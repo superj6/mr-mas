@@ -1,0 +1,8557 @@
+[
+ {
+  "id": "a4-25-01",
+  "scene": "25",
+  "speaker": "NELEH",
+  "speaker_slug": "neleh",
+  "text": "Step four.",
+  "spoken_as": "Step four.",
+  "delivery": "(blueprint, precise) Reads the next item on the list. Level, exact, a clean full stop.",
+  "tag": "[INVENTED]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "blueprint",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": "his",
+  "shot": "[GFX] THE PLAN: the blueprint figures at the blank line",
+  "lip_sync": false,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/wav/a4-25-01.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-25-01.mp3",
+  "duration_s": 0.83,
+  "frames_24": 20,
+  "voiced_span_s": 0.72,
+  "take": "t03",
+  "takes_tried": 3,
+  "pick_reason": "lowest score 0.421 of 3 takes (next t01 at 0.501); terms: asr_conf 0.421",
+  "voice": "af_aoede (Kokoro-82M stock) · c-aoede-precise · speed 0.95",
+  "voiceId": "af_aoede",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 90 Hz",
+   "pitch -2 st",
+   "peak -1.5 dB @300 Hz Q1.0",
+   "peak +1.5 dB @4500 Hz Q0.9",
+   "comp 2.5:1 @-22 dB (6/100 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "E"
+   },
+   {
+    "t": 0.125,
+    "f": 3,
+    "shape": "A"
+   },
+   {
+    "t": 0.208,
+    "f": 5,
+    "shape": "M"
+   },
+   {
+    "t": 0.292,
+    "f": 7,
+    "shape": "E"
+   },
+   {
+    "t": 0.375,
+    "f": 9,
+    "shape": "O"
+   },
+   {
+    "t": 0.625,
+    "f": 15,
+    "shape": "E"
+   },
+   {
+    "t": 0.75,
+    "f": 18,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "Step",
+    "t0": 0.02,
+    "t1": 0.275,
+    "f0": 0,
+    "f1": 7
+   },
+   {
+    "w": "four",
+    "t0": 0.275,
+    "t1": 0.75,
+    "f0": 7,
+    "f1": 18
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -2.28,
+   "clipped_samples": 0,
+   "median_f0_hz": 193.8,
+   "f0_range_st": 9.5,
+   "final_move_st": -1.6,
+   "wpm": null,
+   "asr": "Step 4.",
+   "cer": 0.0,
+   "logprob": -0.481,
+   "align_median_s": 0.038,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -2.29,
+   "target_lufs": -16.0
+  }
+ },
+ {
+  "id": "a4-25-02",
+  "scene": "25",
+  "speaker": "MADA",
+  "speaker_slug": "mada",
+  "text": "Good question.",
+  "spoken_as": "Good question.",
+  "delivery": "(blueprint) The canned answer. Level, courteous, no answer inside it.",
+  "tag": "[INVENTED] catchphrase",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "blueprint",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": "his",
+  "shot": "[GFX] THE PLAN: the blueprint figures at the blank line",
+  "lip_sync": false,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/wav/a4-25-02.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-25-02.mp3",
+  "duration_s": 1.09,
+  "frames_24": 27,
+  "voiced_span_s": 0.99,
+  "take": "t08",
+  "takes_tried": 8,
+  "pick_reason": "lowest score 2.112 of 8 takes (next t04 at 2.482); terms: asr_conf 0.237, flatness 1.875",
+  "voice": "am_adam (Kokoro-82M stock) · b-adam-grey · speed 0.9",
+  "voiceId": "am_adam",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 110 Hz",
+   "pitch +1.5 st",
+   "low shelf -1.5 dB @180 Hz",
+   "peak -1.5 dB @3000 Hz Q0.9",
+   "high shelf -1.5 dB @7000 Hz",
+   "comp 3.0:1 @-24 dB (5/120 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "context-carrier read, cut at the quietest 5 ms frame before the line (carrier: 'Hm.')",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "E"
+   },
+   {
+    "t": 0.083,
+    "f": 2,
+    "shape": "O"
+   },
+   {
+    "t": 0.208,
+    "f": 5,
+    "shape": "E"
+   },
+   {
+    "t": 0.333,
+    "f": 8,
+    "shape": "O"
+   },
+   {
+    "t": 0.417,
+    "f": 10,
+    "shape": "A"
+   },
+   {
+    "t": 0.625,
+    "f": 15,
+    "shape": "E"
+   },
+   {
+    "t": 1.0,
+    "f": 24,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "Good",
+    "t0": 0.02,
+    "t1": 0.275,
+    "f0": 0,
+    "f1": 7
+   },
+   {
+    "w": "question",
+    "t0": 0.275,
+    "t1": 1.01,
+    "f0": 7,
+    "f1": 24
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -4.18,
+   "clipped_samples": 0,
+   "median_f0_hz": 123.5,
+   "f0_range_st": 7.5,
+   "final_move_st": -5.2,
+   "wpm": null,
+   "asr": "Good question.",
+   "cer": 0.0,
+   "logprob": -0.358,
+   "align_median_s": 0.018,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -3.9,
+   "contour_r_vs_mas_echo": 0.852,
+   "target_lufs": -16.0
+  },
+  "master": "mada-good-question"
+ },
+ {
+  "id": "a4-26-01",
+  "scene": "26",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "super.",
+  "spoken_as": "super.",
+  "delivery": "(in [P], right after his thumb takes the strip's offer at once) His tile is gone; his mic isn't. Pleasant, lunch-order even, a complete sentence; the final falls or stays level, never lifts. Mix: no music under it.",
+  "tag": "[INVENTED] usage of a real public tic",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "left",
+  "pov": "his",
+  "shot": "[P] MAS, left (phrase 4, after his thumb taps the middle super at once)",
+  "lip_sync": true,
+  "status": "restaged-3.1",
+  "file": "audio/ep01/act4/dialogue/wav/a4-26-01.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-26-01.mp3",
+  "duration_s": 0.89,
+  "frames_24": 22,
+  "voiced_span_s": 0.77,
+  "take": "t06",
+  "takes_tried": 11,
+  "pick_reason": "lowest score 3.677 of 11 takes (next t10 at 4.01); terms: asr_conf 0.968, final_fall 1.52, lane 1.189",
+  "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.82",
+  "voiceId": "am_michael",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 70 Hz",
+   "pitch 0",
+   "low shelf +2 dB @160 Hz",
+   "peak -2 dB @320 Hz Q1.0",
+   "peak +1 dB @3200 Hz Q0.8",
+   "high shelf -1.5 dB @8000 Hz",
+   "comp 2.0:1 @-24 dB (10/120 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "context-carrier read, cut at the quietest 5 ms frame before the line (carrier: 'Well.')",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "E"
+   },
+   {
+    "t": 0.167,
+    "f": 4,
+    "shape": "O"
+   },
+   {
+    "t": 0.375,
+    "f": 9,
+    "shape": "M"
+   },
+   {
+    "t": 0.458,
+    "f": 11,
+    "shape": "E"
+   },
+   {
+    "t": 0.792,
+    "f": 19,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "super",
+    "t0": 0.06,
+    "t1": 0.81,
+    "f0": 1,
+    "f1": 19
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -1.7,
+   "clipped_samples": 0,
+   "median_f0_hz": 100.3,
+   "f0_range_st": 7.7,
+   "final_move_st": 1.4,
+   "wpm": null,
+   "asr": "Super.",
+   "cer": 0.0,
+   "logprob": -0.845,
+   "align_median_s": 0.06,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -1.69,
+   "target_lufs": -16.0
+  },
+  "alt_takes": [
+   {
+    "take": "t06",
+    "file": "audio/ep01/act4/dialogue/takes/a4-26-01/a4-26-01_t06.wav",
+    "score": 3.677,
+    "spec": {
+     "seed": 5,
+     "carrier": "Well.",
+     "speed": 0.9
+    }
+   },
+   {
+    "take": "t10",
+    "file": "audio/ep01/act4/dialogue/takes/a4-26-01/a4-26-01_t10.wav",
+    "score": 4.01,
+    "spec": {
+     "seed": 9,
+     "carrier": "Sure.",
+     "speed": 0.95
+    }
+   },
+   {
+    "take": "t08",
+    "file": "audio/ep01/act4/dialogue/takes/a4-26-01/a4-26-01_t08.wav",
+    "score": 4.41,
+    "spec": {
+     "seed": 7,
+     "carrier": "Okay.",
+     "speed": 0.92
+    }
+   },
+   {
+    "take": "t09",
+    "file": "audio/ep01/act4/dialogue/takes/a4-26-01/a4-26-01_t09.wav",
+    "score": 4.762,
+    "spec": {
+     "seed": 8,
+     "carrier": "I see."
+    }
+   },
+   {
+    "take": "t03",
+    "file": "audio/ep01/act4/dialogue/takes/a4-26-01/a4-26-01_t03.wav",
+    "score": 4.846,
+    "spec": {
+     "seed": 1,
+     "carrier": "Right. Okay."
+    }
+   },
+   {
+    "take": "t01",
+    "file": "audio/ep01/act4/dialogue/takes/a4-26-01/a4-26-01_t01.wav",
+    "score": 5.356,
+    "spec": {
+     "seed": 1
+    }
+   },
+   {
+    "take": "t07",
+    "file": "audio/ep01/act4/dialogue/takes/a4-26-01/a4-26-01_t07.wav",
+    "score": 5.675,
+    "spec": {
+     "seed": 6,
+     "carrier": "Okay."
+    }
+   },
+   {
+    "take": "t11",
+    "file": "audio/ep01/act4/dialogue/takes/a4-26-01/a4-26-01_t11.wav",
+    "score": 5.893,
+    "spec": {
+     "seed": 10,
+     "carrier": "Mm. Okay."
+    }
+   },
+   {
+    "take": "t04",
+    "file": "audio/ep01/act4/dialogue/takes/a4-26-01/a4-26-01_t04.wav",
+    "score": 6.45,
+    "spec": {
+     "seed": 3,
+     "carrier": "That's fine.",
+     "speed": 0.95
+    }
+   },
+   {
+    "take": "t02",
+    "file": "audio/ep01/act4/dialogue/takes/a4-26-01/a4-26-01_t02.wav",
+    "score": 6.451,
+    "spec": {
+     "seed": 2,
+     "speed": 0.92
+    }
+   },
+   {
+    "take": "t05",
+    "file": "audio/ep01/act4/dialogue/takes/a4-26-01/a4-26-01_t05.wav",
+    "score": 10.128,
+    "spec": {
+     "seed": 4,
+     "say": "Super.",
+     "speed": 1.05
+    }
+   }
+  ]
+ },
+ {
+  "id": "a4-26a-vo1",
+  "scene": "26A",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "i don't keep score.",
+  "spoken_as": "i don't keep score.",
+  "delivery": "(V.O., on the [ECU]'s second bar, over the tally he has just carved) A plain self-description, present tense, told rather than performed: level, settling on 'score' without weight. Close and soft, a touch slower than his scenes. No irony, no defence; the Orb counting the marks is the laugh.",
+  "tag": "[INVENTED · VO · D2 · the Orb catches it; the tag's drawer pays it off]",
+  "mode": "vo",
+  "voiced_in_cut": true,
+  "on_camera": "none",
+  "kind": "vo",
+  "side": "none",
+  "pov": "his",
+  "shot": "[ECU] the desk and the tally, bar 2 (the brush; his thumb comes to rest on mark 3)",
+  "lip_sync": false,
+  "status": "new-3.1",
+  "file": "audio/ep01/act4/dialogue/wav/a4-26a-vo1.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-26a-vo1.mp3",
+  "duration_s": 2.09,
+  "frames_24": 51,
+  "voiced_span_s": 1.94,
+  "take": "t05",
+  "takes_tried": 8,
+  "pick_reason": "lowest score 1.155 of 8 takes (next t08 at 1.504); terms: asr_conf 0.219, understated 0.936",
+  "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.577 (x on-camera read)",
+  "voiceId": "am_michael",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 60 Hz",
+   "pitch 0",
+   "low shelf +2.5 dB @150 Hz",
+   "peak -2 dB @320 Hz Q1.0",
+   "peak -1 dB @3200 Hz Q0.8",
+   "high shelf -2.5 dB @7500 Hz",
+   "comp 2.5:1 @-26 dB (15/160 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "context-carrier read, cut at the quietest 5 ms frame before the line (carrier: 'So.')",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -18 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [],
+  "words": [
+   {
+    "w": "i",
+    "t0": 0.02,
+    "t1": 0.253,
+    "f0": 0,
+    "f1": 6
+   },
+   {
+    "w": "don't",
+    "t0": 0.253,
+    "t1": 0.602,
+    "f0": 6,
+    "f1": 14
+   },
+   {
+    "w": "keep",
+    "t0": 0.602,
+    "t1": 0.99,
+    "f0": 14,
+    "f1": 24
+   },
+   {
+    "w": "score",
+    "t0": 0.99,
+    "t1": 2.02,
+    "f0": 24,
+    "f1": 48
+   }
+  ],
+  "qa": {
+   "lufs_i": -18.0,
+   "true_peak_dbtp": -5.01,
+   "clipped_samples": 0,
+   "median_f0_hz": 117.6,
+   "f0_range_st": 7.8,
+   "final_move_st": -1.7,
+   "wpm": 120,
+   "asr": "I don't keep score.",
+   "cer": 0.0,
+   "logprob": -0.346,
+   "align_median_s": 0.071,
+   "target_lufs": -18.0,
+   "mp3_lufs_i": -18.0,
+   "mp3_true_peak_dbtp": -4.9,
+   "pace_ref": {
+    "oncam_span_s": 1.845,
+    "oncam_speed": 0.656,
+    "oncam_wpm": 130,
+    "wpm_band": [
+     108.4,
+     120.4
+    ],
+    "rule": "V.O. span = 1.08-1.2 x his on-camera read of the same words"
+   },
+   "span_vs_oncam": 1.084
+  },
+  "voice_desc": "the on-camera Mas (am_michael, a-michael-close), closer and softer: intimate close mic, dry, no room, 110-125 wpm (a touch under his scenes), level or gently falling finals, 2 LU under dialogue; told, never performed",
+  "alt_takes": [
+   {
+    "take": "t05",
+    "file": "audio/ep01/act4/dialogue/takes/a4-26a-vo1/a4-26a-vo1_t05.wav",
+    "score": 1.155,
+    "spec": {
+     "seed": 4,
+     "carrier": "So."
+    }
+   },
+   {
+    "take": "t08",
+    "file": "audio/ep01/act4/dialogue/takes/a4-26a-vo1/a4-26a-vo1_t08.wav",
+    "score": 1.504,
+    "spec": {
+     "seed": 7,
+     "carrier": "Well.",
+     "speed": 1.04
+    }
+   },
+   {
+    "take": "t06",
+    "file": "audio/ep01/act4/dialogue/takes/a4-26a-vo1/a4-26a-vo1_t06.wav",
+    "score": 1.546,
+    "spec": {
+     "seed": 5,
+     "carrier": "Anyway.",
+     "speed": 0.95
+    }
+   },
+   {
+    "take": "t01",
+    "file": "audio/ep01/act4/dialogue/takes/a4-26a-vo1/a4-26a-vo1_t01.wav",
+    "score": 1.674,
+    "spec": {
+     "seed": 1
+    }
+   },
+   {
+    "take": "t04",
+    "file": "audio/ep01/act4/dialogue/takes/a4-26a-vo1/a4-26a-vo1_t04.wav",
+    "score": 1.734,
+    "spec": {
+     "seed": 1,
+     "carrier": "Mm."
+    }
+   },
+   {
+    "take": "t03",
+    "file": "audio/ep01/act4/dialogue/takes/a4-26a-vo1/a4-26a-vo1_t03.wav",
+    "score": 1.759,
+    "spec": {
+     "seed": 3,
+     "speed": 0.95
+    }
+   },
+   {
+    "take": "t02",
+    "file": "audio/ep01/act4/dialogue/takes/a4-26a-vo1/a4-26a-vo1_t02.wav",
+    "score": 1.767,
+    "spec": {
+     "seed": 2
+    }
+   },
+   {
+    "take": "t07",
+    "file": "audio/ep01/act4/dialogue/takes/a4-26a-vo1/a4-26a-vo1_t07.wav",
+    "score": 2.893,
+    "spec": {
+     "seed": 6,
+     "tail": ", really."
+    }
+   }
+  ],
+  "fallback": {
+   "text": "i don't keep things.",
+   "spoken_as": "i don't keep things.",
+   "why": "guardrails fallback (pov-changes §7 ruling 2), if 'score' reads as a grudge against the board; the Orb's iris then steps to the pocketed pen instead of along the tally. Default: score",
+   "file": "audio/ep01/act4/dialogue/fallback/a4-26a-vo1.wav",
+   "mp3": "audio/ep01/act4/dialogue/fallback/a4-26a-vo1.mp3",
+   "duration_s": 2.15,
+   "frames_24": 52,
+   "voiced_span_s": 2.03,
+   "take": "t04",
+   "takes_tried": 8,
+   "pick_reason": "lowest score 0.877 of 8 takes (next t05 at 1.033); terms: asr_conf 0.133, understated 0.744",
+   "words": [
+    {
+     "w": "i",
+     "t0": 0.06,
+     "t1": 0.335,
+     "f0": 1,
+     "f1": 8
+    },
+    {
+     "w": "don't",
+     "t0": 0.335,
+     "t1": 0.673,
+     "f0": 8,
+     "f1": 16
+    },
+    {
+     "w": "keep",
+     "t0": 0.673,
+     "t1": 1.06,
+     "f0": 16,
+     "f1": 25
+    },
+    {
+     "w": "things",
+     "t0": 1.06,
+     "t1": 2.07,
+     "f0": 25,
+     "f1": 50
+    }
+   ],
+   "qa": {
+    "lufs_i": -18.0,
+    "true_peak_dbtp": -4.59,
+    "clipped_samples": 0,
+    "median_f0_hz": 119.3,
+    "f0_range_st": 6.2,
+    "final_move_st": -1.5,
+    "wpm": 119,
+    "asr": "I don't keep things.",
+    "cer": 0.0,
+    "logprob": -0.289,
+    "align_median_s": 0.084,
+    "mp3_lufs_i": -18.0,
+    "target_lufs": -18.0,
+    "pace_ref": {
+     "oncam_span_s": 1.815,
+     "oncam_speed": 0.656,
+     "oncam_wpm": 132,
+     "wpm_band": [
+      110.2,
+      122.4
+     ],
+     "rule": "V.O. span = 1.08-1.2 x his on-camera read of the same words"
+    },
+    "span_vs_oncam": 1.107
+   },
+   "alt_takes": [
+    {
+     "take": "t04",
+     "file": "audio/ep01/act4/dialogue/takes/a4-26a-vo1-fallback/a4-26a-vo1-fallback_t04.wav",
+     "score": 0.877,
+     "spec": {
+      "seed": 1,
+      "carrier": "Mm."
+     }
+    },
+    {
+     "take": "t05",
+     "file": "audio/ep01/act4/dialogue/takes/a4-26a-vo1-fallback/a4-26a-vo1-fallback_t05.wav",
+     "score": 1.033,
+     "spec": {
+      "seed": 4,
+      "carrier": "So."
+     }
+    },
+    {
+     "take": "t08",
+     "file": "audio/ep01/act4/dialogue/takes/a4-26a-vo1-fallback/a4-26a-vo1-fallback_t08.wav",
+     "score": 1.096,
+     "spec": {
+      "seed": 7,
+      "carrier": "Well.",
+      "speed": 1.04
+     }
+    },
+    {
+     "take": "t06",
+     "file": "audio/ep01/act4/dialogue/takes/a4-26a-vo1-fallback/a4-26a-vo1-fallback_t06.wav",
+     "score": 1.258,
+     "spec": {
+      "seed": 5,
+      "carrier": "Anyway.",
+      "speed": 0.95
+     }
+    },
+    {
+     "take": "t02",
+     "file": "audio/ep01/act4/dialogue/takes/a4-26a-vo1-fallback/a4-26a-vo1-fallback_t02.wav",
+     "score": 1.468,
+     "spec": {
+      "seed": 2
+     }
+    },
+    {
+     "take": "t01",
+     "file": "audio/ep01/act4/dialogue/takes/a4-26a-vo1-fallback/a4-26a-vo1-fallback_t01.wav",
+     "score": 1.581,
+     "spec": {
+      "seed": 1
+     }
+    },
+    {
+     "take": "t03",
+     "file": "audio/ep01/act4/dialogue/takes/a4-26a-vo1-fallback/a4-26a-vo1-fallback_t03.wav",
+     "score": 1.642,
+     "spec": {
+      "seed": 3,
+      "speed": 0.95
+     }
+    },
+    {
+     "take": "t07",
+     "file": "audio/ep01/act4/dialogue/takes/a4-26a-vo1-fallback/a4-26a-vo1-fallback_t07.wav",
+     "score": 3.622,
+     "spec": {
+      "seed": 6,
+      "tail": ", really."
+     }
+    }
+   ]
+  }
+ },
+ {
+  "id": "a4-26a-01",
+  "scene": "26A",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "\"if i start going off, the nopeai board should go after me for the full value of my shares\"",
+  "spoken_as": "if I start going off,<0.25s> the Nope AI board should go after me for the full value of my shares.",
+  "delivery": "(post) Typed in source casing; the post UI stamps 9:32 PM PT. Scratch read only: dry joke, level.",
+  "tag": "[V · NOV 17, 2023 · decoded 9:32 PM, zone to confirm]",
+  "mode": "post-popup",
+  "voiced_in_cut": false,
+  "on_camera": "none",
+  "kind": "post",
+  "side": "none",
+  "pov": "his",
+  "shot": "[POV] his phone, full-bleed (2 bars)",
+  "lip_sync": false,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/optional/a4-26a-01.wav",
+  "mp3": "audio/ep01/act4/dialogue/optional/a4-26a-01.mp3",
+  "duration_s": 8.4,
+  "frames_24": 202,
+  "voiced_span_s": 8.29,
+  "take": "t01",
+  "takes_tried": 1,
+  "pick_reason": "only take",
+  "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.82",
+  "voiceId": "am_michael",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 70 Hz",
+   "pitch 0",
+   "low shelf +2 dB @160 Hz",
+   "peak -2 dB @320 Hz Q1.0",
+   "peak +1 dB @3200 Hz Q0.8",
+   "high shelf -1.5 dB @8000 Hz",
+   "comp 2.0:1 @-24 dB (10/120 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "pause after word 5: 0.26 s -> 0.26 s (target 0.25)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [],
+  "words": [
+   {
+    "w": "if",
+    "t0": 0.225,
+    "t1": 0.375,
+    "f0": 5,
+    "f1": 9
+   },
+   {
+    "w": "I",
+    "t0": 0.375,
+    "t1": 0.588,
+    "f0": 9,
+    "f1": 14
+   },
+   {
+    "w": "start",
+    "t0": 0.588,
+    "t1": 1.062,
+    "f0": 14,
+    "f1": 26
+   },
+   {
+    "w": "going",
+    "t0": 1.062,
+    "t1": 1.513,
+    "f0": 26,
+    "f1": 36
+   },
+   {
+    "w": "off",
+    "t0": 1.513,
+    "t1": 2.02,
+    "f0": 36,
+    "f1": 48
+   },
+   {
+    "w": "the",
+    "t0": 2.562,
+    "t1": 2.775,
+    "f0": 62,
+    "f1": 67
+   },
+   {
+    "w": "Nope",
+    "t0": 2.775,
+    "t1": 3.26,
+    "f0": 67,
+    "f1": 78
+   },
+   {
+    "w": "AI",
+    "t0": 3.262,
+    "t1": 3.9,
+    "f0": 78,
+    "f1": 94
+   },
+   {
+    "w": "board",
+    "t0": 3.9,
+    "t1": 4.412,
+    "f0": 94,
+    "f1": 106
+   },
+   {
+    "w": "should",
+    "t0": 4.412,
+    "t1": 4.637,
+    "f0": 106,
+    "f1": 111
+   },
+   {
+    "w": "go",
+    "t0": 4.637,
+    "t1": 4.962,
+    "f0": 111,
+    "f1": 119
+   },
+   {
+    "w": "after",
+    "t0": 4.962,
+    "t1": 5.45,
+    "f0": 119,
+    "f1": 131
+   },
+   {
+    "w": "me",
+    "t0": 5.45,
+    "t1": 5.687,
+    "f0": 131,
+    "f1": 136
+   },
+   {
+    "w": "for",
+    "t0": 5.687,
+    "t1": 5.825,
+    "f0": 136,
+    "f1": 140
+   },
+   {
+    "w": "the",
+    "t0": 5.825,
+    "t1": 5.988,
+    "f0": 140,
+    "f1": 144
+   },
+   {
+    "w": "full",
+    "t0": 5.988,
+    "t1": 6.4,
+    "f0": 144,
+    "f1": 154
+   },
+   {
+    "w": "value",
+    "t0": 6.4,
+    "t1": 7.0,
+    "f0": 154,
+    "f1": 168
+   },
+   {
+    "w": "of",
+    "t0": 7.0,
+    "t1": 7.162,
+    "f0": 168,
+    "f1": 172
+   },
+   {
+    "w": "my",
+    "t0": 7.162,
+    "t1": 7.475,
+    "f0": 172,
+    "f1": 179
+   },
+   {
+    "w": "shares",
+    "t0": 7.475,
+    "t1": 8.32,
+    "f0": 179,
+    "f1": 200
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -3.67,
+   "clipped_samples": 0,
+   "median_f0_hz": 109.0,
+   "f0_range_st": 9.1,
+   "final_move_st": -3.5,
+   "wpm": 148,
+   "asr": "If I start going off, the NOPE AI board should go after me for the full value of my shares.",
+   "cer": 0.0,
+   "logprob": -0.176,
+   "align_median_s": 0.08,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -3.54,
+   "target_lufs": -16.0
+  },
+  "popup_hold_beats": 11,
+  "popup_note": "House rule: posts are pop-ups, never speeches. Unvoiced in the cut; this scratch read is for the animatic / audio description only. Suggested on-screen hold >= 11 beats (6.88 s) at ~14 chars/s."
+ },
+ {
+  "id": "a4-26a-vo2",
+  "scene": "26A",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "the meeting ended early.",
+  "spoken_as": "the meeting ended early.",
+  "delivery": "(V.O., over his [PF]; the door into the exit) Gracious and small, like a scheduling note: level through 'meeting', a gentle settle on 'early'. Nothing pointed; the board's call going on without him is the catch.",
+  "tag": "[INVENTED · VO · D4 · the exit's first shot catches it]",
+  "mode": "vo",
+  "voiced_in_cut": true,
+  "on_camera": "none",
+  "kind": "vo",
+  "side": "none",
+  "pov": "his",
+  "shot": "[PF] MAS, left (1½ bars; V.O. band y 182-203 on hoodie shadow)",
+  "lip_sync": false,
+  "status": "new-3.1",
+  "file": "audio/ep01/act4/dialogue/wav/a4-26a-vo2.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-26a-vo2.mp3",
+  "duration_s": 2.19,
+  "frames_24": 53,
+  "voiced_span_s": 2.08,
+  "take": "t04",
+  "takes_tried": 8,
+  "pick_reason": "lowest score 2.038 of 8 takes (next t08 at 2.365); terms: asr_conf 0.184, range 0.72, understated 1.104, fall_too_steep 0.03",
+  "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.722 (x on-camera read)",
+  "voiceId": "am_michael",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 60 Hz",
+   "pitch 0",
+   "low shelf +2.5 dB @150 Hz",
+   "peak -2 dB @320 Hz Q1.0",
+   "peak -1 dB @3200 Hz Q0.8",
+   "high shelf -2.5 dB @7500 Hz",
+   "comp 2.5:1 @-26 dB (15/160 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "context-carrier read, cut at the quietest 5 ms frame before the line (carrier: 'Mm.')",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -18 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [],
+  "words": [
+   {
+    "w": "the",
+    "t0": 0.02,
+    "t1": 0.182,
+    "f0": 0,
+    "f1": 4
+   },
+   {
+    "w": "meeting",
+    "t0": 0.182,
+    "t1": 0.78,
+    "f0": 4,
+    "f1": 19
+   },
+   {
+    "w": "ended",
+    "t0": 0.832,
+    "t1": 1.37,
+    "f0": 20,
+    "f1": 33
+   },
+   {
+    "w": "early",
+    "t0": 1.37,
+    "t1": 2.12,
+    "f0": 33,
+    "f1": 51
+   }
+  ],
+  "qa": {
+   "lufs_i": -18.0,
+   "true_peak_dbtp": -5.36,
+   "clipped_samples": 0,
+   "median_f0_hz": 108.7,
+   "f0_range_st": 9.2,
+   "final_move_st": -5.1,
+   "wpm": 114,
+   "asr": "The meeting ended early.",
+   "cer": 0.0,
+   "logprob": -0.323,
+   "align_median_s": 0.075,
+   "target_lufs": -18.0,
+   "mp3_lufs_i": -18.0,
+   "mp3_true_peak_dbtp": -5.28,
+   "pace_ref": {
+    "oncam_span_s": 1.77,
+    "oncam_speed": 0.82,
+    "oncam_wpm": 136,
+    "wpm_band": [
+     113.0,
+     125.5
+    ],
+    "rule": "V.O. span = 1.08-1.2 x his on-camera read of the same words"
+   },
+   "span_vs_oncam": 1.186
+  },
+  "voice_desc": "the on-camera Mas (am_michael, a-michael-close), closer and softer: intimate close mic, dry, no room, 110-125 wpm (a touch under his scenes), level or gently falling finals, 2 LU under dialogue; told, never performed",
+  "alt_takes": [
+   {
+    "take": "t04",
+    "file": "audio/ep01/act4/dialogue/takes/a4-26a-vo2/a4-26a-vo2_t04.wav",
+    "score": 2.038,
+    "spec": {
+     "seed": 1,
+     "carrier": "Mm."
+    }
+   },
+   {
+    "take": "t08",
+    "file": "audio/ep01/act4/dialogue/takes/a4-26a-vo2/a4-26a-vo2_t08.wav",
+    "score": 2.365,
+    "spec": {
+     "seed": 7,
+     "carrier": "Well.",
+     "speed": 1.04
+    }
+   },
+   {
+    "take": "t01",
+    "file": "audio/ep01/act4/dialogue/takes/a4-26a-vo2/a4-26a-vo2_t01.wav",
+    "score": 2.413,
+    "spec": {
+     "seed": 1
+    }
+   },
+   {
+    "take": "t05",
+    "file": "audio/ep01/act4/dialogue/takes/a4-26a-vo2/a4-26a-vo2_t05.wav",
+    "score": 2.422,
+    "spec": {
+     "seed": 4,
+     "carrier": "So."
+    }
+   },
+   {
+    "take": "t06",
+    "file": "audio/ep01/act4/dialogue/takes/a4-26a-vo2/a4-26a-vo2_t06.wav",
+    "score": 2.587,
+    "spec": {
+     "seed": 5,
+     "carrier": "Anyway.",
+     "speed": 0.95
+    }
+   },
+   {
+    "take": "t02",
+    "file": "audio/ep01/act4/dialogue/takes/a4-26a-vo2/a4-26a-vo2_t02.wav",
+    "score": 2.599,
+    "spec": {
+     "seed": 2
+    }
+   },
+   {
+    "take": "t07",
+    "file": "audio/ep01/act4/dialogue/takes/a4-26a-vo2/a4-26a-vo2_t07.wav",
+    "score": 3.424,
+    "spec": {
+     "seed": 6,
+     "tail": ", really."
+    }
+   },
+   {
+    "take": "t03",
+    "file": "audio/ep01/act4/dialogue/takes/a4-26a-vo2/a4-26a-vo2_t03.wav",
+    "score": 3.505,
+    "spec": {
+     "seed": 3,
+     "speed": 0.95
+    }
+   }
+  ]
+ },
+ {
+  "id": "a4-27-00",
+  "scene": "27",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "super.",
+  "spoken_as": "super.",
+  "delivery": "(through their laptop speaker; no portrait) No new read: sc 26's 'super.' take, heard from the board's side: small, boxy and quieter than the room. The call's room tone runs under it; nobody looks up. The dialogue box types it with no portrait window.",
+  "tag": "[INVENTED] usage of a real public tic (a4-26-01 heard from the board's side)",
+  "mode": "speaker",
+  "voiced_in_cut": true,
+  "on_camera": "speaker",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": "board",
+  "shot": "[SCR] the board's call grid, bezel in frame (after HOLD 1 BEAT: NELEH turns a page)",
+  "lip_sync": false,
+  "status": "derived-3.1",
+  "derived_from": "a4-26-01",
+  "file": "audio/ep01/act4/dialogue/wav/a4-27-00.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-27-00.mp3",
+  "clean": {
+   "file": "audio/ep01/act4/dialogue/clean/a4-27-00.wav",
+   "mp3": "audio/ep01/act4/dialogue/clean/a4-27-00.mp3",
+   "lufs_i": -16.0,
+   "note": "the unprocessed a4-26-01 take (dry, -16 LUFS), for a mix that builds its own speaker"
+  },
+  "duration_s": 0.89,
+  "frames_24": 22,
+  "voiced_span_s": 0.77,
+  "take": "a4-26-01 t06",
+  "takes_tried": 0,
+  "pick_reason": "no new read (pov-changes §1.1): the delivered a4-26-01 take (t06), processed",
+  "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.82 · through the board's laptop speaker",
+  "voiceId": "am_michael",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "source: audio/ep01/act4/dialogue/wav/a4-26-01.wav (the delivered take, unchanged in time)",
+   "HPF 330 Hz",
+   "HPF 330 Hz",
+   "LPF 5400 Hz",
+   "LPF 5400 Hz",
+   "peak +4 dB @950 Hz Q1.1",
+   "peak +2 dB @2800 Hz Q1.4",
+   "tanh saturation drive 1.8 mix 0.25",
+   "comp 3.0:1 @-24 dB (4/80 ms)",
+   "48 kHz / 24-bit; -22 LUFS integrated (quieter than the room: 6 LU under dialogue); true-peak ceiling -1.5 dBTP",
+   "no room added: the board's room tone and any call-codec colour are the mix's"
+  ],
+  "mouth": [],
+  "words": [
+   {
+    "w": "super",
+    "t0": 0.06,
+    "t1": 0.81,
+    "f0": 1,
+    "f1": 19
+   }
+  ],
+  "qa": {
+   "lufs_i": -22.0,
+   "true_peak_dbtp": -4.56,
+   "clipped_samples": 0,
+   "median_f0_hz": 100.3,
+   "f0_note": "pitch numbers are the source take's: the 330 Hz high-pass removes the fundamental (heard as the missing fundamental)",
+   "f0_range_st": 7.7,
+   "final_move_st": 1.4,
+   "wpm": null,
+   "asr": "Super.",
+   "cer": 0.0,
+   "logprob": -0.768,
+   "align_median_s": 0.06,
+   "mp3_lufs_i": -21.99,
+   "mp3_true_peak_dbtp": -4.56,
+   "target_lufs": -22.0
+  }
+ },
+ {
+  "id": "a4-27-01",
+  "scene": "27",
+  "speaker": "GERG MOCKBRAN",
+  "speaker_slug": "gerg-mockbran",
+  "text": "\"…I quit.\"",
+  "spoken_as": "I quit.",
+  "delivery": "(post) Green-lit from below, after the 'has left' toast. Scratch read only.",
+  "tag": "[V · NOV 17, 2023 · fragment of a longer message; re-fetch the casing]",
+  "mode": "post-popup",
+  "voiced_in_cut": false,
+  "on_camera": "none",
+  "kind": "post",
+  "side": "none",
+  "pov": "board",
+  "shot": "[SCR] the board's call grid (after the 'has left' toast)",
+  "lip_sync": false,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/optional/a4-27-01.wav",
+  "mp3": "audio/ep01/act4/dialogue/optional/a4-27-01.mp3",
+  "duration_s": 0.63,
+  "frames_24": 16,
+  "voiced_span_s": 0.51,
+  "take": "t01",
+  "takes_tried": 2,
+  "pick_reason": "lowest score 0.282 of 2 takes (next t02 at 7.987); terms: asr_conf 0.282",
+  "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.15",
+  "voiceId": "am_puck",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 90 Hz",
+   "pitch +1.5 st",
+   "peak -2 dB @250 Hz Q1.0",
+   "peak +2 dB @4000 Hz Q0.9",
+   "comp 3.0:1 @-22 dB (4/80 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [],
+  "words": [
+   {
+    "w": "I",
+    "t0": 0.02,
+    "t1": 0.07,
+    "f0": 0,
+    "f1": 2
+   },
+   {
+    "w": "quit",
+    "t0": 0.07,
+    "t1": 0.54,
+    "f0": 2,
+    "f1": 13
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -2.09,
+   "clipped_samples": 0,
+   "median_f0_hz": 137.0,
+   "f0_range_st": 6.9,
+   "final_move_st": -2.7,
+   "wpm": null,
+   "asr": "I quit.",
+   "cer": 0.0,
+   "logprob": -0.388,
+   "align_median_s": 0.045,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -2.08,
+   "target_lufs": -16.0
+  },
+  "popup_hold_beats": 3,
+  "popup_note": "House rule: posts are pop-ups, never speeches. Unvoiced in the cut; this scratch read is for the animatic / audio description only. Suggested on-screen hold >= 3 beats (1.88 s) at ~14 chars/s."
+ },
+ {
+  "id": "a4-27-02",
+  "scene": "27",
+  "speaker": "RIMA TAMURI",
+  "speaker_slug": "rima-tamuri",
+  "text": "I'll hold it together.",
+  "spoken_as": "I'll hold it together.",
+  "delivery": "Spotlight, smoothing the perfect jacket. Composed, even, a soft landing on 'together'.",
+  "tag": "[INVENTED]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "right",
+  "pov": "board",
+  "shot": "[P] RIMA TAMURI, right, under the spotlight",
+  "lip_sync": true,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/wav/a4-27-02.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-27-02.mp3",
+  "duration_s": 1.82,
+  "frames_24": 44,
+  "voiced_span_s": 1.68,
+  "take": "t01",
+  "takes_tried": 4,
+  "pick_reason": "lowest score 2.38 of 4 takes (next t03 at 2.389); terms: asr_conf 0.22, final_fall 2.16",
+  "voice": "af_heart (Kokoro-82M stock) · a-heart-composed · speed 0.9",
+  "voiceId": "af_heart",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 90 Hz",
+   "pitch 0",
+   "peak -1 dB @300 Hz Q1.0",
+   "peak +1 dB @5000 Hz Q0.8",
+   "comp 2.0:1 @-22 dB (8/120 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.125,
+    "f": 3,
+    "shape": "A"
+   },
+   {
+    "t": 0.333,
+    "f": 8,
+    "shape": "E"
+   },
+   {
+    "t": 0.417,
+    "f": 10,
+    "shape": "O"
+   },
+   {
+    "t": 0.667,
+    "f": 16,
+    "shape": "E"
+   },
+   {
+    "t": 1.25,
+    "f": 30,
+    "shape": "A"
+   },
+   {
+    "t": 1.417,
+    "f": 34,
+    "shape": "E"
+   },
+   {
+    "t": 1.75,
+    "f": 42,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "I'll",
+    "t0": 0.115,
+    "t1": 0.415,
+    "f0": 3,
+    "f1": 10
+   },
+   {
+    "w": "hold",
+    "t0": 0.415,
+    "t1": 0.815,
+    "f0": 10,
+    "f1": 20
+   },
+   {
+    "w": "it",
+    "t0": 0.815,
+    "t1": 0.952,
+    "f0": 20,
+    "f1": 23
+   },
+   {
+    "w": "together",
+    "t0": 0.952,
+    "t1": 1.75,
+    "f0": 23,
+    "f1": 42
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -1.95,
+   "clipped_samples": 0,
+   "median_f0_hz": 207.7,
+   "f0_range_st": 9.1,
+   "final_move_st": 2.2,
+   "wpm": 147,
+   "asr": "I'll hold it together.",
+   "cer": 0.0,
+   "logprob": -0.347,
+   "align_median_s": 0.041,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -2.15,
+   "target_lufs": -16.0
+  }
+ },
+ {
+  "id": "a4-27-03",
+  "scene": "27",
+  "speaker": "NELEH",
+  "speaker_slug": "neleh",
+  "text": "For how long?",
+  "spoken_as": "For how long?",
+  "delivery": "Polite and exact; the question she already knows the answer to. A small lift, no edge.",
+  "tag": "[INVENTED]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "right",
+  "pov": "board",
+  "shot": "[P] NELEH, right",
+  "lip_sync": true,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/wav/a4-27-03.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-27-03.mp3",
+  "duration_s": 1.2,
+  "frames_24": 29,
+  "voiced_span_s": 1.07,
+  "take": "t01",
+  "takes_tried": 4,
+  "pick_reason": "lowest score 0.389 of 4 takes (next t04 at 0.606); terms: asr_conf 0.389",
+  "voice": "af_aoede (Kokoro-82M stock) · c-aoede-precise · speed 0.95",
+  "voiceId": "af_aoede",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 90 Hz",
+   "pitch -2 st",
+   "peak -1.5 dB @300 Hz Q1.0",
+   "peak +1.5 dB @4500 Hz Q0.9",
+   "comp 2.5:1 @-22 dB (6/100 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "E"
+   },
+   {
+    "t": 0.083,
+    "f": 2,
+    "shape": "O"
+   },
+   {
+    "t": 0.208,
+    "f": 5,
+    "shape": "A"
+   },
+   {
+    "t": 0.5,
+    "f": 12,
+    "shape": "E"
+   },
+   {
+    "t": 0.667,
+    "f": 16,
+    "shape": "O"
+   },
+   {
+    "t": 0.958,
+    "f": 23,
+    "shape": "E"
+   },
+   {
+    "t": 1.125,
+    "f": 27,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "For",
+    "t0": 0.04,
+    "t1": 0.202,
+    "f0": 1,
+    "f1": 5
+   },
+   {
+    "w": "how",
+    "t0": 0.202,
+    "t1": 0.503,
+    "f0": 5,
+    "f1": 12
+   },
+   {
+    "w": "long",
+    "t0": 0.503,
+    "t1": 1.12,
+    "f0": 12,
+    "f1": 27
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -5.23,
+   "clipped_samples": 0,
+   "median_f0_hz": 168.7,
+   "f0_range_st": 8.2,
+   "final_move_st": -0.1,
+   "wpm": 167,
+   "asr": "For how long?",
+   "cer": 0.0,
+   "logprob": -0.459,
+   "align_median_s": 0.04,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -5.24,
+   "target_lufs": -16.0
+  }
+ },
+ {
+  "id": "a4-27-04",
+  "scene": "27",
+  "speaker": "RIMA TAMURI",
+  "speaker_slug": "rima-tamuri",
+  "text": "We'll share more soon.",
+  "spoken_as": "We'll share more soon.",
+  "delivery": "(pleasant) The non-answer, delivered as good news. Unhurried, soft final, a smile after.",
+  "tag": "[INVENTED] catchphrase",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "right",
+  "pov": "board",
+  "shot": "[P] RIMA, right (then [P] NELEH listening, 1 beat)",
+  "lip_sync": true,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/wav/a4-27-04.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-27-04.mp3",
+  "duration_s": 1.37,
+  "frames_24": 33,
+  "voiced_span_s": 1.25,
+  "take": "t03",
+  "takes_tried": 3,
+  "pick_reason": "lowest score 0.063 of 3 takes (next t01 at 0.207); terms: asr_conf 0.063",
+  "voice": "af_heart (Kokoro-82M stock) · a-heart-composed · speed 0.9",
+  "voiceId": "af_heart",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 90 Hz",
+   "pitch 0",
+   "peak -1 dB @300 Hz Q1.0",
+   "peak +1 dB @5000 Hz Q0.8",
+   "comp 2.0:1 @-22 dB (8/120 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "context-carrier read, cut at the quietest 5 ms frame before the line (carrier: 'Right. Okay.')",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "O"
+   },
+   {
+    "t": 0.083,
+    "f": 2,
+    "shape": "E"
+   },
+   {
+    "t": 0.208,
+    "f": 5,
+    "shape": "A"
+   },
+   {
+    "t": 0.417,
+    "f": 10,
+    "shape": "M"
+   },
+   {
+    "t": 0.5,
+    "f": 12,
+    "shape": "O"
+   },
+   {
+    "t": 0.667,
+    "f": 16,
+    "shape": "E"
+   },
+   {
+    "t": 0.875,
+    "f": 21,
+    "shape": "O"
+   },
+   {
+    "t": 1.167,
+    "f": 28,
+    "shape": "E"
+   },
+   {
+    "t": 1.292,
+    "f": 31,
+    "shape": "smile"
+   }
+  ],
+  "words": [
+   {
+    "w": "We'll",
+    "t0": 0.02,
+    "t1": 0.143,
+    "f0": 0,
+    "f1": 3
+   },
+   {
+    "w": "share",
+    "t0": 0.143,
+    "t1": 0.43,
+    "f0": 3,
+    "f1": 10
+   },
+   {
+    "w": "more",
+    "t0": 0.43,
+    "t1": 0.755,
+    "f0": 10,
+    "f1": 18
+   },
+   {
+    "w": "soon",
+    "t0": 0.755,
+    "t1": 1.3,
+    "f0": 18,
+    "f1": 31
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -3.55,
+   "clipped_samples": 0,
+   "median_f0_hz": 205.3,
+   "f0_range_st": 6.9,
+   "final_move_st": -2.6,
+   "wpm": 188,
+   "asr": "We'll share more soon.",
+   "cer": 0.0,
+   "logprob": -0.242,
+   "align_median_s": 0.054,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -3.55,
+   "target_lufs": -16.0
+  },
+  "alt_takes": [
+   {
+    "take": "t03",
+    "file": "audio/ep01/act4/dialogue/takes/a4-27-04/a4-27-04_t03.wav",
+    "score": 0.063,
+    "spec": {
+     "seed": 1,
+     "carrier": "Right. Okay."
+    }
+   },
+   {
+    "take": "t01",
+    "file": "audio/ep01/act4/dialogue/takes/a4-27-04/a4-27-04_t01.wav",
+    "score": 0.207,
+    "spec": {
+     "seed": 1
+    }
+   },
+   {
+    "take": "t02",
+    "file": "audio/ep01/act4/dialogue/takes/a4-27-04/a4-27-04_t02.wav",
+    "score": 2.25,
+    "spec": {
+     "seed": 2,
+     "speed": 0.92
+    }
+   }
+  ]
+ },
+ {
+  "id": "a4-27-05",
+  "scene": "27",
+  "speaker": "TILED EMPLOYEE",
+  "speaker_slug": "tiled-employee",
+  "text": "Is this a coup?",
+  "spoken_as": "Is this a coup?",
+  "delivery": "(one hand up in the crowd; [W] over the heads, no portrait) Earnest, direct, a little unsure. A real question lift on 'coup'.",
+  "tag": "[INVENTED] cartoon line (unquoted paraphrase of the all-hands question)",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "crowd",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": "board",
+  "shot": "[W] the all-hands, a tighter plate of the bullpen (no portrait)",
+  "lip_sync": false,
+  "status": "restaged-3.1",
+  "file": "audio/ep01/act4/dialogue/wav/a4-27-05.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-27-05.mp3",
+  "duration_s": 1.37,
+  "frames_24": 33,
+  "voiced_span_s": 1.12,
+  "take": "t05",
+  "takes_tried": 5,
+  "pick_reason": "lowest score 0.498 of 5 takes (next t04 at 2.263); terms: asr_conf 0.498",
+  "voice": "af_nova (Kokoro-82M stock) · a-nova-plain · speed 0.95",
+  "voiceId": "af_nova",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 100 Hz",
+   "pitch -1.5 st",
+   "peak +1 dB @3000 Hz Q0.9",
+   "comp 2.0:1 @-22 dB (8/110 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "context-carrier read, cut at the quietest 5 ms frame before the line (carrier: 'Okay.')",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "E"
+   },
+   {
+    "t": 0.417,
+    "f": 10,
+    "shape": "A"
+   },
+   {
+    "t": 0.5,
+    "f": 12,
+    "shape": "E"
+   },
+   {
+    "t": 0.708,
+    "f": 17,
+    "shape": "O"
+   },
+   {
+    "t": 1.167,
+    "f": 28,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "Is",
+    "t0": 0.02,
+    "t1": 0.205,
+    "f0": 0,
+    "f1": 5
+   },
+   {
+    "w": "this",
+    "t0": 0.205,
+    "t1": 0.405,
+    "f0": 5,
+    "f1": 10
+   },
+   {
+    "w": "a",
+    "t0": 0.405,
+    "t1": 0.53,
+    "f0": 10,
+    "f1": 13
+   },
+   {
+    "w": "coup",
+    "t0": 0.53,
+    "t1": 1.16,
+    "f0": 13,
+    "f1": 28
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -2.79,
+   "clipped_samples": 0,
+   "median_f0_hz": 146.4,
+   "f0_range_st": 7.4,
+   "final_move_st": 1.4,
+   "wpm": 211,
+   "asr": "Is this a coup?",
+   "cer": 0.0,
+   "logprob": -0.532,
+   "align_median_s": 0.013,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -2.78,
+   "target_lufs": -16.0
+  }
+ },
+ {
+  "id": "a4-27-06",
+  "scene": "27",
+  "speaker": "ALYI",
+  "speaker_slug": "alyi",
+  "text": "\"You can call it this way\"",
+  "spoken_as": "You can call it<0.20s> this way.",
+  "delivery": "From a doorway, half cut off by the frame. Grave, serene, slow; the stress lands on 'way' and lets go. A real quote spoken in the scene (not a post).",
+  "tag": "[V · NOV 17, 2023]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "right",
+  "pov": "board",
+  "shot": "[P] ALYI, right, the door frame cutting his window in half",
+  "lip_sync": true,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/wav/a4-27-06.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-27-06.mp3",
+  "duration_s": 3.12,
+  "frames_24": 75,
+  "voiced_span_s": 3.0,
+  "take": "t01",
+  "takes_tried": 1,
+  "pick_reason": "only take",
+  "voice": "am_onyx (Kokoro-82M stock) · a-onyx-cathedral · speed 0.8",
+  "voiceId": "am_onyx",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 50 Hz",
+   "pitch 0",
+   "low shelf +1.5 dB @140 Hz",
+   "peak -1.5 dB @400 Hz Q1.0",
+   "peak +1.5 dB @2800 Hz Q0.9",
+   "comp 2.5:1 @-24 dB (8/150 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "pause after word 4: 0.02 s -> 0.20 s (target 0.20)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.167,
+    "f": 4,
+    "shape": "E"
+   },
+   {
+    "t": 0.25,
+    "f": 6,
+    "shape": "O"
+   },
+   {
+    "t": 0.417,
+    "f": 10,
+    "shape": "A"
+   },
+   {
+    "t": 0.583,
+    "f": 14,
+    "shape": "E"
+   },
+   {
+    "t": 0.75,
+    "f": 18,
+    "shape": "O"
+   },
+   {
+    "t": 1.0,
+    "f": 24,
+    "shape": "E"
+   },
+   {
+    "t": 1.292,
+    "f": 31,
+    "shape": "rest"
+   },
+   {
+    "t": 1.5,
+    "f": 36,
+    "shape": "E"
+   },
+   {
+    "t": 1.833,
+    "f": 44,
+    "shape": "O"
+   },
+   {
+    "t": 2.125,
+    "f": 51,
+    "shape": "A"
+   },
+   {
+    "t": 2.792,
+    "f": 67,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "You",
+    "t0": 0.17,
+    "t1": 0.358,
+    "f0": 4,
+    "f1": 9
+   },
+   {
+    "w": "can",
+    "t0": 0.358,
+    "t1": 0.67,
+    "f0": 9,
+    "f1": 16
+   },
+   {
+    "w": "call",
+    "t0": 0.67,
+    "t1": 1.108,
+    "f0": 16,
+    "f1": 27
+   },
+   {
+    "w": "it",
+    "t0": 1.108,
+    "t1": 1.305,
+    "f0": 27,
+    "f1": 31
+   },
+   {
+    "w": "this",
+    "t0": 1.488,
+    "t1": 1.85,
+    "f0": 36,
+    "f1": 44
+   },
+   {
+    "w": "way",
+    "t0": 1.85,
+    "t1": 2.8,
+    "f0": 44,
+    "f1": 67
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -4.32,
+   "clipped_samples": 0,
+   "median_f0_hz": 82.6,
+   "f0_range_st": 13.4,
+   "final_move_st": -2.8,
+   "wpm": 137,
+   "asr": "You can call it this way.",
+   "cer": 0.0,
+   "logprob": -0.342,
+   "align_median_s": 0.089,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -4.29,
+   "target_lufs": -16.0
+  }
+ },
+ {
+  "id": "a4-27-07",
+  "scene": "27",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "\"…sorta like reading your own eulogy while you're still alive\"",
+  "spoken_as": "sorta like reading your own eulogy<0.20s> while you're still alive.",
+  "delivery": "(post, a notification scrolling across the hearts) Scratch read only: mild, amused, level.",
+  "tag": "[V · NOV 18, 2023]",
+  "mode": "post-popup",
+  "voiced_in_cut": false,
+  "on_camera": "none",
+  "kind": "post",
+  "side": "none",
+  "pov": "board",
+  "shot": "[SCR] the board's grid under the hearts (a notification)",
+  "lip_sync": false,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/optional/a4-27-07.wav",
+  "mp3": "audio/ep01/act4/dialogue/optional/a4-27-07.mp3",
+  "duration_s": 5.14,
+  "frames_24": 124,
+  "voiced_span_s": 5.03,
+  "take": "t01",
+  "takes_tried": 1,
+  "pick_reason": "only take",
+  "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.82",
+  "voiceId": "am_michael",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 70 Hz",
+   "pitch 0",
+   "low shelf +2 dB @160 Hz",
+   "peak -2 dB @320 Hz Q1.0",
+   "peak +1 dB @3200 Hz Q0.8",
+   "high shelf -1.5 dB @8000 Hz",
+   "comp 2.0:1 @-24 dB (10/120 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "pause after word 6: 0.10 s -> 0.21 s (target 0.20)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [],
+  "words": [
+   {
+    "w": "sorta",
+    "t0": 0.14,
+    "t1": 0.602,
+    "f0": 3,
+    "f1": 14
+   },
+   {
+    "w": "like",
+    "t0": 0.602,
+    "t1": 0.965,
+    "f0": 14,
+    "f1": 23
+   },
+   {
+    "w": "reading",
+    "t0": 0.965,
+    "t1": 1.44,
+    "f0": 23,
+    "f1": 35
+   },
+   {
+    "w": "your",
+    "t0": 1.44,
+    "t1": 1.69,
+    "f0": 35,
+    "f1": 41
+   },
+   {
+    "w": "own",
+    "t0": 1.69,
+    "t1": 2.14,
+    "f0": 41,
+    "f1": 51
+   },
+   {
+    "w": "eulogy",
+    "t0": 2.14,
+    "t1": 2.86,
+    "f0": 51,
+    "f1": 69
+   },
+   {
+    "w": "while",
+    "t0": 3.282,
+    "t1": 3.608,
+    "f0": 79,
+    "f1": 87
+   },
+   {
+    "w": "you're",
+    "t0": 3.608,
+    "t1": 3.833,
+    "f0": 87,
+    "f1": 92
+   },
+   {
+    "w": "still",
+    "t0": 3.833,
+    "t1": 4.258,
+    "f0": 92,
+    "f1": 102
+   },
+   {
+    "w": "alive",
+    "t0": 4.258,
+    "t1": 5.06,
+    "f0": 102,
+    "f1": 121
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -3.52,
+   "clipped_samples": 0,
+   "median_f0_hz": 111.9,
+   "f0_range_st": 9.7,
+   "final_move_st": -7.4,
+   "wpm": 122,
+   "asr": "Sorta like reading your own eulogy while you're still alive.",
+   "cer": 0.0,
+   "logprob": -0.217,
+   "align_median_s": 0.076,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -3.33,
+   "target_lufs": -16.0
+  },
+  "popup_hold_beats": 8,
+  "popup_note": "House rule: posts are pop-ups, never speeches. Unvoiced in the cut; this scratch read is for the animatic / audio description only. Suggested on-screen hold >= 8 beats (5.00 s) at ~14 chars/s."
+ },
+ {
+  "id": "a4-27-08",
+  "scene": "27",
+  "speaker": "NELEH",
+  "speaker_slug": "neleh",
+  "text": "The bylaws allow it. Footnote three.",
+  "spoken_as": "The bylaws allow it.<0.40s> Footnote three.",
+  "delivery": "At the blueprint, marker in hand. Precise; a clean full stop, then the citation, landing on 'three'.",
+  "tag": "[INVENTED] ('Footnote three.' is her catchphrase)",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "right",
+  "pov": "board",
+  "shot": "[P] volley, right-hand window: NELEH",
+  "lip_sync": true,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/wav/a4-27-08.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-27-08.mp3",
+  "duration_s": 2.35,
+  "frames_24": 57,
+  "voiced_span_s": 2.24,
+  "take": "t01",
+  "takes_tried": 3,
+  "pick_reason": "lowest score 0.345 of 3 takes (next t02 at 0.345); terms: asr_conf 0.345",
+  "voice": "af_aoede (Kokoro-82M stock) · c-aoede-precise · speed 0.95",
+  "voiceId": "af_aoede",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 90 Hz",
+   "pitch -2 st",
+   "peak -1.5 dB @300 Hz Q1.0",
+   "peak +1.5 dB @4500 Hz Q0.9",
+   "comp 2.5:1 @-22 dB (6/100 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "pause after word 4: 0.07 s -> 0.40 s (target 0.40)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "M"
+   },
+   {
+    "t": 0.125,
+    "f": 3,
+    "shape": "A"
+   },
+   {
+    "t": 0.333,
+    "f": 8,
+    "shape": "O"
+   },
+   {
+    "t": 0.5,
+    "f": 12,
+    "shape": "E"
+   },
+   {
+    "t": 0.708,
+    "f": 17,
+    "shape": "A"
+   },
+   {
+    "t": 0.833,
+    "f": 20,
+    "shape": "E"
+   },
+   {
+    "t": 0.958,
+    "f": 23,
+    "shape": "rest"
+   },
+   {
+    "t": 1.417,
+    "f": 34,
+    "shape": "O"
+   },
+   {
+    "t": 1.542,
+    "f": 37,
+    "shape": "E"
+   },
+   {
+    "t": 1.625,
+    "f": 39,
+    "shape": "O"
+   },
+   {
+    "t": 1.75,
+    "f": 42,
+    "shape": "E"
+   },
+   {
+    "t": 2.042,
+    "f": 49,
+    "shape": "A"
+   },
+   {
+    "t": 2.125,
+    "f": 51,
+    "shape": "E"
+   },
+   {
+    "t": 2.25,
+    "f": 54,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "The",
+    "t0": 0.02,
+    "t1": 0.05,
+    "f0": 0,
+    "f1": 1
+   },
+   {
+    "w": "bylaws",
+    "t0": 0.05,
+    "t1": 0.55,
+    "f0": 1,
+    "f1": 13
+   },
+   {
+    "w": "allow",
+    "t0": 0.55,
+    "t1": 0.85,
+    "f0": 13,
+    "f1": 20
+   },
+   {
+    "w": "it",
+    "t0": 0.85,
+    "t1": 0.975,
+    "f0": 20,
+    "f1": 23
+   },
+   {
+    "w": "Footnote",
+    "t0": 1.388,
+    "t1": 1.81,
+    "f0": 33,
+    "f1": 43
+   },
+   {
+    "w": "three",
+    "t0": 1.813,
+    "t1": 2.27,
+    "f0": 44,
+    "f1": 54
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -1.93,
+   "clipped_samples": 0,
+   "median_f0_hz": 174.6,
+   "f0_range_st": 9.7,
+   "final_move_st": -3.3,
+   "wpm": 160,
+   "asr": "The bylaws allow it, footnote 3.",
+   "cer": 0.0,
+   "logprob": -0.43,
+   "align_median_s": 0.05,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -1.93,
+   "target_lufs": -16.0
+  }
+ },
+ {
+  "id": "a4-27-09",
+  "scene": "27",
+  "speaker": "ALYI",
+  "speaker_slug": "alyi",
+  "text": "Step four… will reveal itself.",
+  "spoken_as": "Step four...<0.60s> will reveal itself.",
+  "delivery": "(reflection in the dark window) A sermon's last line: 'four' suspended, a real pause, then it lets go.",
+  "tag": "[INVENTED]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "reflection",
+  "kind": "dialogue",
+  "side": "right",
+  "pov": "board",
+  "shot": "[P] volley, right-hand window: ALYI (reflection)",
+  "lip_sync": true,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/wav/a4-27-09.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-27-09.mp3",
+  "duration_s": 3.27,
+  "frames_24": 79,
+  "voiced_span_s": 3.15,
+  "take": "t01",
+  "takes_tried": 1,
+  "pick_reason": "only take",
+  "voice": "am_onyx (Kokoro-82M stock) · a-onyx-cathedral · speed 0.8",
+  "voiceId": "am_onyx",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 50 Hz",
+   "pitch 0",
+   "low shelf +1.5 dB @140 Hz",
+   "peak -1.5 dB @400 Hz Q1.0",
+   "peak +1.5 dB @2800 Hz Q0.9",
+   "comp 2.5:1 @-24 dB (8/150 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "pause after word 2: 0.00 s -> 0.60 s (target 0.60)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "E"
+   },
+   {
+    "t": 0.167,
+    "f": 4,
+    "shape": "A"
+   },
+   {
+    "t": 0.25,
+    "f": 6,
+    "shape": "M"
+   },
+   {
+    "t": 0.333,
+    "f": 8,
+    "shape": "E"
+   },
+   {
+    "t": 0.417,
+    "f": 10,
+    "shape": "O"
+   },
+   {
+    "t": 0.625,
+    "f": 15,
+    "shape": "E"
+   },
+   {
+    "t": 0.708,
+    "f": 17,
+    "shape": "rest"
+   },
+   {
+    "t": 1.375,
+    "f": 33,
+    "shape": "O"
+   },
+   {
+    "t": 1.458,
+    "f": 35,
+    "shape": "E"
+   },
+   {
+    "t": 1.792,
+    "f": 43,
+    "shape": "A"
+   },
+   {
+    "t": 1.917,
+    "f": 46,
+    "shape": "E"
+   },
+   {
+    "t": 2.5,
+    "f": 60,
+    "shape": "A"
+   },
+   {
+    "t": 2.792,
+    "f": 67,
+    "shape": "E"
+   },
+   {
+    "t": 3.083,
+    "f": 74,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "Step",
+    "t0": 0.055,
+    "t1": 0.342,
+    "f0": 1,
+    "f1": 8
+   },
+   {
+    "w": "four",
+    "t0": 0.342,
+    "t1": 0.705,
+    "f0": 8,
+    "f1": 17
+   },
+   {
+    "w": "will",
+    "t0": 1.392,
+    "t1": 1.555,
+    "f0": 33,
+    "f1": 37
+   },
+   {
+    "w": "reveal",
+    "t0": 1.555,
+    "t1": 1.98,
+    "f0": 37,
+    "f1": 48
+   },
+   {
+    "w": "itself",
+    "t0": 1.98,
+    "t1": 3.08,
+    "f0": 48,
+    "f1": 74
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -4.35,
+   "clipped_samples": 0,
+   "median_f0_hz": 86.8,
+   "f0_range_st": 13.3,
+   "final_move_st": -6.0,
+   "wpm": 99,
+   "asr": "Step 4 will reveal itself.",
+   "cer": 0.0,
+   "logprob": -0.499,
+   "align_median_s": 0.062,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -4.34,
+   "target_lufs": -16.0
+  }
+ },
+ {
+  "id": "a4-27-10",
+  "scene": "27",
+  "speaker": "NELEH",
+  "speaker_slug": "neleh",
+  "text": "When?",
+  "spoken_as": "When?",
+  "delivery": "One word, exact. A small, reasonable lift.",
+  "tag": "[INVENTED]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "right",
+  "pov": "board",
+  "shot": "[P] volley, right-hand window: NELEH",
+  "lip_sync": true,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/wav/a4-27-10.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-27-10.mp3",
+  "duration_s": 0.61,
+  "frames_24": 15,
+  "voiced_span_s": 0.48,
+  "take": "t04",
+  "takes_tried": 5,
+  "pick_reason": "lowest score 1.832 of 5 takes (next t01 at 1.972); terms: asr_conf 0.553, lane 1.279",
+  "voice": "af_aoede (Kokoro-82M stock) · c-aoede-precise · speed 0.95",
+  "voiceId": "af_aoede",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 90 Hz",
+   "pitch -2 st",
+   "peak -1.5 dB @300 Hz Q1.0",
+   "peak +1.5 dB @4500 Hz Q0.9",
+   "comp 2.5:1 @-22 dB (6/100 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "O"
+   },
+   {
+    "t": 0.167,
+    "f": 4,
+    "shape": "A"
+   },
+   {
+    "t": 0.417,
+    "f": 10,
+    "shape": "E"
+   },
+   {
+    "t": 0.5,
+    "f": 12,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "When",
+    "t0": 0.02,
+    "t1": 0.53,
+    "f0": 0,
+    "f1": 13
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -5.1,
+   "clipped_samples": 0,
+   "median_f0_hz": 210.1,
+   "f0_range_st": 3.2,
+   "final_move_st": -1.8,
+   "wpm": null,
+   "asr": "When",
+   "cer": 0.0,
+   "logprob": -0.569,
+   "align_median_s": 0.02,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -5.1,
+   "target_lufs": -16.0
+  }
+ },
+ {
+  "id": "a4-27-11",
+  "scene": "27",
+  "speaker": "ALYI",
+  "speaker_slug": "alyi",
+  "text": "The company will tell us.",
+  "spoken_as": "The company<0.15s> will tell us.",
+  "delivery": "(reflection) Serene certainty; stress on 'tell', the line lets go.",
+  "tag": "[INVENTED]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "reflection",
+  "kind": "dialogue",
+  "side": "right",
+  "pov": "board",
+  "shot": "[P] volley, right-hand window: ALYI (reflection) (then [P] NELEH listening, 1 beat)",
+  "lip_sync": true,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/wav/a4-27-11.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-27-11.mp3",
+  "duration_s": 3.19,
+  "frames_24": 77,
+  "voiced_span_s": 2.93,
+  "take": "t01",
+  "takes_tried": 1,
+  "pick_reason": "only take",
+  "voice": "am_onyx (Kokoro-82M stock) · a-onyx-cathedral · speed 0.8",
+  "voiceId": "am_onyx",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 50 Hz",
+   "pitch 0",
+   "low shelf +1.5 dB @140 Hz",
+   "peak -1.5 dB @400 Hz Q1.0",
+   "peak +1.5 dB @2800 Hz Q0.9",
+   "comp 2.5:1 @-24 dB (8/150 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "pause after word 2: 0.00 s -> 0.15 s (target 0.15)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.125,
+    "f": 3,
+    "shape": "E"
+   },
+   {
+    "t": 0.375,
+    "f": 9,
+    "shape": "A"
+   },
+   {
+    "t": 0.542,
+    "f": 13,
+    "shape": "M"
+   },
+   {
+    "t": 0.667,
+    "f": 16,
+    "shape": "E"
+   },
+   {
+    "t": 1.083,
+    "f": 26,
+    "shape": "rest"
+   },
+   {
+    "t": 1.25,
+    "f": 30,
+    "shape": "O"
+   },
+   {
+    "t": 1.333,
+    "f": 32,
+    "shape": "E"
+   },
+   {
+    "t": 1.625,
+    "f": 39,
+    "shape": "A"
+   },
+   {
+    "t": 1.917,
+    "f": 46,
+    "shape": "E"
+   },
+   {
+    "t": 2.042,
+    "f": 49,
+    "shape": "A"
+   },
+   {
+    "t": 2.25,
+    "f": 54,
+    "shape": "E"
+   },
+   {
+    "t": 2.333,
+    "f": 56,
+    "shape": "A"
+   },
+   {
+    "t": 2.417,
+    "f": 58,
+    "shape": "E"
+   },
+   {
+    "t": 2.583,
+    "f": 62,
+    "shape": "rest"
+   },
+   {
+    "t": 2.792,
+    "f": 67,
+    "shape": "E"
+   },
+   {
+    "t": 2.958,
+    "f": 71,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "The",
+    "t0": 0.145,
+    "t1": 0.32,
+    "f0": 3,
+    "f1": 8
+   },
+   {
+    "w": "company",
+    "t0": 0.32,
+    "t1": 1.082,
+    "f0": 8,
+    "f1": 26
+   },
+   {
+    "w": "will",
+    "t0": 1.232,
+    "t1": 1.532,
+    "f0": 30,
+    "f1": 37
+   },
+   {
+    "w": "tell",
+    "t0": 1.532,
+    "t1": 2.032,
+    "f0": 37,
+    "f1": 49
+   },
+   {
+    "w": "us",
+    "t0": 2.032,
+    "t1": 2.97,
+    "f0": 49,
+    "f1": 71
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -1.89,
+   "clipped_samples": 0,
+   "median_f0_hz": 84.1,
+   "f0_range_st": 12.9,
+   "final_move_st": -5.5,
+   "wpm": 106,
+   "asr": "The company will tell us.",
+   "cer": 0.0,
+   "logprob": -0.415,
+   "align_median_s": 0.145,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -1.88,
+   "target_lufs": -16.0
+  }
+ },
+ {
+  "id": "a4-27-12",
+  "scene": "27",
+  "speaker": "NELEH",
+  "speaker_slug": "neleh",
+  "text": "The company is calling us.",
+  "spoken_as": "The company is calling us.",
+  "delivery": "(in the boardroom [2S], the phones walking to the table's edge) Still level and factual: a correction, not alarm.",
+  "tag": "[INVENTED]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "right",
+  "pov": "board",
+  "shot": "[2S] NELEH and MADA, the phones buzzing harder (Neleh's medium rig)",
+  "lip_sync": true,
+  "status": "restaged-3.1",
+  "file": "audio/ep01/act4/dialogue/wav/a4-27-12.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-27-12.mp3",
+  "duration_s": 1.68,
+  "frames_24": 41,
+  "voiced_span_s": 1.56,
+  "take": "t01",
+  "takes_tried": 1,
+  "pick_reason": "only take",
+  "voice": "af_aoede (Kokoro-82M stock) · c-aoede-precise · speed 0.95",
+  "voiceId": "af_aoede",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 90 Hz",
+   "pitch -2 st",
+   "peak -1.5 dB @300 Hz Q1.0",
+   "peak +1.5 dB @4500 Hz Q0.9",
+   "comp 2.5:1 @-22 dB (6/100 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "E"
+   },
+   {
+    "t": 0.125,
+    "f": 3,
+    "shape": "A"
+   },
+   {
+    "t": 0.25,
+    "f": 6,
+    "shape": "M"
+   },
+   {
+    "t": 0.333,
+    "f": 8,
+    "shape": "E"
+   },
+   {
+    "t": 0.792,
+    "f": 19,
+    "shape": "O"
+   },
+   {
+    "t": 0.917,
+    "f": 22,
+    "shape": "E"
+   },
+   {
+    "t": 1.167,
+    "f": 28,
+    "shape": "A"
+   },
+   {
+    "t": 1.458,
+    "f": 35,
+    "shape": "E"
+   },
+   {
+    "t": 1.583,
+    "f": 38,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "The",
+    "t0": 0.025,
+    "t1": 0.1,
+    "f0": 1,
+    "f1": 2
+   },
+   {
+    "w": "company",
+    "t0": 0.1,
+    "t1": 0.575,
+    "f0": 2,
+    "f1": 14
+   },
+   {
+    "w": "is",
+    "t0": 0.575,
+    "t1": 0.738,
+    "f0": 14,
+    "f1": 18
+   },
+   {
+    "w": "calling",
+    "t0": 0.738,
+    "t1": 1.15,
+    "f0": 18,
+    "f1": 28
+   },
+   {
+    "w": "us",
+    "t0": 1.15,
+    "t1": 1.6,
+    "f0": 28,
+    "f1": 38
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -2.57,
+   "clipped_samples": 0,
+   "median_f0_hz": 168.2,
+   "f0_range_st": 9.4,
+   "final_move_st": -1.3,
+   "wpm": 190,
+   "asr": "The company is calling us.",
+   "cer": 0.0,
+   "logprob": -0.263,
+   "align_median_s": 0.06,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -2.57,
+   "target_lufs": -16.0
+  }
+ },
+ {
+  "id": "a4-27-13",
+  "scene": "27",
+  "speaker": "ALYI",
+  "speaker_slug": "alyi",
+  "text": "That is the company telling us.",
+  "spoken_as": "That is the company<0.15s> telling us.",
+  "delivery": "(reflection) Unbothered; the koan closes the loop. Stress on 'telling'.",
+  "tag": "[INVENTED]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "reflection",
+  "kind": "dialogue",
+  "side": "right",
+  "pov": "board",
+  "shot": "[P] ALYI, right (reflection)",
+  "lip_sync": true,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/wav/a4-27-13.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-27-13.mp3",
+  "duration_s": 3.7,
+  "frames_24": 89,
+  "voiced_span_s": 3.57,
+  "take": "t01",
+  "takes_tried": 1,
+  "pick_reason": "only take",
+  "voice": "am_onyx (Kokoro-82M stock) · a-onyx-cathedral · speed 0.8",
+  "voiceId": "am_onyx",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 50 Hz",
+   "pitch 0",
+   "low shelf +1.5 dB @140 Hz",
+   "peak -1.5 dB @400 Hz Q1.0",
+   "peak +1.5 dB @2800 Hz Q0.9",
+   "comp 2.5:1 @-24 dB (8/150 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "pause after word 4: 0.03 s -> 0.15 s (target 0.15)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.167,
+    "f": 4,
+    "shape": "E"
+   },
+   {
+    "t": 0.25,
+    "f": 6,
+    "shape": "A"
+   },
+   {
+    "t": 0.417,
+    "f": 10,
+    "shape": "E"
+   },
+   {
+    "t": 1.0,
+    "f": 24,
+    "shape": "A"
+   },
+   {
+    "t": 1.167,
+    "f": 28,
+    "shape": "M"
+   },
+   {
+    "t": 1.292,
+    "f": 31,
+    "shape": "E"
+   },
+   {
+    "t": 1.708,
+    "f": 41,
+    "shape": "rest"
+   },
+   {
+    "t": 1.833,
+    "f": 44,
+    "shape": "E"
+   },
+   {
+    "t": 1.917,
+    "f": 46,
+    "shape": "A"
+   },
+   {
+    "t": 2.083,
+    "f": 50,
+    "shape": "E"
+   },
+   {
+    "t": 2.458,
+    "f": 59,
+    "shape": "A"
+   },
+   {
+    "t": 2.875,
+    "f": 69,
+    "shape": "E"
+   },
+   {
+    "t": 3.167,
+    "f": 76,
+    "shape": "rest"
+   },
+   {
+    "t": 3.333,
+    "f": 80,
+    "shape": "E"
+   },
+   {
+    "t": 3.458,
+    "f": 83,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "That",
+    "t0": 0.15,
+    "t1": 0.512,
+    "f0": 4,
+    "f1": 12
+   },
+   {
+    "w": "is",
+    "t0": 0.512,
+    "t1": 0.75,
+    "f0": 12,
+    "f1": 18
+   },
+   {
+    "w": "the",
+    "t0": 0.75,
+    "t1": 0.925,
+    "f0": 18,
+    "f1": 22
+   },
+   {
+    "w": "company",
+    "t0": 0.925,
+    "t1": 1.712,
+    "f0": 22,
+    "f1": 41
+   },
+   {
+    "w": "telling",
+    "t0": 1.832,
+    "t1": 2.445,
+    "f0": 44,
+    "f1": 59
+   },
+   {
+    "w": "us",
+    "t0": 2.445,
+    "t1": 3.47,
+    "f0": 59,
+    "f1": 83
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -4.17,
+   "clipped_samples": 0,
+   "median_f0_hz": 83.8,
+   "f0_range_st": 13.0,
+   "final_move_st": -6.4,
+   "wpm": 108,
+   "asr": "That is the company telling us.",
+   "cer": 0.0,
+   "logprob": -0.313,
+   "align_median_s": 0.121,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -4.17,
+   "target_lufs": -16.0
+  }
+ },
+ {
+  "id": "a4-27-14",
+  "scene": "27",
+  "speaker": "MARIO",
+  "speaker_slug": "mario",
+  "text": "I've written up some thoughts.",
+  "spoken_as": "I've written up some thoughts.",
+  "delivery": "(after the throne-handset insert; looking at the throne, his finger rising) Earnest, a little proud of the document.",
+  "tag": "[INVENTED]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "right",
+  "pov": "board",
+  "shot": "[P] MARIO, right, the lamp turning in the window behind him",
+  "lip_sync": true,
+  "status": "restaged-3.1",
+  "file": "audio/ep01/act4/dialogue/wav/a4-27-14.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-27-14.mp3",
+  "duration_s": 2.16,
+  "frames_24": 52,
+  "voiced_span_s": 2.04,
+  "take": "t03",
+  "takes_tried": 3,
+  "pick_reason": "lowest score 0.09 of 3 takes (next t01 at 1.071); terms: asr_conf 0.09",
+  "voice": "am_liam (Kokoro-82M stock) · a-liam-earnest · speed 0.95",
+  "voiceId": "am_liam",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 80 Hz",
+   "pitch 0",
+   "peak -1 dB @250 Hz Q1.0",
+   "low shelf +1 dB @200 Hz",
+   "peak +1.5 dB @3000 Hz Q0.9",
+   "high shelf -1 dB @7000 Hz",
+   "comp 2.5:1 @-22 dB (6/100 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.083,
+    "f": 2,
+    "shape": "A"
+   },
+   {
+    "t": 0.292,
+    "f": 7,
+    "shape": "E"
+   },
+   {
+    "t": 0.417,
+    "f": 10,
+    "shape": "A"
+   },
+   {
+    "t": 0.542,
+    "f": 13,
+    "shape": "E"
+   },
+   {
+    "t": 0.667,
+    "f": 16,
+    "shape": "A"
+   },
+   {
+    "t": 0.833,
+    "f": 20,
+    "shape": "M"
+   },
+   {
+    "t": 0.917,
+    "f": 22,
+    "shape": "E"
+   },
+   {
+    "t": 1.0,
+    "f": 24,
+    "shape": "A"
+   },
+   {
+    "t": 1.167,
+    "f": 28,
+    "shape": "M"
+   },
+   {
+    "t": 1.25,
+    "f": 30,
+    "shape": "E"
+   },
+   {
+    "t": 1.375,
+    "f": 33,
+    "shape": "O"
+   },
+   {
+    "t": 1.792,
+    "f": 43,
+    "shape": "E"
+   },
+   {
+    "t": 2.083,
+    "f": 50,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "I've",
+    "t0": 0.08,
+    "t1": 0.342,
+    "f0": 2,
+    "f1": 8
+   },
+   {
+    "w": "written",
+    "t0": 0.342,
+    "t1": 0.668,
+    "f0": 8,
+    "f1": 16
+   },
+   {
+    "w": "up",
+    "t0": 0.668,
+    "t1": 0.918,
+    "f0": 16,
+    "f1": 22
+   },
+   {
+    "w": "some",
+    "t0": 0.918,
+    "t1": 1.23,
+    "f0": 22,
+    "f1": 30
+   },
+   {
+    "w": "thoughts",
+    "t0": 1.23,
+    "t1": 2.08,
+    "f0": 30,
+    "f1": 50
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -4.37,
+   "clipped_samples": 0,
+   "median_f0_hz": 113.2,
+   "f0_range_st": 11.9,
+   "final_move_st": 2.2,
+   "wpm": 150,
+   "asr": "I've written up some thoughts.",
+   "cer": 0.0,
+   "logprob": -0.26,
+   "align_median_s": 0.068,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -4.26,
+   "target_lufs": -16.0
+  }
+ },
+ {
+  "id": "a4-27-15",
+  "scene": "27",
+  "speaker": "ADELINA",
+  "speaker_slug": "adelina",
+  "text": "In plain English: no.",
+  "spoken_as": "In plain English:<0.35s> no.",
+  "delivery": "(into the phone, taking it out of his hand) Brisk and warm. A real beat at the colon; 'no.' is short, kind and final. Click.",
+  "tag": "[INVENTED] catchphrase",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "right",
+  "pov": "board",
+  "shot": "[P2] MARIO and ADELINA, she on the right",
+  "lip_sync": true,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/wav/a4-27-15.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-27-15.mp3",
+  "duration_s": 1.57,
+  "frames_24": 38,
+  "voiced_span_s": 1.46,
+  "take": "t01",
+  "takes_tried": 4,
+  "pick_reason": "lowest score 0.178 of 4 takes (next t02 at 0.258); terms: asr_conf 0.178",
+  "voice": "af_bella (Kokoro-82M stock) · a-bella-warm · speed 0.95",
+  "voiceId": "af_bella",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 80 Hz",
+   "pitch -1 st",
+   "low shelf +1.5 dB @200 Hz",
+   "peak -1 dB @450 Hz Q1.0",
+   "peak +1 dB @2500 Hz Q0.9",
+   "high shelf -1 dB @8000 Hz",
+   "comp 2.5:1 @-22 dB (6/110 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "pause after word 3: 0.23 s -> 0.35 s (target 0.35)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "E"
+   },
+   {
+    "t": 0.167,
+    "f": 4,
+    "shape": "A"
+   },
+   {
+    "t": 0.458,
+    "f": 11,
+    "shape": "E"
+   },
+   {
+    "t": 0.833,
+    "f": 20,
+    "shape": "rest"
+   },
+   {
+    "t": 1.125,
+    "f": 27,
+    "shape": "E"
+   },
+   {
+    "t": 1.25,
+    "f": 30,
+    "shape": "O"
+   },
+   {
+    "t": 1.5,
+    "f": 36,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "In",
+    "t0": 0.02,
+    "t1": 0.09,
+    "f0": 0,
+    "f1": 2
+   },
+   {
+    "w": "plain",
+    "t0": 0.09,
+    "t1": 0.353,
+    "f0": 2,
+    "f1": 8
+   },
+   {
+    "w": "English",
+    "t0": 0.353,
+    "t1": 0.83,
+    "f0": 8,
+    "f1": 20
+   },
+   {
+    "w": "no",
+    "t0": 1.122,
+    "t1": 1.49,
+    "f0": 27,
+    "f1": 36
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -1.92,
+   "clipped_samples": 0,
+   "median_f0_hz": 199.4,
+   "f0_range_st": 6.5,
+   "final_move_st": -1.3,
+   "wpm": 163,
+   "asr": "in plain English. No.",
+   "cer": 0.0,
+   "logprob": -0.319,
+   "align_median_s": 0.031,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -1.91,
+   "target_lufs": -16.0
+  },
+  "alt_takes": [
+   {
+    "take": "t01",
+    "file": "audio/ep01/act4/dialogue/takes/a4-27-15/a4-27-15_t01.wav",
+    "score": 0.178,
+    "spec": {
+     "seed": 1
+    }
+   },
+   {
+    "take": "t02",
+    "file": "audio/ep01/act4/dialogue/takes/a4-27-15/a4-27-15_t02.wav",
+    "score": 0.258,
+    "spec": {
+     "seed": 2,
+     "say": "In plain English:{0.30} no."
+    }
+   },
+   {
+    "take": "t04",
+    "file": "audio/ep01/act4/dialogue/takes/a4-27-15/a4-27-15_t04.wav",
+    "score": 0.346,
+    "spec": {
+     "seed": 4,
+     "speed": 1.06
+    }
+   },
+   {
+    "take": "t03",
+    "file": "audio/ep01/act4/dialogue/takes/a4-27-15/a4-27-15_t03.wav",
+    "score": 0.476,
+    "spec": {
+     "seed": 3,
+     "say": "In plain English:{0.42} no.",
+     "speed": 0.95
+    }
+   }
+  ]
+ },
+ {
+  "id": "a4-27-16",
+  "scene": "27",
+  "speaker": "MARIO",
+  "speaker_slug": "mario",
+  "text": "Hi. Yes. We're very worried. How much?",
+  "spoken_as": "Hi.<0.16s> Yes.<0.16s> We're very worried.<0.20s> How much?",
+  "delivery": "Answers the second phone immediately. Eager and fast: no gaps to think, the worry is a formality on the way to the number.",
+  "tag": "[INVENTED]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "right",
+  "pov": "board",
+  "shot": "[P] MARIO, right, the rent meters spinning through the lighthouse window behind him",
+  "lip_sync": true,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/wav/a4-27-16.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-27-16.mp3",
+  "duration_s": 2.77,
+  "frames_24": 67,
+  "voiced_span_s": 2.65,
+  "take": "t01",
+  "takes_tried": 4,
+  "pick_reason": "lowest score 0.345 of 4 takes (next t04 at 0.378); terms: asr_conf 0.345",
+  "voice": "am_liam (Kokoro-82M stock) · a-liam-earnest · speed 0.95",
+  "voiceId": "am_liam",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 80 Hz",
+   "pitch 0",
+   "peak -1 dB @250 Hz Q1.0",
+   "low shelf +1 dB @200 Hz",
+   "peak +1.5 dB @3000 Hz Q0.9",
+   "high shelf -1 dB @7000 Hz",
+   "comp 2.5:1 @-22 dB (6/100 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "pause after word 1: 0.00 s -> 0.16 s (target 0.16)",
+   "pause after word 2: 0.00 s -> 0.16 s (target 0.16)",
+   "pause after word 5: 0.00 s -> 0.20 s (target 0.20)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "A"
+   },
+   {
+    "t": 0.292,
+    "f": 7,
+    "shape": "rest"
+   },
+   {
+    "t": 0.542,
+    "f": 13,
+    "shape": "A"
+   },
+   {
+    "t": 0.75,
+    "f": 18,
+    "shape": "rest"
+   },
+   {
+    "t": 0.958,
+    "f": 23,
+    "shape": "O"
+   },
+   {
+    "t": 1.042,
+    "f": 25,
+    "shape": "E"
+   },
+   {
+    "t": 1.125,
+    "f": 27,
+    "shape": "A"
+   },
+   {
+    "t": 1.25,
+    "f": 30,
+    "shape": "E"
+   },
+   {
+    "t": 1.375,
+    "f": 33,
+    "shape": "O"
+   },
+   {
+    "t": 1.542,
+    "f": 37,
+    "shape": "E"
+   },
+   {
+    "t": 1.708,
+    "f": 41,
+    "shape": "rest"
+   },
+   {
+    "t": 1.958,
+    "f": 47,
+    "shape": "A"
+   },
+   {
+    "t": 2.167,
+    "f": 52,
+    "shape": "M"
+   },
+   {
+    "t": 2.292,
+    "f": 55,
+    "shape": "A"
+   },
+   {
+    "t": 2.583,
+    "f": 62,
+    "shape": "E"
+   },
+   {
+    "t": 2.667,
+    "f": 64,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "Hi",
+    "t0": 0.055,
+    "t1": 0.28,
+    "f0": 1,
+    "f1": 7
+   },
+   {
+    "w": "Yes",
+    "t0": 0.49,
+    "t1": 0.765,
+    "f0": 12,
+    "f1": 18
+   },
+   {
+    "w": "We're",
+    "t0": 0.962,
+    "t1": 1.1,
+    "f0": 23,
+    "f1": 26
+   },
+   {
+    "w": "very",
+    "t0": 1.1,
+    "t1": 1.375,
+    "f0": 26,
+    "f1": 33
+   },
+   {
+    "w": "worried",
+    "t0": 1.375,
+    "t1": 1.72,
+    "f0": 33,
+    "f1": 41
+   },
+   {
+    "w": "How",
+    "t0": 1.975,
+    "t1": 2.15,
+    "f0": 47,
+    "f1": 52
+   },
+   {
+    "w": "much",
+    "t0": 2.15,
+    "t1": 2.69,
+    "f0": 52,
+    "f1": 65
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -4.3,
+   "clipped_samples": 0,
+   "median_f0_hz": 116.5,
+   "f0_range_st": 14.2,
+   "final_move_st": -2.7,
+   "wpm": 159,
+   "asr": "Hi, yes, we're very worried how much.",
+   "cer": 0.0,
+   "logprob": -0.43,
+   "align_median_s": 0.055,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -4.31,
+   "target_lufs": -16.0
+  },
+  "alt_takes": [
+   {
+    "take": "t01",
+    "file": "audio/ep01/act4/dialogue/takes/a4-27-16/a4-27-16_t01.wav",
+    "score": 0.345,
+    "spec": {
+     "seed": 1
+    }
+   },
+   {
+    "take": "t04",
+    "file": "audio/ep01/act4/dialogue/takes/a4-27-16/a4-27-16_t04.wav",
+    "score": 0.378,
+    "spec": {
+     "seed": 4,
+     "speed": 0.97
+    }
+   },
+   {
+    "take": "t02",
+    "file": "audio/ep01/act4/dialogue/takes/a4-27-16/a4-27-16_t02.wav",
+    "score": 0.384,
+    "spec": {
+     "seed": 2,
+     "speed": 1.07
+    }
+   },
+   {
+    "take": "t03",
+    "file": "audio/ep01/act4/dialogue/takes/a4-27-16/a4-27-16_t03.wav",
+    "score": 0.456,
+    "spec": {
+     "seed": 3,
+     "say": "Hi.{0.12} Yes.{0.12} We're very worried.{0.15} How much?",
+     "speed": 1.1
+    }
+   }
+  ]
+ },
+ {
+  "id": "a4-27-17",
+  "scene": "27",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "\"first and last time i ever wear one of these\"",
+  "spoken_as": "first and last time I ever wear one of these.",
+  "delivery": "(post, upside-down in the security tile's corner) Scratch read only: dry, level.",
+  "tag": "[V · NOV 19, 2023]",
+  "mode": "post-popup",
+  "voiced_in_cut": false,
+  "on_camera": "none",
+  "kind": "post",
+  "side": "none",
+  "pov": "board",
+  "shot": "[SCR] the lobby security-camera tile (upside-down in its corner)",
+  "lip_sync": false,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/optional/a4-27-17.wav",
+  "mp3": "audio/ep01/act4/dialogue/optional/a4-27-17.mp3",
+  "duration_s": 4.37,
+  "frames_24": 105,
+  "voiced_span_s": 4.26,
+  "take": "t01",
+  "takes_tried": 2,
+  "pick_reason": "lowest score 1.032 of 2 takes (next t02 at 1.032); terms: asr_cer 1.032",
+  "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.82",
+  "voiceId": "am_michael",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 70 Hz",
+   "pitch 0",
+   "low shelf +2 dB @160 Hz",
+   "peak -2 dB @320 Hz Q1.0",
+   "peak +1 dB @3200 Hz Q0.8",
+   "high shelf -1.5 dB @8000 Hz",
+   "comp 2.0:1 @-24 dB (10/120 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [],
+  "words": [
+   {
+    "w": "first",
+    "t0": 0.19,
+    "t1": 0.665,
+    "f0": 5,
+    "f1": 16
+   },
+   {
+    "w": "and",
+    "t0": 0.665,
+    "t1": 0.802,
+    "f0": 16,
+    "f1": 19
+   },
+   {
+    "w": "last",
+    "t0": 0.802,
+    "t1": 1.302,
+    "f0": 19,
+    "f1": 31
+   },
+   {
+    "w": "time",
+    "t0": 1.302,
+    "t1": 2.05,
+    "f0": 31,
+    "f1": 49
+   },
+   {
+    "w": "I",
+    "t0": 2.177,
+    "t1": 2.452,
+    "f0": 52,
+    "f1": 59
+   },
+   {
+    "w": "ever",
+    "t0": 2.452,
+    "t1": 2.902,
+    "f0": 59,
+    "f1": 70
+   },
+   {
+    "w": "wear",
+    "t0": 2.902,
+    "t1": 3.252,
+    "f0": 70,
+    "f1": 78
+   },
+   {
+    "w": "one",
+    "t0": 3.252,
+    "t1": 3.427,
+    "f0": 78,
+    "f1": 82
+   },
+   {
+    "w": "of",
+    "t0": 3.427,
+    "t1": 3.577,
+    "f0": 82,
+    "f1": 86
+   },
+   {
+    "w": "these",
+    "t0": 3.577,
+    "t1": 4.29,
+    "f0": 86,
+    "f1": 103
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -3.74,
+   "clipped_samples": 0,
+   "median_f0_hz": 114.2,
+   "f0_range_st": 10.1,
+   "final_move_st": 0.1,
+   "wpm": 146,
+   "asr": "The first and last time I ever wear one of these.",
+   "cer": 0.086,
+   "logprob": -0.184,
+   "align_median_s": 0.458,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -3.57,
+   "target_lufs": -16.0
+  },
+  "popup_hold_beats": 6,
+  "popup_note": "House rule: posts are pop-ups, never speeches. Unvoiced in the cut; this scratch read is for the animatic / audio description only. Suggested on-screen hold >= 6 beats (3.75 s) at ~14 chars/s."
+ },
+ {
+  "id": "a4-27-18",
+  "scene": "27",
+  "speaker": "TTEMME",
+  "speaker_slug": "ttemme",
+  "text": "Chat. I'm the CEO now.",
+  "spoken_as": "Chat.<0.28s> I'm the CEO now.",
+  "delivery": "To the stream, into the headset. Affable announcement; he means it.",
+  "tag": "[INVENTED]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "right",
+  "pov": "board",
+  "shot": "[P] TTEMME, right (chat overlay)",
+  "lip_sync": true,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/wav/a4-27-18.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-27-18.mp3",
+  "duration_s": 1.74,
+  "frames_24": 42,
+  "voiced_span_s": 1.64,
+  "take": "t05",
+  "takes_tried": 5,
+  "pick_reason": "lowest score 0.16 of 5 takes (next t02 at 2.198); terms: asr_conf 0.16",
+  "voice": "am_fenrir (Kokoro-82M stock) · d-fenrir-headset · speed 1.0",
+  "voiceId": "am_fenrir",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 150 Hz",
+   "pitch +2 st",
+   "peak -2 dB @300 Hz Q1.0",
+   "peak +2.5 dB @2800 Hz Q0.9",
+   "high shelf -1 dB @9000 Hz",
+   "comp 3.5:1 @-20 dB (3/60 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "pause after word 1: 0.04 s -> 0.28 s (target 0.28)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "E"
+   },
+   {
+    "t": 0.083,
+    "f": 2,
+    "shape": "A"
+   },
+   {
+    "t": 0.25,
+    "f": 6,
+    "shape": "rest"
+   },
+   {
+    "t": 0.542,
+    "f": 13,
+    "shape": "A"
+   },
+   {
+    "t": 0.625,
+    "f": 15,
+    "shape": "M"
+   },
+   {
+    "t": 0.708,
+    "f": 17,
+    "shape": "E"
+   },
+   {
+    "t": 1.083,
+    "f": 26,
+    "shape": "O"
+   },
+   {
+    "t": 1.25,
+    "f": 30,
+    "shape": "E"
+   },
+   {
+    "t": 1.375,
+    "f": 33,
+    "shape": "A"
+   },
+   {
+    "t": 1.667,
+    "f": 40,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "Chat",
+    "t0": 0.03,
+    "t1": 0.255,
+    "f0": 1,
+    "f1": 6
+   },
+   {
+    "w": "I'm",
+    "t0": 0.532,
+    "t1": 0.682,
+    "f0": 13,
+    "f1": 16
+   },
+   {
+    "w": "the",
+    "t0": 0.682,
+    "t1": 0.782,
+    "f0": 16,
+    "f1": 19
+   },
+   {
+    "w": "CEO",
+    "t0": 0.782,
+    "t1": 1.245,
+    "f0": 19,
+    "f1": 30
+   },
+   {
+    "w": "now",
+    "t0": 1.245,
+    "t1": 1.67,
+    "f0": 30,
+    "f1": 40
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -4.54,
+   "clipped_samples": 0,
+   "median_f0_hz": 152.5,
+   "f0_range_st": 8.6,
+   "final_move_st": -0.8,
+   "wpm": 183,
+   "asr": "Chat, I'm the CEO now.",
+   "cer": 0.0,
+   "logprob": -0.307,
+   "align_median_s": 0.057,
+   "mp3_lufs_i": -16.01,
+   "mp3_true_peak_dbtp": -4.4,
+   "target_lufs": -16.0
+  }
+ },
+ {
+  "id": "a4-27-19",
+  "scene": "27",
+  "speaker": "TTEMME",
+  "speaker_slug": "ttemme",
+  "text": "Chat… for how long?",
+  "spoken_as": "Chat...<0.55s> for how long?",
+  "delivery": "(watching the sand) Slower; the thought dawns mid-line. An honest small lift on 'long?'.",
+  "tag": "[INVENTED]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "right",
+  "pov": "board",
+  "shot": "[P] TTEMME, right (after the hourglass-flip insert)",
+  "lip_sync": true,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/wav/a4-27-19.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-27-19.mp3",
+  "duration_s": 1.61,
+  "frames_24": 39,
+  "voiced_span_s": 1.51,
+  "take": "t02",
+  "takes_tried": 4,
+  "pick_reason": "lowest score 0.489 of 4 takes (next t01 at 1.526); terms: asr_conf 0.297, lane 0.192",
+  "voice": "am_fenrir (Kokoro-82M stock) · d-fenrir-headset · speed 1.0",
+  "voiceId": "am_fenrir",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 150 Hz",
+   "pitch +2 st",
+   "peak -2 dB @300 Hz Q1.0",
+   "peak +2.5 dB @2800 Hz Q0.9",
+   "high shelf -1 dB @9000 Hz",
+   "comp 3.5:1 @-20 dB (3/60 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "pause after word 1: 0.04 s -> 0.55 s (target 0.55)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "E"
+   },
+   {
+    "t": 0.083,
+    "f": 2,
+    "shape": "A"
+   },
+   {
+    "t": 0.167,
+    "f": 4,
+    "shape": "E"
+   },
+   {
+    "t": 0.25,
+    "f": 6,
+    "shape": "rest"
+   },
+   {
+    "t": 0.833,
+    "f": 20,
+    "shape": "O"
+   },
+   {
+    "t": 0.958,
+    "f": 23,
+    "shape": "A"
+   },
+   {
+    "t": 1.167,
+    "f": 28,
+    "shape": "E"
+   },
+   {
+    "t": 1.25,
+    "f": 30,
+    "shape": "O"
+   },
+   {
+    "t": 1.458,
+    "f": 35,
+    "shape": "E"
+   },
+   {
+    "t": 1.542,
+    "f": 37,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "Chat",
+    "t0": 0.02,
+    "t1": 0.235,
+    "f0": 0,
+    "f1": 6
+   },
+   {
+    "w": "for",
+    "t0": 0.837,
+    "t1": 0.95,
+    "f0": 20,
+    "f1": 23
+   },
+   {
+    "w": "how",
+    "t0": 0.95,
+    "t1": 1.15,
+    "f0": 23,
+    "f1": 28
+   },
+   {
+    "w": "long",
+    "t0": 1.15,
+    "t1": 1.54,
+    "f0": 28,
+    "f1": 37
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -3.69,
+   "clipped_samples": 0,
+   "median_f0_hz": 121.1,
+   "f0_range_st": 12.3,
+   "final_move_st": 1.2,
+   "wpm": 158,
+   "asr": "Chat? For how long?",
+   "cer": 0.0,
+   "logprob": -0.398,
+   "align_median_s": 0.025,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -3.59,
+   "target_lufs": -16.0
+  },
+  "alt_takes": [
+   {
+    "take": "t02",
+    "file": "audio/ep01/act4/dialogue/takes/a4-27-19/a4-27-19_t02.wav",
+    "score": 0.489,
+    "spec": {
+     "seed": 2,
+     "speed": 0.92
+    }
+   },
+   {
+    "take": "t01",
+    "file": "audio/ep01/act4/dialogue/takes/a4-27-19/a4-27-19_t01.wav",
+    "score": 1.526,
+    "spec": {
+     "seed": 1
+    }
+   },
+   {
+    "take": "t03",
+    "file": "audio/ep01/act4/dialogue/takes/a4-27-19/a4-27-19_t03.wav",
+    "score": 2.85,
+    "spec": {
+     "seed": 3,
+     "say": "Chat...{0.65} for how long?",
+     "speed": 0.88
+    }
+   },
+   {
+    "take": "t04",
+    "file": "audio/ep01/act4/dialogue/takes/a4-27-19/a4-27-19_t04.wav",
+    "score": 6.215,
+    "spec": {
+     "seed": 4,
+     "carrier": "Chat. I'm the CEO now."
+    }
+   }
+  ]
+ },
+ {
+  "id": "a4-27-20",
+  "scene": "27",
+  "speaker": "TASYA",
+  "speaker_slug": "tasya",
+  "text": "\"a new advanced AI research team\"",
+  "spoken_as": "A new advanced AI research team.",
+  "delivery": "(post, read aloud with pleasure) In the new slate-blue door, key ring jangling, arrow sign up. Warm, delighted, unhurried; a smile after.",
+  "tag": "[V · NOV 19-20, 2023]",
+  "mode": "read-aloud-post",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "right",
+  "pov": "board",
+  "shot": "[P] TASYA, right, in the new slate-blue doorway",
+  "lip_sync": true,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/wav/a4-27-20.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-27-20.mp3",
+  "duration_s": 2.8,
+  "frames_24": 68,
+  "voiced_span_s": 2.7,
+  "take": "t09",
+  "takes_tried": 10,
+  "pick_reason": "lowest score 1.0 of 10 takes (next t10 at 1.158); terms: asr_conf 0.283, lane 0.717",
+  "voice": "am_eric (Kokoro-82M stock) · b-eric-warm · speed 0.88",
+  "voiceId": "am_eric",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 70 Hz",
+   "pitch -1.5 st",
+   "low shelf +2 dB @180 Hz",
+   "peak -1.5 dB @350 Hz Q1.0",
+   "high shelf +1.5 dB @6000 Hz",
+   "comp 2.0:1 @-24 dB (12/150 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "tail-carrier read (keeps the final level), cut at the quietest 5 ms frame after the line (tail: ', everyone.')",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.083,
+    "f": 2,
+    "shape": "A"
+   },
+   {
+    "t": 0.208,
+    "f": 5,
+    "shape": "E"
+   },
+   {
+    "t": 0.292,
+    "f": 7,
+    "shape": "O"
+   },
+   {
+    "t": 0.458,
+    "f": 11,
+    "shape": "E"
+   },
+   {
+    "t": 0.792,
+    "f": 19,
+    "shape": "A"
+   },
+   {
+    "t": 0.958,
+    "f": 23,
+    "shape": "E"
+   },
+   {
+    "t": 1.208,
+    "f": 29,
+    "shape": "A"
+   },
+   {
+    "t": 1.667,
+    "f": 40,
+    "shape": "E"
+   },
+   {
+    "t": 1.75,
+    "f": 42,
+    "shape": "A"
+   },
+   {
+    "t": 1.958,
+    "f": 47,
+    "shape": "O"
+   },
+   {
+    "t": 2.125,
+    "f": 51,
+    "shape": "E"
+   },
+   {
+    "t": 2.417,
+    "f": 58,
+    "shape": "A"
+   },
+   {
+    "t": 2.542,
+    "f": 61,
+    "shape": "M"
+   },
+   {
+    "t": 2.667,
+    "f": 64,
+    "shape": "smile"
+   }
+  ],
+  "words": [
+   {
+    "w": "A",
+    "t0": 0.09,
+    "t1": 0.202,
+    "f0": 2,
+    "f1": 5
+   },
+   {
+    "w": "new",
+    "t0": 0.202,
+    "t1": 0.465,
+    "f0": 5,
+    "f1": 11
+   },
+   {
+    "w": "advanced",
+    "t0": 0.465,
+    "t1": 1.165,
+    "f0": 11,
+    "f1": 28
+   },
+   {
+    "w": "AI",
+    "t0": 1.165,
+    "t1": 1.652,
+    "f0": 28,
+    "f1": 40
+   },
+   {
+    "w": "research",
+    "t0": 1.652,
+    "t1": 2.278,
+    "f0": 40,
+    "f1": 55
+   },
+   {
+    "w": "team",
+    "t0": 2.278,
+    "t1": 2.653,
+    "f0": 55,
+    "f1": 64
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -3.62,
+   "clipped_samples": 0,
+   "median_f0_hz": 154.2,
+   "f0_range_st": 10.4,
+   "final_move_st": -3.1,
+   "wpm": 140,
+   "asr": "A new advanced AI research team",
+   "cer": 0.0,
+   "logprob": -0.389,
+   "align_median_s": 0.081,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -3.62,
+   "target_lufs": -16.0
+  }
+ },
+ {
+  "id": "a4-27-21",
+  "scene": "27",
+  "speaker": "NELEH",
+  "speaker_slug": "neleh",
+  "text": "Step four?",
+  "spoken_as": "Step four?",
+  "delivery": "The callback. Looking at the line that is blank but for her question mark; a small, patient lift.",
+  "tag": "[INVENTED]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "right",
+  "pov": "board",
+  "shot": "[2S] NELEH and MADA over the blueprint (step 4 blank but for her '?')",
+  "lip_sync": true,
+  "status": "restaged-3.1",
+  "file": "audio/ep01/act4/dialogue/wav/a4-27-21.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-27-21.mp3",
+  "duration_s": 0.85,
+  "frames_24": 21,
+  "voiced_span_s": 0.74,
+  "take": "t04",
+  "takes_tried": 4,
+  "pick_reason": "lowest score 1.938 of 4 takes (next t01 at 2.387); terms: asr_conf 0.418, final_rise 1.52",
+  "voice": "af_aoede (Kokoro-82M stock) · c-aoede-precise · speed 0.95",
+  "voiceId": "af_aoede",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 90 Hz",
+   "pitch -2 st",
+   "peak -1.5 dB @300 Hz Q1.0",
+   "peak +1.5 dB @4500 Hz Q0.9",
+   "comp 2.5:1 @-22 dB (6/100 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "E"
+   },
+   {
+    "t": 0.125,
+    "f": 3,
+    "shape": "A"
+   },
+   {
+    "t": 0.208,
+    "f": 5,
+    "shape": "M"
+   },
+   {
+    "t": 0.292,
+    "f": 7,
+    "shape": "E"
+   },
+   {
+    "t": 0.375,
+    "f": 9,
+    "shape": "O"
+   },
+   {
+    "t": 0.625,
+    "f": 15,
+    "shape": "E"
+   },
+   {
+    "t": 0.75,
+    "f": 18,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "Step",
+    "t0": 0.02,
+    "t1": 0.275,
+    "f0": 0,
+    "f1": 7
+   },
+   {
+    "w": "four",
+    "t0": 0.275,
+    "t1": 0.77,
+    "f0": 7,
+    "f1": 18
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -3.35,
+   "clipped_samples": 0,
+   "median_f0_hz": 181.3,
+   "f0_range_st": 8.9,
+   "final_move_st": -0.9,
+   "wpm": null,
+   "asr": "Step 4.",
+   "cer": 0.0,
+   "logprob": -0.479,
+   "align_median_s": 0.038,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -3.35,
+   "target_lufs": -16.0
+  }
+ },
+ {
+  "id": "a4-27-22",
+  "scene": "27",
+  "speaker": "MADA",
+  "speaker_slug": "mada",
+  "text": "Good question.",
+  "spoken_as": "Good question.",
+  "delivery": "The same canned answer as sc 25.",
+  "tag": "[INVENTED] catchphrase",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "right",
+  "pov": "board",
+  "shot": "[2S] NELEH and MADA over the blueprint",
+  "lip_sync": true,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/wav/a4-27-22.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-27-22.mp3",
+  "duration_s": 1.09,
+  "frames_24": 27,
+  "voiced_span_s": 0.99,
+  "take": "t08",
+  "takes_tried": 8,
+  "pick_reason": "lowest score 2.112 of 8 takes (next t04 at 2.482); terms: asr_conf 0.237, flatness 1.875",
+  "voice": "am_adam (Kokoro-82M stock) · b-adam-grey · speed 0.9",
+  "voiceId": "am_adam",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 110 Hz",
+   "pitch +1.5 st",
+   "low shelf -1.5 dB @180 Hz",
+   "peak -1.5 dB @3000 Hz Q0.9",
+   "high shelf -1.5 dB @7000 Hz",
+   "comp 3.0:1 @-24 dB (5/120 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "context-carrier read, cut at the quietest 5 ms frame before the line (carrier: 'Hm.')",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "E"
+   },
+   {
+    "t": 0.083,
+    "f": 2,
+    "shape": "O"
+   },
+   {
+    "t": 0.208,
+    "f": 5,
+    "shape": "E"
+   },
+   {
+    "t": 0.333,
+    "f": 8,
+    "shape": "O"
+   },
+   {
+    "t": 0.417,
+    "f": 10,
+    "shape": "A"
+   },
+   {
+    "t": 0.625,
+    "f": 15,
+    "shape": "E"
+   },
+   {
+    "t": 1.0,
+    "f": 24,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "Good",
+    "t0": 0.02,
+    "t1": 0.275,
+    "f0": 0,
+    "f1": 7
+   },
+   {
+    "w": "question",
+    "t0": 0.275,
+    "t1": 1.01,
+    "f0": 7,
+    "f1": 24
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -4.18,
+   "clipped_samples": 0,
+   "median_f0_hz": 123.5,
+   "f0_range_st": 7.5,
+   "final_move_st": -5.2,
+   "wpm": null,
+   "asr": "Good question.",
+   "cer": 0.0,
+   "logprob": -0.358,
+   "align_median_s": 0.018,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -3.9,
+   "contour_r_vs_mas_echo": 0.852,
+   "target_lufs": -16.0
+  },
+  "master": "mada-good-question"
+ },
+ {
+  "id": "a4-29-vo1",
+  "scene": "29",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "i put the phone down.",
+  "spoken_as": "i put the phone down.",
+  "delivery": "(V.O., over the [2S]; sets up MAS'S VERSION) Plain and even, technically true; no stress on 'down' (the matching frame delivers it). Lunch-order calm, closer than the room.",
+  "tag": "[INVENTED · VO · D5]",
+  "mode": "vo",
+  "voiced_in_cut": true,
+  "on_camera": "none",
+  "kind": "vo",
+  "side": "none",
+  "pov": "his",
+  "shot": "[2S] Mas, the Orb, the lanyard laid square, his hand on his phone (1 bar) → MAS'S VERSION",
+  "lip_sync": false,
+  "status": "new-3.1",
+  "file": "audio/ep01/act4/dialogue/wav/a4-29-vo1.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-29-vo1.mp3",
+  "duration_s": 2.15,
+  "frames_24": 52,
+  "voiced_span_s": 1.99,
+  "take": "t05",
+  "takes_tried": 8,
+  "pick_reason": "lowest score 1.214 of 8 takes (next t08 at 1.267); terms: asr_conf 0.11, range 0.12, understated 0.984",
+  "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.613 (x on-camera read)",
+  "voiceId": "am_michael",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 60 Hz",
+   "pitch 0",
+   "low shelf +2.5 dB @150 Hz",
+   "peak -2 dB @320 Hz Q1.0",
+   "peak -1 dB @3200 Hz Q0.8",
+   "high shelf -2.5 dB @7500 Hz",
+   "comp 2.5:1 @-26 dB (15/160 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "context-carrier read, cut at the quietest 5 ms frame before the line (carrier: 'So.')",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -18 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [],
+  "words": [
+   {
+    "w": "i",
+    "t0": 0.02,
+    "t1": 0.302,
+    "f0": 0,
+    "f1": 7
+   },
+   {
+    "w": "put",
+    "t0": 0.302,
+    "t1": 0.565,
+    "f0": 7,
+    "f1": 14
+   },
+   {
+    "w": "the",
+    "t0": 0.565,
+    "t1": 0.752,
+    "f0": 14,
+    "f1": 18
+   },
+   {
+    "w": "phone",
+    "t0": 0.752,
+    "t1": 1.277,
+    "f0": 18,
+    "f1": 31
+   },
+   {
+    "w": "down",
+    "t0": 1.277,
+    "t1": 2.03,
+    "f0": 31,
+    "f1": 49
+   }
+  ],
+  "qa": {
+   "lufs_i": -18.0,
+   "true_peak_dbtp": -4.85,
+   "clipped_samples": 0,
+   "median_f0_hz": 109.4,
+   "f0_range_st": 8.2,
+   "final_move_st": -4.9,
+   "wpm": 149,
+   "asr": "I put the phone down.",
+   "cer": 0.0,
+   "logprob": -0.273,
+   "align_median_s": 0.042,
+   "target_lufs": -18.0,
+   "mp3_lufs_i": -18.0,
+   "mp3_true_peak_dbtp": -4.84,
+   "pace_ref": {
+    "oncam_span_s": 1.795,
+    "oncam_speed": 0.697,
+    "oncam_wpm": 167,
+    "wpm_band": [
+     139.3,
+     154.8
+    ],
+    "rule": "V.O. span = 1.08-1.2 x his on-camera read of the same words"
+   },
+   "span_vs_oncam": 1.12
+  },
+  "voice_desc": "the on-camera Mas (am_michael, a-michael-close), closer and softer: intimate close mic, dry, no room, 110-125 wpm (a touch under his scenes), level or gently falling finals, 2 LU under dialogue; told, never performed",
+  "alt_takes": [
+   {
+    "take": "t05",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-vo1/a4-29-vo1_t05.wav",
+    "score": 1.214,
+    "spec": {
+     "seed": 4,
+     "carrier": "So."
+    }
+   },
+   {
+    "take": "t08",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-vo1/a4-29-vo1_t08.wav",
+    "score": 1.267,
+    "spec": {
+     "seed": 7,
+     "carrier": "Well.",
+     "speed": 1.04
+    }
+   },
+   {
+    "take": "t04",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-vo1/a4-29-vo1_t04.wav",
+    "score": 1.278,
+    "spec": {
+     "seed": 1,
+     "carrier": "Mm."
+    }
+   },
+   {
+    "take": "t06",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-vo1/a4-29-vo1_t06.wav",
+    "score": 1.287,
+    "spec": {
+     "seed": 5,
+     "carrier": "Anyway.",
+     "speed": 0.95
+    }
+   },
+   {
+    "take": "t03",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-vo1/a4-29-vo1_t03.wav",
+    "score": 1.954,
+    "spec": {
+     "seed": 3,
+     "speed": 0.95
+    }
+   },
+   {
+    "take": "t02",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-vo1/a4-29-vo1_t02.wav",
+    "score": 1.977,
+    "spec": {
+     "seed": 2
+    }
+   },
+   {
+    "take": "t01",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-vo1/a4-29-vo1_t01.wav",
+    "score": 1.986,
+    "spec": {
+     "seed": 1
+    }
+   },
+   {
+    "take": "t07",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-vo1/a4-29-vo1_t07.wav",
+    "score": 2.784,
+    "spec": {
+     "seed": 6,
+     "tail": ", really."
+    }
+   }
+  ]
+ },
+ {
+  "id": "a4-29-01",
+  "scene": "29",
+  "speaker": "RIMA TAMURI",
+  "speaker_slug": "rima-tamuri",
+  "text": "\"NopeAI is nothing without its people\"",
+  "spoken_as": "Nope AI is nothing without its people.",
+  "delivery": "(post; a dozen identical copies stack up the feed) Scratch read only: calm, warm.",
+  "tag": "[V · NOV 20, 2023, ~2:06 AM PT]",
+  "mode": "post-popup",
+  "voiced_in_cut": false,
+  "on_camera": "none",
+  "kind": "post",
+  "side": "none",
+  "pov": "his",
+  "shot": "[ECU] the matching frame: the phone face-up on the desk, the post legible on its screen for 2 bars",
+  "lip_sync": false,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/optional/a4-29-01.wav",
+  "mp3": "audio/ep01/act4/dialogue/optional/a4-29-01.mp3",
+  "duration_s": 3.03,
+  "frames_24": 73,
+  "voiced_span_s": 2.92,
+  "take": "t01",
+  "takes_tried": 1,
+  "pick_reason": "only take",
+  "voice": "af_heart (Kokoro-82M stock) · a-heart-composed · speed 0.9",
+  "voiceId": "af_heart",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 90 Hz",
+   "pitch 0",
+   "peak -1 dB @300 Hz Q1.0",
+   "peak +1 dB @5000 Hz Q0.8",
+   "comp 2.0:1 @-22 dB (8/120 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [],
+  "words": [
+   {
+    "w": "Nope",
+    "t0": 0.12,
+    "t1": 0.458,
+    "f0": 3,
+    "f1": 11
+   },
+   {
+    "w": "AI",
+    "t0": 0.458,
+    "t1": 1.07,
+    "f0": 11,
+    "f1": 26
+   },
+   {
+    "w": "is",
+    "t0": 1.12,
+    "t1": 1.358,
+    "f0": 27,
+    "f1": 33
+   },
+   {
+    "w": "nothing",
+    "t0": 1.358,
+    "t1": 1.832,
+    "f0": 33,
+    "f1": 44
+   },
+   {
+    "w": "without",
+    "t0": 1.832,
+    "t1": 2.157,
+    "f0": 44,
+    "f1": 52
+   },
+   {
+    "w": "its",
+    "t0": 2.157,
+    "t1": 2.358,
+    "f0": 52,
+    "f1": 57
+   },
+   {
+    "w": "people",
+    "t0": 2.358,
+    "t1": 2.96,
+    "f0": 57,
+    "f1": 71
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -2.61,
+   "clipped_samples": 0,
+   "median_f0_hz": 190.4,
+   "f0_range_st": 8.8,
+   "final_move_st": 4.1,
+   "wpm": 148,
+   "asr": "Nope AI is nothing without its people.",
+   "cer": 0.0,
+   "logprob": -0.29,
+   "align_median_s": 0.078,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -2.74,
+   "target_lufs": -16.0
+  },
+  "popup_hold_beats": 8,
+  "popup_note": "House rule: posts are pop-ups, never speeches. Unvoiced in the cut; this scratch read is for the animatic / audio description only. Draft 3.1 sets the hold: 8 beats (5.00 s). Legible on the face-up phone inside the [ECU] for its full 2 bars (the same words the whole time: every post is identical; it needs 2.05 s)."
+ },
+ {
+  "id": "a4-29-vo2",
+  "scene": "29",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "the badge was a joke.",
+  "spoken_as": "the badge was a joke.",
+  "delivery": "(V.O.; the Orb is already on the lanyard and never hears it) Light, dismissive only by understatement: 'a joke' said like 'a detail'. Level final; no smile in the voice, no wink.",
+  "tag": "[INVENTED · VO · D3 · the Orb is already on the lanyard; it never hears the line]",
+  "mode": "vo",
+  "voiced_in_cut": true,
+  "on_camera": "none",
+  "kind": "vo",
+  "side": "none",
+  "pov": "his",
+  "shot": "[2S] the Orb's iris on the GUEST lanyard (from the bar's 3rd beat) → [P] THE ORB, HOLD 1 BEAT",
+  "lip_sync": false,
+  "status": "new-3.1",
+  "file": "audio/ep01/act4/dialogue/wav/a4-29-vo2.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-29-vo2.mp3",
+  "duration_s": 2.44,
+  "frames_24": 59,
+  "voiced_span_s": 2.32,
+  "take": "t02",
+  "takes_tried": 8,
+  "pick_reason": "lowest score 1.386 of 8 takes (next t03 at 1.507); terms: asr_conf 0.354, range 0.06, understated 0.972",
+  "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.613 (x on-camera read)",
+  "voiceId": "am_michael",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 60 Hz",
+   "pitch 0",
+   "low shelf +2.5 dB @150 Hz",
+   "peak -2 dB @320 Hz Q1.0",
+   "peak -1 dB @3200 Hz Q0.8",
+   "high shelf -2.5 dB @7500 Hz",
+   "comp 2.5:1 @-26 dB (15/160 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -18 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [],
+  "words": [
+   {
+    "w": "the",
+    "t0": 0.25,
+    "t1": 0.463,
+    "f0": 6,
+    "f1": 11
+   },
+   {
+    "w": "badge",
+    "t0": 0.463,
+    "t1": 1.188,
+    "f0": 11,
+    "f1": 28
+   },
+   {
+    "w": "was",
+    "t0": 1.188,
+    "t1": 1.425,
+    "f0": 28,
+    "f1": 34
+   },
+   {
+    "w": "a",
+    "t0": 1.425,
+    "t1": 1.588,
+    "f0": 34,
+    "f1": 38
+   },
+   {
+    "w": "joke",
+    "t0": 1.588,
+    "t1": 2.37,
+    "f0": 38,
+    "f1": 57
+   }
+  ],
+  "qa": {
+   "lufs_i": -18.0,
+   "true_peak_dbtp": -2.65,
+   "clipped_samples": 0,
+   "median_f0_hz": 115.3,
+   "f0_range_st": 8.1,
+   "final_move_st": -0.8,
+   "wpm": 142,
+   "asr": "The badge was a joke.",
+   "cer": 0.0,
+   "logprob": -0.436,
+   "align_median_s": 0.045,
+   "target_lufs": -18.0,
+   "mp3_lufs_i": -18.0,
+   "mp3_true_peak_dbtp": -2.66,
+   "pace_ref": {
+    "oncam_span_s": 1.87,
+    "oncam_speed": 0.697,
+    "oncam_wpm": 160,
+    "wpm_band": [
+     133.7,
+     148.5
+    ],
+    "rule": "V.O. span = 1.08-1.2 x his on-camera read of the same words"
+   },
+   "span_vs_oncam": 1.134
+  },
+  "voice_desc": "the on-camera Mas (am_michael, a-michael-close), closer and softer: intimate close mic, dry, no room, 110-125 wpm (a touch under his scenes), level or gently falling finals, 2 LU under dialogue; told, never performed",
+  "alt_takes": [
+   {
+    "take": "t02",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-vo2/a4-29-vo2_t02.wav",
+    "score": 1.386,
+    "spec": {
+     "seed": 2
+    }
+   },
+   {
+    "take": "t03",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-vo2/a4-29-vo2_t03.wav",
+    "score": 1.507,
+    "spec": {
+     "seed": 3,
+     "speed": 0.95
+    }
+   },
+   {
+    "take": "t04",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-vo2/a4-29-vo2_t04.wav",
+    "score": 1.678,
+    "spec": {
+     "seed": 1,
+     "carrier": "Mm."
+    }
+   },
+   {
+    "take": "t08",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-vo2/a4-29-vo2_t08.wav",
+    "score": 1.814,
+    "spec": {
+     "seed": 7,
+     "carrier": "Well.",
+     "speed": 1.04
+    }
+   },
+   {
+    "take": "t05",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-vo2/a4-29-vo2_t05.wav",
+    "score": 1.997,
+    "spec": {
+     "seed": 4,
+     "carrier": "So."
+    }
+   },
+   {
+    "take": "t07",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-vo2/a4-29-vo2_t07.wav",
+    "score": 2.511,
+    "spec": {
+     "seed": 6,
+     "tail": ", really."
+    }
+   },
+   {
+    "take": "t06",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-vo2/a4-29-vo2_t06.wav",
+    "score": 2.527,
+    "spec": {
+     "seed": 5,
+     "carrier": "Anyway.",
+     "speed": 0.95
+    }
+   },
+   {
+    "take": "t01",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-vo2/a4-29-vo2_t01.wav",
+    "score": 3.903,
+    "spec": {
+     "seed": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "a4-29-03",
+  "scene": "29",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "mostly.",
+  "spoken_as": "mostly.",
+  "delivery": "(aloud, to the Orb, after [P] THE ORB HOLD 1 BEAT on the lanyard) The one true word. It answers the Orb's look, not the V.O. (the Orb never hears that). Plain, a shade lower than the account before it, landing level to gently falling: a concession, not a punchline. No wink, no smile.",
+  "tag": "[INVENTED]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "left",
+  "pov": "his",
+  "shot": "[2S] Mas, aloud, to the Orb (Mas's medium rig); HOLD 1 BEAT after",
+  "lip_sync": true,
+  "status": "retake-3.1",
+  "file": "audio/ep01/act4/dialogue/wav/a4-29-03.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-29-03.mp3",
+  "duration_s": 0.94,
+  "frames_24": 23,
+  "voiced_span_s": 0.82,
+  "take": "t04",
+  "takes_tried": 10,
+  "pick_reason": "lowest score 0.846 of 10 takes (next t02 at 0.883); terms: asr_conf 0.846",
+  "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.82",
+  "voiceId": "am_michael",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 70 Hz",
+   "pitch 0",
+   "low shelf +2 dB @160 Hz",
+   "peak -2 dB @320 Hz Q1.0",
+   "peak +1 dB @3200 Hz Q0.8",
+   "high shelf -1.5 dB @8000 Hz",
+   "comp 2.0:1 @-24 dB (10/120 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "context-carrier read, cut at the quietest 5 ms frame before the line (carrier: 'It was a joke.')",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "M"
+   },
+   {
+    "t": 0.167,
+    "f": 4,
+    "shape": "O"
+   },
+   {
+    "t": 0.417,
+    "f": 10,
+    "shape": "E"
+   },
+   {
+    "t": 0.875,
+    "f": 21,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "mostly",
+    "t0": 0.048,
+    "t1": 0.87,
+    "f0": 1,
+    "f1": 21
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -3.16,
+   "clipped_samples": 0,
+   "median_f0_hz": 106.9,
+   "f0_range_st": 8.3,
+   "final_move_st": -2.2,
+   "wpm": null,
+   "asr": "Mostly.",
+   "cer": 0.0,
+   "logprob": -0.764,
+   "align_median_s": 0.048,
+   "target_lufs": -16.0,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -2.97,
+   "below_ref": "a4-29-vo2"
+  },
+  "alt_takes": [
+   {
+    "take": "t04",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-03/a4-29-03_t04.wav",
+    "score": 0.846,
+    "spec": {
+     "seed": 4,
+     "carrier": "It was a joke."
+    }
+   },
+   {
+    "take": "t02",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-03/a4-29-03_t02.wav",
+    "score": 0.883,
+    "spec": {
+     "seed": 2,
+     "carrier": "the badge was a joke.",
+     "speed": 0.95
+    }
+   },
+   {
+    "take": "t03",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-03/a4-29-03_t03.wav",
+    "score": 1.089,
+    "spec": {
+     "seed": 3,
+     "carrier": "the badge was a joke.",
+     "speed": 0.9
+    }
+   },
+   {
+    "take": "t01",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-03/a4-29-03_t01.wav",
+    "score": 1.306,
+    "spec": {
+     "seed": 1,
+     "carrier": "the badge was a joke."
+    }
+   },
+   {
+    "take": "t08",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-03/a4-29-03_t08.wav",
+    "score": 1.487,
+    "spec": {
+     "seed": 8,
+     "carrier": "Hm."
+    }
+   },
+   {
+    "take": "t06",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-03/a4-29-03_t06.wav",
+    "score": 1.669,
+    "spec": {
+     "seed": 6
+    }
+   },
+   {
+    "take": "t10",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-03/a4-29-03_t10.wav",
+    "score": 2.947,
+    "spec": {
+     "seed": 10,
+     "carrier": "Well."
+    }
+   },
+   {
+    "take": "t09",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-03/a4-29-03_t09.wav",
+    "score": 3.045,
+    "spec": {
+     "seed": 9,
+     "carrier": "Mm.",
+     "speed": 0.95
+    }
+   },
+   {
+    "take": "t05",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-03/a4-29-03_t05.wav",
+    "score": 4.03,
+    "spec": {
+     "seed": 5,
+     "carrier": "It was a joke.",
+     "speed": 0.92
+    }
+   },
+   {
+    "take": "t07",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-03/a4-29-03_t07.wav",
+    "score": 4.561,
+    "spec": {
+     "seed": 7,
+     "speed": 0.92
+    }
+   }
+  ]
+ },
+ {
+  "id": "a4-29-04",
+  "scene": "29",
+  "speaker": "GERG MOCKBRAN",
+  "speaker_slug": "gerg-mockbran",
+  "text": "One sec. Compiling.",
+  "spoken_as": "One sec.<0.22s> Compiling.",
+  "delivery": "(on the monitor, typing, green glow) Cheerful, mid-thought; a 'one sec' beat, not a dramatic one.",
+  "tag": "[INVENTED] catchphrase",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "monitor",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": "his",
+  "shot": "[POV] Gerg's video tile on the monitor, big enough to act in",
+  "lip_sync": true,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/wav/a4-29-04.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-29-04.mp3",
+  "duration_s": 1.21,
+  "frames_24": 30,
+  "voiced_span_s": 1.04,
+  "take": "t02",
+  "takes_tried": 2,
+  "pick_reason": "lowest score 0.473 of 2 takes (next t01 at 9.08); terms: asr_conf 0.473",
+  "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.15",
+  "voiceId": "am_puck",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 90 Hz",
+   "pitch +1.5 st",
+   "peak -2 dB @250 Hz Q1.0",
+   "peak +2 dB @4000 Hz Q0.9",
+   "comp 3.0:1 @-22 dB (4/80 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "pause after word 2: 0.03 s -> 0.22 s (target 0.22)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "A"
+   },
+   {
+    "t": 0.083,
+    "f": 2,
+    "shape": "E"
+   },
+   {
+    "t": 0.167,
+    "f": 4,
+    "shape": "A"
+   },
+   {
+    "t": 0.333,
+    "f": 8,
+    "shape": "rest"
+   },
+   {
+    "t": 0.542,
+    "f": 13,
+    "shape": "E"
+   },
+   {
+    "t": 0.667,
+    "f": 16,
+    "shape": "M"
+   },
+   {
+    "t": 0.792,
+    "f": 19,
+    "shape": "A"
+   },
+   {
+    "t": 0.875,
+    "f": 21,
+    "shape": "E"
+   },
+   {
+    "t": 1.083,
+    "f": 26,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "One",
+    "t0": 0.02,
+    "t1": 0.12,
+    "f0": 0,
+    "f1": 3
+   },
+   {
+    "w": "sec",
+    "t0": 0.12,
+    "t1": 0.32,
+    "f0": 3,
+    "f1": 8
+   },
+   {
+    "w": "Compiling",
+    "t0": 0.552,
+    "t1": 1.08,
+    "f0": 13,
+    "f1": 26
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -1.69,
+   "clipped_samples": 0,
+   "median_f0_hz": 141.4,
+   "f0_range_st": 7.1,
+   "final_move_st": -2.9,
+   "wpm": 170,
+   "asr": "One sec, compiling.",
+   "cer": 0.0,
+   "logprob": -0.515,
+   "align_median_s": 0.02,
+   "mp3_lufs_i": -16.01,
+   "mp3_true_peak_dbtp": -1.56,
+   "target_lufs": -16.0
+  }
+ },
+ {
+  "id": "a4-29-05",
+  "scene": "29",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "what are you building?",
+  "spoken_as": "what are you building?",
+  "delivery": "Mild curiosity at the lunch-order pace. No alarm.",
+  "tag": "[INVENTED]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "left",
+  "pov": "his",
+  "shot": "[P] MAS, left",
+  "lip_sync": true,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/wav/a4-29-05.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-29-05.mp3",
+  "duration_s": 1.97,
+  "frames_24": 48,
+  "voiced_span_s": 1.86,
+  "take": "t01",
+  "takes_tried": 3,
+  "pick_reason": "lowest score 0.231 of 3 takes (next t03 at 0.249); terms: asr_conf 0.231",
+  "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.82",
+  "voiceId": "am_michael",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 70 Hz",
+   "pitch 0",
+   "low shelf +2 dB @160 Hz",
+   "peak -2 dB @320 Hz Q1.0",
+   "peak +1 dB @3200 Hz Q0.8",
+   "high shelf -1.5 dB @8000 Hz",
+   "comp 2.0:1 @-24 dB (10/120 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.25,
+    "f": 6,
+    "shape": "O"
+   },
+   {
+    "t": 0.333,
+    "f": 8,
+    "shape": "A"
+   },
+   {
+    "t": 0.625,
+    "f": 15,
+    "shape": "E"
+   },
+   {
+    "t": 0.792,
+    "f": 19,
+    "shape": "O"
+   },
+   {
+    "t": 0.958,
+    "f": 23,
+    "shape": "M"
+   },
+   {
+    "t": 1.083,
+    "f": 26,
+    "shape": "A"
+   },
+   {
+    "t": 1.292,
+    "f": 31,
+    "shape": "E"
+   },
+   {
+    "t": 1.875,
+    "f": 45,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "what",
+    "t0": 0.245,
+    "t1": 0.52,
+    "f0": 6,
+    "f1": 12
+   },
+   {
+    "w": "are",
+    "t0": 0.52,
+    "t1": 0.695,
+    "f0": 12,
+    "f1": 17
+   },
+   {
+    "w": "you",
+    "t0": 0.695,
+    "t1": 0.957,
+    "f0": 17,
+    "f1": 23
+   },
+   {
+    "w": "building",
+    "t0": 0.957,
+    "t1": 1.89,
+    "f0": 23,
+    "f1": 45
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -3.64,
+   "clipped_samples": 0,
+   "median_f0_hz": 111.0,
+   "f0_range_st": 9.0,
+   "final_move_st": 0.3,
+   "wpm": 146,
+   "asr": "What are you building?",
+   "cer": 0.0,
+   "logprob": -0.354,
+   "align_median_s": 0.039,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -3.64,
+   "target_lufs": -16.0
+  }
+ },
+ {
+  "id": "a4-29-06",
+  "scene": "29",
+  "speaker": "GERG MOCKBRAN",
+  "speaker_slug": "gerg-mockbran",
+  "text": "The company. Again. Just in case.",
+  "spoken_as": "The company.<0.20s> Again.<0.20s> Just in case.",
+  "delivery": "(on the monitor) A commit-log cheer; three fragments, quick beats between them, the tail trails into typing.",
+  "tag": "[INVENTED]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "monitor",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": "his",
+  "shot": "[POV] Gerg's tile",
+  "lip_sync": true,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/wav/a4-29-06.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-29-06.mp3",
+  "duration_s": 1.98,
+  "frames_24": 48,
+  "voiced_span_s": 1.87,
+  "take": "t05",
+  "takes_tried": 6,
+  "pick_reason": "lowest score 0.373 of 6 takes (next t06 at 2.679); terms: asr_conf 0.373",
+  "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.15",
+  "voiceId": "am_puck",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 90 Hz",
+   "pitch +1.5 st",
+   "peak -2 dB @250 Hz Q1.0",
+   "peak +2 dB @4000 Hz Q0.9",
+   "comp 3.0:1 @-22 dB (4/80 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "pause after word 2: 0.00 s -> 0.20 s (target 0.20)",
+   "pause after word 3: 0.00 s -> 0.20 s (target 0.20)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "A"
+   },
+   {
+    "t": 0.125,
+    "f": 3,
+    "shape": "M"
+   },
+   {
+    "t": 0.208,
+    "f": 5,
+    "shape": "E"
+   },
+   {
+    "t": 0.375,
+    "f": 9,
+    "shape": "rest"
+   },
+   {
+    "t": 0.625,
+    "f": 15,
+    "shape": "E"
+   },
+   {
+    "t": 0.75,
+    "f": 18,
+    "shape": "A"
+   },
+   {
+    "t": 0.875,
+    "f": 21,
+    "shape": "rest"
+   },
+   {
+    "t": 1.167,
+    "f": 28,
+    "shape": "A"
+   },
+   {
+    "t": 1.25,
+    "f": 30,
+    "shape": "E"
+   },
+   {
+    "t": 1.542,
+    "f": 37,
+    "shape": "A"
+   },
+   {
+    "t": 1.833,
+    "f": 44,
+    "shape": "E"
+   },
+   {
+    "t": 1.917,
+    "f": 46,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "The",
+    "t0": 0.02,
+    "t1": 0.02,
+    "f0": 0,
+    "f1": 0
+   },
+   {
+    "w": "company",
+    "t0": 0.02,
+    "t1": 0.395,
+    "f0": 0,
+    "f1": 9
+   },
+   {
+    "w": "Again",
+    "t0": 0.645,
+    "t1": 0.895,
+    "f0": 15,
+    "f1": 21
+   },
+   {
+    "w": "Just",
+    "t0": 1.145,
+    "t1": 1.332,
+    "f0": 27,
+    "f1": 32
+   },
+   {
+    "w": "in",
+    "t0": 1.332,
+    "t1": 1.47,
+    "f0": 32,
+    "f1": 35
+   },
+   {
+    "w": "case",
+    "t0": 1.47,
+    "t1": 1.91,
+    "f0": 35,
+    "f1": 46
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -3.48,
+   "clipped_samples": 0,
+   "median_f0_hz": 133.1,
+   "f0_range_st": 7.3,
+   "final_move_st": 0.2,
+   "wpm": 190,
+   "asr": "The company, again, just in case.",
+   "cer": 0.0,
+   "logprob": -0.449,
+   "align_median_s": 0.036,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -2.98,
+   "target_lufs": -16.0
+  }
+ },
+ {
+  "id": "a4-29-vo3",
+  "scene": "29",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "gerg never waits to be asked.",
+  "spoken_as": "[gerg](/ɡˈɜɹɡ/) never waits to be asked.",
+  "delivery": "(V.O., out of the exchanged look; a straight line, not caught) Warm and plain, generous about Gerg; even to the end, 'asked' soft and complete (the door's first held step lands on it). Not a joke: D8. 'gerg' with a hard G, /ɡɜrɡ/, rhyming with 'berg' (the G2P default read it 'jerg').",
+  "tag": "[INVENTED · VO · D8 · plants 'to be asked' for Ep12]",
+  "mode": "vo",
+  "voiced_in_cut": true,
+  "on_camera": "none",
+  "kind": "vo",
+  "side": "none",
+  "pov": "his",
+  "shot": "[2S] the dark room's back wall, out of the quiet beat; the door's first held step on 'asked'",
+  "lip_sync": false,
+  "status": "new-3.1",
+  "file": "audio/ep01/act4/dialogue/wav/a4-29-vo3.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-29-vo3.mp3",
+  "duration_s": 2.81,
+  "frames_24": 68,
+  "voiced_span_s": 2.7,
+  "take": "t05",
+  "takes_tried": 8,
+  "pick_reason": "lowest score 1.675 of 8 takes (next t06 at 1.824); terms: asr_conf 0.283, range 0.36, understated 1.032",
+  "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.613 (x on-camera read)",
+  "voiceId": "am_michael",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 60 Hz",
+   "pitch 0",
+   "low shelf +2.5 dB @150 Hz",
+   "peak -2 dB @320 Hz Q1.0",
+   "peak -1 dB @3200 Hz Q0.8",
+   "high shelf -2.5 dB @7500 Hz",
+   "comp 2.5:1 @-26 dB (15/160 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "context-carrier read, cut at the quietest 5 ms frame before the line (carrier: 'So.')",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -18 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [],
+  "words": [
+   {
+    "w": "gerg",
+    "t0": 0.025,
+    "t1": 0.55,
+    "f0": 1,
+    "f1": 13
+   },
+   {
+    "w": "never",
+    "t0": 0.55,
+    "t1": 1.012,
+    "f0": 13,
+    "f1": 24
+   },
+   {
+    "w": "waits",
+    "t0": 1.012,
+    "t1": 1.462,
+    "f0": 24,
+    "f1": 35
+   },
+   {
+    "w": "to",
+    "t0": 1.462,
+    "t1": 1.625,
+    "f0": 35,
+    "f1": 39
+   },
+   {
+    "w": "be",
+    "t0": 1.625,
+    "t1": 1.9,
+    "f0": 39,
+    "f1": 46
+   },
+   {
+    "w": "asked",
+    "t0": 1.9,
+    "t1": 2.74,
+    "f0": 46,
+    "f1": 66
+   }
+  ],
+  "qa": {
+   "lufs_i": -18.0,
+   "true_peak_dbtp": -2.57,
+   "clipped_samples": 0,
+   "median_f0_hz": 111.9,
+   "f0_range_st": 8.6,
+   "final_move_st": -3.7,
+   "wpm": 133,
+   "asr": "Gerg never waits to be asked.",
+   "cer": 0.0,
+   "logprob": -0.389,
+   "align_median_s": 0.095,
+   "target_lufs": -18.0,
+   "mp3_lufs_i": -18.0,
+   "mp3_true_peak_dbtp": -2.54,
+   "pace_ref": {
+    "oncam_span_s": 2.44,
+    "oncam_speed": 0.697,
+    "oncam_wpm": 148,
+    "wpm_band": [
+     123.0,
+     136.6
+    ],
+    "rule": "V.O. span = 1.08-1.2 x his on-camera read of the same words"
+   },
+   "span_vs_oncam": 1.113
+  },
+  "voice_desc": "the on-camera Mas (am_michael, a-michael-close), closer and softer: intimate close mic, dry, no room, 110-125 wpm (a touch under his scenes), level or gently falling finals, 2 LU under dialogue; told, never performed",
+  "alt_takes": [
+   {
+    "take": "t05",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-vo3/a4-29-vo3_t05.wav",
+    "score": 1.675,
+    "spec": {
+     "seed": 4,
+     "carrier": "So."
+    }
+   },
+   {
+    "take": "t06",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-vo3/a4-29-vo3_t06.wav",
+    "score": 1.824,
+    "spec": {
+     "seed": 5,
+     "carrier": "Anyway.",
+     "speed": 0.95
+    }
+   },
+   {
+    "take": "t08",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-vo3/a4-29-vo3_t08.wav",
+    "score": 1.872,
+    "spec": {
+     "seed": 7,
+     "carrier": "Well.",
+     "speed": 1.04
+    }
+   },
+   {
+    "take": "t02",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-vo3/a4-29-vo3_t02.wav",
+    "score": 2.008,
+    "spec": {
+     "seed": 2
+    }
+   },
+   {
+    "take": "t07",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-vo3/a4-29-vo3_t07.wav",
+    "score": 2.047,
+    "spec": {
+     "seed": 6,
+     "tail": ", really."
+    }
+   },
+   {
+    "take": "t01",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-vo3/a4-29-vo3_t01.wav",
+    "score": 2.185,
+    "spec": {
+     "seed": 1
+    }
+   },
+   {
+    "take": "t04",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-vo3/a4-29-vo3_t04.wav",
+    "score": 2.35,
+    "spec": {
+     "seed": 1,
+     "carrier": "Mm."
+    }
+   },
+   {
+    "take": "t03",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-vo3/a4-29-vo3_t03.wav",
+    "score": 2.362,
+    "spec": {
+     "seed": 3,
+     "speed": 0.95
+    }
+   }
+  ]
+ },
+ {
+  "id": "a4-29-07",
+  "scene": "29",
+  "speaker": "TASYA",
+  "speaker_slug": "tasya",
+  "text": "Everyone is welcome.",
+  "spoken_as": "Everyone is welcome.",
+  "delivery": "(O.S., from behind the slate-blue door; at least 1 beat after the V.O. ends, no music under either) Warm, gentle, smiling. Recorded dry: the mix puts it behind the door.",
+  "tag": "[INVENTED] (short form of his 'Everyone is welcome. Rent is due on the first.')",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "os",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": "his",
+  "shot": "[2S] the back wall and the slate-blue door (O.S., behind it)",
+  "lip_sync": false,
+  "status": "restaged-3.1",
+  "file": "audio/ep01/act4/dialogue/wav/a4-29-07.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-29-07.mp3",
+  "duration_s": 1.5,
+  "frames_24": 36,
+  "voiced_span_s": 1.38,
+  "take": "t01",
+  "takes_tried": 1,
+  "pick_reason": "only take",
+  "voice": "am_eric (Kokoro-82M stock) · b-eric-warm · speed 0.88",
+  "voiceId": "am_eric",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 70 Hz",
+   "pitch -1.5 st",
+   "low shelf +2 dB @180 Hz",
+   "peak -1.5 dB @350 Hz Q1.0",
+   "high shelf +1.5 dB @6000 Hz",
+   "comp 2.0:1 @-24 dB (12/150 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [],
+  "words": [
+   {
+    "w": "Everyone",
+    "t0": 0.065,
+    "t1": 0.59,
+    "f0": 2,
+    "f1": 14
+   },
+   {
+    "w": "is",
+    "t0": 0.59,
+    "t1": 0.74,
+    "f0": 14,
+    "f1": 18
+   },
+   {
+    "w": "welcome",
+    "t0": 0.74,
+    "t1": 1.43,
+    "f0": 18,
+    "f1": 34
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -4.28,
+   "clipped_samples": 0,
+   "median_f0_hz": 152.9,
+   "f0_range_st": 14.9,
+   "final_move_st": -5.3,
+   "wpm": 132,
+   "asr": "Everyone is welcome.",
+   "cer": 0.0,
+   "logprob": -0.373,
+   "align_median_s": 0.065,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -4.28,
+   "target_lufs": -16.0
+  }
+ },
+ {
+  "id": "a4-29-08",
+  "scene": "29",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "leave it open.",
+  "spoken_as": "leave it open.",
+  "delivery": "(at once on 'Everyone is welcome.'; no eyelines before it) A quiet decision (an arc step), even and falling. No weight put on it.",
+  "tag": "[INVENTED]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "left",
+  "pov": "his",
+  "shot": "[P] MAS, left, at once on 'Everyone is welcome.'",
+  "lip_sync": true,
+  "status": "restaged-3.1",
+  "file": "audio/ep01/act4/dialogue/wav/a4-29-08.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-29-08.mp3",
+  "duration_s": 1.52,
+  "frames_24": 37,
+  "voiced_span_s": 1.42,
+  "take": "t03",
+  "takes_tried": 4,
+  "pick_reason": "lowest score 0.929 of 4 takes (next t01 at 1.254); terms: asr_conf 0.449, range 0.48",
+  "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.82",
+  "voiceId": "am_michael",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 70 Hz",
+   "pitch 0",
+   "low shelf +2 dB @160 Hz",
+   "peak -2 dB @320 Hz Q1.0",
+   "peak +1 dB @3200 Hz Q0.8",
+   "high shelf -1.5 dB @8000 Hz",
+   "comp 2.0:1 @-24 dB (10/120 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.208,
+    "f": 5,
+    "shape": "E"
+   },
+   {
+    "t": 0.292,
+    "f": 7,
+    "shape": "A"
+   },
+   {
+    "t": 0.5,
+    "f": 12,
+    "shape": "E"
+   },
+   {
+    "t": 0.792,
+    "f": 19,
+    "shape": "O"
+   },
+   {
+    "t": 1.0,
+    "f": 24,
+    "shape": "M"
+   },
+   {
+    "t": 1.083,
+    "f": 26,
+    "shape": "E"
+   },
+   {
+    "t": 1.458,
+    "f": 35,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "leave",
+    "t0": 0.22,
+    "t1": 0.57,
+    "f0": 5,
+    "f1": 14
+   },
+   {
+    "w": "it",
+    "t0": 0.57,
+    "t1": 0.732,
+    "f0": 14,
+    "f1": 18
+   },
+   {
+    "w": "open",
+    "t0": 0.732,
+    "t1": 1.45,
+    "f0": 18,
+    "f1": 35
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -4.18,
+   "clipped_samples": 0,
+   "median_f0_hz": 111.3,
+   "f0_range_st": 10.8,
+   "final_move_st": -2.1,
+   "wpm": 146,
+   "asr": "Leave it open.",
+   "cer": 0.0,
+   "logprob": -0.499,
+   "align_median_s": 0.09,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -3.98,
+   "target_lufs": -16.0
+  },
+  "alt_takes": [
+   {
+    "take": "t03",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-08/a4-29-08_t03.wav",
+    "score": 0.929,
+    "spec": {
+     "seed": 3,
+     "speed": 1.04
+    }
+   },
+   {
+    "take": "t01",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-08/a4-29-08_t01.wav",
+    "score": 1.254,
+    "spec": {
+     "seed": 1
+    }
+   },
+   {
+    "take": "t02",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-08/a4-29-08_t02.wav",
+    "score": 1.408,
+    "spec": {
+     "seed": 2,
+     "speed": 0.92
+    }
+   },
+   {
+    "take": "t04",
+    "file": "audio/ep01/act4/dialogue/takes/a4-29-08/a4-29-08_t04.wav",
+    "score": 2.849,
+    "spec": {
+     "seed": 1,
+     "carrier": "Right. Okay."
+    }
+   }
+  ]
+ },
+ {
+  "id": "a4-29-09",
+  "scene": "29",
+  "speaker": "NELEH",
+  "speaker_slug": "neleh",
+  "text": "Has anyone read the char—",
+  "spoken_as": "Has anyone read the charter?",
+  "delivery": "(as her tile goes) Mid-question, polite to the end; cut off hard inside 'char-' as the tile leaves frame.",
+  "tag": "[INVENTED]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "monitor",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": "his",
+  "shot": "[POV] the tile avalanche, phrase 2: NELEH's tile as it goes",
+  "lip_sync": true,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/wav/a4-29-09.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-29-09.mp3",
+  "duration_s": 1.66,
+  "frames_24": 40,
+  "voiced_span_s": 1.55,
+  "take": "t03",
+  "takes_tried": 3,
+  "pick_reason": "lowest score 1.941 of 3 takes (next t02 at 5.92); terms: asr_cer 1.7999999999999998, asr_conf 0.141",
+  "voice": "af_aoede (Kokoro-82M stock) · c-aoede-precise · speed 0.95",
+  "voiceId": "af_aoede",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 90 Hz",
+   "pitch -2 st",
+   "peak -1.5 dB @300 Hz Q1.0",
+   "peak +1.5 dB @4500 Hz Q0.9",
+   "comp 2.5:1 @-22 dB (6/100 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "A"
+   },
+   {
+    "t": 0.333,
+    "f": 8,
+    "shape": "E"
+   },
+   {
+    "t": 0.5,
+    "f": 12,
+    "shape": "O"
+   },
+   {
+    "t": 0.583,
+    "f": 14,
+    "shape": "A"
+   },
+   {
+    "t": 0.708,
+    "f": 17,
+    "shape": "E"
+   },
+   {
+    "t": 0.792,
+    "f": 19,
+    "shape": "A"
+   },
+   {
+    "t": 0.917,
+    "f": 22,
+    "shape": "E"
+   },
+   {
+    "t": 1.125,
+    "f": 27,
+    "shape": "A"
+   },
+   {
+    "t": 1.25,
+    "f": 30,
+    "shape": "E"
+   },
+   {
+    "t": 1.542,
+    "f": 37,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "Has",
+    "t0": 0.025,
+    "t1": 0.225,
+    "f0": 1,
+    "f1": 5
+   },
+   {
+    "w": "anyone",
+    "t0": 0.225,
+    "t1": 0.75,
+    "f0": 5,
+    "f1": 18
+   },
+   {
+    "w": "read",
+    "t0": 0.75,
+    "t1": 0.963,
+    "f0": 18,
+    "f1": 23
+   },
+   {
+    "w": "the",
+    "t0": 0.963,
+    "t1": 1.062,
+    "f0": 23,
+    "f1": 26
+   },
+   {
+    "w": "charter",
+    "t0": 1.062,
+    "t1": 1.56,
+    "f0": 26,
+    "f1": 37
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -3.18,
+   "clipped_samples": 0,
+   "median_f0_hz": 166.7,
+   "f0_range_st": 8.5,
+   "final_move_st": -1.4,
+   "wpm": 195,
+   "asr": "Has anyone read the charter?",
+   "cer": 0.15,
+   "logprob": -0.294,
+   "align_median_s": 0.025,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -3.18,
+   "target_lufs": -16.0
+  }
+ },
+ {
+  "id": "a4-30-01",
+  "scene": "30",
+  "speaker": "ALYI",
+  "speaker_slug": "alyi",
+  "text": "\"I deeply regret my participation in the board's actions.\"",
+  "spoken_as": "I deeply regret<0.25s> my participation<0.15s> in the board's actions.",
+  "delivery": "(post, read from the doorway, in the [P2] with Mas) Slow and sincere, played straight; the one sad violin runs under the post only and stops dead on the first heart. No melodrama.",
+  "tag": "[V · NOV 20, 2023]",
+  "mode": "read-aloud-post",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "right",
+  "pov": "his",
+  "shot": "[P2] MAS left at his end desk; ALYI right, the door frame cutting his window",
+  "lip_sync": true,
+  "status": "restaged-3.1",
+  "file": "audio/ep01/act4/dialogue/wav/a4-30-01.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-30-01.mp3",
+  "duration_s": 5.17,
+  "frames_24": 125,
+  "voiced_span_s": 5.04,
+  "take": "t01",
+  "takes_tried": 1,
+  "pick_reason": "only take",
+  "voice": "am_onyx (Kokoro-82M stock) · a-onyx-cathedral · speed 0.8",
+  "voiceId": "am_onyx",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 50 Hz",
+   "pitch 0",
+   "low shelf +1.5 dB @140 Hz",
+   "peak -1.5 dB @400 Hz Q1.0",
+   "peak +1.5 dB @2800 Hz Q0.9",
+   "comp 2.5:1 @-24 dB (8/150 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "pause after word 3: 0.01 s -> 0.25 s (target 0.25)",
+   "pause after word 5: 0.00 s -> 0.15 s (target 0.15)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "A"
+   },
+   {
+    "t": 0.25,
+    "f": 6,
+    "shape": "E"
+   },
+   {
+    "t": 0.333,
+    "f": 8,
+    "shape": "A"
+   },
+   {
+    "t": 0.417,
+    "f": 10,
+    "shape": "M"
+   },
+   {
+    "t": 0.5,
+    "f": 12,
+    "shape": "E"
+   },
+   {
+    "t": 1.0,
+    "f": 24,
+    "shape": "A"
+   },
+   {
+    "t": 1.167,
+    "f": 28,
+    "shape": "rest"
+   },
+   {
+    "t": 1.417,
+    "f": 34,
+    "shape": "M"
+   },
+   {
+    "t": 1.5,
+    "f": 36,
+    "shape": "A"
+   },
+   {
+    "t": 1.625,
+    "f": 39,
+    "shape": "M"
+   },
+   {
+    "t": 1.708,
+    "f": 41,
+    "shape": "A"
+   },
+   {
+    "t": 1.833,
+    "f": 44,
+    "shape": "E"
+   },
+   {
+    "t": 2.292,
+    "f": 55,
+    "shape": "M"
+   },
+   {
+    "t": 2.375,
+    "f": 57,
+    "shape": "A"
+   },
+   {
+    "t": 2.542,
+    "f": 61,
+    "shape": "E"
+   },
+   {
+    "t": 2.792,
+    "f": 67,
+    "shape": "rest"
+   },
+   {
+    "t": 2.958,
+    "f": 71,
+    "shape": "E"
+   },
+   {
+    "t": 3.167,
+    "f": 76,
+    "shape": "M"
+   },
+   {
+    "t": 3.25,
+    "f": 78,
+    "shape": "O"
+   },
+   {
+    "t": 3.375,
+    "f": 81,
+    "shape": "E"
+   },
+   {
+    "t": 3.625,
+    "f": 87,
+    "shape": "A"
+   },
+   {
+    "t": 4.0,
+    "f": 96,
+    "shape": "E"
+   },
+   {
+    "t": 4.667,
+    "f": 112,
+    "shape": "rest"
+   },
+   {
+    "t": 4.875,
+    "f": 117,
+    "shape": "E"
+   },
+   {
+    "t": 5.0,
+    "f": 120,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "t0": 0.06,
+    "t1": 0.235,
+    "f0": 1,
+    "f1": 6
+   },
+   {
+    "w": "deeply",
+    "t0": 0.235,
+    "t1": 0.71,
+    "f0": 6,
+    "f1": 17
+   },
+   {
+    "w": "regret",
+    "t0": 0.71,
+    "t1": 1.16,
+    "f0": 17,
+    "f1": 28
+   },
+   {
+    "w": "my",
+    "t0": 1.425,
+    "t1": 1.625,
+    "f0": 34,
+    "f1": 39
+   },
+   {
+    "w": "participation",
+    "t0": 1.625,
+    "t1": 2.8,
+    "f0": 39,
+    "f1": 67
+   },
+   {
+    "w": "in",
+    "t0": 2.95,
+    "t1": 3.062,
+    "f0": 71,
+    "f1": 73
+   },
+   {
+    "w": "the",
+    "t0": 3.062,
+    "t1": 3.162,
+    "f0": 73,
+    "f1": 76
+   },
+   {
+    "w": "board's",
+    "t0": 3.162,
+    "t1": 3.612,
+    "f0": 76,
+    "f1": 87
+   },
+   {
+    "w": "actions",
+    "t0": 3.612,
+    "t1": 5.0,
+    "f0": 87,
+    "f1": 120
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -4.13,
+   "clipped_samples": 0,
+   "median_f0_hz": 85.3,
+   "f0_range_st": 12.2,
+   "final_move_st": -7.1,
+   "wpm": 109,
+   "asr": "I deeply regret my participation in the board's actions.",
+   "cer": 0.0,
+   "logprob": -0.186,
+   "align_median_s": 0.06,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -3.95,
+   "target_lufs": -16.0
+  }
+ },
+ {
+  "id": "a4-30-02",
+  "scene": "30",
+  "speaker": "TASYA",
+  "speaker_slug": "tasya",
+  "text": "\"We are below them, above them, around them.\"",
+  "spoken_as": "We are below them,<0.30s> above them,<0.30s> around them.",
+  "delivery": "Hands clasped, delighted, in the middle of the floor. Three even parallel phrases; the palette steps sync to 'below', 'above', 'around' (see the word track).",
+  "tag": "[V/K · NOV 20, 2023 · re-verify before lock]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "right",
+  "pov": "his",
+  "shot": "[W] the bullpen with [P] TASYA's window open over it, right",
+  "lip_sync": true,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/wav/a4-30-02.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-30-02.mp3",
+  "duration_s": 3.66,
+  "frames_24": 88,
+  "voiced_span_s": 3.54,
+  "take": "t01",
+  "takes_tried": 1,
+  "pick_reason": "only take",
+  "voice": "am_eric (Kokoro-82M stock) · b-eric-warm · speed 0.88",
+  "voiceId": "am_eric",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 70 Hz",
+   "pitch -1.5 st",
+   "low shelf +2 dB @180 Hz",
+   "peak -1.5 dB @350 Hz Q1.0",
+   "high shelf +1.5 dB @6000 Hz",
+   "comp 2.0:1 @-24 dB (12/150 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "pause after word 4: 0.02 s -> 0.30 s (target 0.30)",
+   "pause after word 6: 0.02 s -> 0.30 s (target 0.30)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.125,
+    "f": 3,
+    "shape": "O"
+   },
+   {
+    "t": 0.208,
+    "f": 5,
+    "shape": "E"
+   },
+   {
+    "t": 0.292,
+    "f": 7,
+    "shape": "A"
+   },
+   {
+    "t": 0.458,
+    "f": 11,
+    "shape": "M"
+   },
+   {
+    "t": 0.542,
+    "f": 13,
+    "shape": "E"
+   },
+   {
+    "t": 0.75,
+    "f": 18,
+    "shape": "O"
+   },
+   {
+    "t": 0.917,
+    "f": 22,
+    "shape": "E"
+   },
+   {
+    "t": 1.0,
+    "f": 24,
+    "shape": "A"
+   },
+   {
+    "t": 1.167,
+    "f": 28,
+    "shape": "M"
+   },
+   {
+    "t": 1.25,
+    "f": 30,
+    "shape": "rest"
+   },
+   {
+    "t": 1.583,
+    "f": 38,
+    "shape": "E"
+   },
+   {
+    "t": 1.75,
+    "f": 42,
+    "shape": "M"
+   },
+   {
+    "t": 1.833,
+    "f": 44,
+    "shape": "A"
+   },
+   {
+    "t": 2.0,
+    "f": 48,
+    "shape": "E"
+   },
+   {
+    "t": 2.125,
+    "f": 51,
+    "shape": "A"
+   },
+   {
+    "t": 2.292,
+    "f": 55,
+    "shape": "M"
+   },
+   {
+    "t": 2.375,
+    "f": 57,
+    "shape": "rest"
+   },
+   {
+    "t": 2.75,
+    "f": 66,
+    "shape": "E"
+   },
+   {
+    "t": 2.917,
+    "f": 70,
+    "shape": "A"
+   },
+   {
+    "t": 3.083,
+    "f": 74,
+    "shape": "E"
+   },
+   {
+    "t": 3.292,
+    "f": 79,
+    "shape": "A"
+   },
+   {
+    "t": 3.458,
+    "f": 83,
+    "shape": "M"
+   },
+   {
+    "t": 3.583,
+    "f": 86,
+    "shape": "smile"
+   }
+  ],
+  "words": [
+   {
+    "w": "We",
+    "t0": 0.11,
+    "t1": 0.31,
+    "f0": 3,
+    "f1": 7
+   },
+   {
+    "w": "are",
+    "t0": 0.31,
+    "t1": 0.448,
+    "f0": 7,
+    "f1": 11
+   },
+   {
+    "w": "below",
+    "t0": 0.448,
+    "t1": 0.935,
+    "f0": 11,
+    "f1": 22
+   },
+   {
+    "w": "them",
+    "t0": 0.935,
+    "t1": 1.235,
+    "f0": 22,
+    "f1": 30
+   },
+   {
+    "w": "above",
+    "t0": 1.59,
+    "t1": 2.053,
+    "f0": 38,
+    "f1": 49
+   },
+   {
+    "w": "them",
+    "t0": 2.053,
+    "t1": 2.39,
+    "f0": 49,
+    "f1": 57
+   },
+   {
+    "w": "around",
+    "t0": 2.745,
+    "t1": 3.195,
+    "f0": 66,
+    "f1": 77
+   },
+   {
+    "w": "them",
+    "t0": 3.195,
+    "t1": 3.58,
+    "f0": 77,
+    "f1": 86
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -2.21,
+   "clipped_samples": 0,
+   "median_f0_hz": 137.8,
+   "f0_range_st": 15.3,
+   "final_move_st": -7.3,
+   "wpm": 138,
+   "asr": "We are below them, above them, around them.",
+   "cer": 0.0,
+   "logprob": -0.267,
+   "align_median_s": 0.093,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -2.21,
+   "target_lufs": -16.0
+  }
+ },
+ {
+  "id": "a4-30-03",
+  "scene": "30",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "hi.",
+  "spoken_as": "hi.",
+  "delivery": "(in [PF], looking down at the floor, which is Tasya) Mild and friendly.",
+  "tag": "[INVENTED]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "left",
+  "pov": "his",
+  "shot": "[PF] MAS, left, the 'looking down' swap",
+  "lip_sync": true,
+  "status": "restaged-3.1",
+  "file": "audio/ep01/act4/dialogue/wav/a4-30-03.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-30-03.mp3",
+  "duration_s": 0.71,
+  "frames_24": 18,
+  "voiced_span_s": 0.6,
+  "take": "t01",
+  "takes_tried": 6,
+  "pick_reason": "lowest score 1.514 of 6 takes (next t04 at 2.295); terms: asr_conf 0.874, final_fall 0.64",
+  "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.82",
+  "voiceId": "am_michael",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 70 Hz",
+   "pitch 0",
+   "low shelf +2 dB @160 Hz",
+   "peak -2 dB @320 Hz Q1.0",
+   "peak +1 dB @3200 Hz Q0.8",
+   "high shelf -1.5 dB @8000 Hz",
+   "comp 2.0:1 @-24 dB (10/120 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.125,
+    "f": 3,
+    "shape": "A"
+   },
+   {
+    "t": 0.625,
+    "f": 15,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "hi",
+    "t0": 0.115,
+    "t1": 0.64,
+    "f0": 3,
+    "f1": 15
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -1.57,
+   "clipped_samples": 0,
+   "median_f0_hz": 122.2,
+   "f0_range_st": 8.0,
+   "final_move_st": 0.3,
+   "wpm": null,
+   "asr": "Hi!",
+   "cer": 0.0,
+   "logprob": -0.783,
+   "align_median_s": 0.115,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -1.57,
+   "target_lufs": -16.0
+  },
+  "alt_takes": [
+   {
+    "take": "t01",
+    "file": "audio/ep01/act4/dialogue/takes/a4-30-03/a4-30-03_t01.wav",
+    "score": 1.514,
+    "spec": {
+     "seed": 1
+    }
+   },
+   {
+    "take": "t04",
+    "file": "audio/ep01/act4/dialogue/takes/a4-30-03/a4-30-03_t04.wav",
+    "score": 2.295,
+    "spec": {
+     "seed": 3
+    }
+   },
+   {
+    "take": "t03",
+    "file": "audio/ep01/act4/dialogue/takes/a4-30-03/a4-30-03_t03.wav",
+    "score": 2.596,
+    "spec": {
+     "seed": 2,
+     "carrier": "Oh.",
+     "speed": 0.92
+    }
+   },
+   {
+    "take": "t02",
+    "file": "audio/ep01/act4/dialogue/takes/a4-30-03/a4-30-03_t02.wav",
+    "score": 3.905,
+    "spec": {
+     "seed": 1,
+     "carrier": "Right. Okay."
+    }
+   },
+   {
+    "take": "t05",
+    "file": "audio/ep01/act4/dialogue/takes/a4-30-03/a4-30-03_t05.wav",
+    "score": 4.129,
+    "spec": {
+     "seed": 4,
+     "carrier": "Oh. Okay."
+    }
+   },
+   {
+    "take": "t06",
+    "file": "audio/ep01/act4/dialogue/takes/a4-30-03/a4-30-03_t06.wav",
+    "score": 15.403,
+    "spec": {
+     "seed": 5,
+     "carrier": "Well."
+    }
+   }
+  ]
+ },
+ {
+  "id": "a4-30-04",
+  "scene": "30",
+  "speaker": "TASYA",
+  "speaker_slug": "tasya",
+  "text": "Hello.",
+  "spoken_as": "Hello.",
+  "delivery": "(from the floor, warmly) Warm and pleased; a smile after. The mix can put it in the floor.",
+  "tag": "[INVENTED]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "os",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": "his",
+  "shot": "[PF] MAS, left (TASYA O.S., from the floor)",
+  "lip_sync": false,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/wav/a4-30-04.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-30-04.mp3",
+  "duration_s": 0.89,
+  "frames_24": 22,
+  "voiced_span_s": 0.71,
+  "take": "t03",
+  "takes_tried": 3,
+  "pick_reason": "lowest score 0.588 of 3 takes (next t01 at 0.856); terms: asr_conf 0.588",
+  "voice": "am_eric (Kokoro-82M stock) · b-eric-warm · speed 0.88",
+  "voiceId": "am_eric",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 70 Hz",
+   "pitch -1.5 st",
+   "low shelf +2 dB @180 Hz",
+   "peak -1.5 dB @350 Hz Q1.0",
+   "high shelf +1.5 dB @6000 Hz",
+   "comp 2.0:1 @-24 dB (12/150 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [],
+  "words": [
+   {
+    "w": "Hello",
+    "t0": 0.135,
+    "t1": 0.76,
+    "f0": 3,
+    "f1": 18
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -3.69,
+   "clipped_samples": 0,
+   "median_f0_hz": 149.0,
+   "f0_range_st": 11.4,
+   "final_move_st": -1.3,
+   "wpm": null,
+   "asr": "Hello.",
+   "cer": 0.0,
+   "logprob": -0.592,
+   "align_median_s": 0.135,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -3.67,
+   "target_lufs": -16.0
+  },
+  "alt_takes": [
+   {
+    "take": "t03",
+    "file": "audio/ep01/act4/dialogue/takes/a4-30-04/a4-30-04_t03.wav",
+    "score": 0.588,
+    "spec": {
+     "seed": 2,
+     "speed": 0.9
+    }
+   },
+   {
+    "take": "t01",
+    "file": "audio/ep01/act4/dialogue/takes/a4-30-04/a4-30-04_t01.wav",
+    "score": 0.856,
+    "spec": {
+     "seed": 1
+    }
+   },
+   {
+    "take": "t02",
+    "file": "audio/ep01/act4/dialogue/takes/a4-30-04/a4-30-04_t02.wav",
+    "score": 8.772,
+    "spec": {
+     "seed": 1,
+     "carrier": "Right. Okay."
+    }
+   }
+  ]
+ },
+ {
+  "id": "a4-30-05",
+  "scene": "30",
+  "speaker": "TERB",
+  "speaker_slug": "terb",
+  "text": "Which room is on fire?",
+  "spoken_as": "Which room is on fire?",
+  "delivery": "Door banging open, extinguisher like a briefcase. Brisk and procedural, as if asking which room the meeting's in.",
+  "tag": "[INVENTED]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "right",
+  "pov": "his",
+  "shot": "[P] TERB, right (after the [W] entrance and his card)",
+  "lip_sync": true,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/wav/a4-30-05.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-30-05.mp3",
+  "duration_s": 1.71,
+  "frames_24": 42,
+  "voiced_span_s": 1.59,
+  "take": "t02",
+  "takes_tried": 3,
+  "pick_reason": "lowest score 0.157 of 3 takes (next t01 at 0.177); terms: asr_conf 0.157",
+  "voice": "am_echo (Kokoro-82M stock) · b-echo-brisk · speed 1.02",
+  "voiceId": "am_echo",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 80 Hz",
+   "pitch 0",
+   "peak +1.5 dB @150 Hz Q0.9",
+   "peak -1.5 dB @500 Hz Q1.0",
+   "peak +2 dB @2000 Hz Q0.9",
+   "comp 3.0:1 @-21 dB (3/70 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "O"
+   },
+   {
+    "t": 0.083,
+    "f": 2,
+    "shape": "E"
+   },
+   {
+    "t": 0.417,
+    "f": 10,
+    "shape": "O"
+   },
+   {
+    "t": 0.583,
+    "f": 14,
+    "shape": "M"
+   },
+   {
+    "t": 0.667,
+    "f": 16,
+    "shape": "E"
+   },
+   {
+    "t": 0.792,
+    "f": 19,
+    "shape": "O"
+   },
+   {
+    "t": 0.958,
+    "f": 23,
+    "shape": "E"
+   },
+   {
+    "t": 1.125,
+    "f": 27,
+    "shape": "A"
+   },
+   {
+    "t": 1.333,
+    "f": 32,
+    "shape": "E"
+   },
+   {
+    "t": 1.625,
+    "f": 39,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "Which",
+    "t0": 0.02,
+    "t1": 0.332,
+    "f0": 0,
+    "f1": 8
+   },
+   {
+    "w": "room",
+    "t0": 0.332,
+    "t1": 0.645,
+    "f0": 8,
+    "f1": 15
+   },
+   {
+    "w": "is",
+    "t0": 0.645,
+    "t1": 0.795,
+    "f0": 15,
+    "f1": 19
+   },
+   {
+    "w": "on",
+    "t0": 0.795,
+    "t1": 1.045,
+    "f0": 19,
+    "f1": 25
+   },
+   {
+    "w": "fire",
+    "t0": 1.045,
+    "t1": 1.63,
+    "f0": 25,
+    "f1": 39
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -3.09,
+   "clipped_samples": 0,
+   "median_f0_hz": 103.2,
+   "f0_range_st": 12.9,
+   "final_move_st": -6.6,
+   "wpm": 186,
+   "asr": "Which room is on fire?",
+   "cer": 0.0,
+   "logprob": -0.305,
+   "align_median_s": 0.045,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -3.08,
+   "target_lufs": -16.0
+  }
+ },
+ {
+  "id": "a4-30-06",
+  "scene": "30",
+  "speaker": "TERB",
+  "speaker_slug": "terb",
+  "text": "…Ah.",
+  "spoken_as": "Ah.",
+  "delivery": "(in [P]; behind his window the room looks around at the fires) The realisation: short, flat, a little falling. (The '…' is picture time.)",
+  "tag": "[INVENTED]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "right",
+  "pov": "his",
+  "shot": "[P] TERB, right; behind his window everyone looks around",
+  "lip_sync": true,
+  "status": "restaged-3.1",
+  "file": "audio/ep01/act4/dialogue/wav/a4-30-06.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-30-06.mp3",
+  "duration_s": 0.63,
+  "frames_24": 16,
+  "voiced_span_s": 0.41,
+  "take": "t02",
+  "takes_tried": 4,
+  "pick_reason": "lowest score 1.144 of 4 takes (next t01 at 8.835); terms: asr_conf 0.744, final_fall 0.4",
+  "voice": "am_echo (Kokoro-82M stock) · b-echo-brisk · speed 1.02",
+  "voiceId": "am_echo",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 80 Hz",
+   "pitch 0",
+   "peak +1.5 dB @150 Hz Q0.9",
+   "peak -1.5 dB @500 Hz Q1.0",
+   "peak +2 dB @2000 Hz Q0.9",
+   "comp 3.0:1 @-21 dB (3/70 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "context-carrier read, cut at the quietest 5 ms frame before the line (carrier: 'Which room is on fire?')",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "A"
+   },
+   {
+    "t": 0.458,
+    "f": 11,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "Ah",
+    "t0": 0.02,
+    "t1": 0.46,
+    "f0": 0,
+    "f1": 11
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -1.52,
+   "clipped_samples": 0,
+   "median_f0_hz": 89.9,
+   "f0_range_st": 11.5,
+   "final_move_st": 0.0,
+   "wpm": null,
+   "asr": "Ah.",
+   "cer": 0.0,
+   "logprob": -0.696,
+   "align_median_s": 0.02,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -1.45,
+   "target_lufs": -16.0
+  },
+  "alt_takes": [
+   {
+    "take": "t02",
+    "file": "audio/ep01/act4/dialogue/takes/a4-30-06/a4-30-06_t02.wav",
+    "score": 1.144,
+    "spec": {
+     "seed": 1,
+     "carrier": "Which room is on fire?"
+    }
+   },
+   {
+    "take": "t01",
+    "file": "audio/ep01/act4/dialogue/takes/a4-30-06/a4-30-06_t01.wav",
+    "score": 8.835,
+    "spec": {
+     "seed": 1
+    }
+   },
+   {
+    "take": "t03",
+    "file": "audio/ep01/act4/dialogue/takes/a4-30-06/a4-30-06_t03.wav",
+    "score": 12.801,
+    "spec": {
+     "seed": 2,
+     "carrier": "Right. Okay."
+    }
+   },
+   {
+    "take": "t04",
+    "file": "audio/ep01/act4/dialogue/takes/a4-30-06/a4-30-06_t04.wav",
+    "score": 23.416,
+    "spec": {
+     "seed": 3,
+     "say": "Ah...",
+     "speed": 0.9
+    }
+   }
+  ]
+ },
+ {
+  "id": "a4-30-07",
+  "scene": "30",
+  "speaker": "TERB",
+  "speaker_slug": "terb",
+  "text": "Terms?",
+  "spoken_as": "Terms?",
+  "delivery": "Brisk, procedural; the only question that matters to him. A quick lift.",
+  "tag": "[INVENTED]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "os",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": "his",
+  "shot": "[2S] the calm-off (TERB O.S.)",
+  "lip_sync": false,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/wav/a4-30-07.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-30-07.mp3",
+  "duration_s": 0.9,
+  "frames_24": 22,
+  "voiced_span_s": 0.75,
+  "take": "t06",
+  "takes_tried": 6,
+  "pick_reason": "lowest score 0.579 of 6 takes (next t02 at 4.05); terms: asr_conf 0.579",
+  "voice": "am_echo (Kokoro-82M stock) · b-echo-brisk · speed 1.02",
+  "voiceId": "am_echo",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 80 Hz",
+   "pitch 0",
+   "peak +1.5 dB @150 Hz Q0.9",
+   "peak -1.5 dB @500 Hz Q1.0",
+   "peak +2 dB @2000 Hz Q0.9",
+   "comp 3.0:1 @-21 dB (3/70 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "context-carrier read, cut at the quietest 5 ms frame before the line (carrier: 'Right.')",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [],
+  "words": [
+   {
+    "w": "Terms",
+    "t0": 0.02,
+    "t1": 0.8,
+    "f0": 0,
+    "f1": 19
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -2.63,
+   "clipped_samples": 0,
+   "median_f0_hz": 108.8,
+   "f0_range_st": 12.1,
+   "final_move_st": 11.9,
+   "wpm": null,
+   "asr": "terms.",
+   "cer": 0.0,
+   "logprob": -0.586,
+   "align_median_s": 0.02,
+   "mp3_lufs_i": -16.01,
+   "mp3_true_peak_dbtp": -2.52,
+   "target_lufs": -16.0
+  }
+ },
+ {
+  "id": "a4-30-08",
+  "scene": "30",
+  "speaker": "MADA",
+  "speaker_slug": "mada",
+  "text": "Good question.",
+  "spoken_as": "Good question.",
+  "delivery": "The calm-off (PORTRAIT: MADA, right; HOLD 1 BEAT before). The same canned answer, perfectly level.",
+  "tag": "[INVENTED] catchphrase",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "right",
+  "pov": "his",
+  "shot": "[P] MADA, right, after HOLD 1 BEAT",
+  "lip_sync": true,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/wav/a4-30-08.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-30-08.mp3",
+  "duration_s": 1.09,
+  "frames_24": 27,
+  "voiced_span_s": 0.99,
+  "take": "t08",
+  "takes_tried": 8,
+  "pick_reason": "lowest score 2.112 of 8 takes (next t04 at 2.482); terms: asr_conf 0.237, flatness 1.875",
+  "voice": "am_adam (Kokoro-82M stock) · b-adam-grey · speed 0.9",
+  "voiceId": "am_adam",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 110 Hz",
+   "pitch +1.5 st",
+   "low shelf -1.5 dB @180 Hz",
+   "peak -1.5 dB @3000 Hz Q0.9",
+   "high shelf -1.5 dB @7000 Hz",
+   "comp 3.0:1 @-24 dB (5/120 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "context-carrier read, cut at the quietest 5 ms frame before the line (carrier: 'Hm.')",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "E"
+   },
+   {
+    "t": 0.083,
+    "f": 2,
+    "shape": "O"
+   },
+   {
+    "t": 0.208,
+    "f": 5,
+    "shape": "E"
+   },
+   {
+    "t": 0.333,
+    "f": 8,
+    "shape": "O"
+   },
+   {
+    "t": 0.417,
+    "f": 10,
+    "shape": "A"
+   },
+   {
+    "t": 0.625,
+    "f": 15,
+    "shape": "E"
+   },
+   {
+    "t": 1.0,
+    "f": 24,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "Good",
+    "t0": 0.02,
+    "t1": 0.275,
+    "f0": 0,
+    "f1": 7
+   },
+   {
+    "w": "question",
+    "t0": 0.275,
+    "t1": 1.01,
+    "f0": 7,
+    "f1": 24
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -4.18,
+   "clipped_samples": 0,
+   "median_f0_hz": 123.5,
+   "f0_range_st": 7.5,
+   "final_move_st": -5.2,
+   "wpm": null,
+   "asr": "Good question.",
+   "cer": 0.0,
+   "logprob": -0.358,
+   "align_median_s": 0.018,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -3.9,
+   "contour_r_vs_mas_echo": 0.852,
+   "target_lufs": -16.0
+  },
+  "master": "mada-good-question",
+  "alt_takes": [
+   {
+    "take": "t08",
+    "file": "audio/ep01/act4/dialogue/takes/mada-good-question/mada-good-question_t08.wav",
+    "score": 2.112,
+    "spec": {
+     "seed": 7,
+     "carrier": "Hm.",
+     "speed": 0.9
+    }
+   },
+   {
+    "take": "t04",
+    "file": "audio/ep01/act4/dialogue/takes/mada-good-question/mada-good-question_t04.wav",
+    "score": 2.482,
+    "spec": {
+     "seed": 3,
+     "carrier": "Hm.",
+     "speed": 0.95
+    }
+   },
+   {
+    "take": "t07",
+    "file": "audio/ep01/act4/dialogue/takes/mada-good-question/mada-good-question_t07.wav",
+    "score": 2.806,
+    "spec": {
+     "seed": 6,
+     "carrier": "Mm.",
+     "speed": 0.95
+    }
+   },
+   {
+    "take": "t01",
+    "file": "audio/ep01/act4/dialogue/takes/mada-good-question/mada-good-question_t01.wav",
+    "score": 3.007,
+    "spec": {
+     "seed": 1
+    }
+   },
+   {
+    "take": "t05",
+    "file": "audio/ep01/act4/dialogue/takes/mada-good-question/mada-good-question_t05.wav",
+    "score": 3.222,
+    "spec": {
+     "seed": 4,
+     "speed": 0.9
+    }
+   },
+   {
+    "take": "t06",
+    "file": "audio/ep01/act4/dialogue/takes/mada-good-question/mada-good-question_t06.wav",
+    "score": 3.341,
+    "spec": {
+     "seed": 5,
+     "speed": 1.05
+    }
+   },
+   {
+    "take": "t02",
+    "file": "audio/ep01/act4/dialogue/takes/mada-good-question/mada-good-question_t02.wav",
+    "score": 3.364,
+    "spec": {
+     "seed": 2
+    }
+   },
+   {
+    "take": "t03",
+    "file": "audio/ep01/act4/dialogue/takes/mada-good-question/mada-good-question_t03.wav",
+    "score": 9.417,
+    "spec": {
+     "seed": 1,
+     "carrier": "Right. Okay."
+    }
+   }
+  ]
+ },
+ {
+  "id": "a4-30-09",
+  "scene": "30",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "good question.",
+  "spoken_as": "good question.",
+  "delivery": "(one beat late; PORTRAIT: MAS, left) The echo: Mada's melody, in Mas's lane, just as level. Then HOLD 1 BAR, the episode's one long hold.",
+  "tag": "[INVENTED]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "left",
+  "pov": "his",
+  "shot": "[P] MAS, left, after HOLD 1 BEAT; then [2S] HOLD 1 BAR",
+  "lip_sync": true,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/wav/a4-30-09.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-30-09.mp3",
+  "duration_s": 1.34,
+  "frames_24": 33,
+  "voiced_span_s": 1.23,
+  "take": "t07",
+  "takes_tried": 10,
+  "pick_reason": "lowest score 0.956 of 10 takes (next t04 at 1.31); terms: asr_conf 0.536, range 0.42, pair_contour_match 0.592",
+  "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.82",
+  "voiceId": "am_michael",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 70 Hz",
+   "pitch 0",
+   "low shelf +2 dB @160 Hz",
+   "peak -2 dB @320 Hz Q1.0",
+   "peak +1 dB @3200 Hz Q0.8",
+   "high shelf -1.5 dB @8000 Hz",
+   "comp 2.0:1 @-24 dB (10/120 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "context-carrier read, cut at the quietest 5 ms frame before the line (carrier: 'Mm.')",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "E"
+   },
+   {
+    "t": 0.083,
+    "f": 2,
+    "shape": "O"
+   },
+   {
+    "t": 0.333,
+    "f": 8,
+    "shape": "E"
+   },
+   {
+    "t": 0.5,
+    "f": 12,
+    "shape": "O"
+   },
+   {
+    "t": 0.583,
+    "f": 14,
+    "shape": "A"
+   },
+   {
+    "t": 0.792,
+    "f": 19,
+    "shape": "E"
+   },
+   {
+    "t": 1.25,
+    "f": 30,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "good",
+    "t0": 0.02,
+    "t1": 0.398,
+    "f0": 0,
+    "f1": 10
+   },
+   {
+    "w": "question",
+    "t0": 0.398,
+    "t1": 1.27,
+    "f0": 10,
+    "f1": 30
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -2.86,
+   "clipped_samples": 0,
+   "median_f0_hz": 113.9,
+   "f0_range_st": 10.7,
+   "final_move_st": -2.1,
+   "wpm": null,
+   "asr": "Good question.",
+   "cer": 0.0,
+   "logprob": -0.557,
+   "align_median_s": 0.039,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -2.87,
+   "contour_r_vs_mada": 0.852,
+   "target_lufs": -16.0
+  },
+  "alt_takes": [
+   {
+    "take": "t07",
+    "file": "audio/ep01/act4/dialogue/takes/a4-30-09/a4-30-09_t07.wav",
+    "score": 0.956,
+    "spec": {
+     "seed": 6,
+     "carrier": "Mm.",
+     "speed": 0.95
+    }
+   },
+   {
+    "take": "t04",
+    "file": "audio/ep01/act4/dialogue/takes/a4-30-09/a4-30-09_t04.wav",
+    "score": 1.31,
+    "spec": {
+     "seed": 3,
+     "carrier": "Hm.",
+     "speed": 0.95
+    }
+   },
+   {
+    "take": "t05",
+    "file": "audio/ep01/act4/dialogue/takes/a4-30-09/a4-30-09_t05.wav",
+    "score": 1.718,
+    "spec": {
+     "seed": 4,
+     "speed": 1.05
+    }
+   },
+   {
+    "take": "t06",
+    "file": "audio/ep01/act4/dialogue/takes/a4-30-09/a4-30-09_t06.wav",
+    "score": 2.239,
+    "spec": {
+     "seed": 5,
+     "say": "Good question."
+    }
+   },
+   {
+    "take": "t01",
+    "file": "audio/ep01/act4/dialogue/takes/a4-30-09/a4-30-09_t01.wav",
+    "score": 2.51,
+    "spec": {
+     "seed": 1
+    }
+   },
+   {
+    "take": "t09",
+    "file": "audio/ep01/act4/dialogue/takes/a4-30-09/a4-30-09_t09.wav",
+    "score": 2.614,
+    "spec": {
+     "seed": 8,
+     "carrier": "Okay."
+    }
+   },
+   {
+    "take": "t03",
+    "file": "audio/ep01/act4/dialogue/takes/a4-30-09/a4-30-09_t03.wav",
+    "score": 2.742,
+    "spec": {
+     "seed": 1,
+     "carrier": "Right. Okay."
+    }
+   },
+   {
+    "take": "t10",
+    "file": "audio/ep01/act4/dialogue/takes/a4-30-09/a4-30-09_t10.wav",
+    "score": 3.184,
+    "spec": {
+     "seed": 9,
+     "carrier": "Hm.",
+     "speed": 1.0
+    }
+   },
+   {
+    "take": "t02",
+    "file": "audio/ep01/act4/dialogue/takes/a4-30-09/a4-30-09_t02.wav",
+    "score": 3.371,
+    "spec": {
+     "seed": 2,
+     "speed": 0.92
+    }
+   },
+   {
+    "take": "t08",
+    "file": "audio/ep01/act4/dialogue/takes/a4-30-09/a4-30-09_t08.wav",
+    "score": 3.753,
+    "spec": {
+     "seed": 7,
+     "carrier": "Hm.",
+     "speed": 0.9
+    }
+   }
+  ],
+  "pair": {
+   "mada_take": "t08",
+   "pair_score": 4.62
+  }
+ },
+ {
+  "id": "a4-30-10",
+  "scene": "30",
+  "speaker": "GERG MOCKBRAN",
+  "speaker_slug": "gerg-mockbran",
+  "text": "\"Returning to NopeAI & getting back to coding tonight.\"",
+  "spoken_as": "Returning to Nope AI and getting back to coding tonight.",
+  "delivery": "(post; his laptop lights green, keycaps pop) Scratch read only.",
+  "tag": "[V · NOV 21, 2023 · re-fetch the casing; '&' read as 'and']",
+  "mode": "post-popup",
+  "voiced_in_cut": false,
+  "on_camera": "none",
+  "kind": "post",
+  "side": "none",
+  "pov": "his",
+  "shot": "[POV] his phone, lit green (then [PF] MAS reading it, 1 beat)",
+  "lip_sync": false,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/optional/a4-30-10.wav",
+  "mp3": "audio/ep01/act4/dialogue/optional/a4-30-10.mp3",
+  "duration_s": 3.0,
+  "frames_24": 72,
+  "voiced_span_s": 2.75,
+  "take": "t01",
+  "takes_tried": 1,
+  "pick_reason": "only take",
+  "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.15",
+  "voiceId": "am_puck",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 90 Hz",
+   "pitch +1.5 st",
+   "peak -2 dB @250 Hz Q1.0",
+   "peak +2 dB @4000 Hz Q0.9",
+   "comp 3.0:1 @-22 dB (4/80 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [],
+  "words": [
+   {
+    "w": "Returning",
+    "t0": 0.02,
+    "t1": 0.4,
+    "f0": 0,
+    "f1": 10
+   },
+   {
+    "w": "to",
+    "t0": 0.4,
+    "t1": 0.5,
+    "f0": 10,
+    "f1": 12
+   },
+   {
+    "w": "Nope",
+    "t0": 0.5,
+    "t1": 0.738,
+    "f0": 12,
+    "f1": 18
+   },
+   {
+    "w": "AI",
+    "t0": 0.738,
+    "t1": 1.288,
+    "f0": 18,
+    "f1": 31
+   },
+   {
+    "w": "and",
+    "t0": 1.288,
+    "t1": 1.425,
+    "f0": 31,
+    "f1": 34
+   },
+   {
+    "w": "getting",
+    "t0": 1.425,
+    "t1": 1.675,
+    "f0": 34,
+    "f1": 40
+   },
+   {
+    "w": "back",
+    "t0": 1.675,
+    "t1": 1.95,
+    "f0": 40,
+    "f1": 47
+   },
+   {
+    "w": "to",
+    "t0": 1.95,
+    "t1": 2.05,
+    "f0": 47,
+    "f1": 49
+   },
+   {
+    "w": "coding",
+    "t0": 2.05,
+    "t1": 2.4,
+    "f0": 49,
+    "f1": 58
+   },
+   {
+    "w": "tonight",
+    "t0": 2.4,
+    "t1": 2.79,
+    "f0": 58,
+    "f1": 67
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -3.61,
+   "clipped_samples": 0,
+   "median_f0_hz": 127.8,
+   "f0_range_st": 10.9,
+   "final_move_st": -3.5,
+   "wpm": 217,
+   "asr": "returning to NOPE AI and getting back to coding tonight.",
+   "cer": 0.0,
+   "logprob": -0.289,
+   "align_median_s": 0.052,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -3.42,
+   "target_lufs": -16.0
+  },
+  "popup_hold_beats": 7,
+  "popup_note": "House rule: posts are pop-ups, never speeches. Unvoiced in the cut; this scratch read is for the animatic / audio description only. Suggested on-screen hold >= 7 beats (4.38 s) at ~14 chars/s."
+ },
+ {
+  "id": "a4-30-11",
+  "scene": "30",
+  "speaker": "TTEMME",
+  "speaker_slug": "ttemme",
+  "text": "\"I am deeply pleased by this result, after ~72 very intense hours of work.\"",
+  "spoken_as": "I am deeply pleased by this result,<0.22s> after about seventy-two very intense hours of work.",
+  "delivery": "(post; the last grain runs out) Scratch read only: sincere, gracious.",
+  "tag": "[V · NOV 21, 2023; '~' read as 'about']",
+  "mode": "post-popup",
+  "voiced_in_cut": false,
+  "on_camera": "none",
+  "kind": "post",
+  "side": "none",
+  "pov": "his",
+  "shot": "[ECU] prop insert: the last grain runs out of the hourglass",
+  "lip_sync": false,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/optional/a4-30-11.wav",
+  "mp3": "audio/ep01/act4/dialogue/optional/a4-30-11.mp3",
+  "duration_s": 5.6,
+  "frames_24": 135,
+  "voiced_span_s": 5.5,
+  "take": "t01",
+  "takes_tried": 1,
+  "pick_reason": "only take",
+  "voice": "am_fenrir (Kokoro-82M stock) · d-fenrir-headset · speed 1.0",
+  "voiceId": "am_fenrir",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 150 Hz",
+   "pitch +2 st",
+   "peak -2 dB @300 Hz Q1.0",
+   "peak +2.5 dB @2800 Hz Q0.9",
+   "high shelf -1 dB @9000 Hz",
+   "comp 3.5:1 @-20 dB (3/60 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "pause after word 7: 0.20 s -> 0.22 s (target 0.22)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [],
+  "words": [
+   {
+    "w": "I",
+    "t0": 0.02,
+    "t1": 0.14,
+    "f0": 0,
+    "f1": 3
+   },
+   {
+    "w": "am",
+    "t0": 0.14,
+    "t1": 0.302,
+    "f0": 3,
+    "f1": 7
+   },
+   {
+    "w": "deeply",
+    "t0": 0.302,
+    "t1": 0.702,
+    "f0": 7,
+    "f1": 17
+   },
+   {
+    "w": "pleased",
+    "t0": 0.702,
+    "t1": 1.165,
+    "f0": 17,
+    "f1": 28
+   },
+   {
+    "w": "by",
+    "t0": 1.165,
+    "t1": 1.34,
+    "f0": 28,
+    "f1": 32
+   },
+   {
+    "w": "this",
+    "t0": 1.34,
+    "t1": 1.54,
+    "f0": 32,
+    "f1": 37
+   },
+   {
+    "w": "result",
+    "t0": 1.54,
+    "t1": 2.08,
+    "f0": 37,
+    "f1": 50
+   },
+   {
+    "w": "after",
+    "t0": 2.268,
+    "t1": 2.63,
+    "f0": 54,
+    "f1": 63
+   },
+   {
+    "w": "about",
+    "t0": 2.63,
+    "t1": 2.968,
+    "f0": 63,
+    "f1": 71
+   },
+   {
+    "w": "seventy-two",
+    "t0": 2.968,
+    "t1": 3.718,
+    "f0": 71,
+    "f1": 89
+   },
+   {
+    "w": "very",
+    "t0": 3.718,
+    "t1": 4.08,
+    "f0": 89,
+    "f1": 98
+   },
+   {
+    "w": "intense",
+    "t0": 4.08,
+    "t1": 4.617,
+    "f0": 98,
+    "f1": 111
+   },
+   {
+    "w": "hours",
+    "t0": 4.617,
+    "t1": 4.992,
+    "f0": 111,
+    "f1": 120
+   },
+   {
+    "w": "of",
+    "t0": 4.992,
+    "t1": 5.105,
+    "f0": 120,
+    "f1": 123
+   },
+   {
+    "w": "work",
+    "t0": 5.105,
+    "t1": 5.52,
+    "f0": 123,
+    "f1": 132
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -4.14,
+   "clipped_samples": 0,
+   "median_f0_hz": 143.5,
+   "f0_range_st": 12.7,
+   "final_move_st": -4.6,
+   "wpm": 164,
+   "asr": "I am deeply pleased by this result, after about 72 very intense hours of work.",
+   "cer": 0.143,
+   "logprob": -0.153,
+   "align_median_s": 0.052,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -4.11,
+   "target_lufs": -16.0
+  },
+  "popup_hold_beats": 10,
+  "popup_note": "House rule: posts are pop-ups, never speeches. Unvoiced in the cut; this scratch read is for the animatic / audio description only. Suggested on-screen hold >= 10 beats (6.25 s) at ~14 chars/s."
+ },
+ {
+  "id": "a4-30-12",
+  "scene": "30",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "okay.",
+  "spoken_as": "okay.",
+  "delivery": "(off his face, over the [ECU] of his hands; the silent [CU] held 2 beats before it; no lip-sync) Settled, level-to-falling; the act resolves.",
+  "tag": "[INVENTED]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "offface",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": "his",
+  "shot": "[ECU] his hand sets the glass down and nudges it (2 beats), after the silent [CU]",
+  "lip_sync": false,
+  "status": "restaged-3.1",
+  "file": "audio/ep01/act4/dialogue/wav/a4-30-12.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-30-12.mp3",
+  "duration_s": 0.89,
+  "frames_24": 22,
+  "voiced_span_s": 0.77,
+  "take": "t04",
+  "takes_tried": 7,
+  "pick_reason": "lowest score 0.561 of 7 takes (next t03 at 0.853); terms: asr_conf 0.561",
+  "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.82",
+  "voiceId": "am_michael",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 70 Hz",
+   "pitch 0",
+   "low shelf +2 dB @160 Hz",
+   "peak -2 dB @320 Hz Q1.0",
+   "peak +1 dB @3200 Hz Q0.8",
+   "high shelf -1.5 dB @8000 Hz",
+   "comp 2.0:1 @-24 dB (10/120 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "context-carrier read, cut at the quietest 5 ms frame before the line (carrier: 'I see.')",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [],
+  "words": [
+   {
+    "w": "okay",
+    "t0": 0.02,
+    "t1": 0.82,
+    "f0": 0,
+    "f1": 20
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -2.87,
+   "clipped_samples": 0,
+   "median_f0_hz": 106.3,
+   "f0_range_st": 7.6,
+   "final_move_st": -2.4,
+   "wpm": null,
+   "asr": "Okay",
+   "cer": 0.0,
+   "logprob": -0.574,
+   "align_median_s": 0.02,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -2.87,
+   "target_lufs": -16.0
+  },
+  "alt_takes": [
+   {
+    "take": "t04",
+    "file": "audio/ep01/act4/dialogue/takes/a4-30-12/a4-30-12_t04.wav",
+    "score": 0.561,
+    "spec": {
+     "seed": 3,
+     "carrier": "I see.",
+     "speed": 0.95
+    }
+   },
+   {
+    "take": "t03",
+    "file": "audio/ep01/act4/dialogue/takes/a4-30-12/a4-30-12_t03.wav",
+    "score": 0.853,
+    "spec": {
+     "seed": 1,
+     "carrier": "Right."
+    }
+   },
+   {
+    "take": "t05",
+    "file": "audio/ep01/act4/dialogue/takes/a4-30-12/a4-30-12_t05.wav",
+    "score": 2.949,
+    "spec": {
+     "seed": 4,
+     "carrier": "Mm."
+    }
+   },
+   {
+    "take": "t06",
+    "file": "audio/ep01/act4/dialogue/takes/a4-30-12/a4-30-12_t06.wav",
+    "score": 3.728,
+    "spec": {
+     "seed": 5,
+     "carrier": "Sure.",
+     "speed": 0.95
+    }
+   },
+   {
+    "take": "t07",
+    "file": "audio/ep01/act4/dialogue/takes/a4-30-12/a4-30-12_t07.wav",
+    "score": 3.81,
+    "spec": {
+     "seed": 6,
+     "carrier": "I see."
+    }
+   },
+   {
+    "take": "t01",
+    "file": "audio/ep01/act4/dialogue/takes/a4-30-12/a4-30-12_t01.wav",
+    "score": 11.245,
+    "spec": {
+     "seed": 1
+    }
+   },
+   {
+    "take": "t02",
+    "file": "audio/ep01/act4/dialogue/takes/a4-30-12/a4-30-12_t02.wav",
+    "score": 11.661,
+    "spec": {
+     "seed": 2,
+     "speed": 0.9
+    }
+   }
+  ]
+ },
+ {
+  "id": "a4-31-01",
+  "scene": "31",
+  "speaker": "GERG MOCKBRAN",
+  "speaker_slug": "gerg-mockbran",
+  "text": "What's in there?",
+  "spoken_as": "What's in there?",
+  "delivery": "Stops mid-typing at the vault. Cheerful, literal curiosity.",
+  "tag": "[INVENTED]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "right",
+  "pov": "his",
+  "shot": "[P2] MAS left; GERG right, laptop open (gerg-speak portrait)",
+  "lip_sync": true,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/wav/a4-31-01.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-31-01.mp3",
+  "duration_s": 0.9,
+  "frames_24": 22,
+  "voiced_span_s": 0.71,
+  "take": "t01",
+  "takes_tried": 2,
+  "pick_reason": "lowest score 0.186 of 2 takes (next t02 at 0.358); terms: asr_conf 0.186",
+  "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.15",
+  "voiceId": "am_puck",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 90 Hz",
+   "pitch +1.5 st",
+   "peak -2 dB @250 Hz Q1.0",
+   "peak +2 dB @4000 Hz Q0.9",
+   "comp 3.0:1 @-22 dB (4/80 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "A"
+   },
+   {
+    "t": 0.25,
+    "f": 6,
+    "shape": "E"
+   },
+   {
+    "t": 0.417,
+    "f": 10,
+    "shape": "A"
+   },
+   {
+    "t": 0.625,
+    "f": 15,
+    "shape": "E"
+   },
+   {
+    "t": 0.75,
+    "f": 18,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "What's",
+    "t0": 0.02,
+    "t1": 0.138,
+    "f0": 0,
+    "f1": 3
+   },
+   {
+    "w": "in",
+    "t0": 0.138,
+    "t1": 0.325,
+    "f0": 3,
+    "f1": 8
+   },
+   {
+    "w": "there",
+    "t0": 0.325,
+    "t1": 0.75,
+    "f0": 8,
+    "f1": 18
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -1.58,
+   "clipped_samples": 0,
+   "median_f0_hz": 144.3,
+   "f0_range_st": 5.2,
+   "final_move_st": -4.1,
+   "wpm": 247,
+   "asr": "What's in there?",
+   "cer": 0.0,
+   "logprob": -0.324,
+   "align_median_s": 0.025,
+   "mp3_lufs_i": -15.99,
+   "mp3_true_peak_dbtp": -1.58,
+   "target_lufs": -16.0
+  }
+ },
+ {
+  "id": "a4-31-02",
+  "scene": "31",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "it's a preview.",
+  "spoken_as": "it's a preview.",
+  "delivery": "(not looking) Walking past; pleasant and flat. The vault hums under it.",
+  "tag": "[INVENTED] (echo of the 'research preview' launch)",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "left",
+  "pov": "his",
+  "shot": "[P2] MAS left (not looking); the vault hums on the line",
+  "lip_sync": true,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/wav/a4-31-02.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-31-02.mp3",
+  "duration_s": 1.42,
+  "frames_24": 35,
+  "voiced_span_s": 1.3,
+  "take": "t01",
+  "takes_tried": 4,
+  "pick_reason": "lowest score 0.174 of 4 takes (next t02 at 0.618); terms: asr_conf 0.174",
+  "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.82",
+  "voiceId": "am_michael",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 70 Hz",
+   "pitch 0",
+   "low shelf +2 dB @160 Hz",
+   "peak -2 dB @320 Hz Q1.0",
+   "peak +1 dB @3200 Hz Q0.8",
+   "high shelf -1.5 dB @8000 Hz",
+   "comp 2.0:1 @-24 dB (10/120 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.125,
+    "f": 3,
+    "shape": "E"
+   },
+   {
+    "t": 0.333,
+    "f": 8,
+    "shape": "A"
+   },
+   {
+    "t": 0.458,
+    "f": 11,
+    "shape": "M"
+   },
+   {
+    "t": 0.542,
+    "f": 13,
+    "shape": "E"
+   },
+   {
+    "t": 0.667,
+    "f": 16,
+    "shape": "A"
+   },
+   {
+    "t": 0.917,
+    "f": 22,
+    "shape": "E"
+   },
+   {
+    "t": 1.125,
+    "f": 27,
+    "shape": "O"
+   },
+   {
+    "t": 1.333,
+    "f": 32,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "it's",
+    "t0": 0.135,
+    "t1": 0.335,
+    "f0": 3,
+    "f1": 8
+   },
+   {
+    "w": "a",
+    "t0": 0.335,
+    "t1": 0.46,
+    "f0": 8,
+    "f1": 11
+   },
+   {
+    "w": "preview",
+    "t0": 0.46,
+    "t1": 1.35,
+    "f0": 11,
+    "f1": 32
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -3.86,
+   "clipped_samples": 0,
+   "median_f0_hz": 117.6,
+   "f0_range_st": 9.6,
+   "final_move_st": -1.0,
+   "wpm": 148,
+   "asr": "It's a preview.",
+   "cer": 0.0,
+   "logprob": -0.316,
+   "align_median_s": 0.045,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -3.69,
+   "target_lufs": -16.0
+  },
+  "alt_takes": [
+   {
+    "take": "t01",
+    "file": "audio/ep01/act4/dialogue/takes/a4-31-02/a4-31-02_t01.wav",
+    "score": 0.174,
+    "spec": {
+     "seed": 1
+    }
+   },
+   {
+    "take": "t02",
+    "file": "audio/ep01/act4/dialogue/takes/a4-31-02/a4-31-02_t02.wav",
+    "score": 0.618,
+    "spec": {
+     "seed": 2,
+     "speed": 0.92
+    }
+   },
+   {
+    "take": "t03",
+    "file": "audio/ep01/act4/dialogue/takes/a4-31-02/a4-31-02_t03.wav",
+    "score": 0.961,
+    "spec": {
+     "seed": 3,
+     "speed": 1.05
+    }
+   },
+   {
+    "take": "t04",
+    "file": "audio/ep01/act4/dialogue/takes/a4-31-02/a4-31-02_t04.wav",
+    "score": 2.333,
+    "spec": {
+     "seed": 1,
+     "carrier": "Oh."
+    }
+   }
+  ]
+ },
+ {
+  "id": "a4-31-03",
+  "scene": "31",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "\"i love and respect alyi… i harbor zero ill will towards him.\"",
+  "spoken_as": "i love and respect [Alyi](/ˈælji/)...<0.60s> i harbor zero ill will towards him.",
+  "delivery": "(reads his memo aloud, unhurried; voiced only, the page is never inserted) Sincere, even; a real pause at the ellipsis. 'Alyi' = AL-yee (naming §9).",
+  "tag": "[V · NOV 29, 2023]",
+  "mode": "memo-read",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "left",
+  "pov": "his",
+  "shot": "[P] MAS, left, at his desk (voiced on camera, never V.O.)",
+  "lip_sync": true,
+  "status": "unchanged",
+  "file": "audio/ep01/act4/dialogue/wav/a4-31-03.wav",
+  "mp3": "audio/ep01/act4/dialogue/mp3/a4-31-03.mp3",
+  "duration_s": 5.89,
+  "frames_24": 142,
+  "voiced_span_s": 5.77,
+  "take": "t04",
+  "takes_tried": 4,
+  "pick_reason": "lowest score 0.529 of 4 takes (next t01 at 0.54); terms: asr_cer 0.252, asr_conf 0.277",
+  "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.82",
+  "voiceId": "am_michael",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 70 Hz",
+   "pitch 0",
+   "low shelf +2 dB @160 Hz",
+   "peak -2 dB @320 Hz Q1.0",
+   "peak +1 dB @3200 Hz Q0.8",
+   "high shelf -1.5 dB @8000 Hz",
+   "comp 2.0:1 @-24 dB (10/120 ms)",
+   "DRY: no reverb/slap (rooms are mix sends)",
+   "pause after word 5: 0.30 s -> 0.60 s (target 0.60)",
+   "silence trim (-52 dB rel. peak; 30 ms head / 80 ms tail pad)",
+   "48 kHz / 24-bit; -16 LUFS integrated; true-peak ceiling -1.5 dBTP"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.208,
+    "f": 5,
+    "shape": "A"
+   },
+   {
+    "t": 0.5,
+    "f": 12,
+    "shape": "E"
+   },
+   {
+    "t": 0.625,
+    "f": 15,
+    "shape": "A"
+   },
+   {
+    "t": 0.875,
+    "f": 21,
+    "shape": "E"
+   },
+   {
+    "t": 1.0,
+    "f": 24,
+    "shape": "A"
+   },
+   {
+    "t": 1.083,
+    "f": 26,
+    "shape": "E"
+   },
+   {
+    "t": 1.375,
+    "f": 33,
+    "shape": "M"
+   },
+   {
+    "t": 1.458,
+    "f": 35,
+    "shape": "A"
+   },
+   {
+    "t": 1.542,
+    "f": 37,
+    "shape": "E"
+   },
+   {
+    "t": 1.667,
+    "f": 40,
+    "shape": "A"
+   },
+   {
+    "t": 1.875,
+    "f": 45,
+    "shape": "E"
+   },
+   {
+    "t": 2.292,
+    "f": 55,
+    "shape": "rest"
+   },
+   {
+    "t": 3.083,
+    "f": 74,
+    "shape": "A"
+   },
+   {
+    "t": 3.458,
+    "f": 83,
+    "shape": "E"
+   },
+   {
+    "t": 3.542,
+    "f": 85,
+    "shape": "M"
+   },
+   {
+    "t": 3.625,
+    "f": 87,
+    "shape": "E"
+   },
+   {
+    "t": 3.875,
+    "f": 93,
+    "shape": "A"
+   },
+   {
+    "t": 4.042,
+    "f": 97,
+    "shape": "E"
+   },
+   {
+    "t": 4.125,
+    "f": 99,
+    "shape": "O"
+   },
+   {
+    "t": 4.417,
+    "f": 106,
+    "shape": "A"
+   },
+   {
+    "t": 4.542,
+    "f": 109,
+    "shape": "E"
+   },
+   {
+    "t": 4.667,
+    "f": 112,
+    "shape": "O"
+   },
+   {
+    "t": 4.75,
+    "f": 114,
+    "shape": "E"
+   },
+   {
+    "t": 5.042,
+    "f": 121,
+    "shape": "O"
+   },
+   {
+    "t": 5.208,
+    "f": 125,
+    "shape": "E"
+   },
+   {
+    "t": 5.708,
+    "f": 137,
+    "shape": "M"
+   },
+   {
+    "t": 5.833,
+    "f": 140,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "i",
+    "t0": 0.215,
+    "t1": 0.49,
+    "f0": 5,
+    "f1": 12
+   },
+   {
+    "w": "love",
+    "t0": 0.49,
+    "t1": 0.99,
+    "f0": 12,
+    "f1": 24
+   },
+   {
+    "w": "and",
+    "t0": 0.99,
+    "t1": 1.102,
+    "f0": 24,
+    "f1": 26
+   },
+   {
+    "w": "respect",
+    "t0": 1.102,
+    "t1": 1.665,
+    "f0": 26,
+    "f1": 40
+   },
+   {
+    "w": "Alyi",
+    "t0": 1.665,
+    "t1": 2.28,
+    "f0": 40,
+    "f1": 55
+   },
+   {
+    "w": "i",
+    "t0": 3.022,
+    "t1": 3.272,
+    "f0": 73,
+    "f1": 79
+   },
+   {
+    "w": "harbor",
+    "t0": 3.272,
+    "t1": 3.823,
+    "f0": 79,
+    "f1": 92
+   },
+   {
+    "w": "zero",
+    "t0": 3.823,
+    "t1": 4.335,
+    "f0": 92,
+    "f1": 104
+   },
+   {
+    "w": "ill",
+    "t0": 4.335,
+    "t1": 4.672,
+    "f0": 104,
+    "f1": 112
+   },
+   {
+    "w": "will",
+    "t0": 4.672,
+    "t1": 4.972,
+    "f0": 112,
+    "f1": 119
+   },
+   {
+    "w": "towards",
+    "t0": 4.972,
+    "t1": 5.46,
+    "f0": 119,
+    "f1": 131
+   },
+   {
+    "w": "him",
+    "t0": 5.46,
+    "t1": 5.82,
+    "f0": 131,
+    "f1": 140
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -3.84,
+   "clipped_samples": 0,
+   "median_f0_hz": 111.0,
+   "f0_range_st": 9.0,
+   "final_move_st": -2.1,
+   "wpm": 128,
+   "asr": "I love and respect Ali. I harbor zero ill will towards him.",
+   "cer": 0.021,
+   "logprob": -0.385,
+   "align_median_s": 0.096,
+   "mp3_lufs_i": -16.0,
+   "mp3_true_peak_dbtp": -3.73,
+   "target_lufs": -16.0
+  }
+ }
+]

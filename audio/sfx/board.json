@@ -1,0 +1,297 @@
+{
+ "voiceLines": {
+  "nole": {
+   "text": "I came up with the name!",
+   "t0": 54,
+   "cps": 1.25,
+   "sceneSynced": true,
+   "timing": "blips/timing_nole.json",
+   "blipCount": 9
+  },
+  "mas": {
+   "text": "super.",
+   "t0": 99,
+   "cps": 0.75,
+   "sceneSynced": true,
+   "timing": "blips/timing_mas.json",
+   "blipCount": 2
+  },
+  "gerg": {
+   "text": "Shipped it. Sleep is deprecated.",
+   "t0": 0,
+   "cps": 1.0,
+   "sceneSynced": false,
+   "timing": "blips/timing_gerg.json",
+   "blipCount": 26
+  },
+  "alyi": {
+   "text": "Can you feel it? The AGI.",
+   "t0": 0,
+   "cps": 0.5,
+   "sceneSynced": false,
+   "timing": "blips/timing_alyi.json",
+   "blipCount": 6
+  },
+  "mario": {
+   "text": "I have... some concerns.",
+   "t0": 0,
+   "cps": 0.8,
+   "sceneSynced": false,
+   "timing": "blips/timing_mario.json",
+   "blipCount": 9
+  },
+  "rumpt": {
+   "text": "Tremendous. Nobody has ever seen AI like it.",
+   "t0": 0,
+   "cps": 0.9,
+   "sceneSynced": false,
+   "timing": "blips/timing_rumpt.json",
+   "blipCount": 23
+  },
+  "mas_slow": {
+   "text": "super.",
+   "t0": 99,
+   "cps": 0.3,
+   "sceneSynced": false,
+   "timing": "blips/timing_mas_slow.json",
+   "blipCount": 2
+  }
+ },
+ "blipKits": {
+  "mas": {
+   "name": "MAS",
+   "voice": "soft low rounded sine, slow (blips on syllables only)",
+   "bandInstrument": "felt upright piano",
+   "cpsPerFrame": 0.75,
+   "policy": "syllable",
+   "blipEvery": 1,
+   "finalFall": "F3",
+   "finalRise": "C4",
+   "flavors": {
+    "hybrid": {
+     "F3": "blips/kits/mas/hybrid/mas_hybrid_F3.wav",
+     "Ab3": "blips/kits/mas/hybrid/mas_hybrid_Ab3.wav",
+     "C4": "blips/kits/mas/hybrid/mas_hybrid_C4.wav",
+     "Eb3": "blips/kits/mas/hybrid/mas_hybrid_Eb3.wav"
+    },
+    "chip": {
+     "F3": "blips/kits/mas/chip/mas_chip_F3.wav",
+     "Ab3": "blips/kits/mas/chip/mas_chip_Ab3.wav",
+     "C4": "blips/kits/mas/chip/mas_chip_C4.wav",
+     "Eb3": "blips/kits/mas/chip/mas_chip_Eb3.wav"
+    },
+    "band": {
+     "F3": "blips/kits/mas/band/mas_band_F3.wav",
+     "Ab3": "blips/kits/mas/band/mas_band_Ab3.wav",
+     "C4": "blips/kits/mas/band/mas_band_C4.wav",
+     "Eb3": "blips/kits/mas/band/mas_band_Eb3.wav"
+    }
+   }
+  },
+  "nole": {
+   "name": "NOLE",
+   "voice": "bright, fast, slightly overdriven square",
+   "bandInstrument": "staccato trumpet",
+   "cpsPerFrame": 1.25,
+   "policy": "every",
+   "blipEvery": 2,
+   "finalFall": "F5",
+   "finalRise": "F6",
+   "flavors": {
+    "hybrid": {
+     "F5": "blips/kits/nole/hybrid/nole_hybrid_F5.wav",
+     "Ab5": "blips/kits/nole/hybrid/nole_hybrid_Ab5.wav",
+     "C6": "blips/kits/nole/hybrid/nole_hybrid_C6.wav",
+     "Bb5": "blips/kits/nole/hybrid/nole_hybrid_Bb5.wav",
+     "Eb6": "blips/kits/nole/hybrid/nole_hybrid_Eb6.wav",
+     "F6": "blips/kits/nole/hybrid/nole_hybrid_F6.wav"
+    },
+    "chip": {
+     "F5": "blips/kits/nole/chip/nole_chip_F5.wav",
+     "Ab5": "blips/kits/nole/chip/nole_chip_Ab5.wav",
+     "C6": "blips/kits/nole/chip/nole_chip_C6.wav",
+     "Bb5": "blips/kits/nole/chip/nole_chip_Bb5.wav",
+     "Eb6": "blips/kits/nole/chip/nole_chip_Eb6.wav",
+     "F6": "blips/kits/nole/chip/nole_chip_F6.wav"
+    },
+    "band": {
+     "F5": "blips/kits/nole/band/nole_band_F5.wav",
+     "Ab5": "blips/kits/nole/band/nole_band_Ab5.wav",
+     "C6": "blips/kits/nole/band/nole_band_C6.wav",
+     "Bb5": "blips/kits/nole/band/nole_band_Bb5.wav",
+     "Eb6": "blips/kits/nole/band/nole_band_Eb6.wav",
+     "F6": "blips/kits/nole/band/nole_band_F6.wav"
+    }
+   }
+  },
+  "gerg": {
+   "name": "GERG",
+   "voice": "rapid clicky ticks (a fast keyboard talking)",
+   "bandInstrument": "claves / wood clicks",
+   "cpsPerFrame": 1.0,
+   "policy": "every",
+   "blipEvery": 1,
+   "finalFall": "C7",
+   "finalRise": "F7",
+   "flavors": {
+    "hybrid": {
+     "C7": "blips/kits/gerg/hybrid/gerg_hybrid_C7.wav",
+     "Eb7": "blips/kits/gerg/hybrid/gerg_hybrid_Eb7.wav",
+     "F7": "blips/kits/gerg/hybrid/gerg_hybrid_F7.wav",
+     "Bb6": "blips/kits/gerg/hybrid/gerg_hybrid_Bb6.wav"
+    },
+    "chip": {
+     "C7": "blips/kits/gerg/chip/gerg_chip_C7.wav",
+     "Eb7": "blips/kits/gerg/chip/gerg_chip_Eb7.wav",
+     "F7": "blips/kits/gerg/chip/gerg_chip_F7.wav",
+     "Bb6": "blips/kits/gerg/chip/gerg_chip_Bb6.wav"
+    },
+    "band": {
+     "C7": "blips/kits/gerg/band/gerg_band_C7.wav",
+     "Eb7": "blips/kits/gerg/band/gerg_band_Eb7.wav",
+     "F7": "blips/kits/gerg/band/gerg_band_F7.wav",
+     "Bb6": "blips/kits/gerg/band/gerg_band_Bb6.wav"
+    }
+   }
+  },
+  "alyi": {
+   "name": "ALYI",
+   "voice": "breathy, reverberant, drifting (Db = the mystic's ache)",
+   "bandInstrument": "breathy flute in a hall",
+   "cpsPerFrame": 0.5,
+   "policy": "every",
+   "blipEvery": 3,
+   "finalFall": "Db5",
+   "finalRise": "F5",
+   "flavors": {
+    "hybrid": {
+     "Ab4": "blips/kits/alyi/hybrid/alyi_hybrid_Ab4.wav",
+     "C5": "blips/kits/alyi/hybrid/alyi_hybrid_C5.wav",
+     "Db5": "blips/kits/alyi/hybrid/alyi_hybrid_Db5.wav",
+     "F5": "blips/kits/alyi/hybrid/alyi_hybrid_F5.wav",
+     "Eb5": "blips/kits/alyi/hybrid/alyi_hybrid_Eb5.wav"
+    },
+    "chip": {
+     "Ab4": "blips/kits/alyi/chip/alyi_chip_Ab4.wav",
+     "C5": "blips/kits/alyi/chip/alyi_chip_C5.wav",
+     "Db5": "blips/kits/alyi/chip/alyi_chip_Db5.wav",
+     "F5": "blips/kits/alyi/chip/alyi_chip_F5.wav",
+     "Eb5": "blips/kits/alyi/chip/alyi_chip_Eb5.wav"
+    },
+    "band": {
+     "Ab4": "blips/kits/alyi/band/alyi_band_Ab4.wav",
+     "C5": "blips/kits/alyi/band/alyi_band_C5.wav",
+     "Db5": "blips/kits/alyi/band/alyi_band_Db5.wav",
+     "F5": "blips/kits/alyi/band/alyi_band_F5.wav",
+     "Eb5": "blips/kits/alyi/band/alyi_band_Eb5.wav"
+    }
+   }
+  },
+  "mario": {
+   "name": "MARIO",
+   "voice": "woody, nervous (timing and pitch jitter, little stutters)",
+   "bandInstrument": "marimba",
+   "cpsPerFrame": 0.8,
+   "policy": "every",
+   "blipEvery": 2,
+   "finalFall": "C5",
+   "finalRise": "G5",
+   "flavors": {
+    "hybrid": {
+     "C5": "blips/kits/mario/hybrid/mario_hybrid_C5.wav",
+     "Eb5": "blips/kits/mario/hybrid/mario_hybrid_Eb5.wav",
+     "F5": "blips/kits/mario/hybrid/mario_hybrid_F5.wav",
+     "G5": "blips/kits/mario/hybrid/mario_hybrid_G5.wav",
+     "Ab5": "blips/kits/mario/hybrid/mario_hybrid_Ab5.wav"
+    },
+    "chip": {
+     "C5": "blips/kits/mario/chip/mario_chip_C5.wav",
+     "Eb5": "blips/kits/mario/chip/mario_chip_Eb5.wav",
+     "F5": "blips/kits/mario/chip/mario_chip_F5.wav",
+     "G5": "blips/kits/mario/chip/mario_chip_G5.wav",
+     "Ab5": "blips/kits/mario/chip/mario_chip_Ab5.wav"
+    },
+    "band": {
+     "C5": "blips/kits/mario/band/mario_band_C5.wav",
+     "Eb5": "blips/kits/mario/band/mario_band_Eb5.wav",
+     "F5": "blips/kits/mario/band/mario_band_F5.wav",
+     "G5": "blips/kits/mario/band/mario_band_G5.wav",
+     "Ab5": "blips/kits/mario/band/mario_band_Ab5.wav"
+    }
+   }
+  },
+  "rumpt": {
+   "name": "RUMPT",
+   "voice": "brassy, loud, stressed word-starts",
+   "bandInstrument": "trombone blats",
+   "cpsPerFrame": 0.9,
+   "policy": "every",
+   "blipEvery": 2,
+   "finalFall": "Bb2",
+   "finalRise": "F3",
+   "flavors": {
+    "hybrid": {
+     "Bb2": "blips/kits/rumpt/hybrid/rumpt_hybrid_Bb2.wav",
+     "C3": "blips/kits/rumpt/hybrid/rumpt_hybrid_C3.wav",
+     "Db3": "blips/kits/rumpt/hybrid/rumpt_hybrid_Db3.wav",
+     "F3": "blips/kits/rumpt/hybrid/rumpt_hybrid_F3.wav",
+     "Eb3": "blips/kits/rumpt/hybrid/rumpt_hybrid_Eb3.wav"
+    },
+    "chip": {
+     "Bb2": "blips/kits/rumpt/chip/rumpt_chip_Bb2.wav",
+     "C3": "blips/kits/rumpt/chip/rumpt_chip_C3.wav",
+     "Db3": "blips/kits/rumpt/chip/rumpt_chip_Db3.wav",
+     "F3": "blips/kits/rumpt/chip/rumpt_chip_F3.wav",
+     "Eb3": "blips/kits/rumpt/chip/rumpt_chip_Eb3.wav"
+    },
+    "band": {
+     "Bb2": "blips/kits/rumpt/band/rumpt_band_Bb2.wav",
+     "C3": "blips/kits/rumpt/band/rumpt_band_C3.wav",
+     "Db3": "blips/kits/rumpt/band/rumpt_band_Db3.wav",
+     "F3": "blips/kits/rumpt/band/rumpt_band_F3.wav",
+     "Eb3": "blips/kits/rumpt/band/rumpt_band_Eb3.wav"
+    }
+   }
+  }
+ },
+ "about": {
+  "show": "MR. MAS",
+  "board": "SFX board + character voice blips (intro + pixel world)",
+  "made": "2026-09-25",
+  "generator": "audio/sfx/scripts/build.py (render all) + layout.py (intro stem/previews/reels)",
+  "format": {
+   "master": "WAV 48 kHz / 24-bit stereo",
+   "preview": "MP3 256 kb/s (blip kits 192 kb/s)"
+  },
+  "grid": {
+   "fps": 24,
+   "bpm": 96,
+   "framesPerBeat": 15,
+   "introFrames": 720,
+   "key": "F minor"
+  },
+  "levels": "Each master is normalized to -14 LUFS (integrated if >= 2 s, else max momentary; voice lines -16) with a -1 dBTP ceiling, so transient sounds land below -14. 'mixDb' is the suggested gain for the intro mix; intro/sfx_intro_stem.wav applies it (plus a -2.5 dB stem trim).",
+  "flavors": {
+   "hybrid": "default: acoustic/orchestral/jazz body with a quiet 8-bit shadow",
+   "chip": "8-bit forward (pulse/triangle/LFSR noise, 60 Hz stepped envelopes)",
+   "band": "piano / orchestral / big-band instruments only (VSCO 2 CE, GeneralUser GS)"
+  },
+  "anchor": {
+   "start": "file start sits on the cue frame",
+   "end": "file END lands on the cue frame (swells, rolls)",
+   "hit": "transient is at syncOffset seconds into the file; place the file at frame - syncOffset*24"
+  },
+  "intro": {
+   "stem": "intro/sfx_intro_stem.wav",
+   "preview": "intro/sfx_intro_preview.mp3",
+   "previewChip": "intro/sfx_intro_chip_preview.mp3",
+   "previewBand": "intro/sfx_intro_band_preview.mp3",
+   "cues": "intro/sfx_intro_cues.json"
+  },
+  "reels": "reel/reel_{hybrid,chip,band}.mp3 with reel/reel_index.json start times",
+  "manifest": "manifest.json = flat array of every file (sounds, variants, voice lines, blip-kit one-shots); board.json = this block + voiceLines + blipKits index",
+  "loops": "Loops (loop=true) are sample-seamless in the WAV masters only; MP3 previews add encoder padding.",
+  "qa": "qa/spectro_*.png (log-frequency spectrogram + envelope per sound; index in .txt)",
+  "licenses": "LICENSES.md (CC0 VSCO 2 CE samples, GeneralUser GS, procedural originals; no TTS/voice cloning)"
+ }
+}

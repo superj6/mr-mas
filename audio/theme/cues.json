@@ -1,0 +1,2404 @@
+{
+ "title": "The Knee (Main Title)",
+ "show": "MR. MAS",
+ "script": "show/intro/SCRIPT.md v2.1",
+ "grid": {
+  "fps": 24,
+  "bpm": 96,
+  "frames_per_beat": 15,
+  "frames_per_bar": 60,
+  "bars": 12,
+  "frames": 720,
+  "duration_s": 30.0,
+  "sample_rate": 48000,
+  "samples_per_frame": 2000,
+  "swing": "swung 2nd eighth = beat + 10 frames (triplet swing)",
+  "straight": "straight 2nd eighth = beat + 7.5 frames in the music; picture and SFX use the floor (f127, the roll-call cuts f487/502/517/532, f622)",
+  "key": "F minor",
+  "hook": "F F F F G Ab C F (eighths; last F an octave up)"
+ },
+ "stems_note": "Stems are post-master-gain: summing all stems of a variation reproduces the master (residual < -100 dB). v2.1: the \"fired\" stem is retired (there is no music-fired mute); the Harmon trumpet has its own stem, \"harmon\". The VO duck (f23-91) is baked into every stem except the sub - do not duck the music again in the mix; trim the music bus to about -15.5 LUFS before VO/SFX/chant.",
+ "vo_duck": {
+  "frames": [
+   23,
+   91
+  ],
+  "general_db": -6,
+  "strings_db": -9,
+  "sub": "not ducked",
+  "attack_frames": 2,
+  "release_frames": 6,
+  "lifted": [
+   57,
+   71
+  ],
+  "pluck_f90_db": -3
+ },
+ "rollcall": [
+  {
+   "flash": 1,
+   "picture_cut": 480,
+   "music_frame": 480.0,
+   "top": "F5",
+   "chord": "Fm9",
+   "bass": "F2",
+   "player": "TASYA"
+  },
+  {
+   "flash": 2,
+   "picture_cut": 487,
+   "music_frame": 487.5,
+   "top": "F5",
+   "chord": "Fm9",
+   "bass": "F2",
+   "player": "RADNUS"
+  },
+  {
+   "flash": 3,
+   "picture_cut": 495,
+   "music_frame": 495.0,
+   "top": "F5",
+   "chord": "Fm9",
+   "bass": "F2",
+   "player": "KRAM"
+  },
+  {
+   "flash": 4,
+   "picture_cut": 502,
+   "music_frame": 502.5,
+   "top": "F5",
+   "chord": "Fm9",
+   "bass": "F2",
+   "player": "NESNEJ"
+  },
+  {
+   "flash": 5,
+   "picture_cut": 510,
+   "music_frame": 510.0,
+   "top": "G5",
+   "chord": "Dbmaj7(#11)",
+   "bass": "Db2",
+   "player": "RIMA TAMURI"
+  },
+  {
+   "flash": 6,
+   "picture_cut": 517,
+   "music_frame": 517.5,
+   "top": "Ab5",
+   "chord": "Dbmaj7(#11)",
+   "bass": "Db2",
+   "player": "THE WHALE"
+  },
+  {
+   "flash": 7,
+   "picture_cut": 525,
+   "music_frame": 525.0,
+   "top": "C6",
+   "chord": "C7(#9b13)",
+   "bass": "C2",
+   "player": "RUMPT (silhouette)"
+  },
+  {
+   "flash": 8,
+   "picture_cut": 532,
+   "music_frame": 532.5,
+   "top": "F6",
+   "chord": "F5 open fifth F-C, no third",
+   "bass": "F1 + sub",
+   "player": "the player who does not exist yet (GLYPH cursor)"
+  }
+ ],
+ "brass_accents": [
+  {
+   "n": 1,
+   "frames": [
+    195
+   ],
+   "what": "cup-muted stab, 3 trumpets + 2 trombones, Dbmaj7, through the sample-chip filter"
+  },
+  {
+   "n": 2,
+   "frames": [
+    240
+   ],
+   "what": "card stab, trumpets + trombones only (Fm11)"
+  },
+  {
+   "n": 3,
+   "frames": [
+    300
+   ],
+   "what": "card stab, trumpets + trombones only (Dbmaj9#11)"
+  },
+  {
+   "n": 4,
+   "frames": [
+    360
+   ],
+   "what": "card stab, trumpets + trombones only (Bbm9)"
+  },
+  {
+   "n": 5,
+   "frames": [
+    414,
+    419
+   ],
+   "what": "trumpet-section rip up to C"
+  },
+  {
+   "n": 6,
+   "frames": [
+    420
+   ],
+   "what": "the only full shout: trumpets, trombones, saxes (C7#9b13)"
+  },
+  {
+   "n": 7,
+   "frames": [
+    480,
+    487.5,
+    495,
+    502.5,
+    510,
+    517.5,
+    525,
+    532.5
+   ],
+   "what": "the roll call: eight stabs, one gesture"
+  },
+  {
+   "n": 8,
+   "frames": [
+    630
+   ],
+   "what": "horn swell C4 F4 Bb4 Eb5, the last brass"
+  },
+  {
+   "n": "melody",
+   "frames": [
+    540,
+    599
+   ],
+   "what": "the one horn melody: Harmon-muted trumpet, bar 10 (V2: bars 10-11); no Harmon anywhere before f540"
+  }
+ ],
+ "sfx_owned": [
+  {
+   "frames": [
+    105,
+    119
+   ],
+   "what": "reverse_swell_1beat into f120"
+  },
+  {
+   "frames": [
+    150
+   ],
+   "what": "bonk"
+  },
+  {
+   "frames": [
+    532,
+    540
+   ],
+   "what": "reverse_swell_1beat into f540"
+  },
+  {
+   "frames": [
+    705
+   ],
+   "what": "ding"
+  }
+ ],
+ "harmony": [
+  {
+   "bars": "1-2",
+   "frames": [
+    0,
+    119
+   ],
+   "chord": "open fifth F-C (drone); D-flat colour (b6) f60-71",
+   "third": false
+  },
+  {
+   "bars": "3",
+   "frames": [
+    120,
+    179
+   ],
+   "chord": "Fm(add9) - the first third (\"picks a side\")",
+   "third": true
+  },
+  {
+   "bars": "4",
+   "frames": [
+    180,
+    239
+   ],
+   "chord": "Dbmaj7 -> Fm9 (f210) -> C7(b9) (f225)",
+   "third": true
+  },
+  {
+   "bars": "5",
+   "frames": [
+    240,
+    299
+   ],
+   "chord": "Fm11",
+   "third": true
+  },
+  {
+   "bars": "6",
+   "frames": [
+    300,
+    359
+   ],
+   "chord": "Dbmaj9(#11)",
+   "third": true
+  },
+  {
+   "bars": "7",
+   "frames": [
+    360,
+    419
+   ],
+   "chord": "Bbm9",
+   "third": true
+  },
+  {
+   "bars": "8",
+   "frames": [
+    420,
+    479
+   ],
+   "chord": "C7(#9b13) (E natural pulls home to F)",
+   "third": true
+  },
+  {
+   "bars": "9",
+   "frames": [
+    480,
+    539
+   ],
+   "chord": "Fm9 x4 -> Dbmaj7(#11) x2 -> C7(#9b13) -> open fifth F-C (no third: the player who does not exist yet has not picked a side)",
+   "third": "stabs 1-7 yes; stab 8 no"
+  },
+  {
+   "bars": "10",
+   "frames": [
+    540,
+    599
+   ],
+   "chord": "Fm line cliche: Fm / Fm(maj7) / Fm7 / Fm6 (bass F-E-Eb-D)",
+   "third": true
+  },
+  {
+   "bars": "11.1-11.2",
+   "frames": [
+    600,
+    629
+   ],
+   "chord": "Db -> C7",
+   "third": true
+  },
+  {
+   "bars": "11.3-12",
+   "frames": [
+    630,
+    719
+   ],
+   "chord": "quartal C-F-Bb-Eb over F, topped by G - no A, no A-flat",
+   "third": false
+  }
+ ],
+ "cues": [
+  {
+   "frame": 0,
+   "music_frame": 0,
+   "time_s": 0.0,
+   "bar_beat": "1.1",
+   "tier": "T0",
+   "owner": "music",
+   "music": "felt piano F5 on the cursor blink + a 1-frame chip glint F6; the music owns the drone F1+C2 (open fifth, no third), fading in over f0-29. V2: celli + basses hold the fifth (no sub), harp harmonic F5. V3: the F5 is a 12.5 % chip square doubled by felt. V4: piano alone, low F1+C2 under the pedal, no chip",
+   "stems_v1": [
+    "piano",
+    "chip",
+    "sub"
+   ]
+  },
+  {
+   "frame": 15,
+   "music_frame": 15,
+   "time_s": 0.625,
+   "bar_beat": "1.2",
+   "tier": "T0",
+   "owner": "music",
+   "music": "piano F5 + chip glint",
+   "stems_v1": [
+    "piano",
+    "chip"
+   ]
+  },
+  {
+   "frame": 23,
+   "music_frame": 23,
+   "time_s": 0.9583,
+   "bar_beat": "1.2.53",
+   "tier": "T0",
+   "owner": "music",
+   "music": "VO duck in (baked into the stems): every stem except the sub -6 dB, strings -9 dB, 2-frame attack; VO f24-91 is on its own bus",
+   "stems_v1": []
+  },
+  {
+   "frame": 30,
+   "music_frame": 30,
+   "time_s": 1.25,
+   "bar_beat": "1.3",
+   "tier": "T0",
+   "owner": "music",
+   "music": "piano F5 under the VO (the chip glint is cut: it sat on the consonants)",
+   "stems_v1": [
+    "piano"
+   ]
+  },
+  {
+   "frame": 45,
+   "music_frame": 45,
+   "time_s": 1.875,
+   "bar_beat": "1.4",
+   "tier": "T0",
+   "owner": "music",
+   "music": "piano F5 under the VO (no glint)",
+   "stems_v1": [
+    "piano"
+   ]
+  },
+  {
+   "frame": 57,
+   "music_frame": 57,
+   "time_s": 2.375,
+   "bar_beat": "1.4.8",
+   "tier": "T0",
+   "owner": "music",
+   "music": "duck lifts inside the semicolon pause (6-frame release to f63), re-ducks f70-72",
+   "stems_v1": []
+  },
+  {
+   "frame": 60,
+   "music_frame": 60,
+   "time_s": 2.5,
+   "bar_beat": "2.1",
+   "tier": "T0",
+   "owner": "music",
+   "music": "low D-flat colour (b6 of F) in the pause, ending f71; no A-flat (still no third). V2: on bassoon (standing in for the bass clarinet)",
+   "stems_v1": [
+    "piano"
+   ]
+  },
+  {
+   "frame": 90,
+   "music_frame": 90,
+   "time_s": 3.75,
+   "bar_beat": "2.3",
+   "tier": "T0",
+   "owner": "music",
+   "music": "the pluck as the dot exits: harp F5 + pizz C5 + chip F6, held at -3 dB by the duck (V3 vibes + chip, V4 piano + chip); then only the drone under the glimpse - no sting",
+   "stems_v1": [
+    "strings",
+    "chip"
+   ]
+  },
+  {
+   "frame": 105,
+   "music_frame": 105,
+   "time_s": 4.375,
+   "bar_beat": "2.4",
+   "tier": "T0",
+   "owner": "music",
+   "music": "the knee's leap G5 (felt, harp, celesta; the chip doubles it). The reverse swell into f120 belongs to the SFX (no music revswell)",
+   "stems_v1": [
+    "chip",
+    "perc",
+    "piano"
+   ]
+  },
+  {
+   "frame": 108,
+   "music_frame": 108,
+   "time_s": 4.5,
+   "bar_beat": "2.4.2",
+   "tier": "T0",
+   "owner": "music",
+   "music": "leap A-flat 5 (a passing tone)",
+   "stems_v1": [
+    "chip"
+   ]
+  },
+  {
+   "frame": 112,
+   "music_frame": 112,
+   "time_s": 4.6667,
+   "bar_beat": "2.4.47",
+   "tier": "T0",
+   "owner": "music",
+   "music": "leap C6 (the Post click)",
+   "stems_v1": [
+    "chip"
+   ]
+  },
+  {
+   "frame": 116,
+   "music_frame": 116,
+   "time_s": 4.8333,
+   "bar_beat": "2.4.73",
+   "tier": "T0",
+   "owner": "music",
+   "music": "leap F6",
+   "stems_v1": [
+    "chip"
+   ]
+  },
+  {
+   "frame": 120,
+   "music_frame": 120,
+   "time_s": 5.0,
+   "bar_beat": "3.1",
+   "tier": "T1",
+   "owner": "music",
+   "music": "DROP on Fm(add9), the first chord with a third: sub F1, chip square bass F2, chip noise; beeper F5 with A-flat 4 + C5; piano left hand Fm9 (F2 C3 Ab3 G4) pedalled to f164. The machine plays straight. V2 + timpani F and low strings",
+   "stems_v1": [
+    "chip",
+    "sub",
+    "piano"
+   ]
+  },
+  {
+   "frame": 127,
+   "music_frame": 127.5,
+   "time_s": 5.3125,
+   "bar_beat": "3.1.5",
+   "tier": "T1",
+   "owner": "music",
+   "music": "beeper F on the straight off-beat (music +7.5; V3 swings it: f130)",
+   "stems_v1": [
+    "chip"
+   ]
+  },
+  {
+   "frame": 135,
+   "music_frame": 135,
+   "time_s": 5.625,
+   "bar_beat": "3.2",
+   "tier": "T1",
+   "owner": "music",
+   "music": "beeper F; the chip then rests while the dialog is open",
+   "stems_v1": [
+    "chip"
+   ]
+  },
+  {
+   "frame": 150,
+   "music_frame": 150,
+   "time_s": 6.25,
+   "bar_beat": "3.3",
+   "tier": "T1",
+   "owner": "SFX",
+   "music": "the bonk is SFX-owned (alert_bonk--chip, E4->E3); the music adds nothing",
+   "stems_v1": []
+  },
+  {
+   "frame": 165,
+   "music_frame": 165,
+   "time_s": 6.875,
+   "bar_beat": "3.4",
+   "tier": "T1",
+   "owner": "music",
+   "music": "OK: beeper C6 + square C3",
+   "stems_v1": [
+    "chip"
+   ]
+  },
+  {
+   "frame": 168,
+   "music_frame": 168,
+   "time_s": 7.0,
+   "bar_beat": "3.4.2",
+   "tier": "T1",
+   "owner": "music",
+   "music": "the chip gains voices: rising arpeggio F-Ab-C-Eb-F (f168/170/172/174/176), a second pulse voice and a triangle bass by f179; a brushed-snare swell f172-179. V2: harp glissando + string swell (no chip arpeggio); V3: brush fill + the arpeggio; V4: piano run + the arpeggio",
+   "stems_v1": [
+    "chip",
+    "drums"
+   ]
+  },
+  {
+   "frame": 172,
+   "music_frame": 172,
+   "time_s": 7.1667,
+   "bar_beat": "3.4.47",
+   "tier": "T1",
+   "owner": "music",
+   "music": "beeper F6",
+   "stems_v1": [
+    "chip"
+   ]
+  },
+  {
+   "frame": 180,
+   "music_frame": 180,
+   "time_s": 7.5,
+   "bar_beat": "4.1",
+   "tier": "T2",
+   "owner": "music",
+   "music": "2008: the trio lands, swung, through the 16-bit sample-chip filter (no tape wow - the cassette is retired): the knee F f180 . F f190 . F f195 . F f205 . G f210 . Ab f220 . C f225 . F f235, the chip an octave up; Dbmaj7 -> Fm9 (f210) -> C7(b9) (f225); kick on 1 and 3 only. V2: pizz strings + harp, no kit; V3: full swing kit; V4: piano + chip",
+   "stems_v1": [
+    "chip"
+   ]
+  },
+  {
+   "frame": 195,
+   "music_frame": 195,
+   "time_s": 8.125,
+   "bar_beat": "4.2",
+   "tier": "T2",
+   "owner": "music",
+   "music": "BRASS ACCENT #1: a cup-muted stab, 3 trumpets + 2 trombones on Dbmaj7, through the sample-chip filter. V2 horns + trombones; V3 full-band shout; V4 a piano cluster with chip",
+   "stems_v1": [
+    "chip"
+   ]
+  },
+  {
+   "frame": 225,
+   "music_frame": 225,
+   "time_s": 9.375,
+   "bar_beat": "4.4",
+   "tier": "T2",
+   "owner": "music",
+   "music": "the hook's C; chamber strings (quartet + bass) swell f225-239 into the dinner. No brush roll / revswell: the keyboard SFX is the roll. V3: drum fill + trumpet pickup; V4: piano run",
+   "stems_v1": [
+    "strings"
+   ]
+  },
+  {
+   "frame": 240,
+   "music_frame": 240,
+   "time_s": 10.0,
+   "bar_beat": "5.1",
+   "tier": "T3",
+   "owner": "music",
+   "music": "HIT GERG, Fm11 - BRASS ACCENT #2 (trumpets + trombones only), low piano, timpani F, sub; four chip Fs across beats 2-3 (the flat line); then walking bass + brushes, swung, strings hold",
+   "stems_v1": [
+    "brass",
+    "perc",
+    "piano",
+    "sub",
+    "chip"
+   ]
+  },
+  {
+   "frame": 255,
+   "music_frame": 255,
+   "time_s": 10.625,
+   "bar_beat": "5.2",
+   "tier": "T3",
+   "owner": "music",
+   "music": "the viola + cello counter-line begins (lands on F4 inside roll-call stab 1)",
+   "stems_v1": [
+    "strings"
+   ]
+  },
+  {
+   "frame": 285,
+   "music_frame": 285,
+   "time_s": 11.875,
+   "bar_beat": "5.4",
+   "tier": "T3",
+   "owner": "music",
+   "music": "a reed-organ (harmonium) swell on a D-flat pedal f285-299 into the hit - never a church organ (V4: a chip square swell)",
+   "stems_v1": [
+    "winds"
+   ]
+  },
+  {
+   "frame": 300,
+   "music_frame": 300,
+   "time_s": 12.5,
+   "bar_beat": "6.1",
+   "tier": "T3",
+   "owner": "music",
+   "music": "HIT ALYI, Dbmaj9(#11) - BRASS ACCENT #3 (trumpets + trombones), the reed organ, timpani D-flat",
+   "stems_v1": [
+    "brass",
+    "perc",
+    "piano",
+    "sub",
+    "winds"
+   ]
+  },
+  {
+   "frame": 345,
+   "music_frame": 345,
+   "time_s": 14.375,
+   "bar_beat": "6.4",
+   "tier": "T3",
+   "owner": "music",
+   "music": "the bass reaches F2 (bar 6 walks Db3 C3 Ab2 F2)",
+   "stems_v1": [
+    "bass"
+   ]
+  },
+  {
+   "frame": 355,
+   "music_frame": 355,
+   "time_s": 14.7917,
+   "bar_beat": "6.4.67",
+   "tier": "T3",
+   "owner": "music",
+   "music": "pizzicato on the swung off-beat against the klaxon SFX (V3 a piano stab, V4 a chip pluck)",
+   "stems_v1": [
+    "strings"
+   ]
+  },
+  {
+   "frame": 360,
+   "music_frame": 360,
+   "time_s": 15.0,
+   "bar_beat": "7.1",
+   "tier": "T3",
+   "owner": "music",
+   "music": "HIT MARIO, Bbm9 - BRASS ACCENT #4 (trumpets + trombones); the klaxon SFX is cut dead here",
+   "stems_v1": [
+    "brass",
+    "perc",
+    "piano",
+    "sub"
+   ]
+  },
+  {
+   "frame": 414,
+   "music_frame": 414,
+   "time_s": 17.25,
+   "bar_beat": "7.4.6",
+   "tier": "T3",
+   "owner": "music",
+   "music": "BRASS ACCENT #5: a trumpet-section rip up to C (f414-419), the pickup into the shout. V2 horns + low strings crescendo; V3 full-band rip + snare fill; V4 piano glissando + chip riser",
+   "stems_v1": [
+    "brass"
+   ]
+  },
+  {
+   "frame": 420,
+   "music_frame": 420,
+   "time_s": 17.5,
+   "bar_beat": "8.1",
+   "tier": "T3",
+   "owner": "music",
+   "music": "HIT NOLE, C7(#9b13) - BRASS ACCENT #6, the only full shout (trumpets, trombones, saxes), low piano, timpani C, sub; chip line on E. V2 no saxes",
+   "stems_v1": [
+    "brass",
+    "perc",
+    "piano",
+    "sub"
+   ]
+  },
+  {
+   "frame": 460,
+   "music_frame": 460,
+   "time_s": 19.1667,
+   "bar_beat": "8.3.67",
+   "tier": "T3",
+   "owner": "music",
+   "music": "drum fill f460-464",
+   "stems_v1": [
+    "drums"
+   ]
+  },
+  {
+   "frame": 465,
+   "music_frame": 465,
+   "time_s": 19.375,
+   "bar_beat": "8.4",
+   "tier": "T3",
+   "owner": "music",
+   "music": "the kink: chip + celesta G5 (then Ab5 f470, C6 f475) into F at f480; bass Gb2; drum fill f465-479",
+   "stems_v1": [
+    "chip"
+   ]
+  },
+  {
+   "frame": 470,
+   "music_frame": 470,
+   "time_s": 19.5833,
+   "bar_beat": "8.4.33",
+   "tier": "T3",
+   "owner": "music",
+   "music": "kink A-flat 5",
+   "stems_v1": [
+    "chip"
+   ]
+  },
+  {
+   "frame": 475,
+   "music_frame": 475,
+   "time_s": 19.7917,
+   "bar_beat": "8.4.67",
+   "tier": "T3",
+   "owner": "music",
+   "music": "kink C6",
+   "stems_v1": [
+    "chip"
+   ]
+  },
+  {
+   "frame": 480,
+   "music_frame": 480.0,
+   "time_s": 20.0,
+   "bar_beat": "9.1",
+   "tier": "T4",
+   "owner": "music",
+   "music": "ROLL CALL stab 1 (TASYA): top F5 on Fm9, bass F2 - brass accent #7, 2 trumpets + 2 trombones open and short, doubled an octave up by the chip lead (25 % pulse), upright bass + kick; sub F1; the viola/cello F4 sounds inside this stab and releases with it",
+   "stems_v1": [
+    "brass",
+    "chip",
+    "bass",
+    "drums",
+    "piano",
+    "sub"
+   ]
+  },
+  {
+   "frame": 487,
+   "music_frame": 487.5,
+   "time_s": 20.3125,
+   "bar_beat": "9.1.5",
+   "tier": "T4",
+   "owner": "music",
+   "music": "ROLL CALL stab 2 (RADNUS): top F5 on Fm9, bass F2 - brass accent #7, 2 trumpets + 2 trombones open and short, doubled an octave up by the chip lead (25 % pulse), upright bass + kick",
+   "stems_v1": [
+    "brass",
+    "chip",
+    "bass",
+    "drums",
+    "piano"
+   ]
+  },
+  {
+   "frame": 495,
+   "music_frame": 495.0,
+   "time_s": 20.625,
+   "bar_beat": "9.2",
+   "tier": "T4",
+   "owner": "music",
+   "music": "ROLL CALL stab 3 (KRAM): top F5 on Fm9, bass F2 - brass accent #7, 2 trumpets + 2 trombones open and short, doubled an octave up by the chip lead (25 % pulse), upright bass + kick",
+   "stems_v1": [
+    "brass",
+    "chip",
+    "bass",
+    "drums",
+    "piano"
+   ]
+  },
+  {
+   "frame": 502,
+   "music_frame": 502.5,
+   "time_s": 20.9375,
+   "bar_beat": "9.2.5",
+   "tier": "T4",
+   "owner": "music",
+   "music": "ROLL CALL stab 4 (NESNEJ): top F5 on Fm9, bass F2 - brass accent #7, 2 trumpets + 2 trombones open and short, doubled an octave up by the chip lead (25 % pulse), upright bass + kick",
+   "stems_v1": [
+    "brass",
+    "chip",
+    "bass",
+    "drums",
+    "piano"
+   ]
+  },
+  {
+   "frame": 510,
+   "music_frame": 510.0,
+   "time_s": 21.25,
+   "bar_beat": "9.3",
+   "tier": "T4",
+   "owner": "music",
+   "music": "ROLL CALL stab 5 (RIMA TAMURI): top G5 on Dbmaj7(#11), bass Db2 - brass accent #7, 2 trumpets + 2 trombones open and short, doubled an octave up by the chip lead (25 % pulse), upright bass + kick",
+   "stems_v1": [
+    "brass",
+    "chip",
+    "bass",
+    "drums",
+    "piano"
+   ]
+  },
+  {
+   "frame": 517,
+   "music_frame": 517.5,
+   "time_s": 21.5625,
+   "bar_beat": "9.3.5",
+   "tier": "T4",
+   "owner": "music",
+   "music": "ROLL CALL stab 6 (THE WHALE): top Ab5 on Dbmaj7(#11), bass Db2 - brass accent #7, 2 trumpets + 2 trombones open and short, doubled an octave up by the chip lead (25 % pulse), upright bass + kick",
+   "stems_v1": [
+    "brass",
+    "chip",
+    "bass",
+    "drums",
+    "piano"
+   ]
+  },
+  {
+   "frame": 525,
+   "music_frame": 525.0,
+   "time_s": 21.875,
+   "bar_beat": "9.4",
+   "tier": "T4",
+   "owner": "music",
+   "music": "ROLL CALL stab 7 (RUMPT (silhouette)): top C6 on C7(#9b13), bass C2 - brass accent #7, 2 trumpets + 2 trombones open and short, doubled an octave up by the chip lead (25 % pulse), upright bass + kick",
+   "stems_v1": [
+    "brass",
+    "chip",
+    "bass",
+    "drums",
+    "piano"
+   ]
+  },
+  {
+   "frame": 532,
+   "music_frame": 532.5,
+   "time_s": 22.1875,
+   "bar_beat": "9.4.5",
+   "tier": "T4",
+   "owner": "music",
+   "music": "ROLL CALL stab 8 (the player who does not exist yet (GLYPH cursor)): top F6 on F5 open fifth F-C, no third, bass F1 + sub - brass accent #7, 2 trumpets + 2 trombones open and short, doubled an octave up by the chip lead (25 % pulse), upright bass + kick; rings to f539, sub F1",
+   "stems_v1": [
+    "brass",
+    "chip",
+    "bass",
+    "drums",
+    "piano",
+    "sub"
+   ]
+  },
+  {
+   "frame": 539,
+   "music_frame": 539,
+   "time_s": 22.4583,
+   "bar_beat": "9.4.93",
+   "tier": "T4",
+   "owner": "SFX",
+   "music": "stab 8 has rung out; the reverse swell end-anchored on f540 is SFX-owned. No \"music fired\" mute anywhere in bar 9, no f510 slam",
+   "stems_v1": []
+  },
+  {
+   "frame": 540,
+   "music_frame": 540,
+   "time_s": 22.5,
+   "bar_beat": "10.1",
+   "tier": "sky",
+   "owner": "music",
+   "music": "pluck F5 (harp + pizz, chip an octave up); upright walking bass + brushes, swung: the line cliche F2-E2-Eb2-D2; THE MUTED-TRUMPET MOMENT: Harmon C5 f540-564 (its own stem, \"harmon\")",
+   "stems_v1": [
+    "strings",
+    "chip",
+    "bass",
+    "harmon"
+   ]
+  },
+  {
+   "frame": 555,
+   "music_frame": 555,
+   "time_s": 23.125,
+   "bar_beat": "10.2",
+   "tier": "sky",
+   "owner": "music",
+   "music": "pluck F (bass E2)",
+   "stems_v1": [
+    "strings",
+    "chip"
+   ]
+  },
+  {
+   "frame": 565,
+   "music_frame": 565,
+   "time_s": 23.5417,
+   "bar_beat": "10.2.67",
+   "tier": "sky",
+   "owner": "music",
+   "music": "Harmon B-flat 4 on the swung \"and\" of 10.2",
+   "stems_v1": [
+    "harmon"
+   ]
+  },
+  {
+   "frame": 570,
+   "music_frame": 570,
+   "time_s": 23.75,
+   "bar_beat": "10.3",
+   "tier": "sky",
+   "owner": "music",
+   "music": "pluck F (bass Eb2); Harmon A-flat 4 f570-584",
+   "stems_v1": [
+    "strings",
+    "chip",
+    "harmon"
+   ]
+  },
+  {
+   "frame": 585,
+   "music_frame": 585,
+   "time_s": 24.375,
+   "bar_beat": "10.4",
+   "tier": "sky",
+   "owner": "music",
+   "music": "pluck F (bass D2); the Harmon falls off D5 f585-599 (the 6th of Fm6). V2: the line runs on through bar 11 (straight) and falls off B-flat 4 by f629; V3: the chip answers beats 3-4; V4: the piano's right hand in octaves",
+   "stems_v1": [
+    "strings",
+    "chip",
+    "harmon"
+   ]
+  },
+  {
+   "frame": 600,
+   "music_frame": 600,
+   "time_s": 25.0,
+   "bar_beat": "11.1",
+   "tier": "sky",
+   "owner": "music",
+   "music": "pluck G (the kink); bar 11 squares up (straight): Db -> C7 (f615) over a timpani F roll; riser: string tremolo on C-G, chip noise sweep, cymbal swell, snare roll; 16ths on the grid",
+   "stems_v1": [
+    "strings",
+    "chip",
+    "perc",
+    "drums"
+   ]
+  },
+  {
+   "frame": 615,
+   "music_frame": 615,
+   "time_s": 25.625,
+   "bar_beat": "11.2",
+   "tier": "sky",
+   "owner": "music",
+   "music": "pluck A-flat; C7",
+   "stems_v1": [
+    "strings",
+    "chip"
+   ]
+  },
+  {
+   "frame": 622,
+   "music_frame": 622.5,
+   "time_s": 25.9375,
+   "bar_beat": "11.2.5",
+   "tier": "sky",
+   "owner": "music",
+   "music": "pluck C on the straight \"and\" of 11.2 (music +7.5): the riser peaks",
+   "stems_v1": [
+    "strings",
+    "chip"
+   ]
+  },
+  {
+   "frame": 630,
+   "music_frame": 630,
+   "time_s": 26.25,
+   "bar_beat": "11.3",
+   "tier": "title",
+   "owner": "music",
+   "music": "THE FINAL HIT, quartal C-F-Bb-Eb over F topped by G - NO third; sub drop C2 (65.4 Hz) -> F1 (43.7 Hz) over 1.6 s; low piano F1+C2 with F2-Bb2; BRASS ACCENT #8 (the last brass): a horn swell C4 F4 Bb4 Eb5 (V2 + trombones; V3 the band shouts the stack); chip 16ths F5-Bb5-Eb6-F6 (f630-641) into a sustained F6 with vibrato over C6 + triangle F3. Violas thinned for the PAD",
+   "stems_v1": [
+    "perc",
+    "strings",
+    "piano",
+    "sub",
+    "chip",
+    "brass"
+   ]
+  },
+  {
+   "frame": 660,
+   "music_frame": 660,
+   "time_s": 27.5,
+   "bar_beat": "12.1",
+   "tier": "title",
+   "owner": "music",
+   "music": "celesta F6 alone - no chip echo (V4: piano F6)",
+   "stems_v1": [
+    "perc"
+   ]
+  },
+  {
+   "frame": 679,
+   "music_frame": 679,
+   "time_s": 28.2917,
+   "bar_beat": "12.2.27",
+   "tier": "title",
+   "owner": "music",
+   "music": "the music's reverse swell into the f690 cut (V4: a soft chip noise swell)",
+   "stems_v1": [
+    "fx"
+   ]
+  },
+  {
+   "frame": 690,
+   "music_frame": 690,
+   "time_s": 28.75,
+   "bar_beat": "12.3",
+   "tier": "bookend",
+   "owner": "music",
+   "music": "the drone F1+C2 returns (the celesta at f690 is cut)",
+   "stems_v1": [
+    "sub"
+   ]
+  },
+  {
+   "frame": 705,
+   "music_frame": 705,
+   "time_s": 29.375,
+   "bar_beat": "12.4",
+   "tier": "bookend",
+   "owner": "SFX",
+   "music": "DING: SFX-owned (bell_ding_F6, cut at f719 with a 0.35 s fade); the music plays nothing new here - the drone continues",
+   "stems_v1": []
+  },
+  {
+   "frame": 719,
+   "music_frame": 719,
+   "time_s": 29.9583,
+   "bar_beat": "12.4.93",
+   "tier": "bookend",
+   "owner": "music",
+   "music": "the drone tail is out by f719 (end fade f706-719.5): the loop point",
+   "stems_v1": []
+  }
+ ],
+ "variations": {
+  "V1": {
+   "master_wav": "theme-V1-chipchamber.wav",
+   "preview_mp3": "theme-V1-chipchamber.mp3",
+   "midi": "midi/theme-V1-chipchamber.mid",
+   "stems": {
+    "bass": "stems/V1-bass.wav",
+    "brass": "stems/V1-brass.wav",
+    "chip": "stems/V1-chip.wav",
+    "drums": "stems/V1-drums.wav",
+    "fx": "stems/V1-fx.wav",
+    "harmon": "stems/V1-harmon.wav",
+    "perc": "stems/V1-perc.wav",
+    "piano": "stems/V1-piano.wav",
+    "strings": "stems/V1-strings.wav",
+    "sub": "stems/V1-sub.wav",
+    "winds": "stems/V1-winds.wav"
+   },
+   "integrated_lufs": -14.03,
+   "true_peak_dbtp": -1.15,
+   "final_chord_chroma": {
+    "C": 0.745,
+    "Db": 0.008,
+    "D": 0.045,
+    "Eb": 0.189,
+    "E": 0.022,
+    "F": 1.0,
+    "Gb": 0.011,
+    "G": 0.124,
+    "Ab": 0.006,
+    "A": 0.055,
+    "Bb": 0.167,
+    "B": 0.066
+   },
+   "no_third_windows": {
+    "cold_open_f0_57": {
+     "A": 0.001,
+     "Ab": 0.004,
+     "F": 1.0,
+     "C": 0.027,
+     "third_ratio": 0.004
+    },
+    "cold_open_f72_104": {
+     "A": 0.009,
+     "Ab": 0.005,
+     "F": 1.0,
+     "C": 0.402,
+     "third_ratio": 0.009
+    },
+    "stab8": {
+     "A": 0.04,
+     "Ab": 0.018,
+     "F": 1.0,
+     "C": 0.85,
+     "third_ratio": 0.04
+    },
+    "title": {
+     "A": 0.055,
+     "Ab": 0.006,
+     "F": 1.0,
+     "C": 0.745,
+     "third_ratio": 0.055
+    }
+   },
+   "rollcall_rms_dbfs": {
+    "bar8": -15.9,
+    "bar9": -15.9,
+    "old_mute_f495_509": -16.1,
+    "bar10": -17.1
+   },
+   "measured_onsets_ms": {
+    "0": {
+     "stem": "piano",
+     "offset_ms": 4.0
+    },
+    "15": {
+     "stem": "piano",
+     "offset_ms": -1.0
+    },
+    "30": {
+     "stem": "piano",
+     "offset_ms": 2.0
+    },
+    "45": {
+     "stem": "piano",
+     "offset_ms": 2.0
+    },
+    "60": {
+     "stem": "piano",
+     "offset_ms": 12.0
+    },
+    "90": {
+     "stem": "strings",
+     "offset_ms": 2.0
+    },
+    "105": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "108": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "112": {
+     "stem": "chip",
+     "offset_ms": 2.0
+    },
+    "116": {
+     "stem": "chip",
+     "offset_ms": 2.0
+    },
+    "120": {
+     "stem": "chip",
+     "offset_ms": 2.0
+    },
+    "127.5": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "135": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "165": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "172": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "180": {
+     "stem": "chip",
+     "offset_ms": 4.0
+    },
+    "195": {
+     "stem": "chip",
+     "offset_ms": 2.0
+    },
+    "240": {
+     "stem": "sub",
+     "offset_ms": 0.0
+    },
+    "300": {
+     "stem": "sub",
+     "offset_ms": 1.0
+    },
+    "355": {
+     "stem": "strings",
+     "offset_ms": -14.0
+    },
+    "360": {
+     "stem": "sub",
+     "offset_ms": 0.0
+    },
+    "414": {
+     "stem": "brass",
+     "offset_ms": 13.0
+    },
+    "420": {
+     "stem": "sub",
+     "offset_ms": 0.0
+    },
+    "465": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "470": {
+     "stem": "chip",
+     "offset_ms": -0.0
+    },
+    "475": {
+     "stem": "chip",
+     "offset_ms": 2.0
+    },
+    "480": {
+     "stem": "chip",
+     "offset_ms": 2.0
+    },
+    "487.5": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "495": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "502.5": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "510": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "517.5": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "525": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "532.5": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "540": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "555": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "570": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "585": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "600": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "615": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "622.5": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "630": {
+     "stem": "sub",
+     "offset_ms": 0.0
+    },
+    "660": {
+     "stem": "perc",
+     "offset_ms": 1.0
+    },
+    "690": {
+     "stem": "sub",
+     "offset_ms": 9.0
+    }
+   },
+   "rollcall_section_onsets_ms": {
+    "480": {
+     "stem": "brass",
+     "offset_ms": 3.0
+    },
+    "487.5": {
+     "stem": "brass",
+     "offset_ms": 5.0
+    },
+    "495": {
+     "stem": "brass",
+     "offset_ms": 14.0
+    },
+    "502.5": {
+     "stem": "brass",
+     "offset_ms": -6.0
+    },
+    "510": {
+     "stem": "brass",
+     "offset_ms": 7.0
+    },
+    "517.5": {
+     "stem": "brass",
+     "offset_ms": -15.0
+    },
+    "525": {
+     "stem": "brass",
+     "offset_ms": 10.0
+    },
+    "532.5": {
+     "stem": "brass",
+     "offset_ms": 9.0
+    }
+   },
+   "harmon_f540_onset_ms": 6.0,
+   "balance_pct_piano_orch_bigband_chip": {
+    "piano": 34,
+    "orch": 28,
+    "bigband": 11,
+    "chip": 27
+   },
+   "balance_by_section_rhythm_excluded": {
+    "T0 cold": {
+     "piano": 44,
+     "orch": 30,
+     "bigband": 0,
+     "chip": 26
+    },
+    "T1 1993": {
+     "piano": 44,
+     "orch": 7,
+     "bigband": 0,
+     "chip": 49
+    },
+    "T2 2008": {
+     "piano": 0,
+     "orch": 6,
+     "bigband": 0,
+     "chip": 94
+    },
+    "T3 dinner": {
+     "piano": 43,
+     "orch": 27,
+     "bigband": 9,
+     "chip": 22
+    },
+    "T4 rollcall": {
+     "piano": 32,
+     "orch": 2,
+     "bigband": 41,
+     "chip": 25
+    },
+    "skyline": {
+     "piano": 45,
+     "orch": 23,
+     "bigband": 11,
+     "chip": 21
+    },
+    "title": {
+     "piano": 12,
+     "orch": 57,
+     "bigband": 7,
+     "chip": 24
+    }
+   },
+   "role": "PRIMARY mix (Chip Chamber Jazz)"
+  },
+  "V2": {
+   "master_wav": "theme-V2-orchestralnoir.wav",
+   "preview_mp3": "theme-V2-orchestralnoir.mp3",
+   "midi": "midi/theme-V2-orchestralnoir.mid",
+   "stems": {
+    "bass": "stems/V2-bass.wav",
+    "brass": "stems/V2-brass.wav",
+    "chip": "stems/V2-chip.wav",
+    "drums": "stems/V2-drums.wav",
+    "fx": "stems/V2-fx.wav",
+    "harmon": "stems/V2-harmon.wav",
+    "perc": "stems/V2-perc.wav",
+    "piano": "stems/V2-piano.wav",
+    "strings": "stems/V2-strings.wav",
+    "sub": "stems/V2-sub.wav",
+    "winds": "stems/V2-winds.wav"
+   },
+   "integrated_lufs": -14.02,
+   "true_peak_dbtp": -1.15,
+   "final_chord_chroma": {
+    "C": 0.183,
+    "Db": 0.006,
+    "D": 0.032,
+    "Eb": 0.137,
+    "E": 0.021,
+    "F": 1.0,
+    "Gb": 0.011,
+    "G": 0.087,
+    "Ab": 0.006,
+    "A": 0.035,
+    "Bb": 0.129,
+    "B": 0.044
+   },
+   "no_third_windows": {
+    "cold_open_f0_57": {
+     "A": 0.003,
+     "Ab": 0.005,
+     "F": 1.0,
+     "C": 0.01,
+     "third_ratio": 0.005
+    },
+    "cold_open_f72_104": {
+     "A": 0.022,
+     "Ab": 0.006,
+     "F": 1.0,
+     "C": 0.323,
+     "third_ratio": 0.022
+    },
+    "stab8": {
+     "A": 0.011,
+     "Ab": 0.015,
+     "F": 1.0,
+     "C": 0.191,
+     "third_ratio": 0.015
+    },
+    "title": {
+     "A": 0.035,
+     "Ab": 0.006,
+     "F": 1.0,
+     "C": 0.183,
+     "third_ratio": 0.035
+    }
+   },
+   "rollcall_rms_dbfs": {
+    "bar8": -15.0,
+    "bar9": -15.8,
+    "old_mute_f495_509": -16.3,
+    "bar10": -18.9
+   },
+   "measured_onsets_ms": {
+    "0": {
+     "stem": "piano",
+     "offset_ms": 4.0
+    },
+    "15": {
+     "stem": "piano",
+     "offset_ms": -2.0
+    },
+    "30": {
+     "stem": "piano",
+     "offset_ms": 2.0
+    },
+    "45": {
+     "stem": "piano",
+     "offset_ms": 2.0
+    },
+    "60": {
+     "stem": "piano",
+     "offset_ms": 14.0
+    },
+    "90": {
+     "stem": "strings",
+     "offset_ms": 6.0
+    },
+    "105": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "108": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "112": {
+     "stem": "chip",
+     "offset_ms": 2.0
+    },
+    "116": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "120": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "127.5": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "135": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "165": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "172": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "180": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "195": {
+     "stem": "chip",
+     "offset_ms": 2.0
+    },
+    "240": {
+     "stem": "sub",
+     "offset_ms": 0.0
+    },
+    "300": {
+     "stem": "sub",
+     "offset_ms": 1.0
+    },
+    "355": {
+     "stem": "strings",
+     "offset_ms": 13.0
+    },
+    "360": {
+     "stem": "sub",
+     "offset_ms": 1.0
+    },
+    "420": {
+     "stem": "sub",
+     "offset_ms": 1.0
+    },
+    "465": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "470": {
+     "stem": "chip",
+     "offset_ms": -0.0
+    },
+    "475": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "480": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "487.5": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "495": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "502.5": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "510": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "517.5": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "525": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "532.5": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "540": {
+     "stem": "strings",
+     "offset_ms": 6.0
+    },
+    "555": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "570": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "585": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "600": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "615": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "622.5": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "630": {
+     "stem": "sub",
+     "offset_ms": 0.0
+    },
+    "660": {
+     "stem": "perc",
+     "offset_ms": 1.0
+    },
+    "690": {
+     "stem": "sub",
+     "offset_ms": 9.0
+    }
+   },
+   "rollcall_section_onsets_ms": {
+    "480": {
+     "stem": "brass",
+     "offset_ms": 12.0
+    },
+    "487.5": {
+     "stem": "brass",
+     "offset_ms": -10.0
+    },
+    "495": {
+     "stem": "brass",
+     "offset_ms": 20.0
+    },
+    "502.5": {
+     "stem": "brass",
+     "offset_ms": 9.0
+    },
+    "510": {
+     "stem": "brass",
+     "offset_ms": 12.0
+    },
+    "517.5": {
+     "stem": "brass",
+     "offset_ms": 10.0
+    },
+    "525": {
+     "stem": "brass",
+     "offset_ms": 18.0
+    },
+    "532.5": {
+     "stem": "brass",
+     "offset_ms": -24.0
+    }
+   },
+   "harmon_f540_onset_ms": 6.0,
+   "balance_pct_piano_orch_bigband_chip": {
+    "piano": 24,
+    "orch": 43,
+    "bigband": 10,
+    "chip": 23
+   },
+   "balance_by_section_rhythm_excluded": {
+    "T0 cold": {
+     "piano": 20,
+     "orch": 45,
+     "bigband": 0,
+     "chip": 34
+    },
+    "T1 1993": {
+     "piano": 10,
+     "orch": 27,
+     "bigband": 0,
+     "chip": 63
+    },
+    "T2 2008": {
+     "piano": 0,
+     "orch": 38,
+     "bigband": 0,
+     "chip": 62
+    },
+    "T3 dinner": {
+     "piano": 28,
+     "orch": 50,
+     "bigband": 3,
+     "chip": 19
+    },
+    "T4 rollcall": {
+     "piano": 0,
+     "orch": 6,
+     "bigband": 53,
+     "chip": 40
+    },
+    "skyline": {
+     "piano": 23,
+     "orch": 49,
+     "bigband": 16,
+     "chip": 12
+    },
+    "title": {
+     "piano": 32,
+     "orch": 44,
+     "bigband": 8,
+     "chip": 15
+    }
+   },
+   "role": "alternate"
+  },
+  "V3": {
+   "master_wav": "theme-V3-pixelswing.wav",
+   "preview_mp3": "theme-V3-pixelswing.mp3",
+   "midi": "midi/theme-V3-pixelswing.mid",
+   "stems": {
+    "bass": "stems/V3-bass.wav",
+    "brass": "stems/V3-brass.wav",
+    "chip": "stems/V3-chip.wav",
+    "drums": "stems/V3-drums.wav",
+    "fx": "stems/V3-fx.wav",
+    "harmon": "stems/V3-harmon.wav",
+    "perc": "stems/V3-perc.wav",
+    "piano": "stems/V3-piano.wav",
+    "strings": "stems/V3-strings.wav",
+    "sub": "stems/V3-sub.wav",
+    "winds": "stems/V3-winds.wav"
+   },
+   "integrated_lufs": -14.01,
+   "true_peak_dbtp": -1.15,
+   "final_chord_chroma": {
+    "C": 1.0,
+    "Db": 0.007,
+    "D": 0.014,
+    "Eb": 0.096,
+    "E": 0.027,
+    "F": 0.914,
+    "Gb": 0.005,
+    "G": 0.199,
+    "Ab": 0.007,
+    "A": 0.055,
+    "Bb": 0.039,
+    "B": 0.028
+   },
+   "no_third_windows": {
+    "cold_open_f0_57": {
+     "A": 0.005,
+     "Ab": 0.004,
+     "F": 1.0,
+     "C": 0.049,
+     "third_ratio": 0.005
+    },
+    "cold_open_f72_104": {
+     "A": 0.001,
+     "Ab": 0.02,
+     "F": 1.0,
+     "C": 0.082,
+     "third_ratio": 0.02
+    },
+    "stab8": {
+     "A": 0.056,
+     "Ab": 0.013,
+     "F": 1.0,
+     "C": 0.634,
+     "third_ratio": 0.056
+    },
+    "title": {
+     "A": 0.055,
+     "Ab": 0.007,
+     "F": 0.914,
+     "C": 1.0,
+     "third_ratio": 0.055
+    }
+   },
+   "rollcall_rms_dbfs": {
+    "bar8": -16.2,
+    "bar9": -15.0,
+    "old_mute_f495_509": -15.0,
+    "bar10": -18.2
+   },
+   "measured_onsets_ms": {
+    "0": {
+     "stem": "piano",
+     "offset_ms": 4.0
+    },
+    "15": {
+     "stem": "piano",
+     "offset_ms": -2.0
+    },
+    "30": {
+     "stem": "piano",
+     "offset_ms": 2.0
+    },
+    "45": {
+     "stem": "piano",
+     "offset_ms": 2.0
+    },
+    "60": {
+     "stem": "piano",
+     "offset_ms": 1.0
+    },
+    "90": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "105": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "108": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "112": {
+     "stem": "chip",
+     "offset_ms": 2.0
+    },
+    "116": {
+     "stem": "chip",
+     "offset_ms": 2.0
+    },
+    "120": {
+     "stem": "chip",
+     "offset_ms": 2.0
+    },
+    "135": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "165": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "172": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "180": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "195": {
+     "stem": "chip",
+     "offset_ms": 6.0
+    },
+    "240": {
+     "stem": "sub",
+     "offset_ms": 0.0
+    },
+    "300": {
+     "stem": "sub",
+     "offset_ms": 1.0
+    },
+    "355": {
+     "stem": "piano",
+     "offset_ms": -3.0
+    },
+    "360": {
+     "stem": "sub",
+     "offset_ms": 0.0
+    },
+    "414": {
+     "stem": "brass",
+     "offset_ms": 13.0
+    },
+    "420": {
+     "stem": "sub",
+     "offset_ms": 0.0
+    },
+    "465": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "470": {
+     "stem": "chip",
+     "offset_ms": -0.0
+    },
+    "475": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "480": {
+     "stem": "chip",
+     "offset_ms": 2.0
+    },
+    "487.5": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "495": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "502.5": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "510": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "517.5": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "525": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "532.5": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "540": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "555": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "570": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "585": {
+     "stem": "chip",
+     "offset_ms": 3.0
+    },
+    "600": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "615": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "622.5": {
+     "stem": "chip",
+     "offset_ms": 2.0
+    },
+    "630": {
+     "stem": "sub",
+     "offset_ms": 0.0
+    },
+    "660": {
+     "stem": "perc",
+     "offset_ms": 2.0
+    },
+    "690": {
+     "stem": "sub",
+     "offset_ms": 9.0
+    },
+    "130": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    }
+   },
+   "rollcall_section_onsets_ms": {
+    "480": {
+     "stem": "brass",
+     "offset_ms": 7.0
+    },
+    "487.5": {
+     "stem": "brass",
+     "offset_ms": 5.0
+    },
+    "495": {
+     "stem": "brass",
+     "offset_ms": -7.0
+    },
+    "502.5": {
+     "stem": "brass",
+     "offset_ms": 4.0
+    },
+    "510": {
+     "stem": "brass",
+     "offset_ms": 10.0
+    },
+    "517.5": {
+     "stem": "brass",
+     "offset_ms": 8.0
+    },
+    "525": {
+     "stem": "brass",
+     "offset_ms": 21.0
+    },
+    "532.5": {
+     "stem": "brass",
+     "offset_ms": 10.0
+    }
+   },
+   "harmon_f540_onset_ms": 6.0,
+   "balance_pct_piano_orch_bigband_chip": {
+    "piano": 33,
+    "orch": 14,
+    "bigband": 18,
+    "chip": 35
+   },
+   "balance_by_section_rhythm_excluded": {
+    "T0 cold": {
+     "piano": 36,
+     "orch": 25,
+     "bigband": 0,
+     "chip": 39
+    },
+    "T1 1993": {
+     "piano": 28,
+     "orch": 2,
+     "bigband": 0,
+     "chip": 69
+    },
+    "T2 2008": {
+     "piano": 0,
+     "orch": 0,
+     "bigband": 4,
+     "chip": 96
+    },
+    "T3 dinner": {
+     "piano": 45,
+     "orch": 4,
+     "bigband": 14,
+     "chip": 37
+    },
+    "T4 rollcall": {
+     "piano": 12,
+     "orch": 0,
+     "bigband": 67,
+     "chip": 21
+    },
+    "skyline": {
+     "piano": 34,
+     "orch": 26,
+     "bigband": 19,
+     "chip": 21
+    },
+    "title": {
+     "piano": 36,
+     "orch": 35,
+     "bigband": 3,
+     "chip": 26
+    }
+   },
+   "role": "alternate (fallback if V1 reads too polite)"
+  },
+  "V4": {
+   "master_wav": "theme-V4-pianopixels.wav",
+   "preview_mp3": "theme-V4-pianopixels.mp3",
+   "midi": "midi/theme-V4-pianopixels.mid",
+   "stems": {
+    "chip": "stems/V4-chip.wav",
+    "piano": "stems/V4-piano.wav",
+    "sub": "stems/V4-sub.wav"
+   },
+   "integrated_lufs": -14.02,
+   "true_peak_dbtp": -1.15,
+   "final_chord_chroma": {
+    "C": 0.345,
+    "Db": 0.042,
+    "D": 0.014,
+    "Eb": 0.281,
+    "E": 0.058,
+    "F": 1.0,
+    "Gb": 0.006,
+    "G": 0.172,
+    "Ab": 0.043,
+    "A": 0.039,
+    "Bb": 0.059,
+    "B": 0.057
+   },
+   "no_third_windows": {
+    "cold_open_f0_57": {
+     "A": 0.079,
+     "Ab": 0.135,
+     "F": 0.92,
+     "C": 1.0,
+     "third_ratio": 0.135
+    },
+    "cold_open_f72_104": {
+     "A": 0.008,
+     "Ab": 0.008,
+     "F": 1.0,
+     "C": 0.382,
+     "third_ratio": 0.008
+    },
+    "stab8": {
+     "A": 0.126,
+     "Ab": 0.092,
+     "F": 1.0,
+     "C": 0.568,
+     "third_ratio": 0.126
+    },
+    "title": {
+     "A": 0.039,
+     "Ab": 0.043,
+     "F": 1.0,
+     "C": 0.345,
+     "third_ratio": 0.043
+    }
+   },
+   "rollcall_rms_dbfs": {
+    "bar8": -15.8,
+    "bar9": -14.9,
+    "old_mute_f495_509": -14.9,
+    "bar10": -15.8
+   },
+   "measured_onsets_ms": {
+    "0": {
+     "stem": "piano",
+     "offset_ms": 4.0
+    },
+    "15": {
+     "stem": "piano",
+     "offset_ms": -7.0
+    },
+    "30": {
+     "stem": "piano",
+     "offset_ms": 3.0
+    },
+    "45": {
+     "stem": "piano",
+     "offset_ms": 3.0
+    },
+    "60": {
+     "stem": "piano",
+     "offset_ms": 0.0
+    },
+    "90": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "105": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "108": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "112": {
+     "stem": "chip",
+     "offset_ms": 4.0
+    },
+    "116": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "120": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "127.5": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "135": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "165": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "172": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "180": {
+     "stem": "chip",
+     "offset_ms": 6.0
+    },
+    "195": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "240": {
+     "stem": "sub",
+     "offset_ms": 1.0
+    },
+    "300": {
+     "stem": "sub",
+     "offset_ms": 1.0
+    },
+    "355": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "360": {
+     "stem": "sub",
+     "offset_ms": 0.0
+    },
+    "420": {
+     "stem": "sub",
+     "offset_ms": 0.0
+    },
+    "465": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "470": {
+     "stem": "chip",
+     "offset_ms": -0.0
+    },
+    "475": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "480": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "487.5": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "495": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "502.5": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "510": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "517.5": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "525": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "532.5": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "540": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "555": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "570": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "585": {
+     "stem": "chip",
+     "offset_ms": 0.0
+    },
+    "600": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "615": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "622.5": {
+     "stem": "chip",
+     "offset_ms": 1.0
+    },
+    "630": {
+     "stem": "sub",
+     "offset_ms": 0.0
+    },
+    "660": {
+     "stem": "piano",
+     "offset_ms": -3.0
+    },
+    "690": {
+     "stem": "sub",
+     "offset_ms": 9.0
+    }
+   },
+   "rollcall_section_onsets_ms": {
+    "480": {
+     "stem": "piano",
+     "offset_ms": 4.0
+    },
+    "487.5": {
+     "stem": "piano",
+     "offset_ms": 11.0
+    },
+    "495": {
+     "stem": "piano",
+     "offset_ms": 11.0
+    },
+    "502.5": {
+     "stem": "piano",
+     "offset_ms": 11.0
+    },
+    "510": {
+     "stem": "piano",
+     "offset_ms": 2.0
+    },
+    "517.5": {
+     "stem": "piano",
+     "offset_ms": 3.0
+    },
+    "525": {
+     "stem": "piano",
+     "offset_ms": -1.0
+    },
+    "532.5": {
+     "stem": "piano",
+     "offset_ms": 0.0
+    }
+   },
+   "harmon_f540_onset_ms": null,
+   "balance_pct_piano_orch_bigband_chip": {
+    "piano": 58,
+    "orch": 0,
+    "bigband": 0,
+    "chip": 42
+   },
+   "balance_by_section_rhythm_excluded": {
+    "T0 cold": {
+     "piano": 52,
+     "orch": 0,
+     "bigband": 0,
+     "chip": 48
+    },
+    "T1 1993": {
+     "piano": 40,
+     "orch": 0,
+     "bigband": 0,
+     "chip": 60
+    },
+    "T2 2008": {
+     "piano": 14,
+     "orch": 0,
+     "bigband": 0,
+     "chip": 86
+    },
+    "T3 dinner": {
+     "piano": 67,
+     "orch": 0,
+     "bigband": 0,
+     "chip": 33
+    },
+    "T4 rollcall": {
+     "piano": 66,
+     "orch": 0,
+     "bigband": 0,
+     "chip": 34
+    },
+    "skyline": {
+     "piano": 70,
+     "orch": 0,
+     "bigband": 0,
+     "chip": 30
+    },
+    "title": {
+     "piano": 48,
+     "orch": 0,
+     "bigband": 0,
+     "chip": 52
+    }
+   },
+   "role": "alternate (quiet episodes)"
+  }
+ },
+ "tiers": {
+  "T0": "dark room: felt piano, the drone (music-owned), chip glints; VO duck",
+  "T1": "1993 1-bit: beeper / square / noise over a real sub; straight (V3 swings)",
+  "T2": "2008-14 early chip: the band through a 16-bit sample-chip (BRR grit, gaussian interpolation, echo) - no tape wow",
+  "T3": "dinner: full acoustic (piano / strings / brass accents / jazz rhythm) + the chip flat line",
+  "T4": "roll call f480-539: eight brass + chip stabs, stop-time; skyline and title after"
+ }
+}

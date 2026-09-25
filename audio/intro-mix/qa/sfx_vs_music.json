@@ -1,0 +1,2134 @@
+{
+ "V1": {
+  "n": 62,
+  "median_sfx_minus_music": -9.7,
+  "p10": -17.7,
+  "p90": -1.3,
+  "above_music": [
+   [
+    "y93.bonk",
+    150,
+    0.3,
+    -25.0
+   ],
+   [
+    "d.mario.chime_G6",
+    351,
+    0.5,
+    -19.4
+   ],
+   [
+    "book.ding",
+    705,
+    12.3,
+    -31.4
+   ],
+   [
+    "book.post_click",
+    705,
+    11.8,
+    -29.1
+   ]
+  ],
+  "events": [
+   {
+    "id": "co.room_tone",
+    "frame": 0,
+    "sfx": -42.5,
+    "music": -27.5,
+    "dialogue": null,
+    "sfx_minus_music": -15.0
+   },
+   {
+    "id": "co.orb_servo",
+    "frame": 97,
+    "sfx": -27.3,
+    "music": -26.1,
+    "dialogue": -84.1,
+    "sfx_minus_music": -1.2
+   },
+   {
+    "id": "co.orb_scan",
+    "frame": 99,
+    "sfx": -29.7,
+    "music": -27.2,
+    "dialogue": null,
+    "sfx_minus_music": -2.5
+   },
+   {
+    "id": "co.post_click",
+    "frame": 112,
+    "sfx": -24.0,
+    "music": -20.7,
+    "dialogue": null,
+    "sfx_minus_music": -3.3
+   },
+   {
+    "id": "co.revswell_120",
+    "frame": 120,
+    "sfx": -27.4,
+    "music": -20.0,
+    "dialogue": null,
+    "sfx_minus_music": -7.4
+   },
+   {
+    "id": "y93.bonk",
+    "frame": 150,
+    "sfx": -24.6,
+    "music": -25.0,
+    "dialogue": null,
+    "sfx_minus_music": 0.3
+   },
+   {
+    "id": "y93.ok_click",
+    "frame": 165,
+    "sfx": -26.4,
+    "music": -18.2,
+    "dialogue": null,
+    "sfx_minus_music": -8.2
+   },
+   {
+    "id": "y08.collar1",
+    "frame": 180,
+    "sfx": -24.7,
+    "music": -15.1,
+    "dialogue": null,
+    "sfx_minus_music": -9.6
+   },
+   {
+    "id": "y08.collar2",
+    "frame": 190,
+    "sfx": -24.2,
+    "music": -18.1,
+    "dialogue": null,
+    "sfx_minus_music": -6.1
+   },
+   {
+    "id": "y14.collar_repop",
+    "frame": 205,
+    "sfx": -24.2,
+    "music": -16.9,
+    "dialogue": null,
+    "sfx_minus_music": -7.3
+   },
+   {
+    "id": "y14.crown_flutter",
+    "frame": 205,
+    "sfx": -25.8,
+    "music": -16.3,
+    "dialogue": null,
+    "sfx_minus_music": -9.5
+   },
+   {
+    "id": "y14.crown_land",
+    "frame": 217,
+    "sfx": -32.9,
+    "music": -20.6,
+    "dialogue": null,
+    "sfx_minus_music": -12.4
+   },
+   {
+    "id": "d15.keycap_popcorn",
+    "frame": 226,
+    "sfx": -32.4,
+    "music": -17.2,
+    "dialogue": null,
+    "sfx_minus_music": -15.2
+   },
+   {
+    "id": "d.gerg.latch",
+    "frame": 240,
+    "sfx": -22.1,
+    "music": -10.7,
+    "dialogue": null,
+    "sfx_minus_music": -11.4
+   },
+   {
+    "id": "d15.keyboard_roll",
+    "frame": 240,
+    "sfx": -33.1,
+    "music": -16.8,
+    "dialogue": null,
+    "sfx_minus_music": -16.3
+   },
+   {
+    "id": "blip.gerg.ORG",
+    "frame": 246,
+    "sfx": -22.3,
+    "music": -15.5,
+    "dialogue": null,
+    "sfx_minus_music": -6.8
+   },
+   {
+    "id": "blip.gerg.CHART",
+    "frame": 248,
+    "sfx": -21.7,
+    "music": -17.7,
+    "dialogue": null,
+    "sfx_minus_music": -4.0
+   },
+   {
+    "id": "blip.gerg.HIM",
+    "frame": 251,
+    "sfx": -23.7,
+    "music": -19.7,
+    "dialogue": null,
+    "sfx_minus_music": -4.0
+   },
+   {
+    "id": "d.gerg.item_take",
+    "frame": 254,
+    "sfx": -32.6,
+    "music": -13.0,
+    "dialogue": null,
+    "sfx_minus_music": -19.7
+   },
+   {
+    "id": "d.alyi.flame",
+    "frame": 290,
+    "sfx": -27.2,
+    "music": -16.7,
+    "dialogue": -21.2,
+    "sfx_minus_music": -10.4
+   },
+   {
+    "id": "d.alyi.latch",
+    "frame": 300,
+    "sfx": -22.5,
+    "music": -13.0,
+    "dialogue": -14.6,
+    "sfx_minus_music": -9.5
+   },
+   {
+    "id": "d.mario.klaxon",
+    "frame": 345,
+    "sfx": -19.3,
+    "music": -17.5,
+    "dialogue": null,
+    "sfx_minus_music": -1.8
+   },
+   {
+    "id": "d.mario.steam",
+    "frame": 345,
+    "sfx": -19.3,
+    "music": -17.5,
+    "dialogue": null,
+    "sfx_minus_music": -1.8
+   },
+   {
+    "id": "d.mario.chime_F6",
+    "frame": 348,
+    "sfx": -18.4,
+    "music": -17.9,
+    "dialogue": null,
+    "sfx_minus_music": -0.5
+   },
+   {
+    "id": "d.mario.chime_G6",
+    "frame": 351,
+    "sfx": -18.8,
+    "music": -19.4,
+    "dialogue": null,
+    "sfx_minus_music": 0.5
+   },
+   {
+    "id": "d.mario.chime_Ab6",
+    "frame": 354,
+    "sfx": -19.2,
+    "music": -19.1,
+    "dialogue": null,
+    "sfx_minus_music": -0.1
+   },
+   {
+    "id": "d.mario.latch",
+    "frame": 360,
+    "sfx": -21.7,
+    "music": -10.2,
+    "dialogue": null,
+    "sfx_minus_music": -11.5
+   },
+   {
+    "id": "blip.mario.366",
+    "frame": 366,
+    "sfx": -20.8,
+    "music": -15.6,
+    "dialogue": null,
+    "sfx_minus_music": -5.2
+   },
+   {
+    "id": "blip.mario.368",
+    "frame": 368,
+    "sfx": -20.8,
+    "music": -14.3,
+    "dialogue": null,
+    "sfx_minus_music": -6.5
+   },
+   {
+    "id": "blip.mario.366.echo",
+    "frame": 370,
+    "sfx": -22.2,
+    "music": -12.8,
+    "dialogue": null,
+    "sfx_minus_music": -9.4
+   },
+   {
+    "id": "blip.mario.368.echo",
+    "frame": 372,
+    "sfx": -21.9,
+    "music": -12.3,
+    "dialogue": null,
+    "sfx_minus_music": -9.6
+   },
+   {
+    "id": "blip.mario.373",
+    "frame": 373,
+    "sfx": -22.4,
+    "music": -12.3,
+    "dialogue": null,
+    "sfx_minus_music": -10.1
+   },
+   {
+    "id": "blip.mario.375",
+    "frame": 375,
+    "sfx": -24.0,
+    "music": -12.6,
+    "dialogue": null,
+    "sfx_minus_music": -11.5
+   },
+   {
+    "id": "d.mario.unroll",
+    "frame": 375,
+    "sfx": -24.1,
+    "music": -12.6,
+    "dialogue": null,
+    "sfx_minus_music": -11.5
+   },
+   {
+    "id": "blip.mario.373.echo",
+    "frame": 377,
+    "sfx": -27.6,
+    "music": -13.9,
+    "dialogue": null,
+    "sfx_minus_music": -13.7
+   },
+   {
+    "id": "blip.mario.375.echo",
+    "frame": 379,
+    "sfx": -29.2,
+    "music": -15.3,
+    "dialogue": null,
+    "sfx_minus_music": -13.9
+   },
+   {
+    "id": "d.mario.item_take",
+    "frame": 390,
+    "sfx": -29.5,
+    "music": -13.7,
+    "dialogue": null,
+    "sfx_minus_music": -15.8
+   },
+   {
+    "id": "d.nole.rumble",
+    "frame": 403,
+    "sfx": -21.6,
+    "music": -14.2,
+    "dialogue": null,
+    "sfx_minus_music": -7.4
+   },
+   {
+    "id": "d.nole.ceiling_burst",
+    "frame": 405,
+    "sfx": -21.0,
+    "music": -15.0,
+    "dialogue": null,
+    "sfx_minus_music": -6.0
+   },
+   {
+    "id": "d.nole.rocket_roar",
+    "frame": 405,
+    "sfx": -21.0,
+    "music": -15.0,
+    "dialogue": null,
+    "sfx_minus_music": -6.0
+   },
+   {
+    "id": "d.nole.tiles",
+    "frame": 409,
+    "sfx": -23.1,
+    "music": -16.3,
+    "dialogue": null,
+    "sfx_minus_music": -6.8
+   },
+   {
+    "id": "d.nole.landing",
+    "frame": 420,
+    "sfx": -23.2,
+    "music": -9.3,
+    "dialogue": null,
+    "sfx_minus_music": -13.9
+   },
+   {
+    "id": "d.nole.latch",
+    "frame": 420,
+    "sfx": -21.0,
+    "music": -8.8,
+    "dialogue": null,
+    "sfx_minus_music": -12.2
+   },
+   {
+    "id": "blip.nole.NAMED",
+    "frame": 426,
+    "sfx": -21.4,
+    "music": -14.5,
+    "dialogue": null,
+    "sfx_minus_music": -6.9
+   },
+   {
+    "id": "blip.nole.IT",
+    "frame": 429,
+    "sfx": -22.1,
+    "music": -14.1,
+    "dialogue": null,
+    "sfx_minus_music": -8.1
+   },
+   {
+    "id": "d.nole.stamp",
+    "frame": 435,
+    "sfx": -24.3,
+    "music": -14.5,
+    "dialogue": null,
+    "sfx_minus_music": -9.8
+   },
+   {
+    "id": "d.nole.item_take",
+    "frame": 456,
+    "sfx": -32.7,
+    "music": -14.2,
+    "dialogue": null,
+    "sfx_minus_music": -18.5
+   },
+   {
+    "id": "d.nole.letter_clunk",
+    "frame": 464,
+    "sfx": -23.4,
+    "music": -12.5,
+    "dialogue": null,
+    "sfx_minus_music": -10.9
+   },
+   {
+    "id": "d.found.neon_buzz",
+    "frame": 465,
+    "sfx": -25.0,
+    "music": -12.8,
+    "dialogue": null,
+    "sfx_minus_music": -12.2
+   },
+   {
+    "id": "d.found.neon_ignite",
+    "frame": 465,
+    "sfx": -25.0,
+    "music": -12.8,
+    "dialogue": null,
+    "sfx_minus_music": -12.2
+   },
+   {
+    "id": "rc.revswell_540",
+    "frame": 540,
+    "sfx": -40.7,
+    "music": -11.9,
+    "dialogue": null,
+    "sfx_minus_music": -28.7
+   },
+   {
+    "id": "sky.pop_macrosoft",
+    "frame": 540,
+    "sfx": -30.9,
+    "music": -14.8,
+    "dialogue": null,
+    "sfx_minus_music": -16.0
+   },
+   {
+    "id": "sky.pop_elgoog",
+    "frame": 555,
+    "sfx": -30.5,
+    "music": -12.6,
+    "dialogue": null,
+    "sfx_minus_music": -17.9
+   },
+   {
+    "id": "sky.pop_minddeep",
+    "frame": 556,
+    "sfx": -35.3,
+    "music": -13.1,
+    "dialogue": null,
+    "sfx_minus_music": -22.2
+   },
+   {
+    "id": "sky.pop_atem",
+    "frame": 570,
+    "sfx": -31.9,
+    "music": -13.7,
+    "dialogue": null,
+    "sfx_minus_music": -18.2
+   },
+   {
+    "id": "sky.pop_invidia",
+    "frame": 585,
+    "sfx": -31.9,
+    "music": -13.2,
+    "dialogue": null,
+    "sfx_minus_music": -18.6
+   },
+   {
+    "id": "sky.pop_misanthropic",
+    "frame": 600,
+    "sfx": -27.1,
+    "music": -13.0,
+    "dialogue": null,
+    "sfx_minus_music": -14.0
+   },
+   {
+    "id": "sky.pop_zai",
+    "frame": 600,
+    "sfx": -27.1,
+    "music": -13.0,
+    "dialogue": null,
+    "sfx_minus_music": -14.0
+   },
+   {
+    "id": "sky.pop_peekdeep",
+    "frame": 615,
+    "sfx": -26.6,
+    "music": -10.4,
+    "dialogue": null,
+    "sfx_minus_music": -16.2
+   },
+   {
+    "id": "blip.orb.toast",
+    "frame": 692,
+    "sfx": -31.3,
+    "music": -19.1,
+    "dialogue": null,
+    "sfx_minus_music": -12.2
+   },
+   {
+    "id": "book.ding",
+    "frame": 705,
+    "sfx": -19.0,
+    "music": -31.4,
+    "dialogue": null,
+    "sfx_minus_music": 12.3
+   },
+   {
+    "id": "book.post_click",
+    "frame": 705,
+    "sfx": -17.4,
+    "music": -29.1,
+    "dialogue": null,
+    "sfx_minus_music": 11.8
+   }
+  ]
+ },
+ "V2": {
+  "n": 62,
+  "median_sfx_minus_music": -10.2,
+  "p10": -16.9,
+  "p90": -2.1,
+  "above_music": [
+   [
+    "y93.bonk",
+    150,
+    0.1,
+    -25.0
+   ],
+   [
+    "d.mario.chime_G6",
+    351,
+    0.4,
+    -19.5
+   ],
+   [
+    "d.mario.chime_Ab6",
+    354,
+    0.1,
+    -19.6
+   ],
+   [
+    "book.ding",
+    705,
+    11.9,
+    -31.3
+   ],
+   [
+    "book.post_click",
+    705,
+    11.4,
+    -29.1
+   ]
+  ],
+  "events": [
+   {
+    "id": "co.room_tone",
+    "frame": 0,
+    "sfx": -42.8,
+    "music": -25.1,
+    "dialogue": null,
+    "sfx_minus_music": -17.7
+   },
+   {
+    "id": "co.orb_servo",
+    "frame": 97,
+    "sfx": -27.6,
+    "music": -24.8,
+    "dialogue": -84.4,
+    "sfx_minus_music": -2.8
+   },
+   {
+    "id": "co.orb_scan",
+    "frame": 99,
+    "sfx": -30.0,
+    "music": -25.8,
+    "dialogue": null,
+    "sfx_minus_music": -4.2
+   },
+   {
+    "id": "co.post_click",
+    "frame": 112,
+    "sfx": -24.3,
+    "music": -20.5,
+    "dialogue": null,
+    "sfx_minus_music": -3.8
+   },
+   {
+    "id": "co.revswell_120",
+    "frame": 120,
+    "sfx": -27.7,
+    "music": -21.9,
+    "dialogue": null,
+    "sfx_minus_music": -5.8
+   },
+   {
+    "id": "y93.bonk",
+    "frame": 150,
+    "sfx": -24.9,
+    "music": -25.0,
+    "dialogue": null,
+    "sfx_minus_music": 0.1
+   },
+   {
+    "id": "y93.ok_click",
+    "frame": 165,
+    "sfx": -26.7,
+    "music": -17.1,
+    "dialogue": null,
+    "sfx_minus_music": -9.7
+   },
+   {
+    "id": "y08.collar1",
+    "frame": 180,
+    "sfx": -25.0,
+    "music": -19.5,
+    "dialogue": null,
+    "sfx_minus_music": -5.5
+   },
+   {
+    "id": "y08.collar2",
+    "frame": 190,
+    "sfx": -24.5,
+    "music": -21.2,
+    "dialogue": null,
+    "sfx_minus_music": -3.3
+   },
+   {
+    "id": "y14.collar_repop",
+    "frame": 205,
+    "sfx": -24.5,
+    "music": -21.5,
+    "dialogue": null,
+    "sfx_minus_music": -3.0
+   },
+   {
+    "id": "y14.crown_flutter",
+    "frame": 205,
+    "sfx": -26.2,
+    "music": -21.6,
+    "dialogue": null,
+    "sfx_minus_music": -4.6
+   },
+   {
+    "id": "y14.crown_land",
+    "frame": 217,
+    "sfx": -33.3,
+    "music": -33.1,
+    "dialogue": null,
+    "sfx_minus_music": -0.2
+   },
+   {
+    "id": "d15.keycap_popcorn",
+    "frame": 226,
+    "sfx": -32.7,
+    "music": -20.7,
+    "dialogue": null,
+    "sfx_minus_music": -12.1
+   },
+   {
+    "id": "d.gerg.latch",
+    "frame": 240,
+    "sfx": -22.4,
+    "music": -11.6,
+    "dialogue": null,
+    "sfx_minus_music": -10.8
+   },
+   {
+    "id": "d15.keyboard_roll",
+    "frame": 240,
+    "sfx": -33.4,
+    "music": -21.1,
+    "dialogue": null,
+    "sfx_minus_music": -12.3
+   },
+   {
+    "id": "blip.gerg.ORG",
+    "frame": 246,
+    "sfx": -22.6,
+    "music": -14.1,
+    "dialogue": null,
+    "sfx_minus_music": -8.6
+   },
+   {
+    "id": "blip.gerg.CHART",
+    "frame": 248,
+    "sfx": -22.0,
+    "music": -14.3,
+    "dialogue": null,
+    "sfx_minus_music": -7.7
+   },
+   {
+    "id": "blip.gerg.HIM",
+    "frame": 251,
+    "sfx": -24.0,
+    "music": -15.2,
+    "dialogue": null,
+    "sfx_minus_music": -8.8
+   },
+   {
+    "id": "d.gerg.item_take",
+    "frame": 254,
+    "sfx": -32.9,
+    "music": -12.5,
+    "dialogue": null,
+    "sfx_minus_music": -20.5
+   },
+   {
+    "id": "d.alyi.flame",
+    "frame": 290,
+    "sfx": -27.5,
+    "music": -16.7,
+    "dialogue": -22.5,
+    "sfx_minus_music": -10.8
+   },
+   {
+    "id": "d.alyi.latch",
+    "frame": 300,
+    "sfx": -22.2,
+    "music": -14.1,
+    "dialogue": -14.6,
+    "sfx_minus_music": -8.1
+   },
+   {
+    "id": "d.mario.klaxon",
+    "frame": 345,
+    "sfx": -19.6,
+    "music": -17.4,
+    "dialogue": null,
+    "sfx_minus_music": -2.2
+   },
+   {
+    "id": "d.mario.steam",
+    "frame": 345,
+    "sfx": -19.6,
+    "music": -17.4,
+    "dialogue": null,
+    "sfx_minus_music": -2.2
+   },
+   {
+    "id": "d.mario.chime_F6",
+    "frame": 348,
+    "sfx": -18.7,
+    "music": -16.6,
+    "dialogue": null,
+    "sfx_minus_music": -2.1
+   },
+   {
+    "id": "d.mario.chime_G6",
+    "frame": 351,
+    "sfx": -19.2,
+    "music": -19.5,
+    "dialogue": null,
+    "sfx_minus_music": 0.4
+   },
+   {
+    "id": "d.mario.chime_Ab6",
+    "frame": 354,
+    "sfx": -19.5,
+    "music": -19.6,
+    "dialogue": null,
+    "sfx_minus_music": 0.1
+   },
+   {
+    "id": "d.mario.latch",
+    "frame": 360,
+    "sfx": -22.0,
+    "music": -11.6,
+    "dialogue": null,
+    "sfx_minus_music": -10.4
+   },
+   {
+    "id": "blip.mario.366",
+    "frame": 366,
+    "sfx": -21.1,
+    "music": -13.1,
+    "dialogue": null,
+    "sfx_minus_music": -8.0
+   },
+   {
+    "id": "blip.mario.368",
+    "frame": 368,
+    "sfx": -21.1,
+    "music": -12.7,
+    "dialogue": null,
+    "sfx_minus_music": -8.4
+   },
+   {
+    "id": "blip.mario.366.echo",
+    "frame": 370,
+    "sfx": -22.6,
+    "music": -12.6,
+    "dialogue": null,
+    "sfx_minus_music": -10.0
+   },
+   {
+    "id": "blip.mario.368.echo",
+    "frame": 372,
+    "sfx": -22.3,
+    "music": -12.6,
+    "dialogue": null,
+    "sfx_minus_music": -9.7
+   },
+   {
+    "id": "blip.mario.373",
+    "frame": 373,
+    "sfx": -22.8,
+    "music": -12.8,
+    "dialogue": null,
+    "sfx_minus_music": -10.1
+   },
+   {
+    "id": "blip.mario.375",
+    "frame": 375,
+    "sfx": -24.5,
+    "music": -12.8,
+    "dialogue": null,
+    "sfx_minus_music": -11.7
+   },
+   {
+    "id": "d.mario.unroll",
+    "frame": 375,
+    "sfx": -24.5,
+    "music": -12.8,
+    "dialogue": null,
+    "sfx_minus_music": -11.7
+   },
+   {
+    "id": "blip.mario.373.echo",
+    "frame": 377,
+    "sfx": -27.9,
+    "music": -13.2,
+    "dialogue": null,
+    "sfx_minus_music": -14.8
+   },
+   {
+    "id": "blip.mario.375.echo",
+    "frame": 379,
+    "sfx": -29.5,
+    "music": -13.5,
+    "dialogue": null,
+    "sfx_minus_music": -16.0
+   },
+   {
+    "id": "d.mario.item_take",
+    "frame": 390,
+    "sfx": -29.8,
+    "music": -12.6,
+    "dialogue": null,
+    "sfx_minus_music": -17.2
+   },
+   {
+    "id": "d.nole.rumble",
+    "frame": 403,
+    "sfx": -21.9,
+    "music": -14.7,
+    "dialogue": null,
+    "sfx_minus_music": -7.2
+   },
+   {
+    "id": "d.nole.ceiling_burst",
+    "frame": 405,
+    "sfx": -21.3,
+    "music": -14.8,
+    "dialogue": null,
+    "sfx_minus_music": -6.5
+   },
+   {
+    "id": "d.nole.rocket_roar",
+    "frame": 405,
+    "sfx": -21.3,
+    "music": -14.8,
+    "dialogue": null,
+    "sfx_minus_music": -6.5
+   },
+   {
+    "id": "d.nole.tiles",
+    "frame": 409,
+    "sfx": -23.4,
+    "music": -15.6,
+    "dialogue": null,
+    "sfx_minus_music": -7.8
+   },
+   {
+    "id": "d.nole.landing",
+    "frame": 420,
+    "sfx": -23.4,
+    "music": -8.9,
+    "dialogue": null,
+    "sfx_minus_music": -14.4
+   },
+   {
+    "id": "d.nole.latch",
+    "frame": 420,
+    "sfx": -21.1,
+    "music": -8.8,
+    "dialogue": null,
+    "sfx_minus_music": -12.3
+   },
+   {
+    "id": "blip.nole.NAMED",
+    "frame": 426,
+    "sfx": -21.9,
+    "music": -11.1,
+    "dialogue": null,
+    "sfx_minus_music": -10.8
+   },
+   {
+    "id": "blip.nole.IT",
+    "frame": 429,
+    "sfx": -22.7,
+    "music": -11.4,
+    "dialogue": null,
+    "sfx_minus_music": -11.3
+   },
+   {
+    "id": "d.nole.stamp",
+    "frame": 435,
+    "sfx": -25.0,
+    "music": -12.7,
+    "dialogue": null,
+    "sfx_minus_music": -12.3
+   },
+   {
+    "id": "d.nole.item_take",
+    "frame": 456,
+    "sfx": -33.0,
+    "music": -12.9,
+    "dialogue": null,
+    "sfx_minus_music": -20.1
+   },
+   {
+    "id": "d.nole.letter_clunk",
+    "frame": 464,
+    "sfx": -23.7,
+    "music": -12.7,
+    "dialogue": null,
+    "sfx_minus_music": -11.0
+   },
+   {
+    "id": "d.found.neon_buzz",
+    "frame": 465,
+    "sfx": -25.3,
+    "music": -13.3,
+    "dialogue": null,
+    "sfx_minus_music": -12.0
+   },
+   {
+    "id": "d.found.neon_ignite",
+    "frame": 465,
+    "sfx": -25.3,
+    "music": -13.3,
+    "dialogue": null,
+    "sfx_minus_music": -12.0
+   },
+   {
+    "id": "rc.revswell_540",
+    "frame": 540,
+    "sfx": -41.0,
+    "music": -11.6,
+    "dialogue": null,
+    "sfx_minus_music": -29.4
+   },
+   {
+    "id": "sky.pop_macrosoft",
+    "frame": 540,
+    "sfx": -31.2,
+    "music": -16.3,
+    "dialogue": null,
+    "sfx_minus_music": -14.9
+   },
+   {
+    "id": "sky.pop_elgoog",
+    "frame": 555,
+    "sfx": -30.8,
+    "music": -14.4,
+    "dialogue": null,
+    "sfx_minus_music": -16.4
+   },
+   {
+    "id": "sky.pop_minddeep",
+    "frame": 556,
+    "sfx": -35.6,
+    "music": -14.7,
+    "dialogue": null,
+    "sfx_minus_music": -20.9
+   },
+   {
+    "id": "sky.pop_atem",
+    "frame": 570,
+    "sfx": -32.2,
+    "music": -15.3,
+    "dialogue": null,
+    "sfx_minus_music": -16.9
+   },
+   {
+    "id": "sky.pop_invidia",
+    "frame": 585,
+    "sfx": -32.2,
+    "music": -15.3,
+    "dialogue": null,
+    "sfx_minus_music": -16.9
+   },
+   {
+    "id": "sky.pop_misanthropic",
+    "frame": 600,
+    "sfx": -27.2,
+    "music": -13.6,
+    "dialogue": null,
+    "sfx_minus_music": -13.7
+   },
+   {
+    "id": "sky.pop_zai",
+    "frame": 600,
+    "sfx": -27.2,
+    "music": -13.6,
+    "dialogue": null,
+    "sfx_minus_music": -13.7
+   },
+   {
+    "id": "sky.pop_peekdeep",
+    "frame": 615,
+    "sfx": -26.9,
+    "music": -10.6,
+    "dialogue": null,
+    "sfx_minus_music": -16.2
+   },
+   {
+    "id": "blip.orb.toast",
+    "frame": 692,
+    "sfx": -31.6,
+    "music": -18.8,
+    "dialogue": null,
+    "sfx_minus_music": -12.8
+   },
+   {
+    "id": "book.ding",
+    "frame": 705,
+    "sfx": -19.3,
+    "music": -31.3,
+    "dialogue": null,
+    "sfx_minus_music": 11.9
+   },
+   {
+    "id": "book.post_click",
+    "frame": 705,
+    "sfx": -17.7,
+    "music": -29.1,
+    "dialogue": null,
+    "sfx_minus_music": 11.4
+   }
+  ]
+ },
+ "V3": {
+  "n": 62,
+  "median_sfx_minus_music": -9.4,
+  "p10": -17.1,
+  "p90": -1.0,
+  "above_music": [
+   [
+    "co.orb_servo",
+    97,
+    3.6,
+    -30.9
+   ],
+   [
+    "co.orb_scan",
+    99,
+    0.3,
+    -30.1
+   ],
+   [
+    "y93.bonk",
+    150,
+    1.4,
+    -26.0
+   ],
+   [
+    "book.ding",
+    705,
+    12.1,
+    -31.2
+   ],
+   [
+    "book.post_click",
+    705,
+    11.5,
+    -29.0
+   ]
+  ],
+  "events": [
+   {
+    "id": "co.room_tone",
+    "frame": 0,
+    "sfx": -42.5,
+    "music": -24.7,
+    "dialogue": null,
+    "sfx_minus_music": -17.8
+   },
+   {
+    "id": "co.orb_servo",
+    "frame": 97,
+    "sfx": -27.3,
+    "music": -30.9,
+    "dialogue": -84.1,
+    "sfx_minus_music": 3.6
+   },
+   {
+    "id": "co.orb_scan",
+    "frame": 99,
+    "sfx": -29.8,
+    "music": -30.1,
+    "dialogue": null,
+    "sfx_minus_music": 0.3
+   },
+   {
+    "id": "co.post_click",
+    "frame": 112,
+    "sfx": -24.0,
+    "music": -18.5,
+    "dialogue": null,
+    "sfx_minus_music": -5.5
+   },
+   {
+    "id": "co.revswell_120",
+    "frame": 120,
+    "sfx": -27.4,
+    "music": -19.8,
+    "dialogue": null,
+    "sfx_minus_music": -7.6
+   },
+   {
+    "id": "y93.bonk",
+    "frame": 150,
+    "sfx": -24.7,
+    "music": -26.0,
+    "dialogue": null,
+    "sfx_minus_music": 1.4
+   },
+   {
+    "id": "y93.ok_click",
+    "frame": 165,
+    "sfx": -26.5,
+    "music": -17.5,
+    "dialogue": null,
+    "sfx_minus_music": -8.9
+   },
+   {
+    "id": "y08.collar1",
+    "frame": 180,
+    "sfx": -24.7,
+    "music": -13.7,
+    "dialogue": null,
+    "sfx_minus_music": -11.0
+   },
+   {
+    "id": "y08.collar2",
+    "frame": 190,
+    "sfx": -24.3,
+    "music": -15.7,
+    "dialogue": null,
+    "sfx_minus_music": -8.5
+   },
+   {
+    "id": "y14.collar_repop",
+    "frame": 205,
+    "sfx": -24.3,
+    "music": -13.6,
+    "dialogue": null,
+    "sfx_minus_music": -10.6
+   },
+   {
+    "id": "y14.crown_flutter",
+    "frame": 205,
+    "sfx": -25.9,
+    "music": -14.1,
+    "dialogue": null,
+    "sfx_minus_music": -11.8
+   },
+   {
+    "id": "y14.crown_land",
+    "frame": 217,
+    "sfx": -33.0,
+    "music": -24.2,
+    "dialogue": null,
+    "sfx_minus_music": -8.8
+   },
+   {
+    "id": "d15.keycap_popcorn",
+    "frame": 226,
+    "sfx": -32.5,
+    "music": -16.0,
+    "dialogue": null,
+    "sfx_minus_music": -16.5
+   },
+   {
+    "id": "d.gerg.latch",
+    "frame": 240,
+    "sfx": -22.1,
+    "music": -10.2,
+    "dialogue": null,
+    "sfx_minus_music": -11.9
+   },
+   {
+    "id": "d15.keyboard_roll",
+    "frame": 240,
+    "sfx": -33.2,
+    "music": -16.0,
+    "dialogue": null,
+    "sfx_minus_music": -17.1
+   },
+   {
+    "id": "blip.gerg.ORG",
+    "frame": 246,
+    "sfx": -22.4,
+    "music": -14.8,
+    "dialogue": null,
+    "sfx_minus_music": -7.6
+   },
+   {
+    "id": "blip.gerg.CHART",
+    "frame": 248,
+    "sfx": -21.7,
+    "music": -13.3,
+    "dialogue": null,
+    "sfx_minus_music": -8.4
+   },
+   {
+    "id": "blip.gerg.HIM",
+    "frame": 251,
+    "sfx": -23.7,
+    "music": -13.7,
+    "dialogue": null,
+    "sfx_minus_music": -10.0
+   },
+   {
+    "id": "d.gerg.item_take",
+    "frame": 254,
+    "sfx": -32.7,
+    "music": -13.6,
+    "dialogue": null,
+    "sfx_minus_music": -19.1
+   },
+   {
+    "id": "d.alyi.flame",
+    "frame": 290,
+    "sfx": -27.2,
+    "music": -15.0,
+    "dialogue": -21.7,
+    "sfx_minus_music": -12.3
+   },
+   {
+    "id": "d.alyi.latch",
+    "frame": 300,
+    "sfx": -22.5,
+    "music": -13.1,
+    "dialogue": -15.8,
+    "sfx_minus_music": -9.4
+   },
+   {
+    "id": "d.mario.klaxon",
+    "frame": 345,
+    "sfx": -19.3,
+    "music": -16.6,
+    "dialogue": null,
+    "sfx_minus_music": -2.7
+   },
+   {
+    "id": "d.mario.steam",
+    "frame": 345,
+    "sfx": -19.3,
+    "music": -16.6,
+    "dialogue": null,
+    "sfx_minus_music": -2.7
+   },
+   {
+    "id": "d.mario.chime_F6",
+    "frame": 348,
+    "sfx": -18.4,
+    "music": -17.7,
+    "dialogue": null,
+    "sfx_minus_music": -0.8
+   },
+   {
+    "id": "d.mario.chime_G6",
+    "frame": 351,
+    "sfx": -18.9,
+    "music": -18.8,
+    "dialogue": null,
+    "sfx_minus_music": -0.1
+   },
+   {
+    "id": "d.mario.chime_Ab6",
+    "frame": 354,
+    "sfx": -19.3,
+    "music": -15.3,
+    "dialogue": null,
+    "sfx_minus_music": -4.0
+   },
+   {
+    "id": "d.mario.latch",
+    "frame": 360,
+    "sfx": -21.8,
+    "music": -10.0,
+    "dialogue": null,
+    "sfx_minus_music": -11.8
+   },
+   {
+    "id": "blip.mario.366",
+    "frame": 366,
+    "sfx": -20.9,
+    "music": -13.7,
+    "dialogue": null,
+    "sfx_minus_music": -7.2
+   },
+   {
+    "id": "blip.mario.368",
+    "frame": 368,
+    "sfx": -20.7,
+    "music": -13.3,
+    "dialogue": null,
+    "sfx_minus_music": -7.4
+   },
+   {
+    "id": "blip.mario.366.echo",
+    "frame": 370,
+    "sfx": -22.1,
+    "music": -13.2,
+    "dialogue": null,
+    "sfx_minus_music": -8.9
+   },
+   {
+    "id": "blip.mario.368.echo",
+    "frame": 372,
+    "sfx": -21.8,
+    "music": -14.0,
+    "dialogue": null,
+    "sfx_minus_music": -7.8
+   },
+   {
+    "id": "blip.mario.373",
+    "frame": 373,
+    "sfx": -22.3,
+    "music": -14.5,
+    "dialogue": null,
+    "sfx_minus_music": -7.8
+   },
+   {
+    "id": "blip.mario.375",
+    "frame": 375,
+    "sfx": -23.9,
+    "music": -15.7,
+    "dialogue": null,
+    "sfx_minus_music": -8.3
+   },
+   {
+    "id": "d.mario.unroll",
+    "frame": 375,
+    "sfx": -24.0,
+    "music": -15.7,
+    "dialogue": null,
+    "sfx_minus_music": -8.3
+   },
+   {
+    "id": "blip.mario.373.echo",
+    "frame": 377,
+    "sfx": -27.6,
+    "music": -16.3,
+    "dialogue": null,
+    "sfx_minus_music": -11.3
+   },
+   {
+    "id": "blip.mario.375.echo",
+    "frame": 379,
+    "sfx": -29.2,
+    "music": -17.2,
+    "dialogue": null,
+    "sfx_minus_music": -12.0
+   },
+   {
+    "id": "d.mario.item_take",
+    "frame": 390,
+    "sfx": -29.5,
+    "music": -12.5,
+    "dialogue": null,
+    "sfx_minus_music": -17.1
+   },
+   {
+    "id": "d.nole.rumble",
+    "frame": 403,
+    "sfx": -21.6,
+    "music": -17.2,
+    "dialogue": null,
+    "sfx_minus_music": -4.4
+   },
+   {
+    "id": "d.nole.ceiling_burst",
+    "frame": 405,
+    "sfx": -21.1,
+    "music": -16.2,
+    "dialogue": null,
+    "sfx_minus_music": -4.9
+   },
+   {
+    "id": "d.nole.rocket_roar",
+    "frame": 405,
+    "sfx": -21.1,
+    "music": -16.2,
+    "dialogue": null,
+    "sfx_minus_music": -4.9
+   },
+   {
+    "id": "d.nole.tiles",
+    "frame": 409,
+    "sfx": -23.1,
+    "music": -14.2,
+    "dialogue": null,
+    "sfx_minus_music": -9.0
+   },
+   {
+    "id": "d.nole.landing",
+    "frame": 420,
+    "sfx": -23.1,
+    "music": -10.0,
+    "dialogue": null,
+    "sfx_minus_music": -13.1
+   },
+   {
+    "id": "d.nole.latch",
+    "frame": 420,
+    "sfx": -20.8,
+    "music": -9.2,
+    "dialogue": null,
+    "sfx_minus_music": -11.6
+   },
+   {
+    "id": "blip.nole.NAMED",
+    "frame": 426,
+    "sfx": -21.5,
+    "music": -13.8,
+    "dialogue": null,
+    "sfx_minus_music": -7.7
+   },
+   {
+    "id": "blip.nole.IT",
+    "frame": 429,
+    "sfx": -22.2,
+    "music": -14.1,
+    "dialogue": null,
+    "sfx_minus_music": -8.1
+   },
+   {
+    "id": "d.nole.stamp",
+    "frame": 435,
+    "sfx": -24.4,
+    "music": -14.9,
+    "dialogue": null,
+    "sfx_minus_music": -9.5
+   },
+   {
+    "id": "d.nole.item_take",
+    "frame": 456,
+    "sfx": -32.8,
+    "music": -13.7,
+    "dialogue": null,
+    "sfx_minus_music": -19.1
+   },
+   {
+    "id": "d.nole.letter_clunk",
+    "frame": 464,
+    "sfx": -23.4,
+    "music": -13.6,
+    "dialogue": null,
+    "sfx_minus_music": -9.9
+   },
+   {
+    "id": "d.found.neon_buzz",
+    "frame": 465,
+    "sfx": -25.0,
+    "music": -14.6,
+    "dialogue": null,
+    "sfx_minus_music": -10.5
+   },
+   {
+    "id": "d.found.neon_ignite",
+    "frame": 465,
+    "sfx": -25.0,
+    "music": -14.6,
+    "dialogue": null,
+    "sfx_minus_music": -10.5
+   },
+   {
+    "id": "rc.revswell_540",
+    "frame": 540,
+    "sfx": -40.7,
+    "music": -11.3,
+    "dialogue": null,
+    "sfx_minus_music": -29.5
+   },
+   {
+    "id": "sky.pop_macrosoft",
+    "frame": 540,
+    "sfx": -30.9,
+    "music": -15.9,
+    "dialogue": null,
+    "sfx_minus_music": -15.0
+   },
+   {
+    "id": "sky.pop_elgoog",
+    "frame": 555,
+    "sfx": -30.6,
+    "music": -13.0,
+    "dialogue": null,
+    "sfx_minus_music": -17.6
+   },
+   {
+    "id": "sky.pop_minddeep",
+    "frame": 556,
+    "sfx": -35.4,
+    "music": -13.1,
+    "dialogue": null,
+    "sfx_minus_music": -22.2
+   },
+   {
+    "id": "sky.pop_atem",
+    "frame": 570,
+    "sfx": -31.9,
+    "music": -15.1,
+    "dialogue": null,
+    "sfx_minus_music": -16.8
+   },
+   {
+    "id": "sky.pop_invidia",
+    "frame": 585,
+    "sfx": -31.9,
+    "music": -15.4,
+    "dialogue": null,
+    "sfx_minus_music": -16.6
+   },
+   {
+    "id": "sky.pop_misanthropic",
+    "frame": 600,
+    "sfx": -27.0,
+    "music": -14.5,
+    "dialogue": null,
+    "sfx_minus_music": -12.5
+   },
+   {
+    "id": "sky.pop_zai",
+    "frame": 600,
+    "sfx": -27.0,
+    "music": -14.5,
+    "dialogue": null,
+    "sfx_minus_music": -12.5
+   },
+   {
+    "id": "sky.pop_peekdeep",
+    "frame": 615,
+    "sfx": -26.6,
+    "music": -13.2,
+    "dialogue": null,
+    "sfx_minus_music": -13.4
+   },
+   {
+    "id": "blip.orb.toast",
+    "frame": 692,
+    "sfx": -31.3,
+    "music": -18.7,
+    "dialogue": null,
+    "sfx_minus_music": -12.6
+   },
+   {
+    "id": "book.ding",
+    "frame": 705,
+    "sfx": -19.1,
+    "music": -31.2,
+    "dialogue": null,
+    "sfx_minus_music": 12.1
+   },
+   {
+    "id": "book.post_click",
+    "frame": 705,
+    "sfx": -17.4,
+    "music": -29.0,
+    "dialogue": null,
+    "sfx_minus_music": 11.5
+   }
+  ]
+ },
+ "V4": {
+  "n": 62,
+  "median_sfx_minus_music": -10.3,
+  "p10": -18.7,
+  "p90": -2.0,
+  "above_music": [
+   [
+    "co.orb_servo",
+    97,
+    2.4,
+    -29.7
+   ],
+   [
+    "y93.bonk",
+    150,
+    0.3,
+    -24.9
+   ],
+   [
+    "book.ding",
+    705,
+    24.7,
+    -43.8
+   ],
+   [
+    "book.post_click",
+    705,
+    24.1,
+    -41.4
+   ]
+  ],
+  "events": [
+   {
+    "id": "co.room_tone",
+    "frame": 0,
+    "sfx": -42.5,
+    "music": -18.7,
+    "dialogue": null,
+    "sfx_minus_music": -23.8
+   },
+   {
+    "id": "co.orb_servo",
+    "frame": 97,
+    "sfx": -27.3,
+    "music": -29.7,
+    "dialogue": -84.1,
+    "sfx_minus_music": 2.4
+   },
+   {
+    "id": "co.orb_scan",
+    "frame": 99,
+    "sfx": -29.7,
+    "music": -28.5,
+    "dialogue": null,
+    "sfx_minus_music": -1.2
+   },
+   {
+    "id": "co.post_click",
+    "frame": 112,
+    "sfx": -24.0,
+    "music": -19.2,
+    "dialogue": null,
+    "sfx_minus_music": -4.8
+   },
+   {
+    "id": "co.revswell_120",
+    "frame": 120,
+    "sfx": -27.4,
+    "music": -18.4,
+    "dialogue": null,
+    "sfx_minus_music": -8.9
+   },
+   {
+    "id": "y93.bonk",
+    "frame": 150,
+    "sfx": -24.6,
+    "music": -24.9,
+    "dialogue": null,
+    "sfx_minus_music": 0.3
+   },
+   {
+    "id": "y93.ok_click",
+    "frame": 165,
+    "sfx": -26.4,
+    "music": -14.9,
+    "dialogue": null,
+    "sfx_minus_music": -11.5
+   },
+   {
+    "id": "y08.collar1",
+    "frame": 180,
+    "sfx": -24.7,
+    "music": -12.3,
+    "dialogue": null,
+    "sfx_minus_music": -12.4
+   },
+   {
+    "id": "y08.collar2",
+    "frame": 190,
+    "sfx": -24.2,
+    "music": -14.1,
+    "dialogue": null,
+    "sfx_minus_music": -10.1
+   },
+   {
+    "id": "y14.collar_repop",
+    "frame": 205,
+    "sfx": -24.2,
+    "music": -14.8,
+    "dialogue": null,
+    "sfx_minus_music": -9.4
+   },
+   {
+    "id": "y14.crown_flutter",
+    "frame": 205,
+    "sfx": -25.9,
+    "music": -13.9,
+    "dialogue": null,
+    "sfx_minus_music": -12.0
+   },
+   {
+    "id": "y14.crown_land",
+    "frame": 217,
+    "sfx": -33.0,
+    "music": -17.6,
+    "dialogue": null,
+    "sfx_minus_music": -15.4
+   },
+   {
+    "id": "d15.keycap_popcorn",
+    "frame": 226,
+    "sfx": -32.4,
+    "music": -13.2,
+    "dialogue": null,
+    "sfx_minus_music": -19.2
+   },
+   {
+    "id": "d.gerg.latch",
+    "frame": 240,
+    "sfx": -22.3,
+    "music": -9.8,
+    "dialogue": null,
+    "sfx_minus_music": -12.5
+   },
+   {
+    "id": "d15.keyboard_roll",
+    "frame": 240,
+    "sfx": -33.1,
+    "music": -12.8,
+    "dialogue": null,
+    "sfx_minus_music": -20.3
+   },
+   {
+    "id": "blip.gerg.ORG",
+    "frame": 246,
+    "sfx": -22.4,
+    "music": -14.5,
+    "dialogue": null,
+    "sfx_minus_music": -7.9
+   },
+   {
+    "id": "blip.gerg.CHART",
+    "frame": 248,
+    "sfx": -21.7,
+    "music": -15.7,
+    "dialogue": null,
+    "sfx_minus_music": -5.9
+   },
+   {
+    "id": "blip.gerg.HIM",
+    "frame": 251,
+    "sfx": -23.7,
+    "music": -19.5,
+    "dialogue": null,
+    "sfx_minus_music": -4.2
+   },
+   {
+    "id": "d.gerg.item_take",
+    "frame": 254,
+    "sfx": -32.6,
+    "music": -15.6,
+    "dialogue": null,
+    "sfx_minus_music": -17.1
+   },
+   {
+    "id": "d.alyi.flame",
+    "frame": 290,
+    "sfx": -27.2,
+    "music": -16.1,
+    "dialogue": -22.3,
+    "sfx_minus_music": -11.1
+   },
+   {
+    "id": "d.alyi.latch",
+    "frame": 300,
+    "sfx": -22.6,
+    "music": -11.7,
+    "dialogue": -14.9,
+    "sfx_minus_music": -10.8
+   },
+   {
+    "id": "d.mario.klaxon",
+    "frame": 345,
+    "sfx": -19.3,
+    "music": -15.9,
+    "dialogue": null,
+    "sfx_minus_music": -3.4
+   },
+   {
+    "id": "d.mario.steam",
+    "frame": 345,
+    "sfx": -19.3,
+    "music": -15.9,
+    "dialogue": null,
+    "sfx_minus_music": -3.4
+   },
+   {
+    "id": "d.mario.chime_F6",
+    "frame": 348,
+    "sfx": -18.4,
+    "music": -16.2,
+    "dialogue": null,
+    "sfx_minus_music": -2.2
+   },
+   {
+    "id": "d.mario.chime_G6",
+    "frame": 351,
+    "sfx": -18.9,
+    "music": -18.0,
+    "dialogue": null,
+    "sfx_minus_music": -0.9
+   },
+   {
+    "id": "d.mario.chime_Ab6",
+    "frame": 354,
+    "sfx": -19.2,
+    "music": -17.2,
+    "dialogue": null,
+    "sfx_minus_music": -2.0
+   },
+   {
+    "id": "d.mario.latch",
+    "frame": 360,
+    "sfx": -22.1,
+    "music": -8.9,
+    "dialogue": null,
+    "sfx_minus_music": -13.2
+   },
+   {
+    "id": "blip.mario.366",
+    "frame": 366,
+    "sfx": -20.8,
+    "music": -15.2,
+    "dialogue": null,
+    "sfx_minus_music": -5.7
+   },
+   {
+    "id": "blip.mario.368",
+    "frame": 368,
+    "sfx": -20.7,
+    "music": -15.8,
+    "dialogue": null,
+    "sfx_minus_music": -4.9
+   },
+   {
+    "id": "blip.mario.366.echo",
+    "frame": 370,
+    "sfx": -22.1,
+    "music": -16.6,
+    "dialogue": null,
+    "sfx_minus_music": -5.6
+   },
+   {
+    "id": "blip.mario.368.echo",
+    "frame": 372,
+    "sfx": -21.8,
+    "music": -16.8,
+    "dialogue": null,
+    "sfx_minus_music": -5.0
+   },
+   {
+    "id": "blip.mario.373",
+    "frame": 373,
+    "sfx": -22.3,
+    "music": -16.7,
+    "dialogue": null,
+    "sfx_minus_music": -5.6
+   },
+   {
+    "id": "blip.mario.375",
+    "frame": 375,
+    "sfx": -23.9,
+    "music": -16.3,
+    "dialogue": null,
+    "sfx_minus_music": -7.6
+   },
+   {
+    "id": "d.mario.unroll",
+    "frame": 375,
+    "sfx": -23.9,
+    "music": -16.3,
+    "dialogue": null,
+    "sfx_minus_music": -7.6
+   },
+   {
+    "id": "blip.mario.373.echo",
+    "frame": 377,
+    "sfx": -27.6,
+    "music": -16.4,
+    "dialogue": null,
+    "sfx_minus_music": -11.2
+   },
+   {
+    "id": "blip.mario.375.echo",
+    "frame": 379,
+    "sfx": -29.2,
+    "music": -16.9,
+    "dialogue": null,
+    "sfx_minus_music": -12.3
+   },
+   {
+    "id": "d.mario.item_take",
+    "frame": 390,
+    "sfx": -29.5,
+    "music": -14.5,
+    "dialogue": null,
+    "sfx_minus_music": -15.0
+   },
+   {
+    "id": "d.nole.rumble",
+    "frame": 403,
+    "sfx": -21.6,
+    "music": -14.5,
+    "dialogue": null,
+    "sfx_minus_music": -7.1
+   },
+   {
+    "id": "d.nole.ceiling_burst",
+    "frame": 405,
+    "sfx": -21.0,
+    "music": -13.8,
+    "dialogue": null,
+    "sfx_minus_music": -7.3
+   },
+   {
+    "id": "d.nole.rocket_roar",
+    "frame": 405,
+    "sfx": -21.0,
+    "music": -13.8,
+    "dialogue": null,
+    "sfx_minus_music": -7.3
+   },
+   {
+    "id": "d.nole.tiles",
+    "frame": 409,
+    "sfx": -23.2,
+    "music": -12.2,
+    "dialogue": null,
+    "sfx_minus_music": -11.0
+   },
+   {
+    "id": "d.nole.landing",
+    "frame": 420,
+    "sfx": -22.7,
+    "music": -8.2,
+    "dialogue": null,
+    "sfx_minus_music": -14.5
+   },
+   {
+    "id": "d.nole.latch",
+    "frame": 420,
+    "sfx": -20.4,
+    "music": -7.7,
+    "dialogue": null,
+    "sfx_minus_music": -12.7
+   },
+   {
+    "id": "blip.nole.NAMED",
+    "frame": 426,
+    "sfx": -21.5,
+    "music": -12.4,
+    "dialogue": null,
+    "sfx_minus_music": -9.1
+   },
+   {
+    "id": "blip.nole.IT",
+    "frame": 429,
+    "sfx": -22.1,
+    "music": -13.4,
+    "dialogue": null,
+    "sfx_minus_music": -8.7
+   },
+   {
+    "id": "d.nole.stamp",
+    "frame": 435,
+    "sfx": -24.3,
+    "music": -14.4,
+    "dialogue": null,
+    "sfx_minus_music": -9.9
+   },
+   {
+    "id": "d.nole.item_take",
+    "frame": 456,
+    "sfx": -32.7,
+    "music": -14.3,
+    "dialogue": null,
+    "sfx_minus_music": -18.5
+   },
+   {
+    "id": "d.nole.letter_clunk",
+    "frame": 464,
+    "sfx": -23.4,
+    "music": -12.9,
+    "dialogue": null,
+    "sfx_minus_music": -10.5
+   },
+   {
+    "id": "d.found.neon_buzz",
+    "frame": 465,
+    "sfx": -25.0,
+    "music": -13.4,
+    "dialogue": null,
+    "sfx_minus_music": -11.6
+   },
+   {
+    "id": "d.found.neon_ignite",
+    "frame": 465,
+    "sfx": -25.0,
+    "music": -13.4,
+    "dialogue": null,
+    "sfx_minus_music": -11.6
+   },
+   {
+    "id": "rc.revswell_540",
+    "frame": 540,
+    "sfx": -40.8,
+    "music": -11.5,
+    "dialogue": null,
+    "sfx_minus_music": -29.3
+   },
+   {
+    "id": "sky.pop_macrosoft",
+    "frame": 540,
+    "sfx": -30.9,
+    "music": -14.0,
+    "dialogue": null,
+    "sfx_minus_music": -16.9
+   },
+   {
+    "id": "sky.pop_elgoog",
+    "frame": 555,
+    "sfx": -30.5,
+    "music": -13.6,
+    "dialogue": null,
+    "sfx_minus_music": -16.9
+   },
+   {
+    "id": "sky.pop_minddeep",
+    "frame": 556,
+    "sfx": -35.3,
+    "music": -13.9,
+    "dialogue": null,
+    "sfx_minus_music": -21.5
+   },
+   {
+    "id": "sky.pop_atem",
+    "frame": 570,
+    "sfx": -31.9,
+    "music": -13.2,
+    "dialogue": null,
+    "sfx_minus_music": -18.7
+   },
+   {
+    "id": "sky.pop_invidia",
+    "frame": 585,
+    "sfx": -31.9,
+    "music": -12.3,
+    "dialogue": null,
+    "sfx_minus_music": -19.5
+   },
+   {
+    "id": "sky.pop_misanthropic",
+    "frame": 600,
+    "sfx": -27.2,
+    "music": -12.3,
+    "dialogue": null,
+    "sfx_minus_music": -14.9
+   },
+   {
+    "id": "sky.pop_zai",
+    "frame": 600,
+    "sfx": -27.2,
+    "music": -12.3,
+    "dialogue": null,
+    "sfx_minus_music": -14.9
+   },
+   {
+    "id": "sky.pop_peekdeep",
+    "frame": 615,
+    "sfx": -26.7,
+    "music": -9.4,
+    "dialogue": null,
+    "sfx_minus_music": -17.3
+   },
+   {
+    "id": "blip.orb.toast",
+    "frame": 692,
+    "sfx": -31.3,
+    "music": -23.6,
+    "dialogue": null,
+    "sfx_minus_music": -7.7
+   },
+   {
+    "id": "book.ding",
+    "frame": 705,
+    "sfx": -19.0,
+    "music": -43.8,
+    "dialogue": null,
+    "sfx_minus_music": 24.7
+   },
+   {
+    "id": "book.post_click",
+    "frame": 705,
+    "sfx": -17.4,
+    "music": -41.4,
+    "dialogue": null,
+    "sfx_minus_music": 24.1
+   }
+  ]
+ }
+}

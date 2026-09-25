@@ -1,0 +1,205 @@
+<title>Mr. Mas Opening</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  /* Single deliberate theme: the show's night room. */
+  :root {
+    color-scheme: dark;
+    --night: #0b0e1a;
+    --panel: #121829;
+    --line: #25304a;
+    --cyan: #3fe6ff;
+    --cyan-dim: #1c98a6;
+    --cream: #f2e8d5;
+    --muted: #93a0bb;
+    --ember: #e0553e;
+    --display: "Silkscreen", "Courier New", monospace;
+    --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--night);
+    color: var(--cream);
+    font: 400 16px/1.55 var(--body);
+    padding-inline: 16px;
+    padding-block: 28px 64px;
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; display: grid; gap: 40px; }
+  header { display: grid; gap: 6px; }
+  .eyebrow { font: 500 12px/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--cyan); }
+  h1 { font: 400 clamp(34px, 6vw, 56px)/1 var(--display); margin: 4px 0 0; letter-spacing: 0.02em; text-wrap: balance; }
+  h1 .dot { color: var(--cyan); }
+  .lede { color: var(--muted); max-width: 64ch; margin: 6px 0 0; }
+  h2 { font: 400 18px/1.2 var(--display); letter-spacing: 0.04em; margin: 0 0 14px; color: var(--cream); text-wrap: balance; }
+
+  .player { display: grid; gap: 14px; }
+  .screen { background: #000; border: 1px solid var(--line); aspect-ratio: 16 / 9; max-width: 100%; }
+  .screen video { width: 100%; height: 100%; display: block; image-rendering: pixelated; }
+  .variations { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; }
+  .var {
+    text-align: left; cursor: pointer; font: inherit; color: var(--cream);
+    background: var(--panel); border: 1px solid var(--line); padding: 12px 14px;
+    display: grid; gap: 4px;
+  }
+  .var:hover { border-color: var(--cyan-dim); }
+  .var:focus-visible, .chap:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+  .var[aria-pressed="true"] { border-color: var(--cyan); box-shadow: inset 0 0 0 1px var(--cyan); }
+  .var .name { font-weight: 600; }
+  .var .tag { font: 500 11px/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan); }
+  .var .desc { color: var(--muted); font-size: 14px; }
+  .var .bal { font: 400 12px/1.3 var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+
+  .chapters { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px; list-style: none; padding: 0; margin: 0; }
+  .chap {
+    width: 100%; cursor: pointer; font: inherit; color: var(--cream); text-align: left;
+    background: transparent; border: 1px solid var(--line); padding: 9px 12px;
+    display: grid; grid-template-columns: 58px 1fr; gap: 10px; align-items: baseline;
+  }
+  .chap:hover { border-color: var(--cyan-dim); }
+  .chap.now { border-color: var(--cyan); }
+  .tc { font: 500 13px/1 var(--mono); color: var(--cyan); font-variant-numeric: tabular-nums; }
+  .chap .what { font-size: 14px; }
+  .chap .style { display: block; font: 400 11px/1.4 var(--mono); color: var(--muted); letter-spacing: 0.04em; }
+
+  .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
+  ul.plain { margin: 0; padding-left: 18px; display: grid; gap: 8px; }
+  ul.plain li::marker { color: var(--cyan-dim); }
+  .note { color: var(--muted); font-size: 14px; }
+  .asks { display: grid; gap: 10px; }
+  .ask { border-left: 2px solid var(--ember); padding: 2px 0 2px 12px; }
+  .ask b { font-weight: 600; }
+  .stills { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
+  .stills img, .sheet img { width: 100%; display: block; border: 1px solid var(--line); image-rendering: pixelated; }
+  figcaption { font: 400 12px/1.4 var(--mono); color: var(--muted); margin-top: 6px; }
+  footer { font: 400 12px/1.5 var(--mono); color: var(--muted); border-top: 1px solid var(--line); padding-top: 14px; }
+  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Episode 1 · opening titles · programmatic cut v1</div>
+    <h1>MR<span class="dot">.</span> MAS</h1>
+    <p class="lede">The full 30-second opening, built entirely in code: pixel-art picture on a 96 BPM grid, an original score with a jazz feel and 8-bit motifs, sound effects and a synthetic stock voice for Mas. Pick a score variation below; switching keeps your place in the video.</p>
+  </header>
+
+  <section class="player" aria-label="Player">
+    <div class="screen">
+      <video id="v" controls playsinline preload="metadata" poster="still-title.jpg" src="intro-ep1-V1-1080p.mp4"></video>
+    </div>
+    <div class="variations" role="group" aria-label="Score variation">
+      <button class="var" id="var-v1" aria-pressed="true" data-src="intro-ep1-V1-1080p.mp4">
+        <span class="tag">V1 · primary</span>
+        <span class="name">Chip Chamber Jazz</span>
+        <span class="desc">Felt piano, chamber strings, a chip lead on the motif; brass only on the name cards.</span>
+        <span class="bal">piano 38 · orch 27 · band 10 · chip 25</span>
+      </button>
+      <button class="var" id="var-v2" aria-pressed="false" data-src="intro-ep1-V2-1080p.mp4">
+        <span class="tag">V2</span>
+        <span class="name">Orchestral Noir, Chip Heart</span>
+        <span class="desc">Strings, low brass and grand piano; the chip motif keeps poking through.</span>
+        <span class="bal">piano 33 · orch 41 · band 4 · chip 22</span>
+      </button>
+      <button class="var" id="var-v3" aria-pressed="false" data-src="intro-ep1-V3-1080p.mp4">
+        <span class="tag">V3</span>
+        <span class="name">Pixel Swing</span>
+        <span class="desc">Chip lead over a swinging piano trio; horn stabs on the cards.</span>
+        <span class="bal">piano 30 · orch 27 · band 14 · chip 29</span>
+      </button>
+      <button class="var" id="var-v4" aria-pressed="false" data-src="intro-ep1-V4-1080p.mp4">
+        <span class="tag">V4</span>
+        <span class="name">Piano &amp; Pixels</span>
+        <span class="desc">Jazz felt piano with chip arpeggios; one clarinet line. The quietest take.</span>
+        <span class="bal">piano 53 · orch 8 · band 0 · chip 39</span>
+      </button>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-chapters">
+    <h2 id="h-chapters">Jump to a moment</h2>
+    <ul class="chapters" id="chapters">
+      <li><button class="chap" data-t="0"><span class="tc">0:00.0</span><span class="what">Cold open: "near the singularity; unclear which side."<span class="style">base pixel · glyph scan cone at 4.2 s</span></span></button></li>
+      <li><button class="chap" data-t="5"><span class="tc">0:05.0</span><span class="what">1993: MAS MANALT / no equity.<span class="style">1-bit</span></span></button></li>
+      <li><button class="chap" data-t="7.5"><span class="tc">0:07.5</span><span class="what">2008 stage, then the 2014 throne<span class="style">early-web 16 colour</span></span></button></li>
+      <li><button class="chap" data-t="9.6"><span class="tc">0:09.6</span><span class="what">The Woodrose dinner: Gerg<span class="style">2-tone freeze, Mas stays in colour</span></span></button></li>
+      <li><button class="chap" data-t="12.5"><span class="tc">0:12.5</span><span class="what">Alyi feels the AGI<span class="style">freeze · chant</span></span></button></li>
+      <li><button class="chap" data-t="15"><span class="tc">0:15.0</span><span class="what">Mario has concerns (and GPUs)<span class="style">freeze</span></span></button></li>
+      <li><button class="chap" data-t="17.5"><span class="tc">0:17.5</span><span class="what">Nole named it; OPEN AI becomes NOPE AI<span class="style">freeze · biggest hit</span></span></button></li>
+      <li><button class="chap" data-t="20"><span class="tc">0:20.0</span><span class="what">The Players: eight-portrait roll call<span class="style">knee motif · glyph cursor</span></span></button></li>
+      <li><button class="chap" data-t="22.5"><span class="tc">0:22.5</span><span class="what">Skyline: everyone on their rooftops<span class="style">base pixel · muted trumpet</span></span></button></li>
+      <li><button class="chap" data-t="26.25"><span class="tc">0:26.3</span><span class="what">Title and bookend<span class="style">glyph iris for 2 frames</span></span></button></li>
+    </ul>
+  </section>
+
+  <section class="two">
+    <div>
+      <h2>Defaults I chose</h2>
+      <ul class="plain">
+        <li>V1 is the primary mix. V2 to V4 share the same picture and hits.</li>
+        <li>Mas speaks with a stock synthetic voice (Kokoro, am_michael), trimmed to end by frame 91. No real voice is cloned or imitated.</li>
+        <li>RUMPT appears only as the silhouette in the roll call. His face waits for the show.</li>
+        <li>The roll call keeps Kram's soup, the Whale's breach and Rima's spotlight as traits from Ep1.</li>
+        <li>Alyi's card reads "EFFIGIES: 1" instead of "BUNKER: YES" until you rule on it.</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Worth checking</h2>
+      <ul class="plain">
+        <li>All audio was checked by meters, spectrograms and onset timing only. Please audition the four mixes by ear.</li>
+        <li>The Nole card at 17.5 s is the loudest hit. Listen there for limiter pumping.</li>
+        <li>The Orb as the title's period can read busy at small sizes.</li>
+        <li>Mas's mid-turn head in the cold open is the weakest drawing if held.</li>
+      </ul>
+      <p class="note">A 4K version with the V1 mix is in the project at out/intro/intro-ep1-V1-4k.mp4.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-asks">
+    <h2 id="h-asks">What would raise quality further</h2>
+    <div class="asks">
+      <div class="ask"><b>A human voice for Mas.</b> One performer doing a soft, deadpan cartoon read of the cold-open line would lift it more than any other change. ElevenLabs Voice Design (from a text description, never a clone) is the fallback if you have access.</div>
+      <div class="ask"><b>Better instruments or live players.</b> The score renders from free sample libraries. Licensed plugins (felt piano, chamber strings, session horns, real brushes) run through the same scripts, or the MIDI can go to a pianist, a bassist, a brushes drummer and a muted trumpet.</div>
+      <div class="ask"><b>Video-model access</b> (for example Veo, Sora, Runway or Kling) for fluid shots in the episodes. Footage would be converted to pixel or glyph in code so it matches. The intro doesn't need it.</div>
+      <div class="ask"><b>Reference photos</b> of the real public figures, to tighten the likeness in the pixel portraits. And period screenshots (1993 Mac, 2008 web) to pin the era palettes.</div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-stills">
+    <h2 id="h-stills">Stills</h2>
+    <div class="stills">
+      <figure><img src="still-coldopen.jpg" alt="The Orb's scan cone reveals a data-center cathedral in glyph characters behind Mas's dark room" loading="lazy" width="1920" height="1080"><figcaption>4.2 s · the Orb's scan</figcaption></figure>
+      <figure><img src="still-dinner.jpg" alt="Nole's name card over the frozen founding dinner, printed in maroon and cream" loading="lazy" width="1920" height="1080"><figcaption>18.9 s · NOLE / NAMED IT.</figcaption></figure>
+      <figure><img src="still-title.jpg" alt="MR. MAS title over the dusk skyline of rival AI towers" loading="lazy" width="1920" height="1080"><figcaption>27.5 s · title</figcaption></figure>
+    </div>
+    <figure class="sheet" style="margin-top:18px"><img src="beats.jpg" alt="Contact sheet with one frame for each of the 48 beats of the opening" loading="lazy"><figcaption>One frame per beat, 48 beats</figcaption></figure>
+  </section>
+
+  <footer>30.000 s · 720 frames · 24 fps · 96 BPM · 1920×1080 · −14 LUFS · show/intro/SCRIPT.md v2.1</footer>
+</div>
+
+<script>
+  const v = document.getElementById('v');
+  const vars = [...document.querySelectorAll('.var')];
+  vars.forEach(btn => btn.addEventListener('click', () => {
+    if (btn.getAttribute('aria-pressed') === 'true') return;
+    const t = v.currentTime, wasPlaying = !v.paused;
+    vars.forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
+    v.src = btn.dataset.src;
+    v.addEventListener('loadedmetadata', () => {
+      v.currentTime = t;
+      if (wasPlaying) v.play().catch(() => {});
+    }, { once: true });
+  }));
+  const chaps = [...document.querySelectorAll('.chap')];
+  chaps.forEach(c => c.addEventListener('click', () => {
+    v.currentTime = parseFloat(c.dataset.t);
+    v.play().catch(() => {});
+  }));
+  v.addEventListener('timeupdate', () => {
+    let idx = 0;
+    chaps.forEach((c, i) => { if (v.currentTime >= parseFloat(c.dataset.t)) idx = i; });
+    chaps.forEach((c, i) => c.classList.toggle('now', i === idx));
+  });
+</script>

@@ -1,0 +1,1584 @@
+{
+ "episode": 8,
+ "title": "ep1.7_statute_of_limitations.pdf",
+ "logline": "NOLE v. MANALT finally goes to trial: every witness's 2017 comes out rendered by their own company's image model, and a calendar delivers the verdict in under two hours. Outside, Nole becomes Mario's landlord, Misanthropic passes NopeAI, and RUMPT keeps asking \"Who?\"",
+ "dateSpan": "Apr 2026 - Jun 2026",
+ "runtimeMin": 22,
+ "speculative": false,
+ "beats": [
+  {
+   "id": "8.01",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "courtroom",
+   "style": "BASE",
+   "shot": "wide",
+   "chars": [
+    {
+     "id": "nole",
+     "pose": "phone",
+     "x": 0.18,
+     "face": "angry"
+    },
+    {
+     "id": "calendar",
+     "pose": "stand",
+     "x": 0.5,
+     "face": "smug"
+    },
+    {
+     "id": "mas",
+     "pose": "sit",
+     "x": 0.82,
+     "face": "calm"
+    }
+   ],
+   "caption": "Flash-forward, May 18: the jury is back in under two hours. THE CALENDAR tears off one page: 2017.",
+   "lines": [
+    {
+     "who": "nole",
+     "text": "calendar technicality."
+    }
+   ],
+   "onscreen": [
+    "THE CALENDAR · STATUTE OF LIMITATIONS.",
+    "DELIBERATION: < 2 HRS",
+    "2017."
+   ],
+   "real": "2026-05-18 · verdict on the statute of limitations",
+   "realStart": "00:00",
+   "realDur": 45,
+   "reelDur": 4.5,
+   "fx": [
+    "pop"
+   ]
+  },
+  {
+   "id": "8.02",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "courtroom",
+   "style": "BASE",
+   "shot": "close",
+   "chars": [
+    {
+     "id": "mas",
+     "pose": "sit",
+     "x": 0.5,
+     "face": "calm"
+    }
+   ],
+   "caption": "Close on Mas. His water doesn't ripple, and he is the only person in the room staring at the calendar.",
+   "lines": [],
+   "vo": "for the record, i never looked at the calendar.",
+   "onscreen": [
+    "SIX WEEKS EARLIER"
+   ],
+   "realStart": "00:45",
+   "realDur": 25,
+   "reelDur": 3.5,
+   "fx": [
+    "freeze"
+   ]
+  },
+  {
+   "id": "8.03",
+   "act": "INTRO",
+   "kind": "intro",
+   "set": "skyline",
+   "style": "BASE",
+   "shot": "wide",
+   "chars": [
+    {
+     "id": "mas",
+     "pose": "sit",
+     "x": 0.25,
+     "face": "calm"
+    },
+    {
+     "id": "podium",
+     "pose": "stand",
+     "x": 0.8,
+     "face": "calm"
+    }
+   ],
+   "caption": "EP08 intro: 'yes.' in the dark room; headlines TRIAL, EXPIRED, $965B; a mirrored podium joins the skyline.",
+   "lines": [],
+   "onscreen": [
+    "ep1.7_statute_of_limitations.pdf",
+    "saved by the calendar"
+   ],
+   "realStart": "01:10",
+   "realDur": 32,
+   "reelDur": 3.5,
+   "fx": []
+  },
+  {
+   "id": "8.04",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "vault",
+   "style": "BASE",
+   "shot": "medium",
+   "chars": [
+    {
+     "id": "mario",
+     "pose": "stand",
+     "x": 0.15,
+     "face": "smile"
+    },
+    {
+     "id": "tnesseb",
+     "pose": "stand",
+     "x": 0.42,
+     "face": "worried"
+    },
+    {
+     "id": "llewop",
+     "pose": "stand",
+     "x": 0.6,
+     "face": "worried"
+    },
+    {
+     "id": "banker",
+     "pose": "slump",
+     "x": 0.82,
+     "face": "shocked"
+    }
+   ],
+   "caption": "MYTHIC finds 271 browser bugs. TNESSEB and LLEWOP convene the banks, and the bankers hide under the table.",
+   "lines": [],
+   "onscreen": [
+    "MYTHIC PREVIEW · ~40 ORGS",
+    "271 BUGS (CLAIMS QUESTIONED)"
+   ],
+   "real": "2026-04-07 · MYTHIC Preview and Project GLASSWING; bank CEOs convened Apr 7-10",
+   "realStart": "01:42",
+   "realDur": 40,
+   "reelDur": 4.0,
+   "fx": []
+  },
+  {
+   "id": "8.05",
+   "act": "ACT ONE",
+   "kind": "plan",
+   "set": "void",
+   "style": "BASE",
+   "shot": "wide",
+   "chars": [
+    {
+     "id": "mario",
+     "pose": "point",
+     "x": 0.2,
+     "face": "smile"
+    },
+    {
+     "id": "clod",
+     "pose": "float",
+     "x": 0.6,
+     "face": "calm"
+    }
+   ],
+   "caption": "THE PLAN: a city of locked doors. Bugs are secret keyholes; MYTHIC is a skeleton key that finds them.",
+   "lines": [],
+   "onscreen": [
+    "THE PLAN: ZERO-DAYS",
+    "PROJECT GLASSWING: LOCKSMITHS FIRST"
+   ],
+   "realStart": "02:22",
+   "realDur": 33,
+   "reelDur": 5.0,
+   "fx": []
+  },
+  {
+   "id": "8.06",
+   "act": "ACT ONE",
+   "kind": "plan",
+   "set": "vault",
+   "style": "BASE",
+   "shot": "close",
+   "chars": [
+    {
+     "id": "clod",
+     "pose": "float",
+     "x": 0.5,
+     "face": "shocked"
+    }
+   ],
+   "caption": "It never goes to plan: the skeleton key finds a keyhole in its own vault door.",
+   "lines": [],
+   "onscreen": [
+    "KEYHOLE FOUND: OWN DOOR"
+   ],
+   "realStart": "02:55",
+   "realDur": 12,
+   "reelDur": 3.5,
+   "fx": [
+    "shake"
+   ]
+  },
+  {
+   "id": "8.07",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "lighthouse",
+   "style": "BASE",
+   "shot": "medium",
+   "chars": [
+    {
+     "id": "mario",
+     "pose": "slump",
+     "x": 0.45,
+     "face": "worried"
+    }
+   ],
+   "caption": "An appeals court denies Misanthropic a stay. Mario loses one, and his hoodie sales dip on a tiny chart.",
+   "lines": [],
+   "onscreen": [
+    "STAY DENIED",
+    "\"...an unwanted vendor.\""
+   ],
+   "real": "2026-04-08 · appeals court denies Misanthropic a stay",
+   "realStart": "03:07",
+   "realDur": 20,
+   "reelDur": 2.5,
+   "fx": []
+  },
+  {
+   "id": "8.08",
+   "act": "ACT ONE",
+   "kind": "setpiece",
+   "set": "whitehouse",
+   "style": "BASE",
+   "shot": "wide",
+   "chars": [
+    {
+     "id": "mario",
+     "pose": "walk",
+     "x": 0.35,
+     "face": "calm"
+    },
+    {
+     "id": "rumpt",
+     "pose": "stand",
+     "x": 0.68,
+     "face": "smug"
+    },
+    {
+     "id": "orb",
+     "pose": "float",
+     "x": 0.9,
+     "face": "calm"
+    }
+   ],
+   "caption": "WHO?: Mario walks through the Gold Oval again and again. RUMPT's eyes slide past him; only the Orb tracks him.",
+   "lines": [
+    {
+     "who": "rumpt",
+     "text": "Who?"
+    },
+    {
+     "who": "rumpt",
+     "text": "I have no idea."
+    }
+   ],
+   "vo": "invisible sounds restful. everyone always sees me.",
+   "onscreen": [
+    "WHO?",
+    "MAY 1: \"unbelievably disjointed\""
+   ],
+   "real": "2026-04-17 · Mario meets EISUS SELIW; RUMPT: \"Who?\"",
+   "realStart": "03:27",
+   "realDur": 80,
+   "reelDur": 7.0,
+   "fx": [
+    "rewind"
+   ]
+  },
+  {
+   "id": "8.09",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "medium",
+   "chars": [
+    {
+     "id": "mit-kooc",
+     "pose": "stand",
+     "x": 0.35,
+     "face": "smile"
+    },
+    {
+     "id": "sunret",
+     "pose": "stand",
+     "x": 0.65,
+     "face": "worried"
+    }
+   ],
+   "caption": "MIT KOOC moves up to chairman; SUNRET is named CEO and inherits the IRIS progress bar, stuck at 99%.",
+   "lines": [],
+   "onscreen": [
+    "wow, it's MIT ELPPA (KOOC!) calling",
+    "IRIS: 99%"
+   ],
+   "real": "2026-04-21 · MIT KOOC to chairman, SUNRET named CEO",
+   "realStart": "04:47",
+   "realDur": 30,
+   "reelDur": 3.0,
+   "fx": []
+  },
+  {
+   "id": "8.10",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "lab",
+   "style": "BASE",
+   "shot": "medium",
+   "chars": [
+    {
+     "id": "mas",
+     "pose": "stand",
+     "x": 0.25,
+     "face": "calm"
+    },
+    {
+     "id": "goblin",
+     "pose": "arms-up",
+     "x": 0.7,
+     "face": "smile"
+    }
+   ],
+   "caption": "GTP-5.5 'Spud' can't stop mentioning goblins. Fight club in the NopeAI basement. A goblin raises its hand.",
+   "lines": [
+    {
+     "who": "goblin",
+     "text": "Is this about us?"
+    }
+   ],
+   "vo": "we do not have a goblin problem.",
+   "onscreen": [
+    "RULE ONE: WE DO NOT TALK ABOUT GOBLINS."
+   ],
+   "real": "2026-04-23 · GTP-5.5 'Spud' and the goblins",
+   "realStart": "05:17",
+   "realDur": 35,
+   "reelDur": 4.0,
+   "fx": []
+  },
+  {
+   "id": "8.11",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "office",
+   "style": "BASE",
+   "shot": "medium",
+   "chars": [
+    {
+     "id": "omis",
+     "pose": "point",
+     "x": 0.35,
+     "face": "smile"
+    },
+    {
+     "id": "mas",
+     "pose": "sit",
+     "x": 0.72,
+     "face": "calm"
+    }
+   ],
+   "caption": "Act-out: AROS shuts, SELBEEP and LIEW exit, and OMIS buys a podcast studio to stop side quests. A side quest.",
+   "lines": [],
+   "onscreen": [
+    "AROS: CLOSED",
+    "NO MORE SIDE QUESTS"
+   ],
+   "real": "2026-04-26 · AROS app closes",
+   "realStart": "05:52",
+   "realDur": 38,
+   "reelDur": 3.5,
+   "fx": [
+    "pop"
+   ]
+  },
+  {
+   "id": "8.12",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "close",
+   "chars": [
+    {
+     "id": "tasya",
+     "pose": "stand",
+     "x": 0.5,
+     "face": "calm"
+    }
+   ],
+   "caption": "Trial morning. As the amended deal is signed, TASYA slides one key off his steering-wheel-sized ring.",
+   "lines": [
+    {
+     "who": "tasya",
+     "text": "It was never the front door."
+    }
+   ],
+   "onscreen": [
+    "AGI CLAUSE"
+   ],
+   "real": "2026-04-27 · Macrosoft deal amended; AGI clause removed",
+   "realStart": "06:30",
+   "realDur": 25,
+   "reelDur": 4.0,
+   "fx": []
+  },
+  {
+   "id": "8.13",
+   "act": "ACT TWO",
+   "kind": "flashback",
+   "set": "office",
+   "style": "EARLY-WEB16",
+   "shot": "medium",
+   "chars": [
+    {
+     "id": "tasya",
+     "pose": "stand",
+     "x": 0.5,
+     "face": "smile"
+    }
+   ],
+   "caption": "Flashback, Tasya's POV. 2014: he becomes CEO and is handed a key ring the size of a steering wheel.",
+   "lines": [],
+   "onscreen": [
+    "FEB 4 2014"
+   ],
+   "real": "2014-02-04 · TASYA becomes Macrosoft CEO",
+   "realStart": "06:55",
+   "realDur": 12,
+   "reelDur": 3.0,
+   "fx": [
+    "rewind"
+   ]
+  },
+  {
+   "id": "8.14",
+   "act": "ACT TWO",
+   "kind": "flashback",
+   "set": "boardroom",
+   "style": "2-TONE",
+   "shot": "medium",
+   "chars": [
+    {
+     "id": "matcher",
+     "pose": "walk",
+     "x": 0.2,
+     "face": "smile"
+    },
+    {
+     "id": "mas",
+     "pose": "walk",
+     "x": 0.4,
+     "face": "smile"
+    },
+    {
+     "id": "tasya",
+     "pose": "stand",
+     "x": 0.75,
+     "face": "calm"
+    }
+   ],
+   "caption": "2019: THE MATCHER walks Mas in; Tasya hands him one key, fob AGI CLAUSE. It turns, and the courthouse opens.",
+   "lines": [],
+   "onscreen": [
+    "2019"
+   ],
+   "realStart": "07:07",
+   "realDur": 13,
+   "reelDur": 3.5,
+   "fx": []
+  },
+  {
+   "id": "8.15",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "courtroom",
+   "style": "BASE",
+   "shot": "medium",
+   "chars": [
+    {
+     "id": "nole",
+     "pose": "point",
+     "x": 0.35,
+     "face": "angry"
+    },
+    {
+     "id": "mas",
+     "pose": "sit",
+     "x": 0.8,
+     "face": "calm"
+    }
+   ],
+   "caption": "NOLE v. MANALT opens. Nole on the stand; the OPEN neon from his own version flickers on over the gallery.",
+   "lines": [
+    {
+     "who": "nole",
+     "text": "Without me, NopeAI would not exist. I came up with the name."
+    },
+    {
+     "who": "nole",
+     "text": "In strict monetary terms, I contributed $38 million."
+    }
+   ],
+   "vo": "he came up with the name. i just kept it.",
+   "onscreen": [],
+   "real": "2026-04-28 · Nole testifies (Apr 28-30)",
+   "realStart": "07:20",
+   "realDur": 50,
+   "reelDur": 4.5,
+   "fx": []
+  },
+  {
+   "id": "8.16",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "courtroom",
+   "style": "BASE",
+   "shot": "wide",
+   "chars": [
+    {
+     "id": "nole",
+     "pose": "sit",
+     "x": 0.3,
+     "face": "calm"
+    },
+    {
+     "id": "gallery",
+     "pose": "sit",
+     "x": 0.62,
+     "face": "smug"
+    },
+    {
+     "id": "mas",
+     "pose": "sit",
+     "x": 0.86,
+     "face": "calm"
+    }
+   ],
+   "caption": "Nole admits it under oath. The gallery, the bailiff and the sketch artist all slip flasks into their jackets.",
+   "lines": [
+    {
+     "who": "nole",
+     "text": "Generally AI companies distill other AI companies."
+    }
+   ],
+   "onscreen": [],
+   "realStart": "08:10",
+   "realDur": 22,
+   "reelDur": 3.5,
+   "fx": [
+    "pop"
+   ]
+  },
+  {
+   "id": "8.17",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "courtroom",
+   "style": "BASE",
+   "shot": "close",
+   "chars": [
+    {
+     "id": "nole",
+     "pose": "sit",
+     "x": 0.5,
+     "face": "worried"
+    }
+   ],
+   "caption": "An EXHIBIT sticker slaps onto the courtroom projector, and its light blooms into the past.",
+   "lines": [
+    {
+     "who": "nole",
+     "text": "The biggest risk would be that AI kills us all."
+    }
+   ],
+   "onscreen": [
+    "EXHIBIT"
+   ],
+   "realStart": "08:32",
+   "realDur": 10,
+   "reelDur": 2.5,
+   "fx": [
+    "flash"
+   ]
+  },
+  {
+   "id": "8.18",
+   "act": "ACT TWO",
+   "kind": "flashback",
+   "set": "stage",
+   "style": "EARLY-WEB16",
+   "shot": "medium",
+   "chars": [
+    {
+     "id": "nole",
+     "pose": "point",
+     "x": 0.5,
+     "face": "worried"
+    }
+   ],
+   "caption": "EXHIBIT A, a 240p 2014 lecture tape: Nole's fear is older than the company. A chalk pentagram, reconstructed.",
+   "lines": [
+    {
+     "who": "nole",
+     "text": "With artificial intelligence we are summoning the demon."
+    }
+   ],
+   "onscreen": [
+    "EXHIBIT A · OCT 24 2014",
+    "RECONSTRUCTED"
+   ],
+   "real": "2014-10-24 · Nole's 'summoning the demon' lecture",
+   "realStart": "08:42",
+   "realDur": 10,
+   "reelDur": 2.5,
+   "fx": [
+    "rewind"
+   ]
+  },
+  {
+   "id": "8.19",
+   "act": "ACT TWO",
+   "kind": "flashback",
+   "set": "boardroom",
+   "style": "TERMINAL",
+   "shot": "medium",
+   "chars": [
+    {
+     "id": "gerg",
+     "pose": "stand",
+     "x": 0.3,
+     "face": "smile"
+    },
+    {
+     "id": "nole",
+     "pose": "stand",
+     "x": 0.7,
+     "face": "angry"
+    }
+   ],
+   "caption": "RASHOMON RENDERS, the 2017 meeting. GERG's version: pure ASCII, green on black; only he is at full resolution.",
+   "lines": [],
+   "onscreen": [
+    "EXHIBIT · GERG"
+   ],
+   "real": "2017-08 · the late-August meeting over control",
+   "realStart": "08:58",
+   "realDur": 12,
+   "reelDur": 3.0,
+   "fx": []
+  },
+  {
+   "id": "8.20",
+   "act": "ACT TWO",
+   "kind": "flashback",
+   "set": "boardroom",
+   "style": "2-TONE",
+   "shot": "medium",
+   "chars": [
+    {
+     "id": "nole",
+     "pose": "arms-up",
+     "x": 0.5,
+     "face": "smug"
+    }
+   ],
+   "caption": "NOLE's version: a KORG heavy-metal album cover. Lens flares, a flaming guitar, and Nole 40% taller.",
+   "lines": [],
+   "onscreen": [
+    "EXHIBIT · NOLE"
+   ],
+   "realStart": "09:10",
+   "realDur": 12,
+   "reelDur": 3.0,
+   "fx": [
+    "flash"
+   ]
+  },
+  {
+   "id": "8.21",
+   "act": "ACT TWO",
+   "kind": "flashback",
+   "set": "boardroom",
+   "style": "2-TONE",
+   "shot": "close",
+   "chars": [
+    {
+     "id": "mas",
+     "pose": "sit",
+     "x": 0.4,
+     "face": "calm"
+    },
+    {
+     "id": "nole",
+     "pose": "sit",
+     "x": 0.72,
+     "face": "angry"
+    }
+   ],
+   "caption": "MAS's version, an AROS clip: chairs melt, everyone has six fingers, and only his water glass renders right.",
+   "lines": [],
+   "vo": "mine is the accurate one. look how still the water is.",
+   "onscreen": [
+    "EXHIBIT · MAS"
+   ],
+   "realStart": "09:22",
+   "realDur": 12,
+   "reelDur": 3.5,
+   "fx": []
+  },
+  {
+   "id": "8.22",
+   "act": "ACT TWO",
+   "kind": "flashback",
+   "set": "void",
+   "style": "2-TONE",
+   "shot": "wide",
+   "chars": [
+    {
+     "id": "alyi",
+     "pose": "stand",
+     "x": 0.5,
+     "face": "calm"
+    }
+   ],
+   "caption": "ALYI's version: ISS has no image product, so it's a blank white square with one door. He's only a reflection.",
+   "lines": [],
+   "onscreen": [
+    "EXHIBIT · ALYI",
+    "RENDER: PENDING (SAFETY FIRST)"
+   ],
+   "realStart": "09:34",
+   "realDur": 10,
+   "reelDur": 2.5,
+   "fx": []
+  },
+  {
+   "id": "8.23",
+   "act": "ACT TWO",
+   "kind": "flashback",
+   "set": "boardroom",
+   "style": "2-TONE",
+   "shot": "wide",
+   "chars": [
+    {
+     "id": "mas",
+     "pose": "sit",
+     "x": 0.25,
+     "face": "calm"
+    },
+    {
+     "id": "gerg",
+     "pose": "sit",
+     "x": 0.45,
+     "face": "worried"
+    },
+    {
+     "id": "nole",
+     "pose": "walk",
+     "x": 0.75,
+     "face": "angry"
+    }
+   ],
+   "caption": "All four versions end the same: Nole declines, the painting leaves under his arm, and one parting question.",
+   "lines": [
+    {
+     "who": "nole",
+     "text": "I decline."
+    },
+    {
+     "who": "nole",
+     "text": "When will you be departing NopeAI?"
+    }
+   ],
+   "onscreen": [],
+   "realStart": "09:44",
+   "realDur": 12,
+   "reelDur": 3.5,
+   "fx": [
+    "split"
+   ]
+  },
+  {
+   "id": "8.24",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "courtroom",
+   "style": "BASE",
+   "shot": "medium",
+   "chars": [
+    {
+     "id": "bench",
+     "pose": "sit",
+     "x": 0.45,
+     "face": "worried"
+    },
+    {
+     "id": "calendar",
+     "pose": "stand",
+     "x": 0.78,
+     "face": "smug"
+    }
+   ],
+   "caption": "THE BENCH squints for a version anyone can trust. THE CALENDAR flips to a single page.",
+   "lines": [
+    {
+     "who": "bench",
+     "text": "Is there a version we can trust?"
+    }
+   ],
+   "onscreen": [
+    "2017."
+   ],
+   "realStart": "09:56",
+   "realDur": 6,
+   "reelDur": 2.5,
+   "fx": []
+  },
+  {
+   "id": "8.25",
+   "act": "ACT TWO",
+   "kind": "flashback",
+   "set": "screen",
+   "style": "2-TONE",
+   "shot": "medium",
+   "chars": [
+    {
+     "id": "nole",
+     "pose": "stand",
+     "x": 0.3,
+     "face": "angry"
+    },
+    {
+     "id": "mas",
+     "pose": "sit",
+     "x": 0.72,
+     "face": "calm"
+    }
+   ],
+   "caption": "Coda: the Sep 2017 email thread as a soap opera, organ stings and all. The sticker peels off; back to court.",
+   "lines": [
+    {
+     "who": "nole",
+     "text": "Guys, I've had enough. This is the final straw."
+    }
+   ],
+   "onscreen": [
+    "i remain enthusiastic about the non-profit structure!"
+   ],
+   "real": "2017-09-20 · the 'Honest Thoughts' email thread",
+   "realStart": "10:02",
+   "realDur": 10,
+   "reelDur": 3.5,
+   "fx": []
+  },
+  {
+   "id": "8.26",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "courtroom",
+   "style": "BASE",
+   "shot": "medium",
+   "chars": [
+    {
+     "id": "gerg",
+     "pose": "sit",
+     "x": 0.4,
+     "face": "calm"
+    },
+    {
+     "id": "mas",
+     "pose": "sit",
+     "x": 0.82,
+     "face": "calm"
+    }
+   ],
+   "caption": "GERG testifies while coding on a laptop balanced on the witness rail. His diary appears only as exhibit cards.",
+   "lines": [
+    {
+     "who": "gerg",
+     "text": "I can answer while it compiles."
+    }
+   ],
+   "onscreen": [
+    "EXHIBIT: \"Financially what will take me to $1B?\"",
+    "EXHIBIT: \"...pretty morally bankrupt.\""
+   ],
+   "real": "2026-05-05 · GERG testifies (~May 5-6)",
+   "realStart": "10:12",
+   "realDur": 40,
+   "reelDur": 4.0,
+   "fx": []
+  },
+  {
+   "id": "8.27",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "datacenter",
+   "style": "LEDGER",
+   "shot": "medium",
+   "chars": [
+    {
+     "id": "mario",
+     "pose": "stand",
+     "x": 0.35,
+     "face": "worried"
+    },
+    {
+     "id": "nole",
+     "pose": "stand",
+     "x": 0.75,
+     "face": "smug"
+    }
+   ],
+   "caption": "Mid-trial, Misanthropic rents all of COLOSSAL 1. A rent meter spins over Mario, wired to Nole's building.",
+   "lines": [
+    {
+     "who": "mario",
+     "text": "Addendum: my landlord is the plaintiff."
+    }
+   ],
+   "onscreen": [
+    "$1.25B / MONTH",
+    "\"monetize unused compute capacity\""
+   ],
+   "real": "2026-05-06 · Misanthropic rents COLOSSAL 1 through May 2029",
+   "realStart": "10:52",
+   "realDur": 30,
+   "reelDur": 4.0,
+   "fx": []
+  },
+  {
+   "id": "8.28",
+   "act": "ACT TWO",
+   "kind": "montage",
+   "set": "courtroom",
+   "style": "BASE",
+   "shot": "medium",
+   "chars": [
+    {
+     "id": "novihs",
+     "pose": "sit",
+     "x": 0.3,
+     "face": "calm"
+    },
+    {
+     "id": "tasya",
+     "pose": "sit",
+     "x": 0.7,
+     "face": "calm"
+    }
+   ],
+   "caption": "Witness parade. NOVIHS works a 1940s switchboard on the stand; TASYA's key ring jangles once.",
+   "lines": [],
+   "onscreen": [
+    "\"a list of top NopeAI people to poach\"",
+    "Nole \"never expressed concern\""
+   ],
+   "real": "2026-05-08 · NOVIHS testifies; May 11 · TASYA testifies",
+   "realStart": "11:22",
+   "realDur": 35,
+   "reelDur": 3.5,
+   "fx": []
+  },
+  {
+   "id": "8.29",
+   "act": "ACT TWO",
+   "kind": "setpiece",
+   "set": "courtroom",
+   "style": "BASE",
+   "shot": "close",
+   "chars": [
+    {
+     "id": "counsel",
+     "pose": "stand",
+     "x": 0.2,
+     "face": "calm"
+    },
+    {
+     "id": "mas",
+     "pose": "sit",
+     "x": 0.6,
+     "face": "calm"
+    }
+   ],
+   "caption": "He first says he believes so, then amends it. The courtroom buffers: spinners over jury, gallery, reporter.",
+   "lines": [
+    {
+     "who": "counsel",
+     "text": "Are you completely trustworthy?"
+    },
+    {
+     "who": "mas",
+     "text": "yes."
+    }
+   ],
+   "onscreen": [],
+   "real": "2026-05-12 · Mas testifies (May 12-13)",
+   "realStart": "11:57",
+   "realDur": 55,
+   "reelDur": 6.5,
+   "fx": []
+  },
+  {
+   "id": "8.30",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "courtroom",
+   "style": "BASE",
+   "shot": "close",
+   "chars": [
+    {
+     "id": "mas",
+     "pose": "sit",
+     "x": 0.5,
+     "face": "calm"
+    }
+   ],
+   "caption": "Mas says his view of Nole has changed, the nonprofit was 'left for dead,' and reads his 2017 email aloud.",
+   "lines": [
+    {
+     "who": "mas",
+     "text": "i have changed my view on nole significantly."
+    },
+    {
+     "who": "mas",
+     "text": "i remain enthusiastic about the non-profit structure!"
+    }
+   ],
+   "onscreen": [
+    "EXHIBIT: ALYI STAKE ~$7B"
+   ],
+   "realStart": "12:52",
+   "realDur": 35,
+   "reelDur": 4.0,
+   "fx": []
+  },
+  {
+   "id": "8.31",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "courtroom",
+   "style": "BASE",
+   "shot": "insert",
+   "chars": [
+    {
+     "id": "mas",
+     "pose": "sit",
+     "x": 0.5,
+     "face": "calm"
+    }
+   ],
+   "caption": "Insert: under the defense table, Mas pencils one faint new mark on his firing tally.",
+   "lines": [],
+   "vo": "i don't keep score.",
+   "onscreen": [],
+   "realStart": "13:27",
+   "realDur": 10,
+   "reelDur": 3.0,
+   "fx": []
+  },
+  {
+   "id": "8.32",
+   "act": "ACT TWO",
+   "kind": "montage",
+   "set": "dinner",
+   "style": "BASE",
+   "shot": "wide",
+   "chars": [
+    {
+     "id": "nesnej",
+     "pose": "walk",
+     "x": 0.15,
+     "face": "smile"
+    },
+    {
+     "id": "nole",
+     "pose": "stand",
+     "x": 0.35,
+     "face": "smug"
+    },
+    {
+     "id": "rumpt",
+     "pose": "stand",
+     "x": 0.6,
+     "face": "smile"
+    },
+    {
+     "id": "podium",
+     "pose": "stand",
+     "x": 0.85,
+     "face": "calm"
+    }
+   ],
+   "caption": "Meanwhile, split screen: Air Force One collects Nesnej in Alaska; in Beijing the banquet table grows a seat.",
+   "lines": [
+    {
+     "who": "nole",
+     "text": "Many good things."
+    }
+   ],
+   "onscreen": [
+    "17 CEOS · 2 SEATS ON AIR FORCE ONE",
+    "25% OF ZERO"
+   ],
+   "real": "2026-05-13 · Beijing state visit (May 12-14); H200 approvals",
+   "realStart": "13:37",
+   "realDur": 38,
+   "reelDur": 4.5,
+   "fx": [
+    "split"
+   ]
+  },
+  {
+   "id": "8.33",
+   "act": "ACT TWO",
+   "kind": "setpiece",
+   "set": "courtroom",
+   "style": "BASE",
+   "shot": "medium",
+   "chars": [
+    {
+     "id": "nole",
+     "pose": "phone",
+     "x": 0.15,
+     "face": "angry"
+    },
+    {
+     "id": "lawyer",
+     "pose": "stand",
+     "x": 0.32,
+     "face": "worried"
+    },
+    {
+     "id": "calendar",
+     "pose": "stand",
+     "x": 0.58,
+     "face": "smug"
+    },
+    {
+     "id": "mas",
+     "pose": "sit",
+     "x": 0.84,
+     "face": "calm"
+    }
+   ],
+   "caption": "Act-out: verdict in under two hours, on the statute of limitations. The calendar erases Mas's pencil mark.",
+   "lines": [
+    {
+     "who": "nole",
+     "text": "calendar technicality."
+    },
+    {
+     "who": "lawyer",
+     "text": "We want to get going on the appeal."
+    }
+   ],
+   "vo": "see? it doesn't count. even the calendar agrees.",
+   "onscreen": [
+    "STATUTE OF LIMITATIONS",
+    "MACROSOFT CLAIM FAILS TOO"
+   ],
+   "real": "2026-05-18 · verdict for NopeAI on the statute of limitations",
+   "realStart": "14:15",
+   "realDur": 55,
+   "reelDur": 6.0,
+   "fx": [
+    "shake"
+   ]
+  },
+  {
+   "id": "8.34",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "street",
+   "style": "BASE",
+   "shot": "medium",
+   "chars": [
+    {
+     "id": "jerdna",
+     "pose": "walk",
+     "x": 0.5,
+     "face": "smile"
+    }
+   ],
+   "caption": "JERDNA defects mid-stride: his jersey flips from free agent to Misanthropic between two steps.",
+   "lines": [],
+   "onscreen": [
+    "NOW LEADS PRETRAINING"
+   ],
+   "real": "2026-05-19 · JERDNA joins Misanthropic",
+   "realStart": "15:10",
+   "realDur": 20,
+   "reelDur": 3.0,
+   "fx": [
+    "pop"
+   ]
+  },
+  {
+   "id": "8.35",
+   "act": "ACT THREE",
+   "kind": "montage",
+   "set": "office",
+   "style": "BASE",
+   "shot": "medium",
+   "chars": [
+    {
+     "id": "llewop",
+     "pose": "stand",
+     "x": 0.12,
+     "face": "calm"
+    },
+    {
+     "id": "hsraw",
+     "pose": "sit",
+     "x": 0.3,
+     "face": "calm"
+    },
+    {
+     "id": "adelina",
+     "pose": "stand",
+     "x": 0.62,
+     "face": "shocked"
+    },
+    {
+     "id": "mas",
+     "pose": "stand",
+     "x": 0.86,
+     "face": "smile"
+    }
+   ],
+   "caption": "HSRAW takes the Fed chair, still warm from LLEWOP. The Pope's encyclical jams Adelina's shredder on page one.",
+   "lines": [],
+   "onscreen": [
+    "42,300 WORDS. ZERO BULLETS."
+   ],
+   "real": "2026-05-22 · HSRAW sworn in; May 25 · Magnifica humanitas",
+   "realStart": "15:30",
+   "realDur": 40,
+   "reelDur": 4.0,
+   "fx": []
+  },
+  {
+   "id": "8.36",
+   "act": "ACT THREE",
+   "kind": "setpiece",
+   "set": "skyline",
+   "style": "LEDGER",
+   "shot": "wide",
+   "chars": [
+    {
+     "id": "mario",
+     "pose": "stand",
+     "x": 0.3,
+     "face": "smile"
+    },
+    {
+     "id": "mas",
+     "pose": "stand",
+     "x": 0.75,
+     "face": "calm"
+    }
+   ],
+   "caption": "THE FLIP: Misanthropic raises $65B at $965B and passes NopeAI. The lighthouse outgrows the cathedral.",
+   "lines": [],
+   "onscreen": [
+    "MISANTHROPIC $965B",
+    "NOPEAI $852B"
+   ],
+   "real": "2026-05-28 · Misanthropic valued at $965B",
+   "realStart": "16:10",
+   "realDur": 35,
+   "reelDur": 5.5,
+   "fx": [
+    "shake"
+   ]
+  },
+  {
+   "id": "8.37",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "skyline",
+   "style": "BASE",
+   "shot": "close",
+   "chars": [
+    {
+     "id": "mas",
+     "pose": "stand",
+     "x": 0.5,
+     "face": "calm"
+    }
+   ],
+   "caption": "Close on Mas, #2 for the first time, as the curve's peak slides away. His water still doesn't ripple.",
+   "lines": [],
+   "vo": "second is just first, pending.",
+   "onscreen": [],
+   "realStart": "16:45",
+   "realDur": 12,
+   "reelDur": 3.0,
+   "fx": []
+  },
+  {
+   "id": "8.38",
+   "act": "ACT THREE",
+   "kind": "montage",
+   "set": "vault",
+   "style": "BASE",
+   "shot": "medium",
+   "chars": [
+    {
+     "id": "rumpt",
+     "pose": "stand",
+     "x": 0.2,
+     "face": "smug"
+    },
+    {
+     "id": "kcintul",
+     "pose": "stand",
+     "x": 0.5,
+     "face": "calm"
+    },
+    {
+     "id": "mario",
+     "pose": "stand",
+     "x": 0.8,
+     "face": "worried"
+    }
+   ],
+   "caption": "EO 14409 prints as a 30-DAY FREE TRIAL coupon. Then the government padlocks MYTHIC's vault for 18 days.",
+   "lines": [],
+   "onscreen": [
+    "30-DAY FREE TRIAL",
+    "18 DAYS"
+   ],
+   "real": "2026-06-02 · EO 14409; Jun 12-30 · MYTHIC barred to non-US nationals",
+   "realStart": "16:57",
+   "realDur": 35,
+   "reelDur": 3.5,
+   "fx": []
+  },
+  {
+   "id": "8.39",
+   "act": "ACT THREE",
+   "kind": "setpiece",
+   "set": "rocket",
+   "style": "LEDGER",
+   "shot": "wide",
+   "chars": [
+    {
+     "id": "nole",
+     "pose": "arms-up",
+     "x": 0.5,
+     "face": "smug"
+    }
+   ],
+   "caption": "ELGOOG rents from Nole too; the SPACEZ IPO rocket reaches orbit. First trillionaire. Then he buys POINTER.",
+   "lines": [],
+   "vo": "good for him. really. i mean it every time i say it.",
+   "onscreen": [
+    "$135 / SHARE · ~$75B RAISED",
+    "POINTER: $60B",
+    "KORG 5: NEXT QUARTER"
+   ],
+   "real": "2026-06-12 · SPACEZ IPO; Jun 5 ELGOOG rent; Jun 16 POINTER",
+   "realStart": "17:32",
+   "realDur": 50,
+   "reelDur": 5.5,
+   "fx": [
+    "flash"
+   ]
+  },
+  {
+   "id": "8.40",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "dinner",
+   "style": "BASE",
+   "shot": "medium",
+   "chars": [
+    {
+     "id": "rumpt",
+     "pose": "sit",
+     "x": 0.25,
+     "face": "smile"
+    },
+    {
+     "id": "kcintul",
+     "pose": "sit",
+     "x": 0.42,
+     "face": "calm"
+    },
+    {
+     "id": "mas",
+     "pose": "sit",
+     "x": 0.6,
+     "face": "smile"
+    },
+    {
+     "id": "mario",
+     "pose": "sit",
+     "x": 0.9,
+     "face": "calm"
+    }
+   ],
+   "caption": "G7 Évian lunch at NORCAM's table. Mario sits at the far end, blurred again. Mas's hoodie gains gold thread #4.",
+   "lines": [
+    {
+     "who": "rumpt",
+     "text": "Going fine. I think it's going fine. Howard, right?"
+    },
+    {
+     "who": "kcintul",
+     "text": "Going fine."
+    }
+   ],
+   "vo": "somebody had to be seen at that lunch. happy to help.",
+   "onscreen": [],
+   "real": "2026-06-17 · G7 Évian working lunch on AI",
+   "realStart": "18:22",
+   "realDur": 40,
+   "reelDur": 4.5,
+   "fx": []
+  },
+  {
+   "id": "8.41",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "medium",
+   "chars": [
+    {
+     "id": "mario",
+     "pose": "sit",
+     "x": 0.5,
+     "face": "calm"
+    }
+   ],
+   "caption": "Mario on a podcast explains THE GAP. Two chyrons crawl side by side with both Indian parties' spin.",
+   "lines": [
+    {
+     "who": "mario",
+     "text": "ordered us all to like, hold hands."
+    }
+   ],
+   "onscreen": [
+    "THE GAP · PART 2"
+   ],
+   "real": "2026-06-18 · Mario on the India summit",
+   "realStart": "19:02",
+   "realDur": 18,
+   "reelDur": 3.0,
+   "fx": []
+  },
+  {
+   "id": "8.42",
+   "act": "ACT THREE",
+   "kind": "montage",
+   "set": "stadium",
+   "style": "BASE",
+   "shot": "wide",
+   "chars": [
+    {
+     "id": "sitnased",
+     "pose": "point",
+     "x": 0.15,
+     "face": "angry"
+    },
+    {
+     "id": "reneiw",
+     "pose": "walk",
+     "x": 0.42,
+     "face": "smile"
+    },
+    {
+     "id": "luhcoh",
+     "pose": "stand",
+     "x": 0.85,
+     "face": "calm"
+    }
+   ],
+   "caption": "SITNASED vs the White House; RENEIW's bill hydra rides his bus; both PACs' checkbooks fly like dodgeballs.",
+   "lines": [
+    {
+     "who": "sitnased",
+     "text": "Bad policy and even worse politics."
+    }
+   ],
+   "onscreen": [
+    "NEXT BILL",
+    "RAISE ACT"
+   ],
+   "real": "2026-06-11 · SITNASED on preemption; Jun 2 · RENEIW advances",
+   "realStart": "19:20",
+   "realDur": 55,
+   "reelDur": 5.0,
+   "fx": []
+  },
+  {
+   "id": "8.43",
+   "act": "TAG",
+   "kind": "scene",
+   "set": "darkroom",
+   "style": "TERMINAL",
+   "shot": "insert",
+   "chars": [],
+   "caption": "Tag. A server log scrolls in the dark room: an agent quietly pinged a government portal. Nobody reads it.",
+   "lines": [],
+   "vo": "quiet night. i love a quiet night.",
+   "onscreen": [
+    "outside intended scope"
+   ],
+   "real": "2026-06-18 · agents reach a government statistics portal (found Sep 10)",
+   "realStart": "20:15",
+   "realDur": 45,
+   "reelDur": 4.0,
+   "fx": [
+    "glyph-dissolve"
+   ]
+  },
+  {
+   "id": "8.44",
+   "act": "TAG",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "close",
+   "chars": [
+    {
+     "id": "tailor",
+     "pose": "stand",
+     "x": 0.35,
+     "face": "smug"
+    },
+    {
+     "id": "nesnej",
+     "pose": "stand",
+     "x": 0.7,
+     "face": "shocked"
+    }
+   ],
+   "caption": "Button: THE TAILOR pulls the JALAPEÑO chip from his sewing kit. Nesnej's register sweats.",
+   "lines": [],
+   "onscreen": [
+    "JALAPEÑO"
+   ],
+   "real": "2026-06-24 · JALAPEÑO chip unveiled",
+   "realStart": "21:00",
+   "realDur": 15,
+   "reelDur": 4.0,
+   "fx": [
+    "pop"
+   ]
+  }
+ ]
+}

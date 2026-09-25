@@ -1,0 +1,1674 @@
+{
+  "episode": 3,
+  "title": "ep1.2_strawberry.jpg",
+  "logline": "Mas posts a strawberry and the city builds a conspiracy board, while NopeAI teaches a machine to think and then hides the thinking. Behind the fruit, the founding table empties chair by chair, the company gets a $157B price tag, and the podium that has faced away all year turns around when Mas's $1M drops into its slot.",
+  "dateSpan": "Aug 2024 - Dec 2024",
+  "runtimeMin": 22,
+  "speculative": false,
+  "beats": [
+    {
+      "id": "3.01",
+      "act": "COLD OPEN",
+      "kind": "setpiece",
+      "set": "skyline",
+      "style": "BASE",
+      "shot": "wide",
+      "chars": [],
+      "caption": "THE CORKBOARD: red yarn runs tower to tower across San Francisco. The whole city is decoding one post.",
+      "real": "2024-08-07 · the garden-strawberry post",
+      "realStart": "00:00",
+      "realDur": 10,
+      "reelDur": 3.0
+    },
+    {
+      "id": "3.02",
+      "act": "COLD OPEN",
+      "kind": "scene",
+      "set": "street",
+      "style": "BASE",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "corkboard-guy",
+          "pose": "point",
+          "x": 0.35,
+          "face": "angry"
+        },
+        {
+          "id": "second-truther",
+          "pose": "sit",
+          "x": 0.7,
+          "face": "worried"
+        }
+      ],
+      "caption": "Behind a taco truck, THE CORKBOARD GUY reads the strawberry's seeds as Morse and ties the truck in too.",
+      "lines": [
+        {
+          "who": "corkboard-guy",
+          "text": "It's all dots. That's how you know it's Morse."
+        },
+        {
+          "who": "second-truther",
+          "text": "Could it be... a fruit?"
+        },
+        {
+          "who": "corkboard-guy",
+          "text": "Fruit doesn't have a launch window."
+        }
+      ],
+      "onscreen": [
+        "THE CORKBOARD GUY · STRAWBERRY TRUTHER"
+      ],
+      "realStart": "00:10",
+      "realDur": 30,
+      "reelDur": 4.0
+    },
+    {
+      "id": "3.03",
+      "act": "COLD OPEN",
+      "kind": "scene",
+      "set": "skyline",
+      "style": "BASE",
+      "shot": "close",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "stand",
+          "x": 0.35,
+          "face": "calm"
+        },
+        {
+          "id": "orb",
+          "pose": "float",
+          "x": 0.55,
+          "face": "calm"
+        }
+      ],
+      "caption": "The last strand ends in a bow on a pot atop the NopeAI spire. The next model's codename is Strawberry.",
+      "lines": [
+        {
+          "who": "mas",
+          "text": "it's a strawberry."
+        }
+      ],
+      "vo": "it was a strawberry. from a garden. there was nothing to decode.",
+      "realStart": "00:40",
+      "realDur": 13,
+      "reelDur": 3.5,
+      "fx": [
+        "pop"
+      ]
+    },
+    {
+      "id": "3.04",
+      "act": "INTRO",
+      "kind": "intro",
+      "set": "skyline",
+      "style": "BASE",
+      "shot": "wide",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "sit",
+          "x": 0.4,
+          "face": "calm"
+        }
+      ],
+      "caption": "INTRO (30 s). Cold-open line, then the title card: ep1.2_strawberry.jpg · AUG 5 → DEC 2024.",
+      "onscreen": [
+        "\"i love summer in the garden\"",
+        "ep1.2_strawberry.jpg",
+        "now with voice (paused)"
+      ],
+      "realStart": "00:53",
+      "realDur": 32,
+      "reelDur": 2.5
+    },
+    {
+      "id": "3.05",
+      "act": "ACT ONE",
+      "kind": "scene",
+      "set": "lobby",
+      "style": "BASE",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "stand",
+          "x": 0.3,
+          "face": "calm"
+        },
+        {
+          "id": "gerg",
+          "pose": "walk",
+          "x": 0.65,
+          "face": "smile"
+        }
+      ],
+      "caption": "Gerg leaves on a 'sabbatical', laptop open, still typing. A keycap pops off; Mas pockets it.",
+      "lines": [
+        {
+          "who": "gerg",
+          "text": "Sabbatical. Going. Basically gone."
+        },
+        {
+          "who": "mas",
+          "text": "enjoy the break."
+        },
+        {
+          "who": "gerg",
+          "text": "Totally. It has standups."
+        }
+      ],
+      "onscreen": [
+        "DAYS SINCE SOMEONE TRIED TO FIRE MAS: 262"
+      ],
+      "real": "2024-08-05 · the co-founder's sabbatical",
+      "realStart": "01:25",
+      "realDur": 20,
+      "reelDur": 3.5
+    },
+    {
+      "id": "3.06",
+      "act": "ACT ONE",
+      "kind": "scene",
+      "set": "lobby",
+      "style": "BASE",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "lean",
+          "x": 0.2,
+          "face": "calm"
+        },
+        {
+          "id": "gerg",
+          "pose": "stand",
+          "x": 0.38,
+          "face": "shocked"
+        },
+        {
+          "id": "lunchmas",
+          "pose": "walk",
+          "x": 0.78,
+          "face": "worried"
+        }
+      ],
+      "caption": "Out the window, LUNCHMAS walks a box to MISANTHROPIC on a half-built draft bridge. A gold podium sits far off.",
+      "lines": [
+        {
+          "who": "mas",
+          "text": "he's walking on a draft."
+        },
+        {
+          "who": "gerg",
+          "text": "Footnotes are load-bearing over there."
+        }
+      ],
+      "vo": "nobody was leaving. gerg was resting. lunchmas was focusing.",
+      "onscreen": [
+        "LUNCHMAS / CO-FOUNDER.",
+        "DRAFT — DO NOT PUBLISH",
+        "BADGE: UNRECOGNIZED"
+      ],
+      "real": "2024-08-05 · a co-founder leaves for the rival lab",
+      "realStart": "01:45",
+      "realDur": 24,
+      "reelDur": 4.0
+    },
+    {
+      "id": "3.07",
+      "act": "ACT ONE",
+      "kind": "plan",
+      "set": "void",
+      "style": "BASE",
+      "shot": "wide",
+      "chars": [],
+      "caption": "THE PLAN: 'strawberry' splits into tokens. A reasoning model does scratch work first; you pay per thought.",
+      "onscreen": [
+        "WHY IT CAN'T COUNT THE R'S (AND HOW IT LEARNED TO THINK).",
+        "st | raw | berry",
+        "$ PER THOUGHT"
+      ],
+      "real": "2024-09-12 · o1-preview launches",
+      "realStart": "02:16",
+      "realDur": 28,
+      "reelDur": 4.5
+    },
+    {
+      "id": "3.08",
+      "act": "ACT ONE",
+      "kind": "plan",
+      "set": "void",
+      "style": "BASE",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "maon",
+          "pose": "stand",
+          "x": 0.35,
+          "face": "calm"
+        },
+        {
+          "id": "o1",
+          "pose": "stand",
+          "x": 0.6,
+          "face": "calm"
+        }
+      ],
+      "caption": "Step 4: SHOW THE THINKING. A steel shutter slams over o1's scratch roll and tears the blueprint mid-word.",
+      "lines": [
+        {
+          "who": "maon",
+          "text": "Take your time. Twenty seconds."
+        }
+      ],
+      "onscreen": [
+        "STEP 4: SHOW THE THINKING.",
+        "THOUGHTS SUMMAR—"
+      ],
+      "realStart": "02:44",
+      "realDur": 20,
+      "reelDur": 4.0,
+      "fx": [
+        "shake"
+      ]
+    },
+    {
+      "id": "3.09",
+      "act": "ACT ONE",
+      "kind": "setpiece",
+      "set": "stadium",
+      "style": "BASE",
+      "shot": "wide",
+      "chars": [
+        {
+          "id": "chatgtp",
+          "pose": "stand",
+          "x": 0.45,
+          "face": "worried"
+        },
+        {
+          "id": "sucram",
+          "pose": "point",
+          "x": 0.82,
+          "face": "smug"
+        }
+      ],
+      "caption": "HOW MANY R'S? Fourth and strawberry: the old kicker boots it through the '2' post. 40,000 fans boo.",
+      "lines": [
+        {
+          "who": "chatgtp",
+          "text": "Great question! There are... two."
+        },
+        {
+          "who": "sucram",
+          "text": "Thread. One of forty-seven."
+        }
+      ],
+      "onscreen": [
+        "HOW MANY R'S IN \"STRAWBERRY\"?",
+        "CALLED IT"
+      ],
+      "realStart": "03:04",
+      "realDur": 35,
+      "reelDur": 3.5,
+      "fx": [
+        "shake"
+      ]
+    },
+    {
+      "id": "3.10",
+      "act": "ACT ONE",
+      "kind": "setpiece",
+      "set": "stadium",
+      "style": "BASE",
+      "shot": "wide",
+      "chars": [
+        {
+          "id": "o1",
+          "pose": "stand",
+          "x": 0.5,
+          "face": "calm"
+        },
+        {
+          "id": "maon",
+          "pose": "phone",
+          "x": 0.85,
+          "face": "calm"
+        }
+      ],
+      "caption": "o1 takes the field and stops to think. Halftime: a marching band spells the word; a tuba lands on each R.",
+      "lines": [
+        {
+          "who": "maon",
+          "text": "Let it think. ...Longer."
+        }
+      ],
+      "onscreen": [
+        "THINKING…",
+        "S T R A W B E R R Y",
+        "MAON / THINKING… 20s"
+      ],
+      "realStart": "03:39",
+      "realDur": 75,
+      "reelDur": 4.0
+    },
+    {
+      "id": "3.11",
+      "act": "ACT ONE",
+      "kind": "setpiece",
+      "set": "stadium",
+      "style": "BASE",
+      "shot": "wide",
+      "chars": [
+        {
+          "id": "o1",
+          "pose": "stand",
+          "x": 0.5,
+          "face": "calm"
+        }
+      ],
+      "caption": "A field-wide steel shutter drops over the band. Through the slats, for 5 frames, the band is marching tokens.",
+      "onscreen": [
+        "THOUGHTS SUMMARIZED FOR YOUR SAFETY.",
+        "THOUGHT ABOUT BERRIES FOR 20 SECONDS."
+      ],
+      "realStart": "04:54",
+      "realDur": 18,
+      "reelDur": 5.5,
+      "fx": [
+        "glyph-dissolve",
+        "shake"
+      ]
+    },
+    {
+      "id": "3.12",
+      "act": "ACT ONE",
+      "kind": "scene",
+      "set": "stadium",
+      "style": "BASE",
+      "shot": "close",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "sit",
+          "x": 0.3,
+          "face": "calm"
+        },
+        {
+          "id": "maon",
+          "pose": "stand",
+          "x": 0.68,
+          "face": "smug"
+        }
+      ],
+      "caption": "'3.' Standing ovation. Maon hands Mas the summary on a sticky note: 'thought hard.' Mas pockets it. 'super.'",
+      "lines": [
+        {
+          "who": "mas",
+          "text": "what did it think?"
+        },
+        {
+          "who": "maon",
+          "text": "We summarized it."
+        },
+        {
+          "who": "mas",
+          "text": "for my safety?"
+        },
+        {
+          "who": "maon",
+          "text": "Mostly the competitors'."
+        }
+      ],
+      "vo": "they wanted to see its thinking. nobody ever asks to see mine.",
+      "onscreen": [
+        "thought hard."
+      ],
+      "realStart": "05:12",
+      "realDur": 23,
+      "reelDur": 4.5
+    },
+    {
+      "id": "3.13",
+      "act": "ACT ONE",
+      "kind": "scene",
+      "set": "darkroom",
+      "style": "BASE",
+      "shot": "close",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "sit",
+          "x": 0.3,
+          "face": "calm"
+        },
+        {
+          "id": "orb",
+          "pose": "float",
+          "x": 0.45,
+          "face": "calm"
+        }
+      ],
+      "caption": "ACT-OUT: Mas posts his essay. A countdown clock bolts to the wall, can't find a number. Podium: 1/3 up.",
+      "lines": [
+        {
+          "who": "mas",
+          "text": "roughly."
+        }
+      ],
+      "vo": "i wrote 'it may take longer.' nobody reads that part.",
+      "onscreen": [
+        "SUPERINTELLIGENCE IN:",
+        "A FEW THOUSAND DAYS (!)"
+      ],
+      "real": "2024-09-23 · 'The Intelligence Age' essay",
+      "realStart": "05:55",
+      "realDur": 27,
+      "reelDur": 4.5,
+      "fx": [
+        "pop"
+      ]
+    },
+    {
+      "id": "3.14",
+      "act": "ACT TWO",
+      "kind": "scene",
+      "set": "lobby",
+      "style": "BASE",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "stand",
+          "x": 0.3,
+          "face": "calm"
+        },
+        {
+          "id": "installer",
+          "pose": "stand",
+          "x": 0.7,
+          "face": "worried"
+        }
+      ],
+      "caption": "Before anyone resigns, installers wheel in a REVOLVING DOOR (INDUSTRIAL). Mas holds an EXIT INTERVIEW form.",
+      "lines": [
+        {
+          "who": "installer",
+          "text": "Where do you want it?"
+        },
+        {
+          "who": "mas",
+          "text": "where people leave."
+        }
+      ],
+      "vo": "the door was already on order. it had nothing to do with anyone.",
+      "realStart": "06:22",
+      "realDur": 18,
+      "reelDur": 3.5
+    },
+    {
+      "id": "3.15",
+      "act": "ACT TWO",
+      "kind": "scene",
+      "set": "lobby",
+      "style": "BASE",
+      "shot": "close",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "stand",
+          "x": 0.3,
+          "face": "calm"
+        },
+        {
+          "id": "rima",
+          "pose": "walk",
+          "x": 0.68,
+          "face": "calm"
+        }
+      ],
+      "caption": "Rima rides the door round and round through her exit interview. Two unlit, unnamed leaders follow her in.",
+      "lines": [
+        {
+          "who": "mas",
+          "text": "reason for leaving?"
+        },
+        {
+          "who": "rima",
+          "text": "Thank you all."
+        },
+        {
+          "who": "mas",
+          "text": "you're still inside."
+        },
+        {
+          "who": "rima",
+          "text": "I'm aware."
+        }
+      ],
+      "real": "2024-09-25 · three leaders resign in one afternoon",
+      "realStart": "06:40",
+      "realDur": 42,
+      "reelDur": 4.0
+    },
+    {
+      "id": "3.16",
+      "act": "ACT TWO",
+      "kind": "setpiece",
+      "set": "lobby",
+      "style": "BASE",
+      "shot": "wide",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "stand",
+          "x": 0.25,
+          "face": "calm"
+        },
+        {
+          "id": "installer",
+          "pose": "float",
+          "x": 0.72,
+          "face": "shocked"
+        }
+      ],
+      "caption": "THE REVOLVING DOOR: three leavers spin it into a turbine. Lights climb; the installer flies like a flag.",
+      "lines": [
+        {
+          "who": "gerg",
+          "text": "Is that renewable?"
+        },
+        {
+          "who": "mas",
+          "text": "it is now."
+        },
+        {
+          "who": "installer",
+          "text": "Sign here?"
+        }
+      ],
+      "onscreen": [
+        "NOPEAI PLANS FOR-PROFIT RESTRUCTURING"
+      ],
+      "real": "2024-09-25 · for-profit plan reported the same day",
+      "realStart": "07:22",
+      "realDur": 45,
+      "reelDur": 5.0,
+      "fx": [
+        "shake"
+      ]
+    },
+    {
+      "id": "3.17",
+      "act": "ACT TWO",
+      "kind": "flashback",
+      "set": "dinner",
+      "style": "BASE",
+      "shot": "wide",
+      "chars": [
+        {
+          "id": "nole",
+          "pose": "point",
+          "x": 0.12,
+          "face": "smug"
+        },
+        {
+          "id": "mas",
+          "pose": "sit",
+          "x": 0.3,
+          "face": "calm"
+        },
+        {
+          "id": "gerg",
+          "pose": "sit",
+          "x": 0.47,
+          "face": "smile"
+        },
+        {
+          "id": "alyi",
+          "pose": "sit",
+          "x": 0.64,
+          "face": "calm"
+        },
+        {
+          "id": "mario",
+          "pose": "sit",
+          "x": 0.82,
+          "face": "worried"
+        }
+      ],
+      "caption": "The class photo has a Rima-shaped hole. FLASHBACK, Gerg's POV: his keycaps become candles at THE WOODROSE.",
+      "lines": [
+        {
+          "who": "gerg",
+          "text": "I said yes before dessert."
+        }
+      ],
+      "onscreen": [
+        "JUL 2015 · THE WOODROSE",
+        "MARIO (UDIAB) · JOINS 2016",
+        "AND OTHERS"
+      ],
+      "real": "2015-07 · the founding dinner (per Gerg's blog)",
+      "realStart": "08:07",
+      "realDur": 36,
+      "reelDur": 3.5
+    },
+    {
+      "id": "3.18",
+      "act": "ACT TWO",
+      "kind": "flashback",
+      "set": "dinner",
+      "style": "2-TONE",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "nole",
+          "pose": "point",
+          "x": 0.12,
+          "face": "smug"
+        },
+        {
+          "id": "mas",
+          "pose": "sit",
+          "x": 0.3,
+          "face": "calm"
+        },
+        {
+          "id": "halo",
+          "pose": "sit",
+          "x": 0.47,
+          "face": "calm"
+        },
+        {
+          "id": "alyi",
+          "pose": "sit",
+          "x": 0.64,
+          "face": "calm"
+        },
+        {
+          "id": "mario",
+          "pose": "sit",
+          "x": 0.82,
+          "face": "worried"
+        }
+      ],
+      "caption": "The chairs of everyone who later left freeze to navy and cream. Gerg's is empty too. Only Mas stays in colour.",
+      "lines": [
+        {
+          "who": "gerg",
+          "text": "Nole left. Loudly."
+        },
+        {
+          "who": "gerg",
+          "text": "Paul got a lanyard. A government lanyard."
+        },
+        {
+          "who": "gerg",
+          "text": "Alyi."
+        }
+      ],
+      "realStart": "08:43",
+      "realDur": 20,
+      "reelDur": 5.0,
+      "fx": [
+        "freeze"
+      ]
+    },
+    {
+      "id": "3.19",
+      "act": "ACT TWO",
+      "kind": "scene",
+      "set": "office",
+      "style": "BASE",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "moswen",
+          "pose": "sit",
+          "x": 0.4,
+          "face": "smug"
+        },
+        {
+          "id": "reneiw",
+          "pose": "stand",
+          "x": 0.75,
+          "face": "worried"
+        }
+      ],
+      "caption": "Governor MOSWEN vetoes SB 1047 with NEDIB's borrowed pen. The hydra's 1047 head pops off; two stubs sprout.",
+      "lines": [
+        {
+          "who": "reneiw",
+          "text": "Governor, it was a light-touch bill."
+        },
+        {
+          "who": "moswen",
+          "text": "And I touched it lightly."
+        }
+      ],
+      "onscreen": [
+        "NIVAG MOSWEN / VETOED IT.",
+        "\"curtailing the very innovation...\"",
+        "\"a missed opportunity\""
+      ],
+      "real": "2024-09-29 · SB 1047 vetoed",
+      "realStart": "09:03",
+      "realDur": 35,
+      "reelDur": 4.0,
+      "fx": [
+        "pop"
+      ]
+    },
+    {
+      "id": "3.20",
+      "act": "ACT TWO",
+      "kind": "scene",
+      "set": "boardroom",
+      "style": "BASE",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "sit",
+          "x": 0.25,
+          "face": "calm"
+        },
+        {
+          "id": "orb",
+          "pose": "float",
+          "x": 0.4,
+          "face": "calm"
+        },
+        {
+          "id": "investor",
+          "pose": "stand",
+          "x": 0.72,
+          "face": "worried"
+        }
+      ],
+      "caption": "Investors queue to swear off funding rivals, by iris scan. Ep2's $7T pallet comes back: RETURN TO SENDER.",
+      "lines": [
+        {
+          "who": "investor",
+          "text": "Can I fund a rival just a little? The lemonade stand?"
+        },
+        {
+          "who": "mas",
+          "text": "it's on the list."
+        }
+      ],
+      "onscreen": [
+        "PLEDGE HERE",
+        "RETURN TO SENDER",
+        "verified: human (fingers crossed)"
+      ],
+      "real": "2024-10 · investors reportedly asked not to fund rivals",
+      "realStart": "09:38",
+      "realDur": 50,
+      "reelDur": 3.0
+    },
+    {
+      "id": "3.21",
+      "act": "ACT TWO",
+      "kind": "setpiece",
+      "set": "boardroom",
+      "style": "BASE",
+      "shot": "close",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "sit",
+          "x": 0.3,
+          "face": "calm"
+        },
+        {
+          "id": "investor",
+          "pose": "stand",
+          "x": 0.7,
+          "face": "shocked"
+        }
+      ],
+      "caption": "MIDPOINT: the spire's odometer rolls floor by floor, slams on $157B. A fourth collar pops out of Mas's hoodie.",
+      "lines": [
+        {
+          "who": "investor",
+          "text": "So who owns it?"
+        },
+        {
+          "who": "mas",
+          "text": "the nonprofit."
+        }
+      ],
+      "vo": "it was never about the price.",
+      "onscreen": [
+        "$157,000,000,000",
+        "OCT 2, 2024 · $6.6B AT $157B"
+      ],
+      "real": "2024-10-02 · $6.6B raised at $157B",
+      "realStart": "10:28",
+      "realDur": 29,
+      "reelDur": 5.0,
+      "fx": [
+        "shake",
+        "freeze"
+      ]
+    },
+    {
+      "id": "3.22",
+      "act": "ACT THREE",
+      "kind": "flashback",
+      "set": "street",
+      "style": "EARLY-WEB16",
+      "shot": "wide",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "stand",
+          "x": 0.25,
+          "face": "calm"
+        },
+        {
+          "id": "leiht",
+          "pose": "point",
+          "x": 0.72,
+          "face": "calm"
+        }
+      ],
+      "caption": "FLASHBACK · 2012: the odometer runs back to $43.4M. TPOOL sells to a gift-card firm. LEIHT's check: a spinner.",
+      "lines": [
+        {
+          "who": "mas",
+          "text": "that one had confetti."
+        }
+      ],
+      "vo": "i don't think about 2012.",
+      "onscreen": [
+        "MAR 2012",
+        "$43,400,000",
+        "ENIZARDYH CAPITAL"
+      ],
+      "real": "2012-03 · TPOOL sold for $43.4M",
+      "realStart": "10:57",
+      "realDur": 20,
+      "reelDur": 4.5,
+      "fx": [
+        "rewind"
+      ]
+    },
+    {
+      "id": "3.23",
+      "act": "ACT THREE",
+      "kind": "montage",
+      "set": "darkroom",
+      "style": "BASE",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "sit",
+          "x": 0.25,
+          "face": "calm"
+        },
+        {
+          "id": "notnih",
+          "pose": "stand",
+          "x": 0.58,
+          "face": "smile"
+        },
+        {
+          "id": "simed",
+          "pose": "sit",
+          "x": 0.84,
+          "face": "calm"
+        }
+      ],
+      "caption": "Nobel week on Mas's monitor: NOTNIH is proud his student fired Mas. Mas slides his glass an inch toward it.",
+      "lines": [
+        {
+          "who": "notnih",
+          "text": "\"I'm particularly proud... one of my students fired Mas Manalt.\""
+        },
+        {
+          "who": "simed",
+          "text": "Check."
+        },
+        {
+          "who": "mas",
+          "text": "good student."
+        }
+      ],
+      "vo": "it didn't bother me.",
+      "onscreen": [
+        "OCT 8 · PHYSICS",
+        "OCT 9 · CHEMISTRY",
+        "SIMED / NOBELED. UNIMPRESSED."
+      ],
+      "real": "2024-10-08/09 · two AI Nobels in two days",
+      "realStart": "11:17",
+      "realDur": 43,
+      "reelDur": 4.5
+    },
+    {
+      "id": "3.24",
+      "act": "ACT THREE",
+      "kind": "scene",
+      "set": "lighthouse",
+      "style": "BASE",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "mario",
+          "pose": "point",
+          "x": 0.3,
+          "face": "worried"
+        },
+        {
+          "id": "adelina",
+          "pose": "sit",
+          "x": 0.6,
+          "face": "calm"
+        },
+        {
+          "id": "lunchmas",
+          "pose": "stand",
+          "x": 0.85,
+          "face": "smile"
+        }
+      ],
+      "caption": "Misanthropic's lighthouse: Mario's essay nears 15,000 words. LUNCHMAS arrives with his box. Footnotes held.",
+      "lines": [
+        {
+          "who": "adelina",
+          "text": "The footnotes have footnotes."
+        },
+        {
+          "who": "mario",
+          "text": "Machines of Loving Grace."
+        },
+        {
+          "who": "adelina",
+          "text": "Great on a tote bag."
+        }
+      ],
+      "realStart": "12:21",
+      "realDur": 50,
+      "reelDur": 3.5
+    },
+    {
+      "id": "3.25",
+      "act": "ACT THREE",
+      "kind": "setpiece",
+      "set": "lighthouse",
+      "style": "BASE",
+      "shot": "wide",
+      "chars": [
+        {
+          "id": "mario",
+          "pose": "arms-up",
+          "x": 0.2,
+          "face": "smile"
+        }
+      ],
+      "caption": "THE BRIDGE: 'Publish.' The scroll crosses the Bay and finishes the August bridge. Last paragraph: NOW HIRING.",
+      "lines": [
+        {
+          "who": "mario",
+          "text": "\"a country of geniuses in a datacenter\""
+        }
+      ],
+      "onscreen": [
+        "NOW HIRING",
+        "IN PLAIN ENGLISH: 1. GENIUSES IN A DATACENTER · 2. CURE DISEASES · 3. ↗"
+      ],
+      "real": "2024-10-11 · 'Machines of Loving Grace' published",
+      "realStart": "13:11",
+      "realDur": 44,
+      "reelDur": 5.0
+    },
+    {
+      "id": "3.26",
+      "act": "ACT THREE",
+      "kind": "flashback",
+      "set": "void",
+      "style": "BASE",
+      "shot": "wide",
+      "chars": [
+        {
+          "id": "mario",
+          "pose": "sit",
+          "x": 0.62,
+          "face": "worried"
+        },
+        {
+          "id": "adelina",
+          "pose": "sit",
+          "x": 0.74,
+          "face": "calm"
+        },
+        {
+          "id": "halo",
+          "pose": "sit",
+          "x": 0.86,
+          "face": "calm"
+        }
+      ],
+      "caption": "Eleven older footprints under Lunchmas's open a pop-up book: the NOPE AI tour bus splits in two on the hills.",
+      "onscreen": [
+        "DEC 2020 → JAN 2021",
+        "NOPE AI",
+        "SCALING LAWS",
+        "ELEVEN LEAVE"
+      ],
+      "real": "2020-12 → 2021-01 · eleven researchers leave",
+      "realStart": "13:55",
+      "realDur": 17,
+      "reelDur": 5.0,
+      "fx": [
+        "split"
+      ]
+    },
+    {
+      "id": "3.27",
+      "act": "ACT THREE",
+      "kind": "flashback",
+      "set": "void",
+      "style": "BASE",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "adelina",
+          "pose": "lean",
+          "x": 0.55,
+          "face": "calm"
+        },
+        {
+          "id": "lunchmas",
+          "pose": "stand",
+          "x": 0.85,
+          "face": "shocked"
+        }
+      ],
+      "caption": "The rear half is repainted MISANTHROPIC and fills up at a pump stickered PREVIOUS OWNER: THE OTHER MAS.",
+      "lines": [
+        {
+          "who": "lunchmas",
+          "text": "So I wasn't the first one across."
+        },
+        {
+          "who": "adelina",
+          "text": "You're the first one who read it."
+        }
+      ],
+      "onscreen": [
+        "MISANTHROPIC",
+        "DIRECTIONAL DIFFERENCES",
+        "PREVIOUS OWNER: THE OTHER MAS"
+      ],
+      "real": "2022-04 · $500M from THE OTHER MAS",
+      "realStart": "14:12",
+      "realDur": 20,
+      "reelDur": 4.5
+    },
+    {
+      "id": "3.28",
+      "act": "ACT THREE",
+      "kind": "card",
+      "set": "screen",
+      "style": "BASE",
+      "shot": "insert",
+      "chars": [],
+      "caption": "A plain fact card on Mas's monitor. No crowd, no map.",
+      "onscreen": [
+        "NOV 5, 2024 · ELECTION. HE WINS."
+      ],
+      "real": "2024-11-05 · US election",
+      "realStart": "14:32",
+      "realDur": 5,
+      "reelDur": 2.5
+    },
+    {
+      "id": "3.29",
+      "act": "ACT THREE",
+      "kind": "montage",
+      "set": "whitehouse",
+      "style": "BASE",
+      "shot": "wide",
+      "chars": [
+        {
+          "id": "nole",
+          "pose": "sit",
+          "x": 0.42,
+          "face": "smug"
+        },
+        {
+          "id": "podium",
+          "pose": "stand",
+          "x": 0.6,
+          "face": "calm"
+        }
+      ],
+      "caption": "THE PODIUM, still facing away, reaches the top of the hill. A gold cuff waves once. Nole sits on its step.",
+      "onscreen": [
+        "\"FIRST BUDDY\" (REPORTED)",
+        "EGOD",
+        "NOV 2024 · NOZAMA +$4B → MISANTHROPIC"
+      ],
+      "real": "2024-11 · 'First Buddy' and a new efficiency office",
+      "realStart": "14:37",
+      "realDur": 20,
+      "reelDur": 3.5
+    },
+    {
+      "id": "3.30",
+      "act": "ACT THREE",
+      "kind": "scene",
+      "set": "darkroom",
+      "style": "BASE",
+      "shot": "close",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "sit",
+          "x": 0.3,
+          "face": "calm"
+        },
+        {
+          "id": "orb",
+          "pose": "float",
+          "x": 0.45,
+          "face": "calm"
+        }
+      ],
+      "caption": "ACT-OUT: a glint at dusk from a slot on the podium's hidden side. Mas, eyes on the monitor, clicks a pen once.",
+      "vo": "i wasn't watching the hill. i was testing a pen.",
+      "onscreen": [
+        "PEN"
+      ],
+      "realStart": "14:57",
+      "realDur": 21,
+      "reelDur": 3.5,
+      "fx": [
+        "freeze"
+      ]
+    },
+    {
+      "id": "3.31",
+      "act": "ACT FOUR",
+      "kind": "scene",
+      "set": "lobby",
+      "style": "BASE",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "stand",
+          "x": 0.3,
+          "face": "calm"
+        },
+        {
+          "id": "gerg",
+          "pose": "phone",
+          "x": 0.66,
+          "face": "smile"
+        }
+      ],
+      "caption": "Gerg returns, sand pouring from his keyboard. SUCRAM says diminishing returns. Gerg puts a Santa hat on Mas.",
+      "lines": [
+        {
+          "who": "gerg",
+          "text": "Diminishing returns? That's a v2 problem."
+        },
+        {
+          "who": "gerg",
+          "text": "We're shipping twelve things. Twelve days."
+        },
+        {
+          "who": "gerg",
+          "text": "Business days."
+        }
+      ],
+      "onscreen": [
+        "\"CONFIRMED: LLMs have indeed reached a point of diminishing returns\"",
+        "CALLED IT"
+      ],
+      "real": "2024-11-09 · the 'diminishing returns' post",
+      "realStart": "15:18",
+      "realDur": 42,
+      "reelDur": 3.5
+    },
+    {
+      "id": "3.32",
+      "act": "ACT FOUR",
+      "kind": "setpiece",
+      "set": "lobby",
+      "style": "BASE",
+      "shot": "wide",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "stand",
+          "x": 0.28,
+          "face": "calm"
+        },
+        {
+          "id": "calendar",
+          "pose": "stand",
+          "x": 0.55,
+          "face": "calm"
+        },
+        {
+          "id": "o1",
+          "pose": "walk",
+          "x": 0.78,
+          "face": "smile"
+        }
+      ],
+      "caption": "SHIPMAS: a 12-door advent calendar by a GPU Christmas tree. Door 1: PRO at $200/mo. September's bills say NOW.",
+      "lines": [
+        {
+          "who": "mas",
+          "text": "$200."
+        },
+        {
+          "who": "gerg",
+          "text": "A month!"
+        }
+      ],
+      "onscreen": [
+        "SHIPMAS · DEC 5 → DEC 20, 2024",
+        "PRO · $200/mo"
+      ],
+      "real": "2024-12-05 · o1 full release and $200/mo Pro",
+      "realStart": "16:00",
+      "realDur": 30,
+      "reelDur": 4.5
+    },
+    {
+      "id": "3.33",
+      "act": "ACT FOUR",
+      "kind": "montage",
+      "set": "lobby",
+      "style": "BASE",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "stand",
+          "x": 0.2,
+          "face": "calm"
+        },
+        {
+          "id": "chatgtp",
+          "pose": "sit",
+          "x": 0.6,
+          "face": "smile"
+        },
+        {
+          "id": "iris",
+          "pose": "sit",
+          "x": 0.8,
+          "face": "worried"
+        }
+      ],
+      "caption": "Door 3: the AROS mammoth hauls a sleigh; an elf has six fingers. Door 5: CHATGTP moves into an ELPPA phone.",
+      "lines": [
+        {
+          "who": "mas",
+          "text": "it's a preview."
+        },
+        {
+          "who": "iris",
+          "text": "I was almost done."
+        }
+      ],
+      "onscreen": [
+        "DEC 9 · AROS OPENS TO THE PUBLIC",
+        "DEC 11 · CHATGTP MOVES INTO ELPPA'S PHONES"
+      ],
+      "real": "2024-12-09/11 · video model public; phone integration",
+      "realStart": "16:30",
+      "realDur": 35,
+      "reelDur": 3.0
+    },
+    {
+      "id": "3.34",
+      "act": "ACT FOUR",
+      "kind": "setpiece",
+      "set": "lobby",
+      "style": "BASE",
+      "shot": "wide",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "stand",
+          "x": 0.3,
+          "face": "shocked"
+        }
+      ],
+      "caption": "Door 12: one chart bar slides out, rises, and punches through the lobby ceiling and the spire roof garden.",
+      "onscreen": [
+        "o3 · THERE IS NO o2.",
+        "DEC 20 · o3 ANNOUNCED"
+      ],
+      "real": "2024-12-20 · o3 announced",
+      "realStart": "17:05",
+      "realDur": 20,
+      "reelDur": 5.5,
+      "fx": [
+        "shake",
+        "pop"
+      ]
+    },
+    {
+      "id": "3.35",
+      "act": "ACT FOUR",
+      "kind": "setpiece",
+      "set": "skyline",
+      "style": "BASE",
+      "shot": "wide",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "stand",
+          "x": 0.3,
+          "face": "calm"
+        },
+        {
+          "id": "corkboard-guy",
+          "pose": "point",
+          "x": 0.62,
+          "face": "shocked"
+        },
+        {
+          "id": "sucram",
+          "pose": "arms-up",
+          "x": 0.85,
+          "face": "angry"
+        }
+      ],
+      "caption": "THE KEBAB: still rising, the bar skewers SUCRAM's stamp, a loop of Mario's scroll and the corkboard.",
+      "lines": [
+        {
+          "who": "corkboard-guy",
+          "text": "SEE? It's ALL CONNECTED."
+        },
+        {
+          "who": "maon",
+          "text": "It thought for a while."
+        },
+        {
+          "who": "mas",
+          "text": "how long?"
+        },
+        {
+          "who": "maon",
+          "text": "We summarized it."
+        }
+      ],
+      "vo": "none of it was connected.",
+      "onscreen": [
+        "CALLED IT",
+        "(ANNOUNCED.)"
+      ],
+      "realStart": "17:25",
+      "realDur": 45,
+      "reelDur": 5.0
+    },
+    {
+      "id": "3.36",
+      "act": "ACT FOUR",
+      "kind": "scene",
+      "set": "podium",
+      "style": "BASE",
+      "shot": "wide",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "stand",
+          "x": 0.3,
+          "face": "calm"
+        },
+        {
+          "id": "skcas",
+          "pose": "stand",
+          "x": 0.55,
+          "face": "smile"
+        },
+        {
+          "id": "podium",
+          "pose": "stand",
+          "x": 0.85,
+          "face": "calm"
+        }
+      ],
+      "caption": "OGAL-A-RAM (invented staging): a velvet-rope line to the podium's back. Mas is 4th. SKCAS works it in 2 hats.",
+      "lines": [
+        {
+          "who": "skcas",
+          "text": "AI. Crypto. It's basically the same hat."
+        },
+        {
+          "who": "skcas",
+          "text": "Wrong hat."
+        }
+      ],
+      "vo": "i wasn't in the line. i was near it.",
+      "onscreen": [
+        "SKCAS / AI CZAR. CRYPTO CZAR.",
+        "BESTIES TAKE: GREAT TIME TO BE IN LINE"
+      ],
+      "real": "2024-12-05 · AI and crypto czar named",
+      "realStart": "18:10",
+      "realDur": 50,
+      "reelDur": 4.5
+    },
+    {
+      "id": "3.37",
+      "act": "ACT FOUR",
+      "kind": "scene",
+      "set": "podium",
+      "style": "BASE",
+      "shot": "close",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "stand",
+          "x": 0.3,
+          "face": "calm"
+        },
+        {
+          "id": "nole",
+          "pose": "sit",
+          "x": 0.7,
+          "face": "smug"
+        }
+      ],
+      "caption": "Nole blows out NopeAI's seance candle ('Nole wanted a for-profit'). A boom mic asks Mas if Nole worries him.",
+      "lines": [
+        {
+          "who": "nole",
+          "text": "Concerning."
+        },
+        {
+          "who": "mas",
+          "text": "\"not that worried\""
+        },
+        {
+          "who": "nole",
+          "text": "I'm on the step. You're in the line."
+        },
+        {
+          "who": "mas",
+          "text": "it's a good line."
+        }
+      ],
+      "real": "2024-12-04 · 'not that worried' (newspaper interview)",
+      "realStart": "19:00",
+      "realDur": 27,
+      "reelDur": 4.5
+    },
+    {
+      "id": "3.38",
+      "act": "ACT FOUR",
+      "kind": "scene",
+      "set": "podium",
+      "style": "BASE",
+      "shot": "close",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "lean",
+          "x": 0.35,
+          "face": "calm"
+        },
+        {
+          "id": "mit-kooc",
+          "pose": "stand",
+          "x": 0.7,
+          "face": "calm"
+        }
+      ],
+      "caption": "Using the back of the man ahead as a desk, Mas writes a $1,000,000 check, memo 'for the fund'. MIT KOOC waits.",
+      "lines": [
+        {
+          "who": "mit-kooc",
+          "text": "After you."
+        },
+        {
+          "who": "mas",
+          "text": "after you."
+        }
+      ],
+      "onscreen": [
+        "$1,000,000",
+        "for the fund"
+      ],
+      "realStart": "19:27",
+      "realDur": 20,
+      "reelDur": 4.0
+    },
+    {
+      "id": "3.39",
+      "act": "ACT FOUR",
+      "kind": "scene",
+      "set": "podium",
+      "style": "BASE",
+      "shot": "close",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "stand",
+          "x": 0.3,
+          "face": "calm"
+        },
+        {
+          "id": "sama-nos",
+          "pose": "arms-up",
+          "x": 0.7,
+          "face": "smug"
+        }
+      ],
+      "caption": "In the gilded panel where Mas's reflection should be: SAMA NOS, holding up $100B. The reflection winks first.",
+      "onscreen": [
+        "$100B",
+        "DEC 16 · BANKSOFT PLEDGES $100B"
+      ],
+      "real": "2024-12-16 · $100B US investment pledge",
+      "realStart": "19:47",
+      "realDur": 18,
+      "reelDur": 3.5
+    },
+    {
+      "id": "3.40",
+      "act": "TAG",
+      "kind": "scene",
+      "set": "podium",
+      "style": "LEDGER",
+      "shot": "insert",
+      "chars": [
+        {
+          "id": "podium",
+          "pose": "stand",
+          "x": 0.6,
+          "face": "calm"
+        }
+      ],
+      "caption": "The one lit-UI moment: Talk to (greyed), Pitch (greyed), then Use. The check slides into a hidden slot. Clink.",
+      "onscreen": [
+        "Use $1M check on podium",
+        "DEC 2024 · $1M TO THE INAUGURAL FUND"
+      ],
+      "real": "2024-12 · $1M to the inaugural fund",
+      "realStart": "20:05",
+      "realDur": 13,
+      "reelDur": 3.5,
+      "fx": [
+        "pop"
+      ]
+    },
+    {
+      "id": "3.41",
+      "act": "TAG",
+      "kind": "setpiece",
+      "set": "podium",
+      "style": "BASE",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "stand",
+          "x": 0.3,
+          "face": "calm"
+        },
+        {
+          "id": "rumpt",
+          "pose": "point",
+          "x": 0.66,
+          "face": "smile"
+        }
+      ],
+      "caption": "BUTTON: THE PODIUM turns around. RUMPT: navy suit, long red tie, signed folder up, thumbs-up. No name card.",
+      "lines": [
+        {
+          "who": "rumpt",
+          "text": "Say a number."
+        }
+      ],
+      "vo": "i gave to a fund. he turned around. those are two separate things.",
+      "onscreen": [
+        "verified: human",
+        "verified: president-elect"
+      ],
+      "realStart": "20:18",
+      "realDur": 15,
+      "reelDur": 6.0,
+      "fx": [
+        "freeze"
+      ]
+    },
+    {
+      "id": "3.42",
+      "act": "TAG",
+      "kind": "scene",
+      "set": "void",
+      "style": "BASE",
+      "shot": "wide",
+      "chars": [
+        {
+          "id": "whale",
+          "pose": "float",
+          "x": 0.55,
+          "face": "calm"
+        }
+      ],
+      "caption": "HOOK: the Bay is frozen. A strawberry with one bite gone lies on the ice. A whale-shaped shadow glides under.",
+      "realStart": "20:33",
+      "realDur": 5,
+      "reelDur": 3.0
+    }
+  ]
+}

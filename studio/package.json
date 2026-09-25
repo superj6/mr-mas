@@ -1,0 +1,39 @@
+{
+  "name": "mrmas-studio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Remotion studio for MR. MAS: shared character rigs, fx, type, the intro, and style frames",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "still": "remotion still src/index.ts",
+    "render": "remotion render src/index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fontsource/abril-fatface": "^5.3.0",
+    "@fontsource/anton": "^5.3.0",
+    "@fontsource/archivo-black": "^5.3.0",
+    "@fontsource/bebas-neue": "^5.3.0",
+    "@fontsource/bodoni-moda": "^5.3.0",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@fontsource/jetbrains-mono": "^5.3.0",
+    "@fontsource/jost": "^5.3.0",
+    "@fontsource/oswald": "^5.3.0",
+    "@fontsource/permanent-marker": "^5.3.0",
+    "@fontsource/playfair-display": "^5.3.0",
+    "@fontsource/silkscreen": "^5.3.0",
+    "@fontsource/unifrakturmaguntia": "^5.3.0",
+    "@fontsource/vt323": "^5.3.0",
+    "@remotion/cli": "^4.0.529",
+    "@remotion/noise": "^4.0.529",
+    "@remotion/paths": "^4.0.529",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "remotion": "^4.0.529"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.0",
+    "@types/webpack-env": "^1.18.8",
+    "typescript": "^5.6.3"
+  }
+}

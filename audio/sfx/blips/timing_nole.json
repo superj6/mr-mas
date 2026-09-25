@@ -1,0 +1,239 @@
+{
+ "voice": "nole",
+ "name": "NOLE",
+ "text": "I came up with the name!",
+ "cps": 1.25,
+ "t0": 54,
+ "sceneSynced": true,
+ "revealRule": "scene.ts shownChars: floor((f - t0) * cps)",
+ "chars": [
+  {
+   "i": 0,
+   "ch": "I",
+   "frame": 55,
+   "rel": 1
+  },
+  {
+   "i": 1,
+   "ch": " ",
+   "frame": 56,
+   "rel": 2
+  },
+  {
+   "i": 2,
+   "ch": "c",
+   "frame": 57,
+   "rel": 3
+  },
+  {
+   "i": 3,
+   "ch": "a",
+   "frame": 58,
+   "rel": 4
+  },
+  {
+   "i": 4,
+   "ch": "m",
+   "frame": 58,
+   "rel": 4
+  },
+  {
+   "i": 5,
+   "ch": "e",
+   "frame": 59,
+   "rel": 5
+  },
+  {
+   "i": 6,
+   "ch": " ",
+   "frame": 60,
+   "rel": 6
+  },
+  {
+   "i": 7,
+   "ch": "u",
+   "frame": 61,
+   "rel": 7
+  },
+  {
+   "i": 8,
+   "ch": "p",
+   "frame": 62,
+   "rel": 8
+  },
+  {
+   "i": 9,
+   "ch": " ",
+   "frame": 62,
+   "rel": 8
+  },
+  {
+   "i": 10,
+   "ch": "w",
+   "frame": 63,
+   "rel": 9
+  },
+  {
+   "i": 11,
+   "ch": "i",
+   "frame": 64,
+   "rel": 10
+  },
+  {
+   "i": 12,
+   "ch": "t",
+   "frame": 65,
+   "rel": 11
+  },
+  {
+   "i": 13,
+   "ch": "h",
+   "frame": 66,
+   "rel": 12
+  },
+  {
+   "i": 14,
+   "ch": " ",
+   "frame": 66,
+   "rel": 12
+  },
+  {
+   "i": 15,
+   "ch": "t",
+   "frame": 67,
+   "rel": 13
+  },
+  {
+   "i": 16,
+   "ch": "h",
+   "frame": 68,
+   "rel": 14
+  },
+  {
+   "i": 17,
+   "ch": "e",
+   "frame": 69,
+   "rel": 15
+  },
+  {
+   "i": 18,
+   "ch": " ",
+   "frame": 70,
+   "rel": 16
+  },
+  {
+   "i": 19,
+   "ch": "n",
+   "frame": 70,
+   "rel": 16
+  },
+  {
+   "i": 20,
+   "ch": "a",
+   "frame": 71,
+   "rel": 17
+  },
+  {
+   "i": 21,
+   "ch": "m",
+   "frame": 72,
+   "rel": 18
+  },
+  {
+   "i": 22,
+   "ch": "e",
+   "frame": 73,
+   "rel": 19
+  },
+  {
+   "i": 23,
+   "ch": "!",
+   "frame": 74,
+   "rel": 20
+  }
+ ],
+ "blips": [
+  {
+   "i": 0,
+   "ch": "I",
+   "frame": 55,
+   "rel": 1,
+   "t": 0.0417,
+   "note": "Bb5",
+   "accent": 1.0
+  },
+  {
+   "i": 3,
+   "ch": "a",
+   "frame": 58,
+   "rel": 4,
+   "t": 0.1667,
+   "note": "Eb6",
+   "accent": 0.0
+  },
+  {
+   "i": 5,
+   "ch": "e",
+   "frame": 59,
+   "rel": 5,
+   "t": 0.2083,
+   "note": "C6",
+   "accent": 0.0
+  },
+  {
+   "i": 8,
+   "ch": "p",
+   "frame": 62,
+   "rel": 8,
+   "t": 0.3333,
+   "note": "Eb6",
+   "accent": 0.0
+  },
+  {
+   "i": 11,
+   "ch": "i",
+   "frame": 64,
+   "rel": 10,
+   "t": 0.4167,
+   "note": "F5",
+   "accent": 0.0
+  },
+  {
+   "i": 13,
+   "ch": "h",
+   "frame": 66,
+   "rel": 12,
+   "t": 0.5,
+   "note": "Bb5",
+   "accent": 0.0
+  },
+  {
+   "i": 16,
+   "ch": "h",
+   "frame": 68,
+   "rel": 14,
+   "t": 0.5833,
+   "note": "Bb5",
+   "accent": 0.0
+  },
+  {
+   "i": 19,
+   "ch": "n",
+   "frame": 70,
+   "rel": 16,
+   "t": 0.6667,
+   "note": "F5",
+   "accent": 0.0
+  },
+  {
+   "i": 21,
+   "ch": "m",
+   "frame": 72,
+   "rel": 18,
+   "t": 0.75,
+   "note": "F6",
+   "accent": 0.0
+  }
+ ],
+ "lastRevealFrame": 74
+}

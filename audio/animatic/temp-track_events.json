@@ -1,0 +1,191 @@
+{
+ "fps": 24,
+ "bpm": 96,
+ "framesPerBeat": 15,
+ "frames": 720,
+ "sampleRate": 48000,
+ "samples": 1440000,
+ "durationSec": 30.0,
+ "rollCall": [
+  480,
+  487,
+  495,
+  502,
+  510,
+  517,
+  525,
+  532
+ ],
+ "events": [
+  {
+   "frame": 0,
+   "sec": 0.0,
+   "label": "Beat clicks: 48 beats every 15 f (accent on bar downbeats f0, f60 ... f660)",
+   "kind": "click",
+   "source": "synth"
+  },
+  {
+   "frame": 0,
+   "sec": 0.0,
+   "label": "Cold open: felt-piano F5",
+   "kind": "note",
+   "source": "synth"
+  },
+  {
+   "frame": 15,
+   "sec": 0.625,
+   "label": "Cold open: felt-piano F5",
+   "kind": "note",
+   "source": "synth"
+  },
+  {
+   "frame": 24,
+   "sec": 1.0,
+   "label": "VO: Mas, \"near the singularity; unclear which side.\" (take: michael; \"near\" f25, pause f58-71, \"unclear\" f72, \"side\" f86-94)",
+   "kind": "vo",
+   "source": "vocals/vo/mas_coldopen_michael.wav"
+  },
+  {
+   "frame": 30,
+   "sec": 1.25,
+   "label": "Cold open: felt-piano F5",
+   "kind": "note",
+   "source": "synth"
+  },
+  {
+   "frame": 45,
+   "sec": 1.875,
+   "label": "Cold open: felt-piano F5",
+   "kind": "note",
+   "source": "synth"
+  },
+  {
+   "frame": 120,
+   "sec": 5.0,
+   "label": "1993 drop: cut to 1-bit (square dive F4 to F2 + sub)",
+   "kind": "hit",
+   "source": "synth"
+  },
+  {
+   "frame": 168,
+   "sec": 7.0,
+   "label": "Render-front sweep: rising noise, 1-bit to early-web palette",
+   "kind": "sweep",
+   "source": "synth",
+   "endFrame": 179,
+   "endSec": 7.5
+  },
+  {
+   "frame": 180,
+   "sec": 7.5,
+   "label": "Collar pop 1 (Ab4)",
+   "kind": "hit",
+   "source": "sfx/wav/collar_pop_Ab4.wav"
+  },
+  {
+   "frame": 187,
+   "sec": 7.7917,
+   "label": "Collar pop 2 (C5)",
+   "kind": "hit",
+   "source": "sfx/wav/collar_pop_C5.wav"
+  },
+  {
+   "frame": 240,
+   "sec": 10.0,
+   "label": "Name-card freeze thump: GERG MOCKBRAN / ORG CHART: HIM.",
+   "kind": "hit",
+   "source": "synth"
+  },
+  {
+   "frame": 300,
+   "sec": 12.5,
+   "label": "Name-card freeze thump: ALYI / FEELS THE AGI.",
+   "kind": "hit",
+   "source": "synth"
+  },
+  {
+   "frame": 360,
+   "sec": 15.0,
+   "label": "Name-card freeze thump: MARIO / HAS CONCERNS. HAS GPUS.",
+   "kind": "hit",
+   "source": "synth"
+  },
+  {
+   "frame": 420,
+   "sec": 17.5,
+   "label": "Name-card freeze thump: NOLE / NAMED IT.",
+   "kind": "hit",
+   "source": "synth"
+  },
+  {
+   "frame": 480,
+   "sec": 20.0,
+   "label": "Roll call flash 1: TASYA (stab F)",
+   "kind": "hit",
+   "source": "synth"
+  },
+  {
+   "frame": 487,
+   "sec": 20.2917,
+   "label": "Roll call flash 2: RADNUS (stab F)",
+   "kind": "hit",
+   "source": "synth"
+  },
+  {
+   "frame": 495,
+   "sec": 20.625,
+   "label": "Roll call flash 3: KRAM (stab F)",
+   "kind": "hit",
+   "source": "synth"
+  },
+  {
+   "frame": 502,
+   "sec": 20.9167,
+   "label": "Roll call flash 4: NESNEJ (stab F)",
+   "kind": "hit",
+   "source": "synth"
+  },
+  {
+   "frame": 510,
+   "sec": 21.25,
+   "label": "Roll call flash 5: RIMA TAMURI (stab G)",
+   "kind": "hit",
+   "source": "synth"
+  },
+  {
+   "frame": 517,
+   "sec": 21.5417,
+   "label": "Roll call flash 6: THE WHALE (stab Ab)",
+   "kind": "hit",
+   "source": "synth"
+  },
+  {
+   "frame": 525,
+   "sec": 21.875,
+   "label": "Roll call flash 7: RUMPT (silhouette) (stab C)",
+   "kind": "hit",
+   "source": "synth"
+  },
+  {
+   "frame": 532,
+   "sec": 22.1667,
+   "label": "Roll call flash 8: cursor (GLYPH) (stab F8va)",
+   "kind": "hit",
+   "source": "synth"
+  },
+  {
+   "frame": 630,
+   "sec": 26.25,
+   "label": "Title hit: MR. MAS, big low F-C chord, no third (F1 C2 F2 C3 F3 C4)",
+   "kind": "hit",
+   "source": "synth"
+  },
+  {
+   "frame": 705,
+   "sec": 29.375,
+   "label": "Bell ding F6 (post notification, Orb iris glyph)",
+   "kind": "hit",
+   "source": "sfx/wav/bell_ding_F6.wav"
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "clock": "24 fps, f0 = 0.000 s; frames are floats (in_f/out_f) and the frame that contains the event (in_frame/out_frame)",
+ "source": "intro-vox_vo.wav (am_michael, re-fit so the voice ends by f91)",
+ "clips": [
+  {
+   "clip": 1,
+   "text": "near the singularity;",
+   "start_frame": 24,
+   "end_frame": 57
+  },
+  {
+   "clip": 2,
+   "text": "unclear which side.",
+   "start_frame": 72,
+   "end_frame": 91
+  }
+ ],
+ "words": [
+  {
+   "word": "near",
+   "in_s": 1.004,
+   "out_s": 1.306,
+   "in_f": 24.1,
+   "out_f": 31.33,
+   "in_frame": 24,
+   "out_frame": 31
+  },
+  {
+   "word": "the",
+   "in_s": 1.306,
+   "out_s": 1.461,
+   "in_f": 31.33,
+   "out_f": 35.07,
+   "in_frame": 31,
+   "out_frame": 35
+  },
+  {
+   "word": "singularity",
+   "in_s": 1.461,
+   "out_s": 2.397,
+   "in_f": 35.07,
+   "out_f": 57.52,
+   "in_frame": 35,
+   "out_frame": 57
+  },
+  {
+   "word": "unclear",
+   "in_s": 3.003,
+   "out_s": 3.358,
+   "in_f": 72.07,
+   "out_f": 80.59,
+   "in_frame": 72,
+   "out_frame": 80
+  },
+  {
+   "word": "which",
+   "in_s": 3.358,
+   "out_s": 3.51,
+   "in_f": 80.59,
+   "out_f": 84.24,
+   "in_frame": 80,
+   "out_frame": 84
+  },
+  {
+   "word": "side",
+   "in_s": 3.51,
+   "out_s": 3.796,
+   "in_f": 84.24,
+   "out_f": 91.1,
+   "in_frame": 84,
+   "out_frame": 91
+  }
+ ],
+ "side_detail": {
+  "frication_s_onset_f": 84.24,
+  "vowel_onset_f": 86.64,
+  "vowel_end_f": 90.29,
+  "voice_end_f": 91.1
+ },
+ "typing_lead_frames": "typing runs 6 (phrase 1) / 8 (phrase 2) frames ahead of these word onsets (SCRIPT D4)"
+}

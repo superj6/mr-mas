@@ -1,0 +1,677 @@
+{
+ "variation": "V4",
+ "integrated_lufs": -14.02,
+ "true_peak_dbtp": -1.15,
+ "stem_loudness_share_pct": {
+  "piano": 58.2,
+  "chip": 40.1,
+  "sub": 1.7
+ },
+ "octave_bands_db": {
+  "20-60": -10.7,
+  "60-120": -1.6,
+  "120-250": -1.5,
+  "250-500": 0.0,
+  "500-1000": -0.3,
+  "1000-2000": -6.2,
+  "2000-4000": -10.8,
+  "4000-8000": -15.4,
+  "8000-16000": -22.5
+ },
+ "cue_onsets": {
+  "0": {
+   "offset_ms": 5.0,
+   "steepest_ms": 2.0,
+   "rise_db_per_ms": 6.64,
+   "band": "hf"
+  },
+  "15": {
+   "offset_ms": -7.0,
+   "steepest_ms": -7.0,
+   "rise_db_per_ms": 3.67,
+   "band": "hf"
+  },
+  "30": {
+   "offset_ms": 3.0,
+   "steepest_ms": -37.0,
+   "rise_db_per_ms": 5.78,
+   "band": "hf"
+  },
+  "45": {
+   "offset_ms": 3.0,
+   "steepest_ms": 3.0,
+   "rise_db_per_ms": 5.18,
+   "band": "hf"
+  },
+  "60": {
+   "offset_ms": -36.0,
+   "steepest_ms": -36.0,
+   "rise_db_per_ms": 5.79,
+   "band": "full"
+  },
+  "90": {
+   "offset_ms": -2.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 6.66,
+   "band": "hf"
+  },
+  "105": {
+   "offset_ms": 0.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 29.4,
+   "band": "hf"
+  },
+  "108": {
+   "offset_ms": 1.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 1.85,
+   "band": "hf"
+  },
+  "112": {
+   "offset_ms": 1.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 3.46,
+   "band": "hf"
+  },
+  "116": {
+   "offset_ms": 1.0,
+   "steepest_ms": 2.0,
+   "rise_db_per_ms": 2.47,
+   "band": "hf"
+  },
+  "120": {
+   "offset_ms": 3.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 3.18,
+   "band": "full"
+  },
+  "127.5": {
+   "offset_ms": 0.0,
+   "steepest_ms": -36.0,
+   "rise_db_per_ms": 3.93,
+   "band": "hf"
+  },
+  "135": {
+   "offset_ms": 1.0,
+   "steepest_ms": -29.0,
+   "rise_db_per_ms": 34.45,
+   "band": "full"
+  },
+  "165": {
+   "offset_ms": 0.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 33.02,
+   "band": "hf"
+  },
+  "172": {
+   "offset_ms": 2.0,
+   "steepest_ms": 2.0,
+   "rise_db_per_ms": 4.0,
+   "band": "hf"
+  },
+  "180": {
+   "offset_ms": 9.0,
+   "steepest_ms": 20.0,
+   "rise_db_per_ms": 3.81,
+   "band": "full"
+  },
+  "195": {
+   "offset_ms": 1.0,
+   "steepest_ms": 2.0,
+   "rise_db_per_ms": 3.38,
+   "band": "hf"
+  },
+  "240": {
+   "offset_ms": 1.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 4.18,
+   "band": "full"
+  },
+  "300": {
+   "offset_ms": -1.0,
+   "steepest_ms": -5.0,
+   "rise_db_per_ms": 3.39,
+   "band": "full"
+  },
+  "355": {
+   "offset_ms": 1.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 5.5,
+   "band": "hf"
+  },
+  "360": {
+   "offset_ms": 3.0,
+   "steepest_ms": 21.0,
+   "rise_db_per_ms": 2.49,
+   "band": "full"
+  },
+  "414": {
+   "offset_ms": -16.0,
+   "steepest_ms": 26.0,
+   "rise_db_per_ms": 3.17,
+   "band": "full"
+  },
+  "420": {
+   "offset_ms": 9.0,
+   "steepest_ms": 9.0,
+   "rise_db_per_ms": 2.54,
+   "band": "full"
+  },
+  "465": {
+   "offset_ms": -16.0,
+   "steepest_ms": -16.0,
+   "rise_db_per_ms": 3.59,
+   "band": "full"
+  },
+  "470": {
+   "offset_ms": 1.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 2.39,
+   "band": "full"
+  },
+  "475": {
+   "offset_ms": -30.0,
+   "steepest_ms": -30.0,
+   "rise_db_per_ms": 33.08,
+   "band": "full"
+  },
+  "480": {
+   "offset_ms": 1.0,
+   "steepest_ms": 2.0,
+   "rise_db_per_ms": 3.14,
+   "band": "full"
+  },
+  "487.5": {
+   "offset_ms": 0.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 3.4,
+   "band": "hf"
+  },
+  "495": {
+   "offset_ms": 0.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 4.47,
+   "band": "hf"
+  },
+  "502.5": {
+   "offset_ms": 0.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 4.27,
+   "band": "hf"
+  },
+  "510": {
+   "offset_ms": 1.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 33.3,
+   "band": "hf"
+  },
+  "517.5": {
+   "offset_ms": -2.0,
+   "steepest_ms": 2.0,
+   "rise_db_per_ms": 3.67,
+   "band": "hf"
+  },
+  "525": {
+   "offset_ms": -1.0,
+   "steepest_ms": 0.0,
+   "rise_db_per_ms": 6.42,
+   "band": "hf"
+  },
+  "532.5": {
+   "offset_ms": 0.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 5.28,
+   "band": "hf"
+  },
+  "540": {
+   "offset_ms": 0.0,
+   "steepest_ms": -12.0,
+   "rise_db_per_ms": 2.74,
+   "band": "full"
+  },
+  "555": {
+   "offset_ms": 1.0,
+   "steepest_ms": 2.0,
+   "rise_db_per_ms": 3.35,
+   "band": "hf"
+  },
+  "570": {
+   "offset_ms": 1.0,
+   "steepest_ms": 2.0,
+   "rise_db_per_ms": 3.58,
+   "band": "hf"
+  },
+  "585": {
+   "offset_ms": 0.0,
+   "steepest_ms": 11.0,
+   "rise_db_per_ms": 4.11,
+   "band": "full"
+  },
+  "600": {
+   "offset_ms": 0.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 3.33,
+   "band": "hf"
+  },
+  "615": {
+   "offset_ms": 1.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 2.62,
+   "band": "hf"
+  },
+  "622.5": {
+   "offset_ms": -33.0,
+   "steepest_ms": -33.0,
+   "rise_db_per_ms": 2.73,
+   "band": "full"
+  },
+  "630": {
+   "offset_ms": 2.0,
+   "steepest_ms": 3.0,
+   "rise_db_per_ms": 3.17,
+   "band": "full"
+  },
+  "660": {
+   "offset_ms": -37.0,
+   "steepest_ms": -37.0,
+   "rise_db_per_ms": 4.01,
+   "band": "full"
+  },
+  "690": {
+   "offset_ms": 4.0,
+   "steepest_ms": 4.0,
+   "rise_db_per_ms": 1.49,
+   "band": "full"
+  }
+ },
+ "cue_onsets_by_stem": {
+  "0": {
+   "stem": "piano",
+   "offset_ms": 4.0,
+   "steepest_ms": 2.0,
+   "rise_db_per_ms": 6.64,
+   "band": "hf"
+  },
+  "15": {
+   "stem": "piano",
+   "offset_ms": -7.0,
+   "steepest_ms": -7.0,
+   "rise_db_per_ms": 3.67,
+   "band": "hf"
+  },
+  "30": {
+   "stem": "piano",
+   "offset_ms": 3.0,
+   "steepest_ms": 4.0,
+   "rise_db_per_ms": 4.35,
+   "band": "hf"
+  },
+  "45": {
+   "stem": "piano",
+   "offset_ms": 3.0,
+   "steepest_ms": 3.0,
+   "rise_db_per_ms": 5.18,
+   "band": "hf"
+  },
+  "60": {
+   "stem": "piano",
+   "offset_ms": 0.0,
+   "steepest_ms": 0.0,
+   "rise_db_per_ms": 3.25,
+   "band": "full"
+  },
+  "90": {
+   "stem": "chip",
+   "offset_ms": 0.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 26.62,
+   "band": "full"
+  },
+  "105": {
+   "stem": "chip",
+   "offset_ms": 0.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 30.31,
+   "band": "full"
+  },
+  "108": {
+   "stem": "chip",
+   "offset_ms": 1.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 2.58,
+   "band": "full"
+  },
+  "112": {
+   "stem": "chip",
+   "offset_ms": 4.0,
+   "steepest_ms": 2.0,
+   "rise_db_per_ms": 3.05,
+   "band": "hf"
+  },
+  "116": {
+   "stem": "chip",
+   "offset_ms": 1.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 3.01,
+   "band": "hf"
+  },
+  "120": {
+   "stem": "chip",
+   "offset_ms": 1.0,
+   "steepest_ms": 2.0,
+   "rise_db_per_ms": 2.65,
+   "band": "full"
+  },
+  "127.5": {
+   "stem": "chip",
+   "offset_ms": 0.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 31.98,
+   "band": "full"
+  },
+  "135": {
+   "stem": "chip",
+   "offset_ms": 0.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 33.19,
+   "band": "full"
+  },
+  "165": {
+   "stem": "chip",
+   "offset_ms": 0.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 34.3,
+   "band": "full"
+  },
+  "172": {
+   "stem": "chip",
+   "offset_ms": 1.0,
+   "steepest_ms": 2.0,
+   "rise_db_per_ms": 4.08,
+   "band": "hf"
+  },
+  "180": {
+   "stem": "chip",
+   "offset_ms": 6.0,
+   "steepest_ms": 6.0,
+   "rise_db_per_ms": 4.39,
+   "band": "full"
+  },
+  "195": {
+   "stem": "chip",
+   "offset_ms": 1.0,
+   "steepest_ms": 2.0,
+   "rise_db_per_ms": 3.33,
+   "band": "hf"
+  },
+  "240": {
+   "stem": "sub",
+   "offset_ms": 1.0,
+   "steepest_ms": 2.0,
+   "rise_db_per_ms": 30.89,
+   "band": "full"
+  },
+  "300": {
+   "stem": "sub",
+   "offset_ms": 1.0,
+   "steepest_ms": 2.0,
+   "rise_db_per_ms": 31.08,
+   "band": "full"
+  },
+  "355": {
+   "stem": "chip",
+   "offset_ms": 1.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 4.24,
+   "band": "hf"
+  },
+  "360": {
+   "stem": "sub",
+   "offset_ms": 0.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 31.36,
+   "band": "full"
+  },
+  "420": {
+   "stem": "sub",
+   "offset_ms": 0.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 30.81,
+   "band": "full"
+  },
+  "465": {
+   "stem": "chip",
+   "offset_ms": 1.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 31.36,
+   "band": "hf"
+  },
+  "470": {
+   "stem": "chip",
+   "offset_ms": -0.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 4.14,
+   "band": "hf"
+  },
+  "475": {
+   "stem": "chip",
+   "offset_ms": 1.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 3.31,
+   "band": "hf"
+  },
+  "480": {
+   "stem": "chip",
+   "offset_ms": 0.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 3.23,
+   "band": "full"
+  },
+  "487.5": {
+   "stem": "chip",
+   "offset_ms": 0.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 32.93,
+   "band": "full"
+  },
+  "495": {
+   "stem": "chip",
+   "offset_ms": 0.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 33.11,
+   "band": "full"
+  },
+  "502.5": {
+   "stem": "chip",
+   "offset_ms": 0.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 33.0,
+   "band": "full"
+  },
+  "510": {
+   "stem": "chip",
+   "offset_ms": 0.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 33.71,
+   "band": "full"
+  },
+  "517.5": {
+   "stem": "chip",
+   "offset_ms": 0.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 33.68,
+   "band": "full"
+  },
+  "525": {
+   "stem": "chip",
+   "offset_ms": 0.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 33.36,
+   "band": "full"
+  },
+  "532.5": {
+   "stem": "chip",
+   "offset_ms": 0.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 33.04,
+   "band": "hf"
+  },
+  "540": {
+   "stem": "chip",
+   "offset_ms": 1.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 2.61,
+   "band": "full"
+  },
+  "555": {
+   "stem": "chip",
+   "offset_ms": 0.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 3.83,
+   "band": "full"
+  },
+  "570": {
+   "stem": "chip",
+   "offset_ms": 1.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 5.01,
+   "band": "hf"
+  },
+  "585": {
+   "stem": "chip",
+   "offset_ms": 0.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 4.5,
+   "band": "full"
+  },
+  "600": {
+   "stem": "chip",
+   "offset_ms": 1.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 5.91,
+   "band": "hf"
+  },
+  "615": {
+   "stem": "chip",
+   "offset_ms": 1.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 3.32,
+   "band": "full"
+  },
+  "622.5": {
+   "stem": "chip",
+   "offset_ms": 1.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 2.21,
+   "band": "hf"
+  },
+  "630": {
+   "stem": "sub",
+   "offset_ms": 0.0,
+   "steepest_ms": 1.0,
+   "rise_db_per_ms": 31.63,
+   "band": "full"
+  },
+  "660": {
+   "stem": "piano",
+   "offset_ms": -3.0,
+   "steepest_ms": -3.0,
+   "rise_db_per_ms": 3.1,
+   "band": "hf"
+  },
+  "690": {
+   "stem": "sub",
+   "offset_ms": 9.0,
+   "steepest_ms": 17.0,
+   "rise_db_per_ms": 4.64,
+   "band": "full"
+  }
+ },
+ "rollcall_rms_dbfs": {
+  "bar8": -15.8,
+  "bar9": -14.9,
+  "old_mute_f495_509": -14.9,
+  "bar10": -15.8
+ },
+ "no_third_windows": {
+  "cold_open_f0_57": {
+   "A": 0.079,
+   "Ab": 0.135,
+   "F": 0.92,
+   "C": 1.0,
+   "third_ratio": 0.135
+  },
+  "cold_open_f72_104": {
+   "A": 0.008,
+   "Ab": 0.008,
+   "F": 1.0,
+   "C": 0.382,
+   "third_ratio": 0.008
+  },
+  "stab8": {
+   "A": 0.126,
+   "Ab": 0.092,
+   "F": 1.0,
+   "C": 0.568,
+   "third_ratio": 0.126
+  },
+  "title": {
+   "A": 0.039,
+   "Ab": 0.043,
+   "F": 1.0,
+   "C": 0.345,
+   "third_ratio": 0.043
+  }
+ },
+ "harmon_f540_onset": null,
+ "rollcall_section_onsets": {
+  "480": {
+   "stem": "piano",
+   "offset_ms": 4.0
+  },
+  "487.5": {
+   "stem": "piano",
+   "offset_ms": 11.0
+  },
+  "495": {
+   "stem": "piano",
+   "offset_ms": 11.0
+  },
+  "502.5": {
+   "stem": "piano",
+   "offset_ms": 11.0
+  },
+  "510": {
+   "stem": "piano",
+   "offset_ms": 2.0
+  },
+  "517.5": {
+   "stem": "piano",
+   "offset_ms": 3.0
+  },
+  "525": {
+   "stem": "piano",
+   "offset_ms": -1.0
+  },
+  "532.5": {
+   "stem": "piano",
+   "offset_ms": 0.0
+  }
+ },
+ "final_chord_chroma": {
+  "C": 0.345,
+  "Db": 0.042,
+  "D": 0.014,
+  "Eb": 0.281,
+  "E": 0.058,
+  "F": 1.0,
+  "Gb": 0.006,
+  "G": 0.172,
+  "Ab": 0.043,
+  "A": 0.039,
+  "Bb": 0.059,
+  "B": 0.057
+ },
+ "final_chord_third_ratio": 0.043,
+ "duration_s": 30.0
+}

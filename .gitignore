@@ -1,0 +1,49 @@
+# ---------------------------------------------------------------------------
+# MR. MAS — what stays out of git
+# Rule of thumb: code, docs, stills and audio masters are committed;
+# videos, dependencies, third-party sample libraries and caches are not.
+# Everything ignored here can be re-created. See README.md → "Re-rendering".
+# ---------------------------------------------------------------------------
+
+# Videos (rendered outputs; re-render with the commands in docs/RENDERING.md)
+*.mp4
+*.mov
+*.webm
+*.mkv
+*.m4v
+*.avi
+
+# Node / Remotion
+node_modules/
+studio/.remotion/
+studio/out/
+*.tsbuildinfo
+
+# Python environments and bytecode (re-create from audio/requirements/*.txt)
+.venv*/
+__pycache__/
+*.pyc
+
+# Third-party sample libraries (downloaded; sources and licenses listed in audio/samples/LICENSES.md)
+audio/samples/*
+!audio/samples/LICENSES.md
+!audio/samples/fetch_samples.sh
+!audio/samples/MANIFEST.sha256
+
+# Caches, scratch and temp work
+audio/**/_work/
+audio/**/cache/
+audio/**/tts_cache/
+**/tmp/
+**/.tmp/
+*.log
+
+# Regenerable temp audio beds for the story reels (~50 MB each; rebuild with audio/reel/build_all.py)
+audio/reel/*.wav
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

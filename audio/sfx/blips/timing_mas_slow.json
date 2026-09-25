@@ -1,0 +1,68 @@
+{
+ "voice": "mas",
+ "name": "MAS",
+ "text": "super.",
+ "cps": 0.3,
+ "t0": 99,
+ "sceneSynced": false,
+ "revealRule": "linear cps with punctuation holds (+4 frames , ; :  +8 frames . ! ?)",
+ "chars": [
+  {
+   "i": 0,
+   "ch": "s",
+   "frame": 103,
+   "rel": 4
+  },
+  {
+   "i": 1,
+   "ch": "u",
+   "frame": 106,
+   "rel": 7
+  },
+  {
+   "i": 2,
+   "ch": "p",
+   "frame": 109,
+   "rel": 10
+  },
+  {
+   "i": 3,
+   "ch": "e",
+   "frame": 113,
+   "rel": 14
+  },
+  {
+   "i": 4,
+   "ch": "r",
+   "frame": 116,
+   "rel": 17
+  },
+  {
+   "i": 5,
+   "ch": ".",
+   "frame": 119,
+   "rel": 20
+  }
+ ],
+ "blips": [
+  {
+   "i": 0,
+   "ch": "s",
+   "frame": 103,
+   "rel": 4,
+   "t": 0.1667,
+   "note": "C4",
+   "accent": 0.0
+  },
+  {
+   "i": 2,
+   "ch": "p",
+   "frame": 109,
+   "rel": 10,
+   "t": 0.4167,
+   "note": "F3",
+   "accent": 0.0
+  }
+ ],
+ "lastRevealFrame": 119
+}

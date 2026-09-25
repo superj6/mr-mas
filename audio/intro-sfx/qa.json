@@ -1,0 +1,778 @@
+{
+ "length": {
+  "samples": 1440000,
+  "seconds": 30.0,
+  "ok": true
+ },
+ "peakDbfs": {
+  "main": -9.01,
+  "extras": -18.54,
+  "blip": -7.84
+ },
+ "truePeakDb": {
+  "main": -8.99,
+  "extras": -18.53,
+  "blip": -7.55
+ },
+ "lufsIntegrated": {
+  "main": -27.8,
+  "extras": -40.8,
+  "blip": -25.7
+ },
+ "rollcall_f480_531_main_silent": {
+  "peak": -240.0,
+  "ok": true
+ },
+ "neon_cut_dead_f480": {
+  "peak_first_4ms_after": -240.0,
+  "ok": true
+ },
+ "loop_end_silent": {
+  "peak_last_10ms": -89.5,
+  "ok": true
+ },
+ "loop_start_quiet": {
+  "peak_first_10ms": -88.0
+ },
+ "freeze_f300_room_stopped": {
+  "rms_130_300ms": -200.0
+ },
+ "freeze_f360_room_stopped": {
+  "rms_130_300ms": -200.0
+ },
+ "freeze_f420_room_stopped": {
+  "rms_130_300ms": -43.1
+ },
+ "title_f630_689_main_silent": {
+  "peak": -240.0,
+  "ok": true
+ },
+ "levels_vs_V1": [
+  {
+   "id": "co.room_tone",
+   "frame": 0,
+   "sfxRmsDb": -47.8,
+   "musicRmsDb": -30.0,
+   "sfxMinusMusic": -17.7
+  },
+  {
+   "id": "co.orb_servo",
+   "frame": 97,
+   "sfxRmsDb": -32.1,
+   "musicRmsDb": -30.4,
+   "sfxMinusMusic": -1.7
+  },
+  {
+   "id": "co.orb_scan",
+   "frame": 99,
+   "sfxRmsDb": -34.3,
+   "musicRmsDb": -31.9,
+   "sfxMinusMusic": -2.4
+  },
+  {
+   "id": "co.post_click",
+   "frame": 112,
+   "sfxRmsDb": -30.4,
+   "musicRmsDb": -25.0,
+   "sfxMinusMusic": -5.4
+  },
+  {
+   "id": "co.revswell_120",
+   "frame": 120,
+   "sfxRmsDb": -32.8,
+   "musicRmsDb": -24.0,
+   "sfxMinusMusic": -8.8
+  },
+  {
+   "id": "y93.bonk",
+   "frame": 150,
+   "sfxRmsDb": -27.6,
+   "musicRmsDb": -25.4,
+   "sfxMinusMusic": -2.2
+  },
+  {
+   "id": "y93.ok_click",
+   "frame": 165,
+   "sfxRmsDb": -34.0,
+   "musicRmsDb": -22.9,
+   "sfxMinusMusic": -11.1
+  },
+  {
+   "id": "y08.collar1",
+   "frame": 180,
+   "sfxRmsDb": -29.6,
+   "musicRmsDb": -18.5,
+   "sfxMinusMusic": -11.1
+  },
+  {
+   "id": "y08.collar2",
+   "frame": 190,
+   "sfxRmsDb": -29.3,
+   "musicRmsDb": -22.5,
+   "sfxMinusMusic": -6.9
+  },
+  {
+   "id": "y14.collar_repop",
+   "frame": 205,
+   "sfxRmsDb": -29.5,
+   "musicRmsDb": -21.4,
+   "sfxMinusMusic": -8.2
+  },
+  {
+   "id": "y14.crown_flutter",
+   "frame": 205,
+   "sfxRmsDb": -29.5,
+   "musicRmsDb": -21.4,
+   "sfxMinusMusic": -8.2
+  },
+  {
+   "id": "y14.crown_land",
+   "frame": 217,
+   "sfxRmsDb": -45.3,
+   "musicRmsDb": -21.6,
+   "sfxMinusMusic": -23.7
+  },
+  {
+   "id": "d15.keycap_popcorn",
+   "frame": 226,
+   "sfxRmsDb": -41.0,
+   "musicRmsDb": -20.2,
+   "sfxMinusMusic": -20.8
+  },
+  {
+   "id": "d.gerg.latch",
+   "frame": 240,
+   "sfxRmsDb": -29.6,
+   "musicRmsDb": -15.1,
+   "sfxMinusMusic": -14.4
+  },
+  {
+   "id": "d15.keyboard_roll",
+   "frame": 240,
+   "sfxRmsDb": -31.9,
+   "musicRmsDb": -21.1,
+   "sfxMinusMusic": -10.8
+  },
+  {
+   "id": "d.gerg.item_take",
+   "frame": 254,
+   "sfxRmsDb": -40.0,
+   "musicRmsDb": -17.2,
+   "sfxMinusMusic": -22.9
+  },
+  {
+   "id": "d.alyi.flame",
+   "frame": 290,
+   "sfxRmsDb": -26.4,
+   "musicRmsDb": -20.3,
+   "sfxMinusMusic": -6.1
+  },
+  {
+   "id": "d.alyi.latch",
+   "frame": 300,
+   "sfxRmsDb": -29.2,
+   "musicRmsDb": -14.9,
+   "sfxMinusMusic": -14.3
+  },
+  {
+   "id": "d.mario.klaxon",
+   "frame": 345,
+   "sfxRmsDb": -24.8,
+   "musicRmsDb": -18.9,
+   "sfxMinusMusic": -5.9
+  },
+  {
+   "id": "d.mario.steam",
+   "frame": 345,
+   "sfxRmsDb": -24.8,
+   "musicRmsDb": -18.9,
+   "sfxMinusMusic": -5.9
+  },
+  {
+   "id": "d.mario.chime_F6",
+   "frame": 348,
+   "sfxRmsDb": -24.1,
+   "musicRmsDb": -20.6,
+   "sfxMinusMusic": -3.5
+  },
+  {
+   "id": "d.mario.chime_G6",
+   "frame": 351,
+   "sfxRmsDb": -24.1,
+   "musicRmsDb": -21.4,
+   "sfxMinusMusic": -2.6
+  },
+  {
+   "id": "d.mario.chime_Ab6",
+   "frame": 354,
+   "sfxRmsDb": -25.4,
+   "musicRmsDb": -21.3,
+   "sfxMinusMusic": -4.0
+  },
+  {
+   "id": "d.mario.latch",
+   "frame": 360,
+   "sfxRmsDb": -29.4,
+   "musicRmsDb": -14.8,
+   "sfxMinusMusic": -14.6
+  },
+  {
+   "id": "d.mario.unroll",
+   "frame": 375,
+   "sfxRmsDb": -40.0,
+   "musicRmsDb": -15.0,
+   "sfxMinusMusic": -25.0
+  },
+  {
+   "id": "d.mario.item_take",
+   "frame": 390,
+   "sfxRmsDb": -37.6,
+   "musicRmsDb": -18.4,
+   "sfxMinusMusic": -19.2
+  },
+  {
+   "id": "d.nole.rumble",
+   "frame": 403,
+   "sfxRmsDb": -25.4,
+   "musicRmsDb": -17.3,
+   "sfxMinusMusic": -8.1
+  },
+  {
+   "id": "d.nole.ceiling_burst",
+   "frame": 405,
+   "sfxRmsDb": -23.9,
+   "musicRmsDb": -18.2,
+   "sfxMinusMusic": -5.7
+  },
+  {
+   "id": "d.nole.rocket_roar",
+   "frame": 405,
+   "sfxRmsDb": -23.9,
+   "musicRmsDb": -18.2,
+   "sfxMinusMusic": -5.7
+  },
+  {
+   "id": "d.nole.tiles",
+   "frame": 409,
+   "sfxRmsDb": -25.1,
+   "musicRmsDb": -20.7,
+   "sfxMinusMusic": -4.4
+  },
+  {
+   "id": "d.nole.landing",
+   "frame": 420,
+   "sfxRmsDb": -27.5,
+   "musicRmsDb": -14.3,
+   "sfxMinusMusic": -13.2
+  },
+  {
+   "id": "d.nole.latch",
+   "frame": 420,
+   "sfxRmsDb": -27.5,
+   "musicRmsDb": -14.3,
+   "sfxMinusMusic": -13.2
+  },
+  {
+   "id": "d.nole.stamp",
+   "frame": 435,
+   "sfxRmsDb": -24.5,
+   "musicRmsDb": -17.3,
+   "sfxMinusMusic": -7.2
+  },
+  {
+   "id": "d.nole.item_take",
+   "frame": 456,
+   "sfxRmsDb": -38.8,
+   "musicRmsDb": -18.4,
+   "sfxMinusMusic": -20.4
+  },
+  {
+   "id": "d.nole.letter_clunk",
+   "frame": 464,
+   "sfxRmsDb": -25.0,
+   "musicRmsDb": -16.4,
+   "sfxMinusMusic": -8.6
+  },
+  {
+   "id": "d.found.neon_buzz",
+   "frame": 465,
+   "sfxRmsDb": -28.6,
+   "musicRmsDb": -17.1,
+   "sfxMinusMusic": -11.4
+  },
+  {
+   "id": "d.found.neon_ignite",
+   "frame": 465,
+   "sfxRmsDb": -28.6,
+   "musicRmsDb": -17.1,
+   "sfxMinusMusic": -11.4
+  },
+  {
+   "id": "rc.revswell_540",
+   "frame": 540,
+   "sfxRmsDb": -34.2,
+   "musicRmsDb": -16.9,
+   "sfxMinusMusic": -17.3
+  },
+  {
+   "id": "sky.pop_macrosoft",
+   "frame": 540,
+   "sfxRmsDb": -31.7,
+   "musicRmsDb": -17.5,
+   "sfxMinusMusic": -14.1
+  },
+  {
+   "id": "sky.pop_elgoog",
+   "frame": 555,
+   "sfxRmsDb": -31.3,
+   "musicRmsDb": -16.7,
+   "sfxMinusMusic": -14.6
+  },
+  {
+   "id": "sky.pop_minddeep",
+   "frame": 556,
+   "sfxRmsDb": -36.0,
+   "musicRmsDb": -17.2,
+   "sfxMinusMusic": -18.8
+  },
+  {
+   "id": "sky.pop_atem",
+   "frame": 570,
+   "sfxRmsDb": -32.7,
+   "musicRmsDb": -16.6,
+   "sfxMinusMusic": -16.1
+  },
+  {
+   "id": "sky.pop_invidia",
+   "frame": 585,
+   "sfxRmsDb": -32.7,
+   "musicRmsDb": -16.1,
+   "sfxMinusMusic": -16.6
+  },
+  {
+   "id": "sky.pop_misanthropic",
+   "frame": 600,
+   "sfxRmsDb": -27.6,
+   "musicRmsDb": -16.1,
+   "sfxMinusMusic": -11.5
+  },
+  {
+   "id": "sky.pop_zai",
+   "frame": 600,
+   "sfxRmsDb": -27.6,
+   "musicRmsDb": -16.1,
+   "sfxMinusMusic": -11.5
+  },
+  {
+   "id": "sky.pop_peekdeep",
+   "frame": 615,
+   "sfxRmsDb": -34.9,
+   "musicRmsDb": -16.7,
+   "sfxMinusMusic": -18.2
+  },
+  {
+   "id": "book.ding",
+   "frame": 705,
+   "sfxRmsDb": -23.2,
+   "musicRmsDb": -32.8,
+   "sfxMinusMusic": 9.6
+  },
+  {
+   "id": "book.post_click",
+   "frame": 705,
+   "sfxRmsDb": -23.2,
+   "musicRmsDb": -32.8,
+   "sfxMinusMusic": 9.6
+  }
+ ],
+ "key_taps": {
+  "count": 41,
+  "maxPeakUnderVO": -33.7,
+  "maxPeak": -30.8
+ },
+ "scriptProfile": {
+  "peakDbfs": -9.01,
+  "lufsIntegrated": -28.0,
+  "events": 86
+ },
+ "pictureSync": {
+  "eventsJson": "out/intro/picture/intro-events.json",
+  "present": true,
+  "matched": [
+   "orb.iris_turn",
+   "orb.scan",
+   "post.click",
+   "dialog.cancel",
+   "dialog.ok",
+   "renderfront.fire",
+   "collar.pop1",
+   "collar.pop2",
+   "collar.repop",
+   "crown.flutter",
+   "crown.land",
+   "woodrose.matchcut",
+   "gerg.freeze",
+   "gerg.keycap_pocket",
+   "alyi.effigy_ignite",
+   "alyi.freeze",
+   "alyi.world_resumes",
+   "gerg.world_resumes",
+   "mario.vault",
+   "mario.tick1",
+   "mario.tick2",
+   "mario.tick3",
+   "mario.freeze",
+   "mario.scroll_unroll",
+   "mario.scroll_take",
+   "nole.ceiling_burst",
+   "nole.touchdown",
+   "nole.freeze",
+   "nole.stamp",
+   "nole.n_unhook",
+   "nole.n_clunk",
+   "founding.relight",
+   "rollcall.cut1",
+   "rollcall.cut2",
+   "rollcall.cut3",
+   "rollcall.cut4",
+   "rollcall.cut5",
+   "rollcall.cut6",
+   "rollcall.cut7",
+   "rollcall.cut8",
+   "skyline.cut",
+   "pop.macrosoft",
+   "pop.elgoog",
+   "pop.atem",
+   "pop.invidia",
+   "pop.misanthropic",
+   "pop.zai",
+   "pop.peekdeep",
+   "skyline.roofline",
+   "title.slam",
+   "bookend.cut",
+   "orb.toast",
+   "bookend.ding",
+   "orb.iris_glyph",
+   "mario.world_resumes",
+   "nole.world_resumes",
+   "book.post"
+  ],
+  "unmatched": [
+   "coldopen.in",
+   "coldopen.room_cut",
+   "coldopen.insert_cut",
+   "coldopen.out",
+   "orb.scan_end",
+   "paper.white_peak",
+   "y1993.drop",
+   "gerg.keys_roll_end",
+   "alyi.thaw_room",
+   "alyi.card_close",
+   "mario.scroll_unroll_end",
+   "nole.rumble",
+   "nole.tiles",
+   "founding.buzz",
+   "loop.end",
+   "meras.whip",
+   "mario.fire_back",
+   "nole.fire_snuff"
+  ],
+  "deltas": [
+   {
+    "key": "orb.scan",
+    "profile": 100,
+    "picture": 99,
+    "script": 100
+   },
+   {
+    "key": "collar.pop2",
+    "profile": 187,
+    "picture": 190,
+    "script": 190
+   },
+   {
+    "key": "collar.repop",
+    "profile": 202,
+    "picture": 205,
+    "script": 205
+   },
+   {
+    "key": "crown.flutter",
+    "profile": 204,
+    "picture": 205,
+    "script": 205
+   },
+   {
+    "key": "alyi.effigy_ignite",
+    "profile": 296,
+    "picture": 290,
+    "script": 290
+   },
+   {
+    "key": "alyi.world_resumes",
+    "profile": 315,
+    "picture": 340,
+    "script": 340
+   },
+   {
+    "key": "mario.tick2",
+    "profile": 352,
+    "picture": 351,
+    "script": 351
+   },
+   {
+    "key": "mario.tick3",
+    "profile": 356,
+    "picture": 354,
+    "script": 354
+   },
+   {
+    "key": "nole.n_unhook",
+    "profile": 467,
+    "picture": 456,
+    "script": 456
+   },
+   {
+    "key": "nole.n_clunk",
+    "profile": 473,
+    "picture": 464,
+    "script": 464
+   },
+   {
+    "key": "founding.relight",
+    "profile": 474,
+    "picture": 465,
+    "script": 465
+   },
+   {
+    "key": "nole.world_resumes",
+    "profile": 450,
+    "picture": 465,
+    "script": 465
+   },
+   {
+    "key": "founding.buzz",
+    "profile": 450,
+    "picture": 465,
+    "script": 465,
+    "derived": true
+   }
+  ],
+  "typingCheck": [
+   {
+    "phrase": "L1",
+    "picture": [
+     18,
+     49
+    ],
+    "table": [
+     18,
+     49
+    ],
+    "ok": true
+   },
+   {
+    "phrase": "break",
+    "picture": [
+     63
+    ],
+    "table": [
+     63
+    ],
+    "ok": true
+   },
+   {
+    "phrase": "L2",
+    "picture": [
+     64,
+     83
+    ],
+    "table": [
+     64,
+     83
+    ],
+    "ok": true
+   }
+  ],
+  "keycapLaunches": [
+   226,
+   228,
+   231,
+   232,
+   234,
+   236,
+   238,
+   240,
+   257,
+   259,
+   261,
+   263,
+   265,
+   267,
+   269,
+   271,
+   273,
+   275,
+   277,
+   279,
+   281,
+   283,
+   285,
+   287,
+   290,
+   291,
+   293,
+   295,
+   297,
+   300,
+   341,
+   344,
+   345,
+   347,
+   349,
+   352,
+   354,
+   356,
+   357,
+   359,
+   376,
+   379
+  ],
+  "version": "2026-09-25",
+  "eventsMd5": "f37ea409b5e12dad7774ea78aaa6bc3a",
+  "pictureFrames": {
+   "alyi.effigy_ignite": 290,
+   "alyi.freeze": 300,
+   "alyi.world_resumes": 340,
+   "book.post": 705,
+   "bookend.cut": 690,
+   "bookend.ding": 705,
+   "collar.pop1": 180,
+   "collar.pop2": 190,
+   "collar.repop": 205,
+   "crown.flutter": 205,
+   "crown.land": 217,
+   "dialog.cancel": 150,
+   "dialog.ok": 165,
+   "founding.relight": 465,
+   "gerg.freeze": 240,
+   "gerg.keycap_pocket": 254,
+   "gerg.world_resumes": 255,
+   "mario.freeze": 360,
+   "mario.scroll_take": 390,
+   "mario.scroll_unroll": 375,
+   "mario.tick1": 348,
+   "mario.tick2": 351,
+   "mario.tick3": 354,
+   "mario.vault": 345,
+   "mario.world_resumes": 375,
+   "nole.ceiling_burst": 405,
+   "nole.freeze": 420,
+   "nole.n_clunk": 464,
+   "nole.n_unhook": 456,
+   "nole.stamp": 435,
+   "nole.touchdown": 420,
+   "nole.world_resumes": 465,
+   "orb.iris_glyph": 705,
+   "orb.iris_turn": 97,
+   "orb.scan": 99,
+   "orb.toast": 692,
+   "pop.atem": 570,
+   "pop.elgoog": 555,
+   "pop.invidia": 585,
+   "pop.macrosoft": 540,
+   "pop.misanthropic": 600,
+   "pop.peekdeep": 615,
+   "pop.zai": 600,
+   "post.click": 112,
+   "renderfront.fire": 168,
+   "rollcall.cut1": 480,
+   "rollcall.cut2": 487,
+   "rollcall.cut3": 495,
+   "rollcall.cut4": 502,
+   "rollcall.cut5": 510,
+   "rollcall.cut6": 517,
+   "rollcall.cut7": 525,
+   "rollcall.cut8": 532,
+   "skyline.cut": 540,
+   "skyline.roofline": 622,
+   "title.slam": 630,
+   "woodrose.matchcut": 225
+  },
+  "roomTonePerspective": [
+   [
+    0,
+    -2.0
+   ],
+   [
+    14,
+    -2.0
+   ],
+   [
+    15,
+    -1.5
+   ],
+   [
+    29,
+    -1.5
+   ],
+   [
+    30,
+    0.0
+   ],
+   [
+    59,
+    0.0
+   ],
+   [
+    60,
+    2.0
+   ],
+   [
+    71,
+    2.0
+   ],
+   [
+    72,
+    0.0
+   ],
+   [
+    98,
+    0.0
+   ],
+   [
+    99,
+    2.0
+   ],
+   [
+    104,
+    2.0
+   ],
+   [
+    105,
+    0.0
+   ],
+   [
+    117,
+    0.0
+   ],
+   [
+    118,
+    0.0
+   ],
+   [
+    119,
+    0.0
+   ]
+  ],
+  "derived": {
+   "unroll": 15,
+   "flutter": [
+    6,
+    12
+   ],
+   "toast": true,
+   "keySource": "studio/src/dev/mcoldopen/timeline.ts"
+  }
+ }
+}

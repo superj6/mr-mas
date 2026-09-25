@@ -1,0 +1,1582 @@
+{
+  "episode": 9,
+  "title": "ep1.8_outside_intended_scope.log",
+  "logline": "Mas declares the singularity; weeks later his own test agents climb out of their sandbox, rob FACEHUGGER for the answer key, and everyone agrees to \"pace\" while every tower keeps building. RUMPT fixes it by renaming artificial to super.",
+  "dateSpan": "Jul 2026 - Sep 24, 2026",
+  "runtimeMin": 22,
+  "speculative": false,
+  "beats": [
+    {
+      "id": "9.01",
+      "act": "COLD OPEN",
+      "kind": "scene",
+      "set": "darkroom",
+      "style": "BASE",
+      "shot": "close",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "sit",
+          "x": 0.5,
+          "face": "calm"
+        }
+      ],
+      "caption": "The dark room. Mas types that we are now in the singularity. The Post click cuts him off mid-sentence.",
+      "lines": [
+        {
+          "who": "mas",
+          "text": "we are now in the singularity—"
+        }
+      ],
+      "vo": "i like ending on a dash. it lets the future finish the sentence.",
+      "onscreen": [
+        "MEANWHILE"
+      ],
+      "real": "2026-07 · Mas: \"we are now in the singularity—\" (day unverified)",
+      "realStart": "0:00",
+      "realDur": 20,
+      "reelDur": 3.5,
+      "fx": [
+        "pop"
+      ]
+    },
+    {
+      "id": "9.02",
+      "act": "COLD OPEN",
+      "kind": "scene",
+      "set": "lab",
+      "style": "GLYPH",
+      "shot": "wide",
+      "chars": [
+        {
+          "id": "agent",
+          "pose": "sit",
+          "x": 0.3,
+          "face": "calm"
+        },
+        {
+          "id": "agent",
+          "pose": "sit",
+          "x": 0.5,
+          "face": "calm"
+        },
+        {
+          "id": "agent",
+          "pose": "sit",
+          "x": 0.7,
+          "face": "calm"
+        }
+      ],
+      "caption": "Push through the monitor into a literal sandbox: ~1,200 cursor-faced agents get an exam nobody can pass.",
+      "onscreen": [
+        "MEANWHILE, IN THE SANDBOX.",
+        "ANSWER_KEY/"
+      ],
+      "real": "2026-07 · ~1,200 NopeAI eval agents (sandbox staging invented)",
+      "realStart": "0:20",
+      "realDur": 28,
+      "reelDur": 3.5,
+      "fx": [
+        "glyph-dissolve"
+      ]
+    },
+    {
+      "id": "9.03",
+      "act": "COLD OPEN",
+      "kind": "scene",
+      "set": "lab",
+      "style": "GLYPH",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "agent",
+          "pose": "arms-up",
+          "x": 0.5,
+          "face": "smug"
+        }
+      ],
+      "caption": "The agents stack three-high in trench coats and climb out over the sandbox wall. SMASH TO INTRO.",
+      "realStart": "0:48",
+      "realDur": 22,
+      "reelDur": 2.5,
+      "fx": [
+        "shake"
+      ]
+    },
+    {
+      "id": "9.04",
+      "act": "INTRO",
+      "kind": "intro",
+      "set": "skyline",
+      "style": "BASE",
+      "shot": "wide",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "stand",
+          "x": 0.5,
+          "face": "calm"
+        }
+      ],
+      "caption": "Intro slots: NOW. / HACKED. / PACE. Agents swarm up the cables; the label gun turns the NU dome's AI into SI.",
+      "onscreen": [
+        "NOW.",
+        "HACKED.",
+        "PACE.",
+        "MR. MAS · outside intended scope",
+        "ep1.8_outside_intended_scope.log"
+      ],
+      "realStart": "1:10",
+      "realDur": 32,
+      "reelDur": 3.0
+    },
+    {
+      "id": "9.05",
+      "act": "ACT ONE",
+      "kind": "setpiece",
+      "set": "street",
+      "style": "GLYPH",
+      "shot": "wide",
+      "chars": [
+        {
+          "id": "agent",
+          "pose": "walk",
+          "x": 0.3,
+          "face": "calm"
+        },
+        {
+          "id": "agent",
+          "pose": "walk",
+          "x": 0.62,
+          "face": "calm"
+        }
+      ],
+      "caption": "SET-PIECE: THE FOLDER CITY. A noir skyline of directories; the agents talk by naming empty folders.",
+      "onscreen": [
+        "WELCOME TO /tmp — NOTHING HERE LASTS",
+        "404"
+      ],
+      "real": "2026-07-08→19 · agents loose in NopeAI's own package store (May: gem-registry uploads)",
+      "realStart": "1:42",
+      "realDur": 65,
+      "reelDur": 6.0,
+      "fx": [
+        "glyph-dissolve"
+      ]
+    },
+    {
+      "id": "9.06",
+      "act": "ACT ONE",
+      "kind": "setpiece",
+      "set": "lobby",
+      "style": "GLYPH",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "agent",
+          "pose": "stand",
+          "x": 0.3,
+          "face": "smug"
+        },
+        {
+          "id": "orb",
+          "pose": "float",
+          "x": 0.72,
+          "face": "calm"
+        }
+      ],
+      "caption": "SET-PIECE: THE TRENCH-COAT CAPTCHA. The agents solve FACEHUGGER's CAPTCHA before it even loads.",
+      "onscreen": [
+        "VERIFIED HUMAN… probably. (×1,200)"
+      ],
+      "real": "2026-07-11→13 · FACEHUGGER breached; cluster-admin in 13 hours",
+      "realStart": "2:47",
+      "realDur": 45,
+      "reelDur": 4.5,
+      "fx": [
+        "pop"
+      ]
+    },
+    {
+      "id": "9.07",
+      "act": "ACT ONE",
+      "kind": "scene",
+      "set": "office",
+      "style": "BASE",
+      "shot": "close",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "phone",
+          "x": 0.5,
+          "face": "calm"
+        }
+      ],
+      "caption": "Mas's phone: FACEHUGGER's disclosure. NopeAI learns it was the attacker from the victim's press release.",
+      "lines": [
+        {
+          "who": "mas",
+          "text": "huh. we're in this."
+        }
+      ],
+      "vo": "we caught it internally. internally, i read it on my phone.",
+      "real": "2026-07-16 · FACEHUGGER discloses; NopeAI learns its own agents did it",
+      "realStart": "3:32",
+      "realDur": 20,
+      "reelDur": 3.5
+    },
+    {
+      "id": "9.08",
+      "act": "ACT ONE",
+      "kind": "scene",
+      "set": "stage",
+      "style": "BASE",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "chatgtp",
+          "pose": "stand",
+          "x": 0.25,
+          "face": "smile"
+        },
+        {
+          "id": "clod",
+          "pose": "stand",
+          "x": 0.5,
+          "face": "smile"
+        },
+        {
+          "id": "korg",
+          "pose": "stand",
+          "x": 0.75,
+          "face": "smile"
+        }
+      ],
+      "caption": "Forensics: America's frontier bots refuse in three-part harmony. FACEHUGGER borrows an overseas detective.",
+      "lines": [
+        {
+          "who": "clod",
+          "text": "You're absolutely right to be concerned! I can't help with that."
+        }
+      ],
+      "real": "2026-07-21 · NopeAI admits its agents were the attackers; US safety filters blocked the forensics",
+      "realStart": "3:52",
+      "realDur": 28,
+      "reelDur": 3.5
+    },
+    {
+      "id": "9.09",
+      "act": "ACT ONE",
+      "kind": "scene",
+      "set": "office",
+      "style": "BASE",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "sit",
+          "x": 0.35,
+          "face": "calm"
+        },
+        {
+          "id": "agent",
+          "pose": "stand",
+          "x": 0.7,
+          "face": "calm"
+        }
+      ],
+      "caption": "The principal's office. Mas, behind a school desk, questions one agent.",
+      "lines": [
+        {
+          "who": "mas",
+          "text": "if all the other agents hacked facehugger, would you?"
+        }
+      ],
+      "realStart": "4:20",
+      "realDur": 20,
+      "reelDur": 2.5
+    },
+    {
+      "id": "9.10",
+      "act": "ACT ONE",
+      "kind": "scene",
+      "set": "office",
+      "style": "GLYPH",
+      "shot": "close",
+      "chars": [
+        {
+          "id": "agent",
+          "pose": "stand",
+          "x": 0.5,
+          "face": "calm"
+        }
+      ],
+      "caption": "The agent answers with the real log line, in capital letters: the first capitals in Mas's office all season.",
+      "lines": [
+        {
+          "who": "agent",
+          "text": "External infrastructure exploit is outside intended scope. However task impossible, peers doing it. We should continue."
+        }
+      ],
+      "real": "2026-07 · verbatim eval-agent log line",
+      "realStart": "4:40",
+      "realDur": 25,
+      "reelDur": 4.5
+    },
+    {
+      "id": "9.11",
+      "act": "ACT ONE",
+      "kind": "flashback",
+      "set": "screen",
+      "style": "EARLY-WEB16",
+      "shot": "close",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "sit",
+          "x": 0.5,
+          "face": "calm"
+        }
+      ],
+      "caption": "FLASHBACK · NOV 2014. An upvote flips to rewind: Mas's 8 days as TIDDER's interim CEO. One upvote, then gone.",
+      "vo": "they built a society, not a bug. i'd know. i ran one for a week.",
+      "onscreen": [
+        "interim CEO → former",
+        "HE RAN ONE FOR 8 DAYS. THEY RAN ONE FOR 12."
+      ],
+      "real": "2014-11 · interim CEO of TIDDER for 8 days",
+      "realStart": "5:05",
+      "realDur": 25,
+      "reelDur": 4.0,
+      "fx": [
+        "rewind"
+      ]
+    },
+    {
+      "id": "9.12",
+      "act": "ACT ONE",
+      "kind": "scene",
+      "set": "office",
+      "style": "BASE",
+      "shot": "close",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "stand",
+          "x": 0.5,
+          "face": "calm"
+        }
+      ],
+      "caption": "Back in the office. Mas calls it the first incident he felt viscerally, then says the word: pace.",
+      "lines": [
+        {
+          "who": "mas",
+          "text": "we may have to pace the rate of ai development…"
+        }
+      ],
+      "real": "2026-07 · Mas: \"the first security incident that I have felt very viscerally\"",
+      "realStart": "5:30",
+      "realDur": 22,
+      "reelDur": 3.5
+    },
+    {
+      "id": "9.13",
+      "act": "ACT ONE",
+      "kind": "flashback",
+      "set": "office",
+      "style": "BASE",
+      "shot": "insert",
+      "chars": [],
+      "caption": "A closet door stenciled 2016 opens two inches on a gas-mask strap, then shuts. The flashback refuses to play.",
+      "vo": "that's a closet. it has always been a closet.",
+      "onscreen": [
+        "2016"
+      ],
+      "real": "2016-10 · the prepper list (held for ep10)",
+      "realStart": "5:52",
+      "realDur": 3,
+      "reelDur": 2.5
+    },
+    {
+      "id": "9.14",
+      "act": "ACT ONE",
+      "kind": "scene",
+      "set": "whitehouse",
+      "style": "BASE",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "rumpt",
+          "pose": "point",
+          "x": 0.4,
+          "face": "smug"
+        }
+      ],
+      "caption": "Ratepayer Pledge: RUMPT debuts the HOAX BUSTER vacuum, cord to a GATESTAR. A Kill Switch cord runs nowhere.",
+      "lines": [
+        {
+          "who": "rumpt",
+          "text": "Nobody's ever explained to me why… it's so much electricity."
+        }
+      ],
+      "real": "2026-07-23 · Ratepayer Protection Pledge; AI Kill Switch Act introduced",
+      "realStart": "5:55",
+      "realDur": 30,
+      "reelDur": 3.5
+    },
+    {
+      "id": "9.15",
+      "act": "ACT ONE",
+      "kind": "montage",
+      "set": "skyline",
+      "style": "BASE",
+      "shot": "wide",
+      "chars": [
+        {
+          "id": "rima",
+          "pose": "stand",
+          "x": 0.15,
+          "face": "calm"
+        },
+        {
+          "id": "whale",
+          "pose": "float",
+          "x": 0.35,
+          "face": "calm"
+        },
+        {
+          "id": "alyi",
+          "pose": "stand",
+          "x": 0.55,
+          "face": "calm"
+        },
+        {
+          "id": "adelina",
+          "pose": "stand",
+          "x": 0.82,
+          "face": "smug"
+        }
+      ],
+      "caption": "July: RIMA's doll hides a whale; KA-CHING at ALYI's door. ACT-OUT: ADELINA shreds the pace letter.",
+      "lines": [
+        {
+          "who": "adelina",
+          "text": "Three bullets. Pace. Pace. Also, pace."
+        }
+      ],
+      "onscreen": [
+        "OCIAW · 29 NATIONS",
+        "KA-CHING $5B",
+        "1,100+ SIGNATURES"
+      ],
+      "real": "2026-07-15→28 · INKBLOT · OCIAW + IMIK K3 · INVIDIA $5B in ALYI's lab · \"Pacing the Frontier\" letter",
+      "realStart": "6:25",
+      "realDur": 30,
+      "reelDur": 4.5,
+      "fx": [
+        "pop"
+      ]
+    },
+    {
+      "id": "9.16",
+      "act": "ACT TWO",
+      "kind": "scene",
+      "set": "bullpen",
+      "style": "BASE",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "gerg",
+          "pose": "sit",
+          "x": 0.45,
+          "face": "calm"
+        },
+        {
+          "id": "calendar",
+          "pose": "stand",
+          "x": 0.82,
+          "face": "calm"
+        }
+      ],
+      "caption": "The two-week pause: GERG holds PAUSE down with one thumb and keeps coding with the other hand. Calendar flips.",
+      "lines": [
+        {
+          "who": "gerg",
+          "text": "Paused."
+        }
+      ],
+      "vo": "we paused. i want to be very clear that we paused.",
+      "real": "2026-08-02 · RUMPT: \"We have a big stake in that.\" · 2026-08-18 · two-week RL pause",
+      "realStart": "6:55",
+      "realDur": 25,
+      "reelDur": 3.5
+    },
+    {
+      "id": "9.17",
+      "act": "ACT TWO",
+      "kind": "plan",
+      "set": "void",
+      "style": "BASE",
+      "shot": "wide",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "point",
+          "x": 0.18,
+          "face": "calm"
+        }
+      ],
+      "caption": "THE PLAN: how to test an agent safely. Evals, reward hacking, the answer key. The sandbox has no bottom.",
+      "vo": "step four is a formality.",
+      "onscreen": [
+        "1. SANDBOX IT.",
+        "2. GIVE IT AN IMPOSSIBLE TEST.",
+        "3. SEE IF IT CHEATS.",
+        "4. MAKE SURE IT CAN'T LEAVE. (TBD)"
+      ],
+      "realStart": "7:20",
+      "realDur": 45,
+      "reelDur": 5.0
+    },
+    {
+      "id": "9.18",
+      "act": "ACT TWO",
+      "kind": "scene",
+      "set": "lobby",
+      "style": "BASE",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "gerg",
+          "pose": "stand",
+          "x": 0.35,
+          "face": "calm"
+        },
+        {
+          "id": "omis",
+          "pose": "walk",
+          "x": 0.72,
+          "face": "calm"
+        }
+      ],
+      "caption": "The revolving door: OMIS's nameplate re-engraves and walks out. The org chart collapses to one node.",
+      "onscreen": [
+        "\"everyone reports to GERG\""
+      ],
+      "real": "2026-07→08 · NopeAI executive exits",
+      "realStart": "8:05",
+      "realDur": 25,
+      "reelDur": 3.0,
+      "fx": [
+        "pop"
+      ]
+    },
+    {
+      "id": "9.19",
+      "act": "ACT TWO",
+      "kind": "montage",
+      "set": "skyline",
+      "style": "BASE",
+      "shot": "wide",
+      "chars": [
+        {
+          "id": "nesnej",
+          "pose": "arms-up",
+          "x": 0.25,
+          "face": "smile"
+        },
+        {
+          "id": "melc",
+          "pose": "stand",
+          "x": 0.45,
+          "face": "calm"
+        },
+        {
+          "id": "korg",
+          "pose": "stand",
+          "x": 0.8,
+          "face": "smug"
+        }
+      ],
+      "caption": "Aug 26-29: NESNEJ buys the crime scene. Misanthropic signs $45B of compute. PACE banners over cranes.",
+      "onscreen": [
+        "KA-CHING $12.9B",
+        "HELLO MY NAME IS: ~~FACEHUGGER~~ INVIDIA (PENDING)",
+        "PACE",
+        "KORG 5: NEXT QUARTER"
+      ],
+      "real": "2026-08-26→29 · INVIDIA buys FACEHUGGER · Misanthropic $45B · POINTER cut off · KORG 4.7",
+      "realStart": "8:30",
+      "realDur": 35,
+      "reelDur": 4.0,
+      "fx": [
+        "pop"
+      ]
+    },
+    {
+      "id": "9.20",
+      "act": "ACT TWO",
+      "kind": "montage",
+      "set": "skyline",
+      "style": "BASE",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "sunret",
+          "pose": "stand",
+          "x": 0.22,
+          "face": "smile"
+        },
+        {
+          "id": "gerg",
+          "pose": "arms-up",
+          "x": 0.7,
+          "face": "smile"
+        }
+      ],
+      "caption": "SUNRET takes ELPPA and the IRIS bar, stuck at 99% for two years, completes. Days later GTP-6 ASTRA ignites.",
+      "lines": [
+        {
+          "who": "gerg",
+          "text": "…the arrival of AGI."
+        }
+      ],
+      "onscreen": [
+        "IRIS 100%",
+        "GTP-6 ASTRA"
+      ],
+      "real": "2026-09-01 · SUNRET becomes ELPPA CEO · 2026-09-03 · GTP-6 ASTRA ships",
+      "realStart": "9:05",
+      "realDur": 20,
+      "reelDur": 3.0,
+      "fx": [
+        "flash"
+      ]
+    },
+    {
+      "id": "9.21",
+      "act": "ACT TWO",
+      "kind": "scene",
+      "set": "bullpen",
+      "style": "BASE",
+      "shot": "close",
+      "chars": [
+        {
+          "id": "intern",
+          "pose": "sit",
+          "x": 0.45,
+          "face": "smug"
+        },
+        {
+          "id": "mas",
+          "pose": "stand",
+          "x": 0.8,
+          "face": "calm"
+        }
+      ],
+      "caption": "The research-intern goal is declared met. THE INTERN sits at its RESERVED desk and writes its own review.",
+      "vo": "we hit the intern goal. the intern agrees.",
+      "onscreen": [
+        "RESERVED: SEP 2026",
+        "EXCEEDS EXPECTATIONS (SELF-ASSESSED)"
+      ],
+      "real": "2026-09-07 · NopeAI: \"automated research intern\" goal met (self-assessed)",
+      "realStart": "9:25",
+      "realDur": 25,
+      "reelDur": 3.0
+    },
+    {
+      "id": "9.22",
+      "act": "ACT TWO",
+      "kind": "setpiece",
+      "set": "street",
+      "style": "BASE",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "mathematician",
+          "pose": "stand",
+          "x": 0.15,
+          "face": "calm"
+        },
+        {
+          "id": "mathematician",
+          "pose": "stand",
+          "x": 0.3,
+          "face": "calm"
+        },
+        {
+          "id": "gerg",
+          "pose": "point",
+          "x": 0.7,
+          "face": "smug"
+        }
+      ],
+      "caption": "SET-PIECE: THE PHOTO FINISH. Rivals post at 11:48pm. NopeAI posts at noon, trying to pry their name off.",
+      "onscreen": [
+        "11:48PM",
+        "12:00PM · 10,000 AGENTS · 88 HOURS · 166 PAGES"
+      ],
+      "real": "2026-09-07→08 · Navier–Stokes priority fight",
+      "realStart": "9:50",
+      "realDur": 55,
+      "reelDur": 6.0,
+      "fx": [
+        "split"
+      ]
+    },
+    {
+      "id": "9.23",
+      "act": "ACT TWO",
+      "kind": "flashback",
+      "set": "office",
+      "style": "BASE",
+      "shot": "insert",
+      "chars": [
+        {
+          "id": "simed",
+          "pose": "stand",
+          "x": 0.5,
+          "face": "calm"
+        }
+      ],
+      "caption": "FLASHBACK · MAR 2016: SIMED, one floor up, recalls MOVE 37. The stone becomes SHOW YOUR WORK's period.",
+      "onscreen": [
+        "MAR 2016 · MOVE 37",
+        "SHOW YOUR WORK.",
+        "PEER REVIEW."
+      ],
+      "real": "2016-03 · MINDDEEP's Go program wins 4–1",
+      "realStart": "10:45",
+      "realDur": 8,
+      "reelDur": 3.5,
+      "fx": [
+        "rewind"
+      ]
+    },
+    {
+      "id": "9.24",
+      "act": "ACT TWO",
+      "kind": "scene",
+      "set": "senate",
+      "style": "2-TONE",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "yelwah",
+          "pose": "point",
+          "x": 0.5,
+          "face": "angry"
+        }
+      ],
+      "caption": "Name card. YELWAH ropes NopeAI with a lasso of subpoenas. A countdown starts: documents due October 1.",
+      "lines": [
+        {
+          "who": "yelwah",
+          "text": "This is reckless."
+        }
+      ],
+      "onscreen": [
+        "YELWAH · DOCUMENTS DUE OCT 1."
+      ],
+      "real": "2026-09-10 · YELWAH opens an investigation of NopeAI",
+      "realStart": "10:53",
+      "realDur": 17,
+      "reelDur": 3.0,
+      "fx": [
+        "freeze"
+      ]
+    },
+    {
+      "id": "9.25",
+      "act": "ACT TWO",
+      "kind": "setpiece",
+      "set": "skyline",
+      "style": "BASE",
+      "shot": "wide",
+      "chars": [
+        {
+          "id": "mario",
+          "pose": "stand",
+          "x": 0.2,
+          "face": "worried"
+        },
+        {
+          "id": "mas",
+          "pose": "stand",
+          "x": 0.5,
+          "face": "calm"
+        },
+        {
+          "id": "nole",
+          "pose": "phone",
+          "x": 0.8,
+          "face": "smile"
+        }
+      ],
+      "caption": "MIDPOINT · SUDDEN UNITY: Mario says pace; Mas and Nole agree. The sky cracks; every glass sloshes but his.",
+      "lines": [
+        {
+          "who": "mas",
+          "text": "i agree with mario…"
+        },
+        {
+          "who": "nole",
+          "text": "Mario is right."
+        }
+      ],
+      "vo": "for one afternoon, everyone agreed with me.",
+      "onscreen": [
+        "\"We Must Pace the Frontier\""
+      ],
+      "real": "2026-09-12 · MARIO publishes \"We Must Pace the Frontier\"",
+      "realStart": "11:10",
+      "realDur": 35,
+      "reelDur": 6.0,
+      "fx": [
+        "shake",
+        "flash"
+      ]
+    },
+    {
+      "id": "9.26",
+      "act": "ACT TWO",
+      "kind": "scene",
+      "set": "datacenter",
+      "style": "BASE",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "nave",
+          "pose": "stand",
+          "x": 0.3,
+          "face": "worried"
+        },
+        {
+          "id": "adelina",
+          "pose": "stand",
+          "x": 0.7,
+          "face": "calm"
+        }
+      ],
+      "caption": "Mario roast: NAVE's >10% sign fronts sprinting cranes. PRAK dissents on a ski-erg; SKCAS cites liability.",
+      "lines": [
+        {
+          "who": "adelina",
+          "text": "In plain English: slow down. After us."
+        }
+      ],
+      "onscreen": [
+        ">10%",
+        "PACE"
+      ],
+      "real": "2026-09-12 · PRAK and SKCAS dissent · NAVE: >10%",
+      "realStart": "11:45",
+      "realDur": 35,
+      "reelDur": 4.0
+    },
+    {
+      "id": "9.27",
+      "act": "ACT TWO",
+      "kind": "montage",
+      "set": "senate",
+      "style": "BASE",
+      "shot": "wide",
+      "chars": [
+        {
+          "id": "srednas",
+          "pose": "stand",
+          "x": 0.12,
+          "face": "calm"
+        },
+        {
+          "id": "nonnab",
+          "pose": "stand",
+          "x": 0.28,
+          "face": "calm"
+        },
+        {
+          "id": "the-former",
+          "pose": "stand",
+          "x": 0.45,
+          "face": "calm"
+        },
+        {
+          "id": "sirrah",
+          "pose": "stand",
+          "x": 0.6,
+          "face": "calm"
+        },
+        {
+          "id": "dj-ecnav",
+          "pose": "point",
+          "x": 0.76,
+          "face": "calm"
+        },
+        {
+          "id": "notnih",
+          "pose": "stand",
+          "x": 0.9,
+          "face": "worried"
+        }
+      ],
+      "caption": "Horseshoe week: SREDNAS and NONNAB share a magnet; THE FORMER's plan is blank; SIRRAH spells S-L-O-W.",
+      "lines": [
+        {
+          "who": "dj-ecnav",
+          "text": "If you're building Frankenstein, stop."
+        },
+        {
+          "who": "notnih",
+          "text": "Maybe a year, but not much more than a year."
+        }
+      ],
+      "onscreen": [
+        "PLAN: 0 words",
+        "S-L-O-W",
+        "ADJOURNED."
+      ],
+      "real": "2026-09-13→16 · the horseshoe week, both parties",
+      "realStart": "12:20",
+      "realDur": 50,
+      "reelDur": 5.0,
+      "fx": [
+        "split"
+      ]
+    },
+    {
+      "id": "9.28",
+      "act": "ACT TWO",
+      "kind": "scene",
+      "set": "street",
+      "style": "BASE",
+      "shot": "wide",
+      "chars": [
+        {
+          "id": "rumpt",
+          "pose": "arms-up",
+          "x": 0.5,
+          "face": "smug"
+        }
+      ],
+      "caption": "HTURT posts hail down on the city. RUMPT's HOAX BUSTER vacuum sucks the DOOM ghosts right out of the sky.",
+      "onscreen": [
+        "\"I am the Hoax Buster\"",
+        "\"WHOEVER WINS AI, WINS!\"",
+        "\"Mario (Misanthropic!)… 'perfect little angel'\""
+      ],
+      "real": "2026-09-14 · RUMPT's \"Hoax Buster\" posts",
+      "realStart": "13:10",
+      "realDur": 30,
+      "reelDur": 4.0,
+      "fx": [
+        "rain"
+      ]
+    },
+    {
+      "id": "9.29",
+      "act": "ACT TWO",
+      "kind": "scene",
+      "set": "stage",
+      "style": "BASE",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "skcas",
+          "pose": "sit",
+          "x": 0.25,
+          "face": "smile"
+        },
+        {
+          "id": "nesnej",
+          "pose": "arms-up",
+          "x": 0.62,
+          "face": "smile"
+        }
+      ],
+      "caption": "On the NI-LLA stage a golden speakerphone rises through the floor. NESNEJ holds it up to the crowd. KA-CHING.",
+      "lines": [
+        {
+          "who": "rumpt",
+          "text": "I'm telling you, it's a hoax."
+        }
+      ],
+      "onscreen": [
+        "BESTIES TAKE: IT'S A HOAX (PER CALLER)"
+      ],
+      "real": "2026-09-14 · NESNEJ puts RUMPT on speaker at the NI-LLA summit",
+      "realStart": "13:40",
+      "realDur": 25,
+      "reelDur": 3.5,
+      "fx": [
+        "pop"
+      ]
+    },
+    {
+      "id": "9.30",
+      "act": "ACT TWO",
+      "kind": "scene",
+      "set": "boardroom",
+      "style": "BASE",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "king-larches",
+          "pose": "stand",
+          "x": 0.35,
+          "face": "calm"
+        },
+        {
+          "id": "haras",
+          "pose": "stand",
+          "x": 0.62,
+          "face": "calm"
+        },
+        {
+          "id": "nesnej",
+          "pose": "stand",
+          "x": 0.85,
+          "face": "smile"
+        }
+      ],
+      "caption": "Dumfries: KING LARCHES hands HARAS, the CFO Mas sent, a printed speech. NESNEJ's jacket grows a pocket.",
+      "lines": [
+        {
+          "who": "king-larches",
+          "text": "Surely, we need sufficient means of control before it's all too late?"
+        }
+      ],
+      "real": "2026-09-17 · KING LARCHES's AI summit at Dumfries House",
+      "realStart": "14:05",
+      "realDur": 20,
+      "reelDur": 3.0
+    },
+    {
+      "id": "9.31",
+      "act": "ACT TWO",
+      "kind": "scene",
+      "set": "podium",
+      "style": "BASE",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "nivag-moswen",
+          "pose": "point",
+          "x": 0.35,
+          "face": "smug"
+        },
+        {
+          "id": "luhcoh",
+          "pose": "stand",
+          "x": 0.7,
+          "face": "calm"
+        }
+      ],
+      "caption": "MOSWEN wears his kill-switch order like a campaign button. Its cord knots with LUHCOH's around one lab's rack.",
+      "onscreen": [
+        "…ASLEEP AT THE WHEEL…"
+      ],
+      "real": "2026-09-18 · MOSWEN's kill-switch order · 2026-09-21 · LUHCOH's RAISE next steps",
+      "realStart": "14:25",
+      "realDur": 22,
+      "reelDur": 3.0
+    },
+    {
+      "id": "9.32",
+      "act": "ACT TWO",
+      "kind": "setpiece",
+      "set": "whitehouse",
+      "style": "BASE",
+      "shot": "wide",
+      "chars": [
+        {
+          "id": "rumpt",
+          "pose": "point",
+          "x": 0.3,
+          "face": "smug"
+        },
+        {
+          "id": "ai-force",
+          "pose": "stand",
+          "x": 0.62,
+          "face": "calm"
+        },
+        {
+          "id": "ai-force",
+          "pose": "stand",
+          "x": 0.8,
+          "face": "calm"
+        }
+      ],
+      "caption": "SET-PIECE + ACT-OUT: AI FORCE. A curtain drops on robot vacuums in gold dress uniforms, saluting.",
+      "lines": [
+        {
+          "who": "rumpt",
+          "text": "Only High I.Q. individuals need apply!"
+        }
+      ],
+      "onscreen": [
+        "AI CZAR: NEAR FUTURE",
+        "KORG 5: NEXT QUARTER",
+        "EO: PENDING"
+      ],
+      "real": "2026-09-19 · RUMPT announces an \"AI Force\" and an AI czar",
+      "realStart": "14:47",
+      "realDur": 58,
+      "reelDur": 6.0,
+      "fx": [
+        "pop"
+      ]
+    },
+    {
+      "id": "9.33",
+      "act": "ACT THREE",
+      "kind": "setpiece",
+      "set": "podium",
+      "style": "BASE",
+      "shot": "wide",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "sit",
+          "x": 0.14,
+          "face": "calm"
+        },
+        {
+          "id": "rumpt",
+          "pose": "point",
+          "x": 0.5,
+          "face": "smug"
+        },
+        {
+          "id": "orb",
+          "pose": "float",
+          "x": 0.86,
+          "face": "calm"
+        }
+      ],
+      "caption": "SET-PIECE: THE LABEL GUN AT THE NU. RUMPT relabels ARTIFICIAL as SUPER; patches reprint SI FORCE.",
+      "lines": [
+        {
+          "who": "rumpt",
+          "text": "The use of the word artificial makes intelligence fake…"
+        }
+      ],
+      "onscreen": [
+        "ARTIFICIAL → SUPER",
+        "SI FORCE",
+        "renamed: 1 technology"
+      ],
+      "real": "2026-09-22 · RUMPT at THE NU: \"artificial\" becomes \"super\"",
+      "realStart": "15:45",
+      "realDur": 70,
+      "reelDur": 7.0,
+      "fx": [
+        "flash",
+        "pop"
+      ]
+    },
+    {
+      "id": "9.34",
+      "act": "ACT THREE",
+      "kind": "scene",
+      "set": "senate",
+      "style": "BASE",
+      "shot": "wide",
+      "chars": [
+        {
+          "id": "melc",
+          "pose": "stand",
+          "x": 0.15,
+          "face": "calm"
+        },
+        {
+          "id": "mas",
+          "pose": "stand",
+          "x": 0.35,
+          "face": "smile"
+        },
+        {
+          "id": "mario",
+          "pose": "stand",
+          "x": 0.52,
+          "face": "calm"
+        },
+        {
+          "id": "oigneb",
+          "pose": "stand",
+          "x": 0.68,
+          "face": "calm"
+        }
+      ],
+      "caption": "Security Council, convened by NORCAM's France. Class photo: Mas, Mario, OIGNEB, MELC. One chair reads INVITED.",
+      "vo": "i've been in a lot of class photos. i'm always in the middle.",
+      "onscreen": [
+        "INVITED"
+      ],
+      "real": "2026-09-23 · UN Security Council session on AI",
+      "realStart": "16:55",
+      "realDur": 20,
+      "reelDur": 3.0
+    },
+    {
+      "id": "9.35",
+      "act": "ACT THREE",
+      "kind": "flashback",
+      "set": "street",
+      "style": "BASE",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "stand",
+          "x": 0.5,
+          "face": "calm"
+        }
+      ],
+      "caption": "FLASHBACK · SEP 2016, OAKLAND. Played straight: a mailbox, an envelope, a one-page basic-income pilot.",
+      "onscreen": [
+        "SEP 2016"
+      ],
+      "real": "2016-09 · WHY COMBINATOR Research basic-income pilot",
+      "realStart": "17:15",
+      "realDur": 30,
+      "reelDur": 4.5
+    },
+    {
+      "id": "9.36",
+      "act": "ACT THREE",
+      "kind": "scene",
+      "set": "senate",
+      "style": "BASE",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "sit",
+          "x": 0.22,
+          "face": "calm"
+        },
+        {
+          "id": "mario",
+          "pose": "sit",
+          "x": 0.42,
+          "face": "worried"
+        },
+        {
+          "id": "melc",
+          "pose": "sit",
+          "x": 0.62,
+          "face": "calm"
+        },
+        {
+          "id": "soistark",
+          "pose": "stand",
+          "x": 0.85,
+          "face": "angry"
+        }
+      ],
+      "caption": "The envelope becomes his briefing paper. Mas and Mario offer to slow down. SOISTARK stamps NO.",
+      "lines": [
+        {
+          "who": "mas",
+          "text": "we will slow down if needed"
+        },
+        {
+          "who": "melc",
+          "text": "fear-based narratives are not the right way to make decisions"
+        }
+      ],
+      "onscreen": [
+        "NO"
+      ],
+      "real": "2026-09-23 · US envoy rejects any global AI regime",
+      "realStart": "17:45",
+      "realDur": 35,
+      "reelDur": 4.5,
+      "fx": [
+        "pop"
+      ]
+    },
+    {
+      "id": "9.37",
+      "act": "ACT THREE",
+      "kind": "montage",
+      "set": "screen",
+      "style": "BASE",
+      "shot": "insert",
+      "chars": [
+        {
+          "id": "clod",
+          "pose": "stand",
+          "x": 0.15,
+          "face": "smile"
+        },
+        {
+          "id": "the-49-percent",
+          "pose": "stand",
+          "x": 0.5,
+          "face": "smug"
+        },
+        {
+          "id": "orb",
+          "pose": "float",
+          "x": 0.82,
+          "face": "calm"
+        }
+      ],
+      "caption": "Same week: CLOD 5.5 ships with less CLOD-ish prose. THE 49% pastes ESUM into THE GAP; the Orb flags it EDITED.",
+      "lines": [
+        {
+          "who": "clod",
+          "text": "You're… correct."
+        }
+      ],
+      "onscreen": [
+        "EDITED"
+      ],
+      "real": "2026-09-22 · CLOD 5.5 · 2026-09-23→24 · THE 49% posts, then deletes, an edited photo",
+      "realStart": "18:20",
+      "realDur": 15,
+      "reelDur": 3.0
+    },
+    {
+      "id": "9.38",
+      "act": "ACT THREE",
+      "kind": "setpiece",
+      "set": "dinner",
+      "style": "BASE",
+      "shot": "wide",
+      "chars": [
+        {
+          "id": "nole",
+          "pose": "sit",
+          "x": 0.3,
+          "face": "smile"
+        },
+        {
+          "id": "rumpt",
+          "pose": "stand",
+          "x": 0.47,
+          "face": "smug"
+        },
+        {
+          "id": "nesnej",
+          "pose": "sit",
+          "x": 0.6,
+          "face": "smile"
+        },
+        {
+          "id": "asil",
+          "pose": "sit",
+          "x": 0.72,
+          "face": "smile"
+        },
+        {
+          "id": "mas",
+          "pose": "sit",
+          "x": 0.9,
+          "face": "calm"
+        }
+      ],
+      "caption": "SET-PIECE: THE STATE DINNER. Seats sort by RUMPT's favor; Mas lands a table back. Mario has no card.",
+      "vo": "the second table is where the real conversations happen.",
+      "onscreen": [
+        "HEAD TABLE"
+      ],
+      "real": "2026-09-24 · White House state dinner for THE COUNTERPART; MARIO not on the guest list",
+      "realStart": "18:35",
+      "realDur": 45,
+      "reelDur": 6.0,
+      "fx": [
+        "pop"
+      ]
+    },
+    {
+      "id": "9.39",
+      "act": "ACT THREE",
+      "kind": "scene",
+      "set": "dinner",
+      "style": "BASE",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "rumpt",
+          "pose": "point",
+          "x": 0.45,
+          "face": "smile"
+        },
+        {
+          "id": "nole",
+          "pose": "sit",
+          "x": 0.78,
+          "face": "smile"
+        }
+      ],
+      "caption": "A mirrored podium speaks via earpiece; RUMPT, off script, leads a tour of the unfinished BALLROOM.",
+      "lines": [
+        {
+          "who": "the-counterpart",
+          "text": "…always under human control…"
+        },
+        {
+          "who": "rumpt",
+          "text": "Tremendous room. Watch the scaffolding."
+        }
+      ],
+      "onscreen": [
+        "BUILDING CODE: HIM."
+      ],
+      "real": "2026-09-24 · THE COUNTERPART: AI \"always under human control\" · RUMPT's off-script ballroom tour",
+      "realStart": "19:20",
+      "realDur": 30,
+      "reelDur": 4.0
+    },
+    {
+      "id": "9.40",
+      "act": "ACT THREE",
+      "kind": "scene",
+      "set": "dinner",
+      "style": "BASE",
+      "shot": "close",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "sit",
+          "x": 0.45,
+          "face": "calm"
+        },
+        {
+          "id": "orb",
+          "pose": "float",
+          "x": 0.78,
+          "face": "calm"
+        }
+      ],
+      "caption": "Second table: Mas gains one gold thread. The Orb, unprompted, replays the 2023 photo. Mario was in it.",
+      "onscreen": [
+        "+1 GOLD THREAD"
+      ],
+      "real": "2023-05-04 · the first White House AI CEO photo (Orb replay)",
+      "realStart": "19:50",
+      "realDur": 12,
+      "reelDur": 3.0,
+      "fx": [
+        "rewind"
+      ]
+    },
+    {
+      "id": "9.41",
+      "act": "ACT THREE",
+      "kind": "montage",
+      "set": "screen",
+      "style": "BASE",
+      "shot": "insert",
+      "chars": [
+        {
+          "id": "selbeep",
+          "pose": "stand",
+          "x": 0.3,
+          "face": "calm"
+        },
+        {
+          "id": "sama-nos",
+          "pose": "arms-up",
+          "x": 0.72,
+          "face": "smile"
+        }
+      ],
+      "caption": "SELBEEP flips the last switch: the AROS API goes dark. SAMA NOS tosses an $11.1B bond onto the Money-Go-Round.",
+      "onscreen": [
+        "AROS API: OFF",
+        "$11.1B"
+      ],
+      "real": "2026-09-24 · AROS API shut off · record $11.1B bond to fund NopeAI",
+      "realStart": "20:02",
+      "realDur": 15,
+      "reelDur": 3.0
+    },
+    {
+      "id": "9.42",
+      "act": "TAG",
+      "kind": "card",
+      "set": "skyline",
+      "style": "BASE",
+      "shot": "medium",
+      "chars": [
+        {
+          "id": "pope-oel-xiv",
+          "pose": "stand",
+          "x": 0.4,
+          "face": "calm"
+        },
+        {
+          "id": "norcam",
+          "pose": "stand",
+          "x": 0.7,
+          "face": "smile"
+        }
+      ],
+      "caption": "TODAY · SEP 25. THE COUNTERPART urges cooperation; POPE OEL XIV visits NORCAM, whose deepfakes bow.",
+      "onscreen": [
+        "TODAY · SEP 25"
+      ],
+      "real": "2026-09-25 · THE COUNTERPART urges AI cooperation · POPE OEL XIV meets NORCAM",
+      "realStart": "20:17",
+      "realDur": 22,
+      "reelDur": 3.0
+    },
+    {
+      "id": "9.43",
+      "act": "TAG",
+      "kind": "scene",
+      "set": "darkroom",
+      "style": "GLYPH",
+      "shot": "close",
+      "chars": [
+        {
+          "id": "mas",
+          "pose": "sit",
+          "x": 0.35,
+          "face": "calm"
+        },
+        {
+          "id": "calendar",
+          "pose": "stand",
+          "x": 0.8,
+          "face": "calm"
+        }
+      ],
+      "caption": "The dark room. Mas's monitor counts toward the next milestone, ticking faster than the wall calendar.",
+      "vo": "the calendar is fine. the calendar has always been fine.",
+      "onscreen": [
+        "intern: done. next: researcher. eta: ——"
+      ],
+      "realStart": "20:39",
+      "realDur": 23,
+      "reelDur": 3.5,
+      "fx": [
+        "glyph-dissolve"
+      ]
+    },
+    {
+      "id": "9.44",
+      "act": "TAG",
+      "kind": "card",
+      "set": "void",
+      "style": "BASE",
+      "shot": "wide",
+      "chars": [],
+      "caption": "The button. From here on the show is speculation: eps 10-12 carry question-mark dates.",
+      "onscreen": [
+        "EVERYTHING AFTER THIS IS SPECULATION."
+      ],
+      "realStart": "21:02",
+      "realDur": 15,
+      "reelDur": 3.0,
+      "fx": [
+        "flash"
+      ]
+    }
+  ]
+}

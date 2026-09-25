@@ -1,0 +1,279 @@
+{
+ "version": "reelbed 1.0 (2026-09-25)",
+ "reel": "show/reel/ep08.json",
+ "key": "ep08",
+ "episode": 8,
+ "title": "ep1.7_statute_of_limitations.pdf",
+ "speculative": false,
+ "error": null,
+ "frames": 4140,
+ "samples": 8280000,
+ "seconds": 172.5,
+ "fps": 24,
+ "sr": 48000,
+ "sum_reelDur_plus_title_s": 172.5,
+ "title_card_s": 3.0,
+ "beats": 44,
+ "loudness": {
+  "bed_short_term_target": -20.0,
+  "bed_short_term_median": -19.99,
+  "bed_short_term_p5": -20.42,
+  "bed_short_term_p95": -19.56,
+  "accent_momentary_target": -14.0,
+  "accent_momentary_max": [
+   -14.0,
+   -14.0,
+   -14.11,
+   -14.06,
+   -14.11,
+   -14.03,
+   -14.0
+  ],
+  "mix_integrated": -19.64,
+  "mix_true_peak_dbtp": -1.61,
+  "limiter_max_gr_db": 0.0,
+  "limiter_events": []
+ },
+ "layer_gain_db": {
+  "piano": 3.7,
+  "chip_pad": -24.71,
+  "tri": -29.41,
+  "arp": -10.0,
+  "knee": -15.85,
+  "beeper": -14.54,
+  "glyph": 5.64
+ },
+ "chords": [
+  {
+   "t": 3.0,
+   "chord": "Fm9",
+   "act": "COLD OPEN"
+  },
+  {
+   "t": 11.0,
+   "chord": "F9sus4",
+   "act": "INTRO"
+  },
+  {
+   "t": 14.5,
+   "chord": "Fm11",
+   "act": "ACT ONE"
+  },
+  {
+   "t": 23.5,
+   "chord": "Bbm9",
+   "act": "ACT ONE"
+  },
+  {
+   "t": 29.5,
+   "chord": "C7#9b13",
+   "act": "ACT ONE"
+  },
+  {
+   "t": 36.5,
+   "chord": "Fm9",
+   "act": "ACT ONE"
+  },
+  {
+   "t": 43.5,
+   "chord": "Eb9sus4",
+   "act": "ACT ONE"
+  },
+  {
+   "t": 47.0,
+   "chord": "Dbmaj9#11",
+   "act": "ACT TWO"
+  },
+  {
+   "t": 54.0,
+   "chord": "Eb9sus4",
+   "act": "ACT TWO"
+  },
+  {
+   "t": 62.0,
+   "chord": "Fm11",
+   "act": "ACT TWO"
+  },
+  {
+   "t": 68.0,
+   "chord": "Eb9sus4",
+   "act": "ACT TWO"
+  },
+  {
+   "t": 73.5,
+   "chord": "Dbmaj9#11",
+   "act": "ACT TWO"
+  },
+  {
+   "t": 80.0,
+   "chord": "Bbm9",
+   "act": "ACT TWO"
+  },
+  {
+   "t": 86.0,
+   "chord": "Dbmaj9#11",
+   "act": "ACT TWO"
+  },
+  {
+   "t": 92.0,
+   "chord": "Gm7b5",
+   "act": "ACT TWO"
+  },
+  {
+   "t": 100.0,
+   "chord": "C7#9b13",
+   "act": "ACT TWO"
+  },
+  {
+   "t": 103.5,
+   "chord": "Bbm9",
+   "act": "ACT TWO"
+  },
+  {
+   "t": 110.0,
+   "chord": "Dbmaj9#11",
+   "act": "ACT TWO"
+  },
+  {
+   "t": 117.0,
+   "chord": "Eb9sus4",
+   "act": "ACT TWO"
+  },
+  {
+   "t": 121.5,
+   "chord": "C7#9b13",
+   "act": "ACT TWO"
+  },
+  {
+   "t": 127.5,
+   "chord": "Bbm9",
+   "act": "ACT THREE"
+  },
+  {
+   "t": 134.5,
+   "chord": "Fm11",
+   "act": "ACT THREE"
+  },
+  {
+   "t": 140.0,
+   "chord": "Bbm9",
+   "act": "ACT THREE"
+  },
+  {
+   "t": 146.5,
+   "chord": "Dbmaj9#11",
+   "act": "ACT THREE"
+  },
+  {
+   "t": 152.0,
+   "chord": "Fm9",
+   "act": "ACT THREE"
+  },
+  {
+   "t": 156.5,
+   "chord": "Eb9sus4",
+   "act": "ACT THREE"
+  },
+  {
+   "t": 164.5,
+   "chord": "Fm9",
+   "act": "TAG"
+  },
+  {
+   "t": 168.5,
+   "chord": "F9sus4",
+   "act": "TAG"
+  }
+ ],
+ "accents": [
+  {
+   "t": 0.0,
+   "kind": "title-sting",
+   "src": "V1 master f478-540 (bar 9 roll call)",
+   "raw_lufs_m": -9.5,
+   "lufs_m": -14.0
+  },
+  {
+   "t": 11.0,
+   "kind": "intro",
+   "beat": "8.03",
+   "chord": "F9sus4",
+   "src": "V1 master f630+ (title)",
+   "raw_lufs_m": -10.1,
+   "lufs_m": -14.0
+  },
+  {
+   "t": 29.5,
+   "kind": "brass",
+   "beat": "8.08",
+   "chord": "C7#9b13",
+   "src": "V1 brass f420 + chip",
+   "raw_lufs_m": -13.0,
+   "lufs_m": -14.11
+  },
+  {
+   "t": 103.5,
+   "kind": "brass",
+   "beat": "8.29",
+   "chord": "Bbm9",
+   "src": "V1 brass f360 + chip",
+   "raw_lufs_m": -12.6,
+   "lufs_m": -14.06
+  },
+  {
+   "t": 121.5,
+   "kind": "brass",
+   "beat": "8.33",
+   "chord": "C7#9b13",
+   "src": "V1 brass f420 + chip",
+   "raw_lufs_m": -13.0,
+   "lufs_m": -14.11
+  },
+  {
+   "t": 134.5,
+   "kind": "brass",
+   "beat": "8.36",
+   "chord": "Fm11",
+   "src": "V1 brass f240 + chip",
+   "raw_lufs_m": -13.2,
+   "lufs_m": -14.03
+  },
+  {
+   "t": 146.5,
+   "kind": "brass",
+   "beat": "8.39",
+   "chord": "Dbmaj9#11",
+   "src": "V1 brass f300 + chip",
+   "raw_lufs_m": -13.0,
+   "lufs_m": -14.0
+  }
+ ],
+ "flashback_regions": [
+  [
+   51.0,
+   57.5
+  ],
+  [
+   68.0,
+   86.0
+  ],
+  [
+   88.5,
+   92.0
+  ]
+ ],
+ "glyph_regions": [
+  [
+   164.5,
+   168.5
+  ]
+ ],
+ "intro_regions": [
+  [
+   11.0,
+   14.5
+  ]
+ ],
+ "render_s": 71.6,
+ "inputs_hash": "e3226f50318cb560"
+}

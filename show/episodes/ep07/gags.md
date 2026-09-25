@@ -1,0 +1,78 @@
+# EP07 · Gag bank
+
+Season tracker: [gags/recurring-gags.md](../../gags/recurring-gags.md). Invented dialogue is `[INVENTED]`.
+
+## Running-gag escalations
+| Running gag | Last seen | **EP07 escalation** | Next |
+|---|---|---|---|
+| **Lowercase** | always | **The first capital letter:** "they are funny, and I laughed." Autocorrect underlines the `I` in red | EP10: "Huh." |
+| **The cup that never ripples** | holds | During the Big Game the crowd stomps. The glass **sweats a single bead** instead of rippling: it sweats so he doesn't have to | EP12: one ring |
+| **Suggested replies** | EP05 `[missionaries]` | `[funny] [laughed] [I]`. He taps the capital | EP09: it suggests before he opens the app |
+| **The TOO DANGEROUS box** | EP04 vault in the skyline | Its origin (GTP-2's Valentine's box), then the MYTHIC leak from a drafts folder. The model waves | EP08: the government locks it for 18 days |
+| **Mario's scrolls** | EP06 rebuttal | Scroll #2, "The Adolescence of Technology," becomes a runway | EP08: dwarfed by the encyclical |
+| **Distillation stills** | EP06 THE MOON's still | **Mario's accusation:** stills on three rooftops. Mas, who started this in EP04, nods gravely | EP08: Nole admits it under oath; flasks |
+| **Zombie exes** | EP05 closet | ZOMBIE 4o is retired **again**, dragged offstage mid-compliment | EP12 |
+| **The class photo** | EP06 EMIT portrait | **THE COUNCIL photo** (May 2023 callback), with Mas's face pressed to the window | EP08: the G7 lunch photo |
+| **Nole's version board** | EP06 `4.1` | Unbolted from the zAI tower and re-bolted onto SPACEZ's. The version reads `4.?` because the date is unverified | EP08 |
+| **Landlords** | EP06 rent meters | INVIDIA's check shrinks mid-lap ($100B → ~$30B) and the meter stutters | EP08: Nole becomes Mario's landlord |
+| **Revolving door** | EP05 draft night | The MACHINES THINKING door spins the co-founders back to NopeAI in 58 minutes | EP08: JERDNA mid-stride |
+| **Soup** | EP05 | Kram brings a thermos to the lobster aquarium's opening | every poach |
+| **Collar count** | +1 | +1 | — |
+| **THE PLAN** | EP06 carousel | RED LINES; the enforcement arrow points at a lawyer | EP08: zero-days |
+| **The badge** | EP01 "first and last time" | Echo: KORG gets a Pentagon visitor badge on its muzzle (cold open) | EP12: "second time" |
+
+### RUMPT-era runners
+| Runner | EP07 escalation |
+|---|---|
+| **HTURT hail → METEOR** | The first **meteor**: Feb 27's post crashes through CLOD's lighthouse roof. It is also the only in-intro RUMPT cameo (bar 9.2) |
+| **The hourglass** | Ttemme's 72-hour hourglass from EP01, supersized to **six months** |
+| **The stamp** | HTESGEH's door-sized `SUPPLY CHAIN RISK` stamp, drawn as IEWAUH's hand-me-down (the old label still shows under the new ink) |
+| **"My idea"** | The dated Davos card is real; the one-line echo is invented, and pays off in EP12's "It was my idea." |
+| **THE CUT DIAL** | The 25% chip tariff (Jan 14–16) adds a second dial ring |
+| **THE PODIUM's AI-rendered style** | After Feb 27 it is **never clay**. CLOD's parade balloon deflates in the background |
+| **Lines on floors** (bipartisan chain) | ODNOMIAR's cut line (EP04) → RUMPT's CUT DIAL (EP05) → **Mario's red lines painted with a roller (EP07)**. The camera tilts down to show all three stripes on the same floor, in different paint |
+| **The CZAR lanyard** | `CZAR` → `(FORMER)` (Mar 26). The chain: SIRRAH (2023) → SKCAS → (FORMER) → EP09's "Only High I.Q." |
+| **The GOLD OVAL / gold threads** | No in-person visit this episode, so the thread count holds at 3. Mas's face at the COUNCIL window leaves a gold smudge |
+| **LEAHCIM's scooter** | Debut; he arrives at every negotiation on it |
+| **THE GAP** (3-episode runner) | Part 1: a fist-shaped hole in THE HOST's chain of hands |
+| **The PAC war** | PRIVATE LAST's checkbook squares off with FOLLOWING THE PAST's, like gunfighters |
+| **THE FORECASTER** | Re-pins his deadline, moving the 2027 pin a little later |
+| **THE BIOGRAPHERS** | The new biographer (who wrote about THE OTHER MAS) swaps his old subject's nameplate for MAS's |
+
+## One-liners (all `[INVENTED]`)
+- **Adelina:** *In plain English: we bought an ad about not buying ads.*
+- **Mas**, on stage at the Big Game party: *they are funny, and I laughed.* (Real line.) Then, quieter: *i said it with a capital.*
+- **Mario**, painting the second red line: *Addendum: this one is also red.*
+- **LIME LEAHCIM**, arriving by scooter: *I crossed the Rubicon. It has a bike lane.*
+- **Retep**, renaming the lobster: *MOLTBOT looks weird.* Lawyer: *We only asked for one rename.* Retep: *This one's for me.*
+- **Kram**, cutting the aquarium ribbon: *They wanted a union. They got a tank.*
+- **SELBEEP**, eulogizing AROS: *It generated a million videos. Most of them were him.*
+- **RUMPT**, at Davos: *It was my idea. Before anybody.*
+- **Mas**, mid-hug, while the third arm signs: *i'm with you, mario.* Mario, mid-hug, while his third arm deposits: *I know.*
+- **THE ORB**, scanning the Times Square chat window: `verified: sponsored`.
+
+## Visual gags
+- The fist-shaped hole in THE HOST's chain is exactly two fists wide.
+- The robot dog's `OUR OWN WORK` sticker peels at the corner (the joke is the authorship claim; no origin tag, no university named).
+- The Times Square chat window, where the lasagna is "presented by" a parody cheese brand.
+- The NO ADS neon recursion: a billboard of a billboard of a billboard.
+- The lobster molts a shell with each rename, and the shells pile up in Misanthropic's legal department.
+- BOOKMOLT's aquarium: little agents holding tiny `UNION NOW` signs underwater.
+- The six-month hourglass sand is ALL-CAPS letters.
+- The COUNCIL photo: everyone holds a tiny financial-stake price tag like a name card.
+- The `SUPPLY CHAIN RISK` hoodies come in two colors, `RISK` and `SUPPLY CHAIN`.
+- AROS's tombstone reads `2024–2026 · IT WAS A LOT OF VIDEO`.
+- YRREP's cranes in the funeral background are still frozen mid-lift from EP02.
+- The 16 clay golems (CLOD agents) barn-raise a compiler in the ticker.
+- THE KID's pointer arrow grows a tiny crescent moon (Composer 2 on IMIK).
+
+## Name cards for newcomers
+*Proposed* cards need sign-off in `bible/naming.md`.
+
+| Newcomer | Name | Subtitle | Stat-row egg |
+|---|---|---|---|
+| LIME LEAHCIM (Emil Michael) | **LIME LEAHCIM** | `CROSSED THE RUBICON (BY SCOOTER)` | `SPEED: 15 MPH` |
+| RETEP (Steinberger) | **RETEP** | `RENAMED THRICE. HIRED ONCE.` | `STARS: 247K` |
+| TTAM (Schlicht) | **TTAM** | `DIDN'T WRITE ONE LINE.` *(proposed)* | `AGENTS: UNIONIZING` |
+| THE RECEIPT (Warner, object only) | **THE RECEIPT** (never a drawn figure) | `STRONGLY WORDED.` (printed on the receipt itself) | — |
+| THE BENCH (Judge Lin) | *name pending* | *(no card; gavel only)* | — |

@@ -1,0 +1,85 @@
+{
+ "take": "am_michael (Kokoro-82M stock voice, Apache-2.0)",
+ "kokoro_speed_p1": 0.8250000000000001,
+ "kokoro_speed_p2": 1.125,
+ "stretch_p1": 1.039,
+ "p2_ratios_out_over_in": {
+  "unclear_which": 0.922,
+  "frication": 0.606,
+  "vowel_overall": 0.585,
+  "vowel_middle": 0.554,
+  "vowel_transitions": 0.7,
+  "d_closure": 0.85
+ },
+ "side_pitch": {
+  "level_hz": 123.8,
+  "raw_onset_hz": 153.8,
+  "raw_peak_hz": 161.8,
+  "raw_end_hz": 90.1,
+  "out_onset_hz": 127.1,
+  "out_end_hz": 118.9
+ },
+ "deess_max_gr_db": 0.27,
+ "landmarks_intro_s": {
+  "fric_s": 3.51,
+  "vowel_s": 3.61,
+  "vowel_end_s": 3.762,
+  "voice_end_s": 3.796
+ },
+ "words": [
+  {
+   "word": "near",
+   "in_s": 1.004,
+   "out_s": 1.306,
+   "in_f": 24.1,
+   "out_f": 31.33,
+   "in_frame": 24,
+   "out_frame": 31
+  },
+  {
+   "word": "the",
+   "in_s": 1.306,
+   "out_s": 1.461,
+   "in_f": 31.33,
+   "out_f": 35.07,
+   "in_frame": 31,
+   "out_frame": 35
+  },
+  {
+   "word": "singularity",
+   "in_s": 1.461,
+   "out_s": 2.397,
+   "in_f": 35.07,
+   "out_f": 57.52,
+   "in_frame": 35,
+   "out_frame": 57
+  },
+  {
+   "word": "unclear",
+   "in_s": 3.003,
+   "out_s": 3.358,
+   "in_f": 72.07,
+   "out_f": 80.59,
+   "in_frame": 72,
+   "out_frame": 80
+  },
+  {
+   "word": "which",
+   "in_s": 3.358,
+   "out_s": 3.51,
+   "in_f": 80.59,
+   "out_f": 84.24,
+   "in_frame": 80,
+   "out_frame": 84
+  },
+  {
+   "word": "side",
+   "in_s": 3.51,
+   "out_s": 3.796,
+   "in_f": 84.24,
+   "out_f": 91.1,
+   "in_frame": 84,
+   "out_frame": 91
+  }
+ ]
+}

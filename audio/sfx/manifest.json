@@ -1,0 +1,5389 @@
+[
+ {
+  "id": "room_drone",
+  "description": "Dark-room sub drone: F1 + C2 open fifth (no third), slow breathing, faint air. Seamless 4-bar loop.",
+  "pitch": "F1+C2 (open fifth)",
+  "useAt": "Cold open f0-119 (fade in from f0); returns f690-719 and fades out by f719.",
+  "category": "room",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": true,
+  "frames": [
+   0,
+   690
+  ],
+  "anchor": "start",
+  "file": "wav/room_drone.wav",
+  "preview": "mp3/room_drone.mp3",
+  "duration": 10.0,
+  "durationFrames": 240.0,
+  "levels": {
+   "lufsIntegrated": -14.0,
+   "lufsMomentaryMax": -12.5,
+   "truePeakDb": -4.65
+  },
+  "normGainDb": -6.96,
+  "normMode": "integrated",
+  "mixDb": -10,
+  "measuredPeak": "F1 +4c (43.8 Hz)"
+ },
+ {
+  "id": "server_hum",
+  "description": "Server hum bed tuned to F (87.3 Hz electrical + F3/C4 fan tones), rack fans, rare drive ticks. Seamless loop.",
+  "pitch": "F2 hum, F3/C4 fan tones",
+  "useAt": "Cold open f0-119 under the drone; any server-room scene.",
+  "category": "room",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": true,
+  "frames": [
+   0
+  ],
+  "anchor": "start",
+  "file": "wav/server_hum.wav",
+  "preview": "mp3/server_hum.mp3",
+  "duration": 10.0,
+  "durationFrames": 240.0,
+  "levels": {
+   "lufsIntegrated": -14.0,
+   "lufsMomentaryMax": -13.5,
+   "truePeakDb": -4.53
+  },
+  "normGainDb": -0.84,
+  "normMode": "integrated",
+  "mixDb": -20,
+  "measuredPeak": "F2 +1c (87.3 Hz)"
+ },
+ {
+  "id": "room_tone",
+  "description": "Neutral dark-room tone (soft air, distant HVAC). Seamless loop; the unmuted bus under 'FIRED.'",
+  "pitch": null,
+  "useAt": "Slot 9.2 f495-509 (music muted); any quiet interior.",
+  "category": "room",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": true,
+  "frames": [
+   495
+  ],
+  "anchor": "start",
+  "file": "wav/room_tone.wav",
+  "preview": "mp3/room_tone.mp3",
+  "duration": 5.0,
+  "durationFrames": 120.0,
+  "levels": {
+   "lufsIntegrated": -14.0,
+   "lufsMomentaryMax": -13.6,
+   "truePeakDb": -2.85
+  },
+  "normGainDb": -1.08,
+  "normMode": "integrated",
+  "mixDb": -24
+ },
+ {
+  "id": "key_tap_soft_01",
+  "description": "Soft felt-damped keyboard key (round-robin 1/6): muted thock, gentle upstroke.",
+  "pitch": null,
+  "useAt": "Mas typing (cold open f0-111; pixel scenes). Trigger per keystroke; randomize RR.",
+  "category": "ui",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "file": "wav/key_tap_soft_01.wav",
+  "preview": "mp3/key_tap_soft_01.mp3",
+  "duration": 0.217,
+  "durationFrames": 5.2,
+  "levels": {
+   "lufsIntegrated": -18.2,
+   "lufsMomentaryMax": -18.2,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 3.94,
+  "normMode": "momentary",
+  "mixDb": -18
+ },
+ {
+  "id": "key_tap_soft_02",
+  "description": "Soft felt-damped keyboard key (round-robin 2/6): muted thock, gentle upstroke.",
+  "pitch": null,
+  "useAt": "Mas typing (cold open f0-111; pixel scenes). Trigger per keystroke; randomize RR.",
+  "category": "ui",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "file": "wav/key_tap_soft_02.wav",
+  "preview": "mp3/key_tap_soft_02.mp3",
+  "duration": 0.22,
+  "durationFrames": 5.3,
+  "levels": {
+   "lufsIntegrated": -20.8,
+   "lufsMomentaryMax": -20.8,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 0.88,
+  "normMode": "momentary",
+  "mixDb": -18
+ },
+ {
+  "id": "key_tap_soft_03",
+  "description": "Soft felt-damped keyboard key (round-robin 3/6): muted thock, gentle upstroke.",
+  "pitch": null,
+  "useAt": "Mas typing (cold open f0-111; pixel scenes). Trigger per keystroke; randomize RR.",
+  "category": "ui",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "file": "wav/key_tap_soft_03.wav",
+  "preview": "mp3/key_tap_soft_03.mp3",
+  "duration": 0.209,
+  "durationFrames": 5.0,
+  "levels": {
+   "lufsIntegrated": -21.5,
+   "lufsMomentaryMax": -21.5,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 0.45,
+  "normMode": "momentary",
+  "mixDb": -18
+ },
+ {
+  "id": "key_tap_soft_04",
+  "description": "Soft felt-damped keyboard key (round-robin 4/6): muted thock, gentle upstroke.",
+  "pitch": null,
+  "useAt": "Mas typing (cold open f0-111; pixel scenes). Trigger per keystroke; randomize RR.",
+  "category": "ui",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "file": "wav/key_tap_soft_04.wav",
+  "preview": "mp3/key_tap_soft_04.mp3",
+  "duration": 0.216,
+  "durationFrames": 5.2,
+  "levels": {
+   "lufsIntegrated": -21.3,
+   "lufsMomentaryMax": -21.3,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 0.7,
+  "normMode": "momentary",
+  "mixDb": -18
+ },
+ {
+  "id": "key_tap_soft_05",
+  "description": "Soft felt-damped keyboard key (round-robin 5/6): muted thock, gentle upstroke.",
+  "pitch": null,
+  "useAt": "Mas typing (cold open f0-111; pixel scenes). Trigger per keystroke; randomize RR.",
+  "category": "ui",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "file": "wav/key_tap_soft_05.wav",
+  "preview": "mp3/key_tap_soft_05.mp3",
+  "duration": 0.211,
+  "durationFrames": 5.1,
+  "levels": {
+   "lufsIntegrated": -20.9,
+   "lufsMomentaryMax": -20.9,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 0.78,
+  "normMode": "momentary",
+  "mixDb": -18
+ },
+ {
+  "id": "key_tap_soft_06",
+  "description": "Soft felt-damped keyboard key (round-robin 6/6): muted thock, gentle upstroke.",
+  "pitch": null,
+  "useAt": "Mas typing (cold open f0-111; pixel scenes). Trigger per keystroke; randomize RR.",
+  "category": "ui",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "file": "wav/key_tap_soft_06.wav",
+  "preview": "mp3/key_tap_soft_06.mp3",
+  "duration": 0.22,
+  "durationFrames": 5.3,
+  "levels": {
+   "lufsIntegrated": -20.5,
+   "lufsMomentaryMax": -20.5,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 1.39,
+  "normMode": "momentary",
+  "mixDb": -18
+ },
+ {
+  "id": "key_tap_space",
+  "description": "Soft space bar: lower thock with a faint stabilizer wire.",
+  "pitch": null,
+  "useAt": "Word breaks while typing.",
+  "category": "ui",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "file": "wav/key_tap_space.wav",
+  "preview": "mp3/key_tap_space.mp3",
+  "duration": 0.208,
+  "durationFrames": 5.0,
+  "levels": {
+   "lufsIntegrated": -20.5,
+   "lufsMomentaryMax": -20.5,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": -1.93,
+  "normMode": "momentary",
+  "mixDb": -18
+ },
+ {
+  "id": "typing_soft",
+  "description": "Soft typing phrase (~4 s): the Ep1 post 'near the singularity; unclear which side.' typed in human bursts.",
+  "pitch": null,
+  "useAt": "Cold open, under VO (duck -6 dB); pixel room scenes (Mas typing).",
+  "category": "ui",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   24
+  ],
+  "anchor": "start",
+  "file": "wav/typing_soft.wav",
+  "preview": "mp3/typing_soft.mp3",
+  "duration": 4.836,
+  "durationFrames": 116.1,
+  "levels": {
+   "lufsIntegrated": -18.4,
+   "lufsMomentaryMax": -16.3,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": -0.3,
+  "normMode": "integrated",
+  "mixDb": -16
+ },
+ {
+  "id": "felt_key_mech_01",
+  "description": "Felt-piano key mechanics (RR 1/3): key-bed thud, felt hammer 'whump', soft damper return. Layer under the music's felt piano notes for intimacy.",
+  "pitch": null,
+  "useAt": "Cold open felt piano F5 at f0/f15/f30/f45 (layer at -18 dB); any close-miked piano moment.",
+  "category": "room",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   0,
+   15,
+   30,
+   45
+  ],
+  "anchor": "start",
+  "file": "wav/felt_key_mech_01.wav",
+  "preview": "mp3/felt_key_mech_01.mp3",
+  "duration": 0.455,
+  "durationFrames": 10.9,
+  "levels": {
+   "lufsIntegrated": -20.5,
+   "lufsMomentaryMax": -20.5,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 4.0,
+  "normMode": "momentary",
+  "mixDb": -20
+ },
+ {
+  "id": "felt_key_mech_02",
+  "description": "Felt-piano key mechanics (RR 2/3): key-bed thud, felt hammer 'whump', soft damper return. Layer under the music's felt piano notes for intimacy.",
+  "pitch": null,
+  "useAt": "Cold open felt piano F5 at f0/f15/f30/f45 (layer at -18 dB); any close-miked piano moment.",
+  "category": "room",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   0,
+   15,
+   30,
+   45
+  ],
+  "anchor": "start",
+  "file": "wav/felt_key_mech_02.wav",
+  "preview": "mp3/felt_key_mech_02.mp3",
+  "duration": 0.421,
+  "durationFrames": 10.1,
+  "levels": {
+   "lufsIntegrated": -22.4,
+   "lufsMomentaryMax": -22.4,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 4.39,
+  "normMode": "momentary",
+  "mixDb": -20
+ },
+ {
+  "id": "felt_key_mech_03",
+  "description": "Felt-piano key mechanics (RR 3/3): key-bed thud, felt hammer 'whump', soft damper return. Layer under the music's felt piano notes for intimacy.",
+  "pitch": null,
+  "useAt": "Cold open felt piano F5 at f0/f15/f30/f45 (layer at -18 dB); any close-miked piano moment.",
+  "category": "room",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   0,
+   15,
+   30,
+   45
+  ],
+  "anchor": "start",
+  "file": "wav/felt_key_mech_03.wav",
+  "preview": "mp3/felt_key_mech_03.mp3",
+  "duration": 0.415,
+  "durationFrames": 10.0,
+  "levels": {
+   "lufsIntegrated": -24.4,
+   "lufsMomentaryMax": -24.4,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 2.48,
+  "normMode": "momentary",
+  "mixDb": -20
+ },
+ {
+  "id": "post_click",
+  "description": "The Post click: crisp two-stage mouse click with a barely-there F6 'sent' glint (8-bit tick underneath).",
+  "pitch": "F6 glint",
+  "useAt": "Cold open f112 (Mas clicks Post); any UI confirm.",
+  "category": "ui",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   112
+  ],
+  "anchor": "start",
+  "file": "wav/post_click.wav",
+  "preview": "mp3/post_click.mp3",
+  "duration": 0.368,
+  "durationFrames": 8.8,
+  "levels": {
+   "lufsIntegrated": -23.1,
+   "lufsMomentaryMax": -23.1,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": -0.34,
+  "normMode": "momentary",
+  "mixDb": -8,
+  "measuredPeak": "F6 -1c (1395.8 Hz)"
+ },
+ {
+  "id": "post_click--chip",
+  "description": "Post click, 8-bit flavor: LFSR tick + 1-bit F6/C7 blip.",
+  "pitch": "F6-C7",
+  "useAt": "Cold open f112 (alt).",
+  "category": "ui",
+  "flavor": "chip",
+  "variantOf": "post_click",
+  "loop": false,
+  "frames": [
+   112
+  ],
+  "anchor": "start",
+  "file": "wav/post_click--chip.wav",
+  "preview": "mp3/post_click--chip.mp3",
+  "duration": 0.221,
+  "durationFrames": 5.3,
+  "levels": {
+   "lufsIntegrated": -15.5,
+   "lufsMomentaryMax": -15.5,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": -1.03,
+  "normMode": "momentary",
+  "mixDb": -10,
+  "measuredPeak": "F6 +8c (1403.7 Hz)"
+ },
+ {
+  "id": "orb_servo",
+  "description": "Orb iris servo: precise micro-motor accelerate/cruise/stop, gear buzz, soft end-stop tick and iris blades.",
+  "pitch": "motor cruises on C5/F5 harmonics",
+  "useAt": "Cold open f97 (Orb's iris swivels to lens); any Orb movement.",
+  "category": "orb",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   97
+  ],
+  "anchor": "start",
+  "file": "wav/orb_servo.wav",
+  "preview": "mp3/orb_servo.mp3",
+  "duration": 0.652,
+  "durationFrames": 15.6,
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -6.44
+  },
+  "normGainDb": -1.21,
+  "normMode": "momentary",
+  "mixDb": -10,
+  "measuredPeak": "G4 +25c (397.7 Hz)"
+ },
+ {
+  "id": "orb_scan_sweep",
+  "description": "Orb scan 'shhk': bright tuned (F) noise fan sweeping L->R with token glitter; a 5-frame glimpse of a vast cathedral tail.",
+  "pitch": "comb-tuned to F",
+  "useAt": "Cold open f100 (scan fan sweeps; 5-frame GLYPH cathedral reveal f99-104).",
+  "category": "orb",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   100
+  ],
+  "anchor": "start",
+  "file": "wav/orb_scan_sweep.wav",
+  "preview": "mp3/orb_scan_sweep.mp3",
+  "duration": 1.6,
+  "durationFrames": 38.4,
+  "levels": {
+   "lufsIntegrated": -16.3,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -2.54
+  },
+  "normGainDb": 5.63,
+  "normMode": "momentary",
+  "mixDb": -8,
+  "measuredPeak": "Ab6 -43c (1620.7 Hz)"
+ },
+ {
+  "id": "glyph_shimmer",
+  "description": "GLYPH shimmer: the world turning to tokens. Sparse tuned grain cloud (F minor with a Db/G ache), frozen partials, sub pressure, pre-verb swell. Subtle, eerie.",
+  "pitch": "F5-F7 grains (F C Db G Ab)",
+  "useAt": "Any GLYPH switch (Orb-scan cathedral f99-104 layer; iris f705ish; foreshadow beats).",
+  "category": "glyph",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   99
+  ],
+  "anchor": "start",
+  "file": "wav/glyph_shimmer.wav",
+  "preview": "mp3/glyph_shimmer.mp3",
+  "duration": 2.752,
+  "durationFrames": 66.0,
+  "levels": {
+   "lufsIntegrated": -14.0,
+   "lufsMomentaryMax": -11.6,
+   "truePeakDb": -2.48
+  },
+  "normGainDb": -13.54,
+  "normMode": "integrated",
+  "mixDb": -14,
+  "measuredPeak": "F1 -3c (43.6 Hz)"
+ },
+ {
+  "id": "glyph_blink",
+  "description": "Two-frame GLYPH blink: a tiny pre-verbed token sparkle for the Orb iris showing the skyline in tokens.",
+  "pitch": "F6/C7",
+  "useAt": "Title: iris shows the skyline in GLYPH for 2 frames on the last beat (~f705). Sparkle at +0.25 s (pre-verb before it).",
+  "category": "glyph",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   705
+  ],
+  "anchor": "hit",
+  "file": "wav/glyph_blink.wav",
+  "preview": "mp3/glyph_blink.mp3",
+  "duration": 0.95,
+  "durationFrames": 22.8,
+  "levels": {
+   "lufsIntegrated": -17.2,
+   "lufsMomentaryMax": -16.8,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": -8.53,
+  "normMode": "momentary",
+  "mixDb": -18,
+  "syncOffset": 0.25,
+  "measuredPeak": "Db7 +26c (2251.3 Hz)"
+ },
+ {
+  "id": "glyph_dissolve",
+  "description": "GLYPH dissolve/blow-away: a tile crumbles into tuned tokens that scatter outward and rise, carried off by a soft gust.",
+  "pitch": "F minor grains rising",
+  "useAt": "Slot 9.2 ~f500 (Mas's call tile dissolves into tokens and blows away).",
+  "category": "glyph",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   500
+  ],
+  "anchor": "start",
+  "file": "wav/glyph_dissolve.wav",
+  "preview": "mp3/glyph_dissolve.mp3",
+  "duration": 2.077,
+  "durationFrames": 49.9,
+  "levels": {
+   "lufsIntegrated": -16.1,
+   "lufsMomentaryMax": -11.3,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": -6.68,
+  "normMode": "integrated",
+  "mixDb": -12,
+  "measuredPeak": "B6 +24c (2003.5 Hz)"
+ },
+ {
+  "id": "render_front_sweep",
+  "description": "Render-front sweep (palette upgrade): a glowing scanline glides F4->F6 while the audio itself upgrades from 1-bit to clean, ending on a glassy settle.",
+  "pitch": "F4 -> F6, settles on F6/C7",
+  "useAt": "f168-179 (1-bit -> 240p front); any palette upgrade (1-bit -> early-web -> base).",
+  "category": "render",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   168
+  ],
+  "anchor": "start",
+  "file": "wav/render_front_sweep.wav",
+  "preview": "mp3/render_front_sweep.mp3",
+  "duration": 2.203,
+  "durationFrames": 52.9,
+  "levels": {
+   "lufsIntegrated": -14.0,
+   "lufsMomentaryMax": -11.7,
+   "truePeakDb": -5.95
+  },
+  "normGainDb": -4.0,
+  "normMode": "integrated",
+  "mixDb": -8,
+  "measuredPeak": "Db5 -18c (548.8 Hz)"
+ },
+ {
+  "id": "shockwave_bloom",
+  "description": "Radial shockwave re-skin into glass and bloom: air blast, low whump and a tuned glass shimmer (F/C, no third).",
+  "pitch": "F/C glass",
+  "useAt": "Slot 9.1 f480 (CHATGTP button: set re-renders in glass and bloom).",
+  "category": "render",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   480
+  ],
+  "anchor": "start",
+  "file": "wav/shockwave_bloom.wav",
+  "preview": "mp3/shockwave_bloom.mp3",
+  "duration": 2.267,
+  "durationFrames": 54.4,
+  "levels": {
+   "lufsIntegrated": -17.7,
+   "lufsMomentaryMax": -11.3,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": -1.15,
+  "normMode": "integrated",
+  "mixDb": -8,
+  "measuredPeak": "F1 +19c (44.1 Hz)"
+ },
+ {
+  "id": "reverse_swell_1beat",
+  "description": "Reverse cymbal + air swell, exactly 1 beat (15 frames); the FILE END is the hit.",
+  "pitch": null,
+  "useAt": "End on f120 (drop; place at f105) and f540 (place at f525). Anchor = end.",
+  "category": "transition",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   120,
+   540
+  ],
+  "anchor": "end",
+  "file": "wav/reverse_swell_1beat.wav",
+  "preview": "mp3/reverse_swell_1beat.mp3",
+  "duration": 0.625,
+  "durationFrames": 15.0,
+  "levels": {
+   "lufsIntegrated": -17.7,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -2.28
+  },
+  "normGainDb": 7.11,
+  "normMode": "momentary",
+  "mixDb": -10
+ },
+ {
+  "id": "reverse_swell_2beat",
+  "description": "Reverse cymbal + air swell, 2 beats (30 frames); file end = hit.",
+  "pitch": null,
+  "useAt": "Into any card hit (e.g. end on f240) or the title slam f630.",
+  "category": "transition",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   240,
+   630
+  ],
+  "anchor": "end",
+  "file": "wav/reverse_swell_2beat.wav",
+  "preview": "mp3/reverse_swell_2beat.mp3",
+  "duration": 1.25,
+  "durationFrames": 30.0,
+  "levels": {
+   "lufsIntegrated": -18.7,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -5.47
+  },
+  "normGainDb": 5.06,
+  "normMode": "momentary",
+  "mixDb": -10
+ },
+ {
+  "id": "whoosh_pullback",
+  "description": "Reverse whoosh for the pull-back into the monitor: air rushing inward, pitched shimmer tail (F).",
+  "pitch": "F shimmer",
+  "useAt": "Title f690 (dolly-out into Mas's monitor).",
+  "category": "transition",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   690
+  ],
+  "anchor": "start",
+  "file": "wav/whoosh_pullback.wav",
+  "preview": "mp3/whoosh_pullback.mp3",
+  "duration": 2.248,
+  "durationFrames": 54.0,
+  "levels": {
+   "lufsIntegrated": -14.0,
+   "lufsMomentaryMax": -11.4,
+   "truePeakDb": -1.06
+  },
+  "normGainDb": 6.41,
+  "normMode": "integrated",
+  "mixDb": -10,
+  "measuredPeak": "F7 +9c (2807.7 Hz)"
+ },
+ {
+  "id": "alert_bonk",
+  "description": "1993 alert 'bonk' (Cancel is disabled): a hollow wooden knock on E - the wrong note against F minor - with a 1-bit square shadow.",
+  "pitch": "E3 (leading-tone clash vs F)",
+  "useAt": "f150 (stranger clicks greyed-out Cancel); any 'not allowed' beat.",
+  "category": "1993",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   150
+  ],
+  "anchor": "start",
+  "file": "wav/alert_bonk.wav",
+  "preview": "mp3/alert_bonk.mp3",
+  "duration": 0.478,
+  "durationFrames": 11.5,
+  "levels": {
+   "lufsIntegrated": -17.2,
+   "lufsMomentaryMax": -17.2,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": -3.79,
+  "normMode": "momentary",
+  "mixDb": -8,
+  "measuredPeak": "E3 -4c (164.4 Hz)"
+ },
+ {
+  "id": "alert_bonk--chip",
+  "description": "1993 bonk, pure 1-bit: square E4 -> E3 drop, stepped 60 Hz envelope.",
+  "pitch": "E4->E3",
+  "useAt": "f150 (alt, more era-literal).",
+  "category": "1993",
+  "flavor": "chip",
+  "variantOf": "alert_bonk",
+  "loop": false,
+  "frames": [
+   150
+  ],
+  "anchor": "start",
+  "file": "wav/alert_bonk--chip.wav",
+  "preview": "mp3/alert_bonk--chip.mp3",
+  "duration": 0.316,
+  "durationFrames": 7.6,
+  "levels": {
+   "lufsIntegrated": -14.0,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -2.01
+  },
+  "normGainDb": -9.11,
+  "normMode": "momentary",
+  "mixDb": -12,
+  "measuredPeak": "E3 -10c (163.9 Hz)"
+ },
+ {
+  "id": "alert_bonk--band",
+  "description": "1993 bonk, band flavor: low upright-piano minor-second smear (E2+F2) + wood knock + a muted trombone blat.",
+  "pitch": "E2+F2 cluster",
+  "useAt": "f150 (alt, jazzier).",
+  "category": "1993",
+  "flavor": "band",
+  "variantOf": "alert_bonk",
+  "loop": false,
+  "frames": [
+   150
+  ],
+  "anchor": "start",
+  "file": "wav/alert_bonk--band.wav",
+  "preview": "mp3/alert_bonk--band.mp3",
+  "duration": 0.676,
+  "durationFrames": 16.2,
+  "levels": {
+   "lufsIntegrated": -18.6,
+   "lufsMomentaryMax": -15.4,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 3.3,
+  "normMode": "momentary",
+  "mixDb": -8,
+  "measuredPeak": "B3 +0c (247.0 Hz)"
+ },
+ {
+  "id": "dialog_ok_click",
+  "description": "Dialog OK click: tight 1-bit-era button press, clean mechanical click with a single 1-bit tick.",
+  "pitch": null,
+  "useAt": "f165 (kid clicks OK; music beeper plays C here).",
+  "category": "1993",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   165
+  ],
+  "anchor": "start",
+  "file": "wav/dialog_ok_click.wav",
+  "preview": "mp3/dialog_ok_click.mp3",
+  "duration": 0.223,
+  "durationFrames": 5.3,
+  "levels": {
+   "lufsIntegrated": -21.5,
+   "lufsMomentaryMax": -21.5,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 1.78,
+  "normMode": "momentary",
+  "mixDb": -10
+ },
+ {
+  "id": "dialog_ok_click--chip",
+  "description": "OK click, 1-bit: LFSR tick + one square cycle burst.",
+  "pitch": null,
+  "useAt": "f165 (alt).",
+  "category": "1993",
+  "flavor": "chip",
+  "variantOf": "dialog_ok_click",
+  "loop": false,
+  "frames": [
+   165
+  ],
+  "anchor": "start",
+  "file": "wav/dialog_ok_click--chip.wav",
+  "preview": "mp3/dialog_ok_click--chip.mp3",
+  "duration": 0.19,
+  "durationFrames": 4.6,
+  "levels": {
+   "lufsIntegrated": -17.0,
+   "lufsMomentaryMax": -17.0,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 1.1,
+  "normMode": "momentary",
+  "mixDb": -12
+ },
+ {
+  "id": "tape_start",
+  "description": "Cassette start: play-key clunk, pinch-roller tick, motor whirr coming up to speed, hiss blooming in.",
+  "pitch": "motor lands on F3",
+  "useAt": "f168-179 (tape-start whirr as 1-bit hands off to camcorder era).",
+  "category": "tape",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   168
+  ],
+  "anchor": "start",
+  "file": "wav/tape_start.wav",
+  "preview": "mp3/tape_start.mp3",
+  "duration": 0.9,
+  "durationFrames": 21.6,
+  "levels": {
+   "lufsIntegrated": -19.8,
+   "lufsMomentaryMax": -16.6,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": -1.2,
+  "normMode": "momentary",
+  "mixDb": -10,
+  "measuredPeak": "Bb2 +50c (119.9 Hz)"
+ },
+ {
+  "id": "tape_spinup",
+  "description": "Tape spin-up texture (1 beat): capstan and motor accelerate from a crawl to speed, flutter settling; companion to the music's pitch ramp.",
+  "pitch": "rises to F3/F4",
+  "useAt": "f225-239 (tape spins up to speed into the 2015 dinner).",
+  "category": "tape",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   225
+  ],
+  "anchor": "start",
+  "file": "wav/tape_spinup.wav",
+  "preview": "mp3/tape_spinup.mp3",
+  "duration": 0.625,
+  "durationFrames": 15.0,
+  "levels": {
+   "lufsIntegrated": -15.5,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -6.76
+  },
+  "normGainDb": 2.42,
+  "normMode": "momentary",
+  "mixDb": -12,
+  "measuredPeak": "E3 -25c (162.4 Hz)"
+ },
+ {
+  "id": "collar_pop_Ab4",
+  "description": "Tuned collar pop on Ab4: cloth flick-snap + a marimba 'pop' and a whisper of pulse wave.",
+  "pitch": "Ab4",
+  "useAt": "f180 (popped polo collars; D♭maj7 → Fm colour tones).",
+  "category": "2008",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   180
+  ],
+  "anchor": "start",
+  "file": "wav/collar_pop_Ab4.wav",
+  "preview": "mp3/collar_pop_Ab4.mp3",
+  "duration": 0.522,
+  "durationFrames": 12.5,
+  "levels": {
+   "lufsIntegrated": -16.6,
+   "lufsMomentaryMax": -14.4,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 4.78,
+  "normMode": "momentary",
+  "mixDb": -8,
+  "measuredPeak": "Ab4 -1c (415.1 Hz)"
+ },
+ {
+  "id": "collar_pop_Ab4--chip",
+  "description": "Collar pop Ab4, 8-bit: LFSR snap + pulse blip with a pitch flick.",
+  "pitch": "Ab4",
+  "useAt": "f180 (alt).",
+  "category": "2008",
+  "flavor": "chip",
+  "variantOf": "collar_pop_Ab4",
+  "loop": false,
+  "frames": [
+   180
+  ],
+  "anchor": "start",
+  "file": "wav/collar_pop_Ab4--chip.wav",
+  "preview": "mp3/collar_pop_Ab4--chip.mp3",
+  "duration": 0.262,
+  "durationFrames": 6.3,
+  "levels": {
+   "lufsIntegrated": -15.0,
+   "lufsMomentaryMax": -15.0,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 0.56,
+  "normMode": "momentary",
+  "mixDb": -10,
+  "measuredPeak": "Ab4 +1c (415.6 Hz)"
+ },
+ {
+  "id": "collar_pop_Ab4--band",
+  "description": "Collar pop Ab4, big-band: cloth snap + a harmon-muted trumpet stab.",
+  "pitch": "Ab4",
+  "useAt": "f180 (alt, jazzier).",
+  "category": "2008",
+  "flavor": "band",
+  "variantOf": "collar_pop_Ab4",
+  "loop": false,
+  "frames": [
+   180
+  ],
+  "anchor": "start",
+  "file": "wav/collar_pop_Ab4--band.wav",
+  "preview": "mp3/collar_pop_Ab4--band.mp3",
+  "duration": 0.405,
+  "durationFrames": 9.7,
+  "levels": {
+   "lufsIntegrated": -23.0,
+   "lufsMomentaryMax": -23.0,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 9.52,
+  "normMode": "momentary",
+  "mixDb": -8,
+  "measuredPeak": "Ab4 -5c (414.2 Hz)"
+ },
+ {
+  "id": "collar_pop_C5",
+  "description": "Tuned collar pop on C5: cloth flick-snap + a marimba 'pop' and a whisper of pulse wave.",
+  "pitch": "C5",
+  "useAt": "f187 (popped polo collars; D♭maj7 → Fm colour tones).",
+  "category": "2008",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   187
+  ],
+  "anchor": "start",
+  "file": "wav/collar_pop_C5.wav",
+  "preview": "mp3/collar_pop_C5.mp3",
+  "duration": 0.582,
+  "durationFrames": 14.0,
+  "levels": {
+   "lufsIntegrated": -17.6,
+   "lufsMomentaryMax": -15.2,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 4.42,
+  "normMode": "momentary",
+  "mixDb": -8,
+  "measuredPeak": "C5 +1c (523.5 Hz)"
+ },
+ {
+  "id": "collar_pop_C5--chip",
+  "description": "Collar pop C5, 8-bit: LFSR snap + pulse blip with a pitch flick.",
+  "pitch": "C5",
+  "useAt": "f187 (alt).",
+  "category": "2008",
+  "flavor": "chip",
+  "variantOf": "collar_pop_C5",
+  "loop": false,
+  "frames": [
+   187
+  ],
+  "anchor": "start",
+  "file": "wav/collar_pop_C5--chip.wav",
+  "preview": "mp3/collar_pop_C5--chip.mp3",
+  "duration": 0.266,
+  "durationFrames": 6.4,
+  "levels": {
+   "lufsIntegrated": -14.4,
+   "lufsMomentaryMax": -14.4,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 1.08,
+  "normMode": "momentary",
+  "mixDb": -10,
+  "measuredPeak": "C5 -1c (522.9 Hz)"
+ },
+ {
+  "id": "collar_pop_C5--band",
+  "description": "Collar pop C5, big-band: cloth snap + a harmon-muted trumpet stab.",
+  "pitch": "C5",
+  "useAt": "f187 (alt, jazzier).",
+  "category": "2008",
+  "flavor": "band",
+  "variantOf": "collar_pop_C5",
+  "loop": false,
+  "frames": [
+   187
+  ],
+  "anchor": "start",
+  "file": "wav/collar_pop_C5--band.wav",
+  "preview": "mp3/collar_pop_C5--band.mp3",
+  "duration": 0.449,
+  "durationFrames": 10.8,
+  "levels": {
+   "lufsIntegrated": -21.8,
+   "lufsMomentaryMax": -21.8,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 9.65,
+  "normMode": "momentary",
+  "mixDb": -8,
+  "measuredPeak": "C7 -1c (2091.6 Hz)"
+ },
+ {
+  "id": "collar_pop_F5",
+  "description": "Tuned collar pop on F5: cloth flick-snap + a marimba 'pop' and a whisper of pulse wave.",
+  "pitch": "F5",
+  "useAt": "f202 (popped polo collars; D♭maj7 → Fm colour tones).",
+  "category": "2008",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   202
+  ],
+  "anchor": "start",
+  "file": "wav/collar_pop_F5.wav",
+  "preview": "mp3/collar_pop_F5.mp3",
+  "duration": 0.504,
+  "durationFrames": 12.1,
+  "levels": {
+   "lufsIntegrated": -17.4,
+   "lufsMomentaryMax": -15.0,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 4.44,
+  "normMode": "momentary",
+  "mixDb": -8,
+  "measuredPeak": "F5 +1c (698.7 Hz)"
+ },
+ {
+  "id": "collar_pop_F5--chip",
+  "description": "Collar pop F5, 8-bit: LFSR snap + pulse blip with a pitch flick.",
+  "pitch": "F5",
+  "useAt": "f202 (alt).",
+  "category": "2008",
+  "flavor": "chip",
+  "variantOf": "collar_pop_F5",
+  "loop": false,
+  "frames": [
+   202
+  ],
+  "anchor": "start",
+  "file": "wav/collar_pop_F5--chip.wav",
+  "preview": "mp3/collar_pop_F5--chip.mp3",
+  "duration": 0.274,
+  "durationFrames": 6.6,
+  "levels": {
+   "lufsIntegrated": -14.3,
+   "lufsMomentaryMax": -14.3,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 0.67,
+  "normMode": "momentary",
+  "mixDb": -10,
+  "measuredPeak": "F5 +0c (698.4 Hz)"
+ },
+ {
+  "id": "collar_pop_F5--band",
+  "description": "Collar pop F5, big-band: cloth snap + a harmon-muted trumpet stab.",
+  "pitch": "F5",
+  "useAt": "f202 (alt, jazzier).",
+  "category": "2008",
+  "flavor": "band",
+  "variantOf": "collar_pop_F5",
+  "loop": false,
+  "frames": [
+   202
+  ],
+  "anchor": "start",
+  "file": "wav/collar_pop_F5--band.wav",
+  "preview": "mp3/collar_pop_F5--band.mp3",
+  "duration": 0.493,
+  "durationFrames": 11.8,
+  "levels": {
+   "lufsIntegrated": -21.1,
+   "lufsMomentaryMax": -21.1,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 10.3,
+  "normMode": "momentary",
+  "mixDb": -8,
+  "measuredPeak": "C7 +7c (2101.9 Hz)"
+ },
+ {
+  "id": "camera_shutter",
+  "description": "Freeze-card camera shutter: mirror slap, two curtain ticks, mirror return with a tiny bounce. Mechanical, expensive-sounding.",
+  "pitch": null,
+  "useAt": "Card freezes f240 / f300 / f360 / f420 (layer with freeze_hit_*).",
+  "category": "dinner",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   240,
+   300,
+   360,
+   420
+  ],
+  "anchor": "start",
+  "file": "wav/camera_shutter.wav",
+  "preview": "mp3/camera_shutter.mp3",
+  "duration": 0.471,
+  "durationFrames": 11.3,
+  "levels": {
+   "lufsIntegrated": -21.6,
+   "lufsMomentaryMax": -21.6,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": -3.06,
+  "normMode": "momentary",
+  "mixDb": -6
+ },
+ {
+  "id": "freeze_hit_F",
+  "description": "Freeze-card hit layer on F: glass crack + 8-bit crunch, tuned sub drop, 'time stops' frozen ice shimmer (F and fifth).",
+  "pitch": "F (sub + F6 ice)",
+  "useAt": "f240 card freeze (sweetens the music's F hit).",
+  "category": "dinner",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   240
+  ],
+  "anchor": "start",
+  "file": "wav/freeze_hit_F.wav",
+  "preview": "mp3/freeze_hit_F.mp3",
+  "duration": 2.215,
+  "durationFrames": 53.2,
+  "levels": {
+   "lufsIntegrated": -19.7,
+   "lufsMomentaryMax": -13.4,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": -5.3,
+  "normMode": "integrated",
+  "mixDb": -6,
+  "measuredPeak": "F1 +12c (43.9 Hz)"
+ },
+ {
+  "id": "freeze_hit_F--chip",
+  "description": "Freeze hit F, 8-bit: LFSR crash, triangle drop, pulse root-5th-octave flash with echo.",
+  "pitch": "F",
+  "useAt": "f240 (alt).",
+  "category": "dinner",
+  "flavor": "chip",
+  "variantOf": "freeze_hit_F",
+  "loop": false,
+  "frames": [
+   240
+  ],
+  "anchor": "start",
+  "file": "wav/freeze_hit_F--chip.wav",
+  "preview": "mp3/freeze_hit_F--chip.mp3",
+  "duration": 0.713,
+  "durationFrames": 17.1,
+  "levels": {
+   "lufsIntegrated": -16.6,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -3.65
+  },
+  "normGainDb": -7.28,
+  "normMode": "momentary",
+  "mixDb": -8,
+  "measuredPeak": "F2 +12c (87.9 Hz)"
+ },
+ {
+  "id": "freeze_hit_Db",
+  "description": "Freeze-card hit layer on Db: glass crack + 8-bit crunch, tuned sub drop, 'time stops' frozen ice shimmer (Db and fifth).",
+  "pitch": "Db (sub + Db6 ice)",
+  "useAt": "f300 card freeze (sweetens the music's Db hit).",
+  "category": "dinner",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   300
+  ],
+  "anchor": "start",
+  "file": "wav/freeze_hit_Db.wav",
+  "preview": "mp3/freeze_hit_Db.mp3",
+  "duration": 2.327,
+  "durationFrames": 55.9,
+  "levels": {
+   "lufsIntegrated": -16.7,
+   "lufsMomentaryMax": -10.4,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": -4.18,
+  "normMode": "integrated",
+  "mixDb": -6,
+  "measuredPeak": "Db2 +12c (69.8 Hz)"
+ },
+ {
+  "id": "freeze_hit_Db--chip",
+  "description": "Freeze hit Db, 8-bit: LFSR crash, triangle drop, pulse root-5th-octave flash with echo.",
+  "pitch": "Db",
+  "useAt": "f300 (alt).",
+  "category": "dinner",
+  "flavor": "chip",
+  "variantOf": "freeze_hit_Db",
+  "loop": false,
+  "frames": [
+   300
+  ],
+  "anchor": "start",
+  "file": "wav/freeze_hit_Db--chip.wav",
+  "preview": "mp3/freeze_hit_Db--chip.mp3",
+  "duration": 0.737,
+  "durationFrames": 17.7,
+  "levels": {
+   "lufsIntegrated": -16.8,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -4.69
+  },
+  "normGainDb": -6.81,
+  "normMode": "momentary",
+  "mixDb": -8,
+  "measuredPeak": "Db2 +48c (71.2 Hz)"
+ },
+ {
+  "id": "freeze_hit_Bb",
+  "description": "Freeze-card hit layer on Bb: glass crack + 8-bit crunch, tuned sub drop, 'time stops' frozen ice shimmer (Bb and fifth).",
+  "pitch": "Bb (sub + Bb6 ice)",
+  "useAt": "f360 card freeze (sweetens the music's Bb hit).",
+  "category": "dinner",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   360
+  ],
+  "anchor": "start",
+  "file": "wav/freeze_hit_Bb.wav",
+  "preview": "mp3/freeze_hit_Bb.mp3",
+  "duration": 2.368,
+  "durationFrames": 56.8,
+  "levels": {
+   "lufsIntegrated": -19.0,
+   "lufsMomentaryMax": -12.1,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": -5.66,
+  "normMode": "integrated",
+  "mixDb": -6,
+  "measuredPeak": "Bb1 +10c (58.6 Hz)"
+ },
+ {
+  "id": "freeze_hit_Bb--chip",
+  "description": "Freeze hit Bb, 8-bit: LFSR crash, triangle drop, pulse root-5th-octave flash with echo.",
+  "pitch": "Bb",
+  "useAt": "f360 (alt).",
+  "category": "dinner",
+  "flavor": "chip",
+  "variantOf": "freeze_hit_Bb",
+  "loop": false,
+  "frames": [
+   360
+  ],
+  "anchor": "start",
+  "file": "wav/freeze_hit_Bb--chip.wav",
+  "preview": "mp3/freeze_hit_Bb--chip.mp3",
+  "duration": 0.717,
+  "durationFrames": 17.2,
+  "levels": {
+   "lufsIntegrated": -16.9,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -3.95
+  },
+  "normGainDb": -7.45,
+  "normMode": "momentary",
+  "mixDb": -8,
+  "measuredPeak": "Bb2 +34c (118.8 Hz)"
+ },
+ {
+  "id": "freeze_hit_C",
+  "description": "Freeze-card hit layer on C: glass crack + 8-bit crunch, tuned sub drop, 'time stops' frozen ice shimmer (C and fifth).",
+  "pitch": "C (sub + C6 ice)",
+  "useAt": "f420 card freeze (sweetens the music's C hit).",
+  "category": "dinner",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   420
+  ],
+  "anchor": "start",
+  "file": "wav/freeze_hit_C.wav",
+  "preview": "mp3/freeze_hit_C.mp3",
+  "duration": 2.242,
+  "durationFrames": 53.8,
+  "levels": {
+   "lufsIntegrated": -16.5,
+   "lufsMomentaryMax": -10.7,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": -4.3,
+  "normMode": "integrated",
+  "mixDb": -6,
+  "measuredPeak": "C2 +9c (65.7 Hz)"
+ },
+ {
+  "id": "freeze_hit_C--chip",
+  "description": "Freeze hit C, 8-bit: LFSR crash, triangle drop, pulse root-5th-octave flash with echo.",
+  "pitch": "C",
+  "useAt": "f420 (alt).",
+  "category": "dinner",
+  "flavor": "chip",
+  "variantOf": "freeze_hit_C",
+  "loop": false,
+  "frames": [
+   420
+  ],
+  "anchor": "start",
+  "file": "wav/freeze_hit_C--chip.wav",
+  "preview": "mp3/freeze_hit_C--chip.mp3",
+  "duration": 0.721,
+  "durationFrames": 17.3,
+  "levels": {
+   "lufsIntegrated": -16.7,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -2.45
+  },
+  "normGainDb": -6.75,
+  "normMode": "momentary",
+  "mixDb": -8,
+  "measuredPeak": "C2 -25c (64.5 Hz)"
+ },
+ {
+  "id": "keycap_popcorn",
+  "description": "Gerg's keycaps popping like popcorn: plastic snaps with hollow tuned 'poks' (F minor, high), accelerating then thinning.",
+  "pitch": "F minor pentatonic poks (F5-C7)",
+  "useAt": "f225-239 (Gerg types so fast the keycaps pop) and into the f240 freeze.",
+  "category": "dinner",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   225
+  ],
+  "anchor": "start",
+  "file": "wav/keycap_popcorn.wav",
+  "preview": "mp3/keycap_popcorn.mp3",
+  "duration": 1.538,
+  "durationFrames": 36.9,
+  "levels": {
+   "lufsIntegrated": -23.7,
+   "lufsMomentaryMax": -20.3,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 0.36,
+  "normMode": "momentary",
+  "mixDb": -10,
+  "measuredPeak": "C7 -11c (2080.1 Hz)"
+ },
+ {
+  "id": "keyboard_roll",
+  "description": "Mechanical-keyboard snare roll: clicky switches in 32nds accelerating to 64ths, crescendo; the file END lands on the downbeat.",
+  "pitch": null,
+  "useAt": "f225-239, ending on the f240 GERG freeze (anchor = end).",
+  "category": "dinner",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   240
+  ],
+  "anchor": "end",
+  "file": "wav/keyboard_roll.wav",
+  "preview": "mp3/keyboard_roll.mp3",
+  "duration": 0.625,
+  "durationFrames": 15.0,
+  "levels": {
+   "lufsIntegrated": -20.8,
+   "lufsMomentaryMax": -18.4,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 3.4,
+  "normMode": "momentary",
+  "mixDb": -8
+ },
+ {
+  "id": "flame_whoomph",
+  "description": "Effigy ignition: a warm 'whoomph' (pressure swell + rising band), rolling flame body and sparse crackle.",
+  "pitch": null,
+  "useAt": "f285 (paperclip-robot effigy ignites in the server cathedral).",
+  "category": "dinner",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   285
+  ],
+  "anchor": "start",
+  "file": "wav/flame_whoomph.wav",
+  "preview": "mp3/flame_whoomph.mp3",
+  "duration": 2.6,
+  "durationFrames": 62.4,
+  "levels": {
+   "lufsIntegrated": -20.2,
+   "lufsMomentaryMax": -12.4,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": -0.2,
+  "normMode": "integrated",
+  "mixDb": -8
+ },
+ {
+  "id": "klaxon",
+  "description": "Vault klaxon, two tones on eighths (Bb4 -> F4), cut dead at the end: electromechanical horn blended with harmon-muted trumpet. Tasteful, tuned to the Bbm hit.",
+  "pitch": "Bb4 / F4",
+  "useAt": "f345-359, cut dead at f360 (MARIO hit). File is exactly 1 beat.",
+  "category": "dinner",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   345
+  ],
+  "anchor": "start",
+  "file": "wav/klaxon.wav",
+  "preview": "mp3/klaxon.mp3",
+  "duration": 0.625,
+  "durationFrames": 15.0,
+  "levels": {
+   "lufsIntegrated": -14.3,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -7.79
+  },
+  "normGainDb": 4.63,
+  "normMode": "momentary",
+  "mixDb": -10,
+  "measuredPeak": "F5 +0c (698.5 Hz)"
+ },
+ {
+  "id": "klaxon--chip",
+  "description": "Klaxon, 8-bit: two-tone 25% pulse with fast vibrato; cut dead.",
+  "pitch": "Bb4 / F4",
+  "useAt": "f345-359 (alt).",
+  "category": "dinner",
+  "flavor": "chip",
+  "variantOf": "klaxon",
+  "loop": false,
+  "frames": [
+   345
+  ],
+  "anchor": "start",
+  "file": "wav/klaxon--chip.wav",
+  "preview": "mp3/klaxon--chip.mp3",
+  "duration": 0.625,
+  "durationFrames": 15.0,
+  "levels": {
+   "lufsIntegrated": -14.0,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -8.82
+  },
+  "normGainDb": -9.27,
+  "normMode": "momentary",
+  "mixDb": -12,
+  "measuredPeak": "F4 +0c (349.2 Hz)"
+ },
+ {
+  "id": "klaxon--band",
+  "description": "Klaxon, big-band: harmon trumpets + trombone playing the two-tone with a wah; cut dead.",
+  "pitch": "Bb4 / F4",
+  "useAt": "f345-359 (alt, jazzier).",
+  "category": "dinner",
+  "flavor": "band",
+  "variantOf": "klaxon",
+  "loop": false,
+  "frames": [
+   345
+  ],
+  "anchor": "start",
+  "file": "wav/klaxon--band.wav",
+  "preview": "mp3/klaxon--band.mp3",
+  "duration": 0.625,
+  "durationFrames": 15.0,
+  "levels": {
+   "lufsIntegrated": -14.6,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -2.59
+  },
+  "normGainDb": 23.78,
+  "normMode": "momentary",
+  "mixDb": -10,
+  "measuredPeak": "F5 +0c (698.4 Hz)"
+ },
+ {
+  "id": "klaxon_loop",
+  "description": "Klaxon one-bar loop (8 eighths) for longer alarms; loops on the bar.",
+  "pitch": "Bb4 / F4",
+  "useAt": "Show: any vault/alarm scene (96 BPM grid).",
+  "category": "dinner",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": true,
+  "frames": [],
+  "anchor": "start",
+  "file": "wav/klaxon_loop.wav",
+  "preview": "mp3/klaxon_loop.mp3",
+  "duration": 2.5,
+  "durationFrames": 60.0,
+  "levels": {
+   "lufsIntegrated": -14.0,
+   "lufsMomentaryMax": -13.6,
+   "truePeakDb": -7.28
+  },
+  "normGainDb": 5.01,
+  "normMode": "integrated",
+  "mixDb": -14,
+  "measuredPeak": "F5 +0c (698.5 Hz)"
+ },
+ {
+  "id": "steam_hiss",
+  "description": "Vault steam vent: pressurized hiss burst that settles, faint pipe whistle on F7.",
+  "pitch": "F7 whistle (faint)",
+  "useAt": "f345 (blast door opens: steam).",
+  "category": "dinner",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   345
+  ],
+  "anchor": "start",
+  "file": "wav/steam_hiss.wav",
+  "preview": "mp3/steam_hiss.mp3",
+  "duration": 1.448,
+  "durationFrames": 34.8,
+  "levels": {
+   "lufsIntegrated": -19.2,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -4.75
+  },
+  "normGainDb": -2.87,
+  "normMode": "momentary",
+  "mixDb": -12,
+  "measuredPeak": "C8 -9c (4165.1 Hz)"
+ },
+ {
+  "id": "vault_chime_triple",
+  "description": "Safety HUD triple chime (three checkmarks): small glass-bell F6 Ab6 C7 in 32nds.",
+  "pitch": "F6 Ab6 C7",
+  "useAt": "f345-359 (RED-TEAMED ✓✓✓).",
+  "category": "dinner",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   347
+  ],
+  "anchor": "start",
+  "file": "wav/vault_chime_triple.wav",
+  "preview": "mp3/vault_chime_triple.mp3",
+  "duration": 1.499,
+  "durationFrames": 36.0,
+  "levels": {
+   "lufsIntegrated": -17.7,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -6.51
+  },
+  "normGainDb": 1.79,
+  "normMode": "momentary",
+  "mixDb": -12,
+  "measuredPeak": "C7 +0c (2093.3 Hz)"
+ },
+ {
+  "id": "paper_flutter",
+  "description": "A single sheet fluttering out of the vault: irregular paper flaps, crinkle, airy travel L->R.",
+  "pitch": null,
+  "useAt": "f345-359 ('DRAFT - DO NOT PUBLISH' sheet flutters out); any paper float.",
+  "category": "dinner",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   350
+  ],
+  "anchor": "start",
+  "file": "wav/paper_flutter.wav",
+  "preview": "mp3/paper_flutter.mp3",
+  "duration": 1.397,
+  "durationFrames": 33.5,
+  "levels": {
+   "lufsIntegrated": -21.1,
+   "lufsMomentaryMax": -19.0,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 4.2,
+  "normMode": "momentary",
+  "mixDb": -10
+ },
+ {
+  "id": "paper_whip",
+  "description": "Paper-scroll whip-past wipe (4 frames): a fast taut paper swish.",
+  "pitch": null,
+  "useAt": "f401-404 (scroll whips past lens as a paper wipe).",
+  "category": "dinner",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   401
+  ],
+  "anchor": "start",
+  "file": "wav/paper_whip.wav",
+  "preview": "mp3/paper_whip.mp3",
+  "duration": 0.542,
+  "durationFrames": 13.0,
+  "levels": {
+   "lufsIntegrated": -14.2,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -1.32
+  },
+  "normGainDb": 11.6,
+  "normMode": "momentary",
+  "mixDb": -10
+ },
+ {
+  "id": "ceiling_burst",
+  "description": "Ceiling tiles burst: crack, tile crunch, debris raining onto the table, dust. Keeps its low end short so the f420 hit owns the boom.",
+  "pitch": null,
+  "useAt": "f405 (SPACEZ booster bursts through the ceiling).",
+  "category": "dinner",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   405
+  ],
+  "anchor": "start",
+  "file": "wav/ceiling_burst.wav",
+  "preview": "mp3/ceiling_burst.mp3",
+  "duration": 1.657,
+  "durationFrames": 39.8,
+  "levels": {
+   "lufsIntegrated": -20.0,
+   "lufsMomentaryMax": -14.9,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": -3.55,
+  "normMode": "momentary",
+  "mixDb": -6
+ },
+ {
+  "id": "rocket_roar",
+  "description": "Booster descent roar, exactly 1 beat, growing and cut dead on the last sample so the f420 hit carries the boom.",
+  "pitch": null,
+  "useAt": "f405-419 (ends at f419; the boom folds into the f420 NOLE hit).",
+  "category": "dinner",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   405
+  ],
+  "anchor": "start",
+  "file": "wav/rocket_roar.wav",
+  "preview": "mp3/rocket_roar.mp3",
+  "duration": 0.625,
+  "durationFrames": 15.0,
+  "levels": {
+   "lufsIntegrated": -14.8,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -1.28
+  },
+  "normGainDb": -5.95,
+  "normMode": "momentary",
+  "mixDb": -6
+ },
+ {
+  "id": "rocket_roar_long",
+  "description": "Long rocket roar (3.2 s) with swell and release for show use (SPACEZ launches/landings).",
+  "pitch": null,
+  "useAt": "Show: any booster shot.",
+  "category": "dinner",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "file": "wav/rocket_roar_long.wav",
+  "preview": "mp3/rocket_roar_long.mp3",
+  "duration": 3.2,
+  "durationFrames": 76.8,
+  "levels": {
+   "lufsIntegrated": -14.0,
+   "lufsMomentaryMax": -12.1,
+   "truePeakDb": -1.47
+  },
+  "normGainDb": -3.87,
+  "normMode": "integrated",
+  "mixDb": -10
+ },
+ {
+  "id": "landing_thunk",
+  "description": "Booster touchdown on the tablecloth: heavy thunk tuned to C, hydraulic leg 'chunk', glassware and cutlery rattle, bread-basket crunch.",
+  "pitch": "C2 body / C3 table",
+  "useAt": "f420 (landing legs hit the table; NOLE freeze on C major).",
+  "category": "dinner",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   420
+  ],
+  "anchor": "start",
+  "file": "wav/landing_thunk.wav",
+  "preview": "mp3/landing_thunk.mp3",
+  "duration": 1.023,
+  "durationFrames": 24.5,
+  "levels": {
+   "lufsIntegrated": -18.1,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -3.63
+  },
+  "normGainDb": -6.56,
+  "normMode": "momentary",
+  "mixDb": -6,
+  "measuredPeak": "C2 +13c (65.9 Hz)"
+ },
+ {
+  "id": "rubber_stamp_C",
+  "description": "Rubber stamp tuned to C: rubber-on-paper slap, wooden-handle knock on C3, C2 body, a soft timpani C under it.",
+  "pitch": "C (C2/C3)",
+  "useAt": "f435 ('SUED OVER IT.' stamp slams over Nole's card).",
+  "category": "dinner",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   435
+  ],
+  "anchor": "start",
+  "file": "wav/rubber_stamp_C.wav",
+  "preview": "mp3/rubber_stamp_C.mp3",
+  "duration": 0.674,
+  "durationFrames": 16.2,
+  "levels": {
+   "lufsIntegrated": -18.3,
+   "lufsMomentaryMax": -15.8,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": -4.22,
+  "normMode": "momentary",
+  "mixDb": -6,
+  "measuredPeak": "C2 -1c (65.4 Hz)"
+ },
+ {
+  "id": "rubber_stamp_C--chip",
+  "description": "Rubber stamp C, 8-bit: LFSR slap + triangle C2 drop + pulse C4 tick.",
+  "pitch": "C",
+  "useAt": "f435 (alt).",
+  "category": "dinner",
+  "flavor": "chip",
+  "variantOf": "rubber_stamp_C",
+  "loop": false,
+  "frames": [
+   435
+  ],
+  "anchor": "start",
+  "file": "wav/rubber_stamp_C--chip.wav",
+  "preview": "mp3/rubber_stamp_C--chip.mp3",
+  "duration": 0.554,
+  "durationFrames": 13.3,
+  "levels": {
+   "lufsIntegrated": -17.5,
+   "lufsMomentaryMax": -15.4,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": -4.95,
+  "normMode": "momentary",
+  "mixDb": -8,
+  "measuredPeak": "C2 -1c (65.4 Hz)"
+ },
+ {
+  "id": "rubber_stamp_C--band",
+  "description": "Rubber stamp C, orchestral: stamp slap + timpani C2 + low upright-piano C octave.",
+  "pitch": "C",
+  "useAt": "f435 (alt, heavier).",
+  "category": "dinner",
+  "flavor": "band",
+  "variantOf": "rubber_stamp_C",
+  "loop": false,
+  "frames": [
+   435
+  ],
+  "anchor": "start",
+  "file": "wav/rubber_stamp_C--band.wav",
+  "preview": "mp3/rubber_stamp_C--band.mp3",
+  "duration": 2.032,
+  "durationFrames": 48.8,
+  "levels": {
+   "lufsIntegrated": -19.4,
+   "lufsMomentaryMax": -13.8,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": -2.33,
+  "normMode": "integrated",
+  "mixDb": -6,
+  "measuredPeak": "C2 +4c (65.6 Hz)"
+ },
+ {
+  "id": "neon_buzz",
+  "description": "Neon sign buzz tuned to F (87.3 Hz transformer + harmonics), faint ionization crackle. Seamless 3-s-ish loop.",
+  "pitch": "F2 buzz",
+  "useAt": "f465-474 (OPEN AI neon, then NOPE AI); the sign stays lit into f480.",
+  "category": "dinner",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": true,
+  "frames": [
+   465
+  ],
+  "anchor": "start",
+  "file": "wav/neon_buzz.wav",
+  "preview": "mp3/neon_buzz.mp3",
+  "duration": 3.0,
+  "durationFrames": 72.0,
+  "levels": {
+   "lufsIntegrated": -14.0,
+   "lufsMomentaryMax": -13.7,
+   "truePeakDb": -4.03
+  },
+  "normGainDb": -4.57,
+  "normMode": "integrated",
+  "mixDb": -18,
+  "measuredPeak": "F3 +1c (174.7 Hz)"
+ },
+ {
+  "id": "neon_ignite",
+  "description": "Neon tube striking on: starter ticks, two stuttering flickers, then the buzz catches with a small glass ring (F6).",
+  "pitch": "F2 buzz, F6 ring",
+  "useAt": "f474 ('AI' lights, stays lit).",
+  "category": "dinner",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   474
+  ],
+  "anchor": "start",
+  "file": "wav/neon_ignite.wav",
+  "preview": "mp3/neon_ignite.mp3",
+  "duration": 1.2,
+  "durationFrames": 28.8,
+  "levels": {
+   "lufsIntegrated": -15.4,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -4.03
+  },
+  "normGainDb": -4.59,
+  "normMode": "momentary",
+  "mixDb": -12,
+  "measuredPeak": "F3 +2c (174.9 Hz)"
+ },
+ {
+  "id": "letter_clunk",
+  "description": "Heavy sign letter slotting home: steel clunk tuned near F3, glass-tube tick, bracket rattle.",
+  "pitch": "F3 steel",
+  "useAt": "f473 (Mas slides the neon N to the front: OPEN -> NOPE). Clunk transient at +0.18 s (place file at f468.7).",
+  "category": "dinner",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   473
+  ],
+  "anchor": "hit",
+  "file": "wav/letter_clunk.wav",
+  "preview": "mp3/letter_clunk.mp3",
+  "duration": 0.7,
+  "durationFrames": 16.8,
+  "levels": {
+   "lufsIntegrated": -15.9,
+   "lufsMomentaryMax": -15.2,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": -0.72,
+  "normMode": "momentary",
+  "mixDb": -8,
+  "syncOffset": 0.18,
+  "measuredPeak": "F2 +4c (87.5 Hz)"
+ },
+ {
+  "id": "odometer_ratchet",
+  "description": "Odometer slamming past 1,000,000: digit wheels ratchet up to a blur, then lock with a hard clack and a tiny counter bell (C7).",
+  "pitch": "C7 counter bell",
+  "useAt": "Slot 9.1 f480-494 (odometer slams past 1,000,000); lock clack at +0.52 s (~f492).",
+  "category": "slot",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   480
+  ],
+  "anchor": "start",
+  "file": "wav/odometer_ratchet.wav",
+  "preview": "mp3/odometer_ratchet.mp3",
+  "duration": 1.165,
+  "durationFrames": 28.0,
+  "levels": {
+   "lufsIntegrated": -21.9,
+   "lufsMomentaryMax": -20.2,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": -3.87,
+  "normMode": "momentary",
+  "mixDb": -8,
+  "measuredPeak": "F2 +12c (87.9 Hz)"
+ },
+ {
+  "id": "piano_fired_F4",
+  "description": "'The music is fired': one dry upright-piano F4, mezzo, no reverb - alone over room tone.",
+  "pitch": "F4",
+  "useAt": "Slot 9.2 f495 (every stem muted; this note + room_tone play on the unmuted bus).",
+  "category": "slot",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   495
+  ],
+  "anchor": "start",
+  "file": "wav/piano_fired_F4.wav",
+  "preview": "mp3/piano_fired_F4.mp3",
+  "duration": 3.195,
+  "durationFrames": 76.7,
+  "levels": {
+   "lufsIntegrated": -14.0,
+   "lufsMomentaryMax": -9.1,
+   "truePeakDb": -2.27
+  },
+  "normGainDb": 18.88,
+  "normMode": "integrated",
+  "mixDb": -6,
+  "measuredPeak": "F4 +2c (349.5 Hz)"
+ },
+ {
+  "id": "piano_fired_F4--felt",
+  "description": "Fired note, felt version: soft F4 with a felt-damped, darker tone (matches the T0 felt piano).",
+  "pitch": "F4",
+  "useAt": "Slot 9.2 f495 (alt).",
+  "category": "slot",
+  "flavor": "band",
+  "variantOf": "piano_fired_F4",
+  "loop": false,
+  "frames": [
+   495
+  ],
+  "anchor": "start",
+  "file": "wav/piano_fired_F4--felt.wav",
+  "preview": "mp3/piano_fired_F4--felt.mp3",
+  "duration": 3.197,
+  "durationFrames": 76.7,
+  "levels": {
+   "lufsIntegrated": -14.0,
+   "lufsMomentaryMax": -8.8,
+   "truePeakDb": -3.49
+  },
+  "normGainDb": 26.43,
+  "normMode": "integrated",
+  "mixDb": -6,
+  "measuredPeak": "F4 +2c (349.5 Hz)"
+ },
+ {
+  "id": "hourglass_shatter",
+  "description": "Tiny hourglass shattering: bright glass crack and shards, a trickle of sand.",
+  "pitch": null,
+  "useAt": "Slot 9.3 ~f518 (badge flips GUEST -> CEO; hourglass shatters).",
+  "category": "slot",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   518
+  ],
+  "anchor": "start",
+  "file": "wav/hourglass_shatter.wav",
+  "preview": "mp3/hourglass_shatter.mp3",
+  "duration": 0.848,
+  "durationFrames": 20.3,
+  "levels": {
+   "lufsIntegrated": -18.2,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -2.2
+  },
+  "normGainDb": 1.31,
+  "normMode": "momentary",
+  "mixDb": -12
+ },
+ {
+  "id": "heart_gliss",
+  "description": "Heart-avalanche glissando: celesta + glockenspiel up F minor pentatonic, one note per frame F4->F7 (lands on f540), harp underneath, a ghost of pulse wave, soft reverse-cymbal swell.",
+  "pitch": "F4 -> F7 (F Ab Bb C Eb)",
+  "useAt": "Slot 9.4 f525-540 (hearts carry the camera up into the dusk sky).",
+  "category": "slot",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   525
+  ],
+  "anchor": "start",
+  "file": "wav/heart_gliss.wav",
+  "preview": "mp3/heart_gliss.mp3",
+  "duration": 2.847,
+  "durationFrames": 68.3,
+  "levels": {
+   "lufsIntegrated": -14.0,
+   "lufsMomentaryMax": -11.4,
+   "truePeakDb": -3.44
+  },
+  "normGainDb": -3.11,
+  "normMode": "integrated",
+  "mixDb": -8,
+  "measuredPeak": "Eb4 -2c (310.7 Hz)"
+ },
+ {
+  "id": "heart_gliss--chip",
+  "description": "Hearts gliss, 8-bit: alternating 12.5/25% pulse arpeggio with triple echo, triangle F3 landing.",
+  "pitch": "F4 -> F7",
+  "useAt": "f525-540 (alt).",
+  "category": "slot",
+  "flavor": "chip",
+  "variantOf": "heart_gliss",
+  "loop": false,
+  "frames": [
+   525
+  ],
+  "anchor": "start",
+  "file": "wav/heart_gliss--chip.wav",
+  "preview": "mp3/heart_gliss--chip.mp3",
+  "duration": 1.45,
+  "durationFrames": 34.8,
+  "levels": {
+   "lufsIntegrated": -16.1,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -5.22
+  },
+  "normGainDb": -5.75,
+  "normMode": "momentary",
+  "mixDb": -10,
+  "measuredPeak": "F3 -1c (174.5 Hz)"
+ },
+ {
+  "id": "heart_gliss--band",
+  "description": "Hearts gliss, jazz: harp + vibraphone up the pentatonic, reverse-cymbal swell.",
+  "pitch": "F4 -> F7",
+  "useAt": "f525-540 (alt, warmer).",
+  "category": "slot",
+  "flavor": "band",
+  "variantOf": "heart_gliss",
+  "loop": false,
+  "frames": [
+   525
+  ],
+  "anchor": "start",
+  "file": "wav/heart_gliss--band.wav",
+  "preview": "mp3/heart_gliss--band.mp3",
+  "duration": 2.664,
+  "durationFrames": 63.9,
+  "levels": {
+   "lufsIntegrated": -14.0,
+   "lufsMomentaryMax": -11.4,
+   "truePeakDb": -3.98
+  },
+  "normGainDb": -4.67,
+  "normMode": "integrated",
+  "mixDb": -8,
+  "measuredPeak": "Eb4 -1c (310.9 Hz)"
+ },
+ {
+  "id": "tower_pluck_1_F4",
+  "description": "Knee pluck 1/7 (F4): harp + upright-bass pizz two octaves down, soft pop air, a whisper of pulse wave. Repeated Fs are distinct round-robins with a slight crescendo.",
+  "pitch": "F4",
+  "useAt": "Skyline tower pop f540.",
+  "category": "skyline",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   540
+  ],
+  "anchor": "start",
+  "file": "wav/tower_pluck_1_F4.wav",
+  "preview": "mp3/tower_pluck_1_F4.mp3",
+  "duration": 1.411,
+  "durationFrames": 33.9,
+  "levels": {
+   "lufsIntegrated": -22.1,
+   "lufsMomentaryMax": -16.4,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 11.62,
+  "normMode": "momentary",
+  "mixDb": -6,
+  "measuredPeak": "F4 +0c (349.2 Hz)"
+ },
+ {
+  "id": "tower_pluck_1_F4--chip",
+  "description": "Knee pluck 1/7 (F4), 8-bit: pulse + triangle sub + LFSR tick, dotted echo.",
+  "pitch": "F4",
+  "useAt": "f540 (alt).",
+  "category": "skyline",
+  "flavor": "chip",
+  "variantOf": "tower_pluck_1_F4",
+  "loop": false,
+  "frames": [
+   540
+  ],
+  "anchor": "start",
+  "file": "wav/tower_pluck_1_F4--chip.wav",
+  "preview": "mp3/tower_pluck_1_F4--chip.mp3",
+  "duration": 0.633,
+  "durationFrames": 15.2,
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -4.4
+  },
+  "normGainDb": -1.17,
+  "normMode": "momentary",
+  "mixDb": -8,
+  "measuredPeak": "F3 -14c (173.2 Hz)"
+ },
+ {
+  "id": "tower_pluck_1_F4--band",
+  "description": "Knee pluck 1/7 (F4), jazz: upright-bass pizz + vibraphone.",
+  "pitch": "F4",
+  "useAt": "f540 (alt, jazzier).",
+  "category": "skyline",
+  "flavor": "band",
+  "variantOf": "tower_pluck_1_F4",
+  "loop": false,
+  "frames": [
+   540
+  ],
+  "anchor": "start",
+  "file": "wav/tower_pluck_1_F4--band.wav",
+  "preview": "mp3/tower_pluck_1_F4--band.mp3",
+  "duration": 1.63,
+  "durationFrames": 39.1,
+  "levels": {
+   "lufsIntegrated": -16.5,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -9.82
+  },
+  "normGainDb": -1.43,
+  "normMode": "momentary",
+  "mixDb": -6,
+  "measuredPeak": "F4 -1c (349.0 Hz)"
+ },
+ {
+  "id": "tower_pluck_2_F4",
+  "description": "Knee pluck 2/7 (F4): harp + upright-bass pizz two octaves down, soft pop air, a whisper of pulse wave. Repeated Fs are distinct round-robins with a slight crescendo.",
+  "pitch": "F4",
+  "useAt": "Skyline tower pop f555.",
+  "category": "skyline",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   555
+  ],
+  "anchor": "start",
+  "file": "wav/tower_pluck_2_F4.wav",
+  "preview": "mp3/tower_pluck_2_F4.mp3",
+  "duration": 1.418,
+  "durationFrames": 34.0,
+  "levels": {
+   "lufsIntegrated": -21.9,
+   "lufsMomentaryMax": -16.2,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 11.46,
+  "normMode": "momentary",
+  "mixDb": -6,
+  "measuredPeak": "F4 +3c (349.9 Hz)"
+ },
+ {
+  "id": "tower_pluck_2_F4--chip",
+  "description": "Knee pluck 2/7 (F4), 8-bit: pulse + triangle sub + LFSR tick, dotted echo.",
+  "pitch": "F4",
+  "useAt": "f555 (alt).",
+  "category": "skyline",
+  "flavor": "chip",
+  "variantOf": "tower_pluck_2_F4",
+  "loop": false,
+  "frames": [
+   555
+  ],
+  "anchor": "start",
+  "file": "wav/tower_pluck_2_F4--chip.wav",
+  "preview": "mp3/tower_pluck_2_F4--chip.mp3",
+  "duration": 0.633,
+  "durationFrames": 15.2,
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -4.4
+  },
+  "normGainDb": -1.59,
+  "normMode": "momentary",
+  "mixDb": -8,
+  "measuredPeak": "F3 -14c (173.2 Hz)"
+ },
+ {
+  "id": "tower_pluck_2_F4--band",
+  "description": "Knee pluck 2/7 (F4), jazz: upright-bass pizz + vibraphone.",
+  "pitch": "F4",
+  "useAt": "f555 (alt, jazzier).",
+  "category": "skyline",
+  "flavor": "band",
+  "variantOf": "tower_pluck_2_F4",
+  "loop": false,
+  "frames": [
+   555
+  ],
+  "anchor": "start",
+  "file": "wav/tower_pluck_2_F4--band.wav",
+  "preview": "mp3/tower_pluck_2_F4--band.mp3",
+  "duration": 1.63,
+  "durationFrames": 39.1,
+  "levels": {
+   "lufsIntegrated": -16.5,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -9.83
+  },
+  "normGainDb": -1.86,
+  "normMode": "momentary",
+  "mixDb": -6,
+  "measuredPeak": "F4 -1c (349.0 Hz)"
+ },
+ {
+  "id": "tower_pluck_3_F4",
+  "description": "Knee pluck 3/7 (F4): harp + upright-bass pizz two octaves down, soft pop air, a whisper of pulse wave. Repeated Fs are distinct round-robins with a slight crescendo.",
+  "pitch": "F4",
+  "useAt": "Skyline tower pop f570.",
+  "category": "skyline",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   570
+  ],
+  "anchor": "start",
+  "file": "wav/tower_pluck_3_F4.wav",
+  "preview": "mp3/tower_pluck_3_F4.mp3",
+  "duration": 1.411,
+  "durationFrames": 33.9,
+  "levels": {
+   "lufsIntegrated": -22.4,
+   "lufsMomentaryMax": -16.7,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 10.64,
+  "normMode": "momentary",
+  "mixDb": -6,
+  "measuredPeak": "F4 +0c (349.2 Hz)"
+ },
+ {
+  "id": "tower_pluck_3_F4--chip",
+  "description": "Knee pluck 3/7 (F4), 8-bit: pulse + triangle sub + LFSR tick, dotted echo.",
+  "pitch": "F4",
+  "useAt": "f570 (alt).",
+  "category": "skyline",
+  "flavor": "chip",
+  "variantOf": "tower_pluck_3_F4",
+  "loop": false,
+  "frames": [
+   570
+  ],
+  "anchor": "start",
+  "file": "wav/tower_pluck_3_F4--chip.wav",
+  "preview": "mp3/tower_pluck_3_F4--chip.mp3",
+  "duration": 0.633,
+  "durationFrames": 15.2,
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -4.4
+  },
+  "normGainDb": -2.0,
+  "normMode": "momentary",
+  "mixDb": -8,
+  "measuredPeak": "F3 -14c (173.2 Hz)"
+ },
+ {
+  "id": "tower_pluck_3_F4--band",
+  "description": "Knee pluck 3/7 (F4), jazz: upright-bass pizz + vibraphone.",
+  "pitch": "F4",
+  "useAt": "f570 (alt, jazzier).",
+  "category": "skyline",
+  "flavor": "band",
+  "variantOf": "tower_pluck_3_F4",
+  "loop": false,
+  "frames": [
+   570
+  ],
+  "anchor": "start",
+  "file": "wav/tower_pluck_3_F4--band.wav",
+  "preview": "mp3/tower_pluck_3_F4--band.mp3",
+  "duration": 1.63,
+  "durationFrames": 39.1,
+  "levels": {
+   "lufsIntegrated": -16.5,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -9.87
+  },
+  "normGainDb": -2.25,
+  "normMode": "momentary",
+  "mixDb": -6,
+  "measuredPeak": "F4 -1c (349.0 Hz)"
+ },
+ {
+  "id": "tower_pluck_4_F4",
+  "description": "Knee pluck 4/7 (F4): harp + upright-bass pizz two octaves down, soft pop air, a whisper of pulse wave. Repeated Fs are distinct round-robins with a slight crescendo.",
+  "pitch": "F4",
+  "useAt": "Skyline tower pop f585.",
+  "category": "skyline",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   585
+  ],
+  "anchor": "start",
+  "file": "wav/tower_pluck_4_F4.wav",
+  "preview": "mp3/tower_pluck_4_F4.mp3",
+  "duration": 1.414,
+  "durationFrames": 33.9,
+  "levels": {
+   "lufsIntegrated": -22.3,
+   "lufsMomentaryMax": -16.7,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 10.22,
+  "normMode": "momentary",
+  "mixDb": -6,
+  "measuredPeak": "F4 +3c (349.9 Hz)"
+ },
+ {
+  "id": "tower_pluck_4_F4--chip",
+  "description": "Knee pluck 4/7 (F4), 8-bit: pulse + triangle sub + LFSR tick, dotted echo.",
+  "pitch": "F4",
+  "useAt": "f585 (alt).",
+  "category": "skyline",
+  "flavor": "chip",
+  "variantOf": "tower_pluck_4_F4",
+  "loop": false,
+  "frames": [
+   585
+  ],
+  "anchor": "start",
+  "file": "wav/tower_pluck_4_F4--chip.wav",
+  "preview": "mp3/tower_pluck_4_F4--chip.mp3",
+  "duration": 0.633,
+  "durationFrames": 15.2,
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -4.4
+  },
+  "normGainDb": -2.38,
+  "normMode": "momentary",
+  "mixDb": -8,
+  "measuredPeak": "F3 -14c (173.2 Hz)"
+ },
+ {
+  "id": "tower_pluck_4_F4--band",
+  "description": "Knee pluck 4/7 (F4), jazz: upright-bass pizz + vibraphone.",
+  "pitch": "F4",
+  "useAt": "f585 (alt, jazzier).",
+  "category": "skyline",
+  "flavor": "band",
+  "variantOf": "tower_pluck_4_F4",
+  "loop": false,
+  "frames": [
+   585
+  ],
+  "anchor": "start",
+  "file": "wav/tower_pluck_4_F4--band.wav",
+  "preview": "mp3/tower_pluck_4_F4--band.mp3",
+  "duration": 1.63,
+  "durationFrames": 39.1,
+  "levels": {
+   "lufsIntegrated": -16.5,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -9.83
+  },
+  "normGainDb": -2.65,
+  "normMode": "momentary",
+  "mixDb": -6,
+  "measuredPeak": "F4 -1c (349.0 Hz)"
+ },
+ {
+  "id": "tower_pluck_5_G4",
+  "description": "Knee pluck 5/7 (G4): harp + upright-bass pizz two octaves down, soft pop air, a whisper of pulse wave. Repeated Fs are distinct round-robins with a slight crescendo.",
+  "pitch": "G4",
+  "useAt": "Skyline tower pop f600.",
+  "category": "skyline",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   600
+  ],
+  "anchor": "start",
+  "file": "wav/tower_pluck_5_G4.wav",
+  "preview": "mp3/tower_pluck_5_G4.mp3",
+  "duration": 1.427,
+  "durationFrames": 34.2,
+  "levels": {
+   "lufsIntegrated": -23.2,
+   "lufsMomentaryMax": -16.7,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 9.9,
+  "normMode": "momentary",
+  "mixDb": -6,
+  "measuredPeak": "G4 -1c (391.8 Hz)"
+ },
+ {
+  "id": "tower_pluck_5_G4--chip",
+  "description": "Knee pluck 5/7 (G4), 8-bit: pulse + triangle sub + LFSR tick, dotted echo.",
+  "pitch": "G4",
+  "useAt": "f600 (alt).",
+  "category": "skyline",
+  "flavor": "chip",
+  "variantOf": "tower_pluck_5_G4",
+  "loop": false,
+  "frames": [
+   600
+  ],
+  "anchor": "start",
+  "file": "wav/tower_pluck_5_G4--chip.wav",
+  "preview": "mp3/tower_pluck_5_G4--chip.mp3",
+  "duration": 0.669,
+  "durationFrames": 16.1,
+  "levels": {
+   "lufsIntegrated": -16.1,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -1.51
+  },
+  "normGainDb": -1.96,
+  "normMode": "momentary",
+  "mixDb": -8,
+  "measuredPeak": "G4 -6c (390.7 Hz)"
+ },
+ {
+  "id": "tower_pluck_5_G4--band",
+  "description": "Knee pluck 5/7 (G4), jazz: upright-bass pizz + vibraphone.",
+  "pitch": "G4",
+  "useAt": "f600 (alt, jazzier).",
+  "category": "skyline",
+  "flavor": "band",
+  "variantOf": "tower_pluck_5_G4",
+  "loop": false,
+  "frames": [
+   600
+  ],
+  "anchor": "start",
+  "file": "wav/tower_pluck_5_G4--band.wav",
+  "preview": "mp3/tower_pluck_5_G4--band.mp3",
+  "duration": 1.63,
+  "durationFrames": 39.1,
+  "levels": {
+   "lufsIntegrated": -16.5,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -9.97
+  },
+  "normGainDb": -2.97,
+  "normMode": "momentary",
+  "mixDb": -6,
+  "measuredPeak": "G4 -1c (391.8 Hz)"
+ },
+ {
+  "id": "tower_pluck_6_Ab4",
+  "description": "Knee pluck 6/7 (Ab4): harp + upright-bass pizz two octaves down, soft pop air, a whisper of pulse wave. Repeated Fs are distinct round-robins with a slight crescendo.",
+  "pitch": "Ab4",
+  "useAt": "Skyline tower pop f615.",
+  "category": "skyline",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   615
+  ],
+  "anchor": "start",
+  "file": "wav/tower_pluck_6_Ab4.wav",
+  "preview": "mp3/tower_pluck_6_Ab4.mp3",
+  "duration": 1.394,
+  "durationFrames": 33.4,
+  "levels": {
+   "lufsIntegrated": -23.2,
+   "lufsMomentaryMax": -17.3,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 9.26,
+  "normMode": "momentary",
+  "mixDb": -6,
+  "measuredPeak": "Ab4 +0c (415.3 Hz)"
+ },
+ {
+  "id": "tower_pluck_6_Ab4--chip",
+  "description": "Knee pluck 6/7 (Ab4), 8-bit: pulse + triangle sub + LFSR tick, dotted echo.",
+  "pitch": "Ab4",
+  "useAt": "f615 (alt).",
+  "category": "skyline",
+  "flavor": "chip",
+  "variantOf": "tower_pluck_6_Ab4",
+  "loop": false,
+  "frames": [
+   615
+  ],
+  "anchor": "start",
+  "file": "wav/tower_pluck_6_Ab4--chip.wav",
+  "preview": "mp3/tower_pluck_6_Ab4--chip.mp3",
+  "duration": 0.624,
+  "durationFrames": 15.0,
+  "levels": {
+   "lufsIntegrated": -17.4,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -1.79
+  },
+  "normGainDb": -2.63,
+  "normMode": "momentary",
+  "mixDb": -8,
+  "measuredPeak": "Ab4 +2c (415.8 Hz)"
+ },
+ {
+  "id": "tower_pluck_6_Ab4--band",
+  "description": "Knee pluck 6/7 (Ab4), jazz: upright-bass pizz + vibraphone.",
+  "pitch": "Ab4",
+  "useAt": "f615 (alt, jazzier).",
+  "category": "skyline",
+  "flavor": "band",
+  "variantOf": "tower_pluck_6_Ab4",
+  "loop": false,
+  "frames": [
+   615
+  ],
+  "anchor": "start",
+  "file": "wav/tower_pluck_6_Ab4--band.wav",
+  "preview": "mp3/tower_pluck_6_Ab4--band.mp3",
+  "duration": 1.63,
+  "durationFrames": 39.1,
+  "levels": {
+   "lufsIntegrated": -16.6,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -9.06
+  },
+  "normGainDb": -2.6,
+  "normMode": "momentary",
+  "mixDb": -6,
+  "measuredPeak": "Ab4 -1c (415.1 Hz)"
+ },
+ {
+  "id": "tower_pluck_7_C5",
+  "description": "Knee pluck 7/7 (C5): harp + upright-bass pizz two octaves down, soft pop air, a whisper of pulse wave. Repeated Fs are distinct round-robins with a slight crescendo.",
+  "pitch": "C5",
+  "useAt": "Skyline tower pop f622.",
+  "category": "skyline",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   622
+  ],
+  "anchor": "start",
+  "file": "wav/tower_pluck_7_C5.wav",
+  "preview": "mp3/tower_pluck_7_C5.mp3",
+  "duration": 1.403,
+  "durationFrames": 33.7,
+  "levels": {
+   "lufsIntegrated": -24.4,
+   "lufsMomentaryMax": -17.1,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 8.26,
+  "normMode": "momentary",
+  "mixDb": -6,
+  "measuredPeak": "C5 -5c (521.9 Hz)"
+ },
+ {
+  "id": "tower_pluck_7_C5--chip",
+  "description": "Knee pluck 7/7 (C5), 8-bit: pulse + triangle sub + LFSR tick, dotted echo.",
+  "pitch": "C5",
+  "useAt": "f622 (alt).",
+  "category": "skyline",
+  "flavor": "chip",
+  "variantOf": "tower_pluck_7_C5",
+  "loop": false,
+  "frames": [
+   622
+  ],
+  "anchor": "start",
+  "file": "wav/tower_pluck_7_C5--chip.wav",
+  "preview": "mp3/tower_pluck_7_C5--chip.mp3",
+  "duration": 0.639,
+  "durationFrames": 15.3,
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -2.04
+  },
+  "normGainDb": -3.24,
+  "normMode": "momentary",
+  "mixDb": -8,
+  "measuredPeak": "C4 +4c (262.2 Hz)"
+ },
+ {
+  "id": "tower_pluck_7_C5--band",
+  "description": "Knee pluck 7/7 (C5), jazz: upright-bass pizz + vibraphone.",
+  "pitch": "C5",
+  "useAt": "f622 (alt, jazzier).",
+  "category": "skyline",
+  "flavor": "band",
+  "variantOf": "tower_pluck_7_C5",
+  "loop": false,
+  "frames": [
+   622
+  ],
+  "anchor": "start",
+  "file": "wav/tower_pluck_7_C5--band.wav",
+  "preview": "mp3/tower_pluck_7_C5--band.mp3",
+  "duration": 1.63,
+  "durationFrames": 39.1,
+  "levels": {
+   "lufsIntegrated": -16.8,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -8.79
+  },
+  "normGainDb": -1.04,
+  "normMode": "momentary",
+  "mixDb": -6,
+  "measuredPeak": "C5 +0c (523.1 Hz)"
+ },
+ {
+  "id": "tower_pop",
+  "description": "Tower sprite pop-up (unpitched): quick airy pop, 2-frame spring overshoot ticks, a puff of dust. Pairs with any pluck.",
+  "pitch": null,
+  "useAt": "Skyline pops f540/555/570/585/600/615/622 (with tower_pluck_*).",
+  "category": "skyline",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   540,
+   555,
+   570,
+   585,
+   600,
+   615,
+   622
+  ],
+  "anchor": "start",
+  "file": "wav/tower_pop.wav",
+  "preview": "mp3/tower_pop.mp3",
+  "duration": 0.54,
+  "durationFrames": 13.0,
+  "levels": {
+   "lufsIntegrated": -17.8,
+   "lufsMomentaryMax": -17.8,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 2.41,
+  "normMode": "momentary",
+  "mixDb": -12
+ },
+ {
+  "id": "siren_whoop_F",
+  "description": "CODE RED siren whoop tuned to F: rises C4 -> F5, holds, sags to C5; horn-speaker colour, 2 rev/s beacon rotation, faint pulse-wave twin.",
+  "pitch": "C4 -> F5 -> C5",
+  "useAt": "f555 (ELGOOG/MINDDEEP CODE RED siren).",
+  "category": "skyline",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   555
+  ],
+  "anchor": "start",
+  "file": "wav/siren_whoop_F.wav",
+  "preview": "mp3/siren_whoop_F.mp3",
+  "duration": 2.287,
+  "durationFrames": 54.9,
+  "levels": {
+   "lufsIntegrated": -14.0,
+   "lufsMomentaryMax": -11.3,
+   "truePeakDb": -7.91
+  },
+  "normGainDb": -7.27,
+  "normMode": "integrated",
+  "mixDb": -10,
+  "measuredPeak": "F5 -1c (698.2 Hz)"
+ },
+ {
+  "id": "siren_whoop_F--chip",
+  "description": "Siren whoop, 8-bit: 60 Hz-stepped pulse sweep to F5 with an echo.",
+  "pitch": "C4 -> F5",
+  "useAt": "f555 (alt).",
+  "category": "skyline",
+  "flavor": "chip",
+  "variantOf": "siren_whoop_F",
+  "loop": false,
+  "frames": [
+   555
+  ],
+  "anchor": "start",
+  "file": "wav/siren_whoop_F--chip.wav",
+  "preview": "mp3/siren_whoop_F--chip.mp3",
+  "duration": 1.209,
+  "durationFrames": 29.0,
+  "levels": {
+   "lufsIntegrated": -16.3,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -11.59
+  },
+  "normGainDb": -9.02,
+  "normMode": "momentary",
+  "mixDb": -12,
+  "measuredPeak": "F5 -2c (697.8 Hz)"
+ },
+ {
+  "id": "siren_whoop_F--band",
+  "description": "Siren whoop, big-band: trombone rip up to F3 with a harmon trumpet doit to F5 that sags.",
+  "pitch": "-> F3 / F5",
+  "useAt": "f555 (alt, jazzier).",
+  "category": "skyline",
+  "flavor": "band",
+  "variantOf": "siren_whoop_F",
+  "loop": false,
+  "frames": [
+   555
+  ],
+  "anchor": "start",
+  "file": "wav/siren_whoop_F--band.wav",
+  "preview": "mp3/siren_whoop_F--band.mp3",
+  "duration": 2.064,
+  "durationFrames": 49.5,
+  "levels": {
+   "lufsIntegrated": -18.0,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 1.98,
+  "normMode": "integrated",
+  "mixDb": -10,
+  "measuredPeak": "F7 +2c (2796.6 Hz)"
+ },
+ {
+  "id": "ka_ching",
+  "description": "Tasteful ka-ching: two-stage drawer latch, then a small tuned bell pair (F6 + C7, no third), triangle shimmer and a few coin glints.",
+  "pitch": "F6 + C7",
+  "useAt": "f585 (INVIDIA: GPUs tossed to every roof). 'ching' at +0.055 s.",
+  "category": "skyline",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   585
+  ],
+  "anchor": "start",
+  "file": "wav/ka_ching.wav",
+  "preview": "mp3/ka_ching.mp3",
+  "duration": 1.558,
+  "durationFrames": 37.4,
+  "levels": {
+   "lufsIntegrated": -19.2,
+   "lufsMomentaryMax": -15.9,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 0.54,
+  "normMode": "momentary",
+  "mixDb": -10,
+  "measuredPeak": "F6 +0c (1396.9 Hz)"
+ },
+ {
+  "id": "ka_ching--chip",
+  "description": "Ka-ching, 8-bit: LFSR latch, pulse C6 -> F6 with dotted echo.",
+  "pitch": "C6 -> F6",
+  "useAt": "f585 (alt).",
+  "category": "skyline",
+  "flavor": "chip",
+  "variantOf": "ka_ching",
+  "loop": false,
+  "frames": [
+   585
+  ],
+  "anchor": "start",
+  "file": "wav/ka_ching--chip.wav",
+  "preview": "mp3/ka_ching--chip.mp3",
+  "duration": 0.974,
+  "durationFrames": 23.4,
+  "levels": {
+   "lufsIntegrated": -17.0,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -9.08
+  },
+  "normGainDb": -3.7,
+  "normMode": "momentary",
+  "mixDb": -12,
+  "measuredPeak": "F6 +0c (1396.5 Hz)"
+ },
+ {
+  "id": "ka_ching--band",
+  "description": "Ka-ching, jazz: rimshot + vibraphone F6/C7 dyad + triangle.",
+  "pitch": "F6 + C7",
+  "useAt": "f585 (alt).",
+  "category": "skyline",
+  "flavor": "band",
+  "variantOf": "ka_ching",
+  "loop": false,
+  "frames": [
+   585
+  ],
+  "anchor": "start",
+  "file": "wav/ka_ching--band.wav",
+  "preview": "mp3/ka_ching--band.mp3",
+  "duration": 2.08,
+  "durationFrames": 49.9,
+  "levels": {
+   "lufsIntegrated": -17.4,
+   "lufsMomentaryMax": -12.5,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 14.01,
+  "normMode": "integrated",
+  "mixDb": -10,
+  "measuredPeak": "F6 +4c (1400.4 Hz)"
+ },
+ {
+  "id": "plop_water",
+  "description": "Small water plop tuned to Ab5 (bubble chirp) with a splash and two trailing droplets.",
+  "pitch": "Ab5 chirp",
+  "useAt": "f615 (PEEKDEEP: whale water tower / moat, with pluck Ab).",
+  "category": "skyline",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   615
+  ],
+  "anchor": "start",
+  "file": "wav/plop_water.wav",
+  "preview": "mp3/plop_water.mp3",
+  "duration": 0.517,
+  "durationFrames": 12.4,
+  "levels": {
+   "lufsIntegrated": -17.1,
+   "lufsMomentaryMax": -14.6,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 3.09,
+  "normMode": "momentary",
+  "mixDb": -12,
+  "measuredPeak": "C6 -3c (1044.6 Hz)"
+ },
+ {
+  "id": "drip_clack",
+  "description": "Fresh paint letters: a plastic sign-letter clack then a slow, wet paint drip plop (F4).",
+  "pitch": "F4 drip",
+  "useAt": "f570 (ATEM: 'AI' letters drip over METAVERSE). Clack on the frame, drip +0.2 s.",
+  "category": "skyline",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   570
+  ],
+  "anchor": "start",
+  "file": "wav/drip_clack.wav",
+  "preview": "mp3/drip_clack.mp3",
+  "duration": 0.62,
+  "durationFrames": 14.9,
+  "levels": {
+   "lufsIntegrated": -18.7,
+   "lufsMomentaryMax": -17.7,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": 0.98,
+  "normMode": "momentary",
+  "mixDb": -12,
+  "measuredPeak": "F4 -8c (347.7 Hz)"
+ },
+ {
+  "id": "bell_ding_F6",
+  "description": "Post-notification ding, F6: a small struck bell (no third in its partials) + glockenspiel + celesta, a hair of NES triangle.",
+  "pitch": "F6",
+  "useAt": "f705 (post notification; loop point).",
+  "category": "title",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   705
+  ],
+  "anchor": "start",
+  "file": "wav/bell_ding_F6.wav",
+  "preview": "mp3/bell_ding_F6.mp3",
+  "duration": 2.982,
+  "durationFrames": 71.6,
+  "levels": {
+   "lufsIntegrated": -14.0,
+   "lufsMomentaryMax": -8.6,
+   "truePeakDb": -4.09
+  },
+  "normGainDb": 1.42,
+  "normMode": "integrated",
+  "mixDb": -8,
+  "measuredPeak": "F6 +0c (1396.9 Hz)"
+ },
+ {
+  "id": "bell_ding_F6--chip",
+  "description": "Ding F6, 8-bit: 12.5% pulse + triangle with a dotted 3-tap echo.",
+  "pitch": "F6",
+  "useAt": "f705 (alt).",
+  "category": "title",
+  "flavor": "chip",
+  "variantOf": "bell_ding_F6",
+  "loop": false,
+  "frames": [
+   705
+  ],
+  "anchor": "start",
+  "file": "wav/bell_ding_F6--chip.wav",
+  "preview": "mp3/bell_ding_F6--chip.mp3",
+  "duration": 0.926,
+  "durationFrames": 22.2,
+  "levels": {
+   "lufsIntegrated": -17.6,
+   "lufsMomentaryMax": -14.0,
+   "truePeakDb": -5.56
+  },
+  "normGainDb": -3.61,
+  "normMode": "momentary",
+  "mixDb": -10,
+  "measuredPeak": "F6 -1c (1395.8 Hz)"
+ },
+ {
+  "id": "bell_ding_F6--band",
+  "description": "Ding F6, jazz: vibraphone + soft upright-piano F6 + triangle.",
+  "pitch": "F6",
+  "useAt": "f705 (alt, warmer).",
+  "category": "title",
+  "flavor": "band",
+  "variantOf": "bell_ding_F6",
+  "loop": false,
+  "frames": [
+   705
+  ],
+  "anchor": "start",
+  "file": "wav/bell_ding_F6--band.wav",
+  "preview": "mp3/bell_ding_F6--band.mp3",
+  "duration": 2.825,
+  "durationFrames": 67.8,
+  "levels": {
+   "lufsIntegrated": -14.0,
+   "lufsMomentaryMax": -8.2,
+   "truePeakDb": -3.01
+  },
+  "normGainDb": 18.84,
+  "normMode": "integrated",
+  "mixDb": -8,
+  "measuredPeak": "F6 +4c (1400.4 Hz)"
+ },
+ {
+  "id": "voice_nole_line",
+  "description": "NOLE dialogue babble, 'I came up with the name!' (staccato trumpet + 8-bit voice). Text-synced; see blips/timing_nole.json.",
+  "pitch": null,
+  "useAt": "pixeladv scene: place at f54 (text reveal cps 1.25/frame, synced to scene.ts)",
+  "category": "voice",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   54
+  ],
+  "anchor": "start",
+  "file": "wav/voice_nole_line.wav",
+  "preview": "mp3/voice_nole_line.mp3",
+  "duration": 1.127,
+  "durationFrames": 27.0,
+  "levels": {
+   "lufsIntegrated": -17.5,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -7.37
+  },
+  "normGainDb": -4.33,
+  "normMode": "momentary",
+  "mixDb": -8
+ },
+ {
+  "id": "voice_nole_line--chip",
+  "description": "NOLE dialogue babble, 'I came up with the name!' (8-bit voice: bright, fast, slightly overdriven square). Text-synced; see blips/timing_nole.json.",
+  "pitch": null,
+  "useAt": "pixeladv scene: place at f54 (text reveal cps 1.25/frame, synced to scene.ts)",
+  "category": "voice",
+  "flavor": "chip",
+  "variantOf": "voice_nole_line",
+  "loop": false,
+  "frames": [
+   54
+  ],
+  "anchor": "start",
+  "file": "wav/voice_nole_line--chip.wav",
+  "preview": "mp3/voice_nole_line--chip.mp3",
+  "duration": 1.12,
+  "durationFrames": 26.9,
+  "levels": {
+   "lufsIntegrated": -17.6,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -7.17
+  },
+  "normGainDb": -11.05,
+  "normMode": "momentary",
+  "mixDb": -8
+ },
+ {
+  "id": "voice_nole_line--band",
+  "description": "NOLE dialogue babble, 'I came up with the name!' (staccato trumpet). Text-synced; see blips/timing_nole.json.",
+  "pitch": null,
+  "useAt": "pixeladv scene: place at f54 (text reveal cps 1.25/frame, synced to scene.ts)",
+  "category": "voice",
+  "flavor": "band",
+  "variantOf": "voice_nole_line",
+  "loop": false,
+  "frames": [
+   54
+  ],
+  "anchor": "start",
+  "file": "wav/voice_nole_line--band.wav",
+  "preview": "mp3/voice_nole_line--band.mp3",
+  "duration": 1.131,
+  "durationFrames": 27.1,
+  "levels": {
+   "lufsIntegrated": -18.2,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -4.47
+  },
+  "normGainDb": 5.27,
+  "normMode": "momentary",
+  "mixDb": -8
+ },
+ {
+  "id": "voice_mas_line",
+  "description": "MAS dialogue babble, 'super.' (felt upright piano + 8-bit voice). Text-synced; see blips/timing_mas.json.",
+  "pitch": null,
+  "useAt": "pixeladv scene: place at f99 (text reveal cps 0.75/frame, synced to scene.ts)",
+  "category": "voice",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   99
+  ],
+  "anchor": "start",
+  "file": "wav/voice_mas_line.wav",
+  "preview": "mp3/voice_mas_line.mp3",
+  "duration": 0.688,
+  "durationFrames": 16.5,
+  "levels": {
+   "lufsIntegrated": -17.5,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -7.0
+  },
+  "normGainDb": 2.25,
+  "normMode": "momentary",
+  "mixDb": -8
+ },
+ {
+  "id": "voice_mas_line--chip",
+  "description": "MAS dialogue babble, 'super.' (8-bit voice: soft low rounded sine, slow (blips on syllables only)). Text-synced; see blips/timing_mas.json.",
+  "pitch": null,
+  "useAt": "pixeladv scene: place at f99 (text reveal cps 0.75/frame, synced to scene.ts)",
+  "category": "voice",
+  "flavor": "chip",
+  "variantOf": "voice_mas_line",
+  "loop": false,
+  "frames": [
+   99
+  ],
+  "anchor": "start",
+  "file": "wav/voice_mas_line--chip.wav",
+  "preview": "mp3/voice_mas_line--chip.mp3",
+  "duration": 0.675,
+  "durationFrames": 16.2,
+  "levels": {
+   "lufsIntegrated": -17.6,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -7.24
+  },
+  "normGainDb": -4.82,
+  "normMode": "momentary",
+  "mixDb": -8
+ },
+ {
+  "id": "voice_mas_line--band",
+  "description": "MAS dialogue babble, 'super.' (felt upright piano). Text-synced; see blips/timing_mas.json.",
+  "pitch": null,
+  "useAt": "pixeladv scene: place at f99 (text reveal cps 0.75/frame, synced to scene.ts)",
+  "category": "voice",
+  "flavor": "band",
+  "variantOf": "voice_mas_line",
+  "loop": false,
+  "frames": [
+   99
+  ],
+  "anchor": "start",
+  "file": "wav/voice_mas_line--band.wav",
+  "preview": "mp3/voice_mas_line--band.mp3",
+  "duration": 0.81,
+  "durationFrames": 19.4,
+  "levels": {
+   "lufsIntegrated": -17.7,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -7.14
+  },
+  "normGainDb": 17.09,
+  "normMode": "momentary",
+  "mixDb": -8
+ },
+ {
+  "id": "voice_gerg_line",
+  "description": "GERG dialogue babble, 'Shipped it. Sleep is deprecated.' (claves / wood clicks + 8-bit voice). Text-synced; see blips/timing_gerg.json.",
+  "pitch": null,
+  "useAt": "any pixel dialogue box; timing JSON gives per-character reveal frames",
+  "category": "voice",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "file": "wav/voice_gerg_line.wav",
+  "preview": "mp3/voice_gerg_line.mp3",
+  "duration": 1.798,
+  "durationFrames": 43.1,
+  "levels": {
+   "lufsIntegrated": -18.3,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -4.62
+  },
+  "normGainDb": -3.73,
+  "normMode": "momentary",
+  "mixDb": -8
+ },
+ {
+  "id": "voice_gerg_line--chip",
+  "description": "GERG dialogue babble, 'Shipped it. Sleep is deprecated.' (8-bit voice: rapid clicky ticks (a fast keyboard talking)). Text-synced; see blips/timing_gerg.json.",
+  "pitch": null,
+  "useAt": "any pixel dialogue box; timing JSON gives per-character reveal frames",
+  "category": "voice",
+  "flavor": "chip",
+  "variantOf": "voice_gerg_line",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "file": "wav/voice_gerg_line--chip.wav",
+  "preview": "mp3/voice_gerg_line--chip.mp3",
+  "duration": 1.798,
+  "durationFrames": 43.1,
+  "levels": {
+   "lufsIntegrated": -18.3,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -4.9
+  },
+  "normGainDb": -8.1,
+  "normMode": "momentary",
+  "mixDb": -8
+ },
+ {
+  "id": "voice_gerg_line--band",
+  "description": "GERG dialogue babble, 'Shipped it. Sleep is deprecated.' (claves / wood clicks). Text-synced; see blips/timing_gerg.json.",
+  "pitch": null,
+  "useAt": "any pixel dialogue box; timing JSON gives per-character reveal frames",
+  "category": "voice",
+  "flavor": "band",
+  "variantOf": "voice_gerg_line",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "file": "wav/voice_gerg_line--band.wav",
+  "preview": "mp3/voice_gerg_line--band.mp3",
+  "duration": 1.796,
+  "durationFrames": 43.1,
+  "levels": {
+   "lufsIntegrated": -18.2,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -3.89
+  },
+  "normGainDb": 18.37,
+  "normMode": "momentary",
+  "mixDb": -8
+ },
+ {
+  "id": "voice_alyi_line",
+  "description": "ALYI dialogue babble, 'Can you feel it? The AGI.' (breathy flute in a hall + 8-bit voice). Text-synced; see blips/timing_alyi.json.",
+  "pitch": null,
+  "useAt": "any pixel dialogue box; timing JSON gives per-character reveal frames",
+  "category": "voice",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "file": "wav/voice_alyi_line.wav",
+  "preview": "mp3/voice_alyi_line.mp3",
+  "duration": 3.93,
+  "durationFrames": 94.3,
+  "levels": {
+   "lufsIntegrated": -18.7,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -5.27
+  },
+  "normGainDb": 2.13,
+  "normMode": "momentary",
+  "mixDb": -8
+ },
+ {
+  "id": "voice_alyi_line--chip",
+  "description": "ALYI dialogue babble, 'Can you feel it? The AGI.' (8-bit voice: breathy, reverberant, drifting (Db = the mystic's ache)). Text-synced; see blips/timing_alyi.json.",
+  "pitch": null,
+  "useAt": "any pixel dialogue box; timing JSON gives per-character reveal frames",
+  "category": "voice",
+  "flavor": "chip",
+  "variantOf": "voice_alyi_line",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "file": "wav/voice_alyi_line--chip.wav",
+  "preview": "mp3/voice_alyi_line--chip.mp3",
+  "duration": 4.0,
+  "durationFrames": 96.0,
+  "levels": {
+   "lufsIntegrated": -18.7,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -5.11
+  },
+  "normGainDb": -4.65,
+  "normMode": "momentary",
+  "mixDb": -8
+ },
+ {
+  "id": "voice_alyi_line--band",
+  "description": "ALYI dialogue babble, 'Can you feel it? The AGI.' (breathy flute in a hall). Text-synced; see blips/timing_alyi.json.",
+  "pitch": null,
+  "useAt": "any pixel dialogue box; timing JSON gives per-character reveal frames",
+  "category": "voice",
+  "flavor": "band",
+  "variantOf": "voice_alyi_line",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "file": "wav/voice_alyi_line--band.wav",
+  "preview": "mp3/voice_alyi_line--band.mp3",
+  "duration": 4.033,
+  "durationFrames": 96.8,
+  "levels": {
+   "lufsIntegrated": -20.5,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -9.06
+  },
+  "normGainDb": 15.16,
+  "normMode": "momentary",
+  "mixDb": -8
+ },
+ {
+  "id": "voice_mario_line",
+  "description": "MARIO dialogue babble, 'I have... some concerns.' (marimba + 8-bit voice). Text-synced; see blips/timing_mario.json.",
+  "pitch": null,
+  "useAt": "any pixel dialogue box; timing JSON gives per-character reveal frames",
+  "category": "voice",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "file": "wav/voice_mario_line.wav",
+  "preview": "mp3/voice_mario_line.mp3",
+  "duration": 2.142,
+  "durationFrames": 51.4,
+  "levels": {
+   "lufsIntegrated": -18.5,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -1.3
+  },
+  "normGainDb": 4.89,
+  "normMode": "momentary",
+  "mixDb": -8
+ },
+ {
+  "id": "voice_mario_line--chip",
+  "description": "MARIO dialogue babble, 'I have... some concerns.' (8-bit voice: woody, nervous (timing and pitch jitter, little stutters)). Text-synced; see blips/timing_mario.json.",
+  "pitch": null,
+  "useAt": "any pixel dialogue box; timing JSON gives per-character reveal frames",
+  "category": "voice",
+  "flavor": "chip",
+  "variantOf": "voice_mario_line",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "file": "wav/voice_mario_line--chip.wav",
+  "preview": "mp3/voice_mario_line--chip.mp3",
+  "duration": 2.087,
+  "durationFrames": 50.1,
+  "levels": {
+   "lufsIntegrated": -18.5,
+   "lufsMomentaryMax": -16.2,
+   "truePeakDb": -1.0
+  },
+  "normGainDb": -1.74,
+  "normMode": "momentary",
+  "mixDb": -8
+ },
+ {
+  "id": "voice_mario_line--band",
+  "description": "MARIO dialogue babble, 'I have... some concerns.' (marimba). Text-synced; see blips/timing_mario.json.",
+  "pitch": null,
+  "useAt": "any pixel dialogue box; timing JSON gives per-character reveal frames",
+  "category": "voice",
+  "flavor": "band",
+  "variantOf": "voice_mario_line",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "file": "wav/voice_mario_line--band.wav",
+  "preview": "mp3/voice_mario_line--band.mp3",
+  "duration": 2.227,
+  "durationFrames": 53.5,
+  "levels": {
+   "lufsIntegrated": -18.9,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -8.78
+  },
+  "normGainDb": 11.87,
+  "normMode": "momentary",
+  "mixDb": -8
+ },
+ {
+  "id": "voice_rumpt_line",
+  "description": "RUMPT dialogue babble, 'Tremendous. Nobody has ever seen AI like it.' (trombone blats + 8-bit voice). Text-synced; see blips/timing_rumpt.json.",
+  "pitch": null,
+  "useAt": "any pixel dialogue box; timing JSON gives per-character reveal frames",
+  "category": "voice",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "file": "wav/voice_rumpt_line.wav",
+  "preview": "mp3/voice_rumpt_line.mp3",
+  "duration": 3.063,
+  "durationFrames": 73.5,
+  "levels": {
+   "lufsIntegrated": -18.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -4.22
+  },
+  "normGainDb": -4.23,
+  "normMode": "momentary",
+  "mixDb": -8
+ },
+ {
+  "id": "voice_rumpt_line--chip",
+  "description": "RUMPT dialogue babble, 'Tremendous. Nobody has ever seen AI like it.' (8-bit voice: brassy, loud, stressed word-starts). Text-synced; see blips/timing_rumpt.json.",
+  "pitch": null,
+  "useAt": "any pixel dialogue box; timing JSON gives per-character reveal frames",
+  "category": "voice",
+  "flavor": "chip",
+  "variantOf": "voice_rumpt_line",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "file": "wav/voice_rumpt_line--chip.wav",
+  "preview": "mp3/voice_rumpt_line--chip.mp3",
+  "duration": 3.084,
+  "durationFrames": 74.0,
+  "levels": {
+   "lufsIntegrated": -17.6,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -10.2
+  },
+  "normGainDb": -5.2,
+  "normMode": "momentary",
+  "mixDb": -8
+ },
+ {
+  "id": "voice_rumpt_line--band",
+  "description": "RUMPT dialogue babble, 'Tremendous. Nobody has ever seen AI like it.' (trombone blats). Text-synced; see blips/timing_rumpt.json.",
+  "pitch": null,
+  "useAt": "any pixel dialogue box; timing JSON gives per-character reveal frames",
+  "category": "voice",
+  "flavor": "band",
+  "variantOf": "voice_rumpt_line",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "file": "wav/voice_rumpt_line--band.wav",
+  "preview": "mp3/voice_rumpt_line--band.mp3",
+  "duration": 3.047,
+  "durationFrames": 73.1,
+  "levels": {
+   "lufsIntegrated": -18.2,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -2.55
+  },
+  "normGainDb": -3.13,
+  "normMode": "momentary",
+  "mixDb": -8
+ },
+ {
+  "id": "voice_mas_line_slow",
+  "description": "MAS 'super.' at his own slow pace (0.3 chars/frame, felt piano + sine): suggested retime for the scene - two unhurried syllables.",
+  "pitch": null,
+  "useAt": "Suggestion: set the Mas line cps to 0.3 in pixeladv (t0 f99); timing in blips/timing_mas_slow.json.",
+  "category": "voice",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [
+   99
+  ],
+  "anchor": "start",
+  "file": "wav/voice_mas_line_slow.wav",
+  "preview": "mp3/voice_mas_line_slow.mp3",
+  "duration": 0.932,
+  "durationFrames": 22.4,
+  "levels": {
+   "lufsIntegrated": -17.8,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -7.25
+  },
+  "normGainDb": 2.27,
+  "normMode": "momentary",
+  "mixDb": -8
+ },
+ {
+  "id": "blip_mas_hybrid_F3",
+  "file": "blips/kits/mas/hybrid/mas_hybrid_F3.wav",
+  "preview": "blips/kits/mas/hybrid/mas_hybrid_F3.mp3",
+  "description": "MAS voice blip (hybrid: felt upright piano + 8-bit) on F3.",
+  "pitch": "F3",
+  "duration": 0.504,
+  "durationFrames": 12.1,
+  "useAt": "Live dialogue babble for MAS: fire on reveal of every 1 letter(s) (syllable onsets); cps 0.75/frame; last blip -> F3 on '.', C4 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -4.74
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_mas_hybrid_Ab3",
+  "file": "blips/kits/mas/hybrid/mas_hybrid_Ab3.wav",
+  "preview": "blips/kits/mas/hybrid/mas_hybrid_Ab3.mp3",
+  "description": "MAS voice blip (hybrid: felt upright piano + 8-bit) on Ab3.",
+  "pitch": "Ab3",
+  "duration": 0.487,
+  "durationFrames": 11.7,
+  "useAt": "Live dialogue babble for MAS: fire on reveal of every 1 letter(s) (syllable onsets); cps 0.75/frame; last blip -> F3 on '.', C4 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -3.71
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_mas_hybrid_C4",
+  "file": "blips/kits/mas/hybrid/mas_hybrid_C4.wav",
+  "preview": "blips/kits/mas/hybrid/mas_hybrid_C4.mp3",
+  "description": "MAS voice blip (hybrid: felt upright piano + 8-bit) on C4.",
+  "pitch": "C4",
+  "duration": 0.482,
+  "durationFrames": 11.6,
+  "useAt": "Live dialogue babble for MAS: fire on reveal of every 1 letter(s) (syllable onsets); cps 0.75/frame; last blip -> F3 on '.', C4 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -3.82
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_mas_hybrid_Eb3",
+  "file": "blips/kits/mas/hybrid/mas_hybrid_Eb3.wav",
+  "preview": "blips/kits/mas/hybrid/mas_hybrid_Eb3.mp3",
+  "description": "MAS voice blip (hybrid: felt upright piano + 8-bit) on Eb3.",
+  "pitch": "Eb3",
+  "duration": 0.461,
+  "durationFrames": 11.1,
+  "useAt": "Live dialogue babble for MAS: fire on reveal of every 1 letter(s) (syllable onsets); cps 0.75/frame; last blip -> F3 on '.', C4 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -2.93
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_mas_chip_F3",
+  "file": "blips/kits/mas/chip/mas_chip_F3.wav",
+  "preview": "blips/kits/mas/chip/mas_chip_F3.mp3",
+  "description": "MAS voice blip (chip: soft low rounded sine, slow (blips on syllables only)) on F3.",
+  "pitch": "F3",
+  "duration": 0.5,
+  "durationFrames": 12.0,
+  "useAt": "Live dialogue babble for MAS: fire on reveal of every 1 letter(s) (syllable onsets); cps 0.75/frame; last blip -> F3 on '.', C4 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "chip",
+  "variantOf": "blip_mas_hybrid_F3",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -4.68
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_mas_chip_Ab3",
+  "file": "blips/kits/mas/chip/mas_chip_Ab3.wav",
+  "preview": "blips/kits/mas/chip/mas_chip_Ab3.mp3",
+  "description": "MAS voice blip (chip: soft low rounded sine, slow (blips on syllables only)) on Ab3.",
+  "pitch": "Ab3",
+  "duration": 0.454,
+  "durationFrames": 10.9,
+  "useAt": "Live dialogue babble for MAS: fire on reveal of every 1 letter(s) (syllable onsets); cps 0.75/frame; last blip -> F3 on '.', C4 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "chip",
+  "variantOf": "blip_mas_hybrid_Ab3",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -3.93
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_mas_chip_C4",
+  "file": "blips/kits/mas/chip/mas_chip_C4.wav",
+  "preview": "blips/kits/mas/chip/mas_chip_C4.mp3",
+  "description": "MAS voice blip (chip: soft low rounded sine, slow (blips on syllables only)) on C4.",
+  "pitch": "C4",
+  "duration": 0.486,
+  "durationFrames": 11.7,
+  "useAt": "Live dialogue babble for MAS: fire on reveal of every 1 letter(s) (syllable onsets); cps 0.75/frame; last blip -> F3 on '.', C4 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "chip",
+  "variantOf": "blip_mas_hybrid_C4",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -3.9
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_mas_chip_Eb3",
+  "file": "blips/kits/mas/chip/mas_chip_Eb3.wav",
+  "preview": "blips/kits/mas/chip/mas_chip_Eb3.mp3",
+  "description": "MAS voice blip (chip: soft low rounded sine, slow (blips on syllables only)) on Eb3.",
+  "pitch": "Eb3",
+  "duration": 0.452,
+  "durationFrames": 10.8,
+  "useAt": "Live dialogue babble for MAS: fire on reveal of every 1 letter(s) (syllable onsets); cps 0.75/frame; last blip -> F3 on '.', C4 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "chip",
+  "variantOf": "blip_mas_hybrid_Eb3",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -3.38
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_mas_band_F3",
+  "file": "blips/kits/mas/band/mas_band_F3.wav",
+  "preview": "blips/kits/mas/band/mas_band_F3.mp3",
+  "description": "MAS voice blip (band: felt upright piano) on F3.",
+  "pitch": "F3",
+  "duration": 0.657,
+  "durationFrames": 15.8,
+  "useAt": "Live dialogue babble for MAS: fire on reveal of every 1 letter(s) (syllable onsets); cps 0.75/frame; last blip -> F3 on '.', C4 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "band",
+  "variantOf": "blip_mas_hybrid_F3",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -18.7,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -7.04
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_mas_band_Ab3",
+  "file": "blips/kits/mas/band/mas_band_Ab3.wav",
+  "preview": "blips/kits/mas/band/mas_band_Ab3.mp3",
+  "description": "MAS voice blip (band: felt upright piano) on Ab3.",
+  "pitch": "Ab3",
+  "duration": 0.571,
+  "durationFrames": 13.7,
+  "useAt": "Live dialogue babble for MAS: fire on reveal of every 1 letter(s) (syllable onsets); cps 0.75/frame; last blip -> F3 on '.', C4 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "band",
+  "variantOf": "blip_mas_hybrid_Ab3",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -17.3,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -6.33
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_mas_band_C4",
+  "file": "blips/kits/mas/band/mas_band_C4.wav",
+  "preview": "blips/kits/mas/band/mas_band_C4.mp3",
+  "description": "MAS voice blip (band: felt upright piano) on C4.",
+  "pitch": "C4",
+  "duration": 0.679,
+  "durationFrames": 16.3,
+  "useAt": "Live dialogue babble for MAS: fire on reveal of every 1 letter(s) (syllable onsets); cps 0.75/frame; last blip -> F3 on '.', C4 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "band",
+  "variantOf": "blip_mas_hybrid_C4",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -18.5,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -9.92
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_mas_band_Eb3",
+  "file": "blips/kits/mas/band/mas_band_Eb3.wav",
+  "preview": "blips/kits/mas/band/mas_band_Eb3.mp3",
+  "description": "MAS voice blip (band: felt upright piano) on Eb3.",
+  "pitch": "Eb3",
+  "duration": 0.622,
+  "durationFrames": 14.9,
+  "useAt": "Live dialogue babble for MAS: fire on reveal of every 1 letter(s) (syllable onsets); cps 0.75/frame; last blip -> F3 on '.', C4 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "band",
+  "variantOf": "blip_mas_hybrid_Eb3",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -19.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -5.39
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_nole_hybrid_F5",
+  "file": "blips/kits/nole/hybrid/nole_hybrid_F5.wav",
+  "preview": "blips/kits/nole/hybrid/nole_hybrid_F5.mp3",
+  "description": "NOLE voice blip (hybrid: staccato trumpet + 8-bit) on F5.",
+  "pitch": "F5",
+  "duration": 0.389,
+  "durationFrames": 9.3,
+  "useAt": "Live dialogue babble for NOLE: fire on reveal of every 2 letter(s); cps 1.25/frame; last blip -> F5 on '.', F6 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -2.75
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_nole_hybrid_Ab5",
+  "file": "blips/kits/nole/hybrid/nole_hybrid_Ab5.wav",
+  "preview": "blips/kits/nole/hybrid/nole_hybrid_Ab5.mp3",
+  "description": "NOLE voice blip (hybrid: staccato trumpet + 8-bit) on Ab5.",
+  "pitch": "Ab5",
+  "duration": 0.402,
+  "durationFrames": 9.7,
+  "useAt": "Live dialogue babble for NOLE: fire on reveal of every 2 letter(s); cps 1.25/frame; last blip -> F5 on '.', F6 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -3.54
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_nole_hybrid_C6",
+  "file": "blips/kits/nole/hybrid/nole_hybrid_C6.wav",
+  "preview": "blips/kits/nole/hybrid/nole_hybrid_C6.mp3",
+  "description": "NOLE voice blip (hybrid: staccato trumpet + 8-bit) on C6.",
+  "pitch": "C6",
+  "duration": 0.415,
+  "durationFrames": 10.0,
+  "useAt": "Live dialogue babble for NOLE: fire on reveal of every 2 letter(s); cps 1.25/frame; last blip -> F5 on '.', F6 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -3.43
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_nole_hybrid_Bb5",
+  "file": "blips/kits/nole/hybrid/nole_hybrid_Bb5.wav",
+  "preview": "blips/kits/nole/hybrid/nole_hybrid_Bb5.mp3",
+  "description": "NOLE voice blip (hybrid: staccato trumpet + 8-bit) on Bb5.",
+  "pitch": "Bb5",
+  "duration": 0.406,
+  "durationFrames": 9.7,
+  "useAt": "Live dialogue babble for NOLE: fire on reveal of every 2 letter(s); cps 1.25/frame; last blip -> F5 on '.', F6 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -3.58
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_nole_hybrid_Eb6",
+  "file": "blips/kits/nole/hybrid/nole_hybrid_Eb6.wav",
+  "preview": "blips/kits/nole/hybrid/nole_hybrid_Eb6.mp3",
+  "description": "NOLE voice blip (hybrid: staccato trumpet + 8-bit) on Eb6.",
+  "pitch": "Eb6",
+  "duration": 0.424,
+  "durationFrames": 10.2,
+  "useAt": "Live dialogue babble for NOLE: fire on reveal of every 2 letter(s); cps 1.25/frame; last blip -> F5 on '.', F6 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -3.38
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_nole_hybrid_F6",
+  "file": "blips/kits/nole/hybrid/nole_hybrid_F6.wav",
+  "preview": "blips/kits/nole/hybrid/nole_hybrid_F6.mp3",
+  "description": "NOLE voice blip (hybrid: staccato trumpet + 8-bit) on F6.",
+  "pitch": "F6",
+  "duration": 0.377,
+  "durationFrames": 9.0,
+  "useAt": "Live dialogue babble for NOLE: fire on reveal of every 2 letter(s); cps 1.25/frame; last blip -> F5 on '.', F6 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -2.92
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_nole_chip_F5",
+  "file": "blips/kits/nole/chip/nole_chip_F5.wav",
+  "preview": "blips/kits/nole/chip/nole_chip_F5.mp3",
+  "description": "NOLE voice blip (chip: bright, fast, slightly overdriven square) on F5.",
+  "pitch": "F5",
+  "duration": 0.389,
+  "durationFrames": 9.3,
+  "useAt": "Live dialogue babble for NOLE: fire on reveal of every 2 letter(s); cps 1.25/frame; last blip -> F5 on '.', F6 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "chip",
+  "variantOf": "blip_nole_hybrid_F5",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -3.55
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_nole_chip_Ab5",
+  "file": "blips/kits/nole/chip/nole_chip_Ab5.wav",
+  "preview": "blips/kits/nole/chip/nole_chip_Ab5.mp3",
+  "description": "NOLE voice blip (chip: bright, fast, slightly overdriven square) on Ab5.",
+  "pitch": "Ab5",
+  "duration": 0.396,
+  "durationFrames": 9.5,
+  "useAt": "Live dialogue babble for NOLE: fire on reveal of every 2 letter(s); cps 1.25/frame; last blip -> F5 on '.', F6 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "chip",
+  "variantOf": "blip_nole_hybrid_Ab5",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -3.82
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_nole_chip_C6",
+  "file": "blips/kits/nole/chip/nole_chip_C6.wav",
+  "preview": "blips/kits/nole/chip/nole_chip_C6.mp3",
+  "description": "NOLE voice blip (chip: bright, fast, slightly overdriven square) on C6.",
+  "pitch": "C6",
+  "duration": 0.396,
+  "durationFrames": 9.5,
+  "useAt": "Live dialogue babble for NOLE: fire on reveal of every 2 letter(s); cps 1.25/frame; last blip -> F5 on '.', F6 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "chip",
+  "variantOf": "blip_nole_hybrid_C6",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -4.37
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_nole_chip_Bb5",
+  "file": "blips/kits/nole/chip/nole_chip_Bb5.wav",
+  "preview": "blips/kits/nole/chip/nole_chip_Bb5.mp3",
+  "description": "NOLE voice blip (chip: bright, fast, slightly overdriven square) on Bb5.",
+  "pitch": "Bb5",
+  "duration": 0.391,
+  "durationFrames": 9.4,
+  "useAt": "Live dialogue babble for NOLE: fire on reveal of every 2 letter(s); cps 1.25/frame; last blip -> F5 on '.', F6 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "chip",
+  "variantOf": "blip_nole_hybrid_Bb5",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -3.89
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_nole_chip_Eb6",
+  "file": "blips/kits/nole/chip/nole_chip_Eb6.wav",
+  "preview": "blips/kits/nole/chip/nole_chip_Eb6.mp3",
+  "description": "NOLE voice blip (chip: bright, fast, slightly overdriven square) on Eb6.",
+  "pitch": "Eb6",
+  "duration": 0.411,
+  "durationFrames": 9.9,
+  "useAt": "Live dialogue babble for NOLE: fire on reveal of every 2 letter(s); cps 1.25/frame; last blip -> F5 on '.', F6 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "chip",
+  "variantOf": "blip_nole_hybrid_Eb6",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -4.29
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_nole_chip_F6",
+  "file": "blips/kits/nole/chip/nole_chip_F6.wav",
+  "preview": "blips/kits/nole/chip/nole_chip_F6.mp3",
+  "description": "NOLE voice blip (chip: bright, fast, slightly overdriven square) on F6.",
+  "pitch": "F6",
+  "duration": 0.371,
+  "durationFrames": 8.9,
+  "useAt": "Live dialogue babble for NOLE: fire on reveal of every 2 letter(s); cps 1.25/frame; last blip -> F5 on '.', F6 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "chip",
+  "variantOf": "blip_nole_hybrid_F6",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -4.86
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_nole_band_F5",
+  "file": "blips/kits/nole/band/nole_band_F5.wav",
+  "preview": "blips/kits/nole/band/nole_band_F5.mp3",
+  "description": "NOLE voice blip (band: staccato trumpet) on F5.",
+  "pitch": "F5",
+  "duration": 0.449,
+  "durationFrames": 10.8,
+  "useAt": "Live dialogue babble for NOLE: fire on reveal of every 2 letter(s); cps 1.25/frame; last blip -> F5 on '.', F6 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "band",
+  "variantOf": "blip_nole_hybrid_F5",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -4.34
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_nole_band_Ab5",
+  "file": "blips/kits/nole/band/nole_band_Ab5.wav",
+  "preview": "blips/kits/nole/band/nole_band_Ab5.mp3",
+  "description": "NOLE voice blip (band: staccato trumpet) on Ab5.",
+  "pitch": "Ab5",
+  "duration": 0.454,
+  "durationFrames": 10.9,
+  "useAt": "Live dialogue babble for NOLE: fire on reveal of every 2 letter(s); cps 1.25/frame; last blip -> F5 on '.', F6 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "band",
+  "variantOf": "blip_nole_hybrid_Ab5",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -7.0
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_nole_band_C6",
+  "file": "blips/kits/nole/band/nole_band_C6.wav",
+  "preview": "blips/kits/nole/band/nole_band_C6.mp3",
+  "description": "NOLE voice blip (band: staccato trumpet) on C6.",
+  "pitch": "C6",
+  "duration": 0.427,
+  "durationFrames": 10.3,
+  "useAt": "Live dialogue babble for NOLE: fire on reveal of every 2 letter(s); cps 1.25/frame; last blip -> F5 on '.', F6 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "band",
+  "variantOf": "blip_nole_hybrid_C6",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -2.68
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_nole_band_Bb5",
+  "file": "blips/kits/nole/band/nole_band_Bb5.wav",
+  "preview": "blips/kits/nole/band/nole_band_Bb5.mp3",
+  "description": "NOLE voice blip (band: staccato trumpet) on Bb5.",
+  "pitch": "Bb5",
+  "duration": 0.443,
+  "durationFrames": 10.6,
+  "useAt": "Live dialogue babble for NOLE: fire on reveal of every 2 letter(s); cps 1.25/frame; last blip -> F5 on '.', F6 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "band",
+  "variantOf": "blip_nole_hybrid_Bb5",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -7.41
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_nole_band_Eb6",
+  "file": "blips/kits/nole/band/nole_band_Eb6.wav",
+  "preview": "blips/kits/nole/band/nole_band_Eb6.mp3",
+  "description": "NOLE voice blip (band: staccato trumpet) on Eb6.",
+  "pitch": "Eb6",
+  "duration": 0.418,
+  "durationFrames": 10.0,
+  "useAt": "Live dialogue babble for NOLE: fire on reveal of every 2 letter(s); cps 1.25/frame; last blip -> F5 on '.', F6 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "band",
+  "variantOf": "blip_nole_hybrid_Eb6",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -3.02
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_nole_band_F6",
+  "file": "blips/kits/nole/band/nole_band_F6.wav",
+  "preview": "blips/kits/nole/band/nole_band_F6.mp3",
+  "description": "NOLE voice blip (band: staccato trumpet) on F6.",
+  "pitch": "F6",
+  "duration": 0.397,
+  "durationFrames": 9.5,
+  "useAt": "Live dialogue babble for NOLE: fire on reveal of every 2 letter(s); cps 1.25/frame; last blip -> F5 on '.', F6 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "band",
+  "variantOf": "blip_nole_hybrid_F6",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -2.98
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_gerg_hybrid_C7",
+  "file": "blips/kits/gerg/hybrid/gerg_hybrid_C7.wav",
+  "preview": "blips/kits/gerg/hybrid/gerg_hybrid_C7.mp3",
+  "description": "GERG voice blip (hybrid: claves / wood clicks + 8-bit) on C7.",
+  "pitch": "C7",
+  "duration": 0.174,
+  "durationFrames": 4.2,
+  "useAt": "Live dialogue babble for GERG: fire on reveal of every 1 letter(s); cps 1.0/frame; last blip -> C7 on '.', F7 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -20.1,
+   "lufsMomentaryMax": -20.1,
+   "truePeakDb": -1.0
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_gerg_hybrid_Eb7",
+  "file": "blips/kits/gerg/hybrid/gerg_hybrid_Eb7.wav",
+  "preview": "blips/kits/gerg/hybrid/gerg_hybrid_Eb7.mp3",
+  "description": "GERG voice blip (hybrid: claves / wood clicks + 8-bit) on Eb7.",
+  "pitch": "Eb7",
+  "duration": 0.185,
+  "durationFrames": 4.4,
+  "useAt": "Live dialogue babble for GERG: fire on reveal of every 1 letter(s); cps 1.0/frame; last blip -> C7 on '.', F7 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -19.1,
+   "lufsMomentaryMax": -19.1,
+   "truePeakDb": -1.0
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_gerg_hybrid_F7",
+  "file": "blips/kits/gerg/hybrid/gerg_hybrid_F7.wav",
+  "preview": "blips/kits/gerg/hybrid/gerg_hybrid_F7.mp3",
+  "description": "GERG voice blip (hybrid: claves / wood clicks + 8-bit) on F7.",
+  "pitch": "F7",
+  "duration": 0.179,
+  "durationFrames": 4.3,
+  "useAt": "Live dialogue babble for GERG: fire on reveal of every 1 letter(s); cps 1.0/frame; last blip -> C7 on '.', F7 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -18.4,
+   "lufsMomentaryMax": -18.4,
+   "truePeakDb": -1.0
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_gerg_hybrid_Bb6",
+  "file": "blips/kits/gerg/hybrid/gerg_hybrid_Bb6.wav",
+  "preview": "blips/kits/gerg/hybrid/gerg_hybrid_Bb6.mp3",
+  "description": "GERG voice blip (hybrid: claves / wood clicks + 8-bit) on Bb6.",
+  "pitch": "Bb6",
+  "duration": 0.176,
+  "durationFrames": 4.2,
+  "useAt": "Live dialogue babble for GERG: fire on reveal of every 1 letter(s); cps 1.0/frame; last blip -> C7 on '.', F7 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -18.8,
+   "lufsMomentaryMax": -18.8,
+   "truePeakDb": -1.0
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_gerg_chip_C7",
+  "file": "blips/kits/gerg/chip/gerg_chip_C7.wav",
+  "preview": "blips/kits/gerg/chip/gerg_chip_C7.mp3",
+  "description": "GERG voice blip (chip: rapid clicky ticks (a fast keyboard talking)) on C7.",
+  "pitch": "C7",
+  "duration": 0.167,
+  "durationFrames": 4.0,
+  "useAt": "Live dialogue babble for GERG: fire on reveal of every 1 letter(s); cps 1.0/frame; last blip -> C7 on '.', F7 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "chip",
+  "variantOf": "blip_gerg_hybrid_C7",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -20.1,
+   "lufsMomentaryMax": -20.1,
+   "truePeakDb": -1.0
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_gerg_chip_Eb7",
+  "file": "blips/kits/gerg/chip/gerg_chip_Eb7.wav",
+  "preview": "blips/kits/gerg/chip/gerg_chip_Eb7.mp3",
+  "description": "GERG voice blip (chip: rapid clicky ticks (a fast keyboard talking)) on Eb7.",
+  "pitch": "Eb7",
+  "duration": 0.172,
+  "durationFrames": 4.1,
+  "useAt": "Live dialogue babble for GERG: fire on reveal of every 1 letter(s); cps 1.0/frame; last blip -> C7 on '.', F7 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "chip",
+  "variantOf": "blip_gerg_hybrid_Eb7",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -19.1,
+   "lufsMomentaryMax": -19.1,
+   "truePeakDb": -1.0
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_gerg_chip_F7",
+  "file": "blips/kits/gerg/chip/gerg_chip_F7.wav",
+  "preview": "blips/kits/gerg/chip/gerg_chip_F7.mp3",
+  "description": "GERG voice blip (chip: rapid clicky ticks (a fast keyboard talking)) on F7.",
+  "pitch": "F7",
+  "duration": 0.168,
+  "durationFrames": 4.0,
+  "useAt": "Live dialogue babble for GERG: fire on reveal of every 1 letter(s); cps 1.0/frame; last blip -> C7 on '.', F7 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "chip",
+  "variantOf": "blip_gerg_hybrid_F7",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -18.4,
+   "lufsMomentaryMax": -18.4,
+   "truePeakDb": -1.0
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_gerg_chip_Bb6",
+  "file": "blips/kits/gerg/chip/gerg_chip_Bb6.wav",
+  "preview": "blips/kits/gerg/chip/gerg_chip_Bb6.mp3",
+  "description": "GERG voice blip (chip: rapid clicky ticks (a fast keyboard talking)) on Bb6.",
+  "pitch": "Bb6",
+  "duration": 0.172,
+  "durationFrames": 4.1,
+  "useAt": "Live dialogue babble for GERG: fire on reveal of every 1 letter(s); cps 1.0/frame; last blip -> C7 on '.', F7 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "chip",
+  "variantOf": "blip_gerg_hybrid_Bb6",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -18.8,
+   "lufsMomentaryMax": -18.8,
+   "truePeakDb": -1.0
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_gerg_band_C7",
+  "file": "blips/kits/gerg/band/gerg_band_C7.wav",
+  "preview": "blips/kits/gerg/band/gerg_band_C7.mp3",
+  "description": "GERG voice blip (band: claves / wood clicks) on C7.",
+  "pitch": "C7",
+  "duration": 0.172,
+  "durationFrames": 4.1,
+  "useAt": "Live dialogue babble for GERG: fire on reveal of every 1 letter(s); cps 1.0/frame; last blip -> C7 on '.', F7 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "band",
+  "variantOf": "blip_gerg_hybrid_C7",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -19.5,
+   "lufsMomentaryMax": -19.5,
+   "truePeakDb": -1.0
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_gerg_band_Eb7",
+  "file": "blips/kits/gerg/band/gerg_band_Eb7.wav",
+  "preview": "blips/kits/gerg/band/gerg_band_Eb7.mp3",
+  "description": "GERG voice blip (band: claves / wood clicks) on Eb7.",
+  "pitch": "Eb7",
+  "duration": 0.189,
+  "durationFrames": 4.5,
+  "useAt": "Live dialogue babble for GERG: fire on reveal of every 1 letter(s); cps 1.0/frame; last blip -> C7 on '.', F7 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "band",
+  "variantOf": "blip_gerg_hybrid_Eb7",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -19.9,
+   "lufsMomentaryMax": -19.9,
+   "truePeakDb": -1.0
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_gerg_band_F7",
+  "file": "blips/kits/gerg/band/gerg_band_F7.wav",
+  "preview": "blips/kits/gerg/band/gerg_band_F7.mp3",
+  "description": "GERG voice blip (band: claves / wood clicks) on F7.",
+  "pitch": "F7",
+  "duration": 0.169,
+  "durationFrames": 4.1,
+  "useAt": "Live dialogue babble for GERG: fire on reveal of every 1 letter(s); cps 1.0/frame; last blip -> C7 on '.', F7 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "band",
+  "variantOf": "blip_gerg_hybrid_F7",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -20.6,
+   "lufsMomentaryMax": -20.6,
+   "truePeakDb": -1.0
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_gerg_band_Bb6",
+  "file": "blips/kits/gerg/band/gerg_band_Bb6.wav",
+  "preview": "blips/kits/gerg/band/gerg_band_Bb6.mp3",
+  "description": "GERG voice blip (band: claves / wood clicks) on Bb6.",
+  "pitch": "Bb6",
+  "duration": 0.172,
+  "durationFrames": 4.1,
+  "useAt": "Live dialogue babble for GERG: fire on reveal of every 1 letter(s); cps 1.0/frame; last blip -> C7 on '.', F7 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "band",
+  "variantOf": "blip_gerg_hybrid_Bb6",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -19.3,
+   "lufsMomentaryMax": -19.3,
+   "truePeakDb": -1.0
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_alyi_hybrid_Ab4",
+  "file": "blips/kits/alyi/hybrid/alyi_hybrid_Ab4.wav",
+  "preview": "blips/kits/alyi/hybrid/alyi_hybrid_Ab4.mp3",
+  "description": "ALYI voice blip (hybrid: breathy flute in a hall + 8-bit) on Ab4.",
+  "pitch": "Ab4",
+  "duration": 1.78,
+  "durationFrames": 42.7,
+  "useAt": "Live dialogue babble for ALYI: fire on reveal of every 3 letter(s); cps 0.5/frame; last blip -> Db5 on '.', F5 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -21.2,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -3.94
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_alyi_hybrid_C5",
+  "file": "blips/kits/alyi/hybrid/alyi_hybrid_C5.wav",
+  "preview": "blips/kits/alyi/hybrid/alyi_hybrid_C5.mp3",
+  "description": "ALYI voice blip (hybrid: breathy flute in a hall + 8-bit) on C5.",
+  "pitch": "C5",
+  "duration": 1.794,
+  "durationFrames": 43.1,
+  "useAt": "Live dialogue babble for ALYI: fire on reveal of every 3 letter(s); cps 0.5/frame; last blip -> Db5 on '.', F5 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -21.7,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -4.34
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_alyi_hybrid_Db5",
+  "file": "blips/kits/alyi/hybrid/alyi_hybrid_Db5.wav",
+  "preview": "blips/kits/alyi/hybrid/alyi_hybrid_Db5.mp3",
+  "description": "ALYI voice blip (hybrid: breathy flute in a hall + 8-bit) on Db5.",
+  "pitch": "Db5",
+  "duration": 1.745,
+  "durationFrames": 41.9,
+  "useAt": "Live dialogue babble for ALYI: fire on reveal of every 3 letter(s); cps 0.5/frame; last blip -> Db5 on '.', F5 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -21.5,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -4.68
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_alyi_hybrid_F5",
+  "file": "blips/kits/alyi/hybrid/alyi_hybrid_F5.wav",
+  "preview": "blips/kits/alyi/hybrid/alyi_hybrid_F5.mp3",
+  "description": "ALYI voice blip (hybrid: breathy flute in a hall + 8-bit) on F5.",
+  "pitch": "F5",
+  "duration": 1.904,
+  "durationFrames": 45.7,
+  "useAt": "Live dialogue babble for ALYI: fire on reveal of every 3 letter(s); cps 0.5/frame; last blip -> Db5 on '.', F5 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -21.8,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -4.75
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_alyi_hybrid_Eb5",
+  "file": "blips/kits/alyi/hybrid/alyi_hybrid_Eb5.wav",
+  "preview": "blips/kits/alyi/hybrid/alyi_hybrid_Eb5.mp3",
+  "description": "ALYI voice blip (hybrid: breathy flute in a hall + 8-bit) on Eb5.",
+  "pitch": "Eb5",
+  "duration": 1.91,
+  "durationFrames": 45.8,
+  "useAt": "Live dialogue babble for ALYI: fire on reveal of every 3 letter(s); cps 0.5/frame; last blip -> Db5 on '.', F5 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -21.6,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -4.31
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_alyi_chip_Ab4",
+  "file": "blips/kits/alyi/chip/alyi_chip_Ab4.wav",
+  "preview": "blips/kits/alyi/chip/alyi_chip_Ab4.mp3",
+  "description": "ALYI voice blip (chip: breathy, reverberant, drifting (Db = the mystic's ache)) on Ab4.",
+  "pitch": "Ab4",
+  "duration": 1.78,
+  "durationFrames": 42.7,
+  "useAt": "Live dialogue babble for ALYI: fire on reveal of every 3 letter(s); cps 0.5/frame; last blip -> Db5 on '.', F5 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "chip",
+  "variantOf": "blip_alyi_hybrid_Ab4",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -21.2,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -3.91
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_alyi_chip_C5",
+  "file": "blips/kits/alyi/chip/alyi_chip_C5.wav",
+  "preview": "blips/kits/alyi/chip/alyi_chip_C5.mp3",
+  "description": "ALYI voice blip (chip: breathy, reverberant, drifting (Db = the mystic's ache)) on C5.",
+  "pitch": "C5",
+  "duration": 1.788,
+  "durationFrames": 42.9,
+  "useAt": "Live dialogue babble for ALYI: fire on reveal of every 3 letter(s); cps 0.5/frame; last blip -> Db5 on '.', F5 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "chip",
+  "variantOf": "blip_alyi_hybrid_C5",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -21.8,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -4.29
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_alyi_chip_Db5",
+  "file": "blips/kits/alyi/chip/alyi_chip_Db5.wav",
+  "preview": "blips/kits/alyi/chip/alyi_chip_Db5.mp3",
+  "description": "ALYI voice blip (chip: breathy, reverberant, drifting (Db = the mystic's ache)) on Db5.",
+  "pitch": "Db5",
+  "duration": 1.745,
+  "durationFrames": 41.9,
+  "useAt": "Live dialogue babble for ALYI: fire on reveal of every 3 letter(s); cps 0.5/frame; last blip -> Db5 on '.', F5 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "chip",
+  "variantOf": "blip_alyi_hybrid_Db5",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -21.6,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -4.63
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_alyi_chip_F5",
+  "file": "blips/kits/alyi/chip/alyi_chip_F5.wav",
+  "preview": "blips/kits/alyi/chip/alyi_chip_F5.mp3",
+  "description": "ALYI voice blip (chip: breathy, reverberant, drifting (Db = the mystic's ache)) on F5.",
+  "pitch": "F5",
+  "duration": 1.905,
+  "durationFrames": 45.7,
+  "useAt": "Live dialogue babble for ALYI: fire on reveal of every 3 letter(s); cps 0.5/frame; last blip -> Db5 on '.', F5 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "chip",
+  "variantOf": "blip_alyi_hybrid_F5",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -21.8,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -5.02
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_alyi_chip_Eb5",
+  "file": "blips/kits/alyi/chip/alyi_chip_Eb5.wav",
+  "preview": "blips/kits/alyi/chip/alyi_chip_Eb5.mp3",
+  "description": "ALYI voice blip (chip: breathy, reverberant, drifting (Db = the mystic's ache)) on Eb5.",
+  "pitch": "Eb5",
+  "duration": 1.91,
+  "durationFrames": 45.8,
+  "useAt": "Live dialogue babble for ALYI: fire on reveal of every 3 letter(s); cps 0.5/frame; last blip -> Db5 on '.', F5 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "chip",
+  "variantOf": "blip_alyi_hybrid_Eb5",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -21.6,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -4.26
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_alyi_band_Ab4",
+  "file": "blips/kits/alyi/band/alyi_band_Ab4.wav",
+  "preview": "blips/kits/alyi/band/alyi_band_Ab4.mp3",
+  "description": "ALYI voice blip (band: breathy flute in a hall) on Ab4.",
+  "pitch": "Ab4",
+  "duration": 1.887,
+  "durationFrames": 45.3,
+  "useAt": "Live dialogue babble for ALYI: fire on reveal of every 3 letter(s); cps 0.5/frame; last blip -> Db5 on '.', F5 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "band",
+  "variantOf": "blip_alyi_hybrid_Ab4",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -20.4,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -3.85
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_alyi_band_C5",
+  "file": "blips/kits/alyi/band/alyi_band_C5.wav",
+  "preview": "blips/kits/alyi/band/alyi_band_C5.mp3",
+  "description": "ALYI voice blip (band: breathy flute in a hall) on C5.",
+  "pitch": "C5",
+  "duration": 1.985,
+  "durationFrames": 47.7,
+  "useAt": "Live dialogue babble for ALYI: fire on reveal of every 3 letter(s); cps 0.5/frame; last blip -> Db5 on '.', F5 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "band",
+  "variantOf": "blip_alyi_hybrid_C5",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -20.5,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -7.77
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_alyi_band_Db5",
+  "file": "blips/kits/alyi/band/alyi_band_Db5.wav",
+  "preview": "blips/kits/alyi/band/alyi_band_Db5.mp3",
+  "description": "ALYI voice blip (band: breathy flute in a hall) on Db5.",
+  "pitch": "Db5",
+  "duration": 1.849,
+  "durationFrames": 44.4,
+  "useAt": "Live dialogue babble for ALYI: fire on reveal of every 3 letter(s); cps 0.5/frame; last blip -> Db5 on '.', F5 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "band",
+  "variantOf": "blip_alyi_hybrid_Db5",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -20.5,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -7.89
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_alyi_band_F5",
+  "file": "blips/kits/alyi/band/alyi_band_F5.wav",
+  "preview": "blips/kits/alyi/band/alyi_band_F5.mp3",
+  "description": "ALYI voice blip (band: breathy flute in a hall) on F5.",
+  "pitch": "F5",
+  "duration": 1.921,
+  "durationFrames": 46.1,
+  "useAt": "Live dialogue babble for ALYI: fire on reveal of every 3 letter(s); cps 0.5/frame; last blip -> Db5 on '.', F5 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "band",
+  "variantOf": "blip_alyi_hybrid_F5",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -21.5,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -7.65
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_alyi_band_Eb5",
+  "file": "blips/kits/alyi/band/alyi_band_Eb5.wav",
+  "preview": "blips/kits/alyi/band/alyi_band_Eb5.mp3",
+  "description": "ALYI voice blip (band: breathy flute in a hall) on Eb5.",
+  "pitch": "Eb5",
+  "duration": 1.916,
+  "durationFrames": 46.0,
+  "useAt": "Live dialogue babble for ALYI: fire on reveal of every 3 letter(s); cps 0.5/frame; last blip -> Db5 on '.', F5 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "band",
+  "variantOf": "blip_alyi_hybrid_Eb5",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -22.2,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -7.31
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_mario_hybrid_C5",
+  "file": "blips/kits/mario/hybrid/mario_hybrid_C5.wav",
+  "preview": "blips/kits/mario/hybrid/mario_hybrid_C5.mp3",
+  "description": "MARIO voice blip (hybrid: marimba + 8-bit) on C5.",
+  "pitch": "C5",
+  "duration": 0.371,
+  "durationFrames": 8.9,
+  "useAt": "Live dialogue babble for MARIO: fire on reveal of every 2 letter(s); cps 0.8/frame; last blip -> C5 on '.', G5 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -18.1,
+   "lufsMomentaryMax": -18.1,
+   "truePeakDb": -1.0
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_mario_hybrid_Eb5",
+  "file": "blips/kits/mario/hybrid/mario_hybrid_Eb5.wav",
+  "preview": "blips/kits/mario/hybrid/mario_hybrid_Eb5.mp3",
+  "description": "MARIO voice blip (hybrid: marimba + 8-bit) on Eb5.",
+  "pitch": "Eb5",
+  "duration": 0.379,
+  "durationFrames": 9.1,
+  "useAt": "Live dialogue babble for MARIO: fire on reveal of every 2 letter(s); cps 0.8/frame; last blip -> C5 on '.', G5 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -18.9,
+   "lufsMomentaryMax": -18.9,
+   "truePeakDb": -1.0
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_mario_hybrid_F5",
+  "file": "blips/kits/mario/hybrid/mario_hybrid_F5.wav",
+  "preview": "blips/kits/mario/hybrid/mario_hybrid_F5.mp3",
+  "description": "MARIO voice blip (hybrid: marimba + 8-bit) on F5.",
+  "pitch": "F5",
+  "duration": 0.365,
+  "durationFrames": 8.8,
+  "useAt": "Live dialogue babble for MARIO: fire on reveal of every 2 letter(s); cps 0.8/frame; last blip -> C5 on '.', G5 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -20.6,
+   "lufsMomentaryMax": -20.6,
+   "truePeakDb": -1.0
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_mario_hybrid_G5",
+  "file": "blips/kits/mario/hybrid/mario_hybrid_G5.wav",
+  "preview": "blips/kits/mario/hybrid/mario_hybrid_G5.mp3",
+  "description": "MARIO voice blip (hybrid: marimba + 8-bit) on G5.",
+  "pitch": "G5",
+  "duration": 0.405,
+  "durationFrames": 9.7,
+  "useAt": "Live dialogue babble for MARIO: fire on reveal of every 2 letter(s); cps 0.8/frame; last blip -> C5 on '.', G5 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -19.8,
+   "lufsMomentaryMax": -19.8,
+   "truePeakDb": -1.0
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_mario_hybrid_Ab5",
+  "file": "blips/kits/mario/hybrid/mario_hybrid_Ab5.wav",
+  "preview": "blips/kits/mario/hybrid/mario_hybrid_Ab5.mp3",
+  "description": "MARIO voice blip (hybrid: marimba + 8-bit) on Ab5.",
+  "pitch": "Ab5",
+  "duration": 0.395,
+  "durationFrames": 9.5,
+  "useAt": "Live dialogue babble for MARIO: fire on reveal of every 2 letter(s); cps 0.8/frame; last blip -> C5 on '.', G5 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -18.4,
+   "lufsMomentaryMax": -18.4,
+   "truePeakDb": -1.0
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_mario_chip_C5",
+  "file": "blips/kits/mario/chip/mario_chip_C5.wav",
+  "preview": "blips/kits/mario/chip/mario_chip_C5.mp3",
+  "description": "MARIO voice blip (chip: woody, nervous (timing and pitch jitter, little stutters)) on C5.",
+  "pitch": "C5",
+  "duration": 0.32,
+  "durationFrames": 7.7,
+  "useAt": "Live dialogue babble for MARIO: fire on reveal of every 2 letter(s); cps 0.8/frame; last blip -> C5 on '.', G5 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "chip",
+  "variantOf": "blip_mario_hybrid_C5",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -19.4,
+   "lufsMomentaryMax": -19.4,
+   "truePeakDb": -1.0
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_mario_chip_Eb5",
+  "file": "blips/kits/mario/chip/mario_chip_Eb5.wav",
+  "preview": "blips/kits/mario/chip/mario_chip_Eb5.mp3",
+  "description": "MARIO voice blip (chip: woody, nervous (timing and pitch jitter, little stutters)) on Eb5.",
+  "pitch": "Eb5",
+  "duration": 0.322,
+  "durationFrames": 7.7,
+  "useAt": "Live dialogue babble for MARIO: fire on reveal of every 2 letter(s); cps 0.8/frame; last blip -> C5 on '.', G5 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "chip",
+  "variantOf": "blip_mario_hybrid_Eb5",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -19.9,
+   "lufsMomentaryMax": -19.9,
+   "truePeakDb": -1.0
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_mario_chip_F5",
+  "file": "blips/kits/mario/chip/mario_chip_F5.wav",
+  "preview": "blips/kits/mario/chip/mario_chip_F5.mp3",
+  "description": "MARIO voice blip (chip: woody, nervous (timing and pitch jitter, little stutters)) on F5.",
+  "pitch": "F5",
+  "duration": 0.333,
+  "durationFrames": 8.0,
+  "useAt": "Live dialogue babble for MARIO: fire on reveal of every 2 letter(s); cps 0.8/frame; last blip -> C5 on '.', G5 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "chip",
+  "variantOf": "blip_mario_hybrid_F5",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -19.9,
+   "lufsMomentaryMax": -19.9,
+   "truePeakDb": -1.0
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_mario_chip_G5",
+  "file": "blips/kits/mario/chip/mario_chip_G5.wav",
+  "preview": "blips/kits/mario/chip/mario_chip_G5.mp3",
+  "description": "MARIO voice blip (chip: woody, nervous (timing and pitch jitter, little stutters)) on G5.",
+  "pitch": "G5",
+  "duration": 0.35,
+  "durationFrames": 8.4,
+  "useAt": "Live dialogue babble for MARIO: fire on reveal of every 2 letter(s); cps 0.8/frame; last blip -> C5 on '.', G5 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "chip",
+  "variantOf": "blip_mario_hybrid_G5",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -19.7,
+   "lufsMomentaryMax": -19.7,
+   "truePeakDb": -1.0
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_mario_chip_Ab5",
+  "file": "blips/kits/mario/chip/mario_chip_Ab5.wav",
+  "preview": "blips/kits/mario/chip/mario_chip_Ab5.mp3",
+  "description": "MARIO voice blip (chip: woody, nervous (timing and pitch jitter, little stutters)) on Ab5.",
+  "pitch": "Ab5",
+  "duration": 0.353,
+  "durationFrames": 8.5,
+  "useAt": "Live dialogue babble for MARIO: fire on reveal of every 2 letter(s); cps 0.8/frame; last blip -> C5 on '.', G5 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "chip",
+  "variantOf": "blip_mario_hybrid_Ab5",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -19.2,
+   "lufsMomentaryMax": -19.2,
+   "truePeakDb": -1.0
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_mario_band_C5",
+  "file": "blips/kits/mario/band/mario_band_C5.wav",
+  "preview": "blips/kits/mario/band/mario_band_C5.mp3",
+  "description": "MARIO voice blip (band: marimba) on C5.",
+  "pitch": "C5",
+  "duration": 0.405,
+  "durationFrames": 9.7,
+  "useAt": "Live dialogue babble for MARIO: fire on reveal of every 2 letter(s); cps 0.8/frame; last blip -> C5 on '.', G5 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "band",
+  "variantOf": "blip_mario_hybrid_C5",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -5.89
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_mario_band_Eb5",
+  "file": "blips/kits/mario/band/mario_band_Eb5.wav",
+  "preview": "blips/kits/mario/band/mario_band_Eb5.mp3",
+  "description": "MARIO voice blip (band: marimba) on Eb5.",
+  "pitch": "Eb5",
+  "duration": 0.438,
+  "durationFrames": 10.5,
+  "useAt": "Live dialogue babble for MARIO: fire on reveal of every 2 letter(s); cps 0.8/frame; last blip -> C5 on '.', G5 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "band",
+  "variantOf": "blip_mario_hybrid_Eb5",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -5.65
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_mario_band_F5",
+  "file": "blips/kits/mario/band/mario_band_F5.wav",
+  "preview": "blips/kits/mario/band/mario_band_F5.mp3",
+  "description": "MARIO voice blip (band: marimba) on F5.",
+  "pitch": "F5",
+  "duration": 0.454,
+  "durationFrames": 10.9,
+  "useAt": "Live dialogue babble for MARIO: fire on reveal of every 2 letter(s); cps 0.8/frame; last blip -> C5 on '.', G5 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "band",
+  "variantOf": "blip_mario_hybrid_F5",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -5.24
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_mario_band_G5",
+  "file": "blips/kits/mario/band/mario_band_G5.wav",
+  "preview": "blips/kits/mario/band/mario_band_G5.mp3",
+  "description": "MARIO voice blip (band: marimba) on G5.",
+  "pitch": "G5",
+  "duration": 0.487,
+  "durationFrames": 11.7,
+  "useAt": "Live dialogue babble for MARIO: fire on reveal of every 2 letter(s); cps 0.8/frame; last blip -> C5 on '.', G5 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "band",
+  "variantOf": "blip_mario_hybrid_G5",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -5.14
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_mario_band_Ab5",
+  "file": "blips/kits/mario/band/mario_band_Ab5.wav",
+  "preview": "blips/kits/mario/band/mario_band_Ab5.mp3",
+  "description": "MARIO voice blip (band: marimba) on Ab5.",
+  "pitch": "Ab5",
+  "duration": 0.486,
+  "durationFrames": 11.7,
+  "useAt": "Live dialogue babble for MARIO: fire on reveal of every 2 letter(s); cps 0.8/frame; last blip -> C5 on '.', G5 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "band",
+  "variantOf": "blip_mario_hybrid_Ab5",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -5.89
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_rumpt_hybrid_Bb2",
+  "file": "blips/kits/rumpt/hybrid/rumpt_hybrid_Bb2.wav",
+  "preview": "blips/kits/rumpt/hybrid/rumpt_hybrid_Bb2.mp3",
+  "description": "RUMPT voice blip (hybrid: trombone blats + 8-bit) on Bb2.",
+  "pitch": "Bb2",
+  "duration": 0.68,
+  "durationFrames": 16.3,
+  "useAt": "Live dialogue babble for RUMPT: fire on reveal of every 2 letter(s); cps 0.9/frame; last blip -> Bb2 on '.', F3 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -17.7,
+   "lufsMomentaryMax": -16.1,
+   "truePeakDb": -1.0
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_rumpt_hybrid_C3",
+  "file": "blips/kits/rumpt/hybrid/rumpt_hybrid_C3.wav",
+  "preview": "blips/kits/rumpt/hybrid/rumpt_hybrid_C3.mp3",
+  "description": "RUMPT voice blip (hybrid: trombone blats + 8-bit) on C3.",
+  "pitch": "C3",
+  "duration": 0.662,
+  "durationFrames": 15.9,
+  "useAt": "Live dialogue babble for RUMPT: fire on reveal of every 2 letter(s); cps 0.9/frame; last blip -> Bb2 on '.', F3 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -18.3,
+   "lufsMomentaryMax": -16.6,
+   "truePeakDb": -1.0
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_rumpt_hybrid_Db3",
+  "file": "blips/kits/rumpt/hybrid/rumpt_hybrid_Db3.wav",
+  "preview": "blips/kits/rumpt/hybrid/rumpt_hybrid_Db3.mp3",
+  "description": "RUMPT voice blip (hybrid: trombone blats + 8-bit) on Db3.",
+  "pitch": "Db3",
+  "duration": 0.651,
+  "durationFrames": 15.6,
+  "useAt": "Live dialogue babble for RUMPT: fire on reveal of every 2 letter(s); cps 0.9/frame; last blip -> Bb2 on '.', F3 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -19.3,
+   "lufsMomentaryMax": -17.4,
+   "truePeakDb": -1.0
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_rumpt_hybrid_F3",
+  "file": "blips/kits/rumpt/hybrid/rumpt_hybrid_F3.wav",
+  "preview": "blips/kits/rumpt/hybrid/rumpt_hybrid_F3.mp3",
+  "description": "RUMPT voice blip (hybrid: trombone blats + 8-bit) on F3.",
+  "pitch": "F3",
+  "duration": 0.708,
+  "durationFrames": 17.0,
+  "useAt": "Live dialogue babble for RUMPT: fire on reveal of every 2 letter(s); cps 0.9/frame; last blip -> Bb2 on '.', F3 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -17.4,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -3.04
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_rumpt_hybrid_Eb3",
+  "file": "blips/kits/rumpt/hybrid/rumpt_hybrid_Eb3.wav",
+  "preview": "blips/kits/rumpt/hybrid/rumpt_hybrid_Eb3.mp3",
+  "description": "RUMPT voice blip (hybrid: trombone blats + 8-bit) on Eb3.",
+  "pitch": "Eb3",
+  "duration": 0.69,
+  "durationFrames": 16.6,
+  "useAt": "Live dialogue babble for RUMPT: fire on reveal of every 2 letter(s); cps 0.9/frame; last blip -> Bb2 on '.', F3 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "hybrid",
+  "variantOf": null,
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -17.4,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -1.5
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_rumpt_chip_Bb2",
+  "file": "blips/kits/rumpt/chip/rumpt_chip_Bb2.wav",
+  "preview": "blips/kits/rumpt/chip/rumpt_chip_Bb2.mp3",
+  "description": "RUMPT voice blip (chip: brassy, loud, stressed word-starts) on Bb2.",
+  "pitch": "Bb2",
+  "duration": 0.589,
+  "durationFrames": 14.1,
+  "useAt": "Live dialogue babble for RUMPT: fire on reveal of every 2 letter(s); cps 0.9/frame; last blip -> Bb2 on '.', F3 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "chip",
+  "variantOf": "blip_rumpt_hybrid_Bb2",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -6.59
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_rumpt_chip_C3",
+  "file": "blips/kits/rumpt/chip/rumpt_chip_C3.wav",
+  "preview": "blips/kits/rumpt/chip/rumpt_chip_C3.mp3",
+  "description": "RUMPT voice blip (chip: brassy, loud, stressed word-starts) on C3.",
+  "pitch": "C3",
+  "duration": 0.624,
+  "durationFrames": 15.0,
+  "useAt": "Live dialogue babble for RUMPT: fire on reveal of every 2 letter(s); cps 0.9/frame; last blip -> Bb2 on '.', F3 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "chip",
+  "variantOf": "blip_rumpt_hybrid_C3",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -7.21
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_rumpt_chip_Db3",
+  "file": "blips/kits/rumpt/chip/rumpt_chip_Db3.wav",
+  "preview": "blips/kits/rumpt/chip/rumpt_chip_Db3.mp3",
+  "description": "RUMPT voice blip (chip: brassy, loud, stressed word-starts) on Db3.",
+  "pitch": "Db3",
+  "duration": 0.65,
+  "durationFrames": 15.6,
+  "useAt": "Live dialogue babble for RUMPT: fire on reveal of every 2 letter(s); cps 0.9/frame; last blip -> Bb2 on '.', F3 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "chip",
+  "variantOf": "blip_rumpt_hybrid_Db3",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -6.97
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_rumpt_chip_F3",
+  "file": "blips/kits/rumpt/chip/rumpt_chip_F3.wav",
+  "preview": "blips/kits/rumpt/chip/rumpt_chip_F3.mp3",
+  "description": "RUMPT voice blip (chip: brassy, loud, stressed word-starts) on F3.",
+  "pitch": "F3",
+  "duration": 0.665,
+  "durationFrames": 16.0,
+  "useAt": "Live dialogue babble for RUMPT: fire on reveal of every 2 letter(s); cps 0.9/frame; last blip -> Bb2 on '.', F3 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "chip",
+  "variantOf": "blip_rumpt_hybrid_F3",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -6.52
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_rumpt_chip_Eb3",
+  "file": "blips/kits/rumpt/chip/rumpt_chip_Eb3.wav",
+  "preview": "blips/kits/rumpt/chip/rumpt_chip_Eb3.mp3",
+  "description": "RUMPT voice blip (chip: brassy, loud, stressed word-starts) on Eb3.",
+  "pitch": "Eb3",
+  "duration": 0.629,
+  "durationFrames": 15.1,
+  "useAt": "Live dialogue babble for RUMPT: fire on reveal of every 2 letter(s); cps 0.9/frame; last blip -> Bb2 on '.', F3 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "chip",
+  "variantOf": "blip_rumpt_hybrid_Eb3",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -16.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -6.69
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_rumpt_band_Bb2",
+  "file": "blips/kits/rumpt/band/rumpt_band_Bb2.wav",
+  "preview": "blips/kits/rumpt/band/rumpt_band_Bb2.mp3",
+  "description": "RUMPT voice blip (band: trombone blats) on Bb2.",
+  "pitch": "Bb2",
+  "duration": 0.68,
+  "durationFrames": 16.3,
+  "useAt": "Live dialogue babble for RUMPT: fire on reveal of every 2 letter(s); cps 0.9/frame; last blip -> Bb2 on '.', F3 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "band",
+  "variantOf": "blip_rumpt_hybrid_Bb2",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -20.3,
+   "lufsMomentaryMax": -20.2,
+   "truePeakDb": -1.0
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_rumpt_band_C3",
+  "file": "blips/kits/rumpt/band/rumpt_band_C3.wav",
+  "preview": "blips/kits/rumpt/band/rumpt_band_C3.mp3",
+  "description": "RUMPT voice blip (band: trombone blats) on C3.",
+  "pitch": "C3",
+  "duration": 0.662,
+  "durationFrames": 15.9,
+  "useAt": "Live dialogue babble for RUMPT: fire on reveal of every 2 letter(s); cps 0.9/frame; last blip -> Bb2 on '.', F3 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "band",
+  "variantOf": "blip_rumpt_hybrid_C3",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -18.8,
+   "lufsMomentaryMax": -17.7,
+   "truePeakDb": -1.0
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_rumpt_band_Db3",
+  "file": "blips/kits/rumpt/band/rumpt_band_Db3.wav",
+  "preview": "blips/kits/rumpt/band/rumpt_band_Db3.mp3",
+  "description": "RUMPT voice blip (band: trombone blats) on Db3.",
+  "pitch": "Db3",
+  "duration": 0.663,
+  "durationFrames": 15.9,
+  "useAt": "Live dialogue babble for RUMPT: fire on reveal of every 2 letter(s); cps 0.9/frame; last blip -> Bb2 on '.', F3 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "band",
+  "variantOf": "blip_rumpt_hybrid_Db3",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -19.1,
+   "lufsMomentaryMax": -17.8,
+   "truePeakDb": -1.0
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_rumpt_band_F3",
+  "file": "blips/kits/rumpt/band/rumpt_band_F3.wav",
+  "preview": "blips/kits/rumpt/band/rumpt_band_F3.mp3",
+  "description": "RUMPT voice blip (band: trombone blats) on F3.",
+  "pitch": "F3",
+  "duration": 0.708,
+  "durationFrames": 17.0,
+  "useAt": "Live dialogue babble for RUMPT: fire on reveal of every 2 letter(s); cps 0.9/frame; last blip -> Bb2 on '.', F3 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "band",
+  "variantOf": "blip_rumpt_hybrid_F3",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -17.0,
+   "lufsMomentaryMax": -16.0,
+   "truePeakDb": -2.13
+  },
+  "mixDb": -8
+ },
+ {
+  "id": "blip_rumpt_band_Eb3",
+  "file": "blips/kits/rumpt/band/rumpt_band_Eb3.wav",
+  "preview": "blips/kits/rumpt/band/rumpt_band_Eb3.mp3",
+  "description": "RUMPT voice blip (band: trombone blats) on Eb3.",
+  "pitch": "Eb3",
+  "duration": 0.69,
+  "durationFrames": 16.6,
+  "useAt": "Live dialogue babble for RUMPT: fire on reveal of every 2 letter(s); cps 0.9/frame; last blip -> Bb2 on '.', F3 on '!'/'?'.",
+  "category": "voice-kit",
+  "flavor": "band",
+  "variantOf": "blip_rumpt_hybrid_Eb3",
+  "loop": false,
+  "frames": [],
+  "anchor": "start",
+  "levels": {
+   "lufsIntegrated": -17.5,
+   "lufsMomentaryMax": -16.5,
+   "truePeakDb": -1.0
+  },
+  "mixDb": -8
+ }
+]

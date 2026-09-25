@@ -1,0 +1,575 @@
+{
+ "eventsJson": "out/intro/picture/intro-events.json",
+ "present": true,
+ "matched": [
+  "orb.iris_turn",
+  "orb.scan",
+  "post.click",
+  "dialog.cancel",
+  "dialog.ok",
+  "renderfront.fire",
+  "collar.pop1",
+  "collar.pop2",
+  "collar.repop",
+  "crown.flutter",
+  "crown.land",
+  "woodrose.matchcut",
+  "gerg.freeze",
+  "gerg.keycap_pocket",
+  "alyi.effigy_ignite",
+  "alyi.freeze",
+  "alyi.world_resumes",
+  "gerg.world_resumes",
+  "mario.vault",
+  "mario.tick1",
+  "mario.tick2",
+  "mario.tick3",
+  "mario.freeze",
+  "mario.scroll_unroll",
+  "mario.scroll_take",
+  "nole.ceiling_burst",
+  "nole.touchdown",
+  "nole.freeze",
+  "nole.stamp",
+  "nole.n_unhook",
+  "nole.n_clunk",
+  "founding.relight",
+  "rollcall.cut1",
+  "rollcall.cut2",
+  "rollcall.cut3",
+  "rollcall.cut4",
+  "rollcall.cut5",
+  "rollcall.cut6",
+  "rollcall.cut7",
+  "rollcall.cut8",
+  "skyline.cut",
+  "pop.macrosoft",
+  "pop.elgoog",
+  "pop.atem",
+  "pop.invidia",
+  "pop.misanthropic",
+  "pop.zai",
+  "pop.peekdeep",
+  "skyline.roofline",
+  "title.slam",
+  "bookend.cut",
+  "orb.toast",
+  "bookend.ding",
+  "orb.iris_glyph",
+  "mario.world_resumes",
+  "nole.world_resumes",
+  "book.post"
+ ],
+ "unmatched": [
+  "coldopen.in",
+  "coldopen.room_cut",
+  "coldopen.insert_cut",
+  "coldopen.out",
+  "orb.scan_end",
+  "paper.white_peak",
+  "y1993.drop",
+  "gerg.keys_roll_end",
+  "alyi.thaw_room",
+  "alyi.card_close",
+  "mario.scroll_unroll_end",
+  "nole.rumble",
+  "nole.tiles",
+  "founding.buzz",
+  "loop.end",
+  "meras.whip",
+  "mario.fire_back",
+  "nole.fire_snuff"
+ ],
+ "deltas": [
+  {
+   "key": "orb.scan",
+   "profile": 100,
+   "picture": 99,
+   "script": 100
+  },
+  {
+   "key": "collar.pop2",
+   "profile": 187,
+   "picture": 190,
+   "script": 190
+  },
+  {
+   "key": "collar.repop",
+   "profile": 202,
+   "picture": 205,
+   "script": 205
+  },
+  {
+   "key": "crown.flutter",
+   "profile": 204,
+   "picture": 205,
+   "script": 205
+  },
+  {
+   "key": "alyi.effigy_ignite",
+   "profile": 296,
+   "picture": 290,
+   "script": 290
+  },
+  {
+   "key": "alyi.world_resumes",
+   "profile": 315,
+   "picture": 340,
+   "script": 340
+  },
+  {
+   "key": "mario.tick2",
+   "profile": 352,
+   "picture": 351,
+   "script": 351
+  },
+  {
+   "key": "mario.tick3",
+   "profile": 356,
+   "picture": 354,
+   "script": 354
+  },
+  {
+   "key": "nole.n_unhook",
+   "profile": 467,
+   "picture": 456,
+   "script": 456
+  },
+  {
+   "key": "nole.n_clunk",
+   "profile": 473,
+   "picture": 464,
+   "script": 464
+  },
+  {
+   "key": "founding.relight",
+   "profile": 474,
+   "picture": 465,
+   "script": 465
+  },
+  {
+   "key": "nole.world_resumes",
+   "profile": 450,
+   "picture": 465,
+   "script": 465
+  },
+  {
+   "key": "founding.buzz",
+   "profile": 450,
+   "picture": 465,
+   "script": 465,
+   "derived": true
+  }
+ ],
+ "typingCheck": [
+  {
+   "phrase": "L1",
+   "picture": [
+    18,
+    49
+   ],
+   "table": [
+    18,
+    49
+   ],
+   "ok": true
+  },
+  {
+   "phrase": "break",
+   "picture": [
+    63
+   ],
+   "table": [
+    63
+   ],
+   "ok": true
+  },
+  {
+   "phrase": "L2",
+   "picture": [
+    64,
+    83
+   ],
+   "table": [
+    64,
+    83
+   ],
+   "ok": true
+  }
+ ],
+ "keycapLaunches": [
+  226,
+  228,
+  231,
+  232,
+  234,
+  236,
+  238,
+  240,
+  257,
+  259,
+  261,
+  263,
+  265,
+  267,
+  269,
+  271,
+  273,
+  275,
+  277,
+  279,
+  281,
+  283,
+  285,
+  287,
+  290,
+  291,
+  293,
+  295,
+  297,
+  300,
+  341,
+  344,
+  345,
+  347,
+  349,
+  352,
+  354,
+  356,
+  357,
+  359,
+  376,
+  379
+ ],
+ "version": "2026-09-25",
+ "eventsMd5": "f37ea409b5e12dad7774ea78aaa6bc3a",
+ "pictureFrames": {
+  "alyi.effigy_ignite": 290,
+  "alyi.freeze": 300,
+  "alyi.world_resumes": 340,
+  "book.post": 705,
+  "bookend.cut": 690,
+  "bookend.ding": 705,
+  "collar.pop1": 180,
+  "collar.pop2": 190,
+  "collar.repop": 205,
+  "crown.flutter": 205,
+  "crown.land": 217,
+  "dialog.cancel": 150,
+  "dialog.ok": 165,
+  "founding.relight": 465,
+  "gerg.freeze": 240,
+  "gerg.keycap_pocket": 254,
+  "gerg.world_resumes": 255,
+  "mario.freeze": 360,
+  "mario.scroll_take": 390,
+  "mario.scroll_unroll": 375,
+  "mario.tick1": 348,
+  "mario.tick2": 351,
+  "mario.tick3": 354,
+  "mario.vault": 345,
+  "mario.world_resumes": 375,
+  "nole.ceiling_burst": 405,
+  "nole.freeze": 420,
+  "nole.n_clunk": 464,
+  "nole.n_unhook": 456,
+  "nole.stamp": 435,
+  "nole.touchdown": 420,
+  "nole.world_resumes": 465,
+  "orb.iris_glyph": 705,
+  "orb.iris_turn": 97,
+  "orb.scan": 99,
+  "orb.toast": 692,
+  "pop.atem": 570,
+  "pop.elgoog": 555,
+  "pop.invidia": 585,
+  "pop.macrosoft": 540,
+  "pop.misanthropic": 600,
+  "pop.peekdeep": 615,
+  "pop.zai": 600,
+  "post.click": 112,
+  "renderfront.fire": 168,
+  "rollcall.cut1": 480,
+  "rollcall.cut2": 487,
+  "rollcall.cut3": 495,
+  "rollcall.cut4": 502,
+  "rollcall.cut5": 510,
+  "rollcall.cut6": 517,
+  "rollcall.cut7": 525,
+  "rollcall.cut8": 532,
+  "skyline.cut": 540,
+  "skyline.roofline": 622,
+  "title.slam": 630,
+  "woodrose.matchcut": 225
+ },
+ "roomTonePerspective": [
+  [
+   0,
+   -2.0
+  ],
+  [
+   14,
+   -2.0
+  ],
+  [
+   15,
+   -1.5
+  ],
+  [
+   29,
+   -1.5
+  ],
+  [
+   30,
+   0.0
+  ],
+  [
+   59,
+   0.0
+  ],
+  [
+   60,
+   2.0
+  ],
+  [
+   71,
+   2.0
+  ],
+  [
+   72,
+   0.0
+  ],
+  [
+   98,
+   0.0
+  ],
+  [
+   99,
+   2.0
+  ],
+  [
+   104,
+   2.0
+  ],
+  [
+   105,
+   0.0
+  ],
+  [
+   117,
+   0.0
+  ],
+  [
+   118,
+   0.0
+  ],
+  [
+   119,
+   0.0
+  ]
+ ],
+ "derived": {
+  "unroll": 15,
+  "flutter": [
+   6,
+   12
+  ],
+  "toast": true,
+  "keySource": "studio/src/dev/mcoldopen/timeline.ts"
+ },
+ "pictureCodeOverrides": {
+  "collar.pop2": {
+   "script": 190,
+   "picture": 187,
+   "source": "meras/timeline.ts T.pop2"
+  },
+  "collar.repop": {
+   "script": 205,
+   "picture": 202,
+   "source": "meras T.repop"
+  },
+  "crown.flutter": {
+   "script": 205,
+   "picture": 204,
+   "source": "meras T.crownGo (path on twos 204-216)"
+  },
+  "crown.land": {
+   "script": 220,
+   "picture": 217,
+   "source": "meras T.crownLand"
+  },
+  "gerg.keycap_pocket": {
+   "script": 278,
+   "picture": 254,
+   "source": "mdinner1/scene.ts masAt: 'pocket' drawing 254-256"
+  },
+  "alyi.effigy_ignite": {
+   "script": 290,
+   "picture": 296,
+   "source": "mdinner1/scene.ts IGNITE"
+  },
+  "mario.tick2": {
+   "script": 351,
+   "picture": 352,
+   "source": "mdinner2 T.tick2 / vaultAt"
+  },
+  "mario.tick3": {
+   "script": 354,
+   "picture": 356,
+   "source": "mdinner2 T.tick3 / vaultAt"
+  },
+  "mario.scroll_unroll": {
+   "script": 378,
+   "picture": 375,
+   "source": "mdinner2 T.marioLive: the essay unrolls from 375 (whip 384-389)"
+  },
+  "mario.scroll_take": {
+   "script": 392,
+   "picture": 390,
+   "source": "mdinner2 T.grab"
+  },
+  "nole.n_unhook": {
+   "script": 456,
+   "picture": 467,
+   "source": "mdinner2 T.nLift"
+  },
+  "nole.n_clunk": {
+   "script": 464,
+   "picture": 473,
+   "source": "mdinner2 T.nClunk"
+  },
+  "founding.relight": {
+   "script": 465,
+   "picture": 474,
+   "source": "mdinner2 T.aiOn (AI relights with flicker 474-476); the sign is lit from 465"
+  },
+  "alyi.world_resumes": {
+   "script": 340,
+   "picture": 315,
+   "source": "mdinner1 FREEZE_A.t1 (the world, and the fire, run again from 315)"
+  },
+  "gerg.world_resumes": {
+   "script": 285,
+   "picture": 255,
+   "source": "mdinner1 FREEZE_G.t1 (Gerg types again from 255)"
+  },
+  "mario.world_resumes": {
+   "script": 405,
+   "picture": 375,
+   "source": "mdinner2 FREEZE_M.t1"
+  },
+  "nole.world_resumes": {
+   "script": 465,
+   "picture": 450,
+   "source": "mdinner2 FREEZE_N.t1"
+  },
+  "founding.buzz": {
+   "script": 465,
+   "picture": 450,
+   "source": "mdinner2: the OPEN sign is lit in the live room from the f450 unfreeze"
+  }
+ },
+ "pictureCodeTyping": {
+  "L1": {
+   "picture": [
+    24,
+    25,
+    27,
+    28,
+    30,
+    31,
+    32,
+    34,
+    36,
+    37,
+    39,
+    40,
+    41,
+    43,
+    44,
+    46,
+    47,
+    49,
+    50,
+    52,
+    55
+   ],
+   "source": "mcoldopen L1_KEYS"
+  },
+  "L2": {
+   "picture": [
+    71,
+    72,
+    74,
+    75,
+    76,
+    78,
+    79,
+    80,
+    81,
+    82,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    93
+   ],
+   "source": "mcoldopen L2_KEYS"
+  },
+  "brk": {
+   "picture": 70,
+   "source": "mcoldopen L2_BREAK (shift+enter)"
+  },
+  "keycaps": {
+   "picture": [
+    226,
+    228,
+    231,
+    232,
+    234,
+    236,
+    238,
+    240,
+    257,
+    259,
+    261,
+    263,
+    265,
+    267,
+    269,
+    271,
+    273,
+    275,
+    277,
+    279,
+    281,
+    283,
+    285,
+    287,
+    290,
+    291,
+    293,
+    295,
+    297,
+    300,
+    316,
+    319,
+    320,
+    322,
+    324,
+    327,
+    329,
+    331,
+    332,
+    334,
+    336,
+    339
+   ],
+   "source": "shared/pixel/cast/gerg.ts gergKeycaps via mdinner1 worldClock (launch frames)"
+  }
+ }
+}

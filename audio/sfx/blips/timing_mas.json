@@ -1,0 +1,68 @@
+{
+ "voice": "mas",
+ "name": "MAS",
+ "text": "super.",
+ "cps": 0.75,
+ "t0": 99,
+ "sceneSynced": true,
+ "revealRule": "scene.ts shownChars: floor((f - t0) * cps)",
+ "chars": [
+  {
+   "i": 0,
+   "ch": "s",
+   "frame": 101,
+   "rel": 2
+  },
+  {
+   "i": 1,
+   "ch": "u",
+   "frame": 102,
+   "rel": 3
+  },
+  {
+   "i": 2,
+   "ch": "p",
+   "frame": 103,
+   "rel": 4
+  },
+  {
+   "i": 3,
+   "ch": "e",
+   "frame": 105,
+   "rel": 6
+  },
+  {
+   "i": 4,
+   "ch": "r",
+   "frame": 106,
+   "rel": 7
+  },
+  {
+   "i": 5,
+   "ch": ".",
+   "frame": 107,
+   "rel": 8
+  }
+ ],
+ "blips": [
+  {
+   "i": 0,
+   "ch": "s",
+   "frame": 101,
+   "rel": 2,
+   "t": 0.0833,
+   "note": "C4",
+   "accent": 0.0
+  },
+  {
+   "i": 2,
+   "ch": "p",
+   "frame": 103,
+   "rel": 4,
+   "t": 0.1667,
+   "note": "F3",
+   "accent": 0.0
+  }
+ ],
+ "lastRevealFrame": 107
+}

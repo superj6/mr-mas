@@ -1,0 +1,4141 @@
+{
+ "refs": {
+  "mas-manalt": {
+   "cand": "a-michael-close",
+   "summary": {
+    "median_f0_hz": 112.9,
+    "mean_range_st": 10.8,
+    "wpm": [
+     148,
+     162
+    ],
+    "worst_cer": 0.0,
+    "mean_logprob": -0.454,
+    "centroid_hz": 1607,
+    "_mfcc": [
+     40.58100128173828,
+     10.520999908447266,
+     19.020000457763672,
+     2.316999912261963,
+     -3.7809998989105225,
+     10.187999725341797,
+     -8.751999855041504,
+     4.2820000648498535,
+     -1.9170000553131104,
+     2.6549999713897705,
+     0.4659999907016754,
+     -1.503999948501587
+    ]
+   },
+   "lines": [
+    {
+     "line": "r1",
+     "say": "the hearts{0.12} were sincere.",
+     "asr": "The hearts were sincere.",
+     "cer": 0.0,
+     "logprob": -0.381,
+     "duration_s": 1.75,
+     "frames_24": 42,
+     "lufs_i": -16.0,
+     "true_peak_dbtp": -3.91,
+     "clipped_samples": 0,
+     "median_f0_hz": 115.5,
+     "f0_range_st": 11.3,
+     "final_slope_st_per_s": -45.0,
+     "final_move_st": -8.6,
+     "speech_span_s": 1.62,
+     "wpm": 148,
+     "speed": 0.82,
+     "file": "auditions/_refs/mas-manalt/ref-a-michael-close-r1.mp3"
+    },
+    {
+     "line": "r2",
+     "say": "leave it open.",
+     "asr": "Leave it open.",
+     "cer": 0.0,
+     "logprob": -0.457,
+     "duration_s": 1.3,
+     "frames_24": 32,
+     "lufs_i": -16.0,
+     "true_peak_dbtp": -3.62,
+     "clipped_samples": 0,
+     "median_f0_hz": 112.9,
+     "f0_range_st": 11.2,
+     "final_slope_st_per_s": 6.5,
+     "final_move_st": 0.8,
+     "speech_span_s": 1.11,
+     "wpm": 162,
+     "speed": 0.82,
+     "file": "auditions/_refs/mas-manalt/ref-a-michael-close-r2.mp3"
+    },
+    {
+     "line": "r3",
+     "say": "good question.",
+     "asr": "Good question.",
+     "cer": 0.0,
+     "logprob": -0.523,
+     "duration_s": 1.2,
+     "frames_24": 29,
+     "lufs_i": -16.0,
+     "true_peak_dbtp": -1.78,
+     "clipped_samples": 0,
+     "median_f0_hz": 102.6,
+     "f0_range_st": 9.9,
+     "final_slope_st_per_s": 13.0,
+     "final_move_st": 1.4,
+     "speech_span_s": 1.025,
+     "wpm": null,
+     "speed": 0.82,
+     "file": "auditions/_refs/mas-manalt/ref-a-michael-close-r3.mp3"
+    }
+   ]
+  },
+  "alyi": {
+   "cand": "a-onyx-cathedral",
+   "summary": {
+    "median_f0_hz": 84.1,
+    "mean_range_st": 12.8,
+    "wpm": [
+     106,
+     108
+    ],
+    "worst_cer": 0.0,
+    "mean_logprob": -0.365,
+    "centroid_hz": 582,
+    "_mfcc": [
+     114.68800354003906,
+     -0.4970000088214874,
+     22.20599937438965,
+     2.687000036239624,
+     0.23899999260902405,
+     3.5290000438690186,
+     2.265000104904175,
+     -9.196999549865723,
+     5.617000102996826,
+     0.029999999329447746,
+     -0.3959999978542328,
+     -0.35899999737739563
+    ]
+   },
+   "lines": [
+    {
+     "line": "r1",
+     "say": "The company{0.15} will tell us.",
+     "asr": "The company will tell us.",
+     "cer": 0.0,
+     "logprob": -0.423,
+     "duration_s": 3.19,
+     "frames_24": 77,
+     "lufs_i": -16.0,
+     "true_peak_dbtp": -1.89,
+     "clipped_samples": 0,
+     "median_f0_hz": 84.8,
+     "f0_range_st": 12.9,
+     "final_slope_st_per_s": -5.6,
+     "final_move_st": -5.6,
+     "speech_span_s": 2.825,
+     "wpm": 106,
+     "speed": 0.68,
+     "file": "auditions/_refs/alyi/ref-a-onyx-cathedral-r1.mp3"
+    },
+    {
+     "line": "r2",
+     "say": "That is the company{0.15} telling us.",
+     "asr": "That is the company telling us.",
+     "cer": 0.0,
+     "logprob": -0.308,
+     "duration_s": 3.7,
+     "frames_24": 89,
+     "lufs_i": -16.0,
+     "true_peak_dbtp": -4.17,
+     "clipped_samples": 0,
+     "median_f0_hz": 83.4,
+     "f0_range_st": 12.7,
+     "final_slope_st_per_s": -6.4,
+     "final_move_st": -6.4,
+     "speech_span_s": 3.32,
+     "wpm": 108,
+     "speed": 0.68,
+     "file": "auditions/_refs/alyi/ref-a-onyx-cathedral-r2.mp3"
+    }
+   ]
+  },
+  "rima-tamuri": {
+   "cand": "a-heart-composed",
+   "summary": {
+    "median_f0_hz": 222.8,
+    "mean_range_st": 18.6,
+    "wpm": [
+     205,
+     220
+    ],
+    "worst_cer": 0.0,
+    "mean_logprob": -0.267,
+    "centroid_hz": 1384,
+    "_mfcc": [
+     54.14500045776367,
+     -8.154000282287598,
+     8.229999542236328,
+     -12.651000022888184,
+     -0.289000004529953,
+     -7.239999771118164,
+     -0.5860000252723694,
+     -4.955999851226807,
+     -7.078999996185303,
+     -3.377000093460083,
+     -5.999000072479248,
+     -4.710000038146973
+    ]
+   },
+   "lines": [
+    {
+     "line": "r1",
+     "say": "I'll hold it together.",
+     "asr": "I'll hold it together.",
+     "cer": 0.0,
+     "logprob": -0.269,
+     "duration_s": 1.26,
+     "frames_24": 31,
+     "lufs_i": -16.0,
+     "true_peak_dbtp": -2.82,
+     "clipped_samples": 0,
+     "median_f0_hz": 225.1,
+     "f0_range_st": 28.7,
+     "final_slope_st_per_s": -46.4,
+     "final_move_st": -21.2,
+     "speech_span_s": 1.17,
+     "wpm": 205,
+     "speed": 0.9,
+     "file": "auditions/_refs/rima-tamuri/ref-a-heart-composed-r1.mp3"
+    },
+    {
+     "line": "r2",
+     "say": "We'll share more soon.",
+     "asr": "We'll share more soon.",
+     "cer": 0.0,
+     "logprob": -0.265,
+     "duration_s": 1.18,
+     "frames_24": 29,
+     "lufs_i": -16.0,
+     "true_peak_dbtp": -3.22,
+     "clipped_samples": 0,
+     "median_f0_hz": 220.6,
+     "f0_range_st": 8.4,
+     "final_slope_st_per_s": -6.7,
+     "final_move_st": -2.5,
+     "speech_span_s": 1.09,
+     "wpm": 220,
+     "speed": 0.9,
+     "file": "auditions/_refs/rima-tamuri/ref-a-heart-composed-r2.mp3"
+    }
+   ]
+  },
+  "gerg-mockbran": {
+   "cand": "a-puck-quick",
+   "summary": {
+    "median_f0_hz": 137.4,
+    "mean_range_st": 9.6,
+    "wpm": [
+     199,
+     250
+    ],
+    "worst_cer": 0.12,
+    "mean_logprob": -0.367,
+    "centroid_hz": 1417,
+    "_mfcc": [
+     60.83399963378906,
+     2.9519999027252197,
+     23.62700080871582,
+     -6.156000137329102,
+     -3.8320000171661377,
+     4.85699987411499,
+     -6.692999839782715,
+     4.638999938964844,
+     -6.369999885559082,
+     4.935999870300293,
+     0.34700000286102295,
+     0.7409999966621399
+    ]
+   },
+   "lines": [
+    {
+     "line": "r1",
+     "say": "The company.{0.20} Again.{0.20} Just in case.",
+     "asr": "company again, just in case.",
+     "cer": 0.12,
+     "logprob": -0.405,
+     "duration_s": 1.84,
+     "frames_24": 45,
+     "lufs_i": -16.0,
+     "true_peak_dbtp": -2.67,
+     "clipped_samples": 0,
+     "median_f0_hz": 140.6,
+     "f0_range_st": 7.1,
+     "final_slope_st_per_s": -0.8,
+     "final_move_st": 0.2,
+     "speech_span_s": 1.81,
+     "wpm": 199,
+     "speed": 1.26,
+     "file": "auditions/_refs/gerg-mockbran/ref-a-puck-quick-r1.mp3"
+    },
+    {
+     "line": "r2",
+     "say": "What's in there?",
+     "asr": "What's in there?",
+     "cer": 0.0,
+     "logprob": -0.329,
+     "duration_s": 0.77,
+     "frames_24": 19,
+     "lufs_i": -16.0,
+     "true_peak_dbtp": -2.42,
+     "clipped_samples": 0,
+     "median_f0_hz": 134.3,
+     "f0_range_st": 12.2,
+     "final_slope_st_per_s": -37.9,
+     "final_move_st": -0.7,
+     "speech_span_s": 0.72,
+     "wpm": 250,
+     "speed": 1.15,
+     "file": "auditions/_refs/gerg-mockbran/ref-a-puck-quick-r2.mp3"
+    }
+   ]
+  },
+  "mario": {
+   "cand": "a-liam-earnest",
+   "summary": {
+    "median_f0_hz": 130.6,
+    "mean_range_st": 17.0,
+    "wpm": [
+     173,
+     158
+    ],
+    "worst_cer": 0.083,
+    "mean_logprob": -0.349,
+    "centroid_hz": 1447,
+    "_mfcc": [
+     58.45500183105469,
+     -6.410999774932861,
+     14.227999687194824,
+     1.6779999732971191,
+     -0.5040000081062317,
+     3.938999891281128,
+     -2.940999984741211,
+     -8.385000228881836,
+     9.23799991607666,
+     -7.357999801635742,
+     1.902999997138977,
+     3.444999933242798
+    ]
+   },
+   "lines": [
+    {
+     "line": "r1",
+     "say": "I've written up some thoughts.",
+     "asr": "I've written up some thoughts as",
+     "cer": 0.083,
+     "logprob": -0.261,
+     "duration_s": 1.86,
+     "frames_24": 45,
+     "lufs_i": -16.0,
+     "true_peak_dbtp": -4.28,
+     "clipped_samples": 0,
+     "median_f0_hz": 142.7,
+     "f0_range_st": 17.7,
+     "final_slope_st_per_s": -12.4,
+     "final_move_st": -12.4,
+     "speech_span_s": 1.735,
+     "wpm": 173,
+     "speed": 0.807,
+     "file": "auditions/_refs/mario/ref-a-liam-earnest-r1.mp3"
+    },
+    {
+     "line": "r2",
+     "say": "Hi.{0.16} Yes.{0.16} We're very worried.{0.20} How much?",
+     "asr": "Hi, yes, we're very worried. How much?",
+     "cer": 0.0,
+     "logprob": -0.437,
+     "duration_s": 2.77,
+     "frames_24": 67,
+     "lufs_i": -16.0,
+     "true_peak_dbtp": -4.3,
+     "clipped_samples": 0,
+     "median_f0_hz": 118.6,
+     "f0_range_st": 16.4,
+     "final_slope_st_per_s": -1.0,
+     "final_move_st": 0.1,
+     "speech_span_s": 2.655,
+     "wpm": 158,
+     "speed": 0.862,
+     "file": "auditions/_refs/mario/ref-a-liam-earnest-r2.mp3"
+    }
+   ]
+  }
+ },
+ "roles": {
+  "neleh": {
+   "name": "NELEH",
+   "brief": {
+    "function": "Cassandra with citations: the one board member who read the charter literally. Principled, never a villain.",
+    "pitch": "a cool alto, median ~150-175 Hz, even (7-11 st per line), kept well below RIMA (198 Hz) so the two never blur in the sc 27 exchange",
+    "pace": "150-165 wpm, precise and efficient; a clean full stop before the footnote",
+    "texture": "clean and articulate, crisp consonants (a footnote band at 4.5 kHz), dry",
+    "attitude": "polite, exact, patient; she is asking the correct question in the wrong room",
+    "cadence": "even statements that land on the last noun; questions lift only a little (she already knows the answer)",
+    "avoid": "any accent or national-origin colour; villainy, sneer or scolding; breathiness"
+   },
+   "cands": {
+    "a-kore-precise": {
+     "voiceId": "af_kore",
+     "blend": {
+      "af_kore": 1
+     },
+     "speed": 0.95,
+     "grade": "C+",
+     "processing": [
+      "HPF 90 Hz",
+      "pitch +0.5 st",
+      "peak -1.5 dB @300 Hz Q1.0",
+      "peak +1.5 dB @4500 Hz Q0.9",
+      "comp 2.5:1 @-22 dB (6/100 ms)"
+     ],
+     "summary": {
+      "median_f0_hz": 191.5,
+      "mean_range_st": 12.1,
+      "wpm": [
+       212,
+       154,
+       194
+      ],
+      "worst_cer": 0.0,
+      "mean_logprob": -0.528,
+      "centroid_hz": 890,
+      "_mfcc": [
+       76.00499725341797,
+       8.020000457763672,
+       14.456000328063965,
+       -5.6579999923706055,
+       2.559000015258789,
+       -4.5920000076293945,
+       -9.333999633789062,
+       -0.7770000100135803,
+       -6.585999965667725,
+       -3.765000104904175,
+       -4.739999771118164,
+       0.6809999942779541
+      ]
+     },
+     "lines": [
+      {
+       "line": "a4-25-01",
+       "say": "Step four.",
+       "asr": "Step 4.",
+       "cer": 0.0,
+       "logprob": -0.616,
+       "duration_s": 0.84,
+       "frames_24": 21,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -2.7,
+       "clipped_samples": 0,
+       "median_f0_hz": 191.5,
+       "f0_range_st": 12.8,
+       "final_slope_st_per_s": -16.2,
+       "final_move_st": -0.8,
+       "speech_span_s": 0.75,
+       "wpm": null,
+       "speed": 0.95,
+       "file": "auditions/neleh/a-kore-precise-a4-25-01.mp3"
+      },
+      {
+       "line": "a4-27-03",
+       "say": "For how long?",
+       "asr": "For how long?",
+       "cer": 0.0,
+       "logprob": -0.529,
+       "duration_s": 0.93,
+       "frames_24": 23,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -1.75,
+       "clipped_samples": 0,
+       "median_f0_hz": 201.7,
+       "f0_range_st": 12.1,
+       "final_slope_st_per_s": -18.3,
+       "final_move_st": -2.6,
+       "speech_span_s": 0.85,
+       "wpm": 212,
+       "speed": 0.95,
+       "file": "auditions/neleh/a-kore-precise-a4-27-03.mp3"
+      },
+      {
+       "line": "a4-27-08",
+       "say": "The bylaws allow it.{0.40} Footnote three.",
+       "asr": "The bylaws allow it. Footnote 3.",
+       "cer": 0.0,
+       "logprob": -0.352,
+       "duration_s": 2.41,
+       "frames_24": 58,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -2.31,
+       "clipped_samples": 0,
+       "median_f0_hz": 166.7,
+       "f0_range_st": 17.7,
+       "final_slope_st_per_s": -19.5,
+       "final_move_st": -10.1,
+       "speech_span_s": 2.34,
+       "wpm": 154,
+       "speed": 1.004,
+       "file": "auditions/neleh/a-kore-precise-a4-27-08.mp3"
+      },
+      {
+       "line": "a4-27-10",
+       "say": "When?",
+       "asr": "When",
+       "cer": 0.0,
+       "logprob": -0.886,
+       "duration_s": 0.58,
+       "frames_24": 14,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -2.89,
+       "clipped_samples": 0,
+       "median_f0_hz": 193.7,
+       "f0_range_st": 3.0,
+       "final_slope_st_per_s": -7.2,
+       "final_move_st": -0.5,
+       "speech_span_s": 0.49,
+       "wpm": null,
+       "speed": 0.95,
+       "file": "auditions/neleh/a-kore-precise-a4-27-10.mp3"
+      },
+      {
+       "line": "a4-27-12",
+       "say": "The company is calling us.",
+       "asr": "The company is calling us.",
+       "cer": 0.0,
+       "logprob": -0.187,
+       "duration_s": 1.64,
+       "frames_24": 40,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -3.92,
+       "clipped_samples": 0,
+       "median_f0_hz": 169.7,
+       "f0_range_st": 13.9,
+       "final_slope_st_per_s": -25.6,
+       "final_move_st": -6.5,
+       "speech_span_s": 1.545,
+       "wpm": 194,
+       "speed": 0.807,
+       "file": "auditions/neleh/a-kore-precise-a4-27-12.mp3"
+      },
+      {
+       "line": "a4-27-21",
+       "say": "Step four?",
+       "asr": "Step 4",
+       "cer": 0.0,
+       "logprob": -0.598,
+       "duration_s": 0.86,
+       "frames_24": 21,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -1.91,
+       "clipped_samples": 0,
+       "median_f0_hz": 191.5,
+       "f0_range_st": 13.1,
+       "final_slope_st_per_s": -23.0,
+       "final_move_st": -1.1,
+       "speech_span_s": 0.77,
+       "wpm": null,
+       "speed": 0.95,
+       "file": "auditions/neleh/a-kore-precise-a4-27-21.mp3"
+      }
+     ]
+    },
+    "b-sarah-precise": {
+     "voiceId": "af_sarah",
+     "blend": {
+      "af_sarah": 1
+     },
+     "speed": 0.95,
+     "grade": "C+",
+     "processing": [
+      "HPF 90 Hz",
+      "pitch -1.5 st",
+      "peak -1.5 dB @300 Hz Q1.0",
+      "peak +1.5 dB @4500 Hz Q0.9",
+      "comp 2.5:1 @-22 dB (6/100 ms)"
+     ],
+     "summary": {
+      "median_f0_hz": 189.1,
+      "mean_range_st": 12.1,
+      "wpm": [
+       212,
+       155,
+       186
+      ],
+      "worst_cer": 0.0,
+      "mean_logprob": -0.532,
+      "centroid_hz": 1696,
+      "_mfcc": [
+       46.51300048828125,
+       -0.847000002861023,
+       8.430000305175781,
+       -8.652999877929688,
+       -2.7230000495910645,
+       0.8809999823570251,
+       -18.03700065612793,
+       1.2289999723434448,
+       -11.277000427246094,
+       -0.9700000286102295,
+       -3.1410000324249268,
+       -0.9940000176429749
+      ]
+     },
+     "lines": [
+      {
+       "line": "a4-25-01",
+       "say": "Step four.",
+       "asr": "Step 4.",
+       "cer": 0.0,
+       "logprob": -0.673,
+       "duration_s": 0.9,
+       "frames_24": 22,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -1.89,
+       "clipped_samples": 0,
+       "median_f0_hz": 182.9,
+       "f0_range_st": 12.3,
+       "final_slope_st_per_s": -1.8,
+       "final_move_st": -0.2,
+       "speech_span_s": 0.78,
+       "wpm": null,
+       "speed": 0.95,
+       "file": "auditions/neleh/b-sarah-precise-a4-25-01.mp3"
+      },
+      {
+       "line": "a4-27-03",
+       "say": "For how long?",
+       "asr": "For how long?",
+       "cer": 0.0,
+       "logprob": -0.457,
+       "duration_s": 0.97,
+       "frames_24": 24,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -4.64,
+       "clipped_samples": 0,
+       "median_f0_hz": 198.9,
+       "f0_range_st": 12.2,
+       "final_slope_st_per_s": 3.8,
+       "final_move_st": 0.6,
+       "speech_span_s": 0.85,
+       "wpm": 212,
+       "speed": 0.95,
+       "file": "auditions/neleh/b-sarah-precise-a4-27-03.mp3"
+      },
+      {
+       "line": "a4-27-08",
+       "say": "The bylaws allow it.{0.40} Footnote three.",
+       "asr": "The bylaws allow it. Footnote 3.",
+       "cer": 0.0,
+       "logprob": -0.353,
+       "duration_s": 2.42,
+       "frames_24": 59,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -3.35,
+       "clipped_samples": 0,
+       "median_f0_hz": 187.1,
+       "f0_range_st": 13.3,
+       "final_slope_st_per_s": -16.7,
+       "final_move_st": -7.7,
+       "speech_span_s": 2.32,
+       "wpm": 155,
+       "speed": 0.95,
+       "file": "auditions/neleh/b-sarah-precise-a4-27-08.mp3"
+      },
+      {
+       "line": "a4-27-10",
+       "say": "When?",
+       "asr": "When?",
+       "cer": 0.0,
+       "logprob": -0.815,
+       "duration_s": 0.65,
+       "frames_24": 16,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -4.28,
+       "clipped_samples": 0,
+       "median_f0_hz": 210.1,
+       "f0_range_st": 8.2,
+       "final_slope_st_per_s": -48.5,
+       "final_move_st": -4.9,
+       "speech_span_s": 0.515,
+       "wpm": null,
+       "speed": 0.95,
+       "file": "auditions/neleh/b-sarah-precise-a4-27-10.mp3"
+      },
+      {
+       "line": "a4-27-12",
+       "say": "The company is calling us.",
+       "asr": "The company is calling us.",
+       "cer": 0.0,
+       "logprob": -0.26,
+       "duration_s": 1.72,
+       "frames_24": 42,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -4.47,
+       "clipped_samples": 0,
+       "median_f0_hz": 189.3,
+       "f0_range_st": 13.5,
+       "final_slope_st_per_s": -22.4,
+       "final_move_st": -6.4,
+       "speech_span_s": 1.615,
+       "wpm": 186,
+       "speed": 0.807,
+       "file": "auditions/neleh/b-sarah-precise-a4-27-12.mp3"
+      },
+      {
+       "line": "a4-27-21",
+       "say": "Step four?",
+       "asr": "Step 4.",
+       "cer": 0.0,
+       "logprob": -0.635,
+       "duration_s": 0.9,
+       "frames_24": 22,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -1.64,
+       "clipped_samples": 0,
+       "median_f0_hz": 188.8,
+       "f0_range_st": 13.0,
+       "final_slope_st_per_s": -17.4,
+       "final_move_st": -1.6,
+       "speech_span_s": 0.77,
+       "wpm": null,
+       "speed": 0.95,
+       "file": "auditions/neleh/b-sarah-precise-a4-27-21.mp3"
+      }
+     ]
+    },
+    "c-aoede-precise": {
+     "voiceId": "af_aoede",
+     "blend": {
+      "af_aoede": 1
+     },
+     "speed": 0.95,
+     "grade": "C+",
+     "processing": [
+      "HPF 90 Hz",
+      "pitch -1 st",
+      "peak -1.5 dB @300 Hz Q1.0",
+      "peak +1.5 dB @4500 Hz Q0.9",
+      "comp 2.5:1 @-22 dB (6/100 ms)"
+     ],
+     "summary": {
+      "median_f0_hz": 199.4,
+      "mean_range_st": 8.3,
+      "wpm": [
+       225,
+       160,
+       190
+      ],
+      "worst_cer": 0.0,
+      "mean_logprob": -0.47,
+      "centroid_hz": 824,
+      "_mfcc": [
+       90.20800018310547,
+       5.809999942779541,
+       7.645999908447266,
+       -8.286999702453613,
+       -0.3529999852180481,
+       -8.010000228881836,
+       3.8910000324249268,
+       -6.796999931335449,
+       -2.759999990463257,
+       -5.021999835968018,
+       -11.196000099182129,
+       -0.8259999752044678
+      ]
+     },
+     "lines": [
+      {
+       "line": "a4-25-01",
+       "say": "Step four.",
+       "asr": "Step 4.",
+       "cer": 0.0,
+       "logprob": -0.462,
+       "duration_s": 0.83,
+       "frames_24": 20,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -2.29,
+       "clipped_samples": 0,
+       "median_f0_hz": 201.2,
+       "f0_range_st": 10.0,
+       "final_slope_st_per_s": -19.3,
+       "final_move_st": -2.0,
+       "speech_span_s": 0.73,
+       "wpm": null,
+       "speed": 0.95,
+       "file": "auditions/neleh/c-aoede-precise-a4-25-01.mp3"
+      },
+      {
+       "line": "a4-27-03",
+       "say": "For how long?",
+       "asr": "For how long?",
+       "cer": 0.0,
+       "logprob": -0.455,
+       "duration_s": 0.9,
+       "frames_24": 22,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -4.49,
+       "clipped_samples": 0,
+       "median_f0_hz": 206.5,
+       "f0_range_st": 8.1,
+       "final_slope_st_per_s": -4.1,
+       "final_move_st": -0.8,
+       "speech_span_s": 0.8,
+       "wpm": 225,
+       "speed": 0.95,
+       "file": "auditions/neleh/c-aoede-precise-a4-27-03.mp3"
+      },
+      {
+       "line": "a4-27-08",
+       "say": "The bylaws allow it.{0.40} Footnote three.",
+       "asr": "The bylaws allow it. Footnote three.",
+       "cer": 0.0,
+       "logprob": -0.373,
+       "duration_s": 2.35,
+       "frames_24": 57,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -1.77,
+       "clipped_samples": 0,
+       "median_f0_hz": 179.7,
+       "f0_range_st": 9.4,
+       "final_slope_st_per_s": -5.6,
+       "final_move_st": -2.6,
+       "speech_span_s": 2.25,
+       "wpm": 160,
+       "speed": 0.95,
+       "file": "auditions/neleh/c-aoede-precise-a4-27-08.mp3"
+      },
+      {
+       "line": "a4-27-10",
+       "say": "When?",
+       "asr": "When",
+       "cer": 0.0,
+       "logprob": -0.724,
+       "duration_s": 0.61,
+       "frames_24": 15,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -4.12,
+       "clipped_samples": 0,
+       "median_f0_hz": 221.3,
+       "f0_range_st": 3.6,
+       "final_slope_st_per_s": -19.6,
+       "final_move_st": -1.9,
+       "speech_span_s": 0.51,
+       "wpm": null,
+       "speed": 0.95,
+       "file": "auditions/neleh/c-aoede-precise-a4-27-10.mp3"
+      },
+      {
+       "line": "a4-27-12",
+       "say": "The company is calling us.",
+       "asr": "The company is calling us.",
+       "cer": 0.0,
+       "logprob": -0.263,
+       "duration_s": 1.68,
+       "frames_24": 41,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -3.67,
+       "clipped_samples": 0,
+       "median_f0_hz": 191.5,
+       "f0_range_st": 9.2,
+       "final_slope_st_per_s": -2.8,
+       "final_move_st": -0.5,
+       "speech_span_s": 1.575,
+       "wpm": 190,
+       "speed": 0.807,
+       "file": "auditions/neleh/c-aoede-precise-a4-27-12.mp3"
+      },
+      {
+       "line": "a4-27-21",
+       "say": "Step four?",
+       "asr": "Step 4.",
+       "cer": 0.0,
+       "logprob": -0.544,
+       "duration_s": 0.84,
+       "frames_24": 21,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -2.85,
+       "clipped_samples": 0,
+       "median_f0_hz": 197.7,
+       "f0_range_st": 9.3,
+       "final_slope_st_per_s": -12.0,
+       "final_move_st": -1.4,
+       "speech_span_s": 0.74,
+       "wpm": null,
+       "speed": 0.95,
+       "file": "auditions/neleh/c-aoede-precise-a4-27-21.mp3"
+      }
+     ]
+    }
+   }
+  },
+  "mada": {
+   "name": "MADA",
+   "brief": {
+    "function": "the poker face: runs a Q&A empire and never gives an answer. 'Good question.' is all he says.",
+    "pitch": "a neutral mid-baritone, median ~118-132 Hz (above MAS's 111 so the calm-off reads as two men), very narrow (<= 5 st)",
+    "pace": "unhurried; the two words take ~0.8-1.0 s. Pauses stand in for sentences",
+    "texture": "muted grey: no chest warmth, presence pulled back, dynamics held flat (3:1)",
+    "attitude": "courteous non-answer; not smug, not robotic, not sinister",
+    "cadence": "level through 'Good', a small settle on 'question'; identical every time (it is a canned answer)",
+    "avoid": "a synthetic/robot sheen (he is human); a sneer; any imitation"
+   },
+   "cands": {
+    "a-echo-grey": {
+     "voiceId": "am_echo",
+     "blend": {
+      "am_echo": 1
+     },
+     "speed": 0.9,
+     "grade": "D",
+     "processing": [
+      "HPF 110 Hz",
+      "pitch +1.5 st",
+      "low shelf -1.5 dB @180 Hz",
+      "peak -1.5 dB @3000 Hz Q0.9",
+      "high shelf -1.5 dB @7000 Hz",
+      "comp 3.0:1 @-24 dB (5/120 ms)"
+     ],
+     "summary": {
+      "median_f0_hz": 115.5,
+      "mean_range_st": 16.2,
+      "wpm": [],
+      "worst_cer": 0.0,
+      "mean_logprob": -0.525,
+      "centroid_hz": 949,
+      "_mfcc": [
+       78.96199798583984,
+       -3.183000087738037,
+       10.807000160217285,
+       -3.8499999046325684,
+       1.6100000143051147,
+       5.408999919891357,
+       -9.769000053405762,
+       4.688000202178955,
+       -1.8559999465942383,
+       0.9359999895095825,
+       2.509999990463257,
+       1.5420000553131104
+      ]
+     },
+     "lines": [
+      {
+       "line": "a4-25-02",
+       "say": "Good question.",
+       "asr": "Good question.",
+       "cer": 0.0,
+       "logprob": -0.525,
+       "duration_s": 1.36,
+       "frames_24": 33,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -1.87,
+       "clipped_samples": 0,
+       "median_f0_hz": 115.5,
+       "f0_range_st": 16.2,
+       "final_slope_st_per_s": 26.8,
+       "final_move_st": 6.1,
+       "speech_span_s": 1.235,
+       "wpm": null,
+       "speed": 0.9,
+       "file": "auditions/mada/a-echo-grey-a4-25-02.mp3"
+      },
+      {
+       "line": "x-seed2",
+       "say": "Good question.",
+       "asr": "Good question.",
+       "cer": 0.0,
+       "logprob": -0.525,
+       "duration_s": 1.36,
+       "frames_24": 33,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -1.87,
+       "clipped_samples": 0,
+       "median_f0_hz": 115.5,
+       "f0_range_st": 16.2,
+       "final_slope_st_per_s": 26.8,
+       "final_move_st": 6.1,
+       "speech_span_s": 1.235,
+       "wpm": null,
+       "speed": 0.9,
+       "file": "auditions/mada/a-echo-grey-x-seed2.mp3"
+      }
+     ]
+    },
+    "b-adam-grey": {
+     "voiceId": "am_adam",
+     "blend": {
+      "am_adam": 1
+     },
+     "speed": 0.9,
+     "grade": "F+",
+     "processing": [
+      "HPF 110 Hz",
+      "pitch 0",
+      "low shelf -1.5 dB @180 Hz",
+      "peak -1.5 dB @3000 Hz Q0.9",
+      "high shelf -1.5 dB @7000 Hz",
+      "comp 3.0:1 @-24 dB (5/120 ms)"
+     ],
+     "summary": {
+      "median_f0_hz": 113.2,
+      "mean_range_st": 8.7,
+      "wpm": [],
+      "worst_cer": 0.0,
+      "mean_logprob": -0.393,
+      "centroid_hz": 1308,
+      "_mfcc": [
+       49.29899978637695,
+       -6.294000148773193,
+       14.395999908447266,
+       -1.277999997138977,
+       1.4229999780654907,
+       -6.868000030517578,
+       -3.757999897003174,
+       -6.572000026702881,
+       -1.4839999675750732,
+       -3.940000057220459,
+       0.6570000052452087,
+       -3.625
+      ]
+     },
+     "lines": [
+      {
+       "line": "a4-25-02",
+       "say": "Good question.",
+       "asr": "Good question.",
+       "cer": 0.0,
+       "logprob": -0.393,
+       "duration_s": 1.04,
+       "frames_24": 25,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -2.0,
+       "clipped_samples": 0,
+       "median_f0_hz": 113.2,
+       "f0_range_st": 8.7,
+       "final_slope_st_per_s": -24.0,
+       "final_move_st": -2.4,
+       "speech_span_s": 0.93,
+       "wpm": null,
+       "speed": 0.9,
+       "file": "auditions/mada/b-adam-grey-a4-25-02.mp3"
+      },
+      {
+       "line": "x-seed2",
+       "say": "Good question.",
+       "asr": "Good question.",
+       "cer": 0.0,
+       "logprob": -0.393,
+       "duration_s": 1.04,
+       "frames_24": 25,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -2.0,
+       "clipped_samples": 0,
+       "median_f0_hz": 113.2,
+       "f0_range_st": 8.7,
+       "final_slope_st_per_s": -24.0,
+       "final_move_st": -2.4,
+       "speech_span_s": 0.93,
+       "wpm": null,
+       "speed": 0.9,
+       "file": "auditions/mada/b-adam-grey-x-seed2.mp3"
+      }
+     ]
+    },
+    "c-echo-eric-grey": {
+     "voiceId": "am_echo*0.60+am_eric*0.40",
+     "blend": {
+      "am_echo": 0.6,
+      "am_eric": 0.4
+     },
+     "speed": 0.9,
+     "grade": "D/D blend",
+     "processing": [
+      "HPF 110 Hz",
+      "pitch 0",
+      "low shelf -1.5 dB @180 Hz",
+      "peak -1.5 dB @3000 Hz Q0.9",
+      "high shelf -1.5 dB @7000 Hz",
+      "comp 3.0:1 @-24 dB (5/120 ms)"
+     ],
+     "summary": {
+      "median_f0_hz": 119.3,
+      "mean_range_st": 22.0,
+      "wpm": [],
+      "worst_cer": 0.0,
+      "mean_logprob": -0.438,
+      "centroid_hz": 1047,
+      "_mfcc": [
+       70.08200073242188,
+       -0.9300000071525574,
+       11.576000213623047,
+       -4.951000213623047,
+       1.1469999551773071,
+       5.671999931335449,
+       -7.611000061035156,
+       0.7910000085830688,
+       -2.7079999446868896,
+       -0.9350000023841858,
+       -1.9129999876022339,
+       4.11899995803833
+      ]
+     },
+     "lines": [
+      {
+       "line": "a4-25-02",
+       "say": "Good question.",
+       "asr": "Good question.",
+       "cer": 0.0,
+       "logprob": -0.438,
+       "duration_s": 1.22,
+       "frames_24": 30,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -3.96,
+       "clipped_samples": 0,
+       "median_f0_hz": 119.3,
+       "f0_range_st": 22.0,
+       "final_slope_st_per_s": -20.3,
+       "final_move_st": -6.0,
+       "speech_span_s": 1.075,
+       "wpm": null,
+       "speed": 0.9,
+       "file": "auditions/mada/c-echo-eric-grey-a4-25-02.mp3"
+      },
+      {
+       "line": "x-seed2",
+       "say": "Good question.",
+       "asr": "Good question.",
+       "cer": 0.0,
+       "logprob": -0.438,
+       "duration_s": 1.22,
+       "frames_24": 30,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -3.96,
+       "clipped_samples": 0,
+       "median_f0_hz": 119.3,
+       "f0_range_st": 22.0,
+       "final_slope_st_per_s": -20.3,
+       "final_move_st": -6.0,
+       "speech_span_s": 1.075,
+       "wpm": null,
+       "speed": 0.9,
+       "file": "auditions/mada/c-echo-eric-grey-x-seed2.mp3"
+      }
+     ]
+    }
+   }
+  },
+  "terb": {
+   "name": "TERB",
+   "brief": {
+    "function": "the fire marshal of imploding boards: calm, capable, faintly bored by catastrophe.",
+    "pitch": "a tall baritone, median ~95-115 Hz, moderate range (8-12 st)",
+    "pace": "brisk, 165-185 wpm; procedural questions, no drama",
+    "texture": "crisp and clean: a little chest, a clean low-mid, a 2 kHz edge",
+    "attitude": "reassuring and practical; he has done this before",
+    "cadence": "short procedural questions with a quick lift; the realisation '...Ah.' falls flat and short",
+    "avoid": "heroics, barking, a drill-sergeant read; any imitation"
+   },
+   "cands": {
+    "a-fenrir-brisk": {
+     "voiceId": "am_fenrir",
+     "blend": {
+      "am_fenrir": 1
+     },
+     "speed": 1.02,
+     "grade": "C+",
+     "processing": [
+      "HPF 80 Hz",
+      "pitch -2 st",
+      "peak +1.5 dB @150 Hz Q0.9",
+      "peak -1.5 dB @500 Hz Q1.0",
+      "peak +2 dB @2000 Hz Q0.9",
+      "comp 3.0:1 @-21 dB (3/70 ms)"
+     ],
+     "summary": {
+      "median_f0_hz": 152.0,
+      "mean_range_st": 6.2,
+      "wpm": [
+       240
+      ],
+      "worst_cer": 1.5,
+      "mean_logprob": -0.473,
+      "centroid_hz": 1256,
+      "_mfcc": [
+       64.86299896240234,
+       -1.5579999685287476,
+       11.23900032043457,
+       8.404000282287598,
+       -2.9170000553131104,
+       9.734000205993652,
+       -6.290999889373779,
+       -5.870999813079834,
+       7.001999855041504,
+       -8.381999969482422,
+       1.378999948501587,
+       -3.3469998836517334
+      ]
+     },
+     "lines": [
+      {
+       "line": "a4-30-05",
+       "say": "Which room is on fire?",
+       "asr": "Which room is on fire?",
+       "cer": 0.0,
+       "logprob": -0.265,
+       "duration_s": 1.35,
+       "frames_24": 33,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -4.29,
+       "clipped_samples": 0,
+       "median_f0_hz": 155.1,
+       "f0_range_st": 9.8,
+       "final_slope_st_per_s": -27.6,
+       "final_move_st": -3.9,
+       "speech_span_s": 1.25,
+       "wpm": 240,
+       "speed": 0.867,
+       "file": "auditions/terb/a-fenrir-brisk-a4-30-05.mp3"
+      },
+      {
+       "line": "a4-30-06",
+       "say": "Ah.",
+       "asr": "Bye.",
+       "cer": 1.5,
+       "logprob": -0.524,
+       "duration_s": 0.5,
+       "frames_24": 12,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -1.9,
+       "clipped_samples": 0,
+       "median_f0_hz": 143.5,
+       "f0_range_st": 2.9,
+       "final_slope_st_per_s": -5.9,
+       "final_move_st": -0.7,
+       "speech_span_s": 0.38,
+       "wpm": null,
+       "speed": 1.02,
+       "file": "auditions/terb/a-fenrir-brisk-a4-30-06.mp3"
+      },
+      {
+       "line": "a4-30-07",
+       "say": "Terms?",
+       "asr": "terms.",
+       "cer": 0.0,
+       "logprob": -0.631,
+       "duration_s": 0.61,
+       "frames_24": 15,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -3.86,
+       "clipped_samples": 0,
+       "median_f0_hz": 152.0,
+       "f0_range_st": 5.8,
+       "final_slope_st_per_s": -7.4,
+       "final_move_st": -0.8,
+       "speech_span_s": 0.51,
+       "wpm": null,
+       "speed": 1.02,
+       "file": "auditions/terb/a-fenrir-brisk-a4-30-07.mp3"
+      }
+     ]
+    },
+    "b-echo-brisk": {
+     "voiceId": "am_echo",
+     "blend": {
+      "am_echo": 1
+     },
+     "speed": 1.02,
+     "grade": "D",
+     "processing": [
+      "HPF 80 Hz",
+      "pitch 0",
+      "peak +1.5 dB @150 Hz Q0.9",
+      "peak -1.5 dB @500 Hz Q1.0",
+      "peak +2 dB @2000 Hz Q0.9",
+      "comp 3.0:1 @-21 dB (3/70 ms)"
+     ],
+     "summary": {
+      "median_f0_hz": 113.6,
+      "mean_range_st": 15.9,
+      "wpm": [
+       183
+      ],
+      "worst_cer": 0.5,
+      "mean_logprob": -0.704,
+      "centroid_hz": 817,
+      "_mfcc": [
+       100.53500366210938,
+       0.36800000071525574,
+       7.0279998779296875,
+       -3.1029999256134033,
+       -1.8420000076293945,
+       17.27199935913086,
+       -8.093999862670898,
+       4.570000171661377,
+       1.5740000009536743,
+       -1.0149999856948853,
+       3.3489999771118164,
+       5.4079999923706055
+      ]
+     },
+     "lines": [
+      {
+       "line": "a4-30-05",
+       "say": "Which room is on fire?",
+       "asr": "Which room is on fire?",
+       "cer": 0.0,
+       "logprob": -0.323,
+       "duration_s": 1.73,
+       "frames_24": 42,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -3.32,
+       "clipped_samples": 0,
+       "median_f0_hz": 102.3,
+       "f0_range_st": 15.1,
+       "final_slope_st_per_s": -20.4,
+       "final_move_st": -7.8,
+       "speech_span_s": 1.64,
+       "wpm": 183,
+       "speed": 1.02,
+       "file": "auditions/terb/b-echo-brisk-a4-30-05.mp3"
+      },
+      {
+       "line": "a4-30-06",
+       "say": "Ah.",
+       "asr": "Ahh",
+       "cer": 0.5,
+       "logprob": -1.154,
+       "duration_s": 0.7,
+       "frames_24": 17,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -2.66,
+       "clipped_samples": 0,
+       "median_f0_hz": 113.6,
+       "f0_range_st": 13.2,
+       "final_slope_st_per_s": 10.7,
+       "final_move_st": 1.0,
+       "speech_span_s": 0.325,
+       "wpm": null,
+       "speed": 1.02,
+       "file": "auditions/terb/b-echo-brisk-a4-30-06.mp3"
+      },
+      {
+       "line": "a4-30-07",
+       "say": "Terms?",
+       "asr": "terms of",
+       "cer": 0.4,
+       "logprob": -0.634,
+       "duration_s": 0.8,
+       "frames_24": 20,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -3.96,
+       "clipped_samples": 0,
+       "median_f0_hz": 159.2,
+       "f0_range_st": 19.3,
+       "final_slope_st_per_s": -37.3,
+       "final_move_st": -18.7,
+       "speech_span_s": 0.665,
+       "wpm": null,
+       "speed": 1.02,
+       "file": "auditions/terb/b-echo-brisk-a4-30-07.mp3"
+      }
+     ]
+    },
+    "c-fenrir-onyx-brisk": {
+     "voiceId": "am_fenrir*0.60+am_onyx*0.40",
+     "blend": {
+      "am_fenrir": 0.6,
+      "am_onyx": 0.4
+     },
+     "speed": 1.02,
+     "grade": "C+/D blend",
+     "processing": [
+      "HPF 80 Hz",
+      "pitch 0",
+      "peak +1.5 dB @150 Hz Q0.9",
+      "peak -1.5 dB @500 Hz Q1.0",
+      "peak +2 dB @2000 Hz Q0.9",
+      "comp 3.0:1 @-21 dB (3/70 ms)"
+     ],
+     "summary": {
+      "median_f0_hz": 131.6,
+      "mean_range_st": 8.6,
+      "wpm": [
+       199
+      ],
+      "worst_cer": 1.0,
+      "mean_logprob": -0.6,
+      "centroid_hz": 1061,
+      "_mfcc": [
+       85.01000213623047,
+       -9.593999862670898,
+       13.559000015258789,
+       -0.5519999861717224,
+       -1.9129999876022339,
+       5.525000095367432,
+       -7.3379998207092285,
+       -2.2679998874664307,
+       1.2330000400543213,
+       -4.796000003814697,
+       4.47599983215332,
+       -1.7400000095367432
+      ]
+     },
+     "lines": [
+      {
+       "line": "a4-30-05",
+       "say": "Which room is on fire?",
+       "asr": "Which room is on fire?",
+       "cer": 0.0,
+       "logprob": -0.315,
+       "duration_s": 1.6,
+       "frames_24": 39,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -4.23,
+       "clipped_samples": 0,
+       "median_f0_hz": 114.5,
+       "f0_range_st": 13.6,
+       "final_slope_st_per_s": -23.6,
+       "final_move_st": -5.7,
+       "speech_span_s": 1.51,
+       "wpm": 199,
+       "speed": 0.867,
+       "file": "auditions/terb/c-fenrir-onyx-brisk-a4-30-05.mp3"
+      },
+      {
+       "line": "a4-30-06",
+       "say": "Ah.",
+       "asr": "Uhh",
+       "cer": 1.0,
+       "logprob": -0.773,
+       "duration_s": 0.54,
+       "frames_24": 13,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -3.2,
+       "clipped_samples": 0,
+       "median_f0_hz": 131.6,
+       "f0_range_st": 2.7,
+       "final_slope_st_per_s": -33.6,
+       "final_move_st": -2.7,
+       "speech_span_s": 0.33,
+       "wpm": null,
+       "speed": 1.02,
+       "file": "auditions/terb/c-fenrir-onyx-brisk-a4-30-06.mp3"
+      },
+      {
+       "line": "a4-30-07",
+       "say": "Terms?",
+       "asr": "terms of",
+       "cer": 0.4,
+       "logprob": -0.711,
+       "duration_s": 0.69,
+       "frames_24": 17,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -2.14,
+       "clipped_samples": 0,
+       "median_f0_hz": 143.9,
+       "f0_range_st": 9.6,
+       "final_slope_st_per_s": -39.5,
+       "final_move_st": -3.6,
+       "speech_span_s": 0.6,
+       "wpm": null,
+       "speed": 1.02,
+       "file": "auditions/terb/c-fenrir-onyx-brisk-a4-30-07.mp3"
+      }
+     ]
+    }
+   }
+  },
+  "tasya": {
+   "name": "TASYA",
+   "brief": {
+    "function": "the zen landlord: he never fights, he owns the building the fight is in. Serenity is leverage; only Mas is calmer.",
+    "pitch": "a warm light baritone-tenor, median ~130-150 Hz (a clear lane above MAS and below GERG's bright 135 is impossible, so separation comes from pace and warmth: he is half GERG's speed), gentle range (7-11 st)",
+    "pace": "125-140 wpm, measured, business words said like mindfulness mantras",
+    "texture": "warm, soft-onset, smiling (a small air lift), no edge",
+    "attitude": "warm, gently amused, delighted; generous and three moves ahead",
+    "cadence": "parallel phrases with even spacing ('below them, above them, around them'), each landing softly",
+    "avoid": "ANY accent or accent colour (explicit guardrail); 'sipping tea'; smugness; any imitation of the real voice"
+   },
+   "cands": {
+    "a-fenrir-eric-warm": {
+     "voiceId": "am_fenrir*0.50+am_eric*0.50",
+     "blend": {
+      "am_fenrir": 0.5,
+      "am_eric": 0.5
+     },
+     "speed": 0.9,
+     "grade": "C+/D blend",
+     "processing": [
+      "HPF 70 Hz",
+      "pitch 0",
+      "low shelf +2 dB @180 Hz",
+      "peak -1.5 dB @350 Hz Q1.0",
+      "high shelf +1.5 dB @6000 Hz",
+      "comp 2.0:1 @-24 dB (12/150 ms)"
+     ],
+     "summary": {
+      "median_f0_hz": 150.3,
+      "mean_range_st": 14.5,
+      "wpm": [
+       138,
+       144,
+       148
+      ],
+      "worst_cer": 0.0,
+      "mean_logprob": -0.434,
+      "centroid_hz": 1441,
+      "_mfcc": [
+       57.99800109863281,
+       -1.8650000095367432,
+       19.648000717163086,
+       -3.6559998989105225,
+       4.164999961853027,
+       1.6979999542236328,
+       -9.970999717712402,
+       0.4180000126361847,
+       -2.7130000591278076,
+       -3.2660000324249268,
+       -2.2899999618530273,
+       2.819000005722046
+      ]
+     },
+     "lines": [
+      {
+       "line": "a4-27-20",
+       "say": "A new advanced AI research team.",
+       "asr": "A new advanced AI research team.",
+       "cer": 0.0,
+       "logprob": -0.393,
+       "duration_s": 2.75,
+       "frames_24": 66,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -4.53,
+       "clipped_samples": 0,
+       "median_f0_hz": 150.3,
+       "f0_range_st": 15.6,
+       "final_slope_st_per_s": -9.4,
+       "final_move_st": -6.1,
+       "speech_span_s": 2.61,
+       "wpm": 138,
+       "speed": 0.765,
+       "file": "auditions/tasya/a-fenrir-eric-warm-a4-27-20.mp3"
+      },
+      {
+       "line": "a4-29-07",
+       "say": "Everyone is welcome.",
+       "asr": "Everyone is welcome.",
+       "cer": 0.0,
+       "logprob": -0.356,
+       "duration_s": 1.34,
+       "frames_24": 33,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -4.3,
+       "clipped_samples": 0,
+       "median_f0_hz": 150.3,
+       "f0_range_st": 15.1,
+       "final_slope_st_per_s": -17.3,
+       "final_move_st": -2.6,
+       "speech_span_s": 1.25,
+       "wpm": 144,
+       "speed": 0.9,
+       "file": "auditions/tasya/a-fenrir-eric-warm-a4-29-07.mp3"
+      },
+      {
+       "line": "a4-30-02",
+       "say": "We are below them,{0.30} above them,{0.30} around them.",
+       "asr": "We are below them, above them, around them.",
+       "cer": 0.0,
+       "logprob": -0.26,
+       "duration_s": 3.4,
+       "frames_24": 82,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -3.65,
+       "clipped_samples": 0,
+       "median_f0_hz": 137.0,
+       "f0_range_st": 16.0,
+       "final_slope_st_per_s": -12.0,
+       "final_move_st": -7.1,
+       "speech_span_s": 3.25,
+       "wpm": 148,
+       "speed": 0.765,
+       "file": "auditions/tasya/a-fenrir-eric-warm-a4-30-02.mp3"
+      },
+      {
+       "line": "a4-30-04",
+       "say": "Hello.",
+       "asr": "Hello.",
+       "cer": 0.0,
+       "logprob": -0.728,
+       "duration_s": 0.74,
+       "frames_24": 18,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -2.58,
+       "clipped_samples": 0,
+       "median_f0_hz": 180.3,
+       "f0_range_st": 11.1,
+       "final_slope_st_per_s": 1.1,
+       "final_move_st": 0.2,
+       "speech_span_s": 0.645,
+       "wpm": null,
+       "speed": 0.9,
+       "file": "auditions/tasya/a-fenrir-eric-warm-a4-30-04.mp3"
+      }
+     ]
+    },
+    "b-eric-warm": {
+     "voiceId": "am_eric",
+     "blend": {
+      "am_eric": 1
+     },
+     "speed": 0.88,
+     "grade": "D",
+     "processing": [
+      "HPF 70 Hz",
+      "pitch -1.5 st",
+      "low shelf +2 dB @180 Hz",
+      "peak -1.5 dB @350 Hz Q1.0",
+      "high shelf +1.5 dB @6000 Hz",
+      "comp 2.0:1 @-24 dB (12/150 ms)"
+     ],
+     "summary": {
+      "median_f0_hz": 144.0,
+      "mean_range_st": 13.8,
+      "wpm": [
+       125,
+       132,
+       138
+      ],
+      "worst_cer": 0.0,
+      "mean_logprob": -0.453,
+      "centroid_hz": 1181,
+      "_mfcc": [
+       67.98300170898438,
+       -4.8429999351501465,
+       29.92300033569336,
+       -2.0739998817443848,
+       10.852999687194824,
+       8.204000473022461,
+       -4.052999973297119,
+       -1.3910000324249268,
+       -3.117000102996826,
+       1.4450000524520874,
+       -6.122000217437744,
+       -0.7020000219345093
+      ]
+     },
+     "lines": [
+      {
+       "line": "a4-27-20",
+       "say": "A new advanced AI research team.",
+       "asr": "A New Advanced AI Research Team",
+       "cer": 0.0,
+       "logprob": -0.417,
+       "duration_s": 3.03,
+       "frames_24": 73,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -2.81,
+       "clipped_samples": 0,
+       "median_f0_hz": 149.4,
+       "f0_range_st": 15.0,
+       "final_slope_st_per_s": -9.6,
+       "final_move_st": -8.0,
+       "speech_span_s": 2.87,
+       "wpm": 125,
+       "speed": 0.748,
+       "file": "auditions/tasya/b-eric-warm-a4-27-20.mp3"
+      },
+      {
+       "line": "a4-29-07",
+       "say": "Everyone is welcome.",
+       "asr": "Everyone is welcome.",
+       "cer": 0.0,
+       "logprob": -0.355,
+       "duration_s": 1.5,
+       "frames_24": 36,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -4.28,
+       "clipped_samples": 0,
+       "median_f0_hz": 152.5,
+       "f0_range_st": 15.1,
+       "final_slope_st_per_s": -15.2,
+       "final_move_st": -5.2,
+       "speech_span_s": 1.365,
+       "wpm": 132,
+       "speed": 0.88,
+       "file": "auditions/tasya/b-eric-warm-a4-29-07.mp3"
+      },
+      {
+       "line": "a4-30-02",
+       "say": "We are below them,{0.30} above them,{0.30} around them.",
+       "asr": "We are below them, above them, around them.",
+       "cer": 0.0,
+       "logprob": -0.269,
+       "duration_s": 3.66,
+       "frames_24": 88,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -2.21,
+       "clipped_samples": 0,
+       "median_f0_hz": 138.6,
+       "f0_range_st": 15.3,
+       "final_slope_st_per_s": -11.5,
+       "final_move_st": -7.5,
+       "speech_span_s": 3.48,
+       "wpm": 138,
+       "speed": 0.748,
+       "file": "auditions/tasya/b-eric-warm-a4-30-02.mp3"
+      },
+      {
+       "line": "a4-30-04",
+       "say": "Hello.",
+       "asr": "Hello!",
+       "cer": 0.0,
+       "logprob": -0.77,
+       "duration_s": 0.8,
+       "frames_24": 20,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -1.91,
+       "clipped_samples": 0,
+       "median_f0_hz": 132.7,
+       "f0_range_st": 9.7,
+       "final_slope_st_per_s": -0.1,
+       "final_move_st": -0.4,
+       "speech_span_s": 0.6,
+       "wpm": null,
+       "speed": 0.88,
+       "file": "auditions/tasya/b-eric-warm-a4-30-04.mp3"
+      }
+     ]
+    },
+    "c-santa-fenrir-warm": {
+     "voiceId": "am_santa*0.40+am_fenrir*0.60",
+     "blend": {
+      "am_santa": 0.4,
+      "am_fenrir": 0.6
+     },
+     "speed": 0.9,
+     "grade": "D-/C+ blend",
+     "processing": [
+      "HPF 70 Hz",
+      "pitch 0",
+      "low shelf +2 dB @180 Hz",
+      "peak -1.5 dB @350 Hz Q1.0",
+      "high shelf +1.5 dB @6000 Hz",
+      "comp 2.0:1 @-24 dB (12/150 ms)"
+     ],
+     "summary": {
+      "median_f0_hz": 170.4,
+      "mean_range_st": 14.6,
+      "wpm": [
+       133,
+       148,
+       133
+      ],
+      "worst_cer": 0.0,
+      "mean_logprob": -0.401,
+      "centroid_hz": 1714,
+      "_mfcc": [
+       51.06100082397461,
+       -2.302999973297119,
+       11.708999633789062,
+       -3.1640000343322754,
+       -7.267000198364258,
+       5.861999988555908,
+       -17.76099967956543,
+       1.2309999465942383,
+       -2.187000036239624,
+       -6.939000129699707,
+       0.024000000208616257,
+       -3.122999906539917
+      ]
+     },
+     "lines": [
+      {
+       "line": "a4-27-20",
+       "say": "A new advanced AI research team.",
+       "asr": "a new advanced AI research team.",
+       "cer": 0.0,
+       "logprob": -0.382,
+       "duration_s": 2.81,
+       "frames_24": 68,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -4.32,
+       "clipped_samples": 0,
+       "median_f0_hz": 153.8,
+       "f0_range_st": 17.2,
+       "final_slope_st_per_s": -14.7,
+       "final_move_st": -14.8,
+       "speech_span_s": 2.7,
+       "wpm": 133,
+       "speed": 0.765,
+       "file": "auditions/tasya/c-santa-fenrir-warm-a4-27-20.mp3"
+      },
+      {
+       "line": "a4-29-07",
+       "say": "Everyone is welcome.",
+       "asr": "Everyone is welcome.",
+       "cer": 0.0,
+       "logprob": -0.401,
+       "duration_s": 1.31,
+       "frames_24": 32,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -4.08,
+       "clipped_samples": 0,
+       "median_f0_hz": 187.1,
+       "f0_range_st": 19.7,
+       "final_slope_st_per_s": -43.9,
+       "final_move_st": -17.9,
+       "speech_span_s": 1.22,
+       "wpm": 148,
+       "speed": 0.9,
+       "file": "auditions/tasya/c-santa-fenrir-warm-a4-29-07.mp3"
+      },
+      {
+       "line": "a4-30-02",
+       "say": "We are below them,{0.30} above them,{0.30} around them.",
+       "asr": "We are below them, above them, around them.",
+       "cer": 0.0,
+       "logprob": -0.222,
+       "duration_s": 3.74,
+       "frames_24": 90,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -3.21,
+       "clipped_samples": 0,
+       "median_f0_hz": 139.4,
+       "f0_range_st": 18.8,
+       "final_slope_st_per_s": -14.2,
+       "final_move_st": -8.6,
+       "speech_span_s": 3.61,
+       "wpm": 133,
+       "speed": 0.765,
+       "file": "auditions/tasya/c-santa-fenrir-warm-a4-30-02.mp3"
+      },
+      {
+       "line": "a4-30-04",
+       "say": "Hello.",
+       "asr": "Hello!",
+       "cer": 0.0,
+       "logprob": -0.597,
+       "duration_s": 0.7,
+       "frames_24": 17,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -4.09,
+       "clipped_samples": 0,
+       "median_f0_hz": 237.2,
+       "f0_range_st": 2.5,
+       "final_slope_st_per_s": -8.8,
+       "final_move_st": -0.6,
+       "speech_span_s": 0.6,
+       "wpm": null,
+       "speed": 0.9,
+       "file": "auditions/tasya/c-santa-fenrir-warm-a4-30-04.mp3"
+      }
+     ]
+    }
+   }
+  },
+  "ttemme": {
+   "name": "TTEMME",
+   "brief": {
+    "function": "the 72-hour CEO: a livestream co-founder who ran the company for a weekend and talks to 'chat' the whole time.",
+    "pitch": "a light, youthful-sounding mid register, median ~135-165 Hz, lively (10-14 st)",
+    "pace": "155-175 wpm, casual streamer patter; the second 'Chat...' slows as he watches the sand",
+    "texture": "a headset mic: bass rolled off, forward presence, quick compression; dry",
+    "attitude": "affable, a little bemused, sincere (his exit 'deeply pleased' is played straight)",
+    "cadence": "addresses chat first, then the news; a small honest question lift at the end",
+    "avoid": "gamer-bro caricature, shouting, sarcasm; any imitation"
+   },
+   "cands": {
+    "a-eric-headset": {
+     "voiceId": "am_eric",
+     "blend": {
+      "am_eric": 1
+     },
+     "speed": 1.0,
+     "grade": "D",
+     "processing": [
+      "HPF 150 Hz",
+      "pitch -1 st",
+      "peak -2 dB @300 Hz Q1.0",
+      "peak +2.5 dB @2800 Hz Q0.9",
+      "high shelf -1 dB @9000 Hz",
+      "comp 3.5:1 @-20 dB (3/60 ms)"
+     ],
+     "summary": {
+      "median_f0_hz": 143.9,
+      "mean_range_st": 14.6,
+      "wpm": [
+       173,
+       136
+      ],
+      "worst_cer": 0.071,
+      "mean_logprob": -0.4,
+      "centroid_hz": 1380,
+      "_mfcc": [
+       55.13999938964844,
+       -9.593000411987305,
+       27.61199951171875,
+       -5.228000164031982,
+       9.3149995803833,
+       5.627999782562256,
+       -1.4320000410079956,
+       -2.0209999084472656,
+       -2.9790000915527344,
+       0.39399999380111694,
+       -7.491000175476074,
+       1.9609999656677246
+      ]
+     },
+     "lines": [
+      {
+       "line": "a4-27-18",
+       "say": "Chat.{0.28} I'm the CEO now.",
+       "asr": "Chat, I'm the CEO now.",
+       "cer": 0.0,
+       "logprob": -0.274,
+       "duration_s": 1.82,
+       "frames_24": 44,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -4.78,
+       "clipped_samples": 0,
+       "median_f0_hz": 143.5,
+       "f0_range_st": 14.8,
+       "final_slope_st_per_s": -11.1,
+       "final_move_st": -2.6,
+       "speech_span_s": 1.73,
+       "wpm": 173,
+       "speed": 1.0,
+       "file": "auditions/ttemme/a-eric-headset-a4-27-18.mp3"
+      },
+      {
+       "line": "a4-27-19",
+       "say": "Chat...{0.55} for how long?",
+       "asr": "Chad, for how long?",
+       "cer": 0.071,
+       "logprob": -0.525,
+       "duration_s": 1.86,
+       "frames_24": 45,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -2.0,
+       "clipped_samples": 0,
+       "median_f0_hz": 144.3,
+       "f0_range_st": 14.4,
+       "final_slope_st_per_s": 7.6,
+       "final_move_st": 1.6,
+       "speech_span_s": 1.76,
+       "wpm": 136,
+       "speed": 1.0,
+       "file": "auditions/ttemme/a-eric-headset-a4-27-19.mp3"
+      }
+     ]
+    },
+    "b-santa-headset": {
+     "voiceId": "am_santa",
+     "blend": {
+      "am_santa": 1
+     },
+     "speed": 1.0,
+     "grade": "D-",
+     "processing": [
+      "HPF 150 Hz",
+      "pitch 0",
+      "peak -2 dB @300 Hz Q1.0",
+      "peak +2.5 dB @2800 Hz Q0.9",
+      "high shelf -1 dB @9000 Hz",
+      "comp 3.5:1 @-20 dB (3/60 ms)"
+     ],
+     "summary": {
+      "median_f0_hz": 140.5,
+      "mean_range_st": 15.2,
+      "wpm": [
+       155,
+       128
+      ],
+      "worst_cer": 0.0,
+      "mean_logprob": -0.406,
+      "centroid_hz": 1906,
+      "_mfcc": [
+       36.689998626708984,
+       -12.364999771118164,
+       11.755999565124512,
+       -7.468999862670898,
+       -12.175999641418457,
+       9.484999656677246,
+       -17.389999389648438,
+       -0.24400000274181366,
+       -2.312999963760376,
+       -5.894999980926514,
+       -3.443000078201294,
+       -4.572999954223633
+      ]
+     },
+     "lines": [
+      {
+       "line": "a4-27-18",
+       "say": "Chat.{0.28} I'm the CEO now.",
+       "asr": "Chat! I'm the CEO now!",
+       "cer": 0.0,
+       "logprob": -0.33,
+       "duration_s": 2.03,
+       "frames_24": 49,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -4.32,
+       "clipped_samples": 0,
+       "median_f0_hz": 226.0,
+       "f0_range_st": 30.3,
+       "final_slope_st_per_s": -29.2,
+       "final_move_st": -16.9,
+       "speech_span_s": 1.935,
+       "wpm": 155,
+       "speed": 1.0,
+       "file": "auditions/ttemme/b-santa-headset-a4-27-18.mp3"
+      },
+      {
+       "line": "a4-27-19",
+       "say": "Chat...{0.55} for how long?",
+       "asr": "Chat! For how long?",
+       "cer": 0.0,
+       "logprob": -0.482,
+       "duration_s": 1.97,
+       "frames_24": 48,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -3.81,
+       "clipped_samples": 0,
+       "median_f0_hz": 55.0,
+       "f0_range_st": 0.0,
+       "final_slope_st_per_s": 0.0,
+       "final_move_st": 0.0,
+       "speech_span_s": 1.87,
+       "wpm": 128,
+       "speed": 1.0,
+       "file": "auditions/ttemme/b-santa-headset-a4-27-19.mp3"
+      }
+     ]
+    },
+    "c-echo-eric-headset": {
+     "voiceId": "am_echo*0.40+am_eric*0.60",
+     "blend": {
+      "am_echo": 0.4,
+      "am_eric": 0.6
+     },
+     "speed": 1.0,
+     "grade": "D/D blend",
+     "processing": [
+      "HPF 150 Hz",
+      "pitch +1 st",
+      "peak -2 dB @300 Hz Q1.0",
+      "peak +2.5 dB @2800 Hz Q0.9",
+      "high shelf -1 dB @9000 Hz",
+      "comp 3.5:1 @-20 dB (3/60 ms)"
+     ],
+     "summary": {
+      "median_f0_hz": 135.4,
+      "mean_range_st": 16.6,
+      "wpm": [
+       166,
+       128
+      ],
+      "worst_cer": 0.0,
+      "mean_logprob": -0.37,
+      "centroid_hz": 1195,
+      "_mfcc": [
+       63.25600051879883,
+       -5.818999767303467,
+       19.325000762939453,
+       -6.146999835968018,
+       5.729000091552734,
+       2.684000015258789,
+       -3.6589999198913574,
+       -1.1360000371932983,
+       -1.99399995803833,
+       -2.2290000915527344,
+       0.04399999976158142,
+       5.571000099182129
+      ]
+     },
+     "lines": [
+      {
+       "line": "a4-27-18",
+       "say": "Chat.{0.28} I'm the CEO now.",
+       "asr": "Chat, I'm the CEO now.",
+       "cer": 0.0,
+       "logprob": -0.269,
+       "duration_s": 1.9,
+       "frames_24": 46,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -4.29,
+       "clipped_samples": 0,
+       "median_f0_hz": 136.2,
+       "f0_range_st": 16.8,
+       "final_slope_st_per_s": -18.3,
+       "final_move_st": -4.4,
+       "speech_span_s": 1.81,
+       "wpm": 166,
+       "speed": 1.0,
+       "file": "auditions/ttemme/c-echo-eric-headset-a4-27-18.mp3"
+      },
+      {
+       "line": "a4-27-19",
+       "say": "Chat...{0.55} for how long?",
+       "asr": "Chat for how long.",
+       "cer": 0.0,
+       "logprob": -0.471,
+       "duration_s": 1.96,
+       "frames_24": 48,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -3.32,
+       "clipped_samples": 0,
+       "median_f0_hz": 134.6,
+       "f0_range_st": 16.3,
+       "final_slope_st_per_s": 3.7,
+       "final_move_st": 1.4,
+       "speech_span_s": 1.88,
+       "wpm": 128,
+       "speed": 1.0,
+       "file": "auditions/ttemme/c-echo-eric-headset-a4-27-19.mp3"
+      }
+     ]
+    }
+   }
+  },
+  "adelina": {
+   "name": "ADELINA",
+   "brief": {
+    "function": "the adult in the other room: translates Mario's 40,000 words into three bullets and a revenue chart.",
+    "pitch": "a warm mezzo, median ~175-215 Hz, moderate range",
+    "pace": "brisk but unhurried, 150-165 wpm; the colon in 'In plain English:' is a real beat (~0.35 s)",
+    "texture": "warm, close and dry; a phone-call brightness is left to the mix",
+    "attitude": "brisk and warm; kind finality. No is a complete sentence",
+    "cadence": "set-up phrase level, beat, the verdict falls short and clean",
+    "avoid": "sibling or family framing (guardrail); coldness; sarcasm; any imitation"
+   },
+   "cands": {
+    "a-bella-warm": {
+     "voiceId": "af_bella",
+     "blend": {
+      "af_bella": 1
+     },
+     "speed": 0.95,
+     "grade": "A-",
+     "processing": [
+      "HPF 80 Hz",
+      "pitch -1 st",
+      "low shelf +1.5 dB @200 Hz",
+      "peak -1 dB @450 Hz Q1.0",
+      "peak +1 dB @2500 Hz Q0.9",
+      "high shelf -1 dB @8000 Hz",
+      "comp 2.5:1 @-22 dB (6/110 ms)"
+     ],
+     "summary": {
+      "median_f0_hz": 193.3,
+      "mean_range_st": 6.7,
+      "wpm": [
+       136,
+       157
+      ],
+      "worst_cer": 0.0,
+      "mean_logprob": -0.358,
+      "centroid_hz": 1117,
+      "_mfcc": [
+       61.73099899291992,
+       8.298999786376953,
+       19.25,
+       -9.54800033569336,
+       4.353000164031982,
+       -5.591000080108643,
+       2.0759999752044678,
+       -5.840000152587891,
+       -6.570000171661377,
+       -2.569000005722046,
+       -9.3100004196167,
+       0.33399999141693115
+      ]
+     },
+     "lines": [
+      {
+       "line": "a4-27-15",
+       "say": "In plain English:{0.35} no.",
+       "asr": "In plain English, no.",
+       "cer": 0.0,
+       "logprob": -0.501,
+       "duration_s": 1.86,
+       "frames_24": 45,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -1.72,
+       "clipped_samples": 0,
+       "median_f0_hz": 200.6,
+       "f0_range_st": 6.6,
+       "final_slope_st_per_s": -6.9,
+       "final_move_st": -2.3,
+       "speech_span_s": 1.76,
+       "wpm": 136,
+       "speed": 0.95,
+       "file": "auditions/adelina/a-bella-warm-a4-27-15.mp3"
+      },
+      {
+       "line": "x-ep4",
+       "say": "In plain English:{0.30} we raised money to warn about raising money.",
+       "asr": "in plain English. We raised money to warn about raising money.",
+       "cer": 0.0,
+       "logprob": -0.215,
+       "duration_s": 4.3,
+       "frames_24": 104,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -4.63,
+       "clipped_samples": 0,
+       "median_f0_hz": 186.1,
+       "f0_range_st": 6.7,
+       "final_slope_st_per_s": 1.6,
+       "final_move_st": 1.2,
+       "speech_span_s": 4.195,
+       "wpm": 157,
+       "speed": 0.845,
+       "file": "auditions/adelina/a-bella-warm-x-ep4.mp3"
+      }
+     ]
+    },
+    "b-aoede-warm": {
+     "voiceId": "af_aoede",
+     "blend": {
+      "af_aoede": 1
+     },
+     "speed": 0.95,
+     "grade": "C+",
+     "processing": [
+      "HPF 80 Hz",
+      "pitch 0",
+      "low shelf +1.5 dB @200 Hz",
+      "peak -1 dB @450 Hz Q1.0",
+      "peak +1 dB @2500 Hz Q0.9",
+      "high shelf -1 dB @8000 Hz",
+      "comp 2.5:1 @-22 dB (6/110 ms)"
+     ],
+     "summary": {
+      "median_f0_hz": 197.7,
+      "mean_range_st": 8.9,
+      "wpm": [
+       154,
+       165
+      ],
+      "worst_cer": 0.0,
+      "mean_logprob": -0.254,
+      "centroid_hz": 917,
+      "_mfcc": [
+       77.51599884033203,
+       0.2070000022649765,
+       16.363000869750977,
+       -4.627999782562256,
+       -4.021999835968018,
+       -6.007999897003174,
+       4.546999931335449,
+       -10.696000099182129,
+       0.9330000281333923,
+       -6.984000205993652,
+       -5.5370001792907715,
+       -1.0880000591278076
+      ]
+     },
+     "lines": [
+      {
+       "line": "a4-27-15",
+       "say": "In plain English:{0.35} no.",
+       "asr": "In plain English, no.",
+       "cer": 0.0,
+       "logprob": -0.35,
+       "duration_s": 1.65,
+       "frames_24": 40,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -2.92,
+       "clipped_samples": 0,
+       "median_f0_hz": 213.1,
+       "f0_range_st": 8.8,
+       "final_slope_st_per_s": -1.8,
+       "final_move_st": -2.4,
+       "speech_span_s": 1.56,
+       "wpm": 154,
+       "speed": 0.95,
+       "file": "auditions/adelina/b-aoede-warm-a4-27-15.mp3"
+      },
+      {
+       "line": "x-ep4",
+       "say": "In plain English:{0.30} we raised money to warn about raising money.",
+       "asr": "In plain English, we raised money to warn about raising money.",
+       "cer": 0.0,
+       "logprob": -0.157,
+       "duration_s": 4.12,
+       "frames_24": 99,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -1.69,
+       "clipped_samples": 0,
+       "median_f0_hz": 182.3,
+       "f0_range_st": 9.1,
+       "final_slope_st_per_s": 1.6,
+       "final_move_st": -1.0,
+       "speech_span_s": 4.0,
+       "wpm": 165,
+       "speed": 0.809,
+       "file": "auditions/adelina/b-aoede-warm-x-ep4.mp3"
+      }
+     ]
+    },
+    "c-nova-warm": {
+     "voiceId": "af_nova",
+     "blend": {
+      "af_nova": 1
+     },
+     "speed": 0.95,
+     "grade": "C",
+     "processing": [
+      "HPF 80 Hz",
+      "pitch +1.5 st",
+      "low shelf +1.5 dB @200 Hz",
+      "peak -1 dB @450 Hz Q1.0",
+      "peak +1 dB @2500 Hz Q0.9",
+      "high shelf -1 dB @8000 Hz",
+      "comp 2.5:1 @-22 dB (6/110 ms)"
+     ],
+     "summary": {
+      "median_f0_hz": 178.8,
+      "mean_range_st": 10.2,
+      "wpm": [
+       112,
+       163
+      ],
+      "worst_cer": 0.0,
+      "mean_logprob": -0.37,
+      "centroid_hz": 929,
+      "_mfcc": [
+       87.1729965209961,
+       -4.078000068664551,
+       14.027000427246094,
+       -15.24899959564209,
+       8.237000465393066,
+       -1.7480000257492065,
+       0.6510000228881836,
+       -3.5209999084472656,
+       -3.1410000324249268,
+       -6.443999767303467,
+       -2.8529999256134033,
+       -2.4679999351501465
+      ]
+     },
+     "lines": [
+      {
+       "line": "a4-27-15",
+       "say": "In plain English:{0.35} no.",
+       "asr": "In plain English, no.",
+       "cer": 0.0,
+       "logprob": -0.541,
+       "duration_s": 2.17,
+       "frames_24": 53,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -3.38,
+       "clipped_samples": 0,
+       "median_f0_hz": 183.9,
+       "f0_range_st": 11.4,
+       "final_slope_st_per_s": -10.7,
+       "final_move_st": -3.0,
+       "speech_span_s": 2.14,
+       "wpm": 112,
+       "speed": 0.95,
+       "file": "auditions/adelina/c-nova-warm-a4-27-15.mp3"
+      },
+      {
+       "line": "x-ep4",
+       "say": "In plain English:{0.30} we raised money to warn about raising money.",
+       "asr": "In plain English, we raised money to warn about raising money.",
+       "cer": 0.0,
+       "logprob": -0.199,
+       "duration_s": 4.18,
+       "frames_24": 101,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -4.06,
+       "clipped_samples": 0,
+       "median_f0_hz": 173.6,
+       "f0_range_st": 9.0,
+       "final_slope_st_per_s": 0.5,
+       "final_move_st": -0.3,
+       "speech_span_s": 4.06,
+       "wpm": 163,
+       "speed": 0.85,
+       "file": "auditions/adelina/c-nova-warm-x-ep4.mp3"
+      }
+     ]
+    }
+   }
+  },
+  "tiled-employee": {
+   "name": "TILED EMPLOYEE",
+   "brief": {
+    "function": "one hand up in the all-hands crowd; asks the question everyone is thinking.",
+    "pitch": "a plain mid female voice, ~150-200 Hz, so the question contrasts ALYI's low answer",
+    "pace": "natural, ~150-170 wpm",
+    "texture": "plain and clean; the crowd/room is a mix send",
+    "attitude": "earnest, direct, a little unsure; not comic-nervous",
+    "cadence": "a real question lift on 'coup'",
+    "avoid": "mockery of staff; any accent"
+   },
+   "cands": {
+    "a-nova-plain": {
+     "voiceId": "af_nova",
+     "blend": {
+      "af_nova": 1
+     },
+     "speed": 0.95,
+     "grade": "C",
+     "processing": [
+      "HPF 100 Hz",
+      "pitch 0",
+      "peak +1 dB @3000 Hz Q0.9",
+      "comp 2.0:1 @-22 dB (8/110 ms)"
+     ],
+     "summary": {
+      "median_f0_hz": 174.5,
+      "mean_range_st": 10.6,
+      "wpm": [
+       182,
+       226
+      ],
+      "worst_cer": 0.0,
+      "mean_logprob": -0.42,
+      "centroid_hz": 833,
+      "_mfcc": [
+       101.21800231933594,
+       -1.0829999446868896,
+       14.883999824523926,
+       -18.148000717163086,
+       4.584000110626221,
+       -1.2970000505447388,
+       -2.7339999675750732,
+       -1.3919999599456787,
+       -3.7720000743865967,
+       -2.6010000705718994,
+       -4.998000144958496,
+       -0.041999999433755875
+      ]
+     },
+     "lines": [
+      {
+       "line": "a4-27-05",
+       "say": "Is this a coup?",
+       "asr": "Is this a coup?",
+       "cer": 0.0,
+       "logprob": -0.459,
+       "duration_s": 1.54,
+       "frames_24": 37,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -2.93,
+       "clipped_samples": 0,
+       "median_f0_hz": 189.3,
+       "f0_range_st": 10.4,
+       "final_slope_st_per_s": -32.5,
+       "final_move_st": -14.3,
+       "speech_span_s": 1.32,
+       "wpm": 182,
+       "speed": 0.95,
+       "file": "auditions/tiled-employee/a-nova-plain-a4-27-05.mp3"
+      },
+      {
+       "line": "x-2",
+       "say": "Is this a coup, or is this a reorg?",
+       "asr": "Is this a coup, or is this a reorg?",
+       "cer": 0.0,
+       "logprob": -0.381,
+       "duration_s": 2.41,
+       "frames_24": 58,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -3.72,
+       "clipped_samples": 0,
+       "median_f0_hz": 159.7,
+       "f0_range_st": 10.7,
+       "final_slope_st_per_s": 2.7,
+       "final_move_st": 1.5,
+       "speech_span_s": 2.39,
+       "wpm": 226,
+       "speed": 0.95,
+       "file": "auditions/tiled-employee/a-nova-plain-x-2.mp3"
+      }
+     ]
+    },
+    "b-alloy-plain": {
+     "voiceId": "af_alloy",
+     "blend": {
+      "af_alloy": 1
+     },
+     "speed": 0.95,
+     "grade": "C",
+     "processing": [
+      "HPF 100 Hz",
+      "pitch +1.5 st",
+      "peak +1 dB @3000 Hz Q0.9",
+      "comp 2.0:1 @-22 dB (8/110 ms)"
+     ],
+     "summary": {
+      "median_f0_hz": 159.2,
+      "mean_range_st": 14.3,
+      "wpm": [
+       166,
+       200
+      ],
+      "worst_cer": 0.182,
+      "mean_logprob": -0.47,
+      "centroid_hz": 1032,
+      "_mfcc": [
+       70.23699951171875,
+       1.003000020980835,
+       17.957000732421875,
+       -5.366000175476074,
+       -1.4539999961853027,
+       -4.0269999504089355,
+       -2.2899999618530273,
+       -3.302000045776367,
+       0.8180000185966492,
+       -2.365000009536743,
+       0.6370000243186951,
+       -1.5460000038146973
+      ]
+     },
+     "lines": [
+      {
+       "line": "a4-27-05",
+       "say": "Is this a coup?",
+       "asr": "Is this a cool?",
+       "cer": 0.182,
+       "logprob": -0.483,
+       "duration_s": 1.68,
+       "frames_24": 41,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -3.96,
+       "clipped_samples": 0,
+       "median_f0_hz": 162.9,
+       "f0_range_st": 13.7,
+       "final_slope_st_per_s": -24.3,
+       "final_move_st": -4.0,
+       "speech_span_s": 1.45,
+       "wpm": 166,
+       "speed": 0.95,
+       "file": "auditions/tiled-employee/b-alloy-plain-a4-27-05.mp3"
+      },
+      {
+       "line": "x-2",
+       "say": "Is this a coup, or is this a reorg?",
+       "asr": "Is this a coup or is this a reorg?",
+       "cer": 0.0,
+       "logprob": -0.456,
+       "duration_s": 2.8,
+       "frames_24": 68,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -3.49,
+       "clipped_samples": 0,
+       "median_f0_hz": 155.6,
+       "f0_range_st": 15.0,
+       "final_slope_st_per_s": -18.7,
+       "final_move_st": -7.5,
+       "speech_span_s": 2.705,
+       "wpm": 200,
+       "speed": 0.95,
+       "file": "auditions/tiled-employee/b-alloy-plain-x-2.mp3"
+      }
+     ]
+    },
+    "c-river-plain": {
+     "voiceId": "af_river",
+     "blend": {
+      "af_river": 1
+     },
+     "speed": 0.95,
+     "grade": "D",
+     "processing": [
+      "HPF 100 Hz",
+      "pitch 0",
+      "peak +1 dB @3000 Hz Q0.9",
+      "comp 2.0:1 @-22 dB (8/110 ms)"
+     ],
+     "summary": {
+      "median_f0_hz": 185.4,
+      "mean_range_st": 7.2,
+      "wpm": [
+       196,
+       245
+      ],
+      "worst_cer": 0.0,
+      "mean_logprob": -0.347,
+      "centroid_hz": 1655,
+      "_mfcc": [
+       58.93600082397461,
+       -10.595000267028809,
+       11.644000053405762,
+       -16.090999603271484,
+       -3.819000005722046,
+       -9.569000244140625,
+       -8.878000259399414,
+       -1.093000054359436,
+       -11.751999855041504,
+       2.3589999675750732,
+       -14.003999710083008,
+       2.5980000495910645
+      ]
+     },
+     "lines": [
+      {
+       "line": "a4-27-05",
+       "say": "Is this a coup?",
+       "asr": "Is this a coup?",
+       "cer": 0.0,
+       "logprob": -0.437,
+       "duration_s": 1.33,
+       "frames_24": 32,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -3.88,
+       "clipped_samples": 0,
+       "median_f0_hz": 189.9,
+       "f0_range_st": 6.4,
+       "final_slope_st_per_s": -10.8,
+       "final_move_st": -1.8,
+       "speech_span_s": 1.225,
+       "wpm": 196,
+       "speed": 0.95,
+       "file": "auditions/tiled-employee/c-river-plain-a4-27-05.mp3"
+      },
+      {
+       "line": "x-2",
+       "say": "Is this a coup, or is this a reorg?",
+       "asr": "Is this a coup or is this a reorg?",
+       "cer": 0.0,
+       "logprob": -0.257,
+       "duration_s": 2.29,
+       "frames_24": 55,
+       "lufs_i": -16.0,
+       "true_peak_dbtp": -4.22,
+       "clipped_samples": 0,
+       "median_f0_hz": 180.8,
+       "f0_range_st": 8.0,
+       "final_slope_st_per_s": -20.0,
+       "final_move_st": -2.2,
+       "speech_span_s": 2.2,
+       "wpm": 245,
+       "speed": 0.95,
+       "file": "auditions/tiled-employee/c-river-plain-x-2.mp3"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "distinctness": {
+  "neleh:a-kore-precise": {
+   "rima-tamuri": {
+    "d_f0_st": 2.6,
+    "d_mfcc": 31.1,
+    "d_centroid_pct": 36
+   },
+   "alyi": {
+    "d_f0_st": 14.2,
+    "d_mfcc": 46.5,
+    "d_centroid_pct": 53
+   },
+   "mada:a-echo-grey": {
+    "d_f0_st": 8.8,
+    "d_mfcc": 19.5,
+    "d_centroid_pct": 6
+   },
+   "mada:b-adam-grey": {
+    "d_f0_st": 9.1,
+    "d_mfcc": 32.9,
+    "d_centroid_pct": 32
+   },
+   "mada:c-echo-eric-grey": {
+    "d_f0_st": 8.2,
+    "d_mfcc": 16.7,
+    "d_centroid_pct": 15
+   },
+   "ttemme:a-eric-headset": {
+    "d_f0_st": 4.9,
+    "d_mfcc": 34.2,
+    "d_centroid_pct": 36
+   },
+   "ttemme:b-santa-headset": {
+    "d_f0_st": 5.4,
+    "d_mfcc": 50.0,
+    "d_centroid_pct": 53
+   },
+   "ttemme:c-echo-eric-headset": {
+    "d_f0_st": 6.0,
+    "d_mfcc": 23.3,
+    "d_centroid_pct": 26
+   },
+   "tasya:a-fenrir-eric-warm": {
+    "d_f0_st": 4.2,
+    "d_mfcc": 22.9,
+    "d_centroid_pct": 38
+   },
+   "tasya:b-eric-warm": {
+    "d_f0_st": 4.9,
+    "d_mfcc": 28.0,
+    "d_centroid_pct": 25
+   },
+   "tasya:c-santa-fenrir-warm": {
+    "d_f0_st": 2.0,
+    "d_mfcc": 33.0,
+    "d_centroid_pct": 48
+   },
+   "tiled-employee:a-nova-plain": {
+    "d_f0_st": 1.6,
+    "d_mfcc": 30.7,
+    "d_centroid_pct": 7
+   },
+   "tiled-employee:b-alloy-plain": {
+    "d_f0_st": 3.2,
+    "d_mfcc": 16.1,
+    "d_centroid_pct": 14
+   },
+   "tiled-employee:c-river-plain": {
+    "d_f0_st": 0.6,
+    "d_mfcc": 31.2,
+    "d_centroid_pct": 46
+   }
+  },
+  "neleh:b-sarah-precise": {
+   "rima-tamuri": {
+    "d_f0_st": 2.8,
+    "d_mfcc": 24.2,
+    "d_centroid_pct": 23
+   },
+   "alyi": {
+    "d_f0_st": 14.0,
+    "d_mfcc": 76.1,
+    "d_centroid_pct": 191
+   },
+   "mada:a-echo-grey": {
+    "d_f0_st": 8.5,
+    "d_mfcc": 36.6,
+    "d_centroid_pct": 79
+   },
+   "mada:b-adam-grey": {
+    "d_f0_st": 8.9,
+    "d_mfcc": 24.4,
+    "d_centroid_pct": 30
+   },
+   "mada:c-echo-eric-grey": {
+    "d_f0_st": 8.0,
+    "d_mfcc": 28.8,
+    "d_centroid_pct": 62
+   },
+   "ttemme:a-eric-headset": {
+    "d_f0_st": 4.7,
+    "d_mfcc": 32.9,
+    "d_centroid_pct": 23
+   },
+   "ttemme:b-santa-headset": {
+    "d_f0_st": 5.1,
+    "d_mfcc": 22.9,
+    "d_centroid_pct": 11
+   },
+   "ttemme:c-echo-eric-headset": {
+    "d_f0_st": 5.8,
+    "d_mfcc": 29.3,
+    "d_centroid_pct": 42
+   },
+   "tasya:a-fenrir-eric-warm": {
+    "d_f0_st": 4.0,
+    "d_mfcc": 22.2,
+    "d_centroid_pct": 18
+   },
+   "tasya:b-eric-warm": {
+    "d_f0_st": 4.7,
+    "d_mfcc": 38.8,
+    "d_centroid_pct": 44
+   },
+   "tasya:c-santa-fenrir-warm": {
+    "d_f0_st": 1.8,
+    "d_mfcc": 15.6,
+    "d_centroid_pct": 1
+   },
+   "tiled-employee:a-nova-plain": {
+    "d_f0_st": 1.4,
+    "d_mfcc": 59.1,
+    "d_centroid_pct": 104
+   },
+   "tiled-employee:b-alloy-plain": {
+    "d_f0_st": 3.0,
+    "d_mfcc": 33.5,
+    "d_centroid_pct": 64
+   },
+   "tiled-employee:c-river-plain": {
+    "d_f0_st": 0.3,
+    "d_mfcc": 25.6,
+    "d_centroid_pct": 2
+   }
+  },
+  "neleh:c-aoede-precise": {
+   "rima-tamuri": {
+    "d_f0_st": 1.9,
+    "d_mfcc": 40.0,
+    "d_centroid_pct": 40
+   },
+   "alyi": {
+    "d_f0_st": 14.9,
+    "d_mfcc": 36.4,
+    "d_centroid_pct": 42
+   },
+   "mada:a-echo-grey": {
+    "d_f0_st": 9.5,
+    "d_mfcc": 31.1,
+    "d_centroid_pct": 13
+   },
+   "mada:b-adam-grey": {
+    "d_f0_st": 9.8,
+    "d_mfcc": 46.1,
+    "d_centroid_pct": 37
+   },
+   "mada:c-echo-eric-grey": {
+    "d_f0_st": 8.9,
+    "d_mfcc": 31.4,
+    "d_centroid_pct": 21
+   },
+   "ttemme:a-eric-headset": {
+    "d_f0_st": 5.6,
+    "d_mfcc": 47.5,
+    "d_centroid_pct": 40
+   },
+   "ttemme:b-santa-headset": {
+    "d_f0_st": 6.1,
+    "d_mfcc": 65.0,
+    "d_centroid_pct": 57
+   },
+   "ttemme:c-echo-eric-headset": {
+    "d_f0_st": 6.7,
+    "d_mfcc": 37.7,
+    "d_centroid_pct": 31
+   },
+   "tasya:a-fenrir-eric-warm": {
+    "d_f0_st": 4.9,
+    "d_mfcc": 41.4,
+    "d_centroid_pct": 43
+   },
+   "tasya:b-eric-warm": {
+    "d_f0_st": 5.6,
+    "d_mfcc": 41.1,
+    "d_centroid_pct": 30
+   },
+   "tasya:c-santa-fenrir-warm": {
+    "d_f0_st": 2.7,
+    "d_mfcc": 50.5,
+    "d_centroid_pct": 52
+   },
+   "tiled-employee:a-nova-plain": {
+    "d_f0_st": 2.3,
+    "d_mfcc": 22.5,
+    "d_centroid_pct": 1
+   },
+   "tiled-employee:b-alloy-plain": {
+    "d_f0_st": 3.9,
+    "d_mfcc": 27.7,
+    "d_centroid_pct": 20
+   },
+   "tiled-employee:c-river-plain": {
+    "d_f0_st": 1.3,
+    "d_mfcc": 41.1,
+    "d_centroid_pct": 50
+   }
+  },
+  "mada:a-echo-grey": {
+   "mas-manalt": {
+    "d_f0_st": 0.4,
+    "d_mfcc": 42.8,
+    "d_centroid_pct": 41
+   },
+   "neleh:a-kore-precise": {
+    "d_f0_st": 8.8,
+    "d_mfcc": 19.5,
+    "d_centroid_pct": 7
+   },
+   "neleh:b-sarah-precise": {
+    "d_f0_st": 8.5,
+    "d_mfcc": 36.6,
+    "d_centroid_pct": 44
+   },
+   "neleh:c-aoede-precise": {
+    "d_f0_st": 9.5,
+    "d_mfcc": 31.1,
+    "d_centroid_pct": 15
+   },
+   "terb:a-fenrir-brisk": {
+    "d_f0_st": 4.8,
+    "d_mfcc": 26.6,
+    "d_centroid_pct": 24
+   },
+   "terb:b-echo-brisk": {
+    "d_f0_st": 0.3,
+    "d_mfcc": 26.1,
+    "d_centroid_pct": 16
+   },
+   "terb:c-fenrir-onyx-brisk": {
+    "d_f0_st": 2.3,
+    "d_mfcc": 14.8,
+    "d_centroid_pct": 11
+   },
+   "alyi": {
+    "d_f0_st": 5.5,
+    "d_mfcc": 43.2,
+    "d_centroid_pct": 63
+   },
+   "tasya:a-fenrir-eric-warm": {
+    "d_f0_st": 4.6,
+    "d_mfcc": 24.5,
+    "d_centroid_pct": 34
+   },
+   "tasya:b-eric-warm": {
+    "d_f0_st": 3.8,
+    "d_mfcc": 27.1,
+    "d_centroid_pct": 20
+   },
+   "tasya:c-santa-fenrir-warm": {
+    "d_f0_st": 6.7,
+    "d_mfcc": 32.0,
+    "d_centroid_pct": 45
+   },
+   "ttemme:a-eric-headset": {
+    "d_f0_st": 3.8,
+    "d_mfcc": 34.2,
+    "d_centroid_pct": 31
+   },
+   "ttemme:b-santa-headset": {
+    "d_f0_st": 3.4,
+    "d_mfcc": 47.9,
+    "d_centroid_pct": 50
+   },
+   "ttemme:c-echo-eric-headset": {
+    "d_f0_st": 2.8,
+    "d_mfcc": 21.4,
+    "d_centroid_pct": 21
+   }
+  },
+  "mada:b-adam-grey": {
+   "mas-manalt": {
+    "d_f0_st": 0.0,
+    "d_mfcc": 30.0,
+    "d_centroid_pct": 19
+   },
+   "neleh:a-kore-precise": {
+    "d_f0_st": 9.1,
+    "d_mfcc": 32.9,
+    "d_centroid_pct": 47
+   },
+   "neleh:b-sarah-precise": {
+    "d_f0_st": 8.9,
+    "d_mfcc": 24.4,
+    "d_centroid_pct": 23
+   },
+   "neleh:c-aoede-precise": {
+    "d_f0_st": 9.8,
+    "d_mfcc": 46.1,
+    "d_centroid_pct": 59
+   },
+   "terb:a-fenrir-brisk": {
+    "d_f0_st": 5.1,
+    "d_mfcc": 27.6,
+    "d_centroid_pct": 4
+   },
+   "terb:b-echo-brisk": {
+    "d_f0_st": 0.1,
+    "d_mfcc": 59.8,
+    "d_centroid_pct": 60
+   },
+   "terb:c-fenrir-onyx-brisk": {
+    "d_f0_st": 2.6,
+    "d_mfcc": 38.9,
+    "d_centroid_pct": 23
+   },
+   "alyi": {
+    "d_f0_st": 5.1,
+    "d_mfcc": 67.9,
+    "d_centroid_pct": 125
+   },
+   "tasya:a-fenrir-eric-warm": {
+    "d_f0_st": 4.9,
+    "d_mfcc": 18.7,
+    "d_centroid_pct": 9
+   },
+   "tasya:b-eric-warm": {
+    "d_f0_st": 4.2,
+    "d_mfcc": 32.0,
+    "d_centroid_pct": 11
+   },
+   "tasya:c-santa-fenrir-warm": {
+    "d_f0_st": 7.1,
+    "d_mfcc": 23.1,
+    "d_centroid_pct": 24
+   },
+   "ttemme:a-eric-headset": {
+    "d_f0_st": 4.2,
+    "d_mfcc": 24.5,
+    "d_centroid_pct": 5
+   },
+   "ttemme:b-santa-headset": {
+    "d_f0_st": 3.7,
+    "d_mfcc": 30.7,
+    "d_centroid_pct": 31
+   },
+   "ttemme:c-echo-eric-headset": {
+    "d_f0_st": 3.1,
+    "d_mfcc": 21.7,
+    "d_centroid_pct": 9
+   }
+  },
+  "mada:c-echo-eric-grey": {
+   "mas-manalt": {
+    "d_f0_st": 1.0,
+    "d_mfcc": 34.9,
+    "d_centroid_pct": 35
+   },
+   "neleh:a-kore-precise": {
+    "d_f0_st": 8.2,
+    "d_mfcc": 16.7,
+    "d_centroid_pct": 18
+   },
+   "neleh:b-sarah-precise": {
+    "d_f0_st": 8.0,
+    "d_mfcc": 28.8,
+    "d_centroid_pct": 38
+   },
+   "neleh:c-aoede-precise": {
+    "d_f0_st": 8.9,
+    "d_mfcc": 31.4,
+    "d_centroid_pct": 27
+   },
+   "terb:a-fenrir-brisk": {
+    "d_f0_st": 4.2,
+    "d_mfcc": 22.4,
+    "d_centroid_pct": 17
+   },
+   "terb:b-echo-brisk": {
+    "d_f0_st": 0.8,
+    "d_mfcc": 34.0,
+    "d_centroid_pct": 28
+   },
+   "terb:c-fenrir-onyx-brisk": {
+    "d_f0_st": 1.7,
+    "d_mfcc": 21.1,
+    "d_centroid_pct": 1
+   },
+   "alyi": {
+    "d_f0_st": 6.1,
+    "d_mfcc": 49.6,
+    "d_centroid_pct": 80
+   },
+   "tasya:a-fenrir-eric-warm": {
+    "d_f0_st": 4.0,
+    "d_mfcc": 15.9,
+    "d_centroid_pct": 27
+   },
+   "tasya:b-eric-warm": {
+    "d_f0_st": 3.3,
+    "d_mfcc": 23.0,
+    "d_centroid_pct": 11
+   },
+   "tasya:c-santa-fenrir-warm": {
+    "d_f0_st": 6.2,
+    "d_mfcc": 25.2,
+    "d_centroid_pct": 39
+   },
+   "ttemme:a-eric-headset": {
+    "d_f0_st": 3.2,
+    "d_mfcc": 26.6,
+    "d_centroid_pct": 24
+   },
+   "ttemme:b-santa-headset": {
+    "d_f0_st": 2.8,
+    "d_mfcc": 40.5,
+    "d_centroid_pct": 45
+   },
+   "ttemme:c-echo-eric-headset": {
+    "d_f0_st": 2.2,
+    "d_mfcc": 13.8,
+    "d_centroid_pct": 12
+   }
+  },
+  "terb:a-fenrir-brisk": {
+   "mas-manalt": {
+    "d_f0_st": 5.1,
+    "d_mfcc": 33.9,
+    "d_centroid_pct": 22
+   },
+   "mada:a-echo-grey": {
+    "d_f0_st": 4.8,
+    "d_mfcc": 26.6,
+    "d_centroid_pct": 32
+   },
+   "mada:b-adam-grey": {
+    "d_f0_st": 5.1,
+    "d_mfcc": 27.6,
+    "d_centroid_pct": 4
+   },
+   "mada:c-echo-eric-grey": {
+    "d_f0_st": 4.2,
+    "d_mfcc": 22.4,
+    "d_centroid_pct": 20
+   },
+   "gerg-mockbran": {
+    "d_f0_st": 1.7,
+    "d_mfcc": 30.2,
+    "d_centroid_pct": 11
+   }
+  },
+  "terb:b-echo-brisk": {
+   "mas-manalt": {
+    "d_f0_st": 0.1,
+    "d_mfcc": 63.3,
+    "d_centroid_pct": 49
+   },
+   "mada:a-echo-grey": {
+    "d_f0_st": 0.3,
+    "d_mfcc": 26.1,
+    "d_centroid_pct": 14
+   },
+   "mada:b-adam-grey": {
+    "d_f0_st": 0.1,
+    "d_mfcc": 59.8,
+    "d_centroid_pct": 38
+   },
+   "mada:c-echo-eric-grey": {
+    "d_f0_st": 0.8,
+    "d_mfcc": 34.0,
+    "d_centroid_pct": 22
+   },
+   "gerg-mockbran": {
+    "d_f0_st": 3.3,
+    "d_mfcc": 46.4,
+    "d_centroid_pct": 42
+   }
+  },
+  "terb:c-fenrir-onyx-brisk": {
+   "mas-manalt": {
+    "d_f0_st": 2.7,
+    "d_mfcc": 50.7,
+    "d_centroid_pct": 34
+   },
+   "mada:a-echo-grey": {
+    "d_f0_st": 2.3,
+    "d_mfcc": 14.8,
+    "d_centroid_pct": 12
+   },
+   "mada:b-adam-grey": {
+    "d_f0_st": 2.6,
+    "d_mfcc": 38.9,
+    "d_centroid_pct": 19
+   },
+   "mada:c-echo-eric-grey": {
+    "d_f0_st": 1.7,
+    "d_mfcc": 21.1,
+    "d_centroid_pct": 1
+   },
+   "gerg-mockbran": {
+    "d_f0_st": 0.7,
+    "d_mfcc": 33.2,
+    "d_centroid_pct": 25
+   }
+  },
+  "tasya:a-fenrir-eric-warm": {
+   "mas-manalt": {
+    "d_f0_st": 5.0,
+    "d_mfcc": 26.6,
+    "d_centroid_pct": 10
+   },
+   "gerg-mockbran": {
+    "d_f0_st": 1.6,
+    "d_mfcc": 15.7,
+    "d_centroid_pct": 2
+   },
+   "alyi": {
+    "d_f0_st": 10.1,
+    "d_mfcc": 60.1,
+    "d_centroid_pct": 148
+   },
+   "ttemme:a-eric-headset": {
+    "d_f0_st": 0.8,
+    "d_mfcc": 17.2,
+    "d_centroid_pct": 4
+   },
+   "ttemme:b-santa-headset": {
+    "d_f0_st": 1.2,
+    "d_mfcc": 33.0,
+    "d_centroid_pct": 24
+   },
+   "ttemme:c-echo-eric-headset": {
+    "d_f0_st": 1.8,
+    "d_mfcc": 10.5,
+    "d_centroid_pct": 21
+   },
+   "mada:a-echo-grey": {
+    "d_f0_st": 4.6,
+    "d_mfcc": 24.5,
+    "d_centroid_pct": 52
+   },
+   "mada:b-adam-grey": {
+    "d_f0_st": 4.9,
+    "d_mfcc": 18.7,
+    "d_centroid_pct": 10
+   },
+   "mada:c-echo-eric-grey": {
+    "d_f0_st": 4.0,
+    "d_mfcc": 15.9,
+    "d_centroid_pct": 38
+   },
+   "neleh:a-kore-precise": {
+    "d_f0_st": 4.2,
+    "d_mfcc": 22.9,
+    "d_centroid_pct": 62
+   },
+   "neleh:b-sarah-precise": {
+    "d_f0_st": 4.0,
+    "d_mfcc": 22.2,
+    "d_centroid_pct": 15
+   },
+   "neleh:c-aoede-precise": {
+    "d_f0_st": 4.9,
+    "d_mfcc": 41.4,
+    "d_centroid_pct": 75
+   }
+  },
+  "tasya:b-eric-warm": {
+   "mas-manalt": {
+    "d_f0_st": 4.2,
+    "d_mfcc": 38.0,
+    "d_centroid_pct": 27
+   },
+   "gerg-mockbran": {
+    "d_f0_st": 0.8,
+    "d_mfcc": 22.5,
+    "d_centroid_pct": 17
+   },
+   "alyi": {
+    "d_f0_st": 9.3,
+    "d_mfcc": 51.3,
+    "d_centroid_pct": 103
+   },
+   "ttemme:a-eric-headset": {
+    "d_f0_st": 0.0,
+    "d_mfcc": 15.1,
+    "d_centroid_pct": 14
+   },
+   "ttemme:b-santa-headset": {
+    "d_f0_st": 0.4,
+    "d_mfcc": 46.7,
+    "d_centroid_pct": 38
+   },
+   "ttemme:c-echo-eric-headset": {
+    "d_f0_st": 1.1,
+    "d_mfcc": 17.4,
+    "d_centroid_pct": 1
+   },
+   "mada:a-echo-grey": {
+    "d_f0_st": 3.8,
+    "d_mfcc": 27.1,
+    "d_centroid_pct": 24
+   },
+   "mada:b-adam-grey": {
+    "d_f0_st": 4.2,
+    "d_mfcc": 32.0,
+    "d_centroid_pct": 10
+   },
+   "mada:c-echo-eric-grey": {
+    "d_f0_st": 3.3,
+    "d_mfcc": 23.0,
+    "d_centroid_pct": 13
+   },
+   "neleh:a-kore-precise": {
+    "d_f0_st": 4.9,
+    "d_mfcc": 28.0,
+    "d_centroid_pct": 33
+   },
+   "neleh:b-sarah-precise": {
+    "d_f0_st": 4.7,
+    "d_mfcc": 38.8,
+    "d_centroid_pct": 30
+   },
+   "neleh:c-aoede-precise": {
+    "d_f0_st": 5.6,
+    "d_mfcc": 41.1,
+    "d_centroid_pct": 43
+   }
+  },
+  "tasya:c-santa-fenrir-warm": {
+   "mas-manalt": {
+    "d_f0_st": 7.1,
+    "d_mfcc": 24.0,
+    "d_centroid_pct": 7
+   },
+   "gerg-mockbran": {
+    "d_f0_st": 3.7,
+    "d_mfcc": 24.4,
+    "d_centroid_pct": 21
+   },
+   "alyi": {
+    "d_f0_st": 12.2,
+    "d_mfcc": 69.9,
+    "d_centroid_pct": 195
+   },
+   "ttemme:a-eric-headset": {
+    "d_f0_st": 2.9,
+    "d_mfcc": 31.9,
+    "d_centroid_pct": 24
+   },
+   "ttemme:b-santa-headset": {
+    "d_f0_st": 3.3,
+    "d_mfcc": 19.5,
+    "d_centroid_pct": 10
+   },
+   "ttemme:c-echo-eric-headset": {
+    "d_f0_st": 4.0,
+    "d_mfcc": 26.6,
+    "d_centroid_pct": 43
+   },
+   "mada:a-echo-grey": {
+    "d_f0_st": 6.7,
+    "d_mfcc": 32.0,
+    "d_centroid_pct": 81
+   },
+   "mada:b-adam-grey": {
+    "d_f0_st": 7.1,
+    "d_mfcc": 23.1,
+    "d_centroid_pct": 31
+   },
+   "mada:c-echo-eric-grey": {
+    "d_f0_st": 6.2,
+    "d_mfcc": 25.2,
+    "d_centroid_pct": 64
+   },
+   "neleh:a-kore-precise": {
+    "d_f0_st": 2.0,
+    "d_mfcc": 33.0,
+    "d_centroid_pct": 93
+   },
+   "neleh:b-sarah-precise": {
+    "d_f0_st": 1.8,
+    "d_mfcc": 15.6,
+    "d_centroid_pct": 1
+   },
+   "neleh:c-aoede-precise": {
+    "d_f0_st": 2.7,
+    "d_mfcc": 50.5,
+    "d_centroid_pct": 108
+   }
+  },
+  "ttemme:a-eric-headset": {
+   "tasya:a-fenrir-eric-warm": {
+    "d_f0_st": 0.8,
+    "d_mfcc": 17.2,
+    "d_centroid_pct": 4
+   },
+   "tasya:b-eric-warm": {
+    "d_f0_st": 0.0,
+    "d_mfcc": 15.1,
+    "d_centroid_pct": 17
+   },
+   "tasya:c-santa-fenrir-warm": {
+    "d_f0_st": 2.9,
+    "d_mfcc": 31.9,
+    "d_centroid_pct": 19
+   },
+   "mada:a-echo-grey": {
+    "d_f0_st": 3.8,
+    "d_mfcc": 34.2,
+    "d_centroid_pct": 45
+   },
+   "mada:b-adam-grey": {
+    "d_f0_st": 4.2,
+    "d_mfcc": 24.5,
+    "d_centroid_pct": 6
+   },
+   "mada:c-echo-eric-grey": {
+    "d_f0_st": 3.2,
+    "d_mfcc": 26.6,
+    "d_centroid_pct": 32
+   },
+   "neleh:a-kore-precise": {
+    "d_f0_st": 4.9,
+    "d_mfcc": 34.2,
+    "d_centroid_pct": 55
+   },
+   "neleh:b-sarah-precise": {
+    "d_f0_st": 4.7,
+    "d_mfcc": 32.9,
+    "d_centroid_pct": 19
+   },
+   "neleh:c-aoede-precise": {
+    "d_f0_st": 5.6,
+    "d_mfcc": 47.5,
+    "d_centroid_pct": 67
+   },
+   "gerg-mockbran": {
+    "d_f0_st": 0.8,
+    "d_mfcc": 23.4,
+    "d_centroid_pct": 3
+   }
+  },
+  "ttemme:b-santa-headset": {
+   "tasya:a-fenrir-eric-warm": {
+    "d_f0_st": 1.2,
+    "d_mfcc": 33.0,
+    "d_centroid_pct": 32
+   },
+   "tasya:b-eric-warm": {
+    "d_f0_st": 0.4,
+    "d_mfcc": 46.7,
+    "d_centroid_pct": 61
+   },
+   "tasya:c-santa-fenrir-warm": {
+    "d_f0_st": 3.3,
+    "d_mfcc": 19.5,
+    "d_centroid_pct": 11
+   },
+   "mada:a-echo-grey": {
+    "d_f0_st": 3.4,
+    "d_mfcc": 47.9,
+    "d_centroid_pct": 101
+   },
+   "mada:b-adam-grey": {
+    "d_f0_st": 3.7,
+    "d_mfcc": 30.7,
+    "d_centroid_pct": 46
+   },
+   "mada:c-echo-eric-grey": {
+    "d_f0_st": 2.8,
+    "d_mfcc": 40.5,
+    "d_centroid_pct": 82
+   },
+   "neleh:a-kore-precise": {
+    "d_f0_st": 5.4,
+    "d_mfcc": 50.0,
+    "d_centroid_pct": 114
+   },
+   "neleh:b-sarah-precise": {
+    "d_f0_st": 5.1,
+    "d_mfcc": 22.9,
+    "d_centroid_pct": 12
+   },
+   "neleh:c-aoede-precise": {
+    "d_f0_st": 6.1,
+    "d_mfcc": 65.0,
+    "d_centroid_pct": 131
+   },
+   "gerg-mockbran": {
+    "d_f0_st": 0.4,
+    "d_mfcc": 37.0,
+    "d_centroid_pct": 35
+   }
+  },
+  "ttemme:c-echo-eric-headset": {
+   "tasya:a-fenrir-eric-warm": {
+    "d_f0_st": 1.8,
+    "d_mfcc": 10.5,
+    "d_centroid_pct": 17
+   },
+   "tasya:b-eric-warm": {
+    "d_f0_st": 1.1,
+    "d_mfcc": 17.4,
+    "d_centroid_pct": 1
+   },
+   "tasya:c-santa-fenrir-warm": {
+    "d_f0_st": 4.0,
+    "d_mfcc": 26.6,
+    "d_centroid_pct": 30
+   },
+   "mada:a-echo-grey": {
+    "d_f0_st": 2.8,
+    "d_mfcc": 21.4,
+    "d_centroid_pct": 26
+   },
+   "mada:b-adam-grey": {
+    "d_f0_st": 3.1,
+    "d_mfcc": 21.7,
+    "d_centroid_pct": 9
+   },
+   "mada:c-echo-eric-grey": {
+    "d_f0_st": 2.2,
+    "d_mfcc": 13.8,
+    "d_centroid_pct": 14
+   },
+   "neleh:a-kore-precise": {
+    "d_f0_st": 6.0,
+    "d_mfcc": 23.3,
+    "d_centroid_pct": 34
+   },
+   "neleh:b-sarah-precise": {
+    "d_f0_st": 5.8,
+    "d_mfcc": 29.3,
+    "d_centroid_pct": 30
+   },
+   "neleh:c-aoede-precise": {
+    "d_f0_st": 6.7,
+    "d_mfcc": 37.7,
+    "d_centroid_pct": 45
+   },
+   "gerg-mockbran": {
+    "d_f0_st": 0.3,
+    "d_mfcc": 18.3,
+    "d_centroid_pct": 16
+   }
+  },
+  "adelina:a-bella-warm": {
+   "mario": {
+    "d_f0_st": 6.8,
+    "d_mfcc": 30.5,
+    "d_centroid_pct": 23
+   },
+   "rima-tamuri": {
+    "d_f0_st": 2.5,
+    "d_mfcc": 23.0,
+    "d_centroid_pct": 19
+   },
+   "neleh:a-kore-precise": {
+    "d_f0_st": 0.2,
+    "d_mfcc": 20.6,
+    "d_centroid_pct": 26
+   },
+   "neleh:b-sarah-precise": {
+    "d_f0_st": 0.4,
+    "d_mfcc": 32.3,
+    "d_centroid_pct": 34
+   },
+   "neleh:c-aoede-precise": {
+    "d_f0_st": 0.5,
+    "d_mfcc": 31.8,
+    "d_centroid_pct": 36
+   }
+  },
+  "adelina:b-aoede-warm": {
+   "mario": {
+    "d_f0_st": 7.2,
+    "d_mfcc": 27.7,
+    "d_centroid_pct": 37
+   },
+   "rima-tamuri": {
+    "d_f0_st": 2.1,
+    "d_mfcc": 30.2,
+    "d_centroid_pct": 34
+   },
+   "neleh:a-kore-precise": {
+    "d_f0_st": 0.6,
+    "d_mfcc": 21.8,
+    "d_centroid_pct": 3
+   },
+   "neleh:b-sarah-precise": {
+    "d_f0_st": 0.8,
+    "d_mfcc": 44.0,
+    "d_centroid_pct": 46
+   },
+   "neleh:c-aoede-precise": {
+    "d_f0_st": 0.1,
+    "d_mfcc": 19.1,
+    "d_centroid_pct": 11
+   }
+  },
+  "adelina:c-nova-warm": {
+   "mario": {
+    "d_f0_st": 5.4,
+    "d_mfcc": 38.4,
+    "d_centroid_pct": 36
+   },
+   "rima-tamuri": {
+    "d_f0_st": 3.8,
+    "d_mfcc": 36.0,
+    "d_centroid_pct": 33
+   },
+   "neleh:a-kore-precise": {
+    "d_f0_st": 1.2,
+    "d_mfcc": 23.3,
+    "d_centroid_pct": 4
+   },
+   "neleh:b-sarah-precise": {
+    "d_f0_st": 1.0,
+    "d_mfcc": 48.3,
+    "d_centroid_pct": 45
+   },
+   "neleh:c-aoede-precise": {
+    "d_f0_st": 1.9,
+    "d_mfcc": 20.1,
+    "d_centroid_pct": 13
+   }
+  },
+  "tiled-employee:a-nova-plain": {
+   "alyi": {
+    "d_f0_st": 12.6,
+    "d_mfcc": 30.2,
+    "d_centroid_pct": 43
+   },
+   "rima-tamuri": {
+    "d_f0_st": 4.2,
+    "d_mfcc": 49.5,
+    "d_centroid_pct": 40
+   },
+   "neleh:a-kore-precise": {
+    "d_f0_st": 1.6,
+    "d_mfcc": 30.7,
+    "d_centroid_pct": 6
+   },
+   "neleh:b-sarah-precise": {
+    "d_f0_st": 1.4,
+    "d_mfcc": 59.1,
+    "d_centroid_pct": 51
+   },
+   "neleh:c-aoede-precise": {
+    "d_f0_st": 2.3,
+    "d_mfcc": 22.5,
+    "d_centroid_pct": 1
+   }
+  },
+  "tiled-employee:b-alloy-plain": {
+   "alyi": {
+    "d_f0_st": 11.0,
+    "d_mfcc": 47.0,
+    "d_centroid_pct": 77
+   },
+   "rima-tamuri": {
+    "d_f0_st": 5.8,
+    "d_mfcc": 25.0,
+    "d_centroid_pct": 25
+   },
+   "neleh:a-kore-precise": {
+    "d_f0_st": 3.2,
+    "d_mfcc": 16.1,
+    "d_centroid_pct": 16
+   },
+   "neleh:b-sarah-precise": {
+    "d_f0_st": 3.0,
+    "d_mfcc": 33.5,
+    "d_centroid_pct": 39
+   },
+   "neleh:c-aoede-precise": {
+    "d_f0_st": 3.9,
+    "d_mfcc": 27.7,
+    "d_centroid_pct": 25
+   }
+  },
+  "tiled-employee:c-river-plain": {
+   "alyi": {
+    "d_f0_st": 13.7,
+    "d_mfcc": 67.5,
+    "d_centroid_pct": 184
+   },
+   "rima-tamuri": {
+    "d_f0_st": 3.2,
+    "d_mfcc": 18.1,
+    "d_centroid_pct": 20
+   },
+   "neleh:a-kore-precise": {
+    "d_f0_st": 0.6,
+    "d_mfcc": 31.2,
+    "d_centroid_pct": 86
+   },
+   "neleh:b-sarah-precise": {
+    "d_f0_st": 0.3,
+    "d_mfcc": 25.6,
+    "d_centroid_pct": 2
+   },
+   "neleh:c-aoede-precise": {
+    "d_f0_st": 1.3,
+    "d_mfcc": 41.1,
+    "d_centroid_pct": 101
+   }
+  }
+ },
+ "round2": {
+  "cands": {
+   "d-fenrir-headset": {
+    "voiceId": "am_fenrir",
+    "grade": "C+",
+    "processing": [
+     "HPF 150 Hz",
+     "pitch 0",
+     "peak -2 dB @300 Hz Q1.0",
+     "peak +2.5 dB @2800 Hz Q0.9",
+     "high shelf -1 dB @9000 Hz",
+     "comp 3.5:1 @-20 dB (3/60 ms)"
+    ],
+    "summary": {
+     "median_f0_hz": 113.8,
+     "mean_range_st": 16.6,
+     "wpm": [
+      186,
+      155
+     ],
+     "worst_cer": 0.0,
+     "mean_logprob": -0.369,
+     "centroid_hz": 1709,
+     "_mfcc": [
+      40.29100036621094,
+      -5.353000164031982,
+      16.64299964904785,
+      -0.4009999930858612,
+      -4.367000102996826,
+      1.781000018119812,
+      -8.3149995803833,
+      0.2150000035762787,
+      -2.364000082015991,
+      -5.364999771118164,
+      0.8199999928474426,
+      -1.4450000524520874
+     ]
+    },
+    "lines": [
+     {
+      "line": "a4-27-18",
+      "say": "Chat.{0.28} I'm the CEO now.",
+      "asr": "Chat, I'm the CEO now.",
+      "cer": 0.0,
+      "logprob": -0.311,
+      "duration_s": 1.7,
+      "frames_24": 41,
+      "lufs_i": -16.0,
+      "true_peak_dbtp": -3.57,
+      "clipped_samples": 0,
+      "median_f0_hz": 122.1,
+      "f0_range_st": 22.3,
+      "final_slope_st_per_s": -31.0,
+      "final_move_st": -5.9,
+      "speech_span_s": 1.61,
+      "wpm": 186,
+      "speed": 0.85,
+      "file": "auditions/ttemme/d-fenrir-headset-a4-27-18.mp3"
+     },
+     {
+      "line": "a4-27-19",
+      "say": "Chat...{0.55} for how long?",
+      "asr": "Chat? For how long?",
+      "cer": 0.0,
+      "logprob": -0.427,
+      "duration_s": 1.64,
+      "frames_24": 40,
+      "lufs_i": -16.0,
+      "true_peak_dbtp": -3.06,
+      "clipped_samples": 0,
+      "median_f0_hz": 105.6,
+      "f0_range_st": 10.9,
+      "final_slope_st_per_s": 11.4,
+      "final_move_st": 1.3,
+      "speech_span_s": 1.55,
+      "wpm": 155,
+      "speed": 1.0,
+      "file": "auditions/ttemme/d-fenrir-headset-a4-27-19.mp3"
+     }
+    ]
+   },
+   "e-liam-headset": {
+    "voiceId": "am_liam",
+    "grade": "D",
+    "processing": [
+     "HPF 150 Hz",
+     "pitch +1.5 st",
+     "peak -2 dB @300 Hz Q1.0",
+     "peak +2.5 dB @2800 Hz Q0.9",
+     "high shelf -1 dB @9000 Hz",
+     "comp 3.5:1 @-20 dB (3/60 ms)"
+    ],
+    "summary": {
+     "median_f0_hz": 116.2,
+     "mean_range_st": 10.8,
+     "wpm": [
+      164,
+      146
+     ],
+     "worst_cer": 0.0,
+     "mean_logprob": -0.357,
+     "centroid_hz": 1712,
+     "_mfcc": [
+      44.992000579833984,
+      -4.923999786376953,
+      12.350000381469727,
+      0.37400001287460327,
+      -0.47099998593330383,
+      4.578000068664551,
+      -5.791999816894531,
+      -2.8510000705718994,
+      8.107000350952148,
+      -10.159000396728516,
+      4.984000205993652,
+      -3.6480000019073486
+     ]
+    },
+    "lines": [
+     {
+      "line": "a4-27-18",
+      "say": "Chat.{0.28} I'm the CEO now.",
+      "asr": "Chat, I'm the CEO now.",
+      "cer": 0.0,
+      "logprob": -0.252,
+      "duration_s": 1.92,
+      "frames_24": 47,
+      "lufs_i": -16.0,
+      "true_peak_dbtp": -4.2,
+      "clipped_samples": 0,
+      "median_f0_hz": 124.9,
+      "f0_range_st": 13.4,
+      "final_slope_st_per_s": -18.6,
+      "final_move_st": -4.1,
+      "speech_span_s": 1.83,
+      "wpm": 164,
+      "speed": 1.0,
+      "file": "auditions/ttemme/e-liam-headset-a4-27-18.mp3"
+     },
+     {
+      "line": "a4-27-19",
+      "say": "Chat...{0.55} for how long?",
+      "asr": "chat for how long.",
+      "cer": 0.0,
+      "logprob": -0.462,
+      "duration_s": 1.73,
+      "frames_24": 42,
+      "lufs_i": -16.0,
+      "true_peak_dbtp": -2.93,
+      "clipped_samples": 0,
+      "median_f0_hz": 107.5,
+      "f0_range_st": 8.2,
+      "final_slope_st_per_s": 3.9,
+      "final_move_st": 0.4,
+      "speech_span_s": 1.64,
+      "wpm": 146,
+      "speed": 1.2,
+      "file": "auditions/ttemme/e-liam-headset-a4-27-19.mp3"
+     }
+    ]
+   }
+  },
+  "placed": {
+   "neleh": {
+    "cand": "c-aoede-precise",
+    "summary": {
+     "median_f0_hz": 184.6,
+     "mean_range_st": 8.2,
+     "wpm": [
+      167,
+      160,
+      190
+     ],
+     "worst_cer": 0.103,
+     "mean_logprob": -0.494,
+     "centroid_hz": 811,
+     "_mfcc": [
+      90.302001953125,
+      8.836000442504883,
+      9.612000465393066,
+      -4.7170000076293945,
+      -0.6069999933242798,
+      -6.491000175476074,
+      1.8270000219345093,
+      -1.8370000123977661,
+      -5.2729997634887695,
+      1.5140000581741333,
+      -13.135000228881836,
+      -0.3269999921321869
+     ]
+    },
+    "lines": [
+     {
+      "line": "a4-25-01",
+      "say": "Step four.",
+      "asr": "Step 4.",
+      "cer": 0.0,
+      "logprob": -0.575,
+      "duration_s": 0.83,
+      "frames_24": 20,
+      "lufs_i": -16.0,
+      "true_peak_dbtp": -2.31,
+      "clipped_samples": 0,
+      "median_f0_hz": 195.4,
+      "f0_range_st": 9.5,
+      "final_slope_st_per_s": -14.2,
+      "final_move_st": -1.6,
+      "speech_span_s": 0.73,
+      "wpm": null,
+      "speed": 0.95,
+      "file": "auditions/neleh/c-aoede-precise-placed-a4-25-01.mp3"
+     },
+     {
+      "line": "a4-27-03",
+      "say": "For how long?",
+      "asr": "For how long?",
+      "cer": 0.0,
+      "logprob": -0.467,
+      "duration_s": 1.2,
+      "frames_24": 29,
+      "lufs_i": -16.0,
+      "true_peak_dbtp": -5.23,
+      "clipped_samples": 0,
+      "median_f0_hz": 161.5,
+      "f0_range_st": 8.2,
+      "final_slope_st_per_s": 0.2,
+      "final_move_st": 0.1,
+      "speech_span_s": 1.08,
+      "wpm": 167,
+      "speed": 0.76,
+      "file": "auditions/neleh/c-aoede-precise-placed-a4-27-03.mp3"
+     },
+     {
+      "line": "a4-27-08",
+      "say": "The bylaws allow it.{0.40} Footnote three.",
+      "asr": "The bylaws allow it for footnote 3.",
+      "cer": 0.103,
+      "logprob": -0.425,
+      "duration_s": 2.35,
+      "frames_24": 57,
+      "lufs_i": -16.0,
+      "true_peak_dbtp": -1.92,
+      "clipped_samples": 0,
+      "median_f0_hz": 172.6,
+      "f0_range_st": 9.7,
+      "final_slope_st_per_s": -7.4,
+      "final_move_st": -3.6,
+      "speech_span_s": 2.25,
+      "wpm": 160,
+      "speed": 0.95,
+      "file": "auditions/neleh/c-aoede-precise-placed-a4-27-08.mp3"
+     },
+     {
+      "line": "a4-27-10",
+      "say": "When?",
+      "asr": "When",
+      "cer": 0.0,
+      "logprob": -0.644,
+      "duration_s": 0.6,
+      "frames_24": 15,
+      "lufs_i": -16.0,
+      "true_peak_dbtp": -5.51,
+      "clipped_samples": 0,
+      "median_f0_hz": 210.1,
+      "f0_range_st": 2.9,
+      "final_slope_st_per_s": -15.4,
+      "final_move_st": -1.6,
+      "speech_span_s": 0.51,
+      "wpm": null,
+      "speed": 0.95,
+      "file": "auditions/neleh/c-aoede-precise-placed-a4-27-10.mp3"
+     },
+     {
+      "line": "a4-27-12",
+      "say": "The company is calling us.",
+      "asr": "The company is calling us.",
+      "cer": 0.0,
+      "logprob": -0.267,
+      "duration_s": 1.68,
+      "frames_24": 41,
+      "lufs_i": -16.0,
+      "true_peak_dbtp": -2.57,
+      "clipped_samples": 0,
+      "median_f0_hz": 176.7,
+      "f0_range_st": 9.5,
+      "final_slope_st_per_s": -4.9,
+      "final_move_st": -1.2,
+      "speech_span_s": 1.575,
+      "wpm": 190,
+      "speed": 0.807,
+      "file": "auditions/neleh/c-aoede-precise-placed-a4-27-12.mp3"
+     },
+     {
+      "line": "a4-27-21",
+      "say": "Step four?",
+      "asr": "Step 4.",
+      "cer": 0.0,
+      "logprob": -0.583,
+      "duration_s": 0.84,
+      "frames_24": 21,
+      "lufs_i": -16.0,
+      "true_peak_dbtp": -2.53,
+      "clipped_samples": 0,
+      "median_f0_hz": 192.6,
+      "f0_range_st": 9.3,
+      "final_slope_st_per_s": -11.3,
+      "final_move_st": -1.3,
+      "speech_span_s": 0.74,
+      "wpm": null,
+      "speed": 0.95,
+      "file": "auditions/neleh/c-aoede-precise-placed-a4-27-21.mp3"
+     }
+    ]
+   },
+   "mada": {
+    "cand": "b-adam-grey",
+    "summary": {
+     "median_f0_hz": 118.2,
+     "mean_range_st": 8.6,
+     "wpm": [],
+     "worst_cer": 0.0,
+     "mean_logprob": -0.452,
+     "centroid_hz": 1356,
+     "_mfcc": [
+      45.14099884033203,
+      -4.019000053405762,
+      12.743000030517578,
+      -2.680999994277954,
+      -0.7279999852180481,
+      -7.090000152587891,
+      -3.2860000133514404,
+      -4.84499979019165,
+      -1.996999979019165,
+      -2.561000108718872,
+      0.2070000022649765,
+      -2.0290000438690186
+     ]
+    },
+    "lines": [
+     {
+      "line": "a4-25-02",
+      "say": "Good question.",
+      "asr": "Good question.",
+      "cer": 0.0,
+      "logprob": -0.452,
+      "duration_s": 1.05,
+      "frames_24": 26,
+      "lufs_i": -16.0,
+      "true_peak_dbtp": -2.13,
+      "clipped_samples": 0,
+      "median_f0_hz": 118.2,
+      "f0_range_st": 8.6,
+      "final_slope_st_per_s": -17.5,
+      "final_move_st": -1.8,
+      "speech_span_s": 0.93,
+      "wpm": null,
+      "speed": 0.9,
+      "file": "auditions/mada/b-adam-grey-placed-a4-25-02.mp3"
+     },
+     {
+      "line": "x-seed2",
+      "say": "Good question.",
+      "asr": "Good question.",
+      "cer": 0.0,
+      "logprob": -0.452,
+      "duration_s": 1.05,
+      "frames_24": 26,
+      "lufs_i": -16.0,
+      "true_peak_dbtp": -2.13,
+      "clipped_samples": 0,
+      "median_f0_hz": 118.2,
+      "f0_range_st": 8.6,
+      "final_slope_st_per_s": -17.5,
+      "final_move_st": -1.8,
+      "speech_span_s": 0.93,
+      "wpm": null,
+      "speed": 0.9,
+      "file": "auditions/mada/b-adam-grey-placed-x-seed2.mp3"
+     }
+    ]
+   }
+  },
+  "distinctness": {
+   "d-fenrir-headset": {
+    "tasya": {
+     "d_f0_st": 4.1,
+     "d_mfcc": 36.5,
+     "d_centroid_pct": 45
+    },
+    "mada": {
+     "d_f0_st": 0.7,
+     "d_mfcc": 14.0,
+     "d_centroid_pct": 26
+    },
+    "neleh": {
+     "d_f0_st": 8.4,
+     "d_mfcc": 56.7,
+     "d_centroid_pct": 111
+    },
+    "gerg-mockbran": {
+     "d_f0_st": 3.3,
+     "d_mfcc": 27.1,
+     "d_centroid_pct": 21
+    },
+    "mario": {
+     "d_f0_st": 2.4,
+     "d_mfcc": 25.0,
+     "d_centroid_pct": 18
+    }
+   },
+   "e-liam-headset": {
+    "tasya": {
+     "d_f0_st": 3.7,
+     "d_mfcc": 37.2,
+     "d_centroid_pct": 45
+    },
+    "mada": {
+     "d_f0_st": 0.3,
+     "d_mfcc": 18.5,
+     "d_centroid_pct": 26
+    },
+    "neleh": {
+     "d_f0_st": 8.0,
+     "d_mfcc": 55.8,
+     "d_centroid_pct": 111
+    },
+    "gerg-mockbran": {
+     "d_f0_st": 2.9,
+     "d_mfcc": 32.1,
+     "d_centroid_pct": 21
+    },
+    "mario": {
+     "d_f0_st": 2.0,
+     "d_mfcc": 17.2,
+     "d_centroid_pct": 18
+    }
+   },
+   "neleh-placed": {
+    "rima-tamuri": {
+     "d_f0_st": 3.3,
+     "d_mfcc": 42.1,
+     "d_centroid_pct": 41
+    },
+    "alyi": {
+     "d_f0_st": 13.6,
+     "d_mfcc": 36.5,
+     "d_centroid_pct": 39
+    },
+    "tasya": {
+     "d_f0_st": 4.3,
+     "d_mfcc": 39.3,
+     "d_centroid_pct": 31
+    },
+    "tiled-employee": {
+     "d_f0_st": 1.0,
+     "d_mfcc": 24.2,
+     "d_centroid_pct": 3
+    },
+    "adelina": {
+     "d_f0_st": 0.8,
+     "d_mfcc": 31.7,
+     "d_centroid_pct": 27
+    }
+   },
+   "mada-placed": {
+    "mas-manalt": {
+     "d_f0_st": 0.8,
+     "d_mfcc": 27.3,
+     "d_centroid_pct": 16
+    },
+    "terb": {
+     "d_f0_st": 0.7,
+     "d_mfcc": 62.5,
+     "d_centroid_pct": 66
+    },
+    "tasya": {
+     "d_f0_st": 3.4,
+     "d_mfcc": 35.5,
+     "d_centroid_pct": 15
+    },
+    "neleh": {
+     "d_f0_st": 7.7,
+     "d_mfcc": 49.6,
+     "d_centroid_pct": 67
+    },
+    "alyi": {
+     "d_f0_st": 5.9,
+     "d_mfcc": 72.1,
+     "d_centroid_pct": 133
+    }
+   }
+  }
+ }
+}
