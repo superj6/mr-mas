@@ -5,6 +5,7 @@
 #
 #   bash studio/src/dev/reel/render_all.sh                 # every epNN.json
 #   bash studio/src/dev/reel/render_all.sh ep03 ep07       # just these (also: 3, ep03.json, reel-ep03, _sample)
+#   bash studio/src/dev/reel/render_all.sh ep01-full ep01-full-part1   # the full-length pilot (stitched) / one part
 #
 # env:  CONC=4 (render concurrency)   NO_SEASON=1   NO_SHEETS=1   REEL_AUDIO_DIR=… (default audio/reel)   REEL_OUT=… (default out/reel)
 # audio bed lookup per episode, first match wins (wav/mp3/m4a/aac/flac/ogg/opus):
@@ -33,7 +34,9 @@ if [ $# -gt 0 ]; then
     k=${a%.json}; k=${k#reel-}
     [[ $k =~ ^[0-9]+$ ]] && k=$(printf 'ep%02d' "$((10#$k))")
     [ "$k" = sample ] && k=_sample
-    [ -f "src/reel/data/$k.json" ] || { echo "no show/reel/$k.json"; exit 1; }
+    # ep01-full has no file of its own: it is stitched from ep01-full-part1/-part2 (+ ep01-full-act4 if present)
+    if [ "$k" = ep01-full ]; then [ -f src/reel/data/ep01-full-part1.json ] && [ -f src/reel/data/ep01-full-part2.json ] || { echo "ep01-full needs show/reel/ep01-full-part1.json and -part2.json"; exit 1; }
+    else [ -f "src/reel/data/$k.json" ] || { echo "no show/reel/$k.json"; exit 1; }; fi
     keys+=("$k")
   done
 else

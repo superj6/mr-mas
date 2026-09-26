@@ -1,4 +1,7 @@
-"""make_doc.py - write show/episodes/ep01/production/act4/dialogue.md (draft 3.1) from the delivered data
+"""SUPERSEDED for draft 3.2 by make_doc_32.py (2026-09-25): running this would overwrite the 3.2 deliverables with the 3.1 pass.
+Kept because the 3.2 tools import from it.
+
+make_doc.py - write show/episodes/ep01/production/act4/dialogue.md (draft 3.1) from the delivered data
 (lines.json, qa/final_cast.json, auditions/auditions.json, qa/qa.json, reel_cues.json, lines_a4.RETIRED).
 Every number in the doc comes from those files; the prose sections are fixed text below."""
 import json

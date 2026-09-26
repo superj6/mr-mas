@@ -1,0 +1,836 @@
+[
+ {
+  "id": "24.01",
+  "tag": "[W]",
+  "st": "rooms-a suite (drawSuite: truck, shiver) + cast desk sprite + orb-medium at room scale",
+  "standin": false
+ },
+ {
+  "id": "24.02",
+  "tag": "[ECU]",
+  "st": "inserts-mas drawNudgeInsert (suite): set → NUDGE → out1 → out2 → gone",
+  "standin": false
+ },
+ {
+  "id": "24.03",
+  "tag": "[PF]",
+  "st": "[PF] suitePortraitBg / the suite held + stepped down, Mas portrait; beat 2 BLUEPRINT_PRINT (kits)",
+  "standin": false
+ },
+ {
+  "id": "25.01",
+  "tag": "[GFX]",
+  "st": "kits blueprint (THE PLAN on its real clock: episodes/ep01/act4/kits/plan.ts, copied)",
+  "standin": false
+ },
+ {
+  "id": "25.02",
+  "tag": "[GFX]",
+  "st": "kits blueprint (THE PLAN on its real clock: episodes/ep01/act4/kits/plan.ts, copied)",
+  "standin": false
+ },
+ {
+  "id": "25.03",
+  "tag": "[GFX]",
+  "st": "kits blueprint (THE PLAN on its real clock: episodes/ep01/act4/kits/plan.ts, copied)",
+  "standin": false
+ },
+ {
+  "id": "25.04",
+  "tag": "[GFX]",
+  "st": "kits blueprint (THE PLAN on its real clock: episodes/ep01/act4/kits/plan.ts, copied)",
+  "standin": false
+ },
+ {
+  "id": "25.05",
+  "tag": "[GFX]",
+  "st": "kits blueprint (THE PLAN on its real clock: episodes/ep01/act4/kits/plan.ts, copied)",
+  "standin": false
+ },
+ {
+  "id": "25.06",
+  "tag": "[GFX]",
+  "st": "kits blueprint (THE PLAN on its real clock: episodes/ep01/act4/kits/plan.ts, copied)",
+  "standin": false
+ },
+ {
+  "id": "25.07",
+  "tag": "[GFX]",
+  "st": "kits blueprint (THE PLAN on its real clock: episodes/ep01/act4/kits/plan.ts, copied)",
+  "standin": false
+ },
+ {
+  "id": "25.08",
+  "tag": "[ECU]",
+  "st": "inserts-mas drawClickInsert: BOARD · VIDEO CALL · JOIN, the click on beat 3",
+  "standin": false
+ },
+ {
+  "id": "26.01",
+  "tag": "[POV]",
+  "st": "kits callgrid (G5, votes already flipped, the 1-bar Wi-Fi egg)",
+  "standin": false
+ },
+ {
+  "id": "26.02",
+  "tag": "CARD",
+  "st": "callgrid + engine nameCard (kit.cards NEW: stand-in stat line), 2-tone freeze beat 1 (Mas in colour)",
+  "standin": true
+ },
+ {
+  "id": "26.02a",
+  "tag": "[PF]",
+  "st": "[PF] the suite held + stepped down to neon + laptop glow, Mas portrait (eye darts on the beat)",
+  "standin": false
+ },
+ {
+  "id": "26.03",
+  "tag": "[POV]",
+  "st": "callgrid: Alyi speaks, no sound; the typed … stops",
+  "standin": false
+ },
+ {
+  "id": "26.04",
+  "tag": "[POV]",
+  "st": "callgrid + callDialog (the 1993 dialog in colour, Cancel live)",
+  "standin": false
+ },
+ {
+  "id": "26.04a",
+  "tag": "[ECU]",
+  "st": "mas-cu drawEyesStrip (letterboxed): pos 0 → −1 on beat 3",
+  "standin": false
+ },
+ {
+  "id": "26.04b",
+  "tag": "[POV]",
+  "st": "callgrid + dialog + the unlit arrow, one held position per beat",
+  "standin": false
+ },
+ {
+  "id": "26.04c",
+  "tag": "[POV]",
+  "st": "callgrid + dialog; the arrow settles on Cancel (the click is 26.05 f0)",
+  "standin": false
+ },
+ {
+  "id": "26.05",
+  "tag": "[POV]",
+  "st": "callgrid: Cancel clicked; the tile drops (4 drawings) inside the GLYPH dissolve (tokens approximated); G5 → G4",
+  "standin": false
+ },
+ {
+  "id": "26.05a",
+  "tag": "[CU]",
+  "st": "mas-cu drawMasCU (strip): ONE silent drawing; RAIL +1 FIRING on beat 3",
+  "standin": false
+ },
+ {
+  "id": "26.06",
+  "tag": "[ECU]",
+  "st": "inserts-mas drawStripTapInsert (rooms-a desk insert, the lit mic chip; strip = post-ui stand-in): the tap AT ONCE at f90",
+  "standin": true
+ },
+ {
+  "id": "26.07",
+  "tag": "[P]",
+  "st": "[P] the suite held + Mas portrait (lip-sync from a4-26-01)",
+  "standin": false
+ },
+ {
+  "id": "26.08",
+  "tag": "[POV]",
+  "st": "callgrid G4 frozen (his feed froze: the whole grid holds)",
+  "standin": false
+ },
+ {
+  "id": "26.09",
+  "tag": "[W]",
+  "st": "rooms-a suite wide (the truck again, every glass shivers but his)",
+  "standin": false
+ },
+ {
+  "id": "26.10",
+  "tag": "[GFX]",
+  "st": "kit.cards NEW: stand-in dated quote card",
+  "standin": true
+ },
+ {
+  "id": "26.11",
+  "tag": "[POV]",
+  "st": "callgrid G4 + the greyed plate falling; render front BASE → EARLYWEB16 from f6 (engine)",
+  "standin": false
+ },
+ {
+  "id": "26.12",
+  "tag": "[W]",
+  "st": "rooms-a drawTpoolDoor under EARLYWEB16 (F1.2; the rail stays BASE)",
+  "standin": false
+ },
+ {
+  "id": "26.13",
+  "tag": "[ECU]",
+  "st": "rooms-a drawTpoolClose (EW16) → render front → rooms-b drawDarkDesk grain (BASE)",
+  "standin": false
+ },
+ {
+  "id": "26A.01",
+  "tag": "[ECU]",
+  "st": "inserts-mas drawCarveInsert (bar 1, quarters on the beat) → drawBrushInsert (bar 2: thumb on mark 3 only)",
+  "standin": false
+ },
+ {
+  "id": "26A.02",
+  "tag": "[2S]",
+  "st": "twoshots drawDark2S + orbTally: the Orb counts 1, 2, 3, his thumb",
+  "standin": false
+ },
+ {
+  "id": "26A.03",
+  "tag": "[POV]",
+  "st": "kit.post-ui NEW: stand-in phone composer; the post lands at f7, stamped 9:32 PM PT",
+  "standin": true
+ },
+ {
+  "id": "26A.04",
+  "tag": "[ECU]",
+  "st": "BOX: prop.wallet NEW (the Senate wallet: HEALTH INSURANCE, a moth) on rooms-b drawDarkDesk",
+  "standin": true
+ },
+ {
+  "id": "26A.05",
+  "tag": "[PF]",
+  "st": "[PF] rooms-b dark room held + stepped down, Mas portrait (the V.O. band on shadow)",
+  "standin": false
+ },
+ {
+  "id": "26A.06",
+  "tag": "[P]",
+  "st": "[P] the dark room held + THE ORB right (cast.orb.portrait NEW: orb-medium at portrait scale); toast rewinding…",
+  "standin": true
+ },
+ {
+  "id": "27.01",
+  "tag": "[SCR]",
+  "st": "callgrid G4 in the [SCR] bezel; the dialogue box types super. with NO portrait (the left window stays empty)",
+  "standin": false
+ },
+ {
+  "id": "27.01a",
+  "tag": "[SCR]",
+  "st": "callgrid [SCR] + callToast; Gerg's post (kit.post-ui NEW: stand-in), green-lit",
+  "standin": true
+ },
+ {
+  "id": "27.02",
+  "tag": "[SCR]",
+  "st": "callgrid [SCR] + callToast; keycaps rain (a stand-in popcorn on the gerg keycap drawing's timing)",
+  "standin": true
+ },
+ {
+  "id": "27.03",
+  "tag": "[P]",
+  "st": "[P] the board grid held + RIMA right (rima-speak: the spotlight snaps on, the jacket smooth)",
+  "standin": false
+ },
+ {
+  "id": "27.04",
+  "tag": "CARD",
+  "st": "engine nameCard over her window (kit.cards NEW stat line); 2-tone freeze beat 1",
+  "standin": true
+ },
+ {
+  "id": "27.05",
+  "tag": "[P]",
+  "st": "[P] the grid held + RIMA right, lip-sync from the recording",
+  "standin": false
+ },
+ {
+  "id": "27.05a",
+  "tag": "[P]",
+  "st": "[P] the grid held + NELEH right (brow query; 27.05c listening)",
+  "standin": false
+ },
+ {
+  "id": "27.05b",
+  "tag": "[P]",
+  "st": "[P] the grid held + RIMA right, lip-sync from the recording",
+  "standin": false
+ },
+ {
+  "id": "27.05c",
+  "tag": "[P]",
+  "st": "[P] the grid held + NELEH right (brow query; 27.05c listening)",
+  "standin": false
+ },
+ {
+  "id": "27.06",
+  "tag": "[W]",
+  "st": "rooms-b bullpen all-hands (door open, hand up) + alyi-speak drawAlyiStand clipped to the doorway",
+  "standin": false
+ },
+ {
+  "id": "27.07",
+  "tag": "[P]",
+  "st": "[P] the all-hands held + ALYI right, the door jamb over his window",
+  "standin": false
+ },
+ {
+  "id": "27.07a",
+  "tag": "[W]",
+  "st": "rooms-b bullpen all-hands (door open, hand up) + alyi-speak drawAlyiStand clipped to the doorway",
+  "standin": false
+ },
+ {
+  "id": "27.08",
+  "tag": "[P]",
+  "st": "[P] ALYI steps back out of his own window (whole-px steps), the window holds empty, then closes",
+  "standin": false
+ },
+ {
+  "id": "27.09",
+  "tag": "[SCR]",
+  "st": "avalanche planPile / drawPile on the board's grid (G5 with Rima), [SCR] bezel",
+  "standin": false
+ },
+ {
+  "id": "27.10",
+  "tag": "[SCR]",
+  "st": "avalanche: the blue heart rides Mada's spinner; Mas's post as a notification (callgrid postChip)",
+  "standin": false
+ },
+ {
+  "id": "27.11",
+  "tag": "[2S]",
+  "st": "twoshots drawBoard2S (boardroom-plate, neleh-medium, mada-medium, ALYI in the glass, the QV laptop); phones buzz beat 3",
+  "standin": false
+ },
+ {
+  "id": "27.12",
+  "tag": "[P]",
+  "st": "[P] the boardroom (rooms-a) held + NELEH right, lip-sync",
+  "standin": false
+ },
+ {
+  "id": "27.12a",
+  "tag": "[P]",
+  "st": "[P] the boardroom held + ALYI right (the reflection window, alyi-speak drawAlyiWindow)",
+  "standin": false
+ },
+ {
+  "id": "27.12b",
+  "tag": "[P]",
+  "st": "[P] the boardroom (rooms-a) held + NELEH right, lip-sync",
+  "standin": false
+ },
+ {
+  "id": "27.12c",
+  "tag": "[P]",
+  "st": "[P] the boardroom held + ALYI right (the reflection window, alyi-speak drawAlyiWindow)",
+  "standin": false
+ },
+ {
+  "id": "27.12d",
+  "tag": "[P]",
+  "st": "[P] the boardroom (rooms-a) held + NELEH right, lip-sync",
+  "standin": false
+ },
+ {
+  "id": "27.13",
+  "tag": "[2S]",
+  "st": "twoshots drawBoard2S: the phones walk to the edge, one held step a beat",
+  "standin": false
+ },
+ {
+  "id": "27.14",
+  "tag": "[P]",
+  "st": "[P] the boardroom (rooms-a) held + NELEH right, lip-sync",
+  "standin": false
+ },
+ {
+  "id": "27.14a",
+  "tag": "[P]",
+  "st": "[P] the boardroom held + ALYI right (the reflection window, alyi-speak drawAlyiWindow)",
+  "standin": false
+ },
+ {
+  "id": "27.14b",
+  "tag": "[2S]",
+  "st": "twoshots drawBoard2S: ALYI's reflection gone for 2 frames",
+  "standin": false
+ },
+ {
+  "id": "27.15",
+  "tag": "[PF]",
+  "st": "[PF] the boardroom held + stepped down, NELEH right looking down at the blank line",
+  "standin": false
+ },
+ {
+  "id": "27.16",
+  "tag": "[ECU]",
+  "st": "rooms-a drawTableInsert (blueprint, step 4 blank) + the ? (stand-in strokes) · BOX: NELEH's marker hand NEW",
+  "standin": true
+ },
+ {
+  "id": "27.17",
+  "tag": "[W]",
+  "st": "rooms-a boardroom wide: the speakerphone dials four tones (neleh room sprite, mada seated, ALYI in the glass)",
+  "standin": false
+ },
+ {
+  "id": "27.18",
+  "tag": "[ECU]",
+  "st": "BOX plate NEW (lighthouse desk insert) + adelina.ts drawThroneHandset lg (throne on), ringing",
+  "standin": true
+ },
+ {
+  "id": "27.19",
+  "tag": "[P]",
+  "st": "[P] rooms-b lighthouse held + MARIO right (mario portrait, marioMouth), the finger rises",
+  "standin": false
+ },
+ {
+  "id": "27.20",
+  "tag": "[P2]",
+  "st": "[P2] the lighthouse held: MARIO left (silent; the phone leaves), ADELINA right (phone to her ear)",
+  "standin": false
+ },
+ {
+  "id": "27.21",
+  "tag": "CARD",
+  "st": "engine nameCard (kit.cards NEW stat line) over the live lighthouse; 2-tone freeze beat 1",
+  "standin": true
+ },
+ {
+  "id": "27.22",
+  "tag": "[P2]",
+  "st": "[P2] MARIO left + ADELINA right into the phone, lip-sync",
+  "standin": false
+ },
+ {
+  "id": "27.23",
+  "tag": "[ECU]",
+  "st": "BOX plate NEW + drawThroneHandset (throne off) + lighthouse throneImg falling (3 drawings)",
+  "standin": true
+ },
+ {
+  "id": "27.24",
+  "tag": "[P]",
+  "st": "[P] the lighthouse held (meters 2: the rent meters) + MARIO right on the second phone",
+  "standin": false
+ },
+ {
+  "id": "27.26",
+  "tag": "[SCR]",
+  "st": "rooms-a drawLobbyCam [SCR] + mas-stand walk (GUEST) + the post upside-down (post-ui NEW stand-in)",
+  "standin": true
+ },
+ {
+  "id": "27.27",
+  "tag": "[W]",
+  "st": "rooms-a boardroom wide (sticky CEO (TEMP), the spot swings in 3 held positions) + ttemme room sprite + neleh + mada",
+  "standin": false
+ },
+ {
+  "id": "27.28",
+  "tag": "CARD",
+  "st": "engine nameCard over the live room (kit.cards NEW stat line); 2-tone freeze beat 1",
+  "standin": true
+ },
+ {
+  "id": "27.29",
+  "tag": "[P]",
+  "st": "[P] the boardroom held + TTEMME right (ttemme portrait: the chat overlay egg)",
+  "standin": false
+ },
+ {
+  "id": "27.30",
+  "tag": "[ECU]",
+  "st": "rooms-a drawTableInsert (prop) + kits props hourglass L: the flip (3 drawn states, a hop), sand one grain a beat",
+  "standin": false
+ },
+ {
+  "id": "27.31",
+  "tag": "[P]",
+  "st": "[P] the boardroom held + TTEMME right (ttemme portrait: the chat overlay egg)",
+  "standin": false
+ },
+ {
+  "id": "27.32",
+  "tag": "[2S]",
+  "st": "twoshots drawBoard2S: the wall steps to slate, the door appears (1 → 5, a beat each) + tasya room sprite",
+  "standin": false
+ },
+ {
+  "id": "27.33",
+  "tag": "[P]",
+  "st": "[P] the slate boardroom held + TASYA right reading his post aloud (post-ui NEW stand-in pop-up)",
+  "standin": true
+ },
+ {
+  "id": "27.35",
+  "tag": "[2S]",
+  "st": "twoshots drawBoard2S: step 4 blank but for her ? (blueprint 3); 27.36 lip-sync on the medium rigs",
+  "standin": false
+ },
+ {
+  "id": "27.36",
+  "tag": "[2S]",
+  "st": "twoshots drawBoard2S: step 4 blank but for her ? (blueprint 3); 27.36 lip-sync on the medium rigs",
+  "standin": false
+ },
+ {
+  "id": "28.01",
+  "tag": "[GFX]",
+  "st": "kit.cards NEW: stand-in act-out card",
+  "standin": true
+ },
+ {
+  "id": "29.00",
+  "tag": "[ECU]",
+  "st": "rooms-b drawDarkDesk: the home shot, the glass, its water line flat",
+  "standin": false
+ },
+ {
+  "id": "29.01",
+  "tag": "[2S]",
+  "st": "twoshots drawDark2S: the lanyard laid square, his hand on the phone, the grid in the monitor corner",
+  "standin": false
+ },
+ {
+  "id": "29.01a",
+  "tag": "[ECU]",
+  "st": "inserts-mas drawPhone29Timeline: MAS'S VERSION (face-down, six fingers, every layer held; no rim)",
+  "standin": false
+ },
+ {
+  "id": "29.03",
+  "tag": "[ECU]",
+  "st": "inserts-mas drawPhone29Timeline: the true shot, 8 hearts on the beat (feed = post-ui stand-in, Rima's post legible)",
+  "standin": true
+ },
+ {
+  "id": "29.04",
+  "tag": "[2S]",
+  "st": "twoshots drawDark2S + orbToLanyard: the iris steps onto the GUEST lanyard on beat 3",
+  "standin": false
+ },
+ {
+  "id": "29.10",
+  "tag": "[P]",
+  "st": "[P] the dark room held + THE ORB right on the lanyard (orb portrait NEW: orb-medium stand-in)",
+  "standin": true
+ },
+ {
+  "id": "29.10a",
+  "tag": "[2S]",
+  "st": "twoshots drawDark2S: \"mostly.\" aloud, to the Orb (head front), lip-sync",
+  "standin": false
+ },
+ {
+  "id": "29.05",
+  "tag": "[POV]",
+  "st": "avalanche odometer + odoRoll (THE LETTER counter: 505 · 650 · 700 · 745 / 770, the clunk)",
+  "standin": false
+ },
+ {
+  "id": "29.06",
+  "tag": "[GFX]",
+  "st": "kit.cards NEW: stand-in dated quote card",
+  "standin": true
+ },
+ {
+  "id": "29.07",
+  "tag": "[POV]",
+  "st": "post-ui NEW: stand-in signature list (generic, unidentifiable rows), stops 2 beats on ALYI (REPORTED)",
+  "standin": true
+ },
+ {
+  "id": "29.07a",
+  "tag": "[P]",
+  "st": "[P] the dark room held + THE ORB right (orb portrait NEW: orb-medium stand-in): iris to the name, to Alyi's thumbnail, back (chime)",
+  "standin": true
+ },
+ {
+  "id": "29.08",
+  "tag": "[2S]",
+  "st": "twoshots drawDark2S tray 1 → 4 (the plate's own EVIRHT check + VOID stamp, a stand-in for prop.check-evirht)",
+  "standin": true
+ },
+ {
+  "id": "29.11",
+  "tag": "[POV]",
+  "st": "gerg-medium drawGergMediumPOV (the medium tile opens in 3 held steps), lip-sync",
+  "standin": false
+ },
+ {
+  "id": "29.11a",
+  "tag": "[P]",
+  "st": "[P] the dark room held + MAS left, lip-sync",
+  "standin": false
+ },
+ {
+  "id": "29.11b",
+  "tag": "[POV]",
+  "st": "gerg-medium drawGergMediumPOV (the medium tile opens in 3 held steps), lip-sync",
+  "standin": false
+ },
+ {
+  "id": "29.12q",
+  "tag": "[PF]",
+  "st": "[PF] the QUIET BEAT: the dark room falls away to the monitor's green + his cyan; Mas watches Gerg type",
+  "standin": false
+ },
+ {
+  "id": "29.11c",
+  "tag": "[POV]",
+  "st": "gerg-medium drawGergMediumPOV head up (the glance into his camera: his real face)",
+  "standin": false
+ },
+ {
+  "id": "29.12r",
+  "tag": "[PF]",
+  "st": "[PF] Mas looking back; Gerg typing again on the monitor behind his window",
+  "standin": false
+ },
+ {
+  "id": "29.12",
+  "tag": "[2S]",
+  "st": "twoshots drawDark2S: the slate door's held steps from \"asked\" (plate door 1 → 3 → 4); TASYA (O.S.)",
+  "standin": false
+ },
+ {
+  "id": "29.13",
+  "tag": "[P]",
+  "st": "[P] the dark room held (the blue door, key in the lock) + MAS left: leave it open.",
+  "standin": false
+ },
+ {
+  "id": "29.14",
+  "tag": "[POV]",
+  "st": "avalanche planGridStack / drawGridStack on the board grid (monitor full-bleed; layout re-fit to the 203-row room area)",
+  "standin": false
+ },
+ {
+  "id": "29.15",
+  "tag": "[POV]",
+  "st": "avalanche planGridStack / drawGridStack on the board grid (monitor full-bleed; layout re-fit to the 203-row room area)",
+  "standin": false
+ },
+ {
+  "id": "29.16",
+  "tag": "[POV]",
+  "st": "avalanche planGridStack / drawGridStack on the board grid (monitor full-bleed; layout re-fit to the 203-row room area)",
+  "standin": false
+ },
+ {
+  "id": "29.17",
+  "tag": "[POV]",
+  "st": "avalanche planGridStack / drawGridStack on the board grid (monitor full-bleed; layout re-fit to the 203-row room area)",
+  "standin": false
+ },
+ {
+  "id": "29.17a",
+  "tag": "[PF]",
+  "st": "[PF] the dark room held, stepped down to the wall of faces; Mas watching the one gap",
+  "standin": false
+ },
+ {
+  "id": "29.18",
+  "tag": "[POV]",
+  "st": "avalanche: Mada wedged in the gap; bar 2 beat 4 the frame holds HALF-FRAME on his tile (mada drawMadaTile)",
+  "standin": false
+ },
+ {
+  "id": "29.19",
+  "tag": "CARD",
+  "st": "engine nameCard over the live tile wall (kit.cards NEW stat line); 2-tone freeze beat 1",
+  "standin": true
+ },
+ {
+  "id": "29.20",
+  "tag": "[POV]",
+  "st": "avalanche planGridStack / drawGridStack on the board grid (monitor full-bleed; layout re-fit to the 203-row room area)",
+  "standin": false
+ },
+ {
+  "id": "30.01",
+  "tag": "[P2]",
+  "st": "twoshots drawDoorwayP2 (bullpen door crack): hearts off the grid f144/156/171, Alyi looks up f190, the IOU f220; post-ui stand-in",
+  "standin": true
+ },
+ {
+  "id": "30.04",
+  "tag": "[W]",
+  "st": "rooms-b bullpen walkout + tasya room sprite (clasp) + Mas at his desk",
+  "standin": false
+ },
+ {
+  "id": "30.05",
+  "tag": "[W]",
+  "st": "rooms-b bullpenLandlord (floor / ceiling / walls in 3 held steps on the word) + TASYA's window right",
+  "standin": false
+ },
+ {
+  "id": "30.06",
+  "tag": "[W]",
+  "st": "rooms-b bullpenLandlord (floor / ceiling / walls in 3 held steps on the word) + TASYA's window right",
+  "standin": false
+ },
+ {
+  "id": "30.07",
+  "tag": "[W]",
+  "st": "rooms-b bullpenLandlord (floor / ceiling / walls in 3 held steps on the word) + TASYA's window right",
+  "standin": false
+ },
+ {
+  "id": "30.08",
+  "tag": "[PF]",
+  "st": "[PF] the all-slate bullpen held + stepped down; MAS left looking down (swaps-act4 drawMasLookDown); Hello. from the floor",
+  "standin": false
+ },
+ {
+  "id": "30.09",
+  "tag": "[M]",
+  "st": "twoshots drawMadaM (boardroom-plate fires, mada-medium): perfectly still among the fires",
+  "standin": false
+ },
+ {
+  "id": "30.10",
+  "tag": "[W]",
+  "st": "rooms-a boardroom wide (FIRES_SC30, the door bangs, SHAKE_DOOR on the room) + terb walk-in (helmet pops on at the door)",
+  "standin": false
+ },
+ {
+  "id": "30.11",
+  "tag": "CARD",
+  "st": "FULL FREEZE: the boardroom 2-tone; Mas in colour (mas-stand walk → reach → pocket) pulls the pin; engine nameCard TERB (kit.cards NEW stat)",
+  "standin": true
+ },
+ {
+  "id": "30.12",
+  "tag": "[ECU]",
+  "st": "terb drawPinTag (DO NOT REMOVE) over the held freeze · BOX: Mas's fingers on the pin NEW",
+  "standin": true
+ },
+ {
+  "id": "30.13",
+  "tag": "[P]",
+  "st": "[P] the boardroom (fires, on 4s) + TERB right: \"Which room is on fire?\" / f60 the room looks around / \"…Ah.\"",
+  "standin": false
+ },
+ {
+  "id": "30.14",
+  "tag": "[2S]",
+  "st": "twoshots drawCalmOff2S: two still men; Terb sprays behind them; keycaps; TERB (O.S.) Terms?",
+  "standin": false
+ },
+ {
+  "id": "30.15",
+  "tag": "[P]",
+  "st": "[P] the boardroom held + MADA right (spinner), HOLD 1 BEAT then \"Good question.\"",
+  "standin": false
+ },
+ {
+  "id": "30.16",
+  "tag": "[P]",
+  "st": "[P] the boardroom held + MAS left, HOLD 1 BEAT then \"good question.\"",
+  "standin": false
+ },
+ {
+  "id": "30.17",
+  "tag": "[2S]",
+  "st": "twoshots drawCalmOff2S: THE LONG HOLD (bar 1: the spinner stops, the nod), bar 2 Terb's hand stamps the term sheet",
+  "standin": false
+ },
+ {
+  "id": "30.20",
+  "tag": "[POV]",
+  "st": "post-ui NEW: stand-in phone lit green + Gerg's post; keycaps pop from the bottom",
+  "standin": true
+ },
+ {
+  "id": "30.20a",
+  "tag": "[PF]",
+  "st": "[PF] the boardroom held + stepped down; Mas reading, his face unchanged",
+  "standin": false
+ },
+ {
+  "id": "30.21",
+  "tag": "[ECU]",
+  "st": "rooms-a drawTableInsert (prop) + kits props hourglass L: the last grain, the shatter (glass only), the sand holds a beat; post-ui stand-in",
+  "standin": true
+ },
+ {
+  "id": "30.22",
+  "tag": "[W]",
+  "st": "rooms-a lobby night: the sign ignites (1,2,1,2,3 on 3 f holds) + mas-stand at the reception desk, no lanyard",
+  "standin": false
+ },
+ {
+  "id": "30.23",
+  "tag": "[ECU]",
+  "st": "rooms-a drawSignFloorInsert (the box of zeros set down) · BOX: the maintenance hand NEW",
+  "standin": true
+ },
+ {
+  "id": "30.24",
+  "tag": "[W]",
+  "st": "rooms-a lobby night (lit) + callgrid callDialog: Cancel greys 3 held beats; the unlit arrow clicks on beat 4",
+  "standin": false
+ },
+ {
+  "id": "30.25",
+  "tag": "[CU]",
+  "st": "mas-cu drawMasCU (lobby): the same ONE silent drawing, the tungsten behind him",
+  "standin": false
+ },
+ {
+  "id": "30.26",
+  "tag": "[ECU]",
+  "st": "inserts-mas drawNudgeInsert (lobby): held → set → NUDGE at f26; \"okay.\" over the hands",
+  "standin": false
+ },
+ {
+  "id": "31.01",
+  "tag": "[ECU]",
+  "st": "inserts-props drawVaultInsert: Q*, DO NOT OPEN. DO NOT EXPLAIN.",
+  "standin": false
+ },
+ {
+  "id": "31.02",
+  "tag": "[W]",
+  "st": "rooms-b bullpen + mas-stand walk + gerg-stand walk (typing → stops, look up) + orb-medium · BOX: the Q* vault at room scale NEW",
+  "standin": true
+ },
+ {
+  "id": "31.03",
+  "tag": "[P2]",
+  "st": "twoshots drawVaultP2: GERG asks, MAS (not looking) answers; Gerg looks at the note, nods, his window closes",
+  "standin": false
+ },
+ {
+  "id": "31.06",
+  "tag": "[P]",
+  "st": "[P] the bullpen held (door shut, nameplate on) + MAS left reading his memo aloud, lip-sync",
+  "standin": false
+ },
+ {
+  "id": "31.07",
+  "tag": "[ECU]",
+  "st": "rooms-a drawChairBackInsert: four screws, four beats; the plate comes off · BOX: the worker's hand + screwdriver NEW",
+  "standin": true
+ },
+ {
+  "id": "31.08",
+  "tag": "[ECU]",
+  "st": "inserts-props drawShutDoorInsert: the conference door, shut, ALYI plate on",
+  "standin": false
+ },
+ {
+  "id": "31.09",
+  "tag": "[W]",
+  "st": "rooms-b bullpen (window corner) · BOX: prop.observer-chair NEW (unfolds, 4 drawings; the key ring drops)",
+  "standin": true
+ }
+]

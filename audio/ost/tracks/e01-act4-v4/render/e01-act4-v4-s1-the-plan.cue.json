@@ -1,0 +1,1084 @@
+{
+ "schema": "mrmas-ost-cue/1",
+ "id": "e01-act4-v4-s1-the-plan",
+ "mm": "MM-07",
+ "family": "P14 BLUEPRINT",
+ "title": "How to Fire a CEO Who Owns Nothing. (Ep1 Act Four v4, S1a, to picture)",
+ "version": "v4",
+ "composer": "Ep1 Act Four v4 sound pass (re-laid from batch-1 cues)",
+ "tone": "THE PLAN as one performance from the suite to the JOIN click: cheerful, accurate, and it breaks",
+ "tags": [
+  "to picture",
+  "Ep1",
+  "act four",
+  "v4",
+  "continuous"
+ ],
+ "usage": "BI",
+ "scenes": [
+  "v4 S1.01-S1.06, act 0-525 (lock v4.1); file t=0 = act frame 0"
+ ],
+ "description": "",
+ "motifs": [
+  "the Water Line bar 1 (felt; the settle never comes)",
+  "the Blueprint (chip box + celesta)",
+  "the knee-cell waltz F F F | F G Ab (the C never comes)",
+  "the Blueprint break + tape-stop"
+ ],
+ "key": "F dorian (quartal; no A natural); sc 24 F minor",
+ "engine": {
+  "version": "mrmas-ost-engine 1.1 (2026-09-26: fix1 -- meter axis, sample tuning, render pool, QA 5a-d)",
+  "rendered": "2026-09-26T07:12:39",
+  "render_seconds": 14.6
+ },
+ "timing": {
+  "bpm": 96.0,
+  "beat_unit_quarters": 1.0,
+  "tempo_map": [
+   {
+    "bar": 1,
+    "beat": 1.0,
+    "bpm": 96.0,
+    "ramp_in": false,
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "meter_map": [
+   {
+    "bar": 1,
+    "meter": "4/4",
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "swing": 0.0,
+  "swing_unit_quarters": 0.5,
+  "pickup_beats": 0.0,
+  "bars": 12,
+  "length_s": 30.0,
+  "length_frames": 720.0,
+  "fps": 24,
+  "end": {
+   "sec": 21.875,
+   "frame": 525.0,
+   "bar": 9,
+   "beat": 4.0
+  },
+  "album_duration_s": 22.1731,
+  "album_duration_frames": 532.15,
+  "album_loops": 1
+ },
+ "sections": [
+  {
+   "label": "sc 24 the suite (felt)",
+   "start": {
+    "sec": 0.0,
+    "frame": 0.0,
+    "bar": 1,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 4.75,
+    "frame": 114.0,
+    "bar": 2,
+    "beat": 4.6
+   }
+  },
+  {
+   "label": "WORD",
+   "start": {
+    "sec": 5.0,
+    "frame": 120.0,
+    "bar": 3,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 6.25,
+    "frame": 150.0,
+    "bar": 3,
+    "beat": 3.0
+   }
+  },
+  {
+   "label": "the waltz (musical chairs)",
+   "start": {
+    "sec": 6.25,
+    "frame": 150.0,
+    "bar": 3,
+    "beat": 3.0
+   },
+   "end": {
+    "sec": 10.0,
+    "frame": 240.0,
+    "bar": 5,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "the Blueprint resumes",
+   "start": {
+    "sec": 10.0,
+    "frame": 240.0,
+    "bar": 5,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 12.5,
+    "frame": 300.0,
+    "bar": 6,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "the labels",
+   "start": {
+    "sec": 12.5,
+    "frame": 300.0,
+    "bar": 6,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 17.5,
+    "frame": 420.0,
+    "bar": 8,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "the held chord",
+   "start": {
+    "sec": 16.25,
+    "frame": 390.0,
+    "bar": 7,
+    "beat": 3.0
+   },
+   "end": {
+    "sec": 17.5,
+    "frame": 420.0,
+    "bar": 8,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "the path",
+   "start": {
+    "sec": 17.5,
+    "frame": 420.0,
+    "bar": 8,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 19.375,
+    "frame": 465.0,
+    "bar": 8,
+    "beat": 4.0
+   }
+  },
+  {
+   "label": "BREAK + tape-stop",
+   "start": {
+    "sec": 19.375,
+    "frame": 465.0,
+    "bar": 8,
+    "beat": 4.0
+   },
+   "end": {
+    "sec": 21.875,
+    "frame": 525.0,
+    "bar": 9,
+    "beat": 4.0
+   }
+  }
+ ],
+ "markers": [
+  {
+   "label": "S1.01 the suite: the felt Water Line bar",
+   "sec": 0.0,
+   "frame": 0.0,
+   "bar": 1,
+   "beat": 1.0
+  },
+  {
+   "label": "the C4 hangs: the settle never comes",
+   "sec": 2.5,
+   "frame": 60.0,
+   "bar": 2,
+   "beat": 1.0
+  },
+  {
+   "label": "the blueprint cut: the felt rings on into WORD",
+   "sec": 4.75,
+   "frame": 114.0,
+   "bar": 2,
+   "beat": 4.6
+  },
+  {
+   "label": "the stamp: WORD",
+   "sec": 5.0,
+   "frame": 120.0,
+   "bar": 3,
+   "beat": 1.0
+  },
+  {
+   "label": "the waltz: the first walk-off (F)",
+   "sec": 6.25,
+   "frame": 150.0,
+   "bar": 3,
+   "beat": 3.0
+  },
+  {
+   "label": "walk-off 2 (F)",
+   "sec": 6.875,
+   "frame": 165.0,
+   "bar": 3,
+   "beat": 4.0
+  },
+  {
+   "label": "walk-off 3 (F)",
+   "sec": 7.5,
+   "frame": 180.0,
+   "bar": 4,
+   "beat": 1.0
+  },
+  {
+   "label": "the 4/4 Blueprint resumes (no rest)",
+   "sec": 10.0,
+   "frame": 240.0,
+   "bar": 5,
+   "beat": 1.0
+  },
+  {
+   "label": "the labels",
+   "sec": 12.5,
+   "frame": 300.0,
+   "bar": 6,
+   "beat": 1.0
+  },
+  {
+   "label": "VOTES: 0 (C)",
+   "sec": 15.0,
+   "frame": 360.0,
+   "bar": 7,
+   "beat": 1.0
+  },
+  {
+   "label": "EQUITY: 0 (the label rest) + the held chord",
+   "sec": 16.25,
+   "frame": 390.0,
+   "bar": 7,
+   "beat": 3.0
+  },
+  {
+   "label": "the moth",
+   "sec": 16.875,
+   "frame": 405.0,
+   "bar": 7,
+   "beat": 4.0
+  },
+  {
+   "label": "the path",
+   "sec": 17.5,
+   "frame": 420.0,
+   "bar": 8,
+   "beat": 1.0
+  },
+  {
+   "label": "tick 1: 1. NOON",
+   "sec": 18.75,
+   "frame": 450.0,
+   "bar": 8,
+   "beat": 3.0
+  },
+  {
+   "label": "BREAK: stuck",
+   "sec": 19.375,
+   "frame": 465.0,
+   "bar": 8,
+   "beat": 4.0
+  },
+  {
+   "label": "the tear: the tape-stop starts",
+   "sec": 20.583333,
+   "frame": 494.0,
+   "bar": 9,
+   "beat": 1.9333
+  },
+  {
+   "label": "JOIN: the tape reaches zero",
+   "sec": 21.875,
+   "frame": 525.0,
+   "bar": 9,
+   "beat": 4.0
+  }
+ ],
+ "hit_check": [
+  {
+   "t": 0.0,
+   "offset_ms": 2.7,
+   "strength": 6.19
+  },
+  {
+   "t": 2.5,
+   "offset_ms": -6.7,
+   "strength": 2.5
+  },
+  {
+   "t": 4.75,
+   "offset_ms": 58.0,
+   "strength": 1.82
+  },
+  {
+   "t": 5.0,
+   "offset_ms": -5.3,
+   "strength": 8.89
+  },
+  {
+   "t": 6.25,
+   "offset_ms": -4.7,
+   "strength": 7.65
+  },
+  {
+   "t": 6.875,
+   "offset_ms": -3.0,
+   "strength": 11.36
+  },
+  {
+   "t": 7.5,
+   "offset_ms": -4.0,
+   "strength": 14.23
+  },
+  {
+   "t": 10.0,
+   "offset_ms": -8.0,
+   "strength": 4.35
+  },
+  {
+   "t": 12.5,
+   "offset_ms": -4.0,
+   "strength": 9.14
+  },
+  {
+   "t": 15.0,
+   "offset_ms": -2.7,
+   "strength": 7.09
+  },
+  {
+   "t": 16.25,
+   "offset_ms": -10.0,
+   "strength": 3.47
+  },
+  {
+   "t": 16.875,
+   "offset_ms": -8.3,
+   "strength": 2.16
+  },
+  {
+   "t": 17.5,
+   "offset_ms": -4.0,
+   "strength": 2.26
+  },
+  {
+   "t": 18.75,
+   "offset_ms": -3.3,
+   "strength": 6.28
+  },
+  {
+   "t": 19.375,
+   "offset_ms": -4.3,
+   "strength": 4.88
+  },
+  {
+   "t": 20.5833,
+   "offset_ms": 38.0,
+   "strength": 5.45
+  },
+  {
+   "t": 21.875,
+   "offset_ms": 2.3,
+   "strength": 16734.8
+  }
+ ],
+ "sfx_slots": [
+  {
+   "t": 5.041666666666667,
+   "sfx": "rubber_stamp_C: HOW TO FIRE A CEO"
+  },
+  {
+   "t": 15.0,
+   "sfx": "stamp VOTES: 0"
+  },
+  {
+   "t": 16.625,
+   "sfx": "stamp EQUITY: 0"
+  },
+  {
+   "t": 21.875,
+   "sfx": "the JOIN click (tape at zero)"
+  }
+ ],
+ "silence_windows": [],
+ "vo_windows": [],
+ "knee_whole": 0,
+ "f_major": {
+  "limit": 0.08,
+  "windows": 17,
+  "worst": 2.521,
+  "worst_sieved": 1.218,
+  "ok": false,
+  "ok_written": true,
+  "ok_spectral": false,
+  "f_inaudible_windows": 1,
+  "a_classes": {
+   "written": 0,
+   "resonance": 1,
+   "explained": 1,
+   "unattributed": 0
+  },
+  "written_a_over_f_bass": [],
+  "written_third": {
+   "ok": true,
+   "count": 0,
+   "events": [],
+   "grazes": [],
+   "n_grazes": 0,
+   "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+  },
+  "fails": [
+   {
+    "t0": 20.625,
+    "t1": 21.219,
+    "a_over_f": 2.521,
+    "a_over_f_sieved": 1.218,
+    "written_a": [],
+    "f_share": 0.073,
+    "a_from": {
+     "chip": 57,
+     "perc": 32,
+     "strings": 12
+    },
+    "a_peaks": [
+     {
+      "stem": "chip",
+      "hz": 216.1,
+      "kind": "resonance (no written note has this partial)",
+      "cls": "resonance",
+      "share": 0.42
+     },
+     {
+      "stem": "chip",
+      "hz": 221.2,
+      "kind": "resonance (no written note has this partial)",
+      "cls": "resonance",
+      "share": 0.4
+     },
+     {
+      "stem": "chip",
+      "hz": 448.2,
+      "kind": "resonance (no written note has this partial)",
+      "cls": "resonance",
+      "share": 0.03
+     },
+     {
+      "stem": "perc",
+      "hz": 435.1,
+      "kind": "resonance (no written note has this partial)",
+      "cls": "resonance",
+      "share": 0.16
+     }
+    ],
+    "a_class": "resonance",
+    "ok": false,
+    "ok_spectral": false
+   }
+  ],
+  "explained": [
+   {
+    "t0": 16.844,
+    "t1": 17.438,
+    "a_over_f": 0.668,
+    "a_over_f_sieved": 0.633,
+    "written_a": [],
+    "f_share": 0.136,
+    "a_from": {
+     "strings": 95,
+     "perc": 5,
+     "chip": 0
+    },
+    "a_peaks": [
+     {
+      "stem": "strings",
+      "hz": 873.0,
+      "kind": "partial 5 of written F3 (vla)",
+      "cls": "partial",
+      "share": 0.98
+     },
+     {
+      "stem": "strings",
+      "hz": 868.7,
+      "kind": "partial 5 of written F3 (vla)",
+      "cls": "partial",
+      "share": 0.02
+     },
+     {
+      "stem": "strings",
+      "hz": 440.2,
+      "kind": "partial 5 of written F2 (cb)",
+      "cls": "partial",
+      "share": 0.0
+     }
+    ],
+    "a_class": "explained",
+    "ok": true,
+    "ok_spectral": true
+   }
+  ],
+  "fixed_resonances": [],
+  "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+ },
+ "knee_completion": 0,
+ "room_sfx_windows": [],
+ "qa": {
+  "balance": {
+   "balance": {
+    "piano": 3,
+    "orch": 49,
+    "bigband": 0,
+    "chip": 48
+   },
+   "rhythm_pct_of_all": 0,
+   "chip_share": 48,
+   "balance_energy": {
+    "piano": 3,
+    "orch": 50,
+    "bigband": 0,
+    "chip": 47
+   },
+   "method": "theme stemtable (gated loudness per section, time-weighted, rhythm/fx excluded; it counts a brief stab at its own loudness for the whole section) + balance_energy (ungated energy)",
+   "sections": [
+    {
+     "section": "sc 24 the suite (felt)",
+     "share": {
+      "piano": 63,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 37
+     }
+    },
+    {
+     "section": "WORD",
+     "share": {
+      "piano": 0,
+      "orch": 49,
+      "bigband": 0,
+      "chip": 51
+     }
+    },
+    {
+     "section": "the waltz (musical chairs)",
+     "share": {
+      "piano": 0,
+      "orch": 37,
+      "bigband": 0,
+      "chip": 63
+     }
+    },
+    {
+     "section": "the Blueprint resumes",
+     "share": {
+      "piano": 0,
+      "orch": 75,
+      "bigband": 0,
+      "chip": 25
+     }
+    },
+    {
+     "section": "the labels",
+     "share": {
+      "piano": 0,
+      "orch": 56,
+      "bigband": 0,
+      "chip": 44
+     }
+    },
+    {
+     "section": "the held chord",
+     "share": {
+      "piano": 0,
+      "orch": 84,
+      "bigband": 0,
+      "chip": 16
+     }
+    },
+    {
+     "section": "the path",
+     "share": {
+      "piano": 0,
+      "orch": 45,
+      "bigband": 0,
+      "chip": 55
+     }
+    },
+    {
+     "section": "BREAK + tape-stop",
+     "share": {
+      "piano": 0,
+      "orch": 49,
+      "bigband": 0,
+      "chip": 51
+     }
+    }
+   ]
+  },
+  "short_term_underscore": {
+   "p95": -14.14,
+   "median": -15.94,
+   "max": -13.83
+  },
+  "band_2_6k_db": -18.6,
+  "centroid_hz": 461.0,
+  "f_major": {
+   "limit": 0.08,
+   "windows": 17,
+   "worst": 2.521,
+   "worst_sieved": 1.218,
+   "ok": false,
+   "ok_written": true,
+   "ok_spectral": false,
+   "f_inaudible_windows": 1,
+   "a_classes": {
+    "written": 0,
+    "resonance": 1,
+    "explained": 1,
+    "unattributed": 0
+   },
+   "written_a_over_f_bass": [],
+   "written_third": {
+    "ok": true,
+    "count": 0,
+    "events": [],
+    "grazes": [],
+    "n_grazes": 0,
+    "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+   },
+   "fails": [
+    {
+     "t0": 20.625,
+     "t1": 21.219,
+     "a_over_f": 2.521,
+     "a_over_f_sieved": 1.218,
+     "written_a": [],
+     "f_share": 0.073,
+     "a_from": {
+      "chip": 57,
+      "perc": 32,
+      "strings": 12
+     },
+     "a_peaks": [
+      {
+       "stem": "chip",
+       "hz": 216.1,
+       "kind": "resonance (no written note has this partial)",
+       "cls": "resonance",
+       "share": 0.42
+      },
+      {
+       "stem": "chip",
+       "hz": 221.2,
+       "kind": "resonance (no written note has this partial)",
+       "cls": "resonance",
+       "share": 0.4
+      },
+      {
+       "stem": "chip",
+       "hz": 448.2,
+       "kind": "resonance (no written note has this partial)",
+       "cls": "resonance",
+       "share": 0.03
+      },
+      {
+       "stem": "perc",
+       "hz": 435.1,
+       "kind": "resonance (no written note has this partial)",
+       "cls": "resonance",
+       "share": 0.16
+      }
+     ],
+     "a_class": "resonance",
+     "ok": false,
+     "ok_spectral": false
+    }
+   ],
+   "explained": [
+    {
+     "t0": 16.844,
+     "t1": 17.438,
+     "a_over_f": 0.668,
+     "a_over_f_sieved": 0.633,
+     "written_a": [],
+     "f_share": 0.136,
+     "a_from": {
+      "strings": 95,
+      "perc": 5,
+      "chip": 0
+     },
+     "a_peaks": [
+      {
+       "stem": "strings",
+       "hz": 873.0,
+       "kind": "partial 5 of written F3 (vla)",
+       "cls": "partial",
+       "share": 0.98
+      },
+      {
+       "stem": "strings",
+       "hz": 868.7,
+       "kind": "partial 5 of written F3 (vla)",
+       "cls": "partial",
+       "share": 0.02
+      },
+      {
+       "stem": "strings",
+       "hz": 440.2,
+       "kind": "partial 5 of written F2 (cb)",
+       "cls": "partial",
+       "share": 0.0
+      }
+     ],
+     "a_class": "explained",
+     "ok": true,
+     "ok_spectral": true
+    }
+   ],
+   "fixed_resonances": [],
+   "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+  },
+  "knee_completion": {
+   "count": 0,
+   "hits": [],
+   "max_gap_s": 2.5,
+   "rule": "OST-BIBLE rule 4: the knee never plays whole in an episode, in any register, across a phrase boundary too"
+  },
+  "sub_under_room": [],
+  "no_third": [],
+  "silence": [],
+  "hard_stops": [],
+  "vo_windows": [],
+  "knee_whole": 0,
+  "motifs_found": {
+   "BLUEPRINT": [
+    {
+     "inst": "lead",
+     "t": 12.5,
+     "transpose": 0
+    },
+    {
+     "inst": "celesta",
+     "t": 12.5,
+     "transpose": 12
+    },
+    {
+     "inst": "tri2",
+     "t": 12.5,
+     "transpose": -5
+    },
+    {
+     "inst": "harp",
+     "t": 12.5,
+     "transpose": 0
+    }
+   ]
+  },
+  "swing": {
+   "felt": {
+    "offbeats": 1,
+    "median_frames": 10.0,
+    "hum_ms": 3
+   },
+   "vla": {
+    "offbeats": 20,
+    "median_frames": 7.5,
+    "hum_ms": 0.0
+   },
+   "celesta": {
+    "offbeats": 2,
+    "median_frames": 8.75,
+    "hum_ms": 0.0
+   },
+   "harp": {
+    "offbeats": 3,
+    "median_frames": 7.5,
+    "hum_ms": 0.0
+   }
+  },
+  "banned": []
+ },
+ "loop": null,
+ "files": {
+  "album_wav": "render/e01-act4-v4-s1-the-plan-album.wav",
+  "album_mp3": "render/e01-act4-v4-s1-the-plan-album.mp3",
+  "underscore_wav": "render/e01-act4-v4-s1-the-plan-underscore.wav",
+  "underscore_mp3": "render/e01-act4-v4-s1-the-plan-underscore.mp3",
+  "stems": {
+   "piano": "render/stems/e01-act4-v4-s1-the-plan-piano.flac",
+   "strings": "render/stems/e01-act4-v4-s1-the-plan-strings.flac",
+   "winds": "render/stems/e01-act4-v4-s1-the-plan-winds.flac",
+   "perc": "render/stems/e01-act4-v4-s1-the-plan-perc.flac",
+   "chip": "render/stems/e01-act4-v4-s1-the-plan-chip.flac",
+   "synth": "render/stems/e01-act4-v4-s1-the-plan-synth.flac"
+  },
+  "midi": "render/e01-act4-v4-s1-the-plan.mid",
+  "pianoroll": "render/e01-act4-v4-s1-the-plan-pianoroll.png"
+ },
+ "masters": {
+  "album": {
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "comp": {
+    "thresh_db": -20,
+    "ratio": 1.8
+   },
+   "dialog_pocket": null,
+   "measured": {
+    "lufs": -16.04,
+    "lra": 8.74,
+    "true_peak_db": -1.15,
+    "peak_db": -1.16,
+    "rms_db": -18.86,
+    "crest_db": 17.7,
+    "seconds": 22.1731
+   }
+  },
+  "underscore": {
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -3.0,
+   "comp": {
+    "thresh_db": -28,
+    "ratio": 1.3,
+    "att_ms": 40.0,
+    "rel_ms": 350.0
+   },
+   "dialog_pocket": {
+    "f": 2500.0,
+    "db": -2.0,
+    "q": 0.7
+   },
+   "measured": {
+    "lufs": -16.02,
+    "lra": 7.34,
+    "true_peak_db": -3.15,
+    "peak_db": -3.16,
+    "rms_db": -18.7,
+    "crest_db": 15.55,
+    "seconds": 22.1731
+   }
+  }
+ },
+ "stems": {
+  "sum_vs_underscore_residual_db": -162.2,
+  "families_present": [
+   "chip",
+   "perc",
+   "piano",
+   "strings",
+   "synth",
+   "winds"
+  ],
+  "family_share_lu": {
+   "piano": -7.2,
+   "strings": -3.4,
+   "winds": -5.2,
+   "perc": -3.7,
+   "chip": -1.8,
+   "synth": -31.4
+  }
+ },
+ "spectrum": {
+  "sub": -17.3,
+  "bass": -5.0,
+  "lowmid": -2.2,
+  "mid": -12.6,
+  "presence": -23.8,
+  "air": -34.8,
+  "centroid_hz": 461.0
+ },
+ "bar_levels": [
+  {
+   "bar": 1,
+   "rms_db": -23.1,
+   "peak_db": -9.399999618530273
+  },
+  {
+   "bar": 2,
+   "rms_db": -28.7,
+   "peak_db": -8.0
+  },
+  {
+   "bar": 3,
+   "rms_db": -17.7,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 4,
+   "rms_db": -19.7,
+   "peak_db": -3.799999952316284
+  },
+  {
+   "bar": 5,
+   "rms_db": -20.0,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 6,
+   "rms_db": -16.2,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 7,
+   "rms_db": -17.4,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 8,
+   "rms_db": -17.1,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 9,
+   "rms_db": -17.9,
+   "peak_db": -3.200000047683716
+  }
+ ],
+ "instrumentation": {
+  "cb": {
+   "family": "strings",
+   "notes": 10,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "celesta": {
+   "family": "perc",
+   "notes": 19,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "cl": {
+   "family": "winds",
+   "notes": 1,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "felt": {
+   "family": "piano",
+   "notes": 12,
+   "source": "sf2",
+   "credit": "Upright Piano KW by FreePats (CC0 1.0)"
+  },
+  "felt_mech": {
+   "family": "piano",
+   "notes": 2,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "glasspad": {
+   "family": "synth",
+   "notes": 2,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "harp": {
+   "family": "strings",
+   "notes": 14,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "lead": {
+   "family": "chip",
+   "notes": 14,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "tri": {
+   "family": "chip",
+   "notes": 11,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "tri2": {
+   "family": "chip",
+   "notes": 13,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "vc": {
+   "family": "strings",
+   "notes": 7,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vla": {
+   "family": "strings",
+   "notes": 49,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vln1": {
+   "family": "strings",
+   "notes": 1,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vln2": {
+   "family": "strings",
+   "notes": 7,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "woodclick": {
+   "family": "perc",
+   "notes": 7,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "wz_box": {
+   "family": "chip",
+   "notes": 6,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "wz_cel": {
+   "family": "perc",
+   "notes": 6,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "wz_ch": {
+   "family": "chip",
+   "notes": 8,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "wz_tri": {
+   "family": "chip",
+   "notes": 2,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  }
+ },
+ "credits": [
+  "GeneralUser GS by S. Christian Collins",
+  "Upright Piano KW by FreePats (CC0 1.0)",
+  "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+ ],
+ "audition": [
+  "0-4.75 s: the felt bar, then the blueprint cut at 4.75 s: the felt rings on into WORD",
+  "6.25-10.0 s: the three walk-offs on the waltz's F F F; the 4/4 resumes on the downbeat at 10.0 s (v4.1: no rest)",
+  "12.5-18.75 s: the labels under Neleh's read (ducked in the mix): C on VOTES: 0 at 15.0 s; the held chord under \"Good question.\" from 16.25 s",
+  "19.4-21.9 s: stuck, then the tape-stop onto the JOIN click"
+ ],
+ "warnings": [
+  "marker at 4.75 s: no clear onset within 10 ms ({'t': 4.75, 'offset_ms': np.float64(58.0), 'strength': 1.82})",
+  "marker at 20.5833 s: no clear onset within 10 ms ({'t': 20.5833, 'offset_ms': np.float64(38.0), 'strength': 5.45})",
+  "F-major check (spectral): 1 F-bass window(s) carry A energy that NO written note explains (a resonance, not a written third), first at 20.625 s, worst sieved A/F 1.218: chip ~216.1 Hz, chip ~221.2 Hz, chip ~448.2 Hz, perc ~435.1 Hz -- audition: does it sound major?"
+ ]
+}

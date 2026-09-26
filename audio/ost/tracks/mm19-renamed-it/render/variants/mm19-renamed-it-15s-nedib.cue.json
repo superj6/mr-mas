@@ -1,0 +1,466 @@
+{
+ "schema": "mrmas-ost-cue/1",
+ "id": "mm19-renamed-it-15s-nedib",
+ "mm": "MM-19",
+ "family": "P13",
+ "title": "Renamed It. / The Fountain Pen (15 s cut-down (NEDIB))",
+ "version": "1",
+ "composer": "Composer A (OST batch 1)",
+ "tone": "state occasions at equal weight: a fountain-pen quartet signing, and a brass podium one size too big that renames the world under a held note",
+ "tags": [
+  "podium",
+  "march",
+  "string quartet",
+  "parity",
+  "the rename",
+  "rumpt",
+  "nedib",
+  "library",
+  "featured",
+  "word windows",
+  "variant",
+  "cut-down"
+ ],
+ "usage": "BI",
+ "scenes": [
+  "Ep1 sc 13 White House (NEDIB: the Fountain Pen, b1-8)",
+  "NEDIB props: the pen, the PINKY-PROMISE scroll, EO 14110, the three-tier map",
+  "RUMPT's marker voids the three-tier map (b9-10)",
+  "RUMPT phases: FEAR Ep2 (b11-18), the reveal Ep3 (b18.4-b19 only), LOVE Eps 4-6 (b19-26), the label gun (b27), \"Who?\" Ep8 (b29-32), SUPER Ep9 (b33-36)",
+  "cut-downs: 5 s = b27-28 (the Rename); 15 s = b23-28; 30 s = b17-28 or b1-12"
+ ],
+ "description": "15 s (b1-2 + b5-8): the Fountain Pen on the violas, then on the solo violin with the whole quartet, harp and grand, ending on the breath (b8). Parity with RUMPT's 15 s.",
+ "motifs": [
+  "the Fountain Pen (viola b1, solo violin 8va b5; the turn C Bb A Bb)",
+  "the Podium (FEAR in Eb minor, half-time, b11 and b15; LOVE b19 and b23; WHO? b29)",
+  "the Rename (b27.3, b33.3, b35.3)",
+  "the chip piccolo (gold glint) and the chip top line (SUPER)"
+ ],
+ "key": "Bb major (NEDIB); Eb minor (FEAR); Eb major (LOVE) -> B/D# -> G/B (the Renames)",
+ "engine": {
+  "version": "mrmas-ost-engine 1.1 (2026-09-26: fix1 -- meter axis, sample tuning, render pool, QA 5a-d)",
+  "rendered": "2026-09-26T06:37:41",
+  "render_seconds": 8.0
+ },
+ "timing": {
+  "bpm": 96.0,
+  "beat_unit_quarters": 1.0,
+  "tempo_map": [
+   {
+    "bar": 1,
+    "beat": 1.0,
+    "bpm": 96.0,
+    "ramp_in": false,
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "meter_map": [
+   {
+    "bar": 1,
+    "meter": "4/4",
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "swing": 0.0,
+  "swing_unit_quarters": 0.5,
+  "pickup_beats": 0.0,
+  "bars": 6,
+  "length_s": 15.0,
+  "length_frames": 360.0,
+  "fps": 24,
+  "end": {
+   "sec": 15.0,
+   "frame": 360.0,
+   "bar": 7,
+   "beat": 1.0
+  },
+  "album_duration_s": 16.2,
+  "album_duration_frames": 388.8,
+  "album_loops": 1
+ },
+ "sections": [
+  {
+   "label": "THE FOUNTAIN PEN (NEDIB) -- loop A",
+   "start": {
+    "sec": 0.0,
+    "frame": 0.0,
+    "bar": 1,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 5.0,
+    "frame": 120.0,
+    "bar": 3,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "THE FOUNTAIN PEN (NEDIB) -- loop A",
+   "start": {
+    "sec": 5.0,
+    "frame": 120.0,
+    "bar": 3,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 15.0,
+    "frame": 360.0,
+    "bar": 7,
+    "beat": 1.0
+   }
+  }
+ ],
+ "markers": [
+  {
+   "label": "b1 the Fountain Pen (viola)",
+   "sec": 0.0,
+   "frame": 0.0,
+   "bar": 1,
+   "beat": 1.0
+  },
+  {
+   "label": "b5 the Fountain Pen (solo violin)",
+   "sec": 5.0,
+   "frame": 120.0,
+   "bar": 3,
+   "beat": 1.0
+  }
+ ],
+ "hit_check": [
+  {
+   "t": 0.0,
+   "offset_ms": 2.7,
+   "strength": 3.34
+  },
+  {
+   "t": 5.0,
+   "offset_ms": -2.7,
+   "strength": 2.25
+  }
+ ],
+ "sfx_slots": [],
+ "silence_windows": [],
+ "vo_windows": [],
+ "knee_whole": 0,
+ "f_major": {
+  "limit": 0.08,
+  "windows": 4,
+  "worst": 0.041,
+  "worst_sieved": 0.044,
+  "ok": true,
+  "ok_written": true,
+  "ok_spectral": true,
+  "f_inaudible_windows": 0,
+  "a_classes": {
+   "written": 0,
+   "resonance": 0,
+   "explained": 0,
+   "unattributed": 0
+  },
+  "written_a_over_f_bass": [],
+  "written_third": {
+   "ok": true,
+   "count": 0,
+   "events": [],
+   "grazes": [],
+   "n_grazes": 0,
+   "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+  },
+  "fails": [],
+  "explained": [],
+  "fixed_resonances": [],
+  "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+ },
+ "knee_completion": 0,
+ "room_sfx_windows": [],
+ "qa": {
+  "balance": {
+   "balance": {
+    "piano": 3,
+    "orch": 84,
+    "bigband": 0,
+    "chip": 12
+   },
+   "rhythm_pct_of_all": 0,
+   "chip_share": 12,
+   "balance_energy": {
+    "piano": 3,
+    "orch": 85,
+    "bigband": 0,
+    "chip": 12
+   },
+   "method": "theme stemtable (gated loudness per section, time-weighted, rhythm/fx excluded; it counts a brief stab at its own loudness for the whole section) + balance_energy (ungated energy)",
+   "sections": [
+    {
+     "section": "THE FOUNTAIN PEN (NEDIB) -- loop A",
+     "share": {
+      "piano": 0,
+      "orch": 82,
+      "bigband": 0,
+      "chip": 18
+     }
+    },
+    {
+     "section": "THE FOUNTAIN PEN (NEDIB) -- loop A",
+     "share": {
+      "piano": 4,
+      "orch": 85,
+      "bigband": 0,
+      "chip": 11
+     }
+    }
+   ]
+  },
+  "short_term_underscore": {
+   "p95": -15.16,
+   "median": -15.62,
+   "max": -15.08
+  },
+  "band_2_6k_db": -12.7,
+  "centroid_hz": 550.0,
+  "f_major": {
+   "limit": 0.08,
+   "windows": 4,
+   "worst": 0.041,
+   "worst_sieved": 0.044,
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "f_inaudible_windows": 0,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_a_over_f_bass": [],
+   "written_third": {
+    "ok": true,
+    "count": 0,
+    "events": [],
+    "grazes": [],
+    "n_grazes": 0,
+    "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+   },
+   "fails": [],
+   "explained": [],
+   "fixed_resonances": [],
+   "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+  },
+  "knee_completion": {
+   "count": 0,
+   "hits": [],
+   "max_gap_s": 2.5,
+   "rule": "OST-BIBLE rule 4: the knee never plays whole in an episode, in any register, across a phrase boundary too"
+  },
+  "sub_under_room": [],
+  "no_third": [],
+  "silence": [],
+  "hard_stops": [],
+  "vo_windows": [],
+  "knee_whole": 0,
+  "motifs_found": {
+   "FOUNTAIN_PEN": [
+    {
+     "inst": "vla",
+     "t": 0.0,
+     "transpose": 0
+    },
+    {
+     "inst": "svln",
+     "t": 5.0,
+     "transpose": 12
+    }
+   ]
+  },
+  "swing": {
+   "vla": {
+    "offbeats": 2,
+    "median_frames": 9.38,
+    "hum_ms": 8
+   },
+   "svln": {
+    "offbeats": 2,
+    "median_frames": 9.38,
+    "hum_ms": 8
+   },
+   "harp": {
+    "offbeats": 12,
+    "median_frames": 7.5,
+    "hum_ms": 4
+   }
+  },
+  "banned": []
+ },
+ "loop": null,
+ "files": {
+  "album_wav": "variants/mm19-renamed-it-15s-nedib-album.wav",
+  "album_mp3": "variants/mm19-renamed-it-15s-nedib-album.mp3",
+  "underscore_wav": "variants/mm19-renamed-it-15s-nedib-underscore.wav",
+  "underscore_mp3": "variants/mm19-renamed-it-15s-nedib-underscore.mp3",
+  "stems": {},
+  "midi": "variants/mm19-renamed-it-15s-nedib.mid",
+  "pianoroll": "variants/mm19-renamed-it-15s-nedib-pianoroll.png"
+ },
+ "masters": {
+  "album": {
+   "target_lufs": -14.0,
+   "ceiling_dbtp": -1.0,
+   "comp": {
+    "thresh_db": -20,
+    "ratio": 1.8
+   },
+   "dialog_pocket": null,
+   "measured": {
+    "lufs": -14.0,
+    "lra": 2.25,
+    "true_peak_db": -1.15,
+    "peak_db": -1.16,
+    "rms_db": -17.0,
+    "crest_db": 15.85,
+    "seconds": 16.2
+   }
+  },
+  "underscore": {
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -3.0,
+   "comp": {
+    "thresh_db": -28,
+    "ratio": 1.3,
+    "att_ms": 40.0,
+    "rel_ms": 350.0
+   },
+   "dialog_pocket": {
+    "f": 2500.0,
+    "db": -2.0,
+    "q": 0.7
+   },
+   "measured": {
+    "lufs": -16.01,
+    "lra": 2.24,
+    "true_peak_db": -3.15,
+    "peak_db": -3.16,
+    "rms_db": -18.84,
+    "crest_db": 15.68,
+    "seconds": 16.2
+   }
+  }
+ },
+ "stems": {
+  "sum_vs_underscore_residual_db": -163.4,
+  "families_present": [],
+  "family_share_lu": {
+   "piano": -13.0,
+   "strings": -0.6,
+   "chip": -9.1
+  }
+ },
+ "spectrum": {
+  "sub": -20.1,
+  "bass": -3.4,
+  "lowmid": -3.6,
+  "mid": -10.9,
+  "presence": -19.0,
+  "air": -29.9,
+  "centroid_hz": 550.0
+ },
+ "bar_levels": [
+  {
+   "bar": 1,
+   "rms_db": -19.9,
+   "peak_db": -4.5
+  },
+  {
+   "bar": 2,
+   "rms_db": -19.1,
+   "peak_db": -4.900000095367432
+  },
+  {
+   "bar": 3,
+   "rms_db": -18.0,
+   "peak_db": -4.099999904632568
+  },
+  {
+   "bar": 4,
+   "rms_db": -17.7,
+   "peak_db": -4.699999809265137
+  },
+  {
+   "bar": 5,
+   "rms_db": -18.3,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 6,
+   "rms_db": -18.4,
+   "peak_db": -3.200000047683716
+  }
+ ],
+ "instrumentation": {
+  "cb": {
+   "family": "strings",
+   "notes": 14,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "grand": {
+   "family": "piano",
+   "notes": 23,
+   "source": "sf2",
+   "credit": "Salamander Grand Piano by Alexander Holm (CC BY 3.0) -- ATTRIBUTION REQUIRED"
+  },
+  "harp": {
+   "family": "strings",
+   "notes": 40,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "svln": {
+   "family": "strings",
+   "notes": 16,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "tri": {
+   "family": "chip",
+   "notes": 21,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "vc": {
+   "family": "strings",
+   "notes": 21,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vla": {
+   "family": "strings",
+   "notes": 24,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vln1": {
+   "family": "strings",
+   "notes": 8,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vln2": {
+   "family": "strings",
+   "notes": 21,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  }
+ },
+ "credits": [
+  "Salamander Grand Piano by Alexander Holm (CC BY 3.0) -- ATTRIBUTION REQUIRED",
+  "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+ ],
+ "audition": [
+  "0-15.00 s: a clean start on its (pick-up) bar line; the ending is the suite's own stop",
+  "against the suite at the same bars: the same music and the same level"
+ ],
+ "warnings": []
+}

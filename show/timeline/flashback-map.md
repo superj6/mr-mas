@@ -130,7 +130,7 @@ The columns are: **WHEN** (the on-screen card) · **POV** (the rim) · **WHAT WE
 
 | ID | WHEN | POV | WHAT WE SEE | WHY HERE | TRANSITION | TIER | LEN |
 |---|---|---|---|---|---|---|---|
-| F1.1 | `1993` · the screen, **part 1 of 4** | Mas, age 8 (cyan) | A kid lit by the back of a beige, logo-free computer, the screen facing away. A 1-bit dialog shows OK and a greyed-out Cancel. A juice box that doesn't ripple | The APEC cold open's `HE WILL BE FIRED TOMORROW` rewind (Nov 16). It sets up the **Cancel button** the board finally clicks at the Blip (Nov 17) | **In:** the cyan curve rewinds to its first pixel; `downgrading… HDR → 1-bit`. **Out:** the Orb's toast `rewinding… too far`; the 1-bit OK button match-cuts to the beige *low-key research preview* button (Nov 30, 2022). The greyed Cancel pays off at the Blip's video call (Nov 17) | T1 | 4 |
+| F1.1 | `1993` · the screen, **part 1 of 4** | Mas, age 8 (cyan) | A kid lit by the back of a beige, logo-free computer, the screen facing away. A 1-bit dialog shows OK and a greyed-out Cancel. A juice box that doesn't ripple | The APEC cold open's rewind (Nov 16), out of the frozen room where the `Board sync · Fri 12:00` invite arrives (no chyron states the firing). It sets up the **Cancel button** the board finally clicks at the Blip (Nov 17) | **In:** the cyan curve rewinds to its first pixel; `downgrading… HDR → 1-bit`. **Out:** the Orb's toast `rewinding… too far`; the 1-bit OK button match-cuts to the beige *low-key research preview* button (Nov 30, 2022). The greyed Cancel pays off at the Blip's video call (Nov 17) | T1 | 4 |
 | F1.2 | `2005–08 · TPOOL · (REPORTED)` | none (silhouettes) | A silent 240p cutaway: a boardroom door, two shadows, a whispered "twice." Back in the dark room, Mas carves tally marks 1 and 2 beside a fresh 3 | Noon, Nov 17, 2023: the moment Mas's Meet tile drops. The details are held for Ep12's montage. Only the fact of repetition is shown | **In:** a VHS tracking wipe triggered by the tile going grey. **Out:** tally mark 3 on the desk | T2a | 6 |
 
 *Not flashbacks (in-window, present-day):* the board musical-chairs beat (DIRE, NOVIHS, DRUH leave in 2023, CR B6); ODNOMIAR's painted cut line (Dec 2, 2023).
@@ -220,10 +220,10 @@ The columns are: **WHEN** (the on-screen card) · **POV** (the rim) · **WHAT WE
 *Button (present-day):*
 - The UNSC empty chair is for the invited Chinese developers, whose attendance is uncertain.
 - Then Sep 24: the state-dinner seating chart bubble-sorts itself. **Mario's place card was never printed** (CR E43); there is no reserved empty seat.
-- Optional `TODAY · SEP 25` card, then **EVERYTHING AFTER THIS IS SPECULATION**.
+- Optional `TODAY · SEP 25` card. Then the rail's date rolls on by itself into Ep10 (no speculation card; showrunner, 2026-09-25).
 
-### Ep10 · `ep1.9_pace.yaml` · speculative ("OCT 2026?") · [flashbacks](../episodes/ep10/flashbacks.md)
-*Budget 60–150s; about 65s used. The flashbacks are real history, even though the episode is speculative.*
+### Ep10 · `ep1.9_pace.yaml` · extrapolated, post-Sep 2026 ("OCT 2026?") · [flashbacks](../episodes/ep10/flashbacks.md)
+*Budget 60–150s; about 65s used. The flashbacks are real history, even though the present-day plot is extrapolated.*
 
 | ID | WHEN | POV | WHAT WE SEE | WHY HERE | TRANSITION | TIER | LEN |
 |---|---|---|---|---|---|---|---|
@@ -231,7 +231,7 @@ The columns are: **WHEN** (the on-screen card) · **POV** (the rim) · **WHAT WE
 | F10.2 | `JUL 2015 · THE WOODROSE` · **part 4 of 5**: *who knew the curve* | Mario (#1F3A93) | The quiet guest from UDIAB who hasn't joined yet (THE PROFESSOR's lanyard hangs on his chair). Under the table he draws his "very smooth trends" on a napkin. **It ends in `Addendum:` and a price tag** (CR C26), so he is no prophet. Across the table, Mas rolls the napkin's tail into a telescope (the intro gag) | Nobody at the Accord can agree on a unit of pace, so Mario's 2015 napkin becomes international law, price tag included. **Reveal added:** someone at the table already knew the curve would keep going, and had already priced it | **In/out:** THE PLAN blueprint line redraws the napkin curve. **Out:** the napkin → the treaty page | T3 | 25 |
 | F10·m | `2017 / 2019` · the poker bots | Maon (no rim) | Libratus, then Pluribus, beating the pros | MAON deals the Vegas Accord until the Intern takes the shoe | **In/out:** a card shuffle | T3 | 5 |
 
-### Ep11 · `ep1.10_assist_clause.txt` · speculative · [flashbacks](../episodes/ep11/flashbacks.md)
+### Ep11 · `ep1.10_assist_clause.txt` · extrapolated, post-Sep 2026 · [flashbacks](../episodes/ep11/flashbacks.md)
 *Budget 60–150s; about 68s used (65s without the optional micro).*
 
 | ID | WHEN | POV | WHAT WE SEE | WHY HERE | TRANSITION | TIER | LEN |
@@ -241,7 +241,7 @@ The columns are: **WHEN** (the on-screen card) · **POV** (the rim) · **WHAT WE
 | F11.3 | `MAR 2019 · (DISPUTED)` · **THE DIFF** (retitled from "Rashomon," CR E45) | Luap (#FF7F2A) | **Two versions only.** WaPo (2023): LUAP "flew in to fire him." PG (2024), with ACISSEJ: "if he was going to work full-time on OpenAI, we should find someone else to run YC, and he agreed… If he'd said [the reverse]… we'd have been fine with that too." Newer contested text stays excluded. A half-scratched "?" joins the tally | Succession: LUAP trained a successor, and the successor left. The Researcher is now doing the same | **In/out:** LUAP's HTML page with **two edit histories**, diffed in red and green | T2b over T3 | 30 |
 | F11·m | `JUN 2017` (optional) | none | RADNUS's lab publishes the transformer paper [K] | The ATTENTION IS ALL YOU NEED (TO AVOID) heist | Attention-head lasers | T3 | 3 |
 
-### Ep12 · `ep1.11_unclear_which_side.md` · speculative finale · [flashbacks](../episodes/ep12/flashbacks.md)
+### Ep12 · `ep1.11_unclear_which_side.md` · extrapolated finale, post-Sep 2026 · [flashbacks](../episodes/ep12/flashbacks.md)
 *Budget ≤150s; about 71s used. The two biggest reveals of the season land here.*
 
 | ID | WHEN | POV | WHAT WE SEE | WHY HERE | TRANSITION | TIER | LEN |

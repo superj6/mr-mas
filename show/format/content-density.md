@@ -115,13 +115,13 @@ Nothing is needed to fill time. Two swaps would improve the balance at no cost:
 2. **A 20 s dark-room debrief** after the Regulate-Me Tour. The Orb arrives on Jul 24, so from Act 2 on Mas has a confidant. Mas and the Orb watch the forum on his monitor: the Orb's toast, then his lowercase reply.
 
 ### 11 minutes (→ 9:57)
-- **Keep:** the cold open (the chyron and F1.1); the launch (odometer, the Tasya/Radnus dance, SYDNEY, the split screen); the class photo and the Senate, short; KA-CHING; the Orb's arrival; RUMPT's repost; the whole Blip (THE PLAN, the tile, the five days, pass two, the return, the Q\* sticky note); the button.
+- **Keep:** the cold open (the invite and F1.1); the launch (odometer, the Tasya/Radnus dance, SYDNEY, the split screen); the class photo and the Senate, short; KA-CHING; the Orb's arrival; RUMPT's repost; the whole Blip (THE PLAN, the tile, the five days, pass two, the return, the Q\* sticky note); the button.
 - **Cut** the rest of Act 2 and the tag's news (#32–33).
 - **Macro drops to 8%.** The Regulate-Me Tour survives only as two short scenes.
-- **The better 11-minute answer is a two-part pilot.** Ep1a runs from the launch through DevDay and ends on the chyron `HE WILL BE FIRED TOMORROW`, catching up to the cold open. Ep1b is THE BLIP, told twice. Each half is a natural 11 at the 22 cut's density.
+- **The better 11-minute answer is a two-part pilot.** Ep1a runs from the launch through DevDay and ends on the catch-up to the cold open: the invite's reminder and the rail rolling to `NOV 17`, with nothing said about the meeting (pacing-model L9). Ep1b is THE BLIP, told twice. Each half is a natural 11 at the 22 cut's density.
 
 ### 6–8 minutes (→ 6:19)
-THE BLIP only. It opens on the chyron `HE WILL BE FIRED TOMORROW` and "noted.", then a 60 s launch-year montage (odometer, dance-off, class photo, Senate, KA-CHING, the Orb; about 8 s each). Then THE PLAN at 30 s and the Blip at 4:00. RUMPT's 8 s repost stays, so both parties are covered.
+THE BLIP only. It opens on the frozen APEC room, the `Board sync · Fri 12:00` invite and "noted.", then a 60 s launch-year montage (odometer, dance-off, class photo, Senate, KA-CHING, the Orb; about 8 s each). Then THE PLAN at 30 s and the Blip at 4:00. RUMPT's 8 s repost stays, so both parties are covered.
 
 ---
 
@@ -311,7 +311,7 @@ These are **indicative**, not beat-costed. The method: the average floor per bea
    - So do the fairness floor (three camps, Misanthropic and both parties per episode: about 30–40 s even at its most compressed) and THE PLAN.
    - Every 11-minute cut above either drops macro to 2–9% or shrinks scenes below a minute.
 
-2. **Cut the pilot to 22; don't extend it.** A 28-minute pilot with 33 cards is the biggest risk to keeping viewers. The cuts in [§3](#22-minutes-cut-or-merge--2048-with-16-cards) get Ep1 to 20:48 with the Blip intact. If the platform wants a two-part premiere, split it at the `HE WILL BE FIRED TOMORROW` catch-up.
+2. **Cut the pilot to 22; don't extend it.** A 28-minute pilot with 33 cards is the biggest risk to keeping viewers. The cuts in [§3](#22-minutes-cut-or-merge--2048-with-16-cards) get Ep1 to 20:48 with the Blip intact. If the platform wants a two-part premiere, split it at the catch-up to the cold open (the invite's reminder, ≈ 12:31) or at the midpoint crack (≈ 10:13).
 
 3. **Give Ep3 about four minutes of invented scenes**, led by X3.3 THE LINE AT THE PODIUM. If distribution allows variable runtimes, Ep3 can run 19 minutes with 2–3 minutes of invention. Don't pad it with news.
 
@@ -399,7 +399,7 @@ Floor and Best are seconds per beat as drafted. The **22 / 11 / 7** columns are 
 | 1 | CO | APEC "veil" line, unrippled water | news/montage | 15 | 20 | M | B | 15 | 10 | — |
 | 2 | CO | COUNTERPART banquet through window | news/montage | 10 | 15 | M | C | — | — | — |
 | 3 | CO | HTURT hailstone, OGAL-A-RAM phone glow | news/montage | 5 | 8 | M | B | 5 | 4 | — |
-| 4 | CO | Chyron HE WILL BE FIRED TOMORROW / "noted." / rewind | gag | 10 | 15 | I | A | 15 | 12 | 12 |
+| 4 | CO | The `Board sync · Fri 12:00` invite / "noted." / rewind (was the chyron HE WILL BE FIRED TOMORROW, retired by L9) | gag | 10 | 15 | I | A | 15 | 12 | 12 |
 | 5 | CO | F1.1 1993 (4s) + Orb toast | flashback | 6 | 8 | F | A | 8 | 8 | 6 |
 | 6 | A1 | THE ODOMETER DRILL + LLM pre-card | set-piece | 45 | 90 | S | A | 60 | 40 | 10 |
 | 7 | A1 | Eye-watering tear; Nole "scary good" | news/montage | 15 | 20 | M | B | 15 | — | — |

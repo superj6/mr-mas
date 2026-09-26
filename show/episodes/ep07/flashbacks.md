@@ -5,13 +5,14 @@ Source: [timeline/flashback-map.md](../../timeline/flashback-map.md), built from
 - **WC-CRIT #41:** the Rima micro (old F3.3) **moves to EP07**, triggered by Zoph and Metz returning (Jan 14–16, 2026).
 - **WC-CRIT #38:** the exodus is restaged from a "Sound of Music escape" (Nazi-annexation subtext) to a **band breakup**, with the tour bus splitting on the pop-up hills. The callback uses that version.
 
-**Budget:** about 64 s total (F7.1 55 s · F7·m1 5 s · F7·m2 2 s · F7·m3 2 s), just above the floor of the 60–150 s rule, because the exodus moved out. See [open-questions.md](open-questions.md) #6.
+**Budget:** about 59 s total (F7.1 55 s · F7·m2 2 s · F7·m3 2 s), just under the 60 s guide, because the exodus moved out and the second pass cut F7·m1 with its beat. No padding is added. See [open-questions.md](open-questions.md) #6.
 
 **IDs** follow the season [flashback map](../../timeline/flashback-map.md) (§2, Ep7): the Rima micro is **F7·m1**, the 1993 micro **F7·m2**, the exodus callback **F7·m3**.
 
 ---
 
-## F7·m1 (moved from Ep3) · "THE SPOTLIGHT" (micro, 5 s)
+## ~~F7·m1 (moved from Ep3) · "THE SPOTLIGHT" (micro, 5 s)~~ · CUT (second pass)
+**Cut** with beat #3: the co-founders' return goes to the ticker because it doesn't touch Mas, and the micro had nothing left to motivate. The draft is kept below for reference only.
 | Field | |
 |---|---|
 | **When** | 2013 → 2016 → 2018 |
@@ -39,9 +40,9 @@ Source: [timeline/flashback-map.md](../../timeline/flashback-map.md), built from
 
 **What we see.** A 1-bit close-up of the kid's keyboard with **the CAPS LOCK light on.** No text.
 
-**Why here.** "they are funny, and I laughed." is Mas's first capital letter of the season. The micro plants that his lowercase is learned (poker, 2003) and that the 8-year-old typed in ALL CAPS, paid off in EP12's `HOW DO I WIN?`.
+**Why here.** "they are funny, and I laughed." is Mas's first capital "I" of the season (he has typed acronyms before, never the `I`). **Conditional:** it plays only if the post's capital is verified ([open-questions.md](open-questions.md) #1). The micro plants that his lowercase is learned (poker, 2003) and that the 8-year-old typed in ALL CAPS, paid off in EP12's `HOW DO I WIN?`.
 
-**Intro tie-in:** from this episode the intro's bar-3 screen is rotated **35°**, with an unreadable glow of capitals.
+**Intro tie-in:** from this episode the intro's bar-3 screen is rotated **35°**. Its content stays unreadable, with no glow of capitals, so the intro never previews this micro ([intro-slot.md](intro-slot.md)).
 
 ---
 
@@ -64,12 +65,12 @@ Source: [timeline/flashback-map.md](../../timeline/flashback-map.md), built from
 
 **Why here**
 - RETEP is hired on Valentine's Day 2026 [V], and Mas hands him a heart-shaped box.
-- **The button:** MYTHIC leaks from an unlocked drafts folder on Mar 26 [V]. The TOO DANGEROUS vault has always leaked.
+- **The tag:** MYTHIC leaks from an unlocked drafts folder on Mar 26 [V], behind Mario on his video call with Mas. The TOO DANGEROUS vault has always leaked.
 - This roasts Misanthropic, which inherited the move, and it roasts NopeAI too, since GTP-2 was NopeAI's box.
 
 **Transition**
 - **In:** a heart-shaped iris wipe from RETEP's Valentine's box.
-- **Out:** the 2019 box's last lock springs, the heart-wipe opens back onto 2026, and the lobster is handed a nonprofit foundation shell (OpenClaw Foundation [V]). Box → box. The vault door in the button uses the same hinge sound.
+- **Out:** the 2019 box's last lock springs, the heart-wipe opens back onto 2026, and the lobster is handed a nonprofit foundation shell (OpenClaw Foundation [V]). Box → box. The vault door in the tag call uses the same hinge sound.
 
 **Note on the Orb iris rule:** this is a heart-shaped *film* iris wipe, not the Orb's iris replay. The Orb can only replay post-2019 events, and Feb 2019 predates its launch. Keep the two visually distinct.
 
@@ -85,7 +86,9 @@ Source: [timeline/flashback-map.md](../../timeline/flashback-map.md), built from
 
 **What we see.** When the `SUPPLY CHAIN RISK` stamp lands (Mar 5), the pop-up hills from EP03 appear under it for two seconds. The tour bus has already split in two, with the band (Mario, Adelina, HALO and others) in the second half, and the hills fold shut under the stamp like a closed book.
 
-**Why here.** He has been labeled a defector before, and THE HUG is their first embrace since the breakup.
+**Why here.** He has been labeled a defector before, and THE HUG (#17) was their first embrace since the breakup.
+
+**Style moment (proposed) · a return (style-range 7.E):** the callback plays in Ep3's own paper pop-up book, which folds shut on the stamp's impact. Motivation: the stamp closes the book where his old label lives. It's a return to an aired medium, not a new one.
 
 ---
 
@@ -94,7 +97,7 @@ Source: [timeline/flashback-map.md](../../timeline/flashback-map.md), built from
 |---|---|---|---|
 | 1993 screen (4 parts) | EP04 · the other 1993 (SYNNED) | **EP07 · CAPS LOCK** | EP12 · `HOW DO I WIN?` |
 | MARIO backstory | EP03 · the exodus (band breakup) | **EP07 · the Valentine's box, plus the 2 s callback** | EP10 · Woodrose part 4 (the napkin curve) |
-| RIMA | EP03 resignation (present day) | **EP07 · the spotlight micro** | EP09 · the nesting doll |
+| RIMA | EP03 resignation (present day) | **EP07 · cut to the ticker** (second pass) | EP09 · ticker only |
 | TOO DANGEROUS box | EP04 · vault in the skyline | **EP07 · origin, plus the MYTHIC leak** | EP08 · the government locks it for 18 days |
 
 **Dependency on EP03 (confirmed):** EP03 airs the full band-breakup exodus as F3.3 (the tour bus splitting on the pop-up hills), and the Rima micro is **not** in EP03.

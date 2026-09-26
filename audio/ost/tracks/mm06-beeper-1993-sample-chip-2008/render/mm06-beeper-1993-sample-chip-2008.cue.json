@@ -1,0 +1,1532 @@
+{
+ "schema": "mrmas-ost-cue/1",
+ "id": "mm06-beeper-1993-sample-chip-2008",
+ "mm": "MM-06",
+ "family": "P10 ERA TIERS (T1 1-BIT, T2 EARLY-WEB16) + the render front",
+ "title": "Beeper, 1993 / Sample-Chip, 2008",
+ "version": "1.1 (fix 1, 2026-09-26)",
+ "composer": "OST composer C (fix 1: composer A)",
+ "tone": "his past as the machine heard it: a 1-bit kid poking a beeper, then a 16-bit jazz trio remembering the early web -- a memory, not a video game",
+ "tags": [
+  "era tiers",
+  "flashback",
+  "1993",
+  "1-bit",
+  "2008",
+  "16-bit",
+  "sample-chip",
+  "library",
+  "render front"
+ ],
+ "usage": "BI",
+ "scenes": [
+  "Ep1 sc 3-4 F1.1 (1993, 0:30)",
+  "Ep4 1993 part 2 (NESNEJ: the empty slot)",
+  "Ep7 1993 part 3",
+  "Ep12 1993 part 4 (see MM-36)",
+  "Eps 2-3 2005-14 flashbacks (2008 keynote, 2012 sale, TIDDER 2014)",
+  "render-front transitions (any episode)"
+ ],
+ "description": "Fix 1 (2026-09-26): rule 4 -- bar 7 opens on a re-struck C5 (was F5), so the knee never completes by pitch class (b5-7 and b7-9 did); re-rendered on the fixed engine (meter, pizz tuning, render hang); parts render with the engine workers again.",
+ "motifs": [
+  "the flat line in uneven registers (b1-5, b7)",
+  "KINK left hanging (b6, b8)",
+  "UPSELL + close, 1-bit (b13-16) and the empty slot (b17.1)",
+  "WATER_LINE young: the nudge twice (b18-19, b22-23)",
+  "BUILD compiling 4/8/12/16 (b25-28), full (b28-31), tag (b32.3)",
+  "render front: Fm(add9) 3 tiers"
+ ],
+ "key": "F minor (1-bit); A-flat-major colours Abmaj9 - Dbmaj9 - Fm9 - Eb9sus4 (16-bit); Fm(add9) (render front)",
+ "engine": {
+  "version": "mrmas-ost-engine 1.1 (2026-09-26: fix1 -- meter axis, sample tuning, render pool, QA 5a-d)",
+  "rendered": "2026-09-26T01:38:44",
+  "render_seconds": 184.9
+ },
+ "timing": {
+  "bpm": 96.0,
+  "beat_unit_quarters": 1.0,
+  "tempo_map": [
+   {
+    "bar": 1,
+    "beat": 1.0,
+    "bpm": 96.0,
+    "ramp_in": false,
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "meter_map": [
+   {
+    "bar": 1,
+    "meter": "4/4",
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "swing": 1.0,
+  "swing_unit_quarters": 0.5,
+  "pickup_beats": 0.0,
+  "bars": 34,
+  "length_s": 85.0,
+  "length_frames": 2040.0,
+  "fps": 24,
+  "end": {
+   "sec": 85.0,
+   "frame": 2040.0,
+   "bar": 35,
+   "beat": 1.0
+  },
+  "album_duration_s": 87.8994,
+  "album_duration_frames": 2109.58,
+  "album_loops": 1
+ },
+ "sections": [
+  {
+   "label": "I 1993: the flat line",
+   "start": {
+    "sec": 0.0,
+    "frame": 0.0,
+    "bar": 1,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 10.0,
+    "frame": 240.0,
+    "bar": 5,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "I 1993: the knee's cells",
+   "start": {
+    "sec": 10.0,
+    "frame": 240.0,
+    "bar": 5,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 20.0,
+    "frame": 480.0,
+    "bar": 9,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "I 1993: Fm9 arpeggios",
+   "start": {
+    "sec": 20.0,
+    "frame": 480.0,
+    "bar": 9,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 30.0,
+    "frame": 720.0,
+    "bar": 13,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "I 1993: NESNEJ (the empty slot)",
+   "start": {
+    "sec": 30.0,
+    "frame": 720.0,
+    "bar": 13,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 40.0,
+    "frame": 960.0,
+    "bar": 17,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "II 2008: young Mas",
+   "start": {
+    "sec": 40.0,
+    "frame": 960.0,
+    "bar": 17,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 60.0,
+    "frame": 1440.0,
+    "bar": 25,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "II 2008: the dial-up era",
+   "start": {
+    "sec": 60.0,
+    "frame": 1440.0,
+    "bar": 25,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 80.0,
+    "frame": 1920.0,
+    "bar": 33,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "render front: 1-bit -> 16-bit -> BASE",
+   "start": {
+    "sec": 80.0,
+    "frame": 1920.0,
+    "bar": 33,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 85.0,
+    "frame": 2040.0,
+    "bar": 35,
+    "beat": 1.0
+   }
+  }
+ ],
+ "markers": [
+  {
+   "label": "I: 1993 (1-bit)",
+   "sec": 0.0,
+   "frame": 0.0,
+   "bar": 1,
+   "beat": 1.0
+  },
+  {
+   "label": "I: the kink (hanging)",
+   "sec": 12.5,
+   "frame": 300.0,
+   "bar": 6,
+   "beat": 1.0
+  },
+  {
+   "label": "I: Fm9 arpeggios",
+   "sec": 20.0,
+   "frame": 480.0,
+   "bar": 9,
+   "beat": 1.0
+  },
+  {
+   "label": "I: NESNEJ 1993, the Upsell",
+   "sec": 30.0,
+   "frame": 720.0,
+   "bar": 13,
+   "beat": 1.0
+  },
+  {
+   "label": "I: the close lands",
+   "sec": 38.75,
+   "frame": 930.0,
+   "bar": 16,
+   "beat": 3.0
+  },
+  {
+   "label": "II: the band enters after the slot",
+   "sec": 40.625,
+   "frame": 975.0,
+   "bar": 17,
+   "beat": 2.0
+  },
+  {
+   "label": "II: young Mas, the Water Line",
+   "sec": 42.5,
+   "frame": 1020.0,
+   "bar": 18,
+   "beat": 1.0
+  },
+  {
+   "label": "II: the Build compiles",
+   "sec": 60.0,
+   "frame": 1440.0,
+   "bar": 25,
+   "beat": 1.0
+  },
+  {
+   "label": "II: the tag \"shipped\"",
+   "sec": 78.75,
+   "frame": 1890.0,
+   "bar": 32,
+   "beat": 3.0
+  },
+  {
+   "label": "render front: 1-bit",
+   "sec": 80.0,
+   "frame": 1920.0,
+   "bar": 33,
+   "beat": 1.0
+  },
+  {
+   "label": "render front: 16-bit",
+   "sec": 81.25,
+   "frame": 1950.0,
+   "bar": 33,
+   "beat": 3.0
+  },
+  {
+   "label": "render front: BASE",
+   "sec": 82.5,
+   "frame": 1980.0,
+   "bar": 34,
+   "beat": 1.0
+  }
+ ],
+ "hit_check": [
+  {
+   "t": 0.0,
+   "offset_ms": 2.7,
+   "strength": 24.82
+  },
+  {
+   "t": 12.5,
+   "offset_ms": -4.0,
+   "strength": 13.23
+  },
+  {
+   "t": 20.0,
+   "offset_ms": -5.3,
+   "strength": 22.48
+  },
+  {
+   "t": 30.0,
+   "offset_ms": -5.3,
+   "strength": 11.73
+  },
+  {
+   "t": 38.75,
+   "offset_ms": -6.0,
+   "strength": 13.4
+  },
+  {
+   "t": 40.625,
+   "offset_ms": -3.7,
+   "strength": 7.83
+  },
+  {
+   "t": 42.5,
+   "offset_ms": -6.7,
+   "strength": 5.5
+  },
+  {
+   "t": 60.0,
+   "offset_ms": -5.3,
+   "strength": 2.04
+  },
+  {
+   "t": 78.75,
+   "offset_ms": -6.0,
+   "strength": 1.74
+  },
+  {
+   "t": 80.0,
+   "offset_ms": -5.3,
+   "strength": 8.37
+  },
+  {
+   "t": 81.25,
+   "offset_ms": 0.7,
+   "strength": 4.72
+  },
+  {
+   "t": 82.5,
+   "offset_ms": -1.3,
+   "strength": 3.22
+  }
+ ],
+ "sfx_slots": [
+  {
+   "t": [
+    17,
+    1
+   ],
+   "sfx": "the register \"clunks with no bell\" (Ep4 1993 part 2): the empty slot"
+  },
+  {
+   "t": [
+    33,
+    1
+   ],
+   "sfx": "render_front_sweep F4 -> F6 across b33.1-b34.2 (the chord sits under it, top G4)"
+  }
+ ],
+ "silence_windows": [
+  {
+   "t0": 40.005,
+   "t1": 40.605,
+   "label": "the empty slot (NESNEJ 1993): the SFX register clunks with no bell; every stem rests",
+   "max_dbfs": -70.0
+  }
+ ],
+ "vo_windows": [],
+ "knee_whole": 0,
+ "f_major": {
+  "limit": 0.08,
+  "windows": 53,
+  "worst": 0.234,
+  "worst_sieved": 0.122,
+  "ok": true,
+  "ok_written": true,
+  "ok_spectral": true,
+  "f_inaudible_windows": 0,
+  "a_classes": {
+   "written": 0,
+   "resonance": 0,
+   "explained": 5,
+   "unattributed": 0
+  },
+  "written_a_over_f_bass": [],
+  "written_third": {
+   "ok": true,
+   "count": 0,
+   "events": [],
+   "grazes": [],
+   "n_grazes": 0,
+   "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+  },
+  "fails": [],
+  "explained": [
+   {
+    "t0": 65.2,
+    "t1": 65.575,
+    "a_over_f": 0.054,
+    "a_over_f_sieved": 0.091,
+    "written_a": [],
+    "f_share": 0.21,
+    "a_from": {
+     "chip": 100,
+     "piano": 0,
+     "strings": 0
+    },
+    "a_peaks": [
+     {
+      "stem": "chip",
+      "hz": 429.2,
+      "kind": "partial 5 of written F2 (m16_bass)",
+      "cls": "partial",
+      "share": 0.5
+     },
+     {
+      "stem": "chip",
+      "hz": 436.5,
+      "kind": "partial 5 of written F2 (m16_bass)",
+      "cls": "partial",
+      "share": 0.31
+     },
+     {
+      "stem": "chip",
+      "hz": 448.2,
+      "kind": "resonance (no written note has this partial)",
+      "cls": "resonance",
+      "share": 0.19
+     }
+    ],
+    "a_class": "explained",
+    "ok": true,
+    "ok_spectral": true
+   },
+   {
+    "t0": 66.45,
+    "t1": 66.825,
+    "a_over_f": 0.063,
+    "a_over_f_sieved": 0.122,
+    "written_a": [],
+    "f_share": 0.204,
+    "a_from": {
+     "chip": 100,
+     "piano": 0,
+     "strings": 0
+    },
+    "a_peaks": [
+     {
+      "stem": "chip",
+      "hz": 429.2,
+      "kind": "partial 5 of written F2 (m16_bass)",
+      "cls": "partial",
+      "share": 0.44
+     },
+     {
+      "stem": "chip",
+      "hz": 435.8,
+      "kind": "partial 5 of written F2 (m16_bass)",
+      "cls": "partial",
+      "share": 0.42
+     },
+     {
+      "stem": "chip",
+      "hz": 442.4,
+      "kind": "partial 5 of written F2 (m16_bass)",
+      "cls": "partial",
+      "share": 0.14
+     }
+    ],
+    "a_class": "explained",
+    "ok": true,
+    "ok_spectral": true
+   },
+   {
+    "t0": 75.2,
+    "t1": 75.575,
+    "a_over_f": 0.06,
+    "a_over_f_sieved": 0.096,
+    "written_a": [],
+    "f_share": 0.173,
+    "a_from": {
+     "chip": 100,
+     "piano": 0,
+     "strings": 0
+    },
+    "a_peaks": [
+     {
+      "stem": "chip",
+      "hz": 429.2,
+      "kind": "partial 5 of written F2 (m16_bass)",
+      "cls": "partial",
+      "share": 0.48
+     },
+     {
+      "stem": "chip",
+      "hz": 435.1,
+      "kind": "partial 5 of written F2 (m16_bass)",
+      "cls": "partial",
+      "share": 0.36
+     },
+     {
+      "stem": "chip",
+      "hz": 448.2,
+      "kind": "resonance (no written note has this partial)",
+      "cls": "resonance",
+      "share": 0.16
+     }
+    ],
+    "a_class": "explained",
+    "ok": true,
+    "ok_spectral": true
+   },
+   {
+    "t0": 76.45,
+    "t1": 76.825,
+    "a_over_f": 0.053,
+    "a_over_f_sieved": 0.106,
+    "written_a": [],
+    "f_share": 0.211,
+    "a_from": {
+     "chip": 100,
+     "strings": 0,
+     "piano": 0
+    },
+    "a_peaks": [
+     {
+      "stem": "chip",
+      "hz": 429.2,
+      "kind": "partial 5 of written F2 (m16_bass)",
+      "cls": "partial",
+      "share": 0.58
+     },
+     {
+      "stem": "chip",
+      "hz": 448.2,
+      "kind": "resonance (no written note has this partial)",
+      "cls": "resonance",
+      "share": 0.22
+     },
+     {
+      "stem": "chip",
+      "hz": 441.7,
+      "kind": "partial 5 of written F2 (m16_bass)",
+      "cls": "partial",
+      "share": 0.21
+     }
+    ],
+    "a_class": "explained",
+    "ok": true,
+    "ok_spectral": true
+   },
+   {
+    "t0": 83.071,
+    "t1": 83.679,
+    "a_over_f": 0.184,
+    "a_over_f_sieved": 0.087,
+    "written_a": [],
+    "f_share": 0.43,
+    "a_from": {
+     "piano": 98,
+     "strings": 2,
+     "bass": 0
+    },
+    "a_peaks": [
+     {
+      "stem": "piano",
+      "hz": 433.6,
+      "kind": "partial 5 of written F2 (felt_base)",
+      "cls": "partial",
+      "share": 0.89
+     },
+     {
+      "stem": "piano",
+      "hz": 873.8,
+      "kind": "partial 10 of written F2 (felt_base)",
+      "cls": "partial",
+      "share": 0.1
+     },
+     {
+      "stem": "piano",
+      "hz": 1726.3,
+      "kind": "partial 13 of written C3 (felt_base)",
+      "cls": "partial",
+      "share": 0.01
+     }
+    ],
+    "a_class": "explained",
+    "ok": true,
+    "ok_spectral": true
+   }
+  ],
+  "fixed_resonances": [
+   {
+    "stem": "chip",
+    "hz": 448.2,
+    "windows": 3,
+    "at": [
+     65.2,
+     75.2,
+     76.45
+    ],
+    "note": "the same A-class peak under different written notes: a fixed resonance of an instrument in this stem, not a written third"
+   }
+  ],
+  "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+ },
+ "knee_completion": 0,
+ "room_sfx_windows": [],
+ "qa": {
+  "balance": {
+   "balance": {
+    "piano": 4,
+    "orch": 6,
+    "bigband": 0,
+    "chip": 90
+   },
+   "rhythm_pct_of_all": 1,
+   "chip_share": 90,
+   "balance_energy": {
+    "piano": 2,
+    "orch": 1,
+    "bigband": 0,
+    "chip": 97
+   },
+   "method": "theme stemtable (gated loudness per section, time-weighted, rhythm/fx excluded; it counts a brief stab at its own loudness for the whole section) + balance_energy (ungated energy)",
+   "sections": [
+    {
+     "section": "I 1993: the flat line",
+     "share": {
+      "piano": 0,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 100
+     }
+    },
+    {
+     "section": "I 1993: the knee's cells",
+     "share": {
+      "piano": 0,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 100
+     }
+    },
+    {
+     "section": "I 1993: Fm9 arpeggios",
+     "share": {
+      "piano": 0,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 100
+     }
+    },
+    {
+     "section": "I 1993: NESNEJ (the empty slot)",
+     "share": {
+      "piano": 0,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 100
+     }
+    },
+    {
+     "section": "II 2008: young Mas",
+     "share": {
+      "piano": 0,
+      "orch": 9,
+      "bigband": 0,
+      "chip": 91
+     }
+    },
+    {
+     "section": "II 2008: the dial-up era",
+     "share": {
+      "piano": 0,
+      "orch": 7,
+      "bigband": 0,
+      "chip": 93
+     }
+    },
+    {
+     "section": "render front: 1-bit -> 16-bit -> BASE",
+     "share": {
+      "piano": 35,
+      "orch": 8,
+      "bigband": 0,
+      "chip": 57
+     }
+    }
+   ]
+  },
+  "short_term_underscore": {
+   "p95": -17.61,
+   "median": -20.41,
+   "max": -17.21
+  },
+  "band_2_6k_db": -18.3,
+  "centroid_hz": 437.0,
+  "f_major": {
+   "limit": 0.08,
+   "windows": 53,
+   "worst": 0.234,
+   "worst_sieved": 0.122,
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "f_inaudible_windows": 0,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 5,
+    "unattributed": 0
+   },
+   "written_a_over_f_bass": [],
+   "written_third": {
+    "ok": true,
+    "count": 0,
+    "events": [],
+    "grazes": [],
+    "n_grazes": 0,
+    "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+   },
+   "fails": [],
+   "explained": [
+    {
+     "t0": 65.2,
+     "t1": 65.575,
+     "a_over_f": 0.054,
+     "a_over_f_sieved": 0.091,
+     "written_a": [],
+     "f_share": 0.21,
+     "a_from": {
+      "chip": 100,
+      "piano": 0,
+      "strings": 0
+     },
+     "a_peaks": [
+      {
+       "stem": "chip",
+       "hz": 429.2,
+       "kind": "partial 5 of written F2 (m16_bass)",
+       "cls": "partial",
+       "share": 0.5
+      },
+      {
+       "stem": "chip",
+       "hz": 436.5,
+       "kind": "partial 5 of written F2 (m16_bass)",
+       "cls": "partial",
+       "share": 0.31
+      },
+      {
+       "stem": "chip",
+       "hz": 448.2,
+       "kind": "resonance (no written note has this partial)",
+       "cls": "resonance",
+       "share": 0.19
+      }
+     ],
+     "a_class": "explained",
+     "ok": true,
+     "ok_spectral": true
+    },
+    {
+     "t0": 66.45,
+     "t1": 66.825,
+     "a_over_f": 0.063,
+     "a_over_f_sieved": 0.122,
+     "written_a": [],
+     "f_share": 0.204,
+     "a_from": {
+      "chip": 100,
+      "piano": 0,
+      "strings": 0
+     },
+     "a_peaks": [
+      {
+       "stem": "chip",
+       "hz": 429.2,
+       "kind": "partial 5 of written F2 (m16_bass)",
+       "cls": "partial",
+       "share": 0.44
+      },
+      {
+       "stem": "chip",
+       "hz": 435.8,
+       "kind": "partial 5 of written F2 (m16_bass)",
+       "cls": "partial",
+       "share": 0.42
+      },
+      {
+       "stem": "chip",
+       "hz": 442.4,
+       "kind": "partial 5 of written F2 (m16_bass)",
+       "cls": "partial",
+       "share": 0.14
+      }
+     ],
+     "a_class": "explained",
+     "ok": true,
+     "ok_spectral": true
+    },
+    {
+     "t0": 75.2,
+     "t1": 75.575,
+     "a_over_f": 0.06,
+     "a_over_f_sieved": 0.096,
+     "written_a": [],
+     "f_share": 0.173,
+     "a_from": {
+      "chip": 100,
+      "piano": 0,
+      "strings": 0
+     },
+     "a_peaks": [
+      {
+       "stem": "chip",
+       "hz": 429.2,
+       "kind": "partial 5 of written F2 (m16_bass)",
+       "cls": "partial",
+       "share": 0.48
+      },
+      {
+       "stem": "chip",
+       "hz": 435.1,
+       "kind": "partial 5 of written F2 (m16_bass)",
+       "cls": "partial",
+       "share": 0.36
+      },
+      {
+       "stem": "chip",
+       "hz": 448.2,
+       "kind": "resonance (no written note has this partial)",
+       "cls": "resonance",
+       "share": 0.16
+      }
+     ],
+     "a_class": "explained",
+     "ok": true,
+     "ok_spectral": true
+    },
+    {
+     "t0": 76.45,
+     "t1": 76.825,
+     "a_over_f": 0.053,
+     "a_over_f_sieved": 0.106,
+     "written_a": [],
+     "f_share": 0.211,
+     "a_from": {
+      "chip": 100,
+      "strings": 0,
+      "piano": 0
+     },
+     "a_peaks": [
+      {
+       "stem": "chip",
+       "hz": 429.2,
+       "kind": "partial 5 of written F2 (m16_bass)",
+       "cls": "partial",
+       "share": 0.58
+      },
+      {
+       "stem": "chip",
+       "hz": 448.2,
+       "kind": "resonance (no written note has this partial)",
+       "cls": "resonance",
+       "share": 0.22
+      },
+      {
+       "stem": "chip",
+       "hz": 441.7,
+       "kind": "partial 5 of written F2 (m16_bass)",
+       "cls": "partial",
+       "share": 0.21
+      }
+     ],
+     "a_class": "explained",
+     "ok": true,
+     "ok_spectral": true
+    },
+    {
+     "t0": 83.071,
+     "t1": 83.679,
+     "a_over_f": 0.184,
+     "a_over_f_sieved": 0.087,
+     "written_a": [],
+     "f_share": 0.43,
+     "a_from": {
+      "piano": 98,
+      "strings": 2,
+      "bass": 0
+     },
+     "a_peaks": [
+      {
+       "stem": "piano",
+       "hz": 433.6,
+       "kind": "partial 5 of written F2 (felt_base)",
+       "cls": "partial",
+       "share": 0.89
+      },
+      {
+       "stem": "piano",
+       "hz": 873.8,
+       "kind": "partial 10 of written F2 (felt_base)",
+       "cls": "partial",
+       "share": 0.1
+      },
+      {
+       "stem": "piano",
+       "hz": 1726.3,
+       "kind": "partial 13 of written C3 (felt_base)",
+       "cls": "partial",
+       "share": 0.01
+      }
+     ],
+     "a_class": "explained",
+     "ok": true,
+     "ok_spectral": true
+    }
+   ],
+   "fixed_resonances": [
+    {
+     "stem": "chip",
+     "hz": 448.2,
+     "windows": 3,
+     "at": [
+      65.2,
+      75.2,
+      76.45
+     ],
+     "note": "the same A-class peak under different written notes: a fixed resonance of an instrument in this stem, not a written third"
+    }
+   ],
+   "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+  },
+  "knee_completion": {
+   "count": 0,
+   "hits": [],
+   "max_gap_s": 2.5,
+   "rule": "OST-BIBLE rule 4: the knee never plays whole in an episode, in any register, across a phrase boundary too"
+  },
+  "sub_under_room": [],
+  "no_third": [
+   {
+    "t0": 79.1825,
+    "t1": 79.98,
+    "a": 0.004,
+    "ab": 0.0,
+    "ok": true
+   }
+  ],
+  "silence": [
+   {
+    "t0": 40.005,
+    "t1": 40.605,
+    "label": "the empty slot (NESNEJ 1993): the SFX register clunks with no bell; every stem rests",
+    "peak_dbfs": -161.5,
+    "limit": -70.0,
+    "ok": 1.0
+   }
+  ],
+  "hard_stops": [],
+  "vo_windows": [],
+  "knee_whole": 0,
+  "motifs_found": {
+   "KINK": [
+    {
+     "inst": "bline",
+     "t": 12.5,
+     "transpose": -12
+    },
+    {
+     "inst": "bline",
+     "t": 17.5,
+     "transpose": 0
+    },
+    {
+     "inst": "m16_lead",
+     "t": 49.1667,
+     "transpose": 0
+    },
+    {
+     "inst": "m16_build",
+     "t": 62.8125,
+     "transpose": -12
+    },
+    {
+     "inst": "m16_build",
+     "t": 65.3125,
+     "transpose": -12
+    },
+    {
+     "inst": "m16_build",
+     "t": 67.8125,
+     "transpose": -12
+    },
+    {
+     "inst": "m16_build",
+     "t": 69.0625,
+     "transpose": -12
+    },
+    {
+     "inst": "m16_build",
+     "t": 70.3125,
+     "transpose": -12
+    },
+    {
+     "inst": "m16_build",
+     "t": 71.5625,
+     "transpose": -12
+    },
+    {
+     "inst": "m16_build",
+     "t": 72.8125,
+     "transpose": -12
+    },
+    {
+     "inst": "m16_build",
+     "t": 74.0625,
+     "transpose": -12
+    },
+    {
+     "inst": "m16_build",
+     "t": 75.3125,
+     "transpose": -12
+    }
+   ],
+   "UPSELL": [
+    {
+     "inst": "bline",
+     "t": 30.0,
+     "transpose": 0
+    }
+   ],
+   "BUILD": [
+    {
+     "inst": "m16_build",
+     "t": 67.5,
+     "transpose": 0
+    },
+    {
+     "inst": "m16_build",
+     "t": 70.0,
+     "transpose": 0
+    },
+    {
+     "inst": "m16_build",
+     "t": 72.5,
+     "transpose": 0
+    },
+    {
+     "inst": "m16_build",
+     "t": 75.0,
+     "transpose": 0
+    }
+   ]
+  },
+  "swing": {
+   "bline": {
+    "offbeats": 55,
+    "median_frames": 7.5,
+    "hum_ms": 0
+   },
+   "broot": {
+    "offbeats": 22,
+    "median_frames": 7.5,
+    "hum_ms": 0
+   },
+   "m16_felt": {
+    "offbeats": 63,
+    "median_frames": 10.14,
+    "hum_ms": 3
+   },
+   "m16_lead": {
+    "offbeats": 9,
+    "median_frames": 10.0,
+    "hum_ms": 0
+   },
+   "m16_tpt": {
+    "offbeats": 4,
+    "median_frames": 10.04,
+    "hum_ms": 6
+   },
+   "m16_bass": {
+    "offbeats": 3,
+    "median_frames": 10.0,
+    "hum_ms": 3
+   },
+   "m16_jazz": {
+    "offbeats": 10,
+    "median_frames": 10.0,
+    "hum_ms": 3
+   },
+   "m16_brush": {
+    "offbeats": 3,
+    "median_frames": 10.0,
+    "hum_ms": 3
+   },
+   "m16_swish": {
+    "offbeats": 2,
+    "median_frames": 10.0,
+    "hum_ms": 0
+   },
+   "m16_build": {
+    "offbeats": 45,
+    "median_frames": 7.5,
+    "hum_ms": 0
+   },
+   "m16_str": {
+    "offbeats": 4,
+    "median_frames": 7.5,
+    "hum_ms": 8
+   }
+  },
+  "banned": [],
+  "loop_verify": {
+   "total_db": -70.5,
+   "per_family": {
+    "strings": -134.3,
+    "chip": -70.5
+   },
+   "note": "pass 2 of the body played twice (identical draws) vs the folded loop; ~-70 dB = the outro's humanised lead-in reaching back into pass 2 (not a loop error); intro tails reaching pass 2 would also raise it"
+  }
+ },
+ "loop": {
+  "start": {
+   "sec": 40.0,
+   "frame": 960.0,
+   "bar": 17,
+   "beat": 1.0
+  },
+  "end": {
+   "sec": 60.0,
+   "frame": 1440.0,
+   "bar": 25,
+   "beat": 1.0
+  },
+  "samples": 960000,
+  "seconds": 20.0,
+  "frames": 480.0,
+  "frame_aligned": true,
+  "notes": 198,
+  "tail_seconds": 2.59,
+  "seam": {
+   "seam_hf_ratio_to_median": 0.68,
+   "seam_hf_percentile": 36.03,
+   "wrap_jump": 0.01003,
+   "wrap_jump_vs_p99_step": 0.538,
+   "rms_last_50ms_db": -19.3,
+   "rms_first_50ms_db": -22.5,
+   "verdict": "seamless"
+  },
+  "loudness": {
+   "lufs": -19.08,
+   "lra": 3.13,
+   "true_peak_db": -3.15,
+   "peak_db": -3.16,
+   "rms_db": -21.09,
+   "crest_db": 17.94,
+   "seconds": 40.0
+  }
+ },
+ "files": {
+  "album_wav": "render/mm06-beeper-1993-sample-chip-2008-album.wav",
+  "album_mp3": "render/mm06-beeper-1993-sample-chip-2008-album.mp3",
+  "underscore_wav": "render/mm06-beeper-1993-sample-chip-2008-underscore.wav",
+  "underscore_mp3": "render/mm06-beeper-1993-sample-chip-2008-underscore.mp3",
+  "stems": {
+   "piano": "render/stems/mm06-beeper-1993-sample-chip-2008-piano.flac",
+   "strings": "render/stems/mm06-beeper-1993-sample-chip-2008-strings.flac",
+   "bass": "render/stems/mm06-beeper-1993-sample-chip-2008-bass.flac",
+   "chip": "render/stems/mm06-beeper-1993-sample-chip-2008-chip.flac"
+  },
+  "loop_wav": "render/mm06-beeper-1993-sample-chip-2008-loop.wav",
+  "loop_tail_wav": "render/mm06-beeper-1993-sample-chip-2008-loop-tail.wav",
+  "loop_preview_mp3": "render/mm06-beeper-1993-sample-chip-2008-loop-x3-preview.mp3",
+  "midi": "render/mm06-beeper-1993-sample-chip-2008.mid",
+  "pianoroll": "render/mm06-beeper-1993-sample-chip-2008-pianoroll.png"
+ },
+ "masters": {
+  "album": {
+   "target_lufs": -14.0,
+   "ceiling_dbtp": -1.0,
+   "comp": {
+    "thresh_db": -20,
+    "ratio": 1.8
+   },
+   "dialog_pocket": null,
+   "measured": {
+    "lufs": -14.0,
+    "lra": 5.38,
+    "true_peak_db": -1.15,
+    "peak_db": -1.16,
+    "rms_db": -16.57,
+    "crest_db": 15.42,
+    "seconds": 87.8994
+   }
+  },
+  "underscore": {
+   "target_lufs": -20.0,
+   "ceiling_dbtp": -3.0,
+   "comp": {
+    "thresh_db": -28,
+    "ratio": 1.3,
+    "att_ms": 40.0,
+    "rel_ms": 350.0
+   },
+   "dialog_pocket": {
+    "f": 2500.0,
+    "db": -2.0,
+    "q": 0.7
+   },
+   "measured": {
+    "lufs": -20.01,
+    "lra": 5.86,
+    "true_peak_db": -3.15,
+    "peak_db": -3.16,
+    "rms_db": -22.46,
+    "crest_db": 19.3,
+    "seconds": 87.8994
+   }
+  }
+ },
+ "stems": {
+  "sum_vs_underscore_residual_db": -174.1,
+  "families_present": [
+   "bass",
+   "chip",
+   "piano",
+   "strings"
+  ],
+  "family_share_lu": {
+   "piano": -2.9,
+   "strings": -7.9,
+   "bass": -9.7,
+   "chip": 0.0
+  }
+ },
+ "spectrum": {
+  "sub": -19.9,
+  "bass": -5.0,
+  "lowmid": -2.1,
+  "mid": -12.3,
+  "presence": -25.1,
+  "air": -37.6,
+  "centroid_hz": 437.0
+ },
+ "bar_levels": [
+  {
+   "bar": 1,
+   "rms_db": -24.9,
+   "peak_db": -17.200000762939453
+  },
+  {
+   "bar": 2,
+   "rms_db": -25.0,
+   "peak_db": -17.100000381469727
+  },
+  {
+   "bar": 3,
+   "rms_db": -25.7,
+   "peak_db": -17.5
+  },
+  {
+   "bar": 4,
+   "rms_db": -24.4,
+   "peak_db": -17.600000381469727
+  },
+  {
+   "bar": 5,
+   "rms_db": -25.1,
+   "peak_db": -17.5
+  },
+  {
+   "bar": 6,
+   "rms_db": -26.0,
+   "peak_db": -17.299999237060547
+  },
+  {
+   "bar": 7,
+   "rms_db": -25.7,
+   "peak_db": -18.0
+  },
+  {
+   "bar": 8,
+   "rms_db": -26.4,
+   "peak_db": -17.200000762939453
+  },
+  {
+   "bar": 9,
+   "rms_db": -23.0,
+   "peak_db": -15.0
+  },
+  {
+   "bar": 10,
+   "rms_db": -22.9,
+   "peak_db": -15.100000381469727
+  },
+  {
+   "bar": 11,
+   "rms_db": -22.9,
+   "peak_db": -15.100000381469727
+  },
+  {
+   "bar": 12,
+   "rms_db": -23.0,
+   "peak_db": -15.100000381469727
+  },
+  {
+   "bar": 13,
+   "rms_db": -24.3,
+   "peak_db": -16.399999618530273
+  },
+  {
+   "bar": 14,
+   "rms_db": -24.3,
+   "peak_db": -17.299999237060547
+  },
+  {
+   "bar": 15,
+   "rms_db": -24.3,
+   "peak_db": -17.200000762939453
+  },
+  {
+   "bar": 16,
+   "rms_db": -23.5,
+   "peak_db": -17.100000381469727
+  },
+  {
+   "bar": 17,
+   "rms_db": -24.5,
+   "peak_db": -9.600000381469727
+  },
+  {
+   "bar": 18,
+   "rms_db": -19.1,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 19,
+   "rms_db": -22.9,
+   "peak_db": -6.5
+  },
+  {
+   "bar": 20,
+   "rms_db": -21.6,
+   "peak_db": -5.5
+  },
+  {
+   "bar": 21,
+   "rms_db": -21.7,
+   "peak_db": -7.599999904632568
+  },
+  {
+   "bar": 22,
+   "rms_db": -19.0,
+   "peak_db": -5.199999809265137
+  },
+  {
+   "bar": 23,
+   "rms_db": -21.8,
+   "peak_db": -7.5
+  },
+  {
+   "bar": 24,
+   "rms_db": -21.1,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 25,
+   "rms_db": -23.3,
+   "peak_db": -8.399999618530273
+  },
+  {
+   "bar": 26,
+   "rms_db": -22.2,
+   "peak_db": -7.400000095367432
+  },
+  {
+   "bar": 27,
+   "rms_db": -21.1,
+   "peak_db": -7.900000095367432
+  },
+  {
+   "bar": 28,
+   "rms_db": -19.6,
+   "peak_db": -4.699999809265137
+  },
+  {
+   "bar": 29,
+   "rms_db": -20.3,
+   "peak_db": -6.5
+  },
+  {
+   "bar": 30,
+   "rms_db": -20.4,
+   "peak_db": -7.0
+  },
+  {
+   "bar": 31,
+   "rms_db": -20.0,
+   "peak_db": -6.400000095367432
+  },
+  {
+   "bar": 32,
+   "rms_db": -21.2,
+   "peak_db": -6.099999904632568
+  },
+  {
+   "bar": 33,
+   "rms_db": -21.6,
+   "peak_db": -5.0
+  },
+  {
+   "bar": 34,
+   "rms_db": -22.4,
+   "peak_db": -5.400000095367432
+  }
+ ],
+ "instrumentation": {
+  "bline": {
+   "family": "chip",
+   "notes": 125,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "broot": {
+   "family": "chip",
+   "notes": 68,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "felt_base": {
+   "family": "piano",
+   "notes": 5,
+   "source": "sf2",
+   "credit": "Upright Piano KW by FreePats (CC0 1.0)"
+  },
+  "m16_bass": {
+   "family": "chip",
+   "notes": 62,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "m16_brush": {
+   "family": "chip",
+   "notes": 34,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "m16_build": {
+   "family": "chip",
+   "notes": 90,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "m16_felt": {
+   "family": "chip",
+   "notes": 120,
+   "source": "sf2",
+   "credit": "Upright Piano KW by FreePats (CC0 1.0)"
+  },
+  "m16_jazz": {
+   "family": "chip",
+   "notes": 81,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "m16_lead": {
+   "family": "chip",
+   "notes": 23,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "m16_pizz": {
+   "family": "chip",
+   "notes": 22,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "m16_str": {
+   "family": "chip",
+   "notes": 18,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "m16_swish": {
+   "family": "chip",
+   "notes": 18,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "m16_tpt": {
+   "family": "chip",
+   "notes": 4,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "ubass_base": {
+   "family": "bass",
+   "notes": 1,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "vc": {
+   "family": "strings",
+   "notes": 3,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vla": {
+   "family": "strings",
+   "notes": 5,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vln2": {
+   "family": "strings",
+   "notes": 5,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  }
+ },
+ "credits": [
+  "GeneralUser GS by S. Christian Collins",
+  "Upright Piano KW by FreePats (CC0 1.0)",
+  "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+ ],
+ "audition": [
+  "0:00-0:10 (b1-4): the 1-bit flat line over the walking roots -- charmingly harsh or fatiguing? (featured level; the underscore master sits ~2 dB lower, the -lp7k part is the dialogue alternate)",
+  "0:12.5-0:20 (b6, b8): the kink left hanging -- does it read as \"the kid hasn't finished\", not as a mistake? Nothing should sound like the whole knee.  FIX 1: at 0:15.3 (b7) the kid re-strikes the hanging C5 and drops to F4 F4 F3 -- stuck, not the knee finishing (and not a V-I cadence)?",
+  "0:30-0:40 (b13-16) and 0:40 (b17.1): the 1-bit Upsell and the EMPTY SLOT -- with the SFX register clunk laid in, does the missing bell land as the joke?",
+  "0:40.6-1:00 (b17-24): the 16-bit trio -- a memory of 2008, not a video game or a Nintendo overworld? Is the cocky \"nudge twice\" charming or smug?",
+  "1:00-1:20 (b25-32): the Build compiling over the swung band -- straight 16ths against swing: clean or lurching? Does \"shipped\" (1:18.75, b32.3) end it?",
+  "1:20-1:25 (b33-34): the render front -- does the same chord read as ONE chord upgrading (1-bit, 16-bit, clean) under the SFX sweep, with no gap at 1:21.25 and 1:22.5?"
+ ],
+ "warnings": []
+}

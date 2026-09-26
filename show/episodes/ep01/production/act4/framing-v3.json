@@ -1,0 +1,2746 @@
+{
+ "meta": {
+  "what": "Ep1 Act Four framing v3 plan (cinematography); frames carried from lock v2 for comparison only: THE EDITOR re-times in the v3 lock",
+  "grammar": "show/bible/pov-and-framing.md §4.7",
+  "doc": "show/episodes/ep01/production/act4/framing-v3.md",
+  "prototype": "studio/src/dev/framing-v3/templates.ts",
+  "rules": {
+   "max_same_size_run": 2,
+   "deliberate_boxes_per_act": 2,
+   "whips_per_act": 4,
+   "racks_per_act": 4,
+   "screen_macros_per_act": 2
+  },
+  "box_field": "none = no typed dialogue box (close coverage); typed / speaker / os = keep the typed box",
+  "templates": {
+   "MCU-F": "frameless close-up: portrait Img + framelessBust over the room stepped down 2 (soft) + negativeFill; side L (x~100) / R (x~262), top y 20-26; tall bust by day",
+   "MCU-2": "frameless 50/50: two MCU-F busts, one per third, the thing between them soft (rack target)",
+   "MCU-FRAME": "MCU-F inside an in-world frame: doorway (full-height jamb + leaf) or dark window glass (reflection stepped -1)",
+   "DESK-LOW": "insert-scale prop big on the bottom edge + MCU-F behind; rack between",
+   "OTS": "fg: listener portrait silhouette (N0 + 1 px rim on the key side, may flip) bleeding off the side/bottom; bg: speaker medium rig in a medium plate (OTS-W: a room wide)",
+   "2S": "existing medium two-shots (drawDark2S / drawBoard2S / drawCalmOff2S)",
+   "M": "existing medium (drawMadaM)",
+   "CU": "drawMasCU",
+   "ECU-HANDS": "kits/inserts-mas + inserts-hands",
+   "ECU-EYES": "drawEyesStrip",
+   "ECU-PROP": "prop inserts (rooms, inserts-props)",
+   "ECU-ORB": "drawOrb at r 60-90 on a dark pool, orbStep looks, toasts ride",
+   "HIGH-TABLE": "drawTableInsert overhead (blueprint | prop | NEW phones)",
+   "HIGH-FLOOR": "NEW bullpen floor top-down plate",
+   "LOW-ROOM": "NEW low-angle plates (bullpen ceiling, lobby sign)",
+   "SCREEN": "callgrid layouts: grid | active-speaker pin | two-up | half tile | closer laptop; bezel edge in the exit",
+   "SCREEN-MACRO": "integer 2x crop of a screen buffer, <= 1 beat, <= 2 per act, bezel corner in the exit",
+   "BP-SIZES": "blueprint sheet / section / detail (2x coordinates, 1 px lines) + whole-pixel pan",
+   "CARD-RIDE": "name card riding the live shot",
+   "W": "room wide",
+   "BOX": "the deliberate portrait window (<= 2 per act)"
+  },
+  "size_classes": {
+   "W": "wide incl. room angle plates and OTS-W backgrounds",
+   "M": "[M] [2S]",
+   "OTS": "over-the-shoulder",
+   "MCU": "frameless close-up, 50/50, frame-in-frame, desk-low",
+   "CU": "full-frame close-up",
+   "ECU": "hands, eyes, the iris, prop inserts, table overheads",
+   "SW": "screen wide (grid, list)",
+   "SC": "screen close (pinned/single/half tile, phone, counter, floor POV)",
+   "GS": "blueprint sheet",
+   "GM": "blueprint section",
+   "GD": "blueprint detail",
+   "GFX": "full-screen card",
+   "BOX": "deliberate portrait window"
+  },
+  "date": "2026-09-25",
+  "shots": 147,
+  "v2_frames_carried": 10860,
+  "problems": []
+ },
+ "shots": [
+  {
+   "id": "24.01",
+   "v2": [
+    "24.01"
+   ],
+   "tag": "[W]",
+   "cls": "W",
+   "tpl": "W",
+   "frames": 60,
+   "what": "The suite: the crane truck passes, every glass shivers but his.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "24.02",
+   "v2": [
+    "24.02"
+   ],
+   "tag": "[ECU]",
+   "cls": "ECU",
+   "tpl": "ECU-HANDS",
+   "frames": 30,
+   "what": "His two fingers nudge the glass one pixel true.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "24.03",
+   "v2": [
+    "24.03"
+   ],
+   "tag": "[MCU·PF]",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 30,
+   "what": "MAS frameless, left third; the suite steps down behind him to the laptop glow; the flash-print to blueprint rides the last beat.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "helper",
+   "rule": "was [PF] box"
+  },
+  {
+   "id": "25.01",
+   "v2": [
+    "25.01"
+   ],
+   "tag": "[GFX·sheet]",
+   "cls": "GS",
+   "tpl": "BP-SIZES",
+   "frames": 180,
+   "what": "THE WORD: the grid draws itself; HOW TO FIRE A CEO WHO OWNS NOTHING. stamps.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "25.02",
+   "v2": [
+    "25.02"
+   ],
+   "tag": "[GFX·section]",
+   "cls": "GM",
+   "tpl": "BP-SIZES",
+   "frames": 240,
+   "what": "THE DIAGRAM: nine chairs; DIRE, NOVIHS, DRUH walk off; LEFT EARLIER IN 2023; THESE FOUR VOTE.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "25.03",
+   "v2": [
+    "25.03"
+   ],
+   "tag": "[GFX·sheet]",
+   "cls": "GS",
+   "tpl": "BP-SIZES",
+   "frames": 120,
+   "what": "The structure, plan view: a whole-pixel PAN down one oversize sheet, NONPROFIT → CONTROLS → COMPANY, the key ring outside the fence.",
+   "face": false,
+   "box": "none",
+   "move": "pan",
+   "build": "kit param (sheet taller than the frame)",
+   "rule": "split"
+  },
+  {
+   "id": "25.03b",
+   "v2": [
+    "25.03"
+   ],
+   "tag": "[GFX·detail]",
+   "cls": "GD",
+   "tpl": "BP-SIZES",
+   "frames": 60,
+   "what": "Cut-in: the CEO box, EQUITY: 0 (HIS TESTIMONY); the blueprint moth opens its wings (linework redrawn 2x, 1 px lines).",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "kit param (2x coordinates)",
+   "rule": "split"
+  },
+  {
+   "id": "25.04",
+   "v2": [
+    "25.04"
+   ],
+   "tag": "[GFX·section]",
+   "cls": "GM",
+   "tpl": "BP-SIZES",
+   "frames": 180,
+   "what": "THE PLAN: four walkers tick 1 · 2 · 3 in stride and stop at 4.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "25.05",
+   "v2": [
+    "25.05"
+   ],
+   "tag": "[GFX·detail]",
+   "cls": "GD",
+   "tpl": "BP-SIZES",
+   "frames": 120,
+   "what": "The walkers at 2x: NELEH \"Step four.\" / MADA \"Good question.\" (a GFX pair: one Q+A in one frame).",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": "",
+   "lines": [
+    "a4-25-01",
+    "a4-25-02"
+   ],
+   "kinds": {
+    "a4-25-01": "dialogue",
+    "a4-25-02": "dialogue"
+   }
+  },
+  {
+   "id": "25.06",
+   "v2": [
+    "25.06"
+   ],
+   "tag": "[GFX·detail]",
+   "cls": "GD",
+   "tpl": "BP-SIZES",
+   "frames": 60,
+   "what": "The blank line: the chalk squeaks and snaps.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "25.07",
+   "v2": [
+    "25.07"
+   ],
+   "tag": "[GFX·sheet]",
+   "cls": "GS",
+   "tpl": "BP-SIZES",
+   "frames": 60,
+   "what": "The corner curls, neon bleeds through; the sheet tears on the line of step 4.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "25.08",
+   "v2": [
+    "25.08"
+   ],
+   "tag": "[ECU]",
+   "cls": "ECU",
+   "tpl": "ECU-HANDS",
+   "frames": 60,
+   "what": "His hand on the trackpad; JOIN; click.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "26.01",
+   "v2": [
+    "26.01"
+   ],
+   "tag": "[POV·grid]",
+   "cls": "SW",
+   "tpl": "SCREEN",
+   "frames": 60,
+   "what": "His laptop: the five-tile grid connects; four vote icons already flipped (Wi-Fi 1 bar egg).",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "26.02",
+   "v2": [
+    "26.02"
+   ],
+   "tag": "CARD on [POV·grid]",
+   "cls": "SW",
+   "tpl": "CARD-RIDE",
+   "frames": 60,
+   "what": "NELEH name card rides the live grid.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "26.02a",
+   "v2": [
+    "26.02a"
+   ],
+   "tag": "[MCU·PF]",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 60,
+   "what": "MAS frameless; the suite down to the Strip neon + laptop glow; he reads the icons, one pupil step per tile; HOLD 1 beat.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "helper",
+   "rule": "was [PF] box"
+  },
+  {
+   "id": "26.03",
+   "v2": [
+    "26.03"
+   ],
+   "tag": "[POV·pin]",
+   "cls": "SC",
+   "tpl": "SCREEN",
+   "frames": 60,
+   "what": "The app's active-speaker view (automatic, never his click) pins ALYI: his mouth moves, no sound reaches Mas; the box over his tile types … and stops.",
+   "face": false,
+   "box": "typed",
+   "move": "",
+   "build": "kit param (pinned tile)",
+   "rule": "in-world push"
+  },
+  {
+   "id": "26.04",
+   "v2": [
+    "26.04"
+   ],
+   "tag": "[POV·grid]",
+   "cls": "SW",
+   "tpl": "SCREEN",
+   "frames": 60,
+   "what": "The 1993-style dialog pops up over his tile: OK · Cancel (Cancel live).",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "26.04a",
+   "v2": [
+    "26.04a"
+   ],
+   "tag": "[ECU]",
+   "cls": "ECU",
+   "tpl": "ECU-EYES",
+   "frames": 60,
+   "what": "The eyes strip: his pupils move one pixel toward the dialog.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "26.04b",
+   "v2": [
+    "26.04b"
+   ],
+   "tag": "[POV·grid]",
+   "cls": "SW",
+   "tpl": "SCREEN",
+   "frames": 60,
+   "what": "The unlit arrow steps in from the board tiles, one tile a beat.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "26.04c",
+   "v2": [
+    "26.04c"
+   ],
+   "tag": "[MCU·PF]",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 60,
+   "what": "MAS, still: the laptop glow only; nothing on him moves while the arrow (O.S.) settles on Cancel.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "helper",
+   "rule": "breaks a 3-screen run"
+  },
+  {
+   "id": "26.05",
+   "v2": [
+    "26.05"
+   ],
+   "tag": "[POV·close]",
+   "cls": "SC",
+   "tpl": "SCREEN",
+   "frames": 15,
+   "what": "Close on the dialog: the arrow clicks Cancel on the downbeat. D6 DROP-OUT starts here.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "NEW: dialog + arrow drawn at 2x UI scale",
+   "rule": "split"
+  },
+  {
+   "id": "26.05b",
+   "v2": [
+    "26.05"
+   ],
+   "tag": "[POV·grid]",
+   "cls": "SW",
+   "tpl": "SCREEN",
+   "frames": 45,
+   "what": "His tile drops out of the grid, four drawings, GLYPH dissolve; the four slide together.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": "split"
+  },
+  {
+   "id": "26.05a",
+   "v2": [
+    "26.05a"
+   ],
+   "tag": "[CU]",
+   "cls": "CU",
+   "tpl": "CU",
+   "frames": 90,
+   "what": "MAS full frame, silent (the Strip neon); HOLD 2 beats; +1 FIRING on beat 3.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "26.06",
+   "v2": [
+    "26.06"
+   ],
+   "tag": "[ECU]",
+   "cls": "ECU",
+   "tpl": "ECU-HANDS",
+   "frames": 150,
+   "what": "The phone buzzes, the room sound returns; [super]×3 lights; the mic chip still lit; his thumb taps the middle one at once.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "26.07",
+   "v2": [
+    "26.07"
+   ],
+   "tag": "[MCU]",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 60,
+   "what": "MAS frameless (neon): \"super.\" into the still-open mic. No music.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "",
+   "rule": "was [P] box",
+   "lines": [
+    "a4-26-01"
+   ],
+   "kinds": {
+    "a4-26-01": "dialogue"
+   }
+  },
+  {
+   "id": "26.08",
+   "v2": [
+    "26.08"
+   ],
+   "tag": "[POV·grid]",
+   "cls": "SW",
+   "tpl": "SCREEN",
+   "frames": 60,
+   "what": "The grid as his screen shows it: four held faces (a listener's hold); the control bar's mic still lit.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "26.09",
+   "v2": [
+    "26.09"
+   ],
+   "tag": "[W]",
+   "cls": "W",
+   "tpl": "W",
+   "frames": 60,
+   "what": "The suite: the truck passes, every glass shivers; his does not.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "26.10",
+   "v2": [
+    "26.10"
+   ],
+   "tag": "[GFX]",
+   "cls": "GFX",
+   "tpl": "GFX",
+   "frames": 120,
+   "what": "The candor quote card.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "26.11",
+   "v2": [
+    "26.11"
+   ],
+   "tag": "[POV·grid]",
+   "cls": "SW",
+   "tpl": "SCREEN",
+   "frames": 30,
+   "what": "His greyed tile, still falling, becomes the render front.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "26.12",
+   "v2": [
+    "26.12"
+   ],
+   "tag": "[W]",
+   "cls": "W",
+   "tpl": "W",
+   "frames": 120,
+   "what": "F1.2 TPOOL door, EARLY-WEB16, (REPORTED).",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "26.13",
+   "v2": [
+    "26.13"
+   ],
+   "tag": "[ECU]",
+   "cls": "ECU",
+   "tpl": "ECU-PROP",
+   "frames": 30,
+   "what": "The frosted glass; the dither settles into wood grain.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "26A.01",
+   "v2": [
+    "26A.01"
+   ],
+   "tag": "[ECU]",
+   "cls": "ECU",
+   "tpl": "ECU-HANDS",
+   "frames": 135,
+   "what": "He carves mark 3, brushes the shavings, thumb on mark 3 only. V.O. \"i don't keep score.\" (bar 2).",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": "",
+   "lines": [
+    "a4-26a-vo1"
+   ],
+   "kinds": {
+    "a4-26a-vo1": "vo"
+   }
+  },
+  {
+   "id": "26A.02",
+   "v2": [
+    "26A.02"
+   ],
+   "tag": "[2S]",
+   "cls": "M",
+   "tpl": "2S",
+   "frames": 45,
+   "what": "Mas + the Orb: its iris counts 1, 2, 3 and stops on his thumb.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "26A.03",
+   "v2": [
+    "26A.03"
+   ],
+   "tag": "[POV]",
+   "cls": "SC",
+   "tpl": "SCREEN",
+   "frames": 120,
+   "what": "His phone, full-bleed: the post types in source casing, 9:32 PM PT.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": "",
+   "lines": [
+    "a4-26a-01"
+   ],
+   "kinds": {
+    "a4-26a-01": "post"
+   }
+  },
+  {
+   "id": "26A.04",
+   "v2": [
+    "26A.04"
+   ],
+   "tag": "[ECU]",
+   "cls": "ECU",
+   "tpl": "ECU-PROP",
+   "frames": 60,
+   "what": "The Senate wallet, HEALTH INSURANCE; a moth flies out.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "26A.05",
+   "v2": [
+    "26A.05"
+   ],
+   "tag": "[MCU·PF]",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 90,
+   "what": "MAS frameless; the room down to the cyan key + rack LEDs; V.O. \"the meeting ended early.\" on the hoodie shadow.",
+   "face": true,
+   "box": "none",
+   "move": "drift",
+   "build": "helper",
+   "rule": "was [PF] box",
+   "lines": [
+    "a4-26a-vo2"
+   ],
+   "kinds": {
+    "a4-26a-vo2": "vo"
+   }
+  },
+  {
+   "id": "26A.06",
+   "v2": [
+    "26A.06"
+   ],
+   "tag": "[ECU·Orb]",
+   "cls": "ECU",
+   "tpl": "ECU-ORB",
+   "frames": 30,
+   "what": "The Orb's iris, full frame, lifts from the desk to his face; toast rewinding…; WHIP (right→left) into pass one.",
+   "face": true,
+   "box": "none",
+   "move": "whip-out",
+   "build": "procedural",
+   "rule": "was [P] box (no Orb portrait exists)"
+  },
+  {
+   "id": "27.01",
+   "v2": [
+    "27.01"
+   ],
+   "tag": "[SCR·grid]",
+   "cls": "SW",
+   "tpl": "SCREEN",
+   "frames": 45,
+   "what": "The board's grid on a laptop, bezel: the call goes on; his \"super.\" out of the small speaker (no portrait).",
+   "face": false,
+   "box": "speaker",
+   "move": "",
+   "build": "exists",
+   "rule": "",
+   "lines": [
+    "a4-27-00"
+   ],
+   "kinds": {
+    "a4-27-00": "dialogue"
+   }
+  },
+  {
+   "id": "27.01a",
+   "v2": [
+    "27.01a"
+   ],
+   "tag": "[MCU]",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 45,
+   "what": "NELEH at her own desk (her tile's world, full frame): she turns a page and doesn't look up. The catch lands on a face.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "helper + nelehTileBg at 480x203",
+   "rule": "split; nobody looked up"
+  },
+  {
+   "id": "27.01b",
+   "v2": [
+    "27.01a"
+   ],
+   "tag": "[SCR·grid]",
+   "cls": "SW",
+   "tpl": "SCREEN",
+   "frames": 75,
+   "what": "Toast GERG MOCKBRAN has left.; his post \"…I quit.\" green-lit.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": "split",
+   "lines": [
+    "a4-27-01"
+   ],
+   "kinds": {
+    "a4-27-01": "post"
+   }
+  },
+  {
+   "id": "27.02",
+   "v2": [
+    "27.02"
+   ],
+   "tag": "[SCR·close]",
+   "cls": "SC",
+   "tpl": "SCREEN",
+   "frames": 60,
+   "what": "Closer on the laptop: BUKAJ has left.; keycaps rain across the tiles.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "kit param (bigger tiles, bezel edge)",
+   "rule": ""
+  },
+  {
+   "id": "27.03",
+   "v2": [
+    "27.03",
+    "27.04"
+   ],
+   "tag": "[MCU] + CARD",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 90,
+   "what": "RIMA in her hard spotlight, smoothing her jacket; RIMA TAMURI name card rides.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "helper + spotlight pool",
+   "rule": "was [P] box"
+  },
+  {
+   "id": "27.05",
+   "v2": [
+    "27.05"
+   ],
+   "tag": "[SCR·2-up]",
+   "cls": "SC",
+   "tpl": "SCREEN",
+   "frames": 60,
+   "what": "The call's two-up (bezel): RIMA \"I'll hold it together.\" in her tile, NELEH listening in hers.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "kit param (2-up layout)",
+   "rule": "was [P] box",
+   "lines": [
+    "a4-27-02"
+   ],
+   "kinds": {
+    "a4-27-02": "dialogue"
+   }
+  },
+  {
+   "id": "27.05a",
+   "v2": [
+    "27.05a"
+   ],
+   "tag": "[MCU]",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 45,
+   "what": "NELEH (her desk): \"For how long?\"",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "",
+   "rule": "was [P] box",
+   "lines": [
+    "a4-27-03"
+   ],
+   "kinds": {
+    "a4-27-03": "dialogue"
+   }
+  },
+  {
+   "id": "27.05b",
+   "v2": [
+    "27.05b"
+   ],
+   "tag": "[MCU]",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 60,
+   "what": "RIMA (pleasant): \"We'll share more soon.\"",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "",
+   "rule": "was [P] box",
+   "lines": [
+    "a4-27-04"
+   ],
+   "kinds": {
+    "a4-27-04": "dialogue"
+   }
+  },
+  {
+   "id": "27.05c",
+   "v2": [
+    "27.05c"
+   ],
+   "tag": "[SCR·2-up]",
+   "cls": "SC",
+   "tpl": "SCREEN",
+   "frames": 15,
+   "what": "The two-up: NELEH, one brow up.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "",
+   "rule": "was [P] box"
+  },
+  {
+   "id": "27.06",
+   "v2": [
+    "27.06"
+   ],
+   "tag": "[W]",
+   "cls": "W",
+   "tpl": "W",
+   "frames": 60,
+   "what": "The bullpen all-hands: one hand up in the tiled crowd; \"Is this a coup?\" (box with a tail).",
+   "face": false,
+   "box": "typed",
+   "move": "",
+   "build": "exists",
+   "rule": "",
+   "lines": [
+    "a4-27-05"
+   ],
+   "kinds": {
+    "a4-27-05": "dialogue"
+   }
+  },
+  {
+   "id": "27.07",
+   "v2": [
+    "27.07"
+   ],
+   "tag": "[MCU·door]",
+   "cls": "MCU",
+   "tpl": "MCU-FRAME",
+   "frames": 105,
+   "what": "ALYI frameless in the doorway, the jamb and leaf cutting him: \"You can call it this way\" [V]. No move.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "helper + full-height jamb/leaf",
+   "rule": "was [P] box",
+   "lines": [
+    "a4-27-06"
+   ],
+   "kinds": {
+    "a4-27-06": "dialogue"
+   }
+  },
+  {
+   "id": "27.07a",
+   "v2": [
+    "27.07a"
+   ],
+   "tag": "[W]",
+   "cls": "W",
+   "tpl": "W",
+   "frames": 15,
+   "what": "The crowd: the one hand is still up (the listener).",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "27.08",
+   "v2": [
+    "27.08"
+   ],
+   "tag": "[MCU·door]",
+   "cls": "MCU",
+   "tpl": "MCU-FRAME",
+   "frames": 60,
+   "what": "ALYI steps back into the dark of the doorway, one whole-pixel step a time, until the frame has all of him; the empty doorway holds 1 beat.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "",
+   "rule": "was \"steps out of his own window\""
+  },
+  {
+   "id": "27.09",
+   "v2": [
+    "27.09"
+   ],
+   "tag": "[SCR·grid]",
+   "cls": "SW",
+   "tpl": "SCREEN",
+   "frames": 90,
+   "what": "NOV 18: a heart, ten, hundreds pour over the grid.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": "split"
+  },
+  {
+   "id": "27.09b",
+   "v2": [
+    "27.09"
+   ],
+   "tag": "[SCR·macro 2x]",
+   "cls": "SC",
+   "tpl": "SCREEN-MACRO",
+   "frames": 30,
+   "what": "Screen macro (integer 2x of the screen's own pixels, the bezel corner kept in frame: the world's view): the one blue heart lands on Mada's spinner and spins with it.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "helper",
+   "rule": "split; macro 1 of 2"
+  },
+  {
+   "id": "27.10",
+   "v2": [
+    "27.10"
+   ],
+   "tag": "[SCR·grid]",
+   "cls": "SW",
+   "tpl": "SCREEN",
+   "frames": 135,
+   "what": "His post \"…eulogy\" scrolls across the hearts.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": "",
+   "lines": [
+    "a4-27-07"
+   ],
+   "kinds": {
+    "a4-27-07": "post"
+   }
+  },
+  {
+   "id": "27.11",
+   "v2": [
+    "27.11"
+   ],
+   "tag": "[2S]",
+   "cls": "M",
+   "tpl": "2S",
+   "frames": 60,
+   "what": "Boardroom, night: NELEH (marker) + MADA (spinner), ALYI a reflection in the window between them; every phone buzzes.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "27.12",
+   "v2": [
+    "27.12"
+   ],
+   "tag": "[MCU]",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 75,
+   "what": "NELEH frameless, left third, facing right (flipped): \"The bylaws allow it. Footnote three.\"",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "",
+   "rule": "was [P] box",
+   "lines": [
+    "a4-27-08"
+   ],
+   "kinds": {
+    "a4-27-08": "dialogue"
+   }
+  },
+  {
+   "id": "27.12a",
+   "v2": [
+    "27.12a"
+   ],
+   "tag": "[OTS]",
+   "cls": "OTS",
+   "tpl": "OTS",
+   "frames": 105,
+   "what": "Over NELEH's shoulder onto the window: ALYI's reflection \"Step four… will reveal itself.\"",
+   "face": true,
+   "box": "none",
+   "move": "drift",
+   "build": "helper",
+   "rule": "was [P] box",
+   "lines": [
+    "a4-27-09"
+   ],
+   "kinds": {
+    "a4-27-09": "dialogue"
+   }
+  },
+  {
+   "id": "27.12b",
+   "v2": [
+    "27.12b"
+   ],
+   "tag": "[2S]",
+   "cls": "M",
+   "tpl": "2S",
+   "frames": 30,
+   "what": "NELEH: \"When?\" (Mada unmoved, the reflection between them).",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "",
+   "rule": "was [P] box",
+   "lines": [
+    "a4-27-10"
+   ],
+   "kinds": {
+    "a4-27-10": "dialogue"
+   }
+  },
+  {
+   "id": "27.12c",
+   "v2": [
+    "27.12c"
+   ],
+   "tag": "[MCU·glass]",
+   "cls": "MCU",
+   "tpl": "MCU-FRAME",
+   "frames": 90,
+   "what": "ALYI's reflection close in the dark glass, the Valley's lights through him: \"The company will tell us.\"",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "helper (reflection stepped -1)",
+   "rule": "was [P] box",
+   "lines": [
+    "a4-27-11"
+   ],
+   "kinds": {
+    "a4-27-11": "dialogue"
+   }
+  },
+  {
+   "id": "27.12d",
+   "v2": [
+    "27.12d"
+   ],
+   "tag": "[MCU]",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 15,
+   "what": "NELEH listening, one brow up.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "",
+   "rule": "was [P] box"
+  },
+  {
+   "id": "27.13",
+   "v2": [
+    "27.13"
+   ],
+   "tag": "[HIGH]",
+   "cls": "ECU",
+   "tpl": "HIGH-TABLE",
+   "frames": 60,
+   "what": "Overhead on the walnut: every phone buzzes harder and walks toward the edge, one held step a beat.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "NEW: drawTableInsert \"phones\" focus",
+   "rule": ""
+  },
+  {
+   "id": "27.14",
+   "v2": [
+    "27.14"
+   ],
+   "tag": "[MCU]",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 60,
+   "what": "NELEH: \"The company is calling us.\"",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "",
+   "rule": "was [P] box",
+   "lines": [
+    "a4-27-12"
+   ],
+   "kinds": {
+    "a4-27-12": "dialogue"
+   }
+  },
+  {
+   "id": "27.14a",
+   "v2": [
+    "27.14a",
+    "27.14b"
+   ],
+   "tag": "[2S]",
+   "cls": "M",
+   "tpl": "2S",
+   "frames": 120,
+   "what": "ALYI's reflection between them: \"That is the company telling us.\" It flickers for two frames and steadies; the black tile never moves.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "",
+   "rule": "was [P] box + 2S merged (-30 f: the flicker rides the line's tail)",
+   "lines": [
+    "a4-27-13"
+   ],
+   "kinds": {
+    "a4-27-13": "dialogue"
+   }
+  },
+  {
+   "id": "27.15",
+   "v2": [
+    "27.15"
+   ],
+   "tag": "[MCU·PF]",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 45,
+   "what": "NELEH looks down at the blank line; the boardroom steps down behind her. HOLD 1 beat. Her real face.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "",
+   "rule": "was [PF] box"
+  },
+  {
+   "id": "27.16",
+   "v2": [
+    "27.16"
+   ],
+   "tag": "[HIGH]",
+   "cls": "ECU",
+   "tpl": "HIGH-TABLE",
+   "frames": 60,
+   "what": "Her hand uncaps the marker and writes ? on the blank line.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "27.17",
+   "v2": [
+    "27.17"
+   ],
+   "tag": "[W]",
+   "cls": "W",
+   "tpl": "W",
+   "frames": 60,
+   "what": "The whole table: the speakerphone dials four tones. CUT on the first ring.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "27.18",
+   "v2": [
+    "27.18"
+   ],
+   "tag": "[ECU]",
+   "cls": "ECU",
+   "tpl": "ECU-PROP",
+   "frames": 45,
+   "what": "Lighthouse: the phone with the little throne rings. Rail (REPORTED).",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "27.19",
+   "v2": [
+    "27.19"
+   ],
+   "tag": "[MCU]",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 90,
+   "what": "MARIO, the lamp turning in the window behind: \"I've written up some thoughts.\"",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "",
+   "rule": "was [P] box",
+   "lines": [
+    "a4-27-14"
+   ],
+   "kinds": {
+    "a4-27-14": "dialogue"
+   }
+  },
+  {
+   "id": "27.20",
+   "v2": [
+    "27.20",
+    "27.21"
+   ],
+   "tag": "[W] + CARD",
+   "cls": "W",
+   "tpl": "W",
+   "frames": 90,
+   "what": "The lighthouse: ADELINA crosses and takes the phone out of his hand; her name card rides.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists (room sprites)",
+   "rule": "was [P2] box"
+  },
+  {
+   "id": "27.22",
+   "v2": [
+    "27.22"
+   ],
+   "tag": "[MCU]",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 60,
+   "what": "ADELINA, into the phone: \"In plain English: no.\"",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "",
+   "rule": "was [P2] box",
+   "lines": [
+    "a4-27-15"
+   ],
+   "kinds": {
+    "a4-27-15": "dialogue"
+   }
+  },
+  {
+   "id": "27.23",
+   "v2": [
+    "27.23"
+   ],
+   "tag": "[ECU]",
+   "cls": "ECU",
+   "tpl": "ECU-PROP",
+   "frames": 30,
+   "what": "Click. The throne falls off the handset.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "27.24",
+   "v2": [
+    "27.24"
+   ],
+   "tag": "[MCU]",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 120,
+   "what": "MARIO answers the second phone; the rent meters spin SHARP in the window behind (record text never goes soft): \"Hi. Yes. We're very worried. How much?\"",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "",
+   "rule": "was [P] box",
+   "lines": [
+    "a4-27-16"
+   ],
+   "kinds": {
+    "a4-27-16": "dialogue"
+   }
+  },
+  {
+   "id": "27.26",
+   "v2": [
+    "27.26"
+   ],
+   "tag": "[SCR·cam]",
+   "cls": "SC",
+   "tpl": "SCREEN",
+   "frames": 120,
+   "what": "The lobby security-camera tile, bezel, grainy: a figure in a GUEST lanyard; his post upside-down in the corner.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": "",
+   "lines": [
+    "a4-27-17"
+   ],
+   "kinds": {
+    "a4-27-17": "post"
+   }
+  },
+  {
+   "id": "27.27",
+   "v2": [
+    "27.27"
+   ],
+   "tag": "[W]",
+   "cls": "W",
+   "tpl": "W",
+   "frames": 60,
+   "what": "Boardroom, Nov 19: the spotlight swings off Rima's empty chair onto TTEMME.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "27.28",
+   "v2": [
+    "27.28"
+   ],
+   "tag": "CARD on [W]",
+   "cls": "W",
+   "tpl": "CARD-RIDE",
+   "frames": 60,
+   "what": "TTEMME name card rides the wide.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "27.29",
+   "v2": [
+    "27.29"
+   ],
+   "tag": "[MCU]",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 60,
+   "what": "TTEMME (headset, hourglass; his stream chat scrolling up the frame edge): \"Chat. I'm the CEO now.\"",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "",
+   "rule": "was [P] box",
+   "lines": [
+    "a4-27-18"
+   ],
+   "kinds": {
+    "a4-27-18": "dialogue"
+   }
+  },
+  {
+   "id": "27.30",
+   "v2": [
+    "27.30"
+   ],
+   "tag": "[HIGH]",
+   "cls": "ECU",
+   "tpl": "HIGH-TABLE",
+   "frames": 45,
+   "what": "He sets the hourglass down and flips it: three drawings.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "27.31",
+   "v2": [
+    "27.31"
+   ],
+   "tag": "[LOW·desk]",
+   "cls": "MCU",
+   "tpl": "DESK-LOW",
+   "frames": 60,
+   "what": "Desk level: the hourglass big in the foreground, sand falling; TTEMME above it watching: \"Chat… for how long?\"",
+   "face": true,
+   "box": "none",
+   "move": "rack",
+   "build": "NEW: the hourglass at insert scale (the lg one reads too small in the foreground: sheet panel 9)",
+   "rule": "was [P] box",
+   "lines": [
+    "a4-27-19"
+   ],
+   "kinds": {
+    "a4-27-19": "dialogue"
+   }
+  },
+  {
+   "id": "27.32",
+   "v2": [
+    "27.32"
+   ],
+   "tag": "[2S]",
+   "cls": "M",
+   "tpl": "2S",
+   "frames": 75,
+   "what": "NELEH + MADA: the wall steps to slate; a door appears and opens. Hard cut to the door (no whip: her real line starts 6 f into 27.33).",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "27.33",
+   "v2": [
+    "27.33"
+   ],
+   "tag": "[MCU·door]",
+   "cls": "MCU",
+   "tpl": "MCU-FRAME",
+   "frames": 90,
+   "what": "TASYA in the new doorway, slate light, the sign pointing out: \"a new advanced AI research team\" [V]. No move.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "",
+   "rule": "was [P] box",
+   "lines": [
+    "a4-27-20"
+   ],
+   "kinds": {
+    "a4-27-20": "dialogue"
+   }
+  },
+  {
+   "id": "27.35",
+   "v2": [
+    "27.35"
+   ],
+   "tag": "[2S]",
+   "cls": "M",
+   "tpl": "2S",
+   "frames": 30,
+   "what": "NELEH + MADA look down at the blueprint (the listeners).",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "27.36",
+   "v2": [
+    "27.36"
+   ],
+   "tag": "[HIGH]",
+   "cls": "ECU",
+   "tpl": "HIGH-TABLE",
+   "frames": 35,
+   "what": "Overhead: step 4 blank but for her ?. NELEH (O.S.): \"Step four?\"",
+   "face": false,
+   "box": "os",
+   "move": "",
+   "build": "exists",
+   "rule": "split",
+   "lines": [
+    "a4-27-21"
+   ],
+   "kinds": {
+    "a4-27-21": "dialogue"
+   }
+  },
+  {
+   "id": "27.36b",
+   "v2": [
+    "27.36"
+   ],
+   "tag": "[MCU]",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 40,
+   "what": "MADA, the spinner turning: \"Good question.\" Pass one ends on his face.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "",
+   "rule": "split",
+   "lines": [
+    "a4-27-22"
+   ],
+   "kinds": {
+    "a4-27-22": "dialogue"
+   }
+  },
+  {
+   "id": "28.01",
+   "v2": [
+    "28.01"
+   ],
+   "tag": "[GFX]",
+   "cls": "GFX",
+   "tpl": "GFX",
+   "frames": 75,
+   "what": "WHAT THEY DIDN'T KNOW.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "29.00",
+   "v2": [
+    "29.00"
+   ],
+   "tag": "[ECU]",
+   "cls": "ECU",
+   "tpl": "ECU-PROP",
+   "frames": 30,
+   "what": "The home shot: the glass from above, its water line flat. Rail · HIS SIDE.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "29.01",
+   "v2": [
+    "29.01"
+   ],
+   "tag": "[2S]",
+   "cls": "M",
+   "tpl": "2S",
+   "frames": 105,
+   "what": "Mas + the Orb, the lanyard square by the glass; his hand on the phone. V.O. \"i put the phone down.\"",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": "",
+   "lines": [
+    "a4-29-vo1"
+   ],
+   "kinds": {
+    "a4-29-vo1": "vo"
+   }
+  },
+  {
+   "id": "29.01a",
+   "v2": [
+    "29.01a"
+   ],
+   "tag": "[ECU] MAS'S VERSION",
+   "cls": "ECU",
+   "tpl": "ECU-HANDS",
+   "frames": 60,
+   "what": "The matching frame: face-down, too still, keynote piano.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "29.03",
+   "v2": [
+    "29.03"
+   ],
+   "tag": "[ECU]",
+   "cls": "ECU",
+   "tpl": "ECU-HANDS",
+   "frames": 120,
+   "what": "Hard cut: the same frame, face-up; Rima's post [V]; eight hearts on the beat.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": "",
+   "lines": [
+    "a4-29-01"
+   ],
+   "kinds": {
+    "a4-29-01": "post"
+   }
+  },
+  {
+   "id": "29.04",
+   "v2": [
+    "29.04"
+   ],
+   "tag": "[2S]",
+   "cls": "M",
+   "tpl": "2S",
+   "frames": 60,
+   "what": "The Orb's iris steps off the phone onto the GUEST lanyard (beat 3) and stays.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "29.10",
+   "v2": [
+    "29.10"
+   ],
+   "tag": "[ECU·Orb]",
+   "cls": "ECU",
+   "tpl": "ECU-ORB",
+   "frames": 75,
+   "what": "The iris full frame, holding on the lanyard. V.O. \"the badge was a joke.\" HOLD 1 beat.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "procedural",
+   "rule": "was [P] box",
+   "lines": [
+    "a4-29-vo2"
+   ],
+   "kinds": {
+    "a4-29-vo2": "vo"
+   }
+  },
+  {
+   "id": "29.10a",
+   "v2": [
+    "29.10a"
+   ],
+   "tag": "[MCU]",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 60,
+   "what": "MAS aloud, to the Orb: \"mostly.\" (look toward it); RACK to the Orb soft-then-sharp behind his shoulder; it doesn't move. Cut on the downbeat.",
+   "face": true,
+   "box": "none",
+   "move": "rack",
+   "build": "",
+   "rule": "was [2S]",
+   "lines": [
+    "a4-29-03"
+   ],
+   "kinds": {
+    "a4-29-03": "dialogue"
+   }
+  },
+  {
+   "id": "29.05",
+   "v2": [
+    "29.05"
+   ],
+   "tag": "[POV]",
+   "cls": "SC",
+   "tpl": "SCREEN",
+   "frames": 75,
+   "what": "The counter rolls 505 · 650 · 700 · 745 / 770; clunk.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "29.06",
+   "v2": [
+    "29.06"
+   ],
+   "tag": "[GFX]",
+   "cls": "GFX",
+   "tpl": "GFX",
+   "frames": 180,
+   "what": "The employee letter quote card.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "29.07",
+   "v2": [
+    "29.07"
+   ],
+   "tag": "[POV]",
+   "cls": "SW",
+   "tpl": "SCREEN",
+   "frames": 60,
+   "what": "The signature list stops 2 beats on ALYI (REPORTED).",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "29.07a",
+   "v2": [
+    "29.07a"
+   ],
+   "tag": "[ECU·Orb]",
+   "cls": "ECU",
+   "tpl": "ECU-ORB",
+   "frames": 60,
+   "what": "The iris: to the name, to Alyi's thumbnail, back. Chime. (The Orb's beat; no Mas tell.)",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "procedural",
+   "rule": "was [P] box"
+  },
+  {
+   "id": "29.08",
+   "v2": [
+    "29.08"
+   ],
+   "tag": "[2S]",
+   "cls": "M",
+   "tpl": "2S",
+   "frames": 90,
+   "what": "DELIVERY: the rack slot ejects the check tray across the desk.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "29.11",
+   "v2": [
+    "29.11"
+   ],
+   "tag": "[POV·tile]",
+   "cls": "SC",
+   "tpl": "SCREEN",
+   "frames": 60,
+   "what": "GERG's video tile opens on the monitor, big enough to act in: \"One sec. Compiling.\"",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": "",
+   "lines": [
+    "a4-29-04"
+   ],
+   "kinds": {
+    "a4-29-04": "dialogue"
+   }
+  },
+  {
+   "id": "29.11a",
+   "v2": [
+    "29.11a"
+   ],
+   "tag": "[MCU]",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 60,
+   "what": "MAS, facing his monitor: \"what are you building?\"",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "",
+   "rule": "was [P] box",
+   "lines": [
+    "a4-29-05"
+   ],
+   "kinds": {
+    "a4-29-05": "dialogue"
+   }
+  },
+  {
+   "id": "29.11b",
+   "v2": [
+    "29.11b"
+   ],
+   "tag": "[POV·tile]",
+   "cls": "SC",
+   "tpl": "SCREEN",
+   "frames": 60,
+   "what": "GERG: \"The company. Again. Just in case.\"",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": "",
+   "lines": [
+    "a4-29-06"
+   ],
+   "kinds": {
+    "a4-29-06": "dialogue"
+   }
+  },
+  {
+   "id": "29.12q",
+   "v2": [
+    "29.12q"
+   ],
+   "tag": "[MCU·PF]",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 30,
+   "what": "QUIET BEAT: MAS; the room falls away to the monitor's green + his cyan; he watches Gerg type.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "",
+   "rule": "was [PF] box"
+  },
+  {
+   "id": "29.11c",
+   "v2": [
+    "29.11c"
+   ],
+   "tag": "[POV·full]",
+   "cls": "SC",
+   "tpl": "SCREEN",
+   "frames": 15,
+   "what": "Gerg's tile fills the frame; he glances up into his camera, at Mas.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "29.12r",
+   "v2": [
+    "29.12r"
+   ],
+   "tag": "[MCU·PF]",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 15,
+   "what": "MAS looks back (the look swaps from the tile to the lens).",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "",
+   "rule": "was [PF] box"
+  },
+  {
+   "id": "29.12",
+   "v2": [
+    "29.12"
+   ],
+   "tag": "[2S]",
+   "cls": "M",
+   "tpl": "2S",
+   "frames": 135,
+   "what": "The whole back wall: V.O. \"gerg never waits to be asked.\"; on \"asked\" the slate door steps up; TASYA (O.S.) \"Everyone is welcome.\"",
+   "face": true,
+   "box": "os",
+   "move": "",
+   "build": "exists",
+   "rule": "",
+   "lines": [
+    "a4-29-vo3",
+    "a4-29-07"
+   ],
+   "kinds": {
+    "a4-29-vo3": "vo",
+    "a4-29-07": "dialogue"
+   }
+  },
+  {
+   "id": "29.13",
+   "v2": [
+    "29.13"
+   ],
+   "tag": "[MCU]",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 60,
+   "what": "MAS at once, not turning: \"leave it open.\" The slate door soft behind him; after the line, RACK to the door.",
+   "face": true,
+   "box": "none",
+   "move": "rack",
+   "build": "",
+   "rule": "was [P] box",
+   "lines": [
+    "a4-29-08"
+   ],
+   "kinds": {
+    "a4-29-08": "dialogue"
+   }
+  },
+  {
+   "id": "29.14",
+   "v2": [
+    "29.14"
+   ],
+   "tag": "[POV·grid]",
+   "cls": "SW",
+   "tpl": "SCREEN",
+   "frames": 120,
+   "what": "AVALANCHE phrase 1: the board's grid on the monitor; one tile appears, another; hundreds begin to fall.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": "split"
+  },
+  {
+   "id": "29.14b",
+   "v2": [
+    "29.14"
+   ],
+   "tag": "[MCU·PF]",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 60,
+   "what": "MAS watching, blank; each landing steps the ROOM's light (never his face).",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "",
+   "rule": "split: a face inside the set-piece"
+  },
+  {
+   "id": "29.14c",
+   "v2": [
+    "29.14"
+   ],
+   "tag": "[POV·grid]",
+   "cls": "SW",
+   "tpl": "SCREEN",
+   "frames": 60,
+   "what": "The stack presses on the board's row.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": "split"
+  },
+  {
+   "id": "29.15",
+   "v2": [
+    "29.15"
+   ],
+   "tag": "[POV·half]",
+   "cls": "SC",
+   "tpl": "SCREEN",
+   "frames": 120,
+   "what": "Phrase 2: ALYI's tile shoved sideways; resisting one beat, it fills half the frame; it slides off.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "kit param (half-frame tile)",
+   "rule": ""
+  },
+  {
+   "id": "29.16",
+   "v2": [
+    "29.16"
+   ],
+   "tag": "[POV·grid]",
+   "cls": "SW",
+   "tpl": "SCREEN",
+   "frames": 120,
+   "what": "NELEH's tile follows, footnotes scattering: \"Has anyone read the char—\"",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": "",
+   "lines": [
+    "a4-29-09"
+   ],
+   "kinds": {
+    "a4-29-09": "dialogue"
+   }
+  },
+  {
+   "id": "29.17",
+   "v2": [
+    "29.17"
+   ],
+   "tag": "[POV·grid]",
+   "cls": "SW",
+   "tpl": "SCREEN",
+   "frames": 120,
+   "what": "Phrase 3: the Quiet Vote's tile pushed out without a sound; the faces keep coming.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": "split"
+  },
+  {
+   "id": "29.17b",
+   "v2": [
+    "29.17"
+   ],
+   "tag": "[ECU]",
+   "cls": "ECU",
+   "tpl": "ECU-PROP",
+   "frames": 60,
+   "what": "The glass on the desk, from above, in the monitor's flicker: its water line flat while the screen shakes.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "exists (29.00 plate)",
+   "rule": "split: the glass that never ripples"
+  },
+  {
+   "id": "29.17a",
+   "v2": [
+    "29.17a"
+   ],
+   "tag": "[MCU·PF]",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 60,
+   "what": "MAS, the room down until the 745 faces on the monitor are its only light, watching the one gap.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "",
+   "rule": "was [PF] box"
+  },
+  {
+   "id": "29.18",
+   "v2": [
+    "29.18"
+   ],
+   "tag": "[POV·half]",
+   "cls": "SC",
+   "tpl": "SCREEN",
+   "frames": 120,
+   "what": "Phrase 4: MADA's tile wedged in the gap; every tile presses; he doesn't move; the half-frame hold (his real face).",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "kit param (half-frame tile)",
+   "rule": ""
+  },
+  {
+   "id": "29.19",
+   "v2": [
+    "29.19"
+   ],
+   "tag": "CARD on [POV·half]",
+   "cls": "SC",
+   "tpl": "CARD-RIDE",
+   "frames": 60,
+   "what": "MADA / LAST FIRER STANDING rides the tile wall.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "29.20",
+   "v2": [
+    "29.20"
+   ],
+   "tag": "[POV·grid]",
+   "cls": "SW",
+   "tpl": "SCREEN",
+   "frames": 60,
+   "what": "Hold: 745 faces press; the spinner turns; the phrase ends.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "30.01",
+   "v2": [
+    "30.01"
+   ],
+   "tag": "[P2] DELIBERATE BOX 1/2",
+   "cls": "BOX",
+   "tpl": "BOX",
+   "frames": 240,
+   "what": "MAS left in his window, ALYI right in the door-cut window; ALYI's post [V]; three hearts rise out of Mas's window and cross the gap; Alyi looks up; HOLD 2 beats; the IOU flutters. The act's one deliberate box: two men in two boxes.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "exists (drawDoorwayP2)",
+   "rule": "deliberate stylistic beat",
+   "lines": [
+    "a4-30-01"
+   ],
+   "kinds": {
+    "a4-30-01": "dialogue"
+   }
+  },
+  {
+   "id": "30.05",
+   "v2": [
+    "30.04",
+    "30.05"
+   ],
+   "tag": "[W]",
+   "cls": "W",
+   "tpl": "W",
+   "frames": 165,
+   "what": "The bullpen: every desk boxed, coats on, TASYA mid-floor: \"We are below them,\" the floor steps to slate from her feet.",
+   "face": false,
+   "box": "typed",
+   "move": "",
+   "build": "exists",
+   "rule": "merged",
+   "lines": [
+    "a4-30-02"
+   ],
+   "kinds": {
+    "a4-30-02": "dialogue"
+   }
+  },
+  {
+   "id": "30.06",
+   "v2": [
+    "30.06"
+   ],
+   "tag": "[LOW]",
+   "cls": "W",
+   "tpl": "LOW-ROOM",
+   "frames": 120,
+   "what": "Low angle, the bullpen ceiling: \"above them,\" (O.S.) the ceiling steps to slate in 3 held palette steps.",
+   "face": false,
+   "box": "os",
+   "move": "",
+   "build": "NEW: bullpen ceiling low-angle plate",
+   "rule": "angle",
+   "lines": [
+    "a4-30-02"
+   ],
+   "kinds": {
+    "a4-30-02": "dialogue"
+   }
+  },
+  {
+   "id": "30.07",
+   "v2": [
+    "30.07"
+   ],
+   "tag": "[MCU]",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 120,
+   "what": "TASYA delighted: \"around them.\" The walls go slate behind her.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "",
+   "rule": "was [P] box",
+   "lines": [
+    "a4-30-02"
+   ],
+   "kinds": {
+    "a4-30-02": "dialogue"
+   }
+  },
+  {
+   "id": "30.08",
+   "v2": [
+    "30.08"
+   ],
+   "tag": "[MCU·PF]",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 60,
+   "what": "MAS at his desk looking down at the floor (the look-down swap): \"hi.\"",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "exists (masLookDown)",
+   "rule": "was [PF] box",
+   "lines": [
+    "a4-30-03"
+   ],
+   "kinds": {
+    "a4-30-03": "dialogue"
+   }
+  },
+  {
+   "id": "30.08b",
+   "v2": [
+    "30.08"
+   ],
+   "tag": "[POV·floor]",
+   "cls": "SC",
+   "tpl": "HIGH-FLOOR",
+   "frames": 60,
+   "what": "His eyeline: the slate floor from above, his shoe tips at the top edge. TASYA (O.S., from the floor): \"Hello.\"",
+   "face": false,
+   "box": "os",
+   "move": "",
+   "build": "NEW: bullpen floor plate (top-down)",
+   "rule": "split; the reverse is the floor",
+   "lines": [
+    "a4-30-04"
+   ],
+   "kinds": {
+    "a4-30-04": "dialogue"
+   }
+  },
+  {
+   "id": "30.09",
+   "v2": [
+    "30.09"
+   ],
+   "tag": "[M]",
+   "cls": "M",
+   "tpl": "M",
+   "frames": 45,
+   "what": "MADA in the only chair that isn't burning. The door bangs: WHIP to it.",
+   "face": true,
+   "box": "none",
+   "move": "whip-out",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "30.10",
+   "v2": [
+    "30.10"
+   ],
+   "tag": "[W]",
+   "cls": "W",
+   "tpl": "W",
+   "frames": 45,
+   "what": "The door bangs open: TERB, extinguisher like a briefcase, the helmet appears.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "30.11",
+   "v2": [
+    "30.11"
+   ],
+   "tag": "CARD on [W] (freeze)",
+   "cls": "W",
+   "tpl": "CARD-RIDE",
+   "frames": 90,
+   "what": "TERB card, full freeze; Mas walks past in colour and pulls the pin.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "30.12",
+   "v2": [
+    "30.12"
+   ],
+   "tag": "[ECU]",
+   "cls": "ECU",
+   "tpl": "ECU-HANDS",
+   "frames": 30,
+   "what": "The pin in his fingers: DO NOT REMOVE. He pockets it.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "30.13",
+   "v2": [
+    "30.13"
+   ],
+   "tag": "[MCU]",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 60,
+   "what": "TERB, the fires soft behind: \"Which room is on fire?\"",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "",
+   "rule": "was [P] box; split",
+   "lines": [
+    "a4-30-05"
+   ],
+   "kinds": {
+    "a4-30-05": "dialogue"
+   }
+  },
+  {
+   "id": "30.13a",
+   "v2": [
+    "30.13"
+   ],
+   "tag": "[W]",
+   "cls": "W",
+   "tpl": "W",
+   "frames": 60,
+   "what": "The room looks around at the fires as if for the first time. TERB: \"…Ah.\"",
+   "face": false,
+   "box": "typed",
+   "move": "",
+   "build": "exists",
+   "rule": "split",
+   "lines": [
+    "a4-30-06"
+   ],
+   "kinds": {
+    "a4-30-06": "dialogue"
+   }
+  },
+  {
+   "id": "30.14",
+   "v2": [
+    "30.14"
+   ],
+   "tag": "[2S]",
+   "cls": "M",
+   "tpl": "2S",
+   "frames": 75,
+   "what": "THE CALM-OFF: MAS left, MADA right across the table; the chaos behind them; TERB (O.S.) \"Terms?\"",
+   "face": true,
+   "box": "os",
+   "move": "",
+   "build": "exists",
+   "rule": "",
+   "lines": [
+    "a4-30-07"
+   ],
+   "kinds": {
+    "a4-30-07": "dialogue"
+   }
+  },
+  {
+   "id": "30.15",
+   "v2": [
+    "30.15"
+   ],
+   "tag": "[OTS]",
+   "cls": "OTS",
+   "tpl": "OTS",
+   "frames": 60,
+   "what": "Over Mas's shoulder (silhouette, the fires' rim) onto MADA: \"Good question.\" HOLD 1 beat.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "helper",
+   "rule": "was [P] box",
+   "lines": [
+    "a4-30-08"
+   ],
+   "kinds": {
+    "a4-30-08": "dialogue"
+   }
+  },
+  {
+   "id": "30.16",
+   "v2": [
+    "30.16"
+   ],
+   "tag": "[MCU]",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 75,
+   "what": "MAS, near-front, eyes toward Mada, fires soft behind: HOLD 1 beat; \"good question.\" (one beat late).",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "",
+   "rule": "was [P] box",
+   "lines": [
+    "a4-30-09"
+   ],
+   "kinds": {
+    "a4-30-09": "dialogue"
+   }
+  },
+  {
+   "id": "30.17",
+   "v2": [
+    "30.17"
+   ],
+   "tag": "[2S]",
+   "cls": "M",
+   "tpl": "2S",
+   "frames": 120,
+   "what": "HOLD 1 BAR: two still men; the spinner stops; the nod; Terb's hand stamps the term sheet, hands it to both.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "30.20",
+   "v2": [
+    "30.20"
+   ],
+   "tag": "[POV]",
+   "cls": "SC",
+   "tpl": "SCREEN",
+   "frames": 90,
+   "what": "His phone lights green: GERG's post [V]; keycaps pop.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": "",
+   "lines": [
+    "a4-30-10"
+   ],
+   "kinds": {
+    "a4-30-10": "post"
+   }
+  },
+  {
+   "id": "30.20a",
+   "v2": [
+    "30.20a"
+   ],
+   "tag": "[MCU·PF]",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 15,
+   "what": "MAS reading it; his face doesn't change.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "",
+   "rule": "was [PF] box"
+  },
+  {
+   "id": "30.21",
+   "v2": [
+    "30.21"
+   ],
+   "tag": "[HIGH]",
+   "cls": "ECU",
+   "tpl": "HIGH-TABLE",
+   "frames": 135,
+   "what": "The hourglass: the last grain; TTEMME's post [V]; only the glass shatters; the sand holds its shape one beat, falls.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": "",
+   "lines": [
+    "a4-30-11"
+   ],
+   "kinds": {
+    "a4-30-11": "post"
+   }
+  },
+  {
+   "id": "30.22",
+   "v2": [
+    "30.22"
+   ],
+   "tag": "[LOW]",
+   "cls": "W",
+   "tpl": "LOW-ROOM",
+   "frames": 60,
+   "what": "The lobby from low: the wall sign lights up over us, DAYS SINCE SOMEONE TRIED TO FIRE MAS: 0; Mas small at the reception desk.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "NEW: lobby low-angle plate",
+   "rule": "angle"
+  },
+  {
+   "id": "30.23",
+   "v2": [
+    "30.23"
+   ],
+   "tag": "[ECU]",
+   "cls": "ECU",
+   "tpl": "ECU-PROP",
+   "frames": 45,
+   "what": "A maintenance hand sets a box of spare 0 plates under the sign.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "30.24",
+   "v2": [
+    "30.24"
+   ],
+   "tag": "[OTS-W]",
+   "cls": "OTS",
+   "tpl": "OTS",
+   "frames": 60,
+   "what": "Over Mas's shoulder (tungsten rim) onto the lobby: the 1993 dialog, Cancel greys 3 steps, the arrow bonks.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "helper (check the geography with the lobby builder; fallback: v2 [W])",
+   "rule": "was [W]; stepped push into 30.25"
+  },
+  {
+   "id": "30.25",
+   "v2": [
+    "30.25"
+   ],
+   "tag": "[CU]",
+   "cls": "CU",
+   "tpl": "CU",
+   "frames": 30,
+   "what": "MAS full frame, silent, the lobby tungsten behind.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "30.26",
+   "v2": [
+    "30.26"
+   ],
+   "tag": "[ECU]",
+   "cls": "ECU",
+   "tpl": "ECU-HANDS",
+   "frames": 45,
+   "what": "His hand sets the glass down, nudges it one pixel true. \"okay.\" over the hands.",
+   "face": true,
+   "box": "os",
+   "move": "",
+   "build": "exists",
+   "rule": "",
+   "lines": [
+    "a4-30-12"
+   ],
+   "kinds": {
+    "a4-30-12": "dialogue"
+   }
+  },
+  {
+   "id": "31.01",
+   "v2": [
+    "31.01"
+   ],
+   "tag": "[ECU]",
+   "cls": "ECU",
+   "tpl": "ECU-PROP",
+   "frames": 90,
+   "what": "The Q* vault, the sticky note, the hum on F. Rail (REPORTED).",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "31.02",
+   "v2": [
+    "31.02"
+   ],
+   "tag": "[W]",
+   "cls": "W",
+   "tpl": "W",
+   "frames": 60,
+   "what": "The back wall: Mas walks past the vault without looking, the Orb looks; Gerg passes the other way, typing, and stops.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "31.03",
+   "v2": [
+    "31.03"
+   ],
+   "tag": "[MCU-2]",
+   "cls": "MCU",
+   "tpl": "MCU-2",
+   "frames": 90,
+   "what": "A frameless 50/50: MAS left, turned to camera-left (away from the vault and from Gerg: not looking), GERG right, laptop green under his chin, the vault soft between them. GERG: \"What's in there?\" / MAS: \"it's a preview.\" The vault hums on the line: RACK to the vault, both men go soft.",
+   "face": true,
+   "box": "none",
+   "move": "rack",
+   "build": "helper (two frameless busts)",
+   "rule": "was [P2] box; keeps the shared frame (§3.8); one Q+A pair in one frame (rule 2)",
+   "lines": [
+    "a4-31-01",
+    "a4-31-02"
+   ],
+   "kinds": {
+    "a4-31-01": "dialogue",
+    "a4-31-02": "dialogue"
+   }
+  },
+  {
+   "id": "31.05",
+   "v2": [
+    "31.03"
+   ],
+   "tag": "[ECU]",
+   "cls": "ECU",
+   "tpl": "ECU-PROP",
+   "frames": 15,
+   "what": "The sticky note: DO NOT OPEN. DO NOT EXPLAIN. (his read)",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists (vault insert)",
+   "rule": "was [P2] box"
+  },
+  {
+   "id": "31.05b",
+   "v2": [
+    "31.03"
+   ],
+   "tag": "[MCU]",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 15,
+   "what": "GERG nods and walks on out of frame, whole-pixel steps.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "",
+   "rule": "was \"his window closes\""
+  },
+  {
+   "id": "31.06",
+   "v2": [
+    "31.06"
+   ],
+   "tag": "[MCU]",
+   "cls": "MCU",
+   "tpl": "MCU-F",
+   "frames": 165,
+   "what": "MAS at his desk reads his memo aloud [V], unhurried. No move.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "",
+   "rule": "was [P] box",
+   "lines": [
+    "a4-31-03"
+   ],
+   "kinds": {
+    "a4-31-03": "dialogue"
+   }
+  },
+  {
+   "id": "31.07",
+   "v2": [
+    "31.07"
+   ],
+   "tag": "[ECU]",
+   "cls": "ECU",
+   "tpl": "ECU-PROP",
+   "frames": 90,
+   "what": "The boardroom: a screwdriver takes the ALYI plate off his board chair, four screws, four beats.",
+   "face": true,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "31.08",
+   "v2": [
+    "31.08"
+   ],
+   "tag": "[ECU]",
+   "cls": "ECU",
+   "tpl": "ECU-PROP",
+   "frames": 45,
+   "what": "The conference-room door, shut, its nameplate still on.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  },
+  {
+   "id": "31.09",
+   "v2": [
+    "31.09"
+   ],
+   "tag": "[W]",
+   "cls": "W",
+   "tpl": "W",
+   "frames": 120,
+   "what": "The folding chair unfolds: OBSERVER (NON-VOTING); the key ring drops onto it. Jangle.",
+   "face": false,
+   "box": "none",
+   "move": "",
+   "build": "exists",
+   "rule": ""
+  }
+ ]
+}

@@ -1,6 +1,8 @@
 # MR. MAS · POV and framing
 
-> **Status: WORKING RULE, 2026-09-25, revised the same day after the Ep1 Act Four table read** (the POV pass read for comedy, for POV and unreliability, and for intimacy and framing; what changed and why is in [§12](#12-revisions-after-the-ep1-act-four-table-read)). This is the head writer's synthesis of three proposals: THE CONFIDING NARRATOR, THE PLAYER-CHARACTER and THE INTIMATE CHAMBER PIECE (scored in [Appendix A](#appendix-a-the-three-proposals-scored)). It is written to the showrunner's notes of 2026-09-25 and to [pov-clarification.md](pov-clarification.md), both binding, and it governs every rewrite from Ep1 draft 3 on (Ep1 Act Four is now at draft 3.1). Items marked **PROPOSED** need the named owner's sign-off. Until then, write to the default given.
+> **Guidelines, not gates (showrunner, 2026-09-26: "there should be no hard cutoffs for rules on episode handling… the practical flow and user entertainment is always priority").** Every cap, share, budget and GREEN/AMBER/RED band in this file is a guide for spotting problems: break one when the scene plays better, and say why in a line. The POV contract (limited third person through Mas, unreliable but caught, never a Mas tell at a real event), the [guardrails](guardrails.md) and the showrunner's direct story calls stay firm. How to cut is in [flow-and-continuity](flow-and-continuity.md) (cut on story, think in sequences), which replaces §4.7.3 rules 1–2 and the fixed-interval cutting rules below.
+
+> **Status: WORKING RULE, 2026-09-25, revised the same day after the Ep1 Act Four table read** (the POV pass read for comedy, for POV and unreliability, and for intimacy and framing; what changed and why is in [§12](#12-revisions-after-the-ep1-act-four-table-read)), **and again after the showrunner watched the Act Four animatic v2: [§4.7 Shot variety](#47-shot-variety-2026-09-25) retires the boxed portrait window as the conversation shot** (it amends §4.1–§4.4 where they disagree). This is the head writer's synthesis of three proposals: THE CONFIDING NARRATOR, THE PLAYER-CHARACTER and THE INTIMATE CHAMBER PIECE (scored in [Appendix A](#appendix-a-the-three-proposals-scored)). It is written to the showrunner's notes of 2026-09-25 and to [pov-clarification.md](pov-clarification.md), both binding, and it governs every rewrite from Ep1 draft 3 on (Ep1 Act Four is now at draft 3.1). Items marked **PROPOSED** need the named owner's sign-off. Until then, write to the default given.
 
 **The showrunner's notes (binding):**
 1. "I'm concerned everything will be too zoomed out and the viewer won't get attached enough to characters through the individual interactions." → closer framing, faces, reactions, quiet character moments, emotional beats between gags.
@@ -16,17 +18,17 @@
 
 **Sources read:** [INDEX](../INDEX.md) · [overview](overview.md) · [pov-clarification](pov-clarification.md) · [guardrails](guardrails.md) · [mas-manalt](../characters/mas-manalt.md) · [the-orb](../characters/the-orb.md) · [pacing-model](../format/pacing-model.md) · [FORMAT-DECISION](../format/FORMAT-DECISION.md) · [production-estimates](../format/production-estimates.md) · [flashback map §0](../timeline/flashback-map.md#0-rules-of-the-map) · [recurring gags §1](../gags/recurring-gags.md#1-mass-tells) · [Ep1 script](../episodes/ep01/script.md) draft 2 (all of it, and Act Four closely) · [PIXEL_GUIDE](../../studio/PIXEL_GUIDE.md) · the approved look in `out/intro/` and `out/structures/pixeladv/`
 
-**Contents:** [The approach in ten lines](#the-approach-in-ten-lines) · [1. The POV contract](#1-the-pov-contract) · [2. The unreliable-narrator toolkit](#2-the-unreliable-narrator-toolkit) · [3. Mas's inner life](#3-mass-inner-life) · [4. Framing grammar](#4-framing-grammar) · [5. V.O. style guide](#5-vo-style-guide) · [6. Leaving his POV](#6-leaving-his-pov) · [7. Worked example: Ep1 Act Four](#7-worked-example-ep1-act-four-sc-2433) · [8. Per-act checklist and the POV ledger](#8-per-act-checklist-and-the-pov-ledger) · [9. Production impact](#9-production-impact) · [10. The POV across the season](#10-the-pov-across-the-season-proposed) · [11. Decisions and handoffs](#11-decisions-and-handoffs) · [12. Revisions after the Ep1 Act Four table read](#12-revisions-after-the-ep1-act-four-table-read) · [Appendix A](#appendix-a-the-three-proposals-scored)
+**Contents:** [The approach in ten lines](#the-approach-in-ten-lines) · [1. The POV contract](#1-the-pov-contract) · [2. The unreliable-narrator toolkit](#2-the-unreliable-narrator-toolkit) · [3. Mas's inner life](#3-mass-inner-life) · [4. Framing grammar](#4-framing-grammar) ([4.7 Shot variety](#47-shot-variety-2026-09-25)) · [5. V.O. style guide](#5-vo-style-guide) · [6. Leaving his POV](#6-leaving-his-pov) · [7. Worked example: Ep1 Act Four](#7-worked-example-ep1-act-four-sc-2433) · [8. Per-act checklist and the POV ledger](#8-per-act-checklist-and-the-pov-ledger) · [9. Production impact](#9-production-impact) · [10. The POV across the season](#10-the-pov-across-the-season-proposed) · [11. Decisions and handoffs](#11-decisions-and-handoffs) · [12. Revisions after the Ep1 Act Four table read](#12-revisions-after-the-ep1-act-four-table-read) · [Appendix A](#appendix-a-the-three-proposals-scored)
 
 ---
 
 ## The approach in ten lines
 
-1. **Limited third person, close.** The camera sits beside Mas, not across the room. Faces and hands fill at least 55% of story time, and room wides at most 15%.
+1. **Limited third person, close.** The camera sits beside Mas, not across the room. As a guide, faces and hands fill about 55% of story time or more, and room wides about 15% or less, plus the wides a new place needs to read.
 2. **There are four versions of Mas.** To the room he speaks, in eight words or fewer. To us he gives lowercase V.O. To THE ORB he gives one true word. To no one he shows hands, props and rituals. Only the audience gets all four.
-3. **The V.O. is sparing:** 5–8 lines an episode (pilot ≤ 8), 60 words at most, in at least three of the four movements. There is more of it when he's cornered, and none near the record. **Nobody in the world ever hears it**, the Orb included.
+3. **The V.O. is sparing:** about 5–8 lines an episode, around 60 words in all, spread across most of the four movements (guides: the aim is a voice we lean in for, not a narrator). There is more of it when he's cornered, and none near the record. **Nobody in the world ever hears it**, the Orb included.
 4. **He is unreliable in tone, never in fact.** The rail and the Orb are never wrong, and every distortion is corrected on screen within a bar. In a told-twice structure, the other side's pass outranks his on invented beats.
-5. **The toolkit has eight devices,** each with a cap: at most 6 caught per episode and 2 per scene. The V.O. sets up and the picture delivers.
+5. **The toolkit has eight devices,** each with a guide budget: about 6 caught per episode and 2 per scene, so the catches stay surprising. The V.O. sets up and the picture delivers.
 6. **His inner life comes from his public persona.** He wants to be asked, not just to survive. He fears Cancel working, and a calm that can be copied. His tells are props, and nothing is clinical.
 7. **A new framing grammar:**
    - a medium and two-shot tier for principals in home rooms
@@ -36,8 +38,9 @@
    - two-shot first
    - the listener
    - everyone gets one real face
-8. **The adventure game is a signature, used sparingly.** The wide is the map, and lit UI appears at most twice an episode. The lit cursor is the player's seat, not Mas; the unlit arrow belongs to whoever is trying to fire him. He knows he's being played ("noted.").
-9. **Exits from his POV are signposted.** The rail names the side, there's no V.O., and he appears only as his public record (or as his voice on their call). Exits take at most 12% of story time. We come back through the glass.
+   - *(2026-09-25, [§4.7](#47-shot-variety-2026-09-25); revised 2026-09-26 by [flow-and-continuity §2](flow-and-continuity.md#2-cutting))* people talk in frameless close-ups, over-the-shoulders and two-shots, cut on story (new information, a reaction that matters more than the speaker, geography), with size variety coming naturally; the boxed portrait window is in-world or a deliberate beat, about 2 an act
+8. **The adventure game is a signature, used sparingly.** The wide is the map, and lit UI appears about twice an episode at most, so it stays a signature. The lit cursor is the player's seat, not Mas; the unlit arrow belongs to whoever is trying to fire him. He knows he's being played ("noted.").
+9. **Exits from his POV are signposted.** The rail names the side, there's no V.O., and he appears only as his public record (or as his voice on their call). Exits take about 12% of story time or less, so the show stays his. We come back through the glass.
 10. **The cost is about neutral:** about 10 agent-h one-time for the season, and about −0.5 agent-h per episode. Build THE FALLING TILE and 26A in this grammar for the W0 calibration now.
 
 ---
@@ -103,7 +106,7 @@ From *Mr. Robot* we take the reveal structure only, never the psychology.
 
 | | The audience | Mas |
 |---|---|---|
-| The rail: dates, numbers, truth labels | Sees it | Sees it. He can glance at it (≤ 2 per episode) and answer it ("noted.") |
+| The rail: dates, numbers, truth labels (never the future, §1.7) | Sees it | Sees it. He can glance at it (≤ 2 per episode) and answer it |
 | His V.O. | Hears it | It's his account, told to us. Nobody in the world hears it |
 | GLYPH | Sees it | Never. He can react to the event it rides on, never to the tokens. |
 | The suggested-replies strip | Sees it | Sees it, and takes the offer |
@@ -138,6 +141,17 @@ This is the ruling on the adventure-game layer.
 - **When an episode needs him to choose,** the choice is the phone's suggestion strip, grown to three lines if needed (§4.5). Which option he takes is the tell. The cursor never makes it for him. *(Ep2 sc 14's dialogue tree is redrawn this way: its owner's handoff.)*
 
 This keeps the canon, keeps Mas from becoming a gamer, and gives the rare lit-UI moment its meaning: *he knows he's being played.*
+
+### 1.7 The record never announces the climax
+
+**Season rule (binding, 2026-09-25):** No episode may announce its own climax ahead of time (no flash-forward chyrons, countdowns or cards that state the outcome); foreshadow with hints only. The pacing form of the rule, with the allowed and not-allowed table, is [pacing-model L9, §2.4](../format/pacing-model.md#24-no-announced-climaxes-l9).
+
+It follows from the contract line (§1.1): *we know what he knows about the world when he does.* He learns the news when we do, so the record can't know it earlier.
+- **THE RECORD states the past, never the future.** The rail, the quote cards, THE PLAN and the truth labels carry what has happened by the date on screen. A rail item that says what will happen (`HE WILL BE FIRED TOMORROW.`) or counts down to it is the record lying about its own date, and it spends the climax before the climax plays.
+- **Clocks are allowed; verdicts are not.** A date, a calendar invite, a public deadline or a stated target can tick on screen, as long as it never says how it ends. Ep1's cold open is the model: `Board sync · Fri 12:00` on his phone, four unnamed attendee circles, and "noted." He can answer a clock; nobody, him included, is told the outcome.
+- **The witness and the machine don't foreshadow in words either.** THE ORB may look at the hint (its iris steps from the invite to his face; it counts the four circles and stops on the black square), because it reacts to what it can see. It never toasts the outcome. GLYPH and the strip never pre-type an event.
+- **Hints live in the four layers' own devices:** a look from the Orb, a prop on his desk, a reflection, a zero-read egg, an eyeline, a line with a second meaning. Each must read as something else to a first-time viewer and land on a face within 10 s (pacing L2). Hints carry no tag and never quote a real line ahead of its date.
+- **Past the record (Eps 10–12).** The same logic removes the speculation label: the show doesn't stop to tell the viewer what kind of story comes next. The rail's date simply keeps rolling out of Ep9, and its question marks (`OCT 2026?` → `2027??` → `????`) are story, the record losing its grip on the calendar the way the Orb's toast drifts, never a warning card. The end-credits legal card ([overview §8](overview.md#8-disclaimer-cards)) covers dramatization for every episode.
 
 ---
 
@@ -184,13 +198,15 @@ Mas is a composed, clear-headed narrator. He is never confused, deluded or split
 - **The look.**
   - At most 1 look into the lens per episode: 1 beat, no change of expression, only on an invented beat about himself, never within 2 bars of a real line or card.
   - At most 2 glances at the rail.
-  - The pilot has already spent all three: the lens in sc 13 (the class photo), the rail in sc 2 and sc 23. **So Act Four adds no look.**
+  - The pilot has spent two of its three: the lens in sc 13 (the class photo) and the rail in sc 23. Since the no-spoiler pass (§1.7), sc 2 looks at his phone, a prop glance that doesn't count, and the second rail glance stays unspent. **Act Four still adds no look.**
 - **The late beat** (§3.4).
 - **The silence.** This is a rule, not a device.
   - The V.O. never comes within 1 bar of a real line, a dated quote card, a name card, or a `(REPORTED)`, `(DISPUTED)` or sealed item.
   - It never breaks off mid-line into the record, because that would read as a flinch, and a flinch is an invented hesitation.
 
 ### 2.4 Budgets
+
+Guides, not caps: the numbers keep the catches rare enough to surprise. Go over when an episode plays better for it, and note why. The candor-card and no-device-at-the-record lines below are guardrail-adjacent and stay firm.
 
 - **Caught devices (D1–D5 and D7):**
   - ≤ 6 per episode (pilot ≤ 7)
@@ -338,8 +354,8 @@ The native canvas is 480 × 270, and the room area is 480 × 203. Every size is 
 | `[W]` | Room wide | 480 × 203; adults 70–90 px, head ≈ 13 px | Existing rooms and sprites | A new room (≤ 1 bar), physical comedy, set-piece scale, the pull-out, the lit-UI moment |
 | `[M]` | Medium | Waist-up, head ≈ 32–40 px (≈ 2.5–3× room scale); Mas in the left third. **A principal's waist-up rig and nothing else:** a tighter plate of a room is logged `[W]`, and a close shot of a prop is a prop `[ECU]` | **New:** a medium rig per principal (3 head angles, 4 arm poses, the portrait's mouths and lids redrawn at this scale; no legs, no walk), plus a medium plate per home room | Business with props, deliveries, talking while doing. Anything that walks is `[W]` with room sprites |
 | `[2S]` | Two-shot | Two figures at medium scale under one key light. The Orb at this scale is a sphere and an iris. | Medium rigs | Relationships: Mas and the Orb, Mas and Gerg, the calm-off |
-| `[P]` / `[P2]` | Portrait window, one or both | The approved 112 × 136 windows over the room | Existing portraits | Volleys, reactions, the listener. `[P2]` is the cheap two-shot. |
-| `[PF]` | **Portrait fallaway** | A portrait window with the room's key light stepped down behind it | **No new art.** Use `resolve()` with the key near zero. A family step works for holds of 2 beats or less; PIXEL_GUIDE says family steps are "never for long holds." **Lighting notes step the room down; they never relight the face**, unless the art director rules at W0 that Mas's portrait and `[CU]` are painted as materials for `resolve()` (a one-time cost). Otherwise every lighting note on a face is a hidden redraw | Holds, quiet beats, the debrief. **The default close shot.** |
+| `[P]` / `[P2]` | Portrait window, one or both | The approved 112 × 136 windows over the room | Existing portraits | ~~Volleys, reactions, the listener. `[P2]` is the cheap two-shot.~~ **Amended by [§4.7](#47-shot-variety-2026-09-25):** in-world only (a call tile, a phone, a monitor) or a deliberate beat, ≤ 2 per act. Volleys, reactions and the listener move to `[MCU]` (the same portrait art, frameless) and `[OTS]`. |
+| `[PF]` | **Portrait fallaway** | A portrait window with the room's key light stepped down behind it | **No new art.** Use `resolve()` with the key near zero. A family step works for holds of 2 beats or less; PIXEL_GUIDE says family steps are "never for long holds." **Lighting notes step the room down; they never relight the face**, unless the art director rules at W0 that Mas's portrait and `[CU]` are painted as materials for `resolve()` (a one-time cost). Otherwise every lighting note on a face is a hidden redraw | Holds, quiet beats, the debrief. ~~**The default close shot.**~~ **Amended by [§4.7](#47-shot-variety-2026-09-25):** the fallaway is now a lighting move on the frameless `[MCU]` (`[MCU·PF]`), which is the default close shot; no window. |
 | `[CU]` | Full-frame close-up | Head ≈ 140 px, filling the room area | **New, Mas only in Eps 1–3:** the three-quarter view and the smile. Ep1's two `[CU]`s are silent, so they are **one drawing with no mouths**; the light change (cyan to tungsten) lives in what's behind him. The front view, the mouths and the half-lid are built only when an episode needs them | The loudest the camera gets: ≤ 2 per episode. If G1 caps it at one, the second becomes the first one's `[PF]` framing, relit behind him: don't mix sizes in a rhyme |
 | `[ECU]` | Insert | Hands; the eyes strip (480 × 64, letterboxed, 5 pupil positions); the glass from above; the desk and the tally; the drawer | **New:** the ECU kit, for Mas and the Orb only. Others get prop inserts (a hand and an object), never their eyes. | Tells and rituals |
 | `[POV]` | His eyeline | A screen, phone, window or the glass, **full-bleed: we're looking with him** | Existing grid, feed, strip and monitor kits | Macro inside his POV; his reads of people. **Screens and objects only:** no episode before F12.1 shows a room of faces through his eyes |
@@ -349,15 +365,17 @@ The native canvas is 480 × 270, and the room area is 480 × 203. Every size is 
 
 ### 4.2 Target shares (of 20:45 story time)
 
+The bands are for finding spots to go and watch, not pass/fail gates ([flow-and-continuity §5](flow-and-continuity.md#5-coherence-is-checked-not-assumed)). A share off target is fine when the cut is clear and fluid, and the orientation wides a new place or time needs are worth their share of `[W]` ([flow-and-continuity §1](flow-and-continuity.md#1-think-in-sequences-not-shots)).
+
 | Shot | Target | AMBER | RED |
 |---|---|---|---|
 | `[W]` | **10–15%** | 15–20% | > 20% |
-| **Faces and hands:** `[M]` `[2S]` `[P]` `[P2]` `[PF]` `[CU]` `[ECU]` | **≥ 55%.** Within that: `[M]` + `[2S]` 15–20%, the portrait family 30–35%, `[CU]` ≤ 2%, `[ECU]` 6–9% | 45–55% | < 45% |
+| **Faces and hands:** `[M]` `[2S]` `[OTS]` `[MCU]` `[P]` `[P2]` `[PF]` `[CU]` `[ECU]` | **≥ 55%.** Within that: `[M]` + `[2S]` 15–20%, ~~the portrait family 30–35%~~ `[MCU]` + `[CU]` 20–30% and boxed windows ≤ 5% ([§4.7.4](#474-shares-replacing-42s-portrait-family-target)), `[CU]` ≤ 2%, `[ECU]` 6–9% | 45–55% | < 45% |
 | `[POV]` + `[SCR]` | 12–18% | — | — |
 | `[GFX]` | 8–10% | — | — |
 
 - **I-mode scenes:** faces and hands ≥ 65%, and `[W]` ≤ 10%.
-- **Set-pieces:** `[W]` may run 50–70%, because the scale is the joke, but cut to a face at least once every 8 bars.
+- **Set-pieces:** `[W]` may run 50–70%, because the scale is the joke, but come back to a face often enough that it stays about someone (about every 8 bars is a useful check).
 - **Screens:** a video tile counts as a face only when it fills at least half the frame, as Gerg's does in sc 29. A call grid counts as `[POV]`.
 - **Logging:** a `[W]` with a portrait window open logs as `[P]` only while a line is typing in it. A name card logs as the shot it rides. A prop insert without a hand isn't a face or a hand.
 - **Sanctioned AMBER.** An act built around graphics and screens by design (Ep1 Act Four: THE PLAN, the call grid, the avalanche and the exit's screens are ≈ 40% of it) may sit at AMBER for faces and hands by showrunner ruling, rather than chase 55% with more mediums. The rest of the episode then carries the share, or the episode is ruled AMBER too.
@@ -380,8 +398,8 @@ The native canvas is 480 × 270, and the room area is 480 × 203. Every size is 
    - `[PF]`, `[CU]` and `[ECU]` are inside him.
 
    Tells are only drawn at `[PF]` or closer, so that's the only place they're ever shot.
-2. **Open close; earn the wide.** Home rooms never get an establishing wide. A new room gets ≤ 1 bar, or ≤ 2 for a set-piece arrival. Each scene gets one return to `[W]`, for the physical gag or the button.
-3. **No exchange longer than two lines stays in `[W]`.**
+2. **Open close; earn the wide.** A home room the audience already knows can open close. A new place, a jump in time, or a sequence change the viewer might miss opens by showing where, when and who, with a wide held long enough to take in (about 1–2 bars is typical; [flow-and-continuity §1](flow-and-continuity.md#1-think-in-sequences-not-shots)). Each scene usually gets one return to `[W]`, for the physical gag or the button.
+3. **Longer exchanges move in from `[W]`** (usually by the third line), because the acting lives in the faces.
 4. **Two-shot first.** An anchor scene between Mas and a principal establishes the pair in `[2S]` or `[P2]` before the first portrait volley. Attachment comes from sharing a space.
 5. **The listener.**
    - Every exchange cuts to the listener on at least one punchline.
@@ -399,20 +417,22 @@ The native canvas is 480 × 270, and the room area is 480 × 203. Every size is 
    - In his POV, a close-up is something he gives. The board stays a corner thumbnail in pass two, while Gerg gets a tile big enough to act in.
    - **Fairness exception:** anyone who speaks in a room with him gets the right-hand window, and exits give everyone full closeness.
 10. **The smile stays one pixel at every scale.** In `[CU]` it's even smaller relative to the face, and that's the joke. He doesn't blink (§3.6).
-11. **Cut, don't zoom, and cut on the grid.** Volleys cut on beats, holds are counted in beats, and set-pieces run in 4-bar phrases (L7).
+11. **Cut, don't zoom; cut on story.** *(Revised 2026-09-26 by [flow-and-continuity §2](flow-and-continuity.md#2-cutting), which replaces "cut on the grid; volleys cut on beats".)* Cut when new information arrives, when a reaction matters more than the speaker, or when the geography needs re-establishing. A two-shot or over-the-shoulder can carry a whole exchange when the relationship is the point, and a slow push is often better than a cut. Holds are timed to what the viewer needs to take in, not to a beat count. A montage or set-piece under continuous music can ride its phrases, since that's where the music and the picture move together. A push is a cut-in up the ladder, one drawn size per cut; the only true zoom is a screen's own, in-world. Pans, drifts, racks and whips are allowed on the whole-pixel grid: [§4.7.2](#472-camera-moves-all-on-the-whole-pixel-grid).
 12. **Pay for close coverage with the wide.** Each added close cut removes one drawn event from a wide: a walk step, a background pose, a redundant object hop. The visual-events cap (≈ 1,300) does not go up.
 13. **Dark rooms make close shots cheap.** Only the lit area carries detail. A desk edge, the cyan cone and the rack LEDs are a whole medium plate.
 14. **Medium rigs and quiet beats are for principals.** Cameos stay in `[W]` and `[P]`, with plates.
 
 ### 4.4 Holds and quiet beats
 
+The lengths and counts are typical, not limits: a hold serves comprehension and feeling, so it runs as long as the viewer needs to take the moment in, and the sound bed keeps running under it ([flow-and-continuity §3–4](flow-and-continuity.md#4-dialogue-rhythm)).
+
 | Hold | Length | Where | Rules |
 |---|---|---|---|
 | Take | 1 beat | Any reaction | — |
 | Listener's hold | 1–2 beats | Others hearing his calm (the grid after "super.") | No V.O. |
-| Deadpan | 2 beats | Mas, ≤ 1 per scene | In `[P]`, `[PF]` or `[CU]`, never `[W]`. A silent `[CU]` holds its face alone for this long, then something lands (Ep1: `+1 FIRING`; "okay." over the hands), so it never becomes a second long hold |
+| Deadpan | 2 beats | Mas, ≤ 1 per scene | In `[MCU]` (was `[P]`/`[PF]`, §4.7) or `[CU]`, never `[W]`. A silent `[CU]` holds its face alone for this long, then something lands (Ep1: `+1 FIRING`; "okay." over the hands), so it never becomes a second long hold |
 | Long hold | 1 bar | Once per episode | Ep1: the calm-off, now a `[2S]`: two still men in one frame |
-| **Quiet beat** | **4–8 beats (2.5–5 s)** | ≤ 1 per movement, ≤ 3 per episode, at least 90 s apart | Faces or hands only (`[PF]`, `[CU]`, `[2S]`, `[ECU]`, or a video tile that fills half the frame). No line, no gag, no sting. Room tone or one instrument. A laugh within 10 s before it and within 1 bar after it, so the 20 s dead-air rule holds. Best as an **exchanged look** (he watches; they look back; he looks back), not the same beat twice. A D8 line may come out of it. Logged `q`. |
+| **Quiet beat** | **4–8 beats (2.5–5 s)** | About 1 per movement and 3 per episode, well spaced (about 90 s apart), so each one stays special | Faces or hands only (`[PF]`, `[CU]`, `[2S]`, `[ECU]`, or a video tile that fills half the frame). No line, no gag, no sting. Room tone or one instrument, never a hole. Laughs close on both sides of it help the quiet read as chosen. Best as an **exchanged look** (he watches; they look back; he looks back), not the same beat twice. A D8 line may come out of it. Logged `q`. |
 | Sanctioned sincere (H) | ≤ 20 s | Only where scheduled: F9.3, Ep7's bead, Ep12's ring | Never V.O. |
 
 ### 4.5 The adventure game as a signature, used sparingly
@@ -443,6 +463,83 @@ TASYA (O.S.)                                        anyone else off picture: (O.
 ```
 
 `(V.O.)` is **Mas's alone.** Another narrator inside their own rim flashback is typed in their rim colour, never as `(V.O.)`. A real line spoken over picture keeps its quotation marks and its tag. The rule the audience learns: **quotation marks mean the record; no quotation marks means someone's account.**
+
+### 4.7 Shot variety (2026-09-25)
+
+> **The showrunner, on the Ep1 Act Four animatic v2 (binding):** "why is there so much empty silence in the animatic? the dialogue feels slow. i like the visuals otherwise. don't lengthen things out just for the sake of it. also, we don't need to have all scenes in the form of boxes for people talking, we can have more closeup or other angle zoom variety shots."
+
+**What changes, in one line:** the portrait window stops being the show's conversation shot. People talk in **frameless close-ups, over-the-shoulders and two-shots**, cut on the turns. The box comes back only where the world has one (a call tile, a phone, a monitor) or as a deliberate beat, twice an act at most.
+
+**Why:** in the v2 animatic 42 of Act Four's 139 shots (27% of its time) were boxed portraits over a held room, and 29 of its 45 spoken lines played in one. That is the "boxes for people talking". The box also cost time: a window opens in 3 held steps, a box types its line, and a held room behind it gives the eye nothing to cut to, so shots were padded rather than cut. This section amends §4.1–§4.4 where they disagree; the worked example is Act Four's [framing-v3.md](../episodes/ep01/production/act4/framing-v3.md), and the templates are prototyped from existing assets in `studio/src/dev/framing-v3/templates.ts` (sheet: `out/ep01/act4/framing-v3/framing-v3-templates.png`).
+
+#### 4.7.1 The shot ladder
+
+Native room area 480 × 203. Every size is still its own drawing (§4.1); nothing is scaled except a screen's own pixels (the macro below).
+
+| Tag | Shot | How it's built | New art | Use |
+|---|---|---|---|---|
+| `[W]` | Room wide | Existing rooms and sprites (§4.1) | — | A new room, physical comedy, scale, the pull-out |
+| `[HIGH]` · `[LOW]` | **Angle plates**: an overhead of a table or a floor; a low angle on architecture | A pre-drawn perspective variant of a room or an insert plate. Overheads are the cheapest (flat shapes); a low angle on a ceiling or a sign next. No figure drawn from below unless an episode budgets it | 15–35 agent-min a plate | Stakes on a table (the phones walk, the hourglass); a reverse that is an object (the floor he says "hi." to); an institution looming |
+| `[M]` · `[2S]` | Medium · two-shot | The medium rigs and plates (§4.1) | — | Placing a pair; the button of a conversation; the long hold |
+| `[OTS]` | **Over-the-shoulder** | Foreground: the listener's approved portrait as a **silhouette** (N0, a 1 px rim on the key side), bleeding off the frame's side and bottom. Background: the speaker as a **medium rig** in a medium plate. `[OTS-W]`: the background is a room wide | 0 drawings (helper) | Face-to-face turns; only a principal with a medium rig can be the background subject |
+| `[MCU]` | **Frameless close-up** | The approved portrait (head ≈ 70 px) composed straight into the frame, no window: eyes on the upper third (portrait top at y ≈ 20–26), the bust extended to the frame's bottom edge with the shoulders falling off to shadow in hard bands, the room behind stepped down 2 rungs (soft focus) with negative fill | 0 drawings (helper) at night. By day the extended torso reads as a block, so a portrait used in a day room needs a "tall bust": its own vector torso re-rendered 48 rows longer, 5–10 agent-min each | **The default close shot.** Singles in a conversation, reactions, the listener, tells |
+| `[MCU-2]` | **The frameless 50/50** | Two frameless busts, one per third, the thing between them soft: a shared frame (§3.8) without a box | helper | One question-and-answer pair where the relation is the joke (Ep1: the vault) |
+| `[MCU·PF]` | Close-up with the fallaway | `[MCU]` while the room keeps stepping down behind the face. The fallaway (§4.1 `[PF]`) survives as a **lighting move**, not a box | — | Quiet beats, holds, the debrief |
+| `[MCU·door]` · `[MCU·glass]` | **Frame in frame** | `[MCU]` inside a frame the world owns: a doorway (the jamb and leaf as full-height foreground shapes), a dark window with a reflection (stepped down one rung, the city through him) | helper + simple shapes | Where the script's joke was "his own window": the doorway and the glass do it in-world |
+| `[LOW·desk]` | **Desk-level** | An insert-scale prop big on the bottom edge of the frame, the `[MCU]` above and behind it; the rack moves between them | the prop at insert scale, if it doesn't exist | A face and the thing it's about in one frame |
+| `[CU]` | Full-frame close-up | As §4.1: Mas only, ≤ 2 per episode. Another principal's `[CU]` is a 2× re-raster of the portrait's vector parts with the face hand-placed, 45–90 agent-min: budget it per episode, never for a gag | as §4.1 | The loudest the camera gets |
+| `[ECU]` | Extreme close-up | Mas's hands and eyes strip, the glass, the phone, prop inserts (§4.1), **plus THE ORB's iris full frame** (the Orb is drawn procedurally at any radius: free). Other people's eyes stay unbuilt (props and hands only) unless an episode budgets one principal's eyes strip, 30–45 agent-min (**PROPOSED**, ≤ 1 per episode) | — | Tells, rituals, the witness's look |
+| `[POV]` · `[SCR]` | Screens | As §4.1, plus **in-world pushes**: the app's own speaker view (a pinned tile), a two-up, a half-frame tile, and the **screen macro**: an integer 2× crop of a screen's own pixels, ≤ 1 beat, ≤ 2 per act, screens only (never a room, never a face drawn for a room). In an exit every screen shot, a macro included, keeps a bezel edge (rule 7) | kit parameters | Calls, feeds, the avalanche |
+| `[GFX]` | Graphics | Cards; THE PLAN in three sizes (sheet, section, detail: linework redrawn at 2× coordinates in 1 px lines, never enlarged) and whole-pixel pans across a sheet drawn bigger than the frame | kit parameters | The show's voice |
+| `[P]` · `[P2]` | **The boxed portrait window** | The approved 112 × 136 window (§4.1) | — | **Only** (a) in-world: a video tile, a phone, a monitor, a security camera; the name card is show chrome and rides its shot; or (b) a **deliberate stylistic beat: ≤ 2 per act**, logged `BOX`, its reason written on the board |
+
+#### 4.7.2 Camera moves (all on the whole-pixel grid)
+
+| Move | How | Limit (a guide) |
+|---|---|---|
+| **Cut-in** (the stepped push) | Up the ladder on the same axis, one drawn size per cut, on the beat: `[W]` → `[M]` → `[MCU]` → `[CU]`, or `[OTS-W]` → `[CU]` | — |
+| **Screen push** | Grid → speaker view → macro: the app zooms, the camera doesn't | Macro ≤ 2 per act |
+| **Pan** | Whole-pixel, only across art drawn wider or taller than the frame (THE PLAN's sheet; plates drawn wide) | — |
+| **Drift** | A parallax truck: foreground 1 px per 4 f, background 1 px per 8 f, ≤ 16 px a shot. Keeps a held shot of 3 s or more alive | Not on the record (rule 6) |
+| **Rack focus** | Two layers; the soft one steps down 2 rungs (hard steps, never a dither on a figure); focus moves in 3 held steps, 2 f each. It pulls the eye to what the line is about | ≤ 4 per act |
+| **Whip** | The whip streak from the transition vocabulary ([PIXEL_GUIDE](../../studio/PIXEL_GUIDE.md) §2 rule 7): 4 f, 2 out and 2 in; each row held in runs plus the highlight smear. On a motivated turn of attention: a bang, a door, the Orb's rewind | ≤ 4 per act |
+
+No smooth zooms, no sub-pixel moves, no scaled room art or figures ([PIXEL_GUIDE §4](../../studio/PIXEL_GUIDE.md)). The rail band and every UI layer never move, smear or soften: the interface never shakes.
+
+#### 4.7.3 Rules
+
+1. **Size variety comes from cutting on story.** *(Revised 2026-09-26: this replaces "no more than 2 consecutive shots of the same size"; [flow-and-continuity §2](flow-and-continuity.md#2-cutting).)* Cutting when new information arrives, when a reaction matters more than the speaker, or when the geography needs re-establishing varies the sizes naturally. Two or three shots of one size in a row are fine in a steady conversation; what's worth a look is a long run of one size with nothing changing inside the shots. The v3 animatic showed the cost of the old rule: stacked with the other quotas, it forced cuts the story didn't ask for. The size classes, for logging: `[W]` (room angle plates included) · `[M]`/`[2S]` · `[OTS]` · `[MCU]` (the 50/50, frame-in-frame and desk-level included) · `[CU]` · `[ECU]` (hands, eyes, the iris, inserts, table overheads) · screen-wide (a grid, a list) · screen-close (a pinned, single or half tile, a phone, a counter, a floor POV) · `[GFX]` sheet · section · detail · a full-screen card · `BOX`. A name card logs as the shot it rides.
+2. **Conversations change angle on the turns that matter.** *(Revised 2026-09-26: this replaces "every change of speaker changes the setup"; [flow-and-continuity §2](flow-and-continuity.md#2-cutting).)* A change of speaker is a reason to cut only when the new line or the reaction is the story: then the reverse single, an `[OTS]`, the two-shot, the listener or an insert. A two-shot or over-the-shoulder can carry a whole exchange when the relationship is the point (the calm-off, a blueprint pair), and a slow push is often better than a cut. A new setup on every line is what made the v3 act strobe.
+3. **Three setups, not two (a typical shape).** Place the pair (`[2S]` or `[W]`: two-shot first, §4.3 rule 4), then move to `[MCU]` singles, an `[OTS]` or a screen as the turns land, then back to the two-shot for the button.
+4. **The typed dialogue box leaves close coverage** (**PROPOSED**, showrunner and art director; the default for the v3 animatic, which is the test). No typed box over `[MCU]`, `[CU]`, `[OTS]`, `[M]` or `[2S]`: the voice carries the line and the subtitle track carries accessibility. The box stays in `[W]` (the adventure-game register, §4.5), for a voice off picture or through a speaker, and for posts. The V.O. line (§5.2) is unchanged.
+5. **Screen direction** (§4.3 rule 8, kept): Mas in the left third. In `[MCU]` he faces his monitor (camera-left) or turns to the lens (the `front` head, the look toward whoever he answers); he is **never flipped at portrait or `[CU]` scale**. His medium rig flips for a face-to-face, and **a silhouette may flip** (it has no features to mirror). Others face camera-left from the right third, with lead room. In an exit, the room's own staging sets the line.
+6. **The record plays dry.** No drift, rack, whip or push while a real `[V]` line plays or a real post or quote card is in picture: cut in, hold, cut out. **Soft focus never touches a must-read record item** (a meter, a dated item, a sign in the plot): if it's behind a face, both stay sharp.
+7. **POV holds.** Full-bleed is his and a bezel is the world's (§4.3 rule 7). Exits get close coverage on the others and **no Mas single of any size**. The Orb's iris `[ECU]` is a shot *of* the witness, never its point of view (TERMINAL owns that).
+8. **Cut on the turn; never pad.** *(Revised 2026-09-26 by [flow-and-continuity §2 and §6](flow-and-continuity.md#2-cutting), which replace the fixed intervals this rule used to set.)* In a conversation the answer's shot can start on its first frame, or as an L-cut early on the listener; the cut goes where it plays, not rounded to the next beat (§4.3 rule 11). A shot holds after a line as long as the reaction needs and no longer: padding is time that carries no information, feeling, orientation or fun, while a held reaction that lets the viewer follow is not padding. Dialogue coverage typically runs 3–5 s; a shot can run longer when something changes inside it (a move, a staged action, the next line), and a real line plays whole on one still shot however long it runs (rule 6). A set-piece cuts on its visual ideas, usually riding the music's phrases, and comes back to a face often enough to stay about someone (§4.2). No shot is lengthened for a window's open steps or a box's typing.
+9. **Tells at `[MCU]` or closer** (§4.3 rule 1: `[MCU]` takes `[PF]`'s place). The V.O. text band (y 182–203) sits on the falloff shadow of the bust (§5.2).
+10. **Budgets per act (guides that keep each device special):** deliberate boxes about 2 · whips about 4 · racks about 4 · screen macros about 2 · `[CU]` about 2 per episode · angle plates as the episode budgets them.
+
+#### 4.7.4 Shares (replacing §4.2's portrait-family target)
+
+| Measure | GREEN | AMBER | RED |
+|---|---|---|---|
+| Boxed windows (`BOX`; in-world screens log as `[POV]`/`[SCR]`) | ≤ 5% of the act | 5–10% | > 10% |
+| Spoken lines in a boxed window (in-world tiles excluded) | ≤ 2 per act | 3–4 | ≥ 5 |
+| `[MCU]` + `[CU]` | 20–30% | 15–20% | < 15% |
+| `[M]` + `[2S]` + `[OTS]` | 12–20% | 8–12% | < 8% |
+| Runs of 3+ very short shots (under about 1.6 s) outside a montage | 0 | 1 | ≥ 2 |
+
+Faces and hands about 55% or more, `[W]` about 15% or less, and the rest of §4.2 stand as guides; Ep1 Act Four's sanctioned AMBER on faces stands. The bands point at spots to go and watch; the watch decides. *(2026-09-26: the "runs of one size" row is replaced by the short-shot run, the measure that actually found the v3 strobing; [flow-and-continuity §0](flow-and-continuity.md#0-what-went-wrong-in-v3-measured-on-outep01act4animaticact4-animatic-v3mp4).)*
+
+#### 4.7.5 Cost
+
+- **Engine helpers** (additive, `src/shared/pixel/framing.ts`, the engine owner): the frameless bust, the OTS shoulder, the soft layer and rack, negative fill, the whip transition (promote the dinner scenes' `whipSmear` plus the row-run streak), the screen macro, the drift. ≈ 45–75 agent-min once.
+- **Per portrait used in a day room:** the tall-bust re-render, 5–10 agent-min. **Per angle plate:** 15–35 agent-min. **Another principal's `[CU]` or eyes strip:** as the ladder says, budgeted per episode.
+- **Per episode ≈ neutral.** A v3 act runs ≈ +5–10% cuts, and each of its former box shots drops a window's open steps; §4.3 rule 12 (pay for close coverage with the wide) still holds. Ep1 Act Four: 147 shots against 139, with 6 new drawings (≈ 1.4–2.1 agent-h), 4 tall busts for its day rooms and the helpers.
+
+#### 4.7.6 The templates
+
+The builders implement these as layout functions (one call per shot, like `rooms/twoshots.ts`); the specs, parameters and the Act Four shot plan are in [framing-v3.md §2](../episodes/ep01/production/act4/framing-v3.md#2-the-templates): `MCU-F` · `MCU-2` (the frameless 50/50) · `MCU-FRAME` · `DESK-LOW` · `OTS` / `OTS-W` · `2S` / `M` · `CU` · `ECU-HANDS` / `ECU-EYES` / `ECU-PROP` · `ECU-ORB` · `HIGH-TABLE` / `HIGH-FLOOR` · `LOW-ROOM` · `SCREEN` (grid, speaker view, two-up, half tile) / `SCREEN-MACRO` · `BP-SIZES` · `CARD-RIDE` · `W` · `BOX`; and the moves `CUT-IN`, `PAN`, `DRIFT`, `RACK`, `WHIP`.
 
 ---
 
@@ -669,7 +766,7 @@ This section was the brief for the Ep1 writer's draft 3. **The worked example is
 
 ## 8. Per-act checklist and the POV ledger
 
-Run the checklist on every draft and board. THE EDITOR fills in the ledger from the animatic.
+Run the checklist on every draft and board. THE EDITOR fills in the ledger from the animatic. The items are prompts for finding problems, not gates; the final test is a watch of the cut ([flow-and-continuity §5](flow-and-continuity.md#5-coherence-is-checked-not-assumed)).
 
 ### 8.1 Every scene
 
@@ -680,22 +777,23 @@ Run the checklist on every draft and board. THE EDITOR fills in the ledger from 
 - No motive, hesitation or feeling at a real event.
 
 **Storyboard artists:**
-- Open close: home rooms get no wide.
+- Open close in a known home room; orient with a wide when the place or time changes.
 - Mas in the left third, three-quarter.
-- No exchange longer than two lines in `[W]`.
+- Longer exchanges move in from `[W]`.
 - Cut to the listener on a punchline.
 - Every insert is motivated by his eyeline and returns to his face or the glass.
 - Full-bleed is his; a bezel is the world's.
+- *(§4.7, revised 2026-09-26 by [flow-and-continuity §2](flow-and-continuity.md#2-cutting))* Cut on story, not on a quota: new information, a reaction that matters, or geography; size variety comes naturally, and a two-shot can carry an exchange. No boxed window unless it's in-world or one of the act's few deliberate beats; no move on the record; cut on the turn, never pad; no strings of very short shots outside a montage.
 
 ### 8.2 By movement
 
 | Where | Writers | Storyboard artists |
 |---|---|---|
-| **Cold open** | No V.O. A laugh inside 15 s. The clock or the question. A rail glance is allowed (it counts toward the 2). | His face within the first 4 bars. ≤ 1 bar of wide. |
+| **Cold open** | No V.O. A laugh inside 15 s. The clock or the question, and the clock never states the outcome (§1.7). A rail glance is allowed (it counts toward the 2). | His face early (within about 4 bars), after a wide just long enough to say where we are. |
 | **Movement 1** | The first V.O. only after he's established in a room. Teach at most one device, in its simplest form (D1 or D2). The anchor scene's principal gets a real face. | Two-shot first, then the volley. New rooms get ≤ 1 bar of `[W]`. |
 | **Movement 2** | THE PLAN is the show's voice: no V.O. or device within a bar of it. If there's a quiet beat, put laughs on both sides of it. | After THE PLAN's tear, the first shot is his face or his hands. |
 | **Movement 3** | At least one debrief with the Orb per episode. Any exit is signposted, with Mas only as public record (or his voice on their call). In a told-twice, both passes are labelled. | Exits are observational (`[SCR]`, `[W]`, grids) but close on the others. No Mas portrait window. |
-| **Movement 4** | The cornered movement may carry more V.O. (≤ 5 lines in a sanctioned long movement). MAS'S VERSION (≤ 1) re-renders something the next cut shows truly, in the same frame. No caught line in the candor card's scene. The long hold. Re-entry through his body, with the side label in a told-twice. | The S3 cuts to a face at least every 8 bars. The calm-off or the confrontation plays in `[2S]`. `[CU]` only for the loudest moment (≤ 2). |
+| **Movement 4** | The cornered movement may carry more V.O. (≤ 5 lines in a sanctioned long movement). MAS'S VERSION (≤ 1) re-renders something the next cut shows truly, in the same frame. No caught line in the candor card's scene. The long hold. Re-entry through his body, with the side label in a told-twice. | The S3 comes back to a face often (about every 8 bars as a check). The calm-off or the confrontation plays in `[2S]`. `[CU]` only for the loudest moment (≤ 2). |
 | **Tag and button** | No V.O. in the button (≤ 3 spoken words). Let the props answer the V.O. (the drawer). | The home shot. If the lit-UI moment is spent here, it lands on the glass. |
 
 ### 8.3 The POV ledger (one per episode, filled in by THE EDITOR)

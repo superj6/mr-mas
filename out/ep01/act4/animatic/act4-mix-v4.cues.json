@@ -1,0 +1,5978 @@
+{
+ "file": "out/ep01/act4/animatic/act4-mix-v4.wav",
+ "premix": "out/ep01/act4/animatic/act4-dialogue-premix-v4.wav",
+ "lock": "show/episodes/ep01/production/act4/shots-locked-v4.json",
+ "sample_rate": 48000,
+ "fps": 24,
+ "generator": "studio/src/episodes/ep01/act4/animatic/tools/mix_v4.py",
+ "honesty": "Measured, not heard: nothing in this file was listened to. Every flagged spot needs a human ear (edit-plan-v4 §8 check 9).",
+ "rules": [
+  "one continuous to-picture render per sequence or chapter (audio/ost/tracks/e01-act4-v4); designed stops baked in",
+  "thin under record items (melodic families -15 dB, a beat's ramp) and duck from the dialogue and the record (-9 invented, -10.5 THE PLAN's read, -11 record, -6 V.O., -9 the laptop, -7 Alyi's post; 60/500 ms; hold < 1.2 s)",
+  "one bed per location at about -38 to -40 dBFS, crossfaded; the SFX board at the v4 marks; TEMP-SYNTH stand-ins named",
+  "D6: every bus muted from the Cancel click to the phone's buzz (the click's transient kept)",
+  "integrated -16.5 LUFS, true peak <= -1 dBTP"
+ ],
+ "music": [
+  {
+   "cue": "e01-act4-v4-s1-the-plan",
+   "file": "audio/ost/tracks/e01-act4-v4/render/e01-act4-v4-s1-the-plan-underscore.wav",
+   "stems": "audio/ost/tracks/e01-act4-v4/render/stems/e01-act4-v4-s1-the-plan-*.flac",
+   "act_in": 0,
+   "tc_in": "12:31:00",
+   "act_out": 533,
+   "seconds": 22.17,
+   "families": [
+    "piano",
+    "strings",
+    "winds",
+    "perc",
+    "chip",
+    "synth"
+   ],
+   "level_points_db": [
+    [
+     0,
+     -3.5
+    ],
+    [
+     114,
+     -3.5
+    ],
+    [
+     120,
+     -5.5
+    ],
+    [
+     530,
+     -5.5
+    ]
+   ],
+   "label": "MM-07 THE PLAN (S1a): the felt bar, WORD, the waltz, the labels, the break -> the tape-stop on JOIN",
+   "underscore_lufs": -16.02,
+   "sections": [
+    {
+     "label": "sc 24 the suite (felt)",
+     "act_in": 0,
+     "act_out": 114
+    },
+    {
+     "label": "WORD",
+     "act_in": 120,
+     "act_out": 150
+    },
+    {
+     "label": "the waltz (musical chairs)",
+     "act_in": 150,
+     "act_out": 240
+    },
+    {
+     "label": "the Blueprint resumes",
+     "act_in": 240,
+     "act_out": 300
+    },
+    {
+     "label": "the labels",
+     "act_in": 300,
+     "act_out": 420
+    },
+    {
+     "label": "the held chord",
+     "act_in": 390,
+     "act_out": 420
+    },
+    {
+     "label": "the path",
+     "act_in": 420,
+     "act_out": 465
+    },
+    {
+     "label": "BREAK + tape-stop",
+     "act_in": 465,
+     "act_out": 525
+    }
+   ],
+   "markers": [
+    {
+     "act": 0.0,
+     "label": "S1.01 the suite: the felt Water Line bar"
+    },
+    {
+     "act": 60.0,
+     "label": "the C4 hangs: the settle never comes"
+    },
+    {
+     "act": 114.0,
+     "label": "the blueprint cut: the felt rings on into WORD"
+    },
+    {
+     "act": 120.0,
+     "label": "the stamp: WORD"
+    },
+    {
+     "act": 150.0,
+     "label": "the waltz: the first walk-off (F)"
+    },
+    {
+     "act": 165.0,
+     "label": "walk-off 2 (F)"
+    },
+    {
+     "act": 180.0,
+     "label": "walk-off 3 (F)"
+    },
+    {
+     "act": 240.0,
+     "label": "the 4/4 Blueprint resumes (no rest)"
+    },
+    {
+     "act": 300.0,
+     "label": "the labels"
+    },
+    {
+     "act": 360.0,
+     "label": "VOTES: 0 (C)"
+    },
+    {
+     "act": 390.0,
+     "label": "EQUITY: 0 (the label rest) + the held chord"
+    },
+    {
+     "act": 405.0,
+     "label": "the moth"
+    },
+    {
+     "act": 420.0,
+     "label": "the path"
+    },
+    {
+     "act": 450.0,
+     "label": "tick 1: 1. NOON"
+    },
+    {
+     "act": 465.0,
+     "label": "BREAK: stuck"
+    },
+    {
+     "act": 494.0,
+     "label": "the tear: the tape-stop starts"
+    },
+    {
+     "act": 525.0,
+     "label": "JOIN: the tape reaches zero"
+    }
+   ],
+   "warnings": [
+    "marker at 4.75 s: no clear onset within 10 ms ({'t': 4.75, 'offset_ms': np.float64(58.0), 'strength': 1.82})",
+    "marker at 20.5833 s: no clear onset within 10 ms ({'t': 20.5833, 'offset_ms': np.float64(38.0), 'strength': 5.45})",
+    "F-major check (spectral): 1 F-bass window(s) carry A energy that NO written note explains (a resonance, not a written third), first at 20.625 s, worst sieved A/F 1.218: chip ~216.1 Hz, chip ~221.2 Hz, chip ~448.2 Hz, perc ~435.1 Hz -- audition: does it sound major?"
+   ]
+  },
+  {
+   "cue": "e01-act4-v4-s1s2-the-falling-tile",
+   "file": "audio/ost/tracks/e01-act4-v4/render/e01-act4-v4-s1s2-the-falling-tile-underscore.wav",
+   "stems": "audio/ost/tracks/e01-act4-v4/render/stems/e01-act4-v4-s1s2-the-falling-tile-*.flac",
+   "act_in": 525,
+   "tc_in": "12:52:21",
+   "act_out": 1262,
+   "seconds": 30.68,
+   "families": [
+    "piano",
+    "strings",
+    "winds",
+    "brass",
+    "drums",
+    "perc",
+    "chip"
+   ],
+   "level_points_db": [
+    [
+     525,
+     0.0
+    ],
+    [
+     1254,
+     0.0
+    ]
+   ],
+   "label": "MM-08 THE FALLING TILE (S1b + S2): LEVERAGE one take -> D6 -> 26A (the felt, the pedal, the Rewind)",
+   "underscore_lufs": -21.0,
+   "sections": [
+    {
+     "label": "LEVERAGE (the call, one take)",
+     "act_in": 525,
+     "act_out": 735
+    },
+    {
+     "label": "D6",
+     "act_in": 735,
+     "act_out": 924
+    },
+    {
+     "label": "26A carve + V.O.",
+     "act_in": 924,
+     "act_out": 1006
+    },
+    {
+     "label": "the count + TPOOL (pedal)",
+     "act_in": 1006,
+     "act_out": 1171
+    },
+    {
+     "label": "mark 3, the settle, the Rewind",
+     "act_in": 1171,
+     "act_out": 1254
+    }
+   ],
+   "markers": [
+    {
+     "act": 525.0,
+     "label": "JOIN: LEVERAGE in (first eighth on the click)"
+    },
+    {
+     "act": 562.5,
+     "label": "Neleh's clockwork (her card)"
+    },
+    {
+     "act": 630.0,
+     "label": "the 1993 dialog: F F F"
+    },
+    {
+     "act": 660.0,
+     "label": "the eyes strip: the cluster up a semitone"
+    },
+    {
+     "act": 690.0,
+     "label": "STEP FOUR 1 (Bbm)"
+    },
+    {
+     "act": 705.0,
+     "label": "step 2 (Ab)"
+    },
+    {
+     "act": 720.0,
+     "label": "step 3 (Gbmaj7)"
+    },
+    {
+     "act": 735.0,
+     "label": "CANCEL = HARD STOP (D6)"
+    },
+    {
+     "act": 924.0,
+     "label": "26A: the felt fifth (re-entry)"
+    },
+    {
+     "act": 954.0,
+     "label": "the nudge G4 under the V.O."
+    },
+    {
+     "act": 1006.0,
+     "label": "the pedal (the count, TPOOL)"
+    },
+    {
+     "act": 1171.0,
+     "label": "mark 3: the felt back (Eb4)"
+    },
+    {
+     "act": 1194.0,
+     "label": "the settle C4"
+    },
+    {
+     "act": 1209.0,
+     "label": "F4"
+    },
+    {
+     "act": 1224.0,
+     "label": "THE REWIND (E4)"
+    },
+    {
+     "act": 1239.0,
+     "label": "Bb3"
+    },
+    {
+     "act": 1254.0,
+     "label": "EXIT: the cut (S3 downbeat)"
+    }
+   ],
+   "warnings": [
+    "marker at 1.5625 s: no clear onset within 10 ms ({'t': 1.5625, 'offset_ms': np.float64(10.8), 'strength': 2.36})",
+    "marker at 6.875 s: no clear onset within 10 ms ({'t': 6.875, 'offset_ms': np.float64(23.7), 'strength': 1.64})",
+    "marker at 7.5 s: no clear onset within 10 ms ({'t': 7.5, 'offset_ms': np.float64(36.0), 'strength': 1.93})",
+    "marker at 8.125 s: no clear onset within 10 ms ({'t': 8.125, 'offset_ms': np.float64(-58.3), 'strength': 1.35})",
+    "marker at 20.0417 s: no clear onset within 10 ms ({'t': 20.0417, 'offset_ms': np.float64(-44.4), 'strength': 2.62})"
+   ]
+  },
+  {
+   "cue": "e01-act4-v4-s3s4-the-boards-side",
+   "file": "audio/ost/tracks/e01-act4-v4/render/e01-act4-v4-s3s4-the-boards-side-underscore.wav",
+   "stems": "audio/ost/tracks/e01-act4-v4/render/stems/e01-act4-v4-s3s4-the-boards-side-*.flac",
+   "act_in": 1254,
+   "tc_in": "13:23:06",
+   "act_out": 3198,
+   "seconds": 80.97,
+   "families": [
+    "piano",
+    "strings",
+    "winds",
+    "brass",
+    "perc",
+    "chip"
+   ],
+   "level_points_db": [
+    [
+     1254,
+     -1.0
+    ],
+    [
+     3091,
+     -1.0
+    ],
+    [
+     3099,
+     -1.0
+    ],
+    [
+     3233,
+     -1.0
+    ]
+   ],
+   "label": "MM-09 THE BOARD'S SIDE (S3 + S4) + 09x REVERSAL: one procedure, thinning under the record",
+   "underscore_lufs": -20.0,
+   "sections": [
+    {
+     "label": "a NOON",
+     "act_in": 1254,
+     "act_out": 1799
+    },
+    {
+     "label": "a's night bars",
+     "act_in": 1799,
+     "act_out": 1907
+    },
+    {
+     "label": "b NOV 18 hearts",
+     "act_in": 1907,
+     "act_out": 2021
+    },
+    {
+     "label": "c the boardroom",
+     "act_in": 2021,
+     "act_out": 2385
+    },
+    {
+     "label": "rest: the dial tones",
+     "act_in": 2385,
+     "act_out": 2409
+    },
+    {
+     "label": "d LIGHTHOUSE",
+     "act_in": 2409,
+     "act_out": 2603
+    },
+    {
+     "label": "e the lobby camera",
+     "act_in": 2603,
+     "act_out": 2693
+    },
+    {
+     "label": "f TTEMME",
+     "act_in": 2693,
+     "act_out": 2817
+    },
+    {
+     "label": "g 11:53 PM",
+     "act_in": 2817,
+     "act_out": 2999
+    },
+    {
+     "label": "h Step four? (the hang)",
+     "act_in": 2999,
+     "act_out": 3099
+    },
+    {
+     "label": "09x REVERSAL",
+     "act_in": 3099,
+     "act_out": 3135
+    }
+   ],
+   "markers": [
+    {
+     "act": 1254.0,
+     "label": "a: Step Four (the Rewind lands)"
+    },
+    {
+     "act": 1554.0,
+     "label": "a: Neleh clockwork on \"Share what?\""
+    },
+    {
+     "act": 1907.0,
+     "label": "b: the hearts pour"
+    },
+    {
+     "act": 2010.0,
+     "label": "b: the blue heart"
+    },
+    {
+     "act": 2021.0,
+     "label": "c: Step Four x3"
+    },
+    {
+     "act": 2349.0,
+     "label": "c: the sincere beat (the solo viola)"
+    },
+    {
+     "act": 2409.0,
+     "label": "d: the Lighthouse on the ring"
+    },
+    {
+     "act": 2471.0,
+     "label": "d: the Addendum (cut by the click)"
+    },
+    {
+     "act": 2581.5,
+     "label": "d: \"How much?\" -- the tail lands (sold)"
+    },
+    {
+     "act": 2693.0,
+     "label": "f: the spotlight (straight-mute accent)"
+    },
+    {
+     "act": 2772.0,
+     "label": "f: the hourglass (one grain a beat, falling)"
+    },
+    {
+     "act": 2819.0,
+     "label": "g: Tasya's floor (Abmaj9 on the slate)"
+    },
+    {
+     "act": 2848.0,
+     "label": "g: Cmaj9 (the door opens)"
+    },
+    {
+     "act": 2877.0,
+     "label": "g: the Rhodes (Tasya appears)"
+    },
+    {
+     "act": 2999.0,
+     "label": "h: the clockwork winds down"
+    },
+    {
+     "act": 3017.0,
+     "label": "h: the hang (one held C over the blank F)"
+    },
+    {
+     "act": 3099.0,
+     "label": "09x: REVERSAL (the card)"
+    },
+    {
+     "act": 3135.0,
+     "label": "09x: the felt F4 (the door back)"
+    },
+    {
+     "act": 1408.0,
+     "label": "thin: the blog post"
+    },
+    {
+     "act": 1600.0,
+     "label": "thin: Gerg's post"
+    },
+    {
+     "act": 1734.0,
+     "label": "thin: ALYI \"You can call it this way\""
+    },
+    {
+     "act": 1802.0,
+     "label": "thin: the 9:32 post"
+    },
+    {
+     "act": 1938.0,
+     "label": "thin: the eulogy post"
+    },
+    {
+     "act": 2618.0,
+     "label": "thin: the lobby post"
+    },
+    {
+     "act": 2946.4,
+     "label": "thin: TASYA's post read aloud"
+    }
+   ],
+   "warnings": [
+    "marker at 6.4167 s: no clear onset within 10 ms ({'t': 6.4167, 'offset_ms': np.float64(18.0), 'strength': 1.84})",
+    "marker at 12.5 s: no clear onset within 10 ms ({'t': 12.5, 'offset_ms': np.float64(-14.7), 'strength': 1.94})",
+    "marker at 14.4167 s: no clear onset within 10 ms ({'t': 14.4167, 'offset_ms': np.float64(-43.4), 'strength': 1.77})",
+    "marker at 20.0 s: no clear onset within 10 ms ({'t': 20.0, 'offset_ms': np.float64(-50.7), 'strength': 2.0})",
+    "marker at 22.8333 s: no clear onset within 10 ms ({'t': 22.8333, 'offset_ms': np.float64(-54.6), 'strength': 1.49})",
+    "marker at 27.2083 s: no clear onset within 10 ms ({'t': 27.2083, 'offset_ms': np.float64(10.4), 'strength': 1.67})",
+    "marker at 31.9583 s: no clear onset within 10 ms ({'t': 31.9583, 'offset_ms': np.float64(39.0), 'strength': 1.79})",
+    "marker at 45.625 s: no clear onset within 10 ms ({'t': 45.625, 'offset_ms': np.float64(15.0), 'strength': 1.81})",
+    "marker at 56.8333 s: no clear onset within 10 ms ({'t': 56.8333, 'offset_ms': np.float64(-60.0), 'strength': 1.61})",
+    "marker at 59.9583 s: no clear onset within 10 ms ({'t': 59.9583, 'offset_ms': np.float64(36.4), 'strength': 2.15})",
+    "marker at 65.2083 s: no clear onset within 10 ms ({'t': 65.2083, 'offset_ms': np.float64(-29.6), 'strength': 2.68})",
+    "marker at 66.4167 s: no clear onset within 10 ms ({'t': 66.4167, 'offset_ms': np.float64(20.6), 'strength': 1.63})",
+    "marker at 67.625 s: no clear onset within 10 ms ({'t': 67.625, 'offset_ms': np.float64(-30.3), 'strength': 1.52})",
+    "marker at 70.5179 s: no clear onset within 10 ms ({'t': 70.5179, 'offset_ms': np.float64(36.8), 'strength': 1.67})",
+    "marker at 72.7083 s: no clear onset within 10 ms ({'t': 72.7083, 'offset_ms': np.float64(11.7), 'strength': 3.44})",
+    "marker at 73.4583 s: no clear onset within 10 ms ({'t': 73.4583, 'offset_ms': np.float64(-58.3), 'strength': 1.49})",
+    "marker at 78.375 s: no clear onset within 10 ms ({'t': 78.375, 'offset_ms': np.float64(41.0), 'strength': 1.6})"
+   ]
+  },
+  {
+   "cue": "e01-act4-v4-s5s6-his-side-745",
+   "file": "audio/ost/tracks/e01-act4-v4/render/e01-act4-v4-s5s6-his-side-745-underscore.wav",
+   "stems": "audio/ost/tracks/e01-act4-v4/render/stems/e01-act4-v4-s5s6-his-side-745-*.flac",
+   "act_in": 3135,
+   "tc_in": "14:41:15",
+   "act_out": 4288,
+   "seconds": 48.04,
+   "families": [
+    "piano",
+    "strings",
+    "winds",
+    "brass",
+    "bass",
+    "drums",
+    "perc",
+    "chip"
+   ],
+   "level_points_db": [
+    [
+     3135,
+     -4.0
+    ],
+    [
+     4290,
+     -4.0
+    ]
+   ],
+   "label": "MM-10 HIS SIDE / 745 (S5 + S6): the dark-room pedal + the pulse; the Build; the avalanche -> dead stop on MADA's label (v4.1: -4 dB throughout, was -8 under S5)",
+   "underscore_lufs": -16.02,
+   "sections": [
+    {
+     "label": "S5 the dark room pedal (+ the pulse)",
+     "act_in": 3135,
+     "act_out": 3803
+    },
+    {
+     "label": "the glance: ring-out (the pedal holds)",
+     "act_in": 3803,
+     "act_out": 3847
+    },
+    {
+     "label": "S5 the pedal: the door, \"leave it open.\"",
+     "act_in": 3847,
+     "act_out": 3964
+    },
+    {
+     "label": "S6 phrase 1: the compile",
+     "act_in": 3964,
+     "act_out": 4083
+    },
+    {
+     "label": "S6 phrase 2: Step Four, Alyi, Neleh",
+     "act_in": 4083,
+     "act_out": 4202
+    },
+    {
+     "label": "S6 phrase 3: the Water Line",
+     "act_in": 4202,
+     "act_out": 4231
+    },
+    {
+     "label": "S6 phrase 4: the full band",
+     "act_in": 4231,
+     "act_out": 4276
+    }
+   ],
+   "markers": [
+    {
+     "act": 3135.0,
+     "label": "S5: the DARK ROOM pedal (F/C)"
+    },
+    {
+     "act": 3317.0,
+     "label": "the felt C4 (the V.O.)"
+    },
+    {
+     "act": 3438.0,
+     "label": "the pulse enters with the counter"
+    },
+    {
+     "act": 3495.0,
+     "label": "the clunk (the pulse lands)"
+    },
+    {
+     "act": 3715.0,
+     "label": "the Build: 4 notes"
+    },
+    {
+     "act": 3773.0,
+     "label": "the Build: 8 notes"
+    },
+    {
+     "act": 3803.0,
+     "label": "the glance: the Build stops, the pedal holds (ring-out)"
+    },
+    {
+     "act": 3847.0,
+     "label": "the door"
+    },
+    {
+     "act": 3964.0,
+     "label": "AVALANCHE A1: the compile"
+    },
+    {
+     "act": 4023.0,
+     "label": "A4"
+    },
+    {
+     "act": 4083.0,
+     "label": "A6: Step Four (Gb)"
+    },
+    {
+     "act": 4113.0,
+     "label": "ALYI RESISTS"
+    },
+    {
+     "act": 4142.0,
+     "label": "A7: Neleh's window"
+    },
+    {
+     "act": 4179.0,
+     "label": "the quiet vote's layer (A8 F pedal)"
+    },
+    {
+     "act": 4202.0,
+     "label": "A9: the Water Line augmented"
+    },
+    {
+     "act": 4231.0,
+     "label": "A13: THE FULL BAND"
+    },
+    {
+     "act": 4276.0,
+     "label": "STOP 3: dead on MADA's label"
+    }
+   ],
+   "warnings": [
+    "marker at 12.625 s: no clear onset within 10 ms ({'t': 12.625, 'offset_ms': np.float64(15.0), 'strength': 2.57})",
+    "marker at 27.8333 s: no clear onset within 10 ms ({'t': 27.8333, 'offset_ms': np.float64(-20.0), 'strength': 1.69})",
+    "marker at 29.6667 s: no clear onset within 10 ms ({'t': 29.6667, 'offset_ms': np.float64(58.6), 'strength': 2.39})",
+    "marker at 37.0 s: no clear onset within 10 ms ({'t': 37.0, 'offset_ms': np.float64(13.3), 'strength': 8.83})",
+    "marker at 39.5 s: no clear onset within 10 ms ({'t': 39.5, 'offset_ms': np.float64(-33.3), 'strength': 1.74})",
+    "marker at 40.75 s: no clear onset within 10 ms ({'t': 40.75, 'offset_ms': np.float64(42.0), 'strength': 1.52})",
+    "marker at 43.5 s: no clear onset within 10 ms ({'t': 43.5, 'offset_ms': np.float64(-14.7), 'strength': 1.73})",
+    "marker at 44.4583 s: no clear onset within 10 ms ({'t': 44.4583, 'offset_ms': np.float64(-15.6), 'strength': 3.42})",
+    "marker at 45.6667 s: no clear onset within 10 ms ({'t': 45.6667, 'offset_ms': np.float64(13.3), 'strength': 3.21})",
+    "underscore short-term p95 -11.48 LUFS > -13 (featured) (s6.5): the loudest moments sit high above the bed"
+   ]
+  },
+  {
+   "cue": "e01-act4-v4-s7s8-the-return",
+   "file": "audio/ost/tracks/e01-act4-v4/render/e01-act4-v4-s7s8-the-return-underscore.wav",
+   "stems": "audio/ost/tracks/e01-act4-v4/render/stems/e01-act4-v4-s7s8-the-return-*.flac",
+   "act_in": 4338,
+   "tc_in": "15:31:18",
+   "act_out": 6036,
+   "seconds": 70.75,
+   "families": [
+    "piano",
+    "strings",
+    "brass",
+    "bass",
+    "drums",
+    "perc",
+    "chip",
+    "synth"
+   ],
+   "level_points_db": [
+    [
+     4338,
+     -1.5
+    ],
+    [
+     6036,
+     -1.5
+    ]
+   ],
+   "label": "MM-11 THE RETURN (S7 + S8): the violin -> the floor -> LEVERAGE -> the C pedal -> VICTORY LAP",
+   "underscore_lufs": -20.05,
+   "sections": [
+    {
+     "label": "a the STRAIGHT violin (+ its decay)",
+     "act_in": 4338,
+     "act_out": 4490
+    },
+    {
+     "label": "b the floor (pad -> bloom -> home)",
+     "act_in": 4490,
+     "act_out": 4684
+    },
+    {
+     "label": "c1 LEVERAGE (fade-in -> \"Terms?\")",
+     "act_in": 4684,
+     "act_out": 4911
+    },
+    {
+     "label": "stop 4: the long hold",
+     "act_in": 4911,
+     "act_out": 5038
+    },
+    {
+     "label": "c2 the C pedal (under the posts)",
+     "act_in": 5038,
+     "act_out": 5314
+    },
+    {
+     "label": "e1 VICTORY LAP",
+     "act_in": 5314,
+     "act_out": 5374
+    },
+    {
+     "label": "e2 one chip note; F F F",
+     "act_in": 5374,
+     "act_out": 5456
+    },
+    {
+     "label": "e3 the quiet (the CU)",
+     "act_in": 5456,
+     "act_out": 5561
+    },
+    {
+     "label": "e4 the felt settle -> the vault's F",
+     "act_in": 5561,
+     "act_out": 6036
+    }
+   ],
+   "markers": [
+    {
+     "act": 4346.0,
+     "label": "a: the violin (the Door, STRAIGHT)"
+    },
+    {
+     "act": 4441.0,
+     "label": "a: the first heart: the G held, decaying"
+    },
+    {
+     "act": 4490.0,
+     "label": "b: the floor pre-laps as a pad (Abmaj9) under the violin's decay"
+    },
+    {
+     "act": 4559.0,
+     "label": "b: \"below\" (inside the Abmaj9)"
+    },
+    {
+     "act": 4624.0,
+     "label": "b: the bloom (the Rhodes on the beats)"
+    },
+    {
+     "act": 4674.0,
+     "label": "b: home (Abmaj9)"
+    },
+    {
+     "act": 4684.0,
+     "label": "c1: LEVERAGE fades in"
+    },
+    {
+     "act": 4733.0,
+     "label": "c1: the door bang (inside the cue)"
+    },
+    {
+     "act": 4911.0,
+     "label": "STOP 4: \"Terms?\""
+    },
+    {
+     "act": 5038.0,
+     "label": "c2: the stamp: the low C pedal"
+    },
+    {
+     "act": 5286.0,
+     "label": "d: the Build's one rest (the sand)"
+    },
+    {
+     "act": 5299.0,
+     "label": "d: the pickup into the sign (4)"
+    },
+    {
+     "act": 5314.0,
+     "label": "e: the sign: the stab + the Build at full"
+    },
+    {
+     "act": 5374.0,
+     "label": "e: one chip note"
+    },
+    {
+     "act": 5415.0,
+     "label": "e: F F F (one tenuto phrase)"
+    },
+    {
+     "act": 5456.0,
+     "label": "e: the bonk (SFX): out"
+    },
+    {
+     "act": 5561.0,
+     "label": "e: after \"okay.\": the felt C4"
+    },
+    {
+     "act": 5571.0,
+     "label": "e: F4 + the open fifth (settling onto the vault's F)"
+    },
+    {
+     "act": 5576.0,
+     "label": "coda: the vault's F (drone, TEMP for MM-12)"
+    }
+   ],
+   "warnings": [
+    "marker at 0.3333 s: no clear onset within 10 ms ({'t': 0.3333, 'offset_ms': np.float64(-10.6), 'strength': 3.58})",
+    "marker at 6.3333 s: no clear onset within 10 ms ({'t': 6.3333, 'offset_ms': np.float64(-58.6), 'strength': 1.95})",
+    "marker at 9.2083 s: no clear onset within 10 ms ({'t': 9.2083, 'offset_ms': np.float64(29.0), 'strength': 1.75})",
+    "marker at 14.4167 s: no clear onset within 10 ms ({'t': 14.4167, 'offset_ms': np.float64(36.6), 'strength': 1.97})",
+    "marker at 51.5833 s: no clear onset within 10 ms ({'t': 51.5833, 'offset_ms': np.float64(59.4), 'strength': 1.75})",
+    "underscore short-term p95 -16.01 LUFS > -17 (underscore) (s6.5): the loudest moments sit high above the bed"
+   ]
+  }
+ ],
+ "duck_keys": [
+  {
+   "a": 150,
+   "b": 206,
+   "tc": "12:37:06",
+   "duck_db": -8.0,
+   "thin": false,
+   "label": "plan: a4-25-10b NELEH"
+  },
+  {
+   "a": 219,
+   "b": 263,
+   "tc": "12:40:03",
+   "duck_db": -8.0,
+   "thin": false,
+   "label": "plan: a4-25-11 NELEH"
+  },
+  {
+   "a": 343,
+   "b": 362,
+   "tc": "12:45:07",
+   "duck_db": -8.0,
+   "thin": false,
+   "label": "plan: a4-25-12 NELEH"
+  },
+  {
+   "a": 375,
+   "b": 397,
+   "tc": "12:46:15",
+   "duck_db": -8.0,
+   "thin": false,
+   "label": "plan: a4-25-13 NELEH"
+  },
+  {
+   "a": 393,
+   "b": 416,
+   "tc": "12:47:09",
+   "duck_db": -8.0,
+   "thin": false,
+   "label": "plan: a4-25-02 MADA"
+  },
+  {
+   "a": 876,
+   "b": 893,
+   "tc": "13:07:12",
+   "duck_db": -9.0,
+   "thin": false,
+   "label": "line: a4-26-01 MAS"
+  },
+  {
+   "a": 954,
+   "b": 998,
+   "tc": "13:10:18",
+   "duck_db": -6.0,
+   "thin": false,
+   "label": "vo: a4-26a-vo1 MAS"
+  },
+  {
+   "a": 1267,
+   "b": 1284,
+   "tc": "13:23:19",
+   "duck_db": -9.0,
+   "thin": false,
+   "label": "laptop: a4-27-00 MAS"
+  },
+  {
+   "a": 1412,
+   "b": 1486,
+   "tc": "13:29:20",
+   "duck_db": -3.0,
+   "thin": true,
+   "label": "record text: \"…not consistently candid in his communi"
+  },
+  {
+   "a": 1496,
+   "b": 1526,
+   "tc": "13:33:08",
+   "duck_db": -9.0,
+   "thin": false,
+   "label": "line: a4-27-04 RIMA"
+  },
+  {
+   "a": 1520,
+   "b": 1536,
+   "tc": "13:34:08",
+   "duck_db": -9.0,
+   "thin": false,
+   "label": "line: a4-27-23 NELEH"
+  },
+  {
+   "a": 1550,
+   "b": 1572,
+   "tc": "13:35:14",
+   "duck_db": -9.0,
+   "thin": false,
+   "label": "line: a4-27-24 RIMA"
+  },
+  {
+   "a": 1602,
+   "b": 1666,
+   "tc": "13:37:18",
+   "duck_db": -3.0,
+   "thin": true,
+   "label": "post: a4-27-01b GERG"
+  },
+  {
+   "a": 1698,
+   "b": 1719,
+   "tc": "13:41:18",
+   "duck_db": -9.0,
+   "thin": false,
+   "label": "line: a4-27-05 EMPLOYEE"
+  },
+  {
+   "a": 1738,
+   "b": 1791,
+   "tc": "13:43:10",
+   "duck_db": -10.0,
+   "thin": true,
+   "label": "record: a4-27-06 ALYI"
+  },
+  {
+   "a": 1806,
+   "b": 1907,
+   "tc": "13:46:06",
+   "duck_db": -3.0,
+   "thin": true,
+   "label": "post: a4-26a-01b MAS"
+  },
+  {
+   "a": 1935,
+   "b": 2021,
+   "tc": "13:51:15",
+   "duck_db": -3.0,
+   "thin": true,
+   "label": "post: a4-27-07 MAS"
+  },
+  {
+   "a": 2100,
+   "b": 2150,
+   "tc": "13:58:12",
+   "duck_db": -9.0,
+   "thin": false,
+   "label": "line: a4-27-08 NELEH"
+  },
+  {
+   "a": 2161,
+   "b": 2214,
+   "tc": "14:01:01",
+   "duck_db": -9.0,
+   "thin": false,
+   "label": "line: a4-27-09 ALYI"
+  },
+  {
+   "a": 2210,
+   "b": 2222,
+   "tc": "14:03:02",
+   "duck_db": -9.0,
+   "thin": false,
+   "label": "line: a4-27-10 NELEH"
+  },
+  {
+   "a": 2238,
+   "b": 2272,
+   "tc": "14:04:06",
+   "duck_db": -9.0,
+   "thin": false,
+   "label": "line: a4-27-12 NELEH"
+  },
+  {
+   "a": 2284,
+   "b": 2341,
+   "tc": "14:06:04",
+   "duck_db": -9.0,
+   "thin": false,
+   "label": "line: a4-27-13 ALYI"
+  },
+  {
+   "a": 2451,
+   "b": 2481,
+   "tc": "14:13:03",
+   "duck_db": -9.0,
+   "thin": false,
+   "label": "line: a4-27-14 MARIO"
+  },
+  {
+   "a": 2474,
+   "b": 2507,
+   "tc": "14:14:02",
+   "duck_db": -9.0,
+   "thin": false,
+   "label": "line: a4-27-15 ADELINA"
+  },
+  {
+   "a": 2538,
+   "b": 2595,
+   "tc": "14:16:18",
+   "duck_db": -9.0,
+   "thin": false,
+   "label": "line: a4-27-16 MARIO"
+  },
+  {
+   "a": 2621,
+   "b": 2693,
+   "tc": "14:20:05",
+   "duck_db": -3.0,
+   "thin": true,
+   "label": "post: a4-27-17 MAS"
+  },
+  {
+   "a": 2775,
+   "b": 2807,
+   "tc": "14:26:15",
+   "duck_db": -9.0,
+   "thin": false,
+   "label": "line: a4-27-19 TTEMME"
+  },
+  {
+   "a": 2949,
+   "b": 2998,
+   "tc": "14:33:21",
+   "duck_db": -10.0,
+   "thin": true,
+   "label": "record: a4-27-20 TASYA"
+  },
+  {
+   "a": 3017,
+   "b": 3035,
+   "tc": "14:36:17",
+   "duck_db": -9.0,
+   "thin": false,
+   "label": "line: a4-27-21 NELEH"
+  },
+  {
+   "a": 3197,
+   "b": 3291,
+   "tc": "14:44:05",
+   "duck_db": -3.0,
+   "thin": true,
+   "label": "post: a4-29-01 RIMA"
+  },
+  {
+   "a": 3311,
+   "b": 3357,
+   "tc": "14:48:23",
+   "duck_db": -6.0,
+   "thin": false,
+   "label": "vo: a4-29-vo2 MAS"
+  },
+  {
+   "a": 3377,
+   "b": 3395,
+   "tc": "14:51:17",
+   "duck_db": -6.5,
+   "thin": false,
+   "label": "line: a4-29-03 MAS"
+  },
+  {
+   "a": 3433,
+   "b": 3602,
+   "tc": "14:54:01",
+   "duck_db": -3.0,
+   "thin": true,
+   "label": "record text: \"…people that lack competence, judgment "
+  },
+  {
+   "a": 3497,
+   "b": 3602,
+   "tc": "14:56:17",
+   "duck_db": -3.0,
+   "thin": true,
+   "label": "record text: \"…unless all current board members resig"
+  },
+  {
+   "a": 3688,
+   "b": 3713,
+   "tc": "15:04:16",
+   "duck_db": -6.5,
+   "thin": false,
+   "label": "line: a4-29-04 GERG"
+  },
+  {
+   "a": 3709,
+   "b": 3744,
+   "tc": "15:05:13",
+   "duck_db": -6.5,
+   "thin": false,
+   "label": "line: a4-29-05 MAS"
+  },
+  {
+   "a": 3752,
+   "b": 3796,
+   "tc": "15:07:08",
+   "duck_db": -6.5,
+   "thin": false,
+   "label": "line: a4-29-06 GERG"
+  },
+  {
+   "a": 3883,
+   "b": 3913,
+   "tc": "15:12:19",
+   "duck_db": -6.5,
+   "thin": false,
+   "label": "line: a4-29-07 TASYA"
+  },
+  {
+   "a": 3909,
+   "b": 3938,
+   "tc": "15:13:21",
+   "duck_db": -6.5,
+   "thin": false,
+   "label": "line: a4-29-08 MAS"
+  },
+  {
+   "a": 4161,
+   "b": 4191,
+   "tc": "15:24:09",
+   "duck_db": -10.0,
+   "thin": false,
+   "label": "window: a4-29-09 NELEH"
+  },
+  {
+   "a": 4346,
+   "b": 4440,
+   "tc": "15:32:02",
+   "duck_db": -5.0,
+   "thin": false,
+   "label": "violin: a4-30-01 ALYI"
+  },
+  {
+   "a": 4550,
+   "b": 4618,
+   "tc": "15:40:14",
+   "duck_db": -6.5,
+   "thin": true,
+   "label": "record: a4-30-02 TASYA"
+  },
+  {
+   "a": 4640,
+   "b": 4653,
+   "tc": "15:44:08",
+   "duck_db": -6.5,
+   "thin": false,
+   "label": "small: a4-30-03 MAS"
+  },
+  {
+   "a": 4652,
+   "b": 4669,
+   "tc": "15:44:20",
+   "duck_db": -6.5,
+   "thin": false,
+   "label": "line: a4-30-04 TASYA"
+  },
+  {
+   "a": 4829,
+   "b": 4862,
+   "tc": "15:52:05",
+   "duck_db": -9.0,
+   "thin": false,
+   "label": "line: a4-30-05 TERB"
+  },
+  {
+   "a": 4884,
+   "b": 4896,
+   "tc": "15:54:12",
+   "duck_db": -9.0,
+   "thin": false,
+   "label": "line: a4-30-06 TERB"
+  },
+  {
+   "a": 4911,
+   "b": 4928,
+   "tc": "15:55:15",
+   "duck_db": -9.0,
+   "thin": false,
+   "label": "line: a4-30-07 TERB"
+  },
+  {
+   "a": 4940,
+   "b": 4963,
+   "tc": "15:56:20",
+   "duck_db": -9.0,
+   "thin": false,
+   "label": "line: a4-30-08 MADA"
+  },
+  {
+   "a": 4978,
+   "b": 5004,
+   "tc": "15:58:10",
+   "duck_db": -9.0,
+   "thin": false,
+   "label": "line: a4-30-09 MAS"
+  },
+  {
+   "a": 5128,
+   "b": 5198,
+   "tc": "16:04:16",
+   "duck_db": -3.0,
+   "thin": true,
+   "label": "post: a4-30-10 GERG"
+  },
+  {
+   "a": 5203,
+   "b": 5308,
+   "tc": "16:07:19",
+   "duck_db": -3.0,
+   "thin": true,
+   "label": "post: a4-30-11 TTEMME"
+  },
+  {
+   "a": 5544,
+   "b": 5560,
+   "tc": "16:22:00",
+   "duck_db": -6.5,
+   "thin": false,
+   "label": "line: a4-30-12 MAS"
+  },
+  {
+   "a": 5660,
+   "b": 5681,
+   "tc": "16:26:20",
+   "duck_db": -6.5,
+   "thin": false,
+   "label": "line: a4-31-01 GERG"
+  },
+  {
+   "a": 5688,
+   "b": 5714,
+   "tc": "16:28:00",
+   "duck_db": -6.5,
+   "thin": false,
+   "label": "line: a4-31-02 MAS"
+  },
+  {
+   "a": 5812,
+   "b": 5925,
+   "tc": "16:33:04",
+   "duck_db": -6.5,
+   "thin": true,
+   "label": "record: a4-31-03 MAS"
+  }
+ ],
+ "thin_windows": [
+  {
+   "a": 1412,
+   "b": 1486,
+   "families": [
+    "chip",
+    "brass",
+    "winds",
+    "perc",
+    "drums"
+   ],
+   "depth_db": -15.0,
+   "label": "record text: \"…not consistently candid in his communi"
+  },
+  {
+   "a": 1412,
+   "b": 1486,
+   "families": [
+    "strings",
+    "bass",
+    "piano",
+    "synth"
+   ],
+   "depth_db": 2.0,
+   "label": "lift under record text: \"…not consistently candid in his communi"
+  },
+  {
+   "a": 1602,
+   "b": 1666,
+   "families": [
+    "chip",
+    "brass",
+    "winds",
+    "perc",
+    "drums"
+   ],
+   "depth_db": -15.0,
+   "label": "post: a4-27-01b GERG"
+  },
+  {
+   "a": 1602,
+   "b": 1666,
+   "families": [
+    "strings",
+    "bass",
+    "piano",
+    "synth"
+   ],
+   "depth_db": 2.0,
+   "label": "lift under post: a4-27-01b GERG"
+  },
+  {
+   "a": 1738,
+   "b": 1791,
+   "families": [
+    "chip",
+    "brass",
+    "winds",
+    "perc",
+    "drums"
+   ],
+   "depth_db": -15.0,
+   "label": "record: a4-27-06 ALYI"
+  },
+  {
+   "a": 1806,
+   "b": 1907,
+   "families": [
+    "chip",
+    "brass",
+    "winds",
+    "perc",
+    "drums"
+   ],
+   "depth_db": -15.0,
+   "label": "post: a4-26a-01b MAS"
+  },
+  {
+   "a": 1806,
+   "b": 1907,
+   "families": [
+    "strings",
+    "bass",
+    "piano",
+    "synth"
+   ],
+   "depth_db": 2.0,
+   "label": "lift under post: a4-26a-01b MAS"
+  },
+  {
+   "a": 1935,
+   "b": 2021,
+   "families": [
+    "chip",
+    "brass",
+    "winds",
+    "perc",
+    "drums"
+   ],
+   "depth_db": -15.0,
+   "label": "post: a4-27-07 MAS"
+  },
+  {
+   "a": 1935,
+   "b": 2021,
+   "families": [
+    "strings",
+    "bass",
+    "piano",
+    "synth"
+   ],
+   "depth_db": 2.0,
+   "label": "lift under post: a4-27-07 MAS"
+  },
+  {
+   "a": 2621,
+   "b": 2693,
+   "families": [
+    "chip",
+    "brass",
+    "winds",
+    "perc",
+    "drums"
+   ],
+   "depth_db": -15.0,
+   "label": "post: a4-27-17 MAS"
+  },
+  {
+   "a": 2621,
+   "b": 2693,
+   "families": [
+    "strings",
+    "bass",
+    "piano",
+    "synth"
+   ],
+   "depth_db": 2.0,
+   "label": "lift under post: a4-27-17 MAS"
+  },
+  {
+   "a": 2949,
+   "b": 2998,
+   "families": [
+    "chip",
+    "brass",
+    "winds",
+    "perc",
+    "drums"
+   ],
+   "depth_db": -15.0,
+   "label": "record: a4-27-20 TASYA"
+  },
+  {
+   "a": 3197,
+   "b": 3291,
+   "families": [
+    "chip",
+    "brass",
+    "winds",
+    "perc",
+    "drums"
+   ],
+   "depth_db": -15.0,
+   "label": "post: a4-29-01 RIMA"
+  },
+  {
+   "a": 3197,
+   "b": 3291,
+   "families": [
+    "strings",
+    "bass",
+    "piano",
+    "synth"
+   ],
+   "depth_db": 2.0,
+   "label": "lift under post: a4-29-01 RIMA"
+  },
+  {
+   "a": 3433,
+   "b": 3602,
+   "families": [
+    "chip",
+    "brass",
+    "winds",
+    "perc",
+    "drums"
+   ],
+   "depth_db": -15.0,
+   "label": "record text: \"…people that lack competence, judgment "
+  },
+  {
+   "a": 3433,
+   "b": 3602,
+   "families": [
+    "strings",
+    "bass",
+    "piano",
+    "synth"
+   ],
+   "depth_db": 2.0,
+   "label": "lift under record text: \"…people that lack competence, judgment "
+  },
+  {
+   "a": 3497,
+   "b": 3602,
+   "families": [
+    "chip",
+    "brass",
+    "winds",
+    "perc",
+    "drums"
+   ],
+   "depth_db": -15.0,
+   "label": "record text: \"…unless all current board members resig"
+  },
+  {
+   "a": 3497,
+   "b": 3602,
+   "families": [
+    "strings",
+    "bass",
+    "piano",
+    "synth"
+   ],
+   "depth_db": 2.0,
+   "label": "lift under record text: \"…unless all current board members resig"
+  },
+  {
+   "a": 4550,
+   "b": 4618,
+   "families": [
+    "chip",
+    "brass",
+    "winds",
+    "perc",
+    "drums"
+   ],
+   "depth_db": -15.0,
+   "label": "record: a4-30-02 TASYA"
+  },
+  {
+   "a": 5128,
+   "b": 5198,
+   "families": [
+    "chip",
+    "brass",
+    "winds",
+    "perc",
+    "drums"
+   ],
+   "depth_db": -15.0,
+   "label": "post: a4-30-10 GERG"
+  },
+  {
+   "a": 5128,
+   "b": 5198,
+   "families": [
+    "strings",
+    "bass",
+    "piano",
+    "synth"
+   ],
+   "depth_db": 2.0,
+   "label": "lift under post: a4-30-10 GERG"
+  },
+  {
+   "a": 5203,
+   "b": 5308,
+   "families": [
+    "chip",
+    "brass",
+    "winds",
+    "perc",
+    "drums"
+   ],
+   "depth_db": -15.0,
+   "label": "post: a4-30-11 TTEMME"
+  },
+  {
+   "a": 5203,
+   "b": 5308,
+   "families": [
+    "strings",
+    "bass",
+    "piano",
+    "synth"
+   ],
+   "depth_db": 2.0,
+   "label": "lift under post: a4-30-11 TTEMME"
+  },
+  {
+   "a": 5812,
+   "b": 5925,
+   "families": [
+    "chip",
+    "brass",
+    "winds",
+    "perc",
+    "drums"
+   ],
+   "depth_db": -15.0,
+   "label": "record: a4-31-03 MAS"
+  },
+  {
+   "a": 150,
+   "b": 206,
+   "families": [
+    "chip",
+    "perc"
+   ],
+   "depth_db": -4.0,
+   "label": "plan read a4-25-10b"
+  },
+  {
+   "a": 219,
+   "b": 263,
+   "families": [
+    "chip",
+    "perc"
+   ],
+   "depth_db": -4.0,
+   "label": "plan read a4-25-11"
+  },
+  {
+   "a": 343,
+   "b": 362,
+   "families": [
+    "chip",
+    "perc"
+   ],
+   "depth_db": -4.0,
+   "label": "plan read a4-25-12"
+  },
+  {
+   "a": 375,
+   "b": 397,
+   "families": [
+    "chip",
+    "perc"
+   ],
+   "depth_db": -4.0,
+   "label": "plan read a4-25-13"
+  },
+  {
+   "a": 393,
+   "b": 416,
+   "families": [
+    "chip",
+    "perc"
+   ],
+   "depth_db": -4.0,
+   "label": "plan read a4-25-02"
+  }
+ ],
+ "designed_stops_and_rests": [
+  {
+   "a": 735,
+   "b": 824,
+   "tc": "13:01:15",
+   "label": "stop: D6: the Cancel click"
+  },
+  {
+   "a": 3803,
+   "b": 3834,
+   "tc": "15:09:11",
+   "label": "rest: Gerg's glance (v4.1: a ring-out, not a dead stop)"
+  },
+  {
+   "a": 4276,
+   "b": 4306,
+   "tc": "15:29:04",
+   "label": "stop: MADA's label"
+  },
+  {
+   "a": 4911,
+   "b": 4941,
+   "tc": "15:55:15",
+   "label": "stop: \"Terms?\""
+  },
+  {
+   "a": 2385,
+   "b": 2409,
+   "tc": "14:10:09",
+   "label": "rest: the four dial tones at the split's opening"
+  },
+  {
+   "a": 3017,
+   "b": 3099,
+   "tc": "14:36:17",
+   "label": "hang: the pizzicato's held note"
+  },
+  {
+   "a": 4441,
+   "b": 4471,
+   "tc": "15:36:01",
+   "label": "decay: the violin's held, decaying note under the three hearts"
+  },
+  {
+   "a": 5286,
+   "b": 5301,
+   "tc": "16:11:06",
+   "label": "rest: the sand's held beat"
+  },
+  {
+   "a": 5482,
+   "b": 5544,
+   "tc": "16:19:10",
+   "label": "rest: the lobby CU before \"okay.\""
+  },
+  {
+   "a": 3803,
+   "b": 3834,
+   "tc": "15:09:11",
+   "label": "rest: Gerg's glance (v4.1: a ring-out; the pedal holds)"
+  },
+  {
+   "a": 4276,
+   "b": 4346,
+   "tc": "15:29:04",
+   "label": "stop 3: MADA's label -> the violin under Alyi's post"
+  },
+  {
+   "a": 4911,
+   "b": 5038,
+   "tc": "15:55:15",
+   "label": "stop 4: \"Terms?\" -> the stamp's C pedal"
+  },
+  {
+   "a": 735,
+   "b": 924,
+   "tc": "13:01:15",
+   "label": "stop 1: D6 and its aftermath (the room, 'super.', the fallaway) -> the carve"
+  },
+  {
+   "a": 5456,
+   "b": 5562,
+   "tc": "16:18:08",
+   "label": "rest: the bonk -> the lobby CU quiet -> 'okay.' -> the felt"
+  },
+  {
+   "a": 5286,
+   "b": 5314,
+   "tc": "16:11:06",
+   "label": "rest: the sand's held beat -> the pickup into the sign"
+  },
+  {
+   "a": 2369,
+   "b": 2415,
+   "tc": "14:09:17",
+   "label": "rest: the four dial tones (the split's opening)"
+  },
+  {
+   "a": 112,
+   "b": 122,
+   "tc": "12:35:16",
+   "label": "the blueprint's cut (v4.1: the felt rings on into WORD)"
+  },
+  {
+   "a": 921,
+   "b": 927,
+   "tc": "13:09:09",
+   "label": "26A's felt re-entry"
+  }
+ ],
+ "sfx": [
+  {
+   "f": 0,
+   "tc": "12:31:00",
+   "name": "TEMP-SYNTH:truck",
+   "gain_db": -18,
+   "label": "the crane truck grinds past far below (every glass shivers)",
+   "synth": true
+  },
+  {
+   "f": 18,
+   "tc": "12:31:18",
+   "name": "TEMP-SYNTH:ting",
+   "gain_db": -24,
+   "label": "glass tings (his doesn't)",
+   "synth": true
+  },
+  {
+   "f": 21,
+   "tc": "12:31:21",
+   "name": "TEMP-SYNTH:ting",
+   "gain_db": -24,
+   "label": "glass tings (his doesn't)",
+   "synth": true
+  },
+  {
+   "f": 25,
+   "tc": "12:32:01",
+   "name": "TEMP-SYNTH:ting",
+   "gain_db": -24,
+   "label": "glass tings (his doesn't)",
+   "synth": true
+  },
+  {
+   "f": 28,
+   "tc": "12:32:04",
+   "name": "TEMP-SYNTH:ting",
+   "gain_db": -24,
+   "label": "glass tings (his doesn't)",
+   "synth": true
+  },
+  {
+   "f": 80,
+   "tc": "12:34:08",
+   "name": "key_tap_soft_03",
+   "gain_db": -24,
+   "label": "his glass nudged one pixel true",
+   "synth": false
+  },
+  {
+   "f": 106,
+   "tc": "12:35:10",
+   "name": "TEMP-SYNTH:thunk",
+   "gain_db": -20,
+   "label": "the glow prints to blueprint (a soft thump)",
+   "synth": true
+  },
+  {
+   "f": 121,
+   "tc": "12:36:01",
+   "name": "rubber_stamp_C",
+   "gain_db": -8,
+   "label": "WHO OWNS A CEO? (the stamp)",
+   "synth": false
+  },
+  {
+   "f": 150,
+   "tc": "12:37:06",
+   "name": "TEMP-SYNTH:tick",
+   "gain_db": -18,
+   "label": "chair feet: one walks off a beat",
+   "synth": true
+  },
+  {
+   "f": 165,
+   "tc": "12:37:21",
+   "name": "TEMP-SYNTH:tick",
+   "gain_db": -18,
+   "label": "chair feet: one walks off a beat",
+   "synth": true
+  },
+  {
+   "f": 180,
+   "tc": "12:38:12",
+   "name": "TEMP-SYNTH:tick",
+   "gain_db": -18,
+   "label": "chair feet: one walks off a beat",
+   "synth": true
+  },
+  {
+   "f": 182,
+   "tc": "12:38:14",
+   "name": "TEMP-SYNTH:scribble",
+   "gain_db": -19,
+   "label": "the ring draws round the four",
+   "synth": true
+  },
+  {
+   "f": 208,
+   "tc": "12:39:16",
+   "name": "TEMP-SYNTH:scribble",
+   "gain_db": -21,
+   "label": "the box round the six",
+   "synth": true
+  },
+  {
+   "f": 230,
+   "tc": "12:40:14",
+   "name": "TEMP-SYNTH:scribble",
+   "gain_db": -18,
+   "label": "the arrow's long stroke",
+   "synth": true
+  },
+  {
+   "f": 332,
+   "tc": "12:44:20",
+   "name": "TEMP-SYNTH:jangle",
+   "gain_db": -17,
+   "label": "the key ring jangles, hopeful",
+   "synth": true
+  },
+  {
+   "f": 360,
+   "tc": "12:46:00",
+   "name": "rubber_stamp_C",
+   "gain_db": -7,
+   "label": "VOTES: 0 (on 'gets')",
+   "synth": false
+  },
+  {
+   "f": 399,
+   "tc": "12:47:15",
+   "name": "rubber_stamp_C",
+   "gain_db": -8,
+   "label": "EQUITY: 0 (on 'question')",
+   "synth": false
+  },
+  {
+   "f": 421,
+   "tc": "12:48:13",
+   "name": "paper_flutter",
+   "gain_db": -19,
+   "label": "the moth flies out of the box",
+   "synth": false
+  },
+  {
+   "f": 436,
+   "tc": "12:49:04",
+   "name": "TEMP-SYNTH:tick",
+   "gain_db": -23,
+   "label": "four tiny footsteps onto 1. NOON",
+   "synth": true
+  },
+  {
+   "f": 440,
+   "tc": "12:49:08",
+   "name": "TEMP-SYNTH:tick",
+   "gain_db": -23,
+   "label": "four tiny footsteps onto 1. NOON",
+   "synth": true
+  },
+  {
+   "f": 444,
+   "tc": "12:49:12",
+   "name": "TEMP-SYNTH:tick",
+   "gain_db": -23,
+   "label": "four tiny footsteps onto 1. NOON",
+   "synth": true
+  },
+  {
+   "f": 448,
+   "tc": "12:49:16",
+   "name": "TEMP-SYNTH:tick",
+   "gain_db": -23,
+   "label": "four tiny footsteps onto 1. NOON",
+   "synth": true
+  },
+  {
+   "f": 448,
+   "tc": "12:49:16",
+   "name": "TEMP-SYNTH:tick",
+   "gain_db": -16,
+   "label": "step 1's tick (pencil)",
+   "synth": true
+  },
+  {
+   "f": 479,
+   "tc": "12:50:23",
+   "name": "paper_flutter",
+   "gain_db": -13,
+   "label": "the corner curls",
+   "synth": false
+  },
+  {
+   "f": 494,
+   "tc": "12:51:14",
+   "name": "paper_whip",
+   "gain_db": -9,
+   "label": "the tear",
+   "synth": false
+  },
+  {
+   "f": 525,
+   "tc": "12:52:21",
+   "name": "dialog_ok_click",
+   "gain_db": -8,
+   "label": "the trackpad click (JOIN)",
+   "synth": false
+  },
+  {
+   "f": 546,
+   "tc": "12:53:18",
+   "name": "bell_ding_F6--chip",
+   "gain_db": -21,
+   "label": "the call connects",
+   "synth": false
+  },
+  {
+   "f": 550,
+   "tc": "12:53:22",
+   "name": "post_click--chip",
+   "gain_db": -23,
+   "label": "vote icons (already flipped)",
+   "synth": false
+  },
+  {
+   "f": 554,
+   "tc": "12:54:02",
+   "name": "post_click--chip",
+   "gain_db": -23,
+   "label": "vote icons (already flipped)",
+   "synth": false
+  },
+  {
+   "f": 558,
+   "tc": "12:54:06",
+   "name": "post_click--chip",
+   "gain_db": -23,
+   "label": "vote icons (already flipped)",
+   "synth": false
+  },
+  {
+   "f": 562,
+   "tc": "12:54:10",
+   "name": "post_click--chip",
+   "gain_db": -23,
+   "label": "vote icons (already flipped)",
+   "synth": false
+  },
+  {
+   "f": 630,
+   "tc": "12:57:06",
+   "name": "dialog_ok_click--chip",
+   "gain_db": -16,
+   "label": "the dialog pops",
+   "synth": false
+  },
+  {
+   "f": 690,
+   "tc": "12:59:18",
+   "name": "key_tap_soft_05",
+   "gain_db": -28,
+   "label": "the ALYI cursor appears",
+   "synth": false
+  },
+  {
+   "f": 705,
+   "tc": "13:00:09",
+   "name": "key_tap_soft_05",
+   "gain_db": -26,
+   "label": "the pointer steps",
+   "synth": false
+  },
+  {
+   "f": 720,
+   "tc": "13:01:00",
+   "name": "key_tap_soft_05",
+   "gain_db": -26,
+   "label": "the pointer steps",
+   "synth": false
+  },
+  {
+   "f": 735,
+   "tc": "13:01:15",
+   "name": "dialog_ok_click",
+   "gain_db": -4,
+   "label": "CANCEL (the click: D6 starts)",
+   "synth": false
+  },
+  {
+   "f": 824,
+   "tc": "13:05:08",
+   "name": "TEMP-SYNTH:buzz",
+   "gain_db": -10,
+   "label": "the phone buzzes: the room comes back",
+   "synth": true
+  },
+  {
+   "f": 832,
+   "tc": "13:05:16",
+   "name": "key_tap_soft_02",
+   "gain_db": -16,
+   "label": "the tap",
+   "synth": false
+  },
+  {
+   "f": 899,
+   "tc": "13:08:11",
+   "name": "TEMP-SYNTH:thunk",
+   "gain_db": -26,
+   "label": "the room falls away (a soft palette step)",
+   "synth": true
+  },
+  {
+   "f": 924,
+   "tc": "13:09:12",
+   "name": "TEMP-SYNTH:scribble",
+   "gain_db": -14,
+   "label": "the pen clip carves, one stroke a beat",
+   "synth": true
+  },
+  {
+   "f": 939,
+   "tc": "13:10:03",
+   "name": "TEMP-SYNTH:scribble",
+   "gain_db": -14,
+   "label": "the pen clip carves, one stroke a beat",
+   "synth": true
+  },
+  {
+   "f": 954,
+   "tc": "13:10:18",
+   "name": "TEMP-SYNTH:scribble",
+   "gain_db": -14,
+   "label": "the pen clip carves, one stroke a beat",
+   "synth": true
+  },
+  {
+   "f": 969,
+   "tc": "13:11:09",
+   "name": "TEMP-SYNTH:scribble",
+   "gain_db": -14,
+   "label": "the pen clip carves, one stroke a beat",
+   "synth": true
+  },
+  {
+   "f": 984,
+   "tc": "13:12:00",
+   "name": "TEMP-SYNTH:scribble",
+   "gain_db": -22,
+   "label": "the shavings brushed away",
+   "synth": true
+  },
+  {
+   "f": 1034,
+   "tc": "13:14:02",
+   "name": "orb_servo",
+   "gain_db": -16,
+   "label": "the iris steps onto mark 1",
+   "synth": false
+  },
+  {
+   "f": 1062,
+   "tc": "13:15:06",
+   "name": "render_front_sweep",
+   "gain_db": -12,
+   "label": "the render front sweeps out of the mark (F1.2)",
+   "synth": false
+  },
+  {
+   "f": 1141,
+   "tc": "13:18:13",
+   "name": "render_front_sweep",
+   "gain_db": -15,
+   "label": "the front sweeps back into the wood",
+   "synth": false
+  },
+  {
+   "f": 1158,
+   "tc": "13:19:06",
+   "name": "orb_servo",
+   "gain_db": -17,
+   "label": "mark 2",
+   "synth": false
+  },
+  {
+   "f": 1171,
+   "tc": "13:19:19",
+   "name": "orb_servo",
+   "gain_db": -16,
+   "label": "mark 3",
+   "synth": false
+  },
+  {
+   "f": 1184,
+   "tc": "13:20:08",
+   "name": "orb_servo",
+   "gain_db": -19,
+   "label": "the iris stops on his thumb",
+   "synth": false
+  },
+  {
+   "f": 1202,
+   "tc": "13:21:02",
+   "name": "orb_servo",
+   "gain_db": -14,
+   "label": "the iris lifts to his face",
+   "synth": false
+  },
+  {
+   "f": 1239,
+   "tc": "13:22:15",
+   "name": "tape_spinup",
+   "gain_db": -13,
+   "label": "the Rewind (tape_spinup reversed) under the toast",
+   "synth": false
+  },
+  {
+   "f": 1251,
+   "tc": "13:23:03",
+   "name": "TEMP-SYNTH:air",
+   "gain_db": -16,
+   "label": "the whip's air pass",
+   "synth": true
+  },
+  {
+   "f": 1336,
+   "tc": "13:26:16",
+   "name": "TEMP-SYNTH:tick",
+   "gain_db": -14,
+   "label": "1. NOON ticks",
+   "synth": true
+  },
+  {
+   "f": 1350,
+   "tc": "13:27:06",
+   "name": "TEMP-SYNTH:scribble",
+   "gain_db": -21,
+   "label": "her pen runs down what the fold hid",
+   "synth": true
+  },
+  {
+   "f": 1412,
+   "tc": "13:29:20",
+   "name": "post_click",
+   "gain_db": -17,
+   "label": "the blog post loads",
+   "synth": false
+  },
+  {
+   "f": 1486,
+   "tc": "13:32:22",
+   "name": "TEMP-SYNTH:tick",
+   "gain_db": -14,
+   "label": "step 3 ticks (off picture), on the cut",
+   "synth": true
+  },
+  {
+   "f": 1550,
+   "tc": "13:35:14",
+   "name": "TEMP-SYNTH:thunk",
+   "gain_db": -24,
+   "label": "Rima's plate lands (soft)",
+   "synth": true
+  },
+  {
+   "f": 1602,
+   "tc": "13:37:18",
+   "name": "post_click",
+   "gain_db": -10,
+   "label": "Gerg's post: the call's notification",
+   "synth": false
+  },
+  {
+   "f": 1628,
+   "tc": "13:38:20",
+   "name": "keycap_popcorn",
+   "gain_db": -11,
+   "label": "keycaps pop and rain across the grid",
+   "synth": false
+  },
+  {
+   "f": 1806,
+   "tc": "13:46:06",
+   "name": "post_click",
+   "gain_db": -9,
+   "label": "his 9:32 post on her phone",
+   "synth": false
+  },
+  {
+   "f": 1806,
+   "tc": "13:46:06",
+   "name": "TEMP-SYNTH:buzz",
+   "gain_db": -15,
+   "label": "her phone buzzes face-up",
+   "synth": true
+  },
+  {
+   "f": 1849,
+   "tc": "13:48:01",
+   "name": "TEMP-SYNTH:buzz",
+   "gain_db": -22,
+   "label": "another phone buzzes off picture",
+   "synth": true
+  },
+  {
+   "f": 1889,
+   "tc": "13:49:17",
+   "name": "TEMP-SYNTH:buzz",
+   "gain_db": -20,
+   "label": "and another",
+   "synth": true
+  },
+  {
+   "f": 1900,
+   "tc": "13:50:04",
+   "name": "key_tap_soft_04",
+   "gain_db": -18,
+   "label": "her pen taps EQUITY: 0",
+   "synth": false
+  },
+  {
+   "f": 1907,
+   "tc": "13:50:11",
+   "name": "heart_gliss",
+   "gain_db": -13,
+   "label": "the hearts pour (stacking)",
+   "synth": false
+  },
+  {
+   "f": 1935,
+   "tc": "13:51:15",
+   "name": "post_click",
+   "gain_db": -12,
+   "label": "his eulogy post scrolls in",
+   "synth": false
+  },
+  {
+   "f": 2010,
+   "tc": "13:54:18",
+   "name": "bell_ding_F6--chip",
+   "gain_db": -22,
+   "label": "one blue heart lands on Mada's spinner",
+   "synth": false
+  },
+  {
+   "f": 2031,
+   "tc": "13:55:15",
+   "name": "TEMP-SYNTH:buzz",
+   "gain_db": -14,
+   "label": "four phones buzz and step (STAFF, STAFF, INVESTORS, STAFF)",
+   "synth": true
+  },
+  {
+   "f": 2034,
+   "tc": "13:55:18",
+   "name": "TEMP-SYNTH:buzz",
+   "gain_db": -14,
+   "label": "four phones buzz and step (STAFF, STAFF, INVESTORS, STAFF)",
+   "synth": true
+  },
+  {
+   "f": 2037,
+   "tc": "13:55:21",
+   "name": "TEMP-SYNTH:buzz",
+   "gain_db": -14,
+   "label": "four phones buzz and step (STAFF, STAFF, INVESTORS, STAFF)",
+   "synth": true
+  },
+  {
+   "f": 2040,
+   "tc": "13:56:00",
+   "name": "TEMP-SYNTH:buzz",
+   "gain_db": -14,
+   "label": "four phones buzz and step (STAFF, STAFF, INVESTORS, STAFF)",
+   "synth": true
+  },
+  {
+   "f": 2103,
+   "tc": "13:58:15",
+   "name": "TEMP-SYNTH:buzz",
+   "gain_db": -18,
+   "label": "the phones ringing under 'it'",
+   "synth": true
+  },
+  {
+   "f": 2133,
+   "tc": "13:59:21",
+   "name": "TEMP-SYNTH:buzz",
+   "gain_db": -19,
+   "label": "buzz",
+   "synth": true
+  },
+  {
+   "f": 2224,
+   "tc": "14:03:16",
+   "name": "TEMP-SYNTH:buzz",
+   "gain_db": -14,
+   "label": "a buzz: one phone's corner over the edge",
+   "synth": true
+  },
+  {
+   "f": 2234,
+   "tc": "14:04:02",
+   "name": "TEMP-SYNTH:clack",
+   "gain_db": -11,
+   "label": "*clack*: the first phone off the table, out of frame (v4.1: S4.05 is cut)",
+   "synth": true
+  },
+  {
+   "f": 2260,
+   "tc": "14:05:04",
+   "name": "TEMP-SYNTH:clack",
+   "gain_db": -17,
+   "label": "a phone clacks off (O.S.)",
+   "synth": true
+  },
+  {
+   "f": 2310,
+   "tc": "14:07:06",
+   "name": "TEMP-SYNTH:clack",
+   "gain_db": -18,
+   "label": "another (O.S.)",
+   "synth": true
+  },
+  {
+   "f": 2378,
+   "tc": "14:10:02",
+   "name": "TEMP-SYNTH:tones",
+   "gain_db": -13,
+   "label": "the speakerphone dials: four tones (the designed rest)",
+   "synth": true
+  },
+  {
+   "f": 2385,
+   "tc": "14:10:09",
+   "name": "TEMP-SYNTH:tones",
+   "gain_db": -13,
+   "label": "the speakerphone dials: four tones (the designed rest)",
+   "synth": true
+  },
+  {
+   "f": 2392,
+   "tc": "14:10:16",
+   "name": "TEMP-SYNTH:tones",
+   "gain_db": -13,
+   "label": "the speakerphone dials: four tones (the designed rest)",
+   "synth": true
+  },
+  {
+   "f": 2399,
+   "tc": "14:10:23",
+   "name": "TEMP-SYNTH:tones",
+   "gain_db": -13,
+   "label": "the speakerphone dials: four tones (the designed rest)",
+   "synth": true
+  },
+  {
+   "f": 2409,
+   "tc": "14:11:09",
+   "name": "TEMP-SYNTH:ring",
+   "gain_db": -15,
+   "label": "the lighthouse phone rings (carries across)",
+   "synth": true
+  },
+  {
+   "f": 2508,
+   "tc": "14:15:12",
+   "name": "dialog_ok_click",
+   "gain_db": -12,
+   "label": "*Click.* (the handset)",
+   "synth": false
+  },
+  {
+   "f": 2510,
+   "tc": "14:15:14",
+   "name": "TEMP-SYNTH:thunk",
+   "gain_db": -13,
+   "label": "the throne falls off",
+   "synth": true
+  },
+  {
+   "f": 2511,
+   "tc": "14:15:15",
+   "name": "TEMP-SYNTH:dialtone",
+   "gain_db": -31,
+   "label": "the left pane hears a dial tone",
+   "synth": true
+  },
+  {
+   "f": 2520,
+   "tc": "14:16:00",
+   "name": "TEMP-SYNTH:ring",
+   "gain_db": -16,
+   "label": "the second phone rings",
+   "synth": true
+  },
+  {
+   "f": 2533,
+   "tc": "14:16:13",
+   "name": "TEMP-SYNTH:clack",
+   "gain_db": -19,
+   "label": "Mario grabs it",
+   "synth": true
+  },
+  {
+   "f": 2621,
+   "tc": "14:20:05",
+   "name": "post_click",
+   "gain_db": -14,
+   "label": "his badge post pops",
+   "synth": false
+  },
+  {
+   "f": 2603,
+   "tc": "14:19:11",
+   "name": "TEMP-SYNTH:step",
+   "gain_db": -28,
+   "label": "his steps on the lobby floor (GUEST), from the screen",
+   "synth": true
+  },
+  {
+   "f": 2609,
+   "tc": "14:19:17",
+   "name": "TEMP-SYNTH:step",
+   "gain_db": -26,
+   "label": "his steps on the lobby floor (GUEST), from the screen",
+   "synth": true
+  },
+  {
+   "f": 2615,
+   "tc": "14:19:23",
+   "name": "TEMP-SYNTH:step",
+   "gain_db": -28,
+   "label": "his steps on the lobby floor (GUEST), from the screen",
+   "synth": true
+  },
+  {
+   "f": 2621,
+   "tc": "14:20:05",
+   "name": "TEMP-SYNTH:step",
+   "gain_db": -26,
+   "label": "his steps on the lobby floor (GUEST), from the screen",
+   "synth": true
+  },
+  {
+   "f": 2627,
+   "tc": "14:20:11",
+   "name": "TEMP-SYNTH:step",
+   "gain_db": -28,
+   "label": "his steps on the lobby floor (GUEST), from the screen",
+   "synth": true
+  },
+  {
+   "f": 2633,
+   "tc": "14:20:17",
+   "name": "TEMP-SYNTH:step",
+   "gain_db": -26,
+   "label": "his steps on the lobby floor (GUEST), from the screen",
+   "synth": true
+  },
+  {
+   "f": 2639,
+   "tc": "14:20:23",
+   "name": "TEMP-SYNTH:step",
+   "gain_db": -28,
+   "label": "his steps on the lobby floor (GUEST), from the screen",
+   "synth": true
+  },
+  {
+   "f": 2645,
+   "tc": "14:21:05",
+   "name": "TEMP-SYNTH:step",
+   "gain_db": -26,
+   "label": "his steps on the lobby floor (GUEST), from the screen",
+   "synth": true
+  },
+  {
+   "f": 2651,
+   "tc": "14:21:11",
+   "name": "TEMP-SYNTH:step",
+   "gain_db": -28,
+   "label": "his steps on the lobby floor (GUEST), from the screen",
+   "synth": true
+  },
+  {
+   "f": 2657,
+   "tc": "14:21:17",
+   "name": "TEMP-SYNTH:step",
+   "gain_db": -26,
+   "label": "his steps on the lobby floor (GUEST), from the screen",
+   "synth": true
+  },
+  {
+   "f": 2663,
+   "tc": "14:21:23",
+   "name": "TEMP-SYNTH:step",
+   "gain_db": -28,
+   "label": "his steps on the lobby floor (GUEST), from the screen",
+   "synth": true
+  },
+  {
+   "f": 2669,
+   "tc": "14:22:05",
+   "name": "TEMP-SYNTH:step",
+   "gain_db": -26,
+   "label": "his steps on the lobby floor (GUEST), from the screen",
+   "synth": true
+  },
+  {
+   "f": 2675,
+   "tc": "14:22:11",
+   "name": "TEMP-SYNTH:step",
+   "gain_db": -28,
+   "label": "his steps on the lobby floor (GUEST), from the screen",
+   "synth": true
+  },
+  {
+   "f": 2681,
+   "tc": "14:22:17",
+   "name": "TEMP-SYNTH:step",
+   "gain_db": -26,
+   "label": "his steps on the lobby floor (GUEST), from the screen",
+   "synth": true
+  },
+  {
+   "f": 2687,
+   "tc": "14:22:23",
+   "name": "TEMP-SYNTH:step",
+   "gain_db": -28,
+   "label": "his steps on the lobby floor (GUEST), from the screen",
+   "synth": true
+  },
+  {
+   "f": 2693,
+   "tc": "14:23:05",
+   "name": "letter_clunk",
+   "gain_db": -16,
+   "label": "the spotlight swings off the empty chair (clunk)",
+   "synth": false
+  },
+  {
+   "f": 2706,
+   "tc": "14:23:18",
+   "name": "TEMP-SYNTH:thunk",
+   "gain_db": -23,
+   "label": "Ttemme's plate lands",
+   "synth": true
+  },
+  {
+   "f": 2757,
+   "tc": "14:25:21",
+   "name": "TEMP-SYNTH:thunk",
+   "gain_db": -18,
+   "label": "the hourglass flips (glass on wood)",
+   "synth": true
+  },
+  {
+   "f": 2819,
+   "tc": "14:28:11",
+   "name": "TEMP-SYNTH:thunk",
+   "gain_db": -21,
+   "label": "the wall steps to slate (a soft palette thump)",
+   "synth": true
+  },
+  {
+   "f": 2848,
+   "tc": "14:29:16",
+   "name": "TEMP-SYNTH:thunk",
+   "gain_db": -22,
+   "label": "the door opens",
+   "synth": true
+  },
+  {
+   "f": 2877,
+   "tc": "14:30:21",
+   "name": "TEMP-SYNTH:jangle",
+   "gain_db": -18,
+   "label": "Tasya's key ring",
+   "synth": true
+  },
+  {
+   "f": 2911,
+   "tc": "14:32:07",
+   "name": "TEMP-SYNTH:jangle",
+   "gain_db": -22,
+   "label": "the key ring again (the offbeats)",
+   "synth": true
+  },
+  {
+   "f": 2879,
+   "tc": "14:30:23",
+   "name": "TEMP-SYNTH:thunk",
+   "gain_db": -24,
+   "label": "Tasya's plate lands",
+   "synth": true
+  },
+  {
+   "f": 3011,
+   "tc": "14:36:11",
+   "name": "key_tap_soft_06",
+   "gain_db": -19,
+   "label": "the marker uncaps",
+   "synth": false
+  },
+  {
+   "f": 3017,
+   "tc": "14:36:17",
+   "name": "TEMP-SYNTH:squeak",
+   "gain_db": -18,
+   "label": "the marker writes ?",
+   "synth": true
+  },
+  {
+   "f": 3197,
+   "tc": "14:44:05",
+   "name": "post_click",
+   "gain_db": -11,
+   "label": "Rima's post pops",
+   "synth": false
+  },
+  {
+   "f": 3210,
+   "tc": "14:44:18",
+   "name": "post_click",
+   "gain_db": -12,
+   "label": "a heart tick on the beat",
+   "synth": false
+  },
+  {
+   "f": 3225,
+   "tc": "14:45:09",
+   "name": "post_click",
+   "gain_db": -12,
+   "label": "a heart tick on the beat",
+   "synth": false
+  },
+  {
+   "f": 3240,
+   "tc": "14:46:00",
+   "name": "post_click",
+   "gain_db": -12,
+   "label": "a heart tick on the beat",
+   "synth": false
+  },
+  {
+   "f": 3255,
+   "tc": "14:46:15",
+   "name": "post_click",
+   "gain_db": -12,
+   "label": "a heart tick on the beat",
+   "synth": false
+  },
+  {
+   "f": 3270,
+   "tc": "14:47:06",
+   "name": "post_click",
+   "gain_db": -12,
+   "label": "a heart tick on the beat",
+   "synth": false
+  },
+  {
+   "f": 3285,
+   "tc": "14:47:21",
+   "name": "post_click",
+   "gain_db": -12,
+   "label": "a heart tick on the beat",
+   "synth": false
+  },
+  {
+   "f": 3302,
+   "tc": "14:48:14",
+   "name": "orb_servo",
+   "gain_db": -14,
+   "label": "the iris steps onto the lanyard",
+   "synth": false
+  },
+  {
+   "f": 3433,
+   "tc": "14:54:01",
+   "name": "key_tap_soft_*",
+   "gain_db": -32,
+   "label": "far-off keys: the signatures keep landing (11 taps, thickening; they stop on the clunk)",
+   "synth": false
+  },
+  {
+   "f": 3455,
+   "tc": "14:54:23",
+   "name": "TEMP-SYNTH:tick",
+   "gain_db": -21,
+   "label": "the counter ratchets (505, 650, 700)",
+   "synth": true
+  },
+  {
+   "f": 3469,
+   "tc": "14:55:13",
+   "name": "TEMP-SYNTH:tick",
+   "gain_db": -21,
+   "label": "the counter ratchets (505, 650, 700)",
+   "synth": true
+  },
+  {
+   "f": 3482,
+   "tc": "14:56:02",
+   "name": "TEMP-SYNTH:tick",
+   "gain_db": -21,
+   "label": "the counter ratchets (505, 650, 700)",
+   "synth": true
+  },
+  {
+   "f": 3482,
+   "tc": "14:56:02",
+   "name": "odometer_ratchet",
+   "gain_db": -9,
+   "label": "the counter locks at 745: the launch-night clunk",
+   "synth": false
+  },
+  {
+   "f": 3543,
+   "tc": "14:58:15",
+   "name": "TEMP-SYNTH:tick",
+   "gain_db": -27,
+   "label": "the page scrolls",
+   "synth": true
+  },
+  {
+   "f": 3546,
+   "tc": "14:58:18",
+   "name": "TEMP-SYNTH:tick",
+   "gain_db": -27,
+   "label": "the page scrolls",
+   "synth": true
+  },
+  {
+   "f": 3549,
+   "tc": "14:58:21",
+   "name": "TEMP-SYNTH:tick",
+   "gain_db": -27,
+   "label": "the page scrolls",
+   "synth": true
+  },
+  {
+   "f": 3552,
+   "tc": "14:59:00",
+   "name": "TEMP-SYNTH:tick",
+   "gain_db": -27,
+   "label": "the page scrolls",
+   "synth": true
+  },
+  {
+   "f": 3555,
+   "tc": "14:59:03",
+   "name": "TEMP-SYNTH:tick",
+   "gain_db": -27,
+   "label": "the page scrolls",
+   "synth": true
+  },
+  {
+   "f": 3558,
+   "tc": "14:59:06",
+   "name": "TEMP-SYNTH:tick",
+   "gain_db": -27,
+   "label": "the page scrolls",
+   "synth": true
+  },
+  {
+   "f": 3560,
+   "tc": "14:59:08",
+   "name": "orb_servo",
+   "gain_db": -18,
+   "label": "the Orb (off picture) notices ALYI",
+   "synth": false
+  },
+  {
+   "f": 3562,
+   "tc": "14:59:10",
+   "name": "vault_chime_triple",
+   "gain_db": -19,
+   "label": "the Orb's chime (off picture)",
+   "synth": false
+  },
+  {
+   "f": 3598,
+   "tc": "15:00:22",
+   "name": "TEMP-SYNTH:whir",
+   "gain_db": -13,
+   "label": "the rack's slot whirs; the check slides down into frame",
+   "synth": true
+  },
+  {
+   "f": 3630,
+   "tc": "15:02:06",
+   "name": "rubber_stamp_C",
+   "gain_db": -12,
+   "label": "VOID IF CEO MISSING",
+   "synth": false
+  },
+  {
+   "f": 3680,
+   "tc": "15:04:08",
+   "name": "key_tap_soft_01",
+   "gain_db": -21,
+   "label": "Gerg's keys (stop on the glance)",
+   "synth": false
+  },
+  {
+   "f": 3683,
+   "tc": "15:04:11",
+   "name": "key_tap_soft_02",
+   "gain_db": -20,
+   "label": "Gerg's keys (stop on the glance)",
+   "synth": false
+  },
+  {
+   "f": 3687,
+   "tc": "15:04:15",
+   "name": "key_tap_soft_03",
+   "gain_db": -19,
+   "label": "Gerg's keys (stop on the glance)",
+   "synth": false
+  },
+  {
+   "f": 3692,
+   "tc": "15:04:20",
+   "name": "key_tap_soft_04",
+   "gain_db": -21,
+   "label": "Gerg's keys (stop on the glance)",
+   "synth": false
+  },
+  {
+   "f": 3695,
+   "tc": "15:04:23",
+   "name": "key_tap_soft_05",
+   "gain_db": -20,
+   "label": "Gerg's keys (stop on the glance)",
+   "synth": false
+  },
+  {
+   "f": 3699,
+   "tc": "15:05:03",
+   "name": "key_tap_soft_06",
+   "gain_db": -19,
+   "label": "Gerg's keys (stop on the glance)",
+   "synth": false
+  },
+  {
+   "f": 3704,
+   "tc": "15:05:08",
+   "name": "key_tap_soft_01",
+   "gain_db": -21,
+   "label": "Gerg's keys (stop on the glance)",
+   "synth": false
+  },
+  {
+   "f": 3707,
+   "tc": "15:05:11",
+   "name": "key_tap_soft_02",
+   "gain_db": -20,
+   "label": "Gerg's keys (stop on the glance)",
+   "synth": false
+  },
+  {
+   "f": 3711,
+   "tc": "15:05:15",
+   "name": "key_tap_soft_03",
+   "gain_db": -19,
+   "label": "Gerg's keys (stop on the glance)",
+   "synth": false
+  },
+  {
+   "f": 3716,
+   "tc": "15:05:20",
+   "name": "key_tap_soft_04",
+   "gain_db": -21,
+   "label": "Gerg's keys (stop on the glance)",
+   "synth": false
+  },
+  {
+   "f": 3719,
+   "tc": "15:05:23",
+   "name": "key_tap_soft_05",
+   "gain_db": -20,
+   "label": "Gerg's keys (stop on the glance)",
+   "synth": false
+  },
+  {
+   "f": 3723,
+   "tc": "15:06:03",
+   "name": "key_tap_soft_06",
+   "gain_db": -19,
+   "label": "Gerg's keys (stop on the glance)",
+   "synth": false
+  },
+  {
+   "f": 3728,
+   "tc": "15:06:08",
+   "name": "key_tap_soft_01",
+   "gain_db": -21,
+   "label": "Gerg's keys (stop on the glance)",
+   "synth": false
+  },
+  {
+   "f": 3731,
+   "tc": "15:06:11",
+   "name": "key_tap_soft_02",
+   "gain_db": -20,
+   "label": "Gerg's keys (stop on the glance)",
+   "synth": false
+  },
+  {
+   "f": 3735,
+   "tc": "15:06:15",
+   "name": "key_tap_soft_03",
+   "gain_db": -19,
+   "label": "Gerg's keys (stop on the glance)",
+   "synth": false
+  },
+  {
+   "f": 3740,
+   "tc": "15:06:20",
+   "name": "key_tap_soft_04",
+   "gain_db": -21,
+   "label": "Gerg's keys (stop on the glance)",
+   "synth": false
+  },
+  {
+   "f": 3743,
+   "tc": "15:06:23",
+   "name": "key_tap_soft_05",
+   "gain_db": -20,
+   "label": "Gerg's keys (stop on the glance)",
+   "synth": false
+  },
+  {
+   "f": 3747,
+   "tc": "15:07:03",
+   "name": "key_tap_soft_06",
+   "gain_db": -19,
+   "label": "Gerg's keys (stop on the glance)",
+   "synth": false
+  },
+  {
+   "f": 3752,
+   "tc": "15:07:08",
+   "name": "key_tap_soft_01",
+   "gain_db": -21,
+   "label": "Gerg's keys (stop on the glance)",
+   "synth": false
+  },
+  {
+   "f": 3755,
+   "tc": "15:07:11",
+   "name": "key_tap_soft_02",
+   "gain_db": -20,
+   "label": "Gerg's keys (stop on the glance)",
+   "synth": false
+  },
+  {
+   "f": 3759,
+   "tc": "15:07:15",
+   "name": "key_tap_soft_03",
+   "gain_db": -19,
+   "label": "Gerg's keys (stop on the glance)",
+   "synth": false
+  },
+  {
+   "f": 3764,
+   "tc": "15:07:20",
+   "name": "key_tap_soft_04",
+   "gain_db": -21,
+   "label": "Gerg's keys (stop on the glance)",
+   "synth": false
+  },
+  {
+   "f": 3767,
+   "tc": "15:07:23",
+   "name": "key_tap_soft_05",
+   "gain_db": -20,
+   "label": "Gerg's keys (stop on the glance)",
+   "synth": false
+  },
+  {
+   "f": 3771,
+   "tc": "15:08:03",
+   "name": "key_tap_soft_06",
+   "gain_db": -19,
+   "label": "Gerg's keys (stop on the glance)",
+   "synth": false
+  },
+  {
+   "f": 3776,
+   "tc": "15:08:08",
+   "name": "key_tap_soft_01",
+   "gain_db": -21,
+   "label": "Gerg's keys (stop on the glance)",
+   "synth": false
+  },
+  {
+   "f": 3779,
+   "tc": "15:08:11",
+   "name": "key_tap_soft_02",
+   "gain_db": -20,
+   "label": "Gerg's keys (stop on the glance)",
+   "synth": false
+  },
+  {
+   "f": 3783,
+   "tc": "15:08:15",
+   "name": "key_tap_soft_03",
+   "gain_db": -19,
+   "label": "Gerg's keys (stop on the glance)",
+   "synth": false
+  },
+  {
+   "f": 3788,
+   "tc": "15:08:20",
+   "name": "key_tap_soft_04",
+   "gain_db": -21,
+   "label": "Gerg's keys (stop on the glance)",
+   "synth": false
+  },
+  {
+   "f": 3791,
+   "tc": "15:08:23",
+   "name": "key_tap_soft_05",
+   "gain_db": -20,
+   "label": "Gerg's keys (stop on the glance)",
+   "synth": false
+  },
+  {
+   "f": 3795,
+   "tc": "15:09:03",
+   "name": "key_tap_soft_06",
+   "gain_db": -19,
+   "label": "Gerg's keys (stop on the glance)",
+   "synth": false
+  },
+  {
+   "f": 3800,
+   "tc": "15:09:08",
+   "name": "key_tap_soft_01",
+   "gain_db": -21,
+   "label": "Gerg's keys (stop on the glance)",
+   "synth": false
+  },
+  {
+   "f": 3834,
+   "tc": "15:10:18",
+   "name": "key_tap_soft_02",
+   "gain_db": -22.0,
+   "label": "the keys return (and cut us to Mas)",
+   "synth": false
+  },
+  {
+   "f": 3838,
+   "tc": "15:10:22",
+   "name": "key_tap_soft_03",
+   "gain_db": -22.96969696969697,
+   "label": "the keys return (and cut us to Mas)",
+   "synth": false
+  },
+  {
+   "f": 3843,
+   "tc": "15:11:03",
+   "name": "key_tap_soft_04",
+   "gain_db": -24.18181818181818,
+   "label": "the keys return (and cut us to Mas)",
+   "synth": false
+  },
+  {
+   "f": 3846,
+   "tc": "15:11:06",
+   "name": "key_tap_soft_05",
+   "gain_db": -24.90909090909091,
+   "label": "the keys return (and cut us to Mas)",
+   "synth": false
+  },
+  {
+   "f": 3850,
+   "tc": "15:11:10",
+   "name": "key_tap_soft_06",
+   "gain_db": -25.87878787878788,
+   "label": "the keys return (and cut us to Mas)",
+   "synth": false
+  },
+  {
+   "f": 3855,
+   "tc": "15:11:15",
+   "name": "key_tap_soft_01",
+   "gain_db": -27.09090909090909,
+   "label": "the keys return (and cut us to Mas)",
+   "synth": false
+  },
+  {
+   "f": 3858,
+   "tc": "15:11:18",
+   "name": "key_tap_soft_02",
+   "gain_db": -27.81818181818182,
+   "label": "the keys return (and cut us to Mas)",
+   "synth": false
+  },
+  {
+   "f": 3862,
+   "tc": "15:11:22",
+   "name": "key_tap_soft_03",
+   "gain_db": -28.78787878787879,
+   "label": "the keys return (and cut us to Mas)",
+   "synth": false
+  },
+  {
+   "f": 3853,
+   "tc": "15:11:13",
+   "name": "TEMP-SYNTH:thunk",
+   "gain_db": -20,
+   "label": "the slate door's held steps",
+   "synth": true
+  },
+  {
+   "f": 3865,
+   "tc": "15:12:01",
+   "name": "TEMP-SYNTH:thunk",
+   "gain_db": -20,
+   "label": "the slate door's held steps",
+   "synth": true
+  },
+  {
+   "f": 3877,
+   "tc": "15:12:13",
+   "name": "TEMP-SYNTH:thunk",
+   "gain_db": -20,
+   "label": "the slate door's held steps",
+   "synth": true
+  },
+  {
+   "f": 3964,
+   "tc": "15:16:04",
+   "name": "key_tap_space",
+   "gain_db": -9,
+   "label": "thock: the first tile",
+   "synth": false
+  },
+  {
+   "f": 3980,
+   "tc": "15:16:20",
+   "name": "key_tap_space",
+   "gain_db": -13,
+   "label": "thock x10",
+   "synth": false
+  },
+  {
+   "f": 3983,
+   "tc": "15:16:23",
+   "name": "key_tap_space",
+   "gain_db": -13,
+   "label": "thock x10",
+   "synth": false
+  },
+  {
+   "f": 3986,
+   "tc": "15:17:02",
+   "name": "key_tap_space",
+   "gain_db": -13,
+   "label": "thock x10",
+   "synth": false
+  },
+  {
+   "f": 3989,
+   "tc": "15:17:05",
+   "name": "key_tap_space",
+   "gain_db": -13,
+   "label": "thock x10",
+   "synth": false
+  },
+  {
+   "f": 3992,
+   "tc": "15:17:08",
+   "name": "key_tap_space",
+   "gain_db": -13,
+   "label": "thock x10",
+   "synth": false
+  },
+  {
+   "f": 3995,
+   "tc": "15:17:11",
+   "name": "key_tap_space",
+   "gain_db": -13,
+   "label": "thock x10",
+   "synth": false
+  },
+  {
+   "f": 3998,
+   "tc": "15:17:14",
+   "name": "key_tap_space",
+   "gain_db": -13,
+   "label": "thock x10",
+   "synth": false
+  },
+  {
+   "f": 4001,
+   "tc": "15:17:17",
+   "name": "key_tap_space",
+   "gain_db": -13,
+   "label": "thock x10",
+   "synth": false
+  },
+  {
+   "f": 4004,
+   "tc": "15:17:20",
+   "name": "key_tap_space",
+   "gain_db": -13,
+   "label": "thock x10",
+   "synth": false
+  },
+  {
+   "f": 4007,
+   "tc": "15:17:23",
+   "name": "key_tap_space",
+   "gain_db": -13,
+   "label": "thock x10",
+   "synth": false
+  },
+  {
+   "f": 4012,
+   "tc": "15:18:04",
+   "name": "key_tap_space",
+   "gain_db": -17.0,
+   "label": "thocks: hundreds",
+   "synth": false
+  },
+  {
+   "f": 4014,
+   "tc": "15:18:06",
+   "name": "key_tap_space",
+   "gain_db": -17.2,
+   "label": "thocks: hundreds",
+   "synth": false
+  },
+  {
+   "f": 4016,
+   "tc": "15:18:08",
+   "name": "key_tap_space",
+   "gain_db": -17.4,
+   "label": "thocks: hundreds",
+   "synth": false
+  },
+  {
+   "f": 4018,
+   "tc": "15:18:10",
+   "name": "key_tap_space",
+   "gain_db": -17.6,
+   "label": "thocks: hundreds",
+   "synth": false
+  },
+  {
+   "f": 4020,
+   "tc": "15:18:12",
+   "name": "key_tap_space",
+   "gain_db": -17.8,
+   "label": "thocks: hundreds",
+   "synth": false
+  },
+  {
+   "f": 4022,
+   "tc": "15:18:14",
+   "name": "key_tap_space",
+   "gain_db": -18.0,
+   "label": "thocks: hundreds",
+   "synth": false
+  },
+  {
+   "f": 4024,
+   "tc": "15:18:16",
+   "name": "key_tap_space",
+   "gain_db": -18.2,
+   "label": "thocks: hundreds",
+   "synth": false
+  },
+  {
+   "f": 4026,
+   "tc": "15:18:18",
+   "name": "key_tap_space",
+   "gain_db": -18.4,
+   "label": "thocks: hundreds",
+   "synth": false
+  },
+  {
+   "f": 4028,
+   "tc": "15:18:20",
+   "name": "key_tap_space",
+   "gain_db": -18.6,
+   "label": "thocks: hundreds",
+   "synth": false
+  },
+  {
+   "f": 4030,
+   "tc": "15:18:22",
+   "name": "key_tap_space",
+   "gain_db": -18.8,
+   "label": "thocks: hundreds",
+   "synth": false
+  },
+  {
+   "f": 4032,
+   "tc": "15:19:00",
+   "name": "key_tap_space",
+   "gain_db": -19.0,
+   "label": "thocks: hundreds",
+   "synth": false
+  },
+  {
+   "f": 4034,
+   "tc": "15:19:02",
+   "name": "key_tap_space",
+   "gain_db": -19.2,
+   "label": "thocks: hundreds",
+   "synth": false
+  },
+  {
+   "f": 4036,
+   "tc": "15:19:04",
+   "name": "key_tap_space",
+   "gain_db": -19.4,
+   "label": "thocks: hundreds",
+   "synth": false
+  },
+  {
+   "f": 4038,
+   "tc": "15:19:06",
+   "name": "key_tap_space",
+   "gain_db": -19.6,
+   "label": "thocks: hundreds",
+   "synth": false
+  },
+  {
+   "f": 4040,
+   "tc": "15:19:08",
+   "name": "key_tap_space",
+   "gain_db": -19.8,
+   "label": "thocks: hundreds",
+   "synth": false
+  },
+  {
+   "f": 4042,
+   "tc": "15:19:10",
+   "name": "key_tap_space",
+   "gain_db": -20.0,
+   "label": "thocks: hundreds",
+   "synth": false
+  },
+  {
+   "f": 4044,
+   "tc": "15:19:12",
+   "name": "key_tap_space",
+   "gain_db": -20.2,
+   "label": "thocks: hundreds",
+   "synth": false
+  },
+  {
+   "f": 4046,
+   "tc": "15:19:14",
+   "name": "key_tap_space",
+   "gain_db": -20.4,
+   "label": "thocks: hundreds",
+   "synth": false
+  },
+  {
+   "f": 4048,
+   "tc": "15:19:16",
+   "name": "key_tap_space",
+   "gain_db": -20.6,
+   "label": "thocks: hundreds",
+   "synth": false
+  },
+  {
+   "f": 4050,
+   "tc": "15:19:18",
+   "name": "key_tap_space",
+   "gain_db": -20.8,
+   "label": "thocks: hundreds",
+   "synth": false
+  },
+  {
+   "f": 4052,
+   "tc": "15:19:20",
+   "name": "key_tap_space",
+   "gain_db": -21.0,
+   "label": "thocks: hundreds",
+   "synth": false
+  },
+  {
+   "f": 4054,
+   "tc": "15:19:22",
+   "name": "key_tap_space",
+   "gain_db": -21.2,
+   "label": "thocks: hundreds",
+   "synth": false
+  },
+  {
+   "f": 4160,
+   "tc": "15:24:08",
+   "name": "paper_flutter",
+   "gain_db": -17,
+   "label": "her footnotes scatter",
+   "synth": false
+  },
+  {
+   "f": 4142,
+   "tc": "15:23:14",
+   "name": "post_click--chip",
+   "gain_db": -23,
+   "label": "the call: ALYI left the call",
+   "synth": false
+  },
+  {
+   "f": 4195,
+   "tc": "15:25:19",
+   "name": "post_click--chip",
+   "gain_db": -23,
+   "label": "the call: NELEH left the call",
+   "synth": false
+  },
+  {
+   "f": 4222,
+   "tc": "15:26:22",
+   "name": "post_click--chip",
+   "gain_db": -23,
+   "label": "the call: THE QUIET VOTE left the call",
+   "synth": false
+  },
+  {
+   "f": 4276,
+   "tc": "15:29:04",
+   "name": "freeze_hit_F",
+   "gain_db": -10,
+   "label": "MADA's label flips (the band's dead stop)",
+   "synth": false
+  },
+  {
+   "f": 4441,
+   "tc": "15:36:01",
+   "name": "heart_gliss",
+   "gain_db": -16,
+   "label": "a heart rises and crosses the gap",
+   "synth": false
+  },
+  {
+   "f": 4453,
+   "tc": "15:36:13",
+   "name": "heart_gliss",
+   "gain_db": -18,
+   "label": "a heart rises and crosses the gap",
+   "synth": false
+  },
+  {
+   "f": 4465,
+   "tc": "15:37:01",
+   "name": "heart_gliss",
+   "gain_db": -18,
+   "label": "a heart rises and crosses the gap",
+   "synth": false
+  },
+  {
+   "f": 4478,
+   "tc": "15:37:14",
+   "name": "paper_flutter",
+   "gain_db": -21,
+   "label": "the IOU note flutters",
+   "synth": false
+  },
+  {
+   "f": 4559,
+   "tc": "15:40:23",
+   "name": "TEMP-SYNTH:thunk",
+   "gain_db": -19,
+   "label": "the palette steps on 'below'",
+   "synth": true
+  },
+  {
+   "f": 4579,
+   "tc": "15:41:19",
+   "name": "TEMP-SYNTH:thunk",
+   "gain_db": -19,
+   "label": "the palette steps on 'above'",
+   "synth": true
+  },
+  {
+   "f": 4599,
+   "tc": "15:42:15",
+   "name": "TEMP-SYNTH:thunk",
+   "gain_db": -19,
+   "label": "the palette steps on 'around'",
+   "synth": true
+  },
+  {
+   "f": 4614,
+   "tc": "15:43:06",
+   "name": "TEMP-SYNTH:jangle",
+   "gain_db": -21,
+   "label": "his key ring, inside the wall",
+   "synth": true
+  },
+  {
+   "f": 4680,
+   "tc": "15:46:00",
+   "name": "flame_whoomph",
+   "gain_db": -17,
+   "label": "the fires",
+   "synth": false
+  },
+  {
+   "f": 4732,
+   "tc": "15:48:04",
+   "name": "TEMP-SYNTH:air",
+   "gain_db": -14,
+   "label": "the door's air",
+   "synth": true
+  },
+  {
+   "f": 4733,
+   "tc": "15:48:05",
+   "name": "TEMP-SYNTH:thunk",
+   "gain_db": -4,
+   "label": "the door BANGS",
+   "synth": true
+  },
+  {
+   "f": 4751,
+   "tc": "15:48:23",
+   "name": "tower_pop",
+   "gain_db": -14,
+   "label": "the helmet pops on",
+   "synth": false
+  },
+  {
+   "f": 4759,
+   "tc": "15:49:07",
+   "name": "freeze_hit_F",
+   "gain_db": -8,
+   "label": "FULL FREEZE (the TERB card)",
+   "synth": false
+  },
+  {
+   "f": 4802,
+   "tc": "15:51:02",
+   "name": "TEMP-SYNTH:pin",
+   "gain_db": -10,
+   "label": "the pin comes out",
+   "synth": true
+  },
+  {
+   "f": 4824,
+   "tc": "15:52:00",
+   "name": "TEMP-SYNTH:air",
+   "gain_db": -18,
+   "label": "the room unfreezes",
+   "synth": true
+  },
+  {
+   "f": 4906,
+   "tc": "15:55:10",
+   "name": "steam_hiss",
+   "gain_db": -15,
+   "label": "Terb sprays (the extinguisher works)",
+   "synth": false
+  },
+  {
+   "f": 4910,
+   "tc": "15:55:14",
+   "name": "TEMP-SYNTH:spray",
+   "gain_db": -19,
+   "label": "the spray",
+   "synth": true
+  },
+  {
+   "f": 4948,
+   "tc": "15:57:04",
+   "name": "steam_hiss",
+   "gain_db": -15,
+   "label": "Terb sprays (the extinguisher works)",
+   "synth": false
+  },
+  {
+   "f": 4952,
+   "tc": "15:57:08",
+   "name": "TEMP-SYNTH:spray",
+   "gain_db": -19,
+   "label": "the spray",
+   "synth": true
+  },
+  {
+   "f": 5016,
+   "tc": "16:00:00",
+   "name": "steam_hiss",
+   "gain_db": -15,
+   "label": "Terb sprays (the extinguisher works)",
+   "synth": false
+  },
+  {
+   "f": 5020,
+   "tc": "16:00:04",
+   "name": "TEMP-SYNTH:spray",
+   "gain_db": -19,
+   "label": "the spray",
+   "synth": true
+  },
+  {
+   "f": 4934,
+   "tc": "15:56:14",
+   "name": "keycap_popcorn",
+   "gain_db": -18,
+   "label": "keycaps bounce off the table",
+   "synth": false
+  },
+  {
+   "f": 4990,
+   "tc": "15:58:22",
+   "name": "TEMP-SYNTH:jangle",
+   "gain_db": -24,
+   "label": "a key ring, inside the wall",
+   "synth": true
+  },
+  {
+   "f": 5038,
+   "tc": "16:00:22",
+   "name": "rubber_stamp_C",
+   "gain_db": -8,
+   "label": "the term sheet stamped",
+   "synth": false
+  },
+  {
+   "f": 5054,
+   "tc": "16:01:14",
+   "name": "paper_flutter",
+   "gain_db": -22,
+   "label": "handed to both",
+   "synth": false
+  },
+  {
+   "f": 5120,
+   "tc": "16:04:08",
+   "name": "keycap_popcorn",
+   "gain_db": -10,
+   "label": "keycaps pop (the phone lights green)",
+   "synth": false
+  },
+  {
+   "f": 5128,
+   "tc": "16:04:16",
+   "name": "post_click",
+   "gain_db": -10,
+   "label": "Gerg's post",
+   "synth": false
+  },
+  {
+   "f": 5204,
+   "tc": "16:07:20",
+   "name": "post_click",
+   "gain_db": -12,
+   "label": "Ttemme's post",
+   "synth": false
+  },
+  {
+   "f": 5205,
+   "tc": "16:07:21",
+   "name": "TEMP-SYNTH:scribble",
+   "gain_db": -28,
+   "label": "the last grain of sand",
+   "synth": true
+  },
+  {
+   "f": 5258,
+   "tc": "16:10:02",
+   "name": "TEMP-SYNTH:stress",
+   "gain_db": -26,
+   "label": "the glass takes the strain",
+   "synth": true
+  },
+  {
+   "f": 5278,
+   "tc": "16:10:22",
+   "name": "TEMP-SYNTH:stress",
+   "gain_db": -23,
+   "label": "the glass takes the strain",
+   "synth": true
+  },
+  {
+   "f": 5293,
+   "tc": "16:11:13",
+   "name": "TEMP-SYNTH:stress",
+   "gain_db": -20,
+   "label": "the glass takes the strain",
+   "synth": true
+  },
+  {
+   "f": 5286,
+   "tc": "16:11:06",
+   "name": "hourglass_shatter",
+   "gain_db": -8,
+   "label": "the hourglass shatters",
+   "synth": false
+  },
+  {
+   "f": 5301,
+   "tc": "16:11:21",
+   "name": "TEMP-SYNTH:sand",
+   "gain_db": -22,
+   "label": "the sand falls",
+   "synth": true
+  },
+  {
+   "f": 5314,
+   "tc": "16:12:10",
+   "name": "neon_ignite",
+   "gain_db": -10,
+   "label": "the sign ignites",
+   "synth": false
+  },
+  {
+   "f": 5386,
+   "tc": "16:15:10",
+   "name": "letter_clunk",
+   "gain_db": -16,
+   "label": "a box of zeros set down",
+   "synth": false
+  },
+  {
+   "f": 5415,
+   "tc": "16:16:15",
+   "name": "dialog_ok_click--chip",
+   "gain_db": -18,
+   "label": "the 1993 dialog",
+   "synth": false
+  },
+  {
+   "f": 5456,
+   "tc": "16:18:08",
+   "name": "alert_bonk",
+   "gain_db": -6,
+   "label": "*Bonk.* (Cancel is refused)",
+   "synth": false
+  },
+  {
+   "f": 5458,
+   "tc": "16:18:10",
+   "name": "TEMP-SYNTH:clack",
+   "gain_db": -24,
+   "label": "the dialog shakes",
+   "synth": true
+  },
+  {
+   "f": 5528,
+   "tc": "16:21:08",
+   "name": "key_tap_space",
+   "gain_db": -18,
+   "label": "the glass set down on the stone",
+   "synth": false
+  },
+  {
+   "f": 5534,
+   "tc": "16:21:14",
+   "name": "key_tap_soft_03",
+   "gain_db": -22,
+   "label": "nudged one pixel true",
+   "synth": false
+  },
+  {
+   "f": 5874,
+   "tc": "16:35:18",
+   "name": "TEMP-SYNTH:squeak",
+   "gain_db": -18,
+   "label": "a screw, one a beat",
+   "synth": true
+  },
+  {
+   "f": 5884,
+   "tc": "16:36:04",
+   "name": "TEMP-SYNTH:squeak",
+   "gain_db": -18,
+   "label": "a screw, one a beat",
+   "synth": true
+  },
+  {
+   "f": 5902,
+   "tc": "16:36:22",
+   "name": "TEMP-SYNTH:squeak",
+   "gain_db": -18,
+   "label": "a screw, one a beat",
+   "synth": true
+  },
+  {
+   "f": 5917,
+   "tc": "16:37:13",
+   "name": "TEMP-SYNTH:squeak",
+   "gain_db": -18,
+   "label": "a screw, one a beat",
+   "synth": true
+  },
+  {
+   "f": 5930,
+   "tc": "16:38:02",
+   "name": "letter_clunk",
+   "gain_db": -18,
+   "label": "the ALYI plate comes off",
+   "synth": false
+  },
+  {
+   "f": 5940,
+   "tc": "16:38:12",
+   "name": "TEMP-SYNTH:clack",
+   "gain_db": -18,
+   "label": "the folding chair unfolds",
+   "synth": true
+  },
+  {
+   "f": 5944,
+   "tc": "16:38:16",
+   "name": "TEMP-SYNTH:clack",
+   "gain_db": -18,
+   "label": "the folding chair unfolds",
+   "synth": true
+  },
+  {
+   "f": 5948,
+   "tc": "16:38:20",
+   "name": "TEMP-SYNTH:clack",
+   "gain_db": -18,
+   "label": "the folding chair unfolds",
+   "synth": true
+  },
+  {
+   "f": 5952,
+   "tc": "16:39:00",
+   "name": "TEMP-SYNTH:clack",
+   "gain_db": -18,
+   "label": "the folding chair unfolds",
+   "synth": true
+  },
+  {
+   "f": 5956,
+   "tc": "16:39:04",
+   "name": "TEMP-SYNTH:clack",
+   "gain_db": -18,
+   "label": "the folding chair unfolds",
+   "synth": true
+  },
+  {
+   "f": 5988,
+   "tc": "16:40:12",
+   "name": "TEMP-SYNTH:jangle",
+   "gain_db": -12,
+   "label": "Tasya's key ring drops onto the seat",
+   "synth": true
+  },
+  {
+   "f": 5578,
+   "tc": "16:23:10",
+   "name": "server_hum",
+   "gain_db": -24,
+   "label": "the Q* vault's hum on F: the coda's pedal (TEMP for MM-12); thinned under the memo",
+   "synth": false
+  }
+ ],
+ "beds": [
+  {
+   "a": 0,
+   "b": 735,
+   "tc_in": "12:31:00",
+   "tc_out": "13:01:15",
+   "kind": "suite",
+   "target_dbfs": -38.0,
+   "fade_in_f": 0,
+   "fade_out_f": 1,
+   "label": "the suite: HVAC, the Strip far below (TEMP-SYNTH traffic), -40 under THE PLAN",
+   "synth": true
+  },
+  {
+   "a": 824,
+   "b": 929,
+   "tc_in": "13:05:08",
+   "tc_out": "13:09:17",
+   "kind": "suite",
+   "target_dbfs": -38.0,
+   "fade_in_f": 1,
+   "fade_out_f": 30,
+   "label": "the suite comes back with the phone; it falls away with the picture",
+   "synth": true
+  },
+  {
+   "a": 885,
+   "b": 1068,
+   "tc_in": "13:07:21",
+   "tc_out": "13:15:12",
+   "kind": "dark",
+   "target_dbfs": -39.0,
+   "fade_in_f": 24,
+   "fade_out_f": 12,
+   "label": "the dark room: the drone (F1 + C2), the air, the rack (pre-lapped under the fallaway)",
+   "synth": false
+  },
+  {
+   "a": 1056,
+   "b": 1153,
+   "tc_in": "13:15:00",
+   "tc_out": "13:19:01",
+   "kind": "tpool",
+   "target_dbfs": -40.0,
+   "fade_in_f": 12,
+   "fade_out_f": 12,
+   "label": "TPOOL's frosted office (EARLY-WEB16, TEMP-SYNTH), on the fronts",
+   "synth": true
+  },
+  {
+   "a": 1135,
+   "b": 1266,
+   "tc_in": "13:18:07",
+   "tc_out": "13:23:18",
+   "kind": "dark",
+   "target_dbfs": -39.0,
+   "fade_in_f": 12,
+   "fade_out_f": 12,
+   "label": "the dark room (its tail rings 0.5 s under the whip)",
+   "synth": false
+  },
+  {
+   "a": 1252,
+   "b": 1669,
+   "tc_in": "13:23:04",
+   "tc_out": "13:40:13",
+   "kind": "office",
+   "target_dbfs": -38.5,
+   "fade_in_f": 6,
+   "fade_out_f": 6,
+   "label": "Neleh's office by day: HVAC, far keys, murmur (TEMP-SYNTH)",
+   "synth": true
+  },
+  {
+   "a": 1663,
+   "b": 1805,
+   "tc_in": "13:40:07",
+   "tc_out": "13:46:05",
+   "kind": "allhands",
+   "target_dbfs": -34.5,
+   "fade_in_f": 6,
+   "fade_out_f": 12,
+   "label": "the all-hands crowd (TEMP-SYNTH): it hushes for the question, stirs after Alyi",
+   "synth": true
+  },
+  {
+   "a": 1793,
+   "b": 1913,
+   "tc_in": "13:45:17",
+   "tc_out": "13:50:17",
+   "kind": "office_night",
+   "target_dbfs": -40.0,
+   "fade_in_f": 12,
+   "fade_out_f": 6,
+   "label": "Neleh's desk at night (quieter HVAC, the city)",
+   "synth": true
+  },
+  {
+   "a": 1901,
+   "b": 2389,
+   "tc_in": "13:50:05",
+   "tc_out": "14:10:13",
+   "kind": "boardroom",
+   "target_dbfs": -39.0,
+   "fade_in_f": 6,
+   "fade_out_f": 4,
+   "label": "the boardroom: HVAC, the city through glass",
+   "synth": true
+  },
+  {
+   "a": 2381,
+   "b": 2607,
+   "tc_in": "14:10:05",
+   "tc_out": "14:19:15",
+   "kind": "boardroom",
+   "target_dbfs": -41.5,
+   "fade_in_f": 4,
+   "fade_out_f": 4,
+   "label": "the split, left pane: boardroom air",
+   "synth": true
+  },
+  {
+   "a": 2381,
+   "b": 2607,
+   "tc_in": "14:10:05",
+   "tc_out": "14:19:15",
+   "kind": "lighthouse",
+   "target_dbfs": -41.0,
+   "fade_in_f": 4,
+   "fade_out_f": 4,
+   "label": "the split, right pane: lighthouse wind, surf, the lamp's motor (TEMP-SYNTH)",
+   "synth": true
+  },
+  {
+   "a": 2599,
+   "b": 2697,
+   "tc_in": "14:19:07",
+   "tc_out": "14:23:09",
+   "kind": "cctv",
+   "target_dbfs": -40.0,
+   "fade_in_f": 4,
+   "fade_out_f": 4,
+   "label": "the lobby camera on the boardroom's screen: CCTV hum, big-lobby air",
+   "synth": true
+  },
+  {
+   "a": 2689,
+   "b": 3111,
+   "tc_in": "14:23:01",
+   "tc_out": "14:40:15",
+   "kind": "boardroom",
+   "target_dbfs": -39.0,
+   "fade_in_f": 4,
+   "fade_out_f": 36,
+   "label": "the boardroom (it fades across the card)",
+   "synth": true
+  },
+  {
+   "a": 3111,
+   "b": 4344,
+   "tc_in": "14:40:15",
+   "tc_out": "15:32:00",
+   "kind": "dark",
+   "target_dbfs": -39.0,
+   "fade_in_f": 36,
+   "fade_out_f": 12,
+   "label": "the dark room (his side, 2 AM; the monitor's world in S6)",
+   "synth": false
+  },
+  {
+   "a": 4332,
+   "b": 4676,
+   "tc_in": "15:31:12",
+   "tc_out": "15:45:20",
+   "kind": "bullpen",
+   "target_dbfs": -38.0,
+   "fade_in_f": 12,
+   "fade_out_f": 8,
+   "label": "the bullpen by day: murmur, packing rustle, keys, tape (TEMP-SYNTH)",
+   "synth": true
+  },
+  {
+   "a": 4672,
+   "b": 5286,
+   "tc_in": "15:45:16",
+   "tc_out": "16:11:06",
+   "kind": "fires",
+   "target_dbfs": -36.0,
+   "fade_in_f": 8,
+   "fade_out_f": 12,
+   "label": "the boardroom with fires: the crackle pre-laps under the rail (TEMP-SYNTH)",
+   "synth": true
+  },
+  {
+   "a": 5294,
+   "b": 5590,
+   "tc_in": "16:11:14",
+   "tc_out": "16:23:22",
+   "kind": "lobby",
+   "target_dbfs": -39.0,
+   "fade_in_f": 12,
+   "fade_out_f": 12,
+   "label": "the lobby at night: the sign's neon on F, big dark air (pre-lapped under the shatter); v4.2: -40 -> -39 (the bursty bed read -43 in mono for 0.3 s in the rest before 'okay.')",
+   "synth": true
+  },
+  {
+   "a": 5578,
+   "b": 6036,
+   "tc_in": "16:23:10",
+   "tc_out": "16:42:12",
+   "kind": "bullpen",
+   "target_dbfs": -38.5,
+   "fade_in_f": 12,
+   "fade_out_f": 0,
+   "label": "the bullpen by day under the whole coda (the vault included)",
+   "synth": true
+  }
+ ],
+ "measurements": {
+  "act_frames": 6036,
+  "act_seconds": 251.5,
+  "integrated_lufs": -16.51,
+  "true_peak_dbtp": -1.2,
+  "sample_peak_dbfs": -1.21,
+  "master_gain_db": 0.5,
+  "limiter_max_reduction_db": -1.67,
+  "target_lufs": -16.5,
+  "integrated_lufs_dialogue": -12.97,
+  "integrated_lufs_music": -21.74,
+  "music": {
+   "runs": 5,
+   "first_start": "12:31:00",
+   "last_stop": "16:42:02",
+   "audible_pct": 92.6,
+   "longest_run_s": 139.7,
+   "median_run_s": 23.55,
+   "fragments_under_2_5s": [],
+   "run_list": [
+    {
+     "start_frame": 0.0,
+     "end_frame": 735.6,
+     "tc_in": "12:31:00",
+     "tc_out": "13:01:16",
+     "seconds": 30.65,
+     "shot_in": "S1.01",
+     "shot_out": "S1.09"
+    },
+    {
+     "start_frame": 924.0,
+     "end_frame": 4276.8,
+     "tc_in": "13:09:12",
+     "tc_out": "15:29:05",
+     "seconds": 139.7,
+     "shot_in": "S2.01",
+     "shot_out": "S6.06"
+    },
+    {
+     "start_frame": 4346.4,
+     "end_frame": 4911.6,
+     "tc_in": "15:32:02",
+     "tc_out": "15:55:16",
+     "seconds": 23.55,
+     "shot_in": "S7.01",
+     "shot_out": "S7.07"
+    },
+    {
+     "start_frame": 5038.8,
+     "end_frame": 5506.8,
+     "tc_in": "16:00:23",
+     "tc_out": "16:20:11",
+     "seconds": 19.5,
+     "shot_in": "S7.09",
+     "shot_out": "S8.04"
+    },
+    {
+     "start_frame": 5560.8,
+     "end_frame": 6026.4,
+     "tc_in": "16:22:17",
+     "tc_out": "16:42:02",
+     "seconds": 19.4,
+     "shot_in": "S8.05",
+     "shot_out": "S8.10"
+    }
+   ],
+   "stops": [
+    {
+     "start_frame": 735.6,
+     "end_frame": 924.0,
+     "tc": "13:01:16",
+     "seconds": 7.85,
+     "shot": "S1.09",
+     "cause": "stop: D6: the Cancel click"
+    },
+    {
+     "start_frame": 4276.8,
+     "end_frame": 4346.4,
+     "tc": "15:29:05",
+     "seconds": 2.9,
+     "shot": "S6.06",
+     "cause": "stop: MADA's label"
+    },
+    {
+     "start_frame": 4911.6,
+     "end_frame": 5038.8,
+     "tc": "15:55:16",
+     "seconds": 5.3,
+     "shot": "S7.07",
+     "cause": "stop: \"Terms?\""
+    },
+    {
+     "start_frame": 5506.8,
+     "end_frame": 5560.8,
+     "tc": "16:20:11",
+     "seconds": 2.25,
+     "shot": "S8.04",
+     "cause": "rest: the lobby CU before \"okay.\""
+    }
+   ],
+   "unexplained_stops": []
+  },
+  "music_off_windows_by_sequence": {
+   "S1": [
+    {
+     "tc": "13:01:16",
+     "seconds": 7.85,
+     "cause": "stop: D6: the Cancel click"
+    }
+   ],
+   "S6": [
+    {
+     "tc": "15:29:05",
+     "seconds": 2.9,
+     "cause": "stop: MADA's label"
+    }
+   ],
+   "S7": [
+    {
+     "tc": "15:55:16",
+     "seconds": 5.3,
+     "cause": "stop: \"Terms?\""
+    }
+   ],
+   "S8": [
+    {
+     "tc": "16:20:11",
+     "seconds": 2.25,
+     "cause": "rest: the lobby CU before \"okay.\""
+    }
+   ]
+  },
+  "holes_0_3s_under_42dbfs": {
+   "count": 1,
+   "total_seconds": 3.6,
+   "list": [
+    {
+     "start_frame": 736.8,
+     "tc": "13:01:17",
+     "seconds": 3.6,
+     "shot": "S1.09",
+     "level_db": -240.0,
+     "bed_db": -240.0,
+     "cause": "D6: the designed digital silence (every bus muted)"
+    }
+   ],
+   "unexplained": []
+  },
+  "near_holes_under_40dbfs": [],
+  "digital_silence": [
+   {
+    "tc": "13:01:20",
+    "seconds": 3.45
+   }
+  ],
+  "jumps_over_15db": {
+   "count": 38,
+   "up": 27,
+   "down": 11,
+   "list": [
+    {
+     "frame": 120.0,
+     "tc": "12:36:00",
+     "shot": "S1.03",
+     "delta_db": 20.5,
+     "from_db": -35.5,
+     "to_db": -15.0,
+     "led_by": "sfx",
+     "cause": "SFX: WHO OWNS A CEO? (the stamp) (rubber_stamp_C)"
+    },
+    {
+     "frame": 160.8,
+     "tc": "12:37:17",
+     "shot": "S1.03",
+     "delta_db": -18.2,
+     "from_db": -11.5,
+     "to_db": -29.7,
+     "led_by": "dialogue",
+     "cause": "speech inside a4-25-10b NELEH: a word after a pause / a phrase's end over the floor (natural)"
+    },
+    {
+     "frame": 175.2,
+     "tc": "12:38:07",
+     "shot": "S1.03",
+     "delta_db": -15.1,
+     "from_db": -18.2,
+     "to_db": -33.2,
+     "led_by": "dialogue",
+     "cause": "speech inside a4-25-10b NELEH: a word after a pause / a phrase's end over the floor (natural)"
+    },
+    {
+     "frame": 184.8,
+     "tc": "12:38:17",
+     "shot": "S1.03",
+     "delta_db": 15.8,
+     "from_db": -32.0,
+     "to_db": -16.1,
+     "led_by": "dialogue",
+     "cause": "speech inside a4-25-10b NELEH: a word after a pause / a phrase's end over the floor (natural)"
+    },
+    {
+     "frame": 219.6,
+     "tc": "12:40:04",
+     "shot": "S1.03",
+     "delta_db": 19.0,
+     "from_db": -33.6,
+     "to_db": -14.6,
+     "led_by": "dialogue",
+     "cause": "dialogue onset: a4-25-11 NELEH"
+    },
+    {
+     "frame": 524.4,
+     "tc": "12:52:20",
+     "shot": "S1.06",
+     "delta_db": 22.9,
+     "from_db": -36.7,
+     "to_db": -13.8,
+     "led_by": "sfx",
+     "cause": "SFX: the trackpad click (JOIN) (dialog_ok_click)"
+    },
+    {
+     "frame": 736.8,
+     "tc": "13:01:17",
+     "shot": "S1.09",
+     "delta_db": -17.1,
+     "from_db": -33.2,
+     "to_db": -50.3,
+     "led_by": "sfx",
+     "cause": "D6 boundary (designed)"
+    },
+    {
+     "frame": 738.0,
+     "tc": "13:01:18",
+     "shot": "S1.09",
+     "delta_db": -17.2,
+     "from_db": -50.3,
+     "to_db": -67.5,
+     "led_by": "sfx",
+     "cause": "D6 boundary (designed)"
+    },
+    {
+     "frame": 823.2,
+     "tc": "13:05:07",
+     "shot": "S1.10",
+     "delta_db": 209.0,
+     "from_db": -240.0,
+     "to_db": -31.0,
+     "led_by": "sfx",
+     "cause": "D6 boundary (designed)"
+    },
+    {
+     "frame": 877.2,
+     "tc": "13:07:13",
+     "shot": "S1.12",
+     "delta_db": 16.3,
+     "from_db": -34.0,
+     "to_db": -17.7,
+     "led_by": "dialogue",
+     "cause": "dialogue onset: a4-26-01 MAS"
+    },
+    {
+     "frame": 924.0,
+     "tc": "13:09:12",
+     "shot": "S2.01",
+     "delta_db": 21.3,
+     "from_db": -37.0,
+     "to_db": -15.7,
+     "led_by": "sfx",
+     "cause": "SFX: the pen clip carves, one stroke a beat (TEMP-SYNTH:scribble)"
+    },
+    {
+     "frame": 979.2,
+     "tc": "13:11:19",
+     "shot": "S2.01",
+     "delta_db": -16.4,
+     "from_db": -13.3,
+     "to_db": -29.7,
+     "led_by": "dialogue",
+     "cause": "speech inside a4-26a-vo1 MAS: a word after a pause / a phrase's end over the floor (natural)"
+    },
+    {
+     "frame": 1550.4,
+     "tc": "13:35:14",
+     "shot": "S3.04",
+     "delta_db": 16.6,
+     "from_db": -26.9,
+     "to_db": -10.3,
+     "led_by": "dialogue",
+     "cause": "dialogue onset: a4-27-24 RIMA"
+    },
+    {
+     "frame": 1558.8,
+     "tc": "13:35:23",
+     "shot": "S3.04",
+     "delta_db": 17.2,
+     "from_db": -35.0,
+     "to_db": -17.7,
+     "led_by": "dialogue",
+     "cause": "speech inside a4-27-24 RIMA: a word after a pause / a phrase's end over the floor (natural)"
+    },
+    {
+     "frame": 1698.0,
+     "tc": "13:41:18",
+     "shot": "S3.06",
+     "delta_db": 15.2,
+     "from_db": -28.5,
+     "to_db": -13.3,
+     "led_by": "dialogue",
+     "cause": "dialogue onset: a4-27-05 EMPLOYEE"
+    },
+    {
+     "frame": 1759.2,
+     "tc": "13:44:07",
+     "shot": "S3.07",
+     "delta_db": -17.4,
+     "from_db": -16.8,
+     "to_db": -34.3,
+     "led_by": "dialogue",
+     "cause": "speech inside a4-27-06 ALYI: a word after a pause / a phrase's end over the floor (natural)"
+    },
+    {
+     "frame": 1761.6,
+     "tc": "13:44:10",
+     "shot": "S3.07",
+     "delta_db": 18.5,
+     "from_db": -33.1,
+     "to_db": -14.6,
+     "led_by": "dialogue",
+     "cause": "speech inside a4-27-06 ALYI: a word after a pause / a phrase's end over the floor (natural)"
+    },
+    {
+     "frame": 2131.2,
+     "tc": "13:59:19",
+     "shot": "S4.03",
+     "delta_db": 16.5,
+     "from_db": -28.5,
+     "to_db": -12.0,
+     "led_by": "dialogue",
+     "cause": "speech inside a4-27-08 NELEH: a word after a pause / a phrase's end over the floor (natural)"
+    },
+    {
+     "frame": 2210.4,
+     "tc": "14:03:02",
+     "shot": "S4.04",
+     "delta_db": 17.1,
+     "from_db": -30.7,
+     "to_db": -13.6,
+     "led_by": "dialogue",
+     "cause": "dialogue onset: a4-27-09 ALYI"
+    },
+    {
+     "frame": 2451.6,
+     "tc": "14:13:04",
+     "shot": "S4.08",
+     "delta_db": 15.1,
+     "from_db": -30.6,
+     "to_db": -15.6,
+     "led_by": "dialogue",
+     "cause": "dialogue onset: a4-27-14 MARIO"
+    },
+    {
+     "frame": 2546.4,
+     "tc": "14:17:02",
+     "shot": "S4.08",
+     "delta_db": 20.2,
+     "from_db": -32.9,
+     "to_db": -12.7,
+     "led_by": "dialogue",
+     "cause": "speech inside a4-27-16 MARIO: a word after a pause / a phrase's end over the floor (natural)"
+    },
+    {
+     "frame": 2558.4,
+     "tc": "14:17:14",
+     "shot": "S4.08",
+     "delta_db": 19.8,
+     "from_db": -33.1,
+     "to_db": -13.3,
+     "led_by": "dialogue",
+     "cause": "speech inside a4-27-16 MARIO: a word after a pause / a phrase's end over the floor (natural)"
+    },
+    {
+     "frame": 2780.4,
+     "tc": "14:26:20",
+     "shot": "S4.11",
+     "delta_db": -16.7,
+     "from_db": -16.0,
+     "to_db": -32.7,
+     "led_by": "dialogue",
+     "cause": "speech inside a4-27-19 TTEMME: a word after a pause / a phrase's end over the floor (natural)"
+    },
+    {
+     "frame": 3765.6,
+     "tc": "15:07:22",
+     "shot": "S5.09",
+     "delta_db": 16.2,
+     "from_db": -30.6,
+     "to_db": -14.4,
+     "led_by": "dialogue",
+     "cause": "speech inside a4-29-06 GERG: a word after a pause / a phrase's end over the floor (natural)"
+    },
+    {
+     "frame": 4387.2,
+     "tc": "15:33:19",
+     "shot": "S7.01",
+     "delta_db": -18.6,
+     "from_db": -14.4,
+     "to_db": -33.0,
+     "led_by": "dialogue",
+     "cause": "speech inside a4-30-01 ALYI: a word after a pause / a phrase's end over the floor (natural)"
+    },
+    {
+     "frame": 4388.4,
+     "tc": "15:33:20",
+     "shot": "S7.01",
+     "delta_db": 17.3,
+     "from_db": -33.0,
+     "to_db": -15.7,
+     "led_by": "dialogue",
+     "cause": "speech inside a4-30-01 ALYI: a word after a pause / a phrase's end over the floor (natural)"
+    },
+    {
+     "frame": 4732.8,
+     "tc": "15:48:05",
+     "shot": "S7.06",
+     "delta_db": 15.0,
+     "from_db": -23.9,
+     "to_db": -8.8,
+     "led_by": "sfx",
+     "cause": "SFX: the door BANGS (TEMP-SYNTH:thunk)"
+    },
+    {
+     "frame": 4885.2,
+     "tc": "15:54:13",
+     "shot": "S7.06",
+     "delta_db": 15.2,
+     "from_db": -25.5,
+     "to_db": -10.4,
+     "led_by": "dialogue",
+     "cause": "dialogue onset: a4-30-06 TERB"
+    },
+    {
+     "frame": 5546.4,
+     "tc": "16:22:02",
+     "shot": "S8.05",
+     "delta_db": 23.5,
+     "from_db": -37.5,
+     "to_db": -14.0,
+     "led_by": "dialogue",
+     "cause": "dialogue onset: a4-30-12 MAS"
+    },
+    {
+     "frame": 5558.4,
+     "tc": "16:22:14",
+     "shot": "S8.05",
+     "delta_db": -23.1,
+     "from_db": -15.8,
+     "to_db": -38.8,
+     "led_by": "dialogue",
+     "cause": "dialogue end: a4-30-12 MAS"
+    },
+    {
+     "frame": 5660.4,
+     "tc": "16:26:20",
+     "shot": "S8.07",
+     "delta_db": 17.7,
+     "from_db": -32.5,
+     "to_db": -14.9,
+     "led_by": "dialogue",
+     "cause": "dialogue onset: a4-31-01 GERG"
+    },
+    {
+     "frame": 5688.0,
+     "tc": "16:28:00",
+     "shot": "S8.07",
+     "delta_db": 17.5,
+     "from_db": -33.3,
+     "to_db": -15.8,
+     "led_by": "dialogue",
+     "cause": "dialogue onset: a4-31-02 MAS"
+    },
+    {
+     "frame": 5838.0,
+     "tc": "16:34:06",
+     "shot": "S8.08",
+     "delta_db": -18.2,
+     "from_db": -14.0,
+     "to_db": -32.2,
+     "led_by": "dialogue",
+     "cause": "speech inside a4-31-03 MAS: a word after a pause / a phrase's end over the floor (natural)"
+    },
+    {
+     "frame": 5839.2,
+     "tc": "16:34:07",
+     "shot": "S8.08",
+     "delta_db": 16.2,
+     "from_db": -32.2,
+     "to_db": -16.1,
+     "led_by": "dialogue",
+     "cause": "speech inside a4-31-03 MAS: a word after a pause / a phrase's end over the floor (natural)"
+    },
+    {
+     "frame": 5846.4,
+     "tc": "16:34:14",
+     "shot": "S8.08",
+     "delta_db": 17.0,
+     "from_db": -31.5,
+     "to_db": -14.5,
+     "led_by": "dialogue",
+     "cause": "speech inside a4-31-03 MAS: a word after a pause / a phrase's end over the floor (natural)"
+    },
+    {
+     "frame": 5870.4,
+     "tc": "16:35:14",
+     "shot": "S8.09",
+     "delta_db": 17.6,
+     "from_db": -32.4,
+     "to_db": -14.8,
+     "led_by": "dialogue",
+     "cause": "speech inside a4-31-03 MAS: a word after a pause / a phrase's end over the floor (natural)"
+    },
+    {
+     "frame": 5894.4,
+     "tc": "16:36:14",
+     "shot": "S8.09",
+     "delta_db": -19.2,
+     "from_db": -17.2,
+     "to_db": -36.4,
+     "led_by": "dialogue",
+     "cause": "speech inside a4-31-03 MAS: a word after a pause / a phrase's end over the floor (natural)"
+    },
+    {
+     "frame": 5895.6,
+     "tc": "16:36:16",
+     "shot": "S8.09",
+     "delta_db": 17.4,
+     "from_db": -36.4,
+     "to_db": -19.0,
+     "led_by": "dialogue",
+     "cause": "speech inside a4-31-03 MAS: a word after a pause / a phrase's end over the floor (natural)"
+    }
+   ],
+   "unexplained": []
+  },
+  "dialogue_gaps": {
+   "count": 44,
+   "histogram": {
+    "overlap": 7,
+    "0-0.3 s": 1,
+    "0.3-0.6 s": 7,
+    "0.6-1.2 s": 8,
+    "1.2-3 s": 2,
+    "3-6 s": 8,
+    "6-12 s": 7,
+    "12 s +": 4
+   },
+   "reply_gaps_median_s": 0.542,
+   "reply_gaps_range_s": [
+    -0.292,
+    2.542
+   ],
+   "long_wordless": [
+    {
+     "after": "a4-25-11",
+     "before": "a4-25-12",
+     "seconds": 3.333,
+     "music_on_pct": 100.0,
+     "floor_db": -22.7
+    },
+    {
+     "after": "a4-25-02",
+     "before": "a4-26-01",
+     "seconds": 19.167,
+     "music_on_pct": 70.0,
+     "floor_db": -22.1
+    },
+    {
+     "after": "a4-26a-vo1",
+     "before": "a4-27-00",
+     "seconds": 11.208,
+     "music_on_pct": 100.0,
+     "floor_db": -24.8
+    },
+    {
+     "after": "a4-27-00",
+     "before": "a4-27-04",
+     "seconds": 8.833,
+     "music_on_pct": 100.0,
+     "floor_db": -23.9
+    },
+    {
+     "after": "a4-27-24",
+     "before": "a4-27-05",
+     "seconds": 5.25,
+     "music_on_pct": 100.0,
+     "floor_db": -26.8
+    },
+    {
+     "after": "a4-27-06",
+     "before": "a4-27-08",
+     "seconds": 12.875,
+     "music_on_pct": 100.0,
+     "floor_db": -21.9
+    },
+    {
+     "after": "a4-27-13",
+     "before": "a4-27-14",
+     "seconds": 4.583,
+     "music_on_pct": 100.0,
+     "floor_db": -25.6
+    },
+    {
+     "after": "a4-27-16",
+     "before": "a4-27-19",
+     "seconds": 7.5,
+     "music_on_pct": 100.0,
+     "floor_db": -24.2
+    },
+    {
+     "after": "a4-27-19",
+     "before": "a4-27-20",
+     "seconds": 5.917,
+     "music_on_pct": 100.0,
+     "floor_db": -21.8
+    },
+    {
+     "after": "a4-27-21",
+     "before": "a4-29-vo2",
+     "seconds": 11.5,
+     "music_on_pct": 100.0,
+     "floor_db": -23.7
+    },
+    {
+     "after": "a4-29-03",
+     "before": "a4-29-04",
+     "seconds": 12.208,
+     "music_on_pct": 100.0,
+     "floor_db": -24.2
+    },
+    {
+     "after": "a4-29-06",
+     "before": "a4-29-07",
+     "seconds": 3.625,
+     "music_on_pct": 100.0,
+     "floor_db": -25.5
+    },
+    {
+     "after": "a4-29-08",
+     "before": "a4-29-09",
+     "seconds": 9.292,
+     "music_on_pct": 100.0,
+     "floor_db": -17.7
+    },
+    {
+     "after": "a4-29-09",
+     "before": "a4-30-01",
+     "seconds": 6.458,
+     "music_on_pct": 56.0,
+     "floor_db": -19.4
+    },
+    {
+     "after": "a4-30-01",
+     "before": "a4-30-02",
+     "seconds": 4.583,
+     "music_on_pct": 100.0,
+     "floor_db": -22.6
+    },
+    {
+     "after": "a4-30-04",
+     "before": "a4-30-05",
+     "seconds": 6.667,
+     "music_on_pct": 100.0,
+     "floor_db": -19.6
+    },
+    {
+     "after": "a4-30-09",
+     "before": "a4-30-12",
+     "seconds": 22.5,
+     "music_on_pct": 87.0,
+     "floor_db": -22.5
+    },
+    {
+     "after": "a4-30-12",
+     "before": "a4-31-01",
+     "seconds": 4.167,
+     "music_on_pct": 99.0,
+     "floor_db": -30.6
+    },
+    {
+     "after": "a4-31-02",
+     "before": "a4-31-03",
+     "seconds": 4.083,
+     "music_on_pct": 100.0,
+     "floor_db": -29.1
+    }
+   ],
+   "list": [
+    {
+     "after": "a4-25-10b",
+     "before": "a4-25-11",
+     "seconds": 0.542,
+     "music_on_pct": 100.0,
+     "floor_db": -31.7
+    },
+    {
+     "after": "a4-25-11",
+     "before": "a4-25-12",
+     "seconds": 3.333,
+     "music_on_pct": 100.0,
+     "floor_db": -22.7
+    },
+    {
+     "after": "a4-25-12",
+     "before": "a4-25-13",
+     "seconds": 0.542,
+     "music_on_pct": 100.0,
+     "floor_db": -31.2
+    },
+    {
+     "after": "a4-25-13",
+     "before": "a4-25-02",
+     "seconds": -0.167,
+     "music_on_pct": null,
+     "floor_db": null
+    },
+    {
+     "after": "a4-25-02",
+     "before": "a4-26-01",
+     "seconds": 19.167,
+     "music_on_pct": 70.0,
+     "floor_db": -22.1
+    },
+    {
+     "after": "a4-26-01",
+     "before": "a4-26a-vo1",
+     "seconds": 2.542,
+     "music_on_pct": 49.0,
+     "floor_db": -31.0
+    },
+    {
+     "after": "a4-26a-vo1",
+     "before": "a4-27-00",
+     "seconds": 11.208,
+     "music_on_pct": 100.0,
+     "floor_db": -24.8
+    },
+    {
+     "after": "a4-27-00",
+     "before": "a4-27-04",
+     "seconds": 8.833,
+     "music_on_pct": 100.0,
+     "floor_db": -23.9
+    },
+    {
+     "after": "a4-27-04",
+     "before": "a4-27-23",
+     "seconds": -0.25,
+     "music_on_pct": null,
+     "floor_db": null
+    },
+    {
+     "after": "a4-27-23",
+     "before": "a4-27-24",
+     "seconds": 0.583,
+     "music_on_pct": 100.0,
+     "floor_db": -27.7
+    },
+    {
+     "after": "a4-27-24",
+     "before": "a4-27-05",
+     "seconds": 5.25,
+     "music_on_pct": 100.0,
+     "floor_db": -26.8
+    },
+    {
+     "after": "a4-27-05",
+     "before": "a4-27-06",
+     "seconds": 0.792,
+     "music_on_pct": 100.0,
+     "floor_db": -30.2
+    },
+    {
+     "after": "a4-27-06",
+     "before": "a4-27-08",
+     "seconds": 12.875,
+     "music_on_pct": 100.0,
+     "floor_db": -21.9
+    },
+    {
+     "after": "a4-27-08",
+     "before": "a4-27-09",
+     "seconds": 0.458,
+     "music_on_pct": 100.0,
+     "floor_db": -30.3
+    },
+    {
+     "after": "a4-27-09",
+     "before": "a4-27-10",
+     "seconds": -0.167,
+     "music_on_pct": null,
+     "floor_db": null
+    },
+    {
+     "after": "a4-27-10",
+     "before": "a4-27-12",
+     "seconds": 0.667,
+     "music_on_pct": 100.0,
+     "floor_db": -26.5
+    },
+    {
+     "after": "a4-27-12",
+     "before": "a4-27-13",
+     "seconds": 0.5,
+     "music_on_pct": 100.0,
+     "floor_db": -28.9
+    },
+    {
+     "after": "a4-27-13",
+     "before": "a4-27-14",
+     "seconds": 4.583,
+     "music_on_pct": 100.0,
+     "floor_db": -25.6
+    },
+    {
+     "after": "a4-27-14",
+     "before": "a4-27-15",
+     "seconds": -0.292,
+     "music_on_pct": null,
+     "floor_db": null
+    },
+    {
+     "after": "a4-27-15",
+     "before": "a4-27-16",
+     "seconds": 1.292,
+     "music_on_pct": 100.0,
+     "floor_db": -31.9
+    },
+    {
+     "after": "a4-27-16",
+     "before": "a4-27-19",
+     "seconds": 7.5,
+     "music_on_pct": 100.0,
+     "floor_db": -24.2
+    },
+    {
+     "after": "a4-27-19",
+     "before": "a4-27-20",
+     "seconds": 5.917,
+     "music_on_pct": 100.0,
+     "floor_db": -21.8
+    },
+    {
+     "after": "a4-27-20",
+     "before": "a4-27-21",
+     "seconds": 0.792,
+     "music_on_pct": 100.0,
+     "floor_db": -30.0
+    },
+    {
+     "after": "a4-27-21",
+     "before": "a4-29-vo2",
+     "seconds": 11.5,
+     "music_on_pct": 100.0,
+     "floor_db": -23.7
+    },
+    {
+     "after": "a4-29-vo2",
+     "before": "a4-29-03",
+     "seconds": 0.833,
+     "music_on_pct": 100.0,
+     "floor_db": -29.2
+    },
+    {
+     "after": "a4-29-03",
+     "before": "a4-29-04",
+     "seconds": 12.208,
+     "music_on_pct": 100.0,
+     "floor_db": -24.2
+    },
+    {
+     "after": "a4-29-04",
+     "before": "a4-29-05",
+     "seconds": -0.167,
+     "music_on_pct": null,
+     "floor_db": null
+    },
+    {
+     "after": "a4-29-05",
+     "before": "a4-29-06",
+     "seconds": 0.333,
+     "music_on_pct": 100.0,
+     "floor_db": -27.0
+    },
+    {
+     "after": "a4-29-06",
+     "before": "a4-29-07",
+     "seconds": 3.625,
+     "music_on_pct": 100.0,
+     "floor_db": -25.5
+    },
+    {
+     "after": "a4-29-07",
+     "before": "a4-29-08",
+     "seconds": -0.167,
+     "music_on_pct": null,
+     "floor_db": null
+    },
+    {
+     "after": "a4-29-08",
+     "before": "a4-29-09",
+     "seconds": 9.292,
+     "music_on_pct": 100.0,
+     "floor_db": -17.7
+    },
+    {
+     "after": "a4-29-09",
+     "before": "a4-30-01",
+     "seconds": 6.458,
+     "music_on_pct": 56.0,
+     "floor_db": -19.4
+    },
+    {
+     "after": "a4-30-01",
+     "before": "a4-30-02",
+     "seconds": 4.583,
+     "music_on_pct": 100.0,
+     "floor_db": -22.6
+    },
+    {
+     "after": "a4-30-02",
+     "before": "a4-30-03",
+     "seconds": 0.917,
+     "music_on_pct": 100.0,
+     "floor_db": -24.4
+    },
+    {
+     "after": "a4-30-03",
+     "before": "a4-30-04",
+     "seconds": -0.042,
+     "music_on_pct": null,
+     "floor_db": null
+    },
+    {
+     "after": "a4-30-04",
+     "before": "a4-30-05",
+     "seconds": 6.667,
+     "music_on_pct": 100.0,
+     "floor_db": -19.6
+    },
+    {
+     "after": "a4-30-05",
+     "before": "a4-30-06",
+     "seconds": 0.917,
+     "music_on_pct": 100.0,
+     "floor_db": -27.4
+    },
+    {
+     "after": "a4-30-06",
+     "before": "a4-30-07",
+     "seconds": 0.625,
+     "music_on_pct": 100.0,
+     "floor_db": -26.6
+    },
+    {
+     "after": "a4-30-07",
+     "before": "a4-30-08",
+     "seconds": 0.5,
+     "music_on_pct": 0.0,
+     "floor_db": -32.1
+    },
+    {
+     "after": "a4-30-08",
+     "before": "a4-30-09",
+     "seconds": 0.625,
+     "music_on_pct": 0.0,
+     "floor_db": -32.6
+    },
+    {
+     "after": "a4-30-09",
+     "before": "a4-30-12",
+     "seconds": 22.5,
+     "music_on_pct": 87.0,
+     "floor_db": -22.5
+    },
+    {
+     "after": "a4-30-12",
+     "before": "a4-31-01",
+     "seconds": 4.167,
+     "music_on_pct": 99.0,
+     "floor_db": -30.6
+    },
+    {
+     "after": "a4-31-01",
+     "before": "a4-31-02",
+     "seconds": 0.292,
+     "music_on_pct": 100.0,
+     "floor_db": -32.0
+    },
+    {
+     "after": "a4-31-02",
+     "before": "a4-31-03",
+     "seconds": 4.083,
+     "music_on_pct": 100.0,
+     "floor_db": -29.1
+    }
+   ]
+  },
+  "dialogue_over_music": {
+   "median_db": 15.5,
+   "p10_db": 13.0,
+   "min_db": 7.1,
+   "under_12db": [
+    {
+     "id": "a4-27-00",
+     "speaker": "MAS",
+     "frame": 1267,
+     "dialogue_over_music_db": 7.1,
+     "music_db": -28.6
+    },
+    {
+     "id": "a4-29-03",
+     "speaker": "MAS",
+     "frame": 3377,
+     "dialogue_over_music_db": 8.4,
+     "music_db": -27.8
+    },
+    {
+     "id": "a4-29-05",
+     "speaker": "MAS",
+     "frame": 3709,
+     "dialogue_over_music_db": 11.7,
+     "music_db": -27.1
+    }
+   ],
+   "per_line": [
+    {
+     "id": "a4-25-10b",
+     "speaker": "NELEH",
+     "frame": 150,
+     "dialogue_over_music_db": 21.6,
+     "music_db": -36.3
+    },
+    {
+     "id": "a4-25-11",
+     "speaker": "NELEH",
+     "frame": 219,
+     "dialogue_over_music_db": 20.1,
+     "music_db": -36.8
+    },
+    {
+     "id": "a4-25-12",
+     "speaker": "NELEH",
+     "frame": 343,
+     "dialogue_over_music_db": 15.2,
+     "music_db": -29.9
+    },
+    {
+     "id": "a4-25-13",
+     "speaker": "NELEH",
+     "frame": 375,
+     "dialogue_over_music_db": 18.2,
+     "music_db": -32.0
+    },
+    {
+     "id": "a4-25-02",
+     "speaker": "MADA",
+     "frame": 393,
+     "dialogue_over_music_db": 15.6,
+     "music_db": -31.1
+    },
+    {
+     "id": "a4-26-01",
+     "speaker": "MAS",
+     "frame": 876,
+     "dialogue_over_music_db": 223.6,
+     "music_db": -240.0
+    },
+    {
+     "id": "a4-26a-vo1",
+     "speaker": "MAS",
+     "frame": 954,
+     "dialogue_over_music_db": 21.1,
+     "music_db": -36.6
+    },
+    {
+     "id": "a4-27-00",
+     "speaker": "MAS",
+     "frame": 1267,
+     "dialogue_over_music_db": 7.1,
+     "music_db": -28.6
+    },
+    {
+     "id": "a4-27-04",
+     "speaker": "RIMA",
+     "frame": 1496,
+     "dialogue_over_music_db": 14.6,
+     "music_db": -30.2
+    },
+    {
+     "id": "a4-27-23",
+     "speaker": "NELEH",
+     "frame": 1520,
+     "dialogue_over_music_db": 13.8,
+     "music_db": -28.9
+    },
+    {
+     "id": "a4-27-24",
+     "speaker": "RIMA",
+     "frame": 1550,
+     "dialogue_over_music_db": 15.0,
+     "music_db": -31.9
+    },
+    {
+     "id": "a4-27-05",
+     "speaker": "EMPLOYEE",
+     "frame": 1698,
+     "dialogue_over_music_db": 14.1,
+     "music_db": -29.5
+    },
+    {
+     "id": "a4-27-06",
+     "speaker": "ALYI",
+     "frame": 1738,
+     "dialogue_over_music_db": 19.8,
+     "music_db": -35.1
+    },
+    {
+     "id": "a4-27-08",
+     "speaker": "NELEH",
+     "frame": 2100,
+     "dialogue_over_music_db": 17.3,
+     "music_db": -31.0
+    },
+    {
+     "id": "a4-27-09",
+     "speaker": "ALYI",
+     "frame": 2161,
+     "dialogue_over_music_db": 13.5,
+     "music_db": -27.7
+    },
+    {
+     "id": "a4-27-10",
+     "speaker": "NELEH",
+     "frame": 2210,
+     "dialogue_over_music_db": 16.5,
+     "music_db": -29.8
+    },
+    {
+     "id": "a4-27-12",
+     "speaker": "NELEH",
+     "frame": 2238,
+     "dialogue_over_music_db": 15.4,
+     "music_db": -30.5
+    },
+    {
+     "id": "a4-27-13",
+     "speaker": "ALYI",
+     "frame": 2284,
+     "dialogue_over_music_db": 16.8,
+     "music_db": -29.8
+    },
+    {
+     "id": "a4-27-14",
+     "speaker": "MARIO",
+     "frame": 2451,
+     "dialogue_over_music_db": 17.4,
+     "music_db": -32.0
+    },
+    {
+     "id": "a4-27-15",
+     "speaker": "ADELINA",
+     "frame": 2474,
+     "dialogue_over_music_db": 15.8,
+     "music_db": -30.2
+    },
+    {
+     "id": "a4-27-16",
+     "speaker": "MARIO",
+     "frame": 2538,
+     "dialogue_over_music_db": 16.6,
+     "music_db": -30.9
+    },
+    {
+     "id": "a4-27-19",
+     "speaker": "TTEMME",
+     "frame": 2775,
+     "dialogue_over_music_db": 16.4,
+     "music_db": -31.0
+    },
+    {
+     "id": "a4-27-20",
+     "speaker": "TASYA",
+     "frame": 2949,
+     "dialogue_over_music_db": 14.8,
+     "music_db": -28.9
+    },
+    {
+     "id": "a4-27-21",
+     "speaker": "NELEH",
+     "frame": 3017,
+     "dialogue_over_music_db": 17.4,
+     "music_db": -33.5
+    },
+    {
+     "id": "a4-29-vo2",
+     "speaker": "MAS",
+     "frame": 3311,
+     "dialogue_over_music_db": 13.4,
+     "music_db": -28.9
+    },
+    {
+     "id": "a4-29-03",
+     "speaker": "MAS",
+     "frame": 3377,
+     "dialogue_over_music_db": 8.4,
+     "music_db": -27.8
+    },
+    {
+     "id": "a4-29-04",
+     "speaker": "GERG",
+     "frame": 3688,
+     "dialogue_over_music_db": 13.1,
+     "music_db": -27.1
+    },
+    {
+     "id": "a4-29-05",
+     "speaker": "MAS",
+     "frame": 3709,
+     "dialogue_over_music_db": 11.7,
+     "music_db": -27.1
+    },
+    {
+     "id": "a4-29-06",
+     "speaker": "GERG",
+     "frame": 3752,
+     "dialogue_over_music_db": 13.5,
+     "music_db": -28.8
+    },
+    {
+     "id": "a4-29-07",
+     "speaker": "TASYA",
+     "frame": 3883,
+     "dialogue_over_music_db": 19.0,
+     "music_db": -33.3
+    },
+    {
+     "id": "a4-29-08",
+     "speaker": "MAS",
+     "frame": 3909,
+     "dialogue_over_music_db": 15.7,
+     "music_db": -29.7
+    },
+    {
+     "id": "a4-29-09",
+     "speaker": "NELEH",
+     "frame": 4161,
+     "dialogue_over_music_db": 15.2,
+     "music_db": -30.3
+    },
+    {
+     "id": "a4-30-01",
+     "speaker": "ALYI",
+     "frame": 4346,
+     "dialogue_over_music_db": 21.9,
+     "music_db": -36.4
+    },
+    {
+     "id": "a4-30-02",
+     "speaker": "TASYA",
+     "frame": 4550,
+     "dialogue_over_music_db": 13.9,
+     "music_db": -27.4
+    },
+    {
+     "id": "a4-30-03",
+     "speaker": "MAS",
+     "frame": 4640,
+     "dialogue_over_music_db": 13.4,
+     "music_db": -26.7
+    },
+    {
+     "id": "a4-30-04",
+     "speaker": "TASYA",
+     "frame": 4652,
+     "dialogue_over_music_db": 13.7,
+     "music_db": -27.2
+    },
+    {
+     "id": "a4-30-05",
+     "speaker": "TERB",
+     "frame": 4829,
+     "dialogue_over_music_db": 12.2,
+     "music_db": -27.3
+    },
+    {
+     "id": "a4-30-06",
+     "speaker": "TERB",
+     "frame": 4884,
+     "dialogue_over_music_db": 14.6,
+     "music_db": -26.6
+    },
+    {
+     "id": "a4-30-07",
+     "speaker": "TERB",
+     "frame": 4911,
+     "dialogue_over_music_db": 221.3,
+     "music_db": -240.0
+    },
+    {
+     "id": "a4-30-08",
+     "speaker": "MADA",
+     "frame": 4940,
+     "dialogue_over_music_db": 224.7,
+     "music_db": -240.0
+    },
+    {
+     "id": "a4-30-09",
+     "speaker": "MAS",
+     "frame": 4978,
+     "dialogue_over_music_db": 223.2,
+     "music_db": -240.0
+    },
+    {
+     "id": "a4-30-12",
+     "speaker": "MAS",
+     "frame": 5544,
+     "dialogue_over_music_db": 225.9,
+     "music_db": -240.0
+    },
+    {
+     "id": "a4-31-01",
+     "speaker": "GERG",
+     "frame": 5660,
+     "dialogue_over_music_db": 22.6,
+     "music_db": -37.2
+    },
+    {
+     "id": "a4-31-02",
+     "speaker": "MAS",
+     "frame": 5688,
+     "dialogue_over_music_db": 22.7,
+     "music_db": -37.5
+    },
+    {
+     "id": "a4-31-03",
+     "speaker": "MAS",
+     "frame": 5812,
+     "dialogue_over_music_db": 23.0,
+     "music_db": -37.6
+    }
+   ]
+  },
+  "beds": [
+   {
+    "label": "the suite: HVAC, the Strip far below (TEMP-SYNTH traffic), -40 under THE PLAN",
+    "tc_in": "12:31:00",
+    "target_dbfs": -38.0,
+    "bed_median_db": -38.8,
+    "exposed_seconds": 0.0,
+    "exposed_floor_db": null
+   },
+   {
+    "label": "the suite comes back with the phone; it falls away with the picture",
+    "tc_in": "13:05:08",
+    "target_dbfs": -38.0,
+    "bed_median_db": -37.9,
+    "exposed_seconds": 2.85,
+    "exposed_floor_db": -37.0
+   },
+   {
+    "label": "the dark room: the drone (F1 + C2), the air, the rack (pre-lapped under the fallaway)",
+    "tc_in": "13:07:21",
+    "target_dbfs": -39.0,
+    "bed_median_db": -38.0,
+    "exposed_seconds": 1.2,
+    "exposed_floor_db": -35.2
+   },
+   {
+    "label": "TPOOL's frosted office (EARLY-WEB16, TEMP-SYNTH), on the fronts",
+    "tc_in": "13:15:00",
+    "target_dbfs": -40.0,
+    "bed_median_db": -41.3,
+    "exposed_seconds": 0.0,
+    "exposed_floor_db": null
+   },
+   {
+    "label": "the dark room (its tail rings 0.5 s under the whip)",
+    "tc_in": "13:18:07",
+    "target_dbfs": -39.0,
+    "bed_median_db": -38.2,
+    "exposed_seconds": 0.0,
+    "exposed_floor_db": null
+   },
+   {
+    "label": "Neleh's office by day: HVAC, far keys, murmur (TEMP-SYNTH)",
+    "tc_in": "13:23:04",
+    "target_dbfs": -38.5,
+    "bed_median_db": -39.2,
+    "exposed_seconds": 0.0,
+    "exposed_floor_db": null
+   },
+   {
+    "label": "the all-hands crowd (TEMP-SYNTH): it hushes for the question, stirs after Alyi",
+    "tc_in": "13:40:07",
+    "target_dbfs": -34.5,
+    "bed_median_db": -40.0,
+    "exposed_seconds": 0.0,
+    "exposed_floor_db": null
+   },
+   {
+    "label": "Neleh's desk at night (quieter HVAC, the city)",
+    "tc_in": "13:45:17",
+    "target_dbfs": -40.0,
+    "bed_median_db": -39.5,
+    "exposed_seconds": 0.0,
+    "exposed_floor_db": null
+   },
+   {
+    "label": "the boardroom: HVAC, the city through glass",
+    "tc_in": "13:50:05",
+    "target_dbfs": -39.0,
+    "bed_median_db": -38.7,
+    "exposed_seconds": 0.0,
+    "exposed_floor_db": null
+   },
+   {
+    "label": "the split, left pane: boardroom air",
+    "tc_in": "14:10:05",
+    "target_dbfs": -41.5,
+    "bed_median_db": -39.7,
+    "exposed_seconds": 0.0,
+    "exposed_floor_db": null
+   },
+   {
+    "label": "the split, right pane: lighthouse wind, surf, the lamp's motor (TEMP-SYNTH)",
+    "tc_in": "14:10:05",
+    "target_dbfs": -41.0,
+    "bed_median_db": -39.7,
+    "exposed_seconds": 0.0,
+    "exposed_floor_db": null
+   },
+   {
+    "label": "the lobby camera on the boardroom's screen: CCTV hum, big-lobby air",
+    "tc_in": "14:19:07",
+    "target_dbfs": -40.0,
+    "bed_median_db": -39.6,
+    "exposed_seconds": 0.0,
+    "exposed_floor_db": null
+   },
+   {
+    "label": "the boardroom (it fades across the card)",
+    "tc_in": "14:23:01",
+    "target_dbfs": -39.0,
+    "bed_median_db": -38.7,
+    "exposed_seconds": 0.0,
+    "exposed_floor_db": null
+   },
+   {
+    "label": "the dark room (his side, 2 AM; the monitor's world in S6)",
+    "tc_in": "14:40:15",
+    "target_dbfs": -39.0,
+    "bed_median_db": -38.3,
+    "exposed_seconds": 1.45,
+    "exposed_floor_db": -39.2
+   },
+   {
+    "label": "the bullpen by day: murmur, packing rustle, keys, tape (TEMP-SYNTH)",
+    "tc_in": "15:31:12",
+    "target_dbfs": -38.0,
+    "bed_median_db": -40.2,
+    "exposed_seconds": 0.4,
+    "exposed_floor_db": -35.1
+   },
+   {
+    "label": "the boardroom with fires: the crackle pre-laps under the rail (TEMP-SYNTH)",
+    "tc_in": "15:45:16",
+    "target_dbfs": -36.0,
+    "bed_median_db": -35.8,
+    "exposed_seconds": 0.55,
+    "exposed_floor_db": -36.1
+   },
+   {
+    "label": "the lobby at night: the sign's neon on F, big dark air (pre-lapped under the shatter); v4.2: -40 -> -39 (the bursty bed read -43 in mono for 0.3 s in the rest before 'okay.')",
+    "tc_in": "16:11:14",
+    "target_dbfs": -39.0,
+    "bed_median_db": -38.6,
+    "exposed_seconds": 1.5,
+    "exposed_floor_db": -38.1
+   },
+   {
+    "label": "the bullpen by day under the whole coda (the vault included)",
+    "tc_in": "16:23:10",
+    "target_dbfs": -38.5,
+    "bed_median_db": -40.5,
+    "exposed_seconds": 0.0,
+    "exposed_floor_db": null
+   }
+  ],
+  "thin": [
+   {
+    "item": "record text: \"…not consistently candid in his communi",
+    "frame": 1412,
+    "tc": "13:29:20",
+    "music_before_db": -21.4,
+    "music_inside_db": -26.9,
+    "drop_db": 5.4
+   },
+   {
+    "item": "post: a4-27-01b GERG",
+    "frame": 1602,
+    "tc": "13:37:18",
+    "music_before_db": -30.1,
+    "music_inside_db": -27.1,
+    "drop_db": -3.0
+   },
+   {
+    "item": "record: a4-27-06 ALYI",
+    "frame": 1738,
+    "tc": "13:43:10",
+    "music_before_db": -30.1,
+    "music_inside_db": -35.1,
+    "drop_db": 5.0
+   },
+   {
+    "item": "post: a4-26a-01b MAS",
+    "frame": 1806,
+    "tc": "13:46:06",
+    "music_before_db": -34.1,
+    "music_inside_db": -23.6,
+    "drop_db": -10.5
+   },
+   {
+    "item": "post: a4-27-07 MAS",
+    "frame": 1935,
+    "tc": "13:51:15",
+    "music_before_db": -19.0,
+    "music_inside_db": -21.7,
+    "drop_db": 2.7
+   },
+   {
+    "item": "post: a4-27-17 MAS",
+    "frame": 2621,
+    "tc": "14:20:05",
+    "music_before_db": -28.6,
+    "music_inside_db": -25.9,
+    "drop_db": -2.8
+   },
+   {
+    "item": "record: a4-27-20 TASYA",
+    "frame": 2949,
+    "tc": "14:33:21",
+    "music_before_db": -17.6,
+    "music_inside_db": -28.8,
+    "drop_db": 11.2
+   },
+   {
+    "item": "post: a4-29-01 RIMA",
+    "frame": 3197,
+    "tc": "14:44:05",
+    "music_before_db": -27.2,
+    "music_inside_db": -24.0,
+    "drop_db": -3.2
+   },
+   {
+    "item": "record text: \"…people that lack competence, judgment ",
+    "frame": 3433,
+    "tc": "14:54:01",
+    "music_before_db": -28.8,
+    "music_inside_db": -23.8,
+    "drop_db": -5.0
+   },
+   {
+    "item": "record text: \"…unless all current board members resig",
+    "frame": 3497,
+    "tc": "14:56:17",
+    "music_before_db": -22.4,
+    "music_inside_db": -23.9,
+    "drop_db": 1.5
+   },
+   {
+    "item": "record: a4-30-02 TASYA",
+    "frame": 4550,
+    "tc": "15:40:14",
+    "music_before_db": -19.1,
+    "music_inside_db": -27.1,
+    "drop_db": 8.0
+   },
+   {
+    "item": "post: a4-30-10 GERG",
+    "frame": 5128,
+    "tc": "16:04:16",
+    "music_before_db": -22.8,
+    "music_inside_db": -23.9,
+    "drop_db": 1.0
+   },
+   {
+    "item": "post: a4-30-11 TTEMME",
+    "frame": 5203,
+    "tc": "16:07:19",
+    "music_before_db": -22.8,
+    "music_inside_db": -23.5,
+    "drop_db": 0.8
+   },
+   {
+    "item": "record: a4-31-03 MAS",
+    "frame": 5812,
+    "tc": "16:33:04",
+    "music_before_db": -30.4,
+    "music_inside_db": -37.6,
+    "drop_db": 7.2
+   }
+  ],
+  "per_sequence": {
+   "S1": {
+    "tc": "12:31:00",
+    "music_on_pct": 79.6,
+    "music_median_db": -24.2,
+    "bed_median_db": -38.3,
+    "dialogue_active_pct": 17.3,
+    "mix_short_term_lufs_median": -18.3,
+    "mix_short_term_lufs_max": -12.8
+   },
+   "S2": {
+    "tc": "13:09:12",
+    "music_on_pct": 100.0,
+    "music_median_db": -26.2,
+    "bed_median_db": -38.0,
+    "dialogue_active_pct": 12.0,
+    "mix_short_term_lufs_median": -21.2,
+    "mix_short_term_lufs_max": -12.7
+   },
+   "S3": {
+    "tc": "13:23:06",
+    "music_on_pct": 100.0,
+    "music_median_db": -26.8,
+    "bed_median_db": -38.8,
+    "dialogue_active_pct": 20.0,
+    "mix_short_term_lufs_median": -20.3,
+    "mix_short_term_lufs_max": -12.7
+   },
+   "S4": {
+    "tc": "13:50:11",
+    "music_on_pct": 100.0,
+    "music_median_db": -26.7,
+    "bed_median_db": -38.3,
+    "dialogue_active_pct": 30.1,
+    "mix_short_term_lufs_median": -16.7,
+    "mix_short_term_lufs_max": -12.3
+   },
+   "S5": {
+    "tc": "14:40:03",
+    "music_on_pct": 100.0,
+    "music_median_db": -26.2,
+    "bed_median_db": -38.1,
+    "dialogue_active_pct": 23.2,
+    "mix_short_term_lufs_median": -20.7,
+    "mix_short_term_lufs_max": -12.4
+   },
+   "S6": {
+    "tc": "15:16:04",
+    "music_on_pct": 83.7,
+    "music_median_db": -17.6,
+    "bed_median_db": -37.9,
+    "dialogue_active_pct": 8.0,
+    "mix_short_term_lufs_median": -15.4,
+    "mix_short_term_lufs_max": -11.6
+   },
+   "S7": {
+    "tc": "15:31:18",
+    "music_on_pct": 86.0,
+    "music_median_db": -24.2,
+    "bed_median_db": -35.5,
+    "dialogue_active_pct": 26.4,
+    "mix_short_term_lufs_median": -18.0,
+    "mix_short_term_lufs_max": -12.0
+   },
+   "S8": {
+    "tc": "16:12:04",
+    "music_on_pct": 91.3,
+    "music_median_db": -31.0,
+    "bed_median_db": -38.2,
+    "dialogue_active_pct": 20.4,
+    "mix_short_term_lufs_median": -16.6,
+    "mix_short_term_lufs_max": -12.3
+   }
+  },
+  "music_bus_steps_over_10db": [
+   {
+    "frame": 30.0,
+    "tc": "12:32:06",
+    "shot": "S1.01",
+    "delta_db": 13.1,
+    "cause": "a note's attack or decay"
+   },
+   {
+    "frame": 44.4,
+    "tc": "12:32:20",
+    "shot": "S1.01",
+    "delta_db": 15.4,
+    "cause": "a note's attack or decay"
+   },
+   {
+    "frame": 120.0,
+    "tc": "12:36:00",
+    "shot": "S1.03",
+    "delta_db": 23.6,
+    "cause": "the stamp: WORD"
+   },
+   {
+    "frame": 180.0,
+    "tc": "12:38:12",
+    "shot": "S1.03",
+    "delta_db": 11.1,
+    "cause": "walk-off 3 (F)"
+   },
+   {
+    "frame": 194.4,
+    "tc": "12:39:02",
+    "shot": "S1.03",
+    "delta_db": 14.2,
+    "cause": "a note's attack or decay"
+   },
+   {
+    "frame": 300.0,
+    "tc": "12:43:12",
+    "shot": "S1.03",
+    "delta_db": 12.8,
+    "cause": "the labels"
+   },
+   {
+    "frame": 522.0,
+    "tc": "12:52:18",
+    "shot": "S1.06",
+    "delta_db": -10.2,
+    "cause": "JOIN: the tape reaches zero"
+   },
+   {
+    "frame": 524.4,
+    "tc": "12:52:20",
+    "shot": "S1.06",
+    "delta_db": 27.7,
+    "cause": "JOIN: the tape reaches zero"
+   },
+   {
+    "frame": 735.6,
+    "tc": "13:01:16",
+    "shot": "S1.09",
+    "delta_db": -214.8,
+    "cause": "CANCEL = HARD STOP (D6)"
+   },
+   {
+    "frame": 924.0,
+    "tc": "13:09:12",
+    "shot": "S2.01",
+    "delta_db": 49.0,
+    "cause": "26A: the felt fifth (re-entry)"
+   },
+   {
+    "frame": 1194.0,
+    "tc": "13:20:18",
+    "shot": "S2.05",
+    "delta_db": 12.1,
+    "cause": "the settle C4"
+   },
+   {
+    "frame": 1208.4,
+    "tc": "13:21:08",
+    "shot": "S2.05",
+    "delta_db": 11.5,
+    "cause": "F4"
+   },
+   {
+    "frame": 1238.4,
+    "tc": "13:22:14",
+    "shot": "S2.05",
+    "delta_db": 10.1,
+    "cause": "Bb3"
+   },
+   {
+    "frame": 1254.0,
+    "tc": "13:23:06",
+    "shot": "S3.01",
+    "delta_db": 17.3,
+    "cause": "EXIT: the cut (S3 downbeat)"
+   },
+   {
+    "frame": 2408.4,
+    "tc": "14:11:08",
+    "shot": "S4.08",
+    "delta_db": 11.2,
+    "cause": "d: the Lighthouse on the ring"
+   },
+   {
+    "frame": 2424.0,
+    "tc": "14:12:00",
+    "shot": "S4.08",
+    "delta_db": 12.7,
+    "cause": "a note's attack or decay"
+   },
+   {
+    "frame": 3993.6,
+    "tc": "15:17:10",
+    "shot": "S6.01",
+    "delta_db": 13.1,
+    "cause": "a note's attack or decay"
+   },
+   {
+    "frame": 4008.0,
+    "tc": "15:18:00",
+    "shot": "S6.01",
+    "delta_db": 14.8,
+    "cause": "a note's attack or decay"
+   },
+   {
+    "frame": 4023.6,
+    "tc": "15:18:16",
+    "shot": "S6.01",
+    "delta_db": 10.9,
+    "cause": "A4"
+   },
+   {
+    "frame": 4276.8,
+    "tc": "15:29:05",
+    "shot": "S6.06",
+    "delta_db": -220.3,
+    "cause": "STOP 3: dead on MADA's label"
+   },
+   {
+    "frame": 4911.6,
+    "tc": "15:55:16",
+    "shot": "S7.07",
+    "delta_db": -208.6,
+    "cause": "STOP 4: \"Terms?\""
+   },
+   {
+    "frame": 5038.8,
+    "tc": "16:00:23",
+    "shot": "S7.09",
+    "delta_db": 16.2,
+    "cause": "c2: the stamp: the low C pedal"
+   },
+   {
+    "frame": 5506.8,
+    "tc": "16:20:11",
+    "shot": "S8.04",
+    "delta_db": -211.7,
+    "cause": "rest: the lobby CU before \"okay.\""
+   },
+   {
+    "frame": 5560.8,
+    "tc": "16:22:17",
+    "shot": "S8.05",
+    "delta_db": 211.0,
+    "cause": "e: after \"okay.\": the felt C4"
+   }
+  ],
+  "short_term_lufs_max": -11.6
+ }
+}

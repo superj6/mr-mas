@@ -28,7 +28,7 @@
 | Sep 8, 2026 | Reuters: a "key test of AI training under copyright" | [H] | Ep9 chyron |
 | Sep 17–18, 2026 | Unsealed filings: a Microsoft executive called AI scraping "the largest theft of labor in human history" | [H] | Ep9: **Macrosoft's own memo walks into court wearing a `THEFT` name tag** |
 
-**Unverified:** a trial date. Ep10's trial is [INVENTED] and labelled speculative.
+**Unverified:** a trial date. Ep10's trial is [INVENTED] and staged as visibly absurd; no on-screen label marks it, so it never carries a real date or ruling.
 
 ---
 

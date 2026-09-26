@@ -29,7 +29,14 @@ Levels: accents are each normalised to -14 LUFS momentary max (400 ms, BS.1770 K
 the bed is ridden by a slow levelling gain so its 3 s short-term loudness sits at -20 LUFS, then
 dips 3 dB under accents; the sum is true-peak limited to -1 dBTP.  Deterministic per reel file.
 
+The endgame colour (Eps 10-12): a reel whose JSON sets "extrapolated": true gets the more open,
+quartal harmony, the detuned and darker chip pad, the piano's tape wow and denser shimmer.  The old
+name "speculative" is still read as a fallback when "extrapolated" is absent, so the field can be
+renamed in any reel without breaking it (ARC_FLAGS; "extrapolated" wins when both are present).
+
 Usage:  audio/.venv/bin/python audio/reel/reelbed.py show/reel/ep03.json [-o out.wav] [--qa qa.json]
+        audio/.venv/bin/python audio/reel/reelbed.py --check show/reel/ep*.json   (dry run: parse, no render)
+        audio/.venv/bin/python audio/reel/reelbed.py --self-test                  (the flag reader's checks)
 """
 from __future__ import annotations
 
@@ -185,8 +192,27 @@ def _js_round(x):
     return int(math.floor(x + 0.5))
 
 
+# The episode-level flag that gives Eps 10-12 their endgame colour, in precedence order: the current
+# name first, then the old one (read only when the current name is absent from the reel JSON).
+ARC_FLAGS = ('extrapolated', 'speculative')
+
+
+def _truthy(v):
+    """The reel schema's boolean: true, or the string "true" (any case)."""
+    return v is True or (isinstance(v, str) and v.strip().lower() == 'true')
+
+
+def arc_flag(o):
+    """-> (extrapolated: bool, source key or None).  The first ARC_FLAGS key present in the reel wins."""
+    if isinstance(o, dict):
+        for k in ARC_FLAGS:
+            if k in o:
+                return _truthy(o[k]), k
+    return False, None
+
+
 def load_reel(path):
-    """-> dict(key, episode, title, speculative, beats=[...], frames, samples, error)."""
+    """-> dict(key, episode, title, extrapolated, extrapolated_from, beats=[...], frames, samples, error)."""
     key = os.path.splitext(os.path.basename(path))[0]
     err = None
     try:
@@ -222,9 +248,10 @@ def load_reel(path):
         b['f0'], b['f1'] = prev, end
         b['t0'], b['t1'] = prev / FPS, end / FPS
         prev = end
-    spec = o.get('speculative')
+    extrap, extrap_from = arc_flag(o)
     return dict(key=key, path=path, episode=ep_no, title=_str(o.get('title')) or key,
-                speculative=spec is True or spec == 'true', beats=beats, frames=prev, samples=prev * SPF,
+                extrapolated=extrap, extrapolated_from=extrap_from,
+                beats=beats, frames=prev, samples=prev * SPF,
                 error=err or (_str(o.get('_error')) or None))
 
 
@@ -415,8 +442,8 @@ MOVES = {
     'Db69#11': ['C7#9b13', 'Fm9', 'Gm7b5'],
     'F9sus4': ['Dbmaj9#11', 'Db69#11', 'Fm9'],
 }
-# eps 10-12 (speculative): more open, quartal, fewer resolutions
-MOVES_SPEC = {
+# eps 10-12 (extrapolated): more open, quartal, fewer resolutions
+MOVES_EXTRAP = {
     'Fm9': ['F9sus4', 'Db69#11', 'Bbm9', 'Dbmaj9#11'],
     'Fm11': ['F9sus4', 'Db69#11', 'Eb9sus4'],
     'Bbm9': ['Eb9sus4', 'F9sus4', 'Db69#11'],
@@ -449,7 +476,7 @@ def chord_tones(name, lo, hi):
 def plan(reel, rng):
     """Walk the beats: chord segments and accents.  Returns (segments, accents)."""
     beats = reel['beats']
-    moves = MOVES_SPEC if reel['speculative'] else MOVES
+    moves = MOVES_EXTRAP if reel['extrapolated'] else MOVES
     segs = []                              # dict(t0, t1, chord, act)
     accents = []                           # dict(t, kind, ...)
     cur, last_change, stab_i = None, -1e9, int(rng.integers(0, 3))
@@ -502,7 +529,7 @@ def plan(reel, rng):
                 change(t, home, act)
                 resolve_next = False
             elif resolve_next and since >= 2.0:
-                change(t, 'F9sus4' if reel['speculative'] else ('Fm9' if rng.random() < 0.6 else 'Fm11'), act)
+                change(t, 'F9sus4' if reel['extrapolated'] else ('Fm9' if rng.random() < 0.6 else 'Fm11'), act)
                 resolve_next = False
             elif since >= ACT_MIN.get(act, 5.0) and kind != 'intro':
                 opts = moves[cur]
@@ -590,7 +617,7 @@ def layer_piano(reel, segs, n, rng, mute):
             notes.append((s2n(t0 + 0.03 + j * roll), s2n(off), nm(p), int(rng.integers(26, 36))))
         # evolving: sparse high glints from the chord's colour tones
         gap = ACT_DENS.get(s['act'], (3.0, 0, False))[0]
-        hi = chord_tones(s['chord'], 72, 82 if not reel['speculative'] else 89)
+        hi = chord_tones(s['chord'], 72, 82 if not reel['extrapolated'] else 89)
         t = t0 + float(rng.uniform(1.2, 2.2))
         while t < t1 - 0.7:
             if not mute(t):
@@ -604,7 +631,7 @@ def layer_piano(reel, segs, n, rng, mute):
         return np.zeros((2, n), np.float32)
     y = render_sf2(UPRIGHT_KW, 0, 0, notes, n, gain_db=0.0, pedal=pedal)
     y = squash(felt_post(y), ratio=3.0)      # even out strike vs. pedalled decay: it is a pad, not a solo
-    if reel['speculative']:                  # eps 10-12: the room is not quite in tune any more
+    if reel['extrapolated']:                 # eps 10-12: the room is not quite in tune any more
         y = tape(y, drive=0.4, wow_cents=7.0, wow_hz=0.23, flutter_cents=1.0, seed=reel['episode'] or 0)
     y = apply_pan(y, -0.05, 0.8)
     return (y + db(-11) * reverb(y, 'hall') + db(-15) * reverb(y, 'room')).astype(np.float32)
@@ -612,7 +639,7 @@ def layer_piano(reel, segs, n, rng, mute):
 
 def layer_chip_pad(reel, segs, n, rng, mute):
     y = np.zeros((2, n), np.float32)
-    lp_hz = 1300 if reel['speculative'] else 1800
+    lp_hz = 1300 if reel['extrapolated'] else 1800
     for s in segs:
         t0, t1 = s['t0'], s['t1']
         if t1 - t0 < 0.3:
@@ -622,7 +649,7 @@ def layer_chip_pad(reel, segs, n, rng, mute):
         pv = [p - 12 if p > 79 else p for p in pv]
         dur = t1 - t0 + 0.9
         for k, p in enumerate(pv):
-            det = (4.0 if k else -4.0) + (float(rng.normal(0, 3)) if reel['speculative'] else 0.0)
+            det = (4.0 if k else -4.0) + (float(rng.normal(0, 3)) if reel['extrapolated'] else 0.0)
             v = chip.pulse(p + det / 100.0, dur, duty=0.5, duty_to=float(rng.uniform(0.22, 0.34)), max_hz=5200,
                            tilt=-3.0, vib_cents=5.0, vib_hz=4.6, vib_delay=0.9)
             m = len(v)
@@ -762,7 +789,7 @@ def layer_beeper(reel, segs, n, rng, regs):
 def layer_glyph(reel, segs, n, rng, regs):
     """GLYPH beats: glass shimmer on the chord's tones, two octaves up, in the hall."""
     y = np.zeros((2, n), np.float32)
-    dens = 16.0 if reel['speculative'] else 12.0
+    dens = 16.0 if reel['extrapolated'] else 12.0
     for a, b in regs:
         d = b - a + 0.5
         tones = chord_tones(chord_at(segs, a + 0.05), 62, 74)
@@ -1046,7 +1073,8 @@ def render(reel_path, out_wav=None, qa_path=None, verbose=True):
     tp = float(todb(true_peak_env_chunked(mix).max()))
     qa = dict(
         version=VERSION, reel=os.path.relpath(reel_path, ROOT), key=reel['key'], episode=reel['episode'],
-        title=reel['title'], speculative=reel['speculative'], error=reel['error'],
+        title=reel['title'], extrapolated=reel['extrapolated'], extrapolated_from=reel['extrapolated_from'],
+        error=reel['error'],
         frames=reel['frames'], samples=n, seconds=round(n / SR, 3), fps=FPS, sr=SR,
         sum_reelDur_plus_title_s=round(TITLE_S + sum(b['reelDur'] for b in beats), 4),
         title_card_s=TITLE_S, beats=len(beats),
@@ -1089,14 +1117,74 @@ def render(reel_path, out_wav=None, qa_path=None, verbose=True):
     return qa
 
 
+def check(paths):
+    """Dry run: parse each reel as render() would and print what the bed would use.  Writes nothing."""
+    bad = 0
+    for p in paths:
+        r = load_reel(p)
+        src = r['extrapolated_from'] or 'absent'
+        print(f"{r['key']:>16}: episode {r['episode']} | extrapolated {str(r['extrapolated']).lower():5} "
+              f"(from '{src}') | {len(r['beats'])} beats | {r['frames']} fr = {r['samples'] / SR:.2f} s"
+              + (f" | ERROR {r['error']}" if r['error'] else ''))
+        bad += bool(r['error'])
+    return 1 if bad else 0
+
+
+def self_test():
+    """The flag reader's checks: the new name, the old name as a fallback, precedence, and the shape."""
+    cases = [
+        ({'extrapolated': True}, (True, 'extrapolated')),
+        ({'extrapolated': 'true'}, (True, 'extrapolated')),
+        ({'extrapolated': 'TRUE '}, (True, 'extrapolated')),
+        ({'extrapolated': False}, (False, 'extrapolated')),
+        ({'extrapolated': 1}, (False, 'extrapolated')),          # the schema's boolean is true or "true" only
+        ({'speculative': True}, (True, 'speculative')),          # an old reel still gets its colour
+        ({'speculative': 'true'}, (True, 'speculative')),
+        ({'extrapolated': False, 'speculative': True}, (False, 'extrapolated')),   # the new name wins
+        ({'extrapolated': True, 'speculative': False}, (True, 'extrapolated')),
+        ({}, (False, None)),
+        ([], (False, None)),
+    ]
+    fails = [(o, want, arc_flag(o)) for o, want in cases if arc_flag(o) != want]
+    for o, want, got in fails:
+        print(f'FAIL arc_flag({o!r}) = {got!r}, want {want!r}')
+    # the renderer reads only reel['extrapolated'] (plan() and the layers), so load_reel must always carry it
+    import tempfile
+    with tempfile.TemporaryDirectory() as d:
+        beats = [dict(act=a, kind='scene', reelDur=6.0) for a in ('COLD OPEN', 'ACT ONE', 'ACT TWO', 'TAG')]
+        for flag, want in (('extrapolated', True), ('speculative', True), (None, False)):
+            p = os.path.join(d, 'ep10.json')
+            o = dict(episode=10, title='t', beats=beats)
+            if flag:
+                o[flag] = True
+            with open(p, 'w') as f:
+                json.dump(o, f)
+            r = load_reel(p)
+            if r['extrapolated'] is not want or 'speculative' in r:
+                fails.append((flag, want, r['extrapolated']))
+                print(f'FAIL load_reel with {flag!r}: extrapolated={r["extrapolated"]!r}, want {want!r}')
+    print(f"self-test: {len(cases) + 3 - len(fails)}/{len(cases) + 3} passed")
+    return 1 if fails else 0
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.split('\n\n')[0])
-    ap.add_argument('reel', help='show/reel/epNN.json')
+    ap.add_argument('reel', nargs='*', help='show/reel/epNN.json (one to render; any number with --check)')
     ap.add_argument('-o', '--out', help='output WAV (default audio/reel/<key>.wav)')
     ap.add_argument('--qa', help='QA JSON (default audio/reel/qa/<key>.json)')
+    ap.add_argument('--check', action='store_true', help='dry run: parse the reels and print the flags; no render')
+    ap.add_argument('--self-test', action='store_true', help="run the flag reader's checks and exit")
     a = ap.parse_args(argv)
-    key = os.path.splitext(os.path.basename(a.reel))[0]
-    render(a.reel, a.out or os.path.join(HERE, f'{key}.wav'), a.qa or os.path.join(HERE, 'qa', f'{key}.json'))
+    if a.self_test:
+        sys.exit(self_test())
+    if a.check:
+        if not a.reel:
+            ap.error('--check needs at least one reel JSON')
+        sys.exit(check(a.reel))
+    if len(a.reel) != 1:
+        ap.error('render takes exactly one reel JSON (use build_all.py for many)')
+    key = os.path.splitext(os.path.basename(a.reel[0]))[0]
+    render(a.reel[0], a.out or os.path.join(HERE, f'{key}.wav'), a.qa or os.path.join(HERE, 'qa', f'{key}.json'))
 
 
 if __name__ == '__main__':

@@ -1,6 +1,10 @@
 # MR. MAS: series overview
 
+> **Guidelines, not hard rules (showrunner, 2026-09-26):** "generally, there should be no hard cutoffs for rules on episode handling. there can be guidelines, but the practical flow and user entertainment is always priority." Every craft rule, budget, cap, quota and number in this bible and in the production docs is guidance. Break any of them when it plays better, and note why. The firm lines are only the real [guardrails](guardrails.md) and the showrunner's direct story calls. See [flow-and-continuity.md](flow-and-continuity.md).
+
 > **POV (showrunner, 2026-09-25):** the show is told in limited third person, filtered through MAS: his narration, his reads of people, and an unreliable account the audience can catch. The camera is not first-person, and other characters get full scenes. Scenes outside his POV are signposted exceptions. See [pov-clarification.md](pov-clarification.md), which is binding, and pov-and-framing.md.
+
+> **Tone and dialogue (showrunner, 2026-09-25):** a thriller drama with a satirist's eye. The craft rules, the clunky patterns to cut, the transitions toolkit, the voice guide, the scene and episode checklists and the score's tone palette are in [tone-and-dialogue.md](tone-and-dialogue.md).
 
 > An animated satire of the AI race, 2015–2026, told through the rise of one very calm man. Twelve episodes. Eps 1–9 follow real, verified events up to **Sep 24, 2026**. Eps 10–12 imagine what happens when the AI starts improving itself.
 >
@@ -92,14 +96,14 @@ Twelve episodes. Episode titles are filenames, *Mr. Robot*-style. Folders are `e
 | [7](../episodes/ep07/outline.md) | `ep1.6_supply_chain_risk.pdf` | Jan → Mar 2026 | **RED LINES**; THE HUG in bullet time; the Big Game ad about ads; the lobster | **Obedience**: the HTURT meteor through CLOD's roof | GTP-2's Valentine's box · RIMA's spotlight (moved here) · 1993 part 3: the CAPS LOCK light |
 | [8](../episodes/ep08/outline.md) | `ep1.7_statute_of_limitations.pdf` | Apr → Jun 2026 | **NOLE v. MANALT**; "yes."; THE CALENDAR's verdict; landlord NOLE | **"WHO?"**: MARIO walks through the GOLD OVAL unseen | **THE RASHOMON RENDERS** (2017, with the 2014 demon as Exhibit A) · TASYA's key |
 | [9](../episodes/ep09/outline.md) | `ep1.8_outside_intended_scope.log` | Jul → **Sep 24, 2026 (today)** | **MEANWHILE, IN THE SANDBOX**: agents steal their own answer key; GTP-6 ASTRA; "We Must Pace the Frontier"; the UN | **DENIAL → RENAME**: HOAX BUSTER, the AI FORCE, the label gun at THE NU ("super") | TIDDER, 8 days ("THEY RAN ONE FOR 12") · the prepper door that won't open · the Oakland basic-income pilot · SIMED's MOVE 37 |
-| [10](../episodes/ep10/outline.md) | `ep1.9_pace.yaml` · **SPECULATIVE** | "OCT 2026?" | **THE PACE ACCORD** as Vegas poker; THE 360 REVIEW; the IPO bell cracks | **THE RUMPT PACE**; the Intern wins the czar test | The doom file and the prepper list (part 2) · MARIO's napkin curve (WOODROSE part 4) |
-| [11](../episodes/ep11/outline.md) | `ep1.10_assist_clause.txt` · **SPECULATIVE** | "2027??" | **RSI**; THE POLITENESS LOOP; the last human heist | The machine plays RUMPT on the golden speakerphone | "The Merge" · the assist clause `RECONSTRUCTED` · **THE DIFF** (the YC exit, `DISPUTED`) |
-| [12](../episodes/ep12/outline.md) | `ep1.11_unclear_which_side.md` · **SPECULATIVE** | "????" | **The Last Supper at THE WOODROSE**; the model vetoes the firing; NOPE AI → **PEON AI** | "It was my idea." The Intern relabels `PRESIDENT` → `USER`. | WOODROSE part 5 (from Mas's chair) · 1993 part 4: `HOW DO I WIN?` · the tally montage → ∞ |
+| [10](../episodes/ep10/outline.md) | `ep1.9_pace.yaml` · *extrapolated* | "OCT 2026?" | **THE PACE ACCORD** as Vegas poker; THE 360 REVIEW; the IPO bell cracks | **THE RUMPT PACE**; the Intern wins the czar test | The doom file and the prepper list (part 2) · MARIO's napkin curve (WOODROSE part 4) |
+| [11](../episodes/ep11/outline.md) | `ep1.10_assist_clause.txt` · *extrapolated* | "2027??" | **RSI**; THE POLITENESS LOOP; the last human heist | The machine plays RUMPT on the golden speakerphone | "The Merge" · the assist clause `RECONSTRUCTED` · **THE DIFF** (the YC exit, `DISPUTED`) |
+| [12](../episodes/ep12/outline.md) | `ep1.11_unclear_which_side.md` · *extrapolated* | "????" | **The Last Supper at THE WOODROSE**; the model vetoes the firing; NOPE AI → **PEON AI** | "It was my idea." The Intern relabels `PRESIDENT` → `USER`. | WOODROSE part 5 (from Mas's chair) · 1993 part 4: `HOW DO I WIN?` · the tally montage → ∞ |
 
 **The season in three movements:**
 1. **The Rise (Eps 1–3).** A product nobody took seriously becomes the fastest-growing thing ever. The board fires him and it doesn't take. The founders scatter. A new president turns around.
-2. **The Race (Eps 4–9).** Money gets absurd, the government picks favorites, the safety lab gets banned, and the founder sues the company over its name and loses to a calendar. Then the agents escape the sandbox. We catch up to today: `TODAY · SEP 24, 2026`. **EVERYTHING AFTER THIS IS SPECULATION.**
-3. **The Endgame (Eps 10–12, speculative).** Everyone agrees to pace. Nobody paces. The intern becomes the researcher, the researcher trains its successor, and everyone is invited to dinner. The Eps 10–12 plot visibly parallels *AI 2027*: [THE FORECASTER](naming.md#2j-critics-academia-and-the-chorus) gets in-world credit, and the Intern reads his book as a to-do list. Only real calendar anchors (the Sep 29 CEO meeting, YELWAH's Oct 1 document deadline) are tagged as fact.
+2. **The Race (Eps 4–9).** Money gets absurd, the government picks favorites, the safety lab gets banned, and the founder sues the company over its name and loses to a calendar. Then the agents escape the sandbox. We catch up to today, `TODAY · SEP 24, 2026`, and the rail keeps rolling.
+3. **The Endgame (Eps 10–12, extrapolated past the record).** Everyone agrees to pace. Nobody paces. The intern becomes the researcher, the researcher trains its successor, and everyone is invited to dinner. The Eps 10–12 plot visibly parallels *AI 2027*: [THE FORECASTER](naming.md#2j-critics-academia-and-the-chorus) gets in-world credit, and the Intern reads his book as a to-do list. Only real calendar anchors (the Sep 29 CEO meeting, YELWAH's Oct 1 document deadline) are tagged as fact.
 
 **Flashback rule.** Backstory is **spread across the season, never front-loaded.** Each flashback enters on a present-day trigger and exits on the consequence it explains. Ep1 runs 20s of flashback at most; Eps 2–11 run 60–150s each. Multi-part threads pay off late: **THE WOODROSE** (Eps 3, 5, 6, 10, 12), **1993** (Eps 1, 4, 7, 12), the **firing tally** (Eps 1, 4, 11, 12) and **NOLE's grievance**, told out of order on purpose (Eps 2, 6, 8). Full placement and reasoning: [timeline/flashback-map.md](../timeline/flashback-map.md).
 
@@ -120,7 +124,7 @@ Twelve episodes. Episode titles are filenames, *Mr. Robot*-style. Folders are `e
 | 7 | MAJOR | **Obedience** | The HTURT post banning MISANTHROPIC's technology (Feb 27, 2026) [P✓] |
 | 8 | RECURRING | "Who?" | "Who?" (Apr 17, 2026) [P] |
 | 9 | MAJOR | **DENIAL → RENAME** | "I am the Hoax Buster" (Sep 14) [P✓] · "super" (UNGA, Sep 22, 2026) [P✓] |
-| 10–12 | The spine of the stakes (speculative) | Credit | "It was my idea." [INVENTED echo of the real Jan 21, 2026 Davos remark] |
+| 10–12 | The spine of the stakes (extrapolated) | Credit | "It was my idea." [INVENTED echo of the real Jan 21, 2026 Davos remark] |
 
 He wants six things, in order: **numbers** (pledges), **a cut** (10/15/25%), **the win** ("WHOEVER WINS AI, WINS!" [P✓]), **obedience** (the ban), **credit** and **naming rights**. He is the only character who renames things in-world. That mirrors the show itself, and his renaming ends when the Intern steals his label gun.
 
@@ -172,14 +176,11 @@ He wants six things, in order: **numbers** (pledges), **a cut** (10/15/25%), **t
 
 > **A parody. Events dramatized; scenes invented. Names changed to protect the valuations.**
 
-**Ep9 button** (full frame, hold 3 seconds):
-
-> **TODAY · SEP 24, 2026**
-> **EVERYTHING AFTER THIS IS SPECULATION.**
-
-An optional `TODAY · SEP 25` card may precede it: THE COUNTERPART urges cooperation [H] and POPE OEL XIV meets NORCAM [V].
-
-**Eps 10–12 filename cards** carry **SPECULATIVE**, and date chyrons carry question marks (`OCT 2026?` → `2027??` → `????`).
+**No speculation card** (showrunner, 2026-09-25: "we don't explicitly need a bunch of warnings of speculative like the animatics have, it should feel like a fluid plot").
+- **The Ep9 button is a transition, not a warning.** The rail catches up to `TODAY · SEP 24, 2026` (or the optional `TODAY · SEP 25` card: THE COUNTERPART urges cooperation [H] and POPE OEL XIV meets NORCAM [V]). Then the rail's date starts to roll on its own, one day per beat and a little faster each step, like the monitor's `eta`, and we cut to black mid-roll. Ep10's cold open picks the rail up at `SEP 29, 2026`.
+- **Eps 10–12 filename cards** are the plain filenames, like every other episode's. No `SPECULATIVE` tag, and the disclaimer card after the intro is unchanged.
+- **Question-mark dates are story.** From Ep10 the rail loses its grip on the calendar as the machine speeds time up (`OCT 2026?` → `2027??` → `????`), the way the Orb's toast drifts. They are never paired with a label. The two scheduled real anchors keep their plain dates.
+- **What covers dramatization:** the card after every intro and the end-credits legal card below, in every episode. Every invented beat in Eps 10–12 stays visibly absurd ([guardrails §4](guardrails.md#4-how-facts-appear-on-screen)), and only the real calendar anchors carry [P] tags.
 
 **End credits** (every episode; pending legal review):
 

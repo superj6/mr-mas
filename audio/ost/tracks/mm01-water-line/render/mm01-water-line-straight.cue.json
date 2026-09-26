@@ -1,0 +1,819 @@
+{
+ "schema": "mrmas-ost-cue/1",
+ "id": "mm01-water-line-straight",
+ "mm": "MM-01",
+ "family": "P01 (STRAIGHT)",
+ "title": "Water Line (straight)",
+ "version": "1.1 (fix 1, 2026-09-26)",
+ "composer": "Composer E (OST batch 1; fix 1: composer A)",
+ "tone": "Mas's theme: calm, alone, sure of himself at 2 a.m.; the one complete motif in the show",
+ "tags": [
+  "straight",
+  "sincere",
+  "cello"
+ ],
+ "usage": "BI",
+ "scenes": [
+  "Ep1 sc 18 dark room (10:13)",
+  "Ep1 sc 20-23 dark room beats",
+  "every episode: his rooms, nights, V.O.",
+  "Ep1 sc 32 tag (MM-12 may quote it)"
+ ],
+ "description": "STRAIGHT variant: the Water Line x2 on the cello section, straight (no swing), no chip, no piano; for a sanctioned sincere beat",
+ "motifs": [
+  "the Water Line x2 on cellos, straight"
+ ],
+ "key": "F minor (rootless Fm9 - Dbmaj7 - Bbm9 - C7sus(b9)); B: Dbmaj7#11 - Bbm9 - Gbmaj7#11 - F5 - C7sus(b9)",
+ "engine": {
+  "version": "mrmas-ost-engine 1.1 (2026-09-26: fix1 -- meter axis, sample tuning, render pool, QA 5a-d)",
+  "rendered": "2026-09-26T01:41:27",
+  "render_seconds": 13.7
+ },
+ "timing": {
+  "bpm": 96.0,
+  "beat_unit_quarters": 1.0,
+  "tempo_map": [
+   {
+    "bar": 1,
+    "beat": 1.0,
+    "bpm": 96.0,
+    "ramp_in": false,
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "meter_map": [
+   {
+    "bar": 1,
+    "meter": "4/4",
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "swing": 0.0,
+  "swing_unit_quarters": 0.5,
+  "pickup_beats": 0.0,
+  "bars": 8,
+  "length_s": 20.0,
+  "length_frames": 480.0,
+  "fps": 24,
+  "end": {
+   "sec": 20.0,
+   "frame": 480.0,
+   "bar": 9,
+   "beat": 1.0
+  },
+  "album_duration_s": 20.7007,
+  "album_duration_frames": 496.82,
+  "album_loops": 1
+ },
+ "sections": [
+  {
+   "label": "STRAIGHT",
+   "start": {
+    "sec": 0.0,
+    "frame": 0.0,
+    "bar": 1,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 20.0,
+    "frame": 480.0,
+    "bar": 9,
+    "beat": 1.0
+   }
+  }
+ ],
+ "markers": [],
+ "hit_check": [],
+ "sfx_slots": [],
+ "silence_windows": [],
+ "vo_windows": [],
+ "knee_whole": 0,
+ "f_major": {
+  "limit": 0.08,
+  "windows": 24,
+  "worst": 0.663,
+  "worst_sieved": 0.465,
+  "ok": true,
+  "ok_written": true,
+  "ok_spectral": true,
+  "f_inaudible_windows": 0,
+  "a_classes": {
+   "written": 0,
+   "resonance": 0,
+   "explained": 6,
+   "unattributed": 0
+  },
+  "written_a_over_f_bass": [],
+  "written_third": {
+   "ok": true,
+   "count": 0,
+   "events": [],
+   "grazes": [],
+   "n_grazes": 0,
+   "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+  },
+  "fails": [],
+  "explained": [
+   {
+    "t0": 3.81,
+    "t1": 4.425,
+    "a_over_f": 0.663,
+    "a_over_f_sieved": 0.465,
+    "written_a": [],
+    "f_share": 0.59,
+    "a_from": {
+     "strings": 100,
+     "piano": 0,
+     "winds": 0
+    },
+    "a_peaks": [
+     {
+      "stem": "strings",
+      "hz": 874.5,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.99
+     },
+     {
+      "stem": "strings",
+      "hz": 1747.6,
+      "kind": "partial 10 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.01
+     },
+     {
+      "stem": "strings",
+      "hz": 1752.0,
+      "kind": "partial 10 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.0
+     }
+    ],
+    "a_class": "explained",
+    "ok": true,
+    "ok_spectral": true
+   },
+   {
+    "t0": 6.27,
+    "t1": 6.885,
+    "a_over_f": 0.321,
+    "a_over_f_sieved": 0.261,
+    "written_a": [],
+    "f_share": 0.582,
+    "a_from": {
+     "strings": 100,
+     "piano": 0,
+     "winds": 0
+    },
+    "a_peaks": [
+     {
+      "stem": "strings",
+      "hz": 873.8,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.94
+     },
+     {
+      "stem": "strings",
+      "hz": 869.4,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.04
+     },
+     {
+      "stem": "strings",
+      "hz": 1746.8,
+      "kind": "partial 10 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.02
+     }
+    ],
+    "a_class": "explained",
+    "ok": true,
+    "ok_spectral": true
+   },
+   {
+    "t0": 6.885,
+    "t1": 7.5,
+    "a_over_f": 0.224,
+    "a_over_f_sieved": 0.14,
+    "written_a": [],
+    "f_share": 0.825,
+    "a_from": {
+     "strings": 100,
+     "piano": 0,
+     "winds": 0
+    },
+    "a_peaks": [
+     {
+      "stem": "strings",
+      "hz": 871.6,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.89
+     },
+     {
+      "stem": "strings",
+      "hz": 867.2,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.06
+     },
+     {
+      "stem": "strings",
+      "hz": 881.8,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.05
+     }
+    ],
+    "a_class": "explained",
+    "ok": true,
+    "ok_spectral": true
+   },
+   {
+    "t0": 13.81,
+    "t1": 14.425,
+    "a_over_f": 0.481,
+    "a_over_f_sieved": 0.348,
+    "written_a": [],
+    "f_share": 0.663,
+    "a_from": {
+     "strings": 100,
+     "piano": 0,
+     "winds": 0
+    },
+    "a_peaks": [
+     {
+      "stem": "strings",
+      "hz": 874.5,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.99
+     },
+     {
+      "stem": "strings",
+      "hz": 1754.2,
+      "kind": "partial 10 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.01
+     },
+     {
+      "stem": "strings",
+      "hz": 1743.2,
+      "kind": "partial 10 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.0
+     }
+    ],
+    "a_class": "explained",
+    "ok": true,
+    "ok_spectral": true
+   },
+   {
+    "t0": 15.655,
+    "t1": 16.27,
+    "a_over_f": 0.55,
+    "a_over_f_sieved": 0.094,
+    "written_a": [],
+    "f_share": 0.867,
+    "a_from": {
+     "strings": 100,
+     "piano": 0,
+     "winds": 0
+    },
+    "a_peaks": [
+     {
+      "stem": "strings",
+      "hz": 873.0,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.85
+     },
+     {
+      "stem": "strings",
+      "hz": 878.9,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.13
+     },
+     {
+      "stem": "strings",
+      "hz": 1745.4,
+      "kind": "partial 10 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.03
+     }
+    ],
+    "a_class": "explained",
+    "ok": true,
+    "ok_spectral": true
+   },
+   {
+    "t0": 16.885,
+    "t1": 17.5,
+    "a_over_f": 0.236,
+    "a_over_f_sieved": 0.105,
+    "written_a": [],
+    "f_share": 0.879,
+    "a_from": {
+     "strings": 100,
+     "piano": 0,
+     "winds": 0
+    },
+    "a_peaks": [
+     {
+      "stem": "strings",
+      "hz": 872.3,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.92
+     },
+     {
+      "stem": "strings",
+      "hz": 877.4,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.05
+     },
+     {
+      "stem": "strings",
+      "hz": 882.6,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.03
+     }
+    ],
+    "a_class": "explained",
+    "ok": true,
+    "ok_spectral": true
+   }
+  ],
+  "fixed_resonances": [],
+  "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+ },
+ "knee_completion": 0,
+ "room_sfx_windows": [],
+ "qa": {
+  "balance": {
+   "balance": {
+    "piano": 0,
+    "orch": 100,
+    "bigband": 0,
+    "chip": 0
+   },
+   "rhythm_pct_of_all": 0,
+   "chip_share": 0,
+   "balance_energy": {
+    "piano": 0,
+    "orch": 100,
+    "bigband": 0,
+    "chip": 0
+   },
+   "method": "theme stemtable (gated loudness per section, time-weighted, rhythm/fx excluded; it counts a brief stab at its own loudness for the whole section) + balance_energy (ungated energy)",
+   "sections": [
+    {
+     "section": "STRAIGHT",
+     "share": {
+      "piano": 0,
+      "orch": 100,
+      "bigband": 0,
+      "chip": 0
+     }
+    }
+   ]
+  },
+  "short_term_underscore": {
+   "p95": -17.87,
+   "median": -20.85,
+   "max": -17.61
+  },
+  "band_2_6k_db": -24.9,
+  "centroid_hz": 471.0,
+  "f_major": {
+   "limit": 0.08,
+   "windows": 24,
+   "worst": 0.663,
+   "worst_sieved": 0.465,
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "f_inaudible_windows": 0,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 6,
+    "unattributed": 0
+   },
+   "written_a_over_f_bass": [],
+   "written_third": {
+    "ok": true,
+    "count": 0,
+    "events": [],
+    "grazes": [],
+    "n_grazes": 0,
+    "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+   },
+   "fails": [],
+   "explained": [
+    {
+     "t0": 3.81,
+     "t1": 4.425,
+     "a_over_f": 0.663,
+     "a_over_f_sieved": 0.465,
+     "written_a": [],
+     "f_share": 0.59,
+     "a_from": {
+      "strings": 100,
+      "piano": 0,
+      "winds": 0
+     },
+     "a_peaks": [
+      {
+       "stem": "strings",
+       "hz": 874.5,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.99
+      },
+      {
+       "stem": "strings",
+       "hz": 1747.6,
+       "kind": "partial 10 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.01
+      },
+      {
+       "stem": "strings",
+       "hz": 1752.0,
+       "kind": "partial 10 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.0
+      }
+     ],
+     "a_class": "explained",
+     "ok": true,
+     "ok_spectral": true
+    },
+    {
+     "t0": 6.27,
+     "t1": 6.885,
+     "a_over_f": 0.321,
+     "a_over_f_sieved": 0.261,
+     "written_a": [],
+     "f_share": 0.582,
+     "a_from": {
+      "strings": 100,
+      "piano": 0,
+      "winds": 0
+     },
+     "a_peaks": [
+      {
+       "stem": "strings",
+       "hz": 873.8,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.94
+      },
+      {
+       "stem": "strings",
+       "hz": 869.4,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.04
+      },
+      {
+       "stem": "strings",
+       "hz": 1746.8,
+       "kind": "partial 10 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.02
+      }
+     ],
+     "a_class": "explained",
+     "ok": true,
+     "ok_spectral": true
+    },
+    {
+     "t0": 6.885,
+     "t1": 7.5,
+     "a_over_f": 0.224,
+     "a_over_f_sieved": 0.14,
+     "written_a": [],
+     "f_share": 0.825,
+     "a_from": {
+      "strings": 100,
+      "piano": 0,
+      "winds": 0
+     },
+     "a_peaks": [
+      {
+       "stem": "strings",
+       "hz": 871.6,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.89
+      },
+      {
+       "stem": "strings",
+       "hz": 867.2,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.06
+      },
+      {
+       "stem": "strings",
+       "hz": 881.8,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.05
+      }
+     ],
+     "a_class": "explained",
+     "ok": true,
+     "ok_spectral": true
+    },
+    {
+     "t0": 13.81,
+     "t1": 14.425,
+     "a_over_f": 0.481,
+     "a_over_f_sieved": 0.348,
+     "written_a": [],
+     "f_share": 0.663,
+     "a_from": {
+      "strings": 100,
+      "piano": 0,
+      "winds": 0
+     },
+     "a_peaks": [
+      {
+       "stem": "strings",
+       "hz": 874.5,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.99
+      },
+      {
+       "stem": "strings",
+       "hz": 1754.2,
+       "kind": "partial 10 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.01
+      },
+      {
+       "stem": "strings",
+       "hz": 1743.2,
+       "kind": "partial 10 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.0
+      }
+     ],
+     "a_class": "explained",
+     "ok": true,
+     "ok_spectral": true
+    },
+    {
+     "t0": 15.655,
+     "t1": 16.27,
+     "a_over_f": 0.55,
+     "a_over_f_sieved": 0.094,
+     "written_a": [],
+     "f_share": 0.867,
+     "a_from": {
+      "strings": 100,
+      "piano": 0,
+      "winds": 0
+     },
+     "a_peaks": [
+      {
+       "stem": "strings",
+       "hz": 873.0,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.85
+      },
+      {
+       "stem": "strings",
+       "hz": 878.9,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.13
+      },
+      {
+       "stem": "strings",
+       "hz": 1745.4,
+       "kind": "partial 10 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.03
+      }
+     ],
+     "a_class": "explained",
+     "ok": true,
+     "ok_spectral": true
+    },
+    {
+     "t0": 16.885,
+     "t1": 17.5,
+     "a_over_f": 0.236,
+     "a_over_f_sieved": 0.105,
+     "written_a": [],
+     "f_share": 0.879,
+     "a_from": {
+      "strings": 100,
+      "piano": 0,
+      "winds": 0
+     },
+     "a_peaks": [
+      {
+       "stem": "strings",
+       "hz": 872.3,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.92
+      },
+      {
+       "stem": "strings",
+       "hz": 877.4,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.05
+      },
+      {
+       "stem": "strings",
+       "hz": 882.6,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.03
+      }
+     ],
+     "a_class": "explained",
+     "ok": true,
+     "ok_spectral": true
+    }
+   ],
+   "fixed_resonances": [],
+   "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+  },
+  "knee_completion": {
+   "count": 0,
+   "hits": [],
+   "max_gap_s": 2.5,
+   "rule": "OST-BIBLE rule 4: the knee never plays whole in an episode, in any register, across a phrase boundary too"
+  },
+  "sub_under_room": [],
+  "no_third": [],
+  "silence": [],
+  "hard_stops": [],
+  "vo_windows": [],
+  "knee_whole": 0,
+  "motifs_found": {
+   "WATER_LINE": [
+    {
+     "inst": "vc",
+     "t": 0.0,
+     "transpose": -12
+    },
+    {
+     "inst": "vc",
+     "t": 10.0,
+     "transpose": -12
+    }
+   ]
+  },
+  "swing": {
+   "vc": {
+    "offbeats": 2,
+    "median_frames": 7.5,
+    "hum_ms": 8
+   }
+  },
+  "banned": []
+ },
+ "loop": null,
+ "files": {
+  "album_wav": "render/mm01-water-line-straight-album.wav",
+  "album_mp3": "render/mm01-water-line-straight-album.mp3",
+  "underscore_wav": "render/mm01-water-line-straight-underscore.wav",
+  "underscore_mp3": "render/mm01-water-line-straight-underscore.mp3",
+  "stems": {},
+  "midi": "render/mm01-water-line-straight.mid",
+  "pianoroll": "render/mm01-water-line-straight-pianoroll.png"
+ },
+ "masters": {
+  "album": {
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "comp": {
+    "thresh_db": -20,
+    "ratio": 1.8
+   },
+   "dialog_pocket": null,
+   "measured": {
+    "lufs": -16.03,
+    "lra": 8.77,
+    "true_peak_db": -1.99,
+    "peak_db": -2.0,
+    "rms_db": -19.56,
+    "crest_db": 17.56,
+    "seconds": 20.7007
+   }
+  },
+  "underscore": {
+   "target_lufs": -20.0,
+   "ceiling_dbtp": -3.0,
+   "comp": {
+    "thresh_db": -28,
+    "ratio": 1.3,
+    "att_ms": 40.0,
+    "rel_ms": 350.0
+   },
+   "dialog_pocket": {
+    "f": 2500.0,
+    "db": -2.0,
+    "q": 0.7
+   },
+   "measured": {
+    "lufs": -20.03,
+    "lra": 8.64,
+    "true_peak_db": -6.18,
+    "peak_db": -6.19,
+    "rms_db": -23.53,
+    "crest_db": 17.34,
+    "seconds": 20.7007
+   }
+  }
+ },
+ "stems": {
+  "sum_vs_underscore_residual_db": -240.0,
+  "families_present": [],
+  "family_share_lu": {
+   "strings": 0.0
+  }
+ },
+ "spectrum": {
+  "sub": -53.7,
+  "bass": -9.3,
+  "lowmid": -0.8,
+  "mid": -13.3,
+  "presence": -40.7,
+  "air": -54.7,
+  "centroid_hz": 471.0
+ },
+ "bar_levels": [
+  {
+   "bar": 1,
+   "rms_db": -25.2,
+   "peak_db": -11.800000190734863
+  },
+  {
+   "bar": 2,
+   "rms_db": -22.3,
+   "peak_db": -8.600000381469727
+  },
+  {
+   "bar": 3,
+   "rms_db": -21.9,
+   "peak_db": -7.900000095367432
+  },
+  {
+   "bar": 4,
+   "rms_db": -33.9,
+   "peak_db": -13.199999809265137
+  },
+  {
+   "bar": 5,
+   "rms_db": -24.6,
+   "peak_db": -9.100000381469727
+  },
+  {
+   "bar": 6,
+   "rms_db": -21.0,
+   "peak_db": -7.400000095367432
+  },
+  {
+   "bar": 7,
+   "rms_db": -20.5,
+   "peak_db": -6.199999809265137
+  },
+  {
+   "bar": 8,
+   "rms_db": -32.2,
+   "peak_db": -11.5
+  }
+ ],
+ "instrumentation": {
+  "vc": {
+   "family": "strings",
+   "notes": 14,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  }
+ },
+ "credits": [
+  "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+ ],
+ "audition": [],
+ "warnings": []
+}

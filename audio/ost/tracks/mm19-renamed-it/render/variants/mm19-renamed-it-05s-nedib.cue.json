@@ -1,0 +1,386 @@
+{
+ "schema": "mrmas-ost-cue/1",
+ "id": "mm19-renamed-it-05s-nedib",
+ "mm": "MM-19",
+ "family": "P13",
+ "title": "Renamed It. / The Fountain Pen (5 s cut-down (NEDIB))",
+ "version": "1",
+ "composer": "Composer A (OST batch 1)",
+ "tone": "state occasions at equal weight: a fountain-pen quartet signing, and a brass podium one size too big that renames the world under a held note",
+ "tags": [
+  "podium",
+  "march",
+  "string quartet",
+  "parity",
+  "the rename",
+  "rumpt",
+  "nedib",
+  "library",
+  "featured",
+  "word windows",
+  "variant",
+  "cut-down"
+ ],
+ "usage": "BI",
+ "scenes": [
+  "Ep1 sc 13 White House (NEDIB: the Fountain Pen, b1-8)",
+  "NEDIB props: the pen, the PINKY-PROMISE scroll, EO 14110, the three-tier map",
+  "RUMPT's marker voids the three-tier map (b9-10)",
+  "RUMPT phases: FEAR Ep2 (b11-18), the reveal Ep3 (b18.4-b19 only), LOVE Eps 4-6 (b19-26), the label gun (b27), \"Who?\" Ep8 (b29-32), SUPER Ep9 (b33-36)",
+  "cut-downs: 5 s = b27-28 (the Rename); 15 s = b23-28; 30 s = b17-28 or b1-12"
+ ],
+ "description": "5 s (b1-2 + the b3.1 landing): the Fountain Pen once, the turn landing on Bb over a soft Bb chord. Parity with RUMPT's 5 s.",
+ "motifs": [
+  "the Fountain Pen (viola b1, solo violin 8va b5; the turn C Bb A Bb)",
+  "the Podium (FEAR in Eb minor, half-time, b11 and b15; LOVE b19 and b23; WHO? b29)",
+  "the Rename (b27.3, b33.3, b35.3)",
+  "the chip piccolo (gold glint) and the chip top line (SUPER)"
+ ],
+ "key": "Bb major (NEDIB); Eb minor (FEAR); Eb major (LOVE) -> B/D# -> G/B (the Renames)",
+ "engine": {
+  "version": "mrmas-ost-engine 1.1 (2026-09-26: fix1 -- meter axis, sample tuning, render pool, QA 5a-d)",
+  "rendered": "2026-09-26T06:37:44",
+  "render_seconds": 3.6
+ },
+ "timing": {
+  "bpm": 96.0,
+  "beat_unit_quarters": 1.0,
+  "tempo_map": [
+   {
+    "bar": 1,
+    "beat": 1.0,
+    "bpm": 96.0,
+    "ramp_in": false,
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "meter_map": [
+   {
+    "bar": 1,
+    "meter": "4/4",
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "swing": 0.0,
+  "swing_unit_quarters": 0.5,
+  "pickup_beats": 0.0,
+  "bars": 3,
+  "length_s": 7.5,
+  "length_frames": 180.0,
+  "fps": 24,
+  "end": {
+   "sec": 6.25,
+   "frame": 150.0,
+   "bar": 3,
+   "beat": 3.0
+  },
+  "album_duration_s": 7.45,
+  "album_duration_frames": 178.8,
+  "album_loops": 1
+ },
+ "sections": [
+  {
+   "label": "THE FOUNTAIN PEN (NEDIB) -- loop A",
+   "start": {
+    "sec": 0.0,
+    "frame": 0.0,
+    "bar": 1,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 5.0,
+    "frame": 120.0,
+    "bar": 3,
+    "beat": 1.0
+   }
+  }
+ ],
+ "markers": [
+  {
+   "label": "b1 the Fountain Pen (viola)",
+   "sec": 0.0,
+   "frame": 0.0,
+   "bar": 1,
+   "beat": 1.0
+  }
+ ],
+ "hit_check": [
+  {
+   "t": 0.0,
+   "offset_ms": 2.7,
+   "strength": 3.31
+  }
+ ],
+ "sfx_slots": [],
+ "silence_windows": [],
+ "vo_windows": [],
+ "knee_whole": 0,
+ "f_major": {
+  "limit": 0.08,
+  "windows": 1,
+  "worst": 0.025,
+  "worst_sieved": 0.016,
+  "ok": true,
+  "ok_written": true,
+  "ok_spectral": true,
+  "f_inaudible_windows": 0,
+  "a_classes": {
+   "written": 0,
+   "resonance": 0,
+   "explained": 0,
+   "unattributed": 0
+  },
+  "written_a_over_f_bass": [],
+  "written_third": {
+   "ok": true,
+   "count": 0,
+   "events": [],
+   "grazes": [],
+   "n_grazes": 0,
+   "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+  },
+  "fails": [],
+  "explained": [],
+  "fixed_resonances": [],
+  "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+ },
+ "knee_completion": 0,
+ "room_sfx_windows": [],
+ "qa": {
+  "balance": {
+   "balance": {
+    "piano": 0,
+    "orch": 82,
+    "bigband": 0,
+    "chip": 18
+   },
+   "rhythm_pct_of_all": 0,
+   "chip_share": 18,
+   "balance_energy": {
+    "piano": 0,
+    "orch": 82,
+    "bigband": 0,
+    "chip": 18
+   },
+   "method": "theme stemtable (gated loudness per section, time-weighted, rhythm/fx excluded; it counts a brief stab at its own loudness for the whole section) + balance_energy (ungated energy)",
+   "sections": [
+    {
+     "section": "THE FOUNTAIN PEN (NEDIB) -- loop A",
+     "share": {
+      "piano": 0,
+      "orch": 82,
+      "bigband": 0,
+      "chip": 18
+     }
+    }
+   ]
+  },
+  "short_term_underscore": {
+   "p95": -15.1,
+   "median": -15.34,
+   "max": -15.02
+  },
+  "band_2_6k_db": -16.7,
+  "centroid_hz": 398.0,
+  "f_major": {
+   "limit": 0.08,
+   "windows": 1,
+   "worst": 0.025,
+   "worst_sieved": 0.016,
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "f_inaudible_windows": 0,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_a_over_f_bass": [],
+   "written_third": {
+    "ok": true,
+    "count": 0,
+    "events": [],
+    "grazes": [],
+    "n_grazes": 0,
+    "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+   },
+   "fails": [],
+   "explained": [],
+   "fixed_resonances": [],
+   "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+  },
+  "knee_completion": {
+   "count": 0,
+   "hits": [],
+   "max_gap_s": 2.5,
+   "rule": "OST-BIBLE rule 4: the knee never plays whole in an episode, in any register, across a phrase boundary too"
+  },
+  "sub_under_room": [],
+  "no_third": [],
+  "silence": [],
+  "hard_stops": [],
+  "vo_windows": [],
+  "knee_whole": 0,
+  "motifs_found": {
+   "FOUNTAIN_PEN": [
+    {
+     "inst": "vla",
+     "t": 0.0,
+     "transpose": 0
+    }
+   ]
+  },
+  "swing": {
+   "vla": {
+    "offbeats": 2,
+    "median_frames": 9.38,
+    "hum_ms": 8
+   }
+  },
+  "banned": []
+ },
+ "loop": null,
+ "files": {
+  "album_wav": "variants/mm19-renamed-it-05s-nedib-album.wav",
+  "album_mp3": "variants/mm19-renamed-it-05s-nedib-album.mp3",
+  "underscore_wav": "variants/mm19-renamed-it-05s-nedib-underscore.wav",
+  "underscore_mp3": "variants/mm19-renamed-it-05s-nedib-underscore.mp3",
+  "stems": {},
+  "midi": "variants/mm19-renamed-it-05s-nedib.mid",
+  "pianoroll": "variants/mm19-renamed-it-05s-nedib-pianoroll.png"
+ },
+ "masters": {
+  "album": {
+   "target_lufs": -14.0,
+   "ceiling_dbtp": -1.0,
+   "comp": {
+    "thresh_db": -20,
+    "ratio": 1.8
+   },
+   "dialog_pocket": null,
+   "measured": {
+    "lufs": -14.01,
+    "lra": 3.87,
+    "true_peak_db": -1.15,
+    "peak_db": -1.16,
+    "rms_db": -17.04,
+    "crest_db": 15.89,
+    "seconds": 7.45
+   }
+  },
+  "underscore": {
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -3.0,
+   "comp": {
+    "thresh_db": -28,
+    "ratio": 1.3,
+    "att_ms": 40.0,
+    "rel_ms": 350.0
+   },
+   "dialog_pocket": {
+    "f": 2500.0,
+    "db": -2.0,
+    "q": 0.7
+   },
+   "measured": {
+    "lufs": -16.02,
+    "lra": 3.87,
+    "true_peak_db": -3.15,
+    "peak_db": -3.16,
+    "rms_db": -18.87,
+    "crest_db": 15.72,
+    "seconds": 7.45
+   }
+  }
+ },
+ "stems": {
+  "sum_vs_underscore_residual_db": -164.9,
+  "families_present": [],
+  "family_share_lu": {
+   "strings": -0.9,
+   "chip": -7.1
+  }
+ },
+ "spectrum": {
+  "sub": -28.5,
+  "bass": -3.0,
+  "lowmid": -3.6,
+  "mid": -12.5,
+  "presence": -27.9,
+  "air": -40.4,
+  "centroid_hz": 398.0
+ },
+ "bar_levels": [
+  {
+   "bar": 1,
+   "rms_db": -17.8,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 2,
+   "rms_db": -17.1,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 3,
+   "rms_db": -25.9,
+   "peak_db": -11.300000190734863
+  }
+ ],
+ "instrumentation": {
+  "cb": {
+   "family": "strings",
+   "notes": 2,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "harp": {
+   "family": "strings",
+   "notes": 10,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "tri": {
+   "family": "chip",
+   "notes": 8,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "vc": {
+   "family": "strings",
+   "notes": 9,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vla": {
+   "family": "strings",
+   "notes": 12,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vln1": {
+   "family": "strings",
+   "notes": 9,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vln2": {
+   "family": "strings",
+   "notes": 9,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  }
+ },
+ "credits": [
+  "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+ ],
+ "audition": [
+  "0-6.25 s: a clean start on its (pick-up) bar line; the ending is the suite's own stop",
+  "against the suite at the same bars: the same music and the same level"
+ ],
+ "warnings": []
+}

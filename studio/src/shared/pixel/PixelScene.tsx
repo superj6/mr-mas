@@ -15,6 +15,7 @@ import {W, H} from './px';
 import {PAL, hex} from './palette';
 import {ensureGlyphFonts, drawGlyphLayer, presentBuf} from './glyphDraw';
 import {PixelSceneProps, composeFrame} from './compose';
+import {isGenvideoPlate} from './plate';
 
 export type {PixelSceneProps, SwitchSpec, Switches, DrawResult} from './compose';
 
@@ -32,15 +33,19 @@ export const PixelScene: React.FC<PixelSceneProps> = (props) => {
       .then(() => {
         const cv = ref.current;
         if (cv) {
-          const {fb, layers, ui, uiLayers} = composeFrame(props, f);
+          // clean-plate export (keyframes.py): only what draw() paints; see plate.ts
+          const plate = isGenvideoPlate();
+          const {fb, layers, ui, uiLayers} = composeFrame(plate ? {draw: props.draw, bg: props.bg, nativeW: props.nativeW, nativeH: props.nativeH} : props, f);
           const ctx = cv.getContext('2d')!;
           ctx.fillStyle = hex(props.bg ?? PAL.N0);
           ctx.fillRect(0, 0, cv.width, cv.height);
           const view = {scale, ox, oy};
           presentBuf(ctx, fb, view);
-          for (const l of layers) drawGlyphLayer(ctx, l, view);
-          if (ui) presentBuf(ctx, ui, view);
-          for (const l of uiLayers) drawGlyphLayer(ctx, l, view);
+          if (!plate) {
+            for (const l of layers) drawGlyphLayer(ctx, l, view);
+            if (ui) presentBuf(ctx, ui, view);
+            for (const l of uiLayers) drawGlyphLayer(ctx, l, view);
+          }
         }
         continueRender(handle);
       })

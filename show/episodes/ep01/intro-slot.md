@@ -1,38 +1,69 @@
 # ep01 · intro slot
 
-The 30.0s opening ("THE CURVE: everything scales.") is specified in [intro/spec.md](../../intro/spec.md). The season-wide slot table is [intro/episode-slots.md](../../intro/episode-slots.md). This sheet matches it and adds Ep1 production detail. Cold-open lines follow the **source-fidelity rule** ([spec §3.3](../../intro/spec.md)): posts are typed verbatim, and only parody names may be swapped in. Bars 1–8 are shared across episodes and render once. **Ep1 is the reference build**: every later episode swaps only the slots below.
+The 30.0 s opening ("THE CURVE: everything scales.") is specified in [intro/SCRIPT.md](../../intro/SCRIPT.md). This sheet follows its **five spoiler-safe changes** ([SCRIPT §8](../../intro/SCRIPT.md#8-per-episode-changes-ep112-spoiler-safe)), row 1 of each table, and adds Ep1's production detail. Ep1 is the reference build: every later episode changes only these five things.
 
-| Slot | Ep1 value | Notes |
-|---|---|---|
-| **Cold-open quote** (typed and spoken in the dark room, f24–91) | **"near the singularity; unclear which side."** | A real post from Jan 2025 [V], recast as Mas's. It's the season tagline (*near* → Ep9 *now* → Ep12 *ours.*). **It falls outside Ep1's window**; see the alternates and [open-questions](open-questions.md) #1 |
-| — alternate A (in-window) | "the compute costs are eye-watering." [K]† | Dec 2022. 9 syllables, and it fits the GPU visuals. Recommended by the grounding and pacing critics |
-| — alternate B (pilot-only 35.0s cut) | "i think that ai will probably, most likely, sort of lead to the end of the world. but in the meantime, there will be great companies…" [K]† | About 6.5s. Needs a 4-bar dark room (+120 frames, everything shifts). Quote it in full, never trimmed. 2015 quote: early.md sources it, mid.md flags it unverified |
-| **Bar 9.1** (news) | **`CHATGTP`** | Eggs: `low-key research preview` · `1,000,000 · 5 DAYS` · `NOV 2022` · `HDR · RAY-TRACED*` `*not really`. **Never `100,000,000`** (crit-fair #1) |
-| **Bar 9.2** (the music is fired) | **`FIRED.`** | A five-tile call, 90% desaturated. Tiles: `MAS` (Vegas neon, a race car passing) · `ALYI` · `NELEH` · `MADA` · camera-off tile, egg label **`THE QUIET VOTE`** (McCauley, per WC-crit §B5). The 1993 dialog returns in HD glass; the board's pointer clicks **Cancel** and it works. Every stem mutes to one dry piano F4 |
-| **Bar 9.3** (the music is rehired) | **`BACK.`** | The dialog re-pops with Cancel greyed out again. Badge flips `GUEST → CEO`. Tiny hourglass shatters: egg `TTEMME · 72:00:00` |
-| **Bar 9.4** (transition object) | **Heart avalanche → dusk stars** | Hundreds of red hearts and **exactly one blue**. Egg `LETTER 745/770` |
-| **Skyline state** | **Baseline** | NopeAI's GPUs sag red-hot like Dalí clocks. zAI gantry banner: `COMING SOON: TRUTHGTP`. ELGOOG's code-red siren spins (it migrates in Ep6). PEEKDEEP water tower plate: `(NOT YET)`. MACROSOFT's plinth reads `BELOW · ABOVE · AROUND` |
-| **RUMPT / THE PODIUM** | **Absent** | No podium on the hill in Ep1–2 (WC-cast §5). RUMPT never appears in bars 1–8 and never gets an intro card. **[PROPOSAL, shared]:** NEDIB's fountain pen stands in an inkwell on the same hill in Eps 1–3, with no text and no SFX. It's gone in Ep4 ([episode-slots §5.1](../../intro/episode-slots.md)). It gives the hill party parity (WC-crit §C18). **We support it**; the head writer decides |
-| **Orb toast** (bookend, f692) | **`verified: human`** | Stays this way through Ep5 |
-| **Title subtitle** (f640) | **`now in low-key research preview`** | 31 characters (≤34) |
-| **`you are here` dot** | At the knee (x = 0.50) | Moves one notch per episode ([episode-slots §6](../../intro/episode-slots.md)) |
+**The rule.** The intro feels like an intro, not a recap. Nothing in it names, shows or counts the pilot's plot, and above all nothing says he is fired or comes back. Items 2–5 show only what has already aired; for the pilot that means the baseline.
 
-## Per-episode eggs (changing sections only)
-| Egg | Ep1 state |
+## 1. The cold-open line (f18–112)
+
+| | Ep1 |
 |---|---|
-| Firing tally carved into the dark-room desk | **`III`**. Marks 1–2 are faint (TPOOL, explained in-episode as `(REPORTED)`); mark 3 is Nov 17, 2023. This matches episode-slots §7 |
-| Coat hook behind Mas | Two popped collars (the 2008 polos) |
-| KORG split-flap board on the zAI tower | `KORG 1` [K, verify]. The skyline banner still reads `COMING SOON: TRUTHGTP` (the April 2023 announcement); KORG shipped Nov 4, 2023 |
-| Valuation ticker on NopeAI's spire | `$86B` [V per sw-ind; K per episode-slots], the tender in play at the Blip. The earlier $29B term sheet [V] is the alternative if the ticker should show the window's start |
-| 1993 kid's screen (bar 3) | **0°**, facing away. It rotates from Ep4 (10°) and Ep7 (35°), and turns fully in Ep12 |
-| Gold thread in Mas's hoodie | None. It starts in Ep4 |
-| HTURT sky bubble | None (optional faint one in Ep2) |
+| **Line** | **"near the singularity; unclear which side."** · a post, Jan 2025 · [V] |
+| **Why this line** | It's the season's epigraph: *near* here, *now* in Ep9, the same line back in Ep12. It falls outside Ep1's window on purpose, and Ep4 posts it "for real" (SCRIPT §8.1) |
+| **Medium** | Typed on his monitor and spoken in his soft, close voice, a word behind the type; the D♭ colour note sits in the line's longest pause |
+| **Status** | The default. Open question 1 keeps the in-window alternates on file ("the compute costs are eye-watering." [K]†; the 2015 line in a 35.0 s pilot-only cut) |
 
-## Fixes to the shared bars (owned by `intro/`; status)
-1. **Mario's place card** (bar 8.4 egg) now reads **`MARIO (UDIAB) · JOINS 2016`**. He was at Baidu, not Google, in Jul 2015 (WC-fb §0.2). **Done in [intro/spec.md](../../intro/spec.md).**
-2. **Bar 3 menu-bar egg `Thu, Apr 22, 1993`** is **retired in intro/spec.md**, per WC-crit §E42. The `1993` card and the `age 8` title bar stay. That matches F1.1's `1993`-only card.
-3. **Dinner roster:** the Woodrose tableau should allow for HALO and THE OTHER PAUL as background guests (Brockman's blog [V]), even though they get no cards.
-4. **Tile count:** the bible specifies "five tiles". The real call was the board minus Gerg (four voters), with Mas as the fifth tile. That matches.
+## 2. World state, after the fact
+
+The pilot has no aftermath yet, so every item is the **baseline**.
+
+| Item | Ep1 state |
+|---|---|
+| **Skyline** | The towers and their players, no dated events. NopeAI's GPUs pile up red-hot and keep their shape (they start to sag in Ep5). PEEKDEEP's water tower plate: `(NOT YET)`. The siren is RADNUS's own trait. Intro v2.1 cut the rest from the Ep1 skyline (`$86B`, `BELOW · ABOVE · AROUND`, the cage-match poster, `COMING SOON: TRUTHGTP`, the KORG boards, the Dalí GPUs); the ones that survive come back later, once aired |
+| **Misanthropic's price tag** | Blank |
+| **The hill** | RUMPT's silhouette at a dark gold podium, no text and no SFX; on the other side NEDIB's fountain pen in an inkwell, static. The CZAR lanyard's tag is blank [PROPOSAL]. The hill never makes a sound |
+| **Desk tally** (G01) | **`II`**, both faint (TPOOL, `(REPORTED)`). Mark 3 is carved in Act Four and first shows in Ep2's intro. A `III` here would count the firing 40 s into the pilot |
+| **Coat-hook collars** (G05) | 2 (the 2008 polos). The third pops in the episode (sc 9, MACROSOFT's check), so Ep2's intro hook should read 3 (the Ep2 and intro owners' change) |
+| **Gold threads in the hoodie** (G06) | None; they start in Ep5's intro |
+| **1993 screen angle** | 0°, facing away |
+| **`you are here` marker** | At the knee (x = 0.50). Production files call it the marker; it's never named on screen and never meets DOT |
+| **Orb toast** (the bookend, f692) | `verified: human`, through Ep5. Pacing note 27 proposes cutting it from Ep1's bookend; the intro owner's call |
+| **Last bar** | Standard |
+
+## 3. The title subtitle (f640–689)
+
+| | Ep1 |
+|---|---|
+| **Subtitle** | **`now in low-key research preview`** (31 characters; the limit is 34) |
+| **What it is** | Every later subtitle is last week's release note. The pilot's states the premise |
+
+## 4. The couch gag: the pocketed keycap (f270–284)
+
+| | Ep1 |
+|---|---|
+| **Keycap** | **`CTRL`** [PROPOSAL], plucked from the air at Gerg's card and pocketed. It turns up again in the tag's drawer, and Ep12 bookends it |
+
+## 5. Roll-call evolution (flashes 5–8, f480–539)
+
+| Flash | Ep1 state |
+|---|---|
+| 5 · RIMA TAMURI | NopeAI fill; she's on NopeAI's roof in the group shot |
+| 6 · THE WHALE | The budget breach; plate `PEEKDEEP` |
+| 7 · RUMPT | **Silhouette** at a gold podium, pointing, gold rim only. Its shape is the one the cold open's lit window shows across the bay |
+| 8 · the cursor window | The cursor alone |
+
+The roll call carries no must-read text; its name plates are eggs.
+
+## Retired
+
+- **The v2.0 news slot** (bar 9.1–9.4: `CHATGTP` / `FIRED.` / `BACK.` / hearts → stars). `FIRED.` and `BACK.` told the viewer, twenty seconds into the intro, that he is fired and comes back. Intro v2.1's rule 10 cut the slot. The call grid, the Cancel pointer, the hearts and the badge live in Act Four; the `mfinale-chatgtp.png` and `mfinale-fired.png` art is salvaged into sc 5–6 and sc 26.
+- **The bar-3 menu-bar egg `Thu, Apr 22, 1993`** (WC-crit §E42). The `1993` card and the `age 8` title bar stay, matching F1.1's `1993`-only card.
+
+## Loose ends for the intro owner
+
+- The dinner roster should allow for HALO and THE OTHER PAUL as background guests (Brockman's blog [V]), with no cards.
+- Mario's place card reads `MARIO (UDIAB) · JOINS 2016` (done in [intro/spec.md](../../intro/spec.md)).
 
 ## Text-density check
-New must-read text in the Ep1 slot: `CHATGTP` (7) · `FIRED.` (6) · `BACK.` (5) · subtitle (31) · toast (15). Every headline is 7 characters or fewer, as the slot rule requires.
+
+New must-read text in the Ep1 slot: the subtitle (31 characters) and the toast (15). The roll call carries none. Nothing in the intro names, shows or counts the firing.

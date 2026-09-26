@@ -1,4 +1,7 @@
-"""reel.py - a dialogue-only listening reel of Act Four (a 'radio play' for the director's ear pass).
+"""SUPERSEDED for draft 3.2 by reel_32.py (2026-09-25): running this would overwrite the 3.2 deliverables with the 3.1 pass.
+Kept because the 3.2 tools import from it.
+
+reel.py - a dialogue-only listening reel of Act Four (a 'radio play' for the director's ear pass).
 
 Draft 3.1. NOT picture timing: lines play in script order with the script's written holds where it prints them
 (HOLD 1 BEAT = 0.625 s, HOLD 1 BAR = 2.5 s at 96 BPM), 0.35 s between lines in a scene, and 1.25 s

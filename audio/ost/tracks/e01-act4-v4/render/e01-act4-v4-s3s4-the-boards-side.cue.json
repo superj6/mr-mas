@@ -1,0 +1,1500 @@
+{
+ "schema": "mrmas-ost-cue/1",
+ "id": "e01-act4-v4-s3s4-the-boards-side",
+ "mm": "MM-09",
+ "family": "P02 PROCEDURE + P08 OUTS KIT (09x: REVERSAL)",
+ "title": "The Board's Side / What They Didn't Know (Ep1 Act Four v4, S3 + S4, to picture)",
+ "version": "v4",
+ "composer": "Ep1 Act Four v4 sound pass (re-laid from batch-1 cues)",
+ "tone": "their side as one procedure that never stops and a fourth step that is always blank; then the door back",
+ "tags": [
+  "to picture",
+  "Ep1",
+  "act four",
+  "v4",
+  "continuous"
+ ],
+ "usage": "BI",
+ "scenes": [
+  "v4 S3.01-S5.01 (+ the felt on S5.02), act 1254-3135; file t=0 = act frame 1254"
+ ],
+ "description": "",
+ "motifs": [
+  "STEP_FOUR",
+  "NELEH_CLOCKWORK",
+  "MADA_SPINNER",
+  "DOOR",
+  "GPU_CHOIR",
+  "LIGHTHOUSE",
+  "ADDENDUM + landing",
+  "HOURGLASS",
+  "TASYA_FLOOR",
+  "REVERSAL"
+ ],
+ "key": "B-flat minor centre; Db lydian (Alyi); Abmaj9 -> Cmaj9 (Tasya); F(add9) no third (09x)",
+ "engine": {
+  "version": "mrmas-ost-engine 1.1 (2026-09-26: fix1 -- meter axis, sample tuning, render pool, QA 5a-d)",
+  "rendered": "2026-09-26T08:08:22",
+  "render_seconds": 116.7
+ },
+ "timing": {
+  "bpm": 96.0,
+  "beat_unit_quarters": 1.0,
+  "tempo_map": [
+   {
+    "bar": 1,
+    "beat": 1.0,
+    "bpm": 96.0,
+    "ramp_in": false,
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "meter_map": [
+   {
+    "bar": 1,
+    "meter": "4/4",
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "swing": 0.0,
+  "swing_unit_quarters": 0.5,
+  "pickup_beats": 0.0,
+  "bars": 35,
+  "length_s": 87.5,
+  "length_frames": 2100.0,
+  "fps": 24,
+  "end": {
+   "sec": 80.975,
+   "frame": 1943.4,
+   "bar": 33,
+   "beat": 2.56
+  },
+  "album_duration_s": 80.975,
+  "album_duration_frames": 1943.4,
+  "album_loops": 1
+ },
+ "sections": [
+  {
+   "label": "a NOON",
+   "start": {
+    "sec": 0.0,
+    "frame": 0.0,
+    "bar": 1,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 22.708333,
+    "frame": 545.0,
+    "bar": 10,
+    "beat": 1.3333
+   }
+  },
+  {
+   "label": "a's night bars",
+   "start": {
+    "sec": 22.708333,
+    "frame": 545.0,
+    "bar": 10,
+    "beat": 1.3333
+   },
+   "end": {
+    "sec": 27.208333,
+    "frame": 653.0,
+    "bar": 11,
+    "beat": 4.5333
+   }
+  },
+  {
+   "label": "b NOV 18 hearts",
+   "start": {
+    "sec": 27.208333,
+    "frame": 653.0,
+    "bar": 11,
+    "beat": 4.5333
+   },
+   "end": {
+    "sec": 31.958333,
+    "frame": 767.0,
+    "bar": 13,
+    "beat": 4.1333
+   }
+  },
+  {
+   "label": "c the boardroom",
+   "start": {
+    "sec": 31.958333,
+    "frame": 767.0,
+    "bar": 13,
+    "beat": 4.1333
+   },
+   "end": {
+    "sec": 47.125,
+    "frame": 1131.0,
+    "bar": 19,
+    "beat": 4.4
+   }
+  },
+  {
+   "label": "rest: the dial tones",
+   "start": {
+    "sec": 47.125,
+    "frame": 1131.0,
+    "bar": 19,
+    "beat": 4.4
+   },
+   "end": {
+    "sec": 48.125,
+    "frame": 1155.0,
+    "bar": 20,
+    "beat": 2.0
+   }
+  },
+  {
+   "label": "d LIGHTHOUSE",
+   "start": {
+    "sec": 48.125,
+    "frame": 1155.0,
+    "bar": 20,
+    "beat": 2.0
+   },
+   "end": {
+    "sec": 56.208333,
+    "frame": 1349.0,
+    "bar": 23,
+    "beat": 2.9333
+   }
+  },
+  {
+   "label": "e the lobby camera",
+   "start": {
+    "sec": 56.208333,
+    "frame": 1349.0,
+    "bar": 23,
+    "beat": 2.9333
+   },
+   "end": {
+    "sec": 59.958333,
+    "frame": 1439.0,
+    "bar": 24,
+    "beat": 4.9333
+   }
+  },
+  {
+   "label": "f TTEMME",
+   "start": {
+    "sec": 59.958333,
+    "frame": 1439.0,
+    "bar": 24,
+    "beat": 4.9333
+   },
+   "end": {
+    "sec": 65.125,
+    "frame": 1563.0,
+    "bar": 27,
+    "beat": 1.2
+   }
+  },
+  {
+   "label": "g 11:53 PM",
+   "start": {
+    "sec": 65.125,
+    "frame": 1563.0,
+    "bar": 27,
+    "beat": 1.2
+   },
+   "end": {
+    "sec": 72.708333,
+    "frame": 1745.0,
+    "bar": 30,
+    "beat": 1.3333
+   }
+  },
+  {
+   "label": "h Step four? (the hang)",
+   "start": {
+    "sec": 72.708333,
+    "frame": 1745.0,
+    "bar": 30,
+    "beat": 1.3333
+   },
+   "end": {
+    "sec": 76.875,
+    "frame": 1845.0,
+    "bar": 31,
+    "beat": 4.0
+   }
+  },
+  {
+   "label": "09x REVERSAL",
+   "start": {
+    "sec": 76.875,
+    "frame": 1845.0,
+    "bar": 31,
+    "beat": 4.0
+   },
+   "end": {
+    "sec": 78.375,
+    "frame": 1881.0,
+    "bar": 32,
+    "beat": 2.4
+   }
+  }
+ ],
+ "markers": [
+  {
+   "label": "a: Step Four (the Rewind lands)",
+   "sec": 0.0,
+   "frame": 0.0,
+   "bar": 1,
+   "beat": 1.0
+  },
+  {
+   "label": "a: Neleh clockwork on \"Share what?\"",
+   "sec": 12.5,
+   "frame": 300.0,
+   "bar": 6,
+   "beat": 1.0
+  },
+  {
+   "label": "b: the hearts pour",
+   "sec": 27.208333,
+   "frame": 653.0,
+   "bar": 11,
+   "beat": 4.5333
+  },
+  {
+   "label": "b: the blue heart",
+   "sec": 31.5,
+   "frame": 756.0,
+   "bar": 13,
+   "beat": 3.4
+  },
+  {
+   "label": "c: Step Four x3",
+   "sec": 31.958333,
+   "frame": 767.0,
+   "bar": 13,
+   "beat": 4.1333
+  },
+  {
+   "label": "c: the sincere beat (the solo viola)",
+   "sec": 45.625,
+   "frame": 1095.0,
+   "bar": 19,
+   "beat": 2.0
+  },
+  {
+   "label": "d: the Lighthouse on the ring",
+   "sec": 48.125,
+   "frame": 1155.0,
+   "bar": 20,
+   "beat": 2.0
+  },
+  {
+   "label": "d: the Addendum (cut by the click)",
+   "sec": 50.708333,
+   "frame": 1217.0,
+   "bar": 21,
+   "beat": 2.1333
+  },
+  {
+   "label": "d: \"How much?\" -- the tail lands (sold)",
+   "sec": 55.3125,
+   "frame": 1327.5,
+   "bar": 23,
+   "beat": 1.5
+  },
+  {
+   "label": "f: the spotlight (straight-mute accent)",
+   "sec": 59.958333,
+   "frame": 1439.0,
+   "bar": 24,
+   "beat": 4.9333
+  },
+  {
+   "label": "f: the hourglass (one grain a beat, falling)",
+   "sec": 63.25,
+   "frame": 1518.0,
+   "bar": 26,
+   "beat": 2.2
+  },
+  {
+   "label": "g: Tasya's floor (Abmaj9 on the slate)",
+   "sec": 65.208333,
+   "frame": 1565.0,
+   "bar": 27,
+   "beat": 1.3333
+  },
+  {
+   "label": "g: Cmaj9 (the door opens)",
+   "sec": 66.416667,
+   "frame": 1594.0,
+   "bar": 27,
+   "beat": 3.2667
+  },
+  {
+   "label": "g: the Rhodes (Tasya appears)",
+   "sec": 67.625,
+   "frame": 1623.0,
+   "bar": 28,
+   "beat": 1.2
+  },
+  {
+   "label": "h: the clockwork winds down",
+   "sec": 72.708333,
+   "frame": 1745.0,
+   "bar": 30,
+   "beat": 1.3333
+  },
+  {
+   "label": "h: the hang (one held C over the blank F)",
+   "sec": 73.458333,
+   "frame": 1763.0,
+   "bar": 30,
+   "beat": 2.5333
+  },
+  {
+   "label": "09x: REVERSAL (the card)",
+   "sec": 76.875,
+   "frame": 1845.0,
+   "bar": 31,
+   "beat": 4.0
+  },
+  {
+   "label": "09x: the felt F4 (the door back)",
+   "sec": 78.375,
+   "frame": 1881.0,
+   "bar": 32,
+   "beat": 2.4
+  },
+  {
+   "label": "thin: the blog post",
+   "sec": 6.416667,
+   "frame": 154.0,
+   "bar": 3,
+   "beat": 3.2667
+  },
+  {
+   "label": "thin: Gerg's post",
+   "sec": 14.416667,
+   "frame": 346.0,
+   "bar": 6,
+   "beat": 4.0667
+  },
+  {
+   "label": "thin: ALYI \"You can call it this way\"",
+   "sec": 20.0,
+   "frame": 480.0,
+   "bar": 9,
+   "beat": 1.0
+  },
+  {
+   "label": "thin: the 9:32 post",
+   "sec": 22.833333,
+   "frame": 548.0,
+   "bar": 10,
+   "beat": 1.5333
+  },
+  {
+   "label": "thin: the eulogy post",
+   "sec": 28.5,
+   "frame": 684.0,
+   "bar": 12,
+   "beat": 2.6
+  },
+  {
+   "label": "thin: the lobby post",
+   "sec": 56.833333,
+   "frame": 1364.0,
+   "bar": 23,
+   "beat": 3.9333
+  },
+  {
+   "label": "thin: TASYA's post read aloud",
+   "sec": 70.517857,
+   "frame": 1692.429,
+   "bar": 29,
+   "beat": 1.8286
+  }
+ ],
+ "hit_check": [
+  {
+   "t": 0.0,
+   "offset_ms": 2.7,
+   "strength": 4.62
+  },
+  {
+   "t": 6.4167,
+   "offset_ms": 18.0,
+   "strength": 1.84
+  },
+  {
+   "t": 12.5,
+   "offset_ms": -14.7,
+   "strength": 1.94
+  },
+  {
+   "t": 14.4167,
+   "offset_ms": -43.4,
+   "strength": 1.77
+  },
+  {
+   "t": 20.0,
+   "offset_ms": -50.7,
+   "strength": 2.0
+  },
+  {
+   "t": 22.8333,
+   "offset_ms": -54.6,
+   "strength": 1.49
+  },
+  {
+   "t": 27.2083,
+   "offset_ms": 10.4,
+   "strength": 1.67
+  },
+  {
+   "t": 28.5,
+   "offset_ms": 6.7,
+   "strength": 1.74
+  },
+  {
+   "t": 31.5,
+   "offset_ms": 9.3,
+   "strength": 3.06
+  },
+  {
+   "t": 31.9583,
+   "offset_ms": 39.0,
+   "strength": 1.79
+  },
+  {
+   "t": 45.625,
+   "offset_ms": 15.0,
+   "strength": 1.81
+  },
+  {
+   "t": 48.125,
+   "offset_ms": -2.3,
+   "strength": 9.29
+  },
+  {
+   "t": 50.7083,
+   "offset_ms": -4.3,
+   "strength": 2.51
+  },
+  {
+   "t": 55.3125,
+   "offset_ms": 7.5,
+   "strength": 1.48
+  },
+  {
+   "t": 56.8333,
+   "offset_ms": -60.0,
+   "strength": 1.61
+  },
+  {
+   "t": 59.9583,
+   "offset_ms": 36.4,
+   "strength": 2.15
+  },
+  {
+   "t": 63.25,
+   "offset_ms": 8.7,
+   "strength": 2.58
+  },
+  {
+   "t": 65.2083,
+   "offset_ms": -29.6,
+   "strength": 2.68
+  },
+  {
+   "t": 66.4167,
+   "offset_ms": 20.6,
+   "strength": 1.63
+  },
+  {
+   "t": 67.625,
+   "offset_ms": -30.3,
+   "strength": 1.52
+  },
+  {
+   "t": 70.5179,
+   "offset_ms": 36.8,
+   "strength": 1.67
+  },
+  {
+   "t": 72.7083,
+   "offset_ms": 11.7,
+   "strength": 3.44
+  },
+  {
+   "t": 73.4583,
+   "offset_ms": -58.3,
+   "strength": 1.49
+  },
+  {
+   "t": 76.875,
+   "offset_ms": -5.7,
+   "strength": 1.62
+  },
+  {
+   "t": 78.375,
+   "offset_ms": 41.0,
+   "strength": 1.6
+  }
+ ],
+ "sfx_slots": [
+  {
+   "t": 47.125,
+   "sfx": "four dial tones (the designed rest)"
+  },
+  {
+   "t": 52.25,
+   "sfx": "*Click.* (cuts the Addendum)"
+  },
+  {
+   "t": 76.875,
+   "sfx": "the card (the REVERSAL owns it)"
+  }
+ ],
+ "silence_windows": [],
+ "vo_windows": [],
+ "knee_whole": 0,
+ "f_major": {
+  "limit": 0.08,
+  "windows": 18,
+  "worst": 0.127,
+  "worst_sieved": 0.132,
+  "ok": true,
+  "ok_written": true,
+  "ok_spectral": true,
+  "f_inaudible_windows": 0,
+  "a_classes": {
+   "written": 0,
+   "resonance": 0,
+   "explained": 2,
+   "unattributed": 0
+  },
+  "written_a_over_f_bass": [],
+  "written_third": {
+   "ok": true,
+   "count": 0,
+   "events": [],
+   "grazes": [],
+   "n_grazes": 0,
+   "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+  },
+  "fails": [],
+  "explained": [
+   {
+    "t0": 3.75,
+    "t1": 4.375,
+    "a_over_f": 0.118,
+    "a_over_f_sieved": 0.112,
+    "written_a": [],
+    "f_share": 0.344,
+    "a_from": {
+     "strings": 100,
+     "winds": 0,
+     "brass": 0
+    },
+    "a_peaks": [
+     {
+      "stem": "strings",
+      "hz": 440.9,
+      "kind": "partial 5 of written F2 (vc)",
+      "cls": "partial",
+      "share": 0.75
+     },
+     {
+      "stem": "strings",
+      "hz": 220.5,
+      "kind": "partial 5 of written F1 (cb_f1)",
+      "cls": "partial",
+      "share": 0.15
+     },
+     {
+      "stem": "strings",
+      "hz": 437.3,
+      "kind": "partial 5 of written F2 (vc)",
+      "cls": "partial",
+      "share": 0.1
+     }
+    ],
+    "a_class": "explained",
+    "ok": true,
+    "ok_spectral": true
+   },
+   {
+    "t0": 35.708,
+    "t1": 36.333,
+    "a_over_f": 0.127,
+    "a_over_f_sieved": 0.132,
+    "written_a": [],
+    "f_share": 0.45,
+    "a_from": {
+     "strings": 100,
+     "winds": 0,
+     "brass": 0
+    },
+    "a_peaks": [
+     {
+      "stem": "strings",
+      "hz": 440.2,
+      "kind": "partial 5 of written F2 (vc)",
+      "cls": "partial",
+      "share": 0.68
+     },
+     {
+      "stem": "strings",
+      "hz": 219.7,
+      "kind": "partial 5 of written F1 (cb_f1)",
+      "cls": "partial",
+      "share": 0.18
+     },
+     {
+      "stem": "strings",
+      "hz": 874.5,
+      "kind": "partial 10 of written F2 (vc)",
+      "cls": "partial",
+      "share": 0.14
+     }
+    ],
+    "a_class": "explained",
+    "ok": true,
+    "ok_spectral": true
+   }
+  ],
+  "fixed_resonances": [],
+  "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+ },
+ "knee_completion": 0,
+ "room_sfx_windows": [],
+ "qa": {
+  "balance": {
+   "balance": {
+    "piano": 0,
+    "orch": 78,
+    "bigband": 21,
+    "chip": 1
+   },
+   "rhythm_pct_of_all": 0,
+   "chip_share": 1,
+   "balance_energy": {
+    "piano": 0,
+    "orch": 92,
+    "bigband": 6,
+    "chip": 1
+   },
+   "method": "theme stemtable (gated loudness per section, time-weighted, rhythm/fx excluded; it counts a brief stab at its own loudness for the whole section) + balance_energy (ungated energy)",
+   "sections": [
+    {
+     "section": "a NOON",
+     "share": {
+      "piano": 0,
+      "orch": 61,
+      "bigband": 39,
+      "chip": 0
+     }
+    },
+    {
+     "section": "a's night bars",
+     "share": {
+      "piano": 0,
+      "orch": 100,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "b NOV 18 hearts",
+     "share": {
+      "piano": 0,
+      "orch": 100,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "c the boardroom",
+     "share": {
+      "piano": 0,
+      "orch": 76,
+      "bigband": 24,
+      "chip": 0
+     }
+    },
+    {
+     "section": "rest: the dial tones",
+     "share": {
+      "piano": 0,
+      "orch": 100,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "d LIGHTHOUSE",
+     "share": {
+      "piano": 0,
+      "orch": 100,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "e the lobby camera",
+     "share": {
+      "piano": 0,
+      "orch": 100,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "f TTEMME",
+     "share": {
+      "piano": 0,
+      "orch": 44,
+      "bigband": 56,
+      "chip": 0
+     }
+    },
+    {
+     "section": "g 11:53 PM",
+     "share": {
+      "piano": 0,
+      "orch": 100,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "h Step four? (the hang)",
+     "share": {
+      "piano": 0,
+      "orch": 86,
+      "bigband": 14,
+      "chip": 0
+     }
+    },
+    {
+     "section": "09x REVERSAL",
+     "share": {
+      "piano": 0,
+      "orch": 64,
+      "bigband": 18,
+      "chip": 18
+     }
+    }
+   ]
+  },
+  "short_term_underscore": {
+   "p95": -17.0,
+   "median": -20.32,
+   "max": -15.95
+  },
+  "band_2_6k_db": -18.9,
+  "centroid_hz": 443.0,
+  "f_major": {
+   "limit": 0.08,
+   "windows": 18,
+   "worst": 0.127,
+   "worst_sieved": 0.132,
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "f_inaudible_windows": 0,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 2,
+    "unattributed": 0
+   },
+   "written_a_over_f_bass": [],
+   "written_third": {
+    "ok": true,
+    "count": 0,
+    "events": [],
+    "grazes": [],
+    "n_grazes": 0,
+    "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+   },
+   "fails": [],
+   "explained": [
+    {
+     "t0": 3.75,
+     "t1": 4.375,
+     "a_over_f": 0.118,
+     "a_over_f_sieved": 0.112,
+     "written_a": [],
+     "f_share": 0.344,
+     "a_from": {
+      "strings": 100,
+      "winds": 0,
+      "brass": 0
+     },
+     "a_peaks": [
+      {
+       "stem": "strings",
+       "hz": 440.9,
+       "kind": "partial 5 of written F2 (vc)",
+       "cls": "partial",
+       "share": 0.75
+      },
+      {
+       "stem": "strings",
+       "hz": 220.5,
+       "kind": "partial 5 of written F1 (cb_f1)",
+       "cls": "partial",
+       "share": 0.15
+      },
+      {
+       "stem": "strings",
+       "hz": 437.3,
+       "kind": "partial 5 of written F2 (vc)",
+       "cls": "partial",
+       "share": 0.1
+      }
+     ],
+     "a_class": "explained",
+     "ok": true,
+     "ok_spectral": true
+    },
+    {
+     "t0": 35.708,
+     "t1": 36.333,
+     "a_over_f": 0.127,
+     "a_over_f_sieved": 0.132,
+     "written_a": [],
+     "f_share": 0.45,
+     "a_from": {
+      "strings": 100,
+      "winds": 0,
+      "brass": 0
+     },
+     "a_peaks": [
+      {
+       "stem": "strings",
+       "hz": 440.2,
+       "kind": "partial 5 of written F2 (vc)",
+       "cls": "partial",
+       "share": 0.68
+      },
+      {
+       "stem": "strings",
+       "hz": 219.7,
+       "kind": "partial 5 of written F1 (cb_f1)",
+       "cls": "partial",
+       "share": 0.18
+      },
+      {
+       "stem": "strings",
+       "hz": 874.5,
+       "kind": "partial 10 of written F2 (vc)",
+       "cls": "partial",
+       "share": 0.14
+      }
+     ],
+     "a_class": "explained",
+     "ok": true,
+     "ok_spectral": true
+    }
+   ],
+   "fixed_resonances": [],
+   "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+  },
+  "knee_completion": {
+   "count": 0,
+   "hits": [],
+   "max_gap_s": 2.5,
+   "rule": "OST-BIBLE rule 4: the knee never plays whole in an episode, in any register, across a phrase boundary too"
+  },
+  "sub_under_room": [],
+  "no_third": [
+   {
+    "t0": 76.975,
+    "t1": 78.355,
+    "a": 0.011,
+    "ab": 0.003,
+    "ok": true
+   }
+  ],
+  "silence": [],
+  "hard_stops": [],
+  "vo_windows": [],
+  "knee_whole": 0,
+  "motifs_found": {
+   "STEP_FOUR": [
+    {
+     "inst": "vc",
+     "t": 0.0,
+     "transpose": -19
+    },
+    {
+     "inst": "vc",
+     "t": 31.9583,
+     "transpose": -19
+    },
+    {
+     "inst": "vc",
+     "t": 36.9583,
+     "transpose": -19
+    },
+    {
+     "inst": "vc",
+     "t": 41.9583,
+     "transpose": -19
+    },
+    {
+     "inst": "vc",
+     "t": 45.625,
+     "transpose": -19
+    },
+    {
+     "inst": "cb",
+     "t": 0.0,
+     "transpose": -31
+    },
+    {
+     "inst": "cb",
+     "t": 31.9583,
+     "transpose": -31
+    },
+    {
+     "inst": "cb",
+     "t": 36.9583,
+     "transpose": -31
+    },
+    {
+     "inst": "cb",
+     "t": 41.9583,
+     "transpose": -31
+    },
+    {
+     "inst": "cb",
+     "t": 45.625,
+     "transpose": -31
+    },
+    {
+     "inst": "vla",
+     "t": 0.0,
+     "transpose": -12
+    },
+    {
+     "inst": "vla",
+     "t": 31.9583,
+     "transpose": -12
+    }
+   ],
+   "DOOR": [
+    {
+     "inst": "door",
+     "t": 38.2083,
+     "transpose": 0
+    }
+   ],
+   "LIGHTHOUSE": [
+    {
+     "inst": "harp",
+     "t": 48.125,
+     "transpose": 0
+    },
+    {
+     "inst": "marimba",
+     "t": 48.125,
+     "transpose": 0
+    }
+   ],
+   "NELEH_CLOCKWORK": [
+    {
+     "inst": "vln1",
+     "t": 11.1667,
+     "transpose": 0
+    }
+   ]
+  },
+  "swing": {
+   "cb": {
+    "offbeats": 6,
+    "median_frames": 8.45,
+    "hum_ms": 0.0
+   },
+   "vla": {
+    "offbeats": 6,
+    "median_frames": 8.5,
+    "hum_ms": 0.0
+   },
+   "vc": {
+    "offbeats": 21,
+    "median_frames": 8.0,
+    "hum_ms": 0.0
+   },
+   "harm": {
+    "offbeats": 2,
+    "median_frames": 10.83,
+    "hum_ms": 0
+   },
+   "vln1": {
+    "offbeats": 6,
+    "median_frames": 9.25,
+    "hum_ms": 0.0
+   },
+   "vln2": {
+    "offbeats": 2,
+    "median_frames": 7.75,
+    "hum_ms": 0.0
+   },
+   "harp": {
+    "offbeats": 5,
+    "median_frames": 9.02,
+    "hum_ms": 0.0
+   },
+   "svln": {
+    "offbeats": 2,
+    "median_frames": 7.75,
+    "hum_ms": 0.0
+   },
+   "tpt": {
+    "offbeats": 1,
+    "median_frames": 6.5,
+    "hum_ms": 0.0
+   },
+   "cb_f1": {
+    "offbeats": 1,
+    "median_frames": 6.0,
+    "hum_ms": 0.0
+   },
+   "hn": {
+    "offbeats": 1,
+    "median_frames": 7.5,
+    "hum_ms": 0.0
+   },
+   "felt": {
+    "offbeats": 1,
+    "median_frames": 6.0,
+    "hum_ms": 0.0
+   }
+  },
+  "banned": []
+ },
+ "loop": null,
+ "files": {
+  "album_wav": "render/e01-act4-v4-s3s4-the-boards-side-album.wav",
+  "album_mp3": "render/e01-act4-v4-s3s4-the-boards-side-album.mp3",
+  "underscore_wav": "render/e01-act4-v4-s3s4-the-boards-side-underscore.wav",
+  "underscore_mp3": "render/e01-act4-v4-s3s4-the-boards-side-underscore.mp3",
+  "stems": {
+   "piano": "render/stems/e01-act4-v4-s3s4-the-boards-side-piano.flac",
+   "strings": "render/stems/e01-act4-v4-s3s4-the-boards-side-strings.flac",
+   "winds": "render/stems/e01-act4-v4-s3s4-the-boards-side-winds.flac",
+   "brass": "render/stems/e01-act4-v4-s3s4-the-boards-side-brass.flac",
+   "perc": "render/stems/e01-act4-v4-s3s4-the-boards-side-perc.flac",
+   "chip": "render/stems/e01-act4-v4-s3s4-the-boards-side-chip.flac"
+  },
+  "midi": "render/e01-act4-v4-s3s4-the-boards-side.mid",
+  "pianoroll": "render/e01-act4-v4-s3s4-the-boards-side-pianoroll.png"
+ },
+ "masters": {
+  "album": {
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "comp": {
+    "thresh_db": -20,
+    "ratio": 1.8
+   },
+   "dialog_pocket": null,
+   "measured": {
+    "lufs": -16.03,
+    "lra": 7.29,
+    "true_peak_db": -1.15,
+    "peak_db": -1.16,
+    "rms_db": -18.44,
+    "crest_db": 17.29,
+    "seconds": 80.975
+   }
+  },
+  "underscore": {
+   "target_lufs": -20.0,
+   "ceiling_dbtp": -3.0,
+   "comp": {
+    "thresh_db": -28,
+    "ratio": 1.3,
+    "att_ms": 40.0,
+    "rel_ms": 350.0
+   },
+   "dialog_pocket": {
+    "f": 2500.0,
+    "db": -2.0,
+    "q": 0.7
+   },
+   "measured": {
+    "lufs": -20.0,
+    "lra": 6.54,
+    "true_peak_db": -3.15,
+    "peak_db": -3.17,
+    "rms_db": -22.34,
+    "crest_db": 19.17,
+    "seconds": 80.975
+   }
+  }
+ },
+ "stems": {
+  "sum_vs_underscore_residual_db": -167.0,
+  "families_present": [
+   "brass",
+   "chip",
+   "perc",
+   "piano",
+   "strings",
+   "winds"
+  ],
+  "family_share_lu": {
+   "piano": -9.4,
+   "strings": -0.9,
+   "winds": -2.1,
+   "brass": -5.6,
+   "perc": -6.7,
+   "chip": -4.6
+  }
+ },
+ "spectrum": {
+  "sub": -17.7,
+  "bass": -5.0,
+  "lowmid": -2.1,
+  "mid": -13.0,
+  "presence": -26.2,
+  "air": -40.2,
+  "centroid_hz": 443.0
+ },
+ "bar_levels": [
+  {
+   "bar": 1,
+   "rms_db": -20.8,
+   "peak_db": -8.300000190734863
+  },
+  {
+   "bar": 2,
+   "rms_db": -21.5,
+   "peak_db": -6.099999904632568
+  },
+  {
+   "bar": 3,
+   "rms_db": -22.8,
+   "peak_db": -8.5
+  },
+  {
+   "bar": 4,
+   "rms_db": -27.0,
+   "peak_db": -12.5
+  },
+  {
+   "bar": 5,
+   "rms_db": -21.4,
+   "peak_db": -6.800000190734863
+  },
+  {
+   "bar": 6,
+   "rms_db": -23.8,
+   "peak_db": -9.5
+  },
+  {
+   "bar": 7,
+   "rms_db": -27.0,
+   "peak_db": -12.199999809265137
+  },
+  {
+   "bar": 8,
+   "rms_db": -23.2,
+   "peak_db": -7.900000095367432
+  },
+  {
+   "bar": 9,
+   "rms_db": -26.0,
+   "peak_db": -13.199999809265137
+  },
+  {
+   "bar": 10,
+   "rms_db": -24.8,
+   "peak_db": -11.800000190734863
+  },
+  {
+   "bar": 11,
+   "rms_db": -21.1,
+   "peak_db": -7.400000095367432
+  },
+  {
+   "bar": 12,
+   "rms_db": -19.4,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 13,
+   "rms_db": -21.4,
+   "peak_db": -9.300000190734863
+  },
+  {
+   "bar": 14,
+   "rms_db": -21.3,
+   "peak_db": -9.100000381469727
+  },
+  {
+   "bar": 15,
+   "rms_db": -23.4,
+   "peak_db": -9.699999809265137
+  },
+  {
+   "bar": 16,
+   "rms_db": -19.9,
+   "peak_db": -7.599999904632568
+  },
+  {
+   "bar": 17,
+   "rms_db": -21.6,
+   "peak_db": -8.199999809265137
+  },
+  {
+   "bar": 18,
+   "rms_db": -21.6,
+   "peak_db": -10.100000381469727
+  },
+  {
+   "bar": 19,
+   "rms_db": -23.0,
+   "peak_db": -8.199999809265137
+  },
+  {
+   "bar": 20,
+   "rms_db": -26.6,
+   "peak_db": -8.199999809265137
+  },
+  {
+   "bar": 21,
+   "rms_db": -22.3,
+   "peak_db": -8.0
+  },
+  {
+   "bar": 22,
+   "rms_db": -25.1,
+   "peak_db": -10.0
+  },
+  {
+   "bar": 23,
+   "rms_db": -21.0,
+   "peak_db": -8.800000190734863
+  },
+  {
+   "bar": 24,
+   "rms_db": -25.9,
+   "peak_db": -11.699999809265137
+  },
+  {
+   "bar": 25,
+   "rms_db": -22.3,
+   "peak_db": -6.900000095367432
+  },
+  {
+   "bar": 26,
+   "rms_db": -23.7,
+   "peak_db": -8.399999618530273
+  },
+  {
+   "bar": 27,
+   "rms_db": -24.2,
+   "peak_db": -12.100000381469727
+  },
+  {
+   "bar": 28,
+   "rms_db": -20.3,
+   "peak_db": -7.300000190734863
+  },
+  {
+   "bar": 29,
+   "rms_db": -18.5,
+   "peak_db": -5.699999809265137
+  },
+  {
+   "bar": 30,
+   "rms_db": -23.4,
+   "peak_db": -7.300000190734863
+  },
+  {
+   "bar": 31,
+   "rms_db": -20.7,
+   "peak_db": -6.199999809265137
+  },
+  {
+   "bar": 32,
+   "rms_db": -25.1,
+   "peak_db": -8.600000381469727
+  },
+  {
+   "bar": 33,
+   "rms_db": -57.8,
+   "peak_db": -44.900001525878906
+  }
+ ],
+ "instrumentation": {
+  "bsn": {
+   "family": "winds",
+   "notes": 12,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "cb": {
+   "family": "strings",
+   "notes": 35,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "cb_f1": {
+   "family": "strings",
+   "notes": 4,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "celesta": {
+   "family": "perc",
+   "notes": 1,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "cl": {
+   "family": "winds",
+   "notes": 13,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "door": {
+   "family": "winds",
+   "notes": 4,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "felt": {
+   "family": "piano",
+   "notes": 1,
+   "source": "sf2",
+   "credit": "Upright Piano KW by FreePats (CC0 1.0)"
+  },
+  "harm": {
+   "family": "strings",
+   "notes": 7,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "harp": {
+   "family": "strings",
+   "notes": 33,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "hn": {
+   "family": "brass",
+   "notes": 12,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "lead": {
+   "family": "chip",
+   "notes": 1,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "marimba": {
+   "family": "perc",
+   "notes": 12,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "rhodes": {
+   "family": "piano",
+   "notes": 16,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "svla": {
+   "family": "strings",
+   "notes": 3,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "svln": {
+   "family": "strings",
+   "notes": 7,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "timp": {
+   "family": "perc",
+   "notes": 1,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "tpt": {
+   "family": "brass",
+   "notes": 1,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vc": {
+   "family": "strings",
+   "notes": 73,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vla": {
+   "family": "strings",
+   "notes": 33,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vln1": {
+   "family": "strings",
+   "notes": 28,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vln2": {
+   "family": "strings",
+   "notes": 23,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  }
+ },
+ "credits": [
+  "GeneralUser GS by S. Christian Collins",
+  "Upright Piano KW by FreePats (CC0 1.0)",
+  "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+ ],
+ "audition": [
+  "the whole file: one procedure, never stopping -- does it ever feel like a loop that nags?",
+  "6.4, 14.4, 20.0, 22.8 s: the pulse leaves for each real post and line and the pedal holds: thin, not a hole?",
+  "47.1-48.1 s: the dial-tone rest, then the Lighthouse on the ring",
+  "52.2 s: the click cuts the Addendum; 55.3 s: the landing on \"How much?\" (sold)",
+  "72.7-76.9 s: the clockwork winds down and hangs on one held C: an ending, not a stall?",
+  "76.9 s: the REVERSAL on the card; 78.4 s the cut to one felt F4"
+ ],
+ "warnings": [
+  "marker at 6.4167 s: no clear onset within 10 ms ({'t': 6.4167, 'offset_ms': np.float64(18.0), 'strength': 1.84})",
+  "marker at 12.5 s: no clear onset within 10 ms ({'t': 12.5, 'offset_ms': np.float64(-14.7), 'strength': 1.94})",
+  "marker at 14.4167 s: no clear onset within 10 ms ({'t': 14.4167, 'offset_ms': np.float64(-43.4), 'strength': 1.77})",
+  "marker at 20.0 s: no clear onset within 10 ms ({'t': 20.0, 'offset_ms': np.float64(-50.7), 'strength': 2.0})",
+  "marker at 22.8333 s: no clear onset within 10 ms ({'t': 22.8333, 'offset_ms': np.float64(-54.6), 'strength': 1.49})",
+  "marker at 27.2083 s: no clear onset within 10 ms ({'t': 27.2083, 'offset_ms': np.float64(10.4), 'strength': 1.67})",
+  "marker at 31.9583 s: no clear onset within 10 ms ({'t': 31.9583, 'offset_ms': np.float64(39.0), 'strength': 1.79})",
+  "marker at 45.625 s: no clear onset within 10 ms ({'t': 45.625, 'offset_ms': np.float64(15.0), 'strength': 1.81})",
+  "marker at 56.8333 s: no clear onset within 10 ms ({'t': 56.8333, 'offset_ms': np.float64(-60.0), 'strength': 1.61})",
+  "marker at 59.9583 s: no clear onset within 10 ms ({'t': 59.9583, 'offset_ms': np.float64(36.4), 'strength': 2.15})",
+  "marker at 65.2083 s: no clear onset within 10 ms ({'t': 65.2083, 'offset_ms': np.float64(-29.6), 'strength': 2.68})",
+  "marker at 66.4167 s: no clear onset within 10 ms ({'t': 66.4167, 'offset_ms': np.float64(20.6), 'strength': 1.63})",
+  "marker at 67.625 s: no clear onset within 10 ms ({'t': 67.625, 'offset_ms': np.float64(-30.3), 'strength': 1.52})",
+  "marker at 70.5179 s: no clear onset within 10 ms ({'t': 70.5179, 'offset_ms': np.float64(36.8), 'strength': 1.67})",
+  "marker at 72.7083 s: no clear onset within 10 ms ({'t': 72.7083, 'offset_ms': np.float64(11.7), 'strength': 3.44})",
+  "marker at 73.4583 s: no clear onset within 10 ms ({'t': 73.4583, 'offset_ms': np.float64(-58.3), 'strength': 1.49})",
+  "marker at 78.375 s: no clear onset within 10 ms ({'t': 78.375, 'offset_ms': np.float64(41.0), 'strength': 1.6})"
+ ]
+}

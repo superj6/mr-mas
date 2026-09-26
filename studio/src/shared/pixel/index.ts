@@ -16,4 +16,7 @@ export * from './glyphDraw';
 export * from './ui';
 export * from './compose';
 export * from './freeze';
+export * from './genclip';
+export {isGenvideoPlate} from './plate';
 export {PixelScene} from './PixelScene';
+export {GenVideoScene, GenVideoPlayer, useGenClip, useGenDrawing, useGenFrame, loadGenManifest, loadGenDrawing} from './GenVideo';

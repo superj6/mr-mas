@@ -82,7 +82,7 @@
 
 | Ep | Window | Presence | What happens | Flashback involvement |
 |---|---|---|---|---|
-| **1** `research_preview` | Nov 2022–Dec 2023 | The banquet table | **Cold-open city (Nov 15, 2023):** *the APEC banquet with a standing ovation* [H]; *the chyron `HE WILL BE FIRED TOMORROW` scrolls past the banquet hall window.* | — |
+| **1** `research_preview` | Nov 2022–Dec 2023 | The banquet table | **Cold-open city (Nov 15, 2023):** *the APEC banquet with a standing ovation* [H]; *the banquet hall glows gold through the APEC window while the room freezes on Mas's calendar invite.* | — |
 | **4** `not_for_sale` | Jan–Apr 2025 | The symposium photo | **Feb 17:** *THE WHALE in the front row of the symposium photo* [V], the same month its pebble topples Nesnej's statue. | — |
 | **6** `backstop` | Sep–Dec 2025 | Podium + tollbooth | **Sep 17:** `15% OF ZERO` [H]. **Oct 30, Busan:** *the two podiums in one room* [H]. **Oct 31:** OCIAW proposed [H]. **Dec 8:** the sign reads 25% [P]. | — |
 | **8** `statute_of_limitations` | Apr–Jun 2026 | The Beijing banquet | **May 12–15:** *Air Force One lands; the banquet table has grown; NESNEJ, NOLE and MIT KOOC are seated one chair lower than their 2023 counterparts; the tollbooth waves 10 companies' H200s through* [V]. **Intro:** *the mirrored podium appears across the water.* | **Callback (2s):** the Ep1 APEC banquet photo on the wall of the Beijing hall, with one more seat drawn in. |

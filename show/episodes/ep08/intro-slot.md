@@ -1,36 +1,41 @@
 # EP08 · Intro slot
 
-Base spec: [intro/](../../intro/). Only the changing slots are listed.
+Master: [intro/SCRIPT.md §8](../../intro/SCRIPT.md#8-per-episode-changes-ep112-spoiler-safe), row 8. **The intro is an intro, not a recap.** Only five kinds of thing change, and items 2–5 show only what Eps 1–7 have already aired. **Nothing here states or hints at the verdict.**
 
-## At a glance
-| Slot | EP08 value | Notes |
-|---|---|---|
-| **Cold-open (dark-room) quote** | *"yes."* | Real (May 12–13, 2026 testimony) [V], shown in a court-transcript pane per [episode-slots §3](../../intro/episode-slots.md#3-cold-open-lines). Per the record he first said he believed so, then amended it: play a held hedge beat, then "yes.", then **the chart buffers**: a loading spinner sits where the `you are here` dot should slide, and it resolves one beat late. The first answer is never shown as a quote. The shortest quote of the season |
-| **9.1 (news)** | `TRIAL` | A courtroom door slams open on the downbeat |
-| **9.2 ("music fired")** | `EXPIRED.` + egg `NOLE LOSES. TO A CALENDAR.` | All stems mute; THE CALENDAR tears off one page (`2017.`) in silence. **Lint: 8 chars (>7).** Default: drop the period (`EXPIRED`, 7) |
-| **9.3 ("music rehired")** | `$965B` | The band slams back as MISANTHROPIC's lighthouse overtakes the cathedral |
-| **9.4 (transition object)** | The SPACEZ IPO rocket launches and carries the camera up into the skyline | Flame ≤80% white, no strobing |
-| **Skyline change** | Misanthropic's lighthouse briefly outgrows NopeAI, so the cyan curve's peak shifts; NopeAI's gargoyles become **goblins**; tiny JERDNA strolls across a bridge from one tower to the other | FINAL slot table |
-| **PODIUM state** (WC-INT §5) | **THE COUNTERPART's mirrored podium** appears across the water beside PEEKDEEP's whale water tower. The two podiums face each other. It pops on the same off-beat as RUMPT's, with no new SFX | — |
-| **Orb toast** | `human (probably)` | — |
-| **Title subtitle** | `saved by the calendar` | 21 chars ✓ |
+## The five changes
+| # | Change | EP08 value | Notes |
+|---|---|---|---|
+| 1 | **Cold-open line** | *"yes."* | Trial testimony, May 12–13, 2026 [V], in a court-transcript pane (egg: `Q. Are you completely trustworthy?`, wording to verify). Per the record he first said he believed so, then amended it, so the pane holds a beat before "yes." appears. Only "yes." is quoted, and the first answer is never shown. **No buffering:** the chart simply waits under room tone. The courtroom buffering is Ep8's own payoff (#17) |
+| 2 | **World state, after the fact** | See the next table | The skyline shows the aftermath of Eps 1–7 |
+| 3 | **Title subtitle** (last week's release note) | `ad-free* (*ad-supported)` | A callback to Ep7. 24 characters |
+| 4 | **Couch gag:** the keycap Mas pockets at Gerg's card | `CAPS LOCK` | Ep7's capital "I" [PROPOSAL, SCRIPT §8.1] |
+| 5 | **Roll-call evolution** (flashes 5–8) | Flash 8, the cursor window: the mouth | Flashes 5–7 unchanged from Ep7 |
 
-## Eggs that update
-| Egg | EP08 state |
+## World state, after the fact
+| Layer | EP08 state |
 |---|---|
-| `you are here` dot | Notch **8 of 12**, just below the knee. It *buffers* before sliding (the gag above) |
-| 1993 screen rotation (bar 3) | **35°**, glow of capitals |
-| Coat hook | +1 collar |
-| Gold threads | **4** (the Évian lunch) |
-| Firing tally | **4 marks**, plus a faint erased pencil ghost (egg-size, low contrast) |
-| KORG board | Mounted on the SPACEZ fairing; reads `KORG 4.?` (unverified at Jun 30); banner `KORG 5: NEXT QUARTER` |
-| Valuation tickers | NopeAI spire `$852B` · MISANTHROPIC lighthouse `$965B` (the first time a rival's ticker shows) |
-| COLOSSAL rent meter | A tiny meter on the zAI/SPACEZ tower's roof, spinning, with a cord to MISANTHROPIC |
+| **Skyline** | Misanthropic's `NO ADS` neon glows on the lighthouse, aimed across the water at NopeAI; an AROS tombstone in the park (both Ep7). SPACEZ swallowing zAI was ticker-only in Ep7, so it isn't drawn |
+| **Misanthropic's price tag** | `RETURNS · LATE FEE: $1.5B` (unchanged) |
+| **Hill, RUMPT's side** | The `SUPPLY CHAIN RISK` stamp mark on the lighthouse door, as Ep7 printed it: paperwork only, no meteor, no impact |
+| **Hill, the other side** | THE RECEIPT, a `STRONGLY WORDED` receipt, on the lighthouse roof (an object only; its source is never a character) |
+| **CZAR lanyard** | `(FORMER)` (Mar 26, 2026) |
+| **`you are here` marker** | x = 0.85 |
+| **1993 screen** (bar 3) | 35° |
+| **Desk tally** | `IIII`. No pencil ghost: that mark is made on the defense table and erased inside Ep8 |
+| **Coat-hook collars** | 6. Ep7 airs no pop (its Mar 31 close moved into Ep8's Act One), so the hook matches Ep7's; #7 pops inside this episode |
+| **Gold threads** | 3. The Évian thread is earned inside Ep8, so it shows from Ep9 |
+| **Orb toast** | `human (probably)` |
+| **Last bar** | Standard |
+
+## Retired from this sheet
+- **Deleted because they state the verdict:** `EXPIRED.` and its egg `NOLE LOSES. TO A CALENDAR.`, and THE CALENDAR tearing off `2017.` in the silent bar.
+- **Deleted with the news slot:** `TRIAL`, `$965B` (THE FLIP is this episode's Act Three), the SPACEZ IPO rocket transition, the lighthouse-overtakes-the-cathedral skyline change, the goblin gargoyles, the strolling JERDNA and the COLOSSAL rent meter egg. Each airs in Ep8 and may appear from Ep9's intro on.
+- **Deleted:** the buffering spinner on the `you are here` marker, the Ep8 subtitle `saved by the calendar` (it's last week's note in Ep9, not this one), and THE COUNTERPART's podium beat (SCRIPT places it in Ep10's skyline, after Ep9 airs it).
 
 ## Lint and safety
-- Must-read headline characters: `TRIAL` (5) ✓ · `EXPIRED.` (8) ✗ → `EXPIRED` (7) ✓ · `$965B` (5) ✓
-- The mirrored podium adds no text (0 new characters) ✓
-- The rocket launch is a single bright pass, ≤3 flashes per 24 frames ✓
+- New must-read text: the subtitle only (24 characters).
+- **For the intro owner:** SCRIPT §8.4 and episode-slots §7 still show 8 collars and a `BANNED` stamp for this row; this sheet is the newer value.
+- No flashes in the changing layers.
 
 ## Delivery note for the quote
-Flat and quiet. Hold the hedge beat (the record's "believed so"), then "yes." with no further breath. The comedy is in the room afterwards, so hold two beats of total silence (the buffering) before the piano note lands. The cursor doesn't blink during the buffer, and resumes on the note.
+Flat and quiet. Hold the hedge beat, then "yes." with no further breath. The room tone carries the wait, and the piano note lands in it. The cursor blinks at its standard rate throughout.

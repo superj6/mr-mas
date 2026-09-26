@@ -1,4 +1,7 @@
-"""record.py - record every line of Ep1 Act Four (draft 3.1), pick takes by measurement, export.
+"""SUPERSEDED for draft 3.2 by record_32.py (2026-09-25): running this would overwrite the 3.2 deliverables with the 3.1 pass.
+Kept because the 3.2 tools import from it.
+
+record.py - record every line of Ep1 Act Four (draft 3.1), pick takes by measurement, export.
 
 Run:  HF_HUB_OFFLINE=1 audio/.venv-casting/bin/python audio/ep01/act4/dialogue/tools/record.py [line-id ...]
       (no ids = the whole act; ids re-record just those lines and merge into lines.json)

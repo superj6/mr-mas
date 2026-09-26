@@ -1,0 +1,618 @@
+[
+ {
+  "id": "S1.01",
+  "tag": "[W]",
+  "cls": "W",
+  "framing": "W",
+  "st": "v2 24.01 suiteRoom (truck, shiver) + desk sprite + Orb; DRIFT toward the desk, 1 px / 6 f (12 px)",
+  "standin": false
+ },
+ {
+  "id": "S1.02",
+  "tag": "[ECU]",
+  "cls": "ECU",
+  "framing": "ECU-HANDS",
+  "st": "inserts-mas drawNudgeInsert (suite): set -> NUDGE -> out1 -> out2 -> gone; BLUEPRINT_PRINT as the glow floods",
+  "standin": false
+ },
+ {
+  "id": "S1.03",
+  "tag": "[GFX·sheet]",
+  "cls": "GS",
+  "framing": "BP-SHEET",
+  "st": "plan4.ts: THE PLAN as ONE 480 x 330 sheet at the section scale (bpChair row, two-line plates, invite icons, bpBox, bpArrow, the CEO box + fence + key ring); S1.03 tilt oy 0 -> 60 at 1 px/f; S1.04 one fixed 2x crop; S1.05 the path, curl, tear",
+  "standin": false
+ },
+ {
+  "id": "S1.04",
+  "tag": "[GFX·detail 2x]",
+  "cls": "GD",
+  "framing": "BP-DETAIL",
+  "st": "plan4.ts: THE PLAN as ONE 480 x 330 sheet at the section scale (bpChair row, two-line plates, invite icons, bpBox, bpArrow, the CEO box + fence + key ring); S1.03 tilt oy 0 -> 60 at 1 px/f; S1.04 one fixed 2x crop; S1.05 the path, curl, tear",
+  "standin": false
+ },
+ {
+  "id": "S1.05",
+  "tag": "[GFX·sheet]",
+  "cls": "GS",
+  "framing": "BP-SHEET",
+  "st": "plan4.ts: THE PLAN as ONE 480 x 330 sheet at the section scale (bpChair row, two-line plates, invite icons, bpBox, bpArrow, the CEO box + fence + key ring); S1.03 tilt oy 0 -> 60 at 1 px/f; S1.04 one fixed 2x crop; S1.05 the path, curl, tear",
+  "standin": false
+ },
+ {
+  "id": "S1.06",
+  "tag": "[ECU]",
+  "cls": "ECU",
+  "framing": "ECU-HANDS",
+  "st": "inserts-mas drawClickInsert: BOARD · VIDEO CALL · JOIN, the click on the mark; connecting…",
+  "standin": false
+ },
+ {
+  "id": "S1.07",
+  "tag": "[POV]",
+  "cls": "SW",
+  "framing": "SCREEN",
+  "st": "callgrid on ONE clock: G5 (tiles open, votes flipped, Wi-Fi egg) + nameCard NELEH -> G5 + callDialog on the beat (v4.1: the speaker-view pin on ALYI is cut)",
+  "standin": false
+ },
+ {
+  "id": "S1.08",
+  "tag": "[ECU]",
+  "cls": "ECU",
+  "framing": "ECU-EYES",
+  "st": "mas-cu drawEyesStrip (letterboxed): the pupils move one pixel toward the dialog on the mark",
+  "standin": false
+ },
+ {
+  "id": "S1.09",
+  "tag": "[POV]",
+  "cls": "SW",
+  "framing": "SCREEN",
+  "st": "callgrid G5 + dialog + drawPointer with a big collaborator tag (ALYI, his accent) stepping from his tile; the click; 26.06b's drop (GLYPH dissolve, tokens approximated) + G5 -> G4; the call's notice \"You've been removed from the meeting.\"",
+  "standin": false
+ },
+ {
+  "id": "S1.10",
+  "tag": "[CU]",
+  "cls": "CU",
+  "framing": "CU",
+  "st": "mas-cu drawMasCU (strip): ONE silent drawing; the rail +1 FIRING types on its second beat",
+  "standin": false
+ },
+ {
+  "id": "S1.11",
+  "tag": "[ECU]",
+  "cls": "ECU",
+  "framing": "ECU-HANDS",
+  "st": "inserts-mas drawStripTapInsert: the buzz (f0), [super] x3 (f2), the tap at once (f8); the mic chip still lit",
+  "standin": false
+ },
+ {
+  "id": "S1.12",
+  "tag": "[OTS]",
+  "cls": "OTS",
+  "framing": "OTS",
+  "st": "v3 26.09 [OTS] shoulder(masPortrait) over drawLaptopInsert, G4 frozen on \"super.\" + fallaway() over the last 20 f (the bridge to night)",
+  "standin": false
+ },
+ {
+  "id": "S2.01",
+  "tag": "[ECU]",
+  "cls": "ECU",
+  "framing": "ECU-HANDS",
+  "st": "inserts-mas drawCarveInsert (a stroke a beat) -> drawBrushInsert + DRIFT 1 px / 8 f (11 px)",
+  "standin": false
+ },
+ {
+  "id": "S2.02",
+  "tag": "[ECU·top]",
+  "cls": "ECU",
+  "framing": "ECU-HANDS",
+  "st": "v4.1: the marks at insert scale (inserts-mas drawBrushInsert, its last step) + the Orb's eye-light as a cyan pool, stepping onto mark 1",
+  "standin": false
+ },
+ {
+  "id": "S2.03",
+  "tag": "[F1.2 · EARLY-WEB16]",
+  "cls": "W",
+  "framing": "W",
+  "st": "F1.2 inside the count: renderFront from the lit mark 1 (the marks ECU) -> EARLYWEB16 rooms-a drawTpoolDoor (two shadows lean together) -> back to the marks, the light on mark 2",
+  "standin": false
+ },
+ {
+  "id": "S2.04",
+  "tag": "[ECU·top]",
+  "cls": "ECU",
+  "framing": "ECU-HANDS",
+  "st": "v4.1: the marks ECU: the light on mark 2, then on mark 3 = his thumb",
+  "standin": false
+ },
+ {
+  "id": "S2.05",
+  "tag": "[ECU·Orb]",
+  "cls": "ECU",
+  "framing": "ECU-ORB",
+  "st": "v3 26A.03 [ECU·Orb] the iris (drawOrb r 84) + orbStep: thumb -> his face; toast rewinding…; 2-frame WHIP-OUT (the badge flips on it)",
+  "standin": false
+ },
+ {
+  "id": "S3.01",
+  "tag": "[SCR]",
+  "cls": "SW",
+  "framing": "SCREEN",
+  "st": "callgrid G4 (her gallery order) in the [SCR] bezel; \"super.\" through the laptop speaker + the call's live caption; nobody looks up; 2-frame WHIP-IN",
+  "standin": false
+ },
+ {
+  "id": "S3.02",
+  "tag": "[HIGH]",
+  "cls": "ECU",
+  "framing": "HIGH-TABLE",
+  "st": "[HIGH] rooms-a drawTableInsert (blueprint, the step list) + the laptop's edge (her call, 1:2) + the charter; tick 1, the pen runs down 2 · 3 · 4 ______ and stops on the blank (v4.1: no tick 2: the post is step 2); pen hand = clickHand (MARKED)",
+  "standin": false
+ },
+ {
+  "id": "S3.03",
+  "tag": "[SCR]",
+  "cls": "SC",
+  "framing": "SCREEN",
+  "st": "[SCR] her laptop: the NopeAI blog page in its own UI (the quote in the page's type, the date), bezel in frame",
+  "standin": false
+ },
+ {
+  "id": "S3.04",
+  "tag": "[MCU]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "[MCU] RIMA right third (rimaSpeakPortrait) under the hard spotlight IN the boardroom's CEO chair (its high back behind her); one setup for the exchange; platePx on \"More. Soon.\"",
+  "standin": false
+ },
+ {
+  "id": "S3.05",
+  "tag": "[SCR]",
+  "cls": "SW",
+  "framing": "SCREEN",
+  "st": "callgrid G4 (her order) [SCR] + Gerg's post as the call's notification (post-ui stand-in) + keycapRain; no toast",
+  "standin": true
+ },
+ {
+  "id": "S3.06",
+  "tag": "[W]",
+  "cls": "W",
+  "framing": "W",
+  "st": "rooms-b bullpen all-hands (hand up on the mark) + drawAlyiStand clipped to the doorway; framed for the MATCH CUT from his tile's doorway",
+  "standin": false
+ },
+ {
+  "id": "S3.07",
+  "tag": "[MCU·door]",
+  "cls": "MCU",
+  "framing": "MCU-FRAME",
+  "st": "v3 27.08 [MCU·door] ALYI right third (alyiSpeakPortrait), the jamb + leaf over the all-hands soft 1; v4.1 platePx ALYI · HIS CO-FOUNDER, CHIEF SCIENTIST",
+  "standin": false
+ },
+ {
+  "id": "S3.09",
+  "tag": "[HIGH]",
+  "cls": "ECU",
+  "framing": "HIGH-TABLE",
+  "st": "[HIGH] her desk at night (drawTableInsert blueprint + a lamp pool): THE PLAN's CEO box and its EQUITY: 0 stamp + her phone face-up with his 9:32 post (post-ui stand-in); her pen taps the stamp; nothing new is stamped",
+  "standin": true
+ },
+ {
+  "id": "S4.01",
+  "tag": "[SCR]",
+  "cls": "SW",
+  "framing": "SCREEN",
+  "st": "avalanche planPile / drawPile on the board's grid (G5 with Rima) on the boardroom's wall screen ([SCR] bezel), re-clocked so the one BLUE heart lands last on Mada's spinner; his post (postChip) scrolls in and holds",
+  "standin": false
+ },
+ {
+  "id": "S4.02",
+  "tag": "[W]",
+  "cls": "W",
+  "framing": "W",
+  "st": "rooms-a boardroom wide at night (held): phones lit + buzzing with caller IDs, blueprint (1-3, 4 blank), the QV laptop, the empty CEO chair; NELEH, MADA, ALYI in the glass; the wall screen small with the buried call",
+  "standin": false
+ },
+ {
+  "id": "S4.03",
+  "tag": "[MCU]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "[MCU] NELEH right third facing left (nelehPortrait), the boardroom plate soft 2: the board's-side rule",
+  "standin": false
+ },
+ {
+  "id": "S4.04",
+  "tag": "[OTS]",
+  "cls": "OTS",
+  "framing": "OTS",
+  "st": "v3 27.14 [OTS] over NELEH onto the dark window (alyiReflection), MIRRORED so her shoulder is right and she looks screen-left",
+  "standin": false
+ },
+ {
+  "id": "S4.06",
+  "tag": "[2S]",
+  "cls": "M",
+  "framing": "2S",
+  "st": "twoshots drawBoard2S: NELEH looking down (lip-sync), MADA, ALYI's reflection between them (lip-sync); its 2-frame flicker on the mark",
+  "standin": false
+ },
+ {
+  "id": "S4.07",
+  "tag": "[MCU·PF]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "[MCU·PF] NELEH right third at the blank line; the boardroom steps down behind her in held steps (the fallaway)",
+  "standin": false
+ },
+ {
+  "id": "S4.08",
+  "tag": "[SPLIT]",
+  "cls": "M",
+  "framing": "SPLIT",
+  "st": "[SPLIT] two 238 x 203 panes: LEFT the boardroom (the speakerphone's four tones; Neleh leaning in) | RIGHT rooms-b lighthouseRoom (Mario, Adelina, the throne, phone 1 and 2, the meters already full); plate, the click, the rail",
+  "standin": false
+ },
+ {
+  "id": "S4.09",
+  "tag": "[SCR]",
+  "cls": "SC",
+  "framing": "SCREEN",
+  "st": "rooms-a drawLobbyCam [SCR] (label NOPEAI HQ · LOBBY) on the boardroom screen + mas-stand walking in with the lanyard + the CCTV's tracking box GUEST; his post the right way up",
+  "standin": true
+ },
+ {
+  "id": "S4.10",
+  "tag": "[W]",
+  "cls": "W",
+  "framing": "W",
+  "st": "rooms-a boardroom wide: the spot swings off the empty CEO chair onto TTEMME (3 held positions), a BLANK sticky note; platePx TTEMME · INTERIM CEO #2",
+  "standin": false
+ },
+ {
+  "id": "S4.11",
+  "tag": "[LOW·desk]",
+  "cls": "MCU",
+  "framing": "DESK-LOW",
+  "st": "[LOW·desk] TTEMME right third (ttemmePortrait) + chat overlay; the table edge + the hourglass BIG in front: kits/props hourglass flipped in its 3 held drawings, at 2x (MARKED stand-in); RACK hourglass -> him",
+  "standin": true
+ },
+ {
+  "id": "S4.12",
+  "tag": "[2S]",
+  "cls": "M",
+  "framing": "2S",
+  "st": "v3 27.28 twoshots drawBoard2S: the wall steps to slate; the door appears in held steps and opens; TASYA in it (re-clocked on the marks)",
+  "standin": false
+ },
+ {
+  "id": "S4.13",
+  "tag": "[MCU·door]",
+  "cls": "MCU",
+  "framing": "MCU-FRAME",
+  "st": "[MCU·door] TASYA right third (tasyaSpeakPortrait, key ring jangling) framed by the new doorway, slate light; platePx first, then his sign MAS · GERG -> (a flat card, pt)",
+  "standin": false
+ },
+ {
+  "id": "S4.14",
+  "tag": "[HIGH]",
+  "cls": "ECU",
+  "framing": "HIGH-TABLE",
+  "st": "[HIGH] drawTableInsert (blueprint, 1-3 ticked, 4 blank) + her ? in three strokes as she asks \"Step four?\"; her marker hand = clickHand (MARKED)",
+  "standin": false
+ },
+ {
+  "id": "S4.15",
+  "tag": "[MCU]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "v3 27.31 [MCU] MADA right third (madaPortrait) + his spinner, the boardroom soft; he doesn't answer",
+  "standin": false
+ },
+ {
+  "id": "S5.01",
+  "tag": "[GFX]",
+  "cls": "GFX",
+  "framing": "GFX",
+  "st": "kit.cards (stand-in): the chapter door WHAT THEY DIDN'T KNOW",
+  "standin": true
+ },
+ {
+  "id": "S5.02",
+  "tag": "[ECU]",
+  "cls": "ECU",
+  "framing": "ECU-PROP",
+  "st": "v2 29.00 rooms-b drawDarkDesk: the home shot, the glass (water line flat) + the GUEST lanyard laid square",
+  "standin": false
+ },
+ {
+  "id": "S5.03",
+  "tag": "[ECU]",
+  "cls": "ECU",
+  "framing": "ECU-HANDS",
+  "st": "inserts-mas drawPhoneInsert29 (the true shot, hearted on the beat) with feedStandIn + RIMA TAMURI legible on the first (oldest) card, then the flood (post-ui stand-in)",
+  "standin": true
+ },
+ {
+  "id": "S5.04",
+  "tag": "[2S]",
+  "cls": "M",
+  "framing": "2S",
+  "st": "twoshots drawDark2S + orbToLanyard (the lanyard in frame): the iris steps off the phone onto the lanyard on the mark",
+  "standin": false
+ },
+ {
+  "id": "S5.05",
+  "tag": "[MCU]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "v3 29.05 [MCU] MAS left third turned to the Orb + the Orb soft; RACK Mas -> the Orb after \"mostly.\"",
+  "standin": false
+ },
+ {
+  "id": "S5.06",
+  "tag": "[POV]",
+  "cls": "SC",
+  "framing": "SCREEN",
+  "st": "[POV] his monitor: the staff letter as ONE page (pt lettering) with a whole-px scroll (<= 40 px); avalanche odometer + odoRoll in its corner; drawAlyiTile thumbnail with the flipped vote; the chime + servo off picture",
+  "standin": true
+ },
+ {
+  "id": "S5.08",
+  "tag": "[ECU·insert]",
+  "cls": "ECU",
+  "framing": "ECU-PROP",
+  "st": "[ECU·insert] the check slides down out of the rack's slot and lies flat (4 held steps): a flat paper insert (guilloche border, pt lettering): PAY TO: NOPEAI STAFF · ~$86B VALUATION · EVIRHT · MEMO: STAFF SHARE SALE; VOID IF CEO MISSING stamped beside the figure",
+  "standin": false
+ },
+ {
+  "id": "S5.09",
+  "tag": "[OTS]",
+  "cls": "OTS",
+  "framing": "OTS",
+  "st": "[OTS] gerg-medium drawGergMediumPOV full on his monitor (lip-sync) -> the glance up into his camera (head up, keys stop) -> typing again; shoulder(masPortrait) in front, the monitor's green as his rim",
+  "standin": false
+ },
+ {
+  "id": "S5.09b",
+  "tag": "[POV]",
+  "cls": "SC",
+  "framing": "SCREEN",
+  "st": "v4.1 swaps-act4 drawGergTileWide: his tile fills the frame; the glance into his camera, at Mas, held; then his eyes drop and he types (the keys return)",
+  "standin": false
+ },
+ {
+  "id": "S5.11",
+  "tag": "[2S]",
+  "cls": "M",
+  "framing": "2S",
+  "st": "twoshots drawDark2S: the slate door's held steps from the mark (v4.1: no V.O.); TASYA (O.S.); v4.2: his sign MAS / GERG / -> taped to the door",
+  "standin": false
+ },
+ {
+  "id": "S5.12",
+  "tag": "[MCU]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "v3 29.17 [MCU] MAS left third, not turning; the slate door soft over his shoulder; RACK Mas -> the door after the line; v4.2: Tasya's sign on the door, stepped with the rack",
+  "standin": false
+ },
+ {
+  "id": "S6.01",
+  "tag": "[POV]",
+  "cls": "SW",
+  "framing": "SCREEN",
+  "st": "avalanche planGridStack / drawGridStack on the board grid (his monitor, locked), sampled on ONE clock across S6; the letter's 745 / 770 static in the corner",
+  "standin": false
+ },
+ {
+  "id": "S6.02",
+  "tag": "[MCU·PF]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "[MCU·PF] MAS left third, the monitor off frame lighting him; each landing steps the room's light, never his face",
+  "standin": false
+ },
+ {
+  "id": "S6.03",
+  "tag": "[POV·half]",
+  "cls": "SC",
+  "framing": "SCREEN",
+  "st": "[POV·half] ALYI's own tile (drawAlyiTile) grown from his grid place (the grid tile blanked: one face) on the same clock: shoved sideways, resists one beat, slides off; the notice ALYI left the call",
+  "standin": false
+ },
+ {
+  "id": "S6.04",
+  "tag": "[POV·half]",
+  "cls": "SC",
+  "framing": "SCREEN",
+  "st": "[POV·half] NELEH's own tile (drawNelehTile, lip-sync; her grid tile blanked) over the stack; footnotes scatter; on \"char\" it leaves the frame; the notices stack",
+  "standin": false
+ },
+ {
+  "id": "S6.06",
+  "tag": "[POV]",
+  "cls": "SW",
+  "framing": "SCREEN",
+  "st": "v4.1 S6.05 + S6.06 as ONE shot: the grid on the same clock, THE QUIET VOTE's black tile pushed out (its notice); then MADA's own grid tile grows to half the frame in 3 held steps (the grid tile gone, not doubled); the label MADA · LAST FIRER STANDING flips in 3 held steps on the mark and holds",
+  "standin": false
+ },
+ {
+  "id": "S7.01",
+  "tag": "[P2 BOX]",
+  "cls": "BOX",
+  "framing": "BOX",
+  "st": "[P2] BOX (the act's one deliberate box): twoshots drawDoorwayP2 re-clocked on the marks (hearts, Alyi looks up, the IOU) + the GUEST lanyard lying on his desk in his window, not worn; post-ui stand-in",
+  "standin": true
+ },
+ {
+  "id": "S7.02",
+  "tag": "[W]",
+  "cls": "W",
+  "framing": "W",
+  "st": "rooms-b bullpen walkout (coats, packed boxes; Mas small at his end desk; Tasya mid-floor): the establishing wide, held (v4.1: the line and the slate steps move to S7.02b)",
+  "standin": false
+ },
+ {
+  "id": "S7.02b",
+  "tag": "[MCU]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "v4.1 [MCU] TASYA right third (tasyaSpeakPortrait, lip-sync) over the bullpen walkout soft 2; behind him the floor / ceiling / walls step to slate in 3 held steps on \"below / above / around\"",
+  "standin": false
+ },
+ {
+  "id": "S7.03",
+  "tag": "[MCU·PF]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "v3 30.06 [MCU·PF] MAS left third, eyes down (masLookDown) over the all-slate bullpen soft",
+  "standin": false
+ },
+ {
+  "id": "S7.05",
+  "tag": "[M]",
+  "cls": "M",
+  "framing": "M",
+  "st": "twoshots drawMadaM (the boardroom plate with fires, mada-medium): perfectly still among the fires",
+  "standin": false
+ },
+ {
+  "id": "S7.06",
+  "tag": "[W]",
+  "cls": "W",
+  "framing": "W",
+  "st": "rooms-a boardroom wide (FIRES_SC30), ONE held setup: the door bangs (SHAKE_DOOR), TERB in, the helmet -> FULL FREEZE (2-tone) + Mas walking through in colour, the pin + nameCard TERB -> unfreeze, Mas by Terb; the look-around; \"…Ah.\"",
+  "standin": true
+ },
+ {
+  "id": "S7.07",
+  "tag": "[2S]",
+  "cls": "M",
+  "framing": "2S",
+  "st": "twoshots drawCalmOff2S: THE CALM-OFF, two still men; Terb sprays behind them; keycaps; MADA's \"Good question.\" lip-synced in the same frame",
+  "standin": false
+ },
+ {
+  "id": "S7.08",
+  "tag": "[MCU]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "v3 30.14 [MCU] MAS left third, near-front, warm, the fires soft; one beat late",
+  "standin": false
+ },
+ {
+  "id": "S7.09",
+  "tag": "[2S]",
+  "cls": "M",
+  "framing": "2S",
+  "st": "twoshots drawCalmOff2S (the S7.07 setup): HOLD; the spinner stops, the nod, Terb's hand stamps the term sheet and hands it over (re-clocked on the marks)",
+  "standin": false
+ },
+ {
+  "id": "S7.10",
+  "tag": "[ECU·insert]",
+  "cls": "ECU",
+  "framing": "ECU-PROP",
+  "st": "[ECU·insert] the term sheet: a flat paper card (pt): TERMS · 1. CEO: MAS MANALT, the rest folded under (the blueprint fold, in paper colours)",
+  "standin": false
+ },
+ {
+  "id": "S7.11",
+  "tag": "[POV]",
+  "cls": "SC",
+  "framing": "SCREEN",
+  "st": "v4.1: his phone (a drawn phone: bezel, camera notch, the clock), lit green over the boardroom (fires) stepped down; GERG's post on it (on the lock's cue); keycaps pop off the screen",
+  "standin": true
+ },
+ {
+  "id": "S7.13",
+  "tag": "[HIGH]",
+  "cls": "ECU",
+  "framing": "HIGH-TABLE",
+  "st": "[HIGH] drawTableInsert (prop) + kits props hourglass L: the last grain; TTEMME's post (post-ui stand-in); hairlines, then the shatter on the post's last beat; the sand holds a beat, then falls",
+  "standin": true
+ },
+ {
+  "id": "S8.01",
+  "tag": "[LOW]",
+  "cls": "W",
+  "framing": "LOW-ROOM",
+  "st": "v3 30.19 rooms-a lobby at night cropped on the sign (the sign ignites 1,2,1,2,3); Mas small at the desk (crop stand-in for a true low angle)",
+  "standin": true
+ },
+ {
+  "id": "S8.02",
+  "tag": "[ECU]",
+  "cls": "ECU",
+  "framing": "ECU-PROP",
+  "st": "rooms-a drawSignFloorInsert: the box of spare 0 plates set down under the sign + a drawn gloved hand (stand-in art, no label)",
+  "standin": true
+ },
+ {
+  "id": "S8.03",
+  "tag": "[OTS-W]",
+  "cls": "OTS",
+  "framing": "OTS",
+  "st": "rooms-a lobby night + callgrid callDialog: Cancel greys a dither step a beat; drawPointer with an EMPTY tag clicks: bonk, the dialog SHAKES (shakeAt), refused; tries again; shoulder(masPortrait) tungsten rim",
+  "standin": false
+ },
+ {
+  "id": "S8.04",
+  "tag": "[CU]",
+  "cls": "CU",
+  "framing": "CU",
+  "st": "v2 30.25 mas-cu drawMasCU (lobby): the same ONE silent drawing, the tungsten behind him",
+  "standin": false
+ },
+ {
+  "id": "S8.05",
+  "tag": "[ECU]",
+  "cls": "ECU",
+  "framing": "ECU-HANDS",
+  "st": "inserts-mas drawNudgeInsert (lobby): held -> set -> NUDGE; the desk top recoloured to the reception desk's pale stone + a brass edge (the lobby, not the suite's wood)",
+  "standin": true
+ },
+ {
+  "id": "S8.06",
+  "tag": "[ECU]",
+  "cls": "ECU",
+  "framing": "ECU-PROP",
+  "st": "v2 31.01 inserts-props drawVaultInsert: Q*, the sticky note, humming on F",
+  "standin": false
+ },
+ {
+  "id": "S8.07",
+  "tag": "[MCU-2]",
+  "cls": "MCU",
+  "framing": "MCU-2",
+  "st": "[MCU-2] the frameless 50/50: MAS left + GERG right (gergGlow) over the bullpen by day soft 1; the Q* vault drawn at room scale between them + the Orb at his shoulder looking at it; RACK to the sticky note; Gerg reads it and walks out",
+  "standin": true
+ },
+ {
+  "id": "S8.08",
+  "tag": "[MCU]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "v3 31.03 [MCU] MAS left third at his desk reading the memo aloud (masPortrait, warm) over the bullpen soft; lip-sync",
+  "standin": false
+ },
+ {
+  "id": "S8.09",
+  "tag": "[ECU]",
+  "cls": "ECU",
+  "framing": "ECU-PROP",
+  "st": "rooms-a drawChairBackInsert (the boardroom chair back, SCORCHED by sc 30's fire): four screws, four beats; the ALYI plate comes off + a drawn hand and screwdriver (no label)",
+  "standin": true
+ },
+ {
+  "id": "S8.10",
+  "tag": "[W]",
+  "cls": "W",
+  "framing": "W",
+  "st": "rooms-b bullpen (window corner, door shut) + a drawn Macrosoft-blue folding chair (4 held drawings) + its label MACROSOFT · OBSERVER (NON-VOTING); Tasya's key ring drops onto the seat",
+  "standin": true
+ }
+]

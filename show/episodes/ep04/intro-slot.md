@@ -1,56 +1,23 @@
 # ep04 · intro slot
 
-Spec: [intro/spec.md](../../intro/spec.md); season table: [intro/episode-slots.md](../../intro/episode-slots.md). Bars 1–8 are shared. **This episode has two changes inside bars 1–8** (the gold thread and the 1993 screen rotation), both flagged below.
+Spec: [intro/SCRIPT.md §8](../../intro/SCRIPT.md#8-per-episode-changes-ep112-spoiler-safe), row 4 (v2.1). **Only five things change, and none of them shows this episode's plot.** Items 2–5 show only what Eps 1–3 have already aired; item 1 is the epigraph, words only in their own medium. The v2.0 bar-9 news slot is retired, so this sheet no longer carries `$500B` / `−$589B` / `NOPE.`, and the old subtitle `not for sale` (this episode's own outcome) is gone. Source detail: [episode-slots.md](../../intro/episode-slots.md) (v1 reference; SCRIPT wins where they differ).
 
-| Slot | Ep4 value | Notes |
-|---|---|---|
-| **Cold-open quote** | **"…our GPUs are melting."** [K]† | Late Mar 2025. Full line: "it's super fun seeing people love images in chatgpt. but our GPUs are melting." [K]† Displayed **verbatim with the trim marked**, per the shared **source-fidelity rule** ([spec §3.3](../../intro/spec.md)). That supersedes v1's `our gpus are melting.` The Ep7 gag is now "the first capital *I* he posts", so the acronym's capitals don't spend it. Re-verify the post text. See [open-questions](open-questions.md) #2 |
-| **Bar 9.1** (news) | **`$500B`** | The GATESTAR ring rises out of the glossy re-skin, and its chevrons clunk like a register. Egg: `COMING SOON` behind the event horizon |
-| **Bar 9.2** (the music is fired) | **`−$589B`** | A pebble topples INVIDIA's gold statue. Every stem mutes to a single dry piano note |
-| **Bar 9.3** (the music is rehired) | **`NOPE.`** | "not for sale": Mas taps the third suggested reply, and the band slams back. Egg: the tumbleweed decimal `$9.74B` |
-| **Bar 9.4** (transition object) | **Melting drips fall upward** | Red-hot GPU drips rise and cool into the dusk stars |
-| **Skyline state** | Changes: see the list below the table | — |
-| **RUMPT / THE PODIUM** | **Lit gold, with a thin gold wire to NopeAI's GATESTAR ring** (to the ring's **top**, never to the yacht) | Far-left hill, appears at f622 with **no new SFX** (the Ep3 clink doesn't repeat). The cyan curve never touches it. No name card; he's never in bars 1–8. [PROPOSAL, shared]: **NEDIB's inkwell is gone** (EO 14148, Jan 20, 2025 [P]) |
-| **Orb toast** | **`verified: human`** | — |
-| **Title subtitle** | **`not for sale`** | 12 characters |
-| **`you are here` dot** | x = 0.65 | — |
+## The five changes
 
-**Skyline changes:**
-- The Whale **breaches**, and INVIDIA's tower sinks 17% (it recovers by the next episode).
-- The **GATESTAR ring** stands beside NopeAI, flickering on IOUs, with **YRRAL's yacht moored beneath it**. The yacht appears here only, never in an episode shot with RUMPT (WC-crit §D30).
-- **SAMA NOS's banknote balloon** arrives. Per crit-fair, Ep4 is his first skyline appearance.
-- The **MACHINES THINKING** tower goes up.
-- **zAI's gantry swallows a giant Z.**
+| # | Change | Ep4 value | Notes |
+|---|---|---|---|
+| 1 | **Cold-open line** (f18–112) | *"…our GPUs are melting."* | Post, late Mar 2025 [K]†/[H]. Full: "it's super fun seeing people love images in chatgpt. but our GPUs are melting." Displayed verbatim with the trim marked, keeping the source's "GPUs" ([spec §3.3](../../intro/spec.md)). The words only: none of #21's paint front or melt. Re-verify the post's casing and punctuation ([open-questions](open-questions.md) #2) |
+| 2 | **World state, after Eps 1–3** | **Skyline:** a strawberry on the spire; a revolving door; a GPU Christmas tree (SHIPMAS). **Misanthropic's price tag:** the last plank of the *Loving Grace* bridge is a job listing. **Hill:** THE PODIUM turns to face us, lit gold, with its coin slot (Ep3's button), static and silent; across it, a scroll stamped `VETOED` bobs in the bay under the lighthouse, and NEDIB's inkwell stays. **CZAR lanyard:** `SKCAS` | No glint and no clink on the podium, because the other side's scroll gets no beat either. Nothing from Ep4: THE WHALE's breach, INVIDIA's sunken tower, the GATESTAR ring and its gold wire all wait for Ep5's intro |
+| 2 | **Small room layers** | `you are here` marker at x 0.65 · 1993 screen **10°** (a new authored drawing) · desk tally `III` · coat hook 4 collars · gold threads: none | The screen shows nothing readable, so the 10° turn previews nothing. The first thread is earned in this episode and first shows in Ep5 |
+| 2 | **Orb toast · last bar** | `verified: human` · standard | Ambient, not events |
+| 3 | **Title subtitle** (last week's release note) | `thinking… ($200/mo)` | Ep3's release (+18 at 4 cps) [verify the price wording] |
+| 4 | **Couch gag** (f270–284) | Mas pockets `SHIFT` | Ep3's for-profit shift: a callback, never a preview |
+| 5 | **Roll call** (flashes 5–8) | RIMA: neutral grey fill, her light on an empty lot (Ep3 aired her resignation) · THE WHALE: unchanged (budget breach, plate `PEEKDEEP`) · RUMPT: **filled in** (Ep3 aired the reveal), a stylized caricature at a gold podium with a coin slot, pointing · the cursor window: one eye | RUMPT never gets hair, skin, weight, hand-size or age cues, and never a fist pump |
 
-## Changes inside bars 1–8 (need an Ep4+ re-render)
-| Change | Where | Spec |
-|---|---|---|
-| **Gold thread** in Mas's hoodie | Cold open, bars 1–2 | One gold thread, after the Roosevelt Room visit. **No new text.** It rides alongside the collar count (WC-cast §5). It adds one thread per episode in which he meets RUMPT in person ([recurring gags G06](../../gags/recurring-gags.md#1-mass-tells)) |
-| **1993 screen rotation** | Bar 3 | The kid's screen turns **10°** from Ep4 onward (WC-fb §2, the multi-part escalation), after F4.2 airs "the other 1993". The screen content is still unreadable |
-
-## Per-episode eggs
-| Egg | Ep4 state |
-|---|---|
-| Firing tally | **4 marks**. The new one is labeled in microtext `$97.4B` |
-| Coat hook | 5 collars |
-| KORG split-flap | `KORG 3` [K] |
-| Valuation ticker | `$300B` [V] |
-| Countdown clock | `A FEW THOUSAND DAYS (!)`, one digit fewer |
-| Moonshine still | A tiny still on the Whale's water tower (the first appearance of the distillation gag) |
+**Dormant eggs** (SCRIPT doesn't carry them; if the intro owner revives them, use the one-behind values): KORG board `KORG 2` [K] · valuation ticker `$157B` (Oct 2, 2024) [V].
 
 ## Text-density check
-New must-read text in the slot:
+New must-read text: the subtitle (19) and the toast (15). The cold-open line is spoken as well as typed. Nothing on the hill, the skyline or the roll call is must-read.
 
-| Item | Characters |
-|---|---|
-| `$500B` | 5 |
-| `−$589B` | 6 |
-| `NOPE.` | 5 |
-| Subtitle | 12 |
-| Toast | 15 |
-
-The podium adds 0 characters. The gold thread and the screen rotation add none.
-
-## Notes
-- **Collision check.** The podium's 11.2 pop has no SFX. NESNEJ's KA-CHING on 10.4 still rings, but **detuned a semitone flat** (a bruised ka-ching) for the −$589B episode. **True silence is reserved for Ep12**, where the register finally stops.
-- **The yacht rule.** YRRAL's yacht sits under the ring in the skyline. RUMPT's podium is on the far-left hill. Keep them at least a third of the frame apart and never in the same camera move.
+## Delivery note for the line
+Light, pleased, a little tired: a man who is enjoying the problem. The longest pause sits after "…our GPUs", with the D♭ colour note in it, and the `you are here` marker slides on "melting."

@@ -83,7 +83,7 @@ Tags: see the legend in [mas-manalt.md](mas-manalt.md). Guardrails: [bible/guard
 
 ## Season arc
 
-Everything from Ep10 on is **speculation** (the card before Ep10 says so).
+Everything from Ep10 on is **extrapolated** past the record. No card says so on screen (showrunner, 2026-09-25): the rail rolls on out of Ep9, and the invented beats read as invented because they're absurd.
 
 | Ep | What it wants | What happens | Flashback involvement |
 |---|---|---|---|
@@ -127,5 +127,5 @@ Everything from Ep10 on is **speculation** (the card before Ep10 says so).
 - **It never "is" a real person** and is never named SAM or any variant (that egg is rejected).
 - **The one real agent log line** is the only log text in quotation marks as real. Every other log is styled as dramatization, with no real timestamps.
 - **No violence or weapons.** The bunker gas mask is a prop gag; no guns (the prepper list stays text-only and black-barred).
-- **No real incidents invented.** Anything it "does" after Sep 24, 2026 is labeled speculation.
+- **No real incidents invented.** Anything it "does" after Sep 24, 2026 is [INVENTED] and staged absurdly, never as a real incident (there is no on-screen speculation label).
 - **It doesn't personify** the real Hugging Face breach victims or any real security researchers.

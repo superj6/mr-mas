@@ -1,6 +1,8 @@
 {
  "problems": [
+  "a4-27-14: span 1.23 s is -23% of its target 1.6 s",
   "a4-27-17: ASR CER 0.086 ('The first and last time I ever wear one of these.')",
+  "a4-29-08: span 1.11 s is +11% of its target 1.0 s",
   "a4-29-09: ASR CER 0.15 ('Has anyone read the charter?')",
   "a4-30-11: ASR CER 0.143 ('I am deeply pleased by this result, after about 72 very intense hours of work.')",
   "a4-31-03: ASR CER 0.021 ('I love and respect Ali. I harbor zero ill will towards him.')"
@@ -8,360 +10,372 @@
  "lanes": {
   "neleh": {
    "name": "NELEH",
-   "voice": "af_aoede (Kokoro-82M stock) · c-aoede-precise · speed 0.95",
-   "n_lines": 7,
-   "median_f0_hz": 174.6,
-   "mean_range_st": 8.2,
+   "voice": "af_aoede (Kokoro-82M stock) · c-aoede-precise · speed 0.908",
+   "n_lines": 10,
+   "median_f0_hz": 172.6,
+   "mean_range_st": 7.4,
    "wpm_lines": [
-    167,
-    160,
-    190,
-    195
+    188,
+    171,
+    234,
+    270,
+    211,
+    180,
+    140,
+    227,
+    176,
+    248
    ],
-   "centroid_hz": 823,
+   "centroid_hz": 878,
    "_mfcc": [
-    88.38099670410156,
-    9.098999977111816,
-    9.821000099182129,
-    -4.002999782562256,
-    -0.8370000123977661,
-    -6.073999881744385,
-    2.2790000438690186,
-    -1.6410000324249268,
-    -5.63100004196167,
-    1.6239999532699585,
-    -13.010000228881836,
-    0.10999999940395355
+    83.03099822998047,
+    7.638999938964844,
+    9.534000396728516,
+    -1.9630000591278076,
+    -1.3320000171661377,
+    -6.074999809265137,
+    2.0209999084472656,
+    -1.5570000410079956,
+    -4.946000099182129,
+    2.055999994277954,
+    -11.128000259399414,
+    0.9779999852180481
    ],
-   "total_s": 9.18
+   "total_s": 13.38
   },
   "mada": {
    "name": "MADA",
-   "voice": "am_adam (Kokoro-82M stock) · b-adam-grey · speed 0.9",
-   "n_lines": 3,
-   "median_f0_hz": 123.5,
-   "mean_range_st": 7.5,
-   "wpm_lines": [],
-   "centroid_hz": 1401,
-   "_mfcc": [
-    40.62699890136719,
-    -2.8989999294281006,
-    12.763999938964844,
-    -2.3480000495910645,
-    -1.3650000095367432,
-    -8.734000205993652,
-    -3.9660000801086426,
-    -4.59499979019165,
-    -2.6540000438690186,
-    -2.493000030517578,
-    0.9679999947547913,
-    -1.3609999418258667
+   "voice": "am_adam (Kokoro-82M stock) · b-adam-grey · speed 0.976",
+   "n_lines": 2,
+   "median_f0_hz": 131.2,
+   "mean_range_st": 8.8,
+   "wpm_lines": [
+    140,
+    140
    ],
-   "total_s": 3.27
+   "centroid_hz": 1483,
+   "_mfcc": [
+    48.05500030517578,
+    -5.566999912261963,
+    12.368000030517578,
+    -1.8489999771118164,
+    0.2930000126361847,
+    -6.182000160217285,
+    -4.684000015258789,
+    -5.0289998054504395,
+    -2.1080000400543213,
+    -2.6670000553131104,
+    0.03099999949336052,
+    -2.765000104904175
+   ],
+   "total_s": 1.88
   },
   "mas-manalt": {
    "name": "MAS MANALT",
-   "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.82",
+   "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 1.067",
    "n_lines": 9,
-   "median_f0_hz": 111.0,
-   "mean_range_st": 9.0,
+   "median_f0_hz": 115.9,
+   "mean_range_st": 8.4,
    "wpm_lines": [
-    146,
-    146,
-    148,
-    128
+    102,
+    92,
+    178,
+    162,
+    128,
+    121,
+    105,
+    182,
+    156
    ],
-   "centroid_hz": 1546,
+   "centroid_hz": 1609,
    "_mfcc": [
-    48.444000244140625,
-    10.031999588012695,
-    16.075000762939453,
-    4.013999938964844,
-    -2.0360000133514404,
-    9.010000228881836,
-    -10.531000137329102,
-    5.209000110626221,
-    -1.2410000562667847,
-    2.4079999923706055,
-    1.2970000505447388,
-    -0.6690000295639038
+    48.22100067138672,
+    10.121999740600586,
+    16.183000564575195,
+    3.174999952316284,
+    -2.2269999980926514,
+    9.85099983215332,
+    -10.194999694824219,
+    4.291999816894531,
+    -2.0820000171661377,
+    2.7699999809265137,
+    1.065000057220459,
+    -0.7889999747276306
    ],
-   "total_s": 15.57
+   "total_s": 11.98
   },
   "mas-manalt-vo": {
    "name": "MAS MANALT (V.O.)",
-   "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.577 (x on-camera read)",
-   "n_lines": 5,
-   "median_f0_hz": 111.9,
-   "mean_range_st": 8.4,
+   "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.660 (V.O., x his on-camera read)",
+   "n_lines": 3,
+   "median_f0_hz": 120.7,
+   "mean_range_st": 9.1,
    "wpm_lines": [
-    120,
-    114,
-    149,
-    142,
-    133
+    140,
+    166,
+    147
    ],
-   "centroid_hz": 1355,
+   "centroid_hz": 1403,
    "_mfcc": [
-    63.50600051879883,
-    11.784000396728516,
-    16.724000930786133,
-    8.736000061035156,
-    -4.499000072479248,
-    10.210000038146973,
-    -7.638999938964844,
-    4.866000175476074,
-    -0.8970000147819519,
-    3.0350000858306885,
-    1.569000005722046,
-    -1.9930000305175781
+    52.33300018310547,
+    9.29800033569336,
+    13.76099967956543,
+    2.6029999256134033,
+    -5.093999862670898,
+    8.0,
+    -9.946000099182129,
+    4.955999851226807,
+    -0.7229999899864197,
+    2.765000104904175,
+    0.8019999861717224,
+    -1.6990000009536743
    ],
-   "total_s": 11.68
+   "total_s": 6.24
   },
   "rima-tamuri": {
    "name": "RIMA TAMURI",
-   "voice": "af_heart (Kokoro-82M stock) · a-heart-composed · speed 0.9",
-   "n_lines": 2,
-   "median_f0_hz": 206.5,
-   "mean_range_st": 8.0,
+   "voice": "af_heart (Kokoro-82M stock) · a-heart-composed · speed 0.855",
+   "n_lines": 1,
+   "median_f0_hz": 222.6,
+   "mean_range_st": 8.3,
    "wpm_lines": [
-    147,
-    188
+    214
    ],
-   "centroid_hz": 1317,
+   "centroid_hz": 1388,
    "_mfcc": [
-    56.26300048828125,
-    -5.690999984741211,
-    9.699999809265137,
-    -10.859000205993652,
-    0.8330000042915344,
-    -8.734000205993652,
-    0.7879999876022339,
-    -4.250999927520752,
-    -8.071000099182129,
-    -2.8929998874664307,
-    -5.309000015258789,
-    -4.2769999504089355
+    48.47100067138672,
+    -11.902999877929688,
+    8.767000198364258,
+    -13.967000007629395,
+    -0.24400000274181366,
+    -8.782999992370605,
+    0.765999972820282,
+    -5.047999858856201,
+    -7.0970001220703125,
+    -1.8849999904632568,
+    -6.415999889373779,
+    -4.296999931335449
    ],
-   "total_s": 3.19
+   "total_s": 1.21
   },
   "tiled-employee": {
    "name": "TILED EMPLOYEE",
-   "voice": "af_nova (Kokoro-82M stock) · a-nova-plain · speed 0.95",
+   "voice": "af_nova (Kokoro-82M stock) · a-nova-plain · speed 1.196",
    "n_lines": 1,
-   "median_f0_hz": 146.4,
-   "mean_range_st": 7.4,
+   "median_f0_hz": 137.4,
+   "mean_range_st": 7.5,
    "wpm_lines": [
-    211
+    296
    ],
-   "centroid_hz": 620,
+   "centroid_hz": 634,
    "_mfcc": [
-    86.21700286865234,
-    19.32699966430664,
-    17.78499984741211,
-    -1.6770000457763672,
-    5.132999897003174,
-    1.5119999647140503,
-    -2.2769999504089355,
-    2.9630000591278076,
-    -2.312000036239624,
-    -1.5089999437332153,
-    -5.23799991607666,
-    3.8469998836517334
+    71.73400115966797,
+    25.820999145507812,
+    19.700000762939453,
+    4.22599983215332,
+    6.697999954223633,
+    3.2720000743865967,
+    -2.875,
+    0.9520000219345093,
+    -0.17100000381469727,
+    -0.3140000104904175,
+    -5.559999942779541,
+    4.085000038146973
    ],
-   "total_s": 1.37
+   "total_s": 0.87
   },
   "alyi": {
    "name": "ALYI",
-   "voice": "am_onyx (Kokoro-82M stock) · a-onyx-cathedral · speed 0.8",
-   "n_lines": 5,
-   "median_f0_hz": 84.1,
-   "mean_range_st": 13.0,
+   "voice": "am_onyx (Kokoro-82M stock) · a-onyx-cathedral · speed 0.854",
+   "n_lines": 4,
+   "median_f0_hz": 83.0,
+   "mean_range_st": 12.5,
    "wpm_lines": [
-    137,
-    99,
-    106,
-    108,
-    109
+    172,
+    143,
+    159,
+    141
    ],
-   "centroid_hz": 594,
+   "centroid_hz": 681,
    "_mfcc": [
-    104.06300354003906,
-    -0.9959999918937683,
-    21.591999053955078,
-    3.747999906539917,
-    1.4229999780654907,
-    1.1390000581741333,
-    2.1110000610351562,
-    -7.964000225067139,
-    5.385000228881836,
-    -0.5460000038146973,
-    -0.6019999980926514,
-    0.0989999994635582
+    103.24099731445312,
+    -2.3540000915527344,
+    21.0,
+    4.440000057220459,
+    1.9839999675750732,
+    -0.24699999392032623,
+    1.9630000591278076,
+    -7.732999801635742,
+    5.888000011444092,
+    -0.9229999780654907,
+    -1.1139999628067017,
+    0.3050000071525574
    ],
-   "total_s": 18.45
+   "total_s": 10.62
   },
   "mario": {
    "name": "MARIO",
-   "voice": "am_liam (Kokoro-82M stock) · a-liam-earnest · speed 0.95",
+   "voice": "am_liam (Kokoro-82M stock) · a-liam-earnest · speed 0.892",
    "n_lines": 2,
-   "median_f0_hz": 114.8,
-   "mean_range_st": 13.1,
+   "median_f0_hz": 131.7,
+   "mean_range_st": 13.9,
    "wpm_lines": [
-    150,
-    159
+    244,
+    185
    ],
-   "centroid_hz": 1433,
+   "centroid_hz": 1460,
    "_mfcc": [
-    59.5620002746582,
-    -6.369999885559082,
-    14.130999565124512,
-    1.184000015258789,
-    -0.5730000138282776,
-    4.210999965667725,
-    -2.690999984741211,
-    -8.277000427246094,
-    9.565999984741211,
-    -7.831999778747559,
-    2.0850000381469727,
-    3.4079999923706055
+    59.79899978637695,
+    -9.550000190734863,
+    10.989999771118164,
+    -0.6460000276565552,
+    -1.0570000410079956,
+    4.179999828338623,
+    -2.686000108718872,
+    -7.881999969482422,
+    9.017000198364258,
+    -7.4029998779296875,
+    1.0429999828338623,
+    2.878000020980835
    ],
-   "total_s": 4.93
+   "total_s": 3.59
   },
   "adelina": {
    "name": "ADELINA",
-   "voice": "af_bella (Kokoro-82M stock) · a-bella-warm · speed 0.95",
+   "voice": "af_bella (Kokoro-82M stock) · a-bella-warm · speed 1.270",
    "n_lines": 1,
-   "median_f0_hz": 199.4,
-   "mean_range_st": 6.5,
-   "wpm_lines": [
-    163
-   ],
-   "centroid_hz": 1168,
-   "_mfcc": [
-    57.07400131225586,
-    7.830999851226807,
-    19.590999603271484,
-    -8.942000389099121,
-    4.333000183105469,
-    -4.9730000495910645,
-    1.409000039100647,
-    -5.446000099182129,
-    -5.084000110626221,
-    -2.8580000400543213,
-    -8.961000442504883,
-    1.1269999742507935
-   ],
-   "total_s": 1.57
-  },
-  "ttemme": {
-   "name": "TTEMME",
-   "voice": "am_fenrir (Kokoro-82M stock) · d-fenrir-headset · speed 1.0",
-   "n_lines": 2,
-   "median_f0_hz": 136.8,
-   "mean_range_st": 10.4,
-   "wpm_lines": [
-    183,
-    158
-   ],
-   "centroid_hz": 1756,
-   "_mfcc": [
-    42.3120002746582,
-    -10.692999839782715,
-    15.597999572753906,
-    -6.511000156402588,
-    -2.0910000801086426,
-    -1.218000054359436,
-    -9.42199993133545,
-    2.927999973297119,
-    -7.548999786376953,
-    -0.3889999985694885,
-    -1.6069999933242798,
-    -2.88700008392334
-   ],
-   "total_s": 3.35
-  },
-  "tasya": {
-   "name": "TASYA",
-   "voice": "am_eric (Kokoro-82M stock) · b-eric-warm · speed 0.88",
-   "n_lines": 4,
-   "median_f0_hz": 150.9,
-   "mean_range_st": 13.0,
-   "wpm_lines": [
-    140,
-    132,
-    138
-   ],
-   "centroid_hz": 1181,
-   "_mfcc": [
-    66.46900177001953,
-    -2.9230000972747803,
-    31.966999053955078,
-    -2.3239998817443848,
-    10.118000030517578,
-    8.180000305175781,
-    -3.7260000705718994,
-    -1.7769999504089355,
-    -4.22599983215332,
-    0.8370000123977661,
-    -6.369999885559082,
-    -1.3220000267028809
-   ],
-   "total_s": 8.85
-  },
-  "gerg-mockbran": {
-   "name": "GERG MOCKBRAN",
-   "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.15",
-   "n_lines": 3,
-   "median_f0_hz": 141.4,
-   "mean_range_st": 6.5,
-   "wpm_lines": [
-    170,
-    190,
-    247
-   ],
-   "centroid_hz": 1498,
-   "_mfcc": [
-    59.46799850463867,
-    3.240999937057495,
-    20.70199966430664,
-    -5.646999835968018,
-    -2.0799999237060547,
-    5.261000156402588,
-    -8.177000045776367,
-    5.164999961853027,
-    -6.123000144958496,
-    3.7279999256134033,
-    0.07199999690055847,
-    0.3319999873638153
-   ],
-   "total_s": 4.09
-  },
-  "terb": {
-   "name": "TERB",
-   "voice": "am_echo (Kokoro-82M stock) · b-echo-brisk · speed 1.02",
-   "n_lines": 3,
-   "median_f0_hz": 103.2,
-   "mean_range_st": 12.2,
+   "median_f0_hz": 178.2,
+   "mean_range_st": 4.3,
    "wpm_lines": [
     186
    ],
-   "centroid_hz": 788,
+   "centroid_hz": 974,
    "_mfcc": [
-    90.86399841308594,
-    -0.1889999955892563,
-    3.059999942779541,
-    -3.2039999961853027,
-    3.5179998874664307,
-    17.3439998626709,
-    -7.699999809265137,
-    5.823999881744385,
-    2.9509999752044678,
-    -1.5850000381469727,
-    4.324999809265137,
-    3.125999927520752
+    63.72800064086914,
+    9.39799976348877,
+    17.365999221801758,
+    -7.550000190734863,
+    7.181000232696533,
+    -4.828000068664551,
+    0.6570000052452087,
+    -0.597000002861023,
+    -4.126999855041504,
+    -4.693999767303467,
+    -7.309999942779541,
+    0.925000011920929
    ],
-   "total_s": 3.24
+   "total_s": 1.37
+  },
+  "ttemme": {
+   "name": "TTEMME",
+   "voice": "am_fenrir (Kokoro-82M stock) · d-fenrir-headset · speed 1.027",
+   "n_lines": 1,
+   "median_f0_hz": 123.5,
+   "mean_range_st": 10.0,
+   "wpm_lines": [
+    190
+   ],
+   "centroid_hz": 1592,
+   "_mfcc": [
+    53.13800048828125,
+    -9.473999977111816,
+    10.031999588012695,
+    -10.201000213623047,
+    -0.2919999957084656,
+    -2.302999973297119,
+    -8.14900016784668,
+    6.889999866485596,
+    -10.402000427246094,
+    0.47200000286102295,
+    -0.5910000205039978,
+    -4.191999912261963
+   ],
+   "total_s": 1.32
+  },
+  "tasya": {
+   "name": "TASYA",
+   "voice": "am_eric (Kokoro-82M stock) · b-eric-warm · speed 0.833",
+   "n_lines": 4,
+   "median_f0_hz": 136.2,
+   "mean_range_st": 10.7,
+   "wpm_lines": [
+    184,
+    155,
+    176,
+    98
+   ],
+   "centroid_hz": 1165,
+   "_mfcc": [
+    67.802001953125,
+    -1.3569999933242798,
+    30.406999588012695,
+    -1.2000000476837158,
+    12.369000434875488,
+    9.574999809265137,
+    -4.039000034332275,
+    -0.6579999923706055,
+    -2.125999927520752,
+    1.4589999914169312,
+    -5.790999889373779,
+    -0.9779999852180481
+   ],
+   "total_s": 6.78
+  },
+  "gerg-mockbran": {
+   "name": "GERG MOCKBRAN",
+   "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.210",
+   "n_lines": 3,
+   "median_f0_hz": 137.0,
+   "mean_range_st": 7.7,
+   "wpm_lines": [
+    182,
+    205,
+    261
+   ],
+   "centroid_hz": 1512,
+   "_mfcc": [
+    57.3120002746582,
+    2.630000114440918,
+    20.6299991607666,
+    -6.683000087738037,
+    -2.2360000610351562,
+    4.173999786376953,
+    -8.255999565124512,
+    6.660999774932861,
+    -5.447000026702881,
+    4.245999813079834,
+    0.20200000703334808,
+    0.10199999809265137
+   ],
+   "total_s": 3.67
+  },
+  "terb": {
+   "name": "TERB",
+   "voice": "am_echo (Kokoro-82M stock) · b-echo-brisk · speed 1.192",
+   "n_lines": 3,
+   "median_f0_hz": 90.6,
+   "mean_range_st": 9.3,
+   "wpm_lines": [
+    242,
+    146,
+    113
+   ],
+   "centroid_hz": 738,
+   "_mfcc": [
+    96.2040023803711,
+    3.378000020980835,
+    3.872999906539917,
+    1.4470000267028809,
+    4.574999809265137,
+    16.35700035095215,
+    -5.964000225067139,
+    3.9100000858306885,
+    1.9930000305175781,
+    -2.5369999408721924,
+    4.001999855041504,
+    2.697000026702881
+   ],
+   "total_s": 2.54
   }
  },
  "shared_scene_pairs": {
@@ -369,400 +383,357 @@
    "scenes": [
     "27"
    ],
-   "d_f0_st": 14.9,
-   "d_mfcc": 51.9,
-   "d_centroid_pct": 97
-  },
-  "adelina|mada": {
-   "scenes": [
-    "27"
-   ],
-   "d_f0_st": 8.3,
-   "d_mfcc": 25.7,
-   "d_centroid_pct": 17
+   "d_f0_st": 13.2,
+   "d_mfcc": 45.9,
+   "d_centroid_pct": 43
   },
   "adelina|mario": {
    "scenes": [
     "27"
    ],
-   "d_f0_st": 9.6,
-   "d_mfcc": 29.0,
-   "d_centroid_pct": 18
+   "d_f0_st": 5.2,
+   "d_mfcc": 30.5,
+   "d_centroid_pct": 33
   },
   "adelina|neleh": {
    "scenes": [
     "27"
    ],
-   "d_f0_st": 2.3,
-   "d_mfcc": 34.4,
-   "d_centroid_pct": 42
+   "d_f0_st": 0.6,
+   "d_mfcc": 24.6,
+   "d_centroid_pct": 11
   },
   "adelina|rima-tamuri": {
    "scenes": [
     "27"
    ],
-   "d_f0_st": 0.6,
-   "d_mfcc": 19.1,
-   "d_centroid_pct": 11
+   "d_f0_st": 3.9,
+   "d_mfcc": 30.6,
+   "d_centroid_pct": 30
   },
   "adelina|tasya": {
    "scenes": [
     "27"
    ],
-   "d_f0_st": 4.8,
-   "d_mfcc": 26.0,
-   "d_centroid_pct": 1
+   "d_f0_st": 4.7,
+   "d_mfcc": 25.4,
+   "d_centroid_pct": 16
   },
   "adelina|tiled-employee": {
    "scenes": [
     "27"
    ],
-   "d_f0_st": 5.3,
-   "d_mfcc": 34.6,
-   "d_centroid_pct": 88
+   "d_f0_st": 4.5,
+   "d_mfcc": 24.6,
+   "d_centroid_pct": 54
   },
   "adelina|ttemme": {
    "scenes": [
     "27"
    ],
-   "d_f0_st": 6.5,
-   "d_mfcc": 30.1,
-   "d_centroid_pct": 33
+   "d_f0_st": 6.3,
+   "d_mfcc": 29.4,
+   "d_centroid_pct": 39
   },
   "alyi|mada": {
    "scenes": [
-    "27",
     "30"
    ],
-   "d_f0_st": 6.7,
-   "d_mfcc": 66.1,
-   "d_centroid_pct": 58
+   "d_f0_st": 7.9,
+   "d_mfcc": 57.8,
+   "d_centroid_pct": 54
   },
   "alyi|mario": {
    "scenes": [
     "27"
    ],
-   "d_f0_st": 5.4,
-   "d_mfcc": 46.9,
-   "d_centroid_pct": 59
+   "d_f0_st": 8.0,
+   "d_mfcc": 46.7,
+   "d_centroid_pct": 53
   },
   "alyi|mas-manalt": {
    "scenes": [
     "30"
    ],
-   "d_f0_st": 4.8,
+   "d_f0_st": 5.8,
    "d_mfcc": 60.9,
-   "d_centroid_pct": 62
+   "d_centroid_pct": 58
   },
   "alyi|neleh": {
    "scenes": [
     "27"
    ],
-   "d_f0_st": 12.6,
-   "d_mfcc": 30.4,
-   "d_centroid_pct": 28
+   "d_f0_st": 12.7,
+   "d_mfcc": 31.5,
+   "d_centroid_pct": 22
   },
   "alyi|rima-tamuri": {
    "scenes": [
     "27"
    ],
-   "d_f0_st": 15.6,
-   "d_mfcc": 54.8,
-   "d_centroid_pct": 55
+   "d_f0_st": 17.1,
+   "d_mfcc": 62.3,
+   "d_centroid_pct": 51
   },
   "alyi|tasya": {
    "scenes": [
     "27",
     "30"
    ],
-   "d_f0_st": 10.1,
-   "d_mfcc": 43.5,
-   "d_centroid_pct": 50
+   "d_f0_st": 8.6,
+   "d_mfcc": 42.0,
+   "d_centroid_pct": 42
   },
   "alyi|terb": {
    "scenes": [
     "30"
    ],
-   "d_f0_st": 3.5,
-   "d_mfcc": 34.1,
-   "d_centroid_pct": 25
+   "d_f0_st": 1.5,
+   "d_mfcc": 30.3,
+   "d_centroid_pct": 8
   },
   "alyi|tiled-employee": {
    "scenes": [
     "27"
    ],
-   "d_f0_st": 9.6,
-   "d_mfcc": 32.0,
-   "d_centroid_pct": 4
+   "d_f0_st": 8.7,
+   "d_mfcc": 44.6,
+   "d_centroid_pct": 7
   },
   "alyi|ttemme": {
    "scenes": [
     "27"
    ],
-   "d_f0_st": 8.4,
-   "d_mfcc": 67.0,
-   "d_centroid_pct": 66
+   "d_f0_st": 6.9,
+   "d_mfcc": 59.2,
+   "d_centroid_pct": 57
   },
   "gerg-mockbran|mas-manalt": {
    "scenes": [
     "29",
     "31"
    ],
-   "d_f0_st": 4.2,
-   "d_mfcc": 18.2,
-   "d_centroid_pct": 3
+   "d_f0_st": 2.9,
+   "d_mfcc": 17.7,
+   "d_centroid_pct": 6
   },
   "gerg-mockbran|mas-manalt-vo": {
    "scenes": [
     "29"
    ],
-   "d_f0_st": 4.1,
-   "d_mfcc": 19.4,
-   "d_centroid_pct": 11
+   "d_f0_st": 2.2,
+   "d_mfcc": 16.1,
+   "d_centroid_pct": 8
   },
   "gerg-mockbran|neleh": {
    "scenes": [
     "29"
    ],
-   "d_f0_st": 3.7,
-   "d_mfcc": 38.1,
-   "d_centroid_pct": 82
+   "d_f0_st": 4.0,
+   "d_mfcc": 35.3,
+   "d_centroid_pct": 72
   },
   "gerg-mockbran|tasya": {
    "scenes": [
     "29"
    ],
-   "d_f0_st": 1.1,
-   "d_mfcc": 22.5,
-   "d_centroid_pct": 27
-  },
-  "mada|mario": {
-   "scenes": [
-    "27"
-   ],
-   "d_f0_st": 1.3,
-   "d_mfcc": 27.8,
-   "d_centroid_pct": 2
+   "d_f0_st": 0.1,
+   "d_mfcc": 24.9,
+   "d_centroid_pct": 30
   },
   "mada|mas-manalt": {
    "scenes": [
     "30"
    ],
-   "d_f0_st": 1.8,
-   "d_mfcc": 27.6,
-   "d_centroid_pct": 9
+   "d_f0_st": 2.1,
+   "d_mfcc": 26.5,
+   "d_centroid_pct": 8
   },
   "mada|neleh": {
    "scenes": [
-    "25",
-    "27"
+    "25"
    ],
-   "d_f0_st": 6.0,
-   "d_mfcc": 52.1,
-   "d_centroid_pct": 70
-  },
-  "mada|rima-tamuri": {
-   "scenes": [
-    "27"
-   ],
-   "d_f0_st": 8.9,
-   "d_mfcc": 21.0,
-   "d_centroid_pct": 6
+   "d_f0_st": 4.7,
+   "d_mfcc": 40.4,
+   "d_centroid_pct": 69
   },
   "mada|tasya": {
    "scenes": [
-    "27",
     "30"
    ],
-   "d_f0_st": 3.5,
-   "d_mfcc": 39.1,
-   "d_centroid_pct": 19
+   "d_f0_st": 0.6,
+   "d_mfcc": 34.7,
+   "d_centroid_pct": 27
   },
   "mada|terb": {
    "scenes": [
     "30"
    ],
-   "d_f0_st": 3.1,
-   "d_mfcc": 59.3,
-   "d_centroid_pct": 78
-  },
-  "mada|tiled-employee": {
-   "scenes": [
-    "27"
-   ],
-   "d_f0_st": 2.9,
-   "d_mfcc": 53.6,
-   "d_centroid_pct": 126
-  },
-  "mada|ttemme": {
-   "scenes": [
-    "27"
-   ],
-   "d_f0_st": 1.8,
-   "d_mfcc": 16.4,
-   "d_centroid_pct": 20
+   "d_f0_st": 6.4,
+   "d_mfcc": 56.1,
+   "d_centroid_pct": 101
   },
   "mario|neleh": {
    "scenes": [
     "27"
    ],
-   "d_f0_st": 7.3,
-   "d_mfcc": 43.0,
-   "d_centroid_pct": 74
+   "d_f0_st": 4.7,
+   "d_mfcc": 38.0,
+   "d_centroid_pct": 66
   },
   "mario|rima-tamuri": {
    "scenes": [
     "27"
    ],
-   "d_f0_st": 10.2,
-   "d_mfcc": 28.7,
-   "d_centroid_pct": 9
+   "d_f0_st": 9.1,
+   "d_mfcc": 30.0,
+   "d_centroid_pct": 5
   },
   "mario|tasya": {
    "scenes": [
     "27"
    ],
-   "d_f0_st": 4.7,
-   "d_mfcc": 30.4,
-   "d_centroid_pct": 21
+   "d_f0_st": 0.6,
+   "d_mfcc": 32.2,
+   "d_centroid_pct": 25
   },
   "mario|tiled-employee": {
    "scenes": [
     "27"
    ],
-   "d_f0_st": 4.2,
-   "d_mfcc": 42.4,
-   "d_centroid_pct": 131
+   "d_f0_st": 0.7,
+   "d_mfcc": 42.6,
+   "d_centroid_pct": 130
   },
   "mario|ttemme": {
    "scenes": [
     "27"
    ],
-   "d_f0_st": 3.0,
-   "d_mfcc": 31.3,
-   "d_centroid_pct": 18
+   "d_f0_st": 1.1,
+   "d_mfcc": 30.3,
+   "d_centroid_pct": 8
   },
   "mas-manalt|mas-manalt-vo": {
    "scenes": [
     "29"
    ],
-   "d_f0_st": 0.1,
-   "d_mfcc": 16.5,
-   "d_centroid_pct": 14
+   "d_f0_st": 0.7,
+   "d_mfcc": 6.2,
+   "d_centroid_pct": 15
   },
   "mas-manalt|neleh": {
    "scenes": [
     "29"
    ],
-   "d_f0_st": 7.8,
-   "d_mfcc": 48.6,
-   "d_centroid_pct": 88
+   "d_f0_st": 6.9,
+   "d_mfcc": 43.4,
+   "d_centroid_pct": 83
   },
   "mas-manalt|tasya": {
    "scenes": [
     "29",
     "30"
    ],
-   "d_f0_st": 5.3,
-   "d_mfcc": 33.2,
-   "d_centroid_pct": 31
+   "d_f0_st": 2.8,
+   "d_mfcc": 32.6,
+   "d_centroid_pct": 38
   },
   "mas-manalt|terb": {
    "scenes": [
     "30"
    ],
-   "d_f0_st": 1.3,
-   "d_mfcc": 47.9,
-   "d_centroid_pct": 96
+   "d_f0_st": 4.3,
+   "d_mfcc": 51.7,
+   "d_centroid_pct": 118
   },
   "mas-manalt-vo|neleh": {
    "scenes": [
     "29"
    ],
-   "d_f0_st": 7.7,
-   "d_mfcc": 38.7,
-   "d_centroid_pct": 65
+   "d_f0_st": 6.2,
+   "d_mfcc": 39.4,
+   "d_centroid_pct": 60
   },
   "mas-manalt-vo|tasya": {
    "scenes": [
     "29"
    ],
-   "d_f0_st": 5.2,
-   "d_mfcc": 30.6,
-   "d_centroid_pct": 15
+   "d_f0_st": 2.1,
+   "d_mfcc": 32.6,
+   "d_centroid_pct": 20
   },
   "neleh|rima-tamuri": {
    "scenes": [
     "27"
    ],
-   "d_f0_st": 2.9,
-   "d_mfcc": 37.7,
-   "d_centroid_pct": 38
+   "d_f0_st": 4.4,
+   "d_mfcc": 42.6,
+   "d_centroid_pct": 37
   },
   "neleh|tasya": {
    "scenes": [
     "27",
     "29"
    ],
-   "d_f0_st": 2.5,
-   "d_mfcc": 39.1,
-   "d_centroid_pct": 30
+   "d_f0_st": 4.1,
+   "d_mfcc": 35.5,
+   "d_centroid_pct": 25
   },
   "neleh|tiled-employee": {
    "scenes": [
     "27"
    ],
-   "d_f0_st": 3.0,
-   "d_mfcc": 20.2,
-   "d_centroid_pct": 33
+   "d_f0_st": 3.9,
+   "d_mfcc": 29.2,
+   "d_centroid_pct": 38
   },
   "neleh|ttemme": {
    "scenes": [
     "27"
    ],
-   "d_f0_st": 4.2,
-   "d_mfcc": 53.7,
-   "d_centroid_pct": 53
+   "d_f0_st": 5.8,
+   "d_mfcc": 40.2,
+   "d_centroid_pct": 45
   },
   "rima-tamuri|tasya": {
    "scenes": [
     "27"
    ],
-   "d_f0_st": 5.4,
-   "d_mfcc": 33.4,
-   "d_centroid_pct": 12
+   "d_f0_st": 8.5,
+   "d_mfcc": 41.3,
+   "d_centroid_pct": 19
   },
   "rima-tamuri|tiled-employee": {
    "scenes": [
     "27"
    ],
-   "d_f0_st": 6.0,
-   "d_mfcc": 44.3,
-   "d_centroid_pct": 112
+   "d_f0_st": 8.4,
+   "d_mfcc": 52.7,
+   "d_centroid_pct": 119
   },
   "rima-tamuri|ttemme": {
    "scenes": [
     "27"
    ],
-   "d_f0_st": 7.1,
-   "d_mfcc": 22.7,
-   "d_centroid_pct": 25
+   "d_f0_st": 10.2,
+   "d_mfcc": 18.9,
+   "d_centroid_pct": 13
   },
   "tasya|terb": {
    "scenes": [
     "30"
    ],
-   "d_f0_st": 6.6,
-   "d_mfcc": 42.8,
-   "d_centroid_pct": 50
+   "d_f0_st": 7.1,
+   "d_mfcc": 42.6,
+   "d_centroid_pct": 58
   },
   "tasya|tiled-employee": {
    "scenes": [
     "27"
    ],
-   "d_f0_st": 0.5,
-   "d_mfcc": 34.9,
-   "d_centroid_pct": 90
+   "d_f0_st": 0.2,
+   "d_mfcc": 31.7,
+   "d_centroid_pct": 84
   },
   "tasya|ttemme": {
    "scenes": [
@@ -770,15 +741,15 @@
    ],
    "d_f0_st": 1.7,
    "d_mfcc": 35.5,
-   "d_centroid_pct": 33
+   "d_centroid_pct": 27
   },
   "tiled-employee|ttemme": {
    "scenes": [
     "27"
    ],
-   "d_f0_st": 1.2,
-   "d_mfcc": 55.3,
-   "d_centroid_pct": 65
+   "d_f0_st": 1.8,
+   "d_mfcc": 47.3,
+   "d_centroid_pct": 60
   }
  }
 }

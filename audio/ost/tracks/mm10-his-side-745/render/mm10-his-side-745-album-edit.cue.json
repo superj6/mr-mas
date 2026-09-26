@@ -1,0 +1,1465 @@
+{
+ "schema": "mrmas-ost-cue/1",
+ "id": "mm10-his-side-745-album-edit",
+ "mm": "MM-10",
+ "family": "P01 DARK ROOM -> P11 SET-PIECE SWING",
+ "title": "His Side / 745 (album edit)",
+ "version": "1",
+ "composer": "Composer D (OST batch 1)",
+ "tone": "his version of the five days: almost nothing, then the company falls into his lap as a swung avalanche that stops dead on the one man who will not move",
+ "tags": [
+  "to picture",
+  "E01-S29a",
+  "E01-S29b",
+  "S3 set-piece",
+  "the one full band of Ep1",
+  "swing",
+  "dark room",
+  "album edit"
+ ],
+ "usage": "VI",
+ "scenes": [
+  "the soundtrack album: the picture cue (mm10-his-side-745, E01-S29a-b) as a listening piece"
+ ],
+ "description": "ALBUM EDIT of mm10-his-side-745 (fix1, 2026-09-26). Its album master is delivered as render/mm10-his-side-745-album.wav; the picture version stays the underscore master and the stems. Form: his side (b1-9: the felt Water Line bar 1, HIS VERSION -- the keynote bar of MM-02's D5 insert -- cut mid-note, one felt C4, the counter, the compile passes, each dry window a 1-bar rest) | the avalanche as in picture (A1-A12) | chorus 2 (A13-A24: the stack, the board presses, 745 faces) | the full band, 3 bars (the cue's CARD_BAR=39 alternate) | the dead stop.",
+ "motifs": [
+  "the Water Line bar 1 (felt, bar 2), its bar-2 C4 alone (felt, bar 7)",
+  "the Build: straight chip cell under the counter (9.2) and Gerg's compile passes 4 / 8 / (12) (17-19)",
+  "the Build as the SWUNG chip lead, compiling 4-8-12-16 (A1-A4), crushing step four (A8)",
+  "Step Four (low strings, bassoon, muted horn), twice; Alyi's held beat A6.3; the blank crushed A8",
+  "the Water Line AUGMENTED (violins 8ves + chip square), the settle held high (A9-A12)",
+  "Mada's spinner C5-Db5 (celesta + chip, A13-A14)",
+  "the full band on C7(#9b13) (A13-A14), then the dead stop on the card (A15.1)"
+ ],
+ "key": "F minor -> Bb minor (Step Four) -> F minor -> C7(#9b13) pedal, unresolved (the card's freeze hit is on F)",
+ "engine": {
+  "version": "mrmas-ost-engine 1.1 (2026-09-26: fix1 -- meter axis, sample tuning, render pool, QA 5a-d)",
+  "rendered": "2026-09-26T06:29:54",
+  "render_seconds": 91.2
+ },
+ "timing": {
+  "bpm": 96.0,
+  "beat_unit_quarters": 1.0,
+  "tempo_map": [
+   {
+    "bar": 0,
+    "beat": 4.0,
+    "bpm": 96.0,
+    "ramp_in": false,
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "meter_map": [
+   {
+    "bar": 1,
+    "meter": "4/4",
+    "sec": 0.625,
+    "frame": 15.0
+   }
+  ],
+  "swing": 1.0,
+  "swing_unit_quarters": 0.5,
+  "pickup_beats": 1.0,
+  "bars": 37,
+  "length_s": 93.125,
+  "length_frames": 2235.0,
+  "fps": 24,
+  "end": {
+   "sec": 91.875,
+   "frame": 2205.0,
+   "bar": 37,
+   "beat": 3.0
+  },
+  "album_duration_s": 91.875,
+  "album_duration_frames": 2205.0,
+  "album_loops": 1
+ },
+ "sections": [
+  {
+   "label": "a: his side (album edit)",
+   "start": {
+    "sec": 0.0,
+    "frame": 0.0,
+    "bar": 0,
+    "beat": 4.0
+   },
+   "end": {
+    "sec": 23.125,
+    "frame": 555.0,
+    "bar": 10,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "b1: the compile (phrase 1)",
+   "start": {
+    "sec": 23.125,
+    "frame": 555.0,
+    "bar": 10,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 33.125,
+    "frame": 795.0,
+    "bar": 14,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "b2: step four (phrase 2)",
+   "start": {
+    "sec": 33.125,
+    "frame": 795.0,
+    "bar": 14,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 43.125,
+    "frame": 1035.0,
+    "bar": 18,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "b3: the Water Line augmented (phrase 3)",
+   "start": {
+    "sec": 43.125,
+    "frame": 1035.0,
+    "bar": 18,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 53.125,
+    "frame": 1275.0,
+    "bar": 22,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "c2-1: the stack (the compile at full; Step Four pressing)",
+   "start": {
+    "sec": 53.125,
+    "frame": 1275.0,
+    "bar": 22,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 63.125,
+    "frame": 1515.0,
+    "bar": 26,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "c2-2: the board presses (Step Four; the blank crushed)",
+   "start": {
+    "sec": 63.125,
+    "frame": 1515.0,
+    "bar": 26,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 73.125,
+    "frame": 1755.0,
+    "bar": 30,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "c2-3: 745 faces (the Water Line, twice)",
+   "start": {
+    "sec": 73.125,
+    "frame": 1755.0,
+    "bar": 30,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 83.125,
+    "frame": 1995.0,
+    "bar": 34,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "b4: the full band -> the card (phrase 4)",
+   "start": {
+    "sec": 83.125,
+    "frame": 1995.0,
+    "bar": 34,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 93.125,
+    "frame": 2235.0,
+    "bar": 38,
+    "beat": 1.0
+   }
+  }
+ ],
+ "markers": [
+  {
+   "label": "his version (the KEYNOTE bar), cut mid-note",
+   "sec": 3.125,
+   "frame": 75.0,
+   "bar": 2,
+   "beat": 1.0
+  },
+  {
+   "label": "the clunk (745): the Build stops dead",
+   "sec": 13.125,
+   "frame": 315.0,
+   "bar": 6,
+   "beat": 1.0
+  },
+  {
+   "label": "compile pass 1",
+   "sec": 17.5,
+   "frame": 420.0,
+   "bar": 7,
+   "beat": 4.0
+  },
+  {
+   "label": "the Build stops dead (the quiet beat)",
+   "sec": 20.625,
+   "frame": 495.0,
+   "bar": 9,
+   "beat": 1.0
+  },
+  {
+   "label": "AVALANCHE A1.1 (29.14 f0)",
+   "sec": 23.125,
+   "frame": 555.0,
+   "bar": 10,
+   "beat": 1.0
+  },
+  {
+   "label": "brass hit (end of phrase 1)",
+   "sec": 32.5,
+   "frame": 780.0,
+   "bar": 13,
+   "beat": 4.0
+  },
+  {
+   "label": "phrase 2 (29.15 f0): Step Four",
+   "sec": 33.125,
+   "frame": 795.0,
+   "bar": 14,
+   "beat": 1.0
+  },
+  {
+   "label": "ALYI RESISTS: one beat, the chorale holds (conform to 29.15)",
+   "sec": 36.875,
+   "frame": 885.0,
+   "bar": 15,
+   "beat": 3.0
+  },
+  {
+   "label": "step four crushed: brass hits (end of phrase 2)",
+   "sec": 41.875,
+   "frame": 1005.0,
+   "bar": 17,
+   "beat": 3.0
+  },
+  {
+   "label": "phrase 3 (29.17 f0): the Water Line augmented",
+   "sec": 43.125,
+   "frame": 1035.0,
+   "bar": 18,
+   "beat": 1.0
+  },
+  {
+   "label": "the settle: the held high F (A11.3)",
+   "sec": 49.375,
+   "frame": 1185.0,
+   "bar": 20,
+   "beat": 3.0
+  },
+  {
+   "label": "chorus 2: the stack",
+   "sec": 53.125,
+   "frame": 1275.0,
+   "bar": 22,
+   "beat": 1.0
+  },
+  {
+   "label": "brass hit (end of the stack)",
+   "sec": 62.5,
+   "frame": 1500.0,
+   "bar": 25,
+   "beat": 4.0
+  },
+  {
+   "label": "chorus 2: step four crushed again",
+   "sec": 71.875,
+   "frame": 1725.0,
+   "bar": 29,
+   "beat": 3.0
+  },
+  {
+   "label": "chorus 2: the Water Line in its own time",
+   "sec": 73.125,
+   "frame": 1755.0,
+   "bar": 30,
+   "beat": 1.0
+  },
+  {
+   "label": "THE FULL BAND (29.18 f0): C7(#9b13)",
+   "sec": 83.125,
+   "frame": 1995.0,
+   "bar": 34,
+   "beat": 1.0
+  },
+  {
+   "label": "THE CARD: everything stops dead (freeze_hit_F owns the downbeat)",
+   "sec": 90.625,
+   "frame": 2175.0,
+   "bar": 37,
+   "beat": 1.0
+  }
+ ],
+ "hit_check": [
+  {
+   "t": 3.125,
+   "offset_ms": -7.7,
+   "strength": 3.91
+  },
+  {
+   "t": 17.5,
+   "offset_ms": -4.0,
+   "strength": 27.95
+  },
+  {
+   "t": 23.125,
+   "offset_ms": -5.0,
+   "strength": 13.61
+  },
+  {
+   "t": 32.5,
+   "offset_ms": -4.0,
+   "strength": 3.27
+  },
+  {
+   "t": 33.125,
+   "offset_ms": -5.0,
+   "strength": 2.72
+  },
+  {
+   "t": 36.875,
+   "offset_ms": 13.0,
+   "strength": 1.66
+  },
+  {
+   "t": 41.875,
+   "offset_ms": -8.3,
+   "strength": 2.23
+  },
+  {
+   "t": 43.125,
+   "offset_ms": -2.3,
+   "strength": 2.24
+  },
+  {
+   "t": 49.375,
+   "offset_ms": -4.3,
+   "strength": 2.04
+  },
+  {
+   "t": 53.125,
+   "offset_ms": -5.0,
+   "strength": 4.22
+  },
+  {
+   "t": 62.5,
+   "offset_ms": -4.0,
+   "strength": 2.36
+  },
+  {
+   "t": 71.875,
+   "offset_ms": -5.7,
+   "strength": 2.52
+  },
+  {
+   "t": 73.125,
+   "offset_ms": -7.7,
+   "strength": 1.82
+  },
+  {
+   "t": 83.125,
+   "offset_ms": -5.0,
+   "strength": 2.94
+  }
+ ],
+ "sfx_slots": [],
+ "silence_windows": [
+  {
+   "t0": 5.628,
+   "t1": 8.062,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 13.128,
+   "t1": 17.467,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 18.128,
+   "t1": 18.717,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 20.628,
+   "t1": 23.102,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 90.628,
+   "t1": 93.622,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  }
+ ],
+ "vo_windows": [],
+ "knee_whole": 0,
+ "f_major": {
+  "limit": 0.08,
+  "windows": 23,
+  "worst": 0.041,
+  "worst_sieved": 0.035,
+  "ok": true,
+  "ok_written": true,
+  "ok_spectral": true,
+  "f_inaudible_windows": 0,
+  "a_classes": {
+   "written": 0,
+   "resonance": 0,
+   "explained": 0,
+   "unattributed": 0
+  },
+  "written_a_over_f_bass": [],
+  "written_third": {
+   "ok": true,
+   "count": 0,
+   "events": [],
+   "grazes": [],
+   "n_grazes": 0,
+   "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+  },
+  "fails": [],
+  "explained": [],
+  "fixed_resonances": [],
+  "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+ },
+ "knee_completion": 0,
+ "room_sfx_windows": [],
+ "qa": {
+  "balance": {
+   "balance": {
+    "piano": 26,
+    "orch": 30,
+    "bigband": 18,
+    "chip": 26
+   },
+   "rhythm_pct_of_all": 18,
+   "chip_share": 26,
+   "balance_energy": {
+    "piano": 15,
+    "orch": 39,
+    "bigband": 15,
+    "chip": 31
+   },
+   "method": "theme stemtable (gated loudness per section, time-weighted, rhythm/fx excluded; it counts a brief stab at its own loudness for the whole section) + balance_energy (ungated energy)",
+   "sections": [
+    {
+     "section": "a: his side (album edit)",
+     "share": {
+      "piano": 81,
+      "orch": 2,
+      "bigband": 0,
+      "chip": 17
+     }
+    },
+    {
+     "section": "b1: the compile (phrase 1)",
+     "share": {
+      "piano": 26,
+      "orch": 28,
+      "bigband": 23,
+      "chip": 23
+     }
+    },
+    {
+     "section": "b2: step four (phrase 2)",
+     "share": {
+      "piano": 19,
+      "orch": 44,
+      "bigband": 15,
+      "chip": 23
+     }
+    },
+    {
+     "section": "b3: the Water Line augmented (phrase 3)",
+     "share": {
+      "piano": 6,
+      "orch": 29,
+      "bigband": 24,
+      "chip": 40
+     }
+    },
+    {
+     "section": "c2-1: the stack (the compile at full; Step Four pressing)",
+     "share": {
+      "piano": 19,
+      "orch": 46,
+      "bigband": 13,
+      "chip": 23
+     }
+    },
+    {
+     "section": "c2-2: the board presses (Step Four; the blank crushed)",
+     "share": {
+      "piano": 15,
+      "orch": 47,
+      "bigband": 17,
+      "chip": 21
+     }
+    },
+    {
+     "section": "c2-3: 745 faces (the Water Line, twice)",
+     "share": {
+      "piano": 11,
+      "orch": 27,
+      "bigband": 0,
+      "chip": 62
+     }
+    },
+    {
+     "section": "b4: the full band -> the card (phrase 4)",
+     "share": {
+      "piano": 7,
+      "orch": 34,
+      "bigband": 47,
+      "chip": 12
+     }
+    }
+   ]
+  },
+  "short_term_underscore": {
+   "p95": -14.49,
+   "median": -15.92,
+   "max": -14.2
+  },
+  "band_2_6k_db": -16.9,
+  "centroid_hz": 449.0,
+  "f_major": {
+   "limit": 0.08,
+   "windows": 23,
+   "worst": 0.041,
+   "worst_sieved": 0.035,
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "f_inaudible_windows": 0,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_a_over_f_bass": [],
+   "written_third": {
+    "ok": true,
+    "count": 0,
+    "events": [],
+    "grazes": [],
+    "n_grazes": 0,
+    "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+   },
+   "fails": [],
+   "explained": [],
+   "fixed_resonances": [],
+   "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+  },
+  "knee_completion": {
+   "count": 0,
+   "hits": [],
+   "max_gap_s": 2.5,
+   "rule": "OST-BIBLE rule 4: the knee never plays whole in an episode, in any register, across a phrase boundary too"
+  },
+  "sub_under_room": [],
+  "no_third": [],
+  "silence": [
+   {
+    "t0": 5.628,
+    "t1": 8.062,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 13.128,
+    "t1": 17.467,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 18.128,
+    "t1": 18.717,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 20.628,
+    "t1": 23.102,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 90.628,
+    "t1": 93.622,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   }
+  ],
+  "hard_stops": [
+   {
+    "t0": 5.628,
+    "t1": 8.062,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 13.128,
+    "t1": 17.467,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 18.128,
+    "t1": 18.717,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 20.628,
+    "t1": 23.102,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 90.628,
+    "t1": 93.622,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   }
+  ],
+  "vo_windows": [],
+  "knee_whole": 0,
+  "motifs_found": {
+   "WATER_LINE": [
+    {
+     "inst": "vln1",
+     "t": 43.125,
+     "transpose": 12
+    },
+    {
+     "inst": "vln1",
+     "t": 73.125,
+     "transpose": 12
+    },
+    {
+     "inst": "vln1",
+     "t": 78.125,
+     "transpose": 12
+    },
+    {
+     "inst": "vln2",
+     "t": 43.125,
+     "transpose": 0
+    },
+    {
+     "inst": "vln2",
+     "t": 73.125,
+     "transpose": 0
+    },
+    {
+     "inst": "vln2",
+     "t": 78.125,
+     "transpose": 0
+    },
+    {
+     "inst": "tri",
+     "t": 43.125,
+     "transpose": 0
+    },
+    {
+     "inst": "tri",
+     "t": 73.125,
+     "transpose": 0
+    },
+    {
+     "inst": "tri",
+     "t": 78.125,
+     "transpose": 0
+    }
+   ],
+   "BUILD": [
+    {
+     "inst": "lead",
+     "t": 30.625,
+     "transpose": 12
+    },
+    {
+     "inst": "lead",
+     "t": 33.125,
+     "transpose": 12
+    },
+    {
+     "inst": "lead",
+     "t": 43.125,
+     "transpose": 0
+    },
+    {
+     "inst": "lead",
+     "t": 45.625,
+     "transpose": 0
+    },
+    {
+     "inst": "lead",
+     "t": 48.125,
+     "transpose": 0
+    },
+    {
+     "inst": "lead",
+     "t": 50.625,
+     "transpose": 0
+    },
+    {
+     "inst": "lead",
+     "t": 53.125,
+     "transpose": 12
+    },
+    {
+     "inst": "lead",
+     "t": 55.625,
+     "transpose": 12
+    },
+    {
+     "inst": "lead",
+     "t": 58.125,
+     "transpose": 12
+    },
+    {
+     "inst": "lead",
+     "t": 60.625,
+     "transpose": 12
+    },
+    {
+     "inst": "lead",
+     "t": 63.125,
+     "transpose": 12
+    },
+    {
+     "inst": "lead",
+     "t": 65.625,
+     "transpose": 12
+    }
+   ],
+   "STEP_FOUR": [
+    {
+     "inst": "ubass",
+     "t": 46.25,
+     "transpose": -17
+    },
+    {
+     "inst": "ubass",
+     "t": 76.25,
+     "transpose": -17
+    },
+    {
+     "inst": "cb_pizz",
+     "t": 46.25,
+     "transpose": -17
+    },
+    {
+     "inst": "cb_pizz",
+     "t": 76.25,
+     "transpose": -17
+    },
+    {
+     "inst": "vc",
+     "t": 33.125,
+     "transpose": -12
+    },
+    {
+     "inst": "vc",
+     "t": 37.9167,
+     "transpose": -12
+    },
+    {
+     "inst": "vc",
+     "t": 63.125,
+     "transpose": -12
+    },
+    {
+     "inst": "vc",
+     "t": 68.125,
+     "transpose": -12
+    },
+    {
+     "inst": "vla",
+     "t": 33.125,
+     "transpose": 0
+    },
+    {
+     "inst": "vla",
+     "t": 37.9167,
+     "transpose": 0
+    },
+    {
+     "inst": "vla",
+     "t": 63.125,
+     "transpose": 0
+    },
+    {
+     "inst": "vla",
+     "t": 68.125,
+     "transpose": 0
+    }
+   ],
+   "MADA_SPINNER": [
+    {
+     "inst": "lead",
+     "t": 11.5625,
+     "transpose": -5
+    },
+    {
+     "inst": "lead",
+     "t": 12.8125,
+     "transpose": -5
+    },
+    {
+     "inst": "lead",
+     "t": 17.8125,
+     "transpose": -5
+    },
+    {
+     "inst": "lead",
+     "t": 19.0625,
+     "transpose": -5
+    },
+    {
+     "inst": "lead",
+     "t": 20.3125,
+     "transpose": -5
+    },
+    {
+     "inst": "lead",
+     "t": 23.4375,
+     "transpose": 7
+    },
+    {
+     "inst": "lead",
+     "t": 25.9375,
+     "transpose": 7
+    },
+    {
+     "inst": "lead",
+     "t": 28.4375,
+     "transpose": 7
+    },
+    {
+     "inst": "lead",
+     "t": 29.6875,
+     "transpose": 7
+    },
+    {
+     "inst": "lead",
+     "t": 30.9375,
+     "transpose": 7
+    },
+    {
+     "inst": "lead",
+     "t": 32.1875,
+     "transpose": 7
+    },
+    {
+     "inst": "lead",
+     "t": 33.4375,
+     "transpose": 7
+    }
+   ]
+  },
+  "swing": {
+   "felt": {
+    "offbeats": 1,
+    "median_frames": 10.0,
+    "hum_ms": 3
+   },
+   "felt_mech": {
+    "offbeats": 1,
+    "median_frames": 10.0,
+    "hum_ms": 3
+   },
+   "keynote": {
+    "offbeats": 1,
+    "median_frames": 7.5,
+    "hum_ms": 0
+   },
+   "lead": {
+    "offbeats": 95,
+    "median_frames": 7.5,
+    "hum_ms": 0
+   },
+   "xylo": {
+    "offbeats": 8,
+    "median_frames": 9.38,
+    "hum_ms": 3
+   },
+   "jazz": {
+    "offbeats": 51,
+    "median_frames": 10.0,
+    "hum_ms": 3
+   },
+   "grand": {
+    "offbeats": 76,
+    "median_frames": 10.22,
+    "hum_ms": 3
+   },
+   "vc": {
+    "offbeats": 7,
+    "median_frames": 10.0,
+    "hum_ms": 8
+   },
+   "vla": {
+    "offbeats": 6,
+    "median_frames": 10.04,
+    "hum_ms": 8
+   },
+   "bsn": {
+    "offbeats": 3,
+    "median_frames": 10.0,
+    "hum_ms": 8
+   },
+   "hn": {
+    "offbeats": 5,
+    "median_frames": 10.0,
+    "hum_ms": 8
+   },
+   "cb": {
+    "offbeats": 1,
+    "median_frames": 10.0,
+    "hum_ms": 8
+   },
+   "tpt": {
+    "offbeats": 4,
+    "median_frames": 10.01,
+    "hum_ms": 6
+   },
+   "tbn": {
+    "offbeats": 6,
+    "median_frames": 10.01,
+    "hum_ms": 6
+   },
+   "vln1": {
+    "offbeats": 2,
+    "median_frames": 10.0,
+    "hum_ms": 8
+   },
+   "vln2": {
+    "offbeats": 2,
+    "median_frames": 10.0,
+    "hum_ms": 8
+   },
+   "tri": {
+    "offbeats": 2,
+    "median_frames": 10.0,
+    "hum_ms": 0
+   },
+   "timp": {
+    "offbeats": 36,
+    "median_frames": 9.38,
+    "hum_ms": 0
+   },
+   "celesta": {
+    "offbeats": 12,
+    "median_frames": 10.0,
+    "hum_ms": 4
+   },
+   "arp": {
+    "offbeats": 12,
+    "median_frames": 10.0,
+    "hum_ms": 0
+   }
+  },
+  "banned": []
+ },
+ "loop": null,
+ "files": {
+  "album_wav": "render/mm10-his-side-745-album.wav",
+  "album_mp3": "render/mm10-his-side-745-album.mp3",
+  "underscore_wav": null,
+  "underscore_mp3": null,
+  "stems": {},
+  "midi": "render/mm10-his-side-745-album-edit.mid",
+  "pianoroll": "render/mm10-his-side-745-album-edit-pianoroll.png"
+ },
+ "masters": {
+  "album": {
+   "target_lufs": -14.0,
+   "ceiling_dbtp": -1.0,
+   "comp": {
+    "thresh_db": -20,
+    "ratio": 1.8
+   },
+   "dialog_pocket": null,
+   "measured": {
+    "lufs": -14.02,
+    "lra": 11.88,
+    "true_peak_db": -1.15,
+    "peak_db": -1.16,
+    "rms_db": -17.19,
+    "crest_db": 16.04,
+    "seconds": 91.875
+   }
+  },
+  "underscore": {
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -3.0,
+   "comp": {
+    "thresh_db": -28,
+    "ratio": 1.3,
+    "att_ms": 40.0,
+    "rel_ms": 350.0
+   },
+   "dialog_pocket": {
+    "f": 2500.0,
+    "db": -2.0,
+    "q": 0.7
+   },
+   "measured": {
+    "lufs": -16.03,
+    "lra": 10.97,
+    "true_peak_db": -3.15,
+    "peak_db": -3.16,
+    "rms_db": -19.04,
+    "crest_db": 15.89,
+    "seconds": 91.875
+   }
+  }
+ },
+ "stems": {
+  "sum_vs_underscore_residual_db": -160.7,
+  "families_present": [],
+  "family_share_lu": {
+   "piano": -6.9,
+   "strings": -5.0,
+   "winds": -10.8,
+   "brass": -6.4,
+   "bass": -5.0,
+   "drums": -25.6,
+   "perc": -14.4,
+   "chip": -6.1
+  }
+ },
+ "spectrum": {
+  "sub": -25.0,
+  "bass": -3.9,
+  "lowmid": -3.0,
+  "mid": -11.0,
+  "presence": -24.5,
+  "air": -35.7,
+  "centroid_hz": 449.0
+ },
+ "bar_levels": [
+  {
+   "bar": 1,
+   "rms_db": -24.9,
+   "peak_db": -11.199999809265137
+  },
+  {
+   "bar": 2,
+   "rms_db": -17.3,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 3,
+   "rms_db": -49.4,
+   "peak_db": -12.699999809265137
+  },
+  {
+   "bar": 4,
+   "rms_db": -27.0,
+   "peak_db": -8.100000381469727
+  },
+  {
+   "bar": 5,
+   "rms_db": -26.8,
+   "peak_db": -13.800000190734863
+  },
+  {
+   "bar": 6,
+   "rms_db": -65.6,
+   "peak_db": -25.5
+  },
+  {
+   "bar": 7,
+   "rms_db": -31.0,
+   "peak_db": -13.399999618530273
+  },
+  {
+   "bar": 8,
+   "rms_db": -26.3,
+   "peak_db": -12.899999618530273
+  },
+  {
+   "bar": 9,
+   "rms_db": -65.6,
+   "peak_db": -26.299999237060547
+  },
+  {
+   "bar": 10,
+   "rms_db": -24.9,
+   "peak_db": -5.5
+  },
+  {
+   "bar": 11,
+   "rms_db": -20.1,
+   "peak_db": -5.599999904632568
+  },
+  {
+   "bar": 12,
+   "rms_db": -18.6,
+   "peak_db": -4.800000190734863
+  },
+  {
+   "bar": 13,
+   "rms_db": -17.9,
+   "peak_db": -3.700000047683716
+  },
+  {
+   "bar": 14,
+   "rms_db": -16.3,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 15,
+   "rms_db": -17.4,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 16,
+   "rms_db": -21.9,
+   "peak_db": -8.0
+  },
+  {
+   "bar": 17,
+   "rms_db": -18.1,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 18,
+   "rms_db": -16.4,
+   "peak_db": -3.4000000953674316
+  },
+  {
+   "bar": 19,
+   "rms_db": -18.0,
+   "peak_db": -3.9000000953674316
+  },
+  {
+   "bar": 20,
+   "rms_db": -18.3,
+   "peak_db": -5.900000095367432
+  },
+  {
+   "bar": 21,
+   "rms_db": -19.6,
+   "peak_db": -6.699999809265137
+  },
+  {
+   "bar": 22,
+   "rms_db": -17.6,
+   "peak_db": -4.099999904632568
+  },
+  {
+   "bar": 23,
+   "rms_db": -16.6,
+   "peak_db": -3.4000000953674316
+  },
+  {
+   "bar": 24,
+   "rms_db": -17.3,
+   "peak_db": -3.5999999046325684
+  },
+  {
+   "bar": 25,
+   "rms_db": -18.0,
+   "peak_db": -4.0
+  },
+  {
+   "bar": 26,
+   "rms_db": -18.0,
+   "peak_db": -3.4000000953674316
+  },
+  {
+   "bar": 27,
+   "rms_db": -17.3,
+   "peak_db": -3.5
+  },
+  {
+   "bar": 28,
+   "rms_db": -17.5,
+   "peak_db": -3.4000000953674316
+  },
+  {
+   "bar": 29,
+   "rms_db": -17.5,
+   "peak_db": -3.299999952316284
+  },
+  {
+   "bar": 30,
+   "rms_db": -17.8,
+   "peak_db": -4.699999809265137
+  },
+  {
+   "bar": 31,
+   "rms_db": -18.5,
+   "peak_db": -5.199999809265137
+  },
+  {
+   "bar": 32,
+   "rms_db": -17.6,
+   "peak_db": -3.700000047683716
+  },
+  {
+   "bar": 33,
+   "rms_db": -18.1,
+   "peak_db": -4.699999809265137
+  },
+  {
+   "bar": 34,
+   "rms_db": -17.4,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 35,
+   "rms_db": -17.2,
+   "peak_db": -4.300000190734863
+  },
+  {
+   "bar": 36,
+   "rms_db": -18.4,
+   "peak_db": -5.199999809265137
+  },
+  {
+   "bar": 37,
+   "rms_db": -52.5,
+   "peak_db": -18.5
+  }
+ ],
+ "instrumentation": {
+  "arp": {
+   "family": "chip",
+   "notes": 24,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "asax": {
+   "family": "brass",
+   "notes": 1,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "bsax": {
+   "family": "brass",
+   "notes": 1,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "bsn": {
+   "family": "winds",
+   "notes": 15,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "cb": {
+   "family": "strings",
+   "notes": 2,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "cb_pizz": {
+   "family": "bass",
+   "notes": 90,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "celesta": {
+   "family": "perc",
+   "notes": 24,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "felt": {
+   "family": "piano",
+   "notes": 6,
+   "source": "sf2",
+   "credit": "Upright Piano KW by FreePats (CC0 1.0)"
+  },
+  "felt_mech": {
+   "family": "piano",
+   "notes": 6,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "grand": {
+   "family": "piano",
+   "notes": 160,
+   "source": "sf2",
+   "credit": "Salamander Grand Piano by Alexander Holm (CC BY 3.0) -- ATTRIBUTION REQUIRED"
+  },
+  "hn": {
+   "family": "brass",
+   "notes": 17,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "jazz": {
+   "family": "drums",
+   "notes": 309,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "keynote": {
+   "family": "piano",
+   "notes": 5,
+   "source": "sf2",
+   "credit": "Upright Piano KW by FreePats (CC0 1.0)"
+  },
+  "keynote_ch": {
+   "family": "piano",
+   "notes": 6,
+   "source": "sf2",
+   "credit": "Upright Piano KW by FreePats (CC0 1.0)"
+  },
+  "lead": {
+   "family": "chip",
+   "notes": 352,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "lead2": {
+   "family": "chip",
+   "notes": 3,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "tbn": {
+   "family": "brass",
+   "notes": 20,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "timp": {
+   "family": "perc",
+   "notes": 104,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "tpt": {
+   "family": "brass",
+   "notes": 18,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "tri": {
+   "family": "chip",
+   "notes": 21,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "tsax": {
+   "family": "brass",
+   "notes": 2,
+   "source": "art",
+   "credit": "VCSL by Versilian Studios (CC0 1.0)"
+  },
+  "ubass": {
+   "family": "bass",
+   "notes": 90,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "vc": {
+   "family": "strings",
+   "notes": 54,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vla": {
+   "family": "strings",
+   "notes": 56,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vln1": {
+   "family": "strings",
+   "notes": 23,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vln2": {
+   "family": "strings",
+   "notes": 24,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "xylo": {
+   "family": "perc",
+   "notes": 51,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  }
+ },
+ "credits": [
+  "GeneralUser GS by S. Christian Collins",
+  "Salamander Grand Piano by Alexander Holm (CC BY 3.0) -- ATTRIBUTION REQUIRED",
+  "Upright Piano KW by FreePats (CC0 1.0)",
+  "VCSL by Versilian Studios (CC0 1.0)",
+  "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+ ],
+ "audition": [
+  "0-23.12 s: his side on an album: the fragments and their 1-bar rests -- a listening intro, or just gaps? The keynote bar at 3.12 s cut mid-note at 5.62 s",
+  "23.12 s: does the avalanche still ERUPT out of a 1-bar rest?",
+  "53.12-83.12 s: chorus 2 -- the stack (Step Four pressing over the compile, its blank at 60.62 s), the board presses, the Water Line in its own time: momentum, not a repeat",
+  "83.12-90.62 s: THREE bars of the one full band (the picture has two), level, no ramp; the dead stop at 90.62 s ends the track",
+  "73.12-83.12 s: the Water Line twice in the violins over the swung Build: his calm line inside the avalanche, not a victory lap"
+ ],
+ "warnings": [],
+ "album_edit_of": "mm10-his-side-745",
+ "note": "The album master render/mm10-his-side-745-album.wav is the ALBUM EDIT (mm10-his-side-745-album-edit.cue.json); the underscore master and the stems are the PICTURE version (lock v2 timing). This sheet's underscore numbers describe the edit's own (not delivered) underscore render."
+}

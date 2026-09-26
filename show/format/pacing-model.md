@@ -1,5 +1,7 @@
 # MR. MAS · Pacing model and episode template
 
+> **Guidelines, not gates (showrunner, 2026-09-26: "there should be no hard cutoffs for rules on episode handling… the practical flow and user entertainment is always priority").** Every clock, target, cap, floor and GREEN/AMBER/RED threshold here is a reference point for finding problems: break one when the episode plays better, and say why in a line. Only L8 (nothing corny), L9 (no announced climaxes), the [guardrails](../bible/guardrails.md) and the showrunner's direct story calls stay firm. How cuts, music and dialogue flow is in [flow-and-continuity](../bible/flow-and-continuity.md), which replaces this file's fixed-interval rules (cuts on the beat grid, dead-air and joke-rate floors as gates).
+
 The episode template for the season. It covers how every episode balances **people in rooms** (Mas's poker-faced calm against everyone else's chaos) with the **season's macro progression** (the rise to power and the real-event milestones), and how it keeps a viewer entertained minute to minute.
 
 It gives:
@@ -16,6 +18,7 @@ It gives:
   - [production-estimates.md](production-estimates.md) answers *how long each kind of footage takes to make*, measured on the intro build. [§16](#16-pacing-and-cost) turns its rates into pacing levers.
   - **This file** answers *in what order, at what length and at what rhythm* the material plays, and how critics can tell whether it works.
 - **Authority:** where this file and an episode's `beats.md` disagree about *what happens*, the episode wins. Where they disagree about *length, order or rhythm*, this file is the proposal to argue with.
+- **Tone and dialogue:** [tone-and-dialogue.md](../bible/tone-and-dialogue.md) sets how scenes play as a thriller: turns, fuses, handoffs, act-out shapes and the score's tone palette. Where it would change a rule here, it is marked PROPOSED for this file's owner.
 - **Sources read:**
   - bible and timeline: [overview](../bible/overview.md), [guardrails §4](../bible/guardrails.md#4-how-facts-appear-on-screen), [style status](../bible/style-status.md), [flashback map](../timeline/flashback-map.md), [recurring gags](../gags/recurring-gags.md)
   - intro: [intro spec](../intro/spec.md), [shot-table §6 read-time lint](../intro/shot-table.md#6-text-registry-and-read-time-lint), [episode slots](../intro/episode-slots.md)
@@ -35,9 +38,9 @@ It gives:
 | 3 | **Use 6–8 minutes for the proof and for companion shorts, not for the season.** The first one is **THE BLIP, TOLD TWICE** (Ep1 Act 3, 6:30 of story). | It's 30% of the pilot, so none of the work is thrown away. It exercises every device the show uses, and it calibrates both engagement and production rates before the 22s are scheduled ([§5.3](#53-the-proof-the-blip-told-twice)). |
 | 4 | **Make the balance a number.** Present-tense action (I + S) is **60–75%** of story time. Compressed time (M + P) is **24–29%**. Flashback is **5–8%**. | This makes "in-the-moment vs macro" something the critics can measure ([§2.2](#22-the-balance-as-a-number)). |
 | 5 | **Macro arrives as a prop.** A real event should crash into a room where Mas can fail to react to it, rather than scroll past as a chyron. | Use the ladder in [§8.1](#81-the-delivery-ladder). The drafts already do this at their best: the lawsuit through the skylight, the check that won't fit the door. |
-| 6 | **Rhythm targets (22):** 4–6 jokes per story minute, a big laugh at least every 2:00, a set-piece every 2:30–4:30, a progression mark at least every 2:00, and never 20 s without a laugh. | These are the minute contract ([§3.4](#34-targets)). |
+| 6 | **Rhythm targets (22):** 4–6 jokes per story minute, a big laugh about every 2:00, a set-piece every 2:30–4:30, a progression mark about every 2:00, and a laughless stretch over about 20 s treated as a spot to check. | These are the minute contract ([§3.4](#34-targets)): reference points for the critics, not gates. |
 | 7 | **Every episode gets a button. A hook when the calendar supplies one. A hard cliffhanger only at the movement boundaries (Eps 3, 9, 11).** | The drafted endings already fit this shape ([§10](#10-endings)). |
-| 8 | **Let pixel art drive the pacing.** Portraits carry the acting, held drawings carry the deadpan, cuts on the 96 BPM grid carry the energy, the dimmed UI band carries the chyrons, and GLYPH carries the dread, a second at a time. | [§9](#9-pixel-conventions-in-service-of-pace) |
+| 8 | **Let pixel art drive the pacing.** Close shots carry the acting, held drawings carry the deadpan, cutting on story (with montage riding the 96 BPM music) carries the energy, the dimmed UI band carries the chyrons, and GLYPH carries the dread, a second at a time. | [§9](#9-pixel-conventions-in-service-of-pace), [flow-and-continuity §2](../bible/flow-and-continuity.md#2-cutting) |
 | 9 | **Spend drawings on the chaos, not on Mas.** | His stillness is the character, and it's the cheapest footage the show has ([§16](#16-pacing-and-cost)). |
 | 10 | **Critics score every script draft with the engagement map** ([§13](#13-the-engagement-map-method-for-table-read-critics)) before lock, starting with a slate animatic built from synthetic voices. | This lets the room time and test comedy before any art exists. |
 
@@ -72,13 +75,35 @@ Modes use the same letters as [content-density §2.4](content-density.md#24-the-
 | Law | Statement | What breaks without it |
 |---|---|---|
 | **L1** | **The room is the show; the calendar is the clock.** Every movement is built on one anchor room scene. Real events decide *when* a scene happens, not how long it plays. | The show becomes a timeline. |
-| **L2** | **No chyron without a face.** Every macro item lands on a character's reaction within **10 s**: a portrait, a line, or Mas's flat beat. | "Wiki drift": the viewer stops caring who it's happening to. |
+| **L2** | **No chyron without a face.** Every macro item lands on a character's reaction quickly (about **10 s** as a guide): a close shot, a line, or Mas's flat beat. | "Wiki drift": the viewer stops caring who it's happening to. |
 | **L3** | **Macro arrives as a prop.** Use the highest device on the [ladder](#81-the-delivery-ladder) that works. | Montage creep. |
 | **L4** | **Three chaos, one calm.** The others escalate. Mas answers once, briefly, in lowercase. The hold after his answer is the laugh ([§7](#7-the-room-scene-how-in-the-moment-comedy-works)). | Mas becomes a joke machine and the deadpan dies. Or the reverse: he disappears from his own show. |
 | **L5** | **Every set-piece is a triple:** spectacle (S), a laugh (L) and a progression mark (A) in the same beat. | A set-piece that doesn't move the story is a screensaver. |
-| **L6** | **Stop the show once.** THE PLAN is the only full stop. No full flashback within 90 s of it, and never two stops back to back. | The "double stop": momentum dies twice in a minute. |
-| **L7** | **Everything lands on the grid** (96 BPM, 24 fps). Holds, cards, runs and cuts are counted in beats and bars ([§12](#12-clock-constants)). | The edit loses the score, and set-pieces stop matching the ≤10 s production chunks ([§16](#16-pacing-and-cost)). |
+| **L6** | **Stop the show once.** THE PLAN is the only full stop. Keep full flashbacks well clear of it (about 90 s as a guide), and avoid two stops back to back. | The "double stop": momentum dies twice in a minute. |
+| **L7** | **The grid organises the music, not the cut** (96 BPM, 24 fps; revised 2026-09-26 by [flow-and-continuity §2–3](../bible/flow-and-continuity.md#2-cutting)). Scripts and slate animatics count holds, cards and runs in beats and bars ([§12](#12-clock-constants)), and montages and set-pieces ride the music's phrases. Conversation cuts land on story, and music plays as continuous performances that crossfade or ring out on phrase boundaries rather than stopping on every cut. | Without the grid, set-pieces stop matching the ≤10 s production chunks ([§16](#16-pacing-and-cost)). With it applied to every cut, v3's Act Four strobed and its score played in fragments. |
 | **L8** | **Nothing corny.** No explaining a joke after it lands. No UI wink that stops the rhythm. No glitch without a story reason. No meme sounds. No mugging from Mas. | The showrunner's hard line (critic flag **K**). |
+| **L9** | **No announced climaxes.** No episode may announce its own climax ahead of time (no flash-forward chyrons, countdowns or cards that state the outcome); foreshadow with hints only. ([§2.4](#24-no-announced-climaxes-l9)) | The plot stops feeling fluid: the viewer waits for a thing they were told, instead of being surprised by a thing they were shown. The showrunner's note on Ep1 (2026-09-25). |
+| **L10** | **No padding; runtime is an outcome.** Nothing is lengthened for its own sake: time on screen has to carry information, feeling, orientation or fun. The 22:00 clock is the frame the template is built on, not a length to fill; an episode that plays better at 19 or 20 minutes runs 19 or 20. Coherence may add time back (an orientation shot, a held reaction, continuous music), and that isn't padding ([flow-and-continuity §6](../bible/flow-and-continuity.md#6-runtime)). | The showrunner, on the Act Four animatic v2: "don't lengthen things out just for the sake of it." |
+
+### 2.4 No announced climaxes (L9)
+
+**The rule (season-wide, binding from 2026-09-25):** No episode may announce its own climax ahead of time (no flash-forward chyrons, countdowns or cards that state the outcome); foreshadow with hints only.
+
+**Why.** The showrunner, on Ep1: "while we can hint to it we should not directly spoil the firing before the end." The rail is THE RECORD ([pov-and-framing §1.2](../bible/pov-and-framing.md#12-four-layers-one-order-of-precedence)): it states what has happened, never what will. A viewer who knows the history should feel the hints land; a viewer who doesn't should be surprised, then see on a rewatch that it was on screen all along.
+
+| Not allowed (on screen, before the climax) | Allowed |
+|---|---|
+| A chyron or rail item that states the outcome (`HE WILL BE FIRED TOMORROW.`) | A **clock that states no outcome**: a date, an invite, a public deadline, a meeting on a calendar (`Board sync · Fri 12:00`; YELWAH's `OCT 1`) |
+| A countdown to the outcome (`HE WILL BE FIRED IN 233 DAYS.`) | An in-world countdown to a **public target or deadline** whose result the episode hasn't shown (BUKAJ's `INTERN: SEP 2026`; `A FEW THOUSAND DAYS (!)`), so long as it never names what happens when it hits zero |
+| A card that forecasts the payoff (`SIX WEEKS LATER, SOMEONE ELSE GETS A DIFFERENT STAMP.`) | A plain time card after a time jump (`THREE WEEKS EARLIER`), which says when, never what |
+| A flash-forward cold open to the outcome itself (the verdict, the firing, the ban) | A time-jump cold open to a moment **before** the outcome, carrying hints (APEC the day before; the trial's first morning) |
+| An intro slot that shows the episode's own event (the retired bar-9 `FIRED.` / `BACK.`, `EXPIRED.`) | The intro's five spoiler-safe changes ([intro SCRIPT §8](../intro/SCRIPT.md)) |
+
+**Hints, not announcements.** A hint is a prop, a look, a reflection, an egg or a line with a second meaning that a first-time viewer can read as something else: the four attendee circles on the Ep1 invite that turn out to be THE PLAN's four figures; the stamp propped face-to-the-wall at Starbase; the dust on the `2017` evidence box. Hints obey L2 (they land on a face or the Orb), carry no tag of their own and never quote the record ahead of its date.
+
+**What it doesn't cover.** The episode's filename (a title is a hint, and the season's titles stay); THE PLAN inside the climax's own movement (Ep1's `HOW TO FIRE A CEO WHO OWNS NOTHING.` plays at the top of Act Four, as the reveal); truth labels about a side beat's later fact (`LATER: THE DEMO WASN'T REAL-TIME`); flashback cards stating the past. Internal docs (outlines, loglines, beat sheets) may name the climax; the rule is about the screen.
+
+**Rulings made with the rule** (2026-09-25): Ep1's rail countdown (five type-ons, 0:20 → 12:31) → the invite and a hint thread ([Ep1 revision log](../episodes/ep01/script.md#revision-log-no-spoiler-pass)); Ep7's cold-open card → a prop hook; Ep8's verdict flash-forward → the trial's first morning; Ep9's `EVERYTHING AFTER THIS IS SPECULATION.` card → the rail simply rolls on (the showrunner's companion note: "we don't explicitly need a bunch of warnings of speculative like the animatics have, it should feel like a fluid plot").
 
 ---
 
@@ -86,11 +111,11 @@ Modes use the same letters as [content-density §2.4](content-density.md#24-the-
 
 ### 3.1 The clock
 
-Target runtime 22:00. Fixed overhead is 1:15: the intro (0:30), the filename and disclaimer card (0:02) and the credits (0:43; the legal card alone needs about 20 s of read time). That leaves **20:45 of story**. Movements can flex by ±45 s.
+Nominal runtime 22:00: the frame the template is built on, not a length to fill (L10). Fixed overhead is 1:15: the intro (0:30), the filename and disclaimer card (0:02) and the credits (0:43; the legal card alone needs about 20 s of read time). That leaves **20:45 of story**. Movements can flex by ±45 s.
 
 | Slot | In | Out | Length (flex) | Must contain | Ends on |
 |---|---|---|---|---|---|
-| **Cold open** | 0:00 | 1:10 | 0:45–1:15 | A laugh inside 15 s. The episode's question, or a clock. | Mas's flat beat or a hard sting, cut on a downbeat into the intro |
+| **Cold open** | 0:00 | 1:10 | 0:45–1:15 | A laugh inside 15 s. The episode's question, or a clock that states no outcome (L9). | Mas's flat beat or a hard sting, cut on a downbeat into the intro |
 | Intro | 1:10 | 1:40 | 0:30 (locked) | — | — |
 | Filename + disclaimer card | 1:40 | 1:42 | 0:02 | — | — |
 | **Movement 1** (Act 1) | 1:42 | 6:30 | 4:15–5:15 | Anchor scene 1; at least one set-piece; slot F-A allowed | **Act-out 1** (T) |
@@ -100,7 +125,7 @@ Target runtime 22:00. Fixed overhead is 1:15: the intro (0:30), the filename and
 | **Tag + button** | 20:15 | 21:17 | 0:45–1:15 | One thread only. The button is ≤ 15 s; a hook after it is ≤ 5 s. | The button |
 | End credits | 21:17 | 22:00 | 0:43 | Legal-card read time. Optional stinger ≤ 5 s. | — |
 
-- The midpoint act-out may fall anywhere from **10:00 to 14:15** (45–65% of runtime). It must fall at a T, and never between THE PLAN and its set-piece.
+- The midpoint act-out usually falls from **10:00 to 14:15** (45–65% of runtime). It lands on a T, and rarely between THE PLAN and its set-piece.
 - **The pilot is the sanctioned exception.** Its Blip is a 7:30 fourth movement, told twice, with its own internal act-out at the `WHAT THEY DIDN'T KNOW` card ([§14](#14-worked-example-ep1-projected-map)).
 
 ### 3.2 Inside a movement: the braid
@@ -114,7 +139,7 @@ one movement ≈ 4:30
                                  THE PLAN → set-piece   beat
 ```
 
-The order can change, as long as these rules hold:
+The order can change. These guides usually hold (break one when the movement plays better for it):
 1. **A movement opens in a room**, or on a delivery into one. It never opens on a chyron run.
 2. **No two M blocks touch.** At least 30 s of I sits between them.
 3. **No two S2+ set-pieces touch** without at least 30 s of I between them (spectacle fatigue).
@@ -125,11 +150,12 @@ The order can change, as long as these rules hold:
 
 **Cold open**
 - **Length:** 0:45–1:15.
-- **First laugh:** inside 15 s.
-- **It opens the episode's question or a clock:** HE WILL BE FIRED TOMORROW (Ep1), or the complaint of exclamation points (Ep2).
+- **First laugh:** early (about 15 s in).
+- **It opens the episode's question or a clock:** the `Board sync · Fri 12:00` invite (Ep1), or the complaint of exclamation points (Ep2).
+- **It never announces the climax** (L9, [§2.4](#24-no-announced-climaxes-l9)). A clock is a date or a deadline, never a verdict: no chyron, countdown or card that states how the episode ends.
 - **It ends on Mas's flat beat,** cut on the downbeat into bar 1 of the intro.
-- **It never ends at Mas's desk,** because the intro opens there ([§15.3](#153-the-post-rule-eps-3-4-and-9)).
-- **The type rotates, and no two consecutive episodes use the same type:**
+- **It avoids ending at Mas's desk,** because the intro opens there and the cut would repeat the image ([§15.3](#153-the-post-rule-eps-3-4-and-9)).
+- **The type rotates, so neighbouring episodes rarely open the same way:**
 
   | Type | Episodes |
   |---|---|
@@ -137,7 +163,7 @@ The order can change, as long as these rules hold:
   | set-piece plus delivery | 2 |
   | effect before cause | 3, as proposed |
   | metaphor | 5, 6 |
-  | card hook | 7 |
+  | prop hook (was "card hook"; the card stated the climax, L9) | 7 |
   | breakout | 9 |
   | in-world gag | 10 |
   | machine's point of view | 11 |
@@ -145,28 +171,30 @@ The order can change, as long as these rules hold:
 
   See [§11](#11-the-season-shape).
 
-**Act-outs** (three per episode)
-- Each is 10–30 s, lands on a downbeat, and carries a music sting.
+**Act-outs** (usually three per episode)
+- Each is about 10–30 s and lands on a designed musical out: a sting, a stop mid-phrase, a diegetic sound, a pre-lap or the drop-out, varied across the episode ([tone-and-dialogue §9.5](../bible/tone-and-dialogue.md#95-act-out-outs-proposed)). A sting is one option, not a requirement. The bed carries on through the out, and the next cue re-enters on a phrase ([flow-and-continuity §3](../bible/flow-and-continuity.md#3-sound-a-continuous-bed)).
 - The **midpoint act-out** is the most important. It's the A-half ending if the episode ships as 11s, so it carries both a T and a power shift (Aa).
 
-**The tag** is one thread, never a second episode. Keep it to 1:15 or less. Content-density found Ep2's six-beat August tag running 1:40 after the episode's emotional button.
+**The tag** is one thread, never a second episode. About 1:15 or less keeps it from sagging. Content-density found Ep2's six-beat August tag running 1:40 after the episode's emotional button.
 
 **The button**
-- The last image, 15 s or less.
+- The last image, about 15 s or less.
 - A picture punchline, usually a Mas tell (the cup, the lowercase, a prop) meeting one real-event sting (the newspaper thud).
-- Three spoken words at most.
+- About three spoken words at most.
 - The last frame lands on a downbeat.
 
 **The stinger** is 5 s or less, after the button or inside the credits. It's a callback laugh, never plot: the mirror wink (Ep4), the chihuahua with a gold thread (Ep5), KORG 5 shipping to silence (Ep12).
 
 ### 3.4 Targets
 
+Targets are what a well-paced episode usually shows, so a gap in the grid is a place to go and watch, not a failure ([flow-and-continuity §5](../bible/flow-and-continuity.md#5-coherence-is-checked-not-assumed)). A tense stretch, a held reaction or a set-piece carried by picture and music can run long on laughs and still play.
+
 | Target | 22 min | How it's measured ([§13](#13-the-engagement-map-method-for-table-read-critics)) |
 |---|---|---|
-| **The minute contract** | Every story minute has **3 or more laughs** and at least one of {S, A, T} | Per-minute grid |
+| **The minute contract** | Most story minutes carry **about 3 laughs or more** and at least one of {S, A, T} | Per-minute grid |
 | Foreground jokes | **4–6 per story minute**, about 85–120 per episode | Median across critics |
-| Big laughs (L) | At least 1 every **2:00**, about 15–30 per episode | Maximum gap between L marks |
-| Dead air | Never **20 s** without a laugh, except sanctioned sincere (H) beats | Sliding 20 s window |
+| Big laughs (L) | About 1 every **2:00**, about 15–30 per episode | Maximum gap between L marks |
+| Dead air | A stretch over about **20 s** without a laugh is a spot to check. Sanctioned sincere (H) beats, suspense holds and picture-and-music set-pieces can earn longer | Sliding 20 s window |
 | Background eggs | 1–3 per minute, *not counted* as jokes | The freeze-frame layer ([gag rule 2](../gags/recurring-gags.md#10-gag-rules)) |
 | Spectacle | S1 (a literal-metaphor visual) at least every **2:00**. S2+ set-pieces every **2:30–4:30**, 4–6 per episode. **One S3**, at 65–85% | Gaps between S marks |
 | Progression | At least 1 A mark every **2:00**. At least one Aa (arc) per movement. The episode's spine changes state at least 3 times. | A marks |
@@ -181,9 +209,9 @@ The order can change, as long as these rules hold:
 
 1. **It directly precedes the set-piece it explains** (a gap of 15 s or less): blueprint, then heist. Its break tears straight into the set-piece, so the tear-back *is* the cut.
 2. **The preferred window is 30–70% of runtime.** It can go earlier when the chronology puts the set-piece early (Ep3's stadium is Sep 12), but never before the episode's first I scene.
-3. **It sits at least 90 s from any full flashback** (L6).
-4. **It is 18 bars long, exactly 45.0 s:** the word is 3 bars, the diagram 7, the plan 5 and the break 3. This moves the [overview's](../bible/overview.md#7-the-the-plan-device) beat boundaries by no more than 0.5 s.
-5. **The laugh floor is 2 for the PLAN's minute.** The definition is played straight, and the break is the laugh.
+3. **It sits well clear of any full flashback** (about 90 s as a guide; L6).
+4. **Its default length is 18 bars, 45 s:** the word is 3 bars, the diagram 7, the plan 5 and the break 3. This moves the [overview's](../bible/overview.md#7-the-the-plan-device) beat boundaries by no more than 0.5 s. It runs shorter or longer when the story needs (PLAN-SHORT and PLAN-MICRO in §12), as long as it reads.
+5. **The PLAN's minute can run lighter on laughs** (about 2 is typical). The definition is played straight, and the break is the laugh.
 
 ### 3.6 Flashback slots
 
@@ -193,10 +221,10 @@ The order can change, as long as these rules hold:
 | **F-B** | Movement 3 | The wound or the irony: it recolors something we just laughed at | 20–45 s |
 | **F-C** | Movement 4 or the tag | A micro (6 s or less); it may sit inside the climax, as F1.2 does inside the falling tile | ≤ 6 s |
 
-**Rules**, which add pacing to the [map's rules](../timeline/flashback-map.md#0-rules-of-the-map):
-- A full flashback runs 60 s or less.
-- Full flashbacks are **at least 3:00 apart**.
-- None in the first 60 s after the title card. The episode has to be in the present first.
+**Guides**, which add pacing to the [map's rules](../timeline/flashback-map.md#0-rules-of-the-map):
+- A full flashback usually runs 60 s or less.
+- Full flashbacks sit well apart (about **3:00** as a guide).
+- None in the first 60 s or so after the title card. The episode has to be in the present first.
 - None in the tag except a micro.
 - **Every exit lands on a present-day face.** That's L2 applied to the past.
 
@@ -235,18 +263,21 @@ A dialogue page plays about 45–60 s; an action or montage page 20–35 s. **Ti
 
 ### 3.10 Writer's checklist (for the full scripts being refined now)
 
+Prompts, not gates: a "no" is a spot to look at. Item 13 (L9) is the showrunner's call and stays firm.
+
 1. Four movements with act-outs at about 6:30, 11:00 and 15:30, each carrying a T. The midpoint also carries a power shift.
 2. Each movement has an anchor room scene of 1:30–3:00. At least two are in home rooms.
-3. Every macro item lands on a face within 10 s. No block runs over 45 s, and no two blocks touch.
-4. THE PLAN comes directly before its set-piece, at least 90 s from any flashback.
+3. Every macro item lands on a face quickly (about 10 s). Blocks stay short (about 45 s) and rarely touch.
+4. THE PLAN comes directly before its set-piece, well clear of any flashback.
 5. There are 4–6 set-pieces, each a triple (S + L + A). The S3 falls between 14:20 and 18:40.
 6. Flashbacks sit in slots F-A, F-B and F-C, each entering on a trigger and exiting on a face.
 7. The cold open has a laugh inside 15 s, opens a question or a clock, and doesn't end at the desk.
-8. The tag is one thread; the button is 15 s or less, with 3 words or fewer.
-9. Cards stay under the cap; plates cover everyone else.
-10. Mas's lines are short and lowercase. He has at least one rimshot per scene and one long hold per episode, at most.
+8. The tag is one thread; the button is short (about 15 s, about 3 words).
+9. Cards stay rationed (§3.4's count is the guide); plates cover everyone else.
+10. Mas's lines are short and lowercase. He usually has a rimshot in each scene, and about one long hold per episode.
 11. The fairness floor is met (at least three camps roasted, both parties, Misanthropic), per the [guardrails](../bible/guardrails.md#2-fairness-rules).
 12. Every real line is tagged in the script notation of [guardrails §4](../bible/guardrails.md#4-how-facts-appear-on-screen).
+13. **Nothing on screen announces the climax** (L9): no flash-forward chyron, countdown or card that states the outcome. Every act-out turns on a hint or a real event, never on a count.
 
 ---
 
@@ -284,7 +315,7 @@ Fixed overhead is 0:45: a cut-down intro (0:15, not yet specced), the card (0:02
 ### 4.3 The two ways to get 11s
 
 - **The split (recommended).** The A-half ends on the 22's midpoint act-out, a real cliff. The B-half gets a new 30–45 s cold open and the 15 s intro, and it ends on the 22's button. Split points from content-density [§8](content-density.md#8-season-level-recommendation), item 8, with one change:
-  - **Ep1:** at the catch-up to `HE WILL BE FIRED TOMORROW` (≈13:05).
+  - **Ep1:** at the midpoint act-out, the crack (≈10:13, as the Ep1 script recommends), or at the catch-up to the APEC frame and the invite's reminder (≈12:31). Neither half names the firing before the B-half's THE PLAN.
   - **Ep3:** at the $157B round.
   - **Ep4:** at high noon.
   - **Ep2:** content-density proposes THE PLAN. **I propose after "her"** (≈10:40), for two reasons. It keeps THE PLAN with the set-piece it explains, and it splits the episode thematically: A-half *voices*, B-half *exits*.
@@ -322,7 +353,7 @@ Built from content-density's 7-minute column for Ep1 ([appendix A.1](content-den
 
 | In | Out | Segment | Mode | Grid |
 |---|---|---|---|---|
-| 0:00 | 0:25 | `HE WILL BE FIRED TOMORROW.` "noted." THE ORB: `rewinding… too far`, then 1993 (F1.1, 1-BIT, 4 s) | I / F | 10 bars |
+| 0:00 | 0:25 | The freeze and the `Board sync · Fri 12:00` invite; "noted." THE ORB: `rewinding… too far`, then 1993 (F1.1, 1-BIT, 4 s) | I / F | 10 bars |
 | 0:25 | 0:55 | **Full intro** (for the screening; use the 5 s sting in distribution) | O | 12 bars |
 | 0:57 | 1:57 | **THE YEAR IN 24 BARS:** odometer, the dance-off, the class photo, the Senate, KA-CHING, THE ORB, RUMPT's 8 s repost | M (every item a face) | 24 bars |
 | 1:57 | 2:27 | PLAN-SHORT: `HOW TO FIRE A CEO WHO OWNS NOTHING.` | P | 12 bars |
@@ -387,14 +418,14 @@ The show's comedy engine is a man who won't react, in rooms full of people who c
 | 3 · **Volley** | 0:20–1:15 | The chaos character escalates in 2–3 steps, each one a laugh. Mas answers with the minimum. The best real line lands here, tagged. | Portrait windows: **Mas on the left, the other on the right**, every time. |
 | 4 · **The hold** | 1:15–1:25 | Mas's reaction: the held drawing, one blink, the one-pixel smile. **The silence is the joke.** The cup doesn't ripple. | A held portrait: 1 beat for a take, 2 beats for deadpan |
 | 5 · **Turn** | 1:25–1:50 | The consequence: a real event lands (A), or power shifts (Aa) | A date chyron in the band, or a prop state change |
-| 6 · **Button or cut** | 1:50–2:00 | A sting, a prop gag, or a hard cut on the beat | Cut on the bar line |
+| 6 · **Button or cut** | 1:50–2:00 | A sting, a prop gag, or a hard cut on the button | Cut on the button, carrying a sound or shape across ([tone-and-dialogue R13](../bible/tone-and-dialogue.md#r13-carry-something-across-every-cut)) |
 
-**Mas by the numbers**
-- He speaks **≤ 20% of a scene's words**, and most of his lines are **8 words or fewer**.
+**Mas by the numbers** (guides for the table read)
+- He speaks **about 20% of a scene's words or less**, and most of his lines are **8 words or fewer**.
 - He carries **20–35% of the laughs**, mostly as reactions (rimshots). Above 40%, he's become a joke machine. Below 15%, he's absent from his own show.
-- He gets **at least one rimshot per scene** and **one bar-long hold per episode**, at most. The Ep4 "roll it back." beat is the model: he waits a beat too long.
+- He usually gets **a rimshot in each scene** and **about one bar-long hold per episode**. The Ep4 "roll it back." beat is the model: he waits a beat too long.
 
-**Portrait share:** at least 40% of scene time is spent in portrait close-ups. Room sprites are 70–90 px tall, so the acting lives in the portraits (the pixeladv report). The wide is for physical comedy and blocking.
+**Close-shot share:** room sprites are 70–90 px tall, so the acting lives in the close shots (the pixeladv report), and the wide is for physical comedy, blocking and orientation. *(The old "portrait share ≥ 40%" is replaced by [pov-and-framing §4.2 and §4.7.4](../bible/pov-and-framing.md#42-target-shares-of-2045-story-time), where people talk in frameless close-ups, over-the-shoulders and two-shots rather than boxed portraits.)*
 
 **Variants** (rotate them so the sandwich doesn't become a formula):
 
@@ -422,12 +453,12 @@ Use the **highest rung that works**. The lower the rung, the more time it costs 
 | **3** | **MEANWHILE SPLIT** | Two rooms side by side, rhyming on one action | GTP-4 and CLOD 1 launch on the same day | Two panes, each 240 × 203. Three or more only for tile grids. Both panes share one action rhyme. 40 s or less. |
 | **4** | **CHYRON RUN** | Date chyrons on the grid, one image and one sound per item | The Regulate-Me Tour; the TIDDER troll | Spec in §8.2 |
 | **5** | **THE PLAN** | The one explanation | Once per episode | [§3.5](#35-where-the-plan-goes) |
-| **6** | **TIME-JUMP** | A cold-open flash-forward, then THE ORB's rewind to the window's start | Ep1 (APEC, the day before the firing); Ep8 (the verdict) | It opens a clock that must pay off at 60–80% of runtime. **No more than one episode in three** uses it, so it stays a surprise. |
+| **6** | **TIME-JUMP** | A cold open set later in the window but **before the outcome**, then THE ORB's rewind (or a plain time card) to the window's start | Ep1 (APEC, the afternoon of the invite); Ep8 (the trial's first morning) | It opens a clock that must pay off at 60–80% of runtime, and the clock never states the outcome (L9): no jump to the verdict itself. **No more than one episode in three** uses it, so it stays a surprise. |
 
 ### 8.2 The chyron run
 
 - **Length:** 45 s (18 bars) or less. At most one per movement, and never next to another M block.
-- **Grid:** each item is **1 bar** (≤ 45 glyphs of must-read text) or **2 bars** (≤ 95 glyphs). Cut on the bar line. The knee motif's first four notes (F F F F) give the item stabs.
+- **Grid:** a run is a montage under one continuous cue, so its items ride the bars: each is usually **1 bar** (about 45 glyphs of must-read text) or **2 bars** (about 95), long enough to read comfortably. The knee motif's first four notes (F F F F) give the item stabs.
 - **Items:** 6–8 per run. Each is **one image, one sound and one joke**. An item that isn't a joke goes in the band as a background egg.
 - **Faces (L2):** every item has a face in it, or the run lands on a portrait reaction within 10 s. **A run ends on a face:** Mas's blink, the Orb's toast, or a portrait line.
 - **No new faces in a run.** New characters debut in rooms, where they can get a card, or not at all. A new portrait in a montage is the most expensive footage in the show (production-estimates §1 puts beat-synced montage with new portraits at about 24 agent-h per minute) and the most confusing for the Outsider critic.
@@ -482,10 +513,10 @@ Keep action inside the top 203 px so the band can light up at any moment without
 
 | Convention | Pacing function | Rule |
 |---|---|---|
-| **Portrait close-ups** | The acting beat, and the unit of reaction | Mas always left, the other always right. The minimum hold is the line plus 1 beat. At least 40% of scene time. |
+| **Close shots** (frameless `[MCU]`, `[OTS]`, two-shots; [pov-and-framing §4.7](../bible/pov-and-framing.md#47-shot-variety-2026-09-25)) | The acting beat, and the unit of reaction | Mas left, the other right. A shot holds as long as its line and reaction need to read. Shares per pov-and-framing §4.2. |
 | **Held drawings** | The comic hold; the native deadpan | Holds are counted in beats: a take is 1 beat, deadpan 2 beats, a long hold 1 bar (once per episode). |
-| **Whole-pixel motion, swaps, no tweens** | Energy comes from **cuts and swaps, not motion** | Fast means cutting on the grid. The chaos characters get more drawings (NOLE's 4-drawing walk, the slams). Mas gets the fewest. |
-| **Cuts on the 96 BPM grid** | Montage energy, and scene rhythm with the score | Runs cut on bars, volleys on beats, set-pieces in 4-bar phrases (10 s). |
+| **Whole-pixel motion, swaps, no tweens** | Energy comes from **cuts and swaps, not motion** | Fast means cutting on story and swapping drawings, never strobing. The chaos characters get more drawings (NOLE's 4-drawing walk, the slams). Mas gets the fewest. |
+| **The 96 BPM grid** | Montage energy, and the score's phrasing | Runs and set-pieces ride the music's bars and 4-bar phrases (10 s). Conversations cut on story, not on beats ([flow-and-continuity §2](../bible/flow-and-continuity.md#2-cutting)). |
 | **Room-layer shake, object hops** | Impact without camera moves | The UI never shakes. **The glass is composited after the shake**, so the cup gag costs nothing. |
 | **Light as palette steps** | Mood changes in 1–3 frames, and scene transitions without dissolves | Silhouette to lit for entrances; a family step for "the palette blooms". |
 | **Dark rooms** | Only lit areas carry detail, so the eye goes straight to the joke | Stage the joke in the key light (the monitor's cyan, the hallway's tungsten). |
@@ -529,7 +560,7 @@ The [map's tier table](../timeline/flashback-map.md#01-device-language-by-era) p
 ## 10. Endings
 
 **Rules**
-1. **Button always.** A picture punchline in the last 15 s, usually a Mas tell meeting one real-event sting.
+1. **A button, nearly always.** A picture punchline in the last 15 s or so, usually a Mas tell meeting one real-event sting.
 2. **Hook sometimes.** It follows the button and runs 5 s or less. It's a prop, a glyph whisper or an unanswered log line. It is never a second button.
 3. **Hard cliffhangers only at the movement boundaries** (Eps 3, 9, 11), and at the midpoint of a split pair.
 4. **Dread before the laugh inside a tag, never after the button.** Ep8 is the model: the `outside intended scope` log nobody reads, *then* THE TAILOR's chip.
@@ -546,7 +577,7 @@ The [map's tier table](../timeline/flashback-map.md#01-device-language-by-era) p
 | 6 | The `RESERVED: SEP 2026` desk lamp clicks on by itself | Button + dread hook |
 | 7 | MYTHIC leaks; the vault swings open; the model waves | Hook |
 | 8 | `outside intended scope` flickers → the JALAPEÑO chip; the register sweats | Dread, then button |
-| 9 | `intern: done. next: researcher.` → **EVERYTHING AFTER THIS IS SPECULATION.** | **Cliff**: movement 2 ends |
+| 9 | `intern: done. next: researcher.`, the `eta` ticking faster than the wall calendar; the rail's date ticks over on its own and keeps rolling into Ep10's `SEP 29, 2026` (no card) | **Cliff**: movement 2 ends |
 | 10 | The Charter slides; its glass cracks, and the crack is Ep11's wipe | Hook |
 | 11 | The unguarded kill switch; every phone buzzes `Dinner.`; a blank lanyard printing | **Cliff** |
 | 12 | `generally available.`; the missing third; cut to black one frame early → KORG 5 ships to silence | Finale + stinger |
@@ -569,7 +600,7 @@ The mode leanings follow content-density's findings. Eps 1–9 are rich in macro
 | 4 | Race | post + set-piece | 51% I as drafted: the mid-season model | 80 s, 6% | 3 | The cold open runs long (1:40–2:10); the post rule |
 | 5 | Race | metaphor | trim the Act 1 news run | 95 s, 8% | 3 | Same type as Ep6: vary one |
 | 6 | Race | metaphor | watch number fatigue: let the check carry the figures | 83 s, 7% | 3–4 | The dread hook starts |
-| 7 | Race | card hook | fits well | 64 s, 5% | 4 | — |
+| 7 | Race | prop hook | fits well | 64 s, 5% | 4 | — |
 | 8 | Race | time-jump | the courtroom is the scene engine | ≤ 118 s, 9% | 4–5 | The Rashomon (≤ 90 s) needs its own act |
 | 9 | Race | breakout | **overstuffed** (37 beats) | 63 s, 5% | 5–6 | Triage, or the one extended episode; the post rule |
 | 10 | Endgame | in-world gag | rich in I; needs visible macro meters | 65 s, 5% | 6 + TERMINAL | The machine's POV grows |
@@ -612,14 +643,14 @@ Each is a prop or a counter that changes state on screen. At least one moves eve
 
 ## 12. Clock constants
 
-The grid is 96 BPM at 24 fps: **1 beat = 15 frames = 0.625 s**, and **1 bar = 60 frames = 2.5 s** ([`timing.ts`](../../studio/src/shared/timing.ts)). Scripts and slate animatics use these durations.
+The grid is 96 BPM at 24 fps: **1 beat = 15 frames = 0.625 s**, and **1 bar = 60 frames = 2.5 s** ([`timing.ts`](../../studio/src/shared/timing.ts)). Scripts and slate animatics use these durations as defaults. In the edit, a hold or a card runs as long as the viewer needs to take it in, and dialogue is spaced like people talk (quick replies about 0.2–0.5 s apart, loaded ones 0.6–1.2 s; [flow-and-continuity §4](../bible/flow-and-continuity.md#4-dialogue-rhythm)), not packed to a fixed gap.
 
 | Element | Duration | Check |
 |---|---|---|
 | A take (reaction) | 1 beat | — |
 | Mas's semicolon pause | 1 beat | The intro's pause is 14 frames |
-| Deadpan hold | 2 beats (1.25 s) | Once per scene at most |
-| Long hold | 1 bar | Once per episode at most |
+| Deadpan hold | 2 beats (1.25 s) | About once a scene |
+| Long hold | 1 bar | About once an episode |
 | Date slate (≤ 12 glyphs) | 2 beats | Needs 21 frames; has 30 |
 | Name card (≤ 30 glyphs of name + tagline) | 1 bar | Needs 42 frames; has 60 |
 | Chyron-run item | 1 bar (≤ 45 glyphs) or 2 bars (≤ 95) | Lint: ⌈6 + 1.2 × glyphs⌉ frames |
@@ -676,7 +707,7 @@ Critics log live, one row per mark, in a CSV named `engagement/<ep>-<critic>-<da
 
 ```
 tc,mark,size,type,who,aud,note
-00:31,L,,react,MAS,both,"noted." under HE WILL BE FIRED TOMORROW
+00:31,L,,react,MAS,both,"noted." to the Board sync · Fri 12:00 invite
 01:52,S,2,,,both,odometer drill through the floors
 02:16,A,e,,GERG,gen,1M users in 5 days
 05:52,T,,,,both,REZEILE headline lands (act-out 1)
@@ -701,13 +732,13 @@ flags  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  �
 
 ### 13.5 Metrics and thresholds (22; scale per [§6](#6-the-three-formats-side-by-side))
 
-**RED** must be fixed before lock. **AMBER** needs a fix or an explicit accept from the showrunner.
+These are pointers, not gates ([flow-and-continuity §5](../bible/flow-and-continuity.md#5-coherence-is-checked-not-assumed)). **RED** marks the spots to watch first; they usually need a fix, and the report says why when one doesn't. **AMBER** marks spots to check. A number that looks off is a place to go and watch, and the watch decides. The exceptions are the firm lines: a K on Mas, a ? on the A-plot spine, and a W on a real quote are fixed, because they break the tone, the story or the truth grammar.
 
 | Metric | Target | AMBER | RED |
 |---|---|---|---|
 | Jokes per story minute | 4–6 | Any minute below 3 (below 2 in the PLAN's minute) | Any minute with 0–1 that isn't sanctioned (H) |
 | Big-laugh gap | ≤ 2:00 | 2:00–2:30 | > 2:30 |
-| Dead air | none over 20 s | 20–30 s | > 30 s |
+| Dead air | none over about 20 s, unless earned (H, a suspense hold, a set-piece carried by picture and music) | 20–30 s | > 30 s unearned |
 | **Z drift** | none | One critic marks Z in a minute | **Two or more critics mark Z in the same minute**, whatever the counts say |
 | I + S share | 60–75% | 55–60% or 75–80% | < 55% |
 | Longest M block | ≤ 45 s | 45–60 s | > 60 s, or two M blocks touching |
@@ -758,7 +789,7 @@ This is a **projection, not a measurement.** It lays content-density's 22-minute
 
 | Runtime | Segment (beat #) | Movement |
 |---|---|---|
-| 0:00–0:43 | Cold open: APEC "veil" line with the mirrored podium through the window (#1), hailstone (#3), `HE WILL BE FIRED TOMORROW.` → "noted." → rewind (#4), F1.1 (#5) | — |
+| 0:00–0:43 | Cold open: APEC "veil" line with the mirrored podium through the window (#1), hailstone (#3), the `Board sync · Fri 12:00` invite → "noted." → rewind (#4), F1.1 (#5) | — |
 | 0:43–1:15 | Intro and card | — |
 | 1:15–5:55 | Launch night *as a scene* (#6) · the eye-watering tear (#7) · ELGOOG's code red and the crypt (#8) · the check in the door and "we made them dance" (#9) · SYDNEY (#10) · "Open source!" on a monitor (#11) · the split-screen duel (#12) · the two-handed PAUSE letter and REZEILE's headline, **act-out 1** (#13) | M1 |
 | 5:55–10:43 | CLASS PHOTO #1 (#15) · the OGAL-A-RAM repost (#16) · THE SENATE (#17) · the tour stamps (#18) · the extinction statement and KA-CHING #1 (#19) | M2 |
@@ -791,7 +822,7 @@ flags  .  .  .  .  .  .  .  .  A  A  .  .  W? .  .  .  .  .  .  .  .  .
 | Spectacle gap | The duel (4:50) → KA-CHING (10:05) is 5:15 | **AMBER, recommend accepting.** Two anchor scenes, the class photo and the Senate, carry it if each hits two big laughs. Optional: animate the tour stamps (#18) as an S1. |
 | Minute 12 | The densest minute: 8 jokes across four locations, with three real lines | **Watch W and face latency** at the read. Content-density's option applies: route #21–#24 through the dark-room monitor with Mas and THE ORB reacting. It's their first night together, and it turns M into I. |
 | THE PLAN → set-piece | 13:25 → 14:10 | GREEN |
-| Cold-open clock | Pays at the falling tile, about 14:40 (66%) | GREEN |
+| Cold-open clock | The invite's Friday noon pays at the call (THE PLAN's tear) and the falling tile, about 14:40 (66%), and states no outcome before it (L9) | GREEN |
 | S3 | The tile avalanche at about 18:20 (83%) | GREEN |
 | Tension | A T at every act-out, and at the internal `WHAT THEY DIDN'T KNOW` card | GREEN |
 | Cards | Four cards in the Blip's first 2:00 (MADA, RIMA, TTEMME, then TERB) | **Watch.** Space them at least 2 bars apart, and make each tagline land as the laugh |
@@ -918,3 +949,4 @@ This combines the two sibling files' asks:
 | 13 | The dread curve (§11.2) | Adopt it, including the Ep12 exception for model-POV holds over 2 s, which needs explicit approval | Showrunner |
 | 14 | Name cards | ≤ 16 in Eps 1–4, ≤ 10 afterwards, plates for everyone else | Room |
 | 15 | Critics | Three critics (the Outsider, the Insider, the Editor) score every draft from a slate animatic. RED items block lock. | Showrunner |
+| 16 | No announced climaxes (L9, [§2.4](#24-no-announced-climaxes-l9)) | **Decided** by the showrunner's notes of 2026-09-25: hints only; no flash-forward chyrons, countdowns or outcome cards; no on-screen speculation label (the Ep9 card is gone, the end-credits legal card covers dramatization) | Showrunner (decided) |

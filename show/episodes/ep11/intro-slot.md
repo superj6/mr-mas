@@ -1,33 +1,24 @@
-# ep11 · Intro slot — `ep1.10_assist_clause.txt` · ⚠ SPECULATIVE
+# ep11 · Intro slot — `ep1.10_assist_clause.txt`
 
-See [intro/](../../intro/) for the fixed intro. The disclaimer card keeps ep10's added line: *"From here on, events are speculative."*
+The fixed 30.0 s intro is specified in [intro/](../../intro/). **This sheet follows [intro/SCRIPT.md §8](../../intro/SCRIPT.md#8-per-episode-changes-ep112-spoiler-safe), row 11, which is the source of truth.** Only five kinds of thing change per episode, and none of them reveals this episode's plot: items 2–5 show only what Eps 1–10 have already aired. The disclaimer card is the standard one; the old added line ("From here on, events are speculative.") is removed season-wide (showrunner, 2026-09-25; [overview §8](../../bible/overview.md#8-disclaimer-cards)).
 
-## The slot at a glance
-| Slot | ep11 value | Notes |
-|---|---|---|
-| **Cold-open quote** | "i remain enthusiastic about the non-profit structure!" | [V] Sep 21, 2017 email (techemails; flashback map §0.1). 16 syllables and 53 characters, right at the limit, so deliver it briskly (critic pacing). **Staging:** the monitor **autocompletes the line before Mas finishes typing it.** He watches the rest appear, then posts it anyway. |
-| **Bar 9.1 (news)** | `RSI` | Prop: a lanyard printing a smaller lanyard. Egg-level small type under it: `agi achieved internally`, from the ~Sep 2023 Reddit post [K]. The grounding critic wants that line as the ep11 headline's egg. |
-| **Bar 9.2 (music fired)** | `JK.` | Echoes the 2023 "just memeing" edit [K]. The music drops to one dry piano note. |
-| **Bar 9.3 (music rehired)** | `(NOT JK)` | 7 glyphs (spaces are free): a TIGHT pass per [episode-slots §4](../../intro/episode-slots.md#4-bar-9-the-slot). The band slams back **half a beat early**: the music has started predicting itself. |
-| **Bar 9.4 (transition object)** | Bridges of light. | Every tower sprouts a bridge to every other tower. |
-| **Skyline state** | **The towers fuse into one.** THE WHALE's building across the water is suddenly just as tall. The code-red siren spins on every roof. | final.md table, plus the siren gag. |
-| **RUMPT podium beat** | SI FORCE robot vacuums march along the waterfront, same as ep10. **New detail:** one robot vacuum breaks formation to salute a vending machine. | Integration §5 (ep10–11). No text, no SFX. |
-| **Orb toast** | `human… probably?` | Per the grounding critic's escalation ("Ep 11: …probably?"). Nole fails the scan in the episode. |
-| **Title subtitle** | `assisted` | Pays off the assist clause. **Alternate** (flagged dark by the critic): `assisted living`. See [open questions](open-questions.md) #1. |
-| **`you are here` dot** | **Off the top of the monitor**, with a small arrow label: `you are ↑`. | final.md slot rules. |
+## The five changes
+| # | Change | ep11 value | Notes |
+|---|---|---|---|
+| 1 | **Cold-open line** (the epigraph) | "i remain enthusiastic about the non-profit structure!" | [V] Sep 21, 2017 email (techemails; flashback map §0.1), read back in court in May 2026. 16 syllables and 53 characters, so it's delivered briskly. In an email draft window, the monitor autocompletes the line as ghost text first [INVENTED staging], and the V.O. reads about 2 frames behind the ghost. Words in their own medium only; none of the episode's staging. The `you are here` marker sits off the top of the chart (`you are ↑`). |
+| 2 | **World state, after the fact** (Eps 1–10) | **Skyline:** the towers grow between frames; SI FORCE's robot vacuums march along the waterfront in gold dress uniforms (a silent loop, no text). **Hill:** RUMPT's side, THE RUMPT PACE (Ep10); the other side, **proposed:** the `CALIFORNIA` and `NEW YORK` cords on one power strip beside the `FEDERAL` one (Ep10's test press); the CZAR lanyard tag reads `THE INTERN`. **Room layers:** the 1993 screen at 35°; tally `IIII`; the ruff; 6 gold threads. **Orb toast:** `human… probably?` **Last bar:** the riser is louder, and a second ding answers the first (C6 at f712, still no third). | Per SCRIPT §8.3–8.4. **Flag for the intro owner:** SCRIPT's row 11 pairs THE RUMPT PACE with "SREDNAS's Ban ASI hearing," which the season revision cut from Ep10 (SEASON-NOTES note 6). The power strip is the same-weight pair Ep10 now airs. Ep10 now also re-plants THE HORSESHOE (SREDNAS and NONNAB sharing the magnet in the public-comment queue), but keep the magnet off the hill: it's the object that presses Ep12's switch, and on the hill two episodes running it would start to point at the finale. |
+| 3 | **Title subtitle** (last week's release note) | `at a responsible pace (2× speed)` | Ep10's accord: a video-player speed menu flicks open under the title, with "Responsible" ticked at **2×**. 32 characters. |
+| 4 | **Couch gag** (the keycap Mas pockets at Gerg's card) | `"` (the quote key) | Ep10's "paused" in air quotes ("just maintenance"). A callback, never a preview. |
+| 5 | **Roll-call evolution** (flashes 5–8) | The cursor window: the whole face, in tokens, with a lanyard line | Ep10 aired THE INTERN's lanyard. It never resolves into a nameable person and never takes a Mas trait (SCRIPT §8.2). |
 
-## Per-episode eggs
-- **Firing tally** on the desk: the **half-scratch "?"** appears (the YC exit, `(DISPUTED)`).
-- **Collar count:** the ruff, with a heist balaclava draped over the coat hook.
-- **Suggested replies:** `[accept] [accept] [accept]`.
-- **The Intern's lanyard** on Mas's hook now reads `RESEARCHER`, and a second, smaller lanyard hangs from it.
-- **The 1993 kid's screen** (bar 3) is held at 35°. For one frame the glow flickers brighter, still unreadable.
-- **Name cards (bars 5–8), eggs only:** during each freeze, the frozen founder's stat row flickers for 2 frames to a machine-written version. GERG's reads `ORG CHART: IT`. It foreshadows ep12's rewritten cards. The main card is otherwise unchanged, so the fixed render still holds (see open questions).
-- **KORG split-flap:** `4.8`, but only if a real 4.8 has shipped by lock; otherwise `4.7`.
-
-## Sound
-- **Last-bar variation:** the Shepard-tone riser from ep10 gets **louder**, and **a second ding answers the first** (final.md).
-- **9.3:** the rehire slam lands 7 frames early, as if the music has been autocompleted, matching the cold-open staging.
+## Retired from this sheet
+These belonged to the old per-episode news slot, which SCRIPT v2.1 §8 retired, or they previewed this episode:
+- The bar-9 headlines `RSI`, `JK.` and `(NOT JK)`, with the `agi achieved internally` egg, and the bar-9.4 bridges of light.
+- The robot vacuum breaking formation to salute a vending machine (Ep11's own #6).
+- The Intern's `RESEARCHER` lanyard on Mas's coat hook with a smaller lanyard hanging from it (Ep11's nested lanyards), and the half-scratch "?" on the tally (THE DIFF carves it in this episode; it first shows in Ep12's intro).
+- The name-card eggs with machine-rewritten stat rows (they preview Ep12, and they'd force a re-render of the cached fixed section), the heist balaclava on the coat hook and the KORG flap.
+- The old subtitle `assisted`, which is now Ep12's release note, `assisted (after you)` (SCRIPT §8.1, row 12). The `assisted living` alternate goes with it.
+- The `2027??` date hedge (season-revision-plan §18 #8).
 
 ## Text budget check
-New must-read text: `RSI` + `JK.` + `(NOT JK)` + `assisted`. The podium beat has no text.
+New must-read text: the cold-open line and `at a responsible pace (2× speed)`. Everything else is an egg or unchanged.

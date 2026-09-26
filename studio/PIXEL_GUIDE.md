@@ -206,6 +206,12 @@ To capture a character's coverage while drawing, use `blitImg(b, img, x, y, {mas
 
 ---
 
+### Generated-video inserts: `genclip.ts`, `GenVideo.tsx`, `plate.ts` (added 2026-09-25)
+A clip from a video model, converted offline by `tools/genvideo/pixelize.py`, becomes palette-exact native drawings plus `clip.json` in `studio/public/genvideo/<shot>/`. Inside a shot it is just another `Buf`, so masks, palette switches, GLYPH and the render front all apply to it. The full guide is `tools/genvideo/README.md`.
+- `<GenVideoScene clip="genvideo/<shot>" placement={{from, offset, loop}} draw={(fb, f, gen) => ...}>` is a `PixelScene` whose `draw` also receives the clip's current drawing (loaded under `delayRender`). `<GenVideoPlayer src>` is a whole-frame MP4, for straight cuts only.
+- `blitGen(fb, gen, {mask, invert, dx, dy, key})` composites the clip inside a mask ("only the sky", "only the ceiling hole"). `maskFromColors(fb, cols, rect)` keys a region by palette colour. `genHandoff(fb, gen, t)` hides the re-quantisation on a **match cut** (2–6 frames on frames that already match; it is not a transition, see §2 rule 7).
+- **Clean plates.** Rendering with `--props='{"genvideoPlate":true}'` makes every `PixelScene` show only what `draw()` paints: no `after` UI, no glyph layers, no palette or switches. Scenes that paint UI inside `draw()` can check `isGenvideoPlate()`. It is off by default, so no existing render changes. `tools/genvideo/keyframes.py` uses it to export conditioning frames.
+
 ## 6. Recipes
 
 **The Orb scan.** Mas's room stays BASE. Inside the beam, the true world shows in glyph for 5 frames.
@@ -269,3 +275,4 @@ The code is in `src/styleframes/pixelengine.frame.tsx` and `src/dev/pixelengine/
 - **`pixelengine-switches-sheet`**: a 3×3 contact sheet of the panels.
 - **`pixelengine-dissolve`**: 48 frames. A call tile breaks into tokens, blows away, and re-forms.
 - **`pixelengine-renderfront`**: 48 frames. 1-BIT → EARLY-WEB 16 → BASE.
+- **`genvideo-window`, `genvideo-handoff`, `genvideo-glyph`** (`src/dev/genvideo/entry.tsx`): converted clips inside pixel shots (a masked sky plate and a ceiling hole, a match-cut handoff, GLYPH on a clip). Their clips come from `tools/genvideo/test_genvideo.py`.

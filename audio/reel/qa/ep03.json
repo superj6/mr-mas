@@ -4,20 +4,21 @@
  "key": "ep03",
  "episode": 3,
  "title": "ep1.2_strawberry.jpg",
- "speculative": false,
+ "extrapolated": false,
+ "extrapolated_from": "extrapolated",
  "error": null,
- "frames": 4176,
- "samples": 8352000,
- "seconds": 174.0,
+ "frames": 3648,
+ "samples": 7296000,
+ "seconds": 152.0,
  "fps": 24,
  "sr": 48000,
- "sum_reelDur_plus_title_s": 174.0,
+ "sum_reelDur_plus_title_s": 152.0,
  "title_card_s": 3.0,
- "beats": 42,
+ "beats": 33,
  "loudness": {
   "bed_short_term_target": -20.0,
   "bed_short_term_median": -20.0,
-  "bed_short_term_p5": -20.43,
+  "bed_short_term_p5": -20.38,
   "bed_short_term_p95": -19.61,
   "accent_momentary_target": -14.0,
   "accent_momentary_max": [
@@ -25,30 +26,29 @@
    -14.06,
    -14.0,
    -14.03,
-   -14.15,
    -14.09,
+   -14.0,
+   -14.22,
    -14.06,
+   -14.22,
    -14.03,
+   -14.02,
    -14.0,
-   -14.0,
-   -14.03,
-   -14.0,
-   -14.23,
-   -14.11
+   -14.2
   ],
-  "mix_integrated": -19.5,
-  "mix_true_peak_dbtp": -1.44,
+  "mix_integrated": -19.44,
+  "mix_true_peak_dbtp": -1.83,
   "limiter_max_gr_db": 0.0,
   "limiter_events": []
  },
  "layer_gain_db": {
-  "piano": 2.46,
-  "chip_pad": -24.69,
-  "tri": -29.57,
-  "arp": -9.61,
+  "piano": 2.69,
+  "chip_pad": -24.66,
+  "tri": -29.46,
+  "arp": -9.66,
   "knee": -15.85,
-  "beeper": -14.6,
-  "glyph": 3.12
+  "beeper": -14.53,
+  "glyph": null
  },
  "chords": [
   {
@@ -57,163 +57,143 @@
    "act": "COLD OPEN"
   },
   {
-   "t": 10.0,
-   "chord": "Eb9sus4",
-   "act": "COLD OPEN"
-  },
-  {
-   "t": 13.5,
+   "t": 10.5,
    "chord": "F9sus4",
    "act": "INTRO"
   },
   {
-   "t": 16.0,
+   "t": 13.0,
    "chord": "Fm11",
    "act": "ACT ONE"
   },
   {
-   "t": 23.5,
-   "chord": "Eb9sus4",
+   "t": 22.0,
+   "chord": "Bbm9",
    "act": "ACT ONE"
   },
   {
-   "t": 32.0,
+   "t": 27.5,
+   "chord": "Fm9",
+   "act": "ACT ONE"
+  },
+  {
+   "t": 30.0,
    "chord": "Fm11",
    "act": "ACT ONE"
   },
   {
-   "t": 39.5,
+   "t": 35.5,
    "chord": "Dbmaj9#11",
    "act": "ACT ONE"
   },
   {
-   "t": 45.0,
+   "t": 41.0,
    "chord": "Gm7b5",
    "act": "ACT ONE"
   },
   {
-   "t": 54.0,
-   "chord": "Dbmaj9#11",
-   "act": "ACT TWO"
-  },
-  {
-   "t": 61.5,
-   "chord": "Bbm9",
-   "act": "ACT TWO"
-  },
-  {
-   "t": 66.5,
-   "chord": "Eb9sus4",
-   "act": "ACT TWO"
-  },
-  {
-   "t": 75.0,
-   "chord": "Abmaj9",
-   "act": "ACT TWO"
-  },
-  {
-   "t": 82.0,
-   "chord": "Fm11",
-   "act": "ACT TWO"
-  },
-  {
-   "t": 87.0,
-   "chord": "Bbm9",
-   "act": "ACT THREE"
-  },
-  {
-   "t": 91.5,
-   "chord": "Gm7b5",
-   "act": "ACT THREE"
-  },
-  {
-   "t": 96.0,
+   "t": 48.0,
    "chord": "C7#9b13",
+   "act": "ACT ONE"
+  },
+  {
+   "t": 53.0,
+   "chord": "Dbmaj9#11",
+   "act": "ACT TWO"
+  },
+  {
+   "t": 58.0,
+   "chord": "Gm7b5",
+   "act": "ACT TWO"
+  },
+  {
+   "t": 62.5,
+   "chord": "C7#9b13",
+   "act": "ACT TWO"
+  },
+  {
+   "t": 67.0,
+   "chord": "Fm9",
+   "act": "ACT TWO"
+  },
+  {
+   "t": 72.0,
+   "chord": "Bbm9",
+   "act": "ACT TWO"
+  },
+  {
+   "t": 77.0,
+   "chord": "Gm7b5",
+   "act": "ACT TWO"
+  },
+  {
+   "t": 81.5,
+   "chord": "Bbm9",
    "act": "ACT THREE"
   },
   {
-   "t": 99.5,
+   "t": 85.5,
+   "chord": "Fm9",
+   "act": "ACT THREE"
+  },
+  {
+   "t": 90.5,
    "chord": "Dbmaj9#11",
+   "act": "ACT THREE"
+  },
+  {
+   "t": 95.5,
+   "chord": "Fm11",
+   "act": "ACT THREE"
+  },
+  {
+   "t": 100.5,
+   "chord": "Abmaj9",
    "act": "ACT THREE"
   },
   {
    "t": 104.5,
-   "chord": "Bbm9",
+   "chord": "Gm7b5",
    "act": "ACT THREE"
   },
   {
    "t": 109.5,
-   "chord": "Fm9",
+   "chord": "C7#9b13",
    "act": "ACT THREE"
   },
   {
-   "t": 114.0,
-   "chord": "Bbm9",
-   "act": "ACT THREE"
+   "t": 114.5,
+   "chord": "Fm9",
+   "act": "ACT FOUR"
   },
   {
    "t": 120.0,
-   "chord": "Eb9sus4",
-   "act": "ACT THREE"
-  },
-  {
-   "t": 123.5,
-   "chord": "Fm9",
-   "act": "ACT FOUR"
-  },
-  {
-   "t": 127.0,
-   "chord": "Fm11",
-   "act": "ACT FOUR"
-  },
-  {
-   "t": 131.5,
-   "chord": "Abmaj9",
-   "act": "ACT FOUR"
-  },
-  {
-   "t": 134.5,
    "chord": "Dbmaj9#11",
    "act": "ACT FOUR"
   },
   {
-   "t": 140.0,
-   "chord": "Bbm9",
-   "act": "ACT FOUR"
-  },
-  {
-   "t": 145.0,
+   "t": 125.0,
    "chord": "Fm9",
    "act": "ACT FOUR"
   },
   {
-   "t": 149.5,
+   "t": 130.5,
    "chord": "Gm7b5",
    "act": "ACT FOUR"
   },
   {
-   "t": 154.0,
+   "t": 136.0,
    "chord": "C7#9b13",
    "act": "ACT FOUR"
   },
   {
-   "t": 158.0,
+   "t": 140.5,
    "chord": "Fm9",
-   "act": "ACT FOUR"
+   "act": "TAG"
   },
   {
-   "t": 161.5,
+   "t": 149.0,
    "chord": "Gm7b5",
-   "act": "TAG"
-  },
-  {
-   "t": 165.0,
-   "chord": "C7#9b13",
-   "act": "TAG"
-  },
-  {
-   "t": 171.0,
-   "chord": "Fm9",
    "act": "TAG"
   }
  ],
@@ -235,18 +215,18 @@
    "lufs_m": -14.06
   },
   {
-   "t": 13.5,
+   "t": 10.5,
    "kind": "intro",
-   "beat": "3.04",
+   "beat": "3.03",
    "chord": "F9sus4",
    "src": "V1 master f630+ (title)",
    "raw_lufs_m": -10.1,
    "lufs_m": -14.0
   },
   {
-   "t": 32.0,
+   "t": 30.0,
    "kind": "brass",
-   "beat": "3.09",
+   "beat": "3.08",
    "chord": "Fm11",
    "src": "V1 brass f240 + chip",
    "raw_lufs_m": -13.2,
@@ -255,120 +235,106 @@
   {
    "t": 35.5,
    "kind": "chip",
-   "beat": "3.10",
-   "chord": "Fm11",
-   "src": "chip",
-   "raw_lufs_m": -8.6,
-   "lufs_m": -14.15
-  },
-  {
-   "t": 39.5,
-   "kind": "chip",
-   "beat": "3.11",
+   "beat": "3.09",
    "chord": "Dbmaj9#11",
    "src": "chip",
    "raw_lufs_m": -8.7,
    "lufs_m": -14.09
   },
   {
-   "t": 61.5,
+   "t": 53.0,
    "kind": "brass",
-   "beat": "3.16",
+   "beat": "3.13",
+   "chord": "Dbmaj9#11",
+   "src": "V1 brass f300 + chip",
+   "raw_lufs_m": -13.0,
+   "lufs_m": -14.0
+  },
+  {
+   "t": 58.0,
+   "kind": "chip",
+   "beat": "3.14",
+   "chord": "Gm7b5",
+   "src": "chip",
+   "raw_lufs_m": -8.9,
+   "lufs_m": -14.22
+  },
+  {
+   "t": 72.0,
+   "kind": "brass",
+   "beat": "3.17",
    "chord": "Bbm9",
    "src": "V1 brass f360 + chip",
    "raw_lufs_m": -12.6,
    "lufs_m": -14.06
   },
   {
-   "t": 82.0,
-   "kind": "brass",
-   "beat": "3.21",
-   "chord": "Fm11",
-   "src": "V1 brass f240 + chip",
-   "raw_lufs_m": -13.2,
-   "lufs_m": -14.03
-  },
-  {
-   "t": 99.5,
-   "kind": "brass",
-   "beat": "3.25",
-   "chord": "Dbmaj9#11",
-   "src": "V1 brass f300 + chip",
-   "raw_lufs_m": -13.0,
-   "lufs_m": -14.0
-  },
-  {
-   "t": 114.0,
-   "kind": "card",
-   "beat": "3.28",
-   "chord": "Bbm9",
-   "src": "V1 brass f360 via sample-chip + chip",
-   "raw_lufs_m": -12.0,
-   "lufs_m": -14.0
-  },
-  {
-   "t": 127.0,
-   "kind": "brass",
-   "beat": "3.32",
-   "chord": "Fm11",
-   "src": "V1 brass f240 + chip",
-   "raw_lufs_m": -13.2,
-   "lufs_m": -14.03
-  },
-  {
-   "t": 134.5,
-   "kind": "brass",
-   "beat": "3.34",
-   "chord": "Dbmaj9#11",
-   "src": "V1 brass f300 + chip",
-   "raw_lufs_m": -13.0,
-   "lufs_m": -14.0
-  },
-  {
-   "t": 140.0,
+   "t": 77.0,
    "kind": "chip",
-   "beat": "3.35",
-   "chord": "Bbm9",
+   "beat": "3.18",
+   "chord": "Gm7b5",
    "src": "chip",
    "raw_lufs_m": -8.9,
-   "lufs_m": -14.23
+   "lufs_m": -14.22
   },
   {
-   "t": 165.0,
+   "t": 95.5,
    "kind": "brass",
-   "beat": "3.41",
-   "chord": "C7#9b13",
-   "src": "V1 brass f420 + chip",
+   "beat": "3.22",
+   "chord": "Fm11",
+   "src": "V1 brass f240 + chip",
+   "raw_lufs_m": -13.2,
+   "lufs_m": -14.03
+  },
+  {
+   "t": 100.5,
+   "kind": "chip",
+   "beat": "3.23",
+   "chord": "Abmaj9",
+   "src": "chip",
+   "raw_lufs_m": -8.8,
+   "lufs_m": -14.02
+  },
+  {
+   "t": 120.0,
+   "kind": "brass",
+   "beat": "3.27",
+   "chord": "Dbmaj9#11",
+   "src": "V1 brass f300 + chip",
    "raw_lufs_m": -13.0,
-   "lufs_m": -14.11
+   "lufs_m": -14.0
+  },
+  {
+   "t": 125.0,
+   "kind": "chip",
+   "beat": "3.28",
+   "chord": "Fm9",
+   "src": "chip",
+   "raw_lufs_m": -8.7,
+   "lufs_m": -14.2
   }
  ],
  "flashback_regions": [
   [
-   66.5,
-   75.0
+   62.5,
+   67.0
   ],
   [
-   87.0,
-   91.5
+   81.5,
+   85.5
   ],
   [
    104.5,
-   114.0
+   109.5
   ]
  ],
- "glyph_regions": [
-  [
-   39.5,
-   45.0
-  ]
- ],
+ "glyph_regions": [],
  "intro_regions": [
   [
-   13.5,
-   16.0
+   10.5,
+   13.0
   ]
  ],
- "render_s": 78.1,
- "inputs_hash": "37efa263f2688c2a"
+ "render_s": 36.8,
+ "inputs_hash": "456b3cdebd8ac1e0"
 }

@@ -1,0 +1,340 @@
+{
+ "schema": "mrmas-ost-cue/1",
+ "id": "e01-s30a-the-door",
+ "mm": "MM-11",
+ "family": "STRAIGHT (P01 sincere mode)",
+ "title": "The Door (STRAIGHT violin, Ep1 sc 30a)",
+ "version": "1",
+ "composer": "Composer E (OST batch 1)",
+ "tone": "one violin, played straight, under Alyi's regret post only; it stops dead on the first heart",
+ "tags": [
+  "straight",
+  "to picture",
+  "Ep1",
+  "violin",
+  "senza vibrato",
+  "editor-placed stop"
+ ],
+ "usage": "BI",
+ "scenes": [
+  "E01-S30a (18:00): under the regret post; stop on the first heart (editor-placed, off the grid)"
+ ],
+ "description": "Lay at act 8310 (lock v2). Uncut violin line; the editor cuts on the first heart (3 ms, tails cut). Pre-cut stops at act 8439, 8427, 8451, 8466 (render/*-stop-f*.wav); the lock's first heart is 8439 = 5.375 s into this file.",
+ "motifs": [
+  "the Door (s2.9) an octave down: Ab3 Db4 | C4 G3 (the open G, held) -- ends on the #4, never cadences"
+ ],
+ "key": "Db lydian",
+ "engine": {
+  "version": "mrmas-ost-engine 1.1 (2026-09-26: fix1 -- meter axis, sample tuning, render pool, QA 5a-d)",
+  "rendered": "2026-09-26T06:29:47",
+  "render_seconds": 4.0
+ },
+ "timing": {
+  "bpm": 96.0,
+  "beat_unit_quarters": 1.0,
+  "tempo_map": [
+   {
+    "bar": 1,
+    "beat": 1.0,
+    "bpm": 96.0,
+    "ramp_in": false,
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "meter_map": [
+   {
+    "bar": 1,
+    "meter": "4/4",
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "swing": 0.0,
+  "swing_unit_quarters": 0.5,
+  "pickup_beats": 0.0,
+  "bars": 4,
+  "length_s": 10.0,
+  "length_frames": 240.0,
+  "fps": 24,
+  "end": {
+   "sec": 10.0,
+   "frame": 240.0,
+   "bar": 5,
+   "beat": 1.0
+  },
+  "album_duration_s": 11.0183,
+  "album_duration_frames": 264.44,
+  "album_loops": 1
+ },
+ "sections": [
+  {
+   "label": "the Door (the G held until the heart)",
+   "start": {
+    "sec": 0.0,
+    "frame": 0.0,
+    "bar": 1,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 10.0,
+    "frame": 240.0,
+    "bar": 5,
+    "beat": 1.0
+   }
+  }
+ ],
+ "markers": [
+  {
+   "label": "the post (violin in)",
+   "sec": 0.0,
+   "frame": 0.0,
+   "bar": 1,
+   "beat": 1.0
+  }
+ ],
+ "hit_check": [
+  {
+   "t": 0.0,
+   "offset_ms": 2.7,
+   "strength": 4.93
+  }
+ ],
+ "sfx_slots": [],
+ "silence_windows": [],
+ "vo_windows": [],
+ "knee_whole": 0,
+ "f_major": {
+  "limit": 0.08,
+  "windows": 0,
+  "worst": 0.0,
+  "worst_sieved": 0.0,
+  "ok": true,
+  "ok_written": true,
+  "ok_spectral": true,
+  "f_inaudible_windows": 0,
+  "a_classes": {
+   "written": 0,
+   "resonance": 0,
+   "explained": 0,
+   "unattributed": 0
+  },
+  "written_a_over_f_bass": [],
+  "written_third": {
+   "ok": true,
+   "count": 0,
+   "events": [],
+   "grazes": [],
+   "n_grazes": 0,
+   "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+  },
+  "fails": [],
+  "explained": [],
+  "fixed_resonances": [],
+  "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+ },
+ "knee_completion": 0,
+ "room_sfx_windows": [],
+ "qa": {
+  "balance": {
+   "balance": {
+    "piano": 0,
+    "orch": 100,
+    "bigband": 0,
+    "chip": 0
+   },
+   "rhythm_pct_of_all": 0,
+   "chip_share": 0,
+   "balance_energy": {
+    "piano": 0,
+    "orch": 100,
+    "bigband": 0,
+    "chip": 0
+   },
+   "method": "theme stemtable (gated loudness per section, time-weighted, rhythm/fx excluded; it counts a brief stab at its own loudness for the whole section) + balance_energy (ungated energy)",
+   "sections": [
+    {
+     "section": "the Door (the G held until the heart)",
+     "share": {
+      "piano": 0,
+      "orch": 100,
+      "bigband": 0,
+      "chip": 0
+     }
+    }
+   ]
+  },
+  "short_term_underscore": {
+   "p95": -20.11,
+   "median": -22.94,
+   "max": -19.94
+  },
+  "band_2_6k_db": -21.5,
+  "centroid_hz": 653.0,
+  "f_major": {
+   "limit": 0.08,
+   "windows": 0,
+   "worst": 0.0,
+   "worst_sieved": 0.0,
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "f_inaudible_windows": 0,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_a_over_f_bass": [],
+   "written_third": {
+    "ok": true,
+    "count": 0,
+    "events": [],
+    "grazes": [],
+    "n_grazes": 0,
+    "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+   },
+   "fails": [],
+   "explained": [],
+   "fixed_resonances": [],
+   "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+  },
+  "knee_completion": {
+   "count": 0,
+   "hits": [],
+   "max_gap_s": 2.5,
+   "rule": "OST-BIBLE rule 4: the knee never plays whole in an episode, in any register, across a phrase boundary too"
+  },
+  "sub_under_room": [],
+  "no_third": [],
+  "silence": [],
+  "hard_stops": [],
+  "vo_windows": [],
+  "knee_whole": 0,
+  "motifs_found": {
+   "DOOR": [
+    {
+     "inst": "svln_nv",
+     "t": 0.0,
+     "transpose": -12
+    }
+   ]
+  },
+  "swing": {},
+  "banned": []
+ },
+ "loop": null,
+ "files": {
+  "album_wav": "render/e01-s30a-the-door-album.wav",
+  "album_mp3": "render/e01-s30a-the-door-album.mp3",
+  "underscore_wav": "render/e01-s30a-the-door-underscore.wav",
+  "underscore_mp3": "render/e01-s30a-the-door-underscore.mp3",
+  "stems": {
+   "strings": "render/stems/e01-s30a-the-door-strings.flac"
+  },
+  "midi": "render/e01-s30a-the-door.mid",
+  "pianoroll": "render/e01-s30a-the-door-pianoroll.png"
+ },
+ "masters": {
+  "album": {
+   "target_lufs": -18.0,
+   "ceiling_dbtp": -1.0,
+   "comp": {
+    "thresh_db": -20,
+    "ratio": 1.8
+   },
+   "dialog_pocket": null,
+   "measured": {
+    "lufs": -18.05,
+    "lra": 6.81,
+    "true_peak_db": -9.1,
+    "peak_db": -9.11,
+    "rms_db": -21.89,
+    "crest_db": 12.78,
+    "seconds": 11.0183
+   }
+  },
+  "underscore": {
+   "target_lufs": -22.0,
+   "ceiling_dbtp": -3.0,
+   "comp": {
+    "thresh_db": -28,
+    "ratio": 1.3,
+    "att_ms": 40.0,
+    "rel_ms": 350.0
+   },
+   "dialog_pocket": {
+    "f": 2500.0,
+    "db": -2.0,
+    "q": 0.7
+   },
+   "measured": {
+    "lufs": -22.0,
+    "lra": 6.69,
+    "true_peak_db": -13.42,
+    "peak_db": -13.43,
+    "rms_db": -25.82,
+    "crest_db": 12.39,
+    "seconds": 11.0183
+   }
+  }
+ },
+ "stems": {
+  "sum_vs_underscore_residual_db": -240.0,
+  "families_present": [
+   "strings"
+  ],
+  "family_share_lu": {
+   "strings": 0.0
+  }
+ },
+ "spectrum": {
+  "sub": -43.7,
+  "bass": -34.9,
+  "lowmid": -0.3,
+  "mid": -11.5,
+  "presence": -28.2,
+  "air": -55.5,
+  "centroid_hz": 653.0
+ },
+ "bar_levels": [
+  {
+   "bar": 1,
+   "rms_db": -27.9,
+   "peak_db": -16.399999618530273
+  },
+  {
+   "bar": 2,
+   "rms_db": -26.2,
+   "peak_db": -14.899999618530273
+  },
+  {
+   "bar": 3,
+   "rms_db": -22.5,
+   "peak_db": -13.899999618530273
+  },
+  {
+   "bar": 4,
+   "rms_db": -27.2,
+   "peak_db": -13.399999618530273
+  }
+ ],
+ "instrumentation": {
+  "svln_nv": {
+   "family": "strings",
+   "notes": 4,
+   "source": "fn",
+   "credit": "Orchestral samples: VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  }
+ },
+ "credits": [
+  "Orchestral samples: VSCO 2 CE by Versilian Studios (CC0 1.0)"
+ ],
+ "audition": [
+  "0-5 s: senza vibrato, no portamento, no swell -- sincere and plain; it must NOT read as \"world's smallest violin\" (no sob, no sweetness added)",
+  "the -stop-f8439.wav alternate at 5.375 s (the lock's first heart): a dead stop mid-note, tails cut -- the laugh on the first heart, or a glitch?",
+  "the violin timbre after de-vibrato: still a player (bow noise, slight intonation drift), not a synth"
+ ],
+ "warnings": []
+}

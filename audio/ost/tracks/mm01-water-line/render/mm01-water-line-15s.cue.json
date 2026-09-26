@@ -1,0 +1,453 @@
+{
+ "schema": "mrmas-ost-cue/1",
+ "id": "mm01-water-line-15s",
+ "mm": "MM-01",
+ "family": "P01",
+ "title": "Water Line (15s)",
+ "version": "1.1 (fix 1, 2026-09-26)",
+ "composer": "Composer E (OST batch 1; fix 1: composer A)",
+ "tone": "Mas's theme: calm, alone, sure of himself at 2 a.m.; the one complete motif in the show",
+ "tags": [
+  "dark room",
+  "mas",
+  "theme",
+  "library",
+  "felt piano",
+  "jazz trio",
+  "V.O."
+ ],
+ "usage": "BI",
+ "scenes": [
+  "Ep1 sc 18 dark room (10:13)",
+  "Ep1 sc 20-23 dark room beats",
+  "every episode: his rooms, nights, V.O.",
+  "Ep1 sc 32 tag (MM-12 may quote it)"
+ ],
+ "description": "15 s cut-down: one statement (trio), the Dbmaj7 window, the cadence C4 -> F4 and its ring",
+ "motifs": [
+  "the Water Line (felt RH, b1 fragment, b3, b7, b19, b23, b27-28)",
+  "the nudge doubled by a 50 % chip square (A': b19, b23 only)",
+  "the kink G-Ab-C, never taken (violas b11, cellos b18)",
+  "the verdict F5 -> C6 (vibes + celesta, b17)",
+  "one Harmon trumpet line (b13-16)"
+ ],
+ "key": "F minor (rootless Fm9 - Dbmaj7 - Bbm9 - C7sus(b9)); B: Dbmaj7#11 - Bbm9 - Gbmaj7#11 - F5 - C7sus(b9)",
+ "engine": {
+  "version": "mrmas-ost-engine 1.1 (2026-09-26: fix1 -- meter axis, sample tuning, render pool, QA 5a-d)",
+  "rendered": "2026-09-26T01:41:11",
+  "render_seconds": 4.2
+ },
+ "timing": {
+  "bpm": 96.0,
+  "beat_unit_quarters": 1.0,
+  "tempo_map": [
+   {
+    "bar": 1,
+    "beat": 1.0,
+    "bpm": 96.0,
+    "ramp_in": false,
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "meter_map": [
+   {
+    "bar": 1,
+    "meter": "4/4",
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "swing": 1.0,
+  "swing_unit_quarters": 0.5,
+  "pickup_beats": 0.0,
+  "bars": 6,
+  "length_s": 15.0,
+  "length_frames": 360.0,
+  "fps": 24,
+  "end": {
+   "sec": 15.0,
+   "frame": 360.0,
+   "bar": 7,
+   "beat": 1.0
+  },
+  "album_duration_s": 16.4132,
+  "album_duration_frames": 393.92,
+  "album_loops": 1
+ },
+ "sections": [
+  {
+   "label": "statement",
+   "start": {
+    "sec": 0.0,
+    "frame": 0.0,
+    "bar": 1,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 5.0,
+    "frame": 120.0,
+    "bar": 3,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "Dbmaj7 (felt alone)",
+   "start": {
+    "sec": 5.0,
+    "frame": 120.0,
+    "bar": 3,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 10.0,
+    "frame": 240.0,
+    "bar": 5,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "cadence",
+   "start": {
+    "sec": 10.0,
+    "frame": 240.0,
+    "bar": 5,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 15.0,
+    "frame": 360.0,
+    "bar": 7,
+    "beat": 1.0
+   }
+  }
+ ],
+ "markers": [
+  {
+   "label": "the settle: F4 on an open fifth (no third)",
+   "sec": 10.625,
+   "frame": 255.0,
+   "bar": 5,
+   "beat": 2.0
+  }
+ ],
+ "hit_check": [
+  {
+   "t": 10.625,
+   "offset_ms": -3.7,
+   "strength": 3.49
+  }
+ ],
+ "sfx_slots": [],
+ "silence_windows": [],
+ "vo_windows": [],
+ "knee_whole": 0,
+ "f_major": {
+  "limit": 0.08,
+  "windows": 11,
+  "worst": 0.069,
+  "worst_sieved": 0.023,
+  "ok": true,
+  "ok_written": true,
+  "ok_spectral": true,
+  "f_inaudible_windows": 0,
+  "a_classes": {
+   "written": 0,
+   "resonance": 0,
+   "explained": 0,
+   "unattributed": 0
+  },
+  "written_a_over_f_bass": [],
+  "written_third": {
+   "ok": true,
+   "count": 0,
+   "events": [],
+   "grazes": [],
+   "n_grazes": 0,
+   "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+  },
+  "fails": [],
+  "explained": [],
+  "fixed_resonances": [],
+  "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+ },
+ "knee_completion": 0,
+ "room_sfx_windows": [],
+ "qa": {
+  "balance": {
+   "balance": {
+    "piano": 100,
+    "orch": 0,
+    "bigband": 0,
+    "chip": 0
+   },
+   "rhythm_pct_of_all": 3,
+   "chip_share": 0,
+   "balance_energy": {
+    "piano": 100,
+    "orch": 0,
+    "bigband": 0,
+    "chip": 0
+   },
+   "method": "theme stemtable (gated loudness per section, time-weighted, rhythm/fx excluded; it counts a brief stab at its own loudness for the whole section) + balance_energy (ungated energy)",
+   "sections": [
+    {
+     "section": "statement",
+     "share": {
+      "piano": 100,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "Dbmaj7 (felt alone)",
+     "share": {
+      "piano": 100,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "cadence",
+     "share": {
+      "piano": 100,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 0
+     }
+    }
+   ]
+  },
+  "short_term_underscore": {
+   "p95": -17.87,
+   "median": -23.28,
+   "max": -17.25
+  },
+  "band_2_6k_db": -27.4,
+  "centroid_hz": 391.0,
+  "f_major": {
+   "limit": 0.08,
+   "windows": 11,
+   "worst": 0.069,
+   "worst_sieved": 0.023,
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "f_inaudible_windows": 0,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_a_over_f_bass": [],
+   "written_third": {
+    "ok": true,
+    "count": 0,
+    "events": [],
+    "grazes": [],
+    "n_grazes": 0,
+    "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+   },
+   "fails": [],
+   "explained": [],
+   "fixed_resonances": [],
+   "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+  },
+  "knee_completion": {
+   "count": 0,
+   "hits": [],
+   "max_gap_s": 2.5,
+   "rule": "OST-BIBLE rule 4: the knee never plays whole in an episode, in any register, across a phrase boundary too"
+  },
+  "sub_under_room": [],
+  "no_third": [],
+  "silence": [],
+  "hard_stops": [],
+  "vo_windows": [],
+  "knee_whole": 0,
+  "motifs_found": {
+   "WATER_LINE": [
+    {
+     "inst": "felt",
+     "t": 0.0,
+     "transpose": 0
+    }
+   ]
+  },
+  "swing": {
+   "felt": {
+    "offbeats": 1,
+    "median_frames": 10.0,
+    "hum_ms": 3
+   },
+   "felt_lh": {
+    "offbeats": 6,
+    "median_frames": 10.26,
+    "hum_ms": 3
+   },
+   "felt_mech": {
+    "offbeats": 2,
+    "median_frames": 10.0,
+    "hum_ms": 3
+   }
+  },
+  "banned": []
+ },
+ "loop": null,
+ "files": {
+  "album_wav": "render/mm01-water-line-15s-album.wav",
+  "album_mp3": "render/mm01-water-line-15s-album.mp3",
+  "underscore_wav": "render/mm01-water-line-15s-underscore.wav",
+  "underscore_mp3": "render/mm01-water-line-15s-underscore.mp3",
+  "stems": {},
+  "midi": "render/mm01-water-line-15s.mid",
+  "pianoroll": "render/mm01-water-line-15s-pianoroll.png"
+ },
+ "masters": {
+  "album": {
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "comp": {
+    "thresh_db": -20,
+    "ratio": 1.8
+   },
+   "dialog_pocket": null,
+   "measured": {
+    "lufs": -16.0,
+    "lra": 18.23,
+    "true_peak_db": -1.52,
+    "peak_db": -1.53,
+    "rms_db": -20.53,
+    "crest_db": 19.0,
+    "seconds": 16.4132
+   }
+  },
+  "underscore": {
+   "target_lufs": -20.0,
+   "ceiling_dbtp": -3.0,
+   "comp": {
+    "thresh_db": -28,
+    "ratio": 1.3,
+    "att_ms": 40.0,
+    "rel_ms": 350.0
+   },
+   "dialog_pocket": {
+    "f": 2500.0,
+    "db": -2.0,
+    "q": 0.7
+   },
+   "measured": {
+    "lufs": -20.0,
+    "lra": 17.19,
+    "true_peak_db": -4.79,
+    "peak_db": -4.8,
+    "rms_db": -24.25,
+    "crest_db": 19.45,
+    "seconds": 16.4132
+   }
+  }
+ },
+ "stems": {
+  "sum_vs_underscore_residual_db": -169.1,
+  "families_present": [],
+  "family_share_lu": {
+   "piano": -0.4,
+   "bass": -12.0,
+   "drums": -17.4
+  }
+ },
+ "spectrum": {
+  "sub": -33.1,
+  "bass": -7.6,
+  "lowmid": -0.9,
+  "mid": -17.4,
+  "presence": -29.8,
+  "air": -37.6,
+  "centroid_hz": 391.0
+ },
+ "bar_levels": [
+  {
+   "bar": 1,
+   "rms_db": -19.6,
+   "peak_db": -5.400000095367432
+  },
+  {
+   "bar": 2,
+   "rms_db": -21.9,
+   "peak_db": -4.800000190734863
+  },
+  {
+   "bar": 3,
+   "rms_db": -27.5,
+   "peak_db": -8.600000381469727
+  },
+  {
+   "bar": 4,
+   "rms_db": -30.2,
+   "peak_db": -11.199999809265137
+  },
+  {
+   "bar": 5,
+   "rms_db": -23.7,
+   "peak_db": -6.0
+  },
+  {
+   "bar": 6,
+   "rms_db": -38.2,
+   "peak_db": -26.200000762939453
+  }
+ ],
+ "instrumentation": {
+  "brush": {
+   "family": "drums",
+   "notes": 4,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "felt": {
+   "family": "piano",
+   "notes": 8,
+   "source": "sf2",
+   "credit": "Upright Piano KW by FreePats (CC0 1.0)"
+  },
+  "felt_lh": {
+   "family": "piano",
+   "notes": 18,
+   "source": "sf2",
+   "credit": "Upright Piano KW by FreePats (CC0 1.0)"
+  },
+  "felt_mech": {
+   "family": "piano",
+   "notes": 7,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "jazz": {
+   "family": "drums",
+   "notes": 2,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "swish": {
+   "family": "drums",
+   "notes": 2,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "ubass": {
+   "family": "bass",
+   "notes": 4,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  }
+ },
+ "credits": [
+  "GeneralUser GS by S. Christian Collins",
+  "Upright Piano KW by FreePats (CC0 1.0)"
+ ],
+ "audition": [],
+ "warnings": []
+}

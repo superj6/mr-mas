@@ -96,7 +96,7 @@
 
 - **No Jan 6 imagery or references**, no raised-fist photo (it also evokes the banned fist-pump imagery).
 - **No family or faith.**
-- **Never speculate about the investigation's outcome** as fact; Ep10 is [INVENTED] and labeled speculative.
+- **Never speculate about the investigation's outcome** as fact; Ep10 is [INVENTED] and visibly absurd, and there is no on-screen speculation label to lean on, so no line may state an outcome of the real investigation.
 - Never photoreal, never a traced photo, never a cloned voice.
 
 **Sources:** [Hawley investigation](https://www.hawley.senate.gov/chairman-hawley-launches-investigation-into-openai-for-hacking-existential-risk-of-ai-products/) · `_sources/research/worldcast-cast-integration.md` §0.

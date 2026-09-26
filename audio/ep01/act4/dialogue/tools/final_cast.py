@@ -21,7 +21,11 @@ import numpy as np
 import soundfile as sf
 
 import a4lib as L
+import a4pace as P
 from audition import timbre
+
+STATUS_32 = {"new", "changed", "retake-pace", "rederive", "restaged", "moved", "unchanged"}
+VO_SLOT = {"a4-26a-vo1": 2.50, "a4-29-vo2": 1.875, "a4-29-vo3": 2.50}
 
 REPO = "/home/jgon/project/art/mrmas"
 ROOT = os.path.join(REPO, "audio/ep01/act4/dialogue")
@@ -63,7 +67,7 @@ def main():
         target = e["qa"].get("target_lufs", -16.0)
         y, sr = check_file(e["id"], e["file"], e["mp3"], target, e["duration_s"], problems)
         if e.get("kind") not in KINDS or e.get("side") not in SIDES or e.get("pov") not in POVS or not e.get("shot"):
-            problems.append(f"{e['id']}: draft 3.1 staging fields missing or invalid")
+            problems.append(f"{e['id']}: staging fields missing or invalid")
         if (e.get("kind") == "post") == e["voiced_in_cut"]:
             problems.append(f"{e['id']}: kind/voiced_in_cut disagree")
         if e.get("kind") == "vo" and (e.get("side") != "none" or e["mouth"] or e.get("lip_sync")):
@@ -101,6 +105,29 @@ def main():
             scenes[e["scene"]].add(slug)
         if e["qa"].get("cer", 0) > 0.0:
             problems.append(f"{e['id']}: ASR CER {e['qa']['cer']} ('{e['qa']['asr']}')")
+        # draft 3.2 (tighten-changes §3): status values, trims, internal pauses, hard cut-offs, span vs target
+        if e.get("status") not in STATUS_32:
+            problems.append(f"{e['id']}: status '{e.get('status')}' is not a 3.2 value")
+        if e["voiced_in_cut"] and e.get("target_span_s"):
+            a_in, a_out = P.audible(y, sr, -52.0)
+            head, tail = a_in, len(y) / sr - a_out
+            if head > 0.045 or tail > 0.045:
+                problems.append(f"{e['id']}: trim head {head:.3f} s / tail {tail:.3f} s (> 40 ms)")
+            cap = 0.42 if e["id"] == "a4-31-03" else 0.32
+            g = P.longest_gap(y, sr)
+            if g > cap and not e.get("derived_from"):
+                problems.append(f"{e['id']}: internal pause {g:.2f} s (cap {cap})")
+            if e.get("cutoff"):
+                env, hop = L.V._rms_frames(y, sr, 0.01)
+                end_db = 20 * np.log10(env[-3:].max() / env.max())  # the loudest of the last 30 ms: a stop, not a decay
+                if end_db < -24.0:
+                    problems.append(f"{e['id']}: cut-off ends {end_db:.0f} dB under its peak (a tail, not a hard stop)")
+            span = e["voiced_span_s"]
+            if e.get("kind") == "vo":
+                if span > VO_SLOT.get(e["id"], 9) or span < 0.9 * e["target_span_s"]:
+                    problems.append(f"{e['id']}: V.O. span {span:.2f} s outside its slot (target {e['target_span_s']}, slot {VO_SLOT.get(e['id'])})")
+            elif abs(span / e["target_span_s"] - 1) > 0.10:
+                problems.append(f"{e['id']}: span {span:.2f} s is {100 * (span / e['target_span_s'] - 1):+.0f}% of its target {e['target_span_s']} s")
     lanes = {}
     for spk, items in by_spk.items():
         f0s = [e["qa"]["median_f0_hz"] for e, _ in items if e["qa"].get("median_f0_hz")]

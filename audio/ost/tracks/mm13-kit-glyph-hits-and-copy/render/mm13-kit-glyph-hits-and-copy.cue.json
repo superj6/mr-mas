@@ -1,0 +1,2513 @@
+{
+ "schema": "mrmas-ost-cue/1",
+ "id": "mm13-kit-glyph-hits-and-copy",
+ "mm": "MM-13",
+ "family": "P05 GLYPH",
+ "title": "Outside Intended Scope: GLYPH hits, Q* and THE COPY (kit)",
+ "version": "1",
+ "composer": "Composer D (OST batch 1)",
+ "tone": "the machine's punctuation: twelve polite dread blinks, the vault's swell, and Mas's own tune played back to him a little closer each episode",
+ "tags": [
+  "kit",
+  "GLYPH",
+  "hits",
+  "Q*",
+  "THE COPY",
+  "dread",
+  "hard stops"
+ ],
+ "usage": "BI",
+ "scenes": [
+  "H01-H12: GLYPH hits Eps 1-9 on the dread curve (Ep1: the Orb's scan, the iris, the RESERVED lamp...)",
+  "QSTAR: Ep1 sc 31 (the vault) and sc 33 (before the button chord)",
+  "C1a-C1c: Ep1 sc 19 hands runner (items 2-4)",
+  "C2: Ep2 CHATGTP",
+  "C3: Eps 3-5",
+  "C4: Eps 6-8",
+  "C5: Ep9 \"mostly.\" replay",
+  "C6: Eps 10-11 (the Intern, the Researcher)",
+  "C7: Ep12 (the supper)"
+ ],
+ "description": "",
+ "motifs": [
+  "TOKENS (grains, scrambled, reversed, almost, the runaway, stream)",
+  "THE ACHE",
+  "the chord with no third",
+  "re-rendering (a glass tone swapped mid-note for its sample-chip copy)",
+  "THE COPY of the Water Line at every lag"
+ ],
+ "key": "F pedal + the Ache; the COPY in F minor",
+ "engine": {
+  "version": "mrmas-ost-engine 1.1 (2026-09-26: fix1 -- meter axis, sample tuning, render pool, QA 5a-d)",
+  "rendered": "2026-09-26T02:24:02",
+  "render_seconds": 197.5
+ },
+ "timing": {
+  "bpm": 96.0,
+  "beat_unit_quarters": 1.0,
+  "tempo_map": [
+   {
+    "bar": 1,
+    "beat": 1.0,
+    "bpm": 96.0,
+    "ramp_in": false,
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "meter_map": [
+   {
+    "bar": 1,
+    "meter": "4/4",
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "swing": 0.0,
+  "swing_unit_quarters": 0.5,
+  "pickup_beats": 0.0,
+  "bars": 53,
+  "length_s": 132.5,
+  "length_frames": 3180.0,
+  "fps": 24,
+  "end": {
+   "sec": 132.5,
+   "frame": 3180.0,
+   "bar": 54,
+   "beat": 1.0
+  },
+  "album_duration_s": 132.5,
+  "album_duration_frames": 3180.0,
+  "album_loops": 1
+ },
+ "sections": [
+  {
+   "label": "H01",
+   "start": {
+    "sec": 0.0,
+    "frame": 0.0,
+    "bar": 1,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 5.0,
+    "frame": 120.0,
+    "bar": 3,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "H02",
+   "start": {
+    "sec": 5.0,
+    "frame": 120.0,
+    "bar": 3,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 10.0,
+    "frame": 240.0,
+    "bar": 5,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "H03",
+   "start": {
+    "sec": 10.0,
+    "frame": 240.0,
+    "bar": 5,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 15.0,
+    "frame": 360.0,
+    "bar": 7,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "H04",
+   "start": {
+    "sec": 15.0,
+    "frame": 360.0,
+    "bar": 7,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 20.0,
+    "frame": 480.0,
+    "bar": 9,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "H05",
+   "start": {
+    "sec": 20.0,
+    "frame": 480.0,
+    "bar": 9,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 25.0,
+    "frame": 600.0,
+    "bar": 11,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "H06",
+   "start": {
+    "sec": 25.0,
+    "frame": 600.0,
+    "bar": 11,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 30.0,
+    "frame": 720.0,
+    "bar": 13,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "H07",
+   "start": {
+    "sec": 30.0,
+    "frame": 720.0,
+    "bar": 13,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 35.0,
+    "frame": 840.0,
+    "bar": 15,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "H08",
+   "start": {
+    "sec": 35.0,
+    "frame": 840.0,
+    "bar": 15,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 40.0,
+    "frame": 960.0,
+    "bar": 17,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "H09",
+   "start": {
+    "sec": 40.0,
+    "frame": 960.0,
+    "bar": 17,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 45.0,
+    "frame": 1080.0,
+    "bar": 19,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "H10",
+   "start": {
+    "sec": 45.0,
+    "frame": 1080.0,
+    "bar": 19,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 50.0,
+    "frame": 1200.0,
+    "bar": 21,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "H11",
+   "start": {
+    "sec": 50.0,
+    "frame": 1200.0,
+    "bar": 21,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 55.0,
+    "frame": 1320.0,
+    "bar": 23,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "H12",
+   "start": {
+    "sec": 55.0,
+    "frame": 1320.0,
+    "bar": 23,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 60.0,
+    "frame": 1440.0,
+    "bar": 25,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "QSTAR",
+   "start": {
+    "sec": 60.0,
+    "frame": 1440.0,
+    "bar": 25,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 65.0,
+    "frame": 1560.0,
+    "bar": 27,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "C1a",
+   "start": {
+    "sec": 65.0,
+    "frame": 1560.0,
+    "bar": 27,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 72.5,
+    "frame": 1740.0,
+    "bar": 30,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "C1b",
+   "start": {
+    "sec": 72.5,
+    "frame": 1740.0,
+    "bar": 30,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 80.0,
+    "frame": 1920.0,
+    "bar": 33,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "C1c",
+   "start": {
+    "sec": 80.0,
+    "frame": 1920.0,
+    "bar": 33,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 87.5,
+    "frame": 2100.0,
+    "bar": 36,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "C2",
+   "start": {
+    "sec": 87.5,
+    "frame": 2100.0,
+    "bar": 36,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 95.0,
+    "frame": 2280.0,
+    "bar": 39,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "C3",
+   "start": {
+    "sec": 95.0,
+    "frame": 2280.0,
+    "bar": 39,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 102.5,
+    "frame": 2460.0,
+    "bar": 42,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "C4",
+   "start": {
+    "sec": 102.5,
+    "frame": 2460.0,
+    "bar": 42,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 110.0,
+    "frame": 2640.0,
+    "bar": 45,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "C5",
+   "start": {
+    "sec": 110.0,
+    "frame": 2640.0,
+    "bar": 45,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 117.5,
+    "frame": 2820.0,
+    "bar": 48,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "C6",
+   "start": {
+    "sec": 117.5,
+    "frame": 2820.0,
+    "bar": 48,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 125.0,
+    "frame": 3000.0,
+    "bar": 51,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "C7",
+   "start": {
+    "sec": 125.0,
+    "frame": 3000.0,
+    "bar": 51,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 132.5,
+    "frame": 3180.0,
+    "bar": 54,
+    "beat": 1.0
+   }
+  }
+ ],
+ "markers": [
+  {
+   "label": "H01 L1 the scan (grains F5 -> C6, sub puff)",
+   "sec": 0.0,
+   "frame": 0.0,
+   "bar": 1,
+   "beat": 1.0
+  },
+  {
+   "label": "H02 L1 the iris (the Ache blinks)",
+   "sec": 5.0,
+   "frame": 120.0,
+   "bar": 3,
+   "beat": 1.0
+  },
+  {
+   "label": "H03 L1 the lamp (open fifth F-C, a Db6 grain)",
+   "sec": 10.0,
+   "frame": 240.0,
+   "bar": 5,
+   "beat": 1.0
+  },
+  {
+   "label": "H04 L2 scrambled burst (Ab F C G)",
+   "sec": 15.0,
+   "frame": 360.0,
+   "bar": 7,
+   "beat": 1.0
+  },
+  {
+   "label": "H05 L2 the knee REVERSED (F C Ab G F F F F)",
+   "sec": 20.0,
+   "frame": 480.0,
+   "bar": 9,
+   "beat": 1.0
+  },
+  {
+   "label": "H06 L2 the chord with no third (F C G)",
+   "sec": 25.0,
+   "frame": 600.0,
+   "bar": 11,
+   "beat": 1.0
+  },
+  {
+   "label": "H07 L3 almost (F F F F G Ab Db) + violins F-C-G",
+   "sec": 30.0,
+   "frame": 720.0,
+   "bar": 13,
+   "beat": 1.0
+  },
+  {
+   "label": "H08 L3 the Ache, held (Db6 grain)",
+   "sec": 35.0,
+   "frame": 840.0,
+   "bar": 15,
+   "beat": 1.0
+  },
+  {
+   "label": "H09 L3 re-rendered (glass F5 swapped mid-note for its sample-chip copy)",
+   "sec": 40.0,
+   "frame": 960.0,
+   "bar": 17,
+   "beat": 1.0
+  },
+  {
+   "label": "H10 L4 the runaway burst (past the knee's end)",
+   "sec": 45.0,
+   "frame": 1080.0,
+   "bar": 19,
+   "beat": 1.0
+  },
+  {
+   "label": "H11 the glass Db6",
+   "sec": 50.9375,
+   "frame": 1222.5,
+   "bar": 21,
+   "beat": 2.5
+  },
+  {
+   "label": "H12 L4 the stream (dense tokens rising)",
+   "sec": 55.0,
+   "frame": 1320.0,
+   "bar": 23,
+   "beat": 1.0
+  },
+  {
+   "label": "QSTAR cut dead (the button chord follows)",
+   "sec": 62.5,
+   "frame": 1500.0,
+   "bar": 26,
+   "beat": 1.0
+  },
+  {
+   "label": "C1a COPY in (+1 beat)",
+   "sec": 65.625,
+   "frame": 1575.0,
+   "bar": 27,
+   "beat": 2.0
+  },
+  {
+   "label": "C1b COPY in (+1 beat)",
+   "sec": 73.125,
+   "frame": 1755.0,
+   "bar": 30,
+   "beat": 2.0
+  },
+  {
+   "label": "C1c COPY in (+1 beat)",
+   "sec": 80.625,
+   "frame": 1935.0,
+   "bar": 33,
+   "beat": 2.0
+  },
+  {
+   "label": "C2 COPY in (+1 beat)",
+   "sec": 88.125,
+   "frame": 2115.0,
+   "bar": 36,
+   "beat": 2.0
+  },
+  {
+   "label": "C3 COPY in (+0.5 beat)",
+   "sec": 95.3125,
+   "frame": 2287.5,
+   "bar": 39,
+   "beat": 1.5
+  },
+  {
+   "label": "C4 COPY in (+0.25 beat)",
+   "sec": 102.65625,
+   "frame": 2463.75,
+   "bar": 42,
+   "beat": 1.25
+  },
+  {
+   "label": "C5 COPY in (+0 beat)",
+   "sec": 110.0,
+   "frame": 2640.0,
+   "bar": 45,
+   "beat": 1.0
+  },
+  {
+   "label": "C6 COPY in (+0 beat)",
+   "sec": 117.5,
+   "frame": 2820.0,
+   "bar": 48,
+   "beat": 1.0
+  },
+  {
+   "label": "C7 COPY in (-0.25 beat)",
+   "sec": 124.84375,
+   "frame": 2996.25,
+   "bar": 50,
+   "beat": 4.75
+  }
+ ],
+ "hit_check": [
+  {
+   "t": 0.0,
+   "offset_ms": 2.7,
+   "strength": 28.05
+  },
+  {
+   "t": 5.0,
+   "offset_ms": 0.0,
+   "strength": 13.85
+  },
+  {
+   "t": 10.0,
+   "offset_ms": -5.3,
+   "strength": 42.16
+  },
+  {
+   "t": 15.0,
+   "offset_ms": -5.3,
+   "strength": 32.34
+  },
+  {
+   "t": 20.0,
+   "offset_ms": -5.3,
+   "strength": 18.64
+  },
+  {
+   "t": 25.0,
+   "offset_ms": -2.7,
+   "strength": 15.05
+  },
+  {
+   "t": 30.0,
+   "offset_ms": -8.0,
+   "strength": 27.14
+  },
+  {
+   "t": 35.0,
+   "offset_ms": 2.7,
+   "strength": 6.95
+  },
+  {
+   "t": 40.0,
+   "offset_ms": -5.3,
+   "strength": 20.46
+  },
+  {
+   "t": 45.0,
+   "offset_ms": -8.0,
+   "strength": 27.64
+  },
+  {
+   "t": 50.9375,
+   "offset_ms": -4.2,
+   "strength": 28.83
+  },
+  {
+   "t": 55.0,
+   "offset_ms": -8.0,
+   "strength": 30.46
+  },
+  {
+   "t": 65.625,
+   "offset_ms": -3.7,
+   "strength": 15.46
+  },
+  {
+   "t": 73.125,
+   "offset_ms": -5.0,
+   "strength": 14.82
+  },
+  {
+   "t": 80.625,
+   "offset_ms": -3.7,
+   "strength": 15.61
+  },
+  {
+   "t": 88.125,
+   "offset_ms": -5.0,
+   "strength": 11.43
+  },
+  {
+   "t": 95.3125,
+   "offset_ms": -3.2,
+   "strength": 25.6
+  },
+  {
+   "t": 102.6562,
+   "offset_ms": -5.5,
+   "strength": 12.25
+  },
+  {
+   "t": 110.0,
+   "offset_ms": -5.3,
+   "strength": 14.59
+  },
+  {
+   "t": 117.5,
+   "offset_ms": -4.0,
+   "strength": 15.55
+  },
+  {
+   "t": 124.8438,
+   "offset_ms": -3.8,
+   "strength": 32.9
+  }
+ ],
+ "sfx_slots": [],
+ "silence_windows": [
+  {
+   "t0": 2.003,
+   "t1": 4.997,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 7.003,
+   "t1": 9.997,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 12.003,
+   "t1": 14.997,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 17.003,
+   "t1": 19.997,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 22.003,
+   "t1": 24.997,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 27.003,
+   "t1": 29.997,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 32.003,
+   "t1": 34.997,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 37.003,
+   "t1": 39.997,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 42.003,
+   "t1": 44.997,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 47.003,
+   "t1": 49.997,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 52.003,
+   "t1": 54.997,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 57.003,
+   "t1": 59.997,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 62.503,
+   "t1": 64.997,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 71.878,
+   "t1": 72.497,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 79.378,
+   "t1": 79.997,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 86.878,
+   "t1": 87.497,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 94.378,
+   "t1": 94.997,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 101.878,
+   "t1": 102.497,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 109.378,
+   "t1": 109.997,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 116.878,
+   "t1": 117.497,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 124.378,
+   "t1": 124.8358,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 131.878,
+   "t1": 132.497,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  }
+ ],
+ "vo_windows": [],
+ "knee_whole": 0,
+ "f_major": {
+  "limit": 0.08,
+  "windows": 112,
+  "worst": 7.321,
+  "worst_sieved": 8.259,
+  "ok": false,
+  "ok_written": true,
+  "ok_spectral": false,
+  "f_inaudible_windows": 12,
+  "a_classes": {
+   "written": 0,
+   "resonance": 1,
+   "explained": 0,
+   "unattributed": 0
+  },
+  "written_a_over_f_bass": [],
+  "written_third": {
+   "ok": true,
+   "count": 0,
+   "events": [],
+   "grazes": [],
+   "n_grazes": 0,
+   "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+  },
+  "fails": [
+   {
+    "t0": 30.475,
+    "t1": 30.95,
+    "a_over_f": 0.135,
+    "a_over_f_sieved": 0.151,
+    "written_a": [],
+    "f_share": 0.065,
+    "a_from": {
+     "chip": 100,
+     "strings": 0,
+     "perc": 0
+    },
+    "a_peaks": [
+     {
+      "stem": "chip",
+      "hz": 429.2,
+      "kind": "resonance (no written note has this partial)",
+      "cls": "resonance",
+      "share": 0.39
+     },
+     {
+      "stem": "chip",
+      "hz": 448.2,
+      "kind": "resonance (no written note has this partial)",
+      "cls": "resonance",
+      "share": 0.32
+     },
+     {
+      "stem": "chip",
+      "hz": 441.7,
+      "kind": "resonance (no written note has this partial)",
+      "cls": "resonance",
+      "share": 0.29
+     }
+    ],
+    "a_class": "resonance",
+    "ok": false,
+    "ok_spectral": false
+   }
+  ],
+  "explained": [],
+  "fixed_resonances": [],
+  "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+ },
+ "knee_completion": 0,
+ "room_sfx_windows": [
+  {
+   "t0": 0.0,
+   "t1": 2.0,
+   "sfx": "room_drone / server_hum (H01)"
+  },
+  {
+   "t0": 5.0,
+   "t1": 7.0,
+   "sfx": "room_drone / server_hum (H02)"
+  },
+  {
+   "t0": 10.0,
+   "t1": 12.0,
+   "sfx": "room_drone / server_hum (H03)"
+  },
+  {
+   "t0": 15.0,
+   "t1": 17.0,
+   "sfx": "room_drone / server_hum (H04)"
+  },
+  {
+   "t0": 20.0,
+   "t1": 22.0,
+   "sfx": "room_drone / server_hum (H05)"
+  },
+  {
+   "t0": 25.0,
+   "t1": 27.0,
+   "sfx": "room_drone / server_hum (H06)"
+  },
+  {
+   "t0": 30.0,
+   "t1": 32.0,
+   "sfx": "room_drone / server_hum (H07)"
+  },
+  {
+   "t0": 35.0,
+   "t1": 37.0,
+   "sfx": "room_drone / server_hum (H08)"
+  },
+  {
+   "t0": 40.0,
+   "t1": 42.0,
+   "sfx": "room_drone / server_hum (H09)"
+  },
+  {
+   "t0": 45.0,
+   "t1": 47.0,
+   "sfx": "room_drone / server_hum (H10)"
+  },
+  {
+   "t0": 50.0,
+   "t1": 52.0,
+   "sfx": "room_drone / server_hum (H11)"
+  },
+  {
+   "t0": 55.0,
+   "t1": 57.0,
+   "sfx": "room_drone / server_hum (H12)"
+  },
+  {
+   "t0": 60.0,
+   "t1": 62.5,
+   "sfx": "server_hum (QSTAR: the vault)"
+  },
+  {
+   "t0": 65.0,
+   "t1": 71.875,
+   "sfx": "room_drone (C1a)"
+  },
+  {
+   "t0": 72.5,
+   "t1": 79.375,
+   "sfx": "room_drone (C1b)"
+  },
+  {
+   "t0": 80.0,
+   "t1": 86.875,
+   "sfx": "room_drone (C1c)"
+  },
+  {
+   "t0": 87.5,
+   "t1": 94.375,
+   "sfx": "room_drone (C2)"
+  },
+  {
+   "t0": 95.0,
+   "t1": 101.875,
+   "sfx": "room_drone (C3)"
+  },
+  {
+   "t0": 102.5,
+   "t1": 109.375,
+   "sfx": "room_drone (C4)"
+  },
+  {
+   "t0": 110.0,
+   "t1": 116.875,
+   "sfx": "room_drone (C5)"
+  },
+  {
+   "t0": 117.5,
+   "t1": 124.375,
+   "sfx": "room_drone (C6)"
+  },
+  {
+   "t0": 125.0,
+   "t1": 131.875,
+   "sfx": "room_drone (C7)"
+  }
+ ],
+ "qa": {
+  "balance": {
+   "balance": {
+    "piano": 7,
+    "orch": 9,
+    "bigband": 0,
+    "chip": 84
+   },
+   "rhythm_pct_of_all": 0,
+   "chip_share": 84,
+   "balance_energy": {
+    "piano": 9,
+    "orch": 7,
+    "bigband": 0,
+    "chip": 83
+   },
+   "method": "theme stemtable (gated loudness per section, time-weighted, rhythm/fx excluded; it counts a brief stab at its own loudness for the whole section) + balance_energy (ungated energy)",
+   "sections": [
+    {
+     "section": "H01",
+     "share": {
+      "piano": 0,
+      "orch": 10,
+      "bigband": 0,
+      "chip": 90
+     }
+    },
+    {
+     "section": "H02",
+     "share": {
+      "piano": 0,
+      "orch": 52,
+      "bigband": 0,
+      "chip": 48
+     }
+    },
+    {
+     "section": "H03",
+     "share": {
+      "piano": 0,
+      "orch": 8,
+      "bigband": 0,
+      "chip": 92
+     }
+    },
+    {
+     "section": "H04",
+     "share": {
+      "piano": 0,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 100
+     }
+    },
+    {
+     "section": "H05",
+     "share": {
+      "piano": 0,
+      "orch": 6,
+      "bigband": 0,
+      "chip": 94
+     }
+    },
+    {
+     "section": "H06",
+     "share": {
+      "piano": 0,
+      "orch": 9,
+      "bigband": 0,
+      "chip": 91
+     }
+    },
+    {
+     "section": "H07",
+     "share": {
+      "piano": 0,
+      "orch": 13,
+      "bigband": 0,
+      "chip": 87
+     }
+    },
+    {
+     "section": "H08",
+     "share": {
+      "piano": 0,
+      "orch": 67,
+      "bigband": 0,
+      "chip": 33
+     }
+    },
+    {
+     "section": "H09",
+     "share": {
+      "piano": 0,
+      "orch": 17,
+      "bigband": 0,
+      "chip": 83
+     }
+    },
+    {
+     "section": "H10",
+     "share": {
+      "piano": 0,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 100
+     }
+    },
+    {
+     "section": "H11",
+     "share": {
+      "piano": 0,
+      "orch": 9,
+      "bigband": 0,
+      "chip": 91
+     }
+    },
+    {
+     "section": "H12",
+     "share": {
+      "piano": 0,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 100
+     }
+    },
+    {
+     "section": "QSTAR",
+     "share": {
+      "piano": 0,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 100
+     }
+    },
+    {
+     "section": "C1a",
+     "share": {
+      "piano": 28,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 72
+     }
+    },
+    {
+     "section": "C1b",
+     "share": {
+      "piano": 26,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 74
+     }
+    },
+    {
+     "section": "C1c",
+     "share": {
+      "piano": 25,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 75
+     }
+    },
+    {
+     "section": "C2",
+     "share": {
+      "piano": 22,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 78
+     }
+    },
+    {
+     "section": "C3",
+     "share": {
+      "piano": 25,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 75
+     }
+    },
+    {
+     "section": "C4",
+     "share": {
+      "piano": 25,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 75
+     }
+    },
+    {
+     "section": "C5",
+     "share": {
+      "piano": 24,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 76
+     }
+    },
+    {
+     "section": "C6",
+     "share": {
+      "piano": 25,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 75
+     }
+    },
+    {
+     "section": "C7",
+     "share": {
+      "piano": 32,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 68
+     }
+    }
+   ]
+  },
+  "short_term_underscore": {
+   "p95": -20.4,
+   "median": -23.85,
+   "max": -19.86
+  },
+  "band_2_6k_db": -17.1,
+  "centroid_hz": 561.0,
+  "f_major": {
+   "limit": 0.08,
+   "windows": 112,
+   "worst": 7.321,
+   "worst_sieved": 8.259,
+   "ok": false,
+   "ok_written": true,
+   "ok_spectral": false,
+   "f_inaudible_windows": 12,
+   "a_classes": {
+    "written": 0,
+    "resonance": 1,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_a_over_f_bass": [],
+   "written_third": {
+    "ok": true,
+    "count": 0,
+    "events": [],
+    "grazes": [],
+    "n_grazes": 0,
+    "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+   },
+   "fails": [
+    {
+     "t0": 30.475,
+     "t1": 30.95,
+     "a_over_f": 0.135,
+     "a_over_f_sieved": 0.151,
+     "written_a": [],
+     "f_share": 0.065,
+     "a_from": {
+      "chip": 100,
+      "strings": 0,
+      "perc": 0
+     },
+     "a_peaks": [
+      {
+       "stem": "chip",
+       "hz": 429.2,
+       "kind": "resonance (no written note has this partial)",
+       "cls": "resonance",
+       "share": 0.39
+      },
+      {
+       "stem": "chip",
+       "hz": 448.2,
+       "kind": "resonance (no written note has this partial)",
+       "cls": "resonance",
+       "share": 0.32
+      },
+      {
+       "stem": "chip",
+       "hz": 441.7,
+       "kind": "resonance (no written note has this partial)",
+       "cls": "resonance",
+       "share": 0.29
+      }
+     ],
+     "a_class": "resonance",
+     "ok": false,
+     "ok_spectral": false
+    }
+   ],
+   "explained": [],
+   "fixed_resonances": [],
+   "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+  },
+  "knee_completion": {
+   "count": 0,
+   "hits": [],
+   "max_gap_s": 2.5,
+   "rule": "OST-BIBLE rule 4: the knee never plays whole in an episode, in any register, across a phrase boundary too"
+  },
+  "sub_under_room": [
+   {
+    "t0": 0.0,
+    "t1": 2.0,
+    "sfx": "room_drone / server_hum (H01)",
+    "sub_db": -24.1,
+    "limit_db": -18.0,
+    "sub_from": {
+     "bass": 99
+    },
+    "ok": true,
+    "notes_below_c3": [
+     "subp F1"
+    ]
+   },
+   {
+    "t0": 5.0,
+    "t1": 7.0,
+    "sfx": "room_drone / server_hum (H02)",
+    "sub_db": -45.6,
+    "limit_db": -18.0,
+    "sub_from": {
+     "synth": 82,
+     "perc": 18
+    },
+    "ok": true,
+    "notes_below_c3": []
+   },
+   {
+    "t0": 10.0,
+    "t1": 12.0,
+    "sfx": "room_drone / server_hum (H03)",
+    "sub_db": -27.7,
+    "limit_db": -18.0,
+    "sub_from": {
+     "bass": 100
+    },
+    "ok": true,
+    "notes_below_c3": [
+     "subp F1"
+    ]
+   },
+   {
+    "t0": 15.0,
+    "t1": 17.0,
+    "sfx": "room_drone / server_hum (H04)",
+    "sub_db": -47.0,
+    "limit_db": -18.0,
+    "sub_from": {
+     "chip": 90,
+     "synth": 10
+    },
+    "ok": true,
+    "notes_below_c3": []
+   },
+   {
+    "t0": 20.0,
+    "t1": 22.0,
+    "sfx": "room_drone / server_hum (H05)",
+    "sub_db": -27.5,
+    "limit_db": -18.0,
+    "sub_from": {
+     "bass": 97
+    },
+    "ok": true,
+    "notes_below_c3": [
+     "subp F1"
+    ]
+   },
+   {
+    "t0": 25.0,
+    "t1": 27.0,
+    "sfx": "room_drone / server_hum (H06)",
+    "sub_db": -26.1,
+    "limit_db": -18.0,
+    "sub_from": {
+     "bass": 100
+    },
+    "ok": true,
+    "notes_below_c3": [
+     "subp F1"
+    ]
+   },
+   {
+    "t0": 30.0,
+    "t1": 32.0,
+    "sfx": "room_drone / server_hum (H07)",
+    "sub_db": -45.6,
+    "limit_db": -18.0,
+    "sub_from": {
+     "chip": 99
+    },
+    "ok": true,
+    "notes_below_c3": []
+   },
+   {
+    "t0": 35.0,
+    "t1": 37.0,
+    "sfx": "room_drone / server_hum (H08)",
+    "sub_db": -30.4,
+    "limit_db": -18.0,
+    "sub_from": {
+     "bass": 97
+    },
+    "ok": true,
+    "notes_below_c3": [
+     "subp F1"
+    ]
+   },
+   {
+    "t0": 40.0,
+    "t1": 42.0,
+    "sfx": "room_drone / server_hum (H09)",
+    "sub_db": -46.8,
+    "limit_db": -18.0,
+    "sub_from": {
+     "perc": 91,
+     "synth": 9
+    },
+    "ok": true,
+    "notes_below_c3": []
+   },
+   {
+    "t0": 45.0,
+    "t1": 47.0,
+    "sfx": "room_drone / server_hum (H10)",
+    "sub_db": -26.5,
+    "limit_db": -18.0,
+    "sub_from": {
+     "bass": 99
+    },
+    "ok": true,
+    "notes_below_c3": [
+     "subp F1"
+    ]
+   },
+   {
+    "t0": 50.0,
+    "t1": 52.0,
+    "sfx": "room_drone / server_hum (H11)",
+    "sub_db": -19.9,
+    "limit_db": -18.0,
+    "sub_from": {
+     "bass": 100
+    },
+    "ok": true,
+    "notes_below_c3": [
+     "subp F1"
+    ]
+   },
+   {
+    "t0": 55.0,
+    "t1": 57.0,
+    "sfx": "room_drone / server_hum (H12)",
+    "sub_db": -23.0,
+    "limit_db": -18.0,
+    "sub_from": {
+     "bass": 100
+    },
+    "ok": true,
+    "notes_below_c3": [
+     "subp F1"
+    ]
+   },
+   {
+    "t0": 60.0,
+    "t1": 62.5,
+    "sfx": "server_hum (QSTAR: the vault)",
+    "sub_db": -52.0,
+    "limit_db": -18.0,
+    "sub_from": {
+     "synth": 98
+    },
+    "ok": true,
+    "notes_below_c3": [
+     "subp F2"
+    ]
+   },
+   {
+    "t0": 65.0,
+    "t1": 71.875,
+    "sfx": "room_drone (C1a)",
+    "sub_db": -39.5,
+    "limit_db": -18.0,
+    "sub_from": {
+     "piano": 95,
+     "chip": 5
+    },
+    "ok": true,
+    "notes_below_c3": []
+   },
+   {
+    "t0": 72.5,
+    "t1": 79.375,
+    "sfx": "room_drone (C1b)",
+    "sub_db": -40.2,
+    "limit_db": -18.0,
+    "sub_from": {
+     "piano": 92,
+     "chip": 8
+    },
+    "ok": true,
+    "notes_below_c3": []
+   },
+   {
+    "t0": 80.0,
+    "t1": 86.875,
+    "sfx": "room_drone (C1c)",
+    "sub_db": -40.6,
+    "limit_db": -18.0,
+    "sub_from": {
+     "piano": 90,
+     "chip": 10
+    },
+    "ok": true,
+    "notes_below_c3": []
+   },
+   {
+    "t0": 87.5,
+    "t1": 94.375,
+    "sfx": "room_drone (C2)",
+    "sub_db": -43.3,
+    "limit_db": -18.0,
+    "sub_from": {
+     "piano": 73,
+     "chip": 27
+    },
+    "ok": true,
+    "notes_below_c3": []
+   },
+   {
+    "t0": 95.0,
+    "t1": 101.875,
+    "sfx": "room_drone (C3)",
+    "sub_db": -42.8,
+    "limit_db": -18.0,
+    "sub_from": {
+     "piano": 74,
+     "chip": 26
+    },
+    "ok": true,
+    "notes_below_c3": []
+   },
+   {
+    "t0": 102.5,
+    "t1": 109.375,
+    "sfx": "room_drone (C4)",
+    "sub_db": -41.4,
+    "limit_db": -18.0,
+    "sub_from": {
+     "piano": 75,
+     "chip": 25
+    },
+    "ok": true,
+    "notes_below_c3": []
+   },
+   {
+    "t0": 110.0,
+    "t1": 116.875,
+    "sfx": "room_drone (C5)",
+    "sub_db": -43.0,
+    "limit_db": -18.0,
+    "sub_from": {
+     "piano": 76,
+     "chip": 24
+    },
+    "ok": true,
+    "notes_below_c3": []
+   },
+   {
+    "t0": 117.5,
+    "t1": 124.375,
+    "sfx": "room_drone (C6)",
+    "sub_db": -43.7,
+    "limit_db": -18.0,
+    "sub_from": {
+     "piano": 75,
+     "chip": 25
+    },
+    "ok": true,
+    "notes_below_c3": []
+   },
+   {
+    "t0": 125.0,
+    "t1": 131.875,
+    "sfx": "room_drone (C7)",
+    "sub_db": -38.3,
+    "limit_db": -18.0,
+    "sub_from": {
+     "chip": 51,
+     "piano": 49
+    },
+    "ok": true,
+    "notes_below_c3": []
+   }
+  ],
+  "no_third": [],
+  "silence": [
+   {
+    "t0": 2.003,
+    "t1": 4.997,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 7.003,
+    "t1": 9.997,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 12.003,
+    "t1": 14.997,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 17.003,
+    "t1": 19.997,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 22.003,
+    "t1": 24.997,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 27.003,
+    "t1": 29.997,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 32.003,
+    "t1": 34.997,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 37.003,
+    "t1": 39.997,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 42.003,
+    "t1": 44.997,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 47.003,
+    "t1": 49.997,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 52.003,
+    "t1": 54.997,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 57.003,
+    "t1": 59.997,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 62.503,
+    "t1": 64.997,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 71.878,
+    "t1": 72.497,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 79.378,
+    "t1": 79.997,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 86.878,
+    "t1": 87.497,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 94.378,
+    "t1": 94.997,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 101.878,
+    "t1": 102.497,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 109.378,
+    "t1": 109.997,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 116.878,
+    "t1": 117.497,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 124.378,
+    "t1": 124.8358,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 131.878,
+    "t1": 132.497,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -190.5,
+    "limit": -90.0,
+    "ok": 1.0
+   }
+  ],
+  "hard_stops": [
+   {
+    "t0": 2.003,
+    "t1": 4.997,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 7.003,
+    "t1": 9.997,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 12.003,
+    "t1": 14.997,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 17.003,
+    "t1": 19.997,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 22.003,
+    "t1": 24.997,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 27.003,
+    "t1": 29.997,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 32.003,
+    "t1": 34.997,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 37.003,
+    "t1": 39.997,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 42.003,
+    "t1": 44.997,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 47.003,
+    "t1": 49.997,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 52.003,
+    "t1": 54.997,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 57.003,
+    "t1": 59.997,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 62.503,
+    "t1": 64.997,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 71.878,
+    "t1": 72.497,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 79.378,
+    "t1": 79.997,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 86.878,
+    "t1": 87.497,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 94.378,
+    "t1": 94.997,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 101.878,
+    "t1": 102.497,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 109.378,
+    "t1": 109.997,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 116.878,
+    "t1": 117.497,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 124.378,
+    "t1": 124.8358,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 131.878,
+    "t1": 132.497,
+    "label": "hard stop",
+    "peak_dbfs": -190.5,
+    "limit": -90.0,
+    "ok": 1.0
+   }
+  ],
+  "vo_windows": [],
+  "knee_whole": 0,
+  "motifs_found": {
+   "WATER_LINE": [
+    {
+     "inst": "felt",
+     "t": 65.0,
+     "transpose": 0
+    },
+    {
+     "inst": "felt",
+     "t": 72.5,
+     "transpose": 0
+    },
+    {
+     "inst": "felt",
+     "t": 80.0,
+     "transpose": 0
+    },
+    {
+     "inst": "felt",
+     "t": 87.5,
+     "transpose": 0
+    },
+    {
+     "inst": "felt",
+     "t": 95.0,
+     "transpose": 0
+    },
+    {
+     "inst": "felt",
+     "t": 102.5,
+     "transpose": 0
+    },
+    {
+     "inst": "felt",
+     "t": 110.0,
+     "transpose": 0
+    },
+    {
+     "inst": "felt",
+     "t": 117.5,
+     "transpose": 0
+    },
+    {
+     "inst": "felt",
+     "t": 125.0,
+     "transpose": 0
+    },
+    {
+     "inst": "lead",
+     "t": 88.125,
+     "transpose": 0
+    },
+    {
+     "inst": "lead",
+     "t": 95.3125,
+     "transpose": 0
+    },
+    {
+     "inst": "lead",
+     "t": 102.6562,
+     "transpose": 0
+    }
+   ]
+  },
+  "swing": {
+   "celesta": {
+    "offbeats": 3,
+    "median_frames": 7.5,
+    "hum_ms": 0.0
+   },
+   "lead2": {
+    "offbeats": 20,
+    "median_frames": 7.5,
+    "hum_ms": 0.0
+   },
+   "arp": {
+    "offbeats": 10,
+    "median_frames": 7.5,
+    "hum_ms": 0.0
+   },
+   "bell": {
+    "offbeats": 1,
+    "median_frames": 7.5,
+    "hum_ms": 0.0
+   },
+   "felt": {
+    "offbeats": 9,
+    "median_frames": 10.0,
+    "hum_ms": 0.0
+   },
+   "lead": {
+    "offbeats": 17,
+    "median_frames": 7.5,
+    "hum_ms": 0.0
+   },
+   "tri": {
+    "offbeats": 8,
+    "median_frames": 11.25,
+    "hum_ms": 0.0
+   }
+  },
+  "banned": []
+ },
+ "loop": null,
+ "files": {
+  "album_wav": "render/mm13-kit-glyph-hits-and-copy-album.wav",
+  "album_mp3": "render/mm13-kit-glyph-hits-and-copy-album.mp3",
+  "underscore_wav": "render/mm13-kit-glyph-hits-and-copy-underscore.wav",
+  "underscore_mp3": "render/mm13-kit-glyph-hits-and-copy-underscore.mp3",
+  "stems": {
+   "piano": "render/stems/mm13-kit-glyph-hits-and-copy-piano.flac",
+   "strings": "render/stems/mm13-kit-glyph-hits-and-copy-strings.flac",
+   "bass": "render/stems/mm13-kit-glyph-hits-and-copy-bass.flac",
+   "perc": "render/stems/mm13-kit-glyph-hits-and-copy-perc.flac",
+   "chip": "render/stems/mm13-kit-glyph-hits-and-copy-chip.flac",
+   "synth": "render/stems/mm13-kit-glyph-hits-and-copy-synth.flac"
+  },
+  "midi": "render/mm13-kit-glyph-hits-and-copy.mid",
+  "pianoroll": "render/mm13-kit-glyph-hits-and-copy-pianoroll.png"
+ },
+ "masters": {
+  "album": {
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "comp": {
+    "thresh_db": -20,
+    "ratio": 1.8
+   },
+   "dialog_pocket": null,
+   "measured": {
+    "lufs": -16.02,
+    "lra": 11.58,
+    "true_peak_db": -1.15,
+    "peak_db": -1.16,
+    "rms_db": -21.49,
+    "crest_db": 20.33,
+    "seconds": 132.5
+   }
+  },
+  "underscore": {
+   "target_lufs": -21.0,
+   "ceiling_dbtp": -3.0,
+   "comp": {
+    "thresh_db": -28,
+    "ratio": 1.3,
+    "att_ms": 40.0,
+    "rel_ms": 350.0
+   },
+   "dialog_pocket": {
+    "f": 2500.0,
+    "db": -2.0,
+    "q": 0.7
+   },
+   "measured": {
+    "lufs": -21.0,
+    "lra": 11.26,
+    "true_peak_db": -3.15,
+    "peak_db": -3.16,
+    "rms_db": -26.37,
+    "crest_db": 23.21,
+    "seconds": 132.5
+   }
+  }
+ },
+ "stems": {
+  "sum_vs_underscore_residual_db": -171.3,
+  "families_present": [
+   "bass",
+   "chip",
+   "perc",
+   "piano",
+   "strings",
+   "synth"
+  ],
+  "family_share_lu": {
+   "piano": -7.5,
+   "strings": -1.7,
+   "bass": -27.4,
+   "perc": -0.4,
+   "chip": -1.0,
+   "synth": -0.4
+  }
+ },
+ "spectrum": {
+  "sub": -30.6,
+  "bass": -10.7,
+  "lowmid": -1.3,
+  "mid": -7.6,
+  "presence": -38.5,
+  "air": -50.3,
+  "centroid_hz": 561.0
+ },
+ "bar_levels": [
+  {
+   "bar": 1,
+   "rms_db": -24.3,
+   "peak_db": -11.399999618530273
+  },
+  {
+   "bar": 2,
+   "rms_db": -142.2,
+   "peak_db": -101.80000305175781
+  },
+  {
+   "bar": 3,
+   "rms_db": -21.7,
+   "peak_db": -6.699999809265137
+  },
+  {
+   "bar": 4,
+   "rms_db": -109.4,
+   "peak_db": -72.80000305175781
+  },
+  {
+   "bar": 5,
+   "rms_db": -22.7,
+   "peak_db": -8.199999809265137
+  },
+  {
+   "bar": 6,
+   "rms_db": -131.7,
+   "peak_db": -93.5999984741211
+  },
+  {
+   "bar": 7,
+   "rms_db": -23.4,
+   "peak_db": -4.300000190734863
+  },
+  {
+   "bar": 8,
+   "rms_db": -107.3,
+   "peak_db": -68.4000015258789
+  },
+  {
+   "bar": 9,
+   "rms_db": -23.5,
+   "peak_db": -4.5
+  },
+  {
+   "bar": 10,
+   "rms_db": -169.2,
+   "peak_db": -129.39999389648438
+  },
+  {
+   "bar": 11,
+   "rms_db": -22.7,
+   "peak_db": -9.5
+  },
+  {
+   "bar": 12,
+   "rms_db": -105.2,
+   "peak_db": -66.30000305175781
+  },
+  {
+   "bar": 13,
+   "rms_db": -22.5,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 14,
+   "rms_db": -136.3,
+   "peak_db": -97.80000305175781
+  },
+  {
+   "bar": 15,
+   "rms_db": -21.7,
+   "peak_db": -8.800000190734863
+  },
+  {
+   "bar": 16,
+   "rms_db": -109.3,
+   "peak_db": -72.80000305175781
+  },
+  {
+   "bar": 17,
+   "rms_db": -24.7,
+   "peak_db": -10.600000381469727
+  },
+  {
+   "bar": 18,
+   "rms_db": -105.9,
+   "peak_db": -66.4000015258789
+  },
+  {
+   "bar": 19,
+   "rms_db": -22.4,
+   "peak_db": -3.700000047683716
+  },
+  {
+   "bar": 20,
+   "rms_db": -199.7,
+   "peak_db": -157.39999389648438
+  },
+  {
+   "bar": 21,
+   "rms_db": -26.0,
+   "peak_db": -9.800000190734863
+  },
+  {
+   "bar": 22,
+   "rms_db": -132.9,
+   "peak_db": -93.9000015258789
+  },
+  {
+   "bar": 23,
+   "rms_db": -22.9,
+   "peak_db": -5.400000095367432
+  },
+  {
+   "bar": 24,
+   "rms_db": -199.4,
+   "peak_db": -156.5
+  },
+  {
+   "bar": 25,
+   "rms_db": -21.6,
+   "peak_db": -10.0
+  },
+  {
+   "bar": 26,
+   "rms_db": -59.8,
+   "peak_db": -20.200000762939453
+  },
+  {
+   "bar": 27,
+   "rms_db": -25.4,
+   "peak_db": -14.399999618530273
+  },
+  {
+   "bar": 28,
+   "rms_db": -34.3,
+   "peak_db": -16.600000381469727
+  },
+  {
+   "bar": 29,
+   "rms_db": -79.8,
+   "peak_db": -57.400001525878906
+  },
+  {
+   "bar": 30,
+   "rms_db": -24.4,
+   "peak_db": -14.300000190734863
+  },
+  {
+   "bar": 31,
+   "rms_db": -34.3,
+   "peak_db": -16.5
+  },
+  {
+   "bar": 32,
+   "rms_db": -79.8,
+   "peak_db": -57.400001525878906
+  },
+  {
+   "bar": 33,
+   "rms_db": -24.3,
+   "peak_db": -14.300000190734863
+  },
+  {
+   "bar": 34,
+   "rms_db": -31.7,
+   "peak_db": -13.300000190734863
+  },
+  {
+   "bar": 35,
+   "rms_db": -79.8,
+   "peak_db": -57.400001525878906
+  },
+  {
+   "bar": 36,
+   "rms_db": -23.5,
+   "peak_db": -11.199999809265137
+  },
+  {
+   "bar": 37,
+   "rms_db": -23.3,
+   "peak_db": -9.0
+  },
+  {
+   "bar": 38,
+   "rms_db": -32.3,
+   "peak_db": -16.399999618530273
+  },
+  {
+   "bar": 39,
+   "rms_db": -23.9,
+   "peak_db": -14.399999618530273
+  },
+  {
+   "bar": 40,
+   "rms_db": -25.2,
+   "peak_db": -13.899999618530273
+  },
+  {
+   "bar": 41,
+   "rms_db": -39.1,
+   "peak_db": -23.700000762939453
+  },
+  {
+   "bar": 42,
+   "rms_db": -25.2,
+   "peak_db": -13.699999809265137
+  },
+  {
+   "bar": 43,
+   "rms_db": -25.8,
+   "peak_db": -13.399999618530273
+  },
+  {
+   "bar": 44,
+   "rms_db": -49.8,
+   "peak_db": -27.700000762939453
+  },
+  {
+   "bar": 45,
+   "rms_db": -22.8,
+   "peak_db": -14.399999618530273
+  },
+  {
+   "bar": 46,
+   "rms_db": -25.5,
+   "peak_db": -14.0
+  },
+  {
+   "bar": 47,
+   "rms_db": -72.0,
+   "peak_db": -51.400001525878906
+  },
+  {
+   "bar": 48,
+   "rms_db": -22.4,
+   "peak_db": -13.899999618530273
+  },
+  {
+   "bar": 49,
+   "rms_db": -25.2,
+   "peak_db": -12.100000381469727
+  },
+  {
+   "bar": 50,
+   "rms_db": -38.3,
+   "peak_db": -19.299999237060547
+  },
+  {
+   "bar": 51,
+   "rms_db": -25.9,
+   "peak_db": -13.399999618530273
+  },
+  {
+   "bar": 52,
+   "rms_db": -27.0,
+   "peak_db": -15.5
+  },
+  {
+   "bar": 53,
+   "rms_db": -75.8,
+   "peak_db": -55.599998474121094
+  }
+ ],
+ "instrumentation": {
+  "arp": {
+   "family": "chip",
+   "notes": 21,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "bell": {
+   "family": "perc",
+   "notes": 5,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "celesta": {
+   "family": "perc",
+   "notes": 8,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "felt": {
+   "family": "piano",
+   "notes": 63,
+   "source": "sf2",
+   "credit": "Upright Piano KW by FreePats (CC0 1.0)"
+  },
+  "glass_snes": {
+   "family": "synth",
+   "notes": 2,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "glasspad": {
+   "family": "synth",
+   "notes": 16,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "harp": {
+   "family": "strings",
+   "notes": 2,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "lead": {
+   "family": "chip",
+   "notes": 51,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "lead2": {
+   "family": "chip",
+   "notes": 53,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "subp": {
+   "family": "bass",
+   "notes": 9,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "tex": {
+   "family": "synth",
+   "notes": 2,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "tri": {
+   "family": "chip",
+   "notes": 8,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "vln1": {
+   "family": "strings",
+   "notes": 1,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vln2": {
+   "family": "strings",
+   "notes": 2,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  }
+ },
+ "credits": [
+  "GeneralUser GS by S. Christian Collins",
+  "Upright Piano KW by FreePats (CC0 1.0)",
+  "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+ ],
+ "audition": [
+  "65.0-87.5 s (C1a-C1c, with the piano-stem GUIDE): THE COPY a beat late, breaking off after 2, 3, 4 notes -- with MM-01 under Ep1 sc 19, is it noticeable only on a SECOND viewing? (the target; chip at -24 LUFS-S)",
+  "0-57.5 s (H01-H12) against picture and the SFX glyph grains: dread blinks, never UI bleeps; none may read as an interface sound (the SFX own dings, chimes and clicks)",
+  "60.0-62.5 s (QSTAR) with the SFX vault_hum_F laid in: does the glass swell BECOME the hum, and is the cut at 62.5 s dead enough for the button chord?",
+  "87.5 s (C2): the sycophant's three-part COPY -- cloying on purpose, or just pretty?",
+  "125.0 s (C7): a sixteenth AHEAD -- does it sound like it knows the tune before he plays it, not like a sync error?",
+  "40.0-42.0 s (H09): the glass F swapped mid-note for its sample-chip copy -- audible as the world being re-rendered, or as a glitch?"
+ ],
+ "warnings": [
+  "F-major check (spectral): 1 F-bass window(s) carry A energy that NO written note explains (a resonance, not a written third), first at 30.475 s, worst sieved A/F 0.151: chip ~429.2 Hz, chip ~441.7 Hz, chip ~448.2 Hz -- audition: does it sound major?"
+ ]
+}

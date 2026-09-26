@@ -1,0 +1,685 @@
+{
+ "seconds": 259.738,
+ "duration_tc": "4:19.74",
+ "lufs_i": -14.0,
+ "true_peak_db": -1.3,
+ "mp3": "ost-sampler.mp3",
+ "mp3_kbps": 256,
+ "mp3_decoded_seconds": 259.738,
+ "mp3_true_peak_db": -1.19,
+ "mp3_lufs_i": -14.0,
+ "gap_s": 1.0,
+ "mastering": {
+  "before": {
+   "lufs_i": -14.59,
+   "true_peak_db": -1.15
+  },
+  "gain_db": 0.63,
+  "limiter_ceiling_dbtp": -1.3,
+  "limiter_max_gr_db": 0.78,
+  "limiter_share_over_0p1db": 0.03733,
+  "limiter_share_over_0p5db": 0.00785
+ },
+ "items": [
+  {
+   "n": 1,
+   "key": "mm01",
+   "mm": "MM-01",
+   "title": "Water Line",
+   "source": "tracks/mm01-water-line/render/mm01-water-line-album.wav",
+   "src_in": 0.0,
+   "src_out": 25.0,
+   "start": 0.0,
+   "end": 25.0,
+   "start_tc": "0:00.00",
+   "end_tc": "0:25.00",
+   "palette": "DARK ROOM",
+   "act": "I \u00b7 who he is",
+   "ending": "fade",
+   "tone": "Mas alone at 2 a.m., calm and sure of himself: felt upright, a trio in two, the chip only on the nudge",
+   "where": "Mas's theme. First heard in Ep1 sc 18 (the dark room, 10:13); then every episode's rooms, nights and V.O.; in Act Four its felt carries 26A (v4 S2) and his side at 2 a.m. (v4 S5)",
+   "listen": "Calm, not sad: would you know this tune again after two bars?",
+   "moments": [
+    {
+     "src": 0.0,
+     "at": 0.0,
+     "at_tc": "0:00.00",
+     "what": "the felt alone: the flat line and the nudge; the settle held back"
+    },
+    {
+     "src": 5.0,
+     "at": 5.0,
+     "at_tc": "0:05.00",
+     "what": "the trio comes in (upright in two, brushes) under statement 1"
+    },
+    {
+     "src": 10.0,
+     "at": 10.0,
+     "at_tc": "0:10.00",
+     "what": "V.O. window: felt alone, nothing moves"
+    },
+    {
+     "src": 15.0,
+     "at": 15.0,
+     "at_tc": "0:15.00",
+     "what": "statement 2: the violas now join the cellos' guide tones (fix 1)"
+    },
+    {
+     "src": 20.0,
+     "at": 20.0,
+     "at_tc": "0:20.00",
+     "what": "the second V.O. window"
+    }
+   ],
+   "lufs": -15.32,
+   "tp_db": -1.3,
+   "max_limiter_gr_db": 0.62
+  },
+  {
+   "n": 2,
+   "key": "mm06",
+   "mm": "MM-06",
+   "title": "Beeper, 1993 / Sample-Chip, 2008",
+   "source": "tracks/mm06-beeper-1993-sample-chip-2008/render/mm06-beeper-1993-sample-chip-2008-album.wav",
+   "src_in": 30.0,
+   "src_out": 50.0,
+   "start": 26.0,
+   "end": 46.0,
+   "start_tc": "0:26.00",
+   "end_tc": "0:46.00",
+   "palette": "ERA TIERS",
+   "act": "I \u00b7 who he is",
+   "ending": "fade",
+   "tone": "His past as the machine heard it: a 1-bit beeper in 1993, then a 16-bit memory of 2008",
+   "where": "The flashbacks. Ep1 sc 3-4 (F1.1, 1993, 0:30); its 1-bit flat line returns inside MM-08 and MM-11",
+   "listen": "A memory, or a video game? Nothing may sound Nintendo",
+   "moments": [
+    {
+     "src": 30.0,
+     "at": 26.0,
+     "at_tc": "0:26.00",
+     "what": "1993: NESNEJ's Upsell on the beeper (two voices, on or off, no dynamics)"
+    },
+    {
+     "src": 38.75,
+     "at": 34.75,
+     "at_tc": "0:34.75",
+     "what": "the close lands"
+    },
+    {
+     "src": 40.0,
+     "at": 36.0,
+     "at_tc": "0:36.00",
+     "what": "THE EMPTY SLOT (the SFX register clunks here, with no bell)"
+    },
+    {
+     "src": 40.625,
+     "at": 36.625,
+     "at_tc": "0:36.62",
+     "what": "2008: the trio through the 16-bit sample-chip, pushed half a beat early"
+    },
+    {
+     "src": 42.5,
+     "at": 38.5,
+     "at_tc": "0:38.50",
+     "what": "young Mas plays his line, with the nudge twice"
+    }
+   ],
+   "lufs": -13.74,
+   "tp_db": -1.3,
+   "max_limiter_gr_db": 0.78
+  },
+  {
+   "n": 3,
+   "key": "mm05",
+   "mm": "MM-05",
+   "title": "The More You Buy",
+   "source": "tracks/mm05-the-more-you-buy/render/mm05-the-more-you-buy-album.wav",
+   "src_in": 50.0,
+   "src_out": 70.0,
+   "start": 47.0,
+   "end": 67.0,
+   "start_tc": "0:47.00",
+   "end_tc": "1:07.00",
+   "palette": "THE JOB",
+   "act": "I \u00b7 who he is",
+   "ending": "stop",
+   "tone": "A sales pitch that climbs a step every bar and always closes: double-time swing, vibes and a straight mute over a walking bass",
+   "where": "Nesnej, deals, the upsell. Ep1 sc 17 (the rooftop, 9:33), into the register's KA-CHING",
+   "listen": "Does the sale close on the empty downbeat, or does it sound like a dropout?",
+   "moments": [
+    {
+     "src": 50.0,
+     "at": 47.0,
+     "at_tc": "0:47.00",
+     "what": "A': the walking bass lands on F (the downbeat that read as an A before fix 1)"
+    },
+    {
+     "src": 61.25,
+     "at": 58.25,
+     "at_tc": "0:58.25",
+     "what": "the close: an open fifth, bari and trombone stab"
+    },
+    {
+     "src": 62.5,
+     "at": 59.5,
+     "at_tc": "0:59.50",
+     "what": "THE KA-CHING SLOT: every stem rests the downbeat (the SFX bell owns it)"
+    },
+    {
+     "src": 66.25,
+     "at": 63.25,
+     "at_tc": "1:03.25",
+     "what": "the tag stalls on C7(#9b13)"
+    },
+    {
+     "src": 68.75,
+     "at": 65.75,
+     "at_tc": "1:05.75",
+     "what": "the late slot, then nothing"
+    }
+   ],
+   "lufs": -12.5,
+   "tp_db": -1.3,
+   "max_limiter_gr_db": 0.78
+  },
+  {
+   "n": 4,
+   "key": "mm19",
+   "mm": "MM-19",
+   "title": "Renamed It. / The Fountain Pen",
+   "source": "tracks/mm19-renamed-it/render/mm19-renamed-it-album.wav",
+   "src_in": 70.0,
+   "src_out": 90.0,
+   "start": 68.0,
+   "end": 88.0,
+   "start_tc": "1:08.00",
+   "end_tc": "1:28.00",
+   "palette": "THE PODIUM",
+   "act": "I \u00b7 who he is",
+   "ending": "stop",
+   "tone": "The state occasion, played straight and one size too big; the joke is the rename, under a held note",
+   "where": "Power. NEDIB's Fountain Pen in Ep1 sc 13 (the White House, 5:54); RUMPT's march and the Rename from Ep2",
+   "listen": "Is the Rename deadpan, or cute?",
+   "moments": [
+    {
+     "src": 70.0,
+     "at": 68.0,
+     "at_tc": "1:08.00",
+     "what": "WHO?: RUMPT's march"
+    },
+    {
+     "src": 72.5,
+     "at": 70.5,
+     "at_tc": "1:10.50",
+     "what": "the missing downbeat: a silent beat where the fanfare should land"
+    },
+    {
+     "src": 77.5,
+     "at": 75.5,
+     "at_tc": "1:15.50",
+     "what": "the band waits politely; only the pickup plays"
+    },
+    {
+     "src": 80.0,
+     "at": 78.0,
+     "at_tc": "1:18.00",
+     "what": "SUPER: the full march, the chip on the top line"
+    },
+    {
+     "src": 81.25,
+     "at": 79.25,
+     "at_tc": "1:19.25",
+     "what": "THE RENAME: E-flat slips to B under the held top note (the label gun lands)"
+    },
+    {
+     "src": 86.25,
+     "at": 84.25,
+     "at_tc": "1:24.25",
+     "what": "renamed again, to G"
+    },
+    {
+     "src": 87.5,
+     "at": 85.5,
+     "at_tc": "1:25.50",
+     "what": "the button"
+    }
+   ],
+   "lufs": -13.22,
+   "tp_db": -1.3,
+   "max_limiter_gr_db": 0.78
+  },
+  {
+   "n": 5,
+   "key": "mm07",
+   "mm": "MM-07",
+   "title": "How to Fire a CEO Who Owns Nothing.",
+   "source": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-album.wav",
+   "src_in": 30.0,
+   "src_out": 49.0,
+   "start": 89.0,
+   "end": 108.0,
+   "start_tc": "1:29.00",
+   "end_tc": "1:48.00",
+   "palette": "BLUEPRINT",
+   "act": "II \u00b7 Ep1 Act Four, in picture order",
+   "ending": "stop",
+   "tone": "THE PLAN: a small, precise, cheerful drafting machine (chip music box, harp, pizzicato, dead straight) that explains everything and then breaks",
+   "where": "Ep1 sc 24-25, Act Four's opening (12:31 on the v3 lock; v4 S1). PLAN-SHORT and PLAN-MICRO serve every later episode's THE PLAN",
+   "listen": "Does the break read as the plan failing, or as a playback fault?",
+   "moments": [
+    {
+     "src": 30.0,
+     "at": 89.0,
+     "at_tc": "1:29.00",
+     "what": "PLAN: harp eighths draw the path, the chip music box on top (the harp retuned in fix 1)"
+    },
+    {
+     "src": 32.5,
+     "at": 91.5,
+     "at_tc": "1:31.50",
+     "what": "three ticks, one per step of the plan"
+    },
+    {
+     "src": 36.25,
+     "at": 95.25,
+     "at_tc": "1:35.25",
+     "what": "the line stops at step four"
+    },
+    {
+     "src": 37.5,
+     "at": 96.5,
+     "at_tc": "1:36.50",
+     "what": "one held chord, pp, under \"Step four.\" / \"Good question.\""
+    },
+    {
+     "src": 42.5,
+     "at": 101.5,
+     "at_tc": "1:41.50",
+     "what": "THE BREAK: the last two notes stick in a loop"
+    },
+    {
+     "src": 46.25,
+     "at": 105.25,
+     "at_tc": "1:45.25",
+     "what": "the tape-stop"
+    },
+    {
+     "src": 48.75,
+     "at": 107.75,
+     "at_tc": "1:47.75",
+     "what": "it reaches zero on the JOIN click"
+    }
+   ],
+   "lufs": -14.19,
+   "tp_db": -1.3,
+   "max_limiter_gr_db": 0.78
+  },
+  {
+   "n": 6,
+   "key": "mm08",
+   "mm": "MM-08",
+   "title": "The Falling Tile",
+   "source": "tracks/mm08-the-falling-tile/render/mm08-the-falling-tile-album.wav",
+   "src_in": 0.0,
+   "src_out": 19.0,
+   "start": 109.0,
+   "end": 128.0,
+   "start_tc": "1:49.00",
+   "end_tc": "2:08.00",
+   "palette": "LEVERAGE -> D6",
+   "act": "II \u00b7 Ep1 Act Four, in picture order",
+   "ending": "stop",
+   "tone": "A trap closing without a tune: F pedal, low grand clusters a semitone apart, a pitched sub-thud, a chip tick; then the click takes every sound away",
+   "where": "Ep1 sc 26: the call, up to the Cancel click and the drop-out (12:52 on the v3 lock; v4 S1, second half)",
+   "listen": "Does the stop on the click land as a blow, or as a glitch? (the top audition item)",
+   "moments": [
+    {
+     "src": 0.0,
+     "at": 109.0,
+     "at_tc": "1:49.00",
+     "what": "LEVERAGE low: the grand clusters, now 9 dB up (fix 1)"
+    },
+    {
+     "src": 3.125,
+     "at": 112.125,
+     "at_tc": "1:52.12",
+     "what": "Neleh's clockwork pizzicato"
+    },
+    {
+     "src": 10.0,
+     "at": 119.0,
+     "at_tc": "1:59.00",
+     "what": "the 1-bit flat line: 1993, on the call"
+    },
+    {
+     "src": 12.5,
+     "at": 121.5,
+     "at_tc": "2:01.50",
+     "what": "the clusters move up a semitone"
+    },
+    {
+     "src": 15.0,
+     "at": 124.0,
+     "at_tc": "2:04.00",
+     "what": "Step Four on muted horns: three steps, level, no riser"
+    },
+    {
+     "src": 17.5,
+     "at": 126.5,
+     "at_tc": "2:06.50",
+     "what": "THE CLICK: a hard stop into digital silence; the missing fourth step is the silence"
+    }
+   ],
+   "lufs": -15.05,
+   "tp_db": -1.3,
+   "max_limiter_gr_db": 0.78
+  },
+  {
+   "n": 7,
+   "key": "mm09",
+   "mm": "MM-09",
+   "title": "The Board's Side / What They Didn't Know",
+   "source": "tracks/mm09-the-boards-side/render/mm09-the-boards-side-album.wav",
+   "src_in": 95.0,
+   "src_out": 114.879,
+   "start": 129.0,
+   "end": 148.879,
+   "start_tc": "2:09.00",
+   "end_tc": "2:28.88",
+   "palette": "PROCEDURE -> OUTS (REVERSAL)",
+   "act": "II \u00b7 Ep1 Act Four, in picture order",
+   "ending": "stop",
+   "tone": "The other side, played straight and with dignity: no felt, no chip, no swing. Then the card",
+   "where": "Ep1 sc 27-28, the board's pass and the card WHAT THEY DIDN'T KNOW (13:18-14:33 on the v3 lock; v4 S3-S4)",
+   "listen": "A reversal, or a fanfare?",
+   "moments": [
+    {
+     "src": 95.0,
+     "at": 129.0,
+     "at_tc": "2:09.00",
+     "what": "11:53 PM: Tasya's floor, one held step on Rhodes and low strings"
+    },
+    {
+     "src": 100.0,
+     "at": 134.0,
+     "at_tc": "2:14.00",
+     "what": "dry for Tasya's post"
+    },
+    {
+     "src": 105.0,
+     "at": 139.0,
+     "at_tc": "2:19.00",
+     "what": "\"Step four?\": the board's chord with its blank"
+    },
+    {
+     "src": 110.0,
+     "at": 144.0,
+     "at_tc": "2:24.00",
+     "what": "WHAT THEY DIDN'T KNOW: the REVERSAL, C to F up the octave, no third"
+    },
+    {
+     "src": 112.5,
+     "at": 146.5,
+     "at_tc": "2:26.50",
+     "what": "one felt F4: his room comes back first"
+    }
+   ],
+   "lufs": -14.74,
+   "tp_db": -1.3,
+   "max_limiter_gr_db": 0.78
+  },
+  {
+   "n": 8,
+   "key": "mm02",
+   "mm": "MM-02",
+   "title": "His Version",
+   "source": "tracks/mm02-his-version/render/mm02-his-version-album.wav",
+   "src_in": 20.0,
+   "src_out": 38.115,
+   "start": 149.879,
+   "end": 167.994,
+   "start_tc": "2:29.88",
+   "end_tc": "2:47.99",
+   "palette": "KEYNOTE REEL",
+   "act": "II \u00b7 Ep1 Act Four, in picture order",
+   "ending": "stop",
+   "tone": "His flattering account: his own tune in D-flat major on the same piano, with everything human removed",
+   "where": "The D5 device ([MAS'S VERSION]). Draft 3.2 cut D5 from Ep1, so it debuts in Ep2 or Ep3; Ep12 plays it uncut. (Its place here is the old sc 29 position.)",
+   "listen": "Parody by polish, or a sincere ad? Compare it with item 1: the same tune?",
+   "moments": [
+    {
+     "src": 20.0,
+     "at": 149.879,
+     "at_tc": "2:29.88",
+     "what": "pass 3: too clean, too even, too still; no chip, no swing"
+    },
+    {
+     "src": 30.0,
+     "at": 159.879,
+     "at_tc": "2:39.88",
+     "what": "pass 4, a shade more confident"
+    },
+    {
+     "src": 37.815,
+     "at": 167.694,
+     "at_tc": "2:47.69",
+     "what": "CUT mid-note, tails and all"
+    }
+   ],
+   "lufs": -14.82,
+   "tp_db": -1.55,
+   "max_limiter_gr_db": -0.0
+  },
+  {
+   "n": 9,
+   "key": "mm10",
+   "mm": "MM-10",
+   "title": "His Side / 745 (album edit)",
+   "source": "tracks/mm10-his-side-745/render/mm10-his-side-745-album.wav",
+   "src_in": 63.125,
+   "src_out": 91.0,
+   "start": 168.994,
+   "end": 196.869,
+   "start_tc": "2:48.99",
+   "end_tc": "3:16.87",
+   "palette": "SET-PIECE SWING",
+   "act": "II \u00b7 Ep1 Act Four, in picture order",
+   "ending": "stop",
+   "tone": "His version of the five days: the company falls into his lap as a swung avalanche that stops dead on the one man who will not move",
+   "where": "Ep1 sc 29b, the avalanche (15:12-15:30 on the v3 lock; v4 S6), with the episode's one full band. This excerpt is the album edit's new second chorus, which the picture does not have",
+   "listen": "Chorus 2 is new writing: does it add momentum, or just repeat?",
+   "moments": [
+    {
+     "src": 63.125,
+     "at": 168.994,
+     "at_tc": "2:48.99",
+     "what": "chorus 2: the board presses (Step Four, the blank crushed)"
+    },
+    {
+     "src": 71.875,
+     "at": 177.744,
+     "at_tc": "2:57.74",
+     "what": "Step Four crushed again: brass hits"
+    },
+    {
+     "src": 73.125,
+     "at": 178.994,
+     "at_tc": "2:58.99",
+     "what": "the Water Line twice in the violins, in its own time, over the swung Build"
+    },
+    {
+     "src": 83.125,
+     "at": 188.994,
+     "at_tc": "3:08.99",
+     "what": "THE FULL BAND on C7(#9b13): three bars, level, no ramp"
+    },
+    {
+     "src": 90.625,
+     "at": 196.494,
+     "at_tc": "3:16.49",
+     "what": "THE CARD: everything stops dead"
+    }
+   ],
+   "lufs": -12.83,
+   "tp_db": -1.3,
+   "max_limiter_gr_db": 0.78
+  },
+  {
+   "n": 10,
+   "key": "mm11a",
+   "mm": "MM-11",
+   "title": "The Return (album edit): a, the Door (STRAIGHT violin)",
+   "source": "tracks/mm11-the-return/render/mm11-the-return-album.wav",
+   "src_in": 0.5,
+   "src_out": 14.0,
+   "start": 197.869,
+   "end": 211.369,
+   "start_tc": "3:17.87",
+   "end_tc": "3:31.37",
+   "palette": "STRAIGHT",
+   "act": "II \u00b7 Ep1 Act Four, in picture order",
+   "ending": "stop",
+   "tone": "The one sad violin of the season: the Door on a solo violin, senza vibrato, nothing under it",
+   "where": "Ep1 sc 30a, under Alyi's regret post only (15:32 on the v3 lock; v4 S7, where it decays on the first heart instead of stopping dead)",
+   "listen": "Does it avoid \"the world's smallest violin\"?",
+   "moments": [
+    {
+     "src": 0.625,
+     "at": 197.994,
+     "at_tc": "3:17.99",
+     "what": "the Door, plain"
+    },
+    {
+     "src": 8.125,
+     "at": 205.494,
+     "at_tc": "3:25.49",
+     "what": "again, under the regret post"
+    },
+    {
+     "src": 13.5,
+     "at": 210.869,
+     "at_tc": "3:30.87",
+     "what": "stopped dead on the first heart"
+    }
+   ],
+   "lufs": -17.77,
+   "tp_db": -8.56,
+   "max_limiter_gr_db": -0.0
+  },
+  {
+   "n": 11,
+   "key": "mm11",
+   "mm": "MM-11",
+   "title": "The Return (album edit): d-e, the Build, the sign, \"okay.\"",
+   "source": "tracks/mm11-the-return/render/mm11-the-return-album.wav",
+   "src_in": 66.875,
+   "src_out": 92.941,
+   "start": 212.369,
+   "end": 238.435,
+   "start_tc": "3:32.37",
+   "end_tc": "3:58.44",
+   "palette": "VICTORY LAP -> DARK ROOM",
+   "act": "II \u00b7 Ep1 Act Four, in picture order",
+   "ending": "stop",
+   "tone": "The other side's sounds hand him back his company: the win played straight and one size too big, then undercut; his felt returns last",
+   "where": "Ep1 sc 30d-e: Gerg is back, the lobby sign, \"okay.\" (16:03-16:23 on the v3 lock; v4 S7-S8)",
+   "listen": "Is the felt the right last word, or one note too many?",
+   "moments": [
+    {
+     "src": 66.875,
+     "at": 212.369,
+     "at_tc": "3:32.37",
+     "what": "the Build restarts over the stamp's C pedal (Gerg is back)"
+    },
+    {
+     "src": 73.125,
+     "at": 218.619,
+     "at_tc": "3:38.62",
+     "what": "the sand's held beat"
+    },
+    {
+     "src": 75.625,
+     "at": 221.119,
+     "at_tc": "3:41.12",
+     "what": "THE ONE STAB, on the lobby sign; two bars at full"
+    },
+    {
+     "src": 80.625,
+     "at": 226.119,
+     "at_tc": "3:46.12",
+     "what": "the band cuts to one chip note (the box of spare 0 plates)"
+    },
+    {
+     "src": 82.5,
+     "at": 227.994,
+     "at_tc": "3:47.99",
+     "what": "the 1-bit flat line"
+    },
+    {
+     "src": 84.375,
+     "at": 229.869,
+     "at_tc": "3:49.87",
+     "what": "the rest: the bonk and \"okay.\""
+    },
+    {
+     "src": 85.625,
+     "at": 231.119,
+     "at_tc": "3:51.12",
+     "what": "his felt: C4 to F4, an open fifth, ringing out"
+    }
+   ],
+   "lufs": -13.8,
+   "tp_db": -1.3,
+   "max_limiter_gr_db": 0.78
+  },
+  {
+   "n": 12,
+   "key": "mm13",
+   "mm": "MM-13",
+   "title": "Outside Intended Scope",
+   "source": "tracks/mm13-outside-intended-scope/render/mm13-outside-intended-scope-album.wav",
+   "src_in": 65.0,
+   "src_out": 85.303,
+   "start": 239.435,
+   "end": 259.738,
+   "start_tc": "3:59.44",
+   "end_tc": "4:19.74",
+   "palette": "GLYPH",
+   "act": "Coda \u00b7 the machine",
+   "ending": "stop",
+   "tone": "The machine learning the show's tune, politely",
+   "where": "Ep1's GLYPH hits (the Orb's scan, Q*); the L1-L4 beds as the dread curve rises, L4 from Ep9",
+   "listen": "Thrilling, or just loud? Dread, or a screensaver?",
+   "moments": [
+    {
+     "src": 65.0,
+     "at": 239.435,
+     "at_tc": "3:59.44",
+     "what": "L4, the runaway: the tokens play the knee's first seven notes, then keep climbing past the end"
+    },
+    {
+     "src": 65.0,
+     "at": 239.435,
+     "at_tc": "3:59.44",
+     "what": "under it, a line climbs an octave every two bars, cello to violins"
+    },
+    {
+     "src": 82.5,
+     "at": 256.935,
+     "at_tc": "4:16.94",
+     "what": "one glass D-flat 6 over a sub swell (the sub now 9 dB lower, fix 1)"
+    },
+    {
+     "src": 85.0,
+     "at": 259.435,
+     "at_tc": "4:19.44",
+     "what": "cut dead"
+    }
+   ],
+   "lufs": -14.94,
+   "tp_db": -1.3,
+   "max_limiter_gr_db": 0.78
+  }
+ ]
+}

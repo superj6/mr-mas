@@ -1,4 +1,7 @@
-"""lines_a4.py - every line of Ep1 Act Four (sc 24-31), as the script prints it: DRAFT 3.1 (the POV pass), 2026-09-25.
+"""SUPERSEDED for draft 3.2 by lines_a4_32.py (2026-09-25): running this would overwrite the 3.2 deliverables with the 3.1 pass.
+Kept because the 3.2 tools import from it.
+
+lines_a4.py - every line of Ep1 Act Four (sc 24-31), as the script prints it: DRAFT 3.1 (the POV pass), 2026-09-25.
 
 Built in two layers so the draft-2 recording specs stay untouched: _D2 is the draft-2 list the first pass recorded
 (its takes, picks and seeds reproduce those files exactly), and the DRAFT 3.1 layer at the bottom restages every

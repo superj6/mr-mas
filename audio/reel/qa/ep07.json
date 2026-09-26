@@ -4,47 +4,46 @@
  "key": "ep07",
  "episode": 7,
  "title": "ep1.6_supply_chain_risk.pdf",
- "speculative": false,
+ "extrapolated": false,
+ "extrapolated_from": "extrapolated",
  "error": null,
- "frames": 4128,
- "samples": 8256000,
- "seconds": 172.0,
+ "frames": 3312,
+ "samples": 6624000,
+ "seconds": 138.0,
  "fps": 24,
  "sr": 48000,
- "sum_reelDur_plus_title_s": 172.0,
+ "sum_reelDur_plus_title_s": 138.0,
  "title_card_s": 3.0,
- "beats": 44,
+ "beats": 31,
  "loudness": {
   "bed_short_term_target": -20.0,
-  "bed_short_term_median": -19.99,
-  "bed_short_term_p5": -20.45,
-  "bed_short_term_p95": -19.6,
+  "bed_short_term_median": -20.01,
+  "bed_short_term_p5": -20.42,
+  "bed_short_term_p95": -19.56,
   "accent_momentary_target": -14.0,
   "accent_momentary_max": [
    -14.0,
    -14.0,
-   -14.0,
-   -14.03,
-   -14.0,
-   -14.11,
-   -14.11,
    -14.06,
-   -14.11,
-   -14.03
+   -14.52,
+   -14.03,
+   -14.09,
+   -14.22,
+   -14.11
   ],
-  "mix_integrated": -19.58,
-  "mix_true_peak_dbtp": -1.46,
+  "mix_integrated": -19.53,
+  "mix_true_peak_dbtp": -1.25,
   "limiter_max_gr_db": 0.0,
   "limiter_events": []
  },
  "layer_gain_db": {
-  "piano": 2.82,
-  "chip_pad": -24.78,
-  "tri": -29.4,
-  "arp": -9.84,
+  "piano": 3.62,
+  "chip_pad": -24.61,
+  "tri": -29.33,
+  "arp": -9.83,
   "knee": -15.85,
-  "beeper": -14.5,
-  "glyph": 4.72
+  "beeper": -14.61,
+  "glyph": 5.22
  },
  "chords": [
   {
@@ -53,157 +52,112 @@
    "act": "COLD OPEN"
   },
   {
-   "t": 7.0,
-   "chord": "Bbm9",
-   "act": "COLD OPEN"
-  },
-  {
-   "t": 10.0,
+   "t": 10.5,
    "chord": "F9sus4",
    "act": "INTRO"
   },
   {
-   "t": 14.0,
+   "t": 13.0,
    "chord": "Fm11",
    "act": "ACT ONE"
   },
   {
-   "t": 20.5,
+   "t": 22.0,
    "chord": "Dbmaj9#11",
    "act": "ACT ONE"
   },
   {
-   "t": 26.5,
-   "chord": "Fm11",
+   "t": 29.0,
+   "chord": "Gm7b5",
    "act": "ACT ONE"
   },
   {
-   "t": 34.0,
+   "t": 36.5,
    "chord": "Bbm9",
    "act": "ACT ONE"
   },
   {
-   "t": 41.0,
+   "t": 41.5,
    "chord": "Eb9sus4",
    "act": "ACT ONE"
   },
   {
-   "t": 48.5,
+   "t": 47.0,
    "chord": "Db69#11",
    "act": "ACT ONE"
   },
   {
-   "t": 54.0,
+   "t": 55.5,
+   "chord": "Fm9",
+   "act": "ACT ONE"
+  },
+  {
+   "t": 63.5,
+   "chord": "Bbm9",
+   "act": "ACT ONE"
+  },
+  {
+   "t": 71.5,
    "chord": "Dbmaj9#11",
    "act": "ACT TWO"
   },
   {
-   "t": 58.5,
-   "chord": "C7#9b13",
-   "act": "ACT TWO"
-  },
-  {
-   "t": 65.0,
-   "chord": "Fm9",
-   "act": "ACT TWO"
-  },
-  {
-   "t": 72.0,
-   "chord": "Abmaj9",
-   "act": "ACT TWO"
-  },
-  {
-   "t": 78.0,
+   "t": 76.5,
    "chord": "Gm7b5",
    "act": "ACT TWO"
   },
   {
-   "t": 85.5,
+   "t": 86.0,
    "chord": "C7#9b13",
    "act": "ACT TWO"
   },
   {
-   "t": 89.5,
-   "chord": "Fm9",
+   "t": 91.0,
+   "chord": "Fm11",
    "act": "ACT TWO"
   },
   {
-   "t": 93.5,
+   "t": 96.5,
+   "chord": "Dbmaj9#11",
+   "act": "ACT TWO"
+  },
+  {
+   "t": 101.0,
+   "chord": "Gm7b5",
+   "act": "ACT TWO"
+  },
+  {
+   "t": 106.0,
+   "chord": "C7#9b13",
+   "act": "ACT TWO"
+  },
+  {
+   "t": 112.0,
    "chord": "Bbm9",
    "act": "ACT THREE"
   },
   {
-   "t": 97.5,
+   "t": 117.0,
    "chord": "Eb9sus4",
    "act": "ACT THREE"
   },
   {
-   "t": 106.5,
-   "chord": "Fm11",
+   "t": 121.5,
+   "chord": "Dbmaj9#11",
    "act": "ACT THREE"
   },
   {
-   "t": 110.5,
-   "chord": "Bbm9",
-   "act": "ACT THREE"
-  },
-  {
-   "t": 113.5,
-   "chord": "C7#9b13",
-   "act": "ACT THREE"
-  },
-  {
-   "t": 120.5,
+   "t": 126.0,
    "chord": "Fm9",
    "act": "ACT THREE"
-  },
-  {
-   "t": 124.5,
-   "chord": "Bbm9",
-   "act": "ACT FOUR"
   },
   {
    "t": 130.0,
-   "chord": "C7#9b13",
-   "act": "ACT FOUR"
-  },
-  {
-   "t": 137.0,
-   "chord": "Fm9",
-   "act": "ACT FOUR"
-  },
-  {
-   "t": 144.0,
-   "chord": "Eb9sus4",
-   "act": "ACT FOUR"
-  },
-  {
-   "t": 149.5,
-   "chord": "Abmaj9",
-   "act": "ACT FOUR"
-  },
-  {
-   "t": 152.5,
-   "chord": "Fm11",
-   "act": "ACT FOUR"
-  },
-  {
-   "t": 158.0,
-   "chord": "Eb9sus4",
-   "act": "ACT FOUR"
-  },
-  {
-   "t": 162.0,
    "chord": "Dbmaj9#11",
-   "act": "ACT FOUR"
-  },
-  {
-   "t": 165.0,
-   "chord": "Fm9",
    "act": "TAG"
   },
   {
-   "t": 169.0,
+   "t": 134.0,
    "chord": "F9sus4",
    "act": "TAG"
   }
@@ -217,16 +171,7 @@
    "lufs_m": -14.0
   },
   {
-   "t": 7.0,
-   "kind": "card",
-   "beat": "7.02",
-   "chord": "Bbm9",
-   "src": "V1 brass f360 via sample-chip + chip",
-   "raw_lufs_m": -12.0,
-   "lufs_m": -14.0
-  },
-  {
-   "t": 10.0,
+   "t": 10.5,
    "kind": "intro",
    "beat": "7.03",
    "chord": "F9sus4",
@@ -235,99 +180,78 @@
    "lufs_m": -14.0
   },
   {
-   "t": 26.5,
+   "t": 36.5,
    "kind": "brass",
-   "beat": "7.08",
-   "chord": "Fm11",
-   "src": "V1 brass f240 + chip",
-   "raw_lufs_m": -13.2,
-   "lufs_m": -14.03
-  },
-  {
-   "t": 54.0,
-   "kind": "brass",
-   "beat": "7.16",
-   "chord": "Dbmaj9#11",
-   "src": "V1 brass f300 + chip",
-   "raw_lufs_m": -13.0,
-   "lufs_m": -14.0
-  },
-  {
-   "t": 58.5,
-   "kind": "brass",
-   "beat": "7.17",
-   "chord": "C7#9b13",
-   "src": "V1 brass f420 + chip",
-   "raw_lufs_m": -13.0,
-   "lufs_m": -14.11
-  },
-  {
-   "t": 113.5,
-   "kind": "brass",
-   "beat": "7.31",
-   "chord": "C7#9b13",
-   "src": "V1 brass f420 + chip",
-   "raw_lufs_m": -13.0,
-   "lufs_m": -14.11
-  },
-  {
-   "t": 124.5,
-   "kind": "brass",
-   "beat": "7.33",
+   "beat": "7.10",
    "chord": "Bbm9",
    "src": "V1 brass f360 + chip",
    "raw_lufs_m": -12.6,
    "lufs_m": -14.06
   },
   {
-   "t": 130.0,
-   "kind": "brass",
-   "beat": "7.34",
-   "chord": "C7#9b13",
-   "src": "V1 brass f420 + chip",
-   "raw_lufs_m": -13.0,
-   "lufs_m": -14.11
+   "t": 41.5,
+   "kind": "chip",
+   "beat": "7.11",
+   "chord": "Eb9sus4",
+   "src": "chip",
+   "raw_lufs_m": -8.6,
+   "lufs_m": -14.52
   },
   {
-   "t": 152.5,
+   "t": 91.0,
    "kind": "brass",
-   "beat": "7.40",
+   "beat": "7.22",
    "chord": "Fm11",
    "src": "V1 brass f240 + chip",
    "raw_lufs_m": -13.2,
    "lufs_m": -14.03
+  },
+  {
+   "t": 96.5,
+   "kind": "chip",
+   "beat": "7.23",
+   "chord": "Dbmaj9#11",
+   "src": "chip",
+   "raw_lufs_m": -8.7,
+   "lufs_m": -14.09
+  },
+  {
+   "t": 101.0,
+   "kind": "chip",
+   "beat": "7.24",
+   "chord": "Gm7b5",
+   "src": "chip",
+   "raw_lufs_m": -8.9,
+   "lufs_m": -14.22
+  },
+  {
+   "t": 106.0,
+   "kind": "brass",
+   "beat": "7.25",
+   "chord": "C7#9b13",
+   "src": "V1 brass f420 + chip",
+   "raw_lufs_m": -13.0,
+   "lufs_m": -14.11
   }
  ],
  "flashback_regions": [
   [
-   20.5,
-   23.0
-  ],
-  [
-   48.5,
-   50.5
-  ],
-  [
-   78.0,
-   89.5
-  ],
-  [
-   144.0,
-   146.0
+   63.5,
+   68.0
   ]
  ],
  "glyph_regions": [
   [
-   165.0,
-   172.0
+   101.0,
+   106.0
   ]
  ],
  "intro_regions": [
   [
-   10.0,
-   14.0
+   10.5,
+   13.0
   ]
  ],
- "render_s": 81.6,
- "inputs_hash": "b14fd44ef1fe2331"
+ "render_s": 22.7,
+ "inputs_hash": "6d80a0fe01c97fd9"
 }

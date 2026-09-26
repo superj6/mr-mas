@@ -82,12 +82,19 @@ function lint(file, o) {
     if (!b.caption) w.push(`${tag}: no caption`);
     if (typeof b.vo === 'string' && b.vo.length > 90) w.push(`${tag}: vo ${b.vo.length} chars (> 90)`);
     for (const l of Array.isArray(b.lines) ? b.lines : []) if (l && typeof l.text === 'string' && l.text.length > 90) w.push(`${tag}: line by ${l.who} is ${l.text.length} chars (long for a reel)`);
+    // line timing (schema.ts): t is seconds when any line in the beat has t > 1, else a fraction of the beat
+    const ts = (Array.isArray(b.lines) ? b.lines : []).map((l) => (l && typeof l === 'object' ? Number(l.t ?? l.at) : NaN)).filter(Number.isFinite);
+    const secs = ts.some((t) => t > 1);
+    const bd = Number.isFinite(d) && d > 0 ? d : 3;
+    for (const t of ts) if (secs && t >= bd) w.push(`${tag}: a line starts at ${t} s, past the ${bd} s beat (it plays at 95%)`);
+    if (/speculat/i.test(JSON.stringify([b.caption, b.onscreen, b.real]))) w.push(`${tag}: speculation label (dropped at render: the reel shows no speculative labels)`);
     if (b.realStart !== undefined && clock(b.realStart) === null) w.push(`${tag}: realStart "${b.realStart}" not mm:ss`);
     const rs = clock(b.realStart);
     const rt = (typeof o.runtimeMin === 'number' ? o.runtimeMin : 22) * 60;
     if (rs !== null && typeof b.realDur === 'number' && rs + b.realDur > rt + 60) w.push(`${tag}: real window ends at ${fmt(rs + b.realDur)}, past the ${rt / 60}-min runtime`);
   });
   if (isEp && beats.length && (total < 120 || total > 180)) w.push(`reel total ${fmt(total)} outside 2:00-3:00`);
+  if (/speculat/i.test(JSON.stringify([o.title, o.logline, o.dateSpan]))) w.push('speculation label in title/logline/dateSpan (dropped at render)');
   return {w, total, n: beats.length, generic: [...generic]};
 }
 
@@ -129,6 +136,8 @@ function syncOnce() {
       if (!VERBOSE && r.w.length > 12) console.log(`      … ${r.w.length - 12} more (--verbose)`);
       if (r.generic.length) console.log(`      generic figures (no mark yet): ${r.generic.join(', ')}`);
     }
+    if (keep.has('ep01-full-part1.json') && keep.has('ep01-full-part2.json'))
+      console.log(`  ${'(stitched)'.padEnd(24)} ${'reel-ep01-full'.padEnd(24)} part1 + Act Three + ${keep.has('ep01-full-act4.json') ? 'ep01-full-act4' : 'Act Four placeholder (7:13)'} + tag/credits`);
   }
   return changed;
 }

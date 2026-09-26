@@ -1,0 +1,625 @@
+{
+ "schema": "mrmas-ost-cue/1",
+ "id": "mm07-how-to-fire-a-ceo-plan-micro",
+ "mm": "MM-07",
+ "family": "P14",
+ "title": "How to Fire a CEO Who Owns Nothing. (PLAN-MICRO)",
+ "version": "1",
+ "composer": "Composer A (OST batch 1)",
+ "tone": "THE PLAN: a precise, cheerful drafting machine that explains everything accurately and then breaks",
+ "tags": [
+  "blueprint",
+  "the plan",
+  "music box",
+  "waltz",
+  "quartal",
+  "straight",
+  "library",
+  "featured",
+  "tape-stop",
+  "template",
+  "PLAN-MICRO"
+ ],
+ "usage": "VI",
+ "scenes": [
+  "THE PLAN, Eps 2-12: the generic 8-bar Blueprint (1.3.3.1, clarinet); re-voice per concept"
+ ],
+ "description": "",
+ "motifs": [
+  "the Blueprint (chip music box + short clarinet)",
+  "three ticks F - G - Ab, the stop at step 4",
+  "the break: the stuck 2-beat loop over Bb, then the tape-stop"
+ ],
+ "key": "F dorian (quartal; no A natural); sc 24 F minor; the waltz Fm - Dbmaj7 - C7sus - Fm",
+ "engine": {
+  "version": "mrmas-ost-engine 1.1 (2026-09-26: fix1 -- meter axis, sample tuning, render pool, QA 5a-d)",
+  "rendered": "2026-09-26T02:18:46",
+  "render_seconds": 6.7
+ },
+ "timing": {
+  "bpm": 96.0,
+  "beat_unit_quarters": 1.0,
+  "tempo_map": [
+   {
+    "bar": 1,
+    "beat": 1.0,
+    "bpm": 96.0,
+    "ramp_in": false,
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "meter_map": [
+   {
+    "bar": 1,
+    "meter": "4/4",
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "swing": 0.0,
+  "swing_unit_quarters": 0.5,
+  "pickup_beats": 0.0,
+  "bars": 8,
+  "length_s": 20.0,
+  "length_frames": 480.0,
+  "fps": 24,
+  "end": {
+   "sec": 20.0,
+   "frame": 480.0,
+   "bar": 9,
+   "beat": 1.0
+  },
+  "album_duration_s": 20.2993,
+  "album_duration_frames": 487.18,
+  "album_loops": 1
+ },
+ "sections": [
+  {
+   "label": "PLAN-MICRO: WORD",
+   "start": {
+    "sec": 0.0,
+    "frame": 0.0,
+    "bar": 1,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 2.5,
+    "frame": 60.0,
+    "bar": 2,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "PLAN-MICRO: DIAGRAM",
+   "start": {
+    "sec": 2.5,
+    "frame": 60.0,
+    "bar": 2,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 10.0,
+    "frame": 240.0,
+    "bar": 5,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "PLAN-MICRO: PLAN",
+   "start": {
+    "sec": 10.0,
+    "frame": 240.0,
+    "bar": 5,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 17.5,
+    "frame": 420.0,
+    "bar": 8,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "PLAN-MICRO: BREAK",
+   "start": {
+    "sec": 17.5,
+    "frame": 420.0,
+    "bar": 8,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 20.0,
+    "frame": 480.0,
+    "bar": 9,
+    "beat": 1.0
+   }
+  }
+ ],
+ "markers": [
+  {
+   "label": "PLAN-MICRO b1.1 stamp slot (SFX)",
+   "sec": 0.0,
+   "frame": 0.0,
+   "bar": 1,
+   "beat": 1.0
+  },
+  {
+   "label": "PLAN-MICRO tick F4",
+   "sec": 12.5,
+   "frame": 300.0,
+   "bar": 6,
+   "beat": 1.0
+  },
+  {
+   "label": "PLAN-MICRO tick G4",
+   "sec": 13.75,
+   "frame": 330.0,
+   "bar": 6,
+   "beat": 3.0
+  },
+  {
+   "label": "PLAN-MICRO tick Ab4",
+   "sec": 15.0,
+   "frame": 360.0,
+   "bar": 7,
+   "beat": 1.0
+  },
+  {
+   "label": "PLAN-MICRO BREAK: stuck loop",
+   "sec": 17.5,
+   "frame": 420.0,
+   "bar": 8,
+   "beat": 1.0
+  },
+  {
+   "label": "tape-stop start",
+   "sec": 18.75,
+   "frame": 450.0,
+   "bar": 8,
+   "beat": 3.0
+  }
+ ],
+ "hit_check": [
+  {
+   "t": 12.5,
+   "offset_ms": -4.0,
+   "strength": 5.98
+  },
+  {
+   "t": 13.75,
+   "offset_ms": -6.0,
+   "strength": 6.15
+  },
+  {
+   "t": 15.0,
+   "offset_ms": -2.7,
+   "strength": 5.71
+  },
+  {
+   "t": 17.5,
+   "offset_ms": -4.0,
+   "strength": 8.93
+  },
+  {
+   "t": 18.75,
+   "offset_ms": -3.3,
+   "strength": 6.71
+  }
+ ],
+ "sfx_slots": [
+  {
+   "t": 0.0,
+   "sfx": "the stamp slot (the episode's title stamp, SFX)"
+  },
+  {
+   "t": 20.0,
+   "sfx": "the tape reaches zero (the episode's JOIN / click, if any)"
+  }
+ ],
+ "silence_windows": [
+  {
+   "t0": 0.003,
+   "t1": 0.622,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  }
+ ],
+ "vo_windows": [],
+ "knee_whole": 0,
+ "f_major": {
+  "limit": 0.08,
+  "windows": 9,
+  "worst": 0.264,
+  "worst_sieved": 0.069,
+  "ok": true,
+  "ok_written": true,
+  "ok_spectral": true,
+  "f_inaudible_windows": 0,
+  "a_classes": {
+   "written": 0,
+   "resonance": 0,
+   "explained": 0,
+   "unattributed": 0
+  },
+  "written_a_over_f_bass": [],
+  "written_third": {
+   "ok": true,
+   "count": 0,
+   "events": [],
+   "grazes": [],
+   "n_grazes": 0,
+   "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+  },
+  "fails": [],
+  "explained": [],
+  "fixed_resonances": [],
+  "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+ },
+ "knee_completion": 0,
+ "room_sfx_windows": [],
+ "qa": {
+  "balance": {
+   "balance": {
+    "piano": 0,
+    "orch": 42,
+    "bigband": 0,
+    "chip": 58
+   },
+   "rhythm_pct_of_all": 0,
+   "chip_share": 58,
+   "balance_energy": {
+    "piano": 0,
+    "orch": 47,
+    "bigband": 0,
+    "chip": 53
+   },
+   "method": "theme stemtable (gated loudness per section, time-weighted, rhythm/fx excluded; it counts a brief stab at its own loudness for the whole section) + balance_energy (ungated energy)",
+   "sections": [
+    {
+     "section": "PLAN-MICRO: WORD",
+     "share": {
+      "piano": 0,
+      "orch": 40,
+      "bigband": 0,
+      "chip": 60
+     }
+    },
+    {
+     "section": "PLAN-MICRO: DIAGRAM",
+     "share": {
+      "piano": 0,
+      "orch": 46,
+      "bigband": 0,
+      "chip": 54
+     }
+    },
+    {
+     "section": "PLAN-MICRO: PLAN",
+     "share": {
+      "piano": 0,
+      "orch": 43,
+      "bigband": 0,
+      "chip": 57
+     }
+    },
+    {
+     "section": "PLAN-MICRO: BREAK",
+     "share": {
+      "piano": 0,
+      "orch": 30,
+      "bigband": 0,
+      "chip": 70
+     }
+    }
+   ]
+  },
+  "short_term_underscore": {
+   "p95": -15.0,
+   "median": -15.97,
+   "max": -14.78
+  },
+  "band_2_6k_db": -19.4,
+  "centroid_hz": 440.0,
+  "f_major": {
+   "limit": 0.08,
+   "windows": 9,
+   "worst": 0.264,
+   "worst_sieved": 0.069,
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "f_inaudible_windows": 0,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_a_over_f_bass": [],
+   "written_third": {
+    "ok": true,
+    "count": 0,
+    "events": [],
+    "grazes": [],
+    "n_grazes": 0,
+    "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+   },
+   "fails": [],
+   "explained": [],
+   "fixed_resonances": [],
+   "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+  },
+  "knee_completion": {
+   "count": 0,
+   "hits": [],
+   "max_gap_s": 2.5,
+   "rule": "OST-BIBLE rule 4: the knee never plays whole in an episode, in any register, across a phrase boundary too"
+  },
+  "sub_under_room": [],
+  "no_third": [],
+  "silence": [
+   {
+    "t0": 0.003,
+    "t1": 0.622,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   }
+  ],
+  "hard_stops": [
+   {
+    "t0": 0.003,
+    "t1": 0.622,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   }
+  ],
+  "vo_windows": [],
+  "knee_whole": 0,
+  "motifs_found": {
+   "BLUEPRINT": [
+    {
+     "inst": "lead",
+     "t": 0.625,
+     "transpose": 0
+    },
+    {
+     "inst": "cl",
+     "t": 0.625,
+     "transpose": 0
+    },
+    {
+     "inst": "tri2",
+     "t": 0.625,
+     "transpose": -5
+    },
+    {
+     "inst": "harp",
+     "t": 0.625,
+     "transpose": 0
+    }
+   ]
+  },
+  "swing": {
+   "vla": {
+    "offbeats": 29,
+    "median_frames": 7.5,
+    "hum_ms": 0.0
+   }
+  },
+  "banned": []
+ },
+ "loop": null,
+ "files": {
+  "album_wav": "render/mm07-how-to-fire-a-ceo-plan-micro-album.wav",
+  "album_mp3": "render/mm07-how-to-fire-a-ceo-plan-micro-album.mp3",
+  "underscore_wav": "render/mm07-how-to-fire-a-ceo-plan-micro-underscore.wav",
+  "underscore_mp3": "render/mm07-how-to-fire-a-ceo-plan-micro-underscore.mp3",
+  "stems": {
+   "strings": "render/stems/mm07-how-to-fire-a-ceo-plan-micro-strings.flac",
+   "winds": "render/stems/mm07-how-to-fire-a-ceo-plan-micro-winds.flac",
+   "perc": "render/stems/mm07-how-to-fire-a-ceo-plan-micro-perc.flac",
+   "chip": "render/stems/mm07-how-to-fire-a-ceo-plan-micro-chip.flac"
+  },
+  "midi": "render/mm07-how-to-fire-a-ceo-plan-micro.mid",
+  "pianoroll": "render/mm07-how-to-fire-a-ceo-plan-micro-pianoroll.png"
+ },
+ "masters": {
+  "album": {
+   "target_lufs": -14.0,
+   "ceiling_dbtp": -1.0,
+   "comp": {
+    "thresh_db": -20,
+    "ratio": 1.8
+   },
+   "dialog_pocket": null,
+   "measured": {
+    "lufs": -14.02,
+    "lra": 3.44,
+    "true_peak_db": -1.15,
+    "peak_db": -1.16,
+    "rms_db": -16.72,
+    "crest_db": 15.56,
+    "seconds": 20.2993
+   }
+  },
+  "underscore": {
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -3.0,
+   "comp": {
+    "thresh_db": -28,
+    "ratio": 1.3,
+    "att_ms": 40.0,
+    "rel_ms": 350.0
+   },
+   "dialog_pocket": {
+    "f": 2500.0,
+    "db": -2.0,
+    "q": 0.7
+   },
+   "measured": {
+    "lufs": -16.02,
+    "lra": 2.94,
+    "true_peak_db": -3.15,
+    "peak_db": -3.16,
+    "rms_db": -18.61,
+    "crest_db": 15.45,
+    "seconds": 20.2993
+   }
+  }
+ },
+ "stems": {
+  "sum_vs_underscore_residual_db": -163.0,
+  "families_present": [
+   "chip",
+   "perc",
+   "strings",
+   "winds"
+  ],
+  "family_share_lu": {
+   "strings": -3.8,
+   "winds": -15.1,
+   "perc": -7.3,
+   "chip": -2.4
+  }
+ },
+ "spectrum": {
+  "sub": -20.5,
+  "bass": -5.6,
+  "lowmid": -1.8,
+  "mid": -13.3,
+  "presence": -24.7,
+  "air": -35.1,
+  "centroid_hz": 440.0
+ },
+ "bar_levels": [
+  {
+   "bar": 1,
+   "rms_db": -19.0,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 2,
+   "rms_db": -17.6,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 3,
+   "rms_db": -18.1,
+   "peak_db": -3.9000000953674316
+  },
+  {
+   "bar": 4,
+   "rms_db": -17.3,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 5,
+   "rms_db": -20.5,
+   "peak_db": -6.800000190734863
+  },
+  {
+   "bar": 6,
+   "rms_db": -17.9,
+   "peak_db": -3.299999952316284
+  },
+  {
+   "bar": 7,
+   "rms_db": -20.3,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 8,
+   "rms_db": -18.8,
+   "peak_db": -3.5
+  }
+ ],
+ "instrumentation": {
+  "cb": {
+   "family": "strings",
+   "notes": 11,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "celesta": {
+   "family": "perc",
+   "notes": 3,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "cl": {
+   "family": "winds",
+   "notes": 18,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "harp": {
+   "family": "strings",
+   "notes": 14,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "lead": {
+   "family": "chip",
+   "notes": 21,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "tri": {
+   "family": "chip",
+   "notes": 14,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "tri2": {
+   "family": "chip",
+   "notes": 21,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "vc": {
+   "family": "strings",
+   "notes": 8,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vla": {
+   "family": "strings",
+   "notes": 66,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vln1": {
+   "family": "strings",
+   "notes": 1,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vln2": {
+   "family": "strings",
+   "notes": 8,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "woodclick": {
+   "family": "perc",
+   "notes": 3,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  }
+ },
+ "credits": [
+  "GeneralUser GS by S. Christian Collins",
+  "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+ ],
+ "audition": [
+  "0-2.5 s: the WORD (three notes) after the stamp slot",
+  "12.5-16.25 s: three ticks (celesta), the stop, the held stack",
+  "17.5-20.00 s: stuck over Bb, the tape-stop reaches zero on the last frame"
+ ],
+ "warnings": []
+}

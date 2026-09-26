@@ -297,7 +297,7 @@ Example: `V·G` = confirmed from article text, taken from gaps.md. `P✓·CI` = 
 | Nov 4 | KORG released | NOLE | V·M | E1 |
 | Nov 6 | DevDay. TASYA on stage: "We love you guys." | TASYA, MAS | V·M | E1 |
 | Nov 15 | APEC San Francisco: THE COUNTERPART's banquet with US CEOs and a standing ovation | THE COUNTERPART | H·IC | E1 (the cold-open city) |
-| Nov 16 | APEC CEO Summit: "…push the veil of ignorance back and the frontier of discovery forward." | MAS | V·M | E1 (cold open, "HE WILL BE FIRED TOMORROW") |
+| Nov 16 | APEC CEO Summit: "…push the veil of ignorance back and the frontier of discovery forward." | MAS | V·M | E1 (cold open; the frozen room's `Board sync · Fri 12:00` invite, and no chyron states the firing) |
 | Nov 17 | Fired over Google Meet in a Las Vegas hotel room. The four non-executive members, ALYI, MADA, THE QUIET VOTE and NELEH, vote him out: "not consistently candid." Gerg quits, and BUKAJ and others resign. Mas: "if i start going off, the openai board should go after me for the full value of my shares." | MAS, ALYI, MADA, THE QUIET VOTE, NELEH, GERG, BUKAJ | V·M, CR B5 | E1 (THE BLIP) · INTRO bar 9 (`FIRED.`) |
 | Nov 18 | The heart-emoji wave. Mas: "sorta like reading your own eulogy while you're still alive." Merger talks with MISANTHROPIC; NELEH is the most supportive, per ALYI's 2025 deposition | MAS, MARIO, NELEH | V·M/G | E1 (Mario hangs up on the throne) |
 | Nov 19 | The guest badge: "first and last time i ever wear one of these." TTEMME is named interim CEO; RIMA's interim stint lasts about 3 days (Wikipedia) or 2 (M), so pick one on screen. Nole: "Ilya has a good moral compass and does not seek power." | MAS, TTEMME, RIMA TAMURI, NOLE | V·M | E1 (button) |
@@ -810,7 +810,7 @@ Example: `V·G` = confirmed from article text, taken from gaps.md. `P✓·CI` = 
 | Sep 24 | The AROS API goes dark | SELBEEP | V·G | E9 (`TODAY · SEP 24`; he flips the last switch) |
 | Sep 24 | BANKSOFT's record $11.1B junk-bond sale to fund its final $10B NopeAI tranche (closing Oct 1). *Upgraded from [UNVERIFIED] by the IC sweep* | SAMA NOS | H·IC | E9 |
 | Sep 24 | "For Pope Leo, the risk of an AI apocalypse is a major concern." Also: "China's AI chip blitz arms Xi with a message for Trump: 'You can't choke us off'" [H]. MISANTHROPIC's IPO riches are funding a new donor network [H] | POPE OEL XIV, THE COUNTERPART | H·IC/US | E9·bg |
-| **Sep 25 (TODAY)** | THE COUNTERPART urges the US to cooperate on AI [H]. POPE OEL XIV meets NORCAM at the Élysée and gives a UNESCO speech on the need to regulate AI [V] | THE COUNTERPART, POPE OEL XIV, NORCAM | H/V·IC/US | E9 (optional `TODAY · SEP 25` card, then **EVERYTHING AFTER THIS IS SPECULATION**) |
+| **Sep 25 (TODAY)** | THE COUNTERPART urges the US to cooperate on AI [H]. POPE OEL XIV meets NORCAM at the Élysée and gives a UNESCO speech on the need to regulate AI [V] | THE COUNTERPART, POPE OEL XIV, NORCAM | H/V·IC/US | E9 (optional `TODAY · SEP 25` card; then the rail rolls on into Ep10, with no speculation card) |
 
 ## Scheduled after today (Ep10 anchors)
 Only these are real. Everything else in Ep10–12 is `[INVENTED]`.

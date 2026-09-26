@@ -1,0 +1,1248 @@
+{
+ "schema": "mrmas-ost-cue/1",
+ "id": "mm19-renamed-it",
+ "mm": "MM-19",
+ "family": "P13",
+ "title": "Renamed It. / The Fountain Pen",
+ "version": "1",
+ "composer": "Composer A (OST batch 1)",
+ "tone": "state occasions at equal weight: a fountain-pen quartet signing, and a brass podium one size too big that renames the world under a held note",
+ "tags": [
+  "podium",
+  "march",
+  "string quartet",
+  "parity",
+  "the rename",
+  "rumpt",
+  "nedib",
+  "library",
+  "featured",
+  "word windows"
+ ],
+ "usage": "BI",
+ "scenes": [
+  "Ep1 sc 13 White House (NEDIB: the Fountain Pen, b1-8)",
+  "NEDIB props: the pen, the PINKY-PROMISE scroll, EO 14110, the three-tier map",
+  "RUMPT's marker voids the three-tier map (b9-10)",
+  "RUMPT phases: FEAR Ep2 (b11-18), the reveal Ep3 (b18.4-b19 only), LOVE Eps 4-6 (b19-26), the label gun (b27), \"Who?\" Ep8 (b29-32), SUPER Ep9 (b33-36)",
+  "cut-downs: 5 s = b27-28 (the Rename); 15 s = b23-28; 30 s = b17-28 or b1-12"
+ ],
+ "description": "Word windows (pp sustain only, target <= -28 LUFS): b3-4 = 5.0-10.0 s, b13-14 = 30.0-35.0 s, b21-22 = 50.0-55.0 s.  SFX sync (no musical attack by design): the label gun on the Rename slips b27.3 = 66.25 s, b33.3 = 81.25 s, b35.3 = 86.25 s.  Loops: A = b1-8 (0-20 s, mm19-renamed-it-fountainpen-loop.wav), B = b19-26 (45-65 s, mm19-renamed-it-loop.wav).  Cut-downs on bar lines: 5 s = b27-28 (with the b26.4.5 pickup); 15 s = b23-28; 30 s = b17-28.",
+ "motifs": [
+  "the Fountain Pen (viola b1, solo violin 8va b5; the turn C Bb A Bb)",
+  "the Podium (FEAR in Eb minor, half-time, b11 and b15; LOVE b19 and b23; WHO? b29)",
+  "the Rename (b27.3, b33.3, b35.3)",
+  "the chip piccolo (gold glint) and the chip top line (SUPER)"
+ ],
+ "key": "Bb major (NEDIB); Eb minor (FEAR); Eb major (LOVE) -> B/D# -> G/B (the Renames)",
+ "engine": {
+  "version": "mrmas-ost-engine 1.1 (2026-09-26: fix1 -- meter axis, sample tuning, render pool, QA 5a-d)",
+  "rendered": "2026-09-26T06:35:17",
+  "render_seconds": 97.2
+ },
+ "timing": {
+  "bpm": 96.0,
+  "beat_unit_quarters": 1.0,
+  "tempo_map": [
+   {
+    "bar": 1,
+    "beat": 1.0,
+    "bpm": 96.0,
+    "ramp_in": false,
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "meter_map": [
+   {
+    "bar": 1,
+    "meter": "4/4",
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "swing": 0.0,
+  "swing_unit_quarters": 0.5,
+  "pickup_beats": 0.0,
+  "bars": 36,
+  "length_s": 90.0,
+  "length_frames": 2160.0,
+  "fps": 24,
+  "end": {
+   "sec": 90.0,
+   "frame": 2160.0,
+   "bar": 37,
+   "beat": 1.0
+  },
+  "album_duration_s": 90.0,
+  "album_duration_frames": 2160.0,
+  "album_loops": 1
+ },
+ "sections": [
+  {
+   "label": "THE FOUNTAIN PEN (NEDIB) -- loop A",
+   "start": {
+    "sec": 0.0,
+    "frame": 0.0,
+    "bar": 1,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 20.0,
+    "frame": 480.0,
+    "bar": 9,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "THE MARKER: the map voided (cut mid-turn on b9.2)",
+   "start": {
+    "sec": 20.0,
+    "frame": 480.0,
+    "bar": 9,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 25.0,
+    "frame": 600.0,
+    "bar": 11,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "FEAR (muted brass, Eb minor, half-time)",
+   "start": {
+    "sec": 25.0,
+    "frame": 600.0,
+    "bar": 11,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 45.0,
+    "frame": 1080.0,
+    "bar": 19,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "LOVE (the full march) -- loop B",
+   "start": {
+    "sec": 45.0,
+    "frame": 1080.0,
+    "bar": 19,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 65.0,
+    "frame": 1560.0,
+    "bar": 27,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "THE RENAME (Eb -> B/D#)",
+   "start": {
+    "sec": 65.0,
+    "frame": 1560.0,
+    "bar": 27,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 70.0,
+    "frame": 1680.0,
+    "bar": 29,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "WHO? (the missing beat; then only the pickup)",
+   "start": {
+    "sec": 70.0,
+    "frame": 1680.0,
+    "bar": 29,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 80.0,
+    "frame": 1920.0,
+    "bar": 33,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "SUPER (the Rename twice: Eb -> B -> G; the chip takes the top line)",
+   "start": {
+    "sec": 80.0,
+    "frame": 1920.0,
+    "bar": 33,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 90.0,
+    "frame": 2160.0,
+    "bar": 37,
+    "beat": 1.0
+   }
+  }
+ ],
+ "markers": [
+  {
+   "label": "b1 the Fountain Pen (viola)",
+   "sec": 0.0,
+   "frame": 0.0,
+   "bar": 1,
+   "beat": 1.0
+  },
+  {
+   "label": "b5 the Fountain Pen (solo violin)",
+   "sec": 10.0,
+   "frame": 240.0,
+   "bar": 5,
+   "beat": 1.0
+  },
+  {
+   "label": "b9.2 THE MARKER: dry snare + tuba Eb (the pen is cut)",
+   "sec": 20.625,
+   "frame": 495.0,
+   "bar": 9,
+   "beat": 2.0
+  },
+  {
+   "label": "b10.4 FEAR pickup (cup-muted trombone)",
+   "sec": 24.375,
+   "frame": 585.0,
+   "bar": 10,
+   "beat": 4.0
+  },
+  {
+   "label": "b15.1 timpani arrival (FEAR statement 2)",
+   "sec": 35.0,
+   "frame": 840.0,
+   "bar": 15,
+   "beat": 1.0
+  },
+  {
+   "label": "b19 fanfare 1",
+   "sec": 45.0,
+   "frame": 1080.0,
+   "bar": 19,
+   "beat": 1.0
+  },
+  {
+   "label": "b23 fanfare 2",
+   "sec": 55.0,
+   "frame": 1320.0,
+   "bar": 23,
+   "beat": 1.0
+  },
+  {
+   "label": "b30.2 WHO?: the band resumes after the missing downbeat",
+   "sec": 73.125,
+   "frame": 1755.0,
+   "bar": 30,
+   "beat": 2.0
+  },
+  {
+   "label": "b32.4.5 only the pickup",
+   "sec": 79.6875,
+   "frame": 1912.5,
+   "bar": 32,
+   "beat": 4.5
+  },
+  {
+   "label": "b36.1 the button (G/B)",
+   "sec": 87.5,
+   "frame": 2100.0,
+   "bar": 36,
+   "beat": 1.0
+  }
+ ],
+ "hit_check": [
+  {
+   "t": 0.0,
+   "offset_ms": 2.7,
+   "strength": 3.33
+  },
+  {
+   "t": 10.0,
+   "offset_ms": -2.7,
+   "strength": 1.62
+  },
+  {
+   "t": 20.625,
+   "offset_ms": -3.7,
+   "strength": 2.88
+  },
+  {
+   "t": 24.375,
+   "offset_ms": 1.0,
+   "strength": 3.23
+  },
+  {
+   "t": 35.0,
+   "offset_ms": -10.7,
+   "strength": 2.04
+  },
+  {
+   "t": 45.0,
+   "offset_ms": -2.7,
+   "strength": 2.94
+  },
+  {
+   "t": 55.0,
+   "offset_ms": -5.3,
+   "strength": 3.94
+  },
+  {
+   "t": 73.125,
+   "offset_ms": -2.3,
+   "strength": 3.16
+  },
+  {
+   "t": 79.6875,
+   "offset_ms": -4.8,
+   "strength": 17.71
+  },
+  {
+   "t": 87.5,
+   "offset_ms": -4.0,
+   "strength": 2.79
+  }
+ ],
+ "sfx_slots": [
+  {
+   "t": [
+    27,
+    3
+   ],
+   "sfx": "the label gun (RUMPT renames): lands on the slip"
+  },
+  {
+   "t": [
+    33,
+    3
+   ],
+   "sfx": "label gun"
+  },
+  {
+   "t": [
+    35,
+    3
+   ],
+   "sfx": "label gun"
+  }
+ ],
+ "silence_windows": [
+  {
+   "t0": 43.753,
+   "t1": 44.6845,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 68.753,
+   "t1": 69.6845,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 72.503,
+   "t1": 73.122,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 77.503,
+   "t1": 79.6845,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 88.128,
+   "t1": 92.997,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  }
+ ],
+ "vo_windows": [],
+ "knee_whole": 0,
+ "f_major": {
+  "limit": 0.08,
+  "windows": 4,
+  "worst": 0.031,
+  "worst_sieved": 0.163,
+  "ok": true,
+  "ok_written": true,
+  "ok_spectral": true,
+  "f_inaudible_windows": 0,
+  "a_classes": {
+   "written": 0,
+   "resonance": 0,
+   "explained": 1,
+   "unattributed": 0
+  },
+  "written_a_over_f_bass": [],
+  "written_third": {
+   "ok": true,
+   "count": 0,
+   "events": [],
+   "grazes": [],
+   "n_grazes": 0,
+   "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+  },
+  "fails": [],
+  "explained": [
+   {
+    "t0": 13.75,
+    "t1": 14.375,
+    "a_over_f": 0.031,
+    "a_over_f_sieved": 0.163,
+    "written_a": [],
+    "f_share": 0.402,
+    "a_from": {
+     "strings": 100,
+     "piano": 0,
+     "chip": 0
+    },
+    "a_peaks": [
+     {
+      "stem": "strings",
+      "hz": 441.7,
+      "kind": "partial 5 of written F2 (cb)",
+      "cls": "partial",
+      "share": 0.78
+     },
+     {
+      "stem": "strings",
+      "hz": 430.7,
+      "kind": "partial 5 of written F2 (cb)",
+      "cls": "partial",
+      "share": 0.15
+     },
+     {
+      "stem": "strings",
+      "hz": 873.8,
+      "kind": "partial 10 of written F2 (cb)",
+      "cls": "partial",
+      "share": 0.07
+     }
+    ],
+    "a_class": "explained",
+    "ok": true,
+    "ok_spectral": true
+   }
+  ],
+  "fixed_resonances": [],
+  "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+ },
+ "knee_completion": 0,
+ "room_sfx_windows": [],
+ "qa": {
+  "balance": {
+   "balance": {
+    "piano": 12,
+    "orch": 50,
+    "bigband": 22,
+    "chip": 16
+   },
+   "rhythm_pct_of_all": 5,
+   "chip_share": 16,
+   "balance_energy": {
+    "piano": 13,
+    "orch": 52,
+    "bigband": 22,
+    "chip": 13
+   },
+   "method": "theme stemtable (gated loudness per section, time-weighted, rhythm/fx excluded; it counts a brief stab at its own loudness for the whole section) + balance_energy (ungated energy)",
+   "sections": [
+    {
+     "section": "THE FOUNTAIN PEN (NEDIB) -- loop A",
+     "share": {
+      "piano": 5,
+      "orch": 83,
+      "bigband": 0,
+      "chip": 12
+     }
+    },
+    {
+     "section": "THE MARKER: the map voided (cut mid-turn on b9.2)",
+     "share": {
+      "piano": 0,
+      "orch": 79,
+      "bigband": 11,
+      "chip": 10
+     }
+    },
+    {
+     "section": "FEAR (muted brass, Eb minor, half-time)",
+     "share": {
+      "piano": 2,
+      "orch": 21,
+      "bigband": 52,
+      "chip": 26
+     }
+    },
+    {
+     "section": "LOVE (the full march) -- loop B",
+     "share": {
+      "piano": 18,
+      "orch": 31,
+      "bigband": 36,
+      "chip": 16
+     }
+    },
+    {
+     "section": "THE RENAME (Eb -> B/D#)",
+     "share": {
+      "piano": 6,
+      "orch": 56,
+      "bigband": 30,
+      "chip": 8
+     }
+    },
+    {
+     "section": "WHO? (the missing beat; then only the pickup)",
+     "share": {
+      "piano": 19,
+      "orch": 26,
+      "bigband": 34,
+      "chip": 21
+     }
+    },
+    {
+     "section": "SUPER (the Rename twice: Eb -> B -> G; the chip takes the top line)",
+     "share": {
+      "piano": 22,
+      "orch": 38,
+      "bigband": 13,
+      "chip": 27
+     }
+    }
+   ]
+  },
+  "short_term_underscore": {
+   "p95": -14.32,
+   "median": -17.0,
+   "max": -13.78
+  },
+  "band_2_6k_db": -13.3,
+  "centroid_hz": 638.0,
+  "f_major": {
+   "limit": 0.08,
+   "windows": 4,
+   "worst": 0.031,
+   "worst_sieved": 0.163,
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "f_inaudible_windows": 0,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 1,
+    "unattributed": 0
+   },
+   "written_a_over_f_bass": [],
+   "written_third": {
+    "ok": true,
+    "count": 0,
+    "events": [],
+    "grazes": [],
+    "n_grazes": 0,
+    "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+   },
+   "fails": [],
+   "explained": [
+    {
+     "t0": 13.75,
+     "t1": 14.375,
+     "a_over_f": 0.031,
+     "a_over_f_sieved": 0.163,
+     "written_a": [],
+     "f_share": 0.402,
+     "a_from": {
+      "strings": 100,
+      "piano": 0,
+      "chip": 0
+     },
+     "a_peaks": [
+      {
+       "stem": "strings",
+       "hz": 441.7,
+       "kind": "partial 5 of written F2 (cb)",
+       "cls": "partial",
+       "share": 0.78
+      },
+      {
+       "stem": "strings",
+       "hz": 430.7,
+       "kind": "partial 5 of written F2 (cb)",
+       "cls": "partial",
+       "share": 0.15
+      },
+      {
+       "stem": "strings",
+       "hz": 873.8,
+       "kind": "partial 10 of written F2 (cb)",
+       "cls": "partial",
+       "share": 0.07
+      }
+     ],
+     "a_class": "explained",
+     "ok": true,
+     "ok_spectral": true
+    }
+   ],
+   "fixed_resonances": [],
+   "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+  },
+  "knee_completion": {
+   "count": 0,
+   "hits": [],
+   "max_gap_s": 2.5,
+   "rule": "OST-BIBLE rule 4: the knee never plays whole in an episode, in any register, across a phrase boundary too"
+  },
+  "sub_under_room": [],
+  "no_third": [],
+  "silence": [
+   {
+    "t0": 43.753,
+    "t1": 44.6845,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 68.753,
+    "t1": 69.6845,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 72.503,
+    "t1": 73.122,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 77.503,
+    "t1": 79.6845,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 88.128,
+    "t1": 92.997,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   }
+  ],
+  "hard_stops": [
+   {
+    "t0": 43.753,
+    "t1": 44.6845,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 68.753,
+    "t1": 69.6845,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 72.503,
+    "t1": 73.122,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 77.503,
+    "t1": 79.6845,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 88.128,
+    "t1": 92.997,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   }
+  ],
+  "vo_windows": [],
+  "knee_whole": 0,
+  "motifs_found": {
+   "FOUNTAIN_PEN": [
+    {
+     "inst": "vla",
+     "t": 0.0,
+     "transpose": 0
+    },
+    {
+     "inst": "svln",
+     "t": 10.0,
+     "transpose": 12
+    }
+   ],
+   "PODIUM": [
+    {
+     "inst": "vla",
+     "t": 1.875,
+     "transpose": -5
+    },
+    {
+     "inst": "svln",
+     "t": 11.875,
+     "transpose": 7
+    },
+    {
+     "inst": "lead",
+     "t": 45.0,
+     "transpose": 12
+    },
+    {
+     "inst": "lead",
+     "t": 55.0,
+     "transpose": 12
+    },
+    {
+     "inst": "tpt",
+     "t": 45.0,
+     "transpose": 0
+    },
+    {
+     "inst": "tpt",
+     "t": 55.0,
+     "transpose": 0
+    }
+   ]
+  },
+  "swing": {
+   "vla": {
+    "offbeats": 2,
+    "median_frames": 9.38,
+    "hum_ms": 8
+   },
+   "svln": {
+    "offbeats": 5,
+    "median_frames": 7.5,
+    "hum_ms": 8
+   },
+   "harp": {
+    "offbeats": 12,
+    "median_frames": 7.5,
+    "hum_ms": 4
+   },
+   "timp": {
+    "offbeats": 5,
+    "median_frames": 8.65,
+    "hum_ms": 0
+   },
+   "tpt": {
+    "offbeats": 17,
+    "median_frames": 7.5,
+    "hum_ms": 3.0
+   },
+   "tbn": {
+    "offbeats": 22,
+    "median_frames": 7.5,
+    "hum_ms": 3.0
+   },
+   "lead": {
+    "offbeats": 13,
+    "median_frames": 7.5,
+    "hum_ms": 0
+   },
+   "snare": {
+    "offbeats": 58,
+    "median_frames": 11.25,
+    "hum_ms": 3
+   },
+   "vln1": {
+    "offbeats": 2,
+    "median_frames": 7.5,
+    "hum_ms": 8
+   }
+  },
+  "banned": []
+ },
+ "loop": {
+  "start": {
+   "sec": 45.0,
+   "frame": 1080.0,
+   "bar": 19,
+   "beat": 1.0
+  },
+  "end": {
+   "sec": 65.0,
+   "frame": 1560.0,
+   "bar": 27,
+   "beat": 1.0
+  },
+  "samples": 960000,
+  "seconds": 20.0,
+  "frames": 480.0,
+  "frame_aligned": true,
+  "notes": 365,
+  "tail_seconds": 2.981,
+  "seam": {
+   "seam_hf_ratio_to_median": 4.52,
+   "seam_hf_percentile": 90.37,
+   "wrap_jump": 0.01722,
+   "wrap_jump_vs_p99_step": 0.315,
+   "rms_last_50ms_db": -27.3,
+   "rms_first_50ms_db": -14.0,
+   "verdict": "seamless"
+  },
+  "loudness": {
+   "lufs": -15.0,
+   "lra": 13.1,
+   "true_peak_db": -3.15,
+   "peak_db": -3.16,
+   "rms_db": -18.64,
+   "crest_db": 15.49,
+   "seconds": 40.0
+  }
+ },
+ "files": {
+  "album_wav": "render/mm19-renamed-it-album.wav",
+  "album_mp3": "render/mm19-renamed-it-album.mp3",
+  "underscore_wav": "render/mm19-renamed-it-underscore.wav",
+  "underscore_mp3": "render/mm19-renamed-it-underscore.mp3",
+  "stems": {
+   "piano": "render/stems/mm19-renamed-it-piano.flac",
+   "strings": "render/stems/mm19-renamed-it-strings.flac",
+   "brass": "render/stems/mm19-renamed-it-brass.flac",
+   "drums": "render/stems/mm19-renamed-it-drums.flac",
+   "perc": "render/stems/mm19-renamed-it-perc.flac",
+   "chip": "render/stems/mm19-renamed-it-chip.flac"
+  },
+  "loop_wav": "render/mm19-renamed-it-loop.wav",
+  "loop_tail_wav": "render/mm19-renamed-it-loop-tail.wav",
+  "loop_preview_mp3": "render/mm19-renamed-it-loop-x3-preview.mp3",
+  "midi": "render/mm19-renamed-it.mid",
+  "pianoroll": "render/mm19-renamed-it-pianoroll.png"
+ },
+ "masters": {
+  "album": {
+   "target_lufs": -14.0,
+   "ceiling_dbtp": -1.0,
+   "comp": {
+    "thresh_db": -20,
+    "ratio": 1.8
+   },
+   "dialog_pocket": null,
+   "measured": {
+    "lufs": -14.01,
+    "lra": 11.34,
+    "true_peak_db": -1.15,
+    "peak_db": -1.16,
+    "rms_db": -17.88,
+    "crest_db": 16.72,
+    "seconds": 90.0
+   }
+  },
+  "underscore": {
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -3.0,
+   "comp": {
+    "thresh_db": -28,
+    "ratio": 1.3,
+    "att_ms": 40.0,
+    "rel_ms": 350.0
+   },
+   "dialog_pocket": {
+    "f": 2500.0,
+    "db": -2.0,
+    "q": 0.7
+   },
+   "measured": {
+    "lufs": -16.02,
+    "lra": 10.8,
+    "true_peak_db": -3.15,
+    "peak_db": -3.16,
+    "rms_db": -19.7,
+    "crest_db": 16.54,
+    "seconds": 90.0
+   }
+  }
+ },
+ "stems": {
+  "sum_vs_underscore_residual_db": -161.8,
+  "families_present": [
+   "brass",
+   "chip",
+   "drums",
+   "perc",
+   "piano",
+   "strings"
+  ],
+  "family_share_lu": {
+   "piano": -7.4,
+   "strings": -3.2,
+   "brass": -5.1,
+   "drums": -10.0,
+   "perc": -15.8,
+   "chip": -7.6
+  }
+ },
+ "spectrum": {
+  "sub": -25.1,
+  "bass": -4.9,
+  "lowmid": -2.7,
+  "mid": -8.9,
+  "presence": -19.6,
+  "air": -31.5,
+  "centroid_hz": 638.0
+ },
+ "bar_levels": [
+  {
+   "bar": 1,
+   "rms_db": -19.0,
+   "peak_db": -3.5999999046325684
+  },
+  {
+   "bar": 2,
+   "rms_db": -18.3,
+   "peak_db": -4.0
+  },
+  {
+   "bar": 3,
+   "rms_db": -28.9,
+   "peak_db": -12.5
+  },
+  {
+   "bar": 4,
+   "rms_db": -29.8,
+   "peak_db": -10.5
+  },
+  {
+   "bar": 5,
+   "rms_db": -16.8,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 6,
+   "rms_db": -17.3,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 7,
+   "rms_db": -17.1,
+   "peak_db": -3.299999952316284
+  },
+  {
+   "bar": 8,
+   "rms_db": -18.0,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 9,
+   "rms_db": -21.9,
+   "peak_db": -4.800000190734863
+  },
+  {
+   "bar": 10,
+   "rms_db": -31.5,
+   "peak_db": -10.399999618530273
+  },
+  {
+   "bar": 11,
+   "rms_db": -21.9,
+   "peak_db": -10.100000381469727
+  },
+  {
+   "bar": 12,
+   "rms_db": -23.0,
+   "peak_db": -9.800000190734863
+  },
+  {
+   "bar": 13,
+   "rms_db": -31.1,
+   "peak_db": -17.5
+  },
+  {
+   "bar": 14,
+   "rms_db": -27.2,
+   "peak_db": -9.699999809265137
+  },
+  {
+   "bar": 15,
+   "rms_db": -21.5,
+   "peak_db": -8.399999618530273
+  },
+  {
+   "bar": 16,
+   "rms_db": -22.1,
+   "peak_db": -9.399999618530273
+  },
+  {
+   "bar": 17,
+   "rms_db": -21.4,
+   "peak_db": -9.0
+  },
+  {
+   "bar": 18,
+   "rms_db": -24.7,
+   "peak_db": -9.899999618530273
+  },
+  {
+   "bar": 19,
+   "rms_db": -17.3,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 20,
+   "rms_db": -17.2,
+   "peak_db": -3.299999952316284
+  },
+  {
+   "bar": 21,
+   "rms_db": -31.6,
+   "peak_db": -18.700000762939453
+  },
+  {
+   "bar": 22,
+   "rms_db": -26.5,
+   "peak_db": -7.5
+  },
+  {
+   "bar": 23,
+   "rms_db": -16.9,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 24,
+   "rms_db": -17.4,
+   "peak_db": -3.5999999046325684
+  },
+  {
+   "bar": 25,
+   "rms_db": -17.7,
+   "peak_db": -3.5999999046325684
+  },
+  {
+   "bar": 26,
+   "rms_db": -18.7,
+   "peak_db": -3.4000000953674316
+  },
+  {
+   "bar": 27,
+   "rms_db": -16.1,
+   "peak_db": -3.4000000953674316
+  },
+  {
+   "bar": 28,
+   "rms_db": -19.5,
+   "peak_db": -4.699999809265137
+  },
+  {
+   "bar": 29,
+   "rms_db": -17.2,
+   "peak_db": -4.0
+  },
+  {
+   "bar": 30,
+   "rms_db": -21.7,
+   "peak_db": -3.299999952316284
+  },
+  {
+   "bar": 31,
+   "rms_db": -18.9,
+   "peak_db": -4.5
+  },
+  {
+   "bar": 32,
+   "rms_db": -32.4,
+   "peak_db": -9.899999618530273
+  },
+  {
+   "bar": 33,
+   "rms_db": -18.4,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 34,
+   "rms_db": -17.5,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 35,
+   "rms_db": -18.3,
+   "peak_db": -3.5
+  },
+  {
+   "bar": 36,
+   "rms_db": -22.8,
+   "peak_db": -3.5999999046325684
+  }
+ ],
+ "instrumentation": {
+  "bdrum": {
+   "family": "perc",
+   "notes": 25,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "cb": {
+   "family": "strings",
+   "notes": 19,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "glock": {
+   "family": "perc",
+   "notes": 4,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "grand": {
+   "family": "piano",
+   "notes": 223,
+   "source": "sf2",
+   "credit": "Salamander Grand Piano by Alexander Holm (CC BY 3.0) -- ATTRIBUTION REQUIRED"
+  },
+  "harp": {
+   "family": "strings",
+   "notes": 44,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "hn": {
+   "family": "brass",
+   "notes": 33,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "lead": {
+   "family": "chip",
+   "notes": 41,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "snare": {
+   "family": "drums",
+   "notes": 106,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "snare_dry": {
+   "family": "drums",
+   "notes": 1,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "suscym": {
+   "family": "perc",
+   "notes": 3,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "svln": {
+   "family": "strings",
+   "notes": 27,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "tbn": {
+   "family": "brass",
+   "notes": 100,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "tbn_cup": {
+   "family": "brass",
+   "notes": 26,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "timp": {
+   "family": "perc",
+   "notes": 11,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "tpt": {
+   "family": "brass",
+   "notes": 72,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "tri": {
+   "family": "chip",
+   "notes": 22,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "tuba": {
+   "family": "brass",
+   "notes": 27,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "tuba_dry": {
+   "family": "brass",
+   "notes": 1,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vc": {
+   "family": "strings",
+   "notes": 52,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vla": {
+   "family": "strings",
+   "notes": 59,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vln1": {
+   "family": "strings",
+   "notes": 36,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vln2": {
+   "family": "strings",
+   "notes": 47,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  }
+ },
+ "credits": [
+  "Salamander Grand Piano by Alexander Holm (CC BY 3.0) -- ATTRIBUTION REQUIRED",
+  "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+ ],
+ "audition": [
+  "0-20 s vs 45-65 s: PARITY -- do the Fountain Pen and LOVE feel equally grand (same level, same size, same seriousness)? neither may sound like the joke",
+  "65.0-70.0 s (b27-28): THE RENAME -- the inner voices slip at 66.25 s under a held E-flat; deadpan, or too cute? the label gun lands on 66.25 s",
+  "20.0-21.0 s: the marker -- the pen is cut on 20.625 s by one dry snare and a tuba E-flat: a void, not a gag",
+  "25-45 s: FEAR -- hushed and ceremonial (muted brass pp, tremolo) without being horror-movie; the timpani roll at 34.4 s is a roll, never a pulse",
+  "72.5-80 s: WHO? -- the missing downbeat at 72.5 s and the band waiting (77.5-79.7 s): deadpan timing",
+  "80-90 s: SUPER -- the chip top line holds while Eb -> B (81.25 s) -> G (86.25 s); the button at 87.5 s"
+ ],
+ "warnings": [
+  "marker at 35.0 s: no clear onset within 10 ms ({'t': 35.0, 'offset_ms': np.float64(-10.7), 'strength': 2.04})"
+ ]
+}

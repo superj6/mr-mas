@@ -1,0 +1,357 @@
+{
+ "schema": "mrmas-ost-cue/1",
+ "id": "e01-s29-d5",
+ "mm": "MM-02",
+ "family": "KEYNOTE REEL (D5)",
+ "title": "His Version (Ep1 D5 insert)",
+ "version": "1",
+ "composer": "Composer E (OST batch 1)",
+ "tone": "Mas's version, one bar: a keynote-reel piano too clean for the truth, killed by the hard cut",
+ "tags": [
+  "keynote reel",
+  "D5",
+  "insert",
+  "hard cut",
+  "to picture"
+ ],
+ "usage": "BI",
+ "scenes": [
+  "E01-S29 [MAS'S VERSION] (1 bar, 16:31); the hard cut on the next downbeat"
+ ],
+ "description": "Lay bar 1 under the 1-bar [MAS'S VERSION] shot; CUT at bar 2's downbeat (2.500 s, frame 60 from the file start). The Db5 and the chord are sustaining there and nothing attacks until 3.75 s, so the cut is mid-note. Everything after 2.5 s is handle.",
+ "motifs": [
+  "KEYNOTE bar 1 (Db5 Db5 Db5 Eb5 Db5), the last Db5 held across the cut"
+ ],
+ "key": "Db major: Dbmaj9(#11) (| Ab/C in the handle)",
+ "engine": {
+  "version": "mrmas-ost-engine 1.1 (2026-09-26: fix1 -- meter axis, sample tuning, render pool, QA 5a-d)",
+  "rendered": "2026-09-26T01:01:22",
+  "render_seconds": 6.8
+ },
+ "timing": {
+  "bpm": 96.0,
+  "beat_unit_quarters": 1.0,
+  "tempo_map": [
+   {
+    "bar": 1,
+    "beat": 1.0,
+    "bpm": 96.0,
+    "ramp_in": false,
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "meter_map": [
+   {
+    "bar": 1,
+    "meter": "4/4",
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "swing": 0.0,
+  "swing_unit_quarters": 0.5,
+  "pickup_beats": 0.0,
+  "bars": 2,
+  "length_s": 5.0,
+  "length_frames": 120.0,
+  "fps": 24,
+  "end": {
+   "sec": 5.0,
+   "frame": 120.0,
+   "bar": 3,
+   "beat": 1.0
+  },
+  "album_duration_s": 8.0,
+  "album_duration_frames": 192.0,
+  "album_loops": 1
+ },
+ "sections": [
+  {
+   "label": "D5 bar (on picture)",
+   "start": {
+    "sec": 0.0,
+    "frame": 0.0,
+    "bar": 1,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 2.5,
+    "frame": 60.0,
+    "bar": 2,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "handle (after the cut)",
+   "start": {
+    "sec": 2.5,
+    "frame": 60.0,
+    "bar": 2,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 5.0,
+    "frame": 120.0,
+    "bar": 3,
+    "beat": 1.0
+   }
+  }
+ ],
+ "markers": [
+  {
+   "label": "D5 bar starts (the [ECU])",
+   "sec": 0.0,
+   "frame": 0.0,
+   "bar": 1,
+   "beat": 1.0
+  }
+ ],
+ "hit_check": [
+  {
+   "t": 0.0,
+   "offset_ms": 2.7,
+   "strength": 4.08
+  }
+ ],
+ "sfx_slots": [],
+ "silence_windows": [],
+ "vo_windows": [],
+ "knee_whole": 0,
+ "f_major": {
+  "limit": 0.08,
+  "windows": 0,
+  "worst": 0.0,
+  "worst_sieved": 0.0,
+  "ok": true,
+  "ok_written": true,
+  "ok_spectral": true,
+  "f_inaudible_windows": 0,
+  "a_classes": {
+   "written": 0,
+   "resonance": 0,
+   "explained": 0,
+   "unattributed": 0
+  },
+  "written_a_over_f_bass": [],
+  "written_third": {
+   "ok": true,
+   "count": 0,
+   "events": [],
+   "grazes": [],
+   "n_grazes": 0,
+   "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+  },
+  "fails": [],
+  "explained": [],
+  "fixed_resonances": [],
+  "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+ },
+ "knee_completion": 0,
+ "room_sfx_windows": [],
+ "qa": {
+  "balance": {
+   "balance": {
+    "piano": 100,
+    "orch": 0,
+    "bigband": 0,
+    "chip": 0
+   },
+   "rhythm_pct_of_all": 0,
+   "chip_share": 0,
+   "balance_energy": {
+    "piano": 100,
+    "orch": 0,
+    "bigband": 0,
+    "chip": 0
+   },
+   "method": "theme stemtable (gated loudness per section, time-weighted, rhythm/fx excluded; it counts a brief stab at its own loudness for the whole section) + balance_energy (ungated energy)",
+   "sections": [
+    {
+     "section": "D5 bar (on picture)",
+     "share": {
+      "piano": 100,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "handle (after the cut)",
+     "share": {
+      "piano": 100,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 0
+     }
+    }
+   ]
+  },
+  "short_term_underscore": {
+   "p95": -18.67,
+   "median": -19.32,
+   "max": -18.25
+  },
+  "band_2_6k_db": -31.8,
+  "centroid_hz": 459.0,
+  "f_major": {
+   "limit": 0.08,
+   "windows": 0,
+   "worst": 0.0,
+   "worst_sieved": 0.0,
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "f_inaudible_windows": 0,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_a_over_f_bass": [],
+   "written_third": {
+    "ok": true,
+    "count": 0,
+    "events": [],
+    "grazes": [],
+    "n_grazes": 0,
+    "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+   },
+   "fails": [],
+   "explained": [],
+   "fixed_resonances": [],
+   "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+  },
+  "knee_completion": {
+   "count": 0,
+   "hits": [],
+   "max_gap_s": 2.5,
+   "rule": "OST-BIBLE rule 4: the knee never plays whole in an episode, in any register, across a phrase boundary too"
+  },
+  "sub_under_room": [],
+  "no_third": [],
+  "silence": [],
+  "hard_stops": [],
+  "vo_windows": [],
+  "knee_whole": 0,
+  "motifs_found": {},
+  "swing": {
+   "keynote": {
+    "offbeats": 1,
+    "median_frames": 7.5,
+    "hum_ms": 0
+   }
+  },
+  "banned": []
+ },
+ "loop": null,
+ "files": {
+  "album_wav": "render/e01-s29-d5-album.wav",
+  "album_mp3": "render/e01-s29-d5-album.mp3",
+  "underscore_wav": "render/e01-s29-d5-underscore.wav",
+  "underscore_mp3": "render/e01-s29-d5-underscore.mp3",
+  "stems": {
+   "piano": "render/stems/e01-s29-d5-piano.flac"
+  },
+  "midi": "render/e01-s29-d5.mid",
+  "pianoroll": "render/e01-s29-d5-pianoroll.png"
+ },
+ "masters": {
+  "album": {
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "comp": {
+    "thresh_db": -20,
+    "ratio": 1.8
+   },
+   "dialog_pocket": null,
+   "measured": {
+    "lufs": -16.02,
+    "lra": 3.68,
+    "true_peak_db": -1.15,
+    "peak_db": -1.16,
+    "rms_db": -18.41,
+    "crest_db": 17.26,
+    "seconds": 8.0
+   }
+  },
+  "underscore": {
+   "target_lufs": -20.0,
+   "ceiling_dbtp": -3.0,
+   "comp": {
+    "thresh_db": -28,
+    "ratio": 1.3,
+    "att_ms": 40.0,
+    "rel_ms": 350.0
+   },
+   "dialog_pocket": {
+    "f": 2500.0,
+    "db": -2.0,
+    "q": 0.7
+   },
+   "measured": {
+    "lufs": -20.0,
+    "lra": 4.19,
+    "true_peak_db": -3.15,
+    "peak_db": -3.16,
+    "rms_db": -22.04,
+    "crest_db": 18.89,
+    "seconds": 8.0
+   }
+  }
+ },
+ "stems": {
+  "sum_vs_underscore_residual_db": -240.0,
+  "families_present": [
+   "piano"
+  ],
+  "family_share_lu": {
+   "piano": 0.0
+  }
+ },
+ "spectrum": {
+  "sub": -33.0,
+  "bass": -6.5,
+  "lowmid": -1.2,
+  "mid": -19.6,
+  "presence": -55.2,
+  "air": -86.6,
+  "centroid_hz": 459.0
+ },
+ "bar_levels": [
+  {
+   "bar": 1,
+   "rms_db": -20.1,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 2,
+   "rms_db": -21.1,
+   "peak_db": -4.599999904632568
+  }
+ ],
+ "instrumentation": {
+  "keynote": {
+   "family": "piano",
+   "notes": 7,
+   "source": "sf2",
+   "credit": "Upright Piano KW by FreePats (CC0 1.0)"
+  },
+  "keynote_ch": {
+   "family": "piano",
+   "notes": 11,
+   "source": "sf2",
+   "credit": "Upright Piano KW by FreePats (CC0 1.0)"
+  }
+ },
+ "credits": [
+  "Upright Piano KW by FreePats (CC0 1.0)"
+ ],
+ "audition": [
+  "0-2.5 s then cut at 2.5 s (frame 60): does the hard cut land MID-NOTE as the correction (the lie interrupted), not a glitch?",
+  "0-2.5 s: pretty in the wrong way (too clean, too still) -- against the real felt of MM-01 / MM-10a",
+  "0-2.5 s under the [ECU]: nothing in the frame moves, and nothing in the music moves but the tune"
+ ],
+ "warnings": []
+}

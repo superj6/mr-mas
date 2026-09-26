@@ -1,0 +1,954 @@
+[
+ {
+  "id": "24.01",
+  "tag": "[W]",
+  "cls": "W",
+  "framing": "W",
+  "st": "rooms-a drawSuite (truck, shiver) + cast desk sprite + orb-medium at room scale (v2 24.01)",
+  "standin": false
+ },
+ {
+  "id": "24.02",
+  "tag": "[ECU]",
+  "cls": "ECU",
+  "framing": "ECU-HANDS",
+  "st": "inserts-mas drawNudgeInsert (suite) + BLUEPRINT_PRINT on f22-29 (the glow turns to blueprint)",
+  "standin": false
+ },
+ {
+  "id": "25.01",
+  "tag": "[GFX·sheet]",
+  "cls": "GS",
+  "framing": "BP-SIZES",
+  "st": "kits blueprint: THE PLAN rebuilt at 7 bars (plan25v3: new title, the fold, voiced by NELEH)",
+  "standin": false
+ },
+ {
+  "id": "25.02",
+  "tag": "[GFX·section]",
+  "cls": "GM",
+  "framing": "BP-SIZES",
+  "st": "kits blueprint: THE PLAN rebuilt at 7 bars (plan25v3: new title, the fold, voiced by NELEH)",
+  "standin": false
+ },
+ {
+  "id": "25.02b",
+  "tag": "[GFX·sheet]",
+  "cls": "GS",
+  "framing": "BP-SIZES",
+  "st": "kits blueprint: THE PLAN rebuilt at 7 bars (plan25v3: new title, the fold, voiced by NELEH)",
+  "standin": false
+ },
+ {
+  "id": "25.02c",
+  "tag": "[GFX·detail]",
+  "cls": "GD",
+  "framing": "BP-SIZES",
+  "st": "kits blueprint · DETAIL = integer 2x crop of the sheet (MARKED stand-in for the 2x-coordinate redraw)",
+  "standin": true
+ },
+ {
+  "id": "25.02d",
+  "tag": "[GFX·detail]",
+  "cls": "GD",
+  "framing": "BP-SIZES",
+  "st": "kits blueprint · DETAIL = integer 2x crop of the sheet (MARKED stand-in for the 2x-coordinate redraw)",
+  "standin": true
+ },
+ {
+  "id": "25.03",
+  "tag": "[GFX·sheet]",
+  "cls": "GS",
+  "framing": "BP-SIZES",
+  "st": "kits blueprint: THE PLAN rebuilt at 7 bars (plan25v3: new title, the fold, voiced by NELEH)",
+  "standin": false
+ },
+ {
+  "id": "25.04",
+  "tag": "[GFX·detail]",
+  "cls": "GD",
+  "framing": "BP-SIZES",
+  "st": "kits blueprint curlAt / tearAt over inserts-mas drawClickInsert (the neon under the fold)",
+  "standin": false
+ },
+ {
+  "id": "25.05",
+  "tag": "[ECU]",
+  "cls": "ECU",
+  "framing": "ECU-HANDS",
+  "st": "inserts-mas drawClickInsert: JOIN, the click on beat 2 (f15); connecting…",
+  "standin": false
+ },
+ {
+  "id": "26.01",
+  "tag": "[POV] + CARD",
+  "cls": "SW",
+  "framing": "SCREEN + CARD-RIDE",
+  "st": "callgrid G5 (tiles open, votes flipped, Wi-Fi egg) + engine nameCard NELEH riding in live at f15 (kit.cards stat: stand-in)",
+  "standin": false
+ },
+ {
+  "id": "26.02",
+  "tag": "[POV·pin]",
+  "cls": "SC",
+  "framing": "SCREEN",
+  "st": "callgrid SPEAKER VIEW (in-world push): drawAlyiTile pinned 272x150 + the strip of the others (G5 minis)",
+  "standin": false
+ },
+ {
+  "id": "26.03",
+  "tag": "[POV]",
+  "cls": "SC",
+  "framing": "SCREEN",
+  "st": "callgrid + callDialog: the 1993 dialog in colour over his tile, Cancel live (v2 26.04)",
+  "standin": false
+ },
+ {
+  "id": "26.04",
+  "tag": "[ECU]",
+  "cls": "ECU",
+  "framing": "ECU-EYES",
+  "st": "mas-cu drawEyesStrip (letterboxed): the pupils move one pixel toward the dialog at f6",
+  "standin": false
+ },
+ {
+  "id": "26.05",
+  "tag": "[POV]",
+  "cls": "SW",
+  "framing": "SCREEN",
+  "st": "callgrid + dialog + the unlit arrow, one held step a beat (f0, f15) to the dialog edge",
+  "standin": false
+ },
+ {
+  "id": "26.06",
+  "tag": "[POV·macro 2x]",
+  "cls": "SC",
+  "framing": "SCREEN-MACRO",
+  "st": "SCREEN MACRO 1/2: integer 2x nearest of the laptop's own pixels on Cancel (the arrow's last step; pressed at f12)",
+  "standin": false
+ },
+ {
+  "id": "26.06b",
+  "tag": "[POV]",
+  "cls": "SW",
+  "framing": "SCREEN",
+  "st": "callgrid: Cancel clicked (f0); the tile drops (4 drawings) inside the GLYPH dissolve (tokens approximated); G5 → G4 at f22",
+  "standin": false
+ },
+ {
+  "id": "26.07",
+  "tag": "[CU]",
+  "cls": "CU",
+  "framing": "CU",
+  "st": "mas-cu drawMasCU (strip): [CU] 1 of 2, ONE silent drawing; the rail +1 FIRING types on at f15",
+  "standin": false
+ },
+ {
+  "id": "26.08",
+  "tag": "[ECU]",
+  "cls": "ECU",
+  "framing": "ECU-HANDS",
+  "st": "inserts-mas drawStripTapInsert: the phone buzzes (f0), [super] ×3 lights (f2), the tap at once (f8); the mic chip still lit",
+  "standin": false
+ },
+ {
+  "id": "26.09",
+  "tag": "[OTS]",
+  "cls": "OTS",
+  "framing": "OTS",
+  "st": "[OTS] shoulder(masPortrait, the neon rim) over rooms-a drawLaptopInsert; the screen = callgrid G4, frozen on \"super.\" (f10)",
+  "standin": false
+ },
+ {
+  "id": "26.10",
+  "tag": "[W] F1.2",
+  "cls": "W",
+  "framing": "W",
+  "st": "F1.2: the call screen → render front BASE → EARLYWEB16 (f6-44) onto rooms-a drawTpoolDoor; f45 drawTpoolClose → front → rooms-b drawDarkDesk grain",
+  "standin": false
+ },
+ {
+  "id": "26A.01",
+  "tag": "[ECU]",
+  "cls": "ECU",
+  "framing": "ECU-HANDS",
+  "st": "inserts-mas drawCarveInsert (a stroke a beat) → drawBrushInsert (f60) + DRIFT: the insert as one layer, 1 px / 8 f (11 px)",
+  "standin": false
+ },
+ {
+  "id": "26A.02",
+  "tag": "[2S]",
+  "cls": "M",
+  "framing": "2S",
+  "st": "twoshots drawDark2S + orbTally: the Orb counts 1, 2, 3, then his thumb (v2 26A.02)",
+  "standin": false
+ },
+ {
+  "id": "26A.03",
+  "tag": "[ECU·Orb]",
+  "cls": "ECU",
+  "framing": "ECU-ORB",
+  "st": "[ECU·Orb] the iris full frame (orb-medium drawOrb r 84, procedural) + orbStep: thumb → his face (f8-14); toast rewinding… f24; WHIP-OUT f58",
+  "standin": false
+ },
+ {
+  "id": "27.01",
+  "tag": "[SCR]",
+  "cls": "SW",
+  "framing": "SCREEN",
+  "st": "callgrid G4 in the [SCR] bezel; \"super.\" through their laptop speaker (typed box, no portrait); WHIP-IN f0-1 (v2 27.01)",
+  "standin": false
+ },
+ {
+  "id": "27.02",
+  "tag": "[MCU]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "[MCU] NELEH right third, frameless (nelehPortrait) over her tile's world at 480x203 (nelehTileBg), soft 2; the page turns f6",
+  "standin": false
+ },
+ {
+  "id": "27.03",
+  "tag": "[HIGH]",
+  "cls": "ECU",
+  "framing": "HIGH-TABLE",
+  "st": "[HIGH] rooms-a drawTableInsert (blueprint) + the steps list (stand-in lettering): 1 ticks f4, the tick runs on to 2",
+  "standin": false
+ },
+ {
+  "id": "27.04",
+  "tag": "[GFX]",
+  "cls": "GFX",
+  "framing": "GFX",
+  "st": "kit.cards (stand-in): the dated quote card, moved to the board's side as step 2",
+  "standin": false
+ },
+ {
+  "id": "27.05",
+  "tag": "[MCU]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "[MCU] RIMA right third, frameless (rimaSpeakPortrait) under a hard circular spotlight on black; she smooths the jacket f4",
+  "standin": false
+ },
+ {
+  "id": "27.05b",
+  "tag": "[SCR·2-up]",
+  "cls": "SC",
+  "framing": "SCREEN",
+  "st": "[SCR·2-up] the call's two-up in the laptop bezel: drawNelehTile left, drawRimaTile right (call chrome)",
+  "standin": false
+ },
+ {
+  "id": "27.05c",
+  "tag": "[MCU]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "[MCU] the identical RIMA setup (the repeat is the joke) + the PLATE (was a card) typed on at f2",
+  "standin": false
+ },
+ {
+  "id": "27.06",
+  "tag": "[SCR]",
+  "cls": "SW",
+  "framing": "SCREEN",
+  "st": "callgrid G4 [SCR] + callToast (GERG has left, f2) + his post (post-ui stand-in, f10) + keycaps pop f24 (v2 27.01a/27.02)",
+  "standin": true
+ },
+ {
+  "id": "27.07",
+  "tag": "[W]",
+  "cls": "W",
+  "framing": "W",
+  "st": "rooms-b bullpen all-hands (ALLHANDS_TILES, one hand up) + drawAlyiStand in the doorway; the typed box (v2 27.06)",
+  "standin": false
+ },
+ {
+  "id": "27.08",
+  "tag": "[MCU·door]",
+  "cls": "MCU",
+  "framing": "MCU-FRAME",
+  "st": "[MCU·door] ALYI right third, frameless (alyiSpeakPortrait), half in shadow; the doorway jamb + leaf full height in front (flat shapes) over the all-hands, soft 1",
+  "standin": false
+ },
+ {
+  "id": "27.09",
+  "tag": "[W]",
+  "cls": "W",
+  "framing": "W",
+  "st": "rooms-b all-hands wide (27.07 setup): the hand still up; Alyi steps back out of the doorway in whole-px steps (f4-16), then it holds empty",
+  "standin": false
+ },
+ {
+  "id": "27.10",
+  "tag": "[SCR]",
+  "cls": "SC",
+  "framing": "SCREEN",
+  "st": "[SCR] overhead: NELEH's phone face-up on the walnut beside the blueprint (drawTableInsert) + his post in its own UI (post-ui stand-in), 9:32 PM PT",
+  "standin": true
+ },
+ {
+  "id": "27.11",
+  "tag": "[HIGH]",
+  "cls": "ECU",
+  "framing": "HIGH-TABLE",
+  "st": "[HIGH] drawTableInsert (blueprint) + the CEO box + EQUITY: 0 stamp (stand-in lettering); her pen hand = inserts-hands clickHand (MARKED stand-in); tap f8",
+  "standin": true
+ },
+ {
+  "id": "27.12",
+  "tag": "[SCR]",
+  "cls": "SW",
+  "framing": "SCREEN",
+  "st": "avalanche planPile / drawPile on the board's grid (G5 with Rima) in the [SCR] bezel; his eulogy post scrolls through (callgrid postChip) f20-104",
+  "standin": false
+ },
+ {
+  "id": "27.12b",
+  "tag": "[SCR·macro 2x]",
+  "cls": "SC",
+  "framing": "SCREEN-MACRO",
+  "st": "SCREEN MACRO 2/2: integer 2x of the bezel's pixels on MADA's tile; the one BLUE heart lands on his spinner (f3) and spins with it",
+  "standin": false
+ },
+ {
+  "id": "27.13",
+  "tag": "[2S]",
+  "cls": "M",
+  "framing": "2S",
+  "st": "twoshots drawBoard2S (boardroom plate, neleh-medium, mada-medium, ALYI in the glass): the buzz, every phone steps (f0)",
+  "standin": false
+ },
+ {
+  "id": "27.13b",
+  "tag": "[MCU]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "[MCU] NELEH LEFT third facing right (nelehPortrait flipped), the boardroom plate soft 2; footnotes",
+  "standin": false
+ },
+ {
+  "id": "27.14",
+  "tag": "[OTS]",
+  "cls": "OTS",
+  "framing": "OTS",
+  "st": "[OTS] over NELEH's right shoulder (her silhouette, the city's rim) onto the dark window: ALYI's reflection (alyiReflection) in the boardroom plate",
+  "standin": false
+ },
+ {
+  "id": "27.15",
+  "tag": "[HIGH]",
+  "cls": "ECU",
+  "framing": "HIGH-TABLE",
+  "st": "[HIGH] drawTableInsert (walnut) + four phones (flat shapes) walking to the table edge a held step a beat (f4, f19); one tips off f30 (composite stand-in)",
+  "standin": true
+ },
+ {
+  "id": "27.16",
+  "tag": "[MCU]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "[MCU] NELEH left third, looking down at the fallen phone (nelehPortrait flipped, gaze down), the boardroom soft",
+  "standin": false
+ },
+ {
+  "id": "27.17",
+  "tag": "[2S]",
+  "cls": "M",
+  "framing": "2S",
+  "st": "twoshots drawBoard2S: ALYI's reflection speaks (f3); it flickers out for 2 frames at the end and steadies",
+  "standin": false
+ },
+ {
+  "id": "27.18",
+  "tag": "[MCU·PF]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "[MCU·PF] NELEH left third looking at the blank line; the boardroom steps down behind her in held steps (the fallaway)",
+  "standin": false
+ },
+ {
+  "id": "27.19",
+  "tag": "[HIGH]",
+  "cls": "ECU",
+  "framing": "HIGH-TABLE",
+  "st": "[HIGH] drawTableInsert (blueprint, 1-3 ticked) + her ? in three strokes (f10-22); her marker hand = clickHand stand-in (MARKED)",
+  "standin": true
+ },
+ {
+  "id": "27.20",
+  "tag": "[W]",
+  "cls": "W",
+  "framing": "W",
+  "st": "rooms-a boardroom wide: every phone over the edge; the speakerphone dials four tones (f2, 8, 14, 20) (v2 27.17, re-timed)",
+  "standin": false
+ },
+ {
+  "id": "27.21",
+  "tag": "[ECU]",
+  "cls": "ECU",
+  "framing": "ECU-PROP",
+  "st": "[ECU] lighthouse desk (plate stand-in, MARKED) + adelina drawThroneHandset lg, ringing; the (REPORTED) rail (v2 27.18)",
+  "standin": true
+ },
+ {
+  "id": "27.22a",
+  "tag": "[MCU]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "[MCU] MARIO right third, frameless (marioPortraitImg), the lamp turning in the window behind (lighthouse, soft 2); the finger rises",
+  "standin": false
+ },
+ {
+  "id": "27.22b",
+  "tag": "[W]",
+  "cls": "W",
+  "framing": "W",
+  "st": "rooms-b lighthouse wide + mario + adelina room sprites; the throne falls off the handset (throneImg, 3 drawings) at the click; typed box",
+  "standin": false
+ },
+ {
+  "id": "27.23",
+  "tag": "[MCU]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "[MCU] the 27.22a setup, the second phone at his ear; the two RENT METERS kept SHARP behind him (soft layer with a keep mask)",
+  "standin": false
+ },
+ {
+  "id": "27.24",
+  "tag": "[SCR]",
+  "cls": "SC",
+  "framing": "SCREEN",
+  "st": "rooms-a drawLobbyCam [SCR] (REC chrome) + mas-stand walk in a GUEST lanyard; his post upside-down in the corner from f10 (post-ui stand-in)",
+  "standin": true
+ },
+ {
+  "id": "27.25",
+  "tag": "[W]",
+  "cls": "W",
+  "framing": "W",
+  "st": "rooms-a boardroom wide (sticky CEO (TEMP); the spot swings in 3 held positions) + ttemme room sprite; the PLATE rides the wide f10 (was a card)",
+  "standin": false
+ },
+ {
+  "id": "27.26",
+  "tag": "[HIGH]",
+  "cls": "ECU",
+  "framing": "HIGH-TABLE",
+  "st": "[HIGH] drawTableInsert (prop) + kits props hourglass L: the flip in 3 held drawings (f0, 4, 8), a grain a beat (v2 27.30)",
+  "standin": false
+ },
+ {
+  "id": "27.27",
+  "tag": "[LOW·desk]",
+  "cls": "MCU",
+  "framing": "DESK-LOW",
+  "st": "[LOW·desk] TTEMME right third, frameless (ttemmePortrait, gaze sand) + the chat overlay; the table edge + the hourglass BIG in front (ttemme drawHourglass lg); RACK hourglass → him f6-11",
+  "standin": false
+ },
+ {
+  "id": "27.28",
+  "tag": "[2S]",
+  "cls": "M",
+  "framing": "2S",
+  "st": "twoshots drawBoard2S: the wall steps to slate (f0-8); the door appears (f15) in held steps and opens (f30); TASYA in it",
+  "standin": false
+ },
+ {
+  "id": "27.29",
+  "tag": "[MCU·door]",
+  "cls": "MCU",
+  "framing": "MCU-FRAME",
+  "st": "[MCU·door] TASYA right third, frameless (tasyaSpeakPortrait, key ring jangling), framed by the new doorway (jamb + leaf shapes), slate light behind",
+  "standin": false
+ },
+ {
+  "id": "27.30",
+  "tag": "[HIGH]",
+  "cls": "ECU",
+  "framing": "HIGH-TABLE",
+  "st": "[HIGH] drawTableInsert (blueprint): 1-3 ticked, 4 blank but for her ?; her hand + capped marker at rest (clickHand stand-in, MARKED); NELEH (O.S.)",
+  "standin": true
+ },
+ {
+  "id": "27.31",
+  "tag": "[MCU]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "[MCU] MADA right third, frameless (madaPortrait) + his spinner, the boardroom soft; he doesn't answer",
+  "standin": false
+ },
+ {
+  "id": "28.01",
+  "tag": "[GFX]",
+  "cls": "GFX",
+  "framing": "GFX",
+  "st": "kit.cards (stand-in): the act-out card",
+  "standin": true
+ },
+ {
+  "id": "29.01",
+  "tag": "[ECU]",
+  "cls": "ECU",
+  "framing": "ECU-PROP",
+  "st": "[ECU] rooms-b drawDarkDesk from above: the glass, its water line one flat row (v2 29.00)",
+  "standin": false
+ },
+ {
+  "id": "29.02",
+  "tag": "[ECU]",
+  "cls": "ECU",
+  "framing": "ECU-HANDS",
+  "st": "inserts-mas drawPhone29Timeline: the true shot, eight identical posts hearted one a beat (feed = post-ui stand-in) (v2 29.03)",
+  "standin": false
+ },
+ {
+  "id": "29.03",
+  "tag": "[2S]",
+  "cls": "M",
+  "framing": "2S",
+  "st": "twoshots drawDark2S + orbToLanyard: the iris steps off the phone onto the GUEST lanyard on beat 3 (v2 29.04)",
+  "standin": false
+ },
+ {
+  "id": "29.04",
+  "tag": "[ECU·Orb]",
+  "cls": "ECU",
+  "framing": "ECU-ORB",
+  "st": "[ECU·Orb] the iris full frame (drawOrb r 84), its look held on the lanyard (off frame); the V.O. band on the dark pool",
+  "standin": false
+ },
+ {
+  "id": "29.05",
+  "tag": "[MCU]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "[MCU] MAS left third turned toward the Orb (masPortrait, monitor light) + the Orb soft at his far shoulder; RACK Mas → the Orb after the line (3 held steps)",
+  "standin": false
+ },
+ {
+  "id": "29.06",
+  "tag": "[POV]",
+  "cls": "SC",
+  "framing": "SCREEN",
+  "st": "avalanche odometer + odoRoll: 505 · 650 · 700 · 745 / 770, the clunk (v2 29.05)",
+  "standin": false
+ },
+ {
+  "id": "29.07",
+  "tag": "[GFX]",
+  "cls": "GFX",
+  "framing": "GFX",
+  "st": "kit.cards (stand-in): the dated quote card + the count in its corner (v2 29.06)",
+  "standin": true
+ },
+ {
+  "id": "29.08",
+  "tag": "[POV]",
+  "cls": "SW",
+  "framing": "SCREEN",
+  "st": "post-ui stand-in signature list (generic rows), stops 2 beats on ALYI (REPORTED) f15-44 (v2 29.07)",
+  "standin": true
+ },
+ {
+  "id": "29.09",
+  "tag": "[ECU·Orb]",
+  "cls": "ECU",
+  "framing": "ECU-ORB",
+  "st": "[ECU·Orb] the iris: to the name (f0), to Alyi's thumbnail in the monitor corner (f15), back to the name (f30); chime",
+  "standin": false
+ },
+ {
+  "id": "29.10",
+  "tag": "[2S]",
+  "cls": "M",
+  "framing": "2S",
+  "st": "twoshots drawDark2S: the rack slot ejects the check tray-first (tray 1 → 4) · VOID IF CEO MISSING (plate's own check) (v2 29.08)",
+  "standin": false
+ },
+ {
+  "id": "29.11a",
+  "tag": "[POV·tile]",
+  "cls": "SC",
+  "framing": "SCREEN",
+  "st": "gerg-medium drawGergMediumPOV: the tile opens in 3 held steps; \"One sec. Compiling—\" lip-sync (v2 29.11)",
+  "standin": false
+ },
+ {
+  "id": "29.11b",
+  "tag": "[MCU]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "[MCU] MAS left third facing his monitor (masPortrait, monitor light) over the dark plate soft 2 (templates panel 1); lip-sync",
+  "standin": false
+ },
+ {
+  "id": "29.12",
+  "tag": "[POV·tile]",
+  "cls": "SC",
+  "framing": "SCREEN",
+  "st": "gerg-medium drawGergMediumPOV (the tile full on his monitor), lip-sync (v2 29.11b)",
+  "standin": false
+ },
+ {
+  "id": "29.13",
+  "tag": "[MCU·PF]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "[MCU·PF] the QUIET BEAT: the 29.11b setup, the room falls away to the green + his cyan (fallaway as a lighting move)",
+  "standin": false
+ },
+ {
+  "id": "29.14",
+  "tag": "[POV]",
+  "cls": "SC",
+  "framing": "SCREEN",
+  "st": "swaps-act4 drawGergTileWide: his tile fills the frame (the app's layout); he glances up into his camera, at Mas (v2 29.11c)",
+  "standin": false
+ },
+ {
+  "id": "29.15",
+  "tag": "[MCU·PF]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "[MCU·PF] the 29.13 setup; his look swaps from the monitor toward the lens; the green flickers on him (Gerg typing again)",
+  "standin": false
+ },
+ {
+  "id": "29.16",
+  "tag": "[2S]",
+  "cls": "M",
+  "framing": "2S",
+  "st": "twoshots drawDark2S: the slate door's held steps from \"asked\" (plate door 1 → 3 → 4); TASYA (O.S.) typed box",
+  "standin": false
+ },
+ {
+  "id": "29.17",
+  "tag": "[MCU]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "[MCU] MAS left third, not turning; the slate door (dark plate, door 4) soft over his right shoulder; RACK Mas → the door after the line",
+  "standin": false
+ },
+ {
+  "id": "29.18",
+  "tag": "[POV·tile]",
+  "cls": "SC",
+  "framing": "SCREEN",
+  "st": "avalanche planGridStack / drawGridStack on the board grid (his monitor full-bleed), sampled on the v2 stack's clock",
+  "standin": false
+ },
+ {
+  "id": "29.19",
+  "tag": "[POV]",
+  "cls": "SW",
+  "framing": "SCREEN",
+  "st": "avalanche planGridStack / drawGridStack on the board grid (his monitor full-bleed), sampled on the v2 stack's clock",
+  "standin": false
+ },
+ {
+  "id": "29.20",
+  "tag": "[OTS]",
+  "cls": "OTS",
+  "framing": "OTS",
+  "st": "[OTS] over Mas's left shoulder (shoulder(masPortrait), the monitor light as his rim) onto the monitor across the dark room (dark plate soft 2): the stack in its screen (the screen's own pixels, 1:2)",
+  "standin": false
+ },
+ {
+  "id": "29.21",
+  "tag": "[MCU·PF]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "[MCU·PF] MAS left third, the monitor off frame left lighting him; each landing steps the room's light, never his face",
+  "standin": false
+ },
+ {
+  "id": "29.22",
+  "tag": "[POV]",
+  "cls": "SW",
+  "framing": "SCREEN",
+  "st": "avalanche planGridStack / drawGridStack on the board grid (his monitor full-bleed), sampled on the v2 stack's clock",
+  "standin": false
+ },
+ {
+  "id": "29.23",
+  "tag": "[POV·half]",
+  "cls": "SC",
+  "framing": "SCREEN",
+  "st": "[POV·half] ALYI's tile (drawAlyiTile) half-frame, shoved sideways; it resists one beat (f10-24), then slides off the edge",
+  "standin": false
+ },
+ {
+  "id": "29.24",
+  "tag": "[POV·half]",
+  "cls": "SC",
+  "framing": "SCREEN",
+  "st": "[POV·half] NELEH's tile (drawNelehTile) half-frame, her footnotes scattering; on \"char\" the tile leaves the frame",
+  "standin": false
+ },
+ {
+  "id": "29.25",
+  "tag": "[POV]",
+  "cls": "SW",
+  "framing": "SCREEN",
+  "st": "avalanche planGridStack / drawGridStack on the board grid (his monitor full-bleed), sampled on the v2 stack's clock",
+  "standin": false
+ },
+ {
+  "id": "29.26",
+  "tag": "[POV]",
+  "cls": "SW",
+  "framing": "SCREEN",
+  "st": "avalanche planGridStack / drawGridStack on the board grid (his monitor full-bleed), sampled on the v2 stack's clock",
+  "standin": false
+ },
+ {
+  "id": "29.27",
+  "tag": "[ECU]",
+  "cls": "ECU",
+  "framing": "ECU-PROP",
+  "st": "[ECU] the glass on the desk (the 29.01 plate), its water line flat while the monitor's light flickers on it",
+  "standin": false
+ },
+ {
+  "id": "29.28",
+  "tag": "[MCU·PF]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "[MCU·PF] MAS left third watching the gap; the room stepped down until the small faces are its only light",
+  "standin": false
+ },
+ {
+  "id": "29.29",
+  "tag": "[POV·half]",
+  "cls": "SC",
+  "framing": "SCREEN",
+  "st": "[POV·half] MADA's tile wedged in the one gap, every tile around him pressing; f45 the frame holds half-frame on him (drawMadaTile)",
+  "standin": false
+ },
+ {
+  "id": "29.30",
+  "tag": "[POV·half]",
+  "cls": "SC",
+  "framing": "SCREEN",
+  "st": "[POV·half] the same half tile: his label flips on the downbeat (3 held steps) and holds its read (callgrid label stand-in)",
+  "standin": false
+ },
+ {
+  "id": "30.01",
+  "tag": "[P2] BOX",
+  "cls": "BOX",
+  "framing": "BOX",
+  "st": "[P2] BOX (the act's one deliberate box): twoshots drawDoorwayP2 re-timed: hearts f99/112/128 off the grid, Alyi looks up f134, the IOU f140; post-ui stand-in",
+  "standin": false
+ },
+ {
+  "id": "30.03",
+  "tag": "[W]",
+  "cls": "W",
+  "framing": "W",
+  "st": "rooms-b bullpenLandlord (THE LANDLORD, one wide clocked by the line): floor / ceiling / walls in 3 held steps on \"below / above / around\" + tasya room sprite; typed box",
+  "standin": false
+ },
+ {
+  "id": "30.06",
+  "tag": "[MCU·PF]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "[MCU·PF] MAS left third, eyes down (swaps-act4 masLookDown, warm) over the all-slate bullpen soft (tall-bust stand-in: the helper's extension)",
+  "standin": false
+ },
+ {
+  "id": "30.06b",
+  "tag": "[HIGH]",
+  "cls": "SC",
+  "framing": "HIGH-FLOOR",
+  "st": "[HIGH·floor] his eyeline: the slate floor from above (flat tiles in the bullpen's own slate floor colours, sampled from rooms-b landlord 3) + his shoe tips at the top edge (stand-in); TASYA (O.S.)",
+  "standin": true
+ },
+ {
+  "id": "30.07",
+  "tag": "[M]",
+  "cls": "M",
+  "framing": "M",
+  "st": "twoshots drawMadaM (boardroom plate fires, mada-medium): perfectly still among the fires; WHIP-OUT to the door on the bang (v2 30.09)",
+  "standin": false
+ },
+ {
+  "id": "30.08",
+  "tag": "[W]",
+  "cls": "W",
+  "framing": "W",
+  "st": "rooms-a boardroom wide (FIRES_SC30): the door bangs open (SHAKE_DOOR), TERB in; the helmet pops on at f20; WHIP-IN f0-1",
+  "standin": false
+ },
+ {
+  "id": "30.09",
+  "tag": "CARD (full freeze) on [W]",
+  "cls": "W",
+  "framing": "CARD-RIDE",
+  "st": "FULL FREEZE: the boardroom 2-tone, Mas in colour (mas-stand walk → reach → pocket) pulls the pin f24-48; engine nameCard TERB (kit.cards stat: stand-in)",
+  "standin": true
+ },
+ {
+  "id": "30.10",
+  "tag": "[ECU]",
+  "cls": "ECU",
+  "framing": "ECU-PROP",
+  "st": "[ECU] terb drawPinTag (DO NOT REMOVE) over the held freeze · his fingers on the pin: a labelled box (hand CHECK) (v2 30.12)",
+  "standin": true
+ },
+ {
+  "id": "30.11a",
+  "tag": "[MCU]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "[MCU] TERB right third, frameless (terbPortrait, helmet) over the fires boardroom plate, soft 2; procedural",
+  "standin": false
+ },
+ {
+  "id": "30.11b",
+  "tag": "[W]",
+  "cls": "W",
+  "framing": "W",
+  "st": "rooms-a boardroom wide (fires): everyone looks around (held drawings f0-14), \"…Ah.\" (f15); typed box",
+  "standin": false
+ },
+ {
+  "id": "30.12",
+  "tag": "[2S]",
+  "cls": "M",
+  "framing": "2S",
+  "st": "twoshots drawCalmOff2S: THE CALM-OFF placed: two still men; Terb sprays behind them; keycaps; TERB (O.S.) typed box (v2 30.14)",
+  "standin": false
+ },
+ {
+  "id": "30.13",
+  "tag": "[OTS]",
+  "cls": "OTS",
+  "framing": "OTS",
+  "st": "[OTS] over Mas's left shoulder (shoulder(masPortrait), the fires' rim W3) onto MADA (twoshots drawMadaM) (templates panel 3); lip-sync",
+  "standin": false
+ },
+ {
+  "id": "30.14",
+  "tag": "[MCU]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "[MCU] MAS left third, near-front (masPortrait head front, warm), eyes toward Mada, the fires soft behind; one beat late",
+  "standin": false
+ },
+ {
+  "id": "30.15",
+  "tag": "[2S]",
+  "cls": "M",
+  "framing": "2S",
+  "st": "twoshots drawCalmOff2S: HOLD 2 BEATS (the long hold); the spinner stops f18, the nod f24; Terb's hand stamps the term sheet f30, hands it to both f44",
+  "standin": false
+ },
+ {
+  "id": "30.16",
+  "tag": "[POV]",
+  "cls": "SC",
+  "framing": "SCREEN",
+  "st": "post-ui stand-in: his phone lit green + GERG's post; keycaps pop from the bottom (v2 30.20)",
+  "standin": true
+ },
+ {
+  "id": "30.17",
+  "tag": "[MCU·PF]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "[MCU·PF] MAS left third, 3/4 down reading; the boardroom (fires) stepped down; his face doesn't change",
+  "standin": false
+ },
+ {
+  "id": "30.18",
+  "tag": "[HIGH]",
+  "cls": "ECU",
+  "framing": "HIGH-TABLE",
+  "st": "[HIGH] drawTableInsert (prop) + kits props hourglass L: the last grain; TTEMME's post pops f4 (post-ui stand-in); the shatter on the post's last beat (f105)",
+  "standin": true
+ },
+ {
+  "id": "30.19",
+  "tag": "[LOW]",
+  "cls": "W",
+  "framing": "LOW-ROOM",
+  "st": "[LOW] the lobby at night (rooms-a drawLobby) cropped on the sign: the sign looming at the top, Mas small at the desk; the sign ignites (1,2,1,2,3) (crop stand-in, not a true low angle)",
+  "standin": true
+ },
+ {
+  "id": "30.20",
+  "tag": "[ECU]",
+  "cls": "ECU",
+  "framing": "ECU-PROP",
+  "st": "[ECU] rooms-a drawSignFloorInsert: a small box of spare 0 plates set down under the sign · the maintenance hand: a labelled box (v2 30.23)",
+  "standin": true
+ },
+ {
+  "id": "30.21",
+  "tag": "[OTS-W]",
+  "cls": "OTS",
+  "framing": "OTS",
+  "st": "[OTS-W] over Mas's left shoulder (shoulder(masPortrait), tungsten rim) onto the lobby wide; the 1993 dialog: Cancel greys 3 held beats; the arrow clicks f45 (bonk)",
+  "standin": false
+ },
+ {
+  "id": "30.22",
+  "tag": "[CU]",
+  "cls": "CU",
+  "framing": "CU",
+  "st": "mas-cu drawMasCU (lobby): [CU] 2 of 2, the same ONE silent drawing, the tungsten behind him (v2 30.25)",
+  "standin": false
+ },
+ {
+  "id": "30.23",
+  "tag": "[ECU]",
+  "cls": "ECU",
+  "framing": "ECU-HANDS",
+  "st": "inserts-mas drawNudgeInsert (lobby): the glass set down, the nudge one pixel true (f8); \"okay.\" over the hands (typed box)",
+  "standin": false
+ },
+ {
+  "id": "31.01",
+  "tag": "[ECU]",
+  "cls": "ECU",
+  "framing": "ECU-PROP",
+  "st": "inserts-props drawVaultInsert: Q*, the sticky note, the hum on F (v2 31.01)",
+  "standin": false
+ },
+ {
+  "id": "31.02",
+  "tag": "[MCU-2]",
+  "cls": "MCU",
+  "framing": "MCU-2",
+  "st": "[MCU-2] the frameless 50/50: MAS left (turned away) + GERG right (gergGlow, the green under his chin) over the bullpen by day soft 1; the vault between them (labelled box: no room-scale vault); RACK to the note; Gerg walks out",
+  "standin": true
+ },
+ {
+  "id": "31.03",
+  "tag": "[MCU]",
+  "cls": "MCU",
+  "framing": "MCU-F",
+  "st": "[MCU] MAS left third at his desk reading the memo aloud (masPortrait, warm) over the bullpen (door shut, nameplate) soft (tall-bust stand-in); lip-sync",
+  "standin": false
+ },
+ {
+  "id": "31.04",
+  "tag": "[ECU]",
+  "cls": "ECU",
+  "framing": "ECU-PROP",
+  "st": "rooms-a drawChairBackInsert: four screws, four beats; the plate comes off f55 · the worker's hand: a labelled box (v2 31.07)",
+  "standin": true
+ },
+ {
+  "id": "31.05",
+  "tag": "[W]",
+  "cls": "W",
+  "framing": "W",
+  "st": "rooms-b bullpen (window corner) · prop.observer-chair NEW: a labelled box (unfolds, 4 drawings); the key ring drops f45 (v2 31.09, re-timed)",
+  "standin": true
+ }
+]

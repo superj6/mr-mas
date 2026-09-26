@@ -1,0 +1,188 @@
+<title>MR. MAS Review Desk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Silkscreen&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3f5f6; --panel:#ffffff; --ink:#15191c; --ink2:#46505a; --muted:#6b7580;
+  --rule:#d9dee3; --cyan:#0a8fa6; --cyan-soft:#e2f4f7; --amber:#b86a12; --amber-soft:#fbefdf;
+  --code:#eef1f3; --shadow:0 1px 2px rgba(20,30,40,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0b0f13; --panel:#12181e; --ink:#e6ebef; --ink2:#b3bec8; --muted:#8793a0;
+    --rule:#243039; --cyan:#3fe6ff; --cyan-soft:#0f2a31; --amber:#f0a44a; --amber-soft:#2b2012;
+    --code:#1a2229; --shadow:none; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0b0f13; --panel:#12181e; --ink:#e6ebef; --ink2:#b3bec8; --muted:#8793a0;
+  --rule:#243039; --cyan:#3fe6ff; --cyan-soft:#0f2a31; --amber:#f0a44a; --amber-soft:#2b2012;
+  --code:#1a2229; --shadow:none; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.6 "IBM Plex Sans",system-ui,-apple-system,Segoe UI,sans-serif;margin:0;padding-inline:16px;padding-block:28px 64px}
+.wrap{max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:40px}
+header{display:flex;flex-direction:column;gap:6px;border-bottom:1px solid var(--rule);padding-bottom:18px}
+.kicker{font-family:Silkscreen,"JetBrains Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--cyan);text-transform:uppercase}
+h1{font-family:"JetBrains Mono",ui-monospace,monospace;font-weight:600;font-size:clamp(24px,4vw,34px);line-height:1.15;margin:0;text-wrap:balance}
+h2{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:20px;margin:0;text-wrap:balance}
+h3{font-size:15px;margin:0;font-weight:600}
+p{margin:0;max-width:68ch;color:var(--ink2)}
+.lede{color:var(--ink2);max-width:70ch}
+section{display:flex;flex-direction:column;gap:14px}
+.sechead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.tag{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.06em;padding:2px 8px;border-radius:3px;border:1px solid var(--rule);color:var(--muted);text-transform:uppercase}
+.tag.new{border-color:var(--cyan);color:var(--cyan)}
+.tag.warn{border-color:var(--amber);color:var(--amber)}
+video,img{display:block;width:100%;max-width:100%;height:auto;border-radius:4px;background:#000}
+audio{width:100%}
+.media{display:flex;flex-direction:column;gap:6px}
+.cap{font-size:13px;color:var(--muted)}
+.cap code,code{font-family:"JetBrains Mono",monospace;font-size:12.5px;background:var(--code);padding:1px 5px;border-radius:3px;word-break:break-all}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.panel{background:var(--panel);border:1px solid var(--rule);border-radius:6px;padding:16px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px}
+ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:4px;color:var(--ink2)}
+li{max-width:70ch}
+.tablewrap{overflow-x:auto;border:1px solid var(--rule);border-radius:6px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14px}
+th,td{text-align:left;padding:8px 12px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.04em;color:var(--muted);font-weight:600;background:var(--code)}
+tr:last-child td{border-bottom:none}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.good{color:var(--cyan);font-weight:600}
+.decisions{counter-reset:d;display:flex;flex-direction:column;gap:10px;list-style:none;padding:0}
+.decisions li{counter-increment:d;background:var(--panel);border:1px solid var(--rule);border-left:3px solid var(--amber);border-radius:4px;padding:10px 14px 10px 44px;position:relative;max-width:none}
+.decisions li::before{content:counter(d);position:absolute;left:12px;top:10px;font-family:"JetBrains Mono",monospace;font-weight:600;color:var(--amber)}
+.decisions .def{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+.split{display:flex;gap:6px;flex-wrap:wrap;font-family:"JetBrains Mono",monospace;font-size:12px}
+.split span{padding:2px 8px;border-radius:3px}
+.his{background:var(--cyan-soft);color:var(--cyan)}
+.board{background:var(--amber-soft);color:var(--amber)}
+footer{border-top:1px solid var(--rule);padding-top:16px;font-size:13px;color:var(--muted)}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="kicker">MR. MAS · review desk · 2026-09-26</div>
+  <h1>Act Four v4, the season reels, style range and the score</h1>
+  <p class="lede">Everything that landed today, in one place. Nobody, me included, has watched or listened to these in real time: every claim below is measured or checked on stills. The first watch and listen are yours. Decisions are collected at the bottom.</p>
+</header>
+
+<section id="act4">
+  <div class="sechead"><h2>1 · Ep1 Act Four, animatic v4</h2><span class="tag new">new</span><span class="tag">4:11 · 77 shots</span></div>
+  <div class="media">
+    <video controls preload="metadata" src="act4-v4.mp4"></video>
+    <div class="cap">Picture only with the full mix, 960×540 web copy. Full 1080p with the editor's margin: <code>out/ep01/act4/animatic/act4-animatic-v4.mp4</code></div>
+  </div>
+  <p>Rebuilt from your note that v3 was jagged: eight sequences, each with one place, one time and one continuous piece of music; cuts on story rather than on a quota; room tone under everything; dialogue spaced like people talk. Then a newcomer read (someone setting aside the real events) and an insider read shaped v4.2: the firing click now lands visibly on <b>Cancel</b> with <code>ALYI · CO-FOUNDER</code>, people are labelled by what they are to Mas, and two beats the insider called air are gone.</p>
+  <div class="split"><span class="his">HIS SIDE · the blow</span><span class="board">THE BOARD'S SIDE · blind</span><span class="his">HIS SIDE · what they didn't know</span><span class="his">the lobby and after</span></div>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Measured</th><th>v3</th><th>v4.2</th></tr></thead>
+    <tbody>
+      <tr><td>Shots · median length</td><td class="num">119 · 1.88 s</td><td class="num good">77 · 2.75 s</td></tr>
+      <tr><td>Shots under 1.5 s</td><td class="num">48</td><td class="num good">2</td></tr>
+      <tr><td>Music pieces · shortest</td><td class="num">33 fragments · 0.1 s</td><td class="num good">5 performances · 19.4 s</td></tr>
+      <tr><td>Near-silent holes (0.3 s+)</td><td class="num">78 · 70.5 s</td><td class="num good">1 · 3.6 s (the designed drop-out after Cancel)</td></tr>
+      <tr><td>Median gap between replies</td><td class="num">0.12 s</td><td class="num good">0.50 s</td></tr>
+      <tr><td>Runtime</td><td class="num">4:09</td><td class="num">4:11</td></tr>
+    </tbody>
+  </table></div>
+  <div class="grid2">
+    <div class="panel"><h3>Watch and listen for</h3><ul>
+      <li>Is it fluid, clear, and a thriller, on one watch with no notes?</li>
+      <li>0:28–0:34, the firing: does "his co-founder cancels him" read at speed? Then the 8 s after the click.</li>
+      <li>1:15, the cut from "You can call it this way" to Neleh's desk: clean or abrupt?</li>
+      <li>2:40, the door: does "Everyone is welcome." now say where?</li>
+      <li>3:41, the lobby: sign, box of zeros and the refused Cancel, one joke too many?</li>
+      <li>Sound: the three music stops land as punctuation; the rooms sound like air, not hiss; the level under Gerg's and the badge post.</li>
+    </ul></div>
+    <div class="panel"><h3>What a newcomer still leans on outside knowledge for</h3><ul>
+      <li>Why the board fired him (only "not consistently candid").</li>
+      <li>Mario's second call, "How much?"</li>
+      <li>That the return talks failed, and why Rima was replaced (inferred).</li>
+      <li>The staff letter's threat (quit and follow him).</li>
+      <li>What Q* is.</li>
+    </ul><p class="cap">Each is a story call, listed in the decisions below. Their retell of the throughline matched the intended one.</p></div>
+  </div>
+  <div class="media"><img src="act4-contact.jpg" alt="Contact sheet: one still per shot of Act Four v4"><div class="cap">One still per shot (v4.2). Full notes: <code>show/episodes/ep01/production/act4/v4-for-review.md</code></div></div>
+</section>
+
+<section id="season">
+  <div class="sechead"><h2>2 · The season, revised</h2><span class="tag new">new</span><span class="tag">reels 29:45</span></div>
+  <p>Every episode now opens its plan with its storyline as a newcomer would see it, and five critics (continuity, drama, newcomer, insider, facts) read the season. World and public-sentiment beats landed at 27, DOT at 6 small beats, the China Card at 3 plays, lore at 10, all as a menu with each added second paid for inside its episode. The finale's kill switch is now set up in plain sight across Eps 7 to 11.</p>
+  <div class="media"><video controls preload="metadata" src="reel-ep01.mp4"></video><div class="cap">Ep1 reel (3:17, stick-figure animatic). All episodes: <code>out/reel/ep01.mp4</code> … <code>ep12.mp4</code>; full season: <code>out/reel/season.mp4</code>. Plan: <code>show/production/season-revision-plan.md</code></div></div>
+  <div class="media"><img src="season-contact.jpg" alt="Season reel contact sheet"><div class="cap">Season reel contact sheet.</div></div>
+</section>
+
+<section id="range">
+  <div class="sechead"><h2>3 · Style range, two tiers</h2><span class="tag new">new</span><span class="tag">4 prototypes</span></div>
+  <p><b>Passes</b> treat our own pixel frame (a sports broadcast, a livestream, a news feed, a scanner lens), used often and always in code. <b>Leaps</b> redraw a moment in another medium (HD anime, 3D, clay, voxels, near-photoreal objects), about 16 across the season, each motivated and entering through something on screen. Hard media get a programmatic filler now and a video-model or Blender final later; caricatures of real people are never near-photoreal.</p>
+  <div class="media"><video controls preload="metadata" src="range-reel.mp4"></video><div class="cap">The four prototypes. Contains Ep10–12 material.</div></div>
+  <div class="media"><img src="range-sheet.jpg" alt="Style range prototype sheet"></div>
+  <div class="grid2">
+    <div class="panel"><h3>Honest read</h3><ul>
+      <li><b>3D (Ep11)</b>, strongest: the room turns in real perspective while Mas stays a flat pixel card. Weak landing.</li>
+      <li><b>Four passes</b>, most production-ready.</li>
+      <li><b>The rebuilt dinner (Ep12)</b>: rendered objects around pixel people is the thesis, and it works; reads as good real-time CG, not photoreal.</li>
+      <li><b>Anime (Ep10)</b>: clean and lit but closer to flat vector than HD anime; players in a lineup, two faces built on Mas's. Needs the video-model or human final.</li>
+    </ul></div>
+    <div class="panel"><h3>Season highlights</h3><ul>
+      <li>Ep1 CANCELLED certificate · Ep2 the mammoth in a screen · Ep3 paper pop-up exodus</li>
+      <li>Ep4 the paint wave · Ep5 Kram's low-poly plaza · Ep6 lantern shadow play</li>
+      <li>Ep7 CLOD's clay ad · Ep8 the courtroom renders · Ep9 voxel city and the sky tear</li>
+      <li>Ep10 the anime read · Ep11 first 3D camera · Ep12 the reconstruction, the sky, the ring</li>
+    </ul><p class="cap">Plan: <code>show/bible/style-range.md</code></p></div>
+  </div>
+</section>
+
+<section id="jumps">
+  <div class="sechead"><h2>4 · Style jumps J1, J3, J6</h2><span class="tag">fixed</span></div>
+  <div class="grid3">
+    <div class="media"><img src="j1.jpg" alt="J1: engraved NOPEAI share certificate, HOLDS blank SHARES, CANCELLED punched through"><div class="cap">J1 · Ep1 · the Cancel click</div></div>
+    <div class="media"><img src="j3.jpg" alt="J3: a star-filled rip in the sky outside Mas's window"><div class="cap">J3 · Ep9 · the sky tears</div></div>
+    <div class="media"><img src="j6.jpg" alt="J6: a ring spreads in his water"><div class="cap">J6 · Ep12 · the ring in his water</div></div>
+  </div>
+  <div class="media"><video controls preload="metadata" src="jumps-reel.mp4"></video></div>
+</section>
+
+<section id="score">
+  <div class="sechead"><h2>5 · The soundtrack, batch 1</h2><span class="tag">fixed · 4:20</span></div>
+  <audio controls preload="metadata" src="ost-sampler.mp3"></audio>
+  <p>Sixteen cues across twelve tones: the dark room, his too-clean "keynote" version, the blueprint, the board's procedure, the swing avalanche, the victory lap, the machine's glyph dread, RUMPT's podium and more. Rule breaks and engine bugs are fixed and every sample set is retuned to within 5 cents. Listen first for MM-10's new second chorus, whether MM-09 still sounds minor, and whether the soft harp is too bright.</p>
+  <div class="cap">Guide: <code>audio/ost/SAMPLER.md</code> · bible: <code>audio/ost/OST-BIBLE.md</code></div>
+</section>
+
+<section id="decisions">
+  <div class="sechead"><h2>6 · Decisions for you</h2><span class="tag warn">defaults in effect until you rule</span></div>
+  <ol class="decisions">
+    <li>Act Four: why the board fired him. Keep it withheld, or add one duty line to Neleh's card (for example <code>OUR DUTY: THE MISSION, NOT THE COMPANY</code>)?<span class="def">Default: withheld.</span></li>
+    <li>Act Four: the <code>WHAT THEY DIDN'T KNOW</code> card (the newcomer found it puzzling, the insider a spoiler). Keep, swap for the Orb's "fast-forwarding…", or a hard cut to the badge?<span class="def">Default: keep.</span></li>
+    <li>Act Four: Mario's second call ("How much?"), confusing for the newcomer, loved by the insider. Keep or trim (−5 s)?<span class="def">Default: keep.</span></li>
+    <li>Act Four: Q*. Keep the reported line, cut it, or name it in two words?<span class="def">Default: keep.</span></li>
+    <li>Act Four: THE PLAN is now titled <code>HOW TO FIRE A CEO</code>, twenty seconds before the click, inside the firing's own act. Suspense or spoiler?<span class="def">Default: keep, as heist-style setup.</span></li>
+    <li>Style jump J1: the CANCELLED certificate replaces the tile's glyph dissolve at the firing?<span class="def">Default: not yet placed; both exist.</span></li>
+    <li>Style range R17: Ep12's rebuilt dinner objects go near-photoreal, a step below the final photographic sky?<span class="def">Default: yes.</span></li>
+    <li>Style range R16, R18, R19: soft out-of-focus shapes for crowds; a cut to a lens in P3; P2's continuous landing.<span class="def">Default: yes to all three.</span></li>
+    <li>Score: let the machine play the full knee motif once, in Ep12? And the long-withheld third finally sounds as major?<span class="def">Default: never, until you rule; major proposed.</span></li>
+    <li>Score: the ban on AI-generated music came from the soundtrack pass, not from you. Keep it?<span class="def">Default: keep until the live sessions land.</span></li>
+    <li>Lore: Thiel's reported pre-firing warning about Yudkowsky, and "EA vs e/acc" as the firing's framing: both held back. Use either?<span class="def">Default: held.</span></li>
+    <li>Mas's cyan skin: a newcomer briefly wondered whether Mas is an AI. Intended as a series-level question?<span class="def">Default: unchanged.</span></li>
+  </ol>
+</section>
+
+<section id="resources">
+  <div class="sechead"><h2>7 · Resources that would raise quality</h2></div>
+  <ul>
+    <li>Human voice actors, in order: Mas (plus the Intern), RUMPT, NOLE, CHATGTP. The biggest gain per dollar.</li>
+    <li>A Runway API key with about $50 for a bake-off (video-model inserts and style-range finals).</li>
+    <li>A backed-up archive of about 5 GB for generated sources, and more disk: the drive is at 98%.</li>
+    <li>GPU access that works without the desktop login (one free command), then Blender for near-photoreal and 3D finals.</li>
+    <li>Live brass (a Harmon trumpet for the title), strings, a foley day.</li>
+    <li>A human key animator for the anime leap.</li>
+  </ul>
+</section>
+
+<footer>Private review page built from the local project at <code>/home/jgon/project/art/mrmas</code>. Videos are web copies; the 1080p masters are in <code>out/</code>.</footer>
+</div>

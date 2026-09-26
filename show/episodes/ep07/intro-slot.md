@@ -1,36 +1,39 @@
 # EP07 · Intro slot
 
-Base spec: [intro/](../../intro/). **This is the only episode where RUMPT's podium acts inside bar 9** (WC-INT §5).
+Master: [intro/SCRIPT.md §8](../../intro/SCRIPT.md#8-per-episode-changes-ep112-spoiler-safe), row 7. **The intro is an intro, not a recap.** Only five kinds of thing change, and items 2–5 show only what Eps 1–6 have already aired. Nothing here previews Ep7.
 
-## At a glance
-| Slot | EP07 value | Notes |
-|---|---|---|
-| **Cold-open (dark-room) quote** | *"…are funny, and I laughed."* | Real (Feb 2026) [V], typed in the post composer. **Default per [episode-slots §3](../../intro/episode-slots.md#3-cold-open-lines):** the quote starts at "are" until the quote boundary is checked (`recent.md` puts "they" outside the quote; if the post reads "the Anthropic ads are funny…", display "…the Misanthropic ads are funny, and I laughed."). 26 chars ✓. **It carries the first capital "I" he posts all season.** The cursor hesitates one frame before the `I`. Confirm the original capitalization (open question #1) |
-| **9.1 (news)** | `NO ADS` | Misanthropic's neon. Egg: the neon is itself on a billboard |
-| **9.2 ("music fired")** | `BANNED.` | **In-slot RUMPT cameo (0.5 s):** `BANNED.` arrives as an **HTURT meteor** streaking from the podium on the hill into MISANTHROPIC's lighthouse. All stems mute on impact, and one dry piano note plays |
-| **9.3 ("music rehired")** | `SIGNED.` + egg `hours later` | The band slams back as a signature scrawls across NopeAI's spire. Must be `HOURS LATER`, never `SAME DAY` (CRIT-COM) |
-| **9.4 (transition object)** | A lobster scuttles up the data cables, carrying the camera to the skyline | — |
-| **Skyline change** | SPACEZ swallows the zAI tower (the gantry now wears a SPACEZ fairing); a `NO ADS` billboard is aimed at NopeAI; an AROS tombstone sits in the park | FINAL slot table |
-| **PODIUM state** | Fires the meteor (above). Afterwards it sits lit gold, and the label gun is holstered | ≤1 beat of motion, plus the 0.5 s meteor |
-| **Orb toast** | `human (probably)` | — |
-| **Title subtitle** | `ad-free* (*ad-supported)` | 24 chars ✓ |
+## The five changes
+| # | Change | EP07 value | Notes |
+|---|---|---|---|
+| 1 | **Cold-open line** | *"optics don't look good."* | A post, **Feb 28, 2026** [V], typed in the post composer, lowercase as he wrote it. A hint, not the outcome: it says something will look bad and never says what. It plays again, in its own place, after THE HUG (#17). **Second pass:** it replaces *"…are funny, and I laughed."*, which typed the episode's own payoff, the capital "I", about two minutes before #7 (continuity critic ep07-09 #2). The line has no capital letter, so the intro never previews #7 |
+| 2 | **World state, after the fact** | See the next table | The skyline shows the aftermath of Eps 1–6 |
+| 3 | **Title subtitle** (last week's release note) | `backstop not included` | A callback to Ep6. 21 characters |
+| 4 | **Couch gag:** the keycap Mas pockets at Gerg's card | `BACKSPACE` | Ep6's walked-back backstop [PROPOSAL, SCRIPT §8.1] |
+| 5 | **Roll-call evolution** (flashes 5–8) | Flash 8, the cursor window: two eyes and a 1-px closed mouth | Flashes 5–7 unchanged from Ep6 (RIMA in the MACHINES THINKING fill, THE WHALE's beach chair, RUMPT filled in) |
 
-## Eggs that update
-| Egg | EP07 state |
+## World state, after the fact
+| Layer | EP07 state |
 |---|---|
-| `you are here` dot | Notch **7 of 12** |
-| 1993 screen rotation (bar 3) | **35°** from this episode, with an **unreadable glow of capitals** (pays off the CAPS LOCK micro) |
-| Coat hook | +1 collar |
-| Gold threads | **3** (no in-person RUMPT meeting this window) |
-| Firing tally | Unchanged (4 marks) |
-| KORG board | Re-bolted onto the SPACEZ fairing, reading `KORG 4.?` (version at Mar 31 unverified); banner `KORG 5: NEXT QUARTER` |
-| Valuation ticker | `$852B` (Mar 31 [V]) |
-| The dark-room cup | Holds, but a single condensation bead slides down the glass in the cold open |
+| **Skyline** | GATESTAR rings multiply; a `RESERVED` desk plate in a lit NopeAI window; the CODE RED siren now spins on NopeAI's roof too (Ep6 flew it across the bay) |
+| **Misanthropic's price tag** | A book-return slot: `RETURNS · LATE FEE: $1.5B` (Sep 2025 [V]) |
+| **Hill, RUMPT's side** | THE EO RECEIPT curls off the podium. No motion, no SFX |
+| **Hill, the other side** | A signed `SB 53` scroll with a fountain-pen flourish [PROPOSAL, verify] |
+| **CZAR lanyard** | `SKCAS` |
+| **`you are here` marker** | x = 0.80 |
+| **1993 screen** (bar 3) | **35°**, a new authored drawing from this episode. Its content stays unreadable, with no glow of capitals (that would preview #7's CAPS LOCK micro) |
+| **Desk tally** | `IIII` |
+| **Coat-hook collars** | 6 (Ep1 owns #3, then Ep3 #4, Ep4 #5, Ep6 #6; Ep5 airs none) |
+| **Gold threads** | 3 |
+| **Orb toast** | `human (probably)` |
+| **Last bar** | Standard |
+
+## Retired from this sheet
+The bar-9 news slot is gone, and with it Ep7's `NO ADS` / `BANNED.` / `SIGNED.` headlines, the HTURT meteor cameo, the lobster transition and the in-slot podium beat. Those beats belong to the episode.
 
 ## Lint and safety
-- Must-read headline characters: `NO ADS` (6) · `BANNED.` (7) · `SIGNED.` (7). All ✓
-- The meteor streak: one bright pass at ≤80% white. Photosensitivity allows ≤3 flashes per 24 frames. ✓
-- The meteor is text-shaped (ALL-CAPS glyph fragments), not a weapon or explosion. No fireball, no debris on people. Paperwork-only rule ✓
+- New must-read text: the subtitle only (21 characters).
+- **For the intro owner:** [SCRIPT §8.1](../../intro/SCRIPT.md#8-per-episode-changes-ep112-spoiler-safe) row 7 and the §8.4 collar row still carry the old epigraph and 7 collars; this sheet is the newer value.
+- No flashes in the changing layers.
 
 ## Delivery note for the quote
-Soft and warm, genuinely amused. Put the pause after "funny," and deliver "and I laughed" like a small confession. On the capital `I`, the cursor blinks twice, one frame longer than usual, and the dot slides on "laughed."
+Quiet and a little rueful, almost admiring, as if he's reviewing someone else's work. No pause. The `you are here` marker slides on "good." Keep the cursor's blink standard.

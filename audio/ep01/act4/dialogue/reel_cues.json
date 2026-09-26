@@ -1,390 +1,734 @@
 {
- "note": "listening order only, not picture timing",
- "duration_s": 128.58,
+ "note": "the 3.2 dialogue stem on the beat model's clock (tighten-changes \u00a75); not the lock",
+ "act_s": 249.375,
+ "voiced_s": 62.36,
+ "coverage_pct": 25.0,
+ "sum_of_audible_spans_s": 63.61,
+ "silences_over_6s": {
+  "count": 11,
+  "total_s": 132.55,
+  "list": [
+   [
+    0.0,
+    6.88
+   ],
+   [
+    15.65,
+    18.23
+   ],
+   [
+    48.15,
+    8.41
+   ],
+   [
+    67.28,
+    13.53
+   ],
+   [
+    103.02,
+    7.3
+   ],
+   [
+    117.18,
+    13.44
+   ],
+   [
+    133.77,
+    16.42
+   ],
+   [
+    161.43,
+    10.13
+   ],
+   [
+    172.77,
+    10.6
+   ],
+   [
+    196.91,
+    7.6
+   ],
+   [
+    210.49,
+    20.01
+   ]
+  ]
+ },
+ "exchange_gaps": {
+  "n": 23,
+  "median_s": 0.202,
+  "median_excl_open_by_rule_s": 0.15,
+  "pairs": [
+   [
+    "a4-25-10",
+    "a4-25-11",
+    0.55
+   ],
+   [
+    "a4-25-11",
+    "a4-25-12",
+    0.125
+   ],
+   [
+    "a4-25-12",
+    "a4-25-13",
+    0.792
+   ],
+   [
+    "a4-25-13",
+    "a4-25-02",
+    -0.167
+   ],
+   [
+    "a4-27-04",
+    "a4-27-23",
+    -0.25
+   ],
+   [
+    "a4-27-23",
+    "a4-27-24",
+    0.936
+   ],
+   [
+    "a4-27-08",
+    "a4-27-09",
+    0.687
+   ],
+   [
+    "a4-27-09",
+    "a4-27-10",
+    -0.167
+   ],
+   [
+    "a4-27-10",
+    "a4-27-12",
+    1.83
+   ],
+   [
+    "a4-27-12",
+    "a4-27-13",
+    0.1
+   ],
+   [
+    "a4-27-14",
+    "a4-27-15",
+    -0.293
+   ],
+   [
+    "a4-27-15",
+    "a4-27-16",
+    2.018
+   ],
+   [
+    "a4-29-vo2",
+    "a4-29-03",
+    0.69
+   ],
+   [
+    "a4-29-04",
+    "a4-29-05",
+    -0.167
+   ],
+   [
+    "a4-29-05",
+    "a4-29-06",
+    0.202
+   ],
+   [
+    "a4-29-vo3",
+    "a4-29-07",
+    0.625
+   ],
+   [
+    "a4-29-07",
+    "a4-29-08",
+    -0.167
+   ],
+   [
+    "a4-30-03",
+    "a4-30-04",
+    -0.042
+   ],
+   [
+    "a4-30-05",
+    "a4-30-06",
+    0.5
+   ],
+   [
+    "a4-30-06",
+    "a4-30-07",
+    0.725
+   ],
+   [
+    "a4-30-07",
+    "a4-30-08",
+    0.1
+   ],
+   [
+    "a4-30-08",
+    "a4-30-09",
+    0.625
+   ],
+   [
+    "a4-31-01",
+    "a4-31-02",
+    0.15
+   ]
+  ]
+ },
+ "collisions": [],
  "cues": [
   {
-   "id": "a4-25-01",
+   "id": "a4-25-10",
    "scene": "25",
    "speaker": "NELEH",
-   "kind": "dialogue",
-   "start_s": 0.0,
-   "end_s": 0.83
+   "cue_s": 6.875,
+   "placed_by": "cue",
+   "start_s": 6.855,
+   "audible_in_s": 6.875,
+   "audible_out_s": 10.075,
+   "end_s": 10.125,
+   "cue_shift_s": 0.0
+  },
+  {
+   "id": "a4-25-11",
+   "scene": "25",
+   "speaker": "NELEH",
+   "cue_s": 10.625,
+   "placed_by": "cue",
+   "start_s": 10.605,
+   "audible_in_s": 10.625,
+   "audible_out_s": 12.375,
+   "end_s": 12.435,
+   "cue_shift_s": 0.0
+  },
+  {
+   "id": "a4-25-12",
+   "scene": "25",
+   "speaker": "NELEH",
+   "cue_s": 12.5,
+   "placed_by": "cue",
+   "start_s": 12.48,
+   "audible_in_s": 12.5,
+   "audible_out_s": 13.27,
+   "end_s": 13.27,
+   "cue_shift_s": 0.0
+  },
+  {
+   "id": "a4-25-13",
+   "scene": "25",
+   "speaker": "NELEH",
+   "cue_s": 14.062,
+   "placed_by": "cue",
+   "start_s": 14.053,
+   "audible_in_s": 14.062,
+   "audible_out_s": 14.953,
+   "end_s": 14.953,
+   "cue_shift_s": 0.0
   },
   {
    "id": "a4-25-02",
    "scene": "25",
    "speaker": "MADA",
-   "kind": "dialogue",
-   "start_s": 1.18,
-   "end_s": 2.27
+   "cue_s": 14.75,
+   "placed_by": "overlap on a4-25-13",
+   "start_s": 14.766,
+   "audible_in_s": 14.786,
+   "audible_out_s": 15.646,
+   "end_s": 15.706,
+   "cue_shift_s": 0.036
   },
   {
    "id": "a4-26-01",
    "scene": "26",
    "speaker": "MAS MANALT",
-   "kind": "dialogue",
-   "start_s": 3.52,
-   "end_s": 4.41
+   "cue_s": 33.875,
+   "placed_by": "cue",
+   "start_s": 33.855,
+   "audible_in_s": 33.875,
+   "audible_out_s": 34.465,
+   "end_s": 34.535,
+   "cue_shift_s": 0.0
   },
   {
    "id": "a4-26a-vo1",
    "scene": "26A",
-   "speaker": "MAS MANALT",
-   "kind": "vo",
-   "start_s": 5.66,
-   "end_s": 7.75
-  },
-  {
-   "id": "a4-26a-vo2",
-   "scene": "26A",
-   "speaker": "MAS MANALT",
-   "kind": "vo",
-   "start_s": 9.25,
-   "end_s": 11.44
+   "speaker": "MAS MANALT (V.O.)",
+   "cue_s": 40.005,
+   "placed_by": "cue",
+   "start_s": 39.985,
+   "audible_in_s": 40.005,
+   "audible_out_s": 41.725,
+   "end_s": 41.785,
+   "cue_shift_s": 0.0
   },
   {
    "id": "a4-27-00",
    "scene": "27",
    "speaker": "MAS MANALT",
-   "kind": "dialogue",
-   "start_s": 13.315,
-   "end_s": 14.205
-  },
-  {
-   "id": "a4-27-02",
-   "scene": "27",
-   "speaker": "RIMA TAMURI",
-   "kind": "dialogue",
-   "start_s": 16.205,
-   "end_s": 18.025
-  },
-  {
-   "id": "a4-27-03",
-   "scene": "27",
-   "speaker": "NELEH",
-   "kind": "dialogue",
-   "start_s": 18.375,
-   "end_s": 19.575
+   "cue_s": 47.562,
+   "placed_by": "cue",
+   "start_s": 47.542,
+   "audible_in_s": 47.562,
+   "audible_out_s": 48.152,
+   "end_s": 48.222,
+   "cue_shift_s": 0.0
   },
   {
    "id": "a4-27-04",
    "scene": "27",
    "speaker": "RIMA TAMURI",
-   "kind": "dialogue",
-   "start_s": 19.925,
-   "end_s": 21.295
+   "cue_s": 56.562,
+   "placed_by": "cue",
+   "start_s": 56.532,
+   "audible_in_s": 56.562,
+   "audible_out_s": 57.682,
+   "end_s": 57.742,
+   "cue_shift_s": 0.0
+  },
+  {
+   "id": "a4-27-23",
+   "scene": "27",
+   "speaker": "NELEH",
+   "cue_s": 57.933,
+   "placed_by": "overlap on a4-27-04",
+   "start_s": 57.412,
+   "audible_in_s": 57.432,
+   "audible_out_s": 58.002,
+   "end_s": 58.062,
+   "cue_shift_s": -0.501
+  },
+  {
+   "id": "a4-27-24",
+   "scene": "27",
+   "speaker": "RIMA TAMURI",
+   "cue_s": 58.938,
+   "placed_by": "cue",
+   "start_s": 58.917,
+   "audible_in_s": 58.938,
+   "audible_out_s": 59.767,
+   "end_s": 59.817,
+   "cue_shift_s": 0.0
   },
   {
    "id": "a4-27-05",
    "scene": "27",
    "speaker": "TILED EMPLOYEE",
-   "kind": "dialogue",
-   "start_s": 21.645,
-   "end_s": 23.015
+   "cue_s": 63.62,
+   "placed_by": "cue",
+   "start_s": 63.61,
+   "audible_in_s": 63.62,
+   "audible_out_s": 64.43,
+   "end_s": 64.48,
+   "cue_shift_s": 0.0
   },
   {
    "id": "a4-27-06",
    "scene": "27",
    "speaker": "ALYI",
-   "kind": "dialogue",
-   "start_s": 23.365,
-   "end_s": 26.485
+   "cue_s": 65.188,
+   "placed_by": "cue",
+   "start_s": 65.147,
+   "audible_in_s": 65.188,
+   "audible_out_s": 67.277,
+   "end_s": 67.337,
+   "cue_shift_s": 0.0
   },
   {
    "id": "a4-27-08",
    "scene": "27",
    "speaker": "NELEH",
-   "kind": "dialogue",
-   "start_s": 26.835,
-   "end_s": 29.185
+   "cue_s": 80.808,
+   "placed_by": "cue",
+   "start_s": 80.788,
+   "audible_in_s": 80.808,
+   "audible_out_s": 82.808,
+   "end_s": 82.868,
+   "cue_shift_s": 0.0
   },
   {
    "id": "a4-27-09",
    "scene": "27",
    "speaker": "ALYI",
-   "kind": "dialogue",
-   "start_s": 29.535,
-   "end_s": 32.805
+   "cue_s": 83.495,
+   "placed_by": "cue",
+   "start_s": 83.475,
+   "audible_in_s": 83.495,
+   "audible_out_s": 85.595,
+   "end_s": 85.645,
+   "cue_shift_s": 0.0
   },
   {
    "id": "a4-27-10",
    "scene": "27",
    "speaker": "NELEH",
-   "kind": "dialogue",
-   "start_s": 33.155,
-   "end_s": 33.765
-  },
-  {
-   "id": "a4-27-11",
-   "scene": "27",
-   "speaker": "ALYI",
-   "kind": "dialogue",
-   "start_s": 34.115,
-   "end_s": 37.305
+   "cue_s": 85.433,
+   "placed_by": "overlap on a4-27-09",
+   "start_s": 85.408,
+   "audible_in_s": 85.428,
+   "audible_out_s": 85.858,
+   "end_s": 85.908,
+   "cue_shift_s": -0.005
   },
   {
    "id": "a4-27-12",
    "scene": "27",
    "speaker": "NELEH",
-   "kind": "dialogue",
-   "start_s": 37.655,
-   "end_s": 39.335
+   "cue_s": 87.688,
+   "placed_by": "cue",
+   "start_s": 87.668,
+   "audible_in_s": 87.688,
+   "audible_out_s": 89.008,
+   "end_s": 89.058,
+   "cue_shift_s": 0.0
   },
   {
    "id": "a4-27-13",
    "scene": "27",
    "speaker": "ALYI",
-   "kind": "dialogue",
-   "start_s": 39.685,
-   "end_s": 43.385
+   "cue_s": 89.505,
+   "placed_by": "gap after a4-27-12",
+   "start_s": 89.068,
+   "audible_in_s": 89.108,
+   "audible_out_s": 91.378,
+   "end_s": 91.428,
+   "cue_shift_s": -0.397
   },
   {
    "id": "a4-27-14",
    "scene": "27",
    "speaker": "MARIO",
-   "kind": "dialogue",
-   "start_s": 43.735,
-   "end_s": 45.895
+   "cue_s": 96.5,
+   "placed_by": "cue",
+   "start_s": 96.48,
+   "audible_in_s": 96.5,
+   "audible_out_s": 97.73,
+   "end_s": 97.73,
+   "cue_shift_s": 0.0
   },
   {
    "id": "a4-27-15",
    "scene": "27",
    "speaker": "ADELINA",
-   "kind": "dialogue",
-   "start_s": 46.245,
-   "end_s": 47.815
+   "cue_s": 97.438,
+   "placed_by": "overlap on a4-27-14",
+   "start_s": 97.407,
+   "audible_in_s": 97.437,
+   "audible_out_s": 98.727,
+   "end_s": 98.777,
+   "cue_shift_s": -0.0
   },
   {
    "id": "a4-27-16",
    "scene": "27",
    "speaker": "MARIO",
-   "kind": "dialogue",
-   "start_s": 48.165,
-   "end_s": 50.935
-  },
-  {
-   "id": "a4-27-18",
-   "scene": "27",
-   "speaker": "TTEMME",
-   "kind": "dialogue",
-   "start_s": 51.285,
-   "end_s": 53.025
+   "cue_s": 100.745,
+   "placed_by": "cue",
+   "start_s": 100.725,
+   "audible_in_s": 100.745,
+   "audible_out_s": 103.015,
+   "end_s": 103.065,
+   "cue_shift_s": 0.0
   },
   {
    "id": "a4-27-19",
    "scene": "27",
    "speaker": "TTEMME",
-   "kind": "dialogue",
-   "start_s": 54.525,
-   "end_s": 56.135
+   "cue_s": 110.312,
+   "placed_by": "cue",
+   "start_s": 110.302,
+   "audible_in_s": 110.312,
+   "audible_out_s": 111.572,
+   "end_s": 111.622,
+   "cue_shift_s": 0.0
   },
   {
    "id": "a4-27-20",
    "scene": "27",
    "speaker": "TASYA",
-   "kind": "dialogue",
-   "start_s": 56.485,
-   "end_s": 59.285
+   "cue_s": 113.938,
+   "placed_by": "cue",
+   "start_s": 113.907,
+   "audible_in_s": 113.938,
+   "audible_out_s": 115.897,
+   "end_s": 115.948,
+   "cue_shift_s": 0.0
   },
   {
    "id": "a4-27-21",
    "scene": "27",
    "speaker": "NELEH",
-   "kind": "dialogue",
-   "start_s": 59.635,
-   "end_s": 60.485
-  },
-  {
-   "id": "a4-27-22",
-   "scene": "27",
-   "speaker": "MADA",
-   "kind": "dialogue",
-   "start_s": 60.835,
-   "end_s": 61.925
-  },
-  {
-   "id": "a4-29-vo1",
-   "scene": "29",
-   "speaker": "MAS MANALT",
-   "kind": "vo",
-   "start_s": 63.175,
-   "end_s": 65.325
+   "cue_s": 116.5,
+   "placed_by": "cue",
+   "start_s": 116.49,
+   "audible_in_s": 116.5,
+   "audible_out_s": 117.18,
+   "end_s": 117.22,
+   "cue_shift_s": 0.0
   },
   {
    "id": "a4-29-vo2",
    "scene": "29",
-   "speaker": "MAS MANALT",
-   "kind": "vo",
-   "start_s": 67.825,
-   "end_s": 70.265
+   "speaker": "MAS MANALT (V.O.)",
+   "cue_s": 130.62,
+   "placed_by": "cue",
+   "start_s": 130.59,
+   "audible_in_s": 130.62,
+   "audible_out_s": 132.43,
+   "end_s": 132.48,
+   "cue_shift_s": 0.0
   },
   {
    "id": "a4-29-03",
    "scene": "29",
    "speaker": "MAS MANALT",
-   "kind": "dialogue",
-   "start_s": 71.19,
-   "end_s": 72.13
+   "cue_s": 133.12,
+   "placed_by": "cue",
+   "start_s": 133.1,
+   "audible_in_s": 133.12,
+   "audible_out_s": 133.77,
+   "end_s": 133.82,
+   "cue_shift_s": 0.0
   },
   {
    "id": "a4-29-04",
    "scene": "29",
    "speaker": "GERG MOCKBRAN",
-   "kind": "dialogue",
-   "start_s": 74.63,
-   "end_s": 75.84
+   "cue_s": 150.188,
+   "placed_by": "cue",
+   "start_s": 150.167,
+   "audible_in_s": 150.188,
+   "audible_out_s": 151.177,
+   "end_s": 151.177,
+   "cue_shift_s": 0.0
   },
   {
    "id": "a4-29-05",
    "scene": "29",
    "speaker": "MAS MANALT",
-   "kind": "dialogue",
-   "start_s": 76.19,
-   "end_s": 78.16
+   "cue_s": 151.125,
+   "placed_by": "overlap on a4-29-04",
+   "start_s": 150.99,
+   "audible_in_s": 151.01,
+   "audible_out_s": 152.36,
+   "end_s": 152.41,
+   "cue_shift_s": -0.115
   },
   {
    "id": "a4-29-06",
    "scene": "29",
    "speaker": "GERG MOCKBRAN",
-   "kind": "dialogue",
-   "start_s": 78.51,
-   "end_s": 80.49
+   "cue_s": 152.562,
+   "placed_by": "cue",
+   "start_s": 152.562,
+   "audible_in_s": 152.562,
+   "audible_out_s": 154.322,
+   "end_s": 154.373,
+   "cue_shift_s": 0.0
   },
   {
    "id": "a4-29-vo3",
    "scene": "29",
-   "speaker": "MAS MANALT",
-   "kind": "vo",
-   "start_s": 82.99,
-   "end_s": 85.8
+   "speaker": "MAS MANALT (V.O.)",
+   "cue_s": 156.25,
+   "placed_by": "cue",
+   "start_s": 156.2,
+   "audible_in_s": 156.25,
+   "audible_out_s": 158.7,
+   "end_s": 158.75,
+   "cue_shift_s": 0.0
   },
   {
    "id": "a4-29-07",
    "scene": "29",
    "speaker": "TASYA",
-   "kind": "dialogue",
-   "start_s": 86.425,
-   "end_s": 87.925
+   "cue_s": 159.375,
+   "placed_by": "gap after a4-29-vo3",
+   "start_s": 159.305,
+   "audible_in_s": 159.325,
+   "audible_out_s": 160.485,
+   "end_s": 160.545,
+   "cue_shift_s": -0.05
   },
   {
    "id": "a4-29-08",
    "scene": "29",
    "speaker": "MAS MANALT",
-   "kind": "dialogue",
-   "start_s": 88.275,
-   "end_s": 89.795
+   "cue_s": 160.62,
+   "placed_by": "overlap on a4-29-07",
+   "start_s": 160.298,
+   "audible_in_s": 160.318,
+   "audible_out_s": 161.428,
+   "end_s": 161.478,
+   "cue_shift_s": -0.302
   },
   {
    "id": "a4-29-09",
    "scene": "29",
    "speaker": "NELEH",
-   "kind": "dialogue",
-   "start_s": 90.145,
-   "end_s": 91.805
+   "cue_s": 171.562,
+   "placed_by": "cue",
+   "start_s": 171.532,
+   "audible_in_s": 171.562,
+   "audible_out_s": 172.773,
+   "end_s": 172.773,
+   "cue_shift_s": 0.0
   },
   {
    "id": "a4-30-01",
    "scene": "30",
    "speaker": "ALYI",
-   "kind": "dialogue",
-   "start_s": 93.055,
-   "end_s": 98.225
+   "cue_s": 183.37,
+   "placed_by": "cue",
+   "start_s": 183.34,
+   "audible_in_s": 183.37,
+   "audible_out_s": 187.19,
+   "end_s": 187.24,
+   "cue_shift_s": 0.0
   },
   {
    "id": "a4-30-02",
    "scene": "30",
    "speaker": "TASYA",
-   "kind": "dialogue",
-   "start_s": 98.575,
-   "end_s": 102.235
+   "cue_s": 190.005,
+   "placed_by": "cue",
+   "start_s": 189.975,
+   "audible_in_s": 190.005,
+   "audible_out_s": 192.725,
+   "end_s": 192.775,
+   "cue_shift_s": 0.0
   },
   {
    "id": "a4-30-03",
    "scene": "30",
    "speaker": "MAS MANALT",
-   "kind": "dialogue",
-   "start_s": 102.585,
-   "end_s": 103.295
+   "cue_s": 195.87,
+   "placed_by": "cue",
+   "start_s": 195.85,
+   "audible_in_s": 195.87,
+   "audible_out_s": 196.34,
+   "end_s": 196.39,
+   "cue_shift_s": 0.0
   },
   {
    "id": "a4-30-04",
    "scene": "30",
    "speaker": "TASYA",
-   "kind": "dialogue",
-   "start_s": 103.645,
-   "end_s": 104.535
+   "cue_s": 196.817,
+   "placed_by": "overlap on a4-30-03",
+   "start_s": 196.268,
+   "audible_in_s": 196.298,
+   "audible_out_s": 196.908,
+   "end_s": 196.968,
+   "cue_shift_s": -0.519
   },
   {
    "id": "a4-30-05",
    "scene": "30",
    "speaker": "TERB",
-   "kind": "dialogue",
-   "start_s": 104.885,
-   "end_s": 106.595
+   "cue_s": 204.505,
+   "placed_by": "cue",
+   "start_s": 204.485,
+   "audible_in_s": 204.505,
+   "audible_out_s": 205.745,
+   "end_s": 205.845,
+   "cue_shift_s": 0.0
   },
   {
    "id": "a4-30-06",
    "scene": "30",
    "speaker": "TERB",
-   "kind": "dialogue",
-   "start_s": 107.22,
-   "end_s": 107.85
+   "cue_s": 206.245,
+   "placed_by": "cue",
+   "start_s": 206.205,
+   "audible_in_s": 206.245,
+   "audible_out_s": 206.655,
+   "end_s": 206.695,
+   "cue_shift_s": 0.0
   },
   {
    "id": "a4-30-07",
    "scene": "30",
    "speaker": "TERB",
-   "kind": "dialogue",
-   "start_s": 108.2,
-   "end_s": 109.1
+   "cue_s": 207.38,
+   "placed_by": "cue",
+   "start_s": 207.33,
+   "audible_in_s": 207.38,
+   "audible_out_s": 207.91,
+   "end_s": 208.02,
+   "cue_shift_s": 0.0
   },
   {
    "id": "a4-30-08",
    "scene": "30",
    "speaker": "MADA",
-   "kind": "dialogue",
-   "start_s": 109.725,
-   "end_s": 110.815
+   "cue_s": 208.245,
+   "placed_by": "gap after a4-30-07",
+   "start_s": 207.99,
+   "audible_in_s": 208.01,
+   "audible_out_s": 208.87,
+   "end_s": 208.93,
+   "cue_shift_s": -0.235
   },
   {
    "id": "a4-30-09",
    "scene": "30",
    "speaker": "MAS MANALT",
-   "kind": "dialogue",
-   "start_s": 111.44,
-   "end_s": 112.78
+   "cue_s": 210.005,
+   "placed_by": "gap after a4-30-08",
+   "start_s": 209.475,
+   "audible_in_s": 209.495,
+   "audible_out_s": 210.485,
+   "end_s": 210.535,
+   "cue_shift_s": -0.51
   },
   {
    "id": "a4-30-12",
    "scene": "30",
    "speaker": "MAS MANALT",
-   "kind": "dialogue",
-   "start_s": 117.53,
-   "end_s": 118.42
+   "cue_s": 230.5,
+   "placed_by": "cue",
+   "start_s": 230.48,
+   "audible_in_s": 230.5,
+   "audible_out_s": 231.07,
+   "end_s": 231.12,
+   "cue_shift_s": 0.0
   },
   {
    "id": "a4-31-01",
    "scene": "31",
    "speaker": "GERG MOCKBRAN",
-   "kind": "dialogue",
-   "start_s": 119.67,
-   "end_s": 120.57
+   "cue_s": 236.75,
+   "placed_by": "cue",
+   "start_s": 236.73,
+   "audible_in_s": 236.75,
+   "audible_out_s": 237.44,
+   "end_s": 237.58,
+   "cue_shift_s": 0.0
   },
   {
    "id": "a4-31-02",
    "scene": "31",
    "speaker": "MAS MANALT",
-   "kind": "dialogue",
-   "start_s": 120.92,
-   "end_s": 122.34
+   "cue_s": 237.5,
+   "placed_by": "gap after a4-31-01",
+   "start_s": 237.57,
+   "audible_in_s": 237.59,
+   "audible_out_s": 238.58,
+   "end_s": 238.62,
+   "cue_shift_s": 0.09
   },
   {
    "id": "a4-31-03",
    "scene": "31",
    "speaker": "MAS MANALT",
-   "kind": "dialogue",
-   "start_s": 122.69,
-   "end_s": 128.58
+   "cue_s": 239.88,
+   "placed_by": "cue",
+   "start_s": 239.86,
+   "audible_in_s": 239.88,
+   "audible_out_s": 244.5,
+   "end_s": 244.55,
+   "cue_shift_s": 0.0
   }
  ]
 }

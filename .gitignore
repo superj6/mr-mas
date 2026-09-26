@@ -47,3 +47,26 @@ Thumbs.db
 *.swp
 .idea/
 .vscode/
+
+# genvideo (studio/tools/genvideo): demo clips converted by the test bench (rebuild: test_genvideo.py).
+# Real converted inserts (studio/public/genvideo/<shot>/: indexed PNG drawings + clip.json) ARE committed:
+# a model's output can't be regenerated bit for bit.
+studio/public/genvideo/_test/
+.backups/
+
+# API keys and secrets (never commit)
+.env
+*.env
+.secrets/
+
+# Rendered audio (regenerable; see docs/RENDERING.md and each track's README)
+# OST renders: masters, stems, loops and per-render MP3 previews. Cue sheets, READMEs and MIDI stay tracked.
+audio/ost/tracks/*/render/**/*.wav
+audio/ost/tracks/*/render/**/*.flac
+audio/ost/tracks/*/render/**/*.mp3
+# Dialogue takes (TTS WAVs; MP3 previews stay tracked) and mixes/premixes under out/
+audio/ep01/**/*.wav
+out/**/*.wav
+# Derived web copies for the review page (sources live elsewhere in out/)
+out/review-desk/*.mp4
+out/review-desk/*.mp3

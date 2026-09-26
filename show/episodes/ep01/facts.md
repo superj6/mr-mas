@@ -19,6 +19,8 @@ Everything real in this episode, with dates and sources, plus notes on what gets
 | `sw-ind` | `research/worldcast-sweep-industry.md` |
 | `crit-fair` | `design/critic-grounding-fairness.md` |
 | `crit-com` | `design/critic-comedy.md` |
+| `W-S` | `show/bible/world-stakes.md` §7.2 (the season revision's fact bank; each row names its primary source) |
+| `O-L` | `show/bible/orbit-and-lore.md` §4.1 (on file, not used) |
 
 **Confidence:**
 - **[P]** primary source.
@@ -39,8 +41,8 @@ Everything real in this episode, with dates and sources, plus notes on what gets
 | 1 | ~1993 (age 8) | Gets "an Apple Macintosh" | early / gaps §2 #32 · [V] (model [UNVERIFIED]) | F1.1: a logo-free beige computer. The card reads `1993` only (WC-crit §E42) |
 | 2 | 2005–08 | Loopt board tried twice to remove him; supporters defended him | WC-fb §0.8 · [V] (Wikipedia); WSJ version [K] | F1.2 silhouettes, `(REPORTED)` |
 | 3 | Nov 30, 2022 | ChatGPT launches as a "research preview"; later called "low-key research preview" | mid §2 · [V] | Tiny beige button |
-| 4 | Dec 5, 2022 | 1M users in 5 days (Brockman post) | mid §2 · [V][ID] | Odometer drill. Don't use 100M on screen: that's a UBS estimate for Jan 2023 (crit-fair #1) |
-| 5 | Dec 21, 2022 | Google "code red"; Page and Brin attend emergency meetings | mid §2 · [V] | Siren on ELGOOG; NIRB and EGAP as crypt ghosts (no yacht, per WC-crit §D30) |
+| 4 | Dec 5, 2022 | 1M users in 5 days (Brockman post) | mid §2 · [V][ID] | Odometer drill. Don't use the *monthly* 100M on screen: that's a UBS estimate for Jan 2023 (crit-fair #1). DevDay's *weekly* 100M is a separate figure (#63) |
+| 5 | Dec 21, 2022 (code red) · Jan 20, 2023 (founders) | Google "code red" reported Dec 21; Page and Brin being called in to emergency meetings was reported Jan 20, 2023 (NYT) | mid §2 · [V]; the second date per the facts critic, 2026-09-26 | Siren on ELGOOG under `RAIL: DEC 21, 2022`; the rail dims before NIRB and EGAP rise as crypt ghosts, so their summons carries no date (no yacht, per WC-crit §D30) |
 | 6 | Jan 23, 2023 | Microsoft "multiyear, multibillion-dollar" investment (~$10B) | mid §2 · [V] | Novelty check stuck in the door; collar #3 |
 | 7 | Feb 6–8, 2023 | Bard's JWST error; Alphabet falls ~7.7% (~$100B) | mid §2 · [V] | DRAB the bard; the telescope stares at Radnus |
 | 8 | Feb 7, 2023 | New Bing launch; Nadella's "made them dance" | mid §2 · [V] | Radnus tap-dances |
@@ -50,10 +52,10 @@ Everything real in this episode, with dates and sources, plus notes on what gets
 | 12 | Aug/Sep 2022 → 2023 | Gates's AP Bio challenge | sw-ind · [K] | Scantron cameo (optional) |
 | 13 | Mar 22–29, 2023 | FLI pause letter (signed by Musk, Bengio, Marcus and others); Yudkowsky's TIME op-ed | mid §2 · [V] | Two-handed signing; headline as a brick |
 | 14 | Apr 17, 2023 | Musk announces "TruthGPT" on Tucker Carlson | mid §2 · [V] | REKCUT's set; the only allowed REKCUT beat (WC-crit §D28) |
-| 15 | May 1, 2023 | Hinton quits Google | mid §2 · sw-intl · [V] | Godfather lighting |
-| 16 | May 4, 2023 | White House meeting: Harris hosts Altman, Amodei, Nadella and Pichai; Biden "stops by" | mid §2 · sw-US · [P] | Class photo #1 |
+| 15 | May 1, 2023 | Hinton quits Google | mid §2 · sw-intl · [V] | Godfather lighting and the plate `NOTNIH · WORRIES FULL-TIME.` The `LEFT ELGOOG MAY 1` rail egg is cut (pass 2); the date stays here |
+| 16 | May 4, 2023 | White House meeting: Harris hosts Altman, Amodei, Nadella and Pichai; Biden "stops by" | mid §2 · sw-US · [P] | Class photo #1. Since pass 2 no rail marks Biden's entrance; NEDIB's card (`THE PRESIDENT.`) does. Re-fetch the readout's "stops by" / "drops by" only if a rail returns |
 | 17 | 2023 | Harris informally mocked as "AI czar" | WC-crit §C19 · [H] | Lanyard `AI CZAR (INFORMAL)`, the first link in the CZAR lanyard chain |
-| 18 | May 12, 2023 | Trump shares an AI-altered anchor clip | sw-US · WC-cast · [H] | Silhouette reposts a generic voice-cloned anchor (the anchor is never named or drawn) |
+| 18 | May 12, 2023 | Trump shares an AI-altered anchor clip | sw-US · WC-cast · [H] | The clip plays first on Mas's phone at the bullpen window, then the push finds the silhouette reposting it; the anchor is generic, never named or drawn. The rail reads `MAY 12, 2023` only (pass 2); the claim lives here |
 | 19 | May 16, 2023 | Senate Judiciary testimony; Blumenthal opens with a cloned voice; Marcus testifies | mid §2 · sw-US · sw-intl · [V]/[H] | The clone reads better; the insurance card |
 | 20 | May 24–26, 2023 | UCL "cease operating"; Breton's "blackmail"; "no plans to leave" | mid §2 · sw-intl · [H]/[V] | Tour poster with flipping stamps |
 | 21 | Jun 7–8, 2023 | India, "totally hopeless to compete with us" | mid §2 · [V] | Tour-stop card. The out-of-context caveat is noted in the facts only |
@@ -69,16 +71,16 @@ Everything real in this episode, with dates and sources, plus notes on what gets
 | 31 | Sep 19–20, 2023 | Authors Guild and 17 authors sue OpenAI | sw-intl · [H] | Siege towers |
 | 32 | May 2–Sep 27 / Jul 14–Nov 9, 2023 | WGA and SAG-AFTRA strikes (AI protections central) | sw-intl · [K] | Picket chorus; institutions only |
 | 33 | Sep 25 / Oct 27, 2023 | Amazon up to $4B; Google up to $2B into Anthropic | mid §2 · [V] | Mario's "other line"; rent meters (crit-fair #32) |
-| 34 | ~Sep 26, 2023 | "AGI has been achieved internally" Reddit comment, then the edit | mid §2 · [V] | Text rewrites itself on TIDDER |
+| 34 | ~Sep 26, 2023 | "Agi has been achieved internally" Reddit comment, then the edit | mid §2 · [V]; casing per the facts critic's read of the circulated screenshot (2026-09-26), since mid §2 prints "AGI". **Re-fetch the screenshot before lock** and use its casing here, in the script and in Ep11's facts | Text rewrites itself on TIDDER. The first reply, `wait. human-level?? internally??`, is [INVENTED] (§D) |
 | 35 | Sep 27, 2023 | Mistral 7B dropped as a torrent magnet link | sw-intl · [V] | RUHTRA's calling card (gags) |
 | 36 | Oct 2023 | Toner's CSET paper "Decoding Intentions" | mid §2 · [V] | Grimoire glow. The push-her-off-the-board reports are **not used** |
 | 37 | Oct 16, 2023 | Techno-Optimist Manifesto | sw-ind · [V] | Lightning prop |
 | 38 | Oct 30, 2023 | EO 14110 signed; Biden's deepfake remark | sw-US · [P] | Fountain pen plus heckling deepfakes |
 | 39 | Nov 1, 2023 | US AI Safety Institute announced (Raimondo) | WC-crit §B1 · [K] | Background banner: THE SAFETY INSTITUTE (per naming.md) |
-| 40 | Nov 1–2, 2023 | Bletchley summit; King's video; Harris on "existential threats"; Sunak–Musk conversation | sw-intl · [V]/[H] | Cue-card gag [INVENTED] |
+| 40 | Nov 1–2, 2023 | Bletchley summit; King's video; Harris on "existential threats"; Sunak–Musk conversation | sw-intl · [V]/[H] | **Not on screen** since pass 2 (Bletchley's item is cut; KING LARCHES first appears in Ep6). On file |
 | 41 | Nov 2, 2023 | SBF convicted on 7 counts | sw-ind · [V] (adjudicated) | One chyron only: `MEANWHILE, THE OTHER MAS`. No prison jokes |
-| 42 | Nov 4, 2023 | Grok released | mid §2 · [V] | KORG hatches, muzzled |
-| 43 | Nov 6, 2023 | DevDay; Nadella's "We love you guys" | mid §2 · [V] | Suggested-replies strip |
+| 42 | Nov 4, 2023 | Grok released | mid §2 · [V] | KORG hatches, muzzled: an undated egg in the monitor's bezel during DevDay (Nov 6) |
+| 43 | Nov 6, 2023 | DevDay; Nadella's "We love you guys" | mid §2 · [V] | Suggested-replies strip; the odometer reads `100,000,000 / WEEK` (#63) |
 | 44 | Nov 15, 2023 | Xi's APEC banquet with US CEOs; standing ovation | sw-intl · WC-cast · [H] | Mirrored podium across the street |
 | 45 | Nov 16, 2023 | APEC CEO Summit "veil of ignorance" line | mid §3 · [V] | Cold open |
 | 46 | Nov 17, 2023 | Fired over Google Meet in a Las Vegas hotel during the F1 weekend (~noon PT); blog post; Brockman quits; Pachocki, Mądry and Sidor resign | mid §3 · gaps §2 #34 · [V] | Falling tile; `+1 FIRING` |
@@ -95,6 +97,10 @@ Everything real in this episode, with dates and sources, plus notes on what gets
 | 57 | 2022–24 | Sullivan's "small yard, high fence" | WC-crit §B2 · [K] | Postage-stamp yard |
 | 58 | Dec 6, 2023 | TIME: CEO of the Year (Altman) and Person of the Year (Swift); Gemini launches; the duck demo is later revealed as edited | mid §3 · sw-intl · [V] | EMIT inset; staged duck |
 | 59 | Dec 27, 2023 | NYT sues OpenAI and Microsoft | mid §3 · [V] | Newspaper thud (button) |
+| 60 | May 16, 2023 | Senate Judiciary: Blumenthal names jobs as "my biggest nightmare in the long term"; in the same answer Altman says GPT-4 and systems like it are "good at doing tasks, not jobs" | W-S §7.2 (Tech Policy Press transcript) · [P✓] | **W1.3** (season revision): sc 15, the two lines played dry, then the clone reads the chairman's next card for him. The work thread's first link; Ep8 takes the promise back |
+| 61 | May 16, 2023 | Senate Judiciary: Altman proposes a new agency that would license AI efforts above a capability threshold and could take the license away | Senate Judiciary transcript (Tech Policy Press, the W1.3 source) · [V] per the facts critic, 2026-09-26; pull the exact sentence before any of it is quoted | The invented `PLEASE REGULATE ME` sheet (sc 15), started in March (sc 12). The sheet quotes nothing; it stands for the ask |
+| 62 | Mar 9, 2023 (incorporation) · Apr 2023 (reports) | Musk incorporates X.AI Corp in Nevada in March (reported mid-April); he is reported to have bought ≈ 10,000 GPUs for it (Apr 2023) | the facts critic, 2026-09-26 · [H]; nole.md ("weeks later he's building his own lab" [V]) | Nole solders a GPU under his desk while he signs PAUSE (sc 12, Mar 22), and his plate reads `NOLE · EARLY FUNDER · BUILDING HIS OWN`. "Early funder": his NopeAI funding, per nole.md (≈ $44M per court records [V]). Fallback: his right hand scrolls his phone, and the plate stays |
+| 63 | Nov 6, 2023 | At DevDay, Altman says ChatGPT has "100 million weekly active users" | the facts critic, 2026-09-26 · [V] pending a pull of the keynote transcript | The launch-night odometer clunks up through the DevDay stage and reads `100,000,000 / WEEK` (sc 22). Fallback: the blur. Not the UBS monthly estimate (#4) |
 
 ## B. Real quotes on screen
 
@@ -114,6 +120,8 @@ Everything real in this episode, with dates and sources, plus notes on what gets
 | SIRRAH | Jul 12, 2023 | "AI is kind of a fancy thing. First of all, it's two letters." | — | sw-US · [H] |
 | LAHTNEMULB (clone) | May 16, 2023 | "Too often we have seen what happens when technology outpaces regulation." | ChatGPT-written words in a cloned voice | sw-US · [V] |
 | MAS | May 16, 2023 | "I love my current job." | Asked whether he'd run a new agency | mid §2 · [V] |
+| LAHTNEMULB | May 16, 2023 | "You may have had in mind the effect on jobs, which is really my biggest nightmare in the long term." | Verbatim; said to Altman during questioning (W1.3) | W-S §7.2 · Tech Policy Press transcript · [P✓] |
+| MAS | May 16, 2023 | "gtp-4 and other systems like it are good at doing tasks, not jobs." | "GPT-4 and other systems like it are good at doing tasks, not jobs." Lowercased as his voiced subtitle, with the product name swapped (W1.3) | W-S §7.2 · Tech Policy Press transcript · [P✓] |
 | MAS / NOTERB | May 24–26, 2023 | "cease operating" · "blackmail" · "no plans to leave" | Fragments only | sw-intl · [H] |
 | MAS | Jun 7–8, 2023 | "totally hopeless to compete with us" | Full line in mid §2; he later said it was out of context | mid §2 · [V] |
 | NESNEJ | May 29, 2023 | "the more you buy, the more you save." | Computex | mid §2 · [V] |
@@ -122,7 +130,7 @@ Everything real in this episode, with dates and sources, plus notes on what gets
 | NEDIB | Oct 30, 2023 | "When the hell did I say that?" | About a deepfake of himself | sw-US · [P] |
 | REMUHCS | Sep 13, 2023 | "Every single person raised their hand." | — | sw-US · [V] |
 | NOLE | Sep 13, 2023 | "It's important for us to have a referee." | — | sw-US · [V] |
-| MAS | ~Sep 26, 2023 | "AGI has been achieved internally" → "Obviously this is just memeing, y'all have no chill, when AGI is achieved it will not be announced with a TIDDER comment." | "…Reddit comment" | mid §2 · [V] |
+| MAS | ~Sep 26, 2023 | "Agi has been achieved internally" → "Obviously this is just memeing, y'all have no chill, when AGI is achieved it will not be announced with a TIDDER comment." | "…Reddit comment". The first half's casing is "Agi" per the circulated screenshot (the facts critic); mid §2 prints "AGI", and the edit's casing is mid §2's. Re-fetch both before lock (#34) | mid §2 · [V] |
 | THE MANIFESTO | Oct 16, 2023 | "We are the apex predator; the lightning works for us." | Avoid the manifesto's "form of murder" line | sw-ind · [V] |
 | KING LARCHES | Nov 1, 2023 | AI could "completely transform life as we know it" | Video address | sw-intl · [H] |
 | SIRRAH | Nov 1, 2023 | "existential threats" | London | sw-intl · [H] |
@@ -153,7 +161,8 @@ Everything real in this episode, with dates and sources, plus notes on what gets
 ## C. Figures
 | Figure | Value | Tag | Note |
 |---|---|---|---|
-| Users in 5 days | 1,000,000 | [V] | Don't show 100M |
+| Users in 5 days | 1,000,000 | [V] | Don't show the monthly 100M (UBS) |
+| Weekly users at DevDay | 100,000,000 | [V] pending the transcript (#63) | Legible on the DevDay odometer |
 | Microsoft investment | ~$10B (reported) | [V] | "multiyear, multibillion-dollar" |
 | Alphabet drop | ~7.7%, ~$100B | [V] | Feb 8, 2023 |
 | Nvidia market cap | $1T (briefly) | [V] | May 30, 2023 |
@@ -169,6 +178,12 @@ Everything real in this episode, with dates and sources, plus notes on what gets
 - The dialogue: "noted.", "super.", Kram's "We meant to do that. Open source!", THE INTERVIEWER's cue cards, the "twice." whisper, and every line in [gags.md](gags.md) marked [INVENTED].
 - The props: the tender check stamped `VOID IF CEO MISSING`, the Q\* sticky note, the musical chairs, the tour poster, the telescope, the egg timer and the grimoire glow.
 - The staging of real beats: the falling tile, the heart avalanche and Tasya becoming the room.
+- The season revision's plant props: the APEC tent card `MAS MANALT · CEO, NOPEAI` (generic set dressing; his title is public) and the lobby door's `NOPEAI · A NONPROFIT` (the structure is public record, the one THE PLAN draws: a nonprofit board over a capped-profit company). No date, no quote.
+- The season revision's second pass (2026-09-26):
+  - TASYA's card stat `MACROSOFT · OWNS: THE SERVERS`. True: NopeAI's models run on MACROSOFT's cloud. It replaces `OWNS: THE BUILDING`, which was untrue and, in a stat-card format, quietly backed Nole's litigated "effectively controlled" claim (the facts critic).
+  - Role plates stating public roles: `RIMA TAMURI · CTO` (CTO from 2022, per rima-tamuri.md [V]), `RADNUS · RUNS ELGOOG`, `KRAM · RUNS ATEM`, `NOLE · EARLY FUNDER · BUILDING HIS OWN` (#62), and NEDIB's card `THE PRESIDENT.`. No dates, no quotes.
+  - The TIDDER reply `wait. human-level?? internally??`: an invented crowd reply in a parody UI, the pilot's one gloss of "AGI". It quotes no one.
+  - The duel's phrase 4 (Mario's scroll crosses the split and Gerg photographs it into a website): visibly absurd, no claim.
 - **Hard rule:** no invented line is ever placed on a dated quote card.
 
 ## E. Unverified / re-verify before lock
@@ -200,3 +215,8 @@ Everything real in this episode, with dates and sources, plus notes on what gets
 - Biden's age. Any Biden–Xi nuclear item.
 - Musk's family. Any Epstein-adjacent imagery (no islands, jets or yachts near THE OTHER YRRAL, NOLE, DIRE, SETAG or RUMPT).
 - The Anderson Cooper name and likeness. The anchor is generic.
+
+## G. Held (on file, never on screen)
+| Item | Date | Full wording / note | Source · tag | Why held |
+|---|---|---|---|---|
+| LEIHT's warning to Mas | Late 2023, at a private dinner in Los Angeles, "shortly before" Nov 17 (no month given) | "You don't understand how Eliezer has programmed half the people in your company to believe in that stuff." | O-L §4.1, citing the-decoder's report of the WSJ excerpt from Hagey's *The Optimist* · REPORTED, book-sourced | Book contents stay out (THE BIOGRAPHERS ruling); it would need a new scene in the pilot's densest act; and it hands the board a motive at a real event (guardrails §4). Showrunner exception only. No lore beat in Ep1 (season plan §3) |

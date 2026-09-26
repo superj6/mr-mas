@@ -1,0 +1,172 @@
+{
+ "shot": "test-room-sky",
+ "entry": "src/dev/pixeladv/entry.tsx",
+ "composition": "pixeladv-scene",
+ "fps": 24,
+ "start": 0,
+ "end": 23,
+ "frames": 24,
+ "seconds": 1.0,
+ "conditioning": {
+  "first_frame": "start-plate.png",
+  "last_frame": "end-plate.png",
+  "soft_variants": [
+   "start-plate-soft.png",
+   "end-plate-soft.png"
+  ],
+  "model_sizes": [
+   "1280x720",
+   "832x480"
+  ],
+  "motion_masks": [
+   "mask-0.png",
+   "mask-1.png"
+  ],
+  "ref_video": "ref.mp4"
+ },
+ "masks": [
+  "colors:N2,N3,N4@22,32,81,75",
+  "ellipse:338,12,34,11"
+ ],
+ "layout": "adventure",
+ "ui_band": "fill",
+ "colours_on_screen": [
+  {
+   "hex": "#04050a",
+   "name": "N0",
+   "share": 0.3508
+  },
+  {
+   "hex": "#0d1020",
+   "name": "N2",
+   "share": 0.3473
+  },
+  {
+   "hex": "#080a14",
+   "name": "N1",
+   "share": 0.1492
+  },
+  {
+   "hex": "#141a30",
+   "name": "N3",
+   "share": 0.0729
+  },
+  {
+   "hex": "#06222c",
+   "name": "C0",
+   "share": 0.0199
+  },
+  {
+   "hex": "#1f1214",
+   "name": "D1",
+   "share": 0.0197
+  },
+  {
+   "hex": "#1c2442",
+   "name": "N4",
+   "share": 0.0118
+  },
+  {
+   "hex": "#0a3441",
+   "name": "C1",
+   "share": 0.0094
+  },
+  {
+   "hex": "#0e4a58",
+   "name": "C2",
+   "share": 0.0048
+  },
+  {
+   "hex": "#120a0c",
+   "name": "D0",
+   "share": 0.0037
+  },
+  {
+   "hex": "#22a7ad",
+   "name": "C5",
+   "share": 0.0013
+  },
+  {
+   "hex": "#126573",
+   "name": "C3",
+   "share": 0.0012
+  },
+  {
+   "hex": "#242a38",
+   "name": "G1",
+   "share": 0.0009
+  },
+  {
+   "hex": "#1a0c10",
+   "name": "W0",
+   "share": 0.0009
+  },
+  {
+   "hex": "#3a0d18",
+   "name": "R0",
+   "share": 0.0007
+  },
+  {
+   "hex": "#2e1216",
+   "name": "W1",
+   "share": 0.0006
+  },
+  {
+   "hex": "#161923",
+   "name": "G0",
+   "share": 0.0005
+  },
+  {
+   "hex": "#3fcacb",
+   "name": "C6",
+   "share": 0.0005
+  },
+  {
+   "hex": "#17848f",
+   "name": "C4",
+   "share": 0.0004
+  },
+  {
+   "hex": "#ec9338",
+   "name": "W6",
+   "share": 0.0004
+  },
+  {
+   "hex": "#6e1624",
+   "name": "R1",
+   "share": 0.0004
+  },
+  {
+   "hex": "#231619",
+   "name": "B1",
+   "share": 0.0003
+  },
+  {
+   "hex": "#0c2019",
+   "name": "L0",
+   "share": 0.0003
+  },
+  {
+   "hex": "#120c10",
+   "name": "B0",
+   "share": 0.0003
+  }
+ ],
+ "families_on_screen": "BCDGLNRW",
+ "generate": {
+  "length_s": 1.5,
+  "note": "ask for ~0.5 s more than the shot: the head and tail get trimmed at conversion (--t-in)",
+  "fps": "any (24 preferred); pixelize conforms to 24 and holds on 2s"
+ },
+ "pixelize": "audio/.venv-genvideo/bin/python studio/tools/genvideo/pixelize.py <model-output.mp4> --match out/genvideo/keyframes/test-room-sky/start-native.png --families BCDGLNRW --duration 1.000 --out-frames studio/public/genvideo/test-room-sky --out-mp4 out/genvideo/test-room-sky-1080p.mp4",
+ "prompt_scaffold": {
+  "positive": "2D pixel-art animation, limited night palette, the same drawing style and colours as the first frame, locked 4x4 pixel grid, hand-animated feel, subtle motion. Clouds drift slowly across the night sky behind the skyline; nothing else moves.",
+  "negative": "photorealistic, real person, celebrity likeness, face morphing, text, captions, watermark, logo, brand names, camera shake, zoom, blur, film grain, lens flare, extra limbs",
+  "rules": [
+   "Never name a real person, company or product in a prompt; describe our design (e.g. \"a young man in a grey hoodie with a cowlick\").",
+   "Never ask for a likeness. Parody names and logos only, drawn by us, never generated.",
+   "Discard any generated audio. No generated voices.",
+   "The output is raw material: it goes on screen only after pixelize.py / glyphize.py."
+  ]
+ }
+}

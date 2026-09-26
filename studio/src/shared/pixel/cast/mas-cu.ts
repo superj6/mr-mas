@@ -190,7 +190,7 @@ const cuFig = (): FigureDef => {
     toMat('skin', 'skinD', 2, J(68, 36, 74, 38, 77, 46, 76, 56, 74, 66, 70, 74, 63, 80, 57, 83, 56, 80, 60, 79, 66, 74, 70, 66, 70, 56, 70, 44)),
     toMat('skinD', 'skinD', 3, J(68, 36, 69.5, 36.5, 71.5, 44, 71.5, 56, 71.5, 66, 67.5, 75, 61, 80.5, 57, 81.5, 56, 80, 60, 79, 66, 74, 70, 66, 70, 56, 70, 44)),
     // highlights: lit forehead, the far cheekbone (by the contour), the near cheekbone, the chin
-    plane('skin', 4, Hd(40, 35, 46, 34, 54, 35, 50, 38, 44, 39, 38, 40.5), C(72, 86, 76, 83, 79, 88, 78, 97, 75, 100, 72, 95), J(42, 78, 47, 77, 49, 81, 44, 82)),
+    plane('skin', 4, Hd(40, 35, 46, 34, 54, 35, 50, 38, 44, 39, 38, 40.5), C(71, 80, 74, 78, 75, 84, 73, 90, 71, 88), J(42, 78, 47, 77, 49, 81, 44, 82)),
     plane('skin', 5, Hd(41, 36, 45, 35.2, 48, 35.5, 44, 36.3)),
     // brow ridge under the lit forehead: one bridge row, then the sockets
     toMat('skin', 'skinB', 3, Hd(38, 41, 44, 40, 50, 40.5, 62, 40, 64, 42, 50, 42.5, 44, 42, 38, 42.5)),
@@ -204,8 +204,8 @@ const cuFig = (): FigureDef => {
     plane('skin', 2, C(95, 88, 97, 90, 99, 96, 97, 98, 93, 97, 94, 93)),
     // the ridge highlight, the tip ball and its spec
     plane('skin', 4, C(91, 74, 93, 74, 92, 79, 90, 87, 88, 93, 86, 93, 88, 86, 90, 79)),
-    plane('skin', 4, CE(85, 97, 3.2, 2.6)),
-    plane('skin', 5, C(84, 95, 85, 95, 85, 96, 84, 96)),
+    plane('skin', 4, CE(86, 97, 2.6, 2.2)),
+    plane('skin', 5, C(85, 96, 86, 96, 86, 96, 85, 96)),
     // the ala (the wing): no separate colour, only its crease (X2, 1 px) curving round the nostril
     plane('skin', 2, CL(90, 96, 94, 96), CL(94, 96, 96, 97), CL(96, 97, 97, 99), CL(97, 99, 97, 101), CL(97, 101, 95, 102)),
     toMat('skin', 'skinB', 2, CL(91, 97, 94, 97), CL(95, 98, 96, 99)),
@@ -428,7 +428,8 @@ const stripBackdrop = (b: Buf, f: number, live: boolean) => {
     const d = Math.abs(x + 0.5 - 215) / 47 + (bayer(x, y) - 0.5) * 0.18;
     if (d > 1) continue;
     let c = d < 0.62 ? PAL.C1 : PAL.C0;
-    if (y % 9 < 2 && d < 0.8 && bayer(x, y) < 0.5) c = d < 0.5 ? PAL.C2 : PAL.C1;
+    // a few lit floors, far apart and soft (never a blind)
+    if ((y === 40 || y === 41 || y === 96 || y === 97 || y === 150) && d < 0.7 && bayer(x, y) < 0.5) c = PAL.C2;
     b.set(x, y, c);
   }
   for (let y = 0; y < CU_H; y++) for (let x = 250; x < 266; x++) {
@@ -463,44 +464,41 @@ const lobbyBackdrop = (b: Buf, f: number) => {
     const t = y / CU_H + (bayer(x, y) - 0.5) * 0.1;
     b.set(x, y, t < 0.55 ? PAL.N1 : PAL.N2);
   }
-  // the sign's tungsten halo spreading over the wall, then the lightbox itself: behind the back of his head, its top
-  // cropped by the frame (it is a big sign, close), its edges defocused into the halo
-  const sx = 146, sy = -14, sw = 272, sh = 142;
-  glow(b, sx + sw / 2, sy + sh / 2, sw * 0.74, sh * 0.92, [PAL.W6, PAL.W5, PAL.W4, PAL.W3, PAL.W2, PAL.W1]);
-  for (let j = -3; j < sh + 3; j++) for (let i = -3; i < sw + 3; i++) {
-    const X = sx + i, Y = sy + j;
+  // THE SIGN, out of focus: a big rounded box of tungsten light behind the back of his head (cropped by the frame's
+  // top: it is close), stepping out cream -> W7 -> W5 -> W3 -> W1 over a wide dithered falloff; its letter rows are
+  // only faint cooler bands inside the glow, never shapes
+  const cx = 300, cy = 44, rx = 150, ry = 78;
+  const ramp = [PAL.P2, PAL.P1, PAL.W8, PAL.W7, PAL.W6, PAL.W5, PAL.W4, PAL.W3, PAL.W2, PAL.W1];
+  for (let y = 0; y < CU_H; y++) for (let x = 0; x < CU_W; x++) {
+    const ax = Math.abs(x + 0.5 - cx) / rx, ay = Math.abs(y + 0.5 - cy) / ry;
+    const d = Math.pow(ax ** 5 + ay ** 5, 0.2);
+    if (d >= 1.45) continue;
+    // flat core, then the falloff (the core is the lightbox; the falloff its blur)
+    const u = d < 0.62 ? 0 : (d - 0.62) / 0.83;
+    const k = Math.floor(u * (ramp.length - 1) + (bayer(x, y) - 0.5) * 1.1);
+    if (k < 0) { b.set(x, y, ramp[0]); continue; }
+    if (k < ramp.length) b.set(x, y, ramp[k]);
+  }
+  // the letter rows: faint cooler bands in the core (P1 into P2 at 50%), soft-ended; the number plate a warmer patch
+  for (let r = 0; r < 4; r++) for (let x = cx - 120; x < cx + 50 - (r % 2) * 30; x++) for (let j = 0; j < 7; j++) {
+    const Y = 4 + r * 20 + j, X = x;
+    const e = Math.min(x - (cx - 120), cx + 50 - (r % 2) * 30 - x, j + 1, 7 - j);
     if (Y < 0 || Y >= CU_H) continue;
-    const inset = Math.min(i, j, sw - 1 - i, sh - 1 - j);
-    const bz = bayer(X, Y);
-    let c: number;
-    if (inset < 0) { if (bz > (inset + 3.5) / 3.5) continue; c = PAL.W7; }
-    else if (inset < 3) c = bz < 0.5 ? PAL.W8 : PAL.P2;
-    else c = PAL.P2;
-    b.set(X, Y, c);
+    if (bayer(X, Y) < Math.min(0.5, e * 0.12) && b.get(X, Y) === PAL.P2) b.set(X, Y, PAL.P1);
   }
-  // the letter rows: soft low-contrast bars (P1 with a P0 core), dithered ends: unreadable at this focus
-  const rowsW = [168, 132, 150, 176];
-  rowsW.forEach((rw, r) => {
-    for (let i = -4; i < rw + 4; i++) for (let j = -2; j < 13; j++) {
-      const X = sx + 20 + i, Y = sy + 26 + r * 27 + j;
-      if (Y < 0) continue;
-      const e = Math.max(-i, i - rw + 1, -j, j - 10, 0);
-      const bz = bayer(X, Y);
-      if (e > 0 && bz > 0.5 - e * 0.12) continue;
-      b.set(X, Y, e > 0 ? PAL.P1 : j > 2 && j < 8 && i > 2 && i < rw - 3 ? (bz < 0.5 ? PAL.P0 : PAL.P1) : PAL.P1);
+  for (let y = 26; y < 70; y++) for (let x = cx + 78; x < cx + 108; x++) { const e = Math.min(x - (cx + 78), cx + 108 - x, y - 26, 70 - y); if (bayer(x, y) < Math.min(0.55, e * 0.1) && b.get(x, y) === PAL.P2) b.set(x, y, PAL.W8); }
+  // the reception tea-lights low: soft warm discs (solid cores, dithered rims), not rings
+  for (let k = 0; k < 8; k++) {
+    const X = 212 + k * 36, Y = 182 + (k % 2) * 3, R = 6;
+    for (let j = -R; j <= R; j++) for (let i = -R; i <= R; i++) {
+      const d = Math.hypot(i, j) / R;
+      if (d > 1) continue;
+      const c = d < 0.35 ? PAL.W6 : d < 0.7 ? PAL.W4 : PAL.W2;
+      if (d < 0.7 || bayer(X + i, Y + j) < 0.6) b.set(X + i, Y + j, c);
     }
-  });
-  for (let j = -2; j < 48; j++) for (let i = -2; i < 34; i++) {
-    const X = sx + sw - 58 + i, Y = sy + 44 + j;
-    const e = Math.max(-i, i - 31, -j, j - 45, 0);
-    const edge = i < 3 || i > 28 || j < 3 || j > 42;
-    if (e > 0 && bayer(X, Y) > 0.4) continue;
-    b.set(X, Y, e > 0 ? PAL.P1 : edge ? (bayer(X, Y) < 0.5 ? PAL.R1 : PAL.S4) : PAL.P1);
   }
-  // the reception tea-lights: a low row of warm bokeh
-  for (let k = 0; k < 9; k++) bokeh(b, 196 + k * 34, 178 + (k % 2) * 3, 7, PAL.W3, PAL.W5, PAL.W4, 0.5);
-  // the rack pillar's cyan LEDs far left: faint small bokeh
-  for (let k = 0; k < 7; k++) bokeh(b, 10 + (k % 2) * 6, 14 + k * 26, 3, PAL.C1, PAL.C3, undefined, 0.5);
+  // the rack pillar's cyan LEDs far left: faint small discs
+  for (let k = 0; k < 7; k++) { const X = 10 + (k % 2) * 6, Y = 14 + k * 26; for (let j = -2; j <= 2; j++) for (let i = -2; i <= 2; i++) if (i * i + j * j <= 5) b.set(X + i, Y + j, i * i + j * j <= 1 ? PAL.C4 : bayer(X + i, Y + j) < 0.5 ? PAL.C2 : b.get(X + i, Y + j)); }
 };
 
 export const drawCUBackdrop = (b: Buf, backdrop: CUBackdrop, f = 0, o: {live?: boolean} = {}) => {
@@ -521,5 +519,70 @@ export const drawMasCU = (b: Buf, o: {backdrop: CUBackdrop; f?: number; live?: b
 // ------------------------------------------------------------------ the EYES STRIP (480 x 64, 5 pupil positions)
 export const EYES_W = 480, EYES_H = 64;
 export type EyesPos = -2 | -1 | 0 | 1 | 2;
-void line;
-export const drawEyesStrip = (_b: Buf, _y0: number, _pos: EyesPos) => { /* built below */ };
+/** the strip's position inside the room area (letterboxed: black above and below) */
+export const EYES_Y0 = Math.round((CU_H - EYES_H) / 2);
+const stripFig = (pos: EyesPos): FigureDef => {
+  // the face across the strip: the far contour at the left, the nose bridge, the near eye, the terminator, the far
+  // side of the head and the hair at the right. Local coords 480 x 64 (the eyes ~2.5x the CU's).
+  const NX = 220, NY = 31, FX = 116, FY = 31; // eye centres (near / far)
+  const parts: Part[] = [
+    {group: 'face', mat: 'skin', tone: 3, prims: [C(78, 0, 366, 0, 380, 64, 70, 64, 66, 36, 70, 14)]},
+    {group: 'hair', mat: 'hair', tone: 2, prims: [C(366, 0, 480, 0, 480, 64, 384, 64, 376, 30)]},
+  ];
+  const adjust: Adjust[] = [
+    // the brow ridge's light across the top, the socket's shadow wrapping each eye (following its shape), the upper
+    // lid's lit plane between the crease and the lashes, the cheek tops lit, the lower lid's soft line
+    // the orbital hollow under each brow: one broad bridge-tone band (X3), not a ring; its deepest corner by the nose
+    toMat('skin', 'skinB', 2, C(NX - 58, 11, NX - 20, 8, NX + 40, 9, NX + 62, 14, NX + 50, 17, NX, 13, NX - 52, 18), C(FX - 44, 12, FX + 10, 9, FX + 44, 12, FX + 40, 17, FX - 4, 14, FX - 40, 18)),
+    plane('skin', 2, C(NX - 58, 13, NX - 48, 12, NX - 46, 26, NX - 56, 30), C(FX + 36, 13, FX + 46, 14, FX + 42, 28, FX + 34, 26)),
+    plane('skin', 4, C(NX - 36, 56, NX + 30, 54, NX + 44, 58, NX + 20, 62, NX - 30, 62), C(FX - 30, 56, FX + 26, 55, FX + 30, 59, FX - 24, 62)),
+    // the bridge of the nose between the eyes: its lit ridge, its shadow side toward the near eye
+    plane('skin', 4, C(161, 10, 164, 10, 162, 64, 158, 64)),
+    toMat('skin', 'skinB', 2, C(168, 14, 176, 20, 178, 64, 168, 64)),
+    plane('skin', 2, C(176, 34, 184, 40, 186, 64, 178, 64)),
+    // the terminator past the near eye's outer corner, the far side into the hair
+    toMat('skin', 'skinB', 2, C(314, 0, 328, 0, 338, 64, 322, 64, 318, 30)),
+    plane('skin', 2, C(328, 0, 350, 0, 360, 64, 338, 64)),
+    toMat('skin', 'skinD', 2, C(350, 0, 366, 0, 380, 64, 360, 64)),
+    // hair: the temple mass, strands
+    plane('hair', 1, CL(392, 0, 384, 64), CL(412, 0, 404, 64), CL(436, 0, 430, 64), CL(462, 0, 456, 64)),
+    plane('hair', 3, CL(378, 0, 372, 30), CL(382, 0, 376, 28)),
+  ];
+  const eN = eyeMap({w: 100, h: 40, up: 11.5, low: 9.5, ix: 48 + pos, iy: 21, ir: 16.5, pr: 7.4, tilt: 2, lid: 3, crease: 6, glint: 3});
+  const eF = eyeMap({w: 66, h: 38, up: 10, low: 8.4, ix: 26 + pos, iy: 20, ir: 12.6, pr: 5.8, tilt: 2, lid: 3, crease: 5, mirror: true, glint: 2});
+  const T = {S0: ['skin', 0], X0: ['skin', 1], X1: ['skinB', 1], X2: ['skin', 2], X3: ['skinB', 2], K1: ['skinB', 3], K2: ['skin', 3], K3: ['skin', 4], K4: ['skin', 5]} as const;
+  const EYE: Stamp['pal'] = {L: PAL.N0, l: [...T.X1], v: [...T.K1], w: [...T.K2], W: [...T.K3], r: PAL.B2, i: PAL.B3, j: PAL.B4, I: PAL.N0, g: PAL.C8, k: [...T.X1], h: [...T.K3], t: [...T.X3]};
+  // brows at strip scale: dense and calm, 7 px at the head tapering to the tail; B1 hairs in the B0, a few B2 on top
+  const browRows = (w: number, hgt: number, head: 'left' | 'right'): string[] => Array.from({length: hgt}, (_, j) => {
+    let r = '';
+    for (let i = 0; i < w; i++) {
+      const t = head === 'left' ? i / w : 1 - i / w; // 0 at the head (inner end)
+      const top = Math.round(hgt * (0.18 - 0.18 * Math.sin(Math.min(1, t * 1.4) * Math.PI * 0.5) + 0.3 * t * t)), bot = Math.round(hgt * (1 - 0.55 * t * t));
+      if (j < top || j >= bot) { r += '.'; continue; }
+      r += j === top && hash(i, j, 9) < 0.45 ? 'x' : hash(i * 3 + j, 5, 17) < 0.28 ? 'b' : 'B';
+    }
+    return r;
+  });
+  const stamps: Stamp[] = [
+    {x: NX - 46, y: 1, rows: browRows(110, 9, 'left'), pal: {b: PAL.B1, B: PAL.B0, x: PAL.B2}},
+    {x: FX - 46, y: 2, rows: browRows(82, 8, 'right'), pal: {b: PAL.B1, B: PAL.B0, x: PAL.B2}},
+    {x: NX - 50, y: NY - 21, rows: eN, pal: EYE},
+    {x: FX - 33, y: FY - 20, rows: eF, pal: EYE},
+  ];
+  return {w: EYES_W, h: EYES_H, parts, adjust, stamps};
+};
+/** The eyes strip, one drawing per pupil position (-2..2; negative = toward the dialog, camera-left). */
+export const eyesStrip = memo((pos: EyesPos) => renderFigure(stripFig(pos), {...cuRig('cyan'), rim: false, outline: false}));
+/**
+ * Paint the strip shot into the room area: black letterbox bars above and below, the suite stepped down behind the
+ * contour at the left (the laptop's cyan), the strip. pos = the pupils (sc 26: 0, then -1 "toward the dialog").
+ */
+export const drawEyesStrip = (b: Buf, pos: EyesPos) => {
+  rect(0, 0, CU_W, CU_H, b.ink(PAL.N0));
+  const y0 = EYES_Y0;
+  for (let y = 0; y < EYES_H; y++) for (let x = 0; x < 100; x++) {
+    const d = Math.hypot(x / 110, (y - 32) / 60);
+    b.set(x, y0 + y, d < 0.6 ? PAL.C1 : d < 0.85 ? (bayer(x, y) < 0.5 ? PAL.C1 : PAL.C0) : PAL.N1);
+  }
+  blitTo(b, eyesStrip(pos), 0, y0);
+};

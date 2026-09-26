@@ -1,0 +1,588 @@
+{
+ "schema": "mrmas-ost-cue/1",
+ "id": "mm02-his-version",
+ "mm": "MM-02",
+ "family": "KEYNOTE REEL (s2.3)",
+ "title": "His Version",
+ "version": "1",
+ "composer": "Composer E (OST batch 1)",
+ "tone": "his flattering account: a keynote-reel piano, too clean, too still, in Db major -- and cut mid-note",
+ "tags": [
+  "keynote reel",
+  "mas's version",
+  "D5",
+  "unreliable narration",
+  "felt piano",
+  "library",
+  "brand music"
+ ],
+ "usage": "BI",
+ "scenes": [
+  "Ep1 sc 29 [MAS'S VERSION] (the 1-bar D5 insert: tracks/e01-s29-d5)",
+  "Ep2 under Rima's demo (his brand music in the world)",
+  "any later D5 (<= 1 per episode, 1-2 bars, a shade more confident each time)",
+  "Ep8 Rashomon: Mas's render (uncut)",
+  "Ep12 (PROPOSED): the model plays it and nothing cuts it"
+ ],
+ "description": "4 passes x 4 bars, each a shade more confident (pass 1 = the Ep1-level voicing). Ends CUT at b16.1.5 (mid-note). Editor cut points that land mid-note: beat 2.5-4.5 of bars 2, 6, 10, 14 (the held Db5) and of bars 4, 8, 12 (the held Ab4); never on a bar line (the pedal is re-caught there). No loop by design: it grows every pass.",
+ "motifs": [
+  "KEYNOTE (the Water Line in Db major): b1, b5, b9, b13",
+  "its answer on Ab: b3, b7, b11, b15"
+ ],
+ "key": "Db major / lydian: Dbmaj9(#11) | Ab/C | Gbmaj7(#11) | Db/Ab",
+ "engine": {
+  "version": "mrmas-ost-engine 1.1 (2026-09-26: fix1 -- meter axis, sample tuning, render pool, QA 5a-d)",
+  "rendered": "2026-09-26T01:02:21",
+  "render_seconds": 18.4
+ },
+ "timing": {
+  "bpm": 96.0,
+  "beat_unit_quarters": 1.0,
+  "tempo_map": [
+   {
+    "bar": 1,
+    "beat": 1.0,
+    "bpm": 96.0,
+    "ramp_in": false,
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "meter_map": [
+   {
+    "bar": 1,
+    "meter": "4/4",
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "swing": 0.0,
+  "swing_unit_quarters": 0.5,
+  "pickup_beats": 0.0,
+  "bars": 16,
+  "length_s": 40.0,
+  "length_frames": 960.0,
+  "fps": 24,
+  "end": {
+   "sec": 37.8125,
+   "frame": 907.5,
+   "bar": 16,
+   "beat": 1.5
+  },
+  "album_duration_s": 38.1155,
+  "album_duration_frames": 914.77,
+  "album_loops": 1
+ },
+ "sections": [
+  {
+   "label": "pass 1",
+   "start": {
+    "sec": 0.0,
+    "frame": 0.0,
+    "bar": 1,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 10.0,
+    "frame": 240.0,
+    "bar": 5,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "pass 2",
+   "start": {
+    "sec": 10.0,
+    "frame": 240.0,
+    "bar": 5,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 20.0,
+    "frame": 480.0,
+    "bar": 9,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "pass 3",
+   "start": {
+    "sec": 20.0,
+    "frame": 480.0,
+    "bar": 9,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 30.0,
+    "frame": 720.0,
+    "bar": 13,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "pass 4",
+   "start": {
+    "sec": 30.0,
+    "frame": 720.0,
+    "bar": 13,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 40.0,
+    "frame": 960.0,
+    "bar": 17,
+    "beat": 1.0
+   }
+  }
+ ],
+ "markers": [
+  {
+   "label": "pass 1",
+   "sec": 0.0,
+   "frame": 0.0,
+   "bar": 1,
+   "beat": 1.0
+  },
+  {
+   "label": "pass 2",
+   "sec": 10.0,
+   "frame": 240.0,
+   "bar": 5,
+   "beat": 1.0
+  },
+  {
+   "label": "pass 3",
+   "sec": 20.0,
+   "frame": 480.0,
+   "bar": 9,
+   "beat": 1.0
+  },
+  {
+   "label": "pass 4",
+   "sec": 30.0,
+   "frame": 720.0,
+   "bar": 13,
+   "beat": 1.0
+  }
+ ],
+ "hit_check": [
+  {
+   "t": 0.0,
+   "offset_ms": 2.7,
+   "strength": 4.06
+  },
+  {
+   "t": 10.0,
+   "offset_ms": -5.3,
+   "strength": 3.64
+  },
+  {
+   "t": 20.0,
+   "offset_ms": -5.3,
+   "strength": 2.89
+  },
+  {
+   "t": 30.0,
+   "offset_ms": -5.3,
+   "strength": 2.63
+  }
+ ],
+ "sfx_slots": [],
+ "silence_windows": [
+  {
+   "t0": 37.8155,
+   "t1": 49.8095,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  }
+ ],
+ "vo_windows": [],
+ "knee_whole": 0,
+ "f_major": {
+  "limit": 0.08,
+  "windows": 0,
+  "worst": 0.0,
+  "worst_sieved": 0.0,
+  "ok": true,
+  "ok_written": true,
+  "ok_spectral": true,
+  "f_inaudible_windows": 0,
+  "a_classes": {
+   "written": 0,
+   "resonance": 0,
+   "explained": 0,
+   "unattributed": 0
+  },
+  "written_a_over_f_bass": [],
+  "written_third": {
+   "ok": true,
+   "count": 0,
+   "events": [],
+   "grazes": [],
+   "n_grazes": 0,
+   "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+  },
+  "fails": [],
+  "explained": [],
+  "fixed_resonances": [],
+  "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+ },
+ "knee_completion": 0,
+ "room_sfx_windows": [],
+ "qa": {
+  "balance": {
+   "balance": {
+    "piano": 100,
+    "orch": 0,
+    "bigband": 0,
+    "chip": 0
+   },
+   "rhythm_pct_of_all": 0,
+   "chip_share": 0,
+   "balance_energy": {
+    "piano": 100,
+    "orch": 0,
+    "bigband": 0,
+    "chip": 0
+   },
+   "method": "theme stemtable (gated loudness per section, time-weighted, rhythm/fx excluded; it counts a brief stab at its own loudness for the whole section) + balance_energy (ungated energy)",
+   "sections": [
+    {
+     "section": "pass 1",
+     "share": {
+      "piano": 100,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "pass 2",
+     "share": {
+      "piano": 100,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "pass 3",
+     "share": {
+      "piano": 100,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "pass 4",
+     "share": {
+      "piano": 100,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 0
+     }
+    }
+   ]
+  },
+  "short_term_underscore": {
+   "p95": -18.7,
+   "median": -20.27,
+   "max": -18.11
+  },
+  "band_2_6k_db": -33.4,
+  "centroid_hz": 485.0,
+  "f_major": {
+   "limit": 0.08,
+   "windows": 0,
+   "worst": 0.0,
+   "worst_sieved": 0.0,
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "f_inaudible_windows": 0,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_a_over_f_bass": [],
+   "written_third": {
+    "ok": true,
+    "count": 0,
+    "events": [],
+    "grazes": [],
+    "n_grazes": 0,
+    "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+   },
+   "fails": [],
+   "explained": [],
+   "fixed_resonances": [],
+   "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+  },
+  "knee_completion": {
+   "count": 0,
+   "hits": [],
+   "max_gap_s": 2.5,
+   "rule": "OST-BIBLE rule 4: the knee never plays whole in an episode, in any register, across a phrase boundary too"
+  },
+  "sub_under_room": [],
+  "no_third": [],
+  "silence": [
+   {
+    "t0": 37.8155,
+    "t1": 49.8095,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   }
+  ],
+  "hard_stops": [
+   {
+    "t0": 37.8155,
+    "t1": 49.8095,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   }
+  ],
+  "vo_windows": [],
+  "knee_whole": 0,
+  "motifs_found": {
+   "KEYNOTE": [
+    {
+     "inst": "keynote",
+     "t": 0.0,
+     "transpose": 0
+    },
+    {
+     "inst": "keynote",
+     "t": 5.0,
+     "transpose": -5
+    },
+    {
+     "inst": "keynote",
+     "t": 10.0,
+     "transpose": 0
+    },
+    {
+     "inst": "keynote",
+     "t": 15.0,
+     "transpose": -5
+    },
+    {
+     "inst": "keynote",
+     "t": 20.0,
+     "transpose": 12
+    },
+    {
+     "inst": "keynote",
+     "t": 25.0,
+     "transpose": 7
+    },
+    {
+     "inst": "keynote",
+     "t": 30.0,
+     "transpose": 12
+    },
+    {
+     "inst": "keynote",
+     "t": 35.0,
+     "transpose": 7
+    }
+   ]
+  },
+  "swing": {
+   "keynote": {
+    "offbeats": 14,
+    "median_frames": 7.5,
+    "hum_ms": 0
+   }
+  },
+  "banned": []
+ },
+ "loop": null,
+ "files": {
+  "album_wav": "render/mm02-his-version-album.wav",
+  "album_mp3": "render/mm02-his-version-album.mp3",
+  "underscore_wav": "render/mm02-his-version-underscore.wav",
+  "underscore_mp3": "render/mm02-his-version-underscore.mp3",
+  "stems": {
+   "piano": "render/stems/mm02-his-version-piano.flac"
+  },
+  "midi": "render/mm02-his-version.mid",
+  "pianoroll": "render/mm02-his-version-pianoroll.png"
+ },
+ "masters": {
+  "album": {
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "comp": {
+    "thresh_db": -20,
+    "ratio": 1.8
+   },
+   "dialog_pocket": null,
+   "measured": {
+    "lufs": -16.0,
+    "lra": 2.34,
+    "true_peak_db": -1.79,
+    "peak_db": -1.79,
+    "rms_db": -18.32,
+    "crest_db": 16.53,
+    "seconds": 38.1155
+   }
+  },
+  "underscore": {
+   "target_lufs": -20.0,
+   "ceiling_dbtp": -3.0,
+   "comp": {
+    "thresh_db": -28,
+    "ratio": 1.3,
+    "att_ms": 40.0,
+    "rel_ms": 350.0
+   },
+   "dialog_pocket": {
+    "f": 2500.0,
+    "db": -2.0,
+    "q": 0.7
+   },
+   "measured": {
+    "lufs": -20.0,
+    "lra": 2.6,
+    "true_peak_db": -5.47,
+    "peak_db": -5.48,
+    "rms_db": -22.32,
+    "crest_db": 16.84,
+    "seconds": 38.1155
+   }
+  }
+ },
+ "stems": {
+  "sum_vs_underscore_residual_db": -240.0,
+  "families_present": [
+   "piano"
+  ],
+  "family_share_lu": {
+   "piano": 0.0
+  }
+ },
+ "spectrum": {
+  "sub": -32.0,
+  "bass": -7.6,
+  "lowmid": -1.0,
+  "mid": -16.2,
+  "presence": -58.2,
+  "air": -93.3,
+  "centroid_hz": 485.0
+ },
+ "bar_levels": [
+  {
+   "bar": 1,
+   "rms_db": -22.8,
+   "peak_db": -5.800000190734863
+  },
+  {
+   "bar": 2,
+   "rms_db": -23.5,
+   "peak_db": -6.099999904632568
+  },
+  {
+   "bar": 3,
+   "rms_db": -23.2,
+   "peak_db": -7.300000190734863
+  },
+  {
+   "bar": 4,
+   "rms_db": -24.0,
+   "peak_db": -7.800000190734863
+  },
+  {
+   "bar": 5,
+   "rms_db": -22.3,
+   "peak_db": -6.599999904632568
+  },
+  {
+   "bar": 6,
+   "rms_db": -23.4,
+   "peak_db": -5.800000190734863
+  },
+  {
+   "bar": 7,
+   "rms_db": -22.2,
+   "peak_db": -7.099999904632568
+  },
+  {
+   "bar": 8,
+   "rms_db": -22.5,
+   "peak_db": -7.199999809265137
+  },
+  {
+   "bar": 9,
+   "rms_db": -22.1,
+   "peak_db": -8.199999809265137
+  },
+  {
+   "bar": 10,
+   "rms_db": -22.5,
+   "peak_db": -5.599999904632568
+  },
+  {
+   "bar": 11,
+   "rms_db": -21.8,
+   "peak_db": -6.300000190734863
+  },
+  {
+   "bar": 12,
+   "rms_db": -22.3,
+   "peak_db": -6.0
+  },
+  {
+   "bar": 13,
+   "rms_db": -21.2,
+   "peak_db": -6.199999809265137
+  },
+  {
+   "bar": 14,
+   "rms_db": -22.1,
+   "peak_db": -5.5
+  },
+  {
+   "bar": 15,
+   "rms_db": -20.7,
+   "peak_db": -5.5
+  },
+  {
+   "bar": 16,
+   "rms_db": -20.5,
+   "peak_db": -6.400000095367432
+  }
+ ],
+ "instrumentation": {
+  "keynote": {
+   "family": "piano",
+   "notes": 98,
+   "source": "sf2",
+   "credit": "Upright Piano KW by FreePats (CC0 1.0)"
+  },
+  "keynote_ch": {
+   "family": "piano",
+   "notes": 109,
+   "source": "sf2",
+   "credit": "Upright Piano KW by FreePats (CC0 1.0)"
+  }
+ },
+ "credits": [
+  "Upright Piano KW by FreePats (CC0 1.0)"
+ ],
+ "audition": [
+  "album 0-10.0 s: pass 1 -- pretty in the wrong way? Parody by POLISH (too clean, too even, too still), never a sincere ad and never a wink",
+  "album 0-5.0 s against MM-01 0-5.0 s: the same shape (flat line, nudge, settle from the fifth below) -- is his line recognisable under the major-key gloss?",
+  "album 10.0-37.5 s: each pass a shade more confident (a voice more, a wider spread) -- confidence, not a crescendo into a climax",
+  "album 37.81 s: the CUT mid-note, tails and all -- lands as the correction, not as a playback fault",
+  "the felt timbre vs MM-01's real felt: same piano, \"too clean\" should read (no mechanics, no room, even touch, a glossy hall)"
+ ],
+ "warnings": []
+}

@@ -1,0 +1,767 @@
+{
+ "schema": "mrmas-ost-cue/1",
+ "id": "_demo",
+ "mm": "",
+ "family": "test",
+ "title": "Engine Demo (20 s)",
+ "version": "1",
+ "composer": "OST engine demo",
+ "tone": "engine test: cold open -> trio loop -> brass-and-strings tag -> hard stop -> title hit",
+ "tags": [
+  "demo",
+  "test"
+ ],
+ "usage": "BI",
+ "scenes": [
+  "none (engine test cue)"
+ ],
+ "description": "",
+ "motifs": [
+  "Water Line bar 1 (felt, bar 1)",
+  "flat line (chip, bar 3)",
+  "kink (chip, bar 5)",
+  "the Ache (bar 4)",
+  "tokens: grains",
+  "title chord F9sus4 (no third, bar 7)"
+ ],
+ "key": "F dorian / Fm9",
+ "engine": {
+  "version": "mrmas-ost-engine 1.0 (2026-09-25)",
+  "rendered": "2026-09-25T16:18:24",
+  "render_seconds": 63.3
+ },
+ "timing": {
+  "bpm": 84.08759124087591,
+  "beat_unit_quarters": 1.0,
+  "tempo_map": [
+   {
+    "bar": 1,
+    "beat": 1.0,
+    "bpm": 84.0876,
+    "ramp_in": false,
+    "sec": 0.0,
+    "frame": 0.0
+   },
+   {
+    "bar": 6,
+    "beat": 1.0,
+    "bpm": 84.0876,
+    "ramp_in": false,
+    "sec": 14.270833,
+    "frame": 342.5
+   },
+   {
+    "bar": 7,
+    "beat": 1.0,
+    "bpm": 64.0,
+    "ramp_in": true,
+    "sec": 16.716904,
+    "frame": 401.206
+   }
+  ],
+  "meter_map": [
+   {
+    "bar": 1,
+    "meter": "4/4",
+    "sec": 0.0,
+    "frame": 0.0
+   },
+   {
+    "bar": 6,
+    "meter": "3/4",
+    "sec": 14.270833,
+    "frame": 342.5
+   },
+   {
+    "bar": 7,
+    "meter": "2/4",
+    "sec": 16.716904,
+    "frame": 401.206
+   }
+  ],
+  "swing": 0.55,
+  "swing_unit_quarters": 0.5,
+  "pickup_beats": 0.0,
+  "bars": 7,
+  "length_s": 18.591904,
+  "length_frames": 446.206,
+  "fps": 24,
+  "end": {
+   "sec": 18.591904,
+   "frame": 446.206,
+   "bar": 8,
+   "beat": 1.0
+  },
+  "album_duration_s": 20.5919,
+  "album_duration_frames": 494.21,
+  "album_loops": 1
+ },
+ "sections": [
+  {
+   "label": "cold open",
+   "start": {
+    "sec": 0.0,
+    "frame": 0.0,
+    "bar": 1,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 2.854167,
+    "frame": 68.5,
+    "bar": 2,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "loop",
+   "start": {
+    "sec": 2.854167,
+    "frame": 68.5,
+    "bar": 2,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 14.270833,
+    "frame": 342.5,
+    "bar": 6,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "tag",
+   "start": {
+    "sec": 14.270833,
+    "frame": 342.5,
+    "bar": 6,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 16.716904,
+    "frame": 401.206,
+    "bar": 7,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "title",
+   "start": {
+    "sec": 16.716904,
+    "frame": 401.206,
+    "bar": 7,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 18.591904,
+    "frame": 446.206,
+    "bar": 8,
+    "beat": 1.0
+   }
+  }
+ ],
+ "markers": [
+  {
+   "label": "brass kick",
+   "sec": 12.552387,
+   "frame": 301.257,
+   "bar": 5,
+   "beat": 2.5917
+  },
+  {
+   "label": "hard stop",
+   "sec": 16.260003,
+   "frame": 390.24,
+   "bar": 6,
+   "beat": 3.5
+  },
+  {
+   "label": "title hit",
+   "sec": 16.716904,
+   "frame": 401.206,
+   "bar": 7,
+   "beat": 1.0
+  }
+ ],
+ "hit_check": [
+  {
+   "t": 12.5524,
+   "offset_ms": -0.4,
+   "strength": 1.83
+  },
+  {
+   "t": 16.7169,
+   "offset_ms": -7.6,
+   "strength": 5.8
+  }
+ ],
+ "sfx_slots": [],
+ "silence_windows": [
+  {
+   "t0": 16.263,
+   "t1": 16.7139,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  }
+ ],
+ "vo_windows": [],
+ "knee_whole": 0,
+ "f_major": {
+  "limit": 0.08,
+  "windows": 4,
+  "worst": 0.071,
+  "worst_sieved": 0.03,
+  "written_a_over_f_bass": [],
+  "ok": true,
+  "fails": [],
+  "note": "ok = no WRITTEN A-natural over an F bass and the harmonic-sieved A/F < limit; the raw A/F includes the F's own 5th partial"
+ },
+ "qa": {
+  "balance": {
+   "balance": {
+    "piano": 33,
+    "orch": 17,
+    "bigband": 39,
+    "chip": 10
+   },
+   "rhythm_pct_of_all": 23,
+   "chip_share": 10,
+   "balance_energy": {
+    "piano": 43,
+    "orch": 22,
+    "bigband": 18,
+    "chip": 16
+   },
+   "method": "theme stemtable (gated loudness per section, time-weighted, rhythm/fx excluded; it counts a brief stab at its own loudness for the whole section) + balance_energy (ungated energy)",
+   "sections": [
+    {
+     "section": "cold open",
+     "share": {
+      "piano": 86,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 14
+     }
+    },
+    {
+     "section": "loop",
+     "share": {
+      "piano": 40,
+      "orch": 8,
+      "bigband": 48,
+      "chip": 4
+     }
+    },
+    {
+     "section": "tag",
+     "share": {
+      "piano": 19,
+      "orch": 43,
+      "bigband": 35,
+      "chip": 4
+     }
+    },
+    {
+     "section": "title",
+     "share": {
+      "piano": 14,
+      "orch": 31,
+      "bigband": 25,
+      "chip": 30
+     }
+    }
+   ]
+  },
+  "short_term_underscore": {
+   "p95": -11.85,
+   "median": -17.13,
+   "max": -11.66
+  },
+  "band_2_6k_db": -16.3,
+  "centroid_hz": 406.0,
+  "f_major": {
+   "limit": 0.08,
+   "windows": 4,
+   "worst": 0.071,
+   "worst_sieved": 0.03,
+   "written_a_over_f_bass": [],
+   "ok": true,
+   "fails": [],
+   "note": "ok = no WRITTEN A-natural over an F bass and the harmonic-sieved A/F < limit; the raw A/F includes the F's own 5th partial"
+  },
+  "no_third": [
+   {
+    "t0": 16.816903940902748,
+    "t1": 18.591903940902746,
+    "a": 0.028,
+    "ab": 0.001,
+    "ok": true
+   }
+  ],
+  "silence": [
+   {
+    "t0": 16.263,
+    "t1": 16.7139,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   }
+  ],
+  "hard_stops": [
+   {
+    "t0": 16.263,
+    "t1": 16.7139,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   }
+  ],
+  "vo_windows": [],
+  "knee_whole": 0,
+  "motifs_found": {
+   "FLAT_LINE": [
+    {
+     "inst": "lead",
+     "t": 5.7083,
+     "transpose": 0
+    }
+   ],
+   "KINK": [
+    {
+     "inst": "lead",
+     "t": 12.8438,
+     "transpose": 0
+    }
+   ]
+  },
+  "swing": {
+   "felt": {
+    "offbeats": 18,
+    "median_frames": 10.45,
+    "hum_ms": 3
+   },
+   "brush": {
+    "offbeats": 2,
+    "median_frames": 10.13,
+    "hum_ms": 3
+   },
+   "vln1": {
+    "offbeats": 1,
+    "median_frames": 10.13,
+    "hum_ms": 8
+   },
+   "lead": {
+    "offbeats": 3,
+    "median_frames": 10.13,
+    "hum_ms": 0
+   },
+   "arp": {
+    "offbeats": 8,
+    "median_frames": 10.7,
+    "hum_ms": 0
+   },
+   "lead2": {
+    "offbeats": 5,
+    "median_frames": 8.56,
+    "hum_ms": 0
+   },
+   "k808": {
+    "offbeats": 1,
+    "median_frames": 10.13,
+    "hum_ms": 0
+   },
+   "h808": {
+    "offbeats": 9,
+    "median_frames": 8.56,
+    "hum_ms": 1
+   },
+   "tpt": {
+    "offbeats": 4,
+    "median_frames": 10.13,
+    "hum_ms": 6
+   },
+   "tbn": {
+    "offbeats": 3,
+    "median_frames": 10.16,
+    "hum_ms": 6
+   }
+  },
+  "banned": [],
+  "loop_verify": {
+   "total_db": -72.5,
+   "per_family": {
+    "piano": -69.0,
+    "strings": -68.1,
+    "brass": -130.3,
+    "bass": -78.7,
+    "drums": -133.4,
+    "chip": -135.3,
+    "synth": -138.8,
+    "fx": -121.0
+   },
+   "note": "pass 2 of the body played twice (identical draws) vs the folded loop; ~-70 dB = the outro's humanised lead-in reaching back into pass 2 (not a loop error); intro tails reaching pass 2 would also raise it"
+  }
+ },
+ "loop": {
+  "start": {
+   "sec": 2.854167,
+   "frame": 68.5,
+   "bar": 2,
+   "beat": 1.0
+  },
+  "end": {
+   "sec": 14.270833,
+   "frame": 342.5,
+   "bar": 6,
+   "beat": 1.0
+  },
+  "samples": 548000,
+  "seconds": 11.416667,
+  "frames": 274.0,
+  "frame_aligned": true,
+  "notes": 185,
+  "tail_seconds": 6.0,
+  "seam": {
+   "seam_hf_ratio_to_median": 0.12,
+   "seam_hf_percentile": 14.89,
+   "wrap_jump": 0.00845,
+   "wrap_jump_vs_p99_step": 0.245,
+   "rms_last_50ms_db": -28.5,
+   "rms_first_50ms_db": -18.5,
+   "verdict": "seamless"
+  },
+  "loudness": {
+   "lufs": -20.91,
+   "lra": 1.08,
+   "true_peak_db": -4.38,
+   "peak_db": -4.49,
+   "rms_db": -23.03,
+   "crest_db": 18.54,
+   "seconds": 22.8333
+  }
+ },
+ "files": {
+  "album_wav": "render/_demo-album.wav",
+  "album_mp3": "render/_demo-album.mp3",
+  "underscore_wav": "render/_demo-underscore.wav",
+  "underscore_mp3": "render/_demo-underscore.mp3",
+  "stems": {
+   "piano": "render/stems/_demo-piano.flac",
+   "strings": "render/stems/_demo-strings.flac",
+   "brass": "render/stems/_demo-brass.flac",
+   "bass": "render/stems/_demo-bass.flac",
+   "drums": "render/stems/_demo-drums.flac",
+   "perc": "render/stems/_demo-perc.flac",
+   "chip": "render/stems/_demo-chip.flac",
+   "synth": "render/stems/_demo-synth.flac",
+   "fx": "render/stems/_demo-fx.flac"
+  },
+  "loop_wav": "render/_demo-loop.wav",
+  "loop_tail_wav": "render/_demo-loop-tail.wav",
+  "loop_preview_mp3": "render/_demo-loop-x3-preview.mp3",
+  "midi": "render/_demo.mid",
+  "pianoroll": "render/_demo-pianoroll.png"
+ },
+ "masters": {
+  "album": {
+   "target_lufs": -14.0,
+   "ceiling_dbtp": -1.0,
+   "comp": {
+    "thresh_db": -20,
+    "ratio": 1.8
+   },
+   "dialog_pocket": null,
+   "measured": {
+    "lufs": -14.02,
+    "lra": 4.79,
+    "true_peak_db": -1.15,
+    "peak_db": -1.16,
+    "rms_db": -16.25,
+    "crest_db": 15.09,
+    "seconds": 20.5919
+   }
+  },
+  "underscore": {
+   "target_lufs": -20.0,
+   "ceiling_dbtp": -3.0,
+   "comp": {
+    "thresh_db": -28,
+    "ratio": 1.3,
+    "att_ms": 40.0,
+    "rel_ms": 350.0
+   },
+   "dialog_pocket": {
+    "f": 2500.0,
+    "db": -2.0,
+    "q": 0.7
+   },
+   "measured": {
+    "lufs": -20.0,
+    "lra": 6.35,
+    "true_peak_db": -3.15,
+    "peak_db": -3.16,
+    "rms_db": -22.0,
+    "crest_db": 18.84,
+    "seconds": 20.5919
+   }
+  }
+ },
+ "stems": {
+  "sum_vs_underscore_residual_db": -162.2,
+  "families_present": [
+   "bass",
+   "brass",
+   "chip",
+   "drums",
+   "fx",
+   "perc",
+   "piano",
+   "strings",
+   "synth"
+  ],
+  "family_share_lu": {
+   "piano": -4.0,
+   "strings": -6.2,
+   "brass": -4.0,
+   "bass": -4.3,
+   "drums": -9.9,
+   "perc": -21.1,
+   "chip": -6.9,
+   "synth": -29.0,
+   "fx": -15.0
+  }
+ },
+ "spectrum": {
+  "sub": -6.7,
+  "bass": -4.5,
+  "lowmid": -4.6,
+  "mid": -11.4,
+  "presence": -20.7,
+  "air": -28.9,
+  "centroid_hz": 406.0
+ },
+ "bar_levels": [
+  {
+   "bar": 1,
+   "rms_db": -26.6,
+   "peak_db": -10.300000190734863
+  },
+  {
+   "bar": 2,
+   "rms_db": -23.0,
+   "peak_db": -8.399999618530273
+  },
+  {
+   "bar": 3,
+   "rms_db": -23.3,
+   "peak_db": -6.400000095367432
+  },
+  {
+   "bar": 4,
+   "rms_db": -23.7,
+   "peak_db": -6.800000190734863
+  },
+  {
+   "bar": 5,
+   "rms_db": -22.3,
+   "peak_db": -4.400000095367432
+  },
+  {
+   "bar": 6,
+   "rms_db": -22.8,
+   "peak_db": -7.599999904632568
+  },
+  {
+   "bar": 7,
+   "rms_db": -16.0,
+   "peak_db": -3.200000047683716
+  }
+ ],
+ "instrumentation": {
+  "arp": {
+   "family": "chip",
+   "notes": 16,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "brush": {
+   "family": "drums",
+   "notes": 10,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "cb": {
+   "family": "strings",
+   "notes": 2,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "cb_pizz": {
+   "family": "bass",
+   "notes": 16,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "felt": {
+   "family": "piano",
+   "notes": 52,
+   "source": "sf2",
+   "credit": "Upright Piano KW by FreePats (CC0 1.0)"
+  },
+  "glasspad": {
+   "family": "synth",
+   "notes": 2,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "glyph": {
+   "family": "fx",
+   "notes": 1,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "grand": {
+   "family": "piano",
+   "notes": 4,
+   "source": "sf2",
+   "credit": "Salamander Grand Piano by Alexander Holm (CC BY 3.0) -- ATTRIBUTION REQUIRED"
+  },
+  "h808": {
+   "family": "drums",
+   "notes": 22,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "hn": {
+   "family": "brass",
+   "notes": 8,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "impact": {
+   "family": "fx",
+   "notes": 1,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "jazz": {
+   "family": "drums",
+   "notes": 16,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "k808": {
+   "family": "drums",
+   "notes": 5,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "lead": {
+   "family": "chip",
+   "notes": 9,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "lead2": {
+   "family": "chip",
+   "notes": 14,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "noisesweep": {
+   "family": "chip",
+   "notes": 1,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "sub": {
+   "family": "bass",
+   "notes": 1,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "suscym": {
+   "family": "perc",
+   "notes": 1,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "swish": {
+   "family": "drums",
+   "notes": 4,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "tbn": {
+   "family": "brass",
+   "notes": 3,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "tex": {
+   "family": "synth",
+   "notes": 3,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "tpt": {
+   "family": "brass",
+   "notes": 4,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "tri": {
+   "family": "chip",
+   "notes": 1,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "ubass": {
+   "family": "bass",
+   "notes": 16,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "vc": {
+   "family": "strings",
+   "notes": 6,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vla": {
+   "family": "strings",
+   "notes": 8,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vln1": {
+   "family": "strings",
+   "notes": 12,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vln2": {
+   "family": "strings",
+   "notes": 4,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  }
+ },
+ "credits": [
+  "GeneralUser GS by S. Christian Collins",
+  "Salamander Grand Piano by Alexander Holm (CC BY 3.0) -- ATTRIBUTION REQUIRED",
+  "Upright Piano KW by FreePats (CC0 1.0)",
+  "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+ ],
+ "audition": [
+  "loop-x3-preview.mp3 at 11.42 s and 22.83 s (the seams): no click, no level dip; the sub bed crossfades; the walking bass leads back into F",
+  "album 12.55 s, the bar-5 brass kick on the swung and-of-2: a section, not a sampler chord; the lead trumpet fall short and idiomatic (big band), never a sad-trombone joke",
+  "album 8.56-14.27 s: the in-world TV trap beat -- clearly a small speaker in the room, not score",
+  "album 15.9-16.72 s: the hard stop -- true silence (tails cut), then the title hit lands at 16.72 s; open and suspended, no major/minor colour",
+  "album 0-2.85 s: the Water Line fragment on clean felt, the chip square only on the nudge (G4)",
+  "album 14.27-15.9 s: the ritardando should bend, not step"
+ ],
+ "warnings": [
+  "underscore short-term p95 -11.85 LUFS > -17 (underscore) (s6.5): the loudest moments sit high above the bed"
+ ]
+}

@@ -1,0 +1,2527 @@
+[
+ {
+  "id": "mm01-water-line",
+  "mm": "MM-01",
+  "kind": "album/library",
+  "title": "Water Line",
+  "palette": "P01 DARK ROOM",
+  "motifs": [
+   "the Water Line (Mas)",
+   "the Orb's verdict (F-C)",
+   "the kink (never taken)"
+  ],
+  "length": 76.268,
+  "files": {
+   "mp3": "tracks/mm01-water-line/render/mm01-water-line-album.mp3",
+   "album": "tracks/mm01-water-line/render/mm01-water-line-album.wav",
+   "underscore": "tracks/mm01-water-line/render/mm01-water-line-underscore.wav",
+   "underscore_mp3": "tracks/mm01-water-line/render/mm01-water-line-underscore.mp3",
+   "stems": {
+    "piano": "tracks/mm01-water-line/render/stems/mm01-water-line-piano.flac",
+    "strings": "tracks/mm01-water-line/render/stems/mm01-water-line-strings.flac",
+    "brass": "tracks/mm01-water-line/render/stems/mm01-water-line-brass.flac",
+    "bass": "tracks/mm01-water-line/render/stems/mm01-water-line-bass.flac",
+    "drums": "tracks/mm01-water-line/render/stems/mm01-water-line-drums.flac",
+    "perc": "tracks/mm01-water-line/render/stems/mm01-water-line-perc.flac",
+    "chip": "tracks/mm01-water-line/render/stems/mm01-water-line-chip.flac"
+   },
+   "midi": "tracks/mm01-water-line/render/mm01-water-line.mid",
+   "pianoroll": "tracks/mm01-water-line/render/mm01-water-line-pianoroll.png",
+   "cue_sheet": "tracks/mm01-water-line/render/mm01-water-line.cue.json",
+   "readme": "tracks/mm01-water-line/README.md"
+  },
+  "firstUse": "Ep1 sc 18, dark room, 10:13; every episode: his rooms, nights, V.O.",
+  "tone": "Mas's theme: calm, alone, sure of himself at 2 a.m.; the one complete motif in the show",
+  "key": "F minor (rootless Fm9 - Dbmaj7 - Bbm9 - C7sus(b9)); B: Dbmaj7#11 - Bbm9 - Gbmaj7#11 - F5 - C7sus(b9)",
+  "composer": "Composer E (OST batch 1; fix 1: composer A)",
+  "loudness": {
+   "album_lufs": -16.0,
+   "album_tp_db": -1.31,
+   "underscore_lufs": -20.0,
+   "underscore_target": -20.0,
+   "underscore_tp_db": -5.0,
+   "underscore_st_p95_corrected": -17.81
+  },
+  "balance": {
+   "piano": 61,
+   "orch": 27,
+   "bigband": 3,
+   "chip": 8
+  },
+  "sections": [
+   {
+    "label": "intro",
+    "start": 0.0,
+    "end": 5.0
+   },
+   {
+    "label": "A",
+    "start": 5.0,
+    "end": 25.0
+   },
+   {
+    "label": "B (the night)",
+    "start": 25.0,
+    "end": 45.0
+   },
+   {
+    "label": "A'",
+    "start": 45.0,
+    "end": 65.0
+   },
+   {
+    "label": "coda",
+    "start": 65.0,
+    "end": 75.0
+   }
+  ],
+  "loops": [
+   {
+    "file": "tracks/mm01-water-line/render/mm01-water-line-loop.wav",
+    "seconds": 60.0,
+    "frames": 1440.0,
+    "verdict": "seamless"
+   }
+  ],
+  "qa": {
+   "stems_residual_db": -117.2,
+   "knee_whole": 0,
+   "knee_completion": 0,
+   "written_a_over_f_bass": 0,
+   "f_major_ok": true,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "hits": "5/5",
+   "sub_under_room_ok": true,
+   "engine_warnings": 0,
+   "editor_flags": []
+  },
+  "status": "fix pass 1 (2026-09-26): re-rendered on the fixed engine and re-measured by the editor; NOT auditioned. rebalanced to 61 / 27 / 3 / 8 (strings +2 dB, violas join the cellos, Harmon +2 dB); V.O. windows -24.8 / -25.2 / -24.9; room-SFX windows added (sub -33 to -38 dB); the 5 s cut's fade is in the score",
+  "open": [
+   "ears: 17.5-45 s, do the strings stay distant and the Harmon stay \"the night\"?"
+  ],
+  "variants": [
+   {
+    "id": "mm01-water-line-05s",
+    "title": "Water Line (05s)",
+    "length": 6.2,
+    "mp3": "tracks/mm01-water-line/render/mm01-water-line-05s-album.mp3",
+    "album": "tracks/mm01-water-line/render/mm01-water-line-05s-album.wav",
+    "underscore": "tracks/mm01-water-line/render/mm01-water-line-05s-underscore.wav",
+    "underscore_mp3": "tracks/mm01-water-line/render/mm01-water-line-05s-underscore.mp3",
+    "cue_sheet": "tracks/mm01-water-line/render/mm01-water-line-05s.cue.json",
+    "album_lufs": -16.0,
+    "underscore_lufs": -20.0,
+    "engine_warnings": 0,
+    "editor_flags": []
+   },
+   {
+    "id": "mm01-water-line-15s",
+    "title": "Water Line (15s)",
+    "length": 16.413,
+    "mp3": "tracks/mm01-water-line/render/mm01-water-line-15s-album.mp3",
+    "album": "tracks/mm01-water-line/render/mm01-water-line-15s-album.wav",
+    "underscore": "tracks/mm01-water-line/render/mm01-water-line-15s-underscore.wav",
+    "underscore_mp3": "tracks/mm01-water-line/render/mm01-water-line-15s-underscore.mp3",
+    "cue_sheet": "tracks/mm01-water-line/render/mm01-water-line-15s.cue.json",
+    "album_lufs": -16.0,
+    "underscore_lufs": -20.0,
+    "engine_warnings": 0,
+    "editor_flags": []
+   },
+   {
+    "id": "mm01-water-line-30s",
+    "title": "Water Line (30s)",
+    "length": 31.23,
+    "mp3": "tracks/mm01-water-line/render/mm01-water-line-30s-album.mp3",
+    "album": "tracks/mm01-water-line/render/mm01-water-line-30s-album.wav",
+    "underscore": "tracks/mm01-water-line/render/mm01-water-line-30s-underscore.wav",
+    "underscore_mp3": "tracks/mm01-water-line/render/mm01-water-line-30s-underscore.mp3",
+    "cue_sheet": "tracks/mm01-water-line/render/mm01-water-line-30s.cue.json",
+    "album_lufs": -16.01,
+    "underscore_lufs": -20.0,
+    "engine_warnings": 0,
+    "editor_flags": []
+   },
+   {
+    "id": "mm01-water-line-straight",
+    "title": "Water Line (straight)",
+    "length": 20.701,
+    "mp3": "tracks/mm01-water-line/render/mm01-water-line-straight-album.mp3",
+    "album": "tracks/mm01-water-line/render/mm01-water-line-straight-album.wav",
+    "underscore": "tracks/mm01-water-line/render/mm01-water-line-straight-underscore.wav",
+    "underscore_mp3": "tracks/mm01-water-line/render/mm01-water-line-straight-underscore.mp3",
+    "cue_sheet": "tracks/mm01-water-line/render/mm01-water-line-straight.cue.json",
+    "album_lufs": -16.03,
+    "underscore_lufs": -20.03,
+    "engine_warnings": 0,
+    "editor_flags": []
+   }
+  ],
+  "sampler": [
+   {
+    "n": 1,
+    "at": "0:00.00",
+    "src_in": 0.0,
+    "src_out": 25.0
+   }
+  ]
+ },
+ {
+  "id": "mm02-his-version",
+  "mm": "MM-02",
+  "kind": "album/library",
+  "title": "His Version",
+  "palette": "KEYNOTE REEL (the D5 register)",
+  "motifs": [
+   "KEYNOTE (the Water Line in Db major)"
+  ],
+  "length": 38.115,
+  "files": {
+   "mp3": "tracks/mm02-his-version/render/mm02-his-version-album.mp3",
+   "album": "tracks/mm02-his-version/render/mm02-his-version-album.wav",
+   "underscore": "tracks/mm02-his-version/render/mm02-his-version-underscore.wav",
+   "underscore_mp3": "tracks/mm02-his-version/render/mm02-his-version-underscore.mp3",
+   "stems": {
+    "piano": "tracks/mm02-his-version/render/stems/mm02-his-version-piano.flac"
+   },
+   "midi": "tracks/mm02-his-version/render/mm02-his-version.mid",
+   "pianoroll": "tracks/mm02-his-version/render/mm02-his-version-pianoroll.png",
+   "cue_sheet": "tracks/mm02-his-version/render/mm02-his-version.cue.json",
+   "readme": "tracks/mm02-his-version/README.md"
+  },
+  "firstUse": "the D5 device [MAS'S VERSION]: cut from Ep1 in draft 3.2, it debuts in Ep2 or Ep3 (the 1-bar insert e01-s29-d5 is held); Ep12 plays the reel uncut",
+  "tone": "his flattering account: a keynote-reel piano, too clean, too still, in Db major -- and cut mid-note",
+  "key": "Db major / lydian: Dbmaj9(#11) | Ab/C | Gbmaj7(#11) | Db/Ab",
+  "composer": "Composer E (OST batch 1)",
+  "loudness": {
+   "album_lufs": -16.0,
+   "album_tp_db": -1.79,
+   "underscore_lufs": -20.0,
+   "underscore_target": -20.0,
+   "underscore_tp_db": -5.47,
+   "underscore_st_p95_corrected": -18.7
+  },
+  "balance": {
+   "piano": 100,
+   "orch": 0,
+   "bigband": 0,
+   "chip": 0
+  },
+  "sections": [
+   {
+    "label": "pass 1",
+    "start": 0.0,
+    "end": 10.0
+   },
+   {
+    "label": "pass 2",
+    "start": 10.0,
+    "end": 20.0
+   },
+   {
+    "label": "pass 3",
+    "start": 20.0,
+    "end": 30.0
+   },
+   {
+    "label": "pass 4",
+    "start": 30.0,
+    "end": 40.0
+   }
+  ],
+  "loops": [],
+  "qa": {
+   "stems_residual_db": -119.4,
+   "knee_whole": 0,
+   "knee_completion": 0,
+   "written_a_over_f_bass": 0,
+   "f_major_ok": true,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "hits": "4/4",
+   "sub_under_room_ok": null,
+   "engine_warnings": 0,
+   "editor_flags": []
+  },
+  "status": "fix pass 1 (2026-09-26): re-rendered on the fixed engine and re-measured by the editor; NOT auditioned. unchanged (no retuned samples); re-rendered, bit-level same music",
+  "open": [],
+  "sampler": [
+   {
+    "n": 8,
+    "at": "2:29.88",
+    "src_in": 20.0,
+    "src_out": 38.115
+   }
+  ]
+ },
+ {
+  "id": "e01-s29-d5",
+  "mm": "MM-02",
+  "kind": "to-picture insert",
+  "title": "His Version (Ep1 D5 insert)",
+  "palette": "KEYNOTE REEL (D5)",
+  "motifs": [
+   "KEYNOTE bar 1"
+  ],
+  "length": 8.0,
+  "files": {
+   "mp3": "tracks/e01-s29-d5/render/e01-s29-d5-album.mp3",
+   "album": "tracks/e01-s29-d5/render/e01-s29-d5-album.wav",
+   "underscore": "tracks/e01-s29-d5/render/e01-s29-d5-underscore.wav",
+   "underscore_mp3": "tracks/e01-s29-d5/render/e01-s29-d5-underscore.mp3",
+   "stems": {
+    "piano": "tracks/e01-s29-d5/render/stems/e01-s29-d5-piano.flac"
+   },
+   "midi": "tracks/e01-s29-d5/render/e01-s29-d5.mid",
+   "pianoroll": "tracks/e01-s29-d5/render/e01-s29-d5-pianoroll.png",
+   "cue_sheet": "tracks/e01-s29-d5/render/e01-s29-d5.cue.json",
+   "readme": "tracks/e01-s29-d5/README.md"
+  },
+  "firstUse": "UNUSED in Ep1 since draft 3.2 (D5 cut); held for D5's debut in Ep2 or Ep3; cut mid-note on the next downbeat",
+  "tone": "Mas's version, one bar: a keynote-reel piano too clean for the truth, killed by the hard cut",
+  "key": "Db major: Dbmaj9(#11) (| Ab/C in the handle)",
+  "composer": "Composer E (OST batch 1)",
+  "loudness": {
+   "album_lufs": -16.02,
+   "album_tp_db": -1.15,
+   "underscore_lufs": -20.0,
+   "underscore_target": -20.0,
+   "underscore_tp_db": -3.15,
+   "underscore_st_p95_corrected": -18.67
+  },
+  "balance": {
+   "piano": 100,
+   "orch": 0,
+   "bigband": 0,
+   "chip": 0
+  },
+  "sections": [
+   {
+    "label": "D5 bar (on picture)",
+    "start": 0.0,
+    "end": 2.5
+   },
+   {
+    "label": "handle (after the cut)",
+    "start": 2.5,
+    "end": 5.0
+   }
+  ],
+  "loops": [],
+  "qa": {
+   "stems_residual_db": -119.6,
+   "knee_whole": 0,
+   "knee_completion": 0,
+   "written_a_over_f_bass": 0,
+   "f_major_ok": true,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "hits": "1/1",
+   "sub_under_room_ok": null,
+   "engine_warnings": 0,
+   "editor_flags": []
+  },
+  "status": "fix pass 1 (2026-09-26): re-rendered on the fixed engine and re-measured by the editor; NOT auditioned. unchanged; re-rendered",
+  "open": [
+   "unused in Ep1 (D5 cut in draft 3.2): re-spot in Ep2/3"
+  ]
+ },
+ {
+  "id": "mm05-the-more-you-buy",
+  "mm": "MM-05",
+  "kind": "album/library",
+  "title": "The More You Buy (Nesnej)",
+  "palette": "P06 THE JOB",
+  "motifs": [
+   "the Upsell (Nesnej)",
+   "the KA-CHING slot"
+  ],
+  "length": 71.709,
+  "files": {
+   "mp3": "tracks/mm05-the-more-you-buy/render/mm05-the-more-you-buy-album.mp3",
+   "album": "tracks/mm05-the-more-you-buy/render/mm05-the-more-you-buy-album.wav",
+   "underscore": "tracks/mm05-the-more-you-buy/render/mm05-the-more-you-buy-underscore.wav",
+   "underscore_mp3": "tracks/mm05-the-more-you-buy/render/mm05-the-more-you-buy-underscore.mp3",
+   "stems": {
+    "piano": "tracks/mm05-the-more-you-buy/render/stems/mm05-the-more-you-buy-piano.flac",
+    "brass": "tracks/mm05-the-more-you-buy/render/stems/mm05-the-more-you-buy-brass.flac",
+    "bass": "tracks/mm05-the-more-you-buy/render/stems/mm05-the-more-you-buy-bass.flac",
+    "drums": "tracks/mm05-the-more-you-buy/render/stems/mm05-the-more-you-buy-drums.flac",
+    "perc": "tracks/mm05-the-more-you-buy/render/stems/mm05-the-more-you-buy-perc.flac",
+    "chip": "tracks/mm05-the-more-you-buy/render/stems/mm05-the-more-you-buy-chip.flac"
+   },
+   "midi": "tracks/mm05-the-more-you-buy/render/mm05-the-more-you-buy.mid",
+   "pianoroll": "tracks/mm05-the-more-you-buy/render/mm05-the-more-you-buy-pianoroll.png",
+   "cue_sheet": "tracks/mm05-the-more-you-buy/render/mm05-the-more-you-buy.cue.json",
+   "readme": "tracks/mm05-the-more-you-buy/README.md"
+  },
+  "firstUse": "Ep1 sc 17 rooftop, 9:33 (lead-in to the register bell)",
+  "tone": "a sales pitch that climbs a step every bar and always closes: double-time swing, vibes and a straight mute over a walking bass, the chip as the GPU clock -- and a rest where the register rings",
+  "key": "F dorian / F minor blues, C7#9(b13); the close on an F-C open fifth (no third)",
+  "composer": "Composer B (OST batch 1; fix 1: composer A)",
+  "loudness": {
+   "album_lufs": -14.03,
+   "album_tp_db": -1.15,
+   "underscore_lufs": -20.0,
+   "underscore_target": -20.0,
+   "underscore_tp_db": -3.15,
+   "underscore_st_p95_corrected": -18.47
+  },
+  "balance": {
+   "piano": 24,
+   "orch": 21,
+   "bigband": 21,
+   "chip": 34
+  },
+  "sections": [
+   {
+    "label": "intro (intensity 1)",
+    "start": 0.0,
+    "end": 5.0
+   },
+   {
+    "label": "A (intensity 2)",
+    "start": 5.0,
+    "end": 20.0
+   },
+   {
+    "label": "B (intensity 3)",
+    "start": 20.0,
+    "end": 35.0
+   },
+   {
+    "label": "B' (intensity 2)",
+    "start": 35.0,
+    "end": 50.0
+   },
+   {
+    "label": "A' (intensity 3)",
+    "start": 50.0,
+    "end": 65.0
+   },
+   {
+    "label": "tag (intensity 3)",
+    "start": 65.0,
+    "end": 70.0
+   }
+  ],
+  "loops": [
+   {
+    "file": "tracks/mm05-the-more-you-buy/render/mm05-the-more-you-buy-loop.wav",
+    "seconds": 60.0,
+    "frames": 1440.0,
+    "verdict": "seamless"
+   }
+  ],
+  "qa": {
+   "stems_residual_db": -117.6,
+   "knee_whole": 0,
+   "knee_completion": 0,
+   "written_a_over_f_bass": 0,
+   "f_major_ok": true,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "hits": "10/10",
+   "sub_under_room_ok": null,
+   "engine_warnings": 0,
+   "editor_flags": []
+  },
+  "status": "fix pass 1 (2026-09-26): re-rendered on the fixed engine and re-measured by the editor; NOT auditioned. the A2 body resonance of the contrabass-pizz F2 notched (Q 5, -10 dB at 112 Hz): worst sieved A/F 0.16 -> 0.042; the main cue and all five variants pass",
+  "open": [
+   "ears: is the walking bass still woody on its F downbeats (5.0, 10.6, 35.0, 50.0, 65.0 s)?"
+  ],
+  "variants": [
+   {
+    "id": "mm05-the-more-you-buy-cut05",
+    "title": "The More You Buy: 5 s",
+    "length": 7.168,
+    "mp3": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-cut05-album.mp3",
+    "album": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-cut05-album.wav",
+    "underscore": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-cut05-underscore.wav",
+    "underscore_mp3": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-cut05-underscore.mp3",
+    "cue_sheet": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-cut05.cue.json",
+    "album_lufs": -14.0,
+    "underscore_lufs": -16.0,
+    "engine_warnings": 0,
+    "editor_flags": []
+   },
+   {
+    "id": "mm05-the-more-you-buy-cut15",
+    "title": "The More You Buy: 15 s",
+    "length": 17.067,
+    "mp3": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-cut15-album.mp3",
+    "album": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-cut15-album.wav",
+    "underscore": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-cut15-underscore.wav",
+    "underscore_mp3": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-cut15-underscore.mp3",
+    "cue_sheet": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-cut15.cue.json",
+    "album_lufs": -14.0,
+    "underscore_lufs": -16.03,
+    "engine_warnings": 0,
+    "editor_flags": []
+   },
+   {
+    "id": "mm05-the-more-you-buy-cut30",
+    "title": "The More You Buy: 30 s",
+    "length": 31.772,
+    "mp3": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-cut30-album.mp3",
+    "album": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-cut30-album.wav",
+    "underscore": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-cut30-underscore.wav",
+    "underscore_mp3": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-cut30-underscore.mp3",
+    "cue_sheet": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-cut30.cue.json",
+    "album_lufs": -14.0,
+    "underscore_lufs": -20.0,
+    "engine_warnings": 0,
+    "editor_flags": []
+   },
+   {
+    "id": "mm05-the-more-you-buy-limbo",
+    "title": "The More You Buy: Limbo (Ep2)",
+    "length": 42.647,
+    "mp3": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-limbo-album.mp3",
+    "album": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-limbo-album.wav",
+    "underscore": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-limbo-underscore.wav",
+    "underscore_mp3": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-limbo-underscore.mp3",
+    "cue_sheet": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-limbo.cue.json",
+    "album_lufs": -14.0,
+    "underscore_lufs": -20.0,
+    "engine_warnings": 0,
+    "editor_flags": []
+   },
+   {
+    "id": "mm05-the-more-you-buy-trio",
+    "title": "The More You Buy: Trio (bed)",
+    "length": 71.709,
+    "mp3": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-trio-album.mp3",
+    "album": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-trio-album.wav",
+    "underscore": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-trio-underscore.wav",
+    "underscore_mp3": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-trio-underscore.mp3",
+    "cue_sheet": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-trio.cue.json",
+    "album_lufs": -14.05,
+    "underscore_lufs": -20.0,
+    "engine_warnings": 0,
+    "editor_flags": []
+   }
+  ],
+  "parts": [
+   "tracks/mm05-the-more-you-buy/render/extras/mm05-the-more-you-buy-kaching-check.mp3"
+  ],
+  "sampler": [
+   {
+    "n": 3,
+    "at": "0:47.00",
+    "src_in": 50.0,
+    "src_out": 70.0
+   }
+  ]
+ },
+ {
+  "id": "mm06-beeper-1993-sample-chip-2008",
+  "mm": "MM-06",
+  "kind": "album/library",
+  "title": "Beeper, 1993 / Sample-Chip, 2008",
+  "palette": "P10 ERA TIERS (1-bit 1993 -> 16-bit 2008)",
+  "motifs": [
+   "the flat line",
+   "the kink",
+   "the Upsell (1-bit)",
+   "the Water Line (young Mas)",
+   "the Build"
+  ],
+  "length": 87.899,
+  "files": {
+   "mp3": "tracks/mm06-beeper-1993-sample-chip-2008/render/mm06-beeper-1993-sample-chip-2008-album.mp3",
+   "album": "tracks/mm06-beeper-1993-sample-chip-2008/render/mm06-beeper-1993-sample-chip-2008-album.wav",
+   "underscore": "tracks/mm06-beeper-1993-sample-chip-2008/render/mm06-beeper-1993-sample-chip-2008-underscore.wav",
+   "underscore_mp3": "tracks/mm06-beeper-1993-sample-chip-2008/render/mm06-beeper-1993-sample-chip-2008-underscore.mp3",
+   "stems": {
+    "piano": "tracks/mm06-beeper-1993-sample-chip-2008/render/stems/mm06-beeper-1993-sample-chip-2008-piano.flac",
+    "strings": "tracks/mm06-beeper-1993-sample-chip-2008/render/stems/mm06-beeper-1993-sample-chip-2008-strings.flac",
+    "bass": "tracks/mm06-beeper-1993-sample-chip-2008/render/stems/mm06-beeper-1993-sample-chip-2008-bass.flac",
+    "chip": "tracks/mm06-beeper-1993-sample-chip-2008/render/stems/mm06-beeper-1993-sample-chip-2008-chip.flac"
+   },
+   "midi": "tracks/mm06-beeper-1993-sample-chip-2008/render/mm06-beeper-1993-sample-chip-2008.mid",
+   "pianoroll": "tracks/mm06-beeper-1993-sample-chip-2008/render/mm06-beeper-1993-sample-chip-2008-pianoroll.png",
+   "cue_sheet": "tracks/mm06-beeper-1993-sample-chip-2008/render/mm06-beeper-1993-sample-chip-2008.cue.json",
+   "readme": "tracks/mm06-beeper-1993-sample-chip-2008/README.md"
+  },
+  "firstUse": "Ep1 sc 3-4 F1.1 (1993), 0:30",
+  "tone": "his past as the machine heard it: a 1-bit kid poking a beeper, then a 16-bit jazz trio remembering the early web -- a memory, not a video game",
+  "key": "F minor (1-bit); A-flat-major colours Abmaj9 - Dbmaj9 - Fm9 - Eb9sus4 (16-bit); Fm(add9) (render front)",
+  "composer": "OST composer C (fix 1: composer A)",
+  "loudness": {
+   "album_lufs": -14.0,
+   "album_tp_db": -1.15,
+   "underscore_lufs": -20.01,
+   "underscore_target": -20.0,
+   "underscore_tp_db": -3.15,
+   "underscore_st_p95_corrected": -17.61
+  },
+  "balance": {
+   "piano": 4,
+   "orch": 6,
+   "bigband": 0,
+   "chip": 90
+  },
+  "sections": [
+   {
+    "label": "I 1993: the flat line",
+    "start": 0.0,
+    "end": 10.0
+   },
+   {
+    "label": "I 1993: the knee's cells",
+    "start": 10.0,
+    "end": 20.0
+   },
+   {
+    "label": "I 1993: Fm9 arpeggios",
+    "start": 20.0,
+    "end": 30.0
+   },
+   {
+    "label": "I 1993: NESNEJ (the empty slot)",
+    "start": 30.0,
+    "end": 40.0
+   },
+   {
+    "label": "II 2008: young Mas",
+    "start": 40.0,
+    "end": 60.0
+   },
+   {
+    "label": "II 2008: the dial-up era",
+    "start": 60.0,
+    "end": 80.0
+   },
+   {
+    "label": "render front: 1-bit -> 16-bit -> BASE",
+    "start": 80.0,
+    "end": 85.0
+   }
+  ],
+  "loops": [
+   {
+    "file": "tracks/mm06-beeper-1993-sample-chip-2008/render/mm06-beeper-1993-sample-chip-2008-loop.wav",
+    "seconds": 20.0,
+    "frames": 480.0,
+    "verdict": "seamless"
+   }
+  ],
+  "qa": {
+   "stems_residual_db": -119.2,
+   "knee_whole": 0,
+   "knee_completion": 0,
+   "written_a_over_f_bass": 0,
+   "f_major_ok": true,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 5,
+    "unattributed": 0
+   },
+   "hits": "12/12",
+   "sub_under_room_ok": null,
+   "engine_warnings": 0,
+   "editor_flags": []
+  },
+  "status": "fix pass 1 (2026-09-26): re-rendered on the fixed engine and re-measured by the editor; NOT auditioned. the knee completion broken: bar 7 re-strikes C5 (then F4 F4 F3); knee completion 0, across the loop seam too",
+  "open": [
+   "ears: at 0:15.3, does the re-struck C sound stuck, not like a cadence?"
+  ],
+  "parts": [
+   "tracks/mm06-beeper-1993-sample-chip-2008/render/parts/mm06-beeper-1993-sample-chip-2008-cut15-young-mas.wav",
+   "tracks/mm06-beeper-1993-sample-chip-2008/render/parts/mm06-beeper-1993-sample-chip-2008-cut30-1993.wav",
+   "tracks/mm06-beeper-1993-sample-chip-2008/render/parts/mm06-beeper-1993-sample-chip-2008-m1-1993-lp7k.wav",
+   "tracks/mm06-beeper-1993-sample-chip-2008/render/parts/mm06-beeper-1993-sample-chip-2008-m1-1993.wav",
+   "tracks/mm06-beeper-1993-sample-chip-2008/render/parts/mm06-beeper-1993-sample-chip-2008-m1-arps-loop.wav",
+   "tracks/mm06-beeper-1993-sample-chip-2008/render/parts/mm06-beeper-1993-sample-chip-2008-m1-flat-line-loop.wav",
+   "tracks/mm06-beeper-1993-sample-chip-2008/render/parts/mm06-beeper-1993-sample-chip-2008-m2-2008.wav",
+   "tracks/mm06-beeper-1993-sample-chip-2008/render/parts/mm06-beeper-1993-sample-chip-2008-m2-dial-up-loop.wav",
+   "tracks/mm06-beeper-1993-sample-chip-2008/render/parts/mm06-beeper-1993-sample-chip-2008-m2-young-mas-reduced-loop.wav",
+   "tracks/mm06-beeper-1993-sample-chip-2008/render/parts/mm06-beeper-1993-sample-chip-2008-m2-young-mas-solo-loop.wav",
+   "tracks/mm06-beeper-1993-sample-chip-2008/render/parts/mm06-beeper-1993-sample-chip-2008-render-front-back.wav",
+   "tracks/mm06-beeper-1993-sample-chip-2008/render/parts/mm06-beeper-1993-sample-chip-2008-render-front-fwd.wav"
+  ],
+  "sampler": [
+   {
+    "n": 2,
+    "at": "0:26.00",
+    "src_in": 30.0,
+    "src_out": 50.0
+   }
+  ]
+ },
+ {
+  "id": "mm07-how-to-fire-a-ceo",
+  "mm": "MM-07",
+  "kind": "album/library",
+  "title": "How to Fire a CEO Who Owns Nothing.",
+  "palette": "P14 BLUEPRINT (+ a P01 DARK ROOM pickup)",
+  "motifs": [
+   "the Blueprint",
+   "the knee-cell waltz",
+   "Step Four",
+   "the Water Line bar 1"
+  ],
+  "length": 100.299,
+  "files": {
+   "mp3": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-album.mp3",
+   "album": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-album.wav",
+   "underscore": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-underscore.wav",
+   "underscore_mp3": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-underscore.mp3",
+   "stems": {
+    "piano": "tracks/mm07-how-to-fire-a-ceo/render/stems/mm07-how-to-fire-a-ceo-piano.flac",
+    "strings": "tracks/mm07-how-to-fire-a-ceo/render/stems/mm07-how-to-fire-a-ceo-strings.flac",
+    "winds": "tracks/mm07-how-to-fire-a-ceo/render/stems/mm07-how-to-fire-a-ceo-winds.flac",
+    "perc": "tracks/mm07-how-to-fire-a-ceo/render/stems/mm07-how-to-fire-a-ceo-perc.flac",
+    "chip": "tracks/mm07-how-to-fire-a-ceo/render/stems/mm07-how-to-fire-a-ceo-chip.flac",
+    "synth": "tracks/mm07-how-to-fire-a-ceo/render/stems/mm07-how-to-fire-a-ceo-synth.flac"
+   },
+   "midi": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo.mid",
+   "pianoroll": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-pianoroll.png",
+   "cue_sheet": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo.cue.json",
+   "readme": "tracks/mm07-how-to-fire-a-ceo/README.md"
+  },
+  "firstUse": "Ep1 sc 24-25, 12:31 (picture cut e01-s25-the-plan); PLAN-SHORT / PLAN-MICRO: every later episode's THE PLAN",
+  "tone": "THE PLAN: a precise, cheerful drafting machine that explains everything accurately and then breaks",
+  "key": "F dorian (quartal; no A natural); sc 24 F minor; the waltz Fm - Dbmaj7 - C7sus - Fm",
+  "composer": "Composer A (OST batch 1)",
+  "loudness": {
+   "album_lufs": -14.01,
+   "album_tp_db": -1.15,
+   "underscore_lufs": -16.01,
+   "underscore_target": -16.0,
+   "underscore_tp_db": -3.15,
+   "underscore_st_p95_corrected": -14.51
+  },
+  "balance": {
+   "piano": 1,
+   "orch": 48,
+   "bigband": 0,
+   "chip": 52
+  },
+  "sections": [
+   {
+    "label": "E01-S24 the suite (DARK ROOM)",
+    "start": 0.0,
+    "end": 5.0
+   },
+   {
+    "label": "WORD",
+    "start": 5.0,
+    "end": 12.5
+   },
+   {
+    "label": "DIAGRAM: the chip waltz (3/4 on the 96 beat)",
+    "start": 12.5,
+    "end": 20.0
+   },
+   {
+    "label": "DIAGRAM: the remaining six; THESE FOUR VOTE; the structure",
+    "start": 20.0,
+    "end": 30.0
+   },
+   {
+    "label": "PLAN: the path; three ticks; stop at step 4",
+    "start": 30.0,
+    "end": 37.5
+   },
+   {
+    "label": "\"Step four.\" / \"Good question.\" (one held chord, pp)",
+    "start": 37.5,
+    "end": 42.5
+   },
+   {
+    "label": "BREAK: the stuck loop; the tape-stop into the JOIN click",
+    "start": 42.5,
+    "end": 50.0
+   },
+   {
+    "label": "PLAN-SHORT: WORD",
+    "start": 50.0,
+    "end": 55.0
+   },
+   {
+    "label": "PLAN-SHORT: DIAGRAM (the seamless loop)",
+    "start": 55.0,
+    "end": 67.5
+   },
+   {
+    "label": "PLAN-SHORT: PLAN",
+    "start": 67.5,
+    "end": 75.0
+   },
+   {
+    "label": "PLAN-SHORT: BREAK",
+    "start": 75.0,
+    "end": 80.0
+   },
+   {
+    "label": "PLAN-MICRO: WORD",
+    "start": 80.0,
+    "end": 82.5
+   },
+   {
+    "label": "PLAN-MICRO: DIAGRAM",
+    "start": 82.5,
+    "end": 90.0
+   },
+   {
+    "label": "PLAN-MICRO: PLAN",
+    "start": 90.0,
+    "end": 97.5
+   },
+   {
+    "label": "PLAN-MICRO: BREAK",
+    "start": 97.5,
+    "end": 100.0
+   }
+  ],
+  "loops": [
+   {
+    "file": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-loop.wav",
+    "seconds": 12.5,
+    "frames": 300.0,
+    "verdict": "seamless"
+   }
+  ],
+  "qa": {
+   "stems_residual_db": -122.4,
+   "knee_whole": 0,
+   "knee_completion": 0,
+   "written_a_over_f_bass": 0,
+   "f_major_ok": false,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 5,
+    "explained": 15,
+    "unattributed": 0
+   },
+   "hits": "32/32",
+   "sub_under_room_ok": null,
+   "engine_warnings": 1,
+   "editor_flags": [
+    "F-major (engine, full note data) worst sieved A/F 0.515, classes {'written': 0, 'resonance': 5, 'explained': 15, 'unattributed': 0}"
+   ]
+  },
+  "status": "fix pass 1 (2026-09-26): re-rendered on the fixed engine and re-measured by the editor; NOT auditioned. harp and pizz retuned; PLAN-SHORT (30 s + loop) and PLAN-MICRO (20 s) rendered as their own files with stems; MP3s beside the tape-stop alternates",
+  "open": [
+   "F-major: 5 windows at the break (43.1-48.7 s) read A energy with nothing written: the tape-stop glide and the viola pizz body. Accepted by the editor; ears on the break"
+  ],
+  "variants": [
+   {
+    "id": "mm07-how-to-fire-a-ceo-plan-micro",
+    "title": "How to Fire a CEO Who Owns Nothing. (PLAN-MICRO)",
+    "length": 20.299,
+    "mp3": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-plan-micro-album.mp3",
+    "album": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-plan-micro-album.wav",
+    "underscore": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-plan-micro-underscore.wav",
+    "underscore_mp3": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-plan-micro-underscore.mp3",
+    "cue_sheet": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-plan-micro.cue.json",
+    "album_lufs": -14.02,
+    "underscore_lufs": -16.02,
+    "engine_warnings": 0,
+    "editor_flags": []
+   },
+   {
+    "id": "mm07-how-to-fire-a-ceo-plan-short",
+    "title": "How to Fire a CEO Who Owns Nothing. (PLAN-SHORT)",
+    "length": 30.0,
+    "mp3": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-plan-short-album.mp3",
+    "album": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-plan-short-album.wav",
+    "underscore": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-plan-short-underscore.wav",
+    "underscore_mp3": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-plan-short-underscore.mp3",
+    "cue_sheet": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-plan-short.cue.json",
+    "album_lufs": -14.0,
+    "underscore_lufs": -16.04,
+    "engine_warnings": 0,
+    "editor_flags": []
+   }
+  ],
+  "cuts": [
+   {
+    "label": "E01 picture cut (sc 24 + 25)",
+    "start": 0.0,
+    "end": 50.0,
+    "note": "= e01-s25-the-plan"
+   },
+   {
+    "label": "PLAN-SHORT (12 bars, 2-5-3-2, flute)",
+    "start": 50.0,
+    "end": 80.0,
+    "note": "also its own mastered file with stems and loop (fix pass 1): see variants"
+   },
+   {
+    "label": "PLAN-MICRO (8 bars, 1-3-3-1, clarinet)",
+    "start": 80.0,
+    "end": 100.297,
+    "note": "also its own mastered file with stems (fix pass 1): see variants"
+   }
+  ],
+  "sampler": [
+   {
+    "n": 5,
+    "at": "1:29.00",
+    "src_in": 30.0,
+    "src_out": 49.0
+   }
+  ]
+ },
+ {
+  "id": "e01-s25-the-plan",
+  "mm": "MM-07",
+  "kind": "to-picture",
+  "title": "How to Fire a CEO Who Owns Nothing. (E01-S24 + S25, to picture)",
+  "palette": "P14 BLUEPRINT (+ a P01 DARK ROOM pickup)",
+  "motifs": [
+   "the Water Line bar 1",
+   "the Blueprint",
+   "the knee-cell waltz",
+   "Step Four"
+  ],
+  "length": 50.0,
+  "files": {
+   "mp3": "tracks/mm07-how-to-fire-a-ceo/render/e01-s25-the-plan-album.mp3",
+   "album": "tracks/mm07-how-to-fire-a-ceo/render/e01-s25-the-plan-album.wav",
+   "underscore": "tracks/mm07-how-to-fire-a-ceo/render/e01-s25-the-plan-underscore.wav",
+   "underscore_mp3": "tracks/mm07-how-to-fire-a-ceo/render/e01-s25-the-plan-underscore.mp3",
+   "stems": {
+    "piano": "tracks/mm07-how-to-fire-a-ceo/render/stems/e01-s25-the-plan-piano.flac",
+    "strings": "tracks/mm07-how-to-fire-a-ceo/render/stems/e01-s25-the-plan-strings.flac",
+    "winds": "tracks/mm07-how-to-fire-a-ceo/render/stems/e01-s25-the-plan-winds.flac",
+    "perc": "tracks/mm07-how-to-fire-a-ceo/render/stems/e01-s25-the-plan-perc.flac",
+    "chip": "tracks/mm07-how-to-fire-a-ceo/render/stems/e01-s25-the-plan-chip.flac",
+    "synth": "tracks/mm07-how-to-fire-a-ceo/render/stems/e01-s25-the-plan-synth.flac"
+   },
+   "midi": "tracks/mm07-how-to-fire-a-ceo/render/e01-s25-the-plan.mid",
+   "pianoroll": "tracks/mm07-how-to-fire-a-ceo/render/e01-s25-the-plan-pianoroll.png",
+   "cue_sheet": "tracks/mm07-how-to-fire-a-ceo/render/e01-s25-the-plan.cue.json",
+   "readme": "tracks/mm07-how-to-fire-a-ceo/README.md"
+  },
+  "firstUse": "Ep1 sc 24-25, 12:31-13:21",
+  "tone": "THE PLAN: a precise, cheerful drafting machine that explains everything accurately and then breaks",
+  "key": "F dorian (quartal; no A natural); sc 24 F minor; the waltz Fm - Dbmaj7 - C7sus - Fm",
+  "composer": "Composer A (OST batch 1)",
+  "loudness": {
+   "album_lufs": -14.02,
+   "album_tp_db": -1.15,
+   "underscore_lufs": -16.02,
+   "underscore_target": -16.0,
+   "underscore_tp_db": -3.15,
+   "underscore_st_p95_corrected": -14.17
+  },
+  "balance": {
+   "piano": 1,
+   "orch": 52,
+   "bigband": 0,
+   "chip": 47
+  },
+  "sections": [
+   {
+    "label": "E01-S24 the suite (DARK ROOM)",
+    "start": 0.0,
+    "end": 5.0
+   },
+   {
+    "label": "WORD",
+    "start": 5.0,
+    "end": 12.5
+   },
+   {
+    "label": "DIAGRAM: the chip waltz (3/4 on the 96 beat)",
+    "start": 12.5,
+    "end": 20.0
+   },
+   {
+    "label": "DIAGRAM: the remaining six; THESE FOUR VOTE; the structure",
+    "start": 20.0,
+    "end": 30.0
+   },
+   {
+    "label": "PLAN: the path; three ticks; stop at step 4",
+    "start": 30.0,
+    "end": 37.5
+   },
+   {
+    "label": "\"Step four.\" / \"Good question.\" (one held chord, pp)",
+    "start": 37.5,
+    "end": 42.5
+   },
+   {
+    "label": "BREAK: the stuck loop; the tape-stop into the JOIN click",
+    "start": 42.5,
+    "end": 50.0
+   }
+  ],
+  "loops": [],
+  "qa": {
+   "stems_residual_db": -122.5,
+   "knee_whole": 0,
+   "knee_completion": 0,
+   "written_a_over_f_bass": 0,
+   "f_major_ok": false,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 5,
+    "explained": 8,
+    "unattributed": 0
+   },
+   "hits": "22/22",
+   "sub_under_room_ok": null,
+   "engine_warnings": 1,
+   "editor_flags": [
+    "F-major (engine, full note data) worst sieved A/F 0.466, classes {'written': 0, 'resonance': 5, 'explained': 8, 'unattributed': 0}"
+   ]
+  },
+  "status": "fix pass 1 (2026-09-26): re-rendered on the fixed engine and re-measured by the editor; NOT auditioned. harp and pizz retuned; timing unchanged (0.0 ms lag, markers within 2.7 ms)",
+  "open": [
+   "F-major: the same 5 break windows as MM-07 (accepted; ears)"
+  ],
+  "variants": [
+   {
+    "id": "mm07-how-to-fire-a-ceo-plan-micro",
+    "title": "How to Fire a CEO Who Owns Nothing. (PLAN-MICRO)",
+    "length": 20.299,
+    "mp3": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-plan-micro-album.mp3",
+    "album": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-plan-micro-album.wav",
+    "underscore": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-plan-micro-underscore.wav",
+    "underscore_mp3": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-plan-micro-underscore.mp3",
+    "cue_sheet": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-plan-micro.cue.json",
+    "album_lufs": -14.02,
+    "underscore_lufs": -16.02,
+    "engine_warnings": 0,
+    "editor_flags": []
+   },
+   {
+    "id": "mm07-how-to-fire-a-ceo-plan-short",
+    "title": "How to Fire a CEO Who Owns Nothing. (PLAN-SHORT)",
+    "length": 30.0,
+    "mp3": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-plan-short-album.mp3",
+    "album": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-plan-short-album.wav",
+    "underscore": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-plan-short-underscore.wav",
+    "underscore_mp3": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-plan-short-underscore.mp3",
+    "cue_sheet": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-plan-short.cue.json",
+    "album_lufs": -14.0,
+    "underscore_lufs": -16.04,
+    "engine_warnings": 0,
+    "editor_flags": []
+   }
+  ],
+  "parts": [
+   "tracks/mm07-how-to-fire-a-ceo/render/alt/e01-s25-the-plan-tapestop-b17-1-album-from-b16.wav",
+   "tracks/mm07-how-to-fire-a-ceo/render/alt/e01-s25-the-plan-tapestop-b17-1-underscore-from-b16.wav",
+   "tracks/mm07-how-to-fire-a-ceo/render/alt/e01-s25-the-plan-tapestop-b17-2-album-from-b16.wav",
+   "tracks/mm07-how-to-fire-a-ceo/render/alt/e01-s25-the-plan-tapestop-b17-2-underscore-from-b16.wav",
+   "tracks/mm07-how-to-fire-a-ceo/render/alt/e01-s25-the-plan-tapestop-b17-4-album-from-b16.wav",
+   "tracks/mm07-how-to-fire-a-ceo/render/alt/e01-s25-the-plan-tapestop-b17-4-underscore-from-b16.wav"
+  ],
+  "parts_note": "alt/: the tape-stop starting on b17.1, b17.2 or b17.4; butt at 42.500 s (frame 1020)"
+ },
+ {
+  "id": "mm08-the-falling-tile",
+  "mm": "MM-08",
+  "kind": "album/library",
+  "title": "The Falling Tile (album edit)",
+  "palette": "P03 LEVERAGE -> D6 -> P01 DARK ROOM",
+  "motifs": [
+   "Step Four",
+   "the 1-bit flat line",
+   "Neleh's clockwork",
+   "Mada's spinner",
+   "the Water Line settle",
+   "THE REWIND"
+  ],
+  "length": 42.803,
+  "files": {
+   "mp3": "tracks/mm08-the-falling-tile/render/mm08-the-falling-tile-album.mp3",
+   "album": "tracks/mm08-the-falling-tile/render/mm08-the-falling-tile-album.wav",
+   "underscore": "tracks/mm08-the-falling-tile/render/mm08-the-falling-tile-underscore.wav",
+   "underscore_mp3": "tracks/mm08-the-falling-tile/render/mm08-the-falling-tile-underscore.mp3",
+   "stems": {
+    "piano": "tracks/mm08-the-falling-tile/render/stems/mm08-the-falling-tile-piano.flac",
+    "strings": "tracks/mm08-the-falling-tile/render/stems/mm08-the-falling-tile-strings.flac",
+    "winds": "tracks/mm08-the-falling-tile/render/stems/mm08-the-falling-tile-winds.flac",
+    "brass": "tracks/mm08-the-falling-tile/render/stems/mm08-the-falling-tile-brass.flac",
+    "drums": "tracks/mm08-the-falling-tile/render/stems/mm08-the-falling-tile-drums.flac",
+    "perc": "tracks/mm08-the-falling-tile/render/stems/mm08-the-falling-tile-perc.flac",
+    "chip": "tracks/mm08-the-falling-tile/render/stems/mm08-the-falling-tile-chip.flac"
+   },
+   "midi": "tracks/mm08-the-falling-tile/render/mm08-the-falling-tile.mid",
+   "pianoroll": "tracks/mm08-the-falling-tile/render/mm08-the-falling-tile-pianoroll.png",
+   "cue_sheet": "tracks/mm08-the-falling-tile/render/mm08-the-falling-tile.cue.json",
+   "readme": "tracks/mm08-the-falling-tile/README.md"
+  },
+  "firstUse": "Ep1 sc 26-26A, 13:21 (picture cut e01-s26-the-falling-tile)",
+  "tone": "a trap closing without a tune, a click that takes every sound away, then one felt piano in the dark -- and the Orb rewinding his settle",
+  "key": "F pedal with semitone-shifting clusters; Step Four (Bbm - Ab - Gbmaj7) over F; 26A F open fifth, no third",
+  "composer": "Composer B (OST batch 1; fix 1: composer A)",
+  "loudness": {
+   "album_lufs": -16.01,
+   "album_tp_db": -1.15,
+   "underscore_lufs": -21.5,
+   "underscore_target": -21.5,
+   "underscore_tp_db": -5.15,
+   "underscore_st_p95_corrected": -19.66
+  },
+  "balance": {
+   "piano": 51,
+   "orch": 36,
+   "bigband": 0,
+   "chip": 13
+  },
+  "sections": [
+   {
+    "label": "26 P1 call connects (LEVERAGE low)",
+    "start": 0.0,
+    "end": 10.0
+   },
+   {
+    "label": "26 P2 dialog, eyes, arrow (LEVERAGE)",
+    "start": 10.0,
+    "end": 17.5
+   },
+   {
+    "label": "D6 (album: 2 bars)",
+    "start": 17.5,
+    "end": 22.5
+   },
+   {
+    "label": "26A carve + V.O. 1",
+    "start": 22.5,
+    "end": 30.0
+   },
+   {
+    "label": "26A his post (DRY)",
+    "start": 30.0,
+    "end": 35.0
+   },
+   {
+    "label": "26A wallet, V.O. 2, the Rewind",
+    "start": 35.0,
+    "end": 42.5
+   }
+  ],
+  "loops": [],
+  "qa": {
+   "stems_residual_db": -117.2,
+   "knee_whole": 0,
+   "knee_completion": 0,
+   "written_a_over_f_bass": 0,
+   "f_major_ok": true,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "hits": "12/12",
+   "sub_under_room_ok": true,
+   "engine_warnings": 0,
+   "editor_flags": []
+  },
+  "status": "fix pass 1 (2026-09-26): re-rendered on the fixed engine and re-measured by the editor; NOT auditioned. LEVERAGE rebalanced (low grand clusters +9 dB; phrase 1 27/56/0/17); cello and contrabass pizz notched at ~111 Hz; F-major 0 resonance windows",
+  "open": [
+   "ears: are the louder clusters murky? does the notched pizz pedal stay woody?"
+  ],
+  "variants": [
+   {
+    "id": "mm08-leverage-bed",
+    "title": "The Falling Tile: LEVERAGE bed (call connecting, loop)",
+    "length": 33.0,
+    "mp3": "tracks/mm08-the-falling-tile/render/variants/mm08-leverage-bed-album.mp3",
+    "album": "tracks/mm08-the-falling-tile/render/variants/mm08-leverage-bed-album.wav",
+    "underscore": "tracks/mm08-the-falling-tile/render/variants/mm08-leverage-bed-underscore.wav",
+    "underscore_mp3": "tracks/mm08-the-falling-tile/render/variants/mm08-leverage-bed-underscore.mp3",
+    "cue_sheet": "tracks/mm08-the-falling-tile/render/variants/mm08-leverage-bed.cue.json",
+    "album_lufs": -18.01,
+    "underscore_lufs": -22.0,
+    "engine_warnings": 0,
+    "editor_flags": []
+   }
+  ],
+  "sampler": [
+   {
+    "n": 6,
+    "at": "1:49.00",
+    "src_in": 0.0,
+    "src_out": 19.0
+   }
+  ]
+ },
+ {
+  "id": "e01-s26-the-falling-tile",
+  "mm": "MM-08",
+  "kind": "to-picture",
+  "title": "The Falling Tile (E01-S26 + S26A, to picture)",
+  "palette": "P03 LEVERAGE -> D6 -> P01 DARK ROOM",
+  "motifs": [
+   "Step Four",
+   "the 1-bit flat line",
+   "Neleh's clockwork",
+   "Mada's spinner",
+   "the Water Line settle",
+   "THE REWIND"
+  ],
+  "length": 72.803,
+  "files": {
+   "mp3": "tracks/e01-s26-the-falling-tile/render/e01-s26-the-falling-tile-album.mp3",
+   "album": "tracks/e01-s26-the-falling-tile/render/e01-s26-the-falling-tile-album.wav",
+   "underscore": "tracks/e01-s26-the-falling-tile/render/e01-s26-the-falling-tile-underscore.wav",
+   "underscore_mp3": "tracks/e01-s26-the-falling-tile/render/e01-s26-the-falling-tile-underscore.mp3",
+   "stems": {
+    "piano": "tracks/e01-s26-the-falling-tile/render/stems/e01-s26-the-falling-tile-piano.flac",
+    "strings": "tracks/e01-s26-the-falling-tile/render/stems/e01-s26-the-falling-tile-strings.flac",
+    "winds": "tracks/e01-s26-the-falling-tile/render/stems/e01-s26-the-falling-tile-winds.flac",
+    "brass": "tracks/e01-s26-the-falling-tile/render/stems/e01-s26-the-falling-tile-brass.flac",
+    "drums": "tracks/e01-s26-the-falling-tile/render/stems/e01-s26-the-falling-tile-drums.flac",
+    "perc": "tracks/e01-s26-the-falling-tile/render/stems/e01-s26-the-falling-tile-perc.flac",
+    "chip": "tracks/e01-s26-the-falling-tile/render/stems/e01-s26-the-falling-tile-chip.flac"
+   },
+   "midi": "tracks/e01-s26-the-falling-tile/render/e01-s26-the-falling-tile.mid",
+   "pianoroll": "tracks/e01-s26-the-falling-tile/render/e01-s26-the-falling-tile-pianoroll.png",
+   "cue_sheet": "tracks/e01-s26-the-falling-tile/render/e01-s26-the-falling-tile.cue.json",
+   "readme": "tracks/e01-s26-the-falling-tile/README.md"
+  },
+  "firstUse": "Ep1 sc 26-26A, 13:21.0-14:33.5",
+  "tone": "a trap closing without a tune, a click that takes every sound away, then one felt piano in the dark -- and the Orb rewinding his settle",
+  "key": "F pedal with semitone-shifting clusters; Step Four (Bbm - Ab - Gbmaj7) over F; 26A F open fifth, no third",
+  "composer": "Composer B (OST batch 1; fix 1: composer A)",
+  "loudness": {
+   "album_lufs": -16.01,
+   "album_tp_db": -1.15,
+   "underscore_lufs": -21.5,
+   "underscore_target": -21.5,
+   "underscore_tp_db": -5.13,
+   "underscore_st_p95_corrected": -19.64
+  },
+  "balance": {
+   "piano": 51,
+   "orch": 36,
+   "bigband": 0,
+   "chip": 13
+  },
+  "sections": [
+   {
+    "label": "26 P1 call connects (LEVERAGE low)",
+    "start": 0.0,
+    "end": 10.0
+   },
+   {
+    "label": "26 P2 dialog, eyes, arrow (LEVERAGE)",
+    "start": 10.0,
+    "end": 17.5
+   },
+   {
+    "label": "D6: silence",
+    "start": 17.5,
+    "end": 52.5
+   },
+   {
+    "label": "26A carve + V.O. 1",
+    "start": 52.5,
+    "end": 60.0
+   },
+   {
+    "label": "26A his post (DRY)",
+    "start": 60.0,
+    "end": 65.0
+   },
+   {
+    "label": "26A wallet, V.O. 2, the Rewind",
+    "start": 65.0,
+    "end": 72.5
+   }
+  ],
+  "loops": [],
+  "qa": {
+   "stems_residual_db": -117.2,
+   "knee_whole": 0,
+   "knee_completion": 0,
+   "written_a_over_f_bass": 0,
+   "f_major_ok": true,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "hits": "12/12",
+   "sub_under_room_ok": true,
+   "engine_warnings": 0,
+   "editor_flags": []
+  },
+  "status": "fix pass 1 (2026-09-26): re-rendered on the fixed engine and re-measured by the editor; NOT auditioned. as MM-08; timing unchanged (0.0 ms lag)",
+  "open": [
+   "ears: as MM-08"
+  ]
+ },
+ {
+  "id": "mm09-the-boards-side",
+  "mm": "MM-09",
+  "kind": "to-picture (in sections) + album",
+  "title": "The Board's Side / What They Didn't Know",
+  "palette": "P02 PROCEDURE + P08 OUTS KIT (09x REVERSAL)",
+  "motifs": [
+   "Step Four",
+   "the Door + the GPU choir",
+   "Neleh's clockwork and question",
+   "Mada's spinner",
+   "the Lighthouse",
+   "the Addendum",
+   "the hourglass",
+   "Tasya's floor",
+   "REVERSAL"
+  ],
+  "length": 114.879,
+  "files": {
+   "mp3": "tracks/mm09-the-boards-side/render/mm09-the-boards-side-album.mp3",
+   "album": "tracks/mm09-the-boards-side/render/mm09-the-boards-side-album.wav",
+   "underscore": "tracks/mm09-the-boards-side/render/mm09-the-boards-side-underscore.wav",
+   "underscore_mp3": "tracks/mm09-the-boards-side/render/mm09-the-boards-side-underscore.mp3",
+   "stems": {
+    "piano": "tracks/mm09-the-boards-side/render/stems/mm09-the-boards-side-piano.flac",
+    "strings": "tracks/mm09-the-boards-side/render/stems/mm09-the-boards-side-strings.flac",
+    "winds": "tracks/mm09-the-boards-side/render/stems/mm09-the-boards-side-winds.flac",
+    "brass": "tracks/mm09-the-boards-side/render/stems/mm09-the-boards-side-brass.flac",
+    "perc": "tracks/mm09-the-boards-side/render/stems/mm09-the-boards-side-perc.flac",
+    "chip": "tracks/mm09-the-boards-side/render/stems/mm09-the-boards-side-chip.flac"
+   },
+   "midi": "tracks/mm09-the-boards-side/render/mm09-the-boards-side.mid",
+   "pianoroll": "tracks/mm09-the-boards-side/render/mm09-the-boards-side-pianoroll.png",
+   "cue_sheet": "tracks/mm09-the-boards-side/render/mm09-the-boards-side.cue.json",
+   "readme": "tracks/mm09-the-boards-side/README.md"
+  },
+  "firstUse": "Ep1 sc 27-28, 14:34 (section files in render/parts/)",
+  "tone": "their side, played straight and with dignity: a procedure that keeps going and a fourth step that is always blank; then the door back",
+  "key": "B-flat minor centre (Step Four); D-flat lydian (Alyi); B-flat minor (Mario); Abmaj9 -> Cmaj9 (Tasya); F(add9) no third (09x)",
+  "composer": "OST composer C (fix 1: composer A)",
+  "loudness": {
+   "album_lufs": -16.02,
+   "album_tp_db": -1.15,
+   "underscore_lufs": -20.0,
+   "underscore_target": -20.0,
+   "underscore_tp_db": -4.14,
+   "underscore_st_p95_corrected": -17.58
+  },
+  "balance": {
+   "piano": 1,
+   "orch": 75,
+   "bigband": 22,
+   "chip": 1
+  },
+  "sections": [
+   {
+    "label": "a NOON",
+    "start": 0.0,
+    "end": 30.0
+   },
+   {
+    "label": "b NOV 18 hearts",
+    "start": 30.0,
+    "end": 40.0
+   },
+   {
+    "label": "c boardroom night",
+    "start": 40.0,
+    "end": 65.0
+   },
+   {
+    "label": "d LIGHTHOUSE",
+    "start": 65.0,
+    "end": 80.0
+   },
+   {
+    "label": "e NOV 19 camera (dry)",
+    "start": 80.0,
+    "end": 85.0
+   },
+   {
+    "label": "f TTEMME",
+    "start": 85.0,
+    "end": 95.0
+   },
+   {
+    "label": "g 11:53 PM (Tasya)",
+    "start": 95.0,
+    "end": 105.0
+   },
+   {
+    "label": "h Step four?",
+    "start": 105.0,
+    "end": 110.0
+   },
+   {
+    "label": "09x REVERSAL (card)",
+    "start": 110.0,
+    "end": 115.0
+   }
+  ],
+  "loops": [],
+  "qa": {
+   "stems_residual_db": -119.0,
+   "knee_whole": 0,
+   "knee_completion": 0,
+   "written_a_over_f_bass": 0,
+   "f_major_ok": false,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 1,
+    "explained": 2,
+    "unattributed": 0
+   },
+   "hits": "9/10",
+   "sub_under_room_ok": null,
+   "engine_warnings": 2,
+   "editor_flags": [
+    "hits off: 20.0 s 10.7 ms",
+    "F-major (engine, full note data) worst sieved A/F 0.163, classes {'written': 0, 'resonance': 1, 'explained': 2, 'unattributed': 0}"
+   ]
+  },
+  "status": "fix pass 1 (2026-09-26): re-rendered on the fixed engine and re-measured by the editor; NOT auditioned. the written A3 over F3 removed (the pulse leaves F for two bars); the clarinet whisper stops on B-flat 3; the blanks' contrabass F1 notched at 111 Hz; written third 0; timing unchanged (0.0 ms lag); fix 2b: re-rendered on the retuned engine (six solo-violin notes move 11.5 c; the music is unchanged)",
+  "open": [
+   "F-major (fix 2b): one window, 74.99-75.61 s, sieved A/F 0.126, classed resonance: the harp's F4 / B-flat 4 ring (430-447 Hz) where the soft cello F2 holds 6.3 % of the pitched energy. Ears: anything major there?",
+   "ears: 18.75-21.3 s, any F-major colour? do the notched blanks stay full?",
+   "the b9.1 marker (20.0 s) reads +10.7 ms (0.7 ms over the 10 ms tolerance; pre-existing)"
+  ],
+  "parts": [
+   "tracks/mm09-the-boards-side/render/parts/mm09-the-boards-side-e01-s27a-hold-loop.wav",
+   "tracks/mm09-the-boards-side/render/parts/mm09-the-boards-side-e01-s27a-noon.wav",
+   "tracks/mm09-the-boards-side/render/parts/mm09-the-boards-side-e01-s27b-hold-loop.wav",
+   "tracks/mm09-the-boards-side/render/parts/mm09-the-boards-side-e01-s27b-nov18-hearts.wav",
+   "tracks/mm09-the-boards-side/render/parts/mm09-the-boards-side-e01-s27c-boardroom-night.wav",
+   "tracks/mm09-the-boards-side/render/parts/mm09-the-boards-side-e01-s27c-hold-loop.wav",
+   "tracks/mm09-the-boards-side/render/parts/mm09-the-boards-side-e01-s27d-hold3-loop.wav",
+   "tracks/mm09-the-boards-side/render/parts/mm09-the-boards-side-e01-s27d-lighthouse.wav",
+   "tracks/mm09-the-boards-side/render/parts/mm09-the-boards-side-e01-s27f-hold-loop.wav",
+   "tracks/mm09-the-boards-side/render/parts/mm09-the-boards-side-e01-s27f-ttemme.wav",
+   "tracks/mm09-the-boards-side/render/parts/mm09-the-boards-side-e01-s27g-1153pm.wav",
+   "tracks/mm09-the-boards-side/render/parts/mm09-the-boards-side-e01-s27g-hold-loop.wav",
+   "tracks/mm09-the-boards-side/render/parts/mm09-the-boards-side-e01-s27h-hold-loop.wav",
+   "tracks/mm09-the-boards-side/render/parts/mm09-the-boards-side-e01-s27h-step-four.wav",
+   "tracks/mm09-the-boards-side/render/parts/mm09-the-boards-side-e01-s28-what-they-didnt-know.wav"
+  ],
+  "sampler": [
+   {
+    "n": 7,
+    "at": "2:09.00",
+    "src_in": 95.0,
+    "src_out": 114.879
+   }
+  ]
+ },
+ {
+  "id": "mm10-his-side-745",
+  "mm": "MM-10",
+  "kind": "to-picture + album",
+  "title": "His Side / 745",
+  "palette": "P01 DARK ROOM -> P11 SET-PIECE SWING",
+  "motifs": [
+   "the Water Line (and augmented)",
+   "the Build",
+   "Step Four",
+   "Mada's spinner"
+  ],
+  "length": 98.75,
+  "files": {
+   "mp3": "tracks/mm10-his-side-745/render/mm10-his-side-745-album.mp3",
+   "album": "tracks/mm10-his-side-745/render/mm10-his-side-745-album.wav",
+   "underscore": "tracks/mm10-his-side-745/render/mm10-his-side-745-underscore.wav",
+   "underscore_mp3": "tracks/mm10-his-side-745/render/mm10-his-side-745-underscore.mp3",
+   "stems": {
+    "piano": "tracks/mm10-his-side-745/render/stems/mm10-his-side-745-piano.flac",
+    "strings": "tracks/mm10-his-side-745/render/stems/mm10-his-side-745-strings.flac",
+    "winds": "tracks/mm10-his-side-745/render/stems/mm10-his-side-745-winds.flac",
+    "brass": "tracks/mm10-his-side-745/render/stems/mm10-his-side-745-brass.flac",
+    "bass": "tracks/mm10-his-side-745/render/stems/mm10-his-side-745-bass.flac",
+    "drums": "tracks/mm10-his-side-745/render/stems/mm10-his-side-745-drums.flac",
+    "perc": "tracks/mm10-his-side-745/render/stems/mm10-his-side-745-perc.flac",
+    "chip": "tracks/mm10-his-side-745/render/stems/mm10-his-side-745-chip.flac"
+   },
+   "midi": "tracks/mm10-his-side-745/render/mm10-his-side-745.mid",
+   "pianoroll": "tracks/mm10-his-side-745/render/mm10-his-side-745-pianoroll.png",
+   "cue_sheet": "tracks/mm10-his-side-745/render/mm10-his-side-745.cue.json",
+   "readme": "tracks/mm10-his-side-745/README.md"
+  },
+  "firstUse": "Ep1 sc 29, 16:28 (act frames 5925-8295, timed to lock v2; conform to v3/v4 pending: editor/CONFORM-ACT4.md)",
+  "tone": "his version of the five days: almost nothing, then the company falls into his lap as a swung avalanche that stops dead on the one man who will not move",
+  "key": "F minor -> Bb minor (Step Four) -> F minor -> C7(#9b13) pedal, unresolved (the card's freeze hit is on F)",
+  "composer": "Composer D (OST batch 1)",
+  "loudness": {
+   "album_lufs": -14.02,
+   "album_tp_db": -1.15,
+   "underscore_lufs": -16.03,
+   "underscore_target": -16.0,
+   "underscore_tp_db": -3.15,
+   "underscore_st_p95_corrected": -14.11
+  },
+  "balance": {
+   "piano": 15,
+   "orch": 33,
+   "bigband": 26,
+   "chip": 26
+  },
+  "sections": [
+   {
+    "label": "a: home shot + V.O.",
+    "start": 0.0,
+    "end": 5.625
+   },
+   {
+    "label": "a: D5 bar (EMPTY: MM-02) + real post (DRY)",
+    "start": 5.625,
+    "end": 15.625
+   },
+   {
+    "label": "a: V.O. + mostly.",
+    "start": 15.625,
+    "end": 20.625
+   },
+   {
+    "label": "a: the counter (745)",
+    "start": 20.625,
+    "end": 23.125
+   },
+   {
+    "label": "a: letter card + REPORTED + check (DRY)",
+    "start": 23.125,
+    "end": 40.625
+   },
+   {
+    "label": "a: Gerg compiling",
+    "start": 40.625,
+    "end": 48.125
+   },
+   {
+    "label": "a: quiet beat, D8, the door (NO MUSIC)",
+    "start": 48.125,
+    "end": 58.75
+   },
+   {
+    "label": "b1: the compile (phrase 1)",
+    "start": 58.75,
+    "end": 68.75
+   },
+   {
+    "label": "b2: step four (phrase 2)",
+    "start": 68.75,
+    "end": 78.75
+   },
+   {
+    "label": "b3: the Water Line augmented (phrase 3)",
+    "start": 78.75,
+    "end": 88.75
+   },
+   {
+    "label": "b4: the full band -> the card (phrase 4)",
+    "start": 88.75,
+    "end": 98.75
+   }
+  ],
+  "loops": [],
+  "qa": {
+   "stems_residual_db": -119.4,
+   "knee_whole": 0,
+   "knee_completion": 0,
+   "written_a_over_f_bass": 0,
+   "f_major_ok": true,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 1,
+    "unattributed": 0
+   },
+   "hits": "10/10",
+   "sub_under_room_ok": null,
+   "engine_warnings": 0,
+   "editor_flags": []
+  },
+  "status": "fix pass 1 (2026-09-26): re-rendered on the fixed engine and re-measured by the editor; NOT auditioned. the album master is now a 1:31.9 album edit (-14.0 LUFS): fragments with 1-bar rests, the avalanche, a NEW 12-bar second chorus, 3 bars of full band, the dead stop; the picture version (underscore + stems) is unchanged (0.0 ms lag); fix 2b: re-rendered on the retuned engine (the pressing tremolo's cello E3 and B-flat 3 were 33 and 25 c sharp; now in tune)",
+  "open": [
+   "ears: the new second chorus (53.1-83.1 s of the edit) and the intro's rests",
+   "the album edit is now the cue nearest the main title (distinct 2.72): not a second main title?",
+   "the picture cue sheet's album_wav points at the EDIT (another timeline): mix from the underscore / stems only"
+  ],
+  "length_note": "the picture version (the underscore master); the album edit's length is album_edit.length",
+  "album_edit": {
+   "id": "mm10-his-side-745-album-edit",
+   "title": "His Side / 745 (album edit)",
+   "length": 91.875,
+   "cue_sheet": "tracks/mm10-his-side-745/render/mm10-his-side-745-album-edit.cue.json",
+   "mp3": "tracks/mm10-his-side-745/render/mm10-his-side-745-album.mp3",
+   "album": "tracks/mm10-his-side-745/render/mm10-his-side-745-album.wav",
+   "midi": "tracks/mm10-his-side-745/render/mm10-his-side-745-album-edit.mid",
+   "sections": [
+    {
+     "label": "a: his side (album edit)",
+     "start": 0.0,
+     "end": 23.125
+    },
+    {
+     "label": "b1: the compile (phrase 1)",
+     "start": 23.125,
+     "end": 33.125
+    },
+    {
+     "label": "b2: step four (phrase 2)",
+     "start": 33.125,
+     "end": 43.125
+    },
+    {
+     "label": "b3: the Water Line augmented (phrase 3)",
+     "start": 43.125,
+     "end": 53.125
+    },
+    {
+     "label": "c2-1: the stack (the compile at full; Step Four pressing)",
+     "start": 53.125,
+     "end": 63.125
+    },
+    {
+     "label": "c2-2: the board presses (Step Four; the blank crushed)",
+     "start": 63.125,
+     "end": 73.125
+    },
+    {
+     "label": "c2-3: 745 faces (the Water Line, twice)",
+     "start": 73.125,
+     "end": 83.125
+    },
+    {
+     "label": "b4: the full band -> the card (phrase 4)",
+     "start": 83.125,
+     "end": 93.125
+    }
+   ],
+   "album_lufs": -14.02,
+   "album_tp_db": -1.15,
+   "balance": {
+    "piano": 26,
+    "orch": 30,
+    "bigband": 18,
+    "chip": 26
+   },
+   "engine_warnings": [],
+   "note": "files.mp3 / files.album of this row ARE the album edit; the picture version is files.underscore and the stems"
+  },
+  "sampler": [
+   {
+    "n": 9,
+    "at": "2:48.99",
+    "src_in": 63.125,
+    "src_out": 91.0
+   }
+  ]
+ },
+ {
+  "id": "mm11-the-return",
+  "mm": "MM-11",
+  "kind": "to-picture + album",
+  "title": "The Return",
+  "palette": "STRAIGHT -> the floor -> P03 LEVERAGE -> P09 VICTORY LAP",
+  "motifs": [
+   "the Door (violin)",
+   "Tasya's floor",
+   "the Build",
+   "the 1-bit flat line",
+   "the Water Line settle"
+  ],
+  "length": 82.375,
+  "files": {
+   "mp3": "tracks/mm11-the-return/render/mm11-the-return-album.mp3",
+   "album": "tracks/mm11-the-return/render/mm11-the-return-album.wav",
+   "underscore": "tracks/mm11-the-return/render/mm11-the-return-underscore.wav",
+   "underscore_mp3": "tracks/mm11-the-return/render/mm11-the-return-underscore.mp3",
+   "stems": {
+    "piano": "tracks/mm11-the-return/render/stems/mm11-the-return-piano.flac",
+    "strings": "tracks/mm11-the-return/render/stems/mm11-the-return-strings.flac",
+    "brass": "tracks/mm11-the-return/render/stems/mm11-the-return-brass.flac",
+    "bass": "tracks/mm11-the-return/render/stems/mm11-the-return-bass.flac",
+    "drums": "tracks/mm11-the-return/render/stems/mm11-the-return-drums.flac",
+    "perc": "tracks/mm11-the-return/render/stems/mm11-the-return-perc.flac",
+    "chip": "tracks/mm11-the-return/render/stems/mm11-the-return-chip.flac"
+   },
+   "midi": "tracks/mm11-the-return/render/mm11-the-return.mid",
+   "pianoroll": "tracks/mm11-the-return/render/mm11-the-return-pianoroll.png",
+   "cue_sheet": "tracks/mm11-the-return/render/mm11-the-return.cue.json",
+   "readme": "tracks/mm11-the-return/README.md"
+  },
+  "firstUse": "Ep1 sc 30, 18:00 (timed to lock v2; conform pending: editor/CONFORM-ACT4.md)",
+  "tone": "the other side's sounds hand him back his company one by one; the win scored straight and one size too big, then undercut; his felt returns last",
+  "key": "Db (the Door) -> Ab/C/E mediants (the floor) -> F pedal -> C pedal -> F minor (the Build) -> Abmaj9 (the stab) -> F, open fifth",
+  "composer": "Composer E (OST batch 1)",
+  "loudness": {
+   "album_lufs": -16.0,
+   "album_tp_db": -1.15,
+   "underscore_lufs": -20.0,
+   "underscore_target": -20.0,
+   "underscore_tp_db": -3.15,
+   "underscore_st_p95_corrected": -18.54
+  },
+  "balance": {
+   "piano": 3,
+   "orch": 68,
+   "bigband": 10,
+   "chip": 19
+  },
+  "sections": [
+   {
+    "label": "a ALYI (STRAIGHT)",
+    "start": 0.0,
+    "end": 24.375
+   },
+   {
+    "label": "b THE FLOOR",
+    "start": 24.375,
+    "end": 31.875
+   },
+   {
+    "label": "c1 LEVERAGE (the door bang -> \"Terms?\")",
+    "start": 31.875,
+    "end": 47.5
+   },
+   {
+    "label": "c2 the long hold; the stamp's C pedal",
+    "start": 47.5,
+    "end": 59.375
+   },
+   {
+    "label": "d GERG RETURNS",
+    "start": 59.375,
+    "end": 69.375
+   },
+   {
+    "label": "e1 the sign (VICTORY LAP)",
+    "start": 69.375,
+    "end": 71.875
+   },
+   {
+    "label": "e2 one chip note; 1993; [CU]; \"okay.\"",
+    "start": 71.875,
+    "end": 78.75
+   },
+   {
+    "label": "e3 the felt settle",
+    "start": 78.75,
+    "end": 80.875
+   }
+  ],
+  "loops": [],
+  "qa": {
+   "stems_residual_db": -118.7,
+   "knee_whole": 0,
+   "knee_completion": 0,
+   "written_a_over_f_bass": 0,
+   "f_major_ok": true,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "hits": "9/9",
+   "sub_under_room_ok": null,
+   "engine_warnings": 0,
+   "editor_flags": []
+  },
+  "status": "fix pass 1 (2026-09-26): re-rendered on the fixed engine and re-measured by the editor; NOT auditioned. the album master is now a 1:32.9 album edit (-16 LUFS); the felt ending's fade is in the render; the picture version is unchanged (0.0 ms lag); fix 2b: LEVERAGE fixed -- the cello pizz on its own track, notched at 110.5 Hz (Q 16, -12 dB), the F pedal re-bowed every 2 bars (the held sample ran out 6.7 s in), LEVERAGE -1.5 dB; F-major 0 resonance windows in picture and edit (worst 0.045 / 0.085 explained); the senza violin retuned (its C4 sample is 23 c sharp) and +2 dB",
+  "open": [
+   "ears (fix 2b): is the notched cello pizz still woody, and LEVERAGE minor? are the F pedal's bow changes inaudible (picture 39.4 / 44.4 s; edit every 5 s from 43.1 s)?",
+   "ears (fix 2b): the retuned Door (0.6-6.0 s), in tune now?",
+   "ears: does the album edit hold as a piece?",
+   "the editor's file-only F-major cross-check lists 44.375-44.725 s (0.146): the MIDI collapses the pedal's overlapping bow change (the known MIDI-export limit); the engine check passes"
+  ],
+  "length_note": "the picture version (the underscore master); the album edit's length is album_edit.length",
+  "album_edit": {
+   "id": "mm11-the-return-album-edit",
+   "title": "The Return (album edit)",
+   "length": 92.947,
+   "cue_sheet": "tracks/mm11-the-return/render/mm11-the-return-album-edit.cue.json",
+   "mp3": "tracks/mm11-the-return/render/mm11-the-return-album.mp3",
+   "album": "tracks/mm11-the-return/render/mm11-the-return-album.wav",
+   "midi": "tracks/mm11-the-return/render/mm11-the-return-album-edit.mid",
+   "sections": [
+    {
+     "label": "a the Door, twice (STRAIGHT)",
+     "start": 0.0,
+     "end": 15.625
+    },
+    {
+     "label": "b THE FLOOR (2 bars a chord)",
+     "start": 15.625,
+     "end": 35.625
+    },
+    {
+     "label": "c1 LEVERAGE (the door bang -> the drop-out)",
+     "start": 37.5,
+     "end": 60.625
+    },
+    {
+     "label": "c2 the hold; the stamp's C pedal",
+     "start": 60.625,
+     "end": 66.875
+    },
+    {
+     "label": "d the Build compiling over the C pedal",
+     "start": 66.875,
+     "end": 75.625
+    },
+    {
+     "label": "e1 the sign + the victory lap (2 bars)",
+     "start": 75.625,
+     "end": 80.625
+    },
+    {
+     "label": "e2 one chip note; 1993; the rest",
+     "start": 80.625,
+     "end": 85.625
+    },
+    {
+     "label": "e3 the felt settle, ringing out",
+     "start": 85.625,
+     "end": 91.125
+    }
+   ],
+   "album_lufs": -16.0,
+   "album_tp_db": -1.15,
+   "balance": {
+    "piano": 3,
+    "orch": 66,
+    "bigband": 14,
+    "chip": 17
+   },
+   "engine_warnings": [],
+   "note": "files.mp3 / files.album of this row ARE the album edit; the picture version is files.underscore and the stems"
+  },
+  "sampler": [
+   {
+    "n": 10,
+    "at": "3:17.87",
+    "src_in": 0.5,
+    "src_out": 14.0
+   },
+   {
+    "n": 11,
+    "at": "3:32.37",
+    "src_in": 66.875,
+    "src_out": 92.941
+   }
+  ]
+ },
+ {
+  "id": "e01-s30a-the-door",
+  "mm": "MM-11",
+  "kind": "to-picture insert",
+  "title": "The Door (STRAIGHT violin, Ep1 sc 30a)",
+  "palette": "STRAIGHT (P01 sincere mode)",
+  "motifs": [
+   "the Door (violin, 8vb)"
+  ],
+  "length": 11.018,
+  "files": {
+   "mp3": "tracks/e01-s30a-the-door/render/e01-s30a-the-door-album.mp3",
+   "album": "tracks/e01-s30a-the-door/render/e01-s30a-the-door-album.wav",
+   "underscore": "tracks/e01-s30a-the-door/render/e01-s30a-the-door-underscore.wav",
+   "underscore_mp3": "tracks/e01-s30a-the-door/render/e01-s30a-the-door-underscore.mp3",
+   "stems": {
+    "strings": "tracks/e01-s30a-the-door/render/stems/e01-s30a-the-door-strings.flac"
+   },
+   "midi": "tracks/e01-s30a-the-door/render/e01-s30a-the-door.mid",
+   "pianoroll": "tracks/e01-s30a-the-door/render/e01-s30a-the-door-pianoroll.png",
+   "cue_sheet": "tracks/e01-s30a-the-door/render/e01-s30a-the-door.cue.json",
+   "readme": "tracks/e01-s30a-the-door/README.md"
+  },
+  "firstUse": "Ep1 sc 30a, 18:00: under Alyi's regret post; the editor stops it on the first heart",
+  "tone": "one violin, played straight, under Alyi's regret post only; it stops dead on the first heart",
+  "key": "Db lydian",
+  "composer": "Composer E (OST batch 1)",
+  "loudness": {
+   "album_lufs": -18.05,
+   "album_tp_db": -9.1,
+   "underscore_lufs": -22.0,
+   "underscore_target": -22.0,
+   "underscore_tp_db": -13.42,
+   "underscore_st_p95_corrected": -20.11
+  },
+  "balance": {
+   "piano": 0,
+   "orch": 100,
+   "bigband": 0,
+   "chip": 0
+  },
+  "sections": [
+   {
+    "label": "the Door (the G held until the heart)",
+    "start": 0.0,
+    "end": 10.0
+   }
+  ],
+  "loops": [],
+  "qa": {
+   "stems_residual_db": -115.8,
+   "knee_whole": 0,
+   "knee_completion": 0,
+   "written_a_over_f_bass": 0,
+   "f_major_ok": true,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "hits": "1/1",
+   "sub_under_room_ok": null,
+   "engine_warnings": 0,
+   "editor_flags": []
+  },
+  "status": "fix pass 1 (2026-09-26): re-rendered on the fixed engine and re-measured by the editor; NOT auditioned. unchanged (no retuned samples); the four stop files regenerated; fix 2b: the senza violin retuned (the D-flat and C were 22 and 17 c sharp); stops regenerated",
+  "open": [],
+  "parts": [
+   "tracks/e01-s30a-the-door/render/e01-s30a-the-door-stop-f8427.wav",
+   "tracks/e01-s30a-the-door/render/e01-s30a-the-door-stop-f8439.wav",
+   "tracks/e01-s30a-the-door/render/e01-s30a-the-door-stop-f8451.wav",
+   "tracks/e01-s30a-the-door/render/e01-s30a-the-door-stop-f8466.wav"
+  ]
+ },
+ {
+  "id": "mm13-outside-intended-scope",
+  "mm": "MM-13",
+  "kind": "album/library",
+  "title": "Outside Intended Scope",
+  "palette": "P05 GLYPH",
+  "motifs": [
+   "TOKENS (4 stages)",
+   "the Ache",
+   "the knee reversed",
+   "the runaway",
+   "the no-third chord"
+  ],
+  "length": 85.303,
+  "files": {
+   "mp3": "tracks/mm13-outside-intended-scope/render/mm13-outside-intended-scope-album.mp3",
+   "album": "tracks/mm13-outside-intended-scope/render/mm13-outside-intended-scope-album.wav",
+   "underscore": "tracks/mm13-outside-intended-scope/render/mm13-outside-intended-scope-underscore.wav",
+   "underscore_mp3": "tracks/mm13-outside-intended-scope/render/mm13-outside-intended-scope-underscore.mp3",
+   "stems": {
+    "strings": "tracks/mm13-outside-intended-scope/render/stems/mm13-outside-intended-scope-strings.flac",
+    "bass": "tracks/mm13-outside-intended-scope/render/stems/mm13-outside-intended-scope-bass.flac",
+    "perc": "tracks/mm13-outside-intended-scope/render/stems/mm13-outside-intended-scope-perc.flac",
+    "chip": "tracks/mm13-outside-intended-scope/render/stems/mm13-outside-intended-scope-chip.flac",
+    "synth": "tracks/mm13-outside-intended-scope/render/stems/mm13-outside-intended-scope-synth.flac"
+   },
+   "midi": "tracks/mm13-outside-intended-scope/render/mm13-outside-intended-scope.mid",
+   "pianoroll": "tracks/mm13-outside-intended-scope/render/mm13-outside-intended-scope-pianoroll.png",
+   "cue_sheet": "tracks/mm13-outside-intended-scope/render/mm13-outside-intended-scope.cue.json",
+   "readme": "tracks/mm13-outside-intended-scope/README.md"
+  },
+  "firstUse": "Ep1 GLYPH hits (the Orb's scan, Q*); beds from Ep9 (L4)",
+  "tone": "the machine learning the show's tune, politely: grains, then the knee scrambled, then almost, then running past its own ending -- dread without a single evil sound",
+  "key": "F pedal + the Ache (G, Db); tokens {F G Ab C Db} (+ Eb in the runaway), F4-Db6",
+  "composer": "Composer D (OST batch 1)",
+  "loudness": {
+   "album_lufs": -16.0,
+   "album_tp_db": -1.15,
+   "underscore_lufs": -20.8,
+   "underscore_target": -20.8,
+   "underscore_tp_db": -5.49,
+   "underscore_st_p95_corrected": -18.96
+  },
+  "balance": {
+   "piano": 0,
+   "orch": 28,
+   "bigband": 0,
+   "chip": 72
+  },
+  "sections": [
+   {
+    "label": "L1 grains (Eps 1-3)",
+    "start": 0.0,
+    "end": 20.0
+   },
+   {
+    "label": "L2 scrambled (Eps 4-6)",
+    "start": 20.0,
+    "end": 40.0
+   },
+   {
+    "label": "L3 almost (Eps 7-8)",
+    "start": 40.0,
+    "end": 60.0
+   },
+   {
+    "label": "L4 the runaway (Ep9)",
+    "start": 60.0,
+    "end": 80.0
+   },
+   {
+    "label": "HOOK (dread before the cut)",
+    "start": 80.0,
+    "end": 85.0
+   }
+  ],
+  "loops": [
+   {
+    "file": "tracks/mm13-outside-intended-scope/render/mm13-outside-intended-scope-loop.wav",
+    "seconds": 20.0,
+    "frames": 480.0,
+    "verdict": "seamless"
+   },
+   {
+    "file": "tracks/mm13-outside-intended-scope/render/mm13-outside-intended-scope-loop-L2.wav",
+    "seconds": 20.0,
+    "frames": 480.0,
+    "verdict": "seamless"
+   },
+   {
+    "file": "tracks/mm13-outside-intended-scope/render/mm13-outside-intended-scope-loop-L3.wav",
+    "seconds": 20.0,
+    "frames": 480.0,
+    "verdict": "seamless"
+   },
+   {
+    "file": "tracks/mm13-outside-intended-scope/render/mm13-outside-intended-scope-loop-L4.wav",
+    "seconds": 20.0,
+    "frames": 480.0,
+    "verdict": "seamless"
+   }
+  ],
+  "qa": {
+   "stems_residual_db": -116.7,
+   "knee_whole": 0,
+   "knee_completion": 0,
+   "written_a_over_f_bass": 0,
+   "f_major_ok": false,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 3,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "hits": "5/5",
+   "sub_under_room_ok": true,
+   "engine_warnings": 1,
+   "editor_flags": [
+    "F-major (engine, full note data) worst sieved A/F 2.093, classes {'written': 0, 'resonance': 3, 'explained': 0, 'unattributed': 0}"
+   ]
+  },
+  "status": "fix pass 1 (2026-09-26): re-rendered on the fixed engine and re-measured by the editor; NOT auditioned. sub pressure 9 dB lower (-20.2 to -24.8 dB under the room in every level; room windows marked); tokens shelved above 1.6 kHz, strings LP 1.9 kHz (2-6 kHz -16.0 dB); 30 / 15 / 5 s cut-downs, reduced and solo versions delivered",
+  "open": [
+   "F-major: 3 L3 windows (40.6-45.6 s) read A energy: the A band sits 18-24 dB under the A-flat 4 tokens (their spectral skirt), with the F barely sounding. Accepted",
+   "the cut-downs read -11.9 / -13.7 / -14.9 dB at 2-6 kHz: act-outs only; under a line use the reduced or solo version",
+   "ears: is L1 now too empty? are the tokens muffled?"
+  ],
+  "variants": [
+   {
+    "id": "mm13-outside-intended-scope-05s",
+    "title": "Outside Intended Scope (5 s cut-down)",
+    "length": 5.303,
+    "mp3": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-05s-album.mp3",
+    "album": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-05s-album.wav",
+    "underscore": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-05s-underscore.wav",
+    "underscore_mp3": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-05s-underscore.mp3",
+    "cue_sheet": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-05s.cue.json",
+    "album_lufs": -15.15,
+    "underscore_lufs": -20.39,
+    "engine_warnings": 1,
+    "editor_flags": []
+   },
+   {
+    "id": "mm13-outside-intended-scope-15s",
+    "title": "Outside Intended Scope (15 s cut-down)",
+    "length": 15.303,
+    "mp3": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-15s-album.mp3",
+    "album": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-15s-album.wav",
+    "underscore": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-15s-underscore.wav",
+    "underscore_mp3": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-15s-underscore.mp3",
+    "cue_sheet": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-15s.cue.json",
+    "album_lufs": -15.31,
+    "underscore_lufs": -20.21,
+    "engine_warnings": 1,
+    "editor_flags": []
+   },
+   {
+    "id": "mm13-outside-intended-scope-30s",
+    "title": "Outside Intended Scope (30 s cut-down)",
+    "length": 30.303,
+    "mp3": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-30s-album.mp3",
+    "album": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-30s-album.wav",
+    "underscore": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-30s-underscore.wav",
+    "underscore_mp3": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-30s-underscore.mp3",
+    "cue_sheet": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-30s.cue.json",
+    "album_lufs": -15.36,
+    "underscore_lufs": -20.19,
+    "engine_warnings": 2,
+    "editor_flags": [
+     "F-major (engine, full note data) worst sieved A/F 0.251, classes {'written': 0, 'resonance': 1, 'explained': 3, 'unattributed': 0}"
+    ]
+   },
+   {
+    "id": "mm13-outside-intended-scope-reduced",
+    "title": "Outside Intended Scope (reduced)",
+    "length": 85.303,
+    "mp3": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-reduced-album.mp3",
+    "album": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-reduced-album.wav",
+    "underscore": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-reduced-underscore.wav",
+    "underscore_mp3": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-reduced-underscore.mp3",
+    "cue_sheet": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-reduced.cue.json",
+    "album_lufs": -16.01,
+    "underscore_lufs": -20.8,
+    "engine_warnings": 1,
+    "editor_flags": [
+     "F-major (engine, full note data) worst sieved A/F 2.69, classes {'written': 0, 'resonance': 4, 'explained': 0, 'unattributed': 0}"
+    ]
+   },
+   {
+    "id": "mm13-outside-intended-scope-solo",
+    "title": "Outside Intended Scope (solo (chip))",
+    "length": 85.303,
+    "mp3": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-solo-album.mp3",
+    "album": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-solo-album.wav",
+    "underscore": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-solo-underscore.wav",
+    "underscore_mp3": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-solo-underscore.mp3",
+    "cue_sheet": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-solo.cue.json",
+    "album_lufs": -16.02,
+    "underscore_lufs": -20.8,
+    "engine_warnings": 0,
+    "editor_flags": []
+   }
+  ],
+  "sampler": [
+   {
+    "n": 12,
+    "at": "3:59.44",
+    "src_in": 65.0,
+    "src_out": 85.303
+   }
+  ]
+ },
+ {
+  "id": "mm13-kit-glyph-hits-and-copy",
+  "mm": "MM-13",
+  "kind": "kit",
+  "title": "Outside Intended Scope: GLYPH hits, Q* and THE COPY (kit)",
+  "palette": "P05 GLYPH",
+  "motifs": [
+   "GLYPH hits",
+   "Q*",
+   "THE COPY (the Water Line, 7 lags)"
+  ],
+  "length": 132.5,
+  "files": {
+   "mp3": "tracks/mm13-kit-glyph-hits-and-copy/render/mm13-kit-glyph-hits-and-copy-album.mp3",
+   "album": "tracks/mm13-kit-glyph-hits-and-copy/render/mm13-kit-glyph-hits-and-copy-album.wav",
+   "underscore": "tracks/mm13-kit-glyph-hits-and-copy/render/mm13-kit-glyph-hits-and-copy-underscore.wav",
+   "underscore_mp3": "tracks/mm13-kit-glyph-hits-and-copy/render/mm13-kit-glyph-hits-and-copy-underscore.mp3",
+   "stems": {
+    "piano": "tracks/mm13-kit-glyph-hits-and-copy/render/stems/mm13-kit-glyph-hits-and-copy-piano.flac",
+    "strings": "tracks/mm13-kit-glyph-hits-and-copy/render/stems/mm13-kit-glyph-hits-and-copy-strings.flac",
+    "bass": "tracks/mm13-kit-glyph-hits-and-copy/render/stems/mm13-kit-glyph-hits-and-copy-bass.flac",
+    "perc": "tracks/mm13-kit-glyph-hits-and-copy/render/stems/mm13-kit-glyph-hits-and-copy-perc.flac",
+    "chip": "tracks/mm13-kit-glyph-hits-and-copy/render/stems/mm13-kit-glyph-hits-and-copy-chip.flac",
+    "synth": "tracks/mm13-kit-glyph-hits-and-copy/render/stems/mm13-kit-glyph-hits-and-copy-synth.flac"
+   },
+   "midi": "tracks/mm13-kit-glyph-hits-and-copy/render/mm13-kit-glyph-hits-and-copy.mid",
+   "pianoroll": "tracks/mm13-kit-glyph-hits-and-copy/render/mm13-kit-glyph-hits-and-copy-pianoroll.png",
+   "cue_sheet": "tracks/mm13-kit-glyph-hits-and-copy/render/mm13-kit-glyph-hits-and-copy.cue.json",
+   "readme": "tracks/mm13-kit-glyph-hits-and-copy/README.md"
+  },
+  "firstUse": "Ep1 GLYPH hits and sc 19 hands runner (THE COPY a beat late)",
+  "tone": "the machine's punctuation: twelve polite dread blinks, the vault's swell, and Mas's own tune played back to him a little closer each episode",
+  "key": "F pedal + the Ache; the COPY in F minor",
+  "composer": "Composer D (OST batch 1)",
+  "loudness": {
+   "album_lufs": -16.02,
+   "album_tp_db": -1.15,
+   "underscore_lufs": -21.0,
+   "underscore_target": -21.0,
+   "underscore_tp_db": -3.15,
+   "underscore_st_p95_corrected": -20.4
+  },
+  "balance": {
+   "piano": 7,
+   "orch": 9,
+   "bigband": 0,
+   "chip": 84
+  },
+  "sections": [
+   {
+    "label": "H01",
+    "start": 0.0,
+    "end": 5.0
+   },
+   {
+    "label": "H02",
+    "start": 5.0,
+    "end": 10.0
+   },
+   {
+    "label": "H03",
+    "start": 10.0,
+    "end": 15.0
+   },
+   {
+    "label": "H04",
+    "start": 15.0,
+    "end": 20.0
+   },
+   {
+    "label": "H05",
+    "start": 20.0,
+    "end": 25.0
+   },
+   {
+    "label": "H06",
+    "start": 25.0,
+    "end": 30.0
+   },
+   {
+    "label": "H07",
+    "start": 30.0,
+    "end": 35.0
+   },
+   {
+    "label": "H08",
+    "start": 35.0,
+    "end": 40.0
+   },
+   {
+    "label": "H09",
+    "start": 40.0,
+    "end": 45.0
+   },
+   {
+    "label": "H10",
+    "start": 45.0,
+    "end": 50.0
+   },
+   {
+    "label": "H11",
+    "start": 50.0,
+    "end": 55.0
+   },
+   {
+    "label": "H12",
+    "start": 55.0,
+    "end": 60.0
+   },
+   {
+    "label": "QSTAR",
+    "start": 60.0,
+    "end": 65.0
+   },
+   {
+    "label": "C1a",
+    "start": 65.0,
+    "end": 72.5
+   },
+   {
+    "label": "C1b",
+    "start": 72.5,
+    "end": 80.0
+   },
+   {
+    "label": "C1c",
+    "start": 80.0,
+    "end": 87.5
+   },
+   {
+    "label": "C2",
+    "start": 87.5,
+    "end": 95.0
+   },
+   {
+    "label": "C3",
+    "start": 95.0,
+    "end": 102.5
+   },
+   {
+    "label": "C4",
+    "start": 102.5,
+    "end": 110.0
+   },
+   {
+    "label": "C5",
+    "start": 110.0,
+    "end": 117.5
+   },
+   {
+    "label": "C6",
+    "start": 117.5,
+    "end": 125.0
+   },
+   {
+    "label": "C7",
+    "start": 125.0,
+    "end": 132.5
+   }
+  ],
+  "loops": [],
+  "qa": {
+   "stems_residual_db": -116.8,
+   "knee_whole": 0,
+   "knee_completion": 0,
+   "written_a_over_f_bass": 0,
+   "f_major_ok": false,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 1,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "hits": "21/21",
+   "sub_under_room_ok": true,
+   "engine_warnings": 1,
+   "editor_flags": [
+    "F-major (engine, full note data) worst sieved A/F 8.259, classes {'written': 0, 'resonance': 1, 'explained': 0, 'unattributed': 0}"
+   ]
+  },
+  "status": "fix pass 1 (2026-09-26): re-rendered on the fixed engine and re-measured by the editor; NOT auditioned. the same sub fix (22 room windows pass, worst -19.9 dB); H02's soft harp -3 dB",
+  "open": [
+   "F-major: H07 (30.5 s) is the same A-flat 4 skirt (accepted)",
+   "ears: the soft harp in H02 and H08; does H11's sub drop land?"
+  ]
+ },
+ {
+  "id": "mm19-renamed-it",
+  "mm": "MM-19",
+  "kind": "album/library",
+  "title": "Renamed It. / The Fountain Pen",
+  "palette": "P13 THE PODIUM",
+  "motifs": [
+   "the Fountain Pen (NEDIB)",
+   "the Podium (RUMPT)",
+   "the Rename"
+  ],
+  "length": 90.0,
+  "files": {
+   "mp3": "tracks/mm19-renamed-it/render/mm19-renamed-it-album.mp3",
+   "album": "tracks/mm19-renamed-it/render/mm19-renamed-it-album.wav",
+   "underscore": "tracks/mm19-renamed-it/render/mm19-renamed-it-underscore.wav",
+   "underscore_mp3": "tracks/mm19-renamed-it/render/mm19-renamed-it-underscore.mp3",
+   "stems": {
+    "piano": "tracks/mm19-renamed-it/render/stems/mm19-renamed-it-piano.flac",
+    "strings": "tracks/mm19-renamed-it/render/stems/mm19-renamed-it-strings.flac",
+    "brass": "tracks/mm19-renamed-it/render/stems/mm19-renamed-it-brass.flac",
+    "drums": "tracks/mm19-renamed-it/render/stems/mm19-renamed-it-drums.flac",
+    "perc": "tracks/mm19-renamed-it/render/stems/mm19-renamed-it-perc.flac",
+    "chip": "tracks/mm19-renamed-it/render/stems/mm19-renamed-it-chip.flac"
+   },
+   "midi": "tracks/mm19-renamed-it/render/mm19-renamed-it.mid",
+   "pianoroll": "tracks/mm19-renamed-it/render/mm19-renamed-it-pianoroll.png",
+   "cue_sheet": "tracks/mm19-renamed-it/render/mm19-renamed-it.cue.json",
+   "readme": "tracks/mm19-renamed-it/README.md"
+  },
+  "firstUse": "Ep1 sc 13 White House (NEDIB), 5:54; RUMPT's FEAR in Ep2",
+  "tone": "state occasions at equal weight: a fountain-pen quartet signing, and a brass podium one size too big that renames the world under a held note",
+  "key": "Bb major (NEDIB); Eb minor (FEAR); Eb major (LOVE) -> B/D# -> G/B (the Renames)",
+  "composer": "Composer A (OST batch 1)",
+  "loudness": {
+   "album_lufs": -14.01,
+   "album_tp_db": -1.15,
+   "underscore_lufs": -16.02,
+   "underscore_target": -16.0,
+   "underscore_tp_db": -3.15,
+   "underscore_st_p95_corrected": -14.32
+  },
+  "balance": {
+   "piano": 12,
+   "orch": 50,
+   "bigband": 22,
+   "chip": 16
+  },
+  "sections": [
+   {
+    "label": "THE FOUNTAIN PEN (NEDIB) -- loop A",
+    "start": 0.0,
+    "end": 20.0
+   },
+   {
+    "label": "THE MARKER: the map voided (cut mid-turn on b9.2)",
+    "start": 20.0,
+    "end": 25.0
+   },
+   {
+    "label": "FEAR (muted brass, Eb minor, half-time)",
+    "start": 25.0,
+    "end": 45.0
+   },
+   {
+    "label": "LOVE (the full march) -- loop B",
+    "start": 45.0,
+    "end": 65.0
+   },
+   {
+    "label": "THE RENAME (Eb -> B/D#)",
+    "start": 65.0,
+    "end": 70.0
+   },
+   {
+    "label": "WHO? (the missing beat; then only the pickup)",
+    "start": 70.0,
+    "end": 80.0
+   },
+   {
+    "label": "SUPER (the Rename twice: Eb -> B -> G; the chip takes the top line)",
+    "start": 80.0,
+    "end": 90.0
+   }
+  ],
+  "loops": [
+   {
+    "file": "tracks/mm19-renamed-it/render/mm19-renamed-it-loop.wav",
+    "seconds": 20.0,
+    "frames": 480.0,
+    "verdict": "seamless"
+   }
+  ],
+  "qa": {
+   "stems_residual_db": -120.9,
+   "knee_whole": 0,
+   "knee_completion": 0,
+   "written_a_over_f_bass": 0,
+   "f_major_ok": true,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 1,
+    "unattributed": 0
+   },
+   "hits": "9/10",
+   "sub_under_room_ok": null,
+   "engine_warnings": 1,
+   "editor_flags": [
+    "hits off: 35.0 s -10.7 ms"
+   ]
+  },
+  "status": "fix pass 1 (2026-09-26): re-rendered on the fixed engine and re-measured by the editor; NOT auditioned. 30 / 15 / 5 s cut-downs, NEDIB 15 / 5 s cuts (parity), a reduced (one trumpet) and a solo-piano version; parity 0.4 LU; fix 2b: re-rendered on the retuned engine with all variants (the tuba B-flat 1 take was 95 c flat, the FEAR tremolo 25-43 c flat, the stab G3 23-31 c flat, the violin 10-20 c off: now in tune)",
+  "open": [
+   "ears (fix 2b): the retuned tuba (48.75-76.25 s) and FEAR tremolo (25-45 s): in tune, and still the same march?",
+   "the b15.1 marker (35.0 s) reads -10.7 ms since fix 2b: the retuned tremolo's attack, 7 ms ahead of the timpani (no note moved)",
+   "ears: the solo piano: straight, or oom-pah? one trumpet: ceremony, or a bugle call?"
+  ],
+  "variants": [
+   {
+    "id": "mm19-renamed-it-05s-nedib",
+    "title": "Renamed It. / The Fountain Pen (5 s cut-down (NEDIB))",
+    "length": 7.45,
+    "mp3": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-05s-nedib-album.mp3",
+    "album": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-05s-nedib-album.wav",
+    "underscore": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-05s-nedib-underscore.wav",
+    "underscore_mp3": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-05s-nedib-underscore.mp3",
+    "cue_sheet": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-05s-nedib.cue.json",
+    "album_lufs": -14.01,
+    "underscore_lufs": -16.02,
+    "engine_warnings": 0,
+    "editor_flags": []
+   },
+   {
+    "id": "mm19-renamed-it-05s",
+    "title": "Renamed It. / The Fountain Pen (5 s cut-down (RUMPT))",
+    "length": 5.625,
+    "mp3": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-05s-album.mp3",
+    "album": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-05s-album.wav",
+    "underscore": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-05s-underscore.wav",
+    "underscore_mp3": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-05s-underscore.mp3",
+    "cue_sheet": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-05s.cue.json",
+    "album_lufs": -14.0,
+    "underscore_lufs": -16.0,
+    "engine_warnings": 0,
+    "editor_flags": []
+   },
+   {
+    "id": "mm19-renamed-it-15s-nedib",
+    "title": "Renamed It. / The Fountain Pen (15 s cut-down (NEDIB))",
+    "length": 16.2,
+    "mp3": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-15s-nedib-album.mp3",
+    "album": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-15s-nedib-album.wav",
+    "underscore": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-15s-nedib-underscore.wav",
+    "underscore_mp3": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-15s-nedib-underscore.mp3",
+    "cue_sheet": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-15s-nedib.cue.json",
+    "album_lufs": -14.0,
+    "underscore_lufs": -16.01,
+    "engine_warnings": 0,
+    "editor_flags": []
+   },
+   {
+    "id": "mm19-renamed-it-15s",
+    "title": "Renamed It. / The Fountain Pen (15 s cut-down (RUMPT))",
+    "length": 15.625,
+    "mp3": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-15s-album.mp3",
+    "album": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-15s-album.wav",
+    "underscore": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-15s-underscore.wav",
+    "underscore_mp3": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-15s-underscore.mp3",
+    "cue_sheet": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-15s.cue.json",
+    "album_lufs": -14.0,
+    "underscore_lufs": -16.01,
+    "engine_warnings": 0,
+    "editor_flags": []
+   },
+   {
+    "id": "mm19-renamed-it-30s",
+    "title": "Renamed It. / The Fountain Pen (30 s cut-down (RUMPT))",
+    "length": 30.0,
+    "mp3": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-30s-album.mp3",
+    "album": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-30s-album.wav",
+    "underscore": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-30s-underscore.wav",
+    "underscore_mp3": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-30s-underscore.mp3",
+    "cue_sheet": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-30s.cue.json",
+    "album_lufs": -14.0,
+    "underscore_lufs": -16.0,
+    "engine_warnings": 0,
+    "editor_flags": []
+   },
+   {
+    "id": "mm19-renamed-it-reduced",
+    "title": "Renamed It. / The Fountain Pen (reduced)",
+    "length": 90.0,
+    "mp3": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-reduced-album.mp3",
+    "album": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-reduced-album.wav",
+    "underscore": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-reduced-underscore.wav",
+    "underscore_mp3": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-reduced-underscore.mp3",
+    "cue_sheet": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-reduced.cue.json",
+    "album_lufs": -14.01,
+    "underscore_lufs": -16.02,
+    "engine_warnings": 0,
+    "editor_flags": []
+   },
+   {
+    "id": "mm19-renamed-it-solo",
+    "title": "Renamed It. / The Fountain Pen (solo piano)",
+    "length": 90.0,
+    "mp3": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-solo-album.mp3",
+    "album": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-solo-album.wav",
+    "underscore": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-solo-underscore.wav",
+    "underscore_mp3": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-solo-underscore.mp3",
+    "cue_sheet": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-solo.cue.json",
+    "album_lufs": -14.01,
+    "underscore_lufs": -16.01,
+    "engine_warnings": 0,
+    "editor_flags": []
+   }
+  ],
+  "sampler": [
+   {
+    "n": 4,
+    "at": "1:08.00",
+    "src_in": 70.0,
+    "src_out": 90.0
+   }
+  ]
+ }
+]

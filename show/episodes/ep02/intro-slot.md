@@ -1,36 +1,25 @@
 # ep02 · intro slot
 
-The spec is in [intro/spec.md](../../intro/spec.md); the season table is in [intro/episode-slots.md](../../intro/episode-slots.md). Bars 1–8 stay as rendered in Ep1. Only the slots below change.
+Spec: [intro/SCRIPT.md §8](../../intro/SCRIPT.md#8-per-episode-changes-ep112-spoiler-safe), row 2 (v2.1). **Only five things change, and none of them shows this episode's plot.** Items 2–5 show only what Ep1 has already aired; item 1 is the epigraph, words only in their own medium. The v2.0 bar-9 news slot is retired, so this sheet no longer carries `AROS` / `SUED.` / `ELPPA` or the `WHERE IS ALYI?` flyers (all of them this episode's own events), and the old skyline courthouse and ISS cube (Ep2's aftermath, which belongs to Ep3's intro) are gone. The old subtitle `now with voice` is Ep3's (`now with voice (paused)`). Source detail: [episode-slots.md](../../intro/episode-slots.md) (v1 reference; SCRIPT wins where they differ).
 
-| Slot | Ep2 value | Notes |
-|---|---|---|
-| **Cold-open quote** | **"her"** [K]† | His real one-word post, May 13, 2024. After he posts it, **the typing indicator pulses in silence** for the rest of the phrase's time slot (f58–91): three dots and nothing. Re-verify the exact post before lock |
-| **Bar 9.1** (news) | **`AROS`** | A woolly mammoth walks through the glossy re-skin. Egg: an extra with six fingers |
-| **Bar 9.2** (the music is fired) | **`SUED.`** | A complaint made entirely of `!` slams onto the desk. Every stem mutes to one dry piano note |
-| **Bar 9.3** (the music is rehired) | **`ELPPA`** | ELPPA's stage lights snap on, and CHATGTP's bubble appears in a phone. The band slams back |
-| **Bar 9.4** (transition object) | **"WHERE IS ALYI?" flyers** | Missing-person flyers blow upward. The photo on each one is just a doorway, and they become the dusk stars |
-| **Skyline state** | **Courthouse + ISS cube** | A courthouse rises between zAI and NopeAI. A small white ISS cube with one door appears on the edge of the skyline, unlit. The zAI gantry still reads `COMING SOON: TRUTHGTP`, now crossed out with `KORG` taped over it |
-| **RUMPT / THE PODIUM** | **Absent** (optional: one faint HTURT bubble) | No podium on the hill in Ep1–2 (WC-cast §5). Optional: a single faint HTURT speech bubble drifts across the dusk sky with **no text** (0 new characters). No SFX |
-| **Orb toast** | **`verified: human`** | Unchanged, Eps 1–5 |
-| **Title subtitle** | **`now with voice`** | 14 characters |
-| **`you are here` dot** | x = 0.55 | — |
+**Draft 4 changes (the continuity critic):** the coat hook reads **3** collars (Ep1 pops #3 on MACROSOFT's check and Ep2 pops none), and zAI's `COMING SOON: TRUTHGTP` banner and the `KORG 1` / `KORG 5: NEXT QUARTER` boards are out (Ep1 cut the TRUTHGTP set, and the `KORG 5` banner first airs in this episode's sc 20; both can start in Ep3's intro). **For the intro owner:** SCRIPT §8.1 row 2 (the skyline column) and §8.4 row 2 (the coat hook) still carry the old values.
 
-## Per-episode eggs
-| Egg | Ep2 state |
-|---|---|
-| Firing tally on the desk | **3 marks** (Tpool ×2, NopeAI 2023) |
-| Coat hook | Three popped collars |
-| KORG split-flap board | `KORG 2` [K, verify], matching episode-slots §7. The Aug 2024 release date needs a source |
-| Valuation ticker on the spire | `~$86B` (the tender [V]) |
-| 1993 kid's screen (bar 3) | 0°, still facing away |
-| Gold thread in the hoodie | None (from Ep4) |
-| Mario's lighthouse | A job-listing flag flies from the top; EKIEL walked over in May |
-| NEDIB's inkwell on the hill | **[PROPOSAL, shared]** still standing, pen upright (see [ep01 intro-slot](../ep01/intro-slot.md)) |
+## The five changes
+
+| # | Change | Ep2 value | Notes |
+|---|---|---|---|
+| 1 | **Cold-open line** (f18–112) | *"her"* | Post, May 13, 2024 [K]† → upgrade before lock. The VO reads "her" at about f24–33; then **silence under a pulsing typing indicator** (three dots and nothing) for the rest of the phrase; the D♭ lands in the silence. The words only: the blimp, the stage and the spotlight live in the episode |
+| 2 | **World state, after Ep1** | **Skyline:** Misanthropic's price tag `$4B + $2B` (NOZAMA and ELGOOG, Sep–Oct 2023 [V]); nothing on zAI's tower yet. **Hill:** a phone glow in the silhouette's hand (Ep1's anchor-clip repost [H]); across it, a scroll tied in a pinky-promise knot, `VOLUNTARY`, beside NEDIB's inkwell (Jul 21, 2023 [V]). **CZAR lanyard:** `SIRRAH` (2023 [H]) | Nothing from Ep2: no courthouse, no ISS cube, no balloon on the hill, no `KORG 5` banner. The podium stays a dark silhouette; its hands fill in only in Ep3's intro. The rows are in [facts.md](facts.md) §C2 |
+| 2 | **Small room layers** | `you are here` marker at x 0.55 · 1993 screen 0° · desk tally `III` (Ep1's NopeAI mark joins the two faint TPOOL marks) · **coat hook 3 collars** · gold threads: none | Ep1 earned the third (sc 9, MACROSOFT's check) and shows three in its own Nov 2023 cold open. No collar pops in Ep2, so Ep3's intro also reads 3, and the fourth first shows in Ep4's |
+| 2 | **Orb toast · last bar** | `verified: human` · standard | Ambient, not events |
+| 3 | **Title subtitle** (last week's release note) | `back by popular demand` | Ep1's return (+16 at 4 cps) |
+| 4 | **Couch gag** (f270–284) | Mas pockets `ESC` | He got out of Ep1's firing: a callback, never a preview |
+| 5 | **Roll call** (flashes 5–8) | RIMA: NopeAI fill · THE WHALE: unchanged (budget breach, plate `PEEKDEEP`) · RUMPT: a silhouette · the cursor window: the cursor alone | No state changes until the episode that airs it |
+
+**Dormant eggs** (SCRIPT doesn't carry them; if the intro owner revives them, use the one-behind values): the valuation ticker `~$86B` (the tender in play at the Blip [V]) · an optional faint HTURT bubble in the dusk sky with no text.
 
 ## Text-density check
-New must-read text: `AROS` (4) · `SUED.` (5) · `ELPPA` (5) · subtitle (14) · toast (15). The optional HTURT bubble adds 0 characters.
+New must-read text: the subtitle (22) and the toast (15). The cold-open line is spoken as well as typed. Nothing on the hill, the skyline or the roll call is must-read.
 
-## Notes for the intro team
-- The **"her" line is only 1 syllable**. Keep the dark-room beat timing and let the silence (the pulsing typing indicator) hold the pause, with the low D♭ piano note inside it.
-- The blimp gag lives **in the episode only**, not in the intro. That way the intro's `her` text stays a plain typed word.
-- **Photosensitivity:** the flyer blow-up in 9.4 has no flashes.
+## Delivery note for the line
+One syllable, lowercase, unhurried. **Let the silence carry the pause:** the pulsing typing indicator holds the rest of the phrase's slot with the low D♭ inside it, and the `you are here` marker slides on the silence, not on the word.

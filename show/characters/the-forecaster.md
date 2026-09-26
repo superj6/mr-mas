@@ -104,7 +104,7 @@
 
 - **No personal life.**
 - **Never** claim any official read his scenario unless verified.
-- **Never** present *AI 2027*'s scenario as a prediction that came true; the show's Ep10–12 are labelled speculation.
+- **Never** present *AI 2027*'s scenario as a prediction that came true; the show's Ep10–12 are invented and visibly absurd, and the scenario is credited as his book, never as what happened (there is no on-screen speculation label to lean on).
 - Never photoreal, never a traced photo, never a cloned voice.
 
 **Sources:** `_sources/research/worldcast-critic.md` (B7).

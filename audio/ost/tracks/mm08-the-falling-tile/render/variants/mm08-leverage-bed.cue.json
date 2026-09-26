@@ -1,0 +1,713 @@
+{
+ "schema": "mrmas-ost-cue/1",
+ "id": "mm08-leverage-bed",
+ "mm": "MM-08",
+ "family": "P03 LEVERAGE -> D6 -> P01 DARK ROOM",
+ "title": "The Falling Tile: LEVERAGE bed (call connecting, loop)",
+ "version": "1.1 (fix 1, 2026-09-26)",
+ "composer": "Composer B (OST batch 1; fix 1: composer A)",
+ "tone": "the call connecting: LEVERAGE (low) as a seamless 4-bar loop, no card, no felt",
+ "tags": [
+  "leverage",
+  "d6",
+  "drop-out",
+  "dark room",
+  "rewind",
+  "ep01",
+  "act four",
+  "the call"
+ ],
+ "usage": "BI",
+ "scenes": [
+  "Ep1 sc 26 phrase 1 (conform extensions)",
+  "Ep1 sc 9 (the check)",
+  "Ep1 sc 30 (up to the calm-off)",
+  "Ep2 sc 18-19 (LEVERAGE)"
+ ],
+ "description": "Fix 1 (2026-09-26): LEVERAGE balance -- the low grand clusters +9 dB and a touch firmer in b5-6, and the grand doubles Step Four's bass in b7; the cello and contrabass pizz notched at ~111 Hz (a sample body resonance read as A2 under the F pedal); room_sfx windows over 26A; re-rendered on the fixed engine.",
+ "motifs": [
+  "none: LEVERAGE has no melody"
+ ],
+ "key": "F pedal with semitone-shifting clusters; Step Four (Bbm - Ab - Gbmaj7) over F; 26A F open fifth, no third",
+ "engine": {
+  "version": "mrmas-ost-engine 1.1 (2026-09-26: fix1 -- meter axis, sample tuning, render pool, QA 5a-d)",
+  "rendered": "2026-09-26T01:43:10",
+  "render_seconds": 30.2
+ },
+ "timing": {
+  "bpm": 96.0,
+  "beat_unit_quarters": 1.0,
+  "tempo_map": [
+   {
+    "bar": 1,
+    "beat": 1.0,
+    "bpm": 96.0,
+    "ramp_in": false,
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "meter_map": [
+   {
+    "bar": 1,
+    "meter": "4/4",
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "swing": 1.0,
+  "swing_unit_quarters": 0.5,
+  "pickup_beats": 0.0,
+  "bars": 4,
+  "length_s": 10.0,
+  "length_frames": 240.0,
+  "fps": 24,
+  "end": {
+   "sec": 10.0,
+   "frame": 240.0,
+   "bar": 5,
+   "beat": 1.0
+  },
+  "album_duration_s": 33.0,
+  "album_duration_frames": 792.0,
+  "album_loops": 3
+ },
+ "sections": [
+  {
+   "label": "LEVERAGE bed (loop)",
+   "start": {
+    "sec": 0.0,
+    "frame": 0.0,
+    "bar": 1,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 10.0,
+    "frame": 240.0,
+    "bar": 5,
+    "beat": 1.0
+   }
+  }
+ ],
+ "markers": [
+  {
+   "label": "bed downbeat",
+   "sec": 0.0,
+   "frame": 0.0,
+   "bar": 1,
+   "beat": 1.0
+  }
+ ],
+ "hit_check": [
+  {
+   "t": 0.0,
+   "offset_ms": 2.7,
+   "strength": 5.64
+  }
+ ],
+ "sfx_slots": [],
+ "silence_windows": [],
+ "vo_windows": [],
+ "knee_whole": 0,
+ "f_major": {
+  "limit": 0.08,
+  "windows": 45,
+  "worst": 0.188,
+  "worst_sieved": 0.247,
+  "ok": true,
+  "ok_written": true,
+  "ok_spectral": true,
+  "f_inaudible_windows": 0,
+  "a_classes": {
+   "written": 0,
+   "resonance": 0,
+   "explained": 3,
+   "unattributed": 0
+  },
+  "written_a_over_f_bass": [],
+  "written_third": {
+   "ok": true,
+   "count": 0,
+   "events": [],
+   "grazes": [],
+   "n_grazes": 0,
+   "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+  },
+  "fails": [],
+  "explained": [
+   {
+    "t0": 12.5,
+    "t1": 13.125,
+    "a_over_f": 0.093,
+    "a_over_f_sieved": 0.108,
+    "written_a": [],
+    "f_share": 0.292,
+    "a_from": {
+     "strings": 100,
+     "piano": 0,
+     "perc": 0
+    },
+    "a_peaks": [
+     {
+      "stem": "strings",
+      "hz": 219.7,
+      "kind": "partial 5 of written F1 (cb)",
+      "cls": "partial",
+      "share": 0.49
+     },
+     {
+      "stem": "strings",
+      "hz": 436.5,
+      "kind": "partial 5 of written F2 (vc)",
+      "cls": "partial",
+      "share": 0.35
+     },
+     {
+      "stem": "strings",
+      "hz": 111.3,
+      "kind": "resonance (no written note has this partial)",
+      "cls": "resonance",
+      "share": 0.16
+     }
+    ],
+    "a_class": "explained",
+    "ok": true,
+    "ok_spectral": true
+   },
+   {
+    "t0": 20.0,
+    "t1": 20.625,
+    "a_over_f": 0.103,
+    "a_over_f_sieved": 0.135,
+    "written_a": [],
+    "f_share": 0.131,
+    "a_from": {
+     "strings": 85,
+     "chip": 12,
+     "piano": 1
+    },
+    "a_peaks": [
+     {
+      "stem": "strings",
+      "hz": 219.7,
+      "kind": "partial 5 of written F1 (cb)",
+      "cls": "partial",
+      "share": 0.6
+     },
+     {
+      "stem": "strings",
+      "hz": 436.5,
+      "kind": "partial 5 of written F2 (vc)",
+      "cls": "partial",
+      "share": 0.25
+     },
+     {
+      "stem": "strings",
+      "hz": 112.1,
+      "kind": "resonance (no written note has this partial)",
+      "cls": "resonance",
+      "share": 0.15
+     }
+    ],
+    "a_class": "explained",
+    "ok": true,
+    "ok_spectral": true
+   },
+   {
+    "t0": 23.75,
+    "t1": 24.375,
+    "a_over_f": 0.188,
+    "a_over_f_sieved": 0.247,
+    "written_a": [],
+    "f_share": 0.137,
+    "a_from": {
+     "strings": 100,
+     "perc": 0,
+     "piano": 0
+    },
+    "a_peaks": [
+     {
+      "stem": "strings",
+      "hz": 219.7,
+      "kind": "partial 5 of written F1 (cb)",
+      "cls": "partial",
+      "share": 0.83
+     },
+     {
+      "stem": "strings",
+      "hz": 109.9,
+      "kind": "resonance (no written note has this partial)",
+      "cls": "resonance",
+      "share": 0.1
+     },
+     {
+      "stem": "strings",
+      "hz": 437.3,
+      "kind": "partial 10 of written F1 (cb)",
+      "cls": "partial",
+      "share": 0.07
+     }
+    ],
+    "a_class": "explained",
+    "ok": true,
+    "ok_spectral": true
+   }
+  ],
+  "fixed_resonances": [
+   {
+    "stem": "strings",
+    "hz": 110.6,
+    "windows": 2,
+    "at": [
+     23.75,
+     12.5
+    ],
+    "note": "the same A-class peak under different written notes: a fixed resonance of an instrument in this stem, not a written third"
+   }
+  ],
+  "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+ },
+ "knee_completion": 0,
+ "room_sfx_windows": [],
+ "qa": {
+  "balance": {
+   "balance": {
+    "piano": 27,
+    "orch": 56,
+    "bigband": 0,
+    "chip": 17
+   },
+   "rhythm_pct_of_all": 42,
+   "chip_share": 17,
+   "balance_energy": {
+    "piano": 21,
+    "orch": 72,
+    "bigband": 0,
+    "chip": 7
+   },
+   "method": "theme stemtable (gated loudness per section, time-weighted, rhythm/fx excluded; it counts a brief stab at its own loudness for the whole section) + balance_energy (ungated energy)",
+   "sections": [
+    {
+     "section": "LEVERAGE bed (loop)",
+     "share": {
+      "piano": 27,
+      "orch": 56,
+      "bigband": 0,
+      "chip": 17
+     }
+    }
+   ]
+  },
+  "short_term_underscore": {
+   "p95": -21.34,
+   "median": -21.74,
+   "max": -21.17
+  },
+  "band_2_6k_db": -21.9,
+  "centroid_hz": 156.0,
+  "f_major": {
+   "limit": 0.08,
+   "windows": 45,
+   "worst": 0.188,
+   "worst_sieved": 0.247,
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "f_inaudible_windows": 0,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 3,
+    "unattributed": 0
+   },
+   "written_a_over_f_bass": [],
+   "written_third": {
+    "ok": true,
+    "count": 0,
+    "events": [],
+    "grazes": [],
+    "n_grazes": 0,
+    "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+   },
+   "fails": [],
+   "explained": [
+    {
+     "t0": 12.5,
+     "t1": 13.125,
+     "a_over_f": 0.093,
+     "a_over_f_sieved": 0.108,
+     "written_a": [],
+     "f_share": 0.292,
+     "a_from": {
+      "strings": 100,
+      "piano": 0,
+      "perc": 0
+     },
+     "a_peaks": [
+      {
+       "stem": "strings",
+       "hz": 219.7,
+       "kind": "partial 5 of written F1 (cb)",
+       "cls": "partial",
+       "share": 0.49
+      },
+      {
+       "stem": "strings",
+       "hz": 436.5,
+       "kind": "partial 5 of written F2 (vc)",
+       "cls": "partial",
+       "share": 0.35
+      },
+      {
+       "stem": "strings",
+       "hz": 111.3,
+       "kind": "resonance (no written note has this partial)",
+       "cls": "resonance",
+       "share": 0.16
+      }
+     ],
+     "a_class": "explained",
+     "ok": true,
+     "ok_spectral": true
+    },
+    {
+     "t0": 20.0,
+     "t1": 20.625,
+     "a_over_f": 0.103,
+     "a_over_f_sieved": 0.135,
+     "written_a": [],
+     "f_share": 0.131,
+     "a_from": {
+      "strings": 85,
+      "chip": 12,
+      "piano": 1
+     },
+     "a_peaks": [
+      {
+       "stem": "strings",
+       "hz": 219.7,
+       "kind": "partial 5 of written F1 (cb)",
+       "cls": "partial",
+       "share": 0.6
+      },
+      {
+       "stem": "strings",
+       "hz": 436.5,
+       "kind": "partial 5 of written F2 (vc)",
+       "cls": "partial",
+       "share": 0.25
+      },
+      {
+       "stem": "strings",
+       "hz": 112.1,
+       "kind": "resonance (no written note has this partial)",
+       "cls": "resonance",
+       "share": 0.15
+      }
+     ],
+     "a_class": "explained",
+     "ok": true,
+     "ok_spectral": true
+    },
+    {
+     "t0": 23.75,
+     "t1": 24.375,
+     "a_over_f": 0.188,
+     "a_over_f_sieved": 0.247,
+     "written_a": [],
+     "f_share": 0.137,
+     "a_from": {
+      "strings": 100,
+      "perc": 0,
+      "piano": 0
+     },
+     "a_peaks": [
+      {
+       "stem": "strings",
+       "hz": 219.7,
+       "kind": "partial 5 of written F1 (cb)",
+       "cls": "partial",
+       "share": 0.83
+      },
+      {
+       "stem": "strings",
+       "hz": 109.9,
+       "kind": "resonance (no written note has this partial)",
+       "cls": "resonance",
+       "share": 0.1
+      },
+      {
+       "stem": "strings",
+       "hz": 437.3,
+       "kind": "partial 10 of written F1 (cb)",
+       "cls": "partial",
+       "share": 0.07
+      }
+     ],
+     "a_class": "explained",
+     "ok": true,
+     "ok_spectral": true
+    }
+   ],
+   "fixed_resonances": [
+    {
+     "stem": "strings",
+     "hz": 110.6,
+     "windows": 2,
+     "at": [
+      23.75,
+      12.5
+     ],
+     "note": "the same A-class peak under different written notes: a fixed resonance of an instrument in this stem, not a written third"
+    }
+   ],
+   "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+  },
+  "knee_completion": {
+   "count": 0,
+   "hits": [],
+   "max_gap_s": 2.5,
+   "rule": "OST-BIBLE rule 4: the knee never plays whole in an episode, in any register, across a phrase boundary too"
+  },
+  "sub_under_room": [],
+  "no_third": [],
+  "silence": [],
+  "hard_stops": [],
+  "vo_windows": [],
+  "knee_whole": 0,
+  "motifs_found": {},
+  "swing": {
+   "vc": {
+    "offbeats": 16,
+    "median_frames": 7.5,
+    "hum_ms": 0
+   },
+   "cb": {
+    "offbeats": 2,
+    "median_frames": 7.5,
+    "hum_ms": 0
+   },
+   "k808": {
+    "offbeats": 2,
+    "median_frames": 7.5,
+    "hum_ms": 0
+   },
+   "bdrum_muted": {
+    "offbeats": 2,
+    "median_frames": 7.5,
+    "hum_ms": 2
+   },
+   "noise": {
+    "offbeats": 4,
+    "median_frames": 7.5,
+    "hum_ms": 0
+   }
+  },
+  "banned": [],
+  "loop_verify": {
+   "total_db": -76.9,
+   "per_family": {
+    "piano": -67.4,
+    "strings": -133.1,
+    "drums": -229.5,
+    "perc": -137.7,
+    "chip": -142.6
+   },
+   "note": "pass 2 of the body played twice (identical draws) vs the folded loop; ~-70 dB = the outro's humanised lead-in reaching back into pass 2 (not a loop error); intro tails reaching pass 2 would also raise it"
+  }
+ },
+ "loop": {
+  "start": {
+   "sec": 0.0,
+   "frame": 0.0,
+   "bar": 1,
+   "beat": 1.0
+  },
+  "end": {
+   "sec": 10.0,
+   "frame": 240.0,
+   "bar": 5,
+   "beat": 1.0
+  },
+  "samples": 480000,
+  "seconds": 10.0,
+  "frames": 240.0,
+  "frame_aligned": true,
+  "notes": 64,
+  "tail_seconds": 3.504,
+  "seam": {
+   "seam_hf_ratio_to_median": 85.58,
+   "seam_hf_percentile": 84.89,
+   "wrap_jump": 0.00424,
+   "wrap_jump_vs_p99_step": 0.166,
+   "rms_last_50ms_db": -26.8,
+   "rms_first_50ms_db": -13.4,
+   "verdict": "seamless"
+  },
+  "loudness": {
+   "lufs": -21.91,
+   "lra": 1.69,
+   "true_peak_db": -5.54,
+   "peak_db": -5.55,
+   "rms_db": -22.2,
+   "crest_db": 16.66,
+   "seconds": 20.0
+  }
+ },
+ "files": {
+  "album_wav": "variants/mm08-leverage-bed-album.wav",
+  "album_mp3": "variants/mm08-leverage-bed-album.mp3",
+  "underscore_wav": "variants/mm08-leverage-bed-underscore.wav",
+  "underscore_mp3": "variants/mm08-leverage-bed-underscore.mp3",
+  "stems": {
+   "piano": "variants/stems/mm08-leverage-bed-piano.flac",
+   "strings": "variants/stems/mm08-leverage-bed-strings.flac",
+   "drums": "variants/stems/mm08-leverage-bed-drums.flac",
+   "perc": "variants/stems/mm08-leverage-bed-perc.flac",
+   "chip": "variants/stems/mm08-leverage-bed-chip.flac"
+  },
+  "loop_wav": "variants/mm08-leverage-bed-loop.wav",
+  "loop_tail_wav": "variants/mm08-leverage-bed-loop-tail.wav",
+  "loop_preview_mp3": "variants/mm08-leverage-bed-loop-x3-preview.mp3",
+  "midi": "variants/mm08-leverage-bed.mid",
+  "pianoroll": "variants/mm08-leverage-bed-pianoroll.png"
+ },
+ "masters": {
+  "album": {
+   "target_lufs": -18.0,
+   "ceiling_dbtp": -1.0,
+   "comp": {
+    "thresh_db": -20,
+    "ratio": 1.8
+   },
+   "dialog_pocket": null,
+   "measured": {
+    "lufs": -18.01,
+    "lra": 1.91,
+    "true_peak_db": -1.15,
+    "peak_db": -1.16,
+    "rms_db": -18.66,
+    "crest_db": 17.5,
+    "seconds": 33.0
+   }
+  },
+  "underscore": {
+   "target_lufs": -22.0,
+   "ceiling_dbtp": -3.0,
+   "comp": {
+    "thresh_db": -28,
+    "ratio": 1.3,
+    "att_ms": 40.0,
+    "rel_ms": 350.0
+   },
+   "dialog_pocket": {
+    "f": 2500.0,
+    "db": -2.0,
+    "q": 0.7
+   },
+   "measured": {
+    "lufs": -22.0,
+    "lra": 1.65,
+    "true_peak_db": -4.07,
+    "peak_db": -4.08,
+    "rms_db": -22.65,
+    "crest_db": 18.58,
+    "seconds": 33.0
+   }
+  }
+ },
+ "stems": {
+  "sum_vs_underscore_residual_db": -165.6,
+  "families_present": [
+   "chip",
+   "drums",
+   "perc",
+   "piano",
+   "strings"
+  ],
+  "family_share_lu": {
+   "piano": -6.3,
+   "strings": -2.2,
+   "drums": -3.1,
+   "perc": -16.0,
+   "chip": -10.3
+  }
+ },
+ "spectrum": {
+  "sub": -3.0,
+  "bass": -3.8,
+  "lowmid": -11.1,
+  "mid": -23.8,
+  "presence": -22.9,
+  "air": -29.0,
+  "centroid_hz": 156.0
+ },
+ "bar_levels": [
+  {
+   "bar": 1,
+   "rms_db": -21.3,
+   "peak_db": -5.900000095367432
+  },
+  {
+   "bar": 2,
+   "rms_db": -23.2,
+   "peak_db": -9.300000190734863
+  },
+  {
+   "bar": 3,
+   "rms_db": -21.4,
+   "peak_db": -5.900000095367432
+  },
+  {
+   "bar": 4,
+   "rms_db": -23.4,
+   "peak_db": -9.199999809265137
+  }
+ ],
+ "instrumentation": {
+  "bdrum_muted": {
+   "family": "perc",
+   "notes": 6,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "cb": {
+   "family": "strings",
+   "notes": 6,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "grand": {
+   "family": "piano",
+   "notes": 6,
+   "source": "sf2",
+   "credit": "Salamander Grand Piano by Alexander Holm (CC BY 3.0) -- ATTRIBUTION REQUIRED"
+  },
+  "k808": {
+   "family": "drums",
+   "notes": 6,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "noise": {
+   "family": "chip",
+   "notes": 8,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "vc": {
+   "family": "strings",
+   "notes": 32,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  }
+ },
+ "credits": [
+  "Salamander Grand Piano by Alexander Holm (CC BY 3.0) -- ATTRIBUTION REQUIRED",
+  "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+ ],
+ "audition": [
+  "loop-x3-preview seams at 10.0 s and 20.0 s: no click, no level dip; the cluster returns to F2 Gb2 C3 on the downbeat"
+ ],
+ "warnings": []
+}

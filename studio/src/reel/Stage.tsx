@@ -1,12 +1,52 @@
-// One beat's picture: set + cast + balloons + on-screen cards + kind treatments + fx.
+// One beat's PICTURE: set + cast + in-world text (cards, date rail, ticker, UI) + kind treatments + fx.
+// Only what would appear in the show is drawn here. Everything that is a note about the show (ids, labels,
+// dialogue, captions, cues, timecodes) is drawn by Reel.tsx in the amber margin around the picture; this file
+// exports what the margin needs: castMarks() (where each figure stands, for the name labels) and lineStarts().
 import React from 'react';
-import {displayName, type Beat, type CharRef, type Episode, type Shot} from './schema';
-import {FigLabel, Figure, figTop} from './Figure';
+import {castName, deviceOf, displayName, FPS, type Beat, type CharRef, type Episode, type Shot} from './schema';
+import {Figure, figTop, humanGeo} from './Figure';
 import {GlyphBg, SetBack, SetFront} from './Sets';
 import {clamp, DISPLAY, easeBack, easeOut, FLOOR, GLY, hash, HEAD, MONO, palFor, rng, SANS, SH, typed, wrap, type Pal} from './look';
 
 const W = 1280;
-export interface BeatCtx {ep: Episode; beat: Beat; lf: number; len: number}
+export interface BeatCtx {ep: Episode; beat: Beat; lf: number; len: number; dlg?: DlgCtx}
+/** Dialogue reels only (schema.ts DIALOGUE REELS): what the picture needs to know about the talk at this frame. */
+export interface DlgCtx {
+  speaking: Set<string>; // ids whose line is audible on this frame
+  label: (id: string) => string; // the name once the picture has named them, else the neutral role
+}
+const SPEAK_SPECIAL = new Set(['whale', 'orb', 'calendar', 'podium', 'clod', 'chatgtp', 'korg']);
+/** A soft glow and ring behind the head of whoever is talking (dialogue reels). */
+const SpeakGlow: React.FC<{p: Placed; x: number; lf: number; pal: Pal}> = ({p, x, lf, pal}) => {
+  let hx = x;
+  let hy = p.top + 22 * p.s;
+  let R = 22 * p.s;
+  if (!SPEAK_SPECIAL.has(p.ref.id)) {
+    const g = humanGeo(p.ref.id, p.ref.pose, x, p.y, p.s, lf, p.dir);
+    hx = g.hx;
+    hy = g.hy;
+    R = g.R;
+  }
+  const pulse = 1 + 0.06 * Math.sin(lf / 2.2);
+  const ax = hx + R * 1.75 * (p.dir === -1 ? -1 : 1);
+  return (
+    <g>
+      <circle cx={hx} cy={hy} r={R * 2.2 * pulse} fill={pal.mas} opacity={0.13} />
+      <circle cx={hx} cy={hy} r={R * 1.6} fill="none" stroke={pal.mas} strokeWidth={Math.max(1.5, 2.2 * p.s)} opacity={0.55} />
+      {[0, 1, 2].map((k) => (
+        <path
+          key={k}
+          d={`M ${ax + (p.dir === -1 ? -1 : 1) * k * 7 * p.s} ${hy - (8 + k * 5) * p.s} q ${(p.dir === -1 ? -1 : 1) * (5 + k * 2) * p.s} ${(8 + k * 5) * p.s} 0 ${(16 + k * 10) * p.s}`}
+          fill="none"
+          stroke={pal.mas}
+          strokeWidth={Math.max(1.2, 2 * p.s)}
+          strokeLinecap="round"
+          opacity={0.6 - k * 0.15 + 0.15 * Math.sin(lf / 2 + k)}
+        />
+      ))}
+    </g>
+  );
+};
 
 // ---------------------------------------------------------------- cast layout
 interface Placed {ref: CharRef; x: number; y: number; s: number; dir: 1 | -1; look: number; top: number}
@@ -56,160 +96,13 @@ const layout = (chars: CharRef[], shot: Shot, x0 = 90, x1 = 1190): Placed[] => {
   });
 };
 
-// ---------------------------------------------------------------- speech
-interface Box {x: number; y: number; w: number; h: number}
-const Balloon: React.FC<{box: Box; lines: string[]; ax: number; ay: number; fs: number; dim?: boolean}> = ({box, lines, ax, ay, fs, dim}) => {
-  const {x, y, w, h} = box;
-  // tail leaves the edge that faces the anchor
-  let tail: string;
-  let patch: React.ReactNode;
-  if (ay >= y + h) {
-    const tx = clamp(ax, x + 22, x + w - 22);
-    tail = `M${tx - 12} ${y + h - 2} L${ax} ${Math.max(ay - 4, y + h + 10)} L${tx + 12} ${y + h - 2} Z`;
-    patch = <rect x={tx - 10.5} y={y + h - 4} width={21} height={5} fill="#F4F1E6" />;
-  } else {
-    const left = ax < x;
-    const ex = left ? x : x + w;
-    const ty = clamp(ay, y + 14, y + h - 14);
-    tail = `M${ex} ${ty - 10} L${ax} ${ay} L${ex} ${ty + 10} Z`;
-    patch = <rect x={left ? ex - 1 : ex - 4} y={ty - 8.5} width={5} height={17} fill="#F4F1E6" />;
-  }
-  return (
-    <g opacity={dim ? 0.55 : 1}>
-      <path d={tail} fill="#F4F1E6" stroke="#0E1426" strokeWidth={2.5} strokeLinejoin="round" />
-      <rect x={x} y={y} width={w} height={h} rx={16} fill="#F4F1E6" stroke="#0E1426" strokeWidth={2.5} />
-      {patch}
-      {lines.map((l, i) => (
-        <text key={i} x={x + 16} y={y + 12 + fs * (i + 1) + i * 3} fill="#0E1426" fontFamily={SANS} fontWeight={700} fontSize={fs}>
-          {l}
-        </text>
-      ))}
-    </g>
-  );
-};
-
-const lineStarts = (beat: Beat, len: number) =>
+// ---------------------------------------------------------------- dialogue timing (the strip itself is in Reel.tsx)
+/** Frame (inside the beat) at which each line starts. Line t is already resolved to a fraction (schema.ts). */
+export const lineStarts = (beat: Beat, len: number) =>
   beat.lines.map((l, i) => Math.floor(len * (l.t !== null ? l.t : 0.06 + (0.8 * i) / Math.max(1, beat.lines.length))));
 
-const Speech: React.FC<{ctx: BeatCtx; placed: Placed[]; pal: Pal; minTop: number; dx?: number}> = ({ctx, placed, minTop, dx = 0}) => {
-  const {beat, lf, len} = ctx;
-  const starts = lineStarts(beat, len);
-  const lo = 12 + (dx > 0 ? 640 : 0);
-  const hi = (dx < 0 ? 640 : W) - 12;
-  const boxes: {box: Box; lines: string[]; ax: number; ay: number; fs: number; i: number}[] = [];
-  beat.lines.forEach((ln, i) => {
-    if (lf < starts[i]) return;
-    const who = placed.find((p) => p.ref.id === ln.who);
-    if (!who) return;
-    const txt = typed(ln.text, (lf - starts[i] + 1) / Math.max(4, Math.min(12, ln.text.length / 3)));
-    const fs = 19;
-    // long lines get a wider balloon rather than losing their end to "…"
-    const cw = ln.text.length > 100 ? 40 : ln.text.length > 80 ? 34 : 30;
-    const full = wrap(ln.text, cw, 4);
-    const shown = wrap(txt, cw, 4);
-    const w = Math.max(...full.map((l) => l.length)) * fs * 0.53 + 34;
-    const h = full.length * (fs + 3) + 22;
-    let ax = who.x + dx;
-    let ay = who.top;
-    let y = ay - 28 - h;
-    let x = clamp(ax - w / 2, lo, hi - w);
-    if (y < minTop) {
-      // no room above the head: sit beside it, on the side with more space
-      const hs = 22 * who.s;
-      const headY = who.top + hs;
-      const right = hi - (ax + hs) >= ax - hs - lo;
-      x = right ? Math.min(ax + hs + 26, hi - w) : Math.max(ax - hs - 26 - w, lo);
-      y = clamp(headY - h / 2, minTop, SH - 90 - h);
-      ax = right ? ax + hs * 0.8 : ax - hs * 0.8;
-      ay = headY;
-    }
-    boxes.push({box: {x, y, w, h}, lines: shown, ax, ay, fs, i});
-  });
-  const vis = boxes.slice(-3);
-  // nudge earlier balloons away from later ones, never up under the on-screen cards (minTop):
-  // above the newer balloon if there is room, otherwise below it
-  const hit = (a: Box, b: Box) => a.x < b.x + b.w && b.x < a.x + a.w && a.y < b.y + b.h && b.y < a.y + a.h;
-  for (let j = vis.length - 1; j > 0; j--) {
-    for (let k = j - 1; k >= 0; k--) {
-      const a = vis[j].box;
-      const b = vis[k].box;
-      if (!hit(a, b)) continue;
-      const up = a.y - b.h - 8;
-      const down = a.y + a.h + 8;
-      if (up >= minTop) b.y = up;
-      else if (down + b.h <= SH - 60) b.y = down;
-      else b.y = Math.max(minTop, up);
-    }
-  }
-  return (
-    <g>
-      {vis.map((b, j) => (
-        <Balloon key={b.i} box={b.box} lines={b.lines} ax={b.ax} ay={b.ay} fs={b.fs} dim={j < vis.length - 1 && vis.length > 1} />
-      ))}
-    </g>
-  );
-};
-
-/** Lines whose speaker isn't on stage: an RPG-style dialogue box. Returns the node and its top y. */
-const offLines = (ctx: BeatCtx, placed: Placed[]) => {
-  const {beat, lf, len} = ctx;
-  const starts = lineStarts(beat, len);
-  let cur: {who: string; text: string; t: number} | null = null;
-  beat.lines.forEach((ln, i) => {
-    if (lf < starts[i]) return;
-    if (placed.find((p) => p.ref.id === ln.who)) return;
-    cur = {who: ln.who, text: ln.text, t: (lf - starts[i] + 1) / Math.max(4, Math.min(12, ln.text.length / 3))};
-  });
-  return cur as {who: string; text: string; t: number} | null;
-};
-
-const DialogueBox: React.FC<{who: string; text: string; t: number; bottom: number}> = ({who, text, t, bottom}) => {
-  const lines = wrap(text, 70, 3);
-  const shown = wrap(typed(text, t), 70, 3);
-  const h = lines.length * 25 + 22;
-  const y = bottom - h;
-  const name = who ? `${displayName(who)} (O.S.)` : '(O.S.)';
-  return (
-    <g>
-      <rect x={150} y={y} width={980} height={h} rx={8} fill="rgba(6,9,18,0.9)" stroke="#F4F1E6" strokeWidth={2} />
-      <rect x={166} y={y - 13} width={name.length * 9 + 16} height={22} rx={4} fill="#F4F1E6" />
-      <text x={174} y={y + 3} fill="#0E1426" fontFamily={MONO} fontWeight={700} fontSize={14}>
-        {name}
-      </text>
-      {shown.map((l, i) => (
-        <text key={i} x={170} y={y + 32 + i * 25} fill="#F4F1E6" fontFamily={SANS} fontWeight={700} fontSize={20}>
-          {l}
-        </text>
-      ))}
-    </g>
-  );
-};
-
-const VoSub: React.FC<{vo: string; t: number; bottom: number}> = ({vo, t, bottom}) => {
-  const v = vo.toLowerCase();
-  const lines = wrap(v, 74, 2);
-  const shown = wrap(typed(v, t), 74, 2);
-  const h = lines.length * 27 + 14;
-  const w = Math.max(...lines.map((l) => l.length)) * 11.4 + 150;
-  const x = 640 - w / 2;
-  const y = bottom - h;
-  return (
-    <g>
-      <rect x={x} y={y} width={w} height={h} rx={6} fill="rgba(0,0,0,0.8)" />
-      <text x={x + 12} y={y + 24} fill="#FFC857" fontFamily={MONO} fontWeight={700} fontSize={13}>
-        mas (v.o.)
-      </text>
-      {shown.map((l, i) => (
-        <text key={i} x={x + 118} y={y + 25 + i * 27} fill="#fff" fontFamily={SANS} fontStyle="italic" fontSize={21}>
-          {l}
-        </text>
-      ))}
-    </g>
-  );
-};
-
 // ---------------------------------------------------------------- on-screen text
-interface CardLay {text: string; lines: string[]; fs: number; w: number; h: number; y: number; dx: number | null}
+interface CardLay {text: string; lines: string[]; fs: number; w: number; h: number; y: number; dx: number | null; ui?: boolean}
 const CARD_TOP = 72;
 /** Wrap a card's text without hard-splitting a filename-sized word (up to 40 chars). */
 const cardWrap = (text: string, max = 30, maxLines = 3) => {
@@ -253,6 +146,18 @@ const OnCard: React.FC<{c: CardLay; cx: number; k: number; seed: number}> = ({c,
   const rot = (r() - 0.5) * 3.5;
   const sc = easeBack(k);
   const cy = c.y + c.h / 2;
+  if (c.ui)
+    // an on-screen UI button (the writers' "UI: …" items)
+    return (
+      <g transform={`translate(${cx} ${cy}) scale(${sc})`}>
+        <rect x={-c.w / 2} y={-c.h / 2} width={c.w} height={c.h} rx={c.h / 2} fill="#eef1f6" stroke="#0E1426" strokeWidth={3} />
+        {c.lines.map((l, i) => (
+          <text key={i} x={0} y={-c.h / 2 + 12 + c.fs * 0.78 + i * c.fs * 1.06} fill="#0E1426" fontFamily={SANS} fontWeight={700} fontSize={c.fs * 0.8} textAnchor="middle">
+            {l}
+          </text>
+        ))}
+      </g>
+    );
   return (
     <g transform={`translate(${cx} ${cy}) rotate(${rot}) scale(${sc})`}>
       <rect x={-c.w / 2 + 6} y={-c.h / 2 + 6} width={c.w} height={c.h} fill="rgba(0,0,0,0.45)" />
@@ -268,13 +173,69 @@ const OnCard: React.FC<{c: CardLay; cx: number; k: number; seed: number}> = ({c,
 
 const onK = (i: number, lf: number, len: number, n = 1) => clamp((lf - len * (0.08 + i * Math.min(0.14, 0.5 / Math.max(1, n)))) / 6);
 
-const FloatCards: React.FC<{ctx: BeatCtx; lay: CardLay[]; cx: number}> = ({ctx, lay, cx}) => (
+const FloatCards: React.FC<{ctx: BeatCtx; lay: CardLay[]; cx: number; ui: Set<string>; ageOf?: Map<string, number> | null}> = ({ctx, lay, cx, ui, ageOf}) => (
   <g>
     {lay.map((c, i) => (
-      <OnCard key={i} c={c} cx={cx + (c.dx !== null ? c.dx : (i % 2 === 0 ? -1 : 1) * (lay.length > 1 ? 24 : 0))} k={onK(i, ctx.lf, ctx.len, lay.length)} seed={hash(c.text) + i} />
+      <OnCard
+        key={i}
+        c={{...c, ui: ui.has(c.text)}}
+        cx={cx + (c.dx !== null ? c.dx : (i % 2 === 0 ? -1 : 1) * (lay.length > 1 ? 24 : 0))}
+        k={ageOf && ageOf.has(c.text) ? clamp(ageOf.get(c.text)! / 6) : onK(i, ctx.lf, ctx.len, lay.length)}
+        seed={hash(c.text) + i}
+      />
     ))}
   </g>
 );
+
+// "RAIL: …" items: the show's Veep-style date chyron, lower left of the picture (prefix never drawn)
+const DateRail: React.FC<{items: string[]; lf: number; bottom: number; ageOf?: Map<string, number> | null}> = ({items, lf, bottom, ageOf}) => {
+  const fs = 30;
+  let y = bottom;
+  const out: React.ReactNode[] = [];
+  for (let i = items.length - 1; i >= 0; i--) {
+    const lines = wrap(items[i], 38, 2);
+    const w = Math.min(1060, Math.max(...lines.map((l) => l.length)) * fs * 0.47 + 44);
+    const h = lines.length * fs * 1.1 + 16;
+    y -= h + 8;
+    const k = ageOf && ageOf.has(items[i]) ? clamp((ageOf.get(items[i])! - 1) / 6) : clamp((lf - 2 - i * 6) / 6);
+    if (k <= 0) continue;
+    const x = 104 - (1 - easeOut(k)) * 50;
+    out.push(
+      <g key={i} opacity={k}>
+        <clipPath id={`rail-${i}`}>
+          <rect x={x} y={y} width={w * easeOut(k)} height={h} />
+        </clipPath>
+        <g clipPath={`url(#rail-${i})`}>
+          <rect x={x} y={y} width={w} height={h} fill="#0E1426" opacity={0.93} />
+          <rect x={x} y={y} width={8} height={h} fill="#3FE6FF" />
+          {lines.map((l, j) => (
+            <text key={j} x={x + 22} y={y + 8 + fs * 0.95 + j * fs * 1.1} fill="#F2E8CF" fontFamily={DISPLAY} fontSize={fs} letterSpacing={1.5}>
+              {l}
+            </text>
+          ))}
+        </g>
+      </g>,
+    );
+  }
+  return <g>{out}</g>;
+};
+
+// "TICKER: …" items: a news crawl along the bottom of the picture
+const Ticker: React.FC<{items: string[]; lf: number; bottom: number}> = ({items, lf, bottom}) => {
+  const txt = items.join('   ·   ');
+  const fs = 22;
+  const tw = txt.length * fs * 0.6 + 200;
+  const x = 1202 - ((lf * 7) % (tw + 1124));
+  return (
+    <g>
+      <rect x={0} y={bottom - 38} width={W} height={38} fill="#0E1426" opacity={0.95} />
+      <rect x={0} y={bottom - 38} width={W} height={3} fill="#ff5a5a" />
+      <text x={x} y={bottom - 11} fill="#F2E8CF" fontFamily={MONO} fontWeight={700} fontSize={fs} xmlSpace="preserve">
+        {txt}
+      </text>
+    </g>
+  );
+};
 
 // ---------------------------------------------------------------- panels
 const CAM: Record<string, (x: number) => string> = {
@@ -287,24 +248,15 @@ const castX = (p: Placed, lf: number, len: number, frozen: boolean) =>
   p.ref.pose === 'walk' && !(frozen && p.ref.id !== 'mas') ? p.x + p.dir * lin01(lf / len) * 70 * p.s - p.dir * 35 * p.s : p.x;
 const hiddenInMontage = (i: number, n: number, lf: number, len: number, montage: boolean) => montage && n > 1 && lf < Math.floor(len * 0.6 * (i / n));
 
-const Labels: React.FC<{ctx: BeatCtx; placed: Placed[]; pal: Pal; frozen: boolean}> = ({ctx, placed, pal, frozen}) => {
-  const {lf, len, beat} = ctx;
-  return (
-    <g>
-      {placed.map((p, i) =>
-        hiddenInMontage(i, placed.length, lf, len, beat.kind === 'montage') ? null : (
-          <FigLabel key={i} id={p.ref.id} pose={p.ref.pose} x={castX(p, lf, len, frozen)} y={p.y} s={p.s} pal={pal} mode={beat.shot === 'wide' ? 'below' : 'side'} />
-        ),
-      )}
-    </g>
-  );
-};
-
 const Cast: React.FC<{ctx: BeatCtx; placed: Placed[]; pal: Pal; frozen: boolean; montage: boolean; dashed: boolean}> = ({ctx, placed, pal, frozen, montage, dashed}) => {
   const {lf, len, beat} = ctx;
   const n = placed.length;
   return (
     <g>
+      {ctx.dlg &&
+        placed.map((p, i) =>
+          ctx.dlg!.speaking.has(p.ref.id) && !hiddenInMontage(i, n, lf, len, montage) ? <SpeakGlow key={`g${i}`} p={p} x={castX(p, lf, len, frozen)} lf={lf} pal={pal} /> : null,
+        )}
       {placed.map((p, i) => {
         if (hiddenInMontage(i, n, lf, len, montage)) return null;
         const still = frozen && p.ref.id !== 'mas';
@@ -350,13 +302,13 @@ const World: React.FC<{ctx: BeatCtx; pal: Pal; placed: Placed[]; frozen: boolean
       <g transform={cam || undefined}>
         <SetFront set={beat.set} pal={pal} f={f} xs={placed.filter((p) => p.ref.id === 'rumpt').map((p) => p.x).concat(placed.map((p) => p.x))} />
       </g>
-      <Labels ctx={ctx} placed={placed} pal={pal} frozen={frozen} />
     </g>
   );
 };
 
 // video-call grid
 const CallGrid: React.FC<{ctx: BeatCtx; pal: Pal; frozen: boolean; top?: number}> = ({ctx, pal, frozen, top = 76}) => {
+  // (the tile name plates are the call UI, i.e. in-world; the margin adds no labels for a call)
   const {beat, lf} = ctx;
   const n = Math.max(1, beat.chars.length);
   const cols = n <= 1 ? 1 : n <= 4 ? 2 : n <= 9 ? 3 : 4;
@@ -386,15 +338,25 @@ const CallGrid: React.FC<{ctx: BeatCtx; pal: Pal; frozen: boolean; top?: number}
           <clipPath id={`tile-${beat.idx}-${i}`}>
             <rect x={cx} y={cy} width={tw} height={th} rx={8} />
           </clipPath>
-          <rect x={cx} y={cy} width={tw} height={th} rx={8} fill={pal.bg2} />
-          <g clipPath={`url(#tile-${beat.idx}-${i})`}>
-            <Figure id={c.id} pose={c.pose === 'walk' ? 'stand' : c.pose} face={c.face} x={placed[i].x} y={placed[i].y} s={placed[i].s} pal={pal} f={frozen && c.id !== 'mas' ? 0 : lf} look={0} label="none" date={beat.real} noPodium />
-          </g>
+          <rect x={cx} y={cy} width={tw} height={th} rx={8} fill={ctx.dlg && ctx.ep.cast?.[c.id]?.blank ? '#000' : pal.bg2} />
+          {!(ctx.dlg && ctx.ep.cast?.[c.id]?.blank) && (
+            <g clipPath={`url(#tile-${beat.idx}-${i})`}>
+              <Figure id={c.id} pose={c.pose === 'walk' ? 'stand' : c.pose} face={c.face} x={placed[i].x} y={placed[i].y} s={placed[i].s} pal={pal} f={frozen && c.id !== 'mas' ? 0 : lf} look={0} label="none" date={beat.real} noPodium />
+            </g>
+          )}
           <rect x={cx} y={cy} width={tw} height={th} rx={8} fill="none" stroke={c.id === 'mas' ? pal.mas : pal.dim} strokeWidth={c.id === 'mas' ? 4 : 2} />
-          <rect x={cx + 8} y={cy + th - 30} width={displayName(c.id).length * 9 + 14} height={22} rx={4} fill="rgba(0,0,0,0.65)" />
-          <text x={cx + 15} y={cy + th - 14} fill="#fff" fontFamily={MONO} fontWeight={700} fontSize={14}>
-            {displayName(c.id)}
-          </text>
+          {ctx.dlg && ctx.dlg.speaking.has(c.id) && <rect x={cx + 3} y={cy + 3} width={tw - 6} height={th - 6} rx={7} fill="none" stroke="#39FF88" strokeWidth={5} />}
+          {(() => {
+            const nm = ctx.dlg ? castName(ctx.ep, c.id) : displayName(c.id);
+            return (
+              <g>
+                <rect x={cx + 8} y={cy + th - 30} width={nm.length * 9 + 14} height={22} rx={4} fill="rgba(0,0,0,0.65)" />
+                <text x={cx + 15} y={cy + th - 14} fill="#fff" fontFamily={MONO} fontWeight={700} fontSize={14}>
+                  {nm}
+                </text>
+              </g>
+            );
+          })()}
         </g>
       ))}
       <g>
@@ -402,16 +364,15 @@ const CallGrid: React.FC<{ctx: BeatCtx; pal: Pal; frozen: boolean; top?: number}
           <circle key={x} cx={x} cy={566} r={14} fill={i === 2 ? '#d33' : pal.dim} />
         ))}
       </g>
-      <Speech ctx={ctx} placed={placed} pal={pal} minTop={Math.max(70, top)} />
     </g>
   );
 };
 
 // insert: a big object filling the frame, carrying on-screen text (or the caption)
-const Insert: React.FC<{ctx: BeatCtx; pal: Pal}> = ({ctx, pal}) => {
+const Insert: React.FC<{ctx: BeatCtx; pal: Pal; ageOf?: Map<string, number> | null}> = ({ctx, pal, ageOf}) => {
   const {beat, lf, len} = ctx;
   const screenish = ['screen', 'call', 'darkroom', 'office', 'bullpen', 'lab', 'datacenter', 'void'].includes(beat.set);
-  const texts = beat.onscreen.length ? beat.onscreen : [beat.caption || beat.id];
+  const texts = beat.onscreen; // callers only use Insert when there is in-world text to show
   const t = clamp(lf / (len * 0.55));
   return (
     <g>
@@ -429,9 +390,6 @@ const Insert: React.FC<{ctx: BeatCtx; pal: Pal}> = ({ctx, pal}) => {
           ))}
         </g>
       )}
-      <text x={screenish ? 170 : 300} y={screenish ? 108 : 84} fill={screenish ? '#5a6a8a' : pal.plateInk} fontFamily={MONO} fontSize={14} opacity={0.8}>
-        {`[ INSERT${beat.chars.length ? ' · ' + beat.chars.map((c) => displayName(c.id)).join(', ') : ''} ]`}
-      </text>
       {(() => {
         // stack the texts, shrinking to fit inside the screen (y 150..505) / paper (y 150..545).
         // Width: mono is ~0.6 em per char; the paper's Archivo Black runs ~0.74 em.
@@ -445,7 +403,7 @@ const Insert: React.FC<{ctx: BeatCtx; pal: Pal}> = ({ctx, pal}) => {
         if (fs * (1.2 * L + 0.2) > avail) fs = avail / (1.2 * L + 0.2);
         let y = 150 + fs;
         const nodes = texts.map((tx, i) => {
-          const lines = wrap(typed(tx, t * texts.length - i), cw, 4);
+          const lines = wrap(ageOf && ageOf.has(tx) ? typed(tx, ageOf.get(tx)! / Math.max(6, tx.length / 2.5)) : typed(tx, t * texts.length - i), cw, 4);
           const y0 = y;
           y += fulls[i].length * fs * 1.2 + 24;
           return lines.map((l, j) => (
@@ -467,24 +425,34 @@ const Insert: React.FC<{ctx: BeatCtx; pal: Pal}> = ({ctx, pal}) => {
 };
 
 // kind = card: big text on a flat field
-const CardStage: React.FC<{ctx: BeatCtx; pal: Pal}> = ({ctx, pal}) => {
+const CardStage: React.FC<{ctx: BeatCtx; pal: Pal; ageOf?: Map<string, number> | null}> = ({ctx, pal, ageOf}) => {
   const {beat, lf, len} = ctx;
-  const items = beat.onscreen.length ? beat.onscreen : [beat.caption || beat.id];
+  const items = beat.onscreen; // no text = an empty field (the caption is a note: it stays in the margin)
   const n = items.length;
+  // stack the items top to bottom, never hard-splitting a filename-sized word, shrinking to fit the frame
+  const gap = 26;
+  const lays = items.map((t, i) => {
+    const lines = cardWrap(t, t.length > 70 ? 40 : t.length > 36 ? 32 : 24, 6);
+    const longest = Math.max(...lines.map((l) => l.length), 5);
+    const fs = Math.min(i === 0 ? 76 : 54, (1000 / longest - 2) / 0.47); // Anton ~0.47 em + 2 px tracking
+    return {lines, fs};
+  });
+  const total = lays.reduce((a, l) => a + l.lines.length * l.fs * 1.08, 0) + gap * Math.max(0, n - 1);
+  const kf = Math.min(1, 470 / Math.max(1, total));
+  let y = SH / 2 - (total * kf) / 2;
   return (
     <g>
       <rect x={-10} y={-10} width={W + 20} height={SH + 20} fill={pal.bg} />
       {pal.wallFill && <rect width={W} height={SH} fill={pal.wallFill} opacity={0.4} />}
-      {items.map((t, i) => {
-        const k = clamp((lf - len * 0.05 - i * len * 0.15) / 5);
-        const lines = wrap(t, 24, 4);
-        const fs = Math.min(76, 1080 / (Math.max(...lines.map((l) => l.length), 5) * 0.48), 380 / (lines.length * n * 1.1));
-        const blockH = lines.length * fs * 1.08;
-        const cy = SH / 2 + (i - (n - 1) / 2) * (SH / Math.max(n, 1.4)) * 0.62;
+      {lays.map(({lines, fs: fs0}, i) => {
+        const k = ageOf && ageOf.has(items[i]) ? clamp(ageOf.get(items[i])! / 5) : clamp((lf - len * 0.05 - i * len * 0.15) / 5);
+        const fs = fs0 * kf;
+        const y0 = y;
+        y += lines.length * fs * 1.08 + gap * kf;
         return (
           <g key={i} opacity={k} transform={`translate(0 ${(1 - easeOut(k)) * 20})`}>
             {lines.map((l, j) => (
-              <text key={j} x={640} y={cy - blockH / 2 + fs * 0.9 + j * fs * 1.08} fill={i === 0 ? pal.text : pal.glow} fontFamily={DISPLAY} fontSize={fs} textAnchor="middle" letterSpacing={2}>
+              <text key={j} x={640} y={y0 + fs * 0.9 + j * fs * 1.08} fill={i === 0 ? pal.text : pal.glow} fontFamily={DISPLAY} fontSize={fs} textAnchor="middle" letterSpacing={2}>
                 {l}
               </text>
             ))}
@@ -590,9 +558,6 @@ const IntroStage: React.FC<{ctx: BeatCtx; pal: Pal}> = ({ctx, pal}) => {
         );
       })}
       {cards}
-      <text x={640} y={SH - 18} fill={pal.dim} fontFamily={MONO} fontSize={15} textAnchor="middle">
-        [ INTRO 0:30 · see out/animatic/intro-animatic.mp4 ]
-      </text>
     </g>
   );
 };
@@ -637,12 +602,6 @@ const KindLayer: React.FC<{ctx: BeatCtx; pal: Pal}> = ({ctx, pal}) => {
           {Array.from({length: 16}, (_, i) => (
             <line key={`h${i}`} x1={0} y1={i * 40} x2={W} y2={i * 40} stroke={pal.glow} strokeWidth={1} opacity={0.12} />
           ))}
-          <g transform="translate(1070 560) rotate(-6)">
-            <rect x={-10} y={-34} width={190} height={46} fill="none" stroke={pal.mas} strokeWidth={4} />
-            <text x={85} y={0} fill={pal.mas} fontFamily={'"Permanent Marker", cursive'} fontSize={30} textAnchor="middle">
-              THE PLAN
-            </text>
-          </g>
         </g>
       );
     case 'setpiece':
@@ -650,9 +609,6 @@ const KindLayer: React.FC<{ctx: BeatCtx; pal: Pal}> = ({ctx, pal}) => {
         <g>
           <rect x={0} y={0} width={W} height={40} fill="#000" />
           <rect x={0} y={SH - 40} width={W} height={40} fill="#000" />
-          <text x={W - 20} y={SH - 14} fill="#ff9a5c" fontFamily={MONO} fontWeight={700} fontSize={14} textAnchor="end">
-            ★ SET-PIECE
-          </text>
         </g>
       );
     default:
@@ -665,7 +621,7 @@ const FreezeCard: React.FC<{ctx: BeatCtx; name: string; sub: string; id: string}
   const {lf, len} = ctx;
   const k = clamp((lf - Math.min(8, len * 0.1)) / 5);
   if (k <= 0) return null;
-  const x = 700 + (1 - easeOut(k)) * 700;
+  const x = 662 + (1 - easeOut(k)) * 600;
   const w = 520;
   const subL = wrap(sub, 26, 2);
   const h = 140 + Math.max(0, subL.length - 1) * 30;
@@ -775,26 +731,66 @@ const Burst: React.FC<{lf: number; pal: Pal}> = ({lf, pal}) => {
 };
 
 // ---------------------------------------------------------------- the beat
-export const BeatStage: React.FC<{ctx: BeatCtx}> = ({ctx}) => {
-  const {beat, lf, len} = ctx;
-  const fx = new Set(beat.fx);
+type Mode = 'placeholder' | 'card' | 'intro' | 'insert' | 'call' | 'split' | 'world';
+interface Plan {
+  beat: Beat; // the beat as drawn: onscreen[] holds only the plain in-world texts (device prefixes stripped)
+  mode: Mode;
+  fx: Set<string>;
+  frozen: boolean;
+  pal: Pal;
+  freeze: {id: string; name: string; sub: string} | null;
+  cards: string[];
+  rails: string[];
+  tickers: string[];
+  ui: Set<string>;
+  placed: Placed[];
+  pa: Placed[];
+  pb: Placed[];
+  push: number; // slow camera push (scale about 640,316)
+  ageOf: Map<string, number> | null; // dialogue reels: frames since each visible in-world text appeared
+  fg: {id: string; side: 'left' | 'right'} | null; // dialogue reels: over-the-shoulder silhouette
+}
+
+const planBeat = (ctx: BeatCtx): Plan => {
+  const raw = ctx.beat;
+  const fx = new Set<string>(raw.fx);
   const frozen = fx.has('freeze');
-  const pal = palFor(beat.style, frozen);
-  const t = lf / len;
-  const seed = hash(beat.id + beat.caption);
-  // freeze card consumes the first on-screen line
-  // freeze name card: "NAME / SUBTITLE" in onscreen[0] names the card (and picks the portrait); else the first non-Mas char
-  let freeze: {id: string; name: string; sub: string} | null = null;
-  let cards = beat.onscreen;
+  const pal = palFor(raw.style, frozen);
+  const t = ctx.lf / ctx.len;
+  // dialogue reels: in-world text and cast are timed inside the beat (schema.ts DIALOGUE REELS)
+  const D = ctx.dlg && raw.dlg ? raw.dlg : null;
+  let src = raw.onscreen;
+  let chars = raw.chars;
+  let ageOf: Map<string, number> | null = null;
+  if (D) {
+    const sec = ctx.lf / FPS;
+    const vis = D.timed.filter((x) => sec >= x.at && (x.until === null || sec < x.until));
+    src = vis.map((x) => x.text);
+    ageOf = new Map(vis.map((x) => [deviceOf(x.text).text, ctx.lf - x.at * FPS]));
+    chars = raw.chars.filter((_, i) => {
+      const T = D.charT[i];
+      return !T || ((T.from === null || sec >= T.from) && (T.until === null || sec < T.until));
+    });
+  }
+  // in-world text devices: the prefixes ("RAIL:", "UI:", …) are pointers and are never drawn
+  const items = src.map(deviceOf);
+  const rails = items.filter((d) => d.device === 'rail').map((d) => d.text);
+  const tickers = items.filter((d) => d.device === 'ticker').map((d) => d.text);
+  const ui = new Set(items.filter((d) => d.device === 'ui').map((d) => d.text));
+  const texts = items.filter((d) => d.device === 'card' || d.device === 'ui').map((d) => d.text);
+  const beat: Beat = {...raw, onscreen: texts, chars};
+  // freeze name card: "NAME / SUBTITLE" in onscreen names the card (and picks the portrait); else the first non-Mas char
+  let freeze: Plan['freeze'] = null;
+  let cards = texts;
   // (no name card on a full-frame card or insert: the text already fills the frame)
-  if (frozen && beat.kind !== 'card' && beat.kind !== 'intro' && beat.shot !== 'insert') {
+  if (frozen && beat.kind !== 'card' && beat.kind !== 'intro' && beat.shot !== 'insert' && !beat.placeholder) {
     const nameOf = (id: string) => displayName(id).replace(/^THE /, '');
     const charFor = (nm: string) => beat.chars.find((c) => nameOf(c.id) === nm.toUpperCase().replace(/^THE /, '') || c.id === nm.toLowerCase().replace(/\s+/g, '-'));
     // "NAME / SUB", or "NAME · SUB" when NAME is someone in the shot (the writers use both)
-    const split = beat.onscreen.map((t) => {
-      const m = t.match(/^\s*([^/]{1,26}?)\s*\/\s*(.+)$/);
+    const split = texts.map((x) => {
+      const m = x.match(/^\s*([^/]{1,26}?)\s*\/\s*(.+)$/);
       if (m) return m;
-      const d = t.match(/^\s*([^·]{1,26}?)\s*·\s*(.+)$/);
+      const d = x.match(/^\s*([^·]{1,26}?)\s*·\s*(.+)$/);
       return d && charFor(d[1]) ? d : null;
     });
     // prefer a "NAME / SUB" item naming someone in the shot, then any short "NAME / SUB", else the first non-Mas char
@@ -804,18 +800,75 @@ export const BeatStage: React.FC<{ctx: BeatCtx}> = ({ctx}) => {
       const m = split[k]!;
       const who = charFor(m[1]) ?? beat.chars.find((c) => c.id !== 'mas');
       freeze = {id: who?.id ?? 'generic', name: m[1].toUpperCase(), sub: m[2]};
-      cards = beat.onscreen.filter((_, i) => i !== k);
+      cards = texts.filter((_, i) => i !== k);
     } else {
       const who = beat.chars.find((c) => c.id !== 'mas');
       if (who) freeze = {id: who.id, name: displayName(who.id), sub: ''};
     }
   }
-  // camera
-  let camT = '';
-  if (!frozen && beat.kind !== 'card') {
-    const push = 1 + 0.035 * t;
-    camT = `translate(640 316) scale(${push}) translate(-640 -316)`;
+  let mode: Mode;
+  let placed: Placed[] = [];
+  let pa: Placed[] = [];
+  let pb: Placed[] = [];
+  if (beat.placeholder) mode = 'placeholder';
+  else if (beat.kind === 'card') mode = 'card';
+  else if (beat.kind === 'intro') mode = 'intro';
+  else if (beat.shot === 'insert' && texts.length) mode = 'insert';
+  else if (beat.set === 'call' && !fx.has('split')) mode = 'call';
+  else if (fx.has('split') && beat.chars.length >= 1) {
+    mode = 'split';
+    const half = Math.ceil(beat.chars.length / 2);
+    pa = layout(beat.chars.slice(0, Math.max(1, half)).map((c) => ({...c, x: null})), beat.shot, 420, 860);
+    pb = layout(beat.chars.slice(Math.max(1, half)).map((c) => ({...c, x: null})), beat.shot, 420, 860);
+  } else {
+    mode = 'world';
+    // an insert with no in-world text reads as a tight detail of the set (and anyone in it)
+    placed = layout(beat.chars, beat.shot === 'insert' ? 'close' : beat.shot);
   }
+  const push = frozen || mode === 'card' || mode === 'placeholder' ? 1 : 1 + 0.035 * t;
+  return {beat: mode === 'world' && beat.shot === 'insert' ? {...beat, shot: 'close'} : beat, mode, fx, frozen, pal, freeze, cards, rails, tickers, ui, placed, pa, pb, push, ageOf, fg: D && mode !== 'card' && mode !== 'insert' ? D.fg : null};
+};
+
+/** Where each visible figure stands (x in stage coordinates, 0..1280), for the margin's name labels.
+ *  Empty for full-frame cards, inserts, the intro, placeholders and video calls (call tiles carry their own names). */
+export const castMarks = (ctx: BeatCtx): {id: string; x: number}[] => {
+  const P = planBeat(ctx);
+  const {lf, len} = ctx;
+  const pushX = (x: number) => 640 + (x - 640) * P.push;
+  const fgMark = P.fg ? [{id: P.fg.id, x: P.fg.side === 'left' ? 200 : 1080}] : [];
+  if (P.fg && P.mode !== 'world' && P.mode !== 'split') return fgMark;
+  if (P.mode === 'world') {
+    const n = P.placed.length;
+    return [...fgMark, ...P.placed.flatMap((p, i) => (hiddenInMontage(i, n, lf, len, P.beat.kind === 'montage') ? [] : [{id: p.ref.id, x: pushX(castX(p, lf, len, P.frozen))}]))];
+  }
+  if (P.mode === 'split')
+    return [
+      ...fgMark,
+      ...P.pa.map((p) => ({id: p.ref.id, x: pushX(Math.min(632, castX(p, lf, len, P.frozen) - 320))})),
+      ...P.pb.map((p) => ({id: p.ref.id, x: pushX(Math.max(648, castX(p, lf, len, P.frozen) + 320))})),
+    ];
+  return [];
+};
+
+const Placeholder: React.FC = () => (
+  // a segment with no picture yet: an empty, hatched frame (what it is, and how long, is in the margin)
+  <g>
+    <rect x={-10} y={-10} width={W + 20} height={SH + 20} fill="#10141b" />
+    {Array.from({length: 52}, (_, i) => (
+      <line key={i} x1={-720 + i * 40} y1={-10} x2={-720 + i * 40 + SH + 20} y2={SH + 10} stroke="#1f2631" strokeWidth={10} />
+    ))}
+  </g>
+);
+
+export const BeatStage: React.FC<{ctx: BeatCtx}> = ({ctx: ctx0}) => {
+  const P = planBeat(ctx0);
+  const ctx: BeatCtx = {...ctx0, beat: P.beat};
+  const {beat, lf, len} = ctx;
+  const {fx, frozen, pal, freeze, cards} = P;
+  const t = lf / len;
+  const seed = hash(beat.id + beat.caption);
+  // camera
+  let camT = P.push !== 1 ? `translate(640 316) scale(${P.push}) translate(-640 -316)` : '';
   if (fx.has('pop') && lf < 10) {
     const sc = 1 + 0.14 * (1 - easeBack(lf / 10));
     camT = `translate(640 316) scale(${sc}) translate(-640 -316) ` + camT;
@@ -830,25 +883,20 @@ export const BeatStage: React.FC<{ctx: BeatCtx}> = ({ctx}) => {
     const r = rng(lf * 13 + 1);
     shake += ` translate(${Math.round((r() * 2 - 1) * 10 * (1 - t))} 0)`;
   }
-  const hasCards = cards.length > 0 && beat.shot !== 'insert' && beat.kind !== 'card' && beat.kind !== 'intro' && beat.set !== 'screen';
+  const flat = P.mode === 'card' || P.mode === 'intro' || P.mode === 'insert' || P.mode === 'placeholder';
+  const hasCards = cards.length > 0 && !flat && beat.set !== 'screen';
   const cardW = freeze ? 600 : 860;
   const budget = beat.shot === 'close' ? 150 : beat.shot === 'medium' ? 230 : 220;
   const cardLay = hasCards ? layCards(cards.slice(0, 8), cardW, budget) : {cards: [], used: 0};
   const minTop = hasCards ? CARD_TOP + cardLay.used + 6 : 66;
   // picture
   let picture: React.ReactNode;
-  let placed: Placed[] = [];
-  if (beat.kind === 'card') picture = <CardStage ctx={ctx} pal={pal} />;
-  else if (beat.kind === 'intro') picture = <IntroStage ctx={ctx} pal={pal} />;
-  else if (beat.shot === 'insert') picture = <Insert ctx={ctx} pal={pal} />;
-  else if (beat.set === 'call' && !fx.has('split')) picture = <CallGrid ctx={ctx} pal={pal} frozen={frozen} top={hasCards ? minTop : 76} />;
-  else if (fx.has('split') && beat.chars.length >= 1) {
-    const half = Math.ceil(beat.chars.length / 2);
-    const A = beat.chars.slice(0, Math.max(1, half));
-    const B = beat.chars.slice(Math.max(1, half));
-    const pa = layout(A.map((c) => ({...c, x: null})), beat.shot, 420, 860);
-    const pb = layout(B.map((c) => ({...c, x: null})), beat.shot, 420, 860);
-    placed = [];
+  if (P.mode === 'placeholder') picture = <Placeholder />;
+  else if (P.mode === 'card') picture = <CardStage ctx={ctx} pal={pal} ageOf={P.ageOf} />;
+  else if (P.mode === 'intro') picture = <IntroStage ctx={ctx} pal={pal} />;
+  else if (P.mode === 'insert') picture = <Insert ctx={ctx} pal={pal} ageOf={P.ageOf} />;
+  else if (P.mode === 'call') picture = <CallGrid ctx={ctx} pal={pal} frozen={frozen} top={hasCards ? minTop : 76} />;
+  else if (P.mode === 'split') {
     picture = (
       <g>
         <clipPath id={`splitL-${beat.idx}`}>
@@ -859,46 +907,33 @@ export const BeatStage: React.FC<{ctx: BeatCtx}> = ({ctx}) => {
         </clipPath>
         <g clipPath={`url(#splitL-${beat.idx})`}>
           <g transform="translate(-320 0)">
-            <World ctx={ctx} pal={pal} placed={pa} frozen={frozen} />
+            <World ctx={ctx} pal={pal} placed={P.pa} frozen={frozen} />
           </g>
         </g>
         <g clipPath={`url(#splitR-${beat.idx})`}>
           <g transform="translate(320 0)">
-            <World ctx={{...ctx, beat: {...beat, set: beat.set === 'call' ? 'void' : beat.set}}} pal={pal} placed={pb} frozen={frozen} />
+            <World ctx={{...ctx, beat: {...beat, set: beat.set === 'call' ? 'void' : beat.set}}} pal={pal} placed={P.pb} frozen={frozen} />
           </g>
         </g>
         <rect x={636} y={0} width={8} height={SH} fill="#000" />
         <rect x={638} y={0} width={4} height={SH} fill={pal.glow} />
-        <Speech ctx={ctx} placed={pa} pal={pal} minTop={minTop} dx={-320} />
-        <Speech ctx={ctx} placed={pb} pal={pal} minTop={minTop} dx={320} />
       </g>
     );
-  } else {
-    placed = layout(beat.chars, beat.shot);
-    picture = <World ctx={ctx} pal={pal} placed={placed} frozen={frozen} />;
-  }
-  const speechInline = beat.kind !== 'card' && beat.shot !== 'insert' && !(beat.set === 'call' && !fx.has('split')) && !fx.has('split');
-  const castIds = fx.has('split') || (beat.set === 'call' && !fx.has('split')) ? beat.chars.map((c) => ({ref: c}) as Placed) : placed;
-  const off = offLines(ctx, castIds);
-  // bottom stack: VO at the very bottom, off-screen dialogue above it
-  let bottom = SH - 8 - (beat.kind === 'setpiece' ? 40 : beat.kind === 'montage' ? 26 : 0);
-  const vo = beat.vo ? <VoSub vo={beat.vo} t={clamp(lf / (len * 0.45))} bottom={bottom} /> : null;
-  if (beat.vo) bottom -= wrap(beat.vo, 74, 2).length * 27 + 22;
-  const dlg = off ? <DialogueBox who={off.who} text={off.text} t={off.t} bottom={bottom} /> : null;
+  } else picture = <World ctx={ctx} pal={pal} placed={P.placed} frozen={frozen} />;
   // screen set: on-screen text lives inside the monitor
   const screenText =
-    beat.set === 'screen' && beat.kind !== 'card' && beat.shot !== 'insert' && cards.length ? (
+    beat.set === 'screen' && !flat && cards.length ? (
       <g>
         {(() => {
           const wide = beat.shot === 'wide';
-          const x0 = wide ? 225 : 90;
+          const x0 = wide ? 225 : 110;
           let y = wide ? 128 : 112;
           const fs = wide ? 30 : 36;
           const yMax = wide ? 440 : 470;
           const out: React.ReactNode[] = [];
           cards.forEach((c, i) => {
-            const lines = wrap(typed(c, clamp((lf - i * len * 0.2) / (len * 0.4))), wide ? 48 : 52, 3);
-            const full = wrap(c, wide ? 48 : 52, 3);
+            const lines = wrap(P.ageOf && P.ageOf.has(c) ? typed(c, P.ageOf.get(c)! / Math.max(6, c.length / 2.5)) : typed(c, clamp((lf - i * len * 0.2) / (len * 0.4))), wide ? 48 : 50, 3);
+            const full = wrap(c, wide ? 48 : 50, 3);
             full.forEach((_, j) => {
               if (y > yMax) return;
               if (lines[j]) out.push(<text key={`${i}-${j}`} x={x0} y={y} fill={pal.text} fontFamily={MONO} fontWeight={700} fontSize={fs}>{lines[j]}</text>);
@@ -910,6 +945,7 @@ export const BeatStage: React.FC<{ctx: BeatCtx}> = ({ctx}) => {
         })()}
       </g>
     ) : null;
+  const bottom = SH - 22 - (beat.kind === 'setpiece' ? 40 : beat.kind === 'montage' ? 26 : 0);
   return (
     <g>
       <g transform={shake || undefined}>
@@ -921,19 +957,44 @@ export const BeatStage: React.FC<{ctx: BeatCtx}> = ({ctx}) => {
       <KindLayer ctx={ctx} pal={pal} />
       {fx.has('rain') && <Rain lf={lf} pal={pal} seed={seed} />}
       {fx.has('glyph-dissolve') && <GlyphDissolve lf={lf} len={len} pal={pal} seed={seed} />}
-      {speechInline && <Speech ctx={ctx} placed={placed} pal={pal} minTop={minTop} />}
-      {hasCards && <FloatCards ctx={ctx} lay={cardLay.cards} cx={freeze ? 340 : 640} />}
+      {P.fg && <Shoulder side={P.fg.side} pal={pal} />}
+      {hasCards && <FloatCards ctx={ctx} lay={cardLay.cards} cx={freeze ? 340 : 640} ui={P.ui} ageOf={P.ageOf} />}
       {freeze && <FreezeCard ctx={ctx} id={freeze.id} name={freeze.name} sub={freeze.sub} />}
-      {frozen && lf < 14 && !beat.lines.length && (
-        <text x={24} y={SH - 20} fill="#F2E8CF" fontFamily={MONO} fontWeight={700} fontSize={14}>
-          FREEZE · world drops to 2-TONE · MAS stays in colour
-        </text>
-      )}
-      {dlg}
-      {vo}
+      {P.tickers.length > 0 && <Ticker items={P.tickers} lf={lf} bottom={bottom + 22} />}
+      {P.rails.length > 0 && <DateRail items={P.rails} lf={lf} bottom={bottom - (P.tickers.length ? 38 : 0)} ageOf={P.ageOf} />}
       {fx.has('pop') && <Burst lf={lf} pal={pal} />}
       {fx.has('rewind') && <Rewind lf={lf} len={len} />}
       {(fx.has('flash') || frozen) && lf < 6 && <rect x={0} y={0} width={W} height={SH} fill="#fff" opacity={1 - lf / 6} />}
+      {ctx.dlg && beat.dlg?.side && P.mode !== 'card' && <SideBadge text={beat.dlg.side} />}
+    </g>
+  );
+};
+
+// dialogue reels: the over-the-shoulder foreground (a dark shoulder and head, cut by the frame edge)
+const Shoulder: React.FC<{side: 'left' | 'right'; pal: Pal}> = ({side, pal}) => {
+  const m = side === 'left' ? 1 : -1;
+  const cx = side === 'left' ? 150 : 1130;
+  return (
+    <g>
+      <ellipse cx={cx + m * 30} cy={700} rx={250} ry={175} fill="#03050a" opacity={0.94} />
+      <circle cx={cx} cy={452} r={92} fill="#03050a" opacity={0.94} />
+      <path d={`M ${cx + m * 92} 452 A 92 92 0 0 ${side === 'left' ? 1 : 0} ${cx + m * 40} 535`} fill="none" stroke={pal.dim} strokeWidth={3} opacity={0.8} />
+    </g>
+  );
+};
+
+// dialogue reels: the show's side badge (in-world chrome: HIS SIDE / THE BOARD'S SIDE), top right, persistent
+const SideBadge: React.FC<{text: string}> = ({text}) => {
+  const fs = 20;
+  const w = text.length * fs * 0.62 + 28;
+  const x = 1186 - w;
+  const board = /BOARD/i.test(text);
+  return (
+    <g>
+      <rect x={x} y={16} width={w} height={fs + 14} rx={4} fill={board ? '#1B2A4A' : '#0E1426'} opacity={0.9} stroke={board ? '#F2E8CF' : '#FFC857'} strokeWidth={2} />
+      <text x={x + w / 2} y={16 + fs + 3} fill={board ? '#F2E8CF' : '#FFC857'} fontFamily={MONO} fontWeight={700} fontSize={fs} textAnchor="middle" letterSpacing={1}>
+        {text}
+      </text>
     </g>
   );
 };

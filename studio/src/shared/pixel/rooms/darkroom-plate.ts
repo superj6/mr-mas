@@ -24,29 +24,29 @@ import {text, textWidth} from '../font';
 // ------------------------------------------------------------------ geometry (frame coords, 480 x 203)
 export const DPLATE = {
   /** the desk top's far edge (Mas's rig row MAS_M_DESK sits on it) */
-  deskY: 120,
+  deskY: 128,
   /** the desk's near edge: below it is the dark under the desk (the V.O. band, y 182-203, sits on shadow) */
-  nearY: 178,
-  win: {x0: 108, x1: 300, y0: 6, y1: 106, mx: 204, my: 40},
+  nearY: 176,
+  win: {x0: 108, x1: 300, y0: 10, y1: 112, mx: 204, my: 44},
   /** TASYA's door in the back wall, between the window and the rack (outer frame; its foot is behind the desk) */
-  door: {x0: 318, x1: 362, y0: 22},
-  rack: {x0: 400, x1: 480, y0: 14},
+  door: {x0: 318, x1: 362, y0: 28},
+  rack: {x0: 400, x1: 480, y0: 18},
   /** the rack's drive slot, at the desk's height, facing left: the check tray comes out of it */
-  slot: {x: 404, y: 110, w: 3, h: 8},
-  shelf: {x0: 0, x1: 96, y: 22},
+  slot: {x: 404, y: 118, w: 3, h: 8},
+  shelf: {x0: 0, x1: 96, y: 26},
   /** the monitor, turned to him: its screen quad (the near, taller left edge; the far, shorter right edge) */
-  mon: {x0: 4, x1: 64, topL: 38, botL: 102, topR: 44, botR: 96},
+  mon: {x0: 4, x1: 64, topL: 44, botL: 108, topR: 50, botR: 102},
   /** where the scenes put the cast (top-left of cast/mas-medium's rig; the Orb's centre) */
-  mas: [88, 36] as [number, number],
-  orb: [202, 66] as [number, number],
+  mas: [88, 44] as [number, number],
+  orb: [202, 72] as [number, number],
   /** his glass and the GUEST lanyard laid square beside it: on the desk under the Orb, so its look from the phone
    *  (camera-left) to the lanyard (straight down) is one clear step, never a 1-px nudge */
-  glass: {x: 170, y: 126, w: 9, h: 26},
-  lanyard: {x: 184, y: 152},
+  glass: {x: 170, y: 134, w: 9, h: 26},
+  lanyard: {x: 184, y: 158},
   /** the phone lying on the desk (under his camera-left hand in 'phone') */
-  phone: {x: 98, y: 132, w: 22, h: 12},
+  phone: {x: 98, y: 140, w: 22, h: 12},
   /** the tally: three grooves carved in the desk top in front of him; mark 3 is where his thumb rests ('tally') */
-  tally: {x: 128, y: 134, gap: 10, len: 12},
+  tally: {x: 128, y: 142, gap: 10, len: 12},
 };
 const D = DPLATE;
 /**
@@ -98,7 +98,7 @@ const DIG: Record<string, string[]> = {
 };
 const monLight = (x: number, y: number) => {
   // the monitor faces him: a cone from its face (x ~ 40, y ~ 70) opening to the right
-  const dx = x - 44, dy = (y - 70) * 1.25;
+  const dx = x - 44, dy = (y - 76) * 1.25;
   if (dx < -30) return 0;
   const d = Math.hypot(dx, dy);
   const ang = Math.abs(Math.atan2(dy, Math.max(1, dx)));
@@ -375,11 +375,11 @@ const drawTally = (b: Buf, n: number, carve: number, shavings: boolean) => {
     for (let j = 0; j < l; j++) {
       if (!fresh && (j === 3 || j === 8)) continue; // worn gaps
       const X = gx + (j > 5 ? 1 : 0), Y = y + j; // a hand-cut lean
-      b.set(X, Y, fresh ? PAL.N0 : stepColor(b.get(X, Y), -3));
-      b.set(X + 1, Y, fresh ? PAL.C7 : stepColor(b.get(X + 1, Y), 2));
-      b.set(X - 1, Y, stepColor(b.get(X - 1, Y), fresh ? -2 : -1));
+      b.set(X - 1, Y, stepColor(b.get(X - 1, Y), fresh ? -3 : -2));
+      b.set(X, Y, fresh ? PAL.N0 : PAL.N1);
+      b.set(X + 1, Y, fresh ? PAL.C8 : stepColor(b.get(X + 1, Y), 2));
     }
-    if (fresh) { b.set(gx, y - 1, PAL.C4); b.set(gx + 1, y - 1, PAL.C7); }
+    if (fresh) { b.set(gx, y - 1, PAL.C6); b.set(gx + 1, y - 1, PAL.C9); b.set(gx + 1, y + l, PAL.C6); }
   };
   if (n >= 2) { groove(x, len - 2, false); groove(x + gap, len - 1, false); }
   if (n >= 3) {

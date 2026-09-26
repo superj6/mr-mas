@@ -1,0 +1,784 @@
+{
+ "problems": [
+  "a4-27-17: ASR CER 0.086 ('The first and last time I ever wear one of these.')",
+  "a4-29-09: ASR CER 0.15 ('Has anyone read the charter?')",
+  "a4-30-11: ASR CER 0.143 ('I am deeply pleased by this result, after about 72 very intense hours of work.')",
+  "a4-31-03: ASR CER 0.021 ('I love and respect Ali. I harbor zero ill will towards him.')"
+ ],
+ "lanes": {
+  "neleh": {
+   "name": "NELEH",
+   "voice": "af_aoede (Kokoro-82M stock) · c-aoede-precise · speed 0.95",
+   "n_lines": 7,
+   "median_f0_hz": 174.6,
+   "mean_range_st": 8.2,
+   "wpm_lines": [
+    167,
+    160,
+    190,
+    195
+   ],
+   "centroid_hz": 823,
+   "_mfcc": [
+    88.38099670410156,
+    9.098999977111816,
+    9.821000099182129,
+    -4.002999782562256,
+    -0.8370000123977661,
+    -6.073999881744385,
+    2.2790000438690186,
+    -1.6410000324249268,
+    -5.63100004196167,
+    1.6239999532699585,
+    -13.010000228881836,
+    0.10999999940395355
+   ],
+   "total_s": 9.18
+  },
+  "mada": {
+   "name": "MADA",
+   "voice": "am_adam (Kokoro-82M stock) · b-adam-grey · speed 0.9",
+   "n_lines": 3,
+   "median_f0_hz": 123.5,
+   "mean_range_st": 7.5,
+   "wpm_lines": [],
+   "centroid_hz": 1401,
+   "_mfcc": [
+    40.62699890136719,
+    -2.8989999294281006,
+    12.763999938964844,
+    -2.3480000495910645,
+    -1.3650000095367432,
+    -8.734000205993652,
+    -3.9660000801086426,
+    -4.59499979019165,
+    -2.6540000438690186,
+    -2.493000030517578,
+    0.9679999947547913,
+    -1.3609999418258667
+   ],
+   "total_s": 3.27
+  },
+  "mas-manalt": {
+   "name": "MAS MANALT",
+   "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.82",
+   "n_lines": 9,
+   "median_f0_hz": 111.0,
+   "mean_range_st": 9.0,
+   "wpm_lines": [
+    146,
+    146,
+    148,
+    128
+   ],
+   "centroid_hz": 1546,
+   "_mfcc": [
+    48.444000244140625,
+    10.031999588012695,
+    16.075000762939453,
+    4.013999938964844,
+    -2.0360000133514404,
+    9.010000228881836,
+    -10.531000137329102,
+    5.209000110626221,
+    -1.2410000562667847,
+    2.4079999923706055,
+    1.2970000505447388,
+    -0.6690000295639038
+   ],
+   "total_s": 15.57
+  },
+  "mas-manalt-vo": {
+   "name": "MAS MANALT (V.O.)",
+   "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.577 (x on-camera read)",
+   "n_lines": 5,
+   "median_f0_hz": 111.9,
+   "mean_range_st": 8.4,
+   "wpm_lines": [
+    120,
+    114,
+    149,
+    142,
+    133
+   ],
+   "centroid_hz": 1355,
+   "_mfcc": [
+    63.50600051879883,
+    11.784000396728516,
+    16.724000930786133,
+    8.736000061035156,
+    -4.499000072479248,
+    10.210000038146973,
+    -7.638999938964844,
+    4.866000175476074,
+    -0.8970000147819519,
+    3.0350000858306885,
+    1.569000005722046,
+    -1.9930000305175781
+   ],
+   "total_s": 11.68
+  },
+  "rima-tamuri": {
+   "name": "RIMA TAMURI",
+   "voice": "af_heart (Kokoro-82M stock) · a-heart-composed · speed 0.9",
+   "n_lines": 2,
+   "median_f0_hz": 206.5,
+   "mean_range_st": 8.0,
+   "wpm_lines": [
+    147,
+    188
+   ],
+   "centroid_hz": 1317,
+   "_mfcc": [
+    56.26300048828125,
+    -5.690999984741211,
+    9.699999809265137,
+    -10.859000205993652,
+    0.8330000042915344,
+    -8.734000205993652,
+    0.7879999876022339,
+    -4.250999927520752,
+    -8.071000099182129,
+    -2.8929998874664307,
+    -5.309000015258789,
+    -4.2769999504089355
+   ],
+   "total_s": 3.19
+  },
+  "tiled-employee": {
+   "name": "TILED EMPLOYEE",
+   "voice": "af_nova (Kokoro-82M stock) · a-nova-plain · speed 0.95",
+   "n_lines": 1,
+   "median_f0_hz": 146.4,
+   "mean_range_st": 7.4,
+   "wpm_lines": [
+    211
+   ],
+   "centroid_hz": 620,
+   "_mfcc": [
+    86.21700286865234,
+    19.32699966430664,
+    17.78499984741211,
+    -1.6770000457763672,
+    5.132999897003174,
+    1.5119999647140503,
+    -2.2769999504089355,
+    2.9630000591278076,
+    -2.312000036239624,
+    -1.5089999437332153,
+    -5.23799991607666,
+    3.8469998836517334
+   ],
+   "total_s": 1.37
+  },
+  "alyi": {
+   "name": "ALYI",
+   "voice": "am_onyx (Kokoro-82M stock) · a-onyx-cathedral · speed 0.8",
+   "n_lines": 5,
+   "median_f0_hz": 84.1,
+   "mean_range_st": 13.0,
+   "wpm_lines": [
+    137,
+    99,
+    106,
+    108,
+    109
+   ],
+   "centroid_hz": 594,
+   "_mfcc": [
+    104.06300354003906,
+    -0.9959999918937683,
+    21.591999053955078,
+    3.747999906539917,
+    1.4229999780654907,
+    1.1390000581741333,
+    2.1110000610351562,
+    -7.964000225067139,
+    5.385000228881836,
+    -0.5460000038146973,
+    -0.6019999980926514,
+    0.0989999994635582
+   ],
+   "total_s": 18.45
+  },
+  "mario": {
+   "name": "MARIO",
+   "voice": "am_liam (Kokoro-82M stock) · a-liam-earnest · speed 0.95",
+   "n_lines": 2,
+   "median_f0_hz": 114.8,
+   "mean_range_st": 13.1,
+   "wpm_lines": [
+    150,
+    159
+   ],
+   "centroid_hz": 1433,
+   "_mfcc": [
+    59.5620002746582,
+    -6.369999885559082,
+    14.130999565124512,
+    1.184000015258789,
+    -0.5730000138282776,
+    4.210999965667725,
+    -2.690999984741211,
+    -8.277000427246094,
+    9.565999984741211,
+    -7.831999778747559,
+    2.0850000381469727,
+    3.4079999923706055
+   ],
+   "total_s": 4.93
+  },
+  "adelina": {
+   "name": "ADELINA",
+   "voice": "af_bella (Kokoro-82M stock) · a-bella-warm · speed 0.95",
+   "n_lines": 1,
+   "median_f0_hz": 199.4,
+   "mean_range_st": 6.5,
+   "wpm_lines": [
+    163
+   ],
+   "centroid_hz": 1168,
+   "_mfcc": [
+    57.07400131225586,
+    7.830999851226807,
+    19.590999603271484,
+    -8.942000389099121,
+    4.333000183105469,
+    -4.9730000495910645,
+    1.409000039100647,
+    -5.446000099182129,
+    -5.084000110626221,
+    -2.8580000400543213,
+    -8.961000442504883,
+    1.1269999742507935
+   ],
+   "total_s": 1.57
+  },
+  "ttemme": {
+   "name": "TTEMME",
+   "voice": "am_fenrir (Kokoro-82M stock) · d-fenrir-headset · speed 1.0",
+   "n_lines": 2,
+   "median_f0_hz": 136.8,
+   "mean_range_st": 10.4,
+   "wpm_lines": [
+    183,
+    158
+   ],
+   "centroid_hz": 1756,
+   "_mfcc": [
+    42.3120002746582,
+    -10.692999839782715,
+    15.597999572753906,
+    -6.511000156402588,
+    -2.0910000801086426,
+    -1.218000054359436,
+    -9.42199993133545,
+    2.927999973297119,
+    -7.548999786376953,
+    -0.3889999985694885,
+    -1.6069999933242798,
+    -2.88700008392334
+   ],
+   "total_s": 3.35
+  },
+  "tasya": {
+   "name": "TASYA",
+   "voice": "am_eric (Kokoro-82M stock) · b-eric-warm · speed 0.88",
+   "n_lines": 4,
+   "median_f0_hz": 150.9,
+   "mean_range_st": 13.0,
+   "wpm_lines": [
+    140,
+    132,
+    138
+   ],
+   "centroid_hz": 1181,
+   "_mfcc": [
+    66.46900177001953,
+    -2.9230000972747803,
+    31.966999053955078,
+    -2.3239998817443848,
+    10.118000030517578,
+    8.180000305175781,
+    -3.7260000705718994,
+    -1.7769999504089355,
+    -4.22599983215332,
+    0.8370000123977661,
+    -6.369999885559082,
+    -1.3220000267028809
+   ],
+   "total_s": 8.85
+  },
+  "gerg-mockbran": {
+   "name": "GERG MOCKBRAN",
+   "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.15",
+   "n_lines": 3,
+   "median_f0_hz": 141.4,
+   "mean_range_st": 6.5,
+   "wpm_lines": [
+    170,
+    190,
+    247
+   ],
+   "centroid_hz": 1498,
+   "_mfcc": [
+    59.46799850463867,
+    3.240999937057495,
+    20.70199966430664,
+    -5.646999835968018,
+    -2.0799999237060547,
+    5.261000156402588,
+    -8.177000045776367,
+    5.164999961853027,
+    -6.123000144958496,
+    3.7279999256134033,
+    0.07199999690055847,
+    0.3319999873638153
+   ],
+   "total_s": 4.09
+  },
+  "terb": {
+   "name": "TERB",
+   "voice": "am_echo (Kokoro-82M stock) · b-echo-brisk · speed 1.02",
+   "n_lines": 3,
+   "median_f0_hz": 103.2,
+   "mean_range_st": 12.2,
+   "wpm_lines": [
+    186
+   ],
+   "centroid_hz": 788,
+   "_mfcc": [
+    90.86399841308594,
+    -0.1889999955892563,
+    3.059999942779541,
+    -3.2039999961853027,
+    3.5179998874664307,
+    17.3439998626709,
+    -7.699999809265137,
+    5.823999881744385,
+    2.9509999752044678,
+    -1.5850000381469727,
+    4.324999809265137,
+    3.125999927520752
+   ],
+   "total_s": 3.24
+  }
+ },
+ "shared_scene_pairs": {
+  "adelina|alyi": {
+   "scenes": [
+    "27"
+   ],
+   "d_f0_st": 14.9,
+   "d_mfcc": 51.9,
+   "d_centroid_pct": 97
+  },
+  "adelina|mada": {
+   "scenes": [
+    "27"
+   ],
+   "d_f0_st": 8.3,
+   "d_mfcc": 25.7,
+   "d_centroid_pct": 17
+  },
+  "adelina|mario": {
+   "scenes": [
+    "27"
+   ],
+   "d_f0_st": 9.6,
+   "d_mfcc": 29.0,
+   "d_centroid_pct": 18
+  },
+  "adelina|neleh": {
+   "scenes": [
+    "27"
+   ],
+   "d_f0_st": 2.3,
+   "d_mfcc": 34.4,
+   "d_centroid_pct": 42
+  },
+  "adelina|rima-tamuri": {
+   "scenes": [
+    "27"
+   ],
+   "d_f0_st": 0.6,
+   "d_mfcc": 19.1,
+   "d_centroid_pct": 11
+  },
+  "adelina|tasya": {
+   "scenes": [
+    "27"
+   ],
+   "d_f0_st": 4.8,
+   "d_mfcc": 26.0,
+   "d_centroid_pct": 1
+  },
+  "adelina|tiled-employee": {
+   "scenes": [
+    "27"
+   ],
+   "d_f0_st": 5.3,
+   "d_mfcc": 34.6,
+   "d_centroid_pct": 88
+  },
+  "adelina|ttemme": {
+   "scenes": [
+    "27"
+   ],
+   "d_f0_st": 6.5,
+   "d_mfcc": 30.1,
+   "d_centroid_pct": 33
+  },
+  "alyi|mada": {
+   "scenes": [
+    "27",
+    "30"
+   ],
+   "d_f0_st": 6.7,
+   "d_mfcc": 66.1,
+   "d_centroid_pct": 58
+  },
+  "alyi|mario": {
+   "scenes": [
+    "27"
+   ],
+   "d_f0_st": 5.4,
+   "d_mfcc": 46.9,
+   "d_centroid_pct": 59
+  },
+  "alyi|mas-manalt": {
+   "scenes": [
+    "30"
+   ],
+   "d_f0_st": 4.8,
+   "d_mfcc": 60.9,
+   "d_centroid_pct": 62
+  },
+  "alyi|neleh": {
+   "scenes": [
+    "27"
+   ],
+   "d_f0_st": 12.6,
+   "d_mfcc": 30.4,
+   "d_centroid_pct": 28
+  },
+  "alyi|rima-tamuri": {
+   "scenes": [
+    "27"
+   ],
+   "d_f0_st": 15.6,
+   "d_mfcc": 54.8,
+   "d_centroid_pct": 55
+  },
+  "alyi|tasya": {
+   "scenes": [
+    "27",
+    "30"
+   ],
+   "d_f0_st": 10.1,
+   "d_mfcc": 43.5,
+   "d_centroid_pct": 50
+  },
+  "alyi|terb": {
+   "scenes": [
+    "30"
+   ],
+   "d_f0_st": 3.5,
+   "d_mfcc": 34.1,
+   "d_centroid_pct": 25
+  },
+  "alyi|tiled-employee": {
+   "scenes": [
+    "27"
+   ],
+   "d_f0_st": 9.6,
+   "d_mfcc": 32.0,
+   "d_centroid_pct": 4
+  },
+  "alyi|ttemme": {
+   "scenes": [
+    "27"
+   ],
+   "d_f0_st": 8.4,
+   "d_mfcc": 67.0,
+   "d_centroid_pct": 66
+  },
+  "gerg-mockbran|mas-manalt": {
+   "scenes": [
+    "29",
+    "31"
+   ],
+   "d_f0_st": 4.2,
+   "d_mfcc": 18.2,
+   "d_centroid_pct": 3
+  },
+  "gerg-mockbran|mas-manalt-vo": {
+   "scenes": [
+    "29"
+   ],
+   "d_f0_st": 4.1,
+   "d_mfcc": 19.4,
+   "d_centroid_pct": 11
+  },
+  "gerg-mockbran|neleh": {
+   "scenes": [
+    "29"
+   ],
+   "d_f0_st": 3.7,
+   "d_mfcc": 38.1,
+   "d_centroid_pct": 82
+  },
+  "gerg-mockbran|tasya": {
+   "scenes": [
+    "29"
+   ],
+   "d_f0_st": 1.1,
+   "d_mfcc": 22.5,
+   "d_centroid_pct": 27
+  },
+  "mada|mario": {
+   "scenes": [
+    "27"
+   ],
+   "d_f0_st": 1.3,
+   "d_mfcc": 27.8,
+   "d_centroid_pct": 2
+  },
+  "mada|mas-manalt": {
+   "scenes": [
+    "30"
+   ],
+   "d_f0_st": 1.8,
+   "d_mfcc": 27.6,
+   "d_centroid_pct": 9
+  },
+  "mada|neleh": {
+   "scenes": [
+    "25",
+    "27"
+   ],
+   "d_f0_st": 6.0,
+   "d_mfcc": 52.1,
+   "d_centroid_pct": 70
+  },
+  "mada|rima-tamuri": {
+   "scenes": [
+    "27"
+   ],
+   "d_f0_st": 8.9,
+   "d_mfcc": 21.0,
+   "d_centroid_pct": 6
+  },
+  "mada|tasya": {
+   "scenes": [
+    "27",
+    "30"
+   ],
+   "d_f0_st": 3.5,
+   "d_mfcc": 39.1,
+   "d_centroid_pct": 19
+  },
+  "mada|terb": {
+   "scenes": [
+    "30"
+   ],
+   "d_f0_st": 3.1,
+   "d_mfcc": 59.3,
+   "d_centroid_pct": 78
+  },
+  "mada|tiled-employee": {
+   "scenes": [
+    "27"
+   ],
+   "d_f0_st": 2.9,
+   "d_mfcc": 53.6,
+   "d_centroid_pct": 126
+  },
+  "mada|ttemme": {
+   "scenes": [
+    "27"
+   ],
+   "d_f0_st": 1.8,
+   "d_mfcc": 16.4,
+   "d_centroid_pct": 20
+  },
+  "mario|neleh": {
+   "scenes": [
+    "27"
+   ],
+   "d_f0_st": 7.3,
+   "d_mfcc": 43.0,
+   "d_centroid_pct": 74
+  },
+  "mario|rima-tamuri": {
+   "scenes": [
+    "27"
+   ],
+   "d_f0_st": 10.2,
+   "d_mfcc": 28.7,
+   "d_centroid_pct": 9
+  },
+  "mario|tasya": {
+   "scenes": [
+    "27"
+   ],
+   "d_f0_st": 4.7,
+   "d_mfcc": 30.4,
+   "d_centroid_pct": 21
+  },
+  "mario|tiled-employee": {
+   "scenes": [
+    "27"
+   ],
+   "d_f0_st": 4.2,
+   "d_mfcc": 42.4,
+   "d_centroid_pct": 131
+  },
+  "mario|ttemme": {
+   "scenes": [
+    "27"
+   ],
+   "d_f0_st": 3.0,
+   "d_mfcc": 31.3,
+   "d_centroid_pct": 18
+  },
+  "mas-manalt|mas-manalt-vo": {
+   "scenes": [
+    "29"
+   ],
+   "d_f0_st": 0.1,
+   "d_mfcc": 16.5,
+   "d_centroid_pct": 14
+  },
+  "mas-manalt|neleh": {
+   "scenes": [
+    "29"
+   ],
+   "d_f0_st": 7.8,
+   "d_mfcc": 48.6,
+   "d_centroid_pct": 88
+  },
+  "mas-manalt|tasya": {
+   "scenes": [
+    "29",
+    "30"
+   ],
+   "d_f0_st": 5.3,
+   "d_mfcc": 33.2,
+   "d_centroid_pct": 31
+  },
+  "mas-manalt|terb": {
+   "scenes": [
+    "30"
+   ],
+   "d_f0_st": 1.3,
+   "d_mfcc": 47.9,
+   "d_centroid_pct": 96
+  },
+  "mas-manalt-vo|neleh": {
+   "scenes": [
+    "29"
+   ],
+   "d_f0_st": 7.7,
+   "d_mfcc": 38.7,
+   "d_centroid_pct": 65
+  },
+  "mas-manalt-vo|tasya": {
+   "scenes": [
+    "29"
+   ],
+   "d_f0_st": 5.2,
+   "d_mfcc": 30.6,
+   "d_centroid_pct": 15
+  },
+  "neleh|rima-tamuri": {
+   "scenes": [
+    "27"
+   ],
+   "d_f0_st": 2.9,
+   "d_mfcc": 37.7,
+   "d_centroid_pct": 38
+  },
+  "neleh|tasya": {
+   "scenes": [
+    "27",
+    "29"
+   ],
+   "d_f0_st": 2.5,
+   "d_mfcc": 39.1,
+   "d_centroid_pct": 30
+  },
+  "neleh|tiled-employee": {
+   "scenes": [
+    "27"
+   ],
+   "d_f0_st": 3.0,
+   "d_mfcc": 20.2,
+   "d_centroid_pct": 33
+  },
+  "neleh|ttemme": {
+   "scenes": [
+    "27"
+   ],
+   "d_f0_st": 4.2,
+   "d_mfcc": 53.7,
+   "d_centroid_pct": 53
+  },
+  "rima-tamuri|tasya": {
+   "scenes": [
+    "27"
+   ],
+   "d_f0_st": 5.4,
+   "d_mfcc": 33.4,
+   "d_centroid_pct": 12
+  },
+  "rima-tamuri|tiled-employee": {
+   "scenes": [
+    "27"
+   ],
+   "d_f0_st": 6.0,
+   "d_mfcc": 44.3,
+   "d_centroid_pct": 112
+  },
+  "rima-tamuri|ttemme": {
+   "scenes": [
+    "27"
+   ],
+   "d_f0_st": 7.1,
+   "d_mfcc": 22.7,
+   "d_centroid_pct": 25
+  },
+  "tasya|terb": {
+   "scenes": [
+    "30"
+   ],
+   "d_f0_st": 6.6,
+   "d_mfcc": 42.8,
+   "d_centroid_pct": 50
+  },
+  "tasya|tiled-employee": {
+   "scenes": [
+    "27"
+   ],
+   "d_f0_st": 0.5,
+   "d_mfcc": 34.9,
+   "d_centroid_pct": 90
+  },
+  "tasya|ttemme": {
+   "scenes": [
+    "27"
+   ],
+   "d_f0_st": 1.7,
+   "d_mfcc": 35.5,
+   "d_centroid_pct": 33
+  },
+  "tiled-employee|ttemme": {
+   "scenes": [
+    "27"
+   ],
+   "d_f0_st": 1.2,
+   "d_mfcc": 55.3,
+   "d_centroid_pct": 65
+  }
+ }
+}

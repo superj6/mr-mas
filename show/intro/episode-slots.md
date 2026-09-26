@@ -1,4 +1,6 @@
-> **Status: v1 reference, superseded where it conflicts.** The master opening script is now [`SCRIPT.md`](SCRIPT.md) (v2.0, 2026-09-25). v2.0 changes the visual style to pixel art with motivated style switches (see `studio/INTRO_PIXEL_BRIEF.md`) and the music to a piano / orchestral / big-band blend with a jazz feel and 8-bit motifs (variations V1–V4). This file's timing, gags and text remain useful detail.
+> **Status: v1 reference, superseded where it conflicts.** The master opening script is now [`SCRIPT.md`](SCRIPT.md) (v2.1, 2026-09-25). v2.0 changes the visual style to pixel art with motivated style switches (see `studio/INTRO_PIXEL_BRIEF.md`) and the music to a piano / orchestral / big-band blend with a jazz feel and 8-bit motifs (variations V1–V4). This file's timing, gags and text remain useful detail.
+>
+> **Spoiler note (2026-09-26).** v2.1 retires the bar-9 news slot and makes every per-episode state **one episode behind**: the intro of episode N shows only what episodes 1 to N−1 aired ([SCRIPT §8](SCRIPT.md#8-per-episode-changes-ep112-spoiler-safe)). Where this file still lists an episode's own events (the bar-9 headlines in §2 and §4, the §5 skyline, the §6 subtitles and toasts), treat them as research only; the on-screen values are SCRIPT §8.1–§8.4. §7 has been brought into line.
 
 # Opening Titles: Per-Episode Slots (Ep1–12)
 
@@ -46,6 +48,8 @@ All headlines, subtitles, toasts and podium labels are **[INVENTED]** gag text, 
 ---
 
 ## 2. Season at a glance
+
+> **Research only.** The 9.1–9.4 columns are the retired bar-9 slot. Every entry is that episode's own news, and some state its climax outright (Ep1's `FIRED.` / `BACK.`, Ep8's `EXPIRED`), so none of them goes on screen. The subtitle and toast columns are v1.1 values for each episode's own release. The current ones (the subtitle is last week's release note) are in [SCRIPT §8.1](SCRIPT.md#81-cold-open-couch-gag-and-title-text), where Ep12's `generally available` and `side: unclear` stay out because they are Ep12's button.
 
 | Ep | Window | File title | 9.1 / 9.2 / 9.3 | 9.4 transition | Title subtitle | Orb toast |
 |---|---|---|---|---|---|---|
@@ -98,6 +102,8 @@ The table shows each line **as displayed**, verbatim per [spec §3.3](spec.md#33
 
 ## 4. Bar 9: the slot
 
+> **Retired in intro v2.1** ([SCRIPT §8](SCRIPT.md#8-per-episode-changes-ep112-spoiler-safe)). Kept for its sourcing and lint history. Each headline announces its own episode's event, and Ep1's `FIRED.` / `BACK.` would spoil the firing about a minute in, so nothing here plays.
+
 Each sub-beat is 15 frames. **Lint:** a headline needs ⌈6 + 1.2·n⌉ frames, with spaces free (see [shot-table §6](shot-table.md#6-text-registry-and-read-time-lint)). That makes 7 glyphs the maximum.
 
 | Ep | 9.1 · f480–494 (news, T4 shockwave) | 9.2 · f495–509 (the music is fired: desaturated, mute) | 9.3 · f510–524 (the music is rehired: slam) | 9.4 · f525–539 (transition object) | Real anchors | Lint |
@@ -131,6 +137,8 @@ Each sub-beat is 15 frames. **Lint:** a headline needs ⌈6 + 1.2·n⌉ frames, 
 THE PODIUM is **a small gold podium on a far-left skyline hill.** It's "up the hill," not a company tower, and it is **not** part of the tower-per-beat sequence. From Ep3 it appears at **f622**, riding the roofline ignition and the pluck C with **no new SFX**. The cyan curve runs past the hill and **never touches it**.
 
 Its plaque is **blank until Ep12.** Motion is capped at one beat (f615–629), except the Ep7 slot cameo.
+
+> **v1.1 table, superseded for the screen.** Each row below shows its own episode's events (Ep4's breach and ring, Ep12's `USER` plaque). In v2.1 the skyline in episode N shows the aftermath of episodes 1 to N−1, and Ep12's plaque stays out ([SCRIPT §8.3](SCRIPT.md#83-skyline-and-hill-after-the-fact)). The sourcing here still holds.
 
 | Ep | Skyline change (industry) | **THE PODIUM** (Rumpt layer) | New podium text | Real anchor |
 |---|---|---|---|---|
@@ -174,6 +182,8 @@ This follows real events, costs no text, and makes the hill "the seat of power" 
 
 ## 6. Bookend: dot, toast, subtitle, last bar
 
+> **v1.1 values.** The subtitles here name each episode's own release. v2.1 makes the subtitle last week's release note, and keeps Ep12's `generally available`, `side: unclear` and the axis rescale out, because they are Ep12's button and held package ([SCRIPT §8.1](SCRIPT.md#81-cold-open-couch-gag-and-title-text), [§6.3](SCRIPT.md#63-ep12-the-takeover-package-held)). The dot positions for Eps 1–11 and the last-bar ladder still match.
+
 | Ep | `you are here` dot ([PROPOSAL] positions) | Orb toast (lint) | Title subtitle (glyphs → lint) | Last bar |
 |---|---|---|---|---|
 | 1 | At the knee (x = 0.50 of the chart) | `verified: human` (+5) | `now in low-key research preview` (27 → +11) | Standard |
@@ -197,25 +207,29 @@ This follows real events, costs no text, and makes the hill "the seat of power" 
 
 These are eggs only (never must-read). Every value that states a fact needs a line in that episode's `facts.md`.
 
+**Every state is one episode behind** ([SCRIPT §8.4](SCRIPT.md#84-small-room-layers-eggs-details-in-episode-slots-67), which this table now matches). A mark, collar, thread or number is earned in its episode and first shows in the next intro, so no intro states its own episode's outcome. v1.1 showed each episode's own state: Ep1's intro read `III`, carving the firing's mark before the firing, and Ep12's read `∞` and hung the visitor lanyard, both Ep12's own payoffs.
+
 | Ep | Firing tally (carved in the desk) | Collars (on the coat hook) | Gold threads (hoodie, optional) | KORG board (zAI tower; the banner `KORG 5: NEXT QUARTER` never changes) | Valuation ticker (NopeAI spire) |
 |---|---|---|---|---|---|
-| 1 | `III`: marks 1–2 faint (Tpool, `(REPORTED)` in-episode), mark 3 is Nov 17, 2023 | 2 | — | `KORG 1` [K, verify] | `$86B` [K: the tender in play at the Blip; verify] |
-| 2 | `III` | 3 (the "three by 2024" collar) | — | `KORG 2` [K, verify] | `$86B` [K, verify] |
-| 3 | `III` | 4 | — | `KORG 2` [K] | `$157B` [V] |
-| 4 | `IIII` (Nole's $97.4B bid) | 5 | 1 (Jan 21, 2025, White House) | `KORG 3` [K, verify] | `$300B` (Mar 31, 2025) [V] |
-| 5 | `IIII` | 6 | 2 (May 13, 2025, Riyadh) | `KORG 4` (Jul 9, 2025) [V] | `$300B` |
-| 6 | `IIII` | 7 | 3 (Sep 4, 2025 White House dinner) [P✓] | `KORG 4.1` (Nov 17, 2025) [V] | `$500B` (Oct 2025) [V] |
-| 7 | `IIII` | 8 | 3 (no in-person meeting) | verify | `$852B` (closed Mar 31, 2026 per CNBC). **If Wikipedia's April date holds, show `$730B`**, the Feb first close. [V] |
-| 8 | `IIII` | 9 | 4 (the G7 lunch at Évian, Jun 17, 2026) [P✓] | verify | `$852B` [V] |
-| 9 | `IIII` | 10 | 5 (Sep 24, 2026 state dinner) [P✓] | `KORG 4.7` (Sep 21, 2026) [V] | `$852B`. **Don't show $1.2T**: those talks are UNVERIFIED. |
-| 10 SPEC | `IIII` | A ruff | 6 (the Sep 29 ballroom meeting, if it happens) | `KORG 4.8?` [SPEC] | Scrolls too fast to read |
-| 11 SPEC | `IIII ?`: a half-scratch "?" for the disputed 2019 YC exit | A ruff | 6+ | `KORG 4.9?` [SPEC] | Same |
-| 12 SPEC | `∞` | **The visitor lanyard** hangs on the hook: the last collar | — | `KORG 4.9999` | Blank |
+| 1 | `II`: TPOOL ×2, both faint, `(REPORTED)` in-episode. The premise, not an event | 2 | — | — (cut from Ep1's intro in v2.1) | — (cut from Ep1's intro in v2.1) |
+| 2 | `III` (Ep1's mark: Nov 17, 2023) | 2 | — | `KORG 1` [K, verify], on the skyline ([SCRIPT §8.3](SCRIPT.md#83-skyline-and-hill-after-the-fact)) | `$86B` [K: the tender Ep1 aired; verify] |
+| 3 | `III` | 3 (the "three by 2024" collar, after Ep2) | — | `KORG 2` [K, verify] | `$86B` |
+| 4 | `III` | 4 | — | `KORG 2` [K] | `$157B` (Oct 2, 2024, Ep3's raise) [V] |
+| 5 | `IIII` (Ep4's mark: Nole's $97.4B bid) | 5 | 1 (Ep4: Jan 21, 2025, White House) | `KORG 3` [K, verify] | `$300B` (Mar 31, 2025, Ep4's round) [V] |
+| 6 | `IIII` | 6 | 2 (Ep5: May 13, 2025, Riyadh) | `KORG 4` (Jul 9, 2025) [V] | `$300B` |
+| 7 | `IIII` | 7 | 3 (Ep6: the Sep 4, 2025 White House dinner) [P✓] | `KORG 4.1` (Nov 17, 2025) [V] | `$500B` (Oct 2025, Ep6) [V] |
+| 8 | `IIII` | 8 | 3 (Ep7 has no in-person meeting) | verify | `$852B` (closed Mar 31, 2026 per CNBC, Ep7) [V]. **If Wikipedia's April date holds**, the close falls in Ep8's own window: show `$730B` (the Feb first close) here and `$852B` from Ep9. |
+| 9 | `IIII` | 9 | 4 (Ep8: the G7 lunch at Évian, Jun 17, 2026) [P✓] | verify | `$852B` [V] |
+| 10 SPEC | `IIII` | 10 | 5 (Ep9: the Sep 24, 2026 state dinner) [P✓] | `KORG 4.7` (Sep 21, 2026) [V] | `$852B`. **Don't show $1.2T**: those talks are UNVERIFIED. |
+| 11 SPEC | `IIII` | A ruff | 6 (the Sep 29 ballroom meeting, if Ep10 airs it) | `KORG 4.8?` [SPEC] | Scrolls too fast to read |
+| 12 SPEC | `IIII ?`: Ep11's half-scratched "?" for the disputed 2019 YC exit. **Never `∞`**, which is Ep12's own payoff | A ruff. **The visitor lanyard** (the last collar) is Ep12's own payoff and stays out | 6 | `KORG 4.9?` [SPEC] | Same (a blank spire would preview Ep12) |
 
 **Source of each thread:**
-- **The tally** follows the flashback map's placement: Ep1 carries Tpool ×2 and 2023, Ep4 Nole's bid, Ep11 the "?", Ep12 ∞. **This overrides `final.md`**, which gave the first two marks to Ep2.
-- **Collars:** the bible says one per funding round. The intro simplifies this to +1 per episode, which still lands "three by 2024" (Ep2) and "a ruff by Ep10." Check that each window has a NopeAI round or valuation jump; if one doesn't, skip that collar.
-- **Gold threads** count one per episode in which Mas meets RUMPT in person (White House or on the road), matching [recurring gags G06](../gags/recurring-gags.md#1-mass-tells) and the episode intro slots. The counts are tentative until each episode's `facts.md` confirms the meetings.
+- **The tally** follows the flashback map's placement, one intro late. Ep1 carries Tpool ×2 as the premise. The 2023 mark is earned in Ep1 and shows from Ep2, Nole's bid (Ep4) from Ep5, and the "?" (Ep11) in Ep12. `∞` belongs to Ep12's episode, never its intro. **This overrides `final.md`**, which gave the first two marks to Ep2.
+- **Collars:** the bible says one per funding round. The intro simplifies this to +1 per episode, shown one intro late, which lands "three by 2024" in Ep3's intro and a ruff from Ep11. Check that each window has a NopeAI round or valuation jump; if one doesn't, skip that collar.
+- **Gold threads** count one per episode in which Mas meets RUMPT in person (White House or on the road), matching [recurring gags G06](../gags/recurring-gags.md#1-mass-tells), and show from the next intro. The counts are tentative until each episode's `facts.md` confirms the meetings.
+- **The KORG board and the valuation ticker** follow the same one-behind rule. v2.1 cut both from Ep1's intro, and [SCRIPT §8.4](SCRIPT.md#84-small-room-layers-eggs-details-in-episode-slots-67) doesn't carry them. They come back only if the intro owner revives them, and then with these values. v1.1's Ep12 `KORG 4.9999` was Ep12's own (it sets up the KORG 5 stinger), so it moves to the episode if the room wants the joke.
+- **The per-episode sheets** (`episodes/epNN/intro-slot.md`) still carry v1.1 values in places. Their owners align them with this table.
 
 ---
 

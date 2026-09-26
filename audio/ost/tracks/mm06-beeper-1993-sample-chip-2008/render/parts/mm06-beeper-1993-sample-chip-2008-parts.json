@@ -1,0 +1,330 @@
+{
+ "id": "mm06-beeper-1993-sample-chip-2008",
+ "level": "each part is levelled to the track underscore master (K-weighted loudness match on its own span), or to the named part",
+ "parts": [
+  {
+   "part": "m1-1993",
+   "kind": "linear",
+   "file": "parts/mm06-beeper-1993-sample-chip-2008-m1-1993.wav",
+   "bars": [
+    "1",
+    "(17, 2)"
+   ],
+   "start_s": 0.0,
+   "start_frame": 0.0,
+   "body_s": 40.625,
+   "file_s": 40.625,
+   "gain_vs_raw_db": 0.98,
+   "note": "Movement I (1-bit) with the empty slot on b17.1; underscore level (P10: -22)",
+   "lufs_i": -21.69,
+   "true_peak_db": -15.26,
+   "short_term_p95": -20.33,
+   "short_term_max": -20.31,
+   "momentary_max": -19.54,
+   "band_2_6k_db": -15.6
+  },
+  {
+   "part": "m1-1993-lp7k",
+   "kind": "linear",
+   "file": "parts/mm06-beeper-1993-sample-chip-2008-m1-1993-lp7k.wav",
+   "bars": [
+    "1",
+    "(17, 2)"
+   ],
+   "start_s": 0.0,
+   "start_frame": 0.0,
+   "body_s": 40.625,
+   "file_s": 40.625,
+   "gain_vs_raw_db": 0.98,
+   "note": "Movement I low-passed at 7 kHz: the under-dialogue alternate (P10)",
+   "lufs_i": -21.7,
+   "true_peak_db": -15.29,
+   "short_term_p95": -20.35,
+   "short_term_max": -20.33,
+   "momentary_max": -19.55,
+   "band_2_6k_db": -15.6
+  },
+  {
+   "part": "m2-2008",
+   "kind": "linear",
+   "file": "parts/mm06-beeper-1993-sample-chip-2008-m2-2008.wav",
+   "bars": [
+    "17",
+    "33"
+   ],
+   "start_s": 40.0,
+   "start_frame": 960.0,
+   "body_s": 40.0,
+   "file_s": 41.5391,
+   "gain_vs_raw_db": -0.43,
+   "note": "Movement II (16-bit), ending on the tag \"shipped\" (b32.3); underscore level (P10: -20)",
+   "lufs_i": -18.85,
+   "true_peak_db": -3.15,
+   "short_term_p95": -17.3,
+   "short_term_max": -16.93,
+   "momentary_max": -14.03,
+   "band_2_6k_db": -20.1
+  },
+  {
+   "part": "render-front-fwd",
+   "kind": "linear",
+   "file": "parts/mm06-beeper-1993-sample-chip-2008-render-front-fwd.wav",
+   "bars": [
+    "33",
+    "35"
+   ],
+   "start_s": 80.0,
+   "start_frame": 1920.0,
+   "body_s": 5.0,
+   "file_s": 8.2391,
+   "gain_vs_raw_db": -0.21,
+   "note": "1-bit -> 16-bit -> BASE on Fm(add9), 2 beats each (the 5 s cut-down)",
+   "lufs_i": -20.43,
+   "true_peak_db": -4.54,
+   "short_term_p95": -18.55,
+   "short_term_max": -18.46,
+   "momentary_max": -14.55,
+   "band_2_6k_db": -24.9
+  },
+  {
+   "part": "render-front-back",
+   "kind": "linear",
+   "file": "parts/mm06-beeper-1993-sample-chip-2008-render-front-back.wav",
+   "bars": [
+    "33",
+    "(34, 3)"
+   ],
+   "start_s": 80.0,
+   "start_frame": 1920.0,
+   "body_s": 3.75,
+   "file_s": 4.05,
+   "gain_vs_raw_db": -0.21,
+   "note": "BASE -> 16-bit -> 1-bit, 2 beats each; ends dead on the 1-bit (b34.3)",
+   "lufs_i": -19.65,
+   "true_peak_db": -4.32,
+   "short_term_p95": -18.79,
+   "short_term_max": -18.65,
+   "momentary_max": -14.44,
+   "band_2_6k_db": -25.1
+  },
+  {
+   "part": "m1-flat-line",
+   "kind": "loop",
+   "file": "parts/mm06-beeper-1993-sample-chip-2008-m1-flat-line-loop.wav",
+   "tail": "parts/mm06-beeper-1993-sample-chip-2008-m1-flat-line-loop-tail.wav",
+   "preview": "parts/mm06-beeper-1993-sample-chip-2008-m1-flat-line-loop-x3-preview.mp3",
+   "bars": [
+    "1",
+    "5"
+   ],
+   "start_s": 0.0,
+   "loop_s": 10.0,
+   "loop_frames": 240.0,
+   "frame_aligned": true,
+   "tail_s": 0.3,
+   "seam": {
+    "seam_hf_ratio_to_median": 7.36,
+    "seam_hf_percentile": 89.56,
+    "wrap_jump": 0.0,
+    "wrap_jump_vs_p99_step": 0.0,
+    "rms_last_50ms_db": -240.0,
+    "rms_first_50ms_db": -21.8,
+    "verdict": "seamless"
+   },
+   "note": "1-bit, bars 1-4",
+   "lufs_i": -22.78,
+   "true_peak_db": -18.27,
+   "short_term_p95": -21.91,
+   "short_term_max": -21.79,
+   "momentary_max": -19.98,
+   "band_2_6k_db": -16.3
+  },
+  {
+   "part": "m1-arps",
+   "kind": "loop",
+   "file": "parts/mm06-beeper-1993-sample-chip-2008-m1-arps-loop.wav",
+   "tail": "parts/mm06-beeper-1993-sample-chip-2008-m1-arps-loop-tail.wav",
+   "preview": "parts/mm06-beeper-1993-sample-chip-2008-m1-arps-loop-x3-preview.mp3",
+   "bars": [
+    "9",
+    "13"
+   ],
+   "start_s": 20.0,
+   "loop_s": 10.0,
+   "loop_frames": 240.0,
+   "frame_aligned": true,
+   "tail_s": 0.314,
+   "seam": {
+    "seam_hf_ratio_to_median": 1.28,
+    "seam_hf_percentile": 79.08,
+    "wrap_jump": 0.00077,
+    "wrap_jump_vs_p99_step": 0.021,
+    "rms_last_50ms_db": -23.3,
+    "rms_first_50ms_db": -21.6,
+    "verdict": "seamless"
+   },
+   "note": "1-bit Fm9 arpeggios, bars 9-12",
+   "lufs_i": -20.34,
+   "true_peak_db": -15.26,
+   "short_term_p95": -20.3,
+   "short_term_max": -20.29,
+   "momentary_max": -19.86,
+   "band_2_6k_db": -14.8
+  },
+  {
+   "part": "m2-dial-up",
+   "kind": "loop",
+   "file": "parts/mm06-beeper-1993-sample-chip-2008-m2-dial-up-loop.wav",
+   "tail": "parts/mm06-beeper-1993-sample-chip-2008-m2-dial-up-loop-tail.wav",
+   "preview": "parts/mm06-beeper-1993-sample-chip-2008-m2-dial-up-loop-x3-preview.mp3",
+   "bars": [
+    "25",
+    "33"
+   ],
+   "start_s": 60.0,
+   "loop_s": 20.0,
+   "loop_frames": 480.0,
+   "frame_aligned": true,
+   "tail_s": 2.497,
+   "seam": {
+    "seam_hf_ratio_to_median": 1.4,
+    "seam_hf_percentile": 61.11,
+    "wrap_jump": 0.00243,
+    "wrap_jump_vs_p99_step": 0.069,
+    "rms_last_50ms_db": -18.2,
+    "rms_first_50ms_db": -17.8,
+    "verdict": "seamless"
+   },
+   "note": "the dial-up era, bars 25-32, with the push on b32.4& back into b25 (instead of the tag)",
+   "lufs_i": -18.74,
+   "true_peak_db": -4.74,
+   "short_term_p95": -17.36,
+   "short_term_max": -17.34,
+   "momentary_max": -14.03,
+   "band_2_6k_db": -18.9
+  },
+  {
+   "part": "m2-young-mas-reduced",
+   "kind": "loop",
+   "file": "parts/mm06-beeper-1993-sample-chip-2008-m2-young-mas-reduced-loop.wav",
+   "tail": "parts/mm06-beeper-1993-sample-chip-2008-m2-young-mas-reduced-loop-tail.wav",
+   "preview": "parts/mm06-beeper-1993-sample-chip-2008-m2-young-mas-reduced-loop-x3-preview.mp3",
+   "bars": [
+    "17",
+    "25"
+   ],
+   "start_s": 40.0,
+   "loop_s": 20.0,
+   "loop_frames": 480.0,
+   "frame_aligned": true,
+   "tail_s": 1.472,
+   "seam": {
+    "seam_hf_ratio_to_median": 0.53,
+    "seam_hf_percentile": 42.19,
+    "wrap_jump": 0.00837,
+    "wrap_jump_vs_p99_step": 0.595,
+    "rms_last_50ms_db": -18.7,
+    "rms_first_50ms_db": -22.1,
+    "verdict": "seamless"
+   },
+   "note": "variant: the 16-bit trio only (no chip lead, no trumpet, no clean swell)",
+   "lufs_i": -19.56,
+   "true_peak_db": -3.15,
+   "short_term_p95": -17.44,
+   "short_term_max": -17.19,
+   "momentary_max": -14.61,
+   "band_2_6k_db": -26.0
+  },
+  {
+   "part": "m2-young-mas-solo",
+   "kind": "loop",
+   "file": "parts/mm06-beeper-1993-sample-chip-2008-m2-young-mas-solo-loop.wav",
+   "tail": "parts/mm06-beeper-1993-sample-chip-2008-m2-young-mas-solo-loop-tail.wav",
+   "preview": "parts/mm06-beeper-1993-sample-chip-2008-m2-young-mas-solo-loop-x3-preview.mp3",
+   "bars": [
+    "17",
+    "25"
+   ],
+   "start_s": 40.0,
+   "loop_s": 20.0,
+   "loop_frames": 480.0,
+   "frame_aligned": true,
+   "tail_s": 1.457,
+   "seam": {
+    "seam_hf_ratio_to_median": 65.55,
+    "seam_hf_percentile": 92.6,
+    "wrap_jump": 0.00673,
+    "wrap_jump_vs_p99_step": 0.488,
+    "rms_last_50ms_db": -19.8,
+    "rms_first_50ms_db": -22.3,
+    "verdict": "seamless"
+   },
+   "note": "variant: 16-bit felt alone + the chip on the nudges only",
+   "lufs_i": -19.84,
+   "true_peak_db": -4.37,
+   "short_term_p95": -18.15,
+   "short_term_max": -17.86,
+   "momentary_max": -15.5,
+   "band_2_6k_db": -28.4
+  },
+  {
+   "part": "cut30-1993",
+   "kind": "linear",
+   "file": "parts/mm06-beeper-1993-sample-chip-2008-cut30-1993.wav",
+   "bars": [
+    "5",
+    "(17, 2)"
+   ],
+   "start_s": 10.0,
+   "start_frame": 240.0,
+   "body_s": 30.625,
+   "file_s": 30.625,
+   "gain_vs_raw_db": 0.98,
+   "note": "30 s: the knee cells -> arpeggios -> NESNEJ -> the empty slot (12 bars)",
+   "lufs_i": -21.37,
+   "true_peak_db": -15.26,
+   "short_term_p95": -20.32,
+   "short_term_max": -20.31,
+   "momentary_max": -19.54,
+   "band_2_6k_db": -15.4
+  },
+  {
+   "part": "cut15-young-mas",
+   "kind": "linear",
+   "file": "parts/mm06-beeper-1993-sample-chip-2008-cut15-young-mas.wav",
+   "bars": [
+    "18",
+    "24"
+   ],
+   "start_s": 42.5,
+   "start_frame": 1020.0,
+   "body_s": 15.0,
+   "file_s": 17.5876,
+   "gain_vs_raw_db": -0.43,
+   "note": "15 s: young Mas (b18-23) + a button on Abmaj9 (b24.1)",
+   "lufs_i": -18.76,
+   "true_peak_db": -4.35,
+   "short_term_p95": -17.12,
+   "short_term_max": -16.93,
+   "momentary_max": -14.48,
+   "band_2_6k_db": -21.9
+  },
+  {
+   "part": "m2-base-blend",
+   "kind": "stems",
+   "files": {
+    "piano": "parts/mm06-beeper-1993-sample-chip-2008-m2-base-blend-piano.flac",
+    "brass": "parts/mm06-beeper-1993-sample-chip-2008-m2-base-blend-brass.flac",
+    "bass": "parts/mm06-beeper-1993-sample-chip-2008-m2-base-blend-bass.flac",
+    "drums": "parts/mm06-beeper-1993-sample-chip-2008-m2-base-blend-drums.flac"
+   },
+   "bars": [
+    "17",
+    "33"
+   ],
+   "start_s": 40.0,
+   "note": "Movement II BEFORE the sample-chip (clean felt, upright, brushes, trumpet), level-matched: a mixer blends BASE in under the 16-bit stem. Not part of the master."
+  }
+ ],
+ "levels": "P10: Movement I underscore -22 (featured -18 = +4 dB); Movement II -20 (featured -18 = +2 dB)"
+}

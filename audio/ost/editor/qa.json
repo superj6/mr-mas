@@ -1,0 +1,7827 @@
+[
+ {
+  "id": "e01-act4-v4-s1-the-plan",
+  "mm": "MM-07",
+  "family": "P14 BLUEPRINT",
+  "title": "How to Fire a CEO Who Owns Nothing. (Ep1 Act Four v4, S1a, to picture)",
+  "cue": "tracks/e01-act4-v4/render/e01-act4-v4-s1-the-plan.cue.json",
+  "album": {
+   "lufs": -16.0,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 0.000521,
+   "st_p95": -13.51,
+   "st_median": -16.49,
+   "st_max": -13.15,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -11.12,
+   "seconds": 23.4231,
+   "samples": 1124308,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/e01-act4-v4/render/e01-act4-v4-s1-the-plan-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 23.448,
+    "wav_s": 23.423,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -16.03,
+   "tp_db": -3.15,
+   "peak_db": -3.16,
+   "clipped": 0,
+   "dc": 0.000579,
+   "st_p95": -14.01,
+   "st_median": -16.27,
+   "st_max": -13.6,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -11.71,
+   "seconds": 23.4231,
+   "samples": 1124308,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/e01-act4-v4/render/e01-act4-v4-s1-the-plan-underscore.wav",
+   "band_2_6k_db": -18.5,
+   "sub_60_db": -15.6,
+   "centroid_hz": 467,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 23.448,
+    "wav_s": 23.423,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [
+    "chip",
+    "perc",
+    "piano",
+    "strings",
+    "synth"
+   ],
+   "residual_db_re_master": -122.4,
+   "residual_peak_dbfs": -128.9,
+   "lengths_match": true
+  },
+  "loops": [],
+  "hits": {
+   "n": 17,
+   "within_tol": 15,
+   "off": [
+    {
+     "t": 4.75,
+     "offset_ms": -22.0,
+     "strength": 2.85
+    },
+    {
+     "t": 21.8333,
+     "offset_ms": 38.7,
+     "strength": 6.24
+    }
+   ],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 3,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 177,
+   "lines": 16,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "f_major": {
+   "ok": false,
+   "ok_written": true,
+   "ok_spectral": false,
+   "windows": 19,
+   "worst_sieved": 7.591,
+   "a_classes": {
+    "written": 0,
+    "resonance": 1,
+    "explained": 1,
+    "unattributed": 0
+   },
+   "fails": [
+    {
+     "t0": 21.875,
+     "t1": 22.469,
+     "a_f": 1.128,
+     "cls": "resonance",
+     "a_from": {
+      "chip": 53,
+      "perc": 30,
+      "strings": 17
+     },
+     "peaks": [
+      "chip 216.1 Hz resonance",
+      "chip 221.2 Hz resonance",
+      "chip 448.2 Hz resonance",
+      "perc 435.1 Hz resonance"
+     ]
+    }
+   ],
+   "fixed_resonances": []
+  },
+  "engine": {
+   "balance": {
+    "piano": 3,
+    "orch": 49,
+    "bigband": 0,
+    "chip": 48
+   },
+   "balance_energy": {
+    "piano": 3,
+    "orch": 50,
+    "bigband": 0,
+    "chip": 47
+   },
+   "st": {
+    "p95": -14.01,
+    "median": -16.27,
+    "max": -13.6
+   },
+   "band_2_6k_db": -18.5,
+   "f_major_ok": false,
+   "f_major_worst_sieved": 7.591,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 1,
+    "explained": 1,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [
+    "marker at 4.75 s: no clear onset within 10 ms ({'t': 4.75, 'offset_ms': np.float64(-22.0), 'strength': 2.85})",
+    "marker at 21.8333 s: no clear onset within 10 ms ({'t': 21.8333, 'offset_ms': np.float64(38.7), 'strength': 6.24})",
+    "F-major check (spectral): 1 F-bass window(s) carry A energy that NO written note explains (a resonance, not a written third), first at 21.875 s, worst sieved A/F 1.128: chip ~216.1 Hz, chip ~221.2 Hz, chip ~448.2 Hz, perc ~435.1 Hz -- audition: does it sound major?"
+   ],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "cb",
+    "celesta",
+    "felt",
+    "felt_mech",
+    "glasspad",
+    "harp",
+    "lead",
+    "tri",
+    "tri2",
+    "vc",
+    "vla",
+    "vln1",
+    "vln2",
+    "woodclick",
+    "wz_box",
+    "wz_cel",
+    "wz_ch",
+    "wz_tri"
+   ]
+  },
+  "editor_flags": [
+   "hits off: 4.75 s -22.0 ms, 21.8333 s 38.7 ms",
+   "F-major (engine, full note data) worst sieved A/F 7.591, classes {'written': 0, 'resonance': 1, 'explained': 1, 'unattributed': 0}"
+  ],
+  "crosscheck": []
+ },
+ {
+  "id": "e01-act4-v4-s1s2-the-falling-tile",
+  "mm": "MM-08",
+  "family": "P03 LEVERAGE -> D6 -> P01 DARK ROOM",
+  "title": "The Falling Tile (Ep1 Act Four v4, S1b + S2, to picture)",
+  "cue": "tracks/e01-act4-v4/render/e01-act4-v4-s1s2-the-falling-tile.cue.json",
+  "album": {
+   "lufs": -16.05,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 2.6e-05,
+   "st_p95": -13.81,
+   "st_median": -17.35,
+   "st_max": -13.13,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -11.09,
+   "seconds": 31.2583,
+   "samples": 1500400,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/e01-act4-v4/render/e01-act4-v4-s1s2-the-falling-tile-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 31.296,
+    "wav_s": 31.258,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -21.0,
+   "tp_db": -4.8,
+   "peak_db": -4.81,
+   "clipped": 0,
+   "dc": 1.2e-05,
+   "st_p95": -18.79,
+   "st_median": -22.33,
+   "st_max": -18.37,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -15.9,
+   "seconds": 31.2583,
+   "samples": 1500400,
+   "target_lufs": -21.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/e01-act4-v4/render/e01-act4-v4-s1s2-the-falling-tile-underscore.wav",
+   "band_2_6k_db": -18.9,
+   "sub_60_db": -6.2,
+   "centroid_hz": 281,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 31.296,
+    "wav_s": 31.258,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [
+    "brass",
+    "chip",
+    "drums",
+    "perc",
+    "piano",
+    "strings",
+    "winds"
+   ],
+   "residual_db_re_master": -118.3,
+   "residual_peak_dbfs": -128.9,
+   "lengths_match": true
+  },
+  "loops": [],
+  "hits": {
+   "n": 16,
+   "within_tol": 12,
+   "off": [
+    {
+     "t": 1.5625,
+     "offset_ms": 10.8,
+     "strength": 2.36
+    },
+    {
+     "t": 4.375,
+     "offset_ms": 19.7,
+     "strength": 2.51
+    },
+    {
+     "t": 5.7083,
+     "offset_ms": -55.0,
+     "strength": 2.5
+    },
+    {
+     "t": 8.125,
+     "offset_ms": -10.3,
+     "strength": 1.61
+    }
+   ],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 5,
+   "ok": true,
+   "bad": []
+  },
+  "vo_windows": [
+   {
+    "t0": 18.958,
+    "t1": 20.792,
+    "lufs": -24.54,
+    "ok": true
+   }
+  ],
+  "midi": {
+   "notes": 111,
+   "lines": 11,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "f_major": {
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "windows": 23,
+   "worst_sieved": 0.264,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "fails": [],
+   "fixed_resonances": []
+  },
+  "sub_under_room": {
+   "n": 1,
+   "ok": true,
+   "worst_db": -34.4,
+   "bad": []
+  },
+  "engine": {
+   "balance": {
+    "piano": 48,
+    "orch": 43,
+    "bigband": 0,
+    "chip": 9
+   },
+   "balance_energy": {
+    "piano": 47,
+    "orch": 49,
+    "bigband": 0,
+    "chip": 4
+   },
+   "st": {
+    "p95": -18.79,
+    "median": -22.33,
+    "max": -18.37
+   },
+   "band_2_6k_db": -18.9,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.264,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [
+    "marker at 1.5625 s: no clear onset within 10 ms ({'t': 1.5625, 'offset_ms': np.float64(10.8), 'strength': 2.36})",
+    "marker at 4.375 s: no clear onset within 10 ms ({'t': 4.375, 'offset_ms': np.float64(19.7), 'strength': 2.51})",
+    "marker at 5.7083 s: no clear onset within 10 ms ({'t': 5.7083, 'offset_ms': np.float64(-55.0), 'strength': 2.5})",
+    "marker at 8.125 s: no clear onset within 10 ms ({'t': 8.125, 'offset_ms': np.float64(-10.3), 'strength': 1.61})"
+   ],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "bdrum_muted",
+    "beeper",
+    "bsn",
+    "cb",
+    "celesta",
+    "felt",
+    "felt_mech",
+    "grand",
+    "hn",
+    "k808",
+    "noise",
+    "snes_piano",
+    "vc",
+    "vln1",
+    "vln2"
+   ]
+  },
+  "editor_flags": [
+   "hits off: 1.5625 s 10.8 ms, 4.375 s 19.7 ms, 5.7083 s -55.0 ms, 8.125 s -10.3 ms"
+  ],
+  "crosscheck": []
+ },
+ {
+  "id": "e01-act4-v4-s3s4-the-boards-side",
+  "mm": "MM-09",
+  "family": "P02 PROCEDURE + P08 OUTS KIT (09x: REVERSAL)",
+  "title": "The Board's Side / What They Didn't Know (Ep1 Act Four v4, S3 + S4, to picture)",
+  "cue": "tracks/e01-act4-v4/render/e01-act4-v4-s3s4-the-boards-side.cue.json",
+  "album": {
+   "lufs": -16.0,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 1e-05,
+   "st_p95": -12.97,
+   "st_median": -16.54,
+   "st_max": -11.98,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -9.72,
+   "seconds": 86.1,
+   "samples": 4132800,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/e01-act4-v4/render/e01-act4-v4-s3s4-the-boards-side-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 86.136,
+    "wav_s": 86.1,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -20.01,
+   "tp_db": -3.15,
+   "peak_db": -3.16,
+   "clipped": 0,
+   "dc": 7e-06,
+   "st_p95": -17.31,
+   "st_median": -20.44,
+   "st_max": -16.54,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -13.68,
+   "seconds": 86.1,
+   "samples": 4132800,
+   "target_lufs": -20.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/e01-act4-v4/render/e01-act4-v4-s3s4-the-boards-side-underscore.wav",
+   "band_2_6k_db": -19.1,
+   "sub_60_db": -18.1,
+   "centroid_hz": 444,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 86.136,
+    "wav_s": 86.1,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [
+    "brass",
+    "chip",
+    "perc",
+    "piano",
+    "strings",
+    "winds"
+   ],
+   "residual_db_re_master": -119.1,
+   "residual_peak_dbfs": -132.5,
+   "lengths_match": true
+  },
+  "loops": [],
+  "hits": {
+   "n": 26,
+   "within_tol": 9,
+   "off": [
+    {
+     "t": 21.5,
+     "offset_ms": -54.7,
+     "strength": 1.91
+    },
+    {
+     "t": 23.9583,
+     "offset_ms": 36.4,
+     "strength": 1.77
+    },
+    {
+     "t": 26.0833,
+     "offset_ms": -27.3,
+     "strength": 1.76
+    },
+    {
+     "t": 31.4583,
+     "offset_ms": -18.3,
+     "strength": 1.85
+    },
+    {
+     "t": 32.75,
+     "offset_ms": -38.0,
+     "strength": 1.95
+    },
+    {
+     "t": 36.2083,
+     "offset_ms": 37.0,
+     "strength": 2.33
+    },
+    {
+     "t": 61.0625,
+     "offset_ms": 36.2,
+     "strength": 1.59
+    },
+    {
+     "t": 62.5833,
+     "offset_ms": 24.7,
+     "strength": 1.49
+    },
+    {
+     "t": 65.7083,
+     "offset_ms": -41.6,
+     "strength": 2.0
+    },
+    {
+     "t": 68.5833,
+     "offset_ms": 11.4,
+     "strength": 2.78
+    },
+    {
+     "t": 70.5417,
+     "offset_ms": -29.7,
+     "strength": 2.39
+    },
+    {
+     "t": 71.75,
+     "offset_ms": 26.0,
+     "strength": 1.76
+    },
+    {
+     "t": 72.9583,
+     "offset_ms": 15.0,
+     "strength": 1.63
+    },
+    {
+     "t": 75.125,
+     "offset_ms": -47.7,
+     "strength": 1.88
+    },
+    {
+     "t": 77.3333,
+     "offset_ms": 10.7,
+     "strength": 2.96
+    },
+    {
+     "t": 78.0833,
+     "offset_ms": -59.3,
+     "strength": 1.42
+    },
+    {
+     "t": 81.5,
+     "offset_ms": 14.7,
+     "strength": 1.63
+    }
+   ],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 0,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 335,
+   "lines": 23,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "f_major": {
+   "ok": false,
+   "ok_written": true,
+   "ok_spectral": false,
+   "windows": 34,
+   "worst_sieved": 0.285,
+   "a_classes": {
+    "written": 0,
+    "resonance": 1,
+    "explained": 7,
+    "unattributed": 0
+   },
+   "fails": [
+    {
+     "t0": 78.0,
+     "t1": 78.531,
+     "a_f": 0.08,
+     "cls": "resonance",
+     "a_from": {
+      "strings": 100,
+      "piano": 0
+     },
+     "peaks": [
+      "strings 440.2 Hz partial",
+      "strings 427.7 Hz resonance",
+      "strings 219.7 Hz partial"
+     ]
+    }
+   ],
+   "fixed_resonances": [
+    "strings ~108.4 Hz x3"
+   ]
+  },
+  "engine": {
+   "balance": {
+    "piano": 0,
+    "orch": 78,
+    "bigband": 21,
+    "chip": 1
+   },
+   "balance_energy": {
+    "piano": 0,
+    "orch": 93,
+    "bigband": 6,
+    "chip": 1
+   },
+   "st": {
+    "p95": -17.31,
+    "median": -20.44,
+    "max": -16.54
+   },
+   "band_2_6k_db": -19.1,
+   "f_major_ok": false,
+   "f_major_worst_sieved": 0.112,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 1,
+    "explained": 1,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [
+    "marker at 21.5 s: no clear onset within 10 ms ({'t': 21.5, 'offset_ms': np.float64(-54.7), 'strength': 1.91})",
+    "marker at 23.9583 s: no clear onset within 10 ms ({'t': 23.9583, 'offset_ms': np.float64(36.4), 'strength': 1.77})",
+    "marker at 26.0833 s: no clear onset within 10 ms ({'t': 26.0833, 'offset_ms': np.float64(-27.3), 'strength': 1.76})",
+    "marker at 31.4583 s: no clear onset within 10 ms ({'t': 31.4583, 'offset_ms': np.float64(-18.3), 'strength': 1.85})",
+    "marker at 32.75 s: no clear onset within 10 ms ({'t': 32.75, 'offset_ms': np.float64(-38.0), 'strength': 1.95})",
+    "marker at 36.2083 s: no clear onset within 10 ms ({'t': 36.2083, 'offset_ms': np.float64(37.0), 'strength': 2.33})",
+    "marker at 61.0625 s: no clear onset within 10 ms ({'t': 61.0625, 'offset_ms': np.float64(36.2), 'strength': 1.59})",
+    "marker at 62.5833 s: no clear onset within 10 ms ({'t': 62.5833, 'offset_ms': np.float64(24.7), 'strength': 1.49})",
+    "marker at 65.7083 s: no clear onset within 10 ms ({'t': 65.7083, 'offset_ms': np.float64(-41.6), 'strength': 2.0})",
+    "marker at 68.5833 s: no clear onset within 10 ms ({'t': 68.5833, 'offset_ms': np.float64(11.4), 'strength': 2.78})",
+    "marker at 70.5417 s: no clear onset within 10 ms ({'t': 70.5417, 'offset_ms': np.float64(-29.7), 'strength': 2.39})",
+    "marker at 71.75 s: no clear onset within 10 ms ({'t': 71.75, 'offset_ms': np.float64(26.0), 'strength': 1.76})",
+    "marker at 72.9583 s: no clear onset within 10 ms ({'t': 72.9583, 'offset_ms': np.float64(15.0), 'strength': 1.63})",
+    "marker at 75.125 s: no clear onset within 10 ms ({'t': 75.125, 'offset_ms': np.float64(-47.7), 'strength': 1.88})",
+    "marker at 77.3333 s: no clear onset within 10 ms ({'t': 77.3333, 'offset_ms': np.float64(10.7), 'strength': 2.96})",
+    "marker at 78.0833 s: no clear onset within 10 ms ({'t': 78.0833, 'offset_ms': np.float64(-59.3), 'strength': 1.42})",
+    "marker at 81.5 s: no clear onset within 10 ms ({'t': 81.5, 'offset_ms': np.float64(14.7), 'strength': 1.63})",
+    "F-major check (spectral): 1 F-bass window(s) carry A energy that NO written note explains (a resonance, not a written third), first at 78.0 s, worst sieved A/F 0.08: strings ~427.7 Hz -- audition: does it sound major?",
+    "motif ADDENDUM is listed in META motif_ids but was not found in any line"
+   ],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "bsn",
+    "cb",
+    "cb_f1",
+    "celesta",
+    "choir",
+    "cl",
+    "door",
+    "felt",
+    "harm",
+    "harp",
+    "hn",
+    "lead",
+    "marimba",
+    "reed",
+    "rhodes",
+    "svla",
+    "svln",
+    "timp",
+    "tpt",
+    "vc",
+    "vla",
+    "vln1",
+    "vln2"
+   ]
+  },
+  "editor_flags": [
+   "hits off: 21.5 s -54.7 ms, 23.9583 s 36.4 ms, 26.0833 s -27.3 ms, 31.4583 s -18.3 ms, 32.75 s -38.0 ms, 36.2083 s 37.0 ms, 61.0625 s 36.2 ms, 62.5833 s 24.7 ms, 65.7083 s -41.6 ms, 68.5833 s 11.4 ms, 70.5417 s -29.7 ms, 71.75 s 26.0 ms, 72.9583 s 15.0 ms, 75.125 s -47.7 ms, 77.3333 s 10.7 ms, 78.0833 s -59.3 ms, 81.5 s 14.7 ms",
+   "F-major (engine, full note data) worst sieved A/F 0.112, classes {'written': 0, 'resonance': 1, 'explained': 1, 'unattributed': 0}"
+  ],
+  "crosscheck": []
+ },
+ {
+  "id": "e01-act4-v4-s5s6-his-side-745",
+  "mm": "MM-10",
+  "family": "P01 DARK ROOM -> P11 SET-PIECE SWING",
+  "title": "His Side / 745 (Ep1 Act Four v4, S5 + S6, to picture)",
+  "cue": "tracks/e01-act4-v4/render/e01-act4-v4-s5s6-his-side-745.cue.json",
+  "album": {
+   "lufs": -16.01,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 3.3e-05,
+   "st_p95": -10.25,
+   "st_median": -20.14,
+   "st_max": -9.81,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -8.95,
+   "seconds": 55.75,
+   "samples": 2676000,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/e01-act4-v4/render/e01-act4-v4-s5s6-his-side-745-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 55.776,
+    "wav_s": 55.75,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -16.02,
+   "tp_db": -3.15,
+   "peak_db": -3.16,
+   "clipped": 0,
+   "dc": 4.7e-05,
+   "st_p95": -11.27,
+   "st_median": -18.45,
+   "st_max": -10.85,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -10.08,
+   "seconds": 55.75,
+   "samples": 2676000,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/e01-act4-v4/render/e01-act4-v4-s5s6-his-side-745-underscore.wav",
+   "band_2_6k_db": -17.9,
+   "sub_60_db": -23.5,
+   "centroid_hz": 424,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 55.776,
+    "wav_s": 55.75,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [
+    "bass",
+    "brass",
+    "chip",
+    "drums",
+    "perc",
+    "piano",
+    "strings",
+    "winds"
+   ],
+   "residual_db_re_master": -122.5,
+   "residual_peak_dbfs": -126.4,
+   "lengths_match": true
+  },
+  "loops": [],
+  "hits": {
+   "n": 13,
+   "within_tol": 7,
+   "off": [
+    {
+     "t": 35.2083,
+     "offset_ms": -48.3,
+     "strength": 6.38
+    },
+    {
+     "t": 44.7083,
+     "offset_ms": 11.7,
+     "strength": 8.82
+    },
+    {
+     "t": 49.6667,
+     "offset_ms": -13.4,
+     "strength": 2.05
+    },
+    {
+     "t": 51.2083,
+     "offset_ms": -21.6,
+     "strength": 2.08
+    },
+    {
+     "t": 52.1667,
+     "offset_ms": -20.0,
+     "strength": 2.57
+    },
+    {
+     "t": 53.375,
+     "offset_ms": 14.3,
+     "strength": 3.06
+    }
+   ],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 5,
+   "ok": true,
+   "bad": []
+  },
+  "vo_windows": [
+   {
+    "t0": 7.333,
+    "t1": 9.25,
+    "lufs": -16.09,
+    "ok": false
+   }
+  ],
+  "midi": {
+   "notes": 241,
+   "lines": 22,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "f_major": {
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "windows": 31,
+   "worst_sieved": 0.096,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 1,
+    "unattributed": 0
+   },
+   "fails": [],
+   "fixed_resonances": []
+  },
+  "sub_under_room": {
+   "n": 1,
+   "ok": true,
+   "worst_db": -37.3,
+   "bad": []
+  },
+  "engine": {
+   "balance": {
+    "piano": 23,
+    "orch": 36,
+    "bigband": 12,
+    "chip": 29
+   },
+   "balance_energy": {
+    "piano": 10,
+    "orch": 58,
+    "bigband": 15,
+    "chip": 16
+   },
+   "st": {
+    "p95": -11.27,
+    "median": -18.45,
+    "max": -10.85
+   },
+   "band_2_6k_db": -17.9,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.093,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 1,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [
+    "marker at 35.2083 s: no clear onset within 10 ms ({'t': 35.2083, 'offset_ms': np.float64(-48.3), 'strength': 6.4})",
+    "marker at 44.7083 s: no clear onset within 10 ms ({'t': 44.7083, 'offset_ms': np.float64(11.7), 'strength': 8.82})",
+    "marker at 49.6667 s: no clear onset within 10 ms ({'t': 49.6667, 'offset_ms': np.float64(-13.4), 'strength': 2.05})",
+    "marker at 51.2083 s: no clear onset within 10 ms ({'t': 51.2083, 'offset_ms': np.float64(-21.6), 'strength': 2.08})",
+    "marker at 52.1667 s: no clear onset within 10 ms ({'t': 52.1667, 'offset_ms': np.float64(-20.0), 'strength': 2.57})",
+    "marker at 53.375 s: no clear onset within 10 ms ({'t': 53.375, 'offset_ms': np.float64(14.3), 'strength': 3.06})",
+    "underscore short-term p95 -11.27 LUFS > -13 (featured) (s6.5): the loudest moments sit high above the bed"
+   ],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "arp",
+    "asax",
+    "bsax",
+    "bsn",
+    "cb",
+    "cb_pizz",
+    "celesta",
+    "felt",
+    "felt_mech",
+    "grand",
+    "hn",
+    "jazz",
+    "lead",
+    "tbn",
+    "timp",
+    "tpt",
+    "tri",
+    "tsax",
+    "ubass",
+    "vc",
+    "vla",
+    "vln1",
+    "vln2",
+    "xylo"
+   ]
+  },
+  "editor_flags": [
+   "underscore ST p95 -11.27 > -13.0",
+   "hits off: 35.2083 s -48.3 ms, 44.7083 s 11.7 ms, 49.6667 s -13.4 ms, 51.2083 s -21.6 ms, 52.1667 s -20.0 ms, 53.375 s 14.3 ms",
+   "V.O. window 7.333-9.25 s -16.09 LUFS"
+  ],
+  "crosscheck": []
+ },
+ {
+  "id": "e01-act4-v4-s7s8-the-return",
+  "mm": "MM-11",
+  "family": "STRAIGHT -> the floor -> LEVERAGE (P03) -> the Build -> VICTORY LAP (P09) -> (the vault: TEMP)",
+  "title": "The Return (Ep1 Act Four v4, S7 + S8, to picture)",
+  "cue": "tracks/e01-act4-v4/render/e01-act4-v4-s7s8-the-return.cue.json",
+  "album": {
+   "lufs": -16.0,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 2e-05,
+   "st_p95": -12.2,
+   "st_median": -18.64,
+   "st_max": -10.52,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -10.31,
+   "seconds": 73.5745,
+   "samples": 3531574,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/e01-act4-v4/render/e01-act4-v4-s7s8-the-return-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 73.608,
+    "wav_s": 73.574,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -20.03,
+   "tp_db": -3.15,
+   "peak_db": -3.16,
+   "clipped": 0,
+   "dc": 1.3e-05,
+   "st_p95": -16.55,
+   "st_median": -22.11,
+   "st_max": -14.96,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -13.43,
+   "seconds": 73.5745,
+   "samples": 3531574,
+   "target_lufs": -20.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/e01-act4-v4/render/e01-act4-v4-s7s8-the-return-underscore.wav",
+   "band_2_6k_db": -22.3,
+   "sub_60_db": -13.8,
+   "centroid_hz": 299,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 73.608,
+    "wav_s": 73.574,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [
+    "bass",
+    "brass",
+    "chip",
+    "drums",
+    "perc",
+    "piano",
+    "strings",
+    "synth"
+   ],
+   "residual_db_re_master": -118.7,
+   "residual_peak_dbfs": -128.9,
+   "lengths_match": true
+  },
+  "loops": [],
+  "hits": {
+   "n": 18,
+   "within_tol": 9,
+   "off": [
+    {
+     "t": 0.3333,
+     "offset_ms": -10.6,
+     "strength": 3.57
+    },
+    {
+     "t": 7.2917,
+     "offset_ms": -59.7,
+     "strength": 1.47
+    },
+    {
+     "t": 10.0,
+     "offset_ms": 10.7,
+     "strength": 1.91
+    },
+    {
+     "t": 14.9167,
+     "offset_ms": 16.6,
+     "strength": 1.94
+    },
+    {
+     "t": 16.9583,
+     "offset_ms": 44.4,
+     "strength": 2.3
+    },
+    {
+     "t": 30.0833,
+     "offset_ms": 42.0,
+     "strength": 2.03
+    },
+    {
+     "t": 42.5833,
+     "offset_ms": -28.6,
+     "strength": 1.76
+    },
+    {
+     "t": 50.0,
+     "offset_ms": -34.7,
+     "strength": 1.73
+    },
+    {
+     "t": 55.0,
+     "offset_ms": 48.0,
+     "strength": 1.49
+    }
+   ],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 3,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 187,
+   "lines": 19,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "f_major": {
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "windows": 52,
+   "worst_sieved": 0.118,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 1,
+    "unattributed": 0
+   },
+   "fails": [],
+   "fixed_resonances": []
+  },
+  "sub_under_room": {
+   "n": 1,
+   "ok": true,
+   "worst_db": -44.1,
+   "bad": []
+  },
+  "engine": {
+   "balance": {
+    "piano": 5,
+    "orch": 35,
+    "bigband": 8,
+    "chip": 51
+   },
+   "balance_energy": {
+    "piano": 3,
+    "orch": 51,
+    "bigband": 3,
+    "chip": 44
+   },
+   "st": {
+    "p95": -16.55,
+    "median": -22.11,
+    "max": -14.96
+   },
+   "band_2_6k_db": -22.3,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.119,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 1,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [
+    "marker at 0.3333 s: no clear onset within 10 ms ({'t': 0.3333, 'offset_ms': np.float64(-10.6), 'strength': 3.57})",
+    "marker at 7.2917 s: no clear onset within 10 ms ({'t': 7.2917, 'offset_ms': np.float64(-59.7), 'strength': 1.47})",
+    "marker at 10.0 s: no clear onset within 10 ms ({'t': 10.0, 'offset_ms': np.float64(10.7), 'strength': 1.91})",
+    "marker at 14.9167 s: no clear onset within 10 ms ({'t': 14.9167, 'offset_ms': np.float64(16.6), 'strength': 1.94})",
+    "marker at 16.9583 s: no clear onset within 10 ms ({'t': 16.9583, 'offset_ms': np.float64(44.4), 'strength': 2.3})",
+    "marker at 30.0833 s: no clear onset within 10 ms ({'t': 30.0833, 'offset_ms': np.float64(42.0), 'strength': 2.03})",
+    "marker at 42.5833 s: no clear onset within 10 ms ({'t': 42.5833, 'offset_ms': np.float64(-28.6), 'strength': 1.76})",
+    "marker at 50.0 s: no clear onset within 10 ms ({'t': 50.0, 'offset_ms': np.float64(-34.7), 'strength': 1.73})",
+    "marker at 55.0 s: no clear onset within 10 ms ({'t': 55.0, 'offset_ms': np.float64(48.0), 'strength': 1.49})",
+    "underscore short-term p95 -16.55 LUFS > -17 (underscore) (s6.5): the loudest moments sit high above the bed"
+   ],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "bdrum_muted",
+    "beeper",
+    "cb",
+    "cb_pizz",
+    "celesta",
+    "drone",
+    "felt",
+    "felt_mech",
+    "grand",
+    "k808",
+    "lead",
+    "lead2",
+    "noise",
+    "rhodes",
+    "svln_nv",
+    "tbn",
+    "timp",
+    "tpt",
+    "tri",
+    "vc",
+    "vla",
+    "vln1",
+    "woodclick",
+    "xylo"
+   ]
+  },
+  "editor_flags": [
+   "underscore ST p95 -16.55 > -17.0",
+   "hits off: 0.3333 s -10.6 ms, 7.2917 s -59.7 ms, 10.0 s 10.7 ms, 14.9167 s 16.6 ms, 16.9583 s 44.4 ms, 30.0833 s 42.0 ms, 42.5833 s -28.6 ms, 50.0 s -34.7 ms, 55.0 s 48.0 ms"
+  ],
+  "crosscheck": []
+ },
+ {
+  "id": "e01-s26-the-falling-tile",
+  "mm": "MM-08",
+  "family": "P03 LEVERAGE -> D6 -> P01 DARK ROOM",
+  "title": "The Falling Tile (E01-S26 + S26A, to picture)",
+  "cue": "tracks/e01-s26-the-falling-tile/render/e01-s26-the-falling-tile.cue.json",
+  "album": {
+   "lufs": -16.01,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 1.9e-05,
+   "st_p95": -14.04,
+   "st_median": -18.73,
+   "st_max": -13.89,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -10.96,
+   "seconds": 72.8029,
+   "samples": 3494541,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/e01-s26-the-falling-tile/render/e01-s26-the-falling-tile-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 72.84,
+    "wav_s": 72.803,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -21.5,
+   "tp_db": -5.13,
+   "peak_db": -5.14,
+   "clipped": 0,
+   "dc": 6e-06,
+   "st_p95": -19.64,
+   "st_median": -23.9,
+   "st_max": -19.5,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -16.32,
+   "seconds": 72.8029,
+   "samples": 3494541,
+   "target_lufs": -21.5,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/e01-s26-the-falling-tile/render/e01-s26-the-falling-tile-underscore.wav",
+   "band_2_6k_db": -20.0,
+   "sub_60_db": -4.8,
+   "centroid_hz": 255,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 72.84,
+    "wav_s": 72.803,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [
+    "brass",
+    "chip",
+    "drums",
+    "perc",
+    "piano",
+    "strings",
+    "winds"
+   ],
+   "residual_db_re_master": -117.2,
+   "residual_peak_dbfs": -128.9,
+   "lengths_match": true
+  },
+  "loops": [],
+  "hits": {
+   "n": 12,
+   "within_tol": 12,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 7,
+   "ok": true,
+   "bad": []
+  },
+  "vo_windows": [
+   {
+    "t0": 55.0,
+    "t1": 57.5,
+    "lufs": -24.51,
+    "ok": true
+   },
+   {
+    "t0": 67.5,
+    "t1": 70.0,
+    "lufs": -25.56,
+    "ok": true
+   }
+  ],
+  "midi": {
+   "notes": 138,
+   "lines": 11,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "f_major": {
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "windows": 26,
+   "worst_sieved": 0.073,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "fails": [],
+   "fixed_resonances": []
+  },
+  "sub_under_room": {
+   "n": 2,
+   "ok": true,
+   "worst_db": -30.9,
+   "bad": []
+  },
+  "engine": {
+   "balance": {
+    "piano": 51,
+    "orch": 36,
+    "bigband": 0,
+    "chip": 13
+   },
+   "balance_energy": {
+    "piano": 48,
+    "orch": 47,
+    "bigband": 0,
+    "chip": 5
+   },
+   "st": {
+    "p95": -19.64,
+    "median": -23.9,
+    "max": -19.5
+   },
+   "band_2_6k_db": -20.0,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.073,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "bdrum_muted",
+    "beeper",
+    "bsn",
+    "cb",
+    "celesta",
+    "felt",
+    "felt_mech",
+    "grand",
+    "hn",
+    "k808",
+    "noise",
+    "snes_piano",
+    "vc",
+    "vln1",
+    "vln2"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "e01-s29-d5",
+  "mm": "MM-02",
+  "family": "KEYNOTE REEL (D5)",
+  "title": "His Version (Ep1 D5 insert)",
+  "cue": "tracks/e01-s29-d5/render/e01-s29-d5.cue.json",
+  "album": {
+   "lufs": -16.02,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 3e-06,
+   "st_p95": -14.99,
+   "st_median": -15.68,
+   "st_max": -14.59,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -10.83,
+   "seconds": 8.0,
+   "samples": 384000,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/e01-s29-d5/render/e01-s29-d5-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 8.04,
+    "wav_s": 8.0,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -20.0,
+   "tp_db": -3.15,
+   "peak_db": -3.16,
+   "clipped": 0,
+   "dc": 1e-06,
+   "st_p95": -18.67,
+   "st_median": -19.32,
+   "st_max": -18.25,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -13.57,
+   "seconds": 8.0,
+   "samples": 384000,
+   "target_lufs": -20.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/e01-s29-d5/render/e01-s29-d5-underscore.wav",
+   "band_2_6k_db": -31.8,
+   "sub_60_db": -32.8,
+   "centroid_hz": 459,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 8.04,
+    "wav_s": 8.0,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [
+    "piano"
+   ],
+   "residual_db_re_master": -119.6,
+   "residual_peak_dbfs": -138.5,
+   "lengths_match": true
+  },
+  "loops": [],
+  "hits": {
+   "n": 1,
+   "within_tol": 1,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 0,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 18,
+   "lines": 2,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "f_major": {
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "windows": 0,
+   "worst_sieved": 0.0,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "fails": [],
+   "fixed_resonances": []
+  },
+  "engine": {
+   "balance": {
+    "piano": 100,
+    "orch": 0,
+    "bigband": 0,
+    "chip": 0
+   },
+   "balance_energy": {
+    "piano": 100,
+    "orch": 0,
+    "bigband": 0,
+    "chip": 0
+   },
+   "st": {
+    "p95": -18.67,
+    "median": -19.32,
+    "max": -18.25
+   },
+   "band_2_6k_db": -31.8,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.0,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "keynote",
+    "keynote_ch"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "e01-s30a-the-door",
+  "mm": "MM-11",
+  "family": "STRAIGHT (P01 sincere mode)",
+  "title": "The Door (STRAIGHT violin, Ep1 sc 30a)",
+  "cue": "tracks/e01-s30a-the-door/render/e01-s30a-the-door.cue.json",
+  "album": {
+   "lufs": -18.05,
+   "tp_db": -9.1,
+   "peak_db": -9.11,
+   "clipped": 0,
+   "dc": 1.4e-05,
+   "st_p95": -16.12,
+   "st_median": -18.89,
+   "st_max": -15.96,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -14.22,
+   "seconds": 11.0183,
+   "samples": 528878,
+   "target_lufs": -18.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/e01-s30a-the-door/render/e01-s30a-the-door-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 11.064,
+    "wav_s": 11.018,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -22.0,
+   "tp_db": -13.42,
+   "peak_db": -13.43,
+   "clipped": 0,
+   "dc": 9e-06,
+   "st_p95": -20.11,
+   "st_median": -22.94,
+   "st_max": -19.94,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -18.32,
+   "seconds": 11.0183,
+   "samples": 528878,
+   "target_lufs": -22.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/e01-s30a-the-door/render/e01-s30a-the-door-underscore.wav",
+   "band_2_6k_db": -21.5,
+   "sub_60_db": -41.3,
+   "centroid_hz": 653,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 11.064,
+    "wav_s": 11.018,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [
+    "strings"
+   ],
+   "residual_db_re_master": -115.8,
+   "residual_peak_dbfs": -138.5,
+   "lengths_match": true
+  },
+  "loops": [],
+  "hits": {
+   "n": 1,
+   "within_tol": 1,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 0,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 4,
+   "lines": 1,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "f_major": {
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "windows": 0,
+   "worst_sieved": 0.0,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "fails": [],
+   "fixed_resonances": []
+  },
+  "engine": {
+   "balance": {
+    "piano": 0,
+    "orch": 100,
+    "bigband": 0,
+    "chip": 0
+   },
+   "balance_energy": {
+    "piano": 0,
+    "orch": 100,
+    "bigband": 0,
+    "chip": 0
+   },
+   "st": {
+    "p95": -20.11,
+    "median": -22.94,
+    "max": -19.94
+   },
+   "band_2_6k_db": -21.5,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.0,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "svln_nv"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "mm01-water-line-05s",
+  "mm": "MM-01",
+  "family": "P01",
+  "title": "Water Line (05s)",
+  "cue": "tracks/mm01-water-line/render/mm01-water-line-05s.cue.json",
+  "album": {
+   "lufs": -16.0,
+   "tp_db": -4.29,
+   "peak_db": -4.29,
+   "clipped": 0,
+   "dc": 2.5e-05,
+   "st_p95": -15.59,
+   "st_median": -17.17,
+   "st_max": -15.56,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -13.51,
+   "seconds": 6.2,
+   "samples": 297600,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm01-water-line/render/mm01-water-line-05s-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 6.24,
+    "wav_s": 6.2,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -20.0,
+   "tp_db": -8.26,
+   "peak_db": -8.26,
+   "clipped": 0,
+   "dc": 9e-06,
+   "st_p95": -19.55,
+   "st_median": -21.19,
+   "st_max": -19.5,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -17.33,
+   "seconds": 6.2,
+   "samples": 297600,
+   "target_lufs": -20.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm01-water-line/render/mm01-water-line-05s-underscore.wav",
+   "band_2_6k_db": -40.2,
+   "sub_60_db": -34.2,
+   "centroid_hz": 396,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 6.24,
+    "wav_s": 6.2,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [],
+   "note": "no stems in the cue sheet"
+  },
+  "loops": [],
+  "hits": {
+   "n": 1,
+   "within_tol": 1,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 0,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 12,
+   "lines": 2,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "engine": {
+   "balance": {
+    "piano": 100,
+    "orch": 0,
+    "bigband": 0,
+    "chip": 0
+   },
+   "balance_energy": {
+    "piano": 100,
+    "orch": 0,
+    "bigband": 0,
+    "chip": 0
+   },
+   "st": {
+    "p95": -19.55,
+    "median": -21.19,
+    "max": -19.5
+   },
+   "band_2_6k_db": -40.2,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.036,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "felt",
+    "felt_lh",
+    "felt_mech"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "mm01-water-line-15s",
+  "mm": "MM-01",
+  "family": "P01",
+  "title": "Water Line (15s)",
+  "cue": "tracks/mm01-water-line/render/mm01-water-line-15s.cue.json",
+  "album": {
+   "lufs": -16.0,
+   "tp_db": -1.52,
+   "peak_db": -1.53,
+   "clipped": 0,
+   "dc": 1.6e-05,
+   "st_p95": -13.99,
+   "st_median": -19.48,
+   "st_max": -13.51,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -11.61,
+   "seconds": 16.4132,
+   "samples": 787833,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm01-water-line/render/mm01-water-line-15s-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 16.44,
+    "wav_s": 16.413,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -20.0,
+   "tp_db": -4.79,
+   "peak_db": -4.8,
+   "clipped": 0,
+   "dc": 7e-06,
+   "st_p95": -17.87,
+   "st_median": -23.28,
+   "st_max": -17.25,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -14.96,
+   "seconds": 16.4132,
+   "samples": 787833,
+   "target_lufs": -20.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm01-water-line/render/mm01-water-line-15s-underscore.wav",
+   "band_2_6k_db": -27.4,
+   "sub_60_db": -32.8,
+   "centroid_hz": 391,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 16.44,
+    "wav_s": 16.413,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [],
+   "note": "no stems in the cue sheet"
+  },
+  "loops": [],
+  "hits": {
+   "n": 1,
+   "within_tol": 1,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 0,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 30,
+   "lines": 3,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "engine": {
+   "balance": {
+    "piano": 100,
+    "orch": 0,
+    "bigband": 0,
+    "chip": 0
+   },
+   "balance_energy": {
+    "piano": 100,
+    "orch": 0,
+    "bigband": 0,
+    "chip": 0
+   },
+   "st": {
+    "p95": -17.87,
+    "median": -23.28,
+    "max": -17.25
+   },
+   "band_2_6k_db": -27.4,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.023,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "brush",
+    "felt",
+    "felt_lh",
+    "felt_mech",
+    "jazz",
+    "swish",
+    "ubass"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "mm01-water-line-30s",
+  "mm": "MM-01",
+  "family": "P01",
+  "title": "Water Line (30s)",
+  "cue": "tracks/mm01-water-line/render/mm01-water-line-30s.cue.json",
+  "album": {
+   "lufs": -16.01,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 1.7e-05,
+   "st_p95": -14.09,
+   "st_median": -18.19,
+   "st_max": -13.75,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -12.12,
+   "seconds": 31.2303,
+   "samples": 1499055,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm01-water-line/render/mm01-water-line-30s-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 31.272,
+    "wav_s": 31.23,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -20.0,
+   "tp_db": -3.72,
+   "peak_db": -3.72,
+   "clipped": 0,
+   "dc": 7e-06,
+   "st_p95": -17.91,
+   "st_median": -22.05,
+   "st_max": -17.39,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -15.38,
+   "seconds": 31.2303,
+   "samples": 1499055,
+   "target_lufs": -20.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm01-water-line/render/mm01-water-line-30s-underscore.wav",
+   "band_2_6k_db": -26.3,
+   "sub_60_db": -33.7,
+   "centroid_hz": 402,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 31.272,
+    "wav_s": 31.23,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [],
+   "note": "no stems in the cue sheet"
+  },
+  "loops": [],
+  "hits": {
+   "n": 2,
+   "within_tol": 2,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 0,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 70,
+   "lines": 5,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "engine": {
+   "balance": {
+    "piano": 76,
+    "orch": 24,
+    "bigband": 0,
+    "chip": 0
+   },
+   "balance_energy": {
+    "piano": 89,
+    "orch": 11,
+    "bigband": 0,
+    "chip": 0
+   },
+   "st": {
+    "p95": -17.91,
+    "median": -22.05,
+    "max": -17.39
+   },
+   "band_2_6k_db": -26.3,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.048,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "brush",
+    "felt",
+    "felt_lh",
+    "felt_mech",
+    "jazz",
+    "swish",
+    "ubass",
+    "vc",
+    "vla"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "mm01-water-line-straight",
+  "mm": "MM-01",
+  "family": "P01 (STRAIGHT)",
+  "title": "Water Line (straight)",
+  "cue": "tracks/mm01-water-line/render/mm01-water-line-straight.cue.json",
+  "album": {
+   "lufs": -16.03,
+   "tp_db": -1.99,
+   "peak_db": -2.0,
+   "clipped": 0,
+   "dc": 1e-06,
+   "st_p95": -13.81,
+   "st_median": -16.94,
+   "st_max": -13.56,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -10.85,
+   "seconds": 20.7007,
+   "samples": 993634,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm01-water-line/render/mm01-water-line-straight-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 20.736,
+    "wav_s": 20.701,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -20.03,
+   "tp_db": -6.18,
+   "peak_db": -6.19,
+   "clipped": 0,
+   "dc": 1e-06,
+   "st_p95": -17.87,
+   "st_median": -20.85,
+   "st_max": -17.61,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -14.96,
+   "seconds": 20.7007,
+   "samples": 993634,
+   "target_lufs": -20.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm01-water-line/render/mm01-water-line-straight-underscore.wav",
+   "band_2_6k_db": -24.9,
+   "sub_60_db": -46.2,
+   "centroid_hz": 471,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 20.736,
+    "wav_s": 20.701,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [],
+   "note": "no stems in the cue sheet"
+  },
+  "loops": [],
+  "silence": {
+   "n": 0,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 14,
+   "lines": 1,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "engine": {
+   "balance": {
+    "piano": 0,
+    "orch": 100,
+    "bigband": 0,
+    "chip": 0
+   },
+   "balance_energy": {
+    "piano": 0,
+    "orch": 100,
+    "bigband": 0,
+    "chip": 0
+   },
+   "st": {
+    "p95": -17.87,
+    "median": -20.85,
+    "max": -17.61
+   },
+   "band_2_6k_db": -24.9,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.465,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 6,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "vc"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "mm01-water-line",
+  "mm": "MM-01",
+  "family": "P01",
+  "title": "Water Line",
+  "cue": "tracks/mm01-water-line/render/mm01-water-line.cue.json",
+  "album": {
+   "lufs": -16.0,
+   "tp_db": -1.31,
+   "peak_db": -1.31,
+   "clipped": 0,
+   "dc": 2.2e-05,
+   "st_p95": -13.94,
+   "st_median": -17.2,
+   "st_max": -13.84,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -12.27,
+   "seconds": 76.2677,
+   "samples": 3660850,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm01-water-line/render/mm01-water-line-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 76.296,
+    "wav_s": 76.268,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -20.0,
+   "tp_db": -5.0,
+   "peak_db": -5.01,
+   "clipped": 0,
+   "dc": 1.1e-05,
+   "st_p95": -17.81,
+   "st_median": -21.18,
+   "st_max": -17.64,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -15.46,
+   "seconds": 76.2677,
+   "samples": 3660850,
+   "target_lufs": -20.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm01-water-line/render/mm01-water-line-underscore.wav",
+   "band_2_6k_db": -20.6,
+   "sub_60_db": -33.0,
+   "centroid_hz": 431,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 76.296,
+    "wav_s": 76.268,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [
+    "bass",
+    "brass",
+    "chip",
+    "drums",
+    "perc",
+    "piano",
+    "strings"
+   ],
+   "residual_db_re_master": -117.2,
+   "residual_peak_dbfs": -128.9,
+   "lengths_match": true
+  },
+  "loops": [
+   {
+    "file": "tracks/mm01-water-line/render/mm01-water-line-loop.wav",
+    "seconds": 60.0,
+    "frames": 1440.0,
+    "frame_aligned": true,
+    "wrap_step": 0.00196,
+    "wrap_vs_p99_step": 0.086,
+    "wrap_vs_p999_step": 0.047,
+    "seam_hf_ratio": 0.01,
+    "seam_hf_rank": 33.5,
+    "rms_end_db": -27.9,
+    "rms_begin_db": -16.9,
+    "lufs_2x": -19.91,
+    "tp_db": -5.0,
+    "verdict": "seamless",
+    "tail_s": 3.372,
+    "tail_end_db": -117.6
+   }
+  ],
+  "hits": {
+   "n": 5,
+   "within_tol": 5,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 0,
+   "ok": true,
+   "bad": []
+  },
+  "vo_windows": [
+   {
+    "t0": 10.0,
+    "t1": 15.0,
+    "lufs": -24.8,
+    "ok": true
+   },
+   {
+    "t0": 20.0,
+    "t1": 25.0,
+    "lufs": -25.22,
+    "ok": true
+   },
+   {
+    "t0": 50.0,
+    "t1": 55.0,
+    "lufs": -24.87,
+    "ok": true
+   }
+  ],
+  "midi": {
+   "notes": 228,
+   "lines": 10,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "f_major": {
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "windows": 29,
+   "worst_sieved": 0.107,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "fails": [],
+   "fixed_resonances": []
+  },
+  "sub_under_room": {
+   "n": 5,
+   "ok": true,
+   "worst_db": -33.5,
+   "bad": []
+  },
+  "engine": {
+   "balance": {
+    "piano": 61,
+    "orch": 27,
+    "bigband": 3,
+    "chip": 8
+   },
+   "balance_energy": {
+    "piano": 65,
+    "orch": 25,
+    "bigband": 2,
+    "chip": 8
+   },
+   "st": {
+    "p95": -17.81,
+    "median": -21.18,
+    "max": -17.64
+   },
+   "band_2_6k_db": -20.6,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.108,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "brush",
+    "celesta",
+    "felt",
+    "felt_lh",
+    "felt_mech",
+    "harmon",
+    "jazz",
+    "lead",
+    "swish",
+    "tri",
+    "ubass",
+    "vc",
+    "vibes",
+    "vla"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "mm02-his-version",
+  "mm": "MM-02",
+  "family": "KEYNOTE REEL (s2.3)",
+  "title": "His Version",
+  "cue": "tracks/mm02-his-version/render/mm02-his-version.cue.json",
+  "album": {
+   "lufs": -16.0,
+   "tp_db": -1.79,
+   "peak_db": -1.79,
+   "clipped": 0,
+   "dc": 6e-06,
+   "st_p95": -14.79,
+   "st_median": -16.14,
+   "st_max": -14.34,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -12.14,
+   "seconds": 38.1155,
+   "samples": 1829543,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm02-his-version/render/mm02-his-version-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 38.16,
+    "wav_s": 38.115,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -20.0,
+   "tp_db": -5.47,
+   "peak_db": -5.48,
+   "clipped": 0,
+   "dc": 1e-06,
+   "st_p95": -18.7,
+   "st_median": -20.27,
+   "st_max": -18.11,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -15.39,
+   "seconds": 38.1155,
+   "samples": 1829543,
+   "target_lufs": -20.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm02-his-version/render/mm02-his-version-underscore.wav",
+   "band_2_6k_db": -33.4,
+   "sub_60_db": -31.8,
+   "centroid_hz": 485,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 38.16,
+    "wav_s": 38.115,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [
+    "piano"
+   ],
+   "residual_db_re_master": -119.4,
+   "residual_peak_dbfs": -138.5,
+   "lengths_match": true
+  },
+  "loops": [],
+  "hits": {
+   "n": 4,
+   "within_tol": 4,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 2,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 207,
+   "lines": 2,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "f_major": {
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "windows": 0,
+   "worst_sieved": 0.0,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "fails": [],
+   "fixed_resonances": []
+  },
+  "engine": {
+   "balance": {
+    "piano": 100,
+    "orch": 0,
+    "bigband": 0,
+    "chip": 0
+   },
+   "balance_energy": {
+    "piano": 100,
+    "orch": 0,
+    "bigband": 0,
+    "chip": 0
+   },
+   "st": {
+    "p95": -18.7,
+    "median": -20.27,
+    "max": -18.11
+   },
+   "band_2_6k_db": -33.4,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.0,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "keynote",
+    "keynote_ch"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "mm05-the-more-you-buy",
+  "mm": "MM-05",
+  "family": "P06 THE JOB",
+  "title": "The More You Buy (Nesnej)",
+  "cue": "tracks/mm05-the-more-you-buy/render/mm05-the-more-you-buy.cue.json",
+  "album": {
+   "lufs": -14.03,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 0.0002,
+   "st_p95": -12.4,
+   "st_median": -13.98,
+   "st_max": -12.3,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -10.7,
+   "seconds": 71.7094,
+   "samples": 3442053,
+   "target_lufs": -14.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm05-the-more-you-buy/render/mm05-the-more-you-buy-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 71.736,
+    "wav_s": 71.709,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -20.0,
+   "tp_db": -3.15,
+   "peak_db": -3.16,
+   "clipped": 0,
+   "dc": 0.000103,
+   "st_p95": -18.47,
+   "st_median": -20.0,
+   "st_max": -18.32,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -16.5,
+   "seconds": 71.7094,
+   "samples": 3442053,
+   "target_lufs": -20.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm05-the-more-you-buy/render/mm05-the-more-you-buy-underscore.wav",
+   "band_2_6k_db": -16.1,
+   "sub_60_db": -10.7,
+   "centroid_hz": 399,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 71.736,
+    "wav_s": 71.709,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [
+    "bass",
+    "brass",
+    "chip",
+    "drums",
+    "perc",
+    "piano"
+   ],
+   "residual_db_re_master": -117.6,
+   "residual_peak_dbfs": -128.9,
+   "lengths_match": true
+  },
+  "loops": [
+   {
+    "file": "tracks/mm05-the-more-you-buy/render/mm05-the-more-you-buy-loop.wav",
+    "seconds": 60.0,
+    "frames": 1440.0,
+    "frame_aligned": true,
+    "wrap_step": 0.00436,
+    "wrap_vs_p99_step": 0.117,
+    "wrap_vs_p999_step": 0.078,
+    "seam_hf_ratio": 0.35,
+    "seam_hf_rank": 27.07,
+    "rms_end_db": -26.7,
+    "rms_begin_db": -20.2,
+    "lufs_2x": -19.89,
+    "tp_db": -5.91,
+    "verdict": "seamless",
+    "tail_s": 4.086,
+    "tail_end_db": -122.9
+   }
+  ],
+  "hits": {
+   "n": 10,
+   "within_tol": 10,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 0,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 1337,
+   "lines": 9,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "f_major": {
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "windows": 25,
+   "worst_sieved": 0.042,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "fails": [],
+   "fixed_resonances": []
+  },
+  "engine": {
+   "balance": {
+    "piano": 24,
+    "orch": 21,
+    "bigband": 21,
+    "chip": 34
+   },
+   "balance_energy": {
+    "piano": 18,
+    "orch": 23,
+    "bigband": 19,
+    "chip": 39
+   },
+   "st": {
+    "p95": -18.47,
+    "median": -20.0,
+    "max": -18.32
+   },
+   "band_2_6k_db": -16.1,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.042,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "arp",
+    "brush",
+    "bsax",
+    "cb_pizz",
+    "grand",
+    "jazz",
+    "lead",
+    "swish",
+    "tbn",
+    "tpt",
+    "ubass",
+    "vibes"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "mm05-the-more-you-buy-cut05",
+  "mm": "MM-05",
+  "family": "P06 THE JOB",
+  "title": "The More You Buy: 5 s",
+  "cue": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-cut05.cue.json",
+  "album": {
+   "lufs": -14.0,
+   "tp_db": -1.58,
+   "peak_db": -1.63,
+   "clipped": 0,
+   "dc": 0.000108,
+   "st_p95": -13.56,
+   "st_median": -14.39,
+   "st_max": -13.48,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -11.94,
+   "seconds": 7.1677,
+   "samples": 344050,
+   "target_lufs": -14.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-cut05-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 7.2,
+    "wav_s": 7.168,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -16.0,
+   "tp_db": -3.55,
+   "peak_db": -3.63,
+   "clipped": 0,
+   "dc": 9.6e-05,
+   "st_p95": -15.54,
+   "st_median": -16.4,
+   "st_max": -15.49,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -13.92,
+   "seconds": 7.1677,
+   "samples": 344050,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-cut05-underscore.wav",
+   "band_2_6k_db": -12.6,
+   "sub_60_db": -15.8,
+   "centroid_hz": 614,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 7.2,
+    "wav_s": 7.168,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [],
+   "note": "no stems in the cue sheet"
+  },
+  "loops": [],
+  "hits": {
+   "n": 2,
+   "within_tol": 2,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 0,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 89,
+   "lines": 8,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "engine": {
+   "balance": {
+    "piano": 25,
+    "orch": 21,
+    "bigband": 30,
+    "chip": 25
+   },
+   "balance_energy": {
+    "piano": 20,
+    "orch": 22,
+    "bigband": 32,
+    "chip": 27
+   },
+   "st": {
+    "p95": -15.54,
+    "median": -16.4,
+    "max": -15.49
+   },
+   "band_2_6k_db": -12.6,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.025,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "arp",
+    "brush",
+    "bsax",
+    "cb_pizz",
+    "grand",
+    "jazz",
+    "swish",
+    "tbn",
+    "tpt",
+    "ubass",
+    "vibes"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "mm05-the-more-you-buy-cut15",
+  "mm": "MM-05",
+  "family": "P06 THE JOB",
+  "title": "The More You Buy: 15 s",
+  "cue": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-cut15.cue.json",
+  "album": {
+   "lufs": -14.0,
+   "tp_db": -1.15,
+   "peak_db": -1.18,
+   "clipped": 0,
+   "dc": 0.000142,
+   "st_p95": -13.14,
+   "st_median": -13.54,
+   "st_max": -12.96,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -11.4,
+   "seconds": 17.0675,
+   "samples": 819239,
+   "target_lufs": -14.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-cut15-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 17.112,
+    "wav_s": 17.067,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -16.03,
+   "tp_db": -3.15,
+   "peak_db": -3.2,
+   "clipped": 0,
+   "dc": 0.000124,
+   "st_p95": -15.16,
+   "st_median": -15.6,
+   "st_max": -15.03,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -13.42,
+   "seconds": 17.0675,
+   "samples": 819239,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-cut15-underscore.wav",
+   "band_2_6k_db": -13.8,
+   "sub_60_db": -16.9,
+   "centroid_hz": 487,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 17.112,
+    "wav_s": 17.067,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [],
+   "note": "no stems in the cue sheet"
+  },
+  "loops": [],
+  "hits": {
+   "n": 3,
+   "within_tol": 3,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 0,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 265,
+   "lines": 8,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "engine": {
+   "balance": {
+    "piano": 24,
+    "orch": 22,
+    "bigband": 24,
+    "chip": 30
+   },
+   "balance_energy": {
+    "piano": 17,
+    "orch": 24,
+    "bigband": 25,
+    "chip": 33
+   },
+   "st": {
+    "p95": -15.16,
+    "median": -15.6,
+    "max": -15.03
+   },
+   "band_2_6k_db": -13.8,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.022,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "arp",
+    "brush",
+    "bsax",
+    "cb_pizz",
+    "grand",
+    "jazz",
+    "swish",
+    "tbn",
+    "tpt",
+    "ubass",
+    "vibes"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "mm05-the-more-you-buy-cut30",
+  "mm": "MM-05",
+  "family": "P06 THE JOB",
+  "title": "The More You Buy: 30 s",
+  "cue": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-cut30.cue.json",
+  "album": {
+   "lufs": -14.0,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 0.000176,
+   "st_p95": -12.87,
+   "st_median": -13.85,
+   "st_max": -12.36,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -11.11,
+   "seconds": 31.7719,
+   "samples": 1525051,
+   "target_lufs": -14.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-cut30-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 31.8,
+    "wav_s": 31.772,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -20.0,
+   "tp_db": -3.63,
+   "peak_db": -3.64,
+   "clipped": 0,
+   "dc": 9.5e-05,
+   "st_p95": -18.72,
+   "st_median": -19.93,
+   "st_max": -18.04,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -15.24,
+   "seconds": 31.7719,
+   "samples": 1525051,
+   "target_lufs": -20.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-cut30-underscore.wav",
+   "band_2_6k_db": -15.0,
+   "sub_60_db": -11.0,
+   "centroid_hz": 439,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 31.8,
+    "wav_s": 31.772,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [],
+   "note": "no stems in the cue sheet"
+  },
+  "loops": [],
+  "hits": {
+   "n": 7,
+   "within_tol": 7,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 0,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 506,
+   "lines": 9,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "engine": {
+   "balance": {
+    "piano": 25,
+    "orch": 15,
+    "bigband": 26,
+    "chip": 33
+   },
+   "balance_energy": {
+    "piano": 20,
+    "orch": 16,
+    "bigband": 26,
+    "chip": 38
+   },
+   "st": {
+    "p95": -18.72,
+    "median": -19.93,
+    "max": -18.04
+   },
+   "band_2_6k_db": -15.0,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.029,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "arp",
+    "brush",
+    "bsax",
+    "cb_pizz",
+    "grand",
+    "jazz",
+    "lead",
+    "swish",
+    "tbn",
+    "tpt",
+    "ubass",
+    "vibes"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "mm05-the-more-you-buy-limbo",
+  "mm": "MM-05",
+  "family": "P06 THE JOB",
+  "title": "The More You Buy: Limbo (Ep2)",
+  "cue": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-limbo.cue.json",
+  "album": {
+   "lufs": -14.0,
+   "tp_db": -1.16,
+   "peak_db": -1.17,
+   "clipped": 0,
+   "dc": 1.3e-05,
+   "st_p95": -13.26,
+   "st_median": -13.85,
+   "st_max": -12.93,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -10.62,
+   "seconds": 42.6467,
+   "samples": 2047043,
+   "target_lufs": -14.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-limbo-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 42.672,
+    "wav_s": 42.647,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -20.0,
+   "tp_db": -7.26,
+   "peak_db": -7.27,
+   "clipped": 0,
+   "dc": 4e-06,
+   "st_p95": -19.25,
+   "st_median": -19.84,
+   "st_max": -18.93,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -16.46,
+   "seconds": 42.6467,
+   "samples": 2047043,
+   "target_lufs": -20.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-limbo-underscore.wav",
+   "band_2_6k_db": -18.1,
+   "sub_60_db": -22.4,
+   "centroid_hz": 294,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 42.672,
+    "wav_s": 42.647,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [],
+   "note": "no stems in the cue sheet"
+  },
+  "loops": [
+   {
+    "file": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-limbo-loop.wav",
+    "seconds": 20.0,
+    "frames": 480.0,
+    "frame_aligned": true,
+    "wrap_step": 0.00382,
+    "wrap_vs_p99_step": 0.137,
+    "wrap_vs_p999_step": 0.098,
+    "seam_hf_ratio": 0.36,
+    "seam_hf_rank": 26.69,
+    "rms_end_db": -28.6,
+    "rms_begin_db": -20.5,
+    "lufs_2x": -19.96,
+    "tp_db": -7.26,
+    "verdict": "seamless",
+    "tail_s": 3.202,
+    "tail_end_db": -121.6
+   }
+  ],
+  "hits": {
+   "n": 1,
+   "within_tol": 1,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 0,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 256,
+   "lines": 7,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "engine": {
+   "balance": {
+    "piano": 23,
+    "orch": 41,
+    "bigband": 10,
+    "chip": 26
+   },
+   "balance_energy": {
+    "piano": 19,
+    "orch": 43,
+    "bigband": 11,
+    "chip": 27
+   },
+   "st": {
+    "p95": -19.25,
+    "median": -19.84,
+    "max": -18.93
+   },
+   "band_2_6k_db": -18.1,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.028,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "arp",
+    "brush",
+    "bsax",
+    "cb_pizz",
+    "grand",
+    "jazz",
+    "swish",
+    "tpt",
+    "ubass",
+    "vibes"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "mm05-the-more-you-buy-trio",
+  "mm": "MM-05",
+  "family": "P06 THE JOB",
+  "title": "The More You Buy: Trio (bed)",
+  "cue": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-trio.cue.json",
+  "album": {
+   "lufs": -14.05,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 0.000262,
+   "st_p95": -12.84,
+   "st_median": -13.94,
+   "st_max": -12.4,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -11.08,
+   "seconds": 71.7094,
+   "samples": 3442052,
+   "target_lufs": -14.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-trio-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 71.736,
+    "wav_s": 71.709,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -20.0,
+   "tp_db": -3.15,
+   "peak_db": -3.16,
+   "clipped": 0,
+   "dc": 0.000133,
+   "st_p95": -18.81,
+   "st_median": -19.91,
+   "st_max": -18.42,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -17.04,
+   "seconds": 71.7094,
+   "samples": 3442052,
+   "target_lufs": -20.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-trio-underscore.wav",
+   "band_2_6k_db": -18.5,
+   "sub_60_db": -10.2,
+   "centroid_hz": 283,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 71.736,
+    "wav_s": 71.709,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [],
+   "note": "no stems in the cue sheet"
+  },
+  "loops": [
+   {
+    "file": "tracks/mm05-the-more-you-buy/render/variants/mm05-the-more-you-buy-trio-loop.wav",
+    "seconds": 60.0,
+    "frames": 1440.0,
+    "frame_aligned": true,
+    "wrap_step": 0.00478,
+    "wrap_vs_p99_step": 0.151,
+    "wrap_vs_p999_step": 0.093,
+    "seam_hf_ratio": 0.73,
+    "seam_hf_rank": 41.95,
+    "rms_end_db": -25.9,
+    "rms_begin_db": -19.5,
+    "lufs_2x": -19.9,
+    "tp_db": -5.95,
+    "verdict": "seamless",
+    "tail_s": 4.086,
+    "tail_end_db": -122.9
+   }
+  ],
+  "hits": {
+   "n": 10,
+   "within_tol": 10,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 0,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 1086,
+   "lines": 4,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "engine": {
+   "balance": {
+    "piano": 47,
+    "orch": 0,
+    "bigband": 0,
+    "chip": 53
+   },
+   "balance_energy": {
+    "piano": 38,
+    "orch": 0,
+    "bigband": 0,
+    "chip": 62
+   },
+   "st": {
+    "p95": -18.81,
+    "median": -19.91,
+    "max": -18.42
+   },
+   "band_2_6k_db": -18.5,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.021,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "arp",
+    "brush",
+    "cb_pizz",
+    "grand",
+    "jazz",
+    "swish",
+    "ubass"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "mm06-beeper-1993-sample-chip-2008",
+  "mm": "MM-06",
+  "family": "P10 ERA TIERS (T1 1-BIT, T2 EARLY-WEB16) + the render front",
+  "title": "Beeper, 1993 / Sample-Chip, 2008",
+  "cue": "tracks/mm06-beeper-1993-sample-chip-2008/render/mm06-beeper-1993-sample-chip-2008.cue.json",
+  "album": {
+   "lufs": -14.0,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 0.000139,
+   "st_p95": -11.98,
+   "st_median": -14.3,
+   "st_max": -11.67,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -9.9,
+   "seconds": 87.8994,
+   "samples": 4219169,
+   "target_lufs": -14.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm06-beeper-1993-sample-chip-2008/render/mm06-beeper-1993-sample-chip-2008-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 87.936,
+    "wav_s": 87.899,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -20.01,
+   "tp_db": -3.15,
+   "peak_db": -3.16,
+   "clipped": 0,
+   "dc": 6.5e-05,
+   "st_p95": -17.61,
+   "st_median": -20.41,
+   "st_max": -17.21,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -14.69,
+   "seconds": 87.8994,
+   "samples": 4219169,
+   "target_lufs": -20.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm06-beeper-1993-sample-chip-2008/render/mm06-beeper-1993-sample-chip-2008-underscore.wav",
+   "band_2_6k_db": -18.3,
+   "sub_60_db": -19.9,
+   "centroid_hz": 437,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 87.936,
+    "wav_s": 87.899,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [
+    "bass",
+    "chip",
+    "piano",
+    "strings"
+   ],
+   "residual_db_re_master": -119.2,
+   "residual_peak_dbfs": -132.5,
+   "lengths_match": true
+  },
+  "loops": [
+   {
+    "file": "tracks/mm06-beeper-1993-sample-chip-2008/render/mm06-beeper-1993-sample-chip-2008-loop.wav",
+    "seconds": 20.0,
+    "frames": 480.0,
+    "frame_aligned": true,
+    "wrap_step": 0.01003,
+    "wrap_vs_p99_step": 0.538,
+    "wrap_vs_p999_step": 0.392,
+    "seam_hf_ratio": 0.68,
+    "seam_hf_rank": 35.98,
+    "rms_end_db": -19.3,
+    "rms_begin_db": -22.5,
+    "lufs_2x": -19.08,
+    "tp_db": -3.15,
+    "verdict": "seamless",
+    "tail_s": 2.59,
+    "tail_end_db": -110.9
+   }
+  ],
+  "hits": {
+   "n": 12,
+   "within_tol": 12,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 1,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 684,
+   "lines": 17,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "f_major": {
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "windows": 53,
+   "worst_sieved": 0.122,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 5,
+    "unattributed": 0
+   },
+   "fails": [],
+   "fixed_resonances": []
+  },
+  "engine": {
+   "balance": {
+    "piano": 4,
+    "orch": 6,
+    "bigband": 0,
+    "chip": 90
+   },
+   "balance_energy": {
+    "piano": 2,
+    "orch": 1,
+    "bigband": 0,
+    "chip": 97
+   },
+   "st": {
+    "p95": -17.61,
+    "median": -20.41,
+    "max": -17.21
+   },
+   "band_2_6k_db": -18.3,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.122,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 5,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "bline",
+    "broot",
+    "felt_base",
+    "m16_bass",
+    "m16_brush",
+    "m16_build",
+    "m16_felt",
+    "m16_jazz",
+    "m16_lead",
+    "m16_pizz",
+    "m16_str",
+    "m16_swish",
+    "m16_tpt",
+    "ubass_base",
+    "vc",
+    "vla",
+    "vln2"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "e01-s25-the-plan",
+  "mm": "MM-07",
+  "family": "P14",
+  "title": "How to Fire a CEO Who Owns Nothing. (E01-S24 + S25, to picture)",
+  "cue": "tracks/mm07-how-to-fire-a-ceo/render/e01-s25-the-plan.cue.json",
+  "album": {
+   "lufs": -14.02,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 0.000521,
+   "st_p95": -11.94,
+   "st_median": -14.5,
+   "st_max": -11.71,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -8.98,
+   "seconds": 50.0,
+   "samples": 2400000,
+   "target_lufs": -14.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm07-how-to-fire-a-ceo/render/e01-s25-the-plan-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 50.04,
+    "wav_s": 50.0,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -16.02,
+   "tp_db": -3.15,
+   "peak_db": -3.16,
+   "clipped": 0,
+   "dc": 0.000439,
+   "st_p95": -14.17,
+   "st_median": -16.23,
+   "st_max": -13.84,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -11.19,
+   "seconds": 50.0,
+   "samples": 2400000,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm07-how-to-fire-a-ceo/render/e01-s25-the-plan-underscore.wav",
+   "band_2_6k_db": -18.4,
+   "sub_60_db": -19.2,
+   "centroid_hz": 456,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 50.04,
+    "wav_s": 50.0,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [
+    "chip",
+    "perc",
+    "piano",
+    "strings",
+    "synth",
+    "winds"
+   ],
+   "residual_db_re_master": -122.5,
+   "residual_peak_dbfs": -128.9,
+   "lengths_match": true
+  },
+  "loops": [],
+  "hits": {
+   "n": 22,
+   "within_tol": 22,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 5,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 344,
+   "lines": 17,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "f_major": {
+   "ok": false,
+   "ok_written": true,
+   "ok_spectral": false,
+   "windows": 40,
+   "worst_sieved": 0.466,
+   "a_classes": {
+    "written": 0,
+    "resonance": 5,
+    "explained": 8,
+    "unattributed": 0
+   },
+   "fails": [
+    {
+     "t0": 43.068,
+     "t1": 43.688,
+     "a_f": 0.091,
+     "cls": "resonance",
+     "a_from": {
+      "strings": 75,
+      "perc": 15,
+      "chip": 10
+     },
+     "peaks": [
+      "strings 223.4 Hz resonance",
+      "strings 220.5 Hz resonance",
+      "strings 217.5 Hz resonance"
+     ]
+    },
+    {
+     "t0": 46.25,
+     "t1": 46.844,
+     "a_f": 0.313,
+     "cls": "resonance",
+     "a_from": {
+      "chip": 77,
+      "strings": 23,
+      "perc": 0
+     },
+     "peaks": [
+      "chip 223.4 Hz resonance",
+      "chip 217.5 Hz resonance",
+      "chip 900.1 Hz resonance",
+      "strings 432.9 Hz partial",
+      "strings 444.6 Hz resonance",
+      "strings 218.3 Hz resonance"
+     ]
+    },
+    {
+     "t0": 46.844,
+     "t1": 47.438,
+     "a_f": 0.343,
+     "cls": "resonance",
+     "a_from": {
+      "perc": 50,
+      "strings": 43,
+      "chip": 7
+     },
+     "peaks": [
+      "perc 438.7 Hz resonance",
+      "perc 449.0 Hz resonance",
+      "strings 108.4 Hz resonance",
+      "strings 220.5 Hz resonance",
+      "strings 428.5 Hz resonance"
+     ]
+    },
+    {
+     "t0": 47.5,
+     "t1": 48.094,
+     "a_f": 0.465,
+     "cls": "resonance",
+     "a_from": {
+      "chip": 74,
+      "perc": 25,
+      "strings": 2
+     },
+     "peaks": [
+      "chip 112.1 Hz resonance",
+      "chip 214.6 Hz resonance",
+      "chip 226.3 Hz resonance",
+      "perc 226.3 Hz resonance"
+     ]
+    },
+    {
+     "t0": 48.094,
+     "t1": 48.688,
+     "a_f": 0.389,
+     "cls": "resonance",
+     "a_from": {
+      "chip": 92,
+      "strings": 8,
+      "perc": 0
+     },
+     "peaks": [
+      "chip 109.1 Hz resonance",
+      "chip 213.9 Hz resonance",
+      "chip 221.9 Hz resonance"
+     ]
+    }
+   ],
+   "fixed_resonances": [
+    "strings ~219.4 Hz x4",
+    "strings ~224.1 Hz x6",
+    "strings ~428.5 Hz x2",
+    "chip ~214.2 Hz x2",
+    "chip ~222.7 Hz x2"
+   ]
+  },
+  "engine": {
+   "balance": {
+    "piano": 1,
+    "orch": 52,
+    "bigband": 0,
+    "chip": 47
+   },
+   "balance_energy": {
+    "piano": 1,
+    "orch": 54,
+    "bigband": 0,
+    "chip": 45
+   },
+   "st": {
+    "p95": -14.17,
+    "median": -16.23,
+    "max": -13.84
+   },
+   "band_2_6k_db": -18.4,
+   "f_major_ok": false,
+   "f_major_worst_sieved": 0.466,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 5,
+    "explained": 8,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [
+    "F-major check (spectral): 5 F-bass window(s) carry A energy that NO written note explains (a resonance, not a written third), first at 43.068 s, worst sieved A/F 0.465: chip ~109.1 Hz, chip ~112.1 Hz, chip ~213.9 Hz, chip ~214.6 Hz, chip ~217.5 Hz, chip ~221.9 Hz; FIXED (same peak under different notes): strings ~219.4 Hz x4; strings ~224.1 Hz x6; strings ~428.5 Hz x2; chip ~214.2 Hz x2; chip ~222.7 Hz x2 -- audition: does it sound major?"
+   ],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "cb",
+    "celesta",
+    "cl",
+    "felt",
+    "felt_mech",
+    "glasspad",
+    "harp",
+    "lead",
+    "tri",
+    "tri2",
+    "vc",
+    "vla",
+    "vln1",
+    "vln2",
+    "woodclick",
+    "wz_box",
+    "wz_cel",
+    "wz_ch",
+    "wz_tri"
+   ]
+  },
+  "editor_flags": [
+   "F-major (engine, full note data) worst sieved A/F 0.466, classes {'written': 0, 'resonance': 5, 'explained': 8, 'unattributed': 0}"
+  ],
+  "crosscheck": []
+ },
+ {
+  "id": "mm07-how-to-fire-a-ceo-plan-micro",
+  "mm": "MM-07",
+  "family": "P14",
+  "title": "How to Fire a CEO Who Owns Nothing. (PLAN-MICRO)",
+  "cue": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-plan-micro.cue.json",
+  "album": {
+   "lufs": -14.02,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 0.000154,
+   "st_p95": -12.91,
+   "st_median": -14.02,
+   "st_max": -12.63,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -10.17,
+   "seconds": 20.2993,
+   "samples": 974367,
+   "target_lufs": -14.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-plan-micro-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 20.328,
+    "wav_s": 20.299,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -16.02,
+   "tp_db": -3.15,
+   "peak_db": -3.16,
+   "clipped": 0,
+   "dc": 0.000131,
+   "st_p95": -15.0,
+   "st_median": -15.97,
+   "st_max": -14.78,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -12.32,
+   "seconds": 20.2993,
+   "samples": 974367,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-plan-micro-underscore.wav",
+   "band_2_6k_db": -19.4,
+   "sub_60_db": -19.3,
+   "centroid_hz": 440,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 20.328,
+    "wav_s": 20.299,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [
+    "chip",
+    "perc",
+    "strings",
+    "winds"
+   ],
+   "residual_db_re_master": -122.5,
+   "residual_peak_dbfs": -132.5,
+   "lengths_match": true
+  },
+  "loops": [],
+  "hits": {
+   "n": 5,
+   "within_tol": 5,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 2,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 185,
+   "lines": 11,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "f_major": {
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "windows": 9,
+   "worst_sieved": 0.069,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "fails": [],
+   "fixed_resonances": []
+  },
+  "engine": {
+   "balance": {
+    "piano": 0,
+    "orch": 42,
+    "bigband": 0,
+    "chip": 58
+   },
+   "balance_energy": {
+    "piano": 0,
+    "orch": 47,
+    "bigband": 0,
+    "chip": 53
+   },
+   "st": {
+    "p95": -15.0,
+    "median": -15.97,
+    "max": -14.78
+   },
+   "band_2_6k_db": -19.4,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.069,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "cb",
+    "celesta",
+    "cl",
+    "harp",
+    "lead",
+    "tri",
+    "tri2",
+    "vc",
+    "vla",
+    "vln1",
+    "vln2",
+    "woodclick"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "mm07-how-to-fire-a-ceo-plan-short",
+  "mm": "MM-07",
+  "family": "P14",
+  "title": "How to Fire a CEO Who Owns Nothing. (PLAN-SHORT)",
+  "cue": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-plan-short.cue.json",
+  "album": {
+   "lufs": -14.0,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 8.7e-05,
+   "st_p95": -12.9,
+   "st_median": -14.26,
+   "st_max": -12.6,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -10.2,
+   "seconds": 30.0,
+   "samples": 1440000,
+   "target_lufs": -14.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-plan-short-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 30.024,
+    "wav_s": 30.0,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -16.04,
+   "tp_db": -3.15,
+   "peak_db": -3.16,
+   "clipped": 0,
+   "dc": 7.6e-05,
+   "st_p95": -15.02,
+   "st_median": -16.25,
+   "st_max": -14.77,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -12.32,
+   "seconds": 30.0,
+   "samples": 1440000,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-plan-short-underscore.wav",
+   "band_2_6k_db": -19.5,
+   "sub_60_db": -17.6,
+   "centroid_hz": 453,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 30.024,
+    "wav_s": 30.0,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [
+    "chip",
+    "perc",
+    "strings",
+    "winds"
+   ],
+   "residual_db_re_master": -122.4,
+   "residual_peak_dbfs": -132.5,
+   "lengths_match": true
+  },
+  "loops": [
+   {
+    "file": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-plan-short-loop.wav",
+    "seconds": 12.5,
+    "frames": 300.0,
+    "frame_aligned": true,
+    "wrap_step": 0.02956,
+    "wrap_vs_p99_step": 0.598,
+    "wrap_vs_p999_step": 0.389,
+    "seam_hf_ratio": 3.72,
+    "seam_hf_rank": 87.63,
+    "rms_end_db": -23.8,
+    "rms_begin_db": -14.3,
+    "lufs_2x": -15.47,
+    "tp_db": -3.15,
+    "verdict": "seamless",
+    "tail_s": 3.119,
+    "tail_end_db": -112.5
+   }
+  ],
+  "hits": {
+   "n": 5,
+   "within_tol": 5,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 3,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 273,
+   "lines": 10,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "f_major": {
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "windows": 9,
+   "worst_sieved": 0.19,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 3,
+    "unattributed": 0
+   },
+   "fails": [],
+   "fixed_resonances": [
+    "strings ~222.7 Hz x3"
+   ]
+  },
+  "engine": {
+   "balance": {
+    "piano": 0,
+    "orch": 44,
+    "bigband": 0,
+    "chip": 56
+   },
+   "balance_energy": {
+    "piano": 0,
+    "orch": 49,
+    "bigband": 0,
+    "chip": 51
+   },
+   "st": {
+    "p95": -15.02,
+    "median": -16.25,
+    "max": -14.77
+   },
+   "band_2_6k_db": -19.5,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.19,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 3,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "cb",
+    "fl",
+    "harp",
+    "lead",
+    "tri",
+    "tri2",
+    "vc",
+    "vla",
+    "vln1",
+    "vln2",
+    "woodclick"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "mm07-how-to-fire-a-ceo",
+  "mm": "MM-07",
+  "family": "P14",
+  "title": "How to Fire a CEO Who Owns Nothing.",
+  "cue": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo.cue.json",
+  "album": {
+   "lufs": -14.01,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 0.000289,
+   "st_p95": -12.38,
+   "st_median": -14.34,
+   "st_max": -12.07,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -9.42,
+   "seconds": 100.2993,
+   "samples": 4814366,
+   "target_lufs": -14.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 100.344,
+    "wav_s": 100.299,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -16.01,
+   "tp_db": -3.15,
+   "peak_db": -3.16,
+   "clipped": 0,
+   "dc": 0.000248,
+   "st_p95": -14.51,
+   "st_median": -16.07,
+   "st_max": -14.2,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -11.56,
+   "seconds": 100.2993,
+   "samples": 4814366,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-underscore.wav",
+   "band_2_6k_db": -18.9,
+   "sub_60_db": -17.5,
+   "centroid_hz": 449,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 100.344,
+    "wav_s": 100.299,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [
+    "chip",
+    "perc",
+    "piano",
+    "strings",
+    "synth",
+    "winds"
+   ],
+   "residual_db_re_master": -122.4,
+   "residual_peak_dbfs": -128.9,
+   "lengths_match": true
+  },
+  "loops": [
+   {
+    "file": "tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-loop.wav",
+    "seconds": 12.5,
+    "frames": 300.0,
+    "frame_aligned": true,
+    "wrap_step": 0.02015,
+    "wrap_vs_p99_step": 0.385,
+    "wrap_vs_p999_step": 0.252,
+    "seam_hf_ratio": 3.97,
+    "seam_hf_rank": 89.72,
+    "rms_end_db": -24.6,
+    "rms_begin_db": -12.9,
+    "lufs_2x": -14.92,
+    "tp_db": -3.15,
+    "verdict": "seamless",
+    "tail_s": 3.127,
+    "tail_end_db": -112.0
+   }
+  ],
+  "hits": {
+   "n": 32,
+   "within_tol": 32,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 11,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 802,
+   "lines": 18,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "f_major": {
+   "ok": false,
+   "ok_written": true,
+   "ok_spectral": false,
+   "windows": 58,
+   "worst_sieved": 0.515,
+   "a_classes": {
+    "written": 0,
+    "resonance": 5,
+    "explained": 15,
+    "unattributed": 0
+   },
+   "fails": [
+    {
+     "t0": 43.068,
+     "t1": 43.688,
+     "a_f": 0.091,
+     "cls": "resonance",
+     "a_from": {
+      "strings": 75,
+      "perc": 15,
+      "chip": 10
+     },
+     "peaks": [
+      "strings 223.4 Hz resonance",
+      "strings 220.5 Hz resonance",
+      "strings 217.5 Hz resonance"
+     ]
+    },
+    {
+     "t0": 46.25,
+     "t1": 46.844,
+     "a_f": 0.127,
+     "cls": "resonance",
+     "a_from": {
+      "chip": 77,
+      "strings": 23,
+      "perc": 0
+     },
+     "peaks": [
+      "chip 223.4 Hz resonance",
+      "chip 217.5 Hz resonance",
+      "chip 900.1 Hz resonance",
+      "strings 432.9 Hz partial",
+      "strings 444.6 Hz resonance",
+      "strings 218.3 Hz resonance"
+     ]
+    },
+    {
+     "t0": 46.844,
+     "t1": 47.438,
+     "a_f": 0.343,
+     "cls": "resonance",
+     "a_from": {
+      "perc": 50,
+      "strings": 43,
+      "chip": 7
+     },
+     "peaks": [
+      "perc 438.7 Hz resonance",
+      "perc 449.0 Hz resonance",
+      "strings 108.4 Hz resonance",
+      "strings 220.5 Hz resonance",
+      "strings 428.5 Hz resonance"
+     ]
+    },
+    {
+     "t0": 47.5,
+     "t1": 48.094,
+     "a_f": 0.465,
+     "cls": "resonance",
+     "a_from": {
+      "chip": 74,
+      "perc": 25,
+      "strings": 2
+     },
+     "peaks": [
+      "chip 112.1 Hz resonance",
+      "chip 214.6 Hz resonance",
+      "chip 226.3 Hz resonance",
+      "perc 226.3 Hz resonance"
+     ]
+    },
+    {
+     "t0": 48.094,
+     "t1": 48.688,
+     "a_f": 0.389,
+     "cls": "resonance",
+     "a_from": {
+      "chip": 92,
+      "strings": 8,
+      "perc": 0
+     },
+     "peaks": [
+      "chip 109.1 Hz resonance",
+      "chip 213.9 Hz resonance",
+      "chip 221.9 Hz resonance"
+     ]
+    }
+   ],
+   "fixed_resonances": [
+    "strings ~217.5 Hz x3",
+    "strings ~219.0 Hz x6",
+    "strings ~224.1 Hz x10",
+    "strings ~428.5 Hz x2",
+    "strings ~445.3 Hz x2",
+    "chip ~214.2 Hz x2",
+    "chip ~222.7 Hz x2"
+   ]
+  },
+  "engine": {
+   "balance": {
+    "piano": 1,
+    "orch": 48,
+    "bigband": 0,
+    "chip": 52
+   },
+   "balance_energy": {
+    "piano": 1,
+    "orch": 51,
+    "bigband": 0,
+    "chip": 49
+   },
+   "st": {
+    "p95": -14.51,
+    "median": -16.07,
+    "max": -14.2
+   },
+   "band_2_6k_db": -18.9,
+   "f_major_ok": false,
+   "f_major_worst_sieved": 0.515,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 5,
+    "explained": 15,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [
+    "F-major check (spectral): 5 F-bass window(s) carry A energy that NO written note explains (a resonance, not a written third), first at 43.068 s, worst sieved A/F 0.465: chip ~109.1 Hz, chip ~112.1 Hz, chip ~213.9 Hz, chip ~214.6 Hz, chip ~217.5 Hz, chip ~221.9 Hz; FIXED (same peak under different notes): strings ~217.5 Hz x3; strings ~219 Hz x6; strings ~224.1 Hz x10; strings ~428.5 Hz x2; strings ~445.3 Hz x2; chip ~214.2 Hz x2; chip ~222.7 Hz x2 -- audition: does it sound major?"
+   ],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "cb",
+    "celesta",
+    "cl",
+    "felt",
+    "felt_mech",
+    "fl",
+    "glasspad",
+    "harp",
+    "lead",
+    "tri",
+    "tri2",
+    "vc",
+    "vla",
+    "vln1",
+    "vln2",
+    "woodclick",
+    "wz_box",
+    "wz_cel",
+    "wz_ch",
+    "wz_tri"
+   ]
+  },
+  "editor_flags": [
+   "F-major (engine, full note data) worst sieved A/F 0.515, classes {'written': 0, 'resonance': 5, 'explained': 15, 'unattributed': 0}"
+  ],
+  "crosscheck": []
+ },
+ {
+  "id": "mm08-the-falling-tile",
+  "mm": "MM-08",
+  "family": "P03 LEVERAGE -> D6 -> P01 DARK ROOM",
+  "title": "The Falling Tile (album edit)",
+  "cue": "tracks/mm08-the-falling-tile/render/mm08-the-falling-tile.cue.json",
+  "album": {
+   "lufs": -16.01,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 3.1e-05,
+   "st_p95": -14.06,
+   "st_median": -18.74,
+   "st_max": -13.91,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -10.97,
+   "seconds": 42.8029,
+   "samples": 2054541,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm08-the-falling-tile/render/mm08-the-falling-tile-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 42.84,
+    "wav_s": 42.803,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -21.5,
+   "tp_db": -5.15,
+   "peak_db": -5.15,
+   "clipped": 0,
+   "dc": 1.1e-05,
+   "st_p95": -19.66,
+   "st_median": -23.88,
+   "st_max": -19.52,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -16.34,
+   "seconds": 42.8029,
+   "samples": 2054541,
+   "target_lufs": -21.5,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm08-the-falling-tile/render/mm08-the-falling-tile-underscore.wav",
+   "band_2_6k_db": -20.0,
+   "sub_60_db": -4.9,
+   "centroid_hz": 256,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 42.84,
+    "wav_s": 42.803,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [
+    "brass",
+    "chip",
+    "drums",
+    "perc",
+    "piano",
+    "strings",
+    "winds"
+   ],
+   "residual_db_re_master": -117.2,
+   "residual_peak_dbfs": -128.9,
+   "lengths_match": true
+  },
+  "loops": [],
+  "hits": {
+   "n": 12,
+   "within_tol": 12,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 7,
+   "ok": true,
+   "bad": []
+  },
+  "vo_windows": [
+   {
+    "t0": 25.0,
+    "t1": 27.5,
+    "lufs": -24.57,
+    "ok": true
+   },
+   {
+    "t0": 37.5,
+    "t1": 40.0,
+    "lufs": -25.24,
+    "ok": true
+   }
+  ],
+  "midi": {
+   "notes": 138,
+   "lines": 11,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "f_major": {
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "windows": 26,
+   "worst_sieved": 0.073,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "fails": [],
+   "fixed_resonances": []
+  },
+  "sub_under_room": {
+   "n": 2,
+   "ok": true,
+   "worst_db": -30.8,
+   "bad": []
+  },
+  "engine": {
+   "balance": {
+    "piano": 51,
+    "orch": 36,
+    "bigband": 0,
+    "chip": 13
+   },
+   "balance_energy": {
+    "piano": 49,
+    "orch": 46,
+    "bigband": 0,
+    "chip": 5
+   },
+   "st": {
+    "p95": -19.66,
+    "median": -23.88,
+    "max": -19.52
+   },
+   "band_2_6k_db": -20.0,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.073,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "bdrum_muted",
+    "beeper",
+    "bsn",
+    "cb",
+    "celesta",
+    "felt",
+    "felt_mech",
+    "grand",
+    "hn",
+    "k808",
+    "noise",
+    "snes_piano",
+    "vc",
+    "vln1",
+    "vln2"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "mm08-leverage-bed",
+  "mm": "MM-08",
+  "family": "P03 LEVERAGE -> D6 -> P01 DARK ROOM",
+  "title": "The Falling Tile: LEVERAGE bed (call connecting, loop)",
+  "cue": "tracks/mm08-the-falling-tile/render/variants/mm08-leverage-bed.cue.json",
+  "album": {
+   "lufs": -18.01,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 4.6e-05,
+   "st_p95": -17.3,
+   "st_median": -17.66,
+   "st_max": -17.04,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -12.69,
+   "seconds": 33.0,
+   "samples": 1584000,
+   "target_lufs": -18.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm08-the-falling-tile/render/variants/mm08-leverage-bed-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 33.024,
+    "wav_s": 33.0,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -22.0,
+   "tp_db": -4.07,
+   "peak_db": -4.08,
+   "clipped": 0,
+   "dc": 3.2e-05,
+   "st_p95": -21.34,
+   "st_median": -21.74,
+   "st_max": -21.17,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -17.04,
+   "seconds": 33.0,
+   "samples": 1584000,
+   "target_lufs": -22.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm08-the-falling-tile/render/variants/mm08-leverage-bed-underscore.wav",
+   "band_2_6k_db": -21.9,
+   "sub_60_db": -3.0,
+   "centroid_hz": 156,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 33.024,
+    "wav_s": 33.0,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [
+    "chip",
+    "drums",
+    "perc",
+    "piano",
+    "strings"
+   ],
+   "residual_db_re_master": -117.8,
+   "residual_peak_dbfs": -128.9,
+   "lengths_match": true
+  },
+  "loops": [
+   {
+    "file": "tracks/mm08-the-falling-tile/render/variants/mm08-leverage-bed-loop.wav",
+    "seconds": 10.0,
+    "frames": 240.0,
+    "frame_aligned": true,
+    "wrap_step": 0.00424,
+    "wrap_vs_p99_step": 0.166,
+    "wrap_vs_p999_step": 0.055,
+    "seam_hf_ratio": 85.59,
+    "seam_hf_rank": 84.86,
+    "rms_end_db": -26.8,
+    "rms_begin_db": -13.4,
+    "lufs_2x": -21.91,
+    "tp_db": -5.54,
+    "verdict": "seamless",
+    "tail_s": 3.504,
+    "tail_end_db": -124.5
+   }
+  ],
+  "hits": {
+   "n": 1,
+   "within_tol": 1,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 0,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 44,
+   "lines": 3,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "f_major": {
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "windows": 15,
+   "worst_sieved": 0.058,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "fails": [],
+   "fixed_resonances": []
+  },
+  "engine": {
+   "balance": {
+    "piano": 27,
+    "orch": 56,
+    "bigband": 0,
+    "chip": 17
+   },
+   "balance_energy": {
+    "piano": 21,
+    "orch": 72,
+    "bigband": 0,
+    "chip": 7
+   },
+   "st": {
+    "p95": -21.34,
+    "median": -21.74,
+    "max": -21.17
+   },
+   "band_2_6k_db": -21.9,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.247,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 3,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "bdrum_muted",
+    "cb",
+    "grand",
+    "k808",
+    "noise",
+    "vc"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "mm09-the-boards-side",
+  "mm": "MM-09",
+  "family": "P02 PROCEDURE (the table; an exit from his POV) + P08 OUTS KIT (09x: REVERSAL)",
+  "title": "The Board's Side / What They Didn't Know",
+  "cue": "tracks/mm09-the-boards-side/render/mm09-the-boards-side.cue.json",
+  "album": {
+   "lufs": -16.02,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 1.5e-05,
+   "st_p95": -13.24,
+   "st_median": -17.03,
+   "st_max": -11.93,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -9.61,
+   "seconds": 114.8786,
+   "samples": 5514173,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm09-the-boards-side/render/mm09-the-boards-side-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 114.912,
+    "wav_s": 114.879,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -20.0,
+   "tp_db": -4.14,
+   "peak_db": -4.14,
+   "clipped": 0,
+   "dc": 1e-05,
+   "st_p95": -17.58,
+   "st_median": -20.88,
+   "st_max": -16.32,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -14.07,
+   "seconds": 114.8786,
+   "samples": 5514173,
+   "target_lufs": -20.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm09-the-boards-side/render/mm09-the-boards-side-underscore.wav",
+   "band_2_6k_db": -16.8,
+   "sub_60_db": -18.1,
+   "centroid_hz": 470,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 114.912,
+    "wav_s": 114.879,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [
+    "brass",
+    "chip",
+    "perc",
+    "piano",
+    "strings",
+    "winds"
+   ],
+   "residual_db_re_master": -119.0,
+   "residual_peak_dbfs": -128.9,
+   "lengths_match": true
+  },
+  "loops": [],
+  "hits": {
+   "n": 10,
+   "within_tol": 9,
+   "off": [
+    {
+     "t": 20.0,
+     "offset_ms": 10.7,
+     "strength": 3.11
+    }
+   ],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 20,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 440,
+   "lines": 23,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "f_major": {
+   "ok": false,
+   "ok_written": true,
+   "ok_spectral": false,
+   "windows": 48,
+   "worst_sieved": 6.956,
+   "a_classes": {
+    "written": 0,
+    "resonance": 2,
+    "explained": 8,
+    "unattributed": 0
+   },
+   "fails": [
+    {
+     "t0": 5.312,
+     "t1": 5.625,
+     "a_f": 0.272,
+     "cls": "resonance",
+     "a_from": {
+      "strings": 100,
+      "winds": 0,
+      "brass": 0
+     },
+     "peaks": [
+      "strings 874.5 Hz partial",
+      "strings 108.4 Hz resonance",
+      "strings 436.5 Hz resonance"
+     ]
+    },
+    {
+     "t0": 74.987,
+     "t1": 75.606,
+     "a_f": 0.126,
+     "cls": "resonance",
+     "a_from": {
+      "strings": 99,
+      "perc": 1
+     },
+     "peaks": [
+      "strings 446.8 Hz resonance",
+      "strings 430.7 Hz partial",
+      "strings 436.5 Hz partial"
+     ]
+    }
+   ],
+   "fixed_resonances": [
+    "strings ~109.1 Hz x2",
+    "strings ~225.2 Hz x2",
+    "strings ~446.0 Hz x2"
+   ]
+  },
+  "engine": {
+   "balance": {
+    "piano": 1,
+    "orch": 75,
+    "bigband": 22,
+    "chip": 1
+   },
+   "balance_energy": {
+    "piano": 0,
+    "orch": 92,
+    "bigband": 7,
+    "chip": 1
+   },
+   "st": {
+    "p95": -17.58,
+    "median": -20.88,
+    "max": -16.32
+   },
+   "band_2_6k_db": -16.8,
+   "f_major_ok": false,
+   "f_major_worst_sieved": 0.163,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 1,
+    "explained": 2,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [
+    "marker at 20.0 s: no clear onset within 10 ms ({'t': 20.0, 'offset_ms': np.float64(10.7), 'strength': 3.11})",
+    "F-major check (spectral): 1 F-bass window(s) carry A energy that NO written note explains (a resonance, not a written third), first at 74.987 s, worst sieved A/F 0.126: strings ~446.8 Hz -- audition: does it sound major?"
+   ],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "bsn",
+    "cb",
+    "cb_f1",
+    "celesta",
+    "choir",
+    "cl",
+    "door",
+    "felt",
+    "harm",
+    "harp",
+    "hn",
+    "lead",
+    "marimba",
+    "reed",
+    "rhodes",
+    "svla",
+    "svln",
+    "timp",
+    "tpt",
+    "vc",
+    "vla",
+    "vln1",
+    "vln2"
+   ]
+  },
+  "editor_flags": [
+   "hits off: 20.0 s 10.7 ms",
+   "F-major (engine, full note data) worst sieved A/F 0.163, classes {'written': 0, 'resonance': 1, 'explained': 2, 'unattributed': 0}"
+  ],
+  "crosscheck": []
+ },
+ {
+  "id": "mm10-his-side-745-album-edit",
+  "mm": "MM-10",
+  "family": "P01 DARK ROOM -> P11 SET-PIECE SWING",
+  "title": "His Side / 745 (album edit)",
+  "cue": "tracks/mm10-his-side-745/render/mm10-his-side-745-album-edit.cue.json",
+  "album": {
+   "lufs": -14.02,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 2.3e-05,
+   "st_p95": -12.5,
+   "st_median": -13.95,
+   "st_max": -12.28,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -10.06,
+   "seconds": 91.875,
+   "samples": 4410000,
+   "target_lufs": -14.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm10-his-side-745/render/mm10-his-side-745-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 91.92,
+    "wav_s": 91.875,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "missing": true
+  },
+  "loops": [],
+  "hits": {
+   "n": 14,
+   "within_tol": 13,
+   "off": [
+    {
+     "t": 36.875,
+     "offset_ms": 13.0,
+     "strength": 1.59
+    }
+   ],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 10,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 1169,
+   "lines": 25,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "engine": {
+   "balance": {
+    "piano": 26,
+    "orch": 30,
+    "bigband": 18,
+    "chip": 26
+   },
+   "balance_energy": {
+    "piano": 15,
+    "orch": 39,
+    "bigband": 15,
+    "chip": 31
+   },
+   "st": {
+    "p95": -14.49,
+    "median": -15.92,
+    "max": -14.2
+   },
+   "band_2_6k_db": -16.9,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.035,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "arp",
+    "asax",
+    "bsax",
+    "bsn",
+    "cb",
+    "cb_pizz",
+    "celesta",
+    "felt",
+    "felt_mech",
+    "grand",
+    "hn",
+    "jazz",
+    "keynote",
+    "keynote_ch",
+    "lead",
+    "lead2",
+    "tbn",
+    "timp",
+    "tpt",
+    "tri",
+    "tsax",
+    "ubass",
+    "vc",
+    "vla",
+    "vln1",
+    "vln2",
+    "xylo"
+   ]
+  },
+  "editor_flags": [
+   "hits off: 36.875 s 13.0 ms"
+  ],
+  "crosscheck": []
+ },
+ {
+  "id": "mm10-his-side-745",
+  "mm": "MM-10",
+  "family": "P01 DARK ROOM -> P11 SET-PIECE SWING",
+  "title": "His Side / 745",
+  "cue": "tracks/mm10-his-side-745/render/mm10-his-side-745.cue.json",
+  "album_is_album_edit": "album edit (mm10-his-side-745-album-edit.cue.json)",
+  "album": {
+   "lufs": -14.02,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 2.3e-05,
+   "st_p95": -12.5,
+   "st_median": -13.95,
+   "st_max": -12.28,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -10.06,
+   "seconds": 91.875,
+   "samples": 4410000,
+   "target_lufs": -14.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm10-his-side-745/render/mm10-his-side-745-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 91.92,
+    "wav_s": 91.875,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -16.03,
+   "tp_db": -3.15,
+   "peak_db": -3.16,
+   "clipped": 0,
+   "dc": 1.6e-05,
+   "st_p95": -14.11,
+   "st_median": -17.83,
+   "st_max": -13.77,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -12.45,
+   "seconds": 98.75,
+   "samples": 4740000,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm10-his-side-745/render/mm10-his-side-745-underscore.wav",
+   "band_2_6k_db": -16.4,
+   "sub_60_db": -24.1,
+   "centroid_hz": 463,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 98.784,
+    "wav_s": 98.75,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [
+    "bass",
+    "brass",
+    "chip",
+    "drums",
+    "perc",
+    "piano",
+    "strings",
+    "winds"
+   ],
+   "residual_db_re_master": -119.4,
+   "residual_peak_dbfs": -126.4,
+   "lengths_match": true
+  },
+  "loops": [],
+  "hits": {
+   "n": 10,
+   "within_tol": 10,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 16,
+   "ok": true,
+   "bad": []
+  },
+  "vo_windows": [
+   {
+    "t0": 2.5,
+    "t1": 5.625,
+    "lufs": -22.7,
+    "ok": true
+   },
+   {
+    "t0": 15.625,
+    "t1": 18.083,
+    "lufs": -24.18,
+    "ok": true
+   }
+  ],
+  "midi": {
+   "notes": 570,
+   "lines": 23,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "f_major": {
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "windows": 17,
+   "worst_sieved": 0.216,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 1,
+    "unattributed": 0
+   },
+   "fails": [],
+   "fixed_resonances": []
+  },
+  "engine": {
+   "balance": {
+    "piano": 15,
+    "orch": 33,
+    "bigband": 26,
+    "chip": 26
+   },
+   "balance_energy": {
+    "piano": 10,
+    "orch": 40,
+    "bigband": 19,
+    "chip": 31
+   },
+   "st": {
+    "p95": -14.11,
+    "median": -17.83,
+    "max": -13.77
+   },
+   "band_2_6k_db": -16.4,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.216,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 1,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "arp",
+    "asax",
+    "bsax",
+    "bsn",
+    "cb",
+    "cb_pizz",
+    "celesta",
+    "felt",
+    "felt_mech",
+    "grand",
+    "hn",
+    "jazz",
+    "lead",
+    "lead2",
+    "tbn",
+    "timp",
+    "tpt",
+    "tri",
+    "tsax",
+    "ubass",
+    "vc",
+    "vla",
+    "vln1",
+    "vln2",
+    "xylo"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "mm11-the-return-album-edit",
+  "mm": "MM-11",
+  "family": "STRAIGHT -> the floor (s2.16) -> LEVERAGE (P03) -> the Build -> VICTORY LAP (P09)",
+  "title": "The Return (album edit)",
+  "cue": "tracks/mm11-the-return/render/mm11-the-return-album-edit.cue.json",
+  "album": {
+   "lufs": -16.0,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 3.2e-05,
+   "st_p95": -13.3,
+   "st_median": -16.65,
+   "st_max": -12.28,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -9.72,
+   "seconds": 92.947,
+   "samples": 4461454,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm11-the-return/render/mm11-the-return-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 92.976,
+    "wav_s": 92.947,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "missing": true
+  },
+  "loops": [],
+  "hits": {
+   "n": 9,
+   "within_tol": 9,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 8,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 422,
+   "lines": 18,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "engine": {
+   "balance": {
+    "piano": 3,
+    "orch": 66,
+    "bigband": 14,
+    "chip": 17
+   },
+   "balance_energy": {
+    "piano": 3,
+    "orch": 77,
+    "bigband": 2,
+    "chip": 18
+   },
+   "st": {
+    "p95": -17.8,
+    "median": -20.39,
+    "max": -17.0
+   },
+   "band_2_6k_db": -20.8,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.085,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 1,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "bdrum_muted",
+    "beeper",
+    "cb",
+    "cb_pizz",
+    "celesta",
+    "felt",
+    "felt_mech",
+    "grand",
+    "k808",
+    "lead",
+    "lead2",
+    "noise",
+    "rhodes",
+    "svln_nv",
+    "tbn",
+    "timp",
+    "tpt",
+    "vc",
+    "vc_lev",
+    "vla",
+    "vln1",
+    "woodclick",
+    "xylo"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "mm11-the-return",
+  "mm": "MM-11",
+  "family": "STRAIGHT -> the floor (s2.16) -> LEVERAGE (P03) -> the Build -> VICTORY LAP (P09)",
+  "title": "The Return",
+  "cue": "tracks/mm11-the-return/render/mm11-the-return.cue.json",
+  "album_is_album_edit": "album edit (mm11-the-return-album-edit.cue.json)",
+  "album": {
+   "lufs": -16.0,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 3.2e-05,
+   "st_p95": -13.3,
+   "st_median": -16.65,
+   "st_max": -12.28,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -9.72,
+   "seconds": 92.947,
+   "samples": 4461454,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm11-the-return/render/mm11-the-return-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 92.976,
+    "wav_s": 92.947,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -20.0,
+   "tp_db": -3.15,
+   "peak_db": -3.16,
+   "clipped": 0,
+   "dc": 2.4e-05,
+   "st_p95": -18.54,
+   "st_median": -22.02,
+   "st_max": -17.1,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -13.38,
+   "seconds": 82.375,
+   "samples": 3954000,
+   "target_lufs": -20.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm11-the-return/render/mm11-the-return-underscore.wav",
+   "band_2_6k_db": -20.0,
+   "sub_60_db": -9.6,
+   "centroid_hz": 360,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 82.416,
+    "wav_s": 82.375,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [
+    "bass",
+    "brass",
+    "chip",
+    "drums",
+    "perc",
+    "piano",
+    "strings"
+   ],
+   "residual_db_re_master": -118.7,
+   "residual_peak_dbfs": -128.9,
+   "lengths_match": true
+  },
+  "loops": [],
+  "hits": {
+   "n": 9,
+   "within_tol": 9,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 17,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 210,
+   "lines": 18,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "f_major": {
+   "ok": false,
+   "ok_written": true,
+   "ok_spectral": false,
+   "windows": 22,
+   "worst_sieved": 0.146,
+   "a_classes": {
+    "written": 0,
+    "resonance": 1,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "fails": [
+    {
+     "t0": 44.375,
+     "t1": 44.725,
+     "a_f": 0.146,
+     "cls": "resonance",
+     "a_from": {
+      "strings": 100,
+      "piano": 0,
+      "perc": 0
+     },
+     "peaks": [
+      "strings 435.1 Hz partial",
+      "strings 111.3 Hz resonance",
+      "strings 213.9 Hz resonance"
+     ]
+    }
+   ],
+   "fixed_resonances": []
+  },
+  "engine": {
+   "balance": {
+    "piano": 3,
+    "orch": 68,
+    "bigband": 10,
+    "chip": 19
+   },
+   "balance_energy": {
+    "piano": 5,
+    "orch": 71,
+    "bigband": 5,
+    "chip": 18
+   },
+   "st": {
+    "p95": -18.54,
+    "median": -22.02,
+    "max": -17.1
+   },
+   "band_2_6k_db": -20.0,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.045,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "bdrum_muted",
+    "beeper",
+    "cb",
+    "cb_pizz",
+    "celesta",
+    "felt",
+    "felt_mech",
+    "grand",
+    "k808",
+    "lead",
+    "lead2",
+    "noise",
+    "rhodes",
+    "svln_nv",
+    "tbn",
+    "timp",
+    "tpt",
+    "vc",
+    "vc_lev",
+    "vla",
+    "vln1",
+    "woodclick",
+    "xylo"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": [
+   "file re-run: 44.375-44.725 s A/F 0.146 resonance ['strings 435.1 Hz partial', 'strings 111.3 Hz resonance', 'strings 213.9 Hz resonance']"
+  ]
+ },
+ {
+  "id": "mm13-kit-glyph-hits-and-copy",
+  "mm": "MM-13",
+  "family": "P05 GLYPH",
+  "title": "Outside Intended Scope: GLYPH hits, Q* and THE COPY (kit)",
+  "cue": "tracks/mm13-kit-glyph-hits-and-copy/render/mm13-kit-glyph-hits-and-copy.cue.json",
+  "album": {
+   "lufs": -16.02,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 3e-06,
+   "st_p95": -15.37,
+   "st_median": -19.19,
+   "st_max": -14.11,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -10.33,
+   "seconds": 132.5,
+   "samples": 6360000,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm13-kit-glyph-hits-and-copy/render/mm13-kit-glyph-hits-and-copy-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 132.528,
+    "wav_s": 132.5,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -21.0,
+   "tp_db": -3.15,
+   "peak_db": -3.16,
+   "clipped": 0,
+   "dc": 1e-06,
+   "st_p95": -20.4,
+   "st_median": -23.85,
+   "st_max": -19.86,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -15.58,
+   "seconds": 132.5,
+   "samples": 6360000,
+   "target_lufs": -21.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm13-kit-glyph-hits-and-copy/render/mm13-kit-glyph-hits-and-copy-underscore.wav",
+   "band_2_6k_db": -17.1,
+   "sub_60_db": -30.5,
+   "centroid_hz": 561,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 132.528,
+    "wav_s": 132.5,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [
+    "bass",
+    "chip",
+    "perc",
+    "piano",
+    "strings",
+    "synth"
+   ],
+   "residual_db_re_master": -116.8,
+   "residual_peak_dbfs": -132.5,
+   "lengths_match": true
+  },
+  "loops": [],
+  "hits": {
+   "n": 21,
+   "within_tol": 21,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 44,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 243,
+   "lines": 14,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "f_major": {
+   "ok": false,
+   "ok_written": true,
+   "ok_spectral": false,
+   "windows": 112,
+   "worst_sieved": 9.207,
+   "a_classes": {
+    "written": 0,
+    "resonance": 1,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "fails": [
+    {
+     "t0": 30.475,
+     "t1": 30.95,
+     "a_f": 0.151,
+     "cls": "resonance",
+     "a_from": {
+      "chip": 99,
+      "strings": 1,
+      "synth": 0
+     },
+     "peaks": [
+      "chip 429.2 Hz resonance",
+      "chip 448.2 Hz resonance",
+      "chip 441.7 Hz resonance"
+     ]
+    }
+   ],
+   "fixed_resonances": []
+  },
+  "sub_under_room": {
+   "n": 22,
+   "ok": true,
+   "worst_db": -19.9,
+   "bad": []
+  },
+  "engine": {
+   "balance": {
+    "piano": 7,
+    "orch": 9,
+    "bigband": 0,
+    "chip": 84
+   },
+   "balance_energy": {
+    "piano": 9,
+    "orch": 7,
+    "bigband": 0,
+    "chip": 83
+   },
+   "st": {
+    "p95": -20.4,
+    "median": -23.85,
+    "max": -19.86
+   },
+   "band_2_6k_db": -17.1,
+   "f_major_ok": false,
+   "f_major_worst_sieved": 8.259,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 1,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [
+    "F-major check (spectral): 1 F-bass window(s) carry A energy that NO written note explains (a resonance, not a written third), first at 30.475 s, worst sieved A/F 0.151: chip ~429.2 Hz, chip ~441.7 Hz, chip ~448.2 Hz -- audition: does it sound major?"
+   ],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "arp",
+    "bell",
+    "celesta",
+    "felt",
+    "glass_snes",
+    "glasspad",
+    "harp",
+    "lead",
+    "lead2",
+    "subp",
+    "tex",
+    "tri",
+    "vln1",
+    "vln2"
+   ]
+  },
+  "editor_flags": [
+   "F-major (engine, full note data) worst sieved A/F 8.259, classes {'written': 0, 'resonance': 1, 'explained': 0, 'unattributed': 0}"
+  ],
+  "crosscheck": []
+ },
+ {
+  "id": "mm13-outside-intended-scope",
+  "mm": "MM-13",
+  "family": "P05 GLYPH",
+  "title": "Outside Intended Scope",
+  "cue": "tracks/mm13-outside-intended-scope/render/mm13-outside-intended-scope.cue.json",
+  "album": {
+   "lufs": -16.0,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 8.9e-05,
+   "st_p95": -14.16,
+   "st_median": -16.37,
+   "st_max": -13.4,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -10.68,
+   "seconds": 85.303,
+   "samples": 4094543,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm13-outside-intended-scope/render/mm13-outside-intended-scope-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 85.344,
+    "wav_s": 85.303,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -20.8,
+   "tp_db": -5.49,
+   "peak_db": -5.5,
+   "clipped": 0,
+   "dc": 5.4e-05,
+   "st_p95": -18.96,
+   "st_median": -21.1,
+   "st_max": -18.2,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -15.84,
+   "seconds": 85.303,
+   "samples": 4094543,
+   "target_lufs": -20.8,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm13-outside-intended-scope/render/mm13-outside-intended-scope-underscore.wav",
+   "band_2_6k_db": -16.0,
+   "sub_60_db": -22.7,
+   "centroid_hz": 713,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 85.344,
+    "wav_s": 85.303,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [
+    "bass",
+    "chip",
+    "perc",
+    "strings",
+    "synth"
+   ],
+   "residual_db_re_master": -116.7,
+   "residual_peak_dbfs": -128.9,
+   "lengths_match": true
+  },
+  "loops": [
+   {
+    "file": "tracks/mm13-outside-intended-scope/render/mm13-outside-intended-scope-loop.wav",
+    "seconds": 20.0,
+    "frames": 480.0,
+    "frame_aligned": true,
+    "wrap_step": 0.00091,
+    "wrap_vs_p99_step": 0.04,
+    "wrap_vs_p999_step": 0.028,
+    "seam_hf_ratio": 1.36,
+    "seam_hf_rank": 69.07,
+    "rms_end_db": -33.9,
+    "rms_begin_db": -22.7,
+    "lufs_2x": -22.55,
+    "tp_db": -11.45,
+    "verdict": "seamless",
+    "tail_s": 3.288,
+    "tail_end_db": -119.4
+   },
+   {
+    "file": "tracks/mm13-outside-intended-scope/render/mm13-outside-intended-scope-loop-L2.wav",
+    "seconds": 20.0,
+    "frames": 480.0,
+    "frame_aligned": true,
+    "wrap_step": 0.00548,
+    "wrap_vs_p99_step": 0.226,
+    "wrap_vs_p999_step": 0.163,
+    "seam_hf_ratio": 0.09,
+    "seam_hf_rank": 0.54,
+    "rms_end_db": -31.8,
+    "rms_begin_db": -32.4,
+    "lufs_2x": -21.21,
+    "tp_db": -6.23,
+    "verdict": "seamless",
+    "tail_s": 3.464,
+    "tail_end_db": -119.4
+   },
+   {
+    "file": "tracks/mm13-outside-intended-scope/render/mm13-outside-intended-scope-loop-L3.wav",
+    "seconds": 20.0,
+    "frames": 480.0,
+    "frame_aligned": true,
+    "wrap_step": 0.0109,
+    "wrap_vs_p99_step": 0.362,
+    "wrap_vs_p999_step": 0.267,
+    "seam_hf_ratio": 3.34,
+    "seam_hf_rank": 96.25,
+    "rms_end_db": -26.7,
+    "rms_begin_db": -20.3,
+    "lufs_2x": -19.5,
+    "tp_db": -5.59,
+    "verdict": "seamless",
+    "tail_s": 3.035,
+    "tail_end_db": -117.6
+   },
+   {
+    "file": "tracks/mm13-outside-intended-scope/render/mm13-outside-intended-scope-loop-L4.wav",
+    "seconds": 20.0,
+    "frames": 480.0,
+    "frame_aligned": true,
+    "wrap_step": 0.02069,
+    "wrap_vs_p99_step": 0.728,
+    "wrap_vs_p999_step": 0.524,
+    "seam_hf_ratio": 18.41,
+    "seam_hf_rank": 97.41,
+    "rms_end_db": -24.7,
+    "rms_begin_db": -19.1,
+    "lufs_2x": -20.62,
+    "tp_db": -5.49,
+    "verdict": "seamless",
+    "tail_s": 5.778,
+    "tail_end_db": -138.5
+   }
+  ],
+  "hits": {
+   "n": 5,
+   "within_tol": 5,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 2,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 514,
+   "lines": 11,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "f_major": {
+   "ok": false,
+   "ok_written": true,
+   "ok_spectral": false,
+   "windows": 117,
+   "worst_sieved": 0.973,
+   "a_classes": {
+    "written": 0,
+    "resonance": 1,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "fails": [
+    {
+     "t0": 56.827,
+     "t1": 57.447,
+     "a_f": 0.084,
+     "cls": "resonance",
+     "a_from": {
+      "chip": 98,
+      "strings": 2,
+      "perc": 0
+     },
+     "peaks": [
+      "chip 428.5 Hz resonance",
+      "chip 435.1 Hz resonance",
+      "chip 1747.6 Hz partial"
+     ]
+    }
+   ],
+   "fixed_resonances": []
+  },
+  "sub_under_room": {
+   "n": 5,
+   "ok": true,
+   "worst_db": -20.2,
+   "bad": []
+  },
+  "engine": {
+   "balance": {
+    "piano": 0,
+    "orch": 28,
+    "bigband": 0,
+    "chip": 72
+   },
+   "balance_energy": {
+    "piano": 0,
+    "orch": 29,
+    "bigband": 0,
+    "chip": 71
+   },
+   "st": {
+    "p95": -18.96,
+    "median": -21.1,
+    "max": -18.2
+   },
+   "band_2_6k_db": -16.0,
+   "f_major_ok": false,
+   "f_major_worst_sieved": 2.093,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 3,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [
+    "F-major check (spectral): 3 F-bass window(s) carry A energy that NO written note explains (a resonance, not a written third), first at 40.566 s, worst sieved A/F 0.228: chip ~428.5 Hz, chip ~430.7 Hz, chip ~435.1 Hz, chip ~440.9 Hz, chip ~441.7 Hz, perc ~856.9 Hz; FIXED (same peak under different notes): chip ~430.7 Hz x3; chip ~435.1 Hz x3; chip ~441.7 Hz x2 -- audition: does it sound major?"
+   ],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "arp",
+    "bell",
+    "celesta",
+    "glasspad",
+    "lead2",
+    "subp",
+    "tex",
+    "vc",
+    "vla",
+    "vln1",
+    "vln2"
+   ]
+  },
+  "editor_flags": [
+   "F-major (engine, full note data) worst sieved A/F 2.093, classes {'written': 0, 'resonance': 3, 'explained': 0, 'unattributed': 0}"
+  ],
+  "crosscheck": []
+ },
+ {
+  "id": "mm13-outside-intended-scope-05s",
+  "mm": "MM-13",
+  "family": "P05 GLYPH",
+  "title": "Outside Intended Scope (5 s cut-down)",
+  "cue": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-05s.cue.json",
+  "album": {
+   "lufs": -15.15,
+   "tp_db": -5.02,
+   "peak_db": -5.02,
+   "clipped": 0,
+   "dc": 5.4e-05,
+   "st_p95": -15.53,
+   "st_median": -16.61,
+   "st_max": -15.42,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -10.61,
+   "seconds": 5.303,
+   "samples": 254542,
+   "target_lufs": -15.15,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-05s-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 5.328,
+    "wav_s": 5.303,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -20.39,
+   "tp_db": -10.44,
+   "peak_db": -10.46,
+   "clipped": 0,
+   "dc": 3.3e-05,
+   "st_p95": -20.62,
+   "st_median": -21.75,
+   "st_max": -20.52,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -15.79,
+   "seconds": 5.303,
+   "samples": 254542,
+   "target_lufs": -20.39,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-05s-underscore.wav",
+   "band_2_6k_db": -11.9,
+   "sub_60_db": -21.0,
+   "centroid_hz": 873,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 5.328,
+    "wav_s": 5.303,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [],
+   "note": "no stems in the cue sheet"
+  },
+  "loops": [],
+  "hits": {
+   "n": 1,
+   "within_tol": 1,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 2,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 6,
+   "lines": 6,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "sub_under_room": {
+   "n": 1,
+   "ok": true,
+   "worst_db": -21.2,
+   "bad": []
+  },
+  "engine": {
+   "balance": {
+    "piano": 0,
+    "orch": 6,
+    "bigband": 0,
+    "chip": 94
+   },
+   "balance_energy": {
+    "piano": 0,
+    "orch": 3,
+    "bigband": 0,
+    "chip": 97
+   },
+   "st": {
+    "p95": -20.62,
+    "median": -21.75,
+    "max": -20.52
+   },
+   "band_2_6k_db": -11.9,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.016,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [
+    "2-6 kHz band -11.9 dB > -15 dB (s6.5: under dialogue)"
+   ],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "bell",
+    "celesta",
+    "glasspad",
+    "lead2",
+    "subp",
+    "tex"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "mm13-outside-intended-scope-15s",
+  "mm": "MM-13",
+  "family": "P05 GLYPH",
+  "title": "Outside Intended Scope (15 s cut-down)",
+  "cue": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-15s.cue.json",
+  "album": {
+   "lufs": -15.31,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 2e-05,
+   "st_p95": -14.17,
+   "st_median": -15.81,
+   "st_max": -13.99,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -10.51,
+   "seconds": 15.3029,
+   "samples": 734541,
+   "target_lufs": -15.29,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-15s-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 15.336,
+    "wav_s": 15.303,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -20.21,
+   "tp_db": -5.24,
+   "peak_db": -5.25,
+   "clipped": 0,
+   "dc": 1.2e-05,
+   "st_p95": -18.98,
+   "st_median": -20.9,
+   "st_max": -18.77,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -15.68,
+   "seconds": 15.3029,
+   "samples": 734541,
+   "target_lufs": -20.21,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-15s-underscore.wav",
+   "band_2_6k_db": -13.7,
+   "sub_60_db": -22.0,
+   "centroid_hz": 805,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 15.336,
+    "wav_s": 15.303,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [],
+   "note": "no stems in the cue sheet"
+  },
+  "loops": [],
+  "hits": {
+   "n": 1,
+   "within_tol": 1,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 2,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 102,
+   "lines": 9,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "sub_under_room": {
+   "n": 1,
+   "ok": true,
+   "worst_db": -22.1,
+   "bad": []
+  },
+  "engine": {
+   "balance": {
+    "piano": 0,
+    "orch": 18,
+    "bigband": 0,
+    "chip": 82
+   },
+   "balance_energy": {
+    "piano": 0,
+    "orch": 19,
+    "bigband": 0,
+    "chip": 81
+   },
+   "st": {
+    "p95": -18.98,
+    "median": -20.9,
+    "max": -18.77
+   },
+   "band_2_6k_db": -13.7,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 3.126,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [
+    "2-6 kHz band -13.7 dB > -15 dB (s6.5: under dialogue)"
+   ],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "arp",
+    "bell",
+    "celesta",
+    "glasspad",
+    "lead2",
+    "subp",
+    "tex",
+    "vln1",
+    "vln2"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "mm13-outside-intended-scope-30s",
+  "mm": "MM-13",
+  "family": "P05 GLYPH",
+  "title": "Outside Intended Scope (30 s cut-down)",
+  "cue": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-30s.cue.json",
+  "album": {
+   "lufs": -15.36,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 2.9e-05,
+   "st_p95": -14.18,
+   "st_median": -15.76,
+   "st_max": -13.75,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -10.41,
+   "seconds": 30.3029,
+   "samples": 1454539,
+   "target_lufs": -15.35,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-30s-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 30.336,
+    "wav_s": 30.303,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -20.19,
+   "tp_db": -5.26,
+   "peak_db": -5.27,
+   "clipped": 0,
+   "dc": 1.8e-05,
+   "st_p95": -19.1,
+   "st_median": -20.61,
+   "st_max": -18.67,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -15.56,
+   "seconds": 30.3029,
+   "samples": 1454539,
+   "target_lufs": -20.19,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-30s-underscore.wav",
+   "band_2_6k_db": -14.9,
+   "sub_60_db": -22.7,
+   "centroid_hz": 758,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 30.336,
+    "wav_s": 30.303,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [],
+   "note": "no stems in the cue sheet"
+  },
+  "loops": [],
+  "hits": {
+   "n": 2,
+   "within_tol": 2,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 2,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 236,
+   "lines": 11,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "sub_under_room": {
+   "n": 1,
+   "ok": true,
+   "worst_db": -22.8,
+   "bad": []
+  },
+  "engine": {
+   "balance": {
+    "piano": 0,
+    "orch": 22,
+    "bigband": 0,
+    "chip": 78
+   },
+   "balance_energy": {
+    "piano": 0,
+    "orch": 24,
+    "bigband": 0,
+    "chip": 76
+   },
+   "st": {
+    "p95": -19.1,
+    "median": -20.61,
+    "max": -18.67
+   },
+   "band_2_6k_db": -14.9,
+   "f_major_ok": false,
+   "f_major_worst_sieved": 0.251,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 1,
+    "explained": 3,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [
+    "F-major check (spectral): 1 F-bass window(s) carry A energy that NO written note explains (a resonance, not a written third), first at 17.429 s, worst sieved A/F 0.093: chip ~427.7 Hz, chip ~435.1 Hz, chip ~441.7 Hz; FIXED (same peak under different notes): chip ~429.2 Hz x2; chip ~443.5 Hz x2 -- audition: does it sound major?",
+    "2-6 kHz band -14.9 dB > -15 dB (s6.5: under dialogue)"
+   ],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "arp",
+    "bell",
+    "celesta",
+    "glasspad",
+    "lead2",
+    "subp",
+    "tex",
+    "vc",
+    "vla",
+    "vln1",
+    "vln2"
+   ]
+  },
+  "editor_flags": [
+   "F-major (engine, full note data) worst sieved A/F 0.251, classes {'written': 0, 'resonance': 1, 'explained': 3, 'unattributed': 0}"
+  ],
+  "crosscheck": []
+ },
+ {
+  "id": "mm13-outside-intended-scope-reduced",
+  "mm": "MM-13",
+  "family": "P05 GLYPH",
+  "title": "Outside Intended Scope (reduced)",
+  "cue": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-reduced.cue.json",
+  "album": {
+   "lufs": -16.01,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 0.000101,
+   "st_p95": -15.08,
+   "st_median": -16.13,
+   "st_max": -14.52,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -9.66,
+   "seconds": 85.303,
+   "samples": 4094543,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-reduced-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 85.344,
+    "wav_s": 85.303,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -20.8,
+   "tp_db": -4.87,
+   "peak_db": -4.89,
+   "clipped": 0,
+   "dc": 6.2e-05,
+   "st_p95": -19.78,
+   "st_median": -20.9,
+   "st_max": -19.19,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -14.83,
+   "seconds": 85.303,
+   "samples": 4094543,
+   "target_lufs": -20.8,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-reduced-underscore.wav",
+   "band_2_6k_db": -16.8,
+   "sub_60_db": -21.9,
+   "centroid_hz": 708,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 85.344,
+    "wav_s": 85.303,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [],
+   "note": "no stems in the cue sheet"
+  },
+  "loops": [],
+  "hits": {
+   "n": 5,
+   "within_tol": 5,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 2,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 481,
+   "lines": 6,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "sub_under_room": {
+   "n": 5,
+   "ok": true,
+   "worst_db": -20.0,
+   "bad": []
+  },
+  "engine": {
+   "balance": {
+    "piano": 0,
+    "orch": 20,
+    "bigband": 0,
+    "chip": 80
+   },
+   "balance_energy": {
+    "piano": 0,
+    "orch": 19,
+    "bigband": 0,
+    "chip": 81
+   },
+   "st": {
+    "p95": -19.78,
+    "median": -20.9,
+    "max": -19.19
+   },
+   "band_2_6k_db": -16.8,
+   "f_major_ok": false,
+   "f_major_worst_sieved": 2.69,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 4,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [
+    "F-major check (spectral): 4 F-bass window(s) carry A energy that NO written note explains (a resonance, not a written third), first at 40.566 s, worst sieved A/F 0.157: chip ~427.7 Hz, chip ~428.5 Hz, chip ~430.7 Hz, chip ~431.4 Hz, chip ~435.1 Hz, chip ~440.9 Hz; FIXED (same peak under different notes): chip ~429.6 Hz x4; chip ~440.9 Hz x3; chip ~445.7 Hz x2 -- audition: does it sound major?"
+   ],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "arp",
+    "bell",
+    "celesta",
+    "lead2",
+    "subp",
+    "tex"
+   ]
+  },
+  "editor_flags": [
+   "F-major (engine, full note data) worst sieved A/F 2.69, classes {'written': 0, 'resonance': 4, 'explained': 0, 'unattributed': 0}"
+  ],
+  "crosscheck": []
+ },
+ {
+  "id": "mm13-outside-intended-scope-solo",
+  "mm": "MM-13",
+  "family": "P05 GLYPH",
+  "title": "Outside Intended Scope (solo (chip))",
+  "cue": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-solo.cue.json",
+  "album": {
+   "lufs": -16.02,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 8.2e-05,
+   "st_p95": -14.97,
+   "st_median": -16.06,
+   "st_max": -14.64,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -11.16,
+   "seconds": 85.303,
+   "samples": 4094543,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-solo-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 85.344,
+    "wav_s": 85.303,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -20.8,
+   "tp_db": -5.06,
+   "peak_db": -5.07,
+   "clipped": 0,
+   "dc": 5.1e-05,
+   "st_p95": -19.71,
+   "st_median": -20.8,
+   "st_max": -19.4,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -16.27,
+   "seconds": 85.303,
+   "samples": 4094543,
+   "target_lufs": -20.8,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm13-outside-intended-scope/render/variants/mm13-outside-intended-scope-solo-underscore.wav",
+   "band_2_6k_db": -16.4,
+   "sub_60_db": -44.1,
+   "centroid_hz": 745,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 85.344,
+    "wav_s": 85.303,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [],
+   "note": "no stems in the cue sheet"
+  },
+  "loops": [],
+  "hits": {
+   "n": 5,
+   "within_tol": 5,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 2,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 282,
+   "lines": 1,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "sub_under_room": {
+   "n": 5,
+   "ok": true,
+   "worst_db": -43.0,
+   "bad": []
+  },
+  "engine": {
+   "balance": {
+    "piano": 0,
+    "orch": 0,
+    "bigband": 0,
+    "chip": 100
+   },
+   "balance_energy": {
+    "piano": 0,
+    "orch": 0,
+    "bigband": 0,
+    "chip": 100
+   },
+   "st": {
+    "p95": -19.71,
+    "median": -20.8,
+    "max": -19.4
+   },
+   "band_2_6k_db": -16.4,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.0,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "lead2"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "mm19-renamed-it",
+  "mm": "MM-19",
+  "family": "P13",
+  "title": "Renamed It. / The Fountain Pen",
+  "cue": "tracks/mm19-renamed-it/render/mm19-renamed-it.cue.json",
+  "album": {
+   "lufs": -14.01,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 9.2e-05,
+   "st_p95": -12.27,
+   "st_median": -14.93,
+   "st_max": -11.7,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -11.1,
+   "seconds": 90.0,
+   "samples": 4320000,
+   "target_lufs": -14.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm19-renamed-it/render/mm19-renamed-it-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 90.024,
+    "wav_s": 90.0,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -16.02,
+   "tp_db": -3.15,
+   "peak_db": -3.16,
+   "clipped": 0,
+   "dc": 7.7e-05,
+   "st_p95": -14.32,
+   "st_median": -17.0,
+   "st_max": -13.78,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -13.08,
+   "seconds": 90.0,
+   "samples": 4320000,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm19-renamed-it/render/mm19-renamed-it-underscore.wav",
+   "band_2_6k_db": -13.3,
+   "sub_60_db": -24.7,
+   "centroid_hz": 638,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 90.024,
+    "wav_s": 90.0,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [
+    "brass",
+    "chip",
+    "drums",
+    "perc",
+    "piano",
+    "strings"
+   ],
+   "residual_db_re_master": -120.9,
+   "residual_peak_dbfs": -128.9,
+   "lengths_match": true
+  },
+  "loops": [
+   {
+    "file": "tracks/mm19-renamed-it/render/mm19-renamed-it-loop.wav",
+    "seconds": 20.0,
+    "frames": 480.0,
+    "frame_aligned": true,
+    "wrap_step": 0.01722,
+    "wrap_vs_p99_step": 0.315,
+    "wrap_vs_p999_step": 0.217,
+    "seam_hf_ratio": 4.52,
+    "seam_hf_rank": 90.4,
+    "rms_end_db": -27.3,
+    "rms_begin_db": -14.0,
+    "lufs_2x": -15.0,
+    "tp_db": -3.15,
+    "verdict": "seamless",
+    "tail_s": 2.981,
+    "tail_end_db": -121.6
+   }
+  ],
+  "hits": {
+   "n": 10,
+   "within_tol": 9,
+   "off": [
+    {
+     "t": 35.0,
+     "offset_ms": -10.7,
+     "strength": 2.04
+    }
+   ],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 10,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 845,
+   "lines": 19,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "f_major": {
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "windows": 4,
+   "worst_sieved": 0.163,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 1,
+    "unattributed": 0
+   },
+   "fails": [],
+   "fixed_resonances": []
+  },
+  "engine": {
+   "balance": {
+    "piano": 12,
+    "orch": 50,
+    "bigband": 22,
+    "chip": 16
+   },
+   "balance_energy": {
+    "piano": 13,
+    "orch": 52,
+    "bigband": 22,
+    "chip": 13
+   },
+   "st": {
+    "p95": -14.32,
+    "median": -17.0,
+    "max": -13.78
+   },
+   "band_2_6k_db": -13.3,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.163,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 1,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [
+    "marker at 35.0 s: no clear onset within 10 ms ({'t': 35.0, 'offset_ms': np.float64(-10.7), 'strength': 2.04})"
+   ],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "bdrum",
+    "cb",
+    "glock",
+    "grand",
+    "harp",
+    "hn",
+    "lead",
+    "snare",
+    "snare_dry",
+    "suscym",
+    "svln",
+    "tbn",
+    "tbn_cup",
+    "timp",
+    "tpt",
+    "tri",
+    "tuba",
+    "tuba_dry",
+    "vc",
+    "vla",
+    "vln1",
+    "vln2"
+   ]
+  },
+  "editor_flags": [
+   "hits off: 35.0 s -10.7 ms"
+  ],
+  "crosscheck": []
+ },
+ {
+  "id": "mm19-renamed-it-05s-nedib",
+  "mm": "MM-19",
+  "family": "P13",
+  "title": "Renamed It. / The Fountain Pen (5 s cut-down (NEDIB))",
+  "cue": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-05s-nedib.cue.json",
+  "album": {
+   "lufs": -14.01,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 0.000201,
+   "st_p95": -13.11,
+   "st_median": -13.46,
+   "st_max": -13.02,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -11.9,
+   "seconds": 7.45,
+   "samples": 357600,
+   "target_lufs": -14.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-05s-nedib-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 7.488,
+    "wav_s": 7.45,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -16.02,
+   "tp_db": -3.15,
+   "peak_db": -3.16,
+   "clipped": 0,
+   "dc": 0.00017,
+   "st_p95": -15.1,
+   "st_median": -15.34,
+   "st_max": -15.02,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -13.57,
+   "seconds": 7.45,
+   "samples": 357600,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-05s-nedib-underscore.wav",
+   "band_2_6k_db": -16.7,
+   "sub_60_db": -28.1,
+   "centroid_hz": 398,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 7.488,
+    "wav_s": 7.45,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [],
+   "note": "no stems in the cue sheet"
+  },
+  "loops": [],
+  "hits": {
+   "n": 1,
+   "within_tol": 1,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 0,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 59,
+   "lines": 7,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "engine": {
+   "balance": {
+    "piano": 0,
+    "orch": 82,
+    "bigband": 0,
+    "chip": 18
+   },
+   "balance_energy": {
+    "piano": 0,
+    "orch": 82,
+    "bigband": 0,
+    "chip": 18
+   },
+   "st": {
+    "p95": -15.1,
+    "median": -15.34,
+    "max": -15.02
+   },
+   "band_2_6k_db": -16.7,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.016,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "cb",
+    "harp",
+    "tri",
+    "vc",
+    "vla",
+    "vln1",
+    "vln2"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "mm19-renamed-it-05s",
+  "mm": "MM-19",
+  "family": "P13",
+  "title": "Renamed It. / The Fountain Pen (5 s cut-down (RUMPT))",
+  "cue": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-05s.cue.json",
+  "album": {
+   "lufs": -14.0,
+   "tp_db": -3.21,
+   "peak_db": -3.25,
+   "clipped": 0,
+   "dc": 4e-05,
+   "st_p95": -13.55,
+   "st_median": -14.03,
+   "st_max": -13.55,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -12.9,
+   "seconds": 5.625,
+   "samples": 270000,
+   "target_lufs": -14.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-05s-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 5.664,
+    "wav_s": 5.625,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -16.0,
+   "tp_db": -4.8,
+   "peak_db": -4.85,
+   "clipped": 0,
+   "dc": 3.3e-05,
+   "st_p95": -15.57,
+   "st_median": -16.05,
+   "st_max": -15.57,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -14.71,
+   "seconds": 5.625,
+   "samples": 270000,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-05s-underscore.wav",
+   "band_2_6k_db": -10.5,
+   "sub_60_db": -28.9,
+   "centroid_hz": 754,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 5.664,
+    "wav_s": 5.625,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [],
+   "note": "no stems in the cue sheet"
+  },
+  "loops": [],
+  "silence": {
+   "n": 2,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 25,
+   "lines": 13,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "engine": {
+   "balance": {
+    "piano": 5,
+    "orch": 56,
+    "bigband": 31,
+    "chip": 8
+   },
+   "balance_energy": {
+    "piano": 7,
+    "orch": 57,
+    "bigband": 32,
+    "chip": 4
+   },
+   "st": {
+    "p95": -15.57,
+    "median": -16.05,
+    "max": -15.57
+   },
+   "band_2_6k_db": -10.5,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.0,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "bdrum",
+    "cb",
+    "glock",
+    "grand",
+    "hn",
+    "lead",
+    "svln",
+    "tbn",
+    "tpt",
+    "tuba",
+    "vc",
+    "vla",
+    "vln1",
+    "vln2"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "mm19-renamed-it-15s-nedib",
+  "mm": "MM-19",
+  "family": "P13",
+  "title": "Renamed It. / The Fountain Pen (15 s cut-down (NEDIB))",
+  "cue": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-15s-nedib.cue.json",
+  "album": {
+   "lufs": -14.0,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 0.000199,
+   "st_p95": -13.2,
+   "st_median": -13.54,
+   "st_max": -13.12,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -11.64,
+   "seconds": 16.2,
+   "samples": 777600,
+   "target_lufs": -14.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-15s-nedib-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 16.224,
+    "wav_s": 16.2,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -16.01,
+   "tp_db": -3.15,
+   "peak_db": -3.16,
+   "clipped": 0,
+   "dc": 0.000163,
+   "st_p95": -15.16,
+   "st_median": -15.62,
+   "st_max": -15.08,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -13.48,
+   "seconds": 16.2,
+   "samples": 777600,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-15s-nedib-underscore.wav",
+   "band_2_6k_db": -12.7,
+   "sub_60_db": -20.0,
+   "centroid_hz": 550,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 16.224,
+    "wav_s": 16.2,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [],
+   "note": "no stems in the cue sheet"
+  },
+  "loops": [],
+  "hits": {
+   "n": 2,
+   "within_tol": 2,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 0,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 188,
+   "lines": 9,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "engine": {
+   "balance": {
+    "piano": 3,
+    "orch": 84,
+    "bigband": 0,
+    "chip": 12
+   },
+   "balance_energy": {
+    "piano": 3,
+    "orch": 85,
+    "bigband": 0,
+    "chip": 12
+   },
+   "st": {
+    "p95": -15.16,
+    "median": -15.62,
+    "max": -15.08
+   },
+   "band_2_6k_db": -12.7,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.044,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "cb",
+    "grand",
+    "harp",
+    "svln",
+    "tri",
+    "vc",
+    "vla",
+    "vln1",
+    "vln2"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "mm19-renamed-it-15s",
+  "mm": "MM-19",
+  "family": "P13",
+  "title": "Renamed It. / The Fountain Pen (15 s cut-down (RUMPT))",
+  "cue": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-15s.cue.json",
+  "album": {
+   "lufs": -14.0,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 1.6e-05,
+   "st_p95": -13.04,
+   "st_median": -14.19,
+   "st_max": -12.97,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -12.55,
+   "seconds": 15.625,
+   "samples": 750000,
+   "target_lufs": -14.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-15s-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 15.672,
+    "wav_s": 15.625,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -16.01,
+   "tp_db": -3.15,
+   "peak_db": -3.17,
+   "clipped": 0,
+   "dc": 1.8e-05,
+   "st_p95": -15.12,
+   "st_median": -16.15,
+   "st_max": -15.05,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -14.55,
+   "seconds": 15.625,
+   "samples": 750000,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-15s-underscore.wav",
+   "band_2_6k_db": -12.4,
+   "sub_60_db": -30.8,
+   "centroid_hz": 716,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 15.672,
+    "wav_s": 15.625,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [],
+   "note": "no stems in the cue sheet"
+  },
+  "loops": [],
+  "hits": {
+   "n": 1,
+   "within_tol": 1,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 2,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 210,
+   "lines": 13,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "engine": {
+   "balance": {
+    "piano": 14,
+    "orch": 40,
+    "bigband": 33,
+    "chip": 13
+   },
+   "balance_energy": {
+    "piano": 15,
+    "orch": 44,
+    "bigband": 30,
+    "chip": 11
+   },
+   "st": {
+    "p95": -15.12,
+    "median": -16.15,
+    "max": -15.05
+   },
+   "band_2_6k_db": -12.4,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.0,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "bdrum",
+    "cb",
+    "glock",
+    "grand",
+    "hn",
+    "lead",
+    "snare",
+    "suscym",
+    "svln",
+    "tbn",
+    "tpt",
+    "tuba",
+    "vc",
+    "vla",
+    "vln1",
+    "vln2"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "mm19-renamed-it-30s",
+  "mm": "MM-19",
+  "family": "P13",
+  "title": "Renamed It. / The Fountain Pen (30 s cut-down (RUMPT))",
+  "cue": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-30s.cue.json",
+  "album": {
+   "lufs": -14.0,
+   "tp_db": -1.15,
+   "peak_db": -1.23,
+   "clipped": 0,
+   "dc": 1.8e-05,
+   "st_p95": -12.87,
+   "st_median": -14.03,
+   "st_max": -12.3,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -11.46,
+   "seconds": 30.0,
+   "samples": 1440000,
+   "target_lufs": -14.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-30s-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 30.024,
+    "wav_s": 30.0,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -16.0,
+   "tp_db": -3.2,
+   "peak_db": -3.29,
+   "clipped": 0,
+   "dc": 1.7e-05,
+   "st_p95": -14.89,
+   "st_median": -16.09,
+   "st_max": -14.38,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -13.31,
+   "seconds": 30.0,
+   "samples": 1440000,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-30s-underscore.wav",
+   "band_2_6k_db": -12.9,
+   "sub_60_db": -30.5,
+   "centroid_hz": 720,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 30.024,
+    "wav_s": 30.0,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [],
+   "note": "no stems in the cue sheet"
+  },
+  "loops": [],
+  "hits": {
+   "n": 2,
+   "within_tol": 2,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 4,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 343,
+   "lines": 14,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "engine": {
+   "balance": {
+    "piano": 16,
+    "orch": 34,
+    "bigband": 35,
+    "chip": 15
+   },
+   "balance_energy": {
+    "piano": 16,
+    "orch": 38,
+    "bigband": 35,
+    "chip": 11
+   },
+   "st": {
+    "p95": -14.89,
+    "median": -16.09,
+    "max": -14.38
+   },
+   "band_2_6k_db": -12.9,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.0,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "bdrum",
+    "cb",
+    "glock",
+    "grand",
+    "hn",
+    "lead",
+    "snare",
+    "suscym",
+    "svln",
+    "tbn",
+    "tbn_cup",
+    "tpt",
+    "tuba",
+    "vc",
+    "vla",
+    "vln1",
+    "vln2"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "mm19-renamed-it-reduced",
+  "mm": "MM-19",
+  "family": "P13",
+  "title": "Renamed It. / The Fountain Pen (reduced)",
+  "cue": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-reduced.cue.json",
+  "album": {
+   "lufs": -14.01,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 9.7e-05,
+   "st_p95": -12.31,
+   "st_median": -14.95,
+   "st_max": -11.32,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -10.7,
+   "seconds": 90.0,
+   "samples": 4320000,
+   "target_lufs": -14.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-reduced-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 90.024,
+    "wav_s": 90.0,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -16.02,
+   "tp_db": -3.15,
+   "peak_db": -3.16,
+   "clipped": 0,
+   "dc": 8.1e-05,
+   "st_p95": -14.34,
+   "st_median": -16.89,
+   "st_max": -13.37,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -12.71,
+   "seconds": 90.0,
+   "samples": 4320000,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-reduced-underscore.wav",
+   "band_2_6k_db": -12.7,
+   "sub_60_db": -23.7,
+   "centroid_hz": 657,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 90.024,
+    "wav_s": 90.0,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [],
+   "note": "no stems in the cue sheet"
+  },
+  "loops": [],
+  "hits": {
+   "n": 10,
+   "within_tol": 10,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 10,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 608,
+   "lines": 16,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "engine": {
+   "balance": {
+    "piano": 13,
+    "orch": 51,
+    "bigband": 16,
+    "chip": 20
+   },
+   "balance_energy": {
+    "piano": 14,
+    "orch": 53,
+    "bigband": 16,
+    "chip": 16
+   },
+   "st": {
+    "p95": -14.34,
+    "median": -16.89,
+    "max": -13.37
+   },
+   "band_2_6k_db": -12.7,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.075,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "bdrum",
+    "cb",
+    "glock",
+    "grand",
+    "lead",
+    "snare",
+    "snare_dry",
+    "suscym",
+    "svln",
+    "tbn_cup",
+    "timp",
+    "tpt",
+    "tri",
+    "tuba",
+    "tuba_dry",
+    "vc",
+    "vla",
+    "vln1",
+    "vln2"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "mm19-renamed-it-solo",
+  "mm": "MM-19",
+  "family": "P13",
+  "title": "Renamed It. / The Fountain Pen (solo piano)",
+  "cue": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-solo.cue.json",
+  "album": {
+   "lufs": -14.01,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 2.5e-05,
+   "st_p95": -12.58,
+   "st_median": -15.96,
+   "st_max": -12.16,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -9.72,
+   "seconds": 90.0,
+   "samples": 4320000,
+   "target_lufs": -14.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-solo-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 90.024,
+    "wav_s": 90.0,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -16.01,
+   "tp_db": -3.15,
+   "peak_db": -3.16,
+   "clipped": 0,
+   "dc": 2.3e-05,
+   "st_p95": -14.62,
+   "st_median": -17.52,
+   "st_max": -14.23,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -11.81,
+   "seconds": 90.0,
+   "samples": 4320000,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm19-renamed-it/render/variants/mm19-renamed-it-solo-underscore.wav",
+   "band_2_6k_db": -20.1,
+   "sub_60_db": -24.7,
+   "centroid_hz": 381,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 90.024,
+    "wav_s": 90.0,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [],
+   "note": "no stems in the cue sheet"
+  },
+  "loops": [],
+  "hits": {
+   "n": 10,
+   "within_tol": 10,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 10,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 466,
+   "lines": 3,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "engine": {
+   "balance": {
+    "piano": 90,
+    "orch": 0,
+    "bigband": 0,
+    "chip": 10
+   },
+   "balance_energy": {
+    "piano": 92,
+    "orch": 0,
+    "bigband": 0,
+    "chip": 8
+   },
+   "st": {
+    "p95": -14.62,
+    "median": -17.52,
+    "max": -14.23
+   },
+   "band_2_6k_db": -20.1,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.028,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "grand",
+    "lead",
+    "tri"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ }
+]

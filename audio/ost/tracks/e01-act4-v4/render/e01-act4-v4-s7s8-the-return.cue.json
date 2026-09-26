@@ -1,0 +1,1244 @@
+{
+ "schema": "mrmas-ost-cue/1",
+ "id": "e01-act4-v4-s7s8-the-return",
+ "mm": "MM-11",
+ "family": "STRAIGHT -> the floor -> LEVERAGE (P03) -> the Build -> VICTORY LAP (P09) -> (the vault: TEMP)",
+ "title": "The Return (Ep1 Act Four v4, S7 + S8, to picture)",
+ "version": "v4",
+ "composer": "Ep1 Act Four v4 sound pass (re-laid from batch-1 cues)",
+ "tone": "other people's sounds hand him back his company one by one; one size too big, then undercut; his felt last",
+ "tags": [
+  "to picture",
+  "Ep1",
+  "act four",
+  "v4",
+  "continuous"
+ ],
+ "usage": "BI",
+ "scenes": [
+  "v4.1 S7.01-S8.10, act 4338-6036; file t=0 = act frame 4338"
+ ],
+ "description": "",
+ "motifs": [
+  "the Door on solo violin, senza vibrato, held and decaying",
+  "Tasya's floor as a pad, then the bloom",
+  "LEVERAGE (the fade-in, the bang inside it)",
+  "the stamp's C pedal",
+  "the Build (pickup 4, 16)",
+  "the 1-bit flat line F F F (tenuto)",
+  "the Water Line's settle C4 -> F4 (felt)"
+ ],
+ "key": "Db (the Door) -> Ab/C/E mediants -> F pedal -> C pedal -> Abmaj9 -> F, open fifth",
+ "engine": {
+  "version": "mrmas-ost-engine 1.1 (2026-09-26: fix1 -- meter axis, sample tuning, render pool, QA 5a-d)",
+  "rendered": "2026-09-26T08:09:45",
+  "render_seconds": 57.9
+ },
+ "timing": {
+  "bpm": 96.0,
+  "beat_unit_quarters": 1.0,
+  "tempo_map": [
+   {
+    "bar": 1,
+    "beat": 1.0,
+    "bpm": 96.0,
+    "ramp_in": false,
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "meter_map": [
+   {
+    "bar": 1,
+    "meter": "4/4",
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "swing": 1.0,
+  "swing_unit_quarters": 0.5,
+  "pickup_beats": 0.0,
+  "bars": 32,
+  "length_s": 80.0,
+  "length_frames": 1920.0,
+  "fps": 24,
+  "end": {
+   "sec": 70.75,
+   "frame": 1698.0,
+   "bar": 29,
+   "beat": 2.2
+  },
+  "album_duration_s": 70.8483,
+  "album_duration_frames": 1700.36,
+  "album_loops": 1
+ },
+ "sections": [
+  {
+   "label": "a the STRAIGHT violin (+ its decay)",
+   "start": {
+    "sec": 0.0,
+    "frame": 0.0,
+    "bar": 1,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 6.333333,
+    "frame": 152.0,
+    "bar": 3,
+    "beat": 3.1333
+   }
+  },
+  {
+   "label": "b the floor (pad -> bloom -> home)",
+   "start": {
+    "sec": 6.333333,
+    "frame": 152.0,
+    "bar": 3,
+    "beat": 3.1333
+   },
+   "end": {
+    "sec": 14.416667,
+    "frame": 346.0,
+    "bar": 6,
+    "beat": 4.0667
+   }
+  },
+  {
+   "label": "c1 LEVERAGE (fade-in -> \"Terms?\")",
+   "start": {
+    "sec": 14.416667,
+    "frame": 346.0,
+    "bar": 6,
+    "beat": 4.0667
+   },
+   "end": {
+    "sec": 23.875,
+    "frame": 573.0,
+    "bar": 10,
+    "beat": 3.2
+   }
+  },
+  {
+   "label": "stop 4: the long hold",
+   "start": {
+    "sec": 23.875,
+    "frame": 573.0,
+    "bar": 10,
+    "beat": 3.2
+   },
+   "end": {
+    "sec": 29.166667,
+    "frame": 700.0,
+    "bar": 12,
+    "beat": 3.6667
+   }
+  },
+  {
+   "label": "c2 the C pedal (under the posts)",
+   "start": {
+    "sec": 29.166667,
+    "frame": 700.0,
+    "bar": 12,
+    "beat": 3.6667
+   },
+   "end": {
+    "sec": 40.666667,
+    "frame": 976.0,
+    "bar": 17,
+    "beat": 2.0667
+   }
+  },
+  {
+   "label": "e1 VICTORY LAP",
+   "start": {
+    "sec": 40.666667,
+    "frame": 976.0,
+    "bar": 17,
+    "beat": 2.0667
+   },
+   "end": {
+    "sec": 43.166667,
+    "frame": 1036.0,
+    "bar": 18,
+    "beat": 2.0667
+   }
+  },
+  {
+   "label": "e2 one chip note; F F F",
+   "start": {
+    "sec": 43.166667,
+    "frame": 1036.0,
+    "bar": 18,
+    "beat": 2.0667
+   },
+   "end": {
+    "sec": 46.583333,
+    "frame": 1118.0,
+    "bar": 19,
+    "beat": 3.5333
+   }
+  },
+  {
+   "label": "e3 the quiet (the CU)",
+   "start": {
+    "sec": 46.583333,
+    "frame": 1118.0,
+    "bar": 19,
+    "beat": 3.5333
+   },
+   "end": {
+    "sec": 50.958333,
+    "frame": 1223.0,
+    "bar": 21,
+    "beat": 2.5333
+   }
+  },
+  {
+   "label": "e4 the felt settle -> the vault's F",
+   "start": {
+    "sec": 50.958333,
+    "frame": 1223.0,
+    "bar": 21,
+    "beat": 2.5333
+   },
+   "end": {
+    "sec": 70.75,
+    "frame": 1698.0,
+    "bar": 29,
+    "beat": 2.2
+   }
+  }
+ ],
+ "markers": [
+  {
+   "label": "a: the violin (the Door, STRAIGHT)",
+   "sec": 0.333333,
+   "frame": 8.0,
+   "bar": 1,
+   "beat": 1.5333
+  },
+  {
+   "label": "a: the first heart: the G held, decaying",
+   "sec": 4.291667,
+   "frame": 103.0,
+   "bar": 2,
+   "beat": 3.8667
+  },
+  {
+   "label": "b: the floor pre-laps as a pad (Abmaj9) under the violin's decay",
+   "sec": 6.333333,
+   "frame": 152.0,
+   "bar": 3,
+   "beat": 3.1333
+  },
+  {
+   "label": "b: \"below\" (inside the Abmaj9)",
+   "sec": 9.208333,
+   "frame": 221.0,
+   "bar": 4,
+   "beat": 3.7333
+  },
+  {
+   "label": "b: the bloom (the Rhodes on the beats)",
+   "sec": 11.916667,
+   "frame": 286.0,
+   "bar": 5,
+   "beat": 4.0667
+  },
+  {
+   "label": "b: home (Abmaj9)",
+   "sec": 14.0,
+   "frame": 336.0,
+   "bar": 6,
+   "beat": 3.4
+  },
+  {
+   "label": "c1: LEVERAGE fades in",
+   "sec": 14.416667,
+   "frame": 346.0,
+   "bar": 6,
+   "beat": 4.0667
+  },
+  {
+   "label": "c1: the door bang (inside the cue)",
+   "sec": 16.458333,
+   "frame": 395.0,
+   "bar": 7,
+   "beat": 3.3333
+  },
+  {
+   "label": "STOP 4: \"Terms?\"",
+   "sec": 23.875,
+   "frame": 573.0,
+   "bar": 10,
+   "beat": 3.2
+  },
+  {
+   "label": "c2: the stamp: the low C pedal",
+   "sec": 29.166667,
+   "frame": 700.0,
+   "bar": 12,
+   "beat": 3.6667
+  },
+  {
+   "label": "d: the Build's one rest (the sand)",
+   "sec": 39.5,
+   "frame": 948.0,
+   "bar": 16,
+   "beat": 4.2
+  },
+  {
+   "label": "d: the pickup into the sign (4)",
+   "sec": 40.041667,
+   "frame": 961.0,
+   "bar": 17,
+   "beat": 1.0667
+  },
+  {
+   "label": "e: the sign: the stab + the Build at full",
+   "sec": 40.666667,
+   "frame": 976.0,
+   "bar": 17,
+   "beat": 2.0667
+  },
+  {
+   "label": "e: one chip note",
+   "sec": 43.166667,
+   "frame": 1036.0,
+   "bar": 18,
+   "beat": 2.0667
+  },
+  {
+   "label": "e: F F F (one tenuto phrase)",
+   "sec": 44.875,
+   "frame": 1077.0,
+   "bar": 18,
+   "beat": 4.8
+  },
+  {
+   "label": "e: the bonk (SFX): out",
+   "sec": 46.583333,
+   "frame": 1118.0,
+   "bar": 19,
+   "beat": 3.5333
+  },
+  {
+   "label": "e: after \"okay.\": the felt C4",
+   "sec": 50.958333,
+   "frame": 1223.0,
+   "bar": 21,
+   "beat": 2.5333
+  },
+  {
+   "label": "e: F4 + the open fifth (settling onto the vault's F)",
+   "sec": 51.375,
+   "frame": 1233.0,
+   "bar": 21,
+   "beat": 3.2
+  },
+  {
+   "label": "coda: the vault's F (drone, TEMP for MM-12)",
+   "sec": 51.583333,
+   "frame": 1238.0,
+   "bar": 21,
+   "beat": 3.5333
+  }
+ ],
+ "hit_check": [
+  {
+   "t": 0.3333,
+   "offset_ms": -10.6,
+   "strength": 3.58
+  },
+  {
+   "t": 4.2917,
+   "offset_ms": 4.3,
+   "strength": 1.73
+  },
+  {
+   "t": 6.3333,
+   "offset_ms": -58.6,
+   "strength": 1.95
+  },
+  {
+   "t": 9.2083,
+   "offset_ms": 29.0,
+   "strength": 1.75
+  },
+  {
+   "t": 11.9167,
+   "offset_ms": 0.6,
+   "strength": 1.76
+  },
+  {
+   "t": 14.0,
+   "offset_ms": -5.3,
+   "strength": 1.96
+  },
+  {
+   "t": 14.4167,
+   "offset_ms": 36.6,
+   "strength": 1.97
+  },
+  {
+   "t": 16.4583,
+   "offset_ms": -2.3,
+   "strength": 3.08
+  },
+  {
+   "t": 29.1667,
+   "offset_ms": -9.4,
+   "strength": 1.86
+  },
+  {
+   "t": 39.5,
+   "offset_ms": 4.0,
+   "strength": 2.92
+  },
+  {
+   "t": 40.0417,
+   "offset_ms": -4.4,
+   "strength": 8.6
+  },
+  {
+   "t": 40.6667,
+   "offset_ms": -2.7,
+   "strength": 2.55
+  },
+  {
+   "t": 43.1667,
+   "offset_ms": -4.0,
+   "strength": 6.82
+  },
+  {
+   "t": 44.875,
+   "offset_ms": -3.0,
+   "strength": 10.87
+  },
+  {
+   "t": 46.5833,
+   "offset_ms": -10.0,
+   "strength": 1.87
+  },
+  {
+   "t": 50.9583,
+   "offset_ms": -3.6,
+   "strength": 9.62
+  },
+  {
+   "t": 51.375,
+   "offset_ms": -4.3,
+   "strength": 4.25
+  },
+  {
+   "t": 51.5833,
+   "offset_ms": 59.4,
+   "strength": 1.75
+  }
+ ],
+ "sfx_slots": [
+  {
+   "t": 17.541666666666668,
+   "sfx": "freeze_hit_F (the TERB card)"
+  },
+  {
+   "t": 29.166666666666668,
+   "sfx": "rubber_stamp_C"
+  },
+  {
+   "t": 40.666666666666664,
+   "sfx": "neon_ignite"
+  },
+  {
+   "t": 46.583333333333336,
+   "sfx": "alert_bonk (E3)"
+  },
+  {
+   "t": 51.916666666666664,
+   "sfx": "server_hum: the vault's F (TEMP for MM-12)"
+  }
+ ],
+ "silence_windows": [
+  {
+   "t0": 23.88,
+   "t1": 29.1467,
+   "label": "stop 4: \"Terms?\" -> the stamp (the room plays)",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 23.878,
+   "t1": 29.1637,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  }
+ ],
+ "vo_windows": [],
+ "knee_whole": 0,
+ "f_major": {
+  "limit": 0.08,
+  "windows": 53,
+  "worst": 0.075,
+  "worst_sieved": 0.061,
+  "ok": true,
+  "ok_written": true,
+  "ok_spectral": true,
+  "f_inaudible_windows": 0,
+  "a_classes": {
+   "written": 0,
+   "resonance": 0,
+   "explained": 0,
+   "unattributed": 0
+  },
+  "written_a_over_f_bass": [],
+  "written_third": {
+   "ok": true,
+   "count": 0,
+   "events": [],
+   "grazes": [],
+   "n_grazes": 0,
+   "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+  },
+  "fails": [],
+  "explained": [],
+  "fixed_resonances": [],
+  "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+ },
+ "knee_completion": 0,
+ "room_sfx_windows": [
+  {
+   "t0": 51.917,
+   "t1": 70.848,
+   "sfx": "server_hum (no end marked: checked to the end of the cue)"
+  }
+ ],
+ "qa": {
+  "balance": {
+   "balance": {
+    "piano": 5,
+    "orch": 37,
+    "bigband": 10,
+    "chip": 48
+   },
+   "rhythm_pct_of_all": 3,
+   "chip_share": 48,
+   "balance_energy": {
+    "piano": 3,
+    "orch": 52,
+    "bigband": 3,
+    "chip": 43
+   },
+   "method": "theme stemtable (gated loudness per section, time-weighted, rhythm/fx excluded; it counts a brief stab at its own loudness for the whole section) + balance_energy (ungated energy)",
+   "sections": [
+    {
+     "section": "a the STRAIGHT violin (+ its decay)",
+     "share": {
+      "piano": 0,
+      "orch": 100,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "b the floor (pad -> bloom -> home)",
+     "share": {
+      "piano": 3,
+      "orch": 97,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "c1 LEVERAGE (fade-in -> \"Terms?\")",
+     "share": {
+      "piano": 4,
+      "orch": 96,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "stop 4: the long hold",
+     "share": {
+      "piano": 0,
+      "orch": 100,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "c2 the C pedal (under the posts)",
+     "share": {
+      "piano": 0,
+      "orch": 54,
+      "bigband": 0,
+      "chip": 46
+     }
+    },
+    {
+     "section": "e1 VICTORY LAP",
+     "share": {
+      "piano": 0,
+      "orch": 14,
+      "bigband": 68,
+      "chip": 18
+     }
+    },
+    {
+     "section": "e2 one chip note; F F F",
+     "share": {
+      "piano": 0,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 100
+     }
+    },
+    {
+     "section": "e3 the quiet (the CU)",
+     "share": {
+      "piano": 0,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 100
+     }
+    },
+    {
+     "section": "e4 the felt settle -> the vault's F",
+     "share": {
+      "piano": 100,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 0
+     }
+    }
+   ]
+  },
+  "short_term_underscore": {
+   "p95": -16.01,
+   "median": -21.2,
+   "max": -14.58
+  },
+  "band_2_6k_db": -22.7,
+  "centroid_hz": 297.0,
+  "f_major": {
+   "limit": 0.08,
+   "windows": 53,
+   "worst": 0.075,
+   "worst_sieved": 0.061,
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "f_inaudible_windows": 0,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_a_over_f_bass": [],
+   "written_third": {
+    "ok": true,
+    "count": 0,
+    "events": [],
+    "grazes": [],
+    "n_grazes": 0,
+    "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+   },
+   "fails": [],
+   "explained": [],
+   "fixed_resonances": [],
+   "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+  },
+  "knee_completion": {
+   "count": 0,
+   "hits": [],
+   "max_gap_s": 2.5,
+   "rule": "OST-BIBLE rule 4: the knee never plays whole in an episode, in any register, across a phrase boundary too"
+  },
+  "sub_under_room": [
+   {
+    "t0": 51.917,
+    "t1": 70.848,
+    "sfx": "server_hum (no end marked: checked to the end of the cue)",
+    "sub_db": -44.4,
+    "limit_db": -18.0,
+    "sub_from": {
+     "synth": 95
+    },
+    "ok": true,
+    "notes_below_c3": [
+     "drone F2"
+    ]
+   }
+  ],
+  "no_third": [
+   {
+    "t0": 51.425,
+    "t1": 53.375,
+    "a": 0.01,
+    "ab": 0.001,
+    "ok": true
+   }
+  ],
+  "silence": [
+   {
+    "t0": 23.88,
+    "t1": 29.1467,
+    "label": "stop 4: \"Terms?\" -> the stamp (the room plays)",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 23.878,
+    "t1": 29.1637,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   }
+  ],
+  "hard_stops": [
+   {
+    "t0": 23.878,
+    "t1": 29.1637,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   }
+  ],
+  "vo_windows": [],
+  "knee_whole": 0,
+  "motifs_found": {
+   "DOOR": [
+    {
+     "inst": "svln_nv",
+     "t": 0.3333,
+     "transpose": -12
+    }
+   ],
+   "BUILD": [
+    {
+     "inst": "lead",
+     "t": 40.6667,
+     "transpose": 0
+    },
+    {
+     "inst": "xylo",
+     "t": 40.6667,
+     "transpose": 0
+    }
+   ]
+  },
+  "swing": {
+   "svln_nv": {
+    "offbeats": 4,
+    "median_frames": 8.0,
+    "hum_ms": 4
+   },
+   "rhodes": {
+    "offbeats": 3,
+    "median_frames": 6.19,
+    "hum_ms": 4
+   },
+   "vla": {
+    "offbeats": 6,
+    "median_frames": 8.5,
+    "hum_ms": 8
+   },
+   "vc_lev": {
+    "offbeats": 9,
+    "median_frames": 8.5,
+    "hum_ms": 8
+   },
+   "noise": {
+    "offbeats": 4,
+    "median_frames": 8.5,
+    "hum_ms": 0
+   },
+   "k808": {
+    "offbeats": 2,
+    "median_frames": 8.5,
+    "hum_ms": 0
+   },
+   "bdrum_muted": {
+    "offbeats": 2,
+    "median_frames": 8.5,
+    "hum_ms": 2
+   },
+   "grand": {
+    "offbeats": 3,
+    "median_frames": 8.5,
+    "hum_ms": 3
+   },
+   "cb": {
+    "offbeats": 1,
+    "median_frames": 10.0,
+    "hum_ms": 8
+   },
+   "vc": {
+    "offbeats": 1,
+    "median_frames": 10.0,
+    "hum_ms": 8
+   },
+   "lead": {
+    "offbeats": 5,
+    "median_frames": 8.5,
+    "hum_ms": 0
+   },
+   "xylo": {
+    "offbeats": 5,
+    "median_frames": 8.5,
+    "hum_ms": 3
+   },
+   "vln1": {
+    "offbeats": 5,
+    "median_frames": 8.5,
+    "hum_ms": 8
+   },
+   "tri": {
+    "offbeats": 1,
+    "median_frames": 8.0,
+    "hum_ms": 0
+   },
+   "beeper": {
+    "offbeats": 3,
+    "median_frames": 7.0,
+    "hum_ms": 0
+   },
+   "felt": {
+    "offbeats": 1,
+    "median_frames": 8.0,
+    "hum_ms": 3
+   },
+   "felt_mech": {
+    "offbeats": 1,
+    "median_frames": 8.0,
+    "hum_ms": 3
+   },
+   "drone": {
+    "offbeats": 1,
+    "median_frames": 7.8,
+    "hum_ms": 0
+   }
+  },
+  "banned": []
+ },
+ "loop": null,
+ "files": {
+  "album_wav": "render/e01-act4-v4-s7s8-the-return-album.wav",
+  "album_mp3": "render/e01-act4-v4-s7s8-the-return-album.mp3",
+  "underscore_wav": "render/e01-act4-v4-s7s8-the-return-underscore.wav",
+  "underscore_mp3": "render/e01-act4-v4-s7s8-the-return-underscore.mp3",
+  "stems": {
+   "piano": "render/stems/e01-act4-v4-s7s8-the-return-piano.flac",
+   "strings": "render/stems/e01-act4-v4-s7s8-the-return-strings.flac",
+   "brass": "render/stems/e01-act4-v4-s7s8-the-return-brass.flac",
+   "bass": "render/stems/e01-act4-v4-s7s8-the-return-bass.flac",
+   "drums": "render/stems/e01-act4-v4-s7s8-the-return-drums.flac",
+   "perc": "render/stems/e01-act4-v4-s7s8-the-return-perc.flac",
+   "chip": "render/stems/e01-act4-v4-s7s8-the-return-chip.flac",
+   "synth": "render/stems/e01-act4-v4-s7s8-the-return-synth.flac"
+  },
+  "midi": "render/e01-act4-v4-s7s8-the-return.mid",
+  "pianoroll": "render/e01-act4-v4-s7s8-the-return-pianoroll.png"
+ },
+ "masters": {
+  "album": {
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "comp": {
+    "thresh_db": -20,
+    "ratio": 1.8
+   },
+   "dialog_pocket": null,
+   "measured": {
+    "lufs": -16.0,
+    "lra": 14.54,
+    "true_peak_db": -1.15,
+    "peak_db": -1.16,
+    "rms_db": -18.69,
+    "crest_db": 17.54,
+    "seconds": 70.8483
+   }
+  },
+  "underscore": {
+   "target_lufs": -20.0,
+   "ceiling_dbtp": -3.0,
+   "comp": {
+    "thresh_db": -28,
+    "ratio": 1.3,
+    "att_ms": 40.0,
+    "rel_ms": 350.0
+   },
+   "dialog_pocket": {
+    "f": 2500.0,
+    "db": -2.0,
+    "q": 0.7
+   },
+   "measured": {
+    "lufs": -20.05,
+    "lra": 13.14,
+    "true_peak_db": -3.15,
+    "peak_db": -3.16,
+    "rms_db": -22.67,
+    "crest_db": 19.52,
+    "seconds": 70.8483
+   }
+  }
+ },
+ "stems": {
+  "sum_vs_underscore_residual_db": -169.3,
+  "families_present": [
+   "bass",
+   "brass",
+   "chip",
+   "drums",
+   "perc",
+   "piano",
+   "strings",
+   "synth"
+  ],
+  "family_share_lu": {
+   "piano": -10.9,
+   "strings": -0.2,
+   "brass": -1.2,
+   "bass": -13.2,
+   "drums": -7.5,
+   "perc": -10.8,
+   "chip": 3.3,
+   "synth": -9.1
+  }
+ },
+ "spectrum": {
+  "sub": -13.1,
+  "bass": -2.0,
+  "lowmid": -5.4,
+  "mid": -15.6,
+  "presence": -28.0,
+  "air": -37.6,
+  "centroid_hz": 297.0
+ },
+ "bar_levels": [
+  {
+   "bar": 1,
+   "rms_db": -26.0,
+   "peak_db": -14.399999618530273
+  },
+  {
+   "bar": 2,
+   "rms_db": -25.7,
+   "peak_db": -13.199999809265137
+  },
+  {
+   "bar": 3,
+   "rms_db": -25.5,
+   "peak_db": -12.5
+  },
+  {
+   "bar": 4,
+   "rms_db": -19.4,
+   "peak_db": -5.900000095367432
+  },
+  {
+   "bar": 5,
+   "rms_db": -21.2,
+   "peak_db": -6.800000190734863
+  },
+  {
+   "bar": 6,
+   "rms_db": -20.9,
+   "peak_db": -7.599999904632568
+  },
+  {
+   "bar": 7,
+   "rms_db": -19.7,
+   "peak_db": -6.800000190734863
+  },
+  {
+   "bar": 8,
+   "rms_db": -20.7,
+   "peak_db": -8.199999809265137
+  },
+  {
+   "bar": 9,
+   "rms_db": -20.0,
+   "peak_db": -6.199999809265137
+  },
+  {
+   "bar": 10,
+   "rms_db": -21.8,
+   "peak_db": -6.300000190734863
+  },
+  {
+   "bar": 11,
+   "rms_db": -240.0,
+   "peak_db": -240.0
+  },
+  {
+   "bar": 12,
+   "rms_db": -31.8,
+   "peak_db": -12.300000190734863
+  },
+  {
+   "bar": 13,
+   "rms_db": -23.5,
+   "peak_db": -11.399999618530273
+  },
+  {
+   "bar": 14,
+   "rms_db": -22.9,
+   "peak_db": -11.0
+  },
+  {
+   "bar": 15,
+   "rms_db": -22.9,
+   "peak_db": -10.199999809265137
+  },
+  {
+   "bar": 16,
+   "rms_db": -23.1,
+   "peak_db": -10.600000381469727
+  },
+  {
+   "bar": 17,
+   "rms_db": -19.6,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 18,
+   "rms_db": -18.4,
+   "peak_db": -9.600000381469727
+  },
+  {
+   "bar": 19,
+   "rms_db": -16.6,
+   "peak_db": -10.0
+  },
+  {
+   "bar": 20,
+   "rms_db": -22.5,
+   "peak_db": -11.899999618530273
+  },
+  {
+   "bar": 21,
+   "rms_db": -26.4,
+   "peak_db": -8.699999809265137
+  },
+  {
+   "bar": 22,
+   "rms_db": -31.9,
+   "peak_db": -22.200000762939453
+  },
+  {
+   "bar": 23,
+   "rms_db": -30.1,
+   "peak_db": -22.100000381469727
+  },
+  {
+   "bar": 24,
+   "rms_db": -30.3,
+   "peak_db": -22.700000762939453
+  },
+  {
+   "bar": 25,
+   "rms_db": -29.8,
+   "peak_db": -22.0
+  },
+  {
+   "bar": 26,
+   "rms_db": -30.1,
+   "peak_db": -22.799999237060547
+  },
+  {
+   "bar": 27,
+   "rms_db": -30.4,
+   "peak_db": -22.299999237060547
+  },
+  {
+   "bar": 28,
+   "rms_db": -30.1,
+   "peak_db": -21.799999237060547
+  },
+  {
+   "bar": 29,
+   "rms_db": -48.0,
+   "peak_db": -31.799999237060547
+  }
+ ],
+ "instrumentation": {
+  "bdrum_muted": {
+   "family": "perc",
+   "notes": 5,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "beeper": {
+   "family": "chip",
+   "notes": 3,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "cb": {
+   "family": "strings",
+   "notes": 9,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "cb_pizz": {
+   "family": "bass",
+   "notes": 2,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "celesta": {
+   "family": "perc",
+   "notes": 2,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "drone": {
+   "family": "synth",
+   "notes": 1,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "felt": {
+   "family": "piano",
+   "notes": 4,
+   "source": "sf2",
+   "credit": "Upright Piano KW by FreePats (CC0 1.0)"
+  },
+  "felt_mech": {
+   "family": "piano",
+   "notes": 2,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "grand": {
+   "family": "piano",
+   "notes": 12,
+   "source": "sf2",
+   "credit": "Salamander Grand Piano by Alexander Holm (CC BY 3.0) -- ATTRIBUTION REQUIRED"
+  },
+  "k808": {
+   "family": "drums",
+   "notes": 5,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "lead": {
+   "family": "chip",
+   "notes": 21,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "lead2": {
+   "family": "chip",
+   "notes": 1,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "noise": {
+   "family": "chip",
+   "notes": 6,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "rhodes": {
+   "family": "piano",
+   "notes": 20,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "svln_nv": {
+   "family": "strings",
+   "notes": 4,
+   "source": "fn",
+   "credit": "Orchestral samples: VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "tbn": {
+   "family": "brass",
+   "notes": 2,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "timp": {
+   "family": "perc",
+   "notes": 1,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "tpt": {
+   "family": "brass",
+   "notes": 2,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "tri": {
+   "family": "chip",
+   "notes": 1,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "vc": {
+   "family": "strings",
+   "notes": 12,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vc_lev": {
+   "family": "strings",
+   "notes": 16,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vla": {
+   "family": "strings",
+   "notes": 21,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vln1": {
+   "family": "strings",
+   "notes": 12,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "woodclick": {
+   "family": "perc",
+   "notes": 5,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "xylo": {
+   "family": "perc",
+   "notes": 20,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  }
+ },
+ "credits": [
+  "GeneralUser GS by S. Christian Collins",
+  "Orchestral samples: VSCO 2 CE by Versilian Studios (CC0 1.0)",
+  "Salamander Grand Piano by Alexander Holm (CC BY 3.0) -- ATTRIBUTION REQUIRED",
+  "Upright Piano KW by FreePats (CC0 1.0)",
+  "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+ ],
+ "audition": [
+  "0.3-9.2 s: the violin, plain; on the first heart (4.3 s) it holds and decays under the hearts -- sincere, not \"world's smallest violin\"",
+  "6.3-14.0 s: the pad pre-laps under the decay, a chord on each of the three words, then the bloom: does the decay-into-pad-into-LEVERAGE play as one run?",
+  "14.4-23.9 s: LEVERAGE fades in under Mada and the bang lands inside it; STOP 4 at 23.9 s",
+  "29.2-39.5 s: the C pedal holds under both posts; it rests on the sand at 39.5 s",
+  "40.7-46.6 s: the stab, one chip note, F F F as one tenuto phrase; then the quiet",
+  "51.0 s to the end: the felt settle onto the vault's F (a TEMP drone): a pedal, not a new cue"
+ ],
+ "warnings": [
+  "marker at 0.3333 s: no clear onset within 10 ms ({'t': 0.3333, 'offset_ms': np.float64(-10.6), 'strength': 3.58})",
+  "marker at 6.3333 s: no clear onset within 10 ms ({'t': 6.3333, 'offset_ms': np.float64(-58.6), 'strength': 1.95})",
+  "marker at 9.2083 s: no clear onset within 10 ms ({'t': 9.2083, 'offset_ms': np.float64(29.0), 'strength': 1.75})",
+  "marker at 14.4167 s: no clear onset within 10 ms ({'t': 14.4167, 'offset_ms': np.float64(36.6), 'strength': 1.97})",
+  "marker at 51.5833 s: no clear onset within 10 ms ({'t': 51.5833, 'offset_ms': np.float64(59.4), 'strength': 1.75})",
+  "underscore short-term p95 -16.01 LUFS > -17 (underscore) (s6.5): the loudest moments sit high above the bed"
+ ]
+}

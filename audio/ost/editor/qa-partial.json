@@ -1,0 +1,308 @@
+[
+ {
+  "id": "mm11-the-return-album-edit",
+  "mm": "MM-11",
+  "family": "STRAIGHT -> the floor (s2.16) -> LEVERAGE (P03) -> the Build -> VICTORY LAP (P09)",
+  "title": "The Return (album edit)",
+  "cue": "tracks/mm11-the-return/render/mm11-the-return-album-edit.cue.json",
+  "album": {
+   "lufs": -16.0,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 3.2e-05,
+   "st_p95": -13.3,
+   "st_median": -16.65,
+   "st_max": -12.28,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -9.72,
+   "seconds": 92.947,
+   "samples": 4461454,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm11-the-return/render/mm11-the-return-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 92.976,
+    "wav_s": 92.947,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "missing": true
+  },
+  "loops": [],
+  "hits": {
+   "n": 9,
+   "within_tol": 9,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 8,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 422,
+   "lines": 18,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "engine": {
+   "balance": {
+    "piano": 3,
+    "orch": 66,
+    "bigband": 14,
+    "chip": 17
+   },
+   "balance_energy": {
+    "piano": 3,
+    "orch": 77,
+    "bigband": 2,
+    "chip": 18
+   },
+   "st": {
+    "p95": -17.8,
+    "median": -20.39,
+    "max": -17.0
+   },
+   "band_2_6k_db": -20.8,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.085,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 1,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "bdrum_muted",
+    "beeper",
+    "cb",
+    "cb_pizz",
+    "celesta",
+    "felt",
+    "felt_mech",
+    "grand",
+    "k808",
+    "lead",
+    "lead2",
+    "noise",
+    "rhodes",
+    "svln_nv",
+    "tbn",
+    "timp",
+    "tpt",
+    "vc",
+    "vc_lev",
+    "vla",
+    "vln1",
+    "woodclick",
+    "xylo"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": []
+ },
+ {
+  "id": "mm11-the-return",
+  "mm": "MM-11",
+  "family": "STRAIGHT -> the floor (s2.16) -> LEVERAGE (P03) -> the Build -> VICTORY LAP (P09)",
+  "title": "The Return",
+  "cue": "tracks/mm11-the-return/render/mm11-the-return.cue.json",
+  "album_is_album_edit": "album edit (mm11-the-return-album-edit.cue.json)",
+  "album": {
+   "lufs": -16.0,
+   "tp_db": -1.15,
+   "peak_db": -1.16,
+   "clipped": 0,
+   "dc": 3.2e-05,
+   "st_p95": -13.3,
+   "st_median": -16.65,
+   "st_max": -12.28,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -9.72,
+   "seconds": 92.947,
+   "samples": 4461454,
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "file": "tracks/mm11-the-return/render/mm11-the-return-album.wav",
+   "mp3": {
+    "ok": true,
+    "mp3_s": 92.976,
+    "wav_s": 92.947,
+    "newer_than_wav": true
+   }
+  },
+  "underscore": {
+   "lufs": -20.0,
+   "tp_db": -3.15,
+   "peak_db": -3.16,
+   "clipped": 0,
+   "dc": 2.4e-05,
+   "st_p95": -18.54,
+   "st_median": -22.02,
+   "st_max": -17.1,
+   "st_meter_delta_lu": 0.0,
+   "mom_max": -13.38,
+   "seconds": 82.375,
+   "samples": 3954000,
+   "target_lufs": -20.0,
+   "ceiling_dbtp": -3.0,
+   "file": "tracks/mm11-the-return/render/mm11-the-return-underscore.wav",
+   "band_2_6k_db": -20.0,
+   "sub_60_db": -9.6,
+   "centroid_hz": 360,
+   "mp3": {
+    "ok": true,
+    "mp3_s": 82.416,
+    "wav_s": 82.375,
+    "newer_than_wav": true
+   }
+  },
+  "stems": {
+   "families": [
+    "bass",
+    "brass",
+    "chip",
+    "drums",
+    "perc",
+    "piano",
+    "strings"
+   ],
+   "residual_db_re_master": -118.7,
+   "residual_peak_dbfs": -128.9,
+   "lengths_match": true
+  },
+  "loops": [],
+  "hits": {
+   "n": 9,
+   "within_tol": 9,
+   "off": [],
+   "tol_ms": 10.0
+  },
+  "silence": {
+   "n": 17,
+   "ok": true,
+   "bad": []
+  },
+  "midi": {
+   "notes": 210,
+   "lines": 18,
+   "knee_whole": [],
+   "knee_completion": 0,
+   "knee_completion_hits": [],
+   "written_third": 0,
+   "written_third_events": [],
+   "written_third_grazes": 0,
+   "fresh": true
+  },
+  "f_major": {
+   "ok": false,
+   "ok_written": true,
+   "ok_spectral": false,
+   "windows": 22,
+   "worst_sieved": 0.146,
+   "a_classes": {
+    "written": 0,
+    "resonance": 1,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "fails": [
+    {
+     "t0": 44.375,
+     "t1": 44.725,
+     "a_f": 0.146,
+     "cls": "resonance",
+     "a_from": {
+      "strings": 100,
+      "piano": 0,
+      "perc": 0
+     },
+     "peaks": [
+      "strings 435.1 Hz partial",
+      "strings 111.3 Hz resonance",
+      "strings 213.9 Hz resonance"
+     ]
+    }
+   ],
+   "fixed_resonances": []
+  },
+  "engine": {
+   "balance": {
+    "piano": 3,
+    "orch": 68,
+    "bigband": 10,
+    "chip": 19
+   },
+   "balance_energy": {
+    "piano": 5,
+    "orch": 71,
+    "bigband": 5,
+    "chip": 18
+   },
+   "st": {
+    "p95": -18.54,
+    "median": -22.02,
+    "max": -17.1
+   },
+   "band_2_6k_db": -20.0,
+   "f_major_ok": true,
+   "f_major_worst_sieved": 0.045,
+   "f_major_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_third": 0,
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "warnings": [],
+   "banned": [],
+   "editor": null,
+   "instruments": [
+    "bdrum_muted",
+    "beeper",
+    "cb",
+    "cb_pizz",
+    "celesta",
+    "felt",
+    "felt_mech",
+    "grand",
+    "k808",
+    "lead",
+    "lead2",
+    "noise",
+    "rhodes",
+    "svln_nv",
+    "tbn",
+    "timp",
+    "tpt",
+    "vc",
+    "vc_lev",
+    "vla",
+    "vln1",
+    "woodclick",
+    "xylo"
+   ]
+  },
+  "editor_flags": [],
+  "crosscheck": [
+   "file re-run: 44.375-44.725 s A/F 0.146 resonance ['strings 435.1 Hz partial', 'strings 111.3 Hz resonance', 'strings 213.9 Hz resonance']"
+  ]
+ }
+]

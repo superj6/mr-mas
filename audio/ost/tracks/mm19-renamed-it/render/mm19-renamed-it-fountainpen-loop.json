@@ -1,0 +1,51 @@
+{
+ "id": "mm19-renamed-it-fountainpen",
+ "loop": {
+  "start": {
+   "sec": 0.0,
+   "frame": 0.0,
+   "bar": 1,
+   "beat": 1.0
+  },
+  "end": {
+   "sec": 20.0,
+   "frame": 480.0,
+   "bar": 9,
+   "beat": 1.0
+  },
+  "samples": 960000,
+  "seconds": 20.0,
+  "frames": 480.0,
+  "frame_aligned": true,
+  "notes": 194,
+  "tail_seconds": 3.392,
+  "seam": {
+   "seam_hf_ratio_to_median": 0.74,
+   "seam_hf_percentile": 44.28,
+   "wrap_jump": 0.001,
+   "wrap_jump_vs_p99_step": 0.015,
+   "rms_last_50ms_db": -33.9,
+   "rms_first_50ms_db": -18.5,
+   "verdict": "seamless"
+  },
+  "loudness": {
+   "lufs": -15.37,
+   "lra": 13.46,
+   "true_peak_db": -3.15,
+   "peak_db": -3.16,
+   "rms_db": -18.84,
+   "crest_db": 15.69,
+   "seconds": 40.0
+  }
+ },
+ "underscore_master": {
+  "lufs": -16.02,
+  "lra": 10.8,
+  "true_peak_db": -3.15,
+  "peak_db": -3.16,
+  "rms_db": -19.7,
+  "crest_db": 16.54,
+  "seconds": 90.0
+ },
+ "note": "loop A = bars 1-8 (the Fountain Pen) at the suite's underscore make-up; loop B (LOVE, bars 19-26) is mm19-renamed-it-loop.wav"
+}

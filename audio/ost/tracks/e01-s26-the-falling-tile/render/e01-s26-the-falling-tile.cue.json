@@ -1,0 +1,1143 @@
+{
+ "schema": "mrmas-ost-cue/1",
+ "id": "e01-s26-the-falling-tile",
+ "mm": "MM-08",
+ "family": "P03 LEVERAGE -> D6 -> P01 DARK ROOM",
+ "title": "The Falling Tile (E01-S26 + S26A, to picture)",
+ "version": "1.1 (fix 1, 2026-09-26)",
+ "composer": "Composer B (OST batch 1; fix 1: composer A)",
+ "tone": "a trap closing without a tune, a click that takes every sound away, then one felt piano in the dark -- and the Orb rewinding his settle",
+ "tags": [
+  "leverage",
+  "d6",
+  "drop-out",
+  "dark room",
+  "rewind",
+  "ep01",
+  "act four",
+  "the call"
+ ],
+ "usage": "BI",
+ "scenes": [
+  "Ep1 sc 26 THE FALLING TILE, 13:21.0-14:13.5 (bars 1-21: music bars 1-7, D6 from 8.1)",
+  "Ep1 sc 26A dark room, 14:13.5-14:33.5 (bars 22-29), the Rewind into sc 27 at bar 30.1",
+  "script clocks are printed rounded (14:14, 14:34); conform to the slate animatic by whole bars"
+ ],
+ "description": "Fix 1 (2026-09-26): LEVERAGE balance -- the low grand clusters +9 dB and a touch firmer in b5-6, and the grand doubles Step Four's bass in b7; the cello and contrabass pizz notched at ~111 Hz (a sample body resonance read as A2 under the F pedal); room_sfx windows over 26A; re-rendered on the fixed engine.",
+ "motifs": [
+  "Step Four (muted horns + bassoon, bar 7; the click is the blank step four)",
+  "the 1-bit flat line, F F F (beeper, bar 5)",
+  "Neleh's clockwork pizzicato (bar 2)",
+  "Mada's spinner (celesta, bars 6-7)",
+  "the Water Line's open fifth, nudge and settle (felt, 26A)",
+  "THE REWIND (16-bit sample-chip retrograde)"
+ ],
+ "key": "F pedal with semitone-shifting clusters; Step Four (Bbm - Ab - Gbmaj7) over F; 26A F open fifth, no third",
+ "engine": {
+  "version": "mrmas-ost-engine 1.1 (2026-09-26: fix1 -- meter axis, sample tuning, render pool, QA 5a-d)",
+  "rendered": "2026-09-26T01:45:51",
+  "render_seconds": 220.1
+ },
+ "timing": {
+  "bpm": 96.0,
+  "beat_unit_quarters": 1.0,
+  "tempo_map": [
+   {
+    "bar": 1,
+    "beat": 1.0,
+    "bpm": 96.0,
+    "ramp_in": false,
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "meter_map": [
+   {
+    "bar": 1,
+    "meter": "4/4",
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "swing": 1.0,
+  "swing_unit_quarters": 0.5,
+  "pickup_beats": 0.0,
+  "bars": 29,
+  "length_s": 72.5,
+  "length_frames": 1740.0,
+  "fps": 24,
+  "end": {
+   "sec": 72.5,
+   "frame": 1740.0,
+   "bar": 30,
+   "beat": 1.0
+  },
+  "album_duration_s": 72.8029,
+  "album_duration_frames": 1747.27,
+  "album_loops": 1
+ },
+ "sections": [
+  {
+   "label": "26 P1 call connects (LEVERAGE low)",
+   "start": {
+    "sec": 0.0,
+    "frame": 0.0,
+    "bar": 1,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 10.0,
+    "frame": 240.0,
+    "bar": 5,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "26 P2 dialog, eyes, arrow (LEVERAGE)",
+   "start": {
+    "sec": 10.0,
+    "frame": 240.0,
+    "bar": 5,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 17.5,
+    "frame": 420.0,
+    "bar": 8,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "D6: silence",
+   "start": {
+    "sec": 17.5,
+    "frame": 420.0,
+    "bar": 8,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 52.5,
+    "frame": 1260.0,
+    "bar": 22,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "26A carve + V.O. 1",
+   "start": {
+    "sec": 52.5,
+    "frame": 1260.0,
+    "bar": 22,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 60.0,
+    "frame": 1440.0,
+    "bar": 25,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "26A his post (DRY)",
+   "start": {
+    "sec": 60.0,
+    "frame": 1440.0,
+    "bar": 25,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 65.0,
+    "frame": 1560.0,
+    "bar": 27,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "26A wallet, V.O. 2, the Rewind",
+   "start": {
+    "sec": 65.0,
+    "frame": 1560.0,
+    "bar": 27,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 72.5,
+    "frame": 1740.0,
+    "bar": 30,
+    "beat": 1.0
+   }
+  }
+ ],
+ "markers": [
+  {
+   "label": "b1.1 grid connects",
+   "sec": 0.0,
+   "frame": 0.0,
+   "bar": 1,
+   "beat": 1.0
+  },
+  {
+   "label": "b2.2 Neleh clockwork (after the 1-beat dip)",
+   "sec": 3.125,
+   "frame": 75.0,
+   "bar": 2,
+   "beat": 2.0
+  },
+  {
+   "label": "b3.1 his calm (felt F4)",
+   "sec": 5.0,
+   "frame": 120.0,
+   "bar": 3,
+   "beat": 1.0
+  },
+  {
+   "label": "b5.1 the 1993 dialog (1-bit F)",
+   "sec": 10.0,
+   "frame": 240.0,
+   "bar": 5,
+   "beat": 1.0
+  },
+  {
+   "label": "b6.1 eyes strip (cluster up a semitone)",
+   "sec": 12.5,
+   "frame": 300.0,
+   "bar": 6,
+   "beat": 1.0
+  },
+  {
+   "label": "b7.1 arrow step 1 (Bbm)",
+   "sec": 15.0,
+   "frame": 360.0,
+   "bar": 7,
+   "beat": 1.0
+  },
+  {
+   "label": "b7.2 arrow step 2 (Ab)",
+   "sec": 15.625,
+   "frame": 375.0,
+   "bar": 7,
+   "beat": 2.0
+  },
+  {
+   "label": "b7.3 arrow step 3 (Gbmaj7)",
+   "sec": 16.25,
+   "frame": 390.0,
+   "bar": 7,
+   "beat": 3.0
+  },
+  {
+   "label": "b8.1 THE CLICK = HARD STOP (D6)",
+   "sec": 17.5,
+   "frame": 420.0,
+   "bar": 8,
+   "beat": 1.0
+  },
+  {
+   "label": "b22.1 26A the carve (felt open fifth)",
+   "sec": 52.5,
+   "frame": 1260.0,
+   "bar": 22,
+   "beat": 1.0
+  },
+  {
+   "label": "b27.1 the wallet (felt C4)",
+   "sec": 65.0,
+   "frame": 1560.0,
+   "bar": 27,
+   "beat": 1.0
+  },
+  {
+   "label": "b29.2 the settle (F4)",
+   "sec": 70.625,
+   "frame": 1695.0,
+   "bar": 29,
+   "beat": 2.0
+  },
+  {
+   "label": "b29.3 rewinding... (THE REWIND)",
+   "sec": 71.25,
+   "frame": 1710.0,
+   "bar": 29,
+   "beat": 3.0
+  },
+  {
+   "label": "b30.1 EXIT = sc 27 downbeat (hard cut)",
+   "sec": 72.5,
+   "frame": 1740.0,
+   "bar": 30,
+   "beat": 1.0
+  }
+ ],
+ "hit_check": [
+  {
+   "t": 0.0,
+   "offset_ms": 2.7,
+   "strength": 5.56
+  },
+  {
+   "t": 3.125,
+   "offset_ms": 0.3,
+   "strength": 2.56
+  },
+  {
+   "t": 5.0,
+   "offset_ms": -2.7,
+   "strength": 8.64
+  },
+  {
+   "t": 10.0,
+   "offset_ms": -2.7,
+   "strength": 5.93
+  },
+  {
+   "t": 12.5,
+   "offset_ms": -4.0,
+   "strength": 2.65
+  },
+  {
+   "t": 15.0,
+   "offset_ms": -5.3,
+   "strength": 2.71
+  },
+  {
+   "t": 15.625,
+   "offset_ms": -1.0,
+   "strength": 1.48
+  },
+  {
+   "t": 16.25,
+   "offset_ms": -4.7,
+   "strength": 7.66
+  },
+  {
+   "t": 52.5,
+   "offset_ms": -1.3,
+   "strength": 7.02
+  },
+  {
+   "t": 65.0,
+   "offset_ms": -5.3,
+   "strength": 7.12
+  },
+  {
+   "t": 70.625,
+   "offset_ms": -3.7,
+   "strength": 7.34
+  },
+  {
+   "t": 71.25,
+   "offset_ms": 8.7,
+   "strength": 4.31
+  }
+ ],
+ "sfx_slots": [
+  {
+   "t": "2:1",
+   "bar": 2,
+   "beat": 1,
+   "sfx": "freeze_hit (NELEH card; key to confirm, s6.8 req. 2)",
+   "note": "every stem rests beat 1"
+  },
+  {
+   "t": "8:1",
+   "bar": 8,
+   "beat": 1,
+   "sfx": "the Cancel click",
+   "note": "D6 starts on its frame"
+  },
+  {
+   "t": "24:2",
+   "bar": 24,
+   "beat": 2,
+   "sfx": "orb_servo x3 (the Orb counts the tally)",
+   "note": "the score holds; it does not count"
+  },
+  {
+   "t": "29:3",
+   "bar": 29,
+   "beat": 3,
+   "sfx": "the Orb's toast `rewinding...`",
+   "note": "the Rewind is score (a retrograde); reverse swells stay SFX"
+  }
+ ],
+ "silence_windows": [
+  {
+   "t0": 60.0,
+   "t1": 64.98,
+   "label": "his real post (typed; 9:32 PM PT): DRY",
+   "max_dbfs": -70.0
+  },
+  {
+   "t0": 17.503,
+   "t1": 52.485,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 60.003,
+   "t1": 64.985,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  },
+  {
+   "t0": 72.503,
+   "t1": 78.497,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  }
+ ],
+ "vo_windows": [
+  {
+   "t0": 55.0,
+   "t1": 57.5,
+   "lufs": -24.5,
+   "target": "-24 +-2"
+  },
+  {
+   "t0": 67.5,
+   "t1": 70.0,
+   "lufs": -25.6,
+   "target": "-24 +-2"
+  }
+ ],
+ "knee_whole": 0,
+ "f_major": {
+  "limit": 0.08,
+  "windows": 33,
+  "worst": 0.303,
+  "worst_sieved": 0.073,
+  "ok": true,
+  "ok_written": true,
+  "ok_spectral": true,
+  "f_inaudible_windows": 1,
+  "a_classes": {
+   "written": 0,
+   "resonance": 0,
+   "explained": 0,
+   "unattributed": 0
+  },
+  "written_a_over_f_bass": [],
+  "written_third": {
+   "ok": true,
+   "count": 0,
+   "events": [],
+   "grazes": [],
+   "n_grazes": 0,
+   "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+  },
+  "fails": [],
+  "explained": [],
+  "fixed_resonances": [],
+  "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+ },
+ "knee_completion": 0,
+ "room_sfx_windows": [
+  {
+   "t0": 52.5,
+   "t1": 60.0,
+   "sfx": "room_drone (26A carve + V.O. 1)"
+  },
+  {
+   "t0": 65.0,
+   "t1": 72.5,
+   "sfx": "room_drone (26A wallet, V.O. 2, the Rewind)"
+  }
+ ],
+ "qa": {
+  "balance": {
+   "balance": {
+    "piano": 51,
+    "orch": 36,
+    "bigband": 0,
+    "chip": 13
+   },
+   "rhythm_pct_of_all": 25,
+   "chip_share": 13,
+   "balance_energy": {
+    "piano": 48,
+    "orch": 47,
+    "bigband": 0,
+    "chip": 5
+   },
+   "method": "theme stemtable (gated loudness per section, time-weighted, rhythm/fx excluded; it counts a brief stab at its own loudness for the whole section) + balance_energy (ungated energy)",
+   "sections": [
+    {
+     "section": "26 P1 call connects (LEVERAGE low)",
+     "share": {
+      "piano": 27,
+      "orch": 56,
+      "bigband": 0,
+      "chip": 17
+     }
+    },
+    {
+     "section": "26 P2 dialog, eyes, arrow (LEVERAGE)",
+     "share": {
+      "piano": 21,
+      "orch": 66,
+      "bigband": 0,
+      "chip": 13
+     }
+    },
+    {
+     "section": "D6: silence",
+     "share": {
+      "piano": 0,
+      "orch": 100,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "26A carve + V.O. 1",
+     "share": {
+      "piano": 100,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "26A his post (DRY)",
+     "share": {
+      "piano": 100,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "26A wallet, V.O. 2, the Rewind",
+     "share": {
+      "piano": 83,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 17
+     }
+    }
+   ]
+  },
+  "short_term_underscore": {
+   "p95": -19.64,
+   "median": -23.9,
+   "max": -19.5
+  },
+  "band_2_6k_db": -20.0,
+  "centroid_hz": 255.0,
+  "f_major": {
+   "limit": 0.08,
+   "windows": 33,
+   "worst": 0.303,
+   "worst_sieved": 0.073,
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "f_inaudible_windows": 1,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_a_over_f_bass": [],
+   "written_third": {
+    "ok": true,
+    "count": 0,
+    "events": [],
+    "grazes": [],
+    "n_grazes": 0,
+    "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+   },
+   "fails": [],
+   "explained": [],
+   "fixed_resonances": [],
+   "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+  },
+  "knee_completion": {
+   "count": 0,
+   "hits": [],
+   "max_gap_s": 2.5,
+   "rule": "OST-BIBLE rule 4: the knee never plays whole in an episode, in any register, across a phrase boundary too"
+  },
+  "sub_under_room": [
+   {
+    "t0": 52.5,
+    "t1": 60.0,
+    "sfx": "room_drone (26A carve + V.O. 1)",
+    "sub_db": -34.8,
+    "limit_db": -18.0,
+    "sub_from": {
+     "piano": 100
+    },
+    "ok": true,
+    "notes_below_c3": []
+   },
+   {
+    "t0": 65.0,
+    "t1": 72.5,
+    "sfx": "room_drone (26A wallet, V.O. 2, the Rewind)",
+    "sub_db": -30.9,
+    "limit_db": -18.0,
+    "sub_from": {
+     "piano": 95
+    },
+    "ok": true,
+    "notes_below_c3": []
+   }
+  ],
+  "no_third": [],
+  "silence": [
+   {
+    "t0": 60.0,
+    "t1": 64.98,
+    "label": "his real post (typed; 9:32 PM PT): DRY",
+    "peak_dbfs": -78.4000015258789,
+    "limit": -70.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 17.503,
+    "t1": 52.485,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 60.003,
+    "t1": 64.985,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 72.503,
+    "t1": 78.497,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   }
+  ],
+  "hard_stops": [
+   {
+    "t0": 17.503,
+    "t1": 52.485,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 60.003,
+    "t1": 64.985,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   },
+   {
+    "t0": 72.503,
+    "t1": 78.497,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   }
+  ],
+  "vo_windows": [
+   {
+    "t0": 55.0,
+    "t1": 57.5,
+    "lufs": -24.5,
+    "target": "-24 +-2"
+   },
+   {
+    "t0": 67.5,
+    "t1": 70.0,
+    "lufs": -25.6,
+    "target": "-24 +-2"
+   }
+  ],
+  "knee_whole": 0,
+  "motifs_found": {
+   "STEP_FOUR": [
+    {
+     "inst": "grand",
+     "t": 15.0,
+     "transpose": -19
+    },
+    {
+     "inst": "hn",
+     "t": 15.0,
+     "transpose": 0
+    },
+    {
+     "inst": "bsn",
+     "t": 15.0,
+     "transpose": -19
+    }
+   ],
+   "NELEH_CLOCKWORK": [
+    {
+     "inst": "vln1",
+     "t": 3.125,
+     "transpose": 0
+    }
+   ],
+   "MADA_SPINNER": [
+    {
+     "inst": "vc",
+     "t": 0.9375,
+     "transpose": -31
+    },
+    {
+     "inst": "vc",
+     "t": 3.4375,
+     "transpose": -31
+    },
+    {
+     "inst": "vc",
+     "t": 4.375,
+     "transpose": -31
+    },
+    {
+     "inst": "vc",
+     "t": 5.9375,
+     "transpose": -31
+    },
+    {
+     "inst": "vc",
+     "t": 8.125,
+     "transpose": -31
+    },
+    {
+     "inst": "vc",
+     "t": 10.9375,
+     "transpose": -31
+    },
+    {
+     "inst": "vc",
+     "t": 13.4375,
+     "transpose": -31
+    },
+    {
+     "inst": "vc",
+     "t": 14.375,
+     "transpose": -31
+    },
+    {
+     "inst": "vc",
+     "t": 15.9375,
+     "transpose": -31
+    },
+    {
+     "inst": "celesta",
+     "t": 12.5,
+     "transpose": 0
+    },
+    {
+     "inst": "celesta",
+     "t": 13.125,
+     "transpose": 0
+    },
+    {
+     "inst": "celesta",
+     "t": 13.75,
+     "transpose": 0
+    }
+   ]
+  },
+  "swing": {
+   "vc": {
+    "offbeats": 27,
+    "median_frames": 7.5,
+    "hum_ms": 0
+   },
+   "cb": {
+    "offbeats": 2,
+    "median_frames": 7.5,
+    "hum_ms": 0
+   },
+   "k808": {
+    "offbeats": 2,
+    "median_frames": 7.5,
+    "hum_ms": 0
+   },
+   "bdrum_muted": {
+    "offbeats": 2,
+    "median_frames": 7.5,
+    "hum_ms": 2
+   },
+   "noise": {
+    "offbeats": 6,
+    "median_frames": 7.5,
+    "hum_ms": 0
+   },
+   "vln1": {
+    "offbeats": 6,
+    "median_frames": 9.38,
+    "hum_ms": 8
+   },
+   "beeper": {
+    "offbeats": 1,
+    "median_frames": 7.5,
+    "hum_ms": 0
+   },
+   "celesta": {
+    "offbeats": 8,
+    "median_frames": 7.5,
+    "hum_ms": 4
+   }
+  },
+  "banned": []
+ },
+ "loop": null,
+ "files": {
+  "album_wav": "render/e01-s26-the-falling-tile-album.wav",
+  "album_mp3": "render/e01-s26-the-falling-tile-album.mp3",
+  "underscore_wav": "render/e01-s26-the-falling-tile-underscore.wav",
+  "underscore_mp3": "render/e01-s26-the-falling-tile-underscore.mp3",
+  "stems": {
+   "piano": "render/stems/e01-s26-the-falling-tile-piano.flac",
+   "strings": "render/stems/e01-s26-the-falling-tile-strings.flac",
+   "winds": "render/stems/e01-s26-the-falling-tile-winds.flac",
+   "brass": "render/stems/e01-s26-the-falling-tile-brass.flac",
+   "drums": "render/stems/e01-s26-the-falling-tile-drums.flac",
+   "perc": "render/stems/e01-s26-the-falling-tile-perc.flac",
+   "chip": "render/stems/e01-s26-the-falling-tile-chip.flac"
+  },
+  "midi": "render/e01-s26-the-falling-tile.mid",
+  "pianoroll": "render/e01-s26-the-falling-tile-pianoroll.png"
+ },
+ "masters": {
+  "album": {
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "comp": {
+    "thresh_db": -20,
+    "ratio": 1.8
+   },
+   "dialog_pocket": null,
+   "measured": {
+    "lufs": -16.01,
+    "lra": 8.37,
+    "true_peak_db": -1.15,
+    "peak_db": -1.16,
+    "rms_db": -21.79,
+    "crest_db": 20.63,
+    "seconds": 72.8029
+   }
+  },
+  "underscore": {
+   "target_lufs": -21.5,
+   "ceiling_dbtp": -3.0,
+   "comp": {
+    "thresh_db": -28,
+    "ratio": 1.3,
+    "att_ms": 40.0,
+    "rel_ms": 350.0
+   },
+   "dialog_pocket": {
+    "f": 2500.0,
+    "db": -2.0,
+    "q": 0.7
+   },
+   "measured": {
+    "lufs": -21.5,
+    "lra": 8.48,
+    "true_peak_db": -5.13,
+    "peak_db": -5.14,
+    "rms_db": -27.14,
+    "crest_db": 22.0,
+    "seconds": 72.8029
+   }
+  }
+ },
+ "stems": {
+  "sum_vs_underscore_residual_db": -170.8,
+  "families_present": [
+   "brass",
+   "chip",
+   "drums",
+   "perc",
+   "piano",
+   "strings",
+   "winds"
+  ],
+  "family_share_lu": {
+   "piano": -3.6,
+   "strings": -2.2,
+   "winds": -6.8,
+   "brass": -2.8,
+   "drums": -3.2,
+   "perc": -15.2,
+   "chip": -9.5
+  }
+ },
+ "spectrum": {
+  "sub": -4.9,
+  "bass": -4.7,
+  "lowmid": -5.1,
+  "mid": -17.4,
+  "presence": -24.1,
+  "air": -31.3,
+  "centroid_hz": 255.0
+ },
+ "bar_levels": [
+  {
+   "bar": 1,
+   "rms_db": -20.9,
+   "peak_db": -5.599999904632568
+  },
+  {
+   "bar": 2,
+   "rms_db": -24.2,
+   "peak_db": -9.399999618530273
+  },
+  {
+   "bar": 3,
+   "rms_db": -21.5,
+   "peak_db": -5.099999904632568
+  },
+  {
+   "bar": 4,
+   "rms_db": -25.3,
+   "peak_db": -10.899999618530273
+  },
+  {
+   "bar": 5,
+   "rms_db": -20.8,
+   "peak_db": -5.800000190734863
+  },
+  {
+   "bar": 6,
+   "rms_db": -21.4,
+   "peak_db": -8.199999809265137
+  },
+  {
+   "bar": 7,
+   "rms_db": -20.5,
+   "peak_db": -5.199999809265137
+  },
+  {
+   "bar": 8,
+   "rms_db": -64.5,
+   "peak_db": -23.200000762939453
+  },
+  {
+   "bar": 9,
+   "rms_db": -240.0,
+   "peak_db": -240.0
+  },
+  {
+   "bar": 10,
+   "rms_db": -240.0,
+   "peak_db": -240.0
+  },
+  {
+   "bar": 11,
+   "rms_db": -240.0,
+   "peak_db": -240.0
+  },
+  {
+   "bar": 12,
+   "rms_db": -240.0,
+   "peak_db": -240.0
+  },
+  {
+   "bar": 13,
+   "rms_db": -240.0,
+   "peak_db": -240.0
+  },
+  {
+   "bar": 14,
+   "rms_db": -240.0,
+   "peak_db": -240.0
+  },
+  {
+   "bar": 15,
+   "rms_db": -240.0,
+   "peak_db": -240.0
+  },
+  {
+   "bar": 16,
+   "rms_db": -240.0,
+   "peak_db": -240.0
+  },
+  {
+   "bar": 17,
+   "rms_db": -240.0,
+   "peak_db": -240.0
+  },
+  {
+   "bar": 18,
+   "rms_db": -240.0,
+   "peak_db": -240.0
+  },
+  {
+   "bar": 19,
+   "rms_db": -240.0,
+   "peak_db": -240.0
+  },
+  {
+   "bar": 20,
+   "rms_db": -240.0,
+   "peak_db": -240.0
+  },
+  {
+   "bar": 21,
+   "rms_db": -82.3,
+   "peak_db": -49.70000076293945
+  },
+  {
+   "bar": 22,
+   "rms_db": -25.5,
+   "peak_db": -5.300000190734863
+  },
+  {
+   "bar": 23,
+   "rms_db": -27.1,
+   "peak_db": -9.699999809265137
+  },
+  {
+   "bar": 24,
+   "rms_db": -43.8,
+   "peak_db": -30.299999237060547
+  },
+  {
+   "bar": 25,
+   "rms_db": -117.5,
+   "peak_db": -78.4000015258789
+  },
+  {
+   "bar": 26,
+   "rms_db": -57.8,
+   "peak_db": -23.100000381469727
+  },
+  {
+   "bar": 27,
+   "rms_db": -28.3,
+   "peak_db": -9.800000190734863
+  },
+  {
+   "bar": 28,
+   "rms_db": -28.2,
+   "peak_db": -8.300000190734863
+  },
+  {
+   "bar": 29,
+   "rms_db": -26.5,
+   "peak_db": -11.100000381469727
+  }
+ ],
+ "instrumentation": {
+  "bdrum_muted": {
+   "family": "perc",
+   "notes": 8,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "beeper": {
+   "family": "chip",
+   "notes": 3,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "bsn": {
+   "family": "winds",
+   "notes": 3,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "cb": {
+   "family": "strings",
+   "notes": 8,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "celesta": {
+   "family": "perc",
+   "notes": 16,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "felt": {
+   "family": "piano",
+   "notes": 8,
+   "source": "sf2",
+   "credit": "Upright Piano KW by FreePats (CC0 1.0)"
+  },
+  "felt_mech": {
+   "family": "piano",
+   "notes": 3,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "grand": {
+   "family": "piano",
+   "notes": 18,
+   "source": "sf2",
+   "credit": "Salamander Grand Piano by Alexander Holm (CC BY 3.0) -- ATTRIBUTION REQUIRED"
+  },
+  "hn": {
+   "family": "brass",
+   "notes": 12,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "k808": {
+   "family": "drums",
+   "notes": 8,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "noise": {
+   "family": "chip",
+   "notes": 10,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "snes_piano": {
+   "family": "chip",
+   "notes": 2,
+   "source": "sf2",
+   "credit": "Upright Piano KW by FreePats (CC0 1.0)"
+  },
+  "vc": {
+   "family": "strings",
+   "notes": 54,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vln1": {
+   "family": "strings",
+   "notes": 12,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vln2": {
+   "family": "strings",
+   "notes": 2,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  }
+ },
+ "credits": [
+  "GeneralUser GS by S. Christian Collins",
+  "Salamander Grand Piano by Alexander Holm (CC BY 3.0) -- ATTRIBUTION REQUIRED",
+  "Upright Piano KW by FreePats (CC0 1.0)",
+  "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+ ],
+ "audition": [
+  "0:17.5 (bar 8.1, the Cancel click): the HARD STOP -- does it land as a blow, not a playback glitch? Check it with picture (bible s7 item 1)",
+  "0:00-0:17.5 (bars 1-7): LEVERAGE -- a trap closing without a tune; the uneven thud never a heartbeat; Step Four at 0:15.0 level, no riser; the arrow steps at 15.0 / 15.625 / 16.25 s",
+  "FIX 1, 0:00-0:17.5: the low grand clusters are 9 dB up and double Step Four's bass in bar 7 -- audible leverage, still no tune, not murky? The cello pizz is notched at 111.7 Hz: still woody, nothing major?",
+  "0:02.5-0:03.1 (bar 2.1): the 1-beat dip for the NELEH freeze hit, then the clockwork pizz -- lay the freeze hit in and check the key",
+  "0:52.5-1:00.0 (bars 22-24): the felt fifth (the carve), then the G4 nudge alone under \"i don't keep score.\" at 0:55.0 -- nothing moves under the V.O.; lay a stock voice at about -16.5 LUFS-S to check it sits",
+  "1:10.0-1:12.5 (bar 29): C4 -> F4 (the settle), then THE REWIND at 1:11.25 (E4, Bb3 on the 16-bit sample-chip) landing on sc 27 at 1:12.5 -- the Orb rewinding, not a tape effect; hand-off to MM-09's Bbm(add9)",
+  "1:00.0-1:05.0 (bars 25-26): his real post plays DRY; the wallet's C4 enters after it at 1:05.0"
+ ],
+ "warnings": []
+}

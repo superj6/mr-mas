@@ -201,7 +201,7 @@ Real public places stay real ([naming rule 7](../bible/naming.md#1-naming-scheme
 
 | Place | Date | Beat | Ep |
 |---|---|---|---|
-| **APEC, San Francisco** | Nov 15–16, 2023 | The cold-open city. THE COUNTERPART's banquet ovation [H]. The chyron `HE WILL BE FIRED TOMORROW`; Mas: "noted." One HTURT hailstone lands. | 1 |
+| **APEC, San Francisco** | Nov 15–16, 2023 | The cold-open city. THE COUNTERPART's banquet ovation [H]. The freeze, and the `Board sync · Fri 12:00` invite on his phone (no chyron states the firing); Mas: "noted." One HTURT hailstone lands. | 1 |
 | **Bletchley Park** | Nov 1–2, 2023 | KING LARCHES on video. THE INTERVIEWER asks NOLE questions off cue cards NOLE wrote. | 1 |
 | **The G7, Italy** | Jun 14, 2024 | POPE SICNARF: "humans must not lose control of AI" [H]. | 2 |
 | **Paris** (AI Action Summit) | Feb 10–11, 2025 | ECNAV scratches SAFETY into OPPORTUNITY. NORCAM's deepfakes hold the press conference. The US and UK don't sign. | 4 |

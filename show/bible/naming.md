@@ -91,6 +91,7 @@
 | **DRUH** | Will Hurd | CAMEO | NopeAI (ex-board) | 1 | 1 | Musical-chairs cold open: his chair walks out with a campaign sticker. |
 | **NOVIHS** | Shivon Zilis | CAMEO, witness only | NopeAI (ex-board) | 1 | 1, 8 | Switchboard operator. Nothing personal, ever. |
 | **ACISSEJ** (alt THE PARTNER) | Jessica Livingston | CAMEO | Money (WHY COMBINATOR) | 5 (fb) | 5 fb, 11 fb | |
+| **DOT** | fictional: NopeAI's front-desk contractor (no real counterpart; not a composite of any real worker) | RECURRING (light) | NopeAI (contractor, via an unnamed vendor) | 2 | 2, 4, 5, 8, 9, 12 | First name only, as contractor badges print it. Orange contractor badge in a building of teal ones; the teal one is her want, shown and never said. Subtitles in sentence case; "Happy to help!" with a capital H (THE INTERN's lowercase echo is the theft). Ep2 is her back on the lobby ladder and Ep4 her hands and voice ("It's free."); her face is first seen in Ep5, in the Orb's iris. No home life, age, body or accent humor; ethnicity unspecified; never the butt, never in distress for a laugh (world-stakes §3.6). Always written DOT, in capitals. Collisions: TOD NEERG, the intro's `you are here` marker, and "the DOT" ([§5](#5-collision-rulings)). **Added by the season revision, 2026-09-25; episodes and tier updated 2026-09-26** (world-stakes §3, §8.7; the beat count lives in [season-revision-plan](../production/season-revision-plan.md), not here). |
 
 ### 2c. Misanthropic
 
@@ -204,8 +205,9 @@
 | [**LUAP**](../characters/luap.md) | Paul Graham | RECURRING (flashbacks) | Money | 1 (intro egg) | 4 fb, 5 fb, 11 fb (+ optional 8 overlay) | Speaks in plain-HTML overlays. |
 | [**THE MANIFESTO** & **NEB**](../characters/the-manifesto-and-neb.md) (firm: Z61A) | Marc Andreessen & Ben Horowitz | RECURRING | Money | 1 | 1, 2, 5, 6, 8, 9, 10 | |
 | [**THE BESTIES**](../characters/the-besties.md): SKCAS, **THE SPAC KING**, **THE SULTAN OF SCIENCE**, **THE MODERATOR** | Sacks, Chamath Palihapitiya, David Friedberg, Jason Calacanis (All-In) | CHORUS | Money / Culture | 3 | 3–10 | Four-mic table, `BESTIES TAKE:` ticker. Host the golden-speakerphone stage (Sep 14, 2026). |
-| **LEIHT** | Peter Thiel | CAMEO | Money | 3 (fb) | 3 fb, 6, 10 fb | Epstein imagery rule applies. (Dropped from Eps 1–2: no beat there; coordinator pass.) |
-| [**PRAK**](../characters/prak.md) | Alex Karp | CAMEO → RECURRING | Money | 1 | 1, 9, 10 | The lone anti-pause holdout. |
+| **LEIHT** | Peter Thiel | CAMEO | Money | 3 (fb) | 3 fb, 6, 10 fb | Epstein imagery rule applies. (Dropped from Eps 1–2: no beat there; coordinator pass.) His constant is a **printed, pawn-shaped token** (a flat standee banded with his 2014 essay title, `Competition Is for Losers` if ever legible): Ep6's pawn is rebuilt as it, and in the Ep10 flashback it replaces the spinner as the blank map pin. Never SIMED's chess pawn, and never in one shot with it ([§5](#5-collision-rulings)). *Updated by the season revision, 2026-09-25 (orbit-and-lore §2.1).* |
+| [**PRAK**](../characters/prak.md) | Alex Karp | CAMEO → RECURRING | Money | 9 | 9, 10 | The lone anti-pause holdout. *Episodes updated by the season revision, 2026-09-25:* there is no Ep1 beat (the Bletchley skier, O1.1, is cut; gov.uk names the company, not him). His name card's wording lives in [prak.md](../characters/prak.md) only. |
+| **THE SITUATIONIST** (alt THE PROJECTIONIST) | Leopold Aschenbrenner | CAMEO (faceless) | Money | 10 | 10 | **Never drawn, voiced or name-carded:** a black ring binder is the character. The essay's real title (`Situational Awareness`, tab `IV. The Project`) shows only on the Ep10 shelf spine. The Ep9 fund strip (O9.1) is cut (season revision, 2026-09-26), so the fund never appears on screen; if a fund beat ever returns it shows only the subtitle, `The Decade Ahead`, because the title is also the fund's name (rule 2). The fund stays **unnamed on screen**; **THE DECADE AHEAD LP** is reserved if a plate is ever needed (an EDGAR search found no registrant; no trademark search yet). No spouse, no fund numbers, never beside THE OTHER MAS, no CHINA CARD. Kept apart from THE FORECASTER by design (binder vs calendar and pin) and from the POV device THE STRAIGHT LINE; always spelled in full, distinct from THE SPAC KING, THE SULTAN OF SCIENCE, THE STAKEHOLDER, THE SENIOR ADVISOR, THE SHORT and THE SLEEVE. Tag [P] (the essay, opened). **Moved from §8 by the season revision, 2026-09-25** (orbit-and-lore §2.4, §2.6). |
 | **DIRE** | Reid Hoffman | CAMEO | Money | 1 | 1, 2 (+ F2.3 fb exit tag), 4 (optional), 6 | Ep2 fb: his checkbook relights the séance candle (he covered salaries). Ep6 (present day): the DIRE vs SKCAS "PayPal mafia" feud (critic C23). Epstein imagery rule applies. |
 | **THE FIRST CHECK** | Vinod Khosla | CAMEO | Money | 1 | 1, 2 | |
 | **AUHSOJ** | Josh Kushner (Thrive) | CAMEO | Money | 1 | 1, 3, 5, 8 | No family references. |
@@ -278,6 +280,7 @@ These appear only as unnamed silhouettes or objects, with no name plate.
 | Sottiaux ("everyone reports to Greg") | One quote | Attributed on screen to "a NopeAI product head." |
 | Thomas Wolf | One quote | Attributed to "a FACEHUGGER co-founder." |
 | Judges (Gonzalez Rogers, Lin, Alsup) | Public officials; rulings only | Proposed title **THE BENCH**: a robe and gavel with no face ([§8](#8-proposed-coinages-awaiting-approval)). |
+| The public in THE PUBLIC PRESSURE LAYER: protesters, residents, council and township members, organizers, the users in THE BLEACHERS; data-center developers and the trackers and pollsters that count them | Private individuals; rule 7 for companies and groups | **Collective only:** identical BLEACHERS tiles, group signs (verbatim from the record or generic: `PAUSE`, `NO`), tallies and stamps. Nobody's words are attributed on screen. A developer is "a developer" (an unbranded hand); a tracker or pollster is `POLL` or `(REPORTED)`; a protest group appears only as sign text, never as a character. **Added by the season revision, 2026-09-25** (world-stakes §10.1, §10.5; public-pressure research §8). The office-only chyron convention for unregistered officials (`TEXAS GOV. (R)`) stays on file there, unused by this allocation. |
 
 ---
 
@@ -292,6 +295,7 @@ Visual identity, colors and real-counterpart notes live in [world/orgs-and-produ
 | **NOPEAI** (neon wordmark `NOPE AI`) → **PEON AI** (Ep12) | OpenAI | 1 (intro) | canonical |
 | CHATGTP · GTP-n · GTP-6 ASTRA · AROS · OI · JALAPEÑO · GATESTAR (+ GATESTAR UAE / UK / ARGENTINA) · ZOMBIE 4o · THE GOBLINS · Q\* · SHIPMAS | ChatGPT · GPT-n · GPT-6 Astra · Sora · io · Jalapeño chip · Stargate · GPT-4o · the Codex "goblins" line · Q\* · shipmas | 1 | canonical |
 | **MISANTHROPIC** · CLOD · CLOD CODE · CLOD MYTHIC · PRIVATE LAST | Anthropic · Claude · Claude Code · Claude Mythos · Public First Action (Anthropic-funded PAC) | 1 | canonical |
+| **GOLDEN GATE CLOD** | Golden Gate Claude (the 24-hour research demo, May 23, 2024) | 2 | canonical, a prop name only: the last CLOD box in Ep2 sc 18 carries Golden Gate Bridge art, and the name is never printed or spoken on screen (the bridge stays real, rule 7). **Added by the season revision, 2026-09-25** (orbit-and-lore O2.2). |
 | **zAI** · **SPACEZ** · KORG · TRUTHGTP · COLOSSAL · Z (the post app) / RETTIWT (before 2023) · ALSET | xAI · SpaceX (incl. SpaceXAI) · Grok · TruthGPT · Colossus · X / Twitter · Tesla | 1 | canonical |
 | **MACROSOFT** · IAM · GNIB / SYDNEY | Microsoft · Microsoft AI · Bing / Sydney | 1 | canonical |
 | **ELGOOG** · MINDDEEP · DRAB · INIMEG · "the banana image app" | Google · DeepMind · Bard · Gemini · Nano Banana | 1 | canonical (INIMEG was proposed in the integration; now adopted) |
@@ -311,7 +315,7 @@ Visual identity, colors and real-counterpart notes live in [world/orgs-and-produ
 
 | Parody | Real | First ep | Status |
 |---|---|---|---|
-| ELPPA · IRIS · NOZAMA · SWA · ELCARO · BANKSOFT · EVIRHT · PLANTAIR · XTF | Apple · Siri · Amazon · AWS · Oracle · SoftBank · Thrive · Palantir · FTX | 1 | canonical |
+| ELPPA · IRIS · NOZAMA · SWA · ELCARO · BANKSOFT · EVIRHT · PLANTAIR · XTF | Apple · Siri · Amazon · AWS · Oracle · SoftBank · Thrive · Palantir · FTX | 1 | canonical. PLANTAIR's one on-screen appearance is a houseplant with an antenna in Ep3 (orbit-and-lore O3.1). |
 | TPOOL · WHY COMBINATOR · TIDDER · TSOOB · TOD NEERG · ENIZARDYH CAPITAL (alt ROCKET FUEL CAPITAL) · EPIRTS | Loopt · Y Combinator · Reddit · Boost Mobile · Green Dot · Hydrazine · Stripe | 1 (intro) | canonical |
 | Z61A · FOLLOWING THE PAST · AGAM INC. (use sparingly) · NI-LLA | a16z · Leading the Future (super PAC) · MAGA Inc. · All-In | 1 | canonical. FOLLOWING THE PAST always pairs with PRIVATE LAST. |
 | NIAMUH · G24 · XGM | Humain · G42 · MGX | 4 | canonical |
@@ -376,7 +380,11 @@ Visual identity, colors and real-counterpart notes live in [world/orgs-and-produ
 | "CALLED IT" (LUAP's card vs SUCRAM's stamp) | Intentional echo. SUCRAM: `CALLED IT. (BEFORE LAUNCH.)` | integration |
 | CARET vs POINTER (Cursor) | **POINTER.** The Intern's face is a text caret; POINTER is an arrow. | integration |
 | CRAB DOOM vs COMBROAD (Broadcom) | **CRAB DOOM** (true anagram, says "doom," rhymes with the lobster agent). | integration |
-| LIEW (Weil) / LEIHT (Thiel) | Acceptable: cameos in different episodes. | integration |
+| LIEW (Weil) / LEIHT (Thiel) | Acceptable. Both appear in Ep6, so the rule is **same episode allowed, never the same scene**. *(Revised by the season revision, 2026-09-25; the old wording said different episodes.)* | integration; orbit-and-lore §2.6 |
+| **SIMED's pawn vs LEIHT's token** | SIMED's is a small chess piece, always in play. LEIHT's is a printed, pawn-shaped standee that never stands on a board. **Never both in one shot.** Production files call LEIHT's "the token", never "the pawn". *(Added by the season revision, 2026-09-25.)* | orbit-and-lore §2.1 |
+| **DRUH (Hurd) vs HERD SAFETY** | "HERD" is a homophone of the real surname. Acceptable if HERD SAFETY is ever approved (it's back in [§8](#8-proposed-coinages-awaiting-approval) and off screen): DRUH appears only in Ep1, HERD SAFETY only as a plate in Ep7, and the company name is never spoken. *(Added by the season revision, 2026-09-25; made conditional 2026-09-26.)* | orbit-and-lore §2.6 |
+| **DOT vs TOD NEERG** | TOD NEERG (Green Dot) is a flashback brand in Ep3 F3.2 only. The reversal isn't audible, and the two never share a scene. The Corkboard Guy's "Dot. Dot." Morse line (Ep3 sc 2) is a harmless egg. *(Added by the season revision, 2026-09-25.)* | world-stakes §8.7 |
+| **DOT vs the intro's `you are here` dot, and "the DOT"** | The intro's position marker ([episode-slots §6](../intro/episode-slots.md#6-bookend-dot-toast-subtitle-last-bar)) is called **"the `you are here` marker"** in every production file, never "the dot", so no shot list or cue sheet can confuse it with the character. The character is always **DOT**, in capitals, and never takes an article. The marker is never named on screen, so the two never meet there. The Department of Transportation stays a plain generic name under rule 8 and is never abbreviated "the DOT" on screen or in scripts. *(Added by the season revision, 2026-09-26.)* | season-revision-plan §18 |
 | MAS inside LUNCHMAS and THE OTHER MAS | Intentional ("the other Sam"). | integration |
 | SIMED vs SIDEM | **SIMED.** | bible |
 | KANUS, AMABO, GNAW, a Chamath reversal | Title names: THE INTERVIEWER, THE FORMER, THE 49%, THE SPAC KING. | integration |
@@ -477,10 +485,10 @@ Nothing below is canonical until the showrunner signs off. Each has a sourced be
 | **RASAC** | Greg Casar | Co-sponsor of SREDNAS's Ban ASI Act. BG. | 9 |
 | **UEIL** & **NAROM** | Ted Lieu & Nathaniel Moran | Bipartisan AI Kill Switch Act (Jul 23, 2026) [V]. Optional. | 9 |
 | **IRARAH** | Yuval Noah Harari | Davos 2026 [H]. Optional. | 7 |
-| **THE SITUATIONIST** | Leopold Aschenbrenner | "Situational Awareness" (Jun 2024) [K]. Optional. | 2 |
 | [**THE MODEL**](../characters/the-model.md) | fictional: the successor THE INTERN / RESEARCHER trains (no real counterpart) | Ep11's nested lanyard; Ep12's host, F12.1 POV and name-card writer. It has no card of its own. Never "SAM" or any mirror of a real first name (rule 10). | 11, 12 |
 | **THE RUMPT PACE** | fictional document: the renamed PACE ACCORD | Ep10: the LABEL GUN retitles the accord after him. | 10 |
 | **THE MEMORY MERCHANTS** | Samsung (GNUSMAS) and SK (KS) as a pair; executives stay unnamed silhouettes | [cameos-world](../characters/cameos-world.md#the-memory-merchants): the fried-chicken KA-CHING (Oct 30, 2025 [H]) and the GATESTAR wafers | 6, 9 |
+| **HERD SAFETY** | Flock Safety | Nothing on screen now. The season revision's critic pass (2026-09-26) cut Ep7's pole-camera plate, leaving only an unbranded doorbell grid (O7.1), so the name waits here per orbit-and-lore §2.6 (§8 first, §3c only on approval). If it's ever approved: one plate, never spoken, never shortened to "SAFETY", no CEO, no police framing. The reversal KCOLF doesn't read; the synonym carries the joke. Ring stays "NOZAMA's doorbell", with no coinage. **Homophone note:** "HERD" sounds like DRUH's real surname (Hurd); acceptable only while DRUH stays Ep1-only and the name is never spoken ([§5](#5-collision-rulings)). *Moved back from §3c, 2026-09-26.* | 7 (if approved) |
 
 ---
 

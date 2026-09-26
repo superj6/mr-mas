@@ -2,7 +2,7 @@
 
 The table of contents for the whole room: every file, one line each, plus a reading order and the status of each episode. Read-only research and design history lives in `_sources/` and is not indexed here.
 
-- **As of:** 2026-09-25 (coordinator pass). Eps 1–9 follow real events through Sep 24, 2026; Eps 10–12 are speculative.
+- **As of:** 2026-09-25 (coordinator pass). Eps 1–9 follow real events through Sep 24, 2026; Eps 10–12 are extrapolated past the record (post-Sep 2026), with no on-screen speculation label.
 - **Rules of the room:** [README](README.md). Names come only from [bible/naming.md](bible/naming.md); hard exclusions are in [bible/guardrails.md](bible/guardrails.md); flashback placement is in [timeline/flashback-map.md](timeline/flashback-map.md).
 - **Visual style:** **DECIDED 2026-09-25: pixel art primary** (adventure-game staging; glyph for foreshadowing; sparing motivated switches). See [bible/style-status.md](bible/style-status.md). Point of view: limited third person through Mas ([bible/pov-and-framing.md](bible/pov-and-framing.md), [bible/pov-clarification.md](bible/pov-clarification.md)).
 
@@ -45,10 +45,10 @@ All twelve episodes are **drafted** (seven files each: outline, beats, flashback
 | [6](episodes/ep06/outline.md) | `ep1.5_backstop.xlsx` | Sep → Dec 2025 | Drafted · real events | ~83 s | "I'll find you a buyer… Enough." [K]; `BACKSTOP` headline lint fix; the deepfake-shoplifter gag |
 | [7](episodes/ep07/outline.md) | `ep1.6_supply_chain_risk.pdf` | Jan → Mar 2026 | Drafted · real events | ~64 s | The capital "I" in "I laughed" (the lowercase gag depends on it); THE BENCH name; war-context guardrail check |
 | [8](episodes/ep08/outline.md) | `ep1.7_statute_of_limitations.pdf` | Apr → Jun 2026 | Drafted · real events | ≤118 s | "yes." now staged per the record (hedge, then "yes."); re-verify the distillation and "giant irony" lines; THE CALENDAR card |
-| [9](episodes/ep09/outline.md) | `ep1.8_outside_intended_scope.log` | Jul → Sep 24, 2026 (+ optional `TODAY · SEP 25`) | Drafted · real events · ends on **EVERYTHING AFTER THIS IS SPECULATION** | ~63 s | Mas's UNSC line (only the headline wordings); the 2002 assembly stays HELD; the "12 days" card |
-| [10](episodes/ep10/outline.md) | `ep1.9_pace.yaml` | "OCT 2026?" → "2027??" | Drafted · **speculative** | ~65 s | Sep 29 meeting, DevDay and the Oct 1 deadline must be re-verified the week they happen; ALYI's bunker line HELD; *AI 2027* title |
-| [11](episodes/ep11/outline.md) | `ep1.10_assist_clause.txt` | "2027??" | Drafted · **speculative** | ~68 s | The Charter's exact assist-clause wording (paraphrase only for now); `assisted` vs `assisted living` |
-| [12](episodes/ep12/outline.md) | `ep1.11_unclear_which_side.md` | "????" | Drafted · **speculative** finale | ~71 s | Ending tone; PEON AI; THE MODEL name (proposed); no THE PLAN beat yet |
+| [9](episodes/ep09/outline.md) | `ep1.8_outside_intended_scope.log` | Jul → Sep 24, 2026 (+ optional `TODAY · SEP 25`) | Drafted · real events · ends with the rail rolling past TODAY into Ep10 (no speculation card) | ~63 s | Mas's UNSC line (only the headline wordings); the 2002 assembly stays HELD; the "12 days" card |
+| [10](episodes/ep10/outline.md) | `ep1.9_pace.yaml` | "OCT 2026?" → "2027??" | Drafted · extrapolated (post-Sep 2026) | ~65 s | Sep 29 meeting, DevDay and the Oct 1 deadline must be re-verified the week they happen; ALYI's bunker line HELD; *AI 2027* title |
+| [11](episodes/ep11/outline.md) | `ep1.10_assist_clause.txt` | "2027??" | Drafted · extrapolated (post-Sep 2026) | ~68 s | The Charter's exact assist-clause wording (paraphrase only for now); `assisted` vs `assisted living` |
+| [12](episodes/ep12/outline.md) | `ep1.11_unclear_which_side.md` | "????" | Drafted · extrapolated (post-Sep 2026) finale | ~71 s | Ending tone; PEON AI; THE MODEL name (proposed); no THE PLAN beat yet |
 
 ---
 
@@ -60,6 +60,7 @@ All twelve episodes are **drafted** (seven files each: outline, beats, flashback
 | [bible/naming.md](bible/naming.md) | Canonical naming registry: scheme rules, every person/org/product/place, collision rulings, alternates, banned names, proposed coinages, pronunciations. |
 | [bible/guardrails.md](bible/guardrails.md) | Hard exclusions, fairness rules and the per-episode camp matrix, fact tags, on-screen fact grammar (incl. the casing rule), legal hygiene, per-character never-do list, pre-lock checklist. |
 | [bible/style-status.md](bible/style-status.md) | Visual style, **DECIDED: pixel art primary**, plus the options explored and the style-switch vocabulary. |
+| [bible/world-stakes.md](bible/world-stakes.md) | The world threads (China, the public, jobs, money and energy): why they matter, their season arcs, the everyday character DOT, the per-episode insertions (net ≤ 0), timeline facts to verify and guardrails. PROPOSED, for the season revision. |
 
 ## Timeline
 

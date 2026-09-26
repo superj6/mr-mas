@@ -3,11 +3,15 @@
 //   npx esbuild src/episodes/ep01/act4/inserts/tools/lab.ts --bundle --platform=node --outfile=<scratch>/ins.cjs
 //   node <scratch>/ins.cjs <outDir> <scale> <view> [<view> ...]      (view ids: see sheet.ts; 'list' prints them)
 import {writePNG} from '../../../../../dev/pixeladv/tools/png';
-import {renderView, VIEWS} from '../sheet';
+import {renderView, VIEWS, DELIVERABLES} from '../sheet';
 
 const [outDir, scaleS, ...ids] = process.argv.slice(2);
 const scale = Number(scaleS) || 2;
 if (ids[0] === 'list') { console.log(VIEWS.join('\n')); process.exit(0); }
+if (ids[0] === 'deliver') {
+  for (const [name, view] of DELIVERABLES) { const buf = renderView(view); writePNG(`${outDir}/${name}.png`, buf.w, buf.h, buf.c, scale); console.log('wrote', name); }
+  process.exit(0);
+}
 for (const id of ids[0] === 'all' ? VIEWS : ids) {
   const t0 = Date.now();
   const buf = renderView(id);

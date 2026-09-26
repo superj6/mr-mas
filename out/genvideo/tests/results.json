@@ -1,0 +1,172 @@
+{
+ "satire": {
+  "source": "out/structures/satire/scene.mp4",
+  "synthetic": false,
+  "naive_args": [
+   "--preset",
+   "naive",
+   "--on",
+   "2"
+  ],
+  "tuned_args": [
+   "--preset",
+   "default"
+  ],
+  "naive": {
+   "drawings": 60,
+   "frames": 120,
+   "static_px_share": 0.462,
+   "boil_pct": 5.875,
+   "boil_per_s": 0.705,
+   "mc_boil_pct": 11.583,
+   "flips_per_1k": 15.998
+  },
+  "tuned": {
+   "drawings": 60,
+   "frames": 120,
+   "static_px_share": 0.463,
+   "boil_pct": 0.758,
+   "boil_per_s": 0.0909,
+   "mc_boil_pct": 4.004,
+   "flips_per_1k": 0.143
+  }
+ },
+ "puppet": {
+  "source": "out/structures/puppet/scene.mp4",
+  "synthetic": false,
+  "naive_args": [
+   "--preset",
+   "naive",
+   "--on",
+   "2"
+  ],
+  "tuned_args": [
+   "--preset",
+   "default"
+  ],
+  "naive": {
+   "drawings": 60,
+   "frames": 120,
+   "static_px_share": 0.241,
+   "boil_pct": 18.163,
+   "boil_per_s": 2.1796,
+   "mc_boil_pct": 25.64,
+   "flips_per_1k": 60.571
+  },
+  "tuned": {
+   "drawings": 60,
+   "frames": 120,
+   "static_px_share": 0.241,
+   "boil_pct": 1.929,
+   "boil_per_s": 0.2315,
+   "mc_boil_pct": 8.349,
+   "flips_per_1k": 0.477
+  }
+ },
+ "stress": {
+  "source": "out/genvideo/tests/src/stress-satire-16fps.mp4",
+  "synthetic": true,
+  "naive_args": [
+   "--preset",
+   "naive",
+   "--on",
+   "2"
+  ],
+  "tuned_args": [
+   "--preset",
+   "default",
+   "--match",
+   "out/genvideo/tests/src/stress-ref.png"
+  ],
+  "naive": {
+   "drawings": 60,
+   "frames": 120,
+   "static_px_share": 0.092,
+   "boil_pct": 27.226,
+   "boil_per_s": 3.2671,
+   "mc_boil_pct": 30.781,
+   "flips_per_1k": 94.543
+  },
+  "tuned": {
+   "drawings": 60,
+   "frames": 120,
+   "static_px_share": 0.092,
+   "boil_pct": 2.514,
+   "boil_per_s": 0.3017,
+   "mc_boil_pct": 7.237,
+   "flips_per_1k": 1.286
+  }
+ },
+ "sky": {
+  "source": "out/genvideo/tests/src/sky-plate-30fps.mp4",
+  "synthetic": true,
+  "naive_args": [
+   "--preset",
+   "naive",
+   "--on",
+   "auto",
+   "--families",
+   "sky"
+  ],
+  "tuned_args": [
+   "--preset",
+   "plate",
+   "--families",
+   "sky"
+  ],
+  "naive": {
+   "drawings": 60,
+   "frames": 120,
+   "static_px_share": 0.005,
+   "boil_pct": 4.028,
+   "boil_per_s": 0.4833,
+   "mc_boil_pct": 12.879,
+   "flips_per_1k": 4.115
+  },
+  "tuned": {
+   "drawings": 112,
+   "frames": 120,
+   "static_px_share": 0.07,
+   "boil_pct": 0.703,
+   "boil_per_s": 0.1575,
+   "mc_boil_pct": 10.786,
+   "flips_per_1k": 0.0
+  }
+ },
+ "pixeladv": {
+  "source": "out/structures/pixeladv/scene.mp4",
+  "synthetic": false,
+  "naive_args": [
+   "--preset",
+   "naive"
+  ],
+  "tuned_args": [
+   "--preset",
+   "pixel"
+  ],
+  "naive": {
+   "drawings": 120,
+   "frames": 120,
+   "static_px_share": 0.9,
+   "boil_pct": 0.795,
+   "boil_per_s": 0.1907,
+   "mc_boil_pct": 1.731,
+   "flips_per_1k": 2.525
+  },
+  "tuned": {
+   "drawings": 120,
+   "frames": 120,
+   "static_px_share": 0.9,
+   "boil_pct": 0.229,
+   "boil_per_s": 0.0548,
+   "mc_boil_pct": 0.804,
+   "flips_per_1k": 0.16
+  },
+  "roundtrip_vs_engine": {
+   "identical_px_pct_mean": 85.9,
+   "identical_px_pct_min": 75.07,
+   "visually_identical_px_pct_mean": 96.37,
+   "visually_identical_px_pct_min": 82.65
+  }
+ }
+}

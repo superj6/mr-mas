@@ -1,0 +1,480 @@
+{
+ "schema": "mrmas-ost-cue/1",
+ "id": "mm05-the-more-you-buy-limbo",
+ "mm": "MM-05",
+ "family": "P06 THE JOB",
+ "title": "The More You Buy: Limbo (Ep2)",
+ "version": "1.1 (fix 1, 2026-09-26)",
+ "composer": "Composer B (OST batch 1; fix 1: composer A)",
+ "tone": "the upsell deflated: for once the cells go down, a step lower every bar; no sale, no slot",
+ "tags": [
+  "nesnej",
+  "invidia",
+  "the job",
+  "upsell",
+  "deal",
+  "double-time swing",
+  "ka-ching slots",
+  "library"
+ ],
+ "usage": "BI",
+ "scenes": [
+  "Ep2: the limbo under the cut line"
+ ],
+ "description": "Fix 1 (2026-09-26): the A-natural on the F downbeats is traced (engine F-major check) to a body resonance of the cb_pizz layer at ~112 Hz (its F2 is the E2 v3 sample a semitone up), not the straight mute; a narrow notch on that layer only (Q 5, -10 dB at 112 Hz); the limbo's chroma wrapper is removed; re-rendered on the fixed engine.",
+ "motifs": [
+  "THE UPSELL (vibes + straight-mute trumpet in unison): cells a step higher each, the close C5 G4 F4",
+  "the KA-CHING slots (the SFX bell is the downbeat)",
+  "the GPU clock (12.5 % chip 16th arpeggios)",
+  "B': the chip answers each trumpet phrase one step higher with one more note"
+ ],
+ "key": "F dorian / F minor blues, C7#9(b13); the close on an F-C open fifth (no third)",
+ "engine": {
+  "version": "mrmas-ost-engine 1.1 (2026-09-26: fix1 -- meter axis, sample tuning, render pool, QA 5a-d)",
+  "rendered": "2026-09-26T01:25:10",
+  "render_seconds": 20.1
+ },
+ "timing": {
+  "bpm": 96.0,
+  "beat_unit_quarters": 1.0,
+  "tempo_map": [
+   {
+    "bar": 1,
+    "beat": 1.0,
+    "bpm": 96.0,
+    "ramp_in": false,
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "meter_map": [
+   {
+    "bar": 1,
+    "meter": "4/4",
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "swing": 1.0,
+  "swing_unit_quarters": 0.5,
+  "pickup_beats": 0.0,
+  "bars": 8,
+  "length_s": 20.0,
+  "length_frames": 480.0,
+  "fps": 24,
+  "end": {
+   "sec": 20.0,
+   "frame": 480.0,
+   "bar": 9,
+   "beat": 1.0
+  },
+  "album_duration_s": 42.6467,
+  "album_duration_frames": 1023.52,
+  "album_loops": 2
+ },
+ "sections": [
+  {
+   "label": "limbo (loop, intensity 1)",
+   "start": {
+    "sec": 0.0,
+    "frame": 0.0,
+    "bar": 1,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 20.0,
+    "frame": 480.0,
+    "bar": 9,
+    "beat": 1.0
+   }
+  }
+ ],
+ "markers": [
+  {
+   "label": "b1.1 limbo",
+   "sec": 0.0,
+   "frame": 0.0,
+   "bar": 1,
+   "beat": 1.0
+  }
+ ],
+ "hit_check": [
+  {
+   "t": 0.0,
+   "offset_ms": 2.7,
+   "strength": 5.41
+  }
+ ],
+ "sfx_slots": [],
+ "silence_windows": [],
+ "vo_windows": [],
+ "knee_whole": 0,
+ "f_major": {
+  "limit": 0.08,
+  "windows": 12,
+  "worst": 0.026,
+  "worst_sieved": 0.028,
+  "ok": true,
+  "ok_written": true,
+  "ok_spectral": true,
+  "f_inaudible_windows": 0,
+  "a_classes": {
+   "written": 0,
+   "resonance": 0,
+   "explained": 0,
+   "unattributed": 0
+  },
+  "written_a_over_f_bass": [],
+  "written_third": {
+   "ok": true,
+   "count": 0,
+   "events": [],
+   "grazes": [],
+   "n_grazes": 0,
+   "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+  },
+  "fails": [],
+  "explained": [],
+  "fixed_resonances": [],
+  "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+ },
+ "knee_completion": 0,
+ "room_sfx_windows": [],
+ "qa": {
+  "balance": {
+   "balance": {
+    "piano": 23,
+    "orch": 41,
+    "bigband": 10,
+    "chip": 26
+   },
+   "rhythm_pct_of_all": 73,
+   "chip_share": 26,
+   "balance_energy": {
+    "piano": 19,
+    "orch": 43,
+    "bigband": 11,
+    "chip": 27
+   },
+   "method": "theme stemtable (gated loudness per section, time-weighted, rhythm/fx excluded; it counts a brief stab at its own loudness for the whole section) + balance_energy (ungated energy)",
+   "sections": [
+    {
+     "section": "limbo (loop, intensity 1)",
+     "share": {
+      "piano": 23,
+      "orch": 41,
+      "bigband": 10,
+      "chip": 26
+     }
+    }
+   ]
+  },
+  "short_term_underscore": {
+   "p95": -19.25,
+   "median": -19.84,
+   "max": -18.93
+  },
+  "band_2_6k_db": -18.1,
+  "centroid_hz": 294.0,
+  "f_major": {
+   "limit": 0.08,
+   "windows": 12,
+   "worst": 0.026,
+   "worst_sieved": 0.028,
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "f_inaudible_windows": 0,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_a_over_f_bass": [],
+   "written_third": {
+    "ok": true,
+    "count": 0,
+    "events": [],
+    "grazes": [],
+    "n_grazes": 0,
+    "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+   },
+   "fails": [],
+   "explained": [],
+   "fixed_resonances": [],
+   "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+  },
+  "knee_completion": {
+   "count": 0,
+   "hits": [],
+   "max_gap_s": 2.5,
+   "rule": "OST-BIBLE rule 4: the knee never plays whole in an episode, in any register, across a phrase boundary too"
+  },
+  "sub_under_room": [],
+  "no_third": [],
+  "silence": [],
+  "hard_stops": [],
+  "vo_windows": [],
+  "knee_whole": 0,
+  "motifs_found": {},
+  "swing": {
+   "grand": {
+    "offbeats": 32,
+    "median_frames": 10.22,
+    "hum_ms": 3
+   },
+   "vibes": {
+    "offbeats": 16,
+    "median_frames": 10.0,
+    "hum_ms": 5
+   },
+   "tpt": {
+    "offbeats": 8,
+    "median_frames": 10.0,
+    "hum_ms": 6
+   },
+   "arp": {
+    "offbeats": 32,
+    "median_frames": 10.0,
+    "hum_ms": 0
+   },
+   "bsax": {
+    "offbeats": 8,
+    "median_frames": 10.0,
+    "hum_ms": 5
+   }
+  },
+  "banned": []
+ },
+ "loop": {
+  "start": {
+   "sec": 0.0,
+   "frame": 0.0,
+   "bar": 1,
+   "beat": 1.0
+  },
+  "end": {
+   "sec": 20.0,
+   "frame": 480.0,
+   "bar": 9,
+   "beat": 1.0
+  },
+  "samples": 960000,
+  "seconds": 20.0,
+  "frames": 480.0,
+  "frame_aligned": true,
+  "notes": 304,
+  "tail_seconds": 3.202,
+  "seam": {
+   "seam_hf_ratio_to_median": 0.36,
+   "seam_hf_percentile": 26.73,
+   "wrap_jump": 0.00382,
+   "wrap_jump_vs_p99_step": 0.137,
+   "rms_last_50ms_db": -28.6,
+   "rms_first_50ms_db": -20.5,
+   "verdict": "seamless"
+  },
+  "loudness": {
+   "lufs": -19.96,
+   "lra": 2.06,
+   "true_peak_db": -7.26,
+   "peak_db": -7.27,
+   "rms_db": -21.61,
+   "crest_db": 14.34,
+   "seconds": 40.0
+  }
+ },
+ "files": {
+  "album_wav": "variants/mm05-the-more-you-buy-limbo-album.wav",
+  "album_mp3": "variants/mm05-the-more-you-buy-limbo-album.mp3",
+  "underscore_wav": "variants/mm05-the-more-you-buy-limbo-underscore.wav",
+  "underscore_mp3": "variants/mm05-the-more-you-buy-limbo-underscore.mp3",
+  "stems": {},
+  "loop_wav": "variants/mm05-the-more-you-buy-limbo-loop.wav",
+  "loop_tail_wav": "variants/mm05-the-more-you-buy-limbo-loop-tail.wav",
+  "loop_preview_mp3": "variants/mm05-the-more-you-buy-limbo-loop-x3-preview.mp3",
+  "midi": "variants/mm05-the-more-you-buy-limbo.mid",
+  "pianoroll": "variants/mm05-the-more-you-buy-limbo-pianoroll.png"
+ },
+ "masters": {
+  "album": {
+   "target_lufs": -14.0,
+   "ceiling_dbtp": -1.0,
+   "comp": {
+    "thresh_db": -20,
+    "ratio": 1.8
+   },
+   "dialog_pocket": null,
+   "measured": {
+    "lufs": -14.0,
+    "lra": 2.2,
+    "true_peak_db": -1.16,
+    "peak_db": -1.17,
+    "rms_db": -16.0,
+    "crest_db": 14.82,
+    "seconds": 42.6467
+   }
+  },
+  "underscore": {
+   "target_lufs": -20.0,
+   "ceiling_dbtp": -3.0,
+   "comp": {
+    "thresh_db": -28,
+    "ratio": 1.3,
+    "att_ms": 40.0,
+    "rel_ms": 350.0
+   },
+   "dialog_pocket": {
+    "f": 2500.0,
+    "db": -2.0,
+    "q": 0.7
+   },
+   "measured": {
+    "lufs": -20.0,
+    "lra": 2.19,
+    "true_peak_db": -7.26,
+    "peak_db": -7.27,
+    "rms_db": -21.91,
+    "crest_db": 14.64,
+    "seconds": 42.6467
+   }
+  }
+ },
+ "stems": {
+  "sum_vs_underscore_residual_db": -163.9,
+  "families_present": [],
+  "family_share_lu": {
+   "piano": -12.0,
+   "brass": -16.1,
+   "bass": -1.6,
+   "drums": -12.1,
+   "perc": -9.1,
+   "chip": -12.2
+  }
+ },
+ "spectrum": {
+  "sub": -22.6,
+  "bass": -1.0,
+  "lowmid": -8.6,
+  "mid": -13.4,
+  "presence": -21.5,
+  "air": -29.5,
+  "centroid_hz": 294.0
+ },
+ "bar_levels": [
+  {
+   "bar": 1,
+   "rms_db": -23.4,
+   "peak_db": -9.199999809265137
+  },
+  {
+   "bar": 2,
+   "rms_db": -23.4,
+   "peak_db": -8.399999618530273
+  },
+  {
+   "bar": 3,
+   "rms_db": -20.2,
+   "peak_db": -8.300000190734863
+  },
+  {
+   "bar": 4,
+   "rms_db": -21.5,
+   "peak_db": -7.300000190734863
+  },
+  {
+   "bar": 5,
+   "rms_db": -22.1,
+   "peak_db": -8.399999618530273
+  },
+  {
+   "bar": 6,
+   "rms_db": -20.6,
+   "peak_db": -7.699999809265137
+  },
+  {
+   "bar": 7,
+   "rms_db": -20.9,
+   "peak_db": -8.5
+  },
+  {
+   "bar": 8,
+   "rms_db": -21.9,
+   "peak_db": -8.100000381469727
+  }
+ ],
+ "instrumentation": {
+  "arp": {
+   "family": "chip",
+   "notes": 64,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "brush": {
+   "family": "drums",
+   "notes": 16,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "bsax": {
+   "family": "brass",
+   "notes": 16,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "cb_pizz": {
+   "family": "bass",
+   "notes": 32,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "grand": {
+   "family": "piano",
+   "notes": 64,
+   "source": "sf2",
+   "credit": "Salamander Grand Piano by Alexander Holm (CC BY 3.0) -- ATTRIBUTION REQUIRED"
+  },
+  "jazz": {
+   "family": "drums",
+   "notes": 24,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "swish": {
+   "family": "drums",
+   "notes": 8,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "tpt": {
+   "family": "brass",
+   "notes": 16,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "ubass": {
+   "family": "bass",
+   "notes": 32,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "vibes": {
+   "family": "perc",
+   "notes": 32,
+   "source": "art",
+   "credit": "VCSL by Versilian Studios (CC0 1.0)"
+  }
+ },
+ "credits": [
+  "GeneralUser GS by S. Christian Collins",
+  "Salamander Grand Piano by Alexander Holm (CC BY 3.0) -- ATTRIBUTION REQUIRED",
+  "VCSL by Versilian Studios (CC0 1.0)",
+  "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+ ],
+ "audition": [
+  "the loop seam at 20.0 s in the x3 preview: C7 falls back up into Fm13 without a bump",
+  "does it read as the SAME tune going the wrong way (a joke only if you know it), not as a sad version?"
+ ],
+ "warnings": []
+}

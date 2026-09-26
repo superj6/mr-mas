@@ -1,0 +1,419 @@
+{
+ "schema": "mrmas-ost-cue/1",
+ "id": "mm13-outside-intended-scope-05s",
+ "mm": "MM-13",
+ "family": "P05 GLYPH",
+ "title": "Outside Intended Scope (5 s cut-down)",
+ "version": "1",
+ "composer": "Composer D (OST batch 1)",
+ "tone": "the machine learning the show's tune, politely: grains, then the knee scrambled, then almost, then running past its own ending -- dread without a single evil sound",
+ "tags": [
+  "library",
+  "GLYPH",
+  "dread",
+  "the machine",
+  "tokens",
+  "loops L1-L4",
+  "hook",
+  "no swing",
+  "straight",
+  "variant",
+  "05s"
+ ],
+ "usage": "BI",
+ "scenes": [
+  "Eps 1-3: L1 (Ep1 the Orb's scan, the tile dissolve is SFX-only inside D6, Q* hum -> see the kit)",
+  "Eps 4-6: L2 (Ep6 the RESERVED desk)",
+  "Eps 7-8: L3",
+  "Ep9: L4 under the sandbox breakout (MM-31 bed)",
+  "the HOOK: a dread-before-the-cut out, any episode on the dread curve"
+ ],
+ "description": "5 s cut-down (bars 33-34): the HOOK alone -- the sub-pressure swell into one glass Db6, cut dead on the downbeat at 5.0 s. A dread-before-the-cut out.",
+ "motifs": [
+  "TOKENS stage grains (L1), scrambled + reversed (L2), almost (L3), the runaway (L4)",
+  "THE ACHE (G4 + Db5 over the F pedal; L1 bars 5-6, L3 bars 21-22)",
+  "the knee REVERSED (bar 13)",
+  "the chord with no third F-C-G (L2, L3 violins)",
+  "the runaway climb Ab C Eb F, an octave per bar-pair (L4)",
+  "the hook: one glass Db6, cut dead (bar 35.1)"
+ ],
+ "key": "F pedal + the Ache (G, Db); tokens {F G Ab C Db} (+ Eb in the runaway), F4-Db6",
+ "engine": {
+  "version": "mrmas-ost-engine 1.1 (2026-09-26: fix1 -- meter axis, sample tuning, render pool, QA 5a-d)",
+  "rendered": "2026-09-26T01:43:09",
+  "render_seconds": 2.1
+ },
+ "timing": {
+  "bpm": 96.0,
+  "beat_unit_quarters": 1.0,
+  "tempo_map": [
+   {
+    "bar": 1,
+    "beat": 1.0,
+    "bpm": 96.0,
+    "ramp_in": false,
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "meter_map": [
+   {
+    "bar": 1,
+    "meter": "4/4",
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "swing": 0.0,
+  "swing_unit_quarters": 0.5,
+  "pickup_beats": 0.0,
+  "bars": 2,
+  "length_s": 5.0,
+  "length_frames": 120.0,
+  "fps": 24,
+  "end": {
+   "sec": 5.0,
+   "frame": 120.0,
+   "bar": 3,
+   "beat": 1.0
+  },
+  "album_duration_s": 5.303,
+  "album_duration_frames": 127.27,
+  "album_loops": 1
+ },
+ "sections": [
+  {
+   "label": "HOOK (dread before the cut)",
+   "start": {
+    "sec": 0.0,
+    "frame": 0.0,
+    "bar": 1,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 5.0,
+    "frame": 120.0,
+    "bar": 3,
+    "beat": 1.0
+   }
+  }
+ ],
+ "markers": [
+  {
+   "label": "HOOK: the glass Db6",
+   "sec": 2.5,
+   "frame": 60.0,
+   "bar": 2,
+   "beat": 1.0
+  },
+  {
+   "label": "HOOK: cut dead (downbeat)",
+   "sec": 5.0,
+   "frame": 120.0,
+   "bar": 3,
+   "beat": 1.0
+  }
+ ],
+ "hit_check": [
+  {
+   "t": 2.5,
+   "offset_ms": -4.0,
+   "strength": 11.51
+  }
+ ],
+ "sfx_slots": [],
+ "silence_windows": [
+  {
+   "t0": 5.003,
+   "t1": 7.997,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  }
+ ],
+ "vo_windows": [],
+ "knee_whole": 0,
+ "f_major": {
+  "limit": 0.08,
+  "windows": 8,
+  "worst": 0.009,
+  "worst_sieved": 0.016,
+  "ok": true,
+  "ok_written": true,
+  "ok_spectral": true,
+  "f_inaudible_windows": 0,
+  "a_classes": {
+   "written": 0,
+   "resonance": 0,
+   "explained": 0,
+   "unattributed": 0
+  },
+  "written_a_over_f_bass": [],
+  "written_third": {
+   "ok": true,
+   "count": 0,
+   "events": [],
+   "grazes": [],
+   "n_grazes": 0,
+   "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+  },
+  "fails": [],
+  "explained": [],
+  "fixed_resonances": [],
+  "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+ },
+ "knee_completion": 0,
+ "room_sfx_windows": [
+  {
+   "t0": 0.0,
+   "t1": 5.0,
+   "sfx": "room_drone / server_hum (library cut-down)"
+  }
+ ],
+ "qa": {
+  "balance": {
+   "balance": {
+    "piano": 0,
+    "orch": 6,
+    "bigband": 0,
+    "chip": 94
+   },
+   "rhythm_pct_of_all": 0,
+   "chip_share": 94,
+   "balance_energy": {
+    "piano": 0,
+    "orch": 3,
+    "bigband": 0,
+    "chip": 97
+   },
+   "method": "theme stemtable (gated loudness per section, time-weighted, rhythm/fx excluded; it counts a brief stab at its own loudness for the whole section) + balance_energy (ungated energy)",
+   "sections": [
+    {
+     "section": "HOOK (dread before the cut)",
+     "share": {
+      "piano": 0,
+      "orch": 6,
+      "bigband": 0,
+      "chip": 94
+     }
+    }
+   ]
+  },
+  "short_term_underscore": {
+   "p95": -20.62,
+   "median": -21.75,
+   "max": -20.52
+  },
+  "band_2_6k_db": -11.9,
+  "centroid_hz": 873.0,
+  "f_major": {
+   "limit": 0.08,
+   "windows": 8,
+   "worst": 0.009,
+   "worst_sieved": 0.016,
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "f_inaudible_windows": 0,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_a_over_f_bass": [],
+   "written_third": {
+    "ok": true,
+    "count": 0,
+    "events": [],
+    "grazes": [],
+    "n_grazes": 0,
+    "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+   },
+   "fails": [],
+   "explained": [],
+   "fixed_resonances": [],
+   "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+  },
+  "knee_completion": {
+   "count": 0,
+   "hits": [],
+   "max_gap_s": 2.5,
+   "rule": "OST-BIBLE rule 4: the knee never plays whole in an episode, in any register, across a phrase boundary too"
+  },
+  "sub_under_room": [
+   {
+    "t0": 0.0,
+    "t1": 5.0,
+    "sfx": "room_drone / server_hum (library cut-down)",
+    "sub_db": -21.2,
+    "limit_db": -18.0,
+    "sub_from": {
+     "bass": 96
+    },
+    "ok": true,
+    "notes_below_c3": [
+     "subp F1"
+    ]
+   }
+  ],
+  "no_third": [],
+  "silence": [
+   {
+    "t0": 5.003,
+    "t1": 7.997,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   }
+  ],
+  "hard_stops": [
+   {
+    "t0": 5.003,
+    "t1": 7.997,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   }
+  ],
+  "vo_windows": [],
+  "knee_whole": 0,
+  "motifs_found": {},
+  "swing": {},
+  "banned": []
+ },
+ "loop": null,
+ "files": {
+  "album_wav": "variants/mm13-outside-intended-scope-05s-album.wav",
+  "album_mp3": "variants/mm13-outside-intended-scope-05s-album.mp3",
+  "underscore_wav": "variants/mm13-outside-intended-scope-05s-underscore.wav",
+  "underscore_mp3": "variants/mm13-outside-intended-scope-05s-underscore.mp3",
+  "stems": {},
+  "midi": "variants/mm13-outside-intended-scope-05s.mid",
+  "pianoroll": "variants/mm13-outside-intended-scope-05s-pianoroll.png"
+ },
+ "masters": {
+  "album": {
+   "target_lufs": -15.15,
+   "ceiling_dbtp": -1.0,
+   "comp": {
+    "thresh_db": -20,
+    "ratio": 1.8
+   },
+   "dialog_pocket": null,
+   "measured": {
+    "lufs": -15.15,
+    "lra": 2.59,
+    "true_peak_db": -5.02,
+    "peak_db": -5.02,
+    "rms_db": -20.92,
+    "crest_db": 15.89,
+    "seconds": 5.303
+   }
+  },
+  "underscore": {
+   "target_lufs": -20.39,
+   "ceiling_dbtp": -3.0,
+   "comp": {
+    "thresh_db": -28,
+    "ratio": 1.3,
+    "att_ms": 40.0,
+    "rel_ms": 350.0
+   },
+   "dialog_pocket": {
+    "f": 2500.0,
+    "db": -2.0,
+    "q": 0.7
+   },
+   "measured": {
+    "lufs": -20.39,
+    "lra": 2.66,
+    "true_peak_db": -10.44,
+    "peak_db": -10.46,
+    "rms_db": -25.84,
+    "crest_db": 15.38,
+    "seconds": 5.303
+   }
+  }
+ },
+ "stems": {
+  "sum_vs_underscore_residual_db": -169.7,
+  "families_present": [],
+  "family_share_lu": {
+   "bass": -28.1,
+   "perc": -3.5,
+   "chip": -5.6,
+   "synth": -7.2
+  }
+ },
+ "spectrum": {
+  "sub": -21.0,
+  "bass": -5.2,
+  "lowmid": -19.6,
+  "mid": -1.7,
+  "presence": -23.8,
+  "air": -38.6,
+  "centroid_hz": 873.0
+ },
+ "bar_levels": [
+  {
+   "bar": 1,
+   "rms_db": -38.5,
+   "peak_db": -23.600000381469727
+  },
+  {
+   "bar": 2,
+   "rms_db": -22.7,
+   "peak_db": -10.5
+  }
+ ],
+ "instrumentation": {
+  "bell": {
+   "family": "perc",
+   "notes": 1,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "celesta": {
+   "family": "perc",
+   "notes": 1,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "glasspad": {
+   "family": "synth",
+   "notes": 1,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "lead2": {
+   "family": "chip",
+   "notes": 1,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "subp": {
+   "family": "bass",
+   "notes": 1,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "tex": {
+   "family": "synth",
+   "notes": 1,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  }
+ },
+ "credits": [
+  "GeneralUser GS by S. Christian Collins"
+ ],
+ "audition": [
+  "0-5.0 s: starts clean on its bar line; the cut at 5.0 s is dead (no tail)",
+  "against the suite at the same bars: the same music, nothing re-voiced"
+ ],
+ "warnings": [
+  "2-6 kHz band -11.9 dB > -15 dB (s6.5: under dialogue)"
+ ]
+}

@@ -476,11 +476,7 @@ export const SetBack: React.FC<SP> = ({set, pal, f, raw}) => {
           {[0, 1, 2, 3].map((i) => (
             <line key={i} x1={-400} y1={FLOOR + i * i * 12} x2={1680} y2={FLOOR + i * i * 12} stroke={pal.dim} strokeWidth={1.5} opacity={0.4} />
           ))}
-          {raw && raw.toLowerCase() !== 'void' && (
-            <text x={640} y={120} fill={pal.dim} fontFamily={MONO} fontWeight={700} fontSize={22} textAnchor="middle">
-              {`[ set: ${raw} ]`}
-            </text>
-          )}
+          {/* an unknown set name is a note: Reel.tsx shows it in the margin, never in the picture */}
         </g>
       );
   }
