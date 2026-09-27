@@ -1,0 +1,1132 @@
+[
+ {
+  "key": "ROOM-WH@wide-arrive",
+  "id": "ROOM-WH",
+  "state": "wide-arrive",
+  "module": "shared/pixel/rooms/whitehouse.ts",
+  "note": "13.01 [W] the meeting room: the row faces SIRRAH at the head, her pointer on A",
+  "standin": "",
+  "native": "native/ROOM-WH--wide-arrive.png",
+  "full": "full/ROOM-WH--wide-arrive.png"
+ },
+ {
+  "key": "ROOM-WH@wide-pointer-I",
+  "id": "ROOM-WH",
+  "state": "wide-pointer-I",
+  "module": "shared/pixel/rooms/whitehouse.ts",
+  "note": "13.02-13.04 in the wide: the pointer lands on I (the block lights 2 f)",
+  "standin": "",
+  "native": "native/ROOM-WH--wide-pointer-I.png",
+  "full": "full/ROOM-WH--wide-pointer-I.png"
+ },
+ {
+  "key": "ROOM-WH@wide-tripods",
+  "id": "ROOM-WH",
+  "state": "wide-tripods",
+  "module": "shared/pixel/rooms/whitehouse.ts",
+  "note": "13.06 the photographer sets the third tripod (1 2 3 taped), back to us",
+  "standin": "",
+  "native": "native/ROOM-WH--wide-tripods.png",
+  "full": "full/ROOM-WH--wide-tripods.png"
+ },
+ {
+  "key": "ROOM-WH@wide-eyelines",
+  "id": "ROOM-WH",
+  "state": "wide-eyelines",
+  "module": "shared/pixel/rooms/whitehouse.ts",
+  "note": "13.08 four wrong eyelines: Tasya cam 3, Mario cam 2, Radnus the ceiling camera",
+  "standin": "",
+  "native": "native/ROOM-WH--wide-eyelines.png",
+  "full": "full/ROOM-WH--wide-eyelines.png"
+ },
+ {
+  "key": "ROOM-WH@wide-door",
+  "id": "ROOM-WH",
+  "state": "wide-door",
+  "module": "shared/pixel/rooms/whitehouse.ts",
+  "note": "13.11 the door opens behind the row, NEDIB strides in mid-sentence; heads turning (each its own speed)",
+  "standin": "",
+  "native": "native/ROOM-WH--wide-door.png",
+  "full": "full/ROOM-WH--wide-door.png"
+ },
+ {
+  "key": "ROOM-WH@wide-flash",
+  "id": "ROOM-WH",
+  "state": "wide-flash",
+  "module": "shared/pixel/rooms/whitehouse.ts",
+  "note": "13.12 all three cameras fire on the turned heads (the 2-tone freeze + card go on top)",
+  "standin": "",
+  "native": "native/ROOM-WH--wide-flash.png",
+  "full": "full/ROOM-WH--wide-flash.png"
+ },
+ {
+  "key": "ROOM-WH@mcu-sirrah-A",
+  "id": "ROOM-WH",
+  "state": "mcu-sirrah-A",
+  "module": "shared/pixel/rooms/whitehouse.ts drawSirrahMCU",
+  "note": "13.02 [MCU] SIRRAH right third, the blocks at MCU size, the pointer on A",
+  "standin": "",
+  "native": "native/ROOM-WH--mcu-sirrah-A.png",
+  "full": "full/ROOM-WH--mcu-sirrah-A.png"
+ },
+ {
+  "key": "ROOM-WH@mcu-sirrah-I",
+  "id": "ROOM-WH",
+  "state": "mcu-sirrah-I",
+  "module": "shared/pixel/rooms/whitehouse.ts drawSirrahMCU",
+  "note": "13.03-13.04 the pointer on I (the card freezes here)",
+  "standin": "",
+  "native": "native/ROOM-WH--mcu-sirrah-I.png",
+  "full": "full/ROOM-WH--mcu-sirrah-I.png"
+ },
+ {
+  "key": "ROOM-WH@2s-radnus-mario",
+  "id": "ROOM-WH",
+  "state": "2s-radnus-mario",
+  "module": "shared/pixel/rooms/whitehouse.ts drawWH2S",
+  "note": "13.05 [2S] Radnus writes it down; Mario's finger up; the scroll's end past the table",
+  "standin": "the RADNUS bust",
+  "native": "native/ROOM-WH--2s-radnus-mario.png",
+  "full": "full/ROOM-WH--2s-radnus-mario.png"
+ },
+ {
+  "key": "ROOM-WH@row-pan-tasya",
+  "id": "ROOM-WH",
+  "state": "row-pan-tasya",
+  "module": "shared/pixel/rooms/whitehouse.ts drawClassRow",
+  "note": "13.07 [MCU] the pan starts on Tasya (cam 3) and Mario (cam 2), R -> L, whole px",
+  "standin": "the RADNUS bust",
+  "native": "native/ROOM-WH--row-pan-tasya.png",
+  "full": "full/ROOM-WH--row-pan-tasya.png"
+ },
+ {
+  "key": "ROOM-WH@row-pan-mas",
+  "id": "ROOM-WH",
+  "state": "row-pan-mas",
+  "module": "shared/pixel/rooms/whitehouse.ts drawClassRow",
+  "note": "13.07 settled on Mas at the row's end: the lens look (his one); Radnus on the ceiling cam",
+  "standin": "the RADNUS bust",
+  "native": "native/ROOM-WH--row-pan-mas.png",
+  "full": "full/ROOM-WH--row-pan-mas.png"
+ },
+ {
+  "key": "ROOM-WH@2s-mas-radnus",
+  "id": "ROOM-WH",
+  "state": "2s-mas-radnus",
+  "module": "shared/pixel/rooms/whitehouse.ts drawWH2S",
+  "note": "13.09 [2S] MAS + RADNUS, Radnus leaning across, the flame on his collar (held 16 s)",
+  "standin": "the RADNUS bust",
+  "native": "native/ROOM-WH--2s-mas-radnus.png",
+  "full": "full/ROOM-WH--2s-mas-radnus.png"
+ },
+ {
+  "key": "ROOM-WH@ots-nedib",
+  "id": "ROOM-WH",
+  "state": "ots-nedib",
+  "module": "shared/pixel/rooms/whitehouse.ts drawWHOTS",
+  "note": "13.13 [OTS] from behind Mario's raised finger onto NEDIB; the WHOLE scroll out (draft 6)",
+  "standin": "",
+  "native": "native/ROOM-WH--ots-nedib.png",
+  "full": "full/ROOM-WH--ots-nedib.png"
+ },
+ {
+  "key": "ROOM-WH@ots-nedib-scroll2",
+  "id": "ROOM-WH",
+  "state": "ots-nedib-scroll2",
+  "module": "shared/pixel/rooms/whitehouse.ts drawWHOTS",
+  "note": "13.13 earlier: finger half up, the scroll half out of his pocket (held steps)",
+  "standin": "",
+  "native": "native/ROOM-WH--ots-nedib-scroll2.png",
+  "full": "full/ROOM-WH--ots-nedib-scroll2.png"
+ },
+ {
+  "key": "PROP-COLLAR-FLAME@size-1",
+  "id": "PROP-COLLAR-FLAME",
+  "state": "size-1",
+  "module": "shared/pixel/rooms/whitehouse.ts drawCollarFlame",
+  "note": "13.10 [ECU] the small flame on Radnus's collar",
+  "standin": "",
+  "native": "native/PROP-COLLAR-FLAME--size-1.png",
+  "full": "full/PROP-COLLAR-FLAME--size-1.png"
+ },
+ {
+  "key": "PROP-COLLAR-FLAME@size-2-pat",
+  "id": "PROP-COLLAR-FLAME",
+  "state": "size-2-pat",
+  "module": "shared/pixel/rooms/whitehouse.ts drawCollarFlame",
+  "note": "13.10 it grows one size; his hand pats at it (2 held drawings)",
+  "standin": "",
+  "native": "native/PROP-COLLAR-FLAME--size-2-pat.png",
+  "full": "full/PROP-COLLAR-FLAME--size-2-pat.png"
+ },
+ {
+  "key": "PROP-CLASS-PHOTO@print",
+  "id": "PROP-CLASS-PHOTO",
+  "state": "print",
+  "module": "shared/pixel/rooms/whitehouse.ts drawClassPhoto",
+  "note": "13.14 [ECU] CLASS PHOTO #1: the flash frame printed; blocks I A; Mas at the lens; his hand holds it",
+  "standin": "",
+  "native": "native/PROP-CLASS-PHOTO--print.png",
+  "full": "full/PROP-CLASS-PHOTO--print.png"
+ },
+ {
+  "key": "PROP-AI-BLOCKS@sizes",
+  "id": "PROP-AI-BLOCKS",
+  "state": "sizes",
+  "module": "shared/pixel/kits/wh-props.ts",
+  "note": "the A and I blocks: MCU size (hit on I), room size AI and the restack IA",
+  "standin": "",
+  "native": "native/PROP-AI-BLOCKS--sizes.png",
+  "full": "full/PROP-AI-BLOCKS--sizes.png"
+ },
+ {
+  "key": "CAST-SIRRAH@bust",
+  "id": "CAST-SIRRAH",
+  "state": "bust",
+  "module": "shared/pixel/cast/sirrah.ts",
+  "note": "SIRRAH: plum pantsuit, pearls, the CZAR? sticky note; pointer arm; mouths smile · E · A",
+  "standin": "",
+  "native": "native/CAST-SIRRAH--bust.png",
+  "full": "full/CAST-SIRRAH--bust.png"
+ },
+ {
+  "key": "CAST-SIRRAH@room",
+  "id": "CAST-SIRRAH",
+  "state": "room",
+  "module": "shared/pixel/cast/sirrah.ts",
+  "note": "room sprite: pointer (laid to any target) · clasp · open mouth",
+  "standin": "",
+  "native": "native/CAST-SIRRAH--room.png",
+  "full": "full/CAST-SIRRAH--room.png"
+ },
+ {
+  "key": "CAST-NEDIB@bust",
+  "id": "CAST-NEDIB",
+  "state": "bust",
+  "module": "shared/pixel/cast/nedib.ts",
+  "note": "NEDIB: the aviators up on his head, the fountain pen like a baton; sign; mouths",
+  "standin": "",
+  "native": "native/CAST-NEDIB--bust.png",
+  "full": "full/CAST-NEDIB--bust.png"
+ },
+ {
+  "key": "CAST-NEDIB@deepfakes",
+  "id": "CAST-NEDIB",
+  "state": "deepfakes",
+  "module": "shared/pixel/cast/nedib.ts",
+  "note": "the DEEPFAKE NEDIBs: cut paper (a scissor-cut margin), a crude flat print, the wrong ties",
+  "standin": "",
+  "native": "native/CAST-NEDIB--deepfakes.png",
+  "full": "full/CAST-NEDIB--deepfakes.png"
+ },
+ {
+  "key": "CAST-NEDIB@room",
+  "id": "CAST-NEDIB",
+  "state": "room",
+  "module": "shared/pixel/cast/nedib.ts",
+  "note": "room sprite: the stride (4 drawings on 3s, pen up), stand + point, write, a copy",
+  "standin": "",
+  "native": "native/CAST-NEDIB--room.png",
+  "full": "full/CAST-NEDIB--room.png"
+ },
+ {
+  "key": "CAST-RADNUS-STANDIN@bust-room",
+  "id": "CAST-RADNUS-STANDIN",
+  "state": "bust-room",
+  "module": "shared/pixel/cast/radnus-standin.ts",
+  "note": "the bust in art-a's colours (fold · pat · lean + up); beside it art-a's room sprite, used in the row",
+  "standin": "the bust (art-a built RADNUS at room scale only)",
+  "native": "native/CAST-RADNUS-STANDIN--bust-room.png",
+  "full": "full/CAST-RADNUS-STANDIN--bust-room.png"
+ },
+ {
+  "key": "ROOM-BRIDGE@ots-clip",
+  "id": "ROOM-BRIDGE",
+  "state": "ots-clip",
+  "module": "shared/pixel/rooms/bay-bridge.ts drawBridgeOTS",
+  "note": "14.01 [OTS] over Mas's shoulder at the bullpen window: the anchor clip, the ALTERED AUDIO tag",
+  "standin": "",
+  "native": "native/ROOM-BRIDGE--ots-clip.png",
+  "full": "full/ROOM-BRIDGE--ots-clip.png"
+ },
+ {
+  "key": "ROOM-BRIDGE@bay",
+  "id": "ROOM-BRIDGE",
+  "state": "bay",
+  "module": "shared/pixel/rooms/bay-bridge.ts drawBayWide",
+  "note": "14.02 [W] push 1: the bay, the lit skyline, the one dark tower with its one lit window",
+  "standin": "",
+  "native": "native/ROOM-BRIDGE--bay.png",
+  "full": "full/ROOM-BRIDGE--bay.png"
+ },
+ {
+  "key": "ROOM-BRIDGE@lit-window",
+  "id": "ROOM-BRIDGE",
+  "state": "lit-window",
+  "module": "shared/pixel/rooms/bay-bridge.ts drawLitWindow",
+  "note": "14.03 [W] push 2: the lit window, RUMPT's silhouette with the phone (the clip on it), nodding",
+  "standin": "",
+  "native": "native/ROOM-BRIDGE--lit-window.png",
+  "full": "full/ROOM-BRIDGE--lit-window.png"
+ },
+ {
+  "key": "ROOM-BRIDGE@repost-press",
+  "id": "ROOM-BRIDGE",
+  "state": "repost-press",
+  "module": "shared/pixel/rooms/bay-bridge.ts drawRepostECU",
+  "note": "14.04 [ECU] push 3: a thumb on the repost arrow under the same tag (hover -> press -> done)",
+  "standin": "",
+  "native": "native/ROOM-BRIDGE--repost-press.png",
+  "full": "full/ROOM-BRIDGE--repost-press.png"
+ },
+ {
+  "key": "ROOM-BRIDGE@repost-done",
+  "id": "ROOM-BRIDGE",
+  "state": "repost-done",
+  "module": "shared/pixel/rooms/bay-bridge.ts drawRepostECU",
+  "note": "14.04 click: REPOSTED",
+  "standin": "",
+  "native": "native/ROOM-BRIDGE--repost-done.png",
+  "full": "full/ROOM-BRIDGE--repost-done.png"
+ },
+ {
+  "key": "ROOM-BRIDGE@lit-window-hail",
+  "id": "ROOM-BRIDGE",
+  "state": "lit-window-hail",
+  "module": "shared/pixel/rooms/bay-bridge.ts drawLitWindow",
+  "note": "14.05 a hailstone drops out of the lit window (glyph noise, no letters); the glow still on",
+  "standin": "",
+  "native": "native/ROOM-BRIDGE--lit-window-hail.png",
+  "full": "full/ROOM-BRIDGE--lit-window-hail.png"
+ },
+ {
+  "key": "ROOM-BRIDGE@bay-plink-off",
+  "id": "ROOM-BRIDGE",
+  "state": "bay-plink-off",
+  "module": "shared/pixel/rooms/bay-bridge.ts drawBayWide",
+  "note": "14.05 the plink in the bay; the phone's glow clicked off (the window's cold pixel gone)",
+  "standin": "",
+  "native": "native/ROOM-BRIDGE--bay-plink-off.png",
+  "full": "full/ROOM-BRIDGE--bay-plink-off.png"
+ },
+ {
+  "key": "CAST-RUMPT-WINDOW@silhouette",
+  "id": "CAST-RUMPT-WINDOW",
+  "state": "silhouette",
+  "module": "shared/pixel/cast/civic-extras.ts drawRumptWindow",
+  "note": "RUMPT, silhouette only (props and pose): plain head, square shoulders, the long tie, the phone",
+  "standin": "",
+  "native": "native/CAST-RUMPT-WINDOW--silhouette.png",
+  "full": "full/CAST-RUMPT-WINDOW--silhouette.png"
+ },
+ {
+  "key": "KIT-NEWSCLIP@anchor",
+  "id": "KIT-NEWSCLIP",
+  "state": "anchor",
+  "module": "shared/pixel/rooms/bay-bridge.ts drawNewsClip + cast/civic-extras.ts drawAnchor",
+  "note": "the invented anchor clip: mouth shut / open (run a beat late), the grey tag",
+  "standin": "",
+  "native": "native/KIT-NEWSCLIP--anchor.png",
+  "full": "full/KIT-NEWSCLIP--anchor.png"
+ },
+ {
+  "key": "ROOM-SENATE@wide",
+  "id": "ROOM-SENATE",
+  "state": "wide",
+  "module": "shared/pixel/rooms/senate.ts drawSenateWide",
+  "note": "15.02 [W] the hearing room: the dais (the clone in the better chair), the gallery, the witness table",
+  "standin": "",
+  "native": "native/ROOM-SENATE--wide.png",
+  "full": "full/ROOM-SENATE--wide.png"
+ },
+ {
+  "key": "ROOM-SENATE@wide-lean-lit",
+  "id": "ROOM-SENATE",
+  "state": "wide-lean-lit",
+  "module": "shared/pixel/rooms/senate.ts drawSenateWide",
+  "note": "15.10 the dais leans in; one microphone's red light comes on",
+  "standin": "",
+  "native": "native/ROOM-SENATE--wide-lean-lit.png",
+  "full": "full/ROOM-SENATE--wide-lean-lit.png"
+ },
+ {
+  "key": "ROOM-SENATE@wide-wallet-gasp",
+  "id": "ROOM-SENATE",
+  "state": "wide-wallet-gasp",
+  "module": "shared/pixel/rooms/senate.ts drawSenateWide",
+  "note": "15.13 Mas holds the open wallet up to the dais; the gallery gasps (one held drawing)",
+  "standin": "",
+  "native": "native/ROOM-SENATE--wide-wallet-gasp.png",
+  "full": "full/ROOM-SENATE--wide-wallet-gasp.png"
+ },
+ {
+  "key": "ROOM-SENATE@dais-sheet-in",
+  "id": "ROOM-SENATE",
+  "state": "dais-sheet-in",
+  "module": "shared/pixel/rooms/senate.ts drawSenateDais",
+  "note": "15.16 [W] the dais: the sheet arrives from frame left into the clone's hand",
+  "standin": "",
+  "native": "native/ROOM-SENATE--dais-sheet-in.png",
+  "full": "full/ROOM-SENATE--dais-sheet-in.png"
+ },
+ {
+  "key": "ROOM-SENATE@dais-sheet-up",
+  "id": "ROOM-SENATE",
+  "state": "dais-sheet-up",
+  "module": "shared/pixel/rooms/senate.ts drawSenateDais",
+  "note": "15.16 they turn it over and hold its back up toward the witness table",
+  "standin": "",
+  "native": "native/ROOM-SENATE--dais-sheet-up.png",
+  "full": "full/ROOM-SENATE--dais-sheet-up.png"
+ },
+ {
+  "key": "ROOM-SENATE@dais-2s",
+  "id": "ROOM-SENATE",
+  "state": "dais-2s",
+  "module": "shared/pixel/rooms/senate.ts drawDais2S",
+  "note": "15.03 [2S] the chairman (matte) and THE CLONE (glossy), the better chair",
+  "standin": "",
+  "native": "native/ROOM-SENATE--dais-2s.png",
+  "full": "full/ROOM-SENATE--dais-2s.png"
+ },
+ {
+  "key": "ROOM-SENATE@witness-2s",
+  "id": "ROOM-SENATE",
+  "state": "witness-2s",
+  "module": "shared/pixel/rooms/senate.ts drawWitness2S",
+  "note": "15.04-15.05 [2S] MAS + SUCRAM (typing, not looking up)",
+  "standin": "",
+  "native": "native/ROOM-SENATE--witness-2s.png",
+  "full": "full/ROOM-SENATE--witness-2s.png"
+ },
+ {
+  "key": "ROOM-SENATE@witness-2s-stamp",
+  "id": "ROOM-SENATE",
+  "state": "witness-2s-stamp",
+  "module": "shared/pixel/rooms/senate.ts drawWitness2S",
+  "note": "15.14 Sucram stamps, the moth dodging over the pad",
+  "standin": "",
+  "native": "native/ROOM-SENATE--witness-2s-stamp.png",
+  "full": "full/ROOM-SENATE--witness-2s-stamp.png"
+ },
+ {
+  "key": "ROOM-SENATE@ots-card",
+  "id": "ROOM-SENATE",
+  "state": "ots-card",
+  "module": "shared/pixel/rooms/senate.ts drawSenateOTS",
+  "note": "15.07 [OTS] from behind Mas onto the dais: the chairman with his card, the clone at his hand",
+  "standin": "",
+  "native": "native/ROOM-SENATE--ots-card.png",
+  "full": "full/ROOM-SENATE--ots-card.png"
+ },
+ {
+  "key": "ROOM-SENATE@ots-take",
+  "id": "ROOM-SENATE",
+  "state": "ots-take",
+  "module": "shared/pixel/rooms/senate.ts drawSenateOTS",
+  "note": "15.07 the clone takes the next card out of his hand and reads it for him",
+  "standin": "",
+  "native": "native/ROOM-SENATE--ots-take.png",
+  "full": "full/ROOM-SENATE--ots-take.png"
+ },
+ {
+  "key": "ROOM-SENATE@mcu-clone",
+  "id": "ROOM-SENATE",
+  "state": "mcu-clone",
+  "module": "shared/pixel/rooms/senate.ts drawSenateMCU",
+  "note": "15.01 [MCU] the voice finds a mouth: THE CLONE at the mic, the 1-px highlight, the gloss",
+  "standin": "",
+  "native": "native/ROOM-SENATE--mcu-clone.png",
+  "full": "full/ROOM-SENATE--mcu-clone.png"
+ },
+ {
+  "key": "ROOM-SENATE@mcu-chair",
+  "id": "ROOM-SENATE",
+  "state": "mcu-chair",
+  "module": "shared/pixel/rooms/senate.ts drawSenateMCU",
+  "note": "15.06 [MCU] the chairman reading from a card",
+  "standin": "",
+  "native": "native/ROOM-SENATE--mcu-chair.png",
+  "full": "full/ROOM-SENATE--mcu-chair.png"
+ },
+ {
+  "key": "ROOM-SENATE@mcu-sucram",
+  "id": "ROOM-SENATE",
+  "state": "mcu-sucram",
+  "module": "shared/pixel/rooms/senate.ts drawSenateMCU",
+  "note": "15.18 [MCU] SUCRAM stares at it (cut on the stare)",
+  "standin": "",
+  "native": "native/ROOM-SENATE--mcu-sucram.png",
+  "full": "full/ROOM-SENATE--mcu-sucram.png"
+ },
+ {
+  "key": "PROP-WALLET@open-moth",
+  "id": "PROP-WALLET",
+  "state": "open-moth",
+  "module": "shared/pixel/kits/senate-props.ts drawWalletECU",
+  "note": "15.12 [ECU] one card, HEALTH INSURANCE; the moth out (3 drawings)",
+  "standin": "",
+  "native": "native/PROP-WALLET--open-moth.png",
+  "full": "full/PROP-WALLET--open-moth.png"
+ },
+ {
+  "key": "PROP-SHEET@high-stamp",
+  "id": "PROP-SHEET",
+  "state": "high-stamp",
+  "module": "shared/pixel/kits/senate-props.ts drawSheetHigh",
+  "note": "15.15 [HIGH] PLEASE REGULATE ME, signed, sliding; Sucram's stamp comes down mid-slide",
+  "standin": "",
+  "native": "native/PROP-SHEET--high-stamp.png",
+  "full": "full/PROP-SHEET--high-stamp.png"
+ },
+ {
+  "key": "PROP-SHEET@high-done",
+  "id": "PROP-SHEET",
+  "state": "high-done",
+  "module": "shared/pixel/kits/senate-props.ts drawSheetHigh",
+  "note": "15.15 stamped: CALLED IT. (BEFORE LAUNCH.), on its way to frame right",
+  "standin": "",
+  "native": "native/PROP-SHEET--high-done.png",
+  "full": "full/PROP-SHEET--high-done.png"
+ },
+ {
+  "key": "PROP-SHEET@back",
+  "id": "PROP-SHEET",
+  "state": "back",
+  "module": "shared/pixel/kits/senate-props.ts drawSheetBack",
+  "note": "15.17 [ECU] the back, already stamped in the same red: CALLED IT. (BEFORE SUCRAM.)",
+  "standin": "",
+  "native": "native/PROP-SHEET--back.png",
+  "full": "full/PROP-SHEET--back.png"
+ },
+ {
+  "key": "CAST-LAHTNEMULB@bust",
+  "id": "CAST-LAHTNEMULB",
+  "state": "bust",
+  "module": "shared/pixel/cast/lahtnemulb.ts",
+  "note": "the chairman (matte) and THE CLONE (glossy: the hair's highlight, specular points)",
+  "standin": "",
+  "native": "native/CAST-LAHTNEMULB--bust.png",
+  "full": "full/CAST-LAHTNEMULB--bust.png"
+ },
+ {
+  "key": "CAST-LAHTNEMULB@room",
+  "id": "CAST-LAHTNEMULB",
+  "state": "room",
+  "module": "shared/pixel/cast/lahtnemulb.ts",
+  "note": "room sprites (flipped: the dais faces left): card · down · lean · up (the sheet), chairman / clone",
+  "standin": "",
+  "native": "native/CAST-LAHTNEMULB--room.png",
+  "full": "full/CAST-LAHTNEMULB--room.png"
+ },
+ {
+  "key": "CAST-SUCRAM@bust-room",
+  "id": "CAST-SUCRAM",
+  "state": "bust-room",
+  "module": "shared/pixel/cast/sucram.ts",
+  "note": "SUCRAM: tweed blazer, open collar, round glasses; phone · stamp · slam; room sprites",
+  "standin": "",
+  "native": "native/CAST-SUCRAM--bust-room.png",
+  "full": "full/CAST-SUCRAM--bust-room.png"
+ },
+ {
+  "key": "CAST-SENATORS@room-gallery",
+  "id": "CAST-SENATORS",
+  "state": "room-gallery",
+  "module": "shared/pixel/cast/civic-extras.ts",
+  "note": "the senators (3 variants: sit, lean, up) and the gallery's tiled drawing, held and the gasp",
+  "standin": "",
+  "native": "native/CAST-SENATORS--room-gallery.png",
+  "full": "full/CAST-SENATORS--room-gallery.png"
+ },
+ {
+  "key": "KIT-TOUR-POSTER@strip-cancelled",
+  "id": "KIT-TOUR-POSTER",
+  "state": "strip-cancelled",
+  "module": "shared/pixel/kits/tour-poster.ts",
+  "note": "16.01 the one held poster: the review-quote strip, EU CANCELLED",
+  "standin": "",
+  "native": "native/KIT-TOUR-POSTER--strip-cancelled.png",
+  "full": "full/KIT-TOUR-POSTER--strip-cancelled.png"
+ },
+ {
+  "key": "KIT-TOUR-POSTER@post",
+  "id": "KIT-TOUR-POSTER",
+  "state": "post",
+  "module": "shared/pixel/kits/tour-poster.ts",
+  "note": "16.01 his post pops over it: \"…no plans to leave\"",
+  "standin": "",
+  "native": "native/KIT-TOUR-POSTER--post.png",
+  "full": "full/KIT-TOUR-POSTER--post.png"
+ },
+ {
+  "key": "KIT-TOUR-POSTER@un-added",
+  "id": "KIT-TOUR-POSTER",
+  "state": "un-added",
+  "module": "shared/pixel/kits/tour-poster.ts",
+  "note": "16.01 UN-CANCELLED lands over it; the last slot stamps itself ADDED DUE TO POPULAR DEMAND",
+  "standin": "",
+  "native": "native/KIT-TOUR-POSTER--un-added.png",
+  "full": "full/KIT-TOUR-POSTER--un-added.png"
+ },
+ {
+  "key": "KIT-TOUR-POSTER@smile",
+  "id": "KIT-TOUR-POSTER",
+  "state": "smile",
+  "module": "shared/pixel/kits/tour-poster.ts drawPosterSmile",
+  "note": "16.01 (16.05 merged) the cut-in on the poster's photo: the one-pixel smile, held",
+  "standin": "",
+  "native": "native/KIT-TOUR-POSTER--smile.png",
+  "full": "full/KIT-TOUR-POSTER--smile.png"
+ },
+ {
+  "key": "ROOM-ROOFTOP@wide-signers",
+  "id": "ROOM-ROOFTOP",
+  "state": "wide-signers",
+  "module": "shared/pixel/rooms/rooftop.ts drawRooftopWide",
+  "note": "17.01 [W] the table under the sky, the statement typing across the top; the signers queue in",
+  "standin": "",
+  "native": "native/ROOM-ROOFTOP--wide-signers.png",
+  "full": "full/ROOM-ROOFTOP--wide-signers.png"
+ },
+ {
+  "key": "ROOM-ROOFTOP@wide-register",
+  "id": "ROOM-ROOFTOP",
+  "state": "wide-register",
+  "module": "shared/pixel/rooms/rooftop.ts drawRooftopWide",
+  "note": "17.03-17.04 the brass register rolls in on its own; NESNEJ behind it, arms spread",
+  "standin": "",
+  "native": "native/ROOM-ROOFTOP--wide-register.png",
+  "full": "full/ROOM-ROOFTOP--wide-register.png"
+ },
+ {
+  "key": "ROOM-ROOFTOP@wide-crack",
+  "id": "ROOM-ROOFTOP",
+  "state": "wide-crack",
+  "module": "shared/pixel/rooms/rooftop.ts drawRooftopWide",
+  "note": "17.11 the hairline crack runs L -> R (12 f); Nesnej and Mario have looked up",
+  "standin": "",
+  "native": "native/ROOM-ROOFTOP--wide-crack.png",
+  "full": "full/ROOM-ROOFTOP--wide-crack.png"
+ },
+ {
+  "key": "ROOM-ROOFTOP@2s-sheet",
+  "id": "ROOM-ROOFTOP",
+  "state": "2s-sheet",
+  "module": "shared/pixel/rooms/rooftop.ts drawRooftop2S",
+  "note": "17.02 [2S] Mario writes the footnote, the pen tight; Mas's hand out for it",
+  "standin": "",
+  "native": "native/ROOM-ROOFTOP--2s-sheet.png",
+  "full": "full/ROOM-ROOFTOP--2s-sheet.png"
+ },
+ {
+  "key": "ROOM-ROOFTOP@2s-turn",
+  "id": "ROOM-ROOFTOP",
+  "state": "2s-turn",
+  "module": "shared/pixel/rooms/rooftop.ts drawRooftop2S",
+  "note": "17.05 the pen still in Mario's hand, Mas's half out; they turn to the register (O.S. right)",
+  "standin": "",
+  "native": "native/ROOM-ROOFTOP--2s-turn.png",
+  "full": "full/ROOM-ROOFTOP--2s-turn.png"
+ },
+ {
+  "key": "ROOM-ROOFTOP@ots-nesnej",
+  "id": "ROOM-ROOFTOP",
+  "state": "ots-nesnej",
+  "module": "shared/pixel/rooms/rooftop.ts drawRooftopOTS",
+  "note": "17.06 [OTS] from behind Mario's finger onto NESNEJ at the register: \"The more you buy…\"",
+  "standin": "",
+  "native": "native/ROOM-ROOFTOP--ots-nesnej.png",
+  "full": "full/ROOM-ROOFTOP--ots-nesnej.png"
+ },
+ {
+  "key": "PROP-REGISTER@key-ecu",
+  "id": "PROP-REGISTER",
+  "state": "key-ecu",
+  "module": "shared/pixel/kits/register.ts drawKeyECU",
+  "note": "17.07 [ECU] he presses one key (KA-CHING)",
+  "standin": "",
+  "native": "native/PROP-REGISTER--key-ecu.png",
+  "full": "full/PROP-REGISTER--key-ecu.png"
+ },
+ {
+  "key": "PROP-REGISTER@ledger",
+  "id": "PROP-REGISTER",
+  "state": "ledger",
+  "module": "shared/pixel/kits/register.ts ledgerPrint",
+  "note": "17.08 the LEDGER flash-print: INVIDIA · $1,000,000,000,000 (INTRADAY)",
+  "standin": "",
+  "native": "native/PROP-REGISTER--ledger.png",
+  "full": "full/PROP-REGISTER--ledger.png"
+ },
+ {
+  "key": "PROP-REGISTER@window",
+  "id": "PROP-REGISTER",
+  "state": "window",
+  "module": "shared/pixel/kits/register.ts drawRegisterWindow",
+  "note": "17.09 [INSERT] the figure holds in the register's window to read",
+  "standin": "",
+  "native": "native/PROP-REGISTER--window.png",
+  "full": "full/PROP-REGISTER--window.png"
+ },
+ {
+  "key": "PROP-REGISTER@purchase-order",
+  "id": "PROP-REGISTER",
+  "state": "purchase-order",
+  "module": "shared/pixel/kits/register.ts drawPurchaseOrder",
+  "note": "17.10 [INSERT] the pen in Mario's hand is now a purchase order: AI CHIPS · QTY: MORE",
+  "standin": "",
+  "native": "native/PROP-REGISTER--purchase-order.png",
+  "full": "full/PROP-REGISTER--purchase-order.png"
+ },
+ {
+  "key": "PROP-GLASS-CRACK@run-0",
+  "id": "PROP-GLASS-CRACK",
+  "state": "run-0",
+  "module": "shared/pixel/rooms/rooftop.ts drawGlassCrack",
+  "note": "17.12 [ECU] Mas's glass: the crack in the water; the water doesn't move",
+  "standin": "",
+  "native": "native/PROP-GLASS-CRACK--run-0.png",
+  "full": "full/PROP-GLASS-CRACK--run-0.png"
+ },
+ {
+  "key": "PROP-GLASS-CRACK@run-3",
+  "id": "PROP-GLASS-CRACK",
+  "state": "run-3",
+  "module": "shared/pixel/rooms/rooftop.ts drawGlassCrack",
+  "note": "17.12 the reflected crack runs on after the sky's has stopped, across his small reflection",
+  "standin": "",
+  "native": "native/PROP-GLASS-CRACK--run-3.png",
+  "full": "full/PROP-GLASS-CRACK--run-3.png"
+ },
+ {
+  "key": "CAST-NESNEJ@bust-room",
+  "id": "CAST-NESNEJ",
+  "state": "bust-room",
+  "module": "shared/pixel/cast/nesnej.ts",
+  "note": "NESNEJ (the roll-call design re-lit for the sun): spread · key; room sprites; the register",
+  "standin": "",
+  "native": "native/CAST-NESNEJ--bust-room.png",
+  "full": "full/CAST-NESNEJ--bust-room.png"
+ },
+ {
+  "key": "CAST-SIGNERS@room",
+  "id": "CAST-SIGNERS",
+  "state": "room",
+  "module": "shared/pixel/cast/civic-extras.ts drawSigner",
+  "note": "the signers (unplated; v 0 holds a chess piece: the insider egg): stand · sign · walk",
+  "standin": "",
+  "native": "native/CAST-SIGNERS--room.png",
+  "full": "full/CAST-SIGNERS--room.png"
+ },
+ {
+  "key": "ROOM-DARK-A3@box-slide",
+  "id": "ROOM-DARK-A3",
+  "state": "box-slide",
+  "module": "shared/pixel/rooms/darkroom-act3.ts drawDarkA3",
+  "note": "18.01 [2S] the home room: the outline on the wall, empty; the slot slides out a box like a tray",
+  "standin": "",
+  "native": "native/ROOM-DARK-A3--box-slide.png",
+  "full": "full/ROOM-DARK-A3--box-slide.png"
+ },
+ {
+  "key": "ROOM-DARK-A3@box-landed",
+  "id": "ROOM-DARK-A3",
+  "state": "box-landed",
+  "module": "shared/pixel/rooms/darkroom-act3.ts drawDarkA3",
+  "note": "18.01 the box on the desk: COINWORLD",
+  "standin": "",
+  "native": "native/ROOM-DARK-A3--box-landed.png",
+  "full": "full/ROOM-DARK-A3--box-landed.png"
+ },
+ {
+  "key": "PROP-COINWORLD@label",
+  "id": "PROP-COINWORLD",
+  "state": "label",
+  "module": "shared/pixel/rooms/darkroom-act3.ts drawLabelECU",
+  "note": "18.02 [ECU] the label, legible as he reaches for the lid: FROM / SHIP TO",
+  "standin": "",
+  "native": "native/PROP-COINWORLD--label.png",
+  "full": "full/PROP-COINWORLD--label.png"
+ },
+ {
+  "key": "ROOM-DARK-A3@orb-rise-1",
+  "id": "ROOM-DARK-A3",
+  "state": "orb-rise-1",
+  "module": "shared/pixel/rooms/darkroom-act3.ts drawDarkA3",
+  "note": "18.03 he lifts the lid; the Orb rises out of the foam, step 1 of 3",
+  "standin": "",
+  "native": "native/ROOM-DARK-A3--orb-rise-1.png",
+  "full": "full/ROOM-DARK-A3--orb-rise-1.png"
+ },
+ {
+  "key": "ROOM-DARK-A3@orb-rise-3",
+  "id": "ROOM-DARK-A3",
+  "state": "orb-rise-3",
+  "module": "shared/pixel/rooms/darkroom-act3.ts drawDarkA3",
+  "note": "18.03 at eye level, the lens finds him (3 drawings) and dilates",
+  "standin": "",
+  "native": "native/ROOM-DARK-A3--orb-rise-3.png",
+  "full": "full/ROOM-DARK-A3--orb-rise-3.png"
+ },
+ {
+  "key": "ROOM-DARK-A3@scan-mcu",
+  "id": "ROOM-DARK-A3",
+  "state": "scan-mcu",
+  "module": "shared/pixel/rooms/darkroom-act3.ts drawScanMCU",
+  "note": "18.04 [MCU] the thin cyan cone across his face (the GLYPH tokens go inside its mask, 5 f)",
+  "standin": "",
+  "native": "native/ROOM-DARK-A3--scan-mcu.png",
+  "full": "full/ROOM-DARK-A3--scan-mcu.png"
+ },
+ {
+  "key": "ROOM-DARK-A3@scan-toast",
+  "id": "ROOM-DARK-A3",
+  "state": "scan-toast",
+  "module": "shared/pixel/rooms/darkroom-act3.ts drawScanMCU",
+  "note": "18.05 the cone gone; the toast pops beside the Orb: verified: human",
+  "standin": "",
+  "native": "native/ROOM-DARK-A3--scan-toast.png",
+  "full": "full/ROOM-DARK-A3--scan-toast.png"
+ },
+ {
+  "key": "ROOM-DARK-A3@drift",
+  "id": "ROOM-DARK-A3",
+  "state": "drift",
+  "module": "shared/pixel/rooms/darkroom-act3.ts drawDarkA3",
+  "note": "18.06 [2S] the Orb drifts toward the outline on the wallpaper (whole-px steps)",
+  "standin": "",
+  "native": "native/ROOM-DARK-A3--drift.png",
+  "full": "full/ROOM-DARK-A3--drift.png"
+ },
+ {
+  "key": "ROOM-DARK-A3@home",
+  "id": "ROOM-DARK-A3",
+  "state": "home",
+  "module": "shared/pixel/rooms/darkroom-act3.ts drawDarkA3",
+  "note": "18.06 it settles exactly into the outline: \"you can stay.\"",
+  "standin": "",
+  "native": "native/ROOM-DARK-A3--home.png",
+  "full": "full/ROOM-DARK-A3--home.png"
+ },
+ {
+  "key": "ROOM-DARK-A3@catching-up",
+  "id": "ROOM-DARK-A3",
+  "state": "catching-up",
+  "module": "shared/pixel/rooms/darkroom-act3.ts drawDarkA3",
+  "note": "19.01 [2S] the iris flicks to the monitor (the toast is dropped in the beat plan)",
+  "standin": "",
+  "native": "native/ROOM-DARK-A3--catching-up.png",
+  "full": "full/ROOM-DARK-A3--catching-up.png"
+ },
+ {
+  "key": "UI-MONITOR@lighthouse",
+  "id": "UI-MONITOR",
+  "state": "lighthouse",
+  "module": "shared/pixel/kits/monitor-items.ts lighthousePainter + kits/mas-monitor.ts",
+  "note": "19.11 [POV] MISANTHROPIC's lighthouse, its own sign; Mario on phone one, finger up",
+  "standin": "",
+  "native": "native/UI-MONITOR--lighthouse.png",
+  "full": "full/UI-MONITOR--lighthouse.png"
+ },
+ {
+  "key": "ROOM-DARK-A3@orb-ots",
+  "id": "ROOM-DARK-A3",
+  "state": "orb-ots",
+  "module": "shared/pixel/rooms/darkroom-act3.ts drawOrbOTS",
+  "note": "19.12 [OTS] from behind the Orb: Mas, lit cyan, watching the lighthouse past him",
+  "standin": "",
+  "native": "native/ROOM-DARK-A3--orb-ots.png",
+  "full": "full/ROOM-DARK-A3--orb-ots.png"
+ },
+ {
+  "key": "UI-MONITOR@second-phone",
+  "id": "UI-MONITOR",
+  "state": "second-phone",
+  "module": "shared/pixel/kits/monitor-items.ts lighthousePainter",
+  "note": "19.13 [POV] the second phone rings (NOZAMA · UP TO $4B); the rent meter spins",
+  "standin": "",
+  "native": "native/UI-MONITOR--second-phone.png",
+  "full": "full/UI-MONITOR--second-phone.png"
+ },
+ {
+  "key": "UI-TIDDER@ots-typing",
+  "id": "UI-TIDDER",
+  "state": "ots-typing",
+  "module": "shared/pixel/kits/tidder.ts + kits/mas-monitor.ts drawMonitorOTS",
+  "note": "20.01 [OTS] over his shoulder: the TIDDER reply box, typed in source casing",
+  "standin": "",
+  "native": "native/UI-TIDDER--ots-typing.png",
+  "full": "full/UI-TIDDER--ots-typing.png"
+ },
+ {
+  "key": "ROOM-DARK-A3@leds-off",
+  "id": "ROOM-DARK-A3",
+  "state": "leds-off",
+  "module": "shared/pixel/rooms/darkroom-act3.ts drawDarkA3 (ledsOff)",
+  "note": "20.02 [2S] the rack's LEDs stop, all of them; the Orb doesn't move",
+  "standin": "",
+  "native": "native/ROOM-DARK-A3--leds-off.png",
+  "full": "full/ROOM-DARK-A3--leds-off.png"
+ },
+ {
+  "key": "UI-TIDDER@posted",
+  "id": "UI-TIDDER",
+  "state": "posted",
+  "module": "shared/pixel/kits/tidder.ts",
+  "note": "20.03 [POV] he posts: the counter spins (a blur), the first reply legible",
+  "standin": "",
+  "native": "native/UI-TIDDER--posted.png",
+  "full": "full/UI-TIDDER--posted.png"
+ },
+ {
+  "key": "ROOM-DARK-A3@call",
+  "id": "ROOM-DARK-A3",
+  "state": "call",
+  "module": "shared/pixel/rooms/darkroom-act3.ts drawDarkA3 + kits/phone-high.ts phoneMini",
+  "note": "20.04 / 20.06 [2S] the call: GERG on speaker on the desk; the Orb's long look at him",
+  "standin": "",
+  "native": "native/ROOM-DARK-A3--call.png",
+  "full": "full/ROOM-DARK-A3--call.png"
+ },
+ {
+  "key": "UI-TIDDER@edit-tight",
+  "id": "UI-TIDDER",
+  "state": "edit-tight",
+  "module": "shared/pixel/kits/tidder.ts",
+  "note": "20.05 [POV] the edit, framed tight on the middle, rewriting letter by letter",
+  "standin": "",
+  "native": "native/UI-TIDDER--edit-tight.png",
+  "full": "full/UI-TIDDER--edit-tight.png"
+ },
+ {
+  "key": "UI-EO@pov-copies",
+  "id": "UI-EO",
+  "state": "pov-copies",
+  "module": "shared/pixel/kits/eo-signing.ts",
+  "note": "21.02 [POV] NEDIB, pen raised, over an order off both ends of a very big desk; the copies; Neleh's egg",
+  "standin": "",
+  "native": "native/UI-EO--pov-copies.png",
+  "full": "full/UI-EO--pov-copies.png"
+ },
+ {
+  "key": "UI-EO@pov-turn",
+  "id": "UI-EO",
+  "state": "pov-turn",
+  "module": "shared/pixel/kits/eo-signing.ts",
+  "note": "21.03 the real one turns to look at them: \"When the hell did I say that?\"; the stat row",
+  "standin": "",
+  "native": "native/UI-EO--pov-turn.png",
+  "full": "full/UI-EO--pov-turn.png"
+ },
+ {
+  "key": "ROOM-DARK-A3@three-nedibs",
+  "id": "ROOM-DARK-A3",
+  "state": "three-nedibs",
+  "module": "shared/pixel/rooms/darkroom-act3.ts drawDarkA3 + kits/eo-signing.ts (mini)",
+  "note": "21.04 [2S·SCR] Mas, the Orb, three NEDIBs on the monitor; the iris on the one with the pen",
+  "standin": "",
+  "native": "native/ROOM-DARK-A3--three-nedibs.png",
+  "full": "full/ROOM-DARK-A3--three-nedibs.png"
+ },
+ {
+  "key": "UI-EO@pov-sign",
+  "id": "UI-EO",
+  "state": "pov-sign",
+  "module": "shared/pixel/kits/eo-signing.ts",
+  "note": "21.05 [POV] he signs, in ink; the copies clap, and keep clapping",
+  "standin": "",
+  "native": "native/UI-EO--pov-sign.png",
+  "full": "full/UI-EO--pov-sign.png"
+ },
+ {
+  "key": "UI-DEVDAY@rise-tasya",
+  "id": "UI-DEVDAY",
+  "state": "rise-tasya",
+  "module": "shared/pixel/kits/monitor-items.ts devdayPainter",
+  "note": "22.01 [POV] DevDay: the odometer up through the floor, 100,000,000 / WEEK; TASYA walks on",
+  "standin": "",
+  "native": "native/UI-DEVDAY--rise-tasya.png",
+  "full": "full/UI-DEVDAY--rise-tasya.png"
+ },
+ {
+  "key": "UI-DEVDAY@rise-1",
+  "id": "UI-DEVDAY",
+  "state": "rise-1",
+  "module": "shared/pixel/kits/monitor-items.ts devdayPainter",
+  "note": "22.01 the odometer's first held step up; Tasya not yet on",
+  "standin": "",
+  "native": "native/UI-DEVDAY--rise-1.png",
+  "full": "full/UI-DEVDAY--rise-1.png"
+ },
+ {
+  "key": "UI-PHONE-HIGH@prompt-hover",
+  "id": "UI-PHONE-HIGH",
+  "state": "prompt-hover",
+  "module": "shared/pixel/kits/phone-high.ts",
+  "note": "22.02 [HIGH] How did the keynote go?; the thumb hovering over the reply strip (the new pose)",
+  "standin": "",
+  "native": "native/UI-PHONE-HIGH--prompt-hover.png",
+  "full": "full/UI-PHONE-HIGH--prompt-hover.png"
+ },
+ {
+  "key": "UI-PHONE-HIGH@prompt-tap",
+  "id": "UI-PHONE-HIGH",
+  "state": "prompt-tap",
+  "module": "shared/pixel/kits/phone-high.ts",
+  "note": "22.02 then tapping: super",
+  "standin": "",
+  "native": "native/UI-PHONE-HIGH--prompt-tap.png",
+  "full": "full/UI-PHONE-HIGH--prompt-tap.png"
+ },
+ {
+  "key": "ROOM-DARK-A3@phone-between",
+  "id": "ROOM-DARK-A3",
+  "state": "phone-between",
+  "module": "shared/pixel/rooms/darkroom-act3.ts drawDarkA3",
+  "note": "22.03 [2S] Mas and the Orb, the phone between them; its iris lingers on the phone",
+  "standin": "",
+  "native": "native/ROOM-DARK-A3--phone-between.png",
+  "full": "full/ROOM-DARK-A3--phone-between.png"
+ },
+ {
+  "key": "UI-MONITOR@cold-open",
+  "id": "UI-MONITOR",
+  "state": "cold-open",
+  "module": "shared/pixel/kits/monitor-items.ts coldOpenPainter (rooms/apec-stage.ts: art-a's)",
+  "note": "23.01 [POV] the cold open's frame on the monitor: we've caught up",
+  "standin": "",
+  "native": "native/UI-MONITOR--cold-open.png",
+  "full": "full/UI-MONITOR--cold-open.png"
+ },
+ {
+  "key": "UI-PHONE-HIGH@reminder",
+  "id": "UI-PHONE-HIGH",
+  "state": "reminder",
+  "module": "shared/pixel/kits/phone-high.ts",
+  "note": "23.02 [HIGH] Board sync · Fri 12:00, the four circles; the Orb's iris stops on the black square",
+  "standin": "",
+  "native": "native/UI-PHONE-HIGH--reminder.png",
+  "full": "full/UI-PHONE-HIGH--reminder.png"
+ },
+ {
+  "key": "ROOM-DARK-A3@reminder-dark",
+  "id": "ROOM-DARK-A3",
+  "state": "reminder-dark",
+  "module": "shared/pixel/rooms/darkroom-act3.ts drawDarkA3",
+  "note": "23.03 [2S] the rail rolls to Friday; on the desk the reminder goes dark on its own",
+  "standin": "",
+  "native": "native/ROOM-DARK-A3--reminder-dark.png",
+  "full": "full/ROOM-DARK-A3--reminder-dark.png"
+ },
+ {
+  "key": "ROOM-DARK-A3@tag-arrive",
+  "id": "ROOM-DARK-A3",
+  "state": "tag-arrive",
+  "module": "shared/pixel/rooms/darkroom-act3.ts drawDarkA3 + kits/mas-monitor.ts screenDim",
+  "note": "32.01 [2S] three marks in the wood now; the monitor dim, sound off, nothing to read",
+  "standin": "",
+  "native": "native/ROOM-DARK-A3--tag-arrive.png",
+  "full": "full/ROOM-DARK-A3--tag-arrive.png"
+ },
+ {
+  "key": "PROP-EMIT@slot",
+  "id": "PROP-EMIT",
+  "state": "slot",
+  "module": "shared/pixel/rooms/darkroom-act3.ts drawSlotECU + kits/emit-cover.ts",
+  "note": "32.02 [INSERT] the rack slot ejects EMIT's year-end issue: CEO OF THE YEAR",
+  "standin": "",
+  "native": "native/PROP-EMIT--slot.png",
+  "full": "full/PROP-EMIT--slot.png"
+ },
+ {
+  "key": "PROP-EMIT@cover-mcu",
+  "id": "PROP-EMIT",
+  "state": "cover-mcu",
+  "module": "shared/pixel/rooms/darkroom-act3.ts drawCoverMCU",
+  "note": "32.03 [MCU] the cover held up beside his face: the same expression",
+  "standin": "",
+  "native": "native/PROP-EMIT--cover-mcu.png",
+  "full": "full/PROP-EMIT--cover-mcu.png"
+ },
+ {
+  "key": "ROOM-DARK-A3@scan-twice",
+  "id": "ROOM-DARK-A3",
+  "state": "scan-twice",
+  "module": "shared/pixel/rooms/darkroom-act3.ts drawDarkA3 + kits/orb-toast.ts",
+  "note": "32.04 [2S] the fan re-sweeps the cover: re-scanning… (his own verdict came at once)",
+  "standin": "",
+  "native": "native/ROOM-DARK-A3--scan-twice.png",
+  "full": "full/ROOM-DARK-A3--scan-twice.png"
+ },
+ {
+  "key": "PROP-EMIT@sizes",
+  "id": "PROP-EMIT",
+  "state": "sizes",
+  "module": "shared/pixel/kits/emit-cover.ts",
+  "note": "the cover: ecu · mcu · desk · wall (each its own layout)",
+  "standin": "",
+  "native": "native/PROP-EMIT--sizes.png",
+  "full": "full/PROP-EMIT--sizes.png"
+ },
+ {
+  "key": "ROOM-TAG-WALL@pinned",
+  "id": "ROOM-TAG-WALL",
+  "state": "pinned",
+  "module": "shared/pixel/rooms/darkroom-act3.ts drawBackWall",
+  "note": "32.07 [W] the back wall: the cover pinned up, the GUEST lanyard framed beside it",
+  "standin": "",
+  "native": "native/ROOM-TAG-WALL--pinned.png",
+  "full": "full/ROOM-TAG-WALL--pinned.png"
+ },
+ {
+  "key": "ROOM-DARK-A3@thud-fall",
+  "id": "ROOM-DARK-A3",
+  "state": "thud-fall",
+  "module": "shared/pixel/rooms/darkroom-act3.ts drawDarkA3 + kits/grey-lady.ts drawPaperPlate",
+  "note": "33.01 [W] a newspaper drops flat onto the desk from above frame (held steps)",
+  "standin": "",
+  "native": "native/ROOM-DARK-A3--thud-fall.png",
+  "full": "full/ROOM-DARK-A3--thud-fall.png"
+ },
+ {
+  "key": "ROOM-DARK-A3@thud",
+  "id": "ROOM-DARK-A3",
+  "state": "thud",
+  "module": "shared/pixel/rooms/darkroom-act3.ts drawDarkA3",
+  "note": "33.01 THUD: flat on the desk (the room's 2 px shake and the hop are the shot's)",
+  "standin": "",
+  "native": "native/ROOM-DARK-A3--thud.png",
+  "full": "full/ROOM-DARK-A3--thud.png"
+ },
+ {
+  "key": "PROP-GREY-LADY@front-page",
+  "id": "PROP-GREY-LADY",
+  "state": "front-page",
+  "module": "shared/pixel/kits/grey-lady.ts drawFrontPageHigh",
+  "note": "33.02 [HIGH] a plain serif masthead, the columns, the clerk's stamp, held to read",
+  "standin": "",
+  "native": "native/PROP-GREY-LADY--front-page.png",
+  "full": "full/PROP-GREY-LADY--front-page.png"
+ },
+ {
+  "key": "ROOM-DARK-A3@profile-glass",
+  "id": "ROOM-DARK-A3",
+  "state": "profile-glass",
+  "module": "shared/pixel/rooms/darkroom-act3.ts drawProfileGlass",
+  "note": "33.04 [MCU·PF] Mas, his glass at his hand in frame, its water line flat: \"noted.\"",
+  "standin": "",
+  "native": "native/ROOM-DARK-A3--profile-glass.png",
+  "full": "full/ROOM-DARK-A3--profile-glass.png"
+ },
+ {
+  "key": "KIT-ORB-TOAST@toasts-fan",
+  "id": "KIT-ORB-TOAST",
+  "state": "toasts-fan",
+  "module": "shared/pixel/kits/orb-toast.ts",
+  "note": "the Orb's toasts (verdict · working · note) and a scan fan on the sheet's backdrop",
+  "standin": "",
+  "native": "native/KIT-ORB-TOAST--toasts-fan.png",
+  "full": "full/KIT-ORB-TOAST--toasts-fan.png"
+ }
+]

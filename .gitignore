@@ -77,3 +77,6 @@ out/**/*.flac
 audio/**/*.flac
 # SFX library renders (regenerate with audio/sfx/scripts/build.py; the manifest stays tracked)
 audio/sfx/wav/*.wav
+
+# full-v3 art: the 4x copies are reproducible from native/ (the sheet tools)
+out/ep01/full-v3/assets/*/full/

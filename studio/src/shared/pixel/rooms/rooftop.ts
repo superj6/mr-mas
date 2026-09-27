@@ -1,0 +1,277 @@
+// MR. MAS — shared room: EXT. A ROOFTOP SIGNING TABLE — DAY (Ep1 sc 17; new file, owned by the `v3-art-b` pass). A 480 x
+// 203 room plate and its setups. The script's PLAN, kept: the long table runs across the frame under the sky, the sheet
+// at its centre; the signers queue in from frame right and sign facing us; MAS and MARIO sign last and stay at the
+// table, Mas frame left of Mario; the register rolls in from frame right and NESNEJ stands behind it at frame right,
+// facing left; the crack runs across the sky left to right. A perfect blue sky (the show's one open daylight: the
+// periwinkle F / N8 / G6 ramp), a stone parapet, the city's tops far below in haze; a white tablecloth.
+//
+// Entry points (each paints rows 0..202 of `b`; deterministic on its state):
+//   drawRooftopWide(b, f, st)    [W] (17.01, 17.03, 17.04, 17.11): `signers` who is at the table (the queue from the
+//                                right, each signing in turn), `register` its roll-in position 0 (off) .. 1 (stopped at
+//                                Nesnej), `crack` 0..1 its whole-pixel run L -> R (12 frames), `look` who looks up
+//   drawQuoteBox(b, s, typed)    the statement typing across the top of the sky, held to read (a GFX plate)
+//   drawRooftop2S(b, f, st)      [2S] (17.02, 17.05) MAS + MARIO at the sheet: Mario writing under his name, the pen
+//                                tight; Mas's hand out for it; `turn` both look right to the register (O.S.)
+//   drawRooftopOTS(b, f, st)     [OTS] (17.06) from behind Mario (his shoulder and his raised finger big, frame left)
+//                                onto NESNEJ behind the register, frame right, arms spread like a gift
+//   drawGlassCrack(b, f, st)     [ECU] (17.12) Mas's glass on the table: the crack in the water, the water not moving;
+//                                `run` 0..3 the reflected crack's extra whole-pixel steps after the sky's has stopped,
+//                                until it runs across his small reflection
+import {Buf, rect, line, ellipse, hash, bayer, clamp} from '../px';
+import {PAL, stepColor} from '../palette';
+import {blitImg, Img} from '../figure';
+import {text, textWidth} from '../font';
+import {pt, pw, pwrap} from '../kits/uitype';
+import {drawSigner} from '../cast/civic-extras';
+import {drawNesnejRoom, nesnejBust, NESNEJ_BUST_DEFAULT, NesnejBustState} from '../cast/nesnej';
+import {drawMasStand, MAS_STAND_DEFAULT} from '../cast/mas-stand';
+import {masPortrait, MAS_PORTRAIT_DEFAULT, MasPortraitState} from '../cast/mas';
+import {marioImg, MARIO_BASE, MARIO_FOOT, marioPortraitImg, MARIO_PORTRAIT_REST, MarioPortrait} from '../cast/mario';
+import {drawRegisterRoom, drawRegisterBust, REG_BUST} from '../kits/register';
+import {drawIndexUp} from './whitehouse';
+import {putBustCut} from '../cast/civic-kit';
+
+const RH = 203;
+export const ROOF = {
+  horizon: 118, parapet: 128, deck: 140,
+  table: {x0: 60, x1: 380, top: 150, front: 156, foot: 184},
+  sheet: {x: 226, y: 151, w: 22, h: 5},
+  mas: 200, mario: 262, nesnej: 446, regStop: 392,
+  signFoot: 170, signX: 238,
+  /** the queue: where the next signers wait (feet), from the table toward frame right */
+  queue: [296, 330, 364] as number[],
+  glass: {x: 186, y: 144},
+};
+// ------------------------------------------------------------------ the sky and the city (cached)
+const SKY = new Map<number, Buf>();
+/** the sky, the city far below, the parapet and the deck, laid out for a horizon line (the wide's, or a closer setup's
+ *  lower one: each is laid out afresh at its own line, never a stretch of another) */
+const paintSky = (horizonY = ROOF.horizon): Buf => {
+  const hit = SKY.get(horizonY);
+  if (hit) return hit;
+  const b = new Buf(480, RH, PAL.N0);
+  const dH = horizonY - ROOF.horizon;
+  const R0 = {horizon: horizonY, parapet: ROOF.parapet + dH, deck: ROOF.deck + dH};
+  const R = [PAL.F4, PAL.F5, PAL.N8, PAL.F6, PAL.G6];
+  for (let y = 0; y < R0.horizon; y++) for (let x = 0; x < 480; x++) {
+    const t = y / R0.horizon + (bayer(x, y) - 0.5) * 0.14;
+    b.set(x, y, R[clamp(Math.floor(t * R.length), 0, R.length - 1)]);
+  }
+  // the city's tops far below and away, in haze: pale blue-grey blocks, a few windows catching the sun
+  for (let s = 0, x = -10; x < 490; s++) {
+    const w = 8 + Math.floor(hash(s, 1, 61) * 18), top = R0.horizon - 6 - Math.floor(hash(s, 2, 61) * 22);
+    for (let y = top; y < R0.parapet; y++) for (let i = 0; i < w; i++) b.set(x + i, y, i === 0 ? PAL.P1 : y < top + 2 ? PAL.G6 : PAL.G5);
+    for (let y = top + 3; y < R0.parapet; y += 3) for (let i = 2; i < w - 1; i += 3) if (hash(x + i, y, 62) < 0.12) b.set(x + i, y, PAL.P2);
+    x += w + 1 + Math.floor(hash(s, 3, 61) * 4);
+  }
+  // the parapet: pale stone coping, its lit top edge; the deck: stone pavers receding
+  rect(0, R0.parapet, 480, 3, b.ink(PAL.P2)); rect(0, R0.parapet + 3, 480, R0.deck - R0.parapet - 3, b.ink(PAL.P0));
+  for (let x = 0; x < 480; x += 40) rect(x, R0.parapet + 3, 1, R0.deck - R0.parapet - 3, b.ink(PAL.G4));
+  for (let y = R0.deck; y < RH; y++) for (let x = 0; x < 480; x++) {
+    const d = y - R0.deck, jx = ((x - 240) * (1 + d / 60)) | 0;
+    const seam = d % 12 === 0 || ((jx % 48) + 48) % 48 === 0;
+    b.set(x, y, seam ? PAL.G5 : bayer(x, y) < 0.3 ? PAL.P0 : PAL.G6);
+  }
+  SKY.set(horizonY, b);
+  return b;
+};
+/** the crack across the sky: a hairline that runs L -> R in whole-pixel steps, dark with a bright lip; t 0..1 */
+export const crackPath = (): Array<[number, number]> => {
+  const pts: Array<[number, number]> = [];
+  let y = 38;
+  for (let x = 0; x < 480; x++) {
+    if (hash(x >> 3, 5, 71) < 0.35) y += hash(x, 7, 71) < 0.5 ? -1 : 1;
+    y = clamp(y, 28, 52);
+    pts.push([x, y]);
+  }
+  return pts;
+};
+const CRACK = crackPath();
+export const drawCrack = (b: Buf, t: number, o: {dy?: number; x0?: number; x1?: number; clip?: (x: number, y: number) => boolean} = {}) => {
+  const n = Math.round(clamp(t, 0, 1) * 480);
+  for (let i = 0; i < n; i++) {
+    const [x, y] = CRACK[i];
+    const X = x, Y = y + (o.dy ?? 0);
+    if (o.clip && !o.clip(X, Y)) continue;
+    b.set(X, Y, PAL.N0); b.set(X, Y - 1, PAL.W9);
+    if (hash(x, 3, 72) < 0.08) b.set(X, Y + 1, PAL.N1); // a hair-thin branch
+  }
+};
+
+// ------------------------------------------------------------------ the quote box (17.01)
+export const drawQuoteBox = (b: Buf, s: string, typed = 999) => {
+  const lines = pwrap(s, 360);
+  const w = 380, h = 14 + lines.length * 11;
+  const x = 50, y = 8;
+  rect(x, y, w, h, b.ink(PAL.N1)); rect(x, y, w, 1, b.ink(PAL.G5)); rect(x, y, 2, h, b.ink(PAL.W6));
+  let left = typed;
+  lines.forEach((l, i) => { const t = l.slice(0, Math.max(0, left)); left -= l.length + 1; pt(b, t, x + 12, y + 7 + i * 11, PAL.P2); });
+};
+
+// ------------------------------------------------------------------ the wide
+export type RoofSigner = {v: 0 | 1 | 2; at: 'queue0' | 'queue1' | 'queue2' | 'sign' | 'leave'};
+export interface RooftopWideState {
+  signers?: RoofSigner[];
+  /** Mas / Mario: 'stand' at their marks · 'sign' at the sheet · null (not yet there) */
+  mas?: 'stand' | 'sign' | 'reach' | null;
+  mario?: 'stand' | 'write' | 'finger' | null;
+  register?: number;
+  nesnej?: {arm?: 'spread' | 'key' | 'down'; mouth?: 'grin' | 'open'} | null;
+  crack?: number;
+  /** who has looked up at the crack */
+  look?: {nesnej?: boolean; mario?: boolean; mas?: 'up' | 'glass'};
+}
+export const drawRooftopWide = (b: Buf, f: number, st: RooftopWideState = {}) => {
+  const sky = paintSky();
+  b.c.set(sky.c.subarray(0, 480 * RH));
+  if (st.crack) drawCrack(b, st.crack);
+  const clipT = (_x: number, y: number) => y < ROOF.table.top + 1;
+  // the queue and the signer at the sheet (behind the table, facing us: 3/4 to camera-left, toward the sheet)
+  for (const s of st.signers ?? []) {
+    if (s.at === 'sign') drawSigner(b, ROOF.signX, ROOF.signFoot + 14, s.v, 'sign', {flip: true, clip: clipT});
+    else if (s.at === 'leave') drawSigner(b, 140, ROOF.signFoot + 14, s.v, 'walk', {flip: true, f, clip: clipT});
+    else drawSigner(b, ROOF.queue[+s.at.slice(-1)], ROOF.signFoot + 14, s.v, 'stand', {flip: true, clip: clipT});
+  }
+  // MAS and MARIO at the table (standing behind it; Mas frame left)
+  if (st.mas) drawMasStand(b, ROOF.mas, ROOF.signFoot + 14, {...MAS_STAND_DEFAULT, arm: st.mas === 'reach' ? 'reach' : 'down', blink: st.look?.mas === 'glass'}, {clip: st.mas === 'reach' ? undefined : clipT});
+  if (st.mario) {
+    const img = marioImg({...MARIO_BASE, arm: st.mario === 'finger' ? 'raise' : st.mario === 'write' ? 'chest' : 'down', brow: st.look?.mario ? 1 : 0});
+    blitImg(b, img, ROOF.mario - (img.w - 1 - MARIO_FOOT[0]), ROOF.signFoot + 14 - MARIO_FOOT[1], {flip: true, clip: clipT});
+  }
+  // NESNEJ behind where the register will stop
+  if (st.nesnej !== null && st.nesnej !== undefined) drawNesnejRoom(b, ROOF.nesnej, ROOF.signFoot + 18, {arm: st.nesnej.arm ?? 'spread', mouth: st.nesnej.mouth ?? 'grin'}, {flip: true});
+  // the table: a white cloth to the deck, the sheet at its centre, Mas's glass
+  const T = ROOF.table;
+  for (let y = T.top; y < T.foot; y++) for (let x = T.x0; x < T.x1; x++) {
+    const fold = y > T.front && (x - T.x0) % 26 === 0;
+    b.set(x, y, y === T.top ? PAL.W9 : y < T.front ? PAL.P2 : fold ? PAL.G6 : y > T.foot - 3 ? PAL.G5 : bayer(x, y) < 0.2 ? PAL.P1 : PAL.P2);
+  }
+  rect(T.x0, T.foot, T.x1 - T.x0, 2, b.ink(PAL.G4));
+  const S = ROOF.sheet;
+  rect(S.x, S.y, S.w, S.h, b.ink(PAL.W9)); for (let i = 3; i < S.w - 3; i++) if (i % 3) b.set(S.x + i, S.y + 2, PAL.G5);
+  const g = ROOF.glass;
+  rect(g.x, g.y, 4, 7, b.ink(PAL.C4)); b.set(g.x, g.y + 2, PAL.C8); rect(g.x, g.y + 2, 4, 1, b.ink(PAL.C6)); b.set(g.x + 3, g.y + 6, PAL.C2);
+  // the register rolls in on the deck past the table's end, in front of NESNEJ
+  if (st.register !== undefined && st.register > 0) {
+    const x = Math.round(520 - (520 - ROOF.regStop) * clamp(st.register, 0, 1));
+    drawRegisterRoom(b, x, ROOF.signFoot + 24, {roll: st.register < 1 ? Math.floor(f / 2) : 0, flags: st.nesnej?.arm === 'key'});
+  }
+};
+
+// ------------------------------------------------------------------ the two-shot at the sheet (17.02, 17.05)
+export interface Rooftop2SState {
+  mas?: Partial<MasPortraitState>;
+  mario?: Partial<MarioPortrait>;
+  /** both have turned to the register, frame right */
+  turn?: boolean;
+  /** Mas's hand out for the pen: 0 in · 1 half · 2 all the way out */
+  hand?: 0 | 1 | 2;
+  /** Mario's writing hand: 0 · 1 (the pen's two held drawings) · null when he looks up */
+  write?: 0 | 1 | null;
+  /** the footnote's length under Mario's name (lines) */
+  footnote?: number;
+}
+export const ROOF2S = {mas: 60, mario: 250, y: 24, table: 146};
+export const drawRooftop2S = (b: Buf, f: number, st: Rooftop2SState = {}) => {
+  // a step closer: the horizon and the parapet sit lower in the frame, behind their shoulders
+  const sky = paintSky(150);
+  b.c.set(sky.c.subarray(0, 480 * RH));
+  const turn = !!st.turn;
+  putBustCut(b, masPortrait({...MAS_PORTRAIT_DEFAULT, light: 'warm', look: turn ? 1 : 0, ...st.mas}), ROOF2S.mas, ROOF2S.y, ROOF2S.table, true);
+  putBustCut(b, marioPortraitImg({...MARIO_PORTRAIT_REST, blink: st.write !== null && !turn ? 1 : 0, ...st.mario}), ROOF2S.mario, ROOF2S.y, ROOF2S.table, !turn);
+  // the table's cloth close: the sheet, the signatures in a column, Mario's footnote growing under his
+  for (let y = ROOF2S.table; y < RH; y++) for (let x = 0; x < 480; x++) b.set(x, y, y === ROOF2S.table ? PAL.W9 : bayer(x, y) < 0.12 ? PAL.P1 : PAL.P2);
+  const sx = 160, sy = ROOF2S.table + 6, sw = 160, sh = RH - sy;
+  rect(sx + 2, sy + 2, sw, sh, b.ink(PAL.G6)); rect(sx, sy, sw, sh, b.ink(PAL.W9)); rect(sx, sy, sw, 1, b.ink(PAL.P2));
+  for (let i = 12; i < sw - 12; i++) if (i % 4) b.set(sx + i, sy + 5, PAL.G4);
+  const sig = (y: number, x0: number, seed: number) => { let yy = y; for (let i = 0; i < 40; i++) { if (hash(i, seed, 3) < 0.4) yy += hash(i, seed, 4) < 0.5 ? -1 : 1; yy = clamp(yy, y - 2, y + 2); b.set(sx + x0 + i, yy, PAL.N4); } };
+  sig(sy + 14, 20, 1); sig(sy + 22, 70, 2); sig(sy + 30, 24, 3); sig(sy + 38, 90, 4);
+  const fn = st.footnote ?? 2;
+  for (let k = 0; k < fn; k++) for (let i = 0; i < 70 - (k === fn - 1 ? 30 : 0); i++) if ((i * 7 + k) % 11 !== 0) b.set(sx + 92 + i - (k > 1 ? 40 : 0), sy + 46 + k * 4, PAL.I0);
+  // Mario's hand writing (the pen tight, two held drawings), in from the right
+  if (st.write !== null && st.write !== undefined) {
+    const hx = sx + 132 + st.write * 2, hy = sy + 22 + fn * 3;
+    for (let y = hy - 6; y < RH; y++) for (let x = hx; x < hx + 60; x++) if (Math.hypot((x - hx - 24) / 26, (y - hy - 10) / 16) < 1 || (x > hx + 30 && y > hy + 8)) b.set(x, y, x > hx + 40 && y > hy + 12 ? PAL.F3 : x < hx + 16 ? PAL.S5 : PAL.S4);
+    line(hx + 4, hy + 2, hx - 6, hy + 10, b.ink(PAL.N0)); line(hx + 5, hy + 2, hx - 5, hy + 10, b.ink(PAL.N2)); b.set(hx - 7, hy + 11, PAL.W6); // the pen
+  }
+  // Mas's hand out for the pen, palm up, from the left
+  if (st.hand) {
+    const reach = st.hand === 2 ? 40 : 18, hx = sx - 60 + reach, hy = ROOF2S.table + 18;
+    for (let y = hy - 8; y < hy + 14; y++) for (let x = 0; x < hx + 30; x++) {
+      const palm = Math.hypot((x - hx - 14) / 18, (y - hy) / 8) < 1, arm = x < hx + 2 && y > hy - 6 && y < hy + 12;
+      if (palm) b.set(x, y, y < hy - 2 ? PAL.S5 : PAL.S4);
+      else if (arm) b.set(x, y, y < hy - 2 ? PAL.G4 : PAL.G2);
+    }
+    for (const k of [0, 1, 2, 3]) b.set(hx + 26 + (k >> 1), hy - 6 + k * 3, PAL.S3);
+  }
+};
+
+// ------------------------------------------------------------------ the OTS from behind Mario onto NESNEJ (17.06)
+export interface RooftopOTSState { nesnej?: Partial<NesnejBustState>; finger?: 1 | 2; press?: boolean; }
+export const drawRooftopOTS = (b: Buf, f: number, st: RooftopOTSState = {}) => {
+  const sky = paintSky(160);
+  b.c.set(sky.c.subarray(0, 480 * RH));
+  // NESNEJ behind the register, frame right, facing left (flipped: nothing on him is lettering), arms spread
+  const img = nesnejBust({...NESNEJ_BUST_DEFAULT, ...st.nesnej});
+  putBustCut(b, img, 296, 18, RH, true);
+  drawRegisterBust(b, 250, 104, {press: st.press, flags: st.press, glint: Math.floor(f / 12)});
+  // MARIO in the foreground, frame left: the back of his fleece shoulder, his curls at the edge, the raised finger
+  const F = [PAL.F0, PAL.F1, PAL.F2, PAL.F3, PAL.F4];
+  for (let y = 100; y < RH; y++) for (let x = 0; x < 200; x++) { const d = Math.hypot((x - 30) / 170, (y - 240) / 130); if (d <= 1) b.set(x, y, d > 0.96 ? F[3] : x > 120 ? F[2] : F[1]); }
+  for (let y = 40; y < 120; y++) for (let x = 0; x < 90; x++) { const d = Math.hypot((x - 20) / 70, (y - 112) / 66); if (d > 1) continue; const curl = (Math.floor((x + y) / 5) + Math.floor((x - y) / 5)) % 2 === 0; b.set(x, y, d > 0.95 ? PAL.B2 : curl ? PAL.B1 : PAL.B0); }
+  drawIndexUp(b, 122, st.finger === 1 ? 70 : 50, F);
+};
+
+// ------------------------------------------------------------------ the glass (17.12)
+export const drawGlassCrack = (b: Buf, f: number, st: {run: 0 | 1 | 2 | 3}) => {
+  // the white cloth; the glass close, from above and in front: its rim, the water line a little below it, the walls
+  // down to the base (the cloth seen through them, tinted), the base's ring and its shadow
+  for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) b.set(x, y, bayer(x, y) < 0.15 ? PAL.P1 : PAL.P2);
+  const cx = 240, rimY = 40, rx = 96, ry = 34, wy = 58, wrx = 92, wry = 31, baseY = 176, brx = 80, bry = 22;
+  const inE = (x: number, y: number, ex: number, ey: number, erx: number, ery: number) => Math.hypot((x - ex) / erx, (y - ey) / ery) <= 1;
+  // the shadow on the cloth (the sun from camera-left), then the walls
+  for (let y = baseY - 10; y < RH; y++) for (let x = cx - 40; x < cx + brx + 70; x++) if (inE(x, y, cx + 34, baseY + 6, brx + 10, bry)) b.set(x, y, PAL.G6);
+  for (let y = rimY; y <= baseY + bry; y++) for (let x = cx - rx; x <= cx + rx; x++) {
+    const t = (y - rimY) / (baseY - rimY), hw = rx - (rx - brx) * Math.min(1, t);
+    if (Math.abs(x - cx) > hw) continue;
+    if (y > baseY && !inE(x, y, cx, baseY, brx, bry)) continue;
+    const u = (x - cx) / hw;
+    let c = u < -0.86 ? PAL.C7 : u < -0.7 ? PAL.C5 : u > 0.88 ? PAL.C2 : u > 0.6 ? PAL.C3 : bayer(x, y) < 0.5 ? PAL.C6 : PAL.P1;
+    if (y > wy + 8 && Math.abs(u) < 0.6) c = bayer(x, y) < 0.3 ? PAL.C5 : PAL.C6; // the water's body, seen through the wall
+    b.set(x, y, c);
+  }
+  for (let x = cx - brx; x <= cx + brx; x++) { const y = Math.round(baseY + bry * Math.sqrt(Math.max(0, 1 - ((x - cx) / brx) ** 2))); b.set(x, y, PAL.C2); b.set(x, y - 1, PAL.C4); }
+  // the rim (a bright ring), the empty band of glass above the water, the water's surface: the sky, flat
+  for (let y = rimY - ry; y <= rimY + ry; y++) for (let x = cx - rx; x <= cx + rx; x++) {
+    if (!inE(x, y, cx, rimY, rx, ry)) continue;
+    const onRim = !inE(x, y, cx, rimY, rx - 3, ry - 2);
+    b.set(x, y, onRim ? (x < cx ? PAL.W9 : PAL.C7) : PAL.C6);
+  }
+  const R = [PAL.F5, PAL.N8, PAL.F6, PAL.G6];
+  for (let y = wy - wry; y <= wy + wry; y++) for (let x = cx - wrx; x <= cx + wrx; x++) {
+    if (!inE(x, y, cx, wy, wrx, wry) || !inE(x, y, cx, rimY, rx - 3, ry - 2) && y < rimY) continue;
+    if (!inE(x, y, cx, wy, wrx, wry)) continue;
+    const t = (y - (wy - wry)) / (2 * wry) + (bayer(x, y) - 0.5) * 0.15;
+    b.set(x, y, R[clamp(Math.floor(t * R.length), 0, R.length - 1)]);
+  }
+  for (let x = cx - wrx; x <= cx + wrx; x++) { const y = Math.round(wy + wry * Math.sqrt(Math.max(0, 1 - ((x - cx) / wrx) ** 2))); b.set(x, y, PAL.C8); } // the water line: flat
+  // his small reflection in it: a man looking down into the glass, his face dark against the sky, the cowlick
+  const mx = cx + 34, my = wy + 4;
+  const inM = (x: number, y: number) => inE(x, y, mx, my, 8, 10) || inE(x, y, mx, my + 18, 20, 8);
+  for (let y = my - 12; y < my + 28; y++) for (let x = mx - 22; x < mx + 22; x++) if (inM(x, y) && inE(x, y, cx, wy, wrx - 2, wry - 2)) b.set(x, y, y > my + 12 ? PAL.N2 : PAL.N1);
+  for (const [dx, dy] of [[-2, -10], [-3, -11], [-4, -11], [-4, -12]] as Array<[number, number]>) b.set(mx + dx, my + dy, PAL.N1);
+  // the crack, reflected: across the water from its left edge, whole pixels; `run` extra steps after the sky's has
+  // stopped, until it runs across his small reflection and stops there
+  const stopX = cx - 8, steps = [stopX, stopX + 14, stopX + 28, mx + 3];
+  const endX = steps[st.run];
+  let y = wy - 14;
+  for (let x = cx - wrx + 3; x < endX; x++) {
+    if (hash(x >> 2, 11, 73) < 0.4) y += hash(x, 13, 73) < 0.5 ? -1 : 1;
+    y = clamp(y, wy - 20, wy - 4);
+    if (x > mx - 26) y = Math.min(my - 2, y + 1);
+    if (!inE(x, y, cx, wy, wrx - 2, wry - 2)) continue;
+    b.set(x, y, PAL.N0); b.set(x, y - 1, PAL.W9);
+  }
+  void f;
+};
+void line; void ellipse; void text; void textWidth; void pw; void REG_BUST;

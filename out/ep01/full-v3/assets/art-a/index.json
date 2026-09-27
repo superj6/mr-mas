@@ -1,0 +1,1092 @@
+[
+ {
+  "key": "ROOM-APEC@wide-arrival",
+  "id": "ROOM-APEC",
+  "state": "wide-arrival",
+  "module": "shared/pixel/rooms/apec-stage.ts drawApecWide",
+  "note": "sc 1 [W] first frame: the stage, the banquet seated, the lit window far off, the host's hand + card",
+  "standin": "",
+  "native": "native/ROOM-APEC--wide-arrival.png",
+  "full": "full/ROOM-APEC--wide-arrival.png"
+ },
+ {
+  "key": "ROOM-APEC@wide-push-ovation",
+  "id": "ROOM-APEC",
+  "state": "wide-push-ovation",
+  "module": "shared/pixel/rooms/apec-stage.ts drawApecWide",
+  "note": "sc 1 [W] end of the drift upstage (push 12): the ovation risen, the card lifted (the question)",
+  "standin": "",
+  "native": "native/ROOM-APEC--wide-push-ovation.png",
+  "full": "full/ROOM-APEC--wide-push-ovation.png"
+ },
+ {
+  "key": "ROOM-APEC@mcu-hail",
+  "id": "ROOM-APEC",
+  "state": "mcu-hail",
+  "module": "shared/pixel/rooms/apec-stage.ts drawApecMCU + cast/mas-collars.ts",
+  "note": "sc 1 [MCU] answering, eyes on the host; the hailstone crossing the soft window (t 0.45); three collars",
+  "standin": "",
+  "native": "native/ROOM-APEC--mcu-hail.png",
+  "full": "full/ROOM-APEC--mcu-hail.png"
+ },
+ {
+  "key": "ROOM-APEC@mcu-lit-window-off",
+  "id": "ROOM-APEC",
+  "state": "mcu-lit-window-off",
+  "module": "shared/pixel/rooms/apec-stage.ts drawApecMCU",
+  "note": "sc 1 [MCU] \"...forward\": the lit window's phone off, the ovation risen",
+  "standin": "",
+  "native": "native/ROOM-APEC--mcu-lit-window-off.png",
+  "full": "full/ROOM-APEC--mcu-lit-window-off.png"
+ },
+ {
+  "key": "ROOM-APEC@table-plink",
+  "id": "ROOM-APEC",
+  "state": "table-plink",
+  "module": "shared/pixel/rooms/apec-stage.ts drawApecTable",
+  "note": "sc 1 [ECU] the plink: the stone bobbing in his glass (glyph noise, no letters), the host's glass over its rim",
+  "standin": "",
+  "native": "native/ROOM-APEC--table-plink.png",
+  "full": "full/ROOM-APEC--table-plink.png"
+ },
+ {
+  "key": "ROOM-APEC@table-settled",
+  "id": "ROOM-APEC",
+  "state": "table-settled",
+  "module": "shared/pixel/rooms/apec-stage.ts drawApecTable",
+  "note": "sc 1 [ECU] settled: his water line flat, the phone face-up and dark, the tent card legible",
+  "standin": "",
+  "native": "native/ROOM-APEC--table-settled.png",
+  "full": "full/ROOM-APEC--table-settled.png"
+ },
+ {
+  "key": "ROOM-APEC@freeze",
+  "id": "ROOM-APEC",
+  "state": "freeze",
+  "module": "shared/pixel/rooms/apec-stage.ts drawApecWide + apecFreeze",
+  "note": "sc 2 [W] the freeze: navy and cream, Mas and his phone stay in colour (the live mask)",
+  "standin": "",
+  "native": "native/ROOM-APEC--freeze.png",
+  "full": "full/ROOM-APEC--freeze.png"
+ },
+ {
+  "key": "ROOM-APEC@mcu-invite-light",
+  "id": "ROOM-APEC",
+  "state": "mcu-invite-light",
+  "module": "shared/pixel/rooms/apec-stage.ts drawApecMCU",
+  "note": "sc 2 [MCU] reading the invite: eyes down, the phone's white on his jaw from below frame",
+  "standin": "",
+  "native": "native/ROOM-APEC--mcu-invite-light.png",
+  "full": "full/ROOM-APEC--mcu-invite-light.png"
+ },
+ {
+  "key": "ROOM-APEC@mcu-accepted-light",
+  "id": "ROOM-APEC",
+  "state": "mcu-accepted-light",
+  "module": "shared/pixel/rooms/apec-stage.ts drawApecMCU",
+  "note": "sc 2 [MCU] \"noted.\" eyes up; the light on his jaw steps to the calendar's pale blue",
+  "standin": "",
+  "native": "native/ROOM-APEC--mcu-accepted-light.png",
+  "full": "full/ROOM-APEC--mcu-accepted-light.png"
+ },
+ {
+  "key": "ROOM-APEC@2s-orb",
+  "id": "ROOM-APEC",
+  "state": "2s-orb",
+  "module": "shared/pixel/rooms/apec-stage.ts drawApec2S",
+  "note": "sc 3 [2S] Mas and the Orb (r 11): the iris on him (step 3 of 3)",
+  "standin": "",
+  "native": "native/ROOM-APEC--2s-orb.png",
+  "full": "full/ROOM-APEC--2s-orb.png"
+ },
+ {
+  "key": "ROOM-APEC@scrub-steps",
+  "id": "ROOM-APEC",
+  "state": "scrub-steps",
+  "module": "shared/pixel/rooms/apec-stage.ts apecScrub",
+  "note": "sc 3 [W] the step to paper white: k 1 (left), k 2, k 3 (right), in three strips",
+  "standin": "",
+  "native": "native/ROOM-APEC--scrub-steps.png",
+  "full": "full/ROOM-APEC--scrub-steps.png"
+ },
+ {
+  "key": "UI-INVITE@slide-k3",
+  "id": "UI-INVITE",
+  "state": "slide-k3",
+  "module": "shared/pixel/kits/phone-invite.ts drawInviteInsert",
+  "note": "sc 2 [ECU] the phone lights; the invite slides down its screen (held step 2 of 3)",
+  "standin": "",
+  "native": "native/UI-INVITE--slide-k3.png",
+  "full": "full/UI-INVITE--slide-k3.png"
+ },
+ {
+  "key": "UI-INVITE@invite",
+  "id": "UI-INVITE",
+  "state": "invite",
+  "module": "shared/pixel/kits/phone-invite.ts drawInviteInsert",
+  "note": "sc 2 [ECU] held to read: Board sync · Fri 12:00, four attendee circles with no names, Accept / Decline",
+  "standin": "",
+  "native": "native/UI-INVITE--invite.png",
+  "full": "full/UI-INVITE--invite.png"
+ },
+ {
+  "key": "UI-INVITE@accepted",
+  "id": "UI-INVITE",
+  "state": "accepted",
+  "module": "shared/pixel/kits/phone-invite.ts drawInviteInsert",
+  "note": "sc 2 on \"noted.\": accepted, the card and its light step to the calendar's pale blue",
+  "standin": "",
+  "native": "native/UI-INVITE--accepted.png",
+  "full": "full/UI-INVITE--accepted.png"
+ },
+ {
+  "key": "UI-REWIND-TOAST@2s-2023",
+  "id": "UI-REWIND-TOAST",
+  "state": "2s-2023",
+  "module": "shared/pixel/kits/rewind-toast.ts drawRewindToast + rooms/apec-stage.ts drawApec2S",
+  "note": "sc 3 [2S] the toast pops beside the Orb, its year slot at 2023",
+  "standin": "",
+  "native": "native/UI-REWIND-TOAST--2s-2023.png",
+  "full": "full/UI-REWIND-TOAST--2s-2023.png"
+ },
+ {
+  "key": "UI-REWIND-TOAST@caught-2022",
+  "id": "UI-REWIND-TOAST",
+  "state": "caught-2022",
+  "module": "shared/pixel/kits/rewind-toast.ts drawRewindToast + rooms/apec-stage.ts apecScrub",
+  "note": "sc 3 [W] the scrub catches on 2022 and holds (about a second), the room one step up its ramps",
+  "standin": "",
+  "native": "native/UI-REWIND-TOAST--caught-2022.png",
+  "full": "full/UI-REWIND-TOAST--caught-2022.png"
+ },
+ {
+  "key": "UI-REWIND-TOAST@slipping",
+  "id": "UI-REWIND-TOAST",
+  "state": "slipping",
+  "module": "shared/pixel/kits/rewind-toast.ts drawRewindToast",
+  "note": "sc 3 [W] it slips: 2008 with the ones wheel mid-roll (the counter always turning now), k 3 of the white-out",
+  "standin": "",
+  "native": "native/UI-REWIND-TOAST--slipping.png",
+  "full": "full/UI-REWIND-TOAST--slipping.png"
+ },
+ {
+  "key": "GFX-1993@dialog",
+  "id": "GFX-1993",
+  "state": "dialog",
+  "module": "shared/pixel/kits/dialog-1993.ts draw1993Dialog",
+  "note": "sc 4 F1.1: paper white in a 3:2 pillarbox, the 1993 card; Are you sure? OK, Cancel greyed (50% dither)",
+  "standin": "",
+  "native": "native/GFX-1993--dialog.png",
+  "full": "full/GFX-1993--dialog.png"
+ },
+ {
+  "key": "GFX-1993@toast-too-far",
+  "id": "GFX-1993",
+  "state": "toast-too-far",
+  "module": "shared/pixel/kits/dialog-1993.ts + kits/rewind-toast.ts drawRewindToast1bit",
+  "note": "sc 4: the Orb's toast, now in 1-bit: rewinding… too far",
+  "standin": "",
+  "native": "native/GFX-1993--toast-too-far.png",
+  "full": "full/GFX-1993--toast-too-far.png"
+ },
+ {
+  "key": "GFX-1993@open-step",
+  "id": "GFX-1993",
+  "state": "open-step",
+  "module": "shared/pixel/kits/dialog-1993.ts draw1993Dialog",
+  "note": "sc 4 the dialog opening: held step 2 of 2 (a 1993 zoom rect)",
+  "standin": "",
+  "native": "native/GFX-1993--open-step.png",
+  "full": "full/GFX-1993--open-step.png"
+ },
+ {
+  "key": "CAST-MAS-SEATED@poses",
+  "id": "CAST-MAS-SEATED",
+  "state": "poses",
+  "module": "shared/pixel/cast/mas-seated.ts drawMasSeated",
+  "note": "seated, legs crossed, 3/4 to the right: lap, sip, hold, reach (down), phone (down); stage light",
+  "standin": "",
+  "native": "native/CAST-MAS-SEATED--poses.png",
+  "full": "full/CAST-MAS-SEATED--poses.png"
+ },
+ {
+  "key": "PROP-COLLARS@scales",
+  "id": "PROP-COLLARS",
+  "state": "scales",
+  "module": "shared/pixel/cast/mas-collars.ts",
+  "note": "the collar stack (coral, green, then cream): portrait 1/2/3, the pop's hop; medium 2/3 flipped; room scale 3",
+  "standin": "",
+  "native": "native/PROP-COLLARS--scales.png",
+  "full": "full/PROP-COLLARS--scales.png"
+ },
+ {
+  "key": "PROP-BEIGE-BUTTON@ecu",
+  "id": "PROP-BEIGE-BUTTON",
+  "state": "ecu",
+  "module": "shared/pixel/kits/launch-button.ts drawButtonECU",
+  "note": "sc 5 [ECU] the hard cut: the button where the 1993 OK sat, its strip relabelled research preview",
+  "standin": "",
+  "native": "native/PROP-BEIGE-BUTTON--ecu.png",
+  "full": "full/PROP-BEIGE-BUTTON--ecu.png"
+ },
+ {
+  "key": "PROP-BEIGE-BUTTON@ecu-finger-click",
+  "id": "PROP-BEIGE-BUTTON",
+  "state": "ecu-finger-click",
+  "module": "shared/pixel/kits/launch-button.ts drawButtonECU (port of dev/mfinale/callart.ts)",
+  "note": "sc 5 [ECU] his finger, no hover: press 2 (the click), the LED lit",
+  "standin": "",
+  "native": "native/PROP-BEIGE-BUTTON--ecu-finger-click.png",
+  "full": "full/PROP-BEIGE-BUTTON--ecu-finger-click.png"
+ },
+ {
+  "key": "ROOM-BULLPEN-LAUNCH@wide-arrival",
+  "id": "ROOM-BULLPEN-LAUNCH",
+  "state": "wide-arrival",
+  "module": "shared/pixel/rooms/bullpen-launch.ts drawLaunchWide",
+  "note": "sc 5 [W] the home room's one wide: Gerg's green laptop, Rima at LOW-KEY (2 lines), Alyi in the glass, the dark laptop + button",
+  "standin": "",
+  "native": "native/ROOM-BULLPEN-LAUNCH--wide-arrival.png",
+  "full": "full/ROOM-BULLPEN-LAUNCH--wide-arrival.png"
+ },
+ {
+  "key": "ROOM-BULLPEN-LAUNCH@wide-third-line",
+  "id": "ROOM-BULLPEN-LAUNCH",
+  "state": "wide-third-line",
+  "module": "shared/pixel/rooms/bullpen-launch.ts drawLaunchWide",
+  "note": "sc 5 \"Your button.\" Rima underlines a third time (wet 0.6); the laptop still dark",
+  "standin": "",
+  "native": "native/ROOM-BULLPEN-LAUNCH--wide-third-line.png",
+  "full": "full/ROOM-BULLPEN-LAUNCH--wide-third-line.png"
+ },
+ {
+  "key": "ROOM-BULLPEN-LAUNCH@wide-after-launch",
+  "id": "ROOM-BULLPEN-LAUNCH",
+  "state": "wide-after-launch",
+  "module": "shared/pixel/rooms/bullpen-launch.ts drawLaunchWide",
+  "note": "after the click: the laptop open on the chat, Alyi gone from the glass, Rima at his desk (arms folded)",
+  "standin": "",
+  "native": "native/ROOM-BULLPEN-LAUNCH--wide-after-launch.png",
+  "full": "full/ROOM-BULLPEN-LAUNCH--wide-after-launch.png"
+ },
+ {
+  "key": "ROOM-BULLPEN-LAUNCH@2s-mas-gerg",
+  "id": "ROOM-BULLPEN-LAUNCH",
+  "state": "2s-mas-gerg",
+  "module": "shared/pixel/rooms/bullpen-launch.ts drawLaunch2S",
+  "note": "sc 5 [2S] desk to desk: Mas fg left (two collars), Gerg across the aisle in his green; the board's edge; the fuse",
+  "standin": "",
+  "native": "native/ROOM-BULLPEN-LAUNCH--2s-mas-gerg.png",
+  "full": "full/ROOM-BULLPEN-LAUNCH--2s-mas-gerg.png"
+ },
+ {
+  "key": "ROOM-BULLPEN-LAUNCH@2s-gerg-up",
+  "id": "ROOM-BULLPEN-LAUNCH",
+  "state": "2s-gerg-up",
+  "module": "shared/pixel/rooms/bullpen-launch.ts drawLaunch2S",
+  "note": "sc 5 [2S] \"Your button.\": Gerg up from his keys; Rima's 3rd line behind him",
+  "standin": "",
+  "native": "native/ROOM-BULLPEN-LAUNCH--2s-gerg-up.png",
+  "full": "full/ROOM-BULLPEN-LAUNCH--2s-gerg-up.png"
+ },
+ {
+  "key": "ROOM-BULLPEN-LAUNCH@ots-rima",
+  "id": "ROOM-BULLPEN-LAUNCH",
+  "state": "ots-rima",
+  "module": "shared/pixel/rooms/bullpen-launch.ts drawLaunchOTSRima",
+  "note": "sc 5 [OTS] over his shoulder onto Rima at his desk; LOW-KEY behind her; Alyi small and soft in the glass",
+  "standin": "",
+  "native": "native/ROOM-BULLPEN-LAUNCH--ots-rima.png",
+  "full": "full/ROOM-BULLPEN-LAUNCH--ots-rima.png"
+ },
+ {
+  "key": "ROOM-BULLPEN-LAUNCH@glass-alyi",
+  "id": "ROOM-BULLPEN-LAUNCH",
+  "state": "glass-alyi",
+  "module": "shared/pixel/rooms/bullpen-launch.ts drawLaunchGlass",
+  "note": "sc 5 [MCU·glass] the cut on the turn: Alyi's reflection in its doorway, looking past them",
+  "standin": "",
+  "native": "native/ROOM-BULLPEN-LAUNCH--glass-alyi.png",
+  "full": "full/ROOM-BULLPEN-LAUNCH--glass-alyi.png"
+ },
+ {
+  "key": "ROOM-BULLPEN-LAUNCH@glass-count",
+  "id": "ROOM-BULLPEN-LAUNCH",
+  "state": "glass-count",
+  "module": "shared/pixel/rooms/bullpen-launch.ts drawLaunchGlass",
+  "note": "sc 5.09 [MCU·glass] Mas soft fg (hand on the button), Rima capping the marker, Alyi in the glass",
+  "standin": "",
+  "native": "native/ROOM-BULLPEN-LAUNCH--glass-count.png",
+  "full": "full/ROOM-BULLPEN-LAUNCH--glass-count.png"
+ },
+ {
+  "key": "ROOM-BULLPEN-LAUNCH@glass-empty",
+  "id": "ROOM-BULLPEN-LAUNCH",
+  "state": "glass-empty",
+  "module": "shared/pixel/rooms/bullpen-launch.ts drawLaunchGlass",
+  "note": "sc 5.09 end: he turned out of the doorway and went; the glass is empty",
+  "standin": "",
+  "native": "native/ROOM-BULLPEN-LAUNCH--glass-empty.png",
+  "full": "full/ROOM-BULLPEN-LAUNCH--glass-empty.png"
+ },
+ {
+  "key": "ROOM-BULLPEN-LAUNCH@mcu-rima",
+  "id": "ROOM-BULLPEN-LAUNCH",
+  "state": "mcu-rima",
+  "module": "shared/pixel/rooms/bullpen-launch.ts drawLaunchMcuRima",
+  "note": "sc 5 [MCU] Rima turned from the glass to Mas, waiting (her beat)",
+  "standin": "",
+  "native": "native/ROOM-BULLPEN-LAUNCH--mcu-rima.png",
+  "full": "full/ROOM-BULLPEN-LAUNCH--mcu-rima.png"
+ },
+ {
+  "key": "ROOM-BULLPEN-LAUNCH@mcu-mas-likes",
+  "id": "ROOM-BULLPEN-LAUNCH",
+  "state": "mcu-mas-likes",
+  "module": "shared/pixel/rooms/bullpen-launch.ts drawLaunchMcuMas",
+  "note": "sc 5 [MCU] \"it likes me.\": lit from below by the chat, the bullpen soft behind",
+  "standin": "",
+  "native": "native/ROOM-BULLPEN-LAUNCH--mcu-mas-likes.png",
+  "full": "full/ROOM-BULLPEN-LAUNCH--mcu-mas-likes.png"
+ },
+ {
+  "key": "CAST-RIMA-STAND@poses",
+  "id": "CAST-RIMA-STAND",
+  "state": "poses",
+  "module": "shared/pixel/cast/rima-stand.ts drawRimaStand",
+  "note": "her room sprite: stand, write, underline, cap (back), fold, lean, peer, the walk (w0-w3)",
+  "standin": "",
+  "native": "native/CAST-RIMA-STAND--poses.png",
+  "full": "full/CAST-RIMA-STAND--poses.png"
+ },
+ {
+  "key": "UI-CHAT@ots-lights-up",
+  "id": "UI-CHAT",
+  "state": "ots-lights-up",
+  "module": "shared/pixel/kits/chat-window.ts + cast/chatgtp.ts via rooms/bullpen-launch.ts drawLaunchOTSLaptop",
+  "note": "sc 5 [OTS] the bubble lights before anyone types: \"What a great question!\"; Rima leaning in; Gerg's hands",
+  "standin": "",
+  "native": "native/UI-CHAT--ots-lights-up.png",
+  "full": "full/UI-CHAT--ots-lights-up.png"
+ },
+ {
+  "key": "UI-CHAT@ots-visionary",
+  "id": "UI-CHAT",
+  "state": "ots-visionary",
+  "module": "shared/pixel/kits/chat-window.ts + cast/chatgtp.ts via rooms/bullpen-launch.ts drawLaunchOTSLaptop",
+  "note": "sc 5 [OTS] he typed \"is anyone there?\"; \"Brilliant! You're clearly a visionary.\"",
+  "standin": "",
+  "native": "native/UI-CHAT--ots-visionary.png",
+  "full": "full/UI-CHAT--ots-visionary.png"
+ },
+ {
+  "key": "UI-CHAT@ots-typing",
+  "id": "UI-CHAT",
+  "state": "ots-typing",
+  "module": "shared/pixel/kits/chat-window.ts + cast/chatgtp.ts via rooms/bullpen-launch.ts drawLaunchOTSLaptop",
+  "note": "sc 5 [OTS] he types his one line, lowercase, the caret on a held blink",
+  "standin": "",
+  "native": "native/UI-CHAT--ots-typing.png",
+  "full": "full/UI-CHAT--ots-typing.png"
+ },
+ {
+  "key": "UI-CHAT@ecu-first-tick",
+  "id": "UI-CHAT",
+  "state": "ecu-first-tick",
+  "module": "shared/pixel/kits/chat-window.ts + cast/chatgtp.ts drawChatECU",
+  "note": "sc 5 [ECU] the bubble; the 0 on its plate ticking over to 1 (the ones wheel mid-roll)",
+  "standin": "",
+  "native": "native/UI-CHAT--ecu-first-tick.png",
+  "full": "full/UI-CHAT--ecu-first-tick.png"
+ },
+ {
+  "key": "UI-CHAT@ecu-blur",
+  "id": "UI-CHAT",
+  "state": "ecu-blur",
+  "module": "shared/pixel/kits/chat-window.ts + cast/chatgtp.ts drawChatECU",
+  "note": "sc 5 [ECU] then a hundred, a thousand: the digits blur (the swing enters)",
+  "standin": "",
+  "native": "native/UI-CHAT--ecu-blur.png",
+  "full": "full/UI-CHAT--ecu-blur.png"
+ },
+ {
+  "key": "CAST-CHATGTP@states",
+  "id": "CAST-CHATGTP",
+  "state": "states",
+  "module": "shared/pixel/cast/chatgtp.ts drawChatBubble",
+  "note": "screen size: idle, lit, talk, blink; ECU size lit (right)",
+  "standin": "",
+  "native": "native/CAST-CHATGTP--states.png",
+  "full": "full/CAST-CHATGTP--states.png"
+ },
+ {
+  "key": "SET-DRILL@ecu-grow-1",
+  "id": "SET-DRILL",
+  "state": "ecu-grow-1",
+  "module": "shared/pixel/kits/chat-window.ts drawChatECU st.grow",
+  "note": "6.01 [ECU] the counter leaves the plate (its socket dark) and grows, spinning (held drawing 1 of 3)",
+  "standin": "",
+  "native": "native/SET-DRILL--ecu-grow-1.png",
+  "full": "full/SET-DRILL--ecu-grow-1.png"
+ },
+ {
+  "key": "SET-DRILL@ecu-grow-3",
+  "id": "SET-DRILL",
+  "state": "ecu-grow-3",
+  "module": "shared/pixel/kits/chat-window.ts drawChatECU st.grow + kits/odometer.ts",
+  "note": "6.01 [ECU] grown to the desk-sized machine over the window, spinning; the cut to the wide follows",
+  "standin": "",
+  "native": "native/SET-DRILL--ecu-grow-3.png",
+  "full": "full/SET-DRILL--ecu-grow-3.png"
+ },
+ {
+  "key": "SET-DRILL@w-on-desk",
+  "id": "SET-DRILL",
+  "state": "w-on-desk",
+  "module": "shared/pixel/rooms/bullpen-launch.ts drawLaunchWide st.odo",
+  "note": "6.02 [W] the desk-sized odometer on his desk, spinning, the room around it",
+  "standin": "",
+  "native": "native/SET-DRILL--w-on-desk.png",
+  "full": "full/SET-DRILL--w-on-desk.png"
+ },
+ {
+  "key": "SET-DRILL@w-drop",
+  "id": "SET-DRILL",
+  "state": "w-drop",
+  "module": "shared/pixel/rooms/bullpen-launch.ts drawLaunchWide st.odo + cast/gerg-poses.ts",
+  "note": "6.02 [W] the clunk: it drops through the desk (held drawing 1 of 2), the top broken; Gerg jumps up, arms up",
+  "standin": "",
+  "native": "native/SET-DRILL--w-drop.png",
+  "full": "full/SET-DRILL--w-drop.png"
+ },
+ {
+  "key": "SET-DRILL@w-gone",
+  "id": "SET-DRILL",
+  "state": "w-gone",
+  "module": "shared/pixel/rooms/bullpen-launch.ts drawLaunchWide st.odo",
+  "note": "6.02 after: the hole in his desk's top",
+  "standin": "",
+  "native": "native/SET-DRILL--w-gone.png",
+  "full": "full/SET-DRILL--w-gone.png"
+ },
+ {
+  "key": "SET-DRILL@ecu-1000000",
+  "id": "SET-DRILL",
+  "state": "ecu-1000000",
+  "module": "shared/pixel/rooms/drill.ts drawWedgedWheel",
+  "note": "6.06 [ECU] wedged in the bedrock, its last wheel settled and legible: 1,000,000 (RAIL DEC 5)",
+  "standin": "",
+  "native": "native/SET-DRILL--ecu-1000000.png",
+  "full": "full/SET-DRILL--ecu-1000000.png"
+ },
+ {
+  "key": "SET-DRILL@ecu-settling",
+  "id": "SET-DRILL",
+  "state": "ecu-settling",
+  "module": "shared/pixel/rooms/drill.ts drawWedgedWheel",
+  "note": "6.06 [ECU] the last wheel rolling up to 1 (held step 1 of 3)",
+  "standin": "",
+  "native": "native/SET-DRILL--ecu-settling.png",
+  "full": "full/SET-DRILL--ecu-settling.png"
+ },
+ {
+  "key": "SET-DRILL@high-rima-peers",
+  "id": "SET-DRILL",
+  "state": "high-rima-peers",
+  "module": "shared/pixel/rooms/drill.ts drawHoleHigh",
+  "note": "6.08 [HIGH] the hole in the floor from above, Rima peering down; \"Low-key.\" / \"Very low. Basement.\"",
+  "standin": "",
+  "native": "native/SET-DRILL--high-rima-peers.png",
+  "full": "full/SET-DRILL--high-rima-peers.png"
+ },
+ {
+  "key": "SET-DRILL@high-toast",
+  "id": "SET-DRILL",
+  "state": "high-toast",
+  "module": "shared/pixel/rooms/drill.ts drawHoleHigh",
+  "note": "6.09 [HIGH] held: the tile pops up like a toast (step 2), red glow, the $ odometer, racks amber",
+  "standin": "",
+  "native": "native/SET-DRILL--high-toast.png",
+  "full": "full/SET-DRILL--high-toast.png"
+ },
+ {
+  "key": "SET-DRILL@high-red-hot",
+  "id": "SET-DRILL",
+  "state": "high-red-hot",
+  "module": "shared/pixel/rooms/drill.ts drawHoleHigh",
+  "note": "6.09 [HIGH] held, the third palette step: red-hot racks, heat shimmer",
+  "standin": "",
+  "native": "native/SET-DRILL--high-red-hot.png",
+  "full": "full/SET-DRILL--high-red-hot.png"
+ },
+ {
+  "key": "SET-DRILL@high-tear-falls",
+  "id": "SET-DRILL",
+  "state": "high-tear-falls",
+  "module": "shared/pixel/rooms/drill.ts drawHoleHigh",
+  "note": "7.02 [HIGH] the tear falling through the open tile (t 0.5); his phone lights red at the edge",
+  "standin": "",
+  "native": "native/SET-DRILL--high-tear-falls.png",
+  "full": "full/SET-DRILL--high-tear-falls.png"
+ },
+ {
+  "key": "SET-DRILL@gpu-steam",
+  "id": "SET-DRILL",
+  "state": "gpu-steam",
+  "module": "shared/pixel/rooms/drill.ts drawGpuTear",
+  "note": "7.02 [ECU] the tear on a red-hot GPU: tssss, steam in three held puffs (all three)",
+  "standin": "",
+  "native": "native/SET-DRILL--gpu-steam.png",
+  "full": "full/SET-DRILL--gpu-steam.png"
+ },
+ {
+  "key": "SET-DRILL@gpu-splash",
+  "id": "SET-DRILL",
+  "state": "gpu-splash",
+  "module": "shared/pixel/rooms/drill.ts drawGpuTear",
+  "note": "7.02 [ECU] the landing (k 1): the splash",
+  "standin": "",
+  "native": "native/SET-DRILL--gpu-splash.png",
+  "full": "full/SET-DRILL--gpu-splash.png"
+ },
+ {
+  "key": "CAST-MAS-TEAR@mcu-pf",
+  "id": "CAST-MAS-TEAR",
+  "state": "mcu-pf",
+  "module": "shared/pixel/rooms/bullpen-launch.ts drawLaunchMcuPF",
+  "note": "7.01 [MCU·PF] looking down the hole, the red from below, the bullpen stepping down; the tear mid-cheek",
+  "standin": "",
+  "native": "native/CAST-MAS-TEAR--mcu-pf.png",
+  "full": "full/CAST-MAS-TEAR--mcu-pf.png"
+ },
+ {
+  "key": "PROP-ODOMETER@sizes",
+  "id": "PROP-ODOMETER",
+  "state": "sizes",
+  "module": "shared/pixel/kits/odometer.ts drawOdometer",
+  "note": "plate · ecu · wide · desk (spinning) · small $ (hot); heat steps on the right",
+  "standin": "",
+  "native": "native/PROP-ODOMETER--sizes.png",
+  "full": "full/PROP-ODOMETER--sizes.png"
+ },
+ {
+  "key": "INSERT-GERG-PHONE@buzz",
+  "id": "INSERT-GERG-PHONE",
+  "state": "buzz",
+  "module": "shared/pixel/kits/gerg-phone-insert.ts + kits/post-any.ts",
+  "note": "6.04 [ECU] cut up to Gerg's desk (the drill's one angle on the bullpen): his phone buzzes",
+  "standin": "",
+  "native": "native/INSERT-GERG-PHONE--buzz.png",
+  "full": "full/INSERT-GERG-PHONE--buzz.png"
+ },
+ {
+  "key": "INSERT-GERG-PHONE@hearted",
+  "id": "INSERT-GERG-PHONE",
+  "state": "hearted",
+  "module": "shared/pixel/kits/gerg-phone-insert.ts + kits/post-any.ts",
+  "note": "6.04 NOLE's post in its own UI (the record's words), Gerg's thumb hearts it (RAIL DEC 3; plate NOLE after the read)",
+  "standin": "",
+  "native": "native/INSERT-GERG-PHONE--hearted.png",
+  "full": "full/INSERT-GERG-PHONE--hearted.png"
+ },
+ {
+  "key": "INSERT-GERG-PHONE@unhearted",
+  "id": "INSERT-GERG-PHONE",
+  "state": "unhearted",
+  "module": "shared/pixel/kits/gerg-phone-insert.ts + kits/post-any.ts",
+  "note": "6.04 Rima's hand reaches in and un-hearts it for him",
+  "standin": "",
+  "native": "native/INSERT-GERG-PHONE--unhearted.png",
+  "full": "full/INSERT-GERG-PHONE--unhearted.png"
+ },
+ {
+  "key": "UI-ALERT@desk-lit",
+  "id": "UI-ALERT",
+  "state": "desk-lit",
+  "module": "shared/pixel/kits/phone-alert.ts drawAlertInsert",
+  "note": "8.01 [ECU] his phone on the desk: the red alert, siren glyph, ELGOOG · CODE RED (draft 6)",
+  "standin": "",
+  "native": "native/UI-ALERT--desk-lit.png",
+  "full": "full/UI-ALERT--desk-lit.png"
+ },
+ {
+  "key": "UI-ALERT@thumb-tap",
+  "id": "UI-ALERT",
+  "state": "thumb-tap",
+  "module": "shared/pixel/kits/phone-alert.ts drawAlertInsert",
+  "note": "8.01 [ECU] his thumb opens it (the press)",
+  "standin": "",
+  "native": "native/UI-ALERT--thumb-tap.png",
+  "full": "full/UI-ALERT--thumb-tap.png"
+ },
+ {
+  "key": "UI-ALERT@zoom-2",
+  "id": "UI-ALERT",
+  "state": "zoom-2",
+  "module": "shared/pixel/kits/phone-alert.ts drawAlertInsert + shared/pixel/rooms/elgoog-lobby.ts",
+  "note": "8.01 the app zooms, the camera doesn't: held step 2 of 3, the lobby seen 1:1 through the growing screen",
+  "standin": "",
+  "native": "native/UI-ALERT--zoom-2.png",
+  "full": "full/UI-ALERT--zoom-2.png"
+ },
+ {
+  "key": "UI-ALERT@ots-siren",
+  "id": "UI-ALERT",
+  "state": "ots-siren",
+  "module": "shared/pixel/kits/phone-alert.ts drawPhoneLockOTS",
+  "note": "8.06 [OTS] over his shoulder: the siren turning on the phone in his hand",
+  "standin": "",
+  "native": "native/UI-ALERT--ots-siren.png",
+  "full": "full/UI-ALERT--ots-siren.png"
+ },
+ {
+  "key": "UI-ALERT@ots-locked",
+  "id": "UI-ALERT",
+  "state": "ots-locked",
+  "module": "shared/pixel/kits/phone-alert.ts drawPhoneLockOTS",
+  "note": "8.06 [OTS] he locks it; the red goes out of the frame",
+  "standin": "",
+  "native": "native/UI-ALERT--ots-locked.png",
+  "full": "full/UI-ALERT--ots-locked.png"
+ },
+ {
+  "key": "ROOM-ELGOOG@arrival-slab",
+  "id": "ROOM-ELGOOG",
+  "state": "arrival-slab",
+  "module": "shared/pixel/rooms/elgoog-lobby.ts drawElgoogLobby",
+  "note": "8.02 [POV] full-bleed on his phone (the status bar): the atrium in skewed primaries; the slab sliding (1 of 3)",
+  "standin": "",
+  "native": "native/ROOM-ELGOOG--arrival-slab.png",
+  "full": "full/ROOM-ELGOOG--arrival-slab.png"
+ },
+ {
+  "key": "ROOM-ELGOOG@lift-rising",
+  "id": "ROOM-ELGOOG",
+  "state": "lift-rising",
+  "module": "shared/pixel/rooms/elgoog-lobby.ts drawElgoogLobby",
+  "note": "8.02 the siren rising on its scissor lift (held drawing 2 of 3), the hole open",
+  "standin": "",
+  "native": "native/ROOM-ELGOOG--lift-rising.png",
+  "full": "full/ROOM-ELGOOG--lift-rising.png"
+ },
+ {
+  "key": "ROOM-ELGOOG@siren-turning",
+  "id": "ROOM-ELGOOG",
+  "state": "siren-turning",
+  "module": "shared/pixel/rooms/elgoog-lobby.ts drawElgoogLobby + cast/radnus.ts",
+  "note": "8.03 up and turning (1 rev/s, 8 held beams): Radnus beside the hole, extinguisher, sleeve alight",
+  "standin": "",
+  "native": "native/ROOM-ELGOOG--siren-turning.png",
+  "full": "full/ROOM-ELGOOG--siren-turning.png"
+ },
+ {
+  "key": "ROOM-ELGOOG@founders-climb",
+  "id": "ROOM-ELGOOG",
+  "state": "founders-climb",
+  "module": "shared/pixel/rooms/elgoog-lobby.ts + cast/elgoog-founders.ts",
+  "note": "8.04 the founders climbing out of the crypt, backlit, shading their eyes (NIRB step 2, EGAP step 1)",
+  "standin": "",
+  "native": "native/ROOM-ELGOOG--founders-climb.png",
+  "full": "full/ROOM-ELGOOG--founders-climb.png"
+ },
+ {
+  "key": "ROOM-ELGOOG@founders-top",
+  "id": "ROOM-ELGOOG",
+  "state": "founders-top",
+  "module": "shared/pixel/rooms/elgoog-lobby.ts + cast/elgoog-founders.ts",
+  "note": "8.04 held: at the top; Radnus holds up his phone (the bubble); EGAP's mug RETIRED 2019",
+  "standin": "",
+  "native": "native/ROOM-ELGOOG--founders-top.png",
+  "full": "full/ROOM-ELGOOG--founders-top.png"
+ },
+ {
+  "key": "ROOM-ELGOOG@lanyards",
+  "id": "ROOM-ELGOOG",
+  "state": "lanyards",
+  "module": "shared/pixel/rooms/elgoog-lobby.ts + cast/radnus.ts + cast/elgoog-founders.ts",
+  "note": "8.05 he hands them two lanyards: GUEST; the siren turns, his sleeve relights",
+  "standin": "",
+  "native": "native/ROOM-ELGOOG--lanyards.png",
+  "full": "full/ROOM-ELGOOG--lanyards.png"
+ },
+ {
+  "key": "CAST-RADNUS@poses",
+  "id": "CAST-RADNUS",
+  "state": "poses",
+  "module": "shared/pixel/cast/radnus.ts drawRadnus",
+  "note": "fold, ext, pat (flame out), phone, lanyards, tap0, tap1; the flame loop 0-2 (right)",
+  "standin": "",
+  "native": "native/CAST-RADNUS--poses.png",
+  "full": "full/CAST-RADNUS--poses.png"
+ },
+ {
+  "key": "CAST-FOUNDERS@poses",
+  "id": "CAST-FOUNDERS",
+  "state": "poses",
+  "module": "shared/pixel/cast/elgoog-founders.ts drawFounder",
+  "note": "NIRB (prism) and EGAP (the mug): shade, step, reach, lanyard; silhouette (lit 0) and half-lit (lit 1)",
+  "standin": "",
+  "native": "native/CAST-FOUNDERS--poses.png",
+  "full": "full/CAST-FOUNDERS--poses.png"
+ },
+ {
+  "key": "ROOM-LOBBY-DEAL@wide-arrival",
+  "id": "ROOM-LOBBY-DEAL",
+  "state": "wide-arrival",
+  "module": "shared/pixel/rooms/lobby-deal.ts drawDealWide",
+  "note": "9.01 [W] arrival: the lobby, NOPEAI · A NONPROFIT in gold on the door; Mas walks in from frame left",
+  "standin": "",
+  "native": "native/ROOM-LOBBY-DEAL--wide-arrival.png",
+  "full": "full/ROOM-LOBBY-DEAL--wide-arrival.png"
+ },
+ {
+  "key": "ROOM-LOBBY-DEAL@wide-check-jammed",
+  "id": "ROOM-LOBBY-DEAL",
+  "state": "wide-check-jammed",
+  "module": "shared/pixel/rooms/lobby-deal.ts drawDealWide + kits/novelty-check.ts",
+  "note": "9.01 [W] the check jammed in the revolving door, legible: MACROSOFT · \"multiyear, multibillion dollar\" · $ MULTIBILLION",
+  "standin": "",
+  "native": "native/ROOM-LOBBY-DEAL--wide-check-jammed.png",
+  "full": "full/ROOM-LOBBY-DEAL--wide-check-jammed.png"
+ },
+ {
+  "key": "ROOM-LOBBY-DEAL@freeze-pen",
+  "id": "ROOM-LOBBY-DEAL",
+  "state": "freeze-pen",
+  "module": "shared/pixel/rooms/lobby-deal.ts drawDealWide + dealFreeze",
+  "note": "9.04 FULL FREEZE: the lobby navy and cream, Mas in colour at the check, reaching for the pen; Tasya (11 keys)",
+  "standin": "",
+  "native": "native/ROOM-LOBBY-DEAL--freeze-pen.png",
+  "full": "full/ROOM-LOBBY-DEAL--freeze-pen.png"
+ },
+ {
+  "key": "ROOM-LOBBY-DEAL@2s-partnership",
+  "id": "ROOM-LOBBY-DEAL",
+  "state": "2s-partnership",
+  "module": "shared/pixel/rooms/lobby-deal.ts drawDeal2S + cast/tasya-medium.ts",
+  "note": "9.06 [2S] \"It's a partnership.\" Mas and Tasya, the jammed door between; Gerg behind, tugging a corner",
+  "standin": "",
+  "native": "native/ROOM-LOBBY-DEAL--2s-partnership.png",
+  "full": "full/ROOM-LOBBY-DEAL--2s-partnership.png"
+ },
+ {
+  "key": "ROOM-LOBBY-DEAL@wide-floor",
+  "id": "ROOM-LOBBY-DEAL",
+  "state": "wide-floor",
+  "module": "shared/pixel/rooms/lobby-deal.ts drawDealWide",
+  "note": "9.07 [W] under the door it fits exactly, like a floor; Mas steps on at once",
+  "standin": "",
+  "native": "native/ROOM-LOBBY-DEAL--wide-floor.png",
+  "full": "full/ROOM-LOBBY-DEAL--wide-floor.png"
+ },
+ {
+  "key": "ROOM-LOBBY-DEAL@mcu-collar-pop",
+  "id": "ROOM-LOBBY-DEAL",
+  "state": "mcu-collar-pop",
+  "module": "shared/pixel/rooms/lobby-deal.ts drawDealMcuMas + cast/mas-collars.ts",
+  "note": "9.08 [MCU] pop: the third collar surfaces (its 1-px hop, frame 0)",
+  "standin": "",
+  "native": "native/ROOM-LOBBY-DEAL--mcu-collar-pop.png",
+  "full": "full/ROOM-LOBBY-DEAL--mcu-collar-pop.png"
+ },
+ {
+  "key": "ROOM-LOBBY-DEAL@2s-terms",
+  "id": "ROOM-LOBBY-DEAL",
+  "state": "2s-terms",
+  "module": "shared/pixel/rooms/lobby-deal.ts drawDeal2S",
+  "note": "9.09 [2S] the terms (held): Mas on the check, three collars; Tasya warm, unhurried; the ring at his belt",
+  "standin": "",
+  "native": "native/ROOM-LOBBY-DEAL--2s-terms.png",
+  "full": "full/ROOM-LOBBY-DEAL--2s-terms.png"
+ },
+ {
+  "key": "ROOM-LOBBY-DEAL@wide-weeks-on",
+  "id": "ROOM-LOBBY-DEAL",
+  "state": "wide-weeks-on",
+  "module": "shared/pixel/rooms/lobby-deal.ts drawDealWide + kits/tv-news.ts",
+  "note": "9.10 [W] weeks on: the check scuffed grey, Gerg on its edge, Tasya's twelfth key (beige); GNIB on the TV",
+  "standin": "",
+  "native": "native/ROOM-LOBBY-DEAL--wide-weeks-on.png",
+  "full": "full/ROOM-LOBBY-DEAL--wide-weeks-on.png"
+ },
+ {
+  "key": "ROOM-LOBBY-DEAL@2s-lid-open",
+  "id": "ROOM-LOBBY-DEAL",
+  "state": "2s-lid-open",
+  "module": "shared/pixel/rooms/lobby-deal.ts drawDealGerg2S",
+  "note": "9.13 [2S] \"ours does that too.\" Mas at the desk with his glass; Gerg on the check, his laptop open",
+  "standin": "",
+  "native": "native/ROOM-LOBBY-DEAL--2s-lid-open.png",
+  "full": "full/ROOM-LOBBY-DEAL--2s-lid-open.png"
+ },
+ {
+  "key": "ROOM-LOBBY-DEAL@2s-lid-shut",
+  "id": "ROOM-LOBBY-DEAL",
+  "state": "2s-lid-shut",
+  "module": "shared/pixel/rooms/lobby-deal.ts drawDealGerg2S (LOBBY_LID)",
+  "note": "9.13 end: he closes it (the lid shut at LOBBY_LID: sc 11's demo stage opens a lid in the same place)",
+  "standin": "",
+  "native": "native/ROOM-LOBBY-DEAL--2s-lid-shut.png",
+  "full": "full/ROOM-LOBBY-DEAL--2s-lid-shut.png"
+ },
+ {
+  "key": "UI-TV@scr-gnib",
+  "id": "UI-TV",
+  "state": "scr-gnib",
+  "module": "shared/pixel/kits/tv-news.ts drawTvScreen",
+  "note": "9.10 [SCR] GNIB's launch: a search box with a chat bubble inside it; the TV's caption",
+  "standin": "",
+  "native": "native/UI-TV--scr-gnib.png",
+  "full": "full/UI-TV--scr-gnib.png"
+ },
+ {
+  "key": "UI-TV@scr-tap",
+  "id": "UI-TV",
+  "state": "scr-tap",
+  "module": "shared/pixel/kits/tv-news.ts drawTvScreen + cast/radnus.ts",
+  "note": "9.11 [SCR] across town, at Elgoog: Radnus tap-dances (drawing 1 of 2), extinguisher held politely aside",
+  "standin": "",
+  "native": "native/UI-TV--scr-tap.png",
+  "full": "full/UI-TV--scr-tap.png"
+ },
+ {
+  "key": "UI-TV@scr-telescope",
+  "id": "UI-TV",
+  "state": "scr-telescope",
+  "module": "shared/pixel/kits/tv-news.ts drawTvScreen",
+  "note": "9.12 [SCR] the telescope turns (held 2 of 3); the ticker crawls in",
+  "standin": "",
+  "native": "native/UI-TV--scr-telescope.png",
+  "full": "full/UI-TV--scr-telescope.png"
+ },
+ {
+  "key": "UI-TV@scr-ledger",
+  "id": "UI-TV",
+  "state": "scr-ledger",
+  "module": "shared/pixel/kits/tv-news.ts drawTvScreen + tvLedger",
+  "note": "9.12 the LEDGER flash-print (6 frames, the engine's money set), the figure in the ticker",
+  "standin": "",
+  "native": "native/UI-TV--scr-ledger.png",
+  "full": "full/UI-TV--scr-ledger.png"
+ },
+ {
+  "key": "UI-TV@scr-figure",
+  "id": "UI-TV",
+  "state": "scr-figure",
+  "module": "shared/pixel/kits/tv-news.ts drawTvScreen",
+  "note": "9.12 after the print: its lens stares straight at him; the figure holds in the ticker to read",
+  "standin": "",
+  "native": "native/UI-TV--scr-figure.png",
+  "full": "full/UI-TV--scr-figure.png"
+ },
+ {
+  "key": "PROP-CHECK@states",
+  "id": "PROP-CHECK",
+  "state": "states",
+  "module": "shared/pixel/kits/novelty-check.ts",
+  "note": "upright with the pen (the jam), on the floor (a doormat), scuffed weeks on (footprints)",
+  "standin": "",
+  "native": "native/PROP-CHECK--states.png",
+  "full": "full/PROP-CHECK--states.png"
+ },
+ {
+  "key": "CAST-TASYA-MEDIUM@poses",
+  "id": "CAST-TASYA-MEDIUM",
+  "state": "poses",
+  "module": "shared/pixel/cast/tasya-medium.ts drawTasyaMedium",
+  "note": "medium (portrait geometry at half size): clasp (11 keys), after you, the ring up (12, the beige one); the room ring",
+  "standin": "",
+  "native": "native/CAST-TASYA-MEDIUM--poses.png",
+  "full": "full/CAST-TASYA-MEDIUM--poses.png"
+ },
+ {
+  "key": "CAST-GERG-POSES@poses",
+  "id": "CAST-GERG-POSES",
+  "state": "poses",
+  "module": "shared/pixel/cast/gerg-poses.ts drawGergPose",
+  "note": "tug (the check's corner), sit (laptop open on his knees), sitShut, armsUp",
+  "standin": "",
+  "native": "native/CAST-GERG-POSES--poses.png",
+  "full": "full/CAST-GERG-POSES--poses.png"
+ },
+ {
+  "key": "SPLIT-DUEL@arrival-lid-shut",
+  "id": "SPLIT-DUEL",
+  "state": "arrival-lid-shut",
+  "module": "shared/pixel/rooms/duel-split.ts drawDemoArrival",
+  "note": "11.01 [W] the match cut: the bullpen dressed as the demo stage (GTP-4), Gerg's lid shut where it shut in 9.13",
+  "standin": "",
+  "native": "native/SPLIT-DUEL--arrival-lid-shut.png",
+  "full": "full/SPLIT-DUEL--arrival-lid-shut.png"
+ },
+ {
+  "key": "SPLIT-DUEL@arrival-lid-open",
+  "id": "SPLIT-DUEL",
+  "state": "arrival-lid-open",
+  "module": "shared/pixel/rooms/duel-split.ts drawDemoArrival",
+  "note": "11.01 [W] the lid opens in the same place in frame (LOBBY_LID), the Build's chip line leading",
+  "standin": "",
+  "native": "native/SPLIT-DUEL--arrival-lid-open.png",
+  "full": "full/SPLIT-DUEL--arrival-lid-open.png"
+ },
+ {
+  "key": "SPLIT-DUEL@p1-napkin-memo",
+  "id": "SPLIT-DUEL",
+  "state": "p1-napkin-memo",
+  "module": "shared/pixel/rooms/duel-split.ts drawDuelSplit + cast/clod.ts",
+  "note": "11.03 phrase 1: Gerg holds up the napkin; Mario dictates, CLOD unlit on its plinth",
+  "standin": "",
+  "native": "native/SPLIT-DUEL--p1-napkin-memo.png",
+  "full": "full/SPLIT-DUEL--p1-napkin-memo.png"
+ },
+ {
+  "key": "SPLIT-DUEL@p2-launch-site",
+  "id": "SPLIT-DUEL",
+  "state": "p2-launch-site",
+  "module": "shared/pixel/rooms/duel-split.ts drawDuelSplit",
+  "note": "11.04 phrase 2: the launch light on CLOD (\"You're absolutely right!\"); NAPKIN → WEBSITE; the room cheers",
+  "standin": "",
+  "native": "native/SPLIT-DUEL--p2-launch-site.png",
+  "full": "full/SPLIT-DUEL--p2-launch-site.png"
+ },
+ {
+  "key": "SPLIT-DUEL@p3-post",
+  "id": "SPLIT-DUEL",
+  "state": "p3-post",
+  "module": "shared/pixel/rooms/duel-split.ts drawDuelSplit + kits/post-card.ts",
+  "note": "11.05 phrase 3: Mas holds up his phone, his post pops (\"…still flawed, still limited…\"); Mario reads it",
+  "standin": "",
+  "native": "native/SPLIT-DUEL--p3-post.png",
+  "full": "full/SPLIT-DUEL--p3-post.png"
+ },
+ {
+  "key": "SPLIT-DUEL@p4-memo-website",
+  "id": "SPLIT-DUEL",
+  "state": "p4-memo-website",
+  "module": "shared/pixel/rooms/duel-split.ts drawDuelSplit",
+  "note": "11.06 phrase 4, the turn: the scroll crossed the split onto Gerg's desk; MEMO → WEBSITE; the empty spindle",
+  "standin": "",
+  "native": "native/SPLIT-DUEL--p4-memo-website.png",
+  "full": "full/SPLIT-DUEL--p4-memo-website.png"
+ },
+ {
+  "key": "CAST-CLOD@states",
+  "id": "CAST-CLOD",
+  "state": "states",
+  "module": "shared/pixel/cast/clod.ts drawClod",
+  "note": "pixel CLOD: wait unlit, bow lit (smile), up lit, the wheel's three held turns",
+  "standin": "",
+  "native": "native/CAST-CLOD--states.png",
+  "full": "full/CAST-CLOD--states.png"
+ },
+ {
+  "key": "UI-PAUSE-LETTER@ots-monitor",
+  "id": "UI-PAUSE-LETTER",
+  "state": "ots-monitor",
+  "module": "shared/pixel/kits/pause-letter.ts drawLetterOTS",
+  "note": "12.01 [OTS] over his shoulder at night: his monitor lights with the letter: PAUSE GIANT AI EXPERIMENTS",
+  "standin": "",
+  "native": "native/UI-PAUSE-LETTER--ots-monitor.png",
+  "full": "full/UI-PAUSE-LETTER--ots-monitor.png"
+ },
+ {
+  "key": "UI-PAUSE-LETTER@push-2",
+  "id": "UI-PAUSE-LETTER",
+  "state": "push-2",
+  "module": "shared/pixel/kits/pause-letter.ts drawLetterOTS",
+  "note": "12.01 the push to full-bleed (held step 2 of 3): the page seen 1:1 through the growing screen",
+  "standin": "",
+  "native": "native/UI-PAUSE-LETTER--push-2.png",
+  "full": "full/UI-PAUSE-LETTER--push-2.png"
+ },
+ {
+  "key": "UI-PAUSE-LETTER@clipboard",
+  "id": "UI-PAUSE-LETTER",
+  "state": "clipboard",
+  "module": "shared/pixel/kits/pause-letter.ts drawClipboard",
+  "note": "the letter as a clipboard: the clip's fine print PAUSES RECEIVED: 0; Nole's flourish (signed 2); the room size",
+  "standin": "",
+  "native": "native/UI-PAUSE-LETTER--clipboard.png",
+  "full": "full/UI-PAUSE-LETTER--clipboard.png"
+ },
+ {
+  "key": "ROOM-NOLE-DESK@arrival-glide",
+  "id": "ROOM-NOLE-DESK",
+  "state": "arrival-glide",
+  "module": "shared/pixel/rooms/nole-desk.ts drawNoleDesk",
+  "note": "12.01→12.02 [W] a standing desk in the dark, his 1am lamp; the clipboard gliding in (held 2 of 3)",
+  "standin": "",
+  "native": "native/ROOM-NOLE-DESK--arrival-glide.png",
+  "full": "full/ROOM-NOLE-DESK--arrival-glide.png"
+ },
+ {
+  "key": "ROOM-NOLE-DESK@sign-solder",
+  "id": "ROOM-NOLE-DESK",
+  "state": "sign-solder",
+  "module": "shared/pixel/rooms/nole-desk.ts + cast/nole.ts + cast/oigneb.ts",
+  "note": "12.02 [W] he signs with his left hand, solders with his right under the desk (sparks); Oigneb holds up PAUSE",
+  "standin": "",
+  "native": "native/ROOM-NOLE-DESK--sign-solder.png",
+  "full": "full/ROOM-NOLE-DESK--sign-solder.png"
+ },
+ {
+  "key": "ROOM-NOLE-DESK@sign-higher",
+  "id": "ROOM-NOLE-DESK",
+  "state": "sign-higher",
+  "module": "shared/pixel/rooms/nole-desk.ts drawNoleDesk",
+  "note": "12.02 \"It's not the font, Nole.\" Oigneb holds the sign higher; nobody pauses (sparks drawing 3)",
+  "standin": "",
+  "native": "native/ROOM-NOLE-DESK--sign-higher.png",
+  "full": "full/ROOM-NOLE-DESK--sign-higher.png"
+ },
+ {
+  "key": "CAST-OIGNEB@poses",
+  "id": "CAST-OIGNEB",
+  "state": "poses",
+  "module": "shared/pixel/cast/oigneb.ts drawOigneb",
+  "note": "OIGNEB: the PAUSE sign at his chest, held higher, no sign; lit and dim",
+  "standin": "",
+  "native": "native/CAST-OIGNEB--poses.png",
+  "full": "full/CAST-OIGNEB--poses.png"
+ },
+ {
+  "key": "INSERT-PLEASE@high-writing",
+  "id": "INSERT-PLEASE",
+  "state": "high-writing",
+  "module": "shared/pixel/kits/please-sheet.ts drawPleaseHigh",
+  "note": "12.04 [HIGH] his desk from above: his hand, the MACROSOFT pen, PLEASE, its last letter still being drawn",
+  "standin": "",
+  "native": "native/INSERT-PLEASE--high-writing.png",
+  "full": "full/INSERT-PLEASE--high-writing.png"
+ },
+ {
+  "key": "INSERT-PLEASE@ecu-lift",
+  "id": "INSERT-PLEASE",
+  "state": "ecu-lift",
+  "module": "shared/pixel/kits/please-sheet.ts drawPleaseECU",
+  "note": "12.06 [ECU] PLEASE and blank paper under it; the pen lifts (THREAT on the lift)",
+  "standin": "",
+  "native": "native/INSERT-PLEASE--ecu-lift.png",
+  "full": "full/INSERT-PLEASE--ecu-lift.png"
+ },
+ {
+  "key": "ROOM-BULLPEN-LAUNCH@glass-phone-letter",
+  "id": "ROOM-BULLPEN-LAUNCH",
+  "state": "glass-phone-letter",
+  "module": "shared/pixel/rooms/bullpen-launch.ts drawLaunchGlass",
+  "note": "12.05 [MCU·glass] Mas soft, bent over his sheet; in the glass Alyi reads the pause letter on his phone (draft 6)",
+  "standin": "",
+  "native": "native/ROOM-BULLPEN-LAUNCH--glass-phone-letter.png",
+  "full": "full/ROOM-BULLPEN-LAUNCH--glass-phone-letter.png"
+ },
+ {
+  "key": "ROOM-BULLPEN-LAUNCH@glass-blink",
+  "id": "ROOM-BULLPEN-LAUNCH",
+  "state": "glass-blink",
+  "module": "shared/pixel/rooms/bullpen-launch.ts drawLaunchGlass",
+  "note": "v3-5.06b: the 5.05 setup held, the slow blink (eyes closed: the loop's other drawing)",
+  "standin": "",
+  "native": "native/ROOM-BULLPEN-LAUNCH--glass-blink.png",
+  "full": "full/ROOM-BULLPEN-LAUNCH--glass-blink.png"
+ }
+]
