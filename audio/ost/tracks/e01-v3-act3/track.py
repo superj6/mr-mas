@@ -4,8 +4,12 @@
 Brief (v3-score-b, 2026-09-27; v3-plan §6, script draft 6 sc 18-23): intimate, quiet, a little lonely, but WARM, not
 dread.  The Water Line (MM-01), warm, as one continuous performance across sc 18-22, thinning to one felt note under
 the V.O. and under every real line; the Orb's verdict (the open fifth F5 -> C6) when the Orb acts; THE CLOCK (MM-14's
-step figure) only at the act-out, one step a beat, to a dead stop on bar 4's downbeat.  Warm colours away from F
-(D-flat lydian, A-flat major) are authorised for Ep1 v3.  Nothing below C3 anywhere (the dark room's drone, F1 + C2).
+step figure) only at the act-out, one step a beat, to a dead stop on bar 4's downbeat.  Nothing below C3 anywhere (the
+dark room's drone, F1 + C2).
+REVISED on the showrunner's note on the v3 film (2026-09-27, "i didn't mean for you to overkill and make it sound goofy
+level hapy"; SHOWRUNNER-NOTES note 2): the harmony is the dark, modal home (F minor, B-flat minor, quartal and sus);
+the D-flat and A-flat colours are added-9th chords with no third; Gerg's Build is small, soft and in F minor (four short
+passes); the Fountain Pen nod is gone; Tasya's one Rhodes chord has no third.  The map below keeps its positions.
 
 TIMING IS PARAMETRIC.  Every position below is read from the timeline (beat starts, line spans, words, sounds):
     --variant kokoro   show/reel/ep01-v3/ep01-v3-act3.json          (default)  -> render/music.wav, cues.json
@@ -15,10 +19,10 @@ The grid (96 BPM, a bar = 2.5 s) is anchored so that THE CLOCK's bar 1 is 23.01'
 
   segment s (kokoro)  what plays                                                      picture
   0.03                the felt alone in the dark: a D-flat lydian bloom (Db3 Ab3 Eb4)  18.01 the home room
-  0.54                THE WATER LINE, warm: F F F G(sw) F | C F over Dbmaj9(#11) and    (the slot whirs 2.5, the
-                      Bbm9, the chip square on the nudge only                           tray lands 3.7: SFX)
+  0.54                THE WATER LINE: F F F G(sw) F | C F over Fm9 (rootless) and B-flat  (the slot whirs 2.5, the
+                      minor, the chip square on the nudge only                          tray lands 3.7: SFX)
   5.54 / 8.04         Abmaj9, Eb13sus: the dominant hangs as he reaches for the lid     18.02 the label
-  10.54               Gbmaj9(#11) + bowed vibes (Bb4 F5, pp): the lens finds him        18.03 the Orb rises
+  10.54               Gb(add9), no third + bowed vibes (Bb4 F5, pp): the lens finds him 18.03 the Orb rises
   14.13-15.4          GLYPH grains (F5 C6 Db6, straight 16ths, 0 ms): the machine,      18.04 the scan; 18.04g the
                       one bar (GLYPH use 1 of 2 is the picture's)                        tokens (glyph_blink: SFX)
   15.65               THE VERDICT: F5 -> C6 (vibes + celesta), over the felt's open     18.05 `verified: human`
@@ -26,24 +30,24 @@ The grid (96 BPM, a bar = 2.5 s) is anchored so that THE CLOCK's bar 1 is 23.01'
   18.04               one felt note (Db3 + Ab3) and nothing moves: "i made it for        18.06 the V.O.; "you can
                       everyone else." sits inside it; nothing under "you can stay."     stay."; the chime (SFX, F)
   23.67 / 24.29       the settle C4 -> F4 over the open fifth: it fits                  the Orb in the outline
-  25.54-35.5          the Water Line again (Abmaj9 | Dbmaj9#11: the settle lands on     19.x the monitor: Mario,
-                      D-flat's third, warm), a solo violin line under it (the lonely     the second phone, the rent
+  25.54-35.5          the Water Line again (Fm9 | B-flat minor), a solo violin line      19.x the monitor: Mario,
+                      under it (the lonely colour), Dbmaj7 (no third), Eb13sus           the second phone, the rent
                       colour), Bbm9, Eb13sus                                            meter
-  35.54-39.8          the record (the post he types): the felt's held F4 over Dbmaj7    20.01 TIDDER; 20.02 the
+  35.54-39.8          the record (the post he types): the felt's held F4 over Bb minor  20.01 TIDDER; 20.02 the
                       and a sul-tasto Db3/Ab3 pedal; nothing moves (the LEDs stop)      LEDs stop (the quiet beat)
-  40.54-75.7          GERG'S CALL: A-flat major, one felt chord a bar; GERG'S BUILD      20.03 he posts; the ring;
-                      (the v3 sample's A-flat colour) in compile passes in the gaps and  20.04-20.06 the call; the
-                      under his lines, never under Mas's lines, the V.O. or the edit;    edit (the record: pedal);
-                      the V.O. gets the felt alone; the keys run on (a last pass)       "gerg types louder..."
-  75.8-93.5           the order: held chords in the gaps (Gbmaj9#11, Ebm9, Ab13sus),     21.02-21.03 NEDIB and the
+  40.54-75.7          GERG'S CALL: the minor home, one felt chord a bar; GERG'S BUILD    20.03 he posts; the ring;
+                      small and soft (F minor, the bible's cell), a short pass then two  20.04-20.06 the call; the
+                      bars of rest, never under Mas's lines, the V.O. or the edit;       edit (the record: pedal);
+                      the V.O. gets the felt alone; the keys run on (4 notes)           "gerg types louder..."
+  75.8-93.5           the order: held chords in the gaps (Gb(add9), Ebm9, Ab13sus),      21.02-21.03 NEDIB and the
                       pedal only under the real line                                    copies; "When the hell..."
   93.6-98.5           Dbmaj9; the Orb picks: THE VERDICT again (F5 -> C6) over the      21.04 "which one's real?"
                       open fifth, before "the one with the pen."                        the iris x3
-  99.25               NEDIB'S FOUNTAIN PEN, bar 2 (C D F Bb, quarters) on the quartet,   21.05 the real one signs;
-                      pp: his pen, his order                                             the copies clap
-  102.9               DevDay: Abmaj9; TASYA'S RHODES, one chord, as he walks on; the     22.01 the keynote on the
+  99.25               a held sul-tasto Bb3/Eb4 as the real one signs (no motif)         21.05 the real one signs;
+                                                                                         the copies clap
+  102.9               DevDay: Ab sus2; TASYA'S RHODES, one quiet chord (no third), as    22.01 the keynote on the
                       A-flat pedal only under "We love you guys." (the record)          monitor
-  109.9               Dbmaj9#11 on the felt; "thrilled is too much..." sits inside      22.02 the phone's three
+  109.9               Db(add9) on the felt; "thrilled is too much..." sits inside       22.02 the phone's three
   116.17              after "super.": the Water Line's flat line F F F and the nudge     22.03 the Orb lingers
                       G4 ... and the settle never comes:
   118.04              THE CLOCK takes the downbeat: an F3/C4 pedal, one pizz step a     23.01-23.03 the reminder,
@@ -74,7 +78,7 @@ sys.path.insert(0, HERE)
 import v3clock   # noqa: E402
 import v3lay     # noqa: E402
 from v3music import *   # noqa: E402,F401,F403
-from v3music import Cue, rebow, pedal_track, build16, Q, S16, BAR   # noqa: E402
+from v3music import Cue, rebow, pedal_track, build16, BUILD_F, Q, S16, BAR   # noqa: E402
 from engine.core import nm   # noqa: E402
 
 SEG = 'act3'
@@ -139,22 +143,25 @@ def tracks():
     return T
 
 
+# REVISED (the showrunner on the v3 film, 2026-09-27: "i didn't mean for you to overkill and make it sound goofy
+# level hapy"; SHOWRUNNER-NOTES note 2): the dark, modal home (F minor, B-flat minor, quartal and sus colours); a
+# major colour only as an added 9th with no third.  Names kept; voicings changed.
 CH = {  # felt voicings, nothing below C3 (the room drone); no A natural over an F bass anywhere (rule 12)
-    'Dbly':     ['Db3', 'Ab3', 'Eb4'],
-    'Dbmaj9':   ['Db3', 'Ab3', 'C4'],
-    'Dbmaj9h':  ['Db3', 'F3', 'Ab3', 'C4'],
-    'Bbm9':     ['Db3', 'F3', 'Ab3'],
-    'Bbm9h':    ['Db3', 'F3', 'Ab3', 'C4'],
-    'Abmaj9':   ['Eb3', 'G3', 'C4'],
-    'Abmaj9h':  ['Eb3', 'G3', 'Bb3', 'C4'],
+    'Dbly':     ['Db3', 'Ab3', 'Eb4'],                  # D-flat(add9), no third
+    'Dbmaj9':   ['Db3', 'Ab3', 'C4'],                   # D-flat maj7, no third
+    'Dbmaj9h':  ['Db3', 'Ab3', 'C4', 'Eb4'],
+    'Bbm9':     ['Db3', 'F3', 'Bb3'],                   # B-flat minor over D-flat
+    'Bbm9h':    ['Db3', 'F3', 'Bb3', 'C4'],
+    'Abmaj9':   ['Eb3', 'G3', 'Ab3', 'C4'],             # Fm9, rootless (the Water Line's home)
+    'Abmaj9h':  ['Eb3', 'Ab3', 'Bb3', 'Eb4'],           # A-flat sus2, no third
     'Eb13sus':  ['Eb3', 'Ab3', 'Db4', 'F4'],
-    'Gbmaj9':   ['Gb3', 'Bb3', 'Db4', 'F4'],
+    'Gbmaj9':   ['Gb3', 'Db4', 'F4', 'Ab4'],            # G-flat maj9, no third
     'Ebm9':     ['Eb3', 'Gb3', 'Bb3', 'Db4'],
     'Ab13sus':  ['Ab3', 'Db4', 'Gb4', 'Bb4'],
     'Cm7':      ['C3', 'G3', 'Bb3', 'Eb4'],
     'F5':       ['F3', 'C4'],
 }
-CALL_HARM = ['Abmaj9', 'Dbmaj9h', 'Bbm9h', 'Eb13sus', 'Abmaj9h', 'Dbmaj9h', 'Cm7', 'Eb13sus']
+CALL_HARM = ['Abmaj9', 'Bbm9h', 'Dbmaj9h', 'Eb13sus', 'Abmaj9', 'Cm7', 'Bbm9h', 'Eb13sus']
 
 
 # ================================================================== the cue
@@ -211,10 +218,10 @@ def build(c):
     b = cue.next_bar(E['home'] + 0.3)                     # the first bar line after the first frame
     fch('Dbly', E['home'] + 0.03, cue.bar(b) - E['home'] + 0.2, 0.12, roll=0.03, span_end=cue.bar(b) - 0.02)
     cue.mark(E['home'] + 0.03, 'A: the felt alone in the dark (D-flat lydian), from the first frame')
-    water_line(b, vel=0.17)
-    fch('Dbmaj9', cue.bar(b), 2.4, 0.13)
+    water_line(b, vel=0.155)
+    fch('Abmaj9', cue.bar(b), 2.4, 0.13)                  # Fm9 rootless: the Water Line in its home
     fch('Bbm9', cue.bar(b + 1), 2.4, 0.12)
-    cue.mark(cue.bar(b), 'A: THE WATER LINE, warm (F F F G F | C F over Dbmaj9(#11), Bbm9); the chip on the nudge')
+    cue.mark(cue.bar(b), 'A: THE WATER LINE (F F F G F | C F over Fm9, Bbm); the chip on the nudge')
     fch('Abmaj9', cue.bar(b + 2), 2.4, 0.12)
     fch('Eb13sus', cue.bar(b + 3), 2.4, 0.12)
     bo = cue.next_bar(E['lid'] + 0.6)                     # the lens finds him
@@ -259,34 +266,34 @@ def build(c):
     cue.n('felt', 'F4', ts + Q, 2.8, 0.18)
     cue.mark(ts, 'A: the settle C4 (after the chime)')
     cue.mark(ts + Q, 'A: F4 over the open fifth: it fits')
-    no_third.append((cue.s(ts + Q) + 0.05, cue.s(ts + Q) + 1.8))
+    no_third.append((cue.s(ts + Q) + 0.05, min(cue.s(ts + Q) + 1.8, cue.s(E['mon']) + 0.1)))
     cue.section('A the home room: the Water Line warm, the Orb, the verdict, the settle', 0.0, E['mon'])
 
     # ---------------------------------------------------------------- B · the monitor: Mario (a little lonely)
     bm = cue.next_bar(E['mon'] + 0.1)
-    water_line(bm, vel=0.15, nudge=True)
+    water_line(bm, vel=0.14, nudge=True)
     fch('Abmaj9', cue.bar(bm), 2.4, 0.12)
-    fch('Dbmaj9h', cue.bar(bm + 1), 2.4, 0.12)
-    fch('Bbm9h', cue.bar(bm + 2), 2.4, 0.11)
+    fch('Bbm9h', cue.bar(bm + 1), 2.4, 0.12)
+    fch('Dbmaj9h', cue.bar(bm + 2), 2.4, 0.11)
     fch('Eb13sus', cue.bar(bm + 3), 2.4, 0.11, span_end=E['type'] + 0.1)
     # the lonely colour: a solo violin line under the Water Line (sul tasto, soft attacks)
     for p, bb, beat, nb in [('Eb4', bm, 3, 2), ('Db4', bm + 1, 1, 4), ('C4', bm + 2, 1, 2), ('Bb3', bm + 2, 3, 2),
                             ('Ab3', bm + 3, 1, 4)]:
         cue.n('svla', p, cue.bt(bb, beat), nb * Q * 0.98, 0.28, art='sus', att=0.35, rel=0.5)
-    cue.mark(cue.bar(bm), 'B: the Water Line again (Abmaj9 | Dbmaj9: the settle lands on its third) + the solo line')
+    cue.mark(cue.bar(bm), 'B: the Water Line again (Fm9 | Bbm) + the solo line (the lonely colour)')
     cue.section('B the monitor (Mario, the second phone, the rent meter)', E['mon'], E['type'])
 
     # ---------------------------------------------------------------- C · the post (the record) and the call
     tr = cue.bar(cue.next_bar(E['type'] + 0.3))
-    fch('Dbmaj9', tr, E['post'] - tr + 0.6, 0.12, span_end=E['post'] + 0.3)
+    fch('Bbm9', tr, E['post'] - tr + 0.6, 0.12, span_end=E['post'] + 0.3)
     cue.n('felt', 'F4', tr, E['post'] - tr + 0.6, 0.15)                    # the Water Line holds its note
     rebow(cue.a, 'vc', 'Db3', cue.s(tr - 0.2), cue.s(E['ring'] + 0.4), 0.16, seg=5.0, xf=1.0, first_att=1.2,
           last_rel=0.8, art='sus', lp=1100)
     rebow(cue.a, 'vla', 'Ab3', cue.s(tr), cue.s(E['ring'] + 0.4), 0.14, seg=5.0, xf=1.0, first_att=1.4,
           last_rel=0.8, art='sus', lp=1300)
-    cue.mark(tr, 'C: the record (he types the post): a held F4 over Dbmaj7 + the pedal; nothing moves', hit=False)
+    cue.mark(tr, 'C: the record (he types the post): a held F4 over Bbm + the pedal; nothing moves', hit=False)
     cue.mark(E['ledstop'], 'C: the LEDs stop: the Water Line holds (no attack)', hit=False)
-    # the call: A-flat major, one felt chord a bar (moved off Mas's lines; none inside the V.O. or the edit)
+    # the call: the minor home, one felt chord a bar (moved off Mas's lines; none inside the V.O. or the edit)
     bc = cue.next_bar(E['ring'] - 0.15)
     b_end = cue.next_bar(E['order'] - 0.3)
     vo = E['vo15']
@@ -304,14 +311,14 @@ def build(c):
             continue
         fch(name, tt, BAR - (tt - t) - 0.05, 0.12 if c.talk(tt + 0.3) else 0.14)
     fch('Dbmaj9h', vo['on'] - 0.35, vo['end'] - vo['on'] + 0.8, VO_VEL4, span_end=vo['end'] + 0.3)   # the V.O.
-    vo_lift(vo, ['Eb3', 'Ab3', 'C4'], v=0.14)
+    vo_lift(vo, ['Eb3', 'Ab3', 'Db4'], v=0.14)
     # the edit: the record again: a sul-tasto Ab3/Eb4 pedal under it (no chord, no Build)
     rebow(cue.a, 'vla', 'Eb4', cue.s(E['edit'] - 0.1), cue.s(E['back'] + 0.5), 0.13, seg=5.0, xf=1.0, first_att=0.8,
           last_rel=0.6, art='sus', lp=1300)
     rebow(cue.a, 'vc', 'Ab3', cue.s(E['edit'] - 0.1), cue.s(E['back'] + 0.5), 0.14, seg=5.0, xf=1.0, first_att=0.8,
           last_rel=0.6, art='sus', lp=1100)
-    # GERG'S BUILD in A-flat major: compile passes on the half-bars, in the gaps and under his own lines
-    sizes = [4, 8, 8, 12, 4, 8, 16, 8]
+    # GERG'S BUILD, small and soft, F minor: short passes on the half-bars, in the gaps and under his own lines
+    sizes = [4, 8, 4, 8]                                    # (revised: small and soft, F minor)
     passes = []
     t = cue.bt(bc, 3)
     kk = 0
@@ -321,19 +328,19 @@ def build(c):
         while n >= 4 and (blocked(t - 0.05, t + n * S16 + 0.1) or t + n * S16 > limit):
             n -= 4
         if n >= 4:
-            t0_, got = build16(cue, t, n, 0.3 if c.talk(t) else 0.33, felt_every=4, felt_vel=0.13)
+            t0_, got = build16(cue, t, n, 0.22, felt_every=4 if kk == 0 else 0, felt_vel=0.11, cell=BUILD_F)
             passes.append((t0_, got))
             kk += 1
-            t += 2 * Q * max(2, math.ceil((got * S16) / (2 * Q)) + 1)
+            t += 2 * BAR * 2                                   # a pass, then two bars of rest
         else:
             t += 2 * Q
     tl = vo['end'] + 0.12                                                  # the keys run on after the V.O.
     if tl + 4 * S16 < E['order'] - 0.15:
-        passes.append(build16(cue, tl, 8, 0.28, stop_at=E['order'] - 0.15, felt_every=0))
+        passes.append(build16(cue, tl, 4, 0.2, stop_at=E['order'] - 0.15, felt_every=0, cell=BUILD_F))
     for t0_, got in passes:
-        cue.mark(t0_, f"C: the Build (A-flat), a compile pass of {got}")
+        cue.mark(t0_, f"C: the Build (F minor, small), a pass of {got}")
     cue.section('C the post (the record) and the LEDs', E['type'], E['post'])
-    cue.section("C Gerg's call: A-flat, the Build in passes; the edit (pedal); the V.O. (felt)", E['post'], E['order'])
+    cue.section("C Gerg's call: the felt, the Build small; the edit (pedal); the V.O. (felt)", E['post'], E['order'])
 
     # ---------------------------------------------------------------- D · the order (the monitor), the Orb picks
     rebow(cue.a, 'vc', 'Gb3', cue.s(E['order'] - 0.2), cue.s(E['ask'] + 0.2), 0.13, seg=5.0, xf=1.0,
@@ -359,20 +366,18 @@ def build(c):
         cue.n(inst, 'C6', tv2 + 0.3, 1.8, v * 0.95, lock=True)
     cue.mark(tv2, 'D: THE VERDICT again: the Orb picks the one with the pen (F5 -> C6)')
     no_third.append((cue.s(tv2) + 0.05, cue.s(tv2) + 1.0))
-    # NEDIB'S FOUNTAIN PEN (bar 2: C D F Bb in quarters) as the real one signs, pp, on the quartet
+    # (revised: the Fountain Pen nod is out) the real one signs over one held sul-tasto chord
     tp = E['whip'] + 0.03
-    for i, p in enumerate(['C5', 'D5', 'F5', 'Bb5']):
-        cue.n('vln1', p, tp + i * Q, Q * (0.96 if i < 3 else 2.4), 0.3, art='sus', att=0.06, rel=0.6)
-    for inst, p in (('vln2', 'D5'), ('vla', 'F4'), ('vc', 'Bb3')):
-        cue.n(inst, p, tp, 4 * Q + 0.8, 0.2, art='sus', att=0.3, rel=0.8, lp=2600)
-    cue.mark(tp, "D: NEDIB'S FOUNTAIN PEN (bar 2), pp: the real one signs")
-    cue.section('D the order on the monitor; the Orb picks; the pen', E['order'], E['devday'])
+    for inst, p in (('vla', 'Eb4'), ('vc', 'Bb3')):
+        cue.n(inst, p, tp, E['devday'] - tp + 1.0, 0.14, art='sus', att=0.6, rel=0.9, lp=1500)
+    cue.mark(tp, 'D: the real one signs: a held Bb3/Eb4 (sul tasto)', hit=False)
+    cue.section('D the order on the monitor; the Orb picks; the signing', E['order'], E['devday'])
 
     # ---------------------------------------------------------------- E · DevDay on the monitor; the phone; "super."
     tw = cue.bar(cue.next_bar(E['clunk'] + 0.05))                          # Tasya walks on
     fch('Abmaj9h', E['clunk'] + 0.05, tw - E['clunk'] + 2.0, 0.13)
-    cue.ch('rhodes', ['C4', 'Eb4', 'G4', 'Bb4'], tw, 2.2, 0.26, roll=0.008)
-    cue.mark(tw, "E: TASYA'S RHODES, one chord, as he walks on")
+    cue.ch('rhodes', ['Eb4', 'G4', 'Bb4'], tw, 2.2, 0.2, roll=0.008)
+    cue.mark(tw, "E: TASYA'S RHODES, one quiet chord (no third), as he walks on")
     rebow(cue.a, 'vc', 'Ab3', cue.s(tw), cue.s(E['phone'] + 0.5), 0.14, seg=5.0, xf=1.0, first_att=1.2,
           last_rel=0.7, art='sus', lp=1100)
     rebow(cue.a, 'vla', 'Eb4', cue.s(tw + 0.2), cue.s(E['phone'] + 0.5), 0.12, seg=5.0, xf=1.0, first_att=1.2,
@@ -387,7 +392,7 @@ def build(c):
     beats = [bt for bt in (2, 3, 4) if cue.bt(bw, bt) > E['super_']['end'] + 0.12]
     assert len(beats) >= 2, beats
     b0 = beats[0]
-    fch('Dbmaj9', cue.bt(bw, b0), cue.bar(B1) - cue.bt(bw, b0) - 0.02, 0.12, span_end=cue.bar(B1) - 0.03)
+    fch('Bbm9', cue.bt(bw, b0), cue.bar(B1) - cue.bt(bw, b0) - 0.02, 0.12, span_end=cue.bar(B1) - 0.03)
     for bt in beats:
         cue.n('felt', 'F4', cue.bt(bw, bt), Q * 0.92, 0.17)
     cue.n('felt', 'G4', cue.sw(bw, 4.5), cue.bar(B1) - cue.sw(bw, 4.5) - 0.01, 0.18)
@@ -445,13 +450,13 @@ def build(c):
              (cue.s(CLK + 2 * BAR), -1.0), (cue.s(stop) + 1.0, -1.0)]
     meta = dict(
         id=CUE_ID, title='The Dark Room (Ep1 v3, Act Three, to picture)', mm='MM-01 (Water Line) + MM-14 (THE CLOCK)',
-        usage='BI', family='P01 DARK ROOM, warm (D-flat lydian / A-flat major) -> P04 THE CLOCK',
+        usage='BI', family='P01 DARK ROOM (the modal home; add9 colours with no third) -> P04 THE CLOCK',
         tone='intimate, quiet, a little lonely, warm; the Orb as a witness; the clock only at the out',
         scenes=[f'Ep1 v3 Act Three sc 18-23, segment 0-{c.LEN:.3f} s ({c.variant}); file t = 0 = segment {T0:.3f} s'],
         motifs=['the Water Line, warm (felt; the chip on the nudge)', 'the verdict F5 -> C6 (twice)',
-                'GLYPH grains (one bar, the scan)', "Gerg's Build in A-flat major (compile passes)",
-                "Nedib's Fountain Pen (bar 2)", "Tasya's Rhodes (one chord)", 'THE CLOCK (F, G, A-flat: no C)'],
-        motif_ids=['WATER_LINE'], key='D-flat lydian / A-flat major; F open fifths (the verdict); F pedal (the clock)',
+                'GLYPH grains (one bar, the scan)', "Gerg's Build, F minor, small (short passes)",
+                "Tasya's Rhodes (one quiet chord, no third)", 'THE CLOCK (F, G, A-flat: no C)'],
+        motif_ids=['WATER_LINE'], key='F minor / B-flat minor; add9 colours with no third; F open fifths; F pedal',
         composer='Ep1 v3 score, Acts Three and Four (v3-score-b, 2026-09-27)',
         underscore_lufs=-20.0, album_lufs=-16.0,
         no_third_windows=no_third,

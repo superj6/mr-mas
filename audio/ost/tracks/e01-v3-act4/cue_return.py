@@ -1,27 +1,26 @@
-"""E01 v3 Act Four · S7 + S8 · THE RETURN -> THE LOBBY -> THE CODA · MM-11, one relay, onto the vault's F
+"""E01 v3 Act Four · S7 + S8 · THE RETURN -> THE LOBBY -> THE CODA · restrained irony, onto the vault's F
 
+REVISED (the showrunner on the v3 film, 2026-09-27: "i didn't mean for you to overkill and make it sound goofy level
+hapy"; SHOWRUNNER-NOTES note 2's correction: no victory laps; a major colour is fleeting, an added 9th with no third).
 Act Four v5's S7-S8 (tracks/e01-act4-v5/s5-s8_s7s8_the_return.py, MM-11's material), copied and re-spotted to the v3
-lock's ids, with v3's calls (v3-plan §6: "triumph, one size too big"):
+lock's ids, then pared back:
   a  STRAIGHT: the Door on the senza-vibrato solo violin under Alyi's post only; on the first heart its G3 holds and
      decays under the hearts and the exchange (no stop).
-  b  Tasya's floor pre-laps under the decay (the bare A-flat fifth), then a chord on each of "below", "above",
-     "around" (A-flat, C, E maj9, silent attacks), the Rhodes bloom, home to A-flat maj9 under the rail.  (v3: the
-     pre-lap sits under Tasya's own "Everyone's packed..." (v3-a4-0002), not under Mas's cut question.)
+  b  Tasya's floor, quiet: the bare A-flat fifth pre-laps under the decay (under his "Everyone's packed..."), then the
+     landlord's mediants on "below", "above", "around" (A-flat, C, E) as open fifths with the added 9th and no third,
+     silent attacks; one quiet Rhodes chord (no third) home under the rail.
   c1 LEVERAGE fades in under Mada among the fires, the door bang inside it, thinned to its F pedal under Terb's
-     reading and the terms, and a DEAD STOP on "of what?" (Mada's pause, "Good question.", "good question." and the
-     long hold play in the room).
-  c2 the stamp's C: a low C pedal bows in; v3: GERG'S BUILD restarts on his post ("Returning to NopeAI & getting back
-     to coding tonight" restarts it, OST-BIBLE s2.6), soft, in A-flat; one pizz grain on the hourglass's last grain;
-     the pedal rests on the sand.
-  d  the Build's pickup into the sign.
-  e  VICTORY LAP, one size too big (v3: bigger than v5's single stab): the brass stab on the sign, then a bar and a
-     half of A-flat major on strings tutti, horns, timpani roll, the Build at full and a chip-doubled top line
-     (E-flat5 -> A-flat5 -> C6) for a lobby sign; cut by the old dialog: one chip note hangs; the 1993 flat line
-     F5 . F4 . F5 (tenuto, uneven) under Cancel's greying; the bonk (the SFX's E3, the wrong note).
+     reading and the terms, and a DEAD STOP on "of what?" (Mada's pause, both "good question"s and the long hold play
+     in the room).
+  c2 the stamp's C: a low C pedal bows in; Gerg's Build restarts on his post, four soft notes (F minor, OST-BIBLE
+     s2.6); one pizz grain on the hourglass's last grain; the pedal rests on the sand.
+  e  the sign: ONE UNDERSTATED STATEMENT, a little too calm: a still D-flat(add9) chord with no third on low strings
+     and one soft horn, no swell, no motion, until the old dialog pops over it; the 1993 flat line F5 . F4 . F5 under
+     Cancel's greying; the bonk (the SFX's E3).
   -  a designed rest on the lobby's neon F: the CU "silent like the first", nothing under "okay.".
   f  after "okay.": the felt C4 -> F4 over an open fifth; THE VAULT'S F: a glass pedal F3/C4 matched to the hum's fan
-     tones; the Ache (G4 + D-flat5, pure beating tones) for the vault's own shot (v3: no rail explains it, the vault
-     and its note are the beat), cut with the picture; the pedal alone under the memo (the record) and the chair.
+     tones; the Ache (G4 + D-flat5, pure beating tones) for the vault's own shot, cut with the picture; the pedal
+     alone under the memo (the record) and the chair.
 The act ends on the pedal (it carries into the tag: its release is render/music-ringout.wav).
 Nothing here was listened to.
 """
@@ -34,7 +33,17 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from a4common import *   # noqa: E402,F401,F403
 import a4common as C   # noqa: E402
-from v3music import rebow, build16, BUILD_AB, S16   # noqa: E402
+from v3music import rebow, build16, BUILD_F, S16   # noqa: E402
+
+
+class _Proxy:
+    """lets v3music.build16 write on an SCue (act seconds)"""
+
+    def __init__(self, cue):
+        self.cue, self.T0 = cue, cue.T0
+
+    def n(self, inst, p, t, d, v, lock=False, **x):
+        return self.cue.a.n(inst, p, self.cue.s(t), d, v, lock, **x)
 
 ID = 'e01-v3-a4-s7s8-return'
 Q = 0.625
@@ -83,6 +92,7 @@ def build():
     T['hn'].gain_db = T['hn'].gain_db - 3.0
     prewarm(['Ab3', 'Db4', 'C4', 'G3'], vels=(0.5,))
     log = cue.log
+    cue_proxy = _Proxy(cue)
 
     # ================================================================== a · the STRAIGHT violin, then its long decay
     t0 = E['post']
@@ -99,43 +109,33 @@ def build():
     log.append((h1, 'a: the first heart: the G3 holds and decays (no stop)', False))
 
     # ================================================================== b · Tasya's floor
-    AB = (['G3', 'Bb3', 'C4', 'Eb4'], 'Ab1', ['Ab2', 'Eb3'], ['Bb3', 'C4'])
-    CM = (['G3', 'B3', 'D4', 'E4'], 'C2', ['C3', 'G3'], ['D4', 'E4'])
-    EM = (['G#3', 'B3', 'D#4', 'F#4'], 'E2', ['B2', 'E3'], ['F#4', 'G#3'])
+    # (revised: no thirds; the landlord's mediants as open fifths with the added 9th, quiet)
+    AB = (['Eb4', 'G4', 'Bb4'], 'Ab1', ['Ab2', 'Eb3'], ['Bb3', 'Eb4'])
+    CM = (['D4', 'G4', 'B4'], 'C2', ['C3', 'G3'], ['D4', 'G4'])
+    EM = (['F#4', 'B4', 'D#5'], 'E2', ['B2', 'E3'], ['F#4', 'B4'])
     pad0 = E['wide'] + 0.3
     bl, ab, ar = E['below'], E['above'], E['around']
     bloom = E['rec_end'] + 0.25
     home = E['hello_end'] + 0.3
     home_end = E['s705'] + 1.5
-    rebow(a, 'cb', 'Ab1', s(pad0), s(ab) + 0.35, 0.37, seg=4.0, xf=1.0, first_att=1.6, last_rel=0.35, art='sus', lp=2000)
-    rebow(a, 'vc', ['Ab2', 'Eb3'], s(pad0), s(ab) + 0.35, 0.34, seg=4.0, xf=1.0, first_att=1.6, last_rel=0.35,
+    rebow(a, 'cb', 'Ab1', s(pad0), s(ab) + 0.35, 0.3, seg=4.0, xf=1.0, first_att=1.6, last_rel=0.35, art='sus', lp=2000)
+    rebow(a, 'vc', ['Ab2', 'Eb3'], s(pad0), s(ab) + 0.35, 0.28, seg=4.0, xf=1.0, first_att=1.6, last_rel=0.35,
           art='sus', lp=2200)
     art.sus(a, 'vla', AB[3], s(bl), ab - bl + 0.35, vel=0.3, att=0.7, lp=2400, rel=0.35)
-    for (t_a, t_b, (rh, cb, vc, vla), att, v) in [(ab, ar, CM, 0.6, 0.31), (ar, home, EM, 0.6, 0.31),
-                                                  (home, home_end, AB, 0.6, 0.29)]:
+    for (t_a, t_b, (rh, cb, vc, vla), att, v) in [(ab, ar, CM, 0.6, 0.27), (ar, home, EM, 0.6, 0.27),
+                                                  (home, home_end, AB, 0.6, 0.25)]:
         last = t_b == home_end
         dur = t_b - t_a + (0.35 if not last else 0.0)
         rel = 0.35 if not last else 1.2
         art.sus(a, 'cb', [cb], s(t_a), dur, vel=v + 0.02, att=att, lp=2000, rel=rel)
         art.sus(a, 'vc', vc, s(t_a), dur, vel=v, att=att, lp=2200, rel=rel)
         art.sus(a, 'vla', vla, s(t_a), dur, vel=v - 0.05, att=att + 0.2, lp=2400, rel=rel)
-    nb = 0
-    for k in range(2):
-        if bloom + (k + 1) * Q > E['hello'] - 0.1:
-            break
-        a.ch('rhodes', EM[0], s(bloom + k * Q), Q * 0.92, 0.44 if k == 0 else 0.36, roll=0.004)
-        nb = k + 1
-    th = bloom + nb * Q
-    a.ch('rhodes', EM[0], s(th), max(0.3, home - th), 0.34, roll=0.004)
-    a.n('celesta', 'D#6', s(bloom), 2 * Q, 0.3)
-    a.ch('rhodes', AB[0], s(home), home_end - home, 0.36, roll=0.004)
-    a.n('celesta', 'G5', s(home), 2 * Q, 0.26)
+    a.ch('rhodes', AB[0], s(home), home_end - home, 0.22, roll=0.006)          # one quiet chord, home, no third
     T['rhodes'].pedal = [(0.0, False)]
     log += [(pad0, "b: the floor pre-laps (the bare A-flat fifth under the violin's G)", False),
             (bl, 'b: "below": A-flat maj9 (silent attack)', False), (ab, 'b: "above": C maj9', False),
             (ar, 'b: "around": E maj9', False)]
-    cue.mark(bloom, 'b: the bloom (the Rhodes on the beats)')
-    cue.mark(home, 'b: home (A-flat maj9) under the rail')
+    cue.mark(home, 'b: home (A-flat, no third) under the rail: one quiet Rhodes chord')
 
     # ================================================================== c1 · LEVERAGE -> the dead stop on "of what?"
     bang, e8 = E['bang'], Q / 2
@@ -197,50 +197,21 @@ def build():
     rebow(a, 'vla', 'G3', s(st) + 1.0, s(sand), 0.2, seg=5.0, xf=1.0, first_att=1.2, last_rel=0.25, art='sus', lp=1800)
     log.append((st, "c2: the stamp's C: the low C pedal bows in", False))
     gp = E['gerg_post'] + 0.05
-    for n_, dt in ((4, 0.0), (8, 4 * S16 + 2 * Q)):
-        tt = gp + dt
-        if tt + n_ * S16 < E['ttemme_post'] - 0.1:
-            for i in range(n_):
-                p = nm(BUILD_AB[i % 16]) - 12 if nm(BUILD_AB[i % 16]) > nm('C5') else nm(BUILD_AB[i % 16])
-                a.n('lead', p, s(tt + i * S16), S16 * 0.62, 0.32 * (1.0, 0.72, 0.84, 0.72)[i % 4], lock=True,
-                    duty=0.25, att=0.002, dec=0.09, sus=0.45, rel=0.035)
-    cue.mark(gp, "c2: GERG'S BUILD restarts on his post (soft, A-flat; F4-C5 under the keycaps)")
+    build16(cue_proxy, gp, 4, 0.2, felt_every=0, cell=BUILD_F, duty=0.25)          # 4 soft notes: it restarts
+    cue.mark(gp, "c2: GERG'S BUILD restarts on his post (four soft notes, F minor, under the keycaps)")
     art.pizz(a, 'vln1', 'C5', s(E['grain']), vel=0.3, lock=True)
     cue.mark(E['grain'], "c2: one pizz grain on the last grain (before Ttemme's post)")
-    log.append((sand, "the pedal rests on the sand's held beat (the shatter)", False))
+    log.append((sand, "the pedal rests on the sand's held beat (the shatter), and stays at rest into the sign", False))
 
-    # ================================================================== d · the pickup into the sign
+    # ================================================================== e · the sign: one understated statement
+    # (revised: no victory lap, no stab.)  One still chord, a little too calm: D-flat(add9) with no third on low
+    # strings and one soft horn, no swell and no motion, until the old dialog pops over it.
     sg = E['sign']
-    pick = sg - Q
-    mm11.build_cell(a, g, s(pick), 4, vel=0.52)
-    a.n('cb_pizz', 'Eb3', s(pick), Q, 0.5, lock=True)
-    cue.mark(pick, "d: the Build's four-note pickup into the sign")
-
-    # ================================================================== e · VICTORY LAP, one size too big
-    art.stab(a, 'tpt', ['G5', 'Eb5'], s(sg), vel=0.78, length=0.22)
-    art.stab(a, 'tbn', ['C5', 'Bb4'], s(sg), vel=0.76, length=0.24)
-    a.n('lead2', 'G5', s(sg), 0.2, 0.56, lock=True, duty=0.25, rel=0.05)
-    a.n('timp', 'Ab2', s(sg), 0.6, 0.74, lock=True)
-    art.pizz(a, 'cb', 'Ab1', s(sg), vel=0.7, lock=True)
-    one = sg + 16 * Q / 4
-    lap_end = min(E['dialog'] - 0.12, one + 0.2)
-    # the lap: strings tutti swell on A-flat maj9 over the timpani roll; the horns; a chip-doubled top line
-    for inst, ps_, v in (('vln1', ['Eb5'], 0.5), ('vln2', ['C5', 'G4'], 0.46), ('vla', ['Eb4', 'C4'], 0.46),
-                         ('vc', ['Ab2', 'Eb3'], 0.5), ('cb', ['Ab1'], 0.44)):
-        art.sus(a, inst, ps_, s(sg + 0.06), lap_end - sg - 0.06, vel=v, att=0.25, rel=0.18)
-    for p, v in (('Eb4', 0.4), ('G4', 0.38), ('C5', 0.4)):
-        a.n('hn', p, s(sg + 0.05), lap_end - sg - 0.05, v, lock=True, rel=0.2)
-    for k in range(int((lap_end - sg - 0.2) / (Q / 4))):
-        a.n('timp', 'Ab2', s(sg + 0.3 + k * Q / 4), 0.2, 0.3 + 0.2 * k / 16, lock=True)
-    for p, t_a, t_b in (('Eb5', sg, sg + 1.5 * Q), ('Ab5', sg + 1.5 * Q, sg + 3 * Q), ('C6', sg + 3 * Q, lap_end)):
-        a.n('vln1', p, s(t_a), t_b - t_a, 0.52, lock=True, art='sus', att=0.04, rel=0.15)
-        a.n('lead', p, s(t_a), (t_b - t_a) * 0.9, 0.3, lock=True, duty=0.25, rel=0.08, dec=0.2, sus=0.4)
-    mm11.build_cell(a, g, s(sg), 16, vel=0.56, full=True)
-    a.n('cb_pizz', 'Eb3', s(sg + 2 * Q), Q, 0.56, lock=True)
-    a.n('lead', 'G5', s(one), 1.5 * Q, 0.4, lock=True, duty=0.125, rel=0.2, dec=0.3, sus=0.35)
-    cue.mark(sg, 'e: the sign: the brass stab + VICTORY LAP (A-flat maj9, strings, horns, timpani, the Build)')
-    cue.mark(sg + 1.5 * Q, 'e: the top line climbs (E-flat5 -> A-flat5 -> C6, violins + chip)')
-    cue.mark(one, 'e: one chip note (the undercut)')
+    calm_end = E['dialog'] - 0.1
+    for inst, ps_, v in (('vc', ['Db3', 'Ab3'], 0.3), ('vla', ['Eb4'], 0.26), ('vln2', ['Ab4'], 0.22)):
+        art.sus(a, inst, ps_, s(sg), calm_end - sg, vel=v, att=0.5, rel=0.4, lp=2400)
+    a.n('hn', 'Ab3', s(sg + 0.05), calm_end - sg - 0.05, 0.26, lock=True, rel=0.4)
+    cue.mark(sg, 'e: the sign: one understated chord (D-flat(add9), no third), a little too calm')
     for p, t_a, t_b in (('F5', E['dialog'], E['grey1']), ('F4', E['grey1'], E['grey2']), ('F5', E['grey2'], E['bonk'])):
         a.n('beeper', p, s(t_a), t_b - t_a - 0.01, 0.42, lock=True, rel=0.03)
     cue.mark(E['dialog'], 'e: the 1993 flat line F5 . F4 . F5 (tenuto, uneven)')
@@ -269,12 +240,12 @@ def build():
     log.append((end, "the act ends on the pedal; its release carries into the tag (music-ringout.wav)", False))
 
     for lab, a0, a1 in [('S7 a the STRAIGHT violin, then its decay', E['s7'], pad0),
-                        ("S7 b Tasya's floor (pre-lap -> below/above/around -> bloom -> home)", pad0, c1),
+                        ("S7 b Tasya's floor, quiet (pre-lap -> below/above/around -> home, no thirds)", pad0, c1),
                         ('S7 c1 LEVERAGE (fade-in -> the bang)', c1, thin), ('S7 c1 thinned to the F pedal', thin, stop),
                         ('S7 STOP: "of what?" -> the stamp (the room)', stop, st),
                         ("S7 c2 the C pedal (the posts); the Build restarts", st, sand),
-                        ("S7 d the sand's rest + the pickup", sand, sg),
-                        ('S8 e VICTORY LAP, one size too big + one chip note', sg, E['dialog']),
+                        ("S7 d the sand's rest", sand, sg),
+                        ('S8 e the sign: one understated chord, a little too calm', sg, E['dialog']),
                         ('S8 e the flat line', E['dialog'], E['bonk']),
                         ('S8 designed rest: the lobby CU, "okay."', E['bonk'], cc),
                         ('S8 the felt settle', cc, vt), ("S8 f the vault's F (the coda)", vt, end)]:
@@ -282,17 +253,17 @@ def build():
     meta = dict(
         id=ID, title='The Return (Ep1 v3 Act Four, S7 + S8, to picture)', mm='MM-11 (Act Four v5 S7-S8, re-spotted)',
         usage='BI',
-        family='STRAIGHT -> the floor -> LEVERAGE (P03) -> the C pedal -> VICTORY LAP (P09) -> the vault (P05)',
-        tone="other people's sounds hand him back his company one by one; a triumph one size too big for a lobby "
-             "sign, undercut by the old dialog; his felt last, onto the vault's F",
+        family='STRAIGHT -> the floor (quiet) -> LEVERAGE (P03) -> the C pedal -> one still chord -> the vault (P05)',
+        tone="restrained irony: other people's sounds hand him back his company one by one; at the sign one still "
+             "chord, a little too calm; his felt last, onto the vault's F",
         scenes=[f'Ep1 v3 Act Four S7.01-S8.10, segment {E["s7"]:.3f}-{end:.3f} s ({c.variant})'],
-        motifs=['the Door on solo violin, senza vibrato, held and decaying', "Tasya's floor (pad -> bloom -> home)",
+        motifs=['the Door on solo violin, senza vibrato, held and decaying', "Tasya's floor (quiet, no thirds)",
                 'LEVERAGE (the fade-in, the bang inside it, thinned to its pedal)', "the stamp's C pedal",
-                'the Build (restart on the post; the pickup; 16 at the sign)', 'VICTORY LAP (A-flat maj9)',
+                "the Build's four-note restart", 'one still chord at the sign (D-flat(add9), no third)',
                 'the 1-bit flat line F F F (tenuto)', "the Water Line's settle C4 -> F4",
                 "the vault's F (glass) and the Ache (the Q* shot)"],
         motif_ids=['BUILD'],
-        key='Db (the Door) -> Ab/C/E mediants -> F pedal -> C pedal -> Abmaj9 -> F, open fifth (the vault)',
+        key='Db (the Door) -> Ab/C/E open fifths (no thirds) -> F pedal -> C pedal -> Db(add9) -> F, open fifth',
         composer='Ep1 v3 score, Act Four (v3-score-b, 2026-09-27), from Act Four v5 S7-S8',
         underscore_lufs=-20.0, album_lufs=-16.0,
         no_third_windows=[(s(stl) + 0.05, s(stl) + 2.0)],
@@ -308,14 +279,11 @@ def build():
                   f'{s(c1):.1f}-{s(stop):.1f} s: LEVERAGE in the fires, its pedal alone under the terms; the dead stop '
                   'on "of what?"',
                   f'{s(st):.1f}-{s(sg):.1f} s: the C pedal and the Build restarting under Gerg\'s post: soft, not a button',
-                  f'{s(sg):.1f}-{s(E["dialog"]):.1f} s: VICTORY LAP one size too big for a lobby sign, then undercut: '
-                  'a laugh from scale, never a fanfare gag',
+                  f'{s(sg):.1f}-{s(E["dialog"]):.1f} s: the sign\'s one still chord: restrained, a little too calm, '
+                  'never a fanfare',
                   f'{s(cc):.1f} s to the end: the felt settle onto the vault\'s F; the Ache on the vault shot: dread, '
                   'not a sting; the pedal under the memo'])
-    # render 1: the lap read -12.4 LUFS over its 3.3 s (short-term max -12.1): -3.5 dB, ramped under the pickup
-    macro = [(0.0, 0.0), (s(bloom) - 0.4, 0.0), (s(bloom), -1.0), (s(home_end), -1.0), (s(bang) - 0.6, -1.5),
-             (s(thin), -1.5), (s(thin) + 0.4, 0.0), (s(pick), 0.0), (s(sg) - 0.01, -3.5),
-             (s(E['dialog']) - 0.05, -3.5), (s(E['dialog']) + 0.2, 0.0)]
+    macro = [(0.0, 0.0), (s(bang) - 0.6, 0.0), (s(bang) - 0.2, -1.5), (s(thin), -1.5), (s(thin) + 0.4, 0.0)]
     sc = Score(ID, g, T, cue.notes, markers=cue.markers, sections=cue.sections, mutes=cue.mutes, macro=macro,
                length_s=s(end), tail_s=4.2, meta=meta)
     window = [E['s7'], end, 0.0, 0.0]

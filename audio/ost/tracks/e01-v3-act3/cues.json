@@ -39,7 +39,7 @@
     ],
     [
      0.5417,
-     "A: THE WATER LINE, warm (F F F G F | C F over Dbmaj9(#11), Bbm9); the chip on the nudge",
+     "A: THE WATER LINE (F F F G F | C F over Fm9, Bbm); the chip on the nudge",
      true
     ],
     [
@@ -79,12 +79,12 @@
     ],
     [
      25.5417,
-     "B: the Water Line again (Abmaj9 | Dbmaj9: the settle lands on its third) + the solo line",
+     "B: the Water Line again (Fm9 | Bbm) + the solo line (the lonely colour)",
      true
     ],
     [
      35.5417,
-     "C: the record (he types the post): a held F4 over Dbmaj7 + the pedal; nothing moves",
+     "C: the record (he types the post): a held F4 over Bbm + the pedal; nothing moves",
      false
     ],
     [
@@ -94,42 +94,22 @@
     ],
     [
      41.7917,
-     "C: the Build (A-flat), a compile pass of 4",
+     "C: the Build (F minor, small), a pass of 4",
      true
     ],
     [
-     44.2917,
-     "C: the Build (A-flat), a compile pass of 8",
-     true
-    ],
-    [
-     48.0417,
-     "C: the Build (A-flat), a compile pass of 8",
-     true
-    ],
-    [
-     50.5417,
-     "C: the Build (A-flat), a compile pass of 12",
-     true
-    ],
-    [
-     56.7917,
-     "C: the Build (A-flat), a compile pass of 4",
-     true
-    ],
-    [
-     59.2917,
-     "C: the Build (A-flat), a compile pass of 8",
+     51.7917,
+     "C: the Build (F minor, small), a pass of 4",
      true
     ],
     [
      63.0417,
-     "C: the Build (A-flat), a compile pass of 16",
+     "C: the Build (F minor, small), a pass of 4",
      true
     ],
     [
      74.4479,
-     "C: the Build (A-flat), a compile pass of 8",
+     "C: the Build (F minor, small), a pass of 4",
      true
     ],
     [
@@ -149,12 +129,12 @@
     ],
     [
      99.2717,
-     "D: NEDIB'S FOUNTAIN PEN (bar 2), pp: the real one signs",
-     true
+     "D: the real one signs: a held Bb3/Eb4 (sul tasto)",
+     false
     ],
     [
      103.0417,
-     "E: TASYA'S RHODES, one chord, as he walks on",
+     "E: TASYA'S RHODES, one quiet chord (no third), as he walks on",
      true
     ],
     [
@@ -205,12 +185,12 @@
      39.8333
     ],
     [
-     "C Gerg's call: A-flat, the Build in passes; the edit (pedal); the V.O. (felt)",
+     "C Gerg's call: the felt, the Build small; the edit (pedal); the V.O. (felt)",
      39.8333,
      75.75
     ],
     [
-     "D the order on the monitor; the Orb picks; the pen",
+     "D the order on the monitor; the Orb picks; the signing",
      75.75,
      101.3333
     ],
@@ -244,12 +224,12 @@
   "samples": 6146000,
   "seconds": 128.0417,
   "whole": {
-   "lufs_i": -20.07,
+   "lufs_i": -20.06,
    "true_peak_dbtp": -3.15,
    "st": {
-    "p95": -17.78,
-    "median": -21.09,
-    "max": -16.43
+    "p95": -17.47,
+    "median": -21.38,
+    "max": -16.2
    }
   },
   "cues": {
@@ -258,9 +238,9 @@
      0.0,
      128.042
     ],
-    "lufs_i": -20.07,
-    "st_p95": -17.78,
-    "st_max": -16.43,
+    "lufs_i": -20.06,
+    "st_p95": -17.47,
+    "st_max": -16.2,
     "true_peak_dbtp": -3.15
    }
   },
@@ -270,59 +250,59 @@
     "cue": "e01-v3-act3",
     "start": 0.0,
     "end": 25.333,
-    "lufs_i": -19.07,
-    "st_p95": -17.08,
-    "st_max": -16.43,
-    "true_peak_dbtp": -3.56
+    "lufs_i": -18.66,
+    "st_p95": -17.1,
+    "st_max": -16.2,
+    "true_peak_dbtp": -3.15
    },
    {
     "section": "B the monitor (Mario, the second phone, the rent meter)",
     "cue": "e01-v3-act3",
     "start": 25.333,
     "end": 34.833,
-    "lufs_i": -18.16,
-    "st_p95": -17.06,
-    "st_max": -16.9,
-    "true_peak_dbtp": -4.0
+    "lufs_i": -17.9,
+    "st_p95": -16.85,
+    "st_max": -16.55,
+    "true_peak_dbtp": -3.62
    },
    {
     "section": "C the post (the record) and the LEDs",
     "cue": "e01-v3-act3",
     "start": 34.833,
     "end": 39.833,
-    "lufs_i": -20.09,
-    "st_p95": -20.13,
-    "st_max": -20.09,
-    "true_peak_dbtp": -4.53
+    "lufs_i": -19.46,
+    "st_p95": -19.34,
+    "st_max": -19.31,
+    "true_peak_dbtp": -3.43
    },
    {
-    "section": "C Gerg's call: A-flat, the Build in passes; the edit (pedal); the V.O. (felt)",
+    "section": "C Gerg's call: the felt, the Build small; the edit (pedal); the V.O. (felt)",
     "cue": "e01-v3-act3",
     "start": 39.833,
     "end": 75.75,
-    "lufs_i": -20.15,
-    "st_p95": -18.6,
-    "st_max": -17.8,
+    "lufs_i": -20.98,
+    "st_p95": -18.86,
+    "st_max": -18.55,
     "true_peak_dbtp": -3.15
    },
    {
-    "section": "D the order on the monitor; the Orb picks; the pen",
+    "section": "D the order on the monitor; the Orb picks; the signing",
     "cue": "e01-v3-act3",
     "start": 75.75,
     "end": 101.333,
     "lufs_i": -22.77,
-    "st_p95": -21.01,
-    "st_max": -20.21,
-    "true_peak_dbtp": -3.15
+    "st_p95": -20.69,
+    "st_max": -19.82,
+    "true_peak_dbtp": -3.96
    },
    {
     "section": "E DevDay; the phone; \"super.\"",
     "cue": "e01-v3-act3",
     "start": 101.333,
     "end": 118.042,
-    "lufs_i": -20.12,
-    "st_p95": -18.66,
-    "st_max": -18.35,
+    "lufs_i": -20.16,
+    "st_p95": -18.55,
+    "st_max": -18.05,
     "true_peak_dbtp": -3.15
    },
    {
@@ -330,20 +310,20 @@
     "cue": "e01-v3-act3",
     "start": 118.042,
     "end": 125.542,
-    "lufs_i": -19.84,
-    "st_p95": -17.93,
-    "st_max": -17.61,
-    "true_peak_dbtp": -3.9
+    "lufs_i": -19.46,
+    "st_p95": -17.55,
+    "st_max": -17.23,
+    "true_peak_dbtp": -3.51
    },
    {
     "section": "the stop: black (the SFX pre-lap carries it)",
     "cue": "e01-v3-act3",
     "start": 125.542,
     "end": 128.042,
-    "lufs_i": -45.96,
+    "lufs_i": -45.58,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -15.56
+    "true_peak_dbtp": -15.18
    }
   ],
   "digital_silence": [
@@ -395,12 +375,12 @@
       "q": 0.7
      },
      "measured": {
-      "lufs": -20.03,
-      "lra": 8.54,
+      "lufs": -20.05,
+      "lra": 8.98,
       "true_peak_db": -3.15,
       "peak_db": -3.16,
-      "rms_db": -23.22,
-      "crest_db": 20.06,
+      "rms_db": -23.29,
+      "crest_db": 20.14,
       "seconds": 130.2
      }
     },
@@ -409,18 +389,17 @@
     "f_major_fails": [],
     "knee_completion": 0,
     "knee_whole": 0,
-    "st_p95": -17.76,
+    "st_p95": -17.44,
     "band_2_6k_db": -20.2,
     "balance": {
-     "piano": 67,
+     "piano": 68,
      "orch": 30,
      "bigband": 0,
-     "chip": 3
+     "chip": 2
     },
-    "chip_share": 3,
+    "chip_share": 2,
     "warnings": [
-     "marker at 12.5 s: no clear onset within 10 ms ({'t': 12.5, 'offset_ms': np.float64(25.3), 'strength': 3.08})",
-     "marker at 101.23 s: no clear onset within 10 ms ({'t': 101.23, 'offset_ms': np.float64(-56.7), 'strength': 1.74})"
+     "marker at 105.0 s: no clear onset within 10 ms ({'t': 105.0, 'offset_ms': np.float64(-58.7), 'strength': 2.02})"
     ]
    }
   }

@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """E01 v3 · ACT FOUR "the Blip, told twice" · six cues laid on the segment's own clock (0 = its first frame)
 
-Brief (v3-score-b, 2026-09-27; v3-plan §6; script draft 6 sc 24-31): suspense where it's earned (Vegas, noon), felt
-(the night), dry procedural comedy (the board's side, a lighter PROCEDURE), warm and loyal (2 AM with Gerg), the one
-full band (the avalanche), a triumph one size too big (Monday and the return), settling into the vault's F hum and
-handing off to the tag.  Act Four v5's score (tracks/e01-act4-v5/, read-only) and the v3 sample's cues (audio/reel/
-ep01-v3-sample/music/, read-only) are the material, copied here and re-spotted to the v3 lock.
+Brief (v3-score-b, 2026-09-27; v3-plan §6; script draft 6 sc 24-31), REVISED on the showrunner's note on the v3 film
+("i didn't mean for you to overkill and make it sound goofy level hapy"; SHOWRUNNER-NOTES note 2: variety is intensity
+and texture, not genre; a dry, prestige-drama score in the dark, modal home; a major colour is fleeting, an added 9th
+with no third): suspense where it's earned (Vegas, noon), felt (the night), dry and procedural (the board's side),
+warm but sparse (2 AM), a tense building pulse (the avalanche), restrained irony (the return), settling into the
+vault's F and handing off to the tag.  Act Four v5's score (tracks/e01-act4-v5/, read-only) and the v3 sample's 2 AM cue
+(audio/reel/ep01-v3-sample/music/, read-only) are the material, copied here and re-spotted to the v3 lock.
 
   cue (module)            segment s (kokoro)   what
   S1  cue_noon.py         0 -> 47.69           the suite (air, the felt Water Line bar), THE PLAN's waltz and labels,
@@ -14,17 +16,20 @@ ep01-v3-sample/music/, read-only) are the material, copied here and re-spotted t
       -                   47.69 -> 57.63       no score: D6 to the buzz, then "super." in the suite's air
   S2  cue_night.py        57.63 -> 71.04       the felt's open fifth on the carve (the re-entry), the nudge before
                                                "i don't keep score.", the pedal under TPOOL, the settle, THE REWIND
-  S3-4 cue_board.py       71.04 -> ~278.1      PROCEDURE, lighter: the clockwork between lines, the pedal and the tick
-                                               under talk; Step Four; the hearts; the Door in the glass; the sincere
-                                               beat; the Lighthouse and the Addendum cut by "no."; the hourglass;
-                                               Tasya's floor; the hang on "Step four?", its C ringing into the dark room
-  S5  cue_two_am.py       275.08 -> 374.08     the Water Line warm, the count, the Build with Gerg, the walking pulse
-                                               under the letter, out on ALYI / back on "He did both.", the Build cut
-                                               on his look, Tasya's floor and two Rhodes chords, the open A-flat 6/9
-  S6  cue_avalanche.py    374.08 -> 388.25     SET-PIECE SWING, the one full band, DEAD STOP on Mada's label
-  S7-8 cue_return.py      390.21 -> 523.79     the violin, the floor, LEVERAGE to a dead stop on "of what?", the
-                                               stamp's pedal and the Build's restart, VICTORY LAP one size too big,
-                                               the flat line and the bonk, "okay." and the felt onto the vault's F
+  S3-4 cue_board.py       71.04 -> ~278.1      PROCEDURE, lighter: the pedal and a soft tick under talk, the clockwork
+                                               only three times; Step Four; the hearts; the Door in the glass; the
+                                               sincere beat; the Lighthouse and the Addendum cut by "no."; the
+                                               hourglass; Tasya's floor with no thirds; the hang on "Step four?"
+  S5  cue_two_am.py       275.08 -> 374.08     sparse, the F-minor home: the felt and a quiet pad, the Water Line, the
+                                               count, the Build small and soft (stops dead on his look), the pad under
+                                               the letter, out on ALYI / back on "He did both.", Tasya's quiet uneasy
+                                               lift (no thirds, a held B-flat), the settle on F
+  S6  cue_avalanche.py    374.08 -> 388.25     a tense, building orchestral pulse (no band, no swing), DEAD STOP on
+                                               Mada's label
+  S7-8 cue_return.py      390.21 -> 523.79     the violin, a quiet floor, LEVERAGE to a dead stop on "of what?", the
+                                               stamp's pedal and four soft Build notes, ONE STILL CHORD at the sign (a
+                                               little too calm), the flat line and the bonk, "okay." and the felt onto
+                                               the vault's F
 
 TIMING IS PARAMETRIC: every sync point is read from the timeline (beat starts, line spans, words, sounds, texts).
     --variant kokoro   show/reel/ep01-v3/ep01-v3-act4.json        -> render/music.wav, cues.json      (default)

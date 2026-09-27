@@ -4,8 +4,11 @@ PROCEDURE (MM-09, P02), LIGHTER: dry, procedural comedy, one performance whose s
 Act Four v5's pass one (tracks/e01-act4-v5/s1-s4_s3s4_procedure.py) is the template, re-spotted to the v3 lock and
 lightened (v3-plan §6: "PROCEDURE, lighter"):
   * the pedals sit an octave up (cello B-flat2 + viola F3 sul tasto; no contrabass under the talk);
-  * Neleh's clockwork pizzicato is the connective tissue between lines; under talk only the pedal and a soft clock
-    tick, ducked; the viola whisper is kept only under the firing, and it steps down diatonically (no chromatic creep);
+  * Neleh's clockwork pizzicato is kept only where it's dry: once under the 11:59 wait, once very quietly before the
+    list, once on the lobby camera (REVISED on the showrunner's note, 2026-09-27: no comic pizzicato; the gap figures,
+    the join-chime figure and the spotlight's muted-trumpet accent are gone); under talk only the pedal and a soft
+    tick; the viola whisper only under the firing, stepping down diatonically; Tasya's floor with no thirds and one
+    quiet Rhodes chord;
   * no piano, no chip, no swing (the exit rule): Mas appears only as record.
 v3's cuts: the step-four volley (C13: Alyi's "That is the company telling us." moves into the boardroom wide, after
 the first phone's clack), Mario's money call (C14: "no." cuts the Addendum's tail and nothing lands after it; the
@@ -167,10 +170,7 @@ def build():
         kw = dict(art='sus', lp=TASTO) if inst in ('vla', 'vln2', 'vc') else {}
         a.n(inst, p, s(WHIP), s(CONNECT + 6) - s(WHIP), v, lock=True, rel=0.45, **kw)
     a.ch('harm', ['Bb3', 'F4'], s(WHIP), 1.2, 0.3, lock=True)
-    clock16(s(WHIP + 7.5), 8, 'F5', 0.26)
-    clock16(s(WHIP + 37.5), 4, 'G5', 0.23)
-    if CONNECT - WHIP > 70:
-        clock16(s(WHIP + 52.5), 4, 'F5', 0.21)
+    clock16(s(WHIP + 7.5), 8, 'F5', 0.18)                 # (revised: one dry figure under the wait, no more)
     cue.mark(WHIP, 'a: the whip: Bbm(add9) + the harp-harmonic dyad (the board\'s side lands)')
     cue.mark(WHIP + 7.5, "a: Neleh's clockwork under the wait (11:59)")
     pedal(CONNECT, LIST + 2, 0.18, first_att=0.3)
@@ -183,10 +183,8 @@ def build():
         a.n('vla', p, s(fr), s(nx) - s(fr) + 0.35, 0.16, lock=True, art='sus', lp=TASTO, att=0.45, rel=0.5)
     cue.mark(CONNECT, 'a: the connect: the pedal (it holds under "Mas. The board has decided..."); the whisper '
                       'steps down in the gaps', hit=False)
-    clock16(s(LIST - 75), 8, 'F5', 0.11)
-    clock16(s(LIST - 45), 8, 'G5', 0.13)
-    clock16(s(LIST - 15), 4, 'F5', 0.15)
-    cue.mark(LIST - 75, 'a: the clockwork creeps back (under the tinny "super.": the procedure going on)')
+    clock16(s(LIST - 45), 8, 'F5', 0.09)                  # (revised: one figure, very quiet)
+    cue.mark(LIST - 45, 'a: the clockwork, once, very quiet (the procedure going on)')
     L = cue.sec(LIST, bars=3)
     mm09.step_four(L.a, 1, top='cl', inner=('vla', 'vln2', 'vln1'), vel=0.2, top_vel=0.22, blank=False, unit=1.0)
     L.commit()
@@ -202,12 +200,8 @@ def build():
     # ======================================================================= b · Rima
     HANDS, EVENING = M['HANDS'], M['EVENING']
     pedal(POSTCLICK, HANDS + 4, 0.17, first_att=0.35)
-    a.line('vln1', 'Bb4/16 F5/16 Db5/16 C5/16', s(M['JOIN_R'] + 4), vel=0.22, lock=True, art='pizz')
-    cue.mark(M['JOIN_R'] + 4, 'b: one soft pizz figure after her join chime')
-    got = gap_clockwork(M['JOIN_R'] + 30, Lon('a5-27-16') - 2, vel=0.17, min8=40.0, min4=17.0)
-    for g0, n in got:
-        cue.mark(g0, f'b: the clockwork in a gap ({n})')
-    tick([f for f in range(int(M['JOIN_R'] + 40), int(Lon('a5-27-16')) - 4, 30) if not talk(f)], 0.18)
+    tick([f for f in range(int(M['JOIN_R'] + 40), int(Lon('a5-27-16')) - 4, 30) if not talk(f)], 0.14)
+    cue.mark(POSTCLICK + 2, 'b: the pedal and a soft tick in the gaps (revised: no pizz figures)', hit=False)
 
     # ======================================================================= c · the all-hands, and the evening
     pedal(HANDS, M['S4'] + 8, 0.15, first_att=0.8)
@@ -305,16 +299,12 @@ def build():
     # ======================================================================= f · Sunday
     SPOT, FOLDER0, FLIP, SLATE = M['SPOT'], M['FOLDER0'], M['FLIP'], M['SLATE']
     pedal(LOBBY + 10, SLATE + 4, 0.16, first_att=1.2)
-    clock16(s(LOBBY + 8), 8, 'F5', 0.19)
-    clock16(s(LOBBY + 38), 8, 'G5', 0.17)
-    tick([f for f in range(int(LOBBY + 83), int(SPOT) - 10, 15)], 0.2)
-    cue.mark(LOBBY + 8, 'f: the clockwork resumes on the lobby camera, thin')
-    a.n('cb', 'Bb1', s(SPOT), 0.2, 0.3, lock=True, art='pizz')
-    a.seq('tpt', [('F4', s(SPOT), s(SPOT + 7.5) - s(SPOT), 0.23), ('Bb4', s(SPOT + 7.5), 0.94, 0.22)],
-          lock=True, art='straight', rel=0.3)
-    pulse(SPOT, Lon('a5-27-38') - 3, ['A', 'D', 'A', 'B'], vel=0.24, anchor=SPOT, thin=False)
-    tick([f for f in range(int(SPOT + 120), int(FOLDER0) + 1, 15)], 0.2)
-    cue.mark(SPOT, 'f: the spotlight: the straight-mute accent (F4 -> Bb4); the pulse')
+    clock16(s(LOBBY + 8), 8, 'F5', 0.13)                  # (revised: one quiet figure)
+    tick([f for f in range(int(LOBBY + 83), int(SPOT) - 10, 15)], 0.17)
+    cue.mark(LOBBY + 8, 'f: the clockwork once on the lobby camera, quiet')
+    pulse(SPOT, Lon('a5-27-38') - 3, ['A', 'D', 'A', 'B'], vel=0.2, anchor=SPOT, thin=False)
+    tick([f for f in range(int(SPOT + 120), int(FOLDER0) + 1, 15)], 0.17)
+    cue.mark(SPOT, 'f: the spotlight: the pulse (a new CEO, the same procedure)')
     Lf = s(FLIP - 2) - s(FOLDER0 + 5)
     for inst, p, v in (('vla', 'F3', 0.16), ('vln2', 'C4', 0.14), ('vln1', 'Db4', 0.12)):
         a.n(inst, p, s(FOLDER0 + 5), Lf, v, lock=True, art='sus', lp=TASTO, env=mm09.sw_env(Lf, 0.9, 0.7))
@@ -322,42 +312,41 @@ def build():
     for i, (inst, p) in enumerate([('vln1', 'F5'), ('vln2', 'Db5'), ('vla', 'C5'), ('vln1', 'Bb4'), ('vln2', 'Ab4'),
                                    ('vla', 'Gb4')]):
         if FLIP + 2 + 15 * i < SLATE - 4:
-            a.n(inst, p, s(FLIP + 2 + 15 * i), 0.3, 0.3 - 0.012 * i, lock=True, art='pizz')
+            a.n(inst, p, s(FLIP + 2 + 15 * i), 0.3, 0.22 - 0.01 * i, lock=True, art='pizz')
     cue.mark(FLIP + 2, 'f: the hourglass: one grain a beat, falling')
 
     # ======================================================================= g · the door: Tasya's floor
     OPEN, TASYA, STMT, SIGN, BOARD = M['OPEN'], M['TASYA'], M['STMT'], M['SIGN'], M['BOARD']
     d1 = s(OPEN + 14) - s(SLATE)
-    for inst, p in (('vc', 'Ab2'), ('vla', 'Eb3'), ('vln2', 'G3'), ('vln1', 'C4')):
+    for inst, p in (('vc', 'Ab2'), ('vla', 'Eb3'), ('vln2', 'G3'), ('vln1', 'Bb3')):   # (no third)
         a.n(inst, p, s(SLATE), d1, 0.2, lock=True, art='sus', lp=TASTO, env=mm09.sw_env(d1, 0.6, 0.6))
     d2 = s(STMT + 20) - s(OPEN)
     r0_, r1_ = s(M['GOOD'] - 30) - s(OPEN), s(M['GOOD'] - 4) - s(OPEN)
     env2 = [(0.0, 0.0), (0.7, 1.0), (r0_, 1.0), (r1_, 0.63), (d2 - 0.9, 0.63), (d2, 0.0)]
     for inst, p in (('vc', 'C3'), ('vla', 'G3'), ('vln2', 'B3'), ('vln1', 'D4')):
         a.n(inst, p, s(OPEN), d2, 0.18, lock=True, art='sus', lp=TASTO, env=env2)
-    for k in range(4):
-        a.ch('rhodes', ['E3', 'G3', 'B3', 'D4'], s(TASYA + 2 + 15 * k), 0.5, 0.45 if k else 0.5, lock=True)
+    a.ch('rhodes', ['G3', 'B3', 'D4'], s(TASYA + 2), 1.2, 0.36, lock=True)      # (revised: one chord, no third)
     d3 = s(SIGN + 6) - s(STMT)
-    for inst, p in (('vc', 'B2'), ('vla', 'G#3'), ('vln2', 'D#4'), ('vln1', 'F#4')):
+    for inst, p in (('vc', 'B2'), ('vla', 'E3'), ('vln2', 'D#4'), ('vln1', 'F#4')):
         a.n(inst, p, s(STMT), d3, 0.14, lock=True, art='sus', lp=TASTO, env=mm09.sw_env(d3, 1.0, 0.8))
     d4 = s(BOARD + 16) - s(SIGN)
-    for inst, p in (('vc', 'Ab2'), ('vla', 'Eb3'), ('vln2', 'G3'), ('vln1', 'C4')):
+    for inst, p in (('vc', 'Ab2'), ('vla', 'Eb3'), ('vln2', 'G3'), ('vln1', 'Bb3')):
         a.n(inst, p, s(SIGN), d4, 0.19, lock=True, art='sus', lp=TASTO, env=mm09.sw_env(d4, 0.4, 0.7))
-    a.ch('rhodes', ['C4', 'Eb4', 'G4', 'Bb4'], s(SIGN + 1), 0.9, 0.47, lock=True)
+    a.ch('rhodes', ['Eb4', 'G4', 'Bb4'], s(SIGN + 1), 0.9, 0.38, lock=True)
     for fr, lab, hit in [(SLATE, "g: Tasya's floor: Abmaj9 on the slate (silent attack)", False),
                          (OPEN, 'g: Cmaj9 as the door opens', False),
-                         (TASYA + 2, 'g: the Rhodes on the beats (Tasya appears; the jangle owns the offbeats)', True),
+                         (TASYA + 2, 'g: one quiet Rhodes chord as Tasya appears (no third)', True),
                          (STMT, 'g: the statement [V]: the floor steps to Emaj9 (a colour, not a swell)', False),
                          (SIGN + 1, 'g: home: Abmaj9 on the sign, one Rhodes chord', True)]:
         cue.mark(fr, lab, hit=hit)
 
     # ======================================================================= h · "Step four?": the hang -> the door back
     HOME, MADA = M['HOME'], M['MADA']
-    for p, off, v in zip(['F5', 'C5', 'Ab4', 'C5', 'G5'], [0, 3, 6.5, 10.5, 15], [0.28, 0.25, 0.24, 0.23, 0.22]):
+    for p, off, v in zip(['F5', 'C5', 'Ab4', 'C5', 'G5'], [0, 3, 6.5, 10.5, 15], [0.2, 0.18, 0.17, 0.16, 0.15]):
         a.n('vln1', p, s(BOARD + off), 0.3, v, lock=True, art='pizz')
     hang = BOARD + 20
     f_out = HOME - 26                                  # the F leaves before the dark room's drone J-cuts in
-    a.n('svln', 'C5', s(hang), s(HOME + 40) - s(hang), 0.2, lock=True, art='sus', att=0.25, lp=2600, rel=1.4)
+    a.n('svln', 'C5', s(hang), s(HOME + 40) - s(hang), 0.15, lock=True, art='sus', att=0.25, lp=2600, rel=1.4)
     a.n('vc', 'F2', s(hang + 2), s(f_out) - s(hang + 2), 0.2, lock=True, art='sus', lp=TASTO, att=0.3, rel=0.6)
     Sp = cue.sec(MADA + 3, bars=2)
     mm09.spinner(Sp.a, (1, 1), 5, 0.15)
