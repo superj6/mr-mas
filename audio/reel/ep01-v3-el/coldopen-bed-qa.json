@@ -1,0 +1,32 @@
+{
+ "segment": "coldopen",
+ "layers": [
+  {
+   "music+rooms+sfx": "audio/reel/ep01-v3/coldopen-bed.wav (the lock's bed: the v2 stem), spliced per beat",
+   "crossfade_s": 0.06
+  }
+ ],
+ "decisions": [
+  "1.01: the stem from 0.500 s laid at 0.500 s for 3.792 s (the lock's beat 4.250 s)",
+  "1.02: the stem from 4.750 s laid at 4.292 s for 5.208 s (the lock's beat 5.583 s)",
+  "1.03: the stem from 10.333 s laid at 9.500 s for 1.542 s (the lock's beat 1.542 s)",
+  "1.04: the stem from 11.875 s laid at 11.042 s for 2.667 s (the lock's beat 2.667 s)",
+  "2.01: the stem from 14.542 s laid at 13.708 s for 0.625 s (the lock's beat 0.625 s)",
+  "2.02: the stem from 15.167 s laid at 14.333 s for 2.500 s (the lock's beat 2.500 s)",
+  "2.03: the stem from 17.667 s laid at 16.833 s for 2.708 s (the lock's beat 2.500 s)",
+  "3.01: the stem from 20.167 s laid at 19.542 s for 2.000 s (the lock's beat 2.000 s)",
+  "3.02: the stem from 22.167 s laid at 21.542 s for 3.000 s (the lock's beat 3.000 s)",
+  "4.01: the stem from 25.167 s laid at 24.542 s for 4.000 s (the lock's beat 4.000 s)",
+  "4.02: the stem from 29.167 s laid at 28.542 s for 1.500 s (the lock's beat 1.500 s)"
+ ],
+ "sfx": [
+  [
+   "(in the v2 stem)"
+  ]
+ ],
+ "seconds": 30.142,
+ "chapter_seconds": 30.042,
+ "lufs": -25.92,
+ "peak_dbfs": -3.73,
+ "built_by": "audio/ep01/v3-el/tools/el_bed.py"
+}

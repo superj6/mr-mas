@@ -1,0 +1,1353 @@
+{
+ "meta": {
+  "show": "MR. MAS",
+  "episode": "ep01",
+  "seg": "tag",
+  "label": "TAG",
+  "timeline": "show/reel/ep01-v3-el/ep01-v3-el-tag.json",
+  "takes": [
+   "show/episodes/ep01/production/full-v3/assembly/el/tag-takes.json"
+  ],
+  "plan": null,
+  "plan_py": null,
+  "base_lock": null,
+  "generator": "studio/src/episodes/ep01/pixel/tools/lock.py",
+  "fps": 24,
+  "ep_in": "21:04:18",
+  "ep_in_frames": 30354,
+  "rules": [
+   "the picture is cut to the stick timeline: its beats are the shots, its lines are the lines, nothing re-timed",
+   "a continuation beat that follows its own shot directly merges into it",
+   "a line starts on the frame in which its first sound falls (beat start + t; t may be negative, a pre-lap), ends after the frame of its last sound",
+   "mouths and words on the same rule; a line appears in every shot it sounds in (carry = runs in from an earlier shot, pre = starts under this one before its own)",
+   "marks come from the stick's own sound spots and text, the takes' words, or a base lock's marks scaled to the new length",
+   "the framing decides who shows a mouth (face), not the take's lip_sync flag"
+  ],
+  "note": "Nothing here was watched or heard. The numbers are measured from the files; whether the picture reads needs a person."
+ },
+ "summary": {
+  "shots": 10,
+  "beats": 10,
+  "frames": 809,
+  "seconds": 33.708,
+  "length": "0:33.71",
+  "episode_in": "21:04:18",
+  "episode_out": "21:38:11",
+  "verdicts": {
+   "-": 10
+  },
+  "mean_s": 3.371,
+  "median_s": 3.729,
+  "min_s": 1.25,
+  "max_s": 4.5,
+  "lines": 3,
+  "posts": 0,
+  "vo": 1,
+  "lines_with_mouth": 2,
+  "mouths_from_words": 0,
+  "on_camera_mouths": [],
+  "lines_crossing_a_cut": [],
+  "prelaps": [],
+  "reviewer_slates": [],
+  "mix": {
+   "path": "out/ep01/full-v3/mix-el/tag-mix.wav",
+   "offset_frames": 0,
+   "frames": 809.0
+  },
+  "refs": {}
+ },
+ "checks": [
+  {
+   "check": "shot frames = their beats' frames",
+   "ok": true,
+   "detail": "10 shots from 10 beats"
+  },
+  {
+   "check": "shots tile the segment with no gap",
+   "ok": true,
+   "detail": "0 -> 809"
+  },
+  {
+   "check": "the lock vs the stick reel's own line frames",
+   "ok": true,
+   "detail": "same frame: 2; 1 f earlier (the onset falls inside the frame): 1; other: 0"
+  },
+  {
+   "check": "every line has a take",
+   "ok": true,
+   "detail": "3 of 3 placed; no take: []"
+  },
+  {
+   "check": "every line's speech lies inside its take file",
+   "ok": true,
+   "detail": "outside: []"
+  },
+  {
+   "check": "mouth tracks carried over",
+   "ok": true,
+   "detail": "2 lines with a mouth track; lost: []"
+  },
+  {
+   "check": "every on-camera mouth has a track",
+   "ok": true,
+   "detail": "0 faced rows; without a track: []"
+  },
+  {
+   "check": "the mix = its offset + the segment",
+   "ok": true,
+   "detail": "mix 809.00 f vs 0 + 809"
+  }
+ ],
+ "sequences": [
+  {
+   "id": "TAG",
+   "side": "",
+   "place": "Mas's dark room",
+   "time": "December 2023 · night",
+   "s": 0,
+   "e": 809,
+   "shots": [
+    "32.01",
+    "32.02",
+    "32.03",
+    "32.04",
+    "32.05",
+    "32.07",
+    "33.01",
+    "33.02",
+    "33.04",
+    "33.05"
+   ],
+   "chapter": "December 2023 · night",
+   "title": "Mas's dark room",
+   "cue": "music (v3): TAG · quiet, wry · MM-12 december on the Water Line's felt; stops once, on the thud; the chord with no third on \"noted.\" · sound: the dark room bed (rack fans, LED ticks), in from the bullpen's · monitor eggs: zero read load by design; the duck's caption is still timed for a read · the first toast is his, the second the cover's (the reel stacks them; the picture puts each over its face) · the framed GUEST lanyard answers Act Four's \"the badge was a joke.\" / \"mostly.\" · style: the lit-UI band lights on the thud frame (the episode's 2nd and last); the band does not shake · the cursor is already parked on the glass · no rail: the stamp is the record · the room tone holds; no music; the page settles twice (paper_curl) · the bracketed line is a reel stand-in for the drawn newspaper, not in-world text · the lit-UI band (\"Look at glass of water\") stays up over this insert in the picture; the reel leaves it off here so it does not read as newsprint · the Q* vault's F hum carries in under it and becomes its root (heard, not seen) · the hum rings on under black, into the outro",
+   "frames": 809,
+   "tc_in": "21:04:18",
+   "tc_out": "21:38:11"
+  }
+ ],
+ "shots": [
+  {
+   "id": "32.01",
+   "setup": "32.01",
+   "beats": [
+    "32.01"
+   ],
+   "s": 0,
+   "e": 108,
+   "onscreen": [],
+   "lines": [],
+   "seq": "TAG",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "TWO-SHOT · the desk, three marks in the wood",
+   "cls": "M",
+   "move": "hold",
+   "does": "Mas and the Orb at the desk, three marks in the wood now. The monitor behind them runs dim with the sound off, nothing on it to read.",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "cues": [
+    "music (v3): TAG · quiet, wry · MM-12 december on the Water Line's felt; stops once, on the thud; the chord with no third on \"noted.\"",
+    "sound: the dark room bed (rack fans, LED ticks), in from the bullpen's",
+    "monitor eggs: zero read load by design; the duck's caption is still timed for a read"
+   ],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "darkroom",
+   "room": "darkroom",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Mas and the Orb at the desk, three marks in the wood now. The monitor behind them runs dim with the sound off, nothing on it to read.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "sit",
+     "face": "calm",
+     "x": 0.34,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "orb",
+     "pose": "stand",
+     "face": "calm",
+     "x": 0.44,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "32.01": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "21:04:18",
+   "tc_out": "21:09:06",
+   "frames": 108
+  },
+  {
+   "id": "32.02",
+   "setup": "32.02",
+   "beats": [
+    "32.02"
+   ],
+   "s": 108,
+   "e": 198,
+   "onscreen": [
+    {
+     "text": "RAIL: DEC 6, 2023",
+     "s": 8,
+     "e": 69
+    },
+    {
+     "text": "EMIT · YEAR-END ISSUE",
+     "s": 19,
+     "e": 90
+    },
+    {
+     "text": "CEO OF THE YEAR",
+     "s": 28,
+     "e": 90
+    }
+   ],
+   "lines": [],
+   "seq": "TAG",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "INSERT · the rack slot: the delivery (a magazine)",
+   "cls": "ECU",
+   "move": "cut",
+   "does": "DELIVERY. The rack slot whirs and ejects a magazine: on the cover, Mas, calm, lit like a keynote.",
+   "chars": [],
+   "cues": [
+    "music (v3): TAG · quiet, wry · MM-12 december on the Water Line's felt; stops once, on the thud; the chord with no third on \"noted.\""
+   ],
+   "sounds": [
+    "tape_start @0"
+   ],
+   "spots": [
+    {
+     "name": "tape_start",
+     "k": 0,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "darkroom",
+   "room": "darkroom",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "DELIVERY. The rack slot whirs and ejects a magazine: on the cover, Mas, calm, lit like a keynote.",
+   "cast": [],
+   "speak": [],
+   "beat_starts": {
+    "32.02": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "label",
+     "text": "EMIT · YEAR-END ISSUE",
+     "s": 19,
+     "e": 90,
+     "must": true
+    },
+    {
+     "kind": "label",
+     "text": "CEO OF THE YEAR",
+     "s": 28,
+     "e": 90,
+     "must": true
+    }
+   ],
+   "tc_in": "21:09:06",
+   "tc_out": "21:13:00",
+   "frames": 90
+  },
+  {
+   "id": "32.03",
+   "setup": "32.03",
+   "beats": [
+    "32.03"
+   ],
+   "s": 198,
+   "e": 287,
+   "onscreen": [
+    {
+     "text": "CEO OF THE YEAR",
+     "s": 0,
+     "e": 89
+    }
+   ],
+   "lines": [
+    {
+     "id": "v3-vo-24",
+     "kind": "vo",
+     "mode": "on-mic",
+     "who": "MAS",
+     "text": "it looks calmer than me.",
+     "s": 24,
+     "e": 56,
+     "fs": 13,
+     "fe": 73,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [],
+     "words": [
+      [
+       "It",
+       -1,
+       2
+      ],
+      [
+       "looks",
+       4,
+       10
+      ],
+      [
+       "calmer",
+       12,
+       21
+      ],
+      [
+       "than",
+       22,
+       25
+      ],
+      [
+       "me",
+       27,
+       32
+      ]
+     ],
+     "tag": "V.O.",
+     "pre": false
+    }
+   ],
+   "seq": "TAG",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "MEDIUM CLOSE · Mas and the cover, side by side",
+   "cls": "M",
+   "move": "hold",
+   "does": "He holds the cover up next to his face. The cover and the face wear the same expression.",
+   "chars": [
+    "mas"
+   ],
+   "cues": [
+    "music (v3): TAG · quiet, wry · MM-12 december on the Water Line's felt; stops once, on the thud; the chord with no third on \"noted.\""
+   ],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "darkroom",
+   "room": "darkroom",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "He holds the cover up next to his face. The cover and the face wear the same expression.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "sit",
+     "face": "calm",
+     "x": 0.44,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "32.03": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "label",
+     "text": "CEO OF THE YEAR",
+     "s": 0,
+     "e": 89,
+     "must": true
+    }
+   ],
+   "tc_in": "21:13:00",
+   "tc_out": "21:16:17",
+   "frames": 89
+  },
+  {
+   "id": "32.04",
+   "setup": "32.04",
+   "beats": [
+    "32.04"
+   ],
+   "s": 287,
+   "e": 383,
+   "onscreen": [
+    {
+     "text": "CEO OF THE YEAR",
+     "s": 0,
+     "e": 96
+    },
+    {
+     "text": "verified: human",
+     "s": 24,
+     "e": 96
+    },
+    {
+     "text": "re-scanning the cover…",
+     "s": 28,
+     "e": 68
+    },
+    {
+     "text": "verified: human",
+     "s": 68,
+     "e": 96
+    }
+   ],
+   "lines": [],
+   "seq": "TAG",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "TWO-SHOT · the Orb's scan, twice",
+   "cls": "M",
+   "move": "hold",
+   "does": "The scan fan sweeps both. Over Mas the toast pops at once; over the cover it re-sweeps, 2 beats late.",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "cues": [
+    "music (v3): TAG · quiet, wry · MM-12 december on the Water Line's felt; stops once, on the thud; the chord with no third on \"noted.\"",
+    "the first toast is his, the second the cover's (the reel stacks them; the picture puts each over its face)"
+   ],
+   "sounds": [
+    "orb_scan_sweep @7",
+    "glyph_blink @24",
+    "orb_scan_sweep @28",
+    "glyph_blink @68"
+   ],
+   "spots": [
+    {
+     "name": "orb_scan_sweep",
+     "k": 7,
+     "dur": null
+    },
+    {
+     "name": "glyph_blink",
+     "k": 24,
+     "dur": null
+    },
+    {
+     "name": "orb_scan_sweep",
+     "k": 28,
+     "dur": null
+    },
+    {
+     "name": "glyph_blink",
+     "k": 68,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "darkroom",
+   "room": "darkroom",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "The scan fan sweeps both. Over Mas the toast pops at once; over the cover it re-sweeps, 2 beats late.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "sit",
+     "face": "calm",
+     "x": 0.34,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "orb",
+     "pose": "stand",
+     "face": "calm",
+     "x": 0.47,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "32.04": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "label",
+     "text": "CEO OF THE YEAR",
+     "s": 0,
+     "e": 96,
+     "must": true
+    },
+    {
+     "kind": "label",
+     "text": "verified: human",
+     "s": 24,
+     "e": 96,
+     "must": true
+    },
+    {
+     "kind": "label",
+     "text": "re-scanning the cover…",
+     "s": 28,
+     "e": 68,
+     "must": true
+    },
+    {
+     "kind": "label",
+     "text": "verified: human",
+     "s": 68,
+     "e": 96,
+     "must": true
+    }
+   ],
+   "tc_in": "21:16:17",
+   "tc_out": "21:20:17",
+   "frames": 96
+  },
+  {
+   "id": "32.05",
+   "setup": "32.05",
+   "beats": [
+    "32.05"
+   ],
+   "s": 383,
+   "e": 440,
+   "onscreen": [
+    {
+     "text": "CEO OF THE YEAR",
+     "s": 0,
+     "e": 57
+    }
+   ],
+   "lines": [
+    {
+     "id": "e1-tg-32-01",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "MAS",
+     "text": "close.",
+     "s": 16,
+     "e": 33,
+     "fs": 7,
+     "fe": 48,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "E"
+      ],
+      [
+       5,
+       "O"
+      ],
+      [
+       12,
+       "E"
+      ],
+      [
+       14,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "Close",
+       0,
+       14
+      ]
+     ],
+     "tag": "",
+     "pre": false
+    }
+   ],
+   "seq": "TAG",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "SINGLE · profile: Mas, to the cover",
+   "cls": "M",
+   "move": "hold",
+   "does": "Mas, in profile, looks at the cover in his hand, not at the Orb, and grades it.",
+   "chars": [
+    "mas"
+   ],
+   "cues": [
+    "music (v3): TAG · quiet, wry · MM-12 december on the Water Line's felt; stops once, on the thud; the chord with no third on \"noted.\""
+   ],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "darkroom",
+   "room": "darkroom",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Mas, in profile, looks at the cover in his hand, not at the Orb, and grades it.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "sit",
+     "face": "calm",
+     "x": 0.42,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "32.05": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "label",
+     "text": "CEO OF THE YEAR",
+     "s": 0,
+     "e": 57,
+     "must": true
+    }
+   ],
+   "tc_in": "21:20:17",
+   "tc_out": "21:23:02",
+   "frames": 57
+  },
+  {
+   "id": "32.07",
+   "setup": "32.07",
+   "beats": [
+    "32.07"
+   ],
+   "s": 440,
+   "e": 542,
+   "onscreen": [
+    {
+     "text": "CEO OF THE YEAR",
+     "s": 13,
+     "e": 102
+    },
+    {
+     "text": "GUEST",
+     "s": 45,
+     "e": 102
+    }
+   ],
+   "lines": [],
+   "seq": "TAG",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "WIDE · the back wall",
+   "cls": "W",
+   "move": "cut",
+   "does": "The back wall: he pins the cover up. Beside it he hangs a small frame, and in it the GUEST lanyard.",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "cues": [
+    "music (v3): TAG · quiet, wry · MM-12 december on the Water Line's felt; stops once, on the thud; the chord with no third on \"noted.\"",
+    "the framed GUEST lanyard answers Act Four's \"the badge was a joke.\" / \"mostly.\""
+   ],
+   "sounds": [
+    "key_tap_soft_03 @12",
+    "key_tap_soft_05 @44"
+   ],
+   "spots": [
+    {
+     "name": "key_tap_soft_03",
+     "k": 12,
+     "dur": null
+    },
+    {
+     "name": "key_tap_soft_05",
+     "k": 44,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "darkroom",
+   "room": "darkroom",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "The back wall: he pins the cover up. Beside it he hangs a small frame, and in it the GUEST lanyard.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": 0.46,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "orb",
+     "pose": "stand",
+     "face": "calm",
+     "x": 0.58,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "32.07": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "label",
+     "text": "CEO OF THE YEAR",
+     "s": 13,
+     "e": 102,
+     "must": true
+    },
+    {
+     "kind": "label",
+     "text": "GUEST",
+     "s": 45,
+     "e": 102,
+     "must": true
+    }
+   ],
+   "tc_in": "21:23:02",
+   "tc_out": "21:27:08",
+   "frames": 102
+  },
+  {
+   "id": "33.01",
+   "setup": "33.01",
+   "beats": [
+    "33.01"
+   ],
+   "s": 542,
+   "e": 596,
+   "onscreen": [],
+   "lines": [],
+   "seq": "TAG",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "WIDE · the thud",
+   "cls": "W",
+   "move": "cut",
+   "does": "THUD. A newspaper drops flat onto the desk from above. The room shakes 2 px; the phone, keys and Orb hop.",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "cues": [
+    "music (v3): TAG · quiet, wry · MM-12 december on the Water Line's felt; stops once, on the thud; the chord with no third on \"noted.\"",
+    "style: the lit-UI band lights on the thud frame (the episode's 2nd and last); the band does not shake",
+    "the cursor is already parked on the glass"
+   ],
+   "sounds": [
+    "synth:thud @12"
+   ],
+   "spots": [
+    {
+     "name": "synth:thud",
+     "k": 12,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "darkroom",
+   "room": "darkroom",
+   "style": "BASE",
+   "fx": [
+    "shake"
+   ],
+   "slate": false,
+   "caption": "THUD. A newspaper drops flat onto the desk from above. The room shakes 2 px; the phone, keys and Orb hop.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "sit",
+     "face": "calm",
+     "x": 0.34,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "orb",
+     "pose": "stand",
+     "face": "calm",
+     "x": 0.44,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "33.01": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "21:27:08",
+   "tc_out": "21:29:14",
+   "frames": 54
+  },
+  {
+   "id": "33.02",
+   "setup": "33.02",
+   "beats": [
+    "33.02"
+   ],
+   "s": 596,
+   "e": 698,
+   "onscreen": [
+    {
+     "text": "[ a newspaper, front page up ]",
+     "s": 2,
+     "e": 102
+    },
+    {
+     "text": "THE GREY LADY",
+     "s": 9,
+     "e": 102
+    },
+    {
+     "text": "COMPLAINT · THE GREY LADY v. MACROSOFT & NOPEAI · COPYRIGHT · FILED DEC 27, 2023",
+     "s": 15,
+     "e": 102
+    }
+   ],
+   "lines": [],
+   "seq": "TAG",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "HIGH · the front page",
+   "cls": "W",
+   "move": "cut",
+   "does": "A plain serif masthead, never blackletter. The only text under it: a clerk's stamp, held to read.",
+   "chars": [],
+   "cues": [
+    "music (v3): TAG · quiet, wry · MM-12 december on the Water Line's felt; stops once, on the thud; the chord with no third on \"noted.\"",
+    "no rail: the stamp is the record",
+    "the room tone holds; no music; the page settles twice (paper_curl)",
+    "the bracketed line is a reel stand-in for the drawn newspaper, not in-world text",
+    "the lit-UI band (\"Look at glass of water\") stays up over this insert in the picture; the reel leaves it off here so it does not read as newsprint"
+   ],
+   "sounds": [
+    "paper_curl @6",
+    "paper_curl @62"
+   ],
+   "spots": [
+    {
+     "name": "paper_curl",
+     "k": 6,
+     "dur": null
+    },
+    {
+     "name": "paper_curl",
+     "k": 62,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "darkroom",
+   "room": "darkroom",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "A plain serif masthead, never blackletter. The only text under it: a clerk's stamp, held to read.",
+   "cast": [],
+   "speak": [],
+   "beat_starts": {
+    "33.02": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "label",
+     "text": "[ a newspaper, front page up ]",
+     "s": 2,
+     "e": 102,
+     "must": true
+    },
+    {
+     "kind": "label",
+     "text": "THE GREY LADY",
+     "s": 9,
+     "e": 102,
+     "must": true
+    },
+    {
+     "kind": "label",
+     "text": "COMPLAINT · THE GREY LADY v. MACROSOFT & NOPEAI · COPYRIGHT · FILED DEC 27, 2023",
+     "s": 15,
+     "e": 102,
+     "must": true
+    }
+   ],
+   "tc_in": "21:29:14",
+   "tc_out": "21:33:20",
+   "frames": 102
+  },
+  {
+   "id": "33.04",
+   "setup": "33.04",
+   "beats": [
+    "33.04"
+   ],
+   "s": 698,
+   "e": 779,
+   "onscreen": [],
+   "lines": [
+    {
+     "id": "e1-tg-33-01",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "MAS",
+     "text": "noted.",
+     "s": 12,
+     "e": 27,
+     "fs": 2,
+     "fe": 41,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "O"
+      ],
+      [
+       5,
+       "E"
+      ],
+      [
+       11,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "Noted",
+       -1,
+       11
+      ]
+     ],
+     "tag": "",
+     "pre": false
+    }
+   ],
+   "seq": "TAG",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "SINGLE · profile: Mas, the button",
+   "cls": "M",
+   "move": "hold",
+   "does": "Mas in profile, his glass at his hand in frame: everything on the desk hopped, and its water line is flat. \"noted.\" The chord with no third.",
+   "chars": [
+    "mas"
+   ],
+   "cues": [
+    "music (v3): TAG · quiet, wry · MM-12 december on the Water Line's felt; stops once, on the thud; the chord with no third on \"noted.\"",
+    "the Q* vault's F hum carries in under it and becomes its root (heard, not seen)"
+   ],
+   "sounds": [
+    "synth:button_chord @33",
+    "vault_hum_F @33"
+   ],
+   "spots": [
+    {
+     "name": "synth:button_chord",
+     "k": 33,
+     "dur": null
+    },
+    {
+     "name": "vault_hum_F",
+     "k": 33,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "darkroom",
+   "room": "darkroom",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Mas in profile, his glass at his hand in frame: everything on the desk hopped, and its water line is flat. \"noted.\" The chord with no third.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "sit",
+     "face": "calm",
+     "x": 0.42,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "33.04": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "21:33:20",
+   "tc_out": "21:37:05",
+   "frames": 81
+  },
+  {
+   "id": "33.05",
+   "setup": "33.05",
+   "beats": [
+    "33.05"
+   ],
+   "s": 779,
+   "e": 809,
+   "onscreen": [],
+   "lines": [],
+   "seq": "TAG",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "BLACK · on the hum",
+   "cls": "GFX",
+   "move": "cut",
+   "does": "CUT TO BLACK on the hum. The hook to Ep2 is a sound only.",
+   "chars": [],
+   "cues": [
+    "music (v3): TAG · quiet, wry · MM-12 december on the Water Line's felt; stops once, on the thud; the chord with no third on \"noted.\"",
+    "the hum rings on under black, into the outro"
+   ],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "void",
+   "room": "darkroom",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "CUT TO BLACK on the hum. The hook to Ep2 is a sound only.",
+   "cast": [],
+   "speak": [],
+   "beat_starts": {
+    "33.05": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "21:37:05",
+   "tc_out": "21:38:11",
+   "frames": 30
+  }
+ ],
+ "lines": [
+  {
+   "id": "v3-vo-24",
+   "shot": "32.03",
+   "beat": "32.03",
+   "kind": "vo",
+   "mode": "on-mic",
+   "who": "MAS",
+   "text": "it looks calmer than me.",
+   "tag": "V.O.",
+   "on_s": 9.25,
+   "end_s": 10.58,
+   "file_s": 8.83,
+   "abs_in": 222,
+   "abs_out": 254,
+   "file_in": 211,
+   "file_out": 271,
+   "file": "audio/ep01/v3-el/ep01/tag/wav/v3-vo-24__mas-manalt-A.wav",
+   "stick_t": 1.0,
+   "stick_in": 0.42,
+   "cut": false,
+   "on_camera": "vo",
+   "take_lip_sync": false,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "It",
+     -1,
+     2
+    ],
+    [
+     "looks",
+     4,
+     10
+    ],
+    [
+     "calmer",
+     12,
+     21
+    ],
+    [
+     "than",
+     22,
+     25
+    ],
+    [
+     "me",
+     27,
+     32
+    ]
+   ],
+   "mouth": [],
+   "mouth_src": "none",
+   "pre": false
+  },
+  {
+   "id": "e1-tg-32-01",
+   "shot": "32.05",
+   "beat": "32.05",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "MAS",
+   "text": "close.",
+   "tag": "",
+   "on_s": 16.6583,
+   "end_s": 17.3283,
+   "file_s": 16.2583,
+   "abs_in": 399,
+   "abs_out": 416,
+   "file_in": 390,
+   "file_out": 431,
+   "file": "audio/ep01/v3-el/ep01/tag/wav/e1-tg-32-01__mas-manalt-A.wav",
+   "stick_t": 0.7,
+   "stick_in": 0.4,
+   "cut": false,
+   "on_camera": true,
+   "take_lip_sync": false,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "Close",
+     0,
+     14
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "E"
+    ],
+    [
+     5,
+     "O"
+    ],
+    [
+     12,
+     "E"
+    ],
+    [
+     14,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  },
+  {
+   "id": "e1-tg-33-01",
+   "shot": "33.04",
+   "beat": "33.04",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "MAS",
+   "text": "noted.",
+   "tag": "",
+   "on_s": 29.5833,
+   "end_s": 30.1833,
+   "file_s": 29.2033,
+   "abs_in": 710,
+   "abs_out": 725,
+   "file_in": 700,
+   "file_out": 739,
+   "file": "audio/ep01/v3-el/ep01/tag/wav/e1-tg-33-01__mas-manalt-A.wav",
+   "stick_t": 0.5,
+   "stick_in": 0.38,
+   "cut": false,
+   "on_camera": true,
+   "take_lip_sync": false,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "Noted",
+     -1,
+     11
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "O"
+    ],
+    [
+     5,
+     "E"
+    ],
+    [
+     11,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  }
+ ],
+ "posts": [],
+ "rails": [
+  {
+   "text": "DEC 6, 2023",
+   "s": 116,
+   "e": 177,
+   "shot": "32.02",
+   "floor_f": 20
+  }
+ ],
+ "sound_marks": [],
+ "subs": [
+  {
+   "s": 222,
+   "e": 254,
+   "hold_to": 266,
+   "who": "MAS",
+   "shown": "MAN AT THE DESK",
+   "text": "it looks calmer than me.",
+   "kind": "vo",
+   "mode": "on-mic",
+   "id": "v3-vo-24",
+   "os": false
+  },
+  {
+   "s": 399,
+   "e": 416,
+   "hold_to": 428,
+   "who": "MAS",
+   "shown": "MAN AT THE DESK",
+   "text": "close.",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "e1-tg-32-01",
+   "os": false
+  },
+  {
+   "s": 710,
+   "e": 725,
+   "hold_to": 737,
+   "who": "MAS",
+   "shown": "MAN AT THE DESK",
+   "text": "noted.",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "e1-tg-33-01",
+   "os": false
+  }
+ ],
+ "refs": {},
+ "v4_ids": {},
+ "base_marks_scaled": [],
+ "decisions": [
+  "3 beat lengths are not whole frames (32.03, 32.05, 33.04): beats start on the rounded running total, as the stick reel draws them",
+  "33.02: label 'COMPLAINT · THE GREY LADY v. MAC' is up 87 f, under its read floor 102 f (the stick's timing; kept)"
+ ],
+ "problems": []
+}

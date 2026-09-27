@@ -1,0 +1,415 @@
+{
+ "variant": "el",
+ "film": "out/ep01/full-v3/ep01-v3-el.mp4",
+ "measured": "2026-09-27 15:00:50",
+ "heard": "nothing here was heard or watched; every number is measured",
+ "transcript": {
+  "file": "show/episodes/ep01/production/full-v3/assembly/transcript-el.txt",
+  "lines": 228
+ },
+ "decode": {
+  "exit": 0,
+  "error_lines": 0,
+  "errors": [],
+  "frames_decoded": 31406,
+  "seconds": 18.1
+ },
+ "streams": [
+  {
+   "codec_name": "h264",
+   "profile": "100",
+   "codec_type": "video",
+   "width": 1920,
+   "height": 1080,
+   "r_frame_rate": "24/1",
+   "duration": "1308.583333",
+   "bit_rate": "491711",
+   "nb_read_packets": "31406"
+  },
+  {
+   "codec_name": "aac",
+   "profile": "1",
+   "codec_type": "audio",
+   "sample_rate": "48000",
+   "channels": 2,
+   "r_frame_rate": "0/0",
+   "duration": "1308.583000",
+   "bit_rate": "258104",
+   "nb_read_packets": "61341"
+  },
+  {
+   "codec_name": "bin_data",
+   "codec_type": "data",
+   "r_frame_rate": "0/0",
+   "duration": "1308.583000",
+   "bit_rate": "1"
+  }
+ ],
+ "format": {
+  "duration": "1308.583333",
+  "size": "123495505",
+  "bit_rate": "754987",
+  "tags": {
+   "title": "MR. MAS · ep1.0_research_preview.md (v3, ElevenLabs voices)"
+  }
+ },
+ "chapters": [
+  {
+   "id": 0,
+   "start": 0.0,
+   "end": 30.042,
+   "title": "Cold open"
+  },
+  {
+   "id": 1,
+   "start": 30.042,
+   "end": 60.042,
+   "title": "Intro"
+  },
+  {
+   "id": 2,
+   "start": 60.042,
+   "end": 62.042,
+   "title": "ep1.0_research_preview.md"
+  },
+  {
+   "id": 3,
+   "start": 62.042,
+   "end": 399.5,
+   "title": "Act One · research preview"
+  },
+  {
+   "id": 4,
+   "start": 399.5,
+   "end": 596.708,
+   "title": "Act Two · the regulate-me tour"
+  },
+  {
+   "id": 5,
+   "start": 596.708,
+   "end": 722.042,
+   "title": "Act Three · verified: human"
+  },
+  {
+   "id": 6,
+   "start": 722.042,
+   "end": 1264.75,
+   "title": "Act Four · the blip, told twice"
+  },
+  {
+   "id": 7,
+   "start": 1264.75,
+   "end": 1298.458,
+   "title": "Tag · december"
+  },
+  {
+   "id": 8,
+   "start": 1298.458,
+   "end": 1308.583,
+   "title": "Outro · credits"
+  }
+ ],
+ "chapters_match_assembly": true,
+ "audio": {
+  "samples": 62812160,
+  "seconds": 1308.5867,
+  "picture_seconds": 1308.5833,
+  "length_diff_ms": 3.37,
+  "integrated_lufs": -16.09,
+  "true_peak_dbtp": -1.2,
+  "sample_peak_dbfs": -1.35,
+  "chapters": [
+   {
+    "id": "coldopen",
+    "start": "00:00.00",
+    "seconds": 30.0417,
+    "lufs_i": -16.02,
+    "true_peak_dbtp": -3.14,
+    "max_short_term_lufs": -12.9,
+    "sync_lag_samples": 0,
+    "sync_corr": 0.9997
+   },
+   {
+    "id": "intro",
+    "start": "00:30.04",
+    "seconds": 30.0,
+    "lufs_i": -17.05,
+    "true_peak_dbtp": -4.2,
+    "max_short_term_lufs": -13.8,
+    "sync_lag_samples": 0,
+    "sync_corr": 0.9997
+   },
+   {
+    "id": "card",
+    "start": "01:00.04",
+    "seconds": 2.0,
+    "lufs_i": -36.03,
+    "true_peak_dbtp": -24.02,
+    "max_short_term_lufs": -36.0,
+    "sync_lag_samples": 0,
+    "sync_corr": 1.0
+   },
+   {
+    "id": "act1",
+    "start": "01:02.04",
+    "seconds": 337.4583,
+    "lufs_i": -16.02,
+    "true_peak_dbtp": -1.2,
+    "max_short_term_lufs": -13.4,
+    "sync_lag_samples": 0,
+    "sync_corr": 0.9999
+   },
+   {
+    "id": "act2",
+    "start": "06:39.50",
+    "seconds": 197.2083,
+    "lufs_i": -16.03,
+    "true_peak_dbtp": -1.7,
+    "max_short_term_lufs": -14.0,
+    "sync_lag_samples": 0,
+    "sync_corr": 0.9999
+   },
+   {
+    "id": "act3",
+    "start": "09:56.71",
+    "seconds": 125.3333,
+    "lufs_i": -16.06,
+    "true_peak_dbtp": -1.4,
+    "max_short_term_lufs": -13.8,
+    "sync_lag_samples": 0,
+    "sync_corr": 1.0
+   },
+   {
+    "id": "act4",
+    "start": "12:02.04",
+    "seconds": 542.7083,
+    "lufs_i": -16.02,
+    "true_peak_dbtp": -1.52,
+    "max_short_term_lufs": -12.5,
+    "sync_lag_samples": 0,
+    "sync_corr": 1.0
+   },
+   {
+    "id": "tag",
+    "start": "21:04.75",
+    "seconds": 33.7083,
+    "lufs_i": -17.0,
+    "true_peak_dbtp": -1.34,
+    "max_short_term_lufs": -12.2,
+    "sync_lag_samples": 0,
+    "sync_corr": 1.0
+   },
+   {
+    "id": "outro",
+    "start": "21:38.46",
+    "seconds": 10.125,
+    "lufs_i": -17.04,
+    "true_peak_dbtp": -4.12,
+    "max_short_term_lufs": -14.8,
+    "sync_lag_samples": 0,
+    "sync_corr": 0.9999
+   }
+  ],
+  "seams": [
+   {
+    "join": "coldopen -> intro",
+    "at": "00:30.04",
+    "rms_before_db": -19.0,
+    "rms_after_db": -30.8,
+    "step_db": -11.8,
+    "momentary_before_lufs": -16.7,
+    "momentary_after_lufs": -30.4,
+    "sample_jump": 0.0005
+   },
+   {
+    "join": "intro -> card",
+    "at": "01:00.04",
+    "rms_before_db": -38.2,
+    "rms_after_db": -37.7,
+    "step_db": 0.5,
+    "momentary_before_lufs": -28.8,
+    "momentary_after_lufs": -36.5,
+    "sample_jump": 0.0
+   },
+   {
+    "join": "card -> act1",
+    "at": "01:02.04",
+    "rms_before_db": -35.1,
+    "rms_after_db": -33.5,
+    "step_db": 1.6,
+    "momentary_before_lufs": -34.0,
+    "momentary_after_lufs": -31.9,
+    "sample_jump": 0.0017
+   },
+   {
+    "join": "act1 -> act2",
+    "at": "06:39.50",
+    "rms_before_db": -37.6,
+    "rms_after_db": -17.1,
+    "step_db": 20.5,
+    "momentary_before_lufs": -35.8,
+    "momentary_after_lufs": -15.2,
+    "sample_jump": 0.0003
+   },
+   {
+    "join": "act2 -> act3",
+    "at": "09:56.71",
+    "rms_before_db": -38.9,
+    "rms_after_db": -17.1,
+    "step_db": 21.8,
+    "momentary_before_lufs": -38.2,
+    "momentary_after_lufs": -14.2,
+    "sample_jump": 0.0008
+   },
+   {
+    "join": "act3 -> act4",
+    "at": "12:02.04",
+    "rms_before_db": -30.9,
+    "rms_after_db": -30.1,
+    "step_db": 0.8,
+    "momentary_before_lufs": -31.7,
+    "momentary_after_lufs": -30.0,
+    "sample_jump": 0.0044
+   },
+   {
+    "join": "act4 -> tag",
+    "at": "21:04.75",
+    "rms_before_db": -26.8,
+    "rms_after_db": -27.0,
+    "step_db": -0.2,
+    "momentary_before_lufs": -24.7,
+    "momentary_after_lufs": -24.0,
+    "sample_jump": 0.004
+   },
+   {
+    "join": "tag -> outro",
+    "at": "21:38.46",
+    "rms_before_db": -34.3,
+    "rms_after_db": -14.8,
+    "step_db": 19.5,
+    "momentary_before_lufs": -32.0,
+    "momentary_after_lufs": -13.9,
+    "sample_jump": 0.0058
+   }
+  ],
+  "digital_zero_runs_over_5ms": [
+   {
+    "at": "11:59.79",
+    "ms": 92.5
+   }
+  ],
+  "holes_under_-60dBFS_0.3s": [
+   {
+    "at": "11:59.79",
+    "seconds": 0.3
+   }
+  ]
+ },
+ "flash": {
+  "frames": 31406,
+  "general": {
+   "max_flashes_in_1s": 4,
+   "at": "00:39.25",
+   "chapter": "intro",
+   "transitions": 86,
+   "per_chapter": {
+    "coldopen": {
+     "max_flashes_in_1s": 1,
+     "at": "00:13.71"
+    },
+    "intro": {
+     "max_flashes_in_1s": 4,
+     "at": "00:39.25"
+    },
+    "card": {
+     "max_flashes_in_1s": 0,
+     "at": null
+    },
+    "act1": {
+     "max_flashes_in_1s": 1,
+     "at": "06:18.54"
+    },
+    "act2": {
+     "max_flashes_in_1s": 1,
+     "at": "06:52.58"
+    },
+    "act3": {
+     "max_flashes_in_1s": 0,
+     "at": null
+    },
+    "act4": {
+     "max_flashes_in_1s": 2,
+     "at": "13:13.42"
+    },
+    "tag": {
+     "max_flashes_in_1s": 0,
+     "at": null
+    },
+    "outro": {
+     "max_flashes_in_1s": 0,
+     "at": null
+    }
+   },
+   "windows_with_2_or_more": [
+    {
+     "at": "00:39.25",
+     "frame": 942,
+     "flashes": 4
+    },
+    {
+     "at": "00:39.29",
+     "frame": 943,
+     "flashes": 4
+    },
+    {
+     "at": "00:39.33",
+     "frame": 944,
+     "flashes": 3
+    },
+    {
+     "at": "00:39.33",
+     "frame": 944,
+     "flashes": 3
+    },
+    {
+     "at": "00:39.38",
+     "frame": 945,
+     "flashes": 2
+    },
+    {
+     "at": "00:39.38",
+     "frame": 945,
+     "flashes": 2
+    },
+    {
+     "at": "13:13.42",
+     "frame": 19042,
+     "flashes": 2
+    },
+    {
+     "at": "13:13.50",
+     "frame": 19044,
+     "flashes": 2
+    }
+   ]
+  },
+  "red": {
+   "max_flashes_in_1s": 0,
+   "at": null,
+   "transitions": 0
+  },
+  "largest_mean_luminance_step": {
+   "delta": 0.668,
+   "at": "00:35.04",
+   "chapter": "intro"
+  },
+  "limit": 3,
+  "pass": false,
+  "method": "coldopen/tools/flashcheck.py (imported), on a 160 x 90 area decode of the whole film"
+ },
+ "sheet": {
+  "file": "out/ep01/full-v3/ep01-v3-el-sheet.png",
+  "frames": 131
+ },
+ "seconds": 154.9
+}

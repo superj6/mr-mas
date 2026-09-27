@@ -1,0 +1,644 @@
+{
+ "segment": "act1",
+ "layers": [
+  {
+   "room": "bullpen",
+   "from": 0.0,
+   "to": 138.65,
+   "lead": 0.0,
+   "trail": 0.4
+  },
+  {
+   "room": "basement",
+   "from": 137.65,
+   "to": 140.94,
+   "lead": 0.6,
+   "trail": 0.4
+  },
+  {
+   "room": "bullpen",
+   "from": 139.94,
+   "to": 145.19,
+   "lead": 0.6,
+   "trail": 0.4
+  },
+  {
+   "room": "basement",
+   "from": 144.19,
+   "to": 152.69,
+   "lead": 0.6,
+   "trail": 0.4
+  },
+  {
+   "room": "bullpen",
+   "from": 151.69,
+   "to": 167.73,
+   "lead": 0.6,
+   "trail": 0.4
+  },
+  {
+   "room": "phone",
+   "from": 166.73,
+   "to": 194.9,
+   "lead": 0.6,
+   "trail": 0.4
+  },
+  {
+   "room": "bullpen",
+   "from": 193.9,
+   "to": 197.8,
+   "lead": 0.6,
+   "trail": 0.8
+  },
+  {
+   "room": "lobby",
+   "from": 196.4,
+   "to": 277.61,
+   "lead": 0.6,
+   "trail": 0.4
+  },
+  {
+   "room": "bullpen",
+   "from": 276.41,
+   "to": 280.61,
+   "lead": 0.8,
+   "trail": 0.4
+  },
+  {
+   "room": "split",
+   "from": 279.61,
+   "to": 314.98,
+   "lead": 0.6,
+   "trail": 0.4
+  },
+  {
+   "room": "bullpen",
+   "from": 313.98,
+   "to": 319.27,
+   "lead": 0.6,
+   "trail": 0.4
+  },
+  {
+   "room": "dark-desk",
+   "from": 318.27,
+   "to": 329.36,
+   "lead": 0.6,
+   "trail": 0.4
+  },
+  {
+   "room": "bullpen",
+   "from": 328.36,
+   "to": 336.51,
+   "lead": 0.6,
+   "trail": 0.05
+  },
+  {
+   "room (next chapter, leading)": "whitehouse",
+   "from": 336.46,
+   "lead": 1.0
+  },
+  {
+   "pad": "LAUNCH NIGHT",
+   "chords": [
+    "Abmaj9",
+    "Db69#11"
+   ],
+   "lufs": -31,
+   "duck_db": 6,
+   "from": 0.0,
+   "to": 66.75
+  },
+  {
+   "pad": "the Build thins",
+   "chords": [
+    "Abmaj9",
+    "Db69#11"
+   ],
+   "lufs": -34,
+   "duck_db": 6,
+   "from": 66.75,
+   "to": 120.79
+  },
+  {
+   "pad": "THE ODOMETER",
+   "chords": [
+    "Abmaj9",
+    "Eb9sus4"
+   ],
+   "lufs": -30,
+   "duck_db": 10,
+   "from": 120.79,
+   "to": 144.79
+  },
+  {
+   "pad": "the swing turns on the tile",
+   "chords": [
+    "Fm9"
+   ],
+   "lufs": -31,
+   "duck_db": 10,
+   "from": 144.79,
+   "to": 152.29
+  },
+  {
+   "pad": "THE BILL",
+   "chords": [
+    "Fm9",
+    "Bbm9"
+   ],
+   "lufs": -32,
+   "duck_db": 10,
+   "from": 152.29,
+   "to": 164.83
+  },
+  {
+   "pad": "ELGOOG'S CODE RED",
+   "chords": [
+    "Eb9sus4",
+    "Bbm9"
+   ],
+   "lufs": -32,
+   "duck_db": 10,
+   "from": 164.83,
+   "to": 197.0
+  },
+  {
+   "pad": "THE LANDLORD'S DEAL",
+   "chords": [
+    "Eb9sus4",
+    "Abmaj9"
+   ],
+   "lufs": -31,
+   "duck_db": 10,
+   "from": 197.0,
+   "to": 218.25
+  },
+  {
+   "pad": "THE JOB stops on the pop",
+   "chords": [
+    "Eb9sus4",
+    "Abmaj9"
+   ],
+   "lufs": -32,
+   "duck_db": 10,
+   "from": 250.74,
+   "to": 277.21
+  },
+  {
+   "pad": "THE DUEL",
+   "chords": [
+    "Fm11",
+    "Eb9sus4"
+   ],
+   "lufs": -31,
+   "duck_db": 10,
+   "from": 277.21,
+   "to": 314.58
+  },
+  {
+   "pad": "THE PAUSE LETTER",
+   "chords": [
+    "Bbm9",
+    "C7#9b13"
+   ],
+   "lufs": -33,
+   "duck_db": 10,
+   "from": 314.58,
+   "to": 336.46
+  }
+ ],
+ "sfx": [
+  [
+   "5.03",
+   "synth:keys",
+   13.091
+  ],
+  [
+   "5.03",
+   "synth:keys",
+   18.868
+  ],
+  [
+   "5.04",
+   "synth:keys",
+   33.1
+  ],
+  [
+   "5.04",
+   "synth:keys",
+   59.342
+  ],
+  [
+   "5.07",
+   "key_tap_space",
+   73.668
+  ],
+  [
+   "5.07",
+   "marker_write_q",
+   77.11
+  ],
+  [
+   "5.08",
+   "dialog_ok_click",
+   79.292
+  ],
+  [
+   "5.09",
+   "synth:keys",
+   80.783
+  ],
+  [
+   "5.09",
+   "synth:steps_far",
+   91.193
+  ],
+  [
+   "5.10",
+   "synth:keys",
+   95.833
+  ],
+  [
+   "5.10",
+   "ui_toast_pop",
+   101.836
+  ],
+  [
+   "5.10",
+   "synth:keys",
+   106.51
+  ],
+  [
+   "5.11",
+   "synth:keys",
+   113.426
+  ],
+  [
+   "5.12",
+   "counter_roll",
+   121.292
+  ],
+  [
+   "5.12",
+   "counter_roll",
+   122.042
+  ],
+  [
+   "5.12",
+   "counter_roll",
+   122.592
+  ],
+  [
+   "6.01",
+   "synth:ratchet",
+   123.525
+  ],
+  [
+   "6.02",
+   "letter_clunk",
+   128.25
+  ],
+  [
+   "6.02",
+   "synth:ratchet",
+   128.65
+  ],
+  [
+   "6.04",
+   "synth:ratchet",
+   133.25
+  ],
+  [
+   "6.04",
+   "phone_buzz_desk",
+   133.35
+  ],
+  [
+   "6.04",
+   "post_click--chip",
+   133.45
+  ],
+  [
+   "6.04",
+   "heart_tap_1",
+   136.15
+  ],
+  [
+   "6.04",
+   "heart_tap_2",
+   137.45
+  ],
+  [
+   "6.06",
+   "odometer_ratchet",
+   137.879
+  ],
+  [
+   "6.09",
+   "tower_pop",
+   145.092
+  ],
+  [
+   "6.09",
+   "synth:ratchet_fast",
+   145.792
+  ],
+  [
+   "6.09",
+   "palette_step_F",
+   145.992
+  ],
+  [
+   "6.09",
+   "palette_step_Ab",
+   148.492
+  ],
+  [
+   "6.09",
+   "palette_step_C",
+   150.992
+  ],
+  [
+   "7.02",
+   "steam_hiss",
+   161.242
+  ],
+  [
+   "8.01",
+   "key_tap_soft_02",
+   166.133
+  ],
+  [
+   "8.02",
+   "tile_shove",
+   167.383
+  ],
+  [
+   "8.04",
+   "synth:steps_phone",
+   174.188
+  ],
+  [
+   "8.05",
+   "cloth_rustle",
+   192.433
+  ],
+  [
+   "8.06",
+   "dialog_ok_click--chip",
+   195.4
+  ],
+  [
+   "8.06",
+   "revolving_door",
+   195.95
+  ],
+  [
+   "9.01",
+   "revolving_door",
+   197.0
+  ],
+  [
+   "9.01",
+   "synth:steps_stone",
+   197.237
+  ],
+  [
+   "9.01",
+   "desk_phone_ring",
+   197.947
+  ],
+  [
+   "9.01",
+   "glass_nudge",
+   199.23
+  ],
+  [
+   "9.01",
+   "glass_strain_2",
+   199.289
+  ],
+  [
+   "9.04",
+   "freeze_hit_F",
+   202.5
+  ],
+  [
+   "9.04",
+   "camera_shutter",
+   202.546
+  ],
+  [
+   "9.04",
+   "pen_tick_1",
+   206.346
+  ],
+  [
+   "9.04",
+   "cloth_rustle",
+   206.448
+  ],
+  [
+   "9.06",
+   "glass_strain_3",
+   211.694
+  ],
+  [
+   "9.06",
+   "revolving_door",
+   211.795
+  ],
+  [
+   "9.07",
+   "folder_slide",
+   215.55
+  ],
+  [
+   "9.07",
+   "footstep_hard_2",
+   217.3
+  ],
+  [
+   "9.08",
+   "collar_pop_F5",
+   218.25
+  ],
+  [
+   "9.09",
+   "key_ring_jangle_1",
+   250.743
+  ],
+  [
+   "9.09",
+   "synth:steps_stone",
+   250.793
+  ],
+  [
+   "9.09",
+   "key_ring_jangle_2",
+   251.368
+  ],
+  [
+   "9.10",
+   "synth:steps_stone",
+   253.055
+  ],
+  [
+   "9.10",
+   "synth:murmur",
+   253.855
+  ],
+  [
+   "9.11",
+   "synth:tapdance",
+   264.608
+  ],
+  [
+   "9.12",
+   "synth:murmur",
+   266.875
+  ],
+  [
+   "9.12",
+   "orb_servo",
+   267.125
+  ],
+  [
+   "9.12",
+   "orb_servo",
+   267.625
+  ],
+  [
+   "9.12",
+   "orb_servo",
+   268.125
+  ],
+  [
+   "9.12",
+   "rubber_stamp_C--chip",
+   269.775
+  ],
+  [
+   "9.13",
+   "folder_close",
+   275.172
+  ],
+  [
+   "11.03",
+   "camera_shutter",
+   290.153
+  ],
+  [
+   "11.04",
+   "ui_toast_pop",
+   298.995
+  ],
+  [
+   "11.04",
+   "synth:cheer",
+   299.595
+  ],
+  [
+   "11.05",
+   "post_click",
+   304.783
+  ],
+  [
+   "11.05",
+   "synth:cheer",
+   306.483
+  ],
+  [
+   "11.05",
+   "pen_scribble_short",
+   307.383
+  ],
+  [
+   "11.06",
+   "synth:flutter",
+   310.083
+  ],
+  [
+   "11.06",
+   "paper_curl",
+   311.983
+  ],
+  [
+   "11.06",
+   "camera_shutter",
+   312.208
+  ],
+  [
+   "11.06",
+   "ui_toast_pop",
+   312.383
+  ],
+  [
+   "12.01",
+   "ui_toast_pop",
+   314.583
+  ],
+  [
+   "12.01",
+   "paper_whip",
+   316.783
+  ],
+  [
+   "12.02",
+   "pen_scribble_short",
+   319.185
+  ],
+  [
+   "12.02",
+   "synth:crackle",
+   319.685
+  ],
+  [
+   "12.02",
+   "synth:crackle",
+   322.564
+  ],
+  [
+   "12.04",
+   "glass_nudge",
+   328.988
+  ],
+  [
+   "12.04",
+   "synth:pen",
+   328.608
+  ],
+  [
+   "12.05",
+   "synth:pen",
+   331.458
+  ],
+  [
+   "12.05",
+   "paper_curl",
+   332.658
+  ],
+  [
+   "12.06",
+   "synth:pen",
+   333.958
+  ],
+  [
+   "12.06",
+   "pen_tick_3",
+   335.458
+  ]
+ ],
+ "sfx_missing": [],
+ "decisions": [
+  "5.01: \"the bullpen's room (server hum, one buzzing tube, Gerg's keys) under the filename card's last 0.6 s\" = its room, leading the cut by 0.6 s",
+  "9.13: \"the Build's chip arpeggio (sc 11's left pane) under the laptop's close\" leads the next cut (11.01) by 0.8 s",
+  "12.01: \"the monitor's toast pop\" = its own ui_toast_pop, moved 0.4 s earlier",
+  "12.04: \"the pen's scratch, under Nole's last word\" = its own synth:pen, moved 0.5 s earlier"
+ ],
+ "seconds": 337.558,
+ "chapter_seconds": 337.458,
+ "lufs": -27.18,
+ "peak_dbfs": -5.3,
+ "built_by": "audio/ep01/v3-el/tools/el_bed.py"
+}
