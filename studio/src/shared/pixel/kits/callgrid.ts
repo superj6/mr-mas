@@ -188,6 +188,25 @@ export const spinner = (b: Buf, cx: number, cy: number, f: number, o: {frozen?: 
 };
 
 /** A system toast ("GERG MOCKBRAN has left."): rises in 3 held steps from k = 0, holds, sinks from `out`. */
+/** The toast's icon style. 'outline' (default) = v4's door outline. 'v5' (a4p5 finish, Act Four v5, via withToastIcon):
+ *  the picture audit read the 3 x 6 outline at 1x as a missing-glyph box, and "rewinding…" is no door. */
+export type ToastIcon = 'outline' | 'v5';
+let TOAST_ICON: ToastIcon = 'outline';
+export const withToastIcon = <T>(style: ToastIcon, fn: () => T): T => {
+  const prev = TOAST_ICON;
+  TOAST_ICON = style;
+  try { return fn(); } finally { TOAST_ICON = prev; }
+};
+/** a4p5 finish: the notice icons at 1x, top-left (x, y), 12 x 9. 'leave' = a filled door with an arrow out of it (someone
+ *  left or was removed); 'rewind' = the two left-pointing triangles of a transport control */
+export const noticeIcon = (b: Buf, x: number, y: number, kind: 'leave' | 'rewind') => {
+  if (kind === 'rewind') {
+    for (const ox of [0, 5]) for (let c = 0; c < 5; c++) for (let j = -c; j <= c; j++) b.set(x + ox + c, y + 4 + j, c === 4 ? PAL.P2 : PAL.P1);
+    return;
+  }
+  rect(x, y, 6, 9, b.ink(PAL.N0)); rect(x + 1, y + 1, 4, 8, b.ink(PAL.G5)); rect(x + 1, y + 1, 4, 1, b.ink(PAL.G6)); b.set(x + 4, y + 5, PAL.N0);
+  rect(x + 6, y + 4, 5, 1, b.ink(PAL.P2)); b.set(x + 9, y + 3, PAL.P2); b.set(x + 9, y + 5, PAL.P2); b.set(x + 8, y + 2, PAL.P2); b.set(x + 8, y + 6, PAL.P2);
+};
 export const callToast = (b: Buf, x: number, y: number, s: string, k: number, out = 999) => {
   if (k < 0 || k >= out + 3) return;
   const w = textWidth(s) + 26, h = 15;
@@ -197,7 +216,8 @@ export const callToast = (b: Buf, x: number, y: number, s: string, k: number, ou
   rect(x + 1, yy + 1, w - 2, h - 2, b.ink(PAL.N3));
   rect(x + 1, yy + 1, w - 2, 1, b.ink(PAL.N5));
   // a door-exit glyph
-  rect(x + 6, yy + 4, 6, 8, b.ink(PAL.G5)); rect(x + 7, yy + 5, 4, 7, b.ink(PAL.N1)); b.set(x + 10, yy + 8, PAL.G5);
+  if (TOAST_ICON === 'v5') noticeIcon(b, x + 4, yy + 3, /^rewind/i.test(s) ? 'rewind' : 'leave');
+  else { rect(x + 6, yy + 4, 6, 8, b.ink(PAL.G5)); rect(x + 7, yy + 5, 4, 7, b.ink(PAL.N1)); b.set(x + 10, yy + 8, PAL.G5); }
   text(b, s, x + 17, yy + 4, PAL.P1);
 };
 

@@ -1,0 +1,6 @@
+{
+  "_about": "Act Two's part of show/reel/ep01-full/ep01-full-v2.manifest.json (the lead assembles the manifest; the Act Two fixer pass, 2026-09-27, did not edit it). Paste the chapter into chapters[] after act1 (unchanged), and REPLACE all nine act2 beds (13.01 MM-19 ... 17.11 rooftop wind) with the one bed below: the act's temp sound stem (audio/reel/ep01-act2-v2/act2_bed.py: room per scene, the temp score, the anchor's murmur, 49 SFX), played as is (lufs null, no loop). The mixer lays the 39 takes over it and ducks it. The 0.05 s xfade is audit-v2 #21: Act Two's sound starts on its first frame instead of a 2 s crossfade that blurs Act One's act-out sting into it (Act One's MM-14 bed keeps its until: act2). The stem ends 0.3 s after the act's black, so Act Three's stem (18.01, xfade 0.3) enters on silence. Rebuild the stem (act2_bed.py) whenever the timeline JSON changes. See show/episodes/ep01/production/stick/act2-notes.md section 10.",
+  "chapter": {"id": "act2", "label": "ACT TWO", "sub": "the regulate-me tour · sc 13-17 · v2 takes", "from": "ep01-act2-v2"},
+  "bed": {"chapter": "act2", "beat": "13.01", "cue": "MM-19", "label": "Act Two temp stem (room + temp score + SFX)",
+          "src": "audio/reel/ep01-act2-v2/act2-bed.wav", "lufs": null, "loop": "none", "in": 0, "xfade": 0.05}
+}

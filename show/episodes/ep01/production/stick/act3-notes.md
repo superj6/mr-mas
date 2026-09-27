@@ -309,3 +309,147 @@ The showrunner marks the drag first; these are where I'd look, in order. *(Clari
   - the temp CLOCK figure;
   - the crane and tings pre-lap.
 - **Not heard, not watched:** everything above. The reads (newcomer and insider) of this chapter are still owed, along with the rest of the episode.
+
+---
+
+## 11. Clarity pass (`ep1s-act3fix`, 2026-09-27)
+
+| | |
+|---|---|
+| **What** | Fixes, in Act Three only, for the clarity and naturalness problems that three reads of `out/ep01/reel/ep01-full-v2.mp4` found: the newcomer (cold viewer) report, the insider notes, and the flow audit ([audit-v2.md](audit-v2.md) #33–#37). Act Three sat at 10:23.67–12:51.67 of that reel. |
+| **Rules** | The lead's call: fixes for clarity and naturalness, **not length**. Nothing was cut; the length ideas are in §11.5 as proposals. Act Four is untouched (its script section, timeline and mix). The script's `## ACT THREE` was edited only with the Edit tool, after re-reading. Stock Kokoro voices as cast; no clones, no external APIs, `.env` untouched. Machine care: every recording and the render went through `ops/heavy.sh` (fastrec `--workers 2` or 1, render `--jobs 2 --conc 2`); the decodes ran one at a time at `nice 19` / `ionice -c3`. The load average stayed under 7 throughout. |
+| **Who, when** | The `ep1s-act3fix` pass, 2026-09-27, about 03:00 → 03:30. |
+| **Honesty** | Nothing was watched or heard. The numbers come from fastrec's QA (including Whisper's transcripts), the builder, the stem's QA, the episode tool and a PyAV decode. What I say about how the new text reads comes from stills. |
+
+### 11.1 What changed, and why
+
+Beat ids are the timeline's; "EP" is the old `ep01-full-v2` clock. The cost is the change in reel seconds.
+
+| # | Beat (sc) | Before → after | Why (which read, and where) | Cost |
+|---|---|---|---|---|
+| 1 | 18.02 (18) | The label gains a first line, so it reads `FROM: COINWORLD · PROOF YOU'RE HUMAN` / `SHIP TO: MAS MANALT, CO-FOUNDER` | Newcomer, EP 10:28: "couldn't tell co-founder of what… never said why a CEO has an iris-scanning company". The sender's line says both, the way a real label would. The tagline is `[INVENTED]` wording for the Orb's stated purpose, proof of personhood. **Facts owner** to settle | +0.79 s |
+| 2 | 18.06 (18) | V.O. "i didn't need to be verified." → **"i made it for everyone else."** (new id `e1-a3-18-04`; `e1-a3-18-02` is retired) | Insider, EP 10:39: the V.O. "explains the 'verified: human' card; cut the v.o.". Reworded rather than cut, because it's the act's D2 plant (pov-and-framing §4) and the newcomer needs what the Orb is to him. It's still a claim about himself (it's for other people, not him), and the outline kept on the wall for years still contradicts it. **POV owner:** pov-and-framing's D2 rows quote the old words | −0.21 s |
+| 3 | 19.02 (19) | `MAS, ON $10M STARTUPS:` above the quote | Newcomer, EP 10:48: "I don't know who 'he' is or who he said it to". The context is from mid §2 ("asked about competing on a $10M budget") | +0.71 s |
+| 4 | 19.05 (19) | The chyron gains `VP SIRRAH:` | Newcomer, EP 10:55: "unattributed; the [A][I] blocks only hint at the VP". It's spelled in full, per naming.md's SIRRAH/SIRHC ruling | +0.50 s |
+| 5 | 19.07 (19) | `SIGNED: 7 AI COMPANIES` under `PINKY PROMISE` | Newcomer ledger, EP 11:01: needed outside knowledge for what the pinky promise was | +0.21 s |
+| 6 | 19.11 (19) | The lighthouse plate `MISANTHROPIC · MARIO'S LAB` | Newcomer, EP 11:15–11:21: "It isn't stated that the lighthouse is Mario's lab, so Nozama's $4B floats unanchored" | +0.21 s |
+| 7 | 20.06 (20) | "is that the build?" → **"how's the build?"** | Audit #35: a yes/no question carried only by a final rise that neither take gave. A wh-question falls naturally, and Gerg's "Still running." answers it directly | −0.08 s |
+| 8 | 21.01 (21) | `OCT 16 · "…the lightning works for us"` → `OCT 16 · AN INVESTOR'S MANIFESTO` over `"We are the apex predator; the lightning works for us."` | Newcomer, EP 11:57: "no speaker and no meaning I could find". Insider: "I couldn't place it… reads as noise". The fuller quote is the verified line in facts.md (THE MANIFESTO, Oct 16) | +1.62 s |
+| 9 | 21.04 (21) | "that one." → **"which one's real?"**, then the Orb's iris flicks across the three NEDIBs (three servo whirs), then **"the one with the pen."** (new ids `e1-a3-21-06`, `-07`; `e1-a3-21-05` is retired) | Newcomer, EP 12:19: "that one." unclear. Insider: "if the intent is 'we made that one,' land it; otherwise cut". The script's intent (the Orb, then Mas, picks out the real one) now plays as a small exchange with the witness: he asks the device built to tell people from fakes, it answers the only way it can, and he agrees. The line also carries a quiet second meaning: the real one is the one who signs | +1.92 s |
+| 10 | 21.06 (21) | The scroll egg `MARIO` → `MARIO'S MEMO` | Newcomer, EP 12:19–12:27: "a scroll labelled MARIO… unclear". Act One shows his memo and addendum | 0 |
+| 11 | 22.01 (22) | Tasya's take now starts with the laugh: `say` "Ha ha ha! We love you guys." The gap before it went 1.0 s → 0.45 s, and the silent-mouth `speak` is removed | Audit #36: "a hearty laugh first", but v2 had 1.0 s of silent mouth, so the "hug in words" read deadpan. It's her own stock voice (`am_eric` · `b-eric-warm`), not a clone | 0 |
+| 12 | 23.04 (23) | The crane and glass-tings pre-lap under the act-out's black is held out (`PRELAP = False` in `build_timeline.py`) | Audit #37, measured in the MP4: Act Four's premix has **no** crane, so the pre-lap stopped dead at the cut, on the frame captioned "a crane truck grinds past". F5 says to drop it until Act Four's `bed.py` gains the crane. The black stays 2.5 s and now plays on the mixer's floor: −51.4 dBFS RMS in the test render, not digital silence | 0 |
+| 13 | stem | `act3_bed.py`: MM-01's entry is now computed from 23.01's start (`t_clock % BAR`, 1.167 s) instead of the constant 0.5 s | That constant was right only while 23.01 sat at 138.0 s. Without the change, the longer act would have put THE CLOCK's bar 1 0.67 s off the Water Line's bar line. The last part is now bars 3–9, ending on bar 10's downbeat, which is 23.01 | 0 |
+
+**Total: +5.67 s**, 2:28.0 → **2:33.67** (3,552 → 3,688 frames). In the episode, everything after Act Three moves 5.67 s later. The full reel would be about 22:26.2 against 22:20.5, if no other chapter changed.
+
+### 11.2 What I left alone, and why
+
+- **Length notes from the insider** (Act Three's "catching up: 7 weeks" signpost and the text cards after it; "Rima's going to wake up to forty emails about it" as filler). These are length, so they're proposed in §11.5, not made.
+- **NOLE's rushed line** (audit #34, 6.19 syll/s against 4.8–5.6). It's already at the lowest speed QA allows. It needs Nole's band floor widened in `audio/voices/cast.json`, which is the casting owner's file.
+- **The `arms-up` pose** (audit #33). It's in shared `studio/src/reel/Figure.tsx` (the reel owner's; see §10).
+- **The duck (F3) and the Act Two → Three seam (#32).** These belong to the reel owner and the Act Two pass. The stem's music now enters at 1.17 s rather than 0.5 s, so the seam first gets 1.2 s of the room at −40 LUFS; nobody has heard it.
+- **Gerg's "Mas, did you just post on Tidder?"** falls 2.8 st. It's rhetorical (he knows), so I left it.
+- **The rent meter over the lighthouse** isn't drawn in the stick reel, and no read flagged it.
+- **The forum room** (REMUHCS's plate). The newcomer retold it correctly ("a senators' forum where everyone wants a referee").
+
+### 11.3 The takes (run r4, 03:08–03:12)
+
+The plan edits are made by `make_plan.py` (scratch, below) and recorded in each row's `recnote` and `notes`. The ids are the ones `fastrec plan --seg act3 --prev` gives for the new script, so they hold on the next re-plan. That draft also lists `e1-a3-20-10`, the typed post, which stays out as before because it's on-screen text.
+
+| id | speaker | text (`say`) | speech s | wpm | syll/s (guide) | speed | Whisper heard |
+|---|---|---|---|---|---|---|---|
+| `e1-a3-18-04` | MAS (V.O.) | i made it for everyone else. | 1.93 | 187 | 4.15 (3.4–4.0) | 0.85 | "I made it for everyone else." |
+| `e1-a3-20-06` | MAS | how's the build? (2 takes) | 1.06 | 170 | 2.83 (3.6–4.2) | 0.915 | "How's the build?" (both takes) |
+| `e1-a3-21-06` | MAS | which one's real? | 1.17 | 154 | 3.42 (3.6–4.2) | 0.915 | "Which one's real?" |
+| `e1-a3-21-07` | MAS | the one with the pen. | 1.20 | 250 | 4.17 (3.6–4.2) | 0.915 | "The one with the pen." |
+| `e1-a3-22-02` | TASYA | "We love you guys." (`Ha ha ha! We love you guys.`) | 1.73 | 243 (7 words, 3 of them the laugh) | 4.05 (3.8–4.4) | 0.92 | "Ha ha ha, we love you guys." |
+
+- **Runs:** r4, 5 lines and 6 takes, 16 s wall at 2 workers (load 1.0 at the end). Then 22-02 was read twice more, one line each, at 1 worker, about 10 s each.
+- **The laugh, tried** (Whisper was the only judge; nothing heard):
+  - `Ha! Ha ha! {0.25} We…`: the opened pause cut into the voice (dip −7.3 dB, joined speech), and Whisper heard "Ha, ha, ho."
+  - `Ha! Ha ha! {s0.25} We…`: read on its own, the laugh came out as Whisper's "**Dang Talha**", so it was dropped.
+  - Four spellings with no pause, as a scratch trial (`laugh-trial/`): "Ha ha ha!", "Hah! Hah hah!", "Ha-ha-ha!" and "Ha ha!" were all heard as a laugh. "Ha ha ha!" was kept.
+  - The laugh runs into "We" with a 0.04 s break, laughing into the line. **For the ear:** is it a laugh or three spoken "ha"s?
+- **QA, final** (`fast-v2/qa/fastrec-qa.json`): **0 problems, 9 ear flags.** Seven are the §3 flags, minus the old 20-06 rise. The two new ones are:
+  - 20-06: articulation 2.83 syll/s on a three-syllable line (turn wpm is inflated on short lines, see §3; its span is 1.06 s);
+  - 21-06: a −5.8 st final fall on a wh-question, where a fall is the natural reading.
+- **Retired, not deleted:** `e1-a3-18-02` and `e1-a3-21-05` are still in `fast-v2/wav/`, `rows/` and `clean/`. They're no longer in the plan or in `lines-fast-v2.json`, and nothing uses them. The previous pass made them, so I left them.
+
+### 11.4 How to re-run this pass (repo root)
+
+```sh
+PY=audio/.venv-casting/bin/python; T=audio/ep01/act4/dialogue/tools/fastrec/fastrec.py
+# the takes: only lines whose say/speed/voice changed are re-read (the resume key)
+ops/heavy.sh env HF_HUB_OFFLINE=1 $PY $T record --lines audio/ep01/act3/dialogue/lines-plan-v2.json \
+  --out audio/ep01/act3/dialogue/fast-v2 --lines-out audio/ep01/act3/dialogue/lines-fast-v2.json --prosody --workers 2
+python3 audio/reel/ep01-act3-v2/build_timeline.py         # -> show/reel/ep01-full/ep01-act3-v2.json, measure.json, transcript.md
+$PY audio/reel/ep01-act3-v2/act3_bed.py                   # -> act3-bed.wav (154.67 s) + act3-bed-qa.json (about 2 s)
+# test render, from a scratch copy of studio/ (src/{dev,reel,shared,styleframes} copied, node_modules + public symlinked,
+# audio/ symlinked beside it, the new JSON copied into its src/reel/data/), so the real studio/src/reel/data/ isn't written:
+ops/heavy.sh node src/reel/tools/episode.mjs audio/reel/ep01-act3-v2/test.manifest.json --no-sync --jobs 2 --conc 2 \
+  --work <scratch>/w --out <scratch>/ep01-act3-v2-test.mp4
+```
+
+In the real studio, `node src/reel/sync.mjs` (run from `studio/`) now copies `show/reel/ep01-full/*.json` into `data/`. **The lead needs to re-sync before the next episode render**, because `studio/src/reel/data/ep01-act3-v2.json` is still the pre-fix copy.
+
+### 11.5 Measured
+
+**Timeline** (`measure.json`):
+
+| | Before (first build) | After (clarity pass) |
+|---|---|---|
+| Runtime | 2:28.00, 3,552 frames | **2:33.67, 3,688 frames** |
+| Lines / words | 21 / 142 | 22 / 147 |
+| Median words a line; lines ≤ 3 words | 6; 6 of 21 | 5.5; 7 of 22 |
+| Speech | 44.3 s (30 %) | 46.1 s (30 %) |
+| Longest conversation | the call, 25.9 s, 8 lines | unchanged |
+| Longest stretch with no voice | 24.5 s | **25.9 s** (the same stretch, sc 19 items 1–3, now with its attributions) |
+| SFX placements | 53 | 51 (the crane and tings held out) |
+| Scenes (s): 18 / 19 / 20 / 21 / 22 / 23 | 22.2 / 35.4 / 36.0 / 30.9 / 13.6 / 10.0 | 22.8 / 37.0 / 35.9 / 34.4 / 13.6 / 10.0 |
+
+**Stem** (`act3-bed-qa.json`): 154.67 s, −25.35 LUFS, peak −6.75 dBFS. It's digitally silent only under the black (151.25–153.0), which the mixer's −50 LUFS floor covers. The peak sits at MM-01's loop jump (about 66 s).
+
+**Test render** (`out/ep01/reel/segments/ep01-act3-v2-clarity-test.mp4`, with `-chapters.json`, `-measure.json` and `-sheet.png`; the first build's `ep01-act3-v2-test.*` is kept beside it for comparison):
+
+| | Measured (03:15–03:17) |
+|---|---|
+| Length | **2:33.67**, 3,688 frames, 1280×720 H.264 + AAC, 11.3 MB |
+| Wall | 82.8 s: bundle 6.9, render 72.4 (2 segments of 76.8 s, 2 jobs × 2 tabs), mux 3.0. That's 111 s of reel a minute, at a load average of about 6 |
+| Decode (PyAV) | 3,688 of 3,688 frames decoded, 0 errors. Video 153.667 s, audio 153.685 s |
+| Mix (the mixer's meter) | **22 of 22 takes laid**, 0 missing. −19.02 LUFS, peak −5.26 dBFS, 0 silences ≥ 0.5 s |
+| Mix (pyloudnorm on the decoded AAC) | −19.1 LUFS, peak −5.29 dBFS. By scene: sc 18 −21.5 · 19 −21.9 · 20 −17.2 · 21 −17.7 · 22 −18.4 · 23 −25.9. No 0.5 s window under −70 dBFS. The 23.04 black: −51.4 dBFS RMS, −39.5 peak |
+| Stills | One per beat at 60 % (41), on the sheet. All the new text is on screen and legible at 1280×720: the two-line label, `MAS, ON $10M STARTUPS:`, `VP SIRRAH: "…"`, `SIGNED: 7 AI COMPANIES`, `MISANTHROPIC · MARIO'S LAB`, the manifesto header and quote, `MARIO'S MEMO`. The strip shows "which one's real?" / "the one with the pen.". The manifesto quote wraps with "for" at the right edge of the picture; it reads, but a pixel layout should give it a narrower column |
+
+**Length proposals** (none made; they update §9):
+1. **sc 19 items 1–3**, now 25.9 s with no voice (it was 24.5 s). §9's options stand: drop 19.03 (1.8 s), merge 19.04 into 19.06 (≈ 1.9 s), or drop ITEM 1 (the poster, 19.02–19.03, now ≈ 6.1 s). The insider's option is to drop the `catching up: 7 weeks` toast (19.01, 2.0 s) and let the rail's backward roll carry the catch-up. The newcomer read used that toast to follow the run, though, so I'd cut it last.
+2. **21.01, the manifesto egg**, now 3.9 s with a real read (it was 2.3 s of noise). If the showrunner marks the monitor run as dragging, cut this egg whole rather than going back to the bare fragment. NELEH's paper egg can ride on 21.02's first second.
+3. **20.06, "Rima's going to wake up to forty emails about it."** (insider: filler, ≈ 4 s). It's the line that keeps Rima alive between sc 7 and Act Four, so cutting it is a story call.
+4. **§9's items 3 and 4** stand.
+
+### 11.6 Open, and who owns it
+
+- **Facts owner:**
+  - the label's tagline, `PROOF YOU'RE HUMAN`;
+  - `MAS, ON $10M STARTUPS:` as a paraphrase of the question he answered;
+  - `SIGNED: 7 AI COMPANIES`;
+  - `AN INVESTOR'S MANIFESTO` as the attribution (THE MANIFESTO's Oct 16 line, facts.md).
+- **POV owner:** `show/bible/pov-and-framing.md` still quotes "i didn't need to be verified." in its D2 rows (§4 table and the Ep1 placement table). The new wording is "i made it for everyone else." Also check "which one's real?" against pov-and-framing's rule that his real lines never land on the Orb's look. It's an invented line, and the look answers it, so I think it passes.
+- **Act Four owner (F5):** when `audio/reel/ep01-act4-v5/bed.py` gains the crane and the tings at S1.01–S1.02, set `PRELAP = True` in `build_timeline.py`, then rebuild the JSON and the stem.
+- **Lead:**
+  - re-sync `studio/src/reel/data/` before the episode render;
+  - the chapter and bed entries in `ep01-full-v2.manifest.json` need no change (the bed is the same file, now 154.67 s long);
+  - Act Four and everything after it move +5.67 s.
+- **For the ear:**
+  - the laugh (a laugh, or three spoken "ha"s?);
+  - the new 1.75 s look between "which one's real?" and "the one with the pen." (filled by three servo whirs);
+  - the 2.5 s act-out black, now with no pre-lap: a deliberate silence, or a hole? This is note 13 territory, and it ends once F5 lands;
+  - the 1.2 s of bare room before MM-01 enters at the Act Two seam.
+- **Scratch** (temporary, not needed to re-run anything), in `/tmp/claude-1000/-home-jgon-project-art-mrmas/a5e7723c-6ab4-4824-a1ed-8e367fdb82e5/scratchpad/ep1s-act3fix/`:
+  - `*.before.*`: the plan, lines JSON, timeline, builder, stem script and QA as they were before this pass;
+  - `make_plan.py` and `patch_builder.py`: the exact edits;
+  - `plan-now.json`: the re-plan draft;
+  - `laugh-trial/`;
+  - `root/`: the scratch studio;
+  - `w/`: the render's work folder;
+  - `stills/`, `stills.py` and `audiocheck.py`: the checks above.

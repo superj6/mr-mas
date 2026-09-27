@@ -6,6 +6,7 @@
 | **Why** | The showrunner, 2026-09-26: "we should simultaneously begin the stickman outline of the entire episode 1", and "we should've been iterating on cheaper stick figure runs to nail down flow and dialogue before final render". It's fully programmatic: stock Kokoro voices, no external APIs, `.env` untouched. **The lead's call on length:** build the full episode at its current length, let the showrunner watch it and mark where it drags, then cut. So nothing here is cut. §6 lists candidates only. |
 | **Who, when** | The `ep1s-assemble` pass, 2026-09-27, 01:45 → 02:40. The render ran 02:05 → 02:19. |
 | **State** | Rendered and measured. **Nobody has watched or listened to it.** Nothing was committed (the lead commits). `script.md` was not edited. |
+| **Superseded (2026-09-27, `ep1s-close`)** | This file describes and measures the **first** v2 cut (22:20.5), the one the newcomer, insider and flow-audit reads watched. After the five fix passes, the same output path was re-rendered (22:51.4) from an updated manifest (Act One and Act Two stems, two seam cross-fades, the card at 4 s). Its runtimes, measurements and review guide are in [ep01-stick-v2-for-review.md](ep01-stick-v2-for-review.md); the first cut's files are kept in that pass's scratch `before/`. The method and commands below still apply. |
 | **Honesty** | I can't watch or listen. Every number here comes from a tool. Anything about how a frame reads comes from stills: a 90-frame contact sheet, 27 seam frames and 4 full-size frames. |
 
 ---

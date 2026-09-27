@@ -225,6 +225,10 @@ export interface GergTileOpts {
    *  thumbnail) the bottom-anchored bust put his eyes on the tile's top edge ("cropped at eye level" on the stills
    *  check). fit lowers the bust so his eyes sit 40% down the tile */
   fit?: boolean;
+  /** a4p5 finish (Act Four v5, opt-in; default false = v4's typing): the typing drawings held on 3s and the shoulder bob
+   *  only every 16 frames. v4's rhythm changes the forearms and bobs the whole head a pixel on a 1-3 frame beat, which
+   *  the v5 picture audit measured on 65-70% of Mas's frames while Gerg listens (it reads as jitter, or as him talking) */
+  calm?: boolean;
 }
 /**
  * The medium tile: his room, GERG (medium rig) from the chest up with the bottom of the rig on the tile's bottom, the
@@ -236,8 +240,8 @@ export const drawGergMediumTile = (b0: Buf, x: number, y: number, w: number, h: 
   tileBg(b, x, y, w, h);
   const f = o.f ?? 0;
   const typing = o.typing !== false;
-  const st: GergMediumState = {...GERG_MEDIUM_DEFAULT, ...s, type: typing ? gergTypeAt(f) : 0};
-  const bob = typing && st.type === 1 ? 1 : 0;
+  const st: GergMediumState = {...GERG_MEDIUM_DEFAULT, ...s, type: typing ? gergTypeAt(o.calm ? Math.floor(f / 3) : f) : 0};
+  const bob = !typing ? 0 : o.calm ? (Math.floor(f / 16) % 2) : st.type === 1 ? 1 : 0;
   const img = gergMedium(st);
   const fitDy = o.fit ? Math.max(0, Math.round(h * 0.4) - (h - GERG_MH + 6 + GERG_M_FACE[1])) : 0;
   blitImg(b0, img, x + Math.round(w * (o.cx ?? 0.52) - GERG_MW / 2), y + h - GERG_MH + 6 + bob + fitDy, {clip});

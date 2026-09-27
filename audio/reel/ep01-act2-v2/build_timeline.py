@@ -363,10 +363,12 @@ SPEC = [
     # every new beat re-typed the whole poster). Item times: 1 at 0.0, 2 at 5.0, 3 at 10.0, 4 at 15.0 (2 bars each).
     dict(id='16.01', seq=SEQ16, kind='montage', set='street', shot='insert',
          frame='GFX · the tour poster (held: ITEMS 1-4, the stamps pile up)', room='none', min=17.5,
-         on=[(POSTER, 0.0, None), ('RAIL: MAY 24, 2023 · LONDON', 0.5, 10.0), (STRIP, 1.4, None),
+         # the rails leave before the stack reaches the frame's lower left, where a rail is drawn (the first test render
+         # had MAY 24 over the NOTERB plate and MAY 26 over ADDED DUE TO POPULAR DEMAND)
+         on=[(POSTER, 0.0, None), ('RAIL: MAY 24, 2023 · LONDON', 0.5, 5.0), (STRIP, 1.4, None),
              ('EU: CANCELLED', 3.0, None),
              ('"blackmail"', 5.4, None), ('NOTERB · ENFORCES THE RULEBOOK.', 6.3, 10.0),
-             ('RAIL: MAY 26, 2023', 10.2, None), ('@masa · "…no plans to leave"', 10.6, 15.0), ('UN-CANCELLED', 12.9, None),
+             ('RAIL: MAY 26, 2023', 10.2, 12.9), ('@masa · "…no plans to leave"', 10.6, 15.0), ('UN-CANCELLED', 12.9, None),
              ('ADDED DUE TO POPULAR DEMAND', 15.35, None)],
          names=[('noterb', 6.3)],
          sounds=[('rubber_stamp_C', 0.0, -18), ('synth:stab', 0.0, -20), ('paper_whip', 1.4, -22),

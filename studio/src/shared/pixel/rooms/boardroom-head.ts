@@ -16,11 +16,11 @@ import {Buf, rect, line, poly, bayer, hash, clamp} from '../px';
 import {PAL, stepColor} from '../palette';
 import {MatBuf, resolve, defineMat} from '../light';
 import {drawTtemmeMedium, TtemmeMediumState, TTEMME_MEDIUM_DEFAULT, TTEMME_MW} from '../cast/ttemme-medium';
-import {drawNelehMedium, NelehMediumState, NELEH_MEDIUM_DEFAULT} from '../cast/neleh-medium';
-import {drawMadaMedium, MADA_MEDIUM_DEFAULT} from '../cast/mada-medium';
+import {drawNelehMedium, NelehMediumState, NELEH_MEDIUM_DEFAULT, NELEH_MW} from '../cast/neleh-medium';
+import {drawMadaMedium, MADA_MEDIUM_DEFAULT, MADA_MW} from '../cast/mada-medium';
 import {drawTasyaRoom, TasyaRoomPose, TASYA_ROOM_DEFAULT} from '../cast/tasya-speak';
 import {drawFolder, FolderState} from '../kits/folder';
-import {drawChatPanel} from '../kits/chat-panel';
+import {drawChatPanel, CHAT_PANEL} from '../kits/chat-panel';
 
 defineMat('br.slate', ['N0', 'N1', 'G0', 'G1', 'G2', 'G3', 'G4', 'G5'], ['N0', 'N1', 'G0', 'C0', 'C1', 'C2', 'C3', 'C4'], ['N0', 'G0', 'W0', 'W1', 'W2', 'W3', 'W4', 'W5']);
 defineMat('br.carpet', ['N0', 'N1', 'N1', 'N2', 'U0', 'U0', 'U1', 'N5'], ['N0', 'N1', 'N1', 'C0', 'C0', 'C1', 'C2', 'C3'], ['N0', 'N1', 'W0', 'W1', 'W2', 'W3', 'W4', 'W5']);
@@ -216,30 +216,40 @@ export interface BoardHead2SState {
   /** his chat panel's scroll frame (null = off) */
   chat?: number | null;
   plate?: BoardHeadOpts;
+  /** a4p5 finish (opt-in; default 'nelehRight' = the r1-r4 staging): 'nelehLeft' stands NELEH at the table's LEFT side
+   *  (her rig flipped to face screen-right, down the table at him) and seats MADA soft beyond on the RIGHT, Ttemme turned
+   *  to her; the folder slides from her side, his chat panel sits at his other elbow. The plate itself is not mirrored
+   *  (the window stays down the left wall), only the people and their props: the v5 picture audit (§2.3) found Neleh and
+   *  Mada swapping sides between S4.10's wide (Neleh left, Mada right), this two-shot and S4.12 */
+  stage?: 'nelehRight' | 'nelehLeft';
 }
 export const drawBoardHead2S = (b: Buf, f: number, s: BoardHead2SState = {}) => {
   drawBoardHead(b, f, s.plate);
   const plate = new Buf(480, RH, PAL.N0);
   drawBoardHead(plate, f, s.plate);
-  // Mada soft beyond, at the table's left side (flipped to face across it), two rungs down
+  const L = s.stage === 'nelehLeft';
+  const mx0 = (x: number, w: number) => (L ? 480 - x - w : x); // a rig's left edge on the swapped side
+  // Mada soft beyond, at the table's far side (flipped to face across it), two rungs down
   if (s.mada !== null) {
     const [mx, my] = B.mada;
-    drawMadaMedium(b, mx, my, {...MADA_MEDIUM_DEFAULT, head: '34', look: -1, chair: false}, {flip: true, map: soft(2), spin: s.mada?.spin === undefined ? f : s.mada.spin});
-    chairBack(b, mx + 6, my + 76, 64, 1);
+    drawMadaMedium(b, mx0(mx, MADA_MW), my, {...MADA_MEDIUM_DEFAULT, head: '34', look: -1, chair: false}, {flip: !L, map: soft(2), spin: s.mada?.spin === undefined ? f : s.mada.spin});
+    chairBack(b, mx0(mx + 6, 64), my + 76, 64, 1);
   }
-  // Ttemme at the head, flipped to face her
+  // Ttemme at the head, turned to face her
   const [tx, ty] = B.ttemme;
   const folderUp = s.folder && s.folder.kind === 'up' ? s.folder : null;
   const st: TtemmeMediumState = {...TTEMME_MEDIUM_DEFAULT, look: 1, ...s.ttemme, arm: folderUp ? 'folder' : (s.ttemme?.arm ?? 'rest')};
-  drawTtemmeMedium(b, tx, ty, st, {flip: true, f, table: (bb) => tableOver(bb, plate, 0), folder: folderUp});
-  if (s.chat !== null && s.chat !== undefined) drawChatPanel(b, B.chat.x, B.chat.y, 'medium', s.chat);
-  if (s.folder && s.folder.kind === 'table') drawFolder(b, 0, 0, s.folder, {path: B.folderPath});
-  // Neleh standing at the table's right side (her own rig faces camera-left: she looks down the table at him)
+  drawTtemmeMedium(b, tx, ty, st, {flip: !L, f, table: (bb) => tableOver(bb, plate, 0), folder: folderUp});
+  if (s.chat !== null && s.chat !== undefined) drawChatPanel(b, mx0(B.chat.x, CHAT_PANEL.medium.w), B.chat.y, 'medium', s.chat);
+  const path = (L ? B.folderPath.map(([x, y]) => [480 - x, y]) : B.folderPath) as [[number, number], [number, number]];
+  if (s.folder && s.folder.kind === 'table') drawFolder(b, 0, 0, s.folder, {path});
+  // Neleh standing at the table's near side (her own rig faces camera-left: she looks down the table at him; flipped
+  // on the left). Her footnotes are drawn by the rig after the flip, so their digits never mirror
   if (s.neleh !== null) {
     const [nx, ny] = B.neleh;
-    drawNelehMedium(b, nx, ny, {...NELEH_MEDIUM_DEFAULT, head: '34', arm: 'paper', ...s.neleh}, {orbit: f});
-    // the near chair's high back in the right foreground: she stands behind it (it hides where her rig ends)
-    chairBack(b, 350, 136, 118, 0);
+    drawNelehMedium(b, mx0(nx, NELEH_MW), ny, {...NELEH_MEDIUM_DEFAULT, head: '34', arm: 'paper', ...s.neleh}, {orbit: f, flip: L});
+    // the near chair's high back in the foreground: she stands behind it (it hides where her rig ends)
+    chairBack(b, mx0(350, 118), 136, 118, 0);
   }
 };
 /** a leather chair's high back seen from behind (a foreground occluder): rounded top, the pendant's line on its crown.

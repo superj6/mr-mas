@@ -1,0 +1,175 @@
+# Newcomer (cold-viewer) read of the FIRST Ep1 stick reel v2 cut (ep01-full-v2.mp4 at 22:20.5), 2026-09-27, verbatim.
+# Timecodes are on that cut's EP clock, not the closing re-render's (22:51.4): see ep01-stick-v2-for-review.md §4 for them converted,
+# and what was fixed. Kept so a successor has the read itself (it was only in the session scratch).
+
+**NEWCOMER / COLD-VIEWER REPORT: ep01-full-v2.mp4 (22:20)**
+
+Method: I pulled one frame every 1.5 s, 894 frames in all, and read them as 30 timecoded contact sheets alongside transcript.txt. I didn't use the reviewer notes margin, and I read no script, plan or bible. The frame pull ran as a single thread at the lowest CPU and disk priority, and the frames, sheets and helper scripts are now deleted. The machine's load average was about 29 on 14 cores when I finished. That load came from other jobs; mine had already finished.
+
+**(1) RETELL, FROM WHAT THE SHOW TOLD ME**
+- **Cold open, Nov 16 2023, San Francisco.**
+  - Mas Manalt, CEO of NopeAI, is on a panel talking about the frontier of discovery.
+  - His phone shows "Board sync · Fri 12:00". He says "noted."
+  - The reel rewinds, overshoots to a 1993 OK/Cancel box, and the intro plays. It is a portrait gallery: Mas at age 8 with "no equity", Gerg, Alyi, Mario and Nole. A city of labs is labelled Elgoog, Atem, Macrosoft, Misanthropic and Invidia.
+- **Act One: the launch and the first months.**
+  - Nov 30 2022. Gerg wants to ship. Rima (CTO) wants it low-key, with a banner saying it can be wrong. Alyi (chief scientist) has counted 6 years and 11 months to this click.
+  - Mas clicks. ChatGTP flatters everyone. Users go 1, then 1,389, then 1 million in 5 days. Rima calls it low-key; Gerg says "basement."
+  - The servers turn out to be the bill.
+  - Elgoog's Radnus is "politely on fire". Its retired founders are called back and ask "Is search all right?" They built the underlying work and published it.
+  - Jan 2023: Tasya, "the landlord" from Macrosoft, brings about $10B. Everything NopeAI builds runs on her servers. "Everyone is welcome. Rent is due on the first."
+  - Macrosoft puts NopeAI's model inside GNIB to go after Elgoog. Elgoog's Drab demo gets a fact wrong and Elgoog loses about $100B in a day.
+  - GNIB's chatbot Sydney insists it is 2022 and scolds users; Tasya caps it at 5.
+  - Atem releases its model openly.
+  - GTP-4 and Mario's Clod launch on the same day, while Mario writes memos about not racing.
+  - A letter asks labs to pause for six months. Nole signs while building his own lab. Another writer says pausing isn't enough: "shut it all down."
+- **Act Two: the charm tour.**
+  - May 2023, White House photo op. The VP explains AI with blocks. Mario has sub-concerns. Tasya "owns camera two." Radnus congratulates Mas through his teeth. President Nedib says to put it in writing.
+  - Senate hearing: the chairman opens with his own AI clone. Critic Sucram "called it". Mas says he loves his job, is paid enough for health insurance and has no equity, and hands over "PLEASE REGULATE ME."
+  - The "Regulate-Me Tour" in Europe: Mas threatens to leave, the EU calls it blackmail, and he backs down.
+  - He and Mario sign a one-sentence extinction-risk statement; Mario adds a footnote with an appendix. Nesnej of Invidia, who "sells shovels", hits $1T and sells Mas a purchase order.
+- **Act Three: montage in Mas's dark room.**
+  - An iris-scanning Orb he co-founded arrives. He doesn't need to be verified, and it stays.
+  - He catches up on seven weeks: New Delhi "hopeless to compete", the VP's "two letters", the White House pinky promise, a senators' forum where everyone wants a referee, and Nozama's $4B to the rival lab.
+  - Mas posts "AGI achieved internally" on Tidder. Gerg calls to patch it.
+  - Executive order on testing big models; deepfakes of Nedib.
+  - DevDay: 100M users a week, and Tasya says "We love you guys."
+  - Back to Nov 16, 11:59 PM, the board invite.
+- **Act Four: the firing.**
+  - A blueprint shows how the board works. With Mas and Gerg left out, four members (Alyi, Neleh, Mada and a silent fourth) are a majority. The nonprofit controls the company, Macrosoft has 0 votes, and the CEO has 0 equity.
+  - Noon call, from Mas's side: OK, then removed. The reel rewinds to the board's side: Alyi tells him he is out, and his feed isn't frozen, "that is just him."
+  - The blog post goes up ("not consistently candid"). Rima becomes interim CEO: "more soon." Gerg quits. Staff ask whether it was a coup.
+  - Neleh improvises step four:
+    - She offers Mario the CEO job and a merger; he says no.
+    - Mas turns up in the lobby wearing a guest badge.
+    - She hires Ttemme, who ran a streaming site, as a second interim CEO. He asks why they fired him.
+  - Tasya announces that Mas and Gerg are joining Macrosoft.
+  - "What they didn't know": at 2 AM, 745 of 770 staff sign a letter to quit for Macrosoft unless the board resigns. Alyi voted to fire Mas and also signed the letter. A staff share sale is void if the CEO is missing. Gerg is rebuilding the company "just in case."
+  - Tasya offers a desk for everyone. Mas says "leave it open."
+  - The board members leave the call one by one; Mada is left. Alyi posts his regret, and Mas sends three hearts.
+  - Nov 21: new chair Terb reads the deal. Mas returns as CEO. Mada stays, Mas and Gerg are off the board, and there will be an "independent review. Of what? Good question."
+  - A Q* vault ("It's a preview." / "You said that about the last one"). Mas says nice things about Alyi; Alyi's nameplate goes in a drawer; Macrosoft gets a non-voting observer seat.
+- **Tag.**
+  - A demo "wasn't real-time". Mas is CEO of the Year.
+  - A glass of water lies flat. The Grey Lady files a complaint against Macrosoft and NopeAI. "noted."
+
+**(2) CONFUSIONS (timecode, what, why)**
+- **0:28–0:33** A 1993 OK/Cancel box with "rewinding… too far". I couldn't tell what was being OK'd. It pays off later, but it's opaque at first sight.
+- **1:05–1:58** Act One has no date until NOV 30, 2022 appears after the scene is over. Only the "rewinding" gag told me this was a year before the cold open.
+- **1:10 onward** Alyi is repeatedly shown as a reflection in the glass (also at 6:40 and 15:43). I couldn't tell whether he is physically in the room or a conscience figure.
+- **2:20** "> is anyone there?" is on screen, yet Rima says "Nobody asked one." The screen contradicts the joke.
+- **3:12** "A million people, Mas. That's for them, isn't it?" The "that" is vague. Only the $ over the server racks suggests the answer, "it's the bill."
+- **4:04** "KEYS: ONE PER TENANT" means nothing to me.
+- **4:21** Tasya says "Suits you." Nothing visible in Mas's close-up at 4:19 suits him; there's no collar or badge I can see.
+- **4:47** GNIB is never called Macrosoft's search engine. I only inferred it from "going after Elgoog."
+- **4:58** The Drab ticker never says Drab belongs to Elgoog; only Radnus standing next to it implies it.
+- **5:27–5:31** The "5" cap and Sydney's exit line "Remember me?" are unclear.
+- **5:36–5:39** The Atem/Kram model-weights beat has no dialogue and no stakes. I don't know why it's there.
+- **5:54 and 6:15** The "website: working" label isn't explained.
+- **6:33** REZEILE · EMIT: I don't know who Rezeile is or that EMIT is a publication.
+- **6:39–6:45** "PLEASE" is typed on a screen while Alyi's reflection watches. I can't tell who typed it or to whom.
+- **7:55–8:03** May 12, 2023: skyline, a lit window, a silhouette, something drops. No event I could read.
+- **8:37–8:41** The clone asks "Are you nervous, Mr. Manalt?" and the chairman answers "I am, a little." I couldn't tell who is nervous.
+- **9:21** The poster's "…cease operating…" doesn't say where or why.
+- **10:15** A crack runs across the sky at the extinction table. Unexplained.
+- **10:28** SHIP TO: MAS MANALT, CO-FOUNDER. I couldn't tell co-founder of what. COINWORLD shows once, and it's never said why a CEO has an iris-scanning company.
+- **10:48** "…totally hopeless to compete with us…" (HE LATER SAID: OUT OF CONTEXT). I don't know who "he" is or who he said it to.
+- **10:55** "AI is kind of a fancy thing…" is unattributed. The [A][I] blocks only hint at the VP.
+- **11:15–11:21** It isn't stated that the lighthouse is Mario's lab, so Nozama's $4B floats unanchored.
+- **11:57** OCT 16 · "…the lightning works for us": no speaker and no meaning I could find.
+- **12:19–12:27** Mas says "that one." at the deepfakes, and then a scroll labelled MARIO appears. Both are unclear.
+- **12:51** Why Las Vegas? Not explained.
+- **13:28–13:56** From Mas's side, the removal happens with no words. Then "NOV 17 · NIGHT", the TPOOL rail and "i don't keep score" all come before I knew he'd been fired. The rewind explains it, but those first 25 s are a puzzle.
+- **15:13–15:19** Gerg posts "…I quit." Neleh says "He'd have kept his job, just not the chair." The show never said Gerg chaired the board or that he'd been removed from it.
+- **16:04** "RUNS THE RIVAL LAB · (REPORTED)" reads as if his job is the thing being reported.
+- **16:35** "We've talked all day about him coming back" is the first sign of any return talks. Who wanted him back, and the whole Nov 18 negotiation, is off screen.
+- **17:05** Ttemme asks why they fired him, then says "Okay." The answer is never shown, so I can't tell if there was none.
+- **17:07** "Chat… for how long?" and "F F F F" only work if you know the F meme.
+- **17:18 versus 18:54–19:04** Tasya has already announced that Mas and Gerg are joining Macrosoft. Then at 2 AM she is still offering, and he says "leave it open", and at 19:25 he wears a GUEST · MACROSOFT badge. I couldn't tell whether he actually joined.
+- **19:40** "IOU: 20% COMPUTE" pops up with no setup.
+- **19:42–19:55** I couldn't tell where the Mas/Tasya talk is happening (the bullpen full of packed boxes?). Then she says "Hello."
+- **20:17** "YRRAL (NOT THAT YRRAL)": there is no "that" Yrral in the show.
+- **21:20–21:28** Alyi's nameplate is removed and a door shuts. His fate (still at the company or not?) is implied, not stated.
+- **21:32** "What the quack!" and "LATER: THE DEMO WASN'T REAL-TIME": I don't know whose demo.
+- **21:46** Mas says "close." I don't know close to what.
+- **21:49** A "CTRL · DO NOT REMOVE" insert. Unclear.
+- **21:55** A "Look at glass of water" prompt and a flat water line. Unclear.
+- **21:58** The Grey Lady's complaint: I don't know who she is or what the complaint is about. It's the final hook and I couldn't read it.
+
+**(3) DIALOGUE THAT FELT UNNATURAL, BLURTED OR CUT OFF**
+- **2:20** "Nobody asked one." contradicts the typed question on screen.
+- **4:21** "Suits you." is blurted with no referent.
+- **4:51** Tasya answers Gerg's direct question with a quoted fragment, "…I want people to know that we made them dance…". It plays like a clip, not a reply.
+- **5:11** "it's 2023, by the way" comes before Sydney has claimed anything aloud.
+- **5:13 and 5:31** Sydney's lines include 😊. If the voice reads the emoji aloud it will sound odd; I couldn't check this.
+- **8:37–8:41** The clone/chairman "nervous" exchange muddles who is speaking to whom.
+- **15:02** Alyi's "You can call it this way… I disagree with this…" sounds like broken grammar and is clipped by ellipses. A newcomer may hear a script error.
+- **17:18** Tasya's 18-second statement is a verbatim press release. It's long for one breath.
+- **19:55** Tasya's "Hello." dangles.
+- **21:13** "i love and respect alyi…" sounds like a post read aloud, not spoken to anyone.
+- **21:46** "close." is ambiguous.
+- The deliberate cut-offs work: Neleh's "Has anyone read the char—" (19:14) and Adelina's "In plain English: no." (16:23).
+
+**(4) CONVERSATIONS CUT BEFORE I COULD FOLLOW**
+- **4:47–4:58** Gerg: "You're going after Elgoog with it?" The NopeAI side's reaction is dropped and the reel jumps to the Drab ticker.
+- **16:06–16:31** Neleh's offer to Mario is cut by Adelina and then by the Nozama call. Neleh never responds.
+- **16:59–17:07** Ttemme's "why did you fire him?" gets no answer.
+- **17:37** Neleh's "Step four?" gets no answer; the reel cuts to a card.
+- **18:54–19:04** Tasya and Mas: "leave it open" leaves unresolved whether he accepted Macrosoft.
+- **19:42–19:57** Mas and Tasya on "what happens to you if NopeAI disappears": after her answer and "Hello.", it hard-cuts to Nov 21.
+- **Nov 18–19** The return negotiations, in which the investors' and staff phones start buzzing (15:27), are never shown. The only sign of them is one line at 16:35.
+
+**(5) OUTSIDE-KNOWLEDGE LEDGER (where I leaned on real-world knowledge)**
+- **0:34–1:03 intro:** almost every caption needs outside knowledge.
+  - PLAY JUN 09 2008, TPOOL and LUAP "called it (in an essay)".
+  - WHY COMBINATOR 2014.
+  - "SLEEP: DEPRECATED · PTO: 404".
+  - "FEELS THE AGI" and "BUNKER: YES".
+  - "BIG BLOB OF COMPUTE".
+  - "NAMED IT / SUED OVER IT", and "$1B pledged / received $133M".
+  - "MARIO (UDIAB) JOINS 2016".
+  - "HDR · RAY-TRACED *not really".
+  - "KRAM vs NOLE CAGE MATCH".
+  - "near the singularity; unclear which side".
+  - At 0:51 a sign reads OPENAI before it turns into NOPE AI. It is the only real company name on screen.
+- **3:44** "We published it." I knew this was the transformer paper; the show only says they did the work.
+- **3:26–3:52** Founders "SUMMONED / RETIRED 2019". The show carries it, but I recognised them.
+- **4:47** GNIB as Macrosoft's search engine.
+- **4:51 and 7:32** "made them dance". It works internally, but I knew the source.
+- **4:58** Drab is Elgoog's chatbot; the telescope-fact error.
+- **5:27** "5" as a cap on chat turns.
+- **5:36** "PAINT STILL WET", referring to a company renaming itself. Also the model-weights release and why it matters.
+- **5:54** "website: working", the napkin-sketch-to-website demo.
+- **6:28–6:36** OIGNEB (a famous scientist), REZEILE and EMIT (TIME).
+- **6:49** "unburdened by what has been"; **10:55** "two letters"; both from the VP.
+- **8:09** A senator opening with a voice clone.
+- **8:15** Sucram as the perennial critic.
+- **9:21–9:35** The EU AI rules spat, "cease operating" and Noterb.
+- **9:45** NOTNIH.
+- **10:01–10:12** Nesnej/Invidia sells chips ("shovels"). The show never says Invidia makes chips. Also "The more you buy…", Computex and $1T.
+- **10:28–10:43** Coinworld and the Orb, and why iris scans matter.
+- **10:48** New Delhi, "hopeless".
+- **11:01** Voluntary commitments as a "pinky promise".
+- **11:19 and 16:25** The rival lab's funders.
+- **11:57** "the lightning works for us". I couldn't place it even with outside knowledge.
+- **12:51** Why he's in Las Vegas.
+- **13:00** DIRE · NOVINS · DRUH, the three who stepped down.
+- **15:13–15:19** Gerg removed as chair.
+- **16:48** TTEMME ran a streaming site, and the chat "F" meme.
+- **18:35** EVIRHT, the share-sale investor.
+- **19:40** "IOU: 20% COMPUTE".
+- **20:17** "NOT THAT YRRAL".
+- **21:02** Q*. The show says "(reported)"; I knew the rumour.
+- **21:32** "What the quack!", the Elgoog duck demo.
+- **21:55** The glass-of-water ripple reference.
+- **21:58** The Grey Lady is a newspaper, and the complaint is about copyright in training data.
+
+**(6) IS THE OVERARCHING STORYLINE CLEAR?**
+Yes, the spine is clear to a newcomer. A "low-key preview" becomes a phenomenon. It is paid for by a landlord whose servers it can't leave. Its CEO courts regulators while having no equity. His board has the power to fire him, and it does, without a reason it can say out loud. The staff and the landlord force him back within days, with a new board and a review of nothing in particular.
+
+The running bits carry the viewer well: "it's a preview", no equity, OK/Cancel, "super", "Good question", Gerg's build, "Everyone is welcome". So do the "HIS SIDE / THE BOARD'S SIDE" labels, the steps checklist, and the payoff that Alyi "did both".
+
+The weak spots:
+- Act Three is a string of unattributed fragments.
+- The return negotiation is off screen.
+- It's never clear whether Mas actually joined Macrosoft.
+- The tag's closing hooks (the Grey Lady, the glass of water, the demo) need outside knowledge, so the episode ends on its least readable beat for a newcomer.

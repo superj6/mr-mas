@@ -33,8 +33,9 @@ export const LOBBY_LOW = {
   base: 176,
   /** whole-pixel shifts of the lobby's layers: the far wall (+18), the desk (+10: it is nearer, so it drops less) */
   dyFar: 18, dyDesk: 10,
-  /** Mas's feet (in front of the desk, on the compressed floor) */
-  masFeet: [262, 180] as [number, number],
+  /** Mas's feet (in front of the desk, on the compressed floor). a4p5 finish: x 300, at the desk's right end, clear of
+   *  the desk's NOPE AI letters (at 262 he stood in front of the A: the picture audit read the sign as "NOPE I") */
+  masFeet: [300, 180] as [number, number],
   /** the carton: centre of its top edge, width, height (a near object: ~2 px/cm, its foot below the frame) */
   box: {cx: 404, top: 168, w: 62, h: 44},
 };

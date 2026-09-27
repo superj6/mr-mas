@@ -1,0 +1,60 @@
+{
+ "manifest": "../act2-test.manifest.json",
+ "key": "ep01-act2-v2-test",
+ "host": {
+  "cores": 14,
+  "load1": 6.6
+ },
+ "jobs": 2,
+ "concurrency": 2,
+ "seg": 90,
+ "scale": 1,
+ "steps": {
+  "bundle": 8.6,
+  "plan": 0.3,
+  "mix": 2.5,
+  "render": 147.1,
+  "concat": 0.1,
+  "mixWaitAfterPicture": 0,
+  "mux": 4.7
+ },
+ "renderedSeconds": 219.8,
+ "segments": [
+  {
+   "file": "000-act2-0-1758-8a2d94217c.mp4",
+   "chapter": "act2",
+   "frames": 1758,
+   "wall": 79.9
+  },
+  {
+   "file": "001-act2-1758-3517-03b55b506c.mp4",
+   "chapter": "act2",
+   "frames": 1759,
+   "wall": 81.1
+  },
+  {
+   "file": "002-act2-3517-5275-e6c0358e2a.mp4",
+   "chapter": "act2",
+   "frames": 1758,
+   "wall": 67.2
+  }
+ ],
+ "frames": {
+  "expected": 5275,
+  "got": 5275
+ },
+ "wall": 160.9,
+ "reelSeconds": 219.8,
+ "speed": {
+  "reelSecondsPerMinuteWall": 82,
+  "renderedSecondsPerMinuteOfRenderStep": 89.7
+ },
+ "out": "../render/ep01-act2-v2-test.mp4",
+ "outBytes": 18962021,
+ "mix": {
+  "lufs": -17.534,
+  "peak": -4.633,
+  "missing": [],
+  "silences": []
+ }
+}

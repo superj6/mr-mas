@@ -30,14 +30,16 @@ import type {GlyphLayer} from '../../../../shared/pixel/glyph';
 import type {Viseme} from '../../../../shared/pixel/cast/talk';
 import {blitImg} from '../../../../shared/pixel/figure';
 import {
-  callChrome, drawTile, TileRect, captureTile, tileDrop, slideTiles, dialogButton, drawPointer, tilePlate, dropY,
+  callChrome, drawTile, TileRect, captureTile, tileDrop, slideTiles, dialogButton, drawPointer, tilePlate, dropY, callDialog, pointerAt, noticeIcon, withToastIcon,
 } from '../../../../shared/pixel/kits/callgrid';
+import {shakeAt, SHAKE_DOOR} from '../../../../shared/pixel/sprite';
 import {planPile, withBlueHeart, drawPile, pileTopAt, pileHeartAt, PileHeart, reactionBurst, heartCounter, drawHeart, BLUE} from '../../../../shared/pixel/kits/avalanche';
 import {spinner} from '../../../../shared/pixel/kits/callgrid';
 import {BLUEPRINT_PRINT} from '../../../../shared/pixel/kits/blueprint';
 // ---- the v5 art (art-built-v5.md §1)
 import {drawPost, POSTS, POSTERS, drawAvatar9, PostSpec, PostWho} from '../../../../shared/pixel/kits/post-card';
-import {drawPhoneInsert29} from '../../../../shared/pixel/kits/inserts-mas';
+import {drawPhoneInsert29, drawBrushInsert, BRUSH_STEPS} from '../../../../shared/pixel/kits/inserts-mas';
+import {drawDarkDesk, DARKDESK} from '../../../../shared/pixel/rooms/darkroom';
 import {drawNelehDeskOTS, drawNelehBezel, drawNelehDeskWall, NDESK} from '../../../../shared/pixel/rooms/neleh-desk';
 import {drawNelehShoulderR} from '../../../../shared/pixel/cast/neleh-ots';
 import {drawBoardCall, drawTileSoft, BOARD_NOTICE} from '../../../../shared/pixel/kits/call-boardside';
@@ -56,7 +58,7 @@ import {masTurnedAway, drawVaultMid, gergHandOnVault, VAULT_MID} from '../../../
 import {drawBullpenUnpack} from '../../../../shared/pixel/rooms/bullpen-unpack';
 import {drawHourglassXL, hgxFlip, HGX, HGX_HIGH, HGX_GRAINS} from '../../../../shared/pixel/kits/hourglass-insert';
 import {woodGrain} from '../../../../shared/pixel/kits/props';
-import {tasyaPhonePortrait} from '../../../../shared/pixel/cast/tasya-phone';
+import {tasyaPhonePortrait, tasyaRoomPortrait} from '../../../../shared/pixel/cast/tasya-phone';
 import {macrosoftBadge, badgesOnDeskRoom, BADGES_ROOM_AT} from '../../../../shared/pixel/kits/macrosoft-badge';
 import {drawEmployeeStanding, EMP_STAND_WHO} from '../../../../shared/pixel/cast/employee-stand';
 import {drawNudgeJoin} from '../../../../shared/pixel/kits/join-corner';
@@ -66,7 +68,9 @@ import {drawBoardPlate, drawBoardPlateTable, drawBoardPlateFront} from '../../..
 import type {BoardPlateOpts} from '../../../../shared/pixel/rooms/boardroom-plate';
 import {drawDarkPlate, drawDarkPlateDesk, drawDarkPlateFront, DPLATE, DPLATE_LOOK} from '../../../../shared/pixel/rooms/darkroom-plate';
 import type {DarkPlateOpts} from '../../../../shared/pixel/rooms/darkroom-plate';
-import {drawDark2S} from '../../../../shared/pixel/rooms/twoshots';
+import {drawDark2S, drawBoard2S, doorwayHeart} from '../../../../shared/pixel/rooms/twoshots';
+import {BPLATE} from '../../../../shared/pixel/rooms/boardroom-plate';
+import {drawTasyaRoom, TASYA_ROOM_DEFAULT, tasyaSpeakPortrait} from '../../../../shared/pixel/cast/tasya-speak';
 import {FIRES_CALMOFF} from '../../../../shared/pixel/rooms/twoshots';
 import {drawBullpen} from '../../../../shared/pixel/rooms/bullpen';
 import {drawLighthouse} from '../../../../shared/pixel/rooms/lighthouse';
@@ -75,9 +79,16 @@ import {BR, drawTableInsert, TABLE_INSERT, FIRES_SC30} from '../../../../shared/
 import {terbWalkAt} from '../../../../shared/pixel/cast/terb';
 import {drawMasStand, MAS_STAND_DEFAULT, masWalkAt} from '../../../../shared/pixel/cast/mas-stand';
 import {drawShutDoorInsert} from '../../../../shared/pixel/kits/inserts-props';
+// ---- the extra v5 art (art-v5/extra, the a4fin-pixelextra pass; wired by the a4p5 finish pass, art-extra-v5.md §1)
+import {drawNelehPenHand, drawWorkerScrewHand} from '../art-v5/extra/hands';
+import {drawChapterCard, drawLobbyStoneNudge} from '../art-v5/extra/cards-inserts';
+import {drawLobbyLow, signAt, boxAt} from '../art-v5/extra/lobby-low';
+import {drawObserverChair, observerPlacard, CHAIR, chairKeysAt} from '../art-v5/extra/observer-chair';
+import {drawChairBackInsert, PLATE_INSERT} from '../../../../shared/pixel/rooms/boardroom';
+import {textWidth} from '../../../../shared/pixel/font';
 import {masPortrait, MAS_PORTRAIT_DEFAULT} from '../../../../shared/pixel/cast/mas';
 import type {MasPortraitState} from '../../../../shared/pixel/cast/mas';
-import {nelehPortrait, NELEH_PORTRAIT_DEFAULT, withFootnoteStyle} from '../../../../shared/pixel/cast/neleh';
+import {nelehPortrait, NELEH_PORTRAIT_DEFAULT, withFootnoteStyle, drawFootnotes} from '../../../../shared/pixel/cast/neleh';
 import type {FootnoteStyle} from '../../../../shared/pixel/cast/neleh';
 import {alyiReflection} from '../../../../shared/pixel/cast/alyi-speak';
 import {ttemmePortrait, TTEMME_PORTRAIT_DEFAULT, drawChatOverlay} from '../../../../shared/pixel/cast/ttemme';
@@ -93,7 +104,7 @@ import {drawPlan4, PLAN4} from './plan4';
 import {boardRoom, bullpenRoom, lobbyRoom, doorShake} from './backs';
 import {RH, held, fallaway, blipCard, freezePrint, pt, pw, pwrap, bpt, bpw, putUI, ACCENT} from './lay';
 import {talking5, mouth5, roomMouth5, boardMouths5, silentMouth5, v4Track5, lipOn5, room3Mouth5} from './lipsync5';
-import {soft, softMask, keepRect, vignette, shoulder, drawBust, MCU_X, rackStep, RACK, doorFrame, platePx, shiftRoom} from './framing';
+import {soft, softMask, keepRect, vignette, shoulder, drawBust, MCU_X, rackStep, RACK, doorFrame, platePx, shiftRoom, mcuRoom} from './framing';
 import {G5, G4, ui, wifi, board4, masTileState, dialog26, DLG, sui, putSCR, SCR_W, SCR_H, keycapRain, HG, monitor} from './shots';
 import {DRAW4} from './shots4';
 import type {ShotOut4} from './shots4';
@@ -112,6 +123,13 @@ export const OPT5 = {
   /** FIX-FOOTNOTES (a4p5 r2, cast/neleh.ts): Neleh's footnotes as numbered paper slips that never cross her face, in
    *  every v5 frame (drawShot5 wraps each layout, v4's reused ones included, in withFootnoteStyle). 'digits' = v4's */
   footnotes: 'slips' as FootnoteStyle,
+  /** a4p5 finish: on the board's side of the call ALYI's tile shows the man lit in his open doorway (call-boardside
+   *  alyiLit), not his reflection in its glass (the picture audit §2.9: the firing line came from a navy shadow; the
+   *  newcomer read him as an android and could not link him to the all-hands speaker). His side keeps the reflection */
+  alyiLit: true,
+  /** a4p5 finish: the call's toasts (callgrid callToast, in every v5 frame, reused v4 layouts included) draw a filled
+   *  door with an arrow out of it, and "rewinding…" a rewind glyph, in place of v4's 3 x 6 door outline. 'outline' = v4 */
+  toastIcon: 'v5' as 'outline' | 'v5',
 };
 /** the Cancel click (act frame): a J1 host counts t from here (art-v5/j1/timing.ts) */
 export const CANCEL_CLICK = D6[0];
@@ -140,10 +158,14 @@ const POST_KEY: Record<string, keyof typeof POSTS> = {
   'a5-27-P1': 'gergQuit', 'a5-27-P2': 'masEulogy', 'a5-27-P3': 'masBadge', 'a5-29-P1': 'rimaPeople', 'a5-30-P1': 'alyiRegret',
   'a5-30-P2': 'gergReturn', 'a5-30-P3': 'ttemmeResult',
 };
+/** a4p5 finish: the facts check's text fixes the lock (generated from the stick timeline, owned upstream) doesn't carry
+ *  yet (facts.md, Act Four v5 lock checks L2: Gerg's post is lowercase as posted). The picture draws these words; the
+ *  lock, the stick timeline and the script change only through their owners (build_timeline.py, then lock_v5.py) */
+const POST_FACTS5: Record<string, string> = {'a5-27-P1': '…i quit.'};
 const postSpec = (sh: ShotV5, id: string): PostSpec => {
   const base = POSTS[POST_KEY[id]];
   const l = lineOf5(sh, id);
-  return {...base, who: (l ? l.who.toLowerCase() : base.who) as PostWho, text: l ? l.text : base.text};
+  return {...base, who: (l ? l.who.toLowerCase() : base.who) as PostWho, text: POST_FACTS5[id] ?? (l ? l.text : base.text)};
 };
 
 // ================================================================== the v4 adapter: a v4 layout on a v5 shot's clock
@@ -183,6 +205,15 @@ const cursorTagBig = (b: Buf, x: number, y: number, name: string, col: number, r
   bpt(b, name, x + 16, y + 16, PAL.N0);
   if (role) pt(b, role, x + 16, y + 33, PAL.N0);
 };
+/** a4p5 finish (audit §2.13): the noon dialog 16 px right of v4's DLG (x -12: its left border ran off the frame, so the
+ *  box read as cropped). Same size, same pop-in (shots.ts dialog26) */
+const DLG5 = {...DLG, x: DLG.x + 16};
+const dialog5 = (b: Buf, k: number, o: {k0?: number; cancelDown?: boolean} = {}) => {
+  const kk = k - (o.k0 ?? -99);
+  if (kk < 0) return;
+  if (kk < 2) { rect(DLG5.x + 98 - (kk + 1) * 32, DLG5.y + 48 - (kk + 1) * 16, (kk + 1) * 64, (kk + 1) * 32, b.ink(PAL.P2)); return; }
+  callDialog(b, DLG5.x, DLG5.y, {w: DLG5.w, head: 'MAS MANALT', cancelDown: o.cancelDown});
+};
 const hoverRing = (b: Buf, bx: number, by: number, bw: number, bh: number, col: number) => {
   for (const t of [2, 3]) {
     rect(bx - t, by - t, bw + t * 2, 1, b.ink(col)); rect(bx - t, by + bh - 1 + t, bw + t * 2, 1, b.ink(col));
@@ -194,18 +225,20 @@ const callNotice = (b: Buf, s: string, k: number, y = RH - 34) => {
   const w = bpw(s) + 40, x = Math.round(240 - w / 2), rise = k < 3 ? [8, 4, 1][k] : 0;
   const yy = y + rise;
   rect(x, yy, w, 24, b.ink(PAL.N0)); rect(x + 1, yy + 1, w - 2, 22, b.ink(PAL.N3)); rect(x + 1, yy + 1, w - 2, 1, b.ink(PAL.N5));
-  rect(x + 8, yy + 6, 8, 12, b.ink(PAL.G5)); rect(x + 9, yy + 7, 6, 11, b.ink(PAL.N1)); b.set(x + 13, yy + 12, PAL.G5);
+  // a4p5 finish: the notice's icon is a filled door with an arrow out of it (callgrid noticeIcon; the 1x outline read as
+  // a missing-glyph box, audit §2.13)
+  noticeIcon(b, x + 7, yy + 7, 'leave');
   bpt(b, s, x + 24, yy + 5, PAL.P2);
 };
 /** a plate with a name and one line (v4's plate4) or two lines (plate3), typed on; k from its landing */
-const plateN = (b: Buf, x: number, y: number, name: string, lines: string[], k: number, accent: number) => {
+const plateN = (b: Buf, x: number, y: number, name: string, lines: string[], k: number, accent: number, dimLast = true) => {
   if (k < 0) return;
   const w = Math.max(pw(name), ...lines.map(pw)) + 16;
   const full = 16 + lines.length * 10, open = Math.min(1, (k + 1) / 3), hh = Math.max(2, Math.round(full * open));
   rect(x - 1, y - 1, w + 2, hh + 2, b.ink(PAL.N0)); rect(x, y, w, hh, b.ink(PAL.N1)); rect(x, y, w, 1, b.ink(accent));
   if (open < 1) return;
   pt(b, name.slice(0, Math.max(0, (k - 2) * 3)), x + 8, y + 5, accent);
-  lines.forEach((l, i) => pt(b, l.slice(0, Math.max(0, (k - 5 - i * 4) * 3)), x + 8, y + 15 + i * 10, i ? PAL.P0 : PAL.P1));
+  lines.forEach((l, i) => pt(b, l.slice(0, Math.max(0, (k - 5 - i * 4) * 3)), x + 8, y + 15 + i * 10, i && dimLast ? PAL.P0 : PAL.P1));
 };
 /** a lock plate text 'NAME · A · B' -> name + lines */
 const plateOf = (text: string, maxLines = 2): [string, string[]] => {
@@ -259,7 +292,7 @@ export const drawShot5 = (fb: Buf, k: number, sh: ShotV5, f: number): ShotOut5 &
   const def = DRAW5[sh.id];
   if (def) {
     try {
-      const out = withFootnoteStyle(OPT5.footnotes, () => def.draw(fb, k, sh, f)) ?? {};
+      const out = withFootnoteStyle(OPT5.footnotes, () => withToastIcon(OPT5.toastIcon, () => def.draw(fb, k, sh, f))) ?? {};
       return {...out, st: def.st, standin: def.standin};
     } catch (e) {
       if (!DRAW5_FAILED.has(sh.id)) DRAW5_FAILED.set(sh.id, String((e as Error)?.stack ?? e).split('\n').slice(0, 3).join(' | '));
@@ -313,7 +346,7 @@ S5('S1.03', 'C', 'v4 plan4.ts THE PLAN (one sheet, the tilt) + BP-NELEH-POINTER 
   return {full: true};
 });
 S5('S1.04', 'C', 'v4 plan4.ts the 2x zeros detail + BP-NELEH-POINTER bpTipIn: the pointer\'s tip on the key ring, then on the CEO box ("And the CEO?"); bpVoice: MADA\'s spinner icon, turning while he speaks', (fb, k, sh, f) => {
-  drawPlan4(fb, asV4(sh, 'S1.04'), k);
+  drawPlan4(fb, asV4(sh, 'S1.04'), k, {zerosLift: 10}); // a4p5 finish: (HE TOLD THE SENATE) clear of the border rule
   const tipCeo = mk(sh, 'tipCeo', 124), jangle = mk(sh, 'jangle', 7);
   inkOver(fb, (b) => {
     if (k >= jangle && k < tipCeo) bpTipIn(b, [446, 104], [0.55, -1], 120, k >= jangle + 2 && k < jangle + 5 ? 1 : 0);
@@ -340,7 +373,7 @@ S5('S1.07', 'C', 'v4 S1.07 (callgrid G5 on ONE clock, the NELEH card, the dialog
     if (OPT5.soft1G && k >= 14) drawTileSoft(b, st, f); else drawTile(b, st, f);
   });
   wifi(b);
-  if (k >= dlg) dialog26(b, k, {k0: dlg});
+  if (k >= dlg) dialog5(b, k, {k0: dlg});
   putUI(fb, b, false);
   if (k >= card && k < Math.min(cardEnd, dlg)) blipCard(fb, k - card, 'NELEH', 'NELEH', 'READ THE CHARTER. LITERALLY.', 'FOOTNOTES: ∞', {f}, 'R');
 });
@@ -355,8 +388,8 @@ S5('S1.09', 'C', 'v4 S1.09 as it was (G5 + dialog; the ALYI / CO-FOUNDER arrow s
     board4(b, f, G5.slice(1));
     drawTile(b, masT, f);
     wifi(b);
-    dialog26(b, 99, {cancelDown: k >= c});
-    const [cbx, cby, cbw, cbh] = dialogButton(DLG.x, DLG.y, 'cancel', DLG.w);
+    dialog5(b, 99, {cancelDown: k >= c});
+    const [cbx, cby, cbw, cbh] = dialogButton(DLG5.x, DLG5.y, 'cancel', DLG5.w);
     const P: Array<[number, number]> = [[G5[1].x + 60, G5[1].y + 44], [G5[1].x + 20, G5[1].y + 70], [cbx + cbw - 10, cby + 11], [cbx + 30, cby + 9]];
     const i = k < s1 ? 0 : k < s2 ? 1 : k < c - 6 ? 2 : 3;
     const [px, py] = P[i];
@@ -367,11 +400,13 @@ S5('S1.09', 'C', 'v4 S1.09 as it was (G5 + dialog; the ALYI / CO-FOUNDER arrow s
     const kk = k - c;
     const rects = kk < 22 ? G5.slice(1) : slideTiles(G5.slice(1), G4, kk, 22, 8);
     callChrome(b, {title: 'board sync', clock: null, controls: false});
+    const kd = kk - 2;
+    // a4p5 finish (audit §7): the emptied plate falls BEHIND the four (it drops out of the grid, under Mada's tile and the
+    // notice); v4 drew it over them, so its grey outline slid across the notice like a UI glitch
+    if (kd >= 8) tilePlate(b, G5[0].x, G5[0].y + dropY(kd));
     board4(b, f, rects);
     wifi(b);
     const img = captureTile({...masT, open: undefined}, f - kk);
-    const kd = kk - 2;
-    if (kd >= 8) tilePlate(b, G5[0].x, G5[0].y + dropY(kd));
     layers.push(tileDrop(b, img, G5[0].x, G5[0].y, kd, {grey: true}));
     const n = textOf(sh, 'toast');
     if (n) callNotice(b, "You've been removed from the meeting.", k - n.s);
@@ -383,11 +418,45 @@ R5('S1.10', 'S1.10');
 R5('S1.11', 'S1.11');
 R5('S1.12', 'S1.12');
 
-// ================================================================== S2 · THAT NIGHT (all reused)
+// ================================================================== S2 · THAT NIGHT
+/** a4p5 finish (audit §2.12): the count, made countable in the marks ECU. v4 drew the three marks as shaded grooves
+ *  (1 px dark lines on dark wood; the auditor found them only at 3x). Here each groove gets a pale cut wall with its dark
+ *  shadow edge; the mark the Orb's eye-light is on catches its cyan (the count steps with the light), the others
+ *  one to three rungs up from the wood. Only groove pixels change: his hand (the brush insert's last step) stays */
+let MARKS_HAND5: Uint8Array | null = null;
+const marksHand5 = () => (MARKS_HAND5 ??= (() => {
+  const a = new Buf(480, 270, PAL.N0); drawBrushInsert(a, 0, BRUSH_STEPS - 1); shiftRoom(a, -11);
+  const z = new Buf(480, 270, PAL.N0); drawDarkDesk(z, 0, {tally: 3, carve: 1}); shiftRoom(z, -11);
+  const m = new Uint8Array(480 * RH);
+  for (let i = 0; i < 480 * RH; i++) m[i] = a.c[i] !== z.c[i] ? 1 : 0; // his hand, the shavings: not wood
+  return m;
+})());
+const marksGouge5 = (fb: Buf, lit: number) => {
+  const hand = marksHand5(), M = DARKDESK.marks;
+  [M.len - 4, M.len - 1, M.len].forEach((len, i) => {
+    const mx = M.x + M.gap * i - 11;
+    for (let j = 0; j < len; j++) {
+      if (i < 2 && (j === 9 || j === 26)) continue; // the old marks' worn gaps
+      const X = mx + Math.floor(j / 16), y = M.y + j;
+      const at = (x: number) => !hand[y * 480 + x];
+      if (at(X)) fb.set(X, y, PAL.N0);
+      if (i === lit) { if (at(X + 1)) fb.set(X + 1, y, PAL.C4); if (at(X + 2)) fb.set(X + 2, y, PAL.C7); } // the cut catching the Orb's light
+      else { if (at(X + 1)) fb.set(X + 1, y, stepColor(fb.get(X + 1, y), 1)); if (at(X + 2)) fb.set(X + 2, y, stepColor(fb.get(X + 2, y), 3)); }
+    }
+  });
+};
 R5('S2.01', 'S2.01');
-R5('S2.02', 'S2.02');
+S5('S2.02', 'C', 'v4 S2.02 (the marks at insert scale: inserts-mas drawBrushInsert\'s last step + the Orb\'s eye-light pool stepping onto mark 1) with the grooves made countable: pale cut walls, the lit mark catching the Orb\'s cyan (a4p5 finish, audit §2.12)', (fb, k, sh) => {
+  const out = v4(fb, 'S2.02', k, sh);
+  marksGouge5(fb, k < mk(sh, 'mark1', 14) ? 2 : 0);
+  return out;
+});
 R5('S2.03', 'S2.03');
-R5('S2.04', 'S2.04');
+S5('S2.04', 'C', 'v4 S2.04 (the marks ECU: the light on mark 2, then on mark 3 = his thumb) with the countable grooves (marksGouge5)', (fb, k, sh) => {
+  const out = v4(fb, 'S2.04', k, sh);
+  marksGouge5(fb, k < mk(sh, 'mark3', 13) ? 1 : 2);
+  return out;
+});
 R5('S2.05', 'S2.05');
 
 // ================================================================== S3 · FRIDAY, THE BOARD'S SIDE (Neleh's desk)
@@ -395,7 +464,7 @@ const otsScreen = () => new Buf(NDESK.screen.w, NDESK.screen.h, PAL.N1);
 S5('S3.00a', 'N', 'ROOM-NELEH-DESK neleh-desk drawNelehDeskOTS (day, the slow whole-px push, her pen on step 1) + CAST-NELEH-OTS-R (she leans in on "Is his feed frozen?") + UI-CALL-V5 call-boardside drawBoardCall at 1:1 on her laptop (the empty fifth tile, the clock 11:59 -> 12:00, his tile connecting, perfectly still, the neon chasing behind him: STYLE-1G-NEON); ALYI lip-synced in his tile, NELEH in hers', (fb, k, sh, f) => {
   const con = mk(sh, 'connect', 33), lean = mk(sh, 'lean', 328);
   const s = otsScreen();
-  drawBoardCall(s, {f, clock: clockAt(sh, k, '11:59'), fifth: k < con ? {kind: 'waiting', k} : {kind: 'mas', k: k - con}, speaking: boardSpeaker(sh, k), mouths: boardMouths(sh, k), softMas: OPT5.soft1G});
+  drawBoardCall(s, {f, clock: clockAt(sh, k, '11:59'), fifth: k < con ? {kind: 'waiting', k} : {kind: 'mas', k: k - con}, speaking: boardSpeaker(sh, k), mouths: boardMouths(sh, k), softMas: OPT5.soft1G, alyiLit: OPT5.alyiLit});
   const push = Math.min(NDESK.pushMax, Math.floor((k * (NDESK.pushMax + 1)) / Math.max(1, len5(sh))));
   drawNelehDeskOTS(fb, f, {time: 'day', push, pen: 'step1', neleh: {turn: k >= lean ? 1 : 0}, screen: s});
 });
@@ -405,14 +474,52 @@ S5('S3.01', 'C', 'UI-CALL-V5 drawBoardCall in ROOM-NELEH-DESK drawNelehBezel (da
   const s = sui();
   const level = k >= sOn && k < sEnd ? 1 + ((k >> 2) % 3) : 0;
   drawBoardCall(s, {f, clock: '12:00', removed: k >= rm ? k - rm : undefined, fifth: {kind: 'mas', k: 99}, audio: {level, greyed: k >= grey},
-    notice: n ? {text: n.text || BOARD_NOTICE.removed, k: k - n.s} : null, speaking: boardSpeaker(sh, k), mouths: boardMouths(sh, k), softMas: OPT5.soft1G});
+    notice: n ? {text: n.text || BOARD_NOTICE.removed, k: k - n.s} : null, speaking: boardSpeaker(sh, k), mouths: boardMouths(sh, k), softMas: OPT5.soft1G, alyiLit: OPT5.alyiLit});
   drawNelehBezel(fb, s, {time: 'day'});
 });
-R5('S3.02', 'S3.02');
+// ---- S3.02 / S4.14: her desk from above (v4's composition) with her own hand on the pen / marker (POLISH-PEN-HAND)
+const STEP_L5 = ['1. NOON · VIDEO CALL ', '2. BLOG POST ', '3. INTERIM CEO '];
+/** paint out step ticks >= n (the table insert prints all three; shots4 ticksTo) */
+const ticksTo5 = (fb: Buf, n: number) => {
+  STEP_L5.forEach((st, i) => {
+    if (i < n) return;
+    const x = 70 + textWidth(st) - 1, y = 82 + i * 20;
+    const bg = fb.get(x - 3, y + 9);
+    for (let j = -1; j < 9; j++) for (let q = 0; q < 12; q++) fb.set(x + q, y + j, bg);
+  });
+};
+/** the charter, a stapled paper stack at the top left (shots4 charter) */
+const charter5 = (fb: Buf) => {
+  rect(18, 4, 104, 48, fb.ink(PAL.P0)); rect(20, 2, 104, 48, fb.ink(PAL.P1)); rect(20, 2, 104, 1, fb.ink(PAL.P2));
+  pt(fb, 'CHARTER', 28, 8, PAL.N3);
+  for (let j = 0; j < 4; j++) rect(28, 20 + j * 7, 86 - (j % 2) * 20, 1, fb.ink(PAL.P0));
+  rect(24, 5, 5, 2, fb.ink(PAL.G5));
+};
+/** her laptop's edge at the top of the desk: the board's call (v5's own, call-boardside, as S3.01 left it) at 1:2 */
+const laptopEdge5 = (fb: Buf, f: number, x0: number, y0: number) => {
+  const b = sui();
+  drawBoardCall(b, {f, clock: '12:01', removed: 999, fifth: {kind: 'mas', k: 99}, audio: {level: 0, greyed: true}, alyiLit: OPT5.alyiLit});
+  const w = 228, h = 70;
+  rect(x0 - 6, y0 - 6, w + 12, h + 12, fb.ink(PAL.G1)); rect(x0 - 6, y0 + h + 5, w + 12, 1, fb.ink(PAL.G3));
+  for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) fb.set(x0 + x, y0 + y, b.get(x * 2, (y + 18) * 2 > SCR_H - 1 ? SCR_H - 1 : (y + 18) * 2));
+};
+S5('S3.02', 'C', '[HIGH] v4 S3.02 (rooms-a drawTableInsert: the blueprint\'s step list; the charter; tick 1, the pen runs down 2 · 3 · 4 ______ and stops on the blank) with POLISH-PEN-HAND art-v5/extra/hands drawNelehPenHand (her hand and pen: lifted for the run, resting on the tick and the blank; v4\'s floating pencil gone) and the laptop edge showing v5\'s board-side call', (fb, k, sh, f) => {
+  drawTableInsert(fb, {f: k, focus: 'blueprint', word: 0});
+  const t1 = mk(sh, 'tick1', 10), r0 = mk(sh, 'run0', 24), r1 = mk(sh, 'run1', 62);
+  ticksTo5(fb, k < t1 ? 0 : 1);
+  laptopEdge5(fb, f, 244, 0);
+  charter5(fb);
+  const y = k < r0 ? 82 : k < r1 ? 82 + Math.round(((on2(k) - r0) / Math.max(1, r1 - r0)) * 62) : 144;
+  const x = k < r0 ? 70 + textWidth('1. NOON · VIDEO CALL ') + 10 : 64;
+  drawNelehPenHand(fb, x, y + 6, {tool: 'pen', pose: k >= r0 && k < r1 ? 'lift' : 'rest'});
+});
 S5('S3.03', 'C', 'UI-BLOG-DRAFT blog-draft drawBlogDraft in drawNelehBezel (day): the post in its editor, both sentences, Post; her pointer onto Post, the click on the tick, PUBLISHED; the call small in the corner', (fb, k, sh, f) => {
   const ptr = mk(sh, 'point', 334), post = mk(sh, 'post', 358);
   const s = sui();
-  drawBlogDraft(s, {f, k, pointer: k < ptr ? 'rest' : 'post', click: k >= post ? k - post : undefined});
+  // a4p5 finish (audit §2.13): the words she has read aloud are underlined as she reads them (her take's word times)
+  const rd = lineOf5(sh, 'a5-27-07');
+  const read = rd ? rd.words.filter((w) => k >= rd.s + w[1]).length : undefined;
+  drawBlogDraft(s, {f, k, pointer: k < ptr ? 'rest' : 'post', click: k >= post ? k - post : undefined, read});
   drawNelehBezel(fb, s, {time: 'day'});
 });
 S5('S3.04', 'N', 'ROOM-NELEH-DESK drawNelehDeskOTS (day, held, pen gone) + UI-CALL-V5: Rima\'s join (the ring, the hard spotlight searching, landing on her slot), STATE-SMALL 8 her jacket smoothed (rima-v5), the speaking ring passing between RIMA, ALYI and NELEH (all lip-synced in their tiles); platePx RIMA TAMURI · HIS CTO', (fb, k, sh, f) => {
@@ -420,14 +527,20 @@ S5('S3.04', 'N', 'ROOM-NELEH-DESK drawNelehDeskOTS (day, held, pen gone) + UI-CA
   const s = otsScreen();
   const hand = k >= sm && k < sm + 16 ? ((k - sm) >> 3) % 2 ? 'smooth1' : 'smooth0' : 'none';
   drawBoardCall(s, {f, clock: '12:04', removed: 999, fifth: k < j ? null : {kind: 'rima', k: k - j, mouth: mouth5(sh, k, 'RIMA'), lid: blink(k, 5), hand},
-    speaking: boardSpeaker(sh, k), mouths: boardMouths(sh, k)});
+    speaking: boardSpeaker(sh, k), mouths: boardMouths(sh, k), alyiLit: OPT5.alyiLit});
   drawNelehDeskOTS(fb, f, {time: 'day', push: 4, pen: 'gone', neleh: {turn: 0}, screen: s});
   const t = textOf(sh, 'plate');
   if (t && k < t.e) { const [name, lines] = plateOf(t.text, 1); platePx(fb, 22, 150, name, lines.join(' · '), k - t.s, PAL.P2, pt, pw); }
 });
-S5('S3.04b', 'N', '[MCU] NELEH right third, brow query (cast/neleh nelehPortrait, lip-sync) over ROOM-NELEH-DESK drawNelehDeskWall (the soft shelf wall, day); Rima\'s "More. Soon." plays on her face', (fb, k, sh) => {
+S5('S3.04b', 'N', '[MCU] NELEH right third, brow query (cast/neleh nelehPortrait, lip-sync) over ROOM-NELEH-DESK drawNelehDeskWall (the soft shelf wall, day), her footnote slips orbiting her head; Rima\'s "More. Soon." plays on her face', (fb, k, sh, f) => {
   held(fb, 's5:s304b-wall', (b) => drawNelehDeskWall(b, {time: 'day', soft: 2}));
+  // a4p5 finish (the newcomer read took this MCU for "a lone woman in a dark library"): her footnote slips orbit her
+  // head as they do in her call tile and on THE PLAN's card, so the close-up is plainly Neleh (the slips style is
+  // drawShot5's; the ring sits round her head, behind it and in front of it)
+  const orb = {cx: 318, cy: 44, rx: 44, ry: 7, tilt: -6, size: 'lg' as const};
+  drawFootnotes(fb, orb, f, 'back');
   drawBust(fb, nelehPortrait({...NELEH_PORTRAIT_DEFAULT, brow: 'query', mouth: mouth5(sh, k, 'NELEH'), lid: blink(k, 3), look: -1}), {third: 'R'});
+  drawFootnotes(fb, orb, f, 'front');
 });
 S5('S3.06', 'C', 'v4 S3.06 (the all-hands from the back, framed for the match cut; Alyi in the doorway) + CAST-EMP-STAND employee-stand drawEmployeeStanding: tile 22 already standing, hand up, then down, still standing; her mouth in her tile while she asks (the room flap)', (fb, k, sh) => {
   v4(fb, 'S3.06', k, sh);
@@ -445,12 +558,29 @@ S5('S3.07', 'C', 'v3 27.08\'s [MCU·door] (the all-hands soft 1, the jamb and le
 S5('S3.05', 'C', 'UI-CALL-V5 drawBoardCall in drawNelehBezel (EVENING: her lamp on the bezel) + UI-POST post-card \'notify\' (Gerg\'s "…I quit.", his green glow, the lock\'s words) + keycapRain; ALYI and NELEH lip-synced in their tiles', (fb, k, sh, f) => {
   const post = mk(sh, 'post', 7), keys = mk(sh, 'keys', 16);
   const s = sui();
-  drawBoardCall(s, {f, clock: '6:12', removed: 999, fifth: {kind: 'rima', k: 99, mouth: 'rest'}, speaking: boardSpeaker(sh, k), mouths: boardMouths(sh, k)});
-  if (k >= post) drawPost(s, 4, 142, postSpec(sh, 'a5-27-P1'), {size: 'notify', w: 156, glow: true, k: k - post});
-  if (k >= keys) keycapRain(s, k - keys);
+  drawBoardCall(s, {f, clock: '6:12', removed: 999, fifth: {kind: 'rima', k: 99, mouth: 'rest'}, speaking: boardSpeaker(sh, k), mouths: boardMouths(sh, k), alyiLit: OPT5.alyiLit});
+  // a4p5 finish (the insider and newcomer reads): his post lands as a popup over THE QUIET VOTE's black tile (nobody
+  // speaks there), not a small notify card in the corner; the speakers' tiles stay clear
+  // his profile line (the newcomer read: "just not the chair" had nothing on screen to refer to): his titles as of
+  // that morning, before the board removed him as chair
+  if (k >= post) drawPost(s, 6, 122, {...postSpec(sh, 'a5-27-P1'), bio: 'president & chairman, nopeai'}, {size: 'popup', w: 196, k: k - post});
+  if (k >= keys) keycapPop5(s, k - keys, 12, 128);
   drawNelehBezel(fb, s, {time: 'evening'});
 });
 
+/** a4p5 finish (audit §2.13): Gerg's keycaps POP out of the top of his post card (x0.. x0 + 180, y0) and fall out of
+ *  the bottom of the screen, 12 caps in 3 volleys, whole pixels on 2s; each cap keyed with a dark lower edge. v4's rain
+ *  (shots.ts keycapRain) let the caps come to rest over the tiles, where they read as dead pixels */
+const keycapPop5 = (b: Buf, k: number, x0: number, y0: number) => {
+  for (let i = 0; i < 12; i++) {
+    const t = on2(k - (i % 3) * 5 - Math.floor(i / 3));
+    if (t < 0) continue;
+    const vx = ((i * 37) % 9) - 4, vy = -(4 + (i % 4));
+    const x = Math.round(x0 + 14 + ((i * 53) % 150) + vx * t * 0.7), y = Math.round(y0 + vy * t + 0.3 * t * t);
+    if (y > b.h + 2) continue;
+    rect(x, y, 6, 5, b.ink(PAL.N0)); rect(x, y, 6, 4, b.ink(PAL.G5)); rect(x, y, 6, 1, b.ink(PAL.P2)); rect(x + 1, y + 1, 4, 2, b.ink(PAL.G4));
+  }
+};
 // ================================================================== S4 · THE WEEKEND, THE BOARDROOM
 // ---- the hearts on the wall screen, the blue one landing on RIMA's tile (STATE-SMALL 1; shots.ts hearts() lands it on Mada)
 const RIMA_X = HG[4].x + Math.round(HG[4].w / 2), SPIN_X5 = HG[2].x + 75;
@@ -544,8 +674,9 @@ S5('S4.08', 'C', 'v4 S4.08\'s [SPLIT] (two 238 x 203 panes: the boardroom with t
   const ad = lineOf5(sh, 'a5-27-32');
   const adS = ad ? ad.s : ad0 + 14;
   const nm = roomMouth5(sh, k, 'NELEH');
+  const ended = k >= click; // Adelina hangs up phone 1: Neleh's call is over (a4p5 finish)
   const L = new Buf(480, 270, PAL.N0);
-  held(L, `s5:split-L-${nm}`, (b) => boardRoom(b, 0, {blueprint: {word: false}, laptop: true, phones: {lit: false, step: 4}, speaker: 4}, {neleh: {mouth: nm}, mada: true, alyi: false}));
+  held(L, `s5:split-L-${nm}-${ended ? 0 : 4}`, (b) => boardRoom(b, 0, {blueprint: {word: false}, laptop: true, phones: {lit: false, step: 4}, speaker: ended ? 0 : 4}, {neleh: {mouth: nm}, mada: true, alyi: false}));
   const R = new Buf(480, 270, PAL.N0);
   const room = drawLighthouse(R, k, {meters: 2, ring1: k >= ring && k < adS ? ring : null, ring2: k >= ring2 && k < grab ? ring2 : null,
     throne: k < click ? 'on' : 'fallen', phone1: k >= adS - 4 && k < click ? 'off' : 'cradle', phone2: k >= grab ? 'off' : 'cradle'});
@@ -561,9 +692,22 @@ S5('S4.08', 'C', 'v4 S4.08\'s [SPLIT] (two 238 x 203 panes: the boardroom with t
     drawAdelinaRoom(R, ax, 199, {...ADELINA_ROOM_DEFAULT, arm, mouth: am});
   }
   pane(fb, L, 110, 0);
+  if (ended) { // a4p5 finish (newcomer read): her pane goes dark in held palette steps and the pod says so, so Mario's
+    // "Hi. Yes. We're very worried. How much?" is plainly to NOZAMA, not to her
+    const dk = k - click;
+    if (dk >= 8) dimRectL(fb, 0, 0, 238, RH, dk >= 16 ? 2 : 1);
+    if (dk < 44) { const cs = 'CALL ENDED', w = pw(cs) + 8, x = BR.SPEAKER.x - 110 - Math.round(w / 2), y = BR.SPEAKER.y - 20; rect(x - 1, y - 1, w + 2, 12, fb.ink(PAL.N0)); rect(x, y, w, 10, fb.ink(PAL.N2)); rect(x, y + 9, w, 1, fb.ink(PAL.R2)); pt(fb, cs, x + 4, y + 1, PAL.P1); }
+  }
   pane(fb, R, 64, 242);
   rect(238, 0, 4, RH, fb.ink(PAL.N0));
   meterTag(fb, 404, 56, 'ELGOOG', 'UP TO $2B');
+  if (k < ring2 + 4) { // a4p5 finish (insider read): the two rent meters hang dark (their displays blank) until Nozama
+    // rings, where the lock's label lands, then light in one held step, so "It's Nozama. About the money." isn't read
+    // off the wall from 3:14
+    const ew = Math.max(pw('ELGOOG'), pw('UP TO $2B')) + 10;
+    if (k < ring2) { rect(272, 58, 54, 30, fb.ink(PAL.N1)); rect(405, 57, ew - 2, 28, fb.ink(PAL.N1)); rect(272, 58, 54, 1, fb.ink(PAL.N2)); rect(405, 57, ew - 2, 1, fb.ink(PAL.N2)); }
+    else { dimRectL(fb, 270, 56, 58, 34, 1); dimRectL(fb, 404, 56, ew, 30, 1); }
+  }
   for (const t of sh.texts.filter((x) => x.kind === 'plate')) {
     if (k < t.s || k >= t.e) continue;
     const [name, lines] = plateOf(t.text, 2);
@@ -603,6 +747,7 @@ S5('S4.10b', 'N', 'PLATE-BOARD-HEAD boardroom-head drawBoardHead2S: NELEH standi
     ttemme: {mouth: mouth5(sh, k, 'TTEMME'), lid: blink(k, 6), head: reading ? 'down' : '34', brow: k >= close ? 'unsure' : 'level'},
     neleh: {mouth: mouth5(sh, k, 'NELEH'), lid: blink(k, 2)},
     mada: {spin: f}, folder, chat: f,
+    stage: 'nelehLeft', // a4p5 finish: Neleh left, Mada right, as S4.10's wide and S4.12 stage them (audit §2.3)
   });
 });
 S5('S4.11', 'C', 'v4 S4.11\'s [LOW·desk] (the boardroom soft behind, TTEMME right third lip-synced (ttemmePortrait), his LIVE · CHAT overlay, the table edge) with PROP-HOURGLASS-INSERT hourglass-insert drawHourglassXL at insert scale in place of v4\'s 2x blow-up: the flip in its held drawings (hgxFlip), the sand starting', (fb, k, sh) => {
@@ -618,7 +763,17 @@ S5('S4.11', 'C', 'v4 S4.11\'s [LOW·desk] (the boardroom soft behind, TTEMME rig
   const fl = hgxFlip(k - mk(sh, 'flip', 2));
   drawHourglassXL(fb, 96, 176 - HGX.h + 4 + fl.dy, {moved: fl.flipped ? Math.floor(Math.max(0, k - 20) / 15) : 0, running: fl.flipped && !fl.hand, f: k, pose: fl.pose, hand: fl.hand});
 });
-R5('S4.12', 'S4.12');
+S5('S4.12', 'C', 'v3 27.28 as v4 re-clocked it (twoshots drawBoard2S: the wall steps to slate, the door appears in held steps on the mark and opens; TASYA in it with his sign) with S4.06\'s nameplates (NELEH, MADA: v3 27.28 put ALYI\'s plate at Mada\'s seat) and Tasya lit by the room as in S4.13 / S4.13c (a4p5 finish, audit §2.5 / §2.7)', (fb, k, sh) => {
+  const kk = k + 15 - mk(sh, 'door', 16); // v4's re-clock of v3's door clock (door 1 at its f15) onto the mark
+  const door = (kk < 15 ? 0 : kk < 20 ? 1 : kk < 25 ? 2 : kk < 30 ? 3 : 5) as 0 | 1 | 2 | 3 | 5;
+  drawBoard2S(fb, kk, {neleh: {arm: 'marker', head: kk >= 20 ? 'front' : '34', brow: 'query'}, mada: {head: kk >= 20 ? 'front' : '34'}, alyi: null,
+    plate: {laptop: true, blueprint: 0, rolodex: true, slate: kk >= 8, door, phones: {step: 4}, plates: [{name: 'NELEH', x: 86}, {name: 'MADA', x: 280}]}});
+  if (door === 5) { // TASYA in the new door (his room sprite, clipped by the table), lit by the room
+    const t = new Buf(480, 270, 0x1000000);
+    drawTasyaRoom(t, Math.round((BPLATE.door.x0 + BPLATE.door.x1) / 2), BPLATE.tableY + 6, {...TASYA_ROOM_DEFAULT, arm: 'sign', light: 'room'});
+    for (let y = BPLATE.door.y0; y < BPLATE.tableY; y++) for (let x = BPLATE.door.x0; x < BPLATE.door.x1; x++) { const c = t.get(x, y); if (c !== 0x1000000) fb.set(x, y, c); }
+  }
+});
 S5('S4.13', 'C', 'v4 S4.13\'s [MCU·door] (the boardroom plate with the slate door, soft 2; the new doorway) with CAST-TASYA-PHONE tasya-phone tasyaPhonePortrait: pleased, the key ring jangling, then reading his statement off his phone (lip-sync); the plate TASYA · THE LANDLORD · MACROSOFT · NOPEAI RUNS ON ITS SERVERS; the sign moves to S4.13e', (fb, k, sh) => {
   const rd = mk(sh, 'read', 122), jg = mk(sh, 'jangle', 9);
   held(fb, 's5:s413', (b) => { boardBg({slate: true, door: 5, laptop: false, rolodex: 'still'})(b); soft(b, 2); vignette(b, 318, 2); });
@@ -628,7 +783,9 @@ S5('S4.13', 'C', 'v4 S4.13\'s [MCU·door] (the boardroom plate with the slate do
     jangle: (!reading && k >= jg && k < jg + 12 ? (k >> 1) % 2 : 0) as 0 | 1, read: reading}), {third: 'R', dx: 4});
   doorFrame(fb, 246, 172, {leaf: 'left', leafW: 58, light: PAL.N5});
   const t = textOf(sh, 'plate');
-  if (t && k < t.e) { const [name, lines] = plateOf(t.text, 2); plateN(fb, 22, 142, name, lines, k - t.s, PAL.C6); }
+  // a4p5 finish: the third line (what the landlord owns) in the plate's full ink, not dimmed: it is the fact the
+  // statement rests on, and at 3.1 s its dim grey was the audit's risk (§2.8)
+  if (t && k < t.e) { const [name, lines] = plateOf(t.text, 2); plateN(fb, 22, 142, name, lines, k - t.s, PAL.C6, false); }
 });
 S5('S4.13c', 'N', 'PLATE-BOARD-HEAD boardroom-head drawBoardHeadM: TTEMME at the head turned to the open slate door (CAST-TTEMME-MEDIUM, pleased and slightly lost: he nods back on his name), TASYA small in the door reading (room-scale mouth), UI-CHAT-ROOM', (fb, k, sh, f) => {
   const nod = mk(sh, 'nod', 6);
@@ -641,12 +798,33 @@ S5('S4.13d', 'N', 'PLATE-BOARD-SCREEN board-screen drawBoardScreen2S at night: N
   const look = mk(sh, 'look', 15);
   drawBoardScreen2S(fb, f, {alyi: {look: k >= look ? 'door' : 'ahead', mouth: 'rest'}, neleh: {arm: 'marker', head: '34', mouth: 'rest', lid: blink(k, 2)}, door: 'open'});
 });
-R5('S4.13e', 'S4.13', 'the sign beat split out: the lock\'s sign text from f4');
-R5('S4.14', 'S4.14');
+S5('S4.13e', 'C', 'the S4.13 [MCU·door] setup again (the boardroom plate with the slate door, soft 2) with CAST-TASYA-PHONE tasyaPhonePortrait as S4.13 draws him (the room skin, the key ring in his raised fist, one jangle on the mark) holding his sign MAS · GERG -> up at his chest, his fingers on its edge (a4p5 finish: v4\'s slate portrait, its dark arm and a floating card broke continuity with S4.13, audit §2.5)', (fb, k, sh) => {
+  const sg = mk(sh, 'sign', 4), jg = mk(sh, 'jangle', 8);
+  held(fb, 's5:s413', (b) => { boardBg({slate: true, door: 5, laptop: false, rolodex: 'still'})(b); soft(b, 2); vignette(b, 318, 2); });
+  drawBust(fb, tasyaPhonePortrait({mouth: 'smile', lid: blink(k, 9), brow: 'warm', arms: 'ring', jangle: (k >= jg && k < jg + 8 ? (k >> 1) % 2 : 0) as 0 | 1, read: false}), {third: 'R', dx: 4});
+  doorFrame(fb, 246, 172, {leaf: 'left', leafW: 58, light: PAL.N5});
+  if (k >= sg) { // the sign, raised into frame in 3 held steps and held at his chest (a cartoon prop: no quotation marks)
+    const up = Math.max(0, 6 - (k - sg) * 2);
+    const w = bpw('MAS · GERG →') + 20, x = 262, y = 126 + up, h = 34;
+    rect(x - 1, y - 1, w + 2, h + 2, fb.ink(PAL.N0)); rect(x, y, w, h, fb.ink(PAL.P2)); rect(x, y + h - 3, w, 3, fb.ink(PAL.P0));
+    bpt(fb, 'MAS · GERG →', x + 10, y + 9, PAL.N2);
+    // his fingers over the card's lower edge (the room skin's rungs), the thumb in front
+    for (let j = 0; j < 3; j++) { const fx = x + w - 34 + j * 7; rect(fx, y + h - 5, 6, 7, fb.ink(PAL.S3)); rect(fx, y + h - 5, 6, 1, fb.ink(PAL.S4)); rect(fx + 5, y + h - 4, 1, 6, fb.ink(PAL.S1)); }
+    rect(x + w - 40, y + h - 9, 5, 9, fb.ink(PAL.S3)); rect(x + w - 40, y + h - 9, 5, 1, fb.ink(PAL.S4));
+  }
+});
+S5('S4.14', 'C', '[HIGH] v4 S4.14 (drawTableInsert: the blueprint, 1-3 ticked, 4 blank; her ? in three strokes as she asks "Step four?") with POLISH-PEN-HAND drawNelehPenHand (\'marker\': it enters lifted along v4\'s path and rests on the ?; v4\'s floating marker gone)', (fb, k, sh) => {
+  const q = mk(sh, 'q', 8);
+  const w = (k < q ? 0 : k < q + 4 ? 1 : k < q + 8 ? 2 : 3) as 0 | 1 | 2 | 3;
+  drawTableInsert(fb, {f: k, focus: 'blueprint', word: w});
+  const [wx, wy] = TABLE_INSERT.wordAt;
+  const inn = Math.min(1, k / 5);
+  drawNelehPenHand(fb, k < q ? Math.round(380 - 50 * inn) : wx + 18 + w * 14, k < q ? Math.round(214 - 44 * inn) : wy - 2, {tool: 'marker', pose: k < q ? 'lift' : 'rest'});
+});
 R5('S4.15', 'S4.15');
 
 // ================================================================== CARD + S5 · HIS SIDE, 2 AM
-R5('S5.01', 'S5.01');
+S5('S5.01', 'C', 'POLISH-CHAPTER-CARD art-v5/extra/cards-inserts drawChapterCard: WHAT THEY DIDN\'T KNOW in the display face, cream on black (replaces v4\'s kit.cards stand-in)', (fb) => { drawChapterCard(fb); return {full: true}; });
 R5('S5.02', 'S5.02');
 const PHONE_S = {x0: 124, y0: 36, x1: 194, y1: 174}; // kits/inserts-mas PHONE29.screen (71 x 139)
 const HEART5 = ['.#.#.', '#####', '#####', '.###.', '..#..'];
@@ -717,7 +895,7 @@ const s509 = (fb: Buf, k: number, sh: ShotV5, f: number, opened: boolean) => {
     const open = openK >= 6 ? 1 : [0.1, 0.33, 0.66][Math.min(2, openK >> 1)];
     if (open < 1) { const L = letterBehind(f); for (let y = 0; y < T.h; y++) for (let x = 0; x < T.w; x++) pov.set(T.x + x, T.y + y, L.get(20 + x, 10 + y)); }
     const gb = new Buf(480, 270, PAL.N0);
-    drawGergMediumPOV(gb, 0, 0, {head: talk ? 'talk' : k >= g ? 'up' : 'type', mouth: mouth5(sh, k, 'GERG')}, {f: k, speaking: talk, typing: !talk && k < g - 4, open});
+    drawGergMediumPOV(gb, 0, 0, {head: talk ? 'talk' : k >= g ? 'up' : 'type', mouth: mouth5(sh, k, 'GERG')}, {f: k, speaking: talk, typing: !talk && k < g - 4, open, calm: true}); // a4p5 finish: calm typing (audit §2.11)
     const hh = open >= 1 ? T.h : Math.max(3, Math.round(144 * open)) + 4, y0 = T.y + Math.round((T.h - hh) / 2);
     for (let y = open >= 1 ? T.y : y0; y < (open >= 1 ? T.y + T.h : y0 + hh); y++) for (let x = T.x; x < T.x + T.w; x++) pov.set(x, y, gb.get(x, y));
   } else {
@@ -749,10 +927,17 @@ S5('S5.06', 'C', 'UI-LETTER-V5 staff-letter drawStaffLetter: the page with its b
   }
   const L = (LETTER_L ??= letterLayout());
   const stops: Array<[number, number]> = [[q[1], Math.max(0, L.quoteY[1] - 60)], [q[2], Math.max(0, L.quoteY[2] - 60)], [sc, Math.min(LETTER_SCROLL_MAX, Math.max(0, L.alyiY - 70))]];
+  // a4p5 finish (the picture audit §2.1): the quotes' stops keep v5's slow read (1 px / 2 f); "Scroll to the bottom." is
+  // Mas scrolling, 6 px every 2 frames (held on 2s), so the page reaches its bottom and ALYI (REPORTED) is up before
+  // the `alyi` mark (at 1 px / 2 f the row stayed 18 px below the fold to the shot's last frame)
   let scroll = 0;
-  for (let t = 0; t <= k; t++) { const target = stops.filter(([at]) => t >= at).map(([, v]) => v).pop() ?? 0; if (scroll < target && t % 2 === 0) scroll += 1; }
+  for (let t = 0; t <= k; t++) {
+    const target = stops.filter(([at]) => t >= at).map(([, v]) => v).pop() ?? 0;
+    if (scroll < target && t % 2 === 0) scroll = Math.min(target, scroll + (t >= sc ? 6 : 1));
+  }
   const talk = talking5(sh, k, 'GERG');
   drawStaffLetter(fb, {k, f, quotes: q, count, clunk: k >= clunk && k < clunk + 2, scroll: Math.min(LETTER_SCROLL_MAX, scroll), alyi: k >= alyi,
+    alyiThumb: 'onMark', gergCalm: true,
     gerg: {mouth: mouth5(sh, k, 'GERG'), head: talk ? 'talk' : 'type', typing: !talk}, window: k >= c700 ? 1 : 0});
 });
 S5('S5.07b', 'N', 'v3 29.15\'s [MCU·PF] (the QUIET BEAT: the dark room fallen away to the monitor\'s green and his cyan, Gerg\'s typing flickering on him; v4\'s unused S5.10) with Mas lip-synced ("alyi voted."); "He did both." off picture; the hold is his', (fb, k, sh) => {
@@ -792,31 +977,68 @@ R5('S6.01', 'S6.01');
 R5('S6.02', 'S6.02');
 R5('S6.03', 'S6.03');
 R5('S6.04', 'S6.04');
-R5('S6.06', 'S6.06');
+/** S6.06's label (a4p5 finish, audit §2.8): v4 lettered MADA · LAST FIRER STANDING in the 5 px UI face inside his
+ *  tile's foot, up 1.46 s on the dead stop. Here the tile's foot stays a plain black band and the label is the call's
+ *  own caption plate UNDER the tile, in the display face, flipping open in v4's 3 held steps on the same mark */
+const MADA_BIG5 = {x: 200, y: 46, w: 240, h: 136}; // shots4 MADA_BIG (private there)
+S5('S6.06', 'C', 'v4 S6.06 as it was (the grid on the S6 clock, THE QUIET VOTE pushed out, MADA\'s tile growing to half the frame in 3 held steps, the dead stop) with the label MADA · LAST FIRER STANDING as a display-face plate under his tile (3 held steps on the mark), not 5 px text in its foot', (fb, k, sh) => {
+  const out = v4(fb, 'S6.06', k, sh);
+  const lb = mk(sh, 'label', 76);
+  if (k >= lb) {
+    const r = MADA_BIG5, st = Math.min(3, Math.floor((k - lb) / 2) + 1);
+    rect(r.x, r.y + r.h - 16, r.w, 16, fb.ink(PAL.N0)); // v4's band, without its small lettering
+    const s = 'MADA · LAST FIRER STANDING', w = bpw(s) + 14, h = [0, 6, 12, 19][st], x = Math.round(r.x + r.w / 2 - w / 2), y = r.y + r.h + 1;
+    rect(x - 1, y - 1, w + 2, h + 2, fb.ink(PAL.N0)); rect(x, y, w, h, fb.ink(PAL.N2)); rect(x, y, w, 1, fb.ink(PAL.G6));
+    if (st >= 3) bpt(fb, s, x + 7, y + 3, PAL.P2);
+  }
+  return out;
+});
 
 // ================================================================== S7 · THE RETURN
 /** the GUEST lanyard lying on his desk inside his window (v4's lanyardOnDesk) */
 const lanyardOnDesk = (b: Buf, x: number, y: number) => {
   for (let i = 0; i < 44; i++) b.set(x - 18 + i, y + 6 + Math.round(Math.sin(i / 7) * 2), PAL.C5);
-  rect(x + 24, y, 30, 16, b.ink(PAL.N0)); rect(x + 25, y + 1, 28, 14, b.ink(PAL.P2)); rect(x + 25, y + 1, 28, 3, b.ink(PAL.R2));
-  pt(b, 'GUEST', x + 27, y + 6, PAL.N2);
+  // a4p5 finish: the card as wide as its word (v4's 28 px card clipped GUEST to GUES next to the MACROSOFT badge)
+  const w = pw('GUEST') + 7;
+  rect(x + 24, y, w + 2, 16, b.ink(PAL.N0)); rect(x + 25, y + 1, w, 14, b.ink(PAL.P2)); rect(x + 25, y + 1, w, 3, b.ink(PAL.R2));
+  pt(b, 'GUEST', x + 28, y + 6, PAL.N2);
 };
+/** a4p5 finish (audit §2.13): S7.01's three hearts at icon size (13 x 11, keylined), on twoshots' own path
+ *  (doorwayHeart), so "You sent three." has three things to count; twoshots' 7 px hearts read as specks at 1x */
+const HEART13 = ['..kkk...kkk..', '.kRRRk.kRRRk.', 'kRWRRRkRRRRRk', 'kRWRRRRRRRRRk', 'kRRRRRRRRRRRk', '.kRRRRRRRRRk.', '..kRRRRRRRk..', '...kRRRRRk...', '....kRRRk....', '.....kRk.....', '......k......'];
+const drawHeart13 = (b: Buf, x: number, y: number) => HEART13.forEach((r, j) => { for (let i = 0; i < r.length; i++) { const c = ({k: PAL.N0, R: PAL.R3, W: PAL.P2} as Record<string, number>)[r[i]]; if (c !== undefined) b.set(x + i, y + j, c); } });
 S5('S7.01', 'C', '[P2] BOX (the act\'s one deliberate box): CAST-ALYI-PHONE alyi-v5 drawAlyiDoorPhone (twoshots drawDoorwayP2: Alyi reading his post on his phone, then looking up at the three hearts; both men lip-synced; the IOU) + UI-POST \'popup\' (his regret, the lock\'s words) + the GUEST lanyard and PROP-MACROSOFT-BADGE \'p2\' lying on Mas\'s desk', (fb, k, sh) => {
   const h1 = mk(sh, 'heart1', 165), h2 = mk(sh, 'heart2', 177), h3 = mk(sh, 'heart3', 189), up = mk(sh, 'up', 193), iou = mk(sh, 'iou', 408), post = mk(sh, 'post', 24), postEnd = mk(sh, 'postEnd', 163);
   const open = Math.min(1, (k + 1) / 3);
-  drawAlyiDoorPhone(fb, k, {phone: k < up, alyi: {mouth: mouth5(sh, k, 'ALYI'), up: k >= up}, mas: {mouth: mouth5(sh, k, 'MAS'), lid: blink(k, 7)}, hearts: [h1, h2, h3],
+  drawAlyiDoorPhone(fb, k, {phone: k < up, alyi: {mouth: mouth5(sh, k, 'ALYI'), up: k >= up}, mas: {mouth: mouth5(sh, k, 'MAS'), lid: blink(k, 7)}, hearts: [],
     iou: (k < iou ? 0 : Math.floor(k / 4) % 2 ? 1 : 2) as 0 | 1 | 2, openL: open, openR: open});
+  [h1, h2, h3].forEach((t0, i) => { const p = doorwayHeart(i, k - t0); if (p) drawHeart13(fb, p[0] - 6, p[1] - 2 + i); });
   if (k >= 3) { rect(14, 140, 108, 20, fb.ink(PAL.D2)); rect(14, 140, 108, 1, fb.ink(PAL.D4)); lanyardOnDesk(fb, 40, 142); macrosoftBadge(fb, 22, 143, 'p2', {strap: false}); }
   if (k >= post && k < postEnd) drawPost(fb, 140, 24, postSpec(sh, 'a5-30-P1'), {size: 'popup', w: 200, k: k - post});
 });
-S5('S7.02', 'C', 'v4 S7.02 (rooms-b bullpen walkout wide, held: coats, packed boxes, Mas small at his end desk, Tasya mid-floor) + PROP-MACROSOFT-BADGE badgesOnDeskRoom on his desk + his room-scale mouth for the question', (fb, k, sh) => {
+/** S7.02's staging (a4p5 finish, audit §2.4): Tasya on the open floor right of Mas's end desk, in front of the bench (v4
+ *  stood him at the room's 'tasyaFloor' behind the bench's front, left of Mas, which reversed the singles). The crowd
+ *  already faces the pair: the room turns every extra toward x 236, and all of them stand left of Mas or right of Tasya */
+const S702 = {tasya: [372, 199] as [number, number]};
+S5('S7.02', 'C', 'v4 S7.02 (rooms-b bullpen walkout wide, held: coats, packed boxes, Mas small at his end desk) re-staged: TASYA on the open floor right of Mas\'s desk, facing him (the crowd already faces them) + PROP-MACROSOFT-BADGE badgesOnDeskRoom on his desk + his room-scale mouth for the question; Tasya\'s key ring jangles once early in the hold', (fb, k, sh) => {
   const m = roomMouth5(sh, k, 'MAS');
-  held(fb, `s5:s702-${m}`, (b) => {
-    const A = bullpenRoom(b, 0, {variant: 'walkout'}, {mas: {mouth: m}, tasya: {arm: 'clasp'}, landlord: {floor: 0, ceiling: 0, walls: 0}});
+  // his key ring, once, early in the hold (the landlord's tell; the wide was a frozen tableau for 5 s)
+  const arm = k >= 12 && k < 24 ? ((Math.floor(k / 3) % 2) ? 'keys1' : 'keys0') : 'clasp';
+  held(fb, `s5:s702b-${m}-${arm}`, (b) => {
+    const A = bullpenRoom(b, 0, {variant: 'walkout'}, {mas: {mouth: m}, tasya: null, landlord: {floor: 0, ceiling: 0, walls: 0},
+      stage: (bb) => drawTasyaRoom(bb, S702.tasya[0], S702.tasya[1], {...TASYA_ROOM_DEFAULT, arm, light: 'room'}, {flip: S702_FLIP})});
     badgesOnDeskRoom(b, A.masDesk[0] + BADGES_ROOM_AT[0], A.masDesk[1] + BADGES_ROOM_AT[1]);
   });
 });
-R5('S7.02b', 'S7.02b', 'lip-synced on the v5 take; the slate steps on below / above / around');
+const S702_FLIP = true;
+const stepOf5 = (k: number, t: number) => (k < t ? 0 : k < t + 5 ? 1 : k < t + 10 ? 2 : 3);
+S5('S7.02b', 'C', 'v4 S7.02b\'s [MCU] (TASYA right third, lip-synced, over the bullpen walkout soft 2; the floor / ceiling / walls step to slate in 3 held steps on "below / above / around") with his face lit by the room as in S4.13 (cast/tasya-phone tasyaRoomPortrait), stepping to the slate ramp as a palette step on "below", with the floor (a4p5 finish, audit §2.5: v4 drew him teal from frame 0)', (fb, k, sh) => {
+  const L = {floor: stepOf5(k, mk(sh, 'below', 126)), ceiling: stepOf5(k, mk(sh, 'above', 149)), walls: stepOf5(k, mk(sh, 'around', 172))};
+  const o = {third: 'R' as const};
+  held(fb, `s5:s702b-${L.floor}${L.ceiling}${L.walls}`, (b) => { bullpenRoom(b, 0, {variant: 'walkout'}, {mas: false, tasya: null, landlord: L}); mcuRoom(b, o); });
+  const ps = {mouth: mouth5(sh, k, 'TASYA'), lid: blink(k, 9), brow: 'warm' as const, arms: 'clasp' as const, jangle: 0 as const};
+  drawBust(fb, L.floor >= 1 ? tasyaSpeakPortrait(ps) : tasyaRoomPortrait(ps), o);
+});
 R5('S7.03', 'S7.03');
 R5('S7.05', 'S7.05');
 const FIRE_PLATES = {A: null, B: 'ALYI', C: null, D: 'NELEH', E: 'THE QUIET VOTE'} as const;
@@ -846,17 +1068,27 @@ S5('S7.06', 'C', 'v4 S7.06 as it was (the boardroom wide with the fires, ONE hel
 S5('S7.07', 'C', 'CAST-TERB-SHEET calmoff-terms drawCalmOffTerms2S (the calm-off: MAS left, MADA right, TERB in depth between them reading the single sheet, room-scale mouth; between sentences he sprays the chair fire, the sheet under his arm); Mada\'s spinner turning', (fb, k, sh, f) => {
   const sp = mk(sh, 'spray', 120), spE = mk(sh, 'sprayEnd', 130);
   const spraying = k >= sp && k < spE;
-  drawCalmOffTerms2S(fb, f, {terb: {pose: {mouth: spraying ? 'rest' : roomMouth5(sh, k, 'TERB'), read: !spraying, blink: blink(k, 11) > 0}, spray: spraying ? k - sp : null}, spin: f});
+  // a4p5 finish (audit §2.6): the spray puts the chair fire out on sprayEnd (the plate's own out state: the smoke wisp,
+  // then the scorched seat), and it stays out through S7.07-cont, S7.08 and S7.09 (v4 let it burn on, then cut it away)
+  drawCalmOffTerms2S(fb, f, {terb: {pose: {mouth: spraying ? 'rest' : roomMouth5(sh, k, 'TERB'), read: !spraying, blink: blink(k, 11) > 0}, spray: spraying ? k - sp : null}, spin: f,
+    plate: {fires: FIRES_CALMOFF(sh.s + spE)}});
 });
+/** the act frame the chair fire went out (S7.07's sprayEnd): S7.07-cont's smoke runs on from it */
+const CHAIR_FIRE_OUT = (() => { const s7 = SHOTS.find((x) => x.id === 'S7.07'); return s7 ? s7.s + (s7.marks.sprayEnd ?? 130) : 0; })();
 S5('S7.07b', 'N', 'CAST-OTHER-YRRAL calmoff-terms drawOtherYrralM: the seated silhouette at the table\'s far end among the fires, the nameplate YRRAL (NOT THAT YRRAL), one two-drawing nod on "other"', (fb, k, sh, f) => {
   const nod = mk(sh, 'nod', 12);
   drawOtherYrralM(fb, f, {nod: k >= nod && k < nod + 6 ? 1 : 0});
 });
 S5('S7.07-cont', 'C', 'the S7.07 setup again (drawCalmOffTerms2S): Terb reading on, then looking up to Mada ("He stays."); MAS lip-synced ("of what?"); MADA lip-synced on "Good question." (his face is in the 2S, as v4 drew it), his spinner turning', (fb, k, sh, f) => {
   const lk = mk(sh, 'look', 60);
-  drawCalmOffTerms2S(fb, f, {terb: {pose: {mouth: roomMouth5(sh, k, 'TERB'), read: k < lk, blink: blink(k, 11) > 0}}, mas: {mouth: mouth5(sh, k, 'MAS'), lid: blink(k, 7)}, mada: {mouth: mouth5(sh, k, 'MADA')}, spin: f});
+  drawCalmOffTerms2S(fb, f, {terb: {pose: {mouth: roomMouth5(sh, k, 'TERB'), read: k < lk, blink: blink(k, 11) > 0}}, mas: {mouth: mouth5(sh, k, 'MAS'), lid: blink(k, 7)}, mada: {mouth: mouth5(sh, k, 'MADA')}, spin: f,
+    plate: {fires: FIRES_CALMOFF(CHAIR_FIRE_OUT)}});
 });
-R5('S7.08', 'S7.08');
+S5('S7.08', 'C', 'v3 30.14\'s [MCU] (MAS left third, near-front, eyes toward Mada, the boardroom with the ALYI plate soft behind; one beat late, lip-synced) with the chair fire OUT (Terb sprayed it in S7.07) and Mas in the two-shot\'s cool key (masPortrait light \'monitor\'), not v3\'s warm (a4p5 finish, audit §2.6 / §2.13)', (fb, k, sh) => {
+  const o = {third: 'L' as const};
+  held(fb, 's5:s708bg', (b) => { boardBg({laptop: false, rolodex: 'still', fires: FIRES_CALMOFF(-40), plates: [{name: 'ALYI', x: 104, fire: true}]})(b); mcuRoom(b, o); });
+  drawBust(fb, mas({mouth: mouth5(sh, k, 'MAS'), look: 1, head: 'front', light: 'monitor'}), o);
+});
 S5('S7.09', 'C', 'the calm-off, the long hold (drawCalmOffTerms2S): the spinner stops, Mada nods, Terb stamps and hands the sheet over (the term sheet on the table, stamped); PROP-PHONE-TABLE Mas\'s phone lights green on the table, keycaps; UI-POST \'notify\' (Gerg\'s return, the lock\'s words) (merges v4\'s S7.11)', (fb, k, sh, f) => {
   const stop = mk(sh, 'stop', 38), nd = mk(sh, 'nod', 43), stp = mk(sh, 'stamp', 52), hand = mk(sh, 'hand', 68), ph = mk(sh, 'phone', 67), post = mk(sh, 'post', 67);
   const n = k - nd;
@@ -879,20 +1111,32 @@ S5('S7.13', 'C', '[HIGH] v4 S7.13\'s table from above (rooms/boardroom drawTable
 });
 
 // ================================================================== S8 · THE LOBBY, AND AFTER
-S5('S8.01', 'C', 'v3 30.19 (rooms-a lobby at night cropped on the sign, the sign igniting 1,2,1,2,3 on the stab; Mas small at the desk, no badge) with the box of spare 0 plates in the room (lobby zeroBox: v4\'s S8.02 merged in; no hand); the crop is still the stand-in for a true low angle (ROOM-LOBBY-LOW, P4)', (fb, k, sh) => {
+S5('S8.01', 'C', 'ROOM-LOBBY-LOW art-v5/extra/lobby-low drawLobbyLow (the lobby from the floor at the wide\'s distance: the sign igniting 1,2,1,2,3 on the stab, Mas small at the desk with no badge; the carton of spare 0 plates set down in the worker\'s hand in the foreground; v4\'s S8.02 folded in). Replaces v3 30.19\'s cropped wide (the stand-in)', (fb, k, sh) => {
   const ig = mk(sh, 'ignite', 2);
-  const IG = [1, 2, 1, 2, 3] as const;
-  const sign = (k < ig ? 0 : IG[Math.min(4, Math.floor((k - ig) / 3))]) as 0 | 1 | 2 | 3;
-  held(fb, `s5:s801-${sign}`, (b) => {
-    const room = new Buf(480, 270, PAL.N0);
-    lobbyRoom(room, 0, {sign, zeroBox: true}, {});
-    const dx = 240 - Math.round((LOBBY.SIGN.x0 + LOBBY.SIGN.x1) / 2), dy = 24;
-    for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) b.set(x, y, room.get(clamp(x - dx, 0, 479), clamp(y - dy, 0, RH - 1)));
-  });
-}, true);
-R5('S8.03', 'S8.03');
+  drawLobbyLow(fb, k, {sign: signAt(k, ig), box: boxAt(k, ig + 10)});
+});
+S5('S8.03', 'C', 'v4 S8.03 as it was (rooms-a lobby night + callgrid callDialog: Cancel greys a dither step a beat; the empty-tagged arrow steps in, clicks: bonk, the dialog shakes, refused; shoulder(masPortrait) tungsten rim) with the lobby drawn WITHOUT his standing figure (a4p5 finish: v4 drew Mas twice, behind his own shoulder)', (fb, k, sh) => {
+  held(fb, 's5:lobby-s3-nomas', (b) => lobbyRoom(b, 0, {sign: 3}, null));
+  const dl = mk(sh, 'dialog', 5), g1 = mk(sh, 'grey1', 15), g2 = mk(sh, 'grey2', 30), c1 = mk(sh, 'click', 46);
+  if (k >= dl) {
+    const grey = (k < g1 ? 1 : k < g2 ? 2 : 3) as 1 | 2 | 3;
+    const [s1x, s1y] = k >= c1 && k < c1 + 8 ? shakeAt(k, c1, SHAKE_DOOR) : [0, 0];
+    const dx = 118 + s1x * 2, dy = 40 + s1y * 2, dw = 244;
+    callDialog(fb, dx, dy, {w: dw, head: 'MAS MANALT', grey});
+    const [bx, by] = dialogButton(118, 40, 'cancel', dw);
+    const tgt: [number, number] = [bx + 30, by + 9];
+    let p: [number, number] | null = null;
+    if (k >= g2 && k < c1) p = k < c1 - 8 ? [tgt[0] + 92, tgt[1] + 40] : tgt;
+    else if (k >= c1 && k < c1 + 8) p = tgt;
+    else if (k >= c1 + 8) p = pointerAt(on2(k), c1 + 8, c1 + 14, tgt, [tgt[0] + 26, tgt[1] + 22]);
+    if (p) { drawPointer(fb, p[0], p[1], k >= c1 && k < c1 + 2); cursorTagBig(fb, p[0], p[1], '', PAL.N6); }
+  }
+  blitImg(fb, shoulder(mas({look: 1}), 70, PAL.W5, 1, true), -40, 40);
+});
 R5('S8.04', 'S8.04');
-R5('S8.05', 'S8.05');
+S5('S8.05', 'C', 'POLISH-LOBBY-STONE art-v5/extra/cards-inserts drawLobbyStoneNudge (inserts-mas drawNudgeInsert \'lobby\': held -> set -> NUDGE, one pixel true, on the reception desk\'s limestone with its brass nosing and the tea-lights\' reflections; replaces v4\'s recolour)', (fb, k, sh) => {
+  drawLobbyStoneNudge(fb, k < mk(sh, 'set', 4) ? 'held' : k < mk(sh, 'nudge', 10) ? 'set' : 'nudge');
+});
 R5('S8.06', 'S8.06');
 S5('S8.07', 'C', 'CAST-MAS-TURNAWAY mas-turnaway: the frameless 50/50 over the bullpen by day soft 1 (v4\'s recipe): MAS turned away, already past (no mouth), GERG right lip-synced (gergGlow) with his hand on the Q* vault (drawVaultMid, its note DO NOT OPEN. DO NOT EXPLAIN.); RACK to the vault after his line (the note sharp), Mas walking off, then Gerg walks out', (fb, k, sh) => {
   const rk = mk(sh, 'rack', 119), wk = mk(sh, 'walk', 139);
@@ -916,9 +1160,32 @@ S5('S8.07', 'C', 'CAST-MAS-TURNAWAY mas-turnaway: the frameless 50/50 over the b
 S5('S8.08', 'N', 'ROOM-BULLPEN-UNPACK bullpen-unpack drawBullpenUnpack (Nov 29: coats off, boxes open, the staff turned toward his end desk), Mas reading his memo at room scale (open / rest), the slow whole-px drift (8 px over the shot)', (fb, k, sh, f) => {
   drawBullpenUnpack(fb, f, {mas: {mouth: roomMouth5(sh, k, 'MAS')}, drift: Math.min(8, Math.floor((k * 9) / Math.max(1, len5(sh))))});
 });
-R5('S8.09', 'S8.09', 'the memo carries over it');
+S5('S8.09', 'C', 'v4 S8.09 (rooms-a drawChairBackInsert: his boardroom chair back, scorched by sc 30\'s fire; four screws, four beats; the ALYI plate comes off and leaves its unfaded outline; the memo carries over it) with POLISH-SCREW-HAND art-v5/extra/hands drawWorkerScrewHand (the worker\'s fist on each screw in turn, rolling a third of a turn every 4 f; mirrored for the left-hand screws so it never covers ALYI)', (fb, k, sh) => {
+  const sc = [mk(sh, 's1', 0), mk(sh, 's2', 15), mk(sh, 's3', 30), mk(sh, 's4', 45)];
+  const n = sc.filter((t) => k >= t + 4).length, off = k >= sc[3] + 5;
+  drawChairBackInsert(fb, {f: k, screws: n, plateOff: off});
+  for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) { // the scorch: soot creeping up from the lower right (v4's)
+    const d = Math.hypot((x - 480) / 260, (y - 210) / 130);
+    if (d < 1 && ((x * 7 + y * 11) % 5) < (1 - d) * 7) fb.set(x, y, stepColor(fb.get(x, y), d < 0.5 ? -3 : -2));
+  }
+  if (!off) {
+    const i = Math.min(3, n), [sx, sy] = PLATE_INSERT.screws[i];
+    const turn = (Math.floor(Math.max(0, k - sc[i]) / 4) % 3) as 0 | 1 | 2;
+    drawWorkerScrewHand(fb, sx, sy, {turn, from: sx < 240 ? 'left' : 'right'});
+  } else { // v4.1: the plate is gone and its outline stays: the unfaded leather a step lighter, a clean edge (he is off the board)
+    const P = {x0: 176, y0: 86, x1: 304, y1: 118};
+    for (let y = P.y0; y <= P.y1; y++) for (let x = P.x0; x <= P.x1; x++) fb.set(x, y, stepColor(fb.get(x, y), 1));
+    rect(P.x0, P.y0, P.x1 - P.x0 + 1, 1, fb.ink(PAL.D4)); rect(P.x0, P.y1, P.x1 - P.x0 + 1, 1, fb.ink(PAL.D1));
+  }
+});
 S5('S8.09b', 'N', 'kits/inserts-props drawShutDoorInsert (existing art): the conference-room door, shut, its ALYI nameplate still on', (fb) => { drawShutDoorInsert(fb, {name: 'ALYI'}); });
-R5('S8.10', 'S8.10');
+S5('S8.10', 'C', 'rooms-b bullpen (window corner, door shut; v4 S8.10\'s room) + POLISH-FOLD-CHAIR art-v5/extra/observer-chair drawObserverChair (the Macrosoft-blue folding chair on the room\'s observerChair anchor, unfolding in 4 held drawings) + observerPlacard (MACROSOFT · OBSERVER (NON-VOTING), a reserved-seat card on its top rail, from the lock\'s label) + chairKeysAt (Tasya\'s key ring falling onto the seat in held steps)', (fb, k, sh) => {
+  held(fb, 's5:bull-shut4', (b) => bullpenRoom(b, 0, {door: 'shut'}, {}));
+  const u = Math.max(0, Math.min(3, Math.floor((k - mk(sh, 'unfold', 0)) / 5))) as 0 | 1 | 2 | 3;
+  drawObserverChair(fb, 404, 178, {unfold: u, keys: chairKeysAt(k, mk(sh, 'keys', 68))});
+  const t = sh.texts.find((x) => x.kind === 'label');
+  if (t && k >= t.s) { const [rx, ry] = CHAIR.rail(404, 178, u); observerPlacard(fb, rx, ry, {k: k - t.s}); }
+});
 
 // ================================================================== checks and the ledger
 export const missingShots5 = (ids: string[] = SHOTS.map((s) => s.id)) => ids.filter((id) => !DRAW5[id]);

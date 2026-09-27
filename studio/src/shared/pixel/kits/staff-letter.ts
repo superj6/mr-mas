@@ -22,7 +22,9 @@ import {drawGergMediumTile, GergMHead} from '../cast/gerg-medium';
 import type {Viseme} from '../cast/talk';
 
 export const LETTER_QUOTES = [
-  '“…unable to work for or with people that lack competence, judgment and care for our mission and employees.”',
+  // a4p5 finish: the letter as posted spells it "judgement" (facts.md, Act Four v5 lock checks L1; the take stands, the word
+  // sounds the same)
+  '“…unable to work for or with people that lack competence, judgement and care for our mission and employees.”',
   '“…unless all current board members resign…”',
   '“…positions for all NopeAI employees…”',
 ];
@@ -39,7 +41,13 @@ export interface StaffLetterState {
   clunk?: boolean;
   scroll?: number;
   alyi?: boolean;
+  /** a4p5 finish (S5.06, opt-in; default 'always' = the r3 drawing): 'onMark' draws ALYI's thumbnail only once his line
+   *  is lit (st.alyi), as the "who is this" answer, and without the red vote check (the picture audit: from the shot's
+   *  first frame the thumbnail sat on Mas's 2 AM monitor for no reason, and its check read as "signed" 20 s early) */
+  alyiThumb?: 'always' | 'onMark';
   gerg?: {mouth?: Viseme; head?: GergMHead; typing?: boolean};
+  /** a4p5 finish (opt-in): Gerg's typing on held 3s with no head bob (cast/gerg-medium GergTileOpts.calm) */
+  gergCalm?: boolean;
   window?: number;
 }
 /** the page as one tall buffer (the scroll reads a window of it) */
@@ -124,11 +132,13 @@ export const drawStaffLetter = (b: Buf, st: StaffLetterState) => {
   odometer(b, cx + 5, SCR.y + 18, st.count, {digits: 3, label: 'SIGNED', suffix: st.count >= 745 ? '/ 770' : '', kick: st.clunk});
   const gx = cx, gy = SCR.y + 44, gw = SCR.x + SCR.w - 4 - cx, gh = 60;
   rect(gx - 1, gy - 1, gw + 2, gh + 2, b.ink(st.gerg?.mouth && st.gerg.mouth !== 'rest' ? PAL.L3 : PAL.N3));
-  drawGergMediumTile(b, gx, gy, gw, gh, {head: st.gerg?.head ?? 'talk', mouth: st.gerg?.mouth ?? 'rest', lid: 1}, {f: st.f, typing: st.gerg?.typing ?? false, fit: true}); // a4p5 r2: his eyes 40% down, not on the top edge
+  drawGergMediumTile(b, gx, gy, gw, gh, {head: st.gerg?.head ?? 'talk', mouth: st.gerg?.mouth ?? 'rest', lid: 1}, {f: st.f, typing: st.gerg?.typing ?? false, fit: true, calm: st.gergCalm}); // a4p5 r2: his eyes 40% down, not on the top edge
   rect(gx, gy + gh - 11, pw('GERG') + 6, 11, b.ink(PAL.N0)); pt(b, 'GERG', gx + 3, gy + gh - 9, PAL.P1);
   const ax = cx, ay = gy + gh + 8, aw = gw, ah = 44;
+  const onMark = st.alyiThumb === 'onMark';
+  if (onMark && !st.alyi) return;
   rect(ax - 1, ay - 1, aw + 2, ah + 2, b.ink(st.alyi ? PAL.W5 : PAL.N3));
   drawAlyiTileFit(b, ax, ay, aw, ah, {mouth: 'rest', eyes: 'open', t: 0}); // r3: his face framed in the thumbnail's glass
-  rect(ax + aw - 13, ay + 2, 11, 10, b.ink(PAL.R2)); pt(b, '✓', ax + aw - 11, ay + 3, PAL.P2);
+  if (!onMark) { rect(ax + aw - 13, ay + 2, 11, 10, b.ink(PAL.R2)); pt(b, '✓', ax + aw - 11, ay + 3, PAL.P2); }
   rect(ax, ay + ah - 11, pw('ALYI') + 6, 11, b.ink(PAL.N0)); pt(b, 'ALYI', ax + 3, ay + ah - 9, st.alyi ? PAL.W7 : PAL.P1);
 };

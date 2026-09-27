@@ -3,164 +3,164 @@
  "key": "ep01-full-v2",
  "host": {
   "cores": 14,
-  "load1": 2.95
+  "load1": 4.07
  },
- "jobs": 2,
- "concurrency": 2,
+ "jobs": 1,
+ "concurrency": 3,
  "seg": 90,
  "scale": 1,
  "steps": {
-  "bundle": "reused",
+  "bundle": 5.5,
   "plan": 0.3,
-  "mix": 29.7,
-  "render": 811.3,
-  "concat": 0.3,
+  "mix": 9.1,
+  "render": 848.2,
+  "concat": 0.2,
   "mixWaitAfterPicture": 0,
-  "mux": 30.5
+  "mux": 25.8
  },
- "renderedSeconds": 1340.5,
+ "renderedSeconds": 1371.4,
  "segments": [
   {
-   "file": "000-title-0-72-1ee497d858.mp4",
+   "file": "000-title-0-72-50e26ed26e.mp4",
    "chapter": "title",
    "frames": 72,
-   "wall": 4.9
+   "wall": 3.1
   },
   {
-   "file": "001-coldopen-72-796-5e97da6b69.mp4",
+   "file": "001-coldopen-72-796-fac0738e9a.mp4",
    "chapter": "coldopen",
    "frames": 724,
-   "wall": 33.6
+   "wall": 19.8
   },
   {
-   "file": "002-intro-796-1516-50409336e3.mp4",
+   "file": "002-intro-796-1516-b0112effe2.mp4",
    "chapter": "intro",
    "frames": 720,
-   "wall": 4.5
+   "wall": 2.9
   },
   {
-   "file": "003-card-1516-1564-70edb5ef9e.mp4",
+   "file": "003-card-1516-1612-38d01c342b.mp4",
    "chapter": "card",
-   "frames": 48,
-   "wall": 4
+   "frames": 96,
+   "wall": 3.8
   },
   {
-   "file": "004-act1-1564-3611-5734b5d2f3.mp4",
+   "file": "004-act1-1612-3770-b7d2a6daea.mp4",
    "chapter": "act1",
-   "frames": 2047,
-   "wall": 100.2
+   "frames": 2158,
+   "wall": 56.6
   },
   {
-   "file": "005-act1-3611-5657-99281e5a4a.mp4",
+   "file": "005-act1-3770-5928-5c38c98f5c.mp4",
    "chapter": "act1",
-   "frames": 2046,
-   "wall": 85.7
+   "frames": 2158,
+   "wall": 56.3
   },
   {
-   "file": "006-act1-5657-7704-663dd429e9.mp4",
+   "file": "006-act1-5928-8086-6358078bd2.mp4",
    "chapter": "act1",
-   "frames": 2047,
-   "wall": 100.1
+   "frames": 2158,
+   "wall": 56.4
   },
   {
-   "file": "007-act1-7704-9750-6b0fac4802.mp4",
+   "file": "007-act1-8086-10244-3dccaee98f.mp4",
    "chapter": "act1",
-   "frames": 2046,
-   "wall": 85.8
+   "frames": 2158,
+   "wall": 56.6
   },
   {
-   "file": "008-act2-9750-11489-cc545a132a.mp4",
+   "file": "008-act2-10244-12002-48d05561d0.mp4",
    "chapter": "act2",
-   "frames": 1739,
-   "wall": 75.4
+   "frames": 1758,
+   "wall": 46.3
   },
   {
-   "file": "009-act2-11489-13229-76b73b083f.mp4",
+   "file": "009-act2-12002-13761-1b70b80f3a.mp4",
    "chapter": "act2",
-   "frames": 1740,
-   "wall": 75.5
+   "frames": 1759,
+   "wall": 46.3
   },
   {
-   "file": "010-act2-13229-14968-d5c5436195.mp4",
+   "file": "010-act2-13761-15519-f5cb9b11aa.mp4",
    "chapter": "act2",
-   "frames": 1739,
-   "wall": 80.8
+   "frames": 1758,
+   "wall": 46.8
   },
   {
-   "file": "011-act3-14968-16744-cca3f9037c.mp4",
+   "file": "011-act3-15519-17363-3a6e571038.mp4",
    "chapter": "act3",
-   "frames": 1776,
-   "wall": 74.9
+   "frames": 1844,
+   "wall": 47.9
   },
   {
-   "file": "012-act3-16744-18520-9eb8f545e8.mp4",
+   "file": "012-act3-17363-19207-c280a925cf.mp4",
    "chapter": "act3",
-   "frames": 1776,
-   "wall": 75.1
+   "frames": 1844,
+   "wall": 48.2
   },
   {
-   "file": "013-act4-18520-20594-d09650c991.mp4",
+   "file": "013-act4-19207-21281-255e2dd33b.mp4",
    "chapter": "act4",
    "frames": 2074,
-   "wall": 119.8
+   "wall": 53.7
   },
   {
-   "file": "014-act4-20594-22668-9dab93ddeb.mp4",
+   "file": "014-act4-21281-23355-1df64c21d3.mp4",
    "chapter": "act4",
    "frames": 2074,
-   "wall": 119.2
+   "wall": 54.1
   },
   {
-   "file": "015-act4-22668-24742-b8b37d1e4a.mp4",
+   "file": "015-act4-23355-25429-c35b719b95.mp4",
    "chapter": "act4",
    "frames": 2074,
-   "wall": 134
+   "wall": 54.8
   },
   {
-   "file": "016-act4-24742-26815-d53547544a.mp4",
+   "file": "016-act4-25429-27502-43c6b380b5.mp4",
    "chapter": "act4",
    "frames": 2073,
-   "wall": 127.2
+   "wall": 53.3
   },
   {
-   "file": "017-act4-26815-28889-107445fe53.mp4",
+   "file": "017-act4-27502-29576-9ca89293bc.mp4",
    "chapter": "act4",
    "frames": 2074,
-   "wall": 132.2
+   "wall": 53.8
   },
   {
-   "file": "018-act4-28889-30963-8b9efca547.mp4",
+   "file": "018-act4-29576-31650-3a365f86d2.mp4",
    "chapter": "act4",
    "frames": 2074,
-   "wall": 130.9
+   "wall": 53.1
   },
   {
-   "file": "019-tag-30963-31884-f63dff63f9.mp4",
+   "file": "019-tag-31650-32625-0005769e70.mp4",
    "chapter": "tag",
-   "frames": 921,
-   "wall": 40.2
+   "frames": 975,
+   "wall": 25.8
   },
   {
-   "file": "020-outro-31884-32172-ee9ad8072b.mp4",
+   "file": "020-outro-32625-32913-9b3ee92960.mp4",
    "chapter": "outro",
    "frames": 288,
-   "wall": 13.8
+   "wall": 8.7
   }
  ],
  "frames": {
-  "expected": 32172,
-  "got": 32172
+  "expected": 32913,
+  "got": 32913
  },
- "wall": 842.6,
- "reelSeconds": 1340.5,
+ "wall": 880.2,
+ "reelSeconds": 1371.4,
  "speed": {
-  "reelSecondsPerMinuteWall": 95.5,
-  "renderedSecondsPerMinuteOfRenderStep": 99.1
+  "reelSecondsPerMinuteWall": 93.5,
+  "renderedSecondsPerMinuteOfRenderStep": 97
  },
  "out": "out/ep01/reel/ep01-full-v2.mp4",
- "outBytes": 111574057,
+ "outBytes": 114027473,
  "mix": {
-  "lufs": -17.667,
+  "lufs": -17.655,
   "peak": -4.3,
   "missing": [],
   "silences": [

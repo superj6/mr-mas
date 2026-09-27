@@ -137,7 +137,11 @@ const drawPath = (b: Buf, k: number, stopAt: number) => {
 };
 
 // ------------------------------------------------------------------ the frame
-export const drawPlan4 = (fb: Buf, sh: ShotV4, k: number) => {
+/** o.zerosLift (a4p5 finish, Act Four v5 S1.04; opt-in, default 0 = v4): lift the two zero stamps and the equity
+ *  stamp's caption this many px, so (HE TOLD THE SENATE) clears the sheet's bottom border rule (the v5 picture audit:
+ *  on the frame's last rows, crossed by the rule, barely legible at 1x) */
+export const drawPlan4 = (fb: Buf, sh: ShotV4, k: number, o: {zerosLift?: number} = {}) => {
+  const zl = o.zerosLift ?? 0;
   if (sh.id === 'S1.03') {
     const c = clockOf(sh);
     const tall = new Buf(480, 330, BPX.navy);
@@ -167,12 +171,12 @@ export const drawPlan4 = (fb: Buf, sh: ShotV4, k: number) => {
     bpLeader(pg, [lx, 40], [lx, ly - 4], 999, 0, BPX.faint);
     // "The investor gets—" VOTES: 0 lands on "gets" (it cuts the line), below the ring
     const tv = mk(sh, 'votes', wordAt(sh, 'a4-25-12', 'gets', 20) + 4);
-    if (k >= tv) bpStamp(pg, ['VOTES: 0'], 408, 238, k - tv, {big: true, seed: 11});
+    if (k >= tv) bpStamp(pg, ['VOTES: 0'], 408, 238 - zl, k - tv, {big: true, seed: 11});
     // "Good question." EQUITY: 0 (HIS TESTIMONY) beside the empty equity box: the two zeros side by side
     const te = mk(sh, 'equity', wordAt(sh, 'a4-25-02', 'question', 70));
     if (k >= te) { // the same size as VOTES: 0, so the two zeros read as one picture; the record's own words beneath
-      bpStamp(pg, ['EQUITY: 0'], 214, 236, k - te, {big: true, seed: 9});
-      if (k >= te + 3) bpText(pg, '(HE TOLD THE SENATE)', 214, 257, k, te + 3, {align: 'center', cps: 3, col: BPX.hot}); // v4.1: to whom
+      bpStamp(pg, ['EQUITY: 0'], 214, 236 - zl, k - te, {big: true, seed: 9});
+      if (k >= te + 3) bpText(pg, '(HE TOLD THE SENATE)', 214, 257 - zl, k, te + 3, {align: 'center', cps: 3, col: BPX.hot}); // v4.1: to whom
     }
     // the moth leaves the empty box
     const [mx, my] = S(PLAN4.equity.x + PLAN4.equity.w / 2, PLAN4.equity.y + PLAN4.equity.h / 2);

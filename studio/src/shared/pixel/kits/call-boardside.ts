@@ -28,7 +28,7 @@ import {Buf, rect, hash, bayer} from '../px';
 import {PAL, stepColor, lum} from '../palette';
 import {text, textWidth} from '../font';
 import {blitImg} from '../figure';
-import {callChrome, nameChip, micIcon, voteChip, speakingRing, typingDots, CALL_BAR_H, TileRect, TileState, drawTile, gridLayout, slideTiles, clipView, camOffBg, CALL_GREY} from './callgrid';
+import {callChrome, nameChip, micIcon, voteChip, speakingRing, typingDots, CALL_BAR_H, TileRect, TileState, drawTile, gridLayout, slideTiles, clipView, camOffBg, CALL_GREY, noticeIcon} from './callgrid';
 import {pt, pw, pwrap} from './uitype';
 import type {Viseme} from '../cast/talk';
 import {drawNelehTile, drawNelehMini} from '../cast/neleh';
@@ -168,6 +168,9 @@ export interface BoardCallState {
   softMas?: boolean;
   /** the call's title */
   title?: string;
+  /** a4p5 finish (opt-in): ALYI's tile shows the man in his open doorway, lit (cast/alyi-v5 drawAlyiTileFit lit), at every
+   *  tile size but the mini, in place of his reflection in the door's glass (his side keeps the reflection) */
+  alyiLit?: boolean;
 }
 
 const drawBoardTile = (b: Buf, who: Who, t: TileRect, st: BoardCallState) => {
@@ -183,6 +186,7 @@ const drawBoardTile = (b: Buf, who: Who, t: TileRect, st: BoardCallState) => {
   // under 130 px wide v4's tile crops his reflection to the top of his head: the fitted tile centres his face (r3).
   // a4p5 r2: also any tile shorter than 80 px (v4's tile is 86 tall and anchors him at the bottom, so the 2x2 [SCR]
   // layout's 150 x 60 tiles cut him at the eyes)
+  else if (who === 'alyi' && st.alyiLit) drawAlyiTileFit(b, t.x, t.y, t.w, t.h, {mouth: m.alyi ?? 'rest', eyes: 'open', t: f}, {lit: true});
   else if (who === 'alyi' && (t.w < 130 || t.h < 80)) drawAlyiTileFit(b, t.x, t.y, t.w, t.h, {mouth: m.alyi ?? 'rest', eyes: 'open', t: f});
   else if (who === 'alyi') drawAlyiTile(b, t.x, t.y, t.w, t.h, {mouth: m.alyi ?? 'rest', eyes: 'open', t: f});
   else if (who === 'mada') drawMadaTile(b, t.x, t.y, t.w, t.h, {mouth: 'rest', lid: 0, nod: 0}, {spin: f});
@@ -259,7 +263,7 @@ const notice = (b: Buf, L: BoardLayout, s: string, k: number) => {
   const shown = s.slice(0, Math.max(0, Math.floor(k * 1.5)));
   const w = Math.min(L.w - 8, pw(s) + 24), x = Math.round((L.w - w) / 2), y = L.noticeY - (k < 3 ? [-6, -3, -1][k] : 0);
   rect(x, y, w, 13, b.ink(PAL.N0)); rect(x + 1, y + 1, w - 2, 11, b.ink(PAL.N3)); rect(x + 1, y + 1, w - 2, 1, b.ink(PAL.N5));
-  rect(x + 5, y + 3, 5, 8, b.ink(PAL.G5)); rect(x + 6, y + 4, 3, 7, b.ink(PAL.N1)); b.set(x + 8, y + 7, PAL.G5);
+  noticeIcon(b, x + 2, y + 2, 'leave'); // a4p5 finish: the filled door with its arrow (callgrid), not the 3 px outline
   pt(b, shown, x + 15, y + 3, PAL.P1);
 };
 

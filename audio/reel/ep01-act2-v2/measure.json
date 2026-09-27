@@ -1,40 +1,40 @@
 {
- "act_seconds": 217.417,
- "act_clock": "3:37.4",
+ "act_seconds": 219.792,
+ "act_clock": "3:39.8",
  "scenes": {
   "13": {
    "start": "0:00.0",
-   "seconds": 67.8
+   "seconds": 68.8
   },
   "14": {
-   "start": "1:07.8",
-   "seconds": 10.8
+   "start": "1:08.8",
+   "seconds": 11.0
   },
   "15": {
-   "start": "1:18.6",
-   "seconds": 74.9
+   "start": "1:19.8",
+   "seconds": 75.5
   },
   "16": {
-   "start": "2:33.5",
+   "start": "2:35.4",
    "seconds": 20.0
   },
   "17": {
-   "start": "2:53.5",
-   "seconds": 43.9
+   "start": "2:55.4",
+   "seconds": 44.4
   }
  },
  "lines": 39,
- "words": 284,
- "median_words_per_line": 6,
- "mean_words_per_line": 7.28,
- "lines_3_words_or_fewer": 9,
+ "words": 289,
+ "median_words_per_line": 7,
+ "mean_words_per_line": 7.41,
+ "lines_3_words_or_fewer": 8,
  "cut_off_lines": [],
  "overlaps": [],
  "gap_between_lines_s": {
   "definition": "last word to next first word, inside one scene",
   "median": 0.9,
-  "within_0p2_0p6": 13,
-  "within_0p6_1p6": 14,
+  "within_0p2_0p6": 12,
+  "within_0p6_1p6": 15,
   "over_1p6": 8,
   "under_0p2": 0
  },
@@ -45,8 +45,8 @@
   "median_seconds": 6.6,
   "with_two_or_more_speakers": 6,
   "longest": {
-   "start_act": "1:30.7",
-   "seconds": 40.5,
+   "start_act": "1:31.9",
+   "seconds": 41.1,
    "lines": 10,
    "speakers": [
     "clone",
@@ -55,7 +55,7 @@
     "senator",
     "sucram"
    ],
-   "words": 93,
+   "words": 94,
    "first": "e1-a2-15-03",
    "last": "e1-a2-15-12"
   },
@@ -73,18 +73,18 @@
    },
    {
     "start_act": "0:10.0",
-    "seconds": 8.7,
+    "seconds": 9.3,
     "lines": 4,
     "speakers": [
      "mario",
      "sirrah"
     ],
-    "words": 24,
+    "words": 28,
     "first": "e1-a2-13-02",
     "last": "e1-a2-13-05"
    },
    {
-    "start_act": "0:21.8",
+    "start_act": "0:22.4",
     "seconds": 2.4,
     "lines": 1,
     "speakers": [
@@ -95,8 +95,8 @@
     "last": "e1-a2-13-06"
    },
    {
-    "start_act": "0:29.1",
-    "seconds": 36.9,
+    "start_act": "0:29.7",
+    "seconds": 37.2,
     "lines": 12,
     "speakers": [
      "mario",
@@ -111,7 +111,7 @@
     "last": "e1-a2-13-18"
    },
    {
-    "start_act": "1:17.6",
+    "start_act": "1:18.8",
     "seconds": 4.5,
     "lines": 1,
     "speakers": [
@@ -122,7 +122,7 @@
     "last": "e1-a2-15-01"
    },
    {
-    "start_act": "1:24.1",
+    "start_act": "1:25.3",
     "seconds": 2.0,
     "lines": 1,
     "speakers": [
@@ -133,8 +133,8 @@
     "last": "e1-a2-15-02"
    },
    {
-    "start_act": "1:30.7",
-    "seconds": 40.5,
+    "start_act": "1:31.9",
+    "seconds": 41.1,
     "lines": 10,
     "speakers": [
      "clone",
@@ -143,12 +143,12 @@
      "senator",
      "sucram"
     ],
-    "words": 93,
+    "words": 94,
     "first": "e1-a2-15-03",
     "last": "e1-a2-15-12"
    },
    {
-    "start_act": "2:16.2",
+    "start_act": "2:18.1",
     "seconds": 7.7,
     "lines": 3,
     "speakers": [
@@ -161,7 +161,7 @@
     "last": "e1-a2-15-15"
    },
    {
-    "start_act": "3:04.0",
+    "start_act": "3:05.9",
     "seconds": 9.2,
     "lines": 4,
     "speakers": [
@@ -173,7 +173,7 @@
     "last": "e1-a2-17-04"
    },
    {
-    "start_act": "3:16.7",
+    "start_act": "3:18.5",
     "seconds": 5.4,
     "lines": 2,
     "speakers": [
@@ -190,7 +190,7 @@
   "count": 5,
   "longest": {
    "start_act": "0:03.7",
-   "seconds": 62.2,
+   "seconds": 63.2,
    "lines": 18,
    "speakers": [
     "mario",
@@ -201,44 +201,44 @@
     "sirrah",
     "tasya"
    ],
-   "words": 118,
+   "words": 122,
    "first": "e1-a2-13-01",
    "last": "e1-a2-13-18"
   }
  },
- "dialogue_seconds": 96.2,
- "dialogue_share_of_act": 0.442,
+ "dialogue_seconds": 97.8,
+ "dialogue_share_of_act": 0.445,
  "stretches_4s_or_more_without_speech": [
   [
-   "0:24.1",
+   "0:24.7",
    5.0
   ],
   [
-   "1:05.9",
-   11.7
+   "1:06.9",
+   11.9
   ],
   [
-   "1:26.1",
+   "1:27.3",
    4.6
   ],
   [
-   "2:11.2",
+   "2:13.0",
    5.0
   ],
   [
-   "2:23.9",
+   "2:25.8",
    40.1
   ],
   [
-   "3:22.0",
-   15.4
+   "3:23.9",
+   15.9
   ]
  ],
- "beats": 56,
- "shots": 49,
- "median_shot_s": 3.62,
- "mean_shot_s": 4.44,
- "shots_under_1p5s": 5,
+ "beats": 53,
+ "shots": 46,
+ "median_shot_s": 3.56,
+ "mean_shot_s": 4.78,
+ "shots_under_1p5s": 4,
  "named_at_act_s": {
   "mas": -1.0,
   "radnus": -1.0,
@@ -249,13 +249,13 @@
   "senator": -1.0,
   "gallery": -1.0,
   "sirrah": 7.08,
-  "nedib": 53.04,
-  "lahtnemulb": 82.88,
-  "clone": 82.88,
-  "sucram": 89.58,
-  "noterb": 159.8,
-  "notnih": 178.0,
-  "nesnej": 195.29
+  "nedib": 53.67,
+  "lahtnemulb": 84.13,
+  "clone": 84.13,
+  "sucram": 90.83,
+  "noterb": 161.68,
+  "notnih": 179.88,
+  "nesnej": 197.17
  },
  "lines_before_naming": [
   [

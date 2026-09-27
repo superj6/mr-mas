@@ -1,27 +1,27 @@
 {
- "act_seconds": 341.083,
- "act_clock": "5:41.08",
- "frames": 8186,
+ "act_seconds": 359.667,
+ "act_clock": "5:59.67",
+ "frames": 8632,
  "beats": 59,
  "shots": 57,
- "lines": 56,
- "words": 440,
- "median_words_per_line": 5.0,
- "lines_3_words_or_fewer": 18,
- "speech_seconds": 142.0,
- "speech_share": 0.416,
+ "lines": 59,
+ "words": 481,
+ "median_words_per_line": 6,
+ "lines_3_words_or_fewer": 16,
+ "speech_seconds": 159.11,
+ "speech_share": 0.442,
  "reply_gaps_s": {
-  "median": 0.9,
+  "median": 0.85,
   "min": 0.3
  },
  "reply_gaps_in_conversation_s": {
-  "n": 42,
+  "n": 45,
   "median": 0.7,
   "quick_le_0_6": 19,
-  "longer": 23
+  "longer": 26
  },
  "longest_conversation": {
-  "seconds": 43.29,
+  "seconds": 44.26,
   "lines": 12,
   "first": "e1-a1-5-01",
   "last": "e1-a1-5-12",
@@ -38,42 +38,48 @@
    "first": "e1-a1-5-01",
    "last": "e1-a1-5-12",
    "lines": 12,
-   "seconds": 43.29
+   "seconds": 44.26
   },
   {
    "first": "e1-a1-5-13",
    "last": "e1-a1-5-23",
    "lines": 11,
-   "seconds": 31.41
+   "seconds": 31.83
+  },
+  {
+   "first": "e1-a1-8-01",
+   "last": "e1-a1-8-06",
+   "lines": 6,
+   "seconds": 23.82
   },
   {
    "first": "e1-a1-9-04",
    "last": "e1-a1-9-08",
    "lines": 5,
-   "seconds": 22.71
+   "seconds": 25.13
   },
   {
-   "first": "e1-a1-10-01",
+   "first": "e1-a1-10-06",
    "last": "e1-a1-10-05",
-   "lines": 5,
-   "seconds": 20.75
+   "lines": 6,
+   "seconds": 24.3
   }
  ],
  "scenes": {
-  "5": 89.92,
-  "6": 35.54,
-  "7": 9.79,
-  "8": 34.46,
-  "9": 71.79,
-  "10": 26.33,
-  "11": 45.88,
-  "12": 27.38
+  "5": 91.29,
+  "6": 36.12,
+  "7": 10.25,
+  "8": 35.54,
+  "9": 76.75,
+  "10": 29.87,
+  "11": 51.88,
+  "12": 27.96
  },
  "longest_hold_without_words_s": [
   {
    "seconds": 32.56,
-   "from": 287.74,
-   "to": 320.3,
+   "from": 305.74,
+   "to": 338.3,
    "beats": [
     "11.04",
     "11.05",
@@ -83,9 +89,9 @@
    ]
   },
   {
-   "seconds": 21.89,
-   "from": 93.63,
-   "to": 115.52,
+   "seconds": 22.49,
+   "from": 95.0,
+   "to": 117.49,
    "beats": [
     "6.01",
     "6.02",
@@ -98,9 +104,9 @@
    ]
   },
   {
-   "seconds": 19.81,
-   "from": 164.4,
-   "to": 184.21,
+   "seconds": 19.83,
+   "from": 167.88,
+   "to": 187.71,
    "beats": [
     "8.04",
     "8.05",
@@ -115,8 +121,8 @@
   },
   {
    "seconds": 13.71,
-   "from": 327.37,
-   "to": 341.08,
+   "from": 345.96,
+   "to": 359.67,
    "beats": [
     "12.02",
     "12.03",
@@ -127,9 +133,9 @@
    ]
   },
   {
-   "seconds": 10.08,
-   "from": 131.56,
-   "to": 141.64,
+   "seconds": 10.11,
+   "from": 133.95,
+   "to": 144.06,
    "beats": [
     "7.01",
     "7.02",

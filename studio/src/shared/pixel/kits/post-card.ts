@@ -28,11 +28,16 @@ export const POSTERS: Record<PostWho, Poster> = {
   ttemme: {name: 'Ttemme', handle: '@ttemme', accent: PAL.U5, bg: PAL.U3, initial: 'T'},
   staff: {name: 'NopeAI staff', handle: '@staff', accent: PAL.N8, bg: PAL.N5, initial: 'S'},
 };
-export interface PostSpec { who: PostWho; text: string; ts?: string; hearts?: number; }
+/** bio (a4p5 finish, opt-in; 'phone' / 'popup' only): the poster's profile line, dim, under the name row (S3.05: Gerg's
+ *  "president & chairman, nopeai" is what "He'd have kept his job, just not the chair." refers to) */
+export interface PostSpec { who: PostWho; text: string; ts?: string; hearts?: number; bio?: string }
 /** the act's posts (v5 lock words; the record's casing, never corrected) */
 export const POSTS = {
-  gergQuit: {who: 'gerg', text: '…I quit.', ts: 'NOV 17'} as PostSpec,
-  masEulogy: {who: 'mas', text: "…sorta like reading your own eulogy while you're still alive", ts: 'NOV 18'} as PostSpec,
+  // a4p5 finish, from the facts check (show/episodes/ep01/facts.md, Act Four v5 lock checks): his post is lowercase as
+  // posted ("…i quit."), and the eulogy post went up Nov 17, 9:05 PM PT (Nov 18 is the UTC date; S4.01's rail dates the
+  // scene, not the post)
+  gergQuit: {who: 'gerg', text: '…i quit.', ts: 'NOV 17'} as PostSpec,
+  masEulogy: {who: 'mas', text: "…sorta like reading your own eulogy while you're still alive", ts: 'NOV 17'} as PostSpec,
   masBadge: {who: 'mas', text: 'first and last time i ever wear one of these', ts: 'NOV 19'} as PostSpec,
   rimaPeople: {who: 'rima', text: 'NopeAI is nothing without its people', ts: '2:06 AM', hearts: 0} as PostSpec,
   alyiRegret: {who: 'alyi', text: "I deeply regret my participation in the board's actions. I never intended to harm NopeAI…", ts: 'NOV 20'} as PostSpec,
@@ -100,7 +105,7 @@ const textW = (size: PostSize, w: number) => w - (size === 'notify' ? 20 : 30) -
 export const postLines = (spec: PostSpec, size: PostSize, w: number) => pwrap(spec.text, textW(size, w));
 export const postBox = (spec: PostSpec, size: PostSize, w = size === 'notify' ? 170 : 220) => {
   const n = postLines(spec, size, w).length;
-  const h = size === 'notify' ? 17 + n * 10 : 21 + n * 10 + 13;
+  const h = size === 'notify' ? 17 + n * 10 : 21 + n * 10 + 13 + (spec.bio ? 9 : 0);
   return {w, h};
 };
 export interface PostDraw {
@@ -144,7 +149,9 @@ export const drawPost = (b: Buf, x: number, y: number, spec: PostSpec, o: PostDr
   pt(b, P.name, x + 26, y + 6, PAL.P2);
   pt(b, P.handle, x + 30 + pw(P.name), y + 6, PAL.N6);
   if (spec.ts) pt(b, spec.ts, x + w - 6 - pw(spec.ts), y + 6, PAL.N6);
-  lines.forEach((l, i) => pt(b, l, x + 26, y + 19 + i * 10, PAL.P1));
+  const by = spec.bio ? 9 : 0;
+  if (spec.bio) pt(b, spec.bio, x + 26, y + 15, PAL.N6);
+  lines.forEach((l, i) => pt(b, l, x + 26, y + 19 + by + i * 10, PAL.P1));
   // the heart row
   const fy = y + h - 11;
   rect(x + 26, fy - 3, w - 32, 1, b.ink(stepColor(bg, 1)));

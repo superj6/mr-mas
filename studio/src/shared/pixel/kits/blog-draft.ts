@@ -32,7 +32,10 @@ const ED = {x: 10, w: 300};
 export const BLOG_POST_BTN = {x: ED.x + ED.w - 52, y: H - 22, w: 48, h: 15};
 const CALLWIN = {x: W - 136, y: 22, w: 128, h: 86};
 
-export interface BlogDraftState { f: number; k: number; pointer?: 'rest' | 'post' | null; click?: number }
+/** read (a4p5 finish, opt-in): how many of the post's words (both sentences, split on spaces) she has read aloud; each
+ *  read word gets a 1 px underline in the editor's cursor colour, so the 15 s read has a place on the page and a
+ *  motion (the picture audit: the page sat still while an unseen voice read it, and the audience read ahead) */
+export interface BlogDraftState { f: number; k: number; pointer?: 'rest' | 'post' | null; click?: number; read?: number }
 export const drawBlogDraft = (b: Buf, st: BlogDraftState) => {
   const posted = st.click !== undefined && st.click >= 2;
   rect(0, 0, W, H, b.ink(PAL.N2));
@@ -46,9 +49,21 @@ export const drawBlogDraft = (b: Buf, st: BlogDraftState) => {
   pt(b, BLOG.kicker, ED.x + 12, 26, PAL.G3);
   if (posted) pt(b, `· ${BLOG.date}`.slice(0, Math.max(0, (st.click! - 2) * 2)), ED.x + 16 + pw(BLOG.kicker), 26, PAL.G3);
   rect(ED.x + 12, 36, 140, 1, b.ink(PAL.P0));
-  let y = 42;
+  let y = 42, wi = 0;
   for (const [i, s] of BLOG.lines.entries()) {
-    for (const l of bpwrap(s, ED.w - 24)) { bpt(b, l, ED.x + 12, y, PAL.N2); y += 17; }
+    for (const l of bpwrap(s, ED.w - 24)) {
+      bpt(b, l, ED.x + 12, y, PAL.N2);
+      if (st.read !== undefined) { // underline the words read so far (whole words, in this line's own positions)
+        const ws = l.split(' ');
+        let pre = '';
+        for (const w of ws) {
+          if (wi < st.read && w) { const x0 = ED.x + 12 + (pre ? bpw(pre + ' ') : 0); rect(x0, y + 14, bpw(w), 1, b.ink(PAL.C4)); }
+          if (w) wi++;
+          pre = pre ? `${pre} ${w}` : w;
+        }
+      }
+      y += 17;
+    }
     if (i === 0) y += 5;
   }
   // the editor's cursor at the end of the text (a draft is still editable), blinking on 16 f

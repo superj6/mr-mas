@@ -1,6 +1,6 @@
 {
- "plan": "work/plan.json of episode.mjs (ep1s-assemble scratch); re-made by every render",
- "total_s": 1340.5,
+ "plan": "(ep1s-close work folder, session scratch)/plan.json",
+ "total_s": 1371.375,
  "per_chapter": [
   {
    "chapter": "coldopen",
@@ -30,7 +30,7 @@
    "chapter": "card",
    "label": "CARD",
    "start_s": 63.167,
-   "dur_s": 2.0,
+   "dur_s": 4.0,
    "lines": 0,
    "words": 0,
    "median_words_per_line": 0,
@@ -43,12 +43,12 @@
   {
    "chapter": "act1",
    "label": "ACT ONE",
-   "start_s": 65.167,
-   "dur_s": 341.083,
-   "lines": 56,
-   "words": 437,
-   "median_words_per_line": 5.0,
-   "lines_3_words_or_fewer": 18,
+   "start_s": 67.167,
+   "dur_s": 359.667,
+   "lines": 59,
+   "words": 478,
+   "median_words_per_line": 6,
+   "lines_3_words_or_fewer": 16,
    "speakers": [
     "alyi",
     "chatgtp",
@@ -66,14 +66,14 @@
     "tasya"
    ],
    "longest_conversation": {
-    "seconds": 43.29,
+    "seconds": 44.26,
     "lines": 12,
     "first": "e1-a1-5-01",
     "last": "e1-a1-5-12",
     "scene": "5",
-    "starts": "1:12.08"
+    "starts": "1:14.08"
    },
-   "conversations_over_20s": 4,
+   "conversations_over_20s": 5,
    "unnamed_labels": [
     "FOUNDER",
     "FOUNDER WITH THE MUG",
@@ -85,12 +85,12 @@
   {
    "chapter": "act2",
    "label": "ACT TWO",
-   "start_s": 406.25,
-   "dur_s": 217.417,
+   "start_s": 426.833,
+   "dur_s": 219.792,
    "lines": 39,
-   "words": 284,
-   "median_words_per_line": 6,
-   "lines_3_words_or_fewer": 9,
+   "words": 289,
+   "median_words_per_line": 7,
+   "lines_3_words_or_fewer": 8,
    "speakers": [
     "clone",
     "lahtnemulb",
@@ -106,12 +106,12 @@
     "tasya"
    ],
    "longest_conversation": {
-    "seconds": 40.5,
+    "seconds": 41.13,
     "lines": 10,
     "first": "e1-a2-15-03",
     "last": "e1-a2-15-12",
     "scene": "15",
-    "starts": "8:16.91"
+    "starts": "8:38.74"
    },
    "conversations_over_20s": 2,
    "unnamed_labels": [
@@ -124,12 +124,12 @@
   {
    "chapter": "act3",
    "label": "ACT THREE",
-   "start_s": 623.667,
-   "dur_s": 148.0,
-   "lines": 21,
-   "words": 142,
-   "median_words_per_line": 6,
-   "lines_3_words_or_fewer": 6,
+   "start_s": 646.625,
+   "dur_s": 153.667,
+   "lines": 22,
+   "words": 147,
+   "median_words_per_line": 5.5,
+   "lines_3_words_or_fewer": 7,
    "speakers": [
     "deepfake",
     "deepfake-2",
@@ -141,14 +141,14 @@
     "tasya"
    ],
    "longest_conversation": {
-    "seconds": 15.2,
-    "lines": 4,
+    "seconds": 21.85,
+    "lines": 6,
     "first": "e1-a3-21-01",
-    "last": "e1-a3-21-04",
+    "last": "e1-a3-21-07",
     "scene": "21",
-    "starts": "12:00.40"
+    "starts": "12:27.11"
    },
-   "conversations_over_20s": 0,
+   "conversations_over_20s": 1,
    "unnamed_labels": [
     "CUT-PAPER COPY #2 (monitor)",
     "CUT-PAPER COPY (monitor)"
@@ -157,7 +157,7 @@
   {
    "chapter": "act4",
    "label": "ACT FOUR",
-   "start_s": 771.667,
+   "start_s": 800.292,
    "dur_s": 518.458,
    "lines": 101,
    "words": 836,
@@ -183,7 +183,7 @@
     "first": "a5-29-01",
     "last": "a5-29-19",
     "scene": "S5",
-    "starts": "17:50.29"
+    "starts": "18:18.92"
    },
    "conversations_over_20s": 5,
    "unnamed_labels": [
@@ -193,8 +193,8 @@
   {
    "chapter": "tag",
    "label": "TAG",
-   "start_s": 1290.125,
-   "dur_s": 38.375,
+   "start_s": 1318.75,
+   "dur_s": 40.625,
    "lines": 2,
    "words": 2,
    "median_words_per_line": 1.0,
@@ -208,7 +208,7 @@
     "first": "e1-tg-33-01",
     "last": "e1-tg-33-01",
     "scene": "33",
-    "starts": "22:04.46"
+    "starts": "22:35.33"
    },
    "conversations_over_20s": 0,
    "unnamed_labels": []
@@ -216,7 +216,7 @@
   {
    "chapter": "outro",
    "label": "OUTRO",
-   "start_s": 1328.5,
+   "start_s": 1359.375,
    "dur_s": 12.0,
    "lines": 0,
    "words": 0,
@@ -229,11 +229,7 @@
   }
  ],
  "totals": {
-  "lines": 222,
-  "words": 1734
- },
- "definitions": {
-  "words": "whitespace tokens of the printed line that hold a letter or digit (so \"back—and\" is one word)",
-  "longest_conversation": "a run of lines in one scene (beat id before the dot) with no gap over 3.0 s from one line's last word to the next line's first; seconds = first word to last word"
+  "lines": 226,
+  "words": 1785
  }
 }

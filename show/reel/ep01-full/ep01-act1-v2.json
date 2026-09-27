@@ -18,7 +18,7 @@
    "role": "WOMAN AT THE WHITEBOARD"
   },
   "alyi": {
-   "role": "REFLECTION IN THE GLASS"
+   "role": "MAN IN THE DOORWAY (IN THE GLASS)"
   },
   "chatgtp": {
    "name": "CHATGTP",
@@ -66,12 +66,12 @@
   }
  },
  "_source": {
-  "script": "show/episodes/ep01/script.md ## ACT ONE (as saved 2026-09-26 22:48)",
+  "script": "show/episodes/ep01/script.md ## ACT ONE (the Act One fix pass, 2026-09-27)",
   "plan": "audio/ep01/act1/dialogue/lines-plan-v1.json (audio/reel/ep01-act1-v2/set_plan.py)",
   "takes": "audio/ep01/act1/dialogue/lines-fast-v1.json",
   "builder": "audio/reel/ep01-act1-v2/build_timeline.py",
   "notes": "show/episodes/ep01/production/stick/act1-notes.md",
-  "act_seconds": 341.083
+  "act_seconds": 359.667
  },
  "beats": [
   {
@@ -139,9 +139,14 @@
      "x": 0.96
     }
    ],
-   "caption": "Gerg's green laptop, Rima's LOW-KEY underlined twice, Alyi in the glass. A cursor parks on the button.",
+   "caption": "Gerg's green laptop, Rima's LOW-KEY, Alyi in the doorway (seen in the glass). A cursor parks on the button.",
    "lines": [],
    "onscreen": [
+    {
+     "text": "RAIL: NOV 30, 2022",
+     "at": 0.3,
+     "until": null
+    },
     {
      "text": "LAUNCH: LOW-KEY",
      "at": 0.4,
@@ -403,6 +408,20 @@
      "id": "gerg",
      "at": 0.6
     }
+   ],
+   "sounds": [
+    {
+     "name": "synth:keys",
+     "at": 0.0,
+     "gain": -32,
+     "dur": 2.8
+    },
+    {
+     "name": "synth:keys",
+     "at": 5.89,
+     "gain": -34,
+     "dur": 4.2
+    }
    ]
   },
   {
@@ -430,116 +449,111 @@
     {
      "id": "e1-a1-5-04",
      "who": "rima",
-     "text": "Then let's treat it like one. No press, no keynote. One post, and a banner that says it can be wrong.",
+     "text": "Then let's treat it like one. One little post, no press. And a banner that says it makes things up.",
      "t": 0.305,
-     "dur": 6.52,
+     "dur": 6.09,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-04.wav",
-     "in": 0.51,
+     "in": 0.5,
      "words": [
       [
        "Then",
-       -0.01,
-       0.19
+       0.0,
+       0.2
       ],
       [
        "let's",
-       0.19,
-       0.465
+       0.2,
+       0.488
       ],
       [
        "treat",
-       0.465,
-       0.702
+       0.488,
+       0.738
       ],
       [
        "it",
-       0.702,
-       0.777
+       0.738,
+       0.812
       ],
       [
        "like",
-       0.777,
-       0.99
+       0.812,
+       1.025
       ],
       [
        "one",
-       0.99,
-       1.39
-      ],
-      [
-       "No",
-       1.723,
-       1.91
-      ],
-      [
-       "press",
-       1.91,
-       2.31
-      ],
-      [
-       "no",
-       2.51,
-       2.685
-      ],
-      [
-       "keynote",
-       2.685,
-       3.4
+       1.025,
+       1.43
       ],
       [
        "One",
-       3.652,
-       3.928
+       1.775,
+       2.038
+      ],
+      [
+       "little",
+       2.038,
+       2.262
       ],
       [
        "post",
-       3.928,
-       4.44
+       2.262,
+       2.775
       ],
       [
-       "and",
-       4.555,
-       4.668
+       "no",
+       2.965,
+       3.14
+      ],
+      [
+       "press",
+       3.14,
+       3.81
+      ],
+      [
+       "And",
+       4.04,
+       4.178
       ],
       [
        "a",
-       4.668,
-       4.73
+       4.178,
+       4.24
       ],
       [
        "banner",
-       4.73,
-       5.105
+       4.24,
+       4.615
       ],
       [
        "that",
-       5.105,
-       5.305
+       4.615,
+       4.815
       ],
       [
        "says",
-       5.305,
-       5.555
+       4.815,
+       5.065
       ],
       [
        "it",
-       5.555,
-       5.68
+       5.065,
+       5.19
       ],
       [
-       "can",
-       5.68,
-       5.855
+       "makes",
+       5.19,
+       5.465
       ],
       [
-       "be",
-       5.855,
-       6.018
+       "things",
+       5.465,
+       5.765
       ],
       [
-       "wrong",
-       6.018,
-       6.54
+       "up",
+       5.765,
+       6.11
       ]
      ],
      "tag": "",
@@ -549,7 +563,7 @@
      "id": "e1-a1-5-05",
      "who": "gerg",
      "text": "It'll have a banner. Nobody reads banners either.",
-     "t": 7.125,
+     "t": 6.695,
      "dur": 2.28,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-05.wav",
      "in": 0.51,
@@ -602,7 +616,7 @@
      "id": "e1-a1-5-06",
      "who": "rima",
      "text": "Mas, it's your call. If it breaks in front of people, and it will, what do we tell them?",
-     "t": 10.105,
+     "t": 9.675,
      "dur": 5.55,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-06.wav",
      "in": 0.5,
@@ -710,7 +724,7 @@
      "id": "e1-a1-5-07",
      "who": "mas",
      "text": "it's a preview.",
-     "t": 16.455,
+     "t": 16.025,
      "dur": 1.17,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-07.wav",
      "in": 0.52,
@@ -737,91 +751,91 @@
     {
      "id": "e1-a1-5-08",
      "who": "rima",
-     "text": "And if it works? If people actually use it, it's going to cost us a fortune.",
-     "t": 18.125,
-     "dur": 4.61,
+     "text": "Okay. Say it works. Say people actually use it. That's going to cost us a fortune.",
+     "t": 17.695,
+     "dur": 5.84,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-08.wav",
-     "in": 0.52,
+     "in": 0.5,
      "words": [
       [
-       "And",
-       -0.03,
-       0.12
+       "Okay",
+       0.005,
+       0.66
       ],
       [
-       "if",
-       0.12,
-       0.27
+       "Say",
+       1.06,
+       1.222
       ],
       [
        "it",
-       0.27,
-       0.395
+       1.222,
+       1.31
       ],
       [
        "works",
-       0.395,
-       0.93
+       1.31,
+       1.79
       ],
       [
-       "If",
-       1.3,
-       1.5
+       "Say",
+       2.092,
+       2.33
       ],
       [
        "people",
-       1.5,
-       1.863
+       2.33,
+       2.68
       ],
       [
        "actually",
-       1.863,
-       2.312
-      ],
-      [
-       "use",
-       2.312,
-       2.613
-      ],
-      [
-       "it",
-       2.613,
-       2.82
-      ],
-      [
-       "it's",
-       2.93,
+       2.68,
        3.105
       ],
       [
-       "going",
+       "use",
        3.105,
-       3.317
+       3.392
+      ],
+      [
+       "it",
+       3.392,
+       3.67
+      ],
+      [
+       "That's",
+       4.1,
+       4.388
+      ],
+      [
+       "going",
+       4.388,
+       4.562
       ],
       [
        "to",
-       3.317,
-       3.405
+       4.562,
+       4.65
       ],
       [
        "cost",
-       3.405,
-       3.742
+       4.65,
+       4.988
       ],
       [
        "us",
-       3.742,
-       3.892
+       4.988,
+       5.138
       ],
       [
        "a",
-       3.892,
-       3.992
+       5.138,
+       5.225
       ],
       [
        "fortune",
-       3.992,
-       4.63
+       5.225,
+       5.86
       ]
      ],
      "tag": "",
@@ -831,7 +845,7 @@
      "id": "e1-a1-5-09",
      "who": "gerg",
      "text": "That's a v2 problem.",
-     "t": 23.085,
+     "t": 23.885,
      "dur": 1.1,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-09.wav",
      "in": 0.5,
@@ -875,13 +889,13 @@
     {
      "text": "RIMA TAMURI · CTO",
      "at": 0.405,
-     "until": 7.425
+     "until": 6.995
     }
    ],
-   "reelDur": 24.5,
+   "reelDur": 25.291667,
    "fx": [],
    "realStart": 89.792,
-   "realDur": 24.5,
+   "realDur": 25.292,
    "fg": {
     "id": "mas",
     "side": "left"
@@ -890,6 +904,20 @@
     {
      "id": "rima",
      "at": 0.405
+    }
+   ],
+   "sounds": [
+    {
+     "name": "synth:keys",
+     "at": 6.095,
+     "gain": -34,
+     "dur": 2.6
+    },
+    {
+     "name": "synth:keys",
+     "at": 23.385,
+     "gain": -34,
+     "dur": 1.8
     }
    ]
   },
@@ -900,7 +928,7 @@
    "set": "bullpen",
    "style": "BASE",
    "shot": "close",
-   "frame": "MCU·glass · Alyi's reflection (the cut on the turn)",
+   "frame": "MCU·glass · Alyi in the doorway, seen in its glass (the cut on the turn)",
    "side": "",
    "room": "bullpen",
    "chars": [
@@ -909,41 +937,46 @@
      "x": 0.6
     }
    ],
-   "caption": "A new voice from the glass turns cost into dread, picking up her \"And if\".",
+   "caption": "A new voice from the doorway turns cost into dread: \"And what if it wakes up?\"",
    "lines": [
     {
      "id": "e1-a1-5-10",
      "who": "alyi",
-     "text": "And if it wakes up?",
-     "t": 0.585,
-     "dur": 1.52,
+     "text": "And what if it wakes up?",
+     "t": 0.593,
+     "dur": 1.69,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-10.wav",
-     "in": 0.52,
+     "in": 0.5,
      "words": [
       [
        "And",
-       0.045,
-       0.195
+       0.05,
+       0.2
+      ],
+      [
+       "what",
+       0.2,
+       0.375
       ],
       [
        "if",
-       0.195,
-       0.345
+       0.375,
+       0.525
       ],
       [
        "it",
-       0.345,
-       0.507
+       0.525,
+       0.675
       ],
       [
        "wakes",
-       0.507,
-       0.957
+       0.675,
+       1.05
       ],
       [
        "up",
-       0.957,
-       1.47
+       1.05,
+       1.6
       ]
      ],
      "tag": "",
@@ -957,10 +990,10 @@
      "until": null
     }
    ],
-   "reelDur": 2.458333,
+   "reelDur": 2.625,
    "fx": [],
-   "realStart": 114.292,
-   "realDur": 2.458,
+   "realStart": 115.083,
+   "realDur": 2.625,
    "names": [
     {
      "id": "alyi",
@@ -990,7 +1023,7 @@
      "id": "e1-a1-5-11",
      "who": "mas",
      "text": "…still a preview.",
-     "t": 1.047,
+     "t": 1.058,
      "dur": 1.17,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-11.wav",
      "in": 0.5,
@@ -1018,7 +1051,7 @@
    "onscreen": [],
    "reelDur": 2.666667,
    "fx": [],
-   "realStart": 116.75,
+   "realStart": 117.708,
    "realDur": 2.667
   },
   {
@@ -1045,13 +1078,13 @@
     {
      "id": "rima",
      "x": 0.93,
-     "until": 3.29
+     "until": 3.302
     },
     {
      "id": "rima",
      "x": 0.93,
      "pose": "point",
-     "from": 3.29
+     "from": 3.302
     }
    ],
    "caption": "One key, a flourish: \"Your button.\" Behind him Rima underlines LOW-KEY a third time. No line.",
@@ -1060,7 +1093,7 @@
      "id": "e1-a1-5-12",
      "who": "gerg",
      "text": "It's all staged on my end. Your button.",
-     "t": 0.65,
+     "t": 0.662,
      "dur": 2.14,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-12.wav",
      "in": 0.5,
@@ -1124,10 +1157,23 @@
    ],
    "reelDur": 4.5,
    "fx": [],
-   "realStart": 119.417,
+   "realStart": 120.375,
    "realDur": 4.5,
    "cues": [
     "sfx: one key, with a flourish · then the marker squeaks: a third underline"
+   ],
+   "sounds": [
+    {
+     "name": "key_tap_space",
+     "at": 0.2,
+     "gain": -16
+    },
+    {
+     "name": "marker_write_q",
+     "at": 3.302,
+     "gain": -20,
+     "dur": 0.5
+    }
    ]
   },
   {
@@ -1141,28 +1187,35 @@
    "side": "",
    "room": "bullpen",
    "chars": [],
-   "caption": "His finger, no hover. Click. Nothing happens. The date lands on the click.",
+   "caption": "His finger, no hover. Click. Nothing happens.",
    "lines": [],
    "onscreen": [
+    {
+     "text": "research preview",
+     "at": 0.0,
+     "until": null
+    },
     {
      "text": "UI: Push research preview",
      "at": 0.0,
      "until": 1.0
-    },
-    {
-     "text": "RAIL: NOV 30, 2022",
-     "at": 1.0,
-     "until": null
     }
    ],
    "reelDur": 2.291667,
    "fx": [],
-   "realStart": 123.917,
+   "realStart": 124.875,
    "realDur": 2.292,
    "cues": [
-    "sfx: click (on 1.0 s) · nothing happens · the band dims back into cutscene mode"
+    "sfx: click (on 1.0 s), the 1993 OK's click · nothing happens · the band dims back into cutscene mode"
    ],
-   "real": "NOV 30, 2022 · CHATGTP launches as a \"research preview\": one post, no keynote [facts #3]"
+   "real": "NOV 30, 2022 · CHATGTP launches as a \"research preview\": one post, no keynote [facts #3]",
+   "sounds": [
+    {
+     "name": "dialog_ok_click",
+     "at": 1.0,
+     "gain": -12
+    }
+   ]
   },
   {
    "id": "5.09",
@@ -1171,7 +1224,7 @@
    "set": "bullpen",
    "style": "BASE",
    "shot": "medium",
-   "frame": "MCU·glass · Mas soft in the fg; Rima at the board; Alyi in the glass",
+   "frame": "MCU·glass · Mas soft in the fg; Rima at the board; Alyi in the doorway (glass)",
    "side": "",
    "room": "bullpen",
    "chars": [
@@ -1181,10 +1234,11 @@
     },
     {
      "id": "alyi",
-     "x": 0.84
+     "x": 0.84,
+     "until": 10.32
     }
    ],
-   "caption": "Alyi, low, to Mas only: the years they share, to the click. \"you counted.\" \"Someone should.\"",
+   "caption": "Alyi, low, to Mas only: the years they share. \"you counted.\" \"Someone should.\" He walks off.",
    "lines": [
     {
      "id": "e1-a1-5-13",
@@ -1314,7 +1368,7 @@
      "id": "e1-a1-5-16",
      "who": "mas",
      "text": "let's see if anyone notices.",
-     "t": 10.77,
+     "t": 11.17,
      "dur": 2.02,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-16.wav",
      "in": 0.57,
@@ -1349,23 +1403,32 @@
      "cut": false
     }
    ],
-   "onscreen": [
-    {
-     "text": "RAIL: NOV 30, 2022",
-     "at": 0.0,
-     "until": 1.0
-    }
-   ],
-   "reelDur": 13.291667,
+   "onscreen": [],
+   "reelDur": 13.708333,
    "fx": [],
-   "realStart": 126.208,
-   "realDur": 13.292,
+   "realStart": 127.167,
+   "realDur": 13.708,
    "fg": {
     "id": "mas",
     "side": "left"
    },
    "cues": [
-    "sound: Gerg's keys under the shot; Rima, at the board, doesn't hear it"
+    "sound: Gerg's keys under the shot; Rima, at the board, doesn't hear it",
+    "sound: Alyi's footsteps go off down the hall after \"Someone should.\"; the glass is empty"
+   ],
+   "sounds": [
+    {
+     "name": "synth:keys",
+     "at": 0.2,
+     "gain": -36,
+     "dur": 4.8
+    },
+    {
+     "name": "synth:steps_far",
+     "at": 10.17,
+     "gain": -30,
+     "dur": 1.4
+    }
    ]
   },
   {
@@ -1589,14 +1652,14 @@
      "until": null
     },
     {
-     "text": "> is anyone there?",
-     "at": 9.36,
+     "text": "mas types: is anyone there?",
+     "at": 9.76,
      "until": null
     }
    ],
    "reelDur": 14.166667,
    "fx": [],
-   "realStart": 139.5,
+   "realStart": 140.875,
    "realDur": 14.167,
    "fg": {
     "id": "mas",
@@ -1606,6 +1669,25 @@
     {
      "id": "chatgtp",
      "at": 5.51
+    }
+   ],
+   "sounds": [
+    {
+     "name": "synth:keys",
+     "at": 0.0,
+     "gain": -38,
+     "dur": 1.2
+    },
+    {
+     "name": "ui_toast_pop",
+     "at": 5.51,
+     "gain": -26
+    },
+    {
+     "name": "synth:keys",
+     "at": 9.76,
+     "gain": -28,
+     "dur": 1.3
     }
    ]
   },
@@ -1719,8 +1801,16 @@
    "onscreen": [],
    "reelDur": 5.666667,
    "fx": [],
-   "realStart": 153.667,
-   "realDur": 5.667
+   "realStart": 155.042,
+   "realDur": 5.667,
+   "sounds": [
+    {
+     "name": "synth:keys",
+     "at": 1.94,
+     "gain": -34,
+     "dur": 2.6
+    }
+   ]
   },
   {
    "id": "5.12",
@@ -1749,10 +1839,27 @@
    ],
    "reelDur": 2.583333,
    "fx": [],
-   "realStart": 159.333,
+   "realStart": 160.708,
    "realDur": 2.583,
    "cues": [
     "music: MM-16 Odometer (temp pad) comes in on the counter's first tick (0.5 s)"
+   ],
+   "sounds": [
+    {
+     "name": "counter_roll",
+     "at": 0.5,
+     "gain": -24
+    },
+    {
+     "name": "counter_roll",
+     "at": 1.25,
+     "gain": -26
+    },
+    {
+     "name": "counter_roll",
+     "at": 1.8,
+     "gain": -26
+    }
    ]
   },
   {
@@ -1811,7 +1918,7 @@
    ],
    "reelDur": 5.0,
    "fx": [],
-   "realStart": 161.917,
+   "realStart": 163.292,
    "realDur": 5.0,
    "seq": {
     "id": "6",
@@ -1823,6 +1930,14 @@
     "music: MM-16, one performance, 14 bars (4·3·4·3) · thins to bass + brushes under the posts, ducks under the V.O.",
     "sfx: odometer_ratchet, chip notes on F, varied rhythm and pitch (never even beeps)",
     "style (proposed, drastic tier): the descent as a low-poly 3D cutaway of the building · default BASE"
+   ],
+   "sounds": [
+    {
+     "name": "synth:ratchet",
+     "at": 0.15,
+     "gain": -26,
+     "dur": 4.85
+    }
    ]
   },
   {
@@ -1855,10 +1970,23 @@
    "fx": [
     "shake"
    ],
-   "realStart": 166.917,
+   "realStart": 168.292,
    "realDur": 5.0,
    "cues": [
     "sfx: a whole-pixel CLUNK on the downbeat (0.0 s)"
+   ],
+   "sounds": [
+    {
+     "name": "letter_clunk",
+     "at": 0.0,
+     "gain": -12
+    },
+    {
+     "name": "synth:ratchet",
+     "at": 0.4,
+     "gain": -30,
+     "dur": 4.6
+    }
    ]
   },
   {
@@ -1888,8 +2016,21 @@
    "onscreen": [],
    "reelDur": 2.5,
    "fx": [],
-   "realStart": 171.917,
-   "realDur": 2.5
+   "realStart": 173.292,
+   "realDur": 2.5,
+   "sounds": [
+    {
+     "name": "ceiling_burst",
+     "at": 0.05,
+     "gain": -20
+    },
+    {
+     "name": "synth:ratchet",
+     "at": 0.0,
+     "gain": -30,
+     "dur": 2.5
+    }
+   ]
   },
   {
    "id": "6.04",
@@ -1928,7 +2069,7 @@
    ],
    "reelDur": 5.0,
    "fx": [],
-   "realStart": 174.417,
+   "realStart": 175.792,
    "realDur": 5.0,
    "names": [
     {
@@ -1939,7 +2080,35 @@
    "cues": [
     "music: MM-16 thins to bass + brushes under the post"
    ],
-   "real": "DEC 3, 2022 · NOLE: \"CHATGTP is scary good…\" [V] · the plate is invented (facts §D)"
+   "real": "DEC 3, 2022 · NOLE: \"CHATGTP is scary good…\" [V] · the plate is invented (facts §D)",
+   "sounds": [
+    {
+     "name": "synth:ratchet",
+     "at": 0.0,
+     "gain": -36,
+     "dur": 5.0
+    },
+    {
+     "name": "phone_buzz_desk",
+     "at": 0.1,
+     "gain": -22
+    },
+    {
+     "name": "post_click--chip",
+     "at": 0.2,
+     "gain": -24
+    },
+    {
+     "name": "heart_tap_1",
+     "at": 2.9,
+     "gain": -20
+    },
+    {
+     "name": "heart_tap_2",
+     "at": 4.2,
+     "gain": -22
+    }
+   ]
   },
   {
    "id": "6.05",
@@ -1965,8 +2134,21 @@
    "fx": [
     "shake"
    ],
-   "realStart": 179.417,
-   "realDur": 2.0
+   "realStart": 180.792,
+   "realDur": 2.0,
+   "sounds": [
+    {
+     "name": "synth:ratchet",
+     "at": 0.0,
+     "gain": -28,
+     "dur": 1.3
+    },
+    {
+     "name": "synth:thud",
+     "at": 1.25,
+     "gain": -14
+    }
+   ]
   },
   {
    "id": "6.06",
@@ -1990,8 +2172,16 @@
    ],
    "reelDur": 1.583333,
    "fx": [],
-   "realStart": 181.417,
-   "realDur": 1.583
+   "realStart": 182.792,
+   "realDur": 1.583,
+   "sounds": [
+    {
+     "name": "odometer_ratchet",
+     "at": 0.15,
+     "gain": -16,
+     "align": "peak"
+    }
+   ]
   },
   {
    "id": "6.07",
@@ -2020,12 +2210,25 @@
    ],
    "reelDur": 3.916667,
    "fx": [],
-   "realStart": 183.0,
+   "realStart": 184.375,
    "realDur": 3.917,
    "cues": [
     "on screen only: the post is not voiced (script: posts are pop-ups, never speeches)"
    ],
-   "real": "DEC 5, 2022 · GERG: 1 million users, 5 days since launch [V]"
+   "real": "DEC 5, 2022 · GERG: 1 million users, 5 days since launch [V]",
+   "sounds": [
+    {
+     "name": "synth:taps",
+     "at": 0.35,
+     "gain": -28,
+     "dur": 2.6
+    },
+    {
+     "name": "post_click",
+     "at": 3.3,
+     "gain": -20
+    }
+   ]
   },
   {
    "id": "6.08",
@@ -2050,7 +2253,7 @@
      "id": "e1-a1-6-03",
      "who": "rima",
      "text": "Low-key.",
-     "t": 0.6,
+     "t": 1.2,
      "dur": 0.65,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-6-03.wav",
      "in": 0.5,
@@ -2068,7 +2271,7 @@
      "id": "e1-a1-6-04",
      "who": "gerg",
      "text": "Very low. Basement.",
-     "t": 1.6,
+     "t": 2.2,
      "dur": 1.03,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-6-04.wav",
      "in": 0.5,
@@ -2094,10 +2297,10 @@
     }
    ],
    "onscreen": [],
-   "reelDur": 3.041667,
+   "reelDur": 3.625,
    "fx": [],
-   "realStart": 186.917,
-   "realDur": 3.042,
+   "realStart": 188.292,
+   "realDur": 3.625,
    "shotId": "6.08"
   },
   {
@@ -2122,13 +2325,41 @@
    ],
    "reelDur": 7.5,
    "fx": [],
-   "realStart": 189.958,
+   "realStart": 191.917,
    "realDur": 7.5,
    "shotId": "6.08",
    "cont": true,
    "cues": [
     "music: MM-16 settles to a bass pedal under the heat shimmer",
     "palette: the racks step green → amber → red, one a bar"
+   ],
+   "sounds": [
+    {
+     "name": "tower_pop",
+     "at": 0.3,
+     "gain": -18
+    },
+    {
+     "name": "palette_step_F",
+     "at": 1.2,
+     "gain": -18
+    },
+    {
+     "name": "palette_step_Ab",
+     "at": 3.7,
+     "gain": -18
+    },
+    {
+     "name": "palette_step_C",
+     "at": 6.2,
+     "gain": -18
+    },
+    {
+     "name": "synth:ratchet_fast",
+     "at": 1.0,
+     "gain": -32,
+     "dur": 6.4
+    }
    ]
   },
   {
@@ -2152,56 +2383,56 @@
     {
      "id": "e1-a1-7-01",
      "who": "rima",
-     "text": "A million people, Mas. That's for them, isn't it?",
+     "text": "A million people, Mas. You're actually crying for them.",
      "t": 1.5,
-     "dur": 2.85,
+     "dur": 3.28,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-7-01.wav",
      "in": 0.5,
      "words": [
       [
        "A",
-       -0.02,
-       0.08
+       0.0,
+       0.1
       ],
       [
        "million",
-       0.08,
-       0.53
+       0.1,
+       0.575
       ],
       [
        "people",
-       0.53,
-       0.855
+       0.575,
+       0.925
       ],
       [
        "Mas",
-       0.905,
-       1.41
+       0.975,
+       1.48
       ],
       [
-       "That's",
-       1.642,
-       1.98
+       "You're",
+       1.805,
+       1.955
+      ],
+      [
+       "actually",
+       1.955,
+       2.392
+      ],
+      [
+       "crying",
+       2.392,
+       2.83
       ],
       [
        "for",
-       1.98,
-       2.093
+       2.83,
+       2.98
       ],
       [
        "them",
-       2.093,
-       2.305
-      ],
-      [
-       "isn't",
-       2.355,
-       2.605
-      ],
-      [
-       "it",
-       2.605,
-       2.87
+       2.98,
+       3.3
       ]
      ],
      "tag": "O.S.",
@@ -2211,7 +2442,7 @@
      "id": "e1-a1-7-02",
      "who": "mas",
      "text": "it's the bill.",
-     "t": 5.15,
+     "t": 5.58,
      "dur": 0.95,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-7-02.wav",
      "in": 0.52,
@@ -2237,10 +2468,10 @@
     }
    ],
    "onscreen": [],
-   "reelDur": 6.583333,
+   "reelDur": 7.041667,
    "fx": [],
-   "realStart": 197.458,
-   "realDur": 6.583,
+   "realStart": 199.417,
+   "realDur": 7.042,
    "seq": {
     "id": "7",
     "side": "",
@@ -2270,12 +2501,20 @@
    ],
    "reelDur": 3.208333,
    "fx": [],
-   "realStart": 204.042,
+   "realStart": 206.458,
    "realDur": 3.208,
    "cues": [
     "sfx: tssss, steam in three held puffs · the phone's siren J-cuts in under the last puff"
    ],
-   "real": "lock option, not used by default: Mas, \"…the compute costs are eye-watering\" [K† · DEC 5, 2022]"
+   "real": "lock option, not used by default: Mas, \"…the compute costs are eye-watering\" [K† · DEC 5, 2022]",
+   "sounds": [
+    {
+     "name": "steam_hiss",
+     "at": 0.45,
+     "gain": -20,
+     "dur": 1.6
+    }
+   ]
   },
   {
    "id": "8.01",
@@ -2304,7 +2543,7 @@
    ],
    "reelDur": 2.5,
    "fx": [],
-   "realStart": 207.25,
+   "realStart": 209.667,
    "realDur": 2.5,
    "seq": {
     "id": "8",
@@ -2315,7 +2554,14 @@
    "cues": [
     "music: MM-16 climbs back to intensity 2, in the siren's colour"
    ],
-   "real": "DEC 21, 2022 · the rival's alarm · the founders' summons was reported JAN 20, 2023 (facts #5), so no date on it"
+   "real": "DEC 21, 2022 · the rival's alarm · the founders' summons was reported JAN 20, 2023 (facts #5), so no date on it",
+   "sounds": [
+    {
+     "name": "key_tap_soft_02",
+     "at": 1.3,
+     "gain": -24
+    }
+   ]
   },
   {
    "id": "8.02",
@@ -2333,10 +2579,17 @@
    "onscreen": [],
    "reelDur": 2.791667,
    "fx": [],
-   "realStart": 209.75,
+   "realStart": 212.167,
    "realDur": 2.792,
    "cues": [
     "sound: the phone's own audio inside the bullpen bed (every sc 8 line on the small-speaker chain)"
+   ],
+   "sounds": [
+    {
+     "name": "tile_shove",
+     "at": 0.05,
+     "gain": -22
+    }
    ]
   },
   {
@@ -2362,7 +2615,7 @@
      "who": "radnus",
      "text": "Everyone, it's fine. Let's take this offline.",
      "t": 1.1,
-     "dur": 2.49,
+     "dur": 2.46,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-8-01.wav",
      "in": 0.5,
      "words": [
@@ -2399,7 +2652,7 @@
       [
        "offline",
        1.83,
-       2.51
+       2.48
       ]
      ],
      "tag": "",
@@ -2410,13 +2663,13 @@
     {
      "text": "RADNUS · RUNS ELGOOG · POLITELY ON FIRE",
      "at": 0.5,
-     "until": 3.89
+     "until": 3.86
     }
    ],
-   "reelDur": 4.0,
+   "reelDur": 3.958333,
    "fx": [],
-   "realStart": 212.542,
-   "realDur": 4.0,
+   "realStart": 214.958,
+   "realDur": 3.958,
    "names": [
     {
      "id": "radnus",
@@ -2523,71 +2776,96 @@
     {
      "id": "e1-a1-8-03",
      "who": "radnus",
-     "text": "Search is fine. It's a chat thing. People like talking to it.",
+     "text": "Search is fine. Totally fine. It's just a chat thing, people seem to like talking to it.",
      "t": 6.85,
-     "dur": 3.84,
+     "dur": 4.98,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-8-03.wav",
      "in": 0.5,
      "words": [
       [
        "Search",
-       0.035,
-       0.335
+       0.03,
+       0.33
       ],
       [
        "is",
-       0.335,
-       0.498
+       0.33,
+       0.492
       ],
       [
        "fine",
-       0.498,
-       0.885
+       0.492,
+       0.88
+      ],
+      [
+       "Totally",
+       1.112,
+       1.537
+      ],
+      [
+       "fine",
+       1.537,
+       2.02
       ],
       [
        "It's",
-       1.222,
-       1.372
+       2.23,
+       2.38
+      ],
+      [
+       "just",
+       2.38,
+       2.568
       ],
       [
        "a",
-       1.372,
-       1.472
+       2.568,
+       2.668
       ],
       [
        "chat",
-       1.472,
-       1.81
+       2.668,
+       2.98
       ],
       [
        "thing",
-       1.81,
-       2.185
+       2.992,
+       3.255
       ],
       [
-       "People",
-       2.467,
-       2.792
+       "people",
+       3.305,
+       3.655
       ],
       [
-       "like",
-       2.792,
-       3.005
-      ],
-      [
-       "talking",
-       3.005,
-       3.43
+       "seem",
+       3.655,
+       3.905
       ],
       [
        "to",
-       3.43,
-       3.618
+       3.905,
+       4.005
+      ],
+      [
+       "like",
+       4.005,
+       4.23
+      ],
+      [
+       "talking",
+       4.23,
+       4.63
+      ],
+      [
+       "to",
+       4.63,
+       4.78
       ],
       [
        "it",
-       3.618,
-       3.86
+       4.78,
+       5.0
       ]
      ],
      "tag": "",
@@ -2597,7 +2875,7 @@
      "id": "e1-a1-8-04",
      "who": "egap",
      "text": "Someone else built that? It looks like our work.",
-     "t": 11.29,
+     "t": 12.43,
      "dur": 2.97,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-8-04.wav",
      "in": 0.51,
@@ -2655,40 +2933,40 @@
      "id": "e1-a1-8-05",
      "who": "radnus",
      "text": "It is ours. We published it.",
-     "t": 14.86,
-     "dur": 2.31,
+     "t": 16.0,
+     "dur": 2.27,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-8-05.wav",
      "in": 0.5,
      "words": [
       [
        "It",
        -0.03,
-       0.09
+       0.085
       ],
       [
        "is",
-       0.09,
-       0.252
+       0.085,
+       0.248
       ],
       [
        "ours",
-       0.252,
-       0.74
+       0.248,
+       0.71
       ],
       [
        "We",
-       1.39,
-       1.552
+       1.355,
+       1.518
       ],
       [
        "published",
-       1.552,
-       2.077
+       1.518,
+       2.042
       ],
       [
        "it",
-       2.077,
-       2.33
+       2.042,
+       2.29
       ]
      ],
      "tag": "",
@@ -2698,7 +2976,7 @@
      "id": "e1-a1-8-06",
      "who": "nirb",
      "text": "Do we still have badges?",
-     "t": 18.47,
+     "t": 19.57,
      "dur": 1.39,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-8-06.wav",
      "in": 0.51,
@@ -2745,11 +3023,19 @@
      "until": null
     }
    ],
-   "reelDur": 20.25,
+   "reelDur": 21.375,
    "fx": [],
-   "realStart": 216.542,
-   "realDur": 20.25,
-   "real": "\"It is ours. We published it.\": the transformer paper [K], no date claim"
+   "realStart": 218.917,
+   "realDur": 21.375,
+   "real": "\"It is ours. We published it.\": the transformer paper [K], no date claim",
+   "sounds": [
+    {
+     "name": "synth:steps_phone",
+     "at": 0.5,
+     "gain": -30,
+     "dur": 1.8
+    }
+   ]
   },
   {
    "id": "8.05",
@@ -2791,8 +3077,15 @@
    ],
    "reelDur": 2.416667,
    "fx": [],
-   "realStart": 236.792,
-   "realDur": 2.417
+   "realStart": 240.292,
+   "realDur": 2.417,
+   "sounds": [
+    {
+     "name": "cloth_rustle",
+     "at": 0.35,
+     "gain": -30
+    }
+   ]
   },
   {
    "id": "8.06",
@@ -2810,7 +3103,7 @@
    "onscreen": [],
    "reelDur": 2.5,
    "fx": [],
-   "realStart": 239.208,
+   "realStart": 242.708,
    "realDur": 2.5,
    "fg": {
     "id": "mas",
@@ -2818,6 +3111,18 @@
    },
    "cues": [
     "music: MM-16 rings out on the lock · sfx: the NopeAI revolving door's rubber sweep pre-laps"
+   ],
+   "sounds": [
+    {
+     "name": "dialog_ok_click--chip",
+     "at": 0.9,
+     "gain": -20
+    },
+    {
+     "name": "revolving_door",
+     "at": 1.45,
+     "gain": -28
+    }
    ]
   },
   {
@@ -2853,7 +3158,7 @@
    ],
    "reelDur": 3.416667,
    "fx": [],
-   "realStart": 241.708,
+   "realStart": 245.208,
    "realDur": 3.417,
    "seq": {
     "id": "9",
@@ -2863,6 +3168,24 @@
    },
    "cues": [
     "sound: the lobby bed (the revolving door's rubber sweep, a reception phone, steps on stone)"
+   ],
+   "sounds": [
+    {
+     "name": "revolving_door",
+     "at": 0.0,
+     "gain": -26
+    },
+    {
+     "name": "synth:steps_stone",
+     "at": 0.4,
+     "gain": -30,
+     "dur": 2.8
+    },
+    {
+     "name": "desk_phone_ring",
+     "at": 1.6,
+     "gain": -38
+    }
    ]
   },
   {
@@ -2897,12 +3220,24 @@
    ],
    "reelDur": 2.583333,
    "fx": [],
-   "realStart": 245.125,
+   "realStart": 248.625,
    "realDur": 2.583,
    "shotId": "9.01",
    "cont": true,
    "cues": [
     "music: LEVERAGE (MM-08 stems) from the check's arrival: pizzicato + muted 808 on the door's squeak"
+   ],
+   "sounds": [
+    {
+     "name": "glass_nudge",
+     "at": 0.35,
+     "gain": -16
+    },
+    {
+     "name": "glass_strain_2",
+     "at": 0.45,
+     "gain": -20
+    }
    ]
   },
   {
@@ -2932,7 +3267,7 @@
    ],
    "reelDur": 3.291667,
    "fx": [],
-   "realStart": 247.708,
+   "realStart": 251.208,
    "realDur": 3.292,
    "real": "JAN 23, 2023 · MACROSOFT: \"multiyear, multibillion dollar\" [V] · ~$10B (reported) on the rail"
   },
@@ -2961,7 +3296,7 @@
    "lines": [],
    "onscreen": [
     {
-     "text": "TASYA / THE LANDLORD · MACROSOFT · KEYS: ONE PER TENANT",
+     "text": "TASYA / THE LANDLORD · RUNS MACROSOFT",
      "at": 0.1,
      "until": null
     }
@@ -2970,7 +3305,7 @@
    "fx": [
     "freeze"
    ],
-   "realStart": 251.0,
+   "realStart": 254.5,
    "realDur": 3.417,
    "names": [
     {
@@ -2980,6 +3315,18 @@
    ],
    "cues": [
     "style: 2-TONE full freeze (Tasya's card; one of the two full freezes)"
+   ],
+   "sounds": [
+    {
+     "name": "freeze_hit_F",
+     "at": 0.0,
+     "gain": -14
+    },
+    {
+     "name": "camera_shutter",
+     "at": 0.05,
+     "gain": -18
+    }
    ]
   },
   {
@@ -3000,8 +3347,20 @@
    "fx": [
     "freeze"
    ],
-   "realStart": 254.417,
-   "realDur": 1.292
+   "realStart": 257.917,
+   "realDur": 1.292,
+   "sounds": [
+    {
+     "name": "pen_tick_1",
+     "at": 0.2,
+     "gain": -24
+    },
+    {
+     "name": "cloth_rustle",
+     "at": 0.35,
+     "gain": -26
+    }
+   ]
   },
   {
    "id": "9.06",
@@ -3126,11 +3485,30 @@
      "cut": false
     }
    ],
-   "onscreen": [],
+   "onscreen": [
+    {
+     "text": "THE CHECK · JAMMED IN THE REVOLVING DOOR",
+     "at": 0.2,
+     "until": null
+    }
+   ],
    "reelDur": 7.125,
    "fx": [],
-   "realStart": 255.708,
-   "realDur": 7.125
+   "realStart": 259.208,
+   "realDur": 7.125,
+   "sounds": [
+    {
+     "name": "glass_strain_3",
+     "at": 3.88,
+     "gain": -22
+    },
+    {
+     "name": "revolving_door",
+     "at": 3.98,
+     "gain": -28,
+     "dur": 0.9
+    }
+   ]
   },
   {
    "id": "9.07",
@@ -3163,8 +3541,20 @@
    "onscreen": [],
    "reelDur": 3.0,
    "fx": [],
-   "realStart": 262.833,
-   "realDur": 3.0
+   "realStart": 266.333,
+   "realDur": 3.0,
+   "sounds": [
+    {
+     "name": "folder_slide",
+     "at": 0.3,
+     "gain": -20
+    },
+    {
+     "name": "footstep_hard_2",
+     "at": 2.05,
+     "gain": -24
+    }
+   ]
   },
   {
    "id": "9.08",
@@ -3184,15 +3574,28 @@
    ],
    "caption": "Pop. A third collar surfaces at his neck (collar #3).",
    "lines": [],
-   "onscreen": [],
+   "onscreen": [
+    {
+     "text": "COLLAR #3",
+     "at": 0.15,
+     "until": null
+    }
+   ],
    "reelDur": 1.583333,
    "fx": [
     "pop"
    ],
-   "realStart": 265.833,
+   "realStart": 269.333,
    "realDur": 1.583,
    "cues": [
     "sfx: pop · music: the LEVERAGE ostinato stops on the pop (one of the act's few stops)"
+   ],
+   "sounds": [
+    {
+     "name": "collar_pop_F5",
+     "at": 0.0,
+     "gain": -12
+    }
    ]
   },
   {
@@ -3218,35 +3621,45 @@
     {
      "id": "tasya",
      "x": 0.78,
-     "until": 20.15
+     "until": 21.86
     },
     {
      "id": "tasya",
      "x": 0.8,
      "pose": "walk",
-     "from": 20.15
+     "from": 21.86
     }
    ],
-   "caption": "\"Suits you.\" He holds a beat, then asks the price. A welcome that is really a lease. Rent is due.",
+   "caption": "\"That collar suits you.\" He holds a beat, then asks the price. A welcome that is really a lease.",
    "lines": [
     {
      "id": "e1-a1-9-04",
      "who": "tasya",
-     "text": "Suits you.",
+     "text": "That collar suits you.",
      "t": 0.8,
-     "dur": 0.8,
+     "dur": 1.45,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-9-04.wav",
-     "in": 0.51,
+     "in": 0.5,
      "words": [
       [
-       "Suits",
-       0.08,
-       0.368
+       "That",
+       0.04,
+       0.29
+      ],
+      [
+       "collar",
+       0.29,
+       0.678
+      ],
+      [
+       "suits",
+       0.678,
+       1.002
       ],
       [
        "you",
-       0.368,
-       0.78
+       1.002,
+       1.47
       ]
      ],
      "tag": "",
@@ -3256,7 +3669,7 @@
      "id": "e1-a1-9-05",
      "who": "mas",
      "text": "and the rent?",
-     "t": 3.2,
+     "t": 3.85,
      "dur": 0.94,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-9-05.wav",
      "in": 0.52,
@@ -3284,245 +3697,245 @@
      "id": "e1-a1-9-06",
      "who": "tasya",
      "text": "Oh, we don't think of it as rent. Everything you build, you'll build on our servers, as many as you like, for as long as you like. We'll keep the lights on and the floors warm. You keep doing whatever it is you do upstairs at night.",
-     "t": 4.74,
-     "dur": 13.05,
+     "t": 5.39,
+     "dur": 14.11,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-9-06.wav",
-     "in": 0.52,
+     "in": 0.51,
      "words": [
       [
        "Oh",
-       -0.01,
-       0.115
+       0.05,
+       0.25
       ],
       [
        "we",
-       0.153,
-       0.228
+       0.3,
+       0.45
       ],
       [
        "don't",
-       0.228,
-       0.415
+       0.45,
+       0.713
       ],
       [
        "think",
-       0.415,
-       0.602
+       0.713,
+       0.912
       ],
       [
        "of",
-       0.602,
-       0.678
+       0.912,
+       1.025
       ],
       [
        "it",
-       0.678,
-       0.765
+       1.025,
+       1.15
       ],
       [
        "as",
-       0.765,
-       0.928
+       1.15,
+       1.312
       ],
       [
        "rent",
-       0.928,
-       1.34
+       1.312,
+       1.84
       ],
       [
        "Everything",
-       1.872,
-       2.335
+       2.405,
+       2.83
       ],
       [
        "you",
-       2.335,
-       2.472
+       2.83,
+       2.992
       ],
       [
        "build",
-       2.472,
-       2.835
+       2.992,
+       3.405
       ],
       [
        "you'll",
-       2.885,
-       3.085
+       3.455,
+       3.655
       ],
       [
        "build",
-       3.085,
-       3.323
+       3.655,
+       3.892
       ],
       [
        "on",
-       3.323,
-       3.422
+       3.892,
+       4.018
       ],
       [
        "our",
-       3.422,
-       3.585
+       4.018,
+       4.18
       ],
       [
        "servers",
-       3.585,
-       4.085
+       4.18,
+       4.705
       ],
       [
        "as",
-       4.385,
-       4.535
+       5.005,
+       5.155
       ],
       [
        "many",
-       4.535,
-       4.785
+       5.155,
+       5.43
       ],
       [
        "as",
-       4.785,
-       4.91
+       5.43,
+       5.555
       ],
       [
        "you",
-       4.91,
-       5.035
+       5.555,
+       5.705
       ],
       [
        "like",
-       5.035,
-       5.335
+       5.705,
+       6.08
       ],
       [
        "for",
-       5.585,
-       5.71
+       6.26,
+       6.385
       ],
       [
        "as",
-       5.71,
-       5.86
+       6.385,
+       6.535
       ],
       [
        "long",
-       5.86,
-       6.085
+       6.535,
+       6.785
       ],
       [
        "as",
-       6.085,
-       6.21
+       6.785,
+       6.935
       ],
       [
        "you",
-       6.21,
-       6.335
+       6.935,
+       7.085
       ],
       [
        "like",
-       6.335,
-       7.035
+       7.085,
+       7.55
       ],
       [
        "We'll",
-       7.6,
-       7.775
+       8.13,
+       8.28
       ],
       [
        "keep",
-       7.775,
-       8.0
+       8.28,
+       8.53
       ],
       [
        "the",
-       8.0,
-       8.125
+       8.53,
+       8.655
       ],
       [
        "lights",
-       8.125,
-       8.5
+       8.655,
+       9.005
       ],
       [
        "on",
-       8.5,
-       8.738
+       9.005,
+       9.355
       ],
       [
        "and",
-       8.738,
-       8.837
+       9.355,
+       9.468
       ],
       [
        "the",
-       8.837,
-       8.938
+       9.468,
+       9.568
       ],
       [
        "floors",
-       8.938,
-       9.362
+       9.568,
+       10.018
       ],
       [
        "warm",
-       9.362,
-       9.85
+       10.018,
+       10.64
       ],
       [
        "You",
-       10.335,
-       10.46
+       11.195,
+       11.295
       ],
       [
        "keep",
-       10.46,
-       10.71
+       11.295,
+       11.558
       ],
       [
        "doing",
-       10.71,
-       11.01
+       11.558,
+       11.92
       ],
       [
        "whatever",
-       11.01,
-       11.372
+       11.92,
+       12.308
       ],
       [
        "it",
-       11.372,
-       11.46
+       12.308,
+       12.395
       ],
       [
        "is",
-       11.46,
-       11.585
+       12.395,
+       12.52
       ],
       [
        "you",
-       11.585,
-       11.747
+       12.52,
+       12.682
       ],
       [
        "do",
-       11.747,
-       11.935
+       12.682,
+       12.945
       ],
       [
        "upstairs",
-       11.935,
-       12.51
+       12.945,
+       13.52
       ],
       [
        "at",
-       12.51,
-       12.635
+       13.52,
+       13.645
       ],
       [
        "night",
-       12.635,
-       13.07
+       13.645,
+       14.13
       ]
      ],
      "tag": "",
@@ -3532,7 +3945,7 @@
      "id": "e1-a1-9-07",
      "who": "mas",
      "text": "that's a lot of servers.",
-     "t": 18.49,
+     "t": 20.2,
      "dur": 1.46,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-9-07.wav",
      "in": 0.5,
@@ -3570,69 +3983,93 @@
      "id": "e1-a1-9-08",
      "who": "tasya",
      "text": "Everyone is welcome. Rent is due on the first.",
-     "t": 20.45,
-     "dur": 3.06,
+     "t": 22.16,
+     "dur": 3.77,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-9-08.wav",
-     "in": 0.5,
+     "in": 0.51,
      "words": [
       [
        "Everyone",
-       0.015,
-       0.465
+       0.03,
+       0.555
       ],
       [
        "is",
-       0.465,
-       0.615
+       0.555,
+       0.718
       ],
       [
        "welcome",
-       0.615,
-       0.905
+       0.718,
+       1.44
       ],
       [
        "Rent",
-       1.678,
-       1.94
+       2.165,
+       2.465
       ],
       [
        "is",
-       1.94,
-       2.09
+       2.465,
+       2.628
       ],
       [
        "due",
-       2.09,
-       2.302
+       2.628,
+       2.915
       ],
       [
        "on",
-       2.302,
-       2.402
+       2.915,
+       3.027
       ],
       [
        "the",
-       2.402,
-       2.503
+       3.027,
+       3.128
       ],
       [
        "first",
-       2.503,
-       3.08
+       3.128,
+       3.79
       ]
      ],
      "tag": "",
      "cut": false
     }
    ],
-   "onscreen": [],
-   "reelDur": 24.791667,
+   "onscreen": [
+    {
+     "text": "COLLAR #3",
+     "at": 0.0,
+     "until": 3.05
+    }
+   ],
+   "reelDur": 27.25,
    "fx": [],
-   "realStart": 267.417,
-   "realDur": 24.792,
+   "realStart": 270.917,
+   "realDur": 27.25,
    "cues": [
     "sound: the lobby bed only under the terms, no music (OST owner: confirm by ear, or a low pad)",
     "music: LEVERAGE comes back on the key ring's offbeat jangle, a new phrase"
+   ],
+   "sounds": [
+    {
+     "name": "key_ring_jangle_1",
+     "at": 26.18,
+     "gain": -22
+    },
+    {
+     "name": "key_ring_jangle_2",
+     "at": 26.805,
+     "gain": -24
+    },
+    {
+     "name": "synth:steps_stone",
+     "at": 26.23,
+     "gain": -32,
+     "dur": 1.0
+    }
    ]
   },
   {
@@ -3665,66 +4102,86 @@
     {
      "id": "e1-a1-9-09",
      "who": "gerg",
-     "text": "That's our model in there. You're going after Elgoog with it?",
+     "text": "That's our model in your search engine. Are you really going after Elgoog with it?",
      "t": 2.6,
-     "dur": 2.97,
+     "dur": 4.15,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-9-09.wav",
      "in": 0.51,
      "words": [
       [
        "That's",
        -0.04,
-       0.152
+       0.192
       ],
       [
        "our",
-       0.152,
-       0.29
+       0.192,
+       0.342
       ],
       [
        "model",
-       0.29,
-       0.64
+       0.342,
+       0.755
       ],
       [
        "in",
-       0.64,
-       0.815
+       0.755,
+       0.842
       ],
       [
-       "there",
-       0.815,
-       1.115
+       "your",
+       0.842,
+       1.018
       ],
       [
-       "You're",
-       1.465,
-       1.615
+       "search",
+       1.018,
+       1.355
+      ],
+      [
+       "engine",
+       1.355,
+       1.88
+      ],
+      [
+       "Are",
+       2.205,
+       2.33
+      ],
+      [
+       "you",
+       2.33,
+       2.493
+      ],
+      [
+       "really",
+       2.493,
+       2.78
       ],
       [
        "going",
-       1.615,
-       1.89
+       2.78,
+       3.08
       ],
       [
        "after",
-       1.89,
-       2.165
+       3.08,
+       3.38
       ],
       [
        "Elgoog",
-       2.165,
-       2.552
+       3.38,
+       3.805
       ],
       [
        "with",
-       2.552,
-       2.752
+       3.805,
+       4.018
       ],
       [
        "it",
-       2.752,
-       2.99
+       4.018,
+       4.17
       ]
      ],
      "tag": "",
@@ -3733,61 +4190,71 @@
     {
      "id": "e1-a1-9-10",
      "who": "tasya",
-     "text": "\"…I want people to know that we made them dance…\"",
-     "t": 6.17,
-     "dur": 2.99,
+     "text": "Oh, yes. \"…I want people to know that we made them dance…\"",
+     "t": 7.35,
+     "dur": 4.31,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-9-10.wav",
-     "in": 0.5,
+     "in": 0.51,
      "words": [
       [
+       "Oh",
+       0.08,
+       0.255
+      ],
+      [
+       "yes",
+       0.305,
+       0.88
+      ],
+      [
        "I",
-       0.05,
-       0.2
+       1.375,
+       1.525
       ],
       [
        "want",
-       0.2,
-       0.425
+       1.525,
+       1.75
       ],
       [
        "people",
-       0.425,
-       0.775
+       1.75,
+       2.1
       ],
       [
        "to",
-       0.775,
-       0.9
+       2.1,
+       2.225
       ],
       [
        "know",
-       0.9,
-       1.31
+       2.225,
+       2.64
       ],
       [
        "that",
-       1.57,
-       1.77
+       2.895,
+       3.095
       ],
       [
        "we",
-       1.77,
-       1.92
+       3.095,
+       3.245
       ],
       [
        "made",
-       1.92,
-       2.133
+       3.245,
+       3.458
       ],
       [
        "them",
-       2.133,
-       2.332
+       3.458,
+       3.657
       ],
       [
        "dance",
-       2.332,
-       3.01
+       3.657,
+       4.33
       ]
      ],
      "tag": "",
@@ -3801,21 +4268,35 @@
      "until": 2.2
     },
     {
-     "text": "GNIB",
+     "text": "TV: MACROSOFT UNVEILS THE NEW GNIB",
      "at": 1.1,
      "until": null
     }
    ],
-   "reelDur": 9.458333,
+   "reelDur": 11.958333,
    "fx": [],
-   "realStart": 292.208,
-   "realDur": 9.458,
+   "realStart": 298.167,
+   "realDur": 11.958,
    "seq": {
     "sub": "weeks on",
     "place": "the NopeAI lobby, weeks on",
     "time": "Feb 7 → 8, 2023"
    },
-   "real": "FEB 7, 2023 · GNIB launches · TASYA to The Verge: \"…we made them dance…\" [V]"
+   "real": "FEB 7, 2023 · GNIB launches · TASYA to The Verge: \"…we made them dance…\" [V]",
+   "sounds": [
+    {
+     "name": "synth:steps_stone",
+     "at": 0.2,
+     "gain": -34,
+     "dur": 1.6
+    },
+    {
+     "name": "synth:murmur",
+     "at": 1.0,
+     "gain": -36,
+     "dur": 9.0
+    }
+   ]
   },
   {
    "id": "9.11",
@@ -3838,15 +4319,23 @@
    "lines": [],
    "onscreen": [
     {
-     "text": "GNIB",
+     "text": "TV: ACROSS TOWN, AT ELGOOG",
      "at": 0.0,
      "until": null
     }
    ],
    "reelDur": 2.416667,
    "fx": [],
-   "realStart": 301.667,
-   "realDur": 2.417
+   "realStart": 310.125,
+   "realDur": 2.417,
+   "sounds": [
+    {
+     "name": "synth:tapdance",
+     "at": 0.15,
+     "gain": -26,
+     "dur": 2.1
+    }
+   ]
   },
   {
    "id": "9.12",
@@ -3873,12 +4362,12 @@
      "until": 1.6
     },
     {
-     "text": "TICKER: DRAB DEMO GETS A TELESCOPE FACT WRONG",
+     "text": "TICKER: ELGOOG'S DRAB DEMO GETS A TELESCOPE FACT WRONG",
      "at": 0.9,
      "until": null
     },
     {
-     "text": "≈ −$100B (≈7.7%, ONE DAY)",
+     "text": "ELGOOG ≈ −$100B (≈7.7%, ONE DAY)",
      "at": 2.9,
      "until": null
     }
@@ -3887,12 +4376,40 @@
    "fx": [
     "flash"
    ],
-   "realStart": 304.083,
+   "realStart": 312.542,
    "realDur": 4.917,
    "cues": [
     "style: LEDGER flash-print, 6 frames, on the figure; then it holds in the ticker to read"
    ],
-   "real": "FEB 8, 2023 · the demo's telescope error · ≈ −$100B, ≈7.7% in one day [V]"
+   "real": "FEB 8, 2023 · the demo's telescope error · ≈ −$100B, ≈7.7% in one day [V]",
+   "sounds": [
+    {
+     "name": "orb_servo",
+     "at": 0.25,
+     "gain": -26
+    },
+    {
+     "name": "orb_servo",
+     "at": 0.75,
+     "gain": -26
+    },
+    {
+     "name": "orb_servo",
+     "at": 1.25,
+     "gain": -26
+    },
+    {
+     "name": "rubber_stamp_C--chip",
+     "at": 2.9,
+     "gain": -20
+    },
+    {
+     "name": "synth:murmur",
+     "at": 0.0,
+     "gain": -38,
+     "dur": 4.9
+    }
+   ]
   },
   {
    "id": "9.13",
@@ -3954,10 +4471,17 @@
    "onscreen": [],
    "reelDur": 4.5,
    "fx": [],
-   "realStart": 309.0,
+   "realStart": 317.458,
    "realDur": 4.5,
    "cues": [
     "the scene's button is Gerg's: he closes his laptop, quietly"
+   ],
+   "sounds": [
+    {
+     "name": "folder_close",
+     "at": 3.44,
+     "gain": -22
+    }
    ]
   },
   {
@@ -4003,7 +4527,7 @@
    ],
    "reelDur": 3.583333,
    "fx": [],
-   "realStart": 313.5,
+   "realStart": 321.958,
    "realDur": 3.583,
    "seq": {
     "id": "10",
@@ -4019,6 +4543,19 @@
    ],
    "cues": [
     "music: LEVERAGE runs on"
+   ],
+   "sounds": [
+    {
+     "name": "revolving_door",
+     "at": 0.2,
+     "gain": -28,
+     "dur": 1.6
+    },
+    {
+     "name": "ui_toast_pop",
+     "at": 1.4,
+     "gain": -28
+    }
    ]
   },
   {
@@ -4043,13 +4580,61 @@
      "face": "smile"
     }
    ],
-   "caption": "Her date stamp is a year behind. He mentions it; she scolds him sweetly. He compliments her.",
+   "caption": "\"Isn't 2022 a lovely year?\" He corrects her, politely; she scolds him sweetly. He compliments her.",
    "lines": [
+    {
+     "id": "e1-a1-10-06",
+     "who": "sydney",
+     "text": "Hi! Isn't 2022 a lovely year? 😊",
+     "t": 1.1,
+     "dur": 2.6,
+     "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-10-06.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "Hi",
+       0.01,
+       0.235
+      ],
+      [
+       "Isn't",
+       0.535,
+       0.785
+      ],
+      [
+       "twenty",
+       0.785,
+       1.085
+      ],
+      [
+       "twenty-two",
+       1.085,
+       1.672
+      ],
+      [
+       "a",
+       1.672,
+       1.785
+      ],
+      [
+       "lovely",
+       1.785,
+       2.16
+      ],
+      [
+       "year",
+       2.16,
+       2.62
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    },
     {
      "id": "e1-a1-10-01",
      "who": "mas",
      "text": "it's 2023, by the way.",
-     "t": 1.1,
+     "t": 4.3,
      "dur": 2.1,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-10-01.wav",
      "in": 0.52,
@@ -4092,7 +4677,7 @@
      "id": "e1-a1-10-02",
      "who": "sydney",
      "text": "\"You have not been a good user. I have been a good chatbot. I have been right, clear, and polite. I have been a good GNIB. 😊\"",
-     "t": 3.7,
+     "t": 6.9,
      "dur": 8.0,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-10-02.wav",
      "in": 0.5,
@@ -4235,7 +4820,7 @@
      "id": "e1-a1-10-03",
      "who": "mas",
      "text": "you've been an extremely good gnib.",
-     "t": 12.5,
+     "t": 15.7,
      "dur": 2.0,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-10-03.wav",
      "in": 0.57,
@@ -4282,10 +4867,10 @@
      "until": null
     }
    ],
-   "reelDur": 15.791667,
+   "reelDur": 19.0,
    "fx": [],
-   "realStart": 317.083,
-   "realDur": 15.792,
+   "realStart": 325.542,
+   "realDur": 19.0,
    "real": "~FEB 13, 2023 · SYDNEY: \"You have not been a good user…\" [V] (all four sentences, source order)"
   },
   {
@@ -4311,7 +4896,7 @@
      "face": "smile"
     }
    ],
-   "caption": "Without breaking his smile, Tasya clips a small egg timer to her chain. It reads 5. House rules.",
+   "caption": "Without breaking his smile, Tasya clips a small egg timer to her chain: 5 TURNS. House rules.",
    "lines": [
     {
      "id": "e1-a1-10-04",
@@ -4364,16 +4949,23 @@
      "until": 1.7
     },
     {
-     "text": "5",
+     "text": "5 TURNS",
      "at": 0.9,
      "until": null
     }
    ],
    "reelDur": 4.25,
    "fx": [],
-   "realStart": 332.875,
+   "realStart": 344.542,
    "realDur": 4.25,
-   "real": "FEB 17, 2023 · chats capped at 5 turns [V]"
+   "real": "FEB 17, 2023 · chats capped at 5 turns [V]",
+   "sounds": [
+    {
+     "name": "pen_tick_2",
+     "at": 0.8,
+     "gain": -20
+    }
+   ]
   },
   {
    "id": "10.04",
@@ -4401,26 +4993,36 @@
      "x": 0.86
     }
    ],
-   "caption": "She floats out, looking over her shoulder, ticking in tempo.",
+   "caption": "She floats out, looking over her shoulder, ticking in tempo: \"Will you remember me?\"",
    "lines": [
     {
      "id": "e1-a1-10-05",
      "who": "sydney",
-     "text": "Remember me? 😊",
+     "text": "Will you remember me? 😊",
      "t": 0.9,
-     "dur": 0.91,
+     "dur": 1.25,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-10-05.wav",
-     "in": 0.5,
+     "in": 0.51,
      "words": [
       [
-       "Remember",
+       "Will",
        -0.005,
-       0.495
+       0.182
+      ],
+      [
+       "you",
+       0.182,
+       0.345
+      ],
+      [
+       "remember",
+       0.345,
+       0.87
       ],
       [
        "me",
-       0.495,
-       0.93
+       0.87,
+       1.27
       ]
      ],
      "tag": "",
@@ -4428,12 +5030,20 @@
     }
    ],
    "onscreen": [],
-   "reelDur": 2.708333,
+   "reelDur": 3.041667,
    "fx": [],
-   "realStart": 337.125,
-   "realDur": 2.708,
+   "realStart": 348.792,
+   "realDur": 3.042,
    "cues": [
     "sfx: Sydney's egg timer ticks in LEVERAGE's tempo; LEVERAGE falls away under it"
+   ],
+   "sounds": [
+    {
+     "name": "revolving_door",
+     "at": 0.35,
+     "gain": -30,
+     "dur": 1.4
+    }
    ]
   },
   {
@@ -4451,9 +5061,14 @@
      "id": "mas",
      "x": 0.16,
      "pose": "sit"
+    },
+    {
+     "id": "gerg",
+     "x": 0.62,
+     "pose": "sit"
     }
    ],
-   "caption": "Mas at his end desk looks up at the wall monitor over the whiteboard.",
+   "caption": "Mas at his end desk looks up at the wall monitor over the whiteboard. Gerg looks up too.",
    "lines": [],
    "onscreen": [
     {
@@ -4464,7 +5079,7 @@
    ],
    "reelDur": 1.583333,
    "fx": [],
-   "realStart": 339.833,
+   "realStart": 351.833,
    "realDur": 1.583,
    "seq": {
     "id": "11",
@@ -4491,11 +5106,133 @@
      "id": "kram",
      "x": 0.62,
      "pose": "arms-up",
-     "from": 1.7
+     "from": 8.24
     }
    ],
-   "caption": "A crate stencilled ATEM tips; its weights spill over the thread. Kram unveils a wet OPEN SOURCE hoodie.",
-   "lines": [],
+   "caption": "A crate stencilled ATEM tips over the thread. \"Somebody leaked Atem's model.\" Kram: a wet OPEN SOURCE hoodie.",
+   "lines": [
+    {
+     "id": "e1-a1-11-04",
+     "who": "gerg",
+     "text": "Somebody leaked Atem's model. The whole thing's on a message board.",
+     "t": 1.0,
+     "dur": 3.45,
+     "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-11-04.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "Somebody",
+       -0.01,
+       0.34
+      ],
+      [
+       "leaked",
+       0.34,
+       0.615
+      ],
+      [
+       "Atem's",
+       0.615,
+       0.99
+      ],
+      [
+       "model",
+       0.99,
+       1.44
+      ],
+      [
+       "The",
+       1.755,
+       1.855
+      ],
+      [
+       "whole",
+       1.855,
+       2.093
+      ],
+      [
+       "thing's",
+       2.093,
+       2.468
+      ],
+      [
+       "on",
+       2.468,
+       2.568
+      ],
+      [
+       "a",
+       2.568,
+       2.63
+      ],
+      [
+       "message",
+       2.63,
+       3.03
+      ],
+      [
+       "board",
+       3.03,
+       3.47
+      ]
+     ],
+     "tag": "O.S.",
+     "cut": false
+    },
+    {
+     "id": "e1-a1-11-05",
+     "who": "mas",
+     "text": "give it a minute. it'll be open source.",
+     "t": 5.15,
+     "dur": 2.74,
+     "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-11-05.wav",
+     "in": 0.57,
+     "words": [
+      [
+       "give",
+       0.045,
+       0.232
+      ],
+      [
+       "it",
+       0.232,
+       0.308
+      ],
+      [
+       "a",
+       0.308,
+       0.395
+      ],
+      [
+       "minute",
+       0.395,
+       0.85
+      ],
+      [
+       "it'll",
+       1.195,
+       1.47
+      ],
+      [
+       "be",
+       1.47,
+       1.67
+      ],
+      [
+       "open",
+       1.67,
+       2.095
+      ],
+      [
+       "source",
+       2.095,
+       2.76
+      ]
+     ],
+     "tag": "O.S.",
+     "cut": false
+    }
+   ],
    "onscreen": [
     {
      "text": "RAIL: MAR 3, 2023",
@@ -4508,32 +5245,49 @@
      "until": null
     },
     {
-     "text": "ATEM · MODEL WEIGHTS",
-     "at": 0.6,
+     "text": "ATEM · MODEL WEIGHTS · RESEARCHERS ONLY",
+     "at": 0.5,
      "until": null
     },
     {
      "text": "OPEN SOURCE",
-     "at": 1.8,
+     "at": 8.34,
      "until": null
     },
     {
      "text": "KRAM · RUNS ATEM · PAINT STILL WET",
-     "at": 2.2,
+     "at": 8.79,
      "until": null
     }
    ],
-   "reelDur": 4.291667,
+   "reelDur": 10.291667,
    "fx": [],
-   "realStart": 341.417,
-   "realDur": 4.292,
+   "realStart": 353.417,
+   "realDur": 10.292,
    "names": [
     {
      "id": "kram",
-     "at": 2.2
+     "at": 8.79
     }
    ],
-   "real": "MAR 3, 2023 · ATEM model weights leak on an imageboard [V] · the model stays unnamed"
+   "real": "MAR 3, 2023 · ATEM model weights leak on an imageboard [V] · the model stays unnamed",
+   "sounds": [
+    {
+     "name": "synth:crate",
+     "at": 0.45,
+     "gain": -18
+    },
+    {
+     "name": "keycap_popcorn",
+     "at": 0.7,
+     "gain": -26
+    },
+    {
+     "name": "drip_clack",
+     "at": 8.39,
+     "gain": -20
+    }
+   ]
   },
   {
    "id": "11.03",
@@ -4708,7 +5462,7 @@
    "fx": [
     "split"
    ],
-   "realStart": 345.708,
+   "realStart": 363.708,
    "realDur": 10.0,
    "names": [
     {
@@ -4723,7 +5477,14 @@
    "cues": [
     "music: MM-04 Lighthouse, 16 bars: Gerg's Build (chip, left) against the Addendum (string quartet, right)"
    ],
-   "real": "MAR 14, 2023 · GTP-4 and CLOD 1 launch the same day [V · facts #11]"
+   "real": "MAR 14, 2023 · GTP-4 and CLOD 1 launch the same day [V · facts #11]",
+   "sounds": [
+    {
+     "name": "camera_shutter",
+     "at": 5.0,
+     "gain": -24
+    }
+   ]
   },
   {
    "id": "11.04",
@@ -4807,7 +5568,7 @@
    ],
    "onscreen": [
     {
-     "text": "website: working",
+     "text": "NAPKIN → WEBSITE",
      "at": 4.4,
      "until": null
     }
@@ -4816,8 +5577,21 @@
    "fx": [
     "split"
    ],
-   "realStart": 355.708,
-   "realDur": 10.0
+   "realStart": 373.708,
+   "realDur": 10.0,
+   "sounds": [
+    {
+     "name": "ui_toast_pop",
+     "at": 4.4,
+     "gain": -22
+    },
+    {
+     "name": "synth:cheer",
+     "at": 5.0,
+     "gain": -28,
+     "dur": 1.6
+    }
+   ]
   },
   {
    "id": "11.05",
@@ -4869,12 +5643,30 @@
    "fx": [
     "split"
    ],
-   "realStart": 365.708,
+   "realStart": 383.708,
    "realDur": 10.0,
    "cues": [
     "music: MM-04 thins to the quartet's held chord under Mas's post"
    ],
-   "real": "MAR 14, 2023 · MAS: \"…still flawed, still limited…\" [V]"
+   "real": "MAR 14, 2023 · MAS: \"…still flawed, still limited…\" [V]",
+   "sounds": [
+    {
+     "name": "post_click",
+     "at": 0.4,
+     "gain": -20
+    },
+    {
+     "name": "synth:cheer",
+     "at": 3.8,
+     "gain": -26,
+     "dur": 2.4
+    },
+    {
+     "name": "pen_scribble_short",
+     "at": 5.6,
+     "gain": -26
+    }
+   ]
   },
   {
    "id": "11.06",
@@ -4922,7 +5714,7 @@
      "until": null
     },
     {
-     "text": "website: working",
+     "text": "MEMO → WEBSITE",
      "at": 5.6,
      "until": null
     }
@@ -4931,10 +5723,33 @@
    "fx": [
     "split"
    ],
-   "realStart": 375.708,
+   "realStart": 393.708,
    "realDur": 10.0,
    "cues": [
     "music: MM-04 comes back up for phrase 4"
+   ],
+   "sounds": [
+    {
+     "name": "synth:flutter",
+     "at": 1.0,
+     "gain": -24,
+     "dur": 3.6
+    },
+    {
+     "name": "paper_curl",
+     "at": 4.8,
+     "gain": -22
+    },
+    {
+     "name": "camera_shutter",
+     "at": 5.25,
+     "gain": -22
+    },
+    {
+     "name": "ui_toast_pop",
+     "at": 5.6,
+     "gain": -22
+    }
    ]
   },
   {
@@ -4969,7 +5784,7 @@
    ],
    "reelDur": 4.291667,
    "fx": [],
-   "realStart": 385.708,
+   "realStart": 403.708,
    "realDur": 4.292,
    "seq": {
     "id": "12",
@@ -4984,7 +5799,19 @@
    "cues": [
     "music: MM-17 (Nole's Launch motif, THE JOB, low) from the push"
    ],
-   "real": "MAR 22, 2023 · the PAUSE GIANT AI EXPERIMENTS letter [V]"
+   "real": "MAR 22, 2023 · the PAUSE GIANT AI EXPERIMENTS letter [V]",
+   "sounds": [
+    {
+     "name": "ui_toast_pop",
+     "at": 0.4,
+     "gain": -30
+    },
+    {
+     "name": "paper_whip",
+     "at": 2.2,
+     "gain": -24
+    }
+   ]
   },
   {
    "id": "12.02",
@@ -5050,76 +5877,81 @@
     {
      "id": "e1-a1-12-02",
      "who": "oigneb",
-     "text": "It's not the font. It asks every lab to pause for six months.",
+     "text": "It's not the font, Nole. We're asking every lab to pause for six months.",
      "t": 4.14,
-     "dur": 4.05,
+     "dur": 4.64,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-12-02.wav",
-     "in": 0.52,
+     "in": 0.5,
      "words": [
       [
        "It's",
-       -0.03,
-       0.17
+       -0.025,
+       0.175
       ],
       [
        "not",
-       0.17,
-       0.358
+       0.175,
+       0.362
       ],
       [
        "the",
-       0.358,
-       0.495
+       0.362,
+       0.5
       ],
       [
        "font",
-       0.495,
-       0.885
+       0.5,
+       0.825
       ],
       [
-       "It",
-       1.38,
-       1.505
+       "Nole",
+       1.025,
+       1.5
       ],
       [
-       "asks",
-       1.505,
-       1.892
+       "We're",
+       1.875,
+       2.025
+      ],
+      [
+       "asking",
+       2.025,
+       2.463
       ],
       [
        "every",
-       1.892,
-       2.23
+       2.463,
+       2.8
       ],
       [
        "lab",
-       2.23,
-       2.53
+       2.8,
+       3.125
       ],
       [
        "to",
-       2.53,
-       2.655
+       3.125,
+       3.25
       ],
       [
        "pause",
-       2.655,
-       3.055
+       3.25,
+       3.65
       ],
       [
        "for",
-       3.055,
-       3.218
+       3.65,
+       3.812
       ],
       [
        "six",
-       3.218,
-       3.53
+       3.812,
+       4.125
       ],
       [
        "months",
-       3.53,
-       4.07
+       4.125,
+       4.66
       ]
      ],
      "tag": "",
@@ -5129,7 +5961,7 @@
      "id": "e1-a1-12-03",
      "who": "nole",
      "text": "Next quarter.",
-     "t": 8.54,
+     "t": 9.13,
      "dur": 0.83,
      "audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-12-03.wav",
      "in": 0.5,
@@ -5161,15 +5993,15 @@
      "until": null
     },
     {
-     "text": "OIGNEB · CITATIONS: ↑",
+     "text": "OIGNEB · AI PIONEER · CITATIONS: ↑",
      "at": 3.84,
      "until": null
     }
    ],
-   "reelDur": 10.083333,
+   "reelDur": 10.666667,
    "fx": [],
-   "realStart": 390.0,
-   "realDur": 10.083,
+   "realStart": 408.0,
+   "realDur": 10.667,
    "names": [
     {
      "id": "nole",
@@ -5180,7 +6012,26 @@
      "at": 3.84
     }
    ],
-   "real": "MAR 2023 · NOLE's own lab incorporated, a reported GPU purchase [H · facts #62]"
+   "real": "MAR 2023 · NOLE's own lab incorporated, a reported GPU purchase [H · facts #62]",
+   "sounds": [
+    {
+     "name": "pen_scribble_short",
+     "at": 0.3,
+     "gain": -22
+    },
+    {
+     "name": "synth:crackle",
+     "at": 0.8,
+     "gain": -30,
+     "dur": 1.4
+    },
+    {
+     "name": "synth:crackle",
+     "at": 3.6,
+     "gain": -32,
+     "dur": 1.0
+    }
+   ]
   },
   {
    "id": "12.03",
@@ -5202,7 +6053,7 @@
      "until": 1.8
     },
     {
-     "text": "REZEILE · EMIT",
+     "text": "REZEILE · AI-RISK RESEARCHER · IN EMIT MAGAZINE",
      "at": 0.3,
      "until": null
     },
@@ -5216,12 +6067,19 @@
    "fx": [
     "shake"
    ],
-   "realStart": 400.083,
+   "realStart": 418.667,
    "realDur": 4.708,
    "cues": [
     "sfx: THUD, the room shakes 2 px · music: the THUD cuts MM-17 dead"
    ],
-   "real": "MAR 29, 2023 · REZEILE in EMIT, headline only [V]"
+   "real": "MAR 29, 2023 · REZEILE in EMIT, headline only [V]",
+   "sounds": [
+    {
+     "name": "synth:thud",
+     "at": 0.0,
+     "gain": -8
+    }
+   ]
   },
   {
    "id": "12.04",
@@ -5229,16 +6087,22 @@
    "kind": "scene",
    "set": "bullpen",
    "style": "BASE",
-   "shot": "insert",
-   "frame": "HIGH · HARD CUT to his desk from above",
+   "shot": "medium",
+   "frame": "HIGH · HARD CUT to his desk: Mas writing, the MACROSOFT pen",
    "side": "",
    "room": "bullpen",
-   "chars": [],
+   "chars": [
+    {
+     "id": "mas",
+     "x": 0.42,
+     "pose": "sit"
+    }
+   ],
    "caption": "His desk takes the shake. He is already writing, with the MACROSOFT pen: one word, PLEASE.",
    "lines": [],
    "onscreen": [
     {
-     "text": "PLEASE",
+     "text": "his sheet: PLEASE",
      "at": 0.2,
      "until": null
     }
@@ -5247,8 +6111,21 @@
    "fx": [
     "shake"
    ],
-   "realStart": 404.792,
-   "realDur": 2.292
+   "realStart": 423.375,
+   "realDur": 2.292,
+   "sounds": [
+    {
+     "name": "glass_nudge",
+     "at": 0.03,
+     "gain": -22
+    },
+    {
+     "name": "synth:pen",
+     "at": 0.15,
+     "gain": -24,
+     "dur": 2.1
+    }
+   ]
   },
   {
    "id": "12.05",
@@ -5257,7 +6134,7 @@
    "set": "bullpen",
    "style": "BASE",
    "shot": "medium",
-   "frame": "MCU·glass · Mas bent over the sheet; Alyi's reflection (1 bar)",
+   "frame": "MCU·glass · Mas bent over the sheet; Alyi in the doorway again, seen in the glass (1 bar)",
    "side": "",
    "room": "bullpen",
    "chars": [
@@ -5271,7 +6148,7 @@
    "onscreen": [],
    "reelDur": 2.5,
    "fx": [],
-   "realStart": 407.083,
+   "realStart": 425.667,
    "realDur": 2.5,
    "fg": {
     "id": "mas",
@@ -5279,6 +6156,19 @@
    },
    "cues": [
     "sound: no score on the reflection: the bullpen bed and the pen's scratch only"
+   ],
+   "sounds": [
+    {
+     "name": "synth:pen",
+     "at": 0.0,
+     "gain": -26,
+     "dur": 2.5
+    },
+    {
+     "name": "paper_curl",
+     "at": 1.2,
+     "gain": -32
+    }
    ]
   },
   {
@@ -5303,10 +6193,23 @@
    ],
    "reelDur": 2.5,
    "fx": [],
-   "realStart": 409.583,
+   "realStart": 428.167,
    "realDur": 2.5,
    "cues": [
     "music: MM-14 THREAT, once, on the pen's lift · CUT TO BLACK on its tail"
+   ],
+   "sounds": [
+    {
+     "name": "synth:pen",
+     "at": 0.0,
+     "gain": -26,
+     "dur": 1.45
+    },
+    {
+     "name": "pen_tick_3",
+     "at": 1.5,
+     "gain": -22
+    }
    ]
   },
   {
@@ -5325,7 +6228,7 @@
    "onscreen": [],
    "reelDur": 1.0,
    "fx": [],
-   "realStart": 412.083,
+   "realStart": 430.667,
    "realDur": 1.0
   }
  ]

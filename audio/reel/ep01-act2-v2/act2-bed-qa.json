@@ -1,0 +1,450 @@
+{
+ "timeline": "show/reel/ep01-full/ep01-act2-v2.json",
+ "act_seconds": 219.792,
+ "stem_seconds": 220.792,
+ "layers": [
+  {
+   "layer": "room",
+   "kind": "whitehouse",
+   "from": 0.0,
+   "to": 68.833
+  },
+  {
+   "layer": "room",
+   "kind": "bullpen-night",
+   "from": 68.833,
+   "to": 71.417
+  },
+  {
+   "layer": "room",
+   "kind": "bay",
+   "from": 71.417,
+   "to": 78.5
+  },
+  {
+   "layer": "room",
+   "kind": "senate",
+   "from": 79.833,
+   "to": 155.375
+  },
+  {
+   "layer": "room",
+   "kind": "rooftop",
+   "from": 175.375,
+   "to": 219.042
+  },
+  {
+   "layer": "score",
+   "parts": [
+    {
+     "what": "MM-19 podium palette (temp: a B-flat chamber pad + pizz pulses, 96 bpm; no render)",
+     "from": 0.0,
+     "to": 51.133,
+     "lufs": -28
+    },
+    {
+     "what": "MM-19 the Fountain Pen (loop A, bar 1 on Nedib's door; rings out on the photo)",
+     "from": 50.683,
+     "to": 67.317,
+     "lufs": -26
+    },
+    {
+     "what": "MM-20 Under Oath (temp pad: Dbmaj9#11 / Gm7b5, 66 bpm), stops dead on the wallet",
+     "from": 79.833,
+     "to": 133.375,
+     "lufs": -26
+    },
+    {
+     "what": "MM-20 back on a new phrase (temp pad: Gm7b5 first)",
+     "from": 139.875,
+     "to": 155.575,
+     "lufs": -26
+    },
+    {
+     "what": "MM-03 The Regulate-Me Tour (temp pad: Abmaj9 / Db69#11, 100 bpm); knee stabs = the beat sounds",
+     "from": 155.375,
+     "to": 176.125,
+     "lufs": -26
+    },
+    {
+     "what": "MM-03 rings out into a held Abmaj9 pad (temp)",
+     "from": 174.625,
+     "to": 195.9,
+     "lufs": -30
+    },
+    {
+     "what": "MM-05 The More You Buy (loop render), stopped dead at phrase 4",
+     "from": 195.6,
+     "to": 210.625,
+     "lufs": -26
+    }
+   ]
+  },
+  {
+   "layer": "murmur",
+   "what": "the anchor's too-smooth murmur (made: formant voice, no words, phone band, low-passed 1.9 kHz)",
+   "lufs": -34,
+   "from": 69.033,
+   "stops_at_clone_onset": 78.85
+  }
+ ],
+ "sfx": [
+  {
+   "beat": "13.03",
+   "name": "freeze_hit_F",
+   "at_act": 7.083,
+   "peak_dbfs": -20,
+   "len_s": 2.215
+  },
+  {
+   "beat": "13.05",
+   "name": "paper_flutter",
+   "at_act": 19.545,
+   "peak_dbfs": -26,
+   "len_s": 1.397
+  },
+  {
+   "beat": "13.06",
+   "name": "landing_thunk",
+   "at_act": 20.825,
+   "peak_dbfs": -30,
+   "len_s": 1.023
+  },
+  {
+   "beat": "13.06",
+   "name": "landing_thunk",
+   "at_act": 21.375,
+   "peak_dbfs": -30,
+   "len_s": 1.023
+  },
+  {
+   "beat": "13.06",
+   "name": "landing_thunk",
+   "at_act": 21.925,
+   "peak_dbfs": -30,
+   "len_s": 1.023
+  },
+  {
+   "beat": "13.10",
+   "name": "flame_whoomph",
+   "at_act": 48.783,
+   "peak_dbfs": -26,
+   "len_s": 2.6
+  },
+  {
+   "beat": "13.12",
+   "name": "camera_shutter",
+   "at_act": 53.667,
+   "peak_dbfs": -14,
+   "len_s": 0.471
+  },
+  {
+   "beat": "13.12",
+   "name": "freeze_hit_F",
+   "at_act": 53.687,
+   "peak_dbfs": -22,
+   "len_s": 2.215
+  },
+  {
+   "beat": "13.14",
+   "name": "camera_shutter",
+   "at_act": 63.917,
+   "peak_dbfs": -30,
+   "len_s": 0.471
+  },
+  {
+   "beat": "14.04",
+   "name": "post_click",
+   "at_act": 75.283,
+   "peak_dbfs": -18,
+   "len_s": 0.368
+  },
+  {
+   "beat": "14.05",
+   "name": "synth:plink",
+   "at_act": 77.083,
+   "peak_dbfs": -14,
+   "len_s": 0.5
+  },
+  {
+   "beat": "14.05",
+   "name": "key_tap_soft_01",
+   "at_act": 77.983,
+   "peak_dbfs": -34,
+   "len_s": 0.217
+  },
+  {
+   "beat": "15.04",
+   "name": "freeze_hit_C",
+   "at_act": 90.833,
+   "peak_dbfs": -22,
+   "len_s": 2.242
+  },
+  {
+   "beat": "15.05",
+   "name": "typing_soft",
+   "at_act": 91.658,
+   "peak_dbfs": -30,
+   "len_s": 4.836
+  },
+  {
+   "beat": "15.11",
+   "name": "typing_soft",
+   "at_act": 129.115,
+   "peak_dbfs": -26,
+   "len_s": 4.836
+  },
+  {
+   "beat": "15.12",
+   "name": "cloth_rustle",
+   "at_act": 133.425,
+   "peak_dbfs": -30,
+   "len_s": 0.552
+  },
+  {
+   "beat": "15.12",
+   "name": "synth:moth",
+   "at_act": 134.475,
+   "peak_dbfs": -30,
+   "len_s": 1.2
+  },
+  {
+   "beat": "15.13",
+   "name": "synth:gasp",
+   "at_act": 136.825,
+   "peak_dbfs": -17,
+   "len_s": 0.6
+  },
+  {
+   "beat": "15.14",
+   "name": "rubber_stamp_C",
+   "at_act": 139.975,
+   "peak_dbfs": -20,
+   "len_s": 0.674
+  },
+  {
+   "beat": "15.14",
+   "name": "rubber_stamp_C",
+   "at_act": 140.325,
+   "peak_dbfs": -20,
+   "len_s": 0.674
+  },
+  {
+   "beat": "15.14",
+   "name": "rubber_stamp_C",
+   "at_act": 140.675,
+   "peak_dbfs": -20,
+   "len_s": 0.674
+  },
+  {
+   "beat": "15.15",
+   "name": "folder_slide",
+   "at_act": 146.475,
+   "peak_dbfs": -28,
+   "len_s": 0.829
+  },
+  {
+   "beat": "15.15",
+   "name": "rubber_stamp_C",
+   "at_act": 147.825,
+   "peak_dbfs": -16,
+   "len_s": 0.674
+  },
+  {
+   "beat": "15.16",
+   "name": "paper_curl",
+   "at_act": 150.417,
+   "peak_dbfs": -30,
+   "len_s": 0.582
+  },
+  {
+   "beat": "16.01",
+   "name": "rubber_stamp_C",
+   "at_act": 155.375,
+   "peak_dbfs": -18,
+   "len_s": 0.674
+  },
+  {
+   "beat": "16.01",
+   "name": "synth:stab",
+   "at_act": 155.375,
+   "peak_dbfs": -20,
+   "len_s": 0.7
+  },
+  {
+   "beat": "16.01",
+   "name": "paper_whip",
+   "at_act": 156.775,
+   "peak_dbfs": -22,
+   "len_s": 0.542
+  },
+  {
+   "beat": "16.01",
+   "name": "rubber_stamp_C",
+   "at_act": 158.375,
+   "peak_dbfs": -18,
+   "len_s": 0.674
+  },
+  {
+   "beat": "16.01",
+   "name": "synth:stab",
+   "at_act": 158.375,
+   "peak_dbfs": -20,
+   "len_s": 0.7
+  },
+  {
+   "beat": "16.01",
+   "name": "rubber_stamp_C",
+   "at_act": 160.775,
+   "peak_dbfs": -16,
+   "len_s": 0.674
+  },
+  {
+   "beat": "16.01",
+   "name": "synth:stab",
+   "at_act": 160.775,
+   "peak_dbfs": -19,
+   "len_s": 0.7
+  },
+  {
+   "beat": "16.01",
+   "name": "post_click",
+   "at_act": 165.975,
+   "peak_dbfs": -18,
+   "len_s": 0.368
+  },
+  {
+   "beat": "16.01",
+   "name": "rubber_stamp_C",
+   "at_act": 168.275,
+   "peak_dbfs": -18,
+   "len_s": 0.674
+  },
+  {
+   "beat": "16.01",
+   "name": "synth:stab",
+   "at_act": 168.275,
+   "peak_dbfs": -20,
+   "len_s": 0.7
+  },
+  {
+   "beat": "16.01",
+   "name": "rubber_stamp_C",
+   "at_act": 170.725,
+   "peak_dbfs": -16,
+   "len_s": 0.674
+  },
+  {
+   "beat": "16.01",
+   "name": "synth:stab",
+   "at_act": 170.725,
+   "peak_dbfs": -19,
+   "len_s": 0.7
+  },
+  {
+   "beat": "17.01",
+   "name": "pen_scribble_short",
+   "at_act": 178.375,
+   "peak_dbfs": -30,
+   "len_s": 0.471
+  },
+  {
+   "beat": "17.01",
+   "name": "pen_scribble_short",
+   "at_act": 180.275,
+   "peak_dbfs": -30,
+   "len_s": 0.471
+  },
+  {
+   "beat": "17.01",
+   "name": "pen_run",
+   "at_act": 182.575,
+   "peak_dbfs": -30,
+   "len_s": 1.91
+  },
+  {
+   "beat": "17.01",
+   "name": "pen_scribble_short",
+   "at_act": 183.875,
+   "peak_dbfs": -30,
+   "len_s": 0.471
+  },
+  {
+   "beat": "17.01",
+   "name": "pen_tick_1",
+   "at_act": 184.775,
+   "peak_dbfs": -32,
+   "len_s": 0.165
+  },
+  {
+   "beat": "17.02",
+   "name": "pen_scribble_short",
+   "at_act": 185.575,
+   "peak_dbfs": -34,
+   "len_s": 0.471
+  },
+  {
+   "beat": "17.02",
+   "name": "pen_scribble_short",
+   "at_act": 189.975,
+   "peak_dbfs": -34,
+   "len_s": 0.471
+  },
+  {
+   "beat": "17.02",
+   "name": "pen_scribble_short",
+   "at_act": 194.275,
+   "peak_dbfs": -34,
+   "len_s": 0.471
+  },
+  {
+   "beat": "17.03",
+   "name": "synth:roll",
+   "at_act": 195.75,
+   "peak_dbfs": -24,
+   "len_s": 1.3
+  },
+  {
+   "beat": "17.04",
+   "name": "freeze_hit_F",
+   "at_act": 197.167,
+   "peak_dbfs": -22,
+   "len_s": 2.215
+  },
+  {
+   "beat": "17.07",
+   "name": "ka_ching",
+   "at_act": 205.1,
+   "peak_dbfs": -12,
+   "len_s": 1.558
+  },
+  {
+   "beat": "17.07",
+   "name": "synth:bell",
+   "at_act": 205.12,
+   "peak_dbfs": -18,
+   "len_s": 15.172
+  },
+  {
+   "beat": "17.10",
+   "name": "paper_curl",
+   "at_act": 208.325,
+   "peak_dbfs": -32,
+   "len_s": 0.582
+  }
+ ],
+ "lufs_integrated": -26.78,
+ "lufs_by_scene": {
+  "sc13": -27.55,
+  "sc14": -33.81,
+  "sc15": -25.86,
+  "sc16": -25.78,
+  "sc17": -27.4,
+  "phrase4": -37.09
+ },
+ "peak_dbfs": -11.07,
+ "digital_silences_0.5s": [
+  79.0,
+  79.25
+ ]
+}

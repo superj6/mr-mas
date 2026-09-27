@@ -107,8 +107,12 @@ export const drawAlyiDoorPhone = (b: Buf, f: number, s: AlyiDoorPhoneState = {})
 // ------------------------------------------------------------------ his call tile, framed for any size (r3)
 /** portrait coords of what must show in the glass: the eye line (y 47-49) to the mouth (y 74-79); the face's centre
  *  column, mirrored (the reflection is mirrored: portrait x 47 lands at ALYI_PW - 1 - 47) */
-const FACE_CY = 63, FACE_CX_MIRRORED = ALYI_PW - 1 - 47;
-export const drawAlyiTileFit = (b0: Buf, x: number, y: number, w: number, h: number, s: AlyiSpeakState, o: {flicker?: 'there' | 'gone'} = {}) => {
+const FACE_CY = 63, FACE_CX = 47, FACE_CX_MIRRORED = ALYI_PW - 1 - FACE_CX;
+/** a4p5 finish (opt-in `lit`, the board's side of the call): the same doorway tile with the door OPEN and the man in it,
+ *  lit by his own screen (alyiSpeakPortrait as S3.07 draws him, not mirrored), in place of his reflection in its glass.
+ *  The picture audit (§2.9) and the newcomer read: on the board's laptops the navy reflection delivering the firing line
+ *  read as a shadow, and as "an android"; the board sees the man, his side keeps the reflection. Default: the r3 drawing. */
+export const drawAlyiTileFit = (b0: Buf, x: number, y: number, w: number, h: number, s: AlyiSpeakState, o: {flicker?: 'there' | 'gone'; lit?: boolean} = {}) => {
   const clip = tileClip(x, y, w, h);
   const b = clipped(b0, clip);
   for (let j = 0; j < h; j++) for (let i = 0; i < w; i++) b.set(x + i, y + j, bayer(x + i, y + j) < 0.3 ? PAL.W1 : PAL.W0);
@@ -118,6 +122,15 @@ export const drawAlyiTileFit = (b0: Buf, x: number, y: number, w: number, h: num
   rect(dx - 1, y, dw + 2, h, b.ink(PAL.D1));
   const gx = dx + 3, gy = y + 3, gw = dw - 6, gh = h - 3;
   const gc = tileClip(gx, gy, gw, gh);
+  if (o.lit) {
+    // the open doorway: the dark corridor behind him (a 2-rung ordered screen), the man lit in it, no glass sheen
+    for (let j = 0; j < gh; j++) for (let i = 0; i < gw; i++) b.set(gx + i, gy + j, bayer(gx + i, gy + j) < 0.35 ? PAL.D0 : PAL.N1);
+    const img = alyiSpeakPortrait({mouth: s.mouth, eyes: s.eyes, t: s.t});
+    const oy = Math.min(Math.round(gh * 0.48), gh - 30);
+    blitImg(b0, img, gx + Math.round(gw / 2) - FACE_CX, gy + oy - FACE_CY, {clip: (px, py) => gc(px, py) && clip(px, py)});
+    rect(gx - 1, gy + Math.round(gh * 0.55), 1, 6, b.ink(PAL.G4)); // the door's handle, on the jamb
+    return;
+  }
   rect(gx, gy, gw, gh, b.ink(PAL.N1));
   if (o.flicker !== 'gone') {
     const img = alyiReflection({...s, mirror: true});

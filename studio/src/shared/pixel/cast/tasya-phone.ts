@@ -94,6 +94,9 @@ const roomPortrait = memo((s: TasyaPortraitState): Img => {
   for (let i = 0; i < c.length; i++) { const r = STAMP_ROOM[c[i]]; if (r !== undefined) c[i] = r; }
   return {w: im.w, h: im.h, c};
 });
+/** a4p5 finish: tasya-speak's portrait (any arms, 'clasp' included; no phone, no glow) with the room's warm skin, for the
+ *  shots where he talks in person (S7.02b): the same face as S4.13's, so a cut never turns him teal (audit §2.5) */
+export const tasyaRoomPortrait = (s: TasyaPortraitState): Img => roomPortrait(s);
 
 export const tasyaPhonePortrait = memo((s: TasyaPhoneState): Img => {
   const read = s.read !== false;

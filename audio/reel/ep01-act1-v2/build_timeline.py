@@ -19,8 +19,13 @@ laid from its real take (audio/ep01/act1/dialogue/lines-fast-v1.json):
   * rails, plates, posts and headlines are timed for read (about 0.25 s + 0.05 s a character).
 
 The JSON is the "dialogueReel" format of studio/src/reel/schema.ts. There is no premix: the episode mixer
-(studio/src/reel/tools/mixer.mjs) lays each take from lines[].audio and ducks the temp bed under it. SFX and rooms
-are margin notes only (the mixer doesn't lay them). Nothing here is heard or watched.
+(studio/src/reel/tools/mixer.mjs) lays each take from lines[].audio and ducks the temp bed under it. Since the fix
+pass (2026-09-27) each beat also carries `sounds` (SOUNDS below), and act1_bed.py beside this file builds Act One's
+temp stem (room + music + SFX) from this JSON; the manifest plays that stem as the chapter's one bed. Rebuild it
+after this. Nothing here is heard or watched.
+
+Fix pass (2026-09-27, the `act1fix` pass): the SPEC changes for the newcomer / insider / audit reads of
+ep01-full-v2.mp4 are marked "fix pass" in comments; act1-notes.md §9 lists every change and why.
 """
 from __future__ import annotations
 
@@ -184,7 +189,7 @@ SEQ = {
 }
 FUSE = 'UI: Push research preview'   # the lit band and the parked cursor, in every setup with his desk until the click
 
-# ------------------------------------------------------------------ THE SHOT PLAN (script ## ACT ONE, as saved 22:48)
+# ------------------------------------------------------------------ THE SHOT PLAN (script ## ACT ONE; fix pass 2026-09-27)
 # keys: id, seq, kind, set, style, shot, frame, room, chars, fg, lines, lead, tail, min, end, on ((text, at, until)),
 # names ((ids, at)), lx (per line: at = seconds into the beat, lead), caption (<= 110 chars), cues, cont, fx, shotId
 SPEC = [
@@ -352,6 +357,7 @@ SPEC = [
          chars=[C('gerg', 0.04, 'sit'), C('mas', 0.24), C('tasya', 0.78, until=END('9-07', 0.2)),
                 C('tasya', 0.8, 'walk', frm=END('9-07', 0.2))],
          lines=['9-04', '9-05', '9-06', '9-07', '9-08'], lead=0.8, tail=1.3, cues=[MU['terms'], MU['jangle']],
+         on=[('COLLAR #3', 0.0, END('9-04', 0.8))],   # fix pass: the stick figure has no collar; the card stands in for it
          caption='"That collar suits you." He holds a beat, then asks the price. A welcome that is really a lease.'),
     dict(id='9.10', seq=SEQ['9b'], set='lobby', shot='wide', frame='WIDE · weeks on (the time jump, then held)', room='lobby',
          chars=[C('mas', 0.14), C('gerg', 0.45, 'sit'), C('tasya', 0.82)], lines=['9-09', '9-10'], lead=2.6, tail=0.3,
@@ -378,6 +384,7 @@ SPEC = [
          caption='A pastel chat bubble floats in behind Tasya like a dog that followed him home, and drifts too close.'),
     dict(id='10.02', set='lobby', shot='medium', frame='TWO-SHOT · Mas and Sydney, a pixel too close (held)', room='lobby',
          chars=[C('mas', 0.34), C('sydney', 0.56, 'float', 'smile')], lines=['10-06', '10-01', '10-02', '10-03'], lead=1.1, tail=1.3,
+         lx={'10-01': dict(gap=0.6)},   # 10-01's take predates the fix (its row keeps gap null); now a reply to 10-06
          on=[('2022', 0.2, None)],
          caption='"Isn\'t 2022 a lovely year?" He corrects her, politely; she scolds him sweetly. He compliments her.'),
     dict(id='10.03', set='lobby', shot='medium', frame='TWO-SHOT · Tasya and Sydney: the egg timer', room='lobby',
@@ -392,12 +399,15 @@ SPEC = [
     dict(id='11.01', seq=SEQ['11'], set='bullpen', shot='wide', frame='WIDE · the bullpen from the aisle (pre-beat)', room='bullpen',
          min=1.6, chars=[C('mas', 0.16, 'sit'), C('gerg', 0.62, 'sit')], on=[('RAIL: MAR 3, 2023', 0.2, None)], cues=[MU['prebeat']],
          caption='Mas at his end desk looks up at the wall monitor over the whiteboard. Gerg looks up too.'),
+    # fix pass: the leak is said (Gerg, O.S.), Mas predicts the rebrand, and Kram's wet hoodie pays it on the same frame
+    # (the newcomer read: "no dialogue and no stakes"; the insider read: the joke is that it LEAKED)
     dict(id='11.02', set='screen', shot='medium', frame='INSERT · the wall monitor: an imageboard (his look motivates it)',
-         room='bullpen', min=4.3, chars=[C('kram', 0.62, 'arms-up', frm=1.7)],
-         on=[('RAIL: MAR 3, 2023', 0.0, 0.5), ('03/03/23', 0.2, None), ('ATEM · MODEL WEIGHTS', 0.6, None),
-             ('OPEN SOURCE', 1.8, None), ('KRAM · RUNS ATEM · PAINT STILL WET', 2.2, None)],
-         names=[('kram', 2.2)],
-         caption='A crate stencilled ATEM tips; its weights spill over the thread. Kram unveils a wet OPEN SOURCE hoodie.'),
+         room='bullpen', min=4.3, chars=[C('kram', 0.62, 'arms-up', frm=END('11-05', 0.35))],
+         lines=['11-04', '11-05'], lead=1.0, tail=2.4,
+         on=[('RAIL: MAR 3, 2023', 0.0, 0.5), ('03/03/23', 0.2, None), ('ATEM · MODEL WEIGHTS · RESEARCHERS ONLY', 0.5, None),
+             ('OPEN SOURCE', END('11-05', 0.45), None), ('KRAM · RUNS ATEM · PAINT STILL WET', END('11-05', 0.9), None)],
+         names=[('kram', END('11-05', 0.9))],
+         caption='A crate stencilled ATEM tips over the thread. "Somebody leaked Atem\'s model." Kram: a wet OPEN SOURCE hoodie.'),
     dict(id='11.03', set='bullpen', shot='wide', frame='SPLIT · the bullpen | the lighthouse (phrase 1)', room='split',
          fx=['split'], min=4 * BAR, lines=['11-01'], lead=2.3,
          chars=[C('mas', pose='sit'), C('gerg'), C('clod'), C('mario', pose='point')],
@@ -408,7 +418,7 @@ SPEC = [
     dict(id='11.04', set='bullpen', shot='wide', frame='SPLIT · phrase 2', room='split', fx=['split'], min=4 * BAR,
          lines=['11-02', '11-03'], lead=0.35,
          chars=[C('mas', pose='sit'), C('gerg', until=5.0), C('gerg', pose='arms-up', frm=5.0), C('clod'), C('mario')],
-         on=[('website: working', 4.4, None)],
+         on=[('NAPKIN → WEBSITE', 4.4, None)],   # fix pass: was 'website: working' (the newcomer read couldn't place it)
          caption='Clod agrees, and launches. Mario looks up at the split line: the same day. Left: the napkin is a website.'),
     dict(id='11.05', set='bullpen', shot='wide', frame='SPLIT · phrase 3', room='split', fx=['split'], min=4 * BAR,
          chars=[C('mas', pose='phone'), C('gerg', pose='arms-up', frm=3.8), C('gerg', until=3.8), C('clod'),
@@ -420,7 +430,7 @@ SPEC = [
          # the split deals the first half of chars to the left pane: keep three a side (Gerg twice, Mario twice)
          chars=[C('mas', pose='sit'), C('gerg', until=5.2), C('gerg', pose='phone', frm=5.2), C('clod'),
                 C('mario', until=7.2), C('mario', pose='slump', frm=7.2)],
-         on=[('ADDENDUM', 1.0, None), ('website: working', 5.6, None)], cues=[MU['up4']],
+         on=[('ADDENDUM', 1.0, None), ('MEMO → WEBSITE', 5.6, None)], cues=[MU['up4']],
          caption="Mario's longer scroll unrolls across the split onto Gerg's desk. Gerg photographs it. The spindle's empty."),
     # ---------------------------------------------------------------- sc 12 · THE LETTER (ACT-OUT)
     dict(id='12.01', seq=SEQ['12'], set='screen', shot='wide', frame='OTS · over Mas onto his monitor, then the push', room='bullpen',
@@ -431,18 +441,19 @@ SPEC = [
     dict(id='12.02', set='office', shot='wide', frame='WIDE · a standing desk in the dark', room='dark-desk',
          chars=[C('nole', 0.36), C('oigneb', 0.78, 'arms-up')], lines=['12-01', '12-02', '12-03'], lead=2.3, tail=0.7,
          on=[('NOLE · EARLY FUNDER · BUILDING HIS OWN', 0.5, END('12-01', 0.3)), ('PAUSE', 0.3, None),
-             ('OIGNEB · CITATIONS: ↑', ON('12-02', -0.3), None)],
+             ('OIGNEB · AI PIONEER · CITATIONS: ↑', ON('12-02', -0.3), None)],
          names=[('nole', 0.5), ('oigneb', ON('12-02', -0.3))],
          caption='Nole signs with his left hand and solders a GPU with his right. Oigneb holds up PAUSE. Nobody pauses.'),
     dict(id='12.03', set='office', shot='insert', frame='HIGH · the EMIT page lands', room='dark-desk', min=4.7, fx=['shake'],
-         on=[('RAIL: MAR 29, 2023', 0.1, 1.8), ('REZEILE · EMIT', 0.3, None),
+         on=[('RAIL: MAR 29, 2023', 0.1, 1.8), ('REZEILE · AI-RISK RESEARCHER · IN EMIT MAGAZINE', 0.3, None),
              ('"Pausing AI Developments Isn\'t Enough. We Need to Shut It All Down."', 0.5, None)],
          cues=[MU['thud']],
          caption='A page drops flat: THUD. The headline, in full, no body text, held to read.'),
-    dict(id='12.04', set='bullpen', shot='insert', frame="HIGH · HARD CUT to his desk from above", room='bullpen', min=2.3,
-         fx=['shake'], on=[('PLEASE', 0.2, None)],
+    # fix pass: Mas in frame, writing (the newcomer read saw PLEASE "typed on a screen" and couldn't tell who wrote it)
+    dict(id='12.04', set='bullpen', shot='medium', frame="HIGH · HARD CUT to his desk: Mas writing, the MACROSOFT pen",
+         room='bullpen', min=2.3, fx=['shake'], chars=[C('mas', 0.42, 'sit')], on=[('his sheet: PLEASE', 0.2, None)],
          caption='His desk takes the shake. He is already writing, with the MACROSOFT pen: one word, PLEASE.'),
-    dict(id='12.05', set='bullpen', shot='medium', frame="MCU·glass · Mas bent over the sheet; Alyi's reflection (1 bar)",
+    dict(id='12.05', set='bullpen', shot='medium', frame="MCU·glass · Mas bent over the sheet; Alyi in the doorway again, seen in the glass (1 bar)",
          room='bullpen', min=BAR, fg={'id': 'mas', 'side': 'left'}, chars=[C('alyi', 0.78)], cues=[MU['dry']],
          caption="In the glass, Alyi's reflection reads the same headline. It doesn't look at him. He doesn't look up."),
     dict(id='12.06', set='bullpen', shot='insert', frame='INSERT · the sheet (1 bar)', room='bullpen', min=BAR,
@@ -473,11 +484,75 @@ REAL = {
     '12.03': 'MAR 29, 2023 · REZEILE in EMIT, headline only [V]',
 }
 
+# ------------------------------------------------------------------ SOUNDS (fix pass, 2026-09-27: audit-v2 package F1)
+# The episode mixer lays takes and one bed per sequence, but no per-beat SFX, so Act One's written sound turns (the
+# squeak, the click, the ratchet and clunk, the tsss, the siren's J-cut, the door, the pop, the key ring, Sydney's tick,
+# the THUD, the pen) were silent in ep01-full-v2. act1_bed.py (beside this file) now builds Act One's stem from this
+# JSON: room + music + these sounds. Each entry: (name, at, peak dBFS[, dur]); `at` is seconds into the beat or a time
+# expression (ON/END/W). name = an SFX-board file in audio/sfx/wav (without .wav) or synth:<kind> (made in
+# act1_bed.py). Levels are measurement targets; nothing was heard.
+SOUNDS = {
+    '5.03': [('synth:keys', 0.0, -32, 2.8), ('synth:keys', END('5-02', 0.15), -34, 4.2)],
+    '5.04': [('synth:keys', ON('5-05', -0.6), -34, 2.6), ('synth:keys', ON('5-09', -0.5), -34, 1.8)],
+    '5.07': [('key_tap_space', 0.2, -16), ('marker_write_q', END('5-12', 0.5), -20, 0.5)],
+    '5.08': [('dialog_ok_click', 1.0, -12)],
+    '5.09': [('synth:keys', 0.2, -36, 4.8), ('synth:steps_far', END('5-15', 0.4), -30, 1.4)],
+    '5.10': [('synth:keys', 0.0, -38, 1.2), ('ui_toast_pop', ON('5-19', -0.7), -26),
+             ('synth:keys', END('5-20', 0.8), -28, 1.3)],
+    '5.11': [('synth:keys', ON('5-23', -0.3), -34, 2.6)],
+    '5.12': [('counter_roll', 0.5, -24), ('counter_roll', 1.25, -26), ('counter_roll', 1.8, -26)],
+    '6.01': [('synth:ratchet', 0.15, -26, 4.85)],
+    '6.02': [('letter_clunk', 0.0, -12), ('synth:ratchet', 0.4, -30, 4.6)],
+    '6.03': [('ceiling_burst', 0.05, -20), ('synth:ratchet', 0.0, -30, 2.5)],
+    '6.04': [('synth:ratchet', 0.0, -36, 5.0), ('phone_buzz_desk', 0.1, -22), ('post_click--chip', 0.2, -24),
+             ('heart_tap_1', 2.9, -20), ('heart_tap_2', 4.2, -22)],
+    '6.05': [('synth:ratchet', 0.0, -28, 1.3), ('synth:thud', 1.25, -14)],
+    '6.06': [('odometer_ratchet', 0.15, -16, 'PEAK')],        # its lock (the file's loudest sample) on the wheel's settle
+    '6.07': [('synth:taps', 0.35, -28, 2.6), ('post_click', 3.3, -20)],
+    '6.09': [('tower_pop', 0.3, -18), ('palette_step_F', 1.2, -18), ('palette_step_Ab', 3.7, -18),
+             ('palette_step_C', 6.2, -18), ('synth:ratchet_fast', 1.0, -32, 6.4)],
+    '7.02': [('steam_hiss', 0.45, -20, 1.6)],
+    '8.01': [('key_tap_soft_02', 1.3, -24)],
+    '8.02': [('tile_shove', 0.05, -22)],
+    '8.04': [('synth:steps_phone', 0.5, -30, 1.8)],
+    '8.05': [('cloth_rustle', 0.35, -30)],
+    '8.06': [('dialog_ok_click--chip', 0.9, -20), ('revolving_door', 1.45, -28)],
+    '9.01': [('revolving_door', 0.0, -26), ('synth:steps_stone', 0.4, -30, 2.8), ('desk_phone_ring', 1.6, -38)],
+    '9.02': [('glass_nudge', 0.35, -16), ('glass_strain_2', 0.45, -20)],
+    '9.04': [('freeze_hit_F', 0.0, -14), ('camera_shutter', 0.05, -18)],
+    '9.05': [('pen_tick_1', 0.2, -24), ('cloth_rustle', 0.35, -26)],
+    '9.06': [('glass_strain_3', END('9-01', 0.5), -22), ('revolving_door', END('9-01', 0.6), -28, 0.9)],
+    '9.07': [('folder_slide', 0.3, -20), ('footstep_hard_2', 2.05, -24)],
+    '9.08': [('collar_pop_F5', 0.0, -12)],
+    '9.09': [('key_ring_jangle_1', END('9-08', 0.25), -22), ('key_ring_jangle_2', END('9-08', 0.875), -24),
+             ('synth:steps_stone', END('9-08', 0.3), -32, 1.0)],
+    '9.10': [('synth:steps_stone', 0.2, -34, 1.6), ('synth:murmur', 1.0, -36, 9.0)],
+    '9.11': [('synth:tapdance', 0.15, -26, 2.1)],
+    '9.12': [('orb_servo', 0.25, -26), ('orb_servo', 0.75, -26), ('orb_servo', 1.25, -26),
+             ('rubber_stamp_C--chip', 2.9, -20), ('synth:murmur', 0.0, -38, 4.9)],
+    '9.13': [('folder_close', END('9-11', 0.65), -22)],
+    '10.01': [('revolving_door', 0.2, -28, 1.6), ('ui_toast_pop', 1.4, -28)],
+    '10.03': [('pen_tick_2', 0.8, -20)],
+    '10.04': [('revolving_door', 0.35, -30, 1.4)],
+    '11.02': [('synth:crate', 0.45, -18), ('keycap_popcorn', 0.7, -26), ('drip_clack', END('11-05', 0.5), -20)],
+    '11.03': [('camera_shutter', 5.0, -24)],
+    '11.04': [('ui_toast_pop', 4.4, -22), ('synth:cheer', 5.0, -28, 1.6)],
+    '11.05': [('post_click', 0.4, -20), ('synth:cheer', 3.8, -26, 2.4), ('pen_scribble_short', 5.6, -26)],
+    '11.06': [('synth:flutter', 1.0, -24, 3.6), ('paper_curl', 4.8, -22), ('camera_shutter', 5.25, -22),
+              ('ui_toast_pop', 5.6, -22)],
+    '12.01': [('ui_toast_pop', 0.4, -30), ('paper_whip', 2.2, -24)],
+    '12.02': [('pen_scribble_short', 0.3, -22), ('synth:crackle', 0.8, -30, 1.4), ('synth:crackle', 3.6, -32, 1.0)],
+    '12.03': [('synth:thud', 0.0, -8)],
+    '12.04': [('glass_nudge', 0.03, -22), ('synth:pen', 0.15, -24, 2.1)],
+    '12.05': [('synth:pen', 0.0, -26, 2.5), ('paper_curl', 1.2, -32)],
+    '12.06': [('synth:pen', 0.0, -26, 1.45), ('pen_tick_3', 1.5, -22)],
+}
+
 CAST = {
     'mas': {'role': 'MAN AT THE END DESK'},
     'gerg': {'role': 'MAN AT THE LAPTOP'},
     'rima': {'role': 'WOMAN AT THE WHITEBOARD'},
-    'alyi': {'role': 'REFLECTION IN THE GLASS'},
+    'alyi': {'role': 'MAN IN THE DOORWAY (IN THE GLASS)'},
     'chatgtp': {'name': 'CHATGTP', 'role': 'SPEECH BUBBLE'},
     'staff': {'name': 'STAFF', 'role': 'STAFF', 'known': True},
     'nole': {'role': 'MAN IN THE POST'},
@@ -630,6 +705,21 @@ def main():
             beat['cues'] = sp['cues']
         if sp['id'] in REAL:
             beat['real'] = REAL[sp['id']]
+        snd = []
+        for tup in SOUNDS.get(sp['id'], []):
+            name, at, gain = tup[0], tup[1], tup[2]
+            extra = tup[3] if len(tup) > 3 else None
+            a = round(res(at, s0) - s0, 3)
+            if a >= dur:
+                WARN.append(f"{sp['id']}: sound {name} at {a:.2f} s is past the beat's end ({dur:.2f})")
+            e = {'name': name, 'at': a, 'gain': gain}
+            if extra == 'PEAK':
+                e['align'] = 'peak'
+            elif extra is not None:
+                e['dur'] = extra
+            snd.append(e)
+        if snd:
+            beat['sounds'] = snd
         if len(beat['caption']) > 110:
             WARN.append(f"{sp['id']}: caption {len(beat['caption'])} chars (> 110)")
         out_beats.append(beat)
@@ -648,7 +738,7 @@ def main():
         'runtimeMin': 22,
         'dialogueReel': True,
         'cast': CAST,
-        '_source': {'script': 'show/episodes/ep01/script.md ## ACT ONE (as saved 2026-09-26 22:48)',
+        '_source': {'script': 'show/episodes/ep01/script.md ## ACT ONE (the Act One fix pass, 2026-09-27)',
                     'plan': 'audio/ep01/act1/dialogue/lines-plan-v1.json (audio/reel/ep01-act1-v2/set_plan.py)',
                     'takes': 'audio/ep01/act1/dialogue/lines-fast-v1.json',
                     'builder': 'audio/reel/ep01-act1-v2/build_timeline.py',
