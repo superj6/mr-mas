@@ -1,5 +1,5 @@
 // MR. MAS — Ep1 v3 pixel shots, THE COLD OPEN's own small drawings (the v3-shots-coldopen-tag pass, 2026-09-27). New,
-// additive, namespaced to the segment: nothing in shared/pixel or in the intro's code is edited; both are only imported.
+// additive, namespaced to the segment: nothing in shared/pixel is edited, only imported.
 //   tableStone(b, f, k)        1.03: the hailstone dropping into Mas's glass and bobbing, WITHOUT the plink's ring that
 //                              rooms/apec-stage.ts draws (pov-and-framing §3.6: "a ring in the water" is Ep12's reserved
 //                              tell, and the script says his water line doesn't move). Drawn over drawApecTable(plink: null)
@@ -10,24 +10,18 @@
 //   mcuLive(state)             the MCU's live mask: Mas's portrait as drawApecMCU places it (X 70, Y 30), its hoodie run
 //                              down to the frame's foot, and his collars (a 2-px margin)
 //   phoneLive()                the invite insert's live mask: the phone
-//   draw1993(b, k, o)          F1.1 · 1993, the WHOLE 480 x 270 frame in the intro's own 1-bit look: its 3:2 pillarbox
-//                              (dev/meras/era1993.ts PB), its era stamp (cast/era.ts, as the intro sets 1993), its zoom
-//                              rects, and its alert (drawDialog: the modal frame, the dithered title bar, the rounded
-//                              buttons, Cancel greyed, OK's default ring), re-used as drawn and centred, with the cold
-//                              open's words in it (`Are you sure?`) and the intro's 1-bit Orb icon, whose iris can look
-import {Buf, rect, ellipse, hash, bayer} from '../../../../shared/pixel/px';
-import {PAL} from '../../../../shared/pixel/palette';
+//   drawIntroCursor(b)        the intro's first frame's cursor (measured from out/intro/intro-ep1-V1-1080p.mp4 frame 0)
+//   smearRoom(b, j)            3.02's end: the room slides left and streaks, faster each frame (Act Four's whip smear)
+//   collapseFrame(b, step)     then the picture's window closes on the cursor's rectangle in three held steps (a crop)
+// (Until the lead's ruling on the showrunner's note, 2026-09-27, this file also drew the cold open's own 1993 frame from
+// the intro's alert; that beat is cut, and the intro's own 1993 now pays off "too far". See shots-coldopen.md §0.)
+import {Buf, ellipse, hash, bayer} from '../../../../shared/pixel/px';
+import {PAL, stepColor} from '../../../../shared/pixel/palette';
 import {Mask} from '../../../../shared/pixel/mask';
 import {applyPalette} from '../../../../shared/pixel/palettes';
-import {bigText, bigTextWidth, BIG_CAP} from '../../../../shared/pixel/font';
 import {APEC_FREEZE} from '../../../../shared/pixel/rooms/apec-stage';
 import {masPortrait, MAS_PORTRAIT_DEFAULT, MasPortraitState} from '../../../../shared/pixel/cast/mas';
-import {eraStamp} from '../../../../shared/pixel/cast/era';
-import {drawRewindToast1bit} from '../../../../shared/pixel/kits/rewind-toast';
-import {pw} from '../../../../shared/pixel/kits/uitype';
-// the intro's 1993 (the shipped intro is built from these files; they are imported, never edited)
-import {drawDialog, zoomRects, DLG, PB} from '../../../../dev/meras/era1993';
-import {INK, PAPER, LV, pp} from '../../../../dev/meras/bit';
+import {shiftRoom, whipSmear} from '../../act4/animatic/framing';
 
 const RH = 203;
 
@@ -76,71 +70,41 @@ export const buzzPhone = (b: Buf, dx: number) => {
   }
 };
 
-// ------------------------------------------------------------------ F1.1 · 1993 (the whole frame)
-/** the cold open's alert: the intro's (DLG, 244 x 96) moved to the frame's centre */
-export const DLG_CO = {x: 240 - Math.round(DLG.w / 2), y: 72, w: DLG.w, h: DLG.h};
-/** the intro's 32 x 32 1-bit Orb icon (era1993.ts orbIcon, which is not exported: the same pixels, re-set here), with an
- *  iris that can look: `look` [dx, dy] in whole pixels (0, 0 = the intro's: at us) */
-const orbIcon = (b: Buf, x: number, y: number, look: [number, number]) => {
-  const cx = x + 16, cy = y + 16, r = 13.5;
-  for (let j = 0; j < 32; j++) for (let i = 0; i < 32; i++) {
-    const dx = (i + 0.5 - 16) / r, dy = (j + 0.5 - 16) / r;
-    const d2 = dx * dx + dy * dy;
-    if (d2 > 1) continue;
-    const nz = Math.sqrt(1 - d2);
-    const v = Math.max(0, -0.55 * dx - 0.6 * dy + 0.58 * nz);
-    const kk = v > 0.8 ? 8 : v > 0.62 ? 6 : v > 0.45 ? 5 : v > 0.3 ? 4 : v > 0.15 ? 3 : 2;
-    b.set(x + i, y + j, LV[kk](x + i, y + j) ? INK : PAPER);
-  }
-  for (let a = 0; a < 360; a += 2) { const t = (a * Math.PI) / 180; b.set(Math.round(cx - 0.5 + Math.cos(t) * r), Math.round(cy - 0.5 + Math.sin(t) * r), INK); }
-  const ix = cx + look[0], iy = cy + look[1];
-  ellipse(ix + 1, iy + 1, 6.5, 6.5, b.ink(INK));
-  ellipse(ix + 1, iy + 1, 5, 5, pp(b, LV[4]));
-  ellipse(ix + 1, iy + 1, 3, 3, b.ink(INK));
-  rect(ix - 2, iy - 2, 2, 2, b.ink(PAPER));
-  b.set(ix + 3, iy + 3, PAPER);
-};
-export interface Frame1993 {
-  /** frames since the cut: the field and the stamp at 0; the zoom rects at `open`, open + 1; the alert from open + 2 */
-  k: number;
-  open?: number;
-  /** the icon's iris (whole-pixel offset) */
-  look?: [number, number];
-  /** frames since the Orb's 1-bit toast popped (< 0: not yet) */
-  toast?: number;
-}
-export const draw1993 = (b: Buf, o: Frame1993) => {
-  const open = o.open ?? 6;
-  // the intro's paper field in its 3:2 pillarbox, all 270 rows (the era switch fills the frame, as the intro's 1993 does)
-  for (let y = 0; y < 270; y++) for (let x = 0; x < 480; x++) b.c[y * 480 + x] = x < PB.x0 || x >= PB.x1 ? INK : PAPER;
-  // the era stamp as the intro sets 1993 (the shared stamp, paper on an ink plate, its rule growing 8 px a frame)
-  eraStamp(b, '1993', o.k, {text: PAPER, plate: INK, rule: PAPER});
-  const {x, y, w, h} = DLG_CO;
-  if (o.k === open) zoomRects(b, [234, 116, 12, 8], [x, y, w, h], 0.05, 0.4);
-  else if (o.k === open + 1) zoomRects(b, [234, 116, 12, 8], [x, y, w, h], 0.45, 0.85);
-  else if (o.k >= open + 2) {
-    // the intro's alert, drawn where the intro draws it, then moved here whole (frame, title bar, buttons, shadow)
-    const t = new Buf(480, 270, PAPER);
-    drawDialog(t, {okDown: false});
-    const sx = DLG.x, sy = DLG.y;
-    for (let j = 0; j < h + 3; j++) for (let i = 0; i < w + 3; i++) {
-      const v = t.c[(sy + j) * 480 + sx + i];
-      // the shadow's two outer strips are ink on paper in the source: carry them as drawn
-      b.c[(y + j) * 480 + x + i] = v;
+// ------------------------------------------------------------------ the end of the rewind: into the intro's cursor
+/** the intro's first frame (out/intro/intro-ep1-V1-1080p.mp4 frame 0): a cyan block cursor on black, drawn in glyph
+ *  cells: 4 columns x 9 rows of 8-row cells at native x 83 + 9c, y 39 + 9r; each cell two L3 columns, a gap, two C5
+ *  columns (their top row L3). Measured from the intro's own frame (both colours are the master palette's, exactly) */
+export const CURSOR = {x: 83, y: 39, w: 32, h: 80};
+export const drawIntroCursor = (b: Buf) => {
+  for (let c = 0; c < 4; c++) for (let r = 0; r < 9; r++) {
+    const x0 = CURSOR.x + c * 9, y0 = CURSOR.y + r * 9;
+    for (let j = 0; j < 8; j++) {
+      b.set(x0, y0 + j, PAL.L3); b.set(x0 + 1, y0 + j, PAL.L3);
+      const col = j === 0 ? PAL.L3 : PAL.C5;
+      b.set(x0 + 3, y0 + j, col); b.set(x0 + 4, y0 + j, col);
     }
-    // the title bar: the intro's names the kid (`age 8`); nobody is here, so the band runs whole (its own dither)
-    const tb = 12;
-    for (let j = 2; j < tb - 1; j++) for (let i = 3; i < w - 3; i++) b.set(x + i, y + 1 + j, (x + i + y + 1 + j) & 1 ? INK : PAPER);
-    // the content: the icon (its iris free to look), and the question in the intro's display face
-    rect(x + 8, y + tb + 4, w - 16, 42, b.ink(PAPER));
-    orbIcon(b, x + 14, y + tb + 12, o.look ?? [0, 0]);
-    const q = 'Are you sure?';
-    bigText(b, q, x + 58, y + tb + 14, INK);
-    void bigTextWidth; void BIG_CAP;
   }
-  if ((o.toast ?? -1) >= 0) {
-    const label = 'rewinding… too far';
-    const tw = pw(label) + 26;
-    drawRewindToast1bit(b, 240 - Math.round(tw / 2), y + h + 18, {k: o.toast!, text: label});
+};
+/** the smear: the room slides left (toward the cursor's side of the frame) faster each frame, streaked (Act Four's whip
+ *  smear); j = frames into it */
+export const SMEAR = [4, 10, 20, 36, 60, 92];
+export const smearRoom = (b: Buf, j: number) => {
+  const d = SMEAR[Math.min(SMEAR.length - 1, j)];
+  shiftRoom(b, -d);
+  whipSmear(b, -Math.min(240, 60 + j * 40));
+};
+/** the collapse: the picture's window closes on the cursor's rectangle in held steps (a crop, nothing scaled); outside
+ *  it the WHOLE frame goes black (the band too); inside, the smeared room a rung darker per step, a C5 edge.
+ *  step 0..2; returns nothing: the caller returns {full: true} */
+export const COLLAPSE_T = [0.5, 0.78, 0.93];
+export const collapseFrame = (b: Buf, step: number) => {
+  const t = COLLAPSE_T[Math.min(COLLAPSE_T.length - 1, step)];
+  const x0 = Math.round(CURSOR.x * t), y0 = Math.round(CURSOR.y * t);
+  const x1 = Math.round(480 + (CURSOR.x + CURSOR.w - 480) * t), y1 = Math.round(RH + (CURSOR.y + CURSOR.h - RH) * t);
+  for (let y = 0; y < 270; y++) for (let x = 0; x < 480; x++) {
+    const i = y * 480 + x;
+    if (x < x0 || x >= x1 || y < y0 || y >= y1) { b.c[i] = PAL.N0; continue; }
+    if (x === x0 || x === x1 - 1 || y === y0 || y === y1 - 1) { b.c[i] = PAL.C5; continue; }
+    b.c[i] = stepColor(b.c[i], -(step + 1));
   }
 };

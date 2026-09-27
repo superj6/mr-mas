@@ -26,17 +26,17 @@
   "note": "Nothing here was watched or heard. The numbers are measured from the files; whether the picture reads needs a person."
  },
  "summary": {
-  "shots": 11,
-  "beats": 12,
-  "frames": 736,
-  "seconds": 30.667,
-  "length": "0:30.67",
+  "shots": 10,
+  "beats": 10,
+  "frames": 640,
+  "seconds": 26.667,
+  "length": "0:26.67",
   "episode_in": "00:00:00",
-  "episode_out": "00:30:16",
+  "episode_out": "00:26:16",
   "verdicts": {
-   "-": 11
+   "-": 10
   },
-  "mean_s": 2.788,
+  "mean_s": 2.667,
   "median_s": 2.5,
   "min_s": 0.5,
   "max_s": 5.583,
@@ -54,7 +54,7 @@
   "mix": {
    "path": "out/ep01/full-v3/picture/coldopen-stick-mix.wav",
    "offset_frames": 0,
-   "frames": 736.0
+   "frames": 640.0
   },
   "refs": {}
  },
@@ -62,12 +62,12 @@
   {
    "check": "shot frames = their beats' frames",
    "ok": true,
-   "detail": "11 shots from 12 beats"
+   "detail": "10 shots from 10 beats"
   },
   {
    "check": "shots tile the segment with no gap",
    "ok": true,
-   "detail": "0 -> 736"
+   "detail": "0 -> 640"
   },
   {
    "check": "the lock vs the stick reel's own line frames",
@@ -97,7 +97,7 @@
   {
    "check": "the mix = its offset + the segment",
    "ok": true,
-   "detail": "mix 736.00 f vs 0 + 736"
+   "detail": "mix 640.00 f vs 0 + 640"
   }
  ],
  "sequences": [
@@ -107,7 +107,7 @@
    "place": "APEC CEO Summit, San Francisco · main stage",
    "time": "Thu Nov 16, 2023 · day",
    "s": 0,
-   "e": 604,
+   "e": 640,
    "shots": [
     "1.00",
     "1.01",
@@ -122,27 +122,10 @@
    ],
    "chapter": "Thu Nov 16, 2023 · day",
    "title": "APEC CEO Summit, San Francisco · main stage",
-   "cue": "sound: the hall's bed (HVAC, a polite crowd) under black before the first frame · music (v3): COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind · sound: the hall (HVAC, a polite crowd), the banquet louder; no music · the host: a hand and a PA voice, never a face (unnamed, never gendered) · the lit window is OGAL-A-RAM's: no label, no face, a phone's glow · one sentence, one read: the take plays on across the next two cuts · the hailstone crosses behind him; no pan splits the sentence · cut in on the dash: the plink lands in the read's own phrase break · the tent card reads for the whole insert · the phone is planted here, dark: the freeze lights it · the same MCU setup as 1.02 · the swell rises into the freeze and is cut by it, mid-rise · style: 2-TONE FREEZE, a full-room pass; Mas never freezes · sound: the hall drops to a low filtered hum, never silence · held a bar to read; the buzz is the one close sound · egg: none of the four circles is GERG's green laptop glow · the hold is his; the tap plays inside it (no insert of the thumb) · jaw light white -> pale blue at 1.35 s: the only sign he accepted · the clock (Friday, noon) states no outcome · the Orb, his witness, carries \"how did he get here?\" across the cut · the counter aims at 2022 (Act One) and overshoots: sc 4's \"too far\" · style: BASE -> 1-BIT in four held light steps (reel: 1-BIT end only) · sound: the hall runs backward: a groan on the catch, then a lurch",
-   "frames": 604,
+   "cue": "sound: the hall's bed (HVAC, a polite crowd) under black before the first frame · music (v3): COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind · sound: the hall (HVAC, a polite crowd), the banquet louder; no music · the host: a hand and a PA voice, never a face (unnamed, never gendered) · the lit window is OGAL-A-RAM's: no label, no face, a phone's glow · one sentence, one read: the take plays on across the next two cuts · the hailstone crosses behind him; no pan splits the sentence · cut in on the dash: the plink lands in the read's own phrase break · the tent card reads for the whole insert · the phone is planted here, dark: the freeze lights it · the same MCU setup as 1.02 · the swell rises into the freeze and is cut by it, mid-rise · style: 2-TONE FREEZE, a full-room pass; Mas never freezes · sound: the hall drops to a low filtered hum, never silence · held a bar to read; the buzz is the one close sound · egg: none of the four circles is GERG's green laptop glow · the hold is his; the tap plays inside it (no insert of the thumb) · jaw light white -> pale blue at 1.35 s: the only sign he accepted · the clock (Friday, noon) states no outcome · the Orb, his witness, carries \"how did he get here?\" across the cut · the counter aims at 2022 (Act One) and overshoots: \"too far\" lands here; the intro's own 1993 (five seconds on) shows where · style: BASE, washed up its light ramps in held steps as it scrubs (not to paper: no 1993 frame here); the smear from 3.92 s, the collapse in three held steps from 4.17 s, onto the intro's cursor (native x 83-114, y 39-118) on black for the last 2 frames · sound: the hall runs backward: a groan on the catch, then a lurch; the rewind whirr accelerates from the slip into the collapse and cuts with the picture; the intro's first beat takes over (no 1993 chip notes here now)",
+   "frames": 640,
    "tc_in": "00:00:00",
-   "tc_out": "00:25:04"
-  },
-  {
-   "id": "F1.1",
-   "side": "",
-   "place": "a 1-bit dialog (no computer, desk or hand)",
-   "time": "1993",
-   "s": 604,
-   "e": 736,
-   "shots": [
-    "4.01"
-   ],
-   "chapter": "1993",
-   "title": "a 1-bit dialog (no computer, desk or hand)",
-   "cue": "music (v3): COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind · stand-in: Cancel struck through = greyed out (reel can't grey a button) · style: F1.1 1-BIT, an era switch; date card top-left, 3:2 pillarbox · plants the rule: he always takes the offer (paid at Act Four's noon) · the toast is the joke: its read plus a beat, then SMASH TO the intro",
-   "frames": 132,
-   "tc_in": "00:25:04",
-   "tc_out": "00:30:16"
+   "tc_out": "00:26:16"
   }
  ],
  "shots": [
@@ -1927,7 +1910,7 @@
     "3.02"
    ],
    "s": 532,
-   "e": 604,
+   "e": 640,
    "onscreen": [
     {
      "text": "rewinding…",
@@ -1963,6 +1946,11 @@
      "text": "2001",
      "s": 64,
      "e": 72
+    },
+    {
+     "text": "rewinding… too far",
+     "s": 72,
+     "e": 100
     }
    ],
    "lines": [],
@@ -1973,23 +1961,24 @@
    "side_label": "",
    "badge": null,
    "whip": null,
-   "frame": "WIDE · the room scrubs back",
+   "frame": "WIDE · the room scrubs back, too far: the collapse",
    "cls": "W",
    "move": "cut",
-   "does": "The room scrubs back: the ovation sits, the water climbs home, the hailstone flies back. The year catches on 2022 for a second, then slips past, faster.",
+   "does": "The room scrubs back: the ovation sits, the water climbs home, the hailstone flies back. The year catches on 2022 for a second, then slips past, faster; the toast turns to \"rewinding… too far\" as the wheels spin on toward the nineties. The frame smears and collapses into a cyan cursor on black: the intro's first frame.",
    "chars": [
     "mas",
     "orb"
    ],
    "cues": [
     "music (v3): COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind",
-    "the counter aims at 2022 (Act One) and overshoots: sc 4's \"too far\"",
-    "style: BASE -> 1-BIT in four held light steps (reel: 1-BIT end only)",
-    "sound: the hall runs backward: a groan on the catch, then a lurch"
+    "the counter aims at 2022 (Act One) and overshoots: \"too far\" lands here; the intro's own 1993 (five seconds on) shows where",
+    "style: BASE, washed up its light ramps in held steps as it scrubs (not to paper: no 1993 frame here); the smear from 3.92 s, the collapse in three held steps from 4.17 s, onto the intro's cursor (native x 83-114, y 39-118) on black for the last 2 frames",
+    "sound: the hall runs backward: a groan on the catch, then a lurch; the rewind whirr accelerates from the slip into the collapse and cuts with the picture; the intro's first beat takes over (no 1993 chip notes here now)"
    ],
    "sounds": [
     "orb_servo @12",
-    "orb_servo @37"
+    "orb_servo @37",
+    "glyph_blink @72"
    ],
    "spots": [
     {
@@ -2001,6 +1990,11 @@
      "name": "orb_servo",
      "k": 37,
      "dur": null
+    },
+    {
+     "name": "glyph_blink",
+     "k": 72,
+     "dur": null
     }
    ],
    "v4_frames": null,
@@ -2009,10 +2003,12 @@
    "room": "apec-stage",
    "style": "BASE",
    "fx": [
-    "rewind"
+    "collapse",
+    "rewind",
+    "smear"
    ],
    "slate": false,
-   "caption": "The room scrubs back: the ovation sits, the water climbs home, the hailstone flies back. The year catches on 2022 for a second, then slips past, faster.",
+   "caption": "The room scrubs back: the ovation sits, the water climbs home, the hailstone flies back. The year catches on 2022 for a second, then slips past, faster; the toast turns to \"rewinding… too far\" as the wheels spin on toward the nineties. The frame smears and collapses into a cyan cursor on black: the intro's first frame.",
    "cast": [
     {
      "id": "mas",
@@ -2088,185 +2084,18 @@
      "s": 64,
      "e": 72,
      "must": true
-    }
-   ],
-   "tc_in": "00:22:04",
-   "tc_out": "00:25:04",
-   "frames": 72
-  },
-  {
-   "id": "4.01",
-   "setup": "4.01",
-   "beats": [
-    "4.01",
-    "4.02"
-   ],
-   "s": 604,
-   "e": 736,
-   "onscreen": [
-    {
-     "text": "1993",
-     "s": 0,
-     "e": 132
-    },
-    {
-     "text": "Are you sure?",
-     "s": 8,
-     "e": 132
-    },
-    {
-     "text": "UI: OK",
-     "s": 8,
-     "e": 132
-    },
-    {
-     "text": "UI: C̶a̶n̶c̶e̶l̶",
-     "s": 8,
-     "e": 132
-    },
-    {
-     "text": "1993",
-     "s": 96,
-     "e": 132
-    },
-    {
-     "text": "Are you sure?",
-     "s": 96,
-     "e": 132
-    },
-    {
-     "text": "UI: OK",
-     "s": 96,
-     "e": 132
-    },
-    {
-     "text": "UI: C̶a̶n̶c̶e̶l̶",
-     "s": 96,
-     "e": 132
-    },
-    {
-     "text": "rewinding… too far",
-     "s": 98,
-     "e": 132
-    }
-   ],
-   "lines": [],
-   "seq": "F1.1",
-   "verdict": "",
-   "v4": null,
-   "side": "MAS",
-   "side_label": "",
-   "badge": null,
-   "whip": null,
-   "frame": "GFX · 1993: the dialog",
-   "cls": "GS",
-   "move": "cut",
-   "does": "Paper white, a 3:2 pillarbox. Alone in the middle, a 1-bit alert asks \"Are you sure?\": OK, and Cancel greyed out (a 50% dither). No computer, no hand. / The Orb's toast, now in 1-bit. SMASH TO the main titles.",
-   "chars": [],
-   "cues": [
-    "music (v3): COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind",
-    "stand-in: Cancel struck through = greyed out (reel can't grey a button)",
-    "style: F1.1 1-BIT, an era switch; date card top-left, 3:2 pillarbox",
-    "plants the rule: he always takes the offer (paid at Act Four's noon)",
-    "music (v3): COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind",
-    "the toast is the joke: its read plus a beat, then SMASH TO the intro"
-   ],
-   "sounds": [
-    "glyph_blink@1bit @98"
-   ],
-   "spots": [
-    {
-     "name": "glyph_blink@1bit",
-     "k": 98,
-     "dur": null
-    }
-   ],
-   "v4_frames": null,
-   "kind": "flashback",
-   "set": "void",
-   "room": "f1.1",
-   "style": "1-BIT",
-   "fx": [],
-   "slate": false,
-   "caption": "Paper white, a 3:2 pillarbox. Alone in the middle, a 1-bit alert asks \"Are you sure?\": OK, and Cancel greyed out (a 50% dither). No computer, no hand. / The Orb's toast, now in 1-bit. SMASH TO the main titles.",
-   "cast": [],
-   "speak": [],
-   "beat_starts": {
-    "4.01": 0,
-    "4.02": 96
-   },
-   "names": [],
-   "fg": null,
-   "marks": {},
-   "mark_src": {},
-   "texts": [
-    {
-     "kind": "label",
-     "text": "1993",
-     "s": 0,
-     "e": 132,
-     "must": true
-    },
-    {
-     "kind": "label",
-     "text": "Are you sure?",
-     "s": 8,
-     "e": 132,
-     "must": true
-    },
-    {
-     "kind": "ui",
-     "text": "OK",
-     "s": 8,
-     "e": 132,
-     "must": true
-    },
-    {
-     "kind": "ui",
-     "text": "C̶a̶n̶c̶e̶l̶",
-     "s": 8,
-     "e": 132,
-     "must": true
-    },
-    {
-     "kind": "label",
-     "text": "1993",
-     "s": 96,
-     "e": 132,
-     "must": true
-    },
-    {
-     "kind": "label",
-     "text": "Are you sure?",
-     "s": 96,
-     "e": 132,
-     "must": true
-    },
-    {
-     "kind": "ui",
-     "text": "OK",
-     "s": 96,
-     "e": 132,
-     "must": true
-    },
-    {
-     "kind": "ui",
-     "text": "C̶a̶n̶c̶e̶l̶",
-     "s": 96,
-     "e": 132,
-     "must": true
     },
     {
      "kind": "toast",
      "text": "rewinding… too far",
-     "s": 98,
-     "e": 132,
+     "s": 72,
+     "e": 100,
      "must": true
     }
    ],
-   "tc_in": "00:25:04",
-   "tc_out": "00:30:16",
-   "frames": 132
+   "tc_in": "00:22:04",
+   "tc_out": "00:26:16",
+   "frames": 108
   }
  ],
  "lines": [

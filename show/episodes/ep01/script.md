@@ -203,13 +203,9 @@ On the word his thumb taps `Accept` below frame, eyes up. The light on his jaw s
 
 `[2S]` [3.01] (2 s) Mas and the Orb. The iris steps from the phone to Mas (three drawings). A toast pops beside it, with a year under it that starts counting back: `rewinding…` · `2023`. MM-06 enters under the F4's decay.
 
-`[W]` [3.02] (3 s) The room scrubs backward in held-drawing chunks: the ovation sits, the water climbs home, the hailstone flies back through the skylight and across the bay. The year catches on `2022` for about a second, as if this is the stop; then it slips, and the years blur past (`2019` · `2015` · `2008` · `2001`). The frame steps down its light ramps, four held steps, to paper white. The hall runs backward with the scrub: a groan on the catch, a lurch when it slips.
+`[W]` [3.02] (4.5 s) The room scrubs backward in held-drawing chunks: the ovation sits, the water climbs home, the hailstone flies back through the skylight and across the bay. The year catches on `2022` for about a second, as if this is the stop; then it slips, and the years blur past (`2019` · `2015` · `2008` · `2001`…). The toast blinks: `rewinding… too far`. The frame smears sideways and collapses onto one cyan cursor on black: the intro's first frame. The hall runs backward with the scrub (a groan on the catch, a lurch when it slips), and the rewind accelerates into the cut.
 
-### 4. F1.1 · 1993 [1-BIT] · F
-
-`[GFX]` [4.01] (4 s) `1993` (date card, top-left, in a 3:2 pillarbox). A paper-white field; alone in the middle, a 1-bit alert: `Are you sure?` `[INVENTED]`, with `OK` and `Cancel` under it. Cancel is greyed out, a 50% dither. No computer, no desk, no hand. MM-06's three chip notes on F, uneven in rhythm, stepping in pitch (never even beeps: X3).
-
-`[GFX]` [4.02] (1.5 s) The Orb's toast, in 1-bit: `rewinding… too far`
+> **Cut 2026-09-27 (showrunner: "the cold open to intro is not very good transition"):** sc 4, F1.1 1993, the pillarboxed `Are you sure?` dialog. It doubled the intro's own 1993, which arrives five seconds later and now pays off "too far". The rewind lands on the intro's cursor instead. See production/full-v3/shots-coldopen.md §0.
 
 SMASH TO:
 

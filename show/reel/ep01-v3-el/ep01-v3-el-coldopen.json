@@ -1,11 +1,11 @@
 {
  "episode": 1,
  "title": "ep1.0_research_preview.md",
- "part": "COLD OPEN · sc 1-4",
+ "part": "COLD OPEN · sc 1-3",
  "variant": "stick-figure dialogue reel v3 LOCK · v2/v5 takes + the v3 takes (Mas's inner voice, the new lines) · temp bed · ElevenLabs set A takes (eleven_multilingual_v2, library voices), EL-timed: the lock's gaps kept, beats changed only by the takes' lengths",
  "logline": "The v3 stick lock of coldopen: the beat plan applied to ep01-coldopen-v2.json (arrivals, aftermaths, Mas's inner voice, the cuts, no pointers).",
- "dateSpan": "Nov 16, 2023 · 1993",
- "runtimeMin": 0.5,
+ "dateSpan": "Nov 16, 2023",
+ "runtimeMin": 0.43,
  "dialogueReel": true,
  "cast": {
   "mas": {
@@ -31,7 +31,7 @@
   "builder": "audio/reel/ep01-v3/build_timeline.py",
   "bed": "audio/reel/ep01-v3/bed.py -> audio/reel/ep01-v3/coldopen-bed.wav",
   "notes": "show/episodes/ep01/production/full-v3/lock.md",
-  "seconds": 30.027,
+  "seconds": 26.027,
   "kokoro_lock": "show/reel/ep01-v3/ep01-v3-coldopen.json",
   "el_builder": "audio/ep01/v3-el/tools/el_lock.py",
   "el_notes": "show/episodes/ep01/production/full-v3/voices-el.md"
@@ -661,7 +661,7 @@
    "set": "stage",
    "style": "BASE",
    "shot": "wide",
-   "frame": "WIDE · the room scrubs back",
+   "frame": "WIDE · the room scrubs back, too far: the collapse",
    "side": "",
    "room": "apec-stage",
    "chars": [
@@ -675,13 +675,13 @@
      "x": 0.37
     }
    ],
-   "caption": "The room scrubs back: the ovation sits, the water climbs home, the hailstone flies back. The year catches on 2022 for a second, then slips past, faster.",
+   "caption": "The room scrubs back: the ovation sits, the water climbs home, the hailstone flies back. The year catches on 2022 for a second, then slips past, faster; the toast turns to \"rewinding… too far\" as the wheels spin on toward the nineties. The frame smears and collapses into a cyan cursor on black: the intro's first frame.",
    "lines": [],
    "onscreen": [
     {
      "text": "rewinding…",
      "at": 0.0,
-     "until": null
+     "until": 3.0
     },
     {
      "text": "2023",
@@ -711,18 +711,25 @@
     {
      "text": "2001",
      "at": 2.67,
-     "until": null
+     "until": 3.0
+    },
+    {
+     "text": "rewinding… too far",
+     "at": 3.0,
+     "until": 4.17
     }
    ],
-   "reelDur": 3.0,
+   "reelDur": 4.5,
    "fx": [
-    "rewind"
+    "rewind",
+    "smear",
+    "collapse"
    ],
    "cues": [
     "music (v3): COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind",
-    "the counter aims at 2022 (Act One) and overshoots: sc 4's \"too far\"",
-    "style: BASE -> 1-BIT in four held light steps (reel: 1-BIT end only)",
-    "sound: the hall runs backward: a groan on the catch, then a lurch"
+    "the counter aims at 2022 (Act One) and overshoots: \"too far\" lands here; the intro's own 1993 (five seconds on) shows where",
+    "style: BASE, washed up its light ramps in held steps as it scrubs (not to paper: no 1993 frame here); the smear from 3.92 s, the collapse in three held steps from 4.17 s, onto the intro's cursor (native x 83-114, y 39-118) on black for the last 2 frames",
+    "sound: the hall runs backward: a groan on the catch, then a lurch; the rewind whirr accelerates from the slip into the collapse and cuts with the picture; the intro's first beat takes over (no 1993 chip notes here now)"
    ],
    "sounds": [
     {
@@ -734,112 +741,10 @@
      "name": "orb_servo",
      "at": 1.55,
      "gain": -27
-    }
-   ]
-  },
-  {
-   "id": "4.01",
-   "act": "COLD OPEN",
-   "kind": "flashback",
-   "set": "void",
-   "style": "1-BIT",
-   "shot": "wide",
-   "frame": "GFX · 1993: the dialog",
-   "side": "",
-   "room": "f1.1",
-   "chars": [],
-   "caption": "Paper white, a 3:2 pillarbox. Alone in the middle, a 1-bit alert asks \"Are you sure?\": OK, and Cancel greyed out (a 50% dither). No computer, no hand.",
-   "lines": [],
-   "onscreen": [
-    {
-     "text": "1993",
-     "at": 0.0,
-     "until": null
     },
     {
-     "text": "Are you sure?",
-     "at": 0.35,
-     "until": null
-    },
-    {
-     "text": "UI: OK",
-     "at": 0.35,
-     "until": null
-    },
-    {
-     "text": "UI: C̶a̶n̶c̶e̶l̶",
-     "at": 0.35,
-     "until": null
-    }
-   ],
-   "reelDur": 4.0,
-   "fx": [],
-   "seq": {
-    "id": "F1.1",
-    "place": "a 1-bit dialog (no computer, desk or hand)",
-    "time": "1993",
-    "side": ""
-   },
-   "cues": [
-    "music (v3): COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind",
-    "stand-in: Cancel struck through = greyed out (reel can't grey a button)",
-    "style: F1.1 1-BIT, an era switch; date card top-left, 3:2 pillarbox",
-    "plants the rule: he always takes the offer (paid at Act Four's noon)"
-   ],
-   "sounds": []
-  },
-  {
-   "id": "4.02",
-   "act": "COLD OPEN",
-   "kind": "flashback",
-   "set": "void",
-   "style": "1-BIT",
-   "shot": "wide",
-   "frame": "GFX · 1993: the toast",
-   "side": "",
-   "room": "f1.1",
-   "chars": [],
-   "caption": "The Orb's toast, now in 1-bit. SMASH TO the main titles.",
-   "lines": [],
-   "onscreen": [
-    {
-     "text": "1993",
-     "at": 0.0,
-     "until": null
-    },
-    {
-     "text": "Are you sure?",
-     "at": 0.0,
-     "until": null
-    },
-    {
-     "text": "UI: OK",
-     "at": 0.0,
-     "until": null
-    },
-    {
-     "text": "UI: C̶a̶n̶c̶e̶l̶",
-     "at": 0.0,
-     "until": null
-    },
-    {
-     "text": "rewinding… too far",
-     "at": 0.1,
-     "until": null
-    }
-   ],
-   "reelDur": 1.5,
-   "fx": [],
-   "cues": [
-    "music (v3): COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind",
-    "the toast is the joke: its read plus a beat, then SMASH TO the intro"
-   ],
-   "shotId": "4.01",
-   "cont": true,
-   "sounds": [
-    {
-     "name": "glyph_blink@1bit",
-     "at": 0.1,
+     "name": "glyph_blink",
+     "at": 3.0,
      "gain": -26
     }
    ]
@@ -847,10 +752,18 @@
  ],
  "_el_retimed": {
   "rule": "gaps between lines, before the first and after the last kept; J-cut leads kept; beats change only by the takes' lengths; timed items follow the words",
-  "seconds_kokoro": 30.667,
-  "seconds_el": 30.027,
+  "seconds_kokoro": 26.667,
+  "seconds_el": 26.027,
   "delta_s": -0.64,
   "beats_changed": 3,
   "missing_takes": []
- }
+ },
+ "_v3_edits": [
+  {
+   "date": "2026-09-27",
+   "by": "v3-shots-coldopen-tag (the lead's ruling on the showrunner's note: \"i think the cold open to intro is not very good transition\")",
+   "what": "cut 4.01 + 4.02 (the cold open's own 1993 dialog, 5.5 s); 3.02 3.0 -> 4.5 s: the counter slips on toward 1993, `rewinding… too far` lands at 3.0 s (glyph_blink), the frame smears (3.92 s) and collapses (4.17 s) into the intro's first frame, its cyan cursor on black; the intro's own 1993 pays off \"too far\"",
+   "record": "show/episodes/ep01/production/full-v3/shots-coldopen.md §0"
+  }
+ ]
 }

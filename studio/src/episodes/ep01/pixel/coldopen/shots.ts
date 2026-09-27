@@ -1,11 +1,12 @@
 // MR. MAS — Ep1 v3 pixel picture: THE COLD OPEN (sc 1–4), one layout per shot of lock `coldopen` (the
 // v3-shots-coldopen-tag pass, 2026-09-27). The lock is ./data.ts (tools/lock.py on show/reel/ep01-v3/ep01-v3-coldopen.json,
 // with ./takes-mouth.json: the fastrec takes plus mouth tracks for the two on-camera lines, from coldopen/tools/mouths.py).
-// The art is v3-art-a's APEC stage, invite, rewind toast and 1993 (show/episodes/ep01/production/full-v3/art/art-a.md
-// §1.1), the intro's own 1993 alert (dev/meras/era1993.ts, imported), and this segment's small additive drawings in
-// ./art.ts. The record is show/episodes/ep01/production/full-v3/shots-coldopen.md.
+// The art is v3-art-a's APEC stage, invite and rewind toast (show/episodes/ep01/production/full-v3/art/art-a.md §1.1) and
+// this segment's small additive drawings in ./art.ts. The record is show/episodes/ep01/production/full-v3/shots-coldopen.md.
+// The lead's ruling on the showrunner's note (2026-09-27): the cold open's own 1993 (4.01, 4.02) is cut; it ends on the
+// rewind, which smears and collapses into the intro's first frame (its cursor), and the intro's 1993 pays off "too far".
 //
-// Rules kept: native 480 x 270, the master palette (1993 in the ONEBIT ink and paper), whole-pixel moves, held drawings.
+// Rules kept: native 480 x 270, the master palette, whole-pixel moves, held drawings (the collapse is a crop, not a scale).
 // Adult Mas never blinks (pov-and-framing §3.6); his life on camera is his mouth, his eyes and the light on him. No ring
 // in his water (§3.6, Ep12's), no plates beyond the world's own tent card, no pointer text.
 import {defineSegment, layouts, mk, mouth, on2, shiftRoom} from '../kit';
@@ -15,7 +16,7 @@ import {Mask} from '../../../../shared/pixel/mask';
 import {drawApecWide, drawApecMCU, drawApecTable, drawApec2S, apecFreeze, apecScrub, APEC, APEC_2S_LOOKS} from '../../../../shared/pixel/rooms/apec-stage';
 import {drawInviteInsert} from '../../../../shared/pixel/kits/phone-invite';
 import {drawRewindToast, yearAt} from '../../../../shared/pixel/kits/rewind-toast';
-import {tableStone, hostSpill, freezeOutside, mcuLive, phoneLive, buzzPhone, draw1993} from './art';
+import {tableStone, hostSpill, freezeOutside, mcuLive, phoneLive, buzzPhone, drawIntroCursor, smearRoom, collapseFrame, SMEAR} from './art';
 import {LOCK} from './data';
 
 const L = layouts();
@@ -119,10 +120,13 @@ L.add('3.01', {
 });
 
 L.add('3.02', {
-  st: 'rooms/apec-stage drawApecWide run backward + apecScrub: the room scrubs back in held chunks (the Orb bobs backward; the card lowers, the ovation sits, the host\'s water climbs home, the stone flies out of his glass and back to the far window, whose phone lights again); it catches on 2022 (a 1-px judder, the room one step up its ramps), then slips faster down four held light steps to paper; the toast\'s year rolls (yearAt)',
-  marks: {caught: ['snd', 'orb_servo', 1, 0], slip: ['snd', 'orb_servo', 2, 0]},
+  st: 'rooms/apec-stage drawApecWide run backward + apecScrub: the room scrubs back in held chunks (the Orb bobs backward; the card lowers, the ovation sits, the host\'s water climbs home, the stone flies out of his glass and back to the far window, whose phone lights again); it catches on 2022 (a 1-px judder, the room a light step up) and holds, then slips faster, washing up one more held light step (never to white); the toast\'s year rolls (yearAt), and on the blink it turns to `rewinding… too far` while the wheels spin on down toward the nineties. Then coldopen/art smearRoom (6 f: it slides left and streaks, faster) and collapseFrame (3 held steps of 2 f: the window closes on the intro\'s cursor, the band black too), and the last 2 f are the intro\'s first frame: its cyan cursor on black (drawIntroCursor)',
+  marks: {caught: ['snd', 'orb_servo', 1, 0], slip: ['snd', 'orb_servo', 2, 0], far: ['snd', 'glyph_blink', 1, 0], col: ['txt', 'rewinding… too far', 'until', 0]},
   draw: (fb, k, sh) => {
-    const c = mk(sh, 'caught', 12), s = mk(sh, 'slip', 37);
+    const len = sh.e - sh.s;
+    const c = mk(sh, 'caught', 12), s = mk(sh, 'slip', 37), far = mk(sh, 'far', 72), col = mk(sh, 'col', len - 8);
+    const sm = col - SMEAR.length;
+    if (k >= len - 2) { rect(0, 0, 480, 270, fb.ink(PAL.N0)); drawIntroCursor(fb); return {full: true}; }
     // the Orb's own clock runs backward (3x), and stops while the counter is caught
     const fr = 100000 - (k < c ? k : k < s ? c : c + (k - s) * 2) * 3;
     const back = k >= s ? on2(k - s) : -1; // frames into the slip, on 2s
@@ -137,21 +141,19 @@ L.add('3.02', {
       push: PUSH_END,
       mas: {arm: 'lap', head: 'host'},
     });
-    apecScrub(fb, k < c ? 0 : k < s ? 1 : k < s + 10 ? 2 : k < s + 22 ? 3 : 4);
+    apecScrub(fb, k < c ? 0 : k < s ? 1 : 2);
     if (k === c || k === c + 1) shiftRoom(fb, 0, 1); // the catch: a 1-px judder, then it holds
-    drawRewindToast(fb, APEC.orb[0] - PUSH_END + 16, 70, {k: 30 + k, ...yearAt(k / 24)});
-  },
-});
-
-// ------------------------------------------------------------------ 4. F1.1 · 1993
-L.add('4.01', {
-  st: 'coldopen/art draw1993: the whole frame in the intro\'s 1993 (dev/meras/era1993: its 3:2 pillarbox, zoom rects and alert, re-used and centred; cast/era\'s 1993 stamp as the intro sets it): Are you sure?, OK the default, Cancel greyed; the alert\'s 1-bit Orb icon looks at us, at OK, back at us; on the blink the Orb\'s toast in 1-bit (kits/rewind-toast drawRewindToast1bit): rewinding… too far',
-  marks: {pop: ['snd', 'glyph_blink@1bit', 1, 0]},
-  draw: (fb, k, sh) => {
-    const p = mk(sh, 'pop', 98);
-    const look: [number, number] = k < 44 ? [0, 0] : k < 76 ? [3, 3] : k < p ? [0, 0] : [1, 4];
-    draw1993(fb, {k, open: 6, look, toast: k - p});
-    return {full: true};
+    // the counter: the stick's years to 2001, then (after "too far") a year every 2 f down to 1994, the second frame of
+    // each mid-roll, then the ones wheel creeping toward 3 in held steps: it never settles on camera
+    const tx = APEC.orb[0] - PUSH_END + 16;
+    if (k < far) drawRewindToast(fb, tx, 70, {k: 30 + k, ...yearAt(k / 24)});
+    else {
+      const j = k - far, yr = Math.max(1994, 2001 - Math.floor(j / 2));
+      const roll = yr > 1994 ? (j % 2 ? 0.5 : 0) : Math.min(0.85, 0.2 * (1 + Math.floor((j - 14) / 3)));
+      drawRewindToast(fb, tx, 70, {k: j, year: yr, roll, text: 'rewinding… too far'});
+    }
+    if (k >= sm) smearRoom(fb, Math.min(k, col - 1) - sm);
+    if (k >= col) { collapseFrame(fb, Math.floor((k - col) / 2)); return {full: true}; }
   },
 });
 
