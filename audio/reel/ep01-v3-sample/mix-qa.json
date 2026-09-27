@@ -59,7 +59,8 @@
    "what": "rooms out, room tone at -50 LUFS"
   },
   {
-   "music": "MISSING: built without a score"
+   "music": "audio/reel/ep01-v3-sample/music/music.wav",
+   "len_s": 332.88
   },
   {
    "bus": "dialogue",
@@ -71,15 +72,15 @@
   },
   {
    "bus": "sfx",
-   "lufs_pre_master": -34.67
+   "lufs_pre_master": -34.69
   },
   {
    "bus": "music",
-   "lufs_pre_master": null
+   "lufs_pre_master": -22.53
   }
  ],
  "sfx": 59,
  "lines": 69,
  "lufs_integrated": -16.0,
- "peak_dbfs": -1.23
+ "peak_dbfs": -1.1
 }

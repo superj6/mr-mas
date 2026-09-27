@@ -168,6 +168,9 @@ for bid in ('S1.02', 'S1.03', 'S1.04', 'S1.05'):
     beats.append(get(bid))
 b = get('S1.06'); b['lines'] = [vo_line('v3s-07', 0.4)]; dur(b, 0.4 + vo_len('v3s-07') + 0.7)
 b['caption'] = 'His finger over JOIN while he thinks it through. Then the click; the waltz tape-stops on it.'
+for sd in b.get('sounds', []):
+    if sd['name'] == 'dialog_ok_click':
+        sd['at'] = round(b['reelDur'] - 0.02, 3)  # the click lands on the waltz's tape-stop (composer, cues.json)
 beats.append(b)
 note('S1.06', 'V.O. v3s-07 "alyi set it up. probably just the budget." before JOIN', 'the one read he gets wrong, after we have just seen the board\'s plan: suspense by dramatic irony. Then silence inside him for the whole blow')
 for bid in ('S1.07', 'S1.08', 'S1.09', 'S1.10', 'S1.11'):

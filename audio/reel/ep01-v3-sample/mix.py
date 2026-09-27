@@ -182,7 +182,12 @@ for i, tgt in enumerate(blocks):
     v = tgt + (v - tgt) * (att if tgt > v else rel)
     smb[i] = v
 sm = np.interp(np.arange(N), np.arange(len(smb)) * BL + BL / 2, smb)
-mus *= A.db(-10 * sm)[:, None]
+# duck depth by section: launch night's warm bed only dips 6 dB so its warmth survives the talk (composer's note);
+# 2 AM dips 8 dB; Vegas keeps the episode mixer's 10 dB
+depth = np.full(N, 10.0)
+depth[: int(s('B.00') * SR)] = 6.0
+depth[int(s('C.00') * SR):] = 8.0
+mus *= A.db(-depth * sm)[:, None]
 room *= A.db(-2 * sm)[:, None]
 
 # ------------------------------------------------------------------ master
