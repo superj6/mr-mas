@@ -1,0 +1,255 @@
+{
+ "id": "e1-a3-22-02",
+ "scene": "22",
+ "speaker": "TASYA",
+ "speaker_slug": "tasya",
+ "text": "\"We love you guys.\"",
+ "spoken_as": "Ha ha ha! We love you guys.",
+ "delivery": "on the monitor; a hearty laugh first",
+ "tag": "[V · NOV 6, 2023]",
+ "mode": "call",
+ "voiced_in_cut": true,
+ "on_camera": "monitor",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "POV",
+ "shot_id": "POV",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": "monitor",
+ "room": null,
+ "est_s": 1.9,
+ "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-22-02.wav",
+ "mp3": null,
+ "duration_s": 2.925,
+ "frames_24": 71,
+ "voiced_span_s": 1.73,
+ "pace": {
+  "words": 7,
+  "wpm": 242.8,
+  "speed": 0.92,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.92,
+   "speed_band": [
+    0.88,
+    0.96
+   ],
+   "articulation_guide_sps": [
+    3.8,
+    4.4
+   ],
+   "turn_wpm_guide": [
+    125,
+    145
+   ],
+   "intent": "on the monitor; a hearty laugh first"
+  },
+  "measured": {
+   "wpm": 242.8,
+   "articulation_sps": 4.05,
+   "syllables": 7,
+   "span_s": 1.73,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.5,
+  "audible_out_s": 2.23
+ },
+ "placement": {
+  "gap_before_s": 0.7,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_eric (Kokoro-82M stock) · b-eric-warm · speed 0.920",
+ "voiceId": "am_eric",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch -1.5 st",
+  "low shelf +2 dB @180 Hz",
+  "peak -1.5 dB @350 Hz Q1.0",
+  "high shelf +1.5 dB @6000 Hz",
+  "comp 2.0:1 @-24 dB (12/150 ms)",
+  "then the monitor chain: HPF 200 Hz; LPF 7000 Hz; peak +1.5 dB @1800 Hz Q1.0; comp 2.5:1 @-22 dB (5/90 ms); -16 LUFS",
+  "Kokoro speed 0.920 (the centre of the band; tasya band 0.88-0.96); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "A"
+  },
+  {
+   "t": 1.208,
+   "f": 29,
+   "shape": "O"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "E"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "A"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "E"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "O"
+  },
+  {
+   "t": 1.667,
+   "f": 40,
+   "shape": "E"
+  },
+  {
+   "t": 1.792,
+   "f": 43,
+   "shape": "A"
+  },
+  {
+   "t": 2.125,
+   "f": 51,
+   "shape": "E"
+  },
+  {
+   "t": 2.25,
+   "f": 54,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Ha",
+   "t0": 0.505,
+   "t1": 0.705,
+   "f0": 12,
+   "f1": 17,
+   "ph": "hˈɑ"
+  },
+  {
+   "w": "ha",
+   "t0": 0.705,
+   "t1": 0.93,
+   "f0": 17,
+   "f1": 22,
+   "ph": "hˈɑ"
+  },
+  {
+   "w": "ha",
+   "t0": 0.93,
+   "t1": 1.18,
+   "f0": 22,
+   "f1": 28,
+   "ph": "hˈɑ"
+  },
+  {
+   "w": "We",
+   "t0": 1.218,
+   "t1": 1.355,
+   "f0": 29,
+   "f1": 33,
+   "ph": "wˌi"
+  },
+  {
+   "w": "love",
+   "t0": 1.355,
+   "t1": 1.542,
+   "f0": 33,
+   "f1": 37,
+   "ph": "lˈʌv"
+  },
+  {
+   "w": "you",
+   "t0": 1.542,
+   "t1": 1.68,
+   "f0": 37,
+   "f1": 40,
+   "ph": "ju"
+  },
+  {
+   "w": "guys",
+   "t0": 1.68,
+   "t1": 2.25,
+   "f0": 40,
+   "f1": 54,
+   "ph": "ɡˈIz"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -2.29,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 141.8,
+  "f0_range_st": 14.3,
+  "f0_method": "pYIN (a4lib.analyse)",
+  "final_move_st": -2.8,
+  "asr": "Ha ha ha, we love you guys.",
+  "cer": 0.462,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.489,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 80.0,
+  "decay_ms": 165.0,
+  "decay_to_60_s": 0.245
+ },
+ "clean": {
+  "file": "audio/ep01/act3/dialogue/fast-v2/clean/e1-a3-22-02.wav",
+  "note": "the dry read (no monitor chain), -16 LUFS"
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "ce802b510c4197f8",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 3.25,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": true,
+   "breaths": false,
+   "threads": 4
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 1.65,
+   "rechecked_alone": false
+  }
+ }
+}

@@ -1,0 +1,1203 @@
+{
+ "schema": "mrmas-s5s8-qa/1",
+ "note": "measured, never heard",
+ "cues": {
+  "s5-s8_s5-two-am": {
+   "file_t0_act_frame": 6985,
+   "duration_s": 85.2503,
+   "underscore": {
+    "lufs": -20.0,
+    "lra": 3.25,
+    "true_peak_db": -3.57,
+    "peak_db": -3.58,
+    "rms_db": -22.39,
+    "crest_db": 18.81,
+    "seconds": 85.2503
+   },
+   "album": {
+    "lufs": -18.0,
+    "lra": 3.52,
+    "true_peak_db": -1.15,
+    "peak_db": -1.16,
+    "rms_db": -20.42,
+    "crest_db": 19.27,
+    "seconds": 85.2503
+   },
+   "short_term_p95": -18.05,
+   "band_2_6k_db": -24.4,
+   "centroid_hz": 451.0,
+   "f_major": {
+    "ok_written": true,
+    "ok_spectral": true,
+    "windows": 137,
+    "fails": [],
+    "written_third": 0,
+    "f_inaudible_windows": 1
+   },
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "hard_stops": [],
+   "silence": [],
+   "markers": [
+    {
+     "t": 7.0583,
+     "act_f": 7154.4,
+     "offset_ms": -5.0
+    },
+    {
+     "t": 12.9083,
+     "act_f": 7294.8,
+     "offset_ms": -4.3
+    },
+    {
+     "t": 17.9083,
+     "act_f": 7414.8,
+     "offset_ms": -4.3
+    },
+    {
+     "t": 20.4083,
+     "act_f": 7474.8,
+     "offset_ms": -3.0
+    },
+    {
+     "t": 22.9083,
+     "act_f": 7534.8,
+     "offset_ms": -1.6
+    },
+    {
+     "t": 25.4083,
+     "act_f": 7594.8,
+     "offset_ms": -3.0
+    },
+    {
+     "t": 26.6763,
+     "act_f": 7625.2,
+     "offset_ms": -20.3
+    },
+    {
+     "t": 44.8013,
+     "act_f": 8060.2,
+     "offset_ms": 1.4
+    },
+    {
+     "t": 50.7433,
+     "act_f": 8202.8,
+     "offset_ms": 0.7
+    },
+    {
+     "t": 58.1063,
+     "act_f": 8379.6,
+     "offset_ms": -2.3
+    },
+    {
+     "t": 60.4063,
+     "act_f": 8434.8,
+     "offset_ms": -3.6
+    },
+    {
+     "t": 61.9063,
+     "act_f": 8470.8,
+     "offset_ms": -2.3
+    },
+    {
+     "t": 70.6083,
+     "act_f": 8679.6,
+     "offset_ms": -19.0
+    },
+    {
+     "t": 79.1993,
+     "act_f": 8885.8,
+     "offset_ms": 35.4
+    }
+   ],
+   "motifs_found": {},
+   "balance": {
+    "piano": 8,
+    "orch": 81,
+    "bigband": 0,
+    "chip": 10
+   },
+   "chip_share": 10,
+   "balance_energy": {
+    "piano": 6,
+    "orch": 88,
+    "bigband": 0,
+    "chip": 6
+   },
+   "warnings": [
+    "marker at 26.6763 s: no clear onset within 10 ms ({'t': 26.6763, 'offset_ms': np.float64(-20.3), 'strength': 1.62})",
+    "marker at 70.6083 s: no clear onset within 10 ms ({'t': 70.6083, 'offset_ms': np.float64(-19.0), 'strength': 1.97})",
+    "marker at 79.1993 s: no clear onset within 10 ms ({'t': 79.1993, 'offset_ms': np.float64(35.4), 'strength': 2.08})"
+   ]
+  },
+  "s5-s8_s6-avalanche": {
+   "file_t0_act_frame": 9001,
+   "duration_s": 15.6253,
+   "underscore": {
+    "lufs": -16.0,
+    "lra": 3.67,
+    "true_peak_db": -3.15,
+    "peak_db": -3.16,
+    "rms_db": -18.85,
+    "crest_db": 15.7,
+    "seconds": 15.6253
+   },
+   "album": {
+    "lufs": -16.0,
+    "lra": 4.19,
+    "true_peak_db": -1.46,
+    "peak_db": -1.48,
+    "rms_db": -19.04,
+    "crest_db": 17.56,
+    "seconds": 15.6253
+   },
+   "short_term_p95": -14.68,
+   "band_2_6k_db": -16.3,
+   "centroid_hz": 481.0,
+   "f_major": {
+    "ok_written": true,
+    "ok_spectral": true,
+    "windows": 6,
+    "fails": [],
+    "written_third": 0,
+    "f_inaudible_windows": 0
+   },
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "hard_stops": [
+    {
+     "t0": 14.1697,
+     "t1": 16.1223,
+     "label": "hard stop",
+     "peak_dbfs": -103.9000015258789,
+     "limit": -90.0,
+     "ok": 1.0
+    }
+   ],
+   "silence": [
+    {
+     "t0": 14.1697,
+     "t1": 16.1223,
+     "label": "D6 / hard stop",
+     "peak_dbfs": -103.9000015258789,
+     "limit": -90.0,
+     "ok": 1.0
+    }
+   ],
+   "markers": [
+    {
+     "t": 0.0,
+     "act_f": 9001.0,
+     "offset_ms": 2.7
+    },
+    {
+     "t": 2.5,
+     "act_f": 9061.0,
+     "offset_ms": -4.0
+    },
+    {
+     "t": 4.375,
+     "act_f": 9106.0,
+     "offset_ms": -4.3
+    },
+    {
+     "t": 5.0,
+     "act_f": 9121.0,
+     "offset_ms": -5.3
+    },
+    {
+     "t": 6.25,
+     "act_f": 9151.0,
+     "offset_ms": 3.3
+    },
+    {
+     "t": 10.0,
+     "act_f": 9241.0,
+     "offset_ms": -5.3
+    },
+    {
+     "t": 12.5,
+     "act_f": 9301.0,
+     "offset_ms": -4.0
+    }
+   ],
+   "motifs_found": {
+    "BUILD": 2,
+    "STEP_FOUR": 1
+   },
+   "balance": {
+    "piano": 17,
+    "orch": 42,
+    "bigband": 18,
+    "chip": 23
+   },
+   "chip_share": 23,
+   "balance_energy": {
+    "piano": 10,
+    "orch": 51,
+    "bigband": 16,
+    "chip": 23
+   },
+   "warnings": []
+  },
+  "s5-s8_s7s8-the-return": {
+   "file_t0_act_frame": 9376,
+   "duration_s": 131.8341,
+   "underscore": {
+    "lufs": -20.0,
+    "lra": 9.77,
+    "true_peak_db": -3.15,
+    "peak_db": -3.16,
+    "rms_db": -22.82,
+    "crest_db": 19.66,
+    "seconds": 131.8341
+   },
+   "album": {
+    "lufs": -16.0,
+    "lra": 10.27,
+    "true_peak_db": -1.15,
+    "peak_db": -1.16,
+    "rms_db": -18.87,
+    "crest_db": 17.71,
+    "seconds": 131.8341
+   },
+   "short_term_p95": -17.09,
+   "band_2_6k_db": -22.3,
+   "centroid_hz": 369.0,
+   "f_major": {
+    "ok_written": true,
+    "ok_spectral": true,
+    "windows": 106,
+    "fails": [],
+    "written_third": 0,
+    "f_inaudible_windows": 0
+   },
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "hard_stops": [
+    {
+     "t0": 67.4483,
+     "t1": 74.6133,
+     "label": "hard stop",
+     "peak_dbfs": -110.0,
+     "limit": -90.0,
+     "ok": 1.0
+    }
+   ],
+   "silence": [
+    {
+     "t0": 67.4503,
+     "t1": 74.5963,
+     "label": "STOP: \"of what?\" -> the stamp (the room plays)",
+     "peak_dbfs": -240.0,
+     "limit": -90.0,
+     "ok": 1.0
+    },
+    {
+     "t0": 67.4483,
+     "t1": 74.6133,
+     "label": "D6 / hard stop",
+     "peak_dbfs": -110.0,
+     "limit": -90.0,
+     "ok": 1.0
+    }
+   ],
+   "markers": [
+    {
+     "t": 1.0003,
+     "act_f": 9400.0,
+     "offset_ms": -8.3
+    },
+    {
+     "t": 31.3733,
+     "act_f": 10129.0,
+     "offset_ms": 53.4
+    },
+    {
+     "t": 33.9463,
+     "act_f": 10190.7,
+     "offset_ms": -2.3
+    },
+    {
+     "t": 35.5003,
+     "act_f": 10228.0,
+     "offset_ms": 22.4
+    },
+    {
+     "t": 36.7503,
+     "act_f": 10258.0,
+     "offset_ms": -3.6
+    },
+    {
+     "t": 78.7083,
+     "act_f": 11265.0,
+     "offset_ms": 25.0
+    },
+    {
+     "t": 86.1163,
+     "act_f": 11442.8,
+     "offset_ms": -4.3
+    },
+    {
+     "t": 86.7413,
+     "act_f": 11457.8,
+     "offset_ms": -2.6
+    },
+    {
+     "t": 89.2413,
+     "act_f": 11517.8,
+     "offset_ms": -4.0
+    },
+    {
+     "t": 90.0417,
+     "act_f": 11537.0,
+     "offset_ms": -4.4
+    },
+    {
+     "t": 96.065,
+     "act_f": 11681.6,
+     "offset_ms": -6.3
+    },
+    {
+     "t": 96.4817,
+     "act_f": 11691.6,
+     "offset_ms": -7.0
+    }
+   ],
+   "motifs_found": {
+    "DOOR": 1,
+    "BUILD": 2
+   },
+   "balance": {
+    "piano": 4,
+    "orch": 73,
+    "bigband": 16,
+    "chip": 6
+   },
+   "chip_share": 6,
+   "balance_energy": {
+    "piano": 3,
+    "orch": 85,
+    "bigband": 4,
+    "chip": 8
+   },
+   "warnings": [
+    "marker at 31.3733 s: no clear onset within 10 ms ({'t': 31.3733, 'offset_ms': np.float64(53.4), 'strength': 1.69})",
+    "marker at 35.5003 s: no clear onset within 10 ms ({'t': 35.5003, 'offset_ms': np.float64(22.4), 'strength': 1.73})",
+    "marker at 78.7083 s: no clear onset within 10 ms ({'t': 78.7083, 'offset_ms': np.float64(25.0), 'strength': 2.12})"
+   ]
+  }
+ },
+ "flow": {
+  "threshold_dbfs": -60.0,
+  "window_s": 0.05,
+  "runs": 4,
+  "off_windows": [
+   {
+    "a": 389.242,
+    "b": 391.642,
+    "act_f": [
+     9341.8,
+     9399.4
+    ],
+    "tc": "19:00:06",
+    "len_s": 2.4,
+    "cause": "DESIGNED STOP: dead on MADA's label; the dark room's air until the violin (S7.01 post, 391.667)"
+   },
+   {
+    "a": 458.142,
+    "b": 465.292,
+    "act_f": [
+     10995.4,
+     11167.0
+    ],
+    "tc": "20:09:03",
+    "len_s": 7.15,
+    "cause": "DESIGNED STOP: \"of what?\" -> the stamp (Mada's pause, \"Good question.\", the long hold in the room)"
+   },
+   {
+    "a": 483.142,
+    "b": 486.692,
+    "act_f": [
+     11595.4,
+     11680.6
+    ],
+    "tc": "20:34:03",
+    "len_s": 3.55,
+    "cause": "DESIGNED REST: the lobby CU and \"okay.\" on the neon's F (the CU \"silent like the first\"; nothing under \"okay.\")"
+   },
+   {
+    "a": 521.242,
+    "b": 522.492,
+    "act_f": [
+     12509.8,
+     12539.8
+    ],
+    "tc": "21:12:06",
+    "len_s": 1.25,
+    "cause": "after the act (the tail into the tag has ended)"
+   }
+  ],
+  "fragments_under_2s": [],
+  "unexplained": []
+ },
+ "handoffs": {
+  "s6_stop_to_s7_violin": {
+   "stop_act_f": 9341.2,
+   "violin_act_f": 9400.0,
+   "gap_s": 2.45
+  },
+  "s8_into_tag": {
+   "level_last_2s_of_act": -28.4,
+   "level_first_1s_after": -32.6,
+   "level_2_3s_after": -53.0
+  },
+  "s5_pedal_across_s6_downbeat": {
+   "s5_level_last_1s_before": -21.5,
+   "s5_tail_s": 1.25,
+   "s5_tail_first_250ms": -25.0,
+   "s5_tail_250_500ms": -27.1
+  }
+ },
+ "under_talk": [
+  {
+   "id": "a5-29-01",
+   "kind": "line",
+   "act_f": [
+    7167.0,
+    7201.6
+   ],
+   "music_db": -20.3,
+   "music_ducked_db": -26.8,
+   "before_db": -16.3,
+   "after_db": -20.3,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-29-02",
+   "kind": "line",
+   "act_f": [
+    7225.6,
+    7245.0
+   ],
+   "music_db": -20.0,
+   "music_ducked_db": -26.5,
+   "before_db": -21.2,
+   "after_db": -22.1,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-29-03",
+   "kind": "line",
+   "act_f": [
+    7302.6,
+    7355.2
+   ],
+   "music_db": -21.3,
+   "music_ducked_db": -27.8,
+   "before_db": -21.7,
+   "after_db": -23.2,
+   "duck_db": -6.5,
+   "melodic_onsets": [
+    [
+     304.262,
+     "lead"
+    ],
+    [
+     304.419,
+     "lead"
+    ]
+   ]
+  },
+  {
+   "id": "a5-29-04",
+   "kind": "line",
+   "act_f": [
+    7364.8,
+    7403.2
+   ],
+   "music_db": -22.0,
+   "music_ducked_db": -28.5,
+   "before_db": -21.8,
+   "after_db": -19.2,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-29-05",
+   "kind": "line",
+   "act_f": [
+    7410.4,
+    7598.0
+   ],
+   "music_db": -20.5,
+   "music_ducked_db": -27.0,
+   "before_db": -21.5,
+   "after_db": -22.8,
+   "duck_db": -6.5,
+   "melodic_onsets": [
+    [
+     308.95,
+     "lead"
+    ],
+    [
+     308.95,
+     "xylo"
+    ],
+    [
+     309.106,
+     "lead"
+    ],
+    [
+     309.262,
+     "lead"
+    ],
+    [
+     309.419,
+     "lead"
+    ],
+    [
+     309.575,
+     "lead"
+    ],
+    [
+     309.575,
+     "xylo"
+    ],
+    [
+     309.731,
+     "lead"
+    ]
+   ]
+  },
+  {
+   "id": "a5-29-06",
+   "kind": "record",
+   "act_f": [
+    7629.2,
+    7791.9
+   ],
+   "music_db": -20.3,
+   "music_ducked_db": -26.8,
+   "before_db": -22.3,
+   "after_db": -21.9,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-29-07",
+   "kind": "record",
+   "act_f": [
+    7803.9,
+    7869.7
+   ],
+   "music_db": -21.0,
+   "music_ducked_db": -27.5,
+   "before_db": -19.5,
+   "after_db": -19.7,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-29-08",
+   "kind": "line",
+   "act_f": [
+    7879.3,
+    7912.9
+   ],
+   "music_db": -19.7,
+   "music_ducked_db": -26.2,
+   "before_db": -22.8,
+   "after_db": -20.9,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-29-09",
+   "kind": "record",
+   "act_f": [
+    7920.1,
+    8010.3
+   ],
+   "music_db": -20.2,
+   "music_ducked_db": -26.7,
+   "before_db": -19.1,
+   "after_db": -18.2,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-29-10",
+   "kind": "line",
+   "act_f": [
+    8024.7,
+    8057.8
+   ],
+   "music_db": -18.2,
+   "music_ducked_db": -24.7,
+   "before_db": -18.1,
+   "after_db": -20.0,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-29-11",
+   "kind": "line",
+   "act_f": [
+    8067.4,
+    8089.5
+   ],
+   "music_db": -20.3,
+   "music_ducked_db": -26.8,
+   "before_db": -18.5,
+   "after_db": -22.4,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-29-12",
+   "kind": "line",
+   "act_f": [
+    8127.9,
+    8144.7
+   ],
+   "music_db": -21.2,
+   "music_ducked_db": -27.7,
+   "before_db": -22.6,
+   "after_db": -21.8,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-29-13",
+   "kind": "line",
+   "act_f": [
+    8164.2,
+    8190.8
+   ],
+   "music_db": -22.0,
+   "music_ducked_db": -28.5,
+   "before_db": -21.8,
+   "after_db": -20.8,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-29-14",
+   "kind": "line",
+   "act_f": [
+    8202.8,
+    8219.9
+   ],
+   "music_db": -20.4,
+   "music_ducked_db": -26.6,
+   "before_db": -21.0,
+   "after_db": -20.2,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-29-15",
+   "kind": "line",
+   "act_f": [
+    8272.2,
+    8347.8
+   ],
+   "music_db": -20.9,
+   "music_ducked_db": -27.3,
+   "before_db": -20.3,
+   "after_db": -19.4,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-29-16",
+   "kind": "line",
+   "act_f": [
+    8395.4,
+    8424.9
+   ],
+   "music_db": -21.8,
+   "music_ducked_db": -28.3,
+   "before_db": -18.5,
+   "after_db": -20.8,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-29-17",
+   "kind": "line",
+   "act_f": [
+    8434.5,
+    8485.2
+   ],
+   "music_db": -20.0,
+   "music_ducked_db": -26.5,
+   "before_db": -21.5,
+   "after_db": -21.2,
+   "duck_db": -6.5,
+   "melodic_onsets": [
+    [
+     351.448,
+     "lead"
+    ],
+    [
+     351.448,
+     "xylo"
+    ],
+    [
+     351.604,
+     "lead"
+    ],
+    [
+     351.761,
+     "lead"
+    ],
+    [
+     351.917,
+     "lead"
+    ],
+    [
+     352.073,
+     "lead"
+    ],
+    [
+     352.073,
+     "xylo"
+    ],
+    [
+     352.229,
+     "lead"
+    ]
+   ]
+  },
+  {
+   "id": "a5-29-18",
+   "kind": "line",
+   "act_f": [
+    8528.8,
+    8571.3
+   ],
+   "music_db": -21.8,
+   "music_ducked_db": -28.3,
+   "before_db": -21.4,
+   "after_db": -22.0,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-29-19",
+   "kind": "line",
+   "act_f": [
+    8592.9,
+    8631.5
+   ],
+   "music_db": -21.1,
+   "music_ducked_db": -27.6,
+   "before_db": -22.7,
+   "after_db": -22.1,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-29-20",
+   "kind": "line",
+   "act_f": [
+    8703.6,
+    8790.2
+   ],
+   "music_db": -21.7,
+   "music_ducked_db": -28.2,
+   "before_db": -22.5,
+   "after_db": -23.1,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-29-21",
+   "kind": "line",
+   "act_f": [
+    8807.0,
+    8827.2
+   ],
+   "music_db": -23.1,
+   "music_ducked_db": -29.6,
+   "before_db": -20.9,
+   "after_db": -21.4,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-29-22",
+   "kind": "line",
+   "act_f": [
+    8839.2,
+    8919.1
+   ],
+   "music_db": -21.6,
+   "music_ducked_db": -28.1,
+   "before_db": -22.8,
+   "after_db": -22.4,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-29-23",
+   "kind": "line",
+   "act_f": [
+    8945.5,
+    8970.2
+   ],
+   "music_db": -21.8,
+   "music_ducked_db": -28.3,
+   "before_db": -23.7,
+   "after_db": -19.6,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-29-24",
+   "kind": "window",
+   "act_f": [
+    9198.2,
+    9229.9
+   ],
+   "music_db": -21.2,
+   "music_ducked_db": -27.2,
+   "before_db": -22.4,
+   "after_db": -16.0,
+   "duck_db": -6.0,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-30-01",
+   "kind": "violin",
+   "act_f": [
+    9572.8,
+    9603.0
+   ],
+   "music_db": -19.4,
+   "music_ducked_db": -24.4,
+   "before_db": -18.2,
+   "after_db": -20.8,
+   "duck_db": -5.0,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-30-02",
+   "kind": "violin",
+   "act_f": [
+    9619.8,
+    9649.6
+   ],
+   "music_db": -21.3,
+   "music_ducked_db": -26.3,
+   "before_db": -21.2,
+   "after_db": -26.6,
+   "duck_db": -5.0,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-30-03",
+   "kind": "violin",
+   "act_f": [
+    9668.8,
+    9713.0
+   ],
+   "music_db": -26.4,
+   "music_ducked_db": -31.4,
+   "before_db": -23.5,
+   "after_db": -31.0,
+   "duck_db": -5.0,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-30-04",
+   "kind": "violin",
+   "act_f": [
+    9725.0,
+    9760.5
+   ],
+   "music_db": -31.5,
+   "music_ducked_db": -36.5,
+   "before_db": -27.3,
+   "after_db": -33.3,
+   "duck_db": -5.0,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-30-05",
+   "kind": "line",
+   "act_f": [
+    9864.0,
+    9928.8
+   ],
+   "music_db": -17.8,
+   "music_ducked_db": -24.3,
+   "before_db": -17.8,
+   "after_db": -19.4,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-30-06",
+   "kind": "record",
+   "act_f": [
+    9943.2,
+    10123.0
+   ],
+   "music_db": -18.2,
+   "music_ducked_db": -24.7,
+   "before_db": -18.4,
+   "after_db": -16.8,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-30-07",
+   "kind": "line",
+   "act_f": [
+    10168.4,
+    10183.5
+   ],
+   "music_db": -17.4,
+   "music_ducked_db": -23.9,
+   "before_db": -16.8,
+   "after_db": -19.1,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-30-08",
+   "kind": "line",
+   "act_f": [
+    10335.0,
+    10373.2
+   ],
+   "music_db": -20.1,
+   "music_ducked_db": -29.1,
+   "before_db": -19.1,
+   "after_db": -16.3,
+   "duck_db": -9.0,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-30-09",
+   "kind": "line",
+   "act_f": [
+    10411.6,
+    10426.4
+   ],
+   "music_db": -15.5,
+   "music_ducked_db": -24.4,
+   "before_db": -16.2,
+   "after_db": -20.3,
+   "duck_db": -9.0,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-30-10",
+   "kind": "record",
+   "act_f": [
+    10460.2,
+    10737.2
+   ],
+   "music_db": -18.4,
+   "music_ducked_db": -24.9,
+   "before_db": -18.0,
+   "after_db": -17.5,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-30-11",
+   "kind": "line",
+   "act_f": [
+    10758.8,
+    10780.6
+   ],
+   "music_db": -17.5,
+   "music_ducked_db": -24.0,
+   "before_db": -17.0,
+   "after_db": -19.4,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-30-12",
+   "kind": "line",
+   "act_f": [
+    10802.2,
+    10868.2
+   ],
+   "music_db": -20.1,
+   "music_ducked_db": -26.6,
+   "before_db": -18.4,
+   "after_db": -19.9,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-30-13",
+   "kind": "line",
+   "act_f": [
+    10880.2,
+    10901.6
+   ],
+   "music_db": -19.9,
+   "music_ducked_db": -26.4,
+   "before_db": -20.0,
+   "after_db": -20.3,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-30-14",
+   "kind": "line",
+   "act_f": [
+    10911.2,
+    10964.4
+   ],
+   "music_db": -18.7,
+   "music_ducked_db": -25.2,
+   "before_db": -20.3,
+   "after_db": -19.7,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-30-15",
+   "kind": "line",
+   "act_f": [
+    10976.4,
+    10994.7
+   ],
+   "music_db": -17.8,
+   "music_ducked_db": -24.3,
+   "before_db": -17.0,
+   "after_db": -240.0,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-30-16",
+   "kind": "line",
+   "act_f": [
+    11033.1,
+    11054.7
+   ],
+   "music_db": -240.0,
+   "music_ducked_db": -240.0,
+   "before_db": -240.0,
+   "after_db": -240.0,
+   "duck_db": -9.0,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-30-17",
+   "kind": "line",
+   "act_f": [
+    11076.3,
+    11099.5
+   ],
+   "music_db": -240.0,
+   "music_ducked_db": -240.0,
+   "before_db": -240.0,
+   "after_db": -240.0,
+   "duck_db": -9.0,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-30-18",
+   "kind": "line",
+   "act_f": [
+    11392.4,
+    11423.8
+   ],
+   "music_db": -21.7,
+   "music_ducked_db": -28.2,
+   "before_db": -21.5,
+   "after_db": -18.0,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-30-19",
+   "kind": "line",
+   "act_f": [
+    11662.8,
+    11680.6
+   ],
+   "music_db": -141.6,
+   "music_ducked_db": -148.1,
+   "before_db": -141.6,
+   "after_db": -22.2,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-31-01",
+   "kind": "line",
+   "act_f": [
+    11793.6,
+    11808.7
+   ],
+   "music_db": -29.0,
+   "music_ducked_db": -35.5,
+   "before_db": -28.8,
+   "after_db": -28.8,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-31-02",
+   "kind": "line",
+   "act_f": [
+    11818.3,
+    11846.4
+   ],
+   "music_db": -28.3,
+   "music_ducked_db": -34.8,
+   "before_db": -28.9,
+   "after_db": -28.4,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-31-03",
+   "kind": "line",
+   "act_f": [
+    11858.4,
+    11888.6
+   ],
+   "music_db": -28.1,
+   "music_ducked_db": -34.5,
+   "before_db": -29.6,
+   "after_db": -27.7,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  },
+  {
+   "id": "a5-31-04",
+   "kind": "record",
+   "act_f": [
+    12047.4,
+    12272.5
+   ],
+   "music_db": -28.4,
+   "music_ducked_db": -34.9,
+   "before_db": -28.9,
+   "after_db": -27.9,
+   "duck_db": -6.5,
+   "melodic_onsets": []
+  }
+ ],
+ "preview": {
+  "file": "render/s5-s8_chain-ducked-preview.mp3",
+  "act_frame_at_t0": 6985,
+  "what": "the three s5-s8_ underscore masters laid at their act frames and ducked by s5-s8_ducking-map.json; an audition aid, not a mix (no dialogue, room or SFX)"
+ },
+ "record_melodic_onsets": 0
+}

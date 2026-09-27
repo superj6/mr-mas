@@ -1,0 +1,498 @@
+{
+ "id": "e1-a1-5-08",
+ "scene": "5",
+ "speaker": "RIMA TAMURI",
+ "speaker_slug": "rima-tamuri",
+ "text": "Okay. Say it works. Say people actually use it. That's going to cost us a fortune.",
+ "spoken_as": "Okay.{s0.4} Say it works.{0.35} Say people actually use it.{s0.45} That's going to cost us a fortune.",
+ "delivery": null,
+ "tag": "[INVENTED · plants \"it's the bill.\" (sc 7). Act One fix pass (2026-09-27): it was \"And if it works? If people actually use it, it's going to cost us a fortune.\" The insider read heard the breaks / works / wakes-up ladder as built too neatly, three \"And if\"s in a row; the audit measured the read as her one rushed line (5.5 syllables a second against 4.0–4.6), because the voice ran the clauses together. \"Okay.\" concedes his \"preview\" and pivots, and the short sentences are how a calm person presses]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "OTS",
+ "shot_id": "OTS",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 6.9,
+ "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-08.wav",
+ "mp3": null,
+ "duration_s": 6.9,
+ "frames_24": 166,
+ "voiced_span_s": 5.84,
+ "pace": {
+  "words": 16,
+  "wpm": 164.4,
+  "speed": 0.9,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.9,
+   "speed_band": [
+    0.9,
+    0.98
+   ],
+   "articulation_guide_sps": [
+    4.0,
+    4.6
+   ],
+   "turn_wpm_guide": [
+    140,
+    160
+   ],
+   "intent": null
+  },
+  "measured": {
+   "wpm": 164.4,
+   "articulation_sps": 4.93,
+   "syllables": 23,
+   "span_s": 5.84,
+   "pauses_s": [
+    0.39,
+    0.34,
+    0.44
+   ]
+  },
+  "longest_internal_gap_s": 0.44,
+  "audible_in_s": 0.5,
+  "audible_out_s": 6.34
+ },
+ "placement": {
+  "gap_before_s": 0.5,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "af_heart (Kokoro-82M stock) · a-heart-composed · speed 0.900",
+ "voiceId": "af_heart",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch 0",
+  "peak -1 dB @300 Hz Q1.0",
+  "peak +1 dB @5000 Hz Q0.8",
+  "comp 2.0:1 @-22 dB (8/120 ms)",
+  "Kokoro speed 0.900 (the plan speed; rima-tamuri band 0.90-0.98); 3 whole reads, joined in room tone; no time-stretch, no carrier, no splice",
+  "pause after 'works': Kokoro 0.18 s -> 0.35 s (intended 0.35; +0.17 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "O"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "E"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "A"
+  },
+  {
+   "t": 1.167,
+   "f": 28,
+   "shape": "rest"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "A"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "E"
+  },
+  {
+   "t": 1.792,
+   "f": 43,
+   "shape": "O"
+  },
+  {
+   "t": 2.083,
+   "f": 50,
+   "shape": "E"
+  },
+  {
+   "t": 2.292,
+   "f": 55,
+   "shape": "rest"
+  },
+  {
+   "t": 2.583,
+   "f": 62,
+   "shape": "E"
+  },
+  {
+   "t": 2.667,
+   "f": 64,
+   "shape": "A"
+  },
+  {
+   "t": 2.792,
+   "f": 67,
+   "shape": "M"
+  },
+  {
+   "t": 2.875,
+   "f": 69,
+   "shape": "E"
+  },
+  {
+   "t": 2.958,
+   "f": 71,
+   "shape": "M"
+  },
+  {
+   "t": 3.042,
+   "f": 73,
+   "shape": "E"
+  },
+  {
+   "t": 3.167,
+   "f": 76,
+   "shape": "A"
+  },
+  {
+   "t": 3.25,
+   "f": 78,
+   "shape": "E"
+  },
+  {
+   "t": 3.375,
+   "f": 81,
+   "shape": "O"
+  },
+  {
+   "t": 3.458,
+   "f": 83,
+   "shape": "E"
+  },
+  {
+   "t": 3.667,
+   "f": 88,
+   "shape": "O"
+  },
+  {
+   "t": 3.833,
+   "f": 92,
+   "shape": "E"
+  },
+  {
+   "t": 4.167,
+   "f": 100,
+   "shape": "rest"
+  },
+  {
+   "t": 4.583,
+   "f": 110,
+   "shape": "E"
+  },
+  {
+   "t": 4.667,
+   "f": 112,
+   "shape": "A"
+  },
+  {
+   "t": 4.792,
+   "f": 115,
+   "shape": "E"
+  },
+  {
+   "t": 4.917,
+   "f": 118,
+   "shape": "O"
+  },
+  {
+   "t": 5.0,
+   "f": 120,
+   "shape": "E"
+  },
+  {
+   "t": 5.208,
+   "f": 125,
+   "shape": "O"
+  },
+  {
+   "t": 5.375,
+   "f": 129,
+   "shape": "E"
+  },
+  {
+   "t": 5.5,
+   "f": 132,
+   "shape": "A"
+  },
+  {
+   "t": 5.708,
+   "f": 137,
+   "shape": "E"
+  },
+  {
+   "t": 5.792,
+   "f": 139,
+   "shape": "O"
+  },
+  {
+   "t": 5.958,
+   "f": 143,
+   "shape": "E"
+  },
+  {
+   "t": 6.375,
+   "f": 153,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Okay",
+   "t0": 0.505,
+   "t1": 1.16,
+   "f0": 12,
+   "f1": 28,
+   "ph": "ˌOkˈA"
+  },
+  {
+   "w": "Say",
+   "t0": 1.56,
+   "t1": 1.722,
+   "f0": 37,
+   "f1": 41,
+   "ph": "sˈA"
+  },
+  {
+   "w": "it",
+   "t0": 1.722,
+   "t1": 1.81,
+   "f0": 41,
+   "f1": 43,
+   "ph": "ɪt"
+  },
+  {
+   "w": "works",
+   "t0": 1.81,
+   "t1": 2.29,
+   "f0": 43,
+   "f1": 55,
+   "ph": "wˈɜɹks"
+  },
+  {
+   "w": "Say",
+   "t0": 2.592,
+   "t1": 2.83,
+   "f0": 62,
+   "f1": 68,
+   "ph": "sˈA"
+  },
+  {
+   "w": "people",
+   "t0": 2.83,
+   "t1": 3.18,
+   "f0": 68,
+   "f1": 76,
+   "ph": "pˈipᵊl"
+  },
+  {
+   "w": "actually",
+   "t0": 3.18,
+   "t1": 3.605,
+   "f0": 76,
+   "f1": 87,
+   "ph": "ˈækʧəwəli"
+  },
+  {
+   "w": "use",
+   "t0": 3.605,
+   "t1": 3.892,
+   "f0": 87,
+   "f1": 93,
+   "ph": "jˈuz"
+  },
+  {
+   "w": "it",
+   "t0": 3.892,
+   "t1": 4.17,
+   "f0": 93,
+   "f1": 100,
+   "ph": "ɪt"
+  },
+  {
+   "w": "That's",
+   "t0": 4.6,
+   "t1": 4.888,
+   "f0": 110,
+   "f1": 117,
+   "ph": "ðˈæts"
+  },
+  {
+   "w": "going",
+   "t0": 4.888,
+   "t1": 5.062,
+   "f0": 117,
+   "f1": 122,
+   "ph": "ɡˈOɪŋ"
+  },
+  {
+   "w": "to",
+   "t0": 5.062,
+   "t1": 5.15,
+   "f0": 122,
+   "f1": 124,
+   "ph": "tə"
+  },
+  {
+   "w": "cost",
+   "t0": 5.15,
+   "t1": 5.488,
+   "f0": 124,
+   "f1": 132,
+   "ph": "kˈɔst"
+  },
+  {
+   "w": "us",
+   "t0": 5.488,
+   "t1": 5.638,
+   "f0": 132,
+   "f1": 135,
+   "ph": "ˌʌs"
+  },
+  {
+   "w": "a",
+   "t0": 5.638,
+   "t1": 5.725,
+   "f0": 135,
+   "f1": 137,
+   "ph": "ɐ"
+  },
+  {
+   "w": "fortune",
+   "t0": 5.725,
+   "t1": 6.36,
+   "f0": 137,
+   "f1": 153,
+   "ph": "fˈɔɹʧən"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.12,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 218.1,
+  "f0_range_st": 8.8,
+  "f0_method": "pYIN (a4lib.analyse)",
+  "final_move_st": 2.1,
+  "asr": "OK. Say it works. Say people actually use it. That's going to cost us a fortune.",
+  "cer": 0.032,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.177,
+  "align_median_s": 0.059,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.44,
+  "rise_ms": 5.0,
+  "decay_ms": 70.0,
+  "decay_to_60_s": 0.115
+ },
+ "speaker_label": "RIMA",
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": null,
+   "word": "Okay",
+   "tts_s": null,
+   "target_s": 0.4,
+   "final_s": 0.4,
+   "opened_s": 0.0,
+   "joined_speech": false,
+   "dip_db": null,
+   "breath": false,
+   "split": true,
+   "point_s": 0.665,
+   "crossfade_ms": [
+    0,
+    0
+   ]
+  },
+  {
+   "after_word": 3,
+   "word": "works",
+   "tts_s": 0.18,
+   "target_s": 0.35,
+   "point_s": 1.93,
+   "joined_speech": false,
+   "dip_db": -62.1,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.35,
+   "opened_s": 0.17
+  },
+  {
+   "after_word": null,
+   "word": "it",
+   "tts_s": null,
+   "target_s": 0.45,
+   "final_s": 0.45,
+   "opened_s": 0.0,
+   "joined_speech": false,
+   "dip_db": null,
+   "breath": false,
+   "split": true,
+   "point_s": 3.67,
+   "crossfade_ms": [
+    0,
+    0
+   ]
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "efcd745ffea0c9c7",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 6.1,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": true,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 2,
+   "share_s": 1.16,
+   "rechecked_alone": false
+  }
+ }
+}

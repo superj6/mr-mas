@@ -1,0 +1,265 @@
+{
+ "id": "e1-a2-15-08",
+ "scene": "15",
+ "speaker": "LAHTNEMULB (THE CLONE)",
+ "speaker_slug": "lahtnemulb-clone",
+ "text": "Are you nervous, Mr. Manalt?",
+ "spoken_as": "Are you nervous, Mr. Manalt?",
+ "delivery": null,
+ "tag": "[INVENTED · dialogue pass 5: it was \"Mr. Manalt. Are you nervous?\"; with the name as its own sentence a stock voice stops and starts again cold (the naturalness read). The senator's \"Mr. Manalt. There's talk…\" below keeps its full stop, which suits a hearing's formal address]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "OTS",
+ "shot_id": "OTS",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 2.3,
+ "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-08.wav",
+ "mp3": null,
+ "duration_s": 2.95,
+ "frames_24": 71,
+ "voiced_span_s": 1.97,
+ "pace": {
+  "words": 5,
+  "wpm": 152.3,
+  "speed": 0.88,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.88,
+   "speed_band": [
+    0.84,
+    0.92
+   ],
+   "articulation_guide_sps": [
+    4.0,
+    4.6
+   ],
+   "turn_wpm_guide": [
+    135,
+    155
+   ],
+   "intent": null
+  },
+  "measured": {
+   "wpm": 152.3,
+   "articulation_sps": 4.06,
+   "syllables": 8,
+   "span_s": 1.97,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.5,
+  "audible_out_s": 2.47
+ },
+ "placement": {
+  "gap_before_s": 1.2,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_adam*0.50+am_echo*0.50 (Kokoro-82M stock) · d-adam-echo-senate-low + gloss · speed 0.880",
+ "voiceId": "am_adam*0.50+am_echo*0.50",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 75 Hz",
+  "pitch -2 st",
+  "low shelf +1 dB @150 Hz",
+  "peak -1 dB @400 Hz Q1.0",
+  "peak +1 dB @2500 Hz Q0.9",
+  "comp 2.5:1 @-22 dB (6/110 ms)",
+  "peak -1.5 dB @350 Hz Q1.0",
+  "high shelf +2.5 dB @7000 Hz",
+  "chorus 0.6 Hz depth 0.1 mix 0.18",
+  "comp 4.0:1 @-26 dB (2/60 ms)",
+  "pitch +2 st",
+  "Kokoro speed 0.880 (the plan speed; lahtnemulb-clone band 0.84-0.92); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "A"
+  },
+  {
+   "t": 0.625,
+   "f": 15,
+   "shape": "E"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "O"
+  },
+  {
+   "t": 0.833,
+   "f": 20,
+   "shape": "E"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "O"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "E"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "M"
+  },
+  {
+   "t": 1.542,
+   "f": 37,
+   "shape": "A"
+  },
+  {
+   "t": 1.625,
+   "f": 39,
+   "shape": "E"
+  },
+  {
+   "t": 1.833,
+   "f": 44,
+   "shape": "M"
+  },
+  {
+   "t": 1.917,
+   "f": 46,
+   "shape": "A"
+  },
+  {
+   "t": 2.083,
+   "f": 50,
+   "shape": "E"
+  },
+  {
+   "t": 2.167,
+   "f": 52,
+   "shape": "O"
+  },
+  {
+   "t": 2.375,
+   "f": 57,
+   "shape": "E"
+  },
+  {
+   "t": 2.5,
+   "f": 60,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Are",
+   "t0": 0.49,
+   "t1": 0.678,
+   "f0": 12,
+   "f1": 16,
+   "ph": "ˌɑɹ"
+  },
+  {
+   "w": "you",
+   "t0": 0.678,
+   "t1": 0.852,
+   "f0": 16,
+   "f1": 20,
+   "ph": "ju"
+  },
+  {
+   "w": "nervous",
+   "t0": 0.852,
+   "t1": 1.44,
+   "f0": 20,
+   "f1": 35,
+   "ph": "nˈɜɹvəs"
+  },
+  {
+   "w": "Mr.",
+   "t0": 1.49,
+   "t1": 1.84,
+   "f0": 36,
+   "f1": 44,
+   "ph": "mˈɪstəɹ"
+  },
+  {
+   "w": "Manalt",
+   "t0": 1.84,
+   "t1": 2.49,
+   "f0": 44,
+   "f1": 60,
+   "ph": "mˈænɔlt"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.71,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 109.4,
+  "f0_range_st": 12.8,
+  "f0_method": "pYIN (a4lib.analyse)",
+  "final_move_st": -2.6,
+  "asr": "Are you nervous, Mr. Manalt?",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.397,
+  "align_median_s": 0.13,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 15.0,
+  "decay_ms": 175.0,
+  "decay_to_60_s": 0.035,
+  "q_lift_st": -2.3
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "4394de12df755f49",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 2.26,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": true,
+   "breaths": false,
+   "threads": 4
+  },
+  "asr": {
+   "packed_with": 2,
+   "share_s": 0.54,
+   "rechecked_alone": false
+  }
+ }
+}

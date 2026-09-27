@@ -1,0 +1,560 @@
+{
+ "schema": "mrmas-s5s8-cuesheet/1",
+ "cues": [
+  {
+   "id": "s5-s8_s5-two-am",
+   "title": "S5 \u00b7 HIS SIDE, 2 AM",
+   "family": "DARK ROOM (MM-10 a)",
+   "file_t0_act_frame": 6985,
+   "picture_out_act_frame": 9001,
+   "file_len_s": 85.2503,
+   "file_end_act_frame": 9031.0,
+   "underscore": {
+    "lufs": -20.0,
+    "lra": 3.25,
+    "true_peak_db": -3.57,
+    "peak_db": -3.58,
+    "rms_db": -22.39,
+    "crest_db": 18.81,
+    "seconds": 85.2503
+   },
+   "target_lufs": -20.0,
+   "lay_in": "in under the card's felt F4 (S1-S4's, struck on 6985): the pedal bows in with a silent attack",
+   "lay_out": "the pedal rings across S6.01's first frame (the avalanche's downbeat) and releases; overlap it with S6",
+   "files": {
+    "album_wav": "render/s5-s8_s5-two-am-album.wav",
+    "album_mp3": "render/s5-s8_s5-two-am-album.mp3",
+    "underscore_wav": "render/s5-s8_s5-two-am-underscore.wav",
+    "underscore_mp3": "render/s5-s8_s5-two-am-underscore.mp3",
+    "stems": {
+     "piano": "render/stems/s5-s8_s5-two-am-piano.flac",
+     "strings": "render/stems/s5-s8_s5-two-am-strings.flac",
+     "bass": "render/stems/s5-s8_s5-two-am-bass.flac",
+     "perc": "render/stems/s5-s8_s5-two-am-perc.flac",
+     "chip": "render/stems/s5-s8_s5-two-am-chip.flac"
+    },
+    "midi": "render/s5-s8_s5-two-am.mid",
+    "pianoroll": "render/s5-s8_s5-two-am-pianoroll.png"
+   },
+   "events": [
+    {
+     "act_s": 291.042,
+     "act_frame": 6985.01,
+     "file_s": 0.0003,
+     "tc": "17:22:01",
+     "what": "the DARK ROOM pedal bows in (vc F3 + vla C4, sul tasto; silent attack 1.4 s)"
+    },
+    {
+     "act_s": 298.1,
+     "act_frame": 7154.4,
+     "file_s": 7.0583,
+     "tc": "17:29:02",
+     "what": "the felt surfaces: C4 (the Water Line's bar 2; the settle never comes), held through \"mostly.\""
+    },
+    {
+     "act_s": 303.95,
+     "act_frame": 7294.8,
+     "file_s": 12.9083,
+     "tc": "17:34:23",
+     "what": "the Build: compile pass (4)"
+    },
+    {
+     "act_s": 308.95,
+     "act_frame": 7414.8,
+     "file_s": 17.9083,
+     "tc": "17:39:23",
+     "what": "the Build: compile pass (8)"
+    },
+    {
+     "act_s": 311.45,
+     "act_frame": 7474.8,
+     "file_s": 20.4083,
+     "tc": "17:42:11",
+     "what": "the Build: compile pass (12)"
+    },
+    {
+     "act_s": 313.95,
+     "act_frame": 7534.8,
+     "file_s": 22.9083,
+     "tc": "17:44:23",
+     "what": "the Build: compile pass (8)"
+    },
+    {
+     "act_s": 316.45,
+     "act_frame": 7594.8,
+     "file_s": 25.4083,
+     "tc": "17:47:11",
+     "what": "the Build: compile pass (4)"
+    },
+    {
+     "act_s": 317.718,
+     "act_frame": 7625.23,
+     "file_s": 26.6763,
+     "tc": "17:48:17",
+     "what": "the pulse enters as he reads (C3/F3 on the beat)"
+    },
+    {
+     "act_s": 335.843,
+     "act_frame": 8060.23,
+     "file_s": 44.8013,
+     "tc": "18:06:20",
+     "what": "the count stops at 745: the pulse lands"
+    },
+    {
+     "act_s": 337.093,
+     "act_frame": 8090.23,
+     "file_s": 46.0513,
+     "tc": "18:08:02",
+     "what": "the pulse's last note; out for the scroll's stop on ALYI (REPORTED) and the chime"
+    },
+    {
+     "act_s": 341.785,
+     "act_frame": 8202.84,
+     "file_s": 50.7433,
+     "tc": "18:12:19",
+     "what": "the pulse comes back on \"He did both.\""
+    },
+    {
+     "act_s": 349.148,
+     "act_frame": 8379.55,
+     "file_s": 58.1063,
+     "tc": "18:20:04",
+     "what": "the Build: back with his keys (4)"
+    },
+    {
+     "act_s": 351.448,
+     "act_frame": 8434.75,
+     "file_s": 60.4063,
+     "tc": "18:22:11",
+     "what": "the Build: 8 under \"The company. Again. Just in case.\""
+    },
+    {
+     "act_s": 352.948,
+     "act_frame": 8470.75,
+     "file_s": 61.9063,
+     "tc": "18:23:23",
+     "what": "the Build: 12, cut dead by his look"
+    },
+    {
+     "act_s": 354.167,
+     "act_frame": 8500.01,
+     "file_s": 63.1253,
+     "tc": "18:25:04",
+     "what": "RING-OUT: the Build stops dead on his look up; the pedal holds"
+    },
+    {
+     "act_s": 361.65,
+     "act_frame": 8679.6,
+     "file_s": 70.6083,
+     "tc": "18:32:16",
+     "what": "Tasya's Rhodes: one chord on the door (Abmaj9 over the F pedal)"
+    },
+    {
+     "act_s": 370.241,
+     "act_frame": 8885.78,
+     "file_s": 79.1993,
+     "tc": "18:41:06",
+     "what": "the second chord on \"desk\" (Cmaj9)"
+    }
+   ],
+   "mutes": []
+  },
+  {
+   "id": "s5-s8_s6-avalanche",
+   "title": "S6 \u00b7 THE AVALANCHE",
+   "family": "SET-PIECE SWING (MM-10 b), the one full band",
+   "file_t0_act_frame": 9001,
+   "picture_out_act_frame": 9376,
+   "file_len_s": 15.6253,
+   "file_end_act_frame": 9376.0,
+   "underscore": {
+    "lufs": -16.0,
+    "lra": 3.67,
+    "true_peak_db": -3.15,
+    "peak_db": -3.16,
+    "rms_db": -18.85,
+    "crest_db": 15.7,
+    "seconds": 15.6253
+   },
+   "target_lufs": -16.0,
+   "lay_in": "cut in on S6.01's first frame (the downbeat erupts out of S5's pedal; no pickup, no riser)",
+   "lay_out": "DEAD STOP on MADA's label (act 9341, the swung 'and'); digital zero to 9376; the room carries it",
+   "files": {
+    "album_wav": "render/s5-s8_s6-avalanche-album.wav",
+    "album_mp3": "render/s5-s8_s6-avalanche-album.mp3",
+    "underscore_wav": "render/s5-s8_s6-avalanche-underscore.wav",
+    "underscore_mp3": "render/s5-s8_s6-avalanche-underscore.mp3",
+    "stems": {
+     "piano": "render/stems/s5-s8_s6-avalanche-piano.flac",
+     "strings": "render/stems/s5-s8_s6-avalanche-strings.flac",
+     "winds": "render/stems/s5-s8_s6-avalanche-winds.flac",
+     "brass": "render/stems/s5-s8_s6-avalanche-brass.flac",
+     "bass": "render/stems/s5-s8_s6-avalanche-bass.flac",
+     "drums": "render/stems/s5-s8_s6-avalanche-drums.flac",
+     "perc": "render/stems/s5-s8_s6-avalanche-perc.flac",
+     "chip": "render/stems/s5-s8_s6-avalanche-chip.flac"
+    },
+    "midi": "render/s5-s8_s6-avalanche.mid",
+    "pianoroll": "render/s5-s8_s6-avalanche-pianoroll.png"
+   },
+   "events": [
+    {
+     "act_s": 375.0417,
+     "act_frame": 9001.0,
+     "file_s": 0.0,
+     "tc": "18:46:01",
+     "what": "A1: the compile (timpani F, the Build 4)"
+    },
+    {
+     "act_s": 377.5417,
+     "act_frame": 9061.0,
+     "file_s": 2.5,
+     "tc": "18:48:13",
+     "what": "A4: the Build at 16"
+    },
+    {
+     "act_s": 379.4167,
+     "act_frame": 9106.0,
+     "file_s": 4.375,
+     "tc": "18:50:10",
+     "what": "A4 beat 4: the brass kick (end of phrase 1)"
+    },
+    {
+     "act_s": 380.0417,
+     "act_frame": 9121.0,
+     "file_s": 5.0,
+     "tc": "18:51:01",
+     "what": "A6: Step Four's G-flat"
+    },
+    {
+     "act_s": 381.2917,
+     "act_frame": 9151.0,
+     "file_s": 6.25,
+     "tc": "18:52:07",
+     "what": "ALYI RESISTS (A6.3): timpani G-flat, the plucked no"
+    },
+    {
+     "act_s": 383.258,
+     "act_frame": 9198.19,
+     "file_s": 8.2163,
+     "tc": "18:54:06",
+     "what": "NELEH's window (A7): no lead; the line ducked about -6 dB"
+    },
+    {
+     "act_s": 384.1042,
+     "act_frame": 9218.5,
+     "file_s": 9.0625,
+     "tc": "18:55:02",
+     "what": "the board's bowed F pedal enters (A8's)"
+    },
+    {
+     "act_s": 385.0417,
+     "act_frame": 9241.0,
+     "file_s": 10.0,
+     "tc": "18:56:01",
+     "what": "A9: the Water Line augmented"
+    },
+    {
+     "act_s": 385.917,
+     "act_frame": 9262.01,
+     "file_s": 10.8753,
+     "tc": "18:56:22",
+     "what": "THE QUIET VOTE: the F pedal ends silently"
+    },
+    {
+     "act_s": 387.5417,
+     "act_frame": 9301.0,
+     "file_s": 12.5,
+     "tc": "18:58:13",
+     "what": "A13: THE FULL BAND, C7(#9b13)"
+    },
+    {
+     "act_s": 389.217,
+     "act_frame": 9341.21,
+     "file_s": 14.1753,
+     "tc": "19:00:05",
+     "what": "STOP: dead on MADA's label (freeze_hit_F owns the onset); digital zero to the file end"
+    }
+   ],
+   "mutes": [
+    {
+     "file_s": [
+      14.1697,
+      16.1223
+     ],
+     "act_f": [
+      9341.1,
+      9387.9
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s5-s8_s7s8-the-return",
+   "title": "S7 + S8 \u00b7 THE RETURN, THE LOBBY, THE CODA",
+   "family": "MM-11 relay -> the vault's F",
+   "file_t0_act_frame": 9376,
+   "picture_out_act_frame": 12443,
+   "file_len_s": 131.8341,
+   "file_end_act_frame": 12540.0,
+   "underscore": {
+    "lufs": -20.0,
+    "lra": 9.77,
+    "true_peak_db": -3.15,
+    "peak_db": -3.16,
+    "rms_db": -22.82,
+    "crest_db": 19.66,
+    "seconds": 131.8341
+   },
+   "target_lufs": -20.0,
+   "lay_in": "the violin enters under Alyi's post (act 9400), after the label's stop",
+   "lay_out": "the act ends at 12443; the glass pedal's release rings ~4 s into the tag (crossfade the tag's cue over it)",
+   "files": {
+    "album_wav": "render/s5-s8_s7s8-the-return-album.wav",
+    "album_mp3": "render/s5-s8_s7s8-the-return-album.mp3",
+    "underscore_wav": "render/s5-s8_s7s8-the-return-underscore.wav",
+    "underscore_mp3": "render/s5-s8_s7s8-the-return-underscore.mp3",
+    "stems": {
+     "piano": "render/stems/s5-s8_s7s8-the-return-piano.flac",
+     "strings": "render/stems/s5-s8_s7s8-the-return-strings.flac",
+     "brass": "render/stems/s5-s8_s7s8-the-return-brass.flac",
+     "bass": "render/stems/s5-s8_s7s8-the-return-bass.flac",
+     "drums": "render/stems/s5-s8_s7s8-the-return-drums.flac",
+     "perc": "render/stems/s5-s8_s7s8-the-return-perc.flac",
+     "chip": "render/stems/s5-s8_s7s8-the-return-chip.flac",
+     "synth": "render/stems/s5-s8_s7s8-the-return-synth.flac"
+    },
+    "midi": "render/s5-s8_s7s8-the-return.mid",
+    "pianoroll": "render/s5-s8_s7s8-the-return-pianoroll.png"
+   },
+   "events": [
+    {
+     "act_s": 391.667,
+     "act_frame": 9400.01,
+     "file_s": 1.0003,
+     "tc": "19:02:16",
+     "what": "a: the violin (the Door, STRAIGHT), under the post"
+    },
+    {
+     "act_s": 397.567,
+     "act_frame": 9541.61,
+     "file_s": 6.9003,
+     "tc": "19:08:14",
+     "what": "a: the first heart: the G3 holds and decays (no stop)"
+    },
+    {
+     "act_s": 409.3,
+     "act_frame": 9823.2,
+     "file_s": 18.6333,
+     "tc": "19:20:07",
+     "what": "b: the floor pre-laps (the bare A-flat fifth under the violin's G)"
+    },
+    {
+     "act_s": 419.271,
+     "act_frame": 10062.5,
+     "file_s": 28.6043,
+     "tc": "19:30:07",
+     "what": "b: \"below\": A-flat maj9 (silent attack)"
+    },
+    {
+     "act_s": 420.221,
+     "act_frame": 10085.3,
+     "file_s": 29.5543,
+     "tc": "19:31:05",
+     "what": "b: \"above\": C maj9"
+    },
+    {
+     "act_s": 421.176,
+     "act_frame": 10108.22,
+     "file_s": 30.5093,
+     "tc": "19:32:04",
+     "what": "b: \"around\": E maj9"
+    },
+    {
+     "act_s": 422.04,
+     "act_frame": 10128.96,
+     "file_s": 31.3733,
+     "tc": "19:33:01",
+     "what": "b: the bloom (the Rhodes on the beats)"
+    },
+    {
+     "act_s": 424.613,
+     "act_frame": 10190.71,
+     "file_s": 33.9463,
+     "tc": "19:35:15",
+     "what": "b: home (A-flat maj9) under the rail"
+    },
+    {
+     "act_s": 426.167,
+     "act_frame": 10228.01,
+     "file_s": 35.5003,
+     "tc": "19:37:04",
+     "what": "c1: LEVERAGE fades in under Mada"
+    },
+    {
+     "act_s": 427.417,
+     "act_frame": 10258.01,
+     "file_s": 36.7503,
+     "tc": "19:38:10",
+     "what": "c1: the door bang (inside the cue)"
+    },
+    {
+     "act_s": 435.542,
+     "act_frame": 10453.01,
+     "file_s": 44.8753,
+     "tc": "19:46:13",
+     "what": "c1: thins to its F pedal (the reading, the terms)"
+    },
+    {
+     "act_s": 458.112,
+     "act_frame": 10994.69,
+     "file_s": 67.4453,
+     "tc": "20:09:03",
+     "what": "STOP (dead, tails cut): \"of what?\"; Mada's pause, \"Good question.\" and the long hold in the room"
+    },
+    {
+     "act_s": 465.283,
+     "act_frame": 11166.79,
+     "file_s": 74.6163,
+     "tc": "20:16:07",
+     "what": "c2: the stamp's C: the low C pedal bows in (it holds under both posts)"
+    },
+    {
+     "act_s": 469.375,
+     "act_frame": 11265.0,
+     "file_s": 78.7083,
+     "tc": "20:20:09",
+     "what": "c2: one pizz grain on the last grain (before Ttemme's post)"
+    },
+    {
+     "act_s": 476.293,
+     "act_frame": 11431.03,
+     "file_s": 85.6263,
+     "tc": "20:27:07",
+     "what": "the pedal rests on the sand's held beat (the shatter)"
+    },
+    {
+     "act_s": 476.783,
+     "act_frame": 11442.79,
+     "file_s": 86.1163,
+     "tc": "20:27:19",
+     "what": "d: the Build's four-note pickup into the sign"
+    },
+    {
+     "act_s": 477.408,
+     "act_frame": 11457.79,
+     "file_s": 86.7413,
+     "tc": "20:28:10",
+     "what": "e: the sign: ONE brass stab (A-flat maj9) + the Build at full"
+    },
+    {
+     "act_s": 479.908,
+     "act_frame": 11517.79,
+     "file_s": 89.2413,
+     "tc": "20:30:22",
+     "what": "e: one chip note (the undercut)"
+    },
+    {
+     "act_s": 480.7083,
+     "act_frame": 11537.0,
+     "file_s": 90.0417,
+     "tc": "20:31:17",
+     "what": "e: the 1993 flat line F5 . F4 . F5 (tenuto, uneven)"
+    },
+    {
+     "act_s": 482.9,
+     "act_frame": 11589.6,
+     "file_s": 92.2333,
+     "tc": "20:33:22",
+     "what": "e: the bonk (SFX, E3: the wrong note); a designed rest on the lobby's neon F (the CU)"
+    },
+    {
+     "act_s": 486.7317,
+     "act_frame": 11681.56,
+     "file_s": 96.065,
+     "tc": "20:37:18",
+     "what": "after \"okay.\": the felt C4 (his felt, last)"
+    },
+    {
+     "act_s": 487.1483,
+     "act_frame": 11691.56,
+     "file_s": 96.4817,
+     "tc": "20:38:04",
+     "what": "the felt F4 + the open fifth (the settle)"
+    },
+    {
+     "act_s": 487.708,
+     "act_frame": 11704.99,
+     "file_s": 97.0413,
+     "tc": "20:38:17",
+     "what": "f: the vault's F: the glass pedal F3/C4 swells in under the felt's decay"
+    },
+    {
+     "act_s": 496.26,
+     "act_frame": 11910.24,
+     "file_s": 105.5933,
+     "tc": "20:47:06",
+     "what": "f: the Q* hook: the Ache (G4 + D-flat5) over the pedal for the (REPORTED) rail"
+    },
+    {
+     "act_s": 500.375,
+     "act_frame": 12009.0,
+     "file_s": 109.7083,
+     "tc": "20:51:09",
+     "what": "f: the Ache cuts with the picture; the pedal goes on (the memo: the pedal alone)"
+    },
+    {
+     "act_s": 518.458,
+     "act_frame": 12442.99,
+     "file_s": 127.7913,
+     "tc": "21:09:11",
+     "what": "the act ends; the pedal's release carries into the tag"
+    }
+   ],
+   "mutes": [
+    {
+     "file_s": [
+      67.4483,
+      74.6133
+     ],
+     "act_f": [
+      10994.8,
+      11166.7
+     ]
+    }
+   ]
+  }
+ ],
+ "stops": [
+  {
+   "act_f_in": 8500.0,
+   "act_f_out": null,
+   "what": "RING-OUT (not a stop): the Build stops dead; the pedal holds",
+   "cause": "Gerg's look up (S5.09b cut-in)"
+  },
+  {
+   "act_f_in": 9341.2,
+   "act_f_out": 9400.0,
+   "what": "DEAD STOP (tails cut, digital zero); re-entry: the violin under Alyi's post",
+   "cause": "MADA \u00b7 LAST FIRER STANDING (freeze_hit_F owns the onset)"
+  },
+  {
+   "act_f_in": 10994.7,
+   "act_f_out": 11166.8,
+   "what": "DEAD STOP (tails cut); re-entry: the low C pedal under the stamp's C",
+   "cause": "\"of what?\"; Terb looks at Mada; Mada's pause; \"Good question.\" / \"good question.\"; the long hold"
+  },
+  {
+   "act_f_in": 11431.0,
+   "act_f_out": 11442.8,
+   "what": "DESIGNED REST (0.49 s): the pedal rests on the sand's beat; the Build's pickup re-enters",
+   "cause": "the hourglass shatters; the sand holds its shape one beat"
+  },
+  {
+   "act_f_in": 11589.6,
+   "act_f_out": 11681.6,
+   "what": "DESIGNED REST: the flat line ends on the bonk; the lobby's neon buzz (on F) holds the CU and \"okay.\"; the felt re-enters after it",
+   "cause": "the CU, \"silent like the first\" (the firing's drawing); \"okay.\" lands dry"
+  }
+ ]
+}

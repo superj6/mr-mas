@@ -1,0 +1,236 @@
+{
+ "id": "e1-a3-21-07",
+ "scene": "21",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "the one with the pen.",
+ "spoken_as": "the one with the pen.",
+ "delivery": "after the Orb's look settles; agreeing with it",
+ "tag": "[INVENTED · it was \"that one.\"; he agrees with the Orb, and the real one is the one who signs]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "2S·SCR",
+ "shot_id": "2S·SCR",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 2.3,
+ "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-21-07.wav",
+ "mp3": null,
+ "duration_s": 2.43,
+ "frames_24": 59,
+ "voiced_span_s": 1.2,
+ "pace": {
+  "words": 5,
+  "wpm": 250.0,
+  "speed": 0.915,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.915,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.6,
+    4.2
+   ],
+   "turn_wpm_guide": [
+    135,
+    155
+   ],
+   "intent": "after the Orb's look settles; agreeing with it"
+  },
+  "measured": {
+   "wpm": 250.0,
+   "articulation_sps": 4.17,
+   "syllables": 5,
+   "span_s": 1.2,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.54,
+  "audible_out_s": 1.74
+ },
+ "placement": {
+  "gap_before_s": 0.35,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.915",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch 0",
+  "low shelf +2 dB @160 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak +1 dB @3200 Hz Q0.8",
+  "high shelf -1.5 dB @8000 Hz",
+  "comp 2.0:1 @-24 dB (10/120 ms)",
+  "Kokoro speed 0.915 (the centre of the band; mas-manalt band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "E"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "O"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "A"
+  },
+  {
+   "t": 0.833,
+   "f": 20,
+   "shape": "E"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "O"
+  },
+  {
+   "t": 1.0,
+   "f": 24,
+   "shape": "E"
+  },
+  {
+   "t": 1.208,
+   "f": 29,
+   "shape": "M"
+  },
+  {
+   "t": 1.333,
+   "f": 32,
+   "shape": "A"
+  },
+  {
+   "t": 1.625,
+   "f": 39,
+   "shape": "E"
+  },
+  {
+   "t": 1.75,
+   "f": 42,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "the",
+   "t0": 0.54,
+   "t1": 0.665,
+   "f0": 13,
+   "f1": 16,
+   "ph": "ðə"
+  },
+  {
+   "w": "one",
+   "t0": 0.665,
+   "t1": 0.915,
+   "f0": 16,
+   "f1": 22,
+   "ph": "wˈʌn"
+  },
+  {
+   "w": "with",
+   "t0": 0.915,
+   "t1": 1.09,
+   "f0": 22,
+   "f1": 26,
+   "ph": "wɪð"
+  },
+  {
+   "w": "the",
+   "t0": 1.09,
+   "t1": 1.227,
+   "f0": 26,
+   "f1": 29,
+   "ph": "ðə"
+  },
+  {
+   "w": "pen",
+   "t0": 1.227,
+   "t1": 1.76,
+   "f0": 29,
+   "f1": 42,
+   "ph": "pˈɛn"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.76,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.54,
+  "median_f0_hz": 117.9,
+  "f0_range_st": 11.0,
+  "f0_method": "pYIN (a4lib.analyse)",
+  "final_move_st": -6.5,
+  "asr": "The one with the pen.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.471,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.54,
+  "speech_tail_s": 0.38,
+  "rise_ms": 45.0,
+  "decay_ms": 195.0,
+  "decay_to_60_s": 0.315
+ },
+ "speaker_label": "MAS",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "a26259d1a7d22b4f",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 3.0,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": true,
+   "breaths": false,
+   "threads": 4
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 2.09,
+   "rechecked_alone": true
+  }
+ }
+}

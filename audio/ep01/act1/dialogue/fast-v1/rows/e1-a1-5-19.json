@@ -1,0 +1,222 @@
+{
+ "id": "e1-a1-5-19",
+ "scene": "5",
+ "speaker": "CHATGTP",
+ "speaker_slug": "chatgtp",
+ "text": "What a great question!",
+ "spoken_as": "What a great question!",
+ "delivery": null,
+ "tag": "[INVENTED]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "OTS",
+ "shot_id": "OTS",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 1.9,
+ "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-19.wav",
+ "mp3": null,
+ "duration_s": 2.15,
+ "frames_24": 52,
+ "voiced_span_s": 1.15,
+ "pace": {
+  "words": 4,
+  "wpm": 208.7,
+  "speed": 1.13,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.13,
+   "speed_band": [
+    1.09,
+    1.17
+   ],
+   "articulation_guide_sps": [
+    4.8,
+    5.6
+   ],
+   "turn_wpm_guide": [
+    165,
+    185
+   ],
+   "intent": null
+  },
+  "measured": {
+   "wpm": 208.7,
+   "articulation_sps": 4.35,
+   "syllables": 5,
+   "span_s": 1.15,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.51,
+  "audible_out_s": 1.66
+ },
+ "placement": {
+  "gap_before_s": 0.9,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "af_jessica (Kokoro-82M stock) · e-jessica-eager-hi · speed 1.130",
+ "voiceId": "af_jessica",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 130 Hz",
+  "pitch +3 st",
+  "peak +2.5 dB @4000 Hz Q0.9",
+  "high shelf +1.5 dB @8000 Hz",
+  "chorus 1.2 Hz depth 0.08 mix 0.12",
+  "bitcrush 13-bit mix 0.08",
+  "comp 3.0:1 @-20 dB (3/70 ms)",
+  "Kokoro speed 1.130 (the centre of the band; chatgtp band 1.09-1.17); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.458,
+   "f": 11,
+   "shape": "O"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "A"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "E"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "A"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "E"
+  },
+  {
+   "t": 1.0,
+   "f": 24,
+   "shape": "O"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "A"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "E"
+  },
+  {
+   "t": 1.667,
+   "f": 40,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "What",
+   "t0": 0.495,
+   "t1": 0.607,
+   "f0": 12,
+   "f1": 15,
+   "ph": "wˌʌt"
+  },
+  {
+   "w": "a",
+   "t0": 0.607,
+   "t1": 0.67,
+   "f0": 15,
+   "f1": 16,
+   "ph": "ɐ"
+  },
+  {
+   "w": "great",
+   "t0": 0.67,
+   "t1": 0.945,
+   "f0": 16,
+   "f1": 23,
+   "ph": "ɡɹˈAt"
+  },
+  {
+   "w": "question",
+   "t0": 0.945,
+   "t1": 1.68,
+   "f0": 23,
+   "f1": 40,
+   "ph": "kwˈɛsʧᵊn"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.79,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.51,
+  "median_f0_hz": 252.0,
+  "f0_range_st": 13.4,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "What a great question.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.209,
+  "align_median_s": 0.024,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.445,
+  "rise_ms": 10.0,
+  "decay_ms": 60.0,
+  "decay_to_60_s": 0.05
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "202e06c73e0e0922",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 24.42,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 5,
+   "share_s": 7.83,
+   "rechecked_alone": false
+  }
+ }
+}

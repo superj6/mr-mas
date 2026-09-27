@@ -1,0 +1,209 @@
+{
+ "id": "e1-a2-13-13",
+ "scene": "13",
+ "speaker": "RADNUS",
+ "speaker_slug": "radnus",
+ "text": "We're being thoughtful.",
+ "spoken_as": "We're being thoughtful.",
+ "delivery": "O.S.; quickly, patting at the flame, sorry about it",
+ "tag": "[INVENTED]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "ECU",
+ "shot_id": "ECU",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 1.9,
+ "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-13.wav",
+ "mp3": null,
+ "duration_s": 2.255,
+ "frames_24": 55,
+ "voiced_span_s": 1.23,
+ "pace": {
+  "words": 3,
+  "wpm": 146.3,
+  "speed": 0.99,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.99,
+   "speed_band": [
+    0.91,
+    0.99
+   ],
+   "articulation_guide_sps": [
+    3.8,
+    4.4
+   ],
+   "turn_wpm_guide": [
+    130,
+    150
+   ],
+   "intent": "O.S.; quickly, patting at the flame, sorry about it"
+  },
+  "measured": {
+   "wpm": 146.3,
+   "articulation_sps": 4.07,
+   "syllables": 5,
+   "span_s": 1.23,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.5,
+  "audible_out_s": 1.73
+ },
+ "placement": {
+  "gap_before_s": 0.35,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_echo*0.60+am_fenrir*0.40 (Kokoro-82M stock) · d-echo-fenrir-courteous-up2 · speed 0.990",
+ "voiceId": "am_echo*0.60+am_fenrir*0.40",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch +2 st",
+  "low shelf +1.5 dB @180 Hz",
+  "peak -1.5 dB @350 Hz Q1.0",
+  "peak +0.5 dB @3000 Hz Q0.9",
+  "high shelf -1 dB @7000 Hz",
+  "comp 2.0:1 @-24 dB (10/140 ms)",
+  "Kokoro speed 0.990 (the plan speed; radnus band 0.91-0.99); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.458,
+   "f": 11,
+   "shape": "O"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "E"
+  },
+  {
+   "t": 0.625,
+   "f": 15,
+   "shape": "M"
+  },
+  {
+   "t": 0.708,
+   "f": 17,
+   "shape": "A"
+  },
+  {
+   "t": 0.833,
+   "f": 20,
+   "shape": "E"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "O"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "E"
+  },
+  {
+   "t": 1.75,
+   "f": 42,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "We're",
+   "t0": 0.485,
+   "t1": 0.635,
+   "f0": 12,
+   "f1": 15,
+   "ph": "wˌɪɹ"
+  },
+  {
+   "w": "being",
+   "t0": 0.635,
+   "t1": 1.022,
+   "f0": 15,
+   "f1": 25,
+   "ph": "bˈiɪŋ"
+  },
+  {
+   "w": "thoughtful",
+   "t0": 1.022,
+   "t1": 1.75,
+   "f0": 25,
+   "f1": 42,
+   "ph": "θˈɔtfᵊl"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -2.87,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 150.0,
+  "f0_range_st": 14.1,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "We're being thoughtful.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.355,
+  "align_median_s": 0.097,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.43,
+  "rise_ms": 20.0,
+  "decay_ms": 160.0,
+  "decay_to_60_s": 0.1
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "ec62e93b48e9b956",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 106.89,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 4
+  },
+  "asr": {
+   "packed_with": 1,
+   "share_s": 3.88,
+   "rechecked_alone": false
+  }
+ }
+}

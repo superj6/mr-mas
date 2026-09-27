@@ -42,6 +42,44 @@ export interface FootnoteOrbit {
   /** size: 'lg' 3x5 digits (portrait), 'sm' 2x3 (tile, room) */
   size: 'lg' | 'sm';
 }
+/**
+ * a4p5 (Act Four v5 art pass; additive: v4 never sets it, so v4 draws exactly as before): the FOOTNOTE STYLE.
+ *   'digits' (default, v4)  bare gold superscript numerals. The blind read (style-jumps §5.1) and the prep stills check
+ *                           read them cold as "debug numbers or dizzy stars", and in a small tile the front "1" sat on
+ *                           her forehead like a mark on the skin.
+ *   'slips'                 each footnote is a little slip of her glowing paper with its number printed on it: a pale
+ *                           card (a gold top edge, a dog-eared corner, a 1 px shadow) carrying the same digit in ink.
+ *                           An object passing in front of her head, not a mark on it; the same paper as the charter she
+ *                           holds, so "footnote" reads from the prop. The ring is seen from a little below: its near
+ *                           half rides over her crown and its far half passes behind her head, so a slip never
+ *                           crosses her brow or eyes (in the soft 1.G tiles a slip on the brow became a block there).
+ * Set per call with drawFootnotes(..., {style}) or, for everything drawn inside a callback (a v5 frame, a kit's entry
+ * point), withFootnoteStyle('slips', () => ...). It is restored afterwards, so v4 layouts rendered in the same process
+ * are untouched.
+ */
+export type FootnoteStyle = 'digits' | 'slips';
+let FOOTNOTE_STYLE: FootnoteStyle = 'digits';
+export const footnoteStyle = (): FootnoteStyle => FOOTNOTE_STYLE;
+export const withFootnoteStyle = <T>(style: FootnoteStyle, fn: () => T): T => {
+  const prev = FOOTNOTE_STYLE;
+  FOOTNOTE_STYLE = style;
+  try { return fn(); } finally { FOOTNOTE_STYLE = prev; }
+};
+/** one footnote as a paper slip ('slips' style), centred near (x, y) like the digit it replaces */
+const drawSlip = (b: Buf, d: string, x: number, y: number, size: 'lg' | 'sm', front: boolean, clip?: Clip) => {
+  const set = (px: number, py: number, c: number) => { if (!clip || clip(px, py)) b.set(px, py, c); };
+  const lg = size === 'lg';
+  const w = lg ? 7 : 4, h = lg ? 9 : 5;
+  const X = Math.round(x) - (lg ? 3 : 1), Y = Math.round(y) - (lg ? 4 : 2);
+  const paper = front ? PAL.P2 : PAL.P0, edge = front ? PAL.W7 : PAL.W5, ink = front ? PAL.N3 : PAL.G3;
+  for (let j = 1; j <= h; j++) set(X + w, Y + j, PAL.N0); // the shadow, right
+  for (let i = 1; i <= w; i++) set(X + i, Y + h, PAL.N0); // and below
+  for (let j = 0; j < h; j++) for (let i = 0; i < w; i++) set(X + i, Y + j, j === 0 ? edge : paper);
+  if (lg) set(X + w - 1, Y, PAL.N0); // the dog-ear
+  const rows = (lg ? DIGITS : DIGITS_SM)[d];
+  const dx = lg ? 2 : 1, dy = lg ? 2 : 1;
+  rows.forEach((r, j) => { for (let k = 0; k < r.length; k++) if (r[k] === '#') set(X + dx + k, Y + dy + j, ink); });
+};
 export const PORTRAIT_ORBIT: FootnoteOrbit = {cx: 60, cy: 26, rx: 38, ry: 8, tilt: -12, size: 'lg'};
 /** frames per revolution; positions are held on 2s */
 export const FOOTNOTE_PERIOD = 60;
@@ -50,8 +88,9 @@ export const FOOTNOTE_PERIOD = 60;
  * ring to draw: 'back' before the figure (occluded by the head), 'front' after it. `scatter` (0..1+) flings each
  * number outward along its own heading, whole pixels (sc 29: "her footnotes scattering like sparks").
  */
-export const drawFootnotes = (b: Buf, o: FootnoteOrbit, f: number, layer: 'back' | 'front' | 'all', opts: {scatter?: number; clip?: Clip; col?: number; shade?: number} = {}) => {
+export const drawFootnotes = (b: Buf, o: FootnoteOrbit, f: number, layer: 'back' | 'front' | 'all', opts: {scatter?: number; clip?: Clip; col?: number; shade?: number; style?: FootnoteStyle} = {}) => {
   const g = Math.floor(f / 2) * 2;
+  const style = opts.style ?? FOOTNOTE_STYLE;
   const th = (o.tilt * Math.PI) / 180;
   ['1', '2', '3'].forEach((d, i) => {
     const t = (g / FOOTNOTE_PERIOD) * Math.PI * 2 + (i * Math.PI * 2) / 3;
@@ -59,14 +98,18 @@ export const drawFootnotes = (b: Buf, o: FootnoteOrbit, f: number, layer: 'back'
     const front = Math.sin(t) > 0;
     if (layer === 'back' && front) return;
     if (layer === 'front' && !front) return;
-    let x = o.cx + ex * Math.cos(th) - ey * Math.sin(th);
-    let y = o.cy + ex * Math.sin(th) + ey * Math.cos(th);
+    // 'slips': the ring seen from a little below (its near half rides HIGH, over the crown; the far half passes low,
+    // behind the head), so a slip never crosses her brow or eyes (a4p5 r2)
+    const eyy = style === 'slips' ? -ey : ey;
+    let x = o.cx + ex * Math.cos(th) - eyy * Math.sin(th);
+    let y = o.cy + ex * Math.sin(th) + eyy * Math.cos(th);
     const s = opts.scatter ?? 0;
     if (s > 0) {
       const a = t + (hash(i, 3, 17) - 0.5) * 1.2;
       x += Math.cos(a) * s * 26;
       y += Math.sin(a) * s * 14 + s * s * 18; // arcs out, then drops
     }
+    if (style === 'slips') { drawSlip(b, d, x, y, o.size, front, opts.clip); return; }
     const rows = (o.size === 'lg' ? DIGITS : DIGITS_SM)[d];
     // far side of the ring: one palette step dimmer (depth by palette, never by size)
     const col = front ? (opts.col ?? PAL.W8) : (opts.shade ?? PAL.W6);

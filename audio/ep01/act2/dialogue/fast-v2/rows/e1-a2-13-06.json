@@ -1,0 +1,319 @@
+{
+ "id": "e1-a2-13-06",
+ "scene": "13",
+ "speaker": "PHOTOGRAPHER",
+ "speaker_slug": "photographer",
+ "text": "Big smiles, please. Eyes on camera one.",
+ "spoken_as": "Big smiles, please.{0.25} Eyes on camera one.",
+ "delivery": null,
+ "tag": "[INVENTED · second pass: \"Okay…\" is Gerg's opener, so the photographer doesn't borrow it (the naturalness read)]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "W",
+ "shot_id": "W",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 3.1,
+ "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-06.wav",
+ "mp3": null,
+ "duration_s": 3.535,
+ "frames_24": 85,
+ "voiced_span_s": 2.35,
+ "pace": {
+  "words": 7,
+  "wpm": 178.7,
+  "speed": 1.14,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.14,
+   "speed_band": [
+    1.1,
+    1.18
+   ],
+   "articulation_guide_sps": [
+    4.6,
+    5.4
+   ],
+   "turn_wpm_guide": [
+    160,
+    180
+   ],
+   "intent": null
+  },
+  "measured": {
+   "wpm": 178.7,
+   "articulation_sps": 4.31,
+   "syllables": 9,
+   "span_s": 2.35,
+   "pauses_s": [
+    0.26
+   ]
+  },
+  "longest_internal_gap_s": 0.26,
+  "audible_in_s": 0.5,
+  "audible_out_s": 2.85
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "af_river (Kokoro-82M stock) · d-river-brisk-low · speed 1.140",
+ "voiceId": "af_river",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch -2 st",
+  "low shelf +1 dB @200 Hz",
+  "peak +1.5 dB @2800 Hz Q0.9",
+  "comp 2.5:1 @-22 dB (5/90 ms)",
+  "Kokoro speed 1.140 (the plan speed; photographer band 1.10-1.18); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'please': Kokoro 0.00 s -> 0.27 s (intended 0.25; +0.25 s of room tone at the quietest 5 ms; Kokoro ran the words together here (dip -30.9 dB): ear check)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.458,
+   "f": 11,
+   "shape": "M"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "A"
+  },
+  {
+   "t": 0.625,
+   "f": 15,
+   "shape": "E"
+  },
+  {
+   "t": 0.708,
+   "f": 17,
+   "shape": "M"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "A"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "E"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "M"
+  },
+  {
+   "t": 1.167,
+   "f": 28,
+   "shape": "E"
+  },
+  {
+   "t": 1.25,
+   "f": 30,
+   "shape": "A"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "rest"
+  },
+  {
+   "t": 1.792,
+   "f": 43,
+   "shape": "A"
+  },
+  {
+   "t": 2.0,
+   "f": 48,
+   "shape": "O"
+  },
+  {
+   "t": 2.083,
+   "f": 50,
+   "shape": "E"
+  },
+  {
+   "t": 2.167,
+   "f": 52,
+   "shape": "A"
+  },
+  {
+   "t": 2.25,
+   "f": 54,
+   "shape": "M"
+  },
+  {
+   "t": 2.333,
+   "f": 56,
+   "shape": "E"
+  },
+  {
+   "t": 2.458,
+   "f": 59,
+   "shape": "O"
+  },
+  {
+   "t": 2.583,
+   "f": 62,
+   "shape": "A"
+  },
+  {
+   "t": 2.792,
+   "f": 67,
+   "shape": "E"
+  },
+  {
+   "t": 2.875,
+   "f": 69,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Big",
+   "t0": 0.47,
+   "t1": 0.65,
+   "f0": 11,
+   "f1": 16,
+   "ph": "bˈɪɡ"
+  },
+  {
+   "w": "smiles",
+   "t0": 0.65,
+   "t1": 1.05,
+   "f0": 16,
+   "f1": 25,
+   "ph": "smˈIlz"
+  },
+  {
+   "w": "please",
+   "t0": 1.1,
+   "t1": 1.475,
+   "f0": 26,
+   "f1": 35,
+   "ph": "plˈiz"
+  },
+  {
+   "w": "Eyes",
+   "t0": 1.775,
+   "t1": 2.013,
+   "f0": 43,
+   "f1": 48,
+   "ph": "ˈIz"
+  },
+  {
+   "w": "on",
+   "t0": 2.013,
+   "t1": 2.125,
+   "f0": 48,
+   "f1": 51,
+   "ph": "ˌɔn"
+  },
+  {
+   "w": "camera",
+   "t0": 2.125,
+   "t1": 2.475,
+   "f0": 51,
+   "f1": 59,
+   "ph": "kˈæməɹə"
+  },
+  {
+   "w": "one",
+   "t0": 2.475,
+   "t1": 2.87,
+   "f0": 59,
+   "f1": 69,
+   "ph": "wˈʌn"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.88,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 164.5,
+  "f0_range_st": 7.9,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Big smiles please, eyes on camera one.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.355,
+  "align_median_s": 0.085,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.445,
+  "rise_ms": 15.0,
+  "decay_ms": 70.0,
+  "decay_to_60_s": 0.24
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 3,
+   "word": "please",
+   "tts_s": 0.0,
+   "target_s": 0.25,
+   "point_s": 1.09,
+   "joined_speech": true,
+   "dip_db": -30.9,
+   "breath": false,
+   "crossfade_ms": [
+    60,
+    25
+   ],
+   "final_s": 0.265,
+   "opened_s": 0.25
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "0c3e9a443496b51c",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 94.37,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 4
+  },
+  "asr": {
+   "packed_with": 1,
+   "share_s": 5.32,
+   "rechecked_alone": false
+  }
+ }
+}

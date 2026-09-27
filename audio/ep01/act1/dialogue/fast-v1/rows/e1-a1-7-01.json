@@ -1,0 +1,367 @@
+{
+ "id": "e1-a1-7-01",
+ "scene": "7",
+ "speaker": "RIMA TAMURI",
+ "speaker_slug": "rima-tamuri",
+ "text": "A million people, Mas. You're actually crying for them.",
+ "spoken_as": "A million people, [Mas](/mˈɑs/).{0.4} You're actually crying for them.",
+ "delivery": "O.S., beside him at the hole; gently, almost pleased",
+ "tag": "[INVENTED · Act One fix pass (2026-09-27): it was \"A million people, Mas. That's for them, isn't it?\". Both reads of the v2 reel lost the \"that\" (the newcomer couldn't tell it meant the tear; the insider called it unclear), so the tear is now named, as her surprise at his first feeling, and \"it's the bill.\" corrects what it's for. It stays clear of the stock \"is that a tear?\" the final pass cut: she isn't asking, she's already decided. Final pass: it was \"Is that… emotion?\", the stock \"is that a tear?\" line (the feel read's no-corn note). Now she reads it as sentiment and he corrects her to money, so the joke has a turn. Dialogue pass 5: it was \"Mas. Is that… for the users?\". A name said as its own sentence makes a stock voice stop dead and start again cold, and \"for the users\" was vague by ear (the naturalness read). The read offered \"Mas… a million people.\"; the name moves to the end of the phrase instead, the read's own general fix, so there are no dots for a temp voice to stall on. \"A million\" is the number the odometer has just shown]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "MCU·PF",
+ "shot_id": "MCU·PF",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 4.2,
+ "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-7-01.wav",
+ "mp3": null,
+ "duration_s": 4.31,
+ "frames_24": 104,
+ "voiced_span_s": 3.28,
+ "pace": {
+  "words": 9,
+  "wpm": 164.6,
+  "speed": 0.86,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.86,
+   "speed_band": [
+    0.9,
+    0.98
+   ],
+   "articulation_guide_sps": [
+    4.0,
+    4.6
+   ],
+   "turn_wpm_guide": [
+    140,
+    160
+   ],
+   "intent": "O.S., beside him at the hole; gently, almost pleased"
+  },
+  "measured": {
+   "wpm": 164.6,
+   "articulation_sps": 5.23,
+   "syllables": 15,
+   "span_s": 3.28,
+   "pauses_s": [
+    0.41
+   ]
+  },
+  "longest_internal_gap_s": 0.41,
+  "audible_in_s": 0.5,
+  "audible_out_s": 3.78
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 2,
+ "pick_reason": "fast: best of 2 seeds by ASR word recall, then no pause cut inside the voice, then the span nearest est_s",
+ "voice": "af_heart (Kokoro-82M stock) · a-heart-composed · speed 0.860",
+ "voiceId": "af_heart",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch 0",
+  "peak -1 dB @300 Hz Q1.0",
+  "peak +1 dB @5000 Hz Q0.8",
+  "comp 2.0:1 @-22 dB (8/120 ms)",
+  "Kokoro speed 0.860 (the plan speed; rima-tamuri band 0.90-0.98); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'Mas': Kokoro 0.29 s -> 0.35 s (intended 0.40; +0.10 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "A"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "M"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "A"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "E"
+  },
+  {
+   "t": 1.042,
+   "f": 25,
+   "shape": "M"
+  },
+  {
+   "t": 1.125,
+   "f": 27,
+   "shape": "E"
+  },
+  {
+   "t": 1.208,
+   "f": 29,
+   "shape": "M"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "E"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "M"
+  },
+  {
+   "t": 1.625,
+   "f": 39,
+   "shape": "A"
+  },
+  {
+   "t": 1.875,
+   "f": 45,
+   "shape": "E"
+  },
+  {
+   "t": 1.958,
+   "f": 47,
+   "shape": "rest"
+  },
+  {
+   "t": 2.333,
+   "f": 56,
+   "shape": "O"
+  },
+  {
+   "t": 2.458,
+   "f": 59,
+   "shape": "A"
+  },
+  {
+   "t": 2.542,
+   "f": 61,
+   "shape": "E"
+  },
+  {
+   "t": 2.667,
+   "f": 64,
+   "shape": "O"
+  },
+  {
+   "t": 2.75,
+   "f": 66,
+   "shape": "E"
+  },
+  {
+   "t": 3.0,
+   "f": 72,
+   "shape": "A"
+  },
+  {
+   "t": 3.167,
+   "f": 76,
+   "shape": "E"
+  },
+  {
+   "t": 3.375,
+   "f": 81,
+   "shape": "O"
+  },
+  {
+   "t": 3.458,
+   "f": 83,
+   "shape": "E"
+  },
+  {
+   "t": 3.542,
+   "f": 85,
+   "shape": "A"
+  },
+  {
+   "t": 3.708,
+   "f": 89,
+   "shape": "M"
+  },
+  {
+   "t": 3.792,
+   "f": 91,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "A",
+   "t0": 0.5,
+   "t1": 0.6,
+   "f0": 12,
+   "f1": 14,
+   "ph": "ɐ"
+  },
+  {
+   "w": "million",
+   "t0": 0.6,
+   "t1": 1.075,
+   "f0": 14,
+   "f1": 26,
+   "ph": "mˈɪljᵊn"
+  },
+  {
+   "w": "people",
+   "t0": 1.075,
+   "t1": 1.425,
+   "f0": 26,
+   "f1": 34,
+   "ph": "pˈipᵊl"
+  },
+  {
+   "w": "Mas",
+   "t0": 1.475,
+   "t1": 1.98,
+   "f0": 35,
+   "f1": 48,
+   "ph": "mˈɑs"
+  },
+  {
+   "w": "You're",
+   "t0": 2.305,
+   "t1": 2.455,
+   "f0": 55,
+   "f1": 59,
+   "ph": "jˌʊɹ"
+  },
+  {
+   "w": "actually",
+   "t0": 2.455,
+   "t1": 2.892,
+   "f0": 59,
+   "f1": 69,
+   "ph": "ˈækʧəwəli"
+  },
+  {
+   "w": "crying",
+   "t0": 2.892,
+   "t1": 3.33,
+   "f0": 69,
+   "f1": 80,
+   "ph": "kɹˈIɪŋ"
+  },
+  {
+   "w": "for",
+   "t0": 3.33,
+   "t1": 3.48,
+   "f0": 80,
+   "f1": 84,
+   "ph": "fɔɹ"
+  },
+  {
+   "w": "them",
+   "t0": 3.48,
+   "t1": 3.8,
+   "f0": 84,
+   "f1": 91,
+   "ph": "ðˌɛm"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.02,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 207.9,
+  "f0_range_st": 9.5,
+  "f0_method": "pYIN (a4lib.analyse)",
+  "final_move_st": -4.9,
+  "asr": "A million people, Moss. You're actually crying for them.",
+  "cer": 0.047,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.287,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.445,
+  "rise_ms": 5.0,
+  "decay_ms": 85.0,
+  "decay_to_60_s": 0.08
+ },
+ "speaker_label": "RIMA",
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 4,
+   "word": "Mas",
+   "tts_s": 0.295,
+   "target_s": 0.4,
+   "point_s": 1.75,
+   "joined_speech": false,
+   "dip_db": -62.5,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.355,
+   "opened_s": 0.105
+  }
+ ],
+ "alt_takes": [
+  {
+   "tag": "s2",
+   "seed": 2,
+   "speed": 0.86,
+   "file": "audio/ep01/act1/dialogue/fast-v1/takes/e1-a1-7-01/s2.wav",
+   "span_s": 3.28,
+   "wpm": 164.6,
+   "asr": "A million people, Moss. You're actually crying for them.",
+   "recall": 1.0,
+   "utmos": null
+  }
+ ],
+ "fast": {
+  "key": "aa2bbea5ecf67653",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 9.49,
+  "takes": 2,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": true,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 1,
+   "share_s": 4.06
+  }
+ }
+}

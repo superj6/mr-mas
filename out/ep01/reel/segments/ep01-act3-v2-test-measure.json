@@ -1,0 +1,54 @@
+{
+ "manifest": "../test/ep01-act3-v2-test.manifest.json",
+ "key": "ep01-act3-v2-test",
+ "host": {
+  "cores": 14,
+  "load1": 16.78
+ },
+ "jobs": 2,
+ "concurrency": 2,
+ "seg": 90,
+ "scale": 1,
+ "steps": {
+  "bundle": 10.7,
+  "plan": 0.4,
+  "mix": 2.1,
+  "render": 109.6,
+  "concat": 0.1,
+  "mixWaitAfterPicture": 0,
+  "mux": 6.8
+ },
+ "renderedSeconds": 148,
+ "segments": [
+  {
+   "file": "000-act3-0-1776-b86d824a9f.mp4",
+   "chapter": "act3",
+   "frames": 1776,
+   "wall": 108.7
+  },
+  {
+   "file": "001-act3-1776-3552-aa060c3df2.mp4",
+   "chapter": "act3",
+   "frames": 1776,
+   "wall": 109.6
+  }
+ ],
+ "frames": {
+  "expected": 3552,
+  "got": 3552
+ },
+ "wall": 127.8,
+ "reelSeconds": 148,
+ "speed": {
+  "reelSecondsPerMinuteWall": 69.5,
+  "renderedSecondsPerMinuteOfRenderStep": 81
+ },
+ "out": "../test/ep01-act3-v2-test.mp4",
+ "outBytes": 10762061,
+ "mix": {
+  "lufs": -19.094,
+  "peak": -5.019,
+  "missing": [],
+  "silences": []
+ }
+}

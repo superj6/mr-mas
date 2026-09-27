@@ -1,0 +1,6 @@
+{
+  "_about": "Act Three's part of show/reel/ep01-full/ep01-full-v2.manifest.json (the lead assembles the manifest). Paste the chapter into chapters[] after act2, and the bed into beds[] in place of any other act3 bed. The bed is the act's temp sound stem (audio/reel/ep01-act3-v2/act3_bed.py: room, LED ticks, MM-01, a THE CLOCK temp, 51 SFX), played as is (lufs null, no loop); the mixer lays the 22 takes over it and ducks it. The stem stops dead at 23.04 (the cut to black), so no MM-14 pad is needed. Since the clarity pass (2026-09-27) the crane/glass pre-lap under the black is held out (build_timeline.py PRELAP = False) until Act Four's premix carries the crane (audit-v2 #37); the black then plays on the mixer's floor. Rebuild the stem (act3_bed.py) whenever the timeline JSON changes, or its SFX drift off the picture. See show/episodes/ep01/production/stick/act3-notes.md.",
+  "chapter": {"id": "act3", "label": "ACT THREE", "sub": "verified: human · sc 18-23 · v2 takes", "from": "ep01-act3-v2"},
+  "bed": {"chapter": "act3", "beat": "18.01", "cue": "MM-01", "label": "Act Three temp stem (room + MM-01 + THE CLOCK temp + SFX)",
+          "src": "audio/reel/ep01-act3-v2/act3-bed.wav", "lufs": null, "loop": "none", "in": 0, "xfade": 0.3}
+}

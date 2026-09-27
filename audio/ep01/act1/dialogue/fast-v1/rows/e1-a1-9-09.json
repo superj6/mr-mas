@@ -1,0 +1,420 @@
+{
+ "id": "e1-a1-9-09",
+ "scene": "9",
+ "speaker": "GERG MOCKBRAN",
+ "speaker_slug": "gerg-mockbran",
+ "text": "That's our model in your search engine. Are you really going after Elgoog with it?",
+ "spoken_as": "That's our model in your search engine.{0.4} Are you really going after Elgoog with it?",
+ "delivery": "to Tasya, eyes still on the TV",
+ "tag": "[INVENTED · Act One fix pass (2026-09-27): it was \"That's our model in there. You're going after Elgoog with it?\". \"In your search engine\" tells a newcomer what GNIB is, and \"Are you really\" puts the question in the words: the audit measured the old take falling, heard as an accusation (\"…with it.\"). On the record the new GNIB ran \"with GPT-4 underneath\" (mid §2; facts #8), so \"our model\" is the co-founder's word; the facts owner confirms it. The question is ours, and gives the real line its trigger (R19). Second pass: \"Wait. You put a chatbot in your search engine? Elgoog owns search.\" had the co-founder asking what he already knew, and retold what sc 8 showed (the naturalness, newcomer-and-insider and facts reads); now he asks about the nerve of it]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "W",
+ "shot_id": "W",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 6.6,
+ "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-9-09.wav",
+ "mp3": null,
+ "duration_s": 5.505,
+ "frames_24": 133,
+ "voiced_span_s": 4.15,
+ "pace": {
+  "words": 15,
+  "wpm": 216.9,
+  "speed": 1.02,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.02,
+   "speed_band": [
+    1.02,
+    1.1
+   ],
+   "articulation_guide_sps": [
+    5.0,
+    5.8
+   ],
+   "turn_wpm_guide": [
+    175,
+    200
+   ],
+   "intent": "to Tasya, eyes still on the TV"
+  },
+  "measured": {
+   "wpm": 216.9,
+   "articulation_sps": 6.13,
+   "syllables": 23,
+   "span_s": 4.15,
+   "pauses_s": [
+    0.4
+   ]
+  },
+  "longest_internal_gap_s": 0.4,
+  "audible_in_s": 0.51,
+  "audible_out_s": 4.66
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.020",
+ "voiceId": "am_puck",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch +1.5 st",
+  "peak -2 dB @250 Hz Q1.0",
+  "peak +2 dB @4000 Hz Q0.9",
+  "comp 3.0:1 @-22 dB (4/80 ms)",
+  "Kokoro speed 1.020 (the plan speed; gerg-mockbran band 1.02-1.10); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'engine': Kokoro 0.17 s -> 0.41 s (intended 0.40; +0.23 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "A"
+  },
+  {
+   "t": 0.625,
+   "f": 15,
+   "shape": "E"
+  },
+  {
+   "t": 0.833,
+   "f": 20,
+   "shape": "M"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "A"
+  },
+  {
+   "t": 1.042,
+   "f": 25,
+   "shape": "E"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "O"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "E"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "O"
+  },
+  {
+   "t": 1.75,
+   "f": 42,
+   "shape": "E"
+  },
+  {
+   "t": 1.875,
+   "f": 45,
+   "shape": "A"
+  },
+  {
+   "t": 2.0,
+   "f": 48,
+   "shape": "E"
+  },
+  {
+   "t": 2.375,
+   "f": 57,
+   "shape": "rest"
+  },
+  {
+   "t": 2.75,
+   "f": 66,
+   "shape": "E"
+  },
+  {
+   "t": 2.875,
+   "f": 69,
+   "shape": "O"
+  },
+  {
+   "t": 3.042,
+   "f": 73,
+   "shape": "A"
+  },
+  {
+   "t": 3.125,
+   "f": 75,
+   "shape": "E"
+  },
+  {
+   "t": 3.333,
+   "f": 80,
+   "shape": "O"
+  },
+  {
+   "t": 3.458,
+   "f": 83,
+   "shape": "E"
+  },
+  {
+   "t": 3.583,
+   "f": 86,
+   "shape": "A"
+  },
+  {
+   "t": 3.667,
+   "f": 88,
+   "shape": "E"
+  },
+  {
+   "t": 3.875,
+   "f": 93,
+   "shape": "A"
+  },
+  {
+   "t": 4.0,
+   "f": 96,
+   "shape": "E"
+  },
+  {
+   "t": 4.125,
+   "f": 99,
+   "shape": "O"
+  },
+  {
+   "t": 4.25,
+   "f": 102,
+   "shape": "E"
+  },
+  {
+   "t": 4.333,
+   "f": 104,
+   "shape": "O"
+  },
+  {
+   "t": 4.417,
+   "f": 106,
+   "shape": "E"
+  },
+  {
+   "t": 4.667,
+   "f": 112,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "That's",
+   "t0": 0.47,
+   "t1": 0.702,
+   "f0": 11,
+   "f1": 17,
+   "ph": "ðˈæts"
+  },
+  {
+   "w": "our",
+   "t0": 0.702,
+   "t1": 0.852,
+   "f0": 17,
+   "f1": 20,
+   "ph": "ˌWəɹ"
+  },
+  {
+   "w": "model",
+   "t0": 0.852,
+   "t1": 1.265,
+   "f0": 20,
+   "f1": 30,
+   "ph": "mˈɑdᵊl"
+  },
+  {
+   "w": "in",
+   "t0": 1.265,
+   "t1": 1.352,
+   "f0": 30,
+   "f1": 32,
+   "ph": "ɪn"
+  },
+  {
+   "w": "your",
+   "t0": 1.352,
+   "t1": 1.528,
+   "f0": 32,
+   "f1": 37,
+   "ph": "jʊɹ"
+  },
+  {
+   "w": "search",
+   "t0": 1.528,
+   "t1": 1.865,
+   "f0": 37,
+   "f1": 45,
+   "ph": "sˈɜɹʧ"
+  },
+  {
+   "w": "engine",
+   "t0": 1.865,
+   "t1": 2.39,
+   "f0": 45,
+   "f1": 57,
+   "ph": "ˈɛnʤən"
+  },
+  {
+   "w": "Are",
+   "t0": 2.715,
+   "t1": 2.84,
+   "f0": 65,
+   "f1": 68,
+   "ph": "ˌɑɹ"
+  },
+  {
+   "w": "you",
+   "t0": 2.84,
+   "t1": 3.003,
+   "f0": 68,
+   "f1": 72,
+   "ph": "ju"
+  },
+  {
+   "w": "really",
+   "t0": 3.003,
+   "t1": 3.29,
+   "f0": 72,
+   "f1": 79,
+   "ph": "ɹˈiᵊli"
+  },
+  {
+   "w": "going",
+   "t0": 3.29,
+   "t1": 3.59,
+   "f0": 79,
+   "f1": 86,
+   "ph": "ɡˈOɪŋ"
+  },
+  {
+   "w": "after",
+   "t0": 3.59,
+   "t1": 3.89,
+   "f0": 86,
+   "f1": 93,
+   "ph": "ˈæftəɹ"
+  },
+  {
+   "w": "Elgoog",
+   "t0": 3.89,
+   "t1": 4.315,
+   "f0": 93,
+   "f1": 104,
+   "ph": "ˈɛlɡuɡ"
+  },
+  {
+   "w": "with",
+   "t0": 4.315,
+   "t1": 4.528,
+   "f0": 104,
+   "f1": 109,
+   "ph": "wɪð"
+  },
+  {
+   "w": "it",
+   "t0": 4.528,
+   "t1": 4.68,
+   "f0": 109,
+   "f1": 112,
+   "ph": "ɪt"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -2.85,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.51,
+  "median_f0_hz": 120.7,
+  "f0_range_st": 9.5,
+  "f0_method": "pYIN (a4lib.analyse)",
+  "final_move_st": -3.3,
+  "asr": "That's our model in your search engine. Are you really going after Elgog with it?",
+  "cer": 0.015,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.249,
+  "align_median_s": 0.047,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.45,
+  "rise_ms": 15.0,
+  "decay_ms": 25.0,
+  "decay_to_60_s": 0.395,
+  "q_lift_st": -9.8
+ },
+ "speaker_label": "GERG",
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 7,
+   "word": "engine",
+   "tts_s": 0.175,
+   "target_s": 0.4,
+   "point_s": 2.04,
+   "joined_speech": false,
+   "dip_db": -67.0,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.415,
+   "opened_s": 0.225
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "618a4f1bc0885a8e",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 4.91,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": true,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 1,
+   "share_s": 1.36,
+   "rechecked_alone": false
+  }
+ }
+}

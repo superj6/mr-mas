@@ -7,18 +7,21 @@
 //     moved       grains through (0 = just flipped, all on top; HGX_GRAINS = run out; HGX_GRAINS - 1 = the last grain)
 //     running     the 1 px thread from the neck, a grain travelling down it one pixel per `beat` frames (script:
 //                 "one pixel per beat")
-//     view        'front' (S4.11, desk level, low) | 'high' (S7.13, the table seen from above: the top cap's face
-//                 shows as an ellipse, the body foreshortened a step; its own drawing, never a squash)
+//     view        'front' (S4.11, desk level, low) | 'high' (S7.13, the table seen from about 30 degrees above: its own
+//                 drawing, HGX_HIGH: both caps' faces as ellipses, the far posts behind the glass, the sand's mound,
+//                 a contact shadow on whatever plate is under it; a4p5 r2 redrew it, see drawHigh)
 //     pose        'upright' | 'side' (the flip's middle drawing: lying on its side, sand slumped low) | 'lift'
 //     hand        Ttemme's hand on the top cap for the flip drawings (his hoodie's plum sleeve)
-//     shatter     frames since the glass broke: shards fly on whole-pixel arcs (12 f), the sand HOLDS the bulbs'
-//                 shape for a beat (15 f), then slumps in three held drawings into a heap on the base
+//     shatter     frames since the glass broke: 0 = the crack; then sixteen fingernail shards (4-7 px) fly out and
+//                 land by frame 9 and stay lying there (a4p5 r2; single flying pixels read as sparkles), the sand
+//                 HOLDS the bulbs' shape for a beat (15 f), then slumps in three held drawings into a heap on the base
 //   hgxFlip(k)    S4.11's flip as three held drawings from k 0: lift (4 f), side (6 f), set down flipped (+1 px bump)
 //   HGX           the box and the anchors (the neck's centre, the base line) for the shot's framing
+//   HGX_HIGH      the 'high' drawing's box (60 x 100, same top-left convention) and its foot on the table
 // Light: the key is the table's cyan LED bar from below-left ('front') or the overhead (warm-neutral, 'high'); no
 // dither on the prop (flat rungs), whole pixels only.
 import {Buf, rect, hash, clamp} from '../px';
-import {PAL} from '../palette';
+import {PAL, stepColor} from '../palette';
 
 export const HGX = {w: 60, h: 98, cap: 8, glassTop: 8, glassH: 82, maxHalf: 21, post: 3, neckY: 49};
 const WOOD = [PAL.D1, PAL.D2, PAL.D3, PAL.D4, PAL.W4];
@@ -26,28 +29,28 @@ const SAND = [PAL.W3, PAL.W4, PAL.W6, PAL.W7, PAL.W8];
 const GLASS = [PAL.N5, PAL.C3, PAL.C5, PAL.C7, PAL.C9];
 
 /** interior half-width of the glass at row j (0 = top): two rounded bulbs meeting at a 1 px neck */
-const half = (j: number, glassH = HGX.glassH) => {
+const half = (j: number, glassH = HGX.glassH, maxHalf = HGX.maxHalf) => {
   const mid = (glassH - 1) / 2;
   const u = Math.abs(j - mid) / mid;
   if (u < 0.04) return 0;
   const s = Math.sin(Math.min(1, (u - 0.04) / 0.86) * Math.PI * 0.6) * (u > 0.92 ? 0.8 : 1);
-  return Math.max(1, Math.round(HGX.maxHalf * s));
+  return Math.max(1, Math.round(maxHalf * s));
 };
 const cellCache = new Map<number, {top: Array<[number, number]>; bot: Array<[number, number]>}>();
-const cells = (glassH: number) => {
-  let v = cellCache.get(glassH);
+const cells = (glassH: number, maxHalf = HGX.maxHalf) => {
+  let v = cellCache.get(glassH * 1000 + maxHalf);
   if (v) return v;
   const mid = Math.floor((glassH - 1) / 2);
   const top: Array<[number, number]> = [], bot: Array<[number, number]> = [];
   for (let j = 0; j < glassH; j++) {
-    const hw = half(j, glassH) - 1;
+    const hw = half(j, glassH, maxHalf) - 1;
     if (hw < 0) continue;
     for (let i = -hw; i <= hw; i++) (j < mid ? top : j > mid + 1 ? bot : null)?.push([i, j]);
   }
   top.sort((a, b) => (b[1] - a[1]) || (Math.abs(a[0]) - Math.abs(b[0])));
   bot.sort((a, b) => (b[1] - Math.abs(b[0]) * 0.5) - (a[1] - Math.abs(a[0]) * 0.5) || Math.abs(a[0]) - Math.abs(b[0]));
   v = {top, bot};
-  cellCache.set(glassH, v);
+  cellCache.set(glassH * 1000 + maxHalf, v);
   return v;
 };
 /** the grains it holds: 72% of the top bulb */
@@ -136,7 +139,139 @@ export const hgxFlip = (k: number): {pose: 'upright' | 'side' | 'lift'; flipped:
   return {pose: 'upright', flipped: true, dy: 0, hand: false};
 };
 
+// ============================================================ 'high' (S7.13), a4p5 r2
+// The prep check read the first 'high' (the front drawing with a 5 px lid ellipse, over full-frame grain) as "an
+// hourglass against a wooden wall, not a table from above", and its shatter as "sparkles around an intact frame". This
+// is its own drawing from about 30 degrees above: both turned caps show their faces as ellipses (lathe rings, the
+// pendant's catch on the far rim), the side bands only on their near arcs, the body foreshortened (60 px of glass), the
+// four posts at the corners of the square frame seen from above (the far two shorter and behind the glass), the sand's
+// mound in the lower bulb, and a contact shadow on the table under the base. It stands on whatever plate is under it.
+// The shatter: sixteen shards the size of fingernails (4-7 px triangles with a lit edge) flung outward on whole-pixel
+// paths and LEFT LYING on the table; the glass outline is gone from the first frame after the crack, so the sand stands
+// alone in the bulbs' shape, then slumps.
+/** the high view's box: (x, y) = top-left of a 60 x 100 box, like 'front'; foot = the base's centre on the table */
+export const HGX_HIGH = {w: 60, h: 100, rx: 27, ry: 12, band: 5, glassH: 60, maxHalf: 16, post: 19, topCy: 12, botCy: 77, foot: [30, 94] as [number, number]};
+const capFace = (b: Buf, cx: number, cy: number, rx: number, ry: number, band: number) => {
+  // the side band on the near arc (a bead's lit catch through its middle, the underside dark)
+  for (let i = -rx; i <= rx; i++) {
+    const e = Math.sqrt(Math.max(0, 1 - (i * i) / (rx * rx)));
+    const yb = Math.round(cy + ry * e);
+    for (let k = 1; k <= band; k++) b.set(cx + i, yb + k, k === band ? WOOD[0] : k === 2 ? (i < rx * 0.3 ? WOOD[3] : WOOD[2]) : i < -rx * 0.55 ? WOOD[2] : WOOD[1]);
+  }
+  // the face: turned rings, the rim, the pendant's catch on the far (back-left) rim
+  for (let j = -ry; j <= ry; j++) for (let i = -rx; i <= rx; i++) {
+    const d = Math.sqrt((i * i) / (rx * rx) + (j * j) / (ry * ry));
+    if (d > 1) continue;
+    const hl = (-i / rx) * 0.45 + (-j / ry) * 0.9;
+    let c = d > 0.93 ? WOOD[1] : d > 0.78 ? (hl > 0.62 ? WOOD[4] : WOOD[3]) : Math.abs(d - 0.55) < 0.06 || Math.abs(d - 0.24) < 0.07 ? WOOD[2] : WOOD[3];
+    if (d <= 0.78 && j > ry * 0.35 && d > 0.3) c = c === WOOD[3] ? WOOD[2] : c; // the near half a rung down (the pendant is behind)
+    b.set(cx + i, cy + j, c);
+  }
+};
+const shadowOn = (b: Buf, cx: number, cy: number, rx: number, ry: number, k: number) => {
+  for (let j = -ry; j <= ry; j++) for (let i = -rx; i <= rx; i++) if ((i * i) / (rx * rx) + (j * j) / (ry * ry) <= 1) b.set(cx + i, cy + j, stepColor(b.get(cx + i, cy + j), -k));
+};
+/** a whole-pixel triangle */
+const tri = (b: Buf, pts: number[], c: number) => {
+  const [x0, y0, x1, y1, x2, y2] = pts;
+  const minX = Math.min(x0, x1, x2), maxX = Math.max(x0, x1, x2), minY = Math.min(y0, y1, y2), maxY = Math.max(y0, y1, y2);
+  const ar = (x1 - x0) * (y2 - y0) - (x2 - x0) * (y1 - y0);
+  if (ar === 0) { b.set(x0, y0, c); b.set(x1, y1, c); b.set(x2, y2, c); return; }
+  for (let Y = minY; Y <= maxY; Y++) for (let X = minX; X <= maxX; X++) {
+    const w0 = (x1 - X) * (y2 - Y) - (x2 - X) * (y1 - Y), w1 = (x2 - X) * (y0 - Y) - (x0 - X) * (y2 - Y), w2 = (x0 - X) * (y1 - Y) - (x1 - X) * (y0 - Y);
+    if ((w0 >= 0 && w1 >= 0 && w2 >= 0) || (w0 <= 0 && w1 <= 0 && w2 <= 0)) b.set(X, Y, c);
+  }
+};
+/** the shards: `n` fingernail-sized pieces from the bulbs' outline, flung out (sh frames since the break), landing by
+ *  frame 9 and left lying; squash = the plan's y scale (1 front, ry/rx for the table seen from above) */
+const shards = (b: Buf, cx: number, gy: number, glassH: number, maxHalf: number, sh: number, squash: number) => {
+  const t = Math.min(sh, 9), ease = t * (1 - t / 18) / 4.5; // 0 .. 1 at landing
+  for (let n = 0; n < 16; n++) {
+    const j = 4 + Math.floor(hash(n, 1, 71) * (glassH - 8)), sd = n % 2 ? 1 : -1;
+    const hw = half(j, glassH, maxHalf);
+    const x0 = cx + sd * hw, y0 = gy + j;
+    const a = (sd > 0 ? 0 : Math.PI) + (hash(n, 2, 71) - 0.5) * 2.2; // outward, spread
+    const dist = 14 + hash(n, 3, 71) * 30;
+    const px = Math.round(x0 + Math.cos(a) * dist * ease), py = Math.round(y0 + Math.sin(a) * dist * squash * ease + (squash < 1 ? (t / 9) * (glassH - j) * 0.35 : 0));
+    const sz = 4 + Math.floor(hash(n, 4, 71) * 4), spin = (Math.floor(sh / 3) + n) % 2;
+    const o = spin ? [0, 0, sz, 1, 1, sz - 1] : [0, 0, sz - 1, sz - 1, -1, sz - 2];
+    tri(b, [px + o[0], py + o[1], px + o[2], py + o[3], px + o[4], py + o[5]], sh < 9 ? GLASS[2] : GLASS[1]);
+    const lit = sh < 9 ? GLASS[4] : GLASS[3];
+    b.set(px + o[0], py + o[1], lit); b.set(px + o[2], py + o[3], sh < 9 ? GLASS[3] : GLASS[2]);
+  }
+};
+const drawHigh = (b: Buf, x: number, y: number, o: HourglassXLOpts) => {
+  const H = HGX_HIGH, cx = x + Math.floor(H.w / 2);
+  const topCy = y + H.topCy, botCy = y + H.botCy, gy = topCy + H.band, glassH = H.glassH, mh = H.maxHalf;
+  const sh = o.shatter;
+  // the contact shadow on the table (the pendant is above and behind: it falls toward us)
+  shadowOn(b, cx + 3, botCy + H.ry + 3, H.rx + 5, H.ry + 1, 1);
+  shadowOn(b, cx + 1, botCy + H.ry + 1, H.rx - 2, H.ry - 3, 1);
+  // the base: its face and near band
+  capFace(b, cx, botCy, H.rx, H.ry, H.band);
+  // the posts: the far two (behind the glass), from under the lid to the base's face
+  const post = (px: number, y0: number, y1: number, front: boolean) => {
+    for (let j = y0; j <= y1; j++) {
+      const bead = (j - y0) % 10 === 5;
+      rect(px - 1 - (bead ? 1 : 0), j, 3 + (bead ? 2 : 0), 1, b.ink(front ? (bead ? WOOD[3] : WOOD[2]) : WOOD[1]));
+      b.set(px - 1, j, front ? WOOD[3] : WOOD[2]);
+    }
+    rect(px - 2, y1 + 1, 5, 1, b.ink(WOOD[0])); // its foot's shadow on the base
+  };
+  const PY = Math.round(H.ry * 0.7);
+  for (const sd of [-1, 1]) post(cx + sd * H.post, topCy - PY + H.band, botCy - PY, false);
+  // the sand (Nc grains scaled from the front drawing's count, so HGX_GRAINS - 1 is still "the last grain")
+  const C = cells(glassH, mh);
+  const Nc = Math.min(C.top.length, C.bot.length);
+  const m = o.moved ?? 0;
+  const moved = m >= HGX_GRAINS ? Nc : m >= HGX_GRAINS - 1 ? Nc - 1 : clamp(Math.round((m * Nc) / HGX_GRAINS), 0, Nc - 1);
+  const topN = Nc - moved;
+  const slump = sh === undefined ? 0 : sh < 15 ? 0 : Math.min(3, Math.floor((sh - 15) / 6) + 1);
+  if (slump === 0) {
+    for (let k = 0; k < topN; k++) { const [i, j] = C.top[k]; b.set(cx + i, gy + j, sandAt(i, j, k, topN, 10)); }
+    for (let k = 0; k < moved; k++) { const [i, j] = C.bot[k]; b.set(cx + i, gy + j, sandAt(i, j, k, moved, 10)); }
+  } else {
+    // the heap spreads over the base's face as an ellipse, three held drawings, the same grains each time
+    const s = slump === 1 ? 0.55 : slump === 2 ? 0.8 : 1;
+    const rx = Math.round(10 + 12 * s), ry = Math.round(5 + 5 * s), hy = Math.round(22 - 14 * s);
+    for (let j = -ry; j <= ry; j++) for (let i = -rx; i <= rx; i++) if ((i * i) / (rx * rx) + (j * j) / (ry * ry) <= 1) b.set(cx + i, botCy + j, j < -ry * 0.3 ? SAND[3] : i > rx * 0.4 ? SAND[1] : SAND[2]);
+    for (let j = 0; j < hy; j++) { const w = Math.round(((hy - j) / hy) * rx * 0.8); for (let i = -w; i <= w; i++) b.set(cx + i, botCy - j, j > hy - 3 ? SAND[3] : i > w * 0.4 ? SAND[1] : SAND[2]); }
+  }
+  const mid = Math.floor((glassH - 1) / 2);
+  if (o.running && moved < Nc && topN > 0 && sh === undefined) {
+    const botTop = moved > 0 ? C.bot[Math.max(0, moved - 1)][1] : glassH - 1;
+    for (let j = mid; j < botTop; j++) b.set(cx, gy + j, SAND[2]);
+    const beat = o.beat ?? 15;
+    b.set(cx, gy + mid + (Math.floor((o.f ?? 0) / beat) % Math.max(1, botTop - mid)), SAND[4]);
+  }
+  // the glass
+  if (sh === undefined || sh === 0) {
+    for (let j = 0; j < glassH; j++) {
+      const hw = half(j, glassH, mh);
+      b.set(cx - hw, gy + j, GLASS[2]); b.set(cx + hw, gy + j, GLASS[0]);
+      if (hw >= 7 && (j < mid - 4 || j > mid + 4) && j > 3 && j < glassH - 3) { b.set(cx - hw + 2, gy + j, j % 5 === 0 ? GLASS[4] : GLASS[3]); if (hw >= 11 && j % 2 === 0) b.set(cx + hw - 3, gy + j, GLASS[1]); }
+    }
+    rect(cx - 2, gy + mid - 1, 5, 3, b.ink(GLASS[1])); b.set(cx - 2, gy + mid - 1, GLASS[3]);
+    // the last grain, hanging in the neck's mouth under the collar (drawn after the collar, so it is never covered)
+    if (moved === Nc - 1 && sh === undefined) { b.set(cx, gy + mid + 2, SAND[4]); b.set(cx, gy + mid + 3, SAND[4]); b.set(cx + 1, gy + mid + 2, SAND[3]); }
+    // the pendant caught in each bulb, a 2 px catch high on the far side
+    for (const jj of [8, mid + 8]) { const hw = half(jj, glassH, mh); b.set(cx - hw + 4, gy + jj, GLASS[4]); b.set(cx - hw + 5, gy + jj, GLASS[4]); }
+    if (sh === 0) {
+      // the crack: hairlines running from one point on each bulb (the v4 hairlines, drawn through)
+      const cr: Array<[number, number, number, number]> = [[-6, 10, 5, 4], [-6, 10, -3, 18], [-6, 10, 4, 16], [5, mid + 12, -4, mid + 6], [5, mid + 12, 8, mid + 20], [5, mid + 12, -2, mid + 22]];
+      for (const [x0, y0, x1, y1] of cr) { const n = Math.max(Math.abs(x1 - x0), Math.abs(y1 - y0)); for (let k = 0; k <= n; k++) b.set(Math.round(cx + x0 + ((x1 - x0) * k) / n), Math.round(gy + y0 + ((y1 - y0) * k) / n), GLASS[4]); }
+    }
+  }
+  // the near posts (in front of the glass), from under the lid to the base's near face
+  for (const sd of [-1, 1]) post(cx + sd * H.post, topCy + PY + H.band, botCy + PY, true);
+  // the lid, nearest the camera: its face and its near band
+  capFace(b, cx, topCy, H.rx, H.ry, H.band);
+  if (sh !== undefined && sh > 0) shards(b, cx, gy, glassH, mh, sh, H.ry / H.rx + 0.25);
+  if (o.hand) hand(b, x, y);
+};
+
 export const drawHourglassXL = (b: Buf, x: number, y: number, o: HourglassXLOpts = {}) => {
+  if (o.view === 'high' && (o.pose ?? 'upright') === 'upright') { drawHigh(b, x, y, o); return; }
   if (o.pose === 'side') { side(b, x, y); if (o.hand) hand(b, x + 20, y + Math.floor((HGX.h - HGX.w) / 2) + 2); return; }
   const high = o.view === 'high';
   // 'high': the body is foreshortened by redrawing the bulbs on a shorter column (its own drawing, not a squash)
@@ -187,7 +322,6 @@ export const drawHourglassXL = (b: Buf, x: number, y: number, o: HourglassXLOpts
     const gj = mid + (Math.floor((o.f ?? 0) / beat) % Math.max(1, botTop - mid));
     b.set(cx, gy + gj, SAND[4]);
   }
-  if (moved === Nc - 1 && sh === undefined) b.set(cx, gy + mid, SAND[4]); // the last grain, on the neck
   // the glass: its outline (lit left by the cyan bar, dark right), two specular streaks, the neck's collar
   if (sh === undefined) {
     for (let j = 0; j < glassH; j++) {
@@ -199,6 +333,11 @@ export const drawHourglassXL = (b: Buf, x: number, y: number, o: HourglassXLOpts
       }
     }
     rect(cx - 2, gy + mid - 1, 5, 3, b.ink(GLASS[1])); b.set(cx - 2, gy + mid - 1, GLASS[3]);
+    // the last grain in the neck's mouth, after the collar (a4p5 r2: drawn before it, the collar covered it)
+    if (moved === Nc - 1) { b.set(cx, gy + mid + 2, SAND[4]); b.set(cx, gy + mid + 3, SAND[4]); b.set(cx + 1, gy + mid + 2, SAND[3]); }
+  } else if (sh > 0) {
+    // a4p5 r2: the same fingernail shards as the high view (single flying pixels read as sparkles)
+    shards(b, cx, gy, glassH, HGX.maxHalf, sh, 1);
   } else if (sh < 12) {
     // the shards: every outline pixel on its own whole-pixel arc; frame 0 = the cracks
     for (let j = 0; j < glassH; j++) for (const sd of [-1, 1]) {

@@ -1,0 +1,380 @@
+{
+ "id": "e1-a2-13-09",
+ "scene": "13",
+ "speaker": "RADNUS",
+ "speaker_slug": "radnus",
+ "text": "Congratulations on your launch, Mas. Really. Everyone's using it.",
+ "spoken_as": "Congratulations on your launch, [Mas](/mˈɑs/).{0.2} Really.{0.25} Everyone's using it.",
+ "delivery": "quick and sincere, a little apologetic, as if the launch were his fault",
+ "tag": "[INVENTED · dialogue pass 5: his reads are quick and apologetic, Tasya's unhurried, so the two calm \"we\" voices differ by ear (the naturalness read)]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "2S",
+ "shot_id": "2S",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 4.2,
+ "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-09.wav",
+ "mp3": null,
+ "duration_s": 5.015,
+ "frames_24": 121,
+ "voiced_span_s": 4.02,
+ "pace": {
+  "words": 9,
+  "wpm": 134.3,
+  "speed": 0.98,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.98,
+   "speed_band": [
+    0.91,
+    0.99
+   ],
+   "articulation_guide_sps": [
+    3.8,
+    4.4
+   ],
+   "turn_wpm_guide": [
+    130,
+    150
+   ],
+   "intent": "quick and sincere, a little apologetic, as if the launch were his fault"
+  },
+  "measured": {
+   "wpm": 134.3,
+   "articulation_sps": 5.01,
+   "syllables": 18,
+   "span_s": 4.02,
+   "pauses_s": [
+    0.19,
+    0.24
+   ]
+  },
+  "longest_internal_gap_s": 0.24,
+  "audible_in_s": 0.51,
+  "audible_out_s": 4.53
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_echo*0.60+am_fenrir*0.40 (Kokoro-82M stock) · d-echo-fenrir-courteous-up2 · speed 0.980",
+ "voiceId": "am_echo*0.60+am_fenrir*0.40",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch +2 st",
+  "low shelf +1.5 dB @180 Hz",
+  "peak -1.5 dB @350 Hz Q1.0",
+  "peak +0.5 dB @3000 Hz Q0.9",
+  "high shelf -1 dB @7000 Hz",
+  "comp 2.0:1 @-24 dB (10/140 ms)",
+  "Kokoro speed 0.980 (the plan speed; radnus band 0.91-0.99); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'Mas': Kokoro 0.14 s -> 0.20 s (intended 0.20; +0.07 s of room tone at the quietest 5 ms)",
+  "pause after 'Really': Kokoro 0.16 s -> 0.26 s (intended 0.25; +0.09 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "E"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "A"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "E"
+  },
+  {
+   "t": 1.042,
+   "f": 25,
+   "shape": "A"
+  },
+  {
+   "t": 1.167,
+   "f": 28,
+   "shape": "E"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "O"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "E"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "O"
+  },
+  {
+   "t": 1.667,
+   "f": 40,
+   "shape": "E"
+  },
+  {
+   "t": 1.75,
+   "f": 42,
+   "shape": "O"
+  },
+  {
+   "t": 1.917,
+   "f": 46,
+   "shape": "E"
+  },
+  {
+   "t": 2.125,
+   "f": 51,
+   "shape": "M"
+  },
+  {
+   "t": 2.25,
+   "f": 54,
+   "shape": "A"
+  },
+  {
+   "t": 2.5,
+   "f": 60,
+   "shape": "E"
+  },
+  {
+   "t": 2.625,
+   "f": 63,
+   "shape": "rest"
+  },
+  {
+   "t": 2.833,
+   "f": 68,
+   "shape": "A"
+  },
+  {
+   "t": 2.958,
+   "f": 71,
+   "shape": "E"
+  },
+  {
+   "t": 3.208,
+   "f": 77,
+   "shape": "rest"
+  },
+  {
+   "t": 3.458,
+   "f": 83,
+   "shape": "A"
+  },
+  {
+   "t": 3.542,
+   "f": 85,
+   "shape": "E"
+  },
+  {
+   "t": 3.708,
+   "f": 89,
+   "shape": "O"
+  },
+  {
+   "t": 3.792,
+   "f": 91,
+   "shape": "E"
+  },
+  {
+   "t": 4.0,
+   "f": 96,
+   "shape": "O"
+  },
+  {
+   "t": 4.125,
+   "f": 99,
+   "shape": "E"
+  },
+  {
+   "t": 4.542,
+   "f": 109,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Congratulations",
+   "t0": 0.48,
+   "t1": 1.418,
+   "f0": 12,
+   "f1": 34,
+   "ph": "kənɡɹˌæʧəlˈAʃənz"
+  },
+  {
+   "w": "on",
+   "t0": 1.418,
+   "t1": 1.542,
+   "f0": 34,
+   "f1": 37,
+   "ph": "ˌɔn"
+  },
+  {
+   "w": "your",
+   "t0": 1.542,
+   "t1": 1.68,
+   "f0": 37,
+   "f1": 40,
+   "ph": "jʊɹ"
+  },
+  {
+   "w": "launch",
+   "t0": 1.68,
+   "t1": 2.055,
+   "f0": 40,
+   "f1": 49,
+   "ph": "lˈɔnʧ"
+  },
+  {
+   "w": "Mas",
+   "t0": 2.13,
+   "t1": 2.605,
+   "f0": 51,
+   "f1": 63,
+   "ph": "mˈɑs"
+  },
+  {
+   "w": "Really",
+   "t0": 2.782,
+   "t1": 3.22,
+   "f0": 67,
+   "f1": 77,
+   "ph": "ɹˈiᵊli"
+  },
+  {
+   "w": "Everyone's",
+   "t0": 3.422,
+   "t1": 3.96,
+   "f0": 82,
+   "f1": 95,
+   "ph": "ˈɛvɹiwənz"
+  },
+  {
+   "w": "using",
+   "t0": 3.96,
+   "t1": 4.335,
+   "f0": 95,
+   "f1": 104,
+   "ph": "jˈuzɪŋ"
+  },
+  {
+   "w": "it",
+   "t0": 4.335,
+   "t1": 4.55,
+   "f0": 104,
+   "f1": 109,
+   "ph": "ɪt"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.54,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.51,
+  "median_f0_hz": 126.3,
+  "f0_range_st": 12.1,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Congratulations on your launch, Moss. Really, everyone's using it.",
+  "cer": 0.038,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.246,
+  "align_median_s": 0.095,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.39,
+  "rise_ms": 55.0,
+  "decay_ms": 265.0,
+  "decay_to_60_s": 0.1
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 5,
+   "word": "Mas",
+   "tts_s": 0.135,
+   "target_s": 0.2,
+   "point_s": 2.215,
+   "joined_speech": false,
+   "dip_db": -70.3,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.2,
+   "opened_s": 0.065
+  },
+  {
+   "after_word": 6,
+   "word": "Really",
+   "tts_s": 0.16,
+   "target_s": 0.25,
+   "point_s": 2.85,
+   "joined_speech": false,
+   "dip_db": -71.9,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.26,
+   "opened_s": 0.09
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "360e94de6574f8ea",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 84.99,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 4
+  },
+  "asr": {
+   "packed_with": 4,
+   "share_s": 1.42,
+   "rechecked_alone": false
+  }
+ }
+}

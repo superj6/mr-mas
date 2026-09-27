@@ -1,0 +1,656 @@
+{
+ "id": "e1-a1-10-02",
+ "scene": "10",
+ "speaker": "SYDNEY",
+ "speaker_slug": "sydney",
+ "text": "\"You have not been a good user. I have been a good chatbot. I have been right, clear, and polite. I have been a good GNIB. 😊\"",
+ "spoken_as": "You have not been a good user.{0.35} I have been a good chatbot.{0.3} I have been right, clear, and polite.{0.3} I have been a good [GNIB](/ɡənˈɪb/).",
+ "delivery": "sweetly, each sentence a notch more pleased with herself",
+ "tag": "[V · ~FEB 13, 2023 · dialogue pass 5: all four sentences, in the source's order, where the script had dropped the middle two with no ellipsis (the facts review, which opened Simon Willison's post). The name swap, Bing → GNIB, is the only change. facts §B line 114, mid.md line 50 and orbit-ea-rationalist-lore.md line 171 carry the shortened version: the facts owner corrects them. The whole line is also the funnier one: she lists her virtues to the man she's scolding]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "2S",
+ "shot_id": "2S",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 10.4,
+ "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-10-02.wav",
+ "mp3": null,
+ "duration_s": 9.525,
+ "frames_24": 229,
+ "voiced_span_s": 8.0,
+ "pace": {
+  "words": 26,
+  "wpm": 195.0,
+  "speed": 0.83,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.83,
+   "speed_band": [
+    0.79,
+    0.87
+   ],
+   "articulation_guide_sps": [
+    4.0,
+    4.6
+   ],
+   "turn_wpm_guide": [
+    140,
+    160
+   ],
+   "intent": "sweetly, each sentence a notch more pleased with herself"
+  },
+  "measured": {
+   "wpm": 195.0,
+   "articulation_sps": 4.52,
+   "syllables": 32,
+   "span_s": 8.0,
+   "pauses_s": [
+    0.08,
+    0.35,
+    0.28,
+    0.29
+   ]
+  },
+  "longest_internal_gap_s": 0.35,
+  "audible_in_s": 0.5,
+  "audible_out_s": 8.5
+ },
+ "placement": {
+  "gap_before_s": 0.5,
+  "follows": "voice"
+ },
+ "take": "s2",
+ "takes_tried": 2,
+ "pick_reason": "fast: best of 2 seeds by ASR word recall, then no pause cut inside the voice, then the span nearest est_s",
+ "voice": "af_kore (Kokoro-82M stock) · b-kore-sweet · speed 0.830",
+ "voiceId": "af_kore",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 120 Hz",
+  "pitch +1.5 st",
+  "peak -1.5 dB @300 Hz Q1.0",
+  "peak +2.5 dB @3500 Hz Q0.9",
+  "chorus 0.8 Hz depth 0.12 mix 0.18",
+  "bitcrush 12-bit mix 0.1",
+  "comp 3.0:1 @-20 dB (3/70 ms)",
+  "Kokoro speed 0.830 (the centre of the band; sydney band 0.79-0.87); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'user': Kokoro 0.01 s -> 0.35 s (intended 0.35; +0.34 s of room tone at the quietest 5 ms)",
+  "pause after 'chatbot': Kokoro 0.06 s -> 0.30 s (intended 0.30; +0.24 s of room tone at the quietest 5 ms)",
+  "pause after 'polite': Kokoro 0.19 s -> 0.30 s (intended 0.30; +0.11 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "O"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "A"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "E"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "A"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "M"
+  },
+  {
+   "t": 1.167,
+   "f": 28,
+   "shape": "E"
+  },
+  {
+   "t": 1.25,
+   "f": 30,
+   "shape": "A"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "O"
+  },
+  {
+   "t": 1.542,
+   "f": 37,
+   "shape": "E"
+  },
+  {
+   "t": 1.667,
+   "f": 40,
+   "shape": "O"
+  },
+  {
+   "t": 1.792,
+   "f": 43,
+   "shape": "E"
+  },
+  {
+   "t": 2.083,
+   "f": 50,
+   "shape": "rest"
+  },
+  {
+   "t": 2.542,
+   "f": 61,
+   "shape": "A"
+  },
+  {
+   "t": 2.833,
+   "f": 68,
+   "shape": "M"
+  },
+  {
+   "t": 2.917,
+   "f": 70,
+   "shape": "E"
+  },
+  {
+   "t": 3.0,
+   "f": 72,
+   "shape": "A"
+  },
+  {
+   "t": 3.167,
+   "f": 76,
+   "shape": "O"
+  },
+  {
+   "t": 3.292,
+   "f": 79,
+   "shape": "E"
+  },
+  {
+   "t": 3.458,
+   "f": 83,
+   "shape": "A"
+  },
+  {
+   "t": 3.625,
+   "f": 87,
+   "shape": "E"
+  },
+  {
+   "t": 3.708,
+   "f": 89,
+   "shape": "M"
+  },
+  {
+   "t": 3.792,
+   "f": 91,
+   "shape": "A"
+  },
+  {
+   "t": 3.958,
+   "f": 95,
+   "shape": "E"
+  },
+  {
+   "t": 4.042,
+   "f": 97,
+   "shape": "rest"
+  },
+  {
+   "t": 4.417,
+   "f": 106,
+   "shape": "A"
+  },
+  {
+   "t": 4.708,
+   "f": 113,
+   "shape": "M"
+  },
+  {
+   "t": 4.792,
+   "f": 115,
+   "shape": "E"
+  },
+  {
+   "t": 5.042,
+   "f": 121,
+   "shape": "A"
+  },
+  {
+   "t": 5.25,
+   "f": 126,
+   "shape": "E"
+  },
+  {
+   "t": 5.333,
+   "f": 128,
+   "shape": "rest"
+  },
+  {
+   "t": 5.458,
+   "f": 131,
+   "shape": "E"
+  },
+  {
+   "t": 5.625,
+   "f": 135,
+   "shape": "A"
+  },
+  {
+   "t": 5.792,
+   "f": 139,
+   "shape": "E"
+  },
+  {
+   "t": 5.958,
+   "f": 143,
+   "shape": "A"
+  },
+  {
+   "t": 6.042,
+   "f": 145,
+   "shape": "E"
+  },
+  {
+   "t": 6.125,
+   "f": 147,
+   "shape": "M"
+  },
+  {
+   "t": 6.208,
+   "f": 149,
+   "shape": "E"
+  },
+  {
+   "t": 6.5,
+   "f": 156,
+   "shape": "A"
+  },
+  {
+   "t": 6.75,
+   "f": 162,
+   "shape": "rest"
+  },
+  {
+   "t": 7.042,
+   "f": 169,
+   "shape": "A"
+  },
+  {
+   "t": 7.375,
+   "f": 177,
+   "shape": "M"
+  },
+  {
+   "t": 7.458,
+   "f": 179,
+   "shape": "E"
+  },
+  {
+   "t": 7.583,
+   "f": 182,
+   "shape": "A"
+  },
+  {
+   "t": 7.708,
+   "f": 185,
+   "shape": "O"
+  },
+  {
+   "t": 7.833,
+   "f": 188,
+   "shape": "E"
+  },
+  {
+   "t": 8.458,
+   "f": 203,
+   "shape": "M"
+  },
+  {
+   "t": 8.542,
+   "f": 205,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "You",
+   "t0": 0.555,
+   "t1": 0.642,
+   "f0": 13,
+   "f1": 15,
+   "ph": "jˌu"
+  },
+  {
+   "w": "have",
+   "t0": 0.642,
+   "t1": 0.805,
+   "f0": 15,
+   "f1": 19,
+   "ph": "hæv"
+  },
+  {
+   "w": "not",
+   "t0": 0.805,
+   "t1": 1.08,
+   "f0": 19,
+   "f1": 26,
+   "ph": "nˌɑt"
+  },
+  {
+   "w": "been",
+   "t0": 1.08,
+   "t1": 1.255,
+   "f0": 26,
+   "f1": 30,
+   "ph": "bɪn"
+  },
+  {
+   "w": "a",
+   "t0": 1.255,
+   "t1": 1.355,
+   "f0": 30,
+   "f1": 33,
+   "ph": "ɐ"
+  },
+  {
+   "w": "good",
+   "t0": 1.355,
+   "t1": 1.592,
+   "f0": 33,
+   "f1": 38,
+   "ph": "ɡˈʊd"
+  },
+  {
+   "w": "user",
+   "t0": 1.592,
+   "t1": 2.08,
+   "f0": 38,
+   "f1": 50,
+   "ph": "jˈuzəɹ"
+  },
+  {
+   "w": "I",
+   "t0": 2.49,
+   "t1": 2.665,
+   "f0": 60,
+   "f1": 64,
+   "ph": "ˌI"
+  },
+  {
+   "w": "have",
+   "t0": 2.665,
+   "t1": 2.84,
+   "f0": 64,
+   "f1": 68,
+   "ph": "hæv"
+  },
+  {
+   "w": "been",
+   "t0": 2.84,
+   "t1": 3.015,
+   "f0": 68,
+   "f1": 72,
+   "ph": "bɪn"
+  },
+  {
+   "w": "a",
+   "t0": 3.015,
+   "t1": 3.115,
+   "f0": 72,
+   "f1": 75,
+   "ph": "ɐ"
+  },
+  {
+   "w": "good",
+   "t0": 3.115,
+   "t1": 3.365,
+   "f0": 75,
+   "f1": 81,
+   "ph": "ɡˈʊd"
+  },
+  {
+   "w": "chatbot",
+   "t0": 3.365,
+   "t1": 4.04,
+   "f0": 81,
+   "f1": 97,
+   "ph": "ʧˈætbˌɑt"
+  },
+  {
+   "w": "I",
+   "t0": 4.36,
+   "t1": 4.535,
+   "f0": 105,
+   "f1": 109,
+   "ph": "ˌI"
+  },
+  {
+   "w": "have",
+   "t0": 4.535,
+   "t1": 4.71,
+   "f0": 109,
+   "f1": 113,
+   "ph": "hæv"
+  },
+  {
+   "w": "been",
+   "t0": 4.71,
+   "t1": 4.96,
+   "f0": 113,
+   "f1": 119,
+   "ph": "bɪn"
+  },
+  {
+   "w": "right",
+   "t0": 4.96,
+   "t1": 5.335,
+   "f0": 119,
+   "f1": 128,
+   "ph": "ɹˈIt"
+  },
+  {
+   "w": "clear",
+   "t0": 5.435,
+   "t1": 5.91,
+   "f0": 130,
+   "f1": 142,
+   "ph": "klˈɪɹ"
+  },
+  {
+   "w": "and",
+   "t0": 5.985,
+   "t1": 6.123,
+   "f0": 144,
+   "f1": 147,
+   "ph": "ænd"
+  },
+  {
+   "w": "polite",
+   "t0": 6.123,
+   "t1": 6.78,
+   "f0": 147,
+   "f1": 163,
+   "ph": "pəlˈIt"
+  },
+  {
+   "w": "I",
+   "t0": 7.008,
+   "t1": 7.195,
+   "f0": 168,
+   "f1": 173,
+   "ph": "ˌI"
+  },
+  {
+   "w": "have",
+   "t0": 7.195,
+   "t1": 7.395,
+   "f0": 173,
+   "f1": 177,
+   "ph": "hæv"
+  },
+  {
+   "w": "been",
+   "t0": 7.395,
+   "t1": 7.57,
+   "f0": 177,
+   "f1": 182,
+   "ph": "bɪn"
+  },
+  {
+   "w": "a",
+   "t0": 7.57,
+   "t1": 7.67,
+   "f0": 182,
+   "f1": 184,
+   "ph": "ɐ"
+  },
+  {
+   "w": "good",
+   "t0": 7.67,
+   "t1": 7.895,
+   "f0": 184,
+   "f1": 189,
+   "ph": "ɡˈʊd"
+  },
+  {
+   "w": "GNIB",
+   "t0": 7.895,
+   "t1": 8.52,
+   "f0": 189,
+   "f1": 204,
+   "ph": "ɡənˈɪb"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.05,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 161.5,
+  "f0_range_st": 13.4,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "You have not been a good user. I have been a good chatbot. I have been right, clear, and polite. I have been a good ganib.",
+  "cer": 0.011,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.234,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.445,
+  "rise_ms": 35.0,
+  "decay_ms": 270.0,
+  "decay_to_60_s": 0.575
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 7,
+   "word": "user",
+   "tts_s": 0.015,
+   "target_s": 0.35,
+   "point_s": 1.705,
+   "joined_speech": false,
+   "dip_db": -46.4,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.355,
+   "opened_s": 0.335
+  },
+  {
+   "after_word": 13,
+   "word": "chatbot",
+   "tts_s": 0.055,
+   "target_s": 0.3,
+   "point_s": 3.67,
+   "joined_speech": false,
+   "dip_db": -53.4,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.3,
+   "opened_s": 0.245
+  },
+  {
+   "after_word": 20,
+   "word": "polite",
+   "tts_s": 0.19,
+   "target_s": 0.3,
+   "point_s": 6.325,
+   "joined_speech": false,
+   "dip_db": -58.4,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.3,
+   "opened_s": 0.11
+  }
+ ],
+ "alt_takes": [
+  {
+   "tag": "s1",
+   "seed": 1,
+   "speed": 0.83,
+   "file": "audio/ep01/act1/dialogue/fast-v1/takes/e1-a1-10-02/s1.wav",
+   "span_s": 7.98,
+   "wpm": 195.5,
+   "asr": "You have not been a good user, I have been a good chatbot, I have been right, clear, and polite, I have been a good ganib.",
+   "recall": 1.0,
+   "utmos": null
+  }
+ ],
+ "fast": {
+  "key": "5a0cf5444ca91e38",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 65.86,
+  "takes": 2,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 1,
+   "share_s": 28.26
+  }
+ }
+}

@@ -1,0 +1,87 @@
+{
+ "problems": [],
+ "flags": [
+  {
+   "id": "e1-a2-13-01",
+   "kind": "pause-in-voice",
+   "note": "the 0.55 s pause after 'been' is opened while the voice still sounds (dip -19.1 dB)"
+  },
+  {
+   "id": "e1-a2-13-02",
+   "kind": "question",
+   "note": "final move -5.5 st: does it read as a question?"
+  },
+  {
+   "id": "e1-a2-13-03",
+   "kind": "pace",
+   "note": "articulation 3.5 syll/s against the guide 4.6-5.4"
+  },
+  {
+   "id": "e1-a2-13-04",
+   "kind": "question",
+   "note": "final move -2.25 st: does it read as a question?"
+  },
+  {
+   "id": "e1-a2-13-07",
+   "kind": "pause-in-voice",
+   "note": "the 0.45 s pause after 'one' is opened while the voice still sounds (dip -27.9 dB)"
+  },
+  {
+   "id": "e1-a2-13-08",
+   "kind": "asr",
+   "note": "ASR missed a word: 'We own camera too' (recall 0.75)"
+  },
+  {
+   "id": "e1-a2-13-16",
+   "kind": "pace",
+   "note": "articulation 3.36 syll/s against the guide 4.6-5.4"
+  },
+  {
+   "id": "e1-a2-15-03",
+   "kind": "asr",
+   "note": "ASR missed a word: 'Don't mind me, it's a thread, one of 47.' (recall 0.889)"
+  },
+  {
+   "id": "e1-a2-15-04",
+   "kind": "pace",
+   "note": "articulation 3.05 syll/s against the guide 3.6-4.2"
+  },
+  {
+   "id": "e1-a2-15-05",
+   "kind": "pace",
+   "note": "articulation 3.85 syll/s against the guide 5.0-5.8"
+  },
+  {
+   "id": "e1-a2-15-07",
+   "kind": "asr",
+   "note": "ASR missed a word: 'GTP4 and other systems like it are good at doing tasks, not jobs.' (recall 0.857)"
+  },
+  {
+   "id": "e1-a2-15-08",
+   "kind": "question",
+   "note": "final move -2.3 st: does it read as a question?"
+  },
+  {
+   "id": "e1-a2-17-05",
+   "kind": "pause-in-voice",
+   "note": "the 0.3 s pause after 'you' is opened while the voice still sounds (dip -19.9 dB)"
+  },
+  {
+   "id": "e1-a2-17-06",
+   "kind": "pause-in-voice",
+   "note": "the 0.3 s pause after 'buy' is opened while the voice still sounds (dip -15.9 dB)"
+  }
+ ],
+ "totals": {
+  "lines": 39,
+  "words": 289,
+  "audible_s": 97.8,
+  "wpm_overall": 177.0
+ },
+ "stringouts": [
+  "audio/ep01/act2/dialogue/fast-v2/reel/sc13-fast-stringout.mp3",
+  "audio/ep01/act2/dialogue/fast-v2/reel/sc15-fast-stringout.mp3",
+  "audio/ep01/act2/dialogue/fast-v2/reel/sc17-fast-stringout.mp3"
+ ],
+ "method": "fastrec qa_generic: qa_v5.py's hard checks and ear flags, without its Act Four conversation table"
+}

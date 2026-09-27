@@ -112,8 +112,11 @@ export const UNPACK_STAFF: Array<{x: number; foot: number; seed: number; shirt: 
   {x: 356, foot: 152, seed: 3, shirt: 2, hold: 'papers', behind: false},
   {x: 408, foot: 150, seed: 4, shirt: 4, hold: 'none', behind: false},
   {x: 70, foot: 190, seed: 5, shirt: 5, hold: 'plant', behind: false},
-  {x: 176, foot: 197, seed: 6, shirt: 0, hold: 'none', behind: false},
-  {x: 250, foot: 199, seed: 7, shirt: 1, hold: 'mug', behind: false},
+  // a4p5 r2: the front row opened in front of his desk (the stills check found Mas "only on a second look": the
+  // staffer at x 250 stood tall and bright a few pixels left of him). Now nobody in the front row stands within
+  // ~75 px of him, so the eye runs down the others' looks to the one dark, lit figure at the end desk
+  {x: 150, foot: 197, seed: 6, shirt: 0, hold: 'none', behind: false},
+  {x: 216, foot: 199, seed: 7, shirt: 1, hold: 'mug', behind: false},
   {x: 430, foot: 193, seed: 8, shirt: 3, hold: 'none', behind: false},
 ];
 /** a coat draped over a chair back or a desk corner: a folded slab with its collar */

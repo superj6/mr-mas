@@ -1,0 +1,257 @@
+{
+ "id": "e1-a3-19-01",
+ "scene": "19",
+ "speaker": "REMUHCS",
+ "speaker_slug": "remuhcs",
+ "text": "\"Every single person raised their hand.\"",
+ "spoken_as": "Every single person raised their hand.",
+ "delivery": "O.S., on the monitor",
+ "tag": "[V · SEP 13, 2023 · dialogue pass 5: the hands used to be up before the line, so the picture gave the real line away (the insider read). Now the plate asks, the room waits with its hands down, and the hands go up on his words, from the same drawings. LOCK OPTION: sw-US quotes his question as \"Does the government need to play a role in regulating AI?\". If the facts owner confirms those as his spoken words, he says the question first, the line follows, and the plate goes back to his name alone]",
+ "mode": "call",
+ "voiced_in_cut": true,
+ "on_camera": "monitor",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "2S·SCR",
+ "shot_id": "2S·SCR",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": "monitor",
+ "room": null,
+ "est_s": 2.7,
+ "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-19-01.wav",
+ "mp3": null,
+ "duration_s": 3.135,
+ "frames_24": 76,
+ "voiced_span_s": 2.17,
+ "pace": {
+  "words": 6,
+  "wpm": 165.9,
+  "speed": 0.87,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.87,
+   "speed_band": [
+    0.83,
+    0.91
+   ],
+   "articulation_guide_sps": [
+    4.2,
+    4.8
+   ],
+   "turn_wpm_guide": [
+    145,
+    165
+   ],
+   "intent": "O.S., on the monitor"
+  },
+  "measured": {
+   "wpm": 165.9,
+   "articulation_sps": 4.61,
+   "syllables": 10,
+   "span_s": 2.17,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.5,
+  "audible_out_s": 2.67
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_adam*0.50+am_puck*0.50 (Kokoro-82M stock) · c-adam-puck-forum · speed 0.870",
+ "voiceId": "am_adam*0.50+am_puck*0.50",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 75 Hz",
+  "pitch 0",
+  "low shelf +1 dB @150 Hz",
+  "peak -1 dB @400 Hz Q1.0",
+  "peak +1 dB @2500 Hz Q0.9",
+  "comp 2.5:1 @-22 dB (6/110 ms)",
+  "then the monitor chain: HPF 200 Hz; LPF 7000 Hz; peak +1.5 dB @1800 Hz Q1.0; comp 2.5:1 @-22 dB (5/90 ms); -16 LUFS",
+  "Kokoro speed 0.870 (the centre of the band; remuhcs band 0.83-0.91); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "A"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "E"
+  },
+  {
+   "t": 0.833,
+   "f": 20,
+   "shape": "A"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "E"
+  },
+  {
+   "t": 1.167,
+   "f": 28,
+   "shape": "M"
+  },
+  {
+   "t": 1.25,
+   "f": 30,
+   "shape": "O"
+  },
+  {
+   "t": 1.333,
+   "f": 32,
+   "shape": "E"
+  },
+  {
+   "t": 1.667,
+   "f": 40,
+   "shape": "A"
+  },
+  {
+   "t": 1.833,
+   "f": 44,
+   "shape": "E"
+  },
+  {
+   "t": 2.0,
+   "f": 48,
+   "shape": "A"
+  },
+  {
+   "t": 2.458,
+   "f": 59,
+   "shape": "E"
+  },
+  {
+   "t": 2.708,
+   "f": 65,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Every",
+   "t0": 0.49,
+   "t1": 0.778,
+   "f0": 12,
+   "f1": 19,
+   "ph": "ˈɛvəɹi"
+  },
+  {
+   "w": "single",
+   "t0": 0.778,
+   "t1": 1.165,
+   "f0": 19,
+   "f1": 28,
+   "ph": "sˈɪŋɡᵊl"
+  },
+  {
+   "w": "person",
+   "t0": 1.165,
+   "t1": 1.615,
+   "f0": 28,
+   "f1": 39,
+   "ph": "pˈɜɹsᵊn"
+  },
+  {
+   "w": "raised",
+   "t0": 1.615,
+   "t1": 1.965,
+   "f0": 39,
+   "f1": 47,
+   "ph": "ɹˈAzd"
+  },
+  {
+   "w": "their",
+   "t0": 1.965,
+   "t1": 2.165,
+   "f0": 47,
+   "f1": 52,
+   "ph": "ðɛɹ"
+  },
+  {
+   "w": "hand",
+   "t0": 2.165,
+   "t1": 2.69,
+   "f0": 52,
+   "f1": 65,
+   "ph": "hˈænd"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.17,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 115.9,
+  "f0_range_st": 8.4,
+  "f0_method": "pYIN (a4lib.analyse)",
+  "final_move_st": -2.3,
+  "asr": "Every single person raised their hand.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.186,
+  "align_median_s": 0.078,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.415,
+  "rise_ms": 20.0,
+  "decay_ms": 110.0,
+  "decay_to_60_s": 0.05
+ },
+ "clean": {
+  "file": "audio/ep01/act3/dialogue/fast-v2/clean/e1-a3-19-01.wav",
+  "note": "the dry read (no monitor chain), -16 LUFS"
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "a800c6fb00014710",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 3,
+  "wall_s": 15.92,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": true,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 4,
+   "share_s": 3.19,
+   "rechecked_alone": false
+  }
+ }
+}

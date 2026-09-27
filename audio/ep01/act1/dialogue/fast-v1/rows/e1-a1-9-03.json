@@ -1,0 +1,195 @@
+{
+ "id": "e1-a1-9-03",
+ "scene": "9",
+ "speaker": "TASYA",
+ "speaker_slug": "tasya",
+ "text": "It's long-term.",
+ "spoken_as": "It's long-term.",
+ "delivery": "warmly",
+ "tag": "[INVENTED · kept short: \"It's a partnership.\" / \"It's stuck.\" / \"It's long-term.\" is a rhythm, and his sideways answer is the joke]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "2S",
+ "shot_id": "2S",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 1.9,
+ "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-9-03.wav",
+ "mp3": null,
+ "duration_s": 2.03,
+ "frames_24": 49,
+ "voiced_span_s": 0.94,
+ "pace": {
+  "words": 2,
+  "wpm": 127.7,
+  "speed": 0.91,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.91,
+   "speed_band": [
+    0.88,
+    0.96
+   ],
+   "articulation_guide_sps": [
+    3.8,
+    4.4
+   ],
+   "turn_wpm_guide": [
+    125,
+    145
+   ],
+   "intent": "warmly"
+  },
+  "measured": {
+   "wpm": 127.7,
+   "articulation_sps": 3.19,
+   "syllables": 3,
+   "span_s": 0.94,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.51,
+  "audible_out_s": 1.45
+ },
+ "placement": {
+  "gap_before_s": 0.4,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_eric (Kokoro-82M stock) · b-eric-warm · speed 0.910",
+ "voiceId": "am_eric",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch -1.5 st",
+  "low shelf +2 dB @180 Hz",
+  "peak -1.5 dB @350 Hz Q1.0",
+  "high shelf +1.5 dB @6000 Hz",
+  "comp 2.0:1 @-24 dB (12/150 ms)",
+  "Kokoro speed 0.910 (the plan speed; tasya band 0.88-0.96); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "E"
+  },
+  {
+   "t": 0.833,
+   "f": 20,
+   "shape": "O"
+  },
+  {
+   "t": 1.0,
+   "f": 24,
+   "shape": "E"
+  },
+  {
+   "t": 1.125,
+   "f": 27,
+   "shape": "O"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "E"
+  },
+  {
+   "t": 1.375,
+   "f": 33,
+   "shape": "M"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "It's",
+   "t0": 0.515,
+   "t1": 0.74,
+   "f0": 12,
+   "f1": 18,
+   "ph": "ˌɪts"
+  },
+  {
+   "w": "long-term",
+   "t0": 0.74,
+   "t1": 1.47,
+   "f0": 18,
+   "f1": 35,
+   "ph": "lˈɔŋtˌɜɹm"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -2.26,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.51,
+  "median_f0_hz": 155.1,
+  "f0_range_st": 11.2,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "It's long term.",
+  "cer": 0.0,
+  "word_recall_nonames": 0.5,
+  "logprob": -0.531,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.45,
+  "rise_ms": 30.0,
+  "decay_ms": 90.0,
+  "decay_to_60_s": 0.135
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "91fec82c76a0235d",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 83.71,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 38.29,
+   "rechecked_alone": true
+  }
+ }
+}

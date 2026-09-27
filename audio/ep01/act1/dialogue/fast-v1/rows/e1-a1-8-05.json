@@ -1,0 +1,273 @@
+{
+ "id": "e1-a1-8-05",
+ "scene": "8",
+ "speaker": "RADNUS",
+ "speaker_slug": "radnus",
+ "text": "It is ours. We published it.",
+ "spoken_as": "It is ours.{0.6} We published it.",
+ "delivery": "gently, sorry about it",
+ "tag": "[INVENTED · the transformer paper, [K], timeline Z1; no date claim (§7 item 7). Dialogue pass 5: \"Ours.\" is now \"It is ours.\", a whole sentence that answers Egap's \"our work\"]",
+ "mode": "call",
+ "voiced_in_cut": true,
+ "on_camera": "monitor",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "POV",
+ "shot_id": "POV",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": "call",
+ "room": null,
+ "est_s": 2.7,
+ "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-8-05.wav",
+ "mp3": null,
+ "duration_s": 3.28,
+ "frames_24": 79,
+ "voiced_span_s": 2.27,
+ "pace": {
+  "words": 6,
+  "wpm": 158.6,
+  "speed": 1.02,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.02,
+   "speed_band": [
+    0.91,
+    0.99
+   ],
+   "articulation_guide_sps": [
+    3.8,
+    4.4
+   ],
+   "turn_wpm_guide": [
+    130,
+    150
+   ],
+   "intent": "gently, sorry about it"
+  },
+  "measured": {
+   "wpm": 158.6,
+   "articulation_sps": 4.79,
+   "syllables": 8,
+   "span_s": 2.27,
+   "pauses_s": [
+    0.6
+   ]
+  },
+  "longest_internal_gap_s": 0.6,
+  "audible_in_s": 0.5,
+  "audible_out_s": 2.77
+ },
+ "placement": {
+  "gap_before_s": 0.6,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_echo*0.60+am_fenrir*0.40 (Kokoro-82M stock) · d-echo-fenrir-courteous-up2 · speed 1.020",
+ "voiceId": "am_echo*0.60+am_fenrir*0.40",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch +2 st",
+  "low shelf +1.5 dB @180 Hz",
+  "peak -1.5 dB @350 Hz Q1.0",
+  "peak +0.5 dB @3000 Hz Q0.9",
+  "high shelf -1 dB @7000 Hz",
+  "comp 2.0:1 @-24 dB (10/140 ms)",
+  "then the call chain: HPF 200 Hz; LPF 7000 Hz; peak +1.5 dB @1800 Hz Q1.0; comp 2.5:1 @-22 dB (5/90 ms); -16 LUFS",
+  "Kokoro speed 1.020 (the plan speed; radnus band 0.91-0.99); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'ours': Kokoro 0.01 s -> 0.60 s (intended 0.60; +0.59 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "E"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "A"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "E"
+  },
+  {
+   "t": 1.208,
+   "f": 29,
+   "shape": "rest"
+  },
+  {
+   "t": 1.833,
+   "f": 44,
+   "shape": "O"
+  },
+  {
+   "t": 1.917,
+   "f": 46,
+   "shape": "E"
+  },
+  {
+   "t": 2.0,
+   "f": 48,
+   "shape": "M"
+  },
+  {
+   "t": 2.083,
+   "f": 50,
+   "shape": "A"
+  },
+  {
+   "t": 2.208,
+   "f": 53,
+   "shape": "M"
+  },
+  {
+   "t": 2.292,
+   "f": 55,
+   "shape": "E"
+  },
+  {
+   "t": 2.792,
+   "f": 67,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "It",
+   "t0": 0.47,
+   "t1": 0.585,
+   "f0": 11,
+   "f1": 14,
+   "ph": "ˌɪt"
+  },
+  {
+   "w": "is",
+   "t0": 0.585,
+   "t1": 0.748,
+   "f0": 14,
+   "f1": 18,
+   "ph": "ɪz"
+  },
+  {
+   "w": "ours",
+   "t0": 0.748,
+   "t1": 1.21,
+   "f0": 18,
+   "f1": 29,
+   "ph": "ˈWəɹz"
+  },
+  {
+   "w": "We",
+   "t0": 1.855,
+   "t1": 2.018,
+   "f0": 45,
+   "f1": 48,
+   "ph": "wˌi"
+  },
+  {
+   "w": "published",
+   "t0": 2.018,
+   "t1": 2.542,
+   "f0": 48,
+   "f1": 61,
+   "ph": "pˈʌblɪʃt"
+  },
+  {
+   "w": "it",
+   "t0": 2.542,
+   "t1": 2.79,
+   "f0": 61,
+   "f1": 67,
+   "ph": "ɪt"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -2.37,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 134.6,
+  "f0_range_st": 11.6,
+  "f0_method": "pYIN (a4lib.analyse)",
+  "final_move_st": -3.4,
+  "asr": "It is ours. We published it.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.181,
+  "align_median_s": 0.038,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.405,
+  "rise_ms": 15.0,
+  "decay_ms": 185.0,
+  "decay_to_60_s": 0.105
+ },
+ "clean": {
+  "file": "audio/ep01/act1/dialogue/fast-v1/clean/e1-a1-8-05.wav",
+  "note": "the dry read (no call chain), -16 LUFS"
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 3,
+   "word": "ours",
+   "tts_s": 0.005,
+   "target_s": 0.6,
+   "point_s": 0.8,
+   "joined_speech": false,
+   "dip_db": -40.1,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.605,
+   "opened_s": 0.595
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "d88eab67258e664a",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 2.21,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": true,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 3,
+   "share_s": 0.63,
+   "rechecked_alone": false
+  }
+ }
+}

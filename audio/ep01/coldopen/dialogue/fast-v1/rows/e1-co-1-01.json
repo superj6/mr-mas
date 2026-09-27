@@ -1,0 +1,242 @@
+{
+ "id": "e1-co-1-01",
+ "scene": "1",
+ "speaker": "PANEL HOST",
+ "speaker_slug": "panel-host",
+ "text": "Last one, Mas. What's the best part of the job?",
+ "spoken_as": "Last one, [Mas](/mˈɑs/).{0.6} What's the best part of the job?",
+ "delivery": "through the hall's PA, the hand at frame right lifting the card a little; warm, from the wide's second second, so the first frame isn't silent",
+ "tag": "[INVENTED · the host is seen only as a hand, unnamed and never gendered, and the question is ours; it gives the real answer below its trigger and its listener (R19). On the record the answer comes from a longer reply at the APEC CEO Summit (facts #45)]",
+ "mode": "pa",
+ "voiced_in_cut": true,
+ "on_camera": "os",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "W",
+ "shot_id": "W",
+ "cue": null,
+ "lip_sync": false,
+ "status": "fast",
+ "device": "pa",
+ "room": null,
+ "est_s": 4.6,
+ "file": "audio/ep01/coldopen/dialogue/fast-v1/wav/e1-co-1-01.wav",
+ "mp3": null,
+ "duration_s": 3.925,
+ "frames_24": 95,
+ "voiced_span_s": 2.9,
+ "pace": {
+  "words": 10,
+  "wpm": 206.9,
+  "speed": 0.94,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.94,
+   "speed_band": [
+    0.97,
+    1.05
+   ],
+   "articulation_guide_sps": [
+    4.2,
+    4.8
+   ],
+   "turn_wpm_guide": [
+    150,
+    170
+   ],
+   "intent": "through the hall's PA, the hand at frame right lifting the card a little; warm, from the wide's second second, so the first frame isn't silent"
+  },
+  "measured": {
+   "wpm": 206.9,
+   "articulation_sps": 4.33,
+   "syllables": 10,
+   "span_s": 2.9,
+   "pauses_s": [
+    0.59
+   ]
+  },
+  "longest_internal_gap_s": 0.59,
+  "audible_in_s": 0.51,
+  "audible_out_s": 3.41
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "af_sarah*0.45+am_puck*0.55 (Kokoro-82M stock) · c-sarah-puck-host · speed 0.940",
+ "voiceId": "af_sarah*0.45+am_puck*0.55",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch 0",
+  "low shelf +1 dB @200 Hz",
+  "peak +1.5 dB @2800 Hz Q0.9",
+  "comp 2.5:1 @-22 dB (5/90 ms)",
+  "then the pa chain: HPF 160 Hz; LPF 8500 Hz; peak +2 dB @2400 Hz Q0.9; tanh saturation drive 1.6 mix 0.1; comp 3.0:1 @-22 dB (4/80 ms); -16 LUFS",
+  "Kokoro speed 0.940 (the plan speed; panel-host band 0.97-1.05); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'Mas': Kokoro 0.13 s -> 0.60 s (intended 0.60; +0.47 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [],
+ "words": [
+  {
+   "w": "Last",
+   "t0": 0.515,
+   "t1": 0.778,
+   "f0": 12,
+   "f1": 19,
+   "ph": "lˈæst"
+  },
+  {
+   "w": "one",
+   "t0": 0.778,
+   "t1": 0.89,
+   "f0": 19,
+   "f1": 21,
+   "ph": "wˈʌn"
+  },
+  {
+   "w": "Mas",
+   "t0": 0.94,
+   "t1": 1.415,
+   "f0": 23,
+   "f1": 34,
+   "ph": "mˈɑs"
+  },
+  {
+   "w": "What's",
+   "t0": 1.985,
+   "t1": 2.198,
+   "f0": 48,
+   "f1": 53,
+   "ph": "wˌʌts"
+  },
+  {
+   "w": "the",
+   "t0": 2.198,
+   "t1": 2.285,
+   "f0": 53,
+   "f1": 55,
+   "ph": "ðə"
+  },
+  {
+   "w": "best",
+   "t0": 2.285,
+   "t1": 2.56,
+   "f0": 55,
+   "f1": 61,
+   "ph": "bˈɛst"
+  },
+  {
+   "w": "part",
+   "t0": 2.56,
+   "t1": 2.772,
+   "f0": 61,
+   "f1": 67,
+   "ph": "pˈɑɹt"
+  },
+  {
+   "w": "of",
+   "t0": 2.772,
+   "t1": 2.848,
+   "f0": 67,
+   "f1": 68,
+   "ph": "ʌv"
+  },
+  {
+   "w": "the",
+   "t0": 2.848,
+   "t1": 2.935,
+   "f0": 68,
+   "f1": 70,
+   "ph": "ðə"
+  },
+  {
+   "w": "job",
+   "t0": 2.935,
+   "t1": 3.43,
+   "f0": 70,
+   "f1": 82,
+   "ph": "ʤˈɑb"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.1,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 154.4,
+  "f0_range_st": 13.2,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Last one, Moss. What's the best part of the job?",
+  "cer": 0.059,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.287,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.395,
+  "rise_ms": 15.0,
+  "decay_ms": 135.0,
+  "decay_to_60_s": 0.125
+ },
+ "clean": {
+  "file": "audio/ep01/coldopen/dialogue/fast-v1/clean/e1-co-1-01.wav",
+  "note": "the dry read (no pa chain), -16 LUFS"
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 3,
+   "word": "Mas",
+   "tts_s": 0.13,
+   "target_s": 0.6,
+   "point_s": 1.04,
+   "joined_speech": false,
+   "dip_db": -67.3,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.605,
+   "opened_s": 0.47
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "8c04024eabe9cd07",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 7.13,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 3.1,
+   "rechecked_alone": false
+  }
+ }
+}

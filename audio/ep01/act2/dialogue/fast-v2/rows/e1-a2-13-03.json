@@ -1,0 +1,212 @@
+{
+ "id": "e1-a2-13-03",
+ "scene": "13",
+ "speaker": "MARIO",
+ "speaker_slug": "mario",
+ "text": "I have one concern.",
+ "spoken_as": "I have one concern.",
+ "delivery": "finger fully up",
+ "tag": "[INVENTED]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "2S",
+ "shot_id": "2S",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 1.9,
+ "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-03.wav",
+ "mp3": null,
+ "duration_s": 2.43,
+ "frames_24": 59,
+ "voiced_span_s": 1.43,
+ "pace": {
+  "words": 4,
+  "wpm": 167.8,
+  "speed": 1.03,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.03,
+   "speed_band": [
+    1.0,
+    1.08
+   ],
+   "articulation_guide_sps": [
+    4.6,
+    5.4
+   ],
+   "turn_wpm_guide": [
+    160,
+    185
+   ],
+   "intent": "finger fully up"
+  },
+  "measured": {
+   "wpm": 167.8,
+   "articulation_sps": 3.5,
+   "syllables": 5,
+   "span_s": 1.43,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.5,
+  "audible_out_s": 1.93
+ },
+ "placement": {
+  "gap_before_s": 0.35,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_liam (Kokoro-82M stock) · a-liam-earnest · speed 1.030",
+ "voiceId": "am_liam",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 80 Hz",
+  "pitch 0",
+  "peak -1 dB @250 Hz Q1.0",
+  "low shelf +1 dB @200 Hz",
+  "peak +1.5 dB @3000 Hz Q0.9",
+  "high shelf -1 dB @7000 Hz",
+  "comp 2.5:1 @-22 dB (6/100 ms)",
+  "Kokoro speed 1.030 (the plan speed; mario band 1.00-1.08); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "A"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "O"
+  },
+  {
+   "t": 0.958,
+   "f": 23,
+   "shape": "A"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "E"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "O"
+  },
+  {
+   "t": 1.75,
+   "f": 42,
+   "shape": "E"
+  },
+  {
+   "t": 1.958,
+   "f": 47,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "I",
+   "t0": 0.49,
+   "t1": 0.64,
+   "f0": 12,
+   "f1": 15,
+   "ph": "ˌI"
+  },
+  {
+   "w": "have",
+   "t0": 0.64,
+   "t1": 0.878,
+   "f0": 15,
+   "f1": 21,
+   "ph": "hæv"
+  },
+  {
+   "w": "one",
+   "t0": 0.878,
+   "t1": 1.14,
+   "f0": 21,
+   "f1": 27,
+   "ph": "wˈʌn"
+  },
+  {
+   "w": "concern",
+   "t0": 1.14,
+   "t1": 1.95,
+   "f0": 27,
+   "f1": 47,
+   "ph": "kənsˈɜɹn"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.63,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 129.3,
+  "f0_range_st": 12.1,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "I have one concern.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.124,
+  "align_median_s": 0.034,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 25.0,
+  "decay_ms": 110.0,
+  "decay_to_60_s": 0.055
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "2d019bc8aecf538a",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 2,
+  "wall_s": 27.15,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 4
+  },
+  "asr": {
+   "packed_with": 3,
+   "share_s": 0.86,
+   "rechecked_alone": false
+  }
+ }
+}

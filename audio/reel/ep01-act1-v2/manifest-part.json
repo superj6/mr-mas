@@ -1,0 +1,158 @@
+{
+ "_about": "Act One's chapter and beds for the Ep1 episode manifest (manifest_part.py)",
+ "chapter": {
+  "id": "act1",
+  "label": "ACT ONE",
+  "sub": "research preview · sc 5-12 · fastrec takes",
+  "from": "ep01-act1-v2"
+ },
+ "beds": [
+  {
+   "chapter": "act1",
+   "beat": "5.01",
+   "pad": {
+    "type": "room"
+   },
+   "lufs": -42,
+   "xfade": 0.3,
+   "label": "room-tone stand-in (the bullpen bed; no music under the talk)"
+  },
+  {
+   "chapter": "act1",
+   "beat": "5.12",
+   "at": 0.5,
+   "cue": "MM-16",
+   "pad": {
+    "chords": [
+     "Fm11",
+     "Bbm9"
+    ],
+    "bpm": 96,
+    "barsPerChord": 2
+   },
+   "xfade": 0.3,
+   "label": "temp pad (MM-16 Odometer not rendered): in on the first tick; the drill, the bill, the phone"
+  },
+  {
+   "chapter": "act1",
+   "beat": "9.01",
+   "pad": {
+    "type": "room"
+   },
+   "lufs": -42,
+   "xfade": 1.5,
+   "label": "room-tone stand-in (the lobby bed; MM-16 rang out on the lock)"
+  },
+  {
+   "chapter": "act1",
+   "beat": "9.02",
+   "at": 0.3,
+   "cue": "MM-08",
+   "src": "audio/ost/tracks/mm08-the-falling-tile/render/mm08-the-falling-tile-underscore.wav",
+   "in": 0,
+   "loop": [
+    0,
+    17.5
+   ],
+   "xfade": 0.3,
+   "label": "LEVERAGE (temp: the MM-08 underscore), in with the check"
+  },
+  {
+   "chapter": "act1",
+   "beat": "9.08",
+   "at": 0.35,
+   "pad": {
+    "type": "room"
+   },
+   "lufs": -42,
+   "xfade": 0.05,
+   "label": "room tone only: LEVERAGE stops on the pop; the lobby bed holds under the terms"
+  },
+  {
+   "chapter": "act1",
+   "beat": "9.09",
+   "at": 23.66,
+   "cue": "MM-08",
+   "src": "audio/ost/tracks/mm08-the-falling-tile/render/mm08-the-falling-tile-underscore.wav",
+   "in": 0,
+   "loop": [
+    0,
+    17.5
+   ],
+   "xfade": 0.3,
+   "label": "LEVERAGE (temp: MM-08 underscore) back on the key ring's jangle, through sc 10"
+  },
+  {
+   "chapter": "act1",
+   "beat": "11.01",
+   "pad": {
+    "type": "room"
+   },
+   "lufs": -42,
+   "xfade": 0.8,
+   "label": "room-tone stand-in (the pre-beat: Sydney's tick over the bullpen bed; the tick itself is not laid)"
+  },
+  {
+   "chapter": "act1",
+   "beat": "11.03",
+   "cue": "MM-04",
+   "pad": {
+    "chords": [
+     "Fm11",
+     "Eb9sus4"
+    ],
+    "bpm": 88,
+    "barsPerChord": 2
+   },
+   "xfade": 0.2,
+   "label": "temp pad (MM-04 Lighthouse not rendered): the duel, 16 bars"
+  },
+  {
+   "chapter": "act1",
+   "beat": "12.01",
+   "cue": "MM-17",
+   "pad": {
+    "chords": [
+     "Bbm9",
+     "C7#9b13"
+    ],
+    "bpm": 72,
+    "barsPerChord": 2
+   },
+   "xfade": 0.8,
+   "stop": "hard",
+   "label": "temp pad (MM-17 not rendered): from the push; the THUD cuts it dead"
+  },
+  {
+   "chapter": "act1",
+   "beat": "12.03",
+   "at": 0.0,
+   "pad": {
+    "type": "room"
+   },
+   "lufs": -42,
+   "xfade": 0.05,
+   "label": "room tone only (the bullpen bed and the pen's scratch; no score on the reflection)"
+  },
+  {
+   "chapter": "act1",
+   "beat": "12.06",
+   "at": 1.6,
+   "cue": "MM-14",
+   "pad": {
+    "chords": [
+     "Fm9"
+    ],
+    "bpm": 60,
+    "barsPerChord": 4
+   },
+   "lufs": -30,
+   "xfade": 0.05,
+   "stop": "fade",
+   "label": "temp pad (MM-14 THREAT not rendered): once, on the pen's lift",
+   "until": {
+    "chapter": "act2"
+   }
+  }
+ ]
+}

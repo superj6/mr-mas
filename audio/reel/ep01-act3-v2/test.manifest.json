@@ -1,0 +1,42 @@
+{
+ "kind": "episode-manifest",
+ "key": "ep01-act3-v2-test",
+ "episode": 1,
+ "title": "ep1.0_research_preview.md",
+ "variant": "Act Three stick chapter test (ep1s-act3fix clarity pass, 2026-09-27) \u00b7 fastrec takes over a temp stem",
+ "dateSpan": "Jul 24 - Nov 17, 2023",
+ "runtimeMin": 3,
+ "titleCard": 0,
+ "actCards": "margin",
+ "actCardSec": 4,
+ "known": [],
+ "chapters": [
+  {
+   "id": "act3",
+   "label": "ACT THREE",
+   "sub": "verified: human \u00b7 sc 18-23 \u00b7 v2 takes",
+   "from": "ep01-act3-v2"
+  }
+ ],
+ "beds": [
+  {
+   "chapter": "act3",
+   "beat": "18.01",
+   "cue": "MM-01",
+   "label": "Act Three temp stem (room + MM-01 + THE CLOCK temp + SFX)",
+   "src": "audio/reel/ep01-act3-v2/act3-bed.wav",
+   "lufs": null,
+   "loop": "none",
+   "in": 0
+  }
+ ],
+ "mix": {
+  "lufs": null,
+  "floor": -50,
+  "ceiling": -1,
+  "duck": -10,
+  "bedLufs": -26,
+  "xfade": 2.0,
+  "dialogueGain": -3
+ }
+}

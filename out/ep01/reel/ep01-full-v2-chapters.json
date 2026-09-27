@@ -1,0 +1,235 @@
+{
+ "reel": "out/ep01/reel/ep01-full-v2.mp4",
+ "manifest": "show/reel/ep01-full/ep01-full-v2.manifest.json",
+ "fps": 24,
+ "chapters": [
+  {
+   "id": "title",
+   "label": "TITLE",
+   "kind": "title",
+   "start": 0,
+   "end": 3,
+   "episodeStart": 0,
+   "source": "manifest",
+   "sound": "silence (the reel slate)"
+  },
+  {
+   "id": "coldopen",
+   "label": "COLD OPEN",
+   "kind": "reel",
+   "start": 3,
+   "end": 33.167,
+   "episodeStart": 3,
+   "source": "ep01-coldopen-v2",
+   "sound": "3 recorded take(s) over the temp bed"
+  },
+  {
+   "id": "intro",
+   "label": "INTRO",
+   "kind": "video",
+   "start": 33.167,
+   "end": 63.167,
+   "episodeStart": 33.167,
+   "source": "out/intro/intro-ep1-V1-1080p.mp4",
+   "sound": "its own sound at -3 dB; hard cut in, 0.3 s tail out"
+  },
+  {
+   "id": "card",
+   "label": "CARD",
+   "kind": "reel",
+   "start": 63.167,
+   "end": 65.167,
+   "episodeStart": 63.167,
+   "source": "ep01-full-part1",
+   "sound": "the temp bed (no recorded takes yet)"
+  },
+  {
+   "id": "act1",
+   "label": "ACT ONE",
+   "kind": "reel",
+   "start": 65.167,
+   "end": 406.25,
+   "episodeStart": 65.167,
+   "source": "ep01-act1-v2",
+   "sound": "56 recorded take(s) over the temp bed"
+  },
+  {
+   "id": "act2",
+   "label": "ACT TWO",
+   "kind": "reel",
+   "start": 406.25,
+   "end": 623.667,
+   "episodeStart": 406.25,
+   "source": "ep01-act2-v2",
+   "sound": "39 recorded take(s) over the temp bed"
+  },
+  {
+   "id": "act3",
+   "label": "ACT THREE",
+   "kind": "reel",
+   "start": 623.667,
+   "end": 771.667,
+   "episodeStart": 623.667,
+   "source": "ep01-act3-v2",
+   "sound": "21 recorded take(s) over the temp bed"
+  },
+  {
+   "id": "act4",
+   "label": "ACT FOUR",
+   "kind": "reel",
+   "start": 771.667,
+   "end": 1290.125,
+   "episodeStart": 771.667,
+   "source": "ep01-act4-v5",
+   "sound": "its own mix: audio/reel/ep01-act4-v5/mix.wav from 3 s"
+  },
+  {
+   "id": "tag",
+   "label": "TAG",
+   "kind": "reel",
+   "start": 1290.125,
+   "end": 1328.5,
+   "episodeStart": 1290.125,
+   "source": "ep01-tag-v2",
+   "sound": "2 recorded take(s) over the temp bed"
+  },
+  {
+   "id": "outro",
+   "label": "OUTRO",
+   "kind": "reel",
+   "start": 1328.5,
+   "end": 1340.5,
+   "episodeStart": 1328.5,
+   "source": "ep01-tag-v2",
+   "sound": "0 recorded take(s) over the temp bed"
+  }
+ ],
+ "beds": [
+  {
+   "label": "cold open stem: hall, plink, F4, rewind, MM-06",
+   "from": 3,
+   "to": 63.166666666666664
+  },
+  {
+   "label": "room-tone stand-in (card; the bullpen bed takes over at sc 5)",
+   "from": 63.166666666666664,
+   "to": 65.16666666666667
+  },
+  {
+   "label": "room-tone stand-in (the bullpen bed; no music under the talk)",
+   "from": 65.16666666666667,
+   "to": 153
+  },
+  {
+   "label": "temp pad (MM-16 Odometer not rendered): in on the first tick; the drill, the bill, the phone",
+   "from": 153,
+   "to": 234.875
+  },
+  {
+   "label": "room-tone stand-in (the lobby bed; MM-16 rang out on the lock)",
+   "from": 234.875,
+   "to": 238.59166666666667
+  },
+  {
+   "label": "LEVERAGE (temp: the MM-08 underscore), in with the check",
+   "from": 238.59166666666667,
+   "to": 259.35
+  },
+  {
+   "label": "room tone only: LEVERAGE stops on the pop; the lobby bed holds under the terms",
+   "from": 259.35,
+   "to": 284.24333333333334
+  },
+  {
+   "label": "LEVERAGE (temp: MM-08 underscore) back on the key ring's jangle, through sc 10",
+   "from": 284.24333333333334,
+   "to": 333
+  },
+  {
+   "label": "room-tone stand-in (the pre-beat: Sydney's tick over the bullpen bed; the tick itself is not laid)",
+   "from": 333,
+   "to": 338.875
+  },
+  {
+   "label": "temp pad (MM-04 Lighthouse not rendered): the duel, 16 bars",
+   "from": 338.875,
+   "to": 378.875
+  },
+  {
+   "label": "temp pad (MM-17 not rendered): from the push; the THUD cuts it dead",
+   "from": 378.875,
+   "to": 393.25
+  },
+  {
+   "label": "room tone only (the bullpen bed and the pen's scratch; no score on the reflection)",
+   "from": 393.25,
+   "to": 404.35
+  },
+  {
+   "label": "temp pad (MM-14 THREAT not rendered): once, on the pen's lift",
+   "from": 404.35,
+   "to": 406.25
+  },
+  {
+   "label": "MM-19 THE FOUNTAIN PEN (loop A, temp)",
+   "from": 406.25,
+   "to": 474.0833333333333
+  },
+  {
+   "label": "room-tone stand-in (sc 14: no score)",
+   "from": 474.0833333333333,
+   "to": 484.8333333333333
+  },
+  {
+   "label": "temp pad (MM-20 not rendered)",
+   "from": 484.8333333333333,
+   "to": 537.75
+  },
+  {
+   "label": "MM-20 stops on the wallet (room's air)",
+   "from": 537.75,
+   "to": 544.25
+  },
+  {
+   "label": "MM-20 back on a new phrase (temp pad)",
+   "from": 544.25,
+   "to": 559.75
+  },
+  {
+   "label": "temp pad (MM-03 not rendered)",
+   "from": 559.75,
+   "to": 579.75
+  },
+  {
+   "label": "MM-03 rings out into a held pad (temp)",
+   "from": 579.75,
+   "to": 600.125
+  },
+  {
+   "label": "MM-05 THE MORE YOU BUY (temp loop render)",
+   "from": 600.125,
+   "to": 614.5
+  },
+  {
+   "label": "score out: rooftop-wind stand-in (the bell is SFX, not in the stick mix)",
+   "from": 614.5,
+   "to": 623.6666666666666
+  },
+  {
+   "label": "Act Three temp stem (room + MM-01 + THE CLOCK temp + SFX)",
+   "from": 623.6666666666666,
+   "to": 1290.125
+  },
+  {
+   "label": "MM-12 temp: tag stem (MM-01 felt, room, SFX, the thud, the button chord)",
+   "from": 1290.125,
+   "to": 1328.5
+  },
+  {
+   "label": "temp pad (MM-15 not rendered)",
+   "from": 1328.5,
+   "to": 1340.5
+  }
+ ],
+ "warnings": []
+}

@@ -1,0 +1,3672 @@
+{
+ "summary": {
+  "entries": 132,
+  "built": 132,
+  "a_natural_tonal_flags": [],
+  "loop_seam_flags": [],
+  "sheets": [
+   "spectro_act4v5_01.png",
+   "spectro_act4v5_01.txt",
+   "spectro_act4v5_02.png",
+   "spectro_act4v5_02.txt",
+   "spectro_act4v5_03.png",
+   "spectro_act4v5_03.txt",
+   "spectro_act4v5_04.png",
+   "spectro_act4v5_04.txt",
+   "spectro_act4v5_05.png",
+   "spectro_act4v5_05.txt",
+   "spectro_act4v5_06.png",
+   "spectro_act4v5_06.txt",
+   "spectro_act4v5_07.png",
+   "spectro_act4v5_07.txt"
+  ]
+ },
+ "rows": [
+  {
+   "id": "call_connect",
+   "duration": 0.558,
+   "lufs_i": -17.2,
+   "lufs_m_max": -14.9,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": "C5 -> F5",
+   "measured_peak": "F5 +0c (698.4 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 697.3,
+     "note": "F5",
+     "cents": -3,
+     "prominence_db": 25.5,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1394.5,
+     "note": "F6",
+     "cents": -3,
+     "prominence_db": 22.4,
+     "level_db": -4.3,
+     "overtone_of_F": true
+    },
+    {
+     "hz": 524.4,
+     "note": "C5",
+     "cents": 4,
+     "prominence_db": 25.2,
+     "level_db": -4.6,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "call_connect--chip",
+   "duration": 0.462,
+   "lufs_i": -14.0,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -1.81,
+   "loop": false,
+   "pitch": "C5 -> F5",
+   "measured_peak": "F6 -1c (1395.8 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 697.3,
+     "note": "F5",
+     "cents": -3,
+     "prominence_db": 30.8,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1397.5,
+     "note": "F6",
+     "cents": 1,
+     "prominence_db": 31.8,
+     "level_db": -0.3,
+     "overtone_of_F": true
+    },
+    {
+     "hz": 2097.7,
+     "note": "C7",
+     "cents": 4,
+     "prominence_db": 31.0,
+     "level_db": -1.7,
+     "overtone_of_F": true
+    },
+    {
+     "hz": 2794.9,
+     "note": "F7",
+     "cents": 1,
+     "prominence_db": 31.7,
+     "level_db": -3.4,
+     "overtone_of_F": true
+    },
+    {
+     "hz": 4189.5,
+     "note": "C8",
+     "cents": 1,
+     "prominence_db": 31.4,
+     "level_db": -10.3,
+     "overtone_of_F": true
+    },
+    {
+     "hz": 7681.6,
+     "note": "B8",
+     "cents": -49,
+     "prominence_db": 31.7,
+     "level_db": -13.3,
+     "overtone_of_F": true
+    },
+    {
+     "hz": 6984.4,
+     "note": "A8",
+     "cents": -14,
+     "prominence_db": 31.4,
+     "level_db": -15.2,
+     "overtone_of_F": true
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "call_join_chime",
+   "duration": 0.724,
+   "lufs_i": -16.5,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -2.12,
+   "loop": false,
+   "pitch": "F5 Ab5 C6",
+   "measured_peak": "C6 +0c (1046.3 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 832.0,
+     "note": "Ab5",
+     "cents": 3,
+     "prominence_db": 27.9,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1045.9,
+     "note": "C6",
+     "cents": -1,
+     "prominence_db": 26.2,
+     "level_db": -0.4,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 700.2,
+     "note": "F5",
+     "cents": 4,
+     "prominence_db": 12.7,
+     "level_db": -22.5,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1397.5,
+     "note": "F6",
+     "cents": 1,
+     "prominence_db": 15.9,
+     "level_db": -31.8,
+     "overtone_of_F": true
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "call_leave",
+   "duration": 0.595,
+   "lufs_i": -16.6,
+   "lufs_m_max": -14.5,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": "C6 -> F5",
+   "measured_peak": "F5 +0c (698.4 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 697.3,
+     "note": "F5",
+     "cents": -3,
+     "prominence_db": 30.6,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1045.9,
+     "note": "C6",
+     "cents": -1,
+     "prominence_db": 40.6,
+     "level_db": -5.3,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "call_leave--chip",
+   "duration": 0.16,
+   "lufs_i": -14.0,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -4.68,
+   "loop": false,
+   "pitch": "C6 -> F5",
+   "measured_peak": "F5 +0c (698.4 Hz)",
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "call_ring",
+   "duration": 1.438,
+   "lufs_i": -17.1,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -5.08,
+   "loop": false,
+   "pitch": "F5 C6",
+   "measured_peak": "F5 +1c (698.9 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 697.3,
+     "note": "F5",
+     "cents": -3,
+     "prominence_db": 26.3,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1045.9,
+     "note": "C6",
+     "cents": -1,
+     "prominence_db": 28.6,
+     "level_db": -2.0,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "ui_mute_blip",
+   "duration": 0.14,
+   "lufs_i": -14.0,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -1.58,
+   "loop": false,
+   "pitch": "Eb5 -> C5",
+   "measured_peak": "C5 +6c (525.1 Hz)",
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "ui_shake",
+   "duration": 0.194,
+   "lufs_i": -23.3,
+   "lufs_m_max": -23.3,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "ui_toast_pop",
+   "duration": 0.362,
+   "lufs_i": -17.8,
+   "lufs_m_max": -17.8,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": "C6",
+   "measured_peak": "C6 -1c (1045.9 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 1045.9,
+     "note": "C6",
+     "cents": -1,
+     "prominence_db": 32.3,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 2100.6,
+     "note": "C7",
+     "cents": 6,
+     "prominence_db": 22.5,
+     "level_db": -22.1,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 2085.9,
+     "note": "C7",
+     "cents": -6,
+     "prominence_db": 18.7,
+     "level_db": -25.9,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1224.6,
+     "note": "Eb6",
+     "cents": -28,
+     "prominence_db": 14.2,
+     "level_db": -28.5,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 3137.7,
+     "note": "G7",
+     "cents": 1,
+     "prominence_db": 17.4,
+     "level_db": -39.4,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 149.4,
+     "note": "D3",
+     "cents": 30,
+     "prominence_db": 12.6,
+     "level_db": -40.0,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "speakerphone_key_F4",
+   "duration": 0.616,
+   "lufs_i": -16.2,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -9.92,
+   "loop": false,
+   "pitch": "F4",
+   "measured_peak": "F4 +1c (349.4 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 348.6,
+     "note": "F4",
+     "cents": -3,
+     "prominence_db": 51.9,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1048.8,
+     "note": "C6",
+     "cents": 4,
+     "prominence_db": 50.1,
+     "level_db": -9.2,
+     "overtone_of_F": true
+    },
+    {
+     "hz": 1746.1,
+     "note": "A6",
+     "cents": -14,
+     "prominence_db": 44.0,
+     "level_db": -25.7,
+     "overtone_of_F": true
+    },
+    {
+     "hz": 2443.4,
+     "note": "Eb7",
+     "cents": -32,
+     "prominence_db": 43.4,
+     "level_db": -38.4,
+     "overtone_of_F": true
+    },
+    {
+     "hz": 3143.6,
+     "note": "G7",
+     "cents": 4,
+     "prominence_db": 41.2,
+     "level_db": -53.5,
+     "overtone_of_F": true
+    },
+    {
+     "hz": 3840.8,
+     "note": "B7",
+     "cents": -49,
+     "prominence_db": 27.1,
+     "level_db": -62.0,
+     "overtone_of_F": true
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "speakerphone_key_Eb4",
+   "duration": 0.685,
+   "lufs_i": -16.2,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -11.61,
+   "loop": false,
+   "pitch": "Eb4",
+   "measured_peak": "Eb4 +0c (311.1 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 310.5,
+     "note": "Eb4",
+     "cents": -3,
+     "prominence_db": 51.6,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 934.6,
+     "note": "Bb5",
+     "cents": 4,
+     "prominence_db": 51.2,
+     "level_db": -8.3,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1555.7,
+     "note": "G6",
+     "cents": -14,
+     "prominence_db": 45.1,
+     "level_db": -31.8,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 2176.8,
+     "note": "Db7",
+     "cents": -32,
+     "prominence_db": 42.2,
+     "level_db": -36.8,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 2800.8,
+     "note": "F7",
+     "cents": 4,
+     "prominence_db": 39.2,
+     "level_db": -50.7,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 3421.9,
+     "note": "A7",
+     "cents": -49,
+     "prominence_db": 33.0,
+     "level_db": -62.7,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "speakerphone_key_Db4",
+   "duration": 0.651,
+   "lufs_i": -16.2,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -8.71,
+   "loop": false,
+   "pitch": "Db4",
+   "measured_peak": "Db4 +0c (277.2 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 278.3,
+     "note": "Db4",
+     "cents": 7,
+     "prominence_db": 51.8,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 832.0,
+     "note": "Ab5",
+     "cents": 3,
+     "prominence_db": 51.9,
+     "level_db": -7.3,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1385.7,
+     "note": "F6",
+     "cents": -14,
+     "prominence_db": 44.2,
+     "level_db": -26.2,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1939.5,
+     "note": "B6",
+     "cents": -32,
+     "prominence_db": 42.9,
+     "level_db": -37.9,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 2496.1,
+     "note": "Eb7",
+     "cents": 5,
+     "prominence_db": 26.0,
+     "level_db": -64.5,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 3049.8,
+     "note": "G7",
+     "cents": -48,
+     "prominence_db": 28.1,
+     "level_db": -64.6,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "speakerphone_key_C4",
+   "duration": 0.661,
+   "lufs_i": -16.2,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -8.32,
+   "loop": false,
+   "pitch": "C4",
+   "measured_peak": "C4 +0c (261.7 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 260.7,
+     "note": "C4",
+     "cents": -6,
+     "prominence_db": 51.8,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 785.2,
+     "note": "G5",
+     "cents": 3,
+     "prominence_db": 52.5,
+     "level_db": -5.4,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1309.6,
+     "note": "E6",
+     "cents": -12,
+     "prominence_db": 42.2,
+     "level_db": -28.5,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1831.1,
+     "note": "Bb6",
+     "cents": -31,
+     "prominence_db": 39.3,
+     "level_db": -37.8,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 2355.5,
+     "note": "D7",
+     "cents": 5,
+     "prominence_db": 25.5,
+     "level_db": -62.3,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 2877.0,
+     "note": "Gb7",
+     "cents": -49,
+     "prominence_db": 32.3,
+     "level_db": -64.6,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "speakerphone_ringback",
+   "duration": 1.392,
+   "lufs_i": -14.7,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -11.19,
+   "loop": false,
+   "pitch": "F4 + C5 (no third)",
+   "measured_peak": "F4 +0c (349.2 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 348.6,
+     "note": "F4",
+     "cents": -3,
+     "prominence_db": 68.4,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 524.4,
+     "note": "C5",
+     "cents": 4,
+     "prominence_db": 67.2,
+     "level_db": -0.8,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 175.8,
+     "note": "F3",
+     "cents": 12,
+     "prominence_db": 56.8,
+     "level_db": -24.8,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 697.3,
+     "note": "F5",
+     "cents": -3,
+     "prominence_db": 56.4,
+     "level_db": -25.1,
+     "overtone_of_F": true
+    },
+    {
+     "hz": 1394.5,
+     "note": "F6",
+     "cents": -3,
+     "prominence_db": 59.0,
+     "level_db": -25.2,
+     "overtone_of_F": true
+    },
+    {
+     "hz": 1221.7,
+     "note": "Eb6",
+     "cents": -32,
+     "prominence_db": 59.2,
+     "level_db": -25.7,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 870.1,
+     "note": "A5",
+     "cents": -20,
+     "prominence_db": 44.8,
+     "level_db": -49.5,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1743.2,
+     "note": "A6",
+     "cents": -17,
+     "prominence_db": 48.2,
+     "level_db": -55.1,
+     "overtone_of_F": true
+    },
+    {
+     "hz": 3489.3,
+     "note": "A7",
+     "cents": -15,
+     "prominence_db": 36.8,
+     "level_db": -86.2,
+     "overtone_of_F": true
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "dial_tone_speaker",
+   "duration": 2.5,
+   "lufs_i": -14.0,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -11.24,
+   "loop": true,
+   "pitch": "F4 + C5 (no third)",
+   "measured_peak": "C5 +0c (523.1 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 348.6,
+     "note": "F4",
+     "cents": -3,
+     "prominence_db": 71.2,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 524.4,
+     "note": "C5",
+     "cents": 4,
+     "prominence_db": 66.5,
+     "level_db": -0.4,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 697.3,
+     "note": "F5",
+     "cents": -3,
+     "prominence_db": 41.9,
+     "level_db": -24.9,
+     "overtone_of_F": true
+    },
+    {
+     "hz": 1221.7,
+     "note": "Eb6",
+     "cents": -32,
+     "prominence_db": 42.2,
+     "level_db": -25.3,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 175.8,
+     "note": "F3",
+     "cents": 12,
+     "prominence_db": 80.7,
+     "level_db": -25.5,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1394.5,
+     "note": "F6",
+     "cents": -3,
+     "prominence_db": 42.3,
+     "level_db": -25.6,
+     "overtone_of_F": true
+    },
+    {
+     "hz": 870.1,
+     "note": "A5",
+     "cents": -20,
+     "prominence_db": 18.6,
+     "level_db": -48.3,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1743.2,
+     "note": "A6",
+     "cents": -17,
+     "prominence_db": 13.6,
+     "level_db": -54.8,
+     "overtone_of_F": true
+    }
+   ],
+   "a_natural_tonal": [],
+   "seam": {
+    "jump_over_median_step": 1.38,
+    "last50ms_db": -16.3,
+    "first50ms_db": -16.5
+   }
+  },
+  {
+   "id": "desk_phone_ring",
+   "duration": 1.384,
+   "lufs_i": -15.9,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -9.99,
+   "loop": false,
+   "pitch": "Ab5 / C6 warble",
+   "measured_peak": "C6 +7c (1050.7 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 1051.8,
+     "note": "C6",
+     "cents": 9,
+     "prominence_db": 26.1,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1034.2,
+     "note": "C6",
+     "cents": -21,
+     "prominence_db": 23.3,
+     "level_db": -2.4,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 826.2,
+     "note": "Ab5",
+     "cents": -9,
+     "prominence_db": 23.6,
+     "level_db": -2.8,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 843.8,
+     "note": "Ab5",
+     "cents": 27,
+     "prominence_db": 22.3,
+     "level_db": -3.9,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1066.4,
+     "note": "C6",
+     "cents": 33,
+     "prominence_db": 19.7,
+     "level_db": -7.7,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 811.5,
+     "note": "Ab5",
+     "cents": -40,
+     "prominence_db": 17.8,
+     "level_db": -9.4,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "desk_phone_ring--b",
+   "duration": 0.845,
+   "lufs_i": -16.2,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -11.01,
+   "loop": false,
+   "pitch": "Db6 / F6 warble",
+   "measured_peak": "Db6 +1c (1109.6 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 1107.4,
+     "note": "Db6",
+     "cents": -2,
+     "prominence_db": 27.1,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1397.5,
+     "note": "F6",
+     "cents": 1,
+     "prominence_db": 31.7,
+     "level_db": -0.2,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1412.1,
+     "note": "F6",
+     "cents": 19,
+     "prominence_db": 29.5,
+     "level_db": -4.4,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1379.9,
+     "note": "F6",
+     "cents": -21,
+     "prominence_db": 28.2,
+     "level_db": -4.6,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1125.0,
+     "note": "Db6",
+     "cents": 25,
+     "prominence_db": 23.1,
+     "level_db": -5.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1092.8,
+     "note": "Db6",
+     "cents": -25,
+     "prominence_db": 22.1,
+     "level_db": -6.5,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 6984.4,
+     "note": "A8",
+     "cents": -14,
+     "prominence_db": 32.6,
+     "level_db": -28.0,
+     "overtone_of_F": true
+    },
+    {
+     "hz": 6999.0,
+     "note": "A8",
+     "cents": -10,
+     "prominence_db": 29.7,
+     "level_db": -31.7,
+     "overtone_of_F": true
+    },
+    {
+     "hz": 6966.8,
+     "note": "A8",
+     "cents": -18,
+     "prominence_db": 28.4,
+     "level_db": -33.0,
+     "overtone_of_F": true
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "handset_pickup",
+   "duration": 0.556,
+   "lufs_i": -22.7,
+   "lufs_m_max": -20.9,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "handset_hangup",
+   "duration": 0.438,
+   "lufs_i": -21.0,
+   "lufs_m_max": -21.0,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [
+    {
+     "hz": 137.7,
+     "note": "Db3",
+     "cents": -11,
+     "prominence_db": 34.4,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 172.9,
+     "note": "F3",
+     "cents": -18,
+     "prominence_db": 17.2,
+     "level_db": -17.2,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 164.1,
+     "note": "E3",
+     "cents": -8,
+     "prominence_db": 15.2,
+     "level_db": -19.2,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 864.3,
+     "note": "A5",
+     "cents": -31,
+     "prominence_db": 12.4,
+     "level_db": -32.1,
+     "overtone_of_F": true
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "throne_topple",
+   "duration": 0.494,
+   "lufs_i": -20.3,
+   "lufs_m_max": -20.3,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": "C7 ting",
+   "measured_peak": "G5 -41c (765.6 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 2094.7,
+     "note": "C7",
+     "cents": 1,
+     "prominence_db": 20.9,
+     "level_db": -15.8,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "speakerphone_pull",
+   "duration": 0.835,
+   "lufs_i": -19.1,
+   "lufs_m_max": -16.9,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "phone_buzz_desk",
+   "duration": 0.921,
+   "lufs_i": -15.4,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -6.39,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [
+    {
+     "hz": 137.7,
+     "note": "Db3",
+     "cents": -11,
+     "prominence_db": 46.1,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 172.9,
+     "note": "F3",
+     "cents": -18,
+     "prominence_db": 33.4,
+     "level_db": -5.9,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 278.3,
+     "note": "Db4",
+     "cents": 7,
+     "prominence_db": 40.7,
+     "level_db": -7.5,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 102.5,
+     "note": "Ab2",
+     "cents": -22,
+     "prominence_db": 38.2,
+     "level_db": -15.1,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 243.2,
+     "note": "B3",
+     "cents": -27,
+     "prominence_db": 24.2,
+     "level_db": -16.6,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 310.5,
+     "note": "Eb4",
+     "cents": -3,
+     "prominence_db": 34.0,
+     "level_db": -20.4,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "phone_buzz_step_1",
+   "duration": 0.823,
+   "lufs_i": -16.1,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -3.72,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [
+    {
+     "hz": 278.3,
+     "note": "Db4",
+     "cents": 7,
+     "prominence_db": 26.4,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 137.7,
+     "note": "Db3",
+     "cents": -11,
+     "prominence_db": 37.1,
+     "level_db": -0.4,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 310.5,
+     "note": "Eb4",
+     "cents": -3,
+     "prominence_db": 17.6,
+     "level_db": -9.2,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 172.9,
+     "note": "F3",
+     "cents": -18,
+     "prominence_db": 24.8,
+     "level_db": -9.8,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 102.5,
+     "note": "Ab2",
+     "cents": -22,
+     "prominence_db": 27.5,
+     "level_db": -13.1,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 243.2,
+     "note": "B3",
+     "cents": -27,
+     "prominence_db": 12.5,
+     "level_db": -13.9,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "phone_buzz_step_2",
+   "duration": 0.825,
+   "lufs_i": -16.1,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -3.96,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [
+    {
+     "hz": 278.3,
+     "note": "Db4",
+     "cents": 7,
+     "prominence_db": 29.8,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 140.6,
+     "note": "Db3",
+     "cents": 25,
+     "prominence_db": 33.9,
+     "level_db": -1.1,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 313.5,
+     "note": "Eb4",
+     "cents": 13,
+     "prominence_db": 22.0,
+     "level_db": -8.6,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 175.8,
+     "note": "F3",
+     "cents": 12,
+     "prominence_db": 21.7,
+     "level_db": -11.2,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 105.5,
+     "note": "Ab2",
+     "cents": 27,
+     "prominence_db": 25.5,
+     "level_db": -12.8,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 243.2,
+     "note": "B3",
+     "cents": -27,
+     "prominence_db": 13.4,
+     "level_db": -13.8,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "phone_buzz_step_3",
+   "duration": 0.828,
+   "lufs_i": -16.2,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -1.45,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [
+    {
+     "hz": 275.4,
+     "note": "Db4",
+     "cents": -11,
+     "prominence_db": 33.4,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 137.7,
+     "note": "Db3",
+     "cents": -11,
+     "prominence_db": 36.9,
+     "level_db": -0.8,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 310.5,
+     "note": "Eb4",
+     "cents": -3,
+     "prominence_db": 23.1,
+     "level_db": -10.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 172.9,
+     "note": "F3",
+     "cents": -18,
+     "prominence_db": 23.8,
+     "level_db": -10.7,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 102.5,
+     "note": "Ab2",
+     "cents": -22,
+     "prominence_db": 28.7,
+     "level_db": -13.2,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 240.2,
+     "note": "B3",
+     "cents": -48,
+     "prominence_db": 15.4,
+     "level_db": -15.2,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "phone_buzz_step_4",
+   "duration": 0.827,
+   "lufs_i": -16.1,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -4.08,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [
+    {
+     "hz": 281.2,
+     "note": "Db4",
+     "cents": 25,
+     "prominence_db": 26.7,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 140.6,
+     "note": "Db3",
+     "cents": 25,
+     "prominence_db": 35.2,
+     "level_db": -0.8,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 316.4,
+     "note": "Eb4",
+     "cents": 29,
+     "prominence_db": 18.3,
+     "level_db": -9.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 175.8,
+     "note": "F3",
+     "cents": 12,
+     "prominence_db": 23.4,
+     "level_db": -10.8,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 105.5,
+     "note": "Ab2",
+     "cents": 27,
+     "prominence_db": 25.1,
+     "level_db": -12.9,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "phone_clack_floor",
+   "duration": 0.623,
+   "lufs_i": -21.9,
+   "lufs_m_max": -20.3,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "pen_tick_1",
+   "duration": 0.165,
+   "lufs_i": -28.0,
+   "lufs_m_max": -28.0,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [
+    {
+     "hz": 281.2,
+     "note": "Db4",
+     "cents": 25,
+     "prominence_db": 18.3,
+     "level_db": -5.4,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "pen_tick_2",
+   "duration": 0.167,
+   "lufs_i": -27.1,
+   "lufs_m_max": -27.1,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "pen_tick_3",
+   "duration": 0.18,
+   "lufs_i": -24.3,
+   "lufs_m_max": -24.3,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [
+    {
+     "hz": 304.7,
+     "note": "Eb4",
+     "cents": -36,
+     "prominence_db": 14.4,
+     "level_db": -9.6,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "pen_scribble_short",
+   "duration": 0.471,
+   "lufs_i": -14.7,
+   "lufs_m_max": -14.7,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "pen_run",
+   "duration": 1.91,
+   "lufs_i": -18.0,
+   "lufs_m_max": -16.8,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "drafting_ink_stroke",
+   "duration": 1.423,
+   "lufs_i": -14.8,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -1.02,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "marker_uncap",
+   "duration": 0.2,
+   "lufs_i": -19.2,
+   "lufs_m_max": -19.2,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "marker_write_q",
+   "duration": 0.734,
+   "lufs_i": -16.7,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "pen_carve_1",
+   "duration": 0.351,
+   "lufs_i": -15.6,
+   "lufs_m_max": -15.6,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "pen_carve_2",
+   "duration": 0.353,
+   "lufs_i": -17.1,
+   "lufs_m_max": -17.1,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "pen_carve_3",
+   "duration": 0.338,
+   "lufs_i": -18.3,
+   "lufs_m_max": -18.3,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "pen_carve_4",
+   "duration": 0.332,
+   "lufs_i": -18.9,
+   "lufs_m_max": -18.9,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "shavings_brush",
+   "duration": 0.559,
+   "lufs_i": -14.5,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -3.65,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "paper_tear",
+   "duration": 0.752,
+   "lufs_i": -17.4,
+   "lufs_m_max": -15.4,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "paper_curl",
+   "duration": 0.582,
+   "lufs_i": -17.4,
+   "lufs_m_max": -17.0,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "folder_slide",
+   "duration": 0.829,
+   "lufs_i": -16.1,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -1.34,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "folder_seal_break",
+   "duration": 0.343,
+   "lufs_i": -16.7,
+   "lufs_m_max": -16.7,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "folder_open",
+   "duration": 0.308,
+   "lufs_i": -21.4,
+   "lufs_m_max": -21.4,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "folder_close",
+   "duration": 0.36,
+   "lufs_i": -18.5,
+   "lufs_m_max": -18.5,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "chair_walkoff_1",
+   "duration": 0.384,
+   "lufs_i": -21.1,
+   "lufs_m_max": -21.1,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "chair_walkoff_2",
+   "duration": 0.378,
+   "lufs_i": -19.9,
+   "lufs_m_max": -19.9,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "chair_walkoff_3",
+   "duration": 0.366,
+   "lufs_i": -19.6,
+   "lufs_m_max": -19.6,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "key_ring_jangle_1",
+   "duration": 0.645,
+   "lufs_i": -16.0,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -2.59,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [
+    {
+     "hz": 1459.0,
+     "note": "Gb6",
+     "cents": -25,
+     "prominence_db": 24.3,
+     "level_db": -10.3,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "key_ring_jangle_2",
+   "duration": 0.594,
+   "lufs_i": -15.4,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -1.51,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [
+    {
+     "hz": 2390.6,
+     "note": "D7",
+     "cents": 30,
+     "prominence_db": 31.5,
+     "level_db": -4.5,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1532.2,
+     "note": "G6",
+     "cents": -40,
+     "prominence_db": 38.5,
+     "level_db": -5.2,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 3802.7,
+     "note": "Bb7",
+     "cents": 34,
+     "prominence_db": 17.4,
+     "level_db": -18.2,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "key_ring_jangle_3",
+   "duration": 0.591,
+   "lufs_i": -18.4,
+   "lufs_m_max": -16.0,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [
+    {
+     "hz": 5337.9,
+     "note": "E8",
+     "cents": 21,
+     "prominence_db": 23.2,
+     "level_db": -1.4,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1338.9,
+     "note": "E6",
+     "cents": 27,
+     "prominence_db": 35.2,
+     "level_db": -6.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 2882.8,
+     "note": "Gb7",
+     "cents": -46,
+     "prominence_db": 29.0,
+     "level_db": -6.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 5443.4,
+     "note": "F8",
+     "cents": -45,
+     "prominence_db": 17.5,
+     "level_db": -11.6,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 3398.4,
+     "note": "Ab7",
+     "cents": 39,
+     "prominence_db": 31.1,
+     "level_db": -14.3,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 2865.2,
+     "note": "F7",
+     "cents": 44,
+     "prominence_db": 17.9,
+     "level_db": -17.1,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "key_ring_drop",
+   "duration": 0.445,
+   "lufs_i": -15.4,
+   "lufs_m_max": -15.4,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [
+    {
+     "hz": 117.2,
+     "note": "Bb2",
+     "cents": 10,
+     "prominence_db": 52.7,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1418.0,
+     "note": "F6",
+     "cents": 26,
+     "prominence_db": 32.3,
+     "level_db": -19.6,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "door_key_turn",
+   "duration": 0.8,
+   "lufs_i": -16.6,
+   "lufs_m_max": -16.2,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "slate_door_step_1",
+   "duration": 0.612,
+   "lufs_i": -16.3,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -1.98,
+   "loop": false,
+   "pitch": "F2",
+   "measured_peak": "F2 +8c (87.7 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 87.9,
+     "note": "F2",
+     "cents": 12,
+     "prominence_db": 46.8,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 117.2,
+     "note": "Bb2",
+     "cents": 10,
+     "prominence_db": 26.5,
+     "level_db": -19.1,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 134.8,
+     "note": "Db3",
+     "cents": -48,
+     "prominence_db": 17.9,
+     "level_db": -27.7,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 149.4,
+     "note": "D3",
+     "cents": 30,
+     "prominence_db": 17.7,
+     "level_db": -27.9,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 190.4,
+     "note": "G3",
+     "cents": -50,
+     "prominence_db": 12.8,
+     "level_db": -32.7,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "slate_door_step_2",
+   "duration": 0.611,
+   "lufs_i": -17.0,
+   "lufs_m_max": -14.7,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": "Ab2",
+   "measured_peak": "Ab2 +3c (104.0 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 105.5,
+     "note": "Ab2",
+     "cents": 27,
+     "prominence_db": 39.2,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 454.1,
+     "note": "Bb4",
+     "cents": -45,
+     "prominence_db": 12.3,
+     "level_db": -37.2,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "slate_door_step_3",
+   "duration": 0.631,
+   "lufs_i": -16.2,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -3.18,
+   "loop": false,
+   "pitch": "C3",
+   "measured_peak": "C3 +4c (131.1 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 131.8,
+     "note": "C3",
+     "cents": 13,
+     "prominence_db": 39.8,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 190.4,
+     "note": "G3",
+     "cents": -50,
+     "prominence_db": 17.2,
+     "level_db": -21.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 550.8,
+     "note": "Db5",
+     "cents": -11,
+     "prominence_db": 13.0,
+     "level_db": -39.0,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "slate_door_step_4",
+   "duration": 0.617,
+   "lufs_i": -16.2,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -2.49,
+   "loop": false,
+   "pitch": "F2",
+   "measured_peak": "F2 +4c (87.5 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 87.9,
+     "note": "F2",
+     "cents": 12,
+     "prominence_db": 48.3,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 117.2,
+     "note": "Bb2",
+     "cents": 10,
+     "prominence_db": 29.4,
+     "level_db": -19.2,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 149.4,
+     "note": "D3",
+     "cents": 30,
+     "prominence_db": 22.5,
+     "level_db": -26.4,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 137.7,
+     "note": "Db3",
+     "cents": -11,
+     "prominence_db": 21.7,
+     "level_db": -26.9,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "door_open_crack",
+   "duration": 1.025,
+   "lufs_i": -19.2,
+   "lufs_m_max": -17.1,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": "Bb3 -> C4 creak",
+   "measured_peak": "B4 -5c (492.4 Hz)",
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "door_bang_open",
+   "duration": 0.913,
+   "lufs_i": -18.2,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -1.63,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [
+    {
+     "hz": 67.4,
+     "note": "Db2",
+     "cents": -48,
+     "prominence_db": 38.4,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 169.9,
+     "note": "F3",
+     "cents": -47,
+     "prominence_db": 22.2,
+     "level_db": -16.1,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 360.4,
+     "note": "Gb4",
+     "cents": -46,
+     "prominence_db": 28.2,
+     "level_db": -29.8,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 580.1,
+     "note": "D5",
+     "cents": -22,
+     "prominence_db": 21.9,
+     "level_db": -37.8,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 735.4,
+     "note": "Gb5",
+     "cents": -11,
+     "prominence_db": 13.4,
+     "level_db": -44.5,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 837.9,
+     "note": "Ab5",
+     "cents": 15,
+     "prominence_db": 14.3,
+     "level_db": -46.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1749.0,
+     "note": "A6",
+     "cents": -11,
+     "prominence_db": 12.0,
+     "level_db": -52.4,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "revolving_door",
+   "duration": 3.4,
+   "lufs_i": -16.5,
+   "lufs_m_max": -14.6,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "footstep_hard_1",
+   "duration": 0.37,
+   "lufs_i": -22.2,
+   "lufs_m_max": -22.2,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [
+    {
+     "hz": 149.4,
+     "note": "D3",
+     "cents": 30,
+     "prominence_db": 14.0,
+     "level_db": -12.9,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "footstep_soft_1",
+   "duration": 0.438,
+   "lufs_i": -17.3,
+   "lufs_m_max": -17.3,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [
+    {
+     "hz": 87.9,
+     "note": "F2",
+     "cents": 12,
+     "prominence_db": 32.0,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 117.2,
+     "note": "Bb2",
+     "cents": 10,
+     "prominence_db": 14.0,
+     "level_db": -19.0,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "footstep_hard_2",
+   "duration": 0.367,
+   "lufs_i": -21.4,
+   "lufs_m_max": -21.4,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [
+    {
+     "hz": 149.4,
+     "note": "D3",
+     "cents": 30,
+     "prominence_db": 14.2,
+     "level_db": -12.1,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "footstep_soft_2",
+   "duration": 0.425,
+   "lufs_i": -17.4,
+   "lufs_m_max": -17.4,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [
+    {
+     "hz": 87.9,
+     "note": "F2",
+     "cents": 12,
+     "prominence_db": 31.6,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 117.2,
+     "note": "Bb2",
+     "cents": 10,
+     "prominence_db": 12.4,
+     "level_db": -20.2,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "footstep_hard_3",
+   "duration": 0.367,
+   "lufs_i": -22.9,
+   "lufs_m_max": -22.9,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [
+    {
+     "hz": 149.4,
+     "note": "D3",
+     "cents": 30,
+     "prominence_db": 14.3,
+     "level_db": -13.2,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "footstep_soft_3",
+   "duration": 0.425,
+   "lufs_i": -17.1,
+   "lufs_m_max": -17.1,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [
+    {
+     "hz": 87.9,
+     "note": "F2",
+     "cents": 12,
+     "prominence_db": 31.6,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "footstep_hard_4",
+   "duration": 0.385,
+   "lufs_i": -21.2,
+   "lufs_m_max": -21.2,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "footstep_soft_4",
+   "duration": 0.428,
+   "lufs_i": -16.8,
+   "lufs_m_max": -16.8,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [
+    {
+     "hz": 87.9,
+     "note": "F2",
+     "cents": 12,
+     "prominence_db": 32.0,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "glass_shiver_1",
+   "duration": 0.53,
+   "lufs_i": -16.6,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -2.14,
+   "loop": false,
+   "pitch": "C7",
+   "measured_peak": "C7 -3c (2089.1 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 2088.9,
+     "note": "C7",
+     "cents": -3,
+     "prominence_db": 24.6,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 2100.6,
+     "note": "C7",
+     "cents": 6,
+     "prominence_db": 22.9,
+     "level_db": -1.7,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 4863.3,
+     "note": "Eb8",
+     "cents": -40,
+     "prominence_db": 17.3,
+     "level_db": -12.7,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "glass_shiver_2",
+   "duration": 0.52,
+   "lufs_i": -16.6,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -2.75,
+   "loop": false,
+   "pitch": "Eb7",
+   "measured_peak": "Eb7 +4c (2495.2 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 2496.1,
+     "note": "Eb7",
+     "cents": 5,
+     "prominence_db": 36.8,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 5786.1,
+     "note": "Gb8",
+     "cents": -40,
+     "prominence_db": 29.5,
+     "level_db": -10.6,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "glass_shiver_3",
+   "duration": 0.509,
+   "lufs_i": -16.6,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -1.65,
+   "loop": false,
+   "pitch": "F7",
+   "measured_peak": "F7 +0c (2794.6 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 2794.9,
+     "note": "F7",
+     "cents": 1,
+     "prominence_db": 25.3,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 6483.4,
+     "note": "Ab8",
+     "cents": -43,
+     "prominence_db": 26.5,
+     "level_db": -5.0,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "glass_shiver_4",
+   "duration": 0.428,
+   "lufs_i": -14.2,
+   "lufs_m_max": -14.2,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": "Ab6",
+   "measured_peak": "Ab6 -9c (1652.7 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 1652.3,
+     "note": "Ab6",
+     "cents": -9,
+     "prominence_db": 31.7,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1456.1,
+     "note": "Gb6",
+     "cents": -28,
+     "prominence_db": 12.1,
+     "level_db": -32.1,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1110.4,
+     "note": "Db6",
+     "cents": 3,
+     "prominence_db": 13.4,
+     "level_db": -37.1,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 2528.3,
+     "note": "Eb7",
+     "cents": 27,
+     "prominence_db": 12.8,
+     "level_db": -37.8,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "glass_nudge",
+   "duration": 0.226,
+   "lufs_i": -18.6,
+   "lufs_m_max": -18.6,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "glass_set_stone",
+   "duration": 0.403,
+   "lufs_i": -20.8,
+   "lufs_m_max": -20.8,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [
+    {
+     "hz": 990.2,
+     "note": "B5",
+     "cents": 4,
+     "prominence_db": 23.2,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 187.5,
+     "note": "Gb3",
+     "cents": 23,
+     "prominence_db": 26.7,
+     "level_db": -4.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 199.2,
+     "note": "G3",
+     "cents": 28,
+     "prominence_db": 25.9,
+     "level_db": -4.7,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 966.8,
+     "note": "B5",
+     "cents": -37,
+     "prominence_db": 18.1,
+     "level_db": -5.7,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1013.7,
+     "note": "B5",
+     "cents": 45,
+     "prominence_db": 12.4,
+     "level_db": -10.4,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 231.4,
+     "note": "Bb3",
+     "cents": -12,
+     "prominence_db": 15.3,
+     "level_db": -15.3,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "crane_truck_pass",
+   "duration": 4.626,
+   "lufs_i": -14.6,
+   "lufs_m_max": -11.8,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": "C1 firing, C4 whine (faint)",
+   "measured_peak": "C2 -11c (65.0 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 64.5,
+     "note": "C2",
+     "cents": -25,
+     "prominence_db": 27.2,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 96.7,
+     "note": "G2",
+     "cents": -23,
+     "prominence_db": 18.5,
+     "level_db": -8.1,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 131.8,
+     "note": "C3",
+     "cents": 13,
+     "prominence_db": 15.4,
+     "level_db": -11.2,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "palette_step_F",
+   "duration": 0.625,
+   "lufs_i": -17.8,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -3.69,
+   "loop": false,
+   "pitch": "F",
+   "measured_peak": "F2 +4c (87.5 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 87.9,
+     "note": "F2",
+     "cents": 12,
+     "prominence_db": 48.9,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "palette_step_Ab",
+   "duration": 0.64,
+   "lufs_i": -17.6,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -4.35,
+   "loop": false,
+   "pitch": "Ab",
+   "measured_peak": "Ab2 +0c (103.8 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 105.5,
+     "note": "Ab2",
+     "cents": 27,
+     "prominence_db": 46.7,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "palette_step_C",
+   "duration": 0.636,
+   "lufs_i": -17.7,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -4.62,
+   "loop": false,
+   "pitch": "C",
+   "measured_peak": "C3 +1c (130.9 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 131.8,
+     "note": "C3",
+     "cents": 13,
+     "prominence_db": 48.3,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "whip_air",
+   "duration": 0.35,
+   "lufs_i": -14.4,
+   "lufs_m_max": -14.4,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "spotlight_swing",
+   "duration": 1.372,
+   "lufs_i": -18.4,
+   "lufs_m_max": -16.1,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": "F2 hum",
+   "measured_peak": "F2 +1c (87.3 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 87.9,
+     "note": "F2",
+     "cents": 12,
+     "prominence_db": 18.9,
+     "level_db": -5.1,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "slot_whir",
+   "duration": 1.185,
+   "lufs_i": -15.4,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -7.62,
+   "loop": false,
+   "pitch": "F4 motor",
+   "measured_peak": "F4 +0c (349.2 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 348.6,
+     "note": "F4",
+     "cents": -3,
+     "prominence_db": 32.9,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 175.8,
+     "note": "F3",
+     "cents": 12,
+     "prominence_db": 23.0,
+     "level_db": -10.6,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 524.4,
+     "note": "C5",
+     "cents": 4,
+     "prominence_db": 23.0,
+     "level_db": -16.6,
+     "overtone_of_F": true
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "hourglass_flip",
+   "duration": 0.702,
+   "lufs_i": -21.4,
+   "lufs_m_max": -20.7,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": "C glass",
+   "measured_peak": "F3 -18c (172.9 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 6864.3,
+     "note": "A8",
+     "cents": -44,
+     "prominence_db": 12.0,
+     "level_db": -22.4,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "sand_trickle",
+   "duration": 2.5,
+   "lufs_i": -14.0,
+   "lufs_m_max": -13.4,
+   "true_peak_db": -5.76,
+   "loop": true,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": [],
+   "seam": {
+    "jump_over_median_step": 1.13,
+    "last50ms_db": -20.7,
+    "first50ms_db": -20.6
+   }
+  },
+  {
+   "id": "sand_last_grain",
+   "duration": 0.352,
+   "lufs_i": -14.9,
+   "lufs_m_max": -14.9,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "sand_fall",
+   "duration": 1.366,
+   "lufs_i": -17.7,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -6.29,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "glass_strain_1",
+   "duration": 0.638,
+   "lufs_i": -15.2,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -2.87,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "glass_strain_2",
+   "duration": 0.651,
+   "lufs_i": -16.4,
+   "lufs_m_max": -14.4,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "glass_strain_3",
+   "duration": 0.569,
+   "lufs_i": -14.3,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -3.6,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "extinguisher_pin",
+   "duration": 0.47,
+   "lufs_i": -15.6,
+   "lufs_m_max": -15.6,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "extinguisher_spray",
+   "duration": 1.528,
+   "lufs_i": -15.4,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -7.19,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "extinguisher_spray_long",
+   "duration": 2.588,
+   "lufs_i": -14.0,
+   "lufs_m_max": -12.6,
+   "true_peak_db": -4.12,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "chair_unfold",
+   "duration": 1.206,
+   "lufs_i": -16.5,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -2.31,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "screw_turn_1",
+   "duration": 0.469,
+   "lufs_i": -16.1,
+   "lufs_m_max": -16.1,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "screw_turn_2",
+   "duration": 0.495,
+   "lufs_i": -14.1,
+   "lufs_m_max": -14.1,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "screw_turn_3",
+   "duration": 0.473,
+   "lufs_i": -14.6,
+   "lufs_m_max": -14.6,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "screw_turn_4",
+   "duration": 0.467,
+   "lufs_i": -16.8,
+   "lufs_m_max": -16.8,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "nameplate_off",
+   "duration": 0.245,
+   "lufs_i": -16.6,
+   "lufs_m_max": -16.6,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "tile_land_1",
+   "duration": 0.442,
+   "lufs_i": -18.8,
+   "lufs_m_max": -18.8,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": "F3",
+   "measured_peak": "F2 +19c (88.3 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 87.9,
+     "note": "F2",
+     "cents": 12,
+     "prominence_db": 31.0,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1224.6,
+     "note": "Eb6",
+     "cents": -28,
+     "prominence_db": 13.6,
+     "level_db": -35.4,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 864.3,
+     "note": "A5",
+     "cents": -31,
+     "prominence_db": 14.1,
+     "level_db": -37.1,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 2100.6,
+     "note": "C7",
+     "cents": 6,
+     "prominence_db": 15.3,
+     "level_db": -39.8,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 3480.5,
+     "note": "A7",
+     "cents": -20,
+     "prominence_db": 15.2,
+     "level_db": -52.7,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 3501.0,
+     "note": "A7",
+     "cents": -9,
+     "prominence_db": 14.7,
+     "level_db": -53.2,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "tile_land_2",
+   "duration": 0.432,
+   "lufs_i": -19.2,
+   "lufs_m_max": -19.2,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": "Ab3",
+   "measured_peak": "Ab2 -6c (103.5 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 102.5,
+     "note": "Ab2",
+     "cents": -22,
+     "prominence_db": 33.7,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 149.4,
+     "note": "D3",
+     "cents": 30,
+     "prominence_db": 13.4,
+     "level_db": -19.5,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 738.3,
+     "note": "Gb5",
+     "cents": -4,
+     "prominence_db": 12.9,
+     "level_db": -29.6,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 711.9,
+     "note": "F5",
+     "cents": 33,
+     "prominence_db": 13.8,
+     "level_db": -29.7,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 439.5,
+     "note": "A4",
+     "cents": -2,
+     "prominence_db": 19.6,
+     "level_db": -31.2,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 457.0,
+     "note": "Bb4",
+     "cents": -34,
+     "prominence_db": 17.2,
+     "level_db": -31.3,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "tile_land_3",
+   "duration": 0.462,
+   "lufs_i": -17.8,
+   "lufs_m_max": -17.8,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": "C4",
+   "measured_peak": "C3 +1c (130.9 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 131.8,
+     "note": "C3",
+     "cents": 13,
+     "prominence_db": 34.6,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 172.9,
+     "note": "F3",
+     "cents": -18,
+     "prominence_db": 13.4,
+     "level_db": -19.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 550.8,
+     "note": "Db5",
+     "cents": -11,
+     "prominence_db": 17.7,
+     "level_db": -27.6,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1051.8,
+     "note": "C6",
+     "cents": 9,
+     "prominence_db": 14.9,
+     "level_db": -34.7,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 884.8,
+     "note": "A5",
+     "cents": 9,
+     "prominence_db": 12.5,
+     "level_db": -36.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 864.3,
+     "note": "A5",
+     "cents": -31,
+     "prominence_db": 12.1,
+     "level_db": -36.5,
+     "overtone_of_F": true
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "tile_land_4",
+   "duration": 0.466,
+   "lufs_i": -19.1,
+   "lufs_m_max": -19.1,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": "Eb4",
+   "measured_peak": "Eb3 +5c (156.0 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 155.3,
+     "note": "Eb3",
+     "cents": -3,
+     "prominence_db": 33.1,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 190.4,
+     "note": "G3",
+     "cents": -50,
+     "prominence_db": 16.1,
+     "level_db": -13.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 668.0,
+     "note": "E5",
+     "cents": 23,
+     "prominence_db": 14.8,
+     "level_db": -21.5,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1227.5,
+     "note": "Eb6",
+     "cents": -24,
+     "prominence_db": 21.1,
+     "level_db": -30.5,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 2496.1,
+     "note": "Eb7",
+     "cents": 5,
+     "prominence_db": 20.8,
+     "level_db": -33.7,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 2475.6,
+     "note": "Eb7",
+     "cents": -9,
+     "prominence_db": 20.8,
+     "level_db": -35.1,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "tile_land_ten",
+   "duration": 1.222,
+   "lufs_i": -15.7,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -1.17,
+   "loop": false,
+   "pitch": "F minor thocks",
+   "measured_peak": "F3 -45c (170.1 Hz)",
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "tile_land_hundreds",
+   "duration": 2.876,
+   "lufs_i": -15.3,
+   "lufs_m_max": -11.9,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": "F minor thocks",
+   "measured_peak": "C3 +13c (131.8 Hz)",
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "tile_shove",
+   "duration": 1.432,
+   "lufs_i": -19.4,
+   "lufs_m_max": -16.9,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [
+    {
+     "hz": 178.7,
+     "note": "F3",
+     "cents": 40,
+     "prominence_db": 26.3,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 360.4,
+     "note": "Gb4",
+     "cents": -46,
+     "prominence_db": 20.6,
+     "level_db": -0.1,
+     "overtone_of_F": true
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "footnote_sparks",
+   "duration": 1.06,
+   "lufs_i": -16.1,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": "F5-Eb6 glints",
+   "measured_peak": "Ab5 -25c (818.8 Hz)",
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "heart_rise_1",
+   "duration": 1.367,
+   "lufs_i": -17.6,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -7.92,
+   "loop": false,
+   "pitch": "F5 -> C6",
+   "measured_peak": "C6 +1c (1047.0 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 1045.9,
+     "note": "C6",
+     "cents": -1,
+     "prominence_db": 38.7,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 697.3,
+     "note": "F5",
+     "cents": -3,
+     "prominence_db": 38.5,
+     "level_db": -4.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 5674.8,
+     "note": "F8",
+     "cents": 27,
+     "prominence_db": 20.7,
+     "level_db": -44.7,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "heart_rise_2",
+   "duration": 1.383,
+   "lufs_i": -17.6,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -7.28,
+   "loop": false,
+   "pitch": "Ab5 -> Eb6",
+   "measured_peak": "Eb6 +1c (1245.1 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 1245.1,
+     "note": "Eb6",
+     "cents": 1,
+     "prominence_db": 38.7,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 829.1,
+     "note": "Ab5",
+     "cents": -3,
+     "prominence_db": 34.8,
+     "level_db": -5.8,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "heart_rise_3",
+   "duration": 1.342,
+   "lufs_i": -17.8,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -7.9,
+   "loop": false,
+   "pitch": "C6 -> F6",
+   "measured_peak": "F6 +1c (1397.6 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 1397.5,
+     "note": "F6",
+     "cents": 1,
+     "prominence_db": 38.2,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1045.9,
+     "note": "C6",
+     "cents": -1,
+     "prominence_db": 41.8,
+     "level_db": -1.5,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "heart_tap_1",
+   "duration": 0.178,
+   "lufs_i": -25.7,
+   "lufs_m_max": -25.7,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": "C6",
+   "measured_peak": "C6 +1c (1047.0 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 2091.8,
+     "note": "C7",
+     "cents": -1,
+     "prominence_db": 13.2,
+     "level_db": -25.6,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "heart_tap_2",
+   "duration": 0.178,
+   "lufs_i": -24.0,
+   "lufs_m_max": -24.0,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": "Eb6",
+   "measured_peak": "Eb6 +4c (1247.7 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 6175.8,
+     "note": "G8",
+     "cents": -27,
+     "prominence_db": 12.5,
+     "level_db": -53.8,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 6196.3,
+     "note": "G8",
+     "cents": -21,
+     "prominence_db": 13.0,
+     "level_db": -54.9,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "heart_tap_3",
+   "duration": 0.169,
+   "lufs_i": -25.2,
+   "lufs_m_max": -25.2,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": "F6",
+   "measured_peak": "F6 +8c (1403.7 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 2821.3,
+     "note": "F7",
+     "cents": 17,
+     "prominence_db": 13.2,
+     "level_db": -14.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1649.4,
+     "note": "Ab6",
+     "cents": -12,
+     "prominence_db": 12.2,
+     "level_db": -28.9,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "counter_roll",
+   "duration": 0.46,
+   "lufs_i": -17.4,
+   "lufs_m_max": -17.4,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "mouse_scroll",
+   "duration": 1.515,
+   "lufs_i": -22.7,
+   "lufs_m_max": -21.1,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "cloth_rustle",
+   "duration": 0.552,
+   "lufs_i": -14.8,
+   "lufs_m_max": -14.0,
+   "true_peak_db": -2.97,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "typing_fast_loop",
+   "duration": 5.0,
+   "lufs_i": -19.6,
+   "lufs_m_max": -16.1,
+   "true_peak_db": -1.0,
+   "loop": true,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": [],
+   "seam": {
+    "jump_over_median_step": 1.06,
+    "last50ms_db": -19.1,
+    "first50ms_db": -17.6
+   }
+  },
+  {
+   "id": "vault_hum_F",
+   "duration": 10.0,
+   "lufs_i": -14.0,
+   "lufs_m_max": -13.3,
+   "true_peak_db": -8.02,
+   "loop": true,
+   "pitch": "F2 hum, F3 + C4 body; G6/Db7/F7 glints",
+   "measured_peak": "F2 +1c (87.3 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 87.9,
+     "note": "F2",
+     "cents": 12,
+     "prominence_db": 48.8,
+     "level_db": 0.0,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 175.8,
+     "note": "F3",
+     "cents": 12,
+     "prominence_db": 45.4,
+     "level_db": -3.0,
+     "overtone_of_F": true
+    },
+    {
+     "hz": 260.7,
+     "note": "C4",
+     "cents": -6,
+     "prominence_db": 38.9,
+     "level_db": -11.4,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 348.6,
+     "note": "F4",
+     "cents": -3,
+     "prominence_db": 32.7,
+     "level_db": -19.2,
+     "overtone_of_F": true
+    },
+    {
+     "hz": 524.4,
+     "note": "C5",
+     "cents": 4,
+     "prominence_db": 29.3,
+     "level_db": -25.2,
+     "overtone_of_F": true
+    },
+    {
+     "hz": 2217.8,
+     "note": "Db7",
+     "cents": 0,
+     "prominence_db": 26.9,
+     "level_db": -62.9,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": [],
+   "seam": {
+    "jump_over_median_step": 1.14,
+    "last50ms_db": -15.0,
+    "first50ms_db": -15.3
+   }
+  },
+  {
+   "id": "crowd_hush",
+   "duration": 2.411,
+   "lufs_i": -15.1,
+   "lufs_m_max": -10.7,
+   "true_peak_db": -1.0,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "crowd_stir",
+   "duration": 2.6,
+   "lufs_i": -14.0,
+   "lufs_m_max": -10.6,
+   "true_peak_db": -1.07,
+   "loop": false,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": []
+  },
+  {
+   "id": "bed_suite",
+   "duration": 20.0,
+   "lufs_i": -14.1,
+   "lufs_m_max": -13.0,
+   "true_peak_db": -1.0,
+   "loop": true,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [
+    {
+     "hz": 1245.1,
+     "note": "Eb6",
+     "cents": 1,
+     "prominence_db": 54.5,
+     "level_db": -53.2,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1570.3,
+     "note": "G6",
+     "cents": 3,
+     "prominence_db": 54.5,
+     "level_db": -55.3,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 2077.1,
+     "note": "C7",
+     "cents": -13,
+     "prominence_db": 54.2,
+     "level_db": -63.7,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 2616.2,
+     "note": "E7",
+     "cents": -14,
+     "prominence_db": 54.2,
+     "level_db": -67.2,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 2906.2,
+     "note": "Gb7",
+     "cents": -32,
+     "prominence_db": 54.3,
+     "level_db": -72.3,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 3662.1,
+     "note": "Bb7",
+     "cents": -31,
+     "prominence_db": 39.8,
+     "level_db": -76.3,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 7060.5,
+     "note": "A8",
+     "cents": 5,
+     "prominence_db": 53.6,
+     "level_db": -96.6,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": [],
+   "seam": {
+    "jump_over_median_step": 1.16,
+    "last50ms_db": -14.7,
+    "first50ms_db": -15.6
+   }
+  },
+  {
+   "id": "bed_tpool",
+   "duration": 20.0,
+   "lufs_i": -18.5,
+   "lufs_m_max": -13.1,
+   "true_peak_db": -1.0,
+   "loop": true,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": [],
+   "seam": {
+    "jump_over_median_step": 0.51,
+    "last50ms_db": -25.5,
+    "first50ms_db": -25.9
+   }
+  },
+  {
+   "id": "bed_office_day",
+   "duration": 20.0,
+   "lufs_i": -14.0,
+   "lufs_m_max": -12.7,
+   "true_peak_db": -1.87,
+   "loop": true,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": [],
+   "seam": {
+    "jump_over_median_step": 0.83,
+    "last50ms_db": -14.2,
+    "first50ms_db": -14.6
+   }
+  },
+  {
+   "id": "bed_office_evening",
+   "duration": 20.0,
+   "lufs_i": -14.0,
+   "lufs_m_max": -12.0,
+   "true_peak_db": -1.45,
+   "loop": true,
+   "pitch": "F2 lamp hum (faint)",
+   "measured_peak": "F1 -25c (43.0 Hz)",
+   "tonal_peaks": [],
+   "a_natural_tonal": [],
+   "seam": {
+    "jump_over_median_step": 1.24,
+    "last50ms_db": -14.2,
+    "first50ms_db": -13.8
+   }
+  },
+  {
+   "id": "bed_allhands",
+   "duration": 20.0,
+   "lufs_i": -14.6,
+   "lufs_m_max": -10.6,
+   "true_peak_db": -1.0,
+   "loop": true,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": [],
+   "seam": {
+    "jump_over_median_step": 1.39,
+    "last50ms_db": -16.0,
+    "first50ms_db": -16.5
+   }
+  },
+  {
+   "id": "bed_boardroom_night",
+   "duration": 20.0,
+   "lufs_i": -14.0,
+   "lufs_m_max": -12.5,
+   "true_peak_db": -1.51,
+   "loop": true,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": [],
+   "seam": {
+    "jump_over_median_step": 0.6,
+    "last50ms_db": -16.3,
+    "first50ms_db": -16.1
+   }
+  },
+  {
+   "id": "bed_boardroom_day",
+   "duration": 20.0,
+   "lufs_i": -14.4,
+   "lufs_m_max": -12.9,
+   "true_peak_db": -1.0,
+   "loop": true,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": [],
+   "seam": {
+    "jump_over_median_step": 2.0,
+    "last50ms_db": -17.4,
+    "first50ms_db": -15.9
+   }
+  },
+  {
+   "id": "bed_lighthouse",
+   "duration": 20.0,
+   "lufs_i": -15.6,
+   "lufs_m_max": -11.9,
+   "true_peak_db": -1.0,
+   "loop": true,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": [],
+   "seam": {
+    "jump_over_median_step": 0.8,
+    "last50ms_db": -21.5,
+    "first50ms_db": -20.5
+   }
+  },
+  {
+   "id": "bed_cctv",
+   "duration": 20.0,
+   "lufs_i": -14.0,
+   "lufs_m_max": -13.6,
+   "true_peak_db": -3.34,
+   "loop": true,
+   "pitch": "Bb1 mains hum",
+   "measured_peak": "A3 +28c (223.6 Hz)",
+   "tonal_peaks": [],
+   "a_natural_tonal": [],
+   "seam": {
+    "jump_over_median_step": 1.11,
+    "last50ms_db": -17.4,
+    "first50ms_db": -16.9
+   }
+  },
+  {
+   "id": "bed_bullpen_packing",
+   "duration": 20.0,
+   "lufs_i": -14.6,
+   "lufs_m_max": -9.3,
+   "true_peak_db": -1.0,
+   "loop": true,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": [],
+   "seam": {
+    "jump_over_median_step": 0.32,
+    "last50ms_db": -19.1,
+    "first50ms_db": -19.7
+   }
+  },
+  {
+   "id": "bed_bullpen_unpack",
+   "duration": 20.0,
+   "lufs_i": -16.1,
+   "lufs_m_max": -12.8,
+   "true_peak_db": -1.0,
+   "loop": true,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": [],
+   "seam": {
+    "jump_over_median_step": 0.7,
+    "last50ms_db": -19.1,
+    "first50ms_db": -18.2
+   }
+  },
+  {
+   "id": "bed_fires",
+   "duration": 20.0,
+   "lufs_i": -16.5,
+   "lufs_m_max": -15.3,
+   "true_peak_db": -1.0,
+   "loop": true,
+   "pitch": null,
+   "measured_peak": null,
+   "tonal_peaks": [],
+   "a_natural_tonal": [],
+   "seam": {
+    "jump_over_median_step": 0.69,
+    "last50ms_db": -18.4,
+    "first50ms_db": -18.2
+   }
+  },
+  {
+   "id": "bed_lobby_night",
+   "duration": 20.0,
+   "lufs_i": -14.1,
+   "lufs_m_max": -13.2,
+   "true_peak_db": -1.0,
+   "loop": true,
+   "pitch": "F2 neon",
+   "measured_peak": "B1 +15c (62.3 Hz)",
+   "tonal_peaks": [
+    {
+     "hz": 697.3,
+     "note": "F5",
+     "cents": -3,
+     "prominence_db": 75.0,
+     "level_db": -19.9,
+     "overtone_of_F": false
+    },
+    {
+     "hz": 1048.8,
+     "note": "C6",
+     "cents": 4,
+     "prominence_db": 88.2,
+     "level_db": -25.9,
+     "overtone_of_F": false
+    }
+   ],
+   "a_natural_tonal": [],
+   "seam": {
+    "jump_over_median_step": 1.21,
+    "last50ms_db": -14.6,
+    "first50ms_db": -14.3
+   }
+  }
+ ]
+}

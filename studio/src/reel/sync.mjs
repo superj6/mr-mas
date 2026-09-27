@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-// Copy + lint the writers' reel timelines (show/reel/*.json) into studio/src/reel/data/, where the bundle reads them.
+// Copy + lint the writers' reel timelines (show/reel/*.json, and show/reel/<subfolder>/*.json one level down, e.g.
+// show/reel/ep01-full/) into studio/src/reel/data/ (flat), where the bundle reads them.
 // A file that doesn't parse is replaced by an error placeholder (the composition still exists and shows the error),
 // so one bad save never breaks the Remotion bundle for everyone else.
 //   node src/reel/sync.mjs            sync once + print a lint report
@@ -136,9 +137,26 @@ function lintManifest(o, files) {
   return {w, total: 0, n: chapters.length, generic: [], manifest: true};
 }
 
+// show/reel/*.json, plus one level of subfolders (show/reel/ep01-full/*.json, 2026-09-27): a subfolder's files land
+// in data/ flat under their own names, so a key stays the file's basename. A flat file wins a name clash (warned).
+const isJson = (f) => f.toLowerCase().endsWith('.json') && !f.startsWith('.');
+const subdirs = () => (fs.existsSync(SRC) ? fs.readdirSync(SRC, {withFileTypes: true}).filter((e) => e.isDirectory() && !/^[._]/.test(e.name)).map((e) => e.name).sort() : []);
+function listSources() {
+  const at = new Map();
+  const clash = [];
+  if (fs.existsSync(SRC)) for (const f of fs.readdirSync(SRC).filter(isJson).sort()) at.set(f, path.join(SRC, f));
+  for (const d of subdirs())
+    for (const f of fs.readdirSync(path.join(SRC, d)).filter(isJson).sort()) {
+      if (at.has(f)) clash.push(`${d}/${f} ignored: ${path.relative(SRC, at.get(f))} has the same name`);
+      else at.set(f, path.join(SRC, d, f));
+    }
+  return {at, clash};
+}
+
 function syncOnce() {
   fs.mkdirSync(DST, {recursive: true});
-  const files = fs.existsSync(SRC) ? fs.readdirSync(SRC).filter((f) => f.toLowerCase().endsWith('.json') && !f.startsWith('.')).sort() : [];
+  const {at, clash} = listSources();
+  const files = [...at.keys()].sort();
   const keep = new Set();
   let changed = 0;
   const report = [];
@@ -146,7 +164,7 @@ function syncOnce() {
     let obj;
     let err = '';
     try {
-      obj = JSON.parse(fs.readFileSync(path.join(SRC, f), 'utf8'));
+      obj = JSON.parse(fs.readFileSync(at.get(f), 'utf8'));
     } catch (e) {
       err = String(e.message || e).split('\n')[0];
       const m = f.match(/(\d+)/);
@@ -166,7 +184,8 @@ function syncOnce() {
   }
   for (const f of fs.readdirSync(DST)) if (f.endsWith('.json') && !keep.has(f)) (fs.unlinkSync(path.join(DST, f)), changed++);
   if (!QUIET) {
-    console.log(`reel sync: ${files.length} file(s) from ${SRC} -> ${DST} (${changed} changed)`);
+    console.log(`reel sync: ${files.length} file(s) from ${SRC} (+ ${subdirs().length} subfolder(s)) -> ${DST} (${changed} changed)`);
+    for (const c of clash) console.log(`  ! ${c}`);
     for (const r of report) {
       const id = 'reel-' + r.f.replace(/(\.manifest)?\.json$/i, '').replace(/^_+/, '').toLowerCase().replace(/[^a-z0-9-]+/g, '-');
       if (r.manifest) console.log(`  ${r.f.padEnd(24)} ${id.padEnd(24)} ${String(r.n).padStart(3)} chapters  (episode manifest)  ${r.w.length ? r.w.length + ' warning(s)' : 'ok'}`);
@@ -185,7 +204,7 @@ syncOnce();
 if (args.has('--watch')) {
   fs.mkdirSync(SRC, {recursive: true});
   let t = null;
-  fs.watch(SRC, () => {
+  const kick = () => {
     clearTimeout(t);
     t = setTimeout(() => {
       try {
@@ -194,6 +213,8 @@ if (args.has('--watch')) {
         console.error('sync failed:', e);
       }
     }, 400);
-  });
-  console.log(`watching ${SRC} …`);
+  };
+  fs.watch(SRC, kick);
+  for (const d of subdirs()) fs.watch(path.join(SRC, d), kick); // (a subfolder made after start needs a restart)
+  console.log(`watching ${SRC} (+ its subfolders) …`);
 }

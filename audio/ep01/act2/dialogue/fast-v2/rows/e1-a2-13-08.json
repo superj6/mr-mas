@@ -1,0 +1,221 @@
+{
+ "id": "e1-a2-13-08",
+ "scene": "13",
+ "speaker": "TASYA",
+ "speaker_slug": "tasya",
+ "text": "We own camera two.",
+ "spoken_as": "We own camera two.",
+ "delivery": "at the row's far end; pleasantly",
+ "tag": "[INVENTED · scene-craft pass: the line now has a shot]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "W",
+ "shot_id": "W",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 1.9,
+ "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-08.wav",
+ "mp3": null,
+ "duration_s": 2.475,
+ "frames_24": 60,
+ "voiced_span_s": 1.32,
+ "pace": {
+  "words": 4,
+  "wpm": 181.8,
+  "speed": 0.88,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.88,
+   "speed_band": [
+    0.88,
+    0.96
+   ],
+   "articulation_guide_sps": [
+    3.8,
+    4.4
+   ],
+   "turn_wpm_guide": [
+    125,
+    145
+   ],
+   "intent": "at the row's far end; pleasantly"
+  },
+  "measured": {
+   "wpm": 181.8,
+   "articulation_sps": 4.55,
+   "syllables": 6,
+   "span_s": 1.32,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.5,
+  "audible_out_s": 1.82
+ },
+ "placement": {
+  "gap_before_s": 0.5,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_eric (Kokoro-82M stock) · b-eric-warm · speed 0.880",
+ "voiceId": "am_eric",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch -1.5 st",
+  "low shelf +2 dB @180 Hz",
+  "peak -1.5 dB @350 Hz Q1.0",
+  "high shelf +1.5 dB @6000 Hz",
+  "comp 2.0:1 @-24 dB (12/150 ms)",
+  "Kokoro speed 0.880 (the plan speed; tasya band 0.88-0.96); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "O"
+  },
+  {
+   "t": 0.625,
+   "f": 15,
+   "shape": "E"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "O"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "E"
+  },
+  {
+   "t": 0.958,
+   "f": 23,
+   "shape": "A"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "M"
+  },
+  {
+   "t": 1.167,
+   "f": 28,
+   "shape": "E"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "O"
+  },
+  {
+   "t": 1.833,
+   "f": 44,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "We",
+   "t0": 0.535,
+   "t1": 0.735,
+   "f0": 13,
+   "f1": 18,
+   "ph": "wˌi"
+  },
+  {
+   "w": "own",
+   "t0": 0.735,
+   "t1": 0.935,
+   "f0": 18,
+   "f1": 22,
+   "ph": "ˈOn"
+  },
+  {
+   "w": "camera",
+   "t0": 0.935,
+   "t1": 1.372,
+   "f0": 22,
+   "f1": 33,
+   "ph": "kˈæməɹə"
+  },
+  {
+   "w": "two",
+   "t0": 1.372,
+   "t1": 1.84,
+   "f0": 33,
+   "f1": 44,
+   "ph": "tˈu"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.84,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 156.3,
+  "f0_range_st": 12.9,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "We own camera too",
+  "cer": 0.071,
+  "word_recall_nonames": 0.75,
+  "logprob": -0.501,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 15.0,
+  "decay_ms": 165.0,
+  "decay_to_60_s": 0.205
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "90c45f856c49f3e5",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 2,
+  "wall_s": 13.41,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 2
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 3.69,
+   "rechecked_alone": false
+  }
+ }
+}

@@ -1,0 +1,369 @@
+{
+ "id": "e1-a1-8-02",
+ "scene": "8",
+ "speaker": "NIRB",
+ "speaker_slug": "nirb",
+ "text": "We heard the siren. Is it search? Is search all right?",
+ "spoken_as": "We heard the siren.{s0.4} Is it search?{s0.3} Is search all right?",
+ "delivery": "shading his eyes, reaching the top step",
+ "tag": "[INVENTED · the siren is the lead-in; the line says nothing about who called them. Second pass: \"Is it the search thing?\" read as a placeholder (the naturalness read); a founder asks after the thing he built]",
+ "mode": "call",
+ "voiced_in_cut": true,
+ "on_camera": "monitor",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "POV",
+ "shot_id": "POV",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": "call",
+ "room": null,
+ "est_s": 4.6,
+ "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-8-02.wav",
+ "mp3": null,
+ "duration_s": 4.945,
+ "frames_24": 119,
+ "voiced_span_s": 3.9,
+ "pace": {
+  "words": 11,
+  "wpm": 169.2,
+  "speed": 1.02,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.02,
+   "speed_band": [
+    1.01,
+    1.09
+   ],
+   "articulation_guide_sps": [
+    4.4,
+    5.0
+   ],
+   "turn_wpm_guide": [
+    150,
+    170
+   ],
+   "intent": "shading his eyes, reaching the top step"
+  },
+  "measured": {
+   "wpm": 169.2,
+   "articulation_sps": 3.75,
+   "syllables": 12,
+   "span_s": 3.9,
+   "pauses_s": [
+    0.4,
+    0.3
+   ]
+  },
+  "longest_internal_gap_s": 0.4,
+  "audible_in_s": 0.51,
+  "audible_out_s": 4.41
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_eric*0.50+am_liam*0.50 (Kokoro-82M stock) · c-eric-liam-curious · speed 1.020",
+ "voiceId": "am_eric*0.50+am_liam*0.50",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch +1 st",
+  "peak -1.5 dB @300 Hz Q1.0",
+  "peak +2 dB @4500 Hz Q0.9",
+  "comp 2.5:1 @-22 dB (6/100 ms)",
+  "then the call chain: HPF 200 Hz; LPF 7000 Hz; peak +1.5 dB @1800 Hz Q1.0; comp 2.5:1 @-22 dB (5/90 ms); -16 LUFS",
+  "Kokoro speed 1.020 (the plan speed; nirb band 1.01-1.09); 3 whole reads, joined in room tone; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "O"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "E"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "O"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "E"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "A"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "E"
+  },
+  {
+   "t": 1.667,
+   "f": 40,
+   "shape": "rest"
+  },
+  {
+   "t": 2.042,
+   "f": 49,
+   "shape": "E"
+  },
+  {
+   "t": 2.5,
+   "f": 60,
+   "shape": "O"
+  },
+  {
+   "t": 2.708,
+   "f": 65,
+   "shape": "E"
+  },
+  {
+   "t": 2.917,
+   "f": 70,
+   "shape": "rest"
+  },
+  {
+   "t": 3.167,
+   "f": 76,
+   "shape": "E"
+  },
+  {
+   "t": 3.417,
+   "f": 82,
+   "shape": "O"
+  },
+  {
+   "t": 3.542,
+   "f": 85,
+   "shape": "E"
+  },
+  {
+   "t": 3.667,
+   "f": 88,
+   "shape": "O"
+  },
+  {
+   "t": 3.833,
+   "f": 92,
+   "shape": "E"
+  },
+  {
+   "t": 4.0,
+   "f": 96,
+   "shape": "A"
+  },
+  {
+   "t": 4.333,
+   "f": 104,
+   "shape": "E"
+  },
+  {
+   "t": 4.417,
+   "f": 106,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "We",
+   "t0": 0.51,
+   "t1": 0.66,
+   "f0": 12,
+   "f1": 16,
+   "ph": "wˌi"
+  },
+  {
+   "w": "heard",
+   "t0": 0.66,
+   "t1": 0.898,
+   "f0": 16,
+   "f1": 22,
+   "ph": "hˈɜɹd"
+  },
+  {
+   "w": "the",
+   "t0": 0.898,
+   "t1": 1.022,
+   "f0": 22,
+   "f1": 25,
+   "ph": "ðə"
+  },
+  {
+   "w": "siren",
+   "t0": 1.022,
+   "t1": 1.66,
+   "f0": 25,
+   "f1": 40,
+   "ph": "sˈIɹən"
+  },
+  {
+   "w": "Is",
+   "t0": 2.06,
+   "t1": 2.235,
+   "f0": 49,
+   "f1": 54,
+   "ph": "ˌɪz"
+  },
+  {
+   "w": "it",
+   "t0": 2.235,
+   "t1": 2.398,
+   "f0": 54,
+   "f1": 58,
+   "ph": "ɪt"
+  },
+  {
+   "w": "search",
+   "t0": 2.398,
+   "t1": 2.91,
+   "f0": 58,
+   "f1": 70,
+   "ph": "sˈɜɹʧ"
+  },
+  {
+   "w": "Is",
+   "t0": 3.165,
+   "t1": 3.348,
+   "f0": 76,
+   "f1": 80,
+   "ph": "ˌɪz"
+  },
+  {
+   "w": "search",
+   "t0": 3.348,
+   "t1": 3.685,
+   "f0": 80,
+   "f1": 88,
+   "ph": "sˈɜɹʧ"
+  },
+  {
+   "w": "all",
+   "t0": 3.685,
+   "t1": 3.885,
+   "f0": 88,
+   "f1": 93,
+   "ph": "ˈɔl"
+  },
+  {
+   "w": "right",
+   "t0": 3.885,
+   "t1": 4.43,
+   "f0": 93,
+   "f1": 106,
+   "ph": "ɹˈIt"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -2.81,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 150.8,
+  "f0_range_st": 15.5,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "We heard the siren. Is it search? Is search all right?",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.305,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.45,
+  "rise_ms": 20.0,
+  "decay_ms": 85.0,
+  "decay_to_60_s": 0.085
+ },
+ "clean": {
+  "file": "audio/ep01/act1/dialogue/fast-v1/clean/e1-a1-8-02.wav",
+  "note": "the dry read (no call chain), -16 LUFS"
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": null,
+   "word": "siren",
+   "tts_s": null,
+   "target_s": 0.4,
+   "final_s": 0.4,
+   "opened_s": 0.0,
+   "joined_speech": false,
+   "dip_db": null,
+   "breath": false,
+   "split": true,
+   "point_s": 1.17,
+   "crossfade_ms": [
+    0,
+    0
+   ]
+  },
+  {
+   "after_word": null,
+   "word": "search",
+   "tts_s": null,
+   "target_s": 0.3,
+   "final_s": 0.3,
+   "opened_s": 0.0,
+   "joined_speech": false,
+   "dip_db": null,
+   "breath": false,
+   "split": true,
+   "point_s": 2.43,
+   "crossfade_ms": [
+    0,
+    0
+   ]
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "db2bdc18c475381f",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 7.38,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 2.64,
+   "rechecked_alone": false
+  }
+ }
+}

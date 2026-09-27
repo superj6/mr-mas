@@ -1,0 +1,403 @@
+{
+ "id": "e1-a1-9-10",
+ "scene": "9",
+ "speaker": "TASYA",
+ "speaker_slug": "tasya",
+ "text": "Oh, yes. \"…I want people to know that we made them dance…\"",
+ "spoken_as": "Oh, yes.{s0.45} I want people to know{s0.25} that we made them dance.",
+ "delivery": "delighted, watching it; to Gerg, as if the answer were obvious",
+ "tag": "[V · FEB 7, 2023 · said to The Verge, about Elgoog (mid §2). Act One fix pass (2026-09-27): \"Oh, yes.\" is INVENTED (outside the quotation marks), a two-word answer to Gerg's question, so the real line plays as his reply and not as a clip; the newcomer read heard the bare quote \"like a clip, not a reply\". The quotation itself is unchanged. Dialogue pass 5: ellipses at both ends, because the source runs \"And I want people to know that we made them dance, and I think…\" (the facts review; the notation's \"trimmed quotes carry ellipses\"). Record it as one finished sentence, landing on \"dance\"; the dots are trim marks, not a trail. Second pass: tagged V, as facts §B and §E log it (\"per mid · OK\"); it read V/K, which by the notation would have needed `RECONSTRUCTED`. The facts owner logs the timeline's disagreement]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "W",
+ "shot_id": "W",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 5.0,
+ "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-9-10.wav",
+ "mp3": null,
+ "duration_s": 5.51,
+ "frames_24": 133,
+ "voiced_span_s": 4.31,
+ "pace": {
+  "words": 12,
+  "wpm": 167.1,
+  "speed": 0.86,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.86,
+   "speed_band": [
+    0.88,
+    0.96
+   ],
+   "articulation_guide_sps": [
+    3.8,
+    4.4
+   ],
+   "turn_wpm_guide": [
+    125,
+    145
+   ],
+   "intent": "delighted, watching it; to Gerg, as if the answer were obvious"
+  },
+  "measured": {
+   "wpm": 167.1,
+   "articulation_sps": 3.61,
+   "syllables": 13,
+   "span_s": 4.31,
+   "pauses_s": [
+    0.47,
+    0.24
+   ]
+  },
+  "longest_internal_gap_s": 0.47,
+  "audible_in_s": 0.51,
+  "audible_out_s": 4.82
+ },
+ "placement": {
+  "gap_before_s": 0.6,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_eric (Kokoro-82M stock) · b-eric-warm · speed 0.860",
+ "voiceId": "am_eric",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch -1.5 st",
+  "low shelf +2 dB @180 Hz",
+  "peak -1.5 dB @350 Hz Q1.0",
+  "high shelf +1.5 dB @6000 Hz",
+  "comp 2.0:1 @-24 dB (12/150 ms)",
+  "Kokoro speed 0.860 (the plan speed; tasya band 0.88-0.96); 3 whole reads, joined in room tone; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "O"
+  },
+  {
+   "t": 0.833,
+   "f": 20,
+   "shape": "E"
+  },
+  {
+   "t": 0.958,
+   "f": 23,
+   "shape": "A"
+  },
+  {
+   "t": 1.25,
+   "f": 30,
+   "shape": "E"
+  },
+  {
+   "t": 1.375,
+   "f": 33,
+   "shape": "rest"
+  },
+  {
+   "t": 1.875,
+   "f": 45,
+   "shape": "A"
+  },
+  {
+   "t": 2.0,
+   "f": 48,
+   "shape": "O"
+  },
+  {
+   "t": 2.083,
+   "f": 50,
+   "shape": "A"
+  },
+  {
+   "t": 2.167,
+   "f": 52,
+   "shape": "E"
+  },
+  {
+   "t": 2.333,
+   "f": 56,
+   "shape": "A"
+  },
+  {
+   "t": 2.417,
+   "f": 58,
+   "shape": "M"
+  },
+  {
+   "t": 2.5,
+   "f": 60,
+   "shape": "E"
+  },
+  {
+   "t": 2.875,
+   "f": 69,
+   "shape": "O"
+  },
+  {
+   "t": 3.167,
+   "f": 76,
+   "shape": "rest"
+  },
+  {
+   "t": 3.458,
+   "f": 83,
+   "shape": "A"
+  },
+  {
+   "t": 3.542,
+   "f": 85,
+   "shape": "E"
+  },
+  {
+   "t": 3.75,
+   "f": 90,
+   "shape": "M"
+  },
+  {
+   "t": 3.833,
+   "f": 92,
+   "shape": "A"
+  },
+  {
+   "t": 3.917,
+   "f": 94,
+   "shape": "E"
+  },
+  {
+   "t": 4.0,
+   "f": 96,
+   "shape": "A"
+  },
+  {
+   "t": 4.125,
+   "f": 99,
+   "shape": "M"
+  },
+  {
+   "t": 4.208,
+   "f": 101,
+   "shape": "E"
+  },
+  {
+   "t": 4.292,
+   "f": 103,
+   "shape": "A"
+  },
+  {
+   "t": 4.583,
+   "f": 110,
+   "shape": "E"
+  },
+  {
+   "t": 4.833,
+   "f": 116,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Oh",
+   "t0": 0.59,
+   "t1": 0.765,
+   "f0": 14,
+   "f1": 18,
+   "ph": "ˈO"
+  },
+  {
+   "w": "yes",
+   "t0": 0.815,
+   "t1": 1.39,
+   "f0": 20,
+   "f1": 33,
+   "ph": "jˈɛs"
+  },
+  {
+   "w": "I",
+   "t0": 1.885,
+   "t1": 2.035,
+   "f0": 45,
+   "f1": 49,
+   "ph": "ˌI"
+  },
+  {
+   "w": "want",
+   "t0": 2.035,
+   "t1": 2.26,
+   "f0": 49,
+   "f1": 54,
+   "ph": "wˈɑnt"
+  },
+  {
+   "w": "people",
+   "t0": 2.26,
+   "t1": 2.61,
+   "f0": 54,
+   "f1": 63,
+   "ph": "pˈipᵊl"
+  },
+  {
+   "w": "to",
+   "t0": 2.61,
+   "t1": 2.735,
+   "f0": 63,
+   "f1": 66,
+   "ph": "tə"
+  },
+  {
+   "w": "know",
+   "t0": 2.735,
+   "t1": 3.15,
+   "f0": 66,
+   "f1": 76,
+   "ph": "nˈO"
+  },
+  {
+   "w": "that",
+   "t0": 3.405,
+   "t1": 3.605,
+   "f0": 82,
+   "f1": 87,
+   "ph": "ðæt"
+  },
+  {
+   "w": "we",
+   "t0": 3.605,
+   "t1": 3.755,
+   "f0": 87,
+   "f1": 90,
+   "ph": "wi"
+  },
+  {
+   "w": "made",
+   "t0": 3.755,
+   "t1": 3.968,
+   "f0": 90,
+   "f1": 95,
+   "ph": "mˌAd"
+  },
+  {
+   "w": "them",
+   "t0": 3.968,
+   "t1": 4.167,
+   "f0": 95,
+   "f1": 100,
+   "ph": "ðˌɛm"
+  },
+  {
+   "w": "dance",
+   "t0": 4.167,
+   "t1": 4.84,
+   "f0": 100,
+   "f1": 116,
+   "ph": "dˈæns"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.46,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.51,
+  "median_f0_hz": 147.7,
+  "f0_range_st": 13.7,
+  "f0_method": "pYIN (a4lib.analyse)",
+  "final_move_st": -8.4,
+  "asr": "Oh yes. I want people to know that we made them dance.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.181,
+  "align_median_s": 0.033,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.45,
+  "rise_ms": 30.0,
+  "decay_ms": 95.0,
+  "decay_to_60_s": 0.24
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": null,
+   "word": "yes",
+   "tts_s": null,
+   "target_s": 0.45,
+   "final_s": 0.45,
+   "opened_s": 0.0,
+   "joined_speech": false,
+   "dip_db": null,
+   "breath": false,
+   "split": true,
+   "point_s": 0.92,
+   "crossfade_ms": [
+    0,
+    0
+   ]
+  },
+  {
+   "after_word": null,
+   "word": "know",
+   "tts_s": null,
+   "target_s": 0.25,
+   "final_s": 0.25,
+   "opened_s": 0.0,
+   "joined_speech": false,
+   "dip_db": null,
+   "breath": false,
+   "split": true,
+   "point_s": 2.655,
+   "crossfade_ms": [
+    0,
+    0
+   ]
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "8ac73cc3ce923c3e",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 5.48,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": true,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 3,
+   "share_s": 0.94,
+   "rechecked_alone": false
+  }
+ }
+}

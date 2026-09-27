@@ -1,0 +1,74 @@
+{
+ "speech_cues": 126,
+ "sound_cues": 23,
+ "attached_sound": [
+  [
+   "[phone clatters]",
+   "a5-27-28"
+  ]
+ ],
+ "dropped_sound": [],
+ "lines": 101,
+ "labels": 57,
+ "max_cps": 27.3,
+ "over_cps": [
+  [
+   "a5-27-45.1",
+   27.3,
+   1.5
+  ],
+  [
+   "a5-27-31.3",
+   24.0,
+   2.88
+  ],
+  [
+   "a5-29-06.1",
+   23.7,
+   2.92
+  ],
+  [
+   "a5-30-10.2",
+   22.0,
+   3.46
+  ],
+  [
+   "a5-27-31.2",
+   21.3,
+   2.58
+  ],
+  [
+   "a5-27-35.1",
+   20.6,
+   2.08
+  ],
+  [
+   "a5-27-45.3",
+   20.4,
+   3.92
+  ],
+  [
+   "a5-27-27.1",
+   20.1,
+   1.54
+  ]
+ ],
+ "min_dur": 0.875,
+ "overlaps": [],
+ "lock_frame_diffs": [],
+ "act_seconds": 518.458,
+ "ad_cues": 58,
+ "ad_words": 432,
+ "ad_flags": [],
+ "ad_tight": [
+  "AD14",
+  "AD23",
+  "AD24",
+  "AD37",
+  "AD56"
+ ],
+ "ad_max_rate_syl_per_s": 4.21,
+ "warnings": [
+  "a5-27-31.3: ends 0.46 s before its speech does (the next cue overlaps it)"
+ ]
+}

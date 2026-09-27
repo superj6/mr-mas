@@ -1,0 +1,185 @@
+{
+ "id": "e1-a1-12-03",
+ "scene": "12",
+ "speaker": "NOLE",
+ "speaker_slug": "nole",
+ "text": "Next quarter.",
+ "spoken_as": "Next quarter.",
+ "delivery": null,
+ "tag": "[INVENTED · he moves it in time; it answers \"six months\"]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "W",
+ "shot_id": "W",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 1.2,
+ "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-12-03.wav",
+ "mp3": null,
+ "duration_s": 1.79,
+ "frames_24": 43,
+ "voiced_span_s": 0.83,
+ "pace": {
+  "words": 2,
+  "wpm": 144.6,
+  "speed": 1.04,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.04,
+   "speed_band": [
+    1.0,
+    1.08
+   ],
+   "articulation_guide_sps": [
+    4.8,
+    5.6
+   ],
+   "turn_wpm_guide": [
+    165,
+    185
+   ],
+   "intent": null
+  },
+  "measured": {
+   "wpm": 144.6,
+   "articulation_sps": 3.61,
+   "syllables": 3,
+   "span_s": 0.83,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.5,
+  "audible_out_s": 1.33
+ },
+ "placement": {
+  "gap_before_s": 0.35,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_fenrir (Kokoro-82M stock) · a-fenrir-burst (pass-1 pick, dry) · speed 1.040",
+ "voiceId": "am_fenrir",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 80 Hz",
+  "pitch 0",
+  "peak +1.5 dB @180 Hz Q0.9",
+  "peak +2 dB @2500 Hz Q1.0",
+  "comp 4.0:1 @-20 dB (3/60 ms)",
+  "tanh saturation drive 2.5 mix 0.25",
+  "Kokoro speed 1.040 (the centre of the band; nole band 1.00-1.08); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "A"
+  },
+  {
+   "t": 0.625,
+   "f": 15,
+   "shape": "E"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "O"
+  },
+  {
+   "t": 1.0,
+   "f": 24,
+   "shape": "E"
+  },
+  {
+   "t": 1.333,
+   "f": 32,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Next",
+   "t0": 0.47,
+   "t1": 0.755,
+   "f0": 11,
+   "f1": 18,
+   "ph": "nˈɛkst"
+  },
+  {
+   "w": "quarter",
+   "t0": 0.755,
+   "t1": 1.35,
+   "f0": 18,
+   "f1": 32,
+   "ph": "kwˈɔɹTəɹ"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -2.96,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 143.1,
+  "f0_range_st": 13.9,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Next quarter.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.264,
+  "align_median_s": 0.143,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 10.0,
+  "decay_ms": 100.0,
+  "decay_to_60_s": 0.015
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "ad0041e5e4561627",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 3,
+  "wall_s": 32.84,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 4,
+   "share_s": 2.64,
+   "rechecked_alone": false
+  }
+ }
+}

@@ -324,3 +324,12 @@ export const drawTasyaRoom = (b: Buf, footX: number, footY: number, p: TasyaRoom
   const fx = o.flip ? TASYA_W - 1 - TASYA_FOOT[0] : TASYA_FOOT[0];
   blitImg(b, tasyaRoom(p), footX - fx, footY - TASYA_FOOT[1], {flip: o.flip, map: o.map, mask: o.mask});
 };
+
+// Act Four v5 art pass (a4p5), additive exports only (nothing above changed; v4 draws exactly as before): the portrait's
+// figure and rig, so cast/tasya-phone.ts can re-light his skin for S4.13 (the slate ramp read as a green, "alien" face on
+// the stills check), and the key ring, so a host drawing the portrait through drawBust can draw the ring the raised arm
+// holds (without it the raised arm read as a dark blade by his head). drawTasyaKeyRing(b, clip, x - 5, y, jangle) for a
+// portrait whose top-left is (x, y), exactly as drawTasyaSpeakPortrait calls it.
+export const tasyaSpeakFig = fig;
+export const TASYA_SPEAK_RIG = RIG;
+export const drawTasyaKeyRing = drawRing;

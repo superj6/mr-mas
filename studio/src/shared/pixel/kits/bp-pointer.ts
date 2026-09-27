@@ -10,7 +10,9 @@
 //                                               A target beyond the pointer's reach gets a drafting LEADER: a dotted
 //                                               line from the tip to it, ending in a hot tick (r3: the stills check read
 //                                               her short pointer as aimed at THE QUIET VOTE, the nearest chair, when
-//                                               she was naming MAS / CEO). leader: false turns it off
+//                                               she was naming MAS / CEO). leader: false turns it off.
+//                                               callout {box, rail} (a4p5 r2): a drafting callout instead, routed
+//                                               under every label to a hot arrow at the named box (see BpCallout)
 //       {kind: 'down'}                          the pointer set down, lying on the floor line at her feet
 //       {kind: 'walk', step}                    walking (walkStep drawings), the pointer left behind
 //     o.glow   "us": her paper glows bright (the plate's page answers the word)
@@ -31,10 +33,39 @@ import {text, textWidth} from '../font';
 
 export type BpNelehPose =
   | {kind: 'rest'}
-  | {kind: 'point'; at: [number, number]; tap?: 0 | 1; leader?: boolean}
+  | {kind: 'point'; at: [number, number]; tap?: 0 | 1; leader?: boolean; callout?: BpCallout}
   | {kind: 'down'}
   | {kind: 'walk'; step: 0 | 1 | 2};
 export const POINTER_LEN = 44;
+/**
+ * a4p5 r2: a drafting CALLOUT in place of the straight leader, for a named thing across the sheet. The prep check read
+ * the straight leader (ending on the MAS / GERG bracket's corner, a pixel from ALYI's chair and label) as still
+ * ambiguous: a dotted line across a row of labelled chairs can be read as ending on any of them. The callout never
+ * crosses a label: from the pointer's tip it drops at 45 degrees to a RAIL (a row under every label and the four's ring),
+ * runs along it and turns up into the named thing's bracket with a hot arrowhead at its centre. Dots are the bright
+ * line ink, one on, one off (the old leader's mid ink, 1 on 2 off, was faint at 1x).
+ *   box   the named thing's rect (the one bpBracket lights): the arrow ends at its bottom edge's centre
+ *   rail  the rail's row (sheet y), below the box and clear of every label
+ */
+export interface BpCallout { box: [number, number, number, number]; rail: number }
+const dotLine = (b: Buf, x0: number, y0: number, x1: number, y1: number, phase: number, c: number) => {
+  const n = Math.max(Math.abs(x1 - x0), Math.abs(y1 - y0));
+  for (let i = 0; i <= n; i++) if ((i + phase) % 2 === 0) b.set(Math.round(x0 + ((x1 - x0) * i) / Math.max(1, n)), Math.round(y0 + ((y1 - y0) * i) / Math.max(1, n)), c);
+  return n + phase;
+};
+/** the callout path from the pointer's tip (ex, ey): 45 degrees down to the rail, along it, up into the box's centre */
+export const bpCallout = (b: Buf, ex: number, ey: number, co: BpCallout) => {
+  const [bx, by, bw, bh] = co.box;
+  const tx = Math.round(bx + bw / 2), ty = by + bh + 1;
+  const drop = Math.max(0, co.rail - ey), dir = tx < ex ? -1 : 1;
+  const kx = ex + dir * Math.min(drop, Math.abs(tx - ex));
+  let ph = dotLine(b, ex + dir * 2, ey + 2, kx, co.rail, 0, BPX.line);
+  ph = dotLine(b, kx, co.rail, tx, co.rail, ph, BPX.line);
+  dotLine(b, tx, co.rail, tx, ty + 2, ph, BPX.line);
+  // the arrowhead, pointing up into the box
+  b.set(tx, ty, BPX.hot); b.set(tx - 1, ty + 1, BPX.hot); b.set(tx, ty + 1, BPX.hot); b.set(tx + 1, ty + 1, BPX.hot);
+  for (let i = -2; i <= 2; i++) b.set(tx + i, ty + 2, BPX.hot);
+};
 /** her pointing hand (foot-relative, sheet scale): the arm facing into the sheet */
 const HAND = (x: number, y: number, k: number): [number, number] => [x - 4 * k, y - (11 + 14 - 5) * k];
 
@@ -71,6 +102,7 @@ export const bpNeleh = (b: Buf, x: number, y: number, pose: BpNelehPose, f: numb
   // the pointer's rubber tip: one more hot pixel along the shaft
   b.set(Math.round(ex - (dx / d) * 2), Math.round(ey - (dy / d) * 2), BPX.hot);
   // the leader: a drafting callout line, dotted (1 on, 2 off) from just past the tip to the target, a hot tick there
+  if (pose.callout) { bpCallout(b, ex, ey, pose.callout); return; }
   const far = Math.hypot(tx - ex, ty - ey);
   if (pose.leader !== false && far > 10) {
     const n = Math.floor(far);

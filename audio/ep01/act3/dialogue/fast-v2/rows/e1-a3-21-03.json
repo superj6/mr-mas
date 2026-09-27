@@ -1,0 +1,316 @@
+{
+ "id": "e1-a3-21-03",
+ "scene": "21",
+ "speaker": "DEEPFAKE NEDIB #2",
+ "speaker_slug": "deepfake-nedib-2",
+ "text": "And no paperwork, folks. None at all.",
+ "spoken_as": "And no paperwork, folks.{0.30} None at all.",
+ "delivery": "delighted, in turn",
+ "tag": "[INVENTED · a whole line in its turn, where draft 2 had a second overlap; the escalation is the joke: test, then nothing, then no paper, from a man who puts everything in writing]",
+ "mode": "call",
+ "voiced_in_cut": true,
+ "on_camera": "monitor",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "POV",
+ "shot_id": "POV",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": "monitor",
+ "room": null,
+ "est_s": 3.1,
+ "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-21-03.wav",
+ "mp3": null,
+ "duration_s": 3.5,
+ "frames_24": 84,
+ "voiced_span_s": 2.31,
+ "pace": {
+  "words": 7,
+  "wpm": 181.8,
+  "speed": 0.97,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.97,
+   "speed_band": [
+    0.93,
+    1.01
+   ],
+   "articulation_guide_sps": [
+    4.2,
+    4.8
+   ],
+   "turn_wpm_guide": [
+    145,
+    165
+   ],
+   "intent": "delighted, in turn"
+  },
+  "measured": {
+   "wpm": 181.8,
+   "articulation_sps": 4.46,
+   "syllables": 9,
+   "span_s": 2.31,
+   "pauses_s": [
+    0.29
+   ]
+  },
+  "longest_internal_gap_s": 0.29,
+  "audible_in_s": 0.5,
+  "audible_out_s": 2.81
+ },
+ "placement": {
+  "gap_before_s": 0.7,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_fenrir*0.50+am_onyx*0.50 (Kokoro-82M stock) · d-fenrir-onyx-folksy-0 + gloss · speed 0.970",
+ "voiceId": "am_fenrir*0.50+am_onyx*0.50",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch 0",
+  "low shelf +2 dB @160 Hz",
+  "peak -1.5 dB @380 Hz Q1.0",
+  "peak +1.5 dB @2200 Hz Q0.9",
+  "comp 3.0:1 @-21 dB (5/100 ms)",
+  "tanh saturation drive 1.6 mix 0.1",
+  "peak -1.5 dB @350 Hz Q1.0",
+  "high shelf +2.5 dB @7000 Hz",
+  "chorus 0.6 Hz depth 0.1 mix 0.18",
+  "comp 4.0:1 @-26 dB (2/60 ms)",
+  "pitch +0.7 st",
+  "then the monitor chain: HPF 200 Hz; LPF 7000 Hz; peak +1.5 dB @1800 Hz Q1.0; comp 2.5:1 @-22 dB (5/90 ms); -16 LUFS",
+  "Kokoro speed 0.970 (the centre of the band; deepfake-nedib-2 band 0.93-1.01); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'folks': Kokoro 0.02 s -> 0.30 s (intended 0.30; +0.28 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.458,
+   "f": 11,
+   "shape": "A"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "E"
+  },
+  {
+   "t": 0.625,
+   "f": 15,
+   "shape": "O"
+  },
+  {
+   "t": 0.708,
+   "f": 17,
+   "shape": "M"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "A"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "M"
+  },
+  {
+   "t": 0.958,
+   "f": 23,
+   "shape": "E"
+  },
+  {
+   "t": 1.042,
+   "f": 25,
+   "shape": "O"
+  },
+  {
+   "t": 1.167,
+   "f": 28,
+   "shape": "E"
+  },
+  {
+   "t": 1.333,
+   "f": 32,
+   "shape": "O"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "E"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "rest"
+  },
+  {
+   "t": 2.042,
+   "f": 49,
+   "shape": "E"
+  },
+  {
+   "t": 2.125,
+   "f": 51,
+   "shape": "A"
+  },
+  {
+   "t": 2.417,
+   "f": 58,
+   "shape": "O"
+  },
+  {
+   "t": 2.708,
+   "f": 65,
+   "shape": "E"
+  },
+  {
+   "t": 2.833,
+   "f": 68,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "And",
+   "t0": 0.47,
+   "t1": 0.577,
+   "f0": 11,
+   "f1": 14,
+   "ph": "ˌænd"
+  },
+  {
+   "w": "no",
+   "t0": 0.577,
+   "t1": 0.74,
+   "f0": 14,
+   "f1": 18,
+   "ph": "nˈO"
+  },
+  {
+   "w": "paperwork",
+   "t0": 0.74,
+   "t1": 1.24,
+   "f0": 18,
+   "f1": 30,
+   "ph": "pˈApəɹwˌɜɹk"
+  },
+  {
+   "w": "folks",
+   "t0": 1.29,
+   "t1": 1.565,
+   "f0": 31,
+   "f1": 38,
+   "ph": "fˈOks"
+  },
+  {
+   "w": "None",
+   "t0": 2.058,
+   "t1": 2.295,
+   "f0": 49,
+   "f1": 55,
+   "ph": "nˈʌn"
+  },
+  {
+   "w": "at",
+   "t0": 2.295,
+   "t1": 2.42,
+   "f0": 55,
+   "f1": 58,
+   "ph": "æt"
+  },
+  {
+   "w": "all",
+   "t0": 2.42,
+   "t1": 2.83,
+   "f0": 58,
+   "f1": 68,
+   "ph": "ˈɔl"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.29,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 111.0,
+  "f0_range_st": 12.1,
+  "f0_method": "pYIN (a4lib.analyse)",
+  "final_move_st": -4.5,
+  "asr": "And no paperwork, folks. None at all.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.212,
+  "align_median_s": 0.025,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 20.0,
+  "decay_ms": 145.0,
+  "decay_to_60_s": 0.24
+ },
+ "clean": {
+  "file": "audio/ep01/act3/dialogue/fast-v2/clean/e1-a3-21-03.wav",
+  "note": "the dry read (no monitor chain), -16 LUFS"
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 4,
+   "word": "folks",
+   "tts_s": 0.02,
+   "target_s": 0.3,
+   "point_s": 1.095,
+   "joined_speech": false,
+   "dip_db": -49.8,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.3,
+   "opened_s": 0.28
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "3966018fb4963ba2",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 86.78,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": true,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 1,
+   "share_s": 7.09,
+   "rechecked_alone": false
+  }
+ }
+}

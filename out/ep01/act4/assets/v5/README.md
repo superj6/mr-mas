@@ -2,14 +2,14 @@
 
 Stills of every new pixel asset built for the Act Four v5 pixel preview, shown in the framing the v5 shot uses (often
 over the v4 shot it re-dresses). They are previews of the assets, not v5 animatic frames: the v5 layouts don't exist yet.
-Made by the `prep-artbuild` pass, 2026-09-26 (round 3 rendered this folder).
+Made by the `prep-artbuild` pass, 2026-09-26; re-rendered by the `a4p5` art pass (round 4, 2026-09-27 01:43) after its readability fixes (art-built-v5 §5a). Neleh's footnotes are drawn in the v5 `'slips'` style; `FIX-FOOTNOTES--digits-vs-slips` shows v4's digits beside them.
 
 **The record** (what each asset is, its module, how to use it, what is still a stand-in):
 [`show/episodes/ep01/production/act4/art-built-v5.md`](../../../../../show/episodes/ep01/production/act4/art-built-v5.md).
 
 | Path | What |
 |---|---|
-| `sheet-native.png` | All 88 stills at 480×270 (1×), 4 across. The band under each picture is sheet chrome (the key, the module, a note, any stand-in in red), not picture. |
+| `sheet-native.png` | All 89 stills at 480×270 (1×), 4 across. The band under each picture is sheet chrome (the key, the module, a note, any stand-in in red), not picture. |
 | `native/<ID>--<state>.png` | Each still at 480×270 (the native frame). |
 | `full/<ID>--<state>.png` | Each still at 1920×1080 (4× nearest: the output size). |
 | `index.json` | Every still's key, module, note, stand-in and file paths. |
@@ -25,5 +25,5 @@ node $S/sheet.cjs all ../out/ep01/act4/assets/v5
 For J1, see `studio/src/episodes/ep01/act4/art-v5/README.md`.
 
 **Measured versus needs a person:**
-- Measured: every still is inside the master palette (plus THE PLAN's blueprint palette); `sheet.cjs strays` returns `ok` for all 88.
+- Measured: every still is inside the master palette (plus THE PLAN's blueprint palette); `sheet.cjs strays` returns `ok` for all 89 (round 4). The `j1/` folder is round 3's (the certificate did not change in round 4).
 - Needs a person: whether each asset reads was judged by one reader, looking at the stills at 1×, 2× and in crops. Nothing here is in motion.

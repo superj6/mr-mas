@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import dsp  # noqa: E402
 from dsp import SR, ROOT, stereo, highpass, normalize, measure, write_wav, write_mp3, trim_tail, fade  # noqa: E402
 from registry import REG  # noqa: E402
-import sounds_1, sounds_2, sounds_3  # noqa: E402,F401
+import sounds_1, sounds_2, sounds_3, sounds_4  # noqa: E402,F401  (sounds_4: Ep1 Act Four v5, 2026-09-27)
 import blips  # noqa: E402,F401
 
 ABOUT = {

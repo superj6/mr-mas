@@ -1,0 +1,87 @@
+{
+ "problems": [],
+ "flags": [
+  {
+   "id": "e1-a1-5-03",
+   "kind": "asr",
+   "note": "ASR missed a word: 'It's a research preview, Rima. Nobody reads research. We'll get 40 users and a nice thread.' (recall 0.933)"
+  },
+  {
+   "id": "e1-a1-5-05",
+   "kind": "pace",
+   "note": "articulation 6.14 syll/s against the guide 5.0-5.8"
+  },
+  {
+   "id": "e1-a1-5-10",
+   "kind": "question",
+   "note": "final move -6.3 st: does it read as a question?"
+  },
+  {
+   "id": "e1-a1-5-18",
+   "kind": "pace",
+   "note": "articulation 6.25 syll/s against the guide 5.0-5.8"
+  },
+  {
+   "id": "e1-a1-6-03",
+   "kind": "asr",
+   "note": "ASR missed a word: 'A low key.' (recall 0.0)"
+  },
+  {
+   "id": "e1-a1-9-01",
+   "kind": "pause-in-voice",
+   "note": "the 0.15 s pause after 'Mas' is opened while the voice still sounds (dip -28.4 dB)"
+  },
+  {
+   "id": "e1-a1-9-02",
+   "kind": "asr",
+   "note": "ASR missed a word: 'It's Stocking.' (recall 0.5)"
+  },
+  {
+   "id": "e1-a1-9-03",
+   "kind": "asr",
+   "note": "ASR missed a word: 'It's long term.' (recall 0.5)"
+  },
+  {
+   "id": "e1-a1-9-06",
+   "kind": "pause-in-voice",
+   "note": "the 0.25 s pause after 'servers' is opened while the voice still sounds (dip -29.1 dB)"
+  },
+  {
+   "id": "e1-a1-9-09",
+   "kind": "pace",
+   "note": "articulation 6.13 syll/s against the guide 5.0-5.8"
+  },
+  {
+   "id": "e1-a1-9-09",
+   "kind": "question",
+   "note": "final move -9.8 st: does it read as a question?"
+  },
+  {
+   "id": "e1-a1-12-01",
+   "kind": "pace",
+   "note": "articulation 3.73 syll/s against the guide 4.8-5.6"
+  },
+  {
+   "id": "e1-a1-12-02",
+   "kind": "pause-in-voice",
+   "note": "the 0.15 s pause after 'font' is opened while the voice still sounds (dip -29.3 dB)"
+  }
+ ],
+ "totals": {
+  "lines": 59,
+  "words": 478,
+  "audible_s": 159.1,
+  "wpm_overall": 180.0
+ },
+ "stringouts": [
+  "audio/ep01/act1/dialogue/fast-v1/reel/sc5-fast-stringout.mp3",
+  "audio/ep01/act1/dialogue/fast-v1/reel/sc6-fast-stringout.mp3",
+  "audio/ep01/act1/dialogue/fast-v1/reel/sc7-fast-stringout.mp3",
+  "audio/ep01/act1/dialogue/fast-v1/reel/sc8-fast-stringout.mp3",
+  "audio/ep01/act1/dialogue/fast-v1/reel/sc9-fast-stringout.mp3",
+  "audio/ep01/act1/dialogue/fast-v1/reel/sc10-fast-stringout.mp3",
+  "audio/ep01/act1/dialogue/fast-v1/reel/sc11-fast-stringout.mp3",
+  "audio/ep01/act1/dialogue/fast-v1/reel/sc12-fast-stringout.mp3"
+ ],
+ "method": "fastrec qa_generic: qa_v5.py's hard checks and ear flags, without its Act Four conversation table"
+}

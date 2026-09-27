@@ -1,0 +1,210 @@
+{
+ "id": "e1-a1-5-07",
+ "scene": "5",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "it's a preview.",
+ "spoken_as": "it's a preview.",
+ "delivery": null,
+ "tag": "[INVENTED]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "OTS",
+ "shot_id": "OTS",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 1.9,
+ "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-07.wav",
+ "mp3": null,
+ "duration_s": 2.33,
+ "frames_24": 56,
+ "voiced_span_s": 1.17,
+ "pace": {
+  "words": 3,
+  "wpm": 153.8,
+  "speed": 0.9,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.9,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.6,
+    4.2
+   ],
+   "turn_wpm_guide": [
+    135,
+    155
+   ],
+   "intent": null
+  },
+  "measured": {
+   "wpm": 153.8,
+   "articulation_sps": 3.42,
+   "syllables": 4,
+   "span_s": 1.17,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.52,
+  "audible_out_s": 1.69
+ },
+ "placement": {
+  "gap_before_s": 0.8,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.900",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch 0",
+  "low shelf +2 dB @160 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak +1 dB @3200 Hz Q0.8",
+  "high shelf -1.5 dB @8000 Hz",
+  "comp 2.0:1 @-24 dB (10/120 ms)",
+  "Kokoro speed 0.900 (the plan speed; mas-manalt band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.625,
+   "f": 15,
+   "shape": "E"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "A"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "M"
+  },
+  {
+   "t": 1.0,
+   "f": 24,
+   "shape": "E"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "A"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "E"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "O"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "it's",
+   "t0": 0.615,
+   "t1": 0.79,
+   "f0": 15,
+   "f1": 19,
+   "ph": "ɪts"
+  },
+  {
+   "w": "a",
+   "t0": 0.79,
+   "t1": 0.915,
+   "f0": 19,
+   "f1": 22,
+   "ph": "ɐ"
+  },
+  {
+   "w": "preview",
+   "t0": 0.915,
+   "t1": 1.71,
+   "f0": 22,
+   "f1": 41,
+   "ph": "pɹˈivjˌu"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.46,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.52,
+  "median_f0_hz": 106.2,
+  "f0_range_st": 10.6,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "It's a preview.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.209,
+  "align_median_s": 0.04,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.52,
+  "speech_tail_s": 0.38,
+  "rise_ms": 80.0,
+  "decay_ms": 145.0,
+  "decay_to_60_s": 0.26
+ },
+ "speaker_label": "MAS",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "b687ad1f6c3720c6",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 3,
+  "wall_s": 29.53,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 5,
+   "share_s": 6.85,
+   "rechecked_alone": false
+  }
+ }
+}

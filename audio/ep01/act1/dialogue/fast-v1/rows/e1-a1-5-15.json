@@ -1,0 +1,205 @@
+{
+ "id": "e1-a1-5-15",
+ "scene": "5",
+ "speaker": "ALYI",
+ "speaker_slug": "alyi",
+ "text": "Someone should.",
+ "spoken_as": "Someone should.",
+ "delivery": "reflection",
+ "tag": "[INVENTED · he answers the meaning, not the words: a reproach, never a joke. Alyi is the one who counts, and Act Four pays it with \"It has been four days.\" against \"i don't keep score.\"]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "MCU·glass",
+ "shot_id": "MCU·glass",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 1.2,
+ "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-15.wav",
+ "mp3": null,
+ "duration_s": 2.065,
+ "frames_24": 50,
+ "voiced_span_s": 1.06,
+ "pace": {
+  "words": 2,
+  "wpm": 113.2,
+  "speed": 0.87,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.87,
+   "speed_band": [
+    0.85,
+    0.92
+   ],
+   "articulation_guide_sps": [
+    3.4,
+    4.0
+   ],
+   "turn_wpm_guide": [
+    115,
+    140
+   ],
+   "intent": "reflection"
+  },
+  "measured": {
+   "wpm": 113.2,
+   "articulation_sps": 2.83,
+   "syllables": 3,
+   "span_s": 1.06,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.51,
+  "audible_out_s": 1.57
+ },
+ "placement": {
+  "gap_before_s": 0.7,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_onyx (Kokoro-82M stock) · a-onyx-cathedral · speed 0.870",
+ "voiceId": "am_onyx",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 50 Hz",
+  "pitch 0",
+  "low shelf +1.5 dB @140 Hz",
+  "peak -1.5 dB @400 Hz Q1.0",
+  "peak +1.5 dB @2800 Hz Q0.9",
+  "comp 2.5:1 @-24 dB (8/150 ms)",
+  "Kokoro speed 0.870 (the plan speed; alyi band 0.85-0.92); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "E"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "A"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "M"
+  },
+  {
+   "t": 0.833,
+   "f": 20,
+   "shape": "O"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "A"
+  },
+  {
+   "t": 1.0,
+   "f": 24,
+   "shape": "E"
+  },
+  {
+   "t": 1.167,
+   "f": 28,
+   "shape": "O"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "E"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Someone",
+   "t0": 0.6,
+   "t1": 1.062,
+   "f0": 14,
+   "f1": 26,
+   "ph": "sˈʌmwˌʌn"
+  },
+  {
+   "w": "should",
+   "t0": 1.062,
+   "t1": 1.575,
+   "f0": 26,
+   "f1": 38,
+   "ph": "ʃˌʊd"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -2.19,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.51,
+  "median_f0_hz": 95.1,
+  "f0_range_st": 8.5,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Someone should.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.209,
+  "align_median_s": 0.111,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.45,
+  "rise_ms": 160.0,
+  "decay_ms": 175.0,
+  "decay_to_60_s": 0.02
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "4151022997605326",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 12.89,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 5,
+   "share_s": 7.64,
+   "rechecked_alone": false
+  }
+ }
+}

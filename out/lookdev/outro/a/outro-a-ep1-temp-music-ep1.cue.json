@@ -21,14 +21,15 @@
  "motifs": [
   "THE KNEE whole (bar 1, felt + chip 8va)",
   "the answer, the F on 2.4",
-  "the button chord F-C-G (3.1) + the bass root and a low C on the pull-back (3.3)",
-  "the f0 sound, felt F5 + chip F6 glint (4.1, the cursor comes on)"
+  "the button chord F-C-G (3.1)",
+  "the title's quartal stack over Bb (4.1), home on F-C on the pull-back (4.4)",
+  "the f0 sound, felt F5 + chip F6 glint (5.2, the cursor comes on)"
  ],
  "key": "F minor, open fifths, no third",
  "engine": {
   "version": "mrmas-ost-engine 1.1 (2026-09-26: fix1 -- meter axis, sample tuning, render pool, QA 5a-d)",
-  "rendered": "2026-09-26T22:41:49",
-  "render_seconds": 35.7
+  "rendered": "2026-09-27T01:33:42",
+  "render_seconds": 10.1
  },
  "timing": {
   "bpm": 96.0,
@@ -54,18 +55,18 @@
   "swing": 1.0,
   "swing_unit_quarters": 0.5,
   "pickup_beats": 2.0,
-  "bars": 4,
-  "length_s": 11.25,
-  "length_frames": 270.0,
+  "bars": 5,
+  "length_s": 13.75,
+  "length_frames": 330.0,
   "fps": 24,
   "end": {
-   "sec": 10.0,
-   "frame": 240.0,
-   "bar": 4,
-   "beat": 3.0
+   "sec": 13.125,
+   "frame": 315.0,
+   "bar": 5,
+   "beat": 4.0
   },
-  "album_duration_s": 10.0,
-  "album_duration_frames": 240.0,
+  "album_duration_s": 13.125,
+  "album_duration_frames": 315.0,
   "album_loops": 1
  },
  "sections": [
@@ -115,7 +116,7 @@
    }
   },
   {
-   "label": "button chord (hold, pull-back, close)",
+   "label": "button chord (the log holds)",
    "start": {
     "sec": 6.25,
     "frame": 150.0,
@@ -130,7 +131,7 @@
    }
   },
   {
-   "label": "the cursor, the moth (drone alone, SFX)",
+   "label": "the title's stack, then home (pull-back)",
    "start": {
     "sec": 8.75,
     "frame": 210.0,
@@ -143,11 +144,26 @@
     "bar": 5,
     "beat": 1.0
    }
+  },
+  {
+   "label": "the room, the cursor, the moth, black (drone, SFX)",
+   "start": {
+    "sec": 11.25,
+    "frame": 270.0,
+    "bar": 5,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 13.75,
+    "frame": 330.0,
+    "bar": 6,
+    "beat": 1.0
+   }
   }
  ],
  "markers": [
   {
-   "label": "o0 the cut: the act goes out, the band lights; the knee, whole",
+   "label": "o0 the cut: the act goes out; the knee, whole",
    "sec": 1.25,
    "frame": 30.0,
    "bar": 1,
@@ -168,45 +184,57 @@
    "beat": 1.0
   },
   {
-   "label": "3.3 the pull-back to the room: the low fifth, the drone comes in (SFX)",
-   "sec": 7.5,
-   "frame": 180.0,
-   "bar": 3,
-   "beat": 3.0
-  },
-  {
-   "label": "o180 4.1 the cursor comes on: felt F5 + chip F6 glint (= the cold open f0 sound)",
+   "label": "4.1 the title's quartal stack over Bb",
    "sec": 8.75,
    "frame": 210.0,
    "bar": 4,
    "beat": 1.0
+  },
+  {
+   "label": "4.4 (o225) the pull-back to the room: home on F-C, no third; the drone comes in (SFX)",
+   "sec": 10.625,
+   "frame": 255.0,
+   "bar": 4,
+   "beat": 4.0
+  },
+  {
+   "label": "o255 5.2 the cursor comes on: felt F5 + chip F6 glint (= the cold open f0 sound)",
+   "sec": 11.875,
+   "frame": 285.0,
+   "bar": 5,
+   "beat": 2.0
   }
  ],
  "hit_check": [
   {
    "t": 1.25,
    "offset_ms": -4.7,
-   "strength": 4.96
+   "strength": 5.07
   },
   {
    "t": 5.625,
    "offset_ms": -14.3,
-   "strength": 1.65
+   "strength": 1.64
   },
   {
    "t": 6.25,
    "offset_ms": 0.7,
-   "strength": 5.23
-  },
-  {
-   "t": 7.5,
-   "offset_ms": -12.0,
-   "strength": 1.73
+   "strength": 5.37
   },
   {
    "t": 8.75,
    "offset_ms": -3.3,
-   "strength": 10.63
+   "strength": 3.06
+  },
+  {
+   "t": 10.625,
+   "offset_ms": -3.7,
+   "strength": 3.69
+  },
+  {
+   "t": 11.875,
+   "offset_ms": -5.7,
+   "strength": 10.0
   }
  ],
  "sfx_slots": [],
@@ -215,13 +243,13 @@
  "knee_whole": 2,
  "f_major": {
   "limit": 0.08,
-  "windows": 9,
-  "worst": 0.022,
-  "worst_sieved": 0.018,
+  "windows": 12,
+  "worst": 0.242,
+  "worst_sieved": 0.151,
   "ok": true,
   "ok_written": true,
   "ok_spectral": true,
-  "f_inaudible_windows": 0,
+  "f_inaudible_windows": 2,
   "a_classes": {
    "written": 0,
    "resonance": 0,
@@ -245,21 +273,21 @@
  "knee_completion": 2,
  "room_sfx_windows": [
   {
-   "t0": 7.5,
-   "t1": 10.0,
+   "t0": 10.625,
+   "t1": 13.125,
    "sfx": "room_drone"
   }
  ],
  "qa": {
   "balance": {
    "balance": {
-    "piano": 92,
+    "piano": 93,
     "orch": 0,
     "bigband": 0,
-    "chip": 8
+    "chip": 7
    },
    "rhythm_pct_of_all": 7,
-   "chip_share": 8,
+   "chip_share": 7,
    "balance_energy": {
     "piano": 94,
     "orch": 0,
@@ -296,7 +324,7 @@
      }
     },
     {
-     "section": "button chord (hold, pull-back, close)",
+     "section": "button chord (the log holds)",
      "share": {
       "piano": 100,
       "orch": 0,
@@ -305,32 +333,41 @@
      }
     },
     {
-     "section": "the cursor, the moth (drone alone, SFX)",
+     "section": "the title's stack, then home (pull-back)",
      "share": {
-      "piano": 94,
+      "piano": 100,
       "orch": 0,
       "bigband": 0,
-      "chip": 6
+      "chip": 0
+     }
+    },
+    {
+     "section": "the room, the cursor, the moth, black (drone, SFX)",
+     "share": {
+      "piano": 93,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 7
      }
     }
    ]
   },
   "short_term_underscore": {
-   "p95": -13.92,
-   "median": -15.88,
-   "max": -13.82
+   "p95": -13.23,
+   "median": -17.33,
+   "max": -13.15
   },
   "band_2_6k_db": -19.9,
   "centroid_hz": 477.0,
   "f_major": {
    "limit": 0.08,
-   "windows": 9,
-   "worst": 0.022,
-   "worst_sieved": 0.018,
+   "windows": 12,
+   "worst": 0.242,
+   "worst_sieved": 0.151,
    "ok": true,
    "ok_written": true,
    "ok_spectral": true,
-   "f_inaudible_windows": 0,
+   "f_inaudible_windows": 2,
    "a_classes": {
     "written": 0,
     "resonance": 0,
@@ -402,14 +439,14 @@
   },
   "sub_under_room": [
    {
-    "t0": 7.5,
-    "t1": 10.0,
+    "t0": 10.625,
+    "t1": 13.125,
     "sfx": "room_drone",
-    "sub_db": -37.8,
+    "sub_db": -39.5,
     "limit_db": -18.0,
     "sub_from": {
-     "piano": 91,
-     "bass": 8
+     "piano": 58,
+     "bass": 42
     },
     "ok": true,
     "notes_below_c3": [
@@ -427,9 +464,9 @@
    },
    {
     "t0": 6.3,
-    "t1": 10.0,
-    "a": 0.01,
-    "ab": 0.012,
+    "t1": 13.125,
+    "a": 0.017,
+    "ab": 0.041,
     "ok": true
    }
   ],
@@ -453,7 +490,7 @@
   },
   "swing": {
    "felt": {
-    "offbeats": 5,
+    "offbeats": 6,
     "median_frames": 10.0,
     "hum_ms": 3
    },
@@ -496,12 +533,12 @@
    "dialog_pocket": null,
    "measured": {
     "lufs": -16.0,
-    "lra": 6.02,
-    "true_peak_db": -2.33,
-    "peak_db": -2.34,
-    "rms_db": -19.02,
-    "crest_db": 16.69,
-    "seconds": 10.0
+    "lra": 9.26,
+    "true_peak_db": -1.7,
+    "peak_db": -1.71,
+    "rms_db": -19.11,
+    "crest_db": 17.4,
+    "seconds": 13.125
    }
   },
   "underscore": {
@@ -519,13 +556,13 @@
     "q": 0.7
    },
    "measured": {
-    "lufs": -16.02,
-    "lra": 6.18,
+    "lufs": -16.01,
+    "lra": 9.33,
     "true_peak_db": -3.15,
     "peak_db": -3.16,
-    "rms_db": -18.95,
-    "crest_db": 15.8,
-    "seconds": 10.0
+    "rms_db": -19.0,
+    "crest_db": 15.84,
+    "seconds": 13.125
    }
   }
  },
@@ -534,47 +571,52 @@
   "families_present": [],
   "family_share_lu": {
    "piano": -0.3,
-   "bass": -16.3,
-   "drums": -14.5,
-   "perc": -33.0,
-   "chip": -7.8
+   "bass": -15.6,
+   "drums": -13.9,
+   "perc": -32.4,
+   "chip": -7.2
   }
  },
  "spectrum": {
-  "sub": -28.6,
-  "bass": -8.9,
-  "lowmid": -0.8,
-  "mid": -13.7,
-  "presence": -23.1,
-  "air": -31.5,
+  "sub": -20.6,
+  "bass": -9.1,
+  "lowmid": -0.9,
+  "mid": -13.8,
+  "presence": -23.0,
+  "air": -31.2,
   "centroid_hz": 477.0
  },
  "bar_levels": [
   {
    "bar": 1,
-   "rms_db": -16.0,
+   "rms_db": -15.4,
    "peak_db": -3.200000047683716
   },
   {
    "bar": 2,
-   "rms_db": -18.9,
-   "peak_db": -4.199999809265137
+   "rms_db": -18.2,
+   "peak_db": -3.5
   },
   {
    "bar": 3,
-   "rms_db": -21.6,
-   "peak_db": -3.4000000953674316
+   "rms_db": -20.8,
+   "peak_db": -3.200000047683716
   },
   {
    "bar": 4,
-   "rms_db": -27.3,
-   "peak_db": -9.899999618530273
+   "rms_db": -22.1,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 5,
+   "rms_db": -27.4,
+   "peak_db": -9.0
   }
  ],
  "instrumentation": {
   "brush": {
    "family": "drums",
-   "notes": 5,
+   "notes": 6,
    "source": "sf2",
    "credit": "GeneralUser GS by S. Christian Collins"
   },
@@ -586,19 +628,19 @@
   },
   "felt": {
    "family": "piano",
-   "notes": 14,
+   "notes": 17,
    "source": "sf2",
    "credit": "Upright Piano KW by FreePats (CC0 1.0)"
   },
   "felt_lh": {
    "family": "piano",
-   "notes": 25,
+   "notes": 30,
    "source": "sf2",
    "credit": "Upright Piano KW by FreePats (CC0 1.0)"
   },
   "felt_mech": {
    "family": "piano",
-   "notes": 6,
+   "notes": 7,
    "source": "fn",
    "credit": "engine synthesis (no samples)"
   },
@@ -616,13 +658,13 @@
   },
   "swish": {
    "family": "drums",
-   "notes": 3,
+   "notes": 4,
    "source": "fn",
    "credit": "engine synthesis (no samples)"
   },
   "ubass": {
    "family": "bass",
-   "notes": 6,
+   "notes": 7,
    "source": "sf2",
    "credit": "GeneralUser GS by S. Christian Collins"
   }
@@ -634,11 +676,10 @@
  "audition": [
   "1.25-3.75 s: the knee whole on the cut, swung, chip 8va under the felt; the ONLY whole knee",
   "5.62 s: the F lands on 2.4; then 6.25 s the button chord F-C-G, no third",
-  "7.50 s: the bass root and a low C under it as the picture pulls back to the room",
-  "8.75 s: the felt F5 + chip glint, the intro's f0 sound, as the cursor comes on; out by 10.00 s"
+  "8.75 s: the title's quartal stack over Bb; 10.62 s home on F-C as the picture pulls back to the room",
+  "11.88 s: the felt F5 + chip glint, the intro's f0 sound, as the cursor comes on; out by 13.12 s"
  ],
  "warnings": [
-  "marker at 5.625 s: no clear onset within 10 ms ({'t': 5.625, 'offset_ms': np.float64(-14.3), 'strength': 1.65})",
-  "marker at 7.5 s: no clear onset within 10 ms ({'t': 7.5, 'offset_ms': np.float64(-12.0), 'strength': 1.73})"
+  "marker at 5.625 s: no clear onset within 10 ms ({'t': 5.625, 'offset_ms': np.float64(-14.3), 'strength': 1.64})"
  ]
 }

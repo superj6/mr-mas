@@ -1,0 +1,310 @@
+{
+ "id": "e1-a1-5-02",
+ "scene": "5",
+ "speaker": "RIMA TAMURI",
+ "speaker_slug": "rima-tamuri",
+ "text": "We said low-key, Gerg. I underlined it. Twice.",
+ "spoken_as": "We said low-key, [Gerg](/ɡˈɜɹɡ/). I underlined it.{0.3} Twice.",
+ "delivery": "O.S., from the whiteboard, not turning round",
+ "tag": "[INVENTED · the whiteboard behind her shows it. Second pass: it was \"It's on the board.\", and in a pilot about a board the ear hears the board of directors (the naturalness read)]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "2S",
+ "shot_id": "2S",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 3.9,
+ "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-02.wav",
+ "mp3": null,
+ "duration_s": 3.75,
+ "frames_24": 90,
+ "voiced_span_s": 2.76,
+ "pace": {
+  "words": 8,
+  "wpm": 173.9,
+  "speed": 0.94,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.94,
+   "speed_band": [
+    0.9,
+    0.98
+   ],
+   "articulation_guide_sps": [
+    4.0,
+    4.6
+   ],
+   "turn_wpm_guide": [
+    140,
+    160
+   ],
+   "intent": "O.S., from the whiteboard, not turning round"
+  },
+  "measured": {
+   "wpm": 173.9,
+   "articulation_sps": 4.51,
+   "syllables": 11,
+   "span_s": 2.76,
+   "pauses_s": [
+    0.07,
+    0.32
+   ]
+  },
+  "longest_internal_gap_s": 0.32,
+  "audible_in_s": 0.51,
+  "audible_out_s": 3.27
+ },
+ "placement": {
+  "gap_before_s": 0.35,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "af_heart (Kokoro-82M stock) · a-heart-composed · speed 0.940",
+ "voiceId": "af_heart",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch 0",
+  "peak -1 dB @300 Hz Q1.0",
+  "peak +1 dB @5000 Hz Q0.8",
+  "comp 2.0:1 @-22 dB (8/120 ms)",
+  "Kokoro speed 0.940 (the centre of the band; rima-tamuri band 0.90-0.98); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'it': Kokoro 0.29 s -> 0.23 s (intended 0.30; +0.01 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "E"
+  },
+  {
+   "t": 0.625,
+   "f": 15,
+   "shape": "A"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "E"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "O"
+  },
+  {
+   "t": 1.0,
+   "f": 24,
+   "shape": "E"
+  },
+  {
+   "t": 1.208,
+   "f": 29,
+   "shape": "O"
+  },
+  {
+   "t": 1.375,
+   "f": 33,
+   "shape": "E"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "rest"
+  },
+  {
+   "t": 1.625,
+   "f": 39,
+   "shape": "A"
+  },
+  {
+   "t": 1.792,
+   "f": 43,
+   "shape": "E"
+  },
+  {
+   "t": 2.042,
+   "f": 49,
+   "shape": "A"
+  },
+  {
+   "t": 2.125,
+   "f": 51,
+   "shape": "E"
+  },
+  {
+   "t": 2.417,
+   "f": 58,
+   "shape": "rest"
+  },
+  {
+   "t": 2.75,
+   "f": 66,
+   "shape": "O"
+  },
+  {
+   "t": 2.875,
+   "f": 69,
+   "shape": "A"
+  },
+  {
+   "t": 3.208,
+   "f": 77,
+   "shape": "E"
+  },
+  {
+   "t": 3.292,
+   "f": 79,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "We",
+   "t0": 0.47,
+   "t1": 0.595,
+   "f0": 11,
+   "f1": 14,
+   "ph": "wˌi"
+  },
+  {
+   "w": "said",
+   "t0": 0.595,
+   "t1": 0.82,
+   "f0": 14,
+   "f1": 20,
+   "ph": "sˈɛd"
+  },
+  {
+   "w": "low-key",
+   "t0": 0.82,
+   "t1": 1.12,
+   "f0": 20,
+   "f1": 27,
+   "ph": "lˈOkˌi"
+  },
+  {
+   "w": "Gerg",
+   "t0": 1.17,
+   "t1": 1.495,
+   "f0": 28,
+   "f1": 36,
+   "ph": "ɡˈɜɹɡ"
+  },
+  {
+   "w": "I",
+   "t0": 1.57,
+   "t1": 1.72,
+   "f0": 38,
+   "f1": 41,
+   "ph": "ˌI"
+  },
+  {
+   "w": "underlined",
+   "t0": 1.72,
+   "t1": 2.22,
+   "f0": 41,
+   "f1": 53,
+   "ph": "ˈʌndəɹlˌInd"
+  },
+  {
+   "w": "it",
+   "t0": 2.22,
+   "t1": 2.42,
+   "f0": 53,
+   "f1": 58,
+   "ph": "ɪt"
+  },
+  {
+   "w": "Twice",
+   "t0": 2.657,
+   "t1": 3.29,
+   "f0": 64,
+   "f1": 79,
+   "ph": "twˈIs"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -2.47,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.51,
+  "median_f0_hz": 205.2,
+  "f0_range_st": 10.8,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "We said lowkey gerg, I underlined it, twice.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.382,
+  "align_median_s": 0.03,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.445,
+  "rise_ms": 10.0,
+  "decay_ms": 65.0,
+  "decay_to_60_s": 0.04
+ },
+ "speaker_label": "RIMA",
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 7,
+   "word": "it",
+   "tts_s": 0.29,
+   "target_s": 0.3,
+   "point_s": 2.22,
+   "joined_speech": false,
+   "dip_db": -60.9,
+   "breath": false,
+   "final_s": 0.23,
+   "opened_s": 0.01
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "e394ce62a28851f4",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 3,
+  "wall_s": 32.84,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 2,
+   "share_s": 15.99,
+   "rechecked_alone": false
+  }
+ }
+}

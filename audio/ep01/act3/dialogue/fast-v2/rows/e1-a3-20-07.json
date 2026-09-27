@@ -1,0 +1,412 @@
+{
+ "id": "e1-a3-20-07",
+ "scene": "20",
+ "speaker": "GERG MOCKBRAN",
+ "speaker_slug": "gerg-mockbran",
+ "text": "Still running. I don't go to bed till it's green. It's bad luck.",
+ "spoken_as": "Still running.{0.30} I don't go to bed till it's green.{0.35} It's bad luck.",
+ "delivery": "cheerful, typing",
+ "tag": "[INVENTED · the literal engineer's superstition; it gives \"When it compiles.\" a longer line to land against. Final pass: it was \"Build's running. I don't go to bed on a red build.\", and a build that is still running isn't red yet (the insider read). Dialogue pass 5: \"Build's\" is dropped, since Mas's question has just said it]",
+ "mode": "call",
+ "voiced_in_cut": true,
+ "on_camera": "monitor",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "2S",
+ "shot_id": "2S",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": "call",
+ "room": null,
+ "est_s": 6.6,
+ "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-20-07.wav",
+ "mp3": null,
+ "duration_s": 4.765,
+ "frames_24": 115,
+ "voiced_span_s": 3.58,
+ "pace": {
+  "words": 13,
+  "wpm": 217.9,
+  "speed": 1.02,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.02,
+   "speed_band": [
+    1.02,
+    1.1
+   ],
+   "articulation_guide_sps": [
+    5.0,
+    5.8
+   ],
+   "turn_wpm_guide": [
+    175,
+    200
+   ],
+   "intent": "cheerful, typing"
+  },
+  "measured": {
+   "wpm": 217.9,
+   "articulation_sps": 4.79,
+   "syllables": 14,
+   "span_s": 3.58,
+   "pauses_s": [
+    0.3,
+    0.36,
+    0.06
+   ]
+  },
+  "longest_internal_gap_s": 0.36,
+  "audible_in_s": 0.5,
+  "audible_out_s": 4.08
+ },
+ "placement": {
+  "gap_before_s": 0.7,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.020",
+ "voiceId": "am_puck",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch +1.5 st",
+  "peak -2 dB @250 Hz Q1.0",
+  "peak +2 dB @4000 Hz Q0.9",
+  "comp 3.0:1 @-22 dB (4/80 ms)",
+  "then the call chain: HPF 200 Hz; LPF 7000 Hz; peak +1.5 dB @1800 Hz Q1.0; comp 2.5:1 @-22 dB (5/90 ms); -16 LUFS",
+  "Kokoro speed 1.020 (the plan speed; gerg-mockbran band 1.02-1.10); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'running': Kokoro 0.00 s -> 0.31 s (intended 0.30; +0.30 s of room tone at the quietest 5 ms; Kokoro ran the words together here (dip -25.9 dB): ear check)",
+  "pause after 'green': Kokoro 0.07 s -> 0.36 s (intended 0.35; +0.28 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "E"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "A"
+  },
+  {
+   "t": 0.708,
+   "f": 17,
+   "shape": "E"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "A"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "E"
+  },
+  {
+   "t": 1.125,
+   "f": 27,
+   "shape": "rest"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "A"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "O"
+  },
+  {
+   "t": 1.667,
+   "f": 40,
+   "shape": "E"
+  },
+  {
+   "t": 1.875,
+   "f": 45,
+   "shape": "M"
+  },
+  {
+   "t": 1.958,
+   "f": 47,
+   "shape": "A"
+  },
+  {
+   "t": 2.042,
+   "f": 49,
+   "shape": "E"
+  },
+  {
+   "t": 2.125,
+   "f": 51,
+   "shape": "A"
+  },
+  {
+   "t": 2.208,
+   "f": 53,
+   "shape": "E"
+  },
+  {
+   "t": 2.542,
+   "f": 61,
+   "shape": "A"
+  },
+  {
+   "t": 2.708,
+   "f": 65,
+   "shape": "E"
+  },
+  {
+   "t": 2.833,
+   "f": 68,
+   "shape": "rest"
+  },
+  {
+   "t": 3.167,
+   "f": 76,
+   "shape": "E"
+  },
+  {
+   "t": 3.375,
+   "f": 81,
+   "shape": "M"
+  },
+  {
+   "t": 3.458,
+   "f": 83,
+   "shape": "A"
+  },
+  {
+   "t": 3.583,
+   "f": 86,
+   "shape": "E"
+  },
+  {
+   "t": 3.792,
+   "f": 91,
+   "shape": "A"
+  },
+  {
+   "t": 4.0,
+   "f": 96,
+   "shape": "E"
+  },
+  {
+   "t": 4.083,
+   "f": 98,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Still",
+   "t0": 0.495,
+   "t1": 0.745,
+   "f0": 12,
+   "f1": 18,
+   "ph": "stˈɪl"
+  },
+  {
+   "w": "running",
+   "t0": 0.745,
+   "t1": 1.12,
+   "f0": 18,
+   "f1": 27,
+   "ph": "ɹˈʌnɪŋ"
+  },
+  {
+   "w": "I",
+   "t0": 1.458,
+   "t1": 1.557,
+   "f0": 35,
+   "f1": 37,
+   "ph": "ˌI"
+  },
+  {
+   "w": "don't",
+   "t0": 1.557,
+   "t1": 1.707,
+   "f0": 37,
+   "f1": 41,
+   "ph": "dˈOnt"
+  },
+  {
+   "w": "go",
+   "t0": 1.707,
+   "t1": 1.808,
+   "f0": 41,
+   "f1": 43,
+   "ph": "ɡˌO"
+  },
+  {
+   "w": "to",
+   "t0": 1.808,
+   "t1": 1.895,
+   "f0": 43,
+   "f1": 45,
+   "ph": "tə"
+  },
+  {
+   "w": "bed",
+   "t0": 1.895,
+   "t1": 2.095,
+   "f0": 45,
+   "f1": 50,
+   "ph": "bˈɛd"
+  },
+  {
+   "w": "till",
+   "t0": 2.095,
+   "t1": 2.232,
+   "f0": 50,
+   "f1": 54,
+   "ph": "tˈɪl"
+  },
+  {
+   "w": "it's",
+   "t0": 2.232,
+   "t1": 2.37,
+   "f0": 54,
+   "f1": 57,
+   "ph": "ɪts"
+  },
+  {
+   "w": "green",
+   "t0": 2.37,
+   "t1": 2.82,
+   "f0": 57,
+   "f1": 68,
+   "ph": "ɡɹˈin"
+  },
+  {
+   "w": "It's",
+   "t0": 3.18,
+   "t1": 3.355,
+   "f0": 76,
+   "f1": 81,
+   "ph": "ˌɪts"
+  },
+  {
+   "w": "bad",
+   "t0": 3.355,
+   "t1": 3.655,
+   "f0": 81,
+   "f1": 88,
+   "ph": "bˈæd"
+  },
+  {
+   "w": "luck",
+   "t0": 3.655,
+   "t1": 4.1,
+   "f0": 88,
+   "f1": 98,
+   "ph": "lˈʌk"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.6,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 122.8,
+  "f0_range_st": 11.2,
+  "f0_method": "pYIN (a4lib.analyse)",
+  "final_move_st": 2.3,
+  "asr": "Still running, I don't go to bed till it's green. It's bad luck.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.212,
+  "align_median_s": 0.043,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 20.0,
+  "decay_ms": 220.0,
+  "decay_to_60_s": 0.24
+ },
+ "speaker_label": "GERG",
+ "clean": {
+  "file": "audio/ep01/act3/dialogue/fast-v2/clean/e1-a3-20-07.wav",
+  "note": "the dry read (no call chain), -16 LUFS"
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 2,
+   "word": "running",
+   "tts_s": 0.0,
+   "target_s": 0.3,
+   "point_s": 0.72,
+   "joined_speech": true,
+   "dip_db": -25.9,
+   "breath": false,
+   "crossfade_ms": [
+    60,
+    25
+   ],
+   "final_s": 0.31,
+   "opened_s": 0.3
+  },
+  {
+   "after_word": 10,
+   "word": "green",
+   "tts_s": 0.065,
+   "target_s": 0.35,
+   "point_s": 2.43,
+   "joined_speech": false,
+   "dip_db": -58.6,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.365,
+   "opened_s": 0.285
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "2ebd12e92408d326",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 3,
+  "wall_s": 26.86,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": true,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 1,
+   "share_s": 9.0,
+   "rechecked_alone": false
+  }
+ }
+}

@@ -1,0 +1,1548 @@
+{
+ "schema": "mrmas-s1s4-qa/1",
+ "clock": "act frames (24 fps; act 0 = 12:31:00)",
+ "engine": {
+  "s1-s4_noon": {
+   "underscore": {
+    "lufs": -20.0,
+    "lra": 6.07,
+    "true_peak_db": -4.23,
+    "peak_db": -4.25,
+    "rms_db": -22.14,
+    "crest_db": 17.89,
+    "seconds": 42.1417
+   },
+   "album": {
+    "lufs": -16.04,
+    "lra": 6.62,
+    "true_peak_db": -1.15,
+    "peak_db": -1.16,
+    "rms_db": -18.26,
+    "crest_db": 17.11,
+    "seconds": 42.1417
+   },
+   "short_term": {
+    "p95": -17.54,
+    "median": -20.51,
+    "max": -17.14
+   },
+   "band_2_6k_db": -19.6,
+   "centroid_hz": 360.0,
+   "f_major": {
+    "ok_written": true,
+    "ok_spectral": false,
+    "written_third": 0,
+    "windows": 36,
+    "fails": [
+     {
+      "t0": 30.875,
+      "t1": 31.469,
+      "act": 741,
+      "a_over_f_sieved": 0.633,
+      "a_class": "resonance",
+      "a_from": {
+       "chip": 85,
+       "perc": 10,
+       "strings": 5
+      }
+     }
+    ],
+    "fixed_resonances": [],
+    "f_inaudible": 1
+   },
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "silence": [
+    {
+     "t0": 41.5467,
+     "t1": 42.1317,
+     "label": "D6: the Cancel click (no score until S2)",
+     "peak_dbfs": -240.0,
+     "limit": -90.0,
+     "ok": 1.0
+    },
+    {
+     "t0": 41.5447,
+     "t1": 44.0387,
+     "label": "D6 / hard stop",
+     "peak_dbfs": -240.0,
+     "limit": -90.0,
+     "ok": 1.0
+    }
+   ],
+   "hard_stops": [
+    {
+     "t0": 41.5447,
+     "t1": 44.0387,
+     "label": "hard stop",
+     "peak_dbfs": -240.0,
+     "limit": -90.0,
+     "ok": 1.0
+    }
+   ],
+   "vo_windows": [],
+   "balance": {
+    "piano_orch_bigband_chip": {
+     "piano": 11,
+     "orch": 52,
+     "bigband": 0,
+     "chip": 37
+    },
+    "chip_share": 37,
+    "energy": {
+     "piano": 9,
+     "orch": 58,
+     "bigband": 0,
+     "chip": 33
+    }
+   },
+   "hits": [
+    {
+     "label": "S1.01 the suite: the Water Line bar (felt, swung)",
+     "act": 49.0,
+     "offset_ms": -4.4
+    },
+    {
+     "label": "the nudge G4 on his glass nudge (+ the chip square, the nudge only)",
+     "act": 94.0,
+     "offset_ms": -2.0
+    },
+    {
+     "label": "the waltz: walk-off 1 (F)",
+     "act": 186.0,
+     "offset_ms": -3.3
+    },
+    {
+     "label": "the waltz: walk-off 2 (F)",
+     "act": 201.0,
+     "offset_ms": -4.3
+    },
+    {
+     "label": "the waltz: walk-off 3 (F)",
+     "act": 216.0,
+     "offset_ms": -2.7
+    },
+    {
+     "label": "waltz bar 2: the accompaniment alone (the empty chairs)",
+     "act": 231.0,
+     "offset_ms": -3.7
+    },
+    {
+     "label": "label: the four: ALYI \u00b7 NELEH \u00b7 MADA \u00b7 THE QUIET VOTE (F4)",
+     "act": 276.0,
+     "offset_ms": -4.0
+    },
+    {
+     "label": "label: NOPEAI \u00b7 THE NONPROFIT (G4)",
+     "act": 313.5,
+     "offset_ms": -3.8
+    },
+    {
+     "label": "label: \"controls\": the arrow (Ab4)",
+     "act": 328.5,
+     "offset_ms": -4.8
+    },
+    {
+     "label": "label: \"company\" (Bb4)",
+     "act": 358.5,
+     "offset_ms": -4.2
+    },
+    {
+     "label": "label: NOPEAI \u00b7 THE COMPANY (C5)",
+     "act": 411.0,
+     "offset_ms": -2.3
+    },
+    {
+     "label": "label: VOTES: 0 (after the stamp, on the line's end) (Bb4)",
+     "act": 531.0,
+     "offset_ms": -5.0
+    },
+    {
+     "label": "label: CEO (Ab4)",
+     "act": 546.0,
+     "offset_ms": -3.3
+    },
+    {
+     "label": "tick 1: 1. NOON (F4)",
+     "act": 681.0,
+     "offset_ms": -4.3
+    },
+    {
+     "label": "BREAK: the stuck G-Ab loop (the fold curls at 714)",
+     "act": 711.0,
+     "offset_ms": -3.7
+    },
+    {
+     "label": "JOIN: the tape reaches zero; LEVERAGE's first eighth on the click",
+     "act": 772.0,
+     "offset_ms": -4.0
+    },
+    {
+     "label": "Neleh's clockwork (her card)",
+     "act": 794.5,
+     "offset_ms": 10.5
+    },
+    {
+     "label": "his calm: one felt F4",
+     "act": 847.0,
+     "offset_ms": -3.7
+    },
+    {
+     "label": "the dialog: the 1-bit F F F",
+     "act": 888.0,
+     "offset_ms": -5.3
+    },
+    {
+     "label": "his eyes: the cluster up a semitone; the spinner",
+     "act": 910.0,
+     "offset_ms": -4.7
+    },
+    {
+     "label": "STEP FOUR 1 (Bbm(add9)): the arrow",
+     "act": 940.0,
+     "offset_ms": -6.7
+    },
+    {
+     "label": "step 2 (Ab(add9))",
+     "act": 959.0,
+     "offset_ms": -22.3
+    },
+    {
+     "label": "step 3 (Gbmaj7), held to the click",
+     "act": 978.0,
+     "offset_ms": -59.3
+    }
+   ],
+   "stems_residual_db": -165.3,
+   "stems": {
+    "piano": "render/stems/s1-s4_noon-piano.flac",
+    "strings": "render/stems/s1-s4_noon-strings.flac",
+    "winds": "render/stems/s1-s4_noon-winds.flac",
+    "brass": "render/stems/s1-s4_noon-brass.flac",
+    "drums": "render/stems/s1-s4_noon-drums.flac",
+    "perc": "render/stems/s1-s4_noon-perc.flac",
+    "chip": "render/stems/s1-s4_noon-chip.flac",
+    "synth": "render/stems/s1-s4_noon-synth.flac"
+   },
+   "warnings": [
+    "marker at 33.1042 s: no clear onset within 10 ms ({'t': 33.1042, 'offset_ms': np.float64(10.5), 'strength': 2.79})",
+    "marker at 39.9583 s: no clear onset within 10 ms ({'t': 39.9583, 'offset_ms': np.float64(-22.3), 'strength': 1.67})",
+    "marker at 40.75 s: no clear onset within 10 ms ({'t': 40.75, 'offset_ms': np.float64(-59.3), 'strength': 1.45})",
+    "F-major check (spectral): 1 F-bass window(s) carry A energy that NO written note explains (a resonance, not a written third), first at 30.875 s, worst sieved A/F 0.633: chip ~108.4 Hz, chip ~112.8 Hz, chip ~224.9 Hz -- audition: does it sound major?"
+   ]
+  },
+  "s1-s4_third-mark": {
+   "underscore": {
+    "lufs": -22.02,
+    "lra": 11.52,
+    "true_peak_db": -3.15,
+    "peak_db": -3.16,
+    "rms_db": -24.99,
+    "crest_db": 21.84,
+    "seconds": 14.7167
+   },
+   "album": {
+    "lufs": -18.02,
+    "lra": 12.05,
+    "true_peak_db": -1.15,
+    "peak_db": -1.16,
+    "rms_db": -21.08,
+    "crest_db": 19.92,
+    "seconds": 14.7167
+   },
+   "short_term": {
+    "p95": -18.8,
+    "median": -26.61,
+    "max": -18.47
+   },
+   "band_2_6k_db": -36.2,
+   "centroid_hz": 412.0,
+   "f_major": {
+    "ok_written": true,
+    "ok_spectral": true,
+    "written_third": 0,
+    "windows": 18,
+    "fails": [],
+    "fixed_resonances": [],
+    "f_inaudible": 2
+   },
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "silence": [
+    {
+     "t0": 14.4197,
+     "t1": 17.4137,
+     "label": "D6 / hard stop",
+     "peak_dbfs": -240.0,
+     "limit": -90.0,
+     "ok": 1.0
+    }
+   ],
+   "hard_stops": [
+    {
+     "t0": 14.4197,
+     "t1": 17.4137,
+     "label": "hard stop",
+     "peak_dbfs": -240.0,
+     "limit": -90.0,
+     "ok": 1.0
+    }
+   ],
+   "vo_windows": [
+    {
+     "t0": 2.1,
+     "t1": 4.03,
+     "lufs": -27.8,
+     "target": "-24 +-2"
+    }
+   ],
+   "balance": {
+    "piano_orch_bigband_chip": {
+     "piano": 89,
+     "orch": 8,
+     "bigband": 0,
+     "chip": 3
+    },
+    "chip_share": 3,
+    "energy": {
+     "piano": 90,
+     "orch": 8,
+     "bigband": 0,
+     "chip": 1
+    }
+   },
+   "hits": [
+    {
+     "label": "the carve: the felt open fifth (the re-entry after D6)",
+     "act": 1178.0,
+     "offset_ms": -4.0
+    },
+    {
+     "label": "the nudge G4, sounding before the V.O.",
+     "act": 1208.0,
+     "offset_ms": -3.3
+    },
+    {
+     "label": "mark 3: the felt back (Eb4)",
+     "act": 1429.0,
+     "offset_ms": -6.3
+    },
+    {
+     "label": "the settle C4",
+     "act": 1452.0,
+     "offset_ms": -7.4
+    },
+    {
+     "label": "F4",
+     "act": 1467.0,
+     "offset_ms": -3.0
+    },
+    {
+     "label": "THE REWIND: E4",
+     "act": 1482.0,
+     "offset_ms": 6.6
+    },
+    {
+     "label": "Bb3",
+     "act": 1497.0,
+     "offset_ms": 0.3
+    }
+   ],
+   "stems_residual_db": -174.4,
+   "stems": {
+    "piano": "render/stems/s1-s4_third-mark-piano.flac",
+    "strings": "render/stems/s1-s4_third-mark-strings.flac",
+    "chip": "render/stems/s1-s4_third-mark-chip.flac"
+   },
+   "warnings": []
+  },
+  "s1-s4_procedure": {
+   "underscore": {
+    "lufs": -21.0,
+    "lra": 5.24,
+    "true_peak_db": -3.15,
+    "peak_db": -3.16,
+    "rms_db": -23.16,
+    "crest_db": 20.0,
+    "seconds": 230.946
+   },
+   "album": {
+    "lufs": -16.0,
+    "lra": 5.53,
+    "true_peak_db": -1.15,
+    "peak_db": -1.16,
+    "rms_db": -18.21,
+    "crest_db": 17.05,
+    "seconds": 230.946
+   },
+   "short_term": {
+    "p95": -18.39,
+    "median": -21.47,
+    "max": -16.02
+   },
+   "band_2_6k_db": -21.0,
+   "centroid_hz": 367.0,
+   "f_major": {
+    "ok_written": true,
+    "ok_spectral": true,
+    "written_third": 0,
+    "windows": 37,
+    "fails": [],
+    "fixed_resonances": [],
+    "f_inaudible": 0
+   },
+   "knee_completion": 0,
+   "knee_whole": 0,
+   "silence": [],
+   "hard_stops": [],
+   "vo_windows": [],
+   "balance": {
+    "piano_orch_bigband_chip": {
+     "piano": 1,
+     "orch": 85,
+     "bigband": 13,
+     "chip": 1
+    },
+    "chip_share": 1,
+    "energy": {
+     "piano": 1,
+     "orch": 96,
+     "bigband": 2,
+     "chip": 1
+    }
+   },
+   "hits": [
+    {
+     "label": "a: the whip: Bbm(add9) + the harp-harmonic dyad",
+     "act": 1512.0,
+     "offset_ms": 1.3
+    },
+    {
+     "label": "a: Neleh's clockwork under the wait (11:59)",
+     "act": 1519.5,
+     "offset_ms": 11.5
+    },
+    {
+     "label": "a: the clockwork creeps back (under the tinny \"super.\")",
+     "act": 1985.0,
+     "offset_ms": -5.6
+    },
+    {
+     "label": "a: STEP FOUR on the list: Bbm(add9) (1 \u2713)",
+     "act": 2060.0,
+     "offset_ms": -48.0
+    },
+    {
+     "label": "a: STEP FOUR on the list: Ab(add9) (2. BLOG POST)",
+     "act": 2075.0,
+     "offset_ms": 57.7
+    },
+    {
+     "label": "a: STEP FOUR on the list: Gbmaj7 (3. INTERIM CEO)",
+     "act": 2090.0,
+     "offset_ms": -50.0
+    },
+    {
+     "label": "a: STEP FOUR on the list: the blank: the F bass alone (4. ____)",
+     "act": 2105.0,
+     "offset_ms": -40.3
+    },
+    {
+     "label": "a: the clock tick (under \"Any objections?\" and its silence)",
+     "act": 2401.0,
+     "offset_ms": -5.7
+    },
+    {
+     "label": "a: the Post click is a tick; the Bb pedal back",
+     "act": 2476.0,
+     "offset_ms": -5.4
+    },
+    {
+     "label": "b: one soft pizz figure after her join chime",
+     "act": 2498.0,
+     "offset_ms": 54.0
+    },
+    {
+     "label": "c: the pulse returns softly with the keycaps",
+     "act": 3390.0,
+     "offset_ms": -59.3
+    },
+    {
+     "label": "d: NOV 18: the Db bed; the hearts pour (the cascade, to the burial)",
+     "act": 3628.0,
+     "offset_ms": -0.0
+    },
+    {
+     "label": "d: the blue heart (one harp harmonic)",
+     "act": 3731.0,
+     "offset_ms": 12.4
+    },
+    {
+     "label": "d: the phones buzz: the pizz locks to it",
+     "act": 3750.0,
+     "offset_ms": 31.3
+    },
+    {
+     "label": "d: the second buzz",
+     "act": 3945.0,
+     "offset_ms": 31.7
+    },
+    {
+     "label": "d: THE DOOR (Ab4 -> Db5) through the door: his reflection",
+     "act": 4101.0,
+     "offset_ms": 22.3
+    },
+    {
+     "label": "d: the sincere beat: the solo viola plays the three steps (F Eb Db)",
+     "act": 4499.0,
+     "offset_ms": 7.0
+    },
+    {
+     "label": "e: the Lighthouse on the first ring",
+     "act": 4623.0,
+     "offset_ms": -2.3
+    },
+    {
+     "label": "e: the Addendum (Mario's quartet, thin), on \"some thoughts\"",
+     "act": 4960.8,
+     "offset_ms": -4.3
+    },
+    {
+     "label": "e: \"How much?\": the tail lands (sold); it rings into the lobby camera",
+     "act": 5276.4,
+     "offset_ms": -38.7
+    },
+    {
+     "label": "f: the clockwork resumes on the lobby camera, thin",
+     "act": 5300.0,
+     "offset_ms": 10.7
+    },
+    {
+     "label": "f: the spotlight: the straight-mute accent (F4 -> Bb4); the pulse",
+     "act": 5661.0,
+     "offset_ms": 11.7
+    },
+    {
+     "label": "f: the hourglass: one grain a beat, falling",
+     "act": 6127.0,
+     "offset_ms": 8.3
+    },
+    {
+     "label": "g: the Rhodes on the beats (Tasya appears; the jangle owns the offbeats)",
+     "act": 6276.0,
+     "offset_ms": 50.7
+    },
+    {
+     "label": "g: home: Abmaj9 on the sign, one Rhodes chord",
+     "act": 6753.0,
+     "offset_ms": -0.3
+    },
+    {
+     "label": "h: the clockwork winds down",
+     "act": 6824.0,
+     "offset_ms": 4.0
+    },
+    {
+     "label": "09x: the C pickup",
+     "act": 6935.5,
+     "offset_ms": -4.5
+    },
+    {
+     "label": "09x: REVERSAL on the card (F(add9), no third; one chip F6)",
+     "act": 6943.0,
+     "offset_ms": -15.7
+    },
+    {
+     "label": "09x: the orchestra cuts; one felt F4 (the door back) rings into S5",
+     "act": 6985.0,
+     "offset_ms": -40.4
+    }
+   ],
+   "stems_residual_db": -169.9,
+   "stems": {
+    "piano": "render/stems/s1-s4_procedure-piano.flac",
+    "strings": "render/stems/s1-s4_procedure-strings.flac",
+    "winds": "render/stems/s1-s4_procedure-winds.flac",
+    "brass": "render/stems/s1-s4_procedure-brass.flac",
+    "perc": "render/stems/s1-s4_procedure-perc.flac",
+    "chip": "render/stems/s1-s4_procedure-chip.flac"
+   },
+   "warnings": [
+    "marker at 0.8125 s: no clear onset within 10 ms ({'t': 0.8125, 'offset_ms': np.float64(11.5), 'strength': 2.86})",
+    "marker at 23.3333 s: no clear onset within 10 ms ({'t': 23.3333, 'offset_ms': np.float64(-48.0), 'strength': 1.83})",
+    "marker at 23.9583 s: no clear onset within 10 ms ({'t': 23.9583, 'offset_ms': np.float64(57.7), 'strength': 2.85})",
+    "marker at 24.5833 s: no clear onset within 10 ms ({'t': 24.5833, 'offset_ms': np.float64(-50.0), 'strength': 2.18})",
+    "marker at 25.2083 s: no clear onset within 10 ms ({'t': 25.2083, 'offset_ms': np.float64(-40.3), 'strength': 2.39})",
+    "marker at 41.5833 s: no clear onset within 10 ms ({'t': 41.5833, 'offset_ms': np.float64(54.0), 'strength': 2.46})",
+    "marker at 78.75 s: no clear onset within 10 ms ({'t': 78.75, 'offset_ms': np.float64(-59.3), 'strength': 2.57})",
+    "marker at 92.9583 s: no clear onset within 10 ms ({'t': 92.9583, 'offset_ms': np.float64(12.4), 'strength': 3.11})",
+    "marker at 93.75 s: no clear onset within 10 ms ({'t': 93.75, 'offset_ms': np.float64(31.3), 'strength': 1.74})",
+    "marker at 101.875 s: no clear onset within 10 ms ({'t': 101.875, 'offset_ms': np.float64(31.7), 'strength': 1.97})",
+    "marker at 108.375 s: no clear onset within 10 ms ({'t': 108.375, 'offset_ms': np.float64(22.3), 'strength': 1.86})",
+    "marker at 157.3507 s: no clear onset within 10 ms ({'t': 157.3507, 'offset_ms': np.float64(-38.7), 'strength': 1.75})",
+    "marker at 158.3333 s: no clear onset within 10 ms ({'t': 158.3333, 'offset_ms': np.float64(10.7), 'strength': 2.07})",
+    "marker at 173.375 s: no clear onset within 10 ms ({'t': 173.375, 'offset_ms': np.float64(11.7), 'strength': 1.96})",
+    "marker at 199.0 s: no clear onset within 10 ms ({'t': 199.0, 'offset_ms': np.float64(50.7), 'strength': 2.12})",
+    "marker at 226.7917 s: no clear onset within 10 ms ({'t': 226.7917, 'offset_ms': np.float64(-15.7), 'strength': 1.51})",
+    "marker at 228.5417 s: no clear onset within 10 ms ({'t': 228.5417, 'offset_ms': np.float64(-40.4), 'strength': 1.9})"
+   ]
+  }
+ },
+ "holes": {
+  "threshold": "louder channel <= -60 dBFS, 50 ms windows, >= 0.3 s",
+  "all": [
+   {
+    "f0": 997.2,
+    "f1": 1177.2,
+    "s": 7.5,
+    "tc": "13:12:13",
+    "designed": "D6: the Cancel click to the buzz; every bus muted (the act's one digital silence) + the room alone: the buzz, the suggested replies, \"super.\" (no score under it; S2's felt re-enters on 1178)"
+   }
+  ],
+  "undesigned": [],
+  "soft_under_minus50": []
+ },
+ "music_runs": [
+  {
+   "f0": 48.0,
+   "f1": 997.2,
+   "s": 39.55
+  },
+  {
+   "f0": 1177.2,
+   "f1": 4616.4,
+   "s": 143.3
+  },
+  {
+   "f0": 4620.0,
+   "f1": 7033.2,
+   "s": 100.55
+  }
+ ],
+ "fragments_under_2s": [],
+ "thin": [
+  {
+   "id": "a5-25-01",
+   "who": "neleh",
+   "on": 177.6,
+   "end": 214.8,
+   "score_lufs": -19.3,
+   "before_lufs": -28.9,
+   "melodic_onsets": [
+    {
+     "inst": "wz_box",
+     "act": 186.0,
+     "pitch": 77,
+     "why": "the waltz F F F: the three walk-offs are picture hits under \"...stepped down this year.\" (box only)"
+    },
+    {
+     "inst": "wz_box",
+     "act": 201.0,
+     "pitch": 77,
+     "why": "the waltz F F F: the three walk-offs are picture hits under \"...stepped down this year.\" (box only)"
+    }
+   ],
+   "ducked_lufs": -29.3,
+   "duck_db": -10.0
+  },
+  {
+   "id": "a5-25-02",
+   "who": "neleh",
+   "on": 236.4,
+   "end": 306.0,
+   "score_lufs": -19.5,
+   "before_lufs": -18.6,
+   "melodic_onsets": [
+    {
+     "inst": "p_lead",
+     "act": 276.0,
+     "pitch": 65,
+     "why": "one Blueprint note per label, the box alone under a word (the plan's rule: one note per label)"
+    }
+   ],
+   "ducked_lufs": -29.5,
+   "duck_db": -10.0
+  },
+  {
+   "id": "a5-25-03",
+   "who": "neleh",
+   "on": 320.4,
+   "end": 400.1,
+   "score_lufs": -20.5,
+   "before_lufs": -19.9,
+   "melodic_onsets": [
+    {
+     "inst": "p_lead",
+     "act": 328.5,
+     "pitch": 68,
+     "why": "one Blueprint note per label, the box alone under a word (the plan's rule: one note per label)"
+    },
+    {
+     "inst": "p_lead",
+     "act": 358.5,
+     "pitch": 70,
+     "why": "one Blueprint note per label, the box alone under a word (the plan's rule: one note per label)"
+    }
+   ],
+   "ducked_lufs": -30.5,
+   "duck_db": -10.0
+  },
+  {
+   "id": "a5-25-04",
+   "who": "neleh",
+   "on": 433.2,
+   "end": 530.9,
+   "score_lufs": -22.9,
+   "before_lufs": -17.8,
+   "melodic_onsets": [],
+   "ducked_lufs": -31.0,
+   "duck_db": -8.1
+  },
+  {
+   "id": "a5-25-05",
+   "who": "neleh",
+   "on": 545.3,
+   "end": 590.2,
+   "score_lufs": -19.8,
+   "before_lufs": -21.3,
+   "melodic_onsets": [
+    {
+     "inst": "p_lead",
+     "act": 546.0,
+     "pitch": 68,
+     "why": "one Blueprint note per label, the box alone under a word (the plan's rule: one note per label)"
+    }
+   ],
+   "ducked_lufs": -29.8,
+   "duck_db": -10.0
+  },
+  {
+   "id": "a5-25-06",
+   "who": "mada",
+   "on": 609.4,
+   "end": 631.0,
+   "score_lufs": -25.8,
+   "before_lufs": -19.6,
+   "melodic_onsets": [],
+   "ducked_lufs": -31.0,
+   "duck_db": -5.2
+  },
+  {
+   "id": "a5-26-01",
+   "who": "mas",
+   "on": 1135.8,
+   "end": 1153.1,
+   "score_lufs": -99.0,
+   "before_lufs": -99.0,
+   "melodic_onsets": [],
+   "ducked_lufs": -99.0,
+   "duck_db": 0.0
+  },
+  {
+   "id": "a5-26a-01",
+   "who": "mas",
+   "on": 1216.4,
+   "end": 1262.7,
+   "score_lufs": -26.9,
+   "before_lufs": -16.7,
+   "melodic_onsets": [],
+   "ducked_lufs": -30.9,
+   "duck_db": -4.0
+  },
+  {
+   "id": "a5-27-01",
+   "who": "alyi",
+   "on": 1569.6,
+   "end": 1735.2,
+   "score_lufs": -22.1,
+   "before_lufs": -18.6,
+   "melodic_onsets": [],
+   "ducked_lufs": -31.0,
+   "duck_db": -8.9
+  },
+  {
+   "id": "a5-27-02",
+   "who": "alyi",
+   "on": 1766.4,
+   "end": 1810.6,
+   "score_lufs": -19.9,
+   "before_lufs": -20.0,
+   "melodic_onsets": [],
+   "ducked_lufs": -29.9,
+   "duck_db": -10.0
+  },
+  {
+   "id": "a5-27-03",
+   "who": "neleh",
+   "on": 1846.6,
+   "end": 1876.3,
+   "score_lufs": -21.7,
+   "before_lufs": -20.4,
+   "melodic_onsets": [],
+   "ducked_lufs": -31.0,
+   "duck_db": -9.3
+  },
+  {
+   "id": "a5-27-04",
+   "who": "alyi",
+   "on": 1888.3,
+   "end": 1952.2,
+   "score_lufs": -21.4,
+   "before_lufs": -21.1,
+   "melodic_onsets": [],
+   "ducked_lufs": -31.0,
+   "duck_db": -9.6
+  },
+  {
+   "id": "a5-27-05",
+   "who": "mas",
+   "on": 2005.0,
+   "end": 2022.2,
+   "score_lufs": -18.5,
+   "before_lufs": -19.1,
+   "melodic_onsets": [
+    {
+     "inst": "vln1",
+     "act": 2007.5,
+     "pitch": 68,
+     "why": "the clockwork creeping back under the tinny \"super.\" (edit-plan-v5 a), or the hourglass grains"
+    },
+    {
+     "inst": "vln1",
+     "act": 2011.2,
+     "pitch": 72,
+     "why": "the clockwork creeping back under the tinny \"super.\" (edit-plan-v5 a), or the hourglass grains"
+    },
+    {
+     "inst": "vln1",
+     "act": 2015.0,
+     "pitch": 79,
+     "why": "the clockwork creeping back under the tinny \"super.\" (edit-plan-v5 a), or the hourglass grains"
+    },
+    {
+     "inst": "vln1",
+     "act": 2018.8,
+     "pitch": 72,
+     "why": "the clockwork creeping back under the tinny \"super.\" (edit-plan-v5 a), or the hourglass grains"
+    }
+   ],
+   "ducked_lufs": -28.5,
+   "duck_db": -10.0
+  },
+  {
+   "id": "a5-27-06",
+   "who": "neleh",
+   "on": 2110.8,
+   "end": 2174.6,
+   "score_lufs": -22.6,
+   "before_lufs": -20.5,
+   "melodic_onsets": [],
+   "ducked_lufs": -31.0,
+   "duck_db": -8.4
+  },
+  {
+   "id": "a5-27-07",
+   "who": "neleh",
+   "on": 2186.6,
+   "end": 2402.6,
+   "score_lufs": -22.7,
+   "before_lufs": -22.0,
+   "melodic_onsets": [],
+   "ducked_lufs": -31.0,
+   "duck_db": -8.3
+  },
+  {
+   "id": "a5-27-08",
+   "who": "neleh",
+   "on": 2419.4,
+   "end": 2443.9,
+   "score_lufs": -21.3,
+   "before_lufs": -23.6,
+   "melodic_onsets": [],
+   "ducked_lufs": -31.0,
+   "duck_db": -9.7
+  },
+  {
+   "id": "a5-27-09",
+   "who": "neleh",
+   "on": 2516.4,
+   "end": 2630.2,
+   "score_lufs": -21.6,
+   "before_lufs": -18.8,
+   "melodic_onsets": [],
+   "ducked_lufs": -31.0,
+   "duck_db": -9.4
+  },
+  {
+   "id": "a5-27-10",
+   "who": "rima",
+   "on": 2642.2,
+   "end": 2660.6,
+   "score_lufs": -22.2,
+   "before_lufs": -23.7,
+   "melodic_onsets": [],
+   "ducked_lufs": -31.0,
+   "duck_db": -8.8
+  },
+  {
+   "id": "a5-27-11",
+   "who": "neleh",
+   "on": 2670.2,
+   "end": 2700.0,
+   "score_lufs": -19.4,
+   "before_lufs": -21.3,
+   "melodic_onsets": [],
+   "ducked_lufs": -29.4,
+   "duck_db": -10.0
+  },
+  {
+   "id": "a5-27-12",
+   "who": "alyi",
+   "on": 2716.8,
+   "end": 2782.6,
+   "score_lufs": -20.5,
+   "before_lufs": -20.7,
+   "melodic_onsets": [],
+   "ducked_lufs": -30.5,
+   "duck_db": -10.0
+  },
+  {
+   "id": "a5-27-13",
+   "who": "rima",
+   "on": 2794.6,
+   "end": 2821.2,
+   "score_lufs": -21.0,
+   "before_lufs": -20.9,
+   "melodic_onsets": [],
+   "ducked_lufs": -31.0,
+   "duck_db": -10.0
+  },
+  {
+   "id": "a5-27-14",
+   "who": "neleh",
+   "on": 2833.2,
+   "end": 2903.0,
+   "score_lufs": -21.0,
+   "before_lufs": -21.1,
+   "melodic_onsets": [],
+   "ducked_lufs": -31.0,
+   "duck_db": -10.0
+  },
+  {
+   "id": "a5-27-15",
+   "who": "rima",
+   "on": 2919.8,
+   "end": 2944.8,
+   "score_lufs": -22.3,
+   "before_lufs": -22.0,
+   "melodic_onsets": [],
+   "ducked_lufs": -31.0,
+   "duck_db": -8.7
+  },
+  {
+   "id": "a5-27-16",
+   "who": "neleh",
+   "on": 2959.2,
+   "end": 2974.6,
+   "score_lufs": -22.7,
+   "before_lufs": -22.4,
+   "melodic_onsets": [],
+   "ducked_lufs": -31.0,
+   "duck_db": -8.3
+  },
+  {
+   "id": "a5-27-17",
+   "who": "rima",
+   "on": 2986.6,
+   "end": 3016.6,
+   "score_lufs": -21.3,
+   "before_lufs": -23.2,
+   "melodic_onsets": [],
+   "ducked_lufs": -31.0,
+   "duck_db": -9.7
+  },
+  {
+   "id": "a5-27-18",
+   "who": "employee",
+   "on": 3062.0,
+   "end": 3121.3,
+   "score_lufs": -20.7,
+   "before_lufs": -21.2,
+   "melodic_onsets": [],
+   "ducked_lufs": -30.7,
+   "duck_db": -10.0
+  },
+  {
+   "id": "a5-27-19",
+   "who": "alyi",
+   "on": 3145.3,
+   "end": 3333.7,
+   "score_lufs": -22.6,
+   "before_lufs": -19.2,
+   "melodic_onsets": [],
+   "ducked_lufs": -31.0,
+   "duck_db": -8.4
+  },
+  {
+   "id": "a5-27-20",
+   "who": "neleh",
+   "on": 3424.4,
+   "end": 3518.2,
+   "score_lufs": -21.0,
+   "before_lufs": -21.9,
+   "melodic_onsets": [],
+   "ducked_lufs": -31.0,
+   "duck_db": -10.0
+  },
+  {
+   "id": "a5-27-21",
+   "who": "alyi",
+   "on": 3537.4,
+   "end": 3603.7,
+   "score_lufs": -22.9,
+   "before_lufs": -21.5,
+   "melodic_onsets": [],
+   "ducked_lufs": -31.0,
+   "duck_db": -8.1
+  },
+  {
+   "id": "a5-27-22",
+   "who": "neleh",
+   "on": 3774.2,
+   "end": 3934.3,
+   "score_lufs": -22.9,
+   "before_lufs": -20.5,
+   "melodic_onsets": [],
+   "ducked_lufs": -31.0,
+   "duck_db": -8.1
+  },
+  {
+   "id": "a5-27-23",
+   "who": "neleh",
+   "on": 3967.9,
+   "end": 4097.5,
+   "score_lufs": -21.9,
+   "before_lufs": -19.4,
+   "melodic_onsets": [],
+   "ducked_lufs": -31.0,
+   "duck_db": -9.1
+  },
+  {
+   "id": "a5-27-24",
+   "who": "alyi",
+   "on": 4119.1,
+   "end": 4185.6,
+   "score_lufs": -21.4,
+   "before_lufs": -18.4,
+   "melodic_onsets": [],
+   "ducked_lufs": -31.0,
+   "duck_db": -9.6
+  },
+  {
+   "id": "a5-27-25",
+   "who": "neleh",
+   "on": 4192.8,
+   "end": 4204.3,
+   "score_lufs": -20.4,
+   "before_lufs": -22.2,
+   "melodic_onsets": [],
+   "ducked_lufs": -30.4,
+   "duck_db": -10.0
+  },
+  {
+   "id": "a5-27-26",
+   "who": "alyi",
+   "on": 4218.7,
+   "end": 4267.6,
+   "score_lufs": -20.0,
+   "before_lufs": -18.9,
+   "melodic_onsets": [],
+   "ducked_lufs": -30.0,
+   "duck_db": -10.0
+  },
+  {
+   "id": "a5-27-27",
+   "who": "neleh",
+   "on": 4282.2,
+   "end": 4388.5,
+   "score_lufs": -22.5,
+   "before_lufs": -20.9,
+   "melodic_onsets": [],
+   "ducked_lufs": -31.0,
+   "duck_db": -8.5
+  },
+  {
+   "id": "a5-27-28",
+   "who": "alyi",
+   "on": 4414.9,
+   "end": 4477.1,
+   "score_lufs": -22.3,
+   "before_lufs": -23.5,
+   "melodic_onsets": [],
+   "ducked_lufs": -31.0,
+   "duck_db": -8.7
+  },
+  {
+   "id": "a5-27-29",
+   "who": "neleh",
+   "on": 4530.2,
+   "end": 4568.6,
+   "score_lufs": -21.7,
+   "before_lufs": -21.0,
+   "melodic_onsets": [],
+   "ducked_lufs": -31.0,
+   "duck_db": -9.3
+  },
+  {
+   "id": "a5-27-30",
+   "who": "neleh",
+   "on": 4683.8,
+   "end": 4886.4,
+   "score_lufs": -24.9,
+   "before_lufs": -22.6,
+   "melodic_onsets": [
+    {
+     "inst": "marimba",
+     "act": 4683.0,
+     "pitch": 70,
+     "why": "the Lighthouse in half notes under the split's talk (the beam: this room's clock tick)"
+    },
+    {
+     "inst": "marimba",
+     "act": 4713.0,
+     "pitch": 65,
+     "why": "the Lighthouse in half notes under the split's talk (the beam: this room's clock tick)"
+    },
+    {
+     "inst": "marimba",
+     "act": 4743.0,
+     "pitch": 73,
+     "why": "the Lighthouse in half notes under the split's talk (the beam: this room's clock tick)"
+    },
+    {
+     "inst": "marimba",
+     "act": 4773.0,
+     "pitch": 70,
+     "why": "the Lighthouse in half notes under the split's talk (the beam: this room's clock tick)"
+    },
+    {
+     "inst": "marimba",
+     "act": 4803.0,
+     "pitch": 65,
+     "why": "the Lighthouse in half notes under the split's talk (the beam: this room's clock tick)"
+    },
+    {
+     "inst": "marimba",
+     "act": 4833.0,
+     "pitch": 73,
+     "why": "the Lighthouse in half notes under the split's talk (the beam: this room's clock tick)"
+    },
+    {
+     "inst": "marimba",
+     "act": 4863.0,
+     "pitch": 70,
+     "why": "the Lighthouse in half notes under the split's talk (the beam: this room's clock tick)"
+    }
+   ],
+   "ducked_lufs": -31.0,
+   "duck_db": -6.1
+  },
+  {
+   "id": "a5-27-31",
+   "who": "mario",
+   "on": 4900.8,
+   "end": 5083.2,
+   "score_lufs": -23.1,
+   "before_lufs": -24.0,
+   "melodic_onsets": [
+    {
+     "inst": "marimba",
+     "act": 4923.0,
+     "pitch": 73,
+     "why": "the Lighthouse in half notes under the split's talk (the beam: this room's clock tick)"
+    },
+    {
+     "inst": "marimba",
+     "act": 4953.0,
+     "pitch": 70,
+     "why": "the Lighthouse in half notes under the split's talk (the beam: this room's clock tick)"
+    },
+    {
+     "inst": "marimba",
+     "act": 4983.0,
+     "pitch": 65,
+     "why": "the Lighthouse in half notes under the split's talk (the beam: this room's clock tick)"
+    },
+    {
+     "inst": "marimba",
+     "act": 5013.0,
+     "pitch": 73,
+     "why": "the Lighthouse in half notes under the split's talk (the beam: this room's clock tick)"
+    },
+    {
+     "inst": "marimba",
+     "act": 5043.0,
+     "pitch": 70,
+     "why": "the Lighthouse in half notes under the split's talk (the beam: this room's clock tick)"
+    },
+    {
+     "inst": "marimba",
+     "act": 5073.0,
+     "pitch": 65,
+     "why": "the Lighthouse in half notes under the split's talk (the beam: this room's clock tick)"
+    },
+    {
+     "inst": "svla",
+     "act": 4960.8,
+     "pitch": 58,
+     "why": "the Addendum: Mario's quartet, thin, under his own line (edit-plan-v5: \"thin under the talk\")"
+    },
+    {
+     "inst": "svla",
+     "act": 4975.8,
+     "pitch": 60,
+     "why": "the Addendum: Mario's quartet, thin, under his own line (edit-plan-v5: \"thin under the talk\")"
+    },
+    {
+     "inst": "svla",
+     "act": 4990.8,
+     "pitch": 61,
+     "why": "the Addendum: Mario's quartet, thin, under his own line (edit-plan-v5: \"thin under the talk\")"
+    },
+    {
+     "inst": "svla",
+     "act": 5005.8,
+     "pitch": 65,
+     "why": "the Addendum: Mario's quartet, thin, under his own line (edit-plan-v5: \"thin under the talk\")"
+    },
+    {
+     "inst": "svla",
+     "act": 5020.8,
+     "pitch": 63,
+     "why": "the Addendum: Mario's quartet, thin, under his own line (edit-plan-v5: \"thin under the talk\")"
+    },
+    {
+     "inst": "svla",
+     "act": 5043.3,
+     "pitch": 61,
+     "why": "the Addendum: Mario's quartet, thin, under his own line (edit-plan-v5: \"thin under the talk\")"
+    },
+    {
+     "inst": "svla",
+     "act": 5050.8,
+     "pitch": 60,
+     "why": "the Addendum: Mario's quartet, thin, under his own line (edit-plan-v5: \"thin under the talk\")"
+    },
+    {
+     "inst": "svla",
+     "act": 5065.8,
+     "pitch": 58,
+     "why": "the Addendum: Mario's quartet, thin, under his own line (edit-plan-v5: \"thin under the talk\")"
+    },
+    {
+     "inst": "svla",
+     "act": 5080.8,
+     "pitch": 60,
+     "why": "the Addendum: Mario's quartet, thin, under his own line (edit-plan-v5: \"thin under the talk\")"
+    }
+   ],
+   "ducked_lufs": -31.1,
+   "duck_db": -7.9
+  },
+  {
+   "id": "a5-27-32",
+   "who": "adelina",
+   "on": 5075.4,
+   "end": 5112.3,
+   "score_lufs": -22.1,
+   "before_lufs": -22.7,
+   "melodic_onsets": [
+    {
+     "inst": "marimba",
+     "act": 5103.0,
+     "pitch": 73,
+     "why": "the Lighthouse in half notes under the split's talk (the beam: this room's clock tick)"
+    },
+    {
+     "inst": "svla",
+     "act": 5080.8,
+     "pitch": 60,
+     "why": "the Addendum: Mario's quartet, thin, under his own line (edit-plan-v5: \"thin under the talk\")"
+    },
+    {
+     "inst": "svla",
+     "act": 5088.3,
+     "pitch": 61,
+     "why": "the Addendum: Mario's quartet, thin, under his own line (edit-plan-v5: \"thin under the talk\")"
+    },
+    {
+     "inst": "svla",
+     "act": 5095.8,
+     "pitch": 63,
+     "why": "the Addendum: Mario's quartet, thin, under his own line (edit-plan-v5: \"thin under the talk\")"
+    }
+   ],
+   "ducked_lufs": -31.0,
+   "duck_db": -8.9
+  },
+  {
+   "id": "a5-27-33",
+   "who": "adelina",
+   "on": 5160.3,
+   "end": 5202.1,
+   "score_lufs": -23.2,
+   "before_lufs": -23.6,
+   "melodic_onsets": [
+    {
+     "inst": "marimba",
+     "act": 5163.0,
+     "pitch": 65,
+     "why": "the Lighthouse in half notes under the split's talk (the beam: this room's clock tick)"
+    },
+    {
+     "inst": "marimba",
+     "act": 5193.0,
+     "pitch": 73,
+     "why": "the Lighthouse in half notes under the split's talk (the beam: this room's clock tick)"
+    }
+   ],
+   "ducked_lufs": -31.0,
+   "duck_db": -7.8
+  },
+  {
+   "id": "a5-27-34",
+   "who": "mario",
+   "on": 5209.3,
+   "end": 5260.4,
+   "score_lufs": -25.3,
+   "before_lufs": -22.9,
+   "melodic_onsets": [
+    {
+     "inst": "marimba",
+     "act": 5223.0,
+     "pitch": 70,
+     "why": "the Lighthouse in half notes under the split's talk (the beam: this room's clock tick)"
+    },
+    {
+     "inst": "marimba",
+     "act": 5253.0,
+     "pitch": 65,
+     "why": "the Lighthouse in half notes under the split's talk (the beam: this room's clock tick)"
+    }
+   ],
+   "ducked_lufs": -31.0,
+   "duck_db": -5.7
+  },
+  {
+   "id": "a5-27-35",
+   "who": "neleh",
+   "on": 5368.8,
+   "end": 5498.2,
+   "score_lufs": -21.8,
+   "before_lufs": -20.6,
+   "melodic_onsets": [],
+   "ducked_lufs": -31.0,
+   "duck_db": -9.2
+  },
+  {
+   "id": "a5-27-36",
+   "who": "alyi",
+   "on": 5515.0,
+   "end": 5562.5,
+   "score_lufs": -21.0,
+   "before_lufs": -22.9,
+   "melodic_onsets": [],
+   "ducked_lufs": -31.0,
+   "duck_db": -10.0
+  },
+  {
+   "id": "a5-27-37",
+   "who": "neleh",
+   "on": 5574.5,
+   "end": 5632.1,
+   "score_lufs": -23.6,
+   "before_lufs": -21.5,
+   "melodic_onsets": [],
+   "ducked_lufs": -31.0,
+   "duck_db": -7.4
+  },
+  {
+   "id": "a5-27-38",
+   "who": "neleh",
+   "on": 5776.2,
+   "end": 5835.0,
+   "score_lufs": -23.7,
+   "before_lufs": -20.1,
+   "melodic_onsets": [],
+   "ducked_lufs": -31.0,
+   "duck_db": -7.3
+  },
+  {
+   "id": "a5-27-39",
+   "who": "ttemme",
+   "on": 5844.6,
+   "end": 5884.2,
+   "score_lufs": -20.7,
+   "before_lufs": -20.3,
+   "melodic_onsets": [],
+   "ducked_lufs": -30.7,
+   "duck_db": -10.0
+  },
+  {
+   "id": "a5-27-40",
+   "who": "neleh",
+   "on": 5898.6,
+   "end": 5926.7,
+   "score_lufs": -22.2,
+   "before_lufs": -20.8,
+   "melodic_onsets": [],
+   "ducked_lufs": -31.0,
+   "duck_db": -8.8
+  },
+  {
+   "id": "a5-27-41",
+   "who": "ttemme",
+   "on": 5943.5,
+   "end": 6030.6,
+   "score_lufs": -22.1,
+   "before_lufs": -22.9,
+   "melodic_onsets": [],
+   "ducked_lufs": -31.0,
+   "duck_db": -8.9
+  },
+  {
+   "id": "a5-27-42",
+   "who": "ttemme",
+   "on": 6102.6,
+   "end": 6116.0,
+   "score_lufs": -21.4,
+   "before_lufs": -20.2,
+   "melodic_onsets": [],
+   "ducked_lufs": -31.0,
+   "duck_db": -9.6
+  },
+  {
+   "id": "a5-27-43",
+   "who": "ttemme",
+   "on": 6147.0,
+   "end": 6180.1,
+   "score_lufs": -21.0,
+   "before_lufs": -20.4,
+   "melodic_onsets": [
+    {
+     "inst": "vln1",
+     "act": 6172.0,
+     "pitch": 70,
+     "why": "the clockwork creeping back under the tinny \"super.\" (edit-plan-v5 a), or the hourglass grains"
+    }
+   ],
+   "ducked_lufs": -31.0,
+   "duck_db": -10.0
+  },
+  {
+   "id": "a5-27-44",
+   "who": "tasya",
+   "on": 6336.4,
+   "end": 6399.0,
+   "score_lufs": -20.6,
+   "before_lufs": -17.4,
+   "melodic_onsets": [],
+   "ducked_lufs": -30.6,
+   "duck_db": -10.0
+  },
+  {
+   "id": "a5-27-45",
+   "who": "tasya",
+   "on": 6408.6,
+   "end": 6742.0,
+   "score_lufs": -20.5,
+   "before_lufs": -21.6,
+   "melodic_onsets": [
+    {
+     "inst": "vln2",
+     "act": 6518.0,
+     "pitch": 63,
+     "why": "the hourglass: one grain a beat under \"Chat\u2026 for how long?\" (edit-plan-v5 f)"
+    },
+    {
+     "inst": "vln1",
+     "act": 6518.0,
+     "pitch": 66,
+     "why": "the clockwork creeping back under the tinny \"super.\" (edit-plan-v5 a), or the hourglass grains"
+    }
+   ],
+   "ducked_lufs": -31.0,
+   "duck_db": -10.5
+  },
+  {
+   "id": "a5-27-46",
+   "who": "neleh",
+   "on": 6848.0,
+   "end": 6865.8,
+   "score_lufs": -22.4,
+   "before_lufs": -19.4,
+   "melodic_onsets": [],
+   "ducked_lufs": -30.9,
+   "duck_db": -8.6
+  }
+ ],
+ "joins": {
+  "d6": {
+   "f0": 997,
+   "f1": 1178.0,
+   "peak_dbfs": -138.5,
+   "rule": "< -90 dBFS (digital zero)"
+  },
+  "s2_reentry": {
+   "first_sound": 1177.9,
+   "carve": 1178.0
+  },
+  "whip": {
+   "f": 1512.0,
+   "level_before_lufs": -31.9,
+   "level_after_lufs": -19.2
+  },
+  "card": {
+   "f": 6943.0,
+   "level_lufs": -15.2
+  },
+  "felt_f4": {
+   "f": 6985.0,
+   "ring_to": 7034.0,
+   "level_lufs_first_bar": -25.0
+  }
+ },
+ "duck": {
+  "windows": 54,
+  "bridges": 37,
+  "depths": [
+   -10.5,
+   -10.0,
+   -9.7,
+   -9.6,
+   -9.4,
+   -9.3,
+   -9.2,
+   -9.1,
+   -8.9,
+   -8.8,
+   -8.7,
+   -8.6,
+   -8.5,
+   -8.4,
+   -8.3,
+   -8.1,
+   -7.9,
+   -7.8,
+   -7.4,
+   -7.3,
+   -6.1,
+   -5.7,
+   -5.2,
+   -4.0,
+   0.0
+  ]
+ },
+ "heard": false,
+ "note": "Measured, never heard. A person must listen before any of this is called done."
+}

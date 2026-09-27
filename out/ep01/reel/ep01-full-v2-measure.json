@@ -1,0 +1,173 @@
+{
+ "manifest": "show/reel/ep01-full/ep01-full-v2.manifest.json",
+ "key": "ep01-full-v2",
+ "host": {
+  "cores": 14,
+  "load1": 2.95
+ },
+ "jobs": 2,
+ "concurrency": 2,
+ "seg": 90,
+ "scale": 1,
+ "steps": {
+  "bundle": "reused",
+  "plan": 0.3,
+  "mix": 29.7,
+  "render": 811.3,
+  "concat": 0.3,
+  "mixWaitAfterPicture": 0,
+  "mux": 30.5
+ },
+ "renderedSeconds": 1340.5,
+ "segments": [
+  {
+   "file": "000-title-0-72-1ee497d858.mp4",
+   "chapter": "title",
+   "frames": 72,
+   "wall": 4.9
+  },
+  {
+   "file": "001-coldopen-72-796-5e97da6b69.mp4",
+   "chapter": "coldopen",
+   "frames": 724,
+   "wall": 33.6
+  },
+  {
+   "file": "002-intro-796-1516-50409336e3.mp4",
+   "chapter": "intro",
+   "frames": 720,
+   "wall": 4.5
+  },
+  {
+   "file": "003-card-1516-1564-70edb5ef9e.mp4",
+   "chapter": "card",
+   "frames": 48,
+   "wall": 4
+  },
+  {
+   "file": "004-act1-1564-3611-5734b5d2f3.mp4",
+   "chapter": "act1",
+   "frames": 2047,
+   "wall": 100.2
+  },
+  {
+   "file": "005-act1-3611-5657-99281e5a4a.mp4",
+   "chapter": "act1",
+   "frames": 2046,
+   "wall": 85.7
+  },
+  {
+   "file": "006-act1-5657-7704-663dd429e9.mp4",
+   "chapter": "act1",
+   "frames": 2047,
+   "wall": 100.1
+  },
+  {
+   "file": "007-act1-7704-9750-6b0fac4802.mp4",
+   "chapter": "act1",
+   "frames": 2046,
+   "wall": 85.8
+  },
+  {
+   "file": "008-act2-9750-11489-cc545a132a.mp4",
+   "chapter": "act2",
+   "frames": 1739,
+   "wall": 75.4
+  },
+  {
+   "file": "009-act2-11489-13229-76b73b083f.mp4",
+   "chapter": "act2",
+   "frames": 1740,
+   "wall": 75.5
+  },
+  {
+   "file": "010-act2-13229-14968-d5c5436195.mp4",
+   "chapter": "act2",
+   "frames": 1739,
+   "wall": 80.8
+  },
+  {
+   "file": "011-act3-14968-16744-cca3f9037c.mp4",
+   "chapter": "act3",
+   "frames": 1776,
+   "wall": 74.9
+  },
+  {
+   "file": "012-act3-16744-18520-9eb8f545e8.mp4",
+   "chapter": "act3",
+   "frames": 1776,
+   "wall": 75.1
+  },
+  {
+   "file": "013-act4-18520-20594-d09650c991.mp4",
+   "chapter": "act4",
+   "frames": 2074,
+   "wall": 119.8
+  },
+  {
+   "file": "014-act4-20594-22668-9dab93ddeb.mp4",
+   "chapter": "act4",
+   "frames": 2074,
+   "wall": 119.2
+  },
+  {
+   "file": "015-act4-22668-24742-b8b37d1e4a.mp4",
+   "chapter": "act4",
+   "frames": 2074,
+   "wall": 134
+  },
+  {
+   "file": "016-act4-24742-26815-d53547544a.mp4",
+   "chapter": "act4",
+   "frames": 2073,
+   "wall": 127.2
+  },
+  {
+   "file": "017-act4-26815-28889-107445fe53.mp4",
+   "chapter": "act4",
+   "frames": 2074,
+   "wall": 132.2
+  },
+  {
+   "file": "018-act4-28889-30963-8b9efca547.mp4",
+   "chapter": "act4",
+   "frames": 2074,
+   "wall": 130.9
+  },
+  {
+   "file": "019-tag-30963-31884-f63dff63f9.mp4",
+   "chapter": "tag",
+   "frames": 921,
+   "wall": 40.2
+  },
+  {
+   "file": "020-outro-31884-32172-ee9ad8072b.mp4",
+   "chapter": "outro",
+   "frames": 288,
+   "wall": 13.8
+  }
+ ],
+ "frames": {
+  "expected": 32172,
+  "got": 32172
+ },
+ "wall": 842.6,
+ "reelSeconds": 1340.5,
+ "speed": {
+  "reelSecondsPerMinuteWall": 95.5,
+  "renderedSecondsPerMinuteOfRenderStep": 99.1
+ },
+ "out": "out/ep01/reel/ep01-full-v2.mp4",
+ "outBytes": 111574057,
+ "mix": {
+  "lufs": -17.667,
+  "peak": -4.3,
+  "missing": [],
+  "silences": [
+   [
+    0,
+    3
+   ]
+  ]
+ }
+}

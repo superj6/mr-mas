@@ -2,10 +2,11 @@
 // Each demo paints the 480 x 203 picture area of a native frame the way the v5 shot would use the asset, so the sheet
 // shows the asset in its framing, not on a blank. These are previews, not the v5 layouts: shots5.ts (INF-SHOTS5, not
 // built yet) owns the shots. Keys are `ID@state`; ids match art-needs-v5.md §2.
-import {Buf, rect} from '../../../../shared/pixel/px';
+import {Buf, rect, bayer, hash} from '../../../../shared/pixel/px';
 import {text} from '../../../../shared/pixel/font';
 import {PAL} from '../../../../shared/pixel/palette';
 import {drawPost, POSTS, postBox} from '../../../../shared/pixel/kits/post-card';
+import {withFootnoteStyle, FootnoteStyle, drawNelehTile} from '../../../../shared/pixel/cast/neleh';
 
 export interface AssetDemo {
   id: string;
@@ -18,7 +19,10 @@ export interface AssetDemo {
   draw: (fb: Buf) => void;
 }
 export const DEMOS: AssetDemo[] = [];
-const D = (d: AssetDemo) => { DEMOS.push(d); };
+/** a4p5 r2: Neleh's footnotes in every demo are drawn in the v5 style ('slips', cast/neleh.ts withFootnoteStyle), since
+ *  the sheet previews v5; FIX-FOOTNOTES@digits-vs-slips shows v4's digits beside them. A demo can pin `footnotes`. */
+export const V5_FOOTNOTES: FootnoteStyle = 'slips';
+const D = (d: AssetDemo & {footnotes?: FootnoteStyle}) => { const draw = d.draw; DEMOS.push({...d, draw: (fb) => withFootnoteStyle(d.footnotes ?? V5_FOOTNOTES, () => draw(fb))}); };
 
 // ------------------------------------------------------------------ UI-POST
 D({id: 'UI-POST', state: 'phone', module: 'shared/pixel/kits/post-card.ts', note: "S5.03 phone size: Rima's post, hearted; the flood below",
@@ -33,13 +37,14 @@ D({id: 'UI-POST', state: 'phone', module: 'shared/pixel/kits/post-card.ts', note
       y += postBox(POSTS.rimaPeople, 'phone', 216).h + 6;
     }
   }});
-D({id: 'UI-POST', state: 'notify', module: 'shared/pixel/kits/post-card.ts', note: "S3.05 / S4.01 / S4.09 notification size on a call",
+D({id: 'UI-POST', state: 'notify', module: 'shared/pixel/kits/post-card.ts', note: "S3.05 / S4.01 / S4.09 notification size; right: its entrance, k0-k2 held, k3 whole",
   draw: (fb) => {
     rect(0, 0, 480, 203, fb.ink(PAL.N1));
     drawPost(fb, 20, 20, POSTS.gergQuit, {size: 'notify', w: 150, glow: true});
     drawPost(fb, 20, 70, POSTS.masEulogy, {size: 'notify', w: 200});
     drawPost(fb, 250, 20, POSTS.masBadge, {size: 'notify', w: 200});
-    drawPost(fb, 250, 90, POSTS.gergQuit, {size: 'notify', w: 150, k: 1});
+    // a4p5 r2: the card's entrance as labelled held steps (k 0, 1, 2, then whole); a lone k 1 read as an empty card
+    ([0, 1, 2, 3] as const).forEach((k, i) => { text(fb, `k${k}`, 232, 86 + i * 29, PAL.N6); drawPost(fb, 250, 76 + i * 29, POSTS.gergQuit, {size: 'notify', w: 150, k}); });
   }});
 D({id: 'UI-POST', state: 'popup', module: 'shared/pixel/kits/post-card.ts', note: "S7.01 / S7.13 pop-up in its own UI",
   draw: (fb) => {
@@ -72,7 +77,8 @@ D({id: 'ROOM-NELEH-DESK', state: 'scr-evening', module: 'shared/pixel/rooms/nele
     const s = fullScreen({f: 900, clock: '6:12', fifth: {kind: 'rima', k: 99}});
     // r3: the notification sits in the bottom-left corner over THE QUIET VOTE's black tile (at 150,40 it covered Mada's
     // face); nobody who speaks in S3.05 is under it
-    drawPost(s, 4, 142, POSTS.gergQuit, {size: 'notify', w: 156, glow: true});
+    // a4p5 r2: 5 px lower (at 142 its top covered "camera" in "camera off", which then read "...off")
+    drawPost(s, 4, 147, POSTS.gergQuit, {size: 'notify', w: 156, glow: true});
     drawNelehBezel(fb, s, {time: 'evening'});
   }});
 D({id: 'ROOM-NELEH-DESK', state: 'mcu-wall', module: 'shared/pixel/rooms/neleh-desk.ts drawNelehDeskWall + cast/neleh.ts', note: 'S3.04b: Neleh MCU right third, brow query, over the soft shelf wall',
@@ -82,6 +88,13 @@ for (const light of ['screen', 'lamp', 'window', 'sil'] as const)
     draw: (fb) => {
       rect(0, 0, 480, 203, fb.ink(light === 'lamp' ? PAL.W1 : light === 'screen' ? PAL.C1 : PAL.N2));
       rect(40, 30, 280, 150, fb.ink(light === 'screen' ? PAL.C4 : PAL.N1));
+      if (light === 'window') {
+        // a4p5 r2: over a night window (S4.04 looks past her onto the boardroom glass), not a flat navy card
+        for (let y = 0; y < 203; y++) for (let x = 0; x < 480; x++) fb.set(x, y, y < 70 ? PAL.N1 : y < 108 ? (bayer(x, y) < (y - 70) / 60 ? PAL.N3 : PAL.N2) : y === 108 ? PAL.N4 : PAL.N1);
+        for (let r = 0; r < 9; r++) for (let x = (r * 7) % 4; x < 480; x += 2 + (r >> 1)) if (hash(x, r, 9) < 0.55) fb.set(x, 110 + Math.round(r * r * 1.1), r < 2 ? PAL.W3 : hash(x, r, 10) < 0.1 ? PAL.C5 : hash(x, r, 11) < 0.2 ? PAL.W7 : PAL.W5);
+        for (const mx of [118, 262, 406]) { rect(mx, 0, 4, 203, fb.ink(PAL.N0)); rect(mx, 0, 1, 203, fb.ink(PAL.N4)); }
+        rect(0, 196, 480, 7, fb.ink(PAL.N0)); rect(0, 196, 480, 1, fb.ink(PAL.N4));
+      }
       drawNelehShoulderR(fb, 480, 203, {light, turn: 0});
       drawNelehShoulderR(fb, 330, 203, {light, turn: 1});
     }});
@@ -105,17 +118,24 @@ D({id: 'UI-LETTER-V5', state: 'alyi-stop', module: 'shared/pixel/kits/staff-lett
 // ------------------------------------------------------------------ BP-NELEH-POINTER (over v4's plan4 sheet, the v5 poses)
 import {drawPlan4, PLAN4} from '../animatic/plan4';
 import {bpNeleh, bpTipIn, bpVoice, inkOver, sweep, bpBracket} from '../../../../shared/pixel/kits/bp-pointer';
+import {BPX} from '../../../../shared/pixel/kits/blueprint';
 const planShot = (id: string) => ({id, marks: {}, lines: [], texts: []} as unknown as Parameters<typeof drawPlan4>[1]);
 const NX = 458; // r3: inside the sheet's double border (at 468 the border line ran through her paper)
 D({id: 'BP-NELEH-POINTER', state: 'point-plates', module: 'shared/pixel/kits/bp-pointer.ts', note: 'S1.03: her figure at the right edge taps MAS / CEO and GERG / CO-FOUNDER',
   standin: 'the sheet is v4 plan4 (it gets the figure drawn in before composite in plan5)',
-  draw: (fb) => { drawPlan4(fb, planShot('S1.03'), 100); inkOver(fb, (b) => { bpNeleh(b, NX, PLAN4.FOOT, {kind: 'point', at: [272, PLAN4.FOOT + 4], tap: 1}, 100, {knock: true}); bpBracket(b, 176, PLAN4.FOOT + 3, 96, 24, 4); }); }});
+  // a4p5 r2: the callout (routed under the labels and the four's ring to a hot arrow at the bracket's centre) replaces
+  // the straight leader, which ended a pixel from ALYI's chair
+  draw: (fb) => { drawPlan4(fb, planShot('S1.03'), 100); inkOver(fb, (b) => { const box: [number, number, number, number] = [176, PLAN4.FOOT + 3, 96, 24]; bpNeleh(b, NX, PLAN4.FOOT, {kind: 'point', at: [224, PLAN4.FOOT + 14], tap: 1, callout: {box, rail: PLAN4.FOOT + 41}}, 100, {knock: true}); bpBracket(b, ...box, 4); }); }});
 D({id: 'BP-NELEH-POINTER', state: 'sweep-four-us', module: 'shared/pixel/kits/bp-pointer.ts', note: "S1.03: the sweep to the four (a held in-between), her page glowing on \"us\"",
   draw: (fb) => { drawPlan4(fb, planShot('S1.03'), 110); inkOver(fb, (b) => bpNeleh(b, NX, PLAN4.FOOT, sweep(10, 0, 12, [216, 162], [336, 110]), 110, {glow: true, knock: true})); }});
 D({id: 'BP-NELEH-POINTER', state: 'detail-ring-voice', module: 'shared/pixel/kits/bp-pointer.ts', note: "S1.04 2x detail: the pointer's tip on the key ring; MADA's spinner icon (speaking)",
   draw: (fb) => { drawPlan4(fb, planShot('S1.04'), 30); inkOver(fb, (b) => { bpTipIn(b, [446, 104], [0.55, -1], 120); bpVoice(b, 34, 44, 30, true); }); }});
 D({id: 'BP-NELEH-POINTER', state: 'poses', module: 'shared/pixel/kits/bp-pointer.ts', note: 'rest · point (tap) · down · walk A · walk B · 2x rest (the detail scale)',
-  draw: (fb) => { drawPlan4(fb, planShot('S1.05'), 0); inkOver(fb, (b) => {
+  // a4p5 r2: on a blank drafting sheet (v4's S1.05 frame 0 left a stray "THE." and a figure cut by the left edge)
+  draw: (fb) => { inkOver(fb, (b) => {
+    rect(0, 0, 480, 203, b.ink(BPX.navy));
+    for (let x = 4; x < 480; x += 8) rect(x, 0, 1, 203, b.ink(x % 40 === 4 ? BPX.major : BPX.minor));
+    for (let y = 4; y < 203; y += 8) rect(0, y, 480, 1, b.ink(y % 40 === 4 ? BPX.major : BPX.minor));
     bpNeleh(b, 280, 110, {kind: 'rest'}, 0); bpNeleh(b, 330, 110, {kind: 'point', at: [260, 60], tap: 0}, 0); bpNeleh(b, 380, 110, {kind: 'down'}, 0);
     bpNeleh(b, 280, 190, {kind: 'walk', step: 1}, 0); bpNeleh(b, 330, 190, {kind: 'walk', step: 2}, 0); bpNeleh(b, 420, 190, {kind: 'rest'}, 0, {k: 2}); }); }});
 
@@ -168,7 +188,7 @@ D({id: 'CAST-TERB-SHEET', state: 'looks-to-mada', module: 'shared/pixel/cast/ter
   draw: (fb) => drawCalmOffTerms2S(fb, 3100, {terb: {pose: {read: false, mouth: 'open'}}})});
 D({id: 'CAST-TERB-SHEET', state: 'spray', module: 'shared/pixel/cast/terb-sheet.ts + rooms/calmoff-terms.ts', note: 'S7.07: between sentences he sprays the chair fire, the sheet under his arm',
   draw: (fb) => drawCalmOffTerms2S(fb, 3200, {terb: {spray: 8}})});
-D({id: 'PROP-PHONE-TABLE', state: 'lit', module: 'shared/pixel/rooms/calmoff-terms.ts drawTablePhone + kits/post-card.ts', note: "S7.09: Mas's phone lights green on the table, keycaps; Gerg's post as its notify card",
+D({id: 'PROP-PHONE-TABLE', state: 'lit', module: 'shared/pixel/rooms/calmoff-terms.ts drawTablePhone + kits/post-card.ts', note: "S7.09: Mas's phone lights green on the table (no keycaps, a4p5); Gerg's post as its notify card",
   draw: (fb) => { drawCalmOffTerms2S(fb, 3400, {terb: {pose: {arm: 'sheet', read: false}}, phone: 10, mada: {nod: 1}, stopped: true}); drawPostCard(fb, 150, 12, {who: 'gerg', text: 'Returning to NopeAI & getting back to coding tonight.'}, {size: 'notify', w: 184, glow: true}); }});
 D({id: 'CAST-OTHER-YRRAL', state: 'nod-0', module: 'shared/pixel/rooms/calmoff-terms.ts drawOtherYrralM', note: 'S7.07b: the seated silhouette, the nameplate, among the fires', draw: (fb) => drawOtherYrralM(fb, 3050, {nod: 0})});
 D({id: 'CAST-OTHER-YRRAL', state: 'nod-1', module: 'shared/pixel/rooms/calmoff-terms.ts drawOtherYrralM', note: 'S7.07b: the nod (the second drawing, held 6 f)', draw: (fb) => drawOtherYrralM(fb, 3056, {nod: 1})});
@@ -288,7 +308,8 @@ D({id: 'ROOM-BULLPEN-UNPACK', state: 'parts', module: 'shared/pixel/rooms/bullpe
   }});
 
 // ------------------------------------------------------------------ PROP-HOURGLASS-INSERT (S4.11, S7.13)
-import {drawHourglassXL, hgxFlip, HGX, HGX_GRAINS} from '../../../../shared/pixel/kits/hourglass-insert';
+import {drawHourglassXL, hgxFlip, HGX, HGX_GRAINS, HGX_HIGH} from '../../../../shared/pixel/kits/hourglass-insert';
+import {drawTableInsert, TABLE_INSERT} from '../../../../shared/pixel/rooms/boardroom';
 import {woodGrain} from '../../../../shared/pixel/kits/props';
 import {drawTtemmeMedium as ttM, TTEMME_MEDIUM_DEFAULT as TTM} from '../../../../shared/pixel/cast/ttemme-medium';
 import {drawChatPanel as chatP} from '../../../../shared/pixel/kits/chat-panel';
@@ -315,10 +336,13 @@ D({id: 'PROP-HOURGLASS-INSERT', state: 'low-flip-side', module: 'shared/pixel/ki
 D({id: 'PROP-HOURGLASS-INSERT', state: 'low-running', module: 'shared/pixel/kits/hourglass-insert.ts', note: 'S4.11: set down, flipped; the sand starts to fall, one pixel per beat',
   standin: 'the LOW·desk plate here is a demo backing (the v5 layout owns the boardroom plate)',
   draw: (fb) => lowDesk(fb, 40, 3060)});
+/** S7.13 [HIGH]: a4p5 r2 puts the high view on v4's own S7.13 plate (rooms/boardroom drawTableInsert 'prop': the walnut
+ *  top, the pendant's reflection, the blueprint's corner), its foot on TABLE_INSERT.prop, instead of a flat grain field
+ *  (which read as a wall) */
 const highTable = (st: Parameters<typeof drawHourglassXL>[3], post = false) => (fb: Buf) => {
-  rect(0, 0, 480, 203, fb.ink(PAL.D2)); woodGrain(fb, 0, 0, 480, 203, 11, [PAL.D1, PAL.D2, PAL.D3, PAL.D4]);
-  for (let x = 0; x < 480; x++) { fb.set(x, 196, PAL.C3); fb.set(x, 197, PAL.C5); }
-  drawHourglassXL(fb, 210, 50, {view: 'high', ...st});
+  drawTableInsert(fb, {f: 0, focus: 'prop'});
+  const [px, py] = TABLE_INSERT.prop;
+  drawHourglassXL(fb, px - HGX_HIGH.foot[0], py + 3 - HGX_HIGH.foot[1], {view: 'high', ...st});
   chatP(fb, 470, 160, 'corner', 5000);
   if (post) drawPost(fb, 20, 20, POSTS.ttemmeResult, {size: 'popup', w: 200});
 };
@@ -326,13 +350,17 @@ D({id: 'PROP-HOURGLASS-INSERT', state: 'high-last-grain', module: 'shared/pixel/
   draw: highTable({moved: HGX_GRAINS - 1}, true)});
 D({id: 'PROP-HOURGLASS-INSERT', state: 'high-shatter', module: 'shared/pixel/kits/hourglass-insert.ts', note: 'S7.13: the shatter (k 4): shards on their arcs, the sand still holding the bulb\'s shape',
   draw: highTable({moved: HGX_GRAINS, shatter: 4})});
-D({id: 'PROP-HOURGLASS-INSERT', state: 'states', module: 'shared/pixel/kits/hourglass-insert.ts', note: 'full · running · side · lift+hand · last grain · shatter 0 · held shape 10 · slump 1-3',
+D({id: 'PROP-HOURGLASS-INSERT', state: 'states', module: 'shared/pixel/kits/hourglass-insert.ts', note: 'full, running, last grain, crack, held · slump 16, 22, side, HIGH · lift+hand',
   draw: (fb) => {
+    // a4p5 r2: re-laid out (the lift+hand drawing's sleeve overlapped the slump drawing above it)
     rect(0, 0, 480, 203, fb.ink(PAL.N2));
-    const S: Array<Parameters<typeof drawHourglassXL>[3]> = [{moved: 0}, {moved: 200, running: true, f: 30}, {moved: HGX_GRAINS - 1}, {moved: HGX_GRAINS, shatter: 0}, {moved: HGX_GRAINS, shatter: 10}, {moved: HGX_GRAINS, shatter: 16}, {moved: HGX_GRAINS, shatter: 22}];
-    S.forEach((o, i) => drawHourglassXL(fb, 4 + i * 68, 4, o));
-    drawHourglassXL(fb, 300, 104, {pose: 'side'});
-    drawHourglassXL(fb, 410, 104, {pose: 'lift', hand: true});
+    const S: Array<Parameters<typeof drawHourglassXL>[3]> = [{moved: 0}, {moved: 200, running: true, f: 30}, {moved: HGX_GRAINS - 1}, {moved: HGX_GRAINS, shatter: 0}, {moved: HGX_GRAINS, shatter: 10}];
+    S.forEach((o, i) => drawHourglassXL(fb, 8 + i * 76, 2, o));
+    drawHourglassXL(fb, 8, 104, {moved: HGX_GRAINS, shatter: 16});
+    drawHourglassXL(fb, 84, 104, {moved: HGX_GRAINS, shatter: 22});
+    drawHourglassXL(fb, 184, 104, {pose: 'side'});
+    drawHourglassXL(fb, 296, 102, {view: 'high', moved: HGX_GRAINS - 1});
+    drawHourglassXL(fb, 404, 102, {pose: 'lift', hand: true});
   }});
 
 // ------------------------------------------------------------------ CAST-TASYA-PHONE (S4.13)
@@ -374,21 +402,21 @@ D({id: 'PROP-SPEAKERPHONE-MCU', state: 'dial-4', module: 'shared/pixel/kits/spea
   draw: (fb) => { v4Frame(2370)(fb); drawSpeakerphoneMCU(fb, {slide: 3, hand: 'dial', ...dialAt(37, 0, 12)}); }});
 
 // ------------------------------------------------------------------ PROP-MACROSOFT-BADGE (S7.01, S7.02)
-import {macrosoftBadge, badgesOnDeskRoom} from '../../../../shared/pixel/kits/macrosoft-badge';
+import {macrosoftBadge, badgesOnDeskRoom, BADGES_ROOM_AT} from '../../../../shared/pixel/kits/macrosoft-badge';
 import {guestBadge} from '../../../../shared/pixel/kits/props';
 import {bullpenRoom} from '../animatic/backs';
 D({id: 'PROP-MACROSOFT-BADGE', state: 'p2', module: 'shared/pixel/kits/macrosoft-badge.ts', note: "S7.01 over v4's P2 box: the slate MACROSOFT card on his desk beside the GUEST card (v4's lanyardOnDesk)",
   draw: (fb) => { v4Frame(4460)(fb); macrosoftBadge(fb, 22, 143, 'p2', {strap: false}); }});
 D({id: 'PROP-MACROSOFT-BADGE', state: 'room', module: 'shared/pixel/kits/macrosoft-badge.ts badgesOnDeskRoom', note: 'S7.02 the walkout wide: the two badges on his end desk at room scale (GUEST red-white, MACROSOFT slate)',
-  draw: (fb) => { const b = new Buf(480, 270, PAL.N0); const A = bullpenRoom(b, 0, {variant: 'walkout'}, {mas: true, tasya: {arm: 'clasp'}, landlord: {floor: 0, ceiling: 0, walls: 0}}); for (let i = 0; i < 480 * 203; i++) fb.c[i] = b.c[i]; const [mx, my] = A.masDesk; badgesOnDeskRoom(fb, mx + BADGE_ROOM[0], my + BADGE_ROOM[1]); }});
-const BADGE_ROOM: [number, number] = [0, 38];
+  draw: (fb) => { const b = new Buf(480, 270, PAL.N0); const A = bullpenRoom(b, 0, {variant: 'walkout'}, {mas: true, tasya: {arm: 'clasp'}, landlord: {floor: 0, ceiling: 0, walls: 0}}); for (let i = 0; i < 480 * 203; i++) fb.c[i] = b.c[i]; const [mx, my] = A.masDesk; badgesOnDeskRoom(fb, mx + BADGES_ROOM_AT[0], my + BADGES_ROOM_AT[1]); }});
 D({id: 'PROP-MACROSOFT-BADGE', state: 'scales', module: 'shared/pixel/kits/macrosoft-badge.ts', note: "p2 (with its strap) · desk (beside guestBadge 'desk') · room (x4 crop inset) · the pair at room scale",
   draw: (fb) => {
     rect(0, 0, 480, 203, fb.ink(PAL.D2)); rect(0, 0, 480, 1, fb.ink(PAL.D4));
     macrosoftBadge(fb, 70, 30, 'p2');
-    guestBadge(fb, 150, 34, 'desk'); macrosoftBadge(fb, 204, 35, 'desk');
-    const t = new Buf(20, 10, PAL.D2); badgesOnDeskRoom(t, 6, 4);
-    for (let y = 0; y < 10; y++) for (let x = 0; x < 20; x++) rect(300 + x * 6, 30 + y * 6, 6, 6, fb.ink(t.get(x, y)));
+    guestBadge(fb, 146, 34, 'desk'); macrosoftBadge(fb, 210, 35, 'desk');
+    // a4p5: the room pair is 17 x 6 now (7 x 4 cards); the inset shows it at 6x
+    const t = new Buf(26, 10, PAL.D2); badgesOnDeskRoom(t, 5, 2);
+    for (let y = 0; y < 10; y++) for (let x = 0; x < 26; x++) rect(300 + x * 6, 30 + y * 6, 6, 6, fb.ink(t.get(x, y)));
     badgesOnDeskRoom(fb, 300, 110);
   }});
 
@@ -485,3 +513,17 @@ D({id: 'STYLE-J1', state: 't01-flash-print', module: 'episodes/ep01/act4/art-v5/
 D({id: 'STYLE-J1', state: 't46-snap-scar', module: 'episodes/ep01/act4/art-v5/j1/pixel.ts j1Snap', note: 'J1 t 45-47: the snap: his tile greyed, the ONE scar row across the hoodie, the dialog gone', draw: j1At(46)});
 D({id: 'STYLE-J1', state: 't52-fall', module: 'episodes/ep01/act4/art-v5/j1/pixel.ts j1Snap', note: 'J1 t 52: the tile falls through its own slot, masked to it (held drawing 3 of 4)', draw: j1At(52)});
 D({id: 'STYLE-J1', state: 't57-close', module: 'episodes/ep01/act4/art-v5/j1/pixel.ts j1Snap', note: 'J1 t 56-57: the slot empty, the four close ranks (held step 2); from t 60 the host resumes', draw: j1At(57)});
+
+// ================================================================== a4p5 r2: FIX-FOOTNOTES (P4), the design call made
+// v4's bare gold digits (left) against the v5 paper slips (right), in Neleh's call tile at two orbit phases: f 14 puts
+// the front "1" across her brow (the case the prep check read as a mark on her forehead), f 40 the "3" at her cheek.
+D({id: 'FIX-FOOTNOTES', state: 'digits-vs-slips', module: 'shared/pixel/cast/neleh.ts drawFootnotes(style) / withFootnoteStyle', note: "left: v4 digits · right: v5 'slips' (her glowing paper, numbered) · orbit f 14 and f 40",
+  draw: (fb) => {
+    rect(0, 0, 480, 203, fb.ink(PAL.N1));
+    ([[14, 8], [40, 106]] as Array<[number, number]>).forEach(([f, y]) => (['digits', 'slips'] as FootnoteStyle[]).forEach((st, i) => {
+      const x = i ? 290 : 40;
+      rect(x - 1, y - 1, 152, 88, fb.ink(PAL.N3));
+      withFootnoteStyle(st, () => drawNelehTile(fb, x, y, 150, 86, {mouth: 'rest', lid: 0, brow: 'level'}, {orbit: f}));
+    }));
+    text(fb, 'v4 DIGITS', 196, 44, PAL.N6); text(fb, 'v5 SLIPS', 200, 56, PAL.P1);
+  }});

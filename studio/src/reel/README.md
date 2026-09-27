@@ -18,7 +18,7 @@ All commands below run from `studio/`, unless a line says otherwise.
 | `registry.ts` | Registers one composition per `data/*.json`, plus `reel-season` and `reel-ep01-full` (the older hand-stitched pilot). It also registers **`reel-<key>` for every synced manifest** and **`reel-episode` for a manifest passed as input props**. |
 | `episode.ts` | **New.** Turns a manifest into an `EpisodePlan`: the chapters on one clock, the two-row bar, name reveals carried across chapters, and the audio plan. |
 | `EpisodeReel.tsx` | **New.** The episode composition. Title, video slot and reviewer slate are drawn here; reel and card chapters are `Reel` with a clock. |
-| `sync.mjs` | Copies and lints `show/reel/*.json` into `data/` (the bundle reads `data/`; never edit it). It now recognises `*.manifest.json` and lints each as a manifest. |
+| `sync.mjs` | Copies and lints `show/reel/*.json` into `data/` (the bundle reads `data/`; never edit it). It now recognises `*.manifest.json` and lints each as a manifest. **Since 2026-09-27 it also reads one level of subfolders** (for example `show/reel/ep01-full/*.json`): those files land in `data/` flat under their own names, so a timeline's key is still its basename, and a flat file wins a name clash (the sync prints a `!` line). |
 | `tools/episode.mjs` | **New.** The episode renderer: plan, parallel segments, splice, concat, mix and mux. |
 | `tools/mixer.mjs` | **New.** The episode mixer (Node only). It runs inside `episode.mjs`, or on its own from a `plan.json`. |
 | `examples/ep01-full-v1.manifest.json` | **New.** A test manifest for all of Ep1, built from today's material (see its `_about`). |
@@ -63,6 +63,7 @@ node src/reel/tools/episode.mjs <manifest> --only act3,act4
 **Where a manifest lives:**
 
 - **In `show/reel/<key>.manifest.json`.** `sync.mjs` copies it, and the studio then shows `reel-<key>`. `episode.mjs <key>` finds it by key.
+- **In a subfolder, for example `show/reel/ep01-full/ep01-full-v2.manifest.json`** (Ep1's episode reel v2 and its segment timelines). `sync.mjs` copies it and the timelines beside it, and the studio shows `reel-ep01-full-v2`. `episode.mjs` looks up a bare key only in `show/reel/`, so pass this one by path.
 - **Anywhere else**, for example the example manifest here or a draft in `show/episodes/ep01/production/`. Pass it by path. The tool hands it to the bundle as input props, and the composition is called `reel-episode`. Nothing is written to `data/`.
 
 ## The manifest

@@ -1,0 +1,267 @@
+{
+ "id": "e1-a2-15-02",
+ "scene": "15",
+ "speaker": "LAHTNEMULB",
+ "speaker_slug": "lahtnemulb",
+ "text": "Couldn't have said it better myself.",
+ "spoken_as": "Couldn't have said it better myself.",
+ "delivery": null,
+ "tag": "[INVENTED]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "W",
+ "shot_id": "W",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 3.1,
+ "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-02.wav",
+ "mp3": null,
+ "duration_s": 2.985,
+ "frames_24": 72,
+ "voiced_span_s": 1.99,
+ "pace": {
+  "words": 6,
+  "wpm": 180.9,
+  "speed": 0.88,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.88,
+   "speed_band": [
+    0.84,
+    0.92
+   ],
+   "articulation_guide_sps": [
+    4.0,
+    4.6
+   ],
+   "turn_wpm_guide": [
+    135,
+    155
+   ],
+   "intent": null
+  },
+  "measured": {
+   "wpm": 180.9,
+   "articulation_sps": 4.52,
+   "syllables": 9,
+   "span_s": 1.99,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.51,
+  "audible_out_s": 2.5
+ },
+ "placement": {
+  "gap_before_s": 0.6,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_adam*0.50+am_echo*0.50 (Kokoro-82M stock) · d-adam-echo-senate-low · speed 0.880",
+ "voiceId": "am_adam*0.50+am_echo*0.50",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 75 Hz",
+  "pitch -2 st",
+  "low shelf +1 dB @150 Hz",
+  "peak -1 dB @400 Hz Q1.0",
+  "peak +1 dB @2500 Hz Q0.9",
+  "comp 2.5:1 @-22 dB (6/110 ms)",
+  "Kokoro speed 0.880 (the plan speed; lahtnemulb band 0.84-0.92); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "O"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "E"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "A"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "E"
+  },
+  {
+   "t": 0.958,
+   "f": 23,
+   "shape": "A"
+  },
+  {
+   "t": 1.125,
+   "f": 27,
+   "shape": "E"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "M"
+  },
+  {
+   "t": 1.375,
+   "f": 33,
+   "shape": "A"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "E"
+  },
+  {
+   "t": 1.667,
+   "f": 40,
+   "shape": "M"
+  },
+  {
+   "t": 1.792,
+   "f": 43,
+   "shape": "A"
+  },
+  {
+   "t": 2.042,
+   "f": 49,
+   "shape": "E"
+  },
+  {
+   "t": 2.125,
+   "f": 51,
+   "shape": "A"
+  },
+  {
+   "t": 2.333,
+   "f": 56,
+   "shape": "E"
+  },
+  {
+   "t": 2.5,
+   "f": 60,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Couldn't",
+   "t0": 0.485,
+   "t1": 0.748,
+   "f0": 12,
+   "f1": 18,
+   "ph": "kˌʊdᵊnt"
+  },
+  {
+   "w": "have",
+   "t0": 0.748,
+   "t1": 0.91,
+   "f0": 18,
+   "f1": 22,
+   "ph": "hæv"
+  },
+  {
+   "w": "said",
+   "t0": 0.91,
+   "t1": 1.16,
+   "f0": 22,
+   "f1": 28,
+   "ph": "sˈɛd"
+  },
+  {
+   "w": "it",
+   "t0": 1.16,
+   "t1": 1.322,
+   "f0": 28,
+   "f1": 32,
+   "ph": "ɪt"
+  },
+  {
+   "w": "better",
+   "t0": 1.322,
+   "t1": 1.685,
+   "f0": 32,
+   "f1": 40,
+   "ph": "bˈɛTəɹ"
+  },
+  {
+   "w": "myself",
+   "t0": 1.685,
+   "t1": 2.52,
+   "f0": 40,
+   "f1": 60,
+   "ph": "mIsˈɛlf"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -1.62,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.51,
+  "median_f0_hz": 97.1,
+  "f0_range_st": 14.4,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Couldn't have said it better myself.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.23,
+  "align_median_s": 0.036,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.45,
+  "rise_ms": 75.0,
+  "decay_ms": 290.0,
+  "decay_to_60_s": 0.035
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "20a3b1c4c65dba78",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 3,
+  "wall_s": 17.52,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 2
+  },
+  "asr": {
+   "packed_with": 3,
+   "share_s": 2.66,
+   "rechecked_alone": false
+  }
+ }
+}

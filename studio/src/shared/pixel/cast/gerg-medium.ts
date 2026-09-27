@@ -221,6 +221,10 @@ export interface GergTileOpts {
   typing?: boolean;
   /** where his bust sits across the tile, 0..1 (default 0.52) */
   cx?: number;
+  /** a4p5 (Act Four v5 art, opt-in; default false = the drawing as before): in a short tile (the staff letter's 60 px
+   *  thumbnail) the bottom-anchored bust put his eyes on the tile's top edge ("cropped at eye level" on the stills
+   *  check). fit lowers the bust so his eyes sit 40% down the tile */
+  fit?: boolean;
 }
 /**
  * The medium tile: his room, GERG (medium rig) from the chest up with the bottom of the rig on the tile's bottom, the
@@ -235,7 +239,8 @@ export const drawGergMediumTile = (b0: Buf, x: number, y: number, w: number, h: 
   const st: GergMediumState = {...GERG_MEDIUM_DEFAULT, ...s, type: typing ? gergTypeAt(f) : 0};
   const bob = typing && st.type === 1 ? 1 : 0;
   const img = gergMedium(st);
-  blitImg(b0, img, x + Math.round(w * (o.cx ?? 0.52) - GERG_MW / 2), y + h - GERG_MH + 6 + bob, {clip});
+  const fitDy = o.fit ? Math.max(0, Math.round(h * 0.4) - (h - GERG_MH + 6 + GERG_M_FACE[1])) : 0;
+  blitImg(b0, img, x + Math.round(w * (o.cx ?? 0.52) - GERG_MW / 2), y + h - GERG_MH + 6 + bob + fitDy, {clip});
   // the lid's top edge (the webcam is in it) and its green line
   rect(x, y + h - 5, w, 5, b.ink(PAL.N0)); rect(x, y + h - 6, w, 1, b.ink(PAL.L1));
   if (typing) {

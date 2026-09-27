@@ -1,0 +1,50 @@
+{
+ "frames": 12443,
+ "from": 0,
+ "to": 12443,
+ "jobs": 2,
+ "track": "/home/jgon/project/art/mrmas/audio/reel/ep01-act4-v5/mix.wav",
+ "glyph_dir": "/tmp/claude-1000/-home-jgon-project-art-mrmas/a5e7723c-6ab4-4824-a1ed-8e367fdb82e5/scratchpad/a4p5-render/glyph",
+ "segments": [
+  {
+   "from": 0,
+   "to": 6274,
+   "ms": 271084,
+   "spliced": {
+    "pic": 28,
+    "anim": 28
+   },
+   "marked": [],
+   "spliceOff": [],
+   "failed": {}
+  },
+  {
+   "from": 6274,
+   "to": 12443,
+   "ms": 222830,
+   "spliced": {
+    "pic": 0,
+    "anim": 0
+   },
+   "marked": [],
+   "spliceOff": [],
+   "failed": {}
+  }
+ ],
+ "seconds": 294,
+ "summary": {
+  "pic": 28,
+  "anim": 28,
+  "marked": [],
+  "off": [],
+  "failed": {}
+ },
+ "sources": {
+  "shots5.ts": "3a30a8b8a4bb158f0275672c00198b7a",
+  "lipsync5.ts": "0ee0876a7855345a79e20325b6409848",
+  "frame5.ts": "fafbf336a5e24e72c38ad5c67ff47999",
+  "data-v5.ts": "4fb3d1cce6728900263735fd9a80bdc8"
+ },
+ "sources_note": "added after the run from the job log (shots5, frame5, data-v5 printed at job start) and lipsync5.ts as on disk when r5.cjs was built (02:20:58); later runs record them themselves",
+ "bundle_built": "2026-09-27T02:20:58-07:00"
+}

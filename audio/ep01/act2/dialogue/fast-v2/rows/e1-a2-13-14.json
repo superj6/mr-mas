@@ -1,0 +1,299 @@
+{
+ "id": "e1-a2-13-14",
+ "scene": "13",
+ "speaker": "NEDIB",
+ "speaker_slug": "nedib",
+ "text": "Folks, I just want to say one thing.",
+ "spoken_as": "Folks,{0.15} I just want to say one thing.",
+ "delivery": null,
+ "tag": "[INVENTED · dialogue pass 5: a comma after \"Folks\", the naturalness read's general fix for a name or address said as its own sentence, which a stock voice stops dead on and restarts cold; he walks in mid-sentence, so the line should run on]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "W",
+ "shot_id": "W",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 3.5,
+ "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-14.wav",
+ "mp3": null,
+ "duration_s": 3.285,
+ "frames_24": 79,
+ "voiced_span_s": 2.09,
+ "pace": {
+  "words": 8,
+  "wpm": 229.7,
+  "speed": 0.9,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.9,
+   "speed_band": [
+    0.93,
+    1.01
+   ],
+   "articulation_guide_sps": [
+    4.2,
+    4.8
+   ],
+   "turn_wpm_guide": [
+    145,
+    165
+   ],
+   "intent": null
+  },
+  "measured": {
+   "wpm": 229.7,
+   "articulation_sps": 4.08,
+   "syllables": 8,
+   "span_s": 2.09,
+   "pauses_s": [
+    0.13
+   ]
+  },
+  "longest_internal_gap_s": 0.13,
+  "audible_in_s": 0.51,
+  "audible_out_s": 2.6
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_fenrir*0.50+am_onyx*0.50 (Kokoro-82M stock) · d-fenrir-onyx-folksy-0 · speed 0.900",
+ "voiceId": "am_fenrir*0.50+am_onyx*0.50",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch 0",
+  "low shelf +2 dB @160 Hz",
+  "peak -1.5 dB @380 Hz Q1.0",
+  "peak +1.5 dB @2200 Hz Q0.9",
+  "comp 3.0:1 @-21 dB (5/100 ms)",
+  "tanh saturation drive 1.6 mix 0.1",
+  "Kokoro speed 0.900 (the plan speed; nedib band 0.93-1.01); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'Folks': Kokoro 0.04 s -> 0.15 s (intended 0.15; +0.12 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "O"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "E"
+  },
+  {
+   "t": 0.833,
+   "f": 20,
+   "shape": "rest"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "A"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "E"
+  },
+  {
+   "t": 1.375,
+   "f": 33,
+   "shape": "A"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "E"
+  },
+  {
+   "t": 1.667,
+   "f": 40,
+   "shape": "A"
+  },
+  {
+   "t": 1.875,
+   "f": 45,
+   "shape": "O"
+  },
+  {
+   "t": 1.958,
+   "f": 47,
+   "shape": "A"
+  },
+  {
+   "t": 2.083,
+   "f": 50,
+   "shape": "E"
+  },
+  {
+   "t": 2.25,
+   "f": 54,
+   "shape": "A"
+  },
+  {
+   "t": 2.458,
+   "f": 59,
+   "shape": "E"
+  },
+  {
+   "t": 2.625,
+   "f": 63,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Folks",
+   "t0": 0.53,
+   "t1": 0.84,
+   "f0": 13,
+   "f1": 20,
+   "ph": "fˈOks"
+  },
+  {
+   "w": "I",
+   "t0": 1.082,
+   "t1": 1.195,
+   "f0": 26,
+   "f1": 29,
+   "ph": "ˌI"
+  },
+  {
+   "w": "just",
+   "t0": 1.195,
+   "t1": 1.358,
+   "f0": 29,
+   "f1": 33,
+   "ph": "ʤˈʌst"
+  },
+  {
+   "w": "want",
+   "t0": 1.358,
+   "t1": 1.508,
+   "f0": 33,
+   "f1": 36,
+   "ph": "wˈɑnt"
+  },
+  {
+   "w": "to",
+   "t0": 1.508,
+   "t1": 1.608,
+   "f0": 36,
+   "f1": 39,
+   "ph": "tə"
+  },
+  {
+   "w": "say",
+   "t0": 1.608,
+   "t1": 1.87,
+   "f0": 39,
+   "f1": 45,
+   "ph": "sˈA"
+  },
+  {
+   "w": "one",
+   "t0": 1.87,
+   "t1": 2.132,
+   "f0": 45,
+   "f1": 51,
+   "ph": "wˈʌn"
+  },
+  {
+   "w": "thing",
+   "t0": 2.132,
+   "t1": 2.62,
+   "f0": 51,
+   "f1": 63,
+   "ph": "θˈɪŋ"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.58,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 109.0,
+  "f0_range_st": 13.2,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Folks, I just want to say one thing.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.3,
+  "align_median_s": 0.041,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.45,
+  "rise_ms": 100.0,
+  "decay_ms": 160.0,
+  "decay_to_60_s": 0.235
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 1,
+   "word": "Folks",
+   "tts_s": 0.035,
+   "target_s": 0.15,
+   "point_s": 0.37,
+   "joined_speech": false,
+   "dip_db": -54.7,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.15,
+   "opened_s": 0.115
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "00c3e0fbecb42e9b",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 3.96,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 4
+  },
+  "asr": {
+   "packed_with": 1,
+   "share_s": 1.83,
+   "rechecked_alone": false
+  }
+ }
+}

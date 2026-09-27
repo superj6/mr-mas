@@ -1,0 +1,318 @@
+{
+ "id": "e1-a2-15-10",
+ "scene": "15",
+ "speaker": "A SENATOR",
+ "speaker_slug": "a-senator",
+ "text": "Mr. Manalt. There's talk of a new agency to regulate all this. Would you come and run it?",
+ "spoken_as": "Mr. Manalt.{0.35} There's talk of a new agency to regulate all this.{0.3} Would you come and run it?",
+ "delivery": "at the lit microphone",
+ "tag": "[INVENTED · an unnamed senator; on the record he was asked whether he'd run a new agency (facts §B)]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "os",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "W",
+ "shot_id": "W",
+ "cue": null,
+ "lip_sync": false,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 7.7,
+ "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-10.wav",
+ "mp3": null,
+ "duration_s": 8.05,
+ "frames_24": 194,
+ "voiced_span_s": 6.83,
+ "pace": {
+  "words": 18,
+  "wpm": 158.1,
+  "speed": 0.85,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.85,
+   "speed_band": [
+    0.81,
+    0.89
+   ],
+   "articulation_guide_sps": [
+    4.2,
+    4.8
+   ],
+   "turn_wpm_guide": [
+    145,
+    160
+   ],
+   "intent": "at the lit microphone"
+  },
+  "measured": {
+   "wpm": 158.1,
+   "articulation_sps": 4.12,
+   "syllables": 24,
+   "span_s": 6.83,
+   "pauses_s": [
+    0.35,
+    0.66,
+    0.07
+   ]
+  },
+  "longest_internal_gap_s": 0.66,
+  "audible_in_s": 0.5,
+  "audible_out_s": 7.33
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "af_kore*0.60+af_nicole*0.40 (Kokoro-82M stock) · d-kore-nicole-senate-up2 · speed 0.850",
+ "voiceId": "af_kore*0.60+af_nicole*0.40",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 75 Hz",
+  "pitch +2 st",
+  "low shelf +1 dB @150 Hz",
+  "peak -1 dB @400 Hz Q1.0",
+  "peak +1 dB @2500 Hz Q0.9",
+  "comp 2.5:1 @-22 dB (6/110 ms)",
+  "Kokoro speed 0.850 (the plan speed; a-senator band 0.81-0.89); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'Manalt': Kokoro 0.28 s -> 0.36 s (intended 0.35; +0.07 s of room tone at the quietest 5 ms)",
+  "pause after 'this': Kokoro 0.47 s -> 0.33 s (intended 0.30; +0.00 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [],
+ "words": [
+  {
+   "w": "Mr.",
+   "t0": 0.53,
+   "t1": 0.88,
+   "f0": 13,
+   "f1": 21,
+   "ph": "mˈɪstəɹ"
+  },
+  {
+   "w": "Manalt",
+   "t0": 0.88,
+   "t1": 1.6,
+   "f0": 21,
+   "f1": 38,
+   "ph": "mˈænɔlt"
+  },
+  {
+   "w": "There's",
+   "t0": 1.87,
+   "t1": 2.108,
+   "f0": 45,
+   "f1": 51,
+   "ph": "ðˌɛɹz"
+  },
+  {
+   "w": "talk",
+   "t0": 2.108,
+   "t1": 2.52,
+   "f0": 51,
+   "f1": 60,
+   "ph": "tˈɔk"
+  },
+  {
+   "w": "of",
+   "t0": 2.52,
+   "t1": 2.645,
+   "f0": 60,
+   "f1": 63,
+   "ph": "ʌv"
+  },
+  {
+   "w": "a",
+   "t0": 2.645,
+   "t1": 2.77,
+   "f0": 63,
+   "f1": 66,
+   "ph": "ɐ"
+  },
+  {
+   "w": "new",
+   "t0": 2.77,
+   "t1": 3.12,
+   "f0": 66,
+   "f1": 75,
+   "ph": "nˈu"
+  },
+  {
+   "w": "agency",
+   "t0": 3.12,
+   "t1": 3.907,
+   "f0": 75,
+   "f1": 94,
+   "ph": "ˈAʤənsi"
+  },
+  {
+   "w": "to",
+   "t0": 3.907,
+   "t1": 4.045,
+   "f0": 94,
+   "f1": 97,
+   "ph": "tə"
+  },
+  {
+   "w": "regulate",
+   "t0": 4.045,
+   "t1": 4.62,
+   "f0": 97,
+   "f1": 111,
+   "ph": "ɹˈɛɡjəlˌAt"
+  },
+  {
+   "w": "all",
+   "t0": 4.62,
+   "t1": 4.87,
+   "f0": 111,
+   "f1": 117,
+   "ph": "ˈɔl"
+  },
+  {
+   "w": "this",
+   "t0": 4.87,
+   "t1": 5.32,
+   "f0": 117,
+   "f1": 128,
+   "ph": "ðˈɪs"
+  },
+  {
+   "w": "Would",
+   "t0": 5.895,
+   "t1": 6.095,
+   "f0": 141,
+   "f1": 146,
+   "ph": "wˌʊd"
+  },
+  {
+   "w": "you",
+   "t0": 6.095,
+   "t1": 6.27,
+   "f0": 146,
+   "f1": 150,
+   "ph": "ju"
+  },
+  {
+   "w": "come",
+   "t0": 6.27,
+   "t1": 6.595,
+   "f0": 150,
+   "f1": 158,
+   "ph": "kˈʌm"
+  },
+  {
+   "w": "and",
+   "t0": 6.595,
+   "t1": 6.745,
+   "f0": 158,
+   "f1": 162,
+   "ph": "ænd"
+  },
+  {
+   "w": "run",
+   "t0": 6.745,
+   "t1": 7.033,
+   "f0": 162,
+   "f1": 169,
+   "ph": "ɹˈʌn"
+  },
+  {
+   "w": "it",
+   "t0": 7.033,
+   "t1": 7.35,
+   "f0": 169,
+   "f1": 176,
+   "ph": "ɪt"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.51,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 159.3,
+  "f0_range_st": 11.4,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Mr. Manalt, there's talk of a new agency to regulate all this. Would you come and run it?",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.223,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.375,
+  "rise_ms": 25.0,
+  "decay_ms": 275.0,
+  "decay_to_60_s": 0.345
+ },
+ "speaker_label": "A SENATOR (O.S.)",
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 2,
+   "word": "Manalt",
+   "tts_s": 0.285,
+   "target_s": 0.35,
+   "point_s": 1.275,
+   "joined_speech": false,
+   "dip_db": -66.7,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.365,
+   "opened_s": 0.065
+  },
+  {
+   "after_word": 12,
+   "word": "this",
+   "tts_s": 0.475,
+   "target_s": 0.3,
+   "point_s": 5.37,
+   "joined_speech": false,
+   "dip_db": -99.7,
+   "breath": false,
+   "final_s": 0.325,
+   "opened_s": 0.0
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "22dfbfaf77460f1b",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 3,
+  "wall_s": 36.84,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 2
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 16.33,
+   "rechecked_alone": false
+  }
+ }
+}

@@ -1,0 +1,303 @@
+{
+ "id": "e1-a3-19-02",
+ "scene": "19",
+ "speaker": "NOLE",
+ "speaker_slug": "nole",
+ "text": "\"It's important for us to have a referee.\"",
+ "spoken_as": "It's important{0.30} for us to have a referee.",
+ "delivery": "on the monitor",
+ "tag": "[V · SEP 13, 2023]",
+ "mode": "call",
+ "voiced_in_cut": true,
+ "on_camera": "monitor",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "2S·SCR",
+ "shot_id": "2S·SCR",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": "monitor",
+ "room": null,
+ "est_s": 3.9,
+ "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-19-02.wav",
+ "mp3": null,
+ "duration_s": 3.23,
+ "frames_24": 78,
+ "voiced_span_s": 2.25,
+ "pace": {
+  "words": 8,
+  "wpm": 213.3,
+  "speed": 0.95,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.95,
+   "speed_band": [
+    1.0,
+    1.08
+   ],
+   "articulation_guide_sps": [
+    4.8,
+    5.6
+   ],
+   "turn_wpm_guide": [
+    165,
+    185
+   ],
+   "intent": "on the monitor"
+  },
+  "measured": {
+   "wpm": 213.3,
+   "articulation_sps": 6.19,
+   "syllables": 12,
+   "span_s": 2.25,
+   "pauses_s": [
+    0.31
+   ]
+  },
+  "longest_internal_gap_s": 0.31,
+  "audible_in_s": 0.5,
+  "audible_out_s": 2.75
+ },
+ "placement": {
+  "gap_before_s": 0.7,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_fenrir (Kokoro-82M stock) · a-fenrir-burst (pass-1 pick, dry) · speed 0.950",
+ "voiceId": "am_fenrir",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 80 Hz",
+  "pitch 0",
+  "peak +1.5 dB @180 Hz Q0.9",
+  "peak +2 dB @2500 Hz Q1.0",
+  "comp 4.0:1 @-20 dB (3/60 ms)",
+  "tanh saturation drive 2.5 mix 0.25",
+  "then the monitor chain: HPF 200 Hz; LPF 7000 Hz; peak +1.5 dB @1800 Hz Q1.0; comp 2.5:1 @-22 dB (5/90 ms); -16 LUFS",
+  "Kokoro speed 0.950 (the plan speed; nole band 1.00-1.08); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'important': Kokoro 0.00 s -> 0.32 s (intended 0.30; +0.30 s of room tone at the quietest 5 ms; Kokoro ran the words together here (dip -31.2 dB): ear check)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "E"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "M"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "O"
+  },
+  {
+   "t": 0.833,
+   "f": 20,
+   "shape": "E"
+  },
+  {
+   "t": 1.042,
+   "f": 25,
+   "shape": "rest"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "O"
+  },
+  {
+   "t": 1.542,
+   "f": 37,
+   "shape": "A"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "E"
+  },
+  {
+   "t": 1.833,
+   "f": 44,
+   "shape": "A"
+  },
+  {
+   "t": 2.083,
+   "f": 50,
+   "shape": "E"
+  },
+  {
+   "t": 2.167,
+   "f": 52,
+   "shape": "A"
+  },
+  {
+   "t": 2.333,
+   "f": 56,
+   "shape": "E"
+  },
+  {
+   "t": 2.625,
+   "f": 63,
+   "shape": "A"
+  },
+  {
+   "t": 2.75,
+   "f": 66,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "It's",
+   "t0": 0.47,
+   "t1": 0.625,
+   "f0": 11,
+   "f1": 15,
+   "ph": "ˌɪts"
+  },
+  {
+   "w": "important",
+   "t0": 0.625,
+   "t1": 1.025,
+   "f0": 15,
+   "f1": 25,
+   "ph": "ɪmpˈɔɹtᵊnt"
+  },
+  {
+   "w": "for",
+   "t0": 1.45,
+   "t1": 1.562,
+   "f0": 35,
+   "f1": 38,
+   "ph": "fɔɹ"
+  },
+  {
+   "w": "us",
+   "t0": 1.562,
+   "t1": 1.75,
+   "f0": 38,
+   "f1": 42,
+   "ph": "ˌʌs"
+  },
+  {
+   "w": "to",
+   "t0": 1.75,
+   "t1": 1.85,
+   "f0": 42,
+   "f1": 44,
+   "ph": "tə"
+  },
+  {
+   "w": "have",
+   "t0": 1.85,
+   "t1": 2.037,
+   "f0": 44,
+   "f1": 49,
+   "ph": "hæv"
+  },
+  {
+   "w": "a",
+   "t0": 2.037,
+   "t1": 2.1,
+   "f0": 49,
+   "f1": 50,
+   "ph": "ɐ"
+  },
+  {
+   "w": "referee",
+   "t0": 2.1,
+   "t1": 2.77,
+   "f0": 50,
+   "f1": 66,
+   "ph": "ɹˌɛfəɹˈi"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.99,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 133.9,
+  "f0_range_st": 13.9,
+  "f0_method": "pYIN (a4lib.analyse)",
+  "final_move_st": -4.3,
+  "asr": "It's important for us to have a referee.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.256,
+  "align_median_s": 0.053,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.44,
+  "rise_ms": 5.0,
+  "decay_ms": 125.0,
+  "decay_to_60_s": 0.045
+ },
+ "clean": {
+  "file": "audio/ep01/act3/dialogue/fast-v2/clean/e1-a3-19-02.wav",
+  "note": "the dry read (no monitor chain), -16 LUFS"
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 2,
+   "word": "important",
+   "tts_s": 0.0,
+   "target_s": 0.3,
+   "point_s": 0.555,
+   "joined_speech": true,
+   "dip_db": -31.2,
+   "breath": false,
+   "crossfade_ms": [
+    60,
+    25
+   ],
+   "final_s": 0.315,
+   "opened_s": 0.3
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "f839de6a0a85a476",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 2,
+  "wall_s": 39.4,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": true,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 1,
+   "share_s": 10.2,
+   "rechecked_alone": false
+  }
+ }
+}

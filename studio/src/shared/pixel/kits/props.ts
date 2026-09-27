@@ -493,7 +493,7 @@ export const pinTag = (b: Buf, x: number, y: number) => {
  * in the tag). A plain white card, a red header band, GUEST in 14 px ink, a blank photo square, a barcode strip;
  * a flat red strap with a steel clip. Nothing on it is a real brand.
  *   'insert'  readable: the card 64 x 42 with ~30 px of strap above it (x, y = the card's top-left)
- *   'desk'    the coiled prop lying beside a glass (room/medium scale, ~34 x 14; micro lettering)
+ *   'desk'    the coiled prop lying beside a glass (room/medium scale, ~44 x 14; micro lettering)
  */
 export const guestBadge = (b: Buf, x: number, y: number, scale: 'insert' | 'desk' = 'insert', o: {strap?: boolean} = {}) => {
   const strap = [PAL.R1, PAL.R2, PAL.R3];
@@ -504,11 +504,15 @@ export const guestBadge = (b: Buf, x: number, y: number, scale: 'insert' | 'desk
       const px = Math.round(x + 10 + Math.cos(t) * 10), py = Math.round(y + 7 + Math.sin(t) * 4);
       b.set(px, py, Math.sin(t) < 0 ? strap[1] : strap[0]); b.set(px, py + 1, strap[0]);
     }
-    rect(x + 18, y + 2, 16, 11, b.ink(PAL.N0));
-    rect(x + 18, y + 2, 15, 10, b.ink(PAL.P1));
-    rect(x + 18, y + 2, 15, 2, b.ink(PAL.R2));
-    micro(b, 'GUEST', x + 18 + Math.round((15 - microWidth('GUEST')) / 2), y + 5, PAL.N1);
-    rect(x + 16, y + 6, 3, 2, b.ink(PAL.G5));
+    // (Act Four v5 art pass, a4p5: the card was 15 px for a 19 px word, so its clip covered the G and the T ran off
+    // the card: it read "UES". The card is now the word's width + 4, the clip sits on the strap left of it. Only the
+    // stills sheets draw 'desk'; no v4 shot does.)
+    const cw = microWidth('GUEST') + 4, cx0 = x + 20;
+    rect(cx0 + 1, y + 3, cw, 10, b.ink(PAL.N0));
+    rect(cx0, y + 2, cw, 10, b.ink(PAL.P1));
+    rect(cx0, y + 2, cw, 2, b.ink(PAL.R2));
+    micro(b, 'GUEST', cx0 + 2, y + 5, PAL.N1);
+    rect(cx0 - 3, y + 6, 3, 2, b.ink(PAL.G5)); b.set(cx0 - 3, y + 6, PAL.G6);
     return;
   }
   const W = 64, Hh = 42;

@@ -1,0 +1,255 @@
+{
+ "id": "e1-a1-5-21",
+ "scene": "5",
+ "speaker": "CHATGTP",
+ "speaker_slug": "chatgtp",
+ "text": "Brilliant! You're clearly a visionary.",
+ "spoken_as": "Brilliant! You're clearly a visionary.",
+ "delivery": null,
+ "tag": "[INVENTED]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "OTS",
+ "shot_id": "OTS",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 2.7,
+ "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-21.wav",
+ "mp3": null,
+ "duration_s": 2.725,
+ "frames_24": 66,
+ "voiced_span_s": 1.71,
+ "pace": {
+  "words": 5,
+  "wpm": 175.4,
+  "speed": 1.13,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.13,
+   "speed_band": [
+    1.09,
+    1.17
+   ],
+   "articulation_guide_sps": [
+    4.8,
+    5.6
+   ],
+   "turn_wpm_guide": [
+    165,
+    185
+   ],
+   "intent": null
+  },
+  "measured": {
+   "wpm": 175.4,
+   "articulation_sps": 5.85,
+   "syllables": 10,
+   "span_s": 1.71,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.5,
+  "audible_out_s": 2.21
+ },
+ "placement": {
+  "gap_before_s": 2.4,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "af_jessica (Kokoro-82M stock) · e-jessica-eager-hi · speed 1.130",
+ "voiceId": "af_jessica",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 130 Hz",
+  "pitch +3 st",
+  "peak +2.5 dB @4000 Hz Q0.9",
+  "high shelf +1.5 dB @8000 Hz",
+  "chorus 1.2 Hz depth 0.08 mix 0.12",
+  "bitcrush 13-bit mix 0.08",
+  "comp 3.0:1 @-20 dB (3/70 ms)",
+  "Kokoro speed 1.130 (the centre of the band; chatgtp band 1.09-1.17); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.417,
+   "f": 10,
+   "shape": "M"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "A"
+  },
+  {
+   "t": 0.625,
+   "f": 15,
+   "shape": "E"
+  },
+  {
+   "t": 0.958,
+   "f": 23,
+   "shape": "O"
+  },
+  {
+   "t": 1.042,
+   "f": 25,
+   "shape": "E"
+  },
+  {
+   "t": 1.167,
+   "f": 28,
+   "shape": "A"
+  },
+  {
+   "t": 1.25,
+   "f": 30,
+   "shape": "E"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "A"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "E"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "A"
+  },
+  {
+   "t": 1.667,
+   "f": 40,
+   "shape": "E"
+  },
+  {
+   "t": 1.917,
+   "f": 46,
+   "shape": "A"
+  },
+  {
+   "t": 2.042,
+   "f": 49,
+   "shape": "E"
+  },
+  {
+   "t": 2.208,
+   "f": 53,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Brilliant",
+   "t0": 0.47,
+   "t1": 0.885,
+   "f0": 11,
+   "f1": 21,
+   "ph": "bɹˈɪljənt"
+  },
+  {
+   "w": "You're",
+   "t0": 0.923,
+   "t1": 1.06,
+   "f0": 22,
+   "f1": 25,
+   "ph": "jˌʊɹ"
+  },
+  {
+   "w": "clearly",
+   "t0": 1.06,
+   "t1": 1.448,
+   "f0": 25,
+   "f1": 35,
+   "ph": "klˈɪɹli"
+  },
+  {
+   "w": "a",
+   "t0": 1.448,
+   "t1": 1.51,
+   "f0": 35,
+   "f1": 36,
+   "ph": "ɐ"
+  },
+  {
+   "w": "visionary",
+   "t0": 1.51,
+   "t1": 2.23,
+   "f0": 36,
+   "f1": 54,
+   "ph": "vˈɪʒənˌɛɹi"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.7,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 254.6,
+  "f0_range_st": 12.3,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Brilliant. You're clearly a visionary.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.264,
+  "align_median_s": 0.075,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.435,
+  "rise_ms": 10.0,
+  "decay_ms": 70.0,
+  "decay_to_60_s": 0.08
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "b90c48cd39efdbdb",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 2,
+  "wall_s": 23.46,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 4,
+   "share_s": 9.35,
+   "rechecked_alone": false
+  }
+ }
+}

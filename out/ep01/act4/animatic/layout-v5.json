@@ -1,0 +1,832 @@
+[
+ {
+  "id": "S1.01",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S1.01: v2 24.01 suiteRoom (truck, shiver) + desk sprite + Orb; DRIFT toward the desk, 1 px / 6 f (12 px)",
+  "standin": false,
+  "tag": "WIDE · establishing",
+  "cls": "W",
+  "framing": "WIDE · establishing"
+ },
+ {
+  "id": "S1.02",
+  "verdict": "C",
+  "kind": "C",
+  "st": "UI-JOIN-CORNER join-corner drawNudgeJoin (the laptop corner under his hand, JOIN, his arrow beside it; its halo in 2 held steps) over v4's nudge; the glow floods in held steps, then BLUEPRINT_PRINT",
+  "standin": false,
+  "tag": "INSERT · hand, glass, laptop",
+  "cls": "ECU",
+  "framing": "INSERT · hand, glass, laptop"
+ },
+ {
+  "id": "S1.03",
+  "verdict": "C",
+  "kind": "C",
+  "st": "v4 plan4.ts THE PLAN (one sheet, the tilt) + BP-NELEH-POINTER bp-pointer bpNeleh at the sheet's right edge from the stamp: points at the three, taps the MAS / GERG plates (a drafting callout to them; bpBracket lights), sweeps to the four (her page glows on \"us\"), the arrow, the company; rides the tilt",
+  "standin": false,
+  "tag": "GFX · THE SHEET",
+  "cls": "GS",
+  "framing": "GFX · THE SHEET"
+ },
+ {
+  "id": "S1.04",
+  "verdict": "C",
+  "kind": "C",
+  "st": "v4 plan4.ts the 2x zeros detail + BP-NELEH-POINTER bpTipIn: the pointer's tip on the key ring, then on the CEO box (\"And the CEO?\"); bpVoice: MADA's spinner icon, turning while he speaks",
+  "standin": false,
+  "tag": "GFX · detail: THE ZEROS",
+  "cls": "GD",
+  "framing": "GFX · detail: THE ZEROS"
+ },
+ {
+  "id": "S1.05",
+  "verdict": "C",
+  "kind": "C",
+  "st": "v4 plan4.ts the path, the curl, the tear, re-clocked on the v5 marks; her figure is the paper walker in the row (the set-down pose is not drawn: the fold covers the sheet's right edge)",
+  "standin": false,
+  "tag": "GFX · the path and the break",
+  "cls": "GS",
+  "framing": "GFX · the path and the break"
+ },
+ {
+  "id": "S1.06",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S1.06: inserts-mas drawClickInsert: BOARD · VIDEO CALL · JOIN, the click on the mark; connecting…",
+  "standin": false,
+  "tag": "INSERT · trackpad, JOIN",
+  "cls": "ECU",
+  "framing": "INSERT · trackpad, JOIN"
+ },
+ {
+  "id": "S1.07",
+  "verdict": "C",
+  "kind": "C",
+  "st": "v4 S1.07 (callgrid G5 on ONE clock, the NELEH card, the dialog on the beat) + STATE-SMALL 5: ALYI's tile takes the speaking ring and a silent mouth (callgrid TileState.mouth) + STYLE-1G-NEON: his own tile's neon on the 8-frame guardrail",
+  "standin": false,
+  "tag": "POV · the call grid (his laptop)",
+  "cls": "SC",
+  "framing": "POV · the call grid (his laptop)"
+ },
+ {
+  "id": "S1.08",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S1.08: mas-cu drawEyesStrip (letterboxed): the pupils move one pixel toward the dialog on the mark",
+  "standin": false,
+  "tag": "SINGLE · ECU his eyes",
+  "cls": "ECU",
+  "framing": "SINGLE · ECU his eyes"
+ },
+ {
+  "id": "S1.09",
+  "verdict": "R",
+  "kind": "C",
+  "st": "v4 S1.09 as it was (G5 + dialog; the ALYI / CO-FOUNDER arrow stepping onto Cancel, Cancel lit under it; the click; the masked GLYPH dissolve (its layers, drawn by the host) + G5 -> G4; the notice) with his tile's neon on the 1.G guardrail (STYLE-1G-NEON)",
+  "standin": false,
+  "tag": "POV · the call grid",
+  "cls": "SC",
+  "framing": "POV · the call grid"
+ },
+ {
+  "id": "S1.10",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S1.10: mas-cu drawMasCU (strip): ONE silent drawing; the rail +1 FIRING types on its second beat",
+  "standin": false,
+  "tag": "SINGLE · CU Mas, still",
+  "cls": "CU",
+  "framing": "SINGLE · CU Mas, still"
+ },
+ {
+  "id": "S1.11",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S1.11: inserts-mas drawStripTapInsert: the buzz (f0), [super] x3 (f2), the tap at once (f8); the mic chip still lit",
+  "standin": false,
+  "tag": "INSERT · his phone",
+  "cls": "ECU",
+  "framing": "INSERT · his phone"
+ },
+ {
+  "id": "S1.12",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S1.12: v3 26.09 [OTS] shoulder(masPortrait) over drawLaptopInsert, G4 frozen on \"super.\" + fallaway() over the last 20 f (the bridge to night)",
+  "standin": false,
+  "tag": "OTS · over Mas onto the laptop",
+  "cls": "OTS",
+  "framing": "OTS · over Mas onto the laptop"
+ },
+ {
+  "id": "S2.01",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S2.01: inserts-mas drawCarveInsert (a stroke a beat) -> drawBrushInsert + DRIFT 1 px / 8 f (11 px)",
+  "standin": false,
+  "tag": "INSERT · the desk, the carve",
+  "cls": "ECU",
+  "framing": "INSERT · the desk, the carve"
+ },
+ {
+  "id": "S2.02",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S2.02: v4.1: the marks at insert scale (inserts-mas drawBrushInsert, its last step) + the Orb's eye-light as a cyan pool, stepping onto mark 1",
+  "standin": false,
+  "tag": "INSERT · the three marks, from above",
+  "cls": "ECU",
+  "framing": "INSERT · the three marks, from above"
+ },
+ {
+  "id": "S2.03",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S2.03: F1.2 inside the count: renderFront from the lit mark 1 (the marks ECU) -> EARLYWEB16 rooms-a drawTpoolDoor (two shadows lean together) -> back to the marks, the light on mark 2",
+  "standin": false,
+  "tag": "FLASH · F1.2 TPOOL",
+  "cls": "GFX",
+  "framing": "FLASH · F1.2 TPOOL"
+ },
+ {
+  "id": "S2.04",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S2.04: v4.1: the marks ECU: the light on mark 2, then on mark 3 = his thumb",
+  "standin": false,
+  "tag": "INSERT · the marks",
+  "cls": "ECU",
+  "framing": "INSERT · the marks"
+ },
+ {
+  "id": "S2.05",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S2.05: v3 26A.03 [ECU·Orb] the iris (drawOrb r 84) + orbStep: thumb -> his face; toast rewinding…; 2-frame WHIP-OUT (the badge flips on it)",
+  "standin": false,
+  "tag": "SINGLE · the Orb's iris",
+  "cls": "ECU",
+  "framing": "SINGLE · the Orb's iris"
+ },
+ {
+  "id": "S3.00a",
+  "verdict": "N",
+  "kind": "N",
+  "st": "ROOM-NELEH-DESK neleh-desk drawNelehDeskOTS (day, the slow whole-px push, her pen on step 1) + CAST-NELEH-OTS-R (she leans in on \"Is his feed frozen?\") + UI-CALL-V5 call-boardside drawBoardCall at 1:1 on her laptop (the empty fifth tile, the clock 11:59 -> 12:00, his tile connecting, perfectly still, the neon chasing behind him: STYLE-1G-NEON); ALYI lip-synced in his tile, NELEH in hers",
+  "standin": false,
+  "tag": "OTS · over Neleh onto her laptop (held, slow push)",
+  "cls": "OTS",
+  "framing": "OTS · over Neleh onto her laptop (held, slow push)"
+ },
+ {
+  "id": "S3.01",
+  "verdict": "C",
+  "kind": "C",
+  "st": "UI-CALL-V5 drawBoardCall in ROOM-NELEH-DESK drawNelehBezel (day): his tile simply goes, the four close ranks, the notice MAS MANALT was removed from the meeting., the MAS MANALT · audio chip lit while \"super.\" plays, then greyed (v4's live caption is gone)",
+  "standin": false,
+  "tag": "SCREEN · her laptop, full frame",
+  "cls": "SW",
+  "framing": "SCREEN · her laptop, full frame"
+ },
+ {
+  "id": "S3.02",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S3.02: [HIGH] rooms-a drawTableInsert (blueprint, the step list) + the laptop's edge (her call, 1:2) + the charter; tick 1, the pen runs down 2 · 3 · 4 ______ and stops on the blank (v4.1: no tick 2: the post is step 2); pen hand = clickHand (MARKED)",
+  "standin": false,
+  "tag": "OVERHEAD · her desk",
+  "cls": "ECU",
+  "framing": "OVERHEAD · her desk"
+ },
+ {
+  "id": "S3.03",
+  "verdict": "C",
+  "kind": "C",
+  "st": "UI-BLOG-DRAFT blog-draft drawBlogDraft in drawNelehBezel (day): the post in its editor, both sentences, Post; her pointer onto Post, the click on the tick, PUBLISHED; the call small in the corner",
+  "standin": false,
+  "tag": "SCREEN · the blog, in its own UI",
+  "cls": "SW",
+  "framing": "SCREEN · the blog, in its own UI"
+ },
+ {
+  "id": "S3.04",
+  "verdict": "N",
+  "kind": "N",
+  "st": "ROOM-NELEH-DESK drawNelehDeskOTS (day, held, pen gone) + UI-CALL-V5: Rima's join (the ring, the hard spotlight searching, landing on her slot), STATE-SMALL 8 her jacket smoothed (rima-v5), the speaking ring passing between RIMA, ALYI and NELEH (all lip-synced in their tiles); platePx RIMA TAMURI · HIS CTO",
+  "standin": false,
+  "tag": "OTS · over Neleh onto the grid (held)",
+  "cls": "OTS",
+  "framing": "OTS · over Neleh onto the grid (held)"
+ },
+ {
+  "id": "S3.04b",
+  "verdict": "N",
+  "kind": "N",
+  "st": "[MCU] NELEH right third, brow query (cast/neleh nelehPortrait, lip-sync) over ROOM-NELEH-DESK drawNelehDeskWall (the soft shelf wall, day); Rima's \"More. Soon.\" plays on her face",
+  "standin": false,
+  "tag": "SINGLE · MCU Neleh, one brow up",
+  "cls": "MCU",
+  "framing": "SINGLE · MCU Neleh, one brow up"
+ },
+ {
+  "id": "S3.06",
+  "verdict": "C",
+  "kind": "C",
+  "st": "v4 S3.06 (the all-hands from the back, framed for the match cut; Alyi in the doorway) + CAST-EMP-STAND employee-stand drawEmployeeStanding: tile 22 already standing, hand up, then down, still standing; her mouth in her tile while she asks (the room flap)",
+  "standin": false,
+  "tag": "WIDE · the all-hands, from the back",
+  "cls": "W",
+  "framing": "WIDE · the all-hands, from the back"
+ },
+ {
+  "id": "S3.07",
+  "verdict": "C",
+  "kind": "C",
+  "st": "v3 27.08's [MCU·door] (the all-hands soft 1, the jamb and leaf) with CAST-ALYI-LOOK alyi-v5 alyiLook (lip-sync; his eyes to the employee at the pause, back); then he steps back into the dark doorway in 3 held steps (the rack) and it holds empty; no plate (v5 drops v4.1's)",
+  "standin": false,
+  "tag": "SINGLE · MCU Alyi in the doorway (held)",
+  "cls": "MCU",
+  "framing": "SINGLE · MCU Alyi in the doorway (held)"
+ },
+ {
+  "id": "S3.05",
+  "verdict": "C",
+  "kind": "C",
+  "st": "UI-CALL-V5 drawBoardCall in drawNelehBezel (EVENING: her lamp on the bezel) + UI-POST post-card 'notify' (Gerg's \"…I quit.\", his green glow, the lock's words) + keycapRain; ALYI and NELEH lip-synced in their tiles",
+  "standin": false,
+  "tag": "SCREEN · her laptop, evening",
+  "cls": "SW",
+  "framing": "SCREEN · her laptop, evening"
+ },
+ {
+  "id": "S4.01",
+  "verdict": "C",
+  "kind": "C",
+  "st": "v4 S4.01 (avalanche planPile / drawPile over the board's grid on the wall screen, [SCR] bezel, re-clocked to the shot) with the one BLUE heart landing on RIMA's tile (STATE-SMALL 1) + UI-POST 'notify' (his eulogy post scrolling in, the lock's words) in place of v4's postChip",
+  "standin": false,
+  "tag": "SCREEN · the boardroom's wall screen",
+  "cls": "SW",
+  "framing": "SCREEN · the boardroom's wall screen"
+ },
+ {
+  "id": "S4.02",
+  "verdict": "C",
+  "kind": "C",
+  "st": "v4 S4.02 (the boardroom wide at night, held: phones buzzing with caller IDs, blueprint, the QV laptop, the reflection, the wall screen small) + Neleh's room-scale mouth (open / rest) + STATE-SMALL 2: the phones step toward the edge on each buzz (0 -> 3; the first goes over in S4.06)",
+  "standin": false,
+  "tag": "WIDE · the boardroom at night (held)",
+  "cls": "W",
+  "framing": "WIDE · the boardroom at night (held)"
+ },
+ {
+  "id": "S4.04",
+  "verdict": "C",
+  "kind": "C",
+  "st": "v3 27.14's [OTS] onto the dark window (the boardroom plate, ALYI's reflection lip-synced, the phones step 3) NOT mirrored: CAST-NELEH-OTS-R drawNelehShoulderR ('window' rim) is her own right-shoulder drawing (art-needs §1.8)",
+  "standin": false,
+  "tag": "OTS · over Neleh onto the window (Alyi's reflection)",
+  "cls": "OTS",
+  "framing": "OTS · over Neleh onto the window (Alyi's reflection)"
+ },
+ {
+  "id": "S4.06",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S4.06: twoshots drawBoard2S: NELEH looking down (lip-sync), MADA, ALYI's reflection between them (lip-sync); its 2-frame flicker on the mark",
+  "standin": false,
+  "tag": "TWO-SHOT · Neleh and Mada, Alyi's reflection between",
+  "cls": "M",
+  "framing": "TWO-SHOT · Neleh and Mada, Alyi's reflection between"
+ },
+ {
+  "id": "S4.07",
+  "verdict": "C",
+  "kind": "C",
+  "st": "v4 S4.07's [MCU·PF] (NELEH right third, the boardroom stepping down behind her) with her line lip-synced + PROP-SPEAKERPHONE-MCU speakerphone drawSpeakerphoneMCU: she pulls the pod in (3 held steps) and dials four tones, one LED per seat, on the stick's DTMF spots",
+  "standin": false,
+  "tag": "SINGLE · MCU Neleh (her real face)",
+  "cls": "MCU",
+  "framing": "SINGLE · MCU Neleh (her real face)"
+ },
+ {
+  "id": "S4.08",
+  "verdict": "C",
+  "kind": "C",
+  "st": "v4 S4.08's [SPLIT] (two 238 x 203 panes: the boardroom with the speakerphone lit | the lighthouse: the throne, the phones, the meters, the ELGOOG tag, NOZAMA's caller ID) + room-scale mouths for NELEH, MARIO and ADELINA; Mario's finger rise on \"hypothetically\"; Adelina crossing in, taking phone 1 (\"no.\"), then phone 2 and handing it over; the v5 plates MARIO · RUNS THE RIVAL LAB · (REPORTED) and ADELINA · MARIO'S CO-FOUNDER",
+  "standin": false,
+  "tag": "SPLIT · both calls, one held shot",
+  "cls": "W",
+  "framing": "SPLIT · both calls, one held shot"
+ },
+ {
+  "id": "S4.09",
+  "verdict": "C",
+  "kind": "C",
+  "st": "PLATE-BOARD-SCREEN board-screen drawBoardScreenOTS (Sunday by day; CAST-NELEH-OTS-R her shoulder) with ROOM-LOBBY-CCTV-DESK lobby-feed drawLobbyFeed at 1:1 in the glass (1.K: his GUEST card in the feed's ZOOM; on \"here\" he turns and walks out through the drum) + UI-POST 'notify' (his badge post) in the feed's corner; ALYI's reflection lip-synced",
+  "standin": false,
+  "tag": "OTS · over Neleh onto the lobby camera",
+  "cls": "OTS",
+  "framing": "OTS · over Neleh onto the lobby camera"
+ },
+ {
+  "id": "S4.10",
+  "verdict": "C",
+  "kind": "C",
+  "st": "v4 S4.10 (the boardroom wide, now night: the spot swings in 3 held positions onto TTEMME in the CEO chair, the blank sticky note) with the spot starting from RIMA's tile on the small wall screen (STATE-SMALL 3), the plate TTEMME · RAN A STREAMING SITE, and UI-CHAT-ROOM chat-panel 'room' at his elbow",
+  "standin": false,
+  "tag": "WIDE · the boardroom, now night",
+  "cls": "W",
+  "framing": "WIDE · the boardroom, now night"
+ },
+ {
+  "id": "S4.10b",
+  "verdict": "N",
+  "kind": "N",
+  "st": "PLATE-BOARD-HEAD boardroom-head drawBoardHead2S: NELEH standing at the table's side (neleh-medium, lip-sync), TTEMME in the CEO chair (CAST-TTEMME-MEDIUM, lip-sync), MADA soft beyond with his spinner, UI-CHAT-ROOM at his elbow; PROP-FOLDER: the sealed folder slides across in held steps, he breaks the seal and reads it turned away, closes it; nothing inside is ever shown",
+  "standin": false,
+  "tag": "TWO-SHOT · Neleh and Ttemme across the table (held)",
+  "cls": "M",
+  "framing": "TWO-SHOT · Neleh and Ttemme across the table (held)"
+ },
+ {
+  "id": "S4.11",
+  "verdict": "C",
+  "kind": "C",
+  "st": "v4 S4.11's [LOW·desk] (the boardroom soft behind, TTEMME right third lip-synced (ttemmePortrait), his LIVE · CHAT overlay, the table edge) with PROP-HOURGLASS-INSERT hourglass-insert drawHourglassXL at insert scale in place of v4's 2x blow-up: the flip in its held drawings (hgxFlip), the sand starting",
+  "standin": false,
+  "tag": "LOW · desk level, the hourglass",
+  "cls": "ECU",
+  "framing": "LOW · desk level, the hourglass"
+ },
+ {
+  "id": "S4.12",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S4.12: v3 27.28 twoshots drawBoard2S: the wall steps to slate; the door appears in held steps and opens; TASYA in it (re-clocked on the marks)",
+  "standin": false,
+  "tag": "TWO-SHOT · Neleh and Mada",
+  "cls": "M",
+  "framing": "TWO-SHOT · Neleh and Mada"
+ },
+ {
+  "id": "S4.13",
+  "verdict": "C",
+  "kind": "C",
+  "st": "v4 S4.13's [MCU·door] (the boardroom plate with the slate door, soft 2; the new doorway) with CAST-TASYA-PHONE tasya-phone tasyaPhonePortrait: pleased, the key ring jangling, then reading his statement off his phone (lip-sync); the plate TASYA · THE LANDLORD · MACROSOFT · NOPEAI RUNS ON ITS SERVERS; the sign moves to S4.13e",
+  "standin": false,
+  "tag": "SINGLE · MCU Tasya in the new doorway",
+  "cls": "MCU",
+  "framing": "SINGLE · MCU Tasya in the new doorway"
+ },
+ {
+  "id": "S4.13c",
+  "verdict": "N",
+  "kind": "N",
+  "st": "PLATE-BOARD-HEAD boardroom-head drawBoardHeadM: TTEMME at the head turned to the open slate door (CAST-TTEMME-MEDIUM, pleased and slightly lost: he nods back on his name), TASYA small in the door reading (room-scale mouth), UI-CHAT-ROOM",
+  "standin": false,
+  "tag": "MEDIUM · Ttemme in the CEO chair, Tasya beyond",
+  "cls": "M",
+  "framing": "MEDIUM · Ttemme in the CEO chair, Tasya beyond"
+ },
+ {
+  "id": "S4.13d",
+  "verdict": "N",
+  "kind": "N",
+  "st": "PLATE-BOARD-SCREEN board-screen drawBoardScreen2S at night: NELEH medium at the right, her pen stopped mid-air; the wall screen with ALYI's reflection turning to look at the open slate door (CAST-ALYI-LOOK 'door') as the names land",
+  "standin": false,
+  "tag": "TWO-SHOT · Neleh and Alyi's reflection",
+  "cls": "M",
+  "framing": "TWO-SHOT · Neleh and Alyi's reflection"
+ },
+ {
+  "id": "S4.13e",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S4.13 (the sign beat split out: the lock's sign text from f4): [MCU·door] TASYA right third (tasyaSpeakPortrait, key ring jangling) framed by the new doorway, slate light; platePx first, then his sign MAS · GERG -> (a flat card, pt)",
+  "standin": false,
+  "tag": "SINGLE · MCU Tasya lifts the sign",
+  "cls": "MCU",
+  "framing": "SINGLE · MCU Tasya lifts the sign"
+ },
+ {
+  "id": "S4.14",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S4.14: [HIGH] drawTableInsert (blueprint, 1-3 ticked, 4 blank) + her ? in three strokes as she asks \"Step four?\"; her marker hand = clickHand (MARKED)",
+  "standin": false,
+  "tag": "OVERHEAD · the blueprint",
+  "cls": "ECU",
+  "framing": "OVERHEAD · the blueprint"
+ },
+ {
+  "id": "S4.15",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S4.15: v3 27.31 [MCU] MADA right third (madaPortrait) + his spinner, the boardroom soft; he doesn't answer",
+  "standin": false,
+  "tag": "SINGLE · MCU Mada",
+  "cls": "MCU",
+  "framing": "SINGLE · MCU Mada"
+ },
+ {
+  "id": "S5.01",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S5.01: kit.cards (stand-in): the chapter door WHAT THEY DIDN'T KNOW",
+  "standin": true,
+  "tag": "CARD",
+  "cls": "GFX",
+  "framing": "CARD"
+ },
+ {
+  "id": "S5.02",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S5.02: v2 29.00 rooms-b drawDarkDesk: the home shot, the glass (water line flat) + the GUEST lanyard laid square",
+  "standin": false,
+  "tag": "INSERT · the home shot: glass and lanyard",
+  "cls": "ECU",
+  "framing": "INSERT · the home shot: glass and lanyard"
+ },
+ {
+  "id": "S5.03",
+  "verdict": "C",
+  "kind": "C",
+  "st": "v4 S5.03's inserts-mas drawPhoneInsert29 (the true shot: the dark desk, his thumb, the Orb) with post cards in UI-POST's grammar on its screen (re-laid here for the 71 px phone: phoneCard): Rima's post, then the same words from everyone, newest at the bottom under his thumb, each hearted on the stick's tap spots, the counts climbing (the flood)",
+  "standin": false,
+  "tag": "INSERT · his phone and thumb",
+  "cls": "ECU",
+  "framing": "INSERT · his phone and thumb"
+ },
+ {
+  "id": "S5.04",
+  "verdict": "C",
+  "kind": "C",
+  "st": "v4 S5.04's twoshots drawDark2S + orbToLanyard (the iris steps off the phone onto the GUEST lanyard) with STATE-SMALL 7: Mas turns his head to the Orb and answers aloud, lip-synced (\"the badge was a joke.\")",
+  "standin": false,
+  "tag": "TWO-SHOT · Mas and the Orb",
+  "cls": "M",
+  "framing": "TWO-SHOT · Mas and the Orb"
+ },
+ {
+  "id": "S5.05",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S5.05: v3 29.05 [MCU] MAS left third turned to the Orb + the Orb soft; RACK Mas -> the Orb after \"mostly.\"",
+  "standin": false,
+  "tag": "SINGLE · MCU Mas",
+  "cls": "MCU",
+  "framing": "SINGLE · MCU Mas"
+ },
+ {
+  "id": "S5.09",
+  "verdict": "C",
+  "kind": "C",
+  "st": "v4 S5.09's [OTS] (his monitor across the dark room, soft 3; shoulder(masPortrait) in front with the monitor's green rim) with the letter already open on it (UI-LETTER-V5's page at 1:1) and STATE-SMALL 6: Gerg's corner tile rings, Mas clicks, it opens in 3 held steps (drawGergMediumPOV open), then Gerg full, typing, lip-synced",
+  "standin": false,
+  "tag": "OTS · over Mas onto the monitor, Gerg's tile big",
+  "cls": "OTS",
+  "framing": "OTS · over Mas onto the monitor, Gerg's tile big"
+ },
+ {
+  "id": "S5.06",
+  "verdict": "C",
+  "kind": "C",
+  "st": "UI-LETTER-V5 staff-letter drawStaffLetter: the page with its bezel and the window; the three quotes land as Gerg reads them (the lock's texts), SIGNED 505 -> 650 -> 700 -> 745 / 770 rolling on the odometer with its clunk, a slow whole-px scroll (1 px / 2 f) that follows the quotes and stops on ALYI (REPORTED), lit; Gerg's small tile lip-synced; the window one step greyer from 700",
+  "standin": false,
+  "tag": "POV · his monitor: the letter, one page, a slow scroll",
+  "cls": "SC",
+  "framing": "POV · his monitor: the letter, one page, a slow scroll"
+ },
+ {
+  "id": "S5.07b",
+  "verdict": "N",
+  "kind": "N",
+  "st": "v3 29.15's [MCU·PF] (the QUIET BEAT: the dark room fallen away to the monitor's green and his cyan, Gerg's typing flickering on him; v4's unused S5.10) with Mas lip-synced (\"alyi voted.\"); \"He did both.\" off picture; the hold is his",
+  "standin": false,
+  "tag": "SINGLE · MCU Mas, the monitor's light",
+  "cls": "MCU",
+  "framing": "SINGLE · MCU Mas, the monitor's light"
+ },
+ {
+  "id": "S5.08",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S5.08: [ECU·insert] the check slides down out of the rack's slot and lies flat (4 held steps): a flat paper insert (guilloche border, pt lettering): PAY TO: NOPEAI STAFF · ~$86B VALUATION · EVIRHT · MEMO: STAFF SHARE SALE; VOID IF CEO MISSING stamped beside the figure",
+  "standin": false,
+  "tag": "INSERT · the check",
+  "cls": "ECU",
+  "framing": "INSERT · the check"
+ },
+ {
+  "id": "S5.09-back",
+  "verdict": "R",
+  "kind": "C",
+  "st": "the S5.09 [OTS] again (the same setup, Gerg's tile open from the cut): Gerg typing, sunny, lip-synced; his keys stop and he looks up after \"case\" (the glance)",
+  "standin": false,
+  "tag": "OTS · back over Mas onto the monitor",
+  "cls": "OTS",
+  "framing": "OTS · back over Mas onto the monitor"
+ },
+ {
+  "id": "S5.09b",
+  "verdict": "C",
+  "kind": "C",
+  "st": "v4 S5.09b's swaps-act4 drawGergTileWide (his tile fills the frame): the glance into his camera, at Mas, held, with his line lip-synced (STATE-SMALL 9); then his eyes drop and he types",
+  "standin": false,
+  "tag": "POV · cut-in: Gerg's tile fills the monitor",
+  "cls": "SC",
+  "framing": "POV · cut-in: Gerg's tile fills the monitor"
+ },
+ {
+  "id": "S5.11",
+  "verdict": "C",
+  "kind": "C",
+  "st": "twoshots drawDark2S (Mas lip-synced on \"everyone.\"; the Orb turning to the door): the slate door steps up out of the shadow in held steps on the thunks, Tasya's sign taped to it (slateDoorSign), then ROOM-SLATE-DESKS slate-desks drawSlateDoorOpen: the key turns in 3 held drawings, the door opens a crack, and on \"desk\" wider: the labelled desks beyond in slate light",
+  "standin": false,
+  "tag": "TWO-SHOT · the back wall; the slate door rises",
+  "cls": "M",
+  "framing": "TWO-SHOT · the back wall; the slate door rises"
+ },
+ {
+  "id": "S5.12",
+  "verdict": "C",
+  "kind": "C",
+  "st": "v3 29.17's [MCU] (MAS left third, not turning, lip-synced; the dark room soft; RACK Mas -> the door after the line) with the slate door ajar on the desks (ROOM-SLATE-DESKS drawSlateDoorOpen open, slateDoorSign), drawn into the held plate before the softening so the rack steps it",
+  "standin": false,
+  "tag": "SINGLE · MCU Mas, the door soft behind",
+  "cls": "MCU",
+  "framing": "SINGLE · MCU Mas, the door soft behind"
+ },
+ {
+  "id": "S6.01",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S6.01: avalanche planGridStack / drawGridStack on the board grid (his monitor, locked), sampled on ONE clock across S6; the letter's 745 / 770 static in the corner",
+  "standin": false,
+  "tag": "POV · the board grid (locked)",
+  "cls": "SC",
+  "framing": "POV · the board grid (locked)"
+ },
+ {
+  "id": "S6.02",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S6.02: [MCU·PF] MAS left third, the monitor off frame lighting him; each landing steps the room's light, never his face",
+  "standin": false,
+  "tag": "SINGLE · MCU Mas watching",
+  "cls": "MCU",
+  "framing": "SINGLE · MCU Mas watching"
+ },
+ {
+  "id": "S6.03",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S6.03: [POV·half] ALYI's own tile (drawAlyiTile) grown from his grid place (the grid tile blanked: one face) on the same clock: shoved sideways, resists one beat, slides off; the notice ALYI left the call",
+  "standin": false,
+  "tag": "POV · Alyi's tile, half frame",
+  "cls": "SC",
+  "framing": "POV · Alyi's tile, half frame"
+ },
+ {
+  "id": "S6.04",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S6.04: [POV·half] NELEH's own tile (drawNelehTile, lip-sync; her grid tile blanked) over the stack; footnotes scatter; on \"char\" it leaves the frame; the notices stack",
+  "standin": false,
+  "tag": "POV · Neleh's tile, half frame",
+  "cls": "SC",
+  "framing": "POV · Neleh's tile, half frame"
+ },
+ {
+  "id": "S6.06",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S6.06: v4.1 S6.05 + S6.06 as ONE shot: the grid on the same clock, THE QUIET VOTE's black tile pushed out (its notice); then MADA's own grid tile grows to half the frame in 3 held steps (the grid tile gone, not doubled); the label MADA · LAST FIRER STANDING flips in 3 held steps on the mark and holds",
+  "standin": false,
+  "tag": "POV · the last gap: Mada",
+  "cls": "SC",
+  "framing": "POV · the last gap: Mada"
+ },
+ {
+  "id": "S7.01",
+  "verdict": "C",
+  "kind": "C",
+  "st": "[P2] BOX (the act's one deliberate box): CAST-ALYI-PHONE alyi-v5 drawAlyiDoorPhone (twoshots drawDoorwayP2: Alyi reading his post on his phone, then looking up at the three hearts; both men lip-synced; the IOU) + UI-POST 'popup' (his regret, the lock's words) + the GUEST lanyard and PROP-MACROSOFT-BADGE 'p2' lying on Mas's desk",
+  "standin": false,
+  "tag": "BOX · the two boxes (the act's one box, held)",
+  "cls": "BOX",
+  "framing": "BOX · the two boxes (the act's one box, held)"
+ },
+ {
+  "id": "S7.02",
+  "verdict": "C",
+  "kind": "C",
+  "st": "v4 S7.02 (rooms-b bullpen walkout wide, held: coats, packed boxes, Mas small at his end desk, Tasya mid-floor) + PROP-MACROSOFT-BADGE badgesOnDeskRoom on his desk + his room-scale mouth for the question",
+  "standin": false,
+  "tag": "WIDE · the bullpen, packed boxes (held)",
+  "cls": "W",
+  "framing": "WIDE · the bullpen, packed boxes (held)"
+ },
+ {
+  "id": "S7.02b",
+  "verdict": "C",
+  "kind": "R",
+  "st": "v4 S7.02b (lip-synced on the v5 take; the slate steps on below / above / around): v4.1 [MCU] TASYA right third (tasyaSpeakPortrait, lip-sync) over the bullpen walkout soft 2; behind him the floor / ceiling / walls step to slate in 3 held steps on \"below / above / around\"",
+  "standin": false,
+  "tag": "SINGLE · MCU Tasya",
+  "cls": "MCU",
+  "framing": "SINGLE · MCU Tasya"
+ },
+ {
+  "id": "S7.03",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S7.03: v3 30.06 [MCU·PF] MAS left third, eyes down (masLookDown) over the all-slate bullpen soft",
+  "standin": false,
+  "tag": "SINGLE · MCU Mas looking down",
+  "cls": "MCU",
+  "framing": "SINGLE · MCU Mas looking down"
+ },
+ {
+  "id": "S7.05",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S7.05: twoshots drawMadaM (the boardroom plate with fires, mada-medium): perfectly still among the fires",
+  "standin": false,
+  "tag": "MEDIUM · Mada among the fires",
+  "cls": "M",
+  "framing": "MEDIUM · Mada among the fires"
+ },
+ {
+  "id": "S7.06",
+  "verdict": "R",
+  "kind": "C",
+  "st": "v4 S7.06 as it was (the boardroom wide with the fires, ONE held setup with S7.06-cont merged: the door bangs, TERB in, the helmet -> the FULL FREEZE with the TERB card, Mas walking through in colour and pocketing the pin -> unfreeze, the look-around) + TERB's room-scale mouth on \"Which room is on fire?\" and \"…Ah.\"",
+  "standin": true,
+  "tag": "WIDE · the boardroom (freeze card)",
+  "cls": "W",
+  "framing": "WIDE · the boardroom (freeze card)"
+ },
+ {
+  "id": "S7.07",
+  "verdict": "C",
+  "kind": "C",
+  "st": "CAST-TERB-SHEET calmoff-terms drawCalmOffTerms2S (the calm-off: MAS left, MADA right, TERB in depth between them reading the single sheet, room-scale mouth; between sentences he sprays the chair fire, the sheet under his arm); Mada's spinner turning",
+  "standin": false,
+  "tag": "TWO-SHOT · the calm-off, Terb in depth (held)",
+  "cls": "M",
+  "framing": "TWO-SHOT · the calm-off, Terb in depth (held)"
+ },
+ {
+  "id": "S7.07b",
+  "verdict": "N",
+  "kind": "N",
+  "st": "CAST-OTHER-YRRAL calmoff-terms drawOtherYrralM: the seated silhouette at the table's far end among the fires, the nameplate YRRAL (NOT THAT YRRAL), one two-drawing nod on \"other\"",
+  "standin": false,
+  "tag": "MEDIUM · THE OTHER YRRAL (cutaway)",
+  "cls": "M",
+  "framing": "MEDIUM · THE OTHER YRRAL (cutaway)"
+ },
+ {
+  "id": "S7.07-cont",
+  "verdict": "C",
+  "kind": "C",
+  "st": "the S7.07 setup again (drawCalmOffTerms2S): Terb reading on, then looking up to Mada (\"He stays.\"); MAS lip-synced (\"of what?\"); MADA lip-synced on \"Good question.\" (his face is in the 2S, as v4 drew it), his spinner turning",
+  "standin": false,
+  "tag": "TWO-SHOT · the calm-off (held)",
+  "cls": "M",
+  "framing": "TWO-SHOT · the calm-off (held)"
+ },
+ {
+  "id": "S7.08",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S7.08: v3 30.14 [MCU] MAS left third, near-front, warm, the fires soft; one beat late",
+  "standin": false,
+  "tag": "SINGLE · MCU Mas",
+  "cls": "MCU",
+  "framing": "SINGLE · MCU Mas"
+ },
+ {
+  "id": "S7.09",
+  "verdict": "C",
+  "kind": "C",
+  "st": "the calm-off, the long hold (drawCalmOffTerms2S): the spinner stops, Mada nods, Terb stamps and hands the sheet over (the term sheet on the table, stamped); PROP-PHONE-TABLE Mas's phone lights green on the table, keycaps; UI-POST 'notify' (Gerg's return, the lock's words) (merges v4's S7.11)",
+  "standin": false,
+  "tag": "TWO-SHOT · the calm-off, the long hold",
+  "cls": "M",
+  "framing": "TWO-SHOT · the calm-off, the long hold"
+ },
+ {
+  "id": "S7.13",
+  "verdict": "C",
+  "kind": "C",
+  "st": "[HIGH] v4 S7.13's table from above (rooms/boardroom drawTableInsert 'prop') + PROP-HOURGLASS-INSERT hourglass-insert drawHourglassXL (view 'high'): the last grain, the shatter, the sand holding its shape, then falling; UI-POST 'popup' (Ttemme's result, the lock's words); UI-CHAT-ROOM 'corner' entering",
+  "standin": false,
+  "tag": "OVERHEAD · the hourglass, his chat panel",
+  "cls": "ECU",
+  "framing": "OVERHEAD · the hourglass, his chat panel"
+ },
+ {
+  "id": "S8.01",
+  "verdict": "C",
+  "kind": "C",
+  "st": "v3 30.19 (rooms-a lobby at night cropped on the sign, the sign igniting 1,2,1,2,3 on the stab; Mas small at the desk, no badge) with the box of spare 0 plates in the room (lobby zeroBox: v4's S8.02 merged in; no hand); the crop is still the stand-in for a true low angle (ROOM-LOBBY-LOW, P4)",
+  "standin": true,
+  "tag": "LOW · the lobby sign",
+  "cls": "ECU",
+  "framing": "LOW · the lobby sign"
+ },
+ {
+  "id": "S8.03",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S8.03: rooms-a lobby night + callgrid callDialog: Cancel greys a dither step a beat; drawPointer with an EMPTY tag clicks: bonk, the dialog SHAKES (shakeAt), refused; tries again; shoulder(masPortrait) tungsten rim",
+  "standin": false,
+  "tag": "OTS · over Mas onto the last dialog",
+  "cls": "OTS",
+  "framing": "OTS · over Mas onto the last dialog"
+ },
+ {
+  "id": "S8.04",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S8.04: v2 30.25 mas-cu drawMasCU (lobby): the same ONE silent drawing, the tungsten behind him",
+  "standin": false,
+  "tag": "SINGLE · CU Mas",
+  "cls": "CU",
+  "framing": "SINGLE · CU Mas"
+ },
+ {
+  "id": "S8.05",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S8.05: inserts-mas drawNudgeInsert (lobby): held -> set -> NUDGE; the desk top recoloured to the reception desk's pale stone + a brass edge (the lobby, not the suite's wood)",
+  "standin": true,
+  "tag": "INSERT · the glass on the stone",
+  "cls": "ECU",
+  "framing": "INSERT · the glass on the stone"
+ },
+ {
+  "id": "S8.06",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S8.06: v2 31.01 inserts-props drawVaultInsert: Q*, the sticky note, humming on F",
+  "standin": false,
+  "tag": "INSERT · the Q* vault",
+  "cls": "ECU",
+  "framing": "INSERT · the Q* vault"
+ },
+ {
+  "id": "S8.07",
+  "verdict": "C",
+  "kind": "C",
+  "st": "CAST-MAS-TURNAWAY mas-turnaway: the frameless 50/50 over the bullpen by day soft 1 (v4's recipe): MAS turned away, already past (no mouth), GERG right lip-synced (gergGlow) with his hand on the Q* vault (drawVaultMid, its note DO NOT OPEN. DO NOT EXPLAIN.); RACK to the vault after his line (the note sharp), Mas walking off, then Gerg walks out",
+  "standin": false,
+  "tag": "TWO-SHOT · Mas and Gerg, the vault between",
+  "cls": "M",
+  "framing": "TWO-SHOT · Mas and Gerg, the vault between"
+ },
+ {
+  "id": "S8.08",
+  "verdict": "N",
+  "kind": "N",
+  "st": "ROOM-BULLPEN-UNPACK bullpen-unpack drawBullpenUnpack (Nov 29: coats off, boxes open, the staff turned toward his end desk), Mas reading his memo at room scale (open / rest), the slow whole-px drift (8 px over the shot)",
+  "standin": false,
+  "tag": "WIDE · the bullpen, the memo (slow drift)",
+  "cls": "W",
+  "framing": "WIDE · the bullpen, the memo (slow drift)"
+ },
+ {
+  "id": "S8.09",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S8.09 (the memo carries over it): rooms-a drawChairBackInsert (the boardroom chair back, SCORCHED by sc 30's fire): four screws, four beats; the ALYI plate comes off + a drawn hand and screwdriver (no label)",
+  "standin": true,
+  "tag": "INSERT · the nameplate",
+  "cls": "ECU",
+  "framing": "INSERT · the nameplate"
+ },
+ {
+  "id": "S8.09b",
+  "verdict": "N",
+  "kind": "N",
+  "st": "kits/inserts-props drawShutDoorInsert (existing art): the conference-room door, shut, its ALYI nameplate still on",
+  "standin": false,
+  "tag": "INSERT · the shut door",
+  "cls": "ECU",
+  "framing": "INSERT · the shut door"
+ },
+ {
+  "id": "S8.10",
+  "verdict": "R",
+  "kind": "R",
+  "st": "v4 S8.10: rooms-b bullpen (window corner, door shut) + a drawn Macrosoft-blue folding chair (4 held drawings) + its label MACROSOFT · OBSERVER (NON-VOTING); Tasya's key ring drops onto the seat",
+  "standin": true,
+  "tag": "WIDE · the observer chair (the act's last image)",
+  "cls": "W",
+  "framing": "WIDE · the observer chair (the act's last image)"
+ }
+]

@@ -1,0 +1,498 @@
+{
+ "id": "e1-a2-15-06",
+ "scene": "15",
+ "speaker": "LAHTNEMULB",
+ "speaker_slug": "lahtnemulb",
+ "text": "\"You may have had in mind the effect on jobs, which is really my biggest nightmare in the long term.\"",
+ "spoken_as": "You may have had in mind the effect on jobs,{0.35} which is really my biggest nightmare in the long term.",
+ "delivery": null,
+ "tag": "[P✓ · MAY 16, 2023]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "MCU",
+ "shot_id": "MCU",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 8.1,
+ "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-06.wav",
+ "mp3": null,
+ "duration_s": 6.91,
+ "frames_24": 166,
+ "voiced_span_s": 5.93,
+ "pace": {
+  "words": 20,
+  "wpm": 202.4,
+  "speed": 0.82,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.82,
+   "speed_band": [
+    0.84,
+    0.92
+   ],
+   "articulation_guide_sps": [
+    4.0,
+    4.6
+   ],
+   "turn_wpm_guide": [
+    135,
+    155
+   ],
+   "intent": null
+  },
+  "measured": {
+   "wpm": 202.4,
+   "articulation_sps": 4.5,
+   "syllables": 25,
+   "span_s": 5.93,
+   "pauses_s": [
+    0.07,
+    0.37,
+    0.07,
+    0.08
+   ]
+  },
+  "longest_internal_gap_s": 0.37,
+  "audible_in_s": 0.5,
+  "audible_out_s": 6.43
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_adam*0.50+am_echo*0.50 (Kokoro-82M stock) · d-adam-echo-senate-low · speed 0.820",
+ "voiceId": "am_adam*0.50+am_echo*0.50",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 75 Hz",
+  "pitch -2 st",
+  "low shelf +1 dB @150 Hz",
+  "peak -1 dB @400 Hz Q1.0",
+  "peak +1 dB @2500 Hz Q0.9",
+  "comp 2.5:1 @-22 dB (6/110 ms)",
+  "Kokoro speed 0.820 (the plan speed; lahtnemulb band 0.84-0.92); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'jobs': Kokoro 0.36 s -> 0.26 s (intended 0.35; +0.00 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "O"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "M"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "A"
+  },
+  {
+   "t": 1.042,
+   "f": 25,
+   "shape": "E"
+  },
+  {
+   "t": 1.208,
+   "f": 29,
+   "shape": "M"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "A"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "E"
+  },
+  {
+   "t": 1.917,
+   "f": 46,
+   "shape": "A"
+  },
+  {
+   "t": 2.042,
+   "f": 49,
+   "shape": "E"
+  },
+  {
+   "t": 2.167,
+   "f": 52,
+   "shape": "O"
+  },
+  {
+   "t": 2.333,
+   "f": 56,
+   "shape": "E"
+  },
+  {
+   "t": 2.542,
+   "f": 61,
+   "shape": "A"
+  },
+  {
+   "t": 2.875,
+   "f": 69,
+   "shape": "M"
+  },
+  {
+   "t": 3.0,
+   "f": 72,
+   "shape": "E"
+  },
+  {
+   "t": 3.083,
+   "f": 74,
+   "shape": "rest"
+  },
+  {
+   "t": 3.458,
+   "f": 83,
+   "shape": "E"
+  },
+  {
+   "t": 3.875,
+   "f": 93,
+   "shape": "A"
+  },
+  {
+   "t": 3.958,
+   "f": 95,
+   "shape": "E"
+  },
+  {
+   "t": 4.125,
+   "f": 99,
+   "shape": "M"
+  },
+  {
+   "t": 4.208,
+   "f": 101,
+   "shape": "A"
+  },
+  {
+   "t": 4.333,
+   "f": 104,
+   "shape": "M"
+  },
+  {
+   "t": 4.417,
+   "f": 106,
+   "shape": "E"
+  },
+  {
+   "t": 4.5,
+   "f": 108,
+   "shape": "A"
+  },
+  {
+   "t": 4.583,
+   "f": 110,
+   "shape": "E"
+  },
+  {
+   "t": 4.875,
+   "f": 117,
+   "shape": "A"
+  },
+  {
+   "t": 5.042,
+   "f": 121,
+   "shape": "E"
+  },
+  {
+   "t": 5.125,
+   "f": 123,
+   "shape": "M"
+  },
+  {
+   "t": 5.208,
+   "f": 125,
+   "shape": "A"
+  },
+  {
+   "t": 5.333,
+   "f": 128,
+   "shape": "E"
+  },
+  {
+   "t": 5.667,
+   "f": 136,
+   "shape": "O"
+  },
+  {
+   "t": 5.875,
+   "f": 141,
+   "shape": "E"
+  },
+  {
+   "t": 6.042,
+   "f": 145,
+   "shape": "O"
+  },
+  {
+   "t": 6.25,
+   "f": 150,
+   "shape": "E"
+  },
+  {
+   "t": 6.333,
+   "f": 152,
+   "shape": "M"
+  },
+  {
+   "t": 6.458,
+   "f": 155,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "You",
+   "t0": 0.495,
+   "t1": 0.595,
+   "f0": 12,
+   "f1": 14,
+   "ph": "jˌu"
+  },
+  {
+   "w": "may",
+   "t0": 0.595,
+   "t1": 0.758,
+   "f0": 14,
+   "f1": 18,
+   "ph": "mˈA"
+  },
+  {
+   "w": "have",
+   "t0": 0.758,
+   "t1": 0.87,
+   "f0": 18,
+   "f1": 21,
+   "ph": "hæv"
+  },
+  {
+   "w": "had",
+   "t0": 0.87,
+   "t1": 1.082,
+   "f0": 21,
+   "f1": 26,
+   "ph": "hæd"
+  },
+  {
+   "w": "in",
+   "t0": 1.082,
+   "t1": 1.22,
+   "f0": 26,
+   "f1": 29,
+   "ph": "ɪn"
+  },
+  {
+   "w": "mind",
+   "t0": 1.22,
+   "t1": 1.582,
+   "f0": 29,
+   "f1": 38,
+   "ph": "mˈInd"
+  },
+  {
+   "w": "the",
+   "t0": 1.582,
+   "t1": 1.72,
+   "f0": 38,
+   "f1": 41,
+   "ph": "ði"
+  },
+  {
+   "w": "effect",
+   "t0": 1.72,
+   "t1": 2.17,
+   "f0": 41,
+   "f1": 52,
+   "ph": "əfˈɛkt"
+  },
+  {
+   "w": "on",
+   "t0": 2.17,
+   "t1": 2.42,
+   "f0": 52,
+   "f1": 58,
+   "ph": "ˌɔn"
+  },
+  {
+   "w": "jobs",
+   "t0": 2.42,
+   "t1": 3.11,
+   "f0": 58,
+   "f1": 75,
+   "ph": "ʤˈɑbz"
+  },
+  {
+   "w": "which",
+   "t0": 3.395,
+   "t1": 3.595,
+   "f0": 81,
+   "f1": 86,
+   "ph": "wˌɪʧ"
+  },
+  {
+   "w": "is",
+   "t0": 3.595,
+   "t1": 3.77,
+   "f0": 86,
+   "f1": 90,
+   "ph": "ɪz"
+  },
+  {
+   "w": "really",
+   "t0": 3.77,
+   "t1": 4.12,
+   "f0": 90,
+   "f1": 99,
+   "ph": "ɹˈiᵊli"
+  },
+  {
+   "w": "my",
+   "t0": 4.12,
+   "t1": 4.37,
+   "f0": 99,
+   "f1": 105,
+   "ph": "mI"
+  },
+  {
+   "w": "biggest",
+   "t0": 4.37,
+   "t1": 4.808,
+   "f0": 105,
+   "f1": 115,
+   "ph": "bˈɪɡᵻst"
+  },
+  {
+   "w": "nightmare",
+   "t0": 4.808,
+   "t1": 5.395,
+   "f0": 115,
+   "f1": 129,
+   "ph": "nˈItmˌɛɹ"
+  },
+  {
+   "w": "in",
+   "t0": 5.395,
+   "t1": 5.482,
+   "f0": 129,
+   "f1": 132,
+   "ph": "ɪn"
+  },
+  {
+   "w": "the",
+   "t0": 5.482,
+   "t1": 5.595,
+   "f0": 132,
+   "f1": 134,
+   "ph": "ðə"
+  },
+  {
+   "w": "long",
+   "t0": 5.595,
+   "t1": 5.958,
+   "f0": 134,
+   "f1": 143,
+   "ph": "lˈɔŋ"
+  },
+  {
+   "w": "term",
+   "t0": 5.958,
+   "t1": 6.45,
+   "f0": 143,
+   "f1": 155,
+   "ph": "tˈɜɹm"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.51,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 101.4,
+  "f0_range_st": 12.6,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "You may have had in mind the effect on jobs, which is really my biggest nightmare in the long term.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.124,
+  "align_median_s": 0.04,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.44,
+  "rise_ms": 15.0,
+  "decay_ms": 210.0,
+  "decay_to_60_s": 0.04
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 10,
+   "word": "jobs",
+   "tts_s": 0.36,
+   "target_s": 0.35,
+   "point_s": 2.94,
+   "joined_speech": false,
+   "dip_db": -74.4,
+   "breath": false,
+   "final_s": 0.255,
+   "opened_s": 0.0
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "f32847c0c1c2d21c",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 10.37,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 4
+  },
+  "asr": {
+   "packed_with": 3,
+   "share_s": 1.91,
+   "rechecked_alone": false
+  }
+ }
+}

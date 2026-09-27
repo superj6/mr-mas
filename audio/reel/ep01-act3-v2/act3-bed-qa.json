@@ -1,0 +1,427 @@
+{
+ "timeline": "show/reel/ep01-full/ep01-act3-v2.json",
+ "act_seconds": 153.667,
+ "stem_seconds": 154.667,
+ "layers": [
+  {
+   "layer": "room",
+   "src": "audio/sfx/wav/server_hum.wav",
+   "lufs": -40,
+   "from": 0.0,
+   "to": 151.167
+  },
+  {
+   "layer": "leds",
+   "what": "a 12 ms 3.3 kHz tick, peak -44 dBFS, straight eighths at 96 bpm",
+   "out": [
+    63.167,
+    80.667
+   ],
+   "ticks": 424
+  },
+  {
+   "layer": "music",
+   "cue": "MM-01 Water Line",
+   "src": "audio/ost/tracks/mm01-water-line/render/mm01-water-line-underscore.wav",
+   "lufs": -26,
+   "parts": [
+    {
+     "at": 1.167,
+     "file_from": 0.0,
+     "file_to": 65.0
+    },
+    {
+     "at": 66.167,
+     "file_from": 5.0,
+     "file_to": 65.0
+    },
+    {
+     "at": 126.167,
+     "file_from": 5.0,
+     "file_to": 22.5
+    }
+   ],
+   "ends": 143.667,
+   "note": "bar lines land on 23.01 (bar 1 of THE CLOCK)"
+  },
+  {
+   "layer": "clock",
+   "cue": "MM-14 THE CLOCK (temp: a felt step figure; MM-14 not rendered)",
+   "lufs": -26,
+   "from": 143.667,
+   "stops_dead": 151.167,
+   "steps": 12
+  }
+ ],
+ "sfx": [
+  {
+   "beat": "18.01",
+   "name": "synth:slot_whir",
+   "at_act": 0.9,
+   "peak_dbfs": -16,
+   "len_s": 1.458
+  },
+  {
+   "beat": "18.01",
+   "name": "landing_thunk",
+   "at_act": 2.15,
+   "peak_dbfs": -20,
+   "len_s": 1.023
+  },
+  {
+   "beat": "18.03",
+   "name": "paper_flutter",
+   "at_act": 7.675,
+   "peak_dbfs": -24,
+   "len_s": 1.397
+  },
+  {
+   "beat": "18.03",
+   "name": "orb_servo",
+   "at_act": 7.925,
+   "peak_dbfs": -16,
+   "len_s": 0.652
+  },
+  {
+   "beat": "18.03",
+   "name": "orb_servo",
+   "at_act": 8.325,
+   "peak_dbfs": -16,
+   "len_s": 0.652
+  },
+  {
+   "beat": "18.03",
+   "name": "orb_servo",
+   "at_act": 8.725,
+   "peak_dbfs": -16,
+   "len_s": 0.652
+  },
+  {
+   "beat": "18.03",
+   "name": "orb_servo",
+   "at_act": 9.325,
+   "peak_dbfs": -22,
+   "len_s": 0.652
+  },
+  {
+   "beat": "18.04",
+   "name": "orb_scan_sweep",
+   "at_act": 12.542,
+   "peak_dbfs": -16,
+   "len_s": 1.6
+  },
+  {
+   "beat": "18.04g",
+   "name": "glyph_blink",
+   "at_act": 13.292,
+   "peak_dbfs": -18,
+   "len_s": 0.95
+  },
+  {
+   "beat": "18.05",
+   "name": "dialog_ok_click--chip",
+   "at_act": 14.042,
+   "peak_dbfs": -16,
+   "len_s": 0.19
+  },
+  {
+   "beat": "18.06",
+   "name": "orb_servo",
+   "at_act": 16.342,
+   "peak_dbfs": -24,
+   "len_s": 0.652
+  },
+  {
+   "beat": "18.06",
+   "name": "synth:chime",
+   "at_act": 21.592,
+   "peak_dbfs": -16,
+   "len_s": 1.2
+  },
+  {
+   "beat": "19.01",
+   "name": "dialog_ok_click--chip",
+   "at_act": 23.05,
+   "peak_dbfs": -18,
+   "len_s": 0.19
+  },
+  {
+   "beat": "19.04",
+   "name": "synth:murmur",
+   "at_act": 30.933,
+   "peak_dbfs": -34,
+   "len_s": 1.8
+  },
+  {
+   "beat": "19.06",
+   "name": "orb_servo",
+   "at_act": 37.733,
+   "peak_dbfs": -20,
+   "len_s": 0.652
+  },
+  {
+   "beat": "19.06",
+   "name": "orb_servo",
+   "at_act": 38.083,
+   "peak_dbfs": -22,
+   "len_s": 0.652
+  },
+  {
+   "beat": "19.06",
+   "name": "synth:copy",
+   "at_act": 38.383,
+   "peak_dbfs": -20,
+   "len_s": 1.16
+  },
+  {
+   "beat": "19.07",
+   "name": "paper_flutter",
+   "at_act": 39.342,
+   "peak_dbfs": -22,
+   "len_s": 1.397
+  },
+  {
+   "beat": "19.08",
+   "name": "orb_servo",
+   "at_act": 42.583,
+   "peak_dbfs": -20,
+   "len_s": 0.652
+  },
+  {
+   "beat": "19.08",
+   "name": "synth:copy",
+   "at_act": 42.933,
+   "peak_dbfs": -20,
+   "len_s": 1.16
+  },
+  {
+   "beat": "19.09b",
+   "name": "paper_whip",
+   "at_act": 47.15,
+   "peak_dbfs": -20,
+   "len_s": 0.542
+  },
+  {
+   "beat": "19.10",
+   "name": "orb_servo",
+   "at_act": 50.058,
+   "peak_dbfs": -26,
+   "len_s": 0.652
+  },
+  {
+   "beat": "19.10",
+   "name": "synth:copy",
+   "at_act": 52.758,
+   "peak_dbfs": -20,
+   "len_s": 1.16
+  },
+  {
+   "beat": "19.11",
+   "name": "synth:murmur",
+   "at_act": 53.35,
+   "peak_dbfs": -36,
+   "len_s": 1.9
+  },
+  {
+   "beat": "19.13",
+   "name": "synth:ring",
+   "at_act": 57.45,
+   "peak_dbfs": -18,
+   "len_s": 0.9
+  },
+  {
+   "beat": "19.13",
+   "name": "drip_clack",
+   "at_act": 59.63,
+   "peak_dbfs": -16,
+   "len_s": 0.62
+  },
+  {
+   "beat": "20.01",
+   "name": "synth:keys",
+   "at_act": 60.25,
+   "peak_dbfs": -22,
+   "len_s": 2.4
+  },
+  {
+   "beat": "20.03",
+   "name": "post_click",
+   "at_act": 64.75,
+   "peak_dbfs": -16,
+   "len_s": 0.368
+  },
+  {
+   "beat": "20.03",
+   "name": "odometer_ratchet",
+   "at_act": 65.05,
+   "peak_dbfs": -24,
+   "len_s": 1.165
+  },
+  {
+   "beat": "20.03",
+   "name": "synth:ring",
+   "at_act": 65.45,
+   "peak_dbfs": -18,
+   "len_s": 2.4
+  },
+  {
+   "beat": "20.04",
+   "name": "key_tap_space",
+   "at_act": 67.883,
+   "peak_dbfs": -18,
+   "len_s": 0.208
+  },
+  {
+   "beat": "20.04",
+   "name": "synth:call_keys",
+   "at_act": 68.133,
+   "peak_dbfs": -30,
+   "len_s": 27.533
+  },
+  {
+   "beat": "20.05",
+   "name": "dialog_ok_click",
+   "at_act": 77.783,
+   "peak_dbfs": -14,
+   "len_s": 0.223
+  },
+  {
+   "beat": "20.05",
+   "name": "keyboard_roll",
+   "at_act": 78.033,
+   "peak_dbfs": -22,
+   "len_s": 0.625
+  },
+  {
+   "beat": "21.01",
+   "name": "synth:crackle",
+   "at_act": 95.867,
+   "peak_dbfs": -24,
+   "len_s": 0.9
+  },
+  {
+   "beat": "21.02",
+   "name": "tower_pop",
+   "at_act": 107.383,
+   "peak_dbfs": -16,
+   "len_s": 0.54
+  },
+  {
+   "beat": "21.02",
+   "name": "tower_pop",
+   "at_act": 110.073,
+   "peak_dbfs": -16,
+   "len_s": 0.54
+  },
+  {
+   "beat": "21.03",
+   "name": "post_click--chip",
+   "at_act": 115.934,
+   "peak_dbfs": -20,
+   "len_s": 0.221
+  },
+  {
+   "beat": "21.04",
+   "name": "orb_servo",
+   "at_act": 119.737,
+   "peak_dbfs": -26,
+   "len_s": 0.652
+  },
+  {
+   "beat": "21.04",
+   "name": "orb_servo",
+   "at_act": 120.137,
+   "peak_dbfs": -26,
+   "len_s": 0.652
+  },
+  {
+   "beat": "21.04",
+   "name": "orb_servo",
+   "at_act": 120.537,
+   "peak_dbfs": -26,
+   "len_s": 0.652
+  },
+  {
+   "beat": "21.05",
+   "name": "paper_whip",
+   "at_act": 123.075,
+   "peak_dbfs": -18,
+   "len_s": 0.542
+  },
+  {
+   "beat": "21.05",
+   "name": "synth:claps",
+   "at_act": 123.675,
+   "peak_dbfs": -24,
+   "len_s": 7.008
+  },
+  {
+   "beat": "21.06",
+   "name": "synth:flutter",
+   "at_act": 124.867,
+   "peak_dbfs": -22,
+   "len_s": 3.817
+  },
+  {
+   "beat": "21.07",
+   "name": "synth:glass_set",
+   "at_act": 128.683,
+   "peak_dbfs": -14,
+   "len_s": 0.5
+  },
+  {
+   "beat": "22.01",
+   "name": "synth:applause",
+   "at_act": 130.083,
+   "peak_dbfs": -22,
+   "len_s": 3.4
+  },
+  {
+   "beat": "22.01",
+   "name": "odometer_ratchet",
+   "at_act": 130.883,
+   "peak_dbfs": -18,
+   "len_s": 1.165
+  },
+  {
+   "beat": "22.01",
+   "name": "landing_thunk",
+   "at_act": 131.633,
+   "peak_dbfs": -18,
+   "len_s": 1.023
+  },
+  {
+   "beat": "22.02",
+   "name": "post_click--chip",
+   "at_act": 138.367,
+   "peak_dbfs": -20,
+   "len_s": 0.221
+  },
+  {
+   "beat": "22.02",
+   "name": "key_tap_soft_01",
+   "at_act": 140.767,
+   "peak_dbfs": -14,
+   "len_s": 0.217
+  },
+  {
+   "beat": "23.02",
+   "name": "post_click--chip",
+   "at_act": 146.317,
+   "peak_dbfs": -22,
+   "len_s": 0.221
+  }
+ ],
+ "lufs_integrated": -25.35,
+ "peak_dbfs": -6.75,
+ "digital_silences_0.5s": [
+  151.25,
+  151.5,
+  151.75,
+  152.0,
+  152.25,
+  152.5,
+  152.75,
+  153.0
+ ]
+}

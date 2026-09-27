@@ -97,17 +97,11 @@ export const drawBoardHead = (b: Buf, f: number, o: BoardHeadOpts = {}) => {
       dither: 0.8,
     }, plate0);
     // hand-painted details on top (after the light pass, in palette)
-    // the window: the Valley's lights, and the mullions converging on the vanishing point
-    for (let k = 0; k < 140; k++) {
-      const x = Math.floor(hash(k, 1, 13) * (back.x0 - 4)), top = 8 + (x / back.x0) * (back.y0 - 4), bot = RH - 30 + (x / back.x0) * (back.y1 - 8 - RH + 30);
-      const y = Math.floor(top + (bot - top) * (0.45 + hash(k, 2, 13) * 0.5));
-      plate0.set(x, y, hash(k, 3, 13) < 0.6 ? PAL.W4 : hash(k, 4, 13) < 0.5 ? PAL.C4 : PAL.W6);
-    }
-    for (const t of [0.28, 0.58, 0.82]) {
-      const x = Math.round(t * (back.x0 - 2));
-      line(x, Math.round(8 + t * (back.y0 - 4)), x, Math.round(RH - 30 + t * (back.y1 - 8 - RH + 30)), plate0.ink(PAL.N0));
-    }
-    line(0, 8, back.x0 - 2, back.y0 + 4, plate0.ink(PAL.N0));
+    // the window onto the Valley at night (a4p5: the first build scattered 140 random lights over the glass, which read
+    // as "a cloud of orange and teal specks" with no window and, in the 2S, as sparks round Mada's head). Now it is a
+    // view: the sky, a line of hills on the horizon, the valley's lights in strings that recede toward it, a nearer
+    // tower block dark behind the side seat (so a head there sits on black), the mullions and the sill.
+    windowView(plate0);
     // the slats on the right wall (lines toward the VP)
     for (let k = 0; k < 9; k++) {
       const y0 = 10 + k * 22;
@@ -144,6 +138,68 @@ export const drawBoardHead = (b: Buf, f: number, o: BoardHeadOpts = {}) => {
     if (plateCache.size > 16) plateCache.delete(plateCache.keys().next().value as string);
   }
   for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) b.c[y * b.w + x] = plate.c[y * 480 + x];
+};
+/** the glass band of the left wall (frame coords): its top and bottom rows at column x (0 .. WIN_X1 - 1) */
+const WIN_X1 = 148;
+const winTop = (x: number) => Math.ceil(8 + (x * 14) / WIN_X1);
+const winBot = (x: number) => Math.floor(RH - 30 - (x * 69) / WIN_X1);
+const winHorizon = (x: number) => Math.round(winTop(x) + (winBot(x) - winTop(x)) * 0.42);
+/** the dark tower block behind the side seat (Mada's head sits on it in the 2S) */
+const TOWER = {x0: 82, x1: 130, top: 30};
+/** a4p5: the night view through the left wall's glass (see the call site). Palette: N (sky, hills, tower), W (the
+ *  valley's sodium lights, a few brighter), C (a few cool ones), R (a string of tail lights on the freeway). */
+const windowView = (p: Buf) => {
+  for (let x = 0; x < WIN_X1; x++) {
+    const top = winTop(x), bot = winBot(x), hz = winHorizon(x);
+    // the sky: dark, the city's glow on its underside just above the hills
+    for (let y = top; y < hz; y++) {
+      const u = (y - top) / Math.max(1, hz - top);
+      p.set(x, y, u > 0.72 ? (bayer(x, y) < (u - 0.72) * 2.6 ? PAL.N3 : PAL.N2) : u > 0.35 ? (bayer(x, y) < 0.35 ? PAL.N2 : PAL.N1) : PAL.N1);
+    }
+    // the hills on the horizon: a low silhouette, its crest one rung up
+    const crest = hz - 2 - Math.round(2 * (Math.sin(x * 0.055) + 1) + 1.5 * (Math.sin(x * 0.17 + 1.3) + 1));
+    for (let y = crest; y < hz; y++) p.set(x, y, y === crest ? PAL.N2 : PAL.N0);
+    // the valley floor below the horizon
+    for (let y = hz; y <= bot; y++) p.set(x, y, bayer(x, y) < 0.2 ? PAL.N2 : PAL.N1);
+  }
+  // the valley's lights: strings (streets) receding to the horizon, dense and dim near it, sparse and brighter nearer
+  const R = 11;
+  for (let r = 0; r < R; r++) {
+    const f = Math.pow((r + 0.6) / R, 1.9); // 0 = the horizon, 1 = the sill
+    const step = 2 + Math.floor(r / 3);
+    for (let x = (r * 3) % step; x < WIN_X1; x += step) {
+      if (hash(x, r, 131) < (r < 3 ? 0.35 : 0.55)) continue;
+      const hz = winHorizon(x), bot = winBot(x);
+      const y = Math.round(hz + 1 + (bot - hz - 3) * f);
+      const c = r < 3 ? PAL.W3 : hash(x, r, 132) < 0.12 ? PAL.C4 : hash(x, r, 133) < 0.2 ? PAL.W6 : PAL.W4;
+      p.set(x, y, c);
+    }
+  }
+  // the freeway: one string of lights crossing the valley toward the horizon, its tail lights beside it
+  for (let x = 2; x < WIN_X1 - 6; x += 2) {
+    const hz = winHorizon(x), bot = winBot(x), t = x / WIN_X1;
+    const y = Math.round(hz + 2 + (bot - hz - 4) * (0.62 - t * 0.55));
+    p.set(x, y, hash(x, 1, 134) < 0.25 ? PAL.W7 : PAL.W5);
+    if (x % 4 === 0) p.set(x, y + 1, PAL.R2);
+  }
+  // the tower block nearer, behind the side seat: black, a few dim lit windows in its grid, its lit edge
+  for (let x = TOWER.x0; x < TOWER.x1; x++) {
+    const bot = winBot(x);
+    for (let y = Math.max(winTop(x), TOWER.top); y <= bot; y++) p.set(x, y, PAL.N0);
+    p.set(x, Math.max(winTop(x), TOWER.top), PAL.N2);
+  }
+  for (let gy = TOWER.top + 5; gy < RH; gy += 5) for (let gx = TOWER.x0 + 3; gx < TOWER.x1 - 2; gx += 4) {
+    if (gy > winBot(gx) - 2 || hash(gx, gy, 135) < 0.86) continue;
+    p.set(gx, gy, hash(gx, gy, 136) < 0.5 ? PAL.W2 : PAL.N3); p.set(gx + 1, gy, PAL.N2);
+  }
+  for (let y = TOWER.top; y <= winBot(TOWER.x1 - 1); y++) p.set(TOWER.x1 - 1, y, PAL.N2);
+  // the mullions (nearer ones wider), the head rail and the sill
+  for (const [t, w] of [[0.24, 2], [0.53, 2], [0.8, 1]] as Array<[number, number]>) {
+    const x = Math.round(t * WIN_X1);
+    for (let k = 0; k < w; k++) line(x + k, winTop(x + k) - 1, x + k, winBot(x + k) + 1, p.ink(k === w - 1 && w > 1 ? PAL.N2 : PAL.N0));
+  }
+  line(0, 7, WIN_X1, 21, p.ink(PAL.N0));
+  for (let x = 0; x < WIN_X1; x++) { p.set(x, winBot(x) + 1, PAL.N3); p.set(x, winBot(x) + 2, PAL.N0); }
 };
 /** repaint only the table top (the rigs' TABLE rows sit on its far edge: call it between the BACK and FRONT images) */
 const tableOver = (b: Buf, plate: Buf, yMin: number) => {
@@ -215,7 +271,9 @@ export const drawBoardHeadM = (b: Buf, f: number, s: BoardHeadMState = {}) => {
   drawBoardHead(plate, f, po);
   if (s.tasya !== null) {
     const d = B.door;
-    drawTasyaRoom(b, Math.round((d.x0 + d.x1) / 2), B.back.y1 + (s.tasyaNod ? 1 : 0), {...TASYA_ROOM_DEFAULT, light: 'slate', ...s.tasya}, {map: soft(1)});
+    // a4p5: lit by the room (warm skin), not the slate ramp, which read as a green face; the slate door behind him is
+    // his rim and his backing. Pass tasya.light 'slate' for the first build's look
+    drawTasyaRoom(b, Math.round((d.x0 + d.x1) / 2), B.back.y1 + (s.tasyaNod ? 1 : 0), {...TASYA_ROOM_DEFAULT, light: 'room', ...s.tasya}, {map: soft(1)});
     // the door's frame over his edges (he stands in it, not in front of it)
     rect(d.x0 - 3, d.y0 - 3, 3, B.back.y1 - d.y0 + 3, b.ink(PAL.G1)); rect(d.x1, d.y0 - 3, 3, B.back.y1 - d.y0 + 3, b.ink(PAL.G0));
   }

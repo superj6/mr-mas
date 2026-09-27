@@ -1,0 +1,1745 @@
+{
+ "schema": "mrmas-ost-cue/1",
+ "id": "s1-s4_procedure",
+ "mm": "MM-09 + MM-09x",
+ "family": "P02 PROCEDURE + P08 OUTS KIT (09x: REVERSAL)",
+ "title": "The Board's Side: Steps One to Four / What They Didn't Know (Ep1 Act Four v5, S3 + S4 + card, to picture)",
+ "version": "v5",
+ "composer": "Ep1 Act Four v5 score, S1-S4 (re-laid from the batch-1 cues)",
+ "tone": "their side as one procedure that never stops and a fourth step that is always blank; then the door back",
+ "tags": [
+  "to picture",
+  "Ep1",
+  "act four",
+  "v5",
+  "continuous",
+  "S1-S4"
+ ],
+ "usage": "BI",
+ "scenes": [
+  "v5 S3.00a-S5.01 (+ the felt on S5.02), act 1512.0-6985.0; file t = 0 = act frame 1500.0"
+ ],
+ "description": "",
+ "motifs": [
+  "STEP_FOUR (the list; the sincere beat)",
+  "NELEH_CLOCKWORK",
+  "the viola whisper",
+  "the hearts",
+  "DOOR (the head, through the glass) + GPU_CHOIR",
+  "LIGHTHOUSE",
+  "ADDENDUM (cut by \"no.\") + its landing",
+  "HOURGLASS",
+  "TASYA_FLOOR (Abmaj9 -> Cmaj9 -> Emaj9 -> Abmaj9)",
+  "MADA_SPINNER",
+  "REVERSAL"
+ ],
+ "key": "B-flat minor centre; Db lydian (Alyi); Bb minor (Mario); chromatic mediants (Tasya); F(add9) no third (09x)",
+ "engine": {
+  "version": "mrmas-ost-engine 1.1 (2026-09-26: fix1 -- meter axis, sample tuning, render pool, QA 5a-d)",
+  "rendered": "2026-09-27T02:05:02",
+  "render_seconds": 137.7
+ },
+ "timing": {
+  "bpm": 96.0,
+  "beat_unit_quarters": 1.0,
+  "tempo_map": [
+   {
+    "bar": 1,
+    "beat": 1.0,
+    "bpm": 96.0,
+    "ramp_in": false,
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "meter_map": [
+   {
+    "bar": 1,
+    "meter": "4/4",
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "swing": 0.0,
+  "swing_unit_quarters": 0.5,
+  "pickup_beats": 0.0,
+  "bars": 97,
+  "length_s": 242.5,
+  "length_frames": 5820.0,
+  "fps": 24,
+  "end": {
+   "sec": 230.941667,
+   "frame": 5542.6,
+   "bar": 93,
+   "beat": 2.5067
+  },
+  "album_duration_s": 230.946,
+  "album_duration_frames": 5542.7,
+  "album_loops": 1
+ },
+ "sections": [
+  {
+   "label": "a NOON: the call, the list, the post",
+   "start": {
+    "sec": 0.5,
+    "frame": 12.0,
+    "bar": 1,
+    "beat": 1.8
+   },
+   "end": {
+    "sec": 40.666667,
+    "frame": 976.0,
+    "bar": 17,
+    "beat": 2.0667
+   }
+  },
+  {
+   "label": "b Rima",
+   "start": {
+    "sec": 40.666667,
+    "frame": 976.0,
+    "bar": 17,
+    "beat": 2.0667
+   },
+   "end": {
+    "sec": 64.083333,
+    "frame": 1538.0,
+    "bar": 26,
+    "beat": 3.5333
+   }
+  },
+  {
+   "label": "c the all-hands and the evening",
+   "start": {
+    "sec": 64.083333,
+    "frame": 1538.0,
+    "bar": 26,
+    "beat": 3.5333
+   },
+   "end": {
+    "sec": 88.666667,
+    "frame": 2128.0,
+    "bar": 36,
+    "beat": 2.8667
+   }
+  },
+  {
+   "label": "d NOV 18 hearts",
+   "start": {
+    "sec": 88.666667,
+    "frame": 2128.0,
+    "bar": 36,
+    "beat": 2.8667
+   },
+   "end": {
+    "sec": 93.458333,
+    "frame": 2243.0,
+    "bar": 38,
+    "beat": 2.5333
+   }
+  },
+  {
+   "label": "d the boardroom: the phones, the glass",
+   "start": {
+    "sec": 93.458333,
+    "frame": 2243.0,
+    "bar": 38,
+    "beat": 2.5333
+   },
+   "end": {
+    "sec": 124.958333,
+    "frame": 2999.0,
+    "bar": 50,
+    "beat": 4.9333
+   }
+  },
+  {
+   "label": "d the sincere beat",
+   "start": {
+    "sec": 124.958333,
+    "frame": 2999.0,
+    "bar": 50,
+    "beat": 4.9333
+   },
+   "end": {
+    "sec": 128.333333,
+    "frame": 3080.0,
+    "bar": 52,
+    "beat": 2.3333
+   }
+  },
+  {
+   "label": "rest: the dial tones",
+   "start": {
+    "sec": 128.333333,
+    "frame": 3080.0,
+    "bar": 52,
+    "beat": 2.3333
+   },
+   "end": {
+    "sec": 130.125,
+    "frame": 3123.0,
+    "bar": 53,
+    "beat": 1.2
+   }
+  },
+  {
+   "label": "e the rival lab (the split)",
+   "start": {
+    "sec": 130.125,
+    "frame": 3123.0,
+    "bar": 53,
+    "beat": 1.2
+   },
+   "end": {
+    "sec": 158.0,
+    "frame": 3792.0,
+    "bar": 64,
+    "beat": 1.8
+   }
+  },
+  {
+   "label": "f Sunday: the lobby camera",
+   "start": {
+    "sec": 158.0,
+    "frame": 3792.0,
+    "bar": 64,
+    "beat": 1.8
+   },
+   "end": {
+    "sec": 173.375,
+    "frame": 4161.0,
+    "bar": 70,
+    "beat": 2.4
+   }
+  },
+  {
+   "label": "f Ttemme, the folder, the hourglass",
+   "start": {
+    "sec": 173.375,
+    "frame": 4161.0,
+    "bar": 70,
+    "beat": 2.4
+   },
+   "end": {
+    "sec": 196.083333,
+    "frame": 4706.0,
+    "bar": 79,
+    "beat": 2.7333
+   }
+  },
+  {
+   "label": "g the door: Tasya's floor",
+   "start": {
+    "sec": 196.083333,
+    "frame": 4706.0,
+    "bar": 79,
+    "beat": 2.7333
+   },
+   "end": {
+    "sec": 221.833333,
+    "frame": 5324.0,
+    "bar": 89,
+    "beat": 3.9333
+   }
+  },
+  {
+   "label": "h Step four? (the hang)",
+   "start": {
+    "sec": 221.833333,
+    "frame": 5324.0,
+    "bar": 89,
+    "beat": 3.9333
+   },
+   "end": {
+    "sec": 226.479167,
+    "frame": 5435.5,
+    "bar": 91,
+    "beat": 3.3667
+   }
+  },
+  {
+   "label": "09x REVERSAL (the card)",
+   "start": {
+    "sec": 226.479167,
+    "frame": 5435.5,
+    "bar": 91,
+    "beat": 3.3667
+   },
+   "end": {
+    "sec": 228.541667,
+    "frame": 5485.0,
+    "bar": 92,
+    "beat": 2.6667
+   }
+  },
+  {
+   "label": "the felt F4 (into S5)",
+   "start": {
+    "sec": 228.541667,
+    "frame": 5485.0,
+    "bar": 92,
+    "beat": 2.6667
+   },
+   "end": {
+    "sec": 230.416667,
+    "frame": 5530.0,
+    "bar": 93,
+    "beat": 1.6667
+   }
+  }
+ ],
+ "markers": [
+  {
+   "label": "a: the whip: Bbm(add9) + the harp-harmonic dyad",
+   "sec": 0.5,
+   "frame": 12.0,
+   "bar": 1,
+   "beat": 1.8
+  },
+  {
+   "label": "a: Neleh's clockwork under the wait (11:59)",
+   "sec": 0.8125,
+   "frame": 19.5,
+   "bar": 1,
+   "beat": 2.3
+  },
+  {
+   "label": "a: the clockwork creeps back (under the tinny \"super.\")",
+   "sec": 20.208333,
+   "frame": 485.0,
+   "bar": 9,
+   "beat": 1.3333
+  },
+  {
+   "label": "a: STEP FOUR on the list: Bbm(add9) (1 v)",
+   "sec": 23.333333,
+   "frame": 560.0,
+   "bar": 10,
+   "beat": 2.3333
+  },
+  {
+   "label": "a: STEP FOUR on the list: Ab(add9) (2. BLOG POST)",
+   "sec": 23.958333,
+   "frame": 575.0,
+   "bar": 10,
+   "beat": 3.3333
+  },
+  {
+   "label": "a: STEP FOUR on the list: Gbmaj7 (3. INTERIM CEO)",
+   "sec": 24.583333,
+   "frame": 590.0,
+   "bar": 10,
+   "beat": 4.3333
+  },
+  {
+   "label": "a: STEP FOUR on the list: the blank: the F bass alone (4. ____)",
+   "sec": 25.208333,
+   "frame": 605.0,
+   "bar": 11,
+   "beat": 1.3333
+  },
+  {
+   "label": "a: the clock tick (under \"Any objections?\" and its silence)",
+   "sec": 37.541667,
+   "frame": 901.0,
+   "bar": 16,
+   "beat": 1.0667
+  },
+  {
+   "label": "a: the Post click is a tick; the Bb pedal back",
+   "sec": 40.666667,
+   "frame": 976.0,
+   "bar": 17,
+   "beat": 2.0667
+  },
+  {
+   "label": "b: one soft pizz figure after her join chime",
+   "sec": 41.583333,
+   "frame": 998.0,
+   "bar": 17,
+   "beat": 3.5333
+  },
+  {
+   "label": "c: the pulse returns softly with the keycaps",
+   "sec": 78.75,
+   "frame": 1890.0,
+   "bar": 32,
+   "beat": 3.0
+  },
+  {
+   "label": "d: NOV 18: the Db bed; the hearts pour (the cascade, to the burial)",
+   "sec": 88.666667,
+   "frame": 2128.0,
+   "bar": 36,
+   "beat": 2.8667
+  },
+  {
+   "label": "d: the blue heart (one harp harmonic)",
+   "sec": 92.958333,
+   "frame": 2231.0,
+   "bar": 38,
+   "beat": 1.7333
+  },
+  {
+   "label": "d: the phones buzz: the pizz locks to it",
+   "sec": 93.75,
+   "frame": 2250.0,
+   "bar": 38,
+   "beat": 3.0
+  },
+  {
+   "label": "d: the second buzz",
+   "sec": 101.875,
+   "frame": 2445.0,
+   "bar": 41,
+   "beat": 4.0
+  },
+  {
+   "label": "d: THE DOOR (Ab4 -> Db5) through the door: his reflection",
+   "sec": 108.375,
+   "frame": 2601.0,
+   "bar": 44,
+   "beat": 2.4
+  },
+  {
+   "label": "d: the sincere beat: the solo viola plays the three steps (F Eb Db)",
+   "sec": 124.958333,
+   "frame": 2999.0,
+   "bar": 50,
+   "beat": 4.9333
+  },
+  {
+   "label": "e: the Lighthouse on the first ring",
+   "sec": 130.125,
+   "frame": 3123.0,
+   "bar": 53,
+   "beat": 1.2
+  },
+  {
+   "label": "e: the Addendum (Mario's quartet, thin), on \"some thoughts\"",
+   "sec": 144.199,
+   "frame": 3460.776,
+   "bar": 58,
+   "beat": 3.7184
+  },
+  {
+   "label": "e: \"How much?\": the tail lands (sold); it rings into the lobby camera",
+   "sec": 157.350667,
+   "frame": 3776.416,
+   "bar": 63,
+   "beat": 4.7611
+  },
+  {
+   "label": "f: the clockwork resumes on the lobby camera, thin",
+   "sec": 158.333333,
+   "frame": 3800.0,
+   "bar": 64,
+   "beat": 2.3333
+  },
+  {
+   "label": "f: the spotlight: the straight-mute accent (F4 -> Bb4); the pulse",
+   "sec": 173.375,
+   "frame": 4161.0,
+   "bar": 70,
+   "beat": 2.4
+  },
+  {
+   "label": "f: the hourglass: one grain a beat, falling",
+   "sec": 192.791667,
+   "frame": 4627.0,
+   "bar": 78,
+   "beat": 1.4667
+  },
+  {
+   "label": "g: the Rhodes on the beats (Tasya appears; the jangle owns the offbeats)",
+   "sec": 199.0,
+   "frame": 4776.0,
+   "bar": 80,
+   "beat": 3.4
+  },
+  {
+   "label": "g: home: Abmaj9 on the sign, one Rhodes chord",
+   "sec": 218.875,
+   "frame": 5253.0,
+   "bar": 88,
+   "beat": 3.2
+  },
+  {
+   "label": "h: the clockwork winds down",
+   "sec": 221.833333,
+   "frame": 5324.0,
+   "bar": 89,
+   "beat": 3.9333
+  },
+  {
+   "label": "09x: the C pickup",
+   "sec": 226.479167,
+   "frame": 5435.5,
+   "bar": 91,
+   "beat": 3.3667
+  },
+  {
+   "label": "09x: REVERSAL on the card (F(add9), no third; one chip F6)",
+   "sec": 226.791667,
+   "frame": 5443.0,
+   "bar": 91,
+   "beat": 3.8667
+  },
+  {
+   "label": "09x: the orchestra cuts; one felt F4 (the door back) rings into S5",
+   "sec": 228.541667,
+   "frame": 5485.0,
+   "bar": 92,
+   "beat": 2.6667
+  }
+ ],
+ "hit_check": [
+  {
+   "t": 0.5,
+   "offset_ms": 1.3,
+   "strength": 4.49
+  },
+  {
+   "t": 0.8125,
+   "offset_ms": 11.5,
+   "strength": 2.86
+  },
+  {
+   "t": 20.2083,
+   "offset_ms": -5.6,
+   "strength": 1.65
+  },
+  {
+   "t": 23.3333,
+   "offset_ms": -48.0,
+   "strength": 1.83
+  },
+  {
+   "t": 23.9583,
+   "offset_ms": 57.7,
+   "strength": 2.85
+  },
+  {
+   "t": 24.5833,
+   "offset_ms": -50.0,
+   "strength": 2.18
+  },
+  {
+   "t": 25.2083,
+   "offset_ms": -40.3,
+   "strength": 2.39
+  },
+  {
+   "t": 37.5417,
+   "offset_ms": -5.7,
+   "strength": 10.75
+  },
+  {
+   "t": 40.6667,
+   "offset_ms": -5.4,
+   "strength": 7.06
+  },
+  {
+   "t": 41.5833,
+   "offset_ms": 54.0,
+   "strength": 2.46
+  },
+  {
+   "t": 78.75,
+   "offset_ms": -59.3,
+   "strength": 2.57
+  },
+  {
+   "t": 88.6667,
+   "offset_ms": -0.0,
+   "strength": 3.65
+  },
+  {
+   "t": 92.9583,
+   "offset_ms": 12.4,
+   "strength": 3.11
+  },
+  {
+   "t": 93.75,
+   "offset_ms": 31.3,
+   "strength": 1.74
+  },
+  {
+   "t": 101.875,
+   "offset_ms": 31.7,
+   "strength": 1.97
+  },
+  {
+   "t": 108.375,
+   "offset_ms": 22.3,
+   "strength": 1.86
+  },
+  {
+   "t": 124.9583,
+   "offset_ms": 7.0,
+   "strength": 2.06
+  },
+  {
+   "t": 130.125,
+   "offset_ms": -2.3,
+   "strength": 10.97
+  },
+  {
+   "t": 144.199,
+   "offset_ms": -4.3,
+   "strength": 1.77
+  },
+  {
+   "t": 157.3507,
+   "offset_ms": -38.7,
+   "strength": 1.75
+  },
+  {
+   "t": 158.3333,
+   "offset_ms": 10.7,
+   "strength": 2.07
+  },
+  {
+   "t": 173.375,
+   "offset_ms": 11.7,
+   "strength": 1.96
+  },
+  {
+   "t": 192.7917,
+   "offset_ms": 8.3,
+   "strength": 2.65
+  },
+  {
+   "t": 199.0,
+   "offset_ms": 50.7,
+   "strength": 2.12
+  },
+  {
+   "t": 218.875,
+   "offset_ms": -0.3,
+   "strength": 3.14
+  },
+  {
+   "t": 221.8333,
+   "offset_ms": 4.0,
+   "strength": 1.87
+  },
+  {
+   "t": 226.4792,
+   "offset_ms": -4.5,
+   "strength": 1.61
+  },
+  {
+   "t": 226.7917,
+   "offset_ms": -15.7,
+   "strength": 1.51
+  },
+  {
+   "t": 228.5417,
+   "offset_ms": -40.4,
+   "strength": 1.9
+  }
+ ],
+ "sfx_slots": [
+  {
+   "t": 1.875,
+   "sfx": "bell_ding_F6: his tile connects"
+  },
+  {
+   "t": 23.333333333333332,
+   "sfx": "key_tap_space: the pen ticks step 1"
+  },
+  {
+   "t": 40.666666666666664,
+   "sfx": "post_click (on a tick)"
+  },
+  {
+   "t": 41.416666666666664,
+   "sfx": "bell_ding_F6: Rima's join"
+  },
+  {
+   "t": 78.75,
+   "sfx": "keycap_popcorn (F5-C7; the pulse stays low)"
+  },
+  {
+   "t": 89.54166666666667,
+   "sfx": "heart_gliss (rides on top)"
+  },
+  {
+   "t": 93.75,
+   "sfx": "BUZZ: the phones"
+  },
+  {
+   "t": 120.66666666666667,
+   "sfx": "landing_thunk: the clack"
+  },
+  {
+   "t": 128.33333333333334,
+   "sfx": "DTMF x4: the dial tones (the designed rest; tune to F4 Eb4 Db4 C4, OST-BIBLE s6.8 request 1)"
+  },
+  {
+   "t": 130.125,
+   "sfx": "RING: the lighthouse phone"
+  },
+  {
+   "t": 150.79166666666666,
+   "sfx": "the click"
+  },
+  {
+   "t": 151.0,
+   "sfx": "DIALTONE (over the Bb pedal)"
+  },
+  {
+   "t": 189.25,
+   "sfx": "paper_whip: the folder"
+  },
+  {
+   "t": 196.875,
+   "sfx": "landing_thunk x3: the door"
+  },
+  {
+   "t": 199.29166666666666,
+   "sfx": "JANGLE (the offbeat)"
+  },
+  {
+   "t": 226.79166666666666,
+   "sfx": "the card (the REVERSAL owns it)"
+  }
+ ],
+ "silence_windows": [],
+ "vo_windows": [],
+ "knee_whole": 0,
+ "f_major": {
+  "limit": 0.08,
+  "windows": 37,
+  "worst": 0.096,
+  "worst_sieved": 0.053,
+  "ok": true,
+  "ok_written": true,
+  "ok_spectral": true,
+  "f_inaudible_windows": 0,
+  "a_classes": {
+   "written": 0,
+   "resonance": 0,
+   "explained": 0,
+   "unattributed": 0
+  },
+  "written_a_over_f_bass": [],
+  "written_third": {
+   "ok": true,
+   "count": 0,
+   "events": [],
+   "grazes": [],
+   "n_grazes": 0,
+   "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+  },
+  "fails": [],
+  "explained": [],
+  "fixed_resonances": [],
+  "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+ },
+ "knee_completion": 0,
+ "room_sfx_windows": [],
+ "qa": {
+  "balance": {
+   "balance": {
+    "piano": 1,
+    "orch": 85,
+    "bigband": 13,
+    "chip": 1
+   },
+   "rhythm_pct_of_all": 0,
+   "chip_share": 1,
+   "balance_energy": {
+    "piano": 1,
+    "orch": 96,
+    "bigband": 2,
+    "chip": 1
+   },
+   "method": "theme stemtable (gated loudness per section, time-weighted, rhythm/fx excluded; it counts a brief stab at its own loudness for the whole section) + balance_energy (ungated energy)",
+   "sections": [
+    {
+     "section": "a NOON: the call, the list, the post",
+     "share": {
+      "piano": 0,
+      "orch": 100,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "b Rima",
+     "share": {
+      "piano": 0,
+      "orch": 100,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "c the all-hands and the evening",
+     "share": {
+      "piano": 0,
+      "orch": 100,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "d NOV 18 hearts",
+     "share": {
+      "piano": 0,
+      "orch": 100,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "d the boardroom: the phones, the glass",
+     "share": {
+      "piano": 0,
+      "orch": 100,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "d the sincere beat",
+     "share": {
+      "piano": 0,
+      "orch": 100,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "rest: the dial tones",
+     "share": {
+      "piano": 0,
+      "orch": 100,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "e the rival lab (the split)",
+     "share": {
+      "piano": 0,
+      "orch": 100,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "f Sunday: the lobby camera",
+     "share": {
+      "piano": 0,
+      "orch": 100,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "f Ttemme, the folder, the hourglass",
+     "share": {
+      "piano": 0,
+      "orch": 39,
+      "bigband": 61,
+      "chip": 0
+     }
+    },
+    {
+     "section": "g the door: Tasya's floor",
+     "share": {
+      "piano": 0,
+      "orch": 100,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "h Step four? (the hang)",
+     "share": {
+      "piano": 0,
+      "orch": 100,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "09x REVERSAL (the card)",
+     "share": {
+      "piano": 0,
+      "orch": 67,
+      "bigband": 18,
+      "chip": 15
+     }
+    },
+    {
+     "section": "the felt F4 (into S5)",
+     "share": {
+      "piano": 47,
+      "orch": 17,
+      "bigband": 25,
+      "chip": 11
+     }
+    }
+   ]
+  },
+  "short_term_underscore": {
+   "p95": -18.39,
+   "median": -21.47,
+   "max": -16.02
+  },
+  "band_2_6k_db": -21.0,
+  "centroid_hz": 367.0,
+  "f_major": {
+   "limit": 0.08,
+   "windows": 37,
+   "worst": 0.096,
+   "worst_sieved": 0.053,
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "f_inaudible_windows": 0,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_a_over_f_bass": [],
+   "written_third": {
+    "ok": true,
+    "count": 0,
+    "events": [],
+    "grazes": [],
+    "n_grazes": 0,
+    "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+   },
+   "fails": [],
+   "explained": [],
+   "fixed_resonances": [],
+   "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+  },
+  "knee_completion": {
+   "count": 0,
+   "hits": [],
+   "max_gap_s": 2.5,
+   "rule": "OST-BIBLE rule 4: the knee never plays whole in an episode, in any register, across a phrase boundary too"
+  },
+  "sub_under_room": [],
+  "no_third": [
+   {
+    "t0": 226.89166666666665,
+    "t1": 228.52166666666665,
+    "a": 0.048,
+    "ab": 0.003,
+    "ok": true
+   }
+  ],
+  "silence": [],
+  "hard_stops": [],
+  "vo_windows": [],
+  "knee_whole": 0,
+  "motifs_found": {
+   "ADDENDUM": [
+    {
+     "inst": "svla",
+     "t": 144.199,
+     "transpose": 0
+    }
+   ]
+  },
+  "swing": {
+   "vln1": {
+    "offbeats": 22,
+    "median_frames": 8.75,
+    "hum_ms": 0.0
+   },
+   "cb": {
+    "offbeats": 18,
+    "median_frames": 9.37,
+    "hum_ms": 0.0
+   },
+   "vc": {
+    "offbeats": 26,
+    "median_frames": 8.0,
+    "hum_ms": 0.0
+   },
+   "vla": {
+    "offbeats": 16,
+    "median_frames": 10.0,
+    "hum_ms": 0.0
+   },
+   "harp": {
+    "offbeats": 12,
+    "median_frames": 9.88,
+    "hum_ms": 0.0
+   },
+   "harm": {
+    "offbeats": 3,
+    "median_frames": 11.0,
+    "hum_ms": 0
+   },
+   "door": {
+    "offbeats": 2,
+    "median_frames": 6.0,
+    "hum_ms": 0
+   },
+   "svla": {
+    "offbeats": 11,
+    "median_frames": 10.78,
+    "hum_ms": 0
+   },
+   "vln2": {
+    "offbeats": 4,
+    "median_frames": 7.5,
+    "hum_ms": 0.0
+   },
+   "felt": {
+    "offbeats": 1,
+    "median_frames": 10.0,
+    "hum_ms": 0.0
+   }
+  },
+  "banned": []
+ },
+ "loop": null,
+ "files": {
+  "album_wav": "render/s1-s4_procedure-album.wav",
+  "album_mp3": "render/s1-s4_procedure-album.mp3",
+  "underscore_wav": "render/s1-s4_procedure-underscore.wav",
+  "underscore_mp3": "render/s1-s4_procedure-underscore.mp3",
+  "stems": {
+   "piano": "render/stems/s1-s4_procedure-piano.flac",
+   "strings": "render/stems/s1-s4_procedure-strings.flac",
+   "winds": "render/stems/s1-s4_procedure-winds.flac",
+   "brass": "render/stems/s1-s4_procedure-brass.flac",
+   "perc": "render/stems/s1-s4_procedure-perc.flac",
+   "chip": "render/stems/s1-s4_procedure-chip.flac"
+  },
+  "midi": "render/s1-s4_procedure.mid",
+  "pianoroll": "render/s1-s4_procedure-pianoroll.png"
+ },
+ "masters": {
+  "album": {
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "comp": {
+    "thresh_db": -20,
+    "ratio": 1.8
+   },
+   "dialog_pocket": null,
+   "measured": {
+    "lufs": -16.0,
+    "lra": 5.53,
+    "true_peak_db": -1.15,
+    "peak_db": -1.16,
+    "rms_db": -18.21,
+    "crest_db": 17.05,
+    "seconds": 230.946
+   }
+  },
+  "underscore": {
+   "target_lufs": -21.0,
+   "ceiling_dbtp": -3.0,
+   "comp": {
+    "thresh_db": -28,
+    "ratio": 1.3,
+    "att_ms": 40.0,
+    "rel_ms": 350.0
+   },
+   "dialog_pocket": {
+    "f": 2500.0,
+    "db": -2.0,
+    "q": 0.7
+   },
+   "measured": {
+    "lufs": -21.0,
+    "lra": 5.24,
+    "true_peak_db": -3.15,
+    "peak_db": -3.16,
+    "rms_db": -23.16,
+    "crest_db": 20.0,
+    "seconds": 230.946
+   }
+  }
+ },
+ "stems": {
+  "sum_vs_underscore_residual_db": -169.9,
+  "families_present": [
+   "brass",
+   "chip",
+   "perc",
+   "piano",
+   "strings",
+   "winds"
+  ],
+  "family_share_lu": {
+   "piano": -2.5,
+   "strings": -0.3,
+   "winds": -7.0,
+   "brass": -1.5,
+   "perc": -10.3,
+   "chip": -1.7
+  }
+ },
+ "spectrum": {
+  "sub": -18.0,
+  "bass": -3.6,
+  "lowmid": -3.0,
+  "mid": -14.3,
+  "presence": -28.9,
+  "air": -41.1,
+  "centroid_hz": 367.0
+ },
+ "bar_levels": [
+  {
+   "bar": 1,
+   "rms_db": -20.9,
+   "peak_db": -5.300000190734863
+  },
+  {
+   "bar": 2,
+   "rms_db": -24.3,
+   "peak_db": -7.400000095367432
+  },
+  {
+   "bar": 3,
+   "rms_db": -22.6,
+   "peak_db": -9.699999809265137
+  },
+  {
+   "bar": 4,
+   "rms_db": -24.8,
+   "peak_db": -12.0
+  },
+  {
+   "bar": 5,
+   "rms_db": -21.8,
+   "peak_db": -7.900000095367432
+  },
+  {
+   "bar": 6,
+   "rms_db": -22.6,
+   "peak_db": -9.399999618530273
+  },
+  {
+   "bar": 7,
+   "rms_db": -23.8,
+   "peak_db": -10.399999618530273
+  },
+  {
+   "bar": 8,
+   "rms_db": -22.7,
+   "peak_db": -10.199999809265137
+  },
+  {
+   "bar": 9,
+   "rms_db": -20.7,
+   "peak_db": -6.699999809265137
+  },
+  {
+   "bar": 10,
+   "rms_db": -21.3,
+   "peak_db": -8.300000190734863
+  },
+  {
+   "bar": 11,
+   "rms_db": -24.6,
+   "peak_db": -10.5
+  },
+  {
+   "bar": 12,
+   "rms_db": -24.5,
+   "peak_db": -11.5
+  },
+  {
+   "bar": 13,
+   "rms_db": -24.5,
+   "peak_db": -10.899999618530273
+  },
+  {
+   "bar": 14,
+   "rms_db": -24.1,
+   "peak_db": -10.399999618530273
+  },
+  {
+   "bar": 15,
+   "rms_db": -25.4,
+   "peak_db": -11.600000381469727
+  },
+  {
+   "bar": 16,
+   "rms_db": -23.4,
+   "peak_db": -9.5
+  },
+  {
+   "bar": 17,
+   "rms_db": -22.0,
+   "peak_db": -7.800000190734863
+  },
+  {
+   "bar": 18,
+   "rms_db": -23.4,
+   "peak_db": -10.0
+  },
+  {
+   "bar": 19,
+   "rms_db": -24.1,
+   "peak_db": -11.0
+  },
+  {
+   "bar": 20,
+   "rms_db": -22.3,
+   "peak_db": -9.0
+  },
+  {
+   "bar": 21,
+   "rms_db": -22.6,
+   "peak_db": -9.5
+  },
+  {
+   "bar": 22,
+   "rms_db": -22.9,
+   "peak_db": -9.399999618530273
+  },
+  {
+   "bar": 23,
+   "rms_db": -22.8,
+   "peak_db": -8.800000190734863
+  },
+  {
+   "bar": 24,
+   "rms_db": -23.6,
+   "peak_db": -10.399999618530273
+  },
+  {
+   "bar": 25,
+   "rms_db": -24.5,
+   "peak_db": -10.800000190734863
+  },
+  {
+   "bar": 26,
+   "rms_db": -22.3,
+   "peak_db": -8.899999618530273
+  },
+  {
+   "bar": 27,
+   "rms_db": -22.8,
+   "peak_db": -9.600000381469727
+  },
+  {
+   "bar": 28,
+   "rms_db": -21.8,
+   "peak_db": -9.199999809265137
+  },
+  {
+   "bar": 29,
+   "rms_db": -23.9,
+   "peak_db": -9.5
+  },
+  {
+   "bar": 30,
+   "rms_db": -26.1,
+   "peak_db": -12.800000190734863
+  },
+  {
+   "bar": 31,
+   "rms_db": -25.6,
+   "peak_db": -9.899999618530273
+  },
+  {
+   "bar": 32,
+   "rms_db": -22.9,
+   "peak_db": -9.899999618530273
+  },
+  {
+   "bar": 33,
+   "rms_db": -23.9,
+   "peak_db": -9.5
+  },
+  {
+   "bar": 34,
+   "rms_db": -22.3,
+   "peak_db": -7.5
+  },
+  {
+   "bar": 35,
+   "rms_db": -24.8,
+   "peak_db": -10.199999809265137
+  },
+  {
+   "bar": 36,
+   "rms_db": -19.7,
+   "peak_db": -3.700000047683716
+  },
+  {
+   "bar": 37,
+   "rms_db": -22.0,
+   "peak_db": -8.100000381469727
+  },
+  {
+   "bar": 38,
+   "rms_db": -22.3,
+   "peak_db": -8.399999618530273
+  },
+  {
+   "bar": 39,
+   "rms_db": -24.6,
+   "peak_db": -9.899999618530273
+  },
+  {
+   "bar": 40,
+   "rms_db": -25.1,
+   "peak_db": -11.600000381469727
+  },
+  {
+   "bar": 41,
+   "rms_db": -23.6,
+   "peak_db": -8.300000190734863
+  },
+  {
+   "bar": 42,
+   "rms_db": -23.4,
+   "peak_db": -9.300000190734863
+  },
+  {
+   "bar": 43,
+   "rms_db": -24.3,
+   "peak_db": -10.5
+  },
+  {
+   "bar": 44,
+   "rms_db": -21.6,
+   "peak_db": -7.400000095367432
+  },
+  {
+   "bar": 45,
+   "rms_db": -23.8,
+   "peak_db": -9.0
+  },
+  {
+   "bar": 46,
+   "rms_db": -21.2,
+   "peak_db": -6.800000190734863
+  },
+  {
+   "bar": 47,
+   "rms_db": -23.7,
+   "peak_db": -10.399999618530273
+  },
+  {
+   "bar": 48,
+   "rms_db": -24.5,
+   "peak_db": -10.5
+  },
+  {
+   "bar": 49,
+   "rms_db": -25.5,
+   "peak_db": -11.800000190734863
+  },
+  {
+   "bar": 50,
+   "rms_db": -22.9,
+   "peak_db": -9.800000190734863
+  },
+  {
+   "bar": 51,
+   "rms_db": -23.0,
+   "peak_db": -6.900000095367432
+  },
+  {
+   "bar": 52,
+   "rms_db": -26.2,
+   "peak_db": -8.100000381469727
+  },
+  {
+   "bar": 53,
+   "rms_db": -24.2,
+   "peak_db": -7.800000190734863
+  },
+  {
+   "bar": 54,
+   "rms_db": -26.6,
+   "peak_db": -12.899999618530273
+  },
+  {
+   "bar": 55,
+   "rms_db": -27.1,
+   "peak_db": -14.399999618530273
+  },
+  {
+   "bar": 56,
+   "rms_db": -26.5,
+   "peak_db": -14.600000381469727
+  },
+  {
+   "bar": 57,
+   "rms_db": -26.8,
+   "peak_db": -13.399999618530273
+  },
+  {
+   "bar": 58,
+   "rms_db": -25.8,
+   "peak_db": -10.0
+  },
+  {
+   "bar": 59,
+   "rms_db": -25.0,
+   "peak_db": -12.0
+  },
+  {
+   "bar": 60,
+   "rms_db": -24.1,
+   "peak_db": -10.800000190734863
+  },
+  {
+   "bar": 61,
+   "rms_db": -25.2,
+   "peak_db": -8.600000381469727
+  },
+  {
+   "bar": 62,
+   "rms_db": -25.6,
+   "peak_db": -13.300000190734863
+  },
+  {
+   "bar": 63,
+   "rms_db": -25.4,
+   "peak_db": -11.5
+  },
+  {
+   "bar": 64,
+   "rms_db": -20.9,
+   "peak_db": -6.099999904632568
+  },
+  {
+   "bar": 65,
+   "rms_db": -23.6,
+   "peak_db": -8.399999618530273
+  },
+  {
+   "bar": 66,
+   "rms_db": -22.9,
+   "peak_db": -9.0
+  },
+  {
+   "bar": 67,
+   "rms_db": -24.7,
+   "peak_db": -9.300000190734863
+  },
+  {
+   "bar": 68,
+   "rms_db": -23.2,
+   "peak_db": -9.600000381469727
+  },
+  {
+   "bar": 69,
+   "rms_db": -25.7,
+   "peak_db": -11.0
+  },
+  {
+   "bar": 70,
+   "rms_db": -22.3,
+   "peak_db": -5.199999809265137
+  },
+  {
+   "bar": 71,
+   "rms_db": -21.0,
+   "peak_db": -7.599999904632568
+  },
+  {
+   "bar": 72,
+   "rms_db": -24.6,
+   "peak_db": -8.800000190734863
+  },
+  {
+   "bar": 73,
+   "rms_db": -22.5,
+   "peak_db": -8.0
+  },
+  {
+   "bar": 74,
+   "rms_db": -23.8,
+   "peak_db": -10.600000381469727
+  },
+  {
+   "bar": 75,
+   "rms_db": -24.8,
+   "peak_db": -11.100000381469727
+  },
+  {
+   "bar": 76,
+   "rms_db": -23.9,
+   "peak_db": -7.900000095367432
+  },
+  {
+   "bar": 77,
+   "rms_db": -23.2,
+   "peak_db": -9.800000190734863
+  },
+  {
+   "bar": 78,
+   "rms_db": -23.0,
+   "peak_db": -7.900000095367432
+  },
+  {
+   "bar": 79,
+   "rms_db": -22.1,
+   "peak_db": -8.899999618530273
+  },
+  {
+   "bar": 80,
+   "rms_db": -22.6,
+   "peak_db": -8.899999618530273
+  },
+  {
+   "bar": 81,
+   "rms_db": -20.6,
+   "peak_db": -7.900000095367432
+  },
+  {
+   "bar": 82,
+   "rms_db": -24.0,
+   "peak_db": -11.300000190734863
+  },
+  {
+   "bar": 83,
+   "rms_db": -25.1,
+   "peak_db": -11.699999809265137
+  },
+  {
+   "bar": 84,
+   "rms_db": -26.7,
+   "peak_db": -11.100000381469727
+  },
+  {
+   "bar": 85,
+   "rms_db": -22.1,
+   "peak_db": -8.899999618530273
+  },
+  {
+   "bar": 86,
+   "rms_db": -20.5,
+   "peak_db": -7.199999809265137
+  },
+  {
+   "bar": 87,
+   "rms_db": -22.3,
+   "peak_db": -10.100000381469727
+  },
+  {
+   "bar": 88,
+   "rms_db": -23.2,
+   "peak_db": -8.699999809265137
+  },
+  {
+   "bar": 89,
+   "rms_db": -20.3,
+   "peak_db": -5.800000190734863
+  },
+  {
+   "bar": 90,
+   "rms_db": -22.4,
+   "peak_db": -8.899999618530273
+  },
+  {
+   "bar": 91,
+   "rms_db": -18.9,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 92,
+   "rms_db": -22.2,
+   "peak_db": -6.900000095367432
+  },
+  {
+   "bar": 93,
+   "rms_db": -50.7,
+   "peak_db": -38.400001525878906
+  }
+ ],
+ "instrumentation": {
+  "bsn": {
+   "family": "winds",
+   "notes": 4,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "cb": {
+   "family": "strings",
+   "notes": 51,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "cb_f1": {
+   "family": "strings",
+   "notes": 4,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "celesta": {
+   "family": "perc",
+   "notes": 1,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "choir": {
+   "family": "winds",
+   "notes": 4,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "cl": {
+   "family": "winds",
+   "notes": 4,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "door": {
+   "family": "winds",
+   "notes": 2,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "felt": {
+   "family": "piano",
+   "notes": 1,
+   "source": "sf2",
+   "credit": "Upright Piano KW by FreePats (CC0 1.0)"
+  },
+  "harm": {
+   "family": "strings",
+   "notes": 8,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "harp": {
+   "family": "strings",
+   "notes": 31,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "hn": {
+   "family": "brass",
+   "notes": 6,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "lead": {
+   "family": "chip",
+   "notes": 1,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "marimba": {
+   "family": "perc",
+   "notes": 27,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "reed": {
+   "family": "winds",
+   "notes": 4,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "rhodes": {
+   "family": "piano",
+   "notes": 20,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "svla": {
+   "family": "strings",
+   "notes": 17,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "svln": {
+   "family": "strings",
+   "notes": 1,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "tick": {
+   "family": "perc",
+   "notes": 82,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "timp": {
+   "family": "perc",
+   "notes": 1,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "tpt": {
+   "family": "brass",
+   "notes": 2,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vc": {
+   "family": "strings",
+   "notes": 98,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vla": {
+   "family": "strings",
+   "notes": 37,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vln1": {
+   "family": "strings",
+   "notes": 71,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vln2": {
+   "family": "strings",
+   "notes": 19,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  }
+ },
+ "credits": [
+  "GeneralUser GS by S. Christian Collins",
+  "Upright Piano KW by FreePats (CC0 1.0)",
+  "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+ ],
+ "audition": [
+  "the whole file: one procedure, never stopping -- does it ever feel like a loop that nags?",
+  "1.9-23.3 s: the pedal and the whisper under the firing, told from their side: dignified, not villainous; the clockwork creeping back under \"super.\"",
+  "23.3 s: Step Four on the pen's run; the blank F held under the blog post",
+  "108.3-124.7 s: the Door's head and the choir in the glass: a cathedral, never a church",
+  "125.0 s: do we care about Neleh at the sincere beat? then the dial-tone rest",
+  "144.2-150.1 s: the Addendum under Mario, thin; cut by \"no.\"; 156.7 s the landing (sold, not a comic button?)",
+  "196.1-221.8 s: Tasya's floor under the statement: the Emaj9 at the sentence break -- a colour shift, not a swell on the names",
+  "221.8-228.5 s: the clockwork winds down and hangs; the spinner; the REVERSAL on the card; the felt F4 answers at the home shot"
+ ],
+ "warnings": [
+  "marker at 0.8125 s: no clear onset within 10 ms ({'t': 0.8125, 'offset_ms': np.float64(11.5), 'strength': 2.86})",
+  "marker at 23.3333 s: no clear onset within 10 ms ({'t': 23.3333, 'offset_ms': np.float64(-48.0), 'strength': 1.83})",
+  "marker at 23.9583 s: no clear onset within 10 ms ({'t': 23.9583, 'offset_ms': np.float64(57.7), 'strength': 2.85})",
+  "marker at 24.5833 s: no clear onset within 10 ms ({'t': 24.5833, 'offset_ms': np.float64(-50.0), 'strength': 2.18})",
+  "marker at 25.2083 s: no clear onset within 10 ms ({'t': 25.2083, 'offset_ms': np.float64(-40.3), 'strength': 2.39})",
+  "marker at 41.5833 s: no clear onset within 10 ms ({'t': 41.5833, 'offset_ms': np.float64(54.0), 'strength': 2.46})",
+  "marker at 78.75 s: no clear onset within 10 ms ({'t': 78.75, 'offset_ms': np.float64(-59.3), 'strength': 2.57})",
+  "marker at 92.9583 s: no clear onset within 10 ms ({'t': 92.9583, 'offset_ms': np.float64(12.4), 'strength': 3.11})",
+  "marker at 93.75 s: no clear onset within 10 ms ({'t': 93.75, 'offset_ms': np.float64(31.3), 'strength': 1.74})",
+  "marker at 101.875 s: no clear onset within 10 ms ({'t': 101.875, 'offset_ms': np.float64(31.7), 'strength': 1.97})",
+  "marker at 108.375 s: no clear onset within 10 ms ({'t': 108.375, 'offset_ms': np.float64(22.3), 'strength': 1.86})",
+  "marker at 157.3507 s: no clear onset within 10 ms ({'t': 157.3507, 'offset_ms': np.float64(-38.7), 'strength': 1.75})",
+  "marker at 158.3333 s: no clear onset within 10 ms ({'t': 158.3333, 'offset_ms': np.float64(10.7), 'strength': 2.07})",
+  "marker at 173.375 s: no clear onset within 10 ms ({'t': 173.375, 'offset_ms': np.float64(11.7), 'strength': 1.96})",
+  "marker at 199.0 s: no clear onset within 10 ms ({'t': 199.0, 'offset_ms': np.float64(50.7), 'strength': 2.12})",
+  "marker at 226.7917 s: no clear onset within 10 ms ({'t': 226.7917, 'offset_ms': np.float64(-15.7), 'strength': 1.51})",
+  "marker at 228.5417 s: no clear onset within 10 ms ({'t': 228.5417, 'offset_ms': np.float64(-40.4), 'strength': 1.9})"
+ ]
+}

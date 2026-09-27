@@ -1,0 +1,407 @@
+{
+ "id": "e1-a1-5-13",
+ "scene": "5",
+ "speaker": "ALYI",
+ "speaker_slug": "alyi",
+ "text": "Six years and eleven months. From the day we started to that click.",
+ "spoken_as": "Six years and eleven months.{0.5} From the day we started to that click.",
+ "delivery": "reflection; slow and low, under Gerg's keys, to Mas and only to Mas; Rima, at the whiteboard, doesn't hear it",
+ "tag": "[INVENTED · the lab's age at launch: announced Dec 11, 2015, launched Nov 30, 2022 (it rounds down); \"the day we started\" says Alyi was there at the founding (a co-founder on the record). The facts owner confirms the date and adds its row to facts.md, which has none yet (the facts review; open question 56). Dialogue pass 5: \"since we started\" is now its own sentence that points at the click, the thing he's reacting to, so it can't land as a mystic aside after the rail (the naturalness read). It is Alyi's first line to Mas in the series, and it gives a newcomer the years these people share. Final pass: \"since we started\" is new; without a noun a newcomer couldn't tell what he was counting (the newcomer read). Fallback: \"Someone should keep count.\" with the next two lines cut]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "MCU·glass",
+ "shot_id": "MCU·glass",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 5.4,
+ "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-13.wav",
+ "mp3": null,
+ "duration_s": 6.055,
+ "frames_24": 146,
+ "voiced_span_s": 5.08,
+ "pace": {
+  "words": 13,
+  "wpm": 153.5,
+  "speed": 0.86,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.86,
+   "speed_band": [
+    0.85,
+    0.92
+   ],
+   "articulation_guide_sps": [
+    3.4,
+    4.0
+   ],
+   "turn_wpm_guide": [
+    115,
+    140
+   ],
+   "intent": "reflection; slow and low, under Gerg's keys, to Mas and only to Mas; Rima, at the whiteboard, doesn't hear it"
+  },
+  "measured": {
+   "wpm": 153.5,
+   "articulation_sps": 3.79,
+   "syllables": 16,
+   "span_s": 5.08,
+   "pauses_s": [
+    0.49,
+    0.14,
+    0.23,
+    0.06
+   ]
+  },
+  "longest_internal_gap_s": 0.49,
+  "audible_in_s": 0.5,
+  "audible_out_s": 5.58
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 2,
+ "pick_reason": "fast: best of 2 seeds by ASR word recall, then no pause cut inside the voice, then the span nearest est_s",
+ "voice": "am_onyx (Kokoro-82M stock) · a-onyx-cathedral · speed 0.860",
+ "voiceId": "am_onyx",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 50 Hz",
+  "pitch 0",
+  "low shelf +1.5 dB @140 Hz",
+  "peak -1.5 dB @400 Hz Q1.0",
+  "peak +1.5 dB @2800 Hz Q0.9",
+  "comp 2.5:1 @-24 dB (8/150 ms)",
+  "Kokoro speed 0.860 (the plan speed; alyi band 0.85-0.92); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'months': Kokoro 0.03 s -> 0.50 s (intended 0.50; +0.47 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.625,
+   "f": 15,
+   "shape": "A"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "E"
+  },
+  {
+   "t": 0.958,
+   "f": 23,
+   "shape": "A"
+  },
+  {
+   "t": 1.125,
+   "f": 27,
+   "shape": "E"
+  },
+  {
+   "t": 1.333,
+   "f": 32,
+   "shape": "A"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "E"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "A"
+  },
+  {
+   "t": 1.667,
+   "f": 40,
+   "shape": "E"
+  },
+  {
+   "t": 1.875,
+   "f": 45,
+   "shape": "M"
+  },
+  {
+   "t": 1.958,
+   "f": 47,
+   "shape": "A"
+  },
+  {
+   "t": 2.167,
+   "f": 52,
+   "shape": "E"
+  },
+  {
+   "t": 2.375,
+   "f": 57,
+   "shape": "rest"
+  },
+  {
+   "t": 2.958,
+   "f": 71,
+   "shape": "E"
+  },
+  {
+   "t": 3.042,
+   "f": 73,
+   "shape": "A"
+  },
+  {
+   "t": 3.125,
+   "f": 75,
+   "shape": "E"
+  },
+  {
+   "t": 3.25,
+   "f": 78,
+   "shape": "A"
+  },
+  {
+   "t": 3.5,
+   "f": 84,
+   "shape": "O"
+  },
+  {
+   "t": 3.583,
+   "f": 86,
+   "shape": "E"
+  },
+  {
+   "t": 3.708,
+   "f": 89,
+   "shape": "A"
+  },
+  {
+   "t": 3.792,
+   "f": 91,
+   "shape": "E"
+  },
+  {
+   "t": 4.25,
+   "f": 102,
+   "shape": "A"
+  },
+  {
+   "t": 4.417,
+   "f": 106,
+   "shape": "E"
+  },
+  {
+   "t": 5.208,
+   "f": 125,
+   "shape": "rest"
+  },
+  {
+   "t": 5.375,
+   "f": 129,
+   "shape": "E"
+  },
+  {
+   "t": 5.5,
+   "f": 132,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Six",
+   "t0": 0.57,
+   "t1": 0.845,
+   "f0": 14,
+   "f1": 20,
+   "ph": "sˈɪks"
+  },
+  {
+   "w": "years",
+   "t0": 0.845,
+   "t1": 1.32,
+   "f0": 20,
+   "f1": 32,
+   "ph": "jˈɪɹz"
+  },
+  {
+   "w": "and",
+   "t0": 1.32,
+   "t1": 1.445,
+   "f0": 32,
+   "f1": 35,
+   "ph": "ænd"
+  },
+  {
+   "w": "eleven",
+   "t0": 1.445,
+   "t1": 1.87,
+   "f0": 35,
+   "f1": 45,
+   "ph": "əlˈɛvᵊn"
+  },
+  {
+   "w": "months",
+   "t0": 1.87,
+   "t1": 2.395,
+   "f0": 45,
+   "f1": 57,
+   "ph": "mˈʌnθs"
+  },
+  {
+   "w": "From",
+   "t0": 2.94,
+   "t1": 3.102,
+   "f0": 71,
+   "f1": 74,
+   "ph": "fɹˌʌm"
+  },
+  {
+   "w": "the",
+   "t0": 3.102,
+   "t1": 3.19,
+   "f0": 74,
+   "f1": 77,
+   "ph": "ðə"
+  },
+  {
+   "w": "day",
+   "t0": 3.19,
+   "t1": 3.49,
+   "f0": 77,
+   "f1": 84,
+   "ph": "dˈA"
+  },
+  {
+   "w": "we",
+   "t0": 3.49,
+   "t1": 3.615,
+   "f0": 84,
+   "f1": 87,
+   "ph": "wi"
+  },
+  {
+   "w": "started",
+   "t0": 3.615,
+   "t1": 4.04,
+   "f0": 87,
+   "f1": 97,
+   "ph": "stˈɑɹTᵻd"
+  },
+  {
+   "w": "to",
+   "t0": 4.04,
+   "t1": 4.165,
+   "f0": 97,
+   "f1": 100,
+   "ph": "tə"
+  },
+  {
+   "w": "that",
+   "t0": 4.165,
+   "t1": 4.478,
+   "f0": 100,
+   "f1": 107,
+   "ph": "ðˈæt"
+  },
+  {
+   "w": "click",
+   "t0": 4.478,
+   "t1": 5.49,
+   "f0": 107,
+   "f1": 132,
+   "ph": "klˈɪk"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.5,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 87.1,
+  "f0_range_st": 11.2,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "6 years and 11 months from the day we started to that click.",
+  "cer": 0.17,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.273,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 150.0,
+  "decay_ms": 835.0,
+  "decay_to_60_s": 0.03
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 5,
+   "word": "months",
+   "tts_s": 0.03,
+   "target_s": 0.5,
+   "point_s": 2.035,
+   "joined_speech": false,
+   "dip_db": -52.0,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.5,
+   "opened_s": 0.47
+  }
+ ],
+ "alt_takes": [
+  {
+   "tag": "s2",
+   "seed": 2,
+   "speed": 0.86,
+   "file": "audio/ep01/act1/dialogue/fast-v1/takes/e1-a1-5-13/s2.wav",
+   "span_s": 5.08,
+   "wpm": 153.5,
+   "asr": "6 years and 11 months from the day we started to that click.",
+   "recall": 1.0,
+   "utmos": null
+  }
+ ],
+ "fast": {
+  "key": "d9cf76d99cf871db",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 3,
+  "wall_s": 319.49,
+  "takes": 2,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 1,
+   "share_s": 208.88
+  }
+ }
+}

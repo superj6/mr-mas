@@ -1,0 +1,231 @@
+{
+ "id": "e1-a1-5-17",
+ "scene": "5",
+ "speaker": "RIMA TAMURI",
+ "speaker_slug": "rima-tamuri",
+ "text": "So we've launched autocomplete.",
+ "spoken_as": "So we've launched autocomplete.",
+ "delivery": "peering at it",
+ "tag": "[INVENTED]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "OTS",
+ "shot_id": "OTS",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 2.3,
+ "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-17.wav",
+ "mp3": null,
+ "duration_s": 2.705,
+ "frames_24": 65,
+ "voiced_span_s": 1.69,
+ "pace": {
+  "words": 4,
+  "wpm": 142.0,
+  "speed": 0.94,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.94,
+   "speed_band": [
+    0.9,
+    0.98
+   ],
+   "articulation_guide_sps": [
+    4.0,
+    4.6
+   ],
+   "turn_wpm_guide": [
+    140,
+    160
+   ],
+   "intent": "peering at it"
+  },
+  "measured": {
+   "wpm": 142.0,
+   "articulation_sps": 4.14,
+   "syllables": 7,
+   "span_s": 1.69,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.5,
+  "audible_out_s": 2.19
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "af_heart (Kokoro-82M stock) · a-heart-composed · speed 0.940",
+ "voiceId": "af_heart",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch 0",
+  "peak -1 dB @300 Hz Q1.0",
+  "peak +1 dB @5000 Hz Q0.8",
+  "comp 2.0:1 @-22 dB (8/120 ms)",
+  "Kokoro speed 0.940 (the centre of the band; rima-tamuri band 0.90-0.98); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "O"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "E"
+  },
+  {
+   "t": 0.958,
+   "f": 23,
+   "shape": "O"
+  },
+  {
+   "t": 1.125,
+   "f": 27,
+   "shape": "E"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "O"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "E"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "O"
+  },
+  {
+   "t": 1.667,
+   "f": 40,
+   "shape": "E"
+  },
+  {
+   "t": 1.833,
+   "f": 44,
+   "shape": "M"
+  },
+  {
+   "t": 1.958,
+   "f": 47,
+   "shape": "E"
+  },
+  {
+   "t": 2.208,
+   "f": 53,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "So",
+   "t0": 0.525,
+   "t1": 0.675,
+   "f0": 13,
+   "f1": 16,
+   "ph": "sˌO"
+  },
+  {
+   "w": "we've",
+   "t0": 0.675,
+   "t1": 0.9,
+   "f0": 16,
+   "f1": 22,
+   "ph": "wiv"
+  },
+  {
+   "w": "launched",
+   "t0": 0.9,
+   "t1": 1.3,
+   "f0": 22,
+   "f1": 31,
+   "ph": "lˈɔnʧt"
+  },
+  {
+   "w": "autocomplete",
+   "t0": 1.3,
+   "t1": 2.21,
+   "f0": 31,
+   "f1": 53,
+   "ph": "ˌɔTOkəmplˈit"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.42,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 207.5,
+  "f0_range_st": 10.6,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "So we've launched autocomplete.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.209,
+  "align_median_s": 0.03,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.415,
+  "rise_ms": 30.0,
+  "decay_ms": 55.0,
+  "decay_to_60_s": 0.105
+ },
+ "speaker_label": "RIMA",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "f18f528c49efef65",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 24.79,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 5,
+   "share_s": 9.13,
+   "rechecked_alone": false
+  }
+ }
+}

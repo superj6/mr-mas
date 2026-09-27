@@ -1,0 +1,497 @@
+{
+ "id": "e1-a2-13-11",
+ "scene": "13",
+ "speaker": "RADNUS",
+ "speaker_slug": "radnus",
+ "text": "They ask it the things they used to ask us. And it tells them what a great question it was.",
+ "spoken_as": "They ask it the things they used to ask us.{0.5} And it tells them what a great question it was.",
+ "delivery": "a courteous smile; quick, the apology coming through anyway",
+ "tag": "[INVENTED · his fear, dressed as a courtesy: people take their questions to the chatbot now, and it flatters them. It calls back sc 5's \"What a great question!\" and makes no claim about a real person or a figure (open question 60). Final pass: it was \"It's very flattering to them.\", which was ambiguous by ear (is \"it\" the asking, or the bot?), so the barb missed (the feel read)]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "2S",
+ "shot_id": "2S",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 8.1,
+ "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-11.wav",
+ "mp3": null,
+ "duration_s": 6.68,
+ "frames_24": 161,
+ "voiced_span_s": 5.55,
+ "pace": {
+  "words": 20,
+  "wpm": 216.2,
+  "speed": 0.87,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.87,
+   "speed_band": [
+    0.91,
+    0.99
+   ],
+   "articulation_guide_sps": [
+    3.8,
+    4.4
+   ],
+   "turn_wpm_guide": [
+    130,
+    150
+   ],
+   "intent": "a courteous smile; quick, the apology coming through anyway"
+  },
+  "measured": {
+   "wpm": 216.2,
+   "articulation_sps": 4.15,
+   "syllables": 21,
+   "span_s": 5.55,
+   "pauses_s": [
+    0.49,
+    0.06
+   ]
+  },
+  "longest_internal_gap_s": 0.49,
+  "audible_in_s": 0.5,
+  "audible_out_s": 6.05
+ },
+ "placement": {
+  "gap_before_s": 0.6,
+  "follows": "voice"
+ },
+ "take": "s2",
+ "takes_tried": 2,
+ "pick_reason": "fast: best of 2 seeds by ASR word recall, then no pause cut inside the voice, then the span nearest est_s",
+ "voice": "am_echo*0.60+am_fenrir*0.40 (Kokoro-82M stock) · d-echo-fenrir-courteous-up2 · speed 0.870",
+ "voiceId": "am_echo*0.60+am_fenrir*0.40",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch +2 st",
+  "low shelf +1.5 dB @180 Hz",
+  "peak -1.5 dB @350 Hz Q1.0",
+  "peak +0.5 dB @3000 Hz Q0.9",
+  "high shelf -1 dB @7000 Hz",
+  "comp 2.0:1 @-24 dB (10/140 ms)",
+  "Kokoro speed 0.870 (the plan speed; radnus band 0.91-0.99); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'us': Kokoro 0.29 s -> 0.51 s (intended 0.50; +0.21 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "E"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "A"
+  },
+  {
+   "t": 0.958,
+   "f": 23,
+   "shape": "E"
+  },
+  {
+   "t": 1.542,
+   "f": 37,
+   "shape": "A"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "E"
+  },
+  {
+   "t": 1.917,
+   "f": 46,
+   "shape": "A"
+  },
+  {
+   "t": 2.0,
+   "f": 48,
+   "shape": "E"
+  },
+  {
+   "t": 2.083,
+   "f": 50,
+   "shape": "O"
+  },
+  {
+   "t": 2.167,
+   "f": 52,
+   "shape": "E"
+  },
+  {
+   "t": 2.292,
+   "f": 55,
+   "shape": "O"
+  },
+  {
+   "t": 2.375,
+   "f": 57,
+   "shape": "A"
+  },
+  {
+   "t": 2.583,
+   "f": 62,
+   "shape": "E"
+  },
+  {
+   "t": 2.75,
+   "f": 66,
+   "shape": "A"
+  },
+  {
+   "t": 3.042,
+   "f": 73,
+   "shape": "E"
+  },
+  {
+   "t": 3.167,
+   "f": 76,
+   "shape": "rest"
+  },
+  {
+   "t": 3.625,
+   "f": 87,
+   "shape": "A"
+  },
+  {
+   "t": 3.708,
+   "f": 89,
+   "shape": "E"
+  },
+  {
+   "t": 3.875,
+   "f": 93,
+   "shape": "A"
+  },
+  {
+   "t": 4.083,
+   "f": 98,
+   "shape": "E"
+  },
+  {
+   "t": 4.292,
+   "f": 103,
+   "shape": "A"
+  },
+  {
+   "t": 4.417,
+   "f": 106,
+   "shape": "M"
+  },
+  {
+   "t": 4.5,
+   "f": 108,
+   "shape": "A"
+  },
+  {
+   "t": 4.708,
+   "f": 113,
+   "shape": "E"
+  },
+  {
+   "t": 4.792,
+   "f": 115,
+   "shape": "A"
+  },
+  {
+   "t": 4.958,
+   "f": 119,
+   "shape": "E"
+  },
+  {
+   "t": 5.042,
+   "f": 121,
+   "shape": "O"
+  },
+  {
+   "t": 5.125,
+   "f": 123,
+   "shape": "A"
+  },
+  {
+   "t": 5.208,
+   "f": 125,
+   "shape": "E"
+  },
+  {
+   "t": 5.542,
+   "f": 133,
+   "shape": "O"
+  },
+  {
+   "t": 5.708,
+   "f": 137,
+   "shape": "A"
+  },
+  {
+   "t": 5.958,
+   "f": 143,
+   "shape": "E"
+  },
+  {
+   "t": 6.042,
+   "f": 145,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "They",
+   "t0": 0.52,
+   "t1": 0.745,
+   "f0": 12,
+   "f1": 18,
+   "ph": "ðˌA"
+  },
+  {
+   "w": "ask",
+   "t0": 0.745,
+   "t1": 1.12,
+   "f0": 18,
+   "f1": 27,
+   "ph": "ˈæsk"
+  },
+  {
+   "w": "it",
+   "t0": 1.12,
+   "t1": 1.27,
+   "f0": 27,
+   "f1": 30,
+   "ph": "ɪt"
+  },
+  {
+   "w": "the",
+   "t0": 1.27,
+   "t1": 1.42,
+   "f0": 30,
+   "f1": 34,
+   "ph": "ðə"
+  },
+  {
+   "w": "things",
+   "t0": 1.42,
+   "t1": 1.87,
+   "f0": 34,
+   "f1": 45,
+   "ph": "θˈɪŋz"
+  },
+  {
+   "w": "they",
+   "t0": 1.87,
+   "t1": 2.02,
+   "f0": 45,
+   "f1": 48,
+   "ph": "ðA"
+  },
+  {
+   "w": "used",
+   "t0": 2.02,
+   "t1": 2.245,
+   "f0": 48,
+   "f1": 54,
+   "ph": "jˈust"
+  },
+  {
+   "w": "to",
+   "t0": 2.245,
+   "t1": 2.395,
+   "f0": 54,
+   "f1": 57,
+   "ph": "tʊ"
+  },
+  {
+   "w": "ask",
+   "t0": 2.395,
+   "t1": 2.77,
+   "f0": 57,
+   "f1": 66,
+   "ph": "ˈæsk"
+  },
+  {
+   "w": "us",
+   "t0": 2.77,
+   "t1": 3.16,
+   "f0": 66,
+   "f1": 76,
+   "ph": "ˌʌs"
+  },
+  {
+   "w": "And",
+   "t0": 3.58,
+   "t1": 3.718,
+   "f0": 86,
+   "f1": 89,
+   "ph": "ˌænd"
+  },
+  {
+   "w": "it",
+   "t0": 3.718,
+   "t1": 3.818,
+   "f0": 89,
+   "f1": 92,
+   "ph": "ɪt"
+  },
+  {
+   "w": "tells",
+   "t0": 3.818,
+   "t1": 4.255,
+   "f0": 92,
+   "f1": 102,
+   "ph": "tˈɛlz"
+  },
+  {
+   "w": "them",
+   "t0": 4.255,
+   "t1": 4.48,
+   "f0": 102,
+   "f1": 108,
+   "ph": "ðˌɛm"
+  },
+  {
+   "w": "what",
+   "t0": 4.48,
+   "t1": 4.618,
+   "f0": 108,
+   "f1": 111,
+   "ph": "wˌʌt"
+  },
+  {
+   "w": "a",
+   "t0": 4.618,
+   "t1": 4.692,
+   "f0": 111,
+   "f1": 113,
+   "ph": "ɐ"
+  },
+  {
+   "w": "great",
+   "t0": 4.692,
+   "t1": 5.005,
+   "f0": 113,
+   "f1": 120,
+   "ph": "ɡɹˈAt"
+  },
+  {
+   "w": "question",
+   "t0": 5.005,
+   "t1": 5.43,
+   "f0": 120,
+   "f1": 130,
+   "ph": "kwˈɛsʧᵊn"
+  },
+  {
+   "w": "it",
+   "t0": 5.43,
+   "t1": 5.555,
+   "f0": 130,
+   "f1": 133,
+   "ph": "ɪt"
+  },
+  {
+   "w": "was",
+   "t0": 5.555,
+   "t1": 6.07,
+   "f0": 133,
+   "f1": 146,
+   "ph": "wʌz"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.1,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 128.3,
+  "f0_range_st": 13.2,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "They ask it the things they used to ask us, and it tells them what a great question it was.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.168,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.395,
+  "rise_ms": 30.0,
+  "decay_ms": 240.0,
+  "decay_to_60_s": 0.24
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 10,
+   "word": "us",
+   "tts_s": 0.29,
+   "target_s": 0.5,
+   "point_s": 2.86,
+   "joined_speech": false,
+   "dip_db": -69.2,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.51,
+   "opened_s": 0.21
+  }
+ ],
+ "alt_takes": [
+  {
+   "tag": "s1",
+   "seed": 1,
+   "speed": 0.87,
+   "file": "audio/ep01/act2/dialogue/fast-v2/takes/e1-a2-13-11/s1.wav",
+   "span_s": 5.54,
+   "wpm": 216.6,
+   "asr": "They ask it the things they used to ask us, and it tells them what a great question it was.",
+   "recall": 1.0,
+   "utmos": null
+  }
+ ],
+ "fast": {
+  "key": "8f72e855a23fec18",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 19.57,
+  "takes": 2,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 4
+  },
+  "asr": {
+   "packed_with": 1,
+   "share_s": 7.87
+  }
+ }
+}

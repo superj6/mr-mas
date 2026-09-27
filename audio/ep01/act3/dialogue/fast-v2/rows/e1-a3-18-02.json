@@ -1,0 +1,190 @@
+{
+ "id": "e1-a3-18-02",
+ "scene": "18",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "i didn't need to be verified.",
+ "spoken_as": "i didn't need to be verified.",
+ "delivery": null,
+ "tag": "[INVENTED · VO · D2 · early in the scene, as the Orb drifts, more than a bar clear of the card; ≈ 2:50 before 26A's D2, under the bible's 3:00, flagged in the revision log]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "vo",
+ "kind": "vo",
+ "side": "none",
+ "pov": null,
+ "shot": "2S",
+ "shot_id": "2S",
+ "cue": null,
+ "lip_sync": false,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 3.1,
+ "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-18-02.wav",
+ "mp3": null,
+ "duration_s": 3.39,
+ "frames_24": 82,
+ "voiced_span_s": 2.13,
+ "pace": {
+  "words": 6,
+  "wpm": 169.0,
+  "speed": 0.85,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.85,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.4,
+    4.0
+   ],
+   "turn_wpm_guide": [
+    120,
+    140
+   ],
+   "intent": null
+  },
+  "measured": {
+   "wpm": 169.0,
+   "articulation_sps": 4.23,
+   "syllables": 9,
+   "span_s": 2.13,
+   "pauses_s": [
+    0.06
+   ]
+  },
+  "longest_internal_gap_s": 0.06,
+  "audible_in_s": 0.55,
+  "audible_out_s": 2.68
+ },
+ "placement": {
+  "gap_before_s": 0.7,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.850",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 60 Hz",
+  "pitch 0",
+  "low shelf +2.5 dB @150 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak -1 dB @3200 Hz Q0.8",
+  "high shelf -2.5 dB @7500 Hz",
+  "comp 2.5:1 @-26 dB (15/160 ms)",
+  "Kokoro speed 0.850 (the plan speed; mas-manalt-vo band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [],
+ "words": [
+  {
+   "w": "i",
+   "t0": 0.64,
+   "t1": 0.865,
+   "f0": 15,
+   "f1": 21,
+   "ph": "ˈI"
+  },
+  {
+   "w": "didn't",
+   "t0": 0.865,
+   "t1": 1.14,
+   "f0": 21,
+   "f1": 27,
+   "ph": "dˈɪdᵊnt"
+  },
+  {
+   "w": "need",
+   "t0": 1.14,
+   "t1": 1.49,
+   "f0": 27,
+   "f1": 36,
+   "ph": "nˈid"
+  },
+  {
+   "w": "to",
+   "t0": 1.49,
+   "t1": 1.59,
+   "f0": 36,
+   "f1": 38,
+   "ph": "tə"
+  },
+  {
+   "w": "be",
+   "t0": 1.59,
+   "t1": 1.778,
+   "f0": 38,
+   "f1": 43,
+   "ph": "bi"
+  },
+  {
+   "w": "verified",
+   "t0": 1.778,
+   "t1": 2.7,
+   "f0": 43,
+   "f1": 65,
+   "ph": "vˈɛɹᵻfˌId"
+  }
+ ],
+ "qa": {
+  "lufs_i": -18.0,
+  "target_lufs": -18.0,
+  "true_peak_dbtp": -4.81,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.55,
+  "median_f0_hz": 114.2,
+  "f0_range_st": 9.9,
+  "f0_method": "pYIN (a4lib.analyse)",
+  "final_move_st": -7.2,
+  "asr": "I didn't need to be verified.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.29,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.55,
+  "speech_tail_s": 0.405,
+  "rise_ms": 120.0,
+  "decay_ms": 245.0,
+  "decay_to_60_s": 0.31
+ },
+ "speaker_label": "MAS (V.O.)",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "fecb16acbdcadecf",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 84.62,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": true,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 26.61,
+   "rechecked_alone": true
+  }
+ }
+}

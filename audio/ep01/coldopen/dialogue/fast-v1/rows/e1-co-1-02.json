@@ -1,0 +1,376 @@
+{
+ "id": "e1-co-1-02",
+ "scene": "1",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "\"…i've gotten to be in the room when we sort of push the veil of ignorance back—and the frontier of discovery forward…\"",
+ "spoken_as": "I've [gotten](/ɡˈɑtən/) to be in the room,{0.3} when we sort of push the veil of ignorance back,{0.35} and the frontier of discovery forward.",
+ "delivery": "unhurried; a lunch order",
+ "tag": "[V · NOV 16, 2023 · the line's first half; its full tag follows the plink]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": true,
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "MCU",
+ "shot_id": "MCU",
+ "cue": null,
+ "lip_sync": false,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 7.3,
+ "file": "audio/ep01/coldopen/dialogue/fast-v1/wav/e1-co-1-02.wav",
+ "mp3": null,
+ "duration_s": 9.325,
+ "frames_24": 224,
+ "voiced_span_s": 8.26,
+ "pace": {
+  "words": 23,
+  "wpm": 167.1,
+  "speed": 0.85,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.85,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.6,
+    4.2
+   ],
+   "turn_wpm_guide": [
+    135,
+    155
+   ],
+   "intent": "unhurried; a lunch order"
+  },
+  "measured": {
+   "wpm": 167.1,
+   "articulation_sps": 3.92,
+   "syllables": 30,
+   "span_s": 8.26,
+   "pauses_s": [
+    0.28,
+    0.08,
+    0.06,
+    0.06,
+    0.33
+   ]
+  },
+  "longest_internal_gap_s": 0.33,
+  "audible_in_s": 0.53,
+  "audible_out_s": 8.79
+ },
+ "placement": {
+  "gap_before_s": 0.45,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 2,
+ "pick_reason": "fast: best of 2 seeds by ASR word recall, then no pause cut inside the voice, then the span nearest est_s",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.850",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch 0",
+  "low shelf +2 dB @160 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak +1 dB @3200 Hz Q0.8",
+  "high shelf -1.5 dB @8000 Hz",
+  "comp 2.0:1 @-24 dB (10/120 ms)",
+  "Kokoro speed 0.850 (the plan speed; mas-manalt band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'room': Kokoro 0.28 s -> 0.35 s (intended 0.30; +0.02 s of room tone at the quietest 5 ms)",
+  "pause after 'back': Kokoro 0.33 s -> 0.40 s (intended 0.35; +0.03 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [],
+ "words": [
+  {
+   "w": "I've",
+   "t0": 0.57,
+   "t1": 0.77,
+   "f0": 14,
+   "f1": 18,
+   "ph": "ˌIv"
+  },
+  {
+   "w": "gotten",
+   "t0": 0.77,
+   "t1": 1.17,
+   "f0": 18,
+   "f1": 28,
+   "ph": "ɡˈɑtən"
+  },
+  {
+   "w": "to",
+   "t0": 1.17,
+   "t1": 1.295,
+   "f0": 28,
+   "f1": 31,
+   "ph": "tə"
+  },
+  {
+   "w": "be",
+   "t0": 1.295,
+   "t1": 1.557,
+   "f0": 31,
+   "f1": 37,
+   "ph": "bi"
+  },
+  {
+   "w": "in",
+   "t0": 1.557,
+   "t1": 1.695,
+   "f0": 37,
+   "f1": 41,
+   "ph": "ɪn"
+  },
+  {
+   "w": "the",
+   "t0": 1.695,
+   "t1": 1.845,
+   "f0": 41,
+   "f1": 44,
+   "ph": "ðə"
+  },
+  {
+   "w": "room",
+   "t0": 1.845,
+   "t1": 2.39,
+   "f0": 44,
+   "f1": 57,
+   "ph": "ɹˈum"
+  },
+  {
+   "w": "when",
+   "t0": 2.815,
+   "t1": 2.965,
+   "f0": 68,
+   "f1": 71,
+   "ph": "wˌɛn"
+  },
+  {
+   "w": "we",
+   "t0": 2.965,
+   "t1": 3.14,
+   "f0": 71,
+   "f1": 75,
+   "ph": "wi"
+  },
+  {
+   "w": "sort",
+   "t0": 3.14,
+   "t1": 3.403,
+   "f0": 75,
+   "f1": 82,
+   "ph": "sˈɔɹt"
+  },
+  {
+   "w": "of",
+   "t0": 3.403,
+   "t1": 3.528,
+   "f0": 82,
+   "f1": 85,
+   "ph": "ʌv"
+  },
+  {
+   "w": "push",
+   "t0": 3.528,
+   "t1": 3.84,
+   "f0": 85,
+   "f1": 92,
+   "ph": "pˈʊʃ"
+  },
+  {
+   "w": "the",
+   "t0": 3.84,
+   "t1": 3.99,
+   "f0": 92,
+   "f1": 96,
+   "ph": "ðə"
+  },
+  {
+   "w": "veil",
+   "t0": 3.99,
+   "t1": 4.465,
+   "f0": 96,
+   "f1": 107,
+   "ph": "vˈAl"
+  },
+  {
+   "w": "of",
+   "t0": 4.465,
+   "t1": 4.64,
+   "f0": 107,
+   "f1": 111,
+   "ph": "ʌv"
+  },
+  {
+   "w": "ignorance",
+   "t0": 4.64,
+   "t1": 5.278,
+   "f0": 111,
+   "f1": 127,
+   "ph": "ˈɪɡnəɹəns"
+  },
+  {
+   "w": "back",
+   "t0": 5.278,
+   "t1": 5.81,
+   "f0": 127,
+   "f1": 139,
+   "ph": "bˈæk"
+  },
+  {
+   "w": "and",
+   "t0": 6.252,
+   "t1": 6.378,
+   "f0": 150,
+   "f1": 153,
+   "ph": "ænd"
+  },
+  {
+   "w": "the",
+   "t0": 6.378,
+   "t1": 6.49,
+   "f0": 153,
+   "f1": 156,
+   "ph": "ðə"
+  },
+  {
+   "w": "frontier",
+   "t0": 6.49,
+   "t1": 7.215,
+   "f0": 156,
+   "f1": 173,
+   "ph": "fɹˌʌntˈɪɹ"
+  },
+  {
+   "w": "of",
+   "t0": 7.215,
+   "t1": 7.365,
+   "f0": 173,
+   "f1": 177,
+   "ph": "ʌv"
+  },
+  {
+   "w": "discovery",
+   "t0": 7.365,
+   "t1": 8.077,
+   "f0": 177,
+   "f1": 194,
+   "ph": "dəskˈʌvəɹi"
+  },
+  {
+   "w": "forward",
+   "t0": 8.077,
+   "t1": 8.81,
+   "f0": 194,
+   "f1": 211,
+   "ph": "fˈɔɹwəɹd"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.59,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.53,
+  "median_f0_hz": 111.5,
+  "f0_range_st": 12.3,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "I've gotten to be in the room, when we sort of push the veil of ignorance back, and the frontier of discovery forward.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.152,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.53,
+  "speech_tail_s": 0.365,
+  "rise_ms": 105.0,
+  "decay_ms": 220.0,
+  "decay_to_60_s": 0.17
+ },
+ "speaker_label": "MAS",
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 7,
+   "word": "room",
+   "tts_s": 0.28,
+   "target_s": 0.3,
+   "point_s": 1.96,
+   "joined_speech": false,
+   "dip_db": -62.1,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.355,
+   "opened_s": 0.02
+  },
+  {
+   "after_word": 17,
+   "word": "back",
+   "tts_s": 0.325,
+   "target_s": 0.35,
+   "point_s": 5.38,
+   "joined_speech": false,
+   "dip_db": -64.8,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.4,
+   "opened_s": 0.025
+  }
+ ],
+ "alt_takes": [
+  {
+   "tag": "s2",
+   "seed": 2,
+   "speed": 0.85,
+   "file": "audio/ep01/coldopen/dialogue/fast-v1/takes/e1-co-1-02/s2.wav",
+   "span_s": 8.26,
+   "wpm": 167.1,
+   "asr": "I've gotten to be in the room when we sort of push the veil of ignorance back and the frontier of discovery forward.",
+   "recall": 1.0,
+   "utmos": null
+  }
+ ],
+ "fast": {
+  "key": "6d0367b361a6e7b2",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 20.6,
+  "takes": 2,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 1,
+   "share_s": 4.92
+  }
+ }
+}

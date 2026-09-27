@@ -1,0 +1,1068 @@
+{
+ "id": "e1-a1-9-06",
+ "scene": "9",
+ "speaker": "TASYA",
+ "speaker_slug": "tasya",
+ "text": "Oh, we don't think of it as rent. Everything you build, you'll build on our servers, as many as you like, for as long as you like. We'll keep the lights on and the floors warm. You keep doing whatever it is you do upstairs at night.",
+ "spoken_as": "Oh, we don't think of it as rent.{s0.6} Everything you build, you'll build on our servers,{0.25} as many as you like,{0.2} for as long as you like.{s0.6} We'll keep the lights on and the floors warm.{s0.55} You keep doing whatever it is you do upstairs at night.",
+ "delivery": "warmly, unhurried, as if it were a compliment",
+ "tag": "[INVENTED · every welcome a lease clause. The cloud term is the public one: the Jan 23 announcement made MACROSOFT's cloud NopeAI's exclusive provider (facts §D, which was the card's stat until dialogue pass 5; the facts owner confirms the wording, open question 58). Dialogue pass 5: \"as many as you like\" is new. Nothing in the paragraph gave a quantity, so Mas's \"that's a lot of servers.\" only echoed it; now it answers an open-ended offer (the naturalness and insider reads). It is a landlord's flourish, not a figure; the guardrails owner confirms it doesn't read as a claim about the deal's size (open question 58). It states no private terms and no figures. \"The floors warm\" sits over sc 6's red-hot GPUs and ahead of Act Four's \"below them\". Final pass: \"Everything you build, you'll build on our servers\" replaces \"You'll build on our servers, all of it,\", whose \"all of it\" dangled (the feel read); the same exclusive term, in a sentence that says what it covers]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "2S",
+ "shot_id": "2S",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 19.6,
+ "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-9-06.wav",
+ "mp3": null,
+ "duration_s": 15.31,
+ "frames_24": 368,
+ "voiced_span_s": 14.11,
+ "pace": {
+  "words": 47,
+  "wpm": 199.9,
+  "speed": 0.85,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.85,
+   "speed_band": [
+    0.88,
+    0.96
+   ],
+   "articulation_guide_sps": [
+    3.8,
+    4.4
+   ],
+   "turn_wpm_guide": [
+    125,
+    145
+   ],
+   "intent": "warmly, unhurried, as if it were a compliment"
+  },
+  "measured": {
+   "wpm": 199.9,
+   "articulation_sps": 4.78,
+   "syllables": 57,
+   "span_s": 14.11,
+   "pauses_s": [
+    0.59,
+    0.26,
+    0.19,
+    0.59,
+    0.55
+   ]
+  },
+  "longest_internal_gap_s": 0.59,
+  "audible_in_s": 0.51,
+  "audible_out_s": 14.62
+ },
+ "placement": {
+  "gap_before_s": 0.6,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 2,
+ "pick_reason": "fast: best of 2 seeds by ASR word recall, then no pause cut inside the voice, then the span nearest est_s",
+ "voice": "am_eric (Kokoro-82M stock) · b-eric-warm · speed 0.850",
+ "voiceId": "am_eric",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch -1.5 st",
+  "low shelf +2 dB @180 Hz",
+  "peak -1.5 dB @350 Hz Q1.0",
+  "high shelf +1.5 dB @6000 Hz",
+  "comp 2.0:1 @-24 dB (12/150 ms)",
+  "Kokoro speed 0.850 (the plan speed; tasya band 0.88-0.96); 4 whole reads, joined in room tone; no time-stretch, no carrier, no splice",
+  "pause after 'servers': Kokoro 0.00 s -> 0.27 s (intended 0.25; +0.25 s of room tone at the quietest 5 ms; Kokoro ran the words together here (dip -29.1 dB): ear check)",
+  "pause after 'like': Kokoro 0.10 s -> 0.20 s (intended 0.20; +0.10 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "O"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "E"
+  },
+  {
+   "t": 1.0,
+   "f": 24,
+   "shape": "O"
+  },
+  {
+   "t": 1.125,
+   "f": 27,
+   "shape": "E"
+  },
+  {
+   "t": 1.25,
+   "f": 30,
+   "shape": "A"
+  },
+  {
+   "t": 1.333,
+   "f": 32,
+   "shape": "E"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "A"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "E"
+  },
+  {
+   "t": 1.667,
+   "f": 40,
+   "shape": "A"
+  },
+  {
+   "t": 1.792,
+   "f": 43,
+   "shape": "E"
+  },
+  {
+   "t": 1.917,
+   "f": 46,
+   "shape": "A"
+  },
+  {
+   "t": 2.167,
+   "f": 52,
+   "shape": "E"
+  },
+  {
+   "t": 2.333,
+   "f": 56,
+   "shape": "rest"
+  },
+  {
+   "t": 2.917,
+   "f": 70,
+   "shape": "A"
+  },
+  {
+   "t": 3.0,
+   "f": 72,
+   "shape": "E"
+  },
+  {
+   "t": 3.375,
+   "f": 81,
+   "shape": "O"
+  },
+  {
+   "t": 3.5,
+   "f": 84,
+   "shape": "M"
+  },
+  {
+   "t": 3.583,
+   "f": 86,
+   "shape": "A"
+  },
+  {
+   "t": 3.75,
+   "f": 90,
+   "shape": "E"
+  },
+  {
+   "t": 4.0,
+   "f": 96,
+   "shape": "O"
+  },
+  {
+   "t": 4.125,
+   "f": 99,
+   "shape": "M"
+  },
+  {
+   "t": 4.25,
+   "f": 102,
+   "shape": "A"
+  },
+  {
+   "t": 4.333,
+   "f": 104,
+   "shape": "E"
+  },
+  {
+   "t": 4.417,
+   "f": 106,
+   "shape": "O"
+  },
+  {
+   "t": 4.542,
+   "f": 109,
+   "shape": "A"
+  },
+  {
+   "t": 4.625,
+   "f": 111,
+   "shape": "E"
+  },
+  {
+   "t": 4.75,
+   "f": 114,
+   "shape": "O"
+  },
+  {
+   "t": 4.875,
+   "f": 117,
+   "shape": "E"
+  },
+  {
+   "t": 5.208,
+   "f": 125,
+   "shape": "rest"
+  },
+  {
+   "t": 5.542,
+   "f": 133,
+   "shape": "A"
+  },
+  {
+   "t": 5.625,
+   "f": 135,
+   "shape": "M"
+  },
+  {
+   "t": 5.708,
+   "f": 137,
+   "shape": "A"
+  },
+  {
+   "t": 5.792,
+   "f": 139,
+   "shape": "E"
+  },
+  {
+   "t": 5.958,
+   "f": 143,
+   "shape": "A"
+  },
+  {
+   "t": 6.042,
+   "f": 145,
+   "shape": "E"
+  },
+  {
+   "t": 6.125,
+   "f": 147,
+   "shape": "O"
+  },
+  {
+   "t": 6.208,
+   "f": 149,
+   "shape": "E"
+  },
+  {
+   "t": 6.292,
+   "f": 151,
+   "shape": "A"
+  },
+  {
+   "t": 6.5,
+   "f": 156,
+   "shape": "E"
+  },
+  {
+   "t": 6.583,
+   "f": 158,
+   "shape": "rest"
+  },
+  {
+   "t": 6.792,
+   "f": 163,
+   "shape": "O"
+  },
+  {
+   "t": 6.875,
+   "f": 165,
+   "shape": "A"
+  },
+  {
+   "t": 7.0,
+   "f": 168,
+   "shape": "E"
+  },
+  {
+   "t": 7.125,
+   "f": 171,
+   "shape": "O"
+  },
+  {
+   "t": 7.292,
+   "f": 175,
+   "shape": "A"
+  },
+  {
+   "t": 7.417,
+   "f": 178,
+   "shape": "E"
+  },
+  {
+   "t": 7.5,
+   "f": 180,
+   "shape": "O"
+  },
+  {
+   "t": 7.583,
+   "f": 182,
+   "shape": "E"
+  },
+  {
+   "t": 7.708,
+   "f": 185,
+   "shape": "A"
+  },
+  {
+   "t": 7.917,
+   "f": 190,
+   "shape": "E"
+  },
+  {
+   "t": 8.042,
+   "f": 193,
+   "shape": "rest"
+  },
+  {
+   "t": 8.625,
+   "f": 207,
+   "shape": "O"
+  },
+  {
+   "t": 8.708,
+   "f": 209,
+   "shape": "E"
+  },
+  {
+   "t": 8.792,
+   "f": 211,
+   "shape": "A"
+  },
+  {
+   "t": 9.0,
+   "f": 216,
+   "shape": "M"
+  },
+  {
+   "t": 9.083,
+   "f": 218,
+   "shape": "E"
+  },
+  {
+   "t": 9.25,
+   "f": 222,
+   "shape": "A"
+  },
+  {
+   "t": 9.417,
+   "f": 226,
+   "shape": "E"
+  },
+  {
+   "t": 9.5,
+   "f": 228,
+   "shape": "O"
+  },
+  {
+   "t": 9.75,
+   "f": 234,
+   "shape": "E"
+  },
+  {
+   "t": 9.875,
+   "f": 237,
+   "shape": "A"
+  },
+  {
+   "t": 9.958,
+   "f": 239,
+   "shape": "E"
+  },
+  {
+   "t": 10.208,
+   "f": 245,
+   "shape": "O"
+  },
+  {
+   "t": 10.375,
+   "f": 249,
+   "shape": "E"
+  },
+  {
+   "t": 10.542,
+   "f": 253,
+   "shape": "O"
+  },
+  {
+   "t": 10.917,
+   "f": 262,
+   "shape": "E"
+  },
+  {
+   "t": 11.042,
+   "f": 265,
+   "shape": "M"
+  },
+  {
+   "t": 11.167,
+   "f": 268,
+   "shape": "rest"
+  },
+  {
+   "t": 11.708,
+   "f": 281,
+   "shape": "O"
+  },
+  {
+   "t": 11.792,
+   "f": 283,
+   "shape": "E"
+  },
+  {
+   "t": 11.875,
+   "f": 285,
+   "shape": "A"
+  },
+  {
+   "t": 12.0,
+   "f": 288,
+   "shape": "M"
+  },
+  {
+   "t": 12.125,
+   "f": 291,
+   "shape": "O"
+  },
+  {
+   "t": 12.25,
+   "f": 294,
+   "shape": "E"
+  },
+  {
+   "t": 12.417,
+   "f": 298,
+   "shape": "O"
+  },
+  {
+   "t": 12.5,
+   "f": 300,
+   "shape": "E"
+  },
+  {
+   "t": 12.583,
+   "f": 302,
+   "shape": "A"
+  },
+  {
+   "t": 12.667,
+   "f": 304,
+   "shape": "E"
+  },
+  {
+   "t": 13.083,
+   "f": 314,
+   "shape": "O"
+  },
+  {
+   "t": 13.458,
+   "f": 323,
+   "shape": "A"
+  },
+  {
+   "t": 13.583,
+   "f": 326,
+   "shape": "M"
+  },
+  {
+   "t": 13.667,
+   "f": 328,
+   "shape": "E"
+  },
+  {
+   "t": 13.75,
+   "f": 330,
+   "shape": "A"
+  },
+  {
+   "t": 13.917,
+   "f": 334,
+   "shape": "E"
+  },
+  {
+   "t": 14.042,
+   "f": 337,
+   "shape": "A"
+  },
+  {
+   "t": 14.125,
+   "f": 339,
+   "shape": "E"
+  },
+  {
+   "t": 14.25,
+   "f": 342,
+   "shape": "A"
+  },
+  {
+   "t": 14.542,
+   "f": 349,
+   "shape": "E"
+  },
+  {
+   "t": 14.625,
+   "f": 351,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Oh",
+   "t0": 0.56,
+   "t1": 0.76,
+   "f0": 13,
+   "f1": 18,
+   "ph": "ˈO"
+  },
+  {
+   "w": "we",
+   "t0": 0.81,
+   "t1": 0.96,
+   "f0": 19,
+   "f1": 23,
+   "ph": "wi"
+  },
+  {
+   "w": "don't",
+   "t0": 0.96,
+   "t1": 1.223,
+   "f0": 23,
+   "f1": 29,
+   "ph": "dˈOnt"
+  },
+  {
+   "w": "think",
+   "t0": 1.223,
+   "t1": 1.422,
+   "f0": 29,
+   "f1": 34,
+   "ph": "θˈɪŋk"
+  },
+  {
+   "w": "of",
+   "t0": 1.422,
+   "t1": 1.535,
+   "f0": 34,
+   "f1": 37,
+   "ph": "ʌv"
+  },
+  {
+   "w": "it",
+   "t0": 1.535,
+   "t1": 1.66,
+   "f0": 37,
+   "f1": 40,
+   "ph": "ɪt"
+  },
+  {
+   "w": "as",
+   "t0": 1.66,
+   "t1": 1.822,
+   "f0": 40,
+   "f1": 44,
+   "ph": "æz"
+  },
+  {
+   "w": "rent",
+   "t0": 1.822,
+   "t1": 2.35,
+   "f0": 44,
+   "f1": 56,
+   "ph": "ɹˈɛnt"
+  },
+  {
+   "w": "Everything",
+   "t0": 2.915,
+   "t1": 3.34,
+   "f0": 70,
+   "f1": 80,
+   "ph": "ˈɛvəɹiθˌɪŋ"
+  },
+  {
+   "w": "you",
+   "t0": 3.34,
+   "t1": 3.502,
+   "f0": 80,
+   "f1": 84,
+   "ph": "ju"
+  },
+  {
+   "w": "build",
+   "t0": 3.502,
+   "t1": 3.915,
+   "f0": 84,
+   "f1": 94,
+   "ph": "bˈɪld"
+  },
+  {
+   "w": "you'll",
+   "t0": 3.965,
+   "t1": 4.165,
+   "f0": 95,
+   "f1": 100,
+   "ph": "jul"
+  },
+  {
+   "w": "build",
+   "t0": 4.165,
+   "t1": 4.402,
+   "f0": 100,
+   "f1": 106,
+   "ph": "bˈɪld"
+  },
+  {
+   "w": "on",
+   "t0": 4.402,
+   "t1": 4.528,
+   "f0": 106,
+   "f1": 109,
+   "ph": "ˌɔn"
+  },
+  {
+   "w": "our",
+   "t0": 4.528,
+   "t1": 4.69,
+   "f0": 109,
+   "f1": 113,
+   "ph": "ˌWəɹ"
+  },
+  {
+   "w": "servers",
+   "t0": 4.69,
+   "t1": 5.215,
+   "f0": 113,
+   "f1": 125,
+   "ph": "sˈɜɹvəɹz"
+  },
+  {
+   "w": "as",
+   "t0": 5.515,
+   "t1": 5.665,
+   "f0": 132,
+   "f1": 136,
+   "ph": "æz"
+  },
+  {
+   "w": "many",
+   "t0": 5.665,
+   "t1": 5.94,
+   "f0": 136,
+   "f1": 143,
+   "ph": "mˈɛni"
+  },
+  {
+   "w": "as",
+   "t0": 5.94,
+   "t1": 6.065,
+   "f0": 143,
+   "f1": 146,
+   "ph": "æz"
+  },
+  {
+   "w": "you",
+   "t0": 6.065,
+   "t1": 6.215,
+   "f0": 146,
+   "f1": 149,
+   "ph": "ju"
+  },
+  {
+   "w": "like",
+   "t0": 6.215,
+   "t1": 6.59,
+   "f0": 149,
+   "f1": 158,
+   "ph": "lˈIk"
+  },
+  {
+   "w": "for",
+   "t0": 6.77,
+   "t1": 6.895,
+   "f0": 162,
+   "f1": 165,
+   "ph": "fɔɹ"
+  },
+  {
+   "w": "as",
+   "t0": 6.895,
+   "t1": 7.045,
+   "f0": 165,
+   "f1": 169,
+   "ph": "æz"
+  },
+  {
+   "w": "long",
+   "t0": 7.045,
+   "t1": 7.295,
+   "f0": 169,
+   "f1": 175,
+   "ph": "lˈɔŋ"
+  },
+  {
+   "w": "as",
+   "t0": 7.295,
+   "t1": 7.445,
+   "f0": 175,
+   "f1": 179,
+   "ph": "æz"
+  },
+  {
+   "w": "you",
+   "t0": 7.445,
+   "t1": 7.595,
+   "f0": 179,
+   "f1": 182,
+   "ph": "ju"
+  },
+  {
+   "w": "like",
+   "t0": 7.595,
+   "t1": 8.06,
+   "f0": 182,
+   "f1": 193,
+   "ph": "lˈIk"
+  },
+  {
+   "w": "We'll",
+   "t0": 8.64,
+   "t1": 8.79,
+   "f0": 207,
+   "f1": 211,
+   "ph": "wˌil"
+  },
+  {
+   "w": "keep",
+   "t0": 8.79,
+   "t1": 9.04,
+   "f0": 211,
+   "f1": 217,
+   "ph": "kˈip"
+  },
+  {
+   "w": "the",
+   "t0": 9.04,
+   "t1": 9.165,
+   "f0": 217,
+   "f1": 220,
+   "ph": "ðə"
+  },
+  {
+   "w": "lights",
+   "t0": 9.165,
+   "t1": 9.515,
+   "f0": 220,
+   "f1": 228,
+   "ph": "lˈIts"
+  },
+  {
+   "w": "on",
+   "t0": 9.515,
+   "t1": 9.865,
+   "f0": 228,
+   "f1": 237,
+   "ph": "ˌɔn"
+  },
+  {
+   "w": "and",
+   "t0": 9.865,
+   "t1": 9.978,
+   "f0": 237,
+   "f1": 239,
+   "ph": "ænd"
+  },
+  {
+   "w": "the",
+   "t0": 9.978,
+   "t1": 10.078,
+   "f0": 239,
+   "f1": 242,
+   "ph": "ðə"
+  },
+  {
+   "w": "floors",
+   "t0": 10.078,
+   "t1": 10.528,
+   "f0": 242,
+   "f1": 253,
+   "ph": "flˈɔɹz"
+  },
+  {
+   "w": "warm",
+   "t0": 10.528,
+   "t1": 11.15,
+   "f0": 253,
+   "f1": 268,
+   "ph": "wˈɔɹm"
+  },
+  {
+   "w": "You",
+   "t0": 11.705,
+   "t1": 11.805,
+   "f0": 281,
+   "f1": 283,
+   "ph": "jˌu"
+  },
+  {
+   "w": "keep",
+   "t0": 11.805,
+   "t1": 12.068,
+   "f0": 283,
+   "f1": 290,
+   "ph": "kˈip"
+  },
+  {
+   "w": "doing",
+   "t0": 12.068,
+   "t1": 12.43,
+   "f0": 290,
+   "f1": 298,
+   "ph": "dˈuɪŋ"
+  },
+  {
+   "w": "whatever",
+   "t0": 12.43,
+   "t1": 12.818,
+   "f0": 298,
+   "f1": 308,
+   "ph": "wəTˈɛvəɹ"
+  },
+  {
+   "w": "it",
+   "t0": 12.818,
+   "t1": 12.905,
+   "f0": 308,
+   "f1": 310,
+   "ph": "ɪt"
+  },
+  {
+   "w": "is",
+   "t0": 12.905,
+   "t1": 13.03,
+   "f0": 310,
+   "f1": 313,
+   "ph": "ɪz"
+  },
+  {
+   "w": "you",
+   "t0": 13.03,
+   "t1": 13.192,
+   "f0": 313,
+   "f1": 317,
+   "ph": "ju"
+  },
+  {
+   "w": "do",
+   "t0": 13.192,
+   "t1": 13.455,
+   "f0": 317,
+   "f1": 323,
+   "ph": "dˈu"
+  },
+  {
+   "w": "upstairs",
+   "t0": 13.455,
+   "t1": 14.03,
+   "f0": 323,
+   "f1": 337,
+   "ph": "ˌʌpstˈɛɹz"
+  },
+  {
+   "w": "at",
+   "t0": 14.03,
+   "t1": 14.155,
+   "f0": 337,
+   "f1": 340,
+   "ph": "æt"
+  },
+  {
+   "w": "night",
+   "t0": 14.155,
+   "t1": 14.64,
+   "f0": 340,
+   "f1": 351,
+   "ph": "nˈIt"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.82,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.51,
+  "median_f0_hz": 139.4,
+  "f0_range_st": 13.1,
+  "f0_method": "pYIN (a4lib.analyse)",
+  "final_move_st": -4.5,
+  "asr": "Oh, we don't think of it as rent. Everything you build, you'll build on our servers, as many as you like, for as long as you like. We'll keep the lights on and the floors warm. You keep doing whatever it is you do upstairs at night.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.12,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.42,
+  "rise_ms": 20.0,
+  "decay_ms": 185.0,
+  "decay_to_60_s": 0.27
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": null,
+   "word": "rent",
+   "tts_s": null,
+   "target_s": 0.6,
+   "final_s": 0.6,
+   "opened_s": 0.0,
+   "joined_speech": false,
+   "dip_db": null,
+   "breath": false,
+   "split": true,
+   "point_s": 1.855,
+   "crossfade_ms": [
+    0,
+    0
+   ]
+  },
+  {
+   "after_word": 8,
+   "word": "servers",
+   "tts_s": 0.0,
+   "target_s": 0.25,
+   "point_s": 4.805,
+   "joined_speech": true,
+   "dip_db": -29.1,
+   "breath": false,
+   "crossfade_ms": [
+    60,
+    25
+   ],
+   "final_s": 0.27,
+   "opened_s": 0.25
+  },
+  {
+   "after_word": 13,
+   "word": "like",
+   "tts_s": 0.095,
+   "target_s": 0.2,
+   "point_s": 6.205,
+   "joined_speech": false,
+   "dip_db": -59.7,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.2,
+   "opened_s": 0.105
+  },
+  {
+   "after_word": null,
+   "word": "like",
+   "tts_s": null,
+   "target_s": 0.6,
+   "final_s": 0.6,
+   "opened_s": 0.0,
+   "joined_speech": false,
+   "dip_db": null,
+   "breath": false,
+   "split": true,
+   "point_s": 7.565,
+   "crossfade_ms": [
+    0,
+    0
+   ]
+  },
+  {
+   "after_word": null,
+   "word": "warm",
+   "tts_s": null,
+   "target_s": 0.55,
+   "final_s": 0.55,
+   "opened_s": 0.0,
+   "joined_speech": false,
+   "dip_db": null,
+   "breath": false,
+   "split": true,
+   "point_s": 10.66,
+   "crossfade_ms": [
+    0,
+    0
+   ]
+  }
+ ],
+ "alt_takes": [
+  {
+   "tag": "s2",
+   "seed": 2,
+   "speed": 0.85,
+   "file": "audio/ep01/act1/dialogue/fast-v1/takes/e1-a1-9-06/s2.wav",
+   "span_s": 14.1,
+   "wpm": 200.0,
+   "asr": "Oh, we don't think of it as rent. Everything you build, you'll build on our servers, as many as you like, for as long as you like. We'll keep the lights on and the floors warm. You keep doing whatever it is you do upstairs at night.",
+   "recall": 1.0,
+   "utmos": null
+  }
+ ],
+ "fast": {
+  "key": "6bafdb02779b9889",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 25.26,
+  "takes": 2,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": true,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 1,
+   "share_s": 5.76
+  }
+ }
+}

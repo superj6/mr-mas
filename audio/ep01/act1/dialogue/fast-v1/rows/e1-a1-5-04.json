@@ -1,0 +1,567 @@
+{
+ "id": "e1-a1-5-04",
+ "scene": "5",
+ "speaker": "RIMA TAMURI",
+ "speaker_slug": "rima-tamuri",
+ "text": "Then let's treat it like one. One little post, no press. And a banner that says it makes things up.",
+ "spoken_as": "Then let's treat it like one.{0.4} One little post,{0.15} no press.{0.45} And a banner that says it makes things up.",
+ "delivery": "crossing; to Gerg, reasonable: a bargain, not a veto",
+ "tag": "[INVENTED · she picks up his \"research preview\". Act One fix pass (2026-09-27): it was \"No press, no keynote. One post, and a banner that says it can be wrong.\", which the insider read heard as a memo read aloud; \"one little post\" and \"makes things up\" are how she'd say it across a desk. Same bargain, same facts. Dialogue pass 5: \"keep it one\" is now \"treat it like one\", because after Gerg's three sentences \"one\" could be heard as \"keep it to one post\" (the naturalness read). The launch really was one post and a \"research preview\" that warned it could be wrong (facts #3); the facts owner confirms the warning's wording before the banner is drawn. Fallback: \"One post, and we call it a preview.\"]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "OTS",
+ "shot_id": "OTS",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 8.5,
+ "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-04.wav",
+ "mp3": null,
+ "duration_s": 7.075,
+ "frames_24": 170,
+ "voiced_span_s": 6.09,
+ "pace": {
+  "words": 20,
+  "wpm": 197.0,
+  "speed": 0.9,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.9,
+   "speed_band": [
+    0.9,
+    0.98
+   ],
+   "articulation_guide_sps": [
+    4.0,
+    4.6
+   ],
+   "turn_wpm_guide": [
+    140,
+    160
+   ],
+   "intent": "crossing; to Gerg, reasonable: a bargain, not a veto"
+  },
+  "measured": {
+   "wpm": 197.0,
+   "articulation_sps": 4.19,
+   "syllables": 22,
+   "span_s": 6.09,
+   "pauses_s": [
+    0.39,
+    0.14,
+    0.08,
+    0.31,
+    0.06
+   ]
+  },
+  "longest_internal_gap_s": 0.39,
+  "audible_in_s": 0.5,
+  "audible_out_s": 6.59
+ },
+ "placement": {
+  "gap_before_s": 0.6,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "af_heart (Kokoro-82M stock) · a-heart-composed · speed 0.900",
+ "voiceId": "af_heart",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch 0",
+  "peak -1 dB @300 Hz Q1.0",
+  "peak +1 dB @5000 Hz Q0.8",
+  "comp 2.0:1 @-22 dB (8/120 ms)",
+  "Kokoro speed 0.900 (the plan speed; rima-tamuri band 0.90-0.98); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'one': Kokoro 0.38 s -> 0.28 s (intended 0.40; +0.03 s of room tone at the quietest 5 ms)",
+  "pause after 'post': Kokoro 0.04 s -> 0.15 s (intended 0.15; +0.12 s of room tone at the quietest 5 ms)",
+  "pause after 'press': Kokoro 0.38 s -> 0.29 s (intended 0.45; +0.07 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "A"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "E"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "A"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "E"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "A"
+  },
+  {
+   "t": 1.208,
+   "f": 29,
+   "shape": "E"
+  },
+  {
+   "t": 1.375,
+   "f": 33,
+   "shape": "A"
+  },
+  {
+   "t": 1.542,
+   "f": 37,
+   "shape": "O"
+  },
+  {
+   "t": 1.625,
+   "f": 39,
+   "shape": "A"
+  },
+  {
+   "t": 1.833,
+   "f": 44,
+   "shape": "E"
+  },
+  {
+   "t": 1.917,
+   "f": 46,
+   "shape": "rest"
+  },
+  {
+   "t": 2.292,
+   "f": 55,
+   "shape": "O"
+  },
+  {
+   "t": 2.375,
+   "f": 57,
+   "shape": "A"
+  },
+  {
+   "t": 2.458,
+   "f": 59,
+   "shape": "E"
+  },
+  {
+   "t": 2.583,
+   "f": 62,
+   "shape": "A"
+  },
+  {
+   "t": 2.667,
+   "f": 64,
+   "shape": "E"
+  },
+  {
+   "t": 2.75,
+   "f": 66,
+   "shape": "M"
+  },
+  {
+   "t": 2.833,
+   "f": 68,
+   "shape": "O"
+  },
+  {
+   "t": 3.125,
+   "f": 75,
+   "shape": "E"
+  },
+  {
+   "t": 3.292,
+   "f": 79,
+   "shape": "rest"
+  },
+  {
+   "t": 3.5,
+   "f": 84,
+   "shape": "O"
+  },
+  {
+   "t": 3.625,
+   "f": 87,
+   "shape": "M"
+  },
+  {
+   "t": 3.75,
+   "f": 90,
+   "shape": "E"
+  },
+  {
+   "t": 3.917,
+   "f": 94,
+   "shape": "A"
+  },
+  {
+   "t": 4.208,
+   "f": 101,
+   "shape": "E"
+  },
+  {
+   "t": 4.292,
+   "f": 103,
+   "shape": "rest"
+  },
+  {
+   "t": 4.583,
+   "f": 110,
+   "shape": "E"
+  },
+  {
+   "t": 4.667,
+   "f": 112,
+   "shape": "A"
+  },
+  {
+   "t": 4.875,
+   "f": 117,
+   "shape": "E"
+  },
+  {
+   "t": 5.167,
+   "f": 124,
+   "shape": "A"
+  },
+  {
+   "t": 5.25,
+   "f": 126,
+   "shape": "E"
+  },
+  {
+   "t": 5.375,
+   "f": 129,
+   "shape": "A"
+  },
+  {
+   "t": 5.5,
+   "f": 132,
+   "shape": "E"
+  },
+  {
+   "t": 5.708,
+   "f": 137,
+   "shape": "M"
+  },
+  {
+   "t": 5.792,
+   "f": 139,
+   "shape": "A"
+  },
+  {
+   "t": 5.875,
+   "f": 141,
+   "shape": "E"
+  },
+  {
+   "t": 6.042,
+   "f": 145,
+   "shape": "A"
+  },
+  {
+   "t": 6.167,
+   "f": 148,
+   "shape": "E"
+  },
+  {
+   "t": 6.25,
+   "f": 150,
+   "shape": "A"
+  },
+  {
+   "t": 6.5,
+   "f": 156,
+   "shape": "M"
+  },
+  {
+   "t": 6.625,
+   "f": 159,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Then",
+   "t0": 0.5,
+   "t1": 0.7,
+   "f0": 12,
+   "f1": 17,
+   "ph": "ðˈɛn"
+  },
+  {
+   "w": "let's",
+   "t0": 0.7,
+   "t1": 0.988,
+   "f0": 17,
+   "f1": 24,
+   "ph": "lˈɛts"
+  },
+  {
+   "w": "treat",
+   "t0": 0.988,
+   "t1": 1.238,
+   "f0": 24,
+   "f1": 30,
+   "ph": "tɹˈit"
+  },
+  {
+   "w": "it",
+   "t0": 1.238,
+   "t1": 1.312,
+   "f0": 30,
+   "f1": 32,
+   "ph": "ɪt"
+  },
+  {
+   "w": "like",
+   "t0": 1.312,
+   "t1": 1.525,
+   "f0": 32,
+   "f1": 37,
+   "ph": "lˈIk"
+  },
+  {
+   "w": "one",
+   "t0": 1.525,
+   "t1": 1.93,
+   "f0": 37,
+   "f1": 46,
+   "ph": "wˈʌn"
+  },
+  {
+   "w": "One",
+   "t0": 2.275,
+   "t1": 2.538,
+   "f0": 55,
+   "f1": 61,
+   "ph": "wˈʌn"
+  },
+  {
+   "w": "little",
+   "t0": 2.538,
+   "t1": 2.762,
+   "f0": 61,
+   "f1": 66,
+   "ph": "lˈɪTᵊl"
+  },
+  {
+   "w": "post",
+   "t0": 2.762,
+   "t1": 3.275,
+   "f0": 66,
+   "f1": 79,
+   "ph": "pˈOst"
+  },
+  {
+   "w": "no",
+   "t0": 3.465,
+   "t1": 3.64,
+   "f0": 83,
+   "f1": 87,
+   "ph": "nˈO"
+  },
+  {
+   "w": "press",
+   "t0": 3.64,
+   "t1": 4.31,
+   "f0": 87,
+   "f1": 103,
+   "ph": "pɹˈɛs"
+  },
+  {
+   "w": "And",
+   "t0": 4.54,
+   "t1": 4.678,
+   "f0": 109,
+   "f1": 112,
+   "ph": "ˌænd"
+  },
+  {
+   "w": "a",
+   "t0": 4.678,
+   "t1": 4.74,
+   "f0": 112,
+   "f1": 114,
+   "ph": "ɐ"
+  },
+  {
+   "w": "banner",
+   "t0": 4.74,
+   "t1": 5.115,
+   "f0": 114,
+   "f1": 123,
+   "ph": "bˈænəɹ"
+  },
+  {
+   "w": "that",
+   "t0": 5.115,
+   "t1": 5.315,
+   "f0": 123,
+   "f1": 128,
+   "ph": "ðæt"
+  },
+  {
+   "w": "says",
+   "t0": 5.315,
+   "t1": 5.565,
+   "f0": 128,
+   "f1": 134,
+   "ph": "sˈɛz"
+  },
+  {
+   "w": "it",
+   "t0": 5.565,
+   "t1": 5.69,
+   "f0": 134,
+   "f1": 137,
+   "ph": "ɪt"
+  },
+  {
+   "w": "makes",
+   "t0": 5.69,
+   "t1": 5.965,
+   "f0": 137,
+   "f1": 143,
+   "ph": "mˌAks"
+  },
+  {
+   "w": "things",
+   "t0": 5.965,
+   "t1": 6.265,
+   "f0": 143,
+   "f1": 150,
+   "ph": "θˈɪŋz"
+  },
+  {
+   "w": "up",
+   "t0": 6.265,
+   "t1": 6.61,
+   "f0": 150,
+   "f1": 159,
+   "ph": "ˌʌp"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -2.92,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 201.7,
+  "f0_range_st": 8.6,
+  "f0_method": "pYIN (a4lib.analyse)",
+  "final_move_st": -0.4,
+  "asr": "Then let's treat it like one. One little post, no press, and a banner that says it makes things up.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.177,
+  "align_median_s": 0.031,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 10.0,
+  "decay_ms": 170.0,
+  "decay_to_60_s": 0.04
+ },
+ "speaker_label": "RIMA",
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 6,
+   "word": "one",
+   "tts_s": 0.375,
+   "target_s": 0.4,
+   "point_s": 1.75,
+   "joined_speech": false,
+   "dip_db": -65.4,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.285,
+   "opened_s": 0.025
+  },
+  {
+   "after_word": 9,
+   "word": "post",
+   "tts_s": 0.035,
+   "target_s": 0.15,
+   "point_s": 2.86,
+   "joined_speech": false,
+   "dip_db": -50.3,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.15,
+   "opened_s": 0.115
+  },
+  {
+   "after_word": 11,
+   "word": "press",
+   "tts_s": 0.375,
+   "target_s": 0.45,
+   "point_s": 4.04,
+   "joined_speech": false,
+   "dip_db": -61.5,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.29,
+   "opened_s": 0.075
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "29bdeed687d312e6",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 6.01,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": true,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 2,
+   "share_s": 1.19,
+   "rechecked_alone": false
+  }
+ }
+}

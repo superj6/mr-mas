@@ -1,0 +1,264 @@
+{
+ "id": "e1-a1-10-03",
+ "scene": "10",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "you've been an extremely good gnib.",
+ "spoken_as": "you've been an extremely good [gnib](/ɡənˈɪb/).",
+ "delivery": "sincerely",
+ "tag": "[INVENTED]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "2S",
+ "shot_id": "2S",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 3.1,
+ "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-10-03.wav",
+ "mp3": null,
+ "duration_s": 3.18,
+ "frames_24": 77,
+ "voiced_span_s": 2.0,
+ "pace": {
+  "words": 6,
+  "wpm": 180.0,
+  "speed": 0.9,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.9,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.6,
+    4.2
+   ],
+   "turn_wpm_guide": [
+    135,
+    155
+   ],
+   "intent": "sincerely"
+  },
+  "measured": {
+   "wpm": 180.0,
+   "articulation_sps": 4.0,
+   "syllables": 8,
+   "span_s": 2.0,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.57,
+  "audible_out_s": 2.57
+ },
+ "placement": {
+  "gap_before_s": 0.8,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.900",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch 0",
+  "low shelf +2 dB @160 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak +1 dB @3200 Hz Q0.8",
+  "high shelf -1.5 dB @8000 Hz",
+  "comp 2.0:1 @-24 dB (10/120 ms)",
+  "Kokoro speed 0.900 (the plan speed; mas-manalt band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "O"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "M"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "E"
+  },
+  {
+   "t": 0.833,
+   "f": 20,
+   "shape": "A"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "E"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "A"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "M"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "E"
+  },
+  {
+   "t": 1.75,
+   "f": 42,
+   "shape": "O"
+  },
+  {
+   "t": 1.917,
+   "f": 46,
+   "shape": "E"
+  },
+  {
+   "t": 2.333,
+   "f": 56,
+   "shape": "A"
+  },
+  {
+   "t": 2.417,
+   "f": 58,
+   "shape": "E"
+  },
+  {
+   "t": 2.5,
+   "f": 60,
+   "shape": "M"
+  },
+  {
+   "t": 2.583,
+   "f": 62,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "you've",
+   "t0": 0.565,
+   "t1": 0.715,
+   "f0": 14,
+   "f1": 17,
+   "ph": "juv"
+  },
+  {
+   "w": "been",
+   "t0": 0.715,
+   "t1": 0.852,
+   "f0": 17,
+   "f1": 20,
+   "ph": "bɪn"
+  },
+  {
+   "w": "an",
+   "t0": 0.852,
+   "t1": 0.94,
+   "f0": 20,
+   "f1": 23,
+   "ph": "ɐn"
+  },
+  {
+   "w": "extremely",
+   "t0": 0.94,
+   "t1": 1.702,
+   "f0": 23,
+   "f1": 41,
+   "ph": "ɪkstɹˈimli"
+  },
+  {
+   "w": "good",
+   "t0": 1.702,
+   "t1": 1.965,
+   "f0": 41,
+   "f1": 47,
+   "ph": "ɡˈʊd"
+  },
+  {
+   "w": "gnib",
+   "t0": 1.965,
+   "t1": 2.59,
+   "f0": 47,
+   "f1": 62,
+   "ph": "ɡənˈɪb"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.8,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.57,
+  "median_f0_hz": 118.8,
+  "f0_range_st": 9.5,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "You've been an extremely good ganeb.",
+  "cer": 0.071,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.264,
+  "align_median_s": 0.053,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.57,
+  "speech_tail_s": 0.365,
+  "rise_ms": 15.0,
+  "decay_ms": 185.0,
+  "decay_to_60_s": 0.25
+ },
+ "speaker_label": "MAS",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "d65abd8032247c36",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 3,
+  "wall_s": 15.34,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 4,
+   "share_s": 3.87,
+   "rechecked_alone": false
+  }
+ }
+}

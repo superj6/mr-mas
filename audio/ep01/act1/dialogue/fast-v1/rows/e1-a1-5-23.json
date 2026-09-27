@@ -1,0 +1,328 @@
+{
+ "id": "e1-a1-5-23",
+ "scene": "5",
+ "speaker": "GERG MOCKBRAN",
+ "speaker_slug": "gerg-mockbran",
+ "text": "It likes everyone. It called my variable names inspired.",
+ "spoken_as": "It likes everyone. It called my variable names inspired.",
+ "delivery": "O.S., on Mas's face; typing, not looking",
+ "tag": "[INVENTED · second pass: \"That's a v2 problem.\" moved up to answer Rima's cost question. Scene-craft pass: played off picture on Mas, so the deflation lands on the man it deflates]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "MCU",
+ "shot_id": "MCU",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 3.9,
+ "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-23.wav",
+ "mp3": null,
+ "duration_s": 4.1,
+ "frames_24": 99,
+ "voiced_span_s": 2.91,
+ "pace": {
+  "words": 9,
+  "wpm": 185.6,
+  "speed": 1.06,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.06,
+   "speed_band": [
+    1.02,
+    1.1
+   ],
+   "articulation_guide_sps": [
+    5.0,
+    5.8
+   ],
+   "turn_wpm_guide": [
+    175,
+    200
+   ],
+   "intent": "O.S., on Mas's face; typing, not looking"
+  },
+  "measured": {
+   "wpm": 185.6,
+   "articulation_sps": 5.5,
+   "syllables": 16,
+   "span_s": 2.91,
+   "pauses_s": [
+    0.09
+   ]
+  },
+  "longest_internal_gap_s": 0.09,
+  "audible_in_s": 0.51,
+  "audible_out_s": 3.42
+ },
+ "placement": {
+  "gap_before_s": 0.4,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.060",
+ "voiceId": "am_puck",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch +1.5 st",
+  "peak -2 dB @250 Hz Q1.0",
+  "peak +2 dB @4000 Hz Q0.9",
+  "comp 3.0:1 @-22 dB (4/80 ms)",
+  "Kokoro speed 1.060 (the centre of the band; gerg-mockbran band 1.02-1.10); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "E"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "A"
+  },
+  {
+   "t": 0.708,
+   "f": 17,
+   "shape": "E"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "A"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "E"
+  },
+  {
+   "t": 1.125,
+   "f": 27,
+   "shape": "O"
+  },
+  {
+   "t": 1.208,
+   "f": 29,
+   "shape": "E"
+  },
+  {
+   "t": 1.333,
+   "f": 32,
+   "shape": "rest"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "E"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "O"
+  },
+  {
+   "t": 1.667,
+   "f": 40,
+   "shape": "E"
+  },
+  {
+   "t": 1.792,
+   "f": 43,
+   "shape": "A"
+  },
+  {
+   "t": 2.0,
+   "f": 48,
+   "shape": "E"
+  },
+  {
+   "t": 2.208,
+   "f": 53,
+   "shape": "M"
+  },
+  {
+   "t": 2.292,
+   "f": 55,
+   "shape": "E"
+  },
+  {
+   "t": 2.417,
+   "f": 58,
+   "shape": "A"
+  },
+  {
+   "t": 2.583,
+   "f": 62,
+   "shape": "M"
+  },
+  {
+   "t": 2.667,
+   "f": 64,
+   "shape": "E"
+  },
+  {
+   "t": 2.958,
+   "f": 71,
+   "shape": "M"
+  },
+  {
+   "t": 3.042,
+   "f": 73,
+   "shape": "A"
+  },
+  {
+   "t": 3.167,
+   "f": 76,
+   "shape": "E"
+  },
+  {
+   "t": 3.417,
+   "f": 82,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "It",
+   "t0": 0.47,
+   "t1": 0.532,
+   "f0": 11,
+   "f1": 13,
+   "ph": "ˌɪt"
+  },
+  {
+   "w": "likes",
+   "t0": 0.532,
+   "t1": 0.795,
+   "f0": 13,
+   "f1": 19,
+   "ph": "lˈIks"
+  },
+  {
+   "w": "everyone",
+   "t0": 0.795,
+   "t1": 1.345,
+   "f0": 19,
+   "f1": 32,
+   "ph": "ˈɛvɹiwən"
+  },
+  {
+   "w": "It",
+   "t0": 1.42,
+   "t1": 1.545,
+   "f0": 34,
+   "f1": 37,
+   "ph": "ˌɪt"
+  },
+  {
+   "w": "called",
+   "t0": 1.545,
+   "t1": 1.757,
+   "f0": 37,
+   "f1": 42,
+   "ph": "kˈɔld"
+  },
+  {
+   "w": "my",
+   "t0": 1.757,
+   "t1": 1.895,
+   "f0": 42,
+   "f1": 45,
+   "ph": "mI"
+  },
+  {
+   "w": "variable",
+   "t0": 1.895,
+   "t1": 2.37,
+   "f0": 45,
+   "f1": 57,
+   "ph": "vˈɛɹiəbᵊl"
+  },
+  {
+   "w": "names",
+   "t0": 2.37,
+   "t1": 2.72,
+   "f0": 57,
+   "f1": 65,
+   "ph": "nˈAmz"
+  },
+  {
+   "w": "inspired",
+   "t0": 2.72,
+   "t1": 3.44,
+   "f0": 65,
+   "f1": 83,
+   "ph": "ɪnspˈIəɹd"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.3,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.51,
+  "median_f0_hz": 124.8,
+  "f0_range_st": 10.7,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "It likes everyone. It called my variable names inspired.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.293,
+  "align_median_s": 0.035,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.45,
+  "rise_ms": 25.0,
+  "decay_ms": 125.0,
+  "decay_to_60_s": 0.23
+ },
+ "speaker_label": "GERG",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "71abbf2b0041b56e",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 2,
+  "wall_s": 17.36,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 5,
+   "share_s": 5.78,
+   "rechecked_alone": false
+  }
+ }
+}

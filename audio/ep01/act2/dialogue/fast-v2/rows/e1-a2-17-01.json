@@ -1,0 +1,322 @@
+{
+ "id": "e1-a2-17-01",
+ "scene": "17",
+ "speaker": "MARIO",
+ "speaker_slug": "mario",
+ "text": "It's one sentence. It doesn't say what it costs.",
+ "spoken_as": "It's one sentence.{0.3} It doesn't say what it costs.",
+ "delivery": "writing; not letting go of the pen",
+ "tag": "[INVENTED · the statement's own words are on the sheet in the quote box (facts #22), and it is one sentence; the line claims nothing about any signer, and nothing about why the statement was written as it was. Final pass: \"It says it should be a priority.\" is cut, since it read the quote box back (the insider read)]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "2S",
+ "shot_id": "2S",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 4.6,
+ "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-17-01.wav",
+ "mp3": null,
+ "duration_s": 3.63,
+ "frames_24": 88,
+ "voiced_span_s": 2.62,
+ "pace": {
+  "words": 9,
+  "wpm": 206.1,
+  "speed": 1.02,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.02,
+   "speed_band": [
+    1.0,
+    1.08
+   ],
+   "articulation_guide_sps": [
+    4.6,
+    5.4
+   ],
+   "turn_wpm_guide": [
+    160,
+    185
+   ],
+   "intent": "writing; not letting go of the pen"
+  },
+  "measured": {
+   "wpm": 206.1,
+   "articulation_sps": 4.76,
+   "syllables": 11,
+   "span_s": 2.62,
+   "pauses_s": [
+    0.31
+   ]
+  },
+  "longest_internal_gap_s": 0.31,
+  "audible_in_s": 0.5,
+  "audible_out_s": 3.12
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_liam (Kokoro-82M stock) · a-liam-earnest · speed 1.020",
+ "voiceId": "am_liam",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 80 Hz",
+  "pitch 0",
+  "peak -1 dB @250 Hz Q1.0",
+  "low shelf +1 dB @200 Hz",
+  "peak +1.5 dB @3000 Hz Q0.9",
+  "high shelf -1 dB @7000 Hz",
+  "comp 2.5:1 @-22 dB (6/100 ms)",
+  "Kokoro speed 1.020 (the plan speed; mario band 1.00-1.08); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'sentence': Kokoro 0.00 s -> 0.32 s (intended 0.30; +0.30 s of room tone at the quietest 5 ms; Kokoro ran the words together here (dip -36.2 dB): ear check)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "E"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "O"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "A"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "E"
+  },
+  {
+   "t": 1.0,
+   "f": 24,
+   "shape": "A"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "E"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "rest"
+  },
+  {
+   "t": 1.75,
+   "f": 42,
+   "shape": "E"
+  },
+  {
+   "t": 1.875,
+   "f": 45,
+   "shape": "A"
+  },
+  {
+   "t": 1.958,
+   "f": 47,
+   "shape": "E"
+  },
+  {
+   "t": 2.167,
+   "f": 52,
+   "shape": "A"
+  },
+  {
+   "t": 2.292,
+   "f": 55,
+   "shape": "O"
+  },
+  {
+   "t": 2.375,
+   "f": 57,
+   "shape": "A"
+  },
+  {
+   "t": 2.458,
+   "f": 59,
+   "shape": "E"
+  },
+  {
+   "t": 2.625,
+   "f": 63,
+   "shape": "O"
+  },
+  {
+   "t": 2.875,
+   "f": 69,
+   "shape": "E"
+  },
+  {
+   "t": 3.125,
+   "f": 75,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "It's",
+   "t0": 0.47,
+   "t1": 0.675,
+   "f0": 11,
+   "f1": 16,
+   "ph": "ˌɪts"
+  },
+  {
+   "w": "one",
+   "t0": 0.675,
+   "t1": 0.938,
+   "f0": 16,
+   "f1": 22,
+   "ph": "wˈʌn"
+  },
+  {
+   "w": "sentence",
+   "t0": 0.938,
+   "t1": 1.4,
+   "f0": 22,
+   "f1": 34,
+   "ph": "sˈɛntᵊns"
+  },
+  {
+   "w": "It",
+   "t0": 1.738,
+   "t1": 1.838,
+   "f0": 42,
+   "f1": 44,
+   "ph": "ˌɪt"
+  },
+  {
+   "w": "doesn't",
+   "t0": 1.838,
+   "t1": 2.1,
+   "f0": 44,
+   "f1": 50,
+   "ph": "dˈʌzᵊnt"
+  },
+  {
+   "w": "say",
+   "t0": 2.1,
+   "t1": 2.325,
+   "f0": 50,
+   "f1": 56,
+   "ph": "sˈA"
+  },
+  {
+   "w": "what",
+   "t0": 2.325,
+   "t1": 2.463,
+   "f0": 56,
+   "f1": 59,
+   "ph": "wˌʌt"
+  },
+  {
+   "w": "it",
+   "t0": 2.463,
+   "t1": 2.55,
+   "f0": 59,
+   "f1": 61,
+   "ph": "ɪt"
+  },
+  {
+   "w": "costs",
+   "t0": 2.55,
+   "t1": 3.14,
+   "f0": 61,
+   "f1": 75,
+   "ph": "kˈɔsts"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.93,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 123.4,
+  "f0_range_st": 11.8,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "It's one sentence. It doesn't say what it costs.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.223,
+  "align_median_s": 0.03,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.425,
+  "rise_ms": 5.0,
+  "decay_ms": 80.0,
+  "decay_to_60_s": 0.09
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 3,
+   "word": "sentence",
+   "tts_s": 0.0,
+   "target_s": 0.3,
+   "point_s": 1.005,
+   "joined_speech": true,
+   "dip_db": -36.2,
+   "breath": false,
+   "crossfade_ms": [
+    60,
+    25
+   ],
+   "final_s": 0.315,
+   "opened_s": 0.3
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "5e8cedaff7b0232a",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 2,
+  "wall_s": 4.61,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 2
+  },
+  "asr": {
+   "packed_with": 3,
+   "share_s": 0.74,
+   "rechecked_alone": false
+  }
+ }
+}

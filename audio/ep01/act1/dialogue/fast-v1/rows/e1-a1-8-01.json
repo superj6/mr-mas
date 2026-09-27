@@ -1,0 +1,281 @@
+{
+ "id": "e1-a1-8-01",
+ "scene": "8",
+ "speaker": "RADNUS",
+ "speaker_slug": "radnus",
+ "text": "Everyone, it's fine. Let's take this offline.",
+ "spoken_as": "Everyone, it's fine. Let's take this offline.",
+ "delivery": "quick and apologetic, to the lobby, over the siren; he is calm, and sorry about everything",
+ "tag": "[INVENTED · dialogue pass 5: his reads are quick and apologetic, and Tasya's are unhurried, so the pilot's two calm corporate \"we\" voices differ by ear as well as by what they want (the naturalness read). The recording supervisor sets the presets and paces to match]",
+ "mode": "call",
+ "voiced_in_cut": true,
+ "on_camera": "monitor",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "POV",
+ "shot_id": "POV",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": "call",
+ "room": null,
+ "est_s": 3.9,
+ "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-8-01.wav",
+ "mp3": null,
+ "duration_s": 3.455,
+ "frames_24": 83,
+ "voiced_span_s": 2.46,
+ "pace": {
+  "words": 7,
+  "wpm": 170.7,
+  "speed": 1.03,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.03,
+   "speed_band": [
+    0.91,
+    0.99
+   ],
+   "articulation_guide_sps": [
+    3.8,
+    4.4
+   ],
+   "turn_wpm_guide": [
+    130,
+    150
+   ],
+   "intent": "quick and apologetic, to the lobby, over the siren; he is calm, and sorry about everything"
+  },
+  "measured": {
+   "wpm": 170.7,
+   "articulation_sps": 4.07,
+   "syllables": 10,
+   "span_s": 2.46,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.5,
+  "audible_out_s": 2.96
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_echo*0.60+am_fenrir*0.40 (Kokoro-82M stock) · d-echo-fenrir-courteous-up2 · speed 1.030",
+ "voiceId": "am_echo*0.60+am_fenrir*0.40",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch +2 st",
+  "low shelf +1.5 dB @180 Hz",
+  "peak -1.5 dB @350 Hz Q1.0",
+  "peak +0.5 dB @3000 Hz Q0.9",
+  "high shelf -1 dB @7000 Hz",
+  "comp 2.0:1 @-24 dB (10/140 ms)",
+  "then the call chain: HPF 200 Hz; LPF 7000 Hz; peak +1.5 dB @1800 Hz Q1.0; comp 2.5:1 @-22 dB (5/90 ms); -16 LUFS",
+  "Kokoro speed 1.030 (the plan speed; radnus band 0.91-0.99); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "A"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "E"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "O"
+  },
+  {
+   "t": 0.833,
+   "f": 20,
+   "shape": "E"
+  },
+  {
+   "t": 1.208,
+   "f": 29,
+   "shape": "A"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "E"
+  },
+  {
+   "t": 1.667,
+   "f": 40,
+   "shape": "A"
+  },
+  {
+   "t": 1.792,
+   "f": 43,
+   "shape": "E"
+  },
+  {
+   "t": 1.917,
+   "f": 46,
+   "shape": "A"
+  },
+  {
+   "t": 2.083,
+   "f": 50,
+   "shape": "E"
+  },
+  {
+   "t": 2.333,
+   "f": 56,
+   "shape": "O"
+  },
+  {
+   "t": 2.5,
+   "f": 60,
+   "shape": "E"
+  },
+  {
+   "t": 2.667,
+   "f": 64,
+   "shape": "A"
+  },
+  {
+   "t": 2.875,
+   "f": 69,
+   "shape": "E"
+  },
+  {
+   "t": 3.0,
+   "f": 72,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Everyone",
+   "t0": 0.48,
+   "t1": 0.905,
+   "f0": 12,
+   "f1": 22,
+   "ph": "ˈɛvɹiwən"
+  },
+  {
+   "w": "it's",
+   "t0": 0.942,
+   "t1": 1.13,
+   "f0": 23,
+   "f1": 27,
+   "ph": "ɪts"
+  },
+  {
+   "w": "fine",
+   "t0": 1.13,
+   "t1": 1.555,
+   "f0": 27,
+   "f1": 37,
+   "ph": "fˈIn"
+  },
+  {
+   "w": "Let's",
+   "t0": 1.63,
+   "t1": 1.88,
+   "f0": 39,
+   "f1": 45,
+   "ph": "lˈɛts"
+  },
+  {
+   "w": "take",
+   "t0": 1.88,
+   "t1": 2.13,
+   "f0": 45,
+   "f1": 51,
+   "ph": "tˈAk"
+  },
+  {
+   "w": "this",
+   "t0": 2.13,
+   "t1": 2.33,
+   "f0": 51,
+   "f1": 56,
+   "ph": "ðɪs"
+  },
+  {
+   "w": "offline",
+   "t0": 2.33,
+   "t1": 2.98,
+   "f0": 56,
+   "f1": 72,
+   "ph": "ˌɔflˈIn"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.27,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 146.0,
+  "f0_range_st": 12.4,
+  "f0_method": "pYIN (a4lib.analyse)",
+  "final_move_st": -1.9,
+  "asr": "Everyone, it's fine. Let's take this offline.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.181,
+  "align_median_s": 0.05,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.43,
+  "rise_ms": 15.0,
+  "decay_ms": 180.0,
+  "decay_to_60_s": 0.07
+ },
+ "clean": {
+  "file": "audio/ep01/act1/dialogue/fast-v1/clean/e1-a1-8-01.wav",
+  "note": "the dry read (no call chain), -16 LUFS"
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "69b9ed346448e172",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 3.42,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": true,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 3,
+   "share_s": 0.65,
+   "rechecked_alone": false
+  }
+ }
+}

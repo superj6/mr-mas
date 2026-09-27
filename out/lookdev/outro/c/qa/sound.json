@@ -1,12 +1,12 @@
 {
- "length_s": 8.5,
- "frames": 204,
+ "length_s": 9.0,
+ "frames": 216,
  "fps": 24,
- "lufs_music": -15.98,
- "lufs_mix": -15.96,
- "true_peak_mix_dbtp": -2.76,
- "last_frame_peak_dbfs": -44.3,
- "score": "track.py (OST engine, read-only): knee whole once in bar 2 (felt + chip 8va), button chord F-C-G on 3.1",
+ "lufs_music": -15.92,
+ "lufs_mix": -16.13,
+ "true_peak_mix_dbtp": -2.82,
+ "last_frames_peak_dbfs": -240.0,
+ "score": "track.py (OST engine, read-only): knee whole once in bar 2 (felt + chip 8va), button chord F-C-G on 3.1, ringing to the dip; zero from o190",
  "cues": [
   {
    "f": 0,
@@ -27,55 +27,47 @@
    "o": 0,
    "sfx": "neon_buzz (library)",
    "db": -17,
-   "what": "the lit sign's tube hum (F2); dips at o121-122"
+   "what": "the lit sign's tube hum (F2); dips at o121-122; stops at o151"
   },
   {
-   "f": 84,
-   "o": 60,
+   "f": 108,
+   "o": 84,
    "sfx": "rustle (synth)",
    "db": -24,
    "pan": 0.18,
    "what": "the sleeve comes into frame"
   },
   {
-   "f": 88,
-   "o": 64,
+   "f": 117,
+   "o": 93,
+   "sfx": "tap (synth)",
+   "db": -26,
+   "pan": 0.2,
+   "what": "the fingertips on last night's plate"
+  },
+  {
+   "f": 125,
+   "o": 101,
    "sfx": "hook_ticks (synth)",
    "db": -12,
    "pan": 0.2,
-   "what": "the 0 comes off its hooks"
+   "what": "the 5 comes off its hooks (the 6 is behind it)"
   },
   {
-   "f": 99,
-   "o": 75,
+   "f": 137,
+   "o": 113,
+   "sfx": "rustle (synth)",
+   "db": -25,
+   "pan": 0.3,
+   "what": "the hand withdraws"
+  },
+  {
+   "f": 140,
+   "o": 116,
    "sfx": "card_drop (synth)",
    "db": -7,
    "pan": 0.62,
-   "what": "the 0 lands in the box of spare zeros"
-  },
-  {
-   "f": 114,
-   "o": 90,
-   "sfx": "plate_clack (synth)",
-   "db": -6,
-   "pan": 0.1,
-   "what": "the 3 hangs (on the knee's G)"
-  },
-  {
-   "f": 129,
-   "o": 105,
-   "sfx": "plate_clack (synth)",
-   "db": -6,
-   "pan": 0.2,
-   "what": "the 6 hangs (on the knee's C)"
-  },
-  {
-   "f": 136,
-   "o": 112,
-   "sfx": "rustle (synth)",
-   "db": -25,
-   "pan": 0.22,
-   "what": "the hand withdraws"
+   "what": "the 5 lands in the box of spare zeros"
   },
   {
    "f": 144,
@@ -116,6 +108,22 @@
    "db": -25,
    "pan": 0.05,
    "what": "and again, further along"
+  },
+  {
+   "f": 174,
+   "o": 150,
+   "sfx": "ballast_tick (synth)",
+   "db": -19,
+   "pan": 0.0,
+   "what": "the timer's second step: the tube's half step"
+  },
+  {
+   "f": 175,
+   "o": 151,
+   "sfx": "contactor (synth)",
+   "db": -17,
+   "pan": 0.45,
+   "what": "the second contactor, farther off: the sign is out, the hum stops (3.3)"
   }
  ]
 }

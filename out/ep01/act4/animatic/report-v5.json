@@ -1,0 +1,481 @@
+{
+ "shots": {
+  "v3": {
+   "shots": 119,
+   "mean": 2.091386554621849,
+   "median": 1.875,
+   "min": 0.625,
+   "max": 6.25,
+   "under_1.0": 11,
+   "under_1.5": 48,
+   "under_2.0": 72,
+   "over_10": 0,
+   "over_20": 0,
+   "max_cuts_10s": 8,
+   "max_cuts_10s_at": 438,
+   "hist": {
+    "0-1 s": 11,
+    "1-2 s": 61,
+    "2-3 s": 29,
+    "3-4 s": 7,
+    "4-6 s": 9,
+    "6-10 s": 2,
+    "10-20 s": 0,
+    "20 s +": 0
+   },
+   "longest": [
+    "30.03 6.25 s",
+    "30.01 6.25 s",
+    "29.07 5.62 s"
+   ]
+  },
+  "v4": {
+   "shots": 77,
+   "mean": 3.2662337662337664,
+   "median": 2.75,
+   "min": 1.25,
+   "max": 9.083333333333334,
+   "under_1.0": 0,
+   "under_1.5": 2,
+   "under_2.0": 17,
+   "over_10": 0,
+   "over_20": 0,
+   "max_cuts_10s": 5,
+   "max_cuts_10s_at": 636,
+   "hist": {
+    "0-1 s": 0,
+    "1-2 s": 17,
+    "2-3 s": 24,
+    "3-4 s": 14,
+    "4-6 s": 16,
+    "6-10 s": 6,
+    "10-20 s": 0,
+    "20 s +": 0
+   },
+   "longest": [
+    "S4.08 9.08 s",
+    "S1.03 9.00 s",
+    "S5.06 7.75 s"
+   ]
+  },
+  "v5": {
+   "shots": 83,
+   "mean": 6.246485943775101,
+   "median": 4.0,
+   "min": 1.0,
+   "max": 28.041666666666668,
+   "under_1.0": 0,
+   "under_1.5": 2,
+   "under_2.0": 12,
+   "over_10": 16,
+   "over_20": 2,
+   "max_cuts_10s": 5,
+   "max_cuts_10s_at": 888,
+   "hist": {
+    "0-1 s": 0,
+    "1-2 s": 12,
+    "2-3 s": 17,
+    "3-4 s": 11,
+    "4-6 s": 14,
+    "6-10 s": 13,
+    "10-20 s": 14,
+    "20 s +": 2
+   },
+   "longest": [
+    "S4.08 28.04 s",
+    "S5.06 22.79 s",
+    "S3.04 19.25 s"
+   ]
+  }
+ },
+ "dialogue": {
+  "v3": {
+   "posts": 7,
+   "words": 184,
+   "median_words": 4.0,
+   "le3": 21,
+   "share": 0.26787209107651094,
+   "words_per_min": 44.35961828227022,
+   "multi": 11,
+   "longest": {
+    "a": 3567,
+    "on": 148.625,
+    "end": 160.625,
+    "s": 12.0,
+    "speakers": [
+     "GERG",
+     "MAS",
+     "TASYA"
+    ],
+    "words": 25
+   },
+   "longest5": {
+    "a": 4368,
+    "on": 182.0,
+    "end": 195.79166666666666,
+    "s": 13.791666666666657,
+    "speakers": [
+     "ALYI",
+     "MAS",
+     "TASYA"
+    ],
+    "words": 19
+   },
+   "over30": 0
+  },
+  "v4": {
+   "posts": 7,
+   "words": 176,
+   "median_words": 4,
+   "le3": 21,
+   "share": 0.2509940357852883,
+   "words_per_min": 41.988071570576544,
+   "multi": 11,
+   "longest": {
+    "a": 2100,
+    "on": 87.5,
+    "end": 97.54166666666667,
+    "s": 10.041666666666671,
+    "speakers": [
+     "ALYI",
+     "NELEH"
+    ],
+    "words": 23
+   },
+   "longest5": {
+    "a": 2100,
+    "on": 87.5,
+    "end": 108.125,
+    "s": 20.625,
+    "speakers": [
+     "ADELINA",
+     "ALYI",
+     "MARIO",
+     "NELEH"
+    ],
+    "words": 39
+   },
+   "over30": 0
+  },
+  "v5": {
+   "posts": 7,
+   "words": 836,
+   "median_words": 5,
+   "le3": 27,
+   "share": 0.527284416941252,
+   "words_per_min": 96.74837257896006,
+   "multi": 15,
+   "longest": {
+    "a": 7167,
+    "on": 298.625,
+    "end": 359.6467,
+    "s": 61.02170000000001,
+    "speakers": [
+     "GERG",
+     "MAS"
+    ],
+    "words": 138
+   },
+   "longest5": {
+    "a": 7167,
+    "on": 298.625,
+    "end": 373.76,
+    "s": 75.13499999999999,
+    "speakers": [
+     "GERG",
+     "MAS",
+     "TASYA"
+    ],
+    "words": 165
+   },
+   "over30": 3
+  }
+ },
+ "holes_mono": {
+  "v3": {
+   "n": 78,
+   "s": 70.45,
+   "jumps": 107
+  },
+  "v4": {
+   "n": 1,
+   "s": 3.6,
+   "jumps": 55
+  },
+  "v5": {
+   "n": 2,
+   "s": 4.2,
+   "jumps": 172
+  }
+ },
+ "holes_louder": {
+  "v3": {
+   "n": 58,
+   "s": 54.25,
+   "jumps": 86
+  },
+  "v4": {
+   "n": 1,
+   "s": 3.6,
+   "jumps": 38
+  },
+  "v5": {
+   "n": 2,
+   "s": 4.15,
+   "jumps": 88
+  }
+ },
+ "render": {
+  "animatic": {
+   "programs": [],
+   "stream_groups": [],
+   "streams": [
+    {
+     "codec_name": "h264",
+     "codec_type": "video",
+     "width": 1920,
+     "height": 1080,
+     "r_frame_rate": "24/1",
+     "duration": "518.458333",
+     "nb_frames": "12443"
+    },
+    {
+     "codec_name": "aac",
+     "codec_type": "audio",
+     "sample_rate": "48000",
+     "channels": 2,
+     "r_frame_rate": "0/0",
+     "duration": "518.458000",
+     "nb_frames": "24304"
+    }
+   ],
+   "format": {
+    "duration": "518.458333",
+    "size": "90221671"
+   }
+  },
+  "picture": {
+   "programs": [],
+   "stream_groups": [],
+   "streams": [
+    {
+     "codec_name": "h264",
+     "codec_type": "video",
+     "width": 1920,
+     "height": 1080,
+     "r_frame_rate": "24/1",
+     "duration": "518.458333",
+     "nb_frames": "12443"
+    },
+    {
+     "codec_name": "aac",
+     "codec_type": "audio",
+     "sample_rate": "48000",
+     "channels": 2,
+     "r_frame_rate": "0/0",
+     "duration": "518.458000",
+     "nb_frames": "24304"
+    }
+   ],
+   "format": {
+    "duration": "518.458333",
+    "size": "43071042"
+   }
+  },
+  "cancel_compare": {
+   "programs": [],
+   "stream_groups": [],
+   "streams": [
+    {
+     "codec_name": "h264",
+     "codec_type": "video",
+     "width": 1920,
+     "height": 1080,
+     "r_frame_rate": "24/1",
+     "duration": "35.333333",
+     "nb_frames": "848"
+    },
+    {
+     "codec_name": "aac",
+     "codec_type": "audio",
+     "sample_rate": "48000",
+     "channels": 2,
+     "r_frame_rate": "0/0",
+     "duration": "35.333000",
+     "nb_frames": "1658"
+    }
+   ],
+   "format": {
+    "duration": "35.333333",
+    "size": "3193652"
+   }
+  },
+  "picture_frames_decoded": 12443,
+  "cuts": {
+   "lock_cuts": 82,
+   "found_on_the_lock_frame": 78,
+   "not_found": [
+    {
+     "cut": 1277,
+     "tc": "0:53.21",
+     "shot": "S2.02",
+     "peak_offset": 0,
+     "change_at_cut": 0.5,
+     "change_around": 0.0
+    },
+    {
+     "cut": 1320,
+     "tc": "0:55.00",
+     "shot": "S2.03",
+     "peak_offset": 3,
+     "change_at_cut": 0,
+     "change_around": 0.01
+    },
+    {
+     "cut": 1416,
+     "tc": "0:59.00",
+     "shot": "S2.04",
+     "peak_offset": -3,
+     "change_at_cut": 0.0,
+     "change_around": 0.01
+    },
+    {
+     "cut": 8241,
+     "tc": "5:43.38",
+     "shot": "S5.08",
+     "peak_offset": 2,
+     "change_at_cut": 19.39,
+     "change_around": 0.17
+    }
+   ]
+  },
+  "audio_samples": {
+   "animatic": 24886272,
+   "mix_act": 24886000
+  },
+  "audio_sync": [
+   {
+    "act_frame": 177,
+    "tc": "0:07.38",
+    "lag_ms": 0.0,
+    "corr": 1.0
+   },
+   {
+    "act_frame": 1569,
+    "tc": "1:05.38",
+    "lag_ms": 0.0,
+    "corr": 1.0
+   },
+   {
+    "act_frame": 2516,
+    "tc": "1:44.83",
+    "lag_ms": 0.0,
+    "corr": 1.0
+   },
+   {
+    "act_frame": 2986,
+    "tc": "2:04.42",
+    "lag_ms": 0.0,
+    "corr": 1.0
+   },
+   {
+    "act_frame": 4192,
+    "tc": "2:54.67",
+    "lag_ms": 0.0,
+    "corr": 1.0
+   },
+   {
+    "act_frame": 5160,
+    "tc": "3:35.00",
+    "lag_ms": 0.0,
+    "corr": 1.0
+   },
+   {
+    "act_frame": 5943,
+    "tc": "4:07.62",
+    "lag_ms": 0.0,
+    "corr": 1.0
+   },
+   {
+    "act_frame": 7302,
+    "tc": "5:04.25",
+    "lag_ms": 0.0,
+    "corr": 1.0
+   },
+   {
+    "act_frame": 8067,
+    "tc": "5:36.12",
+    "lag_ms": 0.0,
+    "corr": 1.0
+   },
+   {
+    "act_frame": 8592,
+    "tc": "5:58.00",
+    "lag_ms": 0.0,
+    "corr": 1.0
+   },
+   {
+    "act_frame": 9668,
+    "tc": "6:42.83",
+    "lag_ms": 0.0,
+    "corr": 1.0
+   },
+   {
+    "act_frame": 10758,
+    "tc": "7:28.25",
+    "lag_ms": 0.0,
+    "corr": 1.0
+   }
+  ],
+  "render_log": {
+   "frames": 12443,
+   "from": 0,
+   "to": 12443,
+   "jobs": 2,
+   "track": "/home/jgon/project/art/mrmas/audio/reel/ep01-act4-v5/mix.wav",
+   "glyph_dir": "/tmp/claude-1000/-home-jgon-project-art-mrmas/a5e7723c-6ab4-4824-a1ed-8e367fdb82e5/scratchpad/a4p5-render/glyph",
+   "segments": [
+    {
+     "from": 0,
+     "to": 6274,
+     "ms": 271084,
+     "spliced": {
+      "pic": 28,
+      "anim": 28
+     },
+     "marked": [],
+     "spliceOff": [],
+     "failed": {}
+    },
+    {
+     "from": 6274,
+     "to": 12443,
+     "ms": 222830,
+     "spliced": {
+      "pic": 0,
+      "anim": 0
+     },
+     "marked": [],
+     "spliceOff": [],
+     "failed": {}
+    }
+   ],
+   "seconds": 294,
+   "summary": {
+    "pic": 28,
+    "anim": 28,
+    "marked": [],
+    "off": [],
+    "failed": {}
+   },
+   "sources": {
+    "shots5.ts": "3a30a8b8a4bb158f0275672c00198b7a",
+    "lipsync5.ts": "0ee0876a7855345a79e20325b6409848",
+    "frame5.ts": "fafbf336a5e24e72c38ad5c67ff47999",
+    "data-v5.ts": "4fb3d1cce6728900263735fd9a80bdc8"
+   },
+   "sources_note": "added after the run from the job log (shots5, frame5, data-v5 printed at job start) and lipsync5.ts as on disk when r5.cjs was built (02:20:58); later runs record them themselves",
+   "bundle_built": "2026-09-27T02:20:58-07:00"
+  }
+ }
+}

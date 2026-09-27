@@ -1,0 +1,377 @@
+{
+ "id": "e1-a1-11-04",
+ "scene": "11",
+ "speaker": "GERG MOCKBRAN",
+ "speaker_slug": "gerg-mockbran",
+ "text": "Somebody leaked Atem's model. The whole thing's on a message board.",
+ "spoken_as": "Somebody leaked [Atem's](/ˈAtəmz/) model.{0.35} The whole thing's on a message board.",
+ "delivery": "at his desk across the aisle, looking up at the monitor too; half impressed",
+ "tag": "[INVENTED · Act One fix pass (2026-09-27): the newcomer read found the crate beat had \"no dialogue and no stakes\"; the insider read noted the joke is that it LEAKED, which nothing said. Gerg says what spilled and where, in the room that has to compete with it]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "W",
+ "shot_id": "W",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 5.4,
+ "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-11-04.wav",
+ "mp3": null,
+ "duration_s": 4.665,
+ "frames_24": 112,
+ "voiced_span_s": 3.45,
+ "pace": {
+  "words": 11,
+  "wpm": 191.3,
+  "speed": 1.02,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.02,
+   "speed_band": [
+    1.02,
+    1.1
+   ],
+   "articulation_guide_sps": [
+    5.0,
+    5.8
+   ],
+   "turn_wpm_guide": [
+    175,
+    200
+   ],
+   "intent": "at his desk across the aisle, looking up at the monitor too; half impressed"
+  },
+  "measured": {
+   "wpm": 191.3,
+   "articulation_sps": 5.18,
+   "syllables": 16,
+   "span_s": 3.45,
+   "pauses_s": [
+    0.36
+   ]
+  },
+  "longest_internal_gap_s": 0.36,
+  "audible_in_s": 0.5,
+  "audible_out_s": 3.95
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.020",
+ "voiceId": "am_puck",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch +1.5 st",
+  "peak -2 dB @250 Hz Q1.0",
+  "peak +2 dB @4000 Hz Q0.9",
+  "comp 3.0:1 @-22 dB (4/80 ms)",
+  "Kokoro speed 1.020 (the plan speed; gerg-mockbran band 1.02-1.10); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'model': Kokoro 0.11 s -> 0.36 s (intended 0.35; +0.24 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "A"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "M"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "E"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "A"
+  },
+  {
+   "t": 1.0,
+   "f": 24,
+   "shape": "E"
+  },
+  {
+   "t": 1.125,
+   "f": 27,
+   "shape": "A"
+  },
+  {
+   "t": 1.25,
+   "f": 30,
+   "shape": "E"
+  },
+  {
+   "t": 1.375,
+   "f": 33,
+   "shape": "M"
+  },
+  {
+   "t": 1.542,
+   "f": 37,
+   "shape": "A"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "E"
+  },
+  {
+   "t": 1.958,
+   "f": 47,
+   "shape": "rest"
+  },
+  {
+   "t": 2.292,
+   "f": 55,
+   "shape": "E"
+  },
+  {
+   "t": 2.375,
+   "f": 57,
+   "shape": "O"
+  },
+  {
+   "t": 2.542,
+   "f": 61,
+   "shape": "E"
+  },
+  {
+   "t": 2.708,
+   "f": 65,
+   "shape": "A"
+  },
+  {
+   "t": 2.833,
+   "f": 68,
+   "shape": "E"
+  },
+  {
+   "t": 2.958,
+   "f": 71,
+   "shape": "O"
+  },
+  {
+   "t": 3.042,
+   "f": 73,
+   "shape": "A"
+  },
+  {
+   "t": 3.125,
+   "f": 75,
+   "shape": "M"
+  },
+  {
+   "t": 3.208,
+   "f": 77,
+   "shape": "A"
+  },
+  {
+   "t": 3.292,
+   "f": 79,
+   "shape": "E"
+  },
+  {
+   "t": 3.542,
+   "f": 85,
+   "shape": "M"
+  },
+  {
+   "t": 3.625,
+   "f": 87,
+   "shape": "O"
+  },
+  {
+   "t": 3.792,
+   "f": 91,
+   "shape": "E"
+  },
+  {
+   "t": 3.958,
+   "f": 95,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Somebody",
+   "t0": 0.49,
+   "t1": 0.84,
+   "f0": 12,
+   "f1": 20,
+   "ph": "sˈʌmbədi"
+  },
+  {
+   "w": "leaked",
+   "t0": 0.84,
+   "t1": 1.115,
+   "f0": 20,
+   "f1": 27,
+   "ph": "lˈikt"
+  },
+  {
+   "w": "Atem's",
+   "t0": 1.115,
+   "t1": 1.49,
+   "f0": 27,
+   "f1": 36,
+   "ph": "ˈAtəmz"
+  },
+  {
+   "w": "model",
+   "t0": 1.49,
+   "t1": 1.94,
+   "f0": 36,
+   "f1": 47,
+   "ph": "mˈɑdᵊl"
+  },
+  {
+   "w": "The",
+   "t0": 2.255,
+   "t1": 2.355,
+   "f0": 54,
+   "f1": 57,
+   "ph": "ðə"
+  },
+  {
+   "w": "whole",
+   "t0": 2.355,
+   "t1": 2.593,
+   "f0": 57,
+   "f1": 62,
+   "ph": "hˈOl"
+  },
+  {
+   "w": "thing's",
+   "t0": 2.593,
+   "t1": 2.968,
+   "f0": 62,
+   "f1": 71,
+   "ph": "θˈɪŋz"
+  },
+  {
+   "w": "on",
+   "t0": 2.968,
+   "t1": 3.068,
+   "f0": 71,
+   "f1": 74,
+   "ph": "ˌɔn"
+  },
+  {
+   "w": "a",
+   "t0": 3.068,
+   "t1": 3.13,
+   "f0": 74,
+   "f1": 75,
+   "ph": "ɐ"
+  },
+  {
+   "w": "message",
+   "t0": 3.13,
+   "t1": 3.53,
+   "f0": 75,
+   "f1": 85,
+   "ph": "mˈɛsɪʤ"
+  },
+  {
+   "w": "board",
+   "t0": 3.53,
+   "t1": 3.97,
+   "f0": 85,
+   "f1": 95,
+   "ph": "bˈɔɹd"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -2.88,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 127.1,
+  "f0_range_st": 11.3,
+  "f0_method": "pYIN (a4lib.analyse)",
+  "final_move_st": -3.0,
+  "asr": "Somebody leaked Atem's model. The whole thing's on a message board.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.371,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 25.0,
+  "decay_ms": 105.0,
+  "decay_to_60_s": 0.265
+ },
+ "speaker_label": "GERG",
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 4,
+   "word": "model",
+   "tts_s": 0.11,
+   "target_s": 0.35,
+   "point_s": 1.555,
+   "joined_speech": false,
+   "dip_db": -61.7,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.365,
+   "opened_s": 0.24
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "20871639246652ad",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 4.32,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": true,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 2.05,
+   "rechecked_alone": false
+  }
+ }
+}

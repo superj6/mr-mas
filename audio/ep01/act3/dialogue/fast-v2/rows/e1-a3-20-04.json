@@ -1,0 +1,435 @@
+{
+ "id": "e1-a3-20-04",
+ "scene": "20",
+ "speaker": "GERG MOCKBRAN",
+ "speaker_slug": "gerg-mockbran",
+ "text": "Half the replies think it's a leak. The other half want to know which floor it's on.",
+ "spoken_as": "Half the replies think it's a leak.{0.40} The other half want to know which floor it's on.",
+ "delivery": "filter",
+ "tag": "[INVENTED · the crowd's reading of a real post, as the reply on screen shows; it gives the edit a trigger and puts no motive in Mas's mouth. Scene-craft pass: the second sentence is the crowd's joke, not his. Guardrails check requested (open question 52)]",
+ "mode": "call",
+ "voiced_in_cut": true,
+ "on_camera": "monitor",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "2S",
+ "shot_id": "2S",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": "call",
+ "room": null,
+ "est_s": 7.7,
+ "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-20-04.wav",
+ "mp3": null,
+ "duration_s": 5.485,
+ "frames_24": 132,
+ "voiced_span_s": 4.19,
+ "pace": {
+  "words": 17,
+  "wpm": 243.4,
+  "speed": 1.02,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.02,
+   "speed_band": [
+    1.02,
+    1.1
+   ],
+   "articulation_guide_sps": [
+    5.0,
+    5.8
+   ],
+   "turn_wpm_guide": [
+    175,
+    200
+   ],
+   "intent": "filter"
+  },
+  "measured": {
+   "wpm": 243.4,
+   "articulation_sps": 5.03,
+   "syllables": 19,
+   "span_s": 4.19,
+   "pauses_s": [
+    0.41
+   ]
+  },
+  "longest_internal_gap_s": 0.41,
+  "audible_in_s": 0.51,
+  "audible_out_s": 4.7
+ },
+ "placement": {
+  "gap_before_s": 0.7,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.020",
+ "voiceId": "am_puck",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch +1.5 st",
+  "peak -2 dB @250 Hz Q1.0",
+  "peak +2 dB @4000 Hz Q0.9",
+  "comp 3.0:1 @-22 dB (4/80 ms)",
+  "then the call chain: HPF 200 Hz; LPF 7000 Hz; peak +1.5 dB @1800 Hz Q1.0; comp 2.5:1 @-22 dB (5/90 ms); -16 LUFS",
+  "Kokoro speed 1.020 (the plan speed; gerg-mockbran band 1.02-1.10); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'leak': Kokoro 0.07 s -> 0.41 s (intended 0.40; +0.34 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "A"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "E"
+  },
+  {
+   "t": 1.042,
+   "f": 25,
+   "shape": "M"
+  },
+  {
+   "t": 1.125,
+   "f": 27,
+   "shape": "E"
+  },
+  {
+   "t": 1.208,
+   "f": 29,
+   "shape": "A"
+  },
+  {
+   "t": 1.375,
+   "f": 33,
+   "shape": "E"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "A"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "E"
+  },
+  {
+   "t": 1.75,
+   "f": 42,
+   "shape": "A"
+  },
+  {
+   "t": 1.833,
+   "f": 44,
+   "shape": "E"
+  },
+  {
+   "t": 1.917,
+   "f": 46,
+   "shape": "A"
+  },
+  {
+   "t": 2.042,
+   "f": 49,
+   "shape": "E"
+  },
+  {
+   "t": 2.167,
+   "f": 52,
+   "shape": "rest"
+  },
+  {
+   "t": 2.667,
+   "f": 64,
+   "shape": "A"
+  },
+  {
+   "t": 2.75,
+   "f": 66,
+   "shape": "E"
+  },
+  {
+   "t": 2.917,
+   "f": 70,
+   "shape": "A"
+  },
+  {
+   "t": 3.125,
+   "f": 75,
+   "shape": "E"
+  },
+  {
+   "t": 3.25,
+   "f": 78,
+   "shape": "A"
+  },
+  {
+   "t": 3.333,
+   "f": 80,
+   "shape": "E"
+  },
+  {
+   "t": 3.542,
+   "f": 85,
+   "shape": "O"
+  },
+  {
+   "t": 3.792,
+   "f": 91,
+   "shape": "E"
+  },
+  {
+   "t": 4.042,
+   "f": 97,
+   "shape": "O"
+  },
+  {
+   "t": 4.125,
+   "f": 99,
+   "shape": "E"
+  },
+  {
+   "t": 4.375,
+   "f": 105,
+   "shape": "O"
+  },
+  {
+   "t": 4.583,
+   "f": 110,
+   "shape": "E"
+  },
+  {
+   "t": 4.708,
+   "f": 113,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Half",
+   "t0": 0.495,
+   "t1": 0.745,
+   "f0": 12,
+   "f1": 18,
+   "ph": "hˈæf"
+  },
+  {
+   "w": "the",
+   "t0": 0.745,
+   "t1": 0.845,
+   "f0": 18,
+   "f1": 20,
+   "ph": "ðə"
+  },
+  {
+   "w": "replies",
+   "t0": 0.845,
+   "t1": 1.42,
+   "f0": 20,
+   "f1": 34,
+   "ph": "ɹᵻplˈIz"
+  },
+  {
+   "w": "think",
+   "t0": 1.42,
+   "t1": 1.608,
+   "f0": 34,
+   "f1": 39,
+   "ph": "θˈɪŋk"
+  },
+  {
+   "w": "it's",
+   "t0": 1.608,
+   "t1": 1.732,
+   "f0": 39,
+   "f1": 42,
+   "ph": "ɪts"
+  },
+  {
+   "w": "a",
+   "t0": 1.732,
+   "t1": 1.82,
+   "f0": 42,
+   "f1": 44,
+   "ph": "ɐ"
+  },
+  {
+   "w": "leak",
+   "t0": 1.82,
+   "t1": 2.17,
+   "f0": 44,
+   "f1": 52,
+   "ph": "lˈik"
+  },
+  {
+   "w": "The",
+   "t0": 2.58,
+   "t1": 2.68,
+   "f0": 62,
+   "f1": 64,
+   "ph": "ði"
+  },
+  {
+   "w": "other",
+   "t0": 2.68,
+   "t1": 2.93,
+   "f0": 64,
+   "f1": 70,
+   "ph": "ˈʌðəɹ"
+  },
+  {
+   "w": "half",
+   "t0": 2.93,
+   "t1": 3.205,
+   "f0": 70,
+   "f1": 77,
+   "ph": "hˈæf"
+  },
+  {
+   "w": "want",
+   "t0": 3.205,
+   "t1": 3.367,
+   "f0": 77,
+   "f1": 81,
+   "ph": "wˈɑnt"
+  },
+  {
+   "w": "to",
+   "t0": 3.367,
+   "t1": 3.455,
+   "f0": 81,
+   "f1": 83,
+   "ph": "tə"
+  },
+  {
+   "w": "know",
+   "t0": 3.455,
+   "t1": 3.73,
+   "f0": 83,
+   "f1": 90,
+   "ph": "nˈO"
+  },
+  {
+   "w": "which",
+   "t0": 3.73,
+   "t1": 3.942,
+   "f0": 90,
+   "f1": 95,
+   "ph": "wˌɪʧ"
+  },
+  {
+   "w": "floor",
+   "t0": 3.942,
+   "t1": 4.192,
+   "f0": 95,
+   "f1": 101,
+   "ph": "flˈɔɹ"
+  },
+  {
+   "w": "it's",
+   "t0": 4.192,
+   "t1": 4.355,
+   "f0": 101,
+   "f1": 105,
+   "ph": "ɪts"
+  },
+  {
+   "w": "on",
+   "t0": 4.355,
+   "t1": 4.72,
+   "f0": 105,
+   "f1": 113,
+   "ph": "ˌɔn"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.94,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 122.8,
+  "f0_range_st": 10.4,
+  "f0_method": "pYIN (a4lib.analyse)",
+  "final_move_st": -0.8,
+  "asr": "Half the replies think it's a leak. The other half want to know which floor it's on.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.273,
+  "align_median_s": 0.035,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.445,
+  "rise_ms": 40.0,
+  "decay_ms": 105.0,
+  "decay_to_60_s": 0.34
+ },
+ "speaker_label": "GERG",
+ "clean": {
+  "file": "audio/ep01/act3/dialogue/fast-v2/clean/e1-a3-20-04.wav",
+  "note": "the dry read (no call chain), -16 LUFS"
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 7,
+   "word": "leak",
+   "tts_s": 0.065,
+   "target_s": 0.4,
+   "point_s": 1.795,
+   "joined_speech": false,
+   "dip_db": -58.3,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.415,
+   "opened_s": 0.335
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "11cb8b70dbdbb3fe",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 57.37,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": true,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 1,
+   "share_s": 25.16,
+   "rechecked_alone": false
+  }
+ }
+}

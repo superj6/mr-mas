@@ -1,0 +1,319 @@
+{
+ "id": "e1-a2-17-06",
+ "scene": "17",
+ "speaker": "NESNEJ",
+ "speaker_slug": "nesnej",
+ "text": "\"The more you buy, the more you save.\"",
+ "spoken_as": "The more you buy,{0.3} the more you save.",
+ "delivery": "to the signers, like a gift",
+ "tag": "[V · MAY 29, 2023 · a small dateline under the subtitle, shortened: `— COMPUTEX, MAY 29`. It stays because the rail reads MAY 30 and the quotation marks are the record]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "OTS",
+ "shot_id": "OTS",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 3.5,
+ "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-17-06.wav",
+ "mp3": null,
+ "duration_s": 3.3,
+ "frames_24": 80,
+ "voiced_span_s": 2.15,
+ "pace": {
+  "words": 8,
+  "wpm": 223.3,
+  "speed": 0.97,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.97,
+   "speed_band": [
+    1.0,
+    1.08
+   ],
+   "articulation_guide_sps": [
+    4.6,
+    5.4
+   ],
+   "turn_wpm_guide": [
+    160,
+    176
+   ],
+   "intent": "to the signers, like a gift"
+  },
+  "measured": {
+   "wpm": 223.3,
+   "articulation_sps": 4.35,
+   "syllables": 8,
+   "span_s": 2.15,
+   "pauses_s": [
+    0.31
+   ]
+  },
+  "longest_internal_gap_s": 0.31,
+  "audible_in_s": 0.5,
+  "audible_out_s": 2.65
+ },
+ "placement": {
+  "gap_before_s": 0.6,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 2,
+ "pick_reason": "fast: best of 2 seeds by ASR word recall, then no pause cut inside the voice, then the span nearest est_s",
+ "voice": "am_michael*0.50+am_eric*0.50 (Kokoro-82M stock) · a-michael-eric-keynote (pass-1 pick, dry) · speed 0.970",
+ "voiceId": "am_michael*0.50+am_eric*0.50",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 80 Hz",
+  "pitch 0",
+  "peak +1 dB @200 Hz Q0.9",
+  "peak +2 dB @3500 Hz Q0.9",
+  "comp 3.0:1 @-20 dB (4/80 ms)",
+  "tanh saturation drive 1.8 mix 0.15",
+  "Kokoro speed 0.970 (the plan speed; nesnej band 1.00-1.08); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'buy': Kokoro 0.00 s -> 0.32 s (intended 0.30; +0.30 s of room tone at the quietest 5 ms; Kokoro ran the words together here (dip -15.9 dB): ear check)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "E"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "M"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "O"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "E"
+  },
+  {
+   "t": 0.833,
+   "f": 20,
+   "shape": "O"
+  },
+  {
+   "t": 0.958,
+   "f": 23,
+   "shape": "M"
+  },
+  {
+   "t": 1.042,
+   "f": 25,
+   "shape": "A"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "rest"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "M"
+  },
+  {
+   "t": 1.792,
+   "f": 43,
+   "shape": "O"
+  },
+  {
+   "t": 1.875,
+   "f": 45,
+   "shape": "E"
+  },
+  {
+   "t": 2.0,
+   "f": 48,
+   "shape": "O"
+  },
+  {
+   "t": 2.125,
+   "f": 51,
+   "shape": "E"
+  },
+  {
+   "t": 2.208,
+   "f": 53,
+   "shape": "A"
+  },
+  {
+   "t": 2.542,
+   "f": 61,
+   "shape": "E"
+  },
+  {
+   "t": 2.667,
+   "f": 64,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "The",
+   "t0": 0.475,
+   "t1": 0.575,
+   "f0": 11,
+   "f1": 14,
+   "ph": "ðə"
+  },
+  {
+   "w": "more",
+   "t0": 0.575,
+   "t1": 0.8,
+   "f0": 14,
+   "f1": 19,
+   "ph": "mˈɔɹ"
+  },
+  {
+   "w": "you",
+   "t0": 0.8,
+   "t1": 0.95,
+   "f0": 19,
+   "f1": 23,
+   "ph": "ju"
+  },
+  {
+   "w": "buy",
+   "t0": 0.95,
+   "t1": 1.275,
+   "f0": 23,
+   "f1": 31,
+   "ph": "bˈI"
+  },
+  {
+   "w": "the",
+   "t0": 1.625,
+   "t1": 1.725,
+   "f0": 39,
+   "f1": 41,
+   "ph": "ðə"
+  },
+  {
+   "w": "more",
+   "t0": 1.725,
+   "t1": 1.95,
+   "f0": 41,
+   "f1": 47,
+   "ph": "mˈɔɹ"
+  },
+  {
+   "w": "you",
+   "t0": 1.95,
+   "t1": 2.112,
+   "f0": 47,
+   "f1": 51,
+   "ph": "ju"
+  },
+  {
+   "w": "save",
+   "t0": 2.112,
+   "t1": 2.67,
+   "f0": 51,
+   "f1": 64,
+   "ph": "sˈAv"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -2.62,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 143.7,
+  "f0_range_st": 12.6,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "The more you buy, the more you save.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.251,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 30.0,
+  "decay_ms": 250.0,
+  "decay_to_60_s": 0.2
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 4,
+   "word": "buy",
+   "tts_s": 0.0,
+   "target_s": 0.3,
+   "point_s": 0.89,
+   "joined_speech": true,
+   "dip_db": -15.9,
+   "breath": false,
+   "crossfade_ms": [
+    60,
+    25
+   ],
+   "final_s": 0.315,
+   "opened_s": 0.3
+  }
+ ],
+ "alt_takes": [
+  {
+   "tag": "s2",
+   "seed": 2,
+   "speed": 0.97,
+   "file": "audio/ep01/act2/dialogue/fast-v2/takes/e1-a2-17-06/s2.wav",
+   "span_s": 2.15,
+   "wpm": 223.3,
+   "asr": "The more you buy, the more you save.",
+   "recall": 1.0,
+   "utmos": null
+  }
+ ],
+ "fast": {
+  "key": "0216707d8ef9ee72",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 16.45,
+  "takes": 2,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 4
+  },
+  "asr": {
+   "packed_with": 1,
+   "share_s": 8.59
+  }
+ }
+}

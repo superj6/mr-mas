@@ -9,7 +9,8 @@
 //         'lamp'    her desk lamp in the evening: a warm rim (W)
 //         'window'  the dark boardroom window at night: a thin cold rim, the rest near black (S4.04)
 //         'sil'     pure silhouette with the faintest rim (N)
-//   turn  0 | 1: her head turns a pixel toward the screen (the lean in: "Is his feed frozen?")
+//   turn  0 | 1: her head turns toward the screen (the lean in: "Is his feed frozen?"): 5 px and a lost profile, the
+//         rim on her cheek's edge past the hair (a4p5 r2; the first build's 2 px turn read as no change)
 // drawNelehShoulderR(b, rightX, bottomY, state, f): anchored at its BOTTOM-RIGHT corner (it runs off frame there).
 import {Buf} from '../px';
 import {PAL} from '../palette';
@@ -23,9 +24,13 @@ export interface NelehOtsState { light: NelehOtsLight; turn: 0 | 1; }
 export const NELEH_OTS_DEFAULT: NelehOtsState = {light: 'screen', turn: 0};
 
 const fig = (s: NelehOtsState): FigureDef => {
-  const t = s.turn ? -2 : 0; // the lean: head and hair a whole step toward the screen
+  // the lean: head and hair a step toward the screen. a4p5 r2: 2 px read as no change on the stills check, so the turn
+  // is 5 px AND shows a lost profile: the edge of her cheek and jaw past the hair's near side, caught by the rim
+  const t = s.turn ? -5 : 0;
   const H = (...pts: number[]) => P.poly(...pts.map((v, i) => (i % 2 ? v : v + t)));
-  const parts: Part[] = [
+  const parts: Part[] = [];
+  if (s.turn) parts.push({group: 'cheek', mat: 'skin', tone: 2, prims: [H(58, 50, 53, 58, 50, 70, 50, 84, 53, 96, 58, 104, 62, 100, 60, 70)]});
+  parts.push(
     // the blazer: her left shoulder slopes down to the frame's left side of the drawing; the right runs off frame
     {group: 'blazer', mat: 'blazer', tone: 2, prims: [P.poly(0, 206, 4, 176, 16, 156, 34, 142, 56, 132, 72, 128, 104, 128, 124, 132, 150, 140, 150, 206)]},
     // the collar at the back of the neck (the blazer's rolled edge)
@@ -36,7 +41,7 @@ const fig = (s: NelehOtsState): FigureDef => {
     {group: 'hair', mat: 'hair', tone: 2, prims: [
       H(56, 44, 58, 28, 66, 16, 78, 10, 92, 10, 104, 16, 112, 28, 115, 44, 116, 70, 118, 96, 120, 118, 116, 130, 106, 133, 88, 135, 70, 133, 60, 130, 55, 118, 55, 96, 54, 70),
     ]},
-  ];
+  );
   const adjust: Adjust[] = [
     // strands: a few darker falls down the back, and the crown's sheen where the screen light reaches over
     {prims: [H(70, 20, 72, 22, 66, 118, 64, 118), H(86, 12, 88, 12, 86, 104, 84, 104), H(100, 16, 102, 18, 108, 124, 106, 124)], tone: 1, onlyMat: 'hair'},
@@ -49,13 +54,14 @@ const fig = (s: NelehOtsState): FigureDef => {
 const RIM: Record<NelehOtsLight, {hair: number; blazer: number; skin: number}> = {
   screen: {hair: PAL.C4, blazer: PAL.C3, skin: PAL.K2},
   lamp: {hair: PAL.W5, blazer: PAL.W3, skin: PAL.S4},
-  window: {hair: PAL.N5, blazer: PAL.N4, skin: PAL.N5},
+  // a4p5 r2: the window's rim a clear cold line (N5 / N4 vanished against the night glass: 'window' read as 'sil')
+  window: {hair: PAL.N8, blazer: PAL.N6, skin: PAL.N8},
   sil: {hair: PAL.N3, blazer: PAL.N3, skin: PAL.N3},
 };
 const rig = (l: NelehOtsLight): LightRig => ({
   key: [-1, -0.35], keyBand: 2, shadowBand: 0, rim: true, outline: false,
   ramps: {
-    hair: [PAL.N0, PAL.B0, l === 'sil' || l === 'window' ? PAL.N1 : PAL.B1, l === 'sil' || l === 'window' ? PAL.N2 : PAL.B2, l === 'lamp' ? PAL.B4 : PAL.B3, RIM[l].hair],
+    hair: [PAL.N0, PAL.B0, l === 'sil' || l === 'window' ? PAL.N1 : PAL.B1, l === 'sil' ? PAL.N2 : l === 'window' ? PAL.N3 : PAL.B2, l === 'lamp' ? PAL.B4 : l === 'window' ? PAL.N5 : PAL.B3, RIM[l].hair],
     blazer: [PAL.N0, PAL.N0, PAL.N1, PAL.N2, PAL.N3, RIM[l].blazer],
     skin: [PAL.N0, PAL.S0, PAL.S1, PAL.S2, PAL.S3, RIM[l].skin],
   },

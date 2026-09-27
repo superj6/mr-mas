@@ -1,0 +1,233 @@
+{
+ "id": "e1-a1-10-05",
+ "scene": "10",
+ "speaker": "SYDNEY",
+ "speaker_slug": "sydney",
+ "text": "Will you remember me? 😊",
+ "spoken_as": "Will you remember me?",
+ "delivery": "fading",
+ "tag": "[INVENTED · Act One fix pass (2026-09-27): it was \"Remember me? 😊\". The audit measured the take falling (\"Remember me.\"), which turned her sweet exit into an order, and the newcomer read couldn't place it. \"Will you\" makes it her question, a wistful one from a bot that has just been put on a five-turn leash and won't keep the conversation. products-as-characters.md still lists the old wording: its owner updates it]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "W",
+ "shot_id": "W",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 1.9,
+ "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-10-05.wav",
+ "mp3": null,
+ "duration_s": 2.31,
+ "frames_24": 56,
+ "voiced_span_s": 1.25,
+ "pace": {
+  "words": 4,
+  "wpm": 192.0,
+  "speed": 0.83,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.83,
+   "speed_band": [
+    0.79,
+    0.87
+   ],
+   "articulation_guide_sps": [
+    4.0,
+    4.6
+   ],
+   "turn_wpm_guide": [
+    140,
+    160
+   ],
+   "intent": "fading"
+  },
+  "measured": {
+   "wpm": 192.0,
+   "articulation_sps": 4.8,
+   "syllables": 6,
+   "span_s": 1.25,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.51,
+  "audible_out_s": 1.76
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "af_kore (Kokoro-82M stock) · b-kore-sweet · speed 0.830",
+ "voiceId": "af_kore",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 120 Hz",
+  "pitch +1.5 st",
+  "peak -1.5 dB @300 Hz Q1.0",
+  "peak +2.5 dB @3500 Hz Q0.9",
+  "chorus 0.8 Hz depth 0.12 mix 0.18",
+  "bitcrush 12-bit mix 0.1",
+  "comp 3.0:1 @-20 dB (3/70 ms)",
+  "Kokoro speed 0.830 (the centre of the band; sydney band 0.79-0.87); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "O"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "E"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "O"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "E"
+  },
+  {
+   "t": 1.0,
+   "f": 24,
+   "shape": "M"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "A"
+  },
+  {
+   "t": 1.167,
+   "f": 28,
+   "shape": "M"
+  },
+  {
+   "t": 1.25,
+   "f": 30,
+   "shape": "E"
+  },
+  {
+   "t": 1.375,
+   "f": 33,
+   "shape": "M"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "E"
+  },
+  {
+   "t": 1.75,
+   "f": 42,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Will",
+   "t0": 0.505,
+   "t1": 0.692,
+   "f0": 12,
+   "f1": 17,
+   "ph": "wˌɪl"
+  },
+  {
+   "w": "you",
+   "t0": 0.692,
+   "t1": 0.855,
+   "f0": 17,
+   "f1": 21,
+   "ph": "ju"
+  },
+  {
+   "w": "remember",
+   "t0": 0.855,
+   "t1": 1.38,
+   "f0": 21,
+   "f1": 33,
+   "ph": "ɹəmˈɛmbəɹ"
+  },
+  {
+   "w": "me",
+   "t0": 1.38,
+   "t1": 1.78,
+   "f0": 33,
+   "f1": 43,
+   "ph": "mˌi"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -1.92,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.51,
+  "median_f0_hz": 187.1,
+  "f0_range_st": 12.1,
+  "f0_method": "pYIN (a4lib.analyse)",
+  "final_move_st": -4.1,
+  "asr": "Will you remember me?",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.213,
+  "align_median_s": 0.096,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.45,
+  "rise_ms": 45.0,
+  "decay_ms": 260.0,
+  "decay_to_60_s": 0.105,
+  "q_lift_st": -18.5
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "2e152831d0b71a6b",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 1.78,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": true,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 3,
+   "share_s": 0.42,
+   "rechecked_alone": false
+  }
+ }
+}

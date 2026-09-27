@@ -1,0 +1,274 @@
+{
+ "act_seconds": 217.417,
+ "act_clock": "3:37.4",
+ "scenes": {
+  "13": {
+   "start": "0:00.0",
+   "seconds": 67.8
+  },
+  "14": {
+   "start": "1:07.8",
+   "seconds": 10.8
+  },
+  "15": {
+   "start": "1:18.6",
+   "seconds": 74.9
+  },
+  "16": {
+   "start": "2:33.5",
+   "seconds": 20.0
+  },
+  "17": {
+   "start": "2:53.5",
+   "seconds": 43.9
+  }
+ },
+ "lines": 39,
+ "words": 284,
+ "median_words_per_line": 6,
+ "mean_words_per_line": 7.28,
+ "lines_3_words_or_fewer": 9,
+ "cut_off_lines": [],
+ "overlaps": [],
+ "gap_between_lines_s": {
+  "definition": "last word to next first word, inside one scene",
+  "median": 0.9,
+  "within_0p2_0p6": 13,
+  "within_0p6_1p6": 14,
+  "over_1p6": 8,
+  "under_0p2": 0
+ },
+ "exchanges_3s": {
+  "definition": "consecutive lines with no gap over 3.0 s (last word to next first word), split where a new place or time starts (a beat with seq)",
+  "count": 10,
+  "mean_lines": 3.9,
+  "median_seconds": 6.6,
+  "with_two_or_more_speakers": 6,
+  "longest": {
+   "start_act": "1:30.7",
+   "seconds": 40.5,
+   "lines": 10,
+   "speakers": [
+    "clone",
+    "lahtnemulb",
+    "mas",
+    "senator",
+    "sucram"
+   ],
+   "words": 93,
+   "first": "e1-a2-15-03",
+   "last": "e1-a2-15-12"
+  },
+  "list": [
+   {
+    "start_act": "0:03.7",
+    "seconds": 3.2,
+    "lines": 1,
+    "speakers": [
+     "sirrah"
+    ],
+    "words": 9,
+    "first": "e1-a2-13-01",
+    "last": "e1-a2-13-01"
+   },
+   {
+    "start_act": "0:10.0",
+    "seconds": 8.7,
+    "lines": 4,
+    "speakers": [
+     "mario",
+     "sirrah"
+    ],
+    "words": 24,
+    "first": "e1-a2-13-02",
+    "last": "e1-a2-13-05"
+   },
+   {
+    "start_act": "0:21.8",
+    "seconds": 2.4,
+    "lines": 1,
+    "speakers": [
+     "photographer"
+    ],
+    "words": 7,
+    "first": "e1-a2-13-06",
+    "last": "e1-a2-13-06"
+   },
+   {
+    "start_act": "0:29.1",
+    "seconds": 36.9,
+    "lines": 12,
+    "speakers": [
+     "mario",
+     "mas",
+     "nedib",
+     "photographer",
+     "radnus",
+     "tasya"
+    ],
+    "words": 78,
+    "first": "e1-a2-13-07",
+    "last": "e1-a2-13-18"
+   },
+   {
+    "start_act": "1:17.6",
+    "seconds": 4.5,
+    "lines": 1,
+    "speakers": [
+     "clone"
+    ],
+    "words": 11,
+    "first": "e1-a2-15-01",
+    "last": "e1-a2-15-01"
+   },
+   {
+    "start_act": "1:24.1",
+    "seconds": 2.0,
+    "lines": 1,
+    "speakers": [
+     "lahtnemulb"
+    ],
+    "words": 6,
+    "first": "e1-a2-15-02",
+    "last": "e1-a2-15-02"
+   },
+   {
+    "start_act": "1:30.7",
+    "seconds": 40.5,
+    "lines": 10,
+    "speakers": [
+     "clone",
+     "lahtnemulb",
+     "mas",
+     "senator",
+     "sucram"
+    ],
+    "words": 93,
+    "first": "e1-a2-15-03",
+    "last": "e1-a2-15-12"
+   },
+   {
+    "start_act": "2:16.2",
+    "seconds": 7.7,
+    "lines": 3,
+    "speakers": [
+     "clone",
+     "senator",
+     "sucram"
+    ],
+    "words": 15,
+    "first": "e1-a2-15-13",
+    "last": "e1-a2-15-15"
+   },
+   {
+    "start_act": "3:04.0",
+    "seconds": 9.2,
+    "lines": 4,
+    "speakers": [
+     "mario",
+     "mas"
+    ],
+    "words": 24,
+    "first": "e1-a2-17-01",
+    "last": "e1-a2-17-04"
+   },
+   {
+    "start_act": "3:16.7",
+    "seconds": 5.4,
+    "lines": 2,
+    "speakers": [
+     "mario",
+     "nesnej"
+    ],
+    "words": 17,
+    "first": "e1-a2-17-05",
+    "last": "e1-a2-17-06"
+   }
+  ]
+ },
+ "exchanges_5s": {
+  "count": 5,
+  "longest": {
+   "start_act": "0:03.7",
+   "seconds": 62.2,
+   "lines": 18,
+   "speakers": [
+    "mario",
+    "mas",
+    "nedib",
+    "photographer",
+    "radnus",
+    "sirrah",
+    "tasya"
+   ],
+   "words": 118,
+   "first": "e1-a2-13-01",
+   "last": "e1-a2-13-18"
+  }
+ },
+ "dialogue_seconds": 96.2,
+ "dialogue_share_of_act": 0.442,
+ "stretches_4s_or_more_without_speech": [
+  [
+   "0:24.1",
+   5.0
+  ],
+  [
+   "1:05.9",
+   11.7
+  ],
+  [
+   "1:26.1",
+   4.6
+  ],
+  [
+   "2:11.2",
+   5.0
+  ],
+  [
+   "2:23.9",
+   40.1
+  ],
+  [
+   "3:22.0",
+   15.4
+  ]
+ ],
+ "beats": 56,
+ "shots": 49,
+ "median_shot_s": 3.62,
+ "mean_shot_s": 4.44,
+ "shots_under_1p5s": 5,
+ "named_at_act_s": {
+  "mas": -1.0,
+  "radnus": -1.0,
+  "mario": -1.0,
+  "tasya": -1.0,
+  "photographer": -1.0,
+  "silhouette": -1.0,
+  "senator": -1.0,
+  "gallery": -1.0,
+  "sirrah": 7.08,
+  "nedib": 53.04,
+  "lahtnemulb": 82.88,
+  "clone": 82.88,
+  "sucram": 89.58,
+  "noterb": 159.8,
+  "notnih": 178.0,
+  "nesnej": 195.29
+ },
+ "lines_before_naming": [
+  [
+   "e1-a2-13-01",
+   "WOMAN WITH THE POINTER"
+  ],
+  [
+   "e1-a2-13-14",
+   "MAN AT THE DOOR"
+  ],
+  [
+   "e1-a2-15-01",
+   "GLOSSY MAN AT THE MIC (O.S.)"
+  ]
+ ]
+}

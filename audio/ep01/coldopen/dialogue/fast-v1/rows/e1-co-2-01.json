@@ -1,0 +1,159 @@
+{
+ "id": "e1-co-2-01",
+ "scene": "2",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "noted.",
+ "spoken_as": "Noted.",
+ "delivery": null,
+ "tag": "[INVENTED]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": true,
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "MCU",
+ "shot_id": "MCU",
+ "cue": null,
+ "lip_sync": false,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 0.8,
+ "file": "audio/ep01/coldopen/dialogue/fast-v1/wav/e1-co-2-01.wav",
+ "mp3": null,
+ "duration_s": 1.805,
+ "frames_24": 44,
+ "voiced_span_s": 0.71,
+ "pace": {
+  "words": 1,
+  "wpm": 84.5,
+  "speed": 0.9,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.9,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.6,
+    4.2
+   ],
+   "turn_wpm_guide": [
+    135,
+    155
+   ],
+   "intent": null
+  },
+  "measured": {
+   "wpm": 84.5,
+   "articulation_sps": 2.82,
+   "syllables": 2,
+   "span_s": 0.71,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.5,
+  "audible_out_s": 1.21
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 2,
+ "pick_reason": "fast: best of 2 seeds by ASR word recall, then no pause cut inside the voice, then the span nearest est_s",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.900",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch 0",
+  "low shelf +2 dB @160 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak +1 dB @3200 Hz Q0.8",
+  "high shelf -1.5 dB @8000 Hz",
+  "comp 2.0:1 @-24 dB (10/120 ms)",
+  "Kokoro speed 0.900 (the plan speed; mas-manalt band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [],
+ "words": [
+  {
+   "w": "Noted",
+   "t0": 0.59,
+   "t1": 1.23,
+   "f0": 14,
+   "f1": 30,
+   "ph": "nˈOTᵻd"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.54,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 114.7,
+  "f0_range_st": 8.6,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Noted.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.655,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.43,
+  "rise_ms": 20.0,
+  "decay_ms": 190.0,
+  "decay_to_60_s": 0.165
+ },
+ "speaker_label": "MAS",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [
+  {
+   "tag": "s2",
+   "seed": 2,
+   "speed": 0.9,
+   "file": "audio/ep01/coldopen/dialogue/fast-v1/takes/e1-co-2-01/s2.wav",
+   "span_s": 0.71,
+   "wpm": 84.5,
+   "asr": "Noted.",
+   "recall": 1.0,
+   "utmos": null
+  }
+ ],
+ "fast": {
+  "key": "5a45456578639c5f",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 2,
+  "wall_s": 43.93,
+  "takes": 2,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 1,
+   "share_s": 22.87
+  }
+ }
+}

@@ -7,7 +7,7 @@
 //                       everything but Terb; Terb goes in after, clipped above the table's far edge (he stands behind it)
 //   drawTablePhone      PROP-PHONE-TABLE (S7.09): Mas's phone flat on the table between them, lighting green with
 //                       Gerg's post on its screen (kits/post-card.ts, too small to read here: the post itself rides as
-//                       its own notify card), keycaps popping off it (cast/gerg.ts gergKeycaps)
+//                       its own notify card); keycaps popping off it only with o.caps (off by default since a4p5 r2)
 //   drawOtherYrralM     CAST-OTHER-YRRAL (S7.07b [M], 1.6 s, mute): a seated silhouette at the far end of the table among
 //                       the fires, behind a nameplate `YRRAL (NOT THAT YRRAL)`, one two-drawing nod
 import {Buf, rect} from '../px';
@@ -56,7 +56,10 @@ export const drawCalmOffTerms2S = (b: Buf, f: number, s: CalmOffTermsState = {})
 // ------------------------------------------------------------------ Mas's phone on the table
 /** The phone lying flat on the walnut (a foreshortened slab), its screen green-lit with a post's shape, keycaps
  *  popping off it. k = frames since it lit. (x, y) = the phone's top-left. */
-export const drawTablePhone = (b: Buf, x: number, y: number, k: number, f: number) => {
+/** o.caps: Gerg's keycaps popping off it (a4p5 r2: default OFF; at this scale his keycaps, which fly on his own
+ *  figure's paths, landed under the table as two stray white pixels on the stills check; the notify card carries the
+ *  post) */
+export const drawTablePhone = (b: Buf, x: number, y: number, k: number, f: number, o: {caps?: boolean} = {}) => {
   const w = 22, h = 9;
   rect(x + 1, y + 1, w, h, b.ink(PAL.N0)); // its shadow
   rect(x, y, w, h, b.ink(PAL.N1)); rect(x, y, w, 1, b.ink(PAL.G2));
@@ -71,7 +74,7 @@ export const drawTablePhone = (b: Buf, x: number, y: number, k: number, f: numbe
       const X = x + i, Y = y + j;
       if ((i + j) % 2 === 0 && Math.hypot(i - w / 2, (j - h / 2) * 2) < w * 0.75) b.set(X, Y, stepColor(b.get(X, Y), 1));
     }
-    drawKeycaps(b, x + w / 2 - 12, y + 2, gergKeycaps(f, {from: f - k}));
+    if (o.caps) drawKeycaps(b, x + w / 2 - 12, y + 2, gergKeycaps(f, {from: f - k}));
   }
 };
 

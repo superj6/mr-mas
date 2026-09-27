@@ -1,0 +1,290 @@
+{
+ "id": "e1-a2-15-09",
+ "scene": "15",
+ "speaker": "LAHTNEMULB",
+ "speaker_slug": "lahtnemulb",
+ "text": "Speaking for myself, a little.",
+ "spoken_as": "Speaking for myself,{0.3} a little.",
+ "delivery": "quietly, his eyes on his card in the clone's hand",
+ "tag": "[INVENTED · Act Two fixer pass, 2026-09-27: it was \"I am, a little.\", and the v2 reel's cold newcomer \"couldn't tell who is nervous\". \"Speaking for myself\" makes him the one answering, and the nervous one. The card in the clone's hand says why, without a word. The clone's takes also moved up 2 semitones (a pitch_add in cast.json on the derived gloss voice), so the two men now differ by ear too (audit-v2 #26)]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "2S",
+ "shot_id": "2S",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 2.3,
+ "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-09.wav",
+ "mp3": null,
+ "duration_s": 3.27,
+ "frames_24": 79,
+ "voiced_span_s": 2.3,
+ "pace": {
+  "words": 5,
+  "wpm": 130.4,
+  "speed": 0.85,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.85,
+   "speed_band": [
+    0.84,
+    0.92
+   ],
+   "articulation_guide_sps": [
+    4.0,
+    4.6
+   ],
+   "turn_wpm_guide": [
+    135,
+    155
+   ],
+   "intent": "quietly, his eyes on his card in the clone's hand"
+  },
+  "measured": {
+   "wpm": 130.4,
+   "articulation_sps": 3.98,
+   "syllables": 8,
+   "span_s": 2.3,
+   "pauses_s": [
+    0.29
+   ]
+  },
+  "longest_internal_gap_s": 0.29,
+  "audible_in_s": 0.5,
+  "audible_out_s": 2.8
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 2,
+ "pick_reason": "fast: best of 2 seeds by ASR word recall, then no pause cut inside the voice, then the span nearest est_s",
+ "voice": "am_adam*0.50+am_echo*0.50 (Kokoro-82M stock) · d-adam-echo-senate-low · speed 0.850",
+ "voiceId": "am_adam*0.50+am_echo*0.50",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 75 Hz",
+  "pitch -2 st",
+  "low shelf +1 dB @150 Hz",
+  "peak -1 dB @400 Hz Q1.0",
+  "peak +1 dB @2500 Hz Q0.9",
+  "comp 2.5:1 @-22 dB (6/110 ms)",
+  "Kokoro speed 0.850 (the plan speed; lahtnemulb band 0.84-0.92); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'myself': Kokoro 0.08 s -> 0.30 s (intended 0.30; +0.22 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "M"
+  },
+  {
+   "t": 0.708,
+   "f": 17,
+   "shape": "A"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "E"
+  },
+  {
+   "t": 1.0,
+   "f": 24,
+   "shape": "O"
+  },
+  {
+   "t": 1.125,
+   "f": 27,
+   "shape": "M"
+  },
+  {
+   "t": 1.25,
+   "f": 30,
+   "shape": "A"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "E"
+  },
+  {
+   "t": 1.542,
+   "f": 37,
+   "shape": "A"
+  },
+  {
+   "t": 1.75,
+   "f": 42,
+   "shape": "E"
+  },
+  {
+   "t": 1.917,
+   "f": 46,
+   "shape": "rest"
+  },
+  {
+   "t": 2.25,
+   "f": 54,
+   "shape": "A"
+  },
+  {
+   "t": 2.333,
+   "f": 56,
+   "shape": "E"
+  },
+  {
+   "t": 2.417,
+   "f": 58,
+   "shape": "A"
+  },
+  {
+   "t": 2.542,
+   "f": 61,
+   "shape": "E"
+  },
+  {
+   "t": 2.792,
+   "f": 67,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Speaking",
+   "t0": 0.555,
+   "t1": 1.005,
+   "f0": 13,
+   "f1": 24,
+   "ph": "spˈikɪŋ"
+  },
+  {
+   "w": "for",
+   "t0": 1.005,
+   "t1": 1.13,
+   "f0": 24,
+   "f1": 27,
+   "ph": "fɔɹ"
+  },
+  {
+   "w": "myself",
+   "t0": 1.13,
+   "t1": 1.93,
+   "f0": 27,
+   "f1": 46,
+   "ph": "mIsˈɛlf"
+  },
+  {
+   "w": "a",
+   "t0": 2.225,
+   "t1": 2.325,
+   "f0": 53,
+   "f1": 56,
+   "ph": "ɐ"
+  },
+  {
+   "w": "little",
+   "t0": 2.325,
+   "t1": 2.82,
+   "f0": 56,
+   "f1": 68,
+   "ph": "lˈɪTᵊl"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.97,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 98.6,
+  "f0_range_st": 13.5,
+  "f0_method": "pYIN (a4lib.analyse)",
+  "final_move_st": -0.2,
+  "asr": "speaking for myself a little.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.567,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.4,
+  "rise_ms": 30.0,
+  "decay_ms": 170.0,
+  "decay_to_60_s": 0.075
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 3,
+   "word": "myself",
+   "tts_s": 0.08,
+   "target_s": 0.3,
+   "point_s": 1.535,
+   "joined_speech": false,
+   "dip_db": -68.7,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.3,
+   "opened_s": 0.22
+  }
+ ],
+ "alt_takes": [
+  {
+   "tag": "s2",
+   "seed": 2,
+   "speed": 0.85,
+   "file": "audio/ep01/act2/dialogue/fast-v2/takes/e1-a2-15-09/s2.wav",
+   "span_s": 2.29,
+   "wpm": 131.0,
+   "asr": "Speaking for myself a little.",
+   "recall": 1.0,
+   "utmos": null
+  }
+ ],
+ "fast": {
+  "key": "5154c5bf9a7fffb9",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 7.13,
+  "takes": 2,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": true,
+   "breaths": false,
+   "threads": 4
+  },
+  "asr": {
+   "packed_with": 1,
+   "share_s": 3.35
+  }
+ }
+}

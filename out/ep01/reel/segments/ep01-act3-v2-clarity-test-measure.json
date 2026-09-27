@@ -1,0 +1,54 @@
+{
+ "manifest": "../../../../../../../home/jgon/project/art/mrmas/audio/reel/ep01-act3-v2/test.manifest.json",
+ "key": "ep01-act3-v2-test",
+ "host": {
+  "cores": 14,
+  "load1": 5.87
+ },
+ "jobs": 2,
+ "concurrency": 2,
+ "seg": 90,
+ "scale": 1,
+ "steps": {
+  "bundle": 6.9,
+  "plan": 0.3,
+  "mix": 1.6,
+  "render": 72.4,
+  "concat": 0,
+  "mixWaitAfterPicture": 0,
+  "mux": 3
+ },
+ "renderedSeconds": 153.7,
+ "segments": [
+  {
+   "file": "000-act3-0-1844-9ddf5463fb.mp4",
+   "chapter": "act3",
+   "frames": 1844,
+   "wall": 72.1
+  },
+  {
+   "file": "001-act3-1844-3688-72e10227ec.mp4",
+   "chapter": "act3",
+   "frames": 1844,
+   "wall": 72.4
+  }
+ ],
+ "frames": {
+  "expected": 3688,
+  "got": 3688
+ },
+ "wall": 82.8,
+ "reelSeconds": 153.7,
+ "speed": {
+  "reelSecondsPerMinuteWall": 111.4,
+  "renderedSecondsPerMinuteOfRenderStep": 127.4
+ },
+ "out": "../ep01-act3-v2-test.mp4",
+ "outBytes": 11259460,
+ "mix": {
+  "lufs": -19.02,
+  "peak": -5.258,
+  "missing": [],
+  "silences": []
+ }
+}

@@ -124,7 +124,7 @@ export const drawStaffLetter = (b: Buf, st: StaffLetterState) => {
   odometer(b, cx + 5, SCR.y + 18, st.count, {digits: 3, label: 'SIGNED', suffix: st.count >= 745 ? '/ 770' : '', kick: st.clunk});
   const gx = cx, gy = SCR.y + 44, gw = SCR.x + SCR.w - 4 - cx, gh = 60;
   rect(gx - 1, gy - 1, gw + 2, gh + 2, b.ink(st.gerg?.mouth && st.gerg.mouth !== 'rest' ? PAL.L3 : PAL.N3));
-  drawGergMediumTile(b, gx, gy, gw, gh, {head: st.gerg?.head ?? 'talk', mouth: st.gerg?.mouth ?? 'rest', lid: 1}, {f: st.f, typing: st.gerg?.typing ?? false});
+  drawGergMediumTile(b, gx, gy, gw, gh, {head: st.gerg?.head ?? 'talk', mouth: st.gerg?.mouth ?? 'rest', lid: 1}, {f: st.f, typing: st.gerg?.typing ?? false, fit: true}); // a4p5 r2: his eyes 40% down, not on the top edge
   rect(gx, gy + gh - 11, pw('GERG') + 6, 11, b.ink(PAL.N0)); pt(b, 'GERG', gx + 3, gy + gh - 9, PAL.P1);
   const ax = cx, ay = gy + gh + 8, aw = gw, ah = 44;
   rect(ax - 1, ay - 1, aw + 2, ah + 2, b.ink(st.alyi ? PAL.W5 : PAL.N3));

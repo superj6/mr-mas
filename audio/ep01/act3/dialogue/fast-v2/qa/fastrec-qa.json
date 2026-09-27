@@ -1,0 +1,64 @@
+{
+ "problems": [],
+ "flags": [
+  {
+   "id": "e1-a3-19-02",
+   "kind": "pace",
+   "note": "articulation 6.19 syll/s against the guide 4.8-5.6"
+  },
+  {
+   "id": "e1-a3-20-02",
+   "kind": "asr",
+   "note": "ASR missed a word: 'Moss, did you just post on Twitter?' (recall 0.833)"
+  },
+  {
+   "id": "e1-a3-20-02",
+   "kind": "question",
+   "note": "final move -2.81 st: does it read as a question?"
+  },
+  {
+   "id": "e1-a3-20-05",
+   "kind": "asr",
+   "note": "ASR missed a word: 'Okay, that's patched, Rima's going to wake up to 40 emails about it.' (recall 0.917)"
+  },
+  {
+   "id": "e1-a3-20-06",
+   "kind": "pace",
+   "note": "articulation 2.83 syll/s against the guide 3.6-4.2"
+  },
+  {
+   "id": "e1-a3-20-06",
+   "kind": "question",
+   "note": "final move -5.47 st: does it read as a question?"
+  },
+  {
+   "id": "e1-a3-20-07",
+   "kind": "pause-in-voice",
+   "note": "the 0.3 s pause after 'running' is opened while the voice still sounds (dip -25.9 dB)"
+  },
+  {
+   "id": "e1-a3-21-06",
+   "kind": "question",
+   "note": "final move -5.8 st: does it read as a question?"
+  },
+  {
+   "id": "e1-a3-22-01",
+   "kind": "question",
+   "note": "final move -4.38 st: does it read as a question?"
+  }
+ ],
+ "totals": {
+  "lines": 22,
+  "words": 147,
+  "audible_s": 46.1,
+  "wpm_overall": 191.0
+ },
+ "stringouts": [
+  "audio/ep01/act3/dialogue/fast-v2/reel/sc18-fast-stringout.mp3",
+  "audio/ep01/act3/dialogue/fast-v2/reel/sc19-fast-stringout.mp3",
+  "audio/ep01/act3/dialogue/fast-v2/reel/sc20-fast-stringout.mp3",
+  "audio/ep01/act3/dialogue/fast-v2/reel/sc21-fast-stringout.mp3",
+  "audio/ep01/act3/dialogue/fast-v2/reel/sc22-fast-stringout.mp3"
+ ],
+ "method": "fastrec qa_generic: qa_v5.py's hard checks and ear flags, without its Act Four conversation table"
+}

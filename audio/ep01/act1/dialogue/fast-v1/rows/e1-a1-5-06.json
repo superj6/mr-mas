@@ -1,0 +1,551 @@
+{
+ "id": "e1-a1-5-06",
+ "scene": "5",
+ "speaker": "RIMA TAMURI",
+ "speaker_slug": "rima-tamuri",
+ "text": "Mas, it's your call. If it breaks in front of people, and it will, what do we tell them?",
+ "spoken_as": "[Mas](/mˈɑs/),{0.25} it's your call.{0.5} If it breaks in front of people,{0.2} and it will,{0.25} what do we tell them?",
+ "delivery": "stopping at his desk; to Mas now, calm, diplomatic",
+ "tag": "[INVENTED · Act Four's \"What should I tell them?\" pays this: she asks it again of the board, as CEO]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "OTS",
+ "shot_id": "OTS",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 8.1,
+ "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-06.wav",
+ "mp3": null,
+ "duration_s": 6.565,
+ "frames_24": 158,
+ "voiced_span_s": 5.55,
+ "pace": {
+  "words": 19,
+  "wpm": 205.4,
+  "speed": 0.9,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.9,
+   "speed_band": [
+    0.9,
+    0.98
+   ],
+   "articulation_guide_sps": [
+    4.0,
+    4.6
+   ],
+   "turn_wpm_guide": [
+    140,
+    160
+   ],
+   "intent": "stopping at his desk; to Mas now, calm, diplomatic"
+  },
+  "measured": {
+   "wpm": 205.4,
+   "articulation_sps": 4.61,
+   "syllables": 20,
+   "span_s": 5.55,
+   "pauses_s": [
+    0.25,
+    0.56,
+    0.19,
+    0.21
+   ]
+  },
+  "longest_internal_gap_s": 0.56,
+  "audible_in_s": 0.5,
+  "audible_out_s": 6.05
+ },
+ "placement": {
+  "gap_before_s": 0.7,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 2,
+ "pick_reason": "fast: best of 2 seeds by ASR word recall, then no pause cut inside the voice, then the span nearest est_s",
+ "voice": "af_heart (Kokoro-82M stock) · a-heart-composed · speed 0.900",
+ "voiceId": "af_heart",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch 0",
+  "peak -1 dB @300 Hz Q1.0",
+  "peak +1 dB @5000 Hz Q0.8",
+  "comp 2.0:1 @-22 dB (8/120 ms)",
+  "Kokoro speed 0.900 (the plan speed; rima-tamuri band 0.90-0.98); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'Mas': Kokoro 0.03 s -> 0.25 s (intended 0.25; +0.22 s of room tone at the quietest 5 ms)",
+  "pause after 'call': Kokoro 0.42 s -> 0.39 s (intended 0.50; +0.07 s of room tone at the quietest 5 ms)",
+  "pause after 'people': Kokoro 0.01 s -> 0.20 s (intended 0.20; +0.18 s of room tone at the quietest 5 ms)",
+  "pause after 'will': Kokoro 0.14 s -> 0.25 s (intended 0.25; +0.12 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "M"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "A"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "E"
+  },
+  {
+   "t": 1.0,
+   "f": 24,
+   "shape": "rest"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "E"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "O"
+  },
+  {
+   "t": 1.542,
+   "f": 37,
+   "shape": "E"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "O"
+  },
+  {
+   "t": 1.958,
+   "f": 47,
+   "shape": "E"
+  },
+  {
+   "t": 2.042,
+   "f": 49,
+   "shape": "rest"
+  },
+  {
+   "t": 2.583,
+   "f": 62,
+   "shape": "E"
+  },
+  {
+   "t": 2.75,
+   "f": 66,
+   "shape": "M"
+  },
+  {
+   "t": 2.875,
+   "f": 69,
+   "shape": "A"
+  },
+  {
+   "t": 3.0,
+   "f": 72,
+   "shape": "E"
+  },
+  {
+   "t": 3.25,
+   "f": 78,
+   "shape": "A"
+  },
+  {
+   "t": 3.5,
+   "f": 84,
+   "shape": "M"
+  },
+  {
+   "t": 3.583,
+   "f": 86,
+   "shape": "A"
+  },
+  {
+   "t": 3.667,
+   "f": 88,
+   "shape": "M"
+  },
+  {
+   "t": 3.75,
+   "f": 90,
+   "shape": "E"
+  },
+  {
+   "t": 3.917,
+   "f": 94,
+   "shape": "rest"
+  },
+  {
+   "t": 4.167,
+   "f": 100,
+   "shape": "A"
+  },
+  {
+   "t": 4.25,
+   "f": 102,
+   "shape": "E"
+  },
+  {
+   "t": 4.417,
+   "f": 106,
+   "shape": "O"
+  },
+  {
+   "t": 4.542,
+   "f": 109,
+   "shape": "A"
+  },
+  {
+   "t": 4.792,
+   "f": 115,
+   "shape": "E"
+  },
+  {
+   "t": 4.917,
+   "f": 118,
+   "shape": "rest"
+  },
+  {
+   "t": 5.167,
+   "f": 124,
+   "shape": "A"
+  },
+  {
+   "t": 5.292,
+   "f": 127,
+   "shape": "O"
+  },
+  {
+   "t": 5.417,
+   "f": 130,
+   "shape": "E"
+  },
+  {
+   "t": 5.542,
+   "f": 133,
+   "shape": "A"
+  },
+  {
+   "t": 5.667,
+   "f": 136,
+   "shape": "E"
+  },
+  {
+   "t": 5.792,
+   "f": 139,
+   "shape": "A"
+  },
+  {
+   "t": 6.0,
+   "f": 144,
+   "shape": "M"
+  },
+  {
+   "t": 6.083,
+   "f": 146,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Mas",
+   "t0": 0.56,
+   "t1": 0.985,
+   "f0": 13,
+   "f1": 24,
+   "ph": "mˈɑs"
+  },
+  {
+   "w": "it's",
+   "t0": 1.255,
+   "t1": 1.43,
+   "f0": 30,
+   "f1": 34,
+   "ph": "ɪts"
+  },
+  {
+   "w": "your",
+   "t0": 1.43,
+   "t1": 1.605,
+   "f0": 34,
+   "f1": 39,
+   "ph": "jʊɹ"
+  },
+  {
+   "w": "call",
+   "t0": 1.605,
+   "t1": 2.07,
+   "f0": 39,
+   "f1": 50,
+   "ph": "kˈɔl"
+  },
+  {
+   "w": "If",
+   "t0": 2.53,
+   "t1": 2.693,
+   "f0": 61,
+   "f1": 65,
+   "ph": "ˌɪf"
+  },
+  {
+   "w": "it",
+   "t0": 2.693,
+   "t1": 2.78,
+   "f0": 65,
+   "f1": 67,
+   "ph": "ɪt"
+  },
+  {
+   "w": "breaks",
+   "t0": 2.78,
+   "t1": 3.068,
+   "f0": 67,
+   "f1": 74,
+   "ph": "bɹˈAks"
+  },
+  {
+   "w": "in",
+   "t0": 3.068,
+   "t1": 3.205,
+   "f0": 74,
+   "f1": 77,
+   "ph": "ɪn"
+  },
+  {
+   "w": "front",
+   "t0": 3.205,
+   "t1": 3.393,
+   "f0": 77,
+   "f1": 81,
+   "ph": "fɹˈʌnt"
+  },
+  {
+   "w": "of",
+   "t0": 3.393,
+   "t1": 3.48,
+   "f0": 81,
+   "f1": 84,
+   "ph": "ʌv"
+  },
+  {
+   "w": "people",
+   "t0": 3.48,
+   "t1": 3.905,
+   "f0": 84,
+   "f1": 94,
+   "ph": "pˈipᵊl"
+  },
+  {
+   "w": "and",
+   "t0": 4.165,
+   "t1": 4.278,
+   "f0": 100,
+   "f1": 103,
+   "ph": "ænd"
+  },
+  {
+   "w": "it",
+   "t0": 4.278,
+   "t1": 4.428,
+   "f0": 103,
+   "f1": 106,
+   "ph": "ɪt"
+  },
+  {
+   "w": "will",
+   "t0": 4.428,
+   "t1": 4.915,
+   "f0": 106,
+   "f1": 118,
+   "ph": "wˈɪl"
+  },
+  {
+   "w": "what",
+   "t0": 5.13,
+   "t1": 5.267,
+   "f0": 123,
+   "f1": 126,
+   "ph": "wˌʌt"
+  },
+  {
+   "w": "do",
+   "t0": 5.267,
+   "t1": 5.368,
+   "f0": 126,
+   "f1": 129,
+   "ph": "dˈu"
+  },
+  {
+   "w": "we",
+   "t0": 5.368,
+   "t1": 5.48,
+   "f0": 129,
+   "f1": 132,
+   "ph": "wi"
+  },
+  {
+   "w": "tell",
+   "t0": 5.48,
+   "t1": 5.73,
+   "f0": 132,
+   "f1": 138,
+   "ph": "tˈɛl"
+  },
+  {
+   "w": "them",
+   "t0": 5.73,
+   "t1": 6.07,
+   "f0": 138,
+   "f1": 146,
+   "ph": "ðˌɛm"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -2.56,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 205.5,
+  "f0_range_st": 8.9,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Moss, it's your call. If it breaks in front of people, and it will, what do we tell them?",
+  "cer": 0.031,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.175,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.445,
+  "rise_ms": 15.0,
+  "decay_ms": 95.0,
+  "decay_to_60_s": 0.075
+ },
+ "speaker_label": "RIMA",
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 1,
+   "word": "Mas",
+   "tts_s": 0.03,
+   "target_s": 0.25,
+   "point_s": 0.595,
+   "joined_speech": false,
+   "dip_db": -55.1,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.25,
+   "opened_s": 0.22
+  },
+  {
+   "after_word": 4,
+   "word": "call",
+   "tts_s": 0.425,
+   "target_s": 0.5,
+   "point_s": 1.95,
+   "joined_speech": false,
+   "dip_db": -65.4,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.39,
+   "opened_s": 0.075
+  },
+  {
+   "after_word": 11,
+   "word": "people",
+   "tts_s": 0.015,
+   "target_s": 0.2,
+   "point_s": 3.515,
+   "joined_speech": false,
+   "dip_db": -48.6,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.2,
+   "opened_s": 0.185
+  },
+  {
+   "after_word": 14,
+   "word": "will",
+   "tts_s": 0.135,
+   "target_s": 0.25,
+   "point_s": 4.54,
+   "joined_speech": false,
+   "dip_db": -57.2,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.25,
+   "opened_s": 0.115
+  }
+ ],
+ "alt_takes": [
+  {
+   "tag": "s2",
+   "seed": 2,
+   "speed": 0.9,
+   "file": "audio/ep01/act1/dialogue/fast-v1/takes/e1-a1-5-06/s2.wav",
+   "span_s": 5.55,
+   "wpm": 205.4,
+   "asr": "Moss, it's your call. If it breaks in front of people, and it will, what do we tell them?",
+   "recall": 1.0,
+   "utmos": null
+  }
+ ],
+ "fast": {
+  "key": "c519a769ff1bd369",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 19.85,
+  "takes": 2,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 1,
+   "share_s": 7.83
+  }
+ }
+}

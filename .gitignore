@@ -72,3 +72,8 @@ out/review-desk/*.mp4
 out/review-desk/*.mp3
 # Reel beds and mixes (regenerable from audio/reel/ and the reel JSONs)
 audio/reel/**/*.wav
+# Rendered FLAC stems anywhere under out/ and audio/ (regenerable from the mix scripts)
+out/**/*.flac
+audio/**/*.flac
+# SFX library renders (regenerate with audio/sfx/scripts/build.py; the manifest stays tracked)
+audio/sfx/wav/*.wav

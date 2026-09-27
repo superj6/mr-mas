@@ -1,0 +1,1603 @@
+{
+ "schema": "mrmas-ost-cue/1",
+ "id": "s5-s8_s5-two-am",
+ "mm": "MM-10",
+ "family": "P01 DARK ROOM (MM-10 form a, re-laid)",
+ "title": "His Side, 2 AM (Ep1 Act Four v5, S5, to picture)",
+ "version": "v5",
+ "composer": "Ep1 Act Four v5 score, S5-S8 (re-laid from the batch-1 cues)",
+ "tone": "one low pedal in the dark under the record; the felt once for the Orb; the Build with Gerg; a pulse under the letter that stops for Alyi's name; the Build stops on his look; the landlord's two chords at the door",
+ "tags": [
+  "to picture",
+  "Ep1",
+  "act four",
+  "v5",
+  "continuous",
+  "S5-S8"
+ ],
+ "usage": "BI",
+ "scenes": [
+  "v5 S5.02-S5.12, act 6985-9001 (17:22:01-18:46:01); file t=0 = act frame 6985"
+ ],
+ "description": "",
+ "motifs": [
+  "the DARK ROOM pedal (F3/C4, sul tasto)",
+  "the Water Line's C4 (felt; the settle never comes)",
+  "the Build (Gerg's compile passes 4 / 8 / 12 / 8 / 4; 4 / 8 / 12 cut by his look)",
+  "Tasya's floor: Abmaj9 on the door, Cmaj9 on \"desk\" (Rhodes)"
+ ],
+ "key": "F open fifth (F3/C4) throughout; Abmaj9 and Cmaj9 over it at the door",
+ "engine": {
+  "version": "mrmas-ost-engine 1.1 (2026-09-26: fix1 -- meter axis, sample tuning, render pool, QA 5a-d)",
+  "rendered": "2026-09-27T02:26:42",
+  "render_seconds": 34.4
+ },
+ "timing": {
+  "bpm": 96.0,
+  "beat_unit_quarters": 1.0,
+  "tempo_map": [
+   {
+    "bar": 1,
+    "beat": 1.0,
+    "bpm": 96.0,
+    "ramp_in": false,
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "meter_map": [
+   {
+    "bar": 1,
+    "meter": "4/4",
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "swing": 0.0,
+  "swing_unit_quarters": 0.5,
+  "pickup_beats": 0.0,
+  "bars": 38,
+  "length_s": 95.0,
+  "length_frames": 2280.0,
+  "fps": 24,
+  "end": {
+   "sec": 84.050333,
+   "frame": 2017.208,
+   "bar": 34,
+   "beat": 3.4805
+  },
+  "album_duration_s": 85.2503,
+  "album_duration_frames": 2046.01,
+  "album_loops": 1
+ },
+ "sections": [
+  {
+   "label": "home + Rima's post (the pedal)",
+   "start": {
+    "sec": 0.000333,
+    "frame": 0.008,
+    "bar": 1,
+    "beat": 1.0005
+   },
+   "end": {
+    "sec": 6.583333,
+    "frame": 158.0,
+    "bar": 3,
+    "beat": 3.5333
+   }
+  },
+  {
+   "label": "the Orb exchange (the felt C4)",
+   "start": {
+    "sec": 6.583333,
+    "frame": 158.0,
+    "bar": 3,
+    "beat": 3.5333
+   },
+   "end": {
+    "sec": 11.833333,
+    "frame": 284.0,
+    "bar": 5,
+    "beat": 3.9333
+   }
+  },
+  {
+   "label": "Gerg at 2 AM (the Build)",
+   "start": {
+    "sec": 11.833333,
+    "frame": 284.0,
+    "bar": 5,
+    "beat": 3.9333
+   },
+   "end": {
+    "sec": 26.041333,
+    "frame": 624.992,
+    "bar": 11,
+    "beat": 2.6661
+   }
+  },
+  {
+   "label": "the letter (the pedal + the pulse)",
+   "start": {
+    "sec": 26.041333,
+    "frame": 624.992,
+    "bar": 11,
+    "beat": 2.6661
+   },
+   "end": {
+    "sec": 48.833333,
+    "frame": 1172.0,
+    "bar": 20,
+    "beat": 3.1333
+   }
+  },
+  {
+   "label": "\"He did both.\" + the check (the pulse)",
+   "start": {
+    "sec": 48.833333,
+    "frame": 1172.0,
+    "bar": 20,
+    "beat": 3.1333
+   },
+   "end": {
+    "sec": 58.166333,
+    "frame": 1395.992,
+    "bar": 24,
+    "beat": 2.0661
+   }
+  },
+  {
+   "label": "the Build again -> his look (ring-out)",
+   "start": {
+    "sec": 58.166333,
+    "frame": 1395.992,
+    "bar": 24,
+    "beat": 2.0661
+   },
+   "end": {
+    "sec": 63.125333,
+    "frame": 1515.008,
+    "bar": 26,
+    "beat": 2.0005
+   }
+  },
+  {
+   "label": "the look: the pedal alone",
+   "start": {
+    "sec": 63.125333,
+    "frame": 1515.008,
+    "bar": 26,
+    "beat": 2.0005
+   },
+   "end": {
+    "sec": 69.708333,
+    "frame": 1673.0,
+    "bar": 28,
+    "beat": 4.5333
+   }
+  },
+  {
+   "label": "the door (Tasya's Rhodes)",
+   "start": {
+    "sec": 69.708333,
+    "frame": 1673.0,
+    "bar": 28,
+    "beat": 4.5333
+   },
+   "end": {
+    "sec": 81.083333,
+    "frame": 1946.0,
+    "bar": 33,
+    "beat": 2.7333
+   }
+  },
+  {
+   "label": "\"leave it open.\" -> the downbeat",
+   "start": {
+    "sec": 81.083333,
+    "frame": 1946.0,
+    "bar": 33,
+    "beat": 2.7333
+   },
+   "end": {
+    "sec": 84.000333,
+    "frame": 2016.008,
+    "bar": 34,
+    "beat": 3.4005
+   }
+  }
+ ],
+ "markers": [
+  {
+   "label": "the felt surfaces: C4 (the Water Line's bar 2; the settle never comes), held through \"mostly.\"",
+   "sec": 7.058333,
+   "frame": 169.4,
+   "bar": 3,
+   "beat": 4.2933
+  },
+  {
+   "label": "the Build: compile pass (4)",
+   "sec": 12.908333,
+   "frame": 309.8,
+   "bar": 6,
+   "beat": 1.6533
+  },
+  {
+   "label": "the Build: compile pass (8)",
+   "sec": 17.908333,
+   "frame": 429.8,
+   "bar": 8,
+   "beat": 1.6533
+  },
+  {
+   "label": "the Build: compile pass (12)",
+   "sec": 20.408333,
+   "frame": 489.8,
+   "bar": 9,
+   "beat": 1.6533
+  },
+  {
+   "label": "the Build: compile pass (8)",
+   "sec": 22.908333,
+   "frame": 549.8,
+   "bar": 10,
+   "beat": 1.6533
+  },
+  {
+   "label": "the Build: compile pass (4)",
+   "sec": 25.408333,
+   "frame": 609.8,
+   "bar": 11,
+   "beat": 1.6533
+  },
+  {
+   "label": "the Build: back with his keys (4)",
+   "sec": 58.106333,
+   "frame": 1394.552,
+   "bar": 24,
+   "beat": 1.9701
+  },
+  {
+   "label": "the Build: 8 under \"The company. Again. Just in case.\"",
+   "sec": 60.406333,
+   "frame": 1449.752,
+   "bar": 25,
+   "beat": 1.6501
+  },
+  {
+   "label": "the Build: 12, cut dead by his look",
+   "sec": 61.906333,
+   "frame": 1485.752,
+   "bar": 25,
+   "beat": 4.0501
+  },
+  {
+   "label": "the pulse enters as he reads (C3/F3 on the beat)",
+   "sec": 26.676333,
+   "frame": 640.232,
+   "bar": 11,
+   "beat": 3.6821
+  },
+  {
+   "label": "the count stops at 745: the pulse lands",
+   "sec": 44.801333,
+   "frame": 1075.232,
+   "bar": 18,
+   "beat": 4.6821
+  },
+  {
+   "label": "the pulse comes back on \"He did both.\"",
+   "sec": 50.743333,
+   "frame": 1217.84,
+   "bar": 21,
+   "beat": 2.1893
+  },
+  {
+   "label": "Tasya's Rhodes: one chord on the door (Abmaj9 over the F pedal)",
+   "sec": 70.608333,
+   "frame": 1694.6,
+   "bar": 29,
+   "beat": 1.9733
+  },
+  {
+   "label": "the second chord on \"desk\" (Cmaj9)",
+   "sec": 79.199333,
+   "frame": 1900.784,
+   "bar": 32,
+   "beat": 3.7189
+  }
+ ],
+ "hit_check": [
+  {
+   "t": 7.0583,
+   "offset_ms": -5.0,
+   "strength": 6.57
+  },
+  {
+   "t": 12.9083,
+   "offset_ms": -4.3,
+   "strength": 6.63
+  },
+  {
+   "t": 17.9083,
+   "offset_ms": -4.3,
+   "strength": 5.75
+  },
+  {
+   "t": 20.4083,
+   "offset_ms": -3.0,
+   "strength": 8.36
+  },
+  {
+   "t": 22.9083,
+   "offset_ms": -1.6,
+   "strength": 6.4
+  },
+  {
+   "t": 25.4083,
+   "offset_ms": -3.0,
+   "strength": 7.92
+  },
+  {
+   "t": 26.6763,
+   "offset_ms": -20.3,
+   "strength": 1.62
+  },
+  {
+   "t": 44.8013,
+   "offset_ms": 1.4,
+   "strength": 2.56
+  },
+  {
+   "t": 50.7433,
+   "offset_ms": 0.7,
+   "strength": 2.42
+  },
+  {
+   "t": 58.1063,
+   "offset_ms": -2.3,
+   "strength": 7.47
+  },
+  {
+   "t": 60.4063,
+   "offset_ms": -3.6,
+   "strength": 6.39
+  },
+  {
+   "t": 61.9063,
+   "offset_ms": -2.3,
+   "strength": 7.57
+  },
+  {
+   "t": 70.6083,
+   "offset_ms": -19.0,
+   "strength": 1.97
+  },
+  {
+   "t": 79.1993,
+   "offset_ms": 35.4,
+   "strength": 2.08
+  }
+ ],
+ "sfx_slots": [
+  {
+   "t": 3.783,
+   "sfx": "heart tick 1 (key_tap_soft)"
+  },
+  {
+   "t": 4.408,
+   "sfx": "heart tick 2 (key_tap_soft)"
+  },
+  {
+   "t": 5.033,
+   "sfx": "heart tick 3 (key_tap_soft)"
+  },
+  {
+   "t": 5.658,
+   "sfx": "heart tick 4 (key_tap_soft)"
+  },
+  {
+   "t": 6.283,
+   "sfx": "heart tick 5 (key_tap_soft)"
+  },
+  {
+   "t": 6.883,
+   "sfx": "orb_servo"
+  },
+  {
+   "t": 12.033,
+   "sfx": "RING"
+  },
+  {
+   "t": 12.833,
+   "sfx": "dialog_ok_click"
+  },
+  {
+   "t": 44.801,
+   "sfx": "odometer_ratchet (745)"
+  },
+  {
+   "t": 46.721,
+   "sfx": "the Orb's chime (bell_ding_F6 temp)"
+  },
+  {
+   "t": 57.083,
+   "sfx": "rubber_stamp_C: VOID IF CEO MISSING"
+  },
+  {
+   "t": 70.508,
+   "sfx": "the door's third step"
+  },
+  {
+   "t": 70.958,
+   "sfx": "the key"
+  }
+ ],
+ "silence_windows": [],
+ "vo_windows": [],
+ "knee_whole": 0,
+ "f_major": {
+  "limit": 0.08,
+  "windows": 137,
+  "worst": 0.938,
+  "worst_sieved": 0.485,
+  "ok": true,
+  "ok_written": true,
+  "ok_spectral": true,
+  "f_inaudible_windows": 1,
+  "a_classes": {
+   "written": 0,
+   "resonance": 0,
+   "explained": 13,
+   "unattributed": 0
+  },
+  "written_a_over_f_bass": [],
+  "written_third": {
+   "ok": true,
+   "count": 0,
+   "events": [],
+   "grazes": [],
+   "n_grazes": 0,
+   "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+  },
+  "fails": [],
+  "explained": [
+   {
+    "t0": 0.621,
+    "t1": 1.241,
+    "a_over_f": 0.148,
+    "a_over_f_sieved": 0.142,
+    "written_a": [],
+    "f_share": 0.671,
+    "a_from": {
+     "strings": 100,
+     "bass": 0,
+     "chip": 0
+    },
+    "a_peaks": [
+     {
+      "stem": "strings",
+      "hz": 874.5,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.99
+     },
+     {
+      "stem": "strings",
+      "hz": 1748.3,
+      "kind": "partial 10 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.01
+     },
+     {
+      "stem": "strings",
+      "hz": 870.1,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.01
+     }
+    ],
+    "a_class": "explained",
+    "ok": true,
+    "ok_spectral": true
+   },
+   {
+    "t0": 3.103,
+    "t1": 3.724,
+    "a_over_f": 0.238,
+    "a_over_f_sieved": 0.172,
+    "written_a": [],
+    "f_share": 0.298,
+    "a_from": {
+     "strings": 100,
+     "bass": 0,
+     "chip": 0
+    },
+    "a_peaks": [
+     {
+      "stem": "strings",
+      "hz": 873.0,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.72
+     },
+     {
+      "stem": "strings",
+      "hz": 879.6,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.19
+     },
+     {
+      "stem": "strings",
+      "hz": 876.0,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.09
+     }
+    ],
+    "a_class": "explained",
+    "ok": true,
+    "ok_spectral": true
+   },
+   {
+    "t0": 3.724,
+    "t1": 4.344,
+    "a_over_f": 0.179,
+    "a_over_f_sieved": 0.14,
+    "written_a": [],
+    "f_share": 0.302,
+    "a_from": {
+     "strings": 100,
+     "bass": 0,
+     "chip": 0
+    },
+    "a_peaks": [
+     {
+      "stem": "strings",
+      "hz": 871.6,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.8
+     },
+     {
+      "stem": "strings",
+      "hz": 881.1,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.14
+     },
+     {
+      "stem": "strings",
+      "hz": 878.2,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.06
+     }
+    ],
+    "a_class": "explained",
+    "ok": true,
+    "ok_spectral": true
+   },
+   {
+    "t0": 21.721,
+    "t1": 22.341,
+    "a_over_f": 0.207,
+    "a_over_f_sieved": 0.155,
+    "written_a": [],
+    "f_share": 0.144,
+    "a_from": {
+     "strings": 83,
+     "chip": 17,
+     "perc": 0
+    },
+    "a_peaks": [
+     {
+      "stem": "strings",
+      "hz": 871.6,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.88
+     },
+     {
+      "stem": "strings",
+      "hz": 865.7,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.12
+     }
+    ],
+    "a_class": "explained",
+    "ok": true,
+    "ok_spectral": true
+   },
+   {
+    "t0": 31.276,
+    "t1": 31.826,
+    "a_over_f": 0.634,
+    "a_over_f_sieved": 0.301,
+    "written_a": [],
+    "f_share": 0.419,
+    "a_from": {
+     "strings": 100,
+     "bass": 0,
+     "piano": 0
+    },
+    "a_peaks": [
+     {
+      "stem": "strings",
+      "hz": 872.3,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.95
+     },
+     {
+      "stem": "strings",
+      "hz": 880.4,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.04
+     },
+     {
+      "stem": "strings",
+      "hz": 867.2,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.01
+     }
+    ],
+    "a_class": "explained",
+    "ok": true,
+    "ok_spectral": true
+   },
+   {
+    "t0": 36.276,
+    "t1": 36.826,
+    "a_over_f": 0.525,
+    "a_over_f_sieved": 0.39,
+    "written_a": [],
+    "f_share": 0.262,
+    "a_from": {
+     "strings": 100,
+     "bass": 0,
+     "chip": 0
+    },
+    "a_peaks": [
+     {
+      "stem": "strings",
+      "hz": 873.0,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.96
+     },
+     {
+      "stem": "strings",
+      "hz": 880.4,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.04
+     }
+    ],
+    "a_class": "explained",
+    "ok": true,
+    "ok_spectral": true
+   },
+   {
+    "t0": 36.826,
+    "t1": 37.376,
+    "a_over_f": 0.287,
+    "a_over_f_sieved": 0.111,
+    "written_a": [],
+    "f_share": 0.145,
+    "a_from": {
+     "strings": 99,
+     "bass": 1,
+     "chip": 0
+    },
+    "a_peaks": [
+     {
+      "stem": "strings",
+      "hz": 872.3,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.74
+     },
+     {
+      "stem": "strings",
+      "hz": 878.9,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.23
+     },
+     {
+      "stem": "strings",
+      "hz": 867.9,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.03
+     }
+    ],
+    "a_class": "explained",
+    "ok": true,
+    "ok_spectral": true
+   },
+   {
+    "t0": 41.198,
+    "t1": 41.67,
+    "a_over_f": 0.227,
+    "a_over_f_sieved": 0.145,
+    "written_a": [],
+    "f_share": 0.53,
+    "a_from": {
+     "strings": 100,
+     "bass": 0,
+     "chip": 0
+    },
+    "a_peaks": [
+     {
+      "stem": "strings",
+      "hz": 874.5,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.99
+     },
+     {
+      "stem": "strings",
+      "hz": 882.6,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.0
+     },
+     {
+      "stem": "strings",
+      "hz": 887.0,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.0
+     }
+    ],
+    "a_class": "explained",
+    "ok": true,
+    "ok_spectral": true
+   }
+  ],
+  "fixed_resonances": [],
+  "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+ },
+ "knee_completion": 0,
+ "room_sfx_windows": [
+  {
+   "t0": 0.0,
+   "t1": 84.0,
+   "sfx": "room_drone (the dark room)"
+  }
+ ],
+ "qa": {
+  "balance": {
+   "balance": {
+    "piano": 8,
+    "orch": 81,
+    "bigband": 0,
+    "chip": 10
+   },
+   "rhythm_pct_of_all": 11,
+   "chip_share": 10,
+   "balance_energy": {
+    "piano": 6,
+    "orch": 88,
+    "bigband": 0,
+    "chip": 6
+   },
+   "method": "theme stemtable (gated loudness per section, time-weighted, rhythm/fx excluded; it counts a brief stab at its own loudness for the whole section) + balance_energy (ungated energy)",
+   "sections": [
+    {
+     "section": "home + Rima's post (the pedal)",
+     "share": {
+      "piano": 0,
+      "orch": 100,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "the Orb exchange (the felt C4)",
+     "share": {
+      "piano": 59,
+      "orch": 41,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "Gerg at 2 AM (the Build)",
+     "share": {
+      "piano": 1,
+      "orch": 67,
+      "bigband": 0,
+      "chip": 32
+     }
+    },
+    {
+     "section": "the letter (the pedal + the pulse)",
+     "share": {
+      "piano": 0,
+      "orch": 100,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "\"He did both.\" + the check (the pulse)",
+     "share": {
+      "piano": 0,
+      "orch": 89,
+      "bigband": 0,
+      "chip": 11
+     }
+    },
+    {
+     "section": "the Build again -> his look (ring-out)",
+     "share": {
+      "piano": 0,
+      "orch": 64,
+      "bigband": 0,
+      "chip": 36
+     }
+    },
+    {
+     "section": "the look: the pedal alone",
+     "share": {
+      "piano": 0,
+      "orch": 100,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "the door (Tasya's Rhodes)",
+     "share": {
+      "piano": 5,
+      "orch": 95,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "\"leave it open.\" -> the downbeat",
+     "share": {
+      "piano": 0,
+      "orch": 100,
+      "bigband": 0,
+      "chip": 0
+     }
+    }
+   ]
+  },
+  "short_term_underscore": {
+   "p95": -18.05,
+   "median": -20.0,
+   "max": -17.29
+  },
+  "band_2_6k_db": -24.4,
+  "centroid_hz": 451.0,
+  "f_major": {
+   "limit": 0.08,
+   "windows": 137,
+   "worst": 0.938,
+   "worst_sieved": 0.485,
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "f_inaudible_windows": 1,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 13,
+    "unattributed": 0
+   },
+   "written_a_over_f_bass": [],
+   "written_third": {
+    "ok": true,
+    "count": 0,
+    "events": [],
+    "grazes": [],
+    "n_grazes": 0,
+    "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+   },
+   "fails": [],
+   "explained": [
+    {
+     "t0": 0.621,
+     "t1": 1.241,
+     "a_over_f": 0.148,
+     "a_over_f_sieved": 0.142,
+     "written_a": [],
+     "f_share": 0.671,
+     "a_from": {
+      "strings": 100,
+      "bass": 0,
+      "chip": 0
+     },
+     "a_peaks": [
+      {
+       "stem": "strings",
+       "hz": 874.5,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.99
+      },
+      {
+       "stem": "strings",
+       "hz": 1748.3,
+       "kind": "partial 10 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.01
+      },
+      {
+       "stem": "strings",
+       "hz": 870.1,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.01
+      }
+     ],
+     "a_class": "explained",
+     "ok": true,
+     "ok_spectral": true
+    },
+    {
+     "t0": 3.103,
+     "t1": 3.724,
+     "a_over_f": 0.238,
+     "a_over_f_sieved": 0.172,
+     "written_a": [],
+     "f_share": 0.298,
+     "a_from": {
+      "strings": 100,
+      "bass": 0,
+      "chip": 0
+     },
+     "a_peaks": [
+      {
+       "stem": "strings",
+       "hz": 873.0,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.72
+      },
+      {
+       "stem": "strings",
+       "hz": 879.6,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.19
+      },
+      {
+       "stem": "strings",
+       "hz": 876.0,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.09
+      }
+     ],
+     "a_class": "explained",
+     "ok": true,
+     "ok_spectral": true
+    },
+    {
+     "t0": 3.724,
+     "t1": 4.344,
+     "a_over_f": 0.179,
+     "a_over_f_sieved": 0.14,
+     "written_a": [],
+     "f_share": 0.302,
+     "a_from": {
+      "strings": 100,
+      "bass": 0,
+      "chip": 0
+     },
+     "a_peaks": [
+      {
+       "stem": "strings",
+       "hz": 871.6,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.8
+      },
+      {
+       "stem": "strings",
+       "hz": 881.1,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.14
+      },
+      {
+       "stem": "strings",
+       "hz": 878.2,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.06
+      }
+     ],
+     "a_class": "explained",
+     "ok": true,
+     "ok_spectral": true
+    },
+    {
+     "t0": 21.721,
+     "t1": 22.341,
+     "a_over_f": 0.207,
+     "a_over_f_sieved": 0.155,
+     "written_a": [],
+     "f_share": 0.144,
+     "a_from": {
+      "strings": 83,
+      "chip": 17,
+      "perc": 0
+     },
+     "a_peaks": [
+      {
+       "stem": "strings",
+       "hz": 871.6,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.88
+      },
+      {
+       "stem": "strings",
+       "hz": 865.7,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.12
+      }
+     ],
+     "a_class": "explained",
+     "ok": true,
+     "ok_spectral": true
+    },
+    {
+     "t0": 31.276,
+     "t1": 31.826,
+     "a_over_f": 0.634,
+     "a_over_f_sieved": 0.301,
+     "written_a": [],
+     "f_share": 0.419,
+     "a_from": {
+      "strings": 100,
+      "bass": 0,
+      "piano": 0
+     },
+     "a_peaks": [
+      {
+       "stem": "strings",
+       "hz": 872.3,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.95
+      },
+      {
+       "stem": "strings",
+       "hz": 880.4,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.04
+      },
+      {
+       "stem": "strings",
+       "hz": 867.2,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.01
+      }
+     ],
+     "a_class": "explained",
+     "ok": true,
+     "ok_spectral": true
+    },
+    {
+     "t0": 36.276,
+     "t1": 36.826,
+     "a_over_f": 0.525,
+     "a_over_f_sieved": 0.39,
+     "written_a": [],
+     "f_share": 0.262,
+     "a_from": {
+      "strings": 100,
+      "bass": 0,
+      "chip": 0
+     },
+     "a_peaks": [
+      {
+       "stem": "strings",
+       "hz": 873.0,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.96
+      },
+      {
+       "stem": "strings",
+       "hz": 880.4,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.04
+      }
+     ],
+     "a_class": "explained",
+     "ok": true,
+     "ok_spectral": true
+    },
+    {
+     "t0": 36.826,
+     "t1": 37.376,
+     "a_over_f": 0.287,
+     "a_over_f_sieved": 0.111,
+     "written_a": [],
+     "f_share": 0.145,
+     "a_from": {
+      "strings": 99,
+      "bass": 1,
+      "chip": 0
+     },
+     "a_peaks": [
+      {
+       "stem": "strings",
+       "hz": 872.3,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.74
+      },
+      {
+       "stem": "strings",
+       "hz": 878.9,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.23
+      },
+      {
+       "stem": "strings",
+       "hz": 867.9,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.03
+      }
+     ],
+     "a_class": "explained",
+     "ok": true,
+     "ok_spectral": true
+    },
+    {
+     "t0": 41.198,
+     "t1": 41.67,
+     "a_over_f": 0.227,
+     "a_over_f_sieved": 0.145,
+     "written_a": [],
+     "f_share": 0.53,
+     "a_from": {
+      "strings": 100,
+      "bass": 0,
+      "chip": 0
+     },
+     "a_peaks": [
+      {
+       "stem": "strings",
+       "hz": 874.5,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.99
+      },
+      {
+       "stem": "strings",
+       "hz": 882.6,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.0
+      },
+      {
+       "stem": "strings",
+       "hz": 887.0,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.0
+      }
+     ],
+     "a_class": "explained",
+     "ok": true,
+     "ok_spectral": true
+    }
+   ],
+   "fixed_resonances": [],
+   "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+  },
+  "knee_completion": {
+   "count": 0,
+   "hits": [],
+   "max_gap_s": 2.5,
+   "rule": "OST-BIBLE rule 4: the knee never plays whole in an episode, in any register, across a phrase boundary too"
+  },
+  "sub_under_room": [
+   {
+    "t0": 0.0,
+    "t1": 84.0,
+    "sfx": "room_drone (the dark room)",
+    "sub_db": -38.3,
+    "limit_db": -18.0,
+    "sub_from": {
+     "piano": 53,
+     "bass": 42
+    },
+    "ok": true,
+    "notes_below_c3": []
+   }
+  ],
+  "no_third": [],
+  "silence": [],
+  "hard_stops": [],
+  "vo_windows": [],
+  "knee_whole": 0,
+  "motifs_found": {},
+  "swing": {
+   "vc": {
+    "offbeats": 6,
+    "median_frames": 9.18,
+    "hum_ms": 8
+   },
+   "vla": {
+    "offbeats": 5,
+    "median_frames": 8.2,
+    "hum_ms": 8
+   },
+   "lead": {
+    "offbeats": 26,
+    "median_frames": 8.25,
+    "hum_ms": 0
+   },
+   "xylo": {
+    "offbeats": 11,
+    "median_frames": 9.8,
+    "hum_ms": 3
+   },
+   "ubass": {
+    "offbeats": 25,
+    "median_frames": 10.23,
+    "hum_ms": 3
+   },
+   "rhodes": {
+    "offbeats": 4,
+    "median_frames": 11.0,
+    "hum_ms": 4
+   }
+  },
+  "banned": []
+ },
+ "loop": null,
+ "files": {
+  "album_wav": "render/s5-s8_s5-two-am-album.wav",
+  "album_mp3": "render/s5-s8_s5-two-am-album.mp3",
+  "underscore_wav": "render/s5-s8_s5-two-am-underscore.wav",
+  "underscore_mp3": "render/s5-s8_s5-two-am-underscore.mp3",
+  "stems": {
+   "piano": "render/stems/s5-s8_s5-two-am-piano.flac",
+   "strings": "render/stems/s5-s8_s5-two-am-strings.flac",
+   "bass": "render/stems/s5-s8_s5-two-am-bass.flac",
+   "perc": "render/stems/s5-s8_s5-two-am-perc.flac",
+   "chip": "render/stems/s5-s8_s5-two-am-chip.flac"
+  },
+  "midi": "render/s5-s8_s5-two-am.mid",
+  "pianoroll": "render/s5-s8_s5-two-am-pianoroll.png"
+ },
+ "masters": {
+  "album": {
+   "target_lufs": -18.0,
+   "ceiling_dbtp": -1.0,
+   "comp": {
+    "thresh_db": -20,
+    "ratio": 1.8
+   },
+   "dialog_pocket": null,
+   "measured": {
+    "lufs": -18.0,
+    "lra": 3.52,
+    "true_peak_db": -1.15,
+    "peak_db": -1.16,
+    "rms_db": -20.42,
+    "crest_db": 19.27,
+    "seconds": 85.2503
+   }
+  },
+  "underscore": {
+   "target_lufs": -20.0,
+   "ceiling_dbtp": -3.0,
+   "comp": {
+    "thresh_db": -28,
+    "ratio": 1.3,
+    "att_ms": 40.0,
+    "rel_ms": 350.0
+   },
+   "dialog_pocket": {
+    "f": 2500.0,
+    "db": -2.0,
+    "q": 0.7
+   },
+   "measured": {
+    "lufs": -20.0,
+    "lra": 3.25,
+    "true_peak_db": -3.57,
+    "peak_db": -3.58,
+    "rms_db": -22.39,
+    "crest_db": 18.81,
+    "seconds": 85.2503
+   }
+  }
+ },
+ "stems": {
+  "sum_vs_underscore_residual_db": -168.0,
+  "families_present": [
+   "bass",
+   "chip",
+   "perc",
+   "piano",
+   "strings"
+  ],
+  "family_share_lu": {
+   "piano": -4.1,
+   "strings": -1.1,
+   "bass": -3.3,
+   "perc": -16.3,
+   "chip": -3.4
+  }
+ },
+ "spectrum": {
+  "sub": -37.6,
+  "bass": -8.2,
+  "lowmid": -1.0,
+  "mid": -12.3,
+  "presence": -33.2,
+  "air": -44.8,
+  "centroid_hz": 451.0
+ },
+ "bar_levels": [
+  {
+   "bar": 1,
+   "rms_db": -25.6,
+   "peak_db": -10.699999809265137
+  },
+  {
+   "bar": 2,
+   "rms_db": -24.0,
+   "peak_db": -10.800000190734863
+  },
+  {
+   "bar": 3,
+   "rms_db": -20.1,
+   "peak_db": -3.5999999046325684
+  },
+  {
+   "bar": 4,
+   "rms_db": -22.1,
+   "peak_db": -9.800000190734863
+  },
+  {
+   "bar": 5,
+   "rms_db": -23.0,
+   "peak_db": -11.0
+  },
+  {
+   "bar": 6,
+   "rms_db": -22.4,
+   "peak_db": -8.100000381469727
+  },
+  {
+   "bar": 7,
+   "rms_db": -23.6,
+   "peak_db": -9.199999809265137
+  },
+  {
+   "bar": 8,
+   "rms_db": -21.8,
+   "peak_db": -8.199999809265137
+  },
+  {
+   "bar": 9,
+   "rms_db": -21.7,
+   "peak_db": -8.800000190734863
+  },
+  {
+   "bar": 10,
+   "rms_db": -22.2,
+   "peak_db": -8.399999618530273
+  },
+  {
+   "bar": 11,
+   "rms_db": -22.5,
+   "peak_db": -7.800000190734863
+  },
+  {
+   "bar": 12,
+   "rms_db": -21.7,
+   "peak_db": -6.300000190734863
+  },
+  {
+   "bar": 13,
+   "rms_db": -22.3,
+   "peak_db": -6.900000095367432
+  },
+  {
+   "bar": 14,
+   "rms_db": -21.9,
+   "peak_db": -7.699999809265137
+  },
+  {
+   "bar": 15,
+   "rms_db": -22.1,
+   "peak_db": -8.199999809265137
+  },
+  {
+   "bar": 16,
+   "rms_db": -21.5,
+   "peak_db": -6.699999809265137
+  },
+  {
+   "bar": 17,
+   "rms_db": -21.7,
+   "peak_db": -7.099999904632568
+  },
+  {
+   "bar": 18,
+   "rms_db": -19.0,
+   "peak_db": -7.199999809265137
+  },
+  {
+   "bar": 19,
+   "rms_db": -22.7,
+   "peak_db": -7.699999809265137
+  },
+  {
+   "bar": 20,
+   "rms_db": -23.3,
+   "peak_db": -11.399999618530273
+  },
+  {
+   "bar": 21,
+   "rms_db": -21.9,
+   "peak_db": -9.100000381469727
+  },
+  {
+   "bar": 22,
+   "rms_db": -21.8,
+   "peak_db": -9.100000381469727
+  },
+  {
+   "bar": 23,
+   "rms_db": -23.1,
+   "peak_db": -7.800000190734863
+  },
+  {
+   "bar": 24,
+   "rms_db": -21.9,
+   "peak_db": -8.600000381469727
+  },
+  {
+   "bar": 25,
+   "rms_db": -21.6,
+   "peak_db": -6.599999904632568
+  },
+  {
+   "bar": 26,
+   "rms_db": -22.6,
+   "peak_db": -7.800000190734863
+  },
+  {
+   "bar": 27,
+   "rms_db": -23.4,
+   "peak_db": -10.899999618530273
+  },
+  {
+   "bar": 28,
+   "rms_db": -23.3,
+   "peak_db": -9.899999618530273
+  },
+  {
+   "bar": 29,
+   "rms_db": -23.2,
+   "peak_db": -10.199999809265137
+  },
+  {
+   "bar": 30,
+   "rms_db": -23.5,
+   "peak_db": -10.800000190734863
+  },
+  {
+   "bar": 31,
+   "rms_db": -23.6,
+   "peak_db": -11.800000190734863
+  },
+  {
+   "bar": 32,
+   "rms_db": -23.6,
+   "peak_db": -10.600000381469727
+  },
+  {
+   "bar": 33,
+   "rms_db": -23.5,
+   "peak_db": -9.600000381469727
+  },
+  {
+   "bar": 34,
+   "rms_db": -24.6,
+   "peak_db": -10.300000190734863
+  },
+  {
+   "bar": 35,
+   "rms_db": -47.4,
+   "peak_db": -33.20000076293945
+  }
+ ],
+ "instrumentation": {
+  "felt": {
+   "family": "piano",
+   "notes": 1,
+   "source": "sf2",
+   "credit": "Upright Piano KW by FreePats (CC0 1.0)"
+  },
+  "felt_mech": {
+   "family": "piano",
+   "notes": 1,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "lead": {
+   "family": "chip",
+   "notes": 56,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "rhodes": {
+   "family": "piano",
+   "notes": 8,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "ubass": {
+   "family": "bass",
+   "notes": 37,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "vc": {
+   "family": "strings",
+   "notes": 17,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vla": {
+   "family": "strings",
+   "notes": 17,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "xylo": {
+   "family": "perc",
+   "notes": 14,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  }
+ },
+ "credits": [
+  "GeneralUser GS by S. Christian Collins",
+  "Upright Piano KW by FreePats (CC0 1.0)",
+  "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+ ],
+ "audition": [
+  "0-6.6 s: the pedal under the home shot, Rima's post and the hearts: air, not a drone effect; does the card's felt F4 (S1-S4 cue) ring into it?",
+  "7.1-11.8 s: the felt C4 for the Orb exchange: held, not moving under \"mostly.\"",
+  "12.9-26.0 s: the Build low under Gerg: his keyboard, not a melody on his lines?",
+  "26.7-46.1 s: the pulse under the quoted letter: a pulse, not a heartbeat? its stop for ALYI (REPORTED) and its return on \"He did both.\"",
+  "63.1 s: the Build stops dead on his look and the pedal holds (a ring-out, not a hole)",
+  "70.6 / 79.2 s: Tasya's two Rhodes chords over the pedal: warm, and his?"
+ ],
+ "warnings": [
+  "marker at 26.6763 s: no clear onset within 10 ms ({'t': 26.6763, 'offset_ms': np.float64(-20.3), 'strength': 1.62})",
+  "marker at 70.6083 s: no clear onset within 10 ms ({'t': 70.6083, 'offset_ms': np.float64(-19.0), 'strength': 1.97})",
+  "marker at 79.1993 s: no clear onset within 10 ms ({'t': 79.1993, 'offset_ms': np.float64(35.4), 'strength': 2.08})"
+ ]
+}

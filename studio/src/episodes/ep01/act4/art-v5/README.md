@@ -9,9 +9,9 @@ The code side of the Act Four v5 pixel assets. The assets themselves are additiv
 
 | File | What it is |
 |---|---|
-| `demos.ts` | The stills registry: one `D({id, state, module, note, standin, draw})` per asset state (88). Each `draw` paints the 480×203 picture the way the v5 shot would use the asset, often over THE EDITOR's v4 frame for that shot (`native4`). These are previews, not the v5 layouts (`shots5.ts`, not built yet). |
+| `demos.ts` | The stills registry: one `D({id, state, module, note, standin, draw})` per asset state (89). Each `draw` paints the 480×203 picture the way the v5 shot would use the asset, often over THE EDITOR's v4 frame for that shot (`native4`). These are previews, not the v5 layouts (`animatic/shots5.ts`, the composer pass's). `D()` draws every demo inside `withFootnoteStyle(V5_FOOTNOTES)` (Neleh's footnotes as v5 draws them, `'slips'`); a demo can pin `footnotes`. |
 | `tools/sheet.ts` | The Node renderer for the stills sheet (no browser). Modes: `all`, `one`, `crop`, `list`, `strays`. |
-| `tools/v4check.mjs` | The v4 non-regression check: builds v4's renderer with `callgrid.ts` as committed and as edited, and md5-compares 812 native frames. |
+| `tools/v4check.mjs` | The v4 non-regression check: builds v4's renderer with the pinned files (default `callgrid.ts`) as committed and as edited, and md5-compares 812 native frames. |
 | `j1/` | J1 `CANCELLED`, ported for a drop-in at the Cancel click (conditional, off by default). See below. |
 
 ## Run (from `studio/`)
@@ -23,7 +23,7 @@ node $S/sheet.cjs all ../out/ep01/act4/assets/v5        # native/ + full/ + shee
 node $S/sheet.cjs strays                               # every line must end "ok" (master palette + THE PLAN's BP palette)
 node $S/sheet.cjs one $S/x.png ROOM-NELEH-DESK@ots-day-waiting 2
 node $S/sheet.cjs crop $S/c.png ROOM-NELEH-DESK@ots-day-waiting 220 0 190 130 4
-node src/episodes/ep01/act4/art-v5/tools/v4check.mjs $S/v4check    # prints IDENTICAL (about 3 min)
+node src/episodes/ep01/act4/art-v5/tools/v4check.mjs $S/v4check $(git diff --name-only HEAD -- src/shared | sed 's#^studio/##')   # pin every touched shared file; prints IDENTICAL (about 3 min, one core)
 ```
 
 ## J1 (`j1/`)
@@ -44,11 +44,11 @@ npx remotion still $S/j1b ep01-act4-j1-v5-preview ../out/ep01/act4/assets/v5/j1/
 
 ## Rules this code keeps
 
-- Assets are new files. The one edit to an existing shared file (`kits/callgrid.ts`: `vegasBg` guard, `TileState.neonGuard`, `TileState.mouth`) is opt-in and defaults to v4's drawing. `tools/v4check.mjs` proves it (812/812 identical, 2026-09-26).
+- Assets are new files. The edits to existing shared files are additive or opt-in and default to v4's drawing: `kits/callgrid.ts` (`vegasBg` guard, `TileState.neonGuard`, `TileState.mouth`; round 3), `kits/props.ts` (`guestBadge 'desk'`, which no v4 shot draws), `cast/tasya-speak.ts` (three exports), `cast/neleh.ts` (`FootnoteStyle`, default `'digits'`), `cast/gerg-medium.ts` (`fit`, default false) (round 4). `tools/v4check.mjs` proves it (812/812 identical with all 16 touched shared files pinned, 2026-09-27 01:41).
 - Native 480×270, master palette only (`PAL.*`; THE PLAN keeps its own BP palette), whole-pixel moves, held drawings, no scaled sprites, no mirrored frames with lettering.
 - No new imports from `src/dev/` (ORGANIZATION-PLAN phase 5a).
 
 ## Measured versus needs a person
 
-- **Measured:** the 88 stills render and are palette-clean; v4 renders byte-identical and its `check` passes; `tsc` adds no errors; the J1 preview renders (120 f).
-- **Needs a person:** every still was looked at by one reader (the pass). Nothing was seen in motion. The open judgment calls are in art-built-v5.md §5 and §7.
+- **Measured:** the 89 stills render and are palette-clean; v4 renders byte-identical and its `check` passes; `tsc` adds no errors; the J1 preview renders (120 f; not re-rendered in round 4).
+- **Needs a person:** every still was looked at by one reader (the pass). Nothing was seen in motion. The open judgment calls are in art-built-v5.md §5a and §7 (the footnote slips are the art pass's call, not the showrunner's).

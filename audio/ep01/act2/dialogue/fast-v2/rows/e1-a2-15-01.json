@@ -1,0 +1,370 @@
+{
+ "id": "e1-a2-15-01",
+ "scene": "15",
+ "speaker": "LAHTNEMULB (THE CLONE)",
+ "speaker_slug": "lahtnemulb-clone",
+ "text": "\"Too often we have seen what happens when technology outpaces regulation…\"",
+ "spoken_as": "Too often we have seen what happens when technology outpaces regulation.",
+ "delivery": null,
+ "tag": "[V · MAY 16, 2023 · in reality, a cloned voice reading words the chatbot wrote. Dialogue pass 5: the closing ellipsis is new, because the real sentence goes on after \"regulation,\" (the facts review). Record it landing on \"regulation\" as a finished read; the dots are the trim mark]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "MCU",
+ "shot_id": "MCU",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 4.6,
+ "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-01.wav",
+ "mp3": null,
+ "duration_s": 5.54,
+ "frames_24": 133,
+ "voiced_span_s": 4.55,
+ "pace": {
+  "words": 11,
+  "wpm": 145.1,
+  "speed": 0.88,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.88,
+   "speed_band": [
+    0.84,
+    0.92
+   ],
+   "articulation_guide_sps": [
+    4.0,
+    4.6
+   ],
+   "turn_wpm_guide": [
+    135,
+    155
+   ],
+   "intent": null
+  },
+  "measured": {
+   "wpm": 145.1,
+   "articulation_sps": 4.75,
+   "syllables": 21,
+   "span_s": 4.55,
+   "pauses_s": [
+    0.13,
+    0.06
+   ]
+  },
+  "longest_internal_gap_s": 0.13,
+  "audible_in_s": 0.51,
+  "audible_out_s": 5.06
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_adam*0.50+am_echo*0.50 (Kokoro-82M stock) · d-adam-echo-senate-low + gloss · speed 0.880",
+ "voiceId": "am_adam*0.50+am_echo*0.50",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 75 Hz",
+  "pitch -2 st",
+  "low shelf +1 dB @150 Hz",
+  "peak -1 dB @400 Hz Q1.0",
+  "peak +1 dB @2500 Hz Q0.9",
+  "comp 2.5:1 @-22 dB (6/110 ms)",
+  "peak -1.5 dB @350 Hz Q1.0",
+  "high shelf +2.5 dB @7000 Hz",
+  "chorus 0.6 Hz depth 0.1 mix 0.18",
+  "comp 4.0:1 @-26 dB (2/60 ms)",
+  "pitch +2 st",
+  "Kokoro speed 0.880 (the plan speed; lahtnemulb-clone band 0.84-0.92); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "E"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "O"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "E"
+  },
+  {
+   "t": 1.333,
+   "f": 32,
+   "shape": "A"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "E"
+  },
+  {
+   "t": 1.542,
+   "f": 37,
+   "shape": "A"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "E"
+  },
+  {
+   "t": 1.792,
+   "f": 43,
+   "shape": "O"
+  },
+  {
+   "t": 1.875,
+   "f": 45,
+   "shape": "A"
+  },
+  {
+   "t": 2.167,
+   "f": 52,
+   "shape": "M"
+  },
+  {
+   "t": 2.25,
+   "f": 54,
+   "shape": "E"
+  },
+  {
+   "t": 2.667,
+   "f": 64,
+   "shape": "A"
+  },
+  {
+   "t": 2.75,
+   "f": 66,
+   "shape": "E"
+  },
+  {
+   "t": 2.833,
+   "f": 68,
+   "shape": "A"
+  },
+  {
+   "t": 2.958,
+   "f": 71,
+   "shape": "E"
+  },
+  {
+   "t": 3.083,
+   "f": 74,
+   "shape": "A"
+  },
+  {
+   "t": 3.208,
+   "f": 77,
+   "shape": "E"
+  },
+  {
+   "t": 3.583,
+   "f": 86,
+   "shape": "A"
+  },
+  {
+   "t": 3.75,
+   "f": 90,
+   "shape": "M"
+  },
+  {
+   "t": 3.833,
+   "f": 92,
+   "shape": "A"
+  },
+  {
+   "t": 4.0,
+   "f": 96,
+   "shape": "E"
+  },
+  {
+   "t": 4.333,
+   "f": 104,
+   "shape": "A"
+  },
+  {
+   "t": 4.417,
+   "f": 106,
+   "shape": "E"
+  },
+  {
+   "t": 4.708,
+   "f": 113,
+   "shape": "A"
+  },
+  {
+   "t": 4.875,
+   "f": 117,
+   "shape": "E"
+  },
+  {
+   "t": 5.083,
+   "f": 122,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Too",
+   "t0": 0.505,
+   "t1": 0.755,
+   "f0": 12,
+   "f1": 18,
+   "ph": "tˈu"
+  },
+  {
+   "w": "often",
+   "t0": 0.755,
+   "t1": 1.23,
+   "f0": 18,
+   "f1": 30,
+   "ph": "ˈɔfᵊn"
+  },
+  {
+   "w": "we",
+   "t0": 1.23,
+   "t1": 1.342,
+   "f0": 30,
+   "f1": 32,
+   "ph": "wi"
+  },
+  {
+   "w": "have",
+   "t0": 1.342,
+   "t1": 1.492,
+   "f0": 32,
+   "f1": 36,
+   "ph": "hæv"
+  },
+  {
+   "w": "seen",
+   "t0": 1.492,
+   "t1": 1.78,
+   "f0": 36,
+   "f1": 43,
+   "ph": "sˈin"
+  },
+  {
+   "w": "what",
+   "t0": 1.78,
+   "t1": 1.93,
+   "f0": 43,
+   "f1": 46,
+   "ph": "wˌʌt"
+  },
+  {
+   "w": "happens",
+   "t0": 1.93,
+   "t1": 2.57,
+   "f0": 46,
+   "f1": 62,
+   "ph": "hˈæpənz"
+  },
+  {
+   "w": "when",
+   "t0": 2.605,
+   "t1": 2.793,
+   "f0": 63,
+   "f1": 67,
+   "ph": "wˌɛn"
+  },
+  {
+   "w": "technology",
+   "t0": 2.793,
+   "t1": 3.543,
+   "f0": 67,
+   "f1": 85,
+   "ph": "tɛknˈɑləʤi"
+  },
+  {
+   "w": "outpaces",
+   "t0": 3.543,
+   "t1": 4.255,
+   "f0": 85,
+   "f1": 102,
+   "ph": "ˌWtpˈAsᵻz"
+  },
+  {
+   "w": "regulation",
+   "t0": 4.255,
+   "t1": 5.08,
+   "f0": 102,
+   "f1": 122,
+   "ph": "ɹˌɛɡjəlˈAʃən"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.92,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.51,
+  "median_f0_hz": 109.7,
+  "f0_range_st": 9.8,
+  "f0_method": "pYIN (a4lib.analyse)",
+  "final_move_st": -3.6,
+  "asr": "Too often we have seen what happens when technology outpaces regulation.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.397,
+  "align_median_s": 0.06,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.44,
+  "rise_ms": 15.0,
+  "decay_ms": 180.0,
+  "decay_to_60_s": 0.045
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "02d2350763137a99",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 4.05,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": true,
+   "breaths": false,
+   "threads": 4
+  },
+  "asr": {
+   "packed_with": 2,
+   "share_s": 0.88,
+   "rechecked_alone": false
+  }
+ }
+}

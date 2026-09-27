@@ -1,0 +1,292 @@
+{
+ "id": "e1-a1-10-06",
+ "scene": "10",
+ "speaker": "SYDNEY",
+ "speaker_slug": "sydney",
+ "text": "Hi! Isn't 2022 a lovely year? 😊",
+ "spoken_as": "Hi!{0.25} Isn't twenty twenty-two a lovely year?",
+ "delivery": "sweetly, a pixel too close; her first words",
+ "tag": "[INVENTED · Act One fix pass (2026-09-27): the newcomer read heard Mas's \"it's 2023, by the way.\" arrive before she had claimed anything aloud, and the stamp alone didn't carry it. Now she says the wrong year to his face, sweetly, and his correction answers something. On the record the argument was about the date (mid §2); this line is ours and quotes nothing]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "2S",
+ "shot_id": "2S",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 3.1,
+ "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-10-06.wav",
+ "mp3": null,
+ "duration_s": 3.785,
+ "frames_24": 91,
+ "voiced_span_s": 2.6,
+ "pace": {
+  "words": 7,
+  "wpm": 161.5,
+  "speed": 0.84,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.84,
+   "speed_band": [
+    0.79,
+    0.87
+   ],
+   "articulation_guide_sps": [
+    4.0,
+    4.6
+   ],
+   "turn_wpm_guide": [
+    140,
+    160
+   ],
+   "intent": "sweetly, a pixel too close; her first words"
+  },
+  "measured": {
+   "wpm": 161.5,
+   "articulation_sps": 5.15,
+   "syllables": 12,
+   "span_s": 2.6,
+   "pauses_s": [
+    0.27
+   ]
+  },
+  "longest_internal_gap_s": 0.27,
+  "audible_in_s": 0.5,
+  "audible_out_s": 3.1
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "af_kore (Kokoro-82M stock) · b-kore-sweet · speed 0.840",
+ "voiceId": "af_kore",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 120 Hz",
+  "pitch +1.5 st",
+  "peak -1.5 dB @300 Hz Q1.0",
+  "peak +2.5 dB @3500 Hz Q0.9",
+  "chorus 0.8 Hz depth 0.12 mix 0.18",
+  "bitcrush 12-bit mix 0.1",
+  "comp 3.0:1 @-20 dB (3/70 ms)",
+  "Kokoro speed 0.840 (the plan speed; sydney band 0.79-0.87); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'Hi': Kokoro 0.00 s -> 0.27 s (intended 0.25; +0.25 s of room tone at the quietest 5 ms; Kokoro ran the words together here (dip -35.8 dB): ear check)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "A"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "rest"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "A"
+  },
+  {
+   "t": 1.167,
+   "f": 28,
+   "shape": "E"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "O"
+  },
+  {
+   "t": 1.375,
+   "f": 33,
+   "shape": "A"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "E"
+  },
+  {
+   "t": 1.625,
+   "f": 39,
+   "shape": "O"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "A"
+  },
+  {
+   "t": 1.792,
+   "f": 43,
+   "shape": "E"
+  },
+  {
+   "t": 2.042,
+   "f": 49,
+   "shape": "O"
+  },
+  {
+   "t": 2.167,
+   "f": 52,
+   "shape": "A"
+  },
+  {
+   "t": 2.458,
+   "f": 59,
+   "shape": "E"
+  },
+  {
+   "t": 3.125,
+   "f": 75,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Hi",
+   "t0": 0.51,
+   "t1": 0.735,
+   "f0": 12,
+   "f1": 18,
+   "ph": "hˈI"
+  },
+  {
+   "w": "Isn't",
+   "t0": 1.035,
+   "t1": 1.285,
+   "f0": 25,
+   "f1": 31,
+   "ph": "ˈɪzᵊnt"
+  },
+  {
+   "w": "twenty",
+   "t0": 1.285,
+   "t1": 1.585,
+   "f0": 31,
+   "f1": 38,
+   "ph": "twˈɛnti"
+  },
+  {
+   "w": "twenty-two",
+   "t0": 1.585,
+   "t1": 2.172,
+   "f0": 38,
+   "f1": 52,
+   "ph": "twˈɛntitˌu"
+  },
+  {
+   "w": "a",
+   "t0": 2.172,
+   "t1": 2.285,
+   "f0": 52,
+   "f1": 55,
+   "ph": "ɐ"
+  },
+  {
+   "w": "lovely",
+   "t0": 2.285,
+   "t1": 2.66,
+   "f0": 55,
+   "f1": 64,
+   "ph": "lˈʌvli"
+  },
+  {
+   "w": "year",
+   "t0": 2.66,
+   "t1": 3.12,
+   "f0": 64,
+   "f1": 75,
+   "ph": "jˈɪɹ"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -1.71,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 165.8,
+  "f0_range_st": 11.4,
+  "f0_method": "pYIN (a4lib.analyse)",
+  "final_move_st": -1.6,
+  "asr": "Hi, isn't 2022 a lovely year?",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.213,
+  "align_median_s": 0.119,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 50.0,
+  "decay_ms": 240.0,
+  "decay_to_60_s": 0.235,
+  "q_lift_st": -8.1
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 1,
+   "word": "Hi",
+   "tts_s": 0.0,
+   "target_s": 0.25,
+   "point_s": 0.345,
+   "joined_speech": true,
+   "dip_db": -35.8,
+   "breath": false,
+   "crossfade_ms": [
+    60,
+    25
+   ],
+   "final_s": 0.27,
+   "opened_s": 0.25
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "4747247468c44c4f",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 2.96,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": true,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 3,
+   "share_s": 0.6,
+   "rechecked_alone": false
+  }
+ }
+}

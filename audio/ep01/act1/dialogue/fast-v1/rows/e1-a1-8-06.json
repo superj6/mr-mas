@@ -1,0 +1,223 @@
+{
+ "id": "e1-a1-8-06",
+ "scene": "8",
+ "speaker": "NIRB",
+ "speaker_slug": "nirb",
+ "text": "Do we still have badges?",
+ "spoken_as": "Do we still have badges?",
+ "delivery": null,
+ "tag": "[INVENTED]",
+ "mode": "call",
+ "voiced_in_cut": true,
+ "on_camera": "monitor",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "POV",
+ "shot_id": "POV",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": "call",
+ "room": null,
+ "est_s": 2.3,
+ "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-8-06.wav",
+ "mp3": null,
+ "duration_s": 2.465,
+ "frames_24": 60,
+ "voiced_span_s": 1.39,
+ "pace": {
+  "words": 5,
+  "wpm": 215.8,
+  "speed": 1.05,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.05,
+   "speed_band": [
+    1.01,
+    1.09
+   ],
+   "articulation_guide_sps": [
+    4.4,
+    5.0
+   ],
+   "turn_wpm_guide": [
+    150,
+    170
+   ],
+   "intent": null
+  },
+  "measured": {
+   "wpm": 215.8,
+   "articulation_sps": 4.32,
+   "syllables": 6,
+   "span_s": 1.39,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.51,
+  "audible_out_s": 1.9
+ },
+ "placement": {
+  "gap_before_s": 1.3,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_eric*0.50+am_liam*0.50 (Kokoro-82M stock) · c-eric-liam-curious · speed 1.050",
+ "voiceId": "am_eric*0.50+am_liam*0.50",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch +1 st",
+  "peak -1.5 dB @300 Hz Q1.0",
+  "peak +2 dB @4500 Hz Q0.9",
+  "comp 2.5:1 @-22 dB (6/100 ms)",
+  "then the call chain: HPF 200 Hz; LPF 7000 Hz; peak +1.5 dB @1800 Hz Q1.0; comp 2.5:1 @-22 dB (5/90 ms); -16 LUFS",
+  "Kokoro speed 1.050 (the centre of the band; nirb band 1.01-1.09); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "O"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "E"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "A"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "M"
+  },
+  {
+   "t": 1.375,
+   "f": 33,
+   "shape": "A"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "E"
+  },
+  {
+   "t": 1.917,
+   "f": 46,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Do",
+   "t0": 0.51,
+   "t1": 0.61,
+   "f0": 12,
+   "f1": 15,
+   "ph": "dˈu"
+  },
+  {
+   "w": "we",
+   "t0": 0.61,
+   "t1": 0.76,
+   "f0": 15,
+   "f1": 18,
+   "ph": "wi"
+  },
+  {
+   "w": "still",
+   "t0": 0.76,
+   "t1": 1.06,
+   "f0": 18,
+   "f1": 25,
+   "ph": "stˈɪl"
+  },
+  {
+   "w": "have",
+   "t0": 1.06,
+   "t1": 1.285,
+   "f0": 25,
+   "f1": 31,
+   "ph": "hæv"
+  },
+  {
+   "w": "badges",
+   "t0": 1.285,
+   "t1": 1.92,
+   "f0": 31,
+   "f1": 46,
+   "ph": "bˈæʤᵻz"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -1.52,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 144.3,
+  "f0_range_st": 16.3,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Do we still have badges?",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.206,
+  "align_median_s": 0.03,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.45,
+  "rise_ms": 15.0,
+  "decay_ms": 155.0,
+  "decay_to_60_s": 0.11
+ },
+ "clean": {
+  "file": "audio/ep01/act1/dialogue/fast-v1/clean/e1-a1-8-06.wav",
+  "note": "the dry read (no call chain), -16 LUFS"
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "ef7c885cbe82e645",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 56.95,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 2,
+   "share_s": 9.88,
+   "rechecked_alone": false
+  }
+ }
+}

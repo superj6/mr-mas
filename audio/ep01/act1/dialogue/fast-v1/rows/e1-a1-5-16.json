@@ -1,0 +1,248 @@
+{
+ "id": "e1-a1-5-16",
+ "scene": "5",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "let's see if anyone notices.",
+ "spoken_as": "let's see if anyone notices.",
+ "delivery": "turning from the glass to the room; he doesn't answer that",
+ "tag": "[INVENTED]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "MCU·glass",
+ "shot_id": "MCU·glass",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 2.7,
+ "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-16.wav",
+ "mp3": null,
+ "duration_s": 3.25,
+ "frames_24": 78,
+ "voiced_span_s": 2.02,
+ "pace": {
+  "words": 5,
+  "wpm": 148.5,
+  "speed": 0.9,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.9,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.6,
+    4.2
+   ],
+   "turn_wpm_guide": [
+    135,
+    155
+   ],
+   "intent": "turning from the glass to the room; he doesn't answer that"
+  },
+  "measured": {
+   "wpm": 148.5,
+   "articulation_sps": 4.46,
+   "syllables": 9,
+   "span_s": 2.02,
+   "pauses_s": [
+    0.06
+   ]
+  },
+  "longest_internal_gap_s": 0.06,
+  "audible_in_s": 0.57,
+  "audible_out_s": 2.59
+ },
+ "placement": {
+  "gap_before_s": 1.0,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.900",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch 0",
+  "low shelf +2 dB @160 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak +1 dB @3200 Hz Q0.8",
+  "high shelf -1.5 dB @8000 Hz",
+  "comp 2.0:1 @-24 dB (10/120 ms)",
+  "Kokoro speed 0.900 (the plan speed; mas-manalt band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.625,
+   "f": 15,
+   "shape": "A"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "E"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "A"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "E"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "A"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "E"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "O"
+  },
+  {
+   "t": 1.667,
+   "f": 40,
+   "shape": "A"
+  },
+  {
+   "t": 1.75,
+   "f": 42,
+   "shape": "E"
+  },
+  {
+   "t": 1.875,
+   "f": 45,
+   "shape": "O"
+  },
+  {
+   "t": 2.083,
+   "f": 50,
+   "shape": "E"
+  },
+  {
+   "t": 2.583,
+   "f": 62,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "let's",
+   "t0": 0.59,
+   "t1": 0.84,
+   "f0": 14,
+   "f1": 20,
+   "ph": "lˈɛts"
+  },
+  {
+   "w": "see",
+   "t0": 0.84,
+   "t1": 1.102,
+   "f0": 20,
+   "f1": 26,
+   "ph": "sˈi"
+  },
+  {
+   "w": "if",
+   "t0": 1.102,
+   "t1": 1.302,
+   "f0": 26,
+   "f1": 31,
+   "ph": "ɪf"
+  },
+  {
+   "w": "anyone",
+   "t0": 1.302,
+   "t1": 1.79,
+   "f0": 31,
+   "f1": 43,
+   "ph": "ˈɛniwˌʌn"
+  },
+  {
+   "w": "notices",
+   "t0": 1.79,
+   "t1": 2.61,
+   "f0": 43,
+   "f1": 63,
+   "ph": "nˈOTəsᵻz"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.61,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.57,
+  "median_f0_hz": 110.3,
+  "f0_range_st": 11.7,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Let's see if anyone notices.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.209,
+  "align_median_s": 0.045,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.57,
+  "speech_tail_s": 0.37,
+  "rise_ms": 15.0,
+  "decay_ms": 250.0,
+  "decay_to_60_s": 0.29
+ },
+ "speaker_label": "MAS",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "f9bf2586796eb20d",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 20.29,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 5,
+   "share_s": 10.41,
+   "rechecked_alone": false
+  }
+ }
+}

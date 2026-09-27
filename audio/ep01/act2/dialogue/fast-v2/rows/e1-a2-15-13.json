@@ -1,0 +1,190 @@
+{
+ "id": "e1-a2-15-13",
+ "scene": "15",
+ "speaker": "LAHTNEMULB (THE CLONE)",
+ "speaker_slug": "lahtnemulb-clone",
+ "text": "Health insurance.",
+ "spoken_as": "Health insurance.",
+ "delivery": null,
+ "tag": "[INVENTED · reads the invented card. Dialogue pass 5: the chairman's echo, \"(moved, a beat late) Health insurance.\", is cut; the words were seen on the card and then heard twice in about 3 s (the newcomer-and-insider read). The clone reading for him keeps the runner of the machine doing his task]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "W",
+ "shot_id": "W",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 1.2,
+ "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-13.wav",
+ "mp3": null,
+ "duration_s": 2.325,
+ "frames_24": 56,
+ "voiced_span_s": 1.2,
+ "pace": {
+  "words": 2,
+  "wpm": 100.0,
+  "speed": 0.88,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.88,
+   "speed_band": [
+    0.84,
+    0.92
+   ],
+   "articulation_guide_sps": [
+    4.0,
+    4.6
+   ],
+   "turn_wpm_guide": [
+    135,
+    155
+   ],
+   "intent": null
+  },
+  "measured": {
+   "wpm": 100.0,
+   "articulation_sps": 3.33,
+   "syllables": 4,
+   "span_s": 1.2,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.51,
+  "audible_out_s": 1.71
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_adam*0.50+am_echo*0.50 (Kokoro-82M stock) · d-adam-echo-senate-low + gloss · speed 0.880",
+ "voiceId": "am_adam*0.50+am_echo*0.50",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 75 Hz",
+  "pitch -2 st",
+  "low shelf +1 dB @150 Hz",
+  "peak -1 dB @400 Hz Q1.0",
+  "peak +1 dB @2500 Hz Q0.9",
+  "comp 2.5:1 @-22 dB (6/110 ms)",
+  "peak -1.5 dB @350 Hz Q1.0",
+  "high shelf +2.5 dB @7000 Hz",
+  "chorus 0.6 Hz depth 0.1 mix 0.18",
+  "comp 4.0:1 @-26 dB (2/60 ms)",
+  "pitch +2 st",
+  "Kokoro speed 0.880 (the plan speed; lahtnemulb-clone band 0.84-0.92); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "A"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "E"
+  },
+  {
+   "t": 1.167,
+   "f": 28,
+   "shape": "O"
+  },
+  {
+   "t": 1.333,
+   "f": 32,
+   "shape": "E"
+  },
+  {
+   "t": 1.75,
+   "f": 42,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Health",
+   "t0": 0.54,
+   "t1": 0.865,
+   "f0": 13,
+   "f1": 21,
+   "ph": "hˈɛlθ"
+  },
+  {
+   "w": "insurance",
+   "t0": 0.865,
+   "t1": 1.73,
+   "f0": 21,
+   "f1": 42,
+   "ph": "ɪnʃˈʊɹəns"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -1.64,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.51,
+  "median_f0_hz": 133.9,
+  "f0_range_st": 12.3,
+  "f0_method": "pYIN (a4lib.analyse)",
+  "final_move_st": -9.6,
+  "asr": "Health Insurance",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.238,
+  "align_median_s": 0.082,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.45,
+  "rise_ms": 20.0,
+  "decay_ms": 245.0,
+  "decay_to_60_s": 0.165
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "94271d497c4d91b4",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 1.7,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": true,
+   "breaths": false,
+   "threads": 4
+  },
+  "asr": {
+   "packed_with": 2,
+   "share_s": 0.56,
+   "rechecked_alone": false
+  }
+ }
+}

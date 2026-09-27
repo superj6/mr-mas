@@ -1,0 +1,803 @@
+{
+ "schema": "mrmas-ost-cue/1",
+ "id": "s1-s4_third-mark",
+ "mm": "MM-08 (26A)",
+ "family": "P01 DARK ROOM",
+ "title": "That Night: The Third Mark (Ep1 Act Four v5, S2, to picture)",
+ "version": "v5",
+ "composer": "Ep1 Act Four v5 score, S1-S4 (re-laid from the batch-1 cues)",
+ "tone": "one felt in the dark after the silence; the count held, not counted; the Orb takes the settle back",
+ "tags": [
+  "to picture",
+  "Ep1",
+  "act four",
+  "v5",
+  "continuous",
+  "S1-S4"
+ ],
+ "usage": "BI",
+ "scenes": [
+  "v5 S2.01-S2.05, act 1178.0-1512.0; file t = 0 = act frame 1166.0"
+ ],
+ "description": "",
+ "motifs": [
+  "the Water Line's open fifth, nudge and settle (felt)",
+  "THE REWIND (16-bit retrograde)"
+ ],
+ "key": "F, open fifths, no third",
+ "engine": {
+  "version": "mrmas-ost-engine 1.1 (2026-09-26: fix1 -- meter axis, sample tuning, render pool, QA 5a-d)",
+  "rendered": "2026-09-27T02:17:19",
+  "render_seconds": 10.7
+ },
+ "timing": {
+  "bpm": 96.0,
+  "beat_unit_quarters": 1.0,
+  "tempo_map": [
+   {
+    "bar": 1,
+    "beat": 1.0,
+    "bpm": 96.0,
+    "ramp_in": false,
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "meter_map": [
+   {
+    "bar": 1,
+    "meter": "4/4",
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "swing": 0.0,
+  "swing_unit_quarters": 0.5,
+  "pickup_beats": 0.0,
+  "bars": 10,
+  "length_s": 25.0,
+  "length_frames": 600.0,
+  "fps": 24,
+  "end": {
+   "sec": 14.716667,
+   "frame": 353.2,
+   "bar": 6,
+   "beat": 4.5467
+  },
+  "album_duration_s": 14.7167,
+  "album_duration_frames": 353.2,
+  "album_loops": 1
+ },
+ "sections": [
+  {
+   "label": "26A: the carve and the V.O.",
+   "start": {
+    "sec": 0.5,
+    "frame": 12.0,
+    "bar": 1,
+    "beat": 1.8
+   },
+   "end": {
+    "sec": 4.363,
+    "frame": 104.712,
+    "bar": 2,
+    "beat": 3.9808
+   }
+  },
+  {
+   "label": "the count and TPOOL: the pedal",
+   "start": {
+    "sec": 4.363,
+    "frame": 104.712,
+    "bar": 2,
+    "beat": 3.9808
+   },
+   "end": {
+    "sec": 10.958333,
+    "frame": 263.0,
+    "bar": 5,
+    "beat": 2.5333
+   }
+  },
+  {
+   "label": "mark 3, the settle, the Rewind",
+   "start": {
+    "sec": 10.958333,
+    "frame": 263.0,
+    "bar": 5,
+    "beat": 2.5333
+   },
+   "end": {
+    "sec": 14.416667,
+    "frame": 346.0,
+    "bar": 6,
+    "beat": 4.0667
+   }
+  }
+ ],
+ "markers": [
+  {
+   "label": "the carve: the felt open fifth (the re-entry after D6)",
+   "sec": 0.5,
+   "frame": 12.0,
+   "bar": 1,
+   "beat": 1.8
+  },
+  {
+   "label": "the nudge G4, sounding before the V.O.",
+   "sec": 1.75,
+   "frame": 42.0,
+   "bar": 1,
+   "beat": 3.8
+  },
+  {
+   "label": "mark 3: the felt back (Eb4)",
+   "sec": 10.958333,
+   "frame": 263.0,
+   "bar": 5,
+   "beat": 2.5333
+  },
+  {
+   "label": "the settle C4",
+   "sec": 11.916667,
+   "frame": 286.0,
+   "bar": 5,
+   "beat": 4.0667
+  },
+  {
+   "label": "F4",
+   "sec": 12.541667,
+   "frame": 301.0,
+   "bar": 6,
+   "beat": 1.0667
+  },
+  {
+   "label": "THE REWIND: E4",
+   "sec": 13.166667,
+   "frame": 316.0,
+   "bar": 6,
+   "beat": 2.0667
+  },
+  {
+   "label": "Bb3",
+   "sec": 13.791667,
+   "frame": 331.0,
+   "bar": 6,
+   "beat": 3.0667
+  }
+ ],
+ "hit_check": [
+  {
+   "t": 0.5,
+   "offset_ms": -4.0,
+   "strength": 7.38
+  },
+  {
+   "t": 1.75,
+   "offset_ms": -3.3,
+   "strength": 7.18
+  },
+  {
+   "t": 10.9583,
+   "offset_ms": -6.3,
+   "strength": 4.24
+  },
+  {
+   "t": 11.9167,
+   "offset_ms": -7.4,
+   "strength": 6.21
+  },
+  {
+   "t": 12.5417,
+   "offset_ms": -3.0,
+   "strength": 8.79
+  },
+  {
+   "t": 13.1667,
+   "offset_ms": 6.6,
+   "strength": 2.92
+  },
+  {
+   "t": 13.7917,
+   "offset_ms": 0.3,
+   "strength": 8.05
+  }
+ ],
+ "sfx_slots": [
+  {
+   "t": 5.208333333333333,
+   "sfx": "orb_servo: the Orb counts (the score holds; it does not count)"
+  },
+  {
+   "t": 6.416666666666667,
+   "sfx": "render_front_sweep (F4 -> F6): the TPOOL render"
+  },
+  {
+   "t": 12.916666666666666,
+   "sfx": "the toast `rewinding\u2026`"
+  },
+  {
+   "t": 13.291666666666666,
+   "sfx": "reverse_swell_1beat (the SFX own reverse swells)"
+  }
+ ],
+ "silence_windows": [
+  {
+   "t0": 14.4197,
+   "t1": 17.4137,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  }
+ ],
+ "vo_windows": [
+  {
+   "t0": 2.1,
+   "t1": 4.03,
+   "lufs": -27.8,
+   "target": "-24 +-2"
+  }
+ ],
+ "knee_whole": 0,
+ "f_major": {
+  "limit": 0.08,
+  "windows": 18,
+  "worst": 0.569,
+  "worst_sieved": 0.267,
+  "ok": true,
+  "ok_written": true,
+  "ok_spectral": true,
+  "f_inaudible_windows": 2,
+  "a_classes": {
+   "written": 0,
+   "resonance": 0,
+   "explained": 3,
+   "unattributed": 0
+  },
+  "written_a_over_f_bass": [],
+  "written_third": {
+   "ok": true,
+   "count": 0,
+   "events": [],
+   "grazes": [],
+   "n_grazes": 0,
+   "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+  },
+  "fails": [],
+  "explained": [
+   {
+    "t0": 7.258,
+    "t1": 7.872,
+    "a_over_f": 0.569,
+    "a_over_f_sieved": 0.267,
+    "written_a": [],
+    "f_share": 0.248,
+    "a_from": {
+     "strings": 100,
+     "piano": 0,
+     "chip": 0
+    },
+    "a_peaks": [
+     {
+      "stem": "strings",
+      "hz": 872.3,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.95
+     },
+     {
+      "stem": "strings",
+      "hz": 880.4,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.04
+     },
+     {
+      "stem": "strings",
+      "hz": 867.2,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.01
+     }
+    ],
+    "a_class": "explained",
+    "ok": true,
+    "ok_spectral": true
+   },
+   {
+    "t0": 7.872,
+    "t1": 8.487,
+    "a_over_f": 0.111,
+    "a_over_f_sieved": 0.099,
+    "written_a": [],
+    "f_share": 0.335,
+    "a_from": {
+     "strings": 100,
+     "piano": 0,
+     "chip": 0
+    },
+    "a_peaks": [
+     {
+      "stem": "strings",
+      "hz": 876.0,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.97
+     },
+     {
+      "stem": "strings",
+      "hz": 868.7,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.03
+     }
+    ],
+    "a_class": "explained",
+    "ok": true,
+    "ok_spectral": true
+   },
+   {
+    "t0": 10.33,
+    "t1": 10.944,
+    "a_over_f": 0.171,
+    "a_over_f_sieved": 0.093,
+    "written_a": [],
+    "f_share": 0.396,
+    "a_from": {
+     "strings": 100,
+     "piano": 0,
+     "chip": 0
+    },
+    "a_peaks": [
+     {
+      "stem": "strings",
+      "hz": 873.8,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.56
+     },
+     {
+      "stem": "strings",
+      "hz": 876.7,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.4
+     },
+     {
+      "stem": "strings",
+      "hz": 881.8,
+      "kind": "partial 5 of written F3 (vc)",
+      "cls": "partial",
+      "share": 0.04
+     }
+    ],
+    "a_class": "explained",
+    "ok": true,
+    "ok_spectral": true
+   }
+  ],
+  "fixed_resonances": [],
+  "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+ },
+ "knee_completion": 0,
+ "room_sfx_windows": [
+  {
+   "t0": 0.5,
+   "t1": 14.417,
+   "sfx": "room_drone (the dark room)"
+  }
+ ],
+ "qa": {
+  "balance": {
+   "balance": {
+    "piano": 89,
+    "orch": 8,
+    "bigband": 0,
+    "chip": 3
+   },
+   "rhythm_pct_of_all": 0,
+   "chip_share": 3,
+   "balance_energy": {
+    "piano": 90,
+    "orch": 8,
+    "bigband": 0,
+    "chip": 1
+   },
+   "method": "theme stemtable (gated loudness per section, time-weighted, rhythm/fx excluded; it counts a brief stab at its own loudness for the whole section) + balance_energy (ungated energy)",
+   "sections": [
+    {
+     "section": "26A: the carve and the V.O.",
+     "share": {
+      "piano": 100,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "the count and TPOOL: the pedal",
+     "share": {
+      "piano": 13,
+      "orch": 87,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "mark 3, the settle, the Rewind",
+     "share": {
+      "piano": 88,
+      "orch": 6,
+      "bigband": 0,
+      "chip": 6
+     }
+    }
+   ]
+  },
+  "short_term_underscore": {
+   "p95": -18.8,
+   "median": -26.61,
+   "max": -18.47
+  },
+  "band_2_6k_db": -36.2,
+  "centroid_hz": 412.0,
+  "f_major": {
+   "limit": 0.08,
+   "windows": 18,
+   "worst": 0.569,
+   "worst_sieved": 0.267,
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "f_inaudible_windows": 2,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 3,
+    "unattributed": 0
+   },
+   "written_a_over_f_bass": [],
+   "written_third": {
+    "ok": true,
+    "count": 0,
+    "events": [],
+    "grazes": [],
+    "n_grazes": 0,
+    "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+   },
+   "fails": [],
+   "explained": [
+    {
+     "t0": 7.258,
+     "t1": 7.872,
+     "a_over_f": 0.569,
+     "a_over_f_sieved": 0.267,
+     "written_a": [],
+     "f_share": 0.248,
+     "a_from": {
+      "strings": 100,
+      "piano": 0,
+      "chip": 0
+     },
+     "a_peaks": [
+      {
+       "stem": "strings",
+       "hz": 872.3,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.95
+      },
+      {
+       "stem": "strings",
+       "hz": 880.4,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.04
+      },
+      {
+       "stem": "strings",
+       "hz": 867.2,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.01
+      }
+     ],
+     "a_class": "explained",
+     "ok": true,
+     "ok_spectral": true
+    },
+    {
+     "t0": 7.872,
+     "t1": 8.487,
+     "a_over_f": 0.111,
+     "a_over_f_sieved": 0.099,
+     "written_a": [],
+     "f_share": 0.335,
+     "a_from": {
+      "strings": 100,
+      "piano": 0,
+      "chip": 0
+     },
+     "a_peaks": [
+      {
+       "stem": "strings",
+       "hz": 876.0,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.97
+      },
+      {
+       "stem": "strings",
+       "hz": 868.7,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.03
+      }
+     ],
+     "a_class": "explained",
+     "ok": true,
+     "ok_spectral": true
+    },
+    {
+     "t0": 10.33,
+     "t1": 10.944,
+     "a_over_f": 0.171,
+     "a_over_f_sieved": 0.093,
+     "written_a": [],
+     "f_share": 0.396,
+     "a_from": {
+      "strings": 100,
+      "piano": 0,
+      "chip": 0
+     },
+     "a_peaks": [
+      {
+       "stem": "strings",
+       "hz": 873.8,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.56
+      },
+      {
+       "stem": "strings",
+       "hz": 876.7,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.4
+      },
+      {
+       "stem": "strings",
+       "hz": 881.8,
+       "kind": "partial 5 of written F3 (vc)",
+       "cls": "partial",
+       "share": 0.04
+      }
+     ],
+     "a_class": "explained",
+     "ok": true,
+     "ok_spectral": true
+    }
+   ],
+   "fixed_resonances": [],
+   "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+  },
+  "knee_completion": {
+   "count": 0,
+   "hits": [],
+   "max_gap_s": 2.5,
+   "rule": "OST-BIBLE rule 4: the knee never plays whole in an episode, in any register, across a phrase boundary too"
+  },
+  "sub_under_room": [
+   {
+    "t0": 0.5,
+    "t1": 14.417,
+    "sfx": "room_drone (the dark room)",
+    "sub_db": -33.7,
+    "limit_db": -18.0,
+    "sub_from": {
+     "piano": 97
+    },
+    "ok": true,
+    "notes_below_c3": []
+   }
+  ],
+  "no_third": [],
+  "silence": [
+   {
+    "t0": 14.4197,
+    "t1": 17.4137,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   }
+  ],
+  "hard_stops": [
+   {
+    "t0": 14.4197,
+    "t1": 17.4137,
+    "label": "hard stop",
+    "peak_dbfs": -240.0,
+    "limit": -90.0,
+    "ok": 1.0
+   }
+  ],
+  "vo_windows": [
+   {
+    "t0": 2.1,
+    "t1": 4.03,
+    "lufs": -27.8,
+    "target": "-24 +-2"
+   }
+  ],
+  "knee_whole": 0,
+  "motifs_found": {},
+  "swing": {
+   "felt": {
+    "offbeats": 2,
+    "median_frames": 10.0,
+    "hum_ms": 3
+   },
+   "felt_mech": {
+    "offbeats": 1,
+    "median_frames": 8.0,
+    "hum_ms": 3
+   }
+  },
+  "banned": []
+ },
+ "loop": null,
+ "files": {
+  "album_wav": "render/s1-s4_third-mark-album.wav",
+  "album_mp3": "render/s1-s4_third-mark-album.mp3",
+  "underscore_wav": "render/s1-s4_third-mark-underscore.wav",
+  "underscore_mp3": "render/s1-s4_third-mark-underscore.mp3",
+  "stems": {
+   "piano": "render/stems/s1-s4_third-mark-piano.flac",
+   "strings": "render/stems/s1-s4_third-mark-strings.flac",
+   "chip": "render/stems/s1-s4_third-mark-chip.flac"
+  },
+  "midi": "render/s1-s4_third-mark.mid",
+  "pianoroll": "render/s1-s4_third-mark-pianoroll.png"
+ },
+ "masters": {
+  "album": {
+   "target_lufs": -18.0,
+   "ceiling_dbtp": -1.0,
+   "comp": {
+    "thresh_db": -20,
+    "ratio": 1.8
+   },
+   "dialog_pocket": null,
+   "measured": {
+    "lufs": -18.02,
+    "lra": 12.05,
+    "true_peak_db": -1.15,
+    "peak_db": -1.16,
+    "rms_db": -21.08,
+    "crest_db": 19.92,
+    "seconds": 14.7167
+   }
+  },
+  "underscore": {
+   "target_lufs": -22.0,
+   "ceiling_dbtp": -3.0,
+   "comp": {
+    "thresh_db": -28,
+    "ratio": 1.3,
+    "att_ms": 40.0,
+    "rel_ms": 350.0
+   },
+   "dialog_pocket": {
+    "f": 2500.0,
+    "db": -2.0,
+    "q": 0.7
+   },
+   "measured": {
+    "lufs": -22.02,
+    "lra": 11.52,
+    "true_peak_db": -3.15,
+    "peak_db": -3.16,
+    "rms_db": -24.99,
+    "crest_db": 21.84,
+    "seconds": 14.7167
+   }
+  }
+ },
+ "stems": {
+  "sum_vs_underscore_residual_db": -174.4,
+  "families_present": [
+   "chip",
+   "piano",
+   "strings"
+  ],
+  "family_share_lu": {
+   "piano": 2.7,
+   "strings": -7.2,
+   "chip": -8.6
+  }
+ },
+ "spectrum": {
+  "sub": -32.6,
+  "bass": -10.7,
+  "lowmid": -0.5,
+  "mid": -16.5,
+  "presence": -59.9,
+  "air": -84.0,
+  "centroid_hz": 412.0
+ },
+ "bar_levels": [
+  {
+   "bar": 1,
+   "rms_db": -20.0,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 2,
+   "rms_db": -33.2,
+   "peak_db": -20.0
+  },
+  {
+   "bar": 3,
+   "rms_db": -31.2,
+   "peak_db": -18.100000381469727
+  },
+  {
+   "bar": 4,
+   "rms_db": -30.9,
+   "peak_db": -17.799999237060547
+  },
+  {
+   "bar": 5,
+   "rms_db": -24.1,
+   "peak_db": -7.199999809265137
+  },
+  {
+   "bar": 6,
+   "rms_db": -25.0,
+   "peak_db": -7.800000190734863
+  }
+ ],
+ "instrumentation": {
+  "felt": {
+   "family": "piano",
+   "notes": 6,
+   "source": "sf2",
+   "credit": "Upright Piano KW by FreePats (CC0 1.0)"
+  },
+  "felt_mech": {
+   "family": "piano",
+   "notes": 2,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "snes_piano": {
+   "family": "chip",
+   "notes": 2,
+   "source": "sf2",
+   "credit": "Upright Piano KW by FreePats (CC0 1.0)"
+  },
+  "vc": {
+   "family": "strings",
+   "notes": 2,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vla": {
+   "family": "strings",
+   "notes": 2,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  }
+ },
+ "credits": [
+  "Upright Piano KW by FreePats (CC0 1.0)",
+  "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+ ],
+ "audition": [
+  "0.50 s: the re-entry after D6 -- the felt fifth on the stroke, not a sting",
+  "1.75-4.03 s: the G4 under \"i don't keep score.\": still, not sad",
+  "4.36-10.96 s: the pedal under the count and TPOOL -- air, not a drone effect",
+  "11.92-14.42 s: the settle and the Rewind, cut on the whip into pass one"
+ ],
+ "warnings": []
+}

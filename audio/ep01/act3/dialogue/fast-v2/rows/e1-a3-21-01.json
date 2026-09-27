@@ -1,0 +1,567 @@
+{
+ "id": "e1-a3-21-01",
+ "scene": "21",
+ "speaker": "NEDIB",
+ "speaker_slug": "nedib",
+ "text": "Here's the deal, folks. This order says if you build the big ones, you test them, and you show us the results.",
+ "spoken_as": "Here's the deal, folks.{0.60} This order says if you build the big ones,{0.20} you test them,{0.20} and you show us the results.",
+ "delivery": "on the monitor, pen raised, to the room",
+ "tag": "[INVENTED · his style line, then what the order does, in his words: a plain paraphrase of EO 14110's requirement that developers of the most powerful models share their safety-test results with the government (the facts owner confirms the paraphrase). Second pass: he finishes. The conversation pass cut him off on \"says—\", which cut exactly the part that tells a newcomer what the order does (the naturalness read), so the copies now add to him instead of interrupting]",
+ "mode": "call",
+ "voiced_in_cut": true,
+ "on_camera": "monitor",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "POV",
+ "shot_id": "POV",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": "monitor",
+ "room": null,
+ "est_s": 9.2,
+ "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-21-01.wav",
+ "mp3": null,
+ "duration_s": 8.16,
+ "frames_24": 196,
+ "voiced_span_s": 6.85,
+ "pace": {
+  "words": 22,
+  "wpm": 192.7,
+  "speed": 0.93,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.93,
+   "speed_band": [
+    0.93,
+    1.01
+   ],
+   "articulation_guide_sps": [
+    4.2,
+    4.8
+   ],
+   "turn_wpm_guide": [
+    145,
+    165
+   ],
+   "intent": "on the monitor, pen raised, to the room"
+  },
+  "measured": {
+   "wpm": 192.7,
+   "articulation_sps": 4.1,
+   "syllables": 24,
+   "span_s": 6.85,
+   "pauses_s": [
+    0.6,
+    0.22,
+    0.17
+   ]
+  },
+  "longest_internal_gap_s": 0.6,
+  "audible_in_s": 0.51,
+  "audible_out_s": 7.36
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_fenrir*0.50+am_onyx*0.50 (Kokoro-82M stock) · d-fenrir-onyx-folksy-0 · speed 0.930",
+ "voiceId": "am_fenrir*0.50+am_onyx*0.50",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch 0",
+  "low shelf +2 dB @160 Hz",
+  "peak -1.5 dB @380 Hz Q1.0",
+  "peak +1.5 dB @2200 Hz Q0.9",
+  "comp 3.0:1 @-21 dB (5/100 ms)",
+  "tanh saturation drive 1.6 mix 0.1",
+  "then the monitor chain: HPF 200 Hz; LPF 7000 Hz; peak +1.5 dB @1800 Hz Q1.0; comp 2.5:1 @-22 dB (5/90 ms); -16 LUFS",
+  "Kokoro speed 0.930 (the plan speed; nedib band 0.93-1.01); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'folks': Kokoro 0.20 s -> 0.61 s (intended 0.60; +0.41 s of room tone at the quietest 5 ms)",
+  "pause after 'ones': Kokoro 0.00 s -> 0.22 s (intended 0.20; +0.20 s of room tone at the quietest 5 ms; Kokoro ran the words together here (dip -31.9 dB): ear check)",
+  "pause after 'them': Kokoro 0.04 s -> 0.20 s (intended 0.20; +0.16 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "E"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "A"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "E"
+  },
+  {
+   "t": 1.0,
+   "f": 24,
+   "shape": "A"
+  },
+  {
+   "t": 1.167,
+   "f": 28,
+   "shape": "E"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "O"
+  },
+  {
+   "t": 1.75,
+   "f": 42,
+   "shape": "E"
+  },
+  {
+   "t": 1.917,
+   "f": 46,
+   "shape": "rest"
+  },
+  {
+   "t": 2.5,
+   "f": 60,
+   "shape": "E"
+  },
+  {
+   "t": 2.625,
+   "f": 63,
+   "shape": "O"
+  },
+  {
+   "t": 2.75,
+   "f": 66,
+   "shape": "E"
+  },
+  {
+   "t": 3.083,
+   "f": 74,
+   "shape": "A"
+  },
+  {
+   "t": 3.25,
+   "f": 78,
+   "shape": "E"
+  },
+  {
+   "t": 3.542,
+   "f": 85,
+   "shape": "O"
+  },
+  {
+   "t": 3.625,
+   "f": 87,
+   "shape": "M"
+  },
+  {
+   "t": 3.708,
+   "f": 89,
+   "shape": "A"
+  },
+  {
+   "t": 3.792,
+   "f": 91,
+   "shape": "E"
+  },
+  {
+   "t": 4.0,
+   "f": 96,
+   "shape": "M"
+  },
+  {
+   "t": 4.083,
+   "f": 98,
+   "shape": "A"
+  },
+  {
+   "t": 4.25,
+   "f": 102,
+   "shape": "O"
+  },
+  {
+   "t": 4.333,
+   "f": 104,
+   "shape": "A"
+  },
+  {
+   "t": 4.5,
+   "f": 108,
+   "shape": "E"
+  },
+  {
+   "t": 4.625,
+   "f": 111,
+   "shape": "rest"
+  },
+  {
+   "t": 4.917,
+   "f": 118,
+   "shape": "O"
+  },
+  {
+   "t": 5.083,
+   "f": 122,
+   "shape": "A"
+  },
+  {
+   "t": 5.25,
+   "f": 126,
+   "shape": "E"
+  },
+  {
+   "t": 5.417,
+   "f": 130,
+   "shape": "A"
+  },
+  {
+   "t": 5.583,
+   "f": 134,
+   "shape": "M"
+  },
+  {
+   "t": 5.667,
+   "f": 136,
+   "shape": "rest"
+  },
+  {
+   "t": 5.875,
+   "f": 141,
+   "shape": "A"
+  },
+  {
+   "t": 5.958,
+   "f": 143,
+   "shape": "E"
+  },
+  {
+   "t": 6.083,
+   "f": 146,
+   "shape": "O"
+  },
+  {
+   "t": 6.458,
+   "f": 155,
+   "shape": "A"
+  },
+  {
+   "t": 6.542,
+   "f": 157,
+   "shape": "E"
+  },
+  {
+   "t": 7.0,
+   "f": 168,
+   "shape": "A"
+  },
+  {
+   "t": 7.167,
+   "f": 172,
+   "shape": "E"
+  },
+  {
+   "t": 7.375,
+   "f": 177,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Here's",
+   "t0": 0.515,
+   "t1": 0.79,
+   "f0": 12,
+   "f1": 19,
+   "ph": "hˈɪɹz"
+  },
+  {
+   "w": "the",
+   "t0": 0.79,
+   "t1": 0.928,
+   "f0": 19,
+   "f1": 22,
+   "ph": "ðə"
+  },
+  {
+   "w": "deal",
+   "t0": 0.928,
+   "t1": 1.265,
+   "f0": 22,
+   "f1": 30,
+   "ph": "dˈil"
+  },
+  {
+   "w": "folks",
+   "t0": 1.352,
+   "t1": 1.92,
+   "f0": 32,
+   "f1": 46,
+   "ph": "fˈOks"
+  },
+  {
+   "w": "This",
+   "t0": 2.445,
+   "t1": 2.645,
+   "f0": 59,
+   "f1": 63,
+   "ph": "ðˌɪs"
+  },
+  {
+   "w": "order",
+   "t0": 2.645,
+   "t1": 3.008,
+   "f0": 63,
+   "f1": 72,
+   "ph": "ˈɔɹdəɹ"
+  },
+  {
+   "w": "says",
+   "t0": 3.008,
+   "t1": 3.32,
+   "f0": 72,
+   "f1": 80,
+   "ph": "sˈɛz"
+  },
+  {
+   "w": "if",
+   "t0": 3.32,
+   "t1": 3.47,
+   "f0": 80,
+   "f1": 83,
+   "ph": "ɪf"
+  },
+  {
+   "w": "you",
+   "t0": 3.47,
+   "t1": 3.633,
+   "f0": 83,
+   "f1": 87,
+   "ph": "ju"
+  },
+  {
+   "w": "build",
+   "t0": 3.633,
+   "t1": 3.907,
+   "f0": 87,
+   "f1": 94,
+   "ph": "bˈɪld"
+  },
+  {
+   "w": "the",
+   "t0": 3.907,
+   "t1": 4.008,
+   "f0": 94,
+   "f1": 96,
+   "ph": "ðə"
+  },
+  {
+   "w": "big",
+   "t0": 4.008,
+   "t1": 4.27,
+   "f0": 96,
+   "f1": 102,
+   "ph": "bˈɪɡ"
+  },
+  {
+   "w": "ones",
+   "t0": 4.27,
+   "t1": 4.62,
+   "f0": 102,
+   "f1": 111,
+   "ph": "wˈʌnz"
+  },
+  {
+   "w": "you",
+   "t0": 4.87,
+   "t1": 5.032,
+   "f0": 117,
+   "f1": 121,
+   "ph": "ju"
+  },
+  {
+   "w": "test",
+   "t0": 5.032,
+   "t1": 5.37,
+   "f0": 121,
+   "f1": 129,
+   "ph": "tˈɛst"
+  },
+  {
+   "w": "them",
+   "t0": 5.37,
+   "t1": 5.645,
+   "f0": 129,
+   "f1": 135,
+   "ph": "ðˌɛm"
+  },
+  {
+   "w": "and",
+   "t0": 5.88,
+   "t1": 6.005,
+   "f0": 141,
+   "f1": 144,
+   "ph": "ænd"
+  },
+  {
+   "w": "you",
+   "t0": 6.005,
+   "t1": 6.192,
+   "f0": 144,
+   "f1": 149,
+   "ph": "ju"
+  },
+  {
+   "w": "show",
+   "t0": 6.192,
+   "t1": 6.442,
+   "f0": 149,
+   "f1": 155,
+   "ph": "ʃˈO"
+  },
+  {
+   "w": "us",
+   "t0": 6.442,
+   "t1": 6.605,
+   "f0": 155,
+   "f1": 159,
+   "ph": "ˌʌs"
+  },
+  {
+   "w": "the",
+   "t0": 6.605,
+   "t1": 6.705,
+   "f0": 159,
+   "f1": 161,
+   "ph": "ðə"
+  },
+  {
+   "w": "results",
+   "t0": 6.705,
+   "t1": 7.38,
+   "f0": 161,
+   "f1": 177,
+   "ph": "ɹəzˈʌlts"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.88,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 103.8,
+  "f0_range_st": 11.2,
+  "f0_method": "pYIN (a4lib.analyse)",
+  "final_move_st": -0.3,
+  "asr": "Here's the deal folks. This order says if you build the big ones, you test them and you show us the results.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.237,
+  "align_median_s": 0.032,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.43,
+  "rise_ms": 80.0,
+  "decay_ms": 275.0,
+  "decay_to_60_s": 0.375
+ },
+ "clean": {
+  "file": "audio/ep01/act3/dialogue/fast-v2/clean/e1-a3-21-01.wav",
+  "note": "the dry read (no monitor chain), -16 LUFS"
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 4,
+   "word": "folks",
+   "tts_s": 0.195,
+   "target_s": 0.6,
+   "point_s": 1.53,
+   "joined_speech": false,
+   "dip_db": -70.3,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.61,
+   "opened_s": 0.405
+  },
+  {
+   "after_word": 13,
+   "word": "ones",
+   "tts_s": 0.0,
+   "target_s": 0.2,
+   "point_s": 4.205,
+   "joined_speech": true,
+   "dip_db": -31.9,
+   "breath": false,
+   "crossfade_ms": [
+    60,
+    25
+   ],
+   "final_s": 0.22,
+   "opened_s": 0.2
+  },
+  {
+   "after_word": 16,
+   "word": "them",
+   "tts_s": 0.04,
+   "target_s": 0.2,
+   "point_s": 5.255,
+   "joined_speech": false,
+   "dip_db": -56.2,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.2,
+   "opened_s": 0.16
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "4faf6731b5da2ac8",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 57.92,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": true,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 1,
+   "share_s": 13.46,
+   "rechecked_alone": false
+  }
+ }
+}

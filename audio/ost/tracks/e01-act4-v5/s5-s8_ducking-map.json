@@ -1,0 +1,1152 @@
+{
+ "schema": "mrmas-duck-map/1",
+ "what": "The music-bus duck for the Ep1 Act Four v5 score, S5-S8, in act frames (24 fps). Apply it to the three s5-s8_ underscore masters laid at their act frames (file t = 0 at the frame given). The thinning is already composed into the cues; this is the mix duck on top. Guides, set from the plan, never heard.",
+ "clock": {
+  "fps": 24,
+  "act_frame_0": "episode 12:31:00",
+  "timeline": "show/reel/ep01-act4-v5.json",
+  "takes": "audio/ep01/act4/dialogue/lines-v5.json"
+ },
+ "rules": {
+  "pre_s": 0.25,
+  "attack_s": 0.2,
+  "release_s": 0.6,
+  "hold_gap_s": 2.5,
+  "depths_db": {
+   "line": -9.0,
+   "pedal": -6.5,
+   "record": -8.0,
+   "window": -6.0,
+   "violin": -5.0,
+   "post": -3.0,
+   "post_violin": -2.0
+  },
+  "pedal_spans": [
+   {
+    "f0": 6985.0,
+    "f1": 9001.0,
+    "what": "S5: the dark-room pedal"
+   },
+   {
+    "f0": 9376.0,
+    "f1": 10205.0,
+    "what": "S7.01-S7.03: the violin, the floor"
+   },
+   {
+    "f0": 10453.0,
+    "f1": 10994.7,
+    "what": "LEVERAGE thinned to its F pedal (the reading, the terms)"
+   },
+   {
+    "f0": 11166.8,
+    "f1": 11431.0,
+    "what": "the C pedal"
+   },
+   {
+    "f0": 11604.0,
+    "f1": 12563.0,
+    "what": "the lobby quiet, the felt, the vault's F (the coda)"
+   }
+  ]
+ },
+ "cues": [
+  {
+   "id": "s5-s8_s5-two-am",
+   "file_t0_act_frame": 6985,
+   "act_frame_out": 9001
+  },
+  {
+   "id": "s5-s8_s6-avalanche",
+   "file_t0_act_frame": 9001,
+   "act_frame_out": 9376
+  },
+  {
+   "id": "s5-s8_s7s8-the-return",
+   "file_t0_act_frame": 9376,
+   "act_frame_out": 12443
+  }
+ ],
+ "keys": [
+  {
+   "id": null,
+   "kind": "post",
+   "who": null,
+   "act_f_in": 7051.8,
+   "act_f_out": 7143.0,
+   "tc_in": "17:24:20",
+   "depth_db": -3.0,
+   "pedal": "S5: the dark-room pedal",
+   "label": "post/record text: RIMA: \u201cNopeAI is nothing without its people\u201d"
+  },
+  {
+   "id": "a5-29-01",
+   "kind": "line",
+   "who": "mas",
+   "act_f_in": 7167.0,
+   "act_f_out": 7201.56,
+   "tc_in": "17:29:15",
+   "depth_db": -6.5,
+   "pedal": "S5: the dark-room pedal",
+   "label": "line: a5-29-01 mas: the badge was a joke."
+  },
+  {
+   "id": "a5-29-02",
+   "kind": "line",
+   "who": "mas",
+   "act_f_in": 7225.56,
+   "act_f_out": 7245.0,
+   "tc_in": "17:32:02",
+   "depth_db": -6.5,
+   "pedal": "S5: the dark-room pedal",
+   "label": "line: a5-29-02 mas: mostly."
+  },
+  {
+   "id": "a5-29-03",
+   "kind": "line",
+   "who": "gerg",
+   "act_f_in": 7302.6,
+   "act_f_out": 7355.16,
+   "tc_in": "17:35:07",
+   "depth_db": -6.5,
+   "pedal": "S5: the dark-room pedal",
+   "label": "line: a5-29-03 gerg: Sorry, one sec. I've got a build compiling."
+  },
+  {
+   "id": "a5-29-04",
+   "kind": "line",
+   "who": "mas",
+   "act_f_in": 7364.76,
+   "act_f_out": 7403.16,
+   "tc_in": "17:37:21",
+   "depth_db": -6.5,
+   "pedal": "S5: the dark-room pedal",
+   "label": "line: a5-29-04 mas: it's two in the morning, gerg."
+  },
+  {
+   "id": "a5-29-05",
+   "kind": "line",
+   "who": "gerg",
+   "act_f_in": 7410.36,
+   "act_f_out": 7598.04,
+   "tc_in": "17:39:18",
+   "depth_db": -6.5,
+   "pedal": "S5: the dark-room pedal",
+   "label": "line: a5-29-05 gerg: Best time there is. Nobody else is pushing anyth"
+  },
+  {
+   "id": "a5-29-06",
+   "kind": "record",
+   "who": "gerg",
+   "act_f_in": 7629.19,
+   "act_f_out": 7791.91,
+   "tc_in": "17:48:21",
+   "depth_db": -6.5,
+   "pedal": "S5: the dark-room pedal",
+   "label": "record: a5-29-06 gerg: They're telling the board they're \"\u2026unable to wo"
+  },
+  {
+   "id": null,
+   "kind": "post",
+   "who": null,
+   "act_f_in": 7650.31,
+   "act_f_out": 7803.91,
+   "tc_in": "17:49:18",
+   "depth_db": -3.0,
+   "pedal": "S5: the dark-room pedal",
+   "label": "post/record text: \u201c\u2026unable to work for or with people that lack co"
+  },
+  {
+   "id": "a5-29-07",
+   "kind": "record",
+   "who": "gerg",
+   "act_f_in": 7803.91,
+   "act_f_out": 7869.67,
+   "tc_in": "17:56:04",
+   "depth_db": -6.5,
+   "pedal": "S5: the dark-room pedal",
+   "label": "record: a5-29-07 gerg: And they'll quit, \"\u2026unless all current board mem"
+  },
+  {
+   "id": null,
+   "kind": "post",
+   "who": null,
+   "act_f_in": 7816.99,
+   "act_f_out": 7920.07,
+   "tc_in": "17:56:17",
+   "depth_db": -3.0,
+   "pedal": "S5: the dark-room pedal",
+   "label": "post/record text: \u201c\u2026unless all current board members resign\u2026\u201d"
+  },
+  {
+   "id": "a5-29-08",
+   "kind": "line",
+   "who": "mas",
+   "act_f_in": 7879.27,
+   "act_f_out": 7912.87,
+   "tc_in": "17:59:07",
+   "depth_db": -6.5,
+   "pedal": "S5: the dark-room pedal",
+   "label": "line: a5-29-08 mas: and go to macrosoft."
+  },
+  {
+   "id": "a5-29-09",
+   "kind": "record",
+   "who": "gerg",
+   "act_f_in": 7920.07,
+   "act_f_out": 8010.31,
+   "tc_in": "18:01:00",
+   "depth_db": -6.5,
+   "pedal": "S5: the dark-room pedal",
+   "label": "record: a5-29-09 gerg: Yep. Macrosoft's promised them \"\u2026positions for a"
+  },
+  {
+   "id": null,
+   "kind": "post",
+   "who": null,
+   "act_f_in": 7954.51,
+   "act_f_out": 8096.71,
+   "tc_in": "18:02:11",
+   "depth_db": -3.0,
+   "pedal": "S5: the dark-room pedal",
+   "label": "post/record text: \u201c\u2026positions for all NopeAI employees\u2026\u201d"
+  },
+  {
+   "id": "a5-29-10",
+   "kind": "line",
+   "who": "mas",
+   "act_f_in": 8024.71,
+   "act_f_out": 8057.83,
+   "tc_in": "18:05:09",
+   "depth_db": -6.5,
+   "pedal": "S5: the dark-room pedal",
+   "label": "line: a5-29-10 mas: that's a lot of desks."
+  },
+  {
+   "id": "a5-29-11",
+   "kind": "line",
+   "who": "gerg",
+   "act_f_in": 8067.43,
+   "act_f_out": 8089.51,
+   "tc_in": "18:07:03",
+   "depth_db": -6.5,
+   "pedal": "S5: the dark-room pedal",
+   "label": "line: a5-29-11 gerg: Scroll to the bottom."
+  },
+  {
+   "id": null,
+   "kind": "post",
+   "who": null,
+   "act_f_in": 8103.91,
+   "act_f_out": 8157.0,
+   "tc_in": "18:08:16",
+   "depth_db": -3.0,
+   "pedal": "S5: the dark-room pedal",
+   "label": "post/record text: ALYI (REPORTED)"
+  },
+  {
+   "id": "a5-29-12",
+   "kind": "line",
+   "who": "gerg",
+   "act_f_in": 8127.91,
+   "act_f_out": 8144.71,
+   "tc_in": "18:09:16",
+   "depth_db": -6.5,
+   "pedal": "S5: the dark-room pedal",
+   "label": "line: a5-29-12 gerg: Alyi signed it."
+  },
+  {
+   "id": "a5-29-13",
+   "kind": "line",
+   "who": "mas",
+   "act_f_in": 8164.2,
+   "act_f_out": 8190.84,
+   "tc_in": "18:11:04",
+   "depth_db": -6.5,
+   "pedal": "S5: the dark-room pedal",
+   "label": "line: a5-29-13 mas: alyi voted."
+  },
+  {
+   "id": "a5-29-14",
+   "kind": "line",
+   "who": "gerg",
+   "act_f_in": 8202.84,
+   "act_f_out": 8219.88,
+   "tc_in": "18:12:19",
+   "depth_db": -6.5,
+   "pedal": "S5: the dark-room pedal",
+   "label": "line: a5-29-14 gerg: He did both."
+  },
+  {
+   "id": null,
+   "kind": "post",
+   "who": null,
+   "act_f_in": 8250.6,
+   "act_f_out": 8380.99,
+   "tc_in": "18:14:19",
+   "depth_db": -3.0,
+   "pedal": "S5: the dark-room pedal",
+   "label": "post/record text: PAY TO: NOPEAI STAFF"
+  },
+  {
+   "id": null,
+   "kind": "post",
+   "who": null,
+   "act_f_in": 8255.4,
+   "act_f_out": 8380.99,
+   "tc_in": "18:14:23",
+   "depth_db": -3.0,
+   "pedal": "S5: the dark-room pedal",
+   "label": "post/record text: ~$86B VALUATION \u00b7 EVIRHT"
+  },
+  {
+   "id": null,
+   "kind": "post",
+   "who": null,
+   "act_f_in": 8260.2,
+   "act_f_out": 8380.99,
+   "tc_in": "18:15:04",
+   "depth_db": -3.0,
+   "pedal": "S5: the dark-room pedal",
+   "label": "post/record text: MEMO: STAFF SHARE SALE"
+  },
+  {
+   "id": "a5-29-15",
+   "kind": "line",
+   "who": "gerg",
+   "act_f_in": 8272.2,
+   "act_f_out": 8347.8,
+   "tc_in": "18:15:16",
+   "depth_db": -6.5,
+   "pedal": "S5: the dark-room pedal",
+   "label": "line: a5-29-15 gerg: That'll be the share sale. Everybody's been wait"
+  },
+  {
+   "id": null,
+   "kind": "post",
+   "who": null,
+   "act_f_in": 8355.0,
+   "act_f_out": 8380.99,
+   "tc_in": "18:19:03",
+   "depth_db": -3.0,
+   "pedal": "S5: the dark-room pedal",
+   "label": "post/record text: VOID IF CEO MISSING"
+  },
+  {
+   "id": "a5-29-16",
+   "kind": "line",
+   "who": "mas",
+   "act_f_in": 8395.39,
+   "act_f_out": 8424.91,
+   "tc_in": "18:20:19",
+   "depth_db": -6.5,
+   "pedal": "S5: the dark-room pedal",
+   "label": "line: a5-29-16 mas: what are you building?"
+  },
+  {
+   "id": "a5-29-17",
+   "kind": "line",
+   "who": "gerg",
+   "act_f_in": 8434.51,
+   "act_f_out": 8485.15,
+   "tc_in": "18:22:11",
+   "depth_db": -6.5,
+   "pedal": "S5: the dark-room pedal",
+   "label": "line: a5-29-17 gerg: The company. Again. Just in case."
+  },
+  {
+   "id": "a5-29-18",
+   "kind": "line",
+   "who": "gerg",
+   "act_f_in": 8528.81,
+   "act_f_out": 8571.29,
+   "tc_in": "18:26:09",
+   "depth_db": -6.5,
+   "pedal": "S5: the dark-room pedal",
+   "label": "line: a5-29-18 gerg: So. Do I tell everyone to pack?"
+  },
+  {
+   "id": "a5-29-19",
+   "kind": "line",
+   "who": "mas",
+   "act_f_in": 8592.89,
+   "act_f_out": 8631.53,
+   "tc_in": "18:29:01",
+   "depth_db": -6.5,
+   "pedal": "S5: the dark-room pedal",
+   "label": "line: a5-29-19 mas: ask me when it compiles."
+  },
+  {
+   "id": "a5-29-20",
+   "kind": "line",
+   "who": "tasya",
+   "act_f_in": 8703.6,
+   "act_f_out": 8790.24,
+   "tc_in": "18:33:16",
+   "depth_db": -6.5,
+   "pedal": "S5: the dark-room pedal",
+   "label": "line: a5-29-20 tasya: Don't get up, Mas. I won't keep you. Everyone is"
+  },
+  {
+   "id": "a5-29-21",
+   "kind": "line",
+   "who": "mas",
+   "act_f_in": 8807.04,
+   "act_f_out": 8827.2,
+   "tc_in": "18:37:23",
+   "depth_db": -6.5,
+   "pedal": "S5: the dark-room pedal",
+   "label": "line: a5-29-21 mas: everyone."
+  },
+  {
+   "id": "a5-29-22",
+   "kind": "line",
+   "who": "tasya",
+   "act_f_in": 8839.2,
+   "act_f_out": 8919.12,
+   "tc_in": "18:39:07",
+   "depth_db": -6.5,
+   "pedal": "S5: the dark-room pedal",
+   "label": "line: a5-29-22 tasya: Yes. You first. And there's a desk for every one"
+  },
+  {
+   "id": "a5-29-23",
+   "kind": "line",
+   "who": "mas",
+   "act_f_in": 8945.52,
+   "act_f_out": 8970.24,
+   "tc_in": "18:43:18",
+   "depth_db": -6.5,
+   "pedal": "S5: the dark-room pedal",
+   "label": "line: a5-29-23 mas: leave it open."
+  },
+  {
+   "id": "a5-29-24",
+   "kind": "window",
+   "who": "neleh",
+   "act_f_in": 9198.19,
+   "act_f_out": 9229.87,
+   "tc_in": "18:54:06",
+   "depth_db": -6.0,
+   "pedal": null,
+   "label": "window: a5-29-24 neleh: Has anyone read the char\u2014"
+  },
+  {
+   "id": null,
+   "kind": "post",
+   "who": null,
+   "act_f_in": 9400.01,
+   "act_f_out": 9539.21,
+   "tc_in": "19:02:16",
+   "depth_db": -2.0,
+   "pedal": "S7.01-S7.03: the violin, the floor",
+   "label": "post/record text: POST: ALYI: \u201cI deeply regret my participation in"
+  },
+  {
+   "id": "a5-30-01",
+   "kind": "violin",
+   "who": "alyi",
+   "act_f_in": 9572.81,
+   "act_f_out": 9603.05,
+   "tc_in": "19:09:21",
+   "depth_db": -5.0,
+   "pedal": "S7.01-S7.03: the violin, the floor",
+   "label": "violin: a5-30-01 alyi: You sent three."
+  },
+  {
+   "id": "a5-30-02",
+   "kind": "violin",
+   "who": "mas",
+   "act_f_in": 9619.85,
+   "act_f_out": 9649.61,
+   "tc_in": "19:11:20",
+   "depth_db": -5.0,
+   "pedal": "S7.01-S7.03: the violin, the floor",
+   "label": "violin: a5-30-02 mas: one for each day."
+  },
+  {
+   "id": "a5-30-03",
+   "kind": "violin",
+   "who": "alyi",
+   "act_f_in": 9668.81,
+   "act_f_out": 9712.97,
+   "tc_in": "19:13:21",
+   "depth_db": -5.0,
+   "pedal": "S7.01-S7.03: the violin, the floor",
+   "label": "violin: a5-30-03 alyi: It has been four days."
+  },
+  {
+   "id": "a5-30-04",
+   "kind": "violin",
+   "who": "mas",
+   "act_f_in": 9724.97,
+   "act_f_out": 9760.49,
+   "tc_in": "19:16:05",
+   "depth_db": -5.0,
+   "pedal": "S7.01-S7.03: the violin, the floor",
+   "label": "violin: a5-30-04 mas: i'm not counting today."
+  },
+  {
+   "id": "a5-30-05",
+   "kind": "line",
+   "who": "mas",
+   "act_f_in": 9864.0,
+   "act_f_out": 9928.8,
+   "tc_in": "19:22:00",
+   "depth_db": -6.5,
+   "pedal": "S7.01-S7.03: the violin, the floor",
+   "label": "line: a5-30-05 mas: what happens to you if nopeai disappears?"
+  },
+  {
+   "id": "a5-30-06",
+   "kind": "record",
+   "who": "tasya",
+   "act_f_in": 9943.2,
+   "act_f_out": 10122.96,
+   "tc_in": "19:25:07",
+   "depth_db": -6.5,
+   "pedal": "S7.01-S7.03: the violin, the floor",
+   "label": "record: a5-30-06 tasya: Oh, we'd be fine. \u2026we have all the IP rights and"
+  },
+  {
+   "id": "a5-30-07",
+   "kind": "line",
+   "who": "tasya",
+   "act_f_in": 10168.39,
+   "act_f_out": 10183.51,
+   "tc_in": "19:34:16",
+   "depth_db": -6.5,
+   "pedal": "S7.01-S7.03: the violin, the floor",
+   "label": "line: a5-30-07 tasya: Hello."
+  },
+  {
+   "id": "a5-30-08",
+   "kind": "line",
+   "who": "terb",
+   "act_f_in": 10335.0,
+   "act_f_out": 10373.16,
+   "tc_in": "19:41:15",
+   "depth_db": -9.0,
+   "pedal": null,
+   "label": "line: a5-30-08 terb: Which room is on fire?"
+  },
+  {
+   "id": "a5-30-09",
+   "kind": "line",
+   "who": "terb",
+   "act_f_in": 10411.56,
+   "act_f_out": 10426.44,
+   "tc_in": "19:44:20",
+   "depth_db": -9.0,
+   "pedal": null,
+   "label": "line: a5-30-09 terb: \u2026Ah."
+  },
+  {
+   "id": "a5-30-10",
+   "kind": "record",
+   "who": "terb",
+   "act_f_in": 10460.21,
+   "act_f_out": 10737.17,
+   "tc_in": "19:46:20",
+   "depth_db": -6.5,
+   "pedal": "LEVERAGE thinned to its F pedal (the reading, the terms)",
+   "label": "record: a5-30-10 terb: Before this goes out, I'm reading it once, so no"
+  },
+  {
+   "id": "a5-30-11",
+   "kind": "line",
+   "who": "mas",
+   "act_f_in": 10758.77,
+   "act_f_out": 10780.61,
+   "tc_in": "19:59:07",
+   "depth_db": -6.5,
+   "pedal": "LEVERAGE thinned to its F pedal (the reading, the terms)",
+   "label": "line: a5-30-11 mas: you're staying?"
+  },
+  {
+   "id": "a5-30-12",
+   "kind": "line",
+   "who": "terb",
+   "act_f_in": 10802.21,
+   "act_f_out": 10868.21,
+   "tc_in": "20:01:02",
+   "depth_db": -6.5,
+   "pedal": "LEVERAGE thinned to its F pedal (the reading, the terms)",
+   "label": "line: a5-30-12 terb: He stays. You and Gerg don't sit on the board."
+  },
+  {
+   "id": "a5-30-13",
+   "kind": "line",
+   "who": "mas",
+   "act_f_in": 10880.21,
+   "act_f_out": 10901.57,
+   "tc_in": "20:04:08",
+   "depth_db": -6.5,
+   "pedal": "LEVERAGE thinned to its F pedal (the reading, the terms)",
+   "label": "line: a5-30-13 mas: we'll stand."
+  },
+  {
+   "id": "a5-30-14",
+   "kind": "line",
+   "who": "terb",
+   "act_f_in": 10911.17,
+   "act_f_out": 10964.45,
+   "tc_in": "20:05:15",
+   "depth_db": -6.5,
+   "pedal": "LEVERAGE thinned to its F pedal (the reading, the terms)",
+   "label": "line: a5-30-14 terb: And there'll be an independent review."
+  },
+  {
+   "id": "a5-30-15",
+   "kind": "line",
+   "who": "mas",
+   "act_f_in": 10976.45,
+   "act_f_out": 10994.69,
+   "tc_in": "20:08:08",
+   "depth_db": -6.5,
+   "pedal": "LEVERAGE thinned to its F pedal (the reading, the terms)",
+   "label": "line: a5-30-15 mas: of what?"
+  },
+  {
+   "id": "a5-30-16",
+   "kind": "line",
+   "who": "mada",
+   "act_f_in": 11033.09,
+   "act_f_out": 11054.69,
+   "tc_in": "20:10:17",
+   "depth_db": -9.0,
+   "pedal": null,
+   "label": "line: a5-30-16 mada: Good question."
+  },
+  {
+   "id": "a5-30-17",
+   "kind": "line",
+   "who": "mas",
+   "act_f_in": 11076.26,
+   "act_f_out": 11099.54,
+   "tc_in": "20:12:12",
+   "depth_db": -9.0,
+   "pedal": null,
+   "label": "line: a5-30-17 mas: good question."
+  },
+  {
+   "id": null,
+   "kind": "post",
+   "who": null,
+   "act_f_in": 11181.19,
+   "act_f_out": 11257.99,
+   "tc_in": "20:16:21",
+   "depth_db": -3.0,
+   "pedal": "the C pedal",
+   "label": "post/record text: POST: GERG: \u201cReturning to NopeAI & getting back "
+  },
+  {
+   "id": null,
+   "kind": "post",
+   "who": null,
+   "act_f_in": 11279.59,
+   "act_f_out": 11385.19,
+   "tc_in": "20:21:00",
+   "depth_db": -3.0,
+   "pedal": "the C pedal",
+   "label": "post/record text: POST: TTEMME: \u201cI am deeply pleased by this resul"
+  },
+  {
+   "id": "a5-30-18",
+   "kind": "line",
+   "who": "ttemme",
+   "act_f_in": 11392.39,
+   "act_f_out": 11423.83,
+   "tc_in": "20:25:16",
+   "depth_db": -6.5,
+   "pedal": "the C pedal",
+   "label": "line: a5-30-18 ttemme: Chat, we're so back."
+  },
+  {
+   "id": "a5-30-19",
+   "kind": "line",
+   "who": "mas",
+   "act_f_in": 11662.8,
+   "act_f_out": 11680.56,
+   "tc_in": "20:36:23",
+   "depth_db": -6.5,
+   "pedal": "the lobby quiet, the felt, the vault's F (the coda)",
+   "label": "line: a5-30-19 mas: okay."
+  },
+  {
+   "id": "a5-31-01",
+   "kind": "line",
+   "who": "gerg",
+   "act_f_in": 11793.6,
+   "act_f_out": 11808.72,
+   "tc_in": "20:42:10",
+   "depth_db": -6.5,
+   "pedal": "the lobby quiet, the felt, the vault's F (the coda)",
+   "label": "line: a5-31-01 gerg: Is it ready?"
+  },
+  {
+   "id": "a5-31-02",
+   "kind": "line",
+   "who": "mas",
+   "act_f_in": 11818.32,
+   "act_f_out": 11846.4,
+   "tc_in": "20:43:10",
+   "depth_db": -6.5,
+   "pedal": "the lobby quiet, the felt, the vault's F (the coda)",
+   "label": "line: a5-31-02 mas: it's a preview."
+  },
+  {
+   "id": "a5-31-03",
+   "kind": "line",
+   "who": "gerg",
+   "act_f_in": 11858.4,
+   "act_f_out": 11888.64,
+   "tc_in": "20:45:02",
+   "depth_db": -6.5,
+   "pedal": "the lobby quiet, the felt, the vault's F (the coda)",
+   "label": "line: a5-31-03 gerg: You said that about the last one."
+  },
+  {
+   "id": null,
+   "kind": "post",
+   "who": null,
+   "act_f_in": 11919.84,
+   "act_f_out": 12006.24,
+   "tc_in": "20:47:16",
+   "depth_db": -3.0,
+   "pedal": "the lobby quiet, the felt, the vault's F (the coda)",
+   "label": "post/record text: RAIL: (REPORTED) RESEARCHERS WROTE OF A BREAKTHR"
+  },
+  {
+   "id": "a5-31-04",
+   "kind": "record",
+   "who": "mas",
+   "act_f_in": 12047.4,
+   "act_f_out": 12272.52,
+   "tc_in": "20:52:23",
+   "depth_db": -6.5,
+   "pedal": "the lobby quiet, the felt, the vault's F (the coda)",
+   "label": "record: a5-31-04 mas: i love and respect alyi, i think he's a guiding "
+  }
+ ],
+ "curve_breakpoints": [
+  [
+   6985,
+   0.0
+  ],
+  [
+   7045,
+   0.0
+  ],
+  [
+   7046,
+   -0.12
+  ],
+  [
+   7050,
+   -2.63
+  ],
+  [
+   7051,
+   -3.0
+  ],
+  [
+   7163,
+   -3.0
+  ],
+  [
+   7164,
+   -4.06
+  ],
+  [
+   7165,
+   -5.42
+  ],
+  [
+   7166,
+   -6.5
+  ],
+  [
+   8089,
+   -6.5
+  ],
+  [
+   8090,
+   -3.0
+  ],
+  [
+   8124,
+   -3.0
+  ],
+  [
+   8125,
+   -4.18
+  ],
+  [
+   8126,
+   -5.54
+  ],
+  [
+   8127,
+   -6.5
+  ],
+  [
+   8219,
+   -6.5
+  ],
+  [
+   8220,
+   -3.0
+  ],
+  [
+   8268,
+   -3.0
+  ],
+  [
+   8269,
+   -3.79
+  ],
+  [
+   8271,
+   -6.5
+  ],
+  [
+   8347,
+   -6.5
+  ],
+  [
+   8348,
+   -3.0
+  ],
+  [
+   8391,
+   -3.0
+  ],
+  [
+   8392,
+   -3.53
+  ],
+  [
+   8394,
+   -6.24
+  ],
+  [
+   8395,
+   -6.5
+  ],
+  [
+   8631,
+   -6.5
+  ],
+  [
+   8632,
+   -6.29
+  ],
+  [
+   8646,
+   0.0
+  ],
+  [
+   8697,
+   0.0
+  ],
+  [
+   8698,
+   -0.54
+  ],
+  [
+   8702,
+   -5.96
+  ],
+  [
+   8703,
+   -6.5
+  ],
+  [
+   8970,
+   -6.5
+  ],
+  [
+   8971,
+   -6.16
+  ],
+  [
+   8984,
+   -0.29
+  ],
+  [
+   8985,
+   0.0
+  ],
+  [
+   9192,
+   0.0
+  ],
+  [
+   9193,
+   -1.01
+  ],
+  [
+   9197,
+   -6.0
+  ],
+  [
+   9229,
+   -6.0
+  ],
+  [
+   9230,
+   -5.95
+  ],
+  [
+   9244,
+   -0.11
+  ],
+  [
+   9245,
+   0.0
+  ],
+  [
+   9394,
+   0.0
+  ],
+  [
+   9398,
+   -1.66
+  ],
+  [
+   9399,
+   -2.0
+  ],
+  [
+   9568,
+   -2.0
+  ],
+  [
+   9569,
+   -2.28
+  ],
+  [
+   9571,
+   -4.37
+  ],
+  [
+   9572,
+   -5.0
+  ],
+  [
+   9760,
+   -5.0
+  ],
+  [
+   9761,
+   -4.82
+  ],
+  [
+   9775,
+   0.0
+  ],
+  [
+   9858,
+   0.0
+  ],
+  [
+   9862,
+   -5.42
+  ],
+  [
+   9863,
+   -6.5
+  ],
+  [
+   10183,
+   -6.5
+  ],
+  [
+   10184,
+   -6.28
+  ],
+  [
+   10198,
+   0.0
+  ],
+  [
+   10329,
+   0.0
+  ],
+  [
+   10333,
+   -7.5
+  ],
+  [
+   10334,
+   -9.0
+  ],
+  [
+   10426,
+   -9.0
+  ],
+  [
+   10427,
+   -6.5
+  ],
+  [
+   11030,
+   -6.5
+  ],
+  [
+   11031,
+   -7.34
+  ],
+  [
+   11032,
+   -9.0
+  ],
+  [
+   11099,
+   -9.0
+  ],
+  [
+   11100,
+   -8.72
+  ],
+  [
+   11114,
+   0.0
+  ],
+  [
+   11175,
+   0.0
+  ],
+  [
+   11176,
+   -0.5
+  ],
+  [
+   11180,
+   -3.0
+  ],
+  [
+   11388,
+   -3.0
+  ],
+  [
+   11389,
+   -3.53
+  ],
+  [
+   11391,
+   -6.24
+  ],
+  [
+   11392,
+   -6.5
+  ],
+  [
+   11423,
+   -6.5
+  ],
+  [
+   11424,
+   -6.42
+  ],
+  [
+   11438,
+   -0.1
+  ],
+  [
+   11439,
+   0.0
+  ],
+  [
+   11656,
+   0.0
+  ],
+  [
+   11657,
+   -0.27
+  ],
+  [
+   11661,
+   -5.69
+  ],
+  [
+   11662,
+   -6.5
+  ],
+  [
+   11680,
+   -6.5
+  ],
+  [
+   11681,
+   -6.3
+  ],
+  [
+   11695,
+   0.0
+  ],
+  [
+   11787,
+   0.0
+  ],
+  [
+   11788,
+   -0.54
+  ],
+  [
+   11792,
+   -5.96
+  ],
+  [
+   11793,
+   -6.5
+  ],
+  [
+   11888,
+   -6.5
+  ],
+  [
+   11889,
+   -3.0
+  ],
+  [
+   12043,
+   -3.0
+  ],
+  [
+   12044,
+   -3.52
+  ],
+  [
+   12046,
+   -6.23
+  ],
+  [
+   12047,
+   -6.5
+  ],
+  [
+   12272,
+   -6.5
+  ],
+  [
+   12273,
+   -6.28
+  ],
+  [
+   12287,
+   0.0
+  ],
+  [
+   12563,
+   0.0
+  ]
+ ],
+ "summary": {
+  "keys": 60,
+  "frames_ducked": 4231,
+  "frames_total": 5579,
+  "deepest_db": -9.0,
+  "breakpoints": 103
+ }
+}

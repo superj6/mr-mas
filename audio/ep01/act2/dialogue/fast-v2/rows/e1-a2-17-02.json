@@ -1,0 +1,319 @@
+{
+ "id": "e1-a2-17-02",
+ "scene": "17",
+ "speaker": "MARIO",
+ "speaker_slug": "mario",
+ "text": "So I'm adding a footnote. A short one.",
+ "spoken_as": "So I'm adding a footnote.{0.3} A short one.",
+ "delivery": "finger up, still writing",
+ "tag": "[INVENTED · he adds a clause, as he does under pressure (mario.md). Final pass: it explained what he's writing, where it used to answer Mas's feeder question \"what does it cost?\", which is cut. Dialogue pass 5: it was \"That's the footnote. The honest answer depends on who else is buying.\". Two reads pulled apart: the naturalness read heard \"the honest answer\" answering a question nobody asked, and the insider read heard \"who else is buying\" giving away the register's punchline. The third way keeps the footnote and drops the answer: \"A short one.\" is a promise the next two lines break (\"It has an appendix.\"), and \"It doesn't say what it costs.\" is setup enough for the register, which now answers the cost with nobody hinting at it]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "2S",
+ "shot_id": "2S",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 3.9,
+ "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-17-02.wav",
+ "mp3": null,
+ "duration_s": 3.36,
+ "frames_24": 81,
+ "voiced_span_s": 2.36,
+ "pace": {
+  "words": 8,
+  "wpm": 203.4,
+  "speed": 1.03,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.03,
+   "speed_band": [
+    1.0,
+    1.08
+   ],
+   "articulation_guide_sps": [
+    4.6,
+    5.4
+   ],
+   "turn_wpm_guide": [
+    160,
+    185
+   ],
+   "intent": "finger up, still writing"
+  },
+  "measured": {
+   "wpm": 203.4,
+   "articulation_sps": 4.83,
+   "syllables": 10,
+   "span_s": 2.36,
+   "pauses_s": [
+    0.29
+   ]
+  },
+  "longest_internal_gap_s": 0.29,
+  "audible_in_s": 0.5,
+  "audible_out_s": 2.86
+ },
+ "placement": {
+  "gap_before_s": 0.9,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_liam (Kokoro-82M stock) · a-liam-earnest · speed 1.030",
+ "voiceId": "am_liam",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 80 Hz",
+  "pitch 0",
+  "peak -1 dB @250 Hz Q1.0",
+  "low shelf +1 dB @200 Hz",
+  "peak +1.5 dB @3000 Hz Q0.9",
+  "high shelf -1 dB @7000 Hz",
+  "comp 2.5:1 @-22 dB (6/100 ms)",
+  "Kokoro speed 1.030 (the plan speed; mario band 1.00-1.08); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'footnote': Kokoro 0.02 s -> 0.30 s (intended 0.30; +0.28 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "O"
+  },
+  {
+   "t": 0.625,
+   "f": 15,
+   "shape": "A"
+  },
+  {
+   "t": 0.708,
+   "f": 17,
+   "shape": "M"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "A"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "E"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "A"
+  },
+  {
+   "t": 1.25,
+   "f": 30,
+   "shape": "O"
+  },
+  {
+   "t": 1.375,
+   "f": 33,
+   "shape": "E"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "O"
+  },
+  {
+   "t": 1.667,
+   "f": 40,
+   "shape": "E"
+  },
+  {
+   "t": 1.75,
+   "f": 42,
+   "shape": "rest"
+  },
+  {
+   "t": 2.125,
+   "f": 51,
+   "shape": "A"
+  },
+  {
+   "t": 2.25,
+   "f": 54,
+   "shape": "O"
+  },
+  {
+   "t": 2.375,
+   "f": 57,
+   "shape": "E"
+  },
+  {
+   "t": 2.5,
+   "f": 60,
+   "shape": "O"
+  },
+  {
+   "t": 2.583,
+   "f": 62,
+   "shape": "A"
+  },
+  {
+   "t": 2.792,
+   "f": 67,
+   "shape": "E"
+  },
+  {
+   "t": 2.875,
+   "f": 69,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "So",
+   "t0": 0.505,
+   "t1": 0.618,
+   "f0": 12,
+   "f1": 15,
+   "ph": "sˌO"
+  },
+  {
+   "w": "I'm",
+   "t0": 0.618,
+   "t1": 0.78,
+   "f0": 15,
+   "f1": 19,
+   "ph": "ˌIm"
+  },
+  {
+   "w": "adding",
+   "t0": 0.78,
+   "t1": 1.08,
+   "f0": 19,
+   "f1": 26,
+   "ph": "ˈædɪŋ"
+  },
+  {
+   "w": "a",
+   "t0": 1.08,
+   "t1": 1.205,
+   "f0": 26,
+   "f1": 29,
+   "ph": "ɐ"
+  },
+  {
+   "w": "footnote",
+   "t0": 1.205,
+   "t1": 1.73,
+   "f0": 29,
+   "f1": 42,
+   "ph": "fˈʊtnˌOt"
+  },
+  {
+   "w": "A",
+   "t0": 2.098,
+   "t1": 2.222,
+   "f0": 50,
+   "f1": 53,
+   "ph": "ɐ"
+  },
+  {
+   "w": "short",
+   "t0": 2.222,
+   "t1": 2.497,
+   "f0": 53,
+   "f1": 60,
+   "ph": "ʃˈɔɹt"
+  },
+  {
+   "w": "one",
+   "t0": 2.497,
+   "t1": 2.88,
+   "f0": 60,
+   "f1": 69,
+   "ph": "wˈʌn"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.75,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 104.4,
+  "f0_range_st": 13.0,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "So I'm adding a footnote, a short one.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.244,
+  "align_median_s": 0.038,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 15.0,
+  "decay_ms": 120.0,
+  "decay_to_60_s": 0.055
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 5,
+   "word": "footnote",
+   "tts_s": 0.02,
+   "target_s": 0.3,
+   "point_s": 1.36,
+   "joined_speech": false,
+   "dip_db": -47.8,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.3,
+   "opened_s": 0.28
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "98d8e81b18d74af9",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 8.41,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 2
+  },
+  "asr": {
+   "packed_with": 5,
+   "share_s": 1.16,
+   "rechecked_alone": false
+  }
+ }
+}

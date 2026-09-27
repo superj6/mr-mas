@@ -1,0 +1,777 @@
+{
+ "schema": "mrmas-ost-cue/1",
+ "id": "s5-s8_s6-avalanche",
+ "mm": "MM-10",
+ "family": "P11 SET-PIECE SWING (MM-10 form b, re-laid at 96 BPM, k = 1)",
+ "title": "The Avalanche (Ep1 Act Four v5, S6, to picture)",
+ "version": "v5",
+ "composer": "Ep1 Act Four v5 score, S5-S8 (re-laid from the batch-1 cues)",
+ "tone": "the company falls into his lap as a swung avalanche that stops dead on the one man who will not move",
+ "tags": [
+  "to picture",
+  "Ep1",
+  "act four",
+  "v5",
+  "continuous",
+  "S5-S8"
+ ],
+ "usage": "BI",
+ "scenes": [
+  "v5 S6.01-S6.06, act 9001-9341 (the stop holds to 9376); file t=0 = act frame 9001"
+ ],
+ "description": "",
+ "motifs": [
+  "the Build as the swung chip lead (4 -> 16)",
+  "Step Four (G-flat; Alyi resists one beat)",
+  "the board's bowed F pedal (the quiet vote's layer)",
+  "the Water Line augmented (F . F)",
+  "the full band on C7(#9b13); Mada's spinner"
+ ],
+ "key": "F minor -> B-flat minor (Step Four) -> F -> C7(#9b13), unresolved",
+ "engine": {
+  "version": "mrmas-ost-engine 1.1 (2026-09-26: fix1 -- meter axis, sample tuning, render pool, QA 5a-d)",
+  "rendered": "2026-09-27T01:45:31",
+  "render_seconds": 14.1
+ },
+ "timing": {
+  "bpm": 96.0,
+  "beat_unit_quarters": 1.0,
+  "tempo_map": [
+   {
+    "bar": 1,
+    "beat": 1.0,
+    "bpm": 96.0,
+    "ramp_in": false,
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "meter_map": [
+   {
+    "bar": 1,
+    "meter": "4/4",
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "swing": 1.0,
+  "swing_unit_quarters": 0.5,
+  "pickup_beats": 0.0,
+  "bars": 11,
+  "length_s": 27.5,
+  "length_frames": 660.0,
+  "fps": 24,
+  "end": {
+   "sec": 15.625333,
+   "frame": 375.008,
+   "bar": 7,
+   "beat": 2.0005
+  },
+  "album_duration_s": 15.6253,
+  "album_duration_frames": 375.01,
+  "album_loops": 1
+ },
+ "sections": [
+  {
+   "label": "phrase 1: the compile (A1, A4)",
+   "start": {
+    "sec": 0.0,
+    "frame": 0.0,
+    "bar": 1,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 5.0,
+    "frame": 120.0,
+    "bar": 3,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "phrase 2: Step Four, Alyi, Neleh (A6-A7)",
+   "start": {
+    "sec": 5.0,
+    "frame": 120.0,
+    "bar": 3,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 10.0,
+    "frame": 240.0,
+    "bar": 5,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "phrase 3: the Water Line, the quiet vote (A9)",
+   "start": {
+    "sec": 10.0,
+    "frame": 240.0,
+    "bar": 5,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 12.5,
+    "frame": 300.0,
+    "bar": 6,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "phrase 4: the full band (A13) -> the stop",
+   "start": {
+    "sec": 12.5,
+    "frame": 300.0,
+    "bar": 6,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 14.166667,
+    "frame": 340.0,
+    "bar": 6,
+    "beat": 3.6667
+   }
+  }
+ ],
+ "markers": [
+  {
+   "label": "A1: the compile (timpani F, the Build 4)",
+   "sec": 0.0,
+   "frame": 0.0,
+   "bar": 1,
+   "beat": 1.0
+  },
+  {
+   "label": "A4: the Build at 16",
+   "sec": 2.5,
+   "frame": 60.0,
+   "bar": 2,
+   "beat": 1.0
+  },
+  {
+   "label": "A4 beat 4: the brass kick (end of phrase 1)",
+   "sec": 4.375,
+   "frame": 105.0,
+   "bar": 2,
+   "beat": 4.0
+  },
+  {
+   "label": "A6: Step Four's G-flat",
+   "sec": 5.0,
+   "frame": 120.0,
+   "bar": 3,
+   "beat": 1.0
+  },
+  {
+   "label": "ALYI RESISTS (A6.3): timpani G-flat, the plucked no",
+   "sec": 6.25,
+   "frame": 150.0,
+   "bar": 3,
+   "beat": 3.0
+  },
+  {
+   "label": "A9: the Water Line augmented",
+   "sec": 10.0,
+   "frame": 240.0,
+   "bar": 5,
+   "beat": 1.0
+  },
+  {
+   "label": "A13: THE FULL BAND, C7(#9b13)",
+   "sec": 12.5,
+   "frame": 300.0,
+   "bar": 6,
+   "beat": 1.0
+  }
+ ],
+ "hit_check": [
+  {
+   "t": 0.0,
+   "offset_ms": 2.7,
+   "strength": 8.78
+  },
+  {
+   "t": 2.5,
+   "offset_ms": -4.0,
+   "strength": 5.24
+  },
+  {
+   "t": 4.375,
+   "offset_ms": -4.3,
+   "strength": 3.01
+  },
+  {
+   "t": 5.0,
+   "offset_ms": -5.3,
+   "strength": 2.35
+  },
+  {
+   "t": 6.25,
+   "offset_ms": 3.3,
+   "strength": 1.42
+  },
+  {
+   "t": 10.0,
+   "offset_ms": -5.3,
+   "strength": 2.04
+  },
+  {
+   "t": 12.5,
+   "offset_ms": -4.0,
+   "strength": 2.08
+  }
+ ],
+ "sfx_slots": [
+  {
+   "t": 0.8,
+   "sfx": "tile landing 1"
+  },
+  {
+   "t": 1.3,
+   "sfx": "tile landing 2"
+  },
+  {
+   "t": 1.8,
+   "sfx": "tile landing 3"
+  },
+  {
+   "t": 2.3,
+   "sfx": "tile landing 4"
+  },
+  {
+   "t": 2.8,
+   "sfx": "tile landing 5"
+  },
+  {
+   "t": 9.286,
+   "sfx": "landing_thunk: Neleh's tile goes (her voice drops)"
+  },
+  {
+   "t": 14.167,
+   "sfx": "freeze_hit_F: MADA \u00b7 LAST FIRER STANDING (owns the stop)"
+  }
+ ],
+ "silence_windows": [
+  {
+   "t0": 14.1697,
+   "t1": 16.1223,
+   "label": "D6 / hard stop",
+   "max_dbfs": -90.0
+  }
+ ],
+ "vo_windows": [],
+ "knee_whole": 0,
+ "f_major": {
+  "limit": 0.08,
+  "windows": 6,
+  "worst": 0.094,
+  "worst_sieved": 0.037,
+  "ok": true,
+  "ok_written": true,
+  "ok_spectral": true,
+  "f_inaudible_windows": 0,
+  "a_classes": {
+   "written": 0,
+   "resonance": 0,
+   "explained": 0,
+   "unattributed": 0
+  },
+  "written_a_over_f_bass": [],
+  "written_third": {
+   "ok": true,
+   "count": 0,
+   "events": [],
+   "grazes": [],
+   "n_grazes": 0,
+   "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+  },
+  "fails": [],
+  "explained": [],
+  "fixed_resonances": [],
+  "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+ },
+ "knee_completion": 0,
+ "room_sfx_windows": [],
+ "qa": {
+  "balance": {
+   "balance": {
+    "piano": 17,
+    "orch": 42,
+    "bigband": 18,
+    "chip": 23
+   },
+   "rhythm_pct_of_all": 16,
+   "chip_share": 23,
+   "balance_energy": {
+    "piano": 10,
+    "orch": 51,
+    "bigband": 16,
+    "chip": 23
+   },
+   "method": "theme stemtable (gated loudness per section, time-weighted, rhythm/fx excluded; it counts a brief stab at its own loudness for the whole section) + balance_energy (ungated energy)",
+   "sections": [
+    {
+     "section": "phrase 1: the compile (A1, A4)",
+     "share": {
+      "piano": 21,
+      "orch": 36,
+      "bigband": 19,
+      "chip": 23
+     }
+    },
+    {
+     "section": "phrase 2: Step Four, Alyi, Neleh (A6-A7)",
+     "share": {
+      "piano": 22,
+      "orch": 48,
+      "bigband": 14,
+      "chip": 16
+     }
+    },
+    {
+     "section": "phrase 3: the Water Line, the quiet vote (A9)",
+     "share": {
+      "piano": 5,
+      "orch": 39,
+      "bigband": 13,
+      "chip": 42
+     }
+    },
+    {
+     "section": "phrase 4: the full band (A13) -> the stop",
+     "share": {
+      "piano": 8,
+      "orch": 46,
+      "bigband": 33,
+      "chip": 13
+     }
+    }
+   ]
+  },
+  "short_term_underscore": {
+   "p95": -14.68,
+   "median": -15.92,
+   "max": -14.57
+  },
+  "band_2_6k_db": -16.3,
+  "centroid_hz": 481.0,
+  "f_major": {
+   "limit": 0.08,
+   "windows": 6,
+   "worst": 0.094,
+   "worst_sieved": 0.037,
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "f_inaudible_windows": 0,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_a_over_f_bass": [],
+   "written_third": {
+    "ok": true,
+    "count": 0,
+    "events": [],
+    "grazes": [],
+    "n_grazes": 0,
+    "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+   },
+   "fails": [],
+   "explained": [],
+   "fixed_resonances": [],
+   "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+  },
+  "knee_completion": {
+   "count": 0,
+   "hits": [],
+   "max_gap_s": 2.5,
+   "rule": "OST-BIBLE rule 4: the knee never plays whole in an episode, in any register, across a phrase boundary too"
+  },
+  "sub_under_room": [],
+  "no_third": [],
+  "silence": [
+   {
+    "t0": 14.1697,
+    "t1": 16.1223,
+    "label": "D6 / hard stop",
+    "peak_dbfs": -103.9000015258789,
+    "limit": -90.0,
+    "ok": 1.0
+   }
+  ],
+  "hard_stops": [
+   {
+    "t0": 14.1697,
+    "t1": 16.1223,
+    "label": "hard stop",
+    "peak_dbfs": -103.9000015258789,
+    "limit": -90.0,
+    "ok": 1.0
+   }
+  ],
+  "vo_windows": [],
+  "knee_whole": 0,
+  "motifs_found": {
+   "BUILD": [
+    {
+     "inst": "lead",
+     "t": 2.5,
+     "transpose": 12
+    },
+    {
+     "inst": "lead",
+     "t": 10.0,
+     "transpose": 0
+    }
+   ],
+   "STEP_FOUR": [
+    {
+     "inst": "vla",
+     "t": 7.2917,
+     "transpose": 0
+    }
+   ]
+  },
+  "swing": {
+   "lead": {
+    "offbeats": 10,
+    "median_frames": 7.5,
+    "hum_ms": 0
+   },
+   "jazz": {
+    "offbeats": 10,
+    "median_frames": 10.0,
+    "hum_ms": 3
+   },
+   "grand": {
+    "offbeats": 8,
+    "median_frames": 10.22,
+    "hum_ms": 3
+   },
+   "vc": {
+    "offbeats": 7,
+    "median_frames": 10.0,
+    "hum_ms": 8
+   },
+   "vla": {
+    "offbeats": 6,
+    "median_frames": 10.04,
+    "hum_ms": 8
+   },
+   "bsn": {
+    "offbeats": 3,
+    "median_frames": 10.0,
+    "hum_ms": 8
+   },
+   "hn": {
+    "offbeats": 5,
+    "median_frames": 10.0,
+    "hum_ms": 8
+   },
+   "cb": {
+    "offbeats": 1,
+    "median_frames": 8.5,
+    "hum_ms": 8
+   },
+   "timp": {
+    "offbeats": 8,
+    "median_frames": 9.38,
+    "hum_ms": 0
+   },
+   "celesta": {
+    "offbeats": 2,
+    "median_frames": 10.0,
+    "hum_ms": 4
+   },
+   "arp": {
+    "offbeats": 2,
+    "median_frames": 10.0,
+    "hum_ms": 0
+   }
+  },
+  "banned": []
+ },
+ "loop": null,
+ "files": {
+  "album_wav": "render/s5-s8_s6-avalanche-album.wav",
+  "album_mp3": "render/s5-s8_s6-avalanche-album.mp3",
+  "underscore_wav": "render/s5-s8_s6-avalanche-underscore.wav",
+  "underscore_mp3": "render/s5-s8_s6-avalanche-underscore.mp3",
+  "stems": {
+   "piano": "render/stems/s5-s8_s6-avalanche-piano.flac",
+   "strings": "render/stems/s5-s8_s6-avalanche-strings.flac",
+   "winds": "render/stems/s5-s8_s6-avalanche-winds.flac",
+   "brass": "render/stems/s5-s8_s6-avalanche-brass.flac",
+   "bass": "render/stems/s5-s8_s6-avalanche-bass.flac",
+   "drums": "render/stems/s5-s8_s6-avalanche-drums.flac",
+   "perc": "render/stems/s5-s8_s6-avalanche-perc.flac",
+   "chip": "render/stems/s5-s8_s6-avalanche-chip.flac"
+  },
+  "midi": "render/s5-s8_s6-avalanche.mid",
+  "pianoroll": "render/s5-s8_s6-avalanche-pianoroll.png"
+ },
+ "masters": {
+  "album": {
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "comp": {
+    "thresh_db": -20,
+    "ratio": 1.8
+   },
+   "dialog_pocket": null,
+   "measured": {
+    "lufs": -16.0,
+    "lra": 4.19,
+    "true_peak_db": -1.46,
+    "peak_db": -1.48,
+    "rms_db": -19.04,
+    "crest_db": 17.56,
+    "seconds": 15.6253
+   }
+  },
+  "underscore": {
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -3.0,
+   "comp": {
+    "thresh_db": -28,
+    "ratio": 1.3,
+    "att_ms": 40.0,
+    "rel_ms": 350.0
+   },
+   "dialog_pocket": {
+    "f": 2500.0,
+    "db": -2.0,
+    "q": 0.7
+   },
+   "measured": {
+    "lufs": -16.0,
+    "lra": 3.67,
+    "true_peak_db": -3.15,
+    "peak_db": -3.16,
+    "rms_db": -18.85,
+    "crest_db": 15.7,
+    "seconds": 15.6253
+   }
+  }
+ },
+ "stems": {
+  "sum_vs_underscore_residual_db": -160.0,
+  "families_present": [
+   "bass",
+   "brass",
+   "chip",
+   "drums",
+   "perc",
+   "piano",
+   "strings",
+   "winds"
+  ],
+  "family_share_lu": {
+   "piano": -8.0,
+   "strings": -3.6,
+   "winds": -11.5,
+   "brass": -7.2,
+   "bass": -6.4,
+   "drums": -25.0,
+   "perc": -13.7,
+   "chip": -6.1
+  }
+ },
+ "spectrum": {
+  "sub": -22.2,
+  "bass": -4.1,
+  "lowmid": -2.9,
+  "mid": -10.4,
+  "presence": -24.2,
+  "air": -35.9,
+  "centroid_hz": 481.0
+ },
+ "bar_levels": [
+  {
+   "bar": 1,
+   "rms_db": -22.6,
+   "peak_db": -6.099999904632568
+  },
+  {
+   "bar": 2,
+   "rms_db": -17.9,
+   "peak_db": -4.199999809265137
+  },
+  {
+   "bar": 3,
+   "rms_db": -16.8,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 4,
+   "rms_db": -21.0,
+   "peak_db": -7.199999809265137
+  },
+  {
+   "bar": 5,
+   "rms_db": -17.2,
+   "peak_db": -4.0
+  },
+  {
+   "bar": 6,
+   "rms_db": -19.4,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 7,
+   "rms_db": -240.0,
+   "peak_db": -240.0
+  }
+ ],
+ "instrumentation": {
+  "arp": {
+   "family": "chip",
+   "notes": 5,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "asax": {
+   "family": "brass",
+   "notes": 1,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "bsax": {
+   "family": "brass",
+   "notes": 1,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "bsn": {
+   "family": "winds",
+   "notes": 4,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "cb": {
+   "family": "strings",
+   "notes": 2,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "cb_pizz": {
+   "family": "bass",
+   "notes": 20,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "celesta": {
+   "family": "perc",
+   "notes": 5,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "grand": {
+   "family": "piano",
+   "notes": 24,
+   "source": "sf2",
+   "credit": "Salamander Grand Piano by Alexander Holm (CC BY 3.0) -- ATTRIBUTION REQUIRED"
+  },
+  "hn": {
+   "family": "brass",
+   "notes": 6,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "jazz": {
+   "family": "drums",
+   "notes": 65,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "lead": {
+   "family": "chip",
+   "notes": 40,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "tbn": {
+   "family": "brass",
+   "notes": 8,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "timp": {
+   "family": "perc",
+   "notes": 25,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "tpt": {
+   "family": "brass",
+   "notes": 8,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "tri": {
+   "family": "chip",
+   "notes": 2,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "tsax": {
+   "family": "brass",
+   "notes": 2,
+   "source": "art",
+   "credit": "VCSL by Versilian Studios (CC0 1.0)"
+  },
+  "ubass": {
+   "family": "bass",
+   "notes": 20,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "vc": {
+   "family": "strings",
+   "notes": 15,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vla": {
+   "family": "strings",
+   "notes": 17,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vln1": {
+   "family": "strings",
+   "notes": 4,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "vln2": {
+   "family": "strings",
+   "notes": 5,
+   "source": "art",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  },
+  "xylo": {
+   "family": "perc",
+   "notes": 6,
+   "source": "ss",
+   "credit": "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+  }
+ },
+ "credits": [
+  "GeneralUser GS by S. Christian Collins",
+  "Salamander Grand Piano by Alexander Holm (CC BY 3.0) -- ATTRIBUTION REQUIRED",
+  "VCSL by Versilian Studios (CC0 1.0)",
+  "VSCO 2 CE by Versilian Studios (CC0 1.0)"
+ ],
+ "audition": [
+  "0.0 s: does the avalanche erupt out of the S5 pedal (no pickup, no riser)?",
+  "4.38 s: the phrase-1 kick lands 3 frames before the cut to Mas (S6.02): early, or fine?",
+  "6.25 s: Alyi resists one beat: resistance, not a dropout?",
+  "8.22-9.54 s: Neleh's line over the thinned window, ducked -6 dB",
+  "12.50-14.17 s: the full band, 2 2/3 beats, and the dead stop on the swung \"and\": the laugh on the label, never a glitch"
+ ],
+ "warnings": []
+}

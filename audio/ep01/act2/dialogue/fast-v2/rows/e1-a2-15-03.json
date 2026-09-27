@@ -1,0 +1,358 @@
+{
+ "id": "e1-a2-15-03",
+ "scene": "15",
+ "speaker": "SUCRAM",
+ "speaker_slug": "sucram",
+ "text": "Don't mind me. It's a thread. One of forty-seven.",
+ "spoken_as": "Don't mind me.{s0.25} It's a thread.{s0.25} One of forty-seven.",
+ "delivery": "low, typing, to Mas, not looking up",
+ "tag": "[INVENTED · his character file's \"Thread. 1/47.\", now said to the man beside him, so it has a listener (R19)]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "2S",
+ "shot_id": "2S",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 5.0,
+ "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-03.wav",
+ "mp3": null,
+ "duration_s": 4.105,
+ "frames_24": 99,
+ "voiced_span_s": 3.1,
+ "pace": {
+  "words": 9,
+  "wpm": 174.2,
+  "speed": 1.16,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.16,
+   "speed_band": [
+    1.14,
+    1.22
+   ],
+   "articulation_guide_sps": [
+    5.0,
+    5.8
+   ],
+   "turn_wpm_guide": [
+    170,
+    190
+   ],
+   "intent": "low, typing, to Mas, not looking up"
+  },
+  "measured": {
+   "wpm": 174.2,
+   "articulation_sps": 4.58,
+   "syllables": 12,
+   "span_s": 3.1,
+   "pauses_s": [
+    0.24,
+    0.24
+   ]
+  },
+  "longest_internal_gap_s": 0.24,
+  "audible_in_s": 0.5,
+  "audible_out_s": 3.6
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_liam*0.50+am_puck*0.50 (Kokoro-82M stock) · d-liam-puck-thread-0 · speed 1.160",
+ "voiceId": "am_liam*0.50+am_puck*0.50",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch 0",
+  "peak -1.5 dB @250 Hz Q1.0",
+  "peak +1.5 dB @3500 Hz Q0.9",
+  "comp 3.0:1 @-22 dB (3/70 ms)",
+  "Kokoro speed 1.160 (the plan speed; sucram band 1.14-1.22); 3 whole reads, joined in room tone; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "O"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "E"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "M"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "A"
+  },
+  {
+   "t": 0.833,
+   "f": 20,
+   "shape": "E"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "M"
+  },
+  {
+   "t": 1.042,
+   "f": 25,
+   "shape": "E"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "rest"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "E"
+  },
+  {
+   "t": 1.625,
+   "f": 39,
+   "shape": "A"
+  },
+  {
+   "t": 1.75,
+   "f": 42,
+   "shape": "E"
+  },
+  {
+   "t": 1.958,
+   "f": 47,
+   "shape": "A"
+  },
+  {
+   "t": 2.208,
+   "f": 53,
+   "shape": "E"
+  },
+  {
+   "t": 2.292,
+   "f": 55,
+   "shape": "rest"
+  },
+  {
+   "t": 2.458,
+   "f": 59,
+   "shape": "A"
+  },
+  {
+   "t": 2.667,
+   "f": 64,
+   "shape": "E"
+  },
+  {
+   "t": 2.75,
+   "f": 66,
+   "shape": "O"
+  },
+  {
+   "t": 2.917,
+   "f": 70,
+   "shape": "E"
+  },
+  {
+   "t": 3.208,
+   "f": 77,
+   "shape": "A"
+  },
+  {
+   "t": 3.375,
+   "f": 81,
+   "shape": "E"
+  },
+  {
+   "t": 3.625,
+   "f": 87,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Don't",
+   "t0": 0.47,
+   "t1": 0.652,
+   "f0": 11,
+   "f1": 16,
+   "ph": "dˈOnt"
+  },
+  {
+   "w": "mind",
+   "t0": 0.652,
+   "t1": 0.902,
+   "f0": 16,
+   "f1": 22,
+   "ph": "mˈInd"
+  },
+  {
+   "w": "me",
+   "t0": 0.902,
+   "t1": 1.3,
+   "f0": 22,
+   "f1": 31,
+   "ph": "mˌi"
+  },
+  {
+   "w": "It's",
+   "t0": 1.495,
+   "t1": 1.638,
+   "f0": 36,
+   "f1": 39,
+   "ph": "ˌɪts"
+  },
+  {
+   "w": "a",
+   "t0": 1.638,
+   "t1": 1.738,
+   "f0": 39,
+   "f1": 42,
+   "ph": "ɐ"
+  },
+  {
+   "w": "thread",
+   "t0": 1.738,
+   "t1": 2.31,
+   "f0": 42,
+   "f1": 55,
+   "ph": "θɹˈɛd"
+  },
+  {
+   "w": "One",
+   "t0": 2.495,
+   "t1": 2.577,
+   "f0": 60,
+   "f1": 62,
+   "ph": "wˈʌn"
+  },
+  {
+   "w": "of",
+   "t0": 2.577,
+   "t1": 2.702,
+   "f0": 62,
+   "f1": 65,
+   "ph": "ʌv"
+  },
+  {
+   "w": "forty-seven",
+   "t0": 2.702,
+   "t1": 3.62,
+   "f0": 65,
+   "f1": 87,
+   "ph": "fˌɔɹTisˈɛvən"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.22,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 130.8,
+  "f0_range_st": 13.0,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Don't mind me, it's a thread, one of 47.",
+  "cer": 0.286,
+  "word_recall_nonames": 0.889,
+  "logprob": -0.247,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.445,
+  "rise_ms": 5.0,
+  "decay_ms": 100.0,
+  "decay_to_60_s": 0.065
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": null,
+   "word": "me",
+   "tts_s": null,
+   "target_s": 0.25,
+   "final_s": 0.25,
+   "opened_s": 0.0,
+   "joined_speech": false,
+   "dip_db": null,
+   "breath": false,
+   "split": true,
+   "point_s": 0.805,
+   "crossfade_ms": [
+    0,
+    0
+   ]
+  },
+  {
+   "after_word": null,
+   "word": "thread",
+   "tts_s": null,
+   "target_s": 0.25,
+   "final_s": 0.25,
+   "opened_s": 0.0,
+   "joined_speech": false,
+   "dip_db": null,
+   "breath": false,
+   "split": true,
+   "point_s": 1.81,
+   "crossfade_ms": [
+    0,
+    0
+   ]
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "cd1eac05c5ed6fe0",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 7.04,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 4
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 2.8,
+   "rechecked_alone": false
+  }
+ }
+}

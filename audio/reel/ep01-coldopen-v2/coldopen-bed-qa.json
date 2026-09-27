@@ -1,0 +1,159 @@
+{
+ "timeline": "show/reel/ep01-full/ep01-coldopen-v2.json",
+ "seconds": 30.667,
+ "cold_open_seconds": 30.167,
+ "layers": [
+  {
+   "layer": "hall",
+   "src": "audio/sfx/wav/room_tone.wav + made murmur",
+   "lufs": [
+    -38,
+    -41
+   ],
+   "from": 0.0,
+   "to": 14.042
+  },
+  {
+   "layer": "hum (the freeze)",
+   "src": "room_tone band-passed 120-700 Hz",
+   "lufs": -39,
+   "from": 14.042,
+   "to": 24.667,
+   "steps_db": [
+    0.0,
+    -4.0,
+    -9.0,
+    -16.0
+   ]
+  },
+  {
+   "layer": "banquet applause (made)",
+   "lufs": -29,
+   "swell_db": 6,
+   "swell_from": 12.91,
+   "cut_at_freeze": 14.042
+  },
+  {
+   "layer": "rewind",
+   "src": "the hall + banquet, last 7.3 s before the freeze, reversed",
+   "from": 21.667,
+   "to": 24.667,
+   "steps_db": [
+    -4.0,
+    -8.0,
+    -13.0,
+    -20.0
+   ],
+   "lowpass_hz": [
+    9000,
+    4500,
+    2200,
+    1000
+   ],
+   "speed": {
+    "before_catch": 2.0,
+    "catch": 0.35,
+    "slip": [
+     3.0,
+     5.0
+    ],
+    "catch_s_in_3.02": [
+     0.5,
+     1.55
+    ]
+   }
+  },
+  {
+   "layer": "MM-06 underscore (movement I)",
+   "src": "audio/ost/tracks/mm06-beeper-1993-sample-chip-2008/render/mm06-beeper-1993-sample-chip-2008-underscore.wav",
+   "file_in": 0.0,
+   "from": 19.667,
+   "lufs_first_12s": -26,
+   "gain_db": -3.45
+  }
+ ],
+ "sfx": [
+  {
+   "beat": "1.03",
+   "name": "synth:plink",
+   "at": 9.933,
+   "peak_dbfs": -4
+  },
+  {
+   "beat": "1.03",
+   "name": "synth:slosh",
+   "at": 9.983,
+   "peak_dbfs": -20
+  },
+  {
+   "beat": "2.01",
+   "name": "piano_fired_F4",
+   "at": 14.042,
+   "peak_dbfs": -14
+  },
+  {
+   "beat": "2.02",
+   "name": "synth:buzz",
+   "at": 14.717,
+   "peak_dbfs": -20
+  },
+  {
+   "beat": "2.03",
+   "name": "key_tap_soft_03",
+   "at": 18.517,
+   "peak_dbfs": -26
+  },
+  {
+   "beat": "3.01",
+   "name": "orb_servo",
+   "at": 19.717,
+   "peak_dbfs": -22
+  },
+  {
+   "beat": "3.01",
+   "name": "orb_servo",
+   "at": 20.017,
+   "peak_dbfs": -24
+  },
+  {
+   "beat": "3.01",
+   "name": "orb_servo",
+   "at": 20.317,
+   "peak_dbfs": -22
+  },
+  {
+   "beat": "3.01",
+   "name": "glyph_blink",
+   "at": 20.617,
+   "peak_dbfs": -26
+  },
+  {
+   "beat": "3.02",
+   "name": "orb_servo",
+   "at": 22.167,
+   "peak_dbfs": -24
+  },
+  {
+   "beat": "3.02",
+   "name": "orb_servo",
+   "at": 23.217,
+   "peak_dbfs": -27
+  },
+  {
+   "beat": "4.02",
+   "name": "glyph_blink@1bit",
+   "at": 28.767,
+   "peak_dbfs": -26
+  }
+ ],
+ "measured": {
+  "lufs_whole": -25.99,
+  "peak_dbfs": -3.73,
+  "lufs_sc1_before_duck": -26.5,
+  "lufs_swell_last_1s": -25.0,
+  "lufs_sc2": -29.7,
+  "lufs_sc3": -25.4,
+  "lufs_sc4": -26.1,
+  "note": "un-ducked stem levels; the mixer ducks the stem -10 dB under the takes"
+ }
+}

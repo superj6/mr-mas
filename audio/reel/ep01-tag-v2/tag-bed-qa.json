@@ -1,0 +1,147 @@
+{
+ "timeline": "show/reel/ep01-full/ep01-tag-v2.json",
+ "seconds": 41.625,
+ "tag_seconds": 40.625,
+ "layers": [
+  {
+   "layer": "room",
+   "src": "audio/sfx/wav/server_hum.wav",
+   "lufs": -40,
+   "lift_after_thud_db": 4,
+   "from": 0.0,
+   "to": 41.625
+  },
+  {
+   "layer": "pedal (the vault hum, from Act Four)",
+   "src": "audio/sfx/wav/vault_hum_F.wav",
+   "lufs": -31,
+   "from": 0.0,
+   "hold_to": 1.833,
+   "out_by": 4.833
+  },
+  {
+   "layer": "felt (MM-12 temp)",
+   "src": "audio/ost/tracks/mm01-water-line/render/stems/mm01-water-line-piano.flac",
+   "file_in": 0.0,
+   "from": 1.833,
+   "stop_on_thud": 26.833,
+   "lufs": -27,
+   "dip_db": -3,
+   "dip": [
+    5.25,
+    11.5
+   ]
+  }
+ ],
+ "sfx": [
+  {
+   "beat": "32.02",
+   "name": "tape_start",
+   "at": 5.25,
+   "gain": -24,
+   "kind": "one-shot (peak dBFS)"
+  },
+  {
+   "beat": "32.04",
+   "name": "orb_scan_sweep",
+   "at": 11.8,
+   "gain": -21,
+   "kind": "one-shot (peak dBFS)"
+  },
+  {
+   "beat": "32.04",
+   "name": "glyph_blink",
+   "at": 12.5,
+   "gain": -27,
+   "kind": "one-shot (peak dBFS)"
+  },
+  {
+   "beat": "32.04",
+   "name": "orb_scan_sweep",
+   "at": 12.7,
+   "gain": -24,
+   "kind": "one-shot (peak dBFS)"
+  },
+  {
+   "beat": "32.04",
+   "name": "glyph_blink",
+   "at": 14.35,
+   "gain": -27,
+   "kind": "one-shot (peak dBFS)"
+  },
+  {
+   "beat": "32.06",
+   "name": "synth:drawer_open",
+   "at": 17.833,
+   "gain": -24,
+   "kind": "one-shot (peak dBFS)"
+  },
+  {
+   "beat": "32.06",
+   "name": "synth:drawer_shut",
+   "at": 21.583,
+   "gain": -22,
+   "kind": "one-shot (peak dBFS)"
+  },
+  {
+   "beat": "32.07",
+   "name": "key_tap_soft_03",
+   "at": 22.583,
+   "gain": -24,
+   "kind": "one-shot (peak dBFS)"
+  },
+  {
+   "beat": "32.07",
+   "name": "key_tap_soft_05",
+   "at": 23.933,
+   "gain": -26,
+   "kind": "one-shot (peak dBFS)"
+  },
+  {
+   "beat": "33.01",
+   "name": "synth:thud",
+   "at": 26.833,
+   "gain": -8,
+   "kind": "one-shot (peak dBFS)"
+  },
+  {
+   "beat": "33.02",
+   "name": "paper_curl",
+   "at": 28.883,
+   "gain": -30,
+   "kind": "one-shot (peak dBFS)"
+  },
+  {
+   "beat": "33.02",
+   "name": "paper_curl",
+   "at": 31.483,
+   "gain": -35,
+   "kind": "one-shot (peak dBFS)"
+  },
+  {
+   "beat": "33.04",
+   "name": "synth:button_chord",
+   "at": 37.593,
+   "gain": -14,
+   "kind": "one-shot (peak dBFS)"
+  },
+  {
+   "beat": "33.04",
+   "name": "vault_hum_F",
+   "at": 37.593,
+   "gain": -31,
+   "kind": "loop (LUFS)"
+  }
+ ],
+ "measured": {
+  "lufs_whole": -28.82,
+  "peak_dbfs": -8.14,
+  "lufs_sc32": -27.8,
+  "lufs_thud_to_noted": -36.0,
+  "lufs_button_to_end": -28.3,
+  "felt_after_thud_peak_dbfs": -180.0,
+  "rms_first_50ms_dbfs": -30.3,
+  "rms_first_500ms_dbfs": -29.6,
+  "lufs_0_2s": -27.9
+ }
+}

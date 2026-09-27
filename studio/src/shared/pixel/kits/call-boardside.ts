@@ -25,7 +25,7 @@
 // Also: vegasNeon (1.G's re-clocked neon), softTile (1.G's P2 CALL softness: a tile at half resolution, doubled),
 // drawTileSoft (his side: a callgrid tile with its video soft and its chips sharp).
 import {Buf, rect, hash, bayer} from '../px';
-import {PAL, stepColor} from '../palette';
+import {PAL, stepColor, lum} from '../palette';
 import {text, textWidth} from '../font';
 import {blitImg} from '../figure';
 import {callChrome, nameChip, micIcon, voteChip, speakingRing, typingDots, CALL_BAR_H, TileRect, TileState, drawTile, gridLayout, slideTiles, clipView, camOffBg, CALL_GREY} from './callgrid';
@@ -108,11 +108,18 @@ export const drawMasTileTheirs = (b0: Buf, x: number, y: number, w: number, h: n
 
 // ------------------------------------------------------------------ 1.G: the far end one step softer
 /** 1.G's P2 CALL: the tile one grid-true step softer (half native resolution, doubled). A 2 x 2 block takes its
- *  top-left pixel. No stutter, no wobble: apply it every frame or never. */
+ *  top-left pixel, UNLESS the block holds one ISOLATED dark pixel (an eye, a nostril: under half the brightness of
+ *  the other three), which then fills the block. a4p5 r2: the top-left alone dropped Neleh's eyes ("her softened face
+ *  loses its eyes" on the stills check). Only an isolated pixel counts: a dark LINE (Mada's glasses, a brow) keeps
+ *  the top-left rule, or the block row turns into a black bar. No stutter, no wobble: apply it every frame or never. */
 export const softTile = (b: Buf, t: TileRect) => {
   for (let y = t.y; y < t.y + t.h; y += 2) for (let x = t.x; x < t.x + t.w; x += 2) {
-    const c = b.get(x, y);
-    b.set(x + 1, y, c); b.set(x, y + 1, c); b.set(x + 1, y + 1, c);
+    const px = [b.get(x, y), b.get(x + 1, y), b.get(x, y + 1), b.get(x + 1, y + 1)];
+    const L = px.map(lum);
+    let c = px[0];
+    const dark = [0, 1, 2, 3].filter((i) => { const others = L.filter((_, j) => j !== i); return L[i] < 0.5 * Math.min(...others); });
+    if (dark.length === 1) c = px[dark[0]];
+    b.set(x, y, c); b.set(x + 1, y, c); b.set(x, y + 1, c); b.set(x + 1, y + 1, c);
   }
 };
 
@@ -173,8 +180,10 @@ const drawBoardTile = (b: Buf, who: Who, t: TileRect, st: BoardCallState) => {
   else if (mini && who === 'alyi') drawAlyiMini(b, t.x, t.y, t.w, t.h);
   else if (mini && who === 'mada') { drawMadaMini(b, t.x, t.y, t.w, t.h); drawSpinner(b, t.x + Math.floor(t.w / 2), t.y + 4, f, {size: 'sm', clip: (px, py) => px >= t.x && py >= t.y && px < t.x + t.w && py < t.y + t.h}); }
   else if (who === 'neleh') drawNelehTile(b, t.x, t.y, t.w, t.h, {mouth: m.neleh ?? 'rest', lid: 0, brow: 'level'}, {orbit: f});
-  // under 130 px wide v4's tile crops his reflection to the top of his head: the fitted tile centres his face (r3)
-  else if (who === 'alyi' && t.w < 130) drawAlyiTileFit(b, t.x, t.y, t.w, t.h, {mouth: m.alyi ?? 'rest', eyes: 'open', t: f});
+  // under 130 px wide v4's tile crops his reflection to the top of his head: the fitted tile centres his face (r3).
+  // a4p5 r2: also any tile shorter than 80 px (v4's tile is 86 tall and anchors him at the bottom, so the 2x2 [SCR]
+  // layout's 150 x 60 tiles cut him at the eyes)
+  else if (who === 'alyi' && (t.w < 130 || t.h < 80)) drawAlyiTileFit(b, t.x, t.y, t.w, t.h, {mouth: m.alyi ?? 'rest', eyes: 'open', t: f});
   else if (who === 'alyi') drawAlyiTile(b, t.x, t.y, t.w, t.h, {mouth: m.alyi ?? 'rest', eyes: 'open', t: f});
   else if (who === 'mada') drawMadaTile(b, t.x, t.y, t.w, t.h, {mouth: 'rest', lid: 0, nod: 0}, {spin: f});
   else {

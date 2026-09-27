@@ -1,0 +1,296 @@
+{
+ "id": "e1-a3-20-02",
+ "scene": "20",
+ "speaker": "GERG MOCKBRAN",
+ "speaker_slug": "gerg-mockbran",
+ "text": "Mas, did you just post on Tidder?",
+ "spoken_as": "[Mas](/mˈɑs/),{0.25} did you just post on Tidder?",
+ "delivery": "filter, typing",
+ "tag": "[INVENTED · second pass: Act Three's one conversation. Dialogue pass 5: a comma after the name, so a stock voice doesn't stop dead on \"Mas.\" (the naturalness read)]",
+ "mode": "call",
+ "voiced_in_cut": true,
+ "on_camera": "monitor",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "2S",
+ "shot_id": "2S",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": "call",
+ "room": null,
+ "est_s": 3.1,
+ "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-20-02.wav",
+ "mp3": null,
+ "duration_s": 2.92,
+ "frames_24": 71,
+ "voiced_span_s": 1.76,
+ "pace": {
+  "words": 7,
+  "wpm": 238.6,
+  "speed": 1.02,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.02,
+   "speed_band": [
+    1.02,
+    1.1
+   ],
+   "articulation_guide_sps": [
+    5.0,
+    5.8
+   ],
+   "turn_wpm_guide": [
+    175,
+    200
+   ],
+   "intent": "filter, typing"
+  },
+  "measured": {
+   "wpm": 238.6,
+   "articulation_sps": 5.33,
+   "syllables": 8,
+   "span_s": 1.76,
+   "pauses_s": [
+    0.26
+   ]
+  },
+  "longest_internal_gap_s": 0.26,
+  "audible_in_s": 0.5,
+  "audible_out_s": 2.26
+ },
+ "placement": {
+  "gap_before_s": 0.7,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.020",
+ "voiceId": "am_puck",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch +1.5 st",
+  "peak -2 dB @250 Hz Q1.0",
+  "peak +2 dB @4000 Hz Q0.9",
+  "comp 3.0:1 @-22 dB (4/80 ms)",
+  "then the call chain: HPF 200 Hz; LPF 7000 Hz; peak +1.5 dB @1800 Hz Q1.0; comp 2.5:1 @-22 dB (5/90 ms); -16 LUFS",
+  "Kokoro speed 1.020 (the plan speed; gerg-mockbran band 1.02-1.10); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'Mas': Kokoro 0.00 s -> 0.27 s (intended 0.25; +0.25 s of room tone at the quietest 5 ms; Kokoro ran the words together here (dip -32.4 dB): ear check)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.458,
+   "f": 11,
+   "shape": "M"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "A"
+  },
+  {
+   "t": 0.708,
+   "f": 17,
+   "shape": "rest"
+  },
+  {
+   "t": 1.0,
+   "f": 24,
+   "shape": "A"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "O"
+  },
+  {
+   "t": 1.208,
+   "f": 29,
+   "shape": "A"
+  },
+  {
+   "t": 1.333,
+   "f": 32,
+   "shape": "M"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "O"
+  },
+  {
+   "t": 1.542,
+   "f": 37,
+   "shape": "E"
+  },
+  {
+   "t": 1.625,
+   "f": 39,
+   "shape": "O"
+  },
+  {
+   "t": 1.75,
+   "f": 42,
+   "shape": "E"
+  },
+  {
+   "t": 1.875,
+   "f": 45,
+   "shape": "A"
+  },
+  {
+   "t": 2.0,
+   "f": 48,
+   "shape": "E"
+  },
+  {
+   "t": 2.292,
+   "f": 55,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Mas",
+   "t0": 0.475,
+   "t1": 0.7,
+   "f0": 11,
+   "f1": 17,
+   "ph": "mˈɑs"
+  },
+  {
+   "w": "did",
+   "t0": 0.987,
+   "t1": 1.112,
+   "f0": 24,
+   "f1": 27,
+   "ph": "dˈɪd"
+  },
+  {
+   "w": "you",
+   "t0": 1.112,
+   "t1": 1.188,
+   "f0": 27,
+   "f1": 28,
+   "ph": "ju"
+  },
+  {
+   "w": "just",
+   "t0": 1.188,
+   "t1": 1.35,
+   "f0": 28,
+   "f1": 32,
+   "ph": "ʤˈʌst"
+  },
+  {
+   "w": "post",
+   "t0": 1.35,
+   "t1": 1.612,
+   "f0": 32,
+   "f1": 39,
+   "ph": "pˈOst"
+  },
+  {
+   "w": "on",
+   "t0": 1.612,
+   "t1": 1.8,
+   "f0": 39,
+   "f1": 43,
+   "ph": "ˌɔn"
+  },
+  {
+   "w": "Tidder",
+   "t0": 1.8,
+   "t1": 2.28,
+   "f0": 43,
+   "f1": 55,
+   "ph": "tˈɪdəɹ"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.92,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 134.7,
+  "f0_range_st": 9.0,
+  "f0_method": "pYIN (a4lib.analyse)",
+  "final_move_st": -2.8,
+  "asr": "Moss, did you just post on Twitter?",
+  "cer": 0.2,
+  "word_recall_nonames": 0.833,
+  "logprob": -0.395,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 20.0,
+  "decay_ms": 95.0,
+  "decay_to_60_s": 0.21,
+  "q_lift_st": -2.81
+ },
+ "speaker_label": "GERG",
+ "clean": {
+  "file": "audio/ep01/act3/dialogue/fast-v2/clean/e1-a3-20-02.wav",
+  "note": "the dry read (no call chain), -16 LUFS"
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 1,
+   "word": "Mas",
+   "tts_s": 0.0,
+   "target_s": 0.25,
+   "point_s": 0.31,
+   "joined_speech": true,
+   "dip_db": -32.4,
+   "breath": false,
+   "crossfade_ms": [
+    60,
+    25
+   ],
+   "final_s": 0.27,
+   "opened_s": 0.25
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "bf6fc9c516b61824",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 4.84,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": true,
+   "breaths": false,
+   "threads": 4
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 2.37,
+   "rechecked_alone": false
+  }
+ }
+}

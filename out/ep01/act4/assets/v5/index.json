@@ -14,7 +14,7 @@
   "id": "UI-POST",
   "state": "notify",
   "module": "shared/pixel/kits/post-card.ts",
-  "note": "S3.05 / S4.01 / S4.09 notification size on a call",
+  "note": "S3.05 / S4.01 / S4.09 notification size; right: its entrance, k0-k2 held, k3 whole",
   "standin": "",
   "native": "native/UI-POST--notify.png",
   "full": "full/UI-POST--notify.png"
@@ -344,7 +344,7 @@
   "id": "PROP-PHONE-TABLE",
   "state": "lit",
   "module": "shared/pixel/rooms/calmoff-terms.ts drawTablePhone + kits/post-card.ts",
-  "note": "S7.09: Mas's phone lights green on the table, keycaps; Gerg's post as its notify card",
+  "note": "S7.09: Mas's phone lights green on the table (no keycaps, a4p5); Gerg's post as its notify card",
   "standin": "",
   "native": "native/PROP-PHONE-TABLE--lit.png",
   "full": "full/PROP-PHONE-TABLE--lit.png"
@@ -594,7 +594,7 @@
   "id": "PROP-HOURGLASS-INSERT",
   "state": "states",
   "module": "shared/pixel/kits/hourglass-insert.ts",
-  "note": "full · running · side · lift+hand · last grain · shatter 0 · held shape 10 · slump 1-3",
+  "note": "full, running, last grain, crack, held · slump 16, 22, side, HIGH · lift+hand",
   "standin": "",
   "native": "native/PROP-HOURGLASS-INSERT--states.png",
   "full": "full/PROP-HOURGLASS-INSERT--states.png"
@@ -878,5 +878,15 @@
   "standin": "",
   "native": "native/STYLE-J1--t57-close.png",
   "full": "full/STYLE-J1--t57-close.png"
+ },
+ {
+  "key": "FIX-FOOTNOTES@digits-vs-slips",
+  "id": "FIX-FOOTNOTES",
+  "state": "digits-vs-slips",
+  "module": "shared/pixel/cast/neleh.ts drawFootnotes(style) / withFootnoteStyle",
+  "note": "left: v4 digits · right: v5 'slips' (her glowing paper, numbered) · orbit f 14 and f 40",
+  "standin": "",
+  "native": "native/FIX-FOOTNOTES--digits-vs-slips.png",
+  "full": "full/FIX-FOOTNOTES--digits-vs-slips.png"
  }
 ]

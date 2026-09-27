@@ -1,0 +1,248 @@
+{
+ "id": "e1-a1-5-10",
+ "scene": "5",
+ "speaker": "ALYI",
+ "speaker_slug": "alyi",
+ "text": "And what if it wakes up?",
+ "spoken_as": "And what if it wakes up?",
+ "delivery": "reflection only; the last line of a sermon, picking up her \"Say it works\"",
+ "tag": "[INVENTED · Act One fix pass (2026-09-27): it was \"And if it wakes up?\". The audit measured the take falling at the end (pitch and the transcriber both heard a statement, \"…it wakes up.\"), and a question that lives only in its pitch can't be fixed by a new seed; \"what\" puts the question in the words]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "MCU·glass",
+ "shot_id": "MCU·glass",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 2.7,
+ "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-10.wav",
+ "mp3": null,
+ "duration_s": 2.66,
+ "frames_24": 64,
+ "voiced_span_s": 1.69,
+ "pace": {
+  "words": 6,
+  "wpm": 213.0,
+  "speed": 0.87,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.87,
+   "speed_band": [
+    0.85,
+    0.92
+   ],
+   "articulation_guide_sps": [
+    3.4,
+    4.0
+   ],
+   "turn_wpm_guide": [
+    115,
+    140
+   ],
+   "intent": "reflection only; the last line of a sermon, picking up her \"Say it works\""
+  },
+  "measured": {
+   "wpm": 213.0,
+   "articulation_sps": 3.55,
+   "syllables": 6,
+   "span_s": 1.69,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.5,
+  "audible_out_s": 2.19
+ },
+ "placement": {
+  "gap_before_s": 0.9,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_onyx (Kokoro-82M stock) · a-onyx-cathedral · speed 0.870",
+ "voiceId": "am_onyx",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 50 Hz",
+  "pitch 0",
+  "low shelf +1.5 dB @140 Hz",
+  "peak -1.5 dB @400 Hz Q1.0",
+  "peak +1.5 dB @2800 Hz Q0.9",
+  "comp 2.5:1 @-24 dB (8/150 ms)",
+  "Kokoro speed 0.870 (the plan speed; alyi band 0.85-0.92); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "A"
+  },
+  {
+   "t": 0.625,
+   "f": 15,
+   "shape": "E"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "A"
+  },
+  {
+   "t": 0.833,
+   "f": 20,
+   "shape": "E"
+  },
+  {
+   "t": 1.167,
+   "f": 28,
+   "shape": "O"
+  },
+  {
+   "t": 1.25,
+   "f": 30,
+   "shape": "A"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "E"
+  },
+  {
+   "t": 1.542,
+   "f": 37,
+   "shape": "A"
+  },
+  {
+   "t": 1.75,
+   "f": 42,
+   "shape": "E"
+  },
+  {
+   "t": 1.958,
+   "f": 47,
+   "shape": "M"
+  },
+  {
+   "t": 2.083,
+   "f": 50,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "And",
+   "t0": 0.55,
+   "t1": 0.7,
+   "f0": 13,
+   "f1": 17,
+   "ph": "ˌænd"
+  },
+  {
+   "w": "what",
+   "t0": 0.7,
+   "t1": 0.875,
+   "f0": 17,
+   "f1": 21,
+   "ph": "wˌʌt"
+  },
+  {
+   "w": "if",
+   "t0": 0.875,
+   "t1": 1.025,
+   "f0": 21,
+   "f1": 25,
+   "ph": "ɪf"
+  },
+  {
+   "w": "it",
+   "t0": 1.025,
+   "t1": 1.175,
+   "f0": 25,
+   "f1": 28,
+   "ph": "ɪt"
+  },
+  {
+   "w": "wakes",
+   "t0": 1.175,
+   "t1": 1.55,
+   "f0": 28,
+   "f1": 37,
+   "ph": "wˈAks"
+  },
+  {
+   "w": "up",
+   "t0": 1.55,
+   "t1": 2.1,
+   "f0": 37,
+   "f1": 50,
+   "ph": "ˌʌp"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.44,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 86.3,
+  "f0_range_st": 13.2,
+  "f0_method": "pYIN (a4lib.analyse)",
+  "final_move_st": -5.2,
+  "asr": "And what if it wakes up?",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.177,
+  "align_median_s": 0.01,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 65.0,
+  "decay_ms": 460.0,
+  "decay_to_60_s": 0.025,
+  "q_lift_st": -6.3
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "51027117cf0f2887",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 1.87,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": true,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 2,
+   "share_s": 0.55,
+   "rechecked_alone": false
+  }
+ }
+}

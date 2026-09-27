@@ -1,0 +1,195 @@
+{
+ "id": "e1-a1-9-05",
+ "scene": "9",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "and the rent?",
+ "spoken_as": "and the rent?",
+ "delivery": null,
+ "tag": "[INVENTED · he asks the price after he has taken the offer: the pilot in one beat. His first words to Tasya]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "2S",
+ "shot_id": "2S",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 1.6,
+ "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-9-05.wav",
+ "mp3": null,
+ "duration_s": 2.125,
+ "frames_24": 51,
+ "voiced_span_s": 0.94,
+ "pace": {
+  "words": 3,
+  "wpm": 191.5,
+  "speed": 0.9,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.9,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.6,
+    4.2
+   ],
+   "turn_wpm_guide": [
+    135,
+    155
+   ],
+   "intent": null
+  },
+  "measured": {
+   "wpm": 191.5,
+   "articulation_sps": 3.19,
+   "syllables": 3,
+   "span_s": 0.94,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.52,
+  "audible_out_s": 1.46
+ },
+ "placement": {
+  "gap_before_s": 1.6,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.900",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch 0",
+  "low shelf +2 dB @160 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak +1 dB @3200 Hz Q0.8",
+  "high shelf -1.5 dB @8000 Hz",
+  "comp 2.0:1 @-24 dB (10/120 ms)",
+  "Kokoro speed 0.900 (the plan speed; mas-manalt band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.625,
+   "f": 15,
+   "shape": "A"
+  },
+  {
+   "t": 0.708,
+   "f": 17,
+   "shape": "E"
+  },
+  {
+   "t": 1.0,
+   "f": 24,
+   "shape": "A"
+  },
+  {
+   "t": 1.25,
+   "f": 30,
+   "shape": "E"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "and",
+   "t0": 0.64,
+   "t1": 0.752,
+   "f0": 15,
+   "f1": 18,
+   "ph": "ænd"
+  },
+  {
+   "w": "the",
+   "t0": 0.752,
+   "t1": 0.878,
+   "f0": 18,
+   "f1": 21,
+   "ph": "ðə"
+  },
+  {
+   "w": "rent",
+   "t0": 0.878,
+   "t1": 1.48,
+   "f0": 21,
+   "f1": 36,
+   "ph": "ɹˈɛnt"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.4,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.52,
+  "median_f0_hz": 123.6,
+  "f0_range_st": 10.4,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "And the rent?",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.206,
+  "align_median_s": 0.027,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.52,
+  "speech_tail_s": 0.42,
+  "rise_ms": 75.0,
+  "decay_ms": 85.0,
+  "decay_to_60_s": 0.245
+ },
+ "speaker_label": "MAS",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "0e788c1edcee2936",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 171.39,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 2,
+   "share_s": 8.96,
+   "rechecked_alone": false
+  }
+ }
+}

@@ -1,0 +1,469 @@
+{
+ "id": "e1-a1-5-03",
+ "scene": "5",
+ "speaker": "GERG MOCKBRAN",
+ "speaker_slug": "gerg-mockbran",
+ "text": "It's a research preview, Rima. Nobody reads research. We'll get forty users and a nice thread.",
+ "spoken_as": "It's a research preview, Rima. Nobody reads research. We'll get forty users and a nice thread.",
+ "delivery": "cheerful, not looking up",
+ "tag": "[INVENTED · \"forty\" is texture; the odometer answers it]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "2S",
+ "shot_id": "2S",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 7.3,
+ "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-03.wav",
+ "mp3": null,
+ "duration_s": 6.35,
+ "frames_24": 153,
+ "voiced_span_s": 5.04,
+ "pace": {
+  "words": 16,
+  "wpm": 190.5,
+  "speed": 1.06,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.06,
+   "speed_band": [
+    1.02,
+    1.1
+   ],
+   "articulation_guide_sps": [
+    5.0,
+    5.8
+   ],
+   "turn_wpm_guide": [
+    175,
+    200
+   ],
+   "intent": "cheerful, not looking up"
+  },
+  "measured": {
+   "wpm": 190.5,
+   "articulation_sps": 4.76,
+   "syllables": 24,
+   "span_s": 5.04,
+   "pauses_s": [
+    0.06
+   ]
+  },
+  "longest_internal_gap_s": 0.06,
+  "audible_in_s": 0.5,
+  "audible_out_s": 5.54
+ },
+ "placement": {
+  "gap_before_s": 0.3,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.060",
+ "voiceId": "am_puck",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch +1.5 st",
+  "peak -2 dB @250 Hz Q1.0",
+  "peak +2 dB @4000 Hz Q0.9",
+  "comp 3.0:1 @-22 dB (4/80 ms)",
+  "Kokoro speed 1.060 (the centre of the band; gerg-mockbran band 1.02-1.10); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "E"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "A"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "E"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "A"
+  },
+  {
+   "t": 0.833,
+   "f": 20,
+   "shape": "E"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "O"
+  },
+  {
+   "t": 1.0,
+   "f": 24,
+   "shape": "E"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "M"
+  },
+  {
+   "t": 1.167,
+   "f": 28,
+   "shape": "E"
+  },
+  {
+   "t": 1.25,
+   "f": 30,
+   "shape": "A"
+  },
+  {
+   "t": 1.333,
+   "f": 32,
+   "shape": "E"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "O"
+  },
+  {
+   "t": 1.625,
+   "f": 39,
+   "shape": "E"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "A"
+  },
+  {
+   "t": 1.833,
+   "f": 44,
+   "shape": "M"
+  },
+  {
+   "t": 1.917,
+   "f": 46,
+   "shape": "E"
+  },
+  {
+   "t": 2.042,
+   "f": 49,
+   "shape": "rest"
+  },
+  {
+   "t": 2.208,
+   "f": 53,
+   "shape": "O"
+  },
+  {
+   "t": 2.333,
+   "f": 56,
+   "shape": "A"
+  },
+  {
+   "t": 2.417,
+   "f": 58,
+   "shape": "E"
+  },
+  {
+   "t": 2.583,
+   "f": 62,
+   "shape": "A"
+  },
+  {
+   "t": 2.75,
+   "f": 66,
+   "shape": "E"
+  },
+  {
+   "t": 2.917,
+   "f": 70,
+   "shape": "A"
+  },
+  {
+   "t": 3.125,
+   "f": 75,
+   "shape": "O"
+  },
+  {
+   "t": 3.292,
+   "f": 79,
+   "shape": "E"
+  },
+  {
+   "t": 3.417,
+   "f": 82,
+   "shape": "rest"
+  },
+  {
+   "t": 3.542,
+   "f": 85,
+   "shape": "E"
+  },
+  {
+   "t": 3.708,
+   "f": 89,
+   "shape": "A"
+  },
+  {
+   "t": 3.833,
+   "f": 92,
+   "shape": "E"
+  },
+  {
+   "t": 3.917,
+   "f": 94,
+   "shape": "O"
+  },
+  {
+   "t": 4.0,
+   "f": 96,
+   "shape": "E"
+  },
+  {
+   "t": 4.25,
+   "f": 102,
+   "shape": "O"
+  },
+  {
+   "t": 4.375,
+   "f": 105,
+   "shape": "E"
+  },
+  {
+   "t": 4.625,
+   "f": 111,
+   "shape": "A"
+  },
+  {
+   "t": 4.833,
+   "f": 116,
+   "shape": "E"
+  },
+  {
+   "t": 4.917,
+   "f": 118,
+   "shape": "A"
+  },
+  {
+   "t": 5.083,
+   "f": 122,
+   "shape": "E"
+  },
+  {
+   "t": 5.292,
+   "f": 127,
+   "shape": "A"
+  },
+  {
+   "t": 5.542,
+   "f": 133,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "It's",
+   "t0": 0.47,
+   "t1": 0.587,
+   "f0": 11,
+   "f1": 14,
+   "ph": "ˌɪts"
+  },
+  {
+   "w": "a",
+   "t0": 0.587,
+   "t1": 0.675,
+   "f0": 14,
+   "f1": 16,
+   "ph": "ɐ"
+  },
+  {
+   "w": "research",
+   "t0": 0.675,
+   "t1": 1.125,
+   "f0": 16,
+   "f1": 27,
+   "ph": "ɹˈisˌɜɹʧ"
+  },
+  {
+   "w": "preview",
+   "t0": 1.125,
+   "t1": 1.575,
+   "f0": 27,
+   "f1": 38,
+   "ph": "pɹˈivjˌu"
+  },
+  {
+   "w": "Rima",
+   "t0": 1.625,
+   "t1": 2.025,
+   "f0": 39,
+   "f1": 49,
+   "ph": "ɹˈimə"
+  },
+  {
+   "w": "Nobody",
+   "t0": 2.162,
+   "t1": 2.525,
+   "f0": 52,
+   "f1": 61,
+   "ph": "nˈObˌɑdi"
+  },
+  {
+   "w": "reads",
+   "t0": 2.525,
+   "t1": 2.85,
+   "f0": 61,
+   "f1": 68,
+   "ph": "ɹˈidz"
+  },
+  {
+   "w": "research",
+   "t0": 2.85,
+   "t1": 3.425,
+   "f0": 68,
+   "f1": 82,
+   "ph": "ɹˈisˌɜɹʧ"
+  },
+  {
+   "w": "We'll",
+   "t0": 3.5,
+   "t1": 3.65,
+   "f0": 84,
+   "f1": 88,
+   "ph": "wˌil"
+  },
+  {
+   "w": "get",
+   "t0": 3.65,
+   "t1": 3.862,
+   "f0": 88,
+   "f1": 93,
+   "ph": "ɡɛt"
+  },
+  {
+   "w": "forty",
+   "t0": 3.862,
+   "t1": 4.2,
+   "f0": 93,
+   "f1": 101,
+   "ph": "fˈɔɹTi"
+  },
+  {
+   "w": "users",
+   "t0": 4.2,
+   "t1": 4.65,
+   "f0": 101,
+   "f1": 112,
+   "ph": "jˈuzəɹz"
+  },
+  {
+   "w": "and",
+   "t0": 4.65,
+   "t1": 4.762,
+   "f0": 112,
+   "f1": 114,
+   "ph": "ænd"
+  },
+  {
+   "w": "a",
+   "t0": 4.762,
+   "t1": 4.825,
+   "f0": 114,
+   "f1": 116,
+   "ph": "ɐ"
+  },
+  {
+   "w": "nice",
+   "t0": 4.825,
+   "t1": 5.138,
+   "f0": 116,
+   "f1": 123,
+   "ph": "nˈIs"
+  },
+  {
+   "w": "thread",
+   "t0": 5.138,
+   "t1": 5.56,
+   "f0": 123,
+   "f1": 133,
+   "ph": "θɹˈɛd"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -2.94,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 120.9,
+  "f0_range_st": 11.9,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "It's a research preview, Rima. Nobody reads research. We'll get 40 users and a nice thread.",
+  "cer": 0.068,
+  "word_recall_nonames": 0.933,
+  "logprob": -0.233,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 15.0,
+  "decay_ms": 115.0,
+  "decay_to_60_s": 0.36
+ },
+ "speaker_label": "GERG",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "b22778bd82aea93b",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 2,
+  "wall_s": 117.45,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 90.01,
+   "rechecked_alone": true
+  }
+ }
+}

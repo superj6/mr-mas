@@ -1,0 +1,206 @@
+{
+ "id": "e1-a2-13-12",
+ "scene": "13",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "how's the dancing?",
+ "spoken_as": "How's the dancing?",
+ "delivery": "sincerely; never snide",
+ "tag": "[INVENTED · the compliment as a knife; it recalls \"we made them dance.\" (sc 9). Scene-craft pass: \"thank you.\" now answers the congratulations on its own, so the knife lands after Radnus's barb, not after his compliment]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "2S",
+ "shot_id": "2S",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 1.9,
+ "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-12.wav",
+ "mp3": null,
+ "duration_s": 2.515,
+ "frames_24": 61,
+ "voiced_span_s": 1.26,
+ "pace": {
+  "words": 3,
+  "wpm": 142.9,
+  "speed": 0.9,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.9,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.6,
+    4.2
+   ],
+   "turn_wpm_guide": [
+    135,
+    155
+   ],
+   "intent": "sincerely; never snide"
+  },
+  "measured": {
+   "wpm": 142.9,
+   "articulation_sps": 3.17,
+   "syllables": 4,
+   "span_s": 1.26,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.57,
+  "audible_out_s": 1.83
+ },
+ "placement": {
+  "gap_before_s": 0.9,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 2,
+ "pick_reason": "fast: best of 2 seeds by ASR word recall, then no pause cut inside the voice, then the span nearest est_s",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.900",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch 0",
+  "low shelf +2 dB @160 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak +1 dB @3200 Hz Q0.8",
+  "high shelf -1.5 dB @8000 Hz",
+  "comp 2.0:1 @-24 dB (10/120 ms)",
+  "Kokoro speed 0.900 (the plan speed; mas-manalt band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "A"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "E"
+  },
+  {
+   "t": 1.167,
+   "f": 28,
+   "shape": "A"
+  },
+  {
+   "t": 1.375,
+   "f": 33,
+   "shape": "E"
+  },
+  {
+   "t": 1.833,
+   "f": 44,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "How's",
+   "t0": 0.59,
+   "t1": 0.94,
+   "f0": 14,
+   "f1": 23,
+   "ph": "hˌWz"
+  },
+  {
+   "w": "the",
+   "t0": 0.94,
+   "t1": 1.078,
+   "f0": 23,
+   "f1": 26,
+   "ph": "ðə"
+  },
+  {
+   "w": "dancing",
+   "t0": 1.078,
+   "t1": 1.85,
+   "f0": 26,
+   "f1": 44,
+   "ph": "dˈænsɪŋ"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.38,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.57,
+  "median_f0_hz": 111.0,
+  "f0_range_st": 13.8,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "How's the dancing?",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.394,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.57,
+  "speech_tail_s": 0.41,
+  "rise_ms": 60.0,
+  "decay_ms": 160.0,
+  "decay_to_60_s": 0.28
+ },
+ "speaker_label": "MAS",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [
+  {
+   "tag": "s2",
+   "seed": 2,
+   "speed": 0.9,
+   "file": "audio/ep01/act2/dialogue/fast-v2/takes/e1-a2-13-12/s2.wav",
+   "span_s": 1.25,
+   "wpm": 144.0,
+   "asr": "How's the dancing?",
+   "recall": 1.0,
+   "utmos": null
+  }
+ ],
+ "fast": {
+  "key": "99da82d67f0c4193",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 228.76,
+  "takes": 2,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 4
+  },
+  "asr": {
+   "packed_with": 1,
+   "share_s": 140.51
+  }
+ }
+}

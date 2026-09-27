@@ -1,0 +1,218 @@
+{
+ "tool": "studio/src/episodes/ep01/act4/animatic/tools/verify_v5.py",
+ "when": "2026-09-27T02:56:43-0700",
+ "films": {
+  "anim_frames": 12443,
+  "picture_frames": 12443,
+  "act_frames": 12443,
+  "anim_cuts": {
+   "lock_cuts": 82,
+   "found_on_lock_frame": 78,
+   "peak_on_lock_frame": 79,
+   "not_found": [
+    {
+     "shot": "S2.02",
+     "act": 1277,
+     "peak_at": 0,
+     "at_cut": 0.5,
+     "around_median": 0.0,
+     "found": false
+    },
+    {
+     "shot": "S2.03",
+     "act": 1320,
+     "peak_at": 3,
+     "at_cut": 0.0,
+     "around_median": 0.01,
+     "found": false
+    },
+    {
+     "shot": "S2.04",
+     "act": 1416,
+     "peak_at": -3,
+     "at_cut": 0.0,
+     "around_median": 0.01,
+     "found": false
+    },
+    {
+     "shot": "S5.08",
+     "act": 8241,
+     "peak_at": 2,
+     "at_cut": 18.86,
+     "around_median": 0.17,
+     "found": false
+    }
+   ]
+  },
+  "picture_cuts": {
+   "lock_cuts": 82,
+   "found_on_lock_frame": 78,
+   "peak_on_lock_frame": 79,
+   "not_found": [
+    {
+     "shot": "S2.02",
+     "act": 1277,
+     "peak_at": 0,
+     "at_cut": 0.5,
+     "around_median": 0.0,
+     "found": false
+    },
+    {
+     "shot": "S2.03",
+     "act": 1320,
+     "peak_at": 3,
+     "at_cut": 0.0,
+     "around_median": 0.01,
+     "found": false
+    },
+    {
+     "shot": "S2.04",
+     "act": 1416,
+     "peak_at": -3,
+     "at_cut": 0.0,
+     "around_median": 0.01,
+     "found": false
+    },
+    {
+     "shot": "S5.08",
+     "act": 8241,
+     "peak_at": 2,
+     "at_cut": 19.39,
+     "around_median": 0.17,
+     "found": false
+    }
+   ]
+  },
+  "anim_vs_picture": {
+   "frames": 12443,
+   "mean": 0.545,
+   "p99": 0.788,
+   "max": 0.99,
+   "argmax": 6945,
+   "frames_over_1": 0
+  },
+  "audio_anim": {
+   "samples": 24886272,
+   "mix_act_samples": 24885998,
+   "rms_diff": 0.00163,
+   "mix_rms": 0.09078,
+   "onsets": 101,
+   "lag_samples_min": 0,
+   "lag_samples_max": 0,
+   "r_min": 0.9993,
+   "worst": [
+    [
+     "a5-30-12",
+     10802,
+     0,
+     0.9992889761924744
+    ],
+    [
+     "a5-29-01",
+     7167,
+     0,
+     0.9993067383766174
+    ],
+    [
+     "a5-27-13",
+     2794,
+     0,
+     0.9994730353355408
+    ]
+   ]
+  },
+  "audio_picture": {
+   "samples": 24886272,
+   "mix_act_samples": 24885998,
+   "rms_diff": 0.00163,
+   "mix_rms": 0.09078,
+   "onsets": 101,
+   "lag_samples_min": 0,
+   "lag_samples_max": 0,
+   "r_min": 0.9993,
+   "worst": [
+    [
+     "a5-30-12",
+     10802,
+     0,
+     0.9992889761924744
+    ],
+    [
+     "a5-29-01",
+     7167,
+     0,
+     0.9993067383766174
+    ],
+    [
+     "a5-27-13",
+     2794,
+     0,
+     0.9994730353355408
+    ]
+   ]
+  }
+ },
+ "compare": {
+  "window": {
+   "act_from": 778,
+   "act_to": 1178,
+   "click": 997,
+   "before_s": 9.12,
+   "after_s": 7.54,
+   "slate_frames": 24
+  },
+  "frames": 848,
+  "expected": 848,
+  "cuts_A": {
+   "lock_cuts": 5,
+   "found_on_lock_frame": 5,
+   "peak_on_lock_frame": 5,
+   "not_found": []
+  },
+  "cuts_B": {
+   "lock_cuts": 5,
+   "found_on_lock_frame": 4,
+   "peak_on_lock_frame": 4,
+   "not_found": [
+    {
+     "shot": "S1.10",
+     "act": 1055,
+     "peak_at": 2,
+     "at_cut": 2.94,
+     "around_median": 0.04,
+     "found": false
+    }
+   ]
+  },
+  "A_vs_B": {
+   "frames_differing": 59,
+   "first": 998,
+   "last": 1056,
+   "max_elsewhere": 0.012
+  },
+  "A_vs_picture": {
+   "frames": 400,
+   "mean": 0.024,
+   "max": 0.124
+  },
+  "audio": {
+   "samples": 1696768,
+   "expected": 1696000,
+   "passes": {
+    "A": {
+     "lag_samples": -2,
+     "rms_diff": 0.00108
+    },
+    "B": {
+     "lag_samples": 0,
+     "rms_diff": 0.00119
+    }
+   },
+   "slate_peak": [
+    0.00012,
+    0.00107
+   ]
+  }
+ },
+ "seconds": 53.8
+}

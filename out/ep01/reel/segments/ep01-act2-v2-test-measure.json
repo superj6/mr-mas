@@ -1,0 +1,61 @@
+{
+ "manifest": "(scratch) ep1s-act2/act2-test.manifest.json; its chapter and beds are in show/episodes/ep01/production/stick/act2-notes.md \u00a74.3",
+ "key": "ep01-act2-v2-test",
+ "host": {
+  "cores": 14,
+  "load1": 15.51
+ },
+ "jobs": 2,
+ "concurrency": 2,
+ "seg": 90,
+ "scale": 1,
+ "steps": {
+  "bundle": 15.7,
+  "plan": 0.5,
+  "mix": 5.9,
+  "render": 182.9,
+  "concat": 0.1,
+  "mixWaitAfterPicture": 0,
+  "mux": 5.3
+ },
+ "renderedSeconds": 217.4,
+ "segments": [
+  {
+   "file": "000-act2-0-1739-f52da9601d.mp4",
+   "chapter": "act2",
+   "frames": 1739,
+   "wall": 109.4
+  },
+  {
+   "file": "001-act2-1739-3479-bf3668c475.mp4",
+   "chapter": "act2",
+   "frames": 1740,
+   "wall": 110.7
+  },
+  {
+   "file": "002-act2-3479-5218-13314604c2.mp4",
+   "chapter": "act2",
+   "frames": 1739,
+   "wall": 73.5
+  }
+ ],
+ "frames": {
+  "expected": 5218,
+  "got": 5218
+ },
+ "wall": 204.7,
+ "reelSeconds": 217.4,
+ "speed": {
+  "reelSecondsPerMinuteWall": 63.7,
+  "renderedSecondsPerMinuteOfRenderStep": 71.3
+ },
+ "out": "out/ep01/reel/segments/ep01-act2-v2-test.mp4",
+ "outBytes": 18848516,
+ "mix": {
+  "lufs": -17.365,
+  "peak": -4.217,
+  "missing": [],
+  "silences": []
+ },
+ "_note": "Act Two test render by the ep1s-act2 pass (2026-09-27 01:31-01:36), rendered from a scratch mirror of studio/ (see act2-notes.md \u00a72)"
+}
