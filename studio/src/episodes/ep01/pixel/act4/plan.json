@@ -1,0 +1,41 @@
+{
+ "_about": "Act Four on the v3 stick lock (the v3-shots-act4 pass). The per-shot plan (verdicts, marks, faces, whips), the v4 id map, the post ids and the size classes are READ from Act Four v5's lock_v5.py tables (plan_py, parsed, never run), with the v4 lock's marks for the reused v4 layouts (base_lock), exactly as the act4-v5 port reads them. The JSON `shots` entries below merge over them, only where v3 changed a shot: marks re-anchored on the new and moved lines (C13's clack and Alyi's line in the S4.02 wide, C14's cut call in S4.08, C15's second sentence, the new Tasya and Terb reads, Gerg's keys stopping after the planted V.O.), and faces for the new speakers. The text kinds are v5's with the v3 plates (names only). The cut beats (S4.04, S4.06, S4.13c, S5.01) keep their python entries, which have no shot now (the lock logs them). The mix is the v3 stick reel's Act Four chapter (reel frames 17303..29874 of studio/out/reel-work/ep01-v3-stick/mix.wav), cut to scratch; ep_in = the episode frame of Act Four's first frame (the cold open 736 + the intro 720 + the card 48 + Acts One to Three 7740 + 4914 + 3073).",
+ "label": "ACT FOUR",
+ "timeline": "show/reel/ep01-v3/ep01-v3-act4.json",
+ "plan_py": "studio/src/episodes/ep01/act4/animatic/tools/lock_v5.py",
+ "base_lock": "show/episodes/ep01/production/act4/shots-locked-v4.json",
+ "takes": ["audio/ep01/act4/dialogue/lines-v5.json", "audio/ep01/v3/act4/lines-v3.json"],
+ "mix": {"path": "../../../../../tmp/claude-1000/-home-jgon-project-art-mrmas/a5e7723c-6ab4-4824-a1ed-8e367fdb82e5/scratchpad/v3-shots-act4/act4-mix.wav", "offset": 0},
+ "ep_in": 17231,
+ "text_kinds": [
+  ["^RAIL: ", "rail"], ["^POST: ", "post"], ["^UI: ", "ui"],
+  ["^You've been removed from the meeting\\.$|left the call$|was removed from the meeting\\.$|^rewinding", "toast"],
+  ["^RIMA TAMURI$|^MARIO$|^ADELINA$|^TTEMME$|^THE OTHER YRRAL$", "plate"],
+  ["^NELEH / READ|^FOOTNOTES:|^TERB / THE NEW CHAIR|^EXTINGUISHERS:", "card"],
+  ["^HOW TO FIRE A CEO$|^VOTES: 0$|^EQUITY: 0|^VOID IF CEO MISSING$", "stamp"],
+  ["^MAS · GERG →$|^MAS / GERG / →$|^DAYS SINCE SOMEONE", "sign"],
+  ["^\\d+:\\d\\d$", "clock"]
+ ],
+ "shots": {
+  "S1.01": {"marks": {"engine": ["f", 0]}},
+  "S4.02": {"marks": {"clack": ["snd", "landing_thunk", 1, 0], "tip": ["mark", "clack", -5], "creep": ["mark", "buzz2", 0], "alyi": ["on", "a5-27-28", 0]},
+            "face": {"NELEH": "room", "ALYI": "lip"}},
+  "S4.08": {"marks": {"ring2": ["len", 48], "grab": ["len", 48], "handover": ["len", 60]}},
+  "S4.13": {"marks": {"read": ["on", "v3-a4-0001", -12]}},
+  "S4.13d": {"marks": {"names": ["w", "v3-a4-0001", "mas", 0]}},
+  "S4.13e": {"face": {"TASYA": "lip"}},
+  "S5.09-back": {"marks": {"glance": ["end", "v3-vo-23", 2]}},
+  "S7.02": {"face": {"MAS": null, "TASYA": "room"}},
+  "S7.02b": {"marks": {"below": ["w", "v3-a4-0003", "below", 0], "above": ["w", "v3-a4-0003", "above", 0], "around": ["w", "v3-a4-0003", "around", 0]}},
+  "S7.07": {"marks": {"spray": ["we", "v3-a4-0004", "once", 1], "sprayEnd": ["w", "v3-a4-0004", "we", -1]}},
+  "S7.07b": {"marks": {"nod": ["w", "v3-a4-0004", "other", 0]}}
+ },
+ "refs": {"D6": ["S1.09.click", "S1.11.buzz"]},
+ "ref_checks": [["D6 about 3.7 s (edit-plan-v5 §4)", "S1.09.click", "S1.11.buzz", 3.3, 4.1]],
+ "sound_marks": [
+  {"kind": "stop", "n": 1, "name": "D6: the Cancel click's digital silence", "s": "S1.09.click", "e": "S1.11.buzz", "shot": "S1.09"},
+  {"kind": "stop", "n": 2, "name": "dead stop on MADA's label", "s": "S6.06.label", "e": null, "shot": "S6.06"},
+  {"kind": "stop", "n": 3, "name": "dead stop after \"of what?\"", "s": "line:a5-30-15.out", "e": "line:a5-30-16.in", "shot": "S7.07-cont"},
+  {"kind": "ringout", "n": 1, "name": "Gerg's look (the Build stops, the pedal holds)", "s": "shot:S5.09b.s", "e": null, "shot": "S5.09b"}
+ ]
+}
