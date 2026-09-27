@@ -11,6 +11,8 @@ How to re-create every file that git does not store. Videos, `node_modules/`, th
 
 ---
 
+> **2026-09-26:** the legacy 4K intro files (`out/intro/intro-ep1-V1-4k.mp4` and `out/intro/picture/intro-ep1-4k-silent.mp4`) were deleted under the 1080p-max policy. The 4K steps below only run if those files exist, and `master.sh 4k` can re-render them if ever needed.
+
 ## Quick start: re-render the intro in one go
 
 This goes from a fresh clone to `out/intro/intro-ep1-V1-1080p.mp4` … `-V4-1080p.mp4`, the four 30.000 s intros (picture plus final mix). The mixes are committed as `audio/intro-mix/intro-ep1-mix-V*.m4a`, so only the picture has to be rendered. It takes about 3 minutes plus the downloads, which end up as about 370 MB of `node_modules` and 220 MB of Chrome Headless Shell.

@@ -1,0 +1,229 @@
+"""OUTRO B · the designed sound and the mix for the mock-up (lookdev; OUTRO-PROPOSALS §3).
+
+Reads (read-only): the temp score rendered by track.py into $SC/music, and the intro's own Orb sounds in
+audio/intro-sfx/src (the servo on C6, the scan "shhk" retuned to F/C, the toast chime C7, the tuned server hum), so the
+outro's Orb sounds exactly like the intro's. Synthesizes here: the scan's sustained sweep under the cone (the intro's
+cone lasts 5 frames; this one lasts 25), the GLYPH grains inside it, a faint tick per toast chip, and Ep1's moth (inside
+bar 3 since pass 4): its wingbeats, one tap on the Orb's lens glass, its landing tick and a wing twitch; the Orb's
+aperture tick when it narrows on the moth. No switch-off at the cut: the picture cuts, the fifth releases. Writes: out/lookdev/outro/b/outro-b-{music,sfx,mix}.wav and
+$SC/mix-report.json.
+
+  audio/.venv-theme/bin/python studio/src/dev/outro/b/audio/mix.py "$SC"
+
+Frames are FILE frames of the mock-up (24 fps): the 24-frame stand-in, then the outro at f24 = o0. One owner per sound
+(OST-BIBLE rule 11): the SFX own the servo, the scan, the grains and the chime; the score leaves them room (bar 1.3-1.4
+has no music, and 3.1 has no score onset).
+"""
+import json
+import os
+import sys
+
+import numpy as np
+import pyloudnorm as pyln
+import soundfile as sf
+from scipy.signal import butter, lfilter, resample_poly, sosfilt
+
+ROOT = '/home/jgon/project/art/mrmas'
+SC = sys.argv[1]
+OUT = os.path.join(ROOT, 'out/lookdev/outro/b')
+os.makedirs(OUT, exist_ok=True)
+SR = 48000
+FPS = 24
+PRE = 24
+N_FRAMES = 222                                # 24 stand-in + 180 outro + 18 black (the release)
+N = N_FRAMES * SR // FPS                      # 9.25 s exactly
+SRC = os.path.join(ROOT, 'audio/intro-sfx/src')
+rng = np.random.default_rng(1215)
+
+
+def fr(f):
+    return int(round(f * SR / FPS))
+
+
+def o(of):                                     # outro frame -> file frame
+    return of + PRE
+
+
+def load(path):
+    x, sr = sf.read(path, always_2d=True, dtype='float64')
+    assert sr == SR, (path, sr)
+    if x.shape[1] == 1:
+        x = np.repeat(x, 2, axis=1)
+    return x.T.copy()
+
+
+def db(v):
+    return 10 ** (v / 20)
+
+
+def pan2(mono, p):
+    """constant-power pan, p -1 (left) .. 1 (right); p may be an array"""
+    a = (np.asarray(p) + 1) * np.pi / 4
+    return np.stack([mono * np.cos(a), mono * np.sin(a)])
+
+
+def place(bus, x, frame, gain_db=0.0, pan=None, peak_db=None):
+    """add stereo x at a file frame; peak_db normalises its peak first; pan re-pans a mono sum"""
+    if peak_db is not None:
+        x = x * (db(peak_db) / (np.max(np.abs(x)) + 1e-12))
+    if pan is not None:
+        x = pan2(x.mean(axis=0) * np.sqrt(2), pan)
+    x = x * db(gain_db)
+    s = fr(frame)
+    e = min(bus.shape[1], s + x.shape[1])
+    bus[:, s:e] += x[:, :e - s]
+
+
+def bp(x, lo, hi, order=2):
+    sos = butter(order, [lo, hi], btype='band', fs=SR, output='sos')
+    return sosfilt(sos, x)
+
+
+def resonator(x, f, q):
+    w = 2 * np.pi * f / SR
+    r = np.exp(-w / (2 * q))
+    b = [1 - r]
+    a = [1, -2 * r * np.cos(w), r * r]
+    return lfilter(b, a, x)
+
+
+EVENTS = []
+sfx = np.zeros((2, N))
+
+
+def ev(name, frame, **kw):
+    EVENTS.append(dict(sound=name, file_frame=frame, outro_frame=frame - PRE, sec=round(frame / FPS, 3), **kw))
+
+
+# ---------------------------------------------------------------- f0-23: the stand-in's room (the button's tail)
+hum = load(os.path.join(SRC, 'server_hum_tuned.wav'))[:, :fr(PRE)]
+hum[:, -int(0.004 * SR):] *= np.linspace(1, 0, int(0.004 * SR))    # stops dead on the cut (4 ms de-click)
+place(sfx, hum, 0, gain_db=-26.0)
+ev('server_hum_tuned (intro-sfx)', 0, until=PRE, note='the stand-in room; dead on the cut to black')
+
+# ---------------------------------------------------------------- o15: the iris swivels to the lens
+servo = load(os.path.join(SRC, 'orb_servo_C6.wav'))
+place(sfx, servo, o(15), gain_db=-18.0, pan=0.55)
+ev('orb_servo_C6 (intro-sfx)', o(15), pan=0.55, note='the intro f97 servo, the same file')
+
+# ---------------------------------------------------------------- o30-54: the scan
+shhk = load(os.path.join(SRC, 'orb_scan_sweep_FC.wav'))
+place(sfx, shhk, o(30), gain_db=-16.0, pan=0.45)
+ev('orb_scan_sweep_FC (intro-sfx)', o(30), pan=0.45, note='the cone opens')
+# the sustained sweep: F/C-tuned noise that brightens as the cone sweeps down the toast, then closes (25 frames)
+L = fr(25)
+t = np.arange(L) / SR
+noise = rng.standard_normal(L)
+body = sum(resonator(noise, f, 18) * g for f, g in ((698.46, 0.5), (1046.5, 0.8), (1396.9, 1.0), (2093.0, 0.7), (2793.8, 0.35)))
+body = bp(body, 500, 5000)
+env = np.clip(t / 0.06, 0, 1) * np.clip((t[-1] - t) / 0.12, 0, 1) * (0.55 + 0.45 * np.sin(np.pi * t / t[-1]))
+sweep = pan2(body * env, np.linspace(0.5, -0.1, L))
+place(sfx, sweep, o(30), peak_db=-20.0)
+ev('scan sweep bed (synth, F/C resonators)', o(30), until=o(55), note='under the whole cone; pans from the Orb leftward')
+# the GLYPH grains inside the cone: tiny tuned ticks on G6 / Db7 / F7 (the SFX's GLYPH pitches), one per 2 frames
+for k, f in enumerate(range(31, 53, 2)):
+    p = [1567.98, 2217.46, 2793.83][k % 3]
+    gl = int(0.035 * SR)
+    tt = np.arange(gl) / SR
+    grain = np.sin(2 * np.pi * p * tt) * np.exp(-tt / 0.008) + 0.3 * rng.standard_normal(gl) * np.exp(-tt / 0.002)
+    place(sfx, np.stack([grain, grain]), o(f), peak_db=-31.0 + (k % 2) * -3, pan=0.3 - 0.06 * k)
+ev('glyph grains (synth, G6/Db7/F7)', o(31), until=o(53), note='one per 2 frames while the tokens resolve')
+
+# ---------------------------------------------------------------- the toast: the header posts at o9, the two credit
+# chips land at o60 and o75 (2.1, 2.2). A faint unpitched UI tick each, left (where the toast is); the knee is the pop.
+for k, (f, pk) in enumerate([(9, -37.0), (60, -40.0), (75, -40.0)]):
+    tl = int(0.012 * SR)
+    tt = np.arange(tl) / SR
+    tick = bp(rng.standard_normal(tl), 2500, 9000) * np.exp(-tt / 0.0025)
+    place(sfx, np.stack([tick, tick]), o(f), peak_db=pk, pan=-0.55)
+ev('toast ticks (synth)', o(9), until=o(76), note='3 faint ticks, left: the header post (o9), the chips on 2.1 and 2.2')
+
+# ---------------------------------------------------------------- o120: the Orb's chime on the verdict
+chime = load(os.path.join(SRC, 'blip_orb_toast_C7.wav'))
+place(sfx, chime, o(120), gain_db=-14.0, pan=0.45)
+ev('blip_orb_toast_C7 (intro-sfx)', o(120), pan=0.45, note='the intro f692 chime; the score verdict is one beat later')
+
+# ---------------------------------------------------------------- o150: the iris swivels (Ep1: down after the moth;
+# a plain week: back to idle). The same servo, softer.
+place(sfx, servo, o(150), gain_db=-19.0, pan=0.55)
+ev('orb_servo_C6 (intro-sfx), softer', o(150), pan=0.55, note='Ep1: the iris swivels down after the moth')
+
+# ---------------------------------------------------------------- Ep1's moth, inside bar 3: o138-160 its wingbeats
+# (a real moth: soft, papery, ~22 beats a second, panned with its flight; quiet, a detail and not a gag sound), o148 one
+# tap on the Orb's lens glass, o160 it lands, o172 a wing twitch. Positions follow scene.ts MOTH_WAY (x of 480).
+f0, f1 = o(138), o(160)
+L = fr(f1 - f0)
+t = np.arange(L) / SR
+beat_hz = 22.0
+flap = np.clip(np.sin(2 * np.pi * beat_hz * t + 0.3 * np.sin(2 * np.pi * 3.1 * t)), 0, None) ** 3
+air = bp(rng.standard_normal(L), 250, 2600) * flap
+air += 0.35 * bp(rng.standard_normal(L), 2600, 6000) * flap ** 2
+near = np.interp(t, [0, 0.25, 0.45, 0.7, t[-1]], [0.45, 0.8, 1.0, 0.8, 0.6])
+env = np.clip(t / 0.1, 0, 1) * np.clip((t[-1] - t) / 0.06, 0, 1) * near
+way = [(138, 452), (142, 440), (146, 412), (148, 426), (150, 404), (153, 428), (156, 462), (158, 454), (160, 444)]
+px = np.interp(t, [(a - 138) / FPS for a, _ in way], [x for _, x in way])
+place(sfx, pan2(air * env, (px - 240) / 240 * 0.8), f0, peak_db=-24.0)
+ev('moth wingbeats (synth)', f0, until=f1, note='panned with the flight path')
+# the tap on the lens: a tiny glassy tick (a damped resonance near C8), where the Orb is
+tl = int(0.03 * SR)
+tt = np.arange(tl) / SR
+glass = resonator(rng.standard_normal(tl) * np.exp(-tt / 0.0015), 4186.0, 30) + 0.4 * bp(rng.standard_normal(tl), 3000, 9000) * np.exp(-tt / 0.002)
+place(sfx, np.stack([glass, glass]), o(148), peak_db=-36.0, pan=0.62)
+ev('moth taps the lens (synth, glass tick ~C8)', o(148), pan=0.62)
+tl = int(0.02 * SR)
+tt = np.arange(tl) / SR
+tap = bp(rng.standard_normal(tl), 1800, 7000) * np.exp(-tt / 0.003)
+place(sfx, np.stack([tap, tap]), o(160), peak_db=-36.0, pan=0.68)
+ev('moth landing tick (synth)', o(160), pan=0.68)
+# o165 (3.4): the Orb's aperture narrows one step on the moth: the smallest mechanical tick (no pitch)
+tl = int(0.015 * SR)
+tt = np.arange(tl) / SR
+ap = bp(rng.standard_normal(tl), 3500, 10000) * np.exp(-tt / 0.0018)
+place(sfx, np.stack([ap, ap]), o(165), peak_db=-40.0, pan=0.55)
+ev('aperture tick (synth)', o(165), pan=0.55, note='the iris narrows on the moth')
+Lt = fr(2)
+tt = np.arange(Lt) / SR
+tw = bp(rng.standard_normal(Lt), 250, 2600) * np.clip(np.sin(2 * np.pi * 22 * tt), 0, None) ** 3 * np.sin(np.pi * tt / tt[-1])
+place(sfx, np.stack([tw, tw]), o(172), peak_db=-35.0, pan=0.68)
+ev('moth wing twitch (synth)', o(172), pan=0.68)
+
+# ---------------------------------------------------------------- the score, placed at o0
+mus = load(os.path.join(SC, 'music', 'outro-b-temp-album.wav'))
+music = np.zeros((2, N))
+s = fr(PRE)
+m = mus[:, :N - s]
+music[:, s:s + m.shape[1]] = m
+fade = int(0.5 * SR)                                    # the file ends 0.75 s after the cut: the release fades out
+music[:, -fade:] *= np.linspace(1, 0, fade) ** 2
+sfx[:, -fade:] *= np.linspace(1, 0, fade) ** 2
+
+mix = music + sfx
+
+
+def true_peak_db(x):
+    up = resample_poly(x, 4, 1, axis=1)
+    return 20 * np.log10(np.max(np.abs(up)) + 1e-12)
+
+
+meter = pyln.Meter(SR)
+raw_tp = true_peak_db(mix)
+trim = min(0.0, -3.0 - raw_tp)                          # picture masters peak <= -3 dBTP (OST-BIBLE rule 14)
+mix *= db(trim)
+music_out = music * db(trim)
+sfx_out = sfx * db(trim)
+rep = dict(
+    frames=N_FRAMES, seconds=N / SR, sample_rate=SR,
+    music_file=os.path.join(SC, 'music', 'outro-b-temp-album.wav'), music_offset_s=PRE / FPS,
+    trim_db=round(trim, 2),
+    mix_lufs=round(meter.integrated_loudness(mix.T), 2), mix_true_peak_dbtp=round(true_peak_db(mix), 2),
+    music_lufs_in_mix=round(meter.integrated_loudness(music_out.T), 2),
+    music_lufs_outro_only=round(meter.integrated_loudness(music_out[:, fr(PRE):fr(PRE + 180)].T), 2),
+    mix_lufs_outro_only=round(meter.integrated_loudness(mix[:, fr(PRE):fr(PRE + 180)].T), 2),
+    tail_rms_dbfs_last_100ms=round(float(20 * np.log10(np.sqrt(np.mean(mix[:, -int(0.1 * SR):] ** 2)) + 1e-12)), 1),
+    sfx_true_peak_dbtp=round(true_peak_db(sfx_out), 2),
+    events=EVENTS,
+)
+for name, x in (('music', music_out), ('sfx', sfx_out), ('mix', mix)):
+    sf.write(os.path.join(OUT, f'outro-b-{name}.wav'), x.T.astype(np.float32), SR, subtype='PCM_24')
+json.dump(rep, open(os.path.join(SC, 'mix-report.json'), 'w'), indent=1)
+print(json.dumps({k: v for k, v in rep.items() if k != 'events'}, indent=1))

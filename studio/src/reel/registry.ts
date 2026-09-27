@@ -1,11 +1,18 @@
 // Registers one composition per synced reel file (src/reel/data/*.json, copied from show/reel/ by sync.mjs),
 // `reel-season` (every epNN back to back) and `reel-ep01-full` (the full-length pilot, stitched in episode order:
 // ep01-full-part1 = cold open → Act Two, part2's Act Three, Act Four, then part2's tag + credits).
+// EPISODE REELS (episode.ts, EpisodeReel.tsx, README.md): every synced episode manifest (show/reel/<key>.manifest.json)
+// registers `reel-<key>`, and a manifest passed as input props ({"reelManifest": {...}}, what tools/episode.mjs does
+// for a manifest kept anywhere else) registers `reel-episode`.
 // Loaded at bundle time via require.context.
+import {getInputProps} from 'remotion';
 import type {FrameDef} from '../shared/frame-def';
 import {ACTS, FPS, H, normalizeEpisode, parseClock, timeEpisode, W, type Beat, type Episode} from './schema';
 import {Reel, Season} from './Reel';
+import {buildPlan, isManifest} from './episode';
+import {EpisodeReel} from './EpisodeReel';
 
+const manifests: {key: string; raw: unknown}[] = [];
 const load = (): Episode[] => {
   const out: Episode[] = [];
   let ctx: __WebpackModuleApi.RequireContext | null = null;
@@ -20,7 +27,12 @@ const load = (): Episode[] => {
     if (seen.has(key)) continue;
     seen.add(key);
     try {
-      out.push(normalizeEpisode(ctx(k), key));
+      const raw = ctx(k);
+      if (isManifest(raw, key)) {
+        manifests.push({key: key.replace(/\.manifest$/i, ''), raw});
+        continue;
+      }
+      out.push(normalizeEpisode(raw, key));
     } catch (e) {
       out.push(normalizeEpisode({_error: String(e), title: key}, key));
     }
@@ -124,8 +136,24 @@ const reelFrame = (ep: Episode, id = reelId(ep.key)): FrameDef => ({
   durationInFrames: timeEpisode(ep).total,
 });
 
+// ---------------------------------------------------------------- episode reels (manifests)
+const episodeFrame = (raw: unknown, key: string, id: string): FrameDef => {
+  const plan = buildPlan(raw, key, episodes);
+  return {id, component: EpisodeReel, props: {plan}, width: W, height: H, fps: FPS, durationInFrames: Math.max(2, plan.total)};
+};
+const inputManifest = (() => {
+  try {
+    const ip = getInputProps() as Record<string, unknown>;
+    return ip && ip.reelManifest && typeof ip.reelManifest === 'object' ? ip.reelManifest : null;
+  } catch {
+    return null;
+  }
+})();
+
 export const reelFrames: FrameDef[] = [
   ...episodes.map((ep) => reelFrame(ep)),
+  ...manifests.map((m) => episodeFrame(m.raw, m.key, reelId(m.key))),
+  ...(inputManifest ? [episodeFrame(inputManifest, String((inputManifest as Record<string, unknown>).key || 'episode'), 'reel-episode')] : []),
   ...(full ? [reelFrame(full, 'reel-ep01-full')] : []),
   ...(season.length
     ? [{id: 'reel-season', component: Season, props: {eps: season}, width: W, height: H, fps: FPS, durationInFrames: season.reduce((a, e) => a + timeEpisode(e).total, 0)}]

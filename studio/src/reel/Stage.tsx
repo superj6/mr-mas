@@ -976,9 +976,9 @@ const Shoulder: React.FC<{side: 'left' | 'right'; pal: Pal}> = ({side, pal}) => 
   const cx = side === 'left' ? 150 : 1130;
   return (
     <g>
-      <ellipse cx={cx + m * 30} cy={700} rx={250} ry={175} fill="#03050a" opacity={0.94} />
-      <circle cx={cx} cy={452} r={92} fill="#03050a" opacity={0.94} />
-      <path d={`M ${cx + m * 92} 452 A 92 92 0 0 ${side === 'left' ? 1 : 0} ${cx + m * 40} 535`} fill="none" stroke={pal.dim} strokeWidth={3} opacity={0.8} />
+      <ellipse cx={cx - m * 10} cy={715} rx={215} ry={150} fill="#03050a" opacity={0.94} />
+      <circle cx={cx - m * 20} cy={490} r={78} fill="#03050a" opacity={0.94} />
+      <path d={`M ${cx - m * 20 + m * 78} 490 A 78 78 0 0 ${side === 'left' ? 1 : 0} ${cx - m * 20 + m * 34} 560`} fill="none" stroke={pal.dim} strokeWidth={3} opacity={0.8} />
     </g>
   );
 };

@@ -1462,6 +1462,13 @@
     "id": "neleh",
     "side": "left"
    },
+   "sounds": [
+    {
+     "name": "bell_ding_F6",
+     "at": 1.4,
+     "gain": -26
+    }
+   ],
    "cues": [
     "music: temp PROCEDURE (MM-09 underscore), one performance for pass one · thins + ducks under talk"
    ]
@@ -3526,7 +3533,8 @@
      "id": "mario"
     },
     {
-     "id": "adelina"
+     "id": "adelina",
+     "from": 18.216
     }
    ],
    "caption": "Neleh offers Mario the job. He has eleven pages; Adelina takes the phone: no. Then Nozama calls.",
@@ -4684,7 +4692,29 @@
     "sub": "~11:53 PM",
     "place": "the boardroom",
     "time": "Sun Nov 19 · ~11:53 PM"
-   }
+   },
+   "sounds": [
+    {
+     "name": "landing_thunk",
+     "at": 0.9,
+     "gain": -30
+    },
+    {
+     "name": "landing_thunk",
+     "at": 1.2,
+     "gain": -30
+    },
+    {
+     "name": "landing_thunk",
+     "at": 1.5,
+     "gain": -30
+    },
+    {
+     "name": "key_tap_space",
+     "at": 1.95,
+     "gain": -24
+    }
+   ]
   },
   {
    "id": "S4.13",
@@ -5017,6 +5047,13 @@
      "id": "tasya",
      "at": 0.2
     }
+   ],
+   "sounds": [
+    {
+     "name": "JANGLE",
+     "at": 0.4,
+     "gain": -30
+    }
    ]
   },
   {
@@ -5105,7 +5142,14 @@
    "reelDur": 3.0,
    "fx": [],
    "realStart": 1032.333,
-   "realDur": 3.0
+   "realDur": 3.0,
+   "sounds": [
+    {
+     "name": "JANGLE",
+     "at": 0.35,
+     "gain": -28
+    }
+   ]
   },
   {
    "id": "S4.14",
@@ -7095,14 +7139,21 @@
     },
     {
      "text": "NELEH left the call",
-     "at": 1.67,
+     "at": 1.37,
      "until": null
     }
    ],
    "reelDur": 1.958333,
    "fx": [],
    "realStart": 1133.958,
-   "realDur": 1.958
+   "realDur": 1.958,
+   "sounds": [
+    {
+     "name": "landing_thunk",
+     "at": 1.37,
+     "gain": -20
+    }
+   ]
   },
   {
    "id": "S6.06",
@@ -7354,6 +7405,23 @@
     "place": "the bullpen, back wall",
     "time": "Mon Nov 20 · day"
    },
+   "sounds": [
+    {
+     "name": "key_tap_soft_02",
+     "at": 6.9,
+     "gain": -30
+    },
+    {
+     "name": "key_tap_soft_04",
+     "at": 7.4,
+     "gain": -30
+    },
+    {
+     "name": "key_tap_soft_06",
+     "at": 7.9,
+     "gain": -30
+    }
+   ],
    "cues": [
     "music: temp MM-11 THE RETURN (v4 S7/S8 render) · thins + ducks under talk"
    ]

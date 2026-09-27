@@ -575,6 +575,375 @@ From the opportunity map ([§9](../_sources/research/style-range-opportunities.m
 
 Existing switches stay: F1.1 1-BIT, the #4 freeze, the sc 17 LEDGER, THE PLAN, masked GLYPH. The KA-CHING hairline in the sky (#19) stays a pixel line: it's J3's plant. Title card: raw markdown ([§3.4](#34-fenced-slots-and-the-booked-subtraction)).
 
+### 6.1a Ep1 versatility slate (2026-09-26)
+
+> **Status: WORKING GUIDE, 2026-09-26, final after the critic pass.** This is a plan on paper. Nothing in it has been built, rendered or checked on screen, and its prototypes are briefs. The critic's amendments are applied; what was taken, modified or declined, and why, is in [the change log at the end](#change-log-the-critics-amendments-to-61a). **Where it differs from the Ep1 rows of §6.1 and §6.14, or from §1.6's J1 row, this subsection supersedes them for Ep1** (style-jumps' own J1 row belongs to its owner). The season revision owns the cold open, Acts One to Three and the tag; the Act Four pass owns sc 24–31. Every item is an option for them, handed off in [the tables at the end](#rulings-and-handoffs-from-61a). Scene numbers are the script's (`sc`, with Act Four at draft 5.1); `beats.md` numbers are in brackets where they help.
+>
+> **Act Four, measured (read at 15:20 on 2026-09-26):** draft 5.1 has been recorded (101 stock-voice takes, `audio/ep01/act4/dialogue/lines-v5.json`) and cut as the stick-figure reel `out/reel/ep01-act4-v5.mp4` (1280×720, 24 fps, 8:41.5 including a 3 s head). The act runs **8:38.5** against 5.1's planned ≈ 9:36 (the builder's `audio/reel/ep01-act4-v5/measure.json`). Nobody has watched or listened to it yet. Wherever this slate samples Act Four, its timing comes from those takes.
+>
+> **The ask (2026-09-26):** "we want to in the first episode preview the ability of your video creation versatility" · "why would you convert to pixel art, the point of using generator is to do styles beyond what pixel art can do" · "as stated before, we want to first create a version fully programatically, then we can consider the outside layers as quality additions to replace components of what we can do in he first pass". And the standing note: range "not in a forced manner either, only where it makes sense."
+
+**The idea: each medium is somebody's own self-presentation, inside a frame the story built.** The pilot's world stays pixel. Each rival's product, each record and each device appears in its own medium inside a frame the story has already put on screen: a pane of the split, a phone, a call tile, a monitor. The one exception completes the rule: the landlord needs no frame, because he is the frame (1.D).
+- **The story reason.** Every rival in the pilot presents itself with production value: CLOD launches as a clay puppet under a stage light, ELGOOG ships a product film, the Senate opens on its own broadcast, and MACROSOFT's house style takes the room it owns. NopeAI launches as a beige pixel button labelled `research preview` (sc 5), and wins. The range is the rivals' polish; the plain pixel is the winner.
+- **The test.** Every medium here must be somebody's own self-presentation (a launch, a product film, an official feed, a record, a house style), never the show's flourish. A medium that fails it is a showreel, and it goes. This is §1.3's owner test, made specific for the pilot.
+- **Range without strobing.** About fifteen looks reach the screen in about 23 minutes, and the slate adds no full-room change. The Senate's broadcast was already on the strip, and sc 30's landlord was already a full-room change in the script (the palette steps), one the strip had missed. The slate changes that one's medium, not the count. Everywhere else the room never changes register under the viewer, so "stay in one visual register for a while" holds.
+- **It sets the rule the season breaks.** Ep2's mammoth turns to pixel as it steps out of its bezel, and J5 breaks the bezel once. The pilot's job is to teach that there's a frame.
+- **The pilot's one near-photoreal image is a staged demo, exposed inside the shot.** The first time the show looks real, it's lying. That's the season's thesis in small, and it keeps near-photoreal from reading as a showreel flex.
+
+**What a viewer sees, in order:**
+- the title card as raw markdown; the 2-tone freeze; 1-bit 1993; the intro's fidelity tiers
+- a LEDGER print in a TV ticker
+- **CLOD in real clay** under its launch light, for the rest of the duel
+- a too-smooth anchor on his phone, captioned; **the hearing as its broadcast**, with **the clone drawn at a finer pixel density than the man**
+- the poster run; LEDGER at $1T and a pixel hairline in the sky
+- the Orb's masked GLYPH; the president's copies in the clone's look; THE PLAN's blueprint
+- **the call as a call**; his tile coming apart into GLYPH tokens; the 16-colour TPOOL door; a security camera on a wall screen; **the Vegas neon moving behind his still tile**
+- **the landlord's house style taking the bullpen**, around the one pixel man
+- **ELGOOG's product film in near-photoreal, exposed as a set of stills**
+
+**Held back on purpose:** HD anime (its home is 10.C), a camera moving in perspective through the pixel world (11.A), a photographic world (J5), extra blocky (THE WHALE isn't in the pilot's story), and the engraved certificate (J1 goes back to style-jumps for a later home).
+
+#### The slate
+
+**Existing, unchanged.** These stay as written and count on the strip.
+
+| Id · where | Tier · medium · owner | Size | In → out | Length | Route |
+|---|---|---|---|---|---|
+| Title card (fenced) | `research_preview.md` as raw markdown source, `#` and asterisks showing ([§3.4](#34-fenced-slots-and-the-booked-subtraction)) · the file | Full card | The intro's end → Act One | 2 s | CODE (the intro owner's call, H9) |
+| sc 2 [#4] | 2-TONE FREEZE · house | Full | The invite → the Orb's toast | ≈ 10 s | CODE |
+| sc 3–4 [#5] F1.1 | 1-BIT · era | Full | The room steps down its light ramps to paper white → smash to the intro | 4 s | CODE |
+| The intro (fenced) | The fidelity tiers ([intro spec §4](../intro/spec.md)) | Full | — | 30 s | The intro owner's |
+| sc 9 [#9] | LEDGER flash-print, `≈ −$100B` · the record | In the lobby TV's ticker | A 6-frame print → the figure holds in the ticker | ≈ 2 s | CODE |
+| sc 17 [#19] | LEDGER, `$1,000,000,000,000` · the record. The hairline crack stays a pixel line (J3's plant) | Full (the register's window) | KA-CHING → the bell's decay | ≈ 2 s | CODE |
+| sc 18 [#20] | Masked GLYPH, the Orb's first scan · MACHINE | In the cone | The cone fans out → gone by frame 6 | 5 f | CODE |
+| sc 25 [#26] | THE PLAN, BLUEPRINT · the show's voice | Full | The laptop's glow turns to blueprint → it tears along step 1's line | ≈ 35 s | CODE |
+| **sc 26 [#27]** | **Masked GLYPH dissolve, use 2 of 2** · MACHINE, inside his account's edit: his tile comes apart into tokens as it falls. **Kept at the Cancel click** (see J1 below) | In the tile | The four-drawing drop → the four close the gap | 20 f | CODE (the salvaged call art) |
+| sc 26A [#27] F1.2 | EARLY-WEB16 · era, `(REPORTED)` | Full | A render front out of tally mark 1 → back into the wood grain | ≈ 4 s | CODE |
+| **1.K** sc 27, S4.09 | P1 CCTV · DEVICE: the lobby camera on the boardroom's wall screen, already in the 5.1 script | Bezel | The wall screen → Neleh turns from it | ≈ 18 s | CODE |
+
+**Added or changed (★).** For each: tier and medium, owner and motivation, size, in and out, length, the filler now, the final later, the guardrails, and the risk of it feeling forced.
+
+**1.A ★ · CLOD under its launch light** (sc 11 [#12], the split-screen duel, Mar 14, 2023)
+
+| | |
+|---|---|
+| **Tier · medium** | 2, in the frame · **claymation**: CLOD in true clay at 12 fps on 2s, thumbprints and tool drag, three replacement mouths. Between moves it holds the way a puppet holds: the pose still, its surface boiling on 2s through four replacement surfaces while the thumbprints stay put |
+| **Owner · motivation** | BRANDS, the owner's first appearance (it plants 7.A and 11.C). MISANTHROPIC's product presents itself in its own medium, at its own launch. The script already designs CLOD as "a rounded terracotta clay figure with visible thumbprints" with a potter's wheel in its chest, so the leap only stops pretending. Mario and the lighthouse stay pixel, because clay belongs to the product (the bigger option, R24, is below) |
+| **Size** | Inside the right pane (240×203), CLOD about 60–70 native px tall (≈ 250 px on screen). Not a register change |
+| **In → out** | **In: the launch.** Phrase 1 plays with CLOD unlit on a knee-high plinth, a pixel figure in the night rungs, beside a stage can-light on a stand. On CLOD's "You're absolutely right!" (phrase 2, on the beat) the light slams on, and inside its pool CLOD is clay: agreeing that you mustn't launch on the same day *is* the launch. The pixel figure's silhouette matches the clay's first key, so the change reads as light, not a cut. **The light stays on.** Mario's "Addendum." plays under it: a man answering a launch with paperwork. CLOD holds its bow in clay through phrases 2–4 while the duel plays around it. **Out: the cut to sc 12.** The clay leaves with its scene and never switches back on screen |
+| **Length** | ≈ 30 s of clay (12 of the duel's 16 bars). Long enough to read as a medium, where 4.5 s at this size would read as a glitch |
+| **FILLER (now)** | three.js clay on the iGPU from Prototype 3's CLOD (`dev/range/p3/gl/clod.ts`): a warm subsurface tint, fingerprint and tool-drag normals, AO and miniature depth of field, rendered at output resolution into the pane. The hold cycles its four boil surfaces in a hashed, non-repeating order, so ≈ 30 s never shows a loop. **Contact:** the pool stepped on the grid in three rungs, CLOD's alpha shadow falling into it, and Mario's near side one rung warmer for as long as the light is on. **Prototype E1-P1** |
+| **FINAL (later)** | **Put to the showrunner (R22):** the one-puppet stop-motion day (one puppet serves 1.A, 7.A and 11.C, about 20 s of animation in all, shot on a plinth under a key matched to the pixel light); a scanned plasticine maquette (about $20) driven by the rig; a video model for the clay body only, with code supplying the mouths and the timing; or the filler as final |
+| **Guardrails** | A product mascot, ours; parody name; no real logo. The brick is the off-brand MISANTHROPIC red, and the light's spill on Mario stays amber (he is never red). The light's pop is one step at ≤ 80% white |
+| **Sound** | MM-04 carries on. Inside it: the can's clunk on phrase 2's downbeat; a close, dry clay press on the bow's down key; a tiny whirr from the wheel inside the pool for as long as the light is on; one felted-upright phrase doubling the quartet under the bow (the brand's sound, never a pizzicato "ad cue"). No switch and no click |
+| **Risk of forced** | Low. CLOD is already clay by design, the light is the launch, and the exit is the scene's own cut. The risks are a pasted-in look at phone size, if the clay's edge or light doesn't belong to the pane, and a hold that visibly loops over ≈ 30 s. E1-P1 tests both. The staging change (unlit until the launch) is the writers' call (H2) |
+
+**The bigger option for the showrunner (R24; default: not taken).** The duel's music is already a contest of media: chip on NopeAI's side against a string quartet on Mario's. The picture could match: the whole lighthouse pane goes clay under the launch light, Mario as a clay puppet included, stylized and never photoreal. In phrase 4 his scroll turns to pixel in held steps as it crosses the split line, the exact grammar Ep2's mammoth uses at its bezel (a medium converts at its frame's edge), taught inside a joke already written, at 0 s. It makes the rivalry visible: the careful rival works in the slowest, most careful medium, while Gerg ships a napkin in two drawings. **Costs:** a second puppet and a clay lighthouse set. Mario is a caricature of a real person, so his final can only come from code or a human stop-motion day, never a video model, and the guardrails owner approves a clay caricature first (§5.1 allows stylized caricatures in clay; this file asks anyway, as it does for R21). It also bends §1.3's "clay belongs to the product only" for this one pane, on the grounds that the whole pane is the brand's launch as it presents itself. If it isn't taken, 1.A stands as above.
+
+**1.F ★ · the hearing as its broadcast** (sc 14 → 15 [#16–17], May 12–16, 2023)
+
+| | |
+|---|---|
+| **Tier · medium** | 1 · **P3 BROADCAST**, at bezel size on his phone for the anchor clip (sc 14), then full room for the hearing's opening (sc 15) |
+| **Owner · motivation** | DEVICE: the official version of an event. The hearing was televised, and it opened with a cloned voice reading a chatbot's words; the anchor clip is a broadcast on a phone. The broadcast's chrome also gives the required `[AI-GENERATED AUDIO]` caption its home, under the lower third (§5.1) |
+| **Size** | The phone's bezel (sc 14) → full room (sc 15). The band stays. One ■, already counted in §6.14 |
+| **In → out** | **In:** the match cut on the smooth voice over black lands on the broadcast's close camera on the clone at the microphone (the voice finds its mouth), with the generic lower third `SENATE JUDICIARY · HEARING` and `[AI-GENERATED AUDIO]` burned in under it while the clone speaks. Then the broadcast's fixed wide of the dais, where the matte chairman says "Couldn't have said it better myself." under his plate, `LAHTNEMULB · THE CHAIRMAN`. **Each text tells one fact once:** the rail carries only the date in this scene (`MAY 16, 2023`), the lower third the place, the caption the clone, the plate his role. Sucram's card comes later, on its own shot. **Out:** our camera goes where the broadcast's doesn't, to the `[2S]` in the room of the look the clone gives the chairman. The official picture shows two men who agree; ours shows the look |
+| **Length** | ≈ 6–8 s full room (the clone's line and the chairman's reply). The phone clip rides its shot |
+| **FILLER (now)** | Code, from Prototype 4's P3 kit (4c): a fixed wide, flat light, broadcast-safe colour and one light step of compression banding, with no barrel distortion. The banding stays light so the fine-density clone against the matte chairman reads the first time. It needs a new hearing-room plate and the LAHTNEMULB and SUCRAM sprites, so it waits for Act Two's stick-figure approval (no prototype now) |
+| **FINAL (later)** | **CODE.** The voices are the lift: **one human performer** for the chairman and his clone, the clone's read processed. Officials are never voiced with ElevenLabs (GENAI principle 7), which corrects §6.1's "designed from text" for this row. Until then, a stock casting preset chosen and tuned toward no one |
+| **Guardrails** | The anchor is invented (no name, no network, a generic face), and her voice imitates no real anchor. The caption is burned in. No real network's graphics. Fairness: a device pass on a politician, never a leap (R8) |
+| **Risk of forced** | Low: the device is real and on screen. Act Two's sc 15–17 carries three ■ in about three minutes (see the strip below); if it plays busy, 1.F shrinks to OSD size first (the lower third and caption over the pixel wide) |
+
+**1.I ★ · THE COPY: the clone has more pixels than the man** (sc 15, the whole scene; its look carries to sc 21's deepfakes)
+
+| | |
+|---|---|
+| **Tier · medium** | 1, on one figure · **a finer pixel density**: the clone is the chairman's own drawing redrawn on a 2× (or 4×) grid, crisp edges, palette-true, with a sheen stepped on the fine grid. Everyone else stays honest pixels at 4× nearest-neighbour. A smoothing upscaler (xBR / hqx) is only E1-T1's comparison (its look C) |
+| **Owner · motivation** | MACHINE: its copy of a man. The scene's joke is a copy that reads better than the man, so it looks better too, and "the copy has more pixels than the man" is a joke a newcomer gets from one frame. Density is a drawing choice, where a smoothing pass is one drawing run through a filter: the kind of look lookdev turned down, known to gamers as an emulator setting, and blur at phone size. This answers the outline's proposed "too-clean upscale" (sc 15), which was sent to this pass |
+| **Size** | One figure. It isn't a pass on the shot, so it doesn't stack with 1.F's broadcast: it's how the copy is drawn |
+| **In → out** | In with the clone's first frame (the broadcast's close camera); out when the scene ends. **In sc 21** the deepfake NEDIBs take the same look, and the script's cut paper and scissor edges retire: one look per figure (paper plus a second treatment would be two metaphors on one figure), and paper is MISANTHROPIC's medium in §1.3, which nobody else borrows. The script's own words for them, "crisper and glossier than the real one", are what density and the sheen draw. Their other tells stay (the tie a shade off, the too-smooth cadence). A pass is grammar: one look, one meaning. Handed to the writers (H2) |
+| **Length** | The scene |
+| **FILLER = FINAL** | **CODE,** about an hour as an additive module (H6): a palette-true 2× or 4× upscale of the matte sprite in the EPX / Scale2x family (crisp, no new colours) as the starting point, hand-cleaned on the fine grid (finer hair strands, a sharper collar: the detail an upscale can't invent), and a sheen stepped on the fine grid, never a smooth gradient. **E1-T1** decides density against xBR, and 2× against 4×, before the Senate is built |
+| **Guardrails** | A stylized copy of a caricature, never toward photoreal: no skin texture, no photographic detail, no generated face. It depicts the machine's copy, not the politician's perception (R8). Guardrails owner check requested (R21) |
+| **Risk of forced** | Medium-low: it could read as a rendering bug. It reads as a choice beside the matte original in the same frame, with the perfect cadence and the sheen. E1-T1 blind-tests it at phone size |
+
+**1.G ★ · the call as a call, told twice** (sc 26 and sc 27, Nov 17, 2023, noon)
+
+| | |
+|---|---|
+| **Tier · medium** | 1 · **P2 CALL**, cut down to what can be seen: the far end's tiles one grid-true step softer (half native resolution, doubled). No 15 fps stutter and no 8×8 wobble: neither would read on figures that move on 2s and 4s. No breakdown stage |
+| **Owner · motivation** | DEVICE: distance, and who has the good connection. **His side (sc 26):** the board's four tiles are soft; his own tile is clean, because it's his local preview. **Their side (sc 27, S3.00a–S3.01):** the reverse. Their tiles are clean on Neleh's laptop and his is the soft one-bar feed, **and behind his motionless face the Vegas neon's chase lights keep moving.** What proves "No. That is just him." is the neon moving while he doesn't: the feed is live, the man is still |
+| **Size** | In the tiles. Not a register change |
+| **In → out** | The whole call on each side. On "super." (his side) the four tiles freeze plainly, on a held frame with no macroblocks and **no connection warning**: reading four stunned faces there is the design, and pass one answers it |
+| **Length** | The call: ≈ 11 s on his side; on theirs, S3.00a's held over-the-shoulder, which the v5 reel measures at 18.96 s |
+| **FILLER = FINAL** | **CODE**, on the call-grid kit and the passes module. **Sampled after the Act Four stick approval:** a 6 s board's-side neon clip timed to the approved takes (not one of the three prototypes; it samples shots the stick reel is still timing) |
+| **Guardrails** | A generic call UI, with no real app's layout or sounds. The chase lights are geometry, not luminance flashes: one step every 8 frames at most (3 in any 24 f) |
+| **Risk of forced** | Very low: it's the device itself. The one risk is the softness reading as our own low quality; if it does, drop the half-resolution step and keep the neon |
+
+**J1 · returned: the GLYPH dissolve stays at the Cancel click** (sc 26)
+
+An earlier draft of this slate recommended that J1's engraved `CANCELLED` certificate replace the 5.1 script's GLYPH dissolve. **That recommendation is withdrawn.**
+- **Its main reason was out of date.** The newcomer who read the click as OK was watching v4.1, and draft 4.2 already fixed it: the ALYI / CO-FOUNDER arrow now lands on Cancel, and Cancel lights up.
+- **GLYPH is the showrunner's device for dark foreshadowing,** and the 20-frame dissolve is its only readable use in the pilot. Without it, the Orb's 5-frame scan (sc 18) loses the rhyme it gets when he falls; the vault's GLYPH (sc 31) is a hum, not a picture.
+- **It would add a medium at the climax.** The minute around the click already runs the blueprint, then the call, then the early-web flashback, then their side of the call.
+- **It would tell the firing a third time in 1.9 s:** the certificate, the drop, then the "removed" notice. And its motivation was split between "the record" and "his account's edit".
+
+J1 goes back to style-jumps' owner (the jump-fix pass) for a later home. If the room still wants it at the click, cut the stick reel both ways and run a blind read.
+
+**1.H ★ · ELGOOG's duck film, and what it was made of** (the tag, sc 32 [#32], Dec 6, 2023)
+
+| | |
+|---|---|
+| **Tier · medium** | 2, in a bezel · **near-photoreal product film**, upgraded from §6.1's P23 pass. A yellow rubber duck on a pale seamless desk in soft product light; one slow, smooth macro push on 1s with the film's own lens falloff (real depth of field is fine here: it's the film's native look, not a pass on pixel art). The monitor's generic player names it in its title strip, `ELGOOG DEMO · DEC 6`, and the film carries its own super, `"What the quack!"` [V]. **Then the smooth take is exposed**, cut both ways, keeping whichever a blind reader calls "faked" faster: **(A) the ramp**, the same move stepping down from 24 to 12, 6 and 3 fps and ending on three stills side by side; or **(B) the break**, the smooth film breaking at once into three held stills. Then the monitor's own caption types `LATER: ELGOOG'S DEMO WASN'T REAL-TIME` [V · the facts owner checks the wording] |
+| **Owner · motivation** | BRANDS (ELGOOG's product film as it wanted to be seen), and a real event that was itself about media: the demo was later revealed as edited (facts #58). The stills are the edit made visible, and they claim nothing beyond it. §6.1's "pull back to the rod" stays dropped: no rod is on the record. If the facts owner logs the company's own account of how the video was made, typed prompts may appear between the stills; otherwise there are none. **Why it earns a place in the tag:** the tag is about what the year leaves on Mas's desk, and the shot hands a rival its first seconds only because of the chain it starts: a staged duck, then a staged cover that the Orb re-sweeps, then Mas verified at once. The one staged picture the Orb can't see through is him |
+| **Size** | Bezel: the dark room's monitor. The plate's monitor screen is only 96×60 native px, too small for this image, so the tag opens on an **`[OTS]` over Mas's shoulder onto the monitor**, the screen ≈ 264 native px wide (≈ 1,050 px on screen), bezel in frame. The cut-line and yard eggs move to the `[2S]` that follows. The title strip names the rival because ELGOOG was last on screen about 18 minutes earlier (sc 8) |
+| **In → out** | **In:** the film is already playing when the tag opens; a bezel leap's picture is its medium from its first frame. **Out:** the ramp or the break, the caption, and the Orb's cyan eye-light sliding onto the monitor's glass. Its doubt is the eye-light only: no tick, no narrowing. Then the `[2S]`, where its iris returns to Mas and primes its slower re-sweep of his cover |
+| **Length** | ≈ 8 s in the `[OTS]` with the ramp, ≈ 6 s with the break: ≈ +4 s or ≈ +2 s on the tag. **Fallback at 0 s, kept live:** the film plays in the `[2S]`'s background monitor as written. Use it if the stick reel shows the tag playing as a second ending, or if the room's ruling on the pilot's length says no |
+| **FILLER (now)** | **Code.** The smooth take renders in **Blender** (4.5.3 LTS, installed; EEVEE Next on the iGPU) from a scene script in E1-P2's folder: a procedural duck (a smooth body, head and beak) in clearcoat vinyl, area-light softboxes, a curved seamless sweep, a soft contact shadow and the lens's own falloff. If the GPU permission has dropped (this file's opening correction), three.js PBR on `--gl=angle` (P3's scaffolding) is the fallback. The take is matted under the pixel bezel on the grid, with whites ≤ 80%, graded within a stop of the room (brightness isn't fidelity). The title strip, the super, the ramp or break, the stills and the caption are code. **Prototype E1-P2** |
+| **FINAL (later)** | **VIDEO, in its native look:** the pilot's first outside-layer test (below). A near-raw clip inside the bezel (SYNTH, which needs the showrunner's sign-off), image-to-video conditioned on two Blender Cycles stills of the same scene rather than the filler's frames, 720p, audio off. Code keeps the title strip, the super, the exposure and the caption. Fallback 1: **BLENDER** Cycles for the whole take (a rubber duck is a short, controlled render at screen size). Fallback 2: the filler |
+| **Guardrails** | An object only: no hand, no person, no face, and no text from a model. A generic duck (no toy brand), a parody company name, no logo, and generic player and super type (no real typeface, UI or logo marks). It stays inside its bezel, so J5's bezel break and first perfect render are untouched. **For Ep3:** 3.A's "the only photograph in the dark room" becomes "the only photograph he keeps". The duck is a product film on a screen and never leaves its frame, so 3.A's J5 plant holds |
+| **Sound** | None of its own: the monitor runs sound off, as written. MM-12 december's felt line and the dark room's bed carry it |
+| **Risk of forced** | Medium: the show's first near-photoreal image, in a quiet tag, could read as a flex, and the tag could play as a second ending. Its defence is the joke (the flex is exposed as staged within two seconds, which is what the record says happened) and the chain it starts. Cut the animatic both ways; the 0 s fallback stays live |
+
+**1.D ★ · THE LANDLORD BECOMES THE ROOM, in his own house style** (sc 30, S7.02b–S7.03, Nov 20, 2023; revived from §6.1's hold, flat)
+
+| | |
+|---|---|
+| **Tier · medium** | 2, full room behind the people · **flat corporate illustration**: flat fills, rounded geometry at one corner-radius family, one soft gradient per surface lit from the bullpen's window side, soft cast shadows, drawn as vector at output resolution with no pixel grid, in the landlord's palette (slate `#5B6B8C`, window-pane blue, cloud white, one warm accent for the boxes' tape). **Generic:** no real company's design language (no translucent blur, no system typeface, no four-square mark), and no one illustration studio's figure style (no giant-limbed, tiny-headed people in unnatural skin colours) (§5.1, evoke, don't copy) |
+| **Owner · motivation** | BRANDS: MACROSOFT's house style, the landlord's own self-presentation. His character file already draws him "literally as the floor, the walls and the ceiling", and the script already turns them slate in palette steps on his three words. The upgrade completes the slate's rule: the rivals live inside frames, and the landlord needs none because he is the frame. Insider level: vector art is resolution-independent. It scales to anything, below, above and around |
+| **What stays pixel** | **Mas, his chair and his end desk** (with the two badges): the one pixel island in the landlord's picture. His contact shadow is drawn by the floor, in the floor's medium: the landlord owns even that. **Tasya stays pixel too**, because the rule is keep the character, change the world (twelve lines, 6). A caricature redrawn in his company's house style would read as the company's ad for the man, and it would add a second model sheet and a guardrails ask. The staff, a crowd of nobody in particular, redraw with their boxes and coats |
+| **Size** | Full room, ■. It was already a full-room change in the script (the palette steps), one the strip had missed, so the count doesn't rise. The band stays |
+| **In → out** | **In: his words,** on the v5 take (a5-30-06, S7.02b). On "below" the floor, on "above" the ceiling, on "around" the walls, then the staff with their boxes in three held steps, back to front. Each surface changes in two held drawings, 4 frames apart: its pixel drawing steps to the slate palette (the script's step), then the vector drawing takes its place on the stressed syllable, silhouette-matched so nothing in the room moves. **Out:** S7.03. Mas at his desk, the one pixel figure in the landlord's picture, looks straight down, and "Hello." comes from the floor. Then the hard cut to the boardroom on Tuesday night, in pixel: NopeAI's own room, a new place and day. The bullpen is pixel again at sc 31, after the deal: Mas is back, and the landlord is a landlord again |
+| **Length** | ≈ 2.6 s of change (from "below" to the last staff step), then ≈ 3.3 s held (the rest of S7.02b, and S7.03). 0 s of runtime |
+| **FILLER = FINAL** | **CODE.** Vector paths at output resolution through an additive path-drawing module, the room redrawn from the bullpen plate's layout (`rooms/bullpen.ts`, its `walkout` variant), and about six vector staff figures with boxes. A static drawing with no camera move, so 11.A's first perspective camera stays reserved (R9). **Prototype E1-P3** |
+| **Guardrails** | Parody name and palette only; no real company's design system or type. Mas and Tasya stay drawn in pixel. Nothing photoreal |
+| **Sound** | Tasya's Rhodes floor already takes a chord on each of "below", "above", "around". The room's air changes medium with the picture: on "around" the bullpen's murmur and packing rustle thin in held steps to a clean, airless corporate room tone (a soft HVAC hush, no rustle), and his key ring jangles once from inside the wall. "Hello." comes from under Mas, low and close |
+| **Staging note** | 5.1's optional podcast boom and the redraw would be two stagings on one quote. Recommended: cut the boom if 1.D is taken (the board artist was already allowed to cut it) |
+| **Risk of forced** | Medium-low: 0 s, a door with a visible cause (his words), a joke already on the page, and one full-room change about 20 minutes in (at v5's lengths), well away from the Cancel stretch. The risk is vector reading as a cheaper medium than pixel, as clip art. E1-P3 tests it with a premium bar. It belongs to the Act Four pass, after its stick reel is approved |
+
+#### Evaluated and not taken
+
+| Candidate | Call | Why | What would bring it back |
+|---|---|---|---|
+| **NESNEJ's keynote stage, near-photoreal with the pixel figure on it** (1.C revived) | Held | The script stages NESNEJ at the rooftop signing table with a register (sc 17), not on a stage, so it needs new staging. A full-frame near-photoreal place outside any screen would be the season's first photographic world, where the bible keeps the realest picture on screen for the machine, inside a frame, until J5. It would also stack on sc 17's LEDGER and the hairline plant in the midpoint act-out, and the register gag already lands in pixel (test 3) | A later INVIDIA keynote beat where the rendered stage is itself the story, at bezel size on a screen |
+| **SYDNEY's clingy confession as a shoujo-anime pass** | Declined | Guardrails X1: "Romance metaphors stay between companies and never involve Mas." The real confession was to a journalist, about his marriage (X1 again). The genre's grammar is its shorthand (sparkle, screentone flowers, blush), which §5.3 test 5 bans, and it would re-draw a clingy-ex gag in the clingy-ex genre's medium, which the same test bars. HD anime keeps its one home, 10.C. The held two-shot and her fixed 😊 already carry the beat | — |
+| **The class photo as a real photographic print of pixel people** (sc 13 [#15]) | Declined | It would put the season's first photographic object into the world's own place, outside any screen, before 3.A's photo and J5. And the ladder's first rung would top its later ones (7.H's flash-print, 12.C's pixel print with cut lines). The print stays pixel, the ladder's plain first rung, printed by the flash's white step that's already there | 12.C's near-photoreal photograph with paper cut-outs, only if J5 is cut (A4, as booked) |
+| **The descent as a low-poly 3D cutaway** (sc 6 [#6], the outline's proposed "drastic tier") | Declined | R9: the pixel world first moves in perspective at 11.A, the season's thesis image (the flat world gains a side only when the machine builds its successor), and 9.A's orthographic depth is its first step. Ten minutes into the pilot, it would be spent on an odometer and become a transition. The vertical scroll already carries the scale | **The free version, 0 s:** the scroll in flat parallax layers (pipes, slab, back wall at different whole-pixel rates), with no perspective |
+| **The light switch as CLOD's exit** (this slate's first draft) | Cut | A prop that existed only to serve the style change, which is what "forced" means. It also landed on "Addendum.": Mario's joke is that he answers a launch with paperwork, and a hand on the switch made him a man trying to un-launch, two jokes on one word | — |
+| **J1's certificate in place of the GLYPH dissolve** | Returned to style-jumps | See J1 above | A blind read of the stick reel cut both ways, if the room still wants it |
+| **A smoothing upscaler (xBR / hqx) as the copy's look** | E1-T1's comparison only | One drawing run through a filter; an emulator setting; blur at phone size (1.I) | E1-T1's blind read preferring it |
+| **P2's 15 fps stutter and 8×8 wobble; a connection warning on his side** | Cut | Invisible on figures that move on 2s and 4s; the four stunned faces are the design (1.G) | — |
+| The EMIT cover as a painted portrait (sc 32) | Declined | 6.J holds the painted cover (Ep6) and 4.F repaints his portrait (Ep4). The Orb's slower re-sweep carries the joke in pixel | 6.J |
+| P5 STREAM chrome on DevDay (sc 22) | Not booked | It would be a third device in Act Three's monitor run, and the odometer and "We love you guys." read in pixel | OSD size, if the animatic asks |
+| 1.B Kram's leak in low-poly; 1.D in perspective | Held, as in §6.1 | 1.B plays at 5.B. 1.D plays flat (above); a perspective version still waits for 11.A (R9) | — |
+
+#### The reserved reveals stay reserved
+
+- **Ep11's first perspective camera (11.A):** kept. The descent stays flat, and 1.D's vector room is a static drawing with no camera move.
+- **Ep12's photographic sky (J5):** kept. The pilot's only near-photoreal image is an object inside a monitor, exposed as staged, and the sky's crack (sc 17) stays a pixel hairline, J3's plant.
+- **Why breaking either wouldn't play better:** both reveals are the frame failing, and the pilot is where the audience learns there's a frame. Break one here and the finale loses its rule, while the pilot gains a transition it doesn't need.
+
+#### The register strip, re-counted (Ep1, script scenes, Act Four 5.1)
+
+sc 2 FREEZE ■ · sc 3–4 F1.1 1-BIT ■ · the intro and the title card (fenced) · sc 9 LEDGER in the TV's ticker □ · sc 11 1.A clay in the pane □ · sc 14 P3 on his phone □ · sc 15 1.F P3 ■ + 1.I the copy □ · sc 16 the poster run [GFX] ■ · sc 17 LEDGER ■ + the hairline □ · sc 18 masked GLYPH □ · sc 21 the copies in 1.I's look □ · sc 25 THE PLAN ■ · sc 26 1.G CALL □ + the masked GLYPH dissolve □ · sc 26A F1.2 EARLY-WEB16 ■ · sc 27 1.G's neon on their laptops □ + 1.K CCTV on the wall screen □ · sc 30 1.D the landlord's house style ■ · sc 32 1.H in the monitor □
+
+- **≈ 8 ■ in about 23 minutes,** one over the guide's 5–7. The count doesn't rise with this slate: sc 30's palette steps already turned the whole bullpen, and the earlier strip missed them. §6.14's Ep1 row reads about 5 because it also leaves out the poster run and F1.2. The house name cards (1-beat 2-tone freezes) are grammar and aren't counted.
+- **Why one over plays:** the guide's real warning is density, "more than about three in any four beats". sc 30's change sits alone in Act Four's last movement, about 6 minutes after F1.2 at v5's lengths.
+- **The densest stretch is still sc 15–17:** P3, the poster and LEDGER, three ■ in four beats (#16–#19). Each is short and bridged, which puts it at the guide's edge. If it plays busy, 1.F shrinks to OSD size first. If sc 30 plays busy, 1.D falls back to the script's palette steps (still ■).
+
+#### How the flow and the newcomer read survive it
+
+- **No sequence leaves its room.** Every new medium but one is inside a frame already on screen (the pane, the phone, the tile, the monitor), so the band never moves and the viewer is never stranded between registers. The exception, sc 30, changes the room's owner on his own words while Mas stays put.
+- **Every door has a visible cause** ([§11.5](#115-what-the-four-taught), lesson 2): the launch light's clunk, the broadcast's own cameras on a match cut, his words ("below, above, around"), a film already playing on a monitor.
+- **Sound never drops into a hole.** Each medium rides its scene's cue and bed: MM-04 through the clay, MM-20 under the broadcast, Tasya's floor under the redraw, MM-12's felt line under the silent film.
+- **Each one makes the story clearer to a newcomer:**
+  - the clay says CLOD is a product
+  - the caption and the finer copy say which LAHTNEMULB is the machine
+  - the neon proves "That is just him."
+  - the arrow on Cancel (4.2's fix) says who fired him, and the GLYPH dissolve rhymes his fall with the Orb's scan
+  - the room redrawing says who owns the building
+  - the named film, its exposure and the caption say the rival faked its demo
+- **Insiders get a second level:** CLOD 1 launching the same day as GTP-4, the hearing opened in a cloned voice, a copy with more pixels than the man, vector art that scales to anything, the duck.
+- **Runtime:** ≈ +4 s, or ≈ +2 s with the break (the duck's `[OTS]`); everything else rides existing shots. With Act Four measured at 8:38.5 (Acts One to Three still estimated from word counts), the story clock is ≈ 22:18, about 1:03 past the top of its 20:45 ± 0:30 band, so the duck's 0 s fallback stays ready.
+- **Stick figures first** ([SHOWRUNNER-NOTES](../production/SHOWRUNNER-NOTES.md), 2026-09-26): each slate moment goes into its stick-figure reel as a labelled placeholder at its planned length (`CLAY`, `BROADCAST`, `COPY`, `HOUSE STYLE`, `FILM → STILLS`), so the flow is judged with them in.
+- **The prototypes are look samples.** Their timing comes from the stick reel's takes wherever a reel exists (Act Four's v5), and otherwise from the script's bars. A later re-timing of the shot doesn't call for a re-render unless the look changes.
+
+#### Three prototypes now, and one look test (fully programmatic fillers)
+
+**Why these three.** Each samples a different medium the pilot promises, on rooms, cast and kits that already exist, so none waits on a stick-figure approval:
+- **E1-P1 (1.A):** a brand medium, clay.
+- **E1-P2 (1.H):** the near-photoreal film in a bezel, whose scene the outside layer will reuse.
+- **E1-P3 (1.D):** a full-room flat vector change around pixel people, on Act Four's recorded takes.
+
+**E1-T1**, the copy's look test (1.I), is a blind read of stills and one short loop rather than a moving sample of range, so it runs first and sits outside the three. It decides sc 15 and sc 21, and it's the slate's biggest "reads as a bug" risk. The old p7 (the call told twice) is dropped: it sampled shots the stick reel is timing (the reel measures 3.69 s from click to buzz where p7 planned 4.0 s), and its lead element was J1, now returned. The 6 s board's-side neon clip (1.G) follows the Act Four stick approval. Together that's clay, near-photoreal, flat vector and pixel density.
+
+**Shared spec** (as §7.0, with these changes):
+- 1920×1080, 24 fps. `p` is the prototype's frame. On the 96 BPM grid (a beat is 15 f, a bar 60 f) where the moment has no stick reel yet (E1-P1, E1-P2); on the v5 takes' frames where it has one (E1-P3).
+- Folders `studio/src/dev/range/ep1-p1/`, `ep1-p2/`, `ep1-p3/` and `ep1-t1/`, each with an `entry.tsx` on `makeRoot`. Outputs go to `out/range/ep1/`: `ep1-p1.mp4`, `ep1-p2.mp4` (A, the ramp) and `ep1-p2-b.mp4` (B, the break), `ep1-p3.mp4`, and E1-T1's `ep1-t1-sheet.png`, `ep1-t1-blind.png` and `ep1-t1.mp4`. Each clip gets a contact sheet and an uncaptioned blind sheet beside it.
+- Every shared plate, cast file and kit, P3's CLOD and the v5 takes are **imported read-only**. Nothing in `src/episodes/**`, `src/reel/**`, `dev/jumps/**`, `audio/ost/**`, `audio/theme/**` or `out/reel/**` is edited, and anything added to `src/shared` stays additive.
+- **Backends:** E1-P1 renders on the iGPU with `--gl=angle`, after the one-frame probe prints the WebGL renderer. E1-P2's take renders in Blender (EEVEE Next on the iGPU; three.js on `--gl=angle` as the fallback), and its composite renders on the CPU. E1-P3 and E1-T1 render on the CPU. One backend per render, `--concurrency=4` at most.
+- **Disk:** about 6.2 GB was free at 15:20. Each mp4 stays under about 30 MB, no frame sequence is kept (Blender's PNGs are deleted after one intermediate encode under 20 MB), scratch is deleted, and work stops if free space falls under 5 GB.
+- **Temp sound:** read-only throughout. MM-04 and MM-12 have no renders yet (no track folders under `audio/ost/tracks/`), so the builder renders temps of them with the OST engine into its own scratch and labels them temp. Voices are the stock Kokoro casting presets ([CASTING](../../audio/voices/CASTING.md)), none chosen or tuned toward a real person. E1-P3 uses Act Four's recorded v5 takes. CLOD gets a stock pack, logged in the voice plan. No external API is called.
+- Each clip opens and closes in pixel, with its door and its exit inside it. **Review:** a blind read at full frame and at 480×270 first, then the showrunner's approval gate.
+
+**E1-P1 · CLOD UNDER ITS LAUNCH LIGHT** (1.A) · 600 f (25 s)
+
+| | |
+|---|---|
+| **Moment** | sc 11, the split-screen duel (Mar 14, 2023), from phrase 1's second bar to the cut to sc 12. It compresses phrases 2, 3 and 4 (4 bars each) to 2 bars each; the episode's clay runs ≈ 30 s, this sample's 15 s. If Mario's temp take runs past p176, the clip opens a bar earlier (on phrase 1's downbeat) and every later frame shifts by 60, rather than squeezing the take |
+| **Medium** | Claymation for CLOD alone, in the right pane; everything else pixel, band on screen |
+| **Entry → exit** | In: the can-light slams on with "You're absolutely right!" (p180). Out: the cut to sc 12 (p540). No switch |
+| **Folder · output** | `studio/src/dev/range/ep1-p1/` · `out/range/ep1/ep1-p1.mp4`. If R24 is ruled yes, a second cut, `ep1-p1-b.mp4`, with the whole pane in clay, and not before the guardrails owner's OK |
+
+| p | Beat | Picture | Sound |
+|---|---|---|---|
+| 0–179 | bars 1–3 | `[SPLIT]`, pixel, band on screen. LEFT: the bullpen as a demo stage; Gerg holds up the napkin and photographs it (p30); Mas at his end desk behind, his glass by his hand. RIGHT: the lighthouse; Mario at the desk, finger raised, scroll trailing. In front of the desk, on a knee-high plinth, **CLOD unlit, a pixel figure** in the night rungs, its potter's wheel turning in two held drawings; beside it a stage can-light on a stand, dark. PLATE `MARIO · EX-NOPEAI · THE CAREFUL RIVAL` on his first word (p8), cleared by p96 | MM-04 (temp): the chip (left) trading bars with the quartet (right); the lighthouse bed (the lamp's gear, paper) and the bullpen's bed under the left. MARIO, to CLOD: "Memo, on race dynamics. Point one: we must not launch on the same day as them. That's how a race starts." (from p6) |
+| 180 | bar 4, 1 | **In: the launch.** The can slams on. Its pool is a warm cone stepped on the grid in three rungs over the pixel floor, and **in it CLOD is clay**: the first key of its bow at output resolution, thumbprints catching the key, the wheel spinning. Its alpha shadow drops into the pool; Mario's near side steps up one rung (amber). The clay's silhouette matches p179's pixel figure exactly | The can's clunk, on the downbeat |
+| 180–239 | bar 4 | The bow on 2s. CLOD: "You're absolutely right!" (p184–220), with three replacement mouths pressed into the clay. PLATE `CLOD 1 · SAME DAY` at p195, cleared by p235. LEFT: the napkin swaps into a website (p210, p217) | A close, dry clay press on the bow's down key (p188); the wheel's whirr in the pool; one felted-upright phrase doubling the quartet under the bow |
+| 240–299 | bar 5 | Mario looks up from the scroll to the split line in two drawings (p240, p246): the same day. MARIO: "Addendum." (p262–280), **the light still on.** CLOD holds its bow's last key: the hold begins, its surface boiling on 2s. LEFT: the bullpen cheers in two held frames (p285) | The quartet's held chord under "Addendum." |
+| 300–419 | bars 6–7 (phrase 3, condensed) | LEFT: Mas holds up his phone; his post pops over the pane in his own lowercase, `"…still flawed, still limited…"` (p305); the bullpen reads it on their phones and cheers harder (p360). RIGHT: Mario reads the same post and adds a line to the scroll (p330–390). **CLOD in clay throughout:** the hold's four boil surfaces in a hashed order, the thumbprints pinned, the wheel turning, the pool and Mario's warm side holding | MM-04 thins to the quartet's held chord under the post; the wheel's whirr, low |
+| 420–539 | bars 8–9 (phrase 4, condensed) | Mario unrolls a second, longer scroll; it keeps unrolling across the split line into the left pane (p420–480), and its end lands on Gerg's desk (p480). Gerg, still typing, photographs it like a napkin (p495); it becomes a website (p505, p512). RIGHT: Mario looks at the empty spindle in his hand (p525). CLOD holds its bow in the pool, lit | MM-04's phrase 4, both instruments back up |
+| 540–599 | bar 10 | **Out: the cut to sc 12.** `[OTS]` over Mas's shoulder at his desk, night, pixel (the bullpen plate on its night ramp): his monitor lights with the letter's header, `PAUSE GIANT AI EXPERIMENTS`; `RAIL: MAR 22, 2023` types on (p544). Held to p599 | MM-17, low, from the cut (temp); the bullpen's night bed |
+
+- **Premium criteria.** It commits to claymation's rules for the whole stretch: 12 fps on 2s for every move; the boil is replacement surfaces on 2s with the thumbprints and tool drag pinned (the surface shifts, the prints stay), never noise; replacement mouths, never morphs; miniature depth of field at puppet scale; AO and the alpha shadow in contact with the pool; the pool stepped on the grid so its edge belongs to the pane. A stop-motion animator would accept the bow and the hold, and the clay looks at least as finished as the pixel lighthouse beside it.
+- **Passes if** a blind reader, from one frame of p195–530, says a clay product or puppet has just launched and the people are drawn, and nobody says "filter", "effect" or "glitch"; at 480×270 the hold reads as a puppet on hold, not a render error or a loop; and the cut to sc 12 reads as a scene change, not the clay failing.
+- **Fails if** CLOD reads as a pasted-in 3D asset (its edge or light not belonging to the pane), the boil reads as flicker or visibly loops, the spill turns Mario red, the pool's edge smears, or the plate collides with the scroll.
+- **Reuse:** `shared/pixel/rooms/lighthouse.ts`, `rooms/bullpen.ts`, `cast/mario.ts`, `cast/gerg*.ts`, `cast/mas-medium.ts`, `dev/range/p3/gl/clod.ts`, `pixel/ui.ts` (the band).
+- **New:** the can-light on its stand, the stepped pool, the bow's four clay keys on 2s, the hold's four boil surfaces, three replacement mouths, the pixel CLOD matched to the clay's first key, the condensed phrase 3–4 staging, and sc 12's first frame.
+
+**E1-P2 · WHAT THE QUACK** (1.H) · A: 264 f (11 s) · B: 216 f (9 s)
+
+| | |
+|---|---|
+| **Moment** | The tag, sc 32 (Dec 6, 2023), from the `[OTS]` onto the monitor to the `[2S]` and the magazine's whir |
+| **Medium** | Near-photoreal product film inside the dark room's pixel bezel; everything around it pixel, band on screen |
+| **Entry → exit** | In: the film already playing (p0). Out: the ramp (A) or the break (B), the caption and the Orb's eye-light on the glass, then the `[2S]` |
+| **Folder · output** | `studio/src/dev/range/ep1-p2/` (the Blender scene script in `ep1-p2/blender/duck.py`) · `out/range/ep1/ep1-p2.mp4` (A) and `ep1-p2-b.mp4` (B) |
+
+| p | Beat | Picture | Sound |
+|---|---|---|---|
+| 0–71 | bar 1 → bar 2, 1 | `[OTS]` over Mas's shoulder onto the dark room's monitor, bezel in frame, the screen ≈ 264 px wide; the rack's LEDs ticking at frame right; the Orb's cyan rim at his shoulder; the band on screen. **The film is already playing, smooth, on 1s:** a yellow rubber duck on a pale seamless desk in soft product light, one slow macro arc from three-quarter to profile, focus falling off behind it, one specular sliding along the vinyl, a faint reflection in the desk. Across the film's top edge, the player's generic title strip: `ELGOOG DEMO · DEC 6` (from p0). At p18 the film's own super sets, lower left, in a generic sans: `"What the quack!"` [V]. Around the bezel nothing moves on 1s: the LEDs tick in eighths, and Mas breathes on 2s | The monitor runs sound off. The dark room's bed (the rack's fans, the LED ticks) and MM-12 december's felt line (temp) |
+| **A** 72–119 | bar 2, 1 → 4 | **The ramp.** The same move carries on, but on 2s (p72–95), then on 4s (p96–111), then on 8s (p112–119), each hold a clean still of the take | — |
+| **A** 120–131 | bar 3, 1 | The screen lays the last three holds side by side, a strip of stills with hairline gaps. The super stays on the first; the title strip stays | — |
+| **A** 128 | — | The Orb's cyan eye-light slides onto the monitor's glass. Nothing else on the Orb moves | — (no tick) |
+| **A** 132–191 | bar 3, 2 → bar 4, 1 | The monitor's own caption types under the stills in generic chyron type, `LATER: ELGOOG'S DEMO WASN'T REAL-TIME` (p132–152), and holds to read to p191 | — |
+| **A** 192–263 | bar 4, 1 → bar 5, 2 | `[2S]` Mas and the Orb at the desk; three marks in the wood; the monitor small behind them, still holding the stills. The Orb's iris steps from the monitor back to Mas in three drawings (p204). The rack's slot starts to whir (p240): the magazine's delivery. Land on Mas and his glass, its water line flat | The slot's whirr (p240) |
+| **B** 72 | bar 2, 1 | **The break.** The smooth film breaks at once: the screen holds three stills of the take side by side (its frames p0, p36 and p71), hairline gaps, the super on the first, the title strip kept | — |
+| **B** 80 | — | The Orb's eye-light slides onto the glass | — |
+| **B** 84–143 | bar 2, 2 → bar 3, 2 | The caption types (p84–104) and holds to p143 | — |
+| **B** 144–215 | bar 3, 2 → bar 4, 3 | The `[2S]` as in A (the iris at p156, the whir at p192) | The slot's whirr (p192) |
+
+- **Premium criteria.** It commits to the product film's rules: one unbroken camera move on 1s, soft area light with a real falloff, a clearcoat specular that slides rather than flickers, a contact shadow and a faint desk reflection, lens depth of field native to the film, and a grade that sits within a stop of the room (whites ≤ 80%), because a film on a monitor in a dark room can't out-glow the monitor. A commercial product shooter would accept the frame, and the duck looks at least as finished as the pixel room around it.
+- **Passes if** a blind reader, from one frame of p0–71, says "a product video" or "an ad" (not "a filter") and can say whose (ELGOOG) from the title strip; says "it's fake" or "it was edited" after the exposure; can read the title strip and the caption at 480×270. **Between A and B:** the version whose readers say "faked" sooner wins; a tie goes to B (shorter).
+- **Fails if** the duck reads as a cheap toy render (the plastic too glossy, no contact), the ramp reads as a frame-rate demo or a playback glitch, the film glows brighter than the room's monitor could, the text is too small at phone size, or the tag reads as a second ending (then the 0 s fallback).
+- **Reuse:** `rooms/darkroom-plate.ts` and `rooms/darkroom.ts`, `cast/mas-medium.ts`, `cast/orb-medium.ts`, `pixel/ui.ts`, and P3's GL scaffolding and probe (for the fallback).
+- **New:** the `[OTS]` monitor drawing, the Blender scene script (the procedural duck, sweep, lights and camera arc; EEVEE for the take, Cycles for the conditioning stills), the title strip, the super, the caption, and the strip of stills. **The two Cycles stills at the arc's ends and the screen's matte are the inputs the outside-layer test reuses.**
+
+**E1-P3 · BELOW, ABOVE, AROUND** (1.D) · 437 f (18.2 s)
+
+| | |
+|---|---|
+| **Moment** | sc 30, THE RETURN, the landlord beat (Nov 20, 2023): S7.02, S7.02b and S7.03 at their v5 lengths (5.0 s, 8.58 s, 2.63 s), then 2 s of S7.05 as the exit |
+| **Medium** | Flat corporate illustration for the room and the staff; Mas, his desk and Tasya pixel; band on screen |
+| **Entry → exit** | In: "below" (p246). Out: "Hello." from the floor (p354), then the hard cut to the pixel boardroom (p389) |
+| **Folder · output** | `studio/src/dev/range/ep1-p3/` · `out/range/ep1/ep1-p3.mp4` |
+| **Timing source** | The v5 takes as the v5 reel places them (`show/reel/ep01-act4-v5.json`): a5-30-05 at S7.02 + 2.0 s, a5-30-06 at S7.02b + 0.3 s, a5-30-07 at S7.03 + 1.1 s. p0 is reel 412.0 s |
+
+| p | Take | Picture | Sound |
+|---|---|---|---|
+| 0–119 | a5-30-05 (p48–113) | `[W]` S7.02, the bullpen by day, pixel (`rooms/bullpen.ts`, `walkout`): a packed box on every desk, the staff in coats with boxes in arms. MAS small at his end desk, left, the `GUEST` lanyard and the `MACROSOFT` badge side by side before him. TASYA mid-floor, hands clasped, delighted. MAS: "what happens to you if nopeai disappears?" | The bullpen by day (murmur, packing rustle, keyboards); Tasya's Rhodes floor pre-lapping under the violin's decay |
+| 120–245 | a5-30-06, "Oh, we'd be fine." (p128–156) · "We have all the IP rights and all the capability." (p167–232) · "We are" (p241) | `[MCU]` S7.02b, TASYA right third, pixel, lip-synced to the take; the packed floor behind him, pixel | The floor pad under him |
+| 246 · 250 | "below" (p246) | **The floor.** p246: the floor's pixel drawing steps to the slate palette. p250: the vector floor takes its place, silhouette-matched: flat slate, one soft gradient toward the window, soft shadows under every desk and box | The floor's first chord |
+| 269 · 273 | "above" (p269) | **The ceiling**, the same two drawings | The second chord |
+| 292 · 296 | "around" (p292) | **The walls**, the same two drawings | The third chord. From p296 the murmur and rustle thin in three held steps (p296, p300, p304) to a clean corporate hush |
+| 300 · 304 · 308 | "them" (to p307) | **The staff with their boxes,** back row to front, in three held steps: rounded vector figures in coats, boxes in arms, simple faces, standing on the landlord. Tasya stays pixel, delighted | — |
+| 309–325 | — | The room holds in the landlord's style; Tasya's smile | His key ring jangles once, from inside the wall (p312) |
+| 326–388 | a5-30-07, "Hello." (p354–368) | `[MCU·PF]` S7.03: MAS, left, at his desk, looking straight down at the vector floor. **He, his chair and his desk are the one pixel island;** his contact shadow is a flat, soft oval drawn by the floor. The vector bullpen behind him in flat silhouettes one value step lighter (the genre's own depth cue, no blur). He holds the look | TASYA (O.S., from the floor under him, warm, low and close): "Hello." The chord rings under it |
+| 389–436 | — | **Out.** Hard cut to S7.05, INT. NOPEAI BOARDROOM — TUESDAY NIGHT, pixel: MADA among the fires, in the only chair not burning. `RAIL: NOV 21, 2023 · ~10 PM PT` from p394 | The boardroom's room, as the v5 mix has it |
+
+- **Premium criteria.** It commits to flat illustration's rules: flat fills with one gradient per surface, all lit from the bullpen's window side so Mas's pixel rim still makes sense; one corner-radius family; soft cast shadows under every desk, box and figure; clean joins with no stray anti-aliasing seams against the pixel figures; a limited palette in the landlord's colours. An editorial illustrator would accept the room as finished work, and it looks at least as finished as the pixel bullpen it replaced. The change never moves the layout: every vector surface lands on its pixel silhouette.
+- **Passes if** a blind reader, from one frame of p309–388, says the company (or "the landlord", or "he") has taken over the room and that Mas is the one thing left; nobody says "filter", "glitch" or "clip art"; the change reads as three steps on three words; and at 480×270 Mas still reads as pixel and apart.
+- **Fails if** the vector reads cheaper than the pixel, the room's layout shifts, Tasya reads as pasted onto a new background, the staff read as one known illustration style or company, or the change reads as a transition to a new scene.
+- **Sound build (read-only):** the three v5 takes at their v5 placements; the M7a music render at the v5 offsets (`audio/ost/tracks/e01-act4-v4/render/e01-act4-v4-s7s8-the-return-underscore.wav`, reel 411.5 s = source 6.33 s, −2.8 dB); the bullpen's day bed rendered by the v5 builder's `bed.py` into the prototype's own scratch; plus the new room-tone change and the key ring, and three Rhodes chords on the word frames if the render doesn't already put one there. Levels checked against the v5 mix's slice at 412.0–430.2 s.
+- **Reuse:** `rooms/bullpen.ts` (the `walkout` variant, and its layout for the silhouette match), `cast/tasya-speak.ts`, `cast/mas-medium.ts`, `cast/mada-medium.ts`, `rooms/boardroom.ts` and `boardroom-plate.ts`, `pixel/ui.ts`, and the v5 takes.
+- **New:** the additive vector path module, the vector floor, ceiling, walls, desks and boxes, about six vector staff figures, the two-drawing steps, and the room-tone change.
+
+**E1-T1 · THE COPY'S LOOK** (1.I) · a look test: two stills and a 4 s loop, about an hour
+
+- **Question:** does the copy read as "a better copy" or as "a bug", in density or in smoothing?
+- **Build:** a stand-in, since no LAHTNEMULB sprite exists yet: one existing medium sprite (for example `cast/gerg-medium.ts`), drawn twice side by side in a neutral pixel room. On the left, the matte original at 4× nearest-neighbour. On the right, its twin in one of three looks:
+  - **A,** 2× density: a palette-true EPX / Scale2x upscale, hand-cleaned, with a stepped sheen.
+  - **B,** 4× density: the same at 4×.
+  - **C,** xBR 4× smoothing with a gradient sheen.
+- **Outputs:** `ep1-t1-sheet.png` (A, B and C labelled), `ep1-t1-blind.png` (the three pairs unlabelled, in shuffled order, at 1920×1080 and at 480×270), and `ep1-t1.mp4` (4 s: both figures breathing on 2s, so the sheen's behaviour in motion is seen). Folder `studio/src/dev/range/ep1-t1/`.
+- **Read:** "Which one is the copy? What's different about it?"
+- **Keep** the look with the most "copy / sharper / more detailed" answers and no "blurry / bug / filter / emulator" answers at phone size. A tie goes to density, and to 2× over 4× (cheaper to hand-clean). The winner sets sc 15's clone and sc 21's deepfakes.
+
+#### The first outside-layer test (on paper): 1.H, the duck
+
+**The pick: ELGOOG's duck film (1.H), once E1-P2 is approved.** Nothing is spent until the showrunner says go. Why this one:
+- **Its final look is what video models make natively:** a near-photoreal object in product light. That's the re-scoped primary use ("styles beyond what pixel art can do"), with no pixel conversion.
+- **It has no guardrail exposure:** no person, face, hand, voice, likeness, real product or model-made text. The others don't fit. CLOD has a face and a performance (R22 puts its options to the showrunner). The anchor, the clone and the call are people, or code by nature. Vegas (E1-4) is the secondary, pixel-matched use.
+- **It's the smallest stake that answers the open SYNTH ruling** (R6, GENAI §10): about 3 s inside a bezel, where small drift is forgiving, and a filler that ships if it fails.
+- **It tests the whole route end to end:** image-to-video from conditioning stills, provenance, the gate, and the bezel composite in its native look.
+
+**The plan:**
+- **The key:** the Runway key the showrunner added, with its small number of credits. The ElevenLabs key isn't part of this test.
+- **The models:** two behind that key, as the [GENAI plan](../production/GENAI-UPGRADE-PLAN.md)'s roster lists them: **Veo 3.1 Fast** (audio off, first and last frame, 4/6/8 s, $0.10/s) and **Wan 3.0** (720p, first and last frame, $0.10/s). No third account is assumed. The roster was written 2026-09-26 and isn't re-checked in this pass (no external calls): confirm both on Runway's models page before any spend.
+- **The conditioning:** two Blender Cycles stills (CPU) of E1-P2's own scene at the arc's two ends, rendered from its scene script. Not the filler's frames, which would pull the output toward the filler's look. If a model turns out to take no last frame, condition on the first frame only. If the stills don't help, one text-to-video take framed to the matte is the third try.
+- **Generate:** 4 s at 720p, audio off, 3 takes on each model: 24 s, about $2.40 at $0.10/s.
+- **Prompts** describe only the object, the material, the light and the camera: no product, brand, person, hand or "in the style of". Moderation stays on `auto`, and every take gets a `provenance.json`.
+- **Composite** the take unconverted inside the monitor's matte, graded to the room. Code keeps the title strip, the super, the exposure (A or B) and the caption.
+- **Gate:** E1-P2's blind read again at full frame and phone size, plus the premium test against the filler. Fallback: Blender Cycles for the whole take, then the filler.
+
+#### Rulings and handoffs from 6.1a
+
+| # | Ruling | Default until answered |
+|---|---|---|
+| R20 | 1.H: ELGOOG's product film goes near-photoreal inside the monitor's bezel in Ep1, named on its player and exposed as staged within the shot. It's the pilot's only near-photoreal image | Allow, as proposed |
+| R21 | 1.I: the copy's look (finer pixel density by default; smoothing only if E1-T1 prefers it) for the machine's copies of caricatures of politicians (the clone at sc 15; the deepfake NEDIBs at sc 21) | Allow as stylized, never toward photoreal, pending the guardrails owner |
+| R22 | **CLOD's final, as a real choice for the showrunner:** (a) the one-puppet stop-motion day, a resource ask; (b) a scanned plasticine maquette (about $20), a resource ask; (c) a video model for the clay body only, its bow and its surface's movement, with code supplying the three replacement mouths and all the timing, which is how claymation mouths are made anyway; (d) the code filler as the final. The firm guardrails allow (c): CLOD is fictional, stylized, ours and not a person. Only GENAI principle 4 ("no performance from a model") weighs against it, since a strict reading counts a bow as performance; (c) keeps the principle's intent (no face, mouth or timing from a model) | The code filler until the showrunner picks. Nothing is spent |
+| R23 | The duck as the first SYNTH use (a near-raw model clip in its native look inside a bezel), and its test spend (about $2.40 of the Runway credits) | Plan only; nothing is spent until the showrunner says go |
+| R24 | 1.A's bigger option: the whole lighthouse pane in clay, Mario as a clay puppet, his scroll turning to pixel at the split line | Not taken: CLOD alone is clay. Needs the showrunner, then the guardrails owner |
+| R25 | 1.D: the landlord's house style takes the bullpen at sc 30 | Adopt in the Act Four pass's pixel animatic if E1-P3 passes its blind read, after the stick reel is approved; otherwise the script's palette steps |
+| — | J1 at the Cancel click | Withdrawn here: the GLYPH dissolve stays. J1's home is style-jumps' owner's call. If the room still wants it at the click, cut the stick reel both ways and run a blind read |
+
+| To | What |
+|---|---|
+| **The Act Four pass** (sc 24–31; H3) | **1.G told twice:** the far end's tiles one step softer on each side; on their side, the Vegas neon's chase moving behind his still tile, as the visual proof for "No. That is just him."; on his side, a plain freeze on "super." with no macroblocks and no connection warning. No stutter, no wobble. **The GLYPH dissolve stays** at the Cancel click (J1 withdrawn here). **1.K** stays at bezel size. **1.D (R25):** the landlord's house style at S7.02b–S7.03, Mas, his desk and Tasya in pixel, once the stick reel is approved; cut 5.1's optional podcast boom if it's taken. The 6 s board's-side neon clip is built after the stick approval, timed to its takes |
+| **The season revision** (Ep1's cold open, Acts One–Three and tag; H2) | **sc 11:** CLOD waits unlit; the launch light slams on with "You're absolutely right!" and stays on; CLOD holds in clay until the cut to sc 12; no switch (R24 is the bigger option). **sc 14–15:** the broadcast open; the rail carries only `MAY 16, 2023` in this scene; the lower third `SENATE JUDICIARY · HEARING`; the `[AI-GENERATED AUDIO]` caption; the chairman's plate `LAHTNEMULB · THE CHAIRMAN` in place of `OPENED WITH A CLONE`; the clone at a finer pixel density (E1-T1 decides). **sc 21:** the deepfake NEDIBs take the clone's look, and their cut paper and scissor edges retire (paper is MISANTHROPIC's). **sc 32:** the tag opens on the `[OTS]` duck film with `ELGOOG DEMO · DEC 6` and the caption `LATER: ELGOOG'S DEMO WASN'T REAL-TIME`, and the eggs move to the `[2S]`; the 0 s fallback stays live if the stick reel plays the tag as a second ending. **sc 6:** the descent stays flat (optional parallax). The outline's two proposed style moments are answered here: the clone's look is taken (as density), and the 3D descent is declined |
+| **The jump-fix pass** (style-jumps' owner) | J1's recommendation to replace the GLYPH dissolve is withdrawn here, for the reasons under J1. J1 needs a later home. If the room still wants it at the click, the stick reel cut both ways and a blind read |
+| **Ep3's owners** | 3.A: "the only photograph in the dark room" → "the only photograph he keeps" |
+| **The soundtrack pass** (H4) | CLOD's brand sound inside MM-04 for as long as the light is on (dry clay foley, the wheel's whirr, one felted-upright phrase, no pizzicato ad cue); the launch light's clunk; no switch. Sc 30's room tone changing medium with the redraw, and the key ring inside the wall. The duck film silent under MM-12 |
+| **The voice plan** | One human performer for the chairman and his clone at final (officials are never voiced with ElevenLabs); stock presets until then, tuned toward no one; CLOD's and NELEH's temp packs logged. No designed voice describes or imitates a real person |
+| **The genai plan owner** (H5) | 1.H as the first outside-layer test, on the Runway key, conditioned on Blender Cycles stills; R22's four options for CLOD; Ep1's E-codes are unchanged |
+| **The engine owner** (H6) | The density look (EPX-family start, hand cleanup, stepped sheen) as an additive module, with xBR only as E1-T1's comparison; P2's tile softness in the passes module; the vector path module for 1.D |
+| **The guardrails owner** | R21 (the copy's look on politicians' caricatures); R24's clay caricature of Mario, if the showrunner takes it. 1.D redraws no caricature |
+| **The facts owner** | The wording of `ELGOOG DEMO · DEC 6` and `LATER: ELGOOG'S DEMO WASN'T REAL-TIME`; whether the company's own account of how the duck video was made (still frames, typed prompts) can be logged. Until it is, the stills carry no prompts |
+
+#### Change log: the critic's amendments to 6.1a
+
+The critic's verdict held the core rule (Mas's world stays pixel; each rival's product in its own medium inside a frame the story already shows), its declines (SYDNEY as anime, the class photo as a real print, NESNEJ's stage, the 3D descent) and three ideas to keep: the hearing's out, the neon behind his still tile, and "the first time the show looks real, it's lying." All three are kept unchanged.
+
+| # | Amendment | Call | What changed, and why |
+|---|---|---|---|
+| 1 | Cut the light switch; CLOD stays clay until the duel ends | **Taken** | The light stays on from "You're absolutely right!" to the cut to sc 12 (≈ 30 s of clay), with a boil hold; "Addendum." plays with the light on. E1-P1 is rebuilt around it and now includes its exit |
+| 2 | The whole lighthouse pane in clay, Mario as a puppet | **Offered as R24** | A showrunner and guardrails decision, not a default. The file also notes that it bends §1.3's "clay belongs to the product only" for one pane |
+| 3 | Don't replace the GLYPH dissolve with J1 | **Taken** | The recommendation is withdrawn; J1 goes back to style-jumps' owner; the strip, the viewer list and the newcomer read now carry the GLYPH dissolve |
+| 4 | Blind-test before adopting xBR; one look per figure | **Taken, extended** | Density is the default, and E1-T1 decides. Added a second reason to retire sc 21's cut paper: paper is MISANTHROPIC's medium in §1.3. The script's own "crisper and glossier" is what density draws |
+| 5 | Clear sc 15's text pile-up | **Taken** | The rail carries the date, the lower third the place, the caption the clone, the plate `LAHTNEMULB · THE CHAIRMAN`; the banding stays light |
+| 6 | Keep the neon, drop the invisible engineering | **Taken** | No 15 fps stutter, no 8×8 wobble, no connection warning; the far-end softness and the plain freeze stay |
+| 7 | Name the rival on the film | **Taken, placed on the player** | `ELGOOG DEMO · DEC 6` sits in the monitor's generic player title strip, because a product film doesn't caption itself with a date; the super stays the film's own. The caption reads `LATER: ELGOOG'S DEMO WASN'T REAL-TIME`, pending the facts owner |
+| 8 | Test the ramp against a hard break | **Taken** | E1-P2 renders both (A and B); the faster "faked" read wins, and a tie goes to B. The Orb's doubt is its eye-light only (its tick is cut) |
+| 9 | Keep it in the tag; keep the 0 s fallback live | **Taken** | The chain (the staged duck, the staged cover, Mas verified at once) is now the stated reason; the fallback triggers if the stick reel plays the tag as a second ending |
+| 10 | Give the range a story reason and use it as the test | **Taken** | Now the slate's opening idea: every medium is somebody's own self-presentation; NopeAI's beige `research preview` button wins |
+| 11 | The landlord becomes the room | **Taken, modified** | Added as 1.D (R25). **Tasya stays pixel** as well as Mas (keep the character, change the world; a caricature in his company's house style would read as its ad for him, and it would add a guardrails ask), and Mas's desk stays pixel with him. **It isn't a new ■:** the script's palette steps were already a full-room change the strip had missed, so the count holds at ≈ 8. The sound changes medium with it, and 5.1's boom is recommended cut |
+| 12 | Keep p5 and p6, replace p7 | **Taken, modified** | Three prototype slots: E1-P1 (clay), E1-P2 (the duck), E1-P3 (the landlord, flat vector). The critic's p7′ becomes E1-T1, a look test run first, because it's a blind read of stills rather than a moving sample of range. The neon clip follows the Act Four stick approval |
+| 13 | Fix the timing contradiction | **Taken** | The prototypes are look samples; their timing comes from the stick reel's takes where a reel exists (E1-P3 uses v5's), otherwise from the script's bars |
+| 14 | The duck's route | **Taken, one correction** | (a) The GENAI plan already lists Veo 3.1 Fast and Wan 3.0 as served through the Runway API, so the plan named models behind the one key the showrunner gave. Now it says so, and asks for a check on Runway's models page before any spend. (b) The conditioning is two Blender Cycles stills (Blender is installed). (c) First frame only if a model takes no last frame |
+| 15 | Put R22's real option to the showrunner | **Taken** | R22 now lists four options, with (c), a model for the clay body only and code for the mouths and timing, stated against principle 4. The default is the filler, with nothing spent |
+| 16 | Out-of-date status | **Taken, with one correction** | The status now carries the recorded takes and the finished v5 reel (8:38.5). The critic's "≈ 22:18 against the 22:00 target" compares a story clock with a runtime: ≈ 22:18 is the story clock (≈ 1:03 past the top of its 20:45 ± 0:30 band); with the intro, the card and the credits (≈ 1:15), the pilot runs ≈ 23:33 against the 22:00 target. Acts One to Three are still estimates |
+
 ### 6.2 Ep2 · `ep1.1_her.wav` (Jan → Aug 2024)
 
 | Id | Beat | Tier · medium · owner | In → out | Length | FILLER (now) | FINAL | Status |

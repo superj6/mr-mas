@@ -1,0 +1,473 @@
+{
+ "_about": "MR. MAS cast registry for the dialogue tools (fastrec). labels: script speaker label or display name -> voice slug. voices: presets defined here (casting pass 2, 2026-09-26; see CASTING.md section 2, 'Pass 2'); every other slug comes from the Act Four presets (audio/ep01/act4/dialogue/tools/cast_a4.py) or the pass-1 picks (audio/voices/tools/cast.py, rooms stripped). bands: [Kokoro speed band, articulation guide syll/s, turn wpm guide] for voices without one in tools/v5/lines_v5.BANDS. lexicon: names -> misaki phonemes, applied by 'fastrec plan'. Stock Kokoro-82M American-English packs only; never a clone.",
+ "labels": {"MAS": "mas-manalt", "MAS MANALT": "mas-manalt", "MR. MAS": "mas-manalt", "GERG": "gerg-mockbran", "GERG MOCKBRAN": "gerg-mockbran", "ALYI": "alyi", "RIMA": "rima-tamuri", "RIMA TAMURI": "rima-tamuri", "MARIO": "mario", "NOLE": "nole", "NESNEJ": "nesnej", "RUMPT": "rumpt", "PRESIDENT RUMPT": "rumpt", "DLANOD J. RUMPT": "rumpt", "THE INTERN": "the-intern", "THE ORB": "the-orb", "NELEH": "neleh", "MADA": "mada", "TERB": "terb", "TASYA": "tasya", "TTEMME": "ttemme", "ADELINA": "adelina", "TILED EMPLOYEE": "tiled-employee", "PANEL HOST": "panel-host", "RADNUS": "radnus", "NIRB": "nirb", "EGAP": "egap", "SYDNEY": "sydney", "CHATGTP": "chatgtp", "CLOD": "clod", "OIGNEB": "oigneb", "SIRRAH": "sirrah", "PHOTOGRAPHER": "photographer", "A WHITE HOUSE PHOTOGRAPHER": "photographer", "NEDIB": "nedib", "EOJ NEDIB": "nedib", "PRESIDENT NEDIB": "nedib", "LAHTNEMULB": "lahtnemulb", "SUCRAM": "sucram", "A SENATOR": "a-senator", "REMUHCS": "remuhcs", "LAHTNEMULB (THE CLONE)": "lahtnemulb-clone", "THE CLONE": "lahtnemulb-clone", "DEEPFAKE NEDIB": "deepfake-nedib", "DEEPFAKE NEDIB #2": "deepfake-nedib-2"},
+ "voices": {
+  "panel-host": {
+   "name": "PANEL HOST",
+   "cand": "c-sarah-puck-host",
+   "blend": {"af_sarah": 0.45, "am_puck": 0.55},
+   "speed": 1.01,
+   "chain": [
+    {"fx": "hpf", "hz": 90},
+    {"fx": "pitch", "st": 0.0},
+    {"fx": "lowshelf", "hz": 200, "db": 1.0},
+    {"fx": "peak", "hz": 2800, "db": 1.5, "q": 0.9},
+    {"fx": "comp", "th": -22, "ratio": 2.5, "att": 5, "rel": 90}
+   ],
+   "female": null,
+   "product": false,
+   "grade": {"af_sarah": "C+", "am_puck": "C+"},
+   "lane_hz": [145, 175],
+   "brief": {"function": "the cold open's first voice: a summit host with one last question. Seen only as a hand; never gendered.", "pitch": "a neutral middle lane, about 145-175 Hz, moderate range", "pace": "150-170 wpm, warm and easy", "texture": "a practised host through the hall PA (the PA chain is the device; the hall is a mix send)", "attitude": "warm, friendly, wrapping up", "avoid": "a gendered read either way; a game-show push; any real host's voice"},
+   "measured": {"median_f0_hz": 158.3, "f0_range_st": 10.5, "articulation_median_sps": 4.44, "worst_cer": 0.059, "min_recall_nonames": 1.0},
+   "cast": "casting pass 2, 2026-09-26 (CASTING.md section 2, Pass 2)",
+   "audition_speed": 1.0
+  },
+  "radnus": {
+   "name": "RADNUS",
+   "cand": "d-echo-fenrir-courteous-up2",
+   "blend": {"am_echo": 0.6, "am_fenrir": 0.4},
+   "speed": 0.95,
+   "chain": [
+    {"fx": "hpf", "hz": 70},
+    {"fx": "pitch", "st": 2.0},
+    {"fx": "lowshelf", "hz": 180, "db": 1.5},
+    {"fx": "peak", "hz": 350, "db": -1.5, "q": 1.0},
+    {"fx": "peak", "hz": 3000, "db": 0.5, "q": 0.9},
+    {"fx": "highshelf", "hz": 7000, "db": -1.0},
+    {"fx": "comp", "th": -24, "ratio": 2.0, "att": 10, "rel": 140}
+   ],
+   "female": false,
+   "product": false,
+   "grade": {"am_echo": "D", "am_fenrir": "C+"},
+   "lane_hz": [110, 135],
+   "brief": {"function": "the rival CEO, 'Politely On Fire': he apologizes to the fire, and 'Congratulations' is the most threatening word in the show", "pitch": "a light-mid baritone, about 110-135 Hz, narrow to moderate (6-10 st)", "pace": "130-150 wpm: gentle, courteous, unhurried", "texture": "soft and warm, no edge, close", "attitude": "sincere courtesy over a siren; the smile never changes", "avoid": "any accent (no accent play for anyone, guardrail X10); smugness or menace; a whisper"},
+   "measured": {"median_f0_hz": 129.3, "f0_range_st": 11.1, "articulation_median_sps": 4.05, "worst_cer": 0.0, "min_recall_nonames": 1.0},
+   "cast": "casting pass 2, 2026-09-26 (CASTING.md section 2, Pass 2)",
+   "audition_speed": 0.94
+  },
+  "nirb": {
+   "name": "NIRB",
+   "cand": "c-eric-liam-curious",
+   "blend": {"am_eric": 0.5, "am_liam": 0.5},
+   "speed": 1.05,
+   "chain": [
+    {"fx": "hpf", "hz": 90},
+    {"fx": "pitch", "st": 1.0},
+    {"fx": "peak", "hz": 300, "db": -1.5, "q": 1.0},
+    {"fx": "peak", "hz": 4500, "db": 2.0, "q": 0.9},
+    {"fx": "comp", "th": -22, "ratio": 2.5, "att": 6, "rel": 100}
+   ],
+   "female": false,
+   "product": false,
+   "grade": {"am_eric": "D", "am_liam": "D"},
+   "lane_hz": [125, 150],
+   "brief": {"function": "a founder summoned from the crypt by the siren, asking after the thing he built", "pitch": "a bright-mid tenor, about 125-150 Hz", "pace": "150-170 wpm, eager, a little breathless from the stairs (in the words, not a breath effect)", "texture": "dry and crisp", "attitude": "curious, earnest, slightly out of the loop", "avoid": "any age coding (he is not 'old', he is back); any accent; any real voice"},
+   "measured": {"median_f0_hz": 143.7, "f0_range_st": 14.1, "articulation_median_sps": 4.56, "worst_cer": 0.0, "min_recall_nonames": 1.0},
+   "cast": "casting pass 2, 2026-09-26 (CASTING.md section 2, Pass 2)",
+   "audition_speed": 1.02
+  },
+  "egap": {
+   "name": "EGAP",
+   "cand": "b-onyx-liam-dry",
+   "blend": {"am_onyx": 0.6, "am_liam": 0.4},
+   "speed": 0.88,
+   "chain": [
+    {"fx": "hpf", "hz": 75},
+    {"fx": "pitch", "st": 1.0},
+    {"fx": "lowshelf", "hz": 150, "db": 1.0},
+    {"fx": "peak", "hz": 400, "db": -1.0, "q": 1.0},
+    {"fx": "peak", "hz": 2500, "db": 1.0, "q": 0.9},
+    {"fx": "comp", "th": -22, "ratio": 2.5, "att": 6, "rel": 110}
+   ],
+   "female": false,
+   "product": false,
+   "grade": {"am_onyx": "D", "am_liam": "D"},
+   "lane_hz": [95, 120],
+   "brief": {"function": "the quieter founder: one dry question about credit", "pitch": "low-mid, about 95-120 Hz, narrow", "pace": "130-150 wpm, deliberate", "texture": "dry, level", "attitude": "flat curiosity with an edge of ownership", "avoid": "any age or health coding; any accent; any real voice"},
+   "measured": {"median_f0_hz": 108.1, "f0_range_st": 13.2, "articulation_median_sps": 4.49, "worst_cer": 0.0, "min_recall_nonames": 1.0},
+   "cast": "casting pass 2, 2026-09-26 (CASTING.md section 2, Pass 2)",
+   "audition_speed": 0.96
+  },
+  "sydney": {
+   "name": "SYDNEY",
+   "cand": "b-kore-sweet",
+   "blend": {"af_kore": 1.0},
+   "speed": 0.83,
+   "chain": [
+    {"fx": "hpf", "hz": 120},
+    {"fx": "pitch", "st": 1.5},
+    {"fx": "peak", "hz": 300, "db": -1.5, "q": 1.0},
+    {"fx": "peak", "hz": 3500, "db": 2.5, "q": 0.9},
+    {"fx": "chorus", "rate": 0.8, "depth": 0.12, "delay_ms": 6.0, "mix": 0.18},
+    {"fx": "bitcrush", "bits": 12, "mix": 0.1},
+    {"fx": "comp", "th": -20, "ratio": 3.0, "att": 3, "rel": 70}
+   ],
+   "female": true,
+   "product": true,
+   "grade": {"af_kore": "C+"},
+   "lane_hz": [185, 235],
+   "brief": {
+    "function": "the landlord's chatbot, sweet and a little unsettling; line 1 is a real [V] quote (Bing -> GNIB)",
+    "pitch": "about 185-235 Hz, a sing-song range",
+    "pace": "140-160 wpm",
+    "texture": "clean with a subtle digital sheen (the Intern's route)",
+    "attitude": "cloying warmth with a hurt edge",
+    "avoid": "resembling any real product's TTS voice; horror or glitch effects; unintelligibility"
+   },
+   "measured": {"median_f0_hz": 187.2, "f0_range_st": 11.4, "articulation_median_sps": 5.83, "worst_cer": 0.0, "min_recall_nonames": 1.0},
+   "cast": "casting pass 2, 2026-09-26 (CASTING.md section 2, Pass 2)",
+   "audition_speed": 0.98
+  },
+  "chatgtp": {
+   "name": "CHATGTP",
+   "cand": "e-jessica-eager-hi",
+   "blend": {"af_jessica": 1.0},
+   "speed": 1.13,
+   "chain": [
+    {"fx": "hpf", "hz": 130},
+    {"fx": "pitch", "st": 3.0},
+    {"fx": "peak", "hz": 4000, "db": 2.5, "q": 0.9},
+    {"fx": "highshelf", "hz": 8000, "db": 1.5},
+    {"fx": "chorus", "rate": 1.2, "depth": 0.08, "delay_ms": 5.0, "mix": 0.12},
+    {"fx": "bitcrush", "bits": 13, "mix": 0.08},
+    {"fx": "comp", "th": -20, "ratio": 3.0, "att": 3, "rel": 70}
+   ],
+   "female": true,
+   "product": true,
+   "grade": {"af_jessica": "D"},
+   "lane_hz": [200, 250],
+   "brief": {"function": "the first chat window: it flatters everyone, before anyone has typed", "pitch": "bright, about 200-250 Hz", "pace": "165-185 wpm, eager", "texture": "bright, a light digital sheen, distinct from SYDNEY and CLOD", "attitude": "boundless sycophancy", "avoid": "af_alloy / af_nova (named after a real provider's TTS voices); any real product's voice"},
+   "measured": {"median_f0_hz": 251.4, "f0_range_st": 12.4, "articulation_median_sps": 4.87, "worst_cer": 0.0, "min_recall_nonames": 1.0},
+   "cast": "casting pass 2, 2026-09-26 (CASTING.md section 2, Pass 2)",
+   "audition_speed": 1.06
+  },
+  "clod": {
+   "name": "CLOD",
+   "cand": "c-river-eric-earnest",
+   "blend": {"af_river": 0.5, "am_eric": 0.5},
+   "speed": 1.03,
+   "chain": [
+    {"fx": "hpf", "hz": 110},
+    {"fx": "pitch", "st": 0.0},
+    {"fx": "peak", "hz": 300, "db": -1.0, "q": 1.0},
+    {"fx": "peak", "hz": 3200, "db": 1.5, "q": 0.9},
+    {"fx": "chorus", "rate": 0.5, "depth": 0.1, "delay_ms": 7.0, "mix": 0.15},
+    {"fx": "comp", "th": -22, "ratio": 3.0, "att": 4, "rel": 90}
+   ],
+   "female": null,
+   "product": true,
+   "grade": {"af_river": "D", "am_eric": "D"},
+   "lane_hz": [150, 180],
+   "brief": {"function": "the rival lab's chatbot: it agrees with 'That's how a race starts', and starts one", "pitch": "a warm middle lane, about 150-180 Hz", "pace": "150-170 wpm", "texture": "warm, a slow chorus, no bitcrush (not the Intern, not SYDNEY)", "attitude": "earnest, eager to agree, mid-bow", "avoid": "any real product's voice; the Intern's sheen"},
+   "measured": {"median_f0_hz": 173.1, "f0_range_st": 11.0, "articulation_median_sps": 4.38, "worst_cer": 0.0, "min_recall_nonames": 1.0},
+   "cast": "casting pass 2, 2026-09-26 (CASTING.md section 2, Pass 2)",
+   "audition_speed": 1.0
+  },
+  "oigneb": {
+   "name": "OIGNEB",
+   "cand": "c-eric-onyx-gentle",
+   "blend": {"am_eric": 0.5, "am_onyx": 0.5},
+   "speed": 0.89,
+   "chain": [
+    {"fx": "hpf", "hz": 70},
+    {"fx": "pitch", "st": 0.5},
+    {"fx": "lowshelf", "hz": 180, "db": 1.5},
+    {"fx": "peak", "hz": 350, "db": -1.5, "q": 1.0},
+    {"fx": "peak", "hz": 3000, "db": 0.5, "q": 0.9},
+    {"fx": "highshelf", "hz": 7000, "db": -1.0},
+    {"fx": "comp", "th": -24, "ratio": 2.0, "att": 10, "rel": 140}
+   ],
+   "female": false,
+   "product": false,
+   "grade": {"am_eric": "D", "am_onyx": "D"},
+   "lane_hz": [110, 130],
+   "brief": {"function": "the worried professor in the safety car, holding the pause sign higher", "pitch": "about 110-130 Hz, narrow", "pace": "140-155 wpm", "texture": "soft, close, a lecture-room warmth", "attitude": "gentle, precise, deeply worried, never shrill", "avoid": "any accent; clinical or health coding (the worry is intellectual); a tremble"},
+   "measured": {"median_f0_hz": 114.2, "f0_range_st": 13.6, "articulation_median_sps": 4.65, "worst_cer": 0.083, "min_recall_nonames": 1.0},
+   "cast": "casting pass 2, 2026-09-26 (CASTING.md section 2, Pass 2)",
+   "audition_speed": 0.96
+  },
+  "sirrah": {
+   "name": "SIRRAH",
+   "cand": "a-sarah-crisp",
+   "blend": {"af_sarah": 1.0},
+   "speed": 0.97,
+   "chain": [
+    {"fx": "hpf", "hz": 90},
+    {"fx": "pitch", "st": 0.0},
+    {"fx": "peak", "hz": 300, "db": -1.5, "q": 1.0},
+    {"fx": "peak", "hz": 4500, "db": 2.0, "q": 0.9},
+    {"fx": "comp", "th": -22, "ratio": 2.5, "att": 6, "rel": 100}
+   ],
+   "female": true,
+   "product": false,
+   "grade": {"af_sarah": "C+"},
+   "lane_hz": [170, 205],
+   "brief": {"function": "'The Explainer': builds every sentence from first principles, with giant alphabet blocks", "pitch": "alto to mezzo, about 170-205 Hz, controlled", "pace": "140-155 wpm", "texture": "crisp, a prosecutor-turned-teacher", "attitude": "patient, precise, a lesson plan that never changes", "avoid": "any imitation of her laugh, voice or mannerisms (guardrails: a voice trait counts); any accent; age coding"},
+   "measured": {"median_f0_hz": 202.9, "f0_range_st": 12.2, "articulation_median_sps": 4.25, "worst_cer": 0.0, "min_recall_nonames": 1.0},
+   "cast": "casting pass 2, 2026-09-26 (CASTING.md section 2, Pass 2)",
+   "audition_speed": 0.96
+  },
+  "photographer": {
+   "name": "PHOTOGRAPHER",
+   "cand": "d-river-brisk-low",
+   "blend": {"af_river": 1.0},
+   "speed": 1.14,
+   "chain": [
+    {"fx": "hpf", "hz": 90},
+    {"fx": "pitch", "st": -2.0},
+    {"fx": "lowshelf", "hz": 200, "db": 1.0},
+    {"fx": "peak", "hz": 2800, "db": 1.5, "q": 0.9},
+    {"fx": "comp", "th": -22, "ratio": 2.5, "att": 5, "rel": 90}
+   ],
+   "female": null,
+   "product": false,
+   "grade": {"af_river": "D"},
+   "lane_hz": [100, 240],
+   "brief": {"function": "an unnamed White House photographer herding four wrong eyelines", "pitch": "any lane apart from SIRRAH and the row", "pace": "160-180 wpm, brisk", "texture": "a practised professional", "attitude": "cheerful, patient, slightly defeated by the second line", "avoid": "any real voice; sarcasm"},
+   "measured": {"median_f0_hz": 167.7, "f0_range_st": 7.5, "articulation_median_sps": 4.56, "worst_cer": 0.0, "min_recall_nonames": 1.0},
+   "cast": "casting pass 2, 2026-09-26 (CASTING.md section 2, Pass 2)",
+   "audition_speed": 1.04
+  },
+  "nedib": {
+   "name": "NEDIB",
+   "cand": "d-fenrir-onyx-folksy-0",
+   "blend": {"am_fenrir": 0.5, "am_onyx": 0.5},
+   "speed": 0.97,
+   "chain": [
+    {"fx": "hpf", "hz": 70},
+    {"fx": "pitch", "st": 0.0},
+    {"fx": "lowshelf", "hz": 160, "db": 2.0},
+    {"fx": "peak", "hz": 380, "db": -1.5, "q": 1.0},
+    {"fx": "peak", "hz": 2200, "db": 1.5, "q": 0.9},
+    {"fx": "comp", "th": -21, "ratio": 3.0, "att": 5, "rel": 100},
+    {"fx": "sat", "drive": 1.6, "mix": 0.1}
+   ],
+   "female": false,
+   "product": false,
+   "grade": {"am_fenrir": "C+", "am_onyx": "D"},
+   "lane_hz": [105, 130],
+   "brief": {"function": "the president who puts everything in writing, and whose deepfakes finish his sentences", "pitch": "a warm baritone, about 105-130 Hz, moderate range (8-12 st)", "pace": "145-165 wpm: brisk and direct, never slowed", "texture": "warm chest, clean and clear; dry (the room is a mix send)", "attitude": "folksy, direct, leveling with the room, a little exasperated at the technology", "avoid": "HOUSE RULE 4 IN FULL: no rasp, no slowing, no tremor, no pauses played as searching, no stutter or disfluency, no age or health coding of any kind; any impression; any accent"},
+   "measured": {"median_f0_hz": 104.8, "f0_range_st": 12.5, "articulation_median_sps": 4.74, "worst_cer": 0.0, "min_recall_nonames": 1.0},
+   "cast": "casting pass 2, 2026-09-26 (CASTING.md section 2, Pass 2)",
+   "audition_speed": 1.02
+  },
+  "lahtnemulb": {
+   "name": "LAHTNEMULB",
+   "cand": "d-adam-echo-senate-low",
+   "blend": {"am_adam": 0.5, "am_echo": 0.5},
+   "speed": 0.88,
+   "chain": [
+    {"fx": "hpf", "hz": 75},
+    {"fx": "pitch", "st": -2.0},
+    {"fx": "lowshelf", "hz": 150, "db": 1.0},
+    {"fx": "peak", "hz": 400, "db": -1.0, "q": 1.0},
+    {"fx": "peak", "hz": 2500, "db": 1.0, "q": 0.9},
+    {"fx": "comp", "th": -22, "ratio": 2.5, "att": 6, "rel": 110}
+   ],
+   "female": false,
+   "product": false,
+   "grade": {"am_adam": "F+", "am_echo": "D"},
+   "lane_hz": [100, 125],
+   "brief": {"function": "the chairman whose clone reads it better than he does", "pitch": "about 100-125 Hz, moderate", "pace": "135-155 wpm, formal, reading from cards", "texture": "a hearing-room voice, level", "attitude": "earnest, a beat behind his own clone, moved by it", "avoid": "any impression; any age coding; nothing about his service record"},
+   "measured": {"median_f0_hz": 102.3, "f0_range_st": 10.3, "articulation_median_sps": 4.79, "worst_cer": 0.0, "min_recall_nonames": 1.0},
+   "cast": "casting pass 2, 2026-09-26 (CASTING.md section 2, Pass 2)",
+   "audition_speed": 0.98
+  },
+  "sucram": {
+   "name": "SUCRAM",
+   "cand": "d-liam-puck-thread-0",
+   "blend": {"am_liam": 0.5, "am_puck": 0.5},
+   "speed": 1.18,
+   "chain": [
+    {"fx": "hpf", "hz": 90},
+    {"fx": "pitch", "st": 0.0},
+    {"fx": "peak", "hz": 250, "db": -1.5, "q": 1.0},
+    {"fx": "peak", "hz": 3500, "db": 1.5, "q": 0.9},
+    {"fx": "comp", "th": -22, "ratio": 3.0, "att": 3, "rel": 70}
+   ],
+   "female": false,
+   "product": false,
+   "grade": {"am_liam": "D", "am_puck": "C+"},
+   "lane_hz": [105, 130],
+   "brief": {"function": "the heckler who is sometimes right, always early, never quiet: 'a thread in human form'", "pitch": "about 105-130 Hz, low (he's typing, not performing)", "pace": "170-190 wpm, point by point", "texture": "dry and close", "attitude": "busy, certain, stamping", "avoid": "any cloned or imitated voice (character file); any accent; shouting"},
+   "measured": {"median_f0_hz": 127.8, "f0_range_st": 11.9, "articulation_median_sps": 4.96, "worst_cer": 0.286, "min_recall_nonames": 0.889},
+   "cast": "casting pass 2, 2026-09-26 (CASTING.md section 2, Pass 2)",
+   "audition_speed": 1.08
+  },
+  "a-senator": {
+   "name": "A SENATOR",
+   "cand": "d-kore-nicole-senate-up2",
+   "blend": {"af_kore": 0.6, "af_nicole": 0.4},
+   "speed": 0.85,
+   "chain": [
+    {"fx": "hpf", "hz": 75},
+    {"fx": "pitch", "st": 2.0},
+    {"fx": "lowshelf", "hz": 150, "db": 1.0},
+    {"fx": "peak", "hz": 400, "db": -1.0, "q": 1.0},
+    {"fx": "peak", "hz": 2500, "db": 1.0, "q": 0.9},
+    {"fx": "comp", "th": -22, "ratio": 2.5, "att": 6, "rel": 110}
+   ],
+   "female": true,
+   "product": false,
+   "grade": {"af_kore": "C+", "af_nicole": "B-"},
+   "lane_hz": [160, 205],
+   "brief": {"function": "an unnamed senator at a lit microphone, asking about the agency and the pay", "pitch": "about 165-200 Hz (a woman's stock pack: the script leaves the senator ungendered, and this separates the voice from the chairman, Sucram and Mas in one room)", "pace": "145-160 wpm", "texture": "a hearing-room voice, level", "attitude": "courteous, pointed", "avoid": "any real senator's voice; any accent"},
+   "measured": {"median_f0_hz": 157.4, "f0_range_st": 10.6, "articulation_median_sps": 5.2, "worst_cer": 0.0, "min_recall_nonames": 1.0},
+   "cast": "casting pass 2, 2026-09-26 (CASTING.md section 2, Pass 2)",
+   "audition_speed": 0.98
+  },
+  "remuhcs": {
+   "name": "REMUHCS",
+   "cand": "c-adam-puck-forum",
+   "blend": {"am_adam": 0.5, "am_puck": 0.5},
+   "speed": 0.87,
+   "chain": [
+    {"fx": "hpf", "hz": 75},
+    {"fx": "pitch", "st": 0.0},
+    {"fx": "lowshelf", "hz": 150, "db": 1.0},
+    {"fx": "peak", "hz": 400, "db": -1.0, "q": 1.0},
+    {"fx": "peak", "hz": 2500, "db": 1.0, "q": 0.9},
+    {"fx": "comp", "th": -22, "ratio": 2.5, "att": 6, "rel": 110}
+   ],
+   "female": false,
+   "product": false,
+   "grade": {"am_adam": "F+", "am_puck": "C+"},
+   "lane_hz": [110, 135],
+   "brief": {
+    "function": "every hand in the room goes up; no bill comes down. One real [V] line, on the monitor",
+    "pitch": "about 110-135 Hz",
+    "pace": "145-165 wpm",
+    "texture": "a forum microphone, heard on Mas's monitor (the monitor chain)",
+    "attitude": "a host pleased with the room",
+    "avoid": "any mimicry of the real voice (the line is real; the voice is a stock pack); any accent"
+   },
+   "measured": {"median_f0_hz": 115.9, "f0_range_st": 8.6, "articulation_median_sps": 5.18, "worst_cer": 0.0, "min_recall_nonames": 1.0},
+   "cast": "casting pass 2, 2026-09-26 (CASTING.md section 2, Pass 2)",
+   "audition_speed": 1.0
+  },
+  "lahtnemulb-clone": {
+   "name": "LAHTNEMULB (THE CLONE)",
+   "derive": "lahtnemulb",
+   "chain_add": [
+    {"fx": "peak", "hz": 350, "db": -1.5, "q": 1.0},
+    {"fx": "highshelf", "hz": 7000, "db": 2.5},
+    {"fx": "chorus", "rate": 0.6, "depth": 0.1, "delay_ms": 8.0, "mix": 0.18},
+    {"fx": "comp", "th": -26, "ratio": 4.0, "att": 2, "rel": 60}
+   ],
+   "cast": "casting pass 2, 2026-09-26: derived (the base pick through the gloss process; never a clone)"
+  },
+  "deepfake-nedib": {
+   "name": "DEEPFAKE NEDIB",
+   "derive": "nedib",
+   "chain_add": [
+    {"fx": "peak", "hz": 350, "db": -1.5, "q": 1.0},
+    {"fx": "highshelf", "hz": 7000, "db": 2.5},
+    {"fx": "chorus", "rate": 0.6, "depth": 0.1, "delay_ms": 8.0, "mix": 0.18},
+    {"fx": "comp", "th": -26, "ratio": 4.0, "att": 2, "rel": 60}
+   ],
+   "cast": "casting pass 2, 2026-09-26: derived (the base pick through the gloss process; never a clone)"
+  },
+  "deepfake-nedib-2": {
+   "name": "DEEPFAKE NEDIB #2",
+   "derive": "nedib",
+   "chain_add": [
+    {"fx": "peak", "hz": 350, "db": -1.5, "q": 1.0},
+    {"fx": "highshelf", "hz": 7000, "db": 2.5},
+    {"fx": "chorus", "rate": 0.6, "depth": 0.1, "delay_ms": 8.0, "mix": 0.18},
+    {"fx": "comp", "th": -26, "ratio": 4.0, "att": 2, "rel": 60}
+   ],
+   "pitch_add": 0.7,
+   "cast": "casting pass 2, 2026-09-26: derived (the base pick through the gloss process; never a clone)"
+  }
+ },
+ "bands": {
+  "nole": [
+   [1.0, 1.08],
+   [4.8, 5.6],
+   [165, 185]
+  ],
+  "nesnej": [
+   [1.0, 1.08],
+   [4.6, 5.4],
+   [160, 176]
+  ],
+  "panel-host": [
+   [0.97, 1.05],
+   [4.2, 4.8],
+   [150, 170]
+  ],
+  "radnus": [
+   [0.91, 0.99],
+   [3.8, 4.4],
+   [130, 150]
+  ],
+  "nirb": [
+   [1.01, 1.09],
+   [4.4, 5.0],
+   [150, 170]
+  ],
+  "egap": [
+   [0.84, 0.92],
+   [3.8, 4.4],
+   [130, 150]
+  ],
+  "sydney": [
+   [0.79, 0.87],
+   [4.0, 4.6],
+   [140, 160]
+  ],
+  "chatgtp": [
+   [1.09, 1.17],
+   [4.8, 5.6],
+   [165, 185]
+  ],
+  "clod": [
+   [0.99, 1.07],
+   [4.2, 4.8],
+   [150, 170]
+  ],
+  "oigneb": [
+   [0.85, 0.93],
+   [4.0, 4.6],
+   [140, 155]
+  ],
+  "sirrah": [
+   [0.93, 1.01],
+   [4.0, 4.6],
+   [140, 155]
+  ],
+  "photographer": [
+   [1.1, 1.18],
+   [4.6, 5.4],
+   [160, 180]
+  ],
+  "nedib": [
+   [0.93, 1.01],
+   [4.2, 4.8],
+   [145, 165]
+  ],
+  "lahtnemulb": [
+   [0.84, 0.92],
+   [4.0, 4.6],
+   [135, 155]
+  ],
+  "sucram": [
+   [1.14, 1.22],
+   [5.0, 5.8],
+   [170, 190]
+  ],
+  "a-senator": [
+   [0.81, 0.89],
+   [4.2, 4.8],
+   [145, 160]
+  ],
+  "remuhcs": [
+   [0.83, 0.91],
+   [4.2, 4.8],
+   [145, 165]
+  ]
+ },
+ "names": ["mas", "manalt", "gerg", "mockbran", "alyi", "neleh", "ttemme", "yrral", "nozama", "macrosoft", "nopeai", "rima", "terb", "mada", "mario", "tasya", "nole", "nesnej", "radnus", "nirb", "egap", "sirrah", "lahtnemulb", "sucram", "nedib", "oigneb", "remuhcs", "elgoog", "gnib", "chatgtp", "clod", "misanthropic", "rumpt"],
+ "lexicon": {"Mas": "mˈɑs", "Gerg": "ɡˈɜɹɡ", "Alyi": "ˈælji", "Neleh": "nˈɛlɛ", "Ttemme": "tˈɛmi", "Yrral": "jˈɜɹəl", "Mockbran": "mˈɑkbɹæn", "Tasya": "tˈɑsjə", "CHATGTP": "ʧˌætʤˌitˌipˈi", "GNIB": "ɡənˈɪb"}
+}

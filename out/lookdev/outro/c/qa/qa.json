@@ -1,0 +1,377 @@
+{
+ "source": "out/lookdev/outro/outro-c.mp4 (decoded)",
+ "cps": 16.0,
+ "frames": 204,
+ "lines": [
+  {
+   "id": "sign0",
+   "group": "sign",
+   "text": "DAYS SINCE",
+   "native_box": [
+    180,
+    28,
+    244,
+    35
+   ],
+   "ink_px": 140,
+   "on_screen_frames": 180,
+   "on_screen_s": 7.5,
+   "chars": 10,
+   "read_s_at_16cps": 0.62,
+   "read_ok": true,
+   "contrast_480": 11.41,
+   "contrast_1080": 11.41,
+   "decode_mae_480": 2.05,
+   "decode_max_480": 4.0,
+   "note": ""
+  },
+  {
+   "id": "sign1",
+   "group": "sign",
+   "text": "SOMEONE",
+   "native_box": [
+    180,
+    38,
+    244,
+    45
+   ],
+   "ink_px": 126,
+   "on_screen_frames": 180,
+   "on_screen_s": 7.5,
+   "chars": 7,
+   "read_s_at_16cps": 0.44,
+   "read_ok": true,
+   "contrast_480": 11.4,
+   "contrast_1080": 11.4,
+   "decode_mae_480": 2.08,
+   "decode_max_480": 4.0,
+   "note": ""
+  },
+  {
+   "id": "sign2",
+   "group": "sign",
+   "text": "TRIED TO",
+   "native_box": [
+    180,
+    48,
+    244,
+    55
+   ],
+   "ink_px": 111,
+   "on_screen_frames": 180,
+   "on_screen_s": 7.5,
+   "chars": 8,
+   "read_s_at_16cps": 0.5,
+   "read_ok": true,
+   "contrast_480": 11.4,
+   "contrast_1080": 11.4,
+   "decode_mae_480": 2.12,
+   "decode_max_480": 4.0,
+   "note": ""
+  },
+  {
+   "id": "sign3",
+   "group": "sign",
+   "text": "FIRE MAS:",
+   "native_box": [
+    180,
+    58,
+    244,
+    65
+   ],
+   "ink_px": 118,
+   "on_screen_frames": 180,
+   "on_screen_s": 7.5,
+   "chars": 9,
+   "read_s_at_16cps": 0.56,
+   "read_ok": true,
+   "contrast_480": 11.4,
+   "contrast_1080": 11.4,
+   "decode_mae_480": 2.1,
+   "decode_max_480": 4.0,
+   "note": ""
+  },
+  {
+   "id": "count",
+   "group": "sign",
+   "text": "36",
+   "native_box": [
+    246,
+    36,
+    298,
+    58
+   ],
+   "ink_px": 140,
+   "on_screen_frames": 75,
+   "on_screen_s": 3.12,
+   "chars": 2,
+   "read_s_at_16cps": 0.12,
+   "read_ok": true,
+   "contrast_480": 2.77,
+   "contrast_1080": 2.77,
+   "decode_mae_480": 1.06,
+   "decode_max_480": 4.8,
+   "note": "the new count; the old 0 is up o0-63"
+  },
+  {
+   "id": "dir0",
+   "group": "directory",
+   "text": "DIRECTORY",
+   "native_box": [
+    66,
+    89,
+    413,
+    96
+   ],
+   "ink_px": 133,
+   "on_screen_frames": 180,
+   "on_screen_s": 7.5,
+   "chars": 9,
+   "read_s_at_16cps": 0.56,
+   "read_ok": true,
+   "contrast_480": 11.38,
+   "contrast_1080": 11.38,
+   "decode_mae_480": 1.35,
+   "decode_max_480": 5.0,
+   "note": ""
+  },
+  {
+   "id": "dir1",
+   "group": "directory",
+   "text": "MR. MAS \u00b7 EP1.0_RESEARCH_PREVIEW.MD ... CLOSED DEC 27, 2023",
+   "native_box": [
+    66,
+    98,
+    413,
+    105
+   ],
+   "ink_px": 677,
+   "on_screen_frames": 180,
+   "on_screen_s": 7.5,
+   "chars": 55,
+   "read_s_at_16cps": 3.44,
+   "read_ok": true,
+   "contrast_480": 11.42,
+   "contrast_1080": 11.42,
+   "decode_mae_480": 1.44,
+   "decode_max_480": 5.0,
+   "note": ""
+  },
+  {
+   "id": "dir3",
+   "group": "directory",
+   "text": "CREATED BY ... (CREATOR)",
+   "native_box": [
+    66,
+    116,
+    413,
+    123
+   ],
+   "ink_px": 265,
+   "on_screen_frames": 180,
+   "on_screen_s": 7.5,
+   "chars": 20,
+   "read_s_at_16cps": 1.25,
+   "read_ok": true,
+   "contrast_480": 11.41,
+   "contrast_1080": 11.41,
+   "decode_mae_480": 1.34,
+   "decode_max_480": 5.5,
+   "note": ""
+  },
+  {
+   "id": "dir4",
+   "group": "directory",
+   "text": "WRITTEN ... (CREATOR), WITH AI",
+   "native_box": [
+    66,
+    125,
+    413,
+    132
+   ],
+   "ink_px": 318,
+   "on_screen_frames": 180,
+   "on_screen_s": 7.5,
+   "chars": 26,
+   "read_s_at_16cps": 1.62,
+   "read_ok": true,
+   "contrast_480": 11.41,
+   "contrast_1080": 11.41,
+   "decode_mae_480": 1.49,
+   "decode_max_480": 5.5,
+   "note": ""
+  },
+  {
+   "id": "dir5",
+   "group": "directory",
+   "text": "PICTURE \u00b7 MUSIC ... PIXEL ART AND ORIGINAL SCORE, RENDERED IN CODE",
+   "native_box": [
+    66,
+    134,
+    413,
+    141
+   ],
+   "ink_px": 780,
+   "on_screen_frames": 180,
+   "on_screen_s": 7.5,
+   "chars": 62,
+   "read_s_at_16cps": 3.88,
+   "read_ok": true,
+   "contrast_480": 11.44,
+   "contrast_1080": 11.44,
+   "decode_mae_480": 1.57,
+   "decode_max_480": 5.5,
+   "note": ""
+  },
+  {
+   "id": "dir6",
+   "group": "directory",
+   "text": "VOICES ... SYNTHETIC, DESIGNED FROM TEXT \u00b7 NONE CLONED",
+   "native_box": [
+    66,
+    143,
+    413,
+    150
+   ],
+   "ink_px": 625,
+   "on_screen_frames": 180,
+   "on_screen_s": 7.5,
+   "chars": 50,
+   "read_s_at_16cps": 3.12,
+   "read_ok": true,
+   "contrast_480": 11.4,
+   "contrast_1080": 11.4,
+   "decode_mae_480": 1.59,
+   "decode_max_480": 5.5,
+   "note": ""
+  },
+  {
+   "id": "dir7",
+   "group": "directory",
+   "text": "AI TOOLS ... USED THROUGHOUT \u00b7 LISTED IN THE NOTICE",
+   "native_box": [
+    66,
+    152,
+    413,
+    159
+   ],
+   "ink_px": 563,
+   "on_screen_frames": 180,
+   "on_screen_s": 7.5,
+   "chars": 47,
+   "read_s_at_16cps": 2.94,
+   "read_ok": true,
+   "contrast_480": 11.4,
+   "contrast_1080": 11.4,
+   "decode_mae_480": 1.58,
+   "decode_max_480": 4.5,
+   "note": ""
+  },
+  {
+   "id": "terms",
+   "group": "band",
+   "text": "A parody. Events dramatized, scenes invented. No one depicted took part or endorsed it.",
+   "native_box": [
+    40,
+    216,
+    434,
+    223
+   ],
+   "ink_px": 762,
+   "on_screen_frames": 180,
+   "on_screen_s": 7.5,
+   "chars": 87,
+   "read_s_at_16cps": 5.44,
+   "read_ok": true,
+   "contrast_480": 11.75,
+   "contrast_1080": 11.75,
+   "decode_mae_480": 1.25,
+   "decode_max_480": 4.5,
+   "note": ""
+  },
+  {
+   "id": "pointer",
+   "group": "band",
+   "text": "Full notice and sources: in the description.",
+   "native_box": [
+    100,
+    232,
+    380,
+    239
+   ],
+   "ink_px": 357,
+   "on_screen_frames": 180,
+   "on_screen_s": 7.5,
+   "chars": 44,
+   "read_s_at_16cps": 2.75,
+   "read_ok": true,
+   "contrast_480": 11.75,
+   "contrast_1080": 11.75,
+   "decode_mae_480": 1.17,
+   "decode_max_480": 4.0,
+   "note": ""
+  },
+  {
+   "id": "slug",
+   "group": "band",
+   "text": "LEGAL TEXT: DRAFT",
+   "native_box": [
+    376,
+    252,
+    470,
+    262
+   ],
+   "ink_px": 202,
+   "on_screen_frames": 180,
+   "on_screen_s": 7.5,
+   "chars": 17,
+   "read_s_at_16cps": 1.06,
+   "read_ok": true,
+   "contrast_480": 4.23,
+   "contrast_1080": 4.23,
+   "decode_mae_480": 1.26,
+   "decode_max_480": 6.2,
+   "note": "lookdev only"
+  }
+ ],
+ "band_stillness_p9999_absdiff": 2.0,
+ "total_chars_on_screen": 436,
+ "total_read_s_at_16cps": 27.2,
+ "outro_s": 7.5,
+ "read_budget": {
+  "groups": {
+   "sign": {
+    "chars": 36,
+    "read_s": 2.2
+   },
+   "directory": {
+    "chars": 269,
+    "read_s": 16.8
+   },
+   "band": {
+    "chars": 131,
+    "read_s": 8.2
+   }
+  },
+  "on_screen_s": 7.5,
+  "terms_fit": true,
+  "terms_and_pointer_fit": false,
+  "credits_fit": false,
+  "all_fit": false,
+  "note": "each line is up long enough on its own (7.5 s); the terms line alone reads in 5.4 s and fits (rule: up >= 5 s); terms + pointer need 8.2 s; the directory needs 16.8 s, so in one viewing a reader gets the terms, the count and its date, and a skim of the credits"
+ },
+ "check_txt": [
+  "wrote 12",
+  "wrote 64",
+  "wrote 84",
+  "wrote 99",
+  "wrote 129",
+  "wrote 144",
+  "wrote 154",
+  "wrote 174",
+  "wrote 194",
+  "OK: terms + pointer uncovered in all 180 outro frames",
+  "OK: the moth never covers a letter or the period (all frames)",
+  "OK: the moth never touches a letter (4-neighbour), in flight (32 frames in the band) or landed"
+ ]
+}

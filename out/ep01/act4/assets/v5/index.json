@@ -1,0 +1,882 @@
+[
+ {
+  "key": "UI-POST@phone",
+  "id": "UI-POST",
+  "state": "phone",
+  "module": "shared/pixel/kits/post-card.ts",
+  "note": "S5.03 phone size: Rima's post, hearted; the flood below",
+  "standin": "",
+  "native": "native/UI-POST--phone.png",
+  "full": "full/UI-POST--phone.png"
+ },
+ {
+  "key": "UI-POST@notify",
+  "id": "UI-POST",
+  "state": "notify",
+  "module": "shared/pixel/kits/post-card.ts",
+  "note": "S3.05 / S4.01 / S4.09 notification size on a call",
+  "standin": "",
+  "native": "native/UI-POST--notify.png",
+  "full": "full/UI-POST--notify.png"
+ },
+ {
+  "key": "UI-POST@popup",
+  "id": "UI-POST",
+  "state": "popup",
+  "module": "shared/pixel/kits/post-card.ts",
+  "note": "S7.01 / S7.13 pop-up in its own UI",
+  "standin": "",
+  "native": "native/UI-POST--popup.png",
+  "full": "full/UI-POST--popup.png"
+ },
+ {
+  "key": "ROOM-NELEH-DESK@ots-day-waiting",
+  "id": "ROOM-NELEH-DESK",
+  "state": "ots-day-waiting",
+  "module": "shared/pixel/rooms/neleh-desk.ts + kits/call-boardside.ts",
+  "note": "S3.00a open: 11:59, the empty fifth tile, her pen on step 1",
+  "standin": "",
+  "native": "native/ROOM-NELEH-DESK--ots-day-waiting.png",
+  "full": "full/ROOM-NELEH-DESK--ots-day-waiting.png"
+ },
+ {
+  "key": "ROOM-NELEH-DESK@ots-day-connected-push",
+  "id": "ROOM-NELEH-DESK",
+  "state": "ots-day-connected-push",
+  "module": "shared/pixel/rooms/neleh-desk.ts + kits/call-boardside.ts",
+  "note": "S3.00a late: 12:00, his tile live (neon chase), Alyi speaking; push 12 px",
+  "standin": "",
+  "native": "native/ROOM-NELEH-DESK--ots-day-connected-push.png",
+  "full": "full/ROOM-NELEH-DESK--ots-day-connected-push.png"
+ },
+ {
+  "key": "ROOM-NELEH-DESK@ots-day-rima",
+  "id": "ROOM-NELEH-DESK",
+  "state": "ots-day-rima",
+  "module": "shared/pixel/rooms/neleh-desk.ts + kits/call-boardside.ts",
+  "note": "S3.04: Rima's spotlit fifth slot over Neleh's shoulder",
+  "standin": "",
+  "native": "native/ROOM-NELEH-DESK--ots-day-rima.png",
+  "full": "full/ROOM-NELEH-DESK--ots-day-rima.png"
+ },
+ {
+  "key": "ROOM-NELEH-DESK@scr-day-removed",
+  "id": "ROOM-NELEH-DESK",
+  "state": "scr-day-removed",
+  "module": "shared/pixel/rooms/neleh-desk.ts drawNelehBezel + kits/call-boardside.ts",
+  "note": "S3.01: his tile gone, the four closed, the notice, the audio chip lit",
+  "standin": "",
+  "native": "native/ROOM-NELEH-DESK--scr-day-removed.png",
+  "full": "full/ROOM-NELEH-DESK--scr-day-removed.png"
+ },
+ {
+  "key": "ROOM-NELEH-DESK@scr-day-removing",
+  "id": "ROOM-NELEH-DESK",
+  "state": "scr-day-removing",
+  "module": "shared/pixel/rooms/neleh-desk.ts drawNelehBezel + kits/call-boardside.ts",
+  "note": "S3.01 k 6: mid-reflow (held step), the notice starting",
+  "standin": "",
+  "native": "native/ROOM-NELEH-DESK--scr-day-removing.png",
+  "full": "full/ROOM-NELEH-DESK--scr-day-removing.png"
+ },
+ {
+  "key": "ROOM-NELEH-DESK@scr-evening",
+  "id": "ROOM-NELEH-DESK",
+  "state": "scr-evening",
+  "module": "shared/pixel/rooms/neleh-desk.ts drawNelehBezel",
+  "note": "S3.05: the lamp's warm pool on the bezel; Rima in the fifth slot; Gerg's post",
+  "standin": "",
+  "native": "native/ROOM-NELEH-DESK--scr-evening.png",
+  "full": "full/ROOM-NELEH-DESK--scr-evening.png"
+ },
+ {
+  "key": "ROOM-NELEH-DESK@mcu-wall",
+  "id": "ROOM-NELEH-DESK",
+  "state": "mcu-wall",
+  "module": "shared/pixel/rooms/neleh-desk.ts drawNelehDeskWall + cast/neleh.ts",
+  "note": "S3.04b: Neleh MCU right third, brow query, over the soft shelf wall",
+  "standin": "",
+  "native": "native/ROOM-NELEH-DESK--mcu-wall.png",
+  "full": "full/ROOM-NELEH-DESK--mcu-wall.png"
+ },
+ {
+  "key": "CAST-NELEH-OTS-R@screen",
+  "id": "CAST-NELEH-OTS-R",
+  "state": "screen",
+  "module": "shared/pixel/cast/neleh-ots.ts",
+  "note": "her right-side OTS shoulder, light 'screen': turn 0 at frame right, turn 1 (toward the screen) inset",
+  "standin": "",
+  "native": "native/CAST-NELEH-OTS-R--screen.png",
+  "full": "full/CAST-NELEH-OTS-R--screen.png"
+ },
+ {
+  "key": "CAST-NELEH-OTS-R@lamp",
+  "id": "CAST-NELEH-OTS-R",
+  "state": "lamp",
+  "module": "shared/pixel/cast/neleh-ots.ts",
+  "note": "her right-side OTS shoulder, light 'lamp': turn 0 at frame right, turn 1 (toward the screen) inset",
+  "standin": "",
+  "native": "native/CAST-NELEH-OTS-R--lamp.png",
+  "full": "full/CAST-NELEH-OTS-R--lamp.png"
+ },
+ {
+  "key": "CAST-NELEH-OTS-R@window",
+  "id": "CAST-NELEH-OTS-R",
+  "state": "window",
+  "module": "shared/pixel/cast/neleh-ots.ts",
+  "note": "her right-side OTS shoulder, light 'window': turn 0 at frame right, turn 1 (toward the screen) inset",
+  "standin": "",
+  "native": "native/CAST-NELEH-OTS-R--window.png",
+  "full": "full/CAST-NELEH-OTS-R--window.png"
+ },
+ {
+  "key": "CAST-NELEH-OTS-R@sil",
+  "id": "CAST-NELEH-OTS-R",
+  "state": "sil",
+  "module": "shared/pixel/cast/neleh-ots.ts",
+  "note": "her right-side OTS shoulder, light 'sil': turn 0 at frame right, turn 1 (toward the screen) inset",
+  "standin": "",
+  "native": "native/CAST-NELEH-OTS-R--sil.png",
+  "full": "full/CAST-NELEH-OTS-R--sil.png"
+ },
+ {
+  "key": "UI-BLOG-DRAFT@draft",
+  "id": "UI-BLOG-DRAFT",
+  "state": "draft",
+  "module": "shared/pixel/kits/blog-draft.ts",
+  "note": "S3.03: the draft, both sentences, Post, the call in the corner",
+  "standin": "",
+  "native": "native/UI-BLOG-DRAFT--draft.png",
+  "full": "full/UI-BLOG-DRAFT--draft.png"
+ },
+ {
+  "key": "UI-BLOG-DRAFT@click",
+  "id": "UI-BLOG-DRAFT",
+  "state": "click",
+  "module": "shared/pixel/kits/blog-draft.ts",
+  "note": "S3.03: her pointer on Post, the pressed drawing (the click on a tick)",
+  "standin": "",
+  "native": "native/UI-BLOG-DRAFT--click.png",
+  "full": "full/UI-BLOG-DRAFT--click.png"
+ },
+ {
+  "key": "UI-BLOG-DRAFT@posted",
+  "id": "UI-BLOG-DRAFT",
+  "state": "posted",
+  "module": "shared/pixel/kits/blog-draft.ts",
+  "note": "S3.03 tail: PUBLISHED, the date, the toast",
+  "standin": "",
+  "native": "native/UI-BLOG-DRAFT--posted.png",
+  "full": "full/UI-BLOG-DRAFT--posted.png"
+ },
+ {
+  "key": "UI-LETTER-V5@first-quote",
+  "id": "UI-LETTER-V5",
+  "state": "first-quote",
+  "module": "shared/pixel/kits/staff-letter.ts",
+  "note": "S5.06 ~2 s: the insult on the page, SIGNED 505, Gerg reading (mouth), window night",
+  "standin": "",
+  "native": "native/UI-LETTER-V5--first-quote.png",
+  "full": "full/UI-LETTER-V5--first-quote.png"
+ },
+ {
+  "key": "UI-LETTER-V5@third-quote",
+  "id": "UI-LETTER-V5",
+  "state": "third-quote",
+  "module": "shared/pixel/kits/staff-letter.ts",
+  "note": "S5.06 ~15 s: all three quotes, SIGNED 700, scrolled 60 px",
+  "standin": "",
+  "native": "native/UI-LETTER-V5--third-quote.png",
+  "full": "full/UI-LETTER-V5--third-quote.png"
+ },
+ {
+  "key": "UI-LETTER-V5@alyi-stop",
+  "id": "UI-LETTER-V5",
+  "state": "alyi-stop",
+  "module": "shared/pixel/kits/staff-letter.ts",
+  "note": "S5.06 end: scrolled to the bottom, ALYI (REPORTED) lit, 745 / 770, the window one step greyer",
+  "standin": "",
+  "native": "native/UI-LETTER-V5--alyi-stop.png",
+  "full": "full/UI-LETTER-V5--alyi-stop.png"
+ },
+ {
+  "key": "BP-NELEH-POINTER@point-plates",
+  "id": "BP-NELEH-POINTER",
+  "state": "point-plates",
+  "module": "shared/pixel/kits/bp-pointer.ts",
+  "note": "S1.03: her figure at the right edge taps MAS / CEO and GERG / CO-FOUNDER",
+  "standin": "the sheet is v4 plan4 (it gets the figure drawn in before composite in plan5)",
+  "native": "native/BP-NELEH-POINTER--point-plates.png",
+  "full": "full/BP-NELEH-POINTER--point-plates.png"
+ },
+ {
+  "key": "BP-NELEH-POINTER@sweep-four-us",
+  "id": "BP-NELEH-POINTER",
+  "state": "sweep-four-us",
+  "module": "shared/pixel/kits/bp-pointer.ts",
+  "note": "S1.03: the sweep to the four (a held in-between), her page glowing on \"us\"",
+  "standin": "",
+  "native": "native/BP-NELEH-POINTER--sweep-four-us.png",
+  "full": "full/BP-NELEH-POINTER--sweep-four-us.png"
+ },
+ {
+  "key": "BP-NELEH-POINTER@detail-ring-voice",
+  "id": "BP-NELEH-POINTER",
+  "state": "detail-ring-voice",
+  "module": "shared/pixel/kits/bp-pointer.ts",
+  "note": "S1.04 2x detail: the pointer's tip on the key ring; MADA's spinner icon (speaking)",
+  "standin": "",
+  "native": "native/BP-NELEH-POINTER--detail-ring-voice.png",
+  "full": "full/BP-NELEH-POINTER--detail-ring-voice.png"
+ },
+ {
+  "key": "BP-NELEH-POINTER@poses",
+  "id": "BP-NELEH-POINTER",
+  "state": "poses",
+  "module": "shared/pixel/kits/bp-pointer.ts",
+  "note": "rest · point (tap) · down · walk A · walk B · 2x rest (the detail scale)",
+  "standin": "",
+  "native": "native/BP-NELEH-POINTER--poses.png",
+  "full": "full/BP-NELEH-POINTER--poses.png"
+ },
+ {
+  "key": "PLATE-BOARD-HEAD@2S-offer",
+  "id": "PLATE-BOARD-HEAD",
+  "state": "2S-offer",
+  "module": "shared/pixel/rooms/boardroom-head.ts",
+  "note": "S4.10b: Neleh at the side, Ttemme in the CEO chair, Mada soft beyond, the chat panel, the folder sliding",
+  "standin": "",
+  "native": "native/PLATE-BOARD-HEAD--2S-offer.png",
+  "full": "full/PLATE-BOARD-HEAD--2S-offer.png"
+ },
+ {
+  "key": "PLATE-BOARD-HEAD@2S-reading",
+  "id": "PLATE-BOARD-HEAD",
+  "state": "2S-reading",
+  "module": "shared/pixel/rooms/boardroom-head.ts + kits/folder.ts",
+  "note": "S4.10b: he reads behind the folder (seal broken, cover open away from us)",
+  "standin": "",
+  "native": "native/PLATE-BOARD-HEAD--2S-reading.png",
+  "full": "full/PLATE-BOARD-HEAD--2S-reading.png"
+ },
+ {
+  "key": "PLATE-BOARD-HEAD@M-door-tasya",
+  "id": "PLATE-BOARD-HEAD",
+  "state": "M-door-tasya",
+  "module": "shared/pixel/rooms/boardroom-head.ts",
+  "note": "S4.13c: slate wall, the door open, Tasya soft in it; Ttemme turned to him, nodding",
+  "standin": "",
+  "native": "native/PLATE-BOARD-HEAD--M-door-tasya.png",
+  "full": "full/PLATE-BOARD-HEAD--M-door-tasya.png"
+ },
+ {
+  "key": "PLATE-BOARD-HEAD@empty",
+  "id": "PLATE-BOARD-HEAD",
+  "state": "empty",
+  "module": "shared/pixel/rooms/boardroom-head.ts drawBoardHead",
+  "note": "the plate alone: window wall, slats, the LED bar, the table, the CEO chair",
+  "standin": "",
+  "native": "native/PLATE-BOARD-HEAD--empty.png",
+  "full": "full/PLATE-BOARD-HEAD--empty.png"
+ },
+ {
+  "key": "CAST-TTEMME-MEDIUM@sheet",
+  "id": "CAST-TTEMME-MEDIUM",
+  "state": "sheet",
+  "module": "shared/pixel/cast/ttemme-medium.ts",
+  "note": "mouths A E O M rest smile · lids · brows · nod 2 · down · arms rest / hourglass / folder · spot light",
+  "standin": "",
+  "native": "native/CAST-TTEMME-MEDIUM--sheet.png",
+  "full": "full/CAST-TTEMME-MEDIUM--sheet.png"
+ },
+ {
+  "key": "PROP-FOLDER@states",
+  "id": "PROP-FOLDER",
+  "state": "states",
+  "module": "shared/pixel/kits/folder.ts",
+  "note": "on the table (4 held slide steps) · up sealed · seal broken · cover opening · open (no page shows)",
+  "standin": "",
+  "native": "native/PROP-FOLDER--states.png",
+  "full": "full/PROP-FOLDER--states.png"
+ },
+ {
+  "key": "UI-CHAT-ROOM@sizes",
+  "id": "UI-CHAT-ROOM",
+  "state": "sizes",
+  "module": "shared/pixel/kits/chat-panel.ts",
+  "note": "medium (legible LIVE · CHAT) · room (the wide) · corner (entering the S7.13 overhead)",
+  "standin": "",
+  "native": "native/UI-CHAT-ROOM--sizes.png",
+  "full": "full/UI-CHAT-ROOM--sizes.png"
+ },
+ {
+  "key": "CAST-TERB-SHEET@reading",
+  "id": "CAST-TERB-SHEET",
+  "state": "reading",
+  "module": "shared/pixel/cast/terb-sheet.ts + rooms/calmoff-terms.ts",
+  "note": "S7.07: Terb in depth between them, the sheet up, reading (mouth open); Mas and Mada still",
+  "standin": "",
+  "native": "native/CAST-TERB-SHEET--reading.png",
+  "full": "full/CAST-TERB-SHEET--reading.png"
+ },
+ {
+  "key": "CAST-TERB-SHEET@looks-to-mada",
+  "id": "CAST-TERB-SHEET",
+  "state": "looks-to-mada",
+  "module": "shared/pixel/cast/terb-sheet.ts + rooms/calmoff-terms.ts",
+  "note": "S7.07 cont: \"He stays.\" Terb looks up, toward Mada",
+  "standin": "",
+  "native": "native/CAST-TERB-SHEET--looks-to-mada.png",
+  "full": "full/CAST-TERB-SHEET--looks-to-mada.png"
+ },
+ {
+  "key": "CAST-TERB-SHEET@spray",
+  "id": "CAST-TERB-SHEET",
+  "state": "spray",
+  "module": "shared/pixel/cast/terb-sheet.ts + rooms/calmoff-terms.ts",
+  "note": "S7.07: between sentences he sprays the chair fire, the sheet under his arm",
+  "standin": "",
+  "native": "native/CAST-TERB-SHEET--spray.png",
+  "full": "full/CAST-TERB-SHEET--spray.png"
+ },
+ {
+  "key": "PROP-PHONE-TABLE@lit",
+  "id": "PROP-PHONE-TABLE",
+  "state": "lit",
+  "module": "shared/pixel/rooms/calmoff-terms.ts drawTablePhone + kits/post-card.ts",
+  "note": "S7.09: Mas's phone lights green on the table, keycaps; Gerg's post as its notify card",
+  "standin": "",
+  "native": "native/PROP-PHONE-TABLE--lit.png",
+  "full": "full/PROP-PHONE-TABLE--lit.png"
+ },
+ {
+  "key": "CAST-OTHER-YRRAL@nod-0",
+  "id": "CAST-OTHER-YRRAL",
+  "state": "nod-0",
+  "module": "shared/pixel/rooms/calmoff-terms.ts drawOtherYrralM",
+  "note": "S7.07b: the seated silhouette, the nameplate, among the fires",
+  "standin": "",
+  "native": "native/CAST-OTHER-YRRAL--nod-0.png",
+  "full": "full/CAST-OTHER-YRRAL--nod-0.png"
+ },
+ {
+  "key": "CAST-OTHER-YRRAL@nod-1",
+  "id": "CAST-OTHER-YRRAL",
+  "state": "nod-1",
+  "module": "shared/pixel/rooms/calmoff-terms.ts drawOtherYrralM",
+  "note": "S7.07b: the nod (the second drawing, held 6 f)",
+  "standin": "",
+  "native": "native/CAST-OTHER-YRRAL--nod-1.png",
+  "full": "full/CAST-OTHER-YRRAL--nod-1.png"
+ },
+ {
+  "key": "ROOM-LOBBY-CCTV-DESK@stand-zoom",
+  "id": "ROOM-LOBBY-CCTV-DESK",
+  "state": "stand-zoom",
+  "module": "shared/pixel/kits/lobby-feed.ts",
+  "note": "S4.09 feed at 3x here: Mas at the desk, the ZOOM window holding on GUEST",
+  "standin": "",
+  "native": "native/ROOM-LOBBY-CCTV-DESK--stand-zoom.png",
+  "full": "full/ROOM-LOBBY-CCTV-DESK--stand-zoom.png"
+ },
+ {
+  "key": "ROOM-LOBBY-CCTV-DESK@walk-out",
+  "id": "ROOM-LOBBY-CCTV-DESK",
+  "state": "walk-out",
+  "module": "shared/pixel/kits/lobby-feed.ts",
+  "note": "S4.09 on \"here\": he turns and walks out through the revolving door (inside the drum)",
+  "standin": "",
+  "native": "native/ROOM-LOBBY-CCTV-DESK--walk-out.png",
+  "full": "full/ROOM-LOBBY-CCTV-DESK--walk-out.png"
+ },
+ {
+  "key": "PLATE-BOARD-SCREEN@ots-day",
+  "id": "PLATE-BOARD-SCREEN",
+  "state": "ots-day",
+  "module": "shared/pixel/rooms/board-screen.ts + kits/lobby-feed.ts",
+  "note": "S4.09: over Neleh onto the wall screen by day: the feed at 1:1, his post, Alyi's reflection in the glass (speaking)",
+  "standin": "",
+  "native": "native/PLATE-BOARD-SCREEN--ots-day.png",
+  "full": "full/PLATE-BOARD-SCREEN--ots-day.png"
+ },
+ {
+  "key": "PLATE-BOARD-SCREEN@2S-night-door",
+  "id": "PLATE-BOARD-SCREEN",
+  "state": "2S-night-door",
+  "module": "shared/pixel/rooms/board-screen.ts + cast/alyi-v5.ts",
+  "note": "S4.13d: Neleh (pen stops), Alyi's reflection looking at the slate door beyond",
+  "standin": "",
+  "native": "native/PLATE-BOARD-SCREEN--2S-night-door.png",
+  "full": "full/PLATE-BOARD-SCREEN--2S-night-door.png"
+ },
+ {
+  "key": "CAST-ALYI-LOOK@looks",
+  "id": "CAST-ALYI-LOOK",
+  "state": "looks",
+  "module": "shared/pixel/cast/alyi-v5.ts alyiLook",
+  "note": "ahead · left · right · down (the eye patches); S3.07 MCU·door with the look to the employee",
+  "standin": "",
+  "native": "native/CAST-ALYI-LOOK--looks.png",
+  "full": "full/CAST-ALYI-LOOK--looks.png"
+ },
+ {
+  "key": "CAST-ALYI-PHONE@reading",
+  "id": "CAST-ALYI-PHONE",
+  "state": "reading",
+  "module": "shared/pixel/cast/alyi-v5.ts drawAlyiDoorPhone + rooms/twoshots.ts",
+  "note": "S7.01: the P2 box, Alyi reading his post on his phone",
+  "standin": "",
+  "native": "native/CAST-ALYI-PHONE--reading.png",
+  "full": "full/CAST-ALYI-PHONE--reading.png"
+ },
+ {
+  "key": "CAST-ALYI-PHONE@looks-up",
+  "id": "CAST-ALYI-PHONE",
+  "state": "looks-up",
+  "module": "shared/pixel/cast/alyi-v5.ts drawAlyiDoorPhone",
+  "note": "S7.01: he looks up at the three hearts (twoshots alyiUp), the phone still in hand",
+  "standin": "",
+  "native": "native/CAST-ALYI-PHONE--looks-up.png",
+  "full": "full/CAST-ALYI-PHONE--looks-up.png"
+ },
+ {
+  "key": "ROOM-SLATE-DESKS@2S-key-turning",
+  "id": "ROOM-SLATE-DESKS",
+  "state": "2S-key-turning",
+  "module": "shared/pixel/rooms/slate-desks.ts drawSlateDoorOpen",
+  "note": "S5.11 lead-in: the door up, the key mid-turn (drawing 2 of 3), the sign left of the latch",
+  "standin": "",
+  "native": "native/ROOM-SLATE-DESKS--2S-key-turning.png",
+  "full": "full/ROOM-SLATE-DESKS--2S-key-turning.png"
+ },
+ {
+  "key": "ROOM-SLATE-DESKS@2S-open-desks",
+  "id": "ROOM-SLATE-DESKS",
+  "state": "2S-open-desks",
+  "module": "shared/pixel/rooms/slate-desks.ts drawSlateDoorOpen",
+  "note": "S5.11 on \"desk\": the crack open (13 px), the labelled desks in slate light, the spill",
+  "standin": "",
+  "native": "native/ROOM-SLATE-DESKS--2S-open-desks.png",
+  "full": "full/ROOM-SLATE-DESKS--2S-open-desks.png"
+ },
+ {
+  "key": "ROOM-SLATE-DESKS@key-drawings",
+  "id": "ROOM-SLATE-DESKS",
+  "state": "key-drawings",
+  "module": "shared/pixel/rooms/slate-desks.ts",
+  "note": "the key turn, 3 held drawings (1:1 crops of the door) + the crack at 6 and 13 px",
+  "standin": "",
+  "native": "native/ROOM-SLATE-DESKS--key-drawings.png",
+  "full": "full/ROOM-SLATE-DESKS--key-drawings.png"
+ },
+ {
+  "key": "ROOM-SLATE-DESKS@beyond-wide",
+  "id": "ROOM-SLATE-DESKS",
+  "state": "beyond-wide",
+  "module": "shared/pixel/rooms/slate-desks.ts drawSlateBeyond",
+  "note": "the slate room alone in a wide rect (for a wider door or a later pull-out): rows of labelled desks",
+  "standin": "",
+  "native": "native/ROOM-SLATE-DESKS--beyond-wide.png",
+  "full": "full/ROOM-SLATE-DESKS--beyond-wide.png"
+ },
+ {
+  "key": "ROOM-SLATE-DESKS@mcu-soft",
+  "id": "ROOM-SLATE-DESKS",
+  "state": "mcu-soft",
+  "module": "shared/pixel/rooms/slate-desks.ts (+ v3 29.17 framing)",
+  "note": "S5.12 after the rack: Mas left, not turning; the door soft, open a crack on the desks",
+  "standin": "the MCU framing is v3 29.17's recipe re-typed here (the v5 layout owns it)",
+  "native": "native/ROOM-SLATE-DESKS--mcu-soft.png",
+  "full": "full/ROOM-SLATE-DESKS--mcu-soft.png"
+ },
+ {
+  "key": "CAST-MAS-TURNAWAY@50-50",
+  "id": "CAST-MAS-TURNAWAY",
+  "state": "50-50",
+  "module": "shared/pixel/cast/mas-turnaway.ts",
+  "note": "S8.07: Mas turned away, already past (no mouth); Gerg's hand on the vault; the vault soft between",
+  "standin": "",
+  "native": "native/CAST-MAS-TURNAWAY--50-50.png",
+  "full": "full/CAST-MAS-TURNAWAY--50-50.png"
+ },
+ {
+  "key": "CAST-MAS-TURNAWAY@50-50-rack",
+  "id": "CAST-MAS-TURNAWAY",
+  "state": "50-50-rack",
+  "module": "shared/pixel/cast/mas-turnaway.ts",
+  "note": "S8.07 after \"the last one.\": RACK to the vault, both men soft, the note sharp; Mas walking (step 2)",
+  "standin": "",
+  "native": "native/CAST-MAS-TURNAWAY--50-50-rack.png",
+  "full": "full/CAST-MAS-TURNAWAY--50-50-rack.png"
+ },
+ {
+  "key": "CAST-MAS-TURNAWAY@drawings",
+  "id": "CAST-MAS-TURNAWAY",
+  "state": "drawings",
+  "module": "shared/pixel/cast/mas-turnaway.ts masTurnedAway",
+  "note": "warm step 0 / step 1 · monitor step 0 · vs his front portrait (v4) for scale",
+  "standin": "",
+  "native": "native/CAST-MAS-TURNAWAY--drawings.png",
+  "full": "full/CAST-MAS-TURNAWAY--drawings.png"
+ },
+ {
+  "key": "ROOM-BULLPEN-UNPACK@reading",
+  "id": "ROOM-BULLPEN-UNPACK",
+  "state": "reading",
+  "module": "shared/pixel/rooms/bullpen-unpack.ts",
+  "note": "S8.08: Nov 29, coats off, boxes open, the staff turned to his end desk; Mas reading (mouth open)",
+  "standin": "",
+  "native": "native/ROOM-BULLPEN-UNPACK--reading.png",
+  "full": "full/ROOM-BULLPEN-UNPACK--reading.png"
+ },
+ {
+  "key": "ROOM-BULLPEN-UNPACK@drift-8",
+  "id": "ROOM-BULLPEN-UNPACK",
+  "state": "drift-8",
+  "module": "shared/pixel/rooms/bullpen-unpack.ts",
+  "note": "S8.08 end of the drift (8 px left); Mas between words (mouth rest)",
+  "standin": "",
+  "native": "native/ROOM-BULLPEN-UNPACK--drift-8.png",
+  "full": "full/ROOM-BULLPEN-UNPACK--drift-8.png"
+ },
+ {
+  "key": "ROOM-BULLPEN-UNPACK@parts",
+  "id": "ROOM-BULLPEN-UNPACK",
+  "state": "parts",
+  "module": "shared/pixel/rooms/bullpen-unpack.ts openBox + shirtExtra",
+  "note": "open boxes 0-4 · staff in shirtsleeves (6 shirts, holds: mug / plant / papers), both facings",
+  "standin": "",
+  "native": "native/ROOM-BULLPEN-UNPACK--parts.png",
+  "full": "full/ROOM-BULLPEN-UNPACK--parts.png"
+ },
+ {
+  "key": "PROP-HOURGLASS-INSERT@low-flip-side",
+  "id": "PROP-HOURGLASS-INSERT",
+  "state": "low-flip-side",
+  "module": "shared/pixel/kits/hourglass-insert.ts",
+  "note": "S4.11: the flip's middle drawing (on its side, his hand), Ttemme soft above, the chat beside",
+  "standin": "the LOW·desk plate here is a demo backing (the v5 layout owns the boardroom plate)",
+  "native": "native/PROP-HOURGLASS-INSERT--low-flip-side.png",
+  "full": "full/PROP-HOURGLASS-INSERT--low-flip-side.png"
+ },
+ {
+  "key": "PROP-HOURGLASS-INSERT@low-running",
+  "id": "PROP-HOURGLASS-INSERT",
+  "state": "low-running",
+  "module": "shared/pixel/kits/hourglass-insert.ts",
+  "note": "S4.11: set down, flipped; the sand starts to fall, one pixel per beat",
+  "standin": "the LOW·desk plate here is a demo backing (the v5 layout owns the boardroom plate)",
+  "native": "native/PROP-HOURGLASS-INSERT--low-running.png",
+  "full": "full/PROP-HOURGLASS-INSERT--low-running.png"
+ },
+ {
+  "key": "PROP-HOURGLASS-INSERT@high-last-grain",
+  "id": "PROP-HOURGLASS-INSERT",
+  "state": "high-last-grain",
+  "module": "shared/pixel/kits/hourglass-insert.ts",
+  "note": "S7.13 [HIGH]: the table from above, a third of the frame; the last grain on the neck; his post; the chat corner",
+  "standin": "",
+  "native": "native/PROP-HOURGLASS-INSERT--high-last-grain.png",
+  "full": "full/PROP-HOURGLASS-INSERT--high-last-grain.png"
+ },
+ {
+  "key": "PROP-HOURGLASS-INSERT@high-shatter",
+  "id": "PROP-HOURGLASS-INSERT",
+  "state": "high-shatter",
+  "module": "shared/pixel/kits/hourglass-insert.ts",
+  "note": "S7.13: the shatter (k 4): shards on their arcs, the sand still holding the bulb's shape",
+  "standin": "",
+  "native": "native/PROP-HOURGLASS-INSERT--high-shatter.png",
+  "full": "full/PROP-HOURGLASS-INSERT--high-shatter.png"
+ },
+ {
+  "key": "PROP-HOURGLASS-INSERT@states",
+  "id": "PROP-HOURGLASS-INSERT",
+  "state": "states",
+  "module": "shared/pixel/kits/hourglass-insert.ts",
+  "note": "full · running · side · lift+hand · last grain · shatter 0 · held shape 10 · slump 1-3",
+  "standin": "",
+  "native": "native/PROP-HOURGLASS-INSERT--states.png",
+  "full": "full/PROP-HOURGLASS-INSERT--states.png"
+ },
+ {
+  "key": "CAST-TASYA-PHONE@reading",
+  "id": "CAST-TASYA-PHONE",
+  "state": "reading",
+  "module": "shared/pixel/cast/tasya-phone.ts",
+  "note": "S4.13: in the new doorway, reading his statement off his phone (eyes down, the screen on his chin), mouth open",
+  "standin": "",
+  "native": "native/CAST-TASYA-PHONE--reading.png",
+  "full": "full/CAST-TASYA-PHONE--reading.png"
+ },
+ {
+  "key": "CAST-TASYA-PHONE@pleased-ring",
+  "id": "CAST-TASYA-PHONE",
+  "state": "pleased-ring",
+  "module": "shared/pixel/cast/tasya-phone.ts",
+  "note": "S4.13: looking up from it, pleased, the key-ring arm up (the ring itself is the host's, as v4)",
+  "standin": "",
+  "native": "native/CAST-TASYA-PHONE--pleased-ring.png",
+  "full": "full/CAST-TASYA-PHONE--pleased-ring.png"
+ },
+ {
+  "key": "UI-JOIN-CORNER@set-beside",
+  "id": "UI-JOIN-CORNER",
+  "state": "set-beside",
+  "module": "shared/pixel/kits/join-corner.ts drawNudgeJoin",
+  "note": "S1.02: the nudge ECU with the laptop's corner: BOARD · VIDEO CALL, the waiting fifth tile, JOIN, his arrow beside it",
+  "standin": "",
+  "native": "native/UI-JOIN-CORNER--set-beside.png",
+  "full": "full/UI-JOIN-CORNER--set-beside.png"
+ },
+ {
+  "key": "UI-JOIN-CORNER@out1-glow",
+  "id": "UI-JOIN-CORNER",
+  "state": "out1-glow",
+  "module": "shared/pixel/kits/join-corner.ts drawNudgeJoin",
+  "note": "S1.02: the hand leaving for the trackpad; JOIN's halo, held step 2 (the beat before the blueprint print)",
+  "standin": "",
+  "native": "native/UI-JOIN-CORNER--out1-glow.png",
+  "full": "full/UI-JOIN-CORNER--out1-glow.png"
+ },
+ {
+  "key": "PROP-SPEAKERPHONE-MCU@pull",
+  "id": "PROP-SPEAKERPHONE-MCU",
+  "state": "pull",
+  "module": "shared/pixel/kits/speakerphone.ts",
+  "note": "S4.07 over v4's MCU·PF: she pulls the pod across the table to her (held step 2 of 3)",
+  "standin": "",
+  "native": "native/PROP-SPEAKERPHONE-MCU--pull.png",
+  "full": "full/PROP-SPEAKERPHONE-MCU--pull.png"
+ },
+ {
+  "key": "PROP-SPEAKERPHONE-MCU@dial-2",
+  "id": "PROP-SPEAKERPHONE-MCU",
+  "state": "dial-2",
+  "module": "shared/pixel/kits/speakerphone.ts dialAt",
+  "note": "S4.07: the second tone: her index on the key (pressed), two seat LEDs lit",
+  "standin": "",
+  "native": "native/PROP-SPEAKERPHONE-MCU--dial-2.png",
+  "full": "full/PROP-SPEAKERPHONE-MCU--dial-2.png"
+ },
+ {
+  "key": "PROP-SPEAKERPHONE-MCU@dial-4",
+  "id": "PROP-SPEAKERPHONE-MCU",
+  "state": "dial-4",
+  "module": "shared/pixel/kits/speakerphone.ts dialAt",
+  "note": "S4.07: the fourth tone, all four LEDs lit (one per seat); the ring follows in S4.08",
+  "standin": "",
+  "native": "native/PROP-SPEAKERPHONE-MCU--dial-4.png",
+  "full": "full/PROP-SPEAKERPHONE-MCU--dial-4.png"
+ },
+ {
+  "key": "PROP-MACROSOFT-BADGE@p2",
+  "id": "PROP-MACROSOFT-BADGE",
+  "state": "p2",
+  "module": "shared/pixel/kits/macrosoft-badge.ts",
+  "note": "S7.01 over v4's P2 box: the slate MACROSOFT card on his desk beside the GUEST card (v4's lanyardOnDesk)",
+  "standin": "",
+  "native": "native/PROP-MACROSOFT-BADGE--p2.png",
+  "full": "full/PROP-MACROSOFT-BADGE--p2.png"
+ },
+ {
+  "key": "PROP-MACROSOFT-BADGE@room",
+  "id": "PROP-MACROSOFT-BADGE",
+  "state": "room",
+  "module": "shared/pixel/kits/macrosoft-badge.ts badgesOnDeskRoom",
+  "note": "S7.02 the walkout wide: the two badges on his end desk at room scale (GUEST red-white, MACROSOFT slate)",
+  "standin": "",
+  "native": "native/PROP-MACROSOFT-BADGE--room.png",
+  "full": "full/PROP-MACROSOFT-BADGE--room.png"
+ },
+ {
+  "key": "PROP-MACROSOFT-BADGE@scales",
+  "id": "PROP-MACROSOFT-BADGE",
+  "state": "scales",
+  "module": "shared/pixel/kits/macrosoft-badge.ts",
+  "note": "p2 (with its strap) · desk (beside guestBadge 'desk') · room (x4 crop inset) · the pair at room scale",
+  "standin": "",
+  "native": "native/PROP-MACROSOFT-BADGE--scales.png",
+  "full": "full/PROP-MACROSOFT-BADGE--scales.png"
+ },
+ {
+  "key": "CAST-EMP-STAND@stand-hand-up",
+  "id": "CAST-EMP-STAND",
+  "state": "stand-hand-up",
+  "module": "shared/pixel/cast/employee-stand.ts",
+  "note": "S3.06 over v4's all-hands wide: tile 22 risen (step 3) with her hand up: she stands",
+  "standin": "",
+  "native": "native/CAST-EMP-STAND--stand-hand-up.png",
+  "full": "full/CAST-EMP-STAND--stand-hand-up.png"
+ },
+ {
+  "key": "CAST-EMP-STAND@stand-hand-down",
+  "id": "CAST-EMP-STAND",
+  "state": "stand-hand-down",
+  "module": "shared/pixel/cast/employee-stand.ts",
+  "note": "S3.06 tail / S3.07: her hand down, still standing",
+  "standin": "",
+  "native": "native/CAST-EMP-STAND--stand-hand-down.png",
+  "full": "full/CAST-EMP-STAND--stand-hand-down.png"
+ },
+ {
+  "key": "CAST-EMP-STAND@steps",
+  "id": "CAST-EMP-STAND",
+  "state": "steps",
+  "module": "shared/pixel/cast/employee-stand.ts",
+  "note": "the stand in 3 held steps (rise 0 · 1 · 2 · 3), 4x crops round tile 22",
+  "standin": "",
+  "native": "native/CAST-EMP-STAND--steps.png",
+  "full": "full/CAST-EMP-STAND--steps.png"
+ },
+ {
+  "key": "STYLE-1G-NEON@their-side-steps",
+  "id": "STYLE-1G-NEON",
+  "state": "their-side-steps",
+  "module": "shared/pixel/kits/call-boardside.ts vegasNeon / drawMasTileTheirs",
+  "note": "his tile on THEIR side at f 0 · 8 · 16 (one step per 8 f: marquee, floor chase, star) · frozen on 'super.'",
+  "standin": "",
+  "native": "native/STYLE-1G-NEON--their-side-steps.png",
+  "full": "full/STYLE-1G-NEON--their-side-steps.png"
+ },
+ {
+  "key": "STYLE-1G-NEON@his-side-guard",
+  "id": "STYLE-1G-NEON",
+  "state": "his-side-guard",
+  "module": "shared/pixel/kits/callgrid.ts vegasBg (guard) · drawTile({neonGuard})",
+  "note": "his OWN tile on his side (S1.07-S1.09): top v4 (f 0/2/4: steps every 2-4 f, the car) · below neonGuard (f 0/8/16)",
+  "standin": "",
+  "native": "native/STYLE-1G-NEON--his-side-guard.png",
+  "full": "full/STYLE-1G-NEON--his-side-guard.png"
+ },
+ {
+  "key": "STYLE-1G-SOFT@his-side",
+  "id": "STYLE-1G-SOFT",
+  "state": "his-side",
+  "module": "shared/pixel/kits/call-boardside.ts drawTileSoft",
+  "note": "his side (sc 26's call, v2 geometry): the four board tiles' video one grid-true step softer, their chips sharp; his own tile sharp",
+  "standin": "",
+  "native": "native/STYLE-1G-SOFT--his-side.png",
+  "full": "full/STYLE-1G-SOFT--his-side.png"
+ },
+ {
+  "key": "STYLE-1G-SOFT@their-side",
+  "id": "STYLE-1G-SOFT",
+  "state": "their-side",
+  "module": "shared/pixel/kits/call-boardside.ts drawBoardCall({softMas})",
+  "note": "their side (S3.00a / S3.01 [SCR]): his tile soft (softMas), their own four sharp",
+  "standin": "",
+  "native": "native/STYLE-1G-SOFT--their-side.png",
+  "full": "full/STYLE-1G-SOFT--their-side.png"
+ },
+ {
+  "key": "UI-CALL-V5@connect-step",
+  "id": "UI-CALL-V5",
+  "state": "connect-step",
+  "module": "shared/pixel/kits/call-boardside.ts",
+  "note": "S3.00a on 12:00: his tile connecting, the 2nd of 3 held opening steps (the waiting tile gone)",
+  "standin": "",
+  "native": "native/UI-CALL-V5--connect-step.png",
+  "full": "full/UI-CALL-V5--connect-step.png"
+ },
+ {
+  "key": "UI-CALL-V5@connected",
+  "id": "UI-CALL-V5",
+  "state": "connected",
+  "module": "shared/pixel/kits/call-boardside.ts",
+  "note": "S3.00a: MAS small and still, the one-pixel smile, one bar of hotel Wi-Fi, the neon behind him",
+  "standin": "",
+  "native": "native/UI-CALL-V5--connected.png",
+  "full": "full/UI-CALL-V5--connected.png"
+ },
+ {
+  "key": "UI-CALL-V5@audio-greyed",
+  "id": "UI-CALL-V5",
+  "state": "audio-greyed",
+  "module": "shared/pixel/kits/call-boardside.ts",
+  "note": "S3.01 end: the four closed ranks, the notice held, the MAS MANALT · audio chip greyed",
+  "standin": "",
+  "native": "native/UI-CALL-V5--audio-greyed.png",
+  "full": "full/UI-CALL-V5--audio-greyed.png"
+ },
+ {
+  "key": "UI-CALL-V5@rima-ring",
+  "id": "UI-CALL-V5",
+  "state": "rima-ring",
+  "module": "shared/pixel/kits/call-boardside.ts",
+  "note": "S3.04: Rima's join: the ring's first held step; the spotlight searching (overshoot)",
+  "standin": "",
+  "native": "native/UI-CALL-V5--rima-ring.png",
+  "full": "full/UI-CALL-V5--rima-ring.png"
+ },
+ {
+  "key": "UI-CALL-V5@rima-spot",
+  "id": "UI-CALL-V5",
+  "state": "rima-spot",
+  "module": "shared/pixel/kits/call-boardside.ts",
+  "note": "S3.04: the spot landed on her slot, speaking (mouth A), her speaking ring",
+  "standin": "",
+  "native": "native/UI-CALL-V5--rima-spot.png",
+  "full": "full/UI-CALL-V5--rima-spot.png"
+ },
+ {
+  "key": "STATE-SMALL@rima-smooth",
+  "id": "STATE-SMALL",
+  "state": "rima-smooth",
+  "module": "shared/pixel/cast/rima-v5.ts + kits/call-boardside.ts (fifth.hand)",
+  "note": "S3.04 (item 8): Rima smooths her jacket in her tile, 2 held drawings; 4x crops of the fifth slot (none · smooth0 · smooth1)",
+  "standin": "",
+  "native": "native/STATE-SMALL--rima-smooth.png",
+  "full": "full/STATE-SMALL--rima-smooth.png"
+ },
+ {
+  "key": "STATE-SMALL@alyi-mouth-his-side",
+  "id": "STATE-SMALL",
+  "state": "alyi-mouth-his-side",
+  "module": "shared/pixel/kits/callgrid.ts (TileState.mouth, additive)",
+  "note": "S1.07 (item 5): his side's ALYI tile: mouth rest · open (talking unheard), with the call's speaking ring",
+  "standin": "",
+  "native": "native/STATE-SMALL--alyi-mouth-his-side.png",
+  "full": "full/STATE-SMALL--alyi-mouth-his-side.png"
+ },
+ {
+  "key": "STYLE-J1@t01-flash-print",
+  "id": "STYLE-J1",
+  "state": "t01-flash-print",
+  "module": "episodes/ep01/act4/art-v5/j1/pixel.ts",
+  "note": "J1 t 1-2: the flash-print (the room area one flat P1); t 3-44 is the certificate (Remotion only, see j1/)",
+  "standin": "",
+  "native": "native/STYLE-J1--t01-flash-print.png",
+  "full": "full/STYLE-J1--t01-flash-print.png"
+ },
+ {
+  "key": "STYLE-J1@t46-snap-scar",
+  "id": "STYLE-J1",
+  "state": "t46-snap-scar",
+  "module": "episodes/ep01/act4/art-v5/j1/pixel.ts j1Snap",
+  "note": "J1 t 45-47: the snap: his tile greyed, the ONE scar row across the hoodie, the dialog gone",
+  "standin": "",
+  "native": "native/STYLE-J1--t46-snap-scar.png",
+  "full": "full/STYLE-J1--t46-snap-scar.png"
+ },
+ {
+  "key": "STYLE-J1@t52-fall",
+  "id": "STYLE-J1",
+  "state": "t52-fall",
+  "module": "episodes/ep01/act4/art-v5/j1/pixel.ts j1Snap",
+  "note": "J1 t 52: the tile falls through its own slot, masked to it (held drawing 3 of 4)",
+  "standin": "",
+  "native": "native/STYLE-J1--t52-fall.png",
+  "full": "full/STYLE-J1--t52-fall.png"
+ },
+ {
+  "key": "STYLE-J1@t57-close",
+  "id": "STYLE-J1",
+  "state": "t57-close",
+  "module": "episodes/ep01/act4/art-v5/j1/pixel.ts j1Snap",
+  "note": "J1 t 56-57: the slot empty, the four close ranks (held step 2); from t 60 the host resumes",
+  "standin": "",
+  "native": "native/STYLE-J1--t57-close.png",
+  "full": "full/STYLE-J1--t57-close.png"
+ }
+]

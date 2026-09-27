@@ -225,6 +225,7 @@ SPEC = [
          lines=['a5-27-01', 'a5-27-02', 'a5-27-03', 'a5-27-04'], lead=2.4, tail=0.6,
          on=[('Waiting for MAS MANALT to join…', 0.2, 1.4), ('11:59', 0.2, END('a5-27-02', 0.6)),
              ('12:00', END('a5-27-02', 0.6), None)],
+         sounds=[('bell_ding_F6', 1.4, -26)],       # v5b: his tile's join chime (Rima's tile gets the same)
          cues=[MU['proc']],
          caption="Their side: the fifth tile connects, perfectly still. Alyi tells him in plain words."),
     dict(id='S3.01', side=B, set='call', shot='wide', frame='SCREEN · her laptop, full frame', room='office',
@@ -297,7 +298,8 @@ SPEC = [
     dict(id='S4.08', seq=dict(sub='the rival lab', place='split: the boardroom / the rival lab\'s lighthouse',
                               time='Saturday night'),
          side=B, set='lighthouse', shot='medium', fx=['split'], frame='SPLIT · both calls, one held shot',
-         room='split', chars=[C('neleh'), C('mada', pose='sit'), C('mario'), C('adelina', frm=None)],
+         room='split', chars=[C('neleh'), C('mada', pose='sit'), C('mario'), C('adelina')],
+         chars_from={'adelina': ON('a5-27-32', -0.8)},
          lines=['a5-27-30', 'a5-27-31', 'a5-27-32', 'a5-27-33', 'a5-27-34'], lead=2.7, tail=1.3,
          lx={'a5-27-32': dict(overlap='a5-27-31', at_file=8.176), 'a5-27-33': dict(after=2.0)},
          on=[("MARIO · RUNS THE RIVAL LAB · (REPORTED)", 0.25, 2.65),
@@ -332,11 +334,14 @@ SPEC = [
     dict(id='S4.12', seq=dict(sub='~11:53 PM', place='the boardroom', time='Sun Nov 19 · ~11:53 PM'), side=B,
          set='boardroom', shot='medium', frame='TWO-SHOT · Neleh and Mada', room='boardroom', min=2.9,
          chars=[C('neleh', 0.3), C('mada', 0.7, 'sit')], on=[('RAIL: NOV 19 · ~11:53 PM PT', 0.2, 1.9)],
+         # v5b: the door steps up out of the wall and a key turns, as at his door in S5.11
+         sounds=[('landing_thunk', 0.9, -30), ('landing_thunk', 1.2, -30), ('landing_thunk', 1.5, -30),
+                 ('key_tap_space', 1.95, -24)],
          caption='The wall steps to MACROSOFT slate blue. A door that was not there appears in it, and opens.'),
     dict(id='S4.13', side=B, set='boardroom', shot='close', frame='SINGLE · MCU Tasya in the new doorway', room='boardroom',
          chars=[C('tasya', 0.62)], lines=['a5-27-44', 'a5-27-45'], lead=2.6, end=W('a5-27-45', 'Ttemme', -0.3),
          on=[('TASYA · THE LANDLORD · MACROSOFT · NOPEAI RUNS ON ITS SERVERS', 0.2, ON('a5-27-44', 0.7))],
-         names=[('tasya', 0.2)],
+         names=[('tasya', 0.2)], sounds=[('JANGLE', 0.4, -30)],     # v5b: his key ring as he fills the doorway
          caption='Tasya, delighted, phone in hand: "You\'ll want to hear our statement." He reads it whole.'),
     dict(id='S4.13c', side=B, set='boardroom', shot='medium', frame='MEDIUM · Ttemme in the CEO chair, Tasya beyond',
          room='boardroom', chars=[C('ttemme', 0.32, 'sit'), C('tasya', 0.84)], end=W('a5-27-45', 'Mas', -0.15),
@@ -346,6 +351,7 @@ SPEC = [
          caption='The second sentence lands on the board: Mas and Gerg are joining Macrosoft. Her pen stops.'),
     dict(id='S4.13e', side=B, set='boardroom', shot='close', frame='SINGLE · MCU Tasya lifts the sign', room='boardroom',
          min=3.0, chars=[C('tasya', 0.62, 'point')], on=[('MAS · GERG →', 0.2, None)],
+         sounds=[('JANGLE', 0.35, -28)],                              # v5b: "the key ring jangles once"
          caption='A small cartoon sign, arrow pointing out. The key ring jangles once.'),
     dict(id='S4.14', side=B, set='boardroom', shot='insert', frame='OVERHEAD · the blueprint', room='boardroom',
          lines=['a5-27-46'], lead=1.0, tail=0.7, lx={'a5-27-46': dict(tag='O.S.')},
@@ -442,7 +448,10 @@ SPEC = [
     dict(id='S6.04', side=H, set='call', shot='wide', frame="POV · Neleh's tile, half frame", room='dark',
          chars=[C('neleh', until=None), C('mada'), C('quiet-vote'), C('staff'), C('staff'), C('staff')],
          lines=['a5-29-24'], lead=0.3, tail=0.35, lx={'a5-29-24': dict(tag='call')},
-         on=[('ALYI left the call', 0.0, None), ('NELEH left the call', END('a5-29-24', 0.05), None)],
+         # v5b: her tile's exit lands where the take's voice drops (file 1.91 s = 1.07 s after its speech onset,
+         # lines-v5 interrupt.voice_drops_at_s), with the avalanche's thock on it, so the world visibly cuts her off
+         on=[('ALYI left the call', 0.0, None), ('NELEH left the call', ON('a5-29-24', 1.07), None)],
+         sounds=[('landing_thunk', ON('a5-29-24', 1.07), -20)],
          caption='Neleh\'s tile follows, footnotes scattering. The avalanche takes the end of her question.'),
     dict(id='S6.06', side=H, set='call', shot='wide', frame='POV · the last gap: Mada', room='dark', min=5.75,
          chars=[C('quiet-vote', until=1.0), C('mada'), C('staff'), C('staff'), C('staff'), C('staff')],
@@ -458,6 +467,8 @@ SPEC = [
              ("POST: ALYI: “I deeply regret my participation in the board's actions. I never intended to harm NopeAI…”",
               1.0, 6.8),
              ('♥  ♥  ♥', 6.9, None), ('IOU: 20% COMPUTE', END('a5-30-04', 1.0), None)],
+         # v5b: the three hearts cross the gap, soft ticks like the 2 AM hearts'
+         sounds=[('key_tap_soft_02', 6.9, -30), ('key_tap_soft_04', 7.4, -30), ('key_tap_soft_06', 7.9, -30)],
          cues=[MU['ret']],
          caption="Alyi's regret pops up in his box; three hearts rise from Mas's and hang. They talk about the hearts."),
     dict(id='S7.02', side=H, set='bullpen', shot='wide', frame='WIDE · the bullpen, packed boxes (held)', room='bullpen',
@@ -652,10 +663,13 @@ def main():
         dur = e0 - s0
         chars = []
         cu = sp.get('chars_until', {})
+        cf = sp.get('chars_from', {})
         for c in sp.get('chars', []):
             c = dict(c)
             if c['id'] in cu:
                 c['until'] = round(res(cu[c['id']], s0) - s0, 3)
+            if c['id'] in cf:
+                c['from'] = round(res(cf[c['id']], s0) - s0, 3)
             chars.append(c)
         onscreen = []
         for (text, at, until) in sp.get('on', []):

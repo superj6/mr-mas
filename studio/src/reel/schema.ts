@@ -131,10 +131,11 @@ export interface Episode {
   cast?: Record<string, CastInfo>;
 }
 export interface Timing {
-  starts: number[]; // absolute frame of each beat (title card occupies 0..TITLE_FRAMES-1)
+  starts: number[]; // absolute frame of each beat (the title card occupies 0..head-1)
   lens: number[];
   total: number;
   acts: {act: string; from: number; to: number}[]; // frame ranges (to exclusive)
+  head: number; // title-card frames before the first beat: TITLE_FRAMES for a standalone reel, 0 for a chapter of an episode reel
 }
 
 // ---------------------------------------------------------------- helpers
@@ -463,14 +464,16 @@ export const normalizeEpisode = (raw: unknown, key: string): Episode => {
   };
 };
 
-export const timeEpisode = (ep: Episode): Timing => {
+/** Frame layout of one reel. `head` = title-card frames before the first beat (default TITLE_FRAMES; an episode
+ *  reel's chapters use 0, so a chapter's beat frames are exactly its standalone frames minus TITLE_FRAMES). */
+export const timeEpisode = (ep: Episode, head: number = TITLE_FRAMES): Timing => {
   const starts: number[] = [];
   const lens: number[] = [];
   let acc = 0;
-  let prev = TITLE_FRAMES;
+  let prev = head;
   ep.beats.forEach((b) => {
     acc += b.reelDur;
-    const end = Math.max(prev + 1, TITLE_FRAMES + Math.round(acc * FPS));
+    const end = Math.max(prev + 1, head + Math.round(acc * FPS));
     starts.push(prev);
     lens.push(end - prev);
     prev = end;
@@ -481,12 +484,12 @@ export const timeEpisode = (ep: Episode): Timing => {
     if (last && last.act === b.act) last.to = starts[i] + lens[i];
     else acts.push({act: b.act, from: starts[i], to: starts[i] + lens[i]});
   });
-  return {starts, lens, total: prev, acts};
+  return {starts, lens, total: prev, acts, head};
 };
 
 /** Index of the beat on absolute frame f (-1 = title card). */
 export const beatAt = (t: Timing, f: number) => {
-  if (f < TITLE_FRAMES) return -1;
+  if (f < (t.head ?? TITLE_FRAMES)) return -1;
   let lo = 0;
   let hi = t.starts.length - 1;
   while (lo < hi) {

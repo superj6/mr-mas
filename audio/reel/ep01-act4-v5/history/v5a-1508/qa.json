@@ -1,0 +1,1568 @@
+{
+ "built": "2026-09-26 15:08:40",
+ "reel": "show/reel/ep01-act4-v5.json",
+ "wav": "audio/reel/ep01-act4-v5/mix.wav",
+ "frames": 12515,
+ "samples": 25030000,
+ "seconds": 521.458,
+ "loudness_lufs": {
+  "mix": -17.1,
+  "dialogue": -16.0,
+  "music": -26.6,
+  "rooms": -37.9
+ },
+ "music_under_speech_dbfs_rms": -35.3,
+ "music_between_speech_dbfs_rms": -25.4,
+ "peak_dbfs": -4.32,
+ "limiter_ms": 0,
+ "silence_after_cancel": {
+  "click": 44.567,
+  "buzz": 48.258,
+  "seconds": 3.692,
+  "level": "room tone only, about -47 dBFS RMS (the script asks for digital silence here)"
+ },
+ "holes_under_42dBFS_0p3s": [
+  [
+   0.0,
+   2.6
+  ],
+  [
+   44.6,
+   3.65
+  ],
+  [
+   520.95,
+   0.5
+  ]
+ ],
+ "music_runs_raw": [
+  [
+   3.0,
+   32.15
+  ],
+  [
+   35.45,
+   9.15
+  ],
+  [
+   52.05,
+   340.2
+  ],
+  [
+   394.65,
+   7.35
+  ],
+  [
+   402.05,
+   0.05
+  ],
+  [
+   402.15,
+   3.6
+  ],
+  [
+   405.95,
+   0.2
+  ],
+  [
+   406.35,
+   2.5
+  ],
+  [
+   408.95,
+   0.25
+  ],
+  [
+   409.25,
+   0.15
+  ],
+  [
+   409.45,
+   0.15
+  ],
+  [
+   409.65,
+   0.25
+  ],
+  [
+   410.15,
+   0.25
+  ],
+  [
+   410.45,
+   50.85
+  ],
+  [
+   468.35,
+   53.0
+  ]
+ ],
+ "music_runs": [
+  [
+   3.0,
+   32.15
+  ],
+  [
+   35.45,
+   9.15
+  ],
+  [
+   52.05,
+   340.2
+  ],
+  [
+   394.65,
+   66.65
+  ],
+  [
+   468.35,
+   53.0
+  ]
+ ],
+ "music": [
+  {
+   "name": "M1 THE PLAN (MM-07 BLUEPRINT)",
+   "src": "audio/ost/tracks/mm07-how-to-fire-a-ceo/render/mm07-how-to-fire-a-ceo-underscore.wav",
+   "t0": 3.0,
+   "t1": 35.167,
+   "parts": [
+    [
+     3.0,
+     0.0,
+     null
+    ],
+    [
+     7.5,
+     6.25,
+     null
+    ],
+    [
+     20.5,
+     20.75,
+     [
+      22.5,
+      37.5
+     ]
+    ],
+    [
+     31.967,
+     0.0,
+     null
+    ]
+   ],
+   "stop": "hard",
+   "source_rms_dbfs": -19.0,
+   "gain_db": -5.0
+  },
+  {
+   "name": "M2 THE CALL (MM-08 LEVERAGE low)",
+   "src": "audio/ost/tracks/mm08-the-falling-tile/render/mm08-the-falling-tile-underscore.wav",
+   "t0": 35.417,
+   "t1": 44.567,
+   "parts": [
+    [
+     35.417,
+     0.0,
+     null
+    ]
+   ],
+   "stop": "hard",
+   "source_rms_dbfs": -21.5,
+   "gain_db": -2.5
+  },
+  {
+   "name": "M3 THAT NIGHT (MM-08 26A felt)",
+   "src": "audio/ost/tracks/mm08-the-falling-tile/render/mm08-the-falling-tile-underscore.wav",
+   "t0": 52.083,
+   "t1": 66.0,
+   "parts": [
+    [
+     52.083,
+     22.5,
+     [
+      22.5,
+      28.5
+     ]
+    ],
+    [
+     62.0,
+     0.0,
+     null
+    ]
+   ],
+   "stop": "fade",
+   "source_rms_dbfs": -27.3,
+   "gain_db": 5.3
+  },
+  {
+   "name": "M4 PASS ONE (MM-09 PROCEDURE a-h, 09x)",
+   "src": "audio/ost/tracks/mm09-the-boards-side/render/mm09-the-boards-side-underscore.wav",
+   "t0": 66.0,
+   "t1": 295.542,
+   "parts": [
+    [
+     66.0,
+     13.75,
+     [
+      15.0,
+      25.0
+     ]
+    ],
+    [
+     154.167,
+     30.0,
+     null
+    ],
+    [
+     158.958,
+     40.0,
+     [
+      40.0,
+      62.5
+     ]
+    ],
+    [
+     195.458,
+     65.0,
+     [
+      65.0,
+      80.0
+     ]
+    ],
+    [
+     223.5,
+     84.5,
+     [
+      85.0,
+      95.0
+     ]
+    ],
+    [
+     261.5,
+     95.0,
+     [
+      95.0,
+      100.0
+     ]
+    ],
+    [
+     287.333,
+     105.0,
+     [
+      105.0,
+      110.0
+     ]
+    ],
+    [
+     292.292,
+     110.0,
+     null
+    ]
+   ],
+   "stop": "fade",
+   "source_rms_dbfs": -22.7,
+   "gain_db": -1.3
+  },
+  {
+   "name": "M5 2 AM (v4 S5 render: the dark-room pedal + pulse)",
+   "src": "audio/ost/tracks/e01-act4-v4/render/e01-act4-v4-s5s6-his-side-745-underscore.wav",
+   "t0": 293.542,
+   "t1": 378.342,
+   "parts": [
+    [
+     293.542,
+     0.0,
+     [
+      2.0,
+      27.5
+     ]
+    ],
+    [
+     357.167,
+     27.83,
+     [
+      27.9,
+      29.6
+     ]
+    ],
+    [
+     363.75,
+     29.67,
+     [
+      29.8,
+      34.4
+     ]
+    ]
+   ],
+   "stop": "fade",
+   "source_rms_dbfs": -21.3,
+   "gain_db": -2.7
+  },
+  {
+   "name": "M6 THE AVALANCHE (v4 S6 render: SET-PIECE SWING)",
+   "src": "audio/ost/tracks/e01-act4-v4/render/e01-act4-v4-s5s6-his-side-745-underscore.wav",
+   "t0": 377.742,
+   "t1": 392.217,
+   "parts": [
+    [
+     377.742,
+     0.0,
+     null
+    ]
+   ],
+   "stop": "hard",
+   "source_rms_dbfs": -15.0,
+   "gain_db": -6.0
+  },
+  {
+   "name": "M7a THE RETURN (v4 S7 render: violin, the floor, LEVERAGE)",
+   "src": "audio/ost/tracks/e01-act4-v4/render/e01-act4-v4-s7s8-the-return-underscore.wav",
+   "t0": 394.267,
+   "t1": 461.262,
+   "parts": [
+    [
+     394.267,
+     0.0,
+     [
+      1.0,
+      6.2
+     ]
+    ],
+    [
+     411.5,
+     6.33,
+     [
+      6.5,
+      14.3
+     ]
+    ],
+    [
+     428.208,
+     14.42,
+     [
+      15.0,
+      23.5
+     ]
+    ]
+   ],
+   "stop": "hard",
+   "source_rms_dbfs": -21.2,
+   "gain_db": -2.8
+  },
+  {
+   "name": "M7b THE RETURN (v4 S7/S8 render: C pedal, the sign, the flat line, the felt settle)",
+   "src": "audio/ost/tracks/e01-act4-v4/render/e01-act4-v4-s7s8-the-return-underscore.wav",
+   "t0": 468.283,
+   "t1": 504.375,
+   "parts": [
+    [
+     468.283,
+     29.17,
+     [
+      29.3,
+      40.5
+     ]
+    ],
+    [
+     480.208,
+     40.67,
+     null
+    ],
+    [
+     483.5,
+     43.17,
+     null
+    ],
+    [
+     486.5,
+     46.58,
+     null
+    ],
+    [
+     488.25,
+     50.96,
+     [
+      55.0,
+      69.5
+     ]
+    ]
+   ],
+   "stop": "fade",
+   "source_rms_dbfs": -22.8,
+   "gain_db": -1.2
+  },
+  {
+   "name": "M8 CODA: the vault F hum (synth, diegetic pedal)",
+   "t0": 490.708,
+   "t1": 521.458
+  }
+ ],
+ "rooms": [
+  {
+   "room": "suite",
+   "t0": 2.333,
+   "t1": 52.583,
+   "rms_dbfs": -39.0
+  },
+  {
+   "room": "dark",
+   "t0": 51.583,
+   "t1": 58.5,
+   "rms_dbfs": -39.0
+  },
+  {
+   "room": "tpool",
+   "t0": 57.5,
+   "t1": 62.5,
+   "rms_dbfs": -39.0
+  },
+  {
+   "room": "dark",
+   "t0": 61.5,
+   "t1": 66.5,
+   "rms_dbfs": -39.0
+  },
+  {
+   "room": "office",
+   "t0": 65.5,
+   "t1": 130.083,
+   "rms_dbfs": -39.0
+  },
+  {
+   "room": "allhands",
+   "t0": 129.083,
+   "t1": 144.083,
+   "rms_dbfs": -39.0
+  },
+  {
+   "room": "office_night",
+   "t0": 143.083,
+   "t1": 154.667,
+   "rms_dbfs": -39.0
+  },
+  {
+   "room": "boardroom",
+   "t0": 153.667,
+   "t1": 195.958,
+   "rms_dbfs": -39.0
+  },
+  {
+   "room": "split",
+   "t0": 194.958,
+   "t1": 224.0,
+   "rms_dbfs": -39.0
+  },
+  {
+   "room": "cctv",
+   "t0": 223.0,
+   "t1": 239.375,
+   "rms_dbfs": -39.0
+  },
+  {
+   "room": "boardroom",
+   "t0": 238.375,
+   "t1": 294.542,
+   "rms_dbfs": -39.0
+  },
+  {
+   "room": "dark",
+   "t0": 293.542,
+   "t1": 394.167,
+   "rms_dbfs": -39.0
+  },
+  {
+   "room": "bullpen",
+   "t0": 393.167,
+   "t1": 428.708,
+   "rms_dbfs": -39.0
+  },
+  {
+   "room": "fires",
+   "t0": 427.708,
+   "t1": 480.708,
+   "rms_dbfs": -39.0
+  },
+  {
+   "room": "lobby",
+   "t0": 479.708,
+   "t1": 491.208,
+   "rms_dbfs": -39.0
+  },
+  {
+   "room": "coda",
+   "t0": 490.208,
+   "t1": 521.458,
+   "rms_dbfs": -39.0
+  }
+ ],
+ "sfx": [
+  {
+   "beat": "S1.03",
+   "name": "rubber_stamp_C",
+   "at": 9.3,
+   "peak_dbfs": -24,
+   "during_line": []
+  },
+  {
+   "beat": "S1.04",
+   "name": "rubber_stamp_C",
+   "at": 24.573,
+   "peak_dbfs": -22,
+   "during_line": [
+    "a5-25-04"
+   ]
+  },
+  {
+   "beat": "S1.04",
+   "name": "rubber_stamp_C",
+   "at": 28.625,
+   "peak_dbfs": -22,
+   "during_line": [
+    "a5-25-06"
+   ]
+  },
+  {
+   "beat": "S1.05",
+   "name": "paper_whip",
+   "at": 33.408,
+   "peak_dbfs": -20,
+   "during_line": []
+  },
+  {
+   "beat": "S1.06",
+   "name": "dialog_ok_click",
+   "at": 35.167,
+   "peak_dbfs": -16,
+   "during_line": []
+  },
+  {
+   "beat": "S1.09",
+   "name": "dialog_ok_click",
+   "at": 44.567,
+   "peak_dbfs": -14,
+   "during_line": []
+  },
+  {
+   "beat": "S1.11",
+   "name": "BUZZ",
+   "at": 48.258,
+   "peak_dbfs": -14,
+   "during_line": []
+  },
+  {
+   "beat": "S2.03",
+   "name": "render_front_sweep",
+   "at": 58.0,
+   "peak_dbfs": -20,
+   "during_line": []
+  },
+  {
+   "beat": "S2.04",
+   "name": "render_front_sweep",
+   "at": 62.0,
+   "peak_dbfs": -24,
+   "during_line": []
+  },
+  {
+   "beat": "S2.05",
+   "name": "reverse_swell_1beat",
+   "at": 64.9,
+   "peak_dbfs": -18,
+   "during_line": []
+  },
+  {
+   "beat": "S3.02",
+   "name": "key_tap_space",
+   "at": 88.867,
+   "peak_dbfs": -24,
+   "during_line": []
+  },
+  {
+   "beat": "S3.03",
+   "name": "post_click",
+   "at": 106.18,
+   "peak_dbfs": -16,
+   "during_line": []
+  },
+  {
+   "beat": "S3.04",
+   "name": "bell_ding_F6",
+   "at": 106.95,
+   "peak_dbfs": -26,
+   "during_line": []
+  },
+  {
+   "beat": "S3.04b",
+   "name": "key_tap_space",
+   "at": 129.19,
+   "peak_dbfs": -26,
+   "during_line": []
+  },
+  {
+   "beat": "S3.05",
+   "name": "keycap_popcorn",
+   "at": 144.283,
+   "peak_dbfs": -20,
+   "during_line": []
+  },
+  {
+   "beat": "S4.01",
+   "name": "heart_gliss",
+   "at": 154.467,
+   "peak_dbfs": -20,
+   "during_line": []
+  },
+  {
+   "beat": "S4.02",
+   "name": "BUZZ",
+   "at": 159.258,
+   "peak_dbfs": -24,
+   "during_line": []
+  },
+  {
+   "beat": "S4.02",
+   "name": "BUZZ",
+   "at": 167.428,
+   "peak_dbfs": -26,
+   "during_line": []
+  },
+  {
+   "beat": "S4.04",
+   "name": "BUZZ",
+   "at": 174.308,
+   "peak_dbfs": -28,
+   "during_line": []
+  },
+  {
+   "beat": "S4.06",
+   "name": "landing_thunk",
+   "at": 186.205,
+   "peak_dbfs": -22,
+   "during_line": []
+  },
+  {
+   "beat": "S4.07",
+   "name": "DTMF",
+   "at": 193.858,
+   "peak_dbfs": -26,
+   "during_line": []
+  },
+  {
+   "beat": "S4.07",
+   "name": "DTMF",
+   "at": 194.208,
+   "peak_dbfs": -26,
+   "during_line": []
+  },
+  {
+   "beat": "S4.07",
+   "name": "DTMF",
+   "at": 194.558,
+   "peak_dbfs": -26,
+   "during_line": []
+  },
+  {
+   "beat": "S4.07",
+   "name": "DTMF",
+   "at": 194.908,
+   "peak_dbfs": -26,
+   "during_line": []
+  },
+  {
+   "beat": "S4.08",
+   "name": "RING",
+   "at": 195.658,
+   "peak_dbfs": -24,
+   "during_line": []
+  },
+  {
+   "beat": "S4.08",
+   "name": "RING",
+   "at": 196.658,
+   "peak_dbfs": -24,
+   "during_line": []
+  },
+  {
+   "beat": "S4.08",
+   "name": "dialog_ok_click",
+   "at": 216.314,
+   "peak_dbfs": -20,
+   "during_line": []
+  },
+  {
+   "beat": "S4.08",
+   "name": "DIALTONE",
+   "at": 216.514,
+   "peak_dbfs": -30,
+   "during_line": []
+  },
+  {
+   "beat": "S4.08",
+   "name": "RING",
+   "at": 216.914,
+   "peak_dbfs": -26,
+   "during_line": []
+  },
+  {
+   "beat": "S4.10b",
+   "name": "paper_whip",
+   "at": 254.775,
+   "peak_dbfs": -22,
+   "during_line": []
+  },
+  {
+   "beat": "S5.03",
+   "name": "key_tap_soft_01",
+   "at": 297.825,
+   "peak_dbfs": -26,
+   "during_line": []
+  },
+  {
+   "beat": "S5.03",
+   "name": "key_tap_soft_02",
+   "at": 298.45,
+   "peak_dbfs": -26,
+   "during_line": []
+  },
+  {
+   "beat": "S5.03",
+   "name": "key_tap_soft_03",
+   "at": 299.075,
+   "peak_dbfs": -26,
+   "during_line": []
+  },
+  {
+   "beat": "S5.03",
+   "name": "key_tap_soft_04",
+   "at": 299.7,
+   "peak_dbfs": -26,
+   "during_line": []
+  },
+  {
+   "beat": "S5.03",
+   "name": "key_tap_soft_05",
+   "at": 300.325,
+   "peak_dbfs": -26,
+   "during_line": []
+  },
+  {
+   "beat": "S5.04",
+   "name": "orb_servo",
+   "at": 300.925,
+   "peak_dbfs": -22,
+   "during_line": []
+  },
+  {
+   "beat": "S5.09",
+   "name": "RING",
+   "at": 306.075,
+   "peak_dbfs": -30,
+   "during_line": []
+  },
+  {
+   "beat": "S5.09",
+   "name": "dialog_ok_click",
+   "at": 306.875,
+   "peak_dbfs": -24,
+   "during_line": []
+  },
+  {
+   "beat": "S5.06",
+   "name": "odometer_ratchet",
+   "at": 338.843,
+   "peak_dbfs": -22,
+   "during_line": []
+  },
+  {
+   "beat": "S5.06",
+   "name": "bell_ding_F6",
+   "at": 340.763,
+   "peak_dbfs": -28,
+   "during_line": []
+  },
+  {
+   "beat": "S5.08",
+   "name": "SLOT",
+   "at": 346.375,
+   "peak_dbfs": -26,
+   "during_line": []
+  },
+  {
+   "beat": "S5.08",
+   "name": "rubber_stamp_C",
+   "at": 351.125,
+   "peak_dbfs": -18,
+   "during_line": []
+  },
+  {
+   "beat": "S5.11",
+   "name": "landing_thunk",
+   "at": 363.95,
+   "peak_dbfs": -30,
+   "during_line": []
+  },
+  {
+   "beat": "S5.11",
+   "name": "landing_thunk",
+   "at": 364.25,
+   "peak_dbfs": -30,
+   "during_line": []
+  },
+  {
+   "beat": "S5.11",
+   "name": "landing_thunk",
+   "at": 364.55,
+   "peak_dbfs": -30,
+   "during_line": []
+  },
+  {
+   "beat": "S5.11",
+   "name": "key_tap_space",
+   "at": 365.0,
+   "peak_dbfs": -24,
+   "during_line": []
+  },
+  {
+   "beat": "S6.01",
+   "name": "landing_thunk",
+   "at": 378.842,
+   "peak_dbfs": -24,
+   "during_line": []
+  },
+  {
+   "beat": "S6.01",
+   "name": "landing_thunk",
+   "at": 379.342,
+   "peak_dbfs": -24,
+   "during_line": []
+  },
+  {
+   "beat": "S6.01",
+   "name": "landing_thunk",
+   "at": 379.842,
+   "peak_dbfs": -24,
+   "during_line": []
+  },
+  {
+   "beat": "S6.01",
+   "name": "landing_thunk",
+   "at": 380.342,
+   "peak_dbfs": -24,
+   "during_line": []
+  },
+  {
+   "beat": "S6.01",
+   "name": "landing_thunk",
+   "at": 380.842,
+   "peak_dbfs": -24,
+   "during_line": []
+  },
+  {
+   "beat": "S6.06",
+   "name": "freeze_hit_F",
+   "at": 392.217,
+   "peak_dbfs": -20,
+   "during_line": []
+  },
+  {
+   "beat": "S7.06",
+   "name": "landing_thunk",
+   "at": 430.417,
+   "peak_dbfs": -18,
+   "during_line": []
+  },
+  {
+   "beat": "S7.06",
+   "name": "freeze_hit_F",
+   "at": 430.667,
+   "peak_dbfs": -20,
+   "during_line": []
+  },
+  {
+   "beat": "S7.09",
+   "name": "rubber_stamp_C",
+   "at": 468.283,
+   "peak_dbfs": -18,
+   "during_line": []
+  },
+  {
+   "beat": "S7.09",
+   "name": "keycap_popcorn",
+   "at": 468.883,
+   "peak_dbfs": -22,
+   "during_line": []
+  },
+  {
+   "beat": "S7.13",
+   "name": "hourglass_shatter",
+   "at": 479.293,
+   "peak_dbfs": -18,
+   "during_line": []
+  },
+  {
+   "beat": "S8.01",
+   "name": "neon_ignite",
+   "at": 480.308,
+   "peak_dbfs": -20,
+   "during_line": []
+  },
+  {
+   "beat": "S8.03",
+   "name": "alert_bonk",
+   "at": 485.9,
+   "peak_dbfs": -18,
+   "during_line": []
+  },
+  {
+   "beat": "S8.09",
+   "name": "key_tap_soft_01",
+   "at": 512.25,
+   "peak_dbfs": -26,
+   "during_line": [
+    "a5-31-04"
+   ]
+  },
+  {
+   "beat": "S8.09",
+   "name": "key_tap_soft_03",
+   "at": 512.95,
+   "peak_dbfs": -26,
+   "during_line": [
+    "a5-31-04"
+   ]
+  },
+  {
+   "beat": "S8.09",
+   "name": "key_tap_soft_05",
+   "at": 513.65,
+   "peak_dbfs": -26,
+   "during_line": [
+    "a5-31-04"
+   ]
+  },
+  {
+   "beat": "S8.09",
+   "name": "key_tap_soft_06",
+   "at": 514.35,
+   "peak_dbfs": -26,
+   "during_line": [
+    "a5-31-04"
+   ]
+  },
+  {
+   "beat": "S8.10",
+   "name": "bell_ding_F6",
+   "at": 520.45,
+   "peak_dbfs": -32,
+   "during_line": []
+  }
+ ],
+ "placements": [
+  {
+   "id": "a5-25-01",
+   "file_start": 9.49,
+   "speech_on": 10.4,
+   "speech_end": 11.95
+  },
+  {
+   "id": "a5-25-02",
+   "file_start": 11.95,
+   "speech_on": 12.85,
+   "speech_end": 15.75
+  },
+  {
+   "id": "a5-25-03",
+   "file_start": 15.84,
+   "speech_on": 16.35,
+   "speech_end": 19.67
+  },
+  {
+   "id": "a5-25-04",
+   "file_start": 20.21,
+   "speech_on": 21.05,
+   "speech_end": 25.12
+  },
+  {
+   "id": "a5-25-05",
+   "file_start": 25.22,
+   "speech_on": 25.72,
+   "speech_end": 27.59
+  },
+  {
+   "id": "a5-25-06",
+   "file_start": 27.88,
+   "speech_on": 28.39,
+   "speech_end": 29.29
+  },
+  {
+   "id": "a5-26-01",
+   "file_start": 49.405,
+   "speech_on": 50.325,
+   "speech_end": 51.045
+  },
+  {
+   "id": "a5-26a-01",
+   "file_start": 52.773,
+   "speech_on": 53.683,
+   "speech_end": 55.613
+  },
+  {
+   "id": "a5-27-01",
+   "file_start": 67.56,
+   "speech_on": 68.4,
+   "speech_end": 75.3
+  },
+  {
+   "id": "a5-27-02",
+   "file_start": 75.7,
+   "speech_on": 76.6,
+   "speech_end": 78.44
+  },
+  {
+   "id": "a5-27-03",
+   "file_start": 79.04,
+   "speech_on": 79.94,
+   "speech_end": 81.18
+  },
+  {
+   "id": "a5-27-04",
+   "file_start": 81.13,
+   "speech_on": 81.68,
+   "speech_end": 84.34
+  },
+  {
+   "id": "a5-27-05",
+   "file_start": 85.62,
+   "speech_on": 86.54,
+   "speech_end": 87.26
+  },
+  {
+   "id": "a5-27-06",
+   "file_start": 90.11,
+   "speech_on": 90.95,
+   "speech_end": 93.61
+  },
+  {
+   "id": "a5-27-07",
+   "file_start": 93.27,
+   "speech_on": 94.11,
+   "speech_end": 103.11
+  },
+  {
+   "id": "a5-27-08",
+   "file_start": 103.31,
+   "speech_on": 103.81,
+   "speech_end": 104.83
+  },
+  {
+   "id": "a5-27-09",
+   "file_start": 106.95,
+   "speech_on": 107.85,
+   "speech_end": 112.59
+  },
+  {
+   "id": "a5-27-10",
+   "file_start": 112.59,
+   "speech_on": 113.09,
+   "speech_end": 113.86
+  },
+  {
+   "id": "a5-27-11",
+   "file_start": 113.76,
+   "speech_on": 114.26,
+   "speech_end": 115.5
+  },
+  {
+   "id": "a5-27-12",
+   "file_start": 115.69,
+   "speech_on": 116.2,
+   "speech_end": 118.94
+  },
+  {
+   "id": "a5-27-13",
+   "file_start": 118.94,
+   "speech_on": 119.44,
+   "speech_end": 120.55
+  },
+  {
+   "id": "a5-27-14",
+   "file_start": 120.55,
+   "speech_on": 121.05,
+   "speech_end": 123.96
+  },
+  {
+   "id": "a5-27-15",
+   "file_start": 124.15,
+   "speech_on": 124.66,
+   "speech_end": 125.7
+  },
+  {
+   "id": "a5-27-16",
+   "file_start": 125.79,
+   "speech_on": 126.3,
+   "speech_end": 126.94
+  },
+  {
+   "id": "a5-27-17",
+   "file_start": 126.93,
+   "speech_on": 127.44,
+   "speech_end": 128.69
+  },
+  {
+   "id": "a5-27-18",
+   "file_start": 129.753,
+   "speech_on": 130.583,
+   "speech_end": 133.053
+  },
+  {
+   "id": "a5-27-19",
+   "file_start": 133.154,
+   "speech_on": 134.054,
+   "speech_end": 141.904
+  },
+  {
+   "id": "a5-27-20",
+   "file_start": 144.783,
+   "speech_on": 145.683,
+   "speech_end": 149.593
+  },
+  {
+   "id": "a5-27-21",
+   "file_start": 149.883,
+   "speech_on": 150.393,
+   "speech_end": 153.153
+  },
+  {
+   "id": "a5-27-22",
+   "file_start": 159.368,
+   "speech_on": 160.258,
+   "speech_end": 166.928
+  },
+  {
+   "id": "a5-27-23",
+   "file_start": 167.418,
+   "speech_on": 168.328,
+   "speech_end": 173.728
+  },
+  {
+   "id": "a5-27-24",
+   "file_start": 174.128,
+   "speech_on": 174.628,
+   "speech_end": 177.398
+  },
+  {
+   "id": "a5-27-25",
+   "file_start": 177.188,
+   "speech_on": 177.698,
+   "speech_end": 178.178
+  },
+  {
+   "id": "a5-27-26",
+   "file_start": 178.258,
+   "speech_on": 178.778,
+   "speech_end": 180.818
+  },
+  {
+   "id": "a5-27-27",
+   "file_start": 180.915,
+   "speech_on": 181.425,
+   "speech_end": 185.855
+  },
+  {
+   "id": "a5-27-28",
+   "file_start": 186.065,
+   "speech_on": 186.955,
+   "speech_end": 189.545
+  },
+  {
+   "id": "a5-27-29",
+   "file_start": 190.878,
+   "speech_on": 191.758,
+   "speech_end": 193.358
+  },
+  {
+   "id": "a5-27-30",
+   "file_start": 197.268,
+   "speech_on": 198.158,
+   "speech_end": 206.598
+  },
+  {
+   "id": "a5-27-31",
+   "file_start": 206.298,
+   "speech_on": 207.198,
+   "speech_end": 214.798
+  },
+  {
+   "id": "a5-27-32",
+   "file_start": 213.974,
+   "speech_on": 214.474,
+   "speech_end": 216.014
+  },
+  {
+   "id": "a5-27-33",
+   "file_start": 217.184,
+   "speech_on": 218.014,
+   "speech_end": 219.754
+  },
+  {
+   "id": "a5-27-34",
+   "file_start": 219.554,
+   "speech_on": 220.054,
+   "speech_end": 222.184
+  },
+  {
+   "id": "a5-27-35",
+   "file_start": 225.86,
+   "speech_on": 226.7,
+   "speech_end": 232.09
+  },
+  {
+   "id": "a5-27-36",
+   "file_start": 232.28,
+   "speech_on": 232.79,
+   "speech_end": 234.77
+  },
+  {
+   "id": "a5-27-37",
+   "file_start": 234.77,
+   "speech_on": 235.27,
+   "speech_end": 237.67
+  },
+  {
+   "id": "a5-27-38",
+   "file_start": 242.835,
+   "speech_on": 243.675,
+   "speech_end": 246.125
+  },
+  {
+   "id": "a5-27-39",
+   "file_start": 246.015,
+   "speech_on": 246.525,
+   "speech_end": 248.175
+  },
+  {
+   "id": "a5-27-40",
+   "file_start": 248.265,
+   "speech_on": 248.775,
+   "speech_end": 249.945
+  },
+  {
+   "id": "a5-27-41",
+   "file_start": 250.135,
+   "speech_on": 250.645,
+   "speech_end": 254.275
+  },
+  {
+   "id": "a5-27-42",
+   "file_start": 256.385,
+   "speech_on": 257.275,
+   "speech_end": 257.835
+  },
+  {
+   "id": "a5-27-43",
+   "file_start": 258.235,
+   "speech_on": 259.125,
+   "speech_end": 260.505
+  },
+  {
+   "id": "a5-27-44",
+   "file_start": 266.167,
+   "speech_on": 267.017,
+   "speech_end": 269.627
+  },
+  {
+   "id": "a5-27-45",
+   "file_start": 269.517,
+   "speech_on": 270.027,
+   "speech_end": 283.917
+  },
+  {
+   "id": "a5-27-46",
+   "file_start": 287.493,
+   "speech_on": 288.333,
+   "speech_end": 289.073
+  },
+  {
+   "id": "a5-29-01",
+   "file_start": 300.725,
+   "speech_on": 301.625,
+   "speech_end": 303.065
+  },
+  {
+   "id": "a5-29-02",
+   "file_start": 303.545,
+   "speech_on": 304.065,
+   "speech_end": 304.875
+  },
+  {
+   "id": "a5-29-03",
+   "file_start": 306.435,
+   "speech_on": 307.275,
+   "speech_end": 309.465
+  },
+  {
+   "id": "a5-29-04",
+   "file_start": 309.345,
+   "speech_on": 309.865,
+   "speech_end": 311.465
+  },
+  {
+   "id": "a5-29-05",
+   "file_start": 311.265,
+   "speech_on": 311.765,
+   "speech_end": 319.585
+  },
+  {
+   "id": "a5-29-06",
+   "file_start": 319.993,
+   "speech_on": 320.883,
+   "speech_end": 327.663
+  },
+  {
+   "id": "a5-29-07",
+   "file_start": 327.663,
+   "speech_on": 328.163,
+   "speech_end": 330.903
+  },
+  {
+   "id": "a5-29-08",
+   "file_start": 330.713,
+   "speech_on": 331.303,
+   "speech_end": 332.703
+  },
+  {
+   "id": "a5-29-09",
+   "file_start": 332.493,
+   "speech_on": 333.003,
+   "speech_end": 336.763
+  },
+  {
+   "id": "a5-29-10",
+   "file_start": 336.823,
+   "speech_on": 337.363,
+   "speech_end": 338.743
+  },
+  {
+   "id": "a5-29-11",
+   "file_start": 338.633,
+   "speech_on": 339.143,
+   "speech_end": 340.063
+  },
+  {
+   "id": "a5-29-12",
+   "file_start": 340.723,
+   "speech_on": 341.663,
+   "speech_end": 342.363
+  },
+  {
+   "id": "a5-29-13",
+   "file_start": 342.655,
+   "speech_on": 343.175,
+   "speech_end": 344.285
+  },
+  {
+   "id": "a5-29-14",
+   "file_start": 344.275,
+   "speech_on": 344.785,
+   "speech_end": 345.495
+  },
+  {
+   "id": "a5-29-15",
+   "file_start": 346.785,
+   "speech_on": 347.675,
+   "speech_end": 350.825
+  },
+  {
+   "id": "a5-29-16",
+   "file_start": 351.818,
+   "speech_on": 352.808,
+   "speech_end": 354.038
+  },
+  {
+   "id": "a5-29-17",
+   "file_start": 353.938,
+   "speech_on": 354.438,
+   "speech_end": 356.548
+  },
+  {
+   "id": "a5-29-18",
+   "file_start": 357.467,
+   "speech_on": 358.367,
+   "speech_end": 360.137
+  },
+  {
+   "id": "a5-29-19",
+   "file_start": 360.517,
+   "speech_on": 361.037,
+   "speech_end": 362.647
+  },
+  {
+   "id": "a5-29-20",
+   "file_start": 364.75,
+   "speech_on": 365.65,
+   "speech_end": 369.26
+  },
+  {
+   "id": "a5-29-21",
+   "file_start": 369.44,
+   "speech_on": 369.96,
+   "speech_end": 370.8
+  },
+  {
+   "id": "a5-29-22",
+   "file_start": 370.4,
+   "speech_on": 371.3,
+   "speech_end": 374.63
+  },
+  {
+   "id": "a5-29-23",
+   "file_start": 374.78,
+   "speech_on": 375.73,
+   "speech_end": 376.76
+  },
+  {
+   "id": "a5-29-24",
+   "file_start": 385.418,
+   "speech_on": 386.258,
+   "speech_end": 387.578
+  },
+  {
+   "id": "a5-30-01",
+   "file_start": 400.977,
+   "speech_on": 401.867,
+   "speech_end": 403.127
+  },
+  {
+   "id": "a5-30-02",
+   "file_start": 403.257,
+   "speech_on": 403.827,
+   "speech_end": 405.067
+  },
+  {
+   "id": "a5-30-03",
+   "file_start": 405.367,
+   "speech_on": 405.867,
+   "speech_end": 407.707
+  },
+  {
+   "id": "a5-30-04",
+   "file_start": 407.687,
+   "speech_on": 408.207,
+   "speech_end": 409.687
+  },
+  {
+   "id": "a5-30-05",
+   "file_start": 413.02,
+   "speech_on": 414.0,
+   "speech_end": 416.7
+  },
+  {
+   "id": "a5-30-06",
+   "file_start": 416.39,
+   "speech_on": 417.3,
+   "speech_end": 424.79
+  },
+  {
+   "id": "a5-30-07",
+   "file_start": 425.853,
+   "speech_on": 426.683,
+   "speech_end": 427.313
+  },
+  {
+   "id": "a5-30-08",
+   "file_start": 432.735,
+   "speech_on": 433.625,
+   "speech_end": 435.215
+  },
+  {
+   "id": "a5-30-09",
+   "file_start": 435.975,
+   "speech_on": 436.815,
+   "speech_end": 437.435
+  },
+  {
+   "id": "a5-30-10",
+   "file_start": 437.952,
+   "speech_on": 438.842,
+   "speech_end": 450.382
+  },
+  {
+   "id": "a5-30-11",
+   "file_start": 450.712,
+   "speech_on": 451.282,
+   "speech_end": 452.192
+  },
+  {
+   "id": "a5-30-12",
+   "file_start": 452.582,
+   "speech_on": 453.092,
+   "speech_end": 455.842
+  },
+  {
+   "id": "a5-30-13",
+   "file_start": 455.752,
+   "speech_on": 456.342,
+   "speech_end": 457.232
+  },
+  {
+   "id": "a5-30-14",
+   "file_start": 457.132,
+   "speech_on": 457.632,
+   "speech_end": 459.852
+  },
+  {
+   "id": "a5-30-15",
+   "file_start": 459.752,
+   "speech_on": 460.352,
+   "speech_end": 461.112
+  },
+  {
+   "id": "a5-30-16",
+   "file_start": 462.202,
+   "speech_on": 462.712,
+   "speech_end": 463.612
+  },
+  {
+   "id": "a5-30-17",
+   "file_start": 463.941,
+   "speech_on": 464.511,
+   "speech_end": 465.481
+  },
+  {
+   "id": "a5-30-18",
+   "file_start": 476.783,
+   "speech_on": 477.683,
+   "speech_end": 478.993
+  },
+  {
+   "id": "a5-30-19",
+   "file_start": 488.0,
+   "speech_on": 488.95,
+   "speech_end": 489.69
+  },
+  {
+   "id": "a5-31-01",
+   "file_start": 493.5,
+   "speech_on": 494.4,
+   "speech_end": 495.03
+  },
+  {
+   "id": "a5-31-02",
+   "file_start": 494.91,
+   "speech_on": 495.43,
+   "speech_end": 496.6
+  },
+  {
+   "id": "a5-31-03",
+   "file_start": 496.6,
+   "speech_on": 497.1,
+   "speech_end": 498.36
+  },
+  {
+   "id": "a5-31-04",
+   "file_start": 504.055,
+   "speech_on": 504.975,
+   "speech_end": 514.355
+  }
+ ]
+}

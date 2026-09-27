@@ -104,7 +104,7 @@ Throughout there is breathing, monitor flicker on the key light (the spot color 
 - The `print` option is designed but defaulted off (see above).
 
 ## Outputs (`out/dev/nole/`)
-- `nole-tone-test.png`: all 9 styles plus legend
+- `tone-test-v8.png`: all 9 styles plus legend
 - `nole-hero-{soft,paint,noir,riso,engrave,pixel}.png`: hero stills. Glyph, dither and stipple heroes are registered but not rendered.
 - `nole-expressions.png`, `nole-lineup.png`
 - `nole-motion.mp4` (paint | noir): about 1m40s to render at `--concurrency=2`

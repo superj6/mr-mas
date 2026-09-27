@@ -1,0 +1,121 @@
+{
+ "length_s": 8.5,
+ "frames": 204,
+ "fps": 24,
+ "lufs_music": -15.98,
+ "lufs_mix": -15.96,
+ "true_peak_mix_dbtp": -2.76,
+ "last_frame_peak_dbfs": -44.3,
+ "score": "track.py (OST engine, read-only): knee whole once in bar 2 (felt + chip 8va), button chord F-C-G on 3.1",
+ "cues": [
+  {
+   "f": 0,
+   "o": null,
+   "sfx": "room_drone (library)",
+   "db": -12,
+   "what": "the stand-in: the dark room"
+  },
+  {
+   "f": 24,
+   "o": 0,
+   "sfx": "room_tone (library)",
+   "db": -20,
+   "what": "the lobby at night; -1.5 dB after o120"
+  },
+  {
+   "f": 24,
+   "o": 0,
+   "sfx": "neon_buzz (library)",
+   "db": -17,
+   "what": "the lit sign's tube hum (F2); dips at o121-122"
+  },
+  {
+   "f": 84,
+   "o": 60,
+   "sfx": "rustle (synth)",
+   "db": -24,
+   "pan": 0.18,
+   "what": "the sleeve comes into frame"
+  },
+  {
+   "f": 88,
+   "o": 64,
+   "sfx": "hook_ticks (synth)",
+   "db": -12,
+   "pan": 0.2,
+   "what": "the 0 comes off its hooks"
+  },
+  {
+   "f": 99,
+   "o": 75,
+   "sfx": "card_drop (synth)",
+   "db": -7,
+   "pan": 0.62,
+   "what": "the 0 lands in the box of spare zeros"
+  },
+  {
+   "f": 114,
+   "o": 90,
+   "sfx": "plate_clack (synth)",
+   "db": -6,
+   "pan": 0.1,
+   "what": "the 3 hangs (on the knee's G)"
+  },
+  {
+   "f": 129,
+   "o": 105,
+   "sfx": "plate_clack (synth)",
+   "db": -6,
+   "pan": 0.2,
+   "what": "the 6 hangs (on the knee's C)"
+  },
+  {
+   "f": 136,
+   "o": 112,
+   "sfx": "rustle (synth)",
+   "db": -25,
+   "pan": 0.22,
+   "what": "the hand withdraws"
+  },
+  {
+   "f": 144,
+   "o": 120,
+   "sfx": "contactor (synth)",
+   "db": -12,
+   "pan": -0.35,
+   "what": "the after-hours timer: the house light steps down (3.1)"
+  },
+  {
+   "f": 145,
+   "o": 121,
+   "sfx": "ballast_tick (synth)",
+   "db": -18,
+   "pan": 0.0,
+   "what": "the flicker: out (the contactor's kick)"
+  },
+  {
+   "f": 147,
+   "o": 123,
+   "sfx": "ballast_tick (synth)",
+   "db": -21,
+   "pan": 0.0,
+   "what": "the flicker: back"
+  },
+  {
+   "f": 154,
+   "o": 130,
+   "sfx": "moth_tap (synth)",
+   "db": -22,
+   "pan": 0.1,
+   "what": "the moth bumps the light box's top edge"
+  },
+  {
+   "f": 159,
+   "o": 135,
+   "sfx": "moth_tap (synth)",
+   "db": -25,
+   "pan": 0.05,
+   "what": "and again, further along"
+  }
+ ]
+}

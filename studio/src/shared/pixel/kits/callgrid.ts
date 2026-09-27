@@ -418,22 +418,28 @@ export const clipView = (b0: Buf, x: number, y: number, w: number, h: number): B
 };
 
 /** MAS's tile: a hotel room, the Strip's neon through the glass, a race car streaking past below. */
-export const vegasBg = (b0: Buf, x: number, y: number, w: number, h: number, f: number, frozen = false) => {
+export const vegasBg = (b0: Buf, x: number, y: number, w: number, h: number, f: number, frozen = false, guard = false) => {
   const b = clipView(b0, x, y, w, h);
+  // guard (v5, STYLE-1G-NEON; additive, default off so v4 draws as before): 1.G's chase-light guardrail is one step
+  // every 8 frames at most (3 in any 24 f). v4's lights step every 2-4 f and the race car streaks; guarded, every
+  // light steps on ONE 8-f clock by one position (ff is re-scaled so each light's own divisor advances it by exactly
+  // one per 8 f), and the car is gone (motion noise)
+  const g = Math.floor((frozen ? 0 : f) / 8);
   const ff = frozen ? 0 : f;
+  const st4 = guard ? g * 4 : ff, st3 = guard ? g * 3 : ff, st2 = guard ? g * 2 : ff;
   rect(x, y, w, h, b.ink(PAL.N1));
   const wx = x + 34, ww = w - 34;
   for (let j = 0; j < h; j++) for (let i = 0; i < ww; i++) b.set(wx + i, y + j, j < h * 0.55 ? (bayer(i, j) < (j / (h * 0.55)) * 0.5 ? PAL.N3 : PAL.N2) : PAL.N1);
   rect(wx + 70, y + 10, 26, h - 10, b.ink(PAL.N0));
   for (let j = 14; j < h - 20; j += 5) for (let i = 73; i < 94; i += 4) if (hash(i, j, 3) < 0.55) b.set(wx + i, y + j, hash(i, j, 4) < 0.5 ? PAL.W6 : PAL.W4);
   const star = [[0, -4], [0, -3], [0, -2], [-1, -1], [1, -1], [-4, 0], [-3, 0], [-2, 0], [2, 0], [3, 0], [4, 0], [-1, 1], [1, 1], [0, 2], [0, 3], [0, 4], [0, -1], [0, 0], [0, 1], [-1, 0], [1, 0]];
-  const on = Math.floor(ff / 4) % 3 !== 2;
+  const on = Math.floor(st4 / 4) % 3 !== 2;
   for (const [i, j] of star) b.set(wx + 50 + i, y + 16 + j, on ? (i === 0 && j === 0 ? PAL.W9 : PAL.W7) : PAL.W4);
   rect(wx + 30, y + 6, 9, 44, b.ink(PAL.N0));
-  for (let j = 0; j < 8; j++) { const c = (j + Math.floor(ff / 3)) % 8 === 0 ? PAL.P2 : PAL.R3; rect(wx + 32, y + 9 + j * 5, 5, 3, b.ink(c)); rect(wx + 33, y + 10 + j * 5, 3, 1, b.ink(PAL.R1)); }
-  for (let i = 0; i < ww - 8; i += 3) b.set(wx + 4 + i, y + 56, ((i / 3 + Math.floor(ff / 2)) % 3 === 0) ? PAL.W8 : PAL.W4);
+  for (let j = 0; j < 8; j++) { const c = (j + Math.floor(st3 / 3)) % 8 === 0 ? PAL.P2 : PAL.R3; rect(wx + 32, y + 9 + j * 5, 5, 3, b.ink(c)); rect(wx + 33, y + 10 + j * 5, 3, 1, b.ink(PAL.R1)); }
+  for (let i = 0; i < ww - 8; i += 3) b.set(wx + 4 + i, y + 56, ((i / 3 + Math.floor(st2 / 2)) % 3 === 0) ? PAL.W8 : PAL.W4);
   const cx = ((ff * 23) % 190) - 30;
-  if (!frozen && cx > -20 && cx < ww + 10) {
+  if (!frozen && !guard && cx > -20 && cx < ww + 10) {
     const cy = y + h - 12;
     rect(wx + cx, cy, 16, 3, b.ink(PAL.R2)); rect(wx + cx + 4, cy - 2, 6, 2, b.ink(PAL.N0));
     rect(wx + cx + 1, cy + 3, 3, 1, b.ink(PAL.N0)); rect(wx + cx + 11, cy + 3, 3, 1, b.ink(PAL.N0));
@@ -489,7 +495,7 @@ export const camOffBg = (b0: Buf, x: number, y: number, w: number, h: number, di
 };
 
 // ================================================================== tile content painters
-export interface PaintOpts { frozen?: boolean; seed?: number; /** hold every loop (footnotes, spinner, neon) on the drawing it had at this frame */ frozenAt?: number; hand?: 0 | 1 | 2; }
+export interface PaintOpts { frozen?: boolean; seed?: number; /** hold every loop (footnotes, spinner, neon) on the drawing it had at this frame */ frozenAt?: number; hand?: 0 | 1 | 2; /** v5 (STYLE-1G-NEON): his tile's neon on 1.G's guardrail clock (see vegasBg); default off = v4's drawing */ neonGuard?: boolean; /** v5 (STATE-SMALL 5): Alyi's mouth in his tile on his side ('open' while he talks unheard); default 'rest' = v4 */ mouth?: 'rest' | 'open'; }
 export type Painter = (b: Buf, x: number, y: number, w: number, h: number, f: number, o: PaintOpts) => void;
 
 /** Footnote superscripts orbiting a head: [dx, dy, digit, front] for frame f (whole px, on 2s). */
@@ -526,7 +532,7 @@ export const glowingPaper = (b: Buf, x: number, y: number, f: number, frozen = f
 
 export const PAINTERS: Record<string, Painter> = {
   mas: (b, x, y, w, h, f, o) => {
-    vegasBg(b, x, y, w, h, o.frozenAt ?? f, o.frozen);
+    vegasBg(b, x, y, w, h, o.frozenAt ?? f, o.frozen, o.neonGuard);
     blitImg(b, masPortrait({mouth: 'rest', lid: 0, look: -1, brow: 0, light: 'monitor'}), x - 6, y - 12, {clip: inside(x, y, w, h)});
   },
   alyi: (b, x, y, w, h, f, o) => {
@@ -539,7 +545,7 @@ export const PAINTERS: Record<string, Painter> = {
     rect(dx, gy, dw, h - 8, v.ink(PAL.N0));
     // the reflection: his portrait mapped onto dark glass (every colour to a dim cool ramp), offset and cropped
     const glass = (c: number) => { const L = lum3(c); return L > 0.62 ? PAL.C2 : L > 0.45 ? PAL.C1 : L > 0.3 ? PAL.N3 : L > 0.18 ? PAL.N2 : PAL.N1; };
-    blitImg(v, alyiPortrait({eyes: 'open', mouth: 'rest', t: 0}), dx - 26, gy - 16, {clip: inside(dx, gy, dw, h - 8), map: glass});
+    blitImg(v, alyiPortrait({eyes: 'open', mouth: o.mouth ?? 'rest', t: 0}), dx - 26, gy - 16, {clip: inside(dx, gy, dw, h - 8), map: glass});
     // the glass's own sheen over the reflection: sparse horizontal lines (it is a surface, not a window onto him)
     for (let j = gy; j < y + h; j += 3) for (let i = dx; i < dx + dw; i++) if (bayer(i, j) < 0.18) v.set(i, j, PAL.N3);
     // glare: two diagonal streaks across the pane, and the door's push bar
@@ -663,6 +669,10 @@ export interface TileState extends TileRect {
   open?: number;
   seed?: number;
   hand?: 0 | 1 | 2;
+  /** v5 (STYLE-1G-NEON): his tile's neon on 1.G's 8-frame guardrail clock, no race car; default off (v4) */
+  neonGuard?: boolean;
+  /** v5 (STATE-SMALL 5): Alyi's reflection's mouth ('rest' | 'open'); default 'rest' (v4) */
+  mouth?: 'rest' | 'open';
 }
 /** One call tile: its content, its frame, chips. */
 export const drawTile = (b: Buf, t: TileState, f: number) => {
@@ -679,7 +689,7 @@ export const drawTile = (b: Buf, t: TileState, f: number) => {
   rect(t.x - 1, t.y - 1, t.w + 2, t.h + 2, b.ink(PAL.N0));
   rect(t.x - 2, t.y - 2, t.w + 4, 1, b.ink(PAL.N2));
   const p = PAINTERS[t.id] ?? PAINTERS.blank;
-  p(b, t.x, t.y, t.w, t.h, f, {frozen: t.frozen, frozenAt: t.frozenAt, seed: t.seed, hand: t.hand});
+  p(b, t.x, t.y, t.w, t.h, f, {frozen: t.frozen, frozenAt: t.frozenAt, seed: t.seed, hand: t.hand, neonGuard: t.neonGuard, mouth: t.mouth});
   if (t.id === 'off') {
     const s = t.name ?? 'THE QUIET VOTE';
     text(b, s, t.x + Math.round((t.w - textWidth(s)) / 2), t.y + Math.round(t.h / 2) - 8, PAL.G4);

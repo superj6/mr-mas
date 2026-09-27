@@ -6,6 +6,10 @@
 //   under picture   character name labels on leader ticks, then the dialogue strip (speaker-labelled lines,
 //                   Mas's V.O. as "mas (v.o.)" in lowercase italic)
 //   bottom          act / timeline bar (reel time on top, where the beat sits in the 22-min episode below)
+// Inside an EPISODE reel (EpisodeReel.tsx, episode.ts) a chapter is this same component with a `clock`: no title card
+// of its own, the notes show the episode clock and the chapter clock, an act card sits at the top of the notes for
+// the chapter's first seconds, and the bar shows the whole episode (chapters on top, sequences / scenes below).
+// Without a `clock` nothing here changes.
 import React, {useMemo} from 'react';
 import {AbsoluteFill, Series, useCurrentFrame} from 'remotion';
 import {beatAt, castName, displayName, fmtClock, FPS, MARKED, SETS, TITLE_FRAMES, timeEpisode, type Beat, type Episode, type Timing} from './schema';
@@ -30,9 +34,11 @@ const NW = W - 16 - NX; // 336
 const LY = PY + PH; // label row top (550)
 const DY = 582; // dialogue strip top
 const PB_Y = 690; // timeline bar top
+/** Layout constants, shared with EpisodeReel.tsx. */
+export const LAYOUT = {W, H, PX, PY, PW, PH, NX, NW, LY, DY, PB_Y};
 
 // ---------------------------------------------------------------- annotation style (warm amber mono on slate)
-const A = {
+export const A = {
   bg: '#141920', // slate margin
   panel: '#1b2129',
   rule: '#2b333f',
@@ -45,7 +51,7 @@ const A = {
 };
 const CH = 0.6; // JetBrains Mono advance, em
 
-const reelClock = (f: number) => {
+export const reelClock = (f: number) => {
   const s = Math.max(0, f) / FPS;
   return `${Math.floor(s / 60)}:${(s % 60).toFixed(1).padStart(4, '0')}`;
 };
@@ -59,8 +65,8 @@ const realLabel = (b: Beat) => {
 const epLabel = (ep: Episode) => `EP ${ep.episode !== null ? String(ep.episode).padStart(2, '0') : '??'}`;
 const clip = (t: string, n: number) => (t.length > n ? t.slice(0, n - 1) + '…' : t);
 
-const chipW = (t: string, fs = 12) => t.length * fs * CH + 14;
-const Chip: React.FC<{x: number; y: number; t: string; fs?: number; on?: boolean; swatch?: [string, string]}> = ({x, y, t, fs = 12, on, swatch}) => {
+export const chipW = (t: string, fs = 12) => t.length * fs * CH + 14;
+export const Chip: React.FC<{x: number; y: number; t: string; fs?: number; on?: boolean; swatch?: [string, string]}> = ({x, y, t, fs = 12, on, swatch}) => {
   const sw = swatch ? fs + 4 : 0;
   return (
     <g>
@@ -76,6 +82,37 @@ const Chip: React.FC<{x: number; y: number; t: string; fs?: number; on?: boolean
       </text>
     </g>
   );
+};
+
+// ---------------------------------------------------------------- episode clock (a chapter inside an episode reel)
+/** What a chapter needs to know about the episode around it. Frames: `offset`/`total`/segments are episode frames,
+ *  `card` and `len` are chapter frames. */
+export interface EpSeg {label: string; from: number; to: number}
+export interface EpClock {
+  offset: number; // episode frame of this chapter's frame 0
+  total: number; // episode length, frames
+  len: number; // this chapter's length, frames
+  index: number; // chapter number (0-based) and count, for the act card
+  count: number;
+  label: string; // chapter label ("ACT ONE")
+  sub: string; // chapter subtitle ("research preview · sc 5–12")
+  card: number; // frames the act card stays at the top of the notes (0 = none)
+  top: EpSeg[]; // bar, upper row: chapters
+  sub2: EpSeg[]; // bar, lower row: sequences / scenes
+  beds: EpSeg[]; // temp-bed segments (label shown under CUES)
+  known: string[]; // character ids already named earlier in the episode
+}
+const bedAt = (c: EpClock, fe: number) => c.beds.find((b) => fe >= b.from && fe < b.to) ?? null;
+
+/** The act card at the top of the notes panel (an overlay on the margin: it adds no runtime). */
+const actCardLines = (c: EpClock, f: number): {t: string; fs: number; fill: string; bold?: boolean}[] => {
+  if (!c.card || f >= c.card) return [];
+  const hot = f < c.card - 12;
+  return [
+    {t: c.label, fs: 24, fill: hot ? A.hi : A.amber, bold: true},
+    ...(c.sub ? [{t: c.sub, fs: 12, fill: hot ? A.text : A.dim}] : []),
+    {t: `chapter ${c.index + 1} / ${c.count} · ${reelClock(c.len)} · from EP ${reelClock(c.offset)}`, fs: 12, fill: A.dim},
+  ];
 };
 
 // ---------------------------------------------------------------- header row
@@ -162,7 +199,7 @@ const notesFor = (beat: Beat): string[] => {
   return n;
 };
 
-const Notes: React.FC<{ep: Episode; beat: Beat; bi: number; f: number; tm: Timing}> = ({ep, beat, bi, f, tm}) => {
+const Notes: React.FC<{ep: Episode; beat: Beat; bi: number; f: number; tm: Timing; clock?: EpClock}> = ({ep, beat, bi, f, tm, clock}) => {
   const seq = beat.dlg?.seqCur ?? null;
   const out: React.ReactNode[] = [];
   const x = NX + 12;
@@ -191,6 +228,11 @@ const Notes: React.FC<{ep: Episode; beat: Beat; bi: number; f: number; tm: Timin
     const ls = wrap(t, cw, max);
     for (const l of ls) if (!line(l, {fill, italic})) break;
   };
+  if (clock) {
+    const card = actCardLines(clock, f);
+    for (const c of card) line(c.t, {fs: c.fs, fill: c.fill, bold: c.bold});
+    if (card.length) y += 8;
+  }
   if (seq && beat.dlg) {
     // dialogue reels: where and when (a note, not in the picture); bright for 4 s after the sequence starts
     const fresh = f - tm.starts[Math.max(0, beat.dlg.seqStart)] < 4 * FPS;
@@ -199,18 +241,27 @@ const Notes: React.FC<{ep: Episode; beat: Beat; bi: number; f: number; tm: Timin
     if (seq.time) para(seq.time, fresh ? A.hi : A.text, 2);
     y += 4;
   }
-  line(`REEL  ${reelClock(f)} / ${reelClock(tm.total)}`, {fs: 14, fill: A.hi, bold: true});
-  line(realLabel(beat), {fs: 14, fill: A.amber, bold: true});
-  line(`beat ${bi + 1} / ${ep.beats.length} · ${beat.reelDur.toFixed(1)} s in the reel`, {fs: 12, fill: A.dim});
-  if (beat.dlg) line(`ACT ${reelClock(f - TITLE_FRAMES)}  (+12:31 = episode)`, {fs: 12, fill: A.dim});
+  if (clock) {
+    // episode reel: the episode clock leads; the chapter clock and the script's printed clock follow
+    line(`EP  ${reelClock(clock.offset + f)} / ${reelClock(clock.total)}`, {fs: 14, fill: A.hi, bold: true});
+    line(`${clock.label}  ${reelClock(f)} / ${reelClock(clock.len)}`, {fs: 13, fill: A.amber, bold: true});
+    line(`${realLabel(beat).replace(/^IN EP/, 'SCRIPT')} · beat ${bi + 1}/${ep.beats.length}`, {fs: 12, fill: A.dim});
+  } else {
+    line(`REEL  ${reelClock(f)} / ${reelClock(tm.total)}`, {fs: 14, fill: A.hi, bold: true});
+    line(realLabel(beat), {fs: 14, fill: A.amber, bold: true});
+    line(`beat ${bi + 1} / ${ep.beats.length} · ${beat.reelDur.toFixed(1)} s in the reel`, {fs: 12, fill: A.dim});
+    if (beat.dlg) line(`ACT ${reelClock(f - TITLE_FRAMES)}  (+12:31 = episode)`, {fs: 12, fill: A.dim});
+  }
   head('WHAT HAPPENS');
   para(beat.caption || '—', A.text, 8);
   if (beat.real) {
     head('REAL EVENT');
     para(beat.real, A.amber, 4);
   }
-  if (beat.cues.length) {
+  const bed = clock ? bedAt(clock, clock.offset + f) : null;
+  if (beat.cues.length || bed) {
     head('CUES');
+    if (bed) para(`♪ temp bed: ${bed.label}`, A.dim, 2);
     beat.cues.forEach((c) => para(`♪ ${c}`, A.amber, 2));
   }
   const notes = notesFor(beat);
@@ -337,12 +388,13 @@ const DialogueStrip: React.FC<{beat: Beat; lf: number; len: number}> = ({beat, l
 // picture has named them (a beat's names[]); before that the cast's neutral role is used.
 interface GLine {who: string; text: string; tag: string; start: number; end: number; words: {w: string; f0: number}[]; cut: boolean}
 interface GDlg {lines: GLine[]; namedAt: Map<string, number>; speaks: {id: string; f0: number; f1: number}[]; segs: {label: string; from: number; to: number}[]}
-const buildDlg = (ep: Episode, tm: Timing): GDlg => {
+const buildDlg = (ep: Episode, tm: Timing, known: string[] = []): GDlg => {
   const lines: GLine[] = [];
   const namedAt = new Map<string, number>();
   const speaks: GDlg['speaks'] = [];
   const segs: GDlg['segs'] = [];
   Object.entries(ep.cast ?? {}).forEach(([id, c]) => c?.known && namedAt.set(id, -1));
+  known.forEach((id) => namedAt.set(id, -1)); // named earlier in the episode (episode reels)
   ep.beats.forEach((b, i) => {
     const D = b.dlg;
     if (!D) return;
@@ -374,12 +426,13 @@ const speakingAt = (G: GDlg, f: number): Set<string> => {
   return out;
 };
 const TAG_SUFFIX: Record<string, string> = {'O.S.': ' (O.S.)', laptop: ' (laptop)', monitor: ' (monitor)', call: ' (call)', door: ' (O.S.)'};
-const DialogueStripRec: React.FC<{ep: Episode; G: GDlg; f: number}> = ({ep, G, f}) => {
+const DialogueStripRec: React.FC<{ep: Episode; G: GDlg; f: number; from: number}> = ({ep, G, f, from}) => {
   const LX = PX + 250; // text column (wider labels: roles and suffixes)
   const fs = 15;
   const cw = Math.floor((W - 16 - 12 - LX) / (fs * CH));
   const HOLD = 7 * FPS; // a finished line stays (dimmed) this long
-  const started = G.lines.filter((l) => l.start <= f && f - l.end < HOLD);
+  // lines of an earlier (sub-)sequence clear when a new place or time starts (`from` = its first frame)
+  const started = G.lines.filter((l) => l.start <= f && f - l.end < HOLD && l.end >= from - 12);
   const shown: {label: string; lines: string[]; vo: boolean; cur: boolean}[] = [];
   let budget = 4;
   for (let i = started.length - 1; i >= 0 && budget > 0; i--) {
@@ -432,7 +485,7 @@ const DialogueStripRec: React.FC<{ep: Episode; G: GDlg; f: number}> = ({ep, G, f
   return (
     <g>
       <rect x={PX} y={DY} width={W - 32} height={PB_Y - 6 - DY} rx={4} fill={A.panel} stroke={A.rule} strokeWidth={1} />
-      <text x={PX + 10} y={DY + 15} fill={A.dim} fontFamily={MONO} fontWeight={700} fontSize={10.5}>
+      <text x={W - 16 - 10} y={DY + 15} fill={A.dim} fontFamily={MONO} fontWeight={700} fontSize={10.5} textAnchor="end">
         DIALOGUE · RECORDED TAKES
       </text>
       <line x1={LX - 7} y1={DY + 8} x2={LX - 7} y2={PB_Y - 14} stroke={A.rule} strokeWidth={1} />
@@ -485,12 +538,50 @@ const Progress: React.FC<{ep: Episode; tm: Timing; f: number; seqs?: {label: str
   );
 };
 
+/** Episode reels: the whole episode on one bar. Upper row = chapters (cold open, intro, acts, tag, credits), lower
+ *  row = sequences / scenes; `fe` = episode frame. */
+export const EpisodeBar: React.FC<{total: number; top: EpSeg[]; sub: EpSeg[]; fe: number}> = ({total, top, sub, fe}) => {
+  const X0 = 16;
+  const X1 = W - 16;
+  const TX = (fr: number) => X0 + (fr / Math.max(1, total)) * (X1 - X0);
+  return (
+    <g>
+      <rect y={PB_Y} width={W} height={H - PB_Y} fill="#0e1217" />
+      {top.map((s, i) => {
+        const x = TX(s.from);
+        const w = TX(s.to) - x;
+        const on = fe >= s.from && fe < s.to;
+        return (
+          <g key={`c${i}`}>
+            <rect x={x} y={PB_Y + 3} width={Math.max(1, w - 1)} height={13} fill={on ? A.faint : A.rule} stroke={on ? A.amber : 'none'} strokeWidth={1} />
+            {w > s.label.length * 6.3 + 8 && (
+              <text x={x + 4} y={PB_Y + 13} fill={on ? A.hi : A.dim} fontFamily={MONO} fontWeight={700} fontSize={9.5}>
+                {s.label}
+              </text>
+            )}
+          </g>
+        );
+      })}
+      <rect x={X0} y={PB_Y + 19} width={X1 - X0} height={7} fill="#1b2129" />
+      {sub.map((s, i) => {
+        const x = TX(s.from);
+        const w = TX(s.to) - x;
+        const on = fe >= s.from && fe < s.to;
+        return <rect key={`s${i}`} x={x} y={PB_Y + 19} width={Math.max(1, w - 1)} height={7} fill={on ? A.amber : A.dim} opacity={on ? 1 : 0.45} />;
+      })}
+      <line x1={TX(fe)} y1={PB_Y + 1} x2={TX(fe)} y2={PB_Y + 27} stroke={A.hi} strokeWidth={2} />
+      <polygon points={`${TX(fe) - 5},${PB_Y} ${TX(fe) + 5},${PB_Y} ${TX(fe)},${PB_Y + 6}`} fill={A.hi} />
+    </g>
+  );
+};
+
 // ---------------------------------------------------------------- title card (all notes: amber on slate)
-const TitleCard: React.FC<{ep: Episode; tm: Timing; f: number}> = ({ep, tm, f}) => {
+/** `summary`, `chips` and `dur` are for the episode reel's own title chapter; a standalone reel leaves them unset. */
+export const TitleCard: React.FC<{ep: Episode; tm: Timing; f: number; summary?: string; chips?: string[]; dur?: number}> = ({ep, tm, f, summary, chips, dur}) => {
   const k = easeOut(f / 10);
-  const out = clamp((TITLE_FRAMES - 1 - f) / 5);
+  const out = clamp(((dur ?? TITLE_FRAMES) - 1 - f) / 5);
   const log = wrap(ep.logline || '', 70, 4);
-  const actList = tm.acts.map((a) => `${a.act} ${fmtClock((a.to - a.from) / FPS)}`);
+  const actList = chips ?? tm.acts.map((a) => `${a.act} ${fmtClock((a.to - a.from) / FPS)}`);
   let ax = 120;
   const legendK = clamp((f - 6) / 6);
   return (
@@ -524,7 +615,7 @@ const TitleCard: React.FC<{ep: Episode; tm: Timing; f: number}> = ({ep, tm, f}) 
         </text>
       ))}
       <text x={120} y={500} fill={A.dim} fontFamily={MONO} fontSize={16} opacity={clamp((f - 16) / 6)}>
-        {`${ep.runtimeMin}-min episode (proposed) · reel ${reelClock(tm.total)} · ${ep.beats.length} beats`}
+        {summary ?? `${ep.runtimeMin}-min episode (proposed) · reel ${reelClock(tm.total)} · ${ep.beats.length} beats`}
       </text>
       <g opacity={clamp((f - 20) / 6)}>
         {actList.map((a, i) => {
@@ -605,10 +696,10 @@ const Picture: React.FC<{ep: Episode; beat: Beat; lf: number; len: number; f: nu
   </g>
 );
 
-export const Reel: React.FC<{ep: Episode}> = ({ep}) => {
+export const Reel: React.FC<{ep: Episode; clock?: EpClock}> = ({ep, clock}) => {
   const f = useCurrentFrame();
-  const tm = useMemo(() => timeEpisode(ep), [ep]);
-  const G = useMemo(() => (ep.dialogueReel ? buildDlg(ep, tm) : null), [ep, tm]);
+  const tm = useMemo(() => timeEpisode(ep, clock ? 0 : TITLE_FRAMES), [ep, clock]);
+  const G = useMemo(() => (ep.dialogueReel ? buildDlg(ep, tm, clock?.known) : null), [ep, tm, clock]);
   const bi = beatAt(tm, f);
   const beat = bi >= 0 ? ep.beats[bi] : null;
   const lf = beat ? f - tm.starts[bi] : 0;
@@ -624,11 +715,11 @@ export const Reel: React.FC<{ep: Episode}> = ({ep}) => {
             <rect width={W} height={H} fill={A.bg} />
             <Picture ep={ep} beat={beat} lf={lf} len={len} f={f} dlg={dlg} />
             <Header ep={ep} beat={beat} />
-            <Notes ep={ep} beat={beat} bi={bi} f={f} tm={tm} />
+            <Notes ep={ep} beat={beat} bi={bi} f={f} tm={tm} clock={clock} />
             {dlg ? (
               <>
                 <CastLabels marks={castMarks({ep, beat, lf, len, dlg})} nameOf={dlg.label} speaking={dlg.speaking} />
-                <DialogueStripRec ep={ep} G={G!} f={f} />
+                <DialogueStripRec ep={ep} G={G!} f={f} from={beat.dlg ? tm.starts[Math.max(0, beat.dlg.seqStart)] : 0} />
               </>
             ) : (
               <>
@@ -640,7 +731,7 @@ export const Reel: React.FC<{ep: Episode}> = ({ep}) => {
         ) : (
           <TitleCard ep={ep} tm={tm} f={f} />
         )}
-        <Progress ep={ep} tm={tm} f={f} seqs={G?.segs} />
+        {clock ? <EpisodeBar total={clock.total} top={clock.top} sub={clock.sub2} fe={clock.offset + f} /> : <Progress ep={ep} tm={tm} f={f} seqs={G?.segs} />}
       </svg>
     </AbsoluteFill>
   );

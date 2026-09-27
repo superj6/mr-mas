@@ -1,0 +1,644 @@
+{
+ "schema": "mrmas-ost-cue/1",
+ "id": "lookdev-outro-a-ep1",
+ "mm": "(temp, lookdev)",
+ "family": "P01",
+ "title": "Outro A: the closing session (Ep1 colour, temp)",
+ "version": "1",
+ "composer": "outro-A lookdev builder (temp)",
+ "tone": "the credits reprise in the dark room: the knee whole once on the cut, a downward answer, no third",
+ "tags": [
+  "lookdev",
+  "outro",
+  "credits reprise",
+  "temp"
+ ],
+ "usage": "ET",
+ "scenes": [
+  "outro proposal A mock-up (out/lookdev/outro/a/)"
+ ],
+ "description": "",
+ "motifs": [
+  "THE KNEE whole (bar 1, felt + chip 8va)",
+  "the answer, the F on 2.4",
+  "the button chord F-C-G (3.1) + the bass root and a low C on the pull-back (3.3)",
+  "the f0 sound, felt F5 + chip F6 glint (4.1, the cursor comes on)"
+ ],
+ "key": "F minor, open fifths, no third",
+ "engine": {
+  "version": "mrmas-ost-engine 1.1 (2026-09-26: fix1 -- meter axis, sample tuning, render pool, QA 5a-d)",
+  "rendered": "2026-09-26T22:41:49",
+  "render_seconds": 35.7
+ },
+ "timing": {
+  "bpm": 96.0,
+  "beat_unit_quarters": 1.0,
+  "tempo_map": [
+   {
+    "bar": 0,
+    "beat": 3.0,
+    "bpm": 96.0,
+    "ramp_in": false,
+    "sec": 0.0,
+    "frame": 0.0
+   }
+  ],
+  "meter_map": [
+   {
+    "bar": 1,
+    "meter": "4/4",
+    "sec": 1.25,
+    "frame": 30.0
+   }
+  ],
+  "swing": 1.0,
+  "swing_unit_quarters": 0.5,
+  "pickup_beats": 2.0,
+  "bars": 4,
+  "length_s": 11.25,
+  "length_frames": 270.0,
+  "fps": 24,
+  "end": {
+   "sec": 10.0,
+   "frame": 240.0,
+   "bar": 4,
+   "beat": 3.0
+  },
+  "album_duration_s": 10.0,
+  "album_duration_frames": 240.0,
+  "album_loops": 1
+ },
+ "sections": [
+  {
+   "label": "button tail (stand-in)",
+   "start": {
+    "sec": -1.25,
+    "frame": -30.0,
+    "bar": 0,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 1.25,
+    "frame": 30.0,
+    "bar": 1,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "the knee (whole)",
+   "start": {
+    "sec": 1.25,
+    "frame": 30.0,
+    "bar": 1,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 3.75,
+    "frame": 90.0,
+    "bar": 2,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "the answer",
+   "start": {
+    "sec": 3.75,
+    "frame": 90.0,
+    "bar": 2,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 6.25,
+    "frame": 150.0,
+    "bar": 3,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "button chord (hold, pull-back, close)",
+   "start": {
+    "sec": 6.25,
+    "frame": 150.0,
+    "bar": 3,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 8.75,
+    "frame": 210.0,
+    "bar": 4,
+    "beat": 1.0
+   }
+  },
+  {
+   "label": "the cursor, the moth (drone alone, SFX)",
+   "start": {
+    "sec": 8.75,
+    "frame": 210.0,
+    "bar": 4,
+    "beat": 1.0
+   },
+   "end": {
+    "sec": 11.25,
+    "frame": 270.0,
+    "bar": 5,
+    "beat": 1.0
+   }
+  }
+ ],
+ "markers": [
+  {
+   "label": "o0 the cut: the act goes out, the band lights; the knee, whole",
+   "sec": 1.25,
+   "frame": 30.0,
+   "bar": 1,
+   "beat": 1.0
+  },
+  {
+   "label": "2.4 the F lands",
+   "sec": 5.625,
+   "frame": 135.0,
+   "bar": 2,
+   "beat": 4.0
+  },
+  {
+   "label": "3.1 the button chord F-C-G",
+   "sec": 6.25,
+   "frame": 150.0,
+   "bar": 3,
+   "beat": 1.0
+  },
+  {
+   "label": "3.3 the pull-back to the room: the low fifth, the drone comes in (SFX)",
+   "sec": 7.5,
+   "frame": 180.0,
+   "bar": 3,
+   "beat": 3.0
+  },
+  {
+   "label": "o180 4.1 the cursor comes on: felt F5 + chip F6 glint (= the cold open f0 sound)",
+   "sec": 8.75,
+   "frame": 210.0,
+   "bar": 4,
+   "beat": 1.0
+  }
+ ],
+ "hit_check": [
+  {
+   "t": 1.25,
+   "offset_ms": -4.7,
+   "strength": 4.96
+  },
+  {
+   "t": 5.625,
+   "offset_ms": -14.3,
+   "strength": 1.65
+  },
+  {
+   "t": 6.25,
+   "offset_ms": 0.7,
+   "strength": 5.23
+  },
+  {
+   "t": 7.5,
+   "offset_ms": -12.0,
+   "strength": 1.73
+  },
+  {
+   "t": 8.75,
+   "offset_ms": -3.3,
+   "strength": 10.63
+  }
+ ],
+ "sfx_slots": [],
+ "silence_windows": [],
+ "vo_windows": [],
+ "knee_whole": 2,
+ "f_major": {
+  "limit": 0.08,
+  "windows": 9,
+  "worst": 0.022,
+  "worst_sieved": 0.018,
+  "ok": true,
+  "ok_written": true,
+  "ok_spectral": true,
+  "f_inaudible_windows": 0,
+  "a_classes": {
+   "written": 0,
+   "resonance": 0,
+   "explained": 0,
+   "unattributed": 0
+  },
+  "written_a_over_f_bass": [],
+  "written_third": {
+   "ok": true,
+   "count": 0,
+   "events": [],
+   "grazes": [],
+   "n_grazes": 0,
+   "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+  },
+  "fails": [],
+  "explained": [],
+  "fixed_resonances": [],
+  "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+ },
+ "knee_completion": 2,
+ "room_sfx_windows": [
+  {
+   "t0": 7.5,
+   "t1": 10.0,
+   "sfx": "room_drone"
+  }
+ ],
+ "qa": {
+  "balance": {
+   "balance": {
+    "piano": 92,
+    "orch": 0,
+    "bigband": 0,
+    "chip": 8
+   },
+   "rhythm_pct_of_all": 7,
+   "chip_share": 8,
+   "balance_energy": {
+    "piano": 94,
+    "orch": 0,
+    "bigband": 0,
+    "chip": 6
+   },
+   "method": "theme stemtable (gated loudness per section, time-weighted, rhythm/fx excluded; it counts a brief stab at its own loudness for the whole section) + balance_energy (ungated energy)",
+   "sections": [
+    {
+     "section": "button tail (stand-in)",
+     "share": {
+      "piano": 0,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "the knee (whole)",
+     "share": {
+      "piano": 89,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 11
+     }
+    },
+    {
+     "section": "the answer",
+     "share": {
+      "piano": 99,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 1
+     }
+    },
+    {
+     "section": "button chord (hold, pull-back, close)",
+     "share": {
+      "piano": 100,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 0
+     }
+    },
+    {
+     "section": "the cursor, the moth (drone alone, SFX)",
+     "share": {
+      "piano": 94,
+      "orch": 0,
+      "bigband": 0,
+      "chip": 6
+     }
+    }
+   ]
+  },
+  "short_term_underscore": {
+   "p95": -13.92,
+   "median": -15.88,
+   "max": -13.82
+  },
+  "band_2_6k_db": -19.9,
+  "centroid_hz": 477.0,
+  "f_major": {
+   "limit": 0.08,
+   "windows": 9,
+   "worst": 0.022,
+   "worst_sieved": 0.018,
+   "ok": true,
+   "ok_written": true,
+   "ok_spectral": true,
+   "f_inaudible_windows": 0,
+   "a_classes": {
+    "written": 0,
+    "resonance": 0,
+    "explained": 0,
+    "unattributed": 0
+   },
+   "written_a_over_f_bass": [],
+   "written_third": {
+    "ok": true,
+    "count": 0,
+    "events": [],
+    "grazes": [],
+    "n_grazes": 0,
+    "rule": "OST-BIBLE rule 12: no A-natural over an F root or bass (from the notes, every boundary)"
+   },
+   "fails": [],
+   "explained": [],
+   "fixed_resonances": [],
+   "note": "ok = no WRITTEN A-natural over an F bass (every note boundary) and, in every F-bass window where the F is heard, the harmonic-sieved A/F < limit or its excess explained by partials of written non-A notes; a window over the limit names its stem and classes each A peak (written A / partial of a written note / tail / glide / resonance)"
+  },
+  "knee_completion": {
+   "count": 2,
+   "hits": [
+    {
+     "inst": "felt",
+     "line": "top",
+     "t0": 1.25,
+     "t1": 3.542,
+     "key": "F",
+     "notes": [
+      "F4",
+      "F4",
+      "F4",
+      "F4",
+      "G4",
+      "Ab4",
+      "C5",
+      "F5"
+     ],
+     "last_gap_s": 0.417,
+     "max_gap_s": 0.417,
+     "registers": 2,
+     "new_phrase": false
+    },
+    {
+     "inst": "lead",
+     "line": "top",
+     "t0": 1.25,
+     "t1": 3.542,
+     "key": "F",
+     "notes": [
+      "F5",
+      "F5",
+      "F5",
+      "F5",
+      "G5",
+      "Ab5",
+      "C6",
+      "F6"
+     ],
+     "last_gap_s": 0.417,
+     "max_gap_s": 0.417,
+     "registers": 2,
+     "new_phrase": false
+    }
+   ],
+   "max_gap_s": 2.5,
+   "rule": "OST-BIBLE rule 4: the knee never plays whole in an episode, in any register, across a phrase boundary too"
+  },
+  "sub_under_room": [
+   {
+    "t0": 7.5,
+    "t1": 10.0,
+    "sfx": "room_drone",
+    "sub_db": -37.8,
+    "limit_db": -18.0,
+    "sub_from": {
+     "piano": 91,
+     "bass": 8
+    },
+    "ok": true,
+    "notes_below_c3": [
+     "ubass F2"
+    ]
+   }
+  ],
+  "no_third": [
+   {
+    "t0": 0.0,
+    "t1": 1.25,
+    "a": 0.01,
+    "ab": 0.013,
+    "ok": true
+   },
+   {
+    "t0": 6.3,
+    "t1": 10.0,
+    "a": 0.01,
+    "ab": 0.012,
+    "ok": true
+   }
+  ],
+  "silence": [],
+  "hard_stops": [],
+  "vo_windows": [],
+  "knee_whole": 2,
+  "motifs_found": {
+   "KNEE": [
+    {
+     "inst": "felt",
+     "t": 1.25,
+     "transpose": -12
+    },
+    {
+     "inst": "lead",
+     "t": 1.25,
+     "transpose": 0
+    }
+   ]
+  },
+  "swing": {
+   "felt": {
+    "offbeats": 5,
+    "median_frames": 10.0,
+    "hum_ms": 3
+   },
+   "lead": {
+    "offbeats": 4,
+    "median_frames": 10.0,
+    "hum_ms": 0
+   },
+   "felt_lh": {
+    "offbeats": 8,
+    "median_frames": 10.13,
+    "hum_ms": 3
+   },
+   "felt_mech": {
+    "offbeats": 2,
+    "median_frames": 10.0,
+    "hum_ms": 3
+   }
+  },
+  "banned": []
+ },
+ "loop": null,
+ "files": {
+  "album_wav": "music/lookdev-outro-a-ep1-album.wav",
+  "album_mp3": "music/lookdev-outro-a-ep1-album.mp3",
+  "underscore_wav": "music/lookdev-outro-a-ep1-underscore.wav",
+  "underscore_mp3": "music/lookdev-outro-a-ep1-underscore.mp3",
+  "stems": {},
+  "midi": "music/lookdev-outro-a-ep1.mid",
+  "pianoroll": "music/lookdev-outro-a-ep1-pianoroll.png"
+ },
+ "masters": {
+  "album": {
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -1.0,
+   "comp": {
+    "thresh_db": -20,
+    "ratio": 1.8
+   },
+   "dialog_pocket": null,
+   "measured": {
+    "lufs": -16.0,
+    "lra": 6.02,
+    "true_peak_db": -2.33,
+    "peak_db": -2.34,
+    "rms_db": -19.02,
+    "crest_db": 16.69,
+    "seconds": 10.0
+   }
+  },
+  "underscore": {
+   "target_lufs": -16.0,
+   "ceiling_dbtp": -3.0,
+   "comp": {
+    "thresh_db": -28,
+    "ratio": 1.3,
+    "att_ms": 40.0,
+    "rel_ms": 350.0
+   },
+   "dialog_pocket": {
+    "f": 2500.0,
+    "db": -2.0,
+    "q": 0.7
+   },
+   "measured": {
+    "lufs": -16.02,
+    "lra": 6.18,
+    "true_peak_db": -3.15,
+    "peak_db": -3.16,
+    "rms_db": -18.95,
+    "crest_db": 15.8,
+    "seconds": 10.0
+   }
+  }
+ },
+ "stems": {
+  "sum_vs_underscore_residual_db": -162.4,
+  "families_present": [],
+  "family_share_lu": {
+   "piano": -0.3,
+   "bass": -16.3,
+   "drums": -14.5,
+   "perc": -33.0,
+   "chip": -7.8
+  }
+ },
+ "spectrum": {
+  "sub": -28.6,
+  "bass": -8.9,
+  "lowmid": -0.8,
+  "mid": -13.7,
+  "presence": -23.1,
+  "air": -31.5,
+  "centroid_hz": 477.0
+ },
+ "bar_levels": [
+  {
+   "bar": 1,
+   "rms_db": -16.0,
+   "peak_db": -3.200000047683716
+  },
+  {
+   "bar": 2,
+   "rms_db": -18.9,
+   "peak_db": -4.199999809265137
+  },
+  {
+   "bar": 3,
+   "rms_db": -21.6,
+   "peak_db": -3.4000000953674316
+  },
+  {
+   "bar": 4,
+   "rms_db": -27.3,
+   "peak_db": -9.899999618530273
+  }
+ ],
+ "instrumentation": {
+  "brush": {
+   "family": "drums",
+   "notes": 5,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "celesta": {
+   "family": "perc",
+   "notes": 1,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "felt": {
+   "family": "piano",
+   "notes": 14,
+   "source": "sf2",
+   "credit": "Upright Piano KW by FreePats (CC0 1.0)"
+  },
+  "felt_lh": {
+   "family": "piano",
+   "notes": 25,
+   "source": "sf2",
+   "credit": "Upright Piano KW by FreePats (CC0 1.0)"
+  },
+  "felt_mech": {
+   "family": "piano",
+   "notes": 6,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "jazz": {
+   "family": "drums",
+   "notes": 2,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  },
+  "lead": {
+   "family": "chip",
+   "notes": 9,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "swish": {
+   "family": "drums",
+   "notes": 3,
+   "source": "fn",
+   "credit": "engine synthesis (no samples)"
+  },
+  "ubass": {
+   "family": "bass",
+   "notes": 6,
+   "source": "sf2",
+   "credit": "GeneralUser GS by S. Christian Collins"
+  }
+ },
+ "credits": [
+  "GeneralUser GS by S. Christian Collins",
+  "Upright Piano KW by FreePats (CC0 1.0)"
+ ],
+ "audition": [
+  "1.25-3.75 s: the knee whole on the cut, swung, chip 8va under the felt; the ONLY whole knee",
+  "5.62 s: the F lands on 2.4; then 6.25 s the button chord F-C-G, no third",
+  "7.50 s: the bass root and a low C under it as the picture pulls back to the room",
+  "8.75 s: the felt F5 + chip glint, the intro's f0 sound, as the cursor comes on; out by 10.00 s"
+ ],
+ "warnings": [
+  "marker at 5.625 s: no clear onset within 10 ms ({'t': 5.625, 'offset_ms': np.float64(-14.3), 'strength': 1.65})",
+  "marker at 7.5 s: no clear onset within 10 ms ({'t': 7.5, 'offset_ms': np.float64(-12.0), 'strength': 1.73})"
+ ]
+}

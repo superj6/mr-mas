@@ -1,0 +1,296 @@
+{
+ "source": "out/lookdev/outro/b/outro-b-ep1-1080p.mp4 (decoded)",
+ "method": "Each text region of the ENCODED frame, box-reduced to 480x270, is compared with the exact native frame from the Node preview: mean and max absolute RGB error over the region, and the luminance contrast of ink vs ground measured in the encode. Full-size and 480x270 crops are saved for eyes.",
+ "regions": [
+  {
+   "text": "scan: ep1.0_research_preview.md",
+   "frame": 158,
+   "box_native": [
+    31,
+    59,
+    185,
+    73
+   ],
+   "mean_abs_err": 1.18,
+   "max_abs_err": 4,
+   "encoded_contrast": 12.3
+  },
+  {
+   "text": "made in code by (creator), with ai tools",
+   "frame": 158,
+   "box_native": [
+    31,
+    74,
+    213,
+    88
+   ],
+   "mean_abs_err": 1.2,
+   "max_abs_err": 4,
+   "encoded_contrast": 12.3
+  },
+  {
+   "text": "voices: synthetic \u00b7 none cloned",
+   "frame": 158,
+   "box_native": [
+    31,
+    89,
+    178,
+    103
+   ],
+   "mean_abs_err": 1.2,
+   "max_abs_err": 4,
+   "encoded_contrast": 12.3
+  },
+  {
+   "text": "viewer: human \u2713",
+   "frame": 158,
+   "box_native": [
+    31,
+    111,
+    115,
+    125
+   ],
+   "mean_abs_err": 1.31,
+   "max_abs_err": 6,
+   "encoded_contrast": 8.9
+  },
+  {
+   "text": "made in code by (creator), with ai tools  (o50: resolved scan type, before its chip)",
+   "frame": 74,
+   "box_native": [
+    31,
+    74,
+    213,
+    88
+   ],
+   "mean_abs_err": 1.25,
+   "max_abs_err": 7,
+   "encoded_contrast": 8.9
+  },
+  {
+   "text": "TERMS",
+   "frame": 158,
+   "box_native": [
+    43,
+    218,
+    436,
+    229
+   ],
+   "mean_abs_err": 1.65,
+   "max_abs_err": 4,
+   "encoded_contrast": 11.4
+  },
+  {
+   "text": "POINTER",
+   "frame": 158,
+   "box_native": [
+    146,
+    235,
+    334,
+    246
+   ],
+   "mean_abs_err": 1.51,
+   "max_abs_err": 3,
+   "encoded_contrast": 5.7
+  },
+  {
+   "text": "TERMS end + the moth at rest (o176)",
+   "frame": 200,
+   "box_native": [
+    300,
+    214,
+    456,
+    230
+   ],
+   "mean_abs_err": 1.63,
+   "max_abs_err": 4,
+   "encoded_contrast": 11.4
+  },
+  {
+   "text": "stand-in label (lookdev)",
+   "frame": 12,
+   "box_native": [
+    2,
+    2,
+    368,
+    27
+   ],
+   "mean_abs_err": 1.29,
+   "max_abs_err": 7,
+   "encoded_contrast": 5.2
+  }
+ ],
+ "timing": [
+  {
+   "row": 0,
+   "line": "scan: ep1.0_research_preview.md",
+   "chars": 31,
+   "px": 141,
+   "box": [
+    31,
+    59,
+    185,
+    73
+   ],
+   "legibleFrom": 10,
+   "legibleFrames": 170,
+   "seconds": 7.08,
+   "cps": 4.4,
+   "needAt16cpsPlusHalf": 2.44,
+   "perLineOk": true,
+   "earlierFlickers": 0
+  },
+  {
+   "row": 1,
+   "line": "made in code by (creator), with ai tools",
+   "chars": 40,
+   "px": 169,
+   "box": [
+    31,
+    74,
+    213,
+    88
+   ],
+   "legibleFrom": 47,
+   "legibleFrames": 133,
+   "seconds": 5.54,
+   "cps": 7.2,
+   "needAt16cpsPlusHalf": 3,
+   "perLineOk": true,
+   "earlierFlickers": 2
+  },
+  {
+   "row": 2,
+   "line": "voices: synthetic \u00b7 none cloned",
+   "chars": 31,
+   "px": 134,
+   "box": [
+    31,
+    89,
+    178,
+    103
+   ],
+   "legibleFrom": 49,
+   "legibleFrames": 131,
+   "seconds": 5.46,
+   "cps": 5.7,
+   "needAt16cpsPlusHalf": 2.44,
+   "perLineOk": true,
+   "earlierFlickers": 2
+  },
+  {
+   "row": 3,
+   "line": "viewer: human \u2713",
+   "chars": 15,
+   "px": 71,
+   "box": [
+    31,
+    111,
+    115,
+    125
+   ],
+   "legibleFrom": 121,
+   "legibleFrames": 59,
+   "seconds": 2.46,
+   "cps": 6.1,
+   "needAt16cpsPlusHalf": 1.44,
+   "perLineOk": true,
+   "earlierFlickers": 0
+  }
+ ],
+ "band": {
+  "from": 24,
+  "to": 203
+ },
+ "covered_frames": [],
+ "moth": {
+  "box": [
+   435,
+   218,
+   453,
+   228
+  ],
+  "termsRightEdge": 433,
+  "period": [
+   433,
+   226
+  ],
+  "clear": true
+ },
+ "moth_path": {
+  "hits": [],
+  "minGapPx": 0,
+  "overOrbFrames": [
+   146,
+   147,
+   148,
+   149,
+   150,
+   151
+  ]
+ },
+ "toast_read_in_order": [
+  {
+   "cps": 16,
+   "finishes": [
+    56.5,
+    116.5,
+    163,
+    185.5
+   ],
+   "lastFinish": 185.5,
+   "cut": 180,
+   "ok": false,
+   "marginFrames": -5.5
+  },
+  {
+   "cps": 18,
+   "finishes": [
+    51.3,
+    104.7,
+    146,
+    166
+   ],
+   "lastFinish": 166,
+   "cut": 180,
+   "ok": true,
+   "marginFrames": 14
+  },
+  {
+   "cps": 20,
+   "finishes": [
+    47.2,
+    95.2,
+    132.4,
+    150.4
+   ],
+   "lastFinish": 150.4,
+   "cut": 180,
+   "ok": true,
+   "marginFrames": 29.6
+  }
+ ],
+ "whole_frame": {
+  "toastChars": 117,
+  "bandChars": 131,
+  "totalChars": 248,
+  "outroSeconds": 7.5,
+  "bandOnSeconds": 7.5,
+  "secondsNeeded": {
+   "16": 15.5,
+   "18": 13.78,
+   "20": 12.4
+  },
+  "bandUncontestedAt18": 0.96,
+  "bandReadAt18": 7.28
+ },
+ "terms": {
+  "chars": 87,
+  "px": 389,
+  "onSeconds": 7.5,
+  "onSecondsOutroOnly": 7.5,
+  "rule5s": true
+ },
+ "per_line_ok": true,
+ "ok": true
+}

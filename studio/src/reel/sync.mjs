@@ -5,6 +5,8 @@
 //   node src/reel/sync.mjs            sync once + print a lint report
 //   node src/reel/sync.mjs --watch    keep syncing while the studio is open
 //   node src/reel/sync.mjs --verbose  print every warning (default: first 12 per file)
+// An EPISODE MANIFEST (<key>.manifest.json, or "kind": "episode-manifest"; README.md beside this file) is copied the
+// same way and linted as a manifest: the registry builds reel-<key> (the whole episode on one timeline) from it.
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
@@ -98,6 +100,42 @@ function lint(file, o) {
   return {w, total, n: beats.length, generic: [...generic]};
 }
 
+const ROOT = path.resolve(here, '../../..');
+const isManifest = (f, o) => /\.manifest\.json$/i.test(f) || (o && typeof o === 'object' && o.kind === 'episode-manifest');
+function lintManifest(o, files) {
+  const w = [];
+  const chapters = Array.isArray(o.chapters) ? o.chapters : [];
+  if (!chapters.length) w.push('no chapters[]');
+  const ids = new Set();
+  const have = new Set(files.map((f) => f.replace(/\.json$/i, '').toLowerCase()));
+  for (const [i, c] of chapters.entries()) {
+    const tag = `chapter ${c?.id ?? '#' + (i + 1)}`;
+    if (!c || typeof c !== 'object') {
+      w.push(`${tag}: not an object`);
+      continue;
+    }
+    if (!c.id) w.push(`${tag}: no id`);
+    else if (ids.has(c.id)) w.push(`${tag}: duplicate id`);
+    ids.add(c.id);
+    const kind = c.kind || (c.src && !c.from ? 'video' : c.from ? 'reel' : 'card');
+    if (kind === 'reel' && !have.has(String(c.from).toLowerCase())) w.push(`${tag}: timeline show/reel/${c.from}.json not found`);
+    if (kind === 'video') {
+      if (!c.src) w.push(`${tag}: video chapter has no src`);
+      else if (!fs.existsSync(path.join(ROOT, c.src))) w.push(`${tag}: ${c.src} not found`);
+      if (typeof c.dur !== 'number') w.push(`${tag}: video chapter needs dur (seconds)`);
+    }
+    const a = c.audio && typeof c.audio === 'object' ? c.audio : null;
+    if (a?.src && !fs.existsSync(path.join(ROOT, a.src))) w.push(`${tag}: audio ${a.src} not found`);
+  }
+  for (const [i, b] of (Array.isArray(o.beds) ? o.beds : []).entries()) {
+    const tag = `bed ${i + 1}${b?.cue ? ' (' + b.cue + ')' : ''}`;
+    if (!b || typeof b !== 'object') continue;
+    if (b.chapter && !ids.has(b.chapter)) w.push(`${tag}: chapter ${b.chapter} not in chapters[]`);
+    if (b.src && !fs.existsSync(path.join(ROOT, b.src))) w.push(`${tag}: ${b.src} not found (it will be skipped)`);
+  }
+  return {w, total: 0, n: chapters.length, generic: [], manifest: true};
+}
+
 function syncOnce() {
   fs.mkdirSync(DST, {recursive: true});
   const files = fs.existsSync(SRC) ? fs.readdirSync(SRC).filter((f) => f.toLowerCase().endsWith('.json') && !f.startsWith('.')).sort() : [];
@@ -123,15 +161,16 @@ function syncOnce() {
       changed++;
     }
     keep.add(f);
-    const L = err ? {w: [`PARSE ERROR: ${err}`], total: 0, n: 0, generic: []} : lint(f, obj);
+    const L = err ? {w: [`PARSE ERROR: ${err}`], total: 0, n: 0, generic: []} : isManifest(f, obj) ? lintManifest(obj, files) : lint(f, obj);
     report.push({f, ...L});
   }
   for (const f of fs.readdirSync(DST)) if (f.endsWith('.json') && !keep.has(f)) (fs.unlinkSync(path.join(DST, f)), changed++);
   if (!QUIET) {
     console.log(`reel sync: ${files.length} file(s) from ${SRC} -> ${DST} (${changed} changed)`);
     for (const r of report) {
-      const id = 'reel-' + r.f.replace(/\.json$/i, '').replace(/^_+/, '').toLowerCase().replace(/[^a-z0-9-]+/g, '-');
-      console.log(`  ${r.f.padEnd(24)} ${id.padEnd(24)} ${String(r.n).padStart(3)} beats  reel ${fmt(r.total + 3)} (incl. 3 s title)  ${r.w.length ? r.w.length + ' warning(s)' : 'ok'}`);
+      const id = 'reel-' + r.f.replace(/(\.manifest)?\.json$/i, '').replace(/^_+/, '').toLowerCase().replace(/[^a-z0-9-]+/g, '-');
+      if (r.manifest) console.log(`  ${r.f.padEnd(24)} ${id.padEnd(24)} ${String(r.n).padStart(3)} chapters  (episode manifest)  ${r.w.length ? r.w.length + ' warning(s)' : 'ok'}`);
+      else console.log(`  ${r.f.padEnd(24)} ${id.padEnd(24)} ${String(r.n).padStart(3)} beats  reel ${fmt(r.total + 3)} (incl. 3 s title)  ${r.w.length ? r.w.length + ' warning(s)' : 'ok'}`);
       for (const x of VERBOSE ? r.w : r.w.slice(0, 12)) console.log(`      - ${x}`);
       if (!VERBOSE && r.w.length > 12) console.log(`      … ${r.w.length - 12} more (--verbose)`);
       if (r.generic.length) console.log(`      generic figures (no mark yet): ${r.generic.join(', ')}`);

@@ -15,6 +15,14 @@
 
 Slugs: `mas-manalt`, `nole`, `gerg-mockbran`, `alyi`, `mario`, `rumpt`, `nesnej`, `rima-tamuri`, `the-orb`, `the-intern`.
 
+**Pass 2 (2026-09-26) adds** the other 15 Ep1 speaking parts and 3 derived voices. Their picks and measurements are at the end of §2 (["Pass 2"](#pass-2-2026-09-26-every-other-ep1-speaking-part)).
+
+| Path | What it is |
+|---|---|
+| `voices/cast.json` | **the cast registry the dialogue recorder reads**: script speaker label → voice slug, the pass-2 presets (blend, chain, speed, brief, measurements), pace bands, the names lexicon. Pass-1 and Act Four voices are read from `tools/cast.py` and `audio/ep01/act4/dialogue/tools/cast_a4.py`. |
+| `voices/tools/cast_pass2.py` | the pass-2 renderer: `render` (candidates into a scratch folder), `report` (tables and the scene-separation check), `finalize` (picks → `cast.json` and auditions) |
+| `voices/<slug>/<candidate>-audition.mp3` | one audition per pass-2 pick: the part's Ep1 lines back to back, 0.4 s apart, at the production speed, through the scene's device where it has one; −16.0 LUFS |
+
 ---
 
 ## 0. House rules for every voice (read before casting anyone)
@@ -236,9 +244,124 @@ Column key: **Median F0** is the median across the three lines. **F0 range** is 
 
 **Pick: A.** The Intern "learned everything from Mas," so its voice is literally Mas's stock pack, brighter (+3 st), faster (185–211 wpm against his 121–137) and faintly digital. It lands in the pace band. B is the choice if the room wants the Intern to read as clearly *not* Mas. C is flagged lightly: "task" was heard as "ask."
 
+### Pass 2 (2026-09-26): every other Ep1 speaking part
+
+> **Note (read first).** Pass 1 cast the ten leads. Act Four cast seven more (NELEH, MADA, TERB, TASYA, TTEMME, ADELINA, TILED EMPLOYEE; `audio/ep01/act4/dialogue/tools/cast_a4.py`). Pass 2 casts the **15 Ep1 speaking parts that still had no voice** and derives **3 more** from them, so that the fast dialogue recorder (`audio/ep01/act4/dialogue/tools/fastrec/`) can read the whole episode for the stick reels. **These are scratch voices picked by measurement. Nobody has listened to them.** Listen to the auditions below before a pick is treated as settled; every ★ is "the one to try first."
+>
+> **Coverage, checked.** At about 22:30 on 2026-09-26, and again at 23:10 on the script as saved at 22:48, every speaker label in `show/episodes/ep01/script.md` (cold open, Acts One–Four and the tag: 231 lines, 34 speaker labels, 33 voice presets) resolved to a voice with a pace band (`fastrec plan --seg <seg>` prints "labels with no voice: none" for all six segments). The scene-craft pass was still editing the script, so re-run that check after it finishes (commands in "How to re-run" below).
+
+**How the picks were made.** Each part got 3 candidates, or 4–5 where the first round missed the brief's pitch lane or crowded a scene partner (the `d-`/`e-` candidates). Each candidate read the part's own Ep1 lines with the recorder's house method: one whole read, dry, the production chain, room-tone handles, −16 LUFS. The §0 house rules hold unchanged:
+- stock Kokoro-82M American-English packs or weighted averages of them, never a clone or an impression;
+- pitch shifts within ±2 st for humans and ±3 st for the product voices, EQ moves within 2.5 dB, and no rooms printed in (rooms are mix sends);
+- no accent play, and no age, health or disability coding (this binds NEDIB above all: normal pace, clean phonation, a steady pitch);
+- the product voices (SYDNEY, CHATGTP, CLOD) resemble no real product's voice, and keep off the four packs named after one provider's TTS voices (`af_alloy`, `af_nova`, `am_echo`, `am_onyx`).
+
+The numbers behind a pick: fit to the brief's pitch lane, a clean ASR read (faster-whisper small.en, beam 5), Kokoro's pack grade, pitch consistency across the part's lines, and **separation from everyone in the same scene**: no two speakers in one scene share a dominant pack or sit within 1.5 st of each other. The closest pairs are MARIO/RADNUS (sc 13) at 1.6 st and RADNUS/TASYA (sc 13) and MAS/SUCRAM (sc 15) at 1.7 st. Finally each pick's Kokoro speed band was recentred so its measured articulation lands in the brief's guide, held within ±15 % of the audition read (vcast's nudge limit).
+
+**Pitch lanes of the pass-2 picks, low to high:** LAHTNEMULB 102 Hz · NEDIB 105 · EGAP 108 · OIGNEB 114 · REMUHCS 116 · SUCRAM 128 · RADNUS 129 · NIRB 144 · A SENATOR 157 · PANEL HOST 158 · PHOTOGRAPHER 168 · CLOD 173 · SYDNEY 187 · SIRRAH 203 · CHATGTP 251.
+
+Column key as above, except: **Speed** is the production Kokoro speed (the band's centre), with the band and the speed the candidates were auditioned at; **Artic.** is syllables a second at the audition read, against the brief's guide; **CER · recall** is the worst character error rate and the lowest share of non-name words the recognizer returned. Audition paths are under `audio/voices/`.
+
+| Character | ★ Candidate | Stock voice (grade) | Pitch | Speed (band; auditioned at) | Median F0 (brief lane) | Artic. (guide) | CER · recall | Audition |
+|---|---|---|---|---|---|---|---|---|
+| PANEL HOST | **c-sarah-puck-host** | `af_sarah`×0.45 C+ + `am_puck`×0.55 C+ | 0 st | 1.01 (0.97–1.05; 1.00) | 158 Hz (145–175) | 4.44 (4.2–4.8) | 0.06 · 1.00 | `panel-host/c-sarah-puck-host-audition.mp3` |
+| RADNUS | **d-echo-fenrir-courteous-up2** | `am_echo`×0.6 D + `am_fenrir`×0.4 C+ | +2 st | 0.95 (0.91–0.99; 0.94) | 129 Hz (110–135) | 4.05 (3.8–4.4) | 0.00 · 1.00 | `radnus/d-echo-fenrir-courteous-up2-audition.mp3` |
+| NIRB | **c-eric-liam-curious** | `am_eric`×0.5 D + `am_liam`×0.5 D | +1 st | 1.05 (1.01–1.09; 1.02) | 144 Hz (125–150) | 4.56 (4.4–5.0) | 0.00 · 1.00 | `nirb/c-eric-liam-curious-audition.mp3` |
+| EGAP | **b-onyx-liam-dry** | `am_onyx`×0.6 D + `am_liam`×0.4 D | +1 st | 0.88 (0.84–0.92; 0.96) | 108 Hz (95–120) | 4.49 (3.8–4.4) | 0.00 · 1.00 | `egap/b-onyx-liam-dry-audition.mp3` |
+| SYDNEY | **b-kore-sweet** | `af_kore` C+ | +1.5 st | 0.83 (0.79–0.87; 0.98) | 187 Hz (185–235) | 5.83 (4.0–4.6) | 0.00 · 1.00 | `sydney/b-kore-sweet-audition.mp3` |
+| CHATGTP | **e-jessica-eager-hi** | `af_jessica` D | +3 st | 1.13 (1.09–1.17; 1.06) | 251 Hz (200–250) | 4.87 (4.8–5.6) | 0.00 · 1.00 | `chatgtp/e-jessica-eager-hi-audition.mp3` |
+| CLOD | **c-river-eric-earnest** | `af_river`×0.5 D + `am_eric`×0.5 D | 0 st | 1.03 (0.99–1.07; 1.00) | 173 Hz (150–180) | 4.38 (4.2–4.8) | 0.00 · 1.00 | `clod/c-river-eric-earnest-audition.mp3` |
+| OIGNEB | **c-eric-onyx-gentle** | `am_eric`×0.5 D + `am_onyx`×0.5 D | +0.5 st | 0.89 (0.85–0.93; 0.96) | 114 Hz (110–130) | 4.65 (4.0–4.6) | 0.08 · 1.00 | `oigneb/c-eric-onyx-gentle-audition.mp3` |
+| SIRRAH | **a-sarah-crisp** | `af_sarah` C+ | 0 st | 0.97 (0.93–1.01; 0.96) | 203 Hz (170–205) | 4.25 (4.0–4.6) | 0.00 · 1.00 | `sirrah/a-sarah-crisp-audition.mp3` |
+| PHOTOGRAPHER | **d-river-brisk-low** | `af_river` D | −2 st | 1.14 (1.10–1.18; 1.04) | 168 Hz (any lane apart from the row) | 4.56 (4.6–5.4) | 0.00 · 1.00 | `photographer/d-river-brisk-low-audition.mp3` |
+| NEDIB | **d-fenrir-onyx-folksy-0** | `am_fenrir`×0.5 C+ + `am_onyx`×0.5 D | 0 st | 0.97 (0.93–1.01; 1.02) | 105 Hz (105–130) | 4.74 (4.2–4.8) | 0.00 · 1.00 | `nedib/d-fenrir-onyx-folksy-0-audition.mp3` |
+| LAHTNEMULB | **d-adam-echo-senate-low** | `am_adam`×0.5 F+ + `am_echo`×0.5 D | −2 st | 0.88 (0.84–0.92; 0.98) | 102 Hz (100–125) | 4.79 (4.0–4.6) | 0.00 · 1.00 | `lahtnemulb/d-adam-echo-senate-low-audition.mp3` |
+| SUCRAM | **d-liam-puck-thread-0** | `am_liam`×0.5 D + `am_puck`×0.5 C+ | 0 st | 1.18 (1.14–1.22; 1.08) | 128 Hz (105–130) | 4.96 (5.0–5.8) | 0.29 · 0.89 | `sucram/d-liam-puck-thread-0-audition.mp3` |
+| A SENATOR | **d-kore-nicole-senate-up2** | `af_kore`×0.6 C+ + `af_nicole`×0.4 B− | +2 st | 0.85 (0.81–0.89; 0.98) | 157 Hz (160–205) | 5.20 (4.2–4.8) | 0.00 · 1.00 | `a-senator/d-kore-nicole-senate-up2-audition.mp3` |
+| REMUHCS | **c-adam-puck-forum** | `am_adam`×0.5 F+ + `am_puck`×0.5 C+ | 0 st | 0.87 (0.83–0.91; 1.00) | 116 Hz (110–135) | 5.18 (4.2–4.8) | 0.00 · 1.00 | `remuhcs/c-adam-puck-forum-audition.mp3` |
+
+**Derived voices (no new pick: a base pick through a process).** The "gloss" is −1.5 dB at 350 Hz, a +2.5 dB shelf at 7 kHz, a slow doubling chorus (18 %) and 4:1 compression: "the same cadence, a shade too smooth." It is a process on a stock voice, never a clone of anyone.
+
+| Speaker label | Voice | Audition |
+|---|---|---|
+| LAHTNEMULB (THE CLONE), THE CLONE | LAHTNEMULB's pick + gloss | `lahtnemulb/lahtnemulb-clone-gloss-audition.mp3` |
+| DEEPFAKE NEDIB | NEDIB's pick + gloss | `nedib/deepfake-nedib-gloss-audition.mp3` |
+| DEEPFAKE NEDIB #2 | NEDIB's pick + gloss, +0.7 st (so the two fakes are told apart) | `nedib/deepfake-nedib-2-gloss-audition.mp3` |
+
+**Why each pick, in a line.**
+- **PANEL HOST:** the best-graded blend (both packs C+), in a middle lane (158 Hz) that doesn't read as either gender. The three candidates measured almost alike. ASR hears "Mas" as "Moss" (a name, so excluded from recall).
+- **RADNUS:** candidate A lifted 2 st (D), to 129 Hz, clear of MAS 116 and MARIO 118 below and TASYA 143 above in sc 13. It is the slowest, most even read (4.05 syll/s in a 3.8–4.4 guide): "politely on fire."
+- **NIRB:** the only candidate in his tenor lane (144 Hz), 4.9 st above EGAP in the same scene.
+- **EGAP:** in the low lane (108 Hz), under NIRB and RADNUS; recentred to speed 0.88 for the deliberate pace.
+- **SYDNEY:** `af_kore` (C+) at the lane's floor with a wide, sing-song range (11.4 st), on the Intern's sheen route. A (`af_nicole`) sat under the lane with a flat 3.9 st range. See open issues on her speed.
+- **CHATGTP:** every first-round read sat within 1.2 st of RIMA (216 Hz), who shares sc 5. E sits 2.6 st above her (251 Hz). `af_jessica` is D-graded.
+- **CLOD:** the only candidate near the articulation guide (4.38), in a warm middle lane (173 Hz). No bitcrush, so it is neither the Intern nor SYDNEY.
+- **OIGNEB:** in the lane (114 Hz), 2.2 st under NOLE in sc 12; A and B fell under the lane. ASR writes "six" as "6" (CER 0.08; recall 1.0).
+- **SIRRAH:** `af_sarah` (C+) at 203 Hz, top of the lane, 3.3 st above the PHOTOGRAPHER in sc 13. No imitation of any real laugh or mannerism (the §0 SIRRAH guardrail).
+- **PHOTOGRAPHER:** B lowered 2 st (D) to 168 Hz, between TASYA 143 and SIRRAH 203 in sc 13. C (`af_jessica`) was misheard ("anyone's").
+- **NEDIB:** `am_fenrir`/`am_onyx` at 0 st (105 Hz), under MAS, MARIO and RADNUS in sc 13. Articulation 4.74 sits inside 4.2–4.8 at speed 0.97. House rule 4 holds: normal pace, a clean chain, no rasp, tremor or slowing.
+- **LAHTNEMULB:** B lowered 2 st (D) to 102 Hz, 2.2 st under MAS in sc 15. A and C were misheard on "I am, a little" ("the little").
+- **SUCRAM:** A at 0 st (D), 128 Hz, above MAS and LAHTNEMULB in sc 15. The 0.89 recall on every candidate is "forty-seven", which ASR writes "47": a false miss, not a misread.
+- **A SENATOR:** C (the best-graded blend) lifted 2 st (D) to 157 Hz, just under the lane. The script leaves the senator ungendered; a woman's stock pack separates the voice from the chairman, SUCRAM and MAS in the same room.
+- **REMUHCS:** C, in the lane (116 Hz), 2 st under NOLE in sc 19, heard through the monitor chain. The line is a real [V] quote; the voice is a stock blend, with no mimicry.
+
+**The other candidates** (median F0, articulation at the audition read, worst CER, lowest recall):
+- PANEL HOST: a-kore-eric-host (161 Hz, 4.31, 0.06, 1.00); b-river-liam-host (156 Hz, 4.27, 0.06, 1.00)
+- RADNUS: a-echo-fenrir-courteous (116 Hz, 4.07, 0.04, 1.00); c-echo-puck-polite (108 Hz, 4.27, 0.04, 1.00); b-fenrir-adam-gentle (137 Hz, 4.81, 0.04, 1.00)
+- NIRB: b-puck-echo-bright (118 Hz, 4.86, 0.00, 1.00); a-liam-adam-eager (123 Hz, 4.63, 0.00, 1.00)
+- EGAP: a-onyx-adam-quiet (110 Hz, 4.76, 0.00, 1.00); c-adam-plain (121 Hz, 5.43, 0.00, 1.00)
+- SYDNEY: a-nicole-sweet (165 Hz, 4.92, 0.02, 1.00); c-jessica-sweet (218 Hz, 5.32, 0.02, 1.00)
+- CHATGTP: a-sarah-eager (220 Hz, 5.43, 0.00, 1.00); d-sarah-eager-lo (199 Hz, 5.41, 0.00, 1.00); c-jessica-kore-eager (201 Hz, 5.17, 0.00, 1.00); b-river-eager (203 Hz, 4.94, 0.00, 1.00)
+- CLOD: a-kore-puck-earnest (167 Hz, 5.77, 0.00, 1.00); b-puck-soft (159 Hz, 6.00, 0.00, 1.00)
+- OIGNEB: a-liam-echo-gentle (103 Hz, 4.23, 0.08, 1.00); b-echo-gentle (96 Hz, 4.05, 0.08, 1.00)
+- SIRRAH: c-sarah-kore-crisp (177 Hz, 4.35, 0.00, 1.00); b-kore-crisp (155 Hz, 4.26, 0.00, 1.00)
+- PHOTOGRAPHER: b-river-brisk (189 Hz, 4.58, 0.00, 1.00); a-adam-brisk (131 Hz, 4.82, 0.00, 1.00); c-jessica-brisk (214 Hz, 4.75, 0.07, 0.67)
+- NEDIB: a-fenrir-echo-folksy (121 Hz, 4.65, 0.00, 1.00); c-fenrir-onyx-folksy (112 Hz, 4.87, 0.00, 1.00); b-fenrir-puck-folksy (118 Hz, 5.37, 0.00, 1.00)
+- LAHTNEMULB: b-adam-echo-senate (116 Hz, 4.84, 0.00, 1.00); c-onyx-eric-senate (126 Hz, 4.84, 0.30, 0.75); a-onyx-liam-senate (109 Hz, 4.62, 0.40, 0.50)
+- SUCRAM: a-liam-puck-thread (118 Hz, 4.96, 0.29, 0.89); c-echo-liam-rapid (107 Hz, 4.07, 0.29, 0.89); b-eric-rapid (139 Hz, 4.67, 0.37, 0.78)
+- A SENATOR: c-kore-nicole-senate (141 Hz, 5.20, 0.00, 1.00); b-river-senate (180 Hz, 5.54, 0.00, 1.00); a-jessica-senate (214 Hz, 5.48, 0.01, 1.00)
+- REMUHCS: a-eric-echo-forum (129 Hz, 4.42, 0.00, 1.00); b-liam-onyx-forum (100 Hz, 4.37, 0.00, 1.00)
+
+The candidate WAVs were rendered into a scratch folder and are not kept; `cast_pass2.py render` re-makes them (the recipes are in its `ROLES` table).
+
+**Checked in the recorder, at production speed (2026-09-26, 22:40).** Every pass-2 speaker's current Ep1 lines (42 lines, 349 words, 107 s of voiced speech, from the script as of 22:27) were read with `fastrec record` at the production speeds above: 0 file problems (every file at −16.0 LUFS, true peak ≤ −1.5 dBTP, handles, no digital black), and all 18 voices in their pitch lanes (for example NEDIB 102–114 Hz over five lines, SIRRAH 200–214 Hz, CHATGTP 252–255 Hz). The call, monitor and new PA chains each ran on at least one line. What the recorder flagged for an ear:
+- NIRB "Is it search?" came back "is its search" (recall 0.91): the words may run together.
+- PHOTOGRAPHER "Camera one. Anyone." came back "Camera 1's anyone." (recall 0.67): probably the number's spelling, but check the pause.
+- SUCRAM "One of forty-seven" came back "one of 47": a false miss (the number's spelling).
+- SUCRAM "Most of them." measures 4.05 syll/s against 5.0–5.8: a short line.
+
+SYDNEY's long line measures 4.49 syll/s at speed 0.83, inside her 4.0–4.6 guide, so the clamp noted below holds. The run's output is scratch (not kept); the recorder's README has the command.
+
+**Names.** `cast.json` `lexicon` now also carries **CHATGTP** ("chat-G-T-P", per `show/bible/naming.md` §9) and **GNIB** ("guh-NIB"). GNIB has no house pronunciation in naming.md §9 yet: "guh-NIB" is the one SYDNEY's audition uses, and the room should lock it (Mas's "you've been an extremely good gnib." must match her). `fastrec plan` applies the lexicon in any case, so "GNIB" and "gnib" read the same. The pass-2 characters' own names are never spoken in Ep1.
+
+**Open issues (pass 2).**
+- **Nobody has listened.** The numbers prove the reads are clean, level, in their lanes and intelligible, not that they are natural, funny or in character.
+- **Pack grades.** Every C+ male pack is already taken by a lead, so most pass-2 men are blends of D-graded packs (`am_echo`, `am_eric`, `am_liam`, `am_onyx`) and two use `am_adam` (F+). Kokoro's grades predict more artifacts for these.
+- **Speed clamps.** SYDNEY was auditioned fast (5.83 syll/s at speed 0.98), so her band sits at the −15 % limit (0.83). At that speed her long line measures 4.49 syll/s, inside the guide. A SENATOR and REMUHCS also measured above their guides at the audition read and were recentred down 13–15 %; at production speed A SENATOR's three lines measure 4.12, 5.41 and 4.71 syll/s (one above her 4.2–4.8 guide) and REMUHCS's line 4.61.
+- **The auditions use the script as of about 16:40.** The scene-craft pass has since rewritten some of these lines (EGAP's, for one). The voices don't change; the lines are re-read with the recorder.
+- **RUMPT, THE INTERN and THE ORB have no pace band** in the registry. They don't speak in Ep1. Add a band to `cast.json` `bands` before recording Ep2 or Ep3 lines for them (the recorder stops with `NO PACE BAND` until then).
+
+**How to re-run (from the repo root).**
+
+```sh
+PY=audio/.venv-casting/bin/python
+T=audio/ep01/act4/dialogue/tools/fastrec/fastrec.py
+# does every Ep1 speaker have a voice? (prints "labels with no voice: ..." per segment)
+for s in coldopen act1 act2 act3 act4 tag; do HF_HUB_OFFLINE=1 $PY $T plan --seg $s --out <scratch dir>/plan-$s.json; done
+HF_HUB_OFFLINE=1 $PY $T voices                                   # the whole registry
+# re-audition or re-cast (candidates go to a scratch folder; finalize writes cast.json and the auditions)
+HF_HUB_OFFLINE=1 $PY audio/voices/tools/cast_pass2.py render   --work <scratch dir> [slug ...]
+HF_HUB_OFFLINE=1 $PY audio/voices/tools/cast_pass2.py report   --work <scratch dir>
+HF_HUB_OFFLINE=1 $PY audio/voices/tools/cast_pass2.py finalize --work <scratch dir>
+```
+
+A new speaker: add a role (brief, lane, band, lines, 3 candidates) to `ROLES` in `cast_pass2.py`, render and report it, add the pick to `PICKS`, then finalize. Or, for a one-off, add a voice by hand to `cast.json` `voices`, `labels` and `bands`.
+
 ---
 
 ## 3. The recommended cast at a glance
+
+This section covers the pass-1 leads. The Act Four parts are in `audio/ep01/act4/dialogue/tools/cast_a4.py`, and the 15 pass-2 parts and 3 derived voices are at the end of §2 ("Pass 2"). All of them resolve through `cast.json`.
 
 Pitch lanes of the ★ picks, low to high: **ALYI 88 Hz · RUMPT 98 · MAS 111 · MARIO 122 · NOLE 130 · NESNEJ 135 · GERG 135 · INTERN 149 · ORB 177 (optional) · RIMA 198.** Pace runs from **ALYI ~104 wpm** at the slow end to **GERG ~200+** at the fast end.
 
