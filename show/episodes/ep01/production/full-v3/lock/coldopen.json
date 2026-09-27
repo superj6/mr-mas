@@ -1,0 +1,2791 @@
+{
+ "meta": {
+  "show": "MR. MAS",
+  "episode": "ep01",
+  "seg": "coldopen",
+  "label": "COLD OPEN",
+  "timeline": "show/reel/ep01-v3/ep01-v3-coldopen.json",
+  "takes": [
+   "studio/src/episodes/ep01/pixel/coldopen/takes-mouth.json"
+  ],
+  "plan": null,
+  "plan_py": null,
+  "base_lock": null,
+  "generator": "studio/src/episodes/ep01/pixel/tools/lock.py",
+  "fps": 24,
+  "ep_in": "00:00:00",
+  "ep_in_frames": 0,
+  "rules": [
+   "the picture is cut to the stick timeline: its beats are the shots, its lines are the lines, nothing re-timed",
+   "a continuation beat that follows its own shot directly merges into it",
+   "a line starts on the frame in which its first sound falls (beat start + t; t may be negative, a pre-lap), ends after the frame of its last sound",
+   "mouths and words on the same rule; a line appears in every shot it sounds in (carry = runs in from an earlier shot, pre = starts under this one before its own)",
+   "marks come from the stick's own sound spots and text, the takes' words, or a base lock's marks scaled to the new length",
+   "the framing decides who shows a mouth (face), not the take's lip_sync flag"
+  ],
+  "note": "Nothing here was watched or heard. The numbers are measured from the files; whether the picture reads needs a person."
+ },
+ "summary": {
+  "shots": 11,
+  "beats": 12,
+  "frames": 736,
+  "seconds": 30.667,
+  "length": "0:30.67",
+  "episode_in": "00:00:00",
+  "episode_out": "00:30:16",
+  "verdicts": {
+   "-": 11
+  },
+  "mean_s": 2.788,
+  "median_s": 2.5,
+  "min_s": 0.5,
+  "max_s": 5.583,
+  "lines": 3,
+  "posts": 0,
+  "vo": 0,
+  "lines_with_mouth": 2,
+  "mouths_from_words": 0,
+  "on_camera_mouths": [],
+  "lines_crossing_a_cut": [
+   "e1-co-1-02 (1.02 -> 1.03, 1.04)"
+  ],
+  "prelaps": [],
+  "reviewer_slates": [],
+  "mix": {
+   "path": "out/ep01/full-v3/picture/coldopen-stick-mix.wav",
+   "offset_frames": 0,
+   "frames": 736.0
+  },
+  "refs": {}
+ },
+ "checks": [
+  {
+   "check": "shot frames = their beats' frames",
+   "ok": true,
+   "detail": "11 shots from 12 beats"
+  },
+  {
+   "check": "shots tile the segment with no gap",
+   "ok": true,
+   "detail": "0 -> 736"
+  },
+  {
+   "check": "the lock vs the stick reel's own line frames",
+   "ok": true,
+   "detail": "same frame: 1; 1 f earlier (the onset falls inside the frame): 2; other: 0"
+  },
+  {
+   "check": "every line has a take",
+   "ok": true,
+   "detail": "3 of 3 placed; no take: []"
+  },
+  {
+   "check": "every line's speech lies inside its take file",
+   "ok": true,
+   "detail": "outside: []"
+  },
+  {
+   "check": "mouth tracks carried over",
+   "ok": true,
+   "detail": "2 lines with a mouth track; lost: []"
+  },
+  {
+   "check": "every on-camera mouth has a track",
+   "ok": true,
+   "detail": "0 faced rows; without a track: []"
+  },
+  {
+   "check": "the mix = its offset + the segment",
+   "ok": true,
+   "detail": "mix 736.00 f vs 0 + 736"
+  }
+ ],
+ "sequences": [
+  {
+   "id": "COLD OPEN",
+   "side": "",
+   "place": "APEC CEO Summit, San Francisco · main stage",
+   "time": "Thu Nov 16, 2023 · day",
+   "s": 0,
+   "e": 604,
+   "shots": [
+    "1.00",
+    "1.01",
+    "1.02",
+    "1.03",
+    "1.04",
+    "2.01",
+    "2.02",
+    "2.03",
+    "3.01",
+    "3.02"
+   ],
+   "chapter": "Thu Nov 16, 2023 · day",
+   "title": "APEC CEO Summit, San Francisco · main stage",
+   "cue": "sound: the hall's bed (HVAC, a polite crowd) under black before the first frame · music (v3): COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind · sound: the hall (HVAC, a polite crowd), the banquet louder; no music · the host: a hand and a PA voice, never a face (unnamed, never gendered) · the lit window is OGAL-A-RAM's: no label, no face, a phone's glow · one sentence, one read: the take plays on across the next two cuts · the hailstone crosses behind him; no pan splits the sentence · cut in on the dash: the plink lands in the read's own phrase break · the tent card reads for the whole insert · the phone is planted here, dark: the freeze lights it · the same MCU setup as 1.02 · the swell rises into the freeze and is cut by it, mid-rise · style: 2-TONE FREEZE, a full-room pass; Mas never freezes · sound: the hall drops to a low filtered hum, never silence · held a bar to read; the buzz is the one close sound · egg: none of the four circles is GERG's green laptop glow · the hold is his; the tap plays inside it (no insert of the thumb) · jaw light white -> pale blue at 1.35 s: the only sign he accepted · the clock (Friday, noon) states no outcome · the Orb, his witness, carries \"how did he get here?\" across the cut · the counter aims at 2022 (Act One) and overshoots: sc 4's \"too far\" · style: BASE -> 1-BIT in four held light steps (reel: 1-BIT end only) · sound: the hall runs backward: a groan on the catch, then a lurch",
+   "frames": 604,
+   "tc_in": "00:00:00",
+   "tc_out": "00:25:04"
+  },
+  {
+   "id": "F1.1",
+   "side": "",
+   "place": "a 1-bit dialog (no computer, desk or hand)",
+   "time": "1993",
+   "s": 604,
+   "e": 736,
+   "shots": [
+    "4.01"
+   ],
+   "chapter": "1993",
+   "title": "a 1-bit dialog (no computer, desk or hand)",
+   "cue": "music (v3): COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind · stand-in: Cancel struck through = greyed out (reel can't grey a button) · style: F1.1 1-BIT, an era switch; date card top-left, 3:2 pillarbox · plants the rule: he always takes the offer (paid at Act Four's noon) · the toast is the joke: its read plus a beat, then SMASH TO the intro",
+   "frames": 132,
+   "tc_in": "00:25:04",
+   "tc_out": "00:30:16"
+  }
+ ],
+ "shots": [
+  {
+   "id": "1.00",
+   "setup": "1.00",
+   "beats": [
+    "1.00"
+   ],
+   "s": 0,
+   "e": 12,
+   "onscreen": [],
+   "lines": [],
+   "seq": "COLD OPEN",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "BLACK",
+   "cls": "GFX",
+   "move": "cut",
+   "does": "Black. The hall is heard first: HVAC, a polite crowd, cutlery.",
+   "chars": [],
+   "cues": [
+    "sound: the hall's bed (HVAC, a polite crowd) under black before the first frame"
+   ],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "card",
+   "set": "void",
+   "room": "apec-stage",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Black. The hall is heard first: HVAC, a polite crowd, cutlery.",
+   "cast": [],
+   "speak": [],
+   "beat_starts": {
+    "1.00": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "00:00:00",
+   "tc_out": "00:00:12",
+   "frames": 12
+  },
+  {
+   "id": "1.01",
+   "setup": "1.01",
+   "beats": [
+    "1.01"
+   ],
+   "s": 12,
+   "e": 114,
+   "onscreen": [
+    {
+     "text": "RAIL: NOV 16, 2023 · SAN FRANCISCO",
+     "s": 6,
+     "e": 102
+    }
+   ],
+   "lines": [
+    {
+     "id": "e1-co-1-01",
+     "kind": "dialogue",
+     "mode": "pa",
+     "who": "HOST",
+     "text": "Last one, Mas. What's the best part of the job?",
+     "s": 24,
+     "e": 94,
+     "fs": 11,
+     "fe": 106,
+     "os": true,
+     "via": "pa",
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [],
+     "words": [
+      [
+       "Last",
+       0,
+       6
+      ],
+      [
+       "one",
+       6,
+       9
+      ],
+      [
+       "Mas",
+       10,
+       21
+      ],
+      [
+       "What's",
+       35,
+       40
+      ],
+      [
+       "the",
+       40,
+       42
+      ],
+      [
+       "best",
+       42,
+       49
+      ],
+      [
+       "part",
+       49,
+       54
+      ],
+      [
+       "of",
+       54,
+       56
+      ],
+      [
+       "the",
+       56,
+       58
+      ],
+      [
+       "job",
+       58,
+       70
+      ]
+     ],
+     "tag": "",
+     "pre": false
+    }
+   ],
+   "seq": "COLD OPEN",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "WIDE · the one wide: stage, banquet, the lit window",
+   "cls": "W",
+   "move": "cut",
+   "does": "Mas in the armchair, the Orb at his shoulder; at frame right only the host's hand and a card. Behind: the banquet's ovation, and far off one lit window.",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "cues": [
+    "music (v3): COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind",
+    "sound: the hall (HVAC, a polite crowd), the banquet louder; no music",
+    "the host: a hand and a PA voice, never a face (unnamed, never gendered)",
+    "the lit window is OGAL-A-RAM's: no label, no face, a phone's glow"
+   ],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "stage",
+   "room": "apec-stage",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Mas in the armchair, the Orb at his shoulder; at frame right only the host's hand and a card. Behind: the banquet's ovation, and far off one lit window.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "sit",
+     "face": "calm",
+     "x": 0.3,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "orb",
+     "pose": "stand",
+     "face": "calm",
+     "x": 0.37,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "1.01": 0
+   },
+   "names": [
+    {
+     "id": "mas",
+     "k": 45
+    }
+   ],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "00:00:12",
+   "tc_out": "00:04:18",
+   "frames": 102
+  },
+  {
+   "id": "1.02",
+   "setup": "1.02",
+   "beats": [
+    "1.02"
+   ],
+   "s": 114,
+   "e": 248,
+   "onscreen": [],
+   "lines": [
+    {
+     "id": "e1-co-1-02",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "MAS",
+     "text": "\"…i've gotten to be in the room when we sort of push the veil of ignorance back—and the frontier of discovery forward…\"",
+     "s": 7,
+     "e": 206,
+     "fs": -6,
+     "fe": 218,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "rest"
+      ],
+      [
+       1,
+       "A"
+      ],
+      [
+       4,
+       "E"
+      ],
+      [
+       7,
+       "A"
+      ],
+      [
+       10,
+       "E"
+      ],
+      [
+       18,
+       "M"
+      ],
+      [
+       20,
+       "E"
+      ],
+      [
+       35,
+       "O"
+      ],
+      [
+       41,
+       "M"
+      ],
+      [
+       44,
+       "rest"
+      ],
+      [
+       55,
+       "A"
+      ],
+      [
+       58,
+       "O"
+      ],
+      [
+       60,
+       "E"
+      ],
+      [
+       63,
+       "O"
+      ],
+      [
+       66,
+       "E"
+      ],
+      [
+       69,
+       "A"
+      ],
+      [
+       72,
+       "M"
+      ],
+      [
+       74,
+       "O"
+      ],
+      [
+       77,
+       "E"
+      ],
+      [
+       85,
+       "A"
+      ],
+      [
+       91,
+       "E"
+      ],
+      [
+       94,
+       "A"
+      ],
+      [
+       97,
+       "E"
+      ],
+      [
+       100,
+       "A"
+      ],
+      [
+       102,
+       "E"
+      ],
+      [
+       114,
+       "M"
+      ],
+      [
+       117,
+       "A"
+      ],
+      [
+       123,
+       "E"
+      ],
+      [
+       126,
+       "rest"
+      ],
+      [
+       138,
+       "A"
+      ],
+      [
+       140,
+       "E"
+      ],
+      [
+       146,
+       "A"
+      ],
+      [
+       150,
+       "E"
+      ],
+      [
+       154,
+       "A"
+      ],
+      [
+       158,
+       "E"
+      ],
+      [
+       160,
+       "A"
+      ],
+      [
+       163,
+       "E"
+      ],
+      [
+       170,
+       "A"
+      ],
+      [
+       173,
+       "E"
+      ],
+      [
+       182,
+       "O"
+      ],
+      [
+       187,
+       "E"
+      ],
+      [
+       189,
+       "O"
+      ],
+      [
+       191,
+       "E"
+      ],
+      [
+       198,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "I've",
+       1,
+       5
+      ],
+      [
+       "gotten",
+       5,
+       15
+      ],
+      [
+       "to",
+       15,
+       18
+      ],
+      [
+       "be",
+       18,
+       24
+      ],
+      [
+       "in",
+       24,
+       28
+      ],
+      [
+       "the",
+       28,
+       31
+      ],
+      [
+       "room",
+       31,
+       44
+      ],
+      [
+       "when",
+       55,
+       58
+      ],
+      [
+       "we",
+       58,
+       62
+      ],
+      [
+       "sort",
+       62,
+       69
+      ],
+      [
+       "of",
+       69,
+       72
+      ],
+      [
+       "push",
+       72,
+       79
+      ],
+      [
+       "the",
+       79,
+       83
+      ],
+      [
+       "veil",
+       83,
+       94
+      ],
+      [
+       "of",
+       94,
+       98
+      ],
+      [
+       "ignorance",
+       98,
+       114
+      ],
+      [
+       "back",
+       114,
+       126
+      ],
+      [
+       "and",
+       137,
+       140
+      ],
+      [
+       "the",
+       140,
+       143
+      ],
+      [
+       "frontier",
+       143,
+       160
+      ],
+      [
+       "of",
+       160,
+       164
+      ],
+      [
+       "discovery",
+       164,
+       181
+      ],
+      [
+       "forward",
+       181,
+       198
+      ]
+     ],
+     "tag": "",
+     "pre": false
+    }
+   ],
+   "seq": "COLD OPEN",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "SINGLE · MCU Mas, answering; the window soft behind him",
+   "cls": "MCU",
+   "move": "cut",
+   "does": "Mas answers, unhurried. As he starts, a white dot, a HAILSTONE, leaves the lit window and arcs toward us over the bay. We see it; he doesn't.",
+   "chars": [
+    "mas"
+   ],
+   "cues": [
+    "music (v3): COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind",
+    "one sentence, one read: the take plays on across the next two cuts",
+    "the hailstone crosses behind him; no pan splits the sentence"
+   ],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "stage",
+   "room": "apec-stage",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Mas answers, unhurried. As he starts, a white dot, a HAILSTONE, leaves the lit window and arcs toward us over the bay. We see it; he doesn't.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "sit",
+     "face": "calm",
+     "x": 0.36,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "1.02": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "00:04:18",
+   "tc_out": "00:10:08",
+   "frames": 134
+  },
+  {
+   "id": "1.03",
+   "setup": "1.03",
+   "beats": [
+    "1.03"
+   ],
+   "s": 248,
+   "e": 285,
+   "onscreen": [
+    {
+     "text": "MAS MANALT · CEO, NOPEAI",
+     "s": 0,
+     "e": 37
+    }
+   ],
+   "lines": [
+    {
+     "id": "e1-co-1-02",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "MAS",
+     "text": "\"…i've gotten to be in the room when we sort of push the veil of ignorance back—and the frontier of discovery forward…\"",
+     "s": -127,
+     "e": 72,
+     "fs": -140,
+     "fe": 84,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": true,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "rest"
+      ],
+      [
+       1,
+       "A"
+      ],
+      [
+       4,
+       "E"
+      ],
+      [
+       7,
+       "A"
+      ],
+      [
+       10,
+       "E"
+      ],
+      [
+       18,
+       "M"
+      ],
+      [
+       20,
+       "E"
+      ],
+      [
+       35,
+       "O"
+      ],
+      [
+       41,
+       "M"
+      ],
+      [
+       44,
+       "rest"
+      ],
+      [
+       55,
+       "A"
+      ],
+      [
+       58,
+       "O"
+      ],
+      [
+       60,
+       "E"
+      ],
+      [
+       63,
+       "O"
+      ],
+      [
+       66,
+       "E"
+      ],
+      [
+       69,
+       "A"
+      ],
+      [
+       72,
+       "M"
+      ],
+      [
+       74,
+       "O"
+      ],
+      [
+       77,
+       "E"
+      ],
+      [
+       85,
+       "A"
+      ],
+      [
+       91,
+       "E"
+      ],
+      [
+       94,
+       "A"
+      ],
+      [
+       97,
+       "E"
+      ],
+      [
+       100,
+       "A"
+      ],
+      [
+       102,
+       "E"
+      ],
+      [
+       114,
+       "M"
+      ],
+      [
+       117,
+       "A"
+      ],
+      [
+       123,
+       "E"
+      ],
+      [
+       126,
+       "rest"
+      ],
+      [
+       138,
+       "A"
+      ],
+      [
+       140,
+       "E"
+      ],
+      [
+       146,
+       "A"
+      ],
+      [
+       150,
+       "E"
+      ],
+      [
+       154,
+       "A"
+      ],
+      [
+       158,
+       "E"
+      ],
+      [
+       160,
+       "A"
+      ],
+      [
+       163,
+       "E"
+      ],
+      [
+       170,
+       "A"
+      ],
+      [
+       173,
+       "E"
+      ],
+      [
+       182,
+       "O"
+      ],
+      [
+       187,
+       "E"
+      ],
+      [
+       189,
+       "O"
+      ],
+      [
+       191,
+       "E"
+      ],
+      [
+       198,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "I've",
+       1,
+       5
+      ],
+      [
+       "gotten",
+       5,
+       15
+      ],
+      [
+       "to",
+       15,
+       18
+      ],
+      [
+       "be",
+       18,
+       24
+      ],
+      [
+       "in",
+       24,
+       28
+      ],
+      [
+       "the",
+       28,
+       31
+      ],
+      [
+       "room",
+       31,
+       44
+      ],
+      [
+       "when",
+       55,
+       58
+      ],
+      [
+       "we",
+       58,
+       62
+      ],
+      [
+       "sort",
+       62,
+       69
+      ],
+      [
+       "of",
+       69,
+       72
+      ],
+      [
+       "push",
+       72,
+       79
+      ],
+      [
+       "the",
+       79,
+       83
+      ],
+      [
+       "veil",
+       83,
+       94
+      ],
+      [
+       "of",
+       94,
+       98
+      ],
+      [
+       "ignorance",
+       98,
+       114
+      ],
+      [
+       "back",
+       114,
+       126
+      ],
+      [
+       "and",
+       137,
+       140
+      ],
+      [
+       "the",
+       140,
+       143
+      ],
+      [
+       "frontier",
+       143,
+       160
+      ],
+      [
+       "of",
+       160,
+       164
+      ],
+      [
+       "discovery",
+       164,
+       181
+      ],
+      [
+       "forward",
+       181,
+       198
+      ]
+     ],
+     "tag": "",
+     "pre": false
+    }
+   ],
+   "seq": "COLD OPEN",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "INSERT · the shared table from above: plink",
+   "cls": "ECU",
+   "move": "cut",
+   "does": "Plink: the hailstone lands in his glass and bobs, glyph noise, no letters. The host's glass sloshes; his doesn't. His phone lies beside it, face-up and dark.",
+   "chars": [],
+   "cues": [
+    "music (v3): COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind",
+    "cut in on the dash: the plink lands in the read's own phrase break",
+    "the tent card reads for the whole insert",
+    "the phone is planted here, dark: the freeze lights it"
+   ],
+   "sounds": [
+    "synth:plink @2",
+    "synth:slosh @3"
+   ],
+   "spots": [
+    {
+     "name": "synth:plink",
+     "k": 2,
+     "dur": null
+    },
+    {
+     "name": "synth:slosh",
+     "k": 3,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "stage",
+   "room": "apec-stage",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Plink: the hailstone lands in his glass and bobs, glyph noise, no letters. The host's glass sloshes; his doesn't. His phone lies beside it, face-up and dark.",
+   "cast": [],
+   "speak": [],
+   "beat_starts": {
+    "1.03": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "label",
+     "text": "MAS MANALT · CEO, NOPEAI",
+     "s": 0,
+     "e": 37,
+     "must": true
+    }
+   ],
+   "tc_in": "00:10:08",
+   "tc_out": "00:11:21",
+   "frames": 37
+  },
+  {
+   "id": "1.04",
+   "setup": "1.02",
+   "beats": [
+    "1.04"
+   ],
+   "s": 285,
+   "e": 349,
+   "onscreen": [],
+   "lines": [
+    {
+     "id": "e1-co-1-02",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "MAS",
+     "text": "\"…i've gotten to be in the room when we sort of push the veil of ignorance back—and the frontier of discovery forward…\"",
+     "s": -164,
+     "e": 35,
+     "fs": -177,
+     "fe": 47,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": true,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "rest"
+      ],
+      [
+       1,
+       "A"
+      ],
+      [
+       4,
+       "E"
+      ],
+      [
+       7,
+       "A"
+      ],
+      [
+       10,
+       "E"
+      ],
+      [
+       18,
+       "M"
+      ],
+      [
+       20,
+       "E"
+      ],
+      [
+       35,
+       "O"
+      ],
+      [
+       41,
+       "M"
+      ],
+      [
+       44,
+       "rest"
+      ],
+      [
+       55,
+       "A"
+      ],
+      [
+       58,
+       "O"
+      ],
+      [
+       60,
+       "E"
+      ],
+      [
+       63,
+       "O"
+      ],
+      [
+       66,
+       "E"
+      ],
+      [
+       69,
+       "A"
+      ],
+      [
+       72,
+       "M"
+      ],
+      [
+       74,
+       "O"
+      ],
+      [
+       77,
+       "E"
+      ],
+      [
+       85,
+       "A"
+      ],
+      [
+       91,
+       "E"
+      ],
+      [
+       94,
+       "A"
+      ],
+      [
+       97,
+       "E"
+      ],
+      [
+       100,
+       "A"
+      ],
+      [
+       102,
+       "E"
+      ],
+      [
+       114,
+       "M"
+      ],
+      [
+       117,
+       "A"
+      ],
+      [
+       123,
+       "E"
+      ],
+      [
+       126,
+       "rest"
+      ],
+      [
+       138,
+       "A"
+      ],
+      [
+       140,
+       "E"
+      ],
+      [
+       146,
+       "A"
+      ],
+      [
+       150,
+       "E"
+      ],
+      [
+       154,
+       "A"
+      ],
+      [
+       158,
+       "E"
+      ],
+      [
+       160,
+       "A"
+      ],
+      [
+       163,
+       "E"
+      ],
+      [
+       170,
+       "A"
+      ],
+      [
+       173,
+       "E"
+      ],
+      [
+       182,
+       "O"
+      ],
+      [
+       187,
+       "E"
+      ],
+      [
+       189,
+       "O"
+      ],
+      [
+       191,
+       "E"
+      ],
+      [
+       198,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "I've",
+       1,
+       5
+      ],
+      [
+       "gotten",
+       5,
+       15
+      ],
+      [
+       "to",
+       15,
+       18
+      ],
+      [
+       "be",
+       18,
+       24
+      ],
+      [
+       "in",
+       24,
+       28
+      ],
+      [
+       "the",
+       28,
+       31
+      ],
+      [
+       "room",
+       31,
+       44
+      ],
+      [
+       "when",
+       55,
+       58
+      ],
+      [
+       "we",
+       58,
+       62
+      ],
+      [
+       "sort",
+       62,
+       69
+      ],
+      [
+       "of",
+       69,
+       72
+      ],
+      [
+       "push",
+       72,
+       79
+      ],
+      [
+       "the",
+       79,
+       83
+      ],
+      [
+       "veil",
+       83,
+       94
+      ],
+      [
+       "of",
+       94,
+       98
+      ],
+      [
+       "ignorance",
+       98,
+       114
+      ],
+      [
+       "back",
+       114,
+       126
+      ],
+      [
+       "and",
+       137,
+       140
+      ],
+      [
+       "the",
+       140,
+       143
+      ],
+      [
+       "frontier",
+       143,
+       160
+      ],
+      [
+       "of",
+       160,
+       164
+      ],
+      [
+       "discovery",
+       164,
+       181
+      ],
+      [
+       "forward",
+       181,
+       198
+      ]
+     ],
+     "tag": "",
+     "pre": false
+    }
+   ],
+   "seq": "COLD OPEN",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "SINGLE · MCU Mas, the sentence lands",
+   "cls": "MCU",
+   "move": "cut",
+   "does": "Back on his face for \"discovery forward.\" Far behind him the lit window's phone clicks off; the banquet's applause swells.",
+   "chars": [
+    "mas"
+   ],
+   "cues": [
+    "music (v3): COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind",
+    "the same MCU setup as 1.02",
+    "the swell rises into the freeze and is cut by it, mid-rise"
+   ],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "stage",
+   "room": "apec-stage",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Back on his face for \"discovery forward.\" Far behind him the lit window's phone clicks off; the banquet's applause swells.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "sit",
+     "face": "calm",
+     "x": 0.36,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "1.04": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "00:11:21",
+   "tc_out": "00:14:13",
+   "frames": 64
+  },
+  {
+   "id": "2.01",
+   "setup": "2.01",
+   "beats": [
+    "2.01"
+   ],
+   "s": 349,
+   "e": 364,
+   "onscreen": [],
+   "lines": [],
+   "seq": "COLD OPEN",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "WIDE · the freeze",
+   "cls": "W",
+   "move": "cut",
+   "does": "Everything freezes into navy and cream, mid-slosh, mid-ovation. Two things stay in colour: Mas, and his phone on the table.",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "cues": [
+    "music (v3): COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind",
+    "style: 2-TONE FREEZE, a full-room pass; Mas never freezes",
+    "sound: the hall drops to a low filtered hum, never silence"
+   ],
+   "sounds": [
+    "piano_fired_F4 @0"
+   ],
+   "spots": [
+    {
+     "name": "piano_fired_F4",
+     "k": 0,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "stage",
+   "room": "apec-stage",
+   "style": "2-TONE",
+   "fx": [
+    "flash"
+   ],
+   "slate": false,
+   "caption": "Everything freezes into navy and cream, mid-slosh, mid-ovation. Two things stay in colour: Mas, and his phone on the table.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "sit",
+     "face": "calm",
+     "x": 0.3,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "orb",
+     "pose": "stand",
+     "face": "calm",
+     "x": 0.37,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "2.01": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "00:14:13",
+   "tc_out": "00:15:04",
+   "frames": 15
+  },
+  {
+   "id": "2.02",
+   "setup": "2.02",
+   "beats": [
+    "2.02"
+   ],
+   "s": 364,
+   "e": 424,
+   "onscreen": [
+    {
+     "text": "Board sync · Fri 12:00",
+     "s": 3,
+     "e": 60
+    },
+    {
+     "text": "UI: Accept",
+     "s": 10,
+     "e": 60
+    },
+    {
+     "text": "UI: Decline",
+     "s": 10,
+     "e": 60
+    }
+   ],
+   "lines": [],
+   "seq": "COLD OPEN",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "INSERT · the phone: the invite",
+   "cls": "ECU",
+   "move": "cut",
+   "does": "The phone lights: an invite in a generic calendar UI. Four attendee circles, no names: a doorway, a glowing page, a spinner, a black square.",
+   "chars": [],
+   "cues": [
+    "music (v3): COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind",
+    "held a bar to read; the buzz is the one close sound",
+    "egg: none of the four circles is GERG's green laptop glow"
+   ],
+   "sounds": [
+    "synth:buzz @1"
+   ],
+   "spots": [
+    {
+     "name": "synth:buzz",
+     "k": 1,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "screen",
+   "room": "apec-stage",
+   "style": "2-TONE",
+   "fx": [],
+   "slate": false,
+   "caption": "The phone lights: an invite in a generic calendar UI. Four attendee circles, no names: a doorway, a glowing page, a spinner, a black square.",
+   "cast": [],
+   "speak": [],
+   "beat_starts": {
+    "2.02": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "label",
+     "text": "Board sync · Fri 12:00",
+     "s": 3,
+     "e": 60,
+     "must": true
+    },
+    {
+     "kind": "ui",
+     "text": "Accept",
+     "s": 10,
+     "e": 60,
+     "must": true
+    },
+    {
+     "kind": "ui",
+     "text": "Decline",
+     "s": 10,
+     "e": 60,
+     "must": true
+    }
+   ],
+   "tc_in": "00:15:04",
+   "tc_out": "00:17:16",
+   "frames": 60
+  },
+  {
+   "id": "2.03",
+   "setup": "2.03",
+   "beats": [
+    "2.03"
+   ],
+   "s": 424,
+   "e": 484,
+   "onscreen": [],
+   "lines": [
+    {
+     "id": "e1-co-2-01",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "MAS",
+     "text": "noted.",
+     "s": 26,
+     "e": 44,
+     "fs": 14,
+     "fe": 58,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "rest"
+      ],
+      [
+       2,
+       "E"
+      ],
+      [
+       4,
+       "O"
+      ],
+      [
+       10,
+       "E"
+      ],
+      [
+       17,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "Noted",
+       2,
+       17
+      ]
+     ],
+     "tag": "",
+     "pre": false
+    }
+   ],
+   "seq": "COLD OPEN",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "SINGLE · MCU Mas: he reads it, looks up",
+   "cls": "MCU",
+   "move": "cut",
+   "does": "He reads it and looks back up. On \"noted.\" his thumb taps Accept below frame, eyes up. The light on his jaw goes pale blue. He sips.",
+   "chars": [
+    "mas"
+   ],
+   "cues": [
+    "music (v3): COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind",
+    "the hold is his; the tap plays inside it (no insert of the thumb)",
+    "jaw light white -> pale blue at 1.35 s: the only sign he accepted",
+    "the clock (Friday, noon) states no outcome"
+   ],
+   "sounds": [
+    "key_tap_soft_03 @32"
+   ],
+   "spots": [
+    {
+     "name": "key_tap_soft_03",
+     "k": 32,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "stage",
+   "room": "apec-stage",
+   "style": "2-TONE",
+   "fx": [],
+   "slate": false,
+   "caption": "He reads it and looks back up. On \"noted.\" his thumb taps Accept below frame, eyes up. The light on his jaw goes pale blue. He sips.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "sit",
+     "face": "calm",
+     "x": 0.36,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "2.03": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "00:17:16",
+   "tc_out": "00:20:04",
+   "frames": 60
+  },
+  {
+   "id": "3.01",
+   "setup": "3.01",
+   "beats": [
+    "3.01"
+   ],
+   "s": 484,
+   "e": 532,
+   "onscreen": [
+    {
+     "text": "rewinding…",
+     "s": 22,
+     "e": 48
+    },
+    {
+     "text": "2023",
+     "s": 22,
+     "e": 48
+    }
+   ],
+   "lines": [],
+   "seq": "COLD OPEN",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "TWO-SHOT · Mas and the Orb: the iris steps",
+   "cls": "M",
+   "move": "hold",
+   "does": "The Orb's iris steps from the phone to Mas in three drawings. A toast pops beside it, a year under it starting to count back: 2023.",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "cues": [
+    "music (v3): COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind",
+    "the Orb, his witness, carries \"how did he get here?\" across the cut"
+   ],
+   "sounds": [
+    "orb_servo @1",
+    "orb_servo @8",
+    "orb_servo @15",
+    "glyph_blink @22"
+   ],
+   "spots": [
+    {
+     "name": "orb_servo",
+     "k": 1,
+     "dur": null
+    },
+    {
+     "name": "orb_servo",
+     "k": 8,
+     "dur": null
+    },
+    {
+     "name": "orb_servo",
+     "k": 15,
+     "dur": null
+    },
+    {
+     "name": "glyph_blink",
+     "k": 22,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "stage",
+   "room": "apec-stage",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "The Orb's iris steps from the phone to Mas in three drawings. A toast pops beside it, a year under it starting to count back: 2023.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "sit",
+     "face": "calm",
+     "x": 0.3,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "orb",
+     "pose": "stand",
+     "face": "calm",
+     "x": 0.55,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "3.01": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "toast",
+     "text": "rewinding…",
+     "s": 22,
+     "e": 48,
+     "must": true
+    },
+    {
+     "kind": "label",
+     "text": "2023",
+     "s": 22,
+     "e": 48,
+     "must": true
+    }
+   ],
+   "tc_in": "00:20:04",
+   "tc_out": "00:22:04",
+   "frames": 48
+  },
+  {
+   "id": "3.02",
+   "setup": "3.02",
+   "beats": [
+    "3.02"
+   ],
+   "s": 532,
+   "e": 604,
+   "onscreen": [
+    {
+     "text": "rewinding…",
+     "s": 0,
+     "e": 72
+    },
+    {
+     "text": "2023",
+     "s": 0,
+     "e": 12
+    },
+    {
+     "text": "2022",
+     "s": 12,
+     "e": 37
+    },
+    {
+     "text": "2019",
+     "s": 37,
+     "e": 46
+    },
+    {
+     "text": "2015",
+     "s": 46,
+     "e": 55
+    },
+    {
+     "text": "2008",
+     "s": 55,
+     "e": 64
+    },
+    {
+     "text": "2001",
+     "s": 64,
+     "e": 72
+    }
+   ],
+   "lines": [],
+   "seq": "COLD OPEN",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "WIDE · the room scrubs back",
+   "cls": "W",
+   "move": "cut",
+   "does": "The room scrubs back: the ovation sits, the water climbs home, the hailstone flies back. The year catches on 2022 for a second, then slips past, faster.",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "cues": [
+    "music (v3): COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind",
+    "the counter aims at 2022 (Act One) and overshoots: sc 4's \"too far\"",
+    "style: BASE -> 1-BIT in four held light steps (reel: 1-BIT end only)",
+    "sound: the hall runs backward: a groan on the catch, then a lurch"
+   ],
+   "sounds": [
+    "orb_servo @12",
+    "orb_servo @37"
+   ],
+   "spots": [
+    {
+     "name": "orb_servo",
+     "k": 12,
+     "dur": null
+    },
+    {
+     "name": "orb_servo",
+     "k": 37,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "stage",
+   "room": "apec-stage",
+   "style": "BASE",
+   "fx": [
+    "rewind"
+   ],
+   "slate": false,
+   "caption": "The room scrubs back: the ovation sits, the water climbs home, the hailstone flies back. The year catches on 2022 for a second, then slips past, faster.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "sit",
+     "face": "calm",
+     "x": 0.3,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "orb",
+     "pose": "stand",
+     "face": "calm",
+     "x": 0.37,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "3.02": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "toast",
+     "text": "rewinding…",
+     "s": 0,
+     "e": 72,
+     "must": true
+    },
+    {
+     "kind": "label",
+     "text": "2023",
+     "s": 0,
+     "e": 12,
+     "must": true
+    },
+    {
+     "kind": "label",
+     "text": "2022",
+     "s": 12,
+     "e": 37,
+     "must": true
+    },
+    {
+     "kind": "label",
+     "text": "2019",
+     "s": 37,
+     "e": 46,
+     "must": true
+    },
+    {
+     "kind": "label",
+     "text": "2015",
+     "s": 46,
+     "e": 55,
+     "must": true
+    },
+    {
+     "kind": "label",
+     "text": "2008",
+     "s": 55,
+     "e": 64,
+     "must": true
+    },
+    {
+     "kind": "label",
+     "text": "2001",
+     "s": 64,
+     "e": 72,
+     "must": true
+    }
+   ],
+   "tc_in": "00:22:04",
+   "tc_out": "00:25:04",
+   "frames": 72
+  },
+  {
+   "id": "4.01",
+   "setup": "4.01",
+   "beats": [
+    "4.01",
+    "4.02"
+   ],
+   "s": 604,
+   "e": 736,
+   "onscreen": [
+    {
+     "text": "1993",
+     "s": 0,
+     "e": 132
+    },
+    {
+     "text": "Are you sure?",
+     "s": 8,
+     "e": 132
+    },
+    {
+     "text": "UI: OK",
+     "s": 8,
+     "e": 132
+    },
+    {
+     "text": "UI: C̶a̶n̶c̶e̶l̶",
+     "s": 8,
+     "e": 132
+    },
+    {
+     "text": "1993",
+     "s": 96,
+     "e": 132
+    },
+    {
+     "text": "Are you sure?",
+     "s": 96,
+     "e": 132
+    },
+    {
+     "text": "UI: OK",
+     "s": 96,
+     "e": 132
+    },
+    {
+     "text": "UI: C̶a̶n̶c̶e̶l̶",
+     "s": 96,
+     "e": 132
+    },
+    {
+     "text": "rewinding… too far",
+     "s": 98,
+     "e": 132
+    }
+   ],
+   "lines": [],
+   "seq": "F1.1",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "GFX · 1993: the dialog",
+   "cls": "GS",
+   "move": "cut",
+   "does": "Paper white, a 3:2 pillarbox. Alone in the middle, a 1-bit alert asks \"Are you sure?\": OK, and Cancel greyed out (a 50% dither). No computer, no hand. / The Orb's toast, now in 1-bit. SMASH TO the main titles.",
+   "chars": [],
+   "cues": [
+    "music (v3): COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind",
+    "stand-in: Cancel struck through = greyed out (reel can't grey a button)",
+    "style: F1.1 1-BIT, an era switch; date card top-left, 3:2 pillarbox",
+    "plants the rule: he always takes the offer (paid at Act Four's noon)",
+    "music (v3): COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind",
+    "the toast is the joke: its read plus a beat, then SMASH TO the intro"
+   ],
+   "sounds": [
+    "glyph_blink@1bit @98"
+   ],
+   "spots": [
+    {
+     "name": "glyph_blink@1bit",
+     "k": 98,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "flashback",
+   "set": "void",
+   "room": "f1.1",
+   "style": "1-BIT",
+   "fx": [],
+   "slate": false,
+   "caption": "Paper white, a 3:2 pillarbox. Alone in the middle, a 1-bit alert asks \"Are you sure?\": OK, and Cancel greyed out (a 50% dither). No computer, no hand. / The Orb's toast, now in 1-bit. SMASH TO the main titles.",
+   "cast": [],
+   "speak": [],
+   "beat_starts": {
+    "4.01": 0,
+    "4.02": 96
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "label",
+     "text": "1993",
+     "s": 0,
+     "e": 132,
+     "must": true
+    },
+    {
+     "kind": "label",
+     "text": "Are you sure?",
+     "s": 8,
+     "e": 132,
+     "must": true
+    },
+    {
+     "kind": "ui",
+     "text": "OK",
+     "s": 8,
+     "e": 132,
+     "must": true
+    },
+    {
+     "kind": "ui",
+     "text": "C̶a̶n̶c̶e̶l̶",
+     "s": 8,
+     "e": 132,
+     "must": true
+    },
+    {
+     "kind": "label",
+     "text": "1993",
+     "s": 96,
+     "e": 132,
+     "must": true
+    },
+    {
+     "kind": "label",
+     "text": "Are you sure?",
+     "s": 96,
+     "e": 132,
+     "must": true
+    },
+    {
+     "kind": "ui",
+     "text": "OK",
+     "s": 96,
+     "e": 132,
+     "must": true
+    },
+    {
+     "kind": "ui",
+     "text": "C̶a̶n̶c̶e̶l̶",
+     "s": 96,
+     "e": 132,
+     "must": true
+    },
+    {
+     "kind": "toast",
+     "text": "rewinding… too far",
+     "s": 98,
+     "e": 132,
+     "must": true
+    }
+   ],
+   "tc_in": "00:25:04",
+   "tc_out": "00:30:16",
+   "frames": 132
+  }
+ ],
+ "lines": [
+  {
+   "id": "e1-co-1-01",
+   "shot": "1.01",
+   "beat": "1.01",
+   "kind": "dialogue",
+   "mode": "pa",
+   "who": "HOST",
+   "text": "Last one, Mas. What's the best part of the job?",
+   "tag": "",
+   "on_s": 1.5,
+   "end_s": 4.4,
+   "file_s": 0.99,
+   "abs_in": 36,
+   "abs_out": 106,
+   "file_in": 23,
+   "file_out": 118,
+   "file": "audio/ep01/coldopen/dialogue/fast-v1/wav/e1-co-1-01.wav",
+   "stick_t": 1.0,
+   "stick_in": 0.51,
+   "cut": false,
+   "on_camera": "os",
+   "take_lip_sync": false,
+   "os": true,
+   "via": "pa",
+   "words": [
+    [
+     "Last",
+     0,
+     6
+    ],
+    [
+     "one",
+     6,
+     9
+    ],
+    [
+     "Mas",
+     10,
+     21
+    ],
+    [
+     "What's",
+     35,
+     40
+    ],
+    [
+     "the",
+     40,
+     42
+    ],
+    [
+     "best",
+     42,
+     49
+    ],
+    [
+     "part",
+     49,
+     54
+    ],
+    [
+     "of",
+     54,
+     56
+    ],
+    [
+     "the",
+     56,
+     58
+    ],
+    [
+     "job",
+     58,
+     70
+    ]
+   ],
+   "mouth": [],
+   "mouth_src": "none",
+   "pre": false
+  },
+  {
+   "id": "e1-co-1-02",
+   "shot": "1.02",
+   "beat": "1.02",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "MAS",
+   "text": "\"…i've gotten to be in the room when we sort of push the veil of ignorance back—and the frontier of discovery forward…\"",
+   "tag": "",
+   "on_s": 5.05,
+   "end_s": 13.31,
+   "file_s": 4.52,
+   "abs_in": 121,
+   "abs_out": 320,
+   "file_in": 108,
+   "file_out": 332,
+   "file": "audio/ep01/coldopen/dialogue/fast-v1/wav/e1-co-1-02.wav",
+   "stick_t": 0.3,
+   "stick_in": 0.53,
+   "cut": false,
+   "on_camera": true,
+   "take_lip_sync": false,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "I've",
+     1,
+     5
+    ],
+    [
+     "gotten",
+     5,
+     15
+    ],
+    [
+     "to",
+     15,
+     18
+    ],
+    [
+     "be",
+     18,
+     24
+    ],
+    [
+     "in",
+     24,
+     28
+    ],
+    [
+     "the",
+     28,
+     31
+    ],
+    [
+     "room",
+     31,
+     44
+    ],
+    [
+     "when",
+     55,
+     58
+    ],
+    [
+     "we",
+     58,
+     62
+    ],
+    [
+     "sort",
+     62,
+     69
+    ],
+    [
+     "of",
+     69,
+     72
+    ],
+    [
+     "push",
+     72,
+     79
+    ],
+    [
+     "the",
+     79,
+     83
+    ],
+    [
+     "veil",
+     83,
+     94
+    ],
+    [
+     "of",
+     94,
+     98
+    ],
+    [
+     "ignorance",
+     98,
+     114
+    ],
+    [
+     "back",
+     114,
+     126
+    ],
+    [
+     "and",
+     137,
+     140
+    ],
+    [
+     "the",
+     140,
+     143
+    ],
+    [
+     "frontier",
+     143,
+     160
+    ],
+    [
+     "of",
+     160,
+     164
+    ],
+    [
+     "discovery",
+     164,
+     181
+    ],
+    [
+     "forward",
+     181,
+     198
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "rest"
+    ],
+    [
+     1,
+     "A"
+    ],
+    [
+     4,
+     "E"
+    ],
+    [
+     7,
+     "A"
+    ],
+    [
+     10,
+     "E"
+    ],
+    [
+     18,
+     "M"
+    ],
+    [
+     20,
+     "E"
+    ],
+    [
+     35,
+     "O"
+    ],
+    [
+     41,
+     "M"
+    ],
+    [
+     44,
+     "rest"
+    ],
+    [
+     55,
+     "A"
+    ],
+    [
+     58,
+     "O"
+    ],
+    [
+     60,
+     "E"
+    ],
+    [
+     63,
+     "O"
+    ],
+    [
+     66,
+     "E"
+    ],
+    [
+     69,
+     "A"
+    ],
+    [
+     72,
+     "M"
+    ],
+    [
+     74,
+     "O"
+    ],
+    [
+     77,
+     "E"
+    ],
+    [
+     85,
+     "A"
+    ],
+    [
+     91,
+     "E"
+    ],
+    [
+     94,
+     "A"
+    ],
+    [
+     97,
+     "E"
+    ],
+    [
+     100,
+     "A"
+    ],
+    [
+     102,
+     "E"
+    ],
+    [
+     114,
+     "M"
+    ],
+    [
+     117,
+     "A"
+    ],
+    [
+     123,
+     "E"
+    ],
+    [
+     126,
+     "rest"
+    ],
+    [
+     138,
+     "A"
+    ],
+    [
+     140,
+     "E"
+    ],
+    [
+     146,
+     "A"
+    ],
+    [
+     150,
+     "E"
+    ],
+    [
+     154,
+     "A"
+    ],
+    [
+     158,
+     "E"
+    ],
+    [
+     160,
+     "A"
+    ],
+    [
+     163,
+     "E"
+    ],
+    [
+     170,
+     "A"
+    ],
+    [
+     173,
+     "E"
+    ],
+    [
+     182,
+     "O"
+    ],
+    [
+     187,
+     "E"
+    ],
+    [
+     189,
+     "O"
+    ],
+    [
+     191,
+     "E"
+    ],
+    [
+     198,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  },
+  {
+   "id": "e1-co-2-01",
+   "shot": "2.03",
+   "beat": "2.03",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "MAS",
+   "text": "noted.",
+   "tag": "",
+   "on_s": 18.7667,
+   "end_s": 19.4767,
+   "file_s": 18.2667,
+   "abs_in": 450,
+   "abs_out": 468,
+   "file_in": 438,
+   "file_out": 482,
+   "file": "audio/ep01/coldopen/dialogue/fast-v1/wav/e1-co-2-01.wav",
+   "stick_t": 1.1,
+   "stick_in": 0.5,
+   "cut": false,
+   "on_camera": true,
+   "take_lip_sync": false,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "Noted",
+     2,
+     17
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "rest"
+    ],
+    [
+     2,
+     "E"
+    ],
+    [
+     4,
+     "O"
+    ],
+    [
+     10,
+     "E"
+    ],
+    [
+     17,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  }
+ ],
+ "posts": [],
+ "rails": [
+  {
+   "text": "NOV 16, 2023 · SAN FRANCISCO",
+   "s": 18,
+   "e": 114,
+   "shot": "1.01",
+   "floor_f": 40
+  }
+ ],
+ "sound_marks": [],
+ "subs": [
+  {
+   "s": 36,
+   "e": 106,
+   "hold_to": 118,
+   "who": "HOST",
+   "shown": "PANEL HOST",
+   "text": "Last one, Mas. What's the best part of the job?",
+   "kind": "dialogue",
+   "mode": "pa",
+   "id": "e1-co-1-01",
+   "os": true
+  },
+  {
+   "s": 121,
+   "e": 320,
+   "hold_to": 332,
+   "who": "MAS",
+   "shown": "MAS",
+   "text": "\"…i've gotten to be in the room when we sort of push the veil of ignorance back—and the frontier of discovery forward…\"",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "e1-co-1-02",
+   "os": false
+  },
+  {
+   "s": 450,
+   "e": 468,
+   "hold_to": 480,
+   "who": "MAS",
+   "shown": "MAS",
+   "text": "noted.",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "e1-co-2-01",
+   "os": false
+  }
+ ],
+ "refs": {},
+ "v4_ids": {},
+ "base_marks_scaled": [],
+ "decisions": [
+  "3.02: label '2019' is up 9 f, under its read floor 11 f (the stick's timing; kept)",
+  "3.02: label '2015' is up 9 f, under its read floor 11 f (the stick's timing; kept)",
+  "3.02: label '2008' is up 9 f, under its read floor 11 f (the stick's timing; kept)",
+  "3.02: label '2001' is up 8 f, under its read floor 11 f (the stick's timing; kept)"
+ ],
+ "problems": []
+}
