@@ -1,5 +1,5 @@
 // @ts-nocheck -- Node-only dev tool (bundled with esbuild), excluded from the browser typecheck.
-// Fast Node preview + checks for outro B (pixels exact; the GLYPH tokens are approximated as tinted cells, because
+// Fast Node preview + checks for outro B, Ep1's final outro (v3) (pixels exact; the GLYPH tokens are approximated as tinted cells, because
 // the real JetBrains Mono tokens exist only in the Remotion render). For iteration and QA; deliverables come from
 // Remotion.
 //   S=<scratch>; (cd studio && npx esbuild src/dev/outro/b/tools/preview.ts --bundle --platform=node --outfile=$S/pv.js)
@@ -12,8 +12,8 @@ import {Buf, TRANSPARENT} from '../../../../shared/pixel/px';
 import {PAL} from '../../../../shared/pixel/palette';
 import {textWidth} from '../../../../shared/pixel/font';
 import {makeScene, TOAST, toastBox, rowBoxes, typeAt, INK_RESOLVED, mothFlight} from '../scene';
-import {drawBand, TERMS_AT, POINTER_AT, BAND, PERIOD, mothRestBox, mothBox, chipW, CHIP_H, tx, tw} from '../art';
-import {TOTAL, PRE, T, EPS, TERMS, POINTER, toastLines, linePops, lastO} from '../timeline';
+import {mothBox, mothRestBox, chipW, tx, tw, ORB} from '../art';
+import {TOTAL, PRE, T, EPS, toastLines, linePops, lastO} from '../timeline';
 import * as fs from 'fs';
 
 const [outDir, scaleS, epS, spec] = process.argv.slice(2);
@@ -45,34 +45,22 @@ const render = (f) => {
 };
 
 if (spec === 'check') {
-  // 1) the terms line and the pointer: every one of their pixels is identical to the band drawn alone, on every
-  //    frame the band is lit (never covered, never moved, never recoloured); 2) the resting moth covers no letter;
-  // 3) READ TIME, measured on the rendered pixels: a toast row is LEGIBLE on a frame when every pixel of its type is
-  //    an ink colour of that row's state and every other pixel inside the type's box is its ground (a token, a ray, a
-  //    drop or a half-drawn chip fails it). Each row's legible span runs from the first frame it is legible and stays
-  //    legible to the cut (o179 in a plain week, o239 in Ep1). Then: per line (on screen >= chars / 16 cps + 0.5 s), and the whole toast READ IN
-  //    ORDER (header, credits, verdict: each row starts when it is legible and the previous one is read) at 16, 18
-  //    and 20 chars/s, and the whole frame (toast + band) for one first-time reader.
-  const ref = new Buf(480, 270, TRANSPARENT);
-  drawBand(ref);
-  const rows = [[TERMS_AT.x - 1, TERMS_AT.y - 1, TERMS_AT.x + textWidth(TERMS), TERMS_AT.y + 9],
-                [POINTER_AT.x - 1, POINTER_AT.y - 1, POINTER_AT.x + textWidth(POINTER), POINTER_AT.y + 9]];
-  const out = {ep, outroFrames: LAST + 1, band: {from: PRE + T.band, to: PRE + LAST}, covered: [], mothBox: null, toast: [], ok: true};
+  // 1) the toast fits: every chip ends well clear of the Orb (x < ORB.cx - ORB.r - 24); 2) Ep1's moth: its whole
+  // flight never meets a toast row's box (min gap in px), and at rest it sits ON the Orb (its box overlaps the sphere's
+  // top rows) on every frame to the cut; 3) READ TIME, measured on the rendered pixels: a toast row is LEGIBLE on a
+  // frame when every pixel of its type is an ink colour of that row's state and every other pixel inside the type's
+  // box is its ground (a token, a ray, a drop or a half-drawn chip fails it). Each row's legible span runs from the
+  // first frame it is legible and stays legible to the cut (o179 in a plain week, o224 in Ep1). Then: per line (on
+  // screen >= chars / 16 cps + 0.5 s), and the whole toast READ IN ORDER (header, credits, verdict: each row starts
+  // when it is legible and the previous one is read) at 16, 18 and 20 chars/s.
+  const out = {ep, outroFrames: LAST + 1, chips: [], moth: null, toast: [], ok: true};
   const frames = {};
-  for (let f = PRE + T.band; f <= PRE + LAST; f++) {
-    const c = render(f);
-    frames[f] = c;
-    let bad = 0;
-    for (const [x0, y0, x1, y1] of rows) for (let y = y0; y <= y1; y++) for (let x = x0; x <= x1; x++) if (c[y * 480 + x] !== ref.c[y * 480 + x]) bad++;
-    if (bad) { out.covered.push([f, bad]); out.ok = false; }
-  }
-  const mb = mothRestBox();
-  out.mothBox = {box: mb, termsRightEdge: TERMS_AT.x + textWidth(TERMS) - 1, period: [PERIOD.x, PERIOD.y], clear: mb[0] > TERMS_AT.x + textWidth(TERMS) - 1};
-  if (!out.mothBox.clear) out.ok = false;
-  // the moth's whole flight (Ep1, inside bar 3): its inked box never meets a text box (the toast rows, the terms line,
-  // the pointer), with the minimum gap in px; frames where it crosses the Orb are listed (allowed: it's the lens gag)
+  for (let o = 0; o <= LAST; o++) frames[PRE + o] = render(PRE + o);
+  const maxX = ORB.cx - ORB.r - 24;
+  out.chips = toastLines(EPS[ep]).concat([EPS[ep].verdict]).map((s) => ({line: s, chipPx: chipW(s), right: TOAST.x + chipW(s), clearOfOrb: TOAST.x + chipW(s) < maxX}));
+  if (!out.chips.every((c) => c.clearOfOrb)) out.ok = false;
   if (EPS[ep].moth) {
-    const tb = rowBoxes(EPS[ep]).concat(rows);
+    const tb = rowBoxes(EPS[ep]);
     const hits = [], overOrb = [];
     let minGap = 1e9;
     for (let o = 0; o <= LAST; o++) {
@@ -85,10 +73,13 @@ if (spec === 'check') {
         minGap = Math.min(minGap, gap);
         if (a1 >= x0 && a0 <= x1 && b1 >= y0 && b0 <= y1) hits.push([o, [x0, y0, x1, y1]]);
       }
-      if (Math.hypot((a0 + a1) / 2 - 420, (b0 + b1) / 2 - 96) < 31) overOrb.push(o);
+      if (Math.hypot((a0 + a1) / 2 - ORB.cx, (b0 + b1) / 2 - ORB.cy) < ORB.r) overOrb.push(o);
     }
-    out.mothPath = {hits, minGapPx: minGap, overOrbFrames: overOrb};
-    if (hits.length) out.ok = false;
+    const rb = mothRestBox();
+    const sphereTop = ORB.cy - ORB.r;
+    out.moth = {path: {hits, minGapPx: minGap, overOrbFrames: overOrb}, rest: {box: rb, sphereTop, overlapRows: rb[3] - sphereTop + 1,
+      sitsOnOrb: rb[3] >= sphereTop && rb[3] <= sphereTop + 3, restFrom: T.mothFold[1], restSeconds: +((LAST + 1 - T.mothLand) / 24).toFixed(2)}};
+    if (hits.length || !out.moth.rest.sitsOnOrb) out.ok = false;
   }
   // ---- the toast rows
   const e = EPS[ep];
@@ -130,24 +121,14 @@ if (spec === 'check') {
     return {cps, finishes: fin, lastFinish: fin[fin.length - 1], cut: LAST + 1, ok: fin[fin.length - 1] <= LAST + 1, marginFrames: +(LAST + 1 - fin[fin.length - 1]).toFixed(1)};
   };
   out.toastInOrder = CPS.map(inOrder);
-  const toastChars = rowsOut.reduce((a, r) => a + r.chars, 0);
-  const bandChars = TERMS.length + POINTER.length;
-  const bandFrames = LAST + 1 - T.band;
-  out.wholeFrame = {
-    toastChars, bandChars, totalChars: toastChars + bandChars,
-    outroSeconds: (LAST + 1) / 24, bandOnSeconds: +(bandFrames / 24).toFixed(2),
-    secondsNeeded: Object.fromEntries(CPS.map((c) => [c, +((toastChars + bandChars) / c).toFixed(2)])),
-    // the band time left to a reader who reads the toast in order at 18 cps: before the header posts + after the toast is read
-    bandUncontestedAt18: +(((T.header - T.band) + (bandFrames - Math.min(bandFrames, out.toastInOrder[1].lastFinish))) / 24).toFixed(2),
-    bandReadAt18: +(bandChars / 18).toFixed(2),
-  };
-  out.terms = {chars: TERMS.length, px: textWidth(TERMS), onSeconds: +(bandFrames / 24).toFixed(2), rule5s: bandFrames / 24 >= 5};
+  out.toastChars = rowsOut.reduce((a, r) => a + r.chars, 0);
   out.perLineOk = rowsOut.every((r) => r.perLineOk);
-  if (!out.perLineOk || !out.terms.rule5s) out.ok = false;
+  if (!out.perLineOk || !out.toastInOrder.every((x) => x.cps < 16 || x.ok)) out.ok = false;
   out.toastBox = toastBox(e);
   fs.writeFileSync(`${outDir}/check-ep${ep}.json`, JSON.stringify(out, null, 1));
-  console.log(JSON.stringify({ep, ok: out.ok, covered: out.covered.length, mothClear: out.mothBox.clear, mothPath: out.mothPath && {hits: out.mothPath.hits.length, minGapPx: out.mothPath.minGapPx, overOrb: out.mothPath.overOrbFrames.join(',')}, perLineOk: out.perLineOk,
-    rows: rowsOut.map((r) => `${r.legibleFrom}:${r.seconds}s:${r.cps}cps`), inOrder: out.toastInOrder.map((x) => `${x.cps}cps->${x.lastFinish}/${x.cut}`), whole: out.wholeFrame}));
+  console.log(JSON.stringify({ep, ok: out.ok, chips: out.chips.map((c) => `${c.chipPx}px->x${c.right}${c.clearOfOrb ? '' : ' OVER'}`),
+    moth: out.moth && {hits: out.moth.path.hits.length, minGapPx: out.moth.path.minGapPx, rest: out.moth.rest}, perLineOk: out.perLineOk,
+    rows: rowsOut.map((r) => `${r.legibleFrom}:${r.seconds}s:${r.cps}cps`), inOrder: out.toastInOrder.map((x) => `${x.cps}cps->${x.lastFinish}/${x.cut}`), toastChars: out.toastChars}));
 } else if (spec.startsWith('grid:')) {
   const fsx = spec.slice(5).split(',').map(Number);
   const cols = 4, rowsN = Math.ceil(fsx.length / cols);

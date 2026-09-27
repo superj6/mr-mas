@@ -1,12 +1,11 @@
-// MR. MAS · outro B: the drawings. The band (the show's own UI home, carrying the terms line and the pointer), the
-// Orb's toast chips (the intro bookend's TOAST, stacked), the Ep1 moth, the stand-in's lookdev label, and the one
-// glyph the shared 7-px face lacks here (the em dash of Ep10's `viewer: —`). Everything is whole pixels, master palette only.
-// The shared font, the Orb rig and the palette are imported read-only; nothing shared is edited.
+// MR. MAS · outro B: the drawings. The Orb's toast chips (the intro bookend's TOAST, stacked), the Orb close, its lamp
+// and glint, the Ep1 moth and its perch on the Orb, and the one glyph the shared 7-px face lacks here (the em dash of
+// Ep10's `viewer: —`). Everything is whole pixels, master palette only. v3: the band (and its terms line and pointer)
+// and the stand-in's lookdev label are gone. The shared font, the Orb rig and the palette are imported read-only.
 import {Buf, rect, bayer, TRANSPARENT} from '../../../shared/pixel/px';
 import {PAL, stepColor} from '../../../shared/pixel/palette';
 import {text, textWidth} from '../../../shared/pixel/font';
 import {drawOrb} from '../../../shared/pixel/cast/orb-medium';
-import {TERMS, POINTER} from './timeline';
 
 // ================================================================== text with the em dash (drawn locally)
 const DASH = '—';
@@ -28,40 +27,6 @@ export const tx = (b: Buf, s: string, x: number, y: number, col: number) => {
     if (p.length) { text(b, p, cx, y, col); cx += textWidth(p) + 1; }
     if (i < parts.length - 1) { rect(cx, y + 3, 5, 1, b.ink(col)); cx += 6; }
   });
-};
-
-// ================================================================== the band (480 x 67 at y 203)
-export const BAND = {y: 203, h: 67};
-/** the terms line: 389 px in the 7-px face, one row, centred; never moves, never covered, never a joke */
-export const TERMS_AT = {x: Math.floor((480 - textWidth(TERMS)) / 2), y: 220};
-export const POINTER_AT = {x: Math.floor((480 - textWidth(POINTER)) / 2), y: 237};
-/** the terms line's final period (native px): the moth settles here, beside the words, never on them */
-export const PERIOD = {x: TERMS_AT.x + textWidth(TERMS) - 1, y: TERMS_AT.y + 6};
-
-/** The band, lit: the adventure layout's interface strip (pixeladv drawUI's keylines), empty of verbs, carrying
- *  only the terms line and the pointer. Paper on dark (P1 / P0 on N1). UI layer: nothing switches it or covers it. */
-export const drawBand = (ui: Buf) => {
-  const y0 = BAND.y;
-  rect(0, y0, 480, BAND.h, ui.ink(PAL.N1));
-  rect(0, y0, 480, 1, ui.ink(PAL.N0));
-  rect(0, y0 + 1, 480, 1, ui.ink(PAL.N4));
-  rect(0, y0 + 2, 480, 1, ui.ink(PAL.N2));
-  text(ui, TERMS, TERMS_AT.x, TERMS_AT.y, PAL.P1);
-  text(ui, POINTER, POINTER_AT.x, POINTER_AT.y, PAL.P0);
-};
-
-// ================================================================== the lookdev label (the stand-in second only)
-// Pass 4: the outro's own frames carry NO slug. A cold viewer read the corner `LEGAL TEXT: DRAFT` (on every outro
-// frame) as the product looking unfinished, and `(creator)` as a broken template. Both flags now sit on the stand-in
-// second, which is not part of the outro, so the outro is seen as it would air. They are also in the MP4's comment
-// tag, on the key stills' caption bars and on the sheets. Legal review of the on-screen text is still PENDING.
-export const STANDIN_LABEL = ["STAND-IN: EP1'S LAST SHOT (NOT BUILT)", 'LOOKDEV · LEGAL TEXT: DRAFT, REVIEW PENDING · (CREATOR) = CREDIT TBD'];
-export const drawStandinLabel = (ui: Buf) => {
-  const w = Math.max(...STANDIN_LABEL.map((s) => textWidth(s))) + 8;
-  rect(3, 3, w, 24, ui.ink(PAL.N0));
-  rect(3, 26, w, 1, ui.ink(PAL.W5));
-  text(ui, STANDIN_LABEL[0], 7, 5, PAL.W6);
-  text(ui, STANDIN_LABEL[1], 7, 16, PAL.N8);
 };
 
 // ================================================================== the Orb's toast chips
@@ -86,7 +51,9 @@ export const drawChip = (b: Buf, x: number, y: number, s: string, kind: 'credit'
 };
 
 // ================================================================== the Orb, close
-export const ORB = {cx: 420, cy: 96, r: 31};
+/** v3: centred in the whole frame now the band is gone (the mock-up had cy 96 over the band). With the toast beside
+ *  it and the perched moth above it, the block spans about y 89-163, a touch above the frame's centre (135). */
+export const ORB = {cx: 420, cy: 132, r: 31};
 /** look vectors: idle (toward its own toast, screen-left and a touch down), the in-betweens, the lens */
 export const LOOK_IDLE: [number, number] = [-0.62, 0.12];
 export const LOOKS: Array<[number, number]> = [LOOK_IDLE, [-0.4, 0.07], [-0.18, 0.03], [0, 0]];
@@ -142,8 +109,8 @@ export const drawGlint = (b: Buf, cy: number, L: number) => {
 };
 
 // ================================================================== the moth (Ep1's stinger)
-// The Senate moth (Ep1 script: "the Senate moth flutters in across the legal card, settles on its last line and folds
-// its wings"). Pass 5 redraw, after a cold view of pass 4 ("dull brown on navy... it looks like a speck"; "it arrives
+// The Senate moth (Ep1 script: the moth from the empty wallet and the empty equity box). v3: with no words left to
+// settle beside, it lands on the Orb, the lamp it came to. Pass 5 redraw, after a cold view of pass 4 ("dull brown on navy... it looks like a speck"; "it arrives
 // after the eye's glow has faded, so 'moth drawn to the light' isn't clear"):
 //   * bigger: 25 px wide at rest (pass 4: 19; pass 3: 11), 14 rows with the antennae (100 x 56 px at 1080p);
 //   * paler: a dusty grey-beige moth (P0 wings, warm S6 leading edges, a peach thorax, brown marks and trailing edge),
@@ -236,9 +203,10 @@ export const mothBox = (pose: MothPose, x: number, y: number, flip = false): [nu
   d.rows.forEach((row, j) => { for (let i = 0; i < row.length; i++) if (row[i] !== '.') { x0 = Math.min(x0, i); x1 = Math.max(x1, i); y0 = Math.min(y0, j); y1 = Math.max(y1, j); } });
   return [x - d.ax + x0, y - d.ay + y0, x - d.ax + x1, y - d.ay + y1];
 };
-/** where the resting moth sits: its left wing tip 2 px right of the final period (a 1 px gap), its widest row on the
- *  line's x-height, so the dot, the last letter and the words stay clear: "at the final period, beside the words,
- *  never on one". The wings then reach 26 px past the line's end (x 435-459 of 480). */
-export const MOTH_REST: [number, number] = [PERIOD.x + 2 + MOTH.rest.ax, TERMS_AT.y + 4];
-/** the resting moth's bounding box (for the QA check that it covers no letter): [x0, y0, x1, y1] */
-export const mothRestBox = (): [number, number, number, number] => mothBox('rest', MOTH_REST[0], MOTH_REST[1]);
+/** v3: where the resting moth sits: ON the Orb, on top of it, riding its bob. The anchor is PERCH px from the Orb's
+ *  centre (whole pixels); its abdomen and trailing wing edges (rows 12-13) overlap the sphere's top rows by 1-2 px so
+ *  it reads as sitting on the chrome, the head and antennae above the silhouette. */
+export const PERCH: [number, number] = [2, -34];
+export const perchAt = (cy: number): [number, number] => [ORB.cx + PERCH[0], cy + PERCH[1]];
+/** the resting moth's bounding box on an Orb at cy: [x0, y0, x1, y1] */
+export const mothRestBox = (cy = ORB.cy): [number, number, number, number] => { const [x, y] = perchAt(cy); return mothBox('rest', x, y); };

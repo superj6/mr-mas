@@ -1,7 +1,7 @@
-// MR. MAS · outro B: the Remotion hosts. `outro-b-ep1` is the motion mock-up (stand-in + Ep1's 240-frame outro, its
-// moth stinger in bars 3-4, + 18 f of black: 282 f); its props pick another episode's state ({ep: 6 | 10}: a plain week,
-// cut at o179, black after). `outro-b-stills` is one frame per variant state (timeline.ts STILLS): render a single one
-// with --frame=<index>.
+// MR. MAS · outro B: the Remotion hosts. `outro-b-ep1` is Ep1's final outro (v3: 225 f to the cut, its moth stinger
+// in bars 3-4, + 18 f of black: 243 f); its props pick another episode's state ({ep: 6 | 10}: a plain week, cut at
+// o179, black after). `outro-b-stills` is one frame per variant state (timeline.ts STILLS): render a single one with
+// --frame=<index>.
 import React from 'react';
 import {useCurrentFrame} from 'remotion';
 import {PixelScene} from '../../../shared/pixel/PixelScene';
