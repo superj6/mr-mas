@@ -70,3 +70,5 @@ out/**/*.wav
 # Derived web copies for the review page (sources live elsewhere in out/)
 out/review-desk/*.mp4
 out/review-desk/*.mp3
+# Reel beds and mixes (regenerable from audio/reel/ and the reel JSONs)
+audio/reel/**/*.wav

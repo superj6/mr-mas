@@ -5,15 +5,15 @@
 | | |
 |---|---|
 | **Filename card** | `ep1.1_her.wav` |
-| **Date span** | JAN → AUG 22, 2024. The A/B plots run to JUN 19 (ISS); the political runner and the tag run to AUG 22. Flashbacks: SEP 2006 → JUN 2008 · FEB 2018 · 2022 |
-| **Runtime** | An outcome, not a target. Story ≈ 22:11 planned (draft 5.2: ≈ 22:02; draft 5.1: ≈ 19:51; draft 5: ≈ 19:34; draft 4: ≈ 17:10), ±0:45 until the takes and a stick-figure reel · runtime ≈ 23:26 with the intro, card and credits, **about 1:26 past the format's 22:00 frame** (pacing-model §3: 20:45 of story). Writer's notes §9 lists whole beats worth about 1:41, Act One's first, if the room wants the frame back. **Planned from the words, not heard:** nothing in drafts 5–5.3 has been read aloud, recorded or timed (Writer's notes §1) |
+| **Date span** | JAN → AUG 22, 2024. The A/B plots run to JUN 19 (ISS); the political runner and the tag run to AUG 22. Flashbacks: SEP 2006 → JUN 2008 · FEB 2018 · DEC 2022 → 2023 |
+| **Runtime** | An outcome, not a target. Story ≈ 22:03 planned (draft 5.3: ≈ 22:11; draft 5.2: ≈ 22:02; draft 5.1: ≈ 19:51; draft 5: ≈ 19:34; draft 4: ≈ 17:10), ±0:45 until the takes and a stick-figure reel · runtime ≈ 23:18 with the intro, card and credits, **about 1:18 past the format's 22:00 frame** (pacing-model §3: 20:45 of story). Writer's notes §9 lists whole beats worth about 1:36, Act One's first, if the room wants the frame back. **Planned from the words, not heard:** nothing in drafts 5–5.4 has been read aloud, recorded or timed (Writer's notes §1) |
 | **Format** | Cold open · intro · four acts · tag. Written to [flow-and-continuity](../../bible/flow-and-continuity.md) (§4, conversations play out), [tone-and-dialogue](../../bible/tone-and-dialogue.md) (R17–R21), [pov-and-framing](../../bible/pov-and-framing.md) and the [season revision plan §4](../../production/season-revision-plan.md#4-ep2--ep11_herwav) |
 | **Written by** | MR. MAS writers' room (draft) |
-| **Draft** | Staff draft 5.3 (the final pass: the three-lens read of 5.2) · 2026-09-26 · not locked. Drafts 4–5.2 are superseded; the revision logs are at the end. The conversation pass's log quotes every draft-4 line it changed, the 5.1 log every draft-5 line, the [scene-craft log](#revision-log-scene-craft-pass-2026-09-26) every draft-5.1 line, and the [final pass's log](#revision-log-final-pass-2026-09-26-draft-53) every draft-5.2 line, scene by scene, with what was declined and why. **Start there** if you're picking this up |
+| **Draft** | Staff draft 5.4 (dialogue pass 5: the naturalness, newcomer-and-insider and facts critiques of 5.3, finished after an interrupted run) · 2026-09-26 · not locked. Drafts 4–5.3 are superseded; the revision logs are at the end. The conversation pass's log quotes every draft-4 line it changed, the 5.1 log every draft-5 line, the [scene-craft log](#revision-log-scene-craft-pass-2026-09-26) every draft-5.1 line, the [final pass's log](#revision-log-final-pass-2026-09-26-draft-53) every draft-5.2 line, and the [dialogue pass 5 log](#revision-log-dialogue-pass-5-2026-09-26) every draft-5.3 line, scene by scene, with what was declined and why. **Start at the last one** if you're picking this up |
 
 **How to read this draft**
 - **Quotation marks mean real.** Every quoted line carries its tag ([P] [V] [H], or [K]† = re-verify before lock, shown on screen only with `(REPORTED)` or `RECONSTRUCTED`). **Unquoted dialogue, signs and props are invented.** Since draft 5, **every invented voiced line is marked `[INVENTED]`**; where an invented lead-in wraps a real quote, the tag names the words that are ours (`[INVENTED: "…"]`), as in Ep1's Act Four.
-- **Conversations play out (draft 5), and scenes play as scenes (draft 5.2).** Each talk scene has someone who wants something from someone, an obstacle, a turn and a cost, played through several beats rather than delivered in its fewest lines (the scene-craft log has the shape of each). People talk in complete thoughts and answer each other, sideways but in full; the one pressing Mas talks most, and his short lowercase lines land against them. Overlaps and cut-offs are rare and motivated: two in the episode, each after the thought has landed and each with a cause the audience can hear. Every new voice has a lead-in and a listener. Openers: "Welcome" is Tasya's; "Hi" is CHATGTP's (and the voice panel's samples); "Thank you." answers a congratulation twice, as a rhyme: Bukaj's to Mas (sc 14) and Mas's to Radnus (sc 19, draft 5.3); nobody opens with "Okay".
+- **Conversations play out (draft 5), and scenes play as scenes (draft 5.2).** Each talk scene has someone who wants something from someone, an obstacle, a turn and a cost, played through several beats rather than delivered in its fewest lines (the scene-craft log has the shape of each). People talk in complete thoughts and answer each other, sideways but in full; the one pressing Mas talks most, and his short lowercase lines land against them. Overlaps and cut-offs are rare and motivated: two in the episode, each after the thought has landed and each with a cause the audience can hear. Every new voice has a lead-in and a listener. Openers: "Welcome" is Tasya's; "Hi" is CHATGTP's (and the voice panel's samples); "Thank you." answers a congratulation once, Bukaj's to Mas (sc 14; draft 5.4 gives Mas's answer to Radnus new words, since "thank you." to a Radnus congratulation is Ep1 sc 13's exchange); nobody opens with "Okay". **Draft 5.4:** no line opens on a name or a "So" as its own sentence ("Come in, Ekiel, sit down.", "So, your seat's…"), because a stock voice stops dead on the full stop and starts the rest cold; and no line repeats Ep1 or Ep3 word for word (tone guide R10).
 - **Shots** use the ladder in [pov-and-framing §4.7](../../bible/pov-and-framing.md#47-shot-variety-2026-09-25): `[W]` wide · `[M]` medium · `[2S]` two-shot · `[OTS]` over-the-shoulder · `[MCU]` frameless close-up (the default close shot) · `[CU]` Mas only · `[ECU]` hands, glass, props, the Orb's iris · `[POV]` a screen full-bleed, through his eyes · `[SCR]` a screen with its bezel · `[HIGH]`/`[LOW]` angle plates · `[GFX]` THE PLAN and cards. **Boxed portrait windows appear only in-world** (a TV, a phone, a monitor tile). **A conversation is covered by one base setup** (a two-shot, an over-the-shoulder, a locked wide or the split), with cuts on its turns (new information, a reaction that matters, a new geography), not on every speaker. **Draft 5.2's conventions:** a base setup is marked with its cut-ins listed, as "(base setup…; cut-ins: …)", or "(no cut-ins)"; the word "held" means the frame really does hold. Every location header carries an `AXIS:` line: who is screen-left, and where the doors, screens and wings are. Mas keeps the left third (pov-and-framing §4.3 rule 8). A meter the audience reads by comparison (XEL's mic, Rima's spotlight) plays in one locked drawing.
 - **Timing** is written for story, not quotas. Beats (0.625 s) and bars (2.5 s) are used for holds, cards and set-piece phrases; everything else cuts on the turn. Text holds long enough to read (about 0.25 s + 0.05 s a character, generous for story text). Talk runs at each character's own pace, brisk but never sped up; the picture is cut to the takes.
 - **Sound.** Every location has a room-tone bed that runs under every shot in it and crossfades at sequence changes. Each sequence's `MUSIC:` line is one continuous performance that ducks under dialogue and **thins** (pad or pedal only, no melody, no comic scoring) under real lines, posts and quote cards. Stops are rare, designed and marked.
@@ -119,50 +119,52 @@ The five spoiler-safe changes only, nothing from this episode's staging (product
 ---
 
 ## ACT ONE — THE SÉANCE
-`⏱ 1:44 → 8:04 · anchor: the séance · flashback: F2.3 · meter: TASYA's key ring`
+`⏱ 1:44 → 7:57 · anchor: the séance · flashback: F2.3 · meter: TASYA's key ring`
 
 ### 2. EXT. THE PODIUM HILL — DAY · FEB 2, 2024 · [BASE]
-`⏱ 1:44 → 2:15 · I · THE PODIUM (P01) · the intro's hill, dressed as a TV stand-up with one generic camera`
+`⏱ 1:44 → 2:14 · I · THE PODIUM (P01) · the intro's hill, dressed as a TV stand-up with one generic camera`
 
-`MUSIC: RUMPT's brass, muted (FEAR), one size too big · thins to a held pad under both real fragments · out: the séance organ pre-laps under the balloon's exit`
-`ROOM TONE: wind on the hill, the camera's fan`
+`MUSIC: RUMPT's brass, muted (FEAR), one size too big · thins to a held pad under both real fragments on the lower third · out: the séance organ pre-laps under the balloon's exit`
+`ROOM TONE: wind on the hill, the camera's fan; under the lower third, his answer is a murmur behind the podium that the wind takes (draft 5.4)`
 `AXIS: our [W] looks at THE PODIUM's tall gold back, left of centre; RUMPT stands on its far side, hidden by it. The TV camera stands beyond it at screen-right, facing him, and its frame is tight on his hands and the balloon, so neither camera ever shows his face. The red tie runs off screen-left, down the hill.`
 
-`[SCR]` Open inside the TV camera's viewfinder, frame lines in its corners: a plain, unbranded lower third reads `FEB 2` over two hands in navy sleeves at the podium's lip. Cut to `[W]` (base setup through the whole exchange; its one cut-in is the sticker): one camera on a tripod, a light on a stand, the CAMERA OPERATOR at the eyepiece, and THE PODIUM on the intro's hill with its gold back to us. *(The date lives in the broadcast's own graphics. The show's rail stays dark for the scene, so nothing on the rail runs backward from the cold open's `FEB 29`. Draft 5.2: a cut from the viewfinder to the wide; the pixel grammar has no zoom.)*
+`[SCR]` Open inside the TV camera's viewfinder, frame lines in its corners: a plain, unbranded lower third reads `FEB 2` over two hands in navy sleeves at the podium's lip. Cut to `[W]` (base setup through the whole exchange; its cut-ins are the viewfinder for the lower third and the sticker): one camera on a tripod, a light on a stand, the CAMERA OPERATOR at the eyepiece, and THE PODIUM on the intro's hill with its gold back to us. *(The date lives in the broadcast's own graphics. The show's rail stays dark for the scene, so nothing on the rail runs backward from the cold open's `FEB 29`. Draft 5.2: a cut from the viewfinder to the wide; the pixel grammar has no zoom.)*
 
 All we get of DLANOD J. RUMPT are his HANDS, in navy sleeves, over the podium's top edge, and an over-long red tie that runs off the podium, down the hill, across the road and out of frame. The camera operator steps over it. The hands are inflating a balloon shaped like a chatbot's speech bubble, with a smiley face. Every pump, it grows one held size.
 
-**REPORTER** *(O.S., behind the camera; a generic stand-up voice, never drawn or named)*\
-Last one, then we'll let you get back on the trail. Artificial intelligence: does it worry you? `[INVENTED · a generic lead-in, so the real lines answer a question; the interview's own wording isn't on file, so no quotation marks. Draft 5.3: "back on the trail" tells a newcomer he's a candidate, at 0 s of picture (it rides the viewfinder cut and the first pumps); no race, party or result is named]`
+**REPORTER** *(O.S., behind the camera; a generic stand-up voice, never drawn or named; brisk, wrapping up, the question tossed off at the end)*\
+One more and we'll let you get back on the trail. Does AI worry you at all? `[INVENTED · a generic lead-in, so the real lines answer a question; the interview's own wording isn't on file, so no quotation marks. "Back on the trail" tells a newcomer he's a candidate, at 0 s of picture (it rides the viewfinder cut and the first pumps); no race, party or result is named. Draft 5.4: was "Last one, then we'll let you get back on the trail. Artificial intelligence: does it worry you?", which opened on Ep1's first spoken words ("Last one…") and read as written. The interrupted run's "This AI stuff, does it worry you?" echoed the tag's PODCASTER ("What do you make of all this AI stuff?"), so the finishing pass gives the reporter a plain yes/no that rises, with "at all" tossed off: a different rhythm from Ep1's panel host, the tag's podcaster and Ep3's interviewer (the naturalness read's note on the four unseen askers)]`
 
-**RUMPT** *(O.S., behind the podium)*\
-"maybe the most dangerous thing out there…" [V · FEB 2, 2024 · sw-US text; the headline wording is confirmed by The Hill and Newsweek]
+`[SCR]` (the first cut-in, back inside the viewfinder; the second is the sticker) The hands pump. Behind the podium his answer is a murmur the wind takes; the broadcast's own lower third, under `FEB 2`, types it:
 
-Pump. Pump.
+ON SCREEN (the stand-up's lower third): "maybe the most dangerous thing out there…" [H · FEB 2, 2024 · The Hill and Newsweek; sw-US text rates it [V], the worldcast critic, which guardrails.md makes the authority, rates it [H] (facts row 2)]
 
-**RUMPT** *(O.S.)*\
-"it is so scary" [V · same source and tier]
+Pump. Pump. The lower third rolls on:
 
-The camera operator looks up from his eyepiece at the balloon, one beat. *(The real line lands on a listening face; he's the only face in the scene.)*
+ON SCREEN: "it is so scary" [H · same source and tier]
+
+*(Draft 5.4, the facts review: guardrails §3 keeps [H] words to chyrons and headline cards, so the real fragments play on the broadcast's own chyron and are not voiced, as Ep1 did with SIRRAH's "two letters". The facts owner confirms each fragment is a headline's exact wording. **If the Fox Business clip or its transcript upgrades them to [V]**, RUMPT speaks them from behind the podium again, as in draft 5.3, and the lower third goes.)*
+
+`[W]` The camera operator looks up from his eyepiece at the balloon, one beat. *(The real line lands on a listening face; he's the only face in the scene.)*
 
 `[ECU]` The hands slap a sticker on it: `SO SCARY`. They tie it off and hold it up to appraise it.
 
 **REPORTER** *(O.S.)*\
 What would you do about it? `[INVENTED]`
 
-**RUMPT** *(O.S., appraising the balloon; an aside to the camera operator, not an answer)*\
-So scary. What's it worth? `[INVENTED · on AI and money only; it answers sideways and states no policy]`
+**RUMPT** *(O.S., leaning over the podium's edge toward the camera operator, close enough now for our mic; appraising the balloon, an aside, not an answer)*\
+So scary. What's it worth? `[INVENTED · on AI and money only; it answers sideways and states no policy. Draft 5.4: his first clear words, and they repeat the chyron's "so scary" as a price tag]`
 
 The balloon slips the hands and bobs up out of frame, loose. *(It stays loose until the tag.)* Under its exit, the séance organ pre-laps.
 
-*[SYNTHETIC CUT] Both real fragments also print as captions in quotation marks. The stock voice is plainly not an impression, and its prompt neither names nor describes him (Writer's notes §8).*
+*[SYNTHETIC CUT] Both real fragments print on the broadcast's lower third in quotation marks, and (draft 5.4) his voice under them is an unintelligible murmur, so no synthetic voice speaks an [H] line. The stock voice for his invented lines is plainly not an impression, and its prompt neither names nor describes him (Writer's notes §8).*
 
 ### 3. OMITTED
 
 *Draft 1's FOUNDRY loading dock. The $7T reaches Mas's face in XEL's studio (sc 6).*
 
 ### 4. INT. NOPEAI BOARDROOM — NIGHT · MAR 5 → MAR 8, 2024 · [BASE]
-`⏱ 2:15 → 5:27 (3:12, F2.3 inside) · I + S · ANCHOR 1 · home room · Mas runs the room with questions`
+`⏱ 2:14 → 5:21 (3:07, F2.3 inside) · I + S · ANCHOR 1 · home room · Mas runs the room with questions`
 
 `MUSIC: ROOM COLOUR, the séance organ, pre-lapped under sc 2's balloon, one continuous performance under the whole séance · ducks under lines · thins to a pad under every ghost caption and real line · crossfades into the cut-paper chamber tier on the smoke (F2.3) and back · Nole's fanfare that stops one note short on his exit · then PROCEDURE (low strings, brushed snare) for the Mar 8 coda, thinning to its pedal under Terb's reading of the review (the record) · out: the podcast-intro sting pre-laps under the nameplate's click`
 `ROOM TONE: candle crackle, the rack's hum through the wall`
@@ -178,7 +180,7 @@ The balloon slips the hands and bobs up out of frame, loose. *(It stays loose un
 
 `[LOW·desk]` (base setup for Mas's questions) The laptop big in the foreground, the blog post open on it; MAS above and behind it, reading.
 
-`RAIL, on the post: MAR 5` [P · NopeAI's Mar 5, 2024 blog post] *(Draft 5.2: the rail keeps only the date. Gerg's "It's a blog post. We put some of them up today." names the event, R14.)*
+`RAIL, on the post: MAR 5` [P · NopeAI's Mar 5, 2024 blog post] *(Draft 5.2: the rail keeps only the date. Gerg's "It's a blog post. We put some of your old emails up today." names the event, R14.)*
 
 **MAS** *(reading, flat)*\
 is there anyone here… from 2016. `[INVENTED]`
@@ -212,7 +214,7 @@ you're early. we're on 2016. `[INVENTED]`
 Is this a séance or a deposition? Because I've got lawyers for both. `[INVENTED · he is suing, as the cold open showed; "deposition" hints at Ep8 without announcing it]`
 
 **GERG** *(typing; cheerful, literal)*\
-It's a blog post. We put some of them up today. The candles were extra. `[INVENTED · the post is the record on the rail; "some of them" because the Mar 5 post published a selection (the facts pass); "today" claims no hour; the candles are the show's. Draft 5.3 drops "with the dates", which told Nole what he already knew; the ghosts' headers show the dates]`
+It's a blog post. We put some of your old emails up today. The candles were extra. `[INVENTED · the post is the record on the rail; "some of" because the Mar 5 post published a selection (the facts pass); "today" claims no hour; the candles are the show's. Draft 5.3 drops "with the dates", which told Nole what he already knew; the ghosts' headers show the dates. Draft 5.4: "some of them" had no referent by ear, just where a newcomer learns what the event is; "your old emails" says it (the naturalness read)]`
 
 **NOLE** *(brushing off the last tile; fast, to the whole table: his case)*\
 Great. Put this on the blog too. I paid for the table. I paid for the candles. I paid for the ceiling I just came through. And I asked for one thing, and it's in the name. Open. It was supposed to be open. `[INVENTED · his suit's public position (facts row 9) in his own words, with no quotation marks, and it disputes no email; "I paid for…" is cartoon texture under his FUNDED IT plate (row 10b), and it picks up Gerg's candles. Draft 5.2: the scene's one speech, which absorbs draft 5.1's "I named it. You all just work here."]`
@@ -220,7 +222,7 @@ Great. Put this on the blog too. I paid for the table. I paid for the candles. I
 *(Behind him, in the same frame, the 2016 ghost's "less open" and its `Yup` hang in the air while he says "open". Nobody points at it.)*
 
 `[LOW·desk]` **MAS** *(to the planchette, not to him)*\
-spirit. what did we call it? `[INVENTED · draft 5.2: moved up, so it takes Nole's own word and puts it to the board]`
+spirit, what did we call it? `[INVENTED · draft 5.2: moved up, so it takes Nole's own word and puts it to the board. Draft 5.4: a comma, not a full stop, after the address, so the stock voice doesn't stop dead on it]`
 
 `[HIGH]` The planchette glides from letter to letter: `O` · `P` · `E` · `N`.
 
@@ -290,16 +292,11 @@ we keep everything. `[INVENTED]`
 
 *(Nole's one quiet line in the episode, and his one short one: every other line of his is loud and full, so this one lands. "we keep everything." refers to the company publishing his emails, the public act on the rail; the facts pass ruled it in, 2026-09-26.)*
 
-`[W]` (the table) The last ghost rises alone. Its header reads `DRAFT · NEVER SENT`, with no sender and no date. Its subject line, in Nole's capitals, is `Re: Why I'm leaving`, and it has no body, only a cursor blinking. Everyone leans in. It says nothing.
-
-**MAS** *(to the ghost, after the silence)*\
-…anyone? `[INVENTED]`
-
-The candle nearest Nole snuffs out. Its smoke curls upward and repaints the room.
+On the beat after "we keep everything.", in the same `[MCU]`, the candle nearest Nole snuffs out. Its smoke curls upward and repaints the room. *(Draft 5.4 cuts the unsent ghost, `DRAFT · NEVER SENT` / `Re: Why I'm leaving`, and Mas's "…anyone?" (−0:06; the scene nets −0:05, since 5.4's Gerg and Terb lines are a word or two longer): §9's first Act One trim, which the insider read endorsed. F2.3 shows his exit without it.)*
 
 > #### FLASHBACK F2.3 — INT. NOPEAI OFFICE (2018) — DAY · FEB 20, 2018 · [BASE, a palette remap of the boardroom · POV rim NOLE #E0301E → MAS cyan]
-> `⏱ 4:28 → 4:44 (0:16) · F · the smoke settles into a small, crowded all-hands (no new set) · no captions: the freeze says it`
-> *(Draft 5.3 re-derives this timecode backward from the scene's end: after the flashback come ≈ 30 s of counted speech (Nole's two lines, Terb's reading and his line to Mas) and ≈ 13 s of business (the relight, the sip, the rise, the candle, the lights, the slide, two clicks), so the flashback ends ≈ 0:43 before 5:27. Draft 5.2's 4:50 → 5:06 left 21 s for all of that.)*
+> `⏱ 4:22 → 4:38 (0:16) · F · the smoke settles into a small, crowded all-hands (no new set) · no captions: the freeze says it`
+> *(Re-derived backward from the scene's end, as in draft 5.3: after the flashback come ≈ 30 s of counted speech (Nole's two lines, Terb's reading and his line to Mas) and ≈ 13 s of business (the relight, the sip, the rise, the candle, the lights, the slide, two clicks), so the flashback ends ≈ 0:43 before 5:21. Draft 5.4 moves it 6 s earlier than 5.3's 4:28 → 4:44: 5 s from the unsent ghost's cut, net of the longer Gerg and Terb lines, and 1 s from sc 2, whose real fragments are now a chyron.)*
 >
 > `MUSIC: ERA TIER, cut-paper chamber (2015–21), crossfaded in on the smoke`
 >
@@ -334,7 +331,7 @@ He rockets back up through his hole. One ceiling tile drops back into place. Mas
 `RAIL: MAR 8` *(the review's words are in Terb's reading, so the rail carries only the date)*
 
 **TERB** *(brisk; to the table before the first item, then reading the sheet word for word)*\
-Before we start: the independent review is back. Here's what it found. *(reading)* "…the prior Board acted within its broad discretion to terminate Mr. Manalt, but also found that his conduct did not mandate removal." `[INVENTED: "Before we start: the independent review is back. Here's what it found." Draft 5.3: "independent" is Ep1's word ("And there'll be an independent review.", Act Four), so a newcomer knows which review at 0 s; if Ep1 rewords that line, this one follows it]` [P · NopeAI's Mar 8, 2024 post, read verbatim from "the prior Board" to "removal", both halves and the "but also found" together (facts row 12); the one change is the permitted name swap, Altman → Manalt; the leading ellipsis trims the law firm's name. Re-matched in draft 5.2 on the Wayback Machine's May 7, 2024 capture of the post; a human opens the live post before lock]
+Before we start, the independent review is back. I'll read you the finding. *(reading)* "…the prior Board acted within its broad discretion to terminate Mr. Manalt, but also found that his conduct did not mandate removal." `[INVENTED: "Before we start, the independent review is back. I'll read you the finding." Draft 5.3: "independent" is Ep1's word ("And there'll be an independent review.", Act Four), so a newcomer knows which review at 0 s; if Ep1 rewords that line, this one follows it. Draft 5.4: was "Before we start: the independent review is back. Here's what it found.", an announcer's register; a chair tells his table what he's about to do]` [P · NopeAI's Mar 8, 2024 post, read verbatim from "the prior Board" to "removal", both halves and the "but also found" together (facts row 12); the one change is the permitted name swap, Altman → Manalt; the leading ellipsis trims the law firm's name. Re-matched in draft 5.2 on the Wayback Machine's May 7, 2024 capture of the post; a human opens the live post before lock]
 
 *The reading plays whole, and it crosses two cuts so that each half lands on the man it's about (draft 5.2):*
 - *From "the prior Board acted…": `[2S]` across the table, favouring MADA, the one member of the board that fired Mas who is still on it, perfectly still (no action, no reaction), with Mas sitting down opposite him in the left third, three-quarter back to us. Terb's voice carries on from the head of the table.*
@@ -344,7 +341,7 @@ Before we start: the independent review is back. Here's what it found. *(reading
 `[OTS]` Over Mas's shoulder, onto TERB, who looks up from the sheet.
 
 **TERB** *(to Mas; dry)*\
-So. Your seat's where you left it, Mas. `[INVENTED · no view of the finding; it says he is back on the board. Fallback for the whole coda: draft 4's rail with both halves, and Terb says only this line]`
+So, your seat's where you left it, Mas. `[INVENTED · no view of the finding; it says he is back on the board. Fallback for the whole coda: draft 4's rail with both halves, and Terb says only this line. Draft 5.4: "So," with a comma (was "So."), so the stock voice doesn't stop dead on it]`
 
 He slides the nameplate down the table. `[ECU]` It clicks into its slot in front of Mas: `MAS MANALT · BOARD`. Beside it, as OMIS sits down, a second nameplate clicks in: `OMIS · [TITLE PENDING]`. That plate is her introduction (her card waits for Ep5) and the scene's last image. Nothing from the review's underlying allegations appears (X9). Under the second click, the podcast-intro sting pre-laps.
 
@@ -355,7 +352,7 @@ He slides the nameplate down the table. `[ECU]` It clicks into its slot in front
 *Draft 3's Parliament and lighthouse window. Europe's RULEBOOK now arrives as a notification on Mas's monitor (sc 8), its `SNOOZE` button bolted on and unpressed for Ep8. THE OTHER MAS's sticker waits for Ep3's fuel pump. THE TRUSTBUSTER's `INQUIRY` envelope survives as sc 7's egg.*
 
 ### 6. INT. THE PODCAST CIRCUIT — XEL'S STUDIO — DAY · MAR 18, 2024 · [BASE]
-`⏱ 5:27 → 7:15 · I · home room · every quoted line is from the Lex #419 transcript [P · fetched 2026-09-25; the lines this scene uses re-matched on the raw transcript page, 2026-09-26] · the fuse: the mic`
+`⏱ 5:21 → 7:09 · I · home room · every quoted line is from the Lex #419 transcript [P · fetched 2026-09-25; the lines this scene uses re-matched on the raw transcript page, 2026-09-26] · the fuse: the mic`
 
 `MUSIC: an original podcast-intro sting, pre-lapped under sc 4's nameplate, then none: the studio's silence is the joke · the mic's hops are SFX`
 `ROOM TONE: a padded room (HVAC, a chair creak), never true silence`
@@ -435,7 +432,7 @@ The producer's hand flips a sign on the curtain: `PART 1 OF 6`. Then the curtain
 *(Draft 5.1: XEL opens on his real first question, and draft 5's invented "three hours… warmed up" lines are cut: the real episode runs under two hours and opens on the board saga, and the long-form joke is the mic's and `PART 1 OF 6`'s. The quick "no." ladder stays, because it's real and its shortness is the joke; draft 5.2's long answer after it is what makes the shortness land.)*
 
 ### 7. INT. NOPEAI CATHEDRAL — CROSS-SECTION — NIGHT · MAR 19, 2024 · [BASE]
-`⏱ 7:15 → 8:04 · S → T · ACT-OUT 1 · meter: TASYA's key ring · Ep1's odometer-drill cutaway, reused floor for floor`
+`⏱ 7:09 → 7:57 · S → T · ACT-OUT 1 · meter: TASYA's key ring · Ep1's odometer-drill cutaway, reused floor for floor`
 
 `MUSIC: SET-PIECE SWING (low) on the split · TASYA's Rhodes takes over in the basement, one chord under his welcome · out: the key ring's jangle on the downbeat (a diegetic out), then black`
 `ROOM TONE: the building's hum, floor by floor; the basement's is lower`
@@ -445,28 +442,28 @@ The producer's hand flips a sign on the curtain: `PART 1 OF 6`. Then the curtain
 
 THE HUMANIST carries boxes into the basement. The boxes read `DEFLECTION (LICENSED)` [V]. PLATE: `THE HUMANIST · MACROSOFT'S NEW AI CHIEF` [V · the Mar 19, 2024 hire (facts row 16); the facts owner confirms the title's wording] *(Draft 5.3: the plate was `MACROSOFT'S SPARE`, which told "We keep a spare." before Tasya could. Now the plate says what he is, and the button reclassifies him.)*
 
-`[2S]` (base setup: the basement, both men in it; cut-ins: the key ring `[ECU]`, then the pan up to Mas) He sets a box down, turns, and TASYA is already in the doorway, screen-right, his giant key ring in hand, as if he'd been part of the wall all along. On the ring is a tiny new key with a paw print: LE CHIEN (FEB 26 [V]).
+`[2S]` (base setup: the basement, both men in it; cut-ins: the key ring `[ECU]`, then the pan up to Mas) He sets a box down, turns, and TASYA is already in the doorway, screen-right, his giant key ring in hand, as if he'd been part of the wall all along. On the ring is a tiny new key with a paw print: LE CHIEN (FEB 26 · [V once pulled; memory until then; no date on screen] · draft 5.4: the tag was an unqualified [V], per the facts review).
 
 **THE HUMANIST** *(to Tasya, a little caught out)*\
-Don't mind me. I'm just moving in downstairs. `[INVENTED · draft 5.3: said to the landlord in the doorway (it went to the ceiling before), so it has a listener and "Welcome." answers it]`
+I'm just moving in downstairs. I hope that's all right. `[INVENTED · draft 5.3: said to the landlord in the doorway (it went to the ceiling before), so it has a listener. Draft 5.4: was "Don't mind me. I'm just moving in downstairs.": "Don't mind me." is Sucram's line in Ep1 sc 15 (R10), and now the line asks, so "Welcome." answers it]`
 
 **TASYA** *(warm, unhurried; the welcome is the lease)*\
 Welcome. Make yourself at home. Everything's on us: the heat, the power, the floor you're standing on. `[INVENTED · a welcome that is also a clause ("on us": we pay, and it's ours); he never says "control" or "own"]`
 
 **THE HUMANIST** *(at his DEFLECTION boxes)*\
-I brought my own team. I hope there's room. `[INVENTED · accurate: the license-and-hire brought his team with him (facts row 16)]`
+I brought my own team. Is there room for them? `[INVENTED · accurate: the license-and-hire brought his team with him (facts row 16). Draft 5.4: was "…I hope there's room.", which would say "I hope" twice in a row after his new first line]`
 
 **TASYA** *(a glance up through the floors, and back)*\
 There's always room down here. It's quieter than upstairs. `[INVENTED]`
 
 He twists a key off the ring and holds it out. The Humanist takes it. `[ECU]` The ring: a new key grows back into the gap at once.
 
-`RAIL, stamped on the new key as it grows: MAR 19 · MACROSOFT HIRES ITS OWN AI TEAM` [V]
+`RAIL, stamped on the new key as it grows: MAR 19` [V · MACROSOFT hires its own AI team, the Mar 19, 2024 license-and-hire (facts row 16)] *(Draft 5.4: the rail was `MAR 19 · MACROSOFT HIRES ITS OWN AI TEAM`, the third telling in about 20 s after the plate and "I brought my own team." (the insider read); it carries only the date now.)*
 
 **TASYA** *(pocketing the ring; pleasant)*\
 We keep a spare. `[INVENTED · about the key, and about the man holding it: the landlord's new AI chief is a spare (draft 5.3: the plate no longer says it first). Tasya never says "hedge" (tone guide §6)]`
 
-*Egg: an `INQUIRY` envelope from THE TRUSTBUSTER sails in through the cut-away and bonks off the ring in his pocket [V · the FTC 6(b) orders, JAN 25, 2024 · memory, pull before lock].*
+*Egg: an `INQUIRY` envelope from THE TRUSTBUSTER sails in through the cut-away and bonks off the ring in his pocket [the FTC 6(b) orders, JAN 25, 2024 · [V once pulled; memory until then] · draft 5.4: the tag was [V], per the facts review; no date on screen].*
 
 **THE HUMANIST** *(looking up where Tasya looked)*\
 Who else lives here? `[INVENTED · draft 5.2: "quieter than upstairs" gives the question its motive]`
@@ -485,12 +482,12 @@ A tenant. `[INVENTED]`
 ---
 
 ## ACT TWO — "her"
-`⏱ 8:04 → 12:33 · anchor: the demo · THE PLAN → its set-piece · meter: the spotlight`
+`⏱ 7:57 → 12:22 · anchor: the demo · THE PLAN → its set-piece · meter: the spotlight`
 
 ### 8. INT. THE DARK ROOM — NIGHT · MAR → APR 2024 · [BASE]
-`⏱ 8:04 → 8:17 · M inside his POV · his monitor, glass in the foreground`
+`⏱ 7:57 → 8:06 · M inside his POV · his monitor, glass in the foreground`
 
-`MUSIC: DARK ROOM (server hum, the F–C drone), pre-lapped under the black · each show on the monitor carries its own tiny, ducked media bed · out: the stage manager's count and the keynote reel warming up pre-lap under the glass`
+`MUSIC: DARK ROOM (server hum, the F–C drone), pre-lapped under the black · each show on the monitor carries its own tiny, ducked media bed · out: the stage manager's count and the keynote reel warming up pre-lap under the monitor's glow`
 `ROOM TONE: the dark room: rack fans, the monitor's whine`
 `AXIS: over Mas's right shoulder onto the monitor; he's screen-left, the monitor centre-right. Sc 23 reuses the setup.`
 
@@ -502,16 +499,14 @@ ON SCREEN: `"MAS, TASYA AND RADNUS"` [H · APR 1, 2024]
 
 PLATE: `TRAWETS · ONE SEGMENT. THREE CEOS.`
 
-A paper airplane glides in and lands on his desk: an ELPPA memo, with THE TRUSTBUSTER's photo paper-clipped to it, magnifying glass raised. *(Draft 5 cuts the desk slap and the cutout's unrippled printed glass, about 4 s: the second was an unbudgeted fourth glass gag, and the time goes to the talk backstage.)*
+TRAWETS turns from the lineup and looks straight down the lens, at Mas: the one viewer who is also in the lineup. *Egg: as the scroll leaves, the next show's thumbnail reads `AGI TALK IS "ABOUT CREATING GOD"` [H], with RUHTRA's portrait.*
 
-INSERT, the memo, with a pen arrow drawn from its last word to THE TRUSTBUSTER's clipped photo: "please don't talk to her" [H · APR 2024, as TRAWETS recounted it] *(Draft 5.1: the arrow ties this "her" to the regulator in the photo, so a newcomer doesn't carry it forward to Mas's post two scenes later.)*
+*(Draft 5 cut the desk slap and the cutout's unrippled printed glass. **Draft 5.4 cuts the ELPPA memo** (the paper airplane, THE TRUSTBUSTER's clipped photo, the arrow and "please don't talk to her" [H], −0:04): the newcomer read found a second "her" and an unexplained regulator 13 s into Act Two, where only the RULEBOOK swipe plants anything, and the facts review found an invented document carrying a reported spoken request. The lineup keeps what the scene is for: Mas watching himself roasted. Fallback for the insider egg, if the room wants it back: the words in TRAWETS's own speech bubble with `(REPORTED)`, never on a memo.)*
 
-TRAWETS looks at the memo, then straight down the lens, at Mas. *Egg: as the scroll leaves, the next show's thumbnail reads `AGI TALK IS "ABOUT CREATING GOD"` [H], with RUHTRA's portrait.*
-
-`[ECU]` Mas's glass, the monitor's light on it, perfectly still. Under it, a stage manager's distant count and the keynote reel warming up through a wall pre-lap the next room; on the downbeat, the glow becomes a work light. *(Draft 5.2: sound carries the tone change, not a crossfade alone, §4.)*
+`[ECU]` The monitor's glow in the dark. Under it, a stage manager's distant count and the keynote reel warming up through a wall pre-lap the next room; on the downbeat, the glow becomes a work light. *(Draft 5.2: sound carries the tone change, not a crossfade alone, §4. Draft 5.4: the glow alone, where it was "Mas's glass… perfectly still": the insider read counted the still glass four times in the episode, and this one was outside the budget of three.)*
 
 ### 9. INT. NOPEAI DEMO STAGE — BACKSTAGE — MORNING · MAY 13, 2024 · [BASE · work-light palette]
-`⏱ 8:17 → 9:20 · I · the launch room (Ep1's demo-stage pane, widened); backstage is the same room in a work-light palette`
+`⏱ 8:06 → 9:09 · I · the launch room (Ep1's demo-stage pane, widened); backstage is the same room in a work-light palette`
 
 `MUSIC: the KEYNOTE REEL cue warming up in the house, heard through the wall, ducked (its melody runs on through THE PLAN and the demo: one tune in three rooms)`
 `ROOM TONE: the wings: road cases, cable hum, a stage manager's distant count`
@@ -572,7 +567,7 @@ The panel keeps unfolding past the monitor's bezel, square by square, down onto 
 *(The scene's shape, draft 5.2. The engineer wants reassurance; Rima wants the demo run her way; Mas wants in. Rima sets the wings' one rule, Mas asks his question, and she answers the next one in full. He grants her what isn't his to grant, and she takes it back as a fact. The demo cashes it. Draft 5: the engineer and Gerg set up the product; draft 5.1 left the how to THE PLAN. Draft 5.3: her sideways answer is spent once, on Mas; to the engineer she answers straight and too calmly, so her second answer isn't a formula.)*
 
 ### 10. THE PLAN · [BLUEPRINT]
-`⏱ 9:20 → 10:23 (1:03) · P · RIMA reads the plan like her keynote's first slides; the stamps show pictures and numbers, never her words`
+`⏱ 9:09 → 10:12 (1:03) · P · RIMA reads the plan like her keynote's first slides; the stamps show pictures and numbers, never her words`
 
 `MUSIC: BLUEPRINT, the keynote reel's own melody as a chip music-box waltz · out: a tape-stop into the demo cue at the tear`
 `AXIS: the sheet is drawn wider and taller than the frame. BEFORE is on the left and NOW on the right, so the pan reads forward in time; the three steps run down the right-hand column, and the tiny stage is in the last square.`
@@ -621,7 +616,7 @@ It answers about as fast as a person does. The model goes out today, and free us
 From the margin, an **empty** speech bubble drifts onto the paper, lowercase-sized, with nothing in it. It was never on the plan. Every tiny figure looks up at it. It drifts over the tiny stage and blots out its lights. The blueprint tears down the middle, and through the tear pour the real stage lights. The tear is the cut.
 
 ### 11. INT. NOPEAI DEMO STAGE — DAY · MAY 13, 2024 · [BASE]
-`⏱ 10:23 → 12:17 (1:54) · I + S · ANCHOR 2 · the fuse: the spotlight, one step off RIMA toward the big screen on each of CHATGTP's laughs`
+`⏱ 10:12 → 12:06 (1:54) · I + S · ANCHOR 2 · the fuse: the spotlight, one step off RIMA toward the big screen on each of CHATGTP's laughs`
 
 `MUSIC: KEYNOTE REEL, the demo cue, one continuous performance through sc 11 and into sc 12 · ducks under every line · THE COPY (a chip echo, a note late) under the three-part harmony · thins to a pad under the real post and holds it, thin, to the end`
 `ROOM TONE: a full house: seats, air handling, a few coughs`
@@ -726,7 +721,7 @@ It's free! `[INVENTED]`
 *(Draft 5.2: "It's free!" is the handoff into the front row, not a third button after "…and that's the demo." and the heads.)*
 
 ### 12. INT. NOPEAI DEMO STAGE — FRONT ROW — CONTINUOUS · [BASE]
-`⏱ 12:17 → 12:33 · I → T · MIDPOINT ACT-OUT (a turn and a power shift) · out: the demo cue stops mid-phrase`
+`⏱ 12:06 → 12:22 · I → T · MIDPOINT ACT-OUT (a turn and a power shift) · out: the demo cue stops mid-phrase`
 `AXIS: from the wings: Mas's silhouette in the left foreground, the front row beyond him screen-right.`
 
 `[OTS-W]` "It's free!" lands here. From the wings: Mas's silhouette in the left foreground, and beyond him, in the blimp's shade, the auditorium and the front row. The demo cue plays on, thin. `[ECU]` The seat marked `RESERVED: CHIEF SCIENTIST` is empty. In its polished chrome armrest is a reflection: ALYI, in profile, looking up at the blimp. *(Draft 5.2: the over-the-shoulder gives his eyeline without holding his face after a real item.)*
@@ -742,15 +737,15 @@ On the V.O.'s last word, the reflection turns away. The seat's placard flips to 
 
 The demo cue stops mid-phrase on the downbeat. CUT TO BLACK.
 
-**END OF ACT TWO** · `— SPLIT POINT: the A-half ends here (≈ 12:33 with the intro) —`
+**END OF ACT TWO** · `— SPLIT POINT: the A-half ends here (≈ 12:22 with the intro) —`
 
 ---
 
 ## ACT THREE — WHERE'S ALYI?
-`⏱ 12:33 → 16:50 · anchor: the search · flashback: F2.2 (the episode's one flashback exit) · the S3 · meter: the flyers`
+`⏱ 12:22 → 16:39 · anchor: the search · flashback: F2.2 (the episode's one flashback exit) · the S3 · meter: the flyers`
 
 ### 13. INT. NOPEAI LOBBY — DAY · MAY 15, 2024 · [BASE]
-`⏱ 12:33 → 13:04 · I · home room · the lobby TV (the cold open's) carries Congress`
+`⏱ 12:22 → 12:53 · I · home room · the lobby TV (the cold open's) carries Congress`
 
 `MUSIC: THE CLOCK, first step (quarters: a rail tick under the knee's rising F G A♭ C), pre-lapped under the black · the TV's presser is a tiny ducked media bed`
 `ROOM TONE: the lobby`
@@ -787,7 +782,7 @@ We'll hold a forum on it. `[INVENTED]`
 Under the answer, Mas walks off the lobby floor, frame-right, into the open-plan office, and the band lights up as he crosses the threshold. *(Draft 5.2: the scene ends on two institutions deferring, back to back: "leave them up." and "We'll hold a forum on it.")*
 
 ### 14. INT. NOPEAI HQ — THE OPEN FLOOR — DAY · MAY 15–17, 2024 · [BASE · UI LIT]
-`⏱ 13:04 → 14:02 · I + S1 · ANCHOR 3 (part 1) · the episode's one point-and-click scene and its one dialogue tree · lit UI 1 of 2 · Ep1's bullpen, re-dressed with flyers and pedestals`
+`⏱ 12:53 → 13:50 · I + S1 · ANCHOR 3 (part 1) · the episode's one point-and-click scene and its one dialogue tree · lit UI 1 of 2 · Ep1's bullpen, re-dressed with flyers and pedestals`
 
 `MUSIC: THE CLOCK continues under the room tone · ALYI's motif (the GPU choir chord with no third) blooms on each reflection · the hum of his old chair is the same chord, in the room (diegetic into score) · thins to the pedal under EKIEL's post · out: the chair's hum rings over the cut into sc 15`
 `ROOM TONE: the open floor: keyboards, a chiller drip`
@@ -848,7 +843,7 @@ He walks out. The dominoes topple across the floor, and the shot ends on the las
 
 UI: `Pick up IOU`
 
-On ALYI's office door, the note from Ep1, `IOU: 20% COMPUTE`, flutters loose and drops into the inventory, taking Mas's colour. DATE TAG: `PLEDGED JUL 2023 · NEVER DELIVERED (REPORTED)` [V]
+On ALYI's office door, the note from Ep1, `IOU: 20% COMPUTE`, flutters loose and drops into the inventory, taking Mas's colour. DATE TAG: `PLEDGED JUL 2023` [V] *(Draft 5.4: the tag also read `NEVER DELIVERED (REPORTED)`, but the report is Fortune's of May 21, 2024, after this scene's May 15–17 (the facts review). That half now lands in sc 22, on Jun 19, when he tries to use the note.)*
 
 UI: `~~Open~~ door`. *Bonk*, the same bonk as the 1993 Cancel. Nothing happens.
 
@@ -859,7 +854,7 @@ The plate drops into a box stencilled `MISC`, whose shipping label reads `MAY 17
 *(Draft 5.1: the plate's second line tells a newcomer what came off the door, so draft 5's rail, which added only `(REPORTED)`, is gone; the label the [K] tier needs rides the box, an in-world prop. `SUPERALIGNMENT` stays on top for the insider.)*
 
 ### 15. INT. ALYI'S OFFICE — NIGHT · MAY 17, 2024 · [BASE]
-`⏱ 14:02 → 14:48 (0:46, F2.2 inside) · I · ANCHOR 3 (part 2) · the debrief, played without a spoken word from him (a designed quiet scene: the pass leaves it wordless)`
+`⏱ 13:50 → 14:36 (0:46, F2.2 inside) · I · ANCHOR 3 (part 2) · the debrief, played without a spoken word from him (a designed quiet scene: the pass leaves it wordless)`
 
 `MUSIC: the chair's hum carries in from sc 14, then stops · DARK ROOM, one felt piano (his interior) · F2.2 takes over with the choir and glass shimmer · the piano returns on the pin · under the last shot, a receipt printer's chatter from the corridor pre-laps the bridge's band`
 `ROOM TONE: an empty office; the building's night hum`
@@ -867,26 +862,27 @@ The plate drops into a box stencilled `MISC`, whose shipping label reads `MAY 17
 
 `[W]` An empty office: a desk with no chair (the chair went to BUKAJ). Carried over the cut, the chair's hum sounds in the empty space where it stood, and stops. Mas sits on the edge of the desk. THE ORB sweeps its scan beam around the room and finds nothing to toast. *(Draft 5.2 drops the easel turned to the wall: it was planted and never paid.)*
 
-`[ECU]` His thumb is already scrolling his phone, past a wall of modern icons, to a tiny ancient one: `TPOOL`, drawn in [EARLY-WEB16] colours inside a 2024 phone, `LAST UPDATED 2012` across the top. He opens it. A 2008 hourglass cursor spins. THE ORB scans the hourglass. Its toast tries for a while, then settles: `verified: 2008`. *(Toast 2 of 3.)*
+`[ECU]` His thumb is already scrolling his phone, past a wall of modern icons, to a tiny ancient one: `TPOOL`, drawn in [EARLY-WEB16] colours inside a 2024 phone, `LAST UPDATED 2012` across the top. He opens it. Its login screen, in 2008 type, reads `welcome back, mas`, and a 2008 hourglass cursor spins over it. *(Draft 5.4, the newcomer read: the dead app knows him, so a newcomer isn't left wondering why he has it; that it was his company still waits for F2.1 and Ep3.)* THE ORB scans the hourglass. Its toast tries for a while, then settles: `verified: 2008`. *(Toast 2 of 3.)*
 
 **MAS** *(typing, one word per beat; typed, not voiced)*\
 where u at? `[INVENTED · typed on TPOOL's screen]`
 
 *(The exact string on TPOOL's screen in the intro's 2008 keynote, which viewers see every week.)*
 
-`[POV]` The map loads. Every pin on the dead app reads `LAST SEEN: 2012`. One new pin drops alone: `LAST SEEN: 2022 · BONFIRE`. Its ping ripple widens, turns orange, and becomes firelight.
+`[POV]` The map loads. Every pin on the dead app reads `LAST SEEN: 2012`. One new pin drops alone: `LAST SEEN: 2023 · BONFIRE`. Its ping ripple widens, turns orange, and breaks into string lights.
 
-> #### FLASHBACK F2.2 — EXT. LEADERSHIP OFFSITE / INT. HOLIDAY PARTY — NIGHT · 2022 · [BASE · lit by flame only · POV rim ALYI #FF6A1A · the episode's one flashback exit]
-> `⏱ 14:16 → 14:41 (0:25) · F`
+> #### FLASHBACK F2.2 — INT. HOLIDAY PARTY (DEC 2022) / EXT. LEADERSHIP OFFSITE (2023) — NIGHT · [BASE · string lights, then flame only · POV rim ALYI #FF6A1A · the episode's one flashback exit]
+> `⏱ 14:04 → 14:29 (0:25) · F`
+> *(Draft 5.4, the facts review, checked this pass on the Wayback Machine's capture of The Atlantic's Nov 19, 2023 piece (web.archive.org/web/20260917113838/…/676050/): "At OpenAI's 2022 holiday party… Sutskever led employees in a chant: 'Feel the AGI! Feel the AGI!'" and "For a leadership offsite this year [2023]… Sutskever commissioned a wooden effigy from a local artist that was intended to represent an 'unaligned' AI… He set it on fire". Draft 5.3 had the fire first and dated both 2022; the pin said `2022`. Now the party comes first and the fire second, in the record's order, and the flashback still ends on the flame that becomes the pin.)*
 >
-> `[W]` A wooden effigy of a paperclip robot, stenciled `UNALIGNED`, burns at an offsite [V · The Atlantic]. Staff stand in silhouette. ALYI stands in a lodge doorway, a silhouette against the flame, half cut off by the frame.
->
-> Cut on the phrase to a holiday party: silhouettes against palette-cycled string lights. The chant builds from one voice to all of them:
+> `[W]` A holiday party: silhouettes against palette-cycled string lights. At the front, a silhouette with ALYI's profile raises one hand, and the chant builds from that one voice to all of them:
 >
 > **CROWD**\
-> "FEEL THE AGI! FEEL THE AGI!" [V · 2022]
+> "FEEL THE AGI! FEEL THE AGI!" [V · The Atlantic, Nov 19, 2023: the 2022 holiday party, where he "led employees in a chant"]
 >
-> In the corner, the GPUs hum along in harmony. `[MCU·door]` ALYI in a doorway at the party's edge, silhouette. [GLYPH-MASKED · 12 FRAMES] At the peak, his eyes become scrolling token streams. *(Draft 5.2: a closer shot, so the eyes read on a silhouette; build check: the eyes budget, pov-and-framing §4.7.1.)*
+> In the corner, the GPUs hum along in harmony. [GLYPH-MASKED · 12 FRAMES] At the peak, the racks' status lights become scrolling token streams, and their light runs across every silhouette in the room, his included. *(Draft 5.4: the glyph was his eyes becoming token streams; the facts review flagged it as a possible mental-health reading of his mysticism, which guardrails §6 rules out for ALYI. The machine's glyph now plays on the room, the machine's read of it, and his face stays a plain silhouette. Fallback, if the guardrails owner clears the eyes: draft 5.3's `[MCU·door]` eyes shot.)*
+>
+> Cut on the phrase to an offsite at night. A wooden effigy of a paperclip robot, stencilled `UNALIGNED`, burns [V · The Atlantic, as above: an effigy "intended to represent an 'unaligned' AI", set on fire at a 2023 leadership offsite · the paperclip-robot design is ours, `[INVENTED]`; the article gives no design]. Staff stand in silhouette. `[MCU·door]` ALYI stands in a lodge doorway, a silhouette against the flame, half cut off by the frame.
 >
 > The fire's glow shrinks to one point of light.
 
@@ -901,7 +897,7 @@ where u at? `[INVENTED · typed on TPOOL's screen]`
 *Draft 3's press room. The roadmap now plays on the lobby TV in sc 13, in Mas's room; its `0 BILLS` card and the "every hand" echo were Ep1 sc 19's jokes and are gone. The receipt that used to nose under the `FLOOR` door now comes under Alyi's (sc 15).*
 
 ### 17. EXT. BAY BRIDGE — DAY · MAY 17–22, 2024 · [BASE]
-`⏱ 14:48 → 16:50 (2:02) · S + I · THE S3 · ACT-OUT 2 · 4-bar phrases · needs the camera-scroll extension (production P4)`
+`⏱ 14:36 → 16:39 (2:03) · S + I · THE S3 · ACT-OUT 2 · 4-bar phrases · needs the camera-scroll extension (production P4)`
 
 `MUSIC: SET-PIECE SWING, the full band, the episode's one full-band stretch, in 4-bar phrases · ducks under every line · thins to its bass pedal under the chyrons and the posts · drops to a pad in the rain · out: a DREAD sting on the notification; under the black, the lighthouse beacon's motor and the quartet's first pizzicato pre-lap sc 18`
 `ROOM TONE: bridge traffic, wind off the water; then rain`
@@ -930,7 +926,7 @@ The receipt keeps unrolling under both of them. A honk, further back.
 `[M]` The two-shot again.
 
 **THE FORECASTER** *(letting the pen go; the chain draws it back into the paper)*\
-I already took it. Seventy percent it's worth not signing. `[INVENTED · a forecast of his own choice; it gives no reason and no date, and the record is only that he refused and what it put at stake. Draft 5.3: draft 5.2's "I did. Last night." pinned a real person's decision to a night the record doesn't give (facts row 32 has only "May 2024"); "took it" still picks up "take your time.", and "already" keeps it from being heard as the pen]`
+Already did. It's the one thing I didn't need a number for. `[INVENTED · draft 5.4: was "I already took it. Seventy percent it's worth not signing." The naturalness read heard "took it", said as the pen withdraws, as "I took the deal", and found the second sentence unspeakable ("Already did." answers "take your time." with nothing to mishear). The facts review found the invented probability framed a real person's principled refusal as a bet. The forecaster who won't put a number on this one keeps his register and the principle; his runner resumes a line later ("I've got a forecast on you…"). It gives no date and no reason beyond the terms he has just read, and the record is only that he refused and what it put at stake. For the guardrails owner (open question #28); fallback: the naturalness read's "Already did. I put it at seventy percent that not signing is worth it."]`
 
 **Phrase 3.** `[M]` (the same two-shot) The pen is gone. He turns to Mas and checks the clipboard.
 
@@ -976,10 +972,10 @@ DREAD sting. CUT TO BLACK. Under the black, the lighthouse beacon's motor turns 
 ---
 
 ## ACT FOUR — THE ONE DOOR
-`⏱ 16:50 → 21:31 · anchor: the watch party · S2: the walled garden · flashback: F2.1 · meter: doors shutting (the garden gate, Nole's padlock, the white door)`
+`⏱ 16:39 → 21:23 · anchor: the watch party · S2: the walled garden · flashback: F2.1 · meter: doors shutting (the garden gate, Nole's padlock, the white door)`
 
 ### 18. INT. MISANTHROPIC LIGHTHOUSE / INT. NOPEAI BOARDROOM — SPLIT — DAY · MAY 28, 2024 · [BASE]
-`⏱ 16:50 → 18:10 · I/M (a delivery on each side) · the split rhymes on one action: a lanyard dropped over a head · the split holds through both rooms' talk, two agendas side by side (Terb on procedure, Mario on risk)`
+`⏱ 16:39 → 17:58 · I/M (a delivery on each side) · the split rhymes on one action: a lanyard dropped over a head · the split holds through both rooms' talk, two agendas side by side (Terb on procedure, Mario on risk)`
 
 `MUSIC: LEVERAGE, played by a string quartet (pizzicato over a muted 808 ostinato, locked to the rack LEDs), pre-lapped under sc 17's black, one performance through sc 18, 19 and 20 · the 808 drops out on "present." and the quartet carries on alone · MARIO's phrase is its first violin under the right pane`
 `ROOM TONE: right, the lighthouse's wind and the beacon's motor; left, the boardroom's hum`
@@ -994,7 +990,7 @@ DREAD sting. CUT TO BLACK. Under the black, the lighthouse beacon's motor turns 
 LEFT (the right pane steps down a rung):
 
 **TERB** *(brisk, procedural; reading from the board's announcement at his place)*\
-First item. "A first task of the Safety and Security Committee will be to evaluate and further develop NopeAI's processes and safeguards over the next 90 days." *(looking up)* So. Who checks it? *(a hand round the table)* We do. `[INVENTED: "First item." and "So. Who checks it? … We do."]` [P · NopeAI's May 28, 2024 post, matched verbatim in draft 5.2 on the Wayback Machine's May 31, 2024 capture; the one change is the permitted swap, OpenAI → NopeAI; a human opens the live post before lock]
+First item. "A first task of the Safety and Security Committee will be to evaluate and further develop NopeAI's processes and safeguards over the next 90 days." *(looking up)* So, who checks it? *(a hand round the table)* We do. `[INVENTED: "First item." and "So, who checks it? … We do." Draft 5.4: "So," with a comma (was "So."), as in sc 4]` [P · NopeAI's May 28, 2024 post, matched verbatim in draft 5.2 on the Wayback Machine's May 31, 2024 capture; the one change is the permitted swap, OpenAI → NopeAI; a human opens the live post before lock]
 
 `[M]` (inside the left pane, at table level) On "We do.", every face at the table turns to Mas, at the left [HOLD 2 BEATS: the table's hold]. *(Draft 5.3: the chair answers his own question the way a chair does, and the table's turn is the discovery; draft 5.2 had him ask a question he knew the answer to, to set up "present.")*
 
@@ -1018,7 +1014,7 @@ MADA writes a second word.
 RIGHT (the left pane steps down a rung and holds, so the lighthouse always plays beside Mas's pane): `[M]` At a desk by the lamp, MARIO writes without looking up. EKIEL stands in front of him in his new lanyard.
 
 **MARIO** *(still writing; to Ekiel, warm and precise)*\
-Ekiel. Come in, sit. I read your thread last night, twice, and I've made some notes. `[INVENTED]`
+Come in, Ekiel, sit down. I read your thread last night, twice, and I've made some notes. `[INVENTED · draft 5.4: was "Ekiel. Come in, sit.": a name as its own sentence, which a stock voice stops dead on]`
 
 **EKIEL** *(squinting)*\
 You annotated my resignation? `[INVENTED]`
@@ -1036,8 +1032,8 @@ A scroll drops down the stairwell. The right pane pans with it down the spiral, 
 **EKIEL**\
 That's the brief one? `[INVENTED]`
 
-**MARIO**\
-That's the brief one. The long one's holding up the lighthouse. I do have one concern. `[INVENTED · draft 5.1: "That's the summary." was Ep3's "That was the executive summary." a week early; Ep3 keeps its line, and this one pays off the lighthouse of stacked essays]`
+**MARIO** *(setting his pen down for the first time)*\
+That's the brief one. It'd be shorter, but I have one concern. `[INVENTED · draft 5.1: "That's the summary." was Ep3's "That was the executive summary." a week early. Draft 5.4: was "That's the brief one. The long one's holding up the lighthouse. I do have one concern." The insider read found three length jokes in a row ("Four pages.", the scroll, the lighthouse) on top of Ep1's memo, addendum, footnote and appendix, and the naturalness read found no bridge into the concern. The lighthouse line goes (the stacked essays still show it), and the length joke becomes the bridge: the document is long because of the concern. "I have one concern." stays his one clean use]`
 
 `[MCU]` (inside the right pane; the left pane holds beside it, stepped down, with Mas in it) Mario, finger up.
 
@@ -1049,7 +1045,7 @@ It's that we might win. `[INVENTED · his roast for the episode: the fear and th
 *Egg: on the desk, an op-ed clipping with the byline `NELEH & THE QUIET VOTE (CAMERA OFF)`.*
 
 ### 19. INT. NOPEAI LOBBY — DAY · JUN 10, 2024 · [BASE]
-`⏱ 18:10 → 20:25 (2:15, F2.1 inside) · I + S2 + F · ANCHOR 4 · home room · meter: the gate`
+`⏱ 17:58 → 20:17 (2:19, F2.1 inside) · I + S2 + F · ANCHOR 4 · home room · meter: the gate`
 
 `MUSIC: LEVERAGE continues, the quartet alone, under the keynote's own walk-on music on the wall screen (an original media bed, diegetic and low) · F2.1: the quartet holds a pedal under the cassette-piano and boom-bap tier · the garden: the same quartet turns into the garden-party arrangement (never a wedding march), thinning to one violin under the V.O. · on the gate's shut it drops to the cello's pedal and carries into sc 20`
 `ROOM TONE: the lobby at a watch party: beanbags, a hundred people half-listening`
@@ -1071,7 +1067,7 @@ Compute. `[INVENTED]`
 Got it. And the second biggest? `[INVENTED]`
 
 **GERG** *(cheerful, literal; still typing)*\
-Compute. Different compute. One lot trains the next model, and the other lot keeps this one talking. `[INVENTED · no figures; training against running the model, said as a build status. Draft 5.3: a whole sentence about the build in the middle of her ladder, so the exchange is a conversation before the cheer cuts it off]`
+Compute. Different compute. Some of it trains the next model, and the rest keeps this one talking. `[INVENTED · no figures; training against running the model, said as a build status. Draft 5.3: a whole sentence about the build in the middle of her ladder, so the exchange is a conversation before the cheer cuts it off. Draft 5.4: was "One lot trains the next model, and the other lot keeps this one talking.": "lot" is British, and Gerg isn't (the naturalness read)]`
 
 **HARAS** *(writing both on her tape; then, pleasantly, the real one)*\
 And profit— `[INVENTED · the hard question, after the easy ones]`
@@ -1105,14 +1101,14 @@ i heard. `[INVENTED]`
 You ever miss being up there? `[INVENTED · draft 5.3: a real question, where draft 5.2's "You were up on one of those stages once. Before any of us." told Mas what both already knew (R21). It points at facts row 55 without explaining it; F2.1 does]`
 
 **MAS** *(eyes still on the phone)*\
-once. they let me hold the clicker. `[INVENTED · he answers the fact, not the feeling: "once." is how many times he was up there, and it leaves "miss" a question. "let me": the want to be asked, never said. It's about his own 2008 walk-on and claims no feeling about this keynote; the flashback's picture, where he takes the clicker, quietly corrects him]`
+i was up there once. they let me hold the clicker. `[INVENTED · he answers the fact, not the feeling, and leaves "miss" a question. Draft 5.4: was "once. they let me hold the clicker.": after "You ever miss being up there?", a bare "once." is heard as "I missed it once" (the naturalness read); "i was up there once." says it's the count. "let me": the want to be asked, never said. It's about his own 2008 walk-on and claims no feeling about this keynote; the flashback's picture, where he takes the clicker, quietly corrects him]`
 
 *(Draft 5.3: the episode's only co-founder beat, and Act Four's only talk to Mas, plays as a conversation now, ≈ 25 s in the held two-shot instead of ≈ 13 s. Gerg pushes three times, each time closer to the thing he's asking; Mas answers every time, shorter each time until the last, which is his longest line of the scene.)*
 
 `[POV]` A push from the two-shot into his phone, full-bleed. On it, a dotted line draws itself across the stream's stage in a few quick strokes: a GPS breadcrumb in colours older than the phone, crossing the boards he once stood on. *(Draft 5.2: Gerg hands us into the flashback through talk, so the breadcrumb only has to finish the move, and it's shorter.)*
 
 > #### FLASHBACK F2.1 — SEP 2006 → JUN 9, 2008 · [EARLY-WEB16 · POV rim MAS cyan]
-> `⏱ 19:28 → 19:40 (0:12) · F · the 2006 corner is new; the 2008 frame is the intro's own stage, held 2 s`
+> `⏱ 19:18 → 19:30 (0:12) · F · the 2006 corner is new; the 2008 frame is the intro's own stage, held 2 s`
 >
 > `[W]` EXT. STREET CORNER — DAY · SEP 2006. A TSOOB phone ad, in 16 colours with ordered dither. YOUNG MAS holds up a flip phone and grins; a GPS pin bobs over his head. The ad's end card slams in: TSOOB's tagline, `"WHERE YOU AT?"` [V · TSOOB's 2006 tagline].
 >
@@ -1128,11 +1124,11 @@ once. they let me hold the clicker. `[INVENTED · he answers the fact, not the f
 
 *Phrase 3.* `[2S]` (held; no cut-ins until the gate) Outside the hedge: Mas, screen-left, phone in hand, watching the bubble's raised hand go down the row. A few feet along the same hedge, screen-right, RADNUS's head rises into frame, polite, on the outside too. He gives the gate a small wave, then turns to Mas.
 
-**RADNUS** *(to Mas, along the hedge; politely on fire)*\
-Lovely garden. Congratulations to them. `[INVENTED · said to Mas, two rivals shut out together, rather than to nobody]`
+**RADNUS** *(to Mas, along the hedge; quick and apologetic, politely on fire)*\
+Lovely garden. I see they let your chatbot in. `[INVENTED · said to Mas, two rivals shut out together, rather than to nobody. Draft 5.4: was "Lovely garden. Congratulations to them.", which repeated Ep1 sc 13's congratulation between the same two men and was stiff said to the man beside you (the naturalness read, high). It claims nothing beyond the integration on screen]`
 
 **MAS** *(not looking away from the row)*\
-thank you. `[INVENTED · draft 5.3: he takes a congratulation meant for "them", gracious and slightly wrong, a beat before the gate shuts on him. It rhymes with sc 14, where he congratulates Bukaj and gets "Thank you." back. It claims no deal terms and no feeling. For the guardrails owner (open question #34); fallback: he says nothing and doesn't look away, as in draft 5.2]`
+as a guest. `[INVENTED · draft 5.4 (was "thank you."): the wristband on the bubble's tail reads GUEST, and his own framed GUEST lanyard from Ep1 hangs in the dark room (sc 23), so he corrects the rival with the fine print, and the gate shutting on him a beat later is the rest of it. It claims no deal terms and no feeling. For the guardrails owner (open question #34); fallback: he says nothing and doesn't look away, as in draft 5.2]`
 
 In the same two-shot, RADNUS's polite smile holds a beat too long.
 
@@ -1144,13 +1140,13 @@ they ask first in there.
 The garden folds back into the phone in three held steps.
 
 ### 20. INT. NOPEAI LOBBY / INT. ZAI LOBBY — SPLIT — JUN 10 → JUN 11, 2024 · [BASE]
-`⏱ 20:25 → 21:02 · I · home rooms · the split carries us out of the watch party the same day, so the dates only run forward · R15's small scheme`
+`⏱ 20:17 → 20:54 · I · home rooms · the split carries us out of the watch party the same day, so the dates only run forward · R15's small scheme`
 
 `MUSIC: LEVERAGE's cello pedal carries over from the garden · the muted 808 returns under zAI's industrial drone (its room tone) · NOLE's lamp click and his short fanfare are the only motifs · the THUD ends the performance: a hard cut to white`
 `ROOM TONE: left, the lobby's cheer dying down; right, a high, cold warehouse`
 `AXIS: LEFT pane, the NopeAI lobby: Mas at the back, screen-left. RIGHT pane, the zAI lobby: the cage at the doors, at the bottom of the pane; the landing four floors up, at its top right.`
 
-`[W]` SPLIT (base setup: the split stays open through the whole scene, so the zAI side always plays beside Mas's pane; cut-ins inside the right pane: the caller-ID `[ECU]`, Nole's `[MCU]`, the missed-call `[ECU]` and the `[LOW]` up the stairwell). LEFT PANE: in the NopeAI lobby, Mas pockets his phone and leaves his hand in the pocket. RIGHT PANE: the zAI lobby, the same day. Down at its doors stands a brand-new birdcage, the Faraday cage, empty, its shipping tag still on. From the rafters hangs a banner that has clearly been up a while: `KORG 5: NEXT QUARTER`. NOLE stands at the cage with his staff gathered round. His post lamp clicks on beside him, and his post pops up in its own UI:
+`[W]` SPLIT (base setup: the split stays open through the whole scene, so the zAI side always plays beside Mas's pane; cut-ins inside the right pane: the caller-ID `[ECU]`, Nole's `[MCU]`, the missed-call `[ECU]` and the `[LOW]` up the stairwell). LEFT PANE: in the NopeAI lobby, Mas pockets his phone and leaves his hand in the pocket. RIGHT PANE: the zAI lobby, the same day. Down at its doors stands a brand-new birdcage, the Faraday cage, empty, its shipping tag still on. From the rafters hangs a banner that has clearly been up a while: `KORG 2: NEXT QUARTER` *(draft 5.4: was `KORG 5`; in Jun 2024 the promised next version was Grok 2 (the facts review), and "next quarter" is the joke either way)*. NOLE stands at the cage with his staff gathered round. His post lamp clicks on beside him, and his post pops up in its own UI:
 
 ON SCREEN (NOLE's post): `…an unacceptable security violation… stored in a Faraday cage` [K]† (his Jun 10 posts, memory; pull them, then [P])
 
@@ -1176,7 +1172,7 @@ When the rail clears, a sticky note has appeared on top of the stack: `(FOR NOW)
 *Draft 3's fog studio and G7. RUMPT's fog fragments now play in the tag, as a replay on Mas's monitor; the pope is cut (the season's Pope budget, loose-ends). Sc 20's THUD cuts straight to the white.*
 
 ### 22. EXT. ISS — THE WHITE ROOM — DAY · JUN 19, 2024 · [BASE]
-`⏱ 21:02 → 21:31 · I + S2 · THE RESOLUTION · lit UI 2 of 2 (4 s) · the one-on-one: Mas and Alyi's reflection, played silent (a designed quiet scene: Alyi never speaks to him, so the pass leaves it wordless)`
+`⏱ 20:54 → 21:23 · I + S2 · THE RESOLUTION · lit UI 2 of 2 (4 s) · the one-on-one: Mas and Alyi's reflection, played silent (a designed quiet scene: Alyi never speaks to him, so the pass leaves it wordless)`
 
 `MUSIC: DARK ROOM enters on the pin: sparse, one piano note per phrase, ALYI's choir chord under the reflection · the lock's click plays in room tone only (a designed stop) · the cue returns under the IOU and resolves, no sting`
 `ROOM TONE: an empty lot, a faint high wind`
@@ -1191,7 +1187,7 @@ DOORMAT: `NO`
 
 `[W]` Mas walks up from frame-left. He never runs. He wipes his feet on the `NO`. THE ORB scans the cube and toasts nothing: it can't verify a door.
 
-The band lights for four seconds. UI: `Use IOU: 20% COMPUTE on door`. Mas slides the note under the door. The band goes dark.
+The band lights for four seconds. UI: `Use IOU: 20% COMPUTE on door`. The inventory item's tag shows under the sentence line: `PLEDGED JUL 2023 · NEVER DELIVERED (REPORTED)` [V · Fortune, May 21, 2024, on anonymous current and former staff, hence `(REPORTED)`] *(draft 5.4: moved here from sc 14, whose May 15–17 came before the report; the unkept promise is now told once, at the door it was meant for)*. Mas slides the note under the door. The band goes dark.
 
 `[OTS]` (one frame for the reflection and the lock) Over Mas's shoulder onto the door's brass plate. In it, ALYI's reflection faces Mas for exactly one beat. It's the first time all episode he has faced him. On the same shot, inside, a lock turns: the softest click in the show.
 
@@ -1204,7 +1200,7 @@ The band lights for four seconds. UI: `Use IOU: 20% COMPUTE on door`. Mas slides
 ---
 
 ## TAG — AUGUST
-`⏱ 21:31 → 22:43 (1:12) · one surface: the dark-room monitor · the rail rolls like the launch-night odometer, one date per beat, stopping only where a record item lands · meters: ORB VERDICTS (G07), THE PODIUM (P01)`
+`⏱ 21:23 → 22:35 (1:12) · one surface: the dark-room monitor · the rail rolls like the launch-night odometer, one date per beat, stopping only where a record item lands · meters: ORB VERDICTS (G07), THE PODIUM (P01)`
 
 ### 23. INT. THE DARK ROOM — NIGHT · JUL–AUG 2024 · [BASE]
 
@@ -1229,7 +1225,7 @@ The balloon bobs against the fog.
 
 `[POV]` The rail wakes and rolls to `JUL 8`. NEDIB's EO 14110 scroll hangs on a wall. RUMPT's HANDS slide a plank stenciled `PLATFORM` into frame, and it tears the scroll's corner off.
 
-`[GFX]` QUOTE CARD: `JUL 8 · "We will repeal EOJ NEDIB's dangerous Executive Order…"` [P] [2 BARS]
+`[GFX]` QUOTE CARD: `"We will repeal EOJ NEDIB's dangerous Executive Order…"` / `— THE PARTY PLATFORM · JUL 8, 2024` [P] [2 BARS] *(Draft 5.4, the facts review: the card had a date and no attribution, and with RUMPT's hands carrying the plank the platform read as his own words; guardrails §4's dated quote card carries an attribution line. 89 characters read in ≈ 4.7 s, inside the 2 bars (5 s).)*
 
 `[OTS]` Mas at the monitor, watching, a bar after the card clears. *(Draft 5.2: the over-the-shoulder, not an `[MCU]`: no hold on his face right after a real quote card, R11.)*
 
@@ -1250,7 +1246,7 @@ ON SCREEN (the HTURT window, his words and marks): `…and she 'A.I.'d' it…` [
 
 [BASE] TOAST: `verified: human (all of them)` *(Toast 3 of 3.)* It floats back to his shoulder. Mas doesn't move.
 
-`[POV]` The rail rolls to `AUG 16 · ISOLEP` [P]. A single egg sits on a copy of a bill. A hand in a suit sleeve pats it on the head, and a tag pops up: `"WELL-INTENTIONED"`. Then it nudges the egg off the bill: `"ILL INFORMED"` [P · her Aug 16, 2024 statement]. The egg hits the floor and hatches on impact.
+`[POV]` The rail rolls to `AUG 16 · ISOLEP` [P]. A single egg sits on a copy of a bill. A hand in a suit sleeve pats it on the head, and a tag pops up: `"well-intentioned"`. Then it nudges the egg off the bill: `"ill informed"` [P · her Aug 16, 2024 statement, which has both in lowercase ("…is well-intentioned but ill informed."); draft 5.4 lowercases the tags, which were in capitals, because guardrails §4 keeps a written source's casing (the facts review)]. The egg hits the floor and hatches on impact.
 
 Out of the shell comes a hydra with a single head, labeled `1047`. It looks at her hand, looks left, looks right, and swallows, nervous. PLATE: `RENEIW'S BILL · CALIFORNIA AI SAFETY · HEADS: 1`.
 
@@ -1267,7 +1263,7 @@ Very scary. `[INVENTED]`
 
 **HOOK** [≤ 5 s]. `[POV]` The balloon's string goes taut, as if someone on the far side of the podium had just taken hold of it. CUT TO BLACK.
 
-**END OF EPISODE** · credits 22:43 → 23:26
+**END OF EPISODE** · credits 22:35 → 23:18
 
 ---
 ---
@@ -1276,7 +1272,7 @@ Very scary. `[INVENTED]`
 
 ## 1. Runtime and clock
 
-Planned, not measured: nothing in drafts 5 to 5.3 has been read aloud, recorded or timed, and the takes and a stick-figure reel replace every number. Runtime is an outcome ([flow-and-continuity §6](../../bible/flow-and-continuity.md#6-runtime); [pacing-model](../../format/pacing-model.md) L10): nothing here was cut to hit a number, and nothing was padded.
+Planned, not measured: nothing in drafts 5 to 5.4 has been read aloud, recorded or timed, and the takes and a stick-figure reel replace every number. Runtime is an outcome ([flow-and-continuity §6](../../bible/flow-and-continuity.md#6-runtime); [pacing-model](../../format/pacing-model.md) L10): nothing here was cut to hit a number, and nothing was padded.
 
 **How draft 5 was timed.** Draft 4's page timer stands for the picture. On top of it, each scene gets the change in speech time, from a word count of every voiced line in both drafts at the per-character turn paces in Ep1's [voice diagnosis §4.2](../ep01/production/act4/voice-diagnosis-v4.md) (Mas 145 words a minute, Gerg 187, Terb 175, Nole 175 (loud and fast), Rima 150, Tasya 135, XEL 120, the one-line voices 160), plus 0.4 s of pickup per line. Where talk replaces text (the Mar 8 rail, THE PLAN's stamps, Ekiel's post), the text's read time is taken back out. Sc 8 loses 4 s of business. The talk adds about **+2:35 of speech**, and the net is **+2:24 of story**.
 
@@ -1291,40 +1287,42 @@ Net: **+2:11 of story** (−0:13 of business against +2:26 of speech, with each 
 
 **How draft 5.3 was timed.** The same counter and paces, on top of draft 5.2's timer (the counter is printed in the [scene-craft log](#revision-log-scene-craft-pass-2026-09-26); the [final pass's log](#revision-log-final-pass-2026-09-26-draft-53) has the per-scene ledger). Speech moves **+0:14** (≈ 8:44 → ≈ 8:58): the watch party's new talk (+9.6 s), the reporter's orientation (+3.7 s), Rima's straight answer (+3.2 s), Nole's "Keep that too." and Terb's "independent" (+0.4 s), less Terb's paraphrase (−1.7 s) and the engineer's shorter film line (−0.7 s). Business moves **≈ −0:07**: the séance's pun toast (−2 s), the Forecaster's shorter card and the 70 → 71 clipboard (−2.25 s), sc 14's rail (−1 s), Nole's look at the complaint (−1 s), the reporter's line riding the hill's opening picture (−2 s), against Gerg's and Radnus's held beats (+1.2 s) and Terb's hand round the table (+0.5 s). Net: **+0:09 of story** (14.5 s − 6.6 s is 7.9 s; the scene nets, each rounded, sum to +0:09).
 
+**How draft 5.4 was timed.** The same counter and paces, on top of draft 5.3's timer (the [dialogue pass 5 log](#revision-log-dialogue-pass-5-2026-09-26) has the per-scene ledger). Speech moves **≈ −0:00** (≈ 8:58 → ≈ 8:58): RUMPT's two Feb 2 fragments leave the voice track for the chyron (−4.9 s), Mas's "…anyone?" goes with the unsent ghost (−0.8 s) and Mario's bridge is shorter (−1.1 s), against the watch party's fuller lines (+3.6 s: Radnus, Mas's "i was up there once.", Gerg's "Some of it…"), the Humanist's two lines (+1.1 s), the Forecaster's (+0.8 s) and Gerg's "your old emails" and Terb's lead-in (+1.0 s). Business moves **≈ −0:08**: the unsent ghost (−5.2 s), the ELPPA memo (−4 s), the lower third's type-on in place of the voiced fragments (+3.9 s), and the shorter rail on the Humanist's key (−1.7 s) and IOU tag in sc 14 (−1.4 s). The IOU's `NEVER DELIVERED (REPORTED)` in sc 22, the TPOOL login screen and the Jul 8 card's attribution read inside picture that was already running. Net: **−0:08 of story** (−0.3 s − 8.4 s is −8.7 s; the scene nets, each rounded, sum to −0:08).
 
-| Runtime | Segment (sc) | Story | Draft 5.2 | Draft 4 | What the audience holds | Season-revision beats |
+
+| Runtime | Segment (sc) | Story | Draft 5.3 | Draft 4 | What the audience holds | Season-revision beats |
 |---|---|---|---|---|---|---|
 | 0:00–1:12 | Cold open: the mammoth, "Which sentence?", "Our first review.", the thuds talked through ("The mammoth's on four."), the suit, the flyer (1) | 1:12 | 1:12 | 0:57 | Something big is coming through the door | Style moment (proposed) · W2.1 (plant) · PP2.1 |
 | 1:12–1:44 | Intro and card | — | — | — | — | — |
-| 1:44–2:15 | The balloon on the hill, with the reporter's two questions ("…get back on the trail.") (2) | 0:31 | 0:29 | 0:22 | A candidate afraid of AI | — |
-| 2:15–5:27 | **THE EMAIL SÉANCE**: Nole's case ("It was supposed to be open."), OPEN → NOPE, the ghosts' rebuttal, "You kept them.", F2.3 (4:28–4:44), "You sat at the back.", "Keep that too. See you in court.", the independent review read to the table, Mada among the listeners (4) | 3:12 | 3:14 | 2:30 | Nole's case against his own inbox | V.O. 1 |
-| 5:27–7:15 | XEL's mic, from his real first question to "i love alyi." and `PART 1 OF 6` (6) | 1:48 | 1:48 | 1:10 | Where is Alyi? What is he to Mas? The mic grows | — |
-| 7:15–8:04 | The cross-section: "Don't mind me…" to the landlord in the doorway, Tasya's tour, "We keep a spare."; act-out 1, "A tenant." (7) | 0:49 | 0:49 | 0:27 | Who owns the building | — |
-| 8:04–8:17 | His monitor: Europe swiped away, the lineup (8) | 0:13 | 0:13 | 0:17 | He watches himself roasted | — |
-| 8:17–9:20 | Backstage: "Before I've asked.", "is it ready?", "it's all yours." / "It is. Enjoy the view.", "Then it freezes live, and I keep talking." (9) | 1:03 | 1:00 | 0:32 | Is it ready? Whose demo is it? | — |
-| 9:20–10:23 | **THE PLAN: OMNI**, voiced by Rima, the voice "in the coming weeks" (10) | 1:03 | 1:03 | 0:44 | How the launch is meant to go | — |
-| 10:23–12:17 | **"her" ECLIPSES THE DEMO**, with Rima steering it (11) | 1:54 | 1:54 | 1:29 | The spotlight sliding off Rima | — |
-| 12:17–12:33 | The empty seat; the midpoint (12) | 0:16 | 0:16 | 0:16 | The chief scientist's chair | V.O. 2 |
-| 12:33–13:04 | The flyers, "leave them up."; Congress on the lobby TV (13) | 0:31 | 0:31 | 0:16 | Where is Alyi? | — |
-| 13:04–14:02 | **WHERE'S ALYI?** point-and-click; Bukaj's "schedule" (14) | 0:58 | 0:59 | 0:50 | Reflections, a door, a greyed option | — |
-| 14:02–14:48 | Alyi's office, TPOOL, F2.2 (14:16–14:41) (15) | 0:46 | 0:46 | 0:44 | He is looking for him | — |
-| 14:48–16:50 | **THE NDA ACROSS THE BAY BRIDGE**: the pen first, "Here's where I am." / "take your time." / "I already took it."; then the forecast, the apology and the driver; the storm; act-out 2 on the greyed `Hey.` (17) | 2:02 | 2:04 | 1:53 | What silence costs; the lost voice; Alyi's pin | — |
-| 16:50–18:10 | The lanyard split: "Who checks it? … We do." / "present." / "also present."; Mario's notes on the resignation (18) | 1:20 | 1:21 | 0:39 | Who checks the safety work? | O2.2 |
-| 18:10–20:25 | **THE WATCH PARTY**: HARAS and Gerg's "different compute", Gerg's one look-up and "You ever miss being up there?", F2.1 (19:28–19:40), the garden, Mas's "thank you." (19) | 2:15 | 2:04 | 1:55 | The stage he used to stand on | V.O. 3 |
-| 20:25–21:02 | The cage split, held open; the missed call; the dropped suit (20) | 0:37 | 0:38 | 0:32 | Pocket dial or play? | — |
-| 21:02–21:31 | **THE WHITE ROOM** (22) | 0:29 | 0:29 | 0:29 | Will Alyi face him? | — |
-| 21:31–22:43 | Tag: the fog replay, the monitor run, the button, the hook (23) | 1:12 | 1:12 | 1:08 | Fear as a valuation | V.O. 4 |
-| 22:43–23:26 | Credits | — | — | — | — | — |
-| | **Story ≈ 22:11** | | **≈ 22:02** | **≈ 17:10** | | |
+| 1:44–2:14 | The balloon on the hill, with the reporter's two questions ("…get back on the trail.") and the real fragments on the broadcast's lower third (2) | 0:30 | 0:31 | 0:22 | A candidate afraid of AI | — |
+| 2:14–5:21 | **THE EMAIL SÉANCE**: Nole's case ("It was supposed to be open."), OPEN → NOPE, the ghosts' rebuttal, "You kept them." / "we keep everything." and the candle, F2.3 (4:22–4:38), "You sat at the back.", "Keep that too. See you in court.", the independent review read to the table, Mada among the listeners (4) | 3:07 | 3:12 | 2:30 | Nole's case against his own inbox | V.O. 1 |
+| 5:21–7:09 | XEL's mic, from his real first question to "i love alyi." and `PART 1 OF 6` (6) | 1:48 | 1:48 | 1:10 | Where is Alyi? What is he to Mas? The mic grows | — |
+| 7:09–7:57 | The cross-section: "I'm just moving in downstairs…" to the landlord in the doorway, Tasya's tour, "We keep a spare."; act-out 1, "A tenant." (7) | 0:48 | 0:49 | 0:27 | Who owns the building | — |
+| 7:57–8:06 | His monitor: Europe swiped away, the lineup (8) | 0:09 | 0:13 | 0:17 | He watches himself roasted | — |
+| 8:06–9:09 | Backstage: "Before I've asked.", "is it ready?", "it's all yours." / "It is. Enjoy the view.", "Then it freezes live, and I keep talking." (9) | 1:03 | 1:03 | 0:32 | Is it ready? Whose demo is it? | — |
+| 9:09–10:12 | **THE PLAN: OMNI**, voiced by Rima, the voice "in the coming weeks" (10) | 1:03 | 1:03 | 0:44 | How the launch is meant to go | — |
+| 10:12–12:06 | **"her" ECLIPSES THE DEMO**, with Rima steering it (11) | 1:54 | 1:54 | 1:29 | The spotlight sliding off Rima | — |
+| 12:06–12:22 | The empty seat; the midpoint (12) | 0:16 | 0:16 | 0:16 | The chief scientist's chair | V.O. 2 |
+| 12:22–12:53 | The flyers, "leave them up."; Congress on the lobby TV (13) | 0:31 | 0:31 | 0:16 | Where is Alyi? | — |
+| 12:53–13:50 | **WHERE'S ALYI?** point-and-click; Bukaj's "schedule"; the IOU, `PLEDGED JUL 2023` (14) | 0:57 | 0:58 | 0:50 | Reflections, a door, a greyed option | — |
+| 13:50–14:36 | Alyi's office, TPOOL (`welcome back, mas`), F2.2 (14:04–14:29: the 2022 party, then the 2023 fire) (15) | 0:46 | 0:46 | 0:44 | He is looking for him | — |
+| 14:36–16:39 | **THE NDA ACROSS THE BAY BRIDGE**: the pen first, "Here's where I am." / "take your time." / "Already did."; then the forecast, the apology and the driver; the storm; act-out 2 on the greyed `Hey.` (17) | 2:03 | 2:02 | 1:53 | What silence costs; the lost voice; Alyi's pin | — |
+| 16:39–17:58 | The lanyard split: "Who checks it? … We do." / "present." / "also present."; Mario's notes on the resignation, "It'd be shorter, but I have one concern." (18) | 1:19 | 1:20 | 0:39 | Who checks the safety work? | O2.2 |
+| 17:58–20:17 | **THE WATCH PARTY**: HARAS and Gerg's "different compute", Gerg's one look-up and "You ever miss being up there?" / "i was up there once…", F2.1 (19:18–19:30), the garden, Radnus's "I see they let your chatbot in." / "as a guest." (19) | 2:19 | 2:15 | 1:55 | The stage he used to stand on | V.O. 3 |
+| 20:17–20:54 | The cage split, held open; the missed call; the dropped suit (20) | 0:37 | 0:37 | 0:32 | Pocket dial or play? | — |
+| 20:54–21:23 | **THE WHITE ROOM**: the IOU's `NEVER DELIVERED (REPORTED)` at the door (22) | 0:29 | 0:29 | 0:29 | Will Alyi face him? | — |
+| 21:23–22:35 | Tag: the fog replay, the monitor run, the button, the hook (23) | 1:12 | 1:12 | 1:08 | Fear as a valuation | V.O. 4 |
+| 22:35–23:18 | Credits | — | — | — | — | — |
+| | **Story ≈ 22:03** | | **≈ 22:11** | **≈ 17:10** | | |
 
-- **Against draft 5.2: +0:09.** The watch party grows most (+0:11: Gerg's build sentence and the co-founder exchange), then backstage (+0:03) and the hill (+0:02); the séance, the bridge, sc 14, the split and the cage each give back a second or two. Draft 5.1 → 5.2 was +2:11 (the scene-craft log's ledger). **Against draft 4:** +5:01. **Expect the takes to move this either way:** a model like this runs short when readers leave natural pauses, and long if the synthetic voices read fast.
-- **Split halves:** the A-half (cold open → sc 12) is ≈ 12:01 of story; the B-half is ≈ 10:10.
-- **Against the format.** The pacing model's 22:00 frame carries 20:45 of story, with movements flexing ±0:45 ([pacing-model §3](../../format/pacing-model.md#3-the-22-minute-template-primary)). At ≈ 22:11 of story (≈ 23:26 with the intro, card and credits), the episode runs ≈ 1:26 past that frame.
-  - By movement: Act One (1:44–8:04, 6:20) is the long one, over its 4:15–5:15 flex; Acts Two to Four sit inside theirs (4:29, 4:17 and 4:41). **The reel tests Act One first** (§9 now starts there).
-  - The S3 (sc 17, 14:48–16:50) sits at 63–72% of runtime, the front edge of the 65–85% window.
-  - Runtime stays an outcome, and the stick-figure reel decides. If the room wants the frame back, §9 lists whole beats worth ≈ 1:41, Act One's first, never words from lines.
-- **Laughs:** about 150 designed in draft 4, plus draft 5's and 5.1's small ones. Draft 5.2 adds more small ones inside the new talk: "Our first review.", "The mammoth's on four.", "I paid for the ceiling I just came through.", "Even the furniture knows.", "…and the stream can't see you.", "It is. Enjoy the view.", "leave them up.", "also present.", "You annotated my resignation?" / "Lightly. Four pages.", "We checked." on the glint, "I don't forecast that far.", "the phone's closer.". Draft 5.3 adds "Keep that too.", "Then it freezes live, and I keep talking.", "the other lot keeps this one talking.", "Half the lobby's standing on a beanbag." and Mas's "thank you." to Radnus, and cuts one (the `ghost → post` pun toast). This is my count from the page, and nobody has laughed at them yet. The density stays well above 3 a story minute.
-- **Speech share:** ≈ 8:58 of speech in ≈ 22:11 of story, about 40% (draft 5.2: 40%; draft 5.1: about 32%). Mas has about 14% of the speech time (74 s of 538).
+- **Against draft 5.3: −0:08.** The séance gives back most (−0:05, the unsent ghost), then the monitor (−0:04, the memo), and the hill, the cross-section, sc 14 and the lanyard split a second each; the watch party grows (+0:04: Radnus's new line, "i was up there once.", "as a guest.") and the bridge by a second. Draft 5.2 → 5.3 was +0:09 (the final pass's ledger). **Against draft 4:** +4:53. **Expect the takes to move this either way:** a model like this runs short when readers leave natural pauses, and long if the synthetic voices read fast.
+- **Split halves:** the A-half (cold open → sc 12) is ≈ 11:50 of story; the B-half is ≈ 10:13.
+- **Against the format.** The pacing model's 22:00 frame carries 20:45 of story, with movements flexing ±0:45 ([pacing-model §3](../../format/pacing-model.md#3-the-22-minute-template-primary)). At ≈ 22:03 of story (≈ 23:18 with the intro, card and credits), the episode runs ≈ 1:18 past that frame.
+  - By movement: Act One (1:44–7:57, 6:13) is the long one, over its 4:15–5:15 flex; Acts Two to Four sit inside theirs (4:25, 4:17 and 4:44). **The reel tests Act One first** (§9 starts there).
+  - The S3 (sc 17, 14:36–16:39) sits at 63–71% of runtime, the front edge of the 65–85% window.
+  - Runtime stays an outcome, and the stick-figure reel decides. If the room wants the frame back, §9 lists whole beats worth ≈ 1:36, Act One's first, never words from lines.
+- **Laughs:** about 150 designed in draft 4, plus draft 5's and 5.1's small ones. Draft 5.2 adds more small ones inside the new talk: "Our first review.", "The mammoth's on four.", "I paid for the ceiling I just came through.", "Even the furniture knows.", "…and the stream can't see you.", "It is. Enjoy the view.", "leave them up.", "also present.", "You annotated my resignation?" / "Lightly. Four pages.", "We checked." on the glint, "I don't forecast that far.", "the phone's closer.". Draft 5.3 adds "Keep that too.", "Then it freezes live, and I keep talking.", "Compute. Different compute.", "Half the lobby's standing on a beanbag." and Mas's answer to Radnus, and cuts one (the `ghost → post` pun toast). Draft 5.4 changes two: Mas's answer to Radnus is now "as a guest." (the wristband's fine print), and the Forecaster's "Seventy percent…" is now "It's the one thing I didn't need a number for."; it cuts the unsent ghost and its "…anyone?". This is my count from the page, and nobody has laughed at them yet. The density stays well above 3 a story minute.
+- **Speech share:** ≈ 8:58 of speech in ≈ 22:03 of story, about 41% (drafts 5.2 and 5.3: 40%; draft 5.1: about 32%). Mas has about 14% of the speech time (76 s of 538).
 
 ## 2. The V.O. map
 
@@ -1334,7 +1332,7 @@ Four lines, 18 words, in Acts One, Two and Four plus the tag. Each is small word
 |---|---|---|---|---|---|
 | 1 | 4 | i just ask the questions. | D2 | Three hands on the planchette, his among them | Invented beat; > 1 bar from the ghost captions; a claim about himself, not a stock denial |
 | 2 | 12 | people come back. i did. | D1 | The reflection turns away; the placard flips blank | ≥ 1 bar before the `ALYI LEAVES` rail |
-| 3 | 19 | they ask first in there. | D8 | Not caught: it's true (the bubble raised its hand and waited), and the gate shutting on him releases it | A beat after Mas's "thank you." to RADNUS (draft 5.3; it was a beat after RADNUS's line) and Radnus's held smile; no real line within a bar; the wristband no longer says it first |
+| 3 | 19 | they ask first in there. | D8 | Not caught: it's true (the bubble raised its hand and waited), and the gate shutting on him releases it | A beat after Mas's "as a guest." to RADNUS (draft 5.4; draft 5.3's "thank you."; before that, a beat after RADNUS's line) and Radnus's held smile; no real line within a bar; the wristband no longer says it first (it reads `GUEST`, which "as a guest." quotes; the V.O.'s "ask first" is still the first telling of the raised hand in words) |
 | 4 | 23 | just the news. | D1 | The news drops onto his desk from above frame, THUD | ≥ 1 bar after the quote card; the landing is the correction |
 
 - **Cut from the reel's 12:** 2.02 and 2.44 (cold open and button, where V.O. is out), 2.08 (inside a flashback that opens in Nole's rim), 2.11 (comments on his real denial), 2.18 (beside his real post), 2.21 (draft 3's "i wasn't looking for him.", cut in draft 4: his thumb already makes the joke), 2.22 (on the `NEVER DELIVERED (REPORTED)` IOU), **2.27 (claims what he knew at a real event: the plan's cut)**, 2.32 (replaced by line 3) and 2.39 (the white room plays silent). 2.20 survives as line 2, reworded.
@@ -1347,21 +1345,21 @@ Four lines, 18 words, in Acts One, Two and Four plus the tag. Each is small word
 |---|---|---|
 | The glass ≤ 3, one a test someone reads | 3: the thuds (sc 1; draft 5.2 puts the jumping coffee and the still water in one `[M]`) · Nole's slap (sc 4, the test; draft 5.2 puts the jumping flame and the still water in one `[ECU]`) · the rain (sc 17) | The two sips in sc 4 (F2.3's freeze, and his answer to "You sat at the back.") are one sip six years apart, not stillness gags |
 | Orb toasts ≤ 4, each a finding | 3: `…` (sc 11) · `2008` (sc 15) · `human (all of them)` (sc 23). Draft 5.3 cuts the séance's `ghost → post` pun, the likeliest corny beat and a third text inside 8 s | At the white room its silence is the verdict |
-| Name cards ≥ 45 s apart | 4: SELBEEP ≈ 0:27 · XEL ≈ 5:40 (now on his first hop) · EKIEL ≈ 13:44 · THE FORECASTER ≈ 15:00 (draft 5.3 clock) | Plates for YRREP, NOLE (new), THE HUMANIST (was a card), TRAWETS, BUKAJ, HARAS, MIT KOOC and RENEIW's bill; OMIS's nameplate. Each plate and card says what the person is to the story (draft 5.1: XEL's `INTERVIEWS MAS. AGAIN.`, THE FORECASTER's `EX-NOPEAI.`; draft 5.3: THE HUMANIST's plate is his job, `MACROSOFT'S NEW AI CHIEF`, so it no longer tells Tasya's button, and THE FORECASTER's card drops `HAS A DATE FOR EVERYTHING.`) |
-| Lit UI ≤ 2 | The search (0:53) · the white room (4 s) | |
+| Name cards ≥ 45 s apart | 4: SELBEEP ≈ 0:27 · XEL ≈ 5:34 (now on his first hop) · EKIEL ≈ 13:33 · THE FORECASTER ≈ 14:48 (draft 5.4 clock) | Plates for YRREP, NOLE (new), THE HUMANIST (was a card), TRAWETS, BUKAJ, HARAS, MIT KOOC and RENEIW's bill; OMIS's nameplate. Each plate and card says what the person is to the story (draft 5.1: XEL's `INTERVIEWS MAS. AGAIN.`, THE FORECASTER's `EX-NOPEAI.`; draft 5.3: THE HUMANIST's plate is his job, `MACROSOFT'S NEW AI CHIEF`, so it no longer tells Tasya's button, and THE FORECASTER's card drops `HAS A DATE FOR EVERYTHING.`) |
+| Lit UI ≤ 2 | The search (0:52) · the white room (4 s) | |
 | Mas's last word ≤ 1 scene in 3 | 0 scenes end on a Mas line | Every scene ends on the other side's move, the world or an image |
 | One crowd reaction per scene | Held; the demo's is the heads turning to the wings | The fogged glasses are one listener |
-| Catchphrases: one clean use, or they turn | "In plain English:" isn't spent in Ep2 (the lighthouse window and Mario's failed try are cut) · "I have one concern." turns on "we might win." · "super." isn't used (its spine is Ep1 → Ep9's SUPER → Ep11's `…super?`) · Gerg's lines are whole sentences about the build now ("It's a blog post…", "Same email address, though. I checked.", "Careful. The new one can hear you laugh…", "Compute." / "Compute. Different compute. One lot trains the next model…", "They just said our name up there…"), with no tic repeated · openers: "Welcome" is Tasya's alone (draft 5.1 took it from Mas, Mario and Terb); "Hi" is CHATGTP's alone, apart from the voice panel's samples (draft 5.2 takes it from the engineer and Haras); "Thank you." answers a congratulation only, twice as a rhyme: Bukaj's (sc 14) and Mas's lowercase "thank you." to Radnus (sc 19, draft 5.3) (draft 5.2 takes it from the Humanist and Mario as an opener); nobody opens with "Okay" (draft 5.1) · "present." climbs one rung to "also present." and stops · "Let me reframe that." (HARAS) once · "Updating." (THE FORECASTER) once · "is it ready?" turns Ep1's coda: Mas asks it now | GERG is sentence case throughout |
+| Catchphrases: one clean use, or they turn | "In plain English:" isn't spent in Ep2 (the lighthouse window and Mario's failed try are cut) · "I have one concern." turns on "we might win." · "super." isn't used (its spine is Ep1 → Ep9's SUPER → Ep11's `…super?`) · Gerg's lines are whole sentences about the build now ("It's a blog post…", "Same email address, though. I checked.", "Careful. The new one can hear you laugh…", "Compute." / "Compute. Different compute. Some of it trains the next model…", "They just said our name up there…"), with no tic repeated · openers: "Welcome" is Tasya's alone (draft 5.1 took it from Mas, Mario and Terb); "Hi" is CHATGTP's alone, apart from the voice panel's samples (draft 5.2 takes it from the engineer and Haras); "Thank you." answers a congratulation only, once: Bukaj's (sc 14) (draft 5.2 takes it from the Humanist and Mario as an opener; draft 5.4 takes Mas's "thank you." to Radnus, which was Ep1 sc 13's exchange between the same two men); nobody opens with "Okay" (draft 5.1); no line opens on a name or a "So" as its own sentence (draft 5.4) · "present." climbs one rung to "also present." and stops · "Let me reframe that." (HARAS) once · "Updating." (THE FORECASTER) once · "is it ready?" turns Ep1's coda: Mas asks it now | GERG is sentence case throughout |
 | Nole: one caps word, one quiet line, concrete threats | "ELSE" · "You kept them." · "Keep that too. See you in court." (draft 5.3: his exit picks up "we keep everything.") | The lamp *not* clicking on is his tell, and it plays once, after the ghost's "…Yup." (sc 4). Draft 5.3 cuts its second use (sc 20, "His lamp stays off."), which rode the real Jun 11 dismissal the morning after the missed call. Draft 5.2 gives him the scene's one speech (his case, 44 words, no caps), so the quiet line now falls from his highest point |
 | One direct confrontation, aimed at an invented wound | "You sat at the back." (sc 4, out of F2.3): he watched Nole leave and didn't move. Mas answers with the flashback's sip | **A guide bent:** Nole also gets "You kept them." / "we keep everything." (the scene's blow, ruled in by the facts pass). Two pointed exchanges in one scene, because the second pays the flashback, and Mas answers it without a word, so the shape doesn't repeat. "best view." (tone guide pattern 13) is the fallback |
 | One small scheme, set up and paid off with a prop | The pocketed phone (sc 20, left pane) → the caller ID in the cage → `MISSED CALL · MAS` | The question is never answered; draft 5.1's missed call means nothing was said on it, so it can't read as the cause of the next day's THUD |
-| Mas runs the room with questions in one anchor | The séance | Draft 5.2: his questions now play as a cross-examination. "spirit. what did we call it?" puts Nole's own word to the board right after Nole makes his case |
+| Mas runs the room with questions in one anchor | The séance | Draft 5.2: his questions now play as a cross-examination. "spirit, what did we call it?" (draft 5.4's comma) puts Nole's own word to the board right after Nole makes his case |
 | Boxed portraits | In-world only: the lobby TV (YRREP, the roadmap), the monitor feeds, the phones | |
-| GLYPH (Eps 1–3: 2–3 uses, ≤ 3 s) | CHATGTP's eyes (5 f) · ALYI's eyes (12 f) | |
-| Mas share (guide ≥ 70%) | ≈ 77% (est.) | The one flashback exit is F2.2 (0:25). Other stretches without him in frame: sc 2's hill (0:31, the intro's own world-space) and sc 7's basement two-shot (≈ 0:25, in his building, under his floor; the pan ends on him). **Draft 5.2 never closes sc 18's split:** Mario's last line is an `[MCU]` inside the right pane, beside Mas's pane (draft 5.1 went full frame for ≈ 0:03). **Draft 5.1 holds sc 20's split open too** (draft 5 closed it on Nole's pane for ≈ 0:20, an unsignposted step outside Mas's POV, per the facts critic), so the cage and its call play beside Mas with his hand in his pocket. Draft 3's claim that F2.2 was the only exit was wrong; the Mas-less inserts it didn't count (sc 5, 16, 21) are gone |
+| GLYPH (Eps 1–3: 2–3 uses, ≤ 3 s) | CHATGTP's eyes (5 f) · the racks' token light across the party in F2.2 (12 f) | Draft 5.4: F2.2's glyph was ALYI's eyes turning to token streams; the facts review flagged a possible mental-health reading of his mysticism (guardrails §6), so it plays on the room and his face stays a plain silhouette. The eyes shot is the fallback if the guardrails owner clears it |
+| Mas share (guide ≥ 70%) | ≈ 77% (est.) | The one flashback exit is F2.2 (0:25). Other stretches without him in frame: sc 2's hill (0:30, the intro's own world-space) and sc 7's basement two-shot (≈ 0:25, in his building, under his floor; the pan ends on him). **Draft 5.2 never closes sc 18's split:** Mario's last line is an `[MCU]` inside the right pane, beside Mas's pane (draft 5.1 went full frame for ≈ 0:03). **Draft 5.1 holds sc 20's split open too** (draft 5 closed it on Nole's pane for ≈ 0:20, an unsignposted step outside Mas's POV, per the facts critic), so the cage and its call play beside Mas with his hand in his pocket. Draft 3's claim that F2.2 was the only exit was wrong; the Mas-less inserts it didn't count (sc 5, 16, 21) are gone |
 | Flashbacks (guide 60–150 s) | ≈ 53 s | Under the guide, on purpose: F2.1's 2008 half is the intro's own frame, which viewers see every week, and F2.3's captions told what its freeze shows |
 | Music | About 14 sequences, one performance each | Sc 9–12 is one tune in three rooms (warming up, the music box, the demo); sc 18–20 is one quartet |
-| Conversations (draft 5.3; guides, not gates) | Seconds are **speech from the counter** unless marked "on screen". The longest two run ≈ 1:40 each on screen: **the séance**, one table from Nole's landing to "we keep everything." (17 voiced lines, ≈ 60 s of speech), and **XEL's interview** (15 lines, ≈ 81 s, with Mas's 40-word real answer at its centre). Then backstage (10 lines, ≈ 43 s), the demo's engineer and the product (10 lines), **the bridge** (6 lines, ≈ 28 s; ≈ 55 s on screen with the post and the honks), **Mario's pane** (7 lines, ≈ 27 s; ≈ 45 s on screen) and Terb's pane (4 lines, ≈ 20 s), the cross-section (7 lines, ≈ 25 s), the flyers (≈ 20 s), **Haras and Gerg** (6 lines, ≈ 18 s) and **Gerg and Mas** (6 lines, ≈ 17 s; ≈ 25 s on screen, draft 5.2's was ≈ 13 s) | Each talk scene's want, obstacle, turn and cost is in the scene-craft log's table (sc 17 and sc 19 updated in the final pass's log). **R17's "one conversation of 30 s or more in a talk-driven act":** measured as speech, Acts Three and Four peak at ≈ 28 s (the bridge) and ≈ 27 s (Mario's pane); on screen both run well past 30 s. Act Four is mostly set-piece (the garden, the cage, the white room). The ear on the reel decides. Sc 13 stays a window. The wordless scenes are wordless by design: the monitor (8), the midpoint (12), Alyi's office (15), the white room (22) |
+| Conversations (draft 5.4; guides, not gates) | Seconds are **speech from the counter** unless marked "on screen". The longest two run ≈ 1:40 each on screen: **XEL's interview** (15 lines, ≈ 81 s of speech, with Mas's 40-word real answer at its centre) and **the séance**, one table from Nole's landing to "we keep everything." (17 voiced lines, ≈ 61 s). Then backstage (10 lines, ≈ 43 s), the demo's engineer and the product (10 lines), **the bridge** (6 lines, ≈ 28 s; ≈ 55 s on screen with the post and the honks), **Mario's pane** (7 lines, ≈ 26 s; ≈ 45 s on screen) and Terb's pane (4 lines, ≈ 20 s), the cross-section (7 lines, ≈ 26 s), the flyers (≈ 20 s), **Gerg and Mas** (6 lines, ≈ 19 s; ≈ 26 s on screen, draft 5.2's was ≈ 13 s), **Haras and Gerg** (6 lines, ≈ 18 s) and the garden's hedge (3 lines, ≈ 8 s) | Each talk scene's want, obstacle, turn and cost is in the scene-craft log's table (sc 17 and sc 19 updated in the final pass's log and again, in place, by draft 5.4). **R17's "one conversation of 30 s or more in a talk-driven act":** measured as speech, Acts Three and Four peak at ≈ 28 s (the bridge) and ≈ 26 s (Mario's pane); on screen both run well past 30 s. Act Four is mostly set-piece (the garden, the cage, the white room). The ear on the reel decides. Sc 13 stays a window. The wordless scenes are wordless by design: the monitor (8), the midpoint (12), Alyi's office (15), the white room (22) |
 | Cut-offs and overlaps | 2: "Thanks." over "favorite" (sc 11); "And profit—", under the stream (sc 19) | Each one comes after the thought has landed and has a cause the audience can hear. Draft 5.1 removes the engineer's "…and then it—": a silent `yes!!` stopped him mid-word for no audible reason, so he now finishes and the chirp follows. Draft 4 had five dash marks, draft 5 four, draft 5.1 three |
 
 ## 4. The season-revision beats
@@ -1381,20 +1379,20 @@ All four cost 0 s and ride shots that are already running ([plan §4](../../prod
 
 **Newcomer read** (set aside the real events; what does the show itself say?). The must-understand list, and where each item is set up:
 - **Mas is back in charge, and looks untouchable:** the Mar 8 coda (he walks back onto the board while Terb reads the independent review's sentence aloud, both halves, "independent" being Ep1's word for it (draft 5.3), and he takes a side chair, not the head; the first lands on MADA, the one director at the table who was on the board that fired him, and the second on the nameplate; then Terb tells him "Your seat's where you left it"), the nameplate, the glass that never moves.
-- **Nole funded the company, left it, and now sues it, and his own emails undercut him:** his plate on landing (`FUNDED IT. LEFT IT. SUING IT.`), `YOU PROMISED!!!`, "I've got lawyers for both.", Gerg's "We put some of them up today", his own case as he lands (draft 5.2: "I asked for one thing, and it's in the name. Open. It was supposed to be open."), which the ghosts then rebut, "one knock if we promised a nonprofit." answered by three knocks (draft 5.1: the suit's claim, said once, in a question), the ghosts (less open; folding it into *his car company* as a "cash cow"; billions), `OPEN → NOPE` and "The N goes at the end.", F2.3 (his own exit), "You sat at the back."
+- **Nole funded the company, left it, and now sues it, and his own emails undercut him:** his plate on landing (`FUNDED IT. LEFT IT. SUING IT.`), `YOU PROMISED!!!`, "I've got lawyers for both.", Gerg's "We put some of your old emails up today" (draft 5.4; "some of them" had no referent by ear), his own case as he lands (draft 5.2: "I asked for one thing, and it's in the name. Open. It was supposed to be open."), which the ghosts then rebut, "one knock if we promised a nonprofit." answered by three knocks (draft 5.1: the suit's claim, said once, in a question), the ghosts (less open; folding it into *his car company* as a "cash cow"; billions), `OPEN → NOPE` and "The N goes at the end.", F2.3 (his own exit), "You sat at the back."
 - **"her" was Mas's one word, and it cost the company a voice:** the flirty product, "in just one word" and the harmony, the post, the engineer's "Mas just posted. It's one word. …Like the movie? The one where he falls for the voice?" (draft 5.1: what the film is about, never who is in it; draft 5.3: said the way people recall a film), the blimp over the stage; a week later a storm parks on the blimp, the rail says `A FAMOUS VOICE OBJECTS`, and `VOICE 5` greys out with the fifth hello from backstage, `Hey.`, greyed under it (draft 5.3). The actress is never shown or named.
-- **The safety people leave one by one, and Alyi is the loss:** the empty `RESERVED: CHIEF SCIENTIST` seat (planted in the demo's first wide), Mas's own words about him on XEL's podcast (draft 5.2: the record's "i love alyi… i really hope we work together for certainly the rest of my career."), the flyers and the staffer's "If he comes back…" / "leave them up.", the search, BUKAJ's "It's still warm.", EKIEL's card and post, the unscrewed plate (`SUPERALIGNMENT` over `SAFETY TEAM`, draft 5.1), the IOU, the NDA bridge, THE FORECASTER's refusal (his card, `EX-NOPEAI.` and `AT STAKE: ~$2M`, lands before the pen rises; he talks the choice through, "If I sign, I keep what I've vested, and I never say a bad word about the place again.", and "Seventy percent it's worth not signing." says what the number is of; draft 5.3 puts the refusal before Mas's apology post, so the pen is plainly still a choice when he refuses it), Terb reading the committee's announcement (ninety days to check the company's safety work, then a report to the full board, with Mas on both), the lanyard at the rival's lighthouse, the white room.
-- **The unkept promise:** `IOU: 20% COMPUTE` on the safety leader's door, `NEVER DELIVERED`, returned unchanged by the white room, pocketed.
-- **RUMPT is a candidate who is afraid of AI and uses it anyway:** the hill (the podium from the intro), the reporter's "…get back on the trail." (draft 5.3: the one word that says he's campaigning), "so scary", the fog replay's "we should have the most", the platform plank, the false crowd claim, "I accept!", the balloon tied to the podium.
+- **The safety people leave one by one, and Alyi is the loss:** the empty `RESERVED: CHIEF SCIENTIST` seat (planted in the demo's first wide), Mas's own words about him on XEL's podcast (draft 5.2: the record's "i love alyi… i really hope we work together for certainly the rest of my career."), the flyers and the staffer's "If he comes back…" / "leave them up.", the search, BUKAJ's "It's still warm.", EKIEL's card and post, the unscrewed plate (`SUPERALIGNMENT` over `SAFETY TEAM`, draft 5.1), the IOU, the NDA bridge, THE FORECASTER's refusal (his card, `EX-NOPEAI.` and `AT STAKE: ~$2M`, lands before the pen rises; he talks the choice through, "If I sign, I keep what I've vested, and I never say a bad word about the place again.", and, as the pen withdraws, "Already did. It's the one thing I didn't need a number for." (draft 5.4; 5.3's "I already took it." could be heard as taking the deal); draft 5.3 puts the refusal before Mas's apology post, so the pen is plainly still a choice when he refuses it), Terb reading the committee's announcement (ninety days to check the company's safety work, then a report to the full board, with Mas on both), the lanyard at the rival's lighthouse, the white room.
+- **The unkept promise:** `IOU: 20% COMPUTE` on the safety leader's door, `PLEDGED JUL 2023`, pocketed; at the white room, where he tries to use it, `NEVER DELIVERED (REPORTED)`, and it comes back unchanged (draft 5.4 moves `NEVER DELIVERED` there, since the report postdates sc 14).
+- **RUMPT is a candidate who is afraid of AI and uses it anyway:** the hill (the podium from the intro), the reporter's "…get back on the trail." (draft 5.3: the one word that says he's campaigning), "so scary" (draft 5.4: the real fragments on the broadcast's lower third, then his own "So scary. What's it worth?"), the fog replay's "we should have the most", the platform plank, the false crowd claim, "I accept!", the balloon tied to the podium.
 - **The refiled suit is the same fight, against Mas by name:** `NOLE v. MANALT ET AL.`, the crossed-out `(FOR NOW)`, pages losing their exclamation points.
 - **California's bill is an AI-safety bill** (the finale's CALIFORNIA cord starts here): the hydra's plate.
 
 What a newcomer can miss without losing the thread: YRREP, TRAWETS, REMUHCS, ISOLEP, the RULEBOOK notification, the Golden Gate box, the `PAUSE` sign, LE CHIEN, the `INQUIRY` envelope, THE HUMANIST's pun, Mada's stillness at the reading, the Golden Gate art under Mario's "nothing here is shiny". Each is dressing on a scene whose job is clear without it.
 
-**Deliberate withholding:** TPOOL is opened in sc 15 before F2.1 explains it (a question the show raises and answers in Act Four); the pocket dial is never explained; the podium's taut string is Ep3's to answer.
+**Deliberate withholding:** TPOOL is opened in sc 15 before F2.1 explains it (a question the show raises and answers in Act Four; draft 5.4's login screen, `welcome back, mas`, says it's his without saying it was his company); the pocket dial is never explained; the podium's taut string is Ep3's to answer.
 
-**Insider read** (what dragged, repeated or told the inferable). Cut in draft 4: the Parliament and the lighthouse window; the roadmap's press room (it survives as the lobby TV, without Ep1's `0 BILLS` and "every hand"); the fog studio as its own scene and the pope; DIRE's checkbook and his twin; THE PACKAGE DEAL and the second ISS sign; F2.1's 2008 half beyond a 2 s match; F2.3's two captions; the coda's second rail; the equation (Ep1's sycophancy joke again); "Is that about me?" and Gerg's look-up; "Hour four." / "super."; Mario's "In plain English—" and the extra floor; the `VESTED EQUITY` mini-card; the `PAUSED` luggage tag; ISOLEP's 107-character rail; `AFRAID OF AI AGAIN`; MADA's hourglass (the fourth hourglass-as-clock in the season); V.O. 3. **Cut or changed in draft 5.1:** "Muting the dead." and `RESTORED FROM BACKUP` (the same phone joke as the `!` post); Gerg's explanation of the old voice mode (THE PLAN tells it); XEL's "three hours… warmed up" and the `LONG-FORM.` tagline (the mic and `PART 1 OF 6` tell it); sc 14's `(REPORTED)`-only rail; Mario's "That's the summary." (Ep3's joke). **Cut or changed in draft 5.2:** the mammoth's walk back through the complaint; the séance's second "Yup" and Nole's stare; "I named it. You all just work here." (his case absorbs it); the rail's `NOPEAI PUBLISHES NOLE'S OLD EMAILS` (Gerg says it); the `CREW: 0` stat (it repeated Selbeep's line); THE PLAN's taped-shut mouth; the easel; the bridge's second phrase and the garden's first (each merged into its neighbour). **Cut or changed in draft 5.3:** the Orb's `ghost → post` pun (a third text inside 8 s); Gerg's "with the dates" (told Nole what he knew); the plate `MACROSOFT'S SPARE` (it told Tasya's button first); the second "mic hasn't moved"; the Forecaster's tagline `HAS A DATE FOR EVERYTHING.` and the 70 → 71 clipboard (the forecasting runner played about six times); sc 14's `RAIL: MAY 17` (six read texts in 25 s); Terb's verbatim second May 28 sentence (paraphrased); Gerg's "You were up on one of those stages once. Before any of us." (told Mas what both knew).
-Kept for insiders at no cost to anyone else: the `ALYI` byline egg, the `ALSET` plug on the cow's tail, "please don't talk to her", `232 MS`, tiny RADNUS on Tuesday, the Golden Gate box, the bubble's raised hand (ask before sending), IRIS at 99%, the `(FOR NOW)` note, `ET AL.`
+**Insider read** (what dragged, repeated or told the inferable). Cut in draft 4: the Parliament and the lighthouse window; the roadmap's press room (it survives as the lobby TV, without Ep1's `0 BILLS` and "every hand"); the fog studio as its own scene and the pope; DIRE's checkbook and his twin; THE PACKAGE DEAL and the second ISS sign; F2.1's 2008 half beyond a 2 s match; F2.3's two captions; the coda's second rail; the equation (Ep1's sycophancy joke again); "Is that about me?" and Gerg's look-up; "Hour four." / "super."; Mario's "In plain English—" and the extra floor; the `VESTED EQUITY` mini-card; the `PAUSED` luggage tag; ISOLEP's 107-character rail; `AFRAID OF AI AGAIN`; MADA's hourglass (the fourth hourglass-as-clock in the season); V.O. 3. **Cut or changed in draft 5.1:** "Muting the dead." and `RESTORED FROM BACKUP` (the same phone joke as the `!` post); Gerg's explanation of the old voice mode (THE PLAN tells it); XEL's "three hours… warmed up" and the `LONG-FORM.` tagline (the mic and `PART 1 OF 6` tell it); sc 14's `(REPORTED)`-only rail; Mario's "That's the summary." (Ep3's joke). **Cut or changed in draft 5.2:** the mammoth's walk back through the complaint; the séance's second "Yup" and Nole's stare; "I named it. You all just work here." (his case absorbs it); the rail's `NOPEAI PUBLISHES NOLE'S OLD EMAILS` (Gerg says it); the `CREW: 0` stat (it repeated Selbeep's line); THE PLAN's taped-shut mouth; the easel; the bridge's second phrase and the garden's first (each merged into its neighbour). **Cut or changed in draft 5.3:** the Orb's `ghost → post` pun (a third text inside 8 s); Gerg's "with the dates" (told Nole what he knew); the plate `MACROSOFT'S SPARE` (it told Tasya's button first); the second "mic hasn't moved"; the Forecaster's tagline `HAS A DATE FOR EVERYTHING.` and the 70 → 71 clipboard (the forecasting runner played about six times); sc 14's `RAIL: MAY 17` (six read texts in 25 s); Terb's verbatim second May 28 sentence (paraphrased); Gerg's "You were up on one of those stages once. Before any of us." (told Mas what both knew). **Cut or changed in draft 5.4:** the unsent ghost and "…anyone?" (§9's first Act One trim); the ELPPA memo and its "her" (a second "her" 13 s into Act Two); the rail `MACROSOFT HIRES ITS OWN AI TEAM` (the third telling in about 20 s); the still glass in sc 8 (the fourth, outside the budget); Mario's "The long one's holding up the lighthouse." (a third length joke in a row); Radnus's "Congratulations to them." / "thank you." (Ep1 sc 13's exchange again).
+Kept for insiders at no cost to anyone else: the `ALYI` byline egg, the `ALSET` plug on the cow's tail, `232 MS`, tiny RADNUS on Tuesday, the Golden Gate box, the bubble's raised hand (ask before sending), IRIS at 99%, the `(FOR NOW)` note, `ET AL.`
 
 ## 6. Sound, in the spirit of flow-and-continuity
 
@@ -1406,7 +1404,7 @@ Kept for insiders at no cost to anyone else: the `ALYI` byline egg, the `ALSET` 
   - the séance organ pre-laps under sc 2's balloon
   - the podcast sting pre-laps under sc 4's nameplate
   - XEL's curtain parts into the splitting building (a match cut)
-  - the stage manager's count pre-laps under sc 8's glass
+  - the stage manager's count pre-laps under sc 8's glow (draft 5.4: the monitor's glow, where it was his still glass)
   - "It's free!" carries into sc 12 as an L-cut
   - the chair's hum rings over the cut into sc 15
   - the lighthouse's motor and the first pizzicato pre-lap under sc 17's black
@@ -1437,7 +1435,7 @@ Kept for insiders at no cost to anyone else: the `ALYI` byline egg, the `ALSET` 
 | 18 | MADA's hourglass cut (she writes one word in the minutes); Mario's "In plain English—" and the extra floor cut; the rail is [P] | Insider 10; loose-ends (the hourglass as the clock); facts 3 |
 | 19 | Three collars, no pop. F2.1 is the 2006 ad plus a 2 s 2008 match (the clicker becomes his phone). The wristband reads `GUEST`; the bubble raises a hand and waits, so the V.O. is the first telling in words | Continuity 1, insider 2; drama 12, insider 1; drama 6 |
 | 18–20 | One LEVERAGE quartet performance | Drama 17 |
-| 20 | The `KORG 5` banner is first aired here | Continuity 3 |
+| 20 | The `KORG 5` banner is first aired here (draft 5.4: `KORG 2`, per the facts review) | Continuity 3 |
 | 21 | OMITTED; the fog goes to the tag; the pope is cut | Drama 1, insider 8, loose-ends Pope budget |
 | 22 | Opens on a hard cut to white and the pin. The second sign and THE PACKAGE DEAL cut; a lock inside turns | Drama 8, insider 10 |
 | 23 | The fog replay opens the tag (dated in its player). The suit drops from above frame, no skylight. Cover `NOLE v. MANALT ET AL.` (no MACROSOFT). The platform card trimmed. ISOLEP's rail is date and name; her words are the quoted pop-ups. The hydra's plate says California AI safety. `AFRAID OF AI AGAIN` is a date only | Drama 1, 13; continuity 2; facts 1, newcomer 4; newcomer 5; insider 9 |
@@ -1448,36 +1446,35 @@ Kept for insiders at no cost to anyone else: the `ALYI` byline egg, the `ALSET` 
 
 - **Facts:** every quoted line keeps its tag and the facts pass's wording (Lex #419; the May 18 trims; the exact "A.I.'d" fragment; ISOLEP's "ill informed" with no hyphen, now as a pop-up; TSOOB's tagline on its end card; both halves of the Mar 8 review, always together (draft 5: read aloud by Terb, with draft 4's one rail as the fallback; draft 5.1: he reads the whole sentence verbatim, "to terminate" and "but also found" included, with only the name swapped); the cash-cow forwarding caption, with the forwarded email's author unnamed). Draft 5.2 re-matched on the primary pages: XEL's lines and Mas's answers, including the new relationship exchange (the raw Lex #419 transcript page); the two May 28 committee sentences and the Mar 8 sentence (Wayback Machine captures of NopeAI's posts). A human still opens each page before lock.
 - **Guardrails:** the actress is never drawn, voiced or named, and the letterhead stays blank. THE SLEEVE is a sleeve and a clicker. RUMPT: voice and hands, no fist pumps or rally imagery, invented lines on AI, money, naming and credit. Nole's endorsement appears nowhere. The WWDC beat is a walled garden, company to company (X2). Nothing from the review's allegations appears (X9). **Political even-handedness (rule 3):** RUMPT's FEAR phase and the Orb's fact-check are answered in the same episode by the bipartisan roadmap on the lobby TV (sc 13), the matrix's row-2 counterweight; ISOLEP's pat is a Democrat's critique, not a roast of Democrats, so it doesn't count toward it.
-- **Voices:** every synthetic stock voice is designed from text, never cloned. CHATGTP's prompt never mentions the film, the actress or any product voice (the engineer's "…Like the movie? The one where he falls for the voice?" (draft 5.3 wording) is his line, not the product's, and names no one). RUMPT's real fragments also print as captions; his stock voice is plainly not an impression, and the prompt neither names nor describes him. The three-part harmony goes through the intro's sung-vocal pipeline.
-- **Staging at real events:** Mas watches the demo from the wings ([UNVERIFIED] seat); the safety question is a chat comment that the product answers; the ISS door, THE PLAN and the committee's lines are cartoon staging, while the committee's membership and its 90-day first task are the record. Draft 5 adds Terb reading the review at the Mar 8 table, which is staging around the record's own words. Draft 5.1 makes sc 20's cage conditional, as Nole's posts were ("If they go through with it…"), and empty but for his own phone, so no ban is shown as done. Draft 5.2 has Terb read two sentences of the May 28 post to the committee's own table, as he reads the Mar 8 finding. MADA sits still and does nothing while the finding is read, since an action timed to a finding about his own vote could read as a view. The Forecaster's talk-through follows the reported terms and puts no number on what anyone knew. **Draft 5.3:** the Forecaster's refusal carries no date ("I already took it.", where 5.2 said "Last night."), since the record gives only the month; Nole lets go of the complaint on Jun 11 with no lamp and no look, so no tell rides the real dismissal after the missed call; Mas's "thank you." to Radnus claims no deal terms.
+- **Voices:** every synthetic stock voice is designed from text, never cloned. CHATGTP's prompt never mentions the film, the actress or any product voice (the engineer's "…Like the movie? The one where he falls for the voice?" (draft 5.3 wording) is his line, not the product's, and names no one). RUMPT's real fragments also print as captions; his stock voice is plainly not an impression, and the prompt neither names nor describes him. **Draft 5.4:** his Feb 2 fragments ([H] by the worldcast critic, which guardrails.md makes the authority) are chyron-only, on the broadcast's lower third, with an unintelligible murmur under them, so no synthetic voice speaks an [H] line; the tag's Jun 13 fragments are [V] and stay voiced, with captions. The three-part harmony goes through the intro's sung-vocal pipeline.
+- **Staging at real events:** Mas watches the demo from the wings ([UNVERIFIED] seat); the safety question is a chat comment that the product answers; the ISS door, THE PLAN and the committee's lines are cartoon staging, while the committee's membership and its 90-day first task are the record. Draft 5 adds Terb reading the review at the Mar 8 table, which is staging around the record's own words. Draft 5.1 makes sc 20's cage conditional, as Nole's posts were ("If they go through with it…"), and empty but for his own phone, so no ban is shown as done. Draft 5.2 has Terb read two sentences of the May 28 post to the committee's own table, as he reads the Mar 8 finding. MADA sits still and does nothing while the finding is read, since an action timed to a finding about his own vote could read as a view. The Forecaster's talk-through follows the reported terms and puts no number on what anyone knew. **Draft 5.3:** the Forecaster's refusal carries no date ("I already took it.", where 5.2 said "Last night."), since the record gives only the month; Nole lets go of the complaint on Jun 11 with no lamp and no look, so no tell rides the real dismissal after the missed call; Mas's "thank you." to Radnus claims no deal terms. **Draft 5.4:** the Forecaster's refusal is "Already did. It's the one thing I didn't need a number for.", with no invented probability on a real person's principled refusal; Mas's answer to Radnus is "as a guest.", which quotes the wristband already on screen and claims no deal terms; F2.2 runs in the record's order (the 2022 party's chant, then the 2023 offsite's fire), and its glyph plays on the room, not in ALYI's eyes; the IOU's `NEVER DELIVERED (REPORTED)` waits for sc 22 (Jun 19), after Fortune's May 21 report.
 
 ## 9. If the animatic runs long or short
 
-- **Long: test Act One first, then cut whole beats, never words from lines.** Act One (1:44 → 8:04, 6:20) is the only act over its flex (4:15–5:15), and draft 5.2's list took only ≈ 2 s from it (the three-lens read, P1). **Draft 5.3's list totals ≈ −1:41**, against the ≈ 1:26 the episode runs past the format's frame.
-  - **Act One first (≈ −0:25 in all).** Watch the séance and XEL in the reel before anything else; if the act drags, cut in this order:
-    1. the unsent ghost, `Re: Why I'm leaving`, and Mas's "…anyone?" (−0:06; the candle snuffs on the beat after "we keep everything." and still repaints the room into F2.3)
-    2. **one of** XEL's two late hops, not both, since the mic's rule needs its hops: "Is it… conscious, though?" / "the mic?" / "Yes." with the frame-filling mic (−0:09; the hydrant is then the last hop, and `PART 1 OF 6` ends the scene), **or** the $7T exchange and its rail (−0:08; the $7T then isn't in Ep2)
-    3. "Say something ELSE." and the ghost's "…Yup." (−0:05; Nole loses his one caps word, and the lamp that doesn't click on follows Gerg's "Same email address, though. I checked." directly)
-    4. the Humanist's "Don't mind me. I'm just moving in downstairs." (−0:03; Tasya's "Welcome." opens the basement)
-    5. the `INQUIRY` egg (−0:02)
+- **Long: test Act One first, then cut whole beats, never words from lines.** Act One (1:44 → 7:57, 6:13) is the only act over its flex (4:15–5:15), and draft 5.2's list took only ≈ 2 s from it (the three-lens read, P1). **Draft 5.4's list totals ≈ −1:36**, against the ≈ 1:18 the episode runs past the format's frame. (Draft 5.3's first item, the unsent ghost and "…anyone?", is now cut: the insider read endorsed it, −0:06.)
+  - **Act One first (≈ −0:20 in all).** Watch the séance and XEL in the reel before anything else; if the act drags, cut in this order:
+    1. **one of** XEL's two late hops, not both, since the mic's rule needs its hops: "Is it… conscious, though?" / "the mic?" / "Yes." with the frame-filling mic (−0:09; the hydrant is then the last hop, and `PART 1 OF 6` ends the scene), **or** the $7T exchange and its rail (−0:08; the $7T then isn't in Ep2)
+    2. "Say something ELSE." and the ghost's "…Yup." (−0:05; Nole loses his one caps word, and the lamp that doesn't click on follows Gerg's "Same email address, though. I checked." directly)
+    3. the Humanist's "I'm just moving in downstairs. I hope that's all right." (−0:04; Tasya's "Welcome." opens the basement)
+    4. the `INQUIRY` egg (−0:02)
 
-    Even with all five, Act One stays ≈ 0:40 over its flex. Getting it inside means losing talk this list protects (XEL's relationship exchange, −0:33), so that's the showrunner's call after the reel (open question #18).
+    Even with all four, Act One stays ≈ 0:38 over its flex. Getting it inside means losing talk this list protects (XEL's relationship exchange, −0:33), so that's the showrunner's call after the reel (open question #18).
   - **Then the rest, in this order:**
-    6. the sc 14 reflection chase, "Look at heatsink" / "Pick up reflection" / "i can't pick that up." (−0:07; the reflections still show in the spread and at the urn)
-    7. YRREP's TV beat, with "Our first review." (−0:08)
-    8. the fog replay in the tag, with its podcaster's question (−0:10; "Very scary." still lands on the balloon)
-    9. Mario's notes, from "I read your thread…" to "We checked." (−0:15; the glint goes back to its draft 5.1 place, and "There's a brief document." opens the exchange again)
-    10. Terb's paraphrase of the second sentence and "also present." (−0:10; "present." ends the ladder)
-    11. Bukaj's second rung, "Not yet…" (−0:07)
-    12. backstage's freeze pair, "What if it freezes?…" / "Then it freezes live, and I keep talking…" (−0:10; the harmony and "…and that's the demo." lose their plant)
-    13. the staffers' first exchange under the flyers (−0:09; the staffer's question to Mas then opens the scene)
+    5. the sc 14 reflection chase, "Look at heatsink" / "Pick up reflection" / "i can't pick that up." (−0:07; the reflections still show in the spread and at the urn)
+    6. YRREP's TV beat, with "Our first review." (−0:08)
+    7. the fog replay in the tag, with its podcaster's question (−0:10; "Very scary." still lands on the balloon)
+    8. Mario's notes, from "I read your thread…" to "We checked." (−0:15; the glint goes back to its draft 5.1 place, and "There's a brief document." opens the exchange again)
+    9. Terb's paraphrase of the second sentence and "also present." (−0:10; "present." ends the ladder)
+    10. Bukaj's second rung, "Not yet…" (−0:07)
+    11. backstage's freeze pair, "What if it freezes?…" / "Then it freezes live, and I keep talking…" (−0:10; the harmony and "…and that's the demo." lose their plant)
+    12. the staffers' first exchange under the flyers (−0:09; the staffer's question to Mas then opens the scene)
 
   None touches an anchor, the spine, the fairness pair or a season-revision beat. **Not on the list:**
   - XEL's relationship exchange: the one place the episode says what Alyi is to Mas.
   - Nole's case: the séance's engine.
   - Rima's steering line: her fight for the demo.
   - the Forecaster's talk-through: the S3's human turn.
-  - Gerg and Mas at the watch party (≈ 25 s since draft 5.3): Act Four's only talk to Mas, and the episode's only co-founder beat.
+  - Gerg and Mas at the watch party (≈ 26 s on screen since draft 5.4; ≈ 25 s in 5.3): Act Four's only talk to Mas, and the episode's only co-founder beat.
   - Rima's "The new voice follows…": THE PLAN must explain accurately (guardrails §4).
   - Terb's Mar 8 reading: the fallback is draft 4's rail, but the reading is now the coda's listening beat.
 - **Short, restore first:** F2.1's 2008 giant screen, `TPOOL` and `where u at?` (+0:06) → the NELEH inset on the boardroom TV in sc 18's left pane (+0:08) → CHATGTP's "Is that about me?" to the blimp (+0:02) → W2.2, XEL's "Nuclear-" / "that's what i believe." ×2 (+0:08, the plan's first reserve). **Never pad with news.**
@@ -1490,6 +1487,8 @@ Live in [open-questions.md](open-questions.md).
 ---
 
 ## Revision log
+
+**Draft 5.4, 2026-09-26 (dialogue pass 5).** Applies the naturalness, newcomer-and-insider and facts critiques of draft 5.3 ([filed critiques](../../production/reviews/2026-09-26-dialogue-pass-5-critiques.md)). The run was stopped mid-edit and finished by a second pass. See [its own log](#revision-log-dialogue-pass-5-2026-09-26) at the end: every change with the 5.3 wording it replaced, the declines, the re-derived timecodes, the numbers and what a human still has to do.
 
 **Draft 5.3, 2026-09-26 (the final pass).** Applies the three-lens read of draft 5.2 (newcomer, insider and feel, scene by scene, with fixes), to the showrunner's notes on scenes that are felt and on leaving a successor enough to pick up from. See [its own log](#revision-log-final-pass-2026-09-26-draft-53) at the end: every change with the 5.2 wording it replaced, the declines, the re-derived timecodes, the numbers and how to re-run them, and what a human still has to do.
 
@@ -1824,7 +1823,7 @@ The median barely moves because the talk that grew is the scenes' middles: new e
 
 ### Each talk scene's shape (want · obstacle · turn · cost)
 
-Draft 5.1's §3 claimed that every talk scene had "an ask, a push-back and a turn". The screenwriter found sc 7, 13, 18 and 19 without one. This table is the replacement: the shape each scene plays now, so a successor can check a rewrite against it. (Rows 9 and 17–19 were updated in place by draft 5.3.)
+Draft 5.1's §3 claimed that every talk scene had "an ask, a push-back and a turn". The screenwriter found sc 7, 13, 18 and 19 without one. This table is the replacement: the shape each scene plays now, so a successor can check a rewrite against it. (Rows 9 and 17–19 were updated in place by draft 5.3, and rows 17 and 19 again by draft 5.4.)
 
 | Sc | Who wants what from whom | Obstacle | Turn | Cost |
 |---|---|---|---|---|
@@ -1837,9 +1836,9 @@ Draft 5.1's §3 claimed that every talk scene had "an ask, a push-back and a tur
 | 11 | The engineer wants short answers; Rima wants the running order | The product won't be short, and every laugh moves the light | "her" | Rima's light; the scene's one long hold is hers |
 | 13 | The staff want to know if he's coming back | Nobody has seen him; Mas defers ("leave them up.") | Congress defers too ("We'll hold a forum on it.") | A window: the flyers stay up to curl at sc 19 |
 | 14 | Mas wants to find Alyi; he offers Bukaj help | Reflections, a greyed option, a chair still warm | "Not yet… before anyone asks me for a schedule." | The IOU into his pocket; the plate into MISC |
-| 17 | The Forecaster wants to make his choice out loud; the pen wants a signature | ~$2M, and "in perpetuity" | "take your time." / "I already took it."; then his forecast on Mas comes true, "Updating." (draft 5.3 order: the refusal before the apology) | He walks off unsigned; the storm; `VOICE 5` and its greyed `Hey.` |
+| 17 | The Forecaster wants to make his choice out loud; the pen wants a signature | ~$2M, and "in perpetuity" | "take your time." / "Already did. It's the one thing I didn't need a number for." (draft 5.4); then his forecast on Mas comes true, "Updating." (draft 5.3 order: the refusal before the apology) | He walks off unsigned; the storm; `VOICE 5` and its greyed `Hey.` |
 | 18 | Terb wants a committee; Mario wants Ekiel, and his own clauses | "Who checks it? … We do.", and the table turns to Mas (draft 5.3); nothing is shiny except the glint | "also present."; "It's that we might win." | Checked by himself; the rival recruits the critic |
-| 19 | Haras wants the numbers; Gerg wants to know why Mas is watching on his phone, and then whether he misses the stage (draft 5.3) | The cheer; Mas's sideways answers, shorter each time | "You ever miss being up there?" / "once. they let me hold the clicker." → F2.1 | He thanks Radnus for a congratulation meant for others, and the gate shuts with him outside |
+| 19 | Haras wants the numbers; Gerg wants to know why Mas is watching on his phone, and then whether he misses the stage (draft 5.3) | The cheer; Mas's sideways answers, shorter each time | "You ever miss being up there?" / "i was up there once. they let me hold the clicker." (draft 5.4) → F2.1 | Radnus notes they let his chatbot in, Mas corrects him with the wristband's fine print ("as a guest.", draft 5.4), and the gate shuts with him outside |
 
 Wordless by design, unchanged: the midpoint (12), Alyi's office (15), the white room (22). Windows: the hill (2), the monitor (8), the tag's feeder question (23). THE PLAN (10) is a device.
 
@@ -2405,3 +2404,300 @@ The same list is in open-questions.md's "From draft 5.3" block:
 - **Art and production:** the side chair (sc 4), Tasya in the doorway (sc 7), the greyed `Hey.` (sc 17), the reverse's line cross (sc 19).
 - **Ep1 owner:** Ep2 now says "the independent review" after Ep1's Act Four line.
 - **Composer:** no cue changes; the garden runs about 1 s longer.
+
+---
+
+## Revision log (dialogue pass 5, 2026-09-26)
+
+**Draft 5.3 → 5.4, 2026-09-26, by the Ep2 writer (dialogue pass 5). The pass was finished after an interrupted run.**
+- **What it applies:** three critics (naturalness, newcomer-and-insider, and facts and guardrails) re-read draft 5.3 as committed in `890fc82`. Their findings are filed in [2026-09-26-dialogue-pass-5-critiques.md](../../production/reviews/2026-09-26-dialogue-pass-5-critiques.md); this log uses only the Ep2 parts.
+- **The interruption:** the first run applied most of the Ep2 findings in the scenes. The lead stopped it at about 22:33, mid-edit. At that point it had not reached the timecodes after sc 4, the Writer's notes, open-questions.md or this log.
+- **What the finishing pass did:**
+  - compared the script with `890fc82` (`git -C /home/jgon/project/art/mrmas diff 890fc82 -- show/episodes/ep02/script.md`);
+  - checked each of the first run's changes against its finding, and kept all of them;
+  - applied the findings that were left;
+  - fixed what the stop had left inconsistent;
+  - wrote this log.
+- **Written to** the showrunner's standing notes ([SHOWRUNNER-NOTES](../../production/SHOWRUNNER-NOTES.md)): let conversations play out; scenes are to be felt; clear to a newcomer without lectures; guidelines, not hard rules; the guardrails stay firm.
+
+**Status.**
+- Nothing in draft 5.4 has been read aloud, recorded, heard or watched.
+- Every new or reworded voiced line is `[INVENTED]`, with the 5.3 wording quoted in its tag. They go to the guardrails owner (open question #36).
+- No scene-craft deepening was undone, and no conversation was shortened to make a point. The only talk removed is Mas's "…anyone?", which went with the unsent ghost (the insider read and §9's own first trim). The memo's words were written, not spoken.
+- No real quote's words changed:
+  - two [H] fragments moved from the voice track to a chyron;
+  - one on-screen quote's casing was corrected;
+  - one quote card gained its attribution line.
+- Nothing outside `script.md` and `open-questions.md` was edited.
+
+### Where things are (for whoever picks this up)
+
+| What | Where |
+|---|---|
+| The teleplay | This file. Every line 5.4 changed carries a *Draft 5.4* note in its tag or in a direction beside it |
+| The critiques | [show/production/reviews/2026-09-26-dialogue-pass-5-critiques.md](../../production/reviews/2026-09-26-dialogue-pass-5-critiques.md), the Ep2 sections of each critic |
+| Open questions | [open-questions.md](open-questions.md). **New:** #36 (guardrails) and #37 (facts). **Updated, each marked Draft 5.4:** #14, #16, #17, #18, #19, #24, #28, #29, #32, #33 and #34. Also new: a "Resolved in draft 5.4" list and a "From draft 5.4" block for other owners |
+| The drafts compared | Draft 5.3 is commit `890fc82`. The session scratchpad `/tmp/claude-1000/-home-jgon-project-art-mrmas/a5e7723c-6ab4-4824-a1ed-8e367fdb82e5/scratchpad/p5fin-ep02/` holds:<br>• `script-5.3-committed.md`<br>• `script-5.4-interrupted.md` (the file as the stopped run left it)<br>• `open-questions-5.3-before.md`<br>• `count2.py` and `qcount.py` (the counters)<br>• `counts-5.3.txt` and `counts-5.4.txt`<br>Scratch may not survive the session; nothing below depends on it |
+
+### How to re-run the numbers
+
+1. Save the counter printed in the [scene-craft log](#how-to-re-run-the-numbers) as `count2.py`, and the question counter in the final pass's log as `qcount.py`.
+2. From the project root, run `python3 count2.py show/episodes/ep02/script.md` (add `--lines`, or `--scene N`), then `python3 qcount.py show/episodes/ep02/script.md`.
+3. Get a conversation's seconds by summing the counter's per-line seconds for that exchange (`--lines --scene N`). "On screen" figures add the business around the talk, planned by hand.
+4. To see the whole pass: `git -C /home/jgon/project/art/mrmas diff 890fc82 -- show/episodes/ep02/script.md`.
+
+### The numbers
+
+| | Draft 5.3 | Draft 5.4 |
+|---|---|---|
+| Voiced lines | 137 | 134. The three that went: RUMPT's two Feb 2 fragments, now on the chyron, and Mas's "…anyone?" |
+| Words | 1,262 | 1,264 |
+| Median words a line (everyone / everyone but Mas) | 6 / 8 | 6 / 9 |
+| Lines of three words or fewer | 35 (26%) | 34 (25%) |
+| Lines of 20 words or more | 9 | 9 |
+| Mas | 28 lines, 153 words, median 3; longest invented line 7 words; ≈ 74 s of speech | 27 lines, 157 words, median 3. His longest invented line is now 11 words, "i was up there once. they let me hold the clicker." ≈ 76 s of speech, about 14% |
+| Lines that ask a question | 31, 27 of them invented | 31, 27 of them invented ("…anyone?" out; "Is there room for them?" in) |
+| Cut-offs / dash marks | 2 / 3 | 2 / 3 (unchanged) |
+| Longest conversations | XEL's interview (15 lines, ≈ 81 s of speech) and the séance (17 lines, ≈ 60 s), ≈ 1:40 each on screen | XEL's interview (≈ 81 s) and the séance (≈ 61 s), ≈ 1:40 each on screen. In Acts Three and Four: the bridge ≈ 28 s, Mario's pane ≈ 26 s, Gerg and Mas ≈ 19 s |
+| Speech time, at the §1 paces | ≈ 8:58 (538 s) | ≈ 8:58 (538 s) |
+| Story | ≈ 22:11 (runtime ≈ 23:26) | ≈ 22:03 (runtime ≈ 23:18, ≈ 1:18 past the 22:00 frame) |
+
+### What the stopped run left, and how it was checked
+
+- **Timecodes.** The run had moved two timecodes:
+  - sc 4 to end at 5:22;
+  - F2.2 to 14:06.
+
+  Every other header still carried 5.3's clock: the scene and act headers, the split point, the tag and the credits. So sc 6 started at 5:27, 5 s after sc 4 ended, and sc 15 ran 14:02 → 14:48 around a flashback placed for a start ten seconds earlier. The finishing pass re-derived every header from the ledger below, and each scene now starts where the one before it ends.
+- **Sc 2's coverage.** The base setup listed two cut-ins (the viewfinder and the sticker), but the new viewfinder shot called itself "the scene's one cut-in". It now reads "the first cut-in… the second is the sticker".
+- **Sc 2's new reporter line.** "This AI stuff, does it worry you?" echoed the tag's PODCASTER ("What do you make of all this AI stuff?") inside the same episode. Reworded (see sc 2 below).
+- **Documentation still described 5.3:**
+  - Writer's notes §1–§9;
+  - the scene-shape table's rows 17 and 19;
+  - the draft and runtime rows at the top;
+  - open-questions.md.
+
+  Stale items included "Don't mind me…", "I already took it.", "thank you." to Radnus, "One lot…" and "spirit. what…". Others were ALYI's eyes as the glyph, the unsent ghost as §9's first trim and "please don't talk to her" as an insider egg. Still others were sc 14's `NEVER DELIVERED` and sc 8's glass as a sound bridge. All are updated. Historical logs keep their own drafts' wording, as before.
+- **Tags.**
+  - Every new or reworded voiced line carries `[INVENTED]` with the 5.3 wording quoted.
+  - The two fragments now on the chyron keep their [H] tags and their quotation marks.
+  - F2.2's chant and effigy tags cite The Atlantic's Nov 19, 2023 piece.
+  - The effigy's paperclip design is marked `[INVENTED]`.
+  - LE CHIEN and the FTC envelope are down from [V] to "[V once pulled; memory until then]".
+- **Cues.** Every changed line's speaker cue and hard break still parse. The counter finds 134 voiced lines, and the only drops are the three listed above.
+- **The glass budget.** Back to 3 (sc 1, 4, 17), with sc 8's still glass gone. §3 already said 3; §6's bridge list now names the glow.
+
+### Findings and what was done, scene by scene (5.3 wording quoted where it changed)
+
+Tags: [Nat] naturalness · [NI] newcomer-and-insider · [F] facts and guardrails. **Run 1** means the stopped run applied it; **Fin** means the finishing pass did.
+
+**Across the episodes**
+- **[Nat] A name or a "So" said as its own sentence.**
+  - The critic listed no Ep2 lines, but Run 1 found four and fixed them:
+    - sc 4: "spirit. what did we call it?" → "spirit, what did we call it?";
+    - sc 4 coda: "So. Your seat's where you left it, Mas." → "So, your seat's…";
+    - sc 18: "Ekiel. Come in, sit." → "Come in, Ekiel, sit down.";
+    - sc 18: "So. Who checks it?" → "So, who checks it?".
+  - Fin re-read every voiced line and found none left.
+  - Two stay on purpose: the driver's "Excuse me." (how a stranger gets attention) and Rima's "Omni." (she reads a stamp).
+- **[Nat] Lines repeated across episodes (R10).**
+  - "Last one…" (sc 2), "Don't mind me." (sc 7) and Radnus's congratulation with Mas's "thank you." (sc 19) are rewritten; see below.
+  - Fin checked every new line against Ep1 and Ep3, and none repeats.
+- **[Nat] The unseen askers.** Two of the four are Ep2's: sc 2's reporter and the tag's podcaster. Fin gives the reporter "Does AI worry you at all?", a plain yes/no question that rises. It's a different rhythm from:
+  - Ep1's "What's the best part of the job?";
+  - the tag's "What do you make of all this AI stuff?";
+  - Ep3's "How worried should you be?".
+- **[Nat] Radnus and Tasya sound alike (Ep1).** Run 1 directs Radnus as "quick and apologetic" in sc 19. Tasya stays "warm, unhurried".
+
+**Sc 2, the hill**
+- **[Nat, medium] The reporter.**
+  - Run 1: "One more and we'll let you get back on the trail. This AI stuff, does it worry you?"
+  - 5.3 was: "Last one, then we'll let you get back on the trail. Artificial intelligence: does it worry you?"
+  - Fin: "One more and we'll let you get back on the trail. Does AI worry you at all?", for the echo above.
+- **[F, medium] RUMPT's Feb 2 fragments were voiced on a disputed tag.** Run 1:
+  - "maybe the most dangerous thing out there…" and "it is so scary" now type on the stand-up's own lower third, tagged [H], with an unintelligible murmur under them.
+  - His first clear words are the invented "So scary. What's it worth?", leaning in to the operator.
+  - If the Fox Business clip upgrades the fragments to [V], he speaks them again; the scene carries the note.
+- **Fin:** the cut-in wording (above).
+- Net −1 s: −4.9 s of speech against +3.9 s of type-on.
+
+**Sc 4, the séance**
+- **[Nat, medium] Gerg** (Run 1): "It's a blog post. We put some of your old emails up today. The candles were extra." 5.3 was "…We put some of them up today…".
+- **[NI, insider 3] The unsent ghost cut** (Run 1): `DRAFT · NEVER SENT` / `Re: Why I'm leaving`, and Mas's "…anyone?". This was §9's first Act One trim. The candle now snuffs on the beat after "we keep everything." (−6 s).
+- **[Nat, low] Terb** (Run 1): "Before we start, the independent review is back. I'll read you the finding." 5.3 was "Before we start: the independent review is back. Here's what it found."
+- The commas after a name and after "So" (above).
+- **Net −5 s.** Fin re-derives F2.3 to 4:22 → 4:38.
+
+**Sc 7, the cross-section**
+- **[Nat, low] The Humanist** (Run 1):
+  - "I'm just moving in downstairs. I hope that's all right." 5.3 was "Don't mind me. I'm just moving in downstairs." The line now asks, so "Welcome." answers it.
+  - Then "I brought my own team. Is there room for them?" 5.3 was "…I hope there's room.", which would have said "I hope" twice in a row.
+- **[NI, insider 1] The rail** (Run 1) is `MAR 19` alone. 5.3's `MAR 19 · MACROSOFT HIRES ITS OWN AI TEAM` was the third telling in about 20 s.
+- **[F, 11]** (Run 1): the LE CHIEN key and the FTC envelope are tagged "[V once pulled; memory until then]".
+- Net −1 s: the Humanist +1.1 s, the rail −1.7 s.
+
+**Sc 8, the monitor**
+- **[NI newcomer 1; F 3] The ELPPA memo is cut** (Run 1): the paper airplane, THE TRUSTBUSTER's clipped photo, the arrow and "please don't talk to her" [H].
+  - The newcomer read found a second "her" and an unexplained regulator 13 s into Act Two.
+  - The facts review found an invented document carrying a reported spoken request.
+  - The TRAWETS lineup stays: the scene exists for Mas watching himself roasted, and the lineup costs no words.
+  - Fallback for the insider egg: the words in TRAWETS's own speech bubble, with `(REPORTED)`.
+- **[NI, insider 5] The still glass becomes the monitor's glow** (Run 1). It was the fourth glass gag, one over the budget of three.
+- Net −4 s.
+
+**Sc 14, the search**
+- **[F, 8] The IOU tag** (Run 1) reads `PLEDGED JUL 2023`. 5.3 was `PLEDGED JUL 2023 · NEVER DELIVERED (REPORTED)`, but Fortune's report came on May 21, after this scene's May 15–17. That half moves to sc 22.
+- Net −1 s.
+
+**Sc 15, Alyi's office, and F2.2**
+- **[NI, newcomer 2] TPOOL's login screen** (Run 1) reads `welcome back, mas`, so a newcomer sees the dead app knows him. That it was his company still waits for F2.1 and Ep3. 0 s.
+- **[F, 1] F2.2's year.**
+  - Run 1 checked The Atlantic's Nov 19, 2023 piece on a Wayback Machine capture. The chant was at the 2022 holiday party, and the effigy burned at a 2023 leadership offsite.
+  - The flashback now runs party first and fire second, and still ends on the flame that becomes the pin.
+  - The pin reads `LAST SEEN: 2023 · BONFIRE`; 5.3 had `2022`.
+  - The header's date span reads `DEC 2022 → 2023`.
+  - The paperclip-robot design is marked `[INVENTED]`.
+  - 0 s.
+- **[F, 9] The glyph** (Run 1) now plays on the room: the racks' status lights turn to token streams, and their light runs across every silhouette. 5.3 had "his eyes become scrolling token streams", which could read as a mental-health framing of ALYI's mysticism, ruled out by guardrails §6. Fallback: 5.3's eyes shot, if the guardrails owner clears it.
+
+**Sc 17, the bridge**
+- **[Nat medium; F 5] The Forecaster** (Run 1): "Already did. It's the one thing I didn't need a number for."
+  - 5.3 was "I already took it. Seventy percent it's worth not signing."
+  - Run 1 varied the critic's rewrite, "Already did. I put it at seventy percent that not signing is worth it.". That wording fixed the mishearing ("took it" heard as taking the deal), but it kept the invented probability that the facts review flagged, since it frames a real person's principled refusal as a bet.
+  - The new line keeps his register and puts no number on the refusal.
+  - The critic's wording is the fallback (open question #28).
+- +1 s.
+
+**Sc 18, the lanyard split**
+- The comma after the name (above).
+- **[Nat low; NI insider 2] Mario** (Run 1): "That's the brief one. It'd be shorter, but I have one concern."
+  - 5.3 was "That's the brief one. The long one's holding up the lighthouse. I do have one concern."
+  - The critic's "And it all comes down to one concern." was varied. The lighthouse line goes (the insider read's third length joke in a row), and the length becomes the bridge into the concern.
+  - Kept, as the insider read asked: "nothing here is shiny" and "It's that we might win."
+  - Also kept: "Four pages." and the scroll, since Ekiel's only two lines ride them.
+- −1 s.
+
+**Sc 19, the watch party**
+- **[Nat, medium] Gerg** (Run 1): "Compute. Different compute. Some of it trains the next model, and the rest keeps this one talking." 5.3 was "One lot trains the next model, and the other lot keeps this one talking."; "lot" is British, and Gerg isn't.
+- **[Nat, medium] Mas** (Run 1): "i was up there once. they let me hold the clicker." 5.3's "once. they let me hold the clicker." could be heard as "I missed it once".
+- **[Nat high; NI insider 4] The hedge** (Run 1): RADNUS: "Lovely garden. I see they let your chatbot in." / MAS: "as a guest."
+  - 5.3 was "Lovely garden. Congratulations to them." / "thank you.", which repeated Ep1 sc 13's exchange between the same two men.
+  - The wristband `GUEST` is already on screen, and Mas's framed `GUEST` lanyard hangs in the dark room in the tag.
+  - The V.O. "they ask first in there." now follows "as a guest." (§2).
+- +4 s over the scene. F2.1 moves to 19:18 → 19:30.
+
+**Sc 20, the cage**
+- **[F, 7]** (Run 1): `KORG 2: NEXT QUARTER`. 5.3 had `KORG 5`, but in June 2024 the promised next version was the second. 0 s.
+
+**Sc 22, the white room**
+- **[F, 8]** (Run 1): the IOU's `NEVER DELIVERED (REPORTED)` shows here, on Jun 19, under the sentence line as he tries to use it. It's tagged to Fortune's May 21 report. The unkept promise is now told once, at the door it was meant for. 0 s: it reads inside the band's four seconds.
+
+**Sc 23, the tag**
+- **[F, 6] The Jul 8 quote card** (Fin) gains its attribution line: `"We will repeal EOJ NEDIB's dangerous Executive Order…"` / `— THE PARTY PLATFORM · JUL 8, 2024`. 5.3 had `JUL 8 · "…"` with no attribution, and with RUMPT's hands on the plank the platform read as his own words. 0 s: 89 characters read in about 4.7 s, inside the 2 bars (5 s).
+- **[F, 10] ISOLEP's tags** (Fin) are in her statement's casing, `"well-intentioned"` and `"ill informed"`. 5.3 had them in capitals. 0 s.
+
+### Declined or left for an owner, with reasons
+
+- **[NI newcomer 3, low] "Compute" before Gerg explains it.** Sc 14 has "was it the compute?" and `IOU: 20% COMPUTE`. Declined:
+  - the IOU is Ep1's plant, and a newcomer reads an IOU as a promise, whatever it's for;
+  - the suggestion strip is the machine's read of him, texture that nobody speaks;
+  - sc 22's `NEVER DELIVERED` now carries the broken promise at the door;
+  - a definition in sc 14 would be the lecture the showrunner's notes rule out.
+- **[NI newcomer 4] The tag's `…and she 'A.I.'d' it…`.** No change. The critic calls it fine, and the Orb's scan carries the beat.
+- **[NI newcomer 1] The rest of the TRAWETS segment** stays (above).
+- **[NI insider 6 and 7] "Keep" items:** the engineer's film explanation, and the long scenes the insider read said earn their length. Kept, untouched.
+- **[Nat] Two rewrites varied rather than taken:** the Forecaster (sc 17) and Mario (sc 18), each above, with the critic's wording as the fallback.
+- **[F 4, F 11, F 1, F 2] Facts files.** facts.md isn't this pass's file, so these go to the facts owner in open question #37:
+  - four real lines missing from facts §B;
+  - stale rows 16 and 32;
+  - row 56's year;
+  - row 2's tier.
+- **[F, across] "her" [K]† in the intro and sc 11.** It blocks lock until the post is pulled. That's the facts owner's task (#37); the script's tag already says re-verify.
+- **[F, across] One season-wide ruling on voicing [H] lines.** Ep2 now keeps its [H] words on screen: chyrons, headlines and the "I accept!" pop-up (#25). Only #25 waits on that ruling.
+- **Nothing from the scene-craft or final passes was undone.**
+
+### Timecodes (re-derived this pass)
+
+The ledger below gives each scene's net, rounded; every scene not listed is unchanged.
+
+| Sc | 5.3 | 5.4 | Net | Why |
+|---|---|---|---|---|
+| 2 | 0:31 | 0:30 | −1 | fragments to the chyron: −4.9 s of speech, +3.9 s of type-on |
+| 4 | 3:12 | 3:07 | −5 | the unsent ghost and "…anyone?" −6.0 s; Gerg's and Terb's lines +1.0 s |
+| 7 | 0:49 | 0:48 | −1 | the Humanist +1.1 s; the shorter rail −1.7 s |
+| 8 | 0:13 | 0:09 | −4 | the memo |
+| 14 | 0:58 | 0:57 | −1 | the shorter IOU tag, −1.4 s |
+| 17 | 2:02 | 2:03 | +1 | the Forecaster, +0.8 s |
+| 18 | 1:20 | 1:19 | −1 | Mario, −1.1 s |
+| 19 | 2:15 | 2:19 | +4 | Radnus, Mas twice, Gerg: +3.6 s |
+| **Story** | **≈ 22:11** | **≈ 22:03** | **−8** | runtime ≈ 23:26 → ≈ 23:18 |
+
+- **The acts:**
+  - Act One 1:44 → 7:57 (6:13);
+  - Act Two 7:57 → 12:22 (4:25);
+  - Act Three 12:22 → 16:39 (4:17);
+  - Act Four 16:39 → 21:23 (4:44);
+  - the tag 21:23 → 22:35;
+  - the credits 22:35 → 23:18.
+- **The split point:** ≈ 12:22. The A-half is ≈ 11:50 of story, and the B-half ≈ 10:13.
+- **The flashbacks:**
+  - F2.3, 4:22 → 4:38: still 0:43 before the séance's end.
+  - F2.2, 14:04 → 14:29: still 14 s into sc 15. The TPOOL login screen rides the hourglass's spin.
+  - F2.1, 19:18 → 19:30: 80 s into sc 19, since the talk before it is 1.5 s longer.
+- **The S3** (sc 17, 14:36 → 16:39) sits at 63–71% of runtime.
+
+### For the guardrails and facts owners
+
+- **Guardrails** (open question #36):
+  - "as a guest." (sc 19);
+  - the Forecaster's "Already did. It's the one thing I didn't need a number for." (sc 17; with #28);
+  - the murmur under sc 2's chyron;
+  - F2.2's room glyph, with the eyes as the fallback;
+  - the new wordings of the reporter, Gerg (twice), Terb, the Humanist, Mario and Mas.
+- **Facts** (open question #37):
+  - row 2's tier (Feb 2 is now chyron-only);
+  - row 56 (F2.2: the 2022 party, then the 2023 offsite; the live Atlantic page, not only the capture);
+  - row 28 (the IOU tag now splits across sc 14 and sc 22);
+  - row 47 (the card's attribution);
+  - row 50 (the casing);
+  - rows 1 and 8 (tags);
+  - rows 16 and 32 (stale);
+  - the four real lines missing from §B;
+  - "her" [K]†;
+  - the `KORG 2` banner.
+
+### What a human must do (I can't listen or watch)
+
+1. **Read the episode aloud at pace, with a timer**, against Writer's notes §1. Time Act One on its own first (§9).
+2. **Radio-test the lines this pass changed:**
+   - Sc 17: does "Already did." land as "I've taken my time", and does the pen's withdrawal read as the refusal?
+   - Sc 19: does "as a guest." read as a correction with the wristband's fine print, not a sulk? Does "i was up there once." land as a count?
+   - Sc 2: does the murmur read as wind and distance, not as a muted voice? Does the lower third's type-on hold long enough to read?
+   - Sc 18: does "It'd be shorter, but I have one concern." bridge cleanly into "It's that we might win."?
+   - Sc 7: does "I hope that's all right." make "Welcome." an answer?
+3. **Check that the yes/no questions rise**, above all the reporter's "Does AI worry you at all?" and the Humanist's "Is there room for them?".
+4. **Get the rulings:** the guardrails owner on #36; the facts owner on #37, with the live pages before lock (The Atlantic, the Fox Business clip, Fortune's May 21 report, the platform text, Pelosi's statement).
+5. **Make the stick-figure reel** with real takes, and get the showrunner's approval before any pixel work. The reel decides the runtime (#18) and §9, starting with Act One.
+
+### Handoffs (nothing outside script.md and open-questions.md was edited)
+
+The same list is in open-questions.md's "From draft 5.4" block:
+- **Facts owner:** #37.
+- **Guardrails owner:** #36, #28 and #32's eyes shot.
+- **Beats and outline owner:** #33, with 5.4's list.
+- **Gags tracker owner:**
+  - the glass is 3 again (sc 8's is gone);
+  - "Thank you." answers one congratulation (Bukaj's);
+  - the ELPPA memo is cut;
+  - Mario's lighthouse line is cut, and "It'd be shorter, but…" bridges instead.
+- **Recording supervisor:** 134 voiced lines. The Feb 2 fragments aren't recorded; a murmur is.
+- **Art and production:**
+  - sc 2's lower third types the two fragments;
+  - sc 8 has no memo;
+  - sc 15 has TPOOL's `welcome back, mas` screen;
+  - F2.2 runs party first, then fire, with the room glyph;
+  - sc 20's banner reads `KORG 2`;
+  - the IOU tag splits across sc 14 and sc 22;
+  - the tag's card carries its attribution line.
+- **Ep1 and Ep3 owners:** Ep2 no longer repeats "Last one…", "Don't mind me." or Radnus's congratulation. Its reporter's "Does AI worry you at all?" leaves Ep3's "How worried should you be?" its own rhythm.
+- **Composer:** no cue changes. Sc 2's pad sits under a lower third now, not a voice.

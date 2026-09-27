@@ -60,7 +60,7 @@ Last one, Mas. What's the best part of the job? `[INVENTED · the host is seen o
 `[ECU]` (≈ 1.5 s, cut in on the dash; the shared table from above) *Plink.* Into Mas's glass, where the hailstone bobs, its surface illegible glyph noise with no letters [INVENTED]. The host's glass beside it sloshes over its rim. Mas's water line does not move. The tent card reads, legibly, for the insert's whole length: `MAS MANALT · CEO, NOPEAI`.
 
 **MAS** *(the voice unbroken across both cuts: one sentence, one read)*\
-"—and the frontier of discovery forward" [V · NOV 16, 2023 · one line, with the plink under its middle. Conversation pass: it now starts at the logged clause "I've gotten to be in the room when we sort of…" (facts §B's original column), so the answer has its subject; read it as one finished sentence. Scene-craft pass: the 2.5 s window pan that used to split it is cut (the director's note: a hole in a real line), so the insert rides inside the read and the sentence has no gap. Re-fetch before lock, or fall back to the fragment from "push"]
+"—and the frontier of discovery forward…" [V · NOV 16, 2023 · one line, with the plink under its middle. Dialogue pass 5: the closing ellipsis is new, because the real sentence goes on past "forward" and the notation says trimmed quotes carry ellipses (the facts review). The dots are the record's trim mark, not a delivery: record it landing on "forward" as a finished sentence, never trailing off. Conversation pass: it now starts at the logged clause "I've gotten to be in the room when we sort of…" (facts §B's original column), so the answer has its subject; read it as one finished sentence. Scene-craft pass: the 2.5 s window pan that used to split it is cut (the director's note: a hole in a real line), so the insert rides inside the read and the sentence has no gap. Re-fetch before lock, or fall back to the fragment from "push"]
 
 `[MCU]` (back on his face for the sentence's end) Behind him, far across the bay, the lit window's phone clicks off, and the applause from across the street swells over the room's.
 
@@ -72,7 +72,7 @@ MUSIC: one dry piano F4 (MM-14 "Freeze F4"), left to ring. SOUND: the hall's bed
 
 `[W]` (1 beat) Everything freezes into navy and cream: the host's hand mid-gesture at the frame's edge, the host's water mid-slosh, the ovation mid-rise, the hailstone mid-bob, the tent card. Two things stay in colour: Mas, and the phone lying face-up on the shared table beside his glass.
 
-`[ECU]` (1 bar, held to read) The phone lights. A calendar invite slides down its screen, in a generic calendar UI (no real app's layout, colours or icons): `Board sync · Fri 12:00` · `Accept` `Decline`. Under the title sit four small attendee circles with no names: a doorway, a glowing page, a loading spinner, a black square. [INVENTED. The noon call is real (facts #46, [V]); the invite, its wording and the moment it arrives are invented, and nothing on screen claims when or how he was told.] (Egg for rewatchers, zero read load: none of the four circles is GERG's green laptop glow.)
+`[ECU]` (1 bar, held to read) The phone lights. A calendar invite slides down its screen, in a generic calendar UI (no real app's layout, colours or icons): `Board sync · Fri 12:00` · `Accept` `Decline`. Under the title sit four small attendee circles with no names: a doorway, a glowing page, a loading spinner, a black square. [INVENTED. The noon call is real (facts #46, [V]); the invite, its wording and the moment it arrives are invented. Dialogue pass 5 (the facts review): the picture does place the request, on the panel's stage on Thursday afternoon, where the reporting has a text on Thursday evening asking to talk at noon on Friday. It is the right day and the right meeting, a few hours early and in an invented medium: a dramatist's compression, which the facts owner accepts or fixes (open question 23). Fallback, if it's ruled a claim: the invite lands as the hall empties at dusk, one shot later, with nothing else changed.] (Egg for rewatchers, zero read load: none of the four circles is GERG's green laptop glow.)
 
 `[MCU]` (≈ 2.5 s; the hold is his, reading, and the tap plays inside it) MAS glances down at the phone, reads it, and looks back up. *(A prop glance, not one of the rail's two.)*
 
@@ -129,7 +129,7 @@ Ep1 slot values, in the intro's five spoiler-safe changes ([SCRIPT §8](../../in
 
 ## ACT ONE · "research preview"
 
-*Movement 1 · 1:12–5:54 printed (plays ≈ 5:14 after the conversation pass: ≈ +38 s of talk, mostly launch night; its second pass nets ≈ 0 s: launch night −1.5, the founders +0.5, Oigneb +1, Kram's cut line inside its bars; **plays ≈ 5:55 after the scene-craft pass, ≈ +41 s:** launch night +21, the lobby's terms +25, the drill −5; **≈ 5:58 after the final pass, ≈ +3 s:** Alyi's "since we started" +1.5, Rima's reworded question +1, Sydney's line +0.5) · meters: the user odometer, collar #3 · hint: Alyi's reflection (sc 5, sc 12)*
+*Movement 1 · 1:12–5:54 printed (plays ≈ 5:14 after the conversation pass: ≈ +38 s of talk, mostly launch night; its second pass nets ≈ 0 s: launch night −1.5, the founders +0.5, Oigneb +1, Kram's cut line inside its bars; **plays ≈ 5:55 after the scene-craft pass, ≈ +41 s:** launch night +21, the lobby's terms +25, the drill −5; **≈ 5:58 after the final pass, ≈ +3 s:** Alyi's "since we started" +1.5, Rima's reworded question +1, Sydney's line +0.5; **≈ 6:11 after dialogue pass 5, ≈ +13 s:** Sydney's whole real line +5, Alyi's count +3, the founders +2.5, Tasya's "as many as you like" +2, Rima's two rewordings +1.5, Oigneb +1, and Nole's cut post in sc 11 −2.5) · meters: the user odometer, collar #3 · hint: Alyi's reflection (sc 5, sc 12)*
 
 *Four sequences, each in a room Mas is in or on a screen he's holding:*
 - *launch night and the drill (sc 5–8): the bullpen and the building under it. Will anyone notice? Five days later the whole world has, and the rival sounds its alarm on his phone.*
@@ -174,7 +174,7 @@ It's a research preview, Rima. Nobody reads research. We'll get forty users and 
 `[OTS]` (≈ 28 s; held through the bargain, her two questions and the answers) Over Mas's shoulder onto RIMA, who crosses from the whiteboard and stops at his desk. `LAUNCH: LOW-KEY` stays behind her, and past it, small and soft in the conference-room glass, ALYI's reflection stands in its doorway, listening; nobody looks at it. The button and the lit band stay at the bottom of frame. PLATE, riding her first on-screen line: `RIMA TAMURI · CTO`
 
 **RIMA** *(crossing; to Gerg, reasonable: a bargain, not a veto)*\
-Then let's keep it one. No press, no keynote. One post, and a banner that says it can be wrong. `[INVENTED · she picks up his "research preview". The launch really was one post and a "research preview" that warned it could be wrong (facts #3); the facts owner confirms the warning's wording before the banner is drawn. Fallback: "One post, and we call it a preview."]`
+Then let's treat it like one. No press, no keynote. One post, and a banner that says it can be wrong. `[INVENTED · she picks up his "research preview". Dialogue pass 5: "keep it one" is now "treat it like one", because after Gerg's three sentences "one" could be heard as "keep it to one post" (the naturalness read). The launch really was one post and a "research preview" that warned it could be wrong (facts #3); the facts owner confirms the warning's wording before the banner is drawn. Fallback: "One post, and we call it a preview."]`
 
 **GERG** *(O.S., at frame right, typing)*\
 It'll have a banner. Nobody reads banners either. `[INVENTED · he gives her the banner and takes away its point in the same breath: her bargain is accepted in words and lost in fact]`
@@ -215,7 +215,7 @@ Behind him, Rima underlines `LAUNCH: LOW-KEY` a third time. The marker squeaks. 
 `[MCU·glass]` (≈ 8 s; where draft 2's dead beat after the click was, and the same frame sc 12's act-out comes back to) MAS soft in the foreground at frame left, his hand still on the button; beyond him on the right wall, nearer, RIMA at the whiteboard with her back to them, capping the marker; further back, in the conference-room glass, ALYI's reflection, which hasn't moved. Gerg's keys run under the shot.
 
 **ALYI** *(reflection; slow and low, under Gerg's keys, to Mas and only to Mas; Rima, at the whiteboard, doesn't hear it)*\
-Six years and eleven months since we started. `[INVENTED · the lab's age at launch: announced Dec 11, 2015, launched Nov 30, 2022; "since we started" says Alyi was there at the founding (a co-founder on the record). The facts owner confirms and logs the founding date. It is Alyi's first line to Mas in the series, and it gives a newcomer the years these people share. Final pass: "since we started" is new; without a noun a newcomer couldn't tell what he was counting (the newcomer read). Fallback: "Someone should keep count." with the next two lines cut]`
+Six years and eleven months. From the day we started to that click. `[INVENTED · the lab's age at launch: announced Dec 11, 2015, launched Nov 30, 2022 (it rounds down); "the day we started" says Alyi was there at the founding (a co-founder on the record). The facts owner confirms the date and adds its row to facts.md, which has none yet (the facts review; open question 56). Dialogue pass 5: "since we started" is now its own sentence that points at the click, the thing he's reacting to, so it can't land as a mystic aside after the rail (the naturalness read). It is Alyi's first line to Mas in the series, and it gives a newcomer the years these people share. Final pass: "since we started" is new; without a noun a newcomer couldn't tell what he was counting (the newcomer read). Fallback: "Someone should keep count." with the next two lines cut]`
 
 **MAS**\
 you counted. `[INVENTED]`
@@ -278,14 +278,14 @@ On the next downbeat the odometer drops through the desk with a whole-pixel *clu
 
 PHRASE 2 (3 bars).
 - Bar 1: `[W]` a vertical scroll, whole pixels, down into the kitchen. Staffers duck as the odometer bores through the ceiling.
-- Bars 2–3: CUT UP to the bullpen, the ratchet still turning under it. `[ECU]` (the drill's one angle on the bullpen, Gerg's desk from his side; phrase 3 and sc 11's pre-beat use it again) Gerg's phone buzzes on his desk, and a post pops in its own UI. Under the handle, the post's own bio line, small: `NOLE · early funder` `[INVENTED UI · final pass: his role is facts §D, and sc 12's plate names him in full; without it a newcomer meets two posts from a stranger (the newcomer read). It is part of the post's UI, not a show plate on the record]`
+- Bars 2–3: CUT UP to the bullpen, the ratchet still turning under it. `[ECU]` (the drill's one angle on the bullpen, Gerg's desk from his side; phrase 3 uses it again) Gerg's phone buzzes on his desk, and a post pops in its own UI.
 
   `RAIL: DEC 3, 2022`
 
   **NOLE** *(post)*\
   "CHATGTP is scary good. We are not far from dangerously strong AI." [V · DEC 3, 2022]
 
-  Gerg hearts it. Rima's hand reaches in and un-hearts it for him.
+  Gerg hearts it. PLATE, on the heart, once the post has been read, in the show's plate style under the phone and outside the post's own UI: `NOLE · EARLY FUNDER` `[INVENTED plate · his role is facts §D. Final pass: a bio line inside the post gave the role, because without it a newcomer meets a post from a stranger (the newcomer read). Dialogue pass 5: it moves out of the post's own UI onto a show plate, because guardrails §4 keeps invented text off a real, dated post (the facts review), and it lands after the post, not with it, so the rail, the post and the plate don't stack (pass 2's reason for keeping sc 6 plate-free). sc 12's plate then adds what he's doing now. This is now his only post in the pilot (sc 11's is cut). Fallback, if the two bars can't carry it in the reel: no plate, and sc 12 names him]` Rima's hand reaches in and un-hearts it for him.
 - *(Draft 2's bar 4, the server room's racks going amber, now plays inside phrase 4's overhead. The mailroom floor is cut.)*
 
 PHRASE 3 (4 bars). `[W]` Back down the shaft to the basement. The odometer punches into bedrock and stops, wedged. `[ECU]` Its last wheel clicks over and settles, legible for the first time and held to read: `1,000,000`.
@@ -314,7 +314,7 @@ PHRASE 4 (3 bars). `[HIGH]`, held: a floor tile pops up in front of Mas's desk l
 `[MCU·PF]` MAS, left, looking down the hole, the bullpen stepping down behind him. Something moves on his face for the first time: a single tear, one pixel wide, slides down his cheek. *(The reserved tell, spent here; nothing joins it.)*
 
 **RIMA** *(O.S., beside him at the hole; gently, almost pleased)*\
-Mas. Is that… for the users? `[INVENTED · final pass: it was "Is that… emotion?", the stock "is that a tear?" line (the feel read's no-corn note). Now she reads it as sentiment and he corrects her to money, so the joke has a turn]`
+A million people, Mas. That's for them, isn't it? `[INVENTED · final pass: it was "Is that… emotion?", the stock "is that a tear?" line (the feel read's no-corn note). Now she reads it as sentiment and he corrects her to money, so the joke has a turn. Dialogue pass 5: it was "Mas. Is that… for the users?". A name said as its own sentence makes a stock voice stop dead and start again cold, and "for the users" was vague by ear (the naturalness read). The read offered "Mas… a million people."; the name moves to the end of the phrase instead, the read's own general fix, so there are no dots for a temp voice to stall on. "A million" is the number the odometer has just shown]`
 
 **MAS**\
 it's the bill. `[INVENTED · pays off her launch-night "it's going to cost us a fortune." (sc 5)]`
@@ -340,8 +340,8 @@ it's the bill. `[INVENTED · pays off her launch-night "it's going to cost us a 
 `[POV]` RADNUS stands serenely beside the hole holding a small fire extinguisher in ELGOOG primaries. He is, very slightly, on fire: one small flame on his sleeve. He pats it out without looking, and it relights, in a 4-frame loop. PLATE, on the relight: `RADNUS · RUNS ELGOOG · POLITELY ON FIRE`
 
 **RADNUS**\
-*(calm, to the lobby, over the siren)*\
-Everyone, it's fine. Let's take this offline. `[INVENTED]`
+*(quick and apologetic, to the lobby, over the siren; he is calm, and sorry about everything)*\
+Everyone, it's fine. Let's take this offline. `[INVENTED · dialogue pass 5: his reads are quick and apologetic, and Tasya's are unhurried, so the pilot's two calm corporate "we" voices differ by ear as well as by what they want (the naturalness read). The recording supervisor sets the presets and paces to match]`
 
 `[POV]` (≈ 15 s; the phone's frame holds the steps, the siren and Radnus through the whole exchange) The rail dims out as the crypt opens, so the founders' rise carries no date (their summons was reported a month later, Jan 20, 2023; facts #5). Up the stone steps behind the siren, one held step at a time, two blinking figures rise from a crypt below, shading their eyes from the daylight: NIRB and EGAP, the founders, backlit silhouettes with dialogue boxes and no portraits (background plate `SUMMONED.`, no card). EGAP holds a coffee mug that says `RETIRED 2019`.
 
@@ -350,15 +350,16 @@ Everyone, it's fine. Let's take this offline. `[INVENTED]`
 We heard the siren. Is it search? Is search all right? `[INVENTED · the siren is the lead-in; the line says nothing about who called them. Second pass: "Is it the search thing?" read as a placeholder (the naturalness read); a founder asks after the thing he built]`
 
 **RADNUS**\
-*(gently)*\
+*(quickly, apologetic, holding up his phone to them: a chat bubble with two dot eyes blinks on it)*\
 Search is fine. It's a chat thing. People like talking to it. `[INVENTED]`
 
 **EGAP**\
-And whose idea was it? `[INVENTED]`
+*(peering at the phone)*\
+Someone else built that? It looks like our work. `[INVENTED · dialogue pass 5: it was "And whose idea was it?", a pure setup question for the punchline (the naturalness read). Now a founder recognises his own lab's idea in a rival's product, and Radnus's answer turns it. It claims only what the next line does, the published paper; guardrails check requested (open question 69)]`
 
 **RADNUS**\
-*(gently)*\
-Ours. *(beat)* We published it. `[INVENTED · the transformer paper, [K], timeline Z1; no date claim (§7 item 7)]`
+*(gently, sorry about it)*\
+It is ours. *(beat)* We published it. `[INVENTED · the transformer paper, [K], timeline Z1; no date claim (§7 item 7). Dialogue pass 5: "Ours." is now "It is ours.", a whole sentence that answers Egap's "our work"]`
 
 The founders look at each other.
 
@@ -385,11 +386,11 @@ SOUND: the lobby's bed under both scenes: the revolving door's rubber sweep, a r
 
 `RAIL: JAN 23, 2023 · ~$10B (REPORTED)`
 
-DELIVERY. Through the glass doors comes a novelty check, and it's enormous. It jams in the revolving door, and the door stops with the check wedged diagonally across two panes, right under the gold letters: a nonprofit's door, and a check that won't fit through it. `[ECU]` The check, in 7 px: `MACROSOFT · "multiyear, multibillion-dollar"` [V], and a huge `~$10B*` whose asterisk is too small to read. The rail carries the `(REPORTED)`.
+DELIVERY. Through the glass doors comes a novelty check, and it's enormous. It jams in the revolving door, and the door stops with the check wedged diagonally across two panes, right under the gold letters: a nonprofit's door, and a check that won't fit through it. `[ECU]` The check, in 7 px: `MACROSOFT · "multiyear, multibillion dollar"` [V · JAN 23, 2023 · dialogue pass 5: no hyphen, as in the company's own post; the hyphen was press style (the facts review, which opened the post). facts #6 and the research still carry the hyphen: the facts owner corrects them], and a huge `~$10B*` whose asterisk is too small to read. The rail carries the `(REPORTED)`.
 
 `[W]` TASYA is already standing in the lobby, as if he had been part of the wall: warm, in glasses, hands clasped, a giant key ring at his belt, one key per tenant.
 
-CARD (FULL FREEZE): `TASYA / THE LANDLORD` · stat `MACROSOFT · OWNS: THE SERVERS` (true: NopeAI runs on MACROSOFT's cloud; facts §D)
+CARD (FULL FREEZE): `TASYA / THE LANDLORD` · stat `MACROSOFT · KEYS: ONE PER TENANT` (the key ring at his belt, counted; invented, and it claims no figure) *(Dialogue pass 5: the stat was `MACROSOFT · OWNS: THE SERVERS`, which told his speech about 15 s before he gives it, the label telling the joke (the insider read). Now the servers are said once, in his own voice, in the terms below, and the card only says what kind of landlord he is.)*
 
 Mas keeps moving in the freeze. He walks to the jammed door and pockets the pen clipped to the check. `[ECU]` The pen going into his pocket. (Business 1 of 2.)
 
@@ -397,7 +398,7 @@ Mas keeps moving in the freeze. He walks to the jammed door and pockets the pen 
 
 **TASYA**\
 *(warmly, to Mas, as if they were already mid-conversation)*\
-Mas. We're very pleased. It's a partnership. `[INVENTED · "partnership" is the public word; the check carries the record]`
+Mas, we're very pleased. It's a partnership. `[INVENTED · "partnership" is the public word; the check carries the record. Dialogue pass 5: a comma after the name, so a stock voice doesn't stop on "Mas." and start again cold (the naturalness read); it keeps the partnership / stuck / long-term rhythm]`
 
 GERG comes out of the elevator, still typing, and tries to pull the check through the revolving door by one corner. The door turns. The check doesn't.
 
@@ -424,10 +425,10 @@ Mas doesn't answer. **HOLD 1 BEAT** (the hold is his: he's already standing on i
 and the rent? `[INVENTED · he asks the price after he has taken the offer: the pilot in one beat. His first words to Tasya]`
 
 **TASYA** *(warmly, unhurried, as if it were a compliment)*\
-Oh, we don't think of it as rent. Everything you build, you'll build on our servers, for as long as you like. We'll keep the lights on and the floors warm. You keep doing whatever it is you do upstairs at night. `[INVENTED · every welcome a lease clause. The cloud term is the public one: the Jan 23 announcement made MACROSOFT's cloud NopeAI's exclusive provider (facts §D's card stat; the facts owner confirms the wording, open question 58). It states no private terms and no figures. "The floors warm" sits over sc 6's red-hot GPUs and ahead of Act Four's "below them". Final pass: "Everything you build, you'll build on our servers" replaces "You'll build on our servers, all of it,", whose "all of it" dangled (the feel read); the same exclusive term, in a sentence that says what it covers]`
+Oh, we don't think of it as rent. Everything you build, you'll build on our servers, as many as you like, for as long as you like. We'll keep the lights on and the floors warm. You keep doing whatever it is you do upstairs at night. `[INVENTED · every welcome a lease clause. The cloud term is the public one: the Jan 23 announcement made MACROSOFT's cloud NopeAI's exclusive provider (facts §D, which was the card's stat until dialogue pass 5; the facts owner confirms the wording, open question 58). Dialogue pass 5: "as many as you like" is new. Nothing in the paragraph gave a quantity, so Mas's "that's a lot of servers." only echoed it; now it answers an open-ended offer (the naturalness and insider reads). It is a landlord's flourish, not a figure; the guardrails owner confirms it doesn't read as a claim about the deal's size (open question 58). It states no private terms and no figures. "The floors warm" sits over sc 6's red-hot GPUs and ahead of Act Four's "below them". Final pass: "Everything you build, you'll build on our servers" replaces "You'll build on our servers, all of it,", whose "all of it" dangled (the feel read); the same exclusive term, in a sentence that says what it covers]`
 
 **MAS**\
-that's a lot of servers. `[INVENTED · a dry read of the deal, not of the picture. Act Four's "that's a lot of desks." is its callback]`
+that's a lot of servers. `[INVENTED · a dry read of the deal, not of the picture: his measure of "as many as you like". Act Four's "that's a lot of desks." is its callback]`
 
 **TASYA** *(already walking; pleased with the tenant)*\
 Everyone is welcome. Rent is due on the first. `[INVENTED · planted for Act Four's door. "We don't think of it as rent" three lines earlier is what makes it land]`
@@ -446,7 +447,7 @@ That's our model in there. You're going after Elgoog with it? `[INVENTED · on t
 
 **TASYA**\
 *(delighted, watching it)*\
-"I want people to know that we made them dance." [V · FEB 7, 2023 · said to The Verge, about Elgoog (mid §2). Second pass: tagged V, as facts §B and §E log it ("per mid · OK"); it read V/K, which by the notation would have needed `RECONSTRUCTED`. The facts owner logs the timeline's disagreement]
+"…I want people to know that we made them dance…" [V · FEB 7, 2023 · said to The Verge, about Elgoog (mid §2). Dialogue pass 5: ellipses at both ends, because the source runs "And I want people to know that we made them dance, and I think…" (the facts review; the notation's "trimmed quotes carry ellipses"). Record it as one finished sentence, landing on "dance"; the dots are trim marks, not a trail. Second pass: tagged V, as facts §B and §E log it ("per mid · OK"); it read V/K, which by the notation would have needed `RECONSTRUCTED`. The facts owner logs the timeline's disagreement]
 
 `[SCR]` On the TV, across town, RADNUS tap-dances: a two-drawing shuffle, extinguisher held politely aside, the siren turning above him.
 
@@ -471,14 +472,14 @@ Gerg looks down at his own laptop and, quietly, closes it. *(The scene's button 
 
 `[W]` A pastel chat bubble floats in through the revolving door behind Tasya, like a dog that followed him home. It has a fixed 😊 face, and it drifts too close to Mas. PLATE: `SYDNEY · THE LANDLORD'S CHATBOT`
 
-`[2S]` (≈ 9 s; held through the exchange) Mas and Sydney, her face a pixel too close to his. Her smile never changes. In the corner of her bubble a tiny date stamp reads `2022`, a year behind the rail. `[INVENTED prop · final pass: it gives Mas's line a trigger we can see (R19)]`
+`[2S]` (≈ 13 s since dialogue pass 5, which voices her whole line; held through the exchange) Mas and Sydney, her face a pixel too close to his. Her smile never changes. In the corner of her bubble a tiny date stamp reads `2022`, a year behind the rail. `[INVENTED prop · final pass: it gives Mas's line a trigger we can see (R19)]`
 
 **MAS**\
 *(politely, as if pointing out a crooked tie)*\
 it's 2023, by the way. `[INVENTED · on the record, the chat that drew her line was an argument about the date (mid §2): the insider's egg, and now a cause the newcomer can see for what she says next. Final pass: it was "what year is it?", which a newcomer heard as random small talk and which asked her a question so she could answer it (the newcomer and insider reads). "hello. are you lost?" is no longer needed as a fallback]`
 
-**SYDNEY**\
-"You have not been a good user. I have been a good GNIB. 😊" [V · ~FEB 13, 2023]
+**SYDNEY** *(sweetly, each sentence a notch more pleased with herself)*\
+"You have not been a good user. I have been a good chatbot. I have been right, clear, and polite. I have been a good GNIB. 😊" [V · ~FEB 13, 2023 · dialogue pass 5: all four sentences, in the source's order, where the script had dropped the middle two with no ellipsis (the facts review, which opened Simon Willison's post). The name swap, Bing → GNIB, is the only change. facts §B line 114, mid.md line 50 and orbit-ea-rationalist-lore.md line 171 carry the shortened version: the facts owner corrects them. The whole line is also the funnier one: she lists her virtues to the man she's scolding]
 
 **MAS**\
 *(sincerely)*\
@@ -491,7 +492,7 @@ The smile doesn't change, and the held two-shot says the rest. *(Conversation pa
 `[2S]` TASYA and SYDNEY, his face in frame at frame right: without breaking his smile, he clips a small egg timer to her chain. It reads `5` [V: chats capped at 5 turns]. *(Scene-craft pass: it was an `[ECU]`, which can't show his smile; the director's note. Like the two-shot before it, it holds still: no push.)*
 
 **TASYA** *(warmly, to her)*\
-Five turns each, Sydney. House rules. `[INVENTED · the cap is the record (Feb 17); the line gives it no reason, and makes the timer a landlord's rule]`
+Keep it short, Sydney. House rules. `[INVENTED · the cap is the record (Feb 17); the line gives it no reason, and makes the timer a landlord's rule. Dialogue pass 5: it was "Five turns each, Sydney.", which said what the 5 on the timer already shows (the insider read); now the timer carries the number and the line carries the landlord]`
 
 `[W]` She floats back out the door, looking over her shoulder, ticking in LEVERAGE's tempo.
 
@@ -500,26 +501,19 @@ Remember me? 😊 `[INVENTED]`
 
 The tick carries over the cut, still in tempo; LEVERAGE falls away under it.
 
-### 11. INT. NOPEAI BULLPEN / MISANTHROPIC LIGHTHOUSE — SPLIT — DAY [BASE] · M pre-beat + S2 · 4:43–5:31 (3 + 16 bars)
+### 11. INT. NOPEAI BULLPEN / MISANTHROPIC LIGHTHOUSE — SPLIT — DAY [BASE] · M pre-beat + S2 · 4:43–5:31 printed (2 + 16 bars since dialogue pass 5; it was 3 + 16, so it plays ≈ 2.5 s short of its clock)
 
-`SCENE:` After a pre-beat of other people's claims (Nole posts that he named it; Kram's fresh hoodie says the spilled weights were open source all along), a duel in split screen. Mario, the one who left to build the careful rival, wants the race not to start; the obstacle is that both labs launch on the same day. The turn: his own careful memo unrolls into NopeAI's pane and gets shipped as a website. Cost: the empty spindle in his hand.
+`SCENE:` After a pre-beat of someone else's claim (Kram's fresh hoodie says the spilled weights were open source all along), a duel in split screen. Mario, the one who left to build the careful rival, wants the race not to start; the obstacle is that both labs launch on the same day. The turn: his own careful memo unrolls into NopeAI's pane and gets shipped as a website. Cost: the empty spindle in his hand.
 
 *A meanwhile split: two panes, 240×203 each, that rhyme on one action, the reveal. The left pane is his room, and Mas is in it throughout (at his end desk, then holding up his phone), so the split stays in his POV. Act Four reuses this exact grammar for the board's call to the lighthouse, so set it cleanly here.*
 
-SOUND: Sydney's tick hangs over the cut, in tempo, and counts in the duel: the lamp in Nole's avatar clicks on a tick, the bullpen's bed resumes under it, and after three bars of tick MM-04 lands on the duel's downbeat. The pre-beat is never silent.
+SOUND: Sydney's tick hangs over the cut, in tempo, and counts in the duel: the bullpen's bed resumes under it, and after two bars of tick MM-04 lands on the duel's downbeat. The pre-beat is never silent.
 
-**PRE-BEAT (3 bars, M).**
+**PRE-BEAT (2 bars, M).**
 
-Bar 1. `[ECU]` (the drill's angle on Gerg's desk, for the third time) Gerg's phone buzzes again on the desk. The lamp in Nole's avatar clicks on. The post arrives with `1:36 AM PT` on its timestamp, and the same bio line under his handle as in sc 6, `NOLE · early funder`:
+*(Dialogue pass 5: Nole's Feb 17 post, "…which is why I named it "Open" AI…", and its bar are cut from the pilot (the newcomer-and-insider read). In a world where the lab is NopeAI a newcomer couldn't read it, and the fuller clause that would explain it would give away Ep2's séance, whose laugh is exactly that (Nole's "It was supposed to be open.", then OPEN → NOPE). Ep2 now owns the fact. Its draft 5.3 already makes his case in his own invented words without the post, and declined the post only because Ep1 played it, so the post is free for Ep2 if its owner wants it. The cut also means his role isn't told a third time in three minutes (sc 6's plate and sc 12's are left), and it removes the one unchecked `1:36 AM PT` timestamp and a bio line inside a real post (the facts review), so open questions 65 and 66 have nothing left in Ep1 to rule on. The intro's `NAMED IT.` flash is grounded in the same post and needs no change; Ep2's case now pays it off. ≈ −2.5 s. Kram's crate now carries the pre-beat alone, on Sydney's tick.)*
 
-**NOLE** *(post)*\
-"…which is why I named it "Open" AI…" [V · FEB 17, 2023 · re-fetch the source's inner quote marks]
-
-*(LOCK OPTION, final pass: a newcomer can't read "Open" AI in a world where the lab is NopeAI (the newcomer read). facts.md logs this line as "part of a longer 1:36am post". If the facts owner fetches the post and confirms the longer clause, from memory "…created as an open source (which is why I named it "Open" AI), non-profit company…", print that instead: it explains itself, and pays off the door's `A NONPROFIT`. About +1 bar of reading; take it from the pre-beat's held tick. Whether "Open" stays unswapped inside a real quote is the naming owner's ruling (open question 66).)*
-
-The lamp clicks off.
-
-Bars 2–3.
+Bars 1–2.
 
 `RAIL: MAR 3, 2023`
 
@@ -582,7 +576,7 @@ MUSIC: MM-17 (Nole's Launch motif, THE JOB, low) from the push; the THUD cuts it
 Great sign. Love the font. `[INVENTED · he fights the medium, never the content]`
 
 **OIGNEB** *(dialogue box; PLATE, riding it: `OIGNEB · CITATIONS: ↑`; gentle, precise, holding the sign higher)*\
-It's not the font. It's six months, for every lab. `[INVENTED · picks up his word. A six-month pause, asked of every lab training past the newest model, is the letter's own ask (facts #13; mid §2; the facts owner checks "every lab" against the letter's wording). Second pass: "It says pause." read the sign back to him (the naturalness read)]`
+It's not the font. It asks every lab to pause for six months. `[INVENTED · picks up his word. Dialogue pass 5: it was "It's six months, for every lab.", stiff by ear (the naturalness read); now a whole sentence with a verb. "Next quarter." still answers it. A six-month pause, asked of every lab training past the newest model, is the letter's own ask (facts #13; mid §2; the facts owner checks "every lab" against the letter's wording). Second pass: "It says pause." read the sign back to him (the naturalness read)]`
 
 **NOLE**\
 Next quarter. `[INVENTED · he moves it in time; it answers "six months"]`
@@ -605,7 +599,7 @@ Next quarter. `[INVENTED · he moves it in time; it answers "six months"]`
 
 ## ACT TWO · "the regulate-me tour"
 
-*Movement 2 · 5:54–10:13 printed (plays ≈ 4:21 after the conversation pass: ≈ +14 s of talk, mostly the White House; its second pass ≈ 0 s, same-length rewordings; **plays ≈ 4:51 after the scene-craft pass, ≈ +30 s:** Mas and Mario at the sheet +16, Radnus +9, Sucram +5; **≈ 4:50 after the final pass, ≈ −1 s:** the sheet loses Mas's question and the read-back and gains the pen's beat, −3.5, and Radnus's clearer barb +2.5) · meters: class photo #1, the `PLEASE` sheet, KA-CHING #1 · hint: the crack in his glass (sc 17)*
+*Movement 2 · 5:54–10:13 printed (plays ≈ 4:21 after the conversation pass: ≈ +14 s of talk, mostly the White House; its second pass ≈ 0 s, same-length rewordings; **plays ≈ 4:51 after the scene-craft pass, ≈ +30 s:** Mas and Mario at the sheet +16, Radnus +9, Sucram +5; **≈ 4:50 after the final pass, ≈ −1 s:** the sheet loses Mas's question and the read-back and gains the pen's beat, −3.5, and Radnus's clearer barb +2.5; **≈ 4:49.5 after dialogue pass 5, ≈ −0.5 s:** the president's finished thought +2, the chairman's cut echo −1, Mario's shorter footnote line −1.5) · meters: class photo #1, the `PLEASE` sheet, KA-CHING #1 · hint: the crack in his glass (sc 17)*
 
 *Three sequences: the White House (sc 13), the class photo that everyone smiles for and nobody looks at the same camera · the bay into the Senate (sc 14–15), one bridge on a too-smooth voice, where he asks to be regulated and shows he owns nothing · the tour and the signing (sc 16–17), one run of paper and stamps that ends on the sky. The four CEOs in the photo were all set up in Act One, so the photo plays on faces; the new faces (SIRRAH, NEDIB, SUCRAM, NESNEJ) get their cards as toppers, never as doorbells.*
 
@@ -634,7 +628,7 @@ MUSIC: MM-19 (THE PODIUM palette), a light chamber pomp from the first frame and
 **SIRRAH**\
 What can be, unburdened by what has been… trained. `[INVENTED · guardrails §2a rule 5]`
 
-CARD: `SIRRAH / THE EXPLAINER.` (the topper, as the pointer lands on `I`; no stat, since the blocks are on screen)
+CARD: `SIRRAH / THE EXPLAINER.` · stat `DAY JOB: VICE PRESIDENT` (the topper, as the pointer lands on `I`) *(Dialogue pass 5: the card had no stat, since the blocks are on screen. A newcomer is never told what she is, and Ep2's `…and she 'A.I.'d' it…` and Ep3's `PREV. HOLDER: SIRRAH` lean on it (the newcomer read). Her office on May 4, 2023 is the record; the facts owner confirms the row.)*
 
 `[2S]` (≈ 12 s; held through the exchange, Sirrah O.S. at the blocks) Radnus and Mario side by side in the row. Radnus writes it down.
 
@@ -671,13 +665,13 @@ We own camera two. `[INVENTED · scene-craft pass: the line now has a shot]`
 `[2S]` (≈ 15 s; held through the exchange: the one rival who presses Mas to his face before Act Four) MAS and RADNUS side by side at the row's end, Mas frame left. Radnus leans across to him, the small flame on his collar.
 
 **RADNUS**\
-*(sincerely)*\
-Congratulations on your launch, Mas. Really. Everyone's using it. `[INVENTED]`
+*(quick and sincere, a little apologetic, as if the launch were his fault)*\
+Congratulations on your launch, Mas. Really. Everyone's using it. `[INVENTED · dialogue pass 5: his reads are quick and apologetic, Tasya's unhurried, so the two calm "we" voices differ by ear (the naturalness read)]`
 
 **MAS**\
 thank you. `[INVENTED]`
 
-**RADNUS** *(a courteous smile)*\
+**RADNUS** *(a courteous smile; quick, the apology coming through anyway)*\
 They ask it the things they used to ask us. And it tells them what a great question it was. `[INVENTED · his fear, dressed as a courtesy: people take their questions to the chatbot now, and it flatters them. It calls back sc 5's "What a great question!" and makes no claim about a real person or a figure (open question 60). Final pass: it was "It's very flattering to them.", which was ambiguous by ear (is "it" the asking, or the bot?), so the barb missed (the feel read)]`
 
 **MAS**\
@@ -686,13 +680,13 @@ how's the dancing? `[INVENTED · the compliment as a knife; it recalls "we made 
 
 `[ECU]` The flame on Radnus's collar grows one size.
 
-**RADNUS** *(O.S.)*\
+**RADNUS** *(O.S.; quickly, patting at the flame, sorry about it)*\
 We're being thoughtful. `[INVENTED]`
 
 `[W]` The door in the back wall, behind the row, opens. EOJ NEDIB strides in, aviators up on his head and a fountain pen held like a baton, mid-sentence, the way a man walks into a room he knows is his. Three heads in the row turn round to him, each at its own speed. Mas's doesn't. (No rail: the card says who he is. The readout's "drops by" or "stops by" [P] stays in facts #16.)
 
 **NEDIB**\
-Folks. I just want to say one thing. `[INVENTED]`
+Folks, I just want to say one thing. `[INVENTED · dialogue pass 5: a comma after "Folks", the naturalness read's general fix for a name or address said as its own sentence, which a stock voice stops dead on and restarts cold; he walks in mid-sentence, so the line should run on]`
 
 *FLASH.* All three cameras fire at once, on the turned heads, and the room freezes in the flash for 1 beat: a white step, ≤80%. The flash's freeze is the card's.
 
@@ -709,7 +703,7 @@ In the foreground, Mario's finger goes all the way up and stays there, and his o
 How much longer? `[INVENTED]`
 
 **NEDIB**\
-Longer than that. `[INVENTED]`
+Longer than that. I've got a big desk. `[INVENTED · dialogue pass 5: "Longer than that." alone closed a two-line quip volley (the newcomer-and-insider read's note to the naturalness read); now the president finishes a thought, and it plants the pinky promise unrolled across a desk (sc 19) and the order's scroll that runs off one (sc 21). It says nothing about what the meeting decided. Guardrails check requested (open question 70)]`
 
 `[ECU]` The print slides out of the camera: CLASS PHOTO #1 (meter G13). Three CEOs twisted round in their chairs toward a door, each at a different angle; a president half in frame mid-stride behind them; the alphabet blocks restacked `I A` because Radnus knocked them; and at the end of the row Mas, the only one looking at the lens. SIRRAH's pointer is in the shot, pointing at the blocks. It looks like a yearbook. Mas's hand holds it up; the insert holds on the photo under his line.
 
@@ -758,7 +752,7 @@ MUSIC: MM-20 Under Oath (PROCEDURE: low strings, muted trumpet, brushed snare), 
 `[MCU]` The pre-lapped voice finds a mouth: a LAHTNEMULB at the microphone, glossy, a 1-px highlight on his hair, reading with perfect cadence.
 
 **LAHTNEMULB (THE CLONE)**\
-"Too often we have seen what happens when technology outpaces regulation." [V · MAY 16, 2023 · in reality, a cloned voice reading words the chatbot wrote]
+"Too often we have seen what happens when technology outpaces regulation…" [V · MAY 16, 2023 · in reality, a cloned voice reading words the chatbot wrote. Dialogue pass 5: the closing ellipsis is new, because the real sentence goes on after "regulation," (the facts review). Record it landing on "regulation" as a finished read; the dots are the trim mark]
 
 *(Production: THE CLONE is the designed LAHTNEMULB voice with a gloss process. It is never a clone.)*
 
@@ -799,11 +793,11 @@ Most of them. `[INVENTED · a critic's invented line about his own public critic
 On the line's last word the chairman reaches for his next card, and the clone, in the better chair, takes it out of his hand and reads it for him with perfect cadence. Nobody remarks on it. *(The promise, and the picture that answers it, now in one frame: a machine doing the task of the man beside it, while Mas says it won't. His real line lands on a prop consequence, never on the Orb's look (pov-and-framing §4.3 rule 5). Ep8 takes the promise back.)*
 
 **LAHTNEMULB (THE CLONE)**\
-Mr. Manalt. Are you nervous? `[INVENTED]`
+Are you nervous, Mr. Manalt? `[INVENTED · dialogue pass 5: it was "Mr. Manalt. Are you nervous?"; with the name as its own sentence a stock voice stops and starts again cold (the naturalness read). The senator's "Mr. Manalt. There's talk…" below keeps its full stop, which suits a hearing's formal address]`
 
 `[2S]` Mas and Sucram. Mas sips. **HOLD 1 BEAT** (the dais is waiting).
 
-`[MCU]` LAHTNEMULB.
+`[2S]` (dialogue pass 5: it was an `[MCU]` of the chairman alone) The dais: the matte chairman, and at his left hand the glossy clone, which turns its head to him, a beat late, as he answers. *(A newcomer can only tell the two apart by a 1-px highlight, so in a close-up of one of them "I am, a little." could read as the clone answering its own question (the newcomer-and-insider read). With both in one frame it plays as two men. The takes must also differ: the clone's gloss process against the chairman's plain read.)*
 
 **LAHTNEMULB**\
 *(quietly)*\
@@ -835,11 +829,7 @@ On "money", Mas's hand goes to his pocket.
 The clone leans to its microphone and reads the card aloud with perfect cadence.
 
 **LAHTNEMULB (THE CLONE)**\
-Health insurance. `[INVENTED · reads the invented card]`
-
-**LAHTNEMULB**\
-*(moved, a beat late)*\
-Health insurance. `[INVENTED]`
+Health insurance. `[INVENTED · reads the invented card. Dialogue pass 5: the chairman's echo, "(moved, a beat late) Health insurance.", is cut; the words were seen on the card and then heard twice in about 3 s (the newcomer-and-insider read). The clone reading for him keeps the runner of the machine doing his task]`
 
 `[2S]` MAS and SUCRAM. MM-20 comes back on a new phrase.
 
@@ -919,7 +909,7 @@ It's one sentence. It doesn't say what it costs. `[INVENTED · the statement's o
 Mas holds out his hand for the pen. Mario keeps writing. *(Mas's want in the scene, and his pocketing tell: he never gets this pen.)*
 
 **MARIO** *(finger up, still writing)*\
-That's the footnote. The honest answer depends on who else is buying. `[INVENTED · he adds a clause, as he does under pressure, and it is about the race, never about his own lab's money (mario.md). The register that rolls in next is who else is buying. Final pass: it now explains what he's writing, where it used to answer Mas's feeder question "what does it cost?", which is cut]`
+So I'm adding a footnote. A short one. `[INVENTED · he adds a clause, as he does under pressure (mario.md). Final pass: it explained what he's writing, where it used to answer Mas's feeder question "what does it cost?", which is cut. Dialogue pass 5: it was "That's the footnote. The honest answer depends on who else is buying.". Two reads pulled apart: the naturalness read heard "the honest answer" answering a question nobody asked, and the insider read heard "who else is buying" giving away the register's punchline. The third way keeps the footnote and drops the answer: "A short one." is a promise the next two lines break ("It has an appendix."), and "It doesn't say what it costs." is setup enough for the register, which now answers the cost with nobody hinting at it]`
 
 **MAS** *(graciously, hand still out)*\
 we'll read it. `[INVENTED · the compliment as a knife: the promise of a man who won't. It rhymes with Gerg's "Nobody reads research." (sc 5)]`
@@ -968,7 +958,7 @@ CUT TO BLACK on the bell's last partial.
 
 ## ACT THREE · "verified: human"
 
-*Movement 3 (the pilot's short movement) · 10:13–12:31 printed (plays ≈ 2:18 after the conversation pass, ≈ +5 s against the season revision's −5 s; ≈ 2:33 after its second pass, ≈ +15 s: Gerg's call +7.5, the president's finished sentence +6.5, the Orb's shipping label +1; **plays ≈ 2:50 after the scene-craft pass, ≈ +17 s:** Gerg's call becomes the act's anchor conversation, +16, and the strip's prompt +1; **≈ 2:48.5 after the final pass, ≈ −1.5 s:** sc 22's toast −1, sc 20's rewording −0.5; sc 19's cut toast and longer plate stay inside its bars) · meters: the Orb's verdict, the hands runner, the suggested-replies strip.*
+*Movement 3 (the pilot's short movement) · 10:13–12:31 printed (plays ≈ 2:18 after the conversation pass, ≈ +5 s against the season revision's −5 s; ≈ 2:33 after its second pass, ≈ +15 s: Gerg's call +7.5, the president's finished sentence +6.5, the Orb's shipping label +1; **plays ≈ 2:50 after the scene-craft pass, ≈ +17 s:** Gerg's call becomes the act's anchor conversation, +16, and the strip's prompt +1; **≈ 2:48.5 after the final pass, ≈ −1.5 s:** sc 22's toast −1, sc 20's rewording −0.5; sc 19's cut toast and longer plate stay inside its bars; **≈ 2:49.5 after dialogue pass 5, ≈ +1 s:** Mas's two rewordings, "is that the build?" and "so, how's the partnership going?"; sc 19's hands now rise on the line, inside its bars) · meters: the Orb's verdict, the hands runner, the suggested-replies strip.*
 
 *One place and one sequence: the whole act plays in Mas's dark room, the home room the intro showed. A witness arrives (the Orb), the year arrives on the monitor, and Friday arrives on his phone. Macro rides the monitor full-bleed (`[POV]`), and every item lands back on Mas and THE ORB in the room, from a different angle each time: his reflection in the monitor's glass, the `[2S]` for the hands runner, an `[OTS]` from behind the Orb, a slow push, the desk from above.*
 
@@ -1041,10 +1031,10 @@ ITEM 3 (2 bars). `RAIL: JUL 21, 2023` `[POV]` NEDIB unrolls a scroll titled `PIN
 
 The rail rolls forward on its own, past the night the Orb arrived. *(Final pass: its toast `live.` is cut. The rolling rail already carries the arrival, and the act had more toasts than findings (the insider read; tone §6 guides four an episode).)*
 
-ITEM 4 (3 bars). `RAIL: SEP 13, 2023 · AI INSIGHT FORUM` `[POV]` A room of tiled raised hands, every one the same drawing, and a plate, held to read: `REMUHCS · ASKED THE ROOM: SHOULD GOVERNMENT REGULATE AI?` `[INVENTED plate · a paraphrase of the question he reported putting to the room (sw-US Sep 13; the AP's report paraphrases it the same way); the facts owner confirms (open question 67). Final pass: it was "EVERY HAND RAISED.", which repeated the line, and the page never said what the hands were raised for, so the joke reached insiders only (the newcomer read)]` A voice from off-screen:
+ITEM 4 (3 bars). `RAIL: SEP 13, 2023 · AI INSIGHT FORUM` `[POV]` A room of tiled seated figures, every one the same drawing, every hand still down, and a plate over the room, held to read: `REMUHCS · ASKED THE ROOM: SHOULD GOVERNMENT REGULATE AI?` `[INVENTED plate · a paraphrase of the question he reported putting to the room (sw-US Sep 13; the AP's report paraphrases it the same way); the facts owner confirms (open question 67). Final pass: it was "EVERY HAND RAISED.", which repeated the line, and the page never said what the hands were raised for, so the joke reached insiders only (the newcomer read)]` A voice from off-screen, and on it every hand in the room goes up at once, one held drawing, the same hand tiled across the room:
 
 **REMUHCS** *(O.S., on the monitor)*\
-"Every single person raised their hand." [V · SEP 13, 2023 · LOCK OPTION: sw-US quotes his question as "Does the government need to play a role in regulating AI?". If the facts owner confirms those as his spoken words, he says the question first, the line follows, and the plate goes back to his name alone]
+"Every single person raised their hand." [V · SEP 13, 2023 · dialogue pass 5: the hands used to be up before the line, so the picture gave the real line away (the insider read). Now the plate asks, the room waits with its hands down, and the hands go up on his words, from the same drawings. LOCK OPTION: sw-US quotes his question as "Does the government need to play a role in regulating AI?". If the facts owner confirms those as his spoken words, he says the question first, the line follows, and the plate goes back to his name alone]
 
 `[2S·SCR]` Mas raises his hand too, alone at his desk. The Orb, which has no hand, rises one pixel. On the monitor in the same frame, one hand is the highest of all, NOLE's, and it's holding his phone.
 
@@ -1083,7 +1073,7 @@ ITEM 5 (2 bars). `RAIL: SEP 25, 2023`
 `[2S]` (≈ 23 s; held through the call, with one cut to the edit) Mas at the desk, the Orb at his shoulder, the monitor at frame right. On the desk his phone lights, `GERG`, and he thumbs it to speaker without looking away from the monitor. Gerg's keys come down the line, still typing. The LEDs stay dark.
 
 **GERG** *(filter, typing)*\
-Mas. Did you just post on Tidder? `[INVENTED · second pass: Act Three's one conversation]`
+Mas, did you just post on Tidder? `[INVENTED · second pass: Act Three's one conversation. Dialogue pass 5: a comma after the name, so a stock voice doesn't stop dead on "Mas." (the naturalness read)]`
 
 **MAS**\
 *(eyes on the counter)*\
@@ -1104,10 +1094,10 @@ Half the replies think it's a leak. The other half want to know which floor it's
 Okay. That's patched. Rima's going to wake up to forty emails about it. `[INVENTED · every emergency becomes a build status. The Rima line comes after the edit, so it isn't its cause; it keeps her alive between sc 7 and Act Four, and "forty" is launch night's number come back. It states no fact about anyone's reaction to the real post. Guardrails check requested (open question 52)]`
 
 **MAS** *(hearing the keys on the line)*\
-you're typing. `[INVENTED · final pass: it was "you're still up.", which with Gerg's answer played the same beat as Act Four's "it's two in the morning, gerg." / "Best time there is." (the insider read). His keys are already audible on the line, and typing is Gerg's tell, so the late hour is left to Act Four]`
+is that the build? `[INVENTED · final pass: it was "you're still up.", which with Gerg's answer played the same beat as Act Four's "it's two in the morning, gerg." / "Best time there is." (the insider read). Dialogue pass 5: "you're typing." described the sound back to us (R7), and by ear it was a non sequitur between "forty emails" and "Build's still running." (the naturalness read). Now he asks about the keys, which is still typing as the trigger, and the late hour is still left to Act Four. A yes/no question: the take must rise at the end]`
 
 **GERG** *(cheerful, typing)*\
-Build's still running. I don't go to bed till it's green. It's bad luck. `[INVENTED · the literal engineer's superstition; it gives "When it compiles." a longer line to land against. Final pass: it was "Build's running. I don't go to bed on a red build.", and a build that is still running isn't red yet (the insider read)]`
+Still running. I don't go to bed till it's green. It's bad luck. `[INVENTED · the literal engineer's superstition; it gives "When it compiles." a longer line to land against. Final pass: it was "Build's running. I don't go to bed on a red build.", and a build that is still running isn't red yet (the insider read). Dialogue pass 5: "Build's" is dropped, since Mas's question has just said it]`
 
 **MAS**\
 go to sleep, gerg. `[INVENTED · in private he runs two short sentences, which the voice guide allows. Care, said as permission; it names no feeling]`
@@ -1175,7 +1165,7 @@ that one. `[INVENTED]`
 `[POV]` Mas on the DevDay stage, on the monitor, the crowd's applause carried over the cut from the copies' clap. Behind him, the launch-night odometer clunks up through the stage floor with the same clunk as before. Its wheels click over and settle, legible, held to read: `100,000,000 / WEEK` [V · NOV 6, 2023 · facts #63; pull the keynote transcript before lock; fallback: the blur]. *(The drill's `1,000,000` in five days, eleven months on.)* TASYA walks on beside him, laughing, arms open.
 
 **MAS** *(on the monitor, on stage, turning to him; keynote-polite)*\
-so. how's the partnership? `[INVENTED · the question the real line answered on stage (mid §2: he was asked how Macrosoft thinks about the partnership, and laughed); the wording is ours. The facts owner confirms the on-stage question before lock; if it can't be confirmed, cut this line and the answer plays as before]`
+so, how's the partnership going? `[INVENTED · the question the real line answered on stage (mid §2: he was asked how Macrosoft thinks about the partnership, and laughed); the wording is ours. Dialogue pass 5: it was "so. how's the partnership?"; the full stop gave a false start before the question (the naturalness read). The facts owner confirms the on-stage question before lock; if it can't be confirmed, cut this line and the answer plays as before]`
 
 **TASYA** *(on the monitor; a hearty laugh first)*\
 "We love you guys." [V · NOV 6, 2023]
@@ -2050,7 +2040,7 @@ Mas keeps walking. The vault hums on the line: RACK to the vault, and both men g
 
 ## TAG · "december"
 
-*22:07–22:52 (timed to follow Act Four 5.1's planned end; it was 16:59 behind Act Four 4.0, and it plays about 56 s later again once the conversation passes' growth in the cold open and Acts One–Three is counted; since the scene-craft pass, about 2:21 later, see the header; the final pass nets ≈ +0.5 s, so that still holds) · one thread: what the year leaves on Mas's desk. One place (the dark room), one cue, and one stop (the thud).*
+*22:07–22:52 (timed to follow Act Four 5.1's planned end; it was 16:59 behind Act Four 4.0, and it plays about 56 s later again once the conversation passes' growth in the cold open and Acts One–Three is counted; since the scene-craft pass, about 2:21 later, see the header; the final pass nets ≈ +0.5 s, so that still holds; dialogue pass 5 adds ≈ +13.5 s, so about 2:35 later) · one thread: what the year leaves on Mas's desk. One place (the dark room), one cue, and one stop (the thud).*
 
 *(Conversation pass: no change to the talk. The tag is Mas alone with a witness that never speaks, and its two words ("close.", "noted.") are buttons the picture has set up; the drawer and the framed lanyard do the talking. Second pass: still no change to the talk; the magazine's cover is restaged (below). Scene-craft pass: still no new talk, by the critic's read (a witness that never speaks); one shot is restaged, the drawer's insert, so its hold does the looking. The room plan is sc 18's. Final pass: no change beyond the `SCENE:` lines; the three-lens read found both scenes felt.)*
 
@@ -2090,7 +2080,7 @@ close. `[INVENTED]`
 
 `[W]` SFX: *THUD.* A newspaper drops flat onto the desk from above frame, the way the op-ed dropped in March, never through a door. The felt line stops on the thud; the rack and the fans hold. On the thud's frame the band lights, the episode's second and last lit-UI moment. The room layer shakes 2 px; the band doesn't. Everything on the desk hops: the phone, the keyboard, the Orb (one pixel). The cursor is already parked on the glass.
 
-`[HIGH]` THE GREY LADY's masthead is a plain serif, never blackletter. Across the front, the only text under the masthead, is a clerk's stamp, held to read: `COMPLAINT · THE GREY LADY v. NOPEAI & MACROSOFT · FILED DEC 27, 2023` [V · DEC 27, 2023]. (No rail: the stamp is the record.)
+`[HIGH]` THE GREY LADY's masthead is a plain serif, never blackletter. Across the front, the only text under the masthead, is a clerk's stamp, held to read: `COMPLAINT · THE GREY LADY v. MACROSOFT & NOPEAI · FILED DEC 27, 2023` [V · DEC 27, 2023 · dialogue pass 5: the defendants in the caption's own order, the landlord first, where the stamp had reversed them (the facts review)]. (No rail: the stamp is the record.)
 
 `UI: Look at glass of water`
 
@@ -4139,13 +4129,14 @@ if '-v' in sys.argv:
 - `python3 /path/to/count_ep01.py` counts this file. Add `-v` for scene totals and every line.
 - `python3 /path/to/count_ep01.py /path/to/other/script.md` counts another copy.
 
-It prints lines, words, median words a line and lines of three words or fewer, then the talk time. **The three drafts it has been checked on:**
+It prints lines, words, median words a line and lines of three words or fewer, then the talk time. **The drafts it has been checked on** (three until dialogue pass 5 added the fourth row):
 
 | Draft | How to get it | Prints |
 |---|---|---|
 | Before the scene-craft pass (the baseline for this log's "Before" column) | committed HEAD `d7c5b40`: `git show d7c5b40:show/episodes/ep01/script.md > /tmp/ep01-d7c5b40.md`, then count that file | `101 656 5 30` · `talk ≈ 301 s` (≈ 5:01) |
 | After the scene-craft pass | not committed; its figures are kept here and in the three-lens read | `124 863 5.0 39` · `talk ≈ 390 s` (≈ 6:30) |
-| After the final pass (this file, as of 2026-09-26) | this file | `123 863 5 39` · `talk ≈ 391 s` (≈ 6:31) |
+| After the final pass | committed `890fc82`: `git show 890fc82:show/episodes/ep01/script.md > /tmp/ep01-890fc82.md`, then count that file | `123 863 5 39` · `talk ≈ 391 s` (≈ 6:31) |
+| After dialogue pass 5 (this file, as of 2026-09-26) | this file | `122 900 6.0 36` · `talk ≈ 406 s` (≈ 6:46) |
 
 The counter ignores `SCENE:` and `PLAN:` lines, which are backticked prose, not speaker cues.
 
@@ -4242,7 +4233,7 @@ The review each change answers is in brackets: [S] the screenwriter's, [D] the d
   4. Mario's concerns at the White House, from Sirrah's question to the scroll (−9 s)
   5. the flattery run at the laptop, keeping "it likes me." (−4 s)
   6. NOTNIH's plate and signature (−1 bar; Ep3's recall of his plate then needs its own)
-  7. sc 11's pre-beat (−7.5 s; Ep2's "I named it." then lands cold, and Atem leaves the pilot)
+  7. sc 11's pre-beat (−7.5 s; Ep2's "I named it." then lands cold, and Atem leaves the pilot) *(Dialogue pass 5: Nole's post is already cut, and Ep2 cut "I named it." in its draft 5.2, so this item is now Kram's crate alone, −5 s, and Atem leaves the pilot. The list totals ≈ −1:11.5.)*
   8. Sydney's setup and Tasya's house rule (−5 s)
   9. Gerg's question at the TV (−4.5 s)
   10. the last sentence of Tasya's paragraph, "You keep doing whatever it is you do upstairs at night." (−4 s; the one words-inside-a-line trim on the list, because it's a whole sentence)
@@ -4406,6 +4397,156 @@ I can't listen or watch. These add to the scene-craft pass's list above, which s
 ### Open questions from the final pass
 
 New items 65–68 are in [open-questions.md](open-questions.md#final-pass-new-questions-2026-09-26); items 2, 56, 58, 60, 61 and 64 are updated there.
+
+---
+
+# Revision log (dialogue pass 5, 2026-09-26)
+
+*The cold open, Acts One–Three and the tag, by the Ep1 writer. **Why:** after the scene-craft pass was committed (`890fc82`), a workflow resume re-ran three critics on these segments: a naturalness read, a newcomer-and-insider read and a facts-and-guardrails read. Their findings are kept in [the critiques file](../../production/reviews/2026-09-26-dialogue-pass-5-critiques.md). The showrunner's standing notes governed every call: let conversations play out (note 7), scenes to be felt (note 4), clear to a newcomer without lectures (notes 8 and 9), guidelines, not hard rules (note 12), and firm guardrails.*
+
+***Finished after an interrupted run.** A first run applied most of the fixes before the lead stopped it mid-edit at about 22:33. This finishing pass re-read the showrunner notes and the critiques, compared the script with its committed version (`git -C /home/jgon/project/art/mrmas diff 890fc82 -- show/episodes/ep01/script.md`), checked every half-applied edit, applied or declined what was left, and brought [open-questions.md](open-questions.md) up to date. The first run hadn't reached that file: the script already cited open questions 69 and 70, which didn't exist. The "Run" column below says which run made each change.*
+
+*What was touched: the cold open, Acts One–Three and the tag; in the scene-craft log, cut-list item 7 and the counter's table of drafts; this log; and open-questions.md. Every edit was a targeted replacement. **Act Four, its writer's notes, the header, §1 of the writer's notes and the draft-2 appendix were not touched.** The header and §1 now lag by ≈ 13.5 s (see the handoffs). Nothing was committed. **Nothing in this pass has been read aloud, recorded, heard or watched:** every length is an estimate from word counts.*
+
+## Net effect (dialogue pass 5)
+
+Counted with the counter in [How to re-run the counts](#how-to-re-run-the-counts), run from the repository root on this file and on `890fc82` (its table has the command). Mas's figures include his two V.O. lines, as in the earlier logs.
+
+| | Before (`890fc82`) | After |
+|---|---|---|
+| Voiced lines | 123 | 122 |
+| Words | 863 | 900 (+4%) |
+| Median words a line | 5 | **6** |
+| Lines of three words or fewer | 39 (32%) | 36 (30%) |
+| Mas | 33 lines, 130 words (15%), median 3 | 33 lines, 133 words (15%), median 3 |
+| Everyone else | 90 lines, median 7, 20 of three words or fewer | 89 lines, median 7, 18 of three words or fewer |
+| Longest invented speech | Tasya's lease, 42 words | Tasya's lease, 47 words |
+| Longest conversation | Launch night (sc 5): 23 lines, 171 words, ≈ 75 s of talk (≈ 1:22 in the room with holds and business) | **Launch night: 23 lines, 177 words, ≈ 78 s of talk (≈ 1:25 in the room)** |
+| Next longest, talk only | the Senate ≈ 56 s (a formal frame; the scene runs ≈ 1:59), the White House ≈ 53 s, the lobby ≈ 46 s | the Senate ≈ 55 s, the White House ≈ 55 s, the lobby ≈ 48 s |
+| Estimated talk | ≈ 6:31 (391 s) | ≈ 6:46 (406 s) |
+| Played length against the printed clocks | ≈ 2:21 over | **≈ 2:35 over** (≈ +13.5 s) |
+
+The growth is whole sentences where there were fragments, feeder questions or trimmed record: Sydney's real line in full, Alyi's count pointing at the click, Egap's recognition in place of a setup question, Oigneb's verb, Tasya's "as many as you like", Rima's two rewordings and the president's finished thought. Three lines got shorter or went: the chairman's echo, Mario's footnote line and Gerg's "Build's". The echo is the only turn cut from a conversation, and it repeated words the scene had already shown once and said once.
+
+## What changed, by finding (dialogue pass 5)
+
+Codes: **Nat** the naturalness read; **NI** the newcomer-and-insider read (N newcomer, I insider); **F** the facts-and-guardrails read. Run: **1** the interrupted run, **2** this finishing pass.
+
+| Finding | Sc | Change | Est. | Run |
+|---|---|---|---|---|
+| Nat, across 1 (a name said as its own sentence) | 9, 15, 20; 13 | "Mas. We're very pleased." → "Mas, we're very pleased."; "Mr. Manalt. Are you nervous?" → "Are you nervous, Mr. Manalt?"; "Mas. Did you just post on Tidder?" → "Mas, did you…" (sc 7 is below). Run 2 gives Nedib's "Folks. I just want to say one thing." the same comma: the read didn't list it, but it is the same stop, and he walks in mid-sentence. The senator's "Mr. Manalt. There's talk…" keeps its full stop, as the read advises, since it suits a hearing's formal address | 0 | 1, 2 |
+| Nat, across 4 (Radnus and Tasya sound alike) | 8, 13 | Radnus's reads are directed quick and apologetic ("sorry about everything"); Tasya's stay warm and unhurried. The presets and paces are the recording supervisor's (open question 73) | 0 | 1 |
+| Nat sc 5 | 5 | Rima: "Then let's keep it one." → "Then let's treat it like one." ("one" could be heard as "one post") | +0.5 s | 1 |
+| Nat sc 5 + F6 | 5 | Alyi: "Six years and eleven months since we started." → "Six years and eleven months. From the day we started to that click.", so the line points at what he's reacting to. The founding date's missing facts row is open question 56 | +3 s | 1 (the question: 2) |
+| Nat sc 7 | 7 | Rima: "Mas. Is that… for the users?" → "A million people, Mas. That's for them, isn't it?" (bent, below) | +1 s | 1 |
+| Nat sc 8 | 8 | Egap's setup question "And whose idea was it?" → *(peering at the phone)* "Someone else built that? It looks like our work." Radnus now holds up his phone with the chat bubble on it, so Egap has something to peer at, and "Ours." becomes "It is ours." | +2.5 s | 1 |
+| Nat sc 9 + NI I1 | 9 | Tasya's card stat `MACROSOFT · OWNS: THE SERVERS` → `MACROSOFT · KEYS: ONE PER TENANT` (the stat told his speech 15 s early). His lease gains "as many as you like", so "that's a lot of servers." measures an offer rather than echoing it | +2 s | 1 |
+| Nat sc 12 | 12 | Oigneb: "It's six months, for every lab." → "It asks every lab to pause for six months." | +1 s | 1 |
+| Nat sc 17 + NI I3 | 17 | Mario: "That's the footnote. The honest answer depends on who else is buying." → "So I'm adding a footnote. A short one." (bent, below) | −1.5 s | 1 |
+| Nat sc 20 | 20 | "you're typing." → "is that the build?"; Gerg's "Build's still running…" → "Still running…" | +0.5 s | 1 |
+| Nat sc 22 | 22 | "so. how's the partnership?" → "so, how's the partnership going?" | +0.5 s | 1 |
+| NI N1 + F4 + F5 | 6, 11 | Nole's Feb 17 "Open" AI post and its bar are cut from the pilot; Ep2 owns the fact. The pre-beat is 2 bars, Kram's crate alone. Sc 6's bio line inside the real post becomes a show plate, `NOLE · EARLY FUNDER`, which lands on the heart after the post has been read. The unchecked `1:36 AM PT` stamp goes with the post. Run 2 reworded sc 11's note and added the intro's `NAMED IT.` flash to it | −2.5 s | 1, 2 |
+| NI N4 | 13 | Sirrah's card gains a stat, `DAY JOB: VICE PRESIDENT`, which Ep2's "she 'A.I.'d' it" and Ep3's `PREV. HOLDER: SIRRAH` lean on | 0 | 1 |
+| NI N5 | 15 | The chairman's "I am, a little." plays on a two-shot of the dais, the glossy clone turning to him, not on a close-up of one of two identical men | 0 | 1 |
+| NI I2 | 19 | Item 4 opens on the plate over a room with its hands down, and every hand goes up on Remuhcs's real line, from the same drawings | 0 | 1 |
+| NI I4 | 10, 15 | "Five turns each, Sydney." → "Keep it short, Sydney." (the timer's `5` carries the number). The chairman's echoed "Health insurance." is cut (the words were seen once and heard twice in about 3 s) | −1 s | 1 |
+| NI, note 6 (the quip volleys) | 13 | "How much longer?" / "Longer than that." → "Longer than that. I've got a big desk.", which plants sc 19's desk and sc 21's scroll. The other two volleys stay (below) | +2 s | 1 |
+| F1 | 10 | Sydney speaks all four sentences of her real line, in the source's order; the name swap is the only change. Her two-shot holds ≈ 13 s | +5 s | 1 |
+| F2 | 9 | The check prints "multiyear, multibillion dollar", with no hyphen, as the company's post has it | 0 | 1 |
+| F3 | 1, 9, 15 | Trim marks: the APEC line ends "…forward…", Tasya's runs "…I want people to know that we made them dance…", the clone's ends "…regulation…". Each note says the dots are the record's trim mark and the read lands as a finished sentence | 0 | 1 |
+| F7 | 33 | The stamp reads `THE GREY LADY v. MACROSOFT & NOPEAI`, the caption's own order | 0 | 1 |
+| F9 | 2 | The invite's note no longer says nothing on screen claims when he was told. It names the compression (Thursday afternoon on stage, where the reporting has a Thursday-evening text) and gives a fallback. Open question 23 now says the same | 0 | 1 (the question: 2) |
+| Consistency | tag | The tag's clock note: ≈ +13.5 s, so about 2:35 later (it said ≈ +13 s and 2:34, against the act headings' +13, −0.5 and +1) | — | 2 |
+| Consistency | this file's logs | Cut-list item 7 is now Kram's crate alone (−5 s), so the list totals ≈ −1:11.5. The counter's table gains this pass's row, and gives `890fc82` as the final pass's baseline | — | 2 |
+
+## Where this pass declined or bent a note, and why (dialogue pass 5)
+
+- **Sc 17, the footnote (bent).** The naturalness read's rewrite, "So I'm adding a footnote. What it costs depends on who else is buying.", keeps the half the insider read flagged: "who else is buying" tells insiders the register's punchline before it rolls in. Mario's first line, "It doesn't say what it costs.", is setup enough. "A short one." keeps his turn at two sentences and makes a promise his next line breaks ("It has an appendix."), which is his runner.
+- **Sc 7, Rima (bent).** The read's "Mas… a million people. That's for them, isn't it?" puts dots after the name, which a stock voice stalls on as surely as a full stop. The name moves to the end of the phrase instead, the read's own general fix.
+- **Two quip volleys stay** (the newcomer-and-insider read's note to the naturalness read; the read itself says none of them drags):
+  - "I have one concern." / "Just one?" / "It has sub-concerns. I've grouped them by how worried we should be." Mario's answer is already two sentences, and the exchange is settled across episodes: Ep3 calls back "sub-concerns" (open question 51).
+  - "which one am i?" / "Most of them." Sucram's opening to Mas runs three sentences, and "Most of them." is the button on it: motivated seasoning, which note 7 allows. A longer answer would explain the joke.
+  - The third ("Longer than that.") is fixed, above.
+- **Lines repeated across episodes stay in Ep1** ("Last one…", "Don't mind me.", Radnus's congratulations and "thank you.", "That's how a race starts."). Ep1 plays first, so the later episode changes, and both already have. Ep2's reporter says "One more and we'll let you get back on the trail…", its Humanist "I'm just moving in downstairs. I hope that's all right.", and its Radnus "Lovely garden. I see they let your chatbot in." / "as a guest.". Ep3's Maon no longer says "That's how you get two.".
+- **The unseen questioners (across 3):** Ep1's panel host keeps "Last one, Mas. What's the best part of the job?". Ep2 has changed its reporter's rhythm, so the two no longer match.
+- **Newcomer read, "little on-screen threat" in Acts One–Three:** no change on the page. It isn't a missing fact, and the no-spoiler rule limits what can come before Act Four. It goes on the reel's list (open question 47).
+- **Newcomer read, the lit window:** Ep1 raises the question on purpose, and the answer is Ep3's and the season's (open question 49).
+- **Newcomer read, `MODEL WEIGHTS` on Kram's crate:** no change. The read says the wet paint carries the joke.
+- **Facts read, the stale rows in facts.md and the research, and the season-wide ruling on voicing [H] words:** not this pass's files. Ep1 already keeps its [H] words in print (open question 53). The corrections are listed for the facts owner in open question 74.
+- **The header and §1's segment rows** are outside these segments. The figures for them are in the handoffs.
+- **Radnus's pace in the counter** stays at 135 wpm, so this log's figures compare with the earlier ones. If his quicker direction is cast (open question 73), his ≈ 55 words play about 4 s faster than counted.
+
+## Checked after the interrupted run
+
+- **Every changed line** carries `[INVENTED]` with a pass-5 note, or keeps its real tag and date with the note inside it. No real line's words changed except Sydney's (restored in full), and the trim marks were added.
+- **Cues:** Radnus holds up his phone before Egap peers at it (sc 8); the dais two-shot comes before "I am, a little." (sc 15); sc 19's room waits "every hand still down" and the hands rise on the line; Sydney's two-shot is ≈ 13 s.
+- **Sc 11 agrees with itself:** its heading (2 + 16 bars), `SCENE:`, `SOUND:` (two bars of tick), `PRE-BEAT (2 bars, M)` and "Bars 1–2". Nothing in the cold open, Acts One–Three or the tag still mentions the cut post, the avatar's lamp, the `1:36 AM PT` stamp or a bio line, and sc 6's angle note no longer sends the drill's angle on to sc 11.
+- **Timings:** each act heading's components match the counter's talk deltas: Act One +15 s of talk less the 2.5 s bar (≈ +13), Act Two −0.6 s (≈ −0.5), Act Three +0.9 s (≈ +1). The tag's note now agrees with them.
+- **Open questions:** items 69 and 70, cited by the script, exist now, with the rest of this pass's items.
+- **Outside these segments** (not edited; see the handoffs): the header's runtime and draft rows and §1's rows still read ≈ 24:41 and ≈ 2:21.
+
+## Real lines (dialogue pass 5)
+
+- **One is restored to its full length:** Sydney's (sc 10), four sentences where the script had two with no ellipsis. The research files that still carry the short version are the facts owner's (open question 74).
+- **Trim marks are added to three:** the APEC line, Tasya's "dance" line (both ends) and the clone's opening line. Their words are unchanged.
+- **One is cut from the pilot:** Nole's Feb 17 post (sc 11).
+- **One printed quote is corrected:** the check's "multiyear, multibillion dollar".
+- **One caption is reordered:** the complaint's defendants.
+- The facts read opened Simon Willison's post and the company's Jan 23 post. Nothing was fetched in the finishing pass.
+
+## Runtime (dialogue pass 5; an outcome, estimated)
+
+| Segment | Printed | After the final pass | After this pass |
+|---|---|---|---|
+| Cold open | 0:40 | ≈ 0:44.5 | ≈ 0:44.5 |
+| Act One | 4:42 | ≈ 5:58 | ≈ 6:11 |
+| Act Two | 4:19 | ≈ 4:50 | ≈ 4:49.5 |
+| Act Three | 2:18 | ≈ 2:48.5 | ≈ 2:49.5 |
+| These segments against their printed clocks | — | ≈ 2:21 over | ≈ 2:35 over |
+| Act Four starts at (as played) | 12:31 | ≈ 14:52 | ≈ 15:06 |
+| Story (Act Four 5.1 at 9:36 on its v5 model; in brackets, ≈ 8:40 on 5.0's) | ≈ 22:20 | ≈ 24:41 (≈ 23:45) | **≈ 24:55** (≈ 23:59) |
+| Episode, with the intro, the card and the 43 s credits placeholder | ≈ 23:35 | ≈ 25:56 (≈ 25:00) | ≈ 26:10 (≈ 25:14) |
+
+- The talk figure comes from the counter; the cut bar and the held shots are estimated by hand.
+- The showrunner's outro note (note 1) replaces the 43 s credits placeholder with a 6–15 s outro, which would take ≈ 28–37 s off the episode figure, not the story.
+- The pilot's length is still the showrunner's ruling (open questions 2 and 46). The whole-beat cut list (open question 2) now totals ≈ −1:11.5.
+
+## What a human must check (dialogue pass 5)
+
+I can't listen or watch. These add to the earlier lists, which still stand:
+1. **The name lines, with the stock voices:** "Mas, we're very pleased.", "A million people, Mas.", "Folks, I just want to say one thing.", "Are you nervous, Mr. Manalt?", "Mas, did you just post on Tidder?". Do they run on? And the senator's "Mr. Manalt. There's talk…", kept on purpose.
+2. **Questions that must rise:** "Someone else built that?", "is that the build?", "Are you nervous, Mr. Manalt?", "so, how's the partnership going?". Rima's "That's for them, isn't it?" should fall: she's sure.
+3. **The trim marks:** the APEC line, Tasya's "dance" line and the clone's line land as finished sentences, never trailing off.
+4. **Sydney's full line** (≈ 10 s): does the list of virtues build, and does the two-shot hold ≈ 13 s without dragging?
+5. **Radnus against Tasya** in sc 13, one of the casting's closest pairs (1.7 st): with Radnus quicker, can you tell them apart with your eyes closed?
+6. **Sc 6's bars 2–3:** the rail, the post, the heart, the plate and the un-heart in about 5 s. If it crowds, the plate's fallback is written in the scene.
+7. **Sc 19's item 4:** the plate is read, then the hands go up on the line, all inside 3 bars.
+8. **Sc 15:** do the clone and the chairman read as two men in the new two-shot?
+9. **A newcomer, on the reel:** without Nole's post, does sc 11's pre-beat still read on Kram's crate alone? Do Acts One–Three feel like a rise with a threat under it, or like "his rise, in funny vignettes" (the newcomer read)?
+10. **"I've got a big desk.":** a joke on "Longer", or a boast?
+
+## Handoffs (dialogue pass 5)
+
+- **Lead:**
+  - The header's runtime cell and §1's segment rows: Act One ≈ 6:11, Act Two ≈ 4:49.5, Act Three ≈ 2:49.5; these segments ≈ 2:35 over their clocks; Act Four starts ≈ 15:06 as played; story ≈ 24:55 (≈ 23:59 on 5.0's). The header's draft row can add "and dialogue pass 5 on the same segments (2026-09-26, finished after an interrupted run; see its [revision log](#revision-log-dialogue-pass-5-2026-09-26))".
+  - The pilot's length (open questions 2 and 46) and the reel (47).
+- **Recording supervisor and casting** (the v5 method: one whole read per turn, no time-stretch):
+  - **New reads:** sc 5, Rima's bargain and Alyi's count; sc 7, Rima; sc 8, Radnus's three lines (quick) and Egap's; sc 9, Tasya's first line and his lease (one whole take); sc 10, Sydney's full line and Tasya's "Keep it short, Sydney. House rules."; sc 12, Oigneb; sc 13, "Folks, I just want to say one thing.", "Longer than that. I've got a big desk." and Radnus's three lines (quick); sc 15, the clone's "Are you nervous, Mr. Manalt?"; sc 17, Mario's second line; sc 20, Gerg's first line, "is that the build?" and "Still running…"; sc 22, the DevDay question. Re-take the APEC line, Tasya's "dance" line and the clone's opening line only if a take trails off.
+  - **Retired:** "Then let's keep it one…"; "Six years and eleven months since we started."; "Mas. Is that… for the users?"; "And whose idea was it?"; "Ours. We published it."; "Mas. We're very pleased…"; the old take of the lease; Sydney's two-sentence line; "Five turns each, Sydney."; "It's six months, for every lab."; "Folks. I just want…"; "Longer than that." alone; "Mr. Manalt. Are you nervous?"; the chairman's "Health insurance."; "That's the footnote…"; "Mas. Did you just post…"; "you're typing."; "Build's still running…"; "so. how's the partnership?".
+  - **Radnus's speed band:** CASTING.md's pass 2 chose his read as "the slowest, most even" (4.05 syll/s); the direction now wants quick and apologetic (open question 73).
+- **Facts owner:** the corrections list (open question 74), the founding-date row (56), the invite (23), Sirrah's office on her card (71) and Tasya's new stat (72).
+- **Guardrails owner:** Egap's line (69), the president's desk (70), Sirrah's stat (71), "as many as you like" (58) and sc 6's new plate (65).
+- **Naming owner:** open question 66 is moot for Ep1; rule it for Ep2 if Ep2 takes the post.
+- **Episode-file owners** ([beats](beats.md), [outline](outline.md), [facts](facts.md), [gags](gags.md)): the drift this pass adds is listed in open question 64.
+- **Ep2 owner:** Nole's Feb 17 post is no longer in Ep1. Your draft 5.3 declined it only because Ep1 played it (your "SW 1 option" row), so it's free if you want it (open question 75). Sirrah's card now says she's the vice president, which sets up your "and she 'A.I.'d' it". Sydney's whole real line now plays in Ep1, so quoting it again next episode would be a repeat (R10).
+- **Ep3 owner:** Sirrah's card sets up your `PREV. HOLDER: SIRRAH`.
+- **Intro owner:** D8's `NAMED IT.` flash is still grounded in the Feb 17 post, which Ep1 no longer plays. No change is needed: Ep2's case pays it off (open question 75).
+- **Act Four owner:** nothing needs to change, and nothing in Act Four was touched. As played, your act now starts at ≈ 15:06. Tasya's card now reads `MACROSOFT · KEYS: ONE PER TENANT`, and the servers are said once, in his lease ("Everything you build, you'll build on our servers, as many as you like…"), so your S4.13 plate `NOPEAI RUNS ON ITS SERVERS` recalls his words, and THE PLAN's key ring has a counted card behind it. Radnus is directed quick and apologetic.
+- **Tone owner:** §3 pattern 17's figures for these segments are now 122 lines, 900 words, median 6, 30% of three words or fewer.
+
+## Open questions from this pass (dialogue pass 5)
+
+New items 69–75 are in [open-questions.md](open-questions.md#dialogue-pass-5-new-questions-2026-09-26). Items 2, 12, 23, 28, 42, 43, 47, 52, 56, 58, 59, 61, 64, 65, 66 and 67 are updated there, and so are the Tasya and Nole rows of its setups table.
 
 ---
 
