@@ -1,5 +1,5 @@
 {
- "fingerprint": "80704196af67c32530ae76acf645f372434fe1af",
+ "fingerprint": "5866b40929d540add739dd1029bbf46ea36098d9",
  "variant": "kokoro",
  "timelines": {
   "coldopen": "show/reel/ep01-v3/ep01-v3-coldopen.json",
@@ -13,19 +13,19 @@
   "coldopen": {
    "score": "audio/ost/tracks/e01-v3-coldopen/render/music.wav",
    "cues": "audio/ost/tracks/e01-v3-coldopen/cues.json",
-   "drop": [
-    "freeze-F4"
-   ],
-   "why": {
-    "freeze-F4": "14.54 s: the freeze: piano_fired_F4 (MM-14 \"Freeze F4\"), a timeline sound: the sound stem lays it, "
-   },
+   "drop": [],
+   "why": {},
    "grid": null
   },
   "act1": {
-   "score": null,
-   "cues": null,
-   "drop": [],
-   "why": {},
+   "score": "audio/ost/tracks/e01-v3-act1/render/music.wav",
+   "cues": "audio/ost/tracks/e01-v3-act1/cues.json",
+   "drop": [
+    "siren"
+   ],
+   "why": {
+    "siren": "148.50 s:  code_red  comic panic, the siren as a joke"
+   },
    "grid": null
   },
   "act2": {
@@ -47,8 +47,8 @@
    "grid": null
   },
   "act4": {
-   "score": null,
-   "cues": null,
+   "score": "audio/ost/tracks/e01-v3-act4/render/music.wav",
+   "cues": "audio/ost/tracks/e01-v3-act4/cues.json",
    "drop": [],
    "why": {},
    "grid": null

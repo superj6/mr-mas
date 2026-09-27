@@ -1,15 +1,15 @@
 {
  "segment": "act4",
- "variant": "kokoro",
- "timeline": "show/reel/ep01-v3/ep01-v3-act4.json",
- "timeline_variant": "kokoro",
- "seconds": 523.792,
- "frames": 12571,
+ "variant": "el",
+ "timeline": "show/reel/ep01-v3-el/ep01-v3-el-act4.json",
+ "timeline_variant": "el",
+ "seconds": 542.708,
+ "frames": 13025,
  "rooms": [
   {
    "room": "suite",
    "from": -0.6,
-   "to": 58.025,
+   "to": 58.942,
    "first": "S1.01",
    "last": "S1.12",
    "lead": 0.6,
@@ -18,38 +18,38 @@
   },
   {
    "room": "dark",
-   "from": 57.025,
-   "to": 63.942,
+   "from": 57.942,
+   "to": 64.358,
    "first": "S2.01",
    "last": "S2.02",
    "lead": 0.6,
    "trail": 0.4,
-   "lift_db": 1.9
+   "lift_db": 1.4
   },
   {
    "room": "tpool",
-   "from": 62.942,
-   "to": 67.442,
+   "from": 63.358,
+   "to": 67.858,
    "first": "S2.03",
    "last": "S2.03",
    "lead": 0.6,
    "trail": 0.4,
-   "lift_db": 3.6
+   "lift_db": 4.1
   },
   {
    "room": "dark",
-   "from": 66.442,
-   "to": 71.442,
+   "from": 66.858,
+   "to": 71.858,
    "first": "S2.04",
    "last": "S2.05",
    "lead": 0.6,
    "trail": 0.4,
-   "lift_db": 1.5
+   "lift_db": 1.6
   },
   {
    "room": "office",
-   "from": 70.442,
-   "to": 136.025,
+   "from": 70.858,
+   "to": 135.65,
    "first": "S3.00a",
    "last": "S3.04b",
    "lead": 0.6,
@@ -58,78 +58,78 @@
   },
   {
    "room": "allhands",
-   "from": 134.825,
-   "to": 150.817,
+   "from": 134.45,
+   "to": 151.025,
    "first": "S3.06",
    "last": "S3.07",
    "lead": 0.8,
    "trail": 0.4,
-   "lift_db": 1.6
+   "lift_db": 1.7
   },
   {
    "room": "office_night",
-   "from": 149.817,
-   "to": 161.4,
+   "from": 150.025,
+   "to": 160.608,
    "first": "S3.05",
    "last": "S3.05",
    "lead": 0.6,
    "trail": 0.4,
-   "lift_db": 2.1
+   "lift_db": 1.9
   },
   {
    "room": "boardroom",
-   "from": 160.4,
-   "to": 190.65,
+   "from": 159.608,
+   "to": 188.4,
    "first": "S4.01",
    "last": "S4.07",
    "lead": 0.6,
    "trail": 0.4,
-   "lift_db": 1.1
+   "lift_db": 1.3
   },
   {
    "room": "split-a4",
-   "from": 189.65,
-   "to": 212.483,
+   "from": 187.4,
+   "to": 212.442,
    "first": "S4.08",
    "last": "S4.08",
    "lead": 0.6,
    "trail": 0.4,
-   "lift_db": 4.0
+   "lift_db": 3.9
   },
   {
    "room": "cctv",
-   "from": 211.583,
-   "to": 227.858,
+   "from": 211.542,
+   "to": 226.858,
    "first": "S4.09",
    "last": "S4.09",
    "lead": 0.5,
    "trail": 0.4,
-   "lift_db": 3.3
+   "lift_db": 3.2
   },
   {
    "room": "boardroom",
-   "from": 226.858,
-   "to": 275.483,
+   "from": 225.858,
+   "to": 278.65,
    "first": "S4.10",
    "last": "S4.15",
    "lead": 0.6,
    "trail": 0.4,
-   "lift_db": 1.1
+   "lift_db": 1.2
   },
   {
    "room": "dark",
-   "from": 274.083,
-   "to": 390.608,
+   "from": 277.25,
+   "to": 399.233,
    "first": "S5.02",
    "last": "S6.06",
    "lead": 1.0,
    "trail": 0.4,
-   "lift_db": 1.3
+   "lift_db": 1.0
   },
   {
    "room": "bullpen-day",
-   "from": 389.408,
-   "to": 427.567,
+   "from": 398.033,
+   "to": 438.067,
    "first": "S7.01",
    "last": "S7.03",
    "lead": 0.8,
@@ -138,8 +138,8 @@
   },
   {
    "room": "fires",
-   "from": 426.567,
-   "to": 480.442,
+   "from": 437.067,
+   "to": 494.858,
    "first": "S7.05",
    "last": "S7.13",
    "lead": 0.6,
@@ -148,8 +148,8 @@
   },
   {
    "room": "lobby-night",
-   "from": 479.442,
-   "to": 492.442,
+   "from": 493.858,
+   "to": 506.942,
    "first": "S8.01",
    "last": "S8.05",
    "lead": 0.6,
@@ -158,8 +158,8 @@
   },
   {
    "room": "coda",
-   "from": 491.442,
-   "to": 524.392,
+   "from": 505.942,
+   "to": 543.308,
    "first": "S8.06",
    "last": "S8.10",
    "lead": 0.6,
@@ -171,19 +171,19 @@
   [
    "S1.03",
    "rubber_stamp_C",
-   8.55,
+   9.782,
    -24
   ],
   [
    "S1.04",
    "rubber_stamp_C",
-   23.823,
+   23.991,
    -22
   ],
   [
    "S1.04",
    "rubber_stamp_C",
-   27.875,
+   28.093,
    -22
   ],
   [
@@ -195,417 +195,417 @@
   [
    "S1.06",
    "dialog_ok_click",
-   38.318,
+   39.388,
    -16
   ],
   [
    "S1.09",
    "dialog_ok_click",
-   47.692,
+   48.817,
    -14
   ],
   [
    "S1.11",
    "BUZZ",
-   51.383,
+   52.508,
    -14
   ],
   [
    "S2.03",
    "render_front_sweep",
-   63.542,
+   63.958,
    -20
   ],
   [
    "S2.04",
    "render_front_sweep",
-   67.042,
+   67.458,
    -24
   ],
   [
    "S2.05",
    "reverse_swell_1beat",
-   69.942,
+   70.358,
    -18
   ],
   [
    "S3.00a",
    "bell_ding_F6",
-   73.444,
+   73.86,
    -26
   ],
   [
    "S3.02",
    "key_tap_space",
-   94.908,
+   94.415,
    -24
   ],
   [
    "S3.03",
    "post_click",
-   112.222,
+   110.917,
    -16
   ],
   [
    "S3.04",
    "bell_ding_F6",
-   112.992,
+   111.719,
    -26
   ],
   [
    "S3.04b",
    "key_tap_space",
-   135.232,
+   134.863,
    -26
   ],
   [
    "S3.05",
    "keycap_popcorn",
-   151.117,
+   151.325,
    -20
   ],
   [
    "S4.01",
    "heart_gliss",
-   160.5,
+   159.708,
    -20,
    "sound J-cut: leads the cut by 0.5 s"
   ],
   [
    "S4.02",
    "BUZZ",
-   166.092,
+   165.335,
    -24
   ],
   [
    "S4.02",
    "BUZZ",
-   174.262,
+   173.039,
    -26
   ],
   [
    "S4.02",
    "landing_thunk",
-   181.412,
+   179.49,
    -22
   ],
   [
    "S4.07",
    "speakerphone_key_F4",
-   188.65,
+   186.397,
    -26
   ],
   [
    "S4.07",
    "speakerphone_key_Eb4",
-   189.0,
+   186.747,
    -26
   ],
   [
    "S4.07",
    "speakerphone_key_Db4",
-   189.35,
+   187.097,
    -26
   ],
   [
    "S4.07",
    "speakerphone_key_C4",
-   189.7,
+   187.447,
    -26
   ],
   [
    "S4.08",
    "RING",
-   190.45,
+   188.2,
    -24
   ],
   [
    "S4.08",
    "RING",
-   191.45,
+   189.2,
    -24
   ],
   [
    "S4.08",
    "dialog_ok_click",
-   211.106,
+   211.047,
    -20
   ],
   [
    "S4.08",
    "DIALTONE",
-   211.306,
+   211.247,
    -30
   ],
   [
    "S4.10b",
    "paper_whip",
-   243.358,
+   243.092,
    -22
   ],
   [
    "S4.12",
    "landing_thunk",
-   250.983,
+   251.108,
    -30
   ],
   [
    "S4.12",
    "landing_thunk",
-   251.283,
+   251.408,
    -30
   ],
   [
    "S4.12",
    "landing_thunk",
-   251.583,
+   251.708,
    -30
   ],
   [
    "S4.12",
    "key_tap_space",
-   252.033,
+   252.158,
    -24
   ],
   [
    "S4.13",
    "JANGLE",
-   253.4,
+   253.525,
    -30
   ],
   [
    "S4.13e",
    "JANGLE",
-   267.475,
+   270.642,
    -28
   ],
   [
    "S5.03",
    "key_tap_soft_01",
-   280.783,
+   284.251,
    -26
   ],
   [
    "S5.03",
    "key_tap_soft_02",
-   281.408,
+   285.336,
    -26
   ],
   [
    "S5.03",
    "key_tap_soft_03",
-   282.033,
+   286.431,
    -26
   ],
   [
    "S5.03",
    "key_tap_soft_04",
-   282.658,
+   287.076,
    -26
   ],
   [
    "S5.03",
    "key_tap_soft_05",
-   283.283,
+   288.18,
    -26
   ],
   [
    "S5.04",
    "orb_servo",
-   285.758,
+   290.633,
    -22
   ],
   [
    "S5.09",
    "RING",
-   290.908,
+   295.992,
    -30
   ],
   [
    "S5.09",
    "dialog_ok_click",
-   293.348,
+   299.441,
    -24
   ],
   [
    "S5.06",
    "odometer_ratchet",
-   325.302,
+   332.062,
    -22
   ],
   [
    "S5.06",
    "bell_ding_F6",
-   327.222,
+   334.0,
    -28
   ],
   [
    "S5.08",
    "SLOT",
-   335.333,
+   342.598,
    -26
   ],
   [
    "S5.08",
    "rubber_stamp_C",
-   340.083,
+   346.653,
    -18
   ],
   [
    "S5.11",
    "landing_thunk",
-   357.408,
+   364.314,
    -30
   ],
   [
    "S5.11",
    "landing_thunk",
-   357.708,
+   364.614,
    -30
   ],
   [
    "S5.11",
    "landing_thunk",
-   358.008,
+   364.914,
    -30
   ],
   [
    "S5.11",
    "key_tap_space",
-   358.458,
+   365.364,
    -24
   ],
   [
    "S6.01",
    "landing_thunk",
-   373.683,
+   382.6,
    -24,
    "sound J-cut: leads the cut by 0.4 s"
   ],
   [
    "S6.01",
    "landing_thunk",
-   375.383,
+   384.3,
    -24
   ],
   [
    "S6.01",
    "landing_thunk",
-   375.883,
+   384.8,
    -24
   ],
   [
    "S6.01",
    "landing_thunk",
-   376.383,
+   385.3,
    -24
   ],
   [
    "S6.01",
    "landing_thunk",
-   376.883,
+   385.8,
    -24
   ],
   [
    "S6.04",
    "landing_thunk",
-   383.37,
+   392.097,
    -20
   ],
   [
    "S6.06",
    "freeze_hit_F",
-   388.258,
+   396.883,
    -20
   ],
   [
    "S7.01",
    "key_tap_soft_02",
-   398.605,
+   407.23,
    -30
   ],
   [
    "S7.01",
    "key_tap_soft_04",
-   399.105,
+   407.73,
    -30
   ],
   [
    "S7.01",
    "key_tap_soft_06",
-   399.605,
+   408.23,
    -30
   ],
   [
    "S7.06",
    "landing_thunk",
-   429.375,
+   439.875,
    -18
   ],
   [
    "S7.06",
    "freeze_hit_F",
-   429.625,
+   440.125,
    -20
   ],
   [
    "S7.09",
    "rubber_stamp_C",
-   468.117,
+   482.408,
    -18
   ],
   [
    "S7.09",
    "keycap_popcorn",
-   468.717,
+   483.008,
    -22
   ],
   [
    "S7.13",
    "hourglass_shatter",
-   479.127,
+   493.528,
    -18
   ],
   [
    "S8.01",
    "neon_ignite",
-   480.85,
+   495.266,
    -20
   ],
   [
    "S8.03",
    "alert_bonk",
-   486.442,
+   500.858,
    -18
   ],
   [
    "S8.09",
    "key_tap_soft_01",
-   513.583,
+   532.5,
    -26
   ],
   [
    "S8.09",
    "key_tap_soft_03",
-   514.283,
+   533.2,
    -26
   ],
   [
    "S8.09",
    "key_tap_soft_05",
-   514.983,
+   533.9,
    -26
   ],
   [
    "S8.09",
    "key_tap_soft_06",
-   515.683,
+   534.6,
    -26
   ],
   [
    "S8.10",
    "bell_ding_F6",
-   521.783,
+   540.7,
    -32
   ]
  ],
@@ -628,14 +628,14 @@
   },
   {
    "what": "the vault's F hum (the coda's pedal)",
-   "at": 492.04,
-   "to": 525.29,
+   "at": 506.54,
+   "to": 544.21,
    "lufs": -37,
    "why": "CODA mood: \"the vault's F hum as the pedal\"; plan S8.10 L-cut \"the vault's F pedal, into the tag\" 1.5 s"
   },
   {
    "what": "the dark room's drone, leading S5.02 under S4.15",
-   "at": 274.08,
+   "at": 277.25,
    "lufs": -36,
    "why": "script-v3-notes \u00a77 For sound; plan S4.15 jcut \"the dark room's drone, under Mada's held note\" 1.0 s"
   },
@@ -647,77 +647,77 @@
   },
   {
    "what": "the call's waiting tone (twice), leading S3.00a",
-   "at": 70.44,
+   "at": 70.86,
    "peak_dbfs": -32,
    "why": "plan S3.00a jcut: \"Neleh's office: the clock-tick and the call's waiting tone, under the whip's tail\" 0.6 s"
   },
   {
    "what": "the all-hands crowd's hush, leading S3.06 (the room then stays hushed, -8 dB)",
-   "at": 134.83,
+   "at": 134.45,
    "peak_dbfs": -26,
    "why": "plan S3.04b jcut: \"the all-hands crowd's hush\" 0.8 s"
   },
   {
    "what": "Gerg's keys through the monitor",
-   "at": 293.47,
-   "to": 306.54,
+   "at": 299.56,
+   "to": 311.46,
    "peak_dbfs": -16,
    "why": "S5.09: the tile opens on him typing (\"doesn't look up\") (script-v3-notes \u00a77 For sound; sc 29 SOUND \"Gerg's keys and room through the monitor's small speaker\")"
   },
   {
    "what": "Gerg's keys through the monitor",
-   "at": 306.74,
-   "to": 329.33,
+   "at": 311.66,
+   "to": 336.42,
    "peak_dbfs": -24,
    "why": "S5.06: light keys between his reads; none under the quoted lines; none from \"Scroll to the bottom.\" (script-v3-notes \u00a77 For sound; sc 29 SOUND \"Gerg's keys and room through the monitor's small speaker\")"
   },
   {
    "what": "Gerg's keys through the monitor",
-   "at": 341.17,
-   "to": 350.62,
+   "at": 347.71,
+   "to": 357.71,
    "peak_dbfs": -10,
    "why": "S5.09-back: \"typing hard\", loud; stop dead on the cut to his look (script-v3-notes \u00a77 For sound; sc 29 SOUND \"Gerg's keys and room through the monitor's small speaker\")"
   },
   {
    "what": "one key on the cut out of S5.09b",
-   "at": 357.12,
+   "at": 364.04,
    "peak_dbfs": -18,
    "why": "script S5.09b: \"Gerg holds the look a beat longer, then types again, and on the first key we cut.\""
   },
   {
    "what": "Gerg's keys, faint, on the small tile until the door",
-   "at": 357.26,
-   "to": 359.01,
+   "at": 364.17,
+   "to": 365.92,
    "peak_dbfs": -28,
    "why": "script S5.11: \"Gerg's tile small and typing on the monitor\""
   }
  ],
  "score_hints": {
-  "score": "audio/ost/tracks/e01-v3-act4/render/music.wav",
-  "cues": "audio/ost/tracks/e01-v3-act4/cues.json",
+  "score": "audio/ost/tracks/e01-v3-act4/render/music-el.wav",
+  "cues": "audio/ost/tracks/e01-v3-act4/cues-el.json",
   "drop": [],
   "why": {},
   "grid": null
  },
  "keys_stop": {
-  "at": 350.625,
-  "beat_end": 350.625,
+  "at": 357.708,
+  "beat_end": 357.708,
   "after": "v3-vo-23 \"gerg never waits to be asked.\"; on the cut to his look, with the Build"
  },
  "silence": {
-  "click": 47.692,
-  "buzz": 51.383,
+  "click": 48.817,
+  "buzz": 52.508,
   "seconds": 3.692,
   "what": "every room out on the click (12 ms), room tone only at -50 LUFS, back on the buzz (80 ms); the click keeps its first 60 ms, then no SFX until the buzz"
  },
  "room_stem": {
-  "lufs": -36.99,
-  "peak_dbfs": -18.23,
+  "lufs": -37.03,
+  "peak_dbfs": -19.65,
   "p10_50ms_dbfs": -39.6
  },
  "sfx_stem": {
-  "lufs": -32.06,
-  "peak_dbfs": -10.44,
+  "lufs": -32.18,
+  "peak_dbfs": -10.68,
   "p10_50ms_dbfs": -240.0
  },
  "room_under_-55dBFS_0.3s": [],
@@ -729,18 +729,18 @@
   },
   {
    "room": "dark@act4:S2.01",
-   "p5_50ms_dbfs": -41.9,
-   "lift_db": 1.9
+   "p5_50ms_dbfs": -41.4,
+   "lift_db": 1.4
   },
   {
    "room": "tpool@act4:S2.03",
-   "p5_50ms_dbfs": -43.6,
-   "lift_db": 3.6
+   "p5_50ms_dbfs": -44.1,
+   "lift_db": 4.1
   },
   {
    "room": "dark@act4:S2.04",
-   "p5_50ms_dbfs": -41.5,
-   "lift_db": 1.5
+   "p5_50ms_dbfs": -41.6,
+   "lift_db": 1.6
   },
   {
    "room": "office@act4:S3.00a",
@@ -749,38 +749,38 @@
   },
   {
    "room": "allhands@act4:S3.06",
-   "p5_50ms_dbfs": -41.6,
-   "lift_db": 1.6
+   "p5_50ms_dbfs": -41.7,
+   "lift_db": 1.7
   },
   {
    "room": "office_night@act4:S3.05",
-   "p5_50ms_dbfs": -42.1,
-   "lift_db": 2.1
+   "p5_50ms_dbfs": -41.9,
+   "lift_db": 1.9
   },
   {
    "room": "boardroom@act4:S4.01",
-   "p5_50ms_dbfs": -41.1,
-   "lift_db": 1.1
+   "p5_50ms_dbfs": -41.3,
+   "lift_db": 1.3
   },
   {
    "room": "split-a4@act4:S4.08",
-   "p5_50ms_dbfs": -44.0,
-   "lift_db": 4.0
+   "p5_50ms_dbfs": -43.9,
+   "lift_db": 3.9
   },
   {
    "room": "cctv@act4:S4.09",
-   "p5_50ms_dbfs": -43.3,
-   "lift_db": 3.3
+   "p5_50ms_dbfs": -43.2,
+   "lift_db": 3.2
   },
   {
    "room": "boardroom@act4:S4.10",
-   "p5_50ms_dbfs": -41.1,
-   "lift_db": 1.1
+   "p5_50ms_dbfs": -41.2,
+   "lift_db": 1.2
   },
   {
    "room": "dark@act4:S5.02",
-   "p5_50ms_dbfs": -41.3,
-   "lift_db": 1.3
+   "p5_50ms_dbfs": -41.0,
+   "lift_db": 1.0
   },
   {
    "room": "bullpen-day@act4:S7.01",
@@ -789,7 +789,7 @@
   },
   {
    "room": "fires@act4:S7.05",
-   "p5_50ms_dbfs": -39.6,
+   "p5_50ms_dbfs": -39.4,
    "lift_db": 0.0
   },
   {

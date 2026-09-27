@@ -1,120 +1,120 @@
 {
  "segment": "coldopen",
- "variant": "kokoro",
- "timeline": "show/reel/ep01-v3/ep01-v3-coldopen.json",
- "timeline_variant": "kokoro",
- "seconds": 30.667,
- "frames": 736,
+ "variant": "el",
+ "timeline": "show/reel/ep01-v3-el/ep01-v3-el-coldopen.json",
+ "timeline_variant": "el",
+ "seconds": 30.042,
+ "frames": 721,
  "rooms": [
   {
    "room": "hall: room_tone -38 + a polite crowd -41 (coldopen_bed.py)",
    "from": 0.0,
-   "to": 14.542,
+   "to": 13.708,
    "lead": "under the 0.5 s black"
   },
   {
    "room": "banquet applause across the street, -29 LUFS, +6 dB swell after 'forward', cut on the freeze",
    "from": 0.5,
-   "to": 14.542
+   "to": 13.708
   },
   {
    "room": "the freeze hum (room tone 120-700 Hz, -39 LUFS), stepping 0/-4/-9/-16 dB with the rewind",
-   "from": 14.542,
-   "to": 25.167
+   "from": 13.708,
+   "to": 24.542
   },
   {
    "room": "the rewind (the hall + banquet reversed, speed on the counter)",
-   "from": 22.167,
-   "to": 25.167
+   "from": 21.542,
+   "to": 24.542
   },
   {
    "room": "a 1993 PC's fan",
-   "from": 25.167,
-   "to": 30.667
+   "from": 24.542,
+   "to": 30.042
   }
  ],
  "sfx": [
   [
    "1.03",
    "synth:plink",
-   10.433,
+   9.6,
    -14.0,
    "-10.0 dB (the lock's duck on the v2 stem)"
   ],
   [
    "1.03",
    "synth:slosh",
-   10.483,
+   9.65,
    -30.0,
    "-10.0 dB (the lock's duck on the v2 stem)"
   ],
   [
    "2.01",
    "piano_fired_F4",
-   14.542,
+   13.708,
    -14.0,
    ""
   ],
   [
    "2.02",
    "synth:buzz",
-   15.217,
+   14.383,
    -20.0,
    ""
   ],
   [
    "2.03",
    "key_tap_soft_03",
-   19.017,
+   18.165,
    -36.0,
    "-10.0 dB (the lock's duck on the v2 stem)"
   ],
   [
    "3.01",
    "orb_servo",
-   20.217,
+   19.592,
    -22.0,
    ""
   ],
   [
    "3.01",
    "orb_servo",
-   20.517,
+   19.892,
    -24.0,
    ""
   ],
   [
    "3.01",
    "orb_servo",
-   20.817,
+   20.192,
    -22.0,
    ""
   ],
   [
    "3.01",
    "glyph_blink",
-   21.117,
+   20.492,
    -26.0,
    ""
   ],
   [
    "3.02",
    "orb_servo",
-   22.667,
+   22.042,
    -24.0,
    ""
   ],
   [
    "3.02",
    "orb_servo",
-   23.717,
+   23.092,
    -27.0,
    ""
   ],
   [
    "4.02",
    "glyph_blink@1bit",
-   29.267,
+   28.642,
    -26.0,
    ""
   ]
@@ -124,25 +124,25 @@
  "added": [
   {
    "what": "a 1993 PC's fan and mains hum under the flashback (4.01-4.02)",
-   "at": 25.17,
+   "at": 24.54,
    "lufs": -46,
    "why": "the flashback had no room in v2 (MM-06 alone): without a score it was a 5.5 s hole"
   }
  ],
  "score_hints": {
-  "score": "audio/ost/tracks/e01-v3-coldopen/render/music.wav",
-  "cues": "audio/ost/tracks/e01-v3-coldopen/cues.json",
+  "score": "audio/ost/tracks/e01-v3-coldopen/render/music-el.wav",
+  "cues": "audio/ost/tracks/e01-v3-coldopen/cues-el.json",
   "drop": [],
   "why": {},
   "grid": null
  },
  "room_stem": {
-  "lufs": -35.19,
-  "peak_dbfs": -13.77,
+  "lufs": -35.05,
+  "peak_dbfs": -12.65,
   "p10_50ms_dbfs": -43.7
  },
  "sfx_stem": {
-  "lufs": -27.42,
+  "lufs": -27.25,
   "peak_dbfs": -14.0,
   "p10_50ms_dbfs": -240.0
  },

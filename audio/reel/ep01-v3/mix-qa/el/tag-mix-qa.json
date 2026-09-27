@@ -1,37 +1,37 @@
 {
  "segment": "tag",
- "variant": "kokoro",
- "seconds": 33.875,
- "frames": 813,
- "samples": 1626000,
- "timeline": "show/reel/ep01-v3/ep01-v3-tag.json",
+ "variant": "el",
+ "seconds": 33.708,
+ "frames": 809,
+ "samples": 1618000,
+ "timeline": "show/reel/ep01-v3-el/ep01-v3-el-tag.json",
  "dialogue": {
   "lines": 3,
   "device": {},
-  "el_matched": 0,
+  "el_matched": 3,
   "missing": []
  },
  "rooms": {
-  "stem": "audio/reel/ep01-v3/tag-room.wav",
+  "stem": "audio/reel/ep01-v3/el/tag-room.flac",
   "dip_under_speech_db": 2.0
  },
  "sfx": {
-  "stem": "audio/reel/ep01-v3/tag-sfx.wav",
+  "stem": "audio/reel/ep01-v3/el/tag-sfx.flac",
   "ducked": false
  },
  "score": {
-  "file": "audio/ost/tracks/e01-v3-tag/render/music.wav",
-  "cues": "audio/ost/tracks/e01-v3-tag/cues.json",
-  "length_s": 33.875,
+  "file": "audio/ost/tracks/e01-v3-tag/render/music-el.wav",
+  "cues": "audio/ost/tracks/e01-v3-tag/cues-el.json",
+  "length_s": 33.708,
   "length_vs_segment_s": 0.0,
   "act4_ringout": {
-   "file": "audio/ost/tracks/e01-v3-act4/render/music-ringout.wav",
+   "file": "audio/ost/tracks/e01-v3-act4/render/music-el-ringout.wav",
    "seconds": 4.2,
    "crossfade": "full from 0 s, out (equal power) over 2.5 s from the tag score's entry at 0.60 s",
    "why": "the act4 score's hand-off and the lead's note: the vault pedal's release at the tag's head, crossfading under the tag's own score, so the seam doesn't cut it"
   },
   "lufs_as_delivered": -21.03,
-  "lufs_after_gain": -21.15,
+  "lufs_after_gain": -21.06,
   "duck": {
    "by_mood_db": [
     [
@@ -45,8 +45,8 @@
   },
   "designed_silences": [
    [
-    23.125,
-    30.635,
+    23.083,
+    30.483,
     "the thud -> the button: no score (the front page, \"noted.\")"
    ],
    [
@@ -58,57 +58,57 @@
  },
  "checks": [],
  "measured": {
-  "lufs_i": -17.09,
-  "true_peak_dbtp": -1.53,
-  "sample_peak_dbfs": -1.53,
-  "lra_lu": 11.5,
-  "gain_db": 3.34,
+  "lufs_i": -16.97,
+  "true_peak_dbtp": -1.43,
+  "sample_peak_dbfs": -1.5,
+  "lra_lu": 11.7,
+  "gain_db": 3.65,
   "limiter_ceiling_dbfs": -1.5,
-  "limiter_active_s": 0.0,
-  "dialogue_lufs": -13.51,
-  "score_lufs_after_duck": -18.19,
-  "score_rms_under_speech_dbfs": -44.9,
-  "score_rms_between_speech_dbfs": -22.8,
+  "limiter_active_s": 0.39,
+  "dialogue_lufs": -13.4,
+  "score_lufs_after_duck": -17.81,
+  "score_rms_under_speech_dbfs": -44.4,
+  "score_rms_between_speech_dbfs": -22.4,
   "score_runs": {
    "count": 2,
-   "shortest_s": 3.0,
+   "shortest_s": 2.95,
    "runs": [
     [
      0.0,
-     23.15
+     23.1
     ],
     [
-     30.6,
-     3.0
+     30.45,
+     2.95
     ]
    ]
   },
-  "rooms_lufs": -35.03,
-  "sfx_lufs": -30.85,
+  "rooms_lufs": -34.67,
+  "sfx_lufs": -30.38,
   "holes_under_-42dBFS_0.3s": [],
   "holes_mono_downmix": [],
   "holes_without_score": [],
   "unmarked_holes": 0,
   "unmarked_holes_without_score": 0,
   "jumps_over_15dB": {
-   "count": 4,
+   "count": 7,
    "rising": 4,
-   "rising_at_a_word": 3,
-   "rising_at_an_sfx": 0,
+   "rising_at_a_word": 2,
+   "rising_at_an_sfx": 1,
    "rising_other": [
-    20.0
+    19.95
    ],
-   "falling": 0
+   "falling": 3
   }
  },
- "file": "out/ep01/full-v3/mix/tag-mix.wav",
- "guard_db": -1.08,
+ "file": "out/ep01/full-v3/mix-el/tag-mix.wav",
+ "guard_db": -0.88,
  "seam_head": {
   "from_gain_db": 1.14,
-  "to_gain_db": 3.34,
+  "to_gain_db": 3.65,
   "ramp_s": 2.0,
   "after": "act4"
  },
- "built": "2026-09-27 14:39:55",
+ "built": "2026-09-27 14:42:45",
  "heard": "nothing here has been listened to; every number is measured"
 }

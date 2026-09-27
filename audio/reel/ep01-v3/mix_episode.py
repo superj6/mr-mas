@@ -23,15 +23,21 @@ THE MIX, per segment:
   ROOMS     the room stem, dipping 2 dB under speech (the sample's). (The cold open's hall and banquet carry 8 dB more
             in the stem itself: they were built for the lock mixer's 10 dB duck.)
   SFX       the SFX stem as built (not ducked, as the sample and the lock).
-  SCORE     music.wav as delivered (the composers render underscore level, dry of dialogue, on the segment's clock),
+  SCORE     music.wav as delivered (the composers render underscore level, dry of dialogue, on the segment's clock;
+            the cold open's MM-06 +6 dB, the lead's ruling, onto the -20 LUFS reference),
             DUCKED under speech: the lock mixer's envelope (0.25 s pre, joined across gaps under 2.5 s, 0.2 s in,
             0.6 s out), by a depth per mood (DUCK_BY_MOOD: 6 dB on launch night, 7 on the warm dark-room, 2 AM and tag
             cues, 8-10 elsewhere, 10 on Vegas and the pause letter), smoothed over 1.5 s; a cue sheet's
             "duck_db" (on a cue, row or section, or "mix": {"duck_db": ..}) overrides it for its window. -3 dB under
             a silent POST when no one speaks (the v4.1 note). Act Four's Cancel click -> buzz: the score is gated to
             zero (the one silence; its level before the gate is reported).
+            The tag's head: Act Four's score ends on a sounding pedal; its release (music-ringout.wav, the act4
+            composer's hand-off) is laid at the tag's first sample and crossfades out (equal power, 2.5 s) under the
+            tag's own score from its first entry.
   MASTER    -16 LUFS integrated per segment; a look-ahead peak limiter (ceiling -1.5 dBFS) and a 4x-oversampled
-            true-peak check (< -1.0 dBTP, re-limited if not). THE DIALOGUE GUARD (with --all): a segment whose
+            true-peak check (< -1.0 dBTP, re-limited if not). THE SEAMS: each story chapter's first 2 s ramp from the
+            previous chapter's gain to its own, so a sound that crosses a chapter boundary (a pedal, a room, a pre-lap)
+            doesn't step by the difference between their gains; the report measures every seam. THE DIALOGUE GUARD (with --all): a segment whose
             dialogue would land more than 1.5 LU above the episode's median dialogue loudness is turned down to it
             (it then sits under -16 LUFS, and the report says so): chapters match by the voice, not by their music.
 Nothing here has been listened to. The QA and the report say what was measured.
@@ -64,6 +70,8 @@ GUARD_LU = 1.5
 ROOM_DIP = {}                           # (the cold open's extra 8 dB for its hall and banquet is baked into its stem)
 ROOM_DIP_DEFAULT = 2.0
 DUCK_DEFAULT = 9.0
+SCORE_GAIN_DB = {'coldopen': 6.0}       # the lead, 2026-09-27: the cold open's MM-06 (v2's stem at -26 LUFS-I) +6 dB,
+                                        # onto the -20 underscore reference the other segments' scores sit at
 DUCK_BY_MOOD = [                        # the beat's `music (v3): ...` heading, by its first words -> dB under speech
     ('LAUNCH NIGHT', 6), ('the Build thins', 6), ('THE ODOMETER', 8), ('the swing turns', 9), ('THE BILL', 9),
     ("ELGOOG'S CODE RED", 8), ("THE LANDLORD'S DEAL", 8), ('THE JOB', 8), ('THE DUEL', 9), ('THE PAUSE LETTER', 10),
@@ -383,13 +391,39 @@ def premix(name, g, variant, use_score=True):
         sq['length_vs_segment_s'] = round((len(m) - N) / SR, 3)
         mus = np.zeros((N, 2), 'float32')
         mus[:min(N, len(m))] = m[:N]
+        if name == 'tag':                 # Act Four's vault pedal, released past its last frame (its composer's hand-off)
+            rw, _ = S.score_files('act4', variant)
+            ro = rw.replace('.wav', '-ringout.wav') if rw else None
+            if ro and os.path.exists(ro):
+                r_, rsr = sf.read(ro, dtype='float32', always_2d=True)
+                if rsr == SR:
+                    r_ = (r_ if r_.shape[1] == 2 else np.repeat(r_, 2, axis=1)).copy()
+                    # the crossfade: the release plays from the tag's first sample (continuing Act Four's last one),
+                    # then fades out (equal power) over 2.5 s from the tag score's first entry, under its felt
+                    w_ = win_db(mus[: 10 * SR], 0.01)
+                    t_in = float(np.argmax(w_ > -50) * 0.01) if np.any(w_ > -50) else 0.0
+                    i_in, k_ = int(t_in * SR), int(2.5 * SR)
+                    gx = np.ones(len(r_), 'float32')
+                    seg_ = np.clip((np.arange(len(r_)) - i_in) / k_, 0, 1)
+                    gx = np.cos(0.5 * np.pi * seg_).astype('float32')
+                    r_ *= gx[:, None]
+                    mus[:min(N, len(r_))] += r_[:N]
+                    sq['act4_ringout'] = {'file': os.path.relpath(ro, ROOT), 'seconds': round(len(r_) / SR, 2),
+                                          'crossfade': f'full from 0 s, out (equal power) over 2.5 s from the tag score\'s entry at {t_in:.2f} s',
+                                          'why': "the act4 score's hand-off and the lead's note: the vault pedal's release at the "
+                                                 "tag's head, crossfading under the tag's own score, so the seam doesn't cut it"}
+        if SCORE_GAIN_DB.get(name):
+            mus *= np.float32(db(SCORE_GAIN_DB[name]))
+            sq['gain_db'] = SCORE_GAIN_DB[name]
+            sq['gain_why'] = "the lead's ruling (2026-09-27): onto the -20 LUFS underscore reference"
         cues = {}
         if cues_p:
             try:
                 cues = json.load(open(cues_p))
             except Exception as ex:
                 sq['cues_error'] = f'{ex.__class__.__name__}: {ex}'
-        sq['lufs_as_delivered'] = round(lufs(mus), 2)
+        sq['lufs_as_delivered'] = round(lufs(m[:N]), 2)
+        sq['lufs_after_gain'] = round(lufs(mus), 2)
         # the duck depth: the mood per beat, the cue sheet's duck_db over it, smoothed 1.5 s
         CR = 100
         n = int(N / SR * CR) + 2
@@ -437,6 +471,7 @@ def premix(name, g, variant, use_score=True):
             mus[ia - k:ia] *= np.linspace(1, 0, k, dtype='float32')[:, None]
             mus[ia:ib] = 0.0
         qa['silence'] = sil
+    qa['checks'] = sound_checks(name, g, variant, fx, room, mus, speech)
     body = dlg + room + fx
     mix = body + (mus if mus is not None else 0.0)
     stats = {'dlg': lufs(dlg) if np.any(dlg) else None, 'room': lufs(room), 'sfx': lufs(fx)}
@@ -444,8 +479,71 @@ def premix(name, g, variant, use_score=True):
                 stats=stats)
 
 
-def master(mix, gain_db):
-    y = (mix * db(gain_db)).astype('float32')
+def sound_checks(name, g, variant, fx, room, mus, spans):
+    """named moments: the SFX stem against the bed (rooms + score) where nobody speaks (the lines' own spans), dB RMS
+    in the sound's own band (gain-free ratios; a band the score leaves open is where a small sound is heard)"""
+    loc = lambda bid, d=0.0: g.starts[g.BI[bid]][0] + d
+    end = lambda bid, d=0.0: g.starts[g.BI[bid]][1] + d
+    sq = os.path.join(ROOT, S.VARIANTS[variant]['out'], f'{name}-stems-qa.json')
+    stq = json.load(open(sq)) if os.path.exists(sq) else {}
+    W = []
+    try:
+        KEYS, PEN, LAPS, CHIP = (1000, 5000), (3000, 9000), (300, 2000), (300, 3000)
+        if name == 'act3':
+            W.append(("Gerg's keys down the line, 20.06 (loud)", loc('20.06'), end('20.06'), KEYS))
+            W.append(('the LEDs out, 20.02 (the quiet beat): the room in the ticks\' band', loc('20.02'), end('20.02'), (2500, 4500)))
+            W.append(('the LEDs on, 20.01 (for comparison)', loc('20.01'), end('20.01'), (2500, 4500)))
+        if name == 'act4':
+            ks = (stq.get('keys_stop') or {}).get('at')
+            W.append(("Gerg's keys at 2 AM, S5.09 (the tile opens)", loc('S5.09', 2.8), end('S5.09'), KEYS))
+            if ks:
+                W.append(("Gerg's keys, S5.09-back (typing hard)", loc('S5.09-back'), ks, KEYS))
+                W.append(('after "His keys stop." (the first second of his look)', ks + 0.05, ks + 1.0, KEYS))
+            W.append(('the practice laps under S1.01 (after the crane)', loc('S1.01', 2.6), end('S1.01'), LAPS))
+        if name == 'act1':
+            W.append(("the Build's pre-lap (the last 0.6 s of 9.13)", loc('11.01', -0.6), loc('11.01'), CHIP))
+            W.append(('the pen leading 12.04', loc('12.04', -0.5), loc('12.04'), PEN))
+    except KeyError:
+        pass
+    out = []
+    for label, a, b, band in W:
+        i0, i1 = int(a * SR), int(b * SR)
+        mask = np.ones(i1 - i0, bool)
+        for s0, s1 in spans:
+            mask[max(0, int(s0 * SR) - i0):max(0, min(i1 - i0, int(s1 * SR) - i0))] = False
+        whole = mask.sum() < SR // 20
+        if whole:
+            mask[:] = True
+        sos = signal.butter(2, band, 'band', fs=SR, output='sos')
+        pad = int(0.2 * SR)
+        def rms(x):
+            if x is None:
+                return None
+            y = signal.sosfilt(sos, x[max(0, i0 - pad):i1].astype('float64'), axis=0)[i0 - max(0, i0 - pad):]
+            return round(float(20 * np.log10(np.sqrt(np.mean(y[mask] ** 2)) + 1e-12)), 1)
+        bed = room + (mus if mus is not None else 0.0)
+        r = {'what': label, 'from': round(a, 2), 'to': round(b, 2), 'band_hz': list(band),
+             'unspoken_s': round(mask.sum() / SR, 2) if not whole else 'none: measured over the whole window',
+             'sfx_rms': rms(fx), 'room_rms': rms(room), 'score_rms': rms(mus), 'bed_rms': rms(bed)}
+        r['sfx_minus_bed_db'] = round(r['sfx_rms'] - r['bed_rms'], 1)
+        out.append(r)
+    return out
+
+
+SEAM_S = 2.0
+PREV = {'act1': 'card', 'act2': 'act1', 'act3': 'act2', 'act4': 'act3', 'tag': 'act4'}   # back to back on the episode clock
+
+
+def master(mix, gain_db, head_from=None):
+    """gain (with a SEAM_S ramp from the previous chapter's gain at the head, so a sound crossing the seam doesn't
+    step), the limiter, the true-peak check"""
+    if head_from is None or abs(head_from - gain_db) < 0.01:
+        y = (mix * db(gain_db)).astype('float32')
+    else:
+        k = min(len(mix), int(SEAM_S * SR))
+        g = np.full(len(mix), gain_db, 'float64')
+        g[:k] = head_from + (gain_db - head_from) * np.linspace(0, 1, k)
+        y = (mix * db(g)[:, None]).astype('float32')
     ceil = CEIL
     for _ in range(4):
         z, lim_s = limiter(y, ceil)
@@ -574,28 +672,35 @@ def run(names, variant, use_score=True, report_only=False):
         if gains['card'] is None:
             gains['card'] = 0.0
     results = {}
+    last = json.load(open(rep_p)).get('segments', {}) if os.path.exists(rep_p) else {}
     for s in sorted(pre, key=lambda k: k == 'card'):             # the card last: it takes Act One's final gain
         P = pre[s]
         if s == 'card' and 'act1' in gains:
             gains['card'] = gains['act1']
+        pv = PREV.get(s)
+        head = (gains.get('act1') if pv == 'card' else gains.get(pv)) if pv else None
+        if head is None and pv:
+            head = (last.get(pv) or {}).get('gain_db')
         g = segs[s]
         if s == 'card':
             y = (P['mix'] * db(gains[s])).astype('float32')
             lim_s, tp, ceil = 0.0, true_peak(y), None
             out = y
         else:
-            out, lim_s, tp, ceil = master(P['mix'], gains[s])
-            for _ in range(2):                          # the limiter shaves a little: trim the gain and re-master
+            out, lim_s, tp, ceil = master(P['mix'], gains[s], head)
+            for _ in range(2):                          # the limiter (and the seam ramp) shave a little: trim, re-master
                 d = TARGET - lufs(out) if s not in guard else 0.0
                 if abs(d) < 0.05:
                     break
                 gains[s] += d
-                out, lim_s, tp, ceil = master(P['mix'], gains[s])
+                out, lim_s, tp, ceil = master(P['mix'], gains[s], head)
         wav = os.path.join(outd, f'{s}-mix.wav')
         sf.write(wav, out, SR, subtype='PCM_24')
         qa = measure(s, g, P, gains[s], out, lim_s, tp, ceil if ceil is not None else 0.0)
         qa['file'] = os.path.relpath(wav, ROOT)
         qa['guard_db'] = guard.get(s)
+        qa['seam_head'] = ({'from_gain_db': round(head, 2), 'to_gain_db': round(gains[s], 2), 'ramp_s': SEAM_S,
+                            'after': PREV.get(s)} if head is not None and s != 'card' else None)
         qa['built'] = time.strftime('%Y-%m-%d %H:%M:%S')
         qa['heard'] = 'nothing here has been listened to; every number is measured'
         json.dump(qa, open(os.path.join(qad, f'{s}-mix-qa.json'), 'w'), indent=1, default=float)
@@ -629,12 +734,22 @@ def run(names, variant, use_score=True, report_only=False):
         whole = {'segments': ep, 'seconds': round(len(cat) / SR, 2), 'lufs_i': round(lufs(cat), 2), 'lra_lu': lra(cat),
                  'note': 'the story segments (and the card) back to back; the intro and the outro play their own masters between'}
         del cat
+    seams = []
+    for a_, b_ in [('card', 'act1'), ('act1', 'act2'), ('act2', 'act3'), ('act3', 'act4'), ('act4', 'tag')]:
+        fa, fb = (segs_rep.get(a_) or {}).get('file'), (segs_rep.get(b_) or {}).get('file')
+        if fa and fb and os.path.exists(os.path.join(ROOT, fa)) and os.path.exists(os.path.join(ROOT, fb)):
+            xa = sf.read(os.path.join(ROOT, fa), dtype='float32', always_2d=True, start=-int(0.2 * SR))[0]
+            xb = sf.read(os.path.join(ROOT, fb), dtype='float32', always_2d=True, stop=int(0.2 * SR))[0]
+            ra = float(20 * np.log10(np.sqrt(np.mean(xa.astype('float64') ** 2)) + 1e-12))
+            rb = float(20 * np.log10(np.sqrt(np.mean(xb.astype('float64') ** 2)) + 1e-12))
+            seams.append({'seam': f'{a_} -> {b_}', 'last_200ms_dbfs': round(ra, 1), 'first_200ms_dbfs': round(rb, 1),
+                          'step_db': round(rb - ra, 1), 'sample_jump': round(float(np.abs(xb[0] - xa[-1]).max()), 4)})
     li = [segs_rep[s]['lufs_i'] for s in SEGS if s in segs_rep and 'lufs_i' in segs_rep[s]]
     dd = [segs_rep[s]['dialogue_lufs'] for s in SEGS if s in segs_rep and segs_rep[s].get('dialogue_lufs') is not None]
     rep = {'variant': variant, 'target_lufs': TARGET, 'true_peak_max_dbtp': TP_MAX,
            'dialogue_reference_lufs': round(ref, 2) if ref is not None else rep.get('dialogue_reference_lufs'),
            'dialogue_reference_from': ref_src or rep.get('dialogue_reference_from'),
-           'guard_lu': GUARD_LU, 'segments': segs_rep, 'episode': whole,
+           'guard_lu': GUARD_LU, 'segments': segs_rep, 'episode': whole, 'seams': seams,
            'spread': {'lufs_i_lu': round(max(li) - min(li), 2) if li else None,
                       'dialogue_lu': round(max(dd) - min(dd), 2) if dd else None},
            'updated': time.strftime('%Y-%m-%d %H:%M:%S'),

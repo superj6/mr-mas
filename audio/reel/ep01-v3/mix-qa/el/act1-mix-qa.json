@@ -1,33 +1,33 @@
 {
  "segment": "act1",
- "variant": "kokoro",
- "seconds": 322.5,
- "frames": 7740,
- "samples": 15480000,
- "timeline": "show/reel/ep01-v3/ep01-v3-act1.json",
+ "variant": "el",
+ "seconds": 337.458,
+ "frames": 8099,
+ "samples": 16198000,
+ "timeline": "show/reel/ep01-v3-el/ep01-v3-el-act1.json",
  "dialogue": {
   "lines": 60,
   "device": {
    "phone": 6
   },
-  "el_matched": 0,
+  "el_matched": 60,
   "missing": []
  },
  "rooms": {
-  "stem": "audio/reel/ep01-v3/act1-room.wav",
+  "stem": "audio/reel/ep01-v3/el/act1-room.flac",
   "dip_under_speech_db": 2.0
  },
  "sfx": {
-  "stem": "audio/reel/ep01-v3/act1-sfx.wav",
+  "stem": "audio/reel/ep01-v3/el/act1-sfx.flac",
   "ducked": false
  },
  "score": {
-  "file": "audio/ost/tracks/e01-v3-act1/render/music.wav",
-  "cues": "audio/ost/tracks/e01-v3-act1/cues.json",
-  "length_s": 322.5,
+  "file": "audio/ost/tracks/e01-v3-act1/render/music-el.wav",
+  "cues": "audio/ost/tracks/e01-v3-act1/cues-el.json",
+  "length_s": 337.458,
   "length_vs_segment_s": 0.0,
-  "lufs_as_delivered": -20.46,
-  "lufs_after_gain": -20.46,
+  "lufs_as_delivered": -20.45,
+  "lufs_after_gain": -20.45,
   "duck": {
    "by_mood_db": [
     [
@@ -43,7 +43,7 @@
      8
     ],
     [
-     "ELGOOG'S CODE RED",
+     "THE JOB stops on the pop",
      8
     ],
     [
@@ -51,7 +51,7 @@
      8
     ],
     [
-     "THE JOB stops on the pop",
+     "ELGOOG'S CODE RED",
      8
     ],
     [
@@ -59,11 +59,11 @@
      9
     ],
     [
-     "THE BILL",
+     "the swing turns on the tile: the heat, a",
      9
     ],
     [
-     "the swing turns on the tile: the heat, a",
+     "THE BILL",
      9
     ],
     [
@@ -77,23 +77,23 @@
   },
   "designed_silences": [
    [
-    184.942,
-    185.242,
+    195.4,
+    196.95,
     "the phone locks (a diegetic stop) -> the lobby's pickup under the revolving door"
    ],
    [
-    206.542,
-    214.605,
+    218.25,
+    226.613,
     "the collar's pop: the swing stops dead; the lobby's room under \"That collar suits you.\" / \"it does.\" / \"and the rent?\""
    ],
    [
-    260.398,
-    262.458,
+    275.172,
+    277.208,
     "Gerg closes his laptop: his button, in the room (then the match cut)"
    ],
    [
-    316.5,
-    320.5,
+    331.458,
+    335.458,
     "no score on the reflection (Alyi in the glass; the pen's scratch only)"
    ]
   ]
@@ -101,8 +101,8 @@
  "checks": [
   {
    "what": "the Build's pre-lap (the last 0.6 s of 9.13)",
-   "from": 261.86,
-   "to": 262.46,
+   "from": 276.61,
+   "to": 277.21,
    "band_hz": [
     300,
     3000
@@ -116,71 +116,65 @@
   },
   {
    "what": "the pen leading 12.04",
-   "from": 313.5,
-   "to": 314.0,
+   "from": 328.46,
+   "to": 328.96,
    "band_hz": [
     3000,
     9000
    ],
    "unspoken_s": 0.5,
    "sfx_rms": -41.8,
-   "room_rms": -59.4,
-   "score_rms": -63.3,
-   "bed_rms": -58.0,
-   "sfx_minus_bed_db": 16.2
+   "room_rms": -59.1,
+   "score_rms": -45.2,
+   "bed_rms": -45.1,
+   "sfx_minus_bed_db": 3.3
   }
  ],
  "measured": {
   "lufs_i": -16.0,
-  "true_peak_dbtp": -1.44,
+  "true_peak_dbtp": -1.18,
   "sample_peak_dbfs": -1.5,
-  "lra_lu": 5.6,
-  "gain_db": 1.45,
+  "lra_lu": 6.0,
+  "gain_db": 1.48,
   "limiter_ceiling_dbfs": -1.5,
-  "limiter_active_s": 0.192,
-  "dialogue_lufs": -14.96,
-  "score_lufs_after_duck": -21.58,
-  "score_rms_under_speech_dbfs": -29.0,
+  "limiter_active_s": 0.325,
+  "dialogue_lufs": -14.91,
+  "score_lufs_after_duck": -21.66,
+  "score_rms_under_speech_dbfs": -28.8,
   "score_rms_between_speech_dbfs": -20.7,
   "score_runs": {
    "count": 5,
-   "shortest_s": 1.8,
+   "shortest_s": 1.85,
    "runs": [
     [
      0.0,
-     184.95
+     195.4
     ],
     [
-     185.3,
+     197.0,
      21.25
     ],
     [
-     214.7,
-     44.95
+     226.75,
+     47.75
     ],
     [
-     262.45,
-     53.8
+     277.25,
+     53.95
     ],
     [
-     320.5,
-     1.8
+     335.45,
+     1.85
     ]
    ]
   },
-  "rooms_lufs": -36.41,
-  "sfx_lufs": -35.6,
+  "rooms_lufs": -36.37,
+  "sfx_lufs": -35.63,
   "holes_under_-42dBFS_0.3s": [],
-  "holes_mono_downmix": [
-   {
-    "at": 210.4,
-    "s": 0.3,
-    "what": "UNMARKED (in beat 9.09)"
-   }
-  ],
+  "holes_mono_downmix": [],
   "holes_without_score": [
    {
-    "at": 321.55,
+    "at": 336.5,
     "s": 0.3,
     "what": "designed: the act-out black (the bullpen cuts with the picture)"
    }
@@ -188,27 +182,38 @@
   "unmarked_holes": 0,
   "unmarked_holes_without_score": 0,
   "jumps_over_15dB": {
-   "count": 32,
-   "rising": 29,
-   "rising_at_a_word": 23,
-   "rising_at_an_sfx": 2,
+   "count": 73,
+   "rising": 55,
+   "rising_at_a_word": 36,
+   "rising_at_an_sfx": 4,
    "rising_other": [
-    77.0,
-    84.0,
-    185.3,
-    237.05
+    0.6,
+    8.25,
+    48.25,
+    73.25,
+    78.25,
+    96.8,
+    104.5,
+    110.75,
+    118.25,
+    120.75,
+    123.25,
+    141.9,
+    221.85,
+    225.8,
+    252.2
    ],
-   "falling": 3
+   "falling": 18
   }
  },
- "file": "out/ep01/full-v3/mix/act1-mix.wav",
+ "file": "out/ep01/full-v3/mix-el/act1-mix.wav",
  "guard_db": null,
  "seam_head": {
-  "from_gain_db": 1.45,
-  "to_gain_db": 1.45,
+  "from_gain_db": 1.48,
+  "to_gain_db": 1.48,
   "ramp_s": 2.0,
   "after": "card"
  },
- "built": "2026-09-27 14:39:26",
+ "built": "2026-09-27 14:42:26",
  "heard": "nothing here has been listened to; every number is measured"
 }

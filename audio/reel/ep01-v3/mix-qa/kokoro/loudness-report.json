@@ -2,56 +2,56 @@
  "variant": "kokoro",
  "target_lufs": -16.0,
  "true_peak_max_dbtp": -1.0,
- "dialogue_reference_lufs": -15.18,
+ "dialogue_reference_lufs": -15.01,
  "dialogue_reference_from": "this run",
- "guard_lu": 2.0,
+ "guard_lu": 1.5,
  "segments": {
   "coldopen": {
    "file": "out/ep01/full-v3/mix/coldopen-mix.wav",
    "seconds": 30.667,
    "lufs_i": -16.0,
-   "true_peak_dbtp": -3.71,
-   "lra_lu": 11.0,
-   "dialogue_lufs": -13.29,
-   "gain_db": 2.67,
+   "true_peak_dbtp": -4.46,
+   "lra_lu": 8.1,
+   "dialogue_lufs": -14.03,
+   "gain_db": 1.93,
    "guard_db": null,
    "score": "audio/ost/tracks/e01-v3-coldopen/render/music.wav",
    "unmarked_holes": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-09-27 13:34:28"
+   "built": "2026-09-27 14:39:04"
   },
   "act1": {
    "file": "out/ep01/full-v3/mix/act1-mix.wav",
    "seconds": 322.5,
    "lufs_i": -16.0,
-   "true_peak_dbtp": -1.9,
-   "lra_lu": 19.3,
-   "dialogue_lufs": -15.85,
-   "gain_db": 0.56,
+   "true_peak_dbtp": -1.44,
+   "lra_lu": 5.6,
+   "dialogue_lufs": -14.96,
+   "gain_db": 1.45,
    "guard_db": null,
-   "score": "MISSING",
+   "score": "audio/ost/tracks/e01-v3-act1/render/music.wav",
    "unmarked_holes": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-09-27 13:34:33"
+   "built": "2026-09-27 14:39:26"
   },
   "act2": {
    "file": "out/ep01/full-v3/mix/act2-mix.wav",
    "seconds": 204.75,
    "lufs_i": -16.0,
-   "true_peak_dbtp": -2.03,
-   "lra_lu": 6.9,
+   "true_peak_dbtp": -1.98,
+   "lra_lu": 7.0,
    "dialogue_lufs": -15.26,
-   "gain_db": 0.88,
+   "gain_db": 0.89,
    "guard_db": null,
    "score": "audio/ost/tracks/e01-v3-act2/render/music.wav",
    "unmarked_holes": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-09-27 13:34:38"
+   "built": "2026-09-27 14:39:35"
   },
   "act3": {
    "file": "out/ep01/full-v3/mix/act3-mix.wav",
    "seconds": 128.042,
-   "lufs_i": -16.0,
+   "lufs_i": -16.02,
    "true_peak_dbtp": -1.45,
    "lra_lu": 5.2,
    "dialogue_lufs": -15.09,
@@ -60,49 +60,49 @@
    "score": "audio/ost/tracks/e01-v3-act3/render/music.wav",
    "unmarked_holes": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-09-27 13:34:41"
+   "built": "2026-09-27 14:39:39"
   },
   "act4": {
    "file": "out/ep01/full-v3/mix/act4-mix.wav",
    "seconds": 523.792,
    "lufs_i": -16.0,
-   "true_peak_dbtp": -2.99,
-   "lra_lu": 20.4,
-   "dialogue_lufs": -15.91,
-   "gain_db": 0.29,
+   "true_peak_dbtp": -1.62,
+   "lra_lu": 7.1,
+   "dialogue_lufs": -15.07,
+   "gain_db": 1.14,
    "guard_db": null,
-   "score": "MISSING",
+   "score": "audio/ost/tracks/e01-v3-act4/render/music.wav",
    "unmarked_holes": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-09-27 13:34:50"
+   "built": "2026-09-27 14:39:54"
   },
   "tag": {
    "file": "out/ep01/full-v3/mix/tag-mix.wav",
    "seconds": 33.875,
-   "lufs_i": -16.68,
-   "true_peak_dbtp": -1.49,
+   "lufs_i": -17.09,
+   "true_peak_dbtp": -1.53,
    "lra_lu": 11.5,
-   "dialogue_lufs": -13.18,
-   "gain_db": 3.68,
-   "guard_db": -0.67,
+   "dialogue_lufs": -13.51,
+   "gain_db": 3.34,
+   "guard_db": -1.08,
    "score": "audio/ost/tracks/e01-v3-tag/render/music.wav",
    "unmarked_holes": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-09-27 13:34:51"
+   "built": "2026-09-27 14:39:55"
   },
   "card": {
    "file": "out/ep01/full-v3/mix/card-mix.wav",
    "seconds": 2.0,
-   "lufs_i": -37.01,
-   "true_peak_dbtp": -24.77,
+   "lufs_i": -36.11,
+   "true_peak_dbtp": -23.88,
    "lra_lu": null,
    "dialogue_lufs": null,
-   "gain_db": 0.56,
+   "gain_db": 1.45,
    "guard_db": null,
    "score": "none (card)",
    "unmarked_holes": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-09-27 13:34:51"
+   "built": "2026-09-27 14:39:55"
   }
  },
  "episode": {
@@ -116,14 +116,51 @@
    "tag"
   ],
   "seconds": 1245.62,
-  "lufs_i": -16.03,
-  "lra_lu": 19.2,
+  "lufs_i": -16.02,
+  "lra_lu": 6.6,
   "note": "the story segments (and the card) back to back; the intro and the outro play their own masters between"
  },
+ "seams": [
+  {
+   "seam": "card -> act1",
+   "last_200ms_dbfs": -34.9,
+   "first_200ms_dbfs": -33.8,
+   "step_db": 1.0,
+   "sample_jump": 0.0015
+  },
+  {
+   "seam": "act1 -> act2",
+   "last_200ms_dbfs": -37.6,
+   "first_200ms_dbfs": -17.3,
+   "step_db": 20.3,
+   "sample_jump": 0.0007
+  },
+  {
+   "seam": "act2 -> act3",
+   "last_200ms_dbfs": -38.6,
+   "first_200ms_dbfs": -17.5,
+   "step_db": 21.1,
+   "sample_jump": 0.0009
+  },
+  {
+   "seam": "act3 -> act4",
+   "last_200ms_dbfs": -31.6,
+   "first_200ms_dbfs": -30.7,
+   "step_db": 0.9,
+   "sample_jump": 0.0034
+  },
+  {
+   "seam": "act4 -> tag",
+   "last_200ms_dbfs": -25.9,
+   "first_200ms_dbfs": -27.0,
+   "step_db": -1.1,
+   "sample_jump": 0.0014
+  }
+ ],
  "spread": {
-  "lufs_i_lu": 0.68,
-  "dialogue_lu": 2.73
+  "lufs_i_lu": 1.09,
+  "dialogue_lu": 1.75
  },
- "updated": "2026-09-27 13:35:16",
+ "updated": "2026-09-27 14:40:16",
  "heard": "nothing here has been listened to; every number is measured"
 }

@@ -1,42 +1,42 @@
 {
  "segment": "coldopen",
- "variant": "kokoro",
- "seconds": 30.667,
- "frames": 736,
- "samples": 1472000,
- "timeline": "show/reel/ep01-v3/ep01-v3-coldopen.json",
+ "variant": "el",
+ "seconds": 30.042,
+ "frames": 721,
+ "samples": 1442000,
+ "timeline": "show/reel/ep01-v3-el/ep01-v3-el-coldopen.json",
  "dialogue": {
   "lines": 3,
   "device": {},
-  "el_matched": 0,
+  "el_matched": 3,
   "missing": []
  },
  "rooms": {
-  "stem": "audio/reel/ep01-v3/coldopen-room.wav",
+  "stem": "audio/reel/ep01-v3/el/coldopen-room.flac",
   "dip_under_speech_db": 2.0
  },
  "sfx": {
-  "stem": "audio/reel/ep01-v3/coldopen-sfx.wav",
+  "stem": "audio/reel/ep01-v3/el/coldopen-sfx.flac",
   "ducked": false
  },
  "score": {
-  "file": "audio/ost/tracks/e01-v3-coldopen/render/music.wav",
-  "cues": "audio/ost/tracks/e01-v3-coldopen/cues.json",
-  "length_s": 30.667,
+  "file": "audio/ost/tracks/e01-v3-coldopen/render/music-el.wav",
+  "cues": "audio/ost/tracks/e01-v3-coldopen/cues-el.json",
+  "length_s": 30.042,
   "length_vs_segment_s": 0.0,
   "gain_db": 6.0,
   "gain_why": "the lead's ruling (2026-09-27): onto the -20 LUFS underscore reference",
-  "lufs_as_delivered": -26.2,
-  "lufs_after_gain": -20.2,
+  "lufs_as_delivered": -26.23,
+  "lufs_after_gain": -20.23,
   "duck": {
    "by_mood_db": [
     [
-     "COLD OPEN",
-     9
-    ],
-    [
      "",
      9.0
+    ],
+    [
+     "COLD OPEN",
+     9
     ]
    ],
    "cue_sheet_overrides": [],
@@ -46,7 +46,7 @@
   "designed_silences": [
    [
     0.0,
-    20.166666666666668,
+    19.541666666666668,
     "no score under the hall (sc 1-2): the room, the freeze's F4 (a timeline sound)"
    ]
   ]
@@ -54,40 +54,40 @@
  "checks": [],
  "measured": {
   "lufs_i": -16.0,
-  "true_peak_dbtp": -4.46,
-  "sample_peak_dbfs": -4.53,
-  "lra_lu": 8.1,
-  "gain_db": 1.93,
+  "true_peak_dbtp": -3.15,
+  "sample_peak_dbfs": -3.27,
+  "lra_lu": 7.5,
+  "gain_db": 2.0,
   "limiter_ceiling_dbfs": -1.5,
   "limiter_active_s": 0.0,
-  "dialogue_lufs": -14.03,
-  "score_lufs_after_duck": -18.27,
+  "dialogue_lufs": -14.0,
+  "score_lufs_after_duck": -18.23,
   "score_rms_under_speech_dbfs": -240.0,
-  "score_rms_between_speech_dbfs": -22.8,
+  "score_rms_between_speech_dbfs": -22.7,
   "score_runs": {
    "count": 4,
-   "shortest_s": 0.5,
+   "shortest_s": 0.55,
    "runs": [
     [
-     20.15,
+     19.55,
      1.8
     ],
     [
-     22.35,
-     0.5
+     21.7,
+     0.55
     ],
     [
-     23.25,
-     5.35
+     22.65,
+     2.2
     ],
     [
-     28.9,
-     1.75
+     25.15,
+     4.85
     ]
    ]
   },
-  "rooms_lufs": -33.91,
-  "sfx_lufs": -25.5,
+  "rooms_lufs": -33.66,
+  "sfx_lufs": -25.25,
   "holes_under_-42dBFS_0.3s": [],
   "holes_mono_downmix": [
    {
@@ -96,44 +96,49 @@
     "what": "UNMARKED (in beat 1.00)"
    },
    {
-    "at": 2.45,
-    "s": 0.55,
-    "what": "UNMARKED (in beat 1.01)"
-   },
-   {
-    "at": 4.4,
-    "s": 0.65,
-    "what": "UNMARKED (in beat 1.01)"
-   },
-   {
-    "at": 6.9,
+    "at": 2.4,
     "s": 0.3,
+    "what": "UNMARKED (in beat 1.01)"
+   },
+   {
+    "at": 4.15,
+    "s": 0.45,
+    "what": "UNMARKED (in beat 1.01)"
+   },
+   {
+    "at": 9.2,
+    "s": 0.4,
     "what": "UNMARKED (in beat 1.02)"
    },
    {
-    "at": 18.35,
-    "s": 0.4,
+    "at": 17.55,
+    "s": 0.35,
     "what": "UNMARKED (in beat 2.03)"
    },
    {
-    "at": 19.45,
-    "s": 0.5,
+    "at": 18.5,
+    "s": 0.3,
     "what": "UNMARKED (in beat 2.03)"
    },
    {
-    "at": 25.45,
+    "at": 19.1,
+    "s": 0.3,
+    "what": "UNMARKED (in beat 2.03)"
+   },
+   {
+    "at": 24.85,
     "s": 0.3,
     "what": "designed: the rewind reaching white"
    },
    {
-    "at": 28.6,
+    "at": 27.95,
     "s": 0.3,
     "what": "designed: the rewind reaching white"
    }
   ],
   "holes_without_score": [
    {
-    "at": 24.0,
+    "at": 23.4,
     "s": 1.4,
     "what": "designed: the rewind reaching white"
    }
@@ -141,26 +146,30 @@
   "unmarked_holes": 0,
   "unmarked_holes_without_score": 0,
   "jumps_over_15dB": {
-   "count": 25,
-   "rising": 16,
-   "rising_at_a_word": 7,
-   "rising_at_an_sfx": 1,
+   "count": 36,
+   "rising": 25,
+   "rising_at_a_word": 11,
+   "rising_at_an_sfx": 2,
    "rising_other": [
-    24.2,
-    25.75,
-    26.7,
-    27.0,
-    27.65,
-    27.95,
+    8.3,
+    10.15,
+    10.9,
+    22.65,
+    23.6,
+    25.15,
+    26.1,
+    26.4,
+    27.35,
+    28.25,
     28.9,
-    30.15
+    29.5
    ],
-   "falling": 9
+   "falling": 11
   }
  },
- "file": "out/ep01/full-v3/mix/coldopen-mix.wav",
+ "file": "out/ep01/full-v3/mix-el/coldopen-mix.wav",
  "guard_db": null,
  "seam_head": null,
- "built": "2026-09-27 14:39:04",
+ "built": "2026-09-27 14:42:14",
  "heard": "nothing here has been listened to; every number is measured"
 }

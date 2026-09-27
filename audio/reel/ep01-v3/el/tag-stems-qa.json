@@ -1,20 +1,20 @@
 {
  "segment": "tag",
- "variant": "kokoro",
- "timeline": "show/reel/ep01-v3/ep01-v3-tag.json",
- "timeline_variant": "kokoro",
- "seconds": 33.875,
- "frames": 813,
+ "variant": "el",
+ "timeline": "show/reel/ep01-v3-el/ep01-v3-el-tag.json",
+ "timeline_variant": "el",
+ "seconds": 33.708,
+ "frames": 809,
  "rooms": [
   {
    "room": "dark",
    "from": -0.6,
-   "to": 33.875,
+   "to": 33.708,
    "first": "32.01",
    "last": "33.05",
    "lead": 0.6,
    "trail": 0.0,
-   "lift_db": 1.5
+   "lift_db": 1.6
   }
  ],
  "sfx": [
@@ -27,61 +27,61 @@
   [
    "32.04",
    "orb_scan_sweep",
-   12.342,
+   12.258,
    -21
   ],
   [
    "32.04",
    "glyph_blink",
-   13.042,
+   12.958,
    -27
   ],
   [
    "32.04",
    "orb_scan_sweep",
-   13.242,
+   13.158,
    -24
   ],
   [
    "32.04",
    "glyph_blink",
-   14.892,
+   14.808,
    -27
   ],
   [
    "32.07",
    "key_tap_soft_03",
-   18.875,
+   18.833,
    -24
   ],
   [
    "32.07",
    "key_tap_soft_05",
-   20.225,
+   20.183,
    -26
   ],
   [
    "33.01",
    "synth:thud",
-   23.125,
+   23.083,
    -8
   ],
   [
    "33.02",
    "paper_curl",
-   25.143,
+   25.101,
    -30
   ],
   [
    "33.02",
    "paper_curl",
-   27.47,
+   27.428,
    -35
   ],
   [
    "33.04",
    "vault_hum_F",
-   30.635,
+   30.483,
    -31
   ]
  ],
@@ -91,7 +91,7 @@
    "beat": "33.04",
    "name": "synth:button_chord",
    "claimed_by_score": "button-chord",
-   "evidence": "30.64 s: THE BUTTON: F3 C4 G4 C5, no third (the vault's F hum is its root)"
+   "evidence": "30.48 s: THE BUTTON: F3 C4 G4 C5, no third (the vault's F hum is its root)"
   }
  ],
  "added": [
@@ -102,23 +102,23 @@
   }
  ],
  "score_hints": {
-  "score": "audio/ost/tracks/e01-v3-tag/render/music.wav",
-  "cues": "audio/ost/tracks/e01-v3-tag/cues.json",
+  "score": "audio/ost/tracks/e01-v3-tag/render/music-el.wav",
+  "cues": "audio/ost/tracks/e01-v3-tag/cues-el.json",
   "drop": [
    "button-chord"
   ],
   "why": {
-   "button-chord": "30.64 s: THE BUTTON: F3 C4 G4 C5, no third (the vault's F hum is its root)"
+   "button-chord": "30.48 s: THE BUTTON: F3 C4 G4 C5, no third (the vault's F hum is its root)"
   },
   "grid": null
  },
  "room_stem": {
-  "lufs": -38.11,
-  "peak_dbfs": -24.12,
-  "p10_50ms_dbfs": -39.8
+  "lufs": -38.07,
+  "peak_dbfs": -25.77,
+  "p10_50ms_dbfs": -39.7
  },
  "sfx_stem": {
-  "lufs": -34.19,
+  "lufs": -34.03,
   "peak_dbfs": -8.0,
   "p10_50ms_dbfs": -240.0
  },
@@ -126,8 +126,8 @@
  "room_levels": [
   {
    "room": "dark@tag:32.01",
-   "p5_50ms_dbfs": -41.5,
-   "lift_db": 1.5
+   "p5_50ms_dbfs": -41.6,
+   "lift_db": 1.6
   }
  ]
 }

@@ -1,10 +1,10 @@
 {
  "segment": "act4",
- "variant": "kokoro",
- "seconds": 523.792,
- "frames": 12571,
- "samples": 25142000,
- "timeline": "show/reel/ep01-v3/ep01-v3-act4.json",
+ "variant": "el",
+ "seconds": 542.708,
+ "frames": 13025,
+ "samples": 26050000,
+ "timeline": "show/reel/ep01-v3-el/ep01-v3-el-act4.json",
  "dialogue": {
   "lines": 101,
   "device": {
@@ -12,21 +12,21 @@
    "monitor": 7,
    "call": 1
   },
-  "el_matched": 0,
+  "el_matched": 101,
   "missing": []
  },
  "rooms": {
-  "stem": "audio/reel/ep01-v3/act4-room.wav",
+  "stem": "audio/reel/ep01-v3/el/act4-room.flac",
   "dip_under_speech_db": 2.0
  },
  "sfx": {
-  "stem": "audio/reel/ep01-v3/act4-sfx.wav",
+  "stem": "audio/reel/ep01-v3/el/act4-sfx.flac",
   "ducked": false
  },
  "score": {
-  "file": "audio/ost/tracks/e01-v3-act4/render/music.wav",
-  "cues": "audio/ost/tracks/e01-v3-act4/cues.json",
-  "length_s": 523.792,
+  "file": "audio/ost/tracks/e01-v3-act4/render/music-el.wav",
+  "cues": "audio/ost/tracks/e01-v3-act4/cues-el.json",
+  "length_s": 542.708,
   "length_vs_segment_s": 0.0,
   "lufs_as_delivered": -20.21,
   "lufs_after_gain": -20.21,
@@ -37,11 +37,11 @@
      7
     ],
     [
-     "THE RETURN",
+     "THE AVALANCHE",
      8
     ],
     [
-     "THE AVALANCHE",
+     "THE RETURN",
      8
     ],
     [
@@ -67,30 +67,30 @@
   },
   "designed_silences": [
    [
-    47.692,
-    57.61,
+    48.817,
+    58.527,
     "D6: the Cancel click -> the phone's buzz (every bus at zero in the mix), then no score under \"super.\" (the suite's air holds it) -> the carve"
    ],
    [
-    327.102,
-    331.243,
+    333.878,
+    338.267,
     "the scroll stops on ALYI -> \"He did both.\" (no score: the chime, \"Alyi signed it.\" and \"alyi voted.\" play in the room)"
    ],
    [
-    460.07,
-    468.117,
+    474.449,
+    482.408,
     "the dead stop on \"of what?\" -> the stamp (Mada's pause, \"Good question.\", \"good question.\" and the long hold play in the room)"
    ],
    [
-    388.25,
-    392.705,
+    396.875,
+    401.33,
     "the dead stop on MADA's label -> the Monday bullpen (the dark room's air, then the bullpen's, hold it)"
    ]
   ]
  },
  "silence": {
-  "click": 47.692,
-  "buzz": 51.383,
+  "click": 48.817,
+  "buzz": 52.508,
   "seconds": 3.692,
   "score_peak_before_gate_dbfs": -240.0,
   "mix_in_window_dbfs_max_50ms": -47.1,
@@ -99,45 +99,45 @@
  "checks": [
   {
    "what": "Gerg's keys at 2 AM, S5.09 (the tile opens)",
-   "from": 293.51,
-   "to": 306.54,
+   "from": 298.59,
+   "to": 311.46,
    "band_hz": [
     1000,
     5000
    ],
-   "unspoken_s": 1.42,
-   "sfx_rms": -46.0,
-   "room_rms": -57.8,
-   "score_rms": -42.9,
-   "bed_rms": -42.8,
-   "sfx_minus_bed_db": -3.2
+   "unspoken_s": 1.7,
+   "sfx_rms": -44.1,
+   "room_rms": -58.1,
+   "score_rms": -44.3,
+   "bed_rms": -44.1,
+   "sfx_minus_bed_db": 0.0
   },
   {
    "what": "Gerg's keys, S5.09-back (typing hard)",
-   "from": 341.17,
-   "to": 350.62,
+   "from": 347.71,
+   "to": 357.71,
    "band_hz": [
     1000,
     5000
    ],
-   "unspoken_s": 2.34,
-   "sfx_rms": -41.2,
-   "room_rms": -57.9,
-   "score_rms": -39.2,
-   "bed_rms": -39.1,
-   "sfx_minus_bed_db": -2.1
+   "unspoken_s": 2.32,
+   "sfx_rms": -42.6,
+   "room_rms": -58.1,
+   "score_rms": -39.4,
+   "bed_rms": -39.4,
+   "sfx_minus_bed_db": -3.2
   },
   {
    "what": "after \"His keys stop.\" (the first second of his look)",
-   "from": 350.68,
-   "to": 351.62,
+   "from": 357.76,
+   "to": 358.71,
    "band_hz": [
     1000,
     5000
    ],
    "unspoken_s": 0.95,
    "sfx_rms": -240.0,
-   "room_rms": -57.8,
+   "room_rms": -58.3,
    "score_rms": -45.0,
    "bed_rms": -44.8,
    "sfx_minus_bed_db": -195.2
@@ -145,121 +145,126 @@
   {
    "what": "the practice laps under S1.01 (after the crane)",
    "from": 2.6,
-   "to": 5.75,
+   "to": 6.96,
    "band_hz": [
     300,
     2000
    ],
    "unspoken_s": 0.61,
-   "sfx_rms": -42.8,
-   "room_rms": -47.9,
-   "score_rms": -29.3,
-   "bed_rms": -29.2,
-   "sfx_minus_bed_db": -13.6
+   "sfx_rms": -41.1,
+   "room_rms": -47.3,
+   "score_rms": -30.0,
+   "bed_rms": -30.0,
+   "sfx_minus_bed_db": -11.1
   }
  ],
  "measured": {
   "lufs_i": -16.0,
-  "true_peak_dbtp": -1.62,
-  "sample_peak_dbfs": -1.64,
-  "lra_lu": 7.1,
+  "true_peak_dbtp": -1.51,
+  "sample_peak_dbfs": -1.52,
+  "lra_lu": 7.0,
   "gain_db": 1.14,
   "limiter_ceiling_dbfs": -1.5,
   "limiter_active_s": 0.0,
-  "dialogue_lufs": -15.07,
-  "score_lufs_after_duck": -22.32,
+  "dialogue_lufs": -15.05,
+  "score_lufs_after_duck": -22.16,
   "score_rms_under_speech_dbfs": -30.3,
-  "score_rms_between_speech_dbfs": -21.8,
+  "score_rms_between_speech_dbfs": -21.7,
   "score_runs": {
-   "count": 6,
-   "shortest_s": 18.5,
+   "count": 8,
+   "shortest_s": 18.65,
    "runs": [
     [
      0.25,
-     47.45
+     48.6
     ],
     [
-     57.6,
-     269.55
+     58.5,
+     129.4
     ],
     [
-     331.45,
-     56.8
+     188.2,
+     101.0
     ],
     [
-     392.7,
-     67.4
+     290.35,
+     43.55
     ],
     [
-     468.15,
-     18.5
+     338.5,
+     58.4
     ],
     [
-     490.25,
-     33.5
+     401.3,
+     73.15
+    ],
+    [
+     482.4,
+     18.65
+    ],
+    [
+     504.75,
+     37.95
     ]
    ]
   },
-  "rooms_lufs": -37.06,
-  "sfx_lufs": -30.92,
+  "rooms_lufs": -37.12,
+  "sfx_lufs": -31.04,
   "holes_under_-42dBFS_0.3s": [
    {
-    "at": 47.75,
-    "s": 3.6,
+    "at": 48.85,
+    "s": 3.65,
     "what": "designed: THE ONE SILENCE: the Cancel click -> the buzz (room tone only)"
    }
   ],
   "holes_mono_downmix": [
    {
-    "at": 47.75,
-    "s": 3.6,
+    "at": 48.85,
+    "s": 3.65,
     "what": "designed: THE ONE SILENCE: the Cancel click -> the buzz (room tone only)"
    },
    {
-    "at": 460.85,
+    "at": 474.8,
     "s": 0.45,
-    "what": "UNMARKED (in beat S7.07-cont)"
-   },
-   {
-    "at": 461.35,
-    "s": 0.3,
     "what": "UNMARKED (in beat S7.07-cont)"
    }
   ],
   "holes_without_score": [
    {
-    "at": 47.75,
-    "s": 3.6,
+    "at": 48.85,
+    "s": 3.65,
     "what": "designed: THE ONE SILENCE: the Cancel click -> the buzz (room tone only)"
    }
   ],
   "unmarked_holes": 0,
   "unmarked_holes_without_score": 0,
   "jumps_over_15dB": {
-   "count": 58,
-   "rising": 47,
-   "rising_at_a_word": 36,
-   "rising_at_an_sfx": 4,
+   "count": 64,
+   "rising": 54,
+   "rising_at_a_word": 43,
+   "rising_at_an_sfx": 2,
    "rising_other": [
-    53.85,
-    57.6,
-    124.05,
-    340.35,
-    370.4,
-    374.05,
-    480.3
+    37.8,
+    68.95,
+    129.75,
+    289.6,
+    293.2,
+    298.85,
+    379.3,
+    383.0,
+    385.5
    ],
-   "falling": 11
+   "falling": 10
   }
  },
- "file": "out/ep01/full-v3/mix/act4-mix.wav",
+ "file": "out/ep01/full-v3/mix-el/act4-mix.wav",
  "guard_db": null,
  "seam_head": {
-  "from_gain_db": 1.89,
+  "from_gain_db": 2.1,
   "to_gain_db": 1.14,
   "ramp_s": 2.0,
   "after": "act3"
  },
- "built": "2026-09-27 14:39:54",
+ "built": "2026-09-27 14:42:45",
  "heard": "nothing here has been listened to; every number is measured"
 }
