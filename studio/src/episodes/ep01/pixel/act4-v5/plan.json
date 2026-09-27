@@ -1,0 +1,65 @@
+{
+ "_about": "The Act Four v5 port's plan for pixel/tools/lock.py (the pipeline's test: the v5 act re-locked and re-rendered through the episode pipeline must match lock_v5.py's data-v5.ts and render5's frames). The per-shot plan (verdicts, marks, faces, whips, badges), the v4 id map, the post ids, the text kinds and the size classes are READ from lock_v5.py's own tables (plan_py, parsed, never run); the v4 marks a reused layout keeps come from the v4 lock (base_lock). The Act Four specifics lock_v5.py hard-codes are written here as data: the episode timecode, the stick mix's 72-frame title card, D6 and the four sound marks. The timeline is the one data-v5.ts was cut from (git 2fd8da5, before the 2026-09-27 hedge-label removal), read from git by lock.py (`timeline`: git:<rev>:<path>).",
+ "label": "ACT FOUR",
+ "timeline": "git:2fd8da5:show/reel/ep01-act4-v5.json",
+ "plan_py": "studio/src/episodes/ep01/act4/animatic/tools/lock_v5.py",
+ "base_lock": "show/episodes/ep01/production/act4/shots-locked-v4.json",
+ "takes": [
+  "audio/ep01/act4/dialogue/lines-v5.json"
+ ],
+ "mix": {
+  "path": "audio/reel/ep01-act4-v5/mix.wav",
+  "offset": 72
+ },
+ "ep_in": "12:31:00",
+ "require_plan_for_every_shot": true,
+ "refs": {
+  "D6": [
+   "S1.09.click",
+   "S1.11.buzz"
+  ]
+ },
+ "ref_checks": [
+  [
+   "D6 about 3.7 s (edit-plan-v5 §4)",
+   "S1.09.click",
+   "S1.11.buzz",
+   3.3,
+   4.1
+  ]
+ ],
+ "sound_marks": [
+  {
+   "kind": "stop",
+   "n": 1,
+   "name": "D6: the Cancel click's digital silence",
+   "s": "S1.09.click",
+   "e": "S1.11.buzz",
+   "shot": "S1.09"
+  },
+  {
+   "kind": "stop",
+   "n": 2,
+   "name": "dead stop on MADA's label",
+   "s": "S6.06.label",
+   "e": null,
+   "shot": "S6.06"
+  },
+  {
+   "kind": "stop",
+   "n": 3,
+   "name": "dead stop after \"of what?\"",
+   "s": "line:a5-30-15.out",
+   "e": "line:a5-30-16.in",
+   "shot": "S7.07-cont"
+  },
+  {
+   "kind": "ringout",
+   "n": 1,
+   "name": "Gerg's look (the Build stops, the pedal holds)",
+   "s": "shot:S5.09b.s",
+   "e": null,
+   "shot": "S5.09b"
+  }
+ ]
+}

@@ -92,7 +92,7 @@ Everything is in `studio/src/episodes/ep01/pixel/`, and every file is new. **No 
 | # | What was compared | How | Result |
 |---|---|---|---|
 | 1 | **The lock** | Every one of the 22 ShotV5 fields of all 83 shots (1,826 fields), plus `SEQS`, `RAILS`, `SUBS`, `SOUND_MARKS`, `V4_IDS`, `D6`, `MIX`, `ACT_FRAMES`, `EP_IN_FRAMES` and the GLYPH frame list, against `data-v5.ts` (`act4check lock`) | **identical** |
-| 2 | **Every show frame** | All 12,443 frames at 480 × 270, pixel by pixel, and their GLYPH layers, `frame5.native5` against `frame.native` in one process (`act4check frames`, 228 s on 2 workers) | **0 differ** |
+| 2 | **Every show frame** | All 12,443 frames at 480 × 270, pixel by pixel, and their GLYPH layers, `frame5.native5` against `frame.native` in one process (`act4check frames`, 228–255 s on 2 workers) | **0 differ** |
 | 3 | **Picture and review frames** | 2,231 frames at 1920 × 1080: every 6th frame, both sides of every cut, all 28 GLYPH frames. `picture5` against `picture`, and `anim5` against `review` | **0 differ, in both** |
 | 4 | **The Remotion host** | The new host's 28 GLYPH frames and 4 plain frames, picture and review, 64 PNGs. Compared with the v5 host's own PNGs from the v5 render (`a4p5-finish/glyph`) (`act4check pngs`) | **64 of 64 identical** |
 | 4b | **The new host on its own** | Remotion against Node on the plain frames; on the GLYPH frames, outside the room area | **identical** |
@@ -103,7 +103,9 @@ Everything is in `studio/src/episodes/ep01/pixel/`, and every file is new. **No 
 - **`shots5.ts` changed after the v5 render.** At 10:09 on 2026-09-27 (commit `95ebc0e`), only S5.06's `st` string (its "built from" note) changed. That string appears in the **review** margin only, never in the picture, so the picture comparison is unaffected. The in-process review comparison (row 3) is made against the current `shots5.ts`, where it is identical.
 - **The current Act Four timeline has lost its hedge labels** (TPOOL, MARIO, ALYI, MACROSOFT). Re-locking the current one would change those texts, as intended. That belongs to the v3 re-lock of Act Four (S3), not to this test.
 
-**The records** (scratch, may not last): `scratchpad/v3-pipeline/act4check-frames.json` (the per-frame test with md5 samples), `glyph-vs-old.json`, `mp4cmp-v5.json`, `render/act4-v5.mp4.render.json`.
+**The records** (scratch, may not last): `scratchpad/v3-pipeline/final-frames.json` (the per-frame test with md5 samples), `glyph-vs-old.json`, `final-mp4cmp.json`, `render/act4-v5.mp4.render.json`.
+- **Run twice:** every row was run once during the build and again on the finished code, with the same results.
+- **The test film:** deleted from scratch after the comparison, since it is the existing file bit for bit.
 
 ### 2a. Beyond Act Four
 
@@ -122,7 +124,7 @@ Everything is in `studio/src/episodes/ep01/pixel/`, and every file is new. **No 
 
 | Job | Time | Per frame |
 |---|---|---|
-| **Act Four picture** (12,443 frames, 1080p, 2 workers, `X264_THREADS=1`) | **116 s wall** | about 15 ms per worker, about 107 frames a second in total. The act is 8:38, so that is about 4.5× real time |
+| **Act Four picture** (12,443 frames, 1080p, 2 workers, `X264_THREADS=1`) | **116 s and 156 s wall** in two runs (the machine's load varied) | 15–21 ms per worker, 80–107 frames a second in total. The act is 8:38, so that is about 3.3–4.5× real time |
 | v5's `render5` for comparison (picture and review together) | 237 s | |
 | Drawing only, in the test (`native`) | | 8.3 ms, where frame5 took 9.6 ms: the pipeline adds nothing measurable |
 | Stand-in-only segments | | about 8 ms per frame per worker |
@@ -131,7 +133,7 @@ Everything is in `studio/src/episodes/ep01/pixel/`, and every file is new. **No 
 | The Remotion bundle | about 10 s | from file times, not timed directly |
 | The GLYPH frames (32 frames × 2 compositions, and the check) | about 10 s | from file times, not timed directly |
 
-**Estimate for the episode:** at this rate the whole of Ep1 (about 20 min, about 29,000 frames) renders its picture in about 4.5 min on 2 workers. This is an estimate, not a measurement: real layouts may cost more than stand-ins, and Act Four's layouts are heavy.
+**Estimate for the episode:** at this rate the whole of Ep1 (about 20 min, about 29,000 frames) renders its picture in about 4.5–6 min on 2 workers. This is an estimate, not a measurement: real layouts may cost more than stand-ins, and Act Four's layouts are heavy.
 
 ## 4. Limits and open issues
 
@@ -174,4 +176,4 @@ GLYPH_DIR=$S/glyph SEGDIR=$S X264_THREADS=1 ../ops/heavy.sh node $S/r.cjs pictur
   - `pixel/act4-v5/data.ts` and `pixel/example/data.ts`
   - `full-v3/lock/act4-v5.json` and `full-v3/lock/example.json`
   - The P2 passes' `pixel/<seg>/data.ts` and `full-v3/lock/<seg>.json` are generated the same way.
-- **Output:** none in `out/`. The test render is identical to the existing v5 picture, so it was kept only in scratch.
+- **Output:** none in `out/`. The test render was identical to the existing v5 picture, so it went to scratch and was deleted after the comparison.
