@@ -1,5 +1,6 @@
 // MR. MAS — outro A: the pane's later skins (the capability ladder, OUTRO-PROPOSALS §2 "Per episode" and §1.4),
-// as variant STILLS. The band (terms + pointer) is drawn by the same function as Ep1's and never changes.
+// as variant STILLS. The legal block (the terms on two rows, the pointer) is the log's last lines in every skin:
+// the same words, the same rows, in the paper tone, whatever the skin's face (the one thing that never changes).
 //   ep6        BASE UI (the Orb's toast-panel family), proportional face, a toast-cyan title bar
 //   ep10       the layered interface (dithered drop shadow, the columns aligned) and THE MACHINE TYPES: the
 //              `reviewed by:` line is its own; the box is ticked before the words have arrived, and the value is
@@ -9,13 +10,13 @@ import {Buf, W, H, rect, bayer} from '../../../shared/pixel/px';
 import {PAL, stepColor} from '../../../shared/pixel/palette';
 import {text, textWidth} from '../../../shared/pixel/font';
 import type {PixelSceneProps} from '../../../shared/pixel/compose';
-import {EP1, EP6, EP10, EpText, drawSlug, checkbox} from './text';
-import {drawBezel, drawBand, SCR, BAND, WIN, lineY} from './pane';
+import {EP1, EP6, EP10, EpText, drawSlug, checkbox, LEGAL_ROWS} from './text';
+import {drawBezel, SCR, winFor} from './pane';
 import {drawInsert1} from './pane';
 
 export type VariantId = 'ep1' | 'ep6' | 'ep10' | 'ep10-keys';
 
-const LABEL_COL = 96; // the value column for the proportional skins (px from the text's left edge)
+const LABEL_COL = 58; // the value column for the proportional skins (px from the text's left edge)
 
 const panelWin = (b: Buf, x: number, y: number, w: number, h: number, bar: [number, number, number], shadow: 'hard' | 'dither') => {
   // drop shadow
@@ -38,29 +39,28 @@ const panelWin = (b: Buf, x: number, y: number, w: number, h: number, bar: [numb
 };
 
 const drawSkinnedLog = (b: Buf, t: EpText, skin: 'ep6' | 'ep10') => {
-  const {x, y, w, h} = WIN;
-  const hh = h + (t.extra ? 13 : 0);
-  const yy = y - (t.extra ? 6 : 0);
+  const L = winFor(t);
+  const {x, y, w, h} = L;
   // the desktop
   rect(SCR.x, SCR.y, SCR.w, SCR.h, b.ink(PAL.N1));
-  if (skin === 'ep10') for (let j = SCR.y; j < BAND.y; j++) for (let i = SCR.x; i < SCR.x + SCR.w; i++) if (bayer(i, j) < 0.12 * (1 - (j - SCR.y) / (BAND.y - SCR.y))) b.set(i, j, PAL.N2);
-  panelWin(b, x, yy, w, hh, skin === 'ep6' ? [PAL.C6, PAL.C6, PAL.C8] : [PAL.C5, PAL.C6, PAL.C8], skin === 'ep6' ? 'hard' : 'dither');
-  text(b, t.title, x + Math.round((w - textWidth(t.title)) / 2), yy + 3, PAL.N0);
+  if (skin === 'ep10') for (let j = SCR.y; j < SCR.y + SCR.h; j++) for (let i = SCR.x; i < SCR.x + SCR.w; i++) if (bayer(i, j) < 0.12 * (1 - (j - SCR.y) / SCR.h)) b.set(i, j, PAL.N2);
+  panelWin(b, x, y, w, h, skin === 'ep6' ? [PAL.C6, PAL.C6, PAL.C8] : [PAL.C5, PAL.C6, PAL.C8], skin === 'ep6' ? 'hard' : 'dither');
+  text(b, t.title, x + Math.round((w - textWidth(t.title)) / 2), y + 3, PAL.N0);
   // the close box
-  rect(x + 5, yy + 3, 7, 7, b.ink(PAL.N0)); rect(x + 6, yy + 4, 5, 5, b.ink(skin === 'ep6' ? PAL.C6 : PAL.C5));
-  const tx = WIN.tx;
-  const dy = yy - y;
-  text(b, t.header, tx, WIN.headY + dy, PAL.P1);
-  rect(tx, WIN.ruleY + dy, textWidth(t.header), 1, b.ink(PAL.C3));
+  rect(x + 5, y + 3, 7, 7, b.ink(PAL.N0)); rect(x + 6, y + 4, 5, 5, b.ink(skin === 'ep6' ? PAL.C6 : PAL.C5));
+  const tx = L.tx;
+  const right = x + w - (tx - x);
+  text(b, t.header, tx, L.headY, PAL.P1);
+  if (t.date) text(b, t.date, right - textWidth(t.date), L.headY, PAL.P1);
+  rect(tx, L.ruleY, right - tx, 1, b.ink(PAL.C3));
   t.credits.forEach(([l, v], i) => {
-    const ly = lineY(i) + dy;
-    text(b, l, tx, ly, PAL.C6);
-    text(b, v, tx + LABEL_COL, ly, PAL.P2);
+    text(b, l, tx, L.rows[i], PAL.C6);
+    text(b, v, tx + LABEL_COL, L.rows[i], PAL.P2);
   });
   const n = t.credits.length;
   if (t.extra) {
     // the machine's own line: the box already ticked, the value arriving ahead of the cursor (ghost text)
-    const ly = lineY(n) + dy;
+    const ly = L.rows[n];
     text(b, t.extra[0], tx, ly, PAL.C7);
     const typed = 'a ', ghost = t.extra[1].slice(typed.length);
     text(b, typed, tx + LABEL_COL, ly, PAL.P2);
@@ -68,10 +68,14 @@ const drawSkinnedLog = (b: Buf, t: EpText, skin: 'ep6' | 'ep10') => {
     rect(gx, ly - 1, 1, 9, b.ink(PAL.C7)); // the machine's caret: a 1 px beam, not his block
     text(b, ghost, gx + 3, ly, PAL.N6);
     checkbox(b, tx + LABEL_COL + textWidth(t.extra[1]) + 12, ly, PAL.C6, true, PAL.C8);
-    text(b, '>', tx, lineY(n + 1) + dy, PAL.C4);
-  } else {
-    text(b, '>', tx, lineY(n) + dy, PAL.C5);
-    rect(tx + 10, lineY(n) + dy - 1, 4, 8, b.ink(PAL.C7));
+  }
+  // the legal block: the same words and rows as Ep1's, in paper
+  rect(tx, L.rule2Y, right - tx, 1, b.ink(PAL.C3));
+  LEGAL_ROWS.forEach((s, j) => text(b, s, tx, L.legal[j], PAL.P1));
+  if (t.extra) text(b, '>', tx, L.promptY, PAL.C4);
+  else {
+    text(b, '>', tx, L.promptY, PAL.C5);
+    rect(tx + 10, L.promptY - 1, 4, 8, b.ink(PAL.C7));
   }
 };
 
@@ -132,13 +136,12 @@ const drawKeys = (b: Buf) => {
 export const variantScene = (which: VariantId): Pick<PixelSceneProps, 'draw' | 'after' | 'bg'> => ({
   bg: PAL.N0,
   draw: (b) => {
-    if (which === 'ep1') return void drawInsert1(b, 120, EP1);
+    if (which === 'ep1') return void drawInsert1(b, 200, EP1);
     if (which === 'ep10-keys') return void drawKeys(b);
     const t = which === 'ep6' ? EP6 : EP10;
     drawSkinnedLog(b, t, which);
     drawBezel(b);
   },
-  // the band is lit through the whole insert in every skin (the keyboard insert included: it cuts in while the log types)
-  after: (ui) => { drawBand(ui); drawSlug(ui); },
+  after: (ui) => { drawSlug(ui); },
 });
 export {W};

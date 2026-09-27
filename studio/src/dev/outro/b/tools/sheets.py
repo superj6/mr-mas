@@ -4,9 +4,9 @@
 
 Needs, in $SC: dec/%04d.png (every frame of out/lookdev/outro/b/outro-b-ep1-1080p.mp4, decoded by render.sh),
 stills/ (the outro-b-stills composition as PNGs: 0 = Ep10 o40, 1 = Ep10 o140, 2 = Ep6 o140, 3 = Ep6 o172), native/
-(the Node preview's exact 480x270 frames for the QA frames: f12, o50, o134, o176) and check-ep1.json (the preview's
+(the Node preview's exact 480x270 frames for the QA frames: f12, o50, o128, o220) and check-ep1.json (the preview's
 text checks).
-Writes to out/lookdev/outro/b/: the three key stills, the keyframes sheet, the Ep10 still, the variants sheet, and
+Writes to out/lookdev/outro/b/: the four key stills, the keyframes sheet, the Ep10 still, the variants sheet, and
 qa/ (full-size and 480x270 crops of every text line, and qa.json).
 """
 import json
@@ -23,6 +23,8 @@ QA = os.path.join(OUT, 'qa')
 os.makedirs(QA, exist_ok=True)
 PRE = 24
 FPS = 24
+OUT_F = 240          # Ep1's outro (3 bars + the stinger bar); a plain week is 180
+TOTAL = PRE + OUT_F + 18
 FONT = '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
 FONTB = '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'
 MONO = '/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf'
@@ -67,8 +69,9 @@ def label_for(f):
 # longer sit on the outro's own frames (pass 4).
 KEYS = [
     (PRE + 42, 'key1-scan', 'the scan: tokens in the cone, legible type behind it'),
-    (PRE + 134, 'key2-verdict', 'the toast, full: the credits, the AI disclosure, the verdict on the viewer'),
-    (PRE + 176, 'key3-moth', 'Ep1: the moth settled beside the final period; the Orb looks down at it (the last beat)'),
+    (PRE + 128, 'key2-verdict', 'the toast, full (the show, the credits, the AI disclosure) and the verdict, which lights the lens'),
+    (PRE + 158, 'key3-lamp', 'Ep1: the moth loops the lit lens, going cyan in its light'),
+    (PRE + 220, 'key4-moth', 'Ep1: the moth at rest beside the final period, rim-lit; the Orb puts its beam on it (the last beat)'),
 ]
 FLAGS = 'LOOKDEV · on-screen legal text: DRAFT, legal review pending · (creator) = the credit line, TBD'
 for f, name, cap in KEYS:
@@ -82,11 +85,11 @@ for f, name, cap in KEYS:
 # ================================================================== the keyframes sheet (6 numbered frames + the bars)
 SHEET = [
     (12, 'STAND-IN · the episode\'s last frame (cold-open MEDIUM, 1 s)'),
-    (PRE + 10, '1.1 · cut to black; the band lights; the Orb is up, posts its scan target'),
+    (PRE + 10, '1.1 · cut to black; the band lights; the Orb is up, posts the show + the file'),
     (PRE + 42, '1.3 · the scan: tokens in the cone; behind it the credits stay as type'),
-    (PRE + 134, '3.1+ · chips landed on 2.1, 2.2; the verdict (chime at 3.1); F5 at 3.2'),
-    (PRE + 148, 'Ep1 · the moth drops in, bumbles across the lit lens (stinger, inside)'),
-    (PRE + 176, 'Ep1 · it settles beside the final period; the Orb looks down at it. Cut.'),
+    (PRE + 128, '3.1 · the verdict (chime) lights the lens: the lamp; chips landed on 2.1, 2.2'),
+    (PRE + 158, 'Ep1 · the moth, drawn to the lamp, loops the lens (cyan in its light); bump on 3.4'),
+    (PRE + 220, 'Ep1 · bar 4: at rest by the final period, rim-lit; the Orb\'s beam on it. Cut o240.'),
 ]
 TW, TH = 624, 351
 PAD = 16
@@ -99,8 +102,8 @@ H = HEAD + 2 * (TH + CAP + PAD) + GRID_H + READ_H + PAD
 sheet = Image.new('RGB', (W, H), BG)
 d = ImageDraw.Draw(sheet)
 d.text((PAD, 14), 'MR. MAS · OUTRO PROPOSAL B · "the Orb\'s verdict" · Ep1 mock-up', font=font(24, True), fill=INK)
-d.text((PAD, 42), '180 f / 7.5 s (3 bars at 96), Ep1\'s moth stinger inside bar 3 · file 222 f: 1 s stand-in + outro + 0.75 s black · frames from the encoded mp4 · '
-       'a visual outline, not a final · LEGAL TEXT: DRAFT, review pending', font=font(14), fill=DIM)
+d.text((PAD, 42), 'a plain week 180 f / 7.5 s (3 bars at 96); Ep1 240 f / 10 s (its moth stinger adds a bar, the Orb on screen) · file 282 f: 1 s stand-in + outro + 0.75 s black · '
+       'frames from the encoded mp4 · a visual outline, not a final · LEGAL TEXT: DRAFT', font=font(14), fill=DIM)
 for k, (f, cap) in enumerate(SHEET):
     x = PAD + (k % 3) * (TW + PAD)
     y = HEAD + (k // 3) * (TH + CAP + PAD)
@@ -112,23 +115,24 @@ for k, (f, cap) in enumerate(SHEET):
 # the bar grid: stand-in | bar 1 | bar 2 | bar 3 | stinger (1.5 bars), with the events
 gy = HEAD + 2 * (TH + CAP + PAD) + 8
 gx0, gx1 = PAD, W - PAD
-total = 222
+total = TOTAL
 px = lambda f: gx0 + (gx1 - gx0) * f / total  # noqa: E731
 spans = [(0, 24, 'stand-in', (60, 64, 76)), (24, 84, 'bar 1 · the Orb wakes, the scan', (18, 60, 70)),
-         (84, 144, 'bar 2 · the knee whole, the toast', (20, 90, 96)), (144, 204, 'bar 3 · the verdict · Ep1: the moth', (24, 110, 112)),
-         (204, 222, 'black', (40, 40, 46))]
+         (84, 144, 'bar 2 · the knee whole, the toast', (20, 90, 96)), (144, 204, 'bar 3 · verdict, lamp · Ep1: moth', (24, 110, 112)),
+         (204, 264, 'bar 4 · Ep1 only: the stinger bar', (122, 81, 57)), (264, 282, 'black', (40, 40, 46))]
 for a, b, name, col in spans:
     d.rectangle([px(a), gy, px(b) - 2, gy + 34], fill=col)
     d.text((px(a) + 6, gy + 9), name, font=font(13, True), fill=INK)
-d.rectangle([px(24), gy + 40, px(204) - 2, gy + 54], fill=(207, 198, 168))
-d.text((px(24) + 6, gy + 40), 'the band: terms line + pointer, never moves, never covered · o0-o179 = 7.5 s', font=font(11, True), fill=(20, 20, 20))
-d.rectangle([px(33), gy + 60, px(204) - 2, gy + 74], fill=(63, 202, 203))
-d.text((px(33) + 6, gy + 60), 'the toast (credits + AI disclosure + verdict): o9-o179', font=font(11, True), fill=(10, 20, 24))
-d.rectangle([px(162), gy + 60, px(204) - 2, gy + 74], fill=(122, 81, 57))
-d.text((px(162) + 4, gy + 60), 'Ep1 moth o138-179', font=font(11, True), fill=(240, 232, 207))
+d.rectangle([px(24), gy + 40, px(264) - 2, gy + 54], fill=(207, 198, 168))
+d.text((px(24) + 6, gy + 40), 'the band: terms line + pointer, never moves, never covered · Ep1 o0-o239 = 10 s (a plain week o0-o179 = 7.5 s)', font=font(11, True), fill=(20, 20, 20))
+d.rectangle([px(33), gy + 60, px(264) - 2, gy + 74], fill=(63, 202, 203))
+d.text((px(33) + 6, gy + 60), 'the toast (MR. MAS + the file, credits + AI disclosure, verdict): o9 to the cut', font=font(11, True), fill=(10, 20, 24))
+d.rectangle([px(154), gy + 60, px(264) - 2, gy + 74], fill=(122, 81, 57))
+d.text((px(154) + 4, gy + 60), 'Ep1 moth o130-o239 (lands o195)', font=font(11, True), fill=(240, 232, 207))
 ticks = [(24, 'o0 cut · F4 · drone'), (33, 'o9 header posts'), (39, 'o15 servo'), (54, 'o30-54 scan'), (84, 'o60 chip 1'),
-         (99, 'o75 chip 2'), (114, 'o90-112 iris narrows'), (144, 'o120 verdict + chime C7'), (159, 'o135 F5->C6'),
-         (162, 'o138 moth in'), (174, 'o150 iris after it'), (184, 'o160 lands'), (189, 'o165 squint'), (204, 'o180 cut')]
+         (99, 'o75 chip 2'), (114, 'o90-112 iris narrows'), (144, 'o120 verdict · chime · lamp'), (154, 'o130 moth in'),
+         (159, 'o135 F5->C6'), (189, 'o165 bump · flinch'), (195, 'o171 iris after it'), (219, 'o195 lands'),
+         (234, 'o210 beam'), (246, 'o222 twitch'), (264, 'o240 cut')]
 for k, (f, t) in enumerate(ticks):
     x = px(f)
     r = k % 4
@@ -149,13 +153,13 @@ t0 = 0.0
 for k, r in enumerate(chk1['toast']):
     yy = ry + 20 + k * 17
     a0 = PRE + r['legibleFrom']
-    d.rectangle([px(a0), yy, px(PRE + 180) - 2, yy + 12], fill=(40, 96, 102))
+    d.rectangle([px(a0), yy, px(PRE + OUT_F) - 2, yy + 12], fill=(40, 96, 102))
     st = max(t0, r['legibleFrom'])
     d.rectangle([px(PRE + st), yy + 3, px(PRE + fin[k]), yy + 9], fill=(12, 30, 34))
     t0 = fin[k]
     lab = r['line']
     d.text((px(a0) - 8 - d.textlength(lab, font=font(11, mono=True)), yy - 1), lab, font=font(11, mono=True), fill=DIM)
-    d.text((px(PRE + 180) + 6, yy - 1), f"{r['chars']} ch · {r['seconds']} s", font=font(11, mono=True), fill=DIM)
+    d.text((px(PRE + OUT_F) + 6, yy - 1), f"{r['chars']} ch · {r['seconds']} s", font=font(11, mono=True), fill=DIM)
 io = {x['cps']: x for x in chk1['toastInOrder']}
 wf = chk1['wholeFrame']
 d.text((PAD, ry + 20 + 4 * 17 + 2),
@@ -169,9 +173,8 @@ sheet.save(os.path.join(OUT, 'outro-b-keyframes.png'))
 st = [Image.open(os.path.join(SC, 'stills', n)).convert('RGB') for n in sorted(os.listdir(os.path.join(SC, 'stills'))) if n.endswith('.png')]
 assert len(st) == 4, os.listdir(os.path.join(SC, 'stills'))
 ep10_scan, ep10_verdict, ep6_verdict, ep6_end = st
-ep1_verdict = dec(PRE + 134)
-ep1_end = dec(PRE + 176)
-ep1_scan = dec(PRE + 40)
+ep1_verdict = dec(PRE + 128)
+ep1_end = dec(PRE + 220)
 # the extra still (1920x1080): how Ep10 differs, two half-size frames of the Ep10 state + the differences
 e = Image.new('RGB', (1920, 1080), BG)
 de = ImageDraw.Draw(e)
@@ -206,12 +209,12 @@ dv = ImageDraw.Draw(V)
 dv.text((PAD, 14), 'Outro B · the ladder: the verdict on the viewer drifts; the terms line never does', font=font(24, True), fill=INK)
 dv.text((PAD, 42), 'Ep1 from the encoded mp4; Ep6 and Ep10 from the outro-b-stills composition (1080p renders).', font=font(14), fill=DIM)
 cells = [
-    (ep1_verdict, 'Ep1 · o134', 'viewer: human ✓ · score F5 -> C6 (Eps 1-5)'),
+    (ep1_verdict, 'Ep1 · o128', 'viewer: human ✓ · the lens lit · score F5 -> C6 (Eps 1-5)'),
     (ep6_verdict, 'Ep6 · o140', 'viewer: human (probably) · F -> C with a Db grace (Eps 6, 8)'),
     (ep10_verdict, 'Ep10 · o140', 'viewer: — (returns nothing) · F alone'),
     (ep10_scan, 'Ep10 · o40', 'the chips are posted before the scan reaches them: it already knew'),
-    (ep6_end, 'a plain week · o172', 'no stinger: the iris relaxes back to its toast (3.3), glint (3.4), cut'),
-    (ep1_end, 'Ep1 · o176', 'the moth stinger, inside: the iris went down after it (3.3) and narrows (3.4)'),
+    (ep6_end, 'a plain week · o172', 'no stinger: the lamp out, the iris back to its toast (3.3), glint (3.4), cut o180'),
+    (ep1_end, 'Ep1 · o220', 'the stinger bar: the moth at rest, rim-lit, under the Orb\'s beam; cut o240'),
 ]
 for k, (im, h, t) in enumerate(cells):
     x = PAD + (k % 3) * (VW + PAD)
@@ -224,7 +227,7 @@ ladder = ['The rest of the season (OUTRO-PROPOSALS §3, B\'s Ep1 wording updated
           'Ep1-5 viewer: human ✓   ·   Ep6, 8 viewer: human (probably)   ·   Ep7 no chime, no verdict: the toast stays open, the cursor blinking (THE HUG)',
           'Ep9 human (probably), and the toast replays its lines unprompted; verdict C -> F   ·   Ep10 viewer: —   ·   Ep11 human… probably?  F -> C, late',
           'Ep12 HUMAN: VERIFIED. SIDE: UNCLEAR.  the fifth held, no third; then the Orb reads the long credits over the song',
-          'Ep1\'s stinger (the moth) sits INSIDE bar 3, the Orb still on screen, and replaces the plain week\'s glance. Ep4, 5, 12 stingers: not placed yet.']
+          'Ep1\'s stinger (the moth) starts inside bar 3 and adds one bar, the Orb on screen throughout (10 s; a plain week 7.5 s). Ep4, 5, 12: not placed yet.']
 for k, line in enumerate(ladder):
     dv.text((PAD, y + k * 30), line, font=font(16, bold=(k == 0), mono=(k > 0)), fill=INK if k else ACC)
 V.save(os.path.join(OUT, 'outro-b-variants.png'))
@@ -232,12 +235,12 @@ V.save(os.path.join(OUT, 'outro-b-variants.png'))
 # ================================================================== readability QA, from the encoded mp4
 chk = json.load(open(os.path.join(SC, 'check-ep1.json')))
 # native text boxes (x0, y0, x1, y1), from the scene layout (scene.ts TOAST, art.ts band)
-boxes = [(t['line'], tuple(t['box']), PRE + 134) for t in chk['toast']]
+boxes = [(t['line'], tuple(t['box']), PRE + 128) for t in chk['toast']]
 boxes.append((chk['toast'][1]['line'] + '  (o50: resolved scan type, before its chip)', tuple(chk['toast'][1]['box']), PRE + 50))
-boxes.append(('TERMS', (43, 218, 436, 229), PRE + 134))
-boxes.append(('POINTER', (146, 235, 334, 246), PRE + 134))
+boxes.append(('TERMS', (43, 218, 436, 229), PRE + 128))
+boxes.append(('POINTER', (146, 235, 334, 246), PRE + 128))
 mb = chk['mothBox']['box']
-boxes.append(('TERMS end + the moth at rest (o176)', (300, min(214, mb[1] - 2), min(479, mb[2] + 3), max(229, mb[3] + 2)), PRE + 176))
+boxes.append(('TERMS end + the moth at rest, lit (o220)', (300, min(214, mb[1] - 2), min(479, mb[2] + 3), max(229, mb[3] + 2)), PRE + 220))
 boxes.append(('stand-in label (lookdev)', (2, 2, 368, 27), 12))
 report = dict(source='out/lookdev/outro/b/outro-b-ep1-1080p.mp4 (decoded)', method=(
     'Each text region of the ENCODED frame, box-reduced to 480x270, is compared with the exact native frame from the '
@@ -294,7 +297,7 @@ def stack(strips, scale, path):
 
 stack(strips_full, 1, os.path.join(QA, 'text-crops-full-1080p.png'))
 stack(strips_small, 3, os.path.join(QA, 'text-crops-480x270-x3.png'))
-for f in (PRE + 10, PRE + 42, PRE + 50, PRE + 100, PRE + 134, PRE + 148, PRE + 176):
+for f in (PRE + 10, PRE + 42, PRE + 50, PRE + 100, PRE + 128, PRE + 158, PRE + 186, PRE + 220):
     small(dec(f)).save(os.path.join(QA, f'frame-480x270-o{f - PRE}.png'))
 report['ok'] = bool(chk['ok'] and all(r['max_abs_err'] <= 24 and r['encoded_contrast'] >= 4.5 for r in report['regions'])
                     and chk['perLineOk'] and next(x for x in chk['toastInOrder'] if x['cps'] == 18)['ok'])

@@ -3,21 +3,22 @@
 // timeline.ts); the comments below use outro frames (o = file frame - 24).
 //
 //   f0-23      STAND-IN   the episode's last frame (Ep1's button isn't built): the cold open's dark-room MEDIUM, f56-62
-//   o0         cut to black on the downbeat. The band lights with the terms line and the pointer (held to o254).
+//   o0         cut to black on the downbeat. The band lights with the terms line and the pointer (held to the cut).
 //              The Orb, close, frame-right, steps up from black in 3 palette steps
-//   o9         lit: the toast's header posts the scan target; o12 its catch-light glints (the title's glint)
+//   o9         lit: the toast's header posts the show and the file (`MR. MAS · <file>`); o12 its catch-light glints
 //   o15-19     the iris swivels to the lens in 3 drawings (the intro bookend's gesture, f690-694)
 //   o30-54     the scan fan sweeps down across the toast. [GLYPH-MASKED] in the cone's leading half only (o31-52): the
 //              credits are tokens there; behind the cone's axis they have resolved into plain type, and they STAY as
-//              type after it has passed (legible from about o42), so reading can start before the knee
+//              type after it has passed (legible from about o47), so reading can start before the knee
 //   o60, o75   the two credit chips land around that type on the knee's flat line (2.1, 2.2), straight
 //   o90-112    the leap: the iris narrows one step per note (G Ab C F), looking harder at the viewer
-//   o120       the verdict on the viewer, `viewer: human ✓` (the chime, C7); o135 the score's F5 -> C6
-//   o150-154   a plain week: the iris relaxes back to its toast (3 drawings); o165 glint
-//   Ep1 only, the moth stinger INSIDE bar 3 (the Orb still on screen): o138 the moth drops in from the top of frame,
-//              bumbles across the Orb's lit lens, o150 the iris swivels down after it, o160 it settles beside the terms
-//              line's final period (beside the words, never on one) and folds its wings; o165 the iris narrows on it
-//   o179       the last frame: the cut to black takes everything together; the file holds 18 f of black after it
+//   o120       the verdict on the viewer, `viewer: human ✓` (the chime, C7), and the lens LIGHTS (the lamp); o135 F5 -> C6
+//   o150-154   a plain week: the lamp goes out as the iris relaxes back to its toast (3 drawings); o165 glint; cut o179
+//   Ep1 only, the moth stinger, bars 3-4 (the Orb on screen throughout; the outro runs to o239): o130 the moth drops in,
+//              drawn to the lit lens; circles it (cyan as it nears it); o165 bumps the glass, tumbles; the iris flinches
+//              shut, then swivels down after it; o195 it settles beside the terms line's final period (never on a
+//              word) and folds its wings; o210 the Orb narrows on it and lays a thin beam of its light on it; o222 a
+//              wing twitch; o239 the last frame: the cut to black takes everything together
 import {Buf, W, H, line} from '../../../shared/pixel/px';
 import {PAL} from '../../../shared/pixel/palette';
 import {Mask} from '../../../shared/pixel/mask';
@@ -25,8 +26,8 @@ import type {GlyphStyle} from '../../../shared/pixel/glyph';
 import type {PixelSceneProps} from '../../../shared/pixel/compose';
 import {orbBob, orbLook} from '../../../shared/pixel/cast/orb-medium';
 import {drawMedium} from '../../mcoldopen/medium';
-import {T, PRE, EPS, EpId, EpData, oOf, toastLines, linePops} from './timeline';
-import {BAND, drawBand, drawStandinLabel, drawChip, chipW, CHIP_H, tx, drawOrbClose, drawGlint, drawMoth, MOTH_REST, ORB, LOOKS, LOOK_IDLE, MothPose} from './art';
+import {T, PRE, EPS, EpId, EpData, oOf, toastLines, linePops, lastO} from './timeline';
+import {BAND, drawBand, drawStandinLabel, drawChip, chipW, CHIP_H, tx, drawOrbClose, drawLensGlow, lensAt, drawGlint, drawMoth, MOTH_REST, ORB, LOOKS, LOOK_IDLE, MothPose, TERMS_AT, PERIOD} from './art';
 
 export type SceneDef = Pick<PixelSceneProps, 'draw' | 'after' | 'switch' | 'bg'>;
 
@@ -41,26 +42,39 @@ export const typeAt = (i: number): [number, number] => [TOAST.x + 6, TOAST.y[i] 
 export const INK_RESOLVED = PAL.C6;
 
 // ================================================================== the Orb over time
-/** Ep1: where the iris goes after the moth (3.3): down at the band, where it will land (the servo's 3 drawings) */
+/** Ep1: where the iris goes after the moth (o171): down at the band, where it lands (the servo's 3 drawings) */
 export const LOOK_MOTH: [number, number] = orbLook(ORB.cx, ORB.cy, MOTH_REST[0], MOTH_REST[1], 110);
 const lookAt = (o: number, moth: boolean): [number, number] => {
   if (o < T.iris[0]) return LOOK_IDLE;
   if (o < T.iris[1]) return LOOKS[1];
   if (o < T.iris[2]) return LOOKS[2];
-  if (o < T.idle[0]) return LOOKS[3];
   if (moth) {
-    // from the lens to the moth: 3 drawings on 2s (like the intro's servo), then held on it to the cut
-    const k = Math.min(3, Math.floor((o - T.idle[0]) / 2) + 1);
+    // the lamp stays on the viewer while the moth circles it; after the bump, the lens to the moth in 3 drawings on
+    // 2s (like the intro's servo), then held on it to the cut
+    if (o < T.swivel) return LOOKS[3];
+    const k = Math.min(3, Math.floor((o - T.swivel) / 2) + 1);
     return [LOOK_MOTH[0] * k / 3, LOOK_MOTH[1] * k / 3];
   }
+  if (o < T.idle[0]) return LOOKS[3];
   if (o < T.idle[1]) return LOOKS[2];
   if (o < T.idle[2]) return LOOKS[1];
   return LOOK_IDLE;
 };
 const fadeStep = (o: number) => (o < T.fade[1] ? -3 : o < T.fade[2] ? -2 : o < T.fade[3] ? -1 : 0);
 const scanning = (o: number) => o >= T.cone[0] && o <= T.cone[1];
+/** the lens is lit: during the scan, and from the verdict on (a plain week puts it out with the glance back at 3.3;
+ *  Ep1 keeps it on to the cut: the moth's lamp) */
+export const lensLit = (o: number, moth: boolean) => scanning(o) || (o >= T.lamp && (moth || o < T.idle[0]));
+/** how strongly the lit lens glows into its glass: a 2-frame flare when the verdict lights it, a dip while the iris
+ *  is flinched shut */
+const glowAt = (o: number, moth: boolean) => {
+  if (!lensLit(o, moth)) return 0;
+  if (o === T.lamp || o === T.lamp + 1) return 1.5;
+  if (moth && o >= T.flinch[0] && o < T.flinch[1]) return 0.45;
+  return 1;
+};
 /** the aperture: idle 0.5, wide while scanning, then one held step narrower per note of the leap, back at the verdict;
- *  Ep1: one step narrower again on the moth at 3.4 */
+ *  Ep1: snapped shut when the moth bumps the glass (the flinch), then one step narrower on it at 4.3 */
 const THINK_AP = [0.38, 0.28, 0.19, 0.1];
 const apertureAt = (o: number, moth: boolean) => {
   if (scanning(o)) return 1;
@@ -69,7 +83,8 @@ const apertureAt = (o: number, moth: boolean) => {
     while (k < T.think.length - 1 && o >= T.think[k + 1]) k++;
     return THINK_AP[k];
   }
-  if (moth && o >= T.squint) return THINK_AP[0];
+  if (moth && o >= T.flinch[0] && o < T.flinch[1]) return 0.03;
+  if (moth && o >= T.squint) return THINK_AP[1];
   return 0.5;
 };
 
@@ -119,24 +134,29 @@ const glyphStyle = (e: EpData): GlyphStyle => ({
 });
 
 // ================================================================== the moth's flight (whole pixels, on 2s)
-// Ep1, inside bar 3. In from the top of frame above the Orb, drawn to the brightest thing on screen: it bumbles across
-// the Orb's lit lens (o144-148), drops away below it, and comes down onto the band from ABOVE and to the RIGHT of the
-// terms line's end, so it never crosses a word of the terms line, the pointer or the toast. Positions are the sprite's
-// centre (art.ts drawMoth); they and the drawing hold for 2 frames.
+// Ep1, bars 3-4. In from the top of frame above the Orb, ten frames after the verdict lights the lens: it comes down
+// to the light, loops it once in front of the glass (going cyan as it nears it), bumps the lens at 3.4 and tumbles
+// (drawn upside down for 4 frames), then flutters down the right side and comes onto the band from ABOVE and to the
+// RIGHT of the terms line's end, so it never crosses a word of the terms line, the pointer or the toast. Positions
+// are the sprite's anchor (art.ts drawMoth); they and the drawing hold for 2 frames.
 export const MOTH_WAY: Array<[number, number, number]> = [
-  [T.mothIn, 452, -8], [T.mothIn + 4, 440, 30], [T.mothIn + 8, 412, 74], [T.mothIn + 10, 426, 92],
-  [T.mothIn + 12, 404, 110], [T.mothIn + 15, 428, 148], [T.mothIn + 18, 462, 182], [T.mothIn + 20, 454, 204],
-  [T.mothLand, MOTH_REST[0], MOTH_REST[1]],
+  [T.mothIn, 472, -12], [134, 462, 14], [138, 450, 38], [T.mothCircle, 436, 60],
+  [145, 414, 72], [148, 398, 84], [151, 396, 104], [154, 408, 118], [157, 428, 120], [160, 442, 106], [163, 434, 88],
+  [T.bump, 421, 97], [167, 428, 108], [169, 438, 118], [171, 448, 130], [175, 458, 148], [179, 453, 164],
+  [183, 463, 178], [187, 458, 194], [191, 452, 208], [T.mothLand, MOTH_REST[0], MOTH_REST[1]],
 ];
 const cr = (p0: number, p1: number, p2: number, p3: number, t: number) =>
   0.5 * (2 * p1 + (-p0 + p2) * t + (2 * p0 - 5 * p1 + 4 * p2 - p3) * t * t + (-p0 + 3 * p1 - 3 * p2 + p3) * t * t * t);
-export const mothFlight = (o: number): {pose: MothPose; x: number; y: number} | null => {
-  if (o < T.mothIn || o > T.out) return null;
+export const mothFlight = (o: number): {pose: MothPose; x: number; y: number; flip: boolean} | null => {
+  if (o < T.mothIn || o > T.outStinger) return null;
+  const at = (pose: MothPose) => ({pose, x: MOTH_REST[0], y: MOTH_REST[1], flip: false});
   if (o >= T.mothLand) {
-    if (o < T.mothFold[0]) return {pose: 'half', x: MOTH_REST[0], y: MOTH_REST[1]};
-    if (o < T.mothFold[1]) return {pose: 'open', x: MOTH_REST[0], y: MOTH_REST[1]};
-    if (o >= T.mothTwitch && o < T.mothTwitch + 2) return {pose: 'open', x: MOTH_REST[0], y: MOTH_REST[1]};
-    return {pose: 'rest', x: MOTH_REST[0], y: MOTH_REST[1]};
+    // touch down with the wings spread, one last beat, then folded; the twitch opens them for 2 frames
+    if (o < T.mothFold[0]) return at('open');
+    if (o < T.mothFold[0] + 2) return at('up');
+    if (o < T.mothFold[1]) return at('open');
+    if (o >= T.mothTwitch && o < T.mothTwitch + 2) return at('open');
+    return at('rest');
   }
   const k = o - ((o - T.mothIn) % 2); // position and drawing hold for 2 frames
   let i = 0;
@@ -147,8 +167,20 @@ export const mothFlight = (o: number): {pose: MothPose; x: number; y: number} | 
   const jit = (k - T.mothIn) / 2; // a moth's erratic 1 px wobble, deterministic
   const x = Math.round(cr(x0, x1, x2, x3, t) + [0, 1, 0, -1, 1, 0][jit % 6]);
   const y = Math.round(cr(y0, y1, y2, y3, t) + [0, -1, 1, 0, -1, 1, 0][jit % 7]);
-  return {pose: jit % 2 ? 'half' : 'open', x, y};
+  const tumble = k > T.bump && k < T.bump + 5;
+  return {pose: tumble ? 'up' : jit % 2 ? 'up' : 'open', x, y, flip: tumble};
 };
+
+// ================================================================== the Orb's beam on the moth (Ep1, 4.3 to the cut)
+/** the scan, once more, on a moth: a thin beam from the lens onto it. Opens in 3 drawings, holds to the cut.
+ *  [half-angle deg]; 0 = off */
+const beamHalfAt = (o: number) => (o < T.squint ? 0 : [1.5, 3, 4.5][Math.min(2, o - T.squint)]);
+/** the beam's reach past the moth's anchor (px) (its body: the pool of light the moth sits in), how far short of the
+ *  anchor its two dotted edge rays stop (above the antennae: running on, they crossed the lit antennae into an X), and
+ *  the text it must never touch (the terms line + the pointer) */
+const BEAM_PAST = 4;
+const RAY_SHORT = 10;
+const TERMS_RIGHT = PERIOD.x; // nothing of the beam lands at or left of the final period
 
 // ================================================================== the scene
 export const makeScene = (epId: EpId): SceneDef => {
@@ -158,9 +190,33 @@ export const makeScene = (epId: EpId): SceneDef => {
   const src = creditSource(e);
   const style = glyphStyle(e);
   // state handed from draw() to switch()/after() for the same frame (draw always runs first)
-  const st: {f: number; glyph: Mask | null; cy: number} = {f: -1, glyph: null, cy: ORB.cy};
+  const st: {f: number; glyph: Mask | null; cy: number; look: [number, number]} = {f: -1, glyph: null, cy: ORB.cy, look: LOOK_IDLE};
   // the scan's final axis: after the scan, everything above it has been read
   const DONE = fanAt(T.cone[1])[0];
+  const last = lastO(e);
+  /** Ep1's beam on the moth: [apex x, apex y, direction deg, half-angle deg, reach px] or null */
+  const beamAt = (o: number, cy: number, look: [number, number]) => {
+    const half = e.moth ? beamHalfAt(o) : 0;
+    if (!half) return null;
+    const [ax, ay] = lensAt(cy, look);
+    const dx = MOTH_REST[0] + 0.5 - ax, dy = MOTH_REST[1] + 0.5 - ay;
+    return {ax, ay, dir: (Math.atan2(dy, dx) * 180) / Math.PI, half, reach: Math.hypot(dx, dy) + BEAM_PAST};
+  };
+  /** the beam's body: every pixel inside it (off the Orb) one rung up its own ramp, above the band on the picture and
+   *  inside the band on the UI; never on the band's keylines, never at or left of the terms line's final period */
+  const beamBody = (b: {ax: number; ay: number; dir: number; half: number; reach: number}, put: (x: number, y: number) => void) => {
+    for (let y = Math.floor(b.ay); y <= Math.ceil(b.ay + b.reach); y++)
+      for (let x = Math.floor(b.ax - b.reach); x <= Math.ceil(b.ax + b.reach); x++) {
+        if (x < 0 || y < 0 || x >= W || y >= H) continue;
+        const d = Math.hypot(x + 0.5 - b.ax, y + 0.5 - b.ay);
+        if (d < 10 || d > b.reach) continue;
+        let rel = (Math.atan2(y + 0.5 - b.ay, x + 0.5 - b.ax) * 180) / Math.PI - b.dir;
+        if (rel > 180) rel -= 360; else if (rel < -180) rel += 360;
+        if (Math.abs(rel) > b.half) continue;
+        if (y >= BAND.y && (y < BAND.y + 3 || x <= TERMS_RIGHT + 1)) continue;
+        put(x, y);
+      }
+  };
 
   return {
     bg: PAL.N0,
@@ -168,11 +224,15 @@ export const makeScene = (epId: EpId): SceneDef => {
       st.f = f; st.glyph = null;
       if (f < PRE) { drawMedium(fb, 56 + (f % 7)); return; } // the stand-in: the cold open's f56-62 cycle
       const o = oOf(f);
-      if (o > T.out) return; // after the cut: black
+      if (o > last) return; // after the cut: black
       const cy = ORB.cy + orbBob(o);
-      st.cy = cy;
+      const look = lookAt(o, e.moth);
+      st.cy = cy; st.look = look;
       const orbMask = new Uint8Array(W * H);
-      drawOrbClose(fb, cy, lookAt(o, e.moth), apertureAt(o, e.moth), scanning(o), fadeStep(o), orbMask);
+      drawOrbClose(fb, cy, look, apertureAt(o, e.moth), lensLit(o, e.moth), fadeStep(o), orbMask);
+      // the lamp: the lit lens glows into its glass (the scan, and the verdict on)
+      const glow = glowAt(o, e.moth);
+      if (glow && fadeStep(o) === 0) drawLensGlow(fb, cy, look, orbMask, glow);
       // the resolved credits: every source pixel the scan's axis has already passed stays as type. (From o55 that is
       // all of them; while the cone is inside the toast it is the part above its axis.) The chips land over it later.
       if (o >= T.cone[0]) {
@@ -196,14 +256,18 @@ export const makeScene = (epId: EpId): SceneDef => {
         }
         if (glyphOn) st.glyph = lead;
       }
+      // Ep1: the beam on the moth, above the band (its part inside the band is drawn on the UI in after())
+      const bm = beamAt(o, cy, look);
+      if (bm) beamBody(bm, (x, y) => { const i = y * W + x; if (y < BAND.y && !orbMask[i] && fb.c[i] === PAL.N0) fb.c[i] = PAL.N1; });
     },
     switch: (f) => (st.f === f && st.glyph ? {type: 'glyph', mask: st.glyph, source: src, style} : null),
     after: (ui, f) => {
       if (f < PRE) { drawStandinLabel(ui); return; } // the lookdev label lives on the stand-in only (art.ts)
       const o = oOf(f);
-      if (o >= T.bandOut) return; // the cut: black to the end of the file
+      if (o > last) return; // the cut: black to the end of the file
       drawBand(ui);
       const cy = st.f === f ? st.cy : ORB.cy + orbBob(o);
+      const look = st.f === f ? st.look : lookAt(o, e.moth);
       // the scan fan's two edge rays: hot at the lens, cooling with distance, clipped at the band
       if (scanning(o)) {
         const [dir, half] = fanAt(o);
@@ -232,11 +296,29 @@ export const makeScene = (epId: EpId): SceneDef => {
       const g1 = o - T.glint1, g2 = e.moth ? -1 : o - T.glint2;
       if (g1 === 0 || g2 === 0) drawGlint(ui, cy, 2);
       else if (g1 === 1 || g2 === 1) drawGlint(ui, cy, 1);
-      // Ep1: the moth, last (over the Orb's face as it passes the lens; its path never meets a word)
-      if (e.moth) {
-        const m = mothFlight(o);
-        if (m) drawMoth(ui, m.pose, m.x, m.y);
+      if (!e.moth) return;
+      // Ep1: the beam on the moth: its body inside the band (band fill one rung up), then its two edge rays, dim and
+      // dotted, from the lens down to the moth (never at or left of the final period, never on the band's keylines)
+      const bm = beamAt(o, cy, look);
+      if (bm) {
+        beamBody(bm, (x, y) => { if (y >= BAND.y && ui.c[y * W + x] === PAL.N1) ui.c[y * W + x] = PAL.N2; });
+        for (const s of [-1, 1]) {
+          const a = ((bm.dir + s * bm.half) * Math.PI) / 180;
+          let k = 0;
+          const rl = bm.reach - BEAM_PAST - RAY_SHORT;
+          line(Math.floor(bm.ax), Math.floor(bm.ay), Math.round(bm.ax + Math.cos(a) * rl), Math.round(bm.ay + Math.sin(a) * rl), (x, y) => {
+            k++;
+            if (k < 12) return;
+            if (y >= BAND.y && (y < BAND.y + 3 || x <= TERMS_RIGHT + 1)) return;
+            if ((x + y) % 2) return; // dotted all the way (solid, they read as strings hanging from the Orb)
+            ui.set(x, y, k < 40 ? PAL.C5 : PAL.C3);
+          });
+        }
       }
+      // the moth, last (over the Orb's face as it passes the lens; its path never meets a word), lit by the lens
+      // whenever the lens is lit
+      const m = mothFlight(o);
+      if (m) drawMoth(ui, m.pose, m.x, m.y, lensLit(o, true) ? (() => { const [lx, ly] = lensAt(cy, look); return {x: lx, y: ly}; })() : null, m.flip);
     },
   };
 };

@@ -32,10 +32,10 @@ FFD = f'{STUDIO}/node_modules/@remotion/compositor-linux-x64-gnu'
 FONT = '/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf'
 FONT_B = '/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf'
 PRE, OUT, TOTAL = 24, 270, 294
-KEYS = [(-12, 'stand-in: the last frame (cold open f56)'), (12, 'F: the thread peels off the desk; the room dissolves'),
-        (75, 'F F F: MR. MAS (1-BIT); created by, written on the flat'), (128, 'G Ab: the leap in quarters; the title steps up'),
-        (200, 'the last F: MR. MAS beside the empty post box; the moth on it'), (256, 'the out: the caret alone, where it was')]
-STILLS = [(12, 'lift'), (128, 'leap'), (200, 'final')]
+KEYS = [(-12, 'stand-in: the last frame (cold open f56)'), (16, 'F: the monitor\'s own curve stretches out to fill the frame'),
+        (75, 'F F F: MR. MAS (1-BIT); created by, written on the flat'), (128, 'G Ab: the leap in quarters; the credits climb'),
+        (200, 'every credit up; two windows; the moth in the empty box'), (256, 'the out: the caret alone, where it was')]
+STILLS = [(16, 'lift'), (128, 'leap'), (200, 'final')]
 
 
 def ff(*args):
@@ -215,7 +215,7 @@ def main():
                crops=sum(a['crop'] for a in boxes['audit']), overlaps=len(boxes['overlaps']),
                moth_over_text=len(boxes['mothHits']),
                notes=['frames_full: frames the element is wholly on screen and settled (plates: above the band, not '
-                      'popping or folding; nothing moves after o153 but the caret and the moth)',
+                      'popping; nothing moves after o153 but the caret and the moth; no plate folds in d5)',
                       'need_frames: 16 chars/s + 0.5 s (the doc estimate); the title 2.5 s; the terms line 5 s',
                       'crops: frames any plate is on screen but not whole; overlaps: frames two text boxes touch; '
                       'moth_over_text: frames the moth\'s box touches a text box. All three must be 0',
@@ -233,12 +233,12 @@ def main():
 def keyframes_sheet(full, dst):
     tw, th, pad, cap = 640, 360, 24, 56
     W = 3 * tw + 4 * pad
-    strip_h = 340
+    strip_h = 390
     H = 96 + 2 * (th + cap) + pad * 3 + strip_h
     im = Image.new('RGB', (W, H), (14, 16, 24))
     d = ImageDraw.Draw(im)
     d.text((pad, 22), 'MR. MAS · OUTRO D · "the curve" · Ep1 lookdev mock-up (from the encoded mp4)', font=font(26, True), fill=(230, 226, 214))
-    d.text((pad, 58), '11.25 s = 4.5 bars at 96 BPM (270 f) after a 1 s stand-in · the intro is 30 s · d4 polish · LEGAL TEXT: DRAFT, review pending · temp music',
+    d.text((pad, 58), '11.25 s = 4.5 bars at 96 BPM (270 f) after a 1 s stand-in · the intro is 30 s · d5 polish · LEGAL TEXT: DRAFT, review pending · temp music',
            font=font(17), fill=(150, 158, 176))
     for i, (o, label) in enumerate(KEYS):
         cx, cy = pad + (i % 3) * (tw + pad), 96 + (i // 3) * (th + cap)
@@ -253,18 +253,19 @@ def keyframes_sheet(full, dst):
     x0, x1 = pad + 150, W - pad - 30
     s = (x1 - x0) / 720.0
     rows = [('intro 30 s', [(0, 720, 'the intro (12 bars)', (70, 80, 110))]),
-            ('D 11.25 s', [(0, 30, 'lift', (40, 90, 100)), (30, 105, 'title + flat (F F F)', (30, 70, 90)),
+            ('D 11.25 s', [(0, 24, 'lift', (40, 90, 100)), (24, 105, 'title + flat (F F F)', (30, 70, 90)),
                            (105, 150, 'leap', (50, 110, 120)), (150, 240, 'final frame', (44, 84, 104)), (240, 270, '', (20, 30, 40))]),
-            ('terms + pointer', [(18, 240, 'up o18-239, 9.2 s lit, never moves', (140, 132, 108))]),
-            ('MR. MAS + file', [(30, 240, 'anchored o30-239: 1-BIT > WEB16 > BASE', (150, 120, 60))]),
-            ('credit plates', [(60, 166, 'flat 2 (fold)', (90, 96, 130)), (105, 240, 'leap 3 + post box', (70, 76, 120))]),
+            ('terms + pointer', [(18, 240, 'up o18-239, 9.2 s lit, never moves; out with the frame', (140, 132, 108))]),
+            ('MR. MAS + file', [(30, 150, '1-BIT plate', (150, 120, 60)), (150, 240, 'the show\'s window', (120, 96, 50))]),
+            ('human credits', [(60, 240, 'created by (o60), written (o90): held to the out', (90, 96, 130))]),
+            ('craft + AI', [(105, 240, 'picture · music, voices, AI tools', (70, 76, 120))]),
             ('knee (whole, once)', [(0, 105, 'F  F  F  F (halves)', (34, 167, 173)), (105, 165, 'G Ab C F', (24, 140, 150))]),
-            ('moth (Ep1 stinger)', [(135, 180, 'in', (60, 70, 90)), (180, 240, 'on the post box', (60, 70, 90))])]
+            ('moth (Ep1 stinger)', [(153, 180, 'in', (60, 70, 90)), (180, 240, 'in the post box', (60, 70, 90))])]
     # the bar grid first (2.5 s a bar), so the segment labels sit on top of it
     for bar in range(0, 13):
         xx = x0 + bar * 60 * s
-        d.line([xx, y0 - 6, xx, y0 + 7 * 40 - 8], fill=(60, 66, 90), width=1)
-        d.text((xx + 3, y0 + 7 * 40 - 4), f'{bar * 2.5:g}s', font=font(12), fill=(120, 128, 150))
+        d.line([xx, y0 - 6, xx, y0 + len(rows) * 40 - 8], fill=(60, 66, 90), width=1)
+        d.text((xx + 3, y0 + len(rows) * 40 - 4), f'{bar * 2.5:g}s', font=font(12), fill=(120, 128, 150))
     for r, (name, segs) in enumerate(rows):
         yy = y0 + r * 40
         d.text((pad, yy + 8), name, font=font(15, True), fill=(200, 196, 184))
@@ -283,7 +284,7 @@ def variants_sheet(S, dst):
     d.text((pad, 22), 'OUTRO D · per-episode states (remotion stills, 1080p, scaled)', font=font(26, True), fill=(230, 226, 214))
     d.text((pad, 58), 'The terms line never changes. What changes: the file, the dot, the palette floor, the post box, who leads.',
            font=font(17), fill=(150, 158, 176))
-    cells = [('var-ep1-o200.png', 'Ep1 o200 (reference, the final frame)', 'title 1-BIT > EARLY-WEB16 > BASE; plates 1-BIT flat, EARLY-WEB16 leap; the post box; dot at 0.55; the moth'),
+    cells = [('var-ep1-o200.png', 'Ep1 o200 (reference, the final frame)', 'title 1-BIT > the show\'s window (o150); human credits 1-BIT (held), leap EARLY-WEB16; dot 0.55; the moth'),
              ('var-ep7-o200.png', 'Ep7 o200', 'floor BASE; the post box holds the month\'s machine render (1080p SVG filler: the Orb); dot at 0.85'),
              ('var-ep10-o100.png', 'Ep10 o100 (mid-flat)', 'the machine leads: the thread is drawn to the top from the start; everything a beat early'),
              ('var-ep10-o200.png', 'Ep10 o200', '`you are ^` off the top of the chart; the post box: the machine\'s own smooth render of the curve')]

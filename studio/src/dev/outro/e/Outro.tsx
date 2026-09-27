@@ -5,7 +5,7 @@ import {PixelScene} from '../../../shared/pixel/PixelScene';
 import {PAL} from '../../../shared/pixel/palette';
 import {drawMockup, drawVariant, drawEndState} from './scene';
 
-/** the motion mock-up: 1 s stand-in + the 180-frame outro (+ in Ep1 the moth, to o199); `sting` false = a plain week */
+/** the motion mock-up: 1 s stand-in + the 180-frame outro (+ in Ep1 the moth, to o195); `sting` false = a plain week */
 export const OutroE: React.FC<{slug?: boolean; sting?: boolean}> = ({slug = true, sting = true}) => (
   <PixelScene draw={(fb, f) => drawMockup(fb, f, {slug, sting})} bg={PAL.N0} />
 );

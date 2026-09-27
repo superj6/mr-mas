@@ -19,17 +19,18 @@ FONT = '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
 FONT_B = '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'
 BG, INK, DIM, HOT = (12, 13, 20), (226, 222, 206), (140, 150, 180), (230, 90, 100)
 
-# the three key stills (outro frames) and the six keyframes (POLISH PASS: the 3-bar outro, the moth on 4.1)
-KEY = [(64, '1-file', 'o64 · 2.1  the file at its end: the credits block lit, the caret on; the terms line on the desktop'),
+# the three key stills (outro frames) and the six keyframes (POLISH PASS 2: no sweep, no loop cursor; the moth
+# lands on 3.4 (o165) and the frame is still from there to the end, o195)
+KEY = [(64, '1-file', 'o64 · 2.1  the file at its end, the credits block whole from the cut, the caret on; the terms line on the desktop'),
        (145, '2-close', 'o145 · 3.2  his pointer on the close box (hover); the click lands on 3.3 (o150)'),
-       (199, '3-end', 'o199 · Ep1  the file is gone; the loop cursor; the moth landed beside the final period')]
+       (195, '3-end', 'o195 · Ep1 end  the file is gone; the moth landed beside the final period on 3.4 (o165), still since')]
 SHEET = [(-12, 'm12 · stand-in', 'the episode\'s last frame (the cold open\'s dark-room MEDIUM), labelled as a stand-in'),
-         (30, 'o30 · 1.3 · the build', 'cut to the file on 1.1; the knee lights the credits block a line a note (5 of 8 lit)'),
-         (100, 'o100 · 2.3 · the hold', 'the block whole since o55, held for reading; the caret blinks on the beat'),
-         (145, 'o145 · 3.2 · hover', 'his pointer on the close box; it set off at o128, 3 s after the block was whole'),
-         (153, 'o153 · 3.3 · click', 'the line (drawing 2 of 4) closes toward the loop cursor; the moth comes in with the light'),
-         (199, 'o199 · 4.1+ · Ep1 end', 'the moth landed on 4.1 beside the final period, wings folded; the loop cursor blinks')]
-VARIANTS = [('ep1', 'Ep1 · ep1.0_research_preview.md', 'raw markdown; the credits are a --- front-matter block; his pointer clicks the close box'),
+         (30, 'o30 · 1.3 · the file', 'hard cut on 1.1; the credits block whole from the cut, the knee under it; the caret blinks on the beat'),
+         (145, 'o145 · 3.2 · hover', 'his pointer on the close box; it set off at o128, 5.3 s after the cut'),
+         (153, 'o153 · 3.3 · click', 'the window closes to its own centre (drawing 2 of 4, the line); the moth comes in with the click'),
+         (158, 'o158 · the light is out', 'nothing left on the desktop but the terms line; the moth turns down to it'),
+         (195, 'o195 · 4.2 · Ep1 end', 'landed beside the final period on 3.4 (o165); nothing moves for the last 1.29 s')]
+VARIANTS = [('ep1', 'Ep1 · ep1.0_research_preview.md', 'raw markdown in a window sized to the file; the credits are a --- front-matter block; his pointer clicks the close box'),
             ('ep3', 'Ep3 · ep1.2_strawberry.jpg', 'an image viewer in 8x8 JPEG blocks; the credits are the EXIF panel, and the AI disclosure is the Software field'),
             ('ep10', 'Ep10 · ep1.9_pace.yaml', 'nobody\'s pointer: the machine types the credits: block itself, the values already in place before their keys; the close box lights on its own')]
 
@@ -99,8 +100,8 @@ def main(out_dir, frames_dir):
     # 2. the keyframe sheet (6 frames with numbers)
     tiles = [(fr(o), cap, sc) for o, cap, sc in SHEET]
     labelled(tiles, 3, 640, 'MR. MAS · outro proposal E · "file closed" · Ep1 · keyframes',
-             '7.5 s outro (o0-o179); Ep1\'s moth rides the close and lands on 4.1 (o180), end o199 = 8.33 s; after 1 s '
-             'of stand-in · 96 BPM, 60 frames a bar · from the encoded mp4', cap_h=58).save(os.path.join(out_dir, 'outro-e-keyframes.png'))
+             '7.5 s outro (o0-o179); Ep1\'s moth comes in with the click, lands on 3.4 (o165), still to o195 = 8.17 s; '
+             'after 1 s of stand-in · 96 BPM, 60 frames a bar · from the encoded mp4', cap_h=58).save(os.path.join(out_dir, 'outro-e-keyframes.png'))
 
     # 3. the variants sheet (the file-type ladder), 2x native per tile (exact pixels)
     vt = []

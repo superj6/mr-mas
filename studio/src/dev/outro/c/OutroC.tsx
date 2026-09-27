@@ -1,5 +1,5 @@
-// MR. MAS — outro C: the Remotion hosts. `outro-c-ep1` is the motion mock-up (1 s stand-in + the 7.5 s outro);
-// `outro-c-stills` holds one frame per variant (0 = Ep1 at o112, 1 = Ep4, 2 = Ep10).
+// MR. MAS — outro C: the Remotion hosts. `outro-c-ep1` is the motion mock-up (1 s stand-in + the 8.0 s outro);
+// `outro-c-stills` holds one frame per variant (0 = Ep1 at o105, 1 = Ep4, 2 = Ep10).
 import React from 'react';
 import {PixelScene} from '../../../shared/pixel';
 import {drawEp1, drawStill} from './timeline';

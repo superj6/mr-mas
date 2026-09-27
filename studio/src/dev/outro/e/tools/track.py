@@ -3,16 +3,17 @@ LOOKDEV ONLY. Not an OST track: it imports the OST engine read-only and writes n
 (show/production/OUTRO-PROPOSALS.md s6 and s9; the timing is studio/src/dev/outro/e/timeline.ts)
 
 The grid is the outro's own: bar 1 beat 1 = o0 (the cut to the file). 96 BPM, 15 frames a beat, 60 a bar.
-POLISH PASS: the outro is 3 bars (o0-o179, 7.5 s); the click is on 3.3 (o150); Ep1's moth lands on 4.1 (o180) and
-the mock-up ends on o199. The black tail is gone.
+POLISH PASS: the outro is 3 bars (o0-o179, 7.5 s); the click is on 3.3 (o150). The black tail is gone.
+POLISH PASS 2: Ep1's moth lands on 3.4 (o165), not 4.1, and the frame is then still to the end, o195 (4.2). The notes
+are unchanged; only the Ep1 file's end (and so its fade and the no-third window) moves from o200 to o196.
 
   bar 0, beats 3-4   file 0.00-1.25 s  the stand-in (the episode's last frame). The button's tail: F-C-G, no third,
                                        held soft. The mix trims the first 0.25 s, so the WAV starts 1.0 s (24 f)
                                        before o0, with the 24-frame stand-in.
   bar 1   o0-59      the file          THE KNEE WHOLE, once: F F F F G Ab C F, swung eighths, felt lead with a
                                        chip double 8va (~10 dB under), over the open fifth (upright bass F2 / C3
-                                       two-feel, felt LH F3+C4), brushes. Each note lights one line of the credits
-                                       block (timeline.ts KNEE). The only whole knee in the episode.
+                                       two-feel, felt LH F3+C4), brushes, under the credits block (whole from the
+                                       cut). The only whole knee in the episode.
   bar 2   o60-119    hold for reading  2.1 the button chord F-C-G, no third, held (bass F2, felt C3 G3 C4).
                                        2.3-2.4 the colour answers once: the Water Line's own cadence, C4 -> F4
                                        (the fourth that settles). Brushes swirl once.
@@ -22,8 +23,9 @@ the mock-up ends on o199. The black tail is gone.
                                        is SFX (post_click, in the mix); with it the felt F5 + a 1-frame chip F6
                                        glint = the cold open's f0 sound. The dampers come down under the click, so
                                        only the F5 rings on. A plain week ends on o179 (the mix fades it).
-  4.1-   o180-199    Ep1: the moth     the F5's decay alone; the moth lands on 4.1 with nothing on the downbeat
-                                       (it lands in silence); faded to zero by o199.
+  3.3-4.2 o150-195   Ep1: the moth     the F5's decay alone under the flight; the moth lands on 3.4 (o165) in the
+                                       F5's ring, and the still frame holds to 4.2 with nothing on 4.1; faded to
+                                       zero by o195.
 
 Run (repo root). The engine's files go to scratch; tools/mix.py takes the album master from there:
   audio/.venv-theme/bin/python studio/src/dev/outro/e/tools/track.py --no-stems --no-loop --out <scratch>/music
@@ -138,7 +140,7 @@ def build():
     T['felt'].pedal = ev
     T['felt_lh'].pedal = ev
 
-    end = g.t(4) + 20 / 24                                                # o200: the Ep1 mock-up's last frame + 1
+    end = g.t(4) + 16 / 24                                                # o196: the Ep1 mock-up's last frame + 1
     META['no_third_windows'] = [(t0, g.t(1)), (g.t(2) + 0.05, end)]
     META['sfx_slots'] = [dict(at=(3, 3), sfx='post_click')]
     META['audition'] = [
@@ -146,7 +148,8 @@ def build():
         f'{g.t(2):.2f} s: the button chord F-C-G, no third; {g.t(2, 3):.2f} s the Water Line settle C4 -> F4',
         f'{g.t(3):.2f} s: the bass re-strike under the pointer; {g.t(3, 3):.2f} s the click (SFX) with the felt F5 + '
         f'chip glint, the intro\'s f0 sound',
-        f'{g.t(4):.2f} s: Ep1, the moth lands in silence; out by {end:.2f} s (a plain week is faded by {g.t(4):.2f} s)',
+        f'{g.t(3, 4):.2f} s: Ep1, the moth lands under the F5\'s ring; the still frame to {end:.2f} s (a plain week is '
+        f'faded by {g.t(4):.2f} s)',
     ]
     return Score(META['id'], g, T, a.notes, markers=a.markers, sections=a.sections, meta=META,
                  tail_s=0.0, end_fade=(end - 0.5, end), length_s=end)

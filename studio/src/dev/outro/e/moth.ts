@@ -1,14 +1,19 @@
-// MR. MAS — outro E: Ep1's stinger, the Senate moth. It arrives while the window collapses into its last line of
-// light, loses the light, and goes to the only light left: the terms line. It settles beside the line's FINAL
-// PERIOD, facing it, the antennae a V either side of the dot, its body and wings to the right of the line, never
-// on a word (the brief).
+// MR. MAS — outro E: Ep1's stinger, the Senate moth. It arrives with the click, flies at the collapsing window's
+// light, loses it, and goes to the only light left: the terms line. It settles BESIDE the line's FINAL PERIOD (a
+// 3-px gap), never on a word (the brief).
 //
-// POLISH PASS (after the cold read, which took the old 14x9 moth for "a tiny fly", "a dead pixel or a stray
-// pointer"): it is now a moth first. 17x21 native pixels (about 2.5 letters high, 68x84 at 1080p), broad dusty
-// forewings with a dark spot, mauve hindwings, a fuzzy striped body and long antennae, flapping fast on 1s (spread,
-// half, up, half) the way a moth flutters, not on 2s like a butterfly. It is drawn head-up and turned head-left in
-// code, so the three drawings stay symmetrical. It enters as the window collapses (no black wait) and loops inward
-// of the frame edge (x 400-490, inside title-safe) so it reads as a flight, not a speck at the border.
+// POLISH PASS (after the first cold read, which took the old 14x9 moth for "a tiny fly"): a moth first, 21x17
+// native, dusty forewings with a dark spot, mauve hindwings, a fuzzy striped body and long antennae, flapping on 1s.
+//
+// POLISH PASS 2 (after the second cold read: "a roughly 10 px smudge on a full stop", "only stops moving at about
+// 8.9 s", "about 0.4 s of true stillness"):
+//   - UPRIGHT. It is drawn head-up throughout, the way a moth sits on a lit screen or a window, wings flat and
+//     symmetrical: that icon-like silhouette reads as a moth at 480x270, where the old head-left pose, antennae
+//     round the dot, read as a smudge on the full stop. It lands with a 3-px gap after the period: beside it.
+//   - Hindwings and body one rung brighter, so the whole wing shape reads on black, not only the paper forewings.
+//   - ONE PATH, no wandering: in from frame-right with the click, toward the light, a stall as the light goes out
+//     (o157), then straight down to the period, braking; it lands on 3.4 (o165), 0.625 s sooner than before.
+//   - NO SETTLE: the landing drawing is the last one. Nothing moves from o165 to the end (o195): 1.29 s of stillness.
 import {Buf, hash} from '../../../shared/pixel/px';
 import {PAL} from '../../../shared/pixel/palette';
 import {EV} from './timeline';
@@ -16,10 +21,10 @@ import {PERIOD} from './window';
 
 // W forewing light (leading edge), w forewing, d wing mark, h hindwing, H hindwing light, b body, B body light,
 // f thorax fuzz, a antenna
-const PALM: Record<string, number> = {W: PAL.P1, w: PAL.P0, d: PAL.B3, h: PAL.X2, H: PAL.X3, b: PAL.B3, B: PAL.B4, f: PAL.P0, a: PAL.P0};
+const PALM: Record<string, number> = {W: PAL.P1, w: PAL.P0, d: PAL.B3, h: PAL.X3, H: PAL.P0, b: PAL.B4, B: PAL.P0, f: PAL.P1, a: PAL.P0};
 
 // head-up drawings, 21 wide x 17 tall; row 0 = the antenna tips, col 10 = the body's axis
-const REST_UP = [
+const REST = [
   '.....a.........a.....',
   '......a.......a......',
   '.......a.....a.......',
@@ -38,7 +43,7 @@ const REST_UP = [
   '...hhhhh.bbb.hhhhh...',
   '.....hh...b...hh.....',
 ];
-const HALF_UP = [
+const HALF = [
   '.....................',
   '......a.......a......',
   '.......a.....a.......',
@@ -57,7 +62,7 @@ const HALF_UP = [
   '......hh.bbb.hh......',
   '..........b..........',
 ];
-const UP_UP = [
+const UP = [
   '.....................',
   '.......a.....a.......',
   '........a...a........',
@@ -76,34 +81,27 @@ const UP_UP = [
   '.........bbb.........',
   '..........b..........',
 ];
-/** turn a head-up drawing head-left (90 degrees counter-clockwise): up-row j -> x j, up-col c -> y (20 - c) */
-const rotLeft = (rows: string[]) => {
-  const w = rows[0].length;
-  return Array.from({length: w}, (_, i) => rows.map((r) => r[w - 1 - i]).join(''));
-};
-const REST = rotLeft(REST_UP), HALF = rotLeft(HALF_UP), UP = rotLeft(UP_UP);
-/** the anchor: the thorax centre (x 7 = up-row 7) on the body's axis (y 10) */
-const AX = 7, AY = 10;
+/** the anchor: the body's axis (x 10), the wings' middle row (y 8) */
+const AX = 10, AY = 8;
 
 const blitD = (b: Buf, d: string[], x: number, y: number) => {
   d.forEach((r, j) => { for (let i = 0; i < r.length; i++) { const c = PALM[r[i]]; if (c !== undefined) b.set(x - AX + i, y - AY + j, c); } });
 };
 
 // ------------------------------------------------------------------ the flight: waypoints (outro frames), Catmull-Rom,
-// plus a moth's erratic 1-2 px jitter, all rounded to whole pixels. It comes in from frame-right at the height of
-// the collapsing line of light (y 80), stalls as the light goes out, then drops in two loose swings to the line's end.
-/** the landed anchor: the antenna tips (x 0) one pixel right of the period, the body on the period's row */
-export const LAND: [number, number] = [PERIOD[0] + 1 + AX, PERIOD[1]];
+// a 1-px moth jitter while it chases the light, then none; all rounded to whole pixels.
+/** the landed anchor: the left wingtip (col 0) 4 px right of the period (a 3-px gap), the wings' middle on the
+ *  terms line's middle row */
+export const LAND: [number, number] = [PERIOD[0] + 4 + AX, PERIOD[1] - 5];
 const WAY: Array<[number, number, number]> = [
-  [EV.moth.enter - 4, 506, 74],
-  [EV.moth.enter, 486, 80],          // o152: in from frame-right at the height of the collapsing line (y 80)
-  [EV.moth.enter + 4, 454, 88],
-  [EV.moth.enter + 8, 424, 110],     // the dot goes out (o156): it stalls, loses the light
-  [EV.moth.enter + 13, 442, 142],    // two loose swings down toward the only light left
-  [EV.moth.enter + 18, 410, 174],
-  [EV.moth.enter + 22, 428, 206],
-  [EV.moth.enter + 25, LAND[0] + 6, LAND[1] - 7],
-  [EV.moth.land, LAND[0], LAND[1]],  // o180 = 4.1: lands, in silence
+  [EV.moth.enter - 4, 526, 102],
+  [EV.moth.enter, 494, 110],           // o150 (the click): just off frame-right, at the height of the window's centre
+  [EV.moth.enter + 3, 432, 117],       // at the collapsing line's right end
+  [EV.moth.lightOut, 394, 124],        // o157: the light is gone; it stalls
+  [EV.moth.lightOut + 3, 408, 168],    // then straight down toward the only light left
+  [EV.moth.land - 3, 434, 214],
+  [EV.moth.land - 1, 446, 233],        // braking
+  [EV.moth.land, LAND[0], LAND[1]],    // o165 = 3.4: lands
   [EV.moth.land + 6, LAND[0], LAND[1]],
 ];
 const cr = (p0: number, p1: number, p2: number, p3: number, t: number) =>
@@ -120,22 +118,16 @@ export const mothX = (o: number) => (o >= EV.moth.land ? LAND[0] : pathAt(o)[0])
 
 /** the flap on 1s: spread, half, up, half (a moth's fast flutter) */
 const FLAP = [REST, HALF, UP, HALF];
-/** the settle after the landing (o180-187): a half-open, a pause, one last half-open, then still from EV.moth.folded */
-const SETTLE = [HALF, HALF, REST, REST, REST, REST, HALF, REST];
 
-/** the moth at outro frame o (nothing before it enters) */
+/** the moth at outro frame o (nothing before it enters; from the landing on, one still drawing) */
 export const drawMoth = (b: Buf, o: number) => {
   if (o < EV.moth.enter) return;
-  if (o >= EV.moth.land) {
-    const k = o - EV.moth.land;
-    blitD(b, o >= EV.moth.folded ? REST : SETTLE[k] ?? REST, LAND[0], LAND[1]);
-    return;
-  }
+  if (o >= EV.moth.land) { blitD(b, REST, LAND[0], LAND[1]); return; }
   const [fx, fy] = pathAt(o);
-  const near = EV.moth.land - o; // the last frames brake: no jitter, a slower flap
-  const jit = near > 5 ? 1.6 : 0;
+  const near = EV.moth.land - o;
+  const jit = o <= EV.moth.lightOut ? 1.2 : 0;             // erratic while it chases the light, direct after
   const jx = Math.round((hash(o, 7, 3) - 0.5) * 2 * jit), jy = Math.round((hash(o, 9, 5) - 0.5) * 2 * jit);
-  const d = near <= 3 ? (near <= 1 ? REST : HALF) : FLAP[(o - EV.moth.enter) % 4];
+  const d = near <= 2 ? HALF : FLAP[(o - EV.moth.enter) % 4];
   blitD(b, d, Math.round(fx) + jx, Math.round(fy) + jy);
 };
 

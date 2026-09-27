@@ -51,6 +51,6 @@ if [[ $STEP == all || $STEP == sheets ]]; then
   (cd "$ROOT/studio" && npx esbuild src/dev/outro/c/tools/preview.ts --bundle --platform=node \
       --outfile="$SC/preview.cjs" --log-level=warning)
   mkdir -p "$SC/native"
-  node "$SC/preview.cjs" "$SC/native" 1 12 64 84 99 129 144 154 174 194 check > "$SC/native/check.txt"
+  node "$SC/preview.cjs" "$SC/native" 1 12 64 119 129 164 176 194 check > "$SC/native/check.txt"
   "$PY" "$ROOT/studio/src/dev/outro/c/tools/sheets.py" "$SC"
 fi

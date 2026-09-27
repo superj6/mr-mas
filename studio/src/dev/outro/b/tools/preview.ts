@@ -13,13 +13,14 @@ import {PAL} from '../../../../shared/pixel/palette';
 import {textWidth} from '../../../../shared/pixel/font';
 import {makeScene, TOAST, toastBox, rowBoxes, typeAt, INK_RESOLVED, mothFlight} from '../scene';
 import {drawBand, TERMS_AT, POINTER_AT, BAND, PERIOD, mothRestBox, mothBox, chipW, CHIP_H, tx, tw} from '../art';
-import {TOTAL, PRE, T, EPS, TERMS, POINTER, toastLines, linePops} from '../timeline';
+import {TOTAL, PRE, T, EPS, TERMS, POINTER, toastLines, linePops, lastO} from '../timeline';
 import * as fs from 'fs';
 
 const [outDir, scaleS, epS, spec] = process.argv.slice(2);
 const scale = Number(scaleS) || 2;
 const ep = Number(epS) || 1;
 const scene = makeScene(ep);
+const LAST = lastO(EPS[ep]); // the episode's last outro frame (Ep1: o239, the stinger bar; a plain week: o179)
 
 const render = (f) => {
   const {fb, layers, ui} = composeFrame(scene, f);
@@ -49,18 +50,18 @@ if (spec === 'check') {
   // 3) READ TIME, measured on the rendered pixels: a toast row is LEGIBLE on a frame when every pixel of its type is
   //    an ink colour of that row's state and every other pixel inside the type's box is its ground (a token, a ray, a
   //    drop or a half-drawn chip fails it). Each row's legible span runs from the first frame it is legible and stays
-  //    legible to the cut (o179). Then: per line (on screen >= chars / 16 cps + 0.5 s), and the whole toast READ IN
+  //    legible to the cut (o179 in a plain week, o239 in Ep1). Then: per line (on screen >= chars / 16 cps + 0.5 s), and the whole toast READ IN
   //    ORDER (header, credits, verdict: each row starts when it is legible and the previous one is read) at 16, 18
   //    and 20 chars/s, and the whole frame (toast + band) for one first-time reader.
   const ref = new Buf(480, 270, TRANSPARENT);
   drawBand(ref);
   const rows = [[TERMS_AT.x - 1, TERMS_AT.y - 1, TERMS_AT.x + textWidth(TERMS), TERMS_AT.y + 9],
                 [POINTER_AT.x - 1, POINTER_AT.y - 1, POINTER_AT.x + textWidth(POINTER), POINTER_AT.y + 9]];
-  const out = {ep, band: {from: PRE + T.band, to: PRE + T.bandOut - 1}, covered: [], mothBox: null, toast: [], ok: true};
+  const out = {ep, outroFrames: LAST + 1, band: {from: PRE + T.band, to: PRE + LAST}, covered: [], mothBox: null, toast: [], ok: true};
   const frames = {};
-  for (let f = PRE + T.band; f < PRE + T.bandOut; f++) {
+  for (let f = PRE + T.band; f <= PRE + LAST; f++) {
     const c = render(f);
-    if (f <= PRE + T.out) frames[f] = c;
+    frames[f] = c;
     let bad = 0;
     for (const [x0, y0, x1, y1] of rows) for (let y = y0; y <= y1; y++) for (let x = x0; x <= x1; x++) if (c[y * 480 + x] !== ref.c[y * 480 + x]) bad++;
     if (bad) { out.covered.push([f, bad]); out.ok = false; }
@@ -74,10 +75,10 @@ if (spec === 'check') {
     const tb = rowBoxes(EPS[ep]).concat(rows);
     const hits = [], overOrb = [];
     let minGap = 1e9;
-    for (let o = 0; o <= T.out; o++) {
+    for (let o = 0; o <= LAST; o++) {
       const m = mothFlight(o);
       if (!m) continue;
-      const [a0, b0, a1, b1] = mothBox(m.pose, m.x, m.y);
+      const [a0, b0, a1, b1] = mothBox(m.pose, m.x, m.y, m.flip);
       for (const [x0, y0, x1, y1] of tb) {
         const gx = Math.max(x0 - a1, a0 - x1, 0), gy = Math.max(y0 - b1, b0 - y1, 0);
         const gap = Math.max(gx, gy) - 1;
@@ -114,10 +115,10 @@ if (spec === 'check') {
   const CPS = [16, 18, 20];
   const rowsOut = states.map((r, i) => {
     let from = null, gaps = 0;
-    for (let o = T.out; o >= 0; o--) { if (legible(frames[PRE + o], r)) from = o; else break; }
+    for (let o = LAST; o >= 0; o--) { if (legible(frames[PRE + o], r)) from = o; else break; }
     for (let o = 0; o < (from ?? 0); o++) if (legible(frames[PRE + o], r)) gaps++;
     const chars = [...r.s].length;
-    const on = from === null ? 0 : T.out - from + 1;
+    const on = from === null ? 0 : LAST - from + 1;
     const need = chars / 16 + 0.5;
     return {row: i, line: r.s, chars, px: r.w, box: boxes[i], legibleFrom: from, legibleFrames: on, seconds: +(on / 24).toFixed(2),
             cps: on ? +(chars / (on / 24)).toFixed(1) : null, needAt16cpsPlusHalf: +need.toFixed(2), perLineOk: on / 24 >= need, earlierFlickers: gaps};
@@ -126,21 +127,21 @@ if (spec === 'check') {
   const inOrder = (cps) => {
     let t = 0;
     const fin = rowsOut.map((r) => { t = Math.max(t, r.legibleFrom ?? 999) + (r.chars / cps) * 24; return +t.toFixed(1); });
-    return {cps, finishes: fin, lastFinish: fin[fin.length - 1], cut: T.out + 1, ok: fin[fin.length - 1] <= T.out + 1, marginFrames: +(T.out + 1 - fin[fin.length - 1]).toFixed(1)};
+    return {cps, finishes: fin, lastFinish: fin[fin.length - 1], cut: LAST + 1, ok: fin[fin.length - 1] <= LAST + 1, marginFrames: +(LAST + 1 - fin[fin.length - 1]).toFixed(1)};
   };
   out.toastInOrder = CPS.map(inOrder);
   const toastChars = rowsOut.reduce((a, r) => a + r.chars, 0);
   const bandChars = TERMS.length + POINTER.length;
-  const bandFrames = T.bandOut - T.band;
+  const bandFrames = LAST + 1 - T.band;
   out.wholeFrame = {
     toastChars, bandChars, totalChars: toastChars + bandChars,
-    outroSeconds: (T.out + 1) / 24, bandOnSeconds: +(bandFrames / 24).toFixed(2),
+    outroSeconds: (LAST + 1) / 24, bandOnSeconds: +(bandFrames / 24).toFixed(2),
     secondsNeeded: Object.fromEntries(CPS.map((c) => [c, +((toastChars + bandChars) / c).toFixed(2)])),
     // the band time left to a reader who reads the toast in order at 18 cps: before the header posts + after the toast is read
     bandUncontestedAt18: +(((T.header - T.band) + (bandFrames - Math.min(bandFrames, out.toastInOrder[1].lastFinish))) / 24).toFixed(2),
     bandReadAt18: +(bandChars / 18).toFixed(2),
   };
-  out.terms = {chars: TERMS.length, px: textWidth(TERMS), onSeconds: +(bandFrames / 24).toFixed(2), onSecondsOutroOnly: (T.out + 1) / 24, rule5s: (T.out + 1) / 24 >= 5};
+  out.terms = {chars: TERMS.length, px: textWidth(TERMS), onSeconds: +(bandFrames / 24).toFixed(2), rule5s: bandFrames / 24 >= 5};
   out.perLineOk = rowsOut.every((r) => r.perLineOk);
   if (!out.perLineOk || !out.terms.rule5s) out.ok = false;
   out.toastBox = toastBox(e);

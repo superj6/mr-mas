@@ -1,8 +1,8 @@
 // MR. MAS — OUTRO PROPOSAL A, "the closing session": LOOKDEV MOCK-UP (a visual outline to compare, not a final).
-// Brief: show/production/OUTRO-PROPOSALS.md §2 + §9 row A, cut down after the cold read (README "Polish pass").
+// Brief: show/production/OUTRO-PROPOSALS.md §2 + §9 row A, reshaped by two cold reads (README).
 // Handoff: studio/src/dev/outro/a/README.md.
 // Compositions:
-//   outro-a-ep1     234 f @24 = 1 s stand-in (last frame of Act Four v4) + the 210-frame outro (o0-o209, 8.75 s)
+//   outro-a-ep1     294 f @24 = 1 s stand-in (last frame of Act Four v4) + the 270-frame outro (o0-o269, 11.25 s)
 //   outro-a-stills  per-episode variant stills; --props='{"which":"ep1"|"ep6"|"ep10"|"ep10-keys"}' (default ep10)
 //
 // Re-render (from studio/; outputs land in out/lookdev/outro/a/ + a copy at out/lookdev/outro/outro-a.mp4;
@@ -15,7 +15,7 @@
 //   npx remotion render src/dev/outro/a/entry.tsx outro-a-ep1 $SCR/outro-a-ep1-silent.mp4 --concurrency=4 \
 //     --image-format=png --crf=12 --pixel-format=yuv420p --bundle-cache=false --log=error
 //   # 3. layout from the engine, mix (music + designed SFX), mux (Remotion's ffmpeg), key stills, sheets, readability
-//   #    QA on the encoded mp4 (about 30 s)
+//   #    QA on the encoded mp4, the one-pass reader (about 30 s)
 //   ../audio/.venv-theme/bin/python src/dev/outro/a/tools/build.py --scratch $SCR
 //   # optional: a variant still through Remotion itself (build.py draws the same pixels with tools/preview.ts)
 //   npx remotion still src/dev/outro/a/entry.tsx outro-a-stills $SCR/var-ep10.png --props='{"which":"ep10"}'

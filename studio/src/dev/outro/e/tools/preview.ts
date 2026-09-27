@@ -3,16 +3,17 @@
 //   npx esbuild src/dev/outro/e/tools/preview.ts --bundle --platform=node --outfile=<scratch>/oe.js
 //   node <scratch>/oe.js <outDir> <scale> m:<m> | o:<o> | p:<o> (plain week) | ep:<1|3|10> | end | strip:<m,m,..> | verify
 // `verify` prints the text checks: every glyph present, the terms line's width, the terms and pointer pixels
-// identical on every frame o0-o199 (never moved, never covered), the landed moth clear of every glyph, and each
-// line's read time vs its time on screen.
+// identical on every frame o0-o195 (never moved, never covered), the landed moth clear of every glyph, each line's
+// read time vs its time on screen, and (polish pass 2) the ending: the last frame anything moves, the length of the
+// still hold, and that nothing but the terms line (and the moth) is on the desktop after the close.
 import {writePNG} from '../../../pixeladv/tools/png';
 import {Buf} from '../../../../shared/pixel/px';
 import {PAL} from '../../../../shared/pixel/palette';
 import {drawMockup, drawVariant, drawEndState} from '../scene';
-import {PRE, OUTRO, EV, KNEE} from '../timeline';
+import {PRE, OUTRO, EV} from '../timeline';
 import {text as sharedText} from '../../../../shared/pixel/font';
 import {strW} from '../text';
-import {TERMS, POINTER_LINE, TERMS_X, TERMS_Y, POINTER_X, POINTER_Y, EP1_LINES, EP1_TITLE, PERIOD, EP1_BLOCK0} from '../window';
+import {TERMS, POINTER_LINE, TERMS_X, TERMS_Y, POINTER_X, POINTER_Y, EP1_LINES, EP1_TITLE, PERIOD} from '../window';
 import {EP3_INFO, EP3_TITLE, EP10_KEYS, EP10_VALS, EP10_TITLE} from '../variants';
 import {MOTH_BOX} from '../moth';
 
@@ -61,10 +62,7 @@ const verify = () => {
   const win = EV.click / 24, calm = EV.pointer[0] / 24;
   const rows = [
     ['window title', EP1_TITLE, win, calm],
-    ...EP1_LINES.map((l, i) => [l, i]).filter(([l]) => l.segs.length).map(([l, i]) => {
-      const from = i >= EP1_BLOCK0 && i < EP1_BLOCK0 + 8 ? KNEE[i - EP1_BLOCK0] : 0;
-      return ['file ' + l.n, l.segs.map((q) => q[0]).join(''), win, (EV.pointer[0] - from) / 24];
-    }),
+    ...EP1_LINES.filter((l) => l.segs.length).map((l) => ['file ' + l.n, l.segs.map((q) => q[0]).join(''), win, calm]),
   ];
   let block = 0;
   for (const [k, sx, t, c] of rows) {
@@ -73,10 +71,28 @@ const verify = () => {
     console.log(`${String(k).padEnd(13)} ${String(n).padStart(3)} ch  16cps ${(n / 16).toFixed(2)} s  on screen ${t.toFixed(2)} s, lit before the pointer ${c.toFixed(2)} s  ${n / 16 <= c ? 'ok' : 'SHORT'}  | ${sx}`);
   }
   console.log(`credits block (lines 2109-2114): ${block} ch -> ${(block / 16).toFixed(1)} s at 16 cps, ${(block / 20).toFixed(1)} s at 20 cps; ` +
-    `on screen ${win.toFixed(2)} s, whole and lit before the pointer ${((EV.pointer[0] - KNEE[7]) / 24).toFixed(2)} s (it lights o0-o${KNEE[7]})`);
+    `on screen ${win.toFixed(2)} s, whole from the cut, ${calm.toFixed(2)} s before the pointer moves`);
   const tp = TERMS.length + POINTER_LINE.length;
   for (const [k, sx] of [['terms', TERMS], ['pointer', POINTER_LINE], ['terms+pointer', TERMS + POINTER_LINE]])
     console.log(`${k.padEnd(14)} ${String(sx.length).padStart(3)} ch -> ${(sx.length / 16).toFixed(2)} s at 16 cps; on screen ${(OUTRO / 24).toFixed(2)} s (plain week), ${((EV.end + 1) / 24).toFixed(2)} s (Ep1)`);
+  // 4. the ending (polish pass 2): the last frame on which ANY pixel changes, and the still hold after it
+  for (const sting of [true, false]) {
+    const last = sting ? EV.end : OUTRO - 1;
+    let prev = null, lastChange = -1;
+    for (let o = 0; o <= last; o++) {
+      const b = new Buf(480, 270, PAL.N0); drawMockup(b, PRE + o, {...O, sting});
+      if (prev && b.c.some((v, i) => v !== prev[i])) lastChange = o;
+      prev = b.c;
+    }
+    const still = last - lastChange + 1;
+    console.log(`${sting ? 'Ep1 (moth)' : 'plain week'}: last change on o${lastChange}; still o${lastChange}-o${last} = ${still} frames = ${(still / 24).toFixed(2)} s`);
+  }
+  // 5. after the close: nothing on the desktop but the terms/pointer text (and, in Ep1, the moth)
+  const pw = new Buf(480, 270, PAL.N0); drawMockup(pw, PRE + OUTRO - 1, {...O, sting: false});
+  const tset = new Set(textPx);
+  let stray = 0;
+  for (let y = 12; y < 270; y++) for (let x = 0; x < 480; x++) { const i = y * 480 + x; if (pw.c[i] !== PAL.N0 && !tset.has(i)) stray++; }
+  console.log('plain week o179: non-black pixels outside the terms/pointer text (slug row excluded):', stray);
 };
 
 const [outDir, scaleS, ...ids] = process.argv.slice(2);

@@ -1,16 +1,17 @@
 """OUTRO E · the lookdev mix: the temp music (tools/track.py) + the designed sound, cut to the mock-up's frames.
 LOOKDEV ONLY. Reads the OST render (scratch) and the shared SFX library (read-only); writes only to out/lookdev/outro/e/.
-POLISH PASS: 3-bar outro, the click on 3.3 (o150), Ep1's moth in from o152 and landed on 4.1 (o180), end o199.
-Writes two mixes: the Ep1 mock-up (224 frames, with the moth) and a plain week (204 frames, no moth, faded by o179).
+POLISH PASS: 3-bar outro, the click on 3.3 (o150).
+POLISH PASS 2: Ep1's moth in with the click (o150), landed on 3.4 (o165), then a still frame to o195 (4.2).
+Writes two mixes: the Ep1 mock-up (220 frames, with the moth) and a plain week (204 frames, no moth, faded by o179).
 
   m0-23    the stand-in (1.0 s): the music's button tail + `server_hum` (the Ep1 button ends "CUT TO BLACK on the
            hum"), cut with a 40 ms fade on the cut to the file (the file is not in the room)
   o0-149   the music alone (the knee whole, the button chord, the settle, the bass re-strike). The pointer's travel
            is silent: a mouse move has no sound, and the score owns this bar
   o150     `post_click` (SFX owns the click; the music's felt F5 + chip glint land with it)
-  o152-179 Ep1: the moth, a designed wing flutter (band-passed noise, 12 soft strokes a second, panned with its
-           flight from frame-right to the period). It stops dead on the landing (o180 = 4.1): it lands in silence
-  o180/186 two tiny wing settles (the re-open drawings), then nothing but the F5's decay
+  o150-164 Ep1: the moth, a designed wing flutter (band-passed noise, 12 soft strokes a second, panned with its
+           flight from frame-right to the period). It stops dead on the landing (o165 = 3.4)
+  o165     one tiny wing settle (the landing), then nothing but the F5's decay under the still frame, out on o195
 
 Run (repo root), after track.py:
   audio/.venv-theme/bin/python studio/src/dev/outro/e/tools/mix.py <scratch>/music out/lookdev/outro/e
@@ -28,17 +29,18 @@ from engine.mix import lufs, true_peak   # noqa: E402
 SR = 48000
 FPS = 24
 PRE = 24                    # frames of stand-in before o0 (timeline.ts PRE)
-TOTAL = 224                 # timeline.ts TOTAL (the Ep1 mock-up)
+TOTAL = 220                 # timeline.ts TOTAL (the Ep1 mock-up)
 TOTAL_PLAIN = 204           # timeline.ts TOTAL_PLAIN (a week with no stinger)
 CLICK = 150                 # timeline.ts EV.click (3.3)
 PLAIN_END = 179             # timeline.ts OUTRO - 1
 TRIM_S = 0.25               # track.py TRIM_S: the file's first 0.25 s are dropped (1.0 s of stand-in remain)
 SFX = '/home/jgon/project/art/mrmas/audio/sfx/wav'
 
-# the moth's flight, outro frames -> native x (moth.ts WAY, for the pan only; LAND x = 442)
-MOTH_ENTER, MOTH_LAND = 152, 180
-MOTH_X = [(148, 506), (152, 486), (156, 454), (160, 424), (165, 442), (170, 410), (174, 428), (177, 448), (180, 442)]
-SETTLES = (MOTH_LAND, MOTH_LAND + 6)   # moth.ts SETTLE: half-open drawings at k = 0 and 6
+# the moth's flight, outro frames -> native x (moth.ts WAY, for the pan only; LAND x = 448)
+MOTH_ENTER, MOTH_LAND = 150, 165
+MOTH_X = [(146, 526), (150, 494), (153, 432), (157, 394), (160, 408), (162, 434), (164, 446), (165, 448)]
+LAND_X = 448
+SETTLES = (MOTH_LAND,)      # one soft settle on the landing; nothing after it
 
 
 def fr(o):
@@ -84,14 +86,14 @@ def moth_flutter(rng):
 
 
 def settle_ticks(rng):
-    """two tiny wing re-opens after the landing (moth.ts SETTLE half-open drawings)"""
+    """one tiny wing settle on the landing (polish pass 2: the moth is still from o165)"""
     out = []
     sos = butter(2, [400, 2600], btype='band', fs=SR, output='sos')
     for o in SETTLES:
         n = int(0.07 * SR)
         x = sosfilt(sos, rng.standard_normal(n)) * np.exp(-np.arange(n) / (0.018 * SR))
         x = x / (np.abs(x).max() + 1e-12)
-        pan = (442 - 240) / 240
+        pan = (LAND_X - 240) / 240
         th = (pan + 1) * np.pi / 4
         out.append((np.stack([x * np.cos(th), x * np.sin(th)], axis=1), fr(o)))
     return out
@@ -153,8 +155,9 @@ def main(music_dir, out_dir):
             tail_dbfs_last_100ms=round(float(20 * np.log10(np.abs(mix[-int(0.1 * SR):]).max() + 1e-12)), 1),
         )
         if sting:
-            rep['rms_dbfs_moth_flight_o152_179'] = rms(w(MOTH_ENTER, MOTH_LAND))
-            rep['rms_dbfs_landed_o180_199'] = rms(w(MOTH_LAND, frames - PRE))
+            rep['rms_dbfs_moth_flight_o150_164'] = rms(w(MOTH_ENTER, MOTH_LAND))
+            rep['rms_dbfs_landed_o165_195'] = rms(w(MOTH_LAND, frames - PRE))
+            rep['rms_dbfs_still_o170_195'] = rms(w(MOTH_LAND + 5, frames - PRE))
         print(rep)
 
 

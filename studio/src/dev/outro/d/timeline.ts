@@ -33,12 +33,15 @@ export const NOTES = [at(1, 1), at(1, 3), at(2, 1), at(2, 3), at(2, 4), at(3, 1)
 export const PITCH = ['F', 'F', 'F', 'F', 'G', 'Ab', 'C', 'F'];
 
 export const EV = {
-  /** o0-4: the thread draws itself along the desk's lit front edge; o4-14: it peels up into the flat line */
-  lift: [0, 14] as const,
-  /** o6-23: 3-step Bayer dissolve of the last frame (steps at o6, o12, o18); gone from o24 */
-  fade: [6, 23] as const,
-  /** o15-26: the dotted future (Ep1) draws on from the knee to the top: where the line is going */
-  future: [15, 26] as const,
+  /** d5: o0-1 the monitor's own curve lights up (the thread IS the line on Mas's screen; no second curve is drawn) */
+  light: [0, 1] as const,
+  /** o2-13: the room dissolves around the lit curve in 4 dithered steps (o2, 5, 8, 11); black from o11 */
+  fade: [2, 13] as const,
+  /** o12-23: the push-in, on the thread alone: the monitor's curve stretches out to the full-frame chart's line
+   *  (one line the whole way, so the two charts are never on screen together); its rise breaks into the dotted future */
+  morph: [12, 23] as const,
+  /** o14-25: the chart's grid and axis develop in on an ordered dither under the moving line */
+  grid: [14, 25] as const,
   /** o18 (1.2+3): the band (terms + pointer) steps up in 3 frames; it stays, unmoving, until the out */
   band: 18,
   /** o42: the `you are here` dot comes on (its halo blinks on the beat) */
@@ -47,15 +50,19 @@ export const EV = {
   climb: at(2, 3),
   /** o105-153: the crane: 20 px up in whole pixels (ease in-out); the world settles into the final frame */
   crane: [at(2, 4), at(3, 3) + 3] as const,
-  /** o240 (5.1): the out. 4 dithered steps to black (o240, 243, 246, 249); the band goes out on 5.1 */
+  /** o150-152 (3.3): the title's one upgrade, 1-BIT paper plate -> the show's own window (the post box's twin), as an
+   *  interlaced develop (every 4th row, every 2nd, all) */
+  upgrade: at(3, 3),
+  /** o240 (5.1): the out. 4 dithered steps to black (o240, 243, 246, 249), the band with them */
   out: at(5, 1),
   /** o255 (5.2): the post box's caret alone on black, at the same spot: felt F5 + the chip F6 glint */
   glint: at(5, 2),
   end: OUT - 1,
 };
 
-/** the flat plates fold back into the line once read: created by on Ab (3.1), written a beat after the post box (3.4) */
-export const FOLD = [at(3, 1), at(3, 4)];
+/** d5: no plate folds. Both human credits (created by, written) stay on the flat line to the out, so the frame held
+ *  longest lists every credit, human first (d4 folded them at o120/o165 and the cold read took the last frame as
+ *  "made by AI"). */
 export const CRANE = 20;
 
 const easeInOut = (t: number) => (t < 0.5 ? 2 * t * t : 1 - 2 * (1 - t) * (1 - t));

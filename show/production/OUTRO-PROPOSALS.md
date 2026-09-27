@@ -1,6 +1,6 @@
 # MR. MAS · Outro proposals (five, for comparison)
 
-> **Status: PROPOSALS, 2026-09-26.** Nothing here is decided. Five ways to close every episode, written so they can be built as moving mock-ups and compared side by side. Whichever one the showrunner picks replaces the 43 s credits placeholder ([pacing-model §3.1](../format/pacing-model.md#31-the-clock)).
+> **Status: PROPOSALS, 2026-09-26; mock-ups built 2026-09-27 ([§7a](#7a-mock-up-results)).** Nothing here is decided. Five ways to close every episode, written so they can be built as moving mock-ups and compared side by side. Whichever one the showrunner picks replaces the 43 s credits placeholder ([pacing-model §3.1](../format/pacing-model.md#31-the-clock)).
 >
 > **The ask (verbatim):**
 > - "i do think we should have some form of short outro at least as brief credit pane or similar. let's think about what makes sense"
@@ -12,11 +12,13 @@
 >
 > **The visual outline** for comparing them is `out/lookdev/outro/outro-proposals-timeline.png` (all five on the 96 BPM grid against the intro, §0). The five moving mock-ups land beside it in `out/lookdev/outro/<id>/` as the builders finish them (§9).
 
-**Contents:** [0. At a glance](#0-at-a-glance) · [1. What every proposal carries](#1-what-every-proposal-carries) · [2. A · The closing session](#2-a--the-closing-session-125-s) · [3. B · The Orb's verdict](#3-b--the-orbs-verdict-75-s) · [4. C · After hours (DAYS SINCE)](#4-c--after-hours-days-since-10-s) · [5. D · The curve](#5-d--the-curve-15-s) · [6. E · File closed](#6-e--file-closed-625-s) · [7. Comparison](#7-comparison) · [8. Recommendation](#8-recommendation) · [9. Builder briefs](#9-builder-briefs) · [10. Open questions](#10-open-questions) · [11. Handoff](#11-handoff)
+**Contents:** [0. At a glance](#0-at-a-glance) · [1. What every proposal carries](#1-what-every-proposal-carries) · [2. A · The closing session](#2-a--the-closing-session-125-s) · [3. B · The Orb's verdict](#3-b--the-orbs-verdict-75-s) · [4. C · After hours (DAYS SINCE)](#4-c--after-hours-days-since-10-s) · [5. D · The curve](#5-d--the-curve-15-s) · [6. E · File closed](#6-e--file-closed-625-s) · [7. Comparison](#7-comparison) · [7a. Mock-up results](#7a-mock-up-results) · [8. Recommendation](#8-recommendation) · [9. Builder briefs](#9-builder-briefs) · [10. Open questions](#10-open-questions) · [11. Handoff](#11-handoff)
 
 ---
 
 ## 0. At a glance
+
+> **These are the briefs' lengths.** The built lengths differ (A 11.875 s, B 7.5 s, C 8 s, D 11.25 s, E 7.5 s): see [§7a](#7a-mock-up-results) and `out/lookdev/outro/outro-compare-sheet.png`.
 
 | | Proposal | Length | Where we are | The credits live in | Ends on |
 |---|---|---|---|---|---|
@@ -505,7 +507,132 @@ The costs follow [production-estimates](../format/production-estimates.md) (≈ 
 
 ---
 
+## 7a. Mock-up results
+
+> **Built 2026-09-26/27.** All five exist as moving Ep1 mock-ups: 1080p, temp music from the OST engine, designed SFX, a 1 s stand-in "last frame" before each. Each went through two cold reads and two polish passes. **The lengths and beats in §0–§7 are the briefs; this section is what was built.** Nobody has listened to any of the mixes yet, and all on-screen legal text is a draft (legal review pending).
+
+**Watch them:**
+- `out/lookdev/outro/outro-compare.mp4` (70 s): all five in order, A to E. Each one follows a 2 s slate with its letter, name and length, with 1 s of black between. Sound is each builder's own mix, not level-matched: B plays about 1.6 LU quieter than the other four (−18.4 LUFS against −16.8 to −17.2).
+- `out/lookdev/outro/outro-compare-sheet.png`: the five as built, to scale against the intro, then one row each with 3 key frames from the encoded reel plus the Ep10 variant still.
+- Each proposal's own files are in `out/lookdev/outro/<id>/`, with its handoff note in `studio/src/dev/outro/<id>/` (`README.md` for A, the `entry.tsx` header for B–E).
+
+### Final lengths
+
+| | Plain week | Ep1, with the moth | Mock-up file | Terms + pointer readable | Brief |
+|---|---|---|---|---|---|
+| **A** · The closing session | **11.875 s** (4.75 bars) | the same (the moth is inside) | 12.875 s | terms 5.83 s, pointer 3.33 s (on the pane) | 12.5 s |
+| **B** · The Orb's verdict | **7.5 s** (3 bars) | 10 s (the moth adds a bar) | 11.75 s | 7.5 s; 10 s in Ep1 | 7.5 s |
+| **C** · After hours | **8 s** (3 bars + the ring-out) | the same (inside) | 9 s | 7.67 s | 10 s |
+| **D** · The curve | **11.25 s** (4.5 bars) | the same (inside) | 12.25 s | 9.17 s | 15 s |
+| **E** · File closed | **7.5 s** (3 bars) | 8.17 s (the moth lands after) | 9.17 s | 7.5 s; 8.17 s in Ep1 | 6.25 s |
+
+All five are under half the 30 s intro and inside 6–15 s. The terms line is on screen for at least 5 s, unmoving and never covered, in every one.
+
+### What each looks like now
+
+**A · The closing session (11.875 s).**
+- **What it is:** one 1-bit session log on Mas's monitor. Three short credit rows type at a reader's pace. Then the terms and the pointer print whole as the log's last lines, in the same face, under a dotted rule. The camera pulls back once, at the end, to Mas and the Orb in his dark room. The moth comes to the light, the window closes to the loop cursor, and the room goes dark around it.
+- **Changes from the brief:** it's the only one that still reads as "his screen, his room". Its second cold read cut it to one block of text in one face. It grew from 8.75 s to 11.875 s so an average reader (25 cps) can read the card once; they finish 0.21 s before the room shot.
+- **Weaknesses:**
+  - It's now the longest of the five, and the card is the same every week.
+  - Slow readers still lose the pointer.
+  - The terms are back on Mas's own monitor, so legal needs to say whether that counts as in-world.
+  - Mas's only new acting is one blink.
+  - The moth is a 13-px speck at phone size.
+
+**B · The Orb's verdict (7.5 s; Ep1 10 s).**
+- **What it is:** the Orb, close, on black. Its scan cone leaves the credits behind it as a toast of chips headed `MR. MAS · <file>`. Its verdict on the viewer, `viewer: human ✓`, lights its lens. The band under it carries the terms and pointer throughout.
+- **Ep1's moth:** it comes to the lit lens, bumps the glass with a tink, and settles beside the final period under a thin beam from the Orb. That adds one bar.
+- **Strengths:** the most characterful moment of the five, and the only joke that drifts across the season (the Ep6 and Ep10 verdicts are rendered as stills).
+- **Weaknesses:**
+  - Its plain week has the tightest reading time. Reading the toast in order misses at 16 cps by 0.67 s, and the band gets only 0.57 s to itself.
+  - Ep1 runs 2.5 s longer than a plain week.
+  - It looks at the lens every week.
+  - Cold-read style notes still stand: flat terminal chips, a stock decode, a band that reads like a web footer, and an empty middle.
+  - Ep7's "no verdict" isn't built.
+
+**C · After hours (8 s).**
+- **What it is:** NopeAI's lobby at night. The DAYS SINCE sign opens on last night's count (35). The directory under it carries one small head row and three big lines: `CREATED BY (CREATOR)` / `MADE WITH AI` / `AI VOICES · NONE CLONED`. A maintenance hand lifts yesterday's 5 off, and tonight's 36 is already behind it, like a tear-off calendar. The timer turns the house light and then the sign off. The moth goes to the one light left, the terms line, and the frame dips to black as the sound ends.
+- **Strengths:** the most in-world of the five, and the arithmetic is real.
+- **Weaknesses:**
+  - The terms and pointer need 8.2 s and get 7.67 s.
+  - The board's wording departs from §1.1, and opening on 35 departs from §4.
+  - Real credits on a parody company's wall is still a legal question.
+  - It leaves Mas's point of view every week.
+  - The count must be right at every lock.
+  - Its moth is copied from E's.
+
+**D · The curve (11.25 s).**
+- **What it is:** the line on Mas's monitor lights up, the room dissolves around it, and the camera pushes in on the line alone to the full-frame chart. The title and the two human credits sit on the flat line. The picture, voices and AI-tools plates pop on the leap's notes. An empty post box rises at the top of the curve, with the moth settled inside it. Everything dithers to black, leaving only the caret, with the intro's first sound.
+- **Strengths:** it keeps all six credit fields in full, and the terms and pointer are up longest (9.17 s). It's the fullest statement of the theme and the most cinematic.
+- **Weaknesses:**
+  - The leap is crowded, with a new card every 0.6 s.
+  - The type is small on a phone (about 5–6 px native).
+  - The same stacking will wear by week three.
+  - The final caret sits at (308,30), not the intro's (96,76), so the loop cuts in off-axis.
+  - It's still the most expensive week to week.
+
+**E · File closed (7.5 s; Ep1 8.17 s).**
+- **What it is:** the episode's own file (`ep1.0_research_preview.md`, raw markdown) in a window sized to it and centred. The credits are a `---` front-matter block, whole from the cut. The terms and pointer sit on the desktop's bottom line, outside the window. His pointer clicks the close box, and the window collapses to its centre. In Ep1 the moth comes in with the click and lands beside the final period, then nothing moves for 1.29 s.
+- **Strengths:** the shortest, tied with B, and the clearest legal placement.
+- **Weaknesses:**
+  - The credits block (174 characters) gets 6.25 s and needs about 10.9 s, so it's skimmed, not read.
+  - Apart from the caret, the hold is fully still for 5.3 s.
+  - There's no Mas.
+  - The second polish dropped the loop cursor, so only the sound loops to the intro now.
+  - The weekly file-type variation is proven only in stills (Ep3 `.jpg` EXIF, Ep10 `.yaml`).
+
+### What the mock-ups taught (all five)
+
+1. **The §1.1 text package doesn't fit in 6–15 s.** Every builder but D cut the credit words on screen:
+   - A to three rows, 13 words;
+   - B to two toast lines;
+   - C to three big lines;
+   - E to shorter values.
+
+   D kept all six fields by staggering them across 9 s. **Needs the showrunner and legal:** a short on-screen credit set, with the long forms in the description beside the full notice. This file proposes A's: `created by (creator)` · `made in code, with AI tools` · `voices synthetic, none cloned`.
+2. **Nobody reads everything once, and that's acceptable only if the terms are read.**
+   - The terms plus the pointer are 131 characters, about 8.2 s at 16 cps.
+   - Only D (9.17 s) and B's Ep1 (10 s) hold them that long. E's Ep1 (8.17 s) is at the line. C (7.67 s) and the 7.5 s plain weeks of B and E fall short.
+   - A paces them as two separate beats, both long enough on their own.
+   - The ≥ 5 s rule on the terms line alone passes everywhere.
+   - Holding the band 0.5–0.7 s longer would fix C and a plain week of B or E.
+3. **The loop to the intro is weaker than planned.**
+   - Only A closes on the intro's loop cursor.
+   - D's caret is off-axis.
+   - E loops by sound only.
+   - B and C don't loop.
+4. **Legal placement splits them.**
+   - B, D and E keep the terms on plain, non-diegetic interface.
+   - A puts them on Mas's monitor.
+   - C puts real credits on NopeAI's wall.
+5. **Five different moths.** Pick one when a proposal is chosen.
+6. **Still open in every one:**
+   - Nobody has heard any mix.
+   - The stand-ins aren't Ep1's real button.
+   - `(creator)` is a placeholder.
+   - The Ep10 rungs are stills, not motion.
+   - The costs in §7 are still estimates; the mock-ups weren't timed.
+
+---
+
 ## 8. Recommendation
+
+**After the mock-ups (2026-09-27): E still, with a fix, and no clear runner-up.** E is still the shortest (7.5 s, tied with B), the clearest legal read (the terms sit outside the window and are the last thing on screen), and the cheapest week to week.
+
+The build weakened two of the reasons below:
+- **The loop (reason 7):** it's now sound only.
+- **The weekly variation (reason 2):** it's still unproven in motion.
+
+The build also showed a fix E needs before it's final: its credits block is too long to read. Use the short credit set (§7a, point 1) and hold the band to about 8.2 s.
+
+**For warmth at the same length:** B is the candidate, but its plain week has the tightest reading time of the five and its style notes are open. Grafting B's verdict onto E from Ep6 (≈ 8.75 s) is still worth trying.
+
+**For Mas in the last shot:** A is the one, but it's now the longest of the five (11.875 s) and identical every week.
+
+The deciding test is still the showrunner's own viewing of `outro-compare.mp4`. The notes below are the original reasoning, kept for the record.
+
+**The original recommendation (2026-09-26, before the mock-ups):**
 
 **E, "file closed", as the weekly outro.** A, "the closing session", is the runner-up if the showrunner wants Mas in the last shot.
 
@@ -598,3 +725,25 @@ The costs follow [production-estimates](../format/production-estimates.md) (≈ 
 - **Estimated:** every cost figure (from production-estimates rates) and every read time (≈ 16 characters a second).
 - **Still needs a human:** the showrunner's pick, the credit line, legal review, and the OST owner's colours.
 - **Not touched:** the intro, the pacing model, the OST bible, the overview's legal text and SHOWRUNNER-NOTES. Whichever proposal is chosen updates pacing-model §3.1's credits row (0:43 → the chosen length), overview §8's end-credits paragraph, OST MM-15's lengths and Ep1's script's END CREDITS heading.
+
+**The comparison pass (r2, 2026-09-27).**
+- **What it made:**
+  - §7a.
+  - The update at the head of §8.
+  - The notes at the top of the file and of §0.
+  - A re-cut of `out/lookdev/outro/outro-compare.mp4` and `outro-compare-sheet.png` from the five second-polish mock-ups.
+- **The tool:** `studio/src/dev/outro/_compare/reel.py`. Its `PROPOSALS` table holds each proposal's built timing, taken from the builders' `timeline.ts` files.
+- **Re-run it, from the repo root:**
+  1. Render B's Ep10 frame once into your scratch folder: `(cd studio && ../ops/heavy.sh npx remotion still src/dev/outro/b/entry.tsx outro-b-stills <scratch>/b-ep10-o140.png --frame=1 --bundle-cache=false --log=error)`.
+  2. Then run `ops/heavy.sh audio/.venv-mix/bin/python studio/src/dev/outro/_compare/reel.py <scratch>` in the background and poll it.
+- **What the script checks:**
+  - Each clip's frame count against the table.
+  - The reel's frame count.
+  - The encoded reel against each source at its key frames.
+  - The loudness of each clip, in its source and in the reel.
+- **Measured on r2:**
+  - The reel is 1,681 frames (70.04 s) at 1920×1080, 24 fps, with AAC stereo audio.
+  - At every checked frame it matches its sources within a mean of 0.51 levels, and the 99.9th percentile is 8 levels or less.
+  - Each clip's loudness is unchanged in the reel. The whole reel is −16.6 LUFS, −1.0 dBTP.
+- **Deliberately not re-drawn:** the brief-time strip `outro-proposals-timeline.png`. It shows the plan, and the sheet's top panel shows what was built.
+- **Still stale:** §2–§6, §7 and §9 give the briefs' lengths and beats, not the built ones. §7a says what changed.

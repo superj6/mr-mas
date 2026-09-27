@@ -1,20 +1,20 @@
 // MR. MAS — outro E, "file closed": the mock-up as ONE pure draw function per frame (runs in Remotion and in the
 // Node preview). Frame m of the composition (o = m - 24):
 //   m0-23     STAND-IN for the episode's last frame: the cold open's dark-room MEDIUM (drawMedium f56-62 cycle)
-//   o0-149    the file window, full frame, scrolled to its end; the credits block lights one line per knee note
-//             (o0-55); the caret appears on 2.1 (o60) and blinks on the beat; the terms + the pointer line on the
-//             desktop's bottom line, outside the window, from o0
+//   o0-149    the file window (sized to its file, centred), scrolled to its end, the credits block whole from the cut;
+//             the file's caret blinks on the beat; the terms + the pointer line on the desktop's bottom line, outside
+//             the window, from o0
 //   o128-141  the pointer travels in from frame-right to the close box (on 2s, ease-out); hover o142-147, press o148-149
-//   o150-157  3.3 click; the window closes in 4 whole-pixel drawings toward the loop cursor: rows, line, dot, gone
-//   o158-179  the black desktop: the loop cursor blinks on the beat (first on at o165), the terms line stays. The
-//             outro ends o179 (every week)
-//   o152-199  Ep1 only: the moth arrives with the collapsing light and lands on the terms line's period on 4.1 (o180)
+//   o150-156  3.3 click; the window closes in 4 whole-pixel drawings to its own centre: rows, line, dot, ember
+//   o157-179  the black desktop, nothing on it but the terms line (no loop cursor: polish pass 2). The outro ends o179
+//   o150-195  Ep1 only: the moth comes in with the click, lands beside the terms line's period on 3.4 (o165) and is
+//             still from then to the end (o195 = 4.2)
 import {Buf, W, H} from '../../../shared/pixel/px';
 import {PAL} from '../../../shared/pixel/palette';
 import {drawMedium} from '../../mcoldopen/medium';
 import {drawPointer} from '../../mfinale/callart';
-import {PRE, EV, OUTRO, KNEE, toO, blinkOn} from './timeline';
-import {drawEp1Window, drawTerms, drawSlug, drawStandinSlug, drawClose, drawEmber, drawCursor, CLOSE_AIM, ChromeState} from './window';
+import {PRE, EV, OUTRO, toO, blinkOn} from './timeline';
+import {drawEp1Window, drawTerms, drawSlug, drawStandinSlug, drawClose, drawEmber, CLOSE_AIM, ChromeState} from './window';
 import {drawMoth, drawMothLanded} from './moth';
 import {drawEp3, drawEp10} from './variants';
 
@@ -47,23 +47,18 @@ const atClick = () => {
   return (clickFrame = b);
 };
 
-/** how many of the credits block's 8 lines the knee has lit by outro frame o */
-export const litAt = (o: number) => KNEE.filter((k) => o >= k).length;
-
 /** the outro proper + (Ep1) the moth, at outro frame o (0..EV.end) */
 export const drawOutro = (fb: Buf, o: number, opts: OutroOpts = {}) => {
   fb.c.fill(PAL.N0);
   const c = EV.close;
   if (o < EV.click) {
-    drawEp1Window(fb, chromeAt(o), o >= EV.caret && blinkOn(o), litAt(o));
+    drawEp1Window(fb, chromeAt(o), o >= EV.caret && blinkOn(o));
     const p = pointerAt(o);
     if (p) drawPointer(fb, p[0], p[1], chromeAt(o).press);
   } else if (o < c.gone) {
     drawClose(fb, atClick(), o < c.line ? 0 : o < c.dot ? 1 : 2);
   } else if (o === c.gone) {
     drawEmber(fb);
-  } else if (o >= EV.desktop && blinkOn(o)) {
-    drawCursor(fb);
   }
   // the desktop's bottom line: up from o0 to the end, never moved, never covered
   drawTerms(fb);
@@ -71,7 +66,7 @@ export const drawOutro = (fb: Buf, o: number, opts: OutroOpts = {}) => {
   if (opts.slug) drawSlug(fb);
 };
 
-/** the whole mock-up, at composition frame m: Ep1 (sting on) runs to o199, a plain week to o179 */
+/** the whole mock-up, at composition frame m: Ep1 (sting on) runs to o195, a plain week to o179 */
 export const drawMockup = (fb: Buf, m: number, opts: OutroOpts = {}) => {
   if (m < PRE) {
     // the stand-in: the cold open's dark-room medium, its f56-62 drawings cycled so the rack and the city live
@@ -92,10 +87,9 @@ export const drawVariant = (fb: Buf, ep: 1 | 3 | 10, opts: OutroOpts = {}) => {
   if (opts.slug) drawSlug(fb);
 };
 
-/** a still of the final state (the desktop, the cursor on, the moth landed) */
+/** a still of the final state (the black desktop, the terms line, the moth landed) */
 export const drawEndState = (fb: Buf, opts: OutroOpts = {}) => {
   fb.c.fill(PAL.N0);
-  drawCursor(fb);
   drawTerms(fb);
   drawMothLanded(fb);
   if (opts.slug) drawSlug(fb);

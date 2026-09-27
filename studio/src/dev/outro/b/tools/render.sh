@@ -15,8 +15,15 @@ fp() { LD_LIBRARY_PATH="$FFD" "$FFD/ffprobe" -v error "$@"; }
 PY=$R/audio/.venv-theme/bin/python
 export PYTHONDONTWRITEBYTECODE=1
 mkdir -p "$OUT"
+# Some outputs may be hard-linked from elsewhere (another agent's snapshot of the tree). Give each of B's outputs its
+# own inode first, so the writes below replace only B's files and never a copy someone else is holding.
+for f in "$R/out/lookdev/outro/outro-b.mp4" $(find "$OUT" -type f); do
+  if [ "$(stat -c %h "$f")" -gt 1 ]; then cp -p "$f" "$f.unlink.$$" && mv -f "$f.unlink.$$" "$f"; fi
+done
+# superseded outputs of earlier passes (pass 5 renumbered the key stills chronologically: key3 is the lamp now)
+rm -f "$OUT/outro-b-key3-moth.png"
 
-echo "== 1/7 picture (Remotion, 222 f, 1080p)"
+echo "== 1/7 picture (Remotion, 282 f, 1080p)"
 (cd "$R/studio" && npx remotion render src/dev/outro/b/entry.tsx outro-b-ep1 "$SC/outro-b-silent.mp4" \
   --concurrency=4 --crf=12 --bundle-cache=false --log=error)
 
@@ -34,7 +41,7 @@ echo "== 4/7 the designed sound and the mix"
 echo "== 5/7 mux (video stream copy + AAC 256k)"
 ff -y -i "$SC/outro-b-silent.mp4" -i "$OUT/outro-b-mix.wav" -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -b:a 256k -ar 48000 \
   -shortest -metadata title="MR. MAS outro proposal B (the Orb's verdict), Ep1 mock-up, lookdev" \
-  -metadata comment="Visual outline for comparison, not a final. 1 s stand-in (Ep1's last shot is not built), the 7.5 s outro with Ep1's moth stinger inside it, 0.75 s of black. Temp music (OST engine) + designed SFX. On-screen legal text: draft, legal review pending. (creator) = the credit line, TBD." \
+  -metadata comment="Visual outline for comparison, not a final. 1 s stand-in (Ep1's last shot is not built), then Ep1's outro: 10 s (a plain week's 7.5 s + one bar for the moth stinger, the Orb on screen throughout), then 0.75 s of black. Temp music (OST engine) + designed SFX. On-screen legal text: draft, legal review pending. (creator) = the credit line, TBD." \
   -movflags +faststart "$OUT/outro-b-ep1-1080p.mp4"
 ln -f "$OUT/outro-b-ep1-1080p.mp4" "$R/out/lookdev/outro/outro-b.mp4"
 
@@ -43,10 +50,11 @@ rm -rf "$SC/dec" && mkdir -p "$SC/dec" "$SC/native"
 ff -i "$OUT/outro-b-ep1-1080p.mp4" -map 0:v:0 "$SC/dec/%04d.png"
 (cd "$R/studio" && node_modules/.bin/esbuild src/dev/outro/b/tools/preview.ts --bundle --platform=node \
   --outfile="$SC/pv.js" --log-level=warning)
-node "$SC/pv.js" "$SC/native" 1 1 12,74,158,200 >/dev/null
+node "$SC/pv.js" "$SC/native" 1 1 12,74,152,244 >/dev/null
 for e in 1 6 10; do node "$SC/pv.js" "$SC" 1 $e check; done
 
 echo "== 7/7 stills, sheets, readability QA (from the encoded mp4)"
+rm -f "$OUT"/qa/frame-480x270-o*.png   # the QA frame list changes between passes: no stale frames
 "$PY" "$R/studio/src/dev/outro/b/tools/sheets.py" "$SC" | head -2
 
 fp -show_entries stream=codec_name,width,height,nb_frames,pix_fmt,r_frame_rate,sample_rate,channels:format=duration \

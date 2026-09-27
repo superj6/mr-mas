@@ -62,6 +62,11 @@
 
 ## Production handoffs and hygiene (from the lead, not showrunner notes)
 
+- **DON'T COOK THE LAPTOP (showrunner, 2026-09-27): "try not to cook/freeze my laptop, i think that is what killed the session last".** This machine is a laptop (14 threads, 30 GB RAM, 8 GB swap), and another project's processes already use about 3 cores.
+  - **Run every heavy command through `ops/heavy.sh`:** Remotion renders and stills of more than a few frames, Kokoro/fastrec recording, OST engine builds, Blender, and long ffmpeg encodes. It lets at most two heavy jobs run at once machine-wide (the showrunner freed the other project's cores on 2026-09-27), waits for memory, swap and load headroom, and runs at low priority. Example: `ops/heavy.sh npx remotion render ... --concurrency=4`.
+  - **Caps inside heavy jobs:** Remotion `--concurrency=4` at most, fastrec `--workers 2`, `OST_WORKERS=2`.
+  - **Waiting:** a heavy job can wait a long time for the lock, so start it with the Bash tool's background mode (or `nohup ... &`) and poll its log. Never hold a foreground command for more than a few minutes.
+  - Never start more than one heavy command at once in your own work. The lead runs about 4–5 passes at a time.
 - **Keep files organized (showrunner, 2026-09-26):** "let's try to keep files organized, they are a bit all over the place."
   - New outputs go in the layout in `docs/ORGANIZATION-PLAN.md` once it's adopted. Until then, don't create new top-level output folders; put work beside its episode or area.
 - **Documentation for a successor (showrunner, 2026-09-26):** "as far as documentation, we want to be sure that we are leaving appropriate detail where someone could pick up where we left off."

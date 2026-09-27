@@ -1,15 +1,28 @@
-// MR. MAS — outro A: the text package (OUTRO-PROPOSALS §1.1, exact), per-episode values, and the type tools.
-// The words below are the brief's, character for character. The pane only adds layout: the credit labels and
-// values are set in two columns (the same words, padded with spaces) and a terminal prompt `>` ends the log.
-// Polish pass: the header no longer repeats the filename (the title bar carries it), so the pane is 28 characters
-// shorter; the terms line and the pointer moved off his monitor into THE BAND (pane.ts drawBand).
+// MR. MAS — outro A: the text package, per-episode values, and the type tools.
+// Second polish pass (cold read 2): ONE block, ONE face. The terms line and the pointer are no longer a second
+// block in the band under the picture: they are the log's last lines, set in the same fixed-width face as the
+// credits, under a dotted rule, and the credit lines are cut to under half their words (32 -> 13). The terms line
+// keeps the brief's words exactly (OUTRO-PROPOSALS §1.1); it is set on two rows because 87 fixed-width cells don't
+// fit the frame. The long forms of the credits move to the description with the full notice.
+//   §1.1 field            §1.1 Ep1 value (the long form, now in the description)          on screen now
+//   Title                 MR. MAS · ep1.0_research_preview.md                              the title bar (unchanged)
+//   Created by            (creator)                                                       created by  (creator)
+//   Written               (creator), with AI                                              } made  in code, with AI tools
+//   Picture · music       pixel art and original score, rendered in code                   }
+//   AI tools              used throughout · listed in the notice                            }
+//   Voices                synthetic, designed from text · none cloned                     voices  synthetic, none cloned
+// The AI-tool disclosure is still the last two credit rows (`made`, `voices`), and it is still exact per episode:
+// the `made` row is the one that changes when an outside layer ships (a video-model plate, a Blender object).
 import {Buf, rect} from '../../../shared/pixel/px';
 import {text, textWidth} from '../../../shared/pixel/font';
 
-/** One line, the same all season (never animated, never covered, never a gag, never on an in-world surface: it
- *  lives in the band, the show's own UI strip under the picture). */
+/** One line, the same all season (never animated, never covered, never a gag). The pane prints it whole, at
+ *  once, never types it; it sets it on two fixed-width rows (TERMS_ROWS), which join back to exactly this. */
 export const TERMS = 'A parody. Events dramatized, scenes invented. No one depicted took part or endorsed it.';
+export const TERMS_ROWS = ['A parody. Events dramatized, scenes invented.', 'No one depicted took part or endorsed it.'] as const;
 export const POINTER = 'Full notice and sources: in the description.';
+/** the legal block as the log prints it: the terms (2 rows), then the pointer */
+export const LEGAL_ROWS = [...TERMS_ROWS, POINTER];
 /** lookdev renders only */
 export const SLUG = 'LEGAL TEXT: DRAFT';
 
@@ -18,28 +31,32 @@ export interface EpText {
   file: string;
   /** the Title credit: MR. MAS · the episode's filename (the pane's title bar) */
   title: string;
-  /** the log's first line: `session closed` and the episode's last rail date (the filename is in the title bar) */
+  /** the log's first line */
   header: string;
-  /** [label, value] in order: created by, written, picture · music, voices, AI tools */
+  /** the episode's last rail date, set flush right on the header row (none when the rail is undated) */
+  date?: string;
+  /** [label, value] in order: created by, made, voices (the last two are the AI-tool disclosure) */
   credits: Array<[string, string]>;
   /** Ep10+: a line the machine adds itself, ticked by itself */
   extra?: [string, string];
+  /** the red clock on his shelf in the room shot (per episode: the hour the session closed) */
+  clock: string;
 }
 
 const credits = (): Array<[string, string]> => [
   ['created by', '(creator)'],
-  ['written:', '(creator), with AI'],
-  ['picture · music:', 'pixel art and original score, rendered in code'],
-  ['voices:', 'synthetic, designed from text · none cloned'],
-  ['AI tools:', 'used throughout · listed in the notice'],
+  ['made', 'in code, with AI tools'],
+  ['voices', 'synthetic, none cloned'],
 ];
 
 export const EP1: EpText = {
   ep: 1,
   file: 'ep1.0_research_preview.md',
   title: 'MR. MAS · ep1.0_research_preview.md',
-  header: 'session closed · DEC 27, 2023',
+  header: 'session closed',
+  date: 'DEC 27, 2023',
   credits: credits(),
+  clock: '1:36', // the cold open's own time
 };
 /** Ep6 (BASE UI skin). Date = the episode's span end (outline: Sep 1 -> Dec 31, 2025); a placeholder until its
  *  last rail date is locked. The credits deltas (§1.1) are unknown yet, so the Ep1 values stand in. */
@@ -47,8 +64,10 @@ export const EP6: EpText = {
   ep: 6,
   file: 'ep1.5_backstop.xlsx',
   title: 'MR. MAS · ep1.5_backstop.xlsx',
-  header: 'session closed · DEC 31, 2025',
+  header: 'session closed',
+  date: 'DEC 31, 2025',
   credits: credits(),
+  clock: '2:48', // placeholder
 };
 /** Ep10: extrapolated; its rail is undated (ep10 outline), so the header carries no date. The machine types the
  *  log and adds a line of its own. */
@@ -58,14 +77,15 @@ export const EP10: EpText = {
   title: 'MR. MAS · ep1.9_pace.yaml',
   header: 'session closed',
   credits: credits(),
-  extra: ['reviewed by:', 'a human'],
+  extra: ['reviewed by', 'a human'],
+  clock: '4:07', // placeholder
 };
 
 // ------------------------------------------------------------------ fixed-width setting of the shared 7-px face
 /** the pane's monospace cell: every glyph centred in 6 px (the widest glyphs are 5) */
 export const CELL = 6;
-/** the value column (in cells): `picture · music: ` is 17 characters */
-export const COL = 17;
+/** the value column (in cells): `created by` + 2 spaces */
+export const COL = 12;
 
 /**
  * Terminal forms of the narrow letters (local, the shared face is untouched): slab-serifed i, l, r, t and f fill their

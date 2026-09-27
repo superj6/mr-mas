@@ -5,24 +5,28 @@ writes only to out/lookdev/outro/a/ (and a copy of the mp4 to out/lookdev/outro/
   0. LAYOUT the timeline, typing schedule, text boxes and the moth's path come from the scene's own modules
            (tools/preview.ts `layout` -> <scratch>/eng1x/layout.json); nothing below restates them by hand
   1. MIX   the temp music (audio/track.py; its first 0.25 s trimmed so the file starts with the 24-frame stand-in)
-           + the designed sound (below), 9.75 s = 234 frames. Music stays at its own -16 LUFS master; SFX sit under it.
+           + the designed sound (below), 12.875 s = 309 frames. Music stays at its own -16 LUFS master; SFX sit under it.
   2. MUX   silent picture + mix -> outro-a-ep1-1080p.mp4 (Remotion's bundled ffmpeg, h264 copy + AAC 256k)
   3. STILLS the 3 key stills, the 6-frame keyframes sheet (numbered, with a to-scale outline strip that also shows the
-           12.5 s cut it replaces), the variants sheet (Ep6, Ep10 pane, Ep10 keyboard insert); pixels from the engine
+           8.75 s cut it replaces and where a first-time reader is), the variants sheet; pixels from the engine
   4. QA    frames decoded from the ENCODED mp4, at 1920x1080 and at 480x270 (area-averaged), compared against the
-           engine's native frame inside every text box; per-line read times; audio levels -> outro-a-qa.json
+           engine's native frame inside every text box; per-line read times; the whole card read in one pass (a
+           simulated reader at 15/20/25 characters a second and at 4 words a second); audio levels -> outro-a-qa.json
 
 Designed sound (all from audio/sfx/wav, read-only, except the synthesized moth and ticks):
-  o0-o149    server_hum as a whisper (-32 dB): we are at his monitor, in his room, before we know it
+  o0-o224    server_hum as a whisper (-32 dB): we are at his monitor, in his room, before we know it
   o3         dialog_ok_click--chip: the 1-bit pane opens
-  o7         key_tap_space: the header prints at once (a return)
-  o10-o66    key_tap_soft_01..06 round-robin, one per typing frame (the log types 4 characters a frame, straight)
-  o150-151   the pull-back: two very quiet 1-bit ticks (the LCD rows)
-  o150-o209  room_drone (F1+C2, the open fifth) and server_hum (-24 dB) come up with the room (3-frame fade in)
-  o170       dialog_ok_click (the plain one, -36 dB): the session window closes
-  o156-o189  the moth: band-passed noise, one soft stroke per 2-frame drawing, panned with its flight
-  o190       its touch-down (20 ms), a wing fold at o193; o192 the Orb's servo, very low, as its iris opens a touch
-  o180       the music's felt F5 + chip F6 glint as the cursor comes on (in the music, not here)
+  o6         key_tap_space: the header prints at once (a return)
+  o9-o69     key_tap_soft_01..06 round-robin, one per typing frame (the credits type 2 characters a frame, straight)
+  o85        the terms print whole: two quick 1-bit ticks (one per row)
+  o145       the pointer prints: one tick, then the prompt's return (key_tap_space)
+  o225-226   the pull-back: two very quiet 1-bit ticks (the LCD rows)
+  o225-o284  room_drone (F1+C2, the open fifth) and server_hum (-24 dB) come up with the room (3-frame fade in) and
+             go down with the lights (o272-o284)
+  o252       dialog_ok_click (the plain one, -36 dB): the session window closes
+  o231-o264  the moth: band-passed noise, one soft stroke per 2-frame drawing, panned with its flight
+  o265       its touch-down (20 ms), a wing fold at o268; o267 the Orb's servo, very low, as its iris opens a touch
+  o255       the music's felt F5 + chip F6 glint as the cursor comes on (in the music, not here)
 
 Run (repo root), after the picture render and the music render (see entry.tsx's header):
   audio/.venv-theme/bin/python studio/src/dev/outro/a/tools/build.py --scratch <scratch>
@@ -163,14 +167,15 @@ def mix(scratch):
     cues = []
     pull, end = O('pull'), O('end')
 
+    fade0 = O('fade')
     hum = loop_to(load('server_hum'), n) * ramp(n, [(-PRE, None), (0, None), (3, -32), (pull - 1, -32), (pull + 2, -24),
-                                                    (end - 12, -25), (end, None), (OUT, None)])
+                                                    (fade0, -25), (end, None), (OUT, None)])
     sfx += hum
     cues.append(('server_hum', f'o0-o{pull - 1} at -32 dB (a whisper under the insert), -24 dB in the room', -24))
-    drone = loop_to(load('room_drone'), n) * ramp(n, [(-PRE, None), (pull - 1, None), (pull + 2, -12), (end - 16, -13),
+    drone = loop_to(load('room_drone'), n) * ramp(n, [(-PRE, None), (pull - 1, None), (pull + 2, -12), (fade0, -13),
                                                       (end, None), (OUT, None)])
     sfx += drone
-    cues.append(('room_drone', f'o{pull}-o{end} (3-frame fade in on the pull-back, out by o{end})', -12))
+    cues.append(('room_drone', f'o{pull}-o{end} (3-frame fade in on the pull-back; down with the lights o{fade0}-o{end})', -12))
     place(sfx, load('dialog_ok_click--chip'), fr(O('paneUp')), -30)
     cues.append(('dialog_ok_click--chip', f"o{O('paneUp')} the pane opens", -30))
     place(sfx, load('key_tap_space'), fr(O('header')), -31)
@@ -183,6 +188,13 @@ def mix(scratch):
             k += 1
     cues.append(('key_tap_soft_01..06', f"{k} taps, one per typing frame o{L['typing'][0][0]}-o{L['typing'][-1][1]} "
                  '(peaks <= -30 dBFS)', -32.5))
+    lg, pt = O('legal'), O('pointer')
+    for j in range(2):   # the terms print whole: one 1-bit tick per row, 25 ms apart
+        place(sfx, tick(rng, 7), fr(lg) + int(0.025 * SR * j), -37 - 1.5 * j)
+    place(sfx, tick(rng, 7), fr(pt), -37.5)   # the pointer's row, then the prompt's return
+    place(sfx, load('key_tap_space'), fr(pt) + int(0.05 * SR), -34)
+    cues.append(('print ticks (synth)', f'o{lg} the terms print whole (2 row ticks)', -37))
+    cues.append(('print tick (synth) + key_tap_space', f'o{pt} the pointer prints, then the prompt (the return)', -34))
     for j, o in enumerate((pull, pull + 1)):
         place(sfx, tick(rng, 6), fr(o), -40 - 3 * j)
     cues.append(('lcd ticks (synth)', f'o{pull}-o{pull + 1} the pull-back', -40))
@@ -216,9 +228,12 @@ def mix(scratch):
     def st_db(o0, o1):
         seg = m[fr(o0):fr(o1)]
         return round(float(10 * np.log10(np.mean(seg ** 2) + 1e-12)), 1)
-    lv['music_rms_db_at'] = {'o60-119 (the log holds)': st_db(60, 120), 'o120-149 (the chord)': st_db(120, 150),
-                             'o150-179 (the pull-back, the close)': st_db(150, 180),
-                             'o180-209 (the cursor, the moth)': st_db(180, 210)}
+    lv['music_rms_db_at'] = {'o0-59 (the knee; the credits type)': st_db(0, 60),
+                             'o60-119 (the answer; the terms print)': st_db(60, 120),
+                             'o120-179 (the chord; the log holds)': st_db(120, 180),
+                             "o180-224 (the title's stack; the log holds)": st_db(180, 225),
+                             'o225-254 (home; the pull-back, the room)': st_db(225, 255),
+                             'o255-284 (the cursor, the moth, black)': st_db(255, 285)}
     os.makedirs(OUTD, exist_ok=True)
     sf.write(f'{OUTD}/outro-a-ep1-mix.wav', mixb, SR, subtype='PCM_24')
     sf.write(f'{OUTD}/outro-a-ep1-temp-music.wav', m, SR, subtype='PCM_24')
@@ -264,19 +279,54 @@ def decode_frame(mp4, f, out_png, size=None):
 
 # ---------------------------------------------------------------- read times
 def read_times():
-    """per-line read time at 15 cps (from the frame a line is complete to the frame it leaves), and the pane in one pass"""
-    rows, total = [], 0
+    """per-line read time at 15 cps (from the frame a line is complete to the frame it leaves)"""
+    rows = []
     for b in L['boxes']:
         on_s = (b['o1'] + 1 - b['o0']) / FPS
         need = len(b['text']) / CPS_READ
-        total += len(b['text'])
-        rows.append(dict(line=b['name'], chars=len(b['text']), from_o=b['o0'], on_screen_s=round(on_s, 2),
+        rows.append(dict(line=b['name'], kind=b['kind'], chars=len(b['text']), words=len(b['text'].split()),
+                         from_o=b['from'], complete_o=b['o0'], on_screen_s=round(on_s, 2),
                          read_s_at_15cps=round(need, 2), ok=on_s >= need, margin_s=round(on_s - need, 2)))
-    up = (L['TERMS_ON'][1] + 1 - L['TERMS_ON'][0]) / FPS
-    return rows, dict(total_chars=total, text_up_s=round(up, 2), whole_read_s_at_15cps=round(total / CPS_READ, 1),
-                      readable_in_one_pass=total / CPS_READ <= up,
-                      typing_done_o=L['typing'][-1][1],
-                      hold_after_typing_s=round((L['TERMS_ON'][1] - L['typing'][-1][1]) / FPS, 2))
+    return rows
+
+
+def one_pass(cps=None, wps=None, glance=True):
+    """A first-time reader reads the card top to bottom, once. They can start a line from its first visible
+    character (the typing is faster than reading, so they never catch the typing head) and read at `cps`
+    characters a second (or `wps` words a second). glance=True: the title bar and the header are skimmed in 0.4 s
+    each; glance=False: they are read in full too. Returns where the reader is when the card leaves."""
+    t = None
+    path = []
+    for b in L['boxes']:
+        start = b['from'] if t is None else max(t, b['from'])
+        if b['kind'] == 'glance' and glance:
+            dur = 0.4 * FPS
+        elif cps:
+            dur = len(b['text']) / cps * FPS
+        else:
+            dur = len(b['text'].split()) / wps * FPS
+        t = start + dur
+        path.append((b['name'], round(start, 1), round(t, 1)))
+    # the pull-back's first two drawings (LCD rows, the bezel coming in 9 and 20 px) leave the pane's text intact:
+    # the card is readable until the room's first frame
+    leave = L['O']['room']
+    return dict(rate=f'{cps} cps' if cps else f'{wps} words/s', glance_title_header=glance,
+                reader_done_o=round(t, 1), card_readable_until_o=leave - 1, margin_s=round((leave - t) / FPS, 2),
+                one_pass_ok=t <= leave, path=path)
+
+
+def whole_text():
+    words = sum(len(b['text'].split()) for b in L['boxes'])
+    chars = sum(len(b['text']) for b in L['boxes'])
+    must = [b for b in L['boxes'] if b['kind'] == 'read']
+    return dict(total_words=words, total_chars=chars, must_read_words=sum(len(b['text'].split()) for b in must),
+                must_read_chars=sum(len(b['text']) for b in must), text_blocks_on_screen=1,
+                card_up_s=round((L['O']['pull'] - L['O']['paneFull']) / FPS, 2),
+                terms_up_s=round((L['TERMS_ON'][1] + 1 - L['TERMS_ON'][0]) / FPS, 2),
+                pointer_up_s=round((L['TERMS_ON'][1] + 1 - L['O']['pointer']) / FPS, 2),
+                typing_done_o=L['typing'][-1][1],
+                one_pass=[one_pass(cps=25), one_pass(cps=20), one_pass(cps=15), one_pass(wps=4.0),
+                          one_pass(cps=25, glance=False)])
 
 
 # ---------------------------------------------------------------- sheets
@@ -289,21 +339,22 @@ def bar_beat(o):
     return f'{b}.{beat}' + (f' +{k}f' if k else '')
 
 
-def keyframes_sheet(frames, eng_dir, dst):
-    """6 frames (numbered, 3 x 2) and under them a to-scale outline of the 210 frames, with the old 300-frame cut
+def keyframes_sheet(frames, eng_dir, dst, reader):
+    """6 frames (numbered, 3 x 2) and under them a to-scale outline of the 270 frames: picture, typing, the legal
+    block, where a first-time reader is (25 cps), the moth, the cursor, the music; and the 8.75 s cut it replaces,
     drawn underneath at the same scale for comparison"""
     OUT = L['OUT']
     tw, th = 640, 360
     pad, cap = 24, 58
     W = 3 * tw + 4 * pad
-    strip_h = 320
+    strip_h = 360
     H = 90 + 2 * (th + cap) + pad * 2 + strip_h
     im = Image.new('RGB', (W, H), (14, 15, 20))
     d = ImageDraw.Draw(im)
-    d.text((pad, 22), f'OUTRO A · the closing session · Ep1 · {OUT} frames, {OUT / FPS:.2f} s (3.5 bars at 96 BPM) · '
+    d.text((pad, 22), f'OUTRO A · the closing session · Ep1 · {OUT} frames, {OUT / FPS:.3g} s ({OUT / 60:g} bars at 96 BPM) · '
            'LOOKDEV MOCK-UP', font=font(26, True), fill=(233, 230, 218))
-    d.text((pad, 58), 'Frames are outro frames (o0 = first frame after the episode). Polish pass: one move outward, the '
-           'reveal once at the end. Legal text: DRAFT, review pending.', font=font(18), fill=(150, 156, 170))
+    d.text((pad, 58), 'Frames are outro frames (o0 = first frame after the episode). One block of text in one face, read '
+           'top to bottom once; one move outward. Legal text: DRAFT, review pending.', font=font(18), fill=(150, 156, 170))
     for k, (o, what) in enumerate(frames):
         x = pad + (k % 3) * (tw + pad)
         y = 90 + (k // 3) * (th + cap)
@@ -313,26 +364,32 @@ def keyframes_sheet(frames, eng_dir, dst):
         d.text((x + 10, y + 4), str(k + 1), font=font(26, True), fill=(10, 10, 12))
         d.text((x, y + th + 6), f'o{o} · {o / FPS:5.2f} s · bar {bar_beat(o)}', font=font(18, True), fill=(127, 230, 222))
         d.text((x, y + th + 30), what, font=font(18), fill=(233, 230, 218))
-    # the outline strip (to scale): 300 frames wide, so the old cut fits under the new one
+    # the outline strip (to scale): 300 frames wide
     y0 = 90 + 2 * (th + cap) + pad
     x0, x1 = pad + 190, W - pad
     sx = lambda o: x0 + (x1 - x0) * o / 300  # noqa: E731
     pull, close, curs, land = O('pull'), O('close'), O('cursorOn'), O('mothLand')
+    rd = [(a, b) for name, a, b in reader['path'] if name not in ('title bar', 'header')]
     lanes = [
-        ('picture', [(0, 3, '', (90, 96, 120)), (3, pull, 'INSERT · the session log (1-bit pane)', (200, 196, 180)),
+        ('picture', [(0, 3, '', (90, 96, 120)), (3, pull, 'INSERT · the session log (1-bit pane, one block)', (200, 196, 180)),
                      (pull, O('room') + 2, '', (90, 96, 120)), (O('room') + 2, close, 'ROOM', (54, 66, 110)),
-                     (close, close + 3, '', (40, 40, 44)), (close + 3, OUT, 'ROOM · dark', (34, 40, 70))]),
-        ('typing', [(O('header'), O('header') + 1, '', (127, 230, 222))] + [(s, e + 1, '', (127, 230, 222)) for s, e in L['typing']]),
-        ('the band', [(L['TERMS_ON'][0], L['TERMS_ON'][1] + 1,
-                       f"terms + pointer o{L['TERMS_ON'][0]}-o{L['TERMS_ON'][1]} = {(L['TERMS_ON'][1] + 1) / FPS:.2f} s, never moves",
-                       (233, 230, 218))]),
-        ('moth', [(O('mothIn'), land, 'flies in', (143, 138, 122)), (land, OUT, 'settled', (106, 84, 96))]),
+                     (close, close + 3, '', (40, 40, 44)), (close + 3, O('fade'), 'dark', (34, 40, 70)),
+                     (O('fade'), O('black'), '', (24, 28, 50)), (O('black'), OUT, '', (0, 0, 0))]),
+        ('typing', [(O('header'), O('header') + 1, '', (127, 230, 222))] + [(s_, e + 1, '', (127, 230, 222)) for s_, e in L['typing']]),
+        ('terms', [(L['TERMS_ON'][0], L['TERMS_ON'][1] + 1,
+                    f"the terms print whole o{L['TERMS_ON'][0]}, held to o{L['TERMS_ON'][1]} = "
+                    f"{(L['TERMS_ON'][1] + 1 - L['TERMS_ON'][0]) / FPS:.2f} s", (233, 230, 218))]),
+        ('pointer', [(O('pointer'), L['TERMS_ON'][1] + 1, f"o{O('pointer')}-o{L['TERMS_ON'][1]} = "
+                      f"{(L['TERMS_ON'][1] + 1 - O('pointer')) / FPS:.2f} s", (200, 196, 180))]),
+        ('reader 25 cps', [(a_, b_, '', (236, 147, 56) if i % 2 == 0 else (190, 110, 40)) for i, (a_, b_) in enumerate(rd)]
+         + [(rd[-1][1], rd[-1][1] + 1, '', (236, 74, 74))]),
+        ('moth', [(O('mothIn'), land, 'flies in', (143, 138, 122)), (land, O('black'), 'settled', (106, 84, 96))]),
         ('cursor', [(o, o + 8, '', (127, 230, 222)) for o in range(curs, O('lastBlink') + 1, 15)]),
         ('music', [(0, 60, 'THE KNEE, whole, swung', (236, 147, 56)), (60, 120, 'answer · F on 2.4', (150, 110, 70)),
-                   (120, 180, 'F-C-G, no third · low root 3.3', (110, 90, 70)), (180, OUT, 'f0 glint · drone', (70, 90, 150))]),
-        ('before (12.5 s)', [(0, 2, '', (90, 96, 120)), (2, 30, 'ROOM', (54, 66, 110)), (30, 33, '', (40, 40, 44)),
-                             (33, 240, 'INSERT · log + footer (4.3 s hold after typing)', (120, 116, 104)),
-                             (240, 300, 'ROOM · log out', (54, 66, 110))]),
+                   (120, 180, 'F-C-G, no third', (110, 90, 70)), (180, 225, "title's stack", (90, 80, 90)),
+                   (225, 255, 'home', (80, 80, 110)), (255, OUT, 'f0 glint', (70, 90, 150))]),
+        ('before (8.75 s)', [(0, 3, '', (90, 96, 120)), (3, 150, 'INSERT · log + a 2nd block in the band', (120, 116, 104)),
+                             (150, 210, 'ROOM', (54, 66, 110))]),
     ]
     lh = 36
     for i, (name, spans) in enumerate(lanes):
@@ -351,7 +408,9 @@ def keyframes_sheet(frames, eng_dir, dst):
         if big:
             d.text((sx(o) + 3, yy + 6), f'o{o} · bar {o // 60 + 1}' if o < 300 else 'o300', font=font(14), fill=(150, 156, 170))
     d.line([sx(OUT), y0 + 14, sx(OUT), yy - 6], fill=(236, 74, 74), width=2)
-    d.text((sx(OUT) + 6, y0 - 2), f'out o{OUT - 1} ({OUT / FPS:.2f} s)', font=font(15, True), fill=(236, 74, 74))
+    lab = f'out o{OUT - 1} ({OUT / FPS:.3g} s)'
+    lw = d.textlength(lab, font=font(15, True))
+    d.text((sx(OUT) + 6 if sx(OUT) + 6 + lw < W - 4 else sx(OUT) - 6 - lw, y0 - 2), lab, font=font(15, True), fill=(236, 74, 74))
     for k, (o, _) in enumerate(frames):
         d.text((sx(o) - 5, y0 - 2), str(k + 1), font=font(16, True), fill=(236, 74, 74))
     im.save(dst, optimize=True)
@@ -359,9 +418,9 @@ def keyframes_sheet(frames, eng_dir, dst):
 
 def variants_sheet(eng_dir, dst):
     items = [
-        ('var-ep1.png', 'Ep1 · 1-BIT terminal (the mock-up)', 'paper on black, fixed-width, block cursor; the band under it'),
+        ('var-ep1.png', 'Ep1 · 1-BIT terminal (the mock-up)', 'paper on black, fixed-width, block cursor; the legal block last'),
         ('var-ep6.png', 'Ep6 · BASE UI skin (ep1.5_backstop.xlsx)', "the Orb's toast family, proportional face"),
-        ('var-ep10.png', 'Ep10 · the machine types (ep1.9_pace.yaml)', 'it adds "reviewed by: a human" and ticks it itself'),
+        ('var-ep10.png', 'Ep10 · the machine types (ep1.9_pace.yaml)', 'it adds a "reviewed by  a human" line and ticks it itself'),
         ('var-ep10-keys.png', 'Ep10 · INSERT: the keys go down, no hands', 'H down, U 2/3, M 1/3: ahead of any typist'),
     ]
     tw, th, pad, cap = 800, 450, 24, 64
@@ -369,7 +428,7 @@ def variants_sheet(eng_dir, dst):
     H = 80 + 2 * (th + cap) + pad
     im = Image.new('RGB', (W, H), (14, 15, 20))
     d = ImageDraw.Draw(im)
-    d.text((pad, 22), 'OUTRO A · the pane matures across the season (the band never changes)',
+    d.text((pad, 22), "OUTRO A · the pane matures across the season (the legal block's words never change)",
            font=font(26, True), fill=(233, 230, 218))
     for k, (f, t1, t2) in enumerate(items):
         x = pad + (k % 2) * (tw + pad)
@@ -381,7 +440,7 @@ def variants_sheet(eng_dir, dst):
 
 
 # ---------------------------------------------------------------- QA on the encoded mp4
-PROBE_OS = [20, 50, 80, 120, 149]
+PROBE_OS = [30, 60, 100, 150, 219]
 
 
 def qa_frames(scratch, mp4, eng_dir):
@@ -408,10 +467,10 @@ def qa_frames(scratch, mp4, eng_dir):
             lo, hi = np.percentile(lum, 5), np.percentile(lum, 95)
             checks.append(dict(o=o, line=b['name'], max_err_1080=int(ef.max()), max_err_480=int(es.max()),
                                px_off_by_gt_24_480=int((es > 24).sum()), text_contrast_480=round(float(hi - lo), 1)))
-    # QA crops for eyes: the pane + band at 1080p, the whole frame at 480x270 shown at 2x, the end at 480x270
-    Image.open(f'{qd}/mp4-o120-1080.png').crop((0, 120, 1920, 1080)).save(f'{qd}/crop-o120-pane-band-1080.png')
-    Image.open(f'{qd}/mp4-o120-480.png').resize((960, 540), Image.NEAREST).save(f'{qd}/view-o120-480-at2x.png')
-    for o in (162, 198):
+    # QA crops for eyes: the pane at 1080p, the whole frame at 480x270 shown at 2x, the room frames at 480x270
+    Image.open(f'{qd}/mp4-o150-1080.png').crop((360, 200, 1560, 900)).save(f'{qd}/crop-o150-pane-1080.png')
+    Image.open(f'{qd}/mp4-o150-480.png').resize((960, 540), Image.NEAREST).save(f'{qd}/view-o150-480-at2x.png')
+    for o in [k['o'] for k in L['KEY_STILLS'][1:]]:
         decode_frame(mp4, L['PRE'] + o, f'{qd}/mp4-o{o}-480.png', (480, 270)).resize((960, 540), Image.NEAREST) \
             .save(f'{qd}/view-o{o}-480-at2x.png')
     return checks
@@ -429,7 +488,7 @@ def main():
     engine(S, eng1, 1, ['layout'])
     L = json.load(open(f'{eng1}/layout.json'))
     report = {'length': dict(frames=L['OUT'], seconds=L['OUT'] / FPS, mockup_frames=L['PRE'] + L['OUT'],
-                             mockup_seconds=(L['PRE'] + L['OUT']) / FPS, was_seconds=12.5)}
+                             mockup_seconds=(L['PRE'] + L['OUT']) / FPS, was_seconds=[12.5, 8.75])}
     if not a.skip_mix:
         lv, cues = mix(S)
         report['audio'] = lv
@@ -447,26 +506,28 @@ def main():
     shutil.copy(f'{eng4}/var-ep10.png', f'{OUTD}/outro-a-ep10-still.png')
     shutil.copy(f'{eng4}/var-ep10-keys.png', f'{OUTD}/outro-a-ep10-keys-still.png')
     shutil.copy(f'{eng4}/var-ep6.png', f'{OUTD}/outro-a-ep6-still.png')
-    keyframes_sheet([(s['o'], s['what']) for s in L['STRIP']], eng1, f'{OUTD}/outro-a-keyframes.png')
+    keyframes_sheet([(s['o'], s['what']) for s in L['STRIP']], eng1, f'{OUTD}/outro-a-keyframes.png', one_pass(cps=25))
     variants_sheet(eng1, f'{OUTD}/outro-a-variants.png')
 
     report['text_qa'] = qa_frames(S, mp4, eng1)
-    rows, whole = read_times()
+    rows = read_times()
     report['read_times'] = rows
+    whole = whole_text()
     report['whole_text'] = whole
-    e4 = np.asarray(Image.open(f'{eng4}/o120.png').convert('RGB')).astype(np.int16) if os.path.exists(f'{eng4}/o120.png') else None
-    if e4 is None:
-        engine(S, eng4, 4, ['o:120'])
-        e4 = np.asarray(Image.open(f'{eng4}/o120.png').convert('RGB')).astype(np.int16)
-    d4 = np.asarray(Image.open(f'{S}/qa/mp4-o120-1080.png').convert('RGB')).astype(np.int16)
-    report['still_vs_mp4_o120'] = dict(mean_abs=round(float(np.abs(e4 - d4).mean()), 3),
-                                       p99=float(np.percentile(np.abs(e4 - d4).max(axis=2), 99)))
+    so = L['KEY_STILLS'][0]['o']
+    decode_frame(mp4, L['PRE'] + so, f'{S}/qa/mp4-o{so}-1080.png')
+    e4 = np.asarray(Image.open(f'{eng4}/o{so}.png').convert('RGB')).astype(np.int16)
+    d4 = np.asarray(Image.open(f'{S}/qa/mp4-o{so}-1080.png').convert('RGB')).astype(np.int16)
+    report['still_vs_mp4'] = dict(o=so, mean_abs=round(float(np.abs(e4 - d4).mean()), 3),
+                                  p99=float(np.percentile(np.abs(e4 - d4).max(axis=2), 99)))
     with open(f'{OUTD}/outro-a-qa.json', 'w') as fh:
         json.dump(report, fh, indent=1, ensure_ascii=False)
     worst = max(report['text_qa'], key=lambda c: c['max_err_480'])
     print(json.dumps(dict(length=report['length'], audio=report.get('audio'), mp4=report['mp4'], worst_text=worst,
                           read_ok=all(r['ok'] for r in rows), thinnest=min(rows, key=lambda r: r['margin_s']),
-                          whole=whole, still_vs_mp4=report['still_vs_mp4_o120']), indent=1, ensure_ascii=False))
+                          whole={k: v for k, v in whole.items() if k != 'one_pass'},
+                          one_pass=[{k: v for k, v in p.items() if k != 'path'} for p in whole['one_pass']],
+                          still_vs_mp4=report['still_vs_mp4']), indent=1, ensure_ascii=False))
 
 
 if __name__ == '__main__':

@@ -2,23 +2,25 @@
 
 Reads (read-only): the temp score from track.py (<SC>/music/lookdev-outro-c-ep1-underscore.wav) and three beds from
 the show's SFX library (audio/sfx/wav: room_drone, room_tone, neon_buzz). Everything else is synthesized here.
-Writes: out/lookdev/outro/c/outro-c-{music,sfx,mix}.wav (48 kHz, 24-bit, 8.500 s = the 204-frame mock-up),
+Writes: out/lookdev/outro/c/outro-c-{music,sfx,mix}.wav (48 kHz, 24-bit, 9.000 s = the 216-frame mock-up),
 <SC>/mix.wav (for the mux) and out/lookdev/outro/c/qa/sound.json (the cue list + measured levels).
 
-Frame map: composition f = 24 + o (o = outro frame). The file's t = f / 24.
+Frame map: composition f = 24 + o (o = outro frame). The file's t = f / 24. (Fourth pass: one plate, two light steps.)
 
   f0-23    the stand-in (the dark room)      room_drone (F1+C2), hard cut on the downbeat
   o0       cut to the lobby                  room_tone (night air, distant HVAC) + the lit sign's tube hum (neon_buzz, F2)
-  o60      the hand comes down               a sleeve rustle
-  o64      the 0 comes off its hooks         two hook ticks
-  o75      the 0 lands in the box            a card thup, a bounce, a rattle among the spare zeros (panned right)
-  o90/o105 the 3, then the 6, hang           a plate clack on the hooks + a short settle jingle
-  o112     the hand goes                     a sleeve rustle
+  o84      the hand comes down               a sleeve rustle
+  o93      it grips last night's 5           a fingertip tap on the card
+  o101     the 5 lifts off its hooks         two hook ticks (tonight's 6 is behind it: no sound, the score's C is the 36)
+  o113     the hand goes                     a sleeve rustle
+  o116     the 5 lands in the box            a card thup, a bounce, a rattle among the spare zeros (panned right)
   o120     the after-hours timer (3.1)       a contactor ka-chunk somewhere in the stone lobby; the air steps down
   o121-122 the flicker (one held step)       the contactor's kick: the hum dips for 2 frames, the ballast ticks out and back
   o130/135 the moth bumps the lit box        two tiny taps on the plastic (it's a moth: that's what they do)
-  o150     the moth lands                    nothing (it lands in the chord's ring)
-  o168-179 out                               the chord and the hum run out to digital zero by o179
+  o150-151 the timer's second step (3.3)     the ballast ticks, a second, farther contactor, and THE HUM STOPS: the lobby's
+                                             air is all that's left (it steps down again)
+  o165     the moth lands                    nothing (it lands in the chord's ring)
+  o176-190 the dip                           the chord and the air run out to digital zero by o190; o190-191 silent black
 
 Run: audio/.venv-theme/bin/python studio/src/dev/outro/c/audio/mix.py <SC>
 """
@@ -38,9 +40,10 @@ OUT = f'{ROOT}/out/lookdev/outro/c'
 SR = 48000
 FPS = 24
 PRE = 24
-OUT_F = 180                             # the outro: 3 bars at 96 BPM (second pass; was 240)
+OUT_F = 192                             # the outro: 3 bars at 96 BPM + the ring-out (fourth pass; was 180)
 TOTAL_F = PRE + OUT_F
-N = TOTAL_F * SR // FPS                 # 8.500 s
+N = TOTAL_F * SR // FPS                 # 9.000 s
+FADE = (176, 190)                       # the sound's run-out (outro frames), zero from o190 (the picture's dip: o184-190)
 TRIM = int(0.25 * SR)                   # the score's pickup: its first 0.25 s is before the mock-up's f0
 rng = np.random.default_rng(20231227)
 
@@ -118,21 +121,6 @@ def hook_ticks():
     return y
 
 
-def plate_clack():
-    """a small enamelled card plate dropping onto two hooks: a bright clack, a body knock, then a settle jingle"""
-    n = int(0.22 * SR)
-    t = np.arange(n) / SR
-    y = np.zeros(n)
-    c = bp(rng.standard_normal(n), 1800, 6500) * env_exp(n, 0.0035)
-    body = np.sin(2 * np.pi * 415 * t) * env_exp(n, 0.012) * 0.55 + np.sin(2 * np.pi * 1120 * t) * env_exp(n, 0.006) * 0.3
-    y += c * 0.9 + body
-    for d, g in [(0.042, 0.35), (0.071, 0.2), (0.093, 0.1)]:
-        s = tick([5400, 6900], dur=0.01, tau=0.0018, noise=0.3, gain=g)
-        i = int(d * SR)
-        y[i:i + len(s)] += s
-    return y
-
-
 def card_drop():
     """the 0 landing in the cardboard box among the spare zeros: a thup, one bounce, a rattle"""
     n = int(0.35 * SR)
@@ -201,7 +189,7 @@ def main(sc):
     mus = mus.T[:, TRIM:TRIM + N]
     if mus.shape[1] < N:
         mus = np.pad(mus, ((0, 0), (0, N - mus.shape[1])))
-    g_out = ramp(N, at(OUT_F - 12), at(OUT_F), 1.0, 0.0)
+    g_out = ramp(N, at(FADE[0]), at(FADE[1]), 1.0, 0.0)
     mus = mus * g_out
 
     # ---------------------------------------------------------------- beds
@@ -216,6 +204,7 @@ def main(sc):
     L = N - cut
     air = tile(load('room_tone'), L) * db(-20)
     air *= ramp(L, at(120) - cut, at(120) - cut + int(0.45 * SR), 1.0, db(-1.5))   # the after-hours HVAC steps down
+    air *= ramp(L, at(151) - cut, at(151) - cut + int(0.6 * SR), 1.0, db(-2.0))    # and again when the sign goes
     hum = tile(np.roll(load('neon_buzz'), -int(0.4 * SR), axis=1), L) * db(-17)
     # the flicker: o121-122 at the half step (the contactor's kick); the ballast ticks out and back
     fl = np.ones(L)
@@ -224,29 +213,36 @@ def main(sc):
     fl[i0:i1] = 0.3
     fl[i0 - k:i0] = np.linspace(1, 0.3, k)
     fl[i1:i1 + k] = np.linspace(0.3, 1, k)
+    # the timer's second step: the half step at o150, then the tube is out at o151 (a 25 ms release: no click)
+    j0, j1 = at(150) - cut, at(151) - cut
+    fl[j0:j1] = np.minimum(fl[j0:j1], 0.35)
+    r = int(0.025 * SR)
+    fl[j1:j1 + r] = np.linspace(0.35, 0.0, r)
+    fl[j1 + r:] = 0.0
     hum *= fl
     for x in (air, hum):
         x[:, :int(0.003 * SR)] *= np.linspace(0, 1, int(0.003 * SR))
     place(bus, air + hum, cut)
     cues += [dict(f=PRE, o=0, sfx='room_tone (library)', db=-20, what='the lobby at night; -1.5 dB after o120'),
-             dict(f=PRE, o=0, sfx='neon_buzz (library)', db=-17, what="the lit sign's tube hum (F2); dips at o121-122")]
+             dict(f=PRE, o=0, sfx='neon_buzz (library)', db=-17, what="the lit sign's tube hum (F2); dips at o121-122; stops at o151")]
 
     # ---------------------------------------------------------------- one-shots
     def shot(o, y, p, g_db, name, what):
         place(bus, pan2(y, p) * db(g_db), at(o))
         cues.append(dict(f=PRE + o, o=o, sfx=name, db=g_db, pan=p, what=what))
 
-    shot(60, rustle(0.26), 0.18, -24, 'rustle (synth)', 'the sleeve comes into frame')
-    shot(64, hook_ticks(), 0.2, -12, 'hook_ticks (synth)', 'the 0 comes off its hooks')
-    shot(75, card_drop(), 0.62, -7, 'card_drop (synth)', 'the 0 lands in the box of spare zeros')
-    shot(90, plate_clack(), 0.1, -6, 'plate_clack (synth)', 'the 3 hangs (on the knee\'s G)')
-    shot(105, plate_clack(), 0.2, -6, 'plate_clack (synth)', 'the 6 hangs (on the knee\'s C)')
-    shot(112, rustle(0.3), 0.22, -25, 'rustle (synth)', 'the hand withdraws')
+    shot(84, rustle(0.26), 0.18, -24, 'rustle (synth)', 'the sleeve comes into frame')
+    shot(93, moth_tap(), 0.2, -26, 'tap (synth)', "the fingertips on last night's plate")
+    shot(101, hook_ticks(), 0.2, -12, 'hook_ticks (synth)', 'the 5 comes off its hooks (the 6 is behind it)')
+    shot(113, rustle(0.3), 0.3, -25, 'rustle (synth)', 'the hand withdraws')
+    shot(116, card_drop(), 0.62, -7, 'card_drop (synth)', 'the 5 lands in the box of spare zeros')
     shot(120, contactor(), -0.35, -12, 'contactor (synth)', 'the after-hours timer: the house light steps down (3.1)')
     shot(121, ballast_tick(), 0.0, -18, 'ballast_tick (synth)', "the flicker: out (the contactor's kick)")
     shot(123, ballast_tick(), 0.0, -21, 'ballast_tick (synth)', 'the flicker: back')
     shot(130, moth_tap(), 0.1, -22, 'moth_tap (synth)', "the moth bumps the light box's top edge")
     shot(135, moth_tap(), 0.05, -25, 'moth_tap (synth)', 'and again, further along')
+    shot(150, ballast_tick(), 0.0, -19, 'ballast_tick (synth)', "the timer's second step: the tube's half step")
+    shot(151, contactor(), 0.45, -17, 'contactor (synth)', 'the second contactor, farther off: the sign is out, the hum stops (3.3)')
 
     sfx = bus * g_out
 
@@ -271,12 +267,13 @@ def main(sc):
     sf.write(f'{OUT}/outro-c-sfx.wav', sfx.T, SR, subtype='PCM_24')
     sf.write(f'{OUT}/outro-c-mix.wav', mix.T, SR, subtype='PCM_24')
     sf.write(f'{sc}/mix.wav', mix.T, SR, subtype='PCM_24')
-    tail = mix[:, at(OUT_F - 1):]
+    tail = mix[:, at(FADE[1]):]                                                     # o190-191: silent black
     rep = dict(
         length_s=N / SR, frames=TOTAL_F, fps=FPS,
         lufs_music=round(lufs_mus, 2), lufs_mix=round(lufs_mix, 2), true_peak_mix_dbtp=round(peak, 2),
-        last_frame_peak_dbfs=round(20 * np.log10(max(1e-12, np.abs(tail).max())), 1),
-        score='track.py (OST engine, read-only): knee whole once in bar 2 (felt + chip 8va), button chord F-C-G on 3.1',
+        last_frames_peak_dbfs=round(20 * np.log10(max(1e-12, np.abs(tail).max())), 1),
+        score='track.py (OST engine, read-only): knee whole once in bar 2 (felt + chip 8va), button chord F-C-G on 3.1, '
+              'ringing to the dip; zero from o190',
         cues=cues)
     with open(f'{OUT}/qa/sound.json', 'w') as fh:
         json.dump(rep, fh, indent=1)

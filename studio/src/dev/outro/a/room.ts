@@ -4,7 +4,7 @@
 // light it throws, one blink (the cold open's own lid drawings, f48-50, copied in over his eyes only), the Orb's
 // look (it follows the moth), and the room stepping down when the screen goes dark.
 import {Buf, W, H, line} from '../../../shared/pixel/px';
-import {PAL, stepColor} from '../../../shared/pixel/palette';
+import {PAL, stepColor, lightness} from '../../../shared/pixel/palette';
 import {drawMedium, MED, CARET_FRAME} from '../../mcoldopen/medium';
 import {SW, SH} from '../../mcoldopen/screen';
 import {drawOrb, orbBob} from '../../mcoldopen/orb';
@@ -40,6 +40,48 @@ const blinkOver = (fb: Buf, mas: Uint8Array, lid: 1 | 2) => {
       const i = y * W + x;
       if (m[i] && mas[i] && c[i] !== fb.c[i]) fb.c[i] = c[i];
     }
+};
+
+// ------------------------------------------------------------------ the lights going down at the very end
+/** The room's last two drawings before black: every colour walks onto the night ramp at a fraction of its own
+ *  lightness (a palette operation, never a blend), so warm and skin ramps that bottom out above black still go. */
+const INK_1BIT = 0x0e0e10; // the 1-bit desktop (pane.ts INK): not a master colour, so stepColor leaves it
+const NIGHT = [PAL.N0, PAL.N1, PAL.N2, PAL.N3, PAL.N4, PAL.N5, PAL.N6, PAL.N7, PAL.N8];
+const NIGHT_L = NIGHT.map(lightness);
+const nightCache = new Map<string, number>();
+const toNight = (c: number, k: number) => {
+  const key = `${c}:${k}`;
+  let n = nightCache.get(key);
+  if (n === undefined) {
+    const L = lightness(c) * k;
+    let best = 0;
+    for (let i = 1; i < NIGHT.length; i++) if (Math.abs(NIGHT_L[i] - L) < Math.abs(NIGHT_L[best] - L)) best = i;
+    n = NIGHT[best];
+    nightCache.set(key, n);
+  }
+  return n;
+};
+
+// ------------------------------------------------------------------ the shelf clock (redrawn: the cold open's 2-px
+// digits made its 6 read as a broken 8 at 1080p). Same box, same reds; 3 x 5 digits, centred in the 22 x 9 face.
+const CLOCK = {x: 208, y: 13, w: 22, h: 9};
+const DIGITS: Record<string, string[]> = {
+  '0': ['###', '#.#', '#.#', '#.#', '###'], '1': ['.#', '##', '.#', '.#', '.#'], '2': ['###', '..#', '###', '#..', '###'],
+  '3': ['###', '..#', '.##', '..#', '###'], '4': ['#.#', '#.#', '###', '..#', '..#'], '5': ['###', '#..', '###', '..#', '###'],
+  '6': ['###', '#..', '###', '#.#', '###'], '7': ['###', '..#', '.#.', '.#.', '.#.'], '8': ['###', '#.#', '###', '#.#', '###'],
+  '9': ['###', '#.#', '###', '..#', '###'],
+};
+export const drawClock = (fb: Buf, time: string) => {
+  const {x, y, w, h} = CLOCK;
+  for (let j = 0; j < h; j++) for (let i = 0; i < w; i++) fb.set(x + i, y + j, PAL.N0);
+  const width = [...time].reduce((a, ch) => a + (ch === ':' ? 1 : DIGITS[ch].length) + 1, -1);
+  let cx = x + Math.floor((w - width) / 2);
+  const cy = y + Math.floor((h - 5) / 2);
+  for (const ch of time) {
+    if (ch === ':') { fb.set(cx, cy + 1, PAL.R2); fb.set(cx, cy + 3, PAL.R2); cx += 2; continue; }
+    DIGITS[ch].forEach((r, j) => { for (let i = 0; i < r.length; i++) if (r[i] === '#') fb.set(cx + i, cy + j, PAL.R3); });
+    cx += DIGITS[ch].length + 1;
+  }
 };
 
 // ------------------------------------------------------------------ the light the screen throws
@@ -85,6 +127,10 @@ export interface RoomOpts {
   lid?: 0 | 1 | 2;
   /** the whole room one light step down (the screen has gone dark) */
   dim?: boolean;
+  /** the end: the room goes down this many more steps (the cursor, drawn after, stays lit) */
+  fade?: number;
+  /** the shelf clock's time (per episode) */
+  clock?: string;
   /** zoom rects (the frame collapsing onto the screen): 0 none, 1 two outlines, 2 one */
   zoom?: 0 | 1 | 2;
 }
@@ -93,13 +139,16 @@ export const drawRoom = (fb: Buf, o: number, r: RoomOpts) => {
   const f = coldFrame(o);
   const mas = new Uint8Array(W * H);
   drawMedium(fb, f, {masMask: mas});
+  if (r.clock) drawClock(fb, r.clock);
   if (r.lid) blinkOver(fb, mas, r.lid);
   const {x: sx, y: sy, w: sw, h: sh} = SCREEN;
   for (let j = 0; j < sh; j++) for (let i = 0; i < sw; i++) fb.set(sx + i, sy + j, r.screen.c[j * sw + i]);
   keyLight(fb, mas, r.mode, r.k ?? 0);
   const [ox, oy] = MED.orb;
   drawOrb(fb, ox, oy + orbBob(f), MED.orbR, {look: r.look, aperture: r.aperture ?? 0.5, monitor: -1});
-  if (r.dim) for (let i = 0; i < fb.c.length; i++) fb.c[i] = stepColor(fb.c[i], -1);
+  const down = (r.dim ? 1 : 0) + (r.fade ?? 0);
+  if (r.fade && r.fade >= 2) for (let i = 0; i < fb.c.length; i++) fb.c[i] = toNight(fb.c[i], r.fade === 2 ? 0.62 : 0.32);
+  else if (down) for (let i = 0; i < fb.c.length; i++) fb.c[i] = fb.c[i] === INK_1BIT && r.fade ? PAL.N1 : stepColor(fb.c[i], -down);
   if (r.zoom) {
     for (const s of r.zoom === 1 ? [0.35, 0.7] : [0.82]) {
       const x0 = Math.round(20 + (sx - 20) * s), y0 = Math.round(20 + (sy - 20) * s);

@@ -9,7 +9,7 @@
 // Light: in the pane's glow it is pale (paper rim); in the dark it is dusty mauve with the window's cool rim on its
 // right, and when the cursor is on, the cursor's cyan catches its near (left) edge, so it blinks with the cursor.
 import {Buf} from '../../../shared/pixel/px';
-import {PAL} from '../../../shared/pixel/palette';
+import {PAL, stepColor} from '../../../shared/pixel/palette';
 import {O, beatOn} from './timeline';
 
 // b body/fur, W wing, w wing shade, d wing edge (dark), h rim, a antenna, e eye, s wing spot
@@ -82,12 +82,13 @@ const TWITCH = ['...a......a..', '....a....a...', ...SETTLE.slice(2)];
  *  x 96-99, y 76-83, so every landed drawing keeps >= 1 px of glass between its wing tip and the cursor */
 export const REST_AT = {cx: 108, bottom: 82};
 
-/** flight path keys: [outro frame, centre x, centre y] (room frame coords) */
+/** flight path keys: [outro frame, centre x, centre y] (room frame coords). The window closes into the cursor
+ *  (o237-239), so the moth loses the pane's light and finds the cursor's in the same second. */
 const PATH: Array<[number, number, number]> = [
   [O.mothIn, 70, -3], [O.mothIn + 4, 92, 18], [O.mothIn + 8, 128, 48], [O.mothIn + 10, 150, 64], // to the lit pane
-  [O.mothIn + 12, 172, 58], [O.mothIn + 14, 160, 72], // bumping at the glass
-  [O.close + 2, 182, 70], [O.close + 4, 198, 84], [O.close + 6, 186, 98], [O.close + 8, 170, 90], // the light is gone
-  [O.cursorOn, 160, 80], [O.cursorOn + 2, 146, 73], [O.cursorOn + 4, 132, 71], [O.cursorOn + 6, 120, 73], // to the cursor
+  [O.mothIn + 12, 172, 58], [O.mothIn + 15, 160, 70], [O.mothIn + 18, 178, 64], // bumping at the glass
+  [O.close + 1, 164, 72], // the window closes under it
+  [O.cursorOn, 176, 84], [O.cursorOn + 2, 150, 80], [O.cursorOn + 4, 132, 71], [O.cursorOn + 6, 120, 73], // to the cursor
   [O.mothLand - 2, 112, 76], [O.mothLand, REST_AT.cx, REST_AT.bottom - 4],
 ];
 
@@ -104,7 +105,7 @@ export const mothPos = (o: number): [number, number] | null => {
   return [Math.round(x0 + (x1 - x0) * t), Math.round(y0 + (y1 - y0) * t) + bob];
 };
 
-const stamp = (b: Buf, rows: string[], x: number, y: number, pal: MothPal, cyanRim: boolean) =>
+const stamp = (b: Buf, rows: string[], x: number, y: number, pal: MothPal, cyanRim: boolean, fade = 0) =>
   rows.forEach((r, j) => {
     let n = 0; // opaque body/wing pixels so far in this row, from the left (the side facing the cursor)
     for (let i = 0; i < r.length; i++) {
@@ -112,7 +113,9 @@ const stamp = (b: Buf, rows: string[], x: number, y: number, pal: MothPal, cyanR
       let c = pal[ch];
       if (c === undefined) continue;
       const solid = ch !== 'e' && ch !== 'a';
-      if (cyanRim && solid && n < 2) c = n === 0 ? PAL.C5 : PAL.C3;
+      const rim = cyanRim && solid && n < 2;
+      if (rim) c = n === 0 ? PAL.C5 : PAL.C3;
+      else if (fade) c = fade === 1 ? stepColor(c, -1) : fade === 2 ? PAL.N2 : PAL.N1; // the room going down: only the cursor's rim stays lit
       if (solid) n++;
       b.set(x + i, y + j, c);
     }
@@ -122,17 +125,17 @@ const stamp = (b: Buf, rows: string[], x: number, y: number, pal: MothPal, cyanR
  * Draw the moth at outro frame o in the ROOM. `dark` = the window has closed (the pane's glow is gone). The cursor's
  * rim light is on when the cursor is and the moth is within 24 px of it.
  */
-export const drawMoth = (b: Buf, o: number, dark: boolean, cursorVisible: boolean) => {
+export const drawMoth = (b: Buf, o: number, dark: boolean, cursorVisible: boolean, fade = 0) => {
   const p = mothPos(o);
   if (!p) return;
   const pal = dark ? DARK : LIT;
   const near = cursorVisible && Math.abs(p[0] - 98) < 24 && Math.abs(p[1] - 80) < 20;
   if (o >= O.mothLand) {
     const k = o - O.mothLand;
-    // touch-down (wings open) -> settled; in the last blink's light it flicks its wings open once (o197-198), then
-    // one antenna twitch after the cursor goes off: motion is what makes 13 px read as a moth at phone size
-    const rows = k < 3 || k === 7 || k === 8 ? TOUCH : k === 13 || k === 14 ? TWITCH : SETTLE;
-    stamp(b, rows, REST_AT.cx - (rows[0].length >> 1), REST_AT.bottom - rows.length + 1, pal, near);
+    // touch-down (wings open, o250-252) -> one antenna twitch (o254-255) -> settled; in the last blink's light it
+    // flicks its wings open once (o257-258): motion is what makes 13 px read as a moth at phone size
+    const rows = k < 3 || k === 7 || k === 8 ? TOUCH : k === 4 || k === 5 ? TWITCH : SETTLE;
+    stamp(b, rows, REST_AT.cx - (rows[0].length >> 1), REST_AT.bottom - rows.length + 1, pal, near, fade);
     return;
   }
   const beat = ((o - ((o - O.mothIn) % 2) - O.mothIn) / 2) % 3;

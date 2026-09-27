@@ -3,14 +3,15 @@
 //   item = <f>        a mock-up frame (composition frame: 0..23 stand-in, 24.. = o0..)
 //        = o<o>       an outro frame (o0..o239)
 //        = s<k>       a variant still (0 ep1 o112, 1 ep4, 2 ep10)
-//        = check      the band checks: nothing covers the terms/pointer in any outro frame; the moth never covers or
-//                     touches (4-neighbour) a letter of either line, in flight or landed; writes <outDir>/moth.json
-//                     (the moth's native bounding box per outro frame, for the QA's band-stillness mask)
+//        = check      the band checks: nothing covers the terms/pointer in any outro frame before the end dip (o184 on,
+//                     where the whole frame goes to black); the moth never covers or touches (4-neighbour) a letter of
+//                     either line, in flight or landed; writes <outDir>/moth.json (the moth's native bounding box per
+//                     outro frame, for the QA's band-stillness mask)
 import {writeFileSync} from 'fs';
 import {writePNG} from './png';
 import {Buf} from '../../../../shared/pixel/px';
 import {PAL} from '../../../../shared/pixel/palette';
-import {drawEp1, drawStill, PRE, OUT, ep1State, renderOutro} from '../timeline';
+import {drawEp1, drawStill, PRE, OUT, EV, ep1State, renderOutro} from '../timeline';
 import {bandGlyphPixels, PERIOD} from '../band';
 import {mothPixels} from '../moth';
 
@@ -28,12 +29,13 @@ for (const it of items) {
     // every band glyph pixel must be exactly the band ink in every outro frame (never covered, never moved)
     const px = bandGlyphPixels();
     let bad = 0;
-    for (let o = 0; o < OUT; o++) {
+    const READ_END = EV.dip[0]; // the dip takes the whole frame (band included) to black: the band's read ends there
+    for (let o = 0; o < READ_END; o++) {
       const fb = new Buf(480, 270, PAL.N0);
       renderOutro(fb, ep1State(o));
       for (const i of px) if (fb.c[i] !== PAL.P1) { bad++; if (bad < 10) console.log('covered at o' + o, i % 480, Math.floor(i / 480)); }
     }
-    console.log(bad ? `FAIL: ${bad} band glyph pixels covered` : `OK: terms + pointer uncovered in all ${OUT} outro frames`);
+    console.log(bad ? `FAIL: ${bad} band glyph pixels covered` : `OK: terms + pointer uncovered in every outro frame before the dip (o0-o${READ_END - 1}, ${READ_END} frames = ${(READ_END / 24).toFixed(2)} s)`);
     // the moth must never cover or touch a letter of the band (4-neighbour), in any frame; the period itself it may
     // stand beside (touching the dot is allowed, covering it is not)
     const g = new Set(px);

@@ -22,7 +22,7 @@ pickup (1.25 s); mix.py trims its first 0.25 s so the file starts 1.0 s before o
 The knee plays whole exactly once (8 notes, F F F F G Ab C F), doubled by chip on every note.
 
 Run (repo root):
-  PYTHONDONTWRITEBYTECODE=1 OST_WORKERS=4 audio/.venv-theme/bin/python -B studio/src/dev/outro/d/audio/track.py --no-stems --no-loop --out <scratch>/music
+  PYTHONDONTWRITEBYTECODE=1 OST_WORKERS=2 ops/heavy.sh audio/.venv-theme/bin/python -B studio/src/dev/outro/d/audio/track.py --no-stems --no-loop --out <scratch>/music
 """
 import sys
 

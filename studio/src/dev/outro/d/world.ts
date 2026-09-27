@@ -5,33 +5,34 @@
 // The camera never pans (in d3 the pan cut the title to "R. MAS" and the file to "eview.md"); it only cranes 20 px up
 // during the leap (o105-153), so a world point sits 20 px higher on screen before the crane and exactly where the
 // final frame has it after. The title block is anchored to the screen (the crane never moves it). Nothing is ever
-// partly off screen: every plate pops fully inside the frame, stays put (bar the slow crane) and folds back into
-// its line once read, or stays to the out.
+// partly off screen: every plate pops fully inside the frame and stays put (bar the slow crane) to the out. d5: no
+// plate folds (the fold machinery below is kept, unused, for a week that needs it).
 //
-// The final frame (o153-239), the image the cold read asked for:
-//      MR. MAS                 ┌──────────────────┐  <- the empty post box, the caret blinking; the moth on its top
-//      ep1.0_research_preview.md│▮                 │
+// The final frame (o153-239): every credit, human first, and two matched windows at the top of the curve:
+//   ┌MR. MAS──────────────────┐┌──────────────────┐  <- the empty post box, the caret blinking; the moth inside it
+//   └ep1.0_research_preview.md┘│▮   (moth)         │
 //                              │──────────────────│
 //                              │ ▣ ≡ ◎      ○ Post │
 //                    ┌AI tools─┐└──────────────────┘
 //               ┌voices───────┐│  <- the thread runs up into the box, under the caret
 //            ┌picture · music┐╱
-//   ═════════════════════════╯ •  (flat: created by / written, folded by now)
+//   ┌created by┐┌written───┐═╯ •  (the human credits, 1-BIT, held to the out)
 //                       you are here
 //   ══════════════ the band: terms + pointer ══════════════
 //
-// Draw order per frame (scene.ts): chart (master colours) -> the tier palette pass on the background (the capability
-// ladder by HEIGHT: 1-BIT under the flat line's decade, EARLY-WEB 16 up the leap, BASE at the top) -> axis labels
+// Draw order per frame (scene.ts): chart (master colours; d5: quiet below the 1K decade) -> the tier palette pass on
+// the background (the capability ladder by HEIGHT: 1-BIT under the flat line's decade, EARLY-WEB 16 up the leap, BASE
+// at the top) -> axis labels -> [o14-25 the grid develops; o<14 the stand-in dissolving; o<24 the lifted line]
 // -> the thread (always in colour) -> the dot -> the plates -> the title -> the moth -> [the out] -> UI: the band + slug.
 import {Buf, rect, TRANSPARENT} from '../../../shared/pixel/px';
-import {PAL} from '../../../shared/pixel/palette';
+import {PAL, stepColor} from '../../../shared/pixel/palette';
+import {bayer4} from '../../../shared/pixel/dither';
 import {ONEBIT, EARLYWEB16, PaletteSet} from '../../../shared/pixel/palettes';
 import {text, textWidth, bigText, bigTextWidth, BIG_CAP, LINE_H} from '../../../shared/pixel/font';
 import {micro, microWidth} from '../../../shared/pixel/cast/bosses';
-import {bpMoth} from '../../../shared/pixel/kits/blueprint';
 import {curveY} from '../../mfinale/skyline';
 import {EpCfg, PlateDef, Tier, PLATES, TERMS, POINTER, SLUG, SHOW} from './text';
-import {NOTES, EV, FOLD, CRANE, craneAt, blinkOn, readFrames} from './timeline';
+import {NOTES, EV, CRANE, craneAt, blinkOn, readFrames} from './timeline';
 
 // ------------------------------------------------------------------ fixed geometry (world = the final frame)
 export const BAND_Y = 240;
@@ -59,8 +60,10 @@ const W16 = {k: 0x000000, navy: 0x000033, slate: 0x333366, steel: 0x336699, sky:
 
 /** EARLY-WEB 16 for the chart's night: the black stays black, the grid is navy (no GIF checker over the whole sky). */
 const EW16_CHART: PaletteSet = EARLYWEB16.with({pin: [[PAL.N0, PAL.N0], [PAL.N2, W16.navy], [PAL.N3, W16.slate], [PAL.N4, W16.slate]]});
-/** 1-BIT for the chart: the grid a sparse 1/8 paper dot, the axis a 50% screen */
-const ONEBIT_CHART: PaletteSet = ONEBIT.with({pin: [[PAL.N0, PAL.N0], [PAL.N2, [PAL.N0, PAPER, 0.125]], [PAL.N3, [PAL.N0, PAPER, 0.5]]]});
+/** 1-BIT for the chart: the axis a 50% screen, the quiet grid's dots (QUIET, below) solid paper. d5: no other grid in
+ *  the 1-bit rows (the cold read: "bright white dotted grid lines in the bottom band fight the chips") */
+const QUIET = PAL.N4;
+const ONEBIT_CHART: PaletteSet = ONEBIT.with({pin: [[PAL.N0, PAL.N0], [PAL.N2, PAL.N0], [PAL.N3, [PAL.N0, PAPER, 0.5]], [QUIET, PAPER]]});
 
 // ------------------------------------------------------------------ the camera: a crane only
 export interface View { cx: number; cy: number }
@@ -166,12 +169,12 @@ export const layoutFor = (cfg: EpCfg): Layout => {
   if (hit) return hit;
   const lead = cfg.machineLeads ? 15 : 0;
   const plates: PlateBox[] = [];
-  // ---- the flat two (1-BIT floor): on the line, side by side, folded once read
+  // ---- the flat two (1-BIT floor): the human credits, on the line, side by side, held to the out (d5: no fold)
   const flatX = [20, 124];
   for (let n = 0; n < 2; n++) {
     const def = PLATES[n];
     const [w, h] = plateSize(def);
-    plates.push({n, def, tier: cfg.tiers.flat, x: flatX[n], y: FLAT_Y - h, w, h, pop: NOTES[2 + n] - lead, fold: FOLD[n] - lead, base: FLAT_Y});
+    plates.push({n, def, tier: cfg.tiers.flat, x: flatX[n], y: FLAT_Y - h, w, h, pop: NOTES[2 + n] - lead, base: FLAT_Y});
   }
   // ---- the leap three: stacked up the rise, each right edge hugging the curve at its own bottom row
   let bot = FLAT_Y - 24;
@@ -231,27 +234,28 @@ export const penIdx = (L: Layout, o: number) => {
   }
   return L.path.length - 1;
 };
-/** Ep1: the dotted future draws on from the knee to the top (o15-26), then stays until the pen covers it */
-export const futureReach = (L: Layout, o: number) => {
-  const [a, b] = EV.future;
-  if (o < a) return -1;
-  return L.kneeIdx + Math.round(((L.path.length - 1 - L.kneeIdx) * Math.min(1, (o - a + 1) / (b - a + 1))));
-};
+/** Ep1: the dotted future is the monitor's rise, broken into dots as it arrives (the morph, o12-23); from o24 it
+ *  stays until the pen covers it */
+export const futureReach = (L: Layout, o: number) => (o <= EV.morph[1] ? -1 : L.path.length - 1);
 
 // ------------------------------------------------------------------ background: the chart
-/** the cold open's chart, as a world: decade lines, dotted log minors, dotted verticals, the axis */
-export const drawChart = (fb: Buf, v: View) => {
+/** the cold open's chart, as a world: decade lines, dotted log minors, dotted verticals, the axis.
+ *  d5: from world row `quiet` down (the flat line's decade, where the human credits, `you are here` and the years sit)
+ *  the grid is only the decade line as one dot every 8 px: no minors, no verticals */
+export const drawChart = (fb: Buf, v: View, quiet = Infinity) => {
   for (let sy = 0; sy < fb.h; sy++) {
     const wy = sy + v.cy;
     const dRow = ((AXIS_Y - wy) % DECADE + DECADE) % DECADE;
     const isDecade = dRow === 0 && wy <= AXIS_Y;
     let isMinor = false;
     if (!isDecade && wy < AXIS_Y) for (let k = 2; k <= 9; k++) if (Math.round(DECADE * Math.log10(k)) === dRow) isMinor = true;
+    const q = wy >= quiet;
     for (let sx = 0; sx < fb.w; sx++) {
       const wx = sx + v.cx;
       let c = PAL.N0;
       if (wy === AXIS_Y) c = PAL.N3;
       else if (wy > AXIS_Y) c = PAL.N0;
+      else if (q) c = isDecade && (((wx % 8) + 8) % 8) === 4 ? QUIET : PAL.N0;
       else if (isDecade) c = PAL.N2;
       else if (isMinor && ((wx + (wy & 1)) & 3) === 0) c = PAL.N2;
       else if (((wx % 40) + 40) % 40 === 20 && (wy & 1) === 0) c = PAL.N2;
@@ -470,100 +474,165 @@ export const windowScreenRect = (L: Layout, v: View, o: number): [number, number
 };
 
 // ------------------------------------------------------------------ the title (anchored to the screen)
-/** which rung the title is drawn in at frame o: it climbs the ladder on the knee (G) and on the top (the last F) */
+/** which rung the title is drawn in at frame o. d5: ONE step, on the last F, when the post box arrives: the episode's
+ *  floor (Ep1: a 1-BIT paper plate) -> the show's own window. d4 stepped twice (1-BIT > EARLY-WEB16 > bare type) and the
+ *  cold read took the restyles for indecision, the last one (no plate) for the least finished. */
 export const titleTier = (L: Layout, o: number): Tier => {
   const lead = L.cfg.machineLeads ? 15 : 0;
-  if (o < NOTES[4] - lead) return L.cfg.tiers.flat;
-  if (o < NOTES[7] - lead) return L.cfg.tiers.leap;
+  if (o < EV.upgrade - lead) return L.cfg.tiers.flat;
   return 'base';
 };
 
+/** the title's top look: the post box's own chrome (drop shadow, N5 keyline, N1 face, soft corners), so the final
+ *  frame's two windows read as one app; MR. MAS in paper with a P0 bevel on its lower-right edge, the file in cyan */
+const titleWindow = (b: Buf, T: Layout['title'], dy: number) => {
+  const {x, w, h} = T, y = T.y + dy;
+  rect(x + 2, y + 2, w, h, b.ink(PAL.N0));
+  rect(x, y, w, h, b.ink(PAL.N5));
+  rect(x + 1, y + 1, w - 2, h - 2, b.ink(PAL.N1));
+  for (const [cx, cy] of [[x, y], [x + w - 1, y], [x, y + h - 1], [x + w - 1, y + h - 1]]) b.set(cx, cy, PAL.N0);
+  hugeText(b, SHOW, T.show[0] + 1, T.show[1] + dy + 1, PAL.P0);
+  hugeText(b, SHOW, T.show[0], T.show[1] + dy, PAL.P1);
+  text(b, T.fileText, T.file[0], T.file[1] + dy, PAL.C5);
+};
+
 /**
- * The show name and the file, one block, never moving: MR. MAS in the 14 px face, the file under it, right-aligned
- * beside the post box. Its surface climbs the palette ladder: a 1-BIT paper plate, an EARLY-WEB16 bevel from the
- * knee, and on the last F no plate at all (BASE: paper type on the night, the file in the monitor's cyan).
- * A 1 px hop on each rung change.
+ * The show name and the file, one block, never moving: MR. MAS in the 28 px face, the file under it, right-aligned
+ * beside the post box. Its surface is the episode's floor until the last F, then it upgrades once to the show's own
+ * window, as an interlaced develop over 3 frames (every 4th row, every 2nd, all: a picture loading in, the ladder's
+ * gesture), in step with the post box rising beside it.
  */
 export const drawTitle = (fb: Buf, L: Layout, o: number) => {
   const T = L.title;
   const k = o - T.pop;
-  let dy = popDy(k, T.h);
+  const dy = popDy(k, T.h);
   if (dy === null) return;
   const lead = L.cfg.machineLeads ? 15 : 0;
-  if (dy === 0 && (o === NOTES[4] - lead || o === NOTES[7] - lead)) dy = -1;
-  const tier = titleTier(L, o);
-  const paint = (b: Buf) => {
-    let ink: number, sub: number;
-    if (tier === 'base' || tier === 'machine') { ink = PAL.P1; sub = PAL.C5; } else [ink, sub] = plateSurface(b, tier, T.x, T.y + dy!, T.w, T.h);
+  const paintTier = (b: Buf, tier: Tier) => {
+    if (tier === 'base' || tier === 'machine') { titleWindow(b, T, dy); return; }
+    let [ink, sub] = plateSurface(b, tier, T.x, T.y + dy, T.w, T.h);
     if (tier === 'onebit') sub = INK;
-    hugeText(b, SHOW, T.show[0], T.show[1] + dy!, ink);
-    text(b, T.fileText, T.file[0], T.file[1] + dy!, sub);
+    hugeText(b, SHOW, T.show[0], T.show[1] + dy, ink);
+    text(b, T.fileText, T.file[0], T.file[1] + dy, sub);
   };
-  if (k <= 1) clipped(fb, T.y + T.h, paint);
-  else paint(fb);
+  const tier = titleTier(L, o);
+  const j = o - (EV.upgrade - lead);
+  if (tier === 'base' && L.cfg.tiers.flat !== 'base' && j >= 0 && j < 2) {
+    // the develop: the old plate, with the new look's rows coming in (every 4th, then every 2nd)
+    paintTier(fb, L.cfg.tiers.flat);
+    const nb = new Buf(fb.w, fb.h, TRANSPARENT);
+    paintTier(nb, 'base');
+    const step = j === 0 ? 4 : 2;
+    for (let yy = Math.max(0, T.y - 2); yy < Math.min(fb.h, T.y + T.h + 4); yy++) {
+      if ((yy - T.y) % step !== 0) continue;
+      for (let xx = Math.max(0, T.x - 2); xx < Math.min(fb.w, T.x + T.w + 4); xx++) {
+        const c = nb.c[yy * fb.w + xx];
+        if (c !== TRANSPARENT) fb.c[yy * fb.w + xx] = c;
+      }
+    }
+    return;
+  }
+  if (k <= 1) clipped(fb, T.y + T.h, (b) => paintTier(b, tier));
+  else paintTier(fb, tier);
 };
 
 // ------------------------------------------------------------------ the moth (Ep1 stinger: it goes to the light)
-/** the moth at rest, seen from above (11 x 7): antennae, a bright body, the wings laid flat in a delta (a moth rests
- *  with its wings spread, which is also what keeps it readable at 480x270). Its legs stand on row 6. */
-const MOTH_PERCH = ['..a.....a..', '...a...a...', '....wBw....', '..wwwBwww..', '.wWWwBwWWw.', 'wWWWwBwWWWw', '.ww..B..ww.'];
-const MOTH_INK: Record<string, number> = {a: PAL.C5, B: PAL.C8, w: PAL.C5, W: PAL.C7};
-const drawPerched = (b: Buf, fx: number, fy: number) => {
-  const top = fy - MOTH_PERCH.length;
-  MOTH_PERCH.forEach((r, j) => { for (let i = 0; i < r.length; i++) if (r[i] !== '.') b.set(fx + i, top + j, MOTH_INK[r[i]]); });
-};
-/** its perch: standing on the post box's top edge, near its right end (left column x, the box's top row y) */
-export const MOTH_PERCH_AT: [number, number] = [BOX.x + BOX.w - 24, BOX.y];
-/** at rest it twitches its wings open for 2 frames now and then (life, and a second look) */
-const TWITCH = [196, 197, 222, 223];
-
-export interface MothState { x: number; y: number; k: number; perched: boolean }
 /**
- * Ep1's stinger, moved off the terms line (in d3 it read as a collision with the final period, and at 480x270 it
- * vanished into the cyan thread). The Senate moth comes in from the right on C (o135), up the dark side of the frame
- * that no plate uses, and goes to the light: it lands on the post box's top edge on 4.1 (o180), folds its wings and
- * stays until the out. Screen coordinates of the flying sprite's centre (bpMoth, 11 px wide with its wings open);
- * the path keeps x >= 432 beside the box and y <= 20 above it, so it never crosses a letter or the thread.
+ * THE PLAN's moth (Ep1 act 3: "a tiny moth drawn in blueprint linework" flies out of the empty EQUITY box), so it is
+ * blueprint cyan. d5: the cold read took d4's 11x7 moth for "a speck ... a glitch or dust" at 480x270, so it is now a
+ * moth first: 19x14 native (76x56 at 1080p), bright linework forewings over a dark-teal fill with an eyespot, dimmer
+ * hindwings, a hot thorax, feathered antennae; its wings beat on 1s (spread, half, up, half) in flight. Drawn from
+ * the left half + the body column, mirrored, so every drawing stays symmetric.
+ *   o  forewing line  f  forewing fill  v  eyespot   h  hindwing line  g  hindwing fill   a  antenna  b B  body
+ */
+const MOTH_HALF: Array<[string, string]> = [
+  ['.....a...', '.'],
+  ['......a..', '.'],
+  ['.......a.', '.'],
+  ['........b', 'B'],
+  ['....oooob', 'B'],
+  ['..ooffffb', 'B'],
+  ['ooffvfffb', 'B'],
+  ['offvvfffb', 'B'],
+  ['.offffffb', 'B'],
+  ['..oooffob', 'B'],
+  ['....hoohb', 'B'],
+  ['...hgggh.', 'b'],
+  ['..hgggh..', 'b'],
+  ['...hhh...', 'b'],
+];
+const MOTH_ROWS = MOTH_HALF.map(([l, c]) => l + c + l.split('').reverse().join(''));
+export const MOTH_W = MOTH_ROWS[0].length; // 19
+export const MOTH_H = MOTH_ROWS.length; // 14
+const MOTH_INK: Record<string, number> = {o: PAL.C7, f: PAL.C2, v: PAL.C5, h: PAL.C5, g: PAL.C1, a: PAL.C6, b: PAL.C6, B: PAL.C8};
+const WING = new Set(['o', 'f', 'v', 'h', 'g']);
+/** one drawing: the wings squashed toward the body by `s` (1 spread, 0.6 half, 0.25 up), the body and antennae kept */
+const drawMothAt = (b: Buf, cx: number, cy: number, s: number) => {
+  const half = (MOTH_W - 1) / 2;
+  const x0 = cx - half, y0 = cy - Math.floor(MOTH_H / 2);
+  MOTH_ROWS.forEach((r, j) => {
+    for (let i = -half; i <= half; i++) {
+      const own = r[i + half];
+      let ch = own !== '.' && !WING.has(own) ? own : '.';
+      if (ch === '.') {
+        const si = Math.round(i / s);
+        if (Math.abs(si) <= half) { const w = r[si + half]; if (WING.has(w)) ch = w; }
+      }
+      if (ch !== '.') b.set(x0 + i + half, y0 + j, MOTH_INK[ch]);
+    }
+  });
+};
+const BEAT_S = [1, 0.7, 0.35, 0.7];
+
+/** its rest: inside the empty post box's text field, just right of the caret (the light), clear of it by 17 px: the
+ *  empty box holds nothing but a moth (the EQUITY box callback). At rest its wings are always spread (the drawing
+ *  that reads as a moth); the half and up drawings exist only in motion, a frame each */
+export const MOTH_REST: [number, number] = [CARET[0] + 30, BOX.y + 17];
+export const MOTH_IN = NOTES[7] + 3; // o153: after the post box (the light) is up, never before it
+export const MOTH_LAND = 180; // 4.1, with the harp F5
+/** at rest it lifts its wings twice (half, up, half; one frame each), the equity-box moth "opens its wings" */
+const TWITCH: Record<number, number> = {206: 0.7, 207: 0.35, 208: 0.7, 227: 0.7, 228: 0.35, 229: 0.7};
+
+export interface MothState { x: number; y: number; s: number }
+/**
+ * Ep1's stinger. It comes in from the right once the post box is up (o153), climbs the dark right side that no plate
+ * uses, crosses over the box's top edge, flutters into the light, bumps at it once (never over the caret) and settles
+ * in the field on 4.1 (o180); it stays until the out takes it. Centre, screen px (the crane is over by o153). The
+ * path keeps x >= 317 (the title ends at 291) and never touches a letter (measured by the preview's audit).
  */
 const FLIGHT: Array<[number, number, number]> = [
-  [135, 500, 160], [141, 471, 150], [147, 450, 134], [153, 438, 112], [159, 437, 90], [165, 441, 66],
-  [170, 439, 42], [174, 432, 18], [177, 422, 12], [180, 412, 14],
+  [153, 494, 44], [156, 474, 36], [159, 452, 22], [162, 428, 12], [165, 400, 10], [168, 372, 14], [170, 352, 22],
+  [172, 336, 32], [174, 327, 42], [176, 341, 30], [178, 335, 38], [180, MOTH_REST[0], MOTH_REST[1]],
 ];
-export const MOTH_LAND = 180;
 export const mothAt = (L: Layout, o: number): MothState | null => {
   if (L.cfg.stinger !== 'moth' || o < FLIGHT[0][0] || o >= EV.out + 12) return null;
-  if (o >= MOTH_LAND) {
-    if (TWITCH.includes(o)) return {x: MOTH_PERCH_AT[0] + 5, y: MOTH_PERCH_AT[1] - 5, k: 2, perched: false};
-    return {x: MOTH_PERCH_AT[0], y: MOTH_PERCH_AT[1], k: 0, perched: true};
-  }
+  if (o >= MOTH_LAND) return {x: MOTH_REST[0], y: MOTH_REST[1], s: TWITCH[o] ?? 1};
   let i = 0;
   while (i + 1 < FLIGHT.length && FLIGHT[i + 1][0] <= o) i++;
   const [o0, x0, y0] = FLIGHT[i], [o1, x1, y1] = FLIGHT[Math.min(FLIGHT.length - 1, i + 1)];
   const t = o1 === o0 ? 0 : (o - o0) / (o1 - o0);
-  const flap = Math.floor(o / 2) % 2 === 0 ? 2 : 1;
-  const wob = o < 174 ? [0, -1, 0, 1][o % 4] : 0;
-  return {x: Math.round(x0 + (x1 - x0) * t), y: Math.round(y0 + (y1 - y0) * t) + wob, k: o >= MOTH_LAND - 2 ? 1 : flap, perched: false};
+  return {x: Math.round(x0 + (x1 - x0) * t), y: Math.round(y0 + (y1 - y0) * t), s: BEAT_S[(o - MOTH_IN) & 3]};
 };
 export const drawMoth = (fb: Buf, m: MothState | null) => {
-  if (!m) return;
-  if (m.perched) drawPerched(fb, m.x, m.y);
-  else bpMoth(fb, m.x, m.y, m.k);
+  if (m) drawMothAt(fb, m.x, m.y, m.s);
 };
-/** the moth's bounding box on screen (for the QA: it must never cover a letter) */
+/** the moth's bounding box on screen, 1 px margin (for the QA: it must never cover a letter) */
 export const mothRect = (m: MothState | null): [number, number, number, number] | null => {
   if (!m) return null;
-  if (m.perched) return [m.x, m.y - MOTH_PERCH.length, 11, MOTH_PERCH.length];
-  const w = m.k >= 2 ? 11 : 9, h = m.k >= 2 ? 8 : 6;
-  return [m.x - Math.floor(w / 2) - 2, m.y - Math.floor(h / 2) - 2, w + 4, h + 2];
+  const half = (MOTH_W - 1) / 2;
+  return [m.x - half - 1, m.y - Math.floor(MOTH_H / 2) - 1, MOTH_W + 2, MOTH_H + 2];
 };
 
 // ------------------------------------------------------------------ UI: the band + the slug (never palette-mapped)
 export const termsX = () => Math.floor((480 - textWidth(TERMS)) / 2);
 export const TERMS_Y = BAND_Y + 6;
 export const POINTER_Y = BAND_Y + 17;
-/** the band steps up in 3 frames at o18 and stays, unmoving, until the out (o240) */
+/** the band steps up in 3 frames at o18 and stays, unmoving, until the out; d5: it goes out WITH the frame, in the
+ *  same 4 dithered steps (o240, 243, 246, 249), not on a hard cut under a dissolving picture */
 export const drawBand = (ui: Buf, o: number) => {
-  if (o < EV.band || o >= EV.out) return;
+  if (o < EV.band) return;
+  const s = o < EV.out ? 0 : Math.min(4, 1 + Math.floor((o - EV.out) / 3));
+  if (s >= 4) return;
   const k = o - EV.band;
   rect(0, BAND_Y, 480, 270 - BAND_Y, ui.ink(PAL.N0));
   rect(0, BAND_Y, 480, 1, ui.ink(k === 0 ? PAL.N2 : PAL.N3));
@@ -571,6 +640,12 @@ export const drawBand = (ui: Buf, o: number) => {
   text(ui, TERMS, termsX(), TERMS_Y, k === 1 ? PAL.P0 : PAL.P1);
   const pw = textWidth(POINTER);
   text(ui, POINTER, Math.floor((480 - pw) / 2), POINTER_Y, k === 1 ? PAL.N5 : PAL.G5);
+  if (s > 0)
+    for (let y = BAND_Y; y < 270; y++)
+      for (let x = 0; x < 480; x++) {
+        const i = y * 480 + x;
+        ui.c[i] = bayer4(x, y) < s / 4 ? PAL.N0 : stepColor(ui.c[i], -s);
+      }
 };
 
 /** a lookdev tag, bottom-left over the stand-in (never on the outro itself) */

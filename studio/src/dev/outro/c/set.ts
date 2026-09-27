@@ -1,19 +1,24 @@
 // MR. MAS — outro C: THE WALL RIGHT OF THE DESK, AFTER HOURS (a close set of the NopeAI lobby, NIGHT).
 // The lobby's own materials and night light (shared/pixel/rooms/lobby.ts: limestone, rack pillar, brass, polished
-// floor, the lit sign's cream pool, the rose window's cyan pool), re-set at a closer scale so the new DIRECTORY
-// board can carry the credits in the 7-px face. Painted as (material, level) into a MatBuf and lit once; the
-// sign face, its plates and the board's letters are flat on top so they stay crisp and readable.
+// floor, the lit sign's cream pool, the rose window's cyan pool), re-set at a closer scale so the DIRECTORY board
+// can carry the credits. Painted as (material, level) into a MatBuf and lit once; the sign face, its plates and the
+// board's letters are flat on top so they stay crisp and readable.
 //
-// Frame contract (the room contract, setkit.ts): picture rows 0..202, the UI band 203..269 (band.ts).
+// Frame contract (the room contract, setkit.ts): picture rows 0..202, the UI band 203..269 (band.ts). The floor's
+// last rows fall off into the band's black (a dithered shadow toward camera, fourth pass), so the band reads as the
+// frame's dark foreground, not a slate stuck under the picture (the cold read: "a compliance slate stuck onto the
+// scene").
 //
 // What is NEW here (local, nothing shared was edited):
 //   the close sign     a copy of the room sign's design (cream light box, green safety rule, four lines, red digits:
 //                      lobby.ts paintSign, the version sc 30 airs) at the kit plate's size (kits/props.ts digitPlate,
-//                      16 x 22) with THREE plate slots (so 36, 275 and ∞ fit; the room wide has one slot: see notes)
-//   the directory      black felt letter board, white push-in capitals, brass frame, 9 grooves (header + 8 rows).
-//                      Second pass: 364 px wide (was 304) so every credit sits on ONE line; the values share one
-//                      column and the dot leaders sit on one 4-px grid that stops at one x (the cold read saw a
-//                      wrapped "RENDERED IN CODE" and 3-dot rows beside 40-dot rows as unfinished)
+//                      16 x 22) with THREE plate slots (so 36, 275 and ∞ fit; the room wide has one slot: see notes).
+//                      Fourth pass: the digits are the darker red (R1: ≈ 9:1 on the lit face; R2 measured 2.8:1 on
+//                      the encode), and the sign can be switched OFF (the after-hours timer's second step)
+//   the directory      fourth pass: a 288-px black felt letter board, white push-in capitals, a brass frame whose
+//                      top rail carries an engraved DIRECTORY nameplate; one small row (the show + the file), THREE
+//                      big rows in the 14-px display face, centred, no leaders (the credits: text.ts), one small egg
+//                      row. The letters dim with the room when the lights go out
 //   the spare box      kits/props.ts zeroBox's carton, redrawn at the sign plates' scale (the kit's box plates are
 //                      10 x 14, smaller than the kit's own 16 x 22 sign plates)
 import {Buf, rect, line, poly, bayer, hash, clamp} from '../../../shared/pixel/px';
@@ -22,7 +27,7 @@ import {MatBuf, Lights, resolve} from '../../../shared/pixel/light';
 import {text, textWidth, bigText, bigTextWidth} from '../../../shared/pixel/font';
 import {micro, microWidth} from '../../../shared/pixel/cast/bosses';
 import {LOBBY} from '../../../shared/pixel/rooms/lobby'; // registers the lb.* materials (and the night ambient below)
-import {DirRow} from './text';
+import {EpisodeOutro} from './text';
 
 export const RH = 203;
 export const G = {
@@ -30,7 +35,7 @@ export const G = {
   SKIRT_Y: 176,
   PILLAR_X1: 33,
   SIGN: {x: 174, y: 20, w: 132, h: 56},
-  BOARD: {x: 58, y: 81, w: 364, h: 94},
+  BOARD: {x: 96, y: 81, w: 288, h: 94},
   /** the carton's front face (top-left, size); it stands on the floor in front of the skirting, just right of the
    *  board (its left flap overlaps the board's bottom-right corner by a few px: the box is in front of the wall) */
   BOX: {x: 418, y: 182, w: 46, h: 16},
@@ -41,24 +46,24 @@ export const WELL = {x: FACE.x1 - 59, y: FACE.y0 + 9, w: 57, h: 31};
 export const PLATE_W = 16, PLATE_H = 22;
 /** slot i's plate top-left when hung */
 export const slotXY = (i: number): [number, number] => [WELL.x + 2 + i * 18, WELL.y + 5];
-/** the felt: rows of text (9 grooves at a 9-px pitch: 7-px caps, a 2-px groove) */
-export const FELT = {x0: G.BOARD.x + 3, y0: G.BOARD.y + 3, x1: G.BOARD.x + G.BOARD.w - 4, y1: G.BOARD.y + G.BOARD.h - 4};
-export const TEXT_X0 = FELT.x0 + 6, TEXT_X1 = FELT.x1 - 6;
-export const ROW_PITCH = 9;
-export const rowY = (i: number) => FELT.y0 + 5 + i * ROW_PITCH;
-/** the credit rows' value column: one x for every value (the longest label, PICTURE · MUSIC, is 79 px, + 16) */
-export const VALUE_X = TEXT_X0 + 79 + 16;
-/** the dot leaders' grid: every dot on x = LEAD_END - 4k, so the dots stand in columns down the board */
-export const LEAD_END = VALUE_X - 4;
+/** the brass frame: a 7-px top rail (it carries the engraved DIRECTORY nameplate), 3-px sides and bottom */
+export const RAIL = 7;
+/** the felt */
+export const FELT = {x0: G.BOARD.x + 3, y0: G.BOARD.y + RAIL, x1: G.BOARD.x + G.BOARD.w - 4, y1: G.BOARD.y + G.BOARD.h - 4};
+export const BOARD_CX = G.BOARD.x + G.BOARD.w / 2;
+/** the rows' tops: the small head row (7-px face), the three big rows (14-px face, pitch 19), the small egg row */
+export const HEAD_Y = FELT.y0 + 4;
+export const BIG_Y = [FELT.y0 + 16, FELT.y0 + 35, FELT.y0 + 54];
+export const EGG_Y = FELT.y0 + 73;
 
 export interface SetState {
   f: number;
-  /** 0 = house lights on; -1 = the after-hours timer's one step down */
+  /** 0 = house lights on; -1 = the after-hours timer's first step (the two downlights off) */
   house: number;
-  /** the sign: 3 lit, 2 the flicker's half step */
-  sign: 2 | 3;
-  /** the spare box: how many plates stand in it (4 = the Ep1 box) and any extras tossed in */
-  boxPlates: number;
+  /** the sign: 3 lit, 2 a held half step (the flicker; the tube dying), 0 off (the timer's second step) */
+  sign: 0 | 2 | 3;
+  /** the plate just dropped into the box (in front, one row lower), if any */
+  dropped?: string | null;
   /** the extra, older plates tossed in on a reset week (Ep4): face-down backs */
   boxBacks?: number;
 }
@@ -69,7 +74,7 @@ const NIGHT_AMB = 2.1; // lobby.ts lobbyLights: night ambient
  *  over the box of spare zeros */
 const HOUSE_X = [40, 446];
 const lights = (s: SetState): Lights => {
-  const k = s.sign === 3 ? 1 : 0.6;
+  const k = s.sign === 3 ? 1 : s.sign === 2 ? 0.6 : 0;
   const cx = G.SIGN.x + G.SIGN.w / 2, cy = G.SIGN.y + 26;
   return {
     amb: (x, y) => {
@@ -179,6 +184,18 @@ const paintSignBox = (mb: MatBuf, s: SetState) => {
   rect(S.x, S.y, S.w, S.h, mb.mat('metal', -0.4));
   rect(S.x, S.y, S.w, 1, mb.shade(1.6));
   rect(S.x, S.y + S.h - 1, S.w, 1, mb.shade(-1));
+  if (s.sign === 0) {
+    // OFF (the timer's second step): the face is a dead diffuser lit only by the room, the rule a dull green line
+    rect(FACE.x0, FACE.y0, FACE.x1 - FACE.x0 + 1, FACE.y1 - FACE.y0 + 1, mb.mat('lb.sign', 0.6));
+    rect(FACE.x0, FACE.y0, FACE.x1 - FACE.x0 + 1, 2, mb.mat('plant', 0.6));
+    rect(WELL.x, WELL.y, WELL.w, WELL.h, mb.mat('black', 0));
+    rect(WELL.x, WELL.y + WELL.h, WELL.w, 1, mb.mat('lb.sign', 0.4));
+    for (let i = 0; i < 3; i++) {
+      const [px] = slotXY(i);
+      for (const hx of [px + 3, px + 11]) rect(hx, WELL.y + 2, 2, 4, mb.mat('metal', 0.6));
+    }
+    return;
+  }
   // the lit face (emissive): cream, its top row hotter; the flicker's half step is a dither of two creams
   for (let y = FACE.y0; y <= FACE.y1; y++)
     for (let x = FACE.x0; x <= FACE.x1; x++) {
@@ -197,24 +214,31 @@ const paintSignBox = (mb: MatBuf, s: SetState) => {
   }
 };
 
+const NAMEPLATE = 'DIRECTORY';
 const paintBoard = (mb: MatBuf) => {
   const B = G.BOARD;
   rect(B.x + 2, B.y + 2, B.w, B.h, mb.shade(-1.2));
-  // the brass frame (3 px): a lit outer edge, the body, a dark inner lip
+  // the brass frame: a lit outer edge, the body, a dark inner lip; the top rail is RAIL px deep
   rect(B.x, B.y, B.w, B.h, mb.mat('lb.brass', 0.4));
   rect(B.x, B.y, B.w, 1, mb.shade(1.4));
   rect(B.x, B.y, 1, B.h, mb.shade(0.8));
   rect(B.x, B.y + B.h - 1, B.w, 1, mb.shade(-1));
   rect(B.x + B.w - 1, B.y, 1, B.h, mb.shade(-0.8));
-  rect(B.x + 2, B.y + 2, B.w - 4, 1, mb.shade(-0.8));
-  // the felt: black, a groove under every row (the letters' tabs sit in them)
-  for (let y = FELT.y0; y <= FELT.y1; y++) {
-    const r = (y - FELT.y0 - 5 + ROW_PITCH * 4) % ROW_PITCH; // 0..6 the letter rows, 7..8 the gap
-    for (let x = FELT.x0; x <= FELT.x1; x++) mb.mat('black', r === 8 ? -0.6 : 0.5)(x, y);
-  }
-  rect(FELT.x0, FELT.y0, FELT.x1 - FELT.x0 + 1, 1, mb.shade(-1.2)); // under the frame's top lip
-  // two brass screw heads in the frame's top rail
-  for (const sx of [B.x + 12, B.x + B.w - 13]) { mb.mat('lb.brass', 2.2)(sx, B.y + 1); mb.mat('lb.brass', -0.6)(sx + 1, B.y + 1); }
+  rect(B.x + 2, B.y + RAIL - 1, B.w - 4, 1, mb.shade(-0.8));
+  // the engraved nameplate, centred in the top rail: a brighter brass plate, the word cut in dark
+  const nw = microWidth(NAMEPLATE) + 8, nx = Math.round(BOARD_CX - nw / 2);
+  rect(nx, B.y + 1, nw, RAIL - 2, mb.mat('lb.brass', 1.3));
+  rect(nx, B.y + 1, nw, 1, mb.shade(0.8));
+  rect(nx + nw - 1, B.y + 1, 1, RAIL - 2, mb.shade(-0.8));
+  const cut = new Buf(1, 1, 0);
+  cut.set = (sx: number, sy: number) => mb.mat('lb.brass', -1.2)(sx, sy);
+  micro(cut, NAMEPLATE, nx + 4, B.y + 1, 0);
+  // the felt: black, finely ribbed (a groove every 3 px, where the letters' tabs sit)
+  for (let y = FELT.y0; y <= FELT.y1; y++)
+    for (let x = FELT.x0; x <= FELT.x1; x++) mb.mat('black', (y - FELT.y0) % 3 === 2 ? -0.4 : 0.5)(x, y);
+  rect(FELT.x0, FELT.y0, FELT.x1 - FELT.x0 + 1, 1, mb.shade(-1.2)); // under the rail's lip
+  // two brass screw heads in the top rail
+  for (const sx of [B.x + 8, B.x + B.w - 9]) { mb.mat('lb.brass', 2.2)(sx, B.y + 3); mb.mat('lb.brass', -0.6)(sx + 1, B.y + 3); }
 };
 
 /** a digit plate drawn into the MatBuf (the spare ones in the box, lit by the room) */
@@ -234,8 +258,8 @@ const paintBox = (mb: MatBuf, s: SetState) => {
   for (let yy = y + h - 1; yy < y + h + 3; yy++) for (let xx = x - 2; xx < x + w + 5; xx++) mb.shade(-1.4)(xx, yy);
   const backs = s.boxBacks ?? 0;
   for (let k = 0; k < backs; k++) matPlate(mb, x - 3 + ((k * 13) % 34), y - 19 + (k % 3) * 3, null, 1.1);
-  for (let k = 0; k < Math.min(4, s.boxPlates); k++) matPlate(mb, x + 2 + k * 8, y - 12 + (k % 2) * 2, '0');
-  if (s.boxPlates >= 5) matPlate(mb, x + 22, y - 9, '0', 1.8); // the plate just dropped in, in front, 1 row lower
+  for (let k = 0; k < 4; k++) matPlate(mb, x + 2 + k * 8, y - 12 + (k % 2) * 2, '0');
+  if (s.dropped) matPlate(mb, x + 22, y - 9, s.dropped, 1.8); // the plate just dropped in, in front, 1 row lower
   // flaps, then the front face
   poly([x, y, x - 6, y - 7, x + 7, y - 7, x + 11, y], mb.mat('lb.box', 1.6));
   poly([x + w, y, x + w + 5, y - 8, x + w - 8, y - 8, x + w - 12, y], mb.mat('lb.box', 0.2));
@@ -244,7 +268,8 @@ const paintBox = (mb: MatBuf, s: SetState) => {
   rect(x + w - 6, y + 1, 6, h - 1, mb.shade(-1)); // its turned side
   rect(x, y + 7, w - 6, 1, mb.shade(-0.5)); // a tape seam
   // a reset week: two of the old plates didn't make it in (face down on the floor beside the box)
-  if (backs) for (const [fx, fy] of [[x - 24, y + h - 3], [x - 12, y + h - 1]] as Array<[number, number]>) {
+  // (fourth pass: set further back on the floor, clear of the floor's fall-off into the band)
+  if (backs) for (const [fx, fy] of [[x - 26, y + 8], [x - 13, y + 10]] as Array<[number, number]>) {
     rect(fx, fy, PLATE_W, 3, mb.mat('lb.sign', 0.6)); rect(fx, fy, PLATE_W, 1, mb.shade(1)); rect(fx + 1, fy + 3, PLATE_W, 1, mb.shade(-1.4));
   }
   const sink = new Buf(1, 1, 0);
@@ -254,6 +279,8 @@ const paintBox = (mb: MatBuf, s: SetState) => {
 };
 
 // ------------------------------------------------------------------ public: the resolved set
+/** the floor's last rows fall off into the band's black: rows FALL_Y0..RH-1, a Bayer ramp toward camera */
+const FALL_Y0 = 194;
 /** Paint + light the set into rows 0..202 of fb. */
 export const drawSet = (fb: Buf, s: SetState) => {
   const mb = new MatBuf(480, RH);
@@ -264,32 +291,31 @@ export const drawSet = (fb: Buf, s: SetState) => {
   paintBoard(mb);
   paintBox(mb, s);
   resolve(mb, lights(s), fb, 0);
+  for (let y = FALL_Y0; y < RH; y++) {
+    const t = (y - FALL_Y0 + 1) / (RH - FALL_Y0 + 1);
+    for (let x = 0; x < 480; x++) if (bayer(x, y) < t) fb.set(x, y, PAL.N0);
+  }
   void LOBBY;
 };
 
 // ------------------------------------------------------------------ flat layers on top of the lit set
-/** A hung (or carried) plate: flat inks, crisp. `lit` = the light box behind it is at full. */
-export const drawPlate = (b: Buf, x: number, y: number, d: string, lit = true, face?: number) => {
-  const fc = face ?? (lit ? PAL.P2 : PAL.P1);
+/** how a flat layer is lit: 3 the light box at full, 2 its half step, 0 the sign off (the room at night only) */
+export type Lit = 0 | 2 | 3;
+/** A hung (or carried) plate: flat inks, crisp. The digit is the darker red (R1) on the lit face: ≈ 9:1. */
+export const drawPlate = (b: Buf, x: number, y: number, d: string, lit: Lit | boolean = 3, face?: number) => {
+  const L: Lit = lit === true ? 3 : lit === false ? 2 : lit;
+  const fc = face ?? (L === 3 ? PAL.P2 : L === 2 ? PAL.P1 : PAL.G2);
   rect(x, y, PLATE_W, PLATE_H, b.ink(PAL.N0));
   rect(x + 1, y + 1, PLATE_W - 2, PLATE_H - 2, b.ink(fc));
-  rect(x + 1, y + PLATE_H - 2, PLATE_W - 2, 1, b.ink(PAL.P0));
-  b.set(x + 4, y + 2, PAL.G3); b.set(x + 12, y + 2, PAL.G3); // the hook holes
-  bigText(b, d, x + Math.round((PLATE_W - bigTextWidth(d)) / 2), y + 5, lit ? PAL.R2 : PAL.R1);
-};
-/** A plate mid-flip on its hooks (Ep10: it turns by itself): a held edge-on drawing, never a rotation. */
-export const drawPlateFlip = (b: Buf, x: number, y: number) => {
-  const cx = x + PLATE_W / 2 - 2;
-  rect(cx, y, 5, PLATE_H, b.ink(PAL.N0));
-  rect(cx + 1, y + 1, 3, PLATE_H - 2, b.ink(PAL.P1));
-  rect(cx + 3, y + 1, 1, PLATE_H - 2, b.ink(PAL.P0));
-  rect(cx + 1, y + 7, 1, 8, b.ink(PAL.R2));
+  rect(x + 1, y + PLATE_H - 2, PLATE_W - 2, 1, b.ink(L === 0 ? PAL.G1 : PAL.P0));
+  b.set(x + 4, y + 2, L === 0 ? PAL.N1 : PAL.G3); b.set(x + 12, y + 2, L === 0 ? PAL.N1 : PAL.G3); // the hook holes
+  bigText(b, d, x + Math.round((PLATE_W - bigTextWidth(d)) / 2), y + 5, L === 0 ? PAL.R0 : PAL.R1);
 };
 
 /** A plate caught half-turned on its hooks (Ep10: it turns by itself): the face foreshortened to 9 of its 16
  *  columns (sampled, never scaled smooth) with its card edge showing on the far side, so the digit still reads.
  *  One held drawing, centred in the slot, whole pixels. */
-export const drawPlateHalf = (b: Buf, x: number, y: number, d: string, lit = true) => {
+export const drawPlateHalf = (b: Buf, x: number, y: number, d: string, lit: Lit = 3) => {
   const src = new Buf(PLATE_W, PLATE_H, 0);
   drawPlate(src, 0, 0, d, lit);
   const HW = 9, x0 = x + Math.floor((PLATE_W - HW - 2) / 2);
@@ -303,71 +329,46 @@ export const drawPlateHalf = (b: Buf, x: number, y: number, d: string, lit = tru
 };
 
 /** The sign's lettering (four lines, as the room sign sets them). */
-export const drawSignWords = (b: Buf, lit: 2 | 3) => {
-  ['DAYS SINCE', 'SOMEONE', 'TRIED TO', 'FIRE MAS:'].forEach((l, i) => text(b, l, FACE.x0 + 4, FACE.y0 + 6 + i * 10, lit === 3 ? PAL.N1 : PAL.N2));
+export const drawSignWords = (b: Buf, lit: Lit) => {
+  ['DAYS SINCE', 'SOMEONE', 'TRIED TO', 'FIRE MAS:'].forEach((l, i) => text(b, l, FACE.x0 + 4, FACE.y0 + 6 + i * 10, lit === 3 ? PAL.N1 : lit === 2 ? PAL.N2 : PAL.N1));
 };
 
-/** One line of board letters, character by character: per-letter offsets (a pushed-in letter a pixel out of line;
- *  the Ep10 letters still sliding into their grooves). Returns the x after the last glyph. */
-export const letters = (b: Buf, s: string, x: number, y: number, col: number, off?: (i: number) => [number, number, number?] | null) => {
+/** One line of board letters, character by character, in the small (7-px) or big (14-px) face, each with a 1-px
+ *  shadow on the felt. `off` gives per-letter offsets (the Ep10 letters still sliding into their grooves: [dx, dy,
+ *  dim?]; null = not on the board yet). */
+export const letters = (b: Buf, s: string, x: number, y: number, col: number, big: boolean, off?: (i: number) => [number, number, number?] | null) => {
+  const sp = big ? 8 : 4, tw = big ? bigTextWidth : textWidth, draw = big ? bigText : text;
   let cx = x;
   [...s].forEach((ch, i) => {
-    const w = ch === ' ' ? 3 : textWidth(ch);
+    const w = ch === ' ' ? sp - (big ? 2 : 1) : tw(ch);
     if (ch !== ' ') {
       const o = off ? off(i) : [0, 0];
       if (o) {
         const X = cx + o[0], Y = y + o[1];
-        if (X >= FELT.x0 && X + w <= FELT.x1 + 1) { text(b, ch, X + 1, Y + 1, PAL.N0); text(b, ch, X, Y, o[2] ? PAL.P0 : col); }
+        if (X >= FELT.x0 && X + w <= FELT.x1 + 1) { draw(b, ch, X + 1, Y + 1, PAL.N0); draw(b, ch, X, Y, o[2] ? PAL.P0 : col); }
       }
     }
-    cx += w + 1;
+    cx += w + (big ? 2 : 1);
   });
-  return cx - 1;
+  return cx;
 };
 
 export interface BoardOpts {
-  /** per-row, per-letter offsets (null = the letter isn't on the board yet) */
+  /** the letters' ink: the white letters under the house light / the sign's glow, or dimmed with the room */
+  ink?: number;
+  /** per-row (0 head, 1-3 big, 4 egg), per-letter offsets (null = the letter isn't on the board yet) */
   off?: (row: number, i: number) => [number, number, number?] | null;
-  /** leader dots per row: 0..1 of them placed (Ep10: they arrive with the letters) */
-  leaders?: (row: number) => number;
 }
-/** The directory's letters: the header centred, then each row (text.ts DirRow): the title row with its value
- *  right-aligned, the credit rows with their values on VALUE_X. Every dot leader sits on the LEAD_END grid, clear of
- *  the words by >= 3 px. */
-export const drawBoardText = (b: Buf, rows: DirRow[], o: BoardOpts = {}) => {
-  const INK = PAL.P1, DOT = PAL.P0;
-  const put = (s: string, x: number, y: number, row: number, base = 0) => letters(b, s, x, y, INK, o.off ? (i) => o.off!(row, base + i) : undefined);
-  const hdr = 'DIRECTORY';
-  put(hdr, Math.round((TEXT_X0 + TEXT_X1 + 1 - textWidth(hdr)) / 2), rowY(0), 0);
-  const leaders = (row: number, y: number, x0: number, x1: number) => {
-    const dots: number[] = [];
-    for (let dx = LEAD_END + 4 * Math.floor((x1 - LEAD_END) / 4); dx >= x0; dx -= 4) dots.push(dx);
-    const share = o.leaders ? o.leaders(row) : 1;
-    dots.reverse().slice(0, Math.round(dots.length * share)).forEach((dx) => b.set(dx, y + 6, DOT));
-  };
-  rows.forEach((r, k) => {
-    const row = k + 1, y = rowY(row);
-    if ('centre' in r) put(r.centre, Math.round((TEXT_X0 + TEXT_X1 + 1 - textWidth(r.centre)) / 2), y, row);
-    else if ('title' in r) {
-      const lx1 = put(r.title, TEXT_X0, y, row);
-      const vx = TEXT_X1 + 1 - textWidth(r.value);
-      put(r.value, vx, y, row, r.title.length);
-      leaders(row, y, lx1 + 4, vx - 4);
-    } else if ('label' in r) {
-      const lx1 = put(r.label, TEXT_X0, y, row);
-      put(r.value, VALUE_X, y, row, r.label.length);
-      leaders(row, y, lx1 + 4, VALUE_X - 4);
-    }
-  });
-};
-
-/** The rows' letter geometry, for the readability checks (x0, x1, y of every row's text). */
-export const boardExtents = (rows: DirRow[]) => {
-  const out: Array<{row: number; x0: number; x1: number; y: number}> = [{row: 0, x0: 0, x1: 0, y: rowY(0)}];
-  rows.forEach((r, k) => {
-    if ('label' in r || 'title' in r) out.push({row: k + 1, x0: TEXT_X0, x1: TEXT_X1, y: rowY(k + 1)});
-  });
-  return out;
+/** the x a centred row starts at */
+export const rowX = (s: string, big: boolean) => Math.round(BOARD_CX - (big ? bigTextWidth(s) : textWidth(s)) / 2);
+/** The directory's letters: the small head row, the three big rows, the small egg row, all centred. */
+export const drawBoardText = (b: Buf, ep: EpisodeOutro, o: BoardOpts = {}) => {
+  const ink = o.ink ?? PAL.P1;
+  const put = (s: string, y: number, row: number, big: boolean) =>
+    letters(b, s, rowX(s, big), y, ink, big, o.off ? (i) => o.off!(row, i) : undefined);
+  put(ep.head, HEAD_Y, 0, false);
+  ep.credits.forEach((c, k) => put(c, BIG_Y[k], k + 1, true));
+  if (ep.egg) put(ep.egg, EGG_Y, 4, false);
 };
 
 export {clamp};

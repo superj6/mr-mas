@@ -9,8 +9,8 @@ import {writePNG} from '../../../pixeladv/tools/png';
 import {composeFrame} from '../../../../shared/pixel/compose';
 import {outroScene} from '../scene';
 import {variantScene} from '../skins';
-import {PRE, OUT, O, TERMS_ON, KEY_STILLS, STRIP, typingSchedule} from '../timeline';
-import {EP1, TERMS, POINTER} from '../text';
+import {PRE, OUT, O, TERMS_ON, KEY_STILLS, STRIP, READ_CPS, typingSchedule} from '../timeline';
+import {EP1, TERMS, POINTER, LEGAL_ROWS} from '../text';
 import {textBoxes} from '../pane';
 import {mothPos} from '../moth';
 
@@ -34,8 +34,9 @@ for (const id of ids) {
     const moth = [];
     for (let o = O.mothIn; o <= O.end; o++) { const p = mothPos(o); if (p) moth.push([o, p[0], p[1]]); }
     writeFileSync(`${outDir}/layout.json`, JSON.stringify({
-      PRE, OUT, O, TERMS_ON, KEY_STILLS, STRIP,
-      title: EP1.title, header: EP1.header, credits: EP1.credits, terms: TERMS, pointer: POINTER,
+      PRE, OUT, O, TERMS_ON, KEY_STILLS, STRIP, READ_CPS,
+      title: EP1.title, header: EP1.header, date: EP1.date, credits: EP1.credits, terms: TERMS, pointer: POINTER,
+      legal: LEGAL_ROWS,
       typing: typingSchedule(EP1.credits), boxes: textBoxes(EP1), moth,
     }, null, 1));
   } else if (kind === 'strip') {
