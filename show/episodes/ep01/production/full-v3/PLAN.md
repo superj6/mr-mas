@@ -133,3 +133,14 @@ out/ep01/full-v3/                         the films and mixes (git-ignored)
 8. **Rebuild, check, final read:**
    - Rebuild both films and run QA, then a last cold read.
    - **Drive:** move the old `ep01-v3.mp4` and `ep01-v3-el.mp4` to the trash (rclone remote `mrmas-drive:`, folder "MR MAS Ep1 v3"), upload the new films, and share them with jgon@mit.edu (Drive API permissions through rclone's token; retry on the shared client's rate limit).
+
+**Added 2026-09-27 (showrunner):** "the transition righy now hiting worse is beginning of act 4. it should eel like a sudden shock to viewer he's fired, but the viewere just becomes aware through the plan, the video call is a bit hard to understand what cancel means". **Required fix in script v3.1 (the lead's design):**
+- **His side, first: shock.** S1.01 Vegas (arrival) → S1.02 the laptop's JOIN → V.O. "gerg's not on it. alyi set it up. probably just the budget." → JOIN.
+  - The call. ALYI's first sentence reaches us for the first time on his side: "Mas. The board has decided that you will no longer lead the company." (his real words, already in S3.00a).
+  - A hard cut to a **literal** host dialog in the 1993 dialog's look: `Remove MAS MANALT from the meeting?` [Remove]. ALYI's pointer clicks Remove. `You've been removed from the meeting.`
+  - The tile drops, the one silence, the buzz, then "super.".
+  - The viewer learns it the same instant he does. No THE PLAN before it.
+- **The board's side, second: the explanation.** THE PLAN blueprint (S1.03–S1.05: the three who stepped down, the majority, the investor's zero votes, "And the CEO? What does he own?" "Good question.", step 1 NOON · VIDEO CALL) **moves to open the board's side** as Neleh's prep minutes before noon, then her side of the call (S3.00a…).
+  - The waltz moves with it.
+  - Alyi's line is heard twice, once per side: the told-twice device working as intended.
+- **The Cancel metaphor is retired from Ep1's call.** The dialog's look is the only rhyme with 1993.
