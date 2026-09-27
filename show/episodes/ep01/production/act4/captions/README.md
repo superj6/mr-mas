@@ -65,6 +65,8 @@ It's light (no audio or video is opened), so it doesn't need `ops/heavy.sh`. Re-
 
 ## The one-line on-screen disclaimer (proposal, **for legal review**)
 
+> **Superseded (2026-09-27, [SHOWRUNNER-NOTES](../../../../../production/SHOWRUNNER-NOTES.md) note 3):** no disclaimer, terms line or pointer goes on screen, including the standalone previews' head title cards. If a notice is ever needed for publishing, it lives only in the platform's description field; the wording below stays on file for that. Question 3's `(REPORTED)` labels are retired as well ([guardrails §4](../../../../../bible/guardrails.md#4-how-facts-appear-on-screen)).
+
 > **A parody. Events dramatized, scenes invented. No one depicted took part in or endorsed it.**
 
 - **Where it comes from.** It's the season's terms line from `show/production/OUTRO-PROPOSALS.md` §1.1, with one grammar fix: "took part **in** or endorsed it" (the drafted "took part or endorsed it" drops the preposition).

@@ -112,7 +112,7 @@ D({id: 'UI-LETTER-V5', state: 'first-quote', module: 'shared/pixel/kits/staff-le
   draw: (fb) => drawStaffLetter(fb, {k: 60, f: 4000, quotes: [40, 200, 340], count: 505, gerg: {mouth: 'E'}, window: 0})});
 D({id: 'UI-LETTER-V5', state: 'third-quote', module: 'shared/pixel/kits/staff-letter.ts', note: 'S5.06 ~15 s: all three quotes, SIGNED 700, scrolled 60 px',
   draw: (fb) => drawStaffLetter(fb, {k: 360, f: 4300, quotes: [40, 200, 340], count: 700, scroll: 60, gerg: {mouth: 'A'}, window: 0})});
-D({id: 'UI-LETTER-V5', state: 'alyi-stop', module: 'shared/pixel/kits/staff-letter.ts', note: 'S5.06 end: scrolled to the bottom, ALYI (REPORTED) lit, 745 / 770, the window one step greyer',
+D({id: 'UI-LETTER-V5', state: 'alyi-stop', module: 'shared/pixel/kits/staff-letter.ts', note: 'S5.06 end: scrolled to the bottom, ALYI lit, 745 / 770, the window one step greyer',
   draw: (fb) => drawStaffLetter(fb, {k: 520, f: 4460, quotes: [40, 200, 340], count: 745, clunk: false, scroll: LETTER_SCROLL_MAX, alyi: true, gerg: {mouth: 'rest'}, window: 1})});
 
 // ------------------------------------------------------------------ BP-NELEH-POINTER (over v4's plan4 sheet, the v5 poses)

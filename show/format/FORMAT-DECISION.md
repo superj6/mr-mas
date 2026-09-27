@@ -21,7 +21,7 @@ The showrunner's call on runtime, episode count, the episode template, the telep
 | Target | Value |
 |---|---|
 | **Runtime** | **22:00** per episode (tolerance ±0:30) |
-| **Story time** | **20:45** (±0:30), timed by the slate animatic, not by pages. Fixed overhead of 1:15 is not yours: intro 0:30 (locked), filename/disclaimer card 0:02, credits 0:43 |
+| **Story time** | **20:45** (±0:30), timed by the slate animatic, not by pages. Fixed overhead of 1:15 is not yours: intro 0:30 (locked), filename card 0:02, credits 0:43 (a placeholder: no notice goes on screen since 2026-09-27, and the outro proposals run 6–15 s) |
 | **Pages** | **36 pages** (band **33–40**) on the house page in §5.3. Dialogue-heavy drafts land low (Ep3 ≈ 34), run-heavy drafts land high |
 | **Shape** | Cold open ≤ 1:15 · four movements of about 4:30, act-outs at about **6:30 / 11:00 / 15:30** · tag and button ≤ 1:15. The 11:00 act-out is a clean midpoint the episode can be split at |
 | **Balance** | Present action (I + S) **60–75%** · compressed time (M + P) **24–29%** · flashback (F) **5–8%** |
@@ -118,13 +118,13 @@ The clock and slot rules are pacing-model's ([§3](pacing-model.md#3-the-22-minu
 |---|---|---|---|---|---|---|
 | **Cold open** | 0:00 → 1:10 | 0:45–1:15 | A laugh inside 15 s; the episode's question or a clock. One location. Never ends at Mas's desk (the intro opens there) | Mas's flat beat or a sting, cut on the downbeat into bar 1 | 2 | ≈ 5 agent-h |
 | Intro | 1:10 → 1:40 | 0:30 (locked) | The per-episode slot items only (cold-open line, skyline state, roll-call fill-in) | — | ½ (slot notes only) | 1.5 agent-h (the intro-slot line, not picture) |
-| Filename + disclaimer card | 1:40 → 1:42 | 0:02 | — | — | — | — |
+| Filename card | 1:40 → 1:42 | 0:02 | — | — | — | — |
 | **Movement 1** | 1:42 → 6:30 | 4:15–5:15 | Anchor scene 1 (a room); at least one set-piece; flashback slot F-A allowed | **Act-out 1** (T) | 8 | ≈ 19 agent-h |
 | **Movement 2** | 6:30 → 11:00 | 4:00–5:00 | Anchor scene 2; usually THE PLAN → its set-piece | **Midpoint act-out**: a T plus a power shift. The split point (window 10:00–14:15) | 8 | ≈ 19 agent-h |
 | **Movement 3** | 11:00 → 15:30 | 4:00–5:00 | Anchor scene 3; a meanwhile split or one run; flashback slot F-B | **Act-out 2**, the biggest T | 8 | ≈ 16 agent-h |
 | **Movement 4** | 15:30 → 20:15 | 4:15–5:15 | The S3 climax at 14:20–18:40; anchor scene 4, the confrontation; micro flashback F-C (≤ 6 s) | The resolution | 8 | ≈ 22 agent-h |
 | **Tag + button** | 20:15 → 21:17 | 0:45–1:15 | One thread. Button ≤ 15 s, ≤ 3 spoken words; optional hook ≤ 5 s after it | The button, on a downbeat | 1½ | ≈ 3 agent-h |
-| End credits | 21:17 → 22:00 | 0:43 | Legal-card read time; optional stinger ≤ 5 s | — | — | — |
+| End credits | 21:17 → 22:00 | 0:43 | The legal card's read time, now a placeholder (no notice on screen, 2026-09-27); optional stinger ≤ 5 s | — | — | — |
 | **Total** | | **22:00** | | | **36** | **≈ 84 agent-h picture** (80–85; ≈ 118 all-in) |
 
 A movement is the natural planning unit: about 20 agent-h of picture, or about **2.5 wall-hours at 8 agents**.

@@ -168,7 +168,7 @@ The files I reviewed are `/home/jgon/project/art/mrmas/show/episodes/ep01/script
 
 **Summary.** None of the three episodes loses its main storyline for a newcomer. The gaps are specific: labels, plates and pronouns that assume outside knowledge. The insider problems are mostly facts told two or three times in a row, not scenes running long.
 
-**What I read.** Before starting, I read SHOWRUNNER-NOTES.md (including note 7, "let conversations play out") and flow-and-continuity.md (§4 and §5a). Then I read the three scripts as they stand on disk:
+**What I read.** Before starting, I read SHOWRUNNER-NOTES.md (including note 11, "let conversations play out") and flow-and-continuity.md (§4 and §5a). Then I read the three scripts as they stand on disk:
 - Ep1 (`show/episodes/ep01/script.md`): the cold open through Act Three, and the tag. I skimmed Act Four only for what the tag, Ep2 and Ep3 depend on.
 - Ep2 (`show/episodes/ep02/script.md`, draft 5.3): scenes 1–23.
 - Ep3 (`show/episodes/ep03/script.md`, draft 3.5): scenes 1–25.

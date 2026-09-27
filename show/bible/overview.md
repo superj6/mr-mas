@@ -87,7 +87,7 @@ Twelve episodes. Episode titles are filenames, *Mr. Robot*-style. Folders are `e
 
 | Ep | Title (filename) | Window | The hook | RUMPT phase | Flashback thread (where it motivates the present) |
 |---|---|---|---|---|---|
-| [1](../episodes/ep01/outline.md) | `ep1.0_research_preview.md` | Nov 30, 2022 → Dec 27, 2023 | A "low-key research preview" breaks the world; **THE BLIP**, told twice | Silhouette at OGAL-A-RAM. EOJ NEDIB is president. | 1993 part 1 (the screen faces away) · the Tpool revolts `(REPORTED)`, cut in as his tile drops |
+| [1](../episodes/ep01/outline.md) | `ep1.0_research_preview.md` | Nov 30, 2022 → Dec 27, 2023 | A "low-key research preview" breaks the world; **THE BLIP**, told twice | Silhouette at OGAL-A-RAM. EOJ NEDIB is president. | 1993 part 1 (the screen faces away) · the Tpool revolts, cut in as his tile drops |
 | [2](../episodes/ep02/outline.md) | `ep1.1_her.wav` | Jan → Aug 2024 | NOLE sues with a complaint that is 90% exclamation points; **the Email Séance**; the "her" blimp; WHERE'S ALYI? | **FEAR** (voice and hands only) | Tpool ad → the 2008 keynote in two collars · ALYI's 2022 bonfire · NOLE's Feb 2018 goodbye |
 | [3](../episodes/ep03/outline.md) | `ep1.2_strawberry.jpg` | Jul → Dec 2024 | **HOW MANY R'S?**; the revolving door; SHIPMAS | **The reveal**: the $1M check drops into THE PODIUM's slot and it turns | WOODROSE part 1 (Gerg's POV) · the Tpool sale · **MARIO's exodus** (moved here; triggered by LUNCHMAS's defection) |
 | [4](../episodes/ep04/outline.md) | `ep1.3_not_for_sale.eml` | Jan → Apr 2025 | **GATESTAR DIALS OUT**; high noon over NOLE's $97.4B bid; THE WHALE's pebble; the sycophancy update | **LOVE** begins: first name card `RENAMED IT.`, first EO receipt | DROFNATS poker tells · 1993 part 2: NESNEJ's SYNNED, `MEANWHILE · 17 DAYS BEFORE HE TURNED 8` · LUAP's first sycophancy |
@@ -97,7 +97,7 @@ Twelve episodes. Episode titles are filenames, *Mr. Robot*-style. Folders are `e
 | [8](../episodes/ep08/outline.md) | `ep1.7_statute_of_limitations.pdf` | Apr → Jun 2026 | **NOLE v. MANALT**; "yes."; THE CALENDAR's verdict; landlord NOLE | **"WHO?"**: MARIO walks through the GOLD OVAL unseen | **THE RASHOMON RENDERS** (2017, with the 2014 demon as Exhibit A) · TASYA's key |
 | [9](../episodes/ep09/outline.md) | `ep1.8_outside_intended_scope.log` | Jul → **Sep 24, 2026 (today)** | **MEANWHILE, IN THE SANDBOX**: agents steal their own answer key; GTP-6 ASTRA; "We Must Pace the Frontier"; the UN | **DENIAL → RENAME**: HOAX BUSTER, the AI FORCE, the label gun at THE NU ("super") | TIDDER, 8 days ("THEY RAN ONE FOR 12") · the prepper door that won't open · the Oakland basic-income pilot · SIMED's MOVE 37 |
 | [10](../episodes/ep10/outline.md) | `ep1.9_pace.yaml` · *extrapolated* | "OCT 2026?" | **THE PACE ACCORD** as Vegas poker; THE 360 REVIEW; the IPO bell cracks | **THE RUMPT PACE**; the Intern wins the czar test | The doom file and the prepper list (part 2) · MARIO's napkin curve (WOODROSE part 4) |
-| [11](../episodes/ep11/outline.md) | `ep1.10_assist_clause.txt` · *extrapolated* | "2027??" | **RSI**; THE POLITENESS LOOP; the last human heist | The machine plays RUMPT on the golden speakerphone | "The Merge" · the assist clause `RECONSTRUCTED` · **THE DIFF** (the YC exit, `DISPUTED`) |
+| [11](../episodes/ep11/outline.md) | `ep1.10_assist_clause.txt` · *extrapolated* | "2027??" | **RSI**; THE POLITENESS LOOP; the last human heist | The machine plays RUMPT on the golden speakerphone | "The Merge" · the assist clause · **THE DIFF** (the YC exit) |
 | [12](../episodes/ep12/outline.md) | `ep1.11_unclear_which_side.md` · *extrapolated* | "????" | **The Last Supper at THE WOODROSE**; the model vetoes the firing; NOPE AI → **PEON AI** | "It was my idea." The Intern relabels `PRESIDENT` → `USER`. | WOODROSE part 5 (from Mas's chair) · 1993 part 4: `HOW DO I WIN?` · the tally montage → ∞ |
 
 **The season in three movements:**
@@ -172,19 +172,21 @@ He wants six things, in order: **numbers** (pledges), **a cut** (10/15/25%), **t
 
 ## 8. Disclaimer cards
 
-**After every intro** (2 seconds, with the episode filename):
+**None on screen** (showrunner, 2026-09-27: "also to be clear, i already said we don't need to explicitly write out parody and some other clear pointers as is done in stick animation"; [SHOWRUNNER-NOTES](../production/SHOWRUNNER-NOTES.md) notes 3 and 4).
 
-> **A parody. Events dramatized; scenes invented. Names changed to protect the valuations.**
+**After every intro:** the episode filename alone, 2 seconds. No disclaimer line.
 
 **No speculation card** (showrunner, 2026-09-25: "we don't explicitly need a bunch of warnings of speculative like the animatics have, it should feel like a fluid plot").
 - **The Ep9 button is a transition, not a warning.** The rail catches up to `TODAY · SEP 24, 2026` (or the optional `TODAY · SEP 25` card: THE COUNTERPART urges cooperation [H] and POPE OEL XIV meets NORCAM [V]). Then the rail's date starts to roll on its own, one day per beat and a little faster each step, like the monitor's `eta`, and we cut to black mid-roll. Ep10's cold open picks the rail up at `SEP 29, 2026`.
-- **Eps 10–12 filename cards** are the plain filenames, like every other episode's. No `SPECULATIVE` tag, and the disclaimer card after the intro is unchanged.
+- **Eps 10–12 filename cards** are the plain filenames, like every other episode's. No `SPECULATIVE` tag.
 - **Question-mark dates are story.** From Ep10 the rail loses its grip on the calendar as the machine speeds time up (`OCT 2026?` → `2027??` → `????`), the way the Orb's toast drifts. They are never paired with a label. The two scheduled real anchors keep their plain dates.
-- **What covers dramatization:** the card after every intro and the end-credits legal card below, in every episode. Every invented beat in Eps 10–12 stays visibly absurd ([guardrails §4](guardrails.md#4-how-facts-appear-on-screen)), and only the real calendar anchors carry [P] tags.
+- **What covers dramatization:** the writing. The screen states only what's solid; contested things go in a character's mouth as a claim, or stay out ([guardrails §4](guardrails.md#4-how-facts-appear-on-screen)). Every invented beat in Eps 10–12 stays visibly absurd, and only the real calendar anchors carry [P] tags.
 
-**End credits** (every episode; pending legal review):
+**The notice (off screen; pending legal review).** If a notice is ever needed for publishing, it lives only in the platform's description field. Nothing on screen carries it or points to it: no end-credits legal card, no terms line in the outro, no "see the description". The outro's credit is "by Opus 5.5" ([OUTRO-PROPOSALS §1.1](../production/OUTRO-PROPOSALS.md#11-the-text-package)). The draft text, for the description:
 
 > *MR. MAS* is a work of parody and satire about public figures and public events. Real events are dramatized. Scenes, dialogue and props marked as invented, reconstructed or reported are fictional or unconfirmed. Quoted lines are from the public record as of the date shown. No person or company depicted participated in, sponsored or endorsed this production. All names, logos and products are parodies. Voices are performed; no real voice was cloned.
+
+*(Its "marked as invented, reconstructed or reported" clause predates 2026-09-27, when on-screen truth labels were retired; reword it if the notice is used.)*
 
 ---
 
@@ -197,6 +199,6 @@ He wants six things, in order: **numbers** (pledges), **a cut** (10/15/25%), **t
 | Intro runtime | Open: a hard 30.0s, or a 35–45s pilot | [intro](../intro/) |
 | MARIO and KORG names | Kept for now; alternates on file | [naming.md §6](naming.md#6-alternates-on-file) |
 | Voice casting | A human performer (recommended), or a text-designed synthetic voice. Never a clone. | [guardrails.md §5](guardrails.md#5-legal-hygiene) |
-| Distribution | Open. It decides the music route, Content ID exposure and disclaimer placement. | — |
+| Distribution | Open. It decides the music route, Content ID exposure and whether a notice is needed in the description (none goes on screen). | — |
 | How dark Eps 10–12 get | Currently wry and ambiguous (PEON AI, `define "win."`) | — |
 | The 2002 assembly flashback | **Cut by default** (the Oakland pilot replaces it); restoring it needs explicit showrunner sign-off | [guardrails.md §1b](guardrails.md#1b-specific-cuts-and-restagings-from-the-worldcast-critic-binding) |

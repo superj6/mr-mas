@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Episode** | 1 of 12 (pilot) |
-| **Title card** | `ep1.0_research_preview.md` (2 s card after the intro, with the disclaimer: *"A parody. Events dramatized; scenes invented. Names changed to protect the valuations."*) |
+| **Title card** | `ep1.0_research_preview.md` (2 s card after the intro, the filename alone; the disclaimer line is cut, 2026-09-27) |
 | **Date span** | **Nov 30, 2022 → Dec 27, 2023.** Cold open Nov 15–16, 2023 (APEC). Flashbacks: 1993; 2005–08. |
 | **Genre** | The coup, told twice (heist grammar) |
 | **Record** | The spine is verified events. Invented filler is flagged `INVENTED` in [beats.md](beats.md) and is visibly absurd. Nothing on screen is labelled speculative. |
@@ -108,7 +108,7 @@ The showrunner's rule for the pilot: hint at the firing, never spoil it before t
 ## Flashbacks
 About 20 s or less is the pilot's guide; this episode uses ≈ 7.5 s. See [flashbacks.md](flashbacks.md).
 - **F1.1 · `1993`** (4 s): the 1-bit dialog alone, Cancel greyed out.
-- **F1.2 · 2005–08 · TPOOL `(REPORTED)`** (≈ 3.5 s, inside 26A): a frosted boardroom door, opened out of tally mark 1 as the Orb counts. No whisper.
+- **F1.2 · 2005–08 · TPOOL** (≈ 3.5 s, inside 26A; no `(REPORTED)` label on screen since 2026-09-27): a frosted boardroom door, opened out of tally mark 1 as the Orb counts. No whisper.
 
 ## World and lore (season revision)
 - **One world beat, W1.3** ("tasks, not jobs", sc 15), the work thread's first link, paid for in the same scene. The pilot is dense and Act Four is in production, so the other threads start cleanly in Eps 2–5 (season plan §3).

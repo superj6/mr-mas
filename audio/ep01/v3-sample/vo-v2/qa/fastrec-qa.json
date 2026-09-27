@@ -1,0 +1,29 @@
+{
+ "problems": [],
+ "flags": [
+  {
+   "id": "v3s-07",
+   "kind": "pace",
+   "note": "articulation 4.89 syll/s against the guide 3.4-4.0"
+  },
+  {
+   "id": "v3s-08",
+   "kind": "asr",
+   "note": "ASR missed a word: '406, 407, 406.' (recall 0.0)"
+  }
+ ],
+ "totals": {
+  "lines": 11,
+  "words": 87,
+  "audible_s": 30.6,
+  "wpm_overall": 171.0
+ },
+ "stringouts": [
+  "audio/ep01/v3-sample/vo-v2/reel/sc5-fast-stringout.mp3",
+  "audio/ep01/v3-sample/vo-v2/reel/sc6-fast-stringout.mp3",
+  "audio/ep01/v3-sample/vo-v2/reel/sc7-fast-stringout.mp3",
+  "audio/ep01/v3-sample/vo-v2/reel/sc24-fast-stringout.mp3",
+  "audio/ep01/v3-sample/vo-v2/reel/sc29-fast-stringout.mp3"
+ ],
+ "method": "fastrec qa_generic: qa_v5.py's hard checks and ear flags, without its Act Four conversation table"
+}

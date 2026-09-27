@@ -20,7 +20,7 @@
 - **The facts check is done.** Three small on-screen text fixes are needed: "judgement", Gerg's lowercase "i quit.", and the eulogy post's date. None is applied yet. Two items need a decision: re-recording Alyi's line, and a listen for Tasya's "IP rights".
 - **Eight extra art assets are drawn** (24 stills, palette-clean), but **none is in the preview yet.** Wiring them in is the pixel fix stage's job (§3).
 - **The pixel pass's own review film still plays the old stick mix.** Switching it to the final mix needs one offset change as well as the new path, or the sound runs 3 s off (§3.1).
-- **Waiting on people:** a listen (§6), a legal read of the one-line disclaimer, and five rulings (§4).
+- **Waiting on people:** a listen (§6) and five rulings (§4). *(The legal read of the one-line disclaimer is moot: since 2026-09-27 no disclaimer goes on screen, [SHOWRUNNER-NOTES](../../../../production/SHOWRUNNER-NOTES.md) note 3.)*
 
 ---
 
@@ -33,7 +33,7 @@
 | **Final mix** | The act mix, four stems, the score's tail into the tag, a cues file | Muxed onto the stick reel and onto the pixel **picture** film | The pixel pass's **review** film (`act4-animatic-v5.mp4`, with the margin and transcript), its renderer and its report still use the stick mix (§3.1) |
 | **Facts** | 23 on-screen or spoken items checked against sources | The captions already spell "judgement" | Script, takes' text, stick timeline, pixel kits (§3.3) |
 | **Captions and AD** | SDH captions (SRT and WebVTT), AD cues and the AD script, on two clocks | Sidecar files that match the lock | Not in any mp4. Load them in the player (§5.5) |
-| **Disclaimer line** | A proposed one-liner, plus an alternate and five questions for legal | — | On no title card, pending legal |
+| **Disclaimer line** | A proposed one-liner, plus an alternate and five questions for legal | — | Not on screen (showrunner, 2026-09-27); on file in case the description needs a notice |
 | **Extra art** | 8 assets, 24 stills, a sheet | — | Not in `shots5.ts`, not in any render (§3.2) |
 
 ---
@@ -98,14 +98,14 @@ Everything Act Four puts on screen or in a voice was checked against primary pos
 | 4 | The letter's demand and threat are confirmed word for word | Tags only |
 | 5 | Alyi's missing middle clause ("And I can understand why you chose this word, but") is confirmed | By the script's own rule it goes back in. That's a re-record of about +2.5 s, which moves the lock. **The lead decides when** |
 | 6 | Tasya's "IP rights" rests only on a court filing quoting the podcast; a transcript from the time has "all the rights" | **On hold** until someone listens to the episode |
-| 7 | The Q\* rail, "TWO STAFF REVOLTS", `EQUITY: 0` and every other post and quote | No change. `(REPORTED)` stays where it is; `(DISPUTED)` isn't needed as the Q\* rail reads now |
+| 7 | The Q\* rail, "TWO STAFF REVOLTS", `EQUITY: 0` and every other post and quote | No change. `(REPORTED)` stays where it is; `(DISPUTED)` isn't needed as the Q\* rail reads now. *(2026-09-27: on-screen truth labels are retired, [guardrails §4](../../../../bible/guardrails.md#4-how-facts-appear-on-screen); the script drops `(REPORTED)`, and the preview's code still carries it.)* |
 
 ### 2.5 Captions, audio description, disclaimer
 
 - **Captions:** 149 cues covering all 101 lines, with 57 speaker labels and 23 sound captions. They're plain SDH: Mas is in normal sentence case, and on-screen text isn't captioned. They come in two versions: the act clock (for the pixel preview) and +3 s (for the stick reel, which opens on a 3 s title card).
   - **Eight cues read faster than 20 characters a second**, because the takes themselves are fast (Tasya's statement is 27). Someone decides whether to edit those captions.
 - **Audio description:** 58 short cues, 432 words, placed in the dialogue's gaps. It reads the silent posts and dates aloud. Two of its choices are flagged for a reviewer: it talks over the Cancel silence and over the stop on Mada's label.
-- **Disclaimer (for legal):** "A parody. Events dramatized, scenes invented. No one depicted took part in or endorsed it." It fits on one row. For a standalone Act Four preview, hold it at least 5 s on the head title card.
+- **Disclaimer (for legal):** "A parody. Events dramatized, scenes invented. No one depicted took part in or endorsed it." It fits on one row. For a standalone Act Four preview, hold it at least 5 s on the head title card. *(2026-09-27: not on screen, on a preview or anywhere else. If a notice is ever needed for publishing, it lives only in the platform's description field.)*
 - **Notes:** `captions/README.md`, beside this file. The AD script a describer reads from is `captions/ep01-act4-v5.ad-script.md`.
 
 ### 2.6 Extra art (an additional pixel artist)
@@ -177,7 +177,7 @@ The pixel pass owns `studio/src/episodes/ep01/act4/animatic/**` and the art-v5 m
 ### 3.4 On the next watch of the pixel picture
 
 - **Caption placement.** Captions sit at the bottom. Check that none covers a post or the letter page, and move any that do (a WebVTT `line:` setting, via `captions/tools/access_v5_src.json`).
-- **The disclaimer's hold.** Once legal clears it, it goes on the head title card of each standalone preview. The pixel preview has no title card, and the stick reel's is 3 s, less than the 5 s suggested.
+- **The disclaimer's hold.** Once legal clears it, it goes on the head title card of each standalone preview. The pixel preview has no title card, and the stick reel's is 3 s, less than the 5 s suggested. *(Moot since 2026-09-27: no disclaimer on screen.)*
 
 ---
 

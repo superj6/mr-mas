@@ -18,7 +18,7 @@
    - He testifies beside the card and never touches it; he just benefits from it. The Senate pitcher sloshes, and his glass doesn't. No V.O. (a government proceeding).
    - **Out:** push in on the hourglass. What it counts isn't said yet; the sand keeps falling. **Hard cut to the intro.**
 
-## INTRO (EP05 variant) → title card `ep1.4_missionaries.docx` + disclaimer
+## INTRO (EP05 variant) → title card `ep1.4_missionaries.docx`
 See [intro-slot.md](intro-slot.md).
 
 ## ACT 1: "THE PRICE OF EVERYTHING" (one place: the sidewalk table · news May 10 → Jun 5; the act Jun 10 → Jun 12)

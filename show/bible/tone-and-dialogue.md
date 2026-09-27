@@ -1010,7 +1010,7 @@ A cut is a handoff, not a reset. In a medium of held drawings, sound is the chea
    - The consequence is a prop, and the prop never says why.
    - Invented pressure scenes around a real event look absurd, never like a plausible backroom.
    - A match cut or a rhyme between two real events is a rhyme, never a cause.
-7. **`(REPORTED)`, `(DISPUTED)` and sealed material** get the Orb's look or nothing. "Not consistently candid" is never answered, in any episode.
+7. **Contested, single-source and sealed material** gets the Orb's look or nothing (reworded 2026-09-27: on-screen truth labels are retired, [guardrails §4](guardrails.md#4-how-facts-appear-on-screen)). "Not consistently candid" is never answered, in any episode.
 8. **Use the calendar for irony.** The audience knows the date; the characters don't. Plant the date's object early, and let the characters plan past it. Examples: the `RESERVED: CHIEF SCIENTIST` seat, the fifth voice slot, the `WHERE IS ALYI?` flyer.
 9. **Real lines work best as cross-examination.** The strongest delivery puts the record inside an invented pressure device. The model is Ep2 sc 6: XEL's real questions and Mas's real answers play under a microphone that grows on every pause. The device is invented and absurd; the words are exact.
 
@@ -1216,7 +1216,7 @@ Run this on every scene, in every draft. The questions are prompts for finding p
 
 **The record and POV**
 - [ ] Do real items walk in, dated as they land, in their own medium, played dry, and land on a face within 10 s? Are posts pop-ups? (§5)
-- [ ] Is there no invented motive, private term, hesitation or causation at a real event? No Mas tell within a bar of the record? Does `(REPORTED)` material get only the Orb's look? (§5, [pov-and-framing §3.7](pov-and-framing.md#37-guardrails-on-the-inner-life))
+- [ ] Is there no invented motive, private term, hesitation or causation at a real event? No Mas tell within a bar of the record? Does contested or single-source material get only the Orb's look? (§5, [pov-and-framing §3.7](pov-and-framing.md#37-guardrails-on-the-inner-life))
 - [ ] Does the V.O. follow [pov-and-framing §5](pov-and-framing.md#5-vo-style-guide): lowercase, 10 words or fewer, a bar clear of the record, ending a beat before the cut?
 
 **Comedy, score and cost**

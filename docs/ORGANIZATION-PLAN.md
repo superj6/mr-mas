@@ -87,7 +87,7 @@ The reasons are in §5.
 - **`audio/mix/` isn't purely stale.** `audio/intro-vox/scripts/assemble.py:82` falls back to `mix/music/theme-V1-chipchamber-rollcall.wav`. The v2 tool rewrites that `f'{AUDIO}/mix/...'` read.
 - **In this harness, `rg -I` means `--no-filename`.** Tools built on `rg -n` must not pass `-I` (Appendix D).
 - **Passes writing at about 22:40** (files changed in the last half hour):
-  - The outro proposals: `studio/src/dev/outro/{a…e}/`, writing `out/lookdev/outro/` (SHOWRUNNER-NOTES note 1).
+  - The outro proposals: `studio/src/dev/outro/{a…e}/`, writing `out/lookdev/outro/` (SHOWRUNNER-NOTES note 5).
   - The fast dialogue recorder: `audio/ep01/act4/dialogue/tools/fastrec/`.
   - The Ep1 range prototypes: `studio/src/dev/range/ep1-p1…p3/`, writing `out/range/ep1/`.
   - Script passes on `show/episodes/ep0[1-3]/script.md`, and a studio typecheck.

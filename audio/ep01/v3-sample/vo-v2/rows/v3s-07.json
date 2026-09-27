@@ -1,0 +1,206 @@
+{
+ "id": "v3s-07",
+ "scene": "24",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "alyi set it up. probably just the budget.",
+ "spoken_as": "alyi set it up. probably just the budget.",
+ "delivery": null,
+ "tag": "[INVENTED · VO · v3 sample, inner voice]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "vo",
+ "kind": "vo",
+ "side": "none",
+ "pov": null,
+ "shot": null,
+ "shot_id": null,
+ "cue": null,
+ "lip_sync": false,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v3-sample/vo-v2/wav/v3s-07.wav",
+ "mp3": null,
+ "duration_s": 4.205,
+ "frames_24": 101,
+ "voiced_span_s": 3.01,
+ "pace": {
+  "words": 8,
+  "wpm": 159.5,
+  "speed": 0.85,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.85,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.4,
+    4.0
+   ],
+   "turn_wpm_guide": [
+    120,
+    140
+   ],
+   "intent": null
+  },
+  "measured": {
+   "wpm": 159.5,
+   "articulation_sps": 4.89,
+   "syllables": 13,
+   "span_s": 3.01,
+   "pauses_s": [
+    0.06,
+    0.35
+   ]
+  },
+  "longest_internal_gap_s": 0.35,
+  "audible_in_s": 0.52,
+  "audible_out_s": 3.53
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.850",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 60 Hz",
+  "pitch 0",
+  "low shelf +2.5 dB @150 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak -1 dB @3200 Hz Q0.8",
+  "high shelf -2.5 dB @7500 Hz",
+  "comp 2.5:1 @-26 dB (15/160 ms)",
+  "Kokoro speed 0.850 (the plan speed; mas-manalt-vo band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [],
+ "words": [
+  {
+   "w": "alyi",
+   "t0": 0.665,
+   "t1": 1.128,
+   "f0": 16,
+   "f1": 27,
+   "ph": "ˈælɪi"
+  },
+  {
+   "w": "set",
+   "t0": 1.128,
+   "t1": 1.328,
+   "f0": 27,
+   "f1": 32,
+   "ph": "sˈɛt"
+  },
+  {
+   "w": "it",
+   "t0": 1.328,
+   "t1": 1.44,
+   "f0": 32,
+   "f1": 35,
+   "ph": "ɪt"
+  },
+  {
+   "w": "up",
+   "t0": 1.44,
+   "t1": 1.8,
+   "f0": 35,
+   "f1": 43,
+   "ph": "ˌʌp"
+  },
+  {
+   "w": "probably",
+   "t0": 2.052,
+   "t1": 2.602,
+   "f0": 49,
+   "f1": 62,
+   "ph": "pɹˈɑbəbli"
+  },
+  {
+   "w": "just",
+   "t0": 2.602,
+   "t1": 2.878,
+   "f0": 62,
+   "f1": 69,
+   "ph": "ʤˈʌst"
+  },
+  {
+   "w": "the",
+   "t0": 2.878,
+   "t1": 3.003,
+   "f0": 69,
+   "f1": 72,
+   "ph": "ðə"
+  },
+  {
+   "w": "budget",
+   "t0": 3.003,
+   "t1": 3.55,
+   "f0": 72,
+   "f1": 85,
+   "ph": "bˈʌʤət"
+  }
+ ],
+ "qa": {
+  "lufs_i": -18.0,
+  "target_lufs": -18.0,
+  "true_peak_dbtp": -4.84,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.52,
+  "median_f0_hz": 120.2,
+  "f0_range_st": 10.2,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Ali set it up, probably just the budget.",
+  "cer": 0.031,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.396,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.52,
+  "speech_tail_s": 0.375,
+  "rise_ms": 130.0,
+  "decay_ms": 165.0,
+  "decay_to_60_s": 0.3
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "3aba2547a807a2c8",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 3.39,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 4
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 1.48,
+   "rechecked_alone": false
+  }
+ }
+}

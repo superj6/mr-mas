@@ -1,0 +1,155 @@
+{
+ "id": "v3s-05",
+ "scene": "6",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "someone noticed.",
+ "spoken_as": "someone noticed.",
+ "delivery": null,
+ "tag": "[INVENTED · VO · v3 sample, inner voice]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "vo",
+ "kind": "vo",
+ "side": "none",
+ "pov": null,
+ "shot": null,
+ "shot_id": null,
+ "cue": null,
+ "lip_sync": false,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v3-sample/vo-v2/wav/v3s-05.wav",
+ "mp3": null,
+ "duration_s": 2.385,
+ "frames_24": 58,
+ "voiced_span_s": 1.21,
+ "pace": {
+  "words": 2,
+  "wpm": 99.2,
+  "speed": 0.915,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.915,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.4,
+    4.0
+   ],
+   "turn_wpm_guide": [
+    120,
+    140
+   ],
+   "intent": null
+  },
+  "measured": {
+   "wpm": 99.2,
+   "articulation_sps": 3.31,
+   "syllables": 4,
+   "span_s": 1.21,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.51,
+  "audible_out_s": 1.72
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.915",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 60 Hz",
+  "pitch 0",
+  "low shelf +2.5 dB @150 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak -1 dB @3200 Hz Q0.8",
+  "high shelf -2.5 dB @7500 Hz",
+  "comp 2.5:1 @-26 dB (15/160 ms)",
+  "Kokoro speed 0.915 (the centre of the band; mas-manalt-vo band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [],
+ "words": [
+  {
+   "w": "someone",
+   "t0": 0.57,
+   "t1": 1.032,
+   "f0": 14,
+   "f1": 25,
+   "ph": "sˈʌmwˌʌn"
+  },
+  {
+   "w": "noticed",
+   "t0": 1.032,
+   "t1": 1.74,
+   "f0": 25,
+   "f1": 42,
+   "ph": "nˈOTəst"
+  }
+ ],
+ "qa": {
+  "lufs_i": -18.0,
+  "target_lufs": -18.0,
+  "true_peak_dbtp": -5.1,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.51,
+  "median_f0_hz": 123.3,
+  "f0_range_st": 9.4,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Someone noticed.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.207,
+  "align_median_s": 0.081,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.4,
+  "rise_ms": 45.0,
+  "decay_ms": 115.0,
+  "decay_to_60_s": 0.27
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "0affd4e95a233bbe",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 1.31,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 4
+  },
+  "asr": {
+   "packed_with": 4,
+   "share_s": 0.33,
+   "rechecked_alone": false
+  }
+ }
+}

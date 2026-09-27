@@ -56,7 +56,9 @@ export interface Line {who: string; text: string; t: number | null; tRaw: number
 // muxed after the render). Everything below is read only when the episode sets "dialogueReel": true, so every
 // other reel normalises exactly as before. In a dialogue reel:
 //   lines[]   {id, who, text, t, dur, audio, in, words, tag, role, cut}: t = SECONDS from the beat's start to the
-//             first audible word (no fraction rule, no 6-line cap); dur = audible speech length; in = where the
+//             first audible word (no fraction rule, no 6-line cap). A negative t (down to -4 s) is a pre-lap / J-cut:
+//             the line starts under the previous shot. A line may also run past its beat (an L-cut). dur = audible
+//             speech length; in = where the
 //             speech starts inside the audio file (the file is laid at beatStart + t - in); words = [[w, t0, t1]]
 //             seconds from the speech onset. tag: "V.O." | "O.S." | "laptop" | "monitor" | "" (label suffix).
 //   onscreen[] strings, or {text, at, until}: seconds inside the beat (an item shows from at until until/beat end)
@@ -351,7 +353,7 @@ const normDlgLine = (v: unknown): DlgLine | null => {
     id: str(o.id),
     who: o.who || o.char ? normCharId(o.who ?? o.char) : '',
     text,
-    t: Math.max(0, num(o.t ?? o.at) ?? 0),
+    t: Math.max(-4, num(o.t ?? o.at) ?? 0), // negative = a pre-lap under the previous shot
     dur: Math.max(0.05, num(o.dur) ?? 1),
     audio: str(o.audio),
     fileIn: num(o.in) ?? 0,

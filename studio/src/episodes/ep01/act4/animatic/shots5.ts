@@ -919,7 +919,7 @@ const s509 = (fb: Buf, k: number, sh: ShotV5, f: number, opened: boolean) => {
 };
 S5('S5.09', 'C', 'v4 S5.09\'s [OTS] (his monitor across the dark room, soft 3; shoulder(masPortrait) in front with the monitor\'s green rim) with the letter already open on it (UI-LETTER-V5\'s page at 1:1) and STATE-SMALL 6: Gerg\'s corner tile rings, Mas clicks, it opens in 3 held steps (drawGergMediumPOV open), then Gerg full, typing, lip-synced · a4p5 finish: Gerg\'s typing calm (gerg-medium calm)', (fb, k, sh, f) => { s509(fb, k, sh, f, false); });
 let LETTER_L: ReturnType<typeof letterLayout> | null = null;
-S5('S5.06', 'C', 'UI-LETTER-V5 staff-letter drawStaffLetter: the page with its bezel and the window; the three quotes land as Gerg reads them (the lock\'s texts), SIGNED 505 -> 650 -> 700 -> 745 / 770 rolling on the odometer with its clunk, a slow whole-px scroll (1 px / 2 f) that follows the quotes and stops on ALYI (REPORTED), lit; Gerg\'s small tile lip-synced; the window one step greyer from 700 · a4p5 finish: the last scroll at 6 px / 2 f from the scroll mark, so ALYI (REPORTED) is up before the alyi mark; his thumbnail only from the mark, no vote check; Gerg\'s typing calm (no head bob); judgement as the letter spells it', (fb, k, sh, f) => {
+S5('S5.06', 'C', 'UI-LETTER-V5 staff-letter drawStaffLetter: the page with its bezel and the window; the three quotes land as Gerg reads them (the lock\'s texts), SIGNED 505 -> 650 -> 700 -> 745 / 770 rolling on the odometer with its clunk, a slow whole-px scroll (1 px / 2 f) that follows the quotes and stops on ALYI (REPORTED), lit; Gerg\'s small tile lip-synced; the window one step greyer from 700 · a4p5 finish: the last scroll at 6 px / 2 f from the scroll mark, so ALYI is up before the alyi mark; his thumbnail only from the mark, no vote check; Gerg\'s typing calm (no head bob); judgement as the letter spells it', (fb, k, sh, f) => {
   const q: [number, number, number] = [mk(sh, 'q1', 40), mk(sh, 'q2', 207), mk(sh, 'q3', 344)];
   const sc = mk(sh, 'scroll', 457), alyi = mk(sh, 'alyi', 493), clunk = mk(sh, 'clunk', 450), c700 = mk(sh, 'c700', 310);
   const counts = sh.texts.filter((t) => t.kind === 'label' && /^SIGNED \d+/.test(t.text)).map((t) => ({s: t.s, v: parseInt(t.text.slice(7), 10)})).sort((a, b) => a.s - b.s);
@@ -932,7 +932,7 @@ S5('S5.06', 'C', 'UI-LETTER-V5 staff-letter drawStaffLetter: the page with its b
   const L = (LETTER_L ??= letterLayout());
   const stops: Array<[number, number]> = [[q[1], Math.max(0, L.quoteY[1] - 60)], [q[2], Math.max(0, L.quoteY[2] - 60)], [sc, Math.min(LETTER_SCROLL_MAX, Math.max(0, L.alyiY - 70))]];
   // a4p5 finish (the picture audit §2.1): the quotes' stops keep v5's slow read (1 px / 2 f); "Scroll to the bottom." is
-  // Mas scrolling, 6 px every 2 frames (held on 2s), so the page reaches its bottom and ALYI (REPORTED) is up before
+  // Mas scrolling, 6 px every 2 frames (held on 2s), so the page reaches its bottom and ALYI is up before
   // the `alyi` mark (at 1 px / 2 f the row stayed 18 px below the fold to the shot's last frame)
   let scroll = 0;
   for (let t = 0; t <= k; t++) {

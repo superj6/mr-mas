@@ -4,7 +4,7 @@
 |---|---|
 | **Who** | The head writer, 2026-09-26, with the script's `## ACT FOUR` at **draft 5.1**: draft 5.0 (the conversation pass), revised after its four table reads (naturalness, newcomer, insider, and facts and guardrails). What was taken and declined, and why, is in the script's [5.0 notes, "After the four table reads"](../../script.md#after-the-four-table-reads-draft-51-2026-09-26). |
 | **Why** | The showrunner on animatic v4: "it is getting cloesr. however, a lot of the dialoge is unnatural and the cuts are still quite fast. a few time dialogue seems to randomly blurt out or cut off. it seems since v2 you didn't allow any conversation to play out for more than a few seconds which makes it hard to follow. i said to cut down empty time, but not to cut every dialogue into only a few words per character". And, newest: "rather than stay stuck, if things can be done faster with more resources, you should always ask me. also, we should've been iterating on cheaper stick figure runs to nail down flow and dialogue before final render". |
-| **Binding guidance** | The live [SHOWRUNNER-NOTES](../../../../production/SHOWRUNNER-NOTES.md) (read at the start and again before this plan was written; note 1, stick figures first, arrived during the pass and is built into §8). The firm [guardrails](../../../../bible/guardrails.md) and [naming](../../../../bible/naming.md). Limited third person through Mas ([pov-clarification](../../../../bible/pov-clarification.md)), with pass one as the act's one signposted exit. Guidance: [flow-and-continuity](../../../../bible/flow-and-continuity.md) (§4 on letting conversations play out) and [tone-and-dialogue](../../../../bible/tone-and-dialogue.md#conversation) R17–R21. |
+| **Binding guidance** | The live [SHOWRUNNER-NOTES](../../../../production/SHOWRUNNER-NOTES.md) (read at the start and again before this plan was written; note 10, stick figures first, arrived during the pass and is built into §8). The firm [guardrails](../../../../bible/guardrails.md) and [naming](../../../../bible/naming.md). Limited third person through Mas ([pov-clarification](../../../../bible/pov-clarification.md)), with pass one as the act's one signposted exit. Guidance: [flow-and-continuity](../../../../bible/flow-and-continuity.md) (§4 on letting conversations play out) and [tone-and-dialogue](../../../../bible/tone-and-dialogue.md#conversation) R17–R21. |
 | **What this is** | A plan. **No line has been recorded, no lock made, nothing rendered, heard or watched.** The v4 files are untouched for comparison. Every length is planned from the words: the per-character turn paces in [voice-diagnosis-v4](voice-diagnosis-v4.md) §4.2, the gaps and pauses each line's delivery note asks for (§7), and the picture time each shot needs. The takes set the frames. |
 | **Numbers** | Starting points for judging the cut, never gates. When the watching disagrees with a number here, the watching wins. |
 
@@ -26,7 +26,7 @@
 - **No blurts.** Every new voice has a lead-in (a ring, a chime, a door, a spotlight, a hand up), and every line has a listener and a trigger the audience has just seen or heard (§3.1 names each).
 - **Music.** One continuous performance per sequence, re-rendered to these lengths. Under talk it **thins to its pedal and ducks**; it comes up between conversations. There are three dead stops (D6's digital silence at the Cancel click, Mada's label, "of what?"), one ring-out, and a few designed rests (§4).
 - **Runtime, planned: about 9:36** (12:31–22:07). Like for like, the new talk adds about 42 s of speech to 5.0's; the rest of the difference from 5.0's 7:59 is that this plan gives every pause its written length (§6). **Pass one is about 4:21, some 45% of the act**, which is a ruling for the showrunner.
-- **Build order (showrunner note 1).** Record the takes from §7, then a **stick-figure reel** (the real takes, a temp bed, stick figures and text cards) for the showrunner to approve flow and dialogue. The pixel animatic comes only after that approval (§8).
+- **Build order (showrunner note 10).** Record the takes from §7, then a **stick-figure reel** (the real takes, a temp bed, stick figures and text cards) for the showrunner to approve flow and dialogue. The pixel animatic comes only after that approval (§8).
 
 ---
 
@@ -516,7 +516,7 @@ Planned lengths come from the takes' estimated lengths (§7), the gaps and pause
 
 ---
 
-## 8. Build order: stick figures first (showrunner note 1)
+## 8. Build order: stick figures first (showrunner note 10)
 
 "we should've been iterating on cheaper stick figure runs to nail down flow and dialogue before final render". So v5 is built in this order, and nothing pixel-final is drawn until step 4 is approved.
 
@@ -531,6 +531,8 @@ Planned lengths come from the takes' estimated lengths (§7), the gaps and pause
    It's cheap to redo, so it can go round several times.
 4. **The showrunner watches the reel and approves flow and dialogue.** Every change there is made in the script and §7 first, then re-recorded or re-cut.
 5. **Only then** the v5 lock and the pixel animatic: `shots5` / `data-v5` / `sound-v5` and a `lock_v5`, built from the approved reel's frames, with kept shots keeping their v4 numbers. The cues get re-rendered to the lock, the report tools get re-run, and new newcomer and insider reads are done on the pixel cut.
+
+   The stick reel's scaffolding (the speaker strip, names over the stick figures, bracketed stand-ins for pictures it can't draw) is for the stick only and never carries into picture (2026-09-27, [SHOWRUNNER-NOTES](../../../../production/SHOWRUNNER-NOTES.md) note 3).
 
 The v4 files stay untouched for comparison.
 

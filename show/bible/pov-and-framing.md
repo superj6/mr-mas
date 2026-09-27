@@ -151,7 +151,7 @@ It follows from the contract line (§1.1): *we know what he knows about the worl
 - **Clocks are allowed; verdicts are not.** A date, a calendar invite, a public deadline or a stated target can tick on screen, as long as it never says how it ends. Ep1's cold open is the model: `Board sync · Fri 12:00` on his phone, four unnamed attendee circles, and "noted." He can answer a clock; nobody, him included, is told the outcome.
 - **The witness and the machine don't foreshadow in words either.** THE ORB may look at the hint (its iris steps from the invite to his face; it counts the four circles and stops on the black square), because it reacts to what it can see. It never toasts the outcome. GLYPH and the strip never pre-type an event.
 - **Hints live in the four layers' own devices:** a look from the Orb, a prop on his desk, a reflection, a zero-read egg, an eyeline, a line with a second meaning. Each must read as something else to a first-time viewer and land on a face within 10 s (pacing L2). Hints carry no tag and never quote a real line ahead of its date.
-- **Past the record (Eps 10–12).** The same logic removes the speculation label: the show doesn't stop to tell the viewer what kind of story comes next. The rail's date simply keeps rolling out of Ep9, and its question marks (`OCT 2026?` → `2027??` → `????`) are story, the record losing its grip on the calendar the way the Orb's toast drifts, never a warning card. The end-credits legal card ([overview §8](overview.md#8-disclaimer-cards)) covers dramatization for every episode.
+- **Past the record (Eps 10–12).** The same logic removes the speculation label: the show doesn't stop to tell the viewer what kind of story comes next. The rail's date simply keeps rolling out of Ep9, and its question marks (`OCT 2026?` → `2027??` → `????`) are story, the record losing its grip on the calendar the way the Orb's toast drifts, never a warning card. Since 2026-09-27 no card or legal text covers dramatization on screen ([overview §8](overview.md#8-disclaimer-cards)); the writing does.
 
 ---
 
@@ -243,6 +243,8 @@ Guides, not caps: the numbers keep the catches rare enough to surprise. Go over 
 
 ### 3.1 The rule
 
+> **Revised 2026-09-27 (SHOWRUNNER-NOTES 1):** he never confesses *to the room*, but **we hear him think**. A regular present-tense inner voice now carries his reads, his warmth and the gap between what he says and what he thinks: see [mas-inner-voice](mas-inner-voice.md). The guardrails below (§3.7) still hold.
+
 **Mas never confesses; the audience infers.**
 - His face and his V.O. keep the Serene Survivor intact.
 - Feelings leak only through the Orb and no-one versions (§1.3), through reflections, and through how much he talks.
@@ -328,7 +330,7 @@ These happen alone, or alone with the Orb, in a work room.
 - Never clinical (X3): no anxiety, insomnia, panic, therapy or "breakdown" framing.
 - Never family, home or romance (X1, X2). The dark room is a work room, and deliveries come through the rack or the monitor.
 - Never a motive at a real event, and never a hesitation on a credibility question.
-- **`(REPORTED)`, `(DISPUTED)` and sealed material get the Orb's look or nothing, never a Mas tell.** So there is no glass nudge on `ALYI (REPORTED)` in sc 29, and **tally marks 1 and 2 (the TPOOL ousters) are never touched by him, in any episode.** He carves mark 3 and rests his thumb on it; the Orb may count all three. Ep12's 4× tally replay stays in the show's voice, with the labels on.
+- **Contested, single-source and sealed material gets the Orb's look or nothing, never a Mas tell.** So there is no glass nudge on Alyi's name on the letter in sc 29, and **tally marks 1 and 2 (the TPOOL ousters) are never touched by him, in any episode.** He carves mark 3 and rests his thumb on it; the Orb may count all three. Ep12's 4× tally replay stays in the show's voice. *(Reworded 2026-09-27: on-screen truth labels are retired, [guardrails §4](guardrails.md#4-how-facts-appear-on-screen).)*
 
 ### 3.8 The ensemble gets close too
 
@@ -544,6 +546,8 @@ The builders implement these as layout functions (one call per shot, like `rooms
 ---
 
 ## 5. V.O. style guide
+
+> **Superseded in part, 2026-09-27:** [mas-inner-voice](mas-inner-voice.md) replaces §5.3's past tense, §5.4's volume (now 15–25 lines, about 200–300 words, clustered) and the "caught line" default of §5.6 (a quarter at most). §5.1, §5.2, lowercase, never "you", and §5.5's no-go places stay.
 
 ### 5.1 The voice
 

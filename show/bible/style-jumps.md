@@ -207,7 +207,7 @@ That's the season's thesis in one image, and nobody says it.
 | **Episode** | 0 or 1. Two only in the finale, and in different acts. No episode is owed one | Ep12: J5 (the Act Two out) and J6 (the button) |
 | **Length** | 24–120 f (1–5 s), in whole beats (15 f) on the 96 BPM grid. 30–60 f is the norm | 45–120 f |
 | **Spacing** | At least 2 bars (120 f) from any switch, THE PLAN, a name card, a flashback door, a real quote card, a real line or V.O. Never two in one act | Checked per jump in §4.1 |
-| **Never in** | The intro, the filename and disclaimer cards, the end credits, recaps, previews, promos or thumbnails | — |
+| **Never in** | The intro, the filename card (no disclaimer card since 2026-09-27), the end credits, recaps, previews, promos or thumbnails | — |
 | **Per motivation** | M1 ≤ 3 · M2 once · M3 ≤ 3 · M4 once · M5 once as a jump | M1: J3, J5 · M2: J6 · M3: J1, J2 · M4: J4 · M5: J5 (shared) |
 
 **Switch budget (PROPOSED, style-status owner):** jumps don't count toward [§7b](style-status.md#7b-rules-for-switching)'s "two non-base styles per episode," because they run under 5 s and set up no register. In exchange, an episode with a jump puts no switch within 2 bars of it. Until the owner signs, count each jump as one of the two.

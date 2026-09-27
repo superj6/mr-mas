@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **What this is** | The editor's length report on the full Ep1 stick reel, `out/ep01/reel/ep01-full-v2.mp4`. It has the measured length against the format's frame (§1), where the reel may drag, with timecodes (§2), a ranked cut list with the seconds each cut saves and what it costs the story (§3), and three cumulative packages of about −1, −2 and −3 minutes (§4). |
-| **Why** | The lead's call on length: build the full episode at its current length, let the showrunner watch it and mark where it drags, then cut. This file is the menu for that watch. The rules it follows: SHOWRUNNER-NOTES 7 ("i said to cut down empty time, but not to cut every dialogue into only a few words per character"), 8 (don't drag on inferable information) and 9 (clear to a newcomer), and the script's own rule for length cuts: whole beats, never words from lines. |
+| **Why** | The lead's call on length: build the full episode at its current length, let the showrunner watch it and mark where it drags, then cut. This file is the menu for that watch. The rules it follows: SHOWRUNNER-NOTES 11 ("i said to cut down empty time, but not to cut every dialogue into only a few words per character"), 12 (don't drag on inferable information) and 13 (clear to a newcomer), and the script's own rule for length cuts: whole beats, never words from lines. |
 | **Who, when** | The `ep1s-length` pass, 2026-09-27, about 02:30 → 03:00. |
 | **State** | Report only. **Nothing is cut.** No file other than this one was written in the repo. `script.md` was not touched. Nothing was committed (the lead commits). |
 | **Honesty** | I can't watch or listen. Every second here comes from the reel's own timelines (beat lengths, line onsets, word timings) and the assembly's measurements. Every "cost" is a reading of the script, the segment notes and the registry, not a viewing. **Where the reel drags is the showrunner's mark to make.** §2 only says where the numbers point. |
@@ -118,7 +118,7 @@ The format's frame, from `show/format/FORMAT-DECISION.md` §1:
 | D7 | **2:38.8–3:00.7** | The odometer drill (an S2 set piece, new art in the final) | 21.9 s with no voice. In the stick it's a ladder of text cards | #5: −2.5 s |
 | D8 | **3:49.6–4:09.4** | The lanyards → the NopeAI lobby → the check → the freeze card → the pen | 19.8 s with no voice across two scenes | #5: −3.5 s |
 | D9 | **12:40.4–12:59.1** | "super." → THE CLOCK's four bars → Las Vegas → the blueprint, across the Act Three → Four break | 18.7 s with no voice. Designed, and Act Four's side of it is approved | none proposed |
-| D10 | **1:03.2–1:12.1** | The card and sc 5's first two shots, on bare room tone right after the intro's final hit | Only 8.9 s, but it's the first thing after the title, and the loudness drops 25.6 LU. The assembly flagged it as a possible "random pause" (SHOWRUNNER-NOTES 13). Mostly a sound fix | #8: −1.4 s |
+| D10 | **1:03.2–1:12.1** | The card and sc 5's first two shots, on bare room tone right after the intro's final hit | Only 8.9 s, but it's the first thing after the title, and the loudness drops 25.6 LU. The assembly flagged it as a possible "random pause" (SHOWRUNNER-NOTES 17). Mostly a sound fix | #8: −1.4 s |
 | D11 | **19:16.3–19:30.5** and **20:34.2–20:46.4** | Act Four: the dead stop with Alyi's silent post; the calm-off's long hold with two record posts | 14.3 s and 12.2 s. These are the two wordless stretches the Act Four audit asked a watch to check | #14: −2 s |
 | D12 | **6:32.5–6:50.0** | Act One's act-out (the EMIT page, the sheet, Alyi's reflection, black) into Act Two's open | 17.4 s. Designed, with a T (a tension beat) on the act-out | none proposed |
 
@@ -251,7 +251,7 @@ min 22   0.7 s                        "noted."
   - three small jokes or setups ("visionary", Gerg's TV question, Tasya's last sentence);
   - NOTNIH's plate, so Ep3 needs its own;
   - NOTERB's first appearance moves (a naming.md edit and a later introduction).
-- **Talk.** Of the 57.9 s, 11.4 s is talk (#10, #12, #13) and 46.5 s is picture. That's in line with SHOWRUNNER-NOTES 7: cut empty time, not talk.
+- **Talk.** Of the 57.9 s, 11.4 s is talk (#10, #12, #13) and 46.5 s is picture. That's in line with SHOWRUNNER-NOTES 11: cut empty time, not talk.
 - **Music.** It re-fits four cues. MM-03, MM-04 and MM-16 aren't rendered yet, and run A's MM-01 is a temp stem, so **re-fitting is cheap now and expensive after the OST renders them.**
 - **The drag map after P1:**
   - D1 goes from 40.1 s to 29.6 s;

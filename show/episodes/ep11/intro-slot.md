@@ -1,6 +1,6 @@
 # ep11 · Intro slot — `ep1.10_assist_clause.txt`
 
-The fixed 30.0 s intro is specified in [intro/](../../intro/). **This sheet follows [intro/SCRIPT.md §8](../../intro/SCRIPT.md#8-per-episode-changes-ep112-spoiler-safe), row 11, which is the source of truth.** Only five kinds of thing change per episode, and none of them reveals this episode's plot: items 2–5 show only what Eps 1–10 have already aired. The disclaimer card is the standard one; the old added line ("From here on, events are speculative.") is removed season-wide (showrunner, 2026-09-25; [overview §8](../../bible/overview.md#8-disclaimer-cards)).
+The fixed 30.0 s intro is specified in [intro/](../../intro/). **This sheet follows [intro/SCRIPT.md §8](../../intro/SCRIPT.md#8-per-episode-changes-ep112-spoiler-safe), row 11, which is the source of truth.** Only five kinds of thing change per episode, and none of them reveals this episode's plot: items 2–5 show only what Eps 1–10 have already aired. The card after the intro is the filename alone (no disclaimer line since 2026-09-27); the old added line ("From here on, events are speculative.") is removed season-wide (showrunner, 2026-09-25; [overview §8](../../bible/overview.md#8-disclaimer-cards)).
 
 ## The five changes
 | # | Change | ep11 value | Notes |

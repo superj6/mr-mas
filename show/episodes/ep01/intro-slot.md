@@ -22,7 +22,7 @@ The pilot has no aftermath yet, so every item is the **baseline**.
 | **Skyline** | The towers and their players, no dated events. NopeAI's GPUs pile up red-hot and keep their shape (they start to sag in Ep5). PEEKDEEP's water tower plate: `(NOT YET)`. The siren is RADNUS's own trait. Intro v2.1 cut the rest from the Ep1 skyline (`$86B`, `BELOW · ABOVE · AROUND`, the cage-match poster, `COMING SOON: TRUTHGTP`, the KORG boards, the Dalí GPUs); the ones that survive come back later, once aired |
 | **Misanthropic's price tag** | Blank |
 | **The hill** | RUMPT's silhouette at a dark gold podium, no text and no SFX; on the other side NEDIB's fountain pen in an inkwell, static. The CZAR lanyard's tag is blank [PROPOSAL]. The hill never makes a sound |
-| **Desk tally** (G01) | **`II`**, both faint (TPOOL, `(REPORTED)`). Mark 3 is carved in Act Four and first shows in Ep2's intro. A `III` here would count the firing 40 s into the pilot |
+| **Desk tally** (G01) | **`II`**, both faint (TPOOL). Mark 3 is carved in Act Four and first shows in Ep2's intro. A `III` here would count the firing 40 s into the pilot |
 | **Coat-hook collars** (G05) | 2 (the 2008 polos). The third pops in the episode (sc 9, MACROSOFT's check), so Ep2's intro hook should read 3 (the Ep2 and intro owners' change) |
 | **Gold threads in the hoodie** (G06) | None; they start in Ep5's intro |
 | **1993 screen angle** | 0°, facing away |

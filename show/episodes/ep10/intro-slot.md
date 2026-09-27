@@ -2,7 +2,7 @@
 
 The fixed 30.0 s intro is specified in [intro/](../../intro/). **This sheet follows [intro/SCRIPT.md §8](../../intro/SCRIPT.md#8-per-episode-changes-ep112-spoiler-safe), row 10, which is the source of truth.** Only five kinds of thing change per episode, and none of them reveals this episode's plot: items 2–5 show only what Eps 1–9 have already aired.
 
-Ep9 hands over with no card: its rail simply rolls on past TODAY, and this episode's cold open picks it up still rolling and undated (a date appears only on a real thing; see the [beats](beats.md) header). The 2 s disclaimer card after the intro is the standard one: *"A parody. Events dramatized; scenes invented. Names changed to protect the valuations."* There is no speculation line, no `(SCHEDULED)` tag and no `?` date anywhere on screen.
+Ep9 hands over with no card: its rail simply rolls on past TODAY, and this episode's cold open picks it up still rolling and undated (a date appears only on a real thing; see the [beats](beats.md) header). The 2 s card after the intro is the filename alone, like every episode's (no disclaimer line since 2026-09-27). There is no speculation line, no `(SCHEDULED)` tag and no `?` date anywhere on screen.
 
 ## The five changes
 | # | Change | ep10 value | Notes |

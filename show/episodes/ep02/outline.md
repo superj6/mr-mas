@@ -133,7 +133,7 @@ About 53 s (under the 60–150 s guide on purpose). See [flashbacks.md](flashbac
 
 ## Guardrails live in this episode
 See [bible/guardrails.md](../../bible/guardrails.md).
-- **The actress** is never drawn, voiced or named on screen; the letterhead stays blank. The joke is on Mas's one-word post and NopeAI's process, never on her. The rail says only `A FAMOUS VOICE OBJECTS (REPORTED)`.
+- **The actress** is never drawn, voiced or named on screen; the letterhead stays blank. The joke is on Mas's one-word post and NopeAI's process, never on her. The rail says only `A FAMOUS VOICE OBJECTS` (no `(REPORTED)` label since 2026-09-27).
 - **THE SLEEVE** (the 2008 keynote host): no thin or frail cues, no reference to his death (WC-crit §D39).
 - **Nole's endorsement:** nowhere in the episode.
 - **RUMPT:** voice and hands only; no fist pumps and no rally imagery. Invented lines stay on AI, money, naming and credit.

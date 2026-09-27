@@ -119,7 +119,7 @@ Links follow the `characters/` slug convention (canonical parody name, lowercase
 | **Money** | FOLLOWING THE PAST's AI "reporters" and MISANTHROPIC's closed checkbook. |
 | **Invidia** | "What the hell is INVIDIA?" He buys his way back into the room at 15%. |
 
-**Balance check:** the Democratic-side roast is THE ORB's `EDITED` flag on MOSWEN's press-office meme (#21), the fact-check mirror that [guardrails rule 11](../../bible/guardrails.md#2a-the-rules) assigns to this episode. It is [K], so it carries a `(REPORTED)` tag until upgraded. It pairs with ZURC's card and RUMPT's label gun. See [open-questions.md](open-questions.md) #4.
+**Balance check:** the Democratic-side roast is THE ORB's `EDITED` flag on MOSWEN's press-office meme (#21), the fact-check mirror that [guardrails rule 11](../../bible/guardrails.md#2a-the-rules) assigns to this episode. It is [K]: upgrade it before lock or cut it (no `(REPORTED)` tag on screen since 2026-09-27). It pairs with ZURC's card and RUMPT's label gun. See [open-questions.md](open-questions.md) #4.
 
 ## Episode files
 [beats.md](beats.md) · [flashbacks.md](flashbacks.md) · [facts.md](facts.md) · [gags.md](gags.md) · [intro-slot.md](intro-slot.md) · [open-questions.md](open-questions.md)

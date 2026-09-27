@@ -1,6 +1,6 @@
 # Ep1 · Act Four · Voice diagnosis of the v4 takes, and a recording method for v5
 
-*Dialogue recording supervisor, 2026-09-26. Written for the showrunner's note on Act Four v4 (verbatim in [SHOWRUNNER-NOTES](../../../../production/SHOWRUNNER-NOTES.md) note 1): "a lot of the dialoge is unnatural … dialogue seems to randomly blurt out or cut off … i said to cut down empty time, but not to cut every dialogue into only a few words per character". Guidance followed: [flow-and-continuity §4](../../../../bible/flow-and-continuity.md#4-dialogue-rhythm).*
+*Dialogue recording supervisor, 2026-09-26. Written for the showrunner's note on Act Four v4 (verbatim in [SHOWRUNNER-NOTES](../../../../production/SHOWRUNNER-NOTES.md) note 11): "a lot of the dialoge is unnatural … dialogue seems to randomly blurt out or cut off … i said to cut down empty time, but not to cut every dialogue into only a few words per character". Guidance followed: [flow-and-continuity §4](../../../../bible/flow-and-continuity.md#4-dialogue-rhythm).*
 
 **Honesty.** I can't listen. Everything here was **measured** on the delivered WAVs, on `lines.json`, on the v4 lock (`shots-locked-v4.json`) and on the v4 mix (`act4-mix-v4.wav`, `act4-dialogue-premix-v4.wav`). The naturalness scores come from an automatic predictor (UTMOS22). It's a proxy trained on isolated read sentences, and it doesn't hear acting, timing between speakers or whether a voice fits a character. No v4 file was changed. The A/B files for the ear pass are listed in §6. **Nothing here is a verdict until a human has listened.**
 

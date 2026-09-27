@@ -7,7 +7,7 @@
 | **Title** | *MR. MAS*, opening titles |
 | **Version** | **v2.1 (pixel / jazz / no spoilers)**, 2026-09-25, script-checked the same day (§11). v2.0 is kept at [`_reviews/SCRIPT-v2.0-backup.md`](_reviews/SCRIPT-v2.0-backup.md). |
 | **Status** | **Master script: the single source of truth for the opening.** Where another intro doc disagrees with this file, this file wins. §9.8 lists the files that still disagree. |
-| **Runtime** | 30.0 s = 720 frames at 24 fps (f0–719). The 2 s disclaimer card that follows every intro ([guardrails §5](../bible/guardrails.md#5-legal-hygiene)) is not counted. |
+| **Runtime** | 30.0 s = 720 frames at 24 fps (f0–719). The 2 s filename card that follows every intro (the filename alone, with no disclaimer since 2026-09-27: [overview §8](../bible/overview.md#8-disclaimer-cards)) is not counted. |
 | **Grid** | 96 BPM, 4/4 · 15 frames per beat · 60 frames per bar · 12 bars of 2.5 s · `at(bar, beat) = (bar−1)·60 + (beat−1)·15` in `studio/src/shared/timing.ts`. **Swung 2nd eighth = beat + 10 frames.** **Straight 2nd eighth = beat + 7.5 in the music** (engine `STRAIGHT_OFF`); picture and SFX round down to +7. Straight off-beats land at f127, the roll-call cuts (f487, f502, f517, f532), f622 and Ep11's f712 ding. Straight-eighth textures (the rack LEDs, the 1993 hats, the klaxon) alternate +7/+8. |
 | **Picture** | Pixel art, adventure-game structure. Native 480×270, 4× nearest-neighbour to 1920×1080, indexed palettes (`studio/src/shared/pixel/palettes.ts`). **Whole-pixel motion only:** the camera cuts or scrolls in whole pixels. Nothing rotates or scales, and nothing blurs. |
 | **Sound** | A blend of piano, orchestra and big band, **brass as accents only**, with a jazz feel; **8-bit chip motifs run throughout** as the identity. **V1 "Chip Chamber Jazz"** is scripted here. V2–V4 notes appear only where they differ (§3.1). |
@@ -524,7 +524,7 @@ Flashes 1–4 never change. A state changes only in the first intro after the ep
 ### 8.4 Small room layers (eggs; details in [episode-slots §6–7](episode-slots.md#6-bookend-dot-toast-subtitle-last-bar))
 | Ep | `you are here` dot (cold open) | 1993 screen angle (authored drawings, not rotated) | Desk tally (G01) | Coat-hook collars (G05) | Gold threads in the hoodie (G06) |
 |---|---|---|---|---|---|
-| 1 | x 0.50, at the knee | 0°, facing away | `II` (TPOOL ×2, faint: `(REPORTED)`) | 2 | — |
+| 1 | x 0.50, at the knee | 0°, facing away | `II` (TPOOL ×2, faint) | 2 | — |
 | 2 | 0.55 | 0° | `III` (Ep1's NopeAI mark) | 2 | — |
 | 3 | 0.60 | 0° | `III` | 3 | — |
 | 4 | 0.65 | **10°** | `III` | 4 | — |

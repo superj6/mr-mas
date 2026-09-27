@@ -107,7 +107,7 @@ These come from the bible. Every idea below was written to them, and so should a
 - **Mas's glass stays pixel inside every leap.** It appears at most three times an episode, and each appearance is a test someone reads (tone-and-dialogue pattern 9). The bead of condensation is Ep7's reserved tell. The tell ladder puts nothing over his head ([style-range §3.5](style-range.md#35-plants-anchors-and-ladders)).
 - **The title cards render as their own file types.** The intro's bar-9 slot is a fenced slot, and so is the tag ([style-range §3.4](style-range.md#34-fenced-slots-and-the-booked-subtraction)).
 - **The intro's per-episode changes**, about fifteen of them ([SCRIPT §8.1–8.4](../intro/SCRIPT.md#8-per-episode-changes-ep112-spoiler-safe)): the cold-open line, the pocketed keycap, the subtitle as last week's release note, the Orb toast's drift, the last bar, the roll call's fills and the cursor window's face, the skyline's aftermath, both sides of the hill, the price tag, the CZAR tag and the small room layers. Within each intro, the render front also climbs through the palettes.
-- **The outro and its ladder** (SHOWRUNNER-NOTES note 1; [OUTRO-PROPOSALS](../production/OUTRO-PROPOSALS.md), five proposals of 6–15 s, recommending E, "file closed", with A, "the closing session", as runner-up):
+- **The outro and its ladder** (SHOWRUNNER-NOTES note 5; [OUTRO-PROPOSALS](../production/OUTRO-PROPOSALS.md), five proposals of 6–15 s, recommending E, "file closed", with A, "the closing session", as runner-up):
   - the credits surface matures at about the machine's month
   - the machine types the credits itself from Ep10
   - a sources ("receipts") line rides it
@@ -146,7 +146,7 @@ These are enablers, not gags. Both are house standards. Much of the menu reads f
   - The scratch prototypes already find every date the timeline repeats across years (`rhymes.py`) and compute weekdays and approximate moon phases (`almanac.py`).
 - **Producer limits (critic pass):**
   - **(a) Start with a minimal scene schema:** date, city and the counters (tally, collars, threads, inventory, DAYS SINCE). A field is added only when an adopted idea needs it. About 360 scenes × 10 fields is weeks of data entry that nobody watches.
-  - **(b) Warn first, block last.** The check only warns during the stick-figure and animatic passes (note 6), and it blocks a render only at picture lock.
+  - **(b) Warn first, block last.** The check only warns during the stick-figure and animatic passes (note 10), and it blocks a render only at picture lock.
   - **(c) `reviewed: true` costs the showrunner's time**, which is the scarcest resource on the show. Keep live rows few, and ask whether someone else (a facts owner) may sign them ([§7.2](#72-resource-asks-per-the-always-ask-note)).
 - **Effort** M · **Risk:** nothing on screen. The process risk is anything auto-publishing, so a person signs every live row. It needs permission to add `studio/src/shared/record/` and the check ([§7](#7-rulings-resources-and-facts-to-verify)). · **Status** house standard (EL-1) · shortlist #1
 
@@ -552,14 +552,14 @@ This section covers date-true details, continuity checks, collectibles for freez
   - `supply_chain_risk.pdf` with a redaction box you could copy-paste through
   - `statute_of_limitations.pdf` with `Created:` 2017
   - the `.log` with line numbers and no timestamps.
-- **Lives:** The filename and disclaimer card after every intro.
+- **Lives:** The filename card after every intro (the filename alone; no disclaimer line since 2026-09-27).
 - **Shows:** Fluency in how files work, on the one card every viewer sees every week.
 - **Build:** A title-card template per file type, filled from the episode record.
 - **Effort** S · **Risk** low.
 - **Cut:**
   - the `modified by:` runner (`mas` → `intern` → `researcher` → blank), rule 11
   - the matching line on the outro, which is overbooked
-  - the Ep12 lowercase disclaimer, also rule 11; the disclaimer's words and casing never change.
+  - the Ep12 lowercase disclaimer, also rule 11 (moot since 2026-09-27: no disclaimer goes on screen).
 - **Status** texture
 
 #### DET-15 · PERIOD SOUNDS
@@ -567,7 +567,7 @@ This section covers date-true details, continuity checks, collectibles for freez
 - **Lives:** Ep2's F2.1, the 1993 thread (Eps 1, 4, 7, 12).
 - **Shows:** Anyone who lived through these eras hears the period before they see it.
 - **Build:** Synthesized in the audio engine: gated pulse trains and crackle bursts.
-- **Effort** S · **Risk** low. Original synthesis only, with no sampled product or OS sounds (guardrails §5). **Cut:** the 2023 video-call ducking on the Blip call "so overlaps really do clip". It's exactly the lines that "randomly blurt out or cut off" that note 7 complains about. · **Status** idea
+- **Effort** S · **Risk** low. Original synthesis only, with no sampled product or OS sounds (guardrails §5). **Cut:** the 2023 video-call ducking on the Blip call "so overlaps really do clip". It's exactly the lines that "randomly blurt out or cut off" that note 11 complains about. · **Status** idea
 
 #### DET-16 · THE RINGTONE THAT NEVER UPGRADES
 - **Pitch:** From the 2006 flashback to 2026, Mas's phone rings with the same small original tone, while everyone else's ringtones change with the years. It's the one thing about him that never upgrades. In Ep12 a device at THE WOODROSE rings with his tone, and it isn't his phone (G38).
@@ -946,7 +946,7 @@ These are episode- and scene-level structures that show range, each mapped to a 
 #### STY-12 · THE BOTTLE AT THE PAUSE KEY
 - **Pitch:** Gerg holds the PAUSE key down for two weeks, and Mas sits beside him. Play it as a bottle two-hander in one room that we come back to three times across Act Two, and let them actually talk: about the keycap and about 2015, never about reasons. Each visit, the light has moved on through the fourteen days, the picket outside is turning into weather and the lobby TV reads 75%. On Sep 1, Gerg hands him the keycap.
 - **Lives:** Ep9's B-plot (Aug 18 → Sep 1), which the outline already books ("Gerg holds a PAUSE key down for two weeks, and Mas sits beside him the whole time"). This stages it; it adds no plot.
-- **Shows:** Restraint, and the live notes: "let conversations play out" (note 7, exchanges of 20–90 s) and scenes built to be felt (note 4). The world arrives as weather.
+- **Shows:** Restraint, and the live notes: "let conversations play out" (note 11, exchanges of 20–90 s) and scenes built to be felt (note 8). The world arrives as weather.
 - **Build:** One room with a day-night palette ramp stepped for each visit, and the news composited into the window. Stick figures first, to get the talk right.
 - **Effort** M · **Risk** low–med: it could drag. Three visits, each with a turn, and the conversation has to want something. It doesn't spend Ep12's "I asked." · **Status** idea · shortlist #5 · Ep9's one menu addition
 
@@ -1029,7 +1029,7 @@ These are episode- and scene-level structures that show range, each mapped to a 
   - **The Rise:** Ep2 or Ep3. Ep1 only if it's decided before Act Four's dialogue pass.
   - **The Race:** any of Eps 4–8. Not Ep9, which is full and has STY-12.
   - **The Endgame:** Ep10 or Ep11.
-- **Shows:** Scenes that play out (notes 4 and 7) and flow that holds (note 13), answered directly. The world arrives as background, not exposition.
+- **Shows:** Scenes that play out (notes 8 and 11) and flow that holds (note 17), answered directly. The world arrives as background, not exposition.
 - **Build:** A whole-pixel scroll over one long background plate, with the dialogue on real takes. It **replaces coverage rather than adding shots**, so it's cheap. Stick figures first.
 - **Effort** M · **Risk** low–med. The talk is invented, and it's never about what happened inside a real event (guardrails §4). The conversation has to want something, and the background never upstages it. · **Status** idea
 
@@ -1057,7 +1057,7 @@ This section is about the show being made in code, with a model, as a quiet part
 
 ### 5.1 Companions
 
-All companion pages live at the show's own address and carry the show's disclaimer in every footer. They use parody names and off-brand colours, and never copy a real company's layout or UI. They're gated by spoiler and update on the day each episode airs ([guardrails §5](guardrails.md#5-legal-hygiene)). ai-media-range §3.15 allows interactive companions only as a fixed-text page, after the season.
+All companion pages live at the show's own address and carry the show's disclaimer in every footer. *(2026-09-27: the episodes carry no notice on screen, and any notice for the video lives only in the platform's description field; whether these pages keep a footer notice is the showrunner's call.)* They use parody names and off-brand colours, and never copy a real company's layout or UI. They're gated by spoiler and update on the day each episode airs ([guardrails §5](guardrails.md#5-legal-hygiene)). ai-media-range §3.15 allows interactive companions only as a fixed-text page, after the season.
 
 #### META-07 · THE ADDENDUM TRACK
 - **Pitch:** A toggleable viewing mode named after MARIO's `Addendum:`.
@@ -1224,7 +1224,7 @@ Cut, parked and pointer entries aren't listed.
 | **The IOU** | G16, DET-05, DET-10, WLD-20, STY-03, the Ep11 outline | One fate, and it's the outline's: still in his pocket, and his hand closes on it at the speakerphone. DET-05's age counter and STY-03's rhyme ride that fate. WLD-20's shelf doesn't. |
 | **The dark-room walls** | WLD-11, WLD-01's twin (dropped), WLD-03 (cut), DET-11 (cut), CAP-20 (the existing rack), WLD-12's page, the booked split-flap and Ep10's red pen | At most two new objects; this pass recommends one, the pin board (WLD-11), hosting WLD-12, WLD-13 and WLD-14 as pins. |
 | **Ep9's density** | The episode runs about 19 min, and about 16 menu entries landed on it | Ep9 gets STY-12, and WLD-08 only as a replacement. Everything else there is a 0 s egg on an existing shot, or it waits (WLD-05's Ep9 pairs, WLD-09's UN chorus, STY-08). |
-| **The live notes** | Note 7 (no lines that "randomly blurt out or cut off"); Act Four in production | DET-15's call ducking is cut. DET-09's Ep1 insert waits for the Act Four dialogue pass. Ep1 plants follow the decide-by column. |
+| **The live notes** | Note 11 (no lines that "randomly blurt out or cut off"); Act Four in production | DET-15's call ducking is cut. DET-09's Ep1 insert waits for the Act Four dialogue pass. Ep1 plants follow the decide-by column. |
 | **The outro** | 6–15 s (20 s with the stinger) | This file adds only the receipts pointer; see the note at the head of §5. |
 | WLD-01 | Ep8's THE CALENDAR card and reveal | Background only, never animated before Ep8. |
 | WLD-04 | [recurring-gags §8](../gags/recurring-gags.md#8-open-payoffs) (G34's proposed upward hourglass in Ep11) | Both can play (it empties in Ep9 and runs upward in Ep11), or pick one. |
@@ -1376,7 +1376,7 @@ The numbers in brackets are the critic's amendment numbers ([§9](#9-critic-log)
 | **DET-12 · find the caret** [36] | It duplicates the intro's cursor-face ladder. |
 | **DET-13's `modified by:` runner, outro line and lowercase disclaimer** [19, 21]; **its 24,000 Hz `her.wav`** [37] | Rule 11, and the outro is overbooked. The 24 kHz format belongs to the Oct 2024 realtime API, after Ep2's window. |
 | **DET-14 · the GLYPH notes** [20] | Rule 12. |
-| **DET-15's call ducking** [31] | Note 7 complains of lines that "randomly blurt out or cut off", and the ducking would make overlaps clip. |
+| **DET-15's call ducking** [31] | Note 11 complains of lines that "randomly blurt out or cut off", and the ducking would make overlaps clip. |
 | **DET-17 · the ransom-note veto** [20] | Rule 12. At speed, mixed typefaces make the season's key line read as noise, and it needs plants in ten episodes. |
 | **DET-19's early captions and early describer** [18] | Rule 13. |
 | **DET-20's render hashes in THE PLAN's fine print** (curator) | A hash changes on any re-render (the same flaw that cut WLD-24), and THE PLAN is THE RECORD. The hashes stay on the receipts page. |

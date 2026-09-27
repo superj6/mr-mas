@@ -13,11 +13,12 @@
 
 **Notation.**
 - Scene headings carry a number, the style tag, the mode letter (I in the moment · S spectacle · M macro · F flashback · P THE PLAN) and the target clock.
-- **Every line in quotation marks is real** and carries its tag and date: [P] primary · [P✓] re-fetched · [V] verified · [H] headline words only · [K†] re-verify before lock (shown with `RECONSTRUCTED` in the rail until upgraded) · **[V/K]** facts.md and the timeline disagree, so it is treated as [K†] until the facts owner settles it. Parody names are swapped in silently; originals are in [facts.md](facts.md). **Trimmed quotes carry ellipses.** The name swap is the only other change.
+- **Every line in quotation marks is real** and carries its tag and date: [P] primary · [P✓] re-fetched · [V] verified · [H] headline words only · [K†] re-verify before lock (not stated on screen as fact until upgraded; no `RECONSTRUCTED` label, 2026-09-27) · **[V/K]** facts.md and the timeline disagree, so it is treated as [K†] until the facts owner settles it. Parody names are swapped in silently; originals are in [facts.md](facts.md). **Trimmed quotes carry ellipses.** The name swap is the only other change.
+- **No hedge labels on screen (2026-09-27, [SHOWRUNNER-NOTES](../../production/SHOWRUNNER-NOTES.md) note 3).** The `(REPORTED)` tags, the check's asterisk, `(HE TOLD THE SENATE)` and `(HE LATER SAID: OUT OF CONTEXT)` are off the on-screen text; the solid part stays. Bracketed tags and notes are off screen and unchanged.
 - **Everything not in quotation marks is invented** cartoon dialogue, props and signs. Since the conversation passes (2026-09-26), every invented voiced line in every segment also carries `[INVENTED]`, often with a note on what it plants or why it's there.
 - Mas's voiced subtitles are lowercase (house style). Real posts keep their source casing in their own UI. Posts appear as post pop-ups, never as speeches.
 - Clock times are **PT**, pending the facts owner's check of the zone the tweet-ID decodes used.
-- `RAIL:` is the dimmed UI band (y 203–270), the fixed home of date chyrons and truth labels. `PLATE:` is a name and tagline under a portrait window, with no freeze.
+- `RAIL:` is the dimmed UI band (y 203–270), the fixed home of date chyrons (no truth labels since 2026-09-27). `PLATE:` is a name and tagline under a portrait window, with no freeze.
 - `CARD:` is a 2-TONE name card. The world freezes for 1 beat, then the card rides over the live room for the rest of its bar. `CARD (FULL FREEZE):` holds the freeze for the whole bar while Mas moves through it. Only TASYA and TERB get a full freeze (the two pocketing businesses).
 - **Deliveries into the dark room** come through the server rack's slot or the monitor, never a door (guardrail X1: no private space implied).
 - Portraits: **Mas always left, the other always right.** Durations are in bars and beats (96 BPM: 1 beat = 0.625 s, 1 bar = 2.5 s).
@@ -124,10 +125,11 @@ Ep1 slot values, in the intro's five spoiler-safe changes ([SCRIPT §8](../../in
 4. **Couch gag:** the pocketed keycap `CTRL`.
 5. **Roll call:** RIMA's NopeAI fill, THE WHALE's budget breach, RUMPT's silhouette, the cursor alone.
 
-## [FILENAME + DISCLAIMER CARD — 2 s]
+## [FILENAME CARD — 2 s]
 
 `ep1.0_research_preview.md`
-*A parody. Events dramatized; scenes invented. Names changed to protect the valuations.*
+
+*(2026-09-27: the filename alone. The disclaimer line is cut; SHOWRUNNER-NOTES note 3.)*
 
 ---
 
@@ -392,9 +394,9 @@ SOUND: the lobby's bed under both scenes: the revolving door's rubber sweep, a r
 
 `[W]` The NopeAI lobby: revolving door, reception desk, the elevator doors on the left wall, the lobby TV dark high on the back wall, and a wall sign that is still blank (it will become `DAYS SINCE…`). On the revolving door's glass, in small gold letters: `NOPEAI · A NONPROFIT`. MAS walks in from frame left and crosses to the desk with his glass.
 
-`RAIL: JAN 23, 2023 · ~$10B (REPORTED)`
+`RAIL: JAN 23, 2023 · ~$10B`
 
-DELIVERY. Through the glass doors comes a novelty check, and it's enormous. It jams in the revolving door, and the door stops with the check wedged diagonally across two panes, right under the gold letters: a nonprofit's door, and a check that won't fit through it. `[ECU]` The check, in 7 px: `MACROSOFT · "multiyear, multibillion dollar"` [V · JAN 23, 2023 · dialogue pass 5: no hyphen, as in the company's own post; the hyphen was press style (the facts review, which opened the post). facts #6 and the research still carry the hyphen: the facts owner corrects them], and a huge `~$10B*` whose asterisk is too small to read. The rail carries the `(REPORTED)`.
+DELIVERY. Through the glass doors comes a novelty check, and it's enormous. It jams in the revolving door, and the door stops with the check wedged diagonally across two panes, right under the gold letters: a nonprofit's door, and a check that won't fit through it. `[ECU]` The check, in 7 px: `MACROSOFT · "multiyear, multibillion dollar"` [V · JAN 23, 2023 · dialogue pass 5: no hyphen, as in the company's own post; the hyphen was press style (the facts review, which opened the post). facts #6 and the research still carry the hyphen: the facts owner corrects them], and a huge `~$10B`.
 
 `[W]` TASYA is already standing in the lobby, as if he had been part of the wall: warm, in glasses, hands clasped, a giant key ring at his belt, one key per tenant.
 
@@ -1038,7 +1040,7 @@ you can stay. `[INVENTED]`
 
 ITEM 1 (2 bars). `RAIL: JUN 7, 2023 · NEW DELHI`
 
-`[POV]` The tour poster from sc 16, with one more city pasted on. A caption slides under his face, saying whose words and what they answered: `MAS, ON $10M STARTUPS:` "…totally hopeless to compete with us…" [V · JUN 7–8, 2023 · trimmed. Clarity pass, 2026-09-27: the speaker and the question are new (mid §2: he was "asked about competing on a $10M budget"); the newcomer read didn't know who "he" was or whom he was answering]. Under it, readable: `(HE LATER SAID: OUT OF CONTEXT)`. The rail and both lines of the caption land and hold to read before the cut. `[MCU·glass]` In the monitor's glass, over the poster, his reflection sips; beside it, the Orb's reflected iris steps down from his caption to the line under it, `(HE LATER SAID: OUT OF CONTEXT)`, and stays there.
+`[POV]` The tour poster from sc 16, with one more city pasted on. A caption slides under his face, saying whose words and what they answered: `MAS, ON $10M STARTUPS:` "…totally hopeless to compete with us…" [V · JUN 7–8, 2023 · trimmed. Clarity pass, 2026-09-27: the speaker and the question are new (mid §2: he was "asked about competing on a $10M budget"); the newcomer read didn't know who "he" was or whom he was answering. 2026-09-27: the `(HE LATER SAID: OUT OF CONTEXT)` line under the caption is cut, SHOWRUNNER-NOTES note 3]. The rail and both lines of the caption land and hold to read before the cut. `[MCU·glass]` In the monitor's glass, over the poster, his reflection sips; beside it, the Orb's reflected iris steps down his caption and stays there.
 
 ITEMS 2–4, THE HANDS (8 bars). `[2S·SCR]` (one held room frame for the whole runner, ≈ 20 s: MAS at the desk, frame left, the Orb at his shoulder, and the monitor at frame right with its bezel in frame, big enough to follow) Each item plays on the monitor inside this frame, and Mas's hand and the Orb answer it in the same picture. A must-read line cuts to full-bleed `[POV]` for as long as it takes to read, then back to this frame.
 
@@ -1318,10 +1320,10 @@ This board controls the company. Not the other way round. `[INVENTED]`
 
 A thick arrow drives down out of the box, and the camera tilts down with it, a whole pixel a frame, into the top of a bigger box: `NOPEAI · THE COMPANY`. At the bottom of the frame, just inside the company's wall, is one small box, `CEO`, with an empty equity box beside it. Just outside the wall, past a drawn fence, sits a key ring the size of a steering wheel.
 
-**THE ZEROS** (S1.04 · ~12 s). `[GFX·detail]` A cut in to one held detail: the CEO box on one side of the fence, the key ring on the other, `MACROSOFT · ~$10B IN (REPORTED)`.
+**THE ZEROS** (S1.04 · ~12 s). `[GFX·detail]` A cut in to one held detail: the CEO box on one side of the fence, the key ring on the other, `MACROSOFT · ~$10B IN`.
 
 **NELEH** *(blueprint; her pointer on the key ring)*\
-Our biggest investor has put in billions. It gets this many votes. `[INVENTED · "billions" is the order of magnitude on the record; the reported ~$10B stays on the (REPORTED) plate]`
+Our biggest investor has put in billions. It gets this many votes. `[INVENTED · "billions" is the order of magnitude on the record; the reported ~$10B stays on the plate]`
 
 The key ring jangles, hopeful. On "votes", a stamp lands on it: `VOTES: 0`. *(5.1: "The investor" was vague; now the ear hears who it is and what it paid before the stamp answers "this many".)*
 
@@ -1333,7 +1335,7 @@ Good question. `[INVENTED]`
 
 *(5.1: she finishes the question and he dodges it, so nobody cuts in without a reason. It sets up the act's pattern, a real question answered with "Good question.", which "of what?" pays off at the end.)*
 
-On "question", the CEO box is stamped underneath: `EQUITY: 0`, and under it, smaller, `(HE TOLD THE SENATE)` [V]. In the empty equity box, a tiny moth drawn in blueprint linework opens its wings and flies out. The two zeros hold side by side for a beat, and the cut comes: that's the act's question, in one picture.
+On "question", the CEO box is stamped underneath: `EQUITY: 0` [V · his Senate testimony; 2026-09-27: the `(HE TOLD THE SENATE)` line under it is cut]. In the empty equity box, a tiny moth drawn in blueprint linework opens its wings and flies out. The two zeros hold side by side for a beat, and the cut comes: that's the act's question, in one picture.
 
 **THE PATH AND THE BREAK** (S1.05 · ~3.5 s; a cut back out to the sheet). Three little blueprint figures walk onto the grid, and her figure puts down its pointer and steps in beside them, a row of four: a door outline (ALYI), the figure holding a glowing paper (NELEH), a figure with a loading spinner over its head (MADA) and a black square (THE QUIET VOTE). They're the invite's four circles, and the four icons from the ring. A numbered path draws itself under their feet, `1. NOON · VIDEO CALL`, and runs on under a fold in the paper. The figures step onto 1 and stop. The fold's corner curls up, and Las Vegas neon bleeds through behind it. The blueprint tears along step 1's line, straight back into the suite.
 
@@ -1404,7 +1406,7 @@ He brushes the shavings away with the side of his hand. His thumb comes to rest 
 
 **F1.2 · `TPOOL` [EARLY-WEB16] · F** (S2.03 · ~4 s). A render front sweeps **out of mark 1** (SOUND: `render_front_sweep`) and turns the frame to sixteen colours with GIF-era dither: a frosted-glass boardroom door with two shadows behind it, leaning together. SOUND: a frosted office (HVAC, voices muffled behind glass), crossfaded in and out on the fronts. There's no whisper and no POV rim: `(REPORTED)` material belongs to the show, never to his account.
 
-`RAIL: TPOOL, HIS FIRST COMPANY · TWO STAFF REVOLTS · (REPORTED)` (it types on while the front sweeps in, and clears before the front sweeps back into the wood grain) *(4.1: the rail says what happened there, and "two" accounts for marks 1 and 2. The years are cut: "2005–08" read as the company's lifespan.)*
+`RAIL: TPOOL, HIS FIRST COMPANY · TWO STAFF REVOLTS` (it types on while the front sweeps in, and clears before the front sweeps back into the wood grain) *(4.1: the rail says what happened there, and "two" accounts for marks 1 and 2. The years are cut: "2005–08" read as the company's lifespan.)*
 
 `[ECU·top]` (S2.04 · ~1.5 s) As before. The light steps to mark 2, then 3, and stops on his thumb.
 
@@ -1604,10 +1606,10 @@ She dials: four tones, one per seat. *(5.0: a decision. In v4 the speakerphone d
 
 INT. NOPEAI BOARDROOM / MISANTHROPIC LIGHTHOUSE — SPLIT — NIGHT. `[SPLIT]` (S4.08 · ~30 s; Act One's meanwhile split, two panes, **both calls in one held shot**) LEFT: the speakerphone, NELEH and MADA leaning in. The ring carries across the line. RIGHT: the lighthouse, opened close, its brick walls warm behind the paper: a phone rings on a desk buried in paper, and attached to its handset, somehow, is a small throne. MARIO, the lamp turning in the window behind him, looks at the throne and picks up. His finger starts to rise. *(5.1: the brick is the lighthouse's, never his: mario.md, "never red".)*
 
-PLATE (over the ring, at the top of his pane; it clears as Neleh starts): `MARIO · RUNS THE RIVAL LAB · (REPORTED)` *(5.1: the truth label is back. The CEO approach rests on a press report; only the merger talks are confirmed.)*
+PLATE (over the ring, at the top of his pane; it clears as Neleh starts): `MARIO · RUNS THE RIVAL LAB` *(5.1: the truth label is back. The CEO approach rests on a press report; only the merger talks are confirmed. 2026-09-27: the label is off again; the plate states only what's solid, and the offer is Neleh's line.)*
 
 **NELEH** *(into the speakerphone; polite, a cold call)*\
-Mario, it's Neleh, from the NopeAI board. I'll be direct. The board is offering you the job of CEO, and it wants to discuss a merger. `[INVENTED · the merger talks are confirmed for Nov 18, with Neleh's real counterpart the most supportive (research gaps.md §2 #9, the 2025 deposition); the CEO approach is reported (The Information, via research mid.md §3), hence the plate's (REPORTED)]`
+Mario, it's Neleh, from the NopeAI board. I'll be direct. The board is offering you the job of CEO, and it wants to discuss a merger. `[INVENTED · the merger talks are confirmed for Nov 18, with Neleh's real counterpart the most supportive (research gaps.md §2 #9, the 2025 deposition); the CEO approach is reported (The Information, via research mid.md §3), so it lives only in her line]`
 
 **MARIO** *(his finger all the way up)*\
 Neleh, hi. Wow. I've actually written up some thoughts on exactly this. Eleven pages, on the conditions under which we might, hypothetically— `[INVENTED]`
@@ -1784,10 +1786,10 @@ that's a lot of desks. `[INVENTED]`
 **GERG**\
 Scroll to the bottom. `[INVENTED]`
 
-The page scrolls, and one name comes up from below the fold and stops, highlighted, and holds: `ALYI (REPORTED)`, beside Alyi's call thumbnail in the monitor's corner, its vote icon still flipped from noon. On the stop, off picture: the Orb's *chime* and servo. *(The notice is the Orb's. No Mas tell on `(REPORTED)` material.)*
+The page scrolls, and one name comes up from below the fold and stops, highlighted, and holds: `ALYI`, beside Alyi's call thumbnail in the monitor's corner, its vote icon still flipped from noon. On the stop, off picture: the Orb's *chime* and servo. *(The notice is the Orb's. No Mas tell on `(REPORTED)` material.)*
 
 **GERG** *(the cheer gone, for once)*\
-Alyi signed it. `[INVENTED · the signature is (REPORTED) on the page as he says it]`
+Alyi signed it. `[INVENTED · the signature is on the page as he says it]`
 
 *(5.1: the letter is the staff's, never Gerg's: he had quit on Friday, so "they", not "we" (the facts read). The ear can tell where the record starts: Gerg's lead-in is his own and the quotation begins on the letter's own word (the naturalness read). Mas is a step ahead, finishing the threat with a fact already public, instead of asking "walk where?" about his own move (the insider read). "that's a lot of desks." replaces the echo "all of them." / "All of them." (all three reads marked it), and Tasya pays it off at the door. The count is on the page, not said.)*
 
@@ -2047,7 +2049,7 @@ You said that about the last one. `[INVENTED · the last one was the "research p
 
 Mas keeps walking. The vault hums on the line: RACK to the vault, and both men go soft. Gerg reads the sticky note, nods, and walks out of frame. Then, over the vault:
 
-`RAIL: (REPORTED) RESEARCHERS WROTE OF A BREAKTHROUGH CALLED Q*` [V as reported · facts §A, event 54; the facts owner confirms the verb, logs the counter-report that the board never received such a letter (remembered by the facts read, not yet on file) and considers `(DISPUTED)`] *(4.1: the fact comes after the question and his deflection, as a sting. 5.0 restores draft 2's "a breakthrough called", the two words the v4.1 newcomer lacked, and Gerg's pickup gives "it's a preview." its dread for anyone who saw Act One. 5.1 drops "had warned the board": after the act's explicit why-thread (Ttemme's question, the sealed folder, "of what?"), it read as the answer, a safety motive, which the record does not give and which Ttemme's own on-file statement contradicts (the facts read). A rhyme is never a cause.)*
+`RAIL: RESEARCHERS WROTE OF A BREAKTHROUGH CALLED Q*` [V as reported · 2026-09-27: the `(REPORTED)` label is off; if the counter-report stands, move this to a character's line or cut it · facts §A, event 54; the facts owner confirms the verb, logs the counter-report that the board never received such a letter (remembered by the facts read, not yet on file) and considers `(DISPUTED)`] *(4.1: the fact comes after the question and his deflection, as a sting. 5.0 restores draft 2's "a breakthrough called", the two words the v4.1 newcomer lacked, and Gerg's pickup gives "it's a preview." its dread for anyone who saw Act One. 5.1 drops "had warned the board": after the act's explicit why-thread (Ttemme's question, the sealed folder, "of what?"), it read as the answer, a safety motive, which the record does not give and which Ttemme's own on-file statement contradicts (the facts read). A rhyme is never a cause.)*
 
 `RAIL: NOV 29, 2023`
 
@@ -2121,13 +2123,13 @@ MUSIC: the chord with no third, on the downbeat (MM-12's button), held on his fa
 
 CUT TO BLACK on the hum.
 
-### END CREDITS [0:43 · legal card per the overview] · 22:52–23:35
+### END CREDITS [0:43 placeholder · the outro, pending a choice] · 22:52–23:35
 
-*(Tag-fix pass, 2026-09-27: superseded, pending a choice. The showrunner's outro note (SHOWRUNNER-NOTES 1) replaces this 0:43 legal card with a short outro, shorter than the intro, with the long legal text moved off screen. Five mock-ups (7.5–11.9 s as built) are being compared in `show/production/OUTRO-PROPOSALS.md`, and none is chosen. The stick reel holds a 12 s card labelled `OUTRO · PENDING` with §1.1's text. The music line and the moth stinger below stand until a proposal is picked; where the stinger goes is OUTRO-PROPOSALS §1.3.)*
+*(Tag-fix pass, 2026-09-27: superseded, pending a choice. The showrunner's outro note (SHOWRUNNER-NOTES 5) replaces this 0:43 legal card with a short outro, shorter than the intro, with the long legal text moved off screen. *(2026-09-27, notes 3 and 4: no legal text or pointer on screen at all, and the outro's credit is "by Opus 5.5".)* Five mock-ups (7.5–11.9 s as built) are being compared in `show/production/OUTRO-PROPOSALS.md`, and none is chosen. The stick reel holds a 12 s card labelled `OUTRO · PENDING` with §1.1's text. The music line and the moth stinger below stand until a proposal is picked; where the stinger goes is OUTRO-PROPOSALS §1.3.)*
 
 MUSIC: MM-15, THE KNEE reprise in Ep1's colour.
 
-*Stinger (≤ 5 s, inside the credits):* the Senate moth flutters in across the legal card, settles on its last line and folds its wings.
+*Stinger (≤ 5 s, inside the credits):* the Senate moth flutters in across the credits, settles on their last line and folds its wings.
 
 **END OF EPISODE**
 
@@ -2158,7 +2160,7 @@ MUSIC: MM-15, THE KNEE reprise in Ep1's colour.
 
 ## Act Four, draft 5.0 (the conversation pass): what changed
 
-*Draft 4.2 → 5.0, 2026-09-26. Written by the head writer to the showrunner's note on animatic v4 (quoted in the act's header and in [SHOWRUNNER-NOTES](../../production/SHOWRUNNER-NOTES.md) note 1), to the conversation rules R17–R21 in [tone-and-dialogue](../../bible/tone-and-dialogue.md#conversation) and [flow-and-continuity §4](../../bible/flow-and-continuity.md#4-dialogue-rhythm), and from the [dialogue diagnosis](production/act4/dialogue-diagnosis-v4.md) and the [voice diagnosis](production/act4/voice-diagnosis-v4.md). **Nothing in 5.0 has been read aloud, recorded, heard or watched.** Every length is a reading estimate: the words at the voice diagnosis's per-character turn paces (§4.2), plus the picture time each shot describes. The takes set the real frames.*
+*Draft 4.2 → 5.0, 2026-09-26. Written by the head writer to the showrunner's note on animatic v4 (quoted in the act's header and in [SHOWRUNNER-NOTES](../../production/SHOWRUNNER-NOTES.md) note 11), to the conversation rules R17–R21 in [tone-and-dialogue](../../bible/tone-and-dialogue.md#conversation) and [flow-and-continuity §4](../../bible/flow-and-continuity.md#4-dialogue-rhythm), and from the [dialogue diagnosis](production/act4/dialogue-diagnosis-v4.md) and the [voice diagnosis](production/act4/voice-diagnosis-v4.md). **Nothing in 5.0 has been read aloud, recorded, heard or watched.** Every length is a reading estimate: the words at the voice diagnosis's per-character turn paces (§4.2), plus the picture time each shot describes. The takes set the real frames.*
 
 **What the note measured on v4.** 45 voiced lines and 176 words in 4:11; a median of 4 words a line; 21 lines of three words or fewer; 12 lines cut off or cut into; 21 exchanges averaging 2 lines, the longest 10 s. Speech came in 1–4 s bursts between wordless stretches of about 6.6 s (22.5 s at most), about 480 words of on-screen text outweighed the 176 spoken, and nobody on the board ever spoke to Mas. The causes were the post-v2 tightening, which cut talk instead of dead time; the old R8, "Collide, don't volley", with its overlap-in-every-scene checklist item; and v3.2's retakes, sped up to fit a picture already cut.
 
@@ -3951,7 +3953,7 @@ I can't listen or watch.
 
 ## Second pass: the three reads
 
-*The same day, the same writer, the same segments. Inputs: the naturalness read of Ep1–3, the newcomer-and-insider read and the facts-and-guardrails read of the conversation pass; the live [SHOWRUNNER-NOTES](../../production/SHOWRUNNER-NOTES.md), re-read at the start and the end (nothing newer than note 1, "stick figures first"); and [flow-and-continuity](../../bible/flow-and-continuity.md) §4–§5a. Every Ep1 finding on the cold open, Acts One–Three and the tag is either applied below or declined with a reason. **Act Four, its writer's notes and the draft-2 appendix were not touched.** Outside the five segments, this pass changed only the header's runtime and draft rows, §1's rows and notes, one correction in the handoffs above, and this section. **Nothing has been read aloud, recorded, heard or watched;** every length is estimated from word counts by the conversation pass's method.*
+*The same day, the same writer, the same segments. Inputs: the naturalness read of Ep1–3, the newcomer-and-insider read and the facts-and-guardrails read of the conversation pass; the live [SHOWRUNNER-NOTES](../../production/SHOWRUNNER-NOTES.md), re-read at the start and the end (nothing newer than note 10, "stick figures first"); and [flow-and-continuity](../../bible/flow-and-continuity.md) §4–§5a. Every Ep1 finding on the cold open, Acts One–Three and the tag is either applied below or declined with a reason. **Act Four, its writer's notes and the draft-2 appendix were not touched.** Outside the five segments, this pass changed only the header's runtime and draft rows, §1's rows and notes, one correction in the handoffs above, and this section. **Nothing has been read aloud, recorded, heard or watched;** every length is estimated from word counts by the conversation pass's method.*
 
 ### Counts
 
@@ -4074,7 +4076,7 @@ The same counting script ran on the file before and after this pass. It counts v
 *The cold open, Acts One–Three and the tag, 2026-09-26, by the Ep1 writer. **Why:** the showrunner's note of the same day, "each conversation was reduced to minimum lines to get a point across without feeling like real dialogue that helps the viewer feel the scene. let's make sure generally we are using generally good filmography and storywriting trends", together with the note on Act Four v4 ("i said to cut down empty time, but not to cut every dialogue into only a few words per character") and the note on documentation ("we want to be sure that we are leaving appropriate detail where someone could pick up where we left off"). The lead measured these segments at about 680 words of dialogue, median 6 words a line, and found that many scenes still delivered their point in the fewest lines.*
 
 *Inputs, read at the start and re-read at the end:*
-- *the live [SHOWRUNNER-NOTES](../../production/SHOWRUNNER-NOTES.md) (nothing newer than note 1 during the pass);*
+- *the live [SHOWRUNNER-NOTES](../../production/SHOWRUNNER-NOTES.md) (nothing newer than note 8, "scenes to be felt", during the pass);*
 - *[tone-and-dialogue](../../bible/tone-and-dialogue.md): the new "Scene craft and film grammar" section, R1–R21 and §6's voices;*
 - *[dialogue-craft](../../_sources/research/dialogue-craft.md);*
 - *[flow-and-continuity](../../bible/flow-and-continuity.md), §5a in particular;*
@@ -4278,7 +4280,7 @@ I can't listen or watch.
 5. **Mas's questions.** He now asks "and the rent?", "which one am i?" and "what does it cost?" in the first half. Do they play as moves, or as a man feeding lines? *(Final pass: "what does it cost?" and "what year is it?" are cut as feeders; the four left are "and the rent?", "how's the dancing?", "which one am i?" and the DevDay question.)*
 6. **Board artists:** check each `PLAN:` against the shots in its room, and flag anything in Act Four that disagrees.
 7. **A fresh newcomer read** of the first half: does Alyi's count tell them these people go back years, and does Tasya's speech tell them what the landlord gets?
-8. **The stick-figure reel** (the showrunner's note 3): these changes should go to a read-aloud and a reel with real takes and a temp bed before any pixel work.
+8. **The stick-figure reel** (the showrunner's note 10): these changes should go to a read-aloud and a reel with real takes and a temp bed before any pixel work.
 
 ## Handoffs (scene-craft pass)
 
@@ -4312,7 +4314,7 @@ Numbered 55–64 in [open-questions.md](open-questions.md#scene-craft-pass-new-q
 
 ## Final pass: the three-lens read (2026-09-26)
 
-*The cold open, Acts One–Three and the tag, by the Ep1 writer, on one reader's three-lens review of the scene-craft draft (newcomer, insider, and "do we feel it"), plus its notes on documentation. **Why:** the same showrunner notes as the pass above, and the documentation note in full: "also as far as documentation, we want to be sure that we are leaving appropriate detail where someone could pick up where we left off". Inputs re-read at the start: the live [SHOWRUNNER-NOTES](../../production/SHOWRUNNER-NOTES.md) (a new note 1, the elevation-ideas menu, arrived during the pass and doesn't touch these segments), tone-and-dialogue's "Scene craft and film grammar" and R1–R21, [dialogue-craft](../../_sources/research/dialogue-craft.md), and [flow-and-continuity](../../bible/flow-and-continuity.md) §5a.*
+*The cold open, Acts One–Three and the tag, by the Ep1 writer, on one reader's three-lens review of the scene-craft draft (newcomer, insider, and "do we feel it"), plus its notes on documentation. **Why:** the same showrunner notes as the pass above, and the documentation note in full: "also as far as documentation, we want to be sure that we are leaving appropriate detail where someone could pick up where we left off". Inputs re-read at the start: the live [SHOWRUNNER-NOTES](../../production/SHOWRUNNER-NOTES.md) (a new note 6, the elevation-ideas menu, arrived during the pass and doesn't touch these segments), tone-and-dialogue's "Scene craft and film grammar" and R1–R21, [dialogue-craft](../../_sources/research/dialogue-craft.md), and [flow-and-continuity](../../bible/flow-and-continuity.md) §5a.*
 
 *What was touched: only the cold open, Acts One–Three and the tag, this log (row 18, the counter, the cut list and this section) and [open-questions.md](open-questions.md). Every edit was a targeted replacement. **Act Four, its writer's notes, the header and the draft-2 appendix were not touched.** Nothing was committed. Nothing has been read aloud, recorded, heard or watched.*
 
@@ -4430,7 +4432,7 @@ New items 65–68 are in [open-questions.md](open-questions.md#final-pass-new-qu
 
 # Revision log (dialogue pass 5, 2026-09-26)
 
-*The cold open, Acts One–Three and the tag, by the Ep1 writer. **Why:** after the scene-craft pass was committed (`890fc82`), a workflow resume re-ran three critics on these segments: a naturalness read, a newcomer-and-insider read and a facts-and-guardrails read. Their findings are kept in [the critiques file](../../production/reviews/2026-09-26-dialogue-pass-5-critiques.md). The showrunner's standing notes governed every call: let conversations play out (note 7), scenes to be felt (note 4), clear to a newcomer without lectures (notes 8 and 9), guidelines, not hard rules (note 12), and firm guardrails.*
+*The cold open, Acts One–Three and the tag, by the Ep1 writer. **Why:** after the scene-craft pass was committed (`890fc82`), a workflow resume re-ran three critics on these segments: a naturalness read, a newcomer-and-insider read and a facts-and-guardrails read. Their findings are kept in [the critiques file](../../production/reviews/2026-09-26-dialogue-pass-5-critiques.md). The showrunner's standing notes governed every call: let conversations play out (note 11), scenes to be felt (note 8), clear to a newcomer without lectures (notes 12 and 13), guidelines, not hard rules (note 16), and firm guardrails.*
 
 ***Finished after an interrupted run.** A first run applied most of the fixes before the lead stopped it mid-edit at about 22:33. This finishing pass re-read the showrunner notes and the critiques, compared the script with its committed version (`git -C /home/jgon/project/art/mrmas diff 890fc82 -- show/episodes/ep01/script.md`), checked every half-applied edit, applied or declined what was left, and brought [open-questions.md](open-questions.md) up to date. The first run hadn't reached that file: the script already cited open questions 69 and 70, which didn't exist. The "Run" column below says which run made each change.*
 
@@ -4493,7 +4495,7 @@ Codes: **Nat** the naturalness read; **NI** the newcomer-and-insider read (N new
 - **Sc 7, Rima (bent).** The read's "Mas… a million people. That's for them, isn't it?" puts dots after the name, which a stock voice stalls on as surely as a full stop. The name moves to the end of the phrase instead, the read's own general fix.
 - **Two quip volleys stay** (the newcomer-and-insider read's note to the naturalness read; the read itself says none of them drags):
   - "I have one concern." / "Just one?" / "It has sub-concerns. I've grouped them by how worried we should be." Mario's answer is already two sentences, and the exchange is settled across episodes: Ep3 calls back "sub-concerns" (open question 51).
-  - "which one am i?" / "Most of them." Sucram's opening to Mas runs three sentences, and "Most of them." is the button on it: motivated seasoning, which note 7 allows. A longer answer would explain the joke.
+  - "which one am i?" / "Most of them." Sucram's opening to Mas runs three sentences, and "Most of them." is the button on it: motivated seasoning, which note 11 allows. A longer answer would explain the joke.
   - The third ("Longer than that.") is fixed, above.
 - **Lines repeated across episodes stay in Ep1** ("Last one…", "Don't mind me.", Radnus's congratulations and "thank you.", "That's how a race starts."). Ep1 plays first, so the later episode changes, and both already have. Ep2's reporter says "One more and we'll let you get back on the trail…", its Humanist "I'm just moving in downstairs. I hope that's all right.", and its Radnus "Lovely garden. I see they let your chatbot in." / "as a guest.". Ep3's Maon no longer says "That's how you get two.".
 - **The unseen questioners (across 3):** Ep1's panel host keeps "Last one, Mas. What's the best part of the job?". Ep2 has changed its reporter's rhythm, so the two no longer match.
@@ -4536,7 +4538,7 @@ Codes: **Nat** the naturalness read; **NI** the newcomer-and-insider read (N new
 | Episode, with the intro, the card and the 43 s credits placeholder | ≈ 23:35 | ≈ 25:56 (≈ 25:00) | ≈ 26:10 (≈ 25:14) |
 
 - The talk figure comes from the counter; the cut bar and the held shots are estimated by hand.
-- The showrunner's outro note (note 1) replaces the 43 s credits placeholder with a 6–15 s outro, which would take ≈ 28–37 s off the episode figure, not the story.
+- The showrunner's outro note (note 5) replaces the 43 s credits placeholder with a 6–15 s outro, which would take ≈ 28–37 s off the episode figure, not the story.
 - The pilot's length is still the showrunner's ruling (open questions 2 and 46). The whole-beat cut list (open question 2) now totals ≈ −1:11.5.
 
 ## What a human must check (dialogue pass 5)

@@ -1,14 +1,16 @@
 # MR. MAS · Outro proposals (five, for comparison)
 
+> **Update (2026-09-27, [SHOWRUNNER-NOTES](SHOWRUNNER-NOTES.md) notes 3 and 4):** no terms line, no disclaimer and no pointer to a notice on screen, and the credit line is **by Opus 5.5**. The credits pane stays minimal: the title and filename, plus "by Opus 5.5". Any other rows (music, voices, the AI-tool disclosure) are optional, the showrunner's call. If a notice is ever needed for publishing, it lives only in the platform's description field, off screen. §1.1 and the credit text written out in §2–§6 are updated. Elsewhere, the terms line, the pointer, their read times and each proposal's Ep12 notice describe the briefs and the mock-ups as built; the code in `studio/src/dev/outro/` and the renders in `out/lookdev/outro/` still carry the old text. The terms' read time set several lengths (A grew to 11.875 s so its card could be read; B, C and E fell short of the 8.2 s the terms and pointer needed), so each proposal can now run shorter. They aren't redesigned here. **Whichever proposal is chosen will be rebuilt with the new text.**
+>
 > **Status: PROPOSALS, 2026-09-26; mock-ups built 2026-09-27 ([§7a](#7a-mock-up-results)).** Nothing here is decided. Five ways to close every episode, written so they can be built as moving mock-ups and compared side by side. Whichever one the showrunner picks replaces the 43 s credits placeholder ([pacing-model §3.1](../format/pacing-model.md#31-the-clock)).
 >
 > **The ask (verbatim):**
 > - "i do think we should have some form of short outro at least as brief credit pane or similar. let's think about what makes sense"
 > - "i was thinking the outro should be shorter than the intro probably. but let's create a few proposals with some sort of visual outlines for comparison"
 >
-> **What that means here:** every proposal is **6–15 s**, shorter than the 30 s intro, and every one still carries a credits pane, the AI-tool disclosure, and a one-line disclaimer that points to the full notice and sources. The 90-word legal text ([overview §8](../bible/overview.md#8-disclaimer-cards)) can't be read in that time, so it moves off screen (§1.1). **Legal review of that move is pending.**
+> **What that means here:** every proposal is **6–15 s**, shorter than the 30 s intro, and every one still carries a credits pane. *(As drafted, each also carried the AI-tool disclosure and a one-line disclaimer pointing to the full notice and sources; since 2026-09-27 the disclosure is optional and the disclaimer and pointer are cut.)* The 90-word legal text ([overview §8](../bible/overview.md#8-disclaimer-cards)) can't be read in that time, so it moves off screen (§1.1). **Legal review of that move is pending.**
 >
-> **Read for this:** [SHOWRUNNER-NOTES](SHOWRUNNER-NOTES.md) note 1 (the lead's "closing session", now proposal A) · [intro SCRIPT](../intro/SCRIPT.md) §3.9–3.10 and §8 · the built bookend (`studio/src/dev/mfinale/bookend.ts`) · [overview §8](../bible/overview.md#8-disclaimer-cards) · [pacing-model §3.1, §3.3](../format/pacing-model.md) · [OST-BIBLE](../../audio/ost/OST-BIBLE.md) §0, §2.1, §2.4, §4 (MM-15) · [recurring-gags](../gags/recurring-gags.md) G01, G07, G09 · [style-range](../bible/style-range.md) §1.4, §3.4 (the title cards as files) · [GENAI-UPGRADE-PLAN](GENAI-UPGRADE-PLAN.md) §1.8 and §6 (disclosure) · [guardrails §5](../bible/guardrails.md#5-legal-hygiene) · Ep1 [script](../episodes/ep01/script.md) (the tag, the button, the moth stinger). `elevation-ideas.md` and `ai-media-range.md` weren't written yet when this was drafted; §1.4 and §1.5 are written so they can drop into them.
+> **Read for this:** [SHOWRUNNER-NOTES](SHOWRUNNER-NOTES.md) note 5 (the lead's "closing session", now proposal A) · [intro SCRIPT](../intro/SCRIPT.md) §3.9–3.10 and §8 · the built bookend (`studio/src/dev/mfinale/bookend.ts`) · [overview §8](../bible/overview.md#8-disclaimer-cards) · [pacing-model §3.1, §3.3](../format/pacing-model.md) · [OST-BIBLE](../../audio/ost/OST-BIBLE.md) §0, §2.1, §2.4, §4 (MM-15) · [recurring-gags](../gags/recurring-gags.md) G01, G07, G09 · [style-range](../bible/style-range.md) §1.4, §3.4 (the title cards as files) · [GENAI-UPGRADE-PLAN](GENAI-UPGRADE-PLAN.md) §1.8 and §6 (disclosure) · [guardrails §5](../bible/guardrails.md#5-legal-hygiene) · Ep1 [script](../episodes/ep01/script.md) (the tag, the button, the moth stinger). `elevation-ideas.md` and `ai-media-range.md` weren't written yet when this was drafted; §1.4 and §1.5 are written so they can drop into them.
 >
 > **The visual outline** for comparing them is `out/lookdev/outro/outro-proposals-timeline.png` (all five on the 96 BPM grid against the intro, §0). The five moving mock-ups land beside it in `out/lookdev/outro/<id>/` as the builders finish them (§9).
 
@@ -54,49 +56,29 @@ the knee (whole)   E 1 bar · B 1 bar · C 1 bar · A 1 bar + answer · D 4 bars
 
 The same words in every proposal. Only the surface that carries them changes.
 
-**The credits** (Ep1, first programmatic pass; `(creator)` is a placeholder until the showrunner gives the credit line):
+**The credits** (showrunner, 2026-09-27: "outro should say by opus 5.5"; [SHOWRUNNER-NOTES](SHOWRUNNER-NOTES.md) note 4). The pane stays minimal: the title and filename, plus the credit line. `by Opus 5.5` replaces the drafts' `(creator)` placeholder and their "created by" and "written" rows.
 
 | Field | Ep1 value | Changes when |
 |---|---|---|
 | Title | `MR. MAS` · the episode's filename, e.g. `ep1.0_research_preview.md` | Every episode |
-| Created by | `(creator)` | Never, unless the showrunner changes it |
-| Written | `(creator), with AI` | If the writing process changes |
-| Picture · music | `pixel art and original score, rendered in code` | When an outside layer ships in that episode (a video-model plate, a Blender object) |
-| Voices | `synthetic, designed from text · none cloned` | When human performers replace the scratch voices |
-| AI tools | `used throughout · listed in the notice` | Every episode, from its provenance manifests |
+| Credit | `by Opus 5.5` | Never, unless the showrunner changes it |
+| Picture · music | *Optional, showrunner's call:* `pixel art and original score, rendered in code` | When an outside layer ships in that episode (a video-model plate, a Blender object) |
+| Voices | *Optional, showrunner's call:* `synthetic, designed from text · none cloned` | When human performers replace the scratch voices |
+| AI tools | *Optional, showrunner's call:* `used throughout` | Every episode, from its provenance manifests |
 
-**The AI-tool disclosure** is the last two rows, and it's **exact per episode**. It's written from that episode's `provenance.json` manifests ([GENAI plan §1.8](GENAI-UPGRADE-PLAN.md)). When an insert used a video model, the line says so in the plan's words ("Select environmental motion generated with AI video tools and redrawn in pixel by the production. No performances, faces or voices were generated."), and the notice lists the tools by name. **On screen it names no product.** That keeps the picture to parody names only; whether legal wants the tools named on screen is open (§10).
+**The AI-tool disclosure** is the last two rows (optional, the showrunner's call). If it's used, it's **exact per episode**. It's written from that episode's `provenance.json` manifests ([GENAI plan §1.8](GENAI-UPGRADE-PLAN.md)). When an insert used a video model, the line says so in the plan's words ("Select environmental motion generated with AI video tools and redrawn in pixel by the production. No performances, faces or voices were generated."), and the description lists the tools by name. **On screen it names no product.** That keeps the picture to parody names only; whether legal wants the tools named on screen is open (§10).
 
-**The terms line** (one line, fixed all season):
+**No terms line and no pointer** (showrunner, 2026-09-27; [SHOWRUNNER-NOTES](SHOWRUNNER-NOTES.md) note 3). The drafts carried a one-line parody notice ("the terms line") and, under it, a pointer to the full notice and sources in the description. Both are cut, and nothing on screen points to a notice. **If a notice is ever needed for publishing, it lives only in the platform's description field, off screen.** The rules that held the terms and the pointer on screen (≥ 5 s unmoving, never covered, never in-world) go with them. The credits keep the legibility rule: 7-px face or larger, paper on dark, never below the 80% white ceiling.
 
-> **A parody. Events dramatized, scenes invented. No one depicted took part or endorsed it.**
-
-- It keeps the three things the 90-word text protects most: parody, dramatization with invented scenes, and no participation or endorsement. The rest (quotes from the public record as of the date shown, parody names and logos, performed voices) moves to the notice. Voices are covered on screen by the disclosure's `none cloned`.
-- It opens with the same words as the card after the intro ("A parody. Events dramatized; scenes invented."), so the episode is framed by one voice at both ends.
-- In the 7-px face it measures **389 px**, so it sets on one row of the 480-px frame.
-- It's sentence case: this is the production speaking, not Mas, so it doesn't take his lowercase.
-
-**The pointer** (under the terms line):
-
-> **Full notice and sources: in the description.**
-
-Once the show has a home page, this becomes `Full notice and sources: (site)/notice`. The URL is not invented here.
-
-**Rules for the terms and the pointer (all five):**
-1. **On screen ≥ 5 s** without moving: ≈ 16 characters a second for 87 characters, with margin. Each proposal below gives its number.
-2. **Never animated, never covered, never a gag.** A gag can drift across the season (the Orb's verdict, the count); the terms line never does. The stinger may land *beside* it (the moth on its final period) but never on a word.
-3. **Never in-world.** The terms line sits on UI (a footer, the band, a status line), never on a NopeAI plaque, so it can't read as a character's notice.
-4. 7-px face or larger, paper on dark, never below the 80% white ceiling.
-
-**Where the full text lives:**
+**Where the full text lives (off screen):**
 
 | Where | What | Why |
 |---|---|---|
-| **The episode description** (the platform's text field) | The full 90-word notice, the credits in full, the AI disclosure with tools named, and a link to the receipts | It's the place the pointer names, it travels with the video, and it can be corrected after release |
+| **The episode description** (the platform's text field) | The full 90-word notice if one is needed, the credits in full, the AI disclosure with tools named, and a link to the receipts | The only home for a notice; it travels with the video, and it can be corrected after release |
 | **The receipts page** (per episode, on the show's page once it exists) | Each episode's `facts.md` turned public: every real line and event with its source and its tag ([P] [V] [H] [K] [INVENTED]) | It's what "sources" means, and it's the proof of care the elevation note asks for |
-| **File metadata** | The notice in the MP4's description tag; the optional C2PA manifest ([GENAI plan §6](GENAI-UPGRADE-PLAN.md)) | It survives re-uploads that drop the description |
-| **A 20 s legal-card alternate** (not in the default cut) | The 90-word card, as a slate after the outro | For any platform, festival or broadcaster that requires the full text on screen. Legal decides if it's ever needed |
-| **Ep12's long credits** | The full notice on screen once, over the song | The song gives it the read time, once a season |
+| **File metadata** | The optional C2PA manifest ([GENAI plan §6](GENAI-UPGRADE-PLAN.md)) | It survives re-uploads that drop the description |
+
+*Cut 2026-09-27 (a notice lives only in the description):* the 20 s legal-card alternate (the 90-word card as a slate after the outro), the full notice on screen in Ep12's long credits, and the notice's copy in the MP4's description tag.
 
 **Legal review is pending** for all of this; §10 lists the questions.
 
@@ -106,7 +88,7 @@ Once the show has a home page, this becomes `Full notice and sources: (site)/not
 
 - **The knee plays whole** (F F F F G A♭ C F) **once, as that episode's credits reprise, in that episode's colour** (OST-BIBLE §2.1, MM-15). That's the only whole knee an episode has. **Chip doubles it** (OST rule 3). It's swung when the people own the frame (A, C, D, E) and straight when the machine does (B).
 - **It ends on the chord with no third:** the open fifth F–C, or the title's quartal stack C–F–B♭–E♭ over F with G on top. No A♮ over F before Ep12 (OST rule 12).
-- **A complete phrase**, never a fragment of a second or two (flow note 13, OST rule 5): the shortest proposal still plays the whole knee and lets its chord ring.
+- **A complete phrase**, never a fragment of a second or two (flow note 17, OST rule 5): the shortest proposal still plays the whole knee and lets its chord ring.
 - **Loudness:** featured, −16 LUFS on the music alone; peaks ≤ −1 dBTP.
 - **SFX own the interface:** key taps, the Orb's chime and servo, the plate clacks, the close click. The score leaves them room.
 - **MM-15 becomes twelve short colours** (2.5–6 bars each, depending on the proposal) plus its 60 s album version.
@@ -136,7 +118,7 @@ Once the show has a home page, this becomes `Full notice and sources: (site)/not
 
 - **≤ 5 s (2 bars), a callback laugh, never plot** ([pacing-model §3.3](../format/pacing-model.md)). The season's booked ones: the moth (Ep1), the mirror wink (Ep4), the chihuahua with a gold thread (Ep5), KORG 5 shipping to silence (Ep12).
 - Each proposal names where its slot sits: **inside** (no extra time) or **after** (up to 2 bars more). The total never passes 20 s.
-- **Ep1's moth** is written for every proposal below. It used to settle on the legal card's last line; now it settles on the terms line's final period, beside the words and never on them.
+- **Ep1's moth** is written for every proposal below. It used to settle on the legal card's last line, then on the terms line's final period, beside the words and never on them. With no terms line (2026-09-27), the rebuild gives it a new place to land.
 
 ### 1.4 The capability curve (the elevation note)
 
@@ -146,12 +128,12 @@ The showrunner: "some component of the show rendering improve that shows the mod
 2. **From Ep10, the machine types the credits itself:** no hands, and the lines arrive before they'd be typed.
 3. **Ep12:** the song (§1.5).
 
-**Guards:** it's a fenced slot like the title cards (style-range §3.4), so it may climb, but it never renders a world perfectly (that's J5's, in Ep12), the pixel base never rises, and **the terms line is the one thing that never changes**.
+**Guards:** it's a fenced slot like the title cards (style-range §3.4), so it may climb, but it never renders a world perfectly (that's J5's, in Ep12), the pixel base never rises, and **the credit line is the one thing that never changes** (until 2026-09-27 this was the terms line).
 
 ### 1.5 Ep12: the AI outro song
 
-- **It extends the weekly outro rather than replacing it.** The season's last outro starts like the other eleven, and then it doesn't close. The song takes over from there and becomes the season's one set of long credits (≈ 60–90 s, the song's call), the only place the full notice appears on screen (§1.1).
-- **Programmatic filler first** ([SHOWRUNNER-NOTES](SHOWRUNNER-NOTES.md) note 3): an instrumental on the OST engine with the lyrics set on screen as type. No sung filler, no vocoder (the engine's banned list). The final is a music-model song under the narrow exception still under discussion.
+- **It extends the weekly outro rather than replacing it.** The season's last outro starts like the other eleven, and then it doesn't close. The song takes over from there and becomes the season's one set of long credits (≈ 60–90 s, the song's call), with no notice on screen (§1.1, 2026-09-27).
+- **Programmatic filler first** ([SHOWRUNNER-NOTES](SHOWRUNNER-NOTES.md) note 7): an instrumental on the OST engine with the lyrics set on screen as type. No sung filler, no vocoder (the engine's banned list). The final is a music-model song under the narrow exception still under discussion.
 - **The disclosure changes for that episode:** "Song generated with an AI music model; lyrics by (writer)." The model's terms are checked under the GENAI rules (commercial use, no artist named, never "in the style of").
 - **The third:** if the model's last cue has sounded A♮ (PROPOSED in OST-BIBLE §1.8), the song may live in F major. If the finale ends with no third, the song keeps the open fifth. The OST owner decides.
 - **The stinger:** KORG 5 ships to total silence **after** the song. Silence is the joke, so it needs the music gone first.
@@ -168,13 +150,13 @@ The showrunner: "some component of the show rendering improve that shows the mod
  o0–29  ROOM · the pull-back          o33–239  INSERT · the log                     o240–299  ROOM · log out
 ┌──────────────────────────────┐    ┌────────────────────────────────────────┐    ┌──────────────────────────────┐
 │ ▒▒▒▒▒▒▒▒▒▒▒▒        ( )      │    │ > session closed  ep1.0_research_prev… │    │                              │
-│ ▒ last frame ▒      Orb      │    │   created by ........ (creator)        │    │        ▮  cursor, on the beat│
-│ ▒ on his     ▒               │    │   written ........... (creator), w/ AI │    │   (the screen asleep)        │
-│ ▒ monitor    ▒   Mas, 3/4    │    │   picture · music ... rendered in code │    │  Mas · the Orb · rack LEDs   │
-│ ▒▒▒▒▒▒▒▒▒▒▒▒     at the desk │    │   voices ............ synthetic · none │    │  the room one step down      │
-│ ═══════ desk ═══════  glass  │    │   ai tools .......... see the notice   │    │                              │
-│                              │    │▓A parody. Events dramatized, scenes…  ▓│    │                              │
-│                              │    │▓Full notice and sources: in the desc. ▓│    │                              │
+│ ▒ last frame ▒      Orb      │    │   by Opus 5.5                          │    │        ▮  cursor, on the beat│
+│ ▒ on his     ▒               │    │                                        │    │   (the screen asleep)        │
+│ ▒ monitor    ▒   Mas, 3/4    │    │                                        │    │  Mas · the Orb · rack LEDs   │
+│ ▒▒▒▒▒▒▒▒▒▒▒▒     at the desk │    │                                        │    │  the room one step down      │
+│ ═══════ desk ═══════  glass  │    │                                        │    │                              │
+│                              │    │                                        │    │                              │
+│                              │    │                                        │    │                              │
 └──────────────────────────────┘    └────────────────────────────────────────┘    └──────────────────────────────┘
 ```
 
@@ -235,13 +217,13 @@ The showrunner: "some component of the show rendering improve that shows the mod
  o0–29  the Orb wakes                 o60–119  the toast fills                  o120–179  the verdict
 ┌──────────────────────────────┐    ┌──────────────────────────────┐    ┌──────────────────────────────┐
 │                         ◐    │    │ scan: ep1.0_research_prev…   │    │ scan: ep1.0_research_prev…   │
-│                        Orb   │    │ made by (creator), in code   │    │ made by (creator), in code   │
-│                   (iris half │    │ voices: synthetic · none …   │    │ voices: synthetic · none …   │
-│                    open)     │    │ ai tools: used · see notice  │  ◉ │ ai tools: used · see notice  │ ◉
+│                        Orb   │    │ by Opus 5.5                  │    │ by Opus 5.5                  │
+│                   (iris half │    │                              │    │                              │
+│                    open)     │    │                              │  ◉ │                              │ ◉
 │                              │    │         ╲ scan cone ╱        │    │ viewer: verified: human      │
 │══════════ the band ══════════│    │══════════ the band ══════════│    │══════════ the band ══════════│
-│ A parody. Events dramatized… │    │ A parody. Events dramatized… │    │ A parody. Events dramatized… │
-│ Full notice and sources: …   │    │ Full notice and sources: …   │    │ Full notice and sources: …   │
+│                              │    │                              │    │                              │
+│                              │    │                              │    │                              │
 └──────────────────────────────┘    └──────────────────────────────┘    └──────────────────────────────┘
 ```
 
@@ -250,7 +232,7 @@ The showrunner: "some component of the show rendering improve that shows the mod
 | **1.1 · o0–14** | Cut to black on the downbeat. **The band lights** (the bottom 480×67 UI band, BASE) with the terms line and the pointer, held to the end. The Orb, close, at frame-right (the orb rig at ≈ 28–32 px radius), steps up from black in 3 palette steps. Its catch-light glints (1 frame, 2 px: the title's glint). | The drone, F1+C2. Felt F4 on 1.1. |
 | **1.2 · o15–19** | The iris swivels to the lens in 3 drawings. | The servo, a tuned chip whirr on C6 (SFX). |
 | **1.3 · o30–54** | The scan fan, a thin cyan cone, opens and sweeps left to right toward us. **[GLYPH-MASKED] inside the cone only:** the credits appear as tokens where the toast will be, and settle into type as the cone passes. Black outside the cone. | The scan "shhk" (SFX, `orb_scan_sweep`). No music under the scan. |
-| **2.1–2.4 · o60–119** | **The toast** (BASE UI panel, lowercase mono) stacks one line per beat, straight: `scan: ep1.0_research_preview.md` (2.1) · `made by (creator), rendered in code` (2.2) · `voices: synthetic · none cloned` (2.3) · `ai tools: used throughout · see notice` (2.4). | **Bar 2: the knee whole, straight** (it's the Orb's frame), in the episode's colour with chip; one line lands on each pair of eighths, and the leap (G A♭ C F) lands under lines 3–4. |
+| **2.1–2.4 · o60–119** | **The toast** (BASE UI panel, lowercase mono) stacks one line per beat, straight: `scan: ep1.0_research_preview.md` (2.1) · `by Opus 5.5` (2.2) · `voices: synthetic · none cloned` (2.3, optional) · `ai tools: used throughout` (2.4, optional). | **Bar 2: the knee whole, straight** (it's the Orb's frame), in the episode's colour with chip; one line lands on each pair of eighths, and the leap (G A♭ C F) lands under lines 3–4. |
 | **3.1 · o120** | **The verdict** pops as the toast's last line: `viewer: verified: human`. | The Orb's chime (C7, 80 ms, SFX). |
 | **3.2 · o135** | Hold. | **The score's verdict one beat after the chime**, never with it (OST §2.4): F5 → C6 on vibes and glass, let ring. It's the outro's final chord, the open fifth. |
 | **3.3–3.4 · o150–179** | The iris relaxes to idle (3 drawings, o150–154). The catch-light glints at o165. Cut to black at o179. | The fifth rings into the black. |
@@ -300,9 +282,9 @@ The showrunner: "some component of the show rendering improve that shows the mod
 │ ║    ║  │TO FIRE MAS:   │   │    │ ║    ║  │TO FIRE MAS:   │  ✋ │    │ ║    ║  │TO FIRE MAS:   │   │
 │         ┌─DIRECTORY──────┐   │    │         ┌─DIRECTORY──────┐   │    │         ┌─DIRECTORY──────┐   │
 │         │EP1.0 ... CLOSED│   │    │         │EP1.0 ... CLOSED│   │    │  (house light one step down) │
-│  [0 0 0]│CREATED BY ..(.)│   │    │  [0 0 0]│CREATED BY ..(.)│   │    │  [0 0 0]│CREATED BY ..(.)│   │
+│  [0 0 0]│BY OPUS 5.5     │   │    │  [0 0 0]│BY OPUS 5.5     │   │    │  [0 0 0]│BY OPUS 5.5     │   │
 │══════════ the band ══════════│    │══════════ the band ══════════│    │══════════ the band ══════════│
-│ A parody. Events dramatized… │    │ A parody. Events dramatized… │    │ A parody. Events dramatized… │
+│                              │    │                              │    │                              │
 └──────────────────────────────┘    └──────────────────────────────┘    └──────────────────────────────┘
 ```
 
@@ -310,13 +292,9 @@ The showrunner: "some component of the show rendering improve that shows the mod
 ```
 DIRECTORY
 EP1.0 RESEARCH_PREVIEW.MD ......... CLOSED
-CREATED BY ...................... (CREATOR)
-WRITTEN ............... (CREATOR), WITH AI
-PICTURE · MUSIC ........ RENDERED IN CODE
-VOICES ........ SYNTHETIC · NONE CLONED
-AI TOOLS .................... SEE NOTICE
+BY OPUS 5.5
 ```
-Letter boards are all caps, so the directory is too. **The terms line stays in the band** in sentence case (rule 3 of §1.1: it's never on a NopeAI surface).
+Letter boards are all caps, so the directory is too. Optional rows, the showrunner's call (§1.1): `PICTURE · MUSIC ... RENDERED IN CODE`, `VOICES ... SYNTHETIC · NONE CLONED`, `AI TOOLS ... USED THROUGHOUT`. *(Until 2026-09-27 the terms line sat in the band, in sentence case, never on a NopeAI surface.)*
 
 | Bar.beat · frames | Picture | Sound |
 |---|---|---|
@@ -363,7 +341,7 @@ Letter boards are all caps, so the directory is too. **The terms line stays in t
  o0–59  the thread lifts           o60–179  the flat line (4 plates)          o180–299  the leap              o300–359  f0
 ┌──────────────────────────┐    ┌────────────────────────────────────┐    ┌──────────────────────┐    ┌──────────────────┐
 │ ░░ last frame, dithering ░│    │ · · · · · · · · · · · · · · · · · ·│    │              ┌▮┐ ╱   │    │                  │
-│ ░░ to black behind ░░░░░░ │    │ ┌MR. MAS┐ ┌created┐ ┌voices┐ ┌music┐│    │        ┌AI┐ ╱       │    │                  │
+│ ░░ to black behind ░░░░░░ │    │ ┌MR. MAS┐ ┌by Opus 5.5┐ ┌voices?┐   │    │        ┌AI┐ ╱       │    │                  │
 │ ░░ the line ░░░░░░░░░░░░░ │    │ ════════════════●═══════════════════│    │   ┌pix┐ ╱ ┌src┐      │    │     ▮  (298,124) │
 │ ═══════════════════════   │    │          "you are here"             │    │ ═════╱               │    │  the intro's f0  │
 │══════════ the band ═══════│    │══════════ the band ═════════════════│    │═══ the band ═════════│    │                  │
@@ -373,8 +351,8 @@ Letter boards are all caps, so the directory is too. **The terms line stays in t
 | Bar.beat · frames | Picture | Sound |
 |---|---|---|
 | **1.1–1.4 · o0–59** | The episode's last frame, held. A 1-px cyan thread (#3FE6FF) lifts out of it along its lower third, and the frame steps to black behind it in a 4-step Bayer fade (o15–44). Only the thread stays in colour (the curve never freezes). The band comes up at o30. | The button's tail; the drone; a harp harmonic on F5 as the thread lifts. |
-| **2.1–3.4 · o60–179** | **The flat line.** The chart's axes and grid stay visible, so it reads as a chart, never a monitor. The camera scrolls right in whole pixels along the thread over a faint 1-px chart grid (the cold open's chart). On the four flat notes (2.1, 2.3, 3.1, 3.3) four plates pop up onto the line in 3 whole-pixel drawings with a 1-px overshoot (the tower-pop grammar): `MR. MAS · ep1.0_research_preview.md` · `created by (creator)` · `voices · synthetic, none cloned` · `music · original score, in code`. The `you are here` dot sits on the line at this episode's step. | **Bars 2–3: the flat line in half-note steps** (F on 2.1, 2.3, 3.1, 3.3), played short (felt staccato and pizzicato), each F in a different register and chip duty. **The drone drops out at 2.1:** the flat thread is never under a held tone (intro rule 9). The Water Line's harmony as short comps, never sustained: Fm(add9) → D♭maj7. Brushes, swung. |
-| **4.1–5.4 · o180–299** | **The leap.** Past the knee the thread bends up; the camera cranes up 1 px every 3 frames. Plates on the leap's notes (4.1, 4.3, 5.1, 5.3): `picture · pixel art, in code` (G) · `ai tools · used throughout, see notice` (A♭) · `written · (creator), with AI` (C) · and on F, **the eighth plate: an empty window with a blinking cursor.** | **Bars 4–5: the leap in half notes** (G, A♭, C, F), chip an octave up, strings in. B♭m9 → C7sus(♭9). On 5.3 the F lands on the title's quartal stack, with no third. No riser, no snare roll: it isn't the title again. |
+| **2.1–3.4 · o60–179** | **The flat line.** The chart's axes and grid stay visible, so it reads as a chart, never a monitor. The camera scrolls right in whole pixels along the thread over a faint 1-px chart grid (the cold open's chart). On the four flat notes (2.1, 2.3, 3.1, 3.3) four plates pop up onto the line in 3 whole-pixel drawings with a 1-px overshoot (the tower-pop grammar): `MR. MAS · ep1.0_research_preview.md` · `by Opus 5.5` · `voices · synthetic, none cloned` (optional) · `music · original score, in code` (optional). The `you are here` dot sits on the line at this episode's step. | **Bars 2–3: the flat line in half-note steps** (F on 2.1, 2.3, 3.1, 3.3), played short (felt staccato and pizzicato), each F in a different register and chip duty. **The drone drops out at 2.1:** the flat thread is never under a held tone (intro rule 9). The Water Line's harmony as short comps, never sustained: Fm(add9) → D♭maj7. Brushes, swung. |
+| **4.1–5.4 · o180–299** | **The leap.** Past the knee the thread bends up; the camera cranes up 1 px every 3 frames. Plates on the leap's notes (4.1, 4.3, 5.1, 5.3): `picture · pixel art, in code` (G, optional) · `ai tools · used throughout` (A♭, optional) · `written · (creator), with AI` (C; replaced by `by Opus 5.5` on the flat line, 2026-09-27) · and on F, **the eighth plate: an empty window with a blinking cursor.** | **Bars 4–5: the leap in half notes** (G, A♭, C, F), chip an octave up, strings in. B♭m9 → C7sus(♭9). On 5.3 the F lands on the title's quartal stack, with no third. No riser, no snare roll: it isn't the title again. |
 | **6.1 · o300** | The thread goes vertical and runs up into the eighth plate's cursor. **Hard cut on the downbeat to the cold open's f0 frame:** a black monitor and the 4×8 cyan block cursor at (298, 124), blinking on the beat. The band goes out on the cut, after 11.25 s up. | The stack releases. **Felt F5 and the 1-frame chip glint on F6**, the cold open's f0 sound. |
 | **6.1–6.4 · o300–359** | The cursor blinks on each beat (on for 8 frames, off for 7). Out on o359. This frame is the next intro's f0. | The drone holds, out by o359. |
 
@@ -421,14 +399,14 @@ Letter boards are all caps, so the directory is too. **The terms line stays in t
 │ ep1.0_research_preview.md                        [x] │    │                  │    │                          │
 │ …                                                    │    │ ════════════════ │    │        ▮  (298,124)      │
 │ ---                                                  │    │   (rows collapse │    │                          │
-│ created_by: (creator)                                │    │    to a line)    │    │                          │
-│ written: (creator), with AI                          │    │                  │    │                          │
-│ picture_music: rendered in code                      │    │        ·         │    │                          │
-│ voices: synthetic, designed from text · none cloned  │    │                  │    │                          │
-│ ai_tools: used throughout · listed in the notice     │    │                  │    │                          │
+│ by: Opus 5.5                                         │    │    to a line)    │    │                          │
 │ ---                                                  │    │                  │    │                          │
-│▓A parody. Events dramatized, scenes invented. No one…▓│    │▓A parody. Events…▓│    │ A parody. Events drama…  │
-│▓Full notice and sources: in the description.         ▓│    │▓Full notice and… ▓│    │ Full notice and sources… │
+│                                                      │    │        ·         │    │                          │
+│                                                      │    │                  │    │                          │
+│                                                      │    │                  │    │                          │
+│                                                      │    │                  │    │                          │
+│                                                      │    │                  │    │                          │
+│                                                      │    │                  │    │                          │
 └──────────────────────────────────────────────────────┘    └──────────────────┘    └──────────────────────────┘
 ```
 
@@ -590,13 +568,14 @@ All five are under half the 30 s intro and inside 6–15 s. The terms line is on
    - C to three big lines;
    - E to shorter values.
 
-   D kept all six fields by staggering them across 9 s. **Needs the showrunner and legal:** a short on-screen credit set, with the long forms in the description beside the full notice. This file proposes A's: `created by (creator)` · `made in code, with AI tools` · `voices synthetic, none cloned`.
+   D kept all six fields by staggering them across 9 s. **Needs the showrunner and legal:** a short on-screen credit set, with the long forms in the description beside the full notice. This file proposed A's: `created by (creator)` · `made in code, with AI tools` · `voices synthetic, none cloned`. *(Settled 2026-09-27: the title and filename plus `by Opus 5.5`; other rows optional, §1.1.)*
 2. **Nobody reads everything once, and that's acceptable only if the terms are read.**
    - The terms plus the pointer are 131 characters, about 8.2 s at 16 cps.
    - Only D (9.17 s) and B's Ep1 (10 s) hold them that long. E's Ep1 (8.17 s) is at the line. C (7.67 s) and the 7.5 s plain weeks of B and E fall short.
    - A paces them as two separate beats, both long enough on their own.
    - The ≥ 5 s rule on the terms line alone passes everywhere.
    - Holding the band 0.5–0.7 s longer would fix C and a plain week of B or E.
+   - *(2026-09-27: moot. With no terms or pointer on screen, their read time no longer sets any length.)*
 3. **The loop to the intro is weaker than planned.**
    - Only A closes on the intro's loop cursor.
    - D's caret is off-axis.
@@ -610,7 +589,7 @@ All five are under half the 30 s intro and inside 6–15 s. The terms line is on
 6. **Still open in every one:**
    - Nobody has heard any mix.
    - The stand-ins aren't Ep1's real button.
-   - `(creator)` is a placeholder.
+   - ~~`(creator)` is a placeholder.~~ The credit is `by Opus 5.5` (2026-09-27).
    - The Ep10 rungs are stills, not motion.
    - The costs in §7 are still estimates; the mock-ups weren't timed.
 
@@ -624,7 +603,7 @@ The build weakened two of the reasons below:
 - **The loop (reason 7):** it's now sound only.
 - **The weekly variation (reason 2):** it's still unproven in motion.
 
-The build also showed a fix E needs before it's final: its credits block is too long to read. Use the short credit set (§7a, point 1) and hold the band to about 8.2 s.
+The build also showed a fix E needs before it's final: its credits block is too long to read. Use the short credit set (§7a, point 1) and hold the band to about 8.2 s. *(2026-09-27: the short set is now §1.1's, and the 8.2 s hold was for the terms and pointer, which are cut.)*
 
 **For warmth at the same length:** B is the candidate, but its plain week has the tightest reading time of the five and its style notes are open. Grafting B's verdict onto E from Ep6 (≈ 8.75 s) is still worth trying.
 
@@ -672,7 +651,7 @@ The deciding test is still the showrunner's own viewing of `outro-compare.mp4`. 
   - Use the dark-room MEDIUM from the cold open (`src/dev/mcoldopen/medium.ts` `drawMedium`, cold-open f56) as "the last frame".
   - Or grab the last frame of `out/ep01/act4/animatic/act4-animatic-v4-picture.mp4`, reduced to 480×270 and snapped to the master palette.
   - Run 1 s of the stand-in before the outro in the mock-up, so the cut in reads.
-- **Text:** exactly §1.1. Use `(creator)` as the placeholder. Draw `·` locally as a 1-px dot. Put a small corner slug `LEGAL TEXT: DRAFT` on the lookdev renders only.
+- **Text:** exactly §1.1 as it stood then. Use `(creator)` as the placeholder (now `by Opus 5.5`, 2026-09-27). Draw `·` locally as a 1-px dot. Put a small corner slug `LEGAL TEXT: DRAFT` on the lookdev renders only.
 - **Music:** a temp in Ep1's colour (felt + brushes trio + chip), made with the OST engine from a `track.py` in scratch, to the exact frame count; the fallback is the title cut (§1.2).
 - **Deliverables per proposal:**
   - `outro-<id>-ep1-1080p.mp4` (the stand-in + outro + the Ep1 moth stinger, with temp music)
@@ -694,13 +673,13 @@ The deciding test is still the showrunner's own viewing of `outro-compare.mp4`. 
 
 **For the showrunner:**
 1. Which proposal, or which graft (E + B's verdict is the one this file suggests)?
-2. The credit line: whose name, and in what form (`created by …`)?
+2. ~~The credit line: whose name, and in what form (`created by …`)?~~ **Answered 2026-09-27:** `by Opus 5.5` (SHOWRUNNER-NOTES note 4).
 3. The notice's home: a show page for the notice and the receipts, or the description only for now?
 4. The stinger: is the moth, settling beside the terms line, still the Ep1 stinger in the new outro?
 5. Ep12: extend (this file's proposal) or replace?
 
 **For legal (pending review):**
-1. Does a one-line on-screen disclaimer, plus the full notice in the description and metadata, cover what the 90-word card did? Is the 20 s legal-card alternate needed for any platform?
+1. The showrunner has ruled out any notice on screen (2026-09-27), including the one-line disclaimer and the 20 s legal-card alternate. Does a notice in the description alone cover what the 90-word card did?
 2. Must the AI disclosure name the tools on screen, or is "listed in the notice" enough?
 3. Check the platform's synthetic-media label and EU AI Act Art. 50 (in force from Aug 2026, with lighter duties for artistic and satirical work) before distribution ([GENAI plan §6](GENAI-UPGRADE-PLAN.md)).
 4. Proposal C: are the real credits on a parody company's in-world directory a problem?

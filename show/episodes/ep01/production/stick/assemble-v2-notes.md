@@ -272,6 +272,7 @@ The showrunner watches first and marks the drag. The numbers point here:
 - **The 2 s card** (script: "FILENAME + DISCLAIMER CARD — 2 s") carries the filename plus a 13-word disclaimer.
 - **Read time.** The text is fully drawn about 0.5 s in, which leaves about 1.5 s to read 13 words. That's roughly 9 words a second, against a comfortable 3–4.
 - **Proposal:** 4 s (`"durs": {"card.01": 4}` on the card chapter). It's the showrunner's call, because it adds 2 s. Not made.
+- *(2026-09-27: moot. The disclaimer is cut ([SHOWRUNNER-NOTES](../../../../production/SHOWRUNNER-NOTES.md) note 3), so the card is the filename alone, 2 s.)*
 
 ---
 
@@ -284,7 +285,7 @@ The showrunner watches first and marks the drag. The numbers point here:
    - It's a small change to shared code. I left it to the reel's owner.
 2. **Acts One and Two have no SFX stem.** The cold open, Act Three and the tag built their own (`*_bed.py`). So Act One and Two's designed sounds aren't heard: Sydney's tick, the THUD, the pen's scratch, the rooftop bell, sc 14's anchor murmur. Each leaves a 6–11 s stretch of bare room (§4.4).
    - **Proposal:** an `act1_bed.py` and `act2_bed.py` in the pattern of `audio/reel/ep01-act3-v2/act3_bed.py`, played as each act's bed with `lufs: null`.
-3. **Intro → card → sc 5** drops −25.6 LU into 8.9 s of room before the first line. That may read as the "random pause of silence" the flow notes warn about (SHOWRUNNER-NOTES 13).
+3. **Intro → card → sc 5** drops −25.6 LU into 8.9 s of room before the first line. That may read as the "random pause of silence" the flow notes warn about (SHOWRUNNER-NOTES 17).
    - Options: a longer intro `tail`, or the bullpen's own sound (keys, the build's fan) under the card and sc 5's opening once Act One has a stem.
 4. **Act Four → tag** has about 1 s of near-black (Act Four's own ending). It's probably right for an act-out. An ear should confirm.
 5. **Carried over, unchanged:**

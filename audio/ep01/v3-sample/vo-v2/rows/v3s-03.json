@@ -1,0 +1,239 @@
+{
+ "id": "v3s-03",
+ "scene": "5",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "alyi asks that about everything we build. he means it every time.",
+ "spoken_as": "alyi asks that about everything we build. he means it every time.",
+ "delivery": null,
+ "tag": "[INVENTED · VO · v3 sample, inner voice]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "vo",
+ "kind": "vo",
+ "side": "none",
+ "pov": null,
+ "shot": null,
+ "shot_id": null,
+ "cue": null,
+ "lip_sync": false,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v3-sample/vo-v2/wav/v3s-03.wav",
+ "mp3": null,
+ "duration_s": 6.125,
+ "frames_24": 147,
+ "voiced_span_s": 4.94,
+ "pace": {
+  "words": 12,
+  "wpm": 145.7,
+  "speed": 0.87,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.87,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.4,
+    4.0
+   ],
+   "turn_wpm_guide": [
+    120,
+    140
+   ],
+   "intent": null
+  },
+  "measured": {
+   "wpm": 145.7,
+   "articulation_sps": 4.49,
+   "syllables": 20,
+   "span_s": 4.94,
+   "pauses_s": [
+    0.06,
+    0.06,
+    0.49
+   ]
+  },
+  "longest_internal_gap_s": 0.49,
+  "audible_in_s": 0.52,
+  "audible_out_s": 5.46
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.870",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 60 Hz",
+  "pitch 0",
+  "low shelf +2.5 dB @150 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak -1 dB @3200 Hz Q0.8",
+  "high shelf -2.5 dB @7500 Hz",
+  "comp 2.5:1 @-26 dB (15/160 ms)",
+  "Kokoro speed 0.870 (the plan speed; mas-manalt-vo band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [],
+ "words": [
+  {
+   "w": "alyi",
+   "t0": 0.64,
+   "t1": 1.065,
+   "f0": 15,
+   "f1": 26,
+   "ph": "ˈælɪi"
+  },
+  {
+   "w": "asks",
+   "t0": 1.065,
+   "t1": 1.515,
+   "f0": 26,
+   "f1": 36,
+   "ph": "ˈæsks"
+  },
+  {
+   "w": "that",
+   "t0": 1.515,
+   "t1": 1.765,
+   "f0": 36,
+   "f1": 42,
+   "ph": "ðæt"
+  },
+  {
+   "w": "about",
+   "t0": 1.765,
+   "t1": 2.102,
+   "f0": 42,
+   "f1": 50,
+   "ph": "əbˈWt"
+  },
+  {
+   "w": "everything",
+   "t0": 2.102,
+   "t1": 2.64,
+   "f0": 50,
+   "f1": 63,
+   "ph": "ˈɛvəɹiθˌɪŋ"
+  },
+  {
+   "w": "we",
+   "t0": 2.64,
+   "t1": 2.815,
+   "f0": 63,
+   "f1": 68,
+   "ph": "wi"
+  },
+  {
+   "w": "build",
+   "t0": 2.815,
+   "t1": 3.41,
+   "f0": 68,
+   "f1": 82,
+   "ph": "bˈɪld"
+  },
+  {
+   "w": "he",
+   "t0": 3.828,
+   "t1": 3.99,
+   "f0": 92,
+   "f1": 96,
+   "ph": "hi"
+  },
+  {
+   "w": "means",
+   "t0": 3.99,
+   "t1": 4.365,
+   "f0": 96,
+   "f1": 105,
+   "ph": "mˈinz"
+  },
+  {
+   "w": "it",
+   "t0": 4.365,
+   "t1": 4.528,
+   "f0": 105,
+   "f1": 109,
+   "ph": "ɪt"
+  },
+  {
+   "w": "every",
+   "t0": 4.528,
+   "t1": 4.878,
+   "f0": 109,
+   "f1": 117,
+   "ph": "ˈɛvəɹi"
+  },
+  {
+   "w": "time",
+   "t0": 4.878,
+   "t1": 5.48,
+   "f0": 117,
+   "f1": 132,
+   "ph": "tˈIm"
+  }
+ ],
+ "qa": {
+  "lufs_i": -18.0,
+  "target_lufs": -18.0,
+  "true_peak_dbtp": -4.86,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.52,
+  "median_f0_hz": 114.2,
+  "f0_range_st": 11.7,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Ali asks that about everything we build. He means it every time.",
+  "cer": 0.019,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.216,
+  "align_median_s": 0.069,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.52,
+  "speech_tail_s": 0.385,
+  "rise_ms": 125.0,
+  "decay_ms": 235.0,
+  "decay_to_60_s": 0.29
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "5aade2e807ee8619",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 3.99,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 4
+  },
+  "asr": {
+   "packed_with": 1,
+   "share_s": 1.2,
+   "rechecked_alone": false
+  }
+ }
+}

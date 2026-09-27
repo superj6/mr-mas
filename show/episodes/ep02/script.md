@@ -12,7 +12,7 @@
 | **Draft** | Staff draft 5.4 (dialogue pass 5: the naturalness, newcomer-and-insider and facts critiques of 5.3, finished after an interrupted run) · 2026-09-26 · not locked. Drafts 4–5.3 are superseded; the revision logs are at the end. The conversation pass's log quotes every draft-4 line it changed, the 5.1 log every draft-5 line, the [scene-craft log](#revision-log-scene-craft-pass-2026-09-26) every draft-5.1 line, the [final pass's log](#revision-log-final-pass-2026-09-26-draft-53) every draft-5.2 line, and the [dialogue pass 5 log](#revision-log-dialogue-pass-5-2026-09-26) every draft-5.3 line, scene by scene, with what was declined and why. **Start at the last one** if you're picking this up |
 
 **How to read this draft**
-- **Quotation marks mean real.** Every quoted line carries its tag ([P] [V] [H], or [K]† = re-verify before lock, shown on screen only with `(REPORTED)` or `RECONSTRUCTED`). **Unquoted dialogue, signs and props are invented.** Since draft 5, **every invented voiced line is marked `[INVENTED]`**; where an invented lead-in wraps a real quote, the tag names the words that are ours (`[INVENTED: "…"]`), as in Ep1's Act Four.
+- **Quotation marks mean real.** Every quoted line carries its tag ([P] [V] [H], or [K]† = re-verify before lock, and not stated on screen as fact until upgraded; since 2026-09-27 no `(REPORTED)` or `RECONSTRUCTED` label goes on screen, [SHOWRUNNER-NOTES](../../production/SHOWRUNNER-NOTES.md) note 3). **Unquoted dialogue, signs and props are invented.** Since draft 5, **every invented voiced line is marked `[INVENTED]`**; where an invented lead-in wraps a real quote, the tag names the words that are ours (`[INVENTED: "…"]`), as in Ep1's Act Four.
 - **Conversations play out (draft 5), and scenes play as scenes (draft 5.2).** Each talk scene has someone who wants something from someone, an obstacle, a turn and a cost, played through several beats rather than delivered in its fewest lines (the scene-craft log has the shape of each). People talk in complete thoughts and answer each other, sideways but in full; the one pressing Mas talks most, and his short lowercase lines land against them. Overlaps and cut-offs are rare and motivated: two in the episode, each after the thought has landed and each with a cause the audience can hear. Every new voice has a lead-in and a listener. Openers: "Welcome" is Tasya's; "Hi" is CHATGTP's (and the voice panel's samples); "Thank you." answers a congratulation once, Bukaj's to Mas (sc 14; draft 5.4 gives Mas's answer to Radnus new words, since "thank you." to a Radnus congratulation is Ep1 sc 13's exchange); nobody opens with "Okay". **Draft 5.4:** no line opens on a name or a "So" as its own sentence ("Come in, Ekiel, sit down.", "So, your seat's…"), because a stock voice stops dead on the full stop and starts the rest cold; and no line repeats Ep1 or Ep3 word for word (tone guide R10).
 - **Shots** use the ladder in [pov-and-framing §4.7](../../bible/pov-and-framing.md#47-shot-variety-2026-09-25): `[W]` wide · `[M]` medium · `[2S]` two-shot · `[OTS]` over-the-shoulder · `[MCU]` frameless close-up (the default close shot) · `[CU]` Mas only · `[ECU]` hands, glass, props, the Orb's iris · `[POV]` a screen full-bleed, through his eyes · `[SCR]` a screen with its bezel · `[HIGH]`/`[LOW]` angle plates · `[GFX]` THE PLAN and cards. **Boxed portrait windows appear only in-world** (a TV, a phone, a monitor tile). **A conversation is covered by one base setup** (a two-shot, an over-the-shoulder, a locked wide or the split), with cuts on its turns (new information, a reaction that matters, a new geography), not on every speaker. **Draft 5.2's conventions:** a base setup is marked with its cut-ins listed, as "(base setup…; cut-ins: …)", or "(no cut-ins)"; the word "held" means the frame really does hold. Every location header carries an `AXIS:` line: who is screen-left, and where the doors, screens and wings are. Mas keeps the left third (pov-and-framing §4.3 rule 8). A meter the audience reads by comparison (XEL's mic, Rima's spotlight) plays in one locked drawing.
 - **Timing** is written for story, not quotas. Beats (0.625 s) and bars (2.5 s) are used for holds, cards and set-piece phrases; everything else cuts on the turn. Text holds long enough to read (about 0.25 s + 0.05 s a character, generous for story text). Talk runs at each character's own pace, brisk but never sped up; the picture is cut to the takes.
@@ -72,7 +72,7 @@ The mammoth wanders off screen-left toward the elevators. *Egg: its footprints s
 
 `[SCR]` The lobby TV, bezel in frame: YRREP's soundstage, every crane frozen mid-lift, a whole wall hanging in the air. PLATE: `YRREP · SAW AROS.` YRREP looks up at the wall, then down at his checkbook, and closes it.
 
-`RAIL: FEB 22 · $800M EXPANSION ON HOLD (REPORTED)` [H]
+`RAIL: FEB 22 · $800M EXPANSION ON HOLD` [H]
 
 **SELBEEP** *(O.S., glancing up at the TV; pleased)*\
 Our first review. `[INVENTED · a sideways brag about the product's reception; it claims nothing about YRREP's reasons, which the plate and the rail carry. For the guardrails owner (open question #26); fallback: the TV beat plays silent, as in draft 5.1]`
@@ -114,7 +114,7 @@ The five spoiler-safe changes only, nothing from this episode's staging (product
 4. **Couch gag:** Mas pockets `ESC`.
 5. **Roll call:** RIMA (NopeAI fill) · THE WHALE unchanged · RUMPT a silhouette · the cursor alone.
 
-**FILENAME + DISCLAIMER CARD** [0:02]: `ep1.1_her.wav` · *A parody. Events dramatized; scenes invented. Names changed to protect the valuations.*
+**FILENAME CARD** [0:02]: `ep1.1_her.wav`, alone *(2026-09-27: the disclaimer line is cut; SHOWRUNNER-NOTES note 3)*
 
 ---
 
@@ -196,7 +196,7 @@ CAPTION (inside the ghost): `"…IT WILL MAKE SENSE TO START BEING LESS OPEN."` 
 A second ghost unfurls beneath it: `RE:` from a 2016 GHOST-NOLE.
 
 **GHOST-NOLE**\
-"Yup" [K]† · `RECONSTRUCTED` (the source may carry no period; confirm)
+"Yup" [K]† (the source may carry no period; confirm; no `RECONSTRUCTED` label on screen since 2026-09-27)
 
 `[LOW·desk]` **MAS** *(to the table, as if calling a vote)*\
 one knock if we promised a nonprofit. `[INVENTED · draft 5.1: the question says what the suit claims, so a newcomer hears it before the three knocks answer it, and Ep3's candle can pay it off]`
@@ -245,7 +245,7 @@ i just ask the questions.
 
 `[W]` (the table) The planchette slides again. Another ghost lumbers up: a COW made of chevrons, with a charging cable for a tail; the plug on its end is stamped `ALSET`. It moos, reverbed.
 
-CAPTION: `2018 · FOLD IT INTO HIS CAR COMPANY "AS ITS CASH COW"? NOLE: "EXACTLY RIGHT"` [K] · `RECONSTRUCTED` until pulled from the Mar 5 post · the forwarded email's author is not named · 73 characters, read over the cow's chewing (≈ 4 s; the scene keeps moving under it)
+CAPTION: `2018 · FOLD IT INTO HIS CAR COMPANY "AS ITS CASH COW"? NOLE: "EXACTLY RIGHT"` [K] · verify against the Mar 5 post before lock (the `RECONSTRUCTED` label is off, 2026-09-27) · the forwarded email's author is not named · 73 characters, read over the cow's chewing (≈ 4 s; the scene keeps moving under it)
 
 `[OTS]` Nole, at the cow.
 
@@ -257,10 +257,10 @@ what's the context? `[INVENTED]`
 
 Nole doesn't answer him. The cow chews. A desk lamp clicks on beside Nole: his post lamp, which comes on whenever he posts, whatever the hour. He types furiously. His post leaves the phone and rises at once as a brand-new ghost, `NOLE · JUST NOW`, made entirely of `!`. It floats up to join the others. *(His answer goes to the internet instead of the room, and it has no words in it, so no invented line disputes the record. Draft 5.3 cuts the Orb's pun toast here, `verified: ghost` → `verified: post`: it was a third text beat inside about 8 s, after the cow's caption and the `!` ghost, and the episode's likeliest corny beat. The toasts are now 3.)*
 
-`[W]` (the table) The planchette slides one last time. A third ghost, its header `DEC 26, 2018 · RECONSTRUCTED`. GHOST-NOLE, in a 2018 hoodie, leans across the table.
+`[W]` (the table) The planchette slides one last time. A third ghost, its header `DEC 26, 2018`. GHOST-NOLE, in a 2018 hoodie, leans across the table.
 
 **GHOST-NOLE**\
-"This needs billions per year immediately or forget it." [K]† · `RECONSTRUCTED` on the ghost's header [early.md · DEC 26, 2018 · untiered in the research, so the facts pass treats it as [K]† until the Mar 5 post is opened; then [P] and the label comes off]
+"This needs billions per year immediately or forget it." [K]† [early.md · DEC 26, 2018 · untiered in the research, so the facts pass treats it as [K]† until the Mar 5 post is opened; then [P]. 2026-09-27: the header's `RECONSTRUCTED` label is off; verify before lock]
 
 `[M]` Nole slaps his phone down on the table, right beside Mas's glass. `[ECU]` The glass with a candle behind it, in one frame: the flame jumps, the water doesn't. `[MCU]` Nole stares at the glass. *(The glass, 2 of 3: a test someone reads.)*
 
@@ -410,7 +410,7 @@ The mic hops to the size of a fire hydrant. Mas leans around it to stay in shot.
 **MAS** *(instantly)*\
 "i did not tweet about that." [P]
 
-`RAIL: FEB 2024 · MAS'S CHIP PLAN: $5–7 TRILLION (REPORTED)` [K]
+`RAIL: FEB 2024 · MAS'S CHIP PLAN: $5–7 TRILLION` [K]
 
 **XEL**\
 Is it… conscious, though? `[INVENTED · the podcast-circuit file's generic host line]`
@@ -695,7 +695,7 @@ You're making me blush. I don't have blood. `[INVENTED]`
 
 ON SCREEN (his post, in its own UI): "her" [K]† · MAY 13, 2024
 
-`RAIL: MAY 13 · (REPORTED)`
+`RAIL: MAY 13`
 
 `[W]` Across the auditorium, phones light up one by one in a wave as the post lands.
 
@@ -849,9 +849,9 @@ UI: `~~Open~~ door`. *Bonk*, the same bonk as the 1993 Cancel. Nothing happens.
 
 UI: `Pivot door`. The door swings on its centre hinge and keeps turning. On its far side, already at work: a maintenance hand in an orange cuff. `[ECU]` A screwdriver backs four screws out of a door plate, one per beat, the rhythm Ep1's hand used on Alyi's board chair. The plate has two lines, the team's name over what it is: `SUPERALIGNMENT` / `SAFETY TEAM`. The band dims on the fourth. *(DOT's hands, inside W2.1's plant; nobody names her.)*
 
-The plate drops into a box stencilled `MISC`, whose shipping label reads `MAY 17 (REPORTED)` [K · facts row 27]. The hand carries it out. `[ECU]` The Orb's iris follows the box. Under it, the old chair's hum swells and rings over the cut.
+The plate drops into a box stencilled `MISC`, whose shipping label reads `MAY 17` [K · facts row 27]. The hand carries it out. `[ECU]` The Orb's iris follows the box. Under it, the old chair's hum swells and rings over the cut.
 
-*(Draft 5.1: the plate's second line tells a newcomer what came off the door, so draft 5's rail, which added only `(REPORTED)`, is gone; the label the [K] tier needs rides the box, an in-world prop. `SUPERALIGNMENT` stays on top for the insider.)*
+*(Draft 5.1: the plate's second line tells a newcomer what came off the door, so draft 5's rail, which added only `(REPORTED)`, is gone; the label the [K] tier needs rides the box, an in-world prop. `SUPERALIGNMENT` stays on top for the insider. 2026-09-27: the box's `(REPORTED)` is off too.)*
 
 ### 15. INT. ALYI'S OFFICE — NIGHT · MAY 17, 2024 · [BASE]
 `⏱ 13:50 → 14:36 (0:46, F2.2 inside) · I · ANCHOR 3 (part 2) · the debrief, played without a spoken word from him (a designed quiet scene: the pass leaves it wordless)`
@@ -905,7 +905,7 @@ where u at? `[INVENTED · typed on TPOOL's screen]`
 
 **Phrase 1.** `[W]` The exit agreement, already unrolling: from under Alyi's door, down the corridor, out through NopeAI's front doors, printed on receipt paper, down the hill and onto the Bay Bridge, one lane at a time (whole-pixel scroll, parallax on three planes). Commuters crawl along all five lanes, reading as they drive. Receipt lines scroll past under the tires: `NON-DISPARAGEMENT` · `IN PERPETUITY` · `CLAUSE 9: THIS RECEIPT DOES NOT EXIST.` *Egg: at the very bottom, a coupon: `SAVE 0% ON YOUR NEXT EXIT`.*
 
-`RAIL: MAY 17 · EXIT PAPERS: STAY QUIET OR LOSE YOUR EQUITY (REPORTED)` [K]
+`RAIL: MAY 17 · EXIT PAPERS: STAY QUIET OR LOSE YOUR EQUITY` [K]
 
 *(Draft 5.2 merges draft 5.1's phrases 1 and 2 into one 4-bar phrase: the receipt and the commuters ran about 20 s with no voice (R18), and the time goes to the talk mid-span.)*
 
@@ -916,7 +916,7 @@ CARD: `THE FORECASTER` / `EX-NOPEAI.` · stat `AT STAKE: ~$2M` [2-TONE FREEZE ·
 `[LOW·desk]` Before either of them speaks, a pen on a bank chain rises out of the receipt and offers itself to THE FORECASTER: the pen large in the foreground, his face above it, Mas beside him. He looks at it and doesn't take it. *(It comes from the receipt, never from Mas's hand.)*
 
 **THE FORECASTER** *(looking at the pen, not taking it; to Mas, conversationally)*\
-Here's where I am. If I sign, I keep what I've vested, and I never say a bad word about the place again. It says in perpetuity. I don't forecast that far. `[INVENTED · the terms follow the reported agreements and the rail's (REPORTED) (facts row 31), and "in perpetuity" is the receipt's own invented print, so no quotation marks; he puts no number on what anyone knew. For the guardrails owner (open question #28)]`
+Here's where I am. If I sign, I keep what I've vested, and I never say a bad word about the place again. It says in perpetuity. I don't forecast that far. `[INVENTED · the terms follow the reported agreements and the rail (facts row 31), and "in perpetuity" is the receipt's own invented print, so no quotation marks; he puts no number on what anyone knew. For the guardrails owner (open question #28)]`
 
 **MAS**\
 take your time. `[INVENTED · a grant that neither pushes him nor stops him; at a real event Mas takes no side and shows no tell (pov-and-framing §3.7). For the guardrails owner (#28); fallback: Mas says nothing, as in draft 5.1]`
@@ -937,7 +937,7 @@ Mas types. In the same frame, the post pops up over the sky in its own UI, one t
 
 ON SCREEN (his post): "vested equity is vested equity, full stop." · *honk* · "this is on me…" · *honk* · "…i did not know this was happening…" · *honk* · "…and i should have." [K]† · MAY 18, 2024
 
-`RAIL: MAY 18 · (REPORTED)`
+`RAIL: MAY 18`
 
 *(Four trims of the same May 18 post; the meaning survives whole. Posts are pop-ups, never speeches.)*
 
@@ -961,7 +961,7 @@ He finds a line on the receipt, reads it, and very carefully takes his hand off 
 
 `[W]` The blimp's running lights click off one by one, and it sags three pixels.
 
-`RAIL, on the sag: MAY 20 · A FAMOUS VOICE OBJECTS (REPORTED)` [K]
+`RAIL, on the sag: MAY 20 · A FAMOUS VOICE OBJECTS` [K]
 
 **Phrase 6, the act-out.** `[POV]` His phone, beaded with rain: the voice menu shows `VOICE 1` to `VOICE 4` as live waveforms, and the fifth slot as a greyed-out `VOICE 5 [PAUSED]`, greyed exactly like the 1993 Cancel, with its sample from backstage (sc 9) still printed under it, greyed too: `Hey.` He taps it. *Bonk.* *(Draft 5.3: the greyed `Hey.` lets a newcomer link this slot to the fifth hello eight minutes back. It claims nothing about which voice the demo used.)* A TPOOL notification slides down over the greyed slot: `ALYI · LOCATION UPDATED`, with sc 15's pin blinking under it.
 
@@ -1150,7 +1150,7 @@ The garden folds back into the phone in three held steps.
 
 ON SCREEN (NOLE's post): `…an unacceptable security violation… stored in a Faraday cage` [K]† (his Jun 10 posts, memory; pull them, then [P])
 
-`RAIL: JUN 10 · (REPORTED)`
+`RAIL: JUN 10`
 
 **NOLE** *(to his staff; the demonstration)*\
 If they go through with it, this is where your phones go. Like this. `[INVENTED · draft 5.1: a threat, not a done ban, as the research has it ("threatens to ban", recent.md:70); the condition, if ELPPA builds NopeAI in, is from memory of the posts, so the facts owner confirms it when the posts are pulled; the cage is his own post, the line is ours]`
@@ -1187,7 +1187,7 @@ DOORMAT: `NO`
 
 `[W]` Mas walks up from frame-left. He never runs. He wipes his feet on the `NO`. THE ORB scans the cube and toasts nothing: it can't verify a door.
 
-The band lights for four seconds. UI: `Use IOU: 20% COMPUTE on door`. The inventory item's tag shows under the sentence line: `PLEDGED JUL 2023 · NEVER DELIVERED (REPORTED)` [V · Fortune, May 21, 2024, on anonymous current and former staff, hence `(REPORTED)`] *(draft 5.4: moved here from sc 14, whose May 15–17 came before the report; the unkept promise is now told once, at the door it was meant for)*. Mas slides the note under the door. The band goes dark.
+The band lights for four seconds. UI: `Use IOU: 20% COMPUTE on door`. The inventory item's tag shows under the sentence line: `PLEDGED JUL 2023 · NEVER DELIVERED` [V · Fortune, May 21, 2024, on anonymous current and former staff; 2026-09-27: the `(REPORTED)` label is off] *(draft 5.4: moved here from sc 14, whose May 15–17 came before the report; the unkept promise is now told once, at the door it was meant for)*. Mas slides the note under the door. The band goes dark.
 
 `[OTS]` (one frame for the reflection and the lock) Over Mas's shoulder onto the door's brass plate. In it, ALYI's reflection faces Mas for exactly one beat. It's the first time all episode he has faced him. On the same shot, inside, a lock turns: the softest click in the show.
 
@@ -1509,7 +1509,7 @@ Live in [open-questions.md](open-questions.md).
 ## Revision log (conversation pass)
 
 **Draft 4 → 5, 2026-09-26, by the Ep2 dialogue writer.** This is the same conversation pass Ep1's Act Four got in its drafts 5.0 and 5.1. It is written to:
-- the showrunner's note on the Act Four v4 animatic: "i said to cut down empty time, but not to cut every dialogue into only a few words per character" ([SHOWRUNNER-NOTES](../../production/SHOWRUNNER-NOTES.md) note 2; the lead measured the same shape in this script)
+- the showrunner's note on the Act Four v4 animatic: "i said to cut down empty time, but not to cut every dialogue into only a few words per character" ([SHOWRUNNER-NOTES](../../production/SHOWRUNNER-NOTES.md) note 11; the lead measured the same shape in this script)
 - [tone-and-dialogue](../../bible/tone-and-dialogue.md) R17–R21 and the rewritten R8
 - [flow-and-continuity §4](../../bible/flow-and-continuity.md#4-dialogue-rhythm) and [dialogue-craft](../../_sources/research/dialogue-craft.md)
 - Ep1's Act Four (draft 5.1), as the model of the voice
@@ -1590,7 +1590,7 @@ The short-line share is still just above the quarter that dialogue-craft flags f
 1. Read the episode aloud at pace, in the voice bands, with a timer. Does it sound like people talking? Is the séance still quick with Nole's longer lines? Are the page's lengths near the takes?
 2. Listen to the takes for question intonation. 27 voiced lines ask a question, 24 of them invented ("Which sentence?", "Is this a séance or a deposition?", "what's the context?", "is it ready?", "What if it freezes?…", "That's the brief one?", "Senator, when does it get a vote?", "What's our biggest expense?", "Does honking count as disparagement?" and others), and a stock voice may not lift them.
 3. Check the three cut-offs in the takes. Each should be recorded complete, with the interrupter in over its last syllable, so none sounds like a render error.
-4. Watch a stick-figure reel with the real takes and a temp bed ([SHOWRUNNER-NOTES](../../production/SHOWRUNNER-NOTES.md) note 1), and get the showrunner's approval before any pixel work.
+4. Watch a stick-figure reel with the real takes and a temp bed ([SHOWRUNNER-NOTES](../../production/SHOWRUNNER-NOTES.md) note 10), and get the showrunner's approval before any pixel work.
 5. Run fresh newcomer and insider reads of the reel. Does the Mar 8 coda, now spoken, still read as "he's back on the board"? Does Ekiel's post carry his exit without his voice?
 
 ### Handoffs (nothing outside script.md and open-questions.md was edited)
@@ -1605,13 +1605,13 @@ The short-line share is still just above the quarter that dialogue-craft flags f
 - **Recording supervisor:** record all 112 voiced lines fresh, by Ep1's v5 method: whole reads, each character's own pace, no time-compression, and the three cut-off lines recorded complete. CHATGTP's harmony still goes through the sung pipeline.
 - **Composer:** PROCEDURE thins to its pedal under Terb's reading. Otherwise the cues only get longer.
 - **Ep1 owner:** sc 9's "is it ready?" turns the "Is it ready?" Gerg asks in Ep1's coda (Act Four 5.1). If Ep1 changes that line, this one still reads as a plain question.
-- **The lead:** resources that would speed this up, per note 1: a human read-aloud of the episode, and a TTS with better question intonation (never a clone).
+- **The lead:** resources that would speed this up, per note 10: a human read-aloud of the episode, and a TTS with better question intonation (never a clone).
 
 ---
 
 ## Revision log (draft 5.1: the naturalness, reads and facts round)
 
-**Draft 5 → 5.1, 2026-09-26, by the Ep2 dialogue writer (second pass).** Applies every Ep2 finding in three critiques of draft 5: the dialogue-naturalness critique, the newcomer-and-insider critique and the facts-and-guardrails review. Where two of them pulled apart, the third way is named. Declines are listed with reasons at the end. Written to the same sources as draft 5 ([SHOWRUNNER-NOTES](../../production/SHOWRUNNER-NOTES.md) note 2, [flow-and-continuity §4](../../bible/flow-and-continuity.md#4-dialogue-rhythm), tone-and-dialogue R6, R8 and R17–R21).
+**Draft 5 → 5.1, 2026-09-26, by the Ep2 dialogue writer (second pass).** Applies every Ep2 finding in three critiques of draft 5: the dialogue-naturalness critique, the newcomer-and-insider critique and the facts-and-guardrails review. Where two of them pulled apart, the third way is named. Declines are listed with reasons at the end. Written to the same sources as draft 5 ([SHOWRUNNER-NOTES](../../production/SHOWRUNNER-NOTES.md) note 11, [flow-and-continuity §4](../../bible/flow-and-continuity.md#4-dialogue-rhythm), tone-and-dialogue R6, R8 and R17–R21).
 
 **Nothing in draft 5.1 has been read aloud, recorded, heard or watched.** Every new word is `[INVENTED]` and needs the guardrails owner's pass. Every beat and scene of draft 5 is kept, in the same order; two small gags are cut (listed below).
 
@@ -1700,7 +1700,7 @@ The same counting script ran on draft 5 and draft 5.1. It counts every voiced li
    - the engineer's film question
    - Nole's cage threat
    - Haras's "Quick question…"
-5. A stick-figure reel with real takes, and the showrunner's approval, before any pixel work (note 1).
+5. A stick-figure reel with real takes, and the showrunner's approval, before any pixel work (note 10).
 
 ### Handoffs (nothing outside script.md and open-questions.md was edited)
 
@@ -1727,7 +1727,7 @@ The same counting script ran on draft 5 and draft 5.1. It counts every voiced li
 - **The director's and editor's shot review.** Its findings: "(held)" frames that don't hold, split non-reaction jokes, meters in unlocked frames, missing reaction shots, no screen-direction map, and an almost wordless Act Three.
 
 It is written to:
-- the showrunner's note of 2026-09-26: "each conversation was reduced to minimum lines to get a point across without feeling like real dialogue that helps the viewer feel the scene. let's make sure generally we are using generally good filmography and storywriting trends" ([SHOWRUNNER-NOTES](../../production/SHOWRUNNER-NOTES.md) note 1; note 4 still stands)
+- the showrunner's note of 2026-09-26: "each conversation was reduced to minimum lines to get a point across without feeling like real dialogue that helps the viewer feel the scene. let's make sure generally we are using generally good filmography and storywriting trends" ([SHOWRUNNER-NOTES](../../production/SHOWRUNNER-NOTES.md) note 8; note 11 still stands)
 - [tone-and-dialogue: Scene craft and film grammar](../../bible/tone-and-dialogue.md#scene-craft-and-film-grammar-showrunner-2026-09-26), R17–R21 and §6
 - [dialogue-craft](../../_sources/research/dialogue-craft.md)
 - [flow-and-continuity](../../bible/flow-and-continuity.md), including §5a
@@ -2179,7 +2179,7 @@ Wordless by design, unchanged: the midpoint (12), Alyi's office (15), the white 
 ## Revision log (final pass, 2026-09-26, draft 5.3)
 
 **Draft 5.2 → 5.3, 2026-09-26, by the Ep2 writer (the final pass).** This pass applies the three-lens read of draft 5.2: a newcomer lens, an insider lens and a feel lens, scene by scene, each finding with a fix and a priority (P1 matters most, P3 is polish). It is written to:
-- the showrunner's notes of 2026-09-26 ([SHOWRUNNER-NOTES](../../production/SHOWRUNNER-NOTES.md) notes 2 and 5, and the handoff note on documentation):
+- the showrunner's notes of 2026-09-26 ([SHOWRUNNER-NOTES](../../production/SHOWRUNNER-NOTES.md) notes 8 and 11, and the handoff note on documentation):
   - "each conversation was reduced to minimum lines to get a point across without feeling like real dialogue that helps the viewer feel the scene. let's make sure generally we are using generally good filmography and storywriting trends"
   - "i said to cut down empty time, but not to cut every dialogue into only a few words per character"
   - "as far as documentation, we want to be sure that we are leaving appropriate detail where someone could pick up where we left off"

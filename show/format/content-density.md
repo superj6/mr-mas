@@ -28,7 +28,7 @@ How many minutes of genuinely entertaining screen time the current drafts suppor
 ### 2.1 Story-time budgets
 | Format | Runtime | Fixed overhead | Story time |
 |---|---|---|---|
-| 22 min | 22:00 | Intro 0:30 (locked), filename/disclaimer card 0:02, end credits ≈0:43 (the legal card alone needs ≈20 s of read time) | **≈20:45** |
+| 22 min | 22:00 | Intro 0:30 (locked), filename card 0:02, end credits ≈0:43 (set by the legal card's ≈20 s of read time; a placeholder, since no notice goes on screen from 2026-09-27) | **≈20:45** |
 | 11 min | 11:00 | Cut-down intro 0:15 (not yet specced), card 0:02, credits ≈0:28 | **≈10:15** |
 | 6–8 min | ≈7:00 | Title sting 0:05, card 0:02, credits ≈0:23 | **≈6:30** |
 

@@ -66,7 +66,7 @@ Modes use the same letters as [content-density §2.4](content-density.md#24-the-
 | **M** · macro | Compressed time: runs of date chyrons, deliveries, meanwhile splits, cards | **20–25%** | 4:09–5:11 | ≤ 45 s per block, ≤ 75 s per movement |
 | **F** · flashback | The past, entered on a trigger and left on a consequence | **5–8%** | 1:02–1:40 | Budgets per the [map](../timeline/flashback-map.md#42-budget-and-era-spread-per-episode): Ep1 ≤ 20 s; Ep8 up to 118 s (9%) |
 | **P** · THE PLAN | The one full stop to explain | **≈4%** | 0:45 | Once per episode |
-| *O · fixed* | The intro, the disclaimer card, the credits | *not story time* | 1:15 | — |
+| *O · fixed* | The intro, the filename card, the credits | *not story time* | 1:15 | — |
 
 **The balance line:** present-tense action (I + S) is 60–75% of story time, compressed time (M + P) is 24–29%, and the past (F) is 5–8%. When critics say an episode "feels like the news," it's almost always M above 30% or an M block over 45 s.
 
@@ -101,7 +101,7 @@ Modes use the same letters as [content-density §2.4](content-density.md#24-the-
 
 **Hints, not announcements.** A hint is a prop, a look, a reflection, an egg or a line with a second meaning that a first-time viewer can read as something else: the four attendee circles on the Ep1 invite that turn out to be THE PLAN's four figures; the stamp propped face-to-the-wall at Starbase; the dust on the `2017` evidence box. Hints obey L2 (they land on a face or the Orb), carry no tag of their own and never quote the record ahead of its date.
 
-**What it doesn't cover.** The episode's filename (a title is a hint, and the season's titles stay); THE PLAN inside the climax's own movement (Ep1's `HOW TO FIRE A CEO WHO OWNS NOTHING.` plays at the top of Act Four, as the reveal); truth labels about a side beat's later fact (`LATER: THE DEMO WASN'T REAL-TIME`); flashback cards stating the past. Internal docs (outlines, loglines, beat sheets) may name the climax; the rule is about the screen.
+**What it doesn't cover.** The episode's filename (a title is a hint, and the season's titles stay); THE PLAN inside the climax's own movement (Ep1's `HOW TO FIRE A CEO WHO OWNS NOTHING.` plays at the top of Act Four, as the reveal); truth labels about a side beat's later fact (retired from the screen on 2026-09-27, so `LATER: THE DEMO WASN'T REAL-TIME` doesn't air); flashback cards stating the past. Internal docs (outlines, loglines, beat sheets) may name the climax; the rule is about the screen.
 
 **Rulings made with the rule** (2026-09-25): Ep1's rail countdown (five type-ons, 0:20 → 12:31) → the invite and a hint thread ([Ep1 revision log](../episodes/ep01/script.md#revision-log-no-spoiler-pass)); Ep7's cold-open card → a prop hook; Ep8's verdict flash-forward → the trial's first morning; Ep9's `EVERYTHING AFTER THIS IS SPECULATION.` card → the rail simply rolls on (the showrunner's companion note: "we don't explicitly need a bunch of warnings of speculative like the animatics have, it should feel like a fluid plot").
 
@@ -111,19 +111,19 @@ Modes use the same letters as [content-density §2.4](content-density.md#24-the-
 
 ### 3.1 The clock
 
-Nominal runtime 22:00: the frame the template is built on, not a length to fill (L10). Fixed overhead is 1:15: the intro (0:30), the filename and disclaimer card (0:02) and the credits (0:43; the legal card alone needs about 20 s of read time). That leaves **20:45 of story**. Movements can flex by ±45 s.
+Nominal runtime 22:00: the frame the template is built on, not a length to fill (L10). Fixed overhead is 1:15: the intro (0:30), the filename card (0:02) and the credits (0:43; the legal card alone needed about 20 s of read time). *(2026-09-27: no notice goes on screen, and if one is ever needed for publishing it lives only in the platform's description field. The 0:43 is a placeholder until an outro is chosen; the proposals run 6–15 s, [OUTRO-PROPOSALS](../production/OUTRO-PROPOSALS.md).)* That leaves **20:45 of story**. Movements can flex by ±45 s.
 
 | Slot | In | Out | Length (flex) | Must contain | Ends on |
 |---|---|---|---|---|---|
 | **Cold open** | 0:00 | 1:10 | 0:45–1:15 | A laugh inside 15 s. The episode's question, or a clock that states no outcome (L9). | Mas's flat beat or a hard sting, cut on a downbeat into the intro |
 | Intro | 1:10 | 1:40 | 0:30 (locked) | — | — |
-| Filename + disclaimer card | 1:40 | 1:42 | 0:02 | — | — |
+| Filename card | 1:40 | 1:42 | 0:02 | — | — |
 | **Movement 1** (Act 1) | 1:42 | 6:30 | 4:15–5:15 | Anchor scene 1; at least one set-piece; slot F-A allowed | **Act-out 1** (T) |
 | **Movement 2** (Act 2A) | 6:30 | 11:00 | 4:00–5:00 | Anchor scene 2; usually THE PLAN followed by its set-piece | **Midpoint act-out** (T plus a power shift). This is the split point for an 11-minute release. |
 | **Movement 3** (Act 2B) | 11:00 | 15:30 | 4:00–5:00 | Anchor scene 3; a meanwhile split or a run; slot F-B | **Act-out 2**, the biggest T |
 | **Movement 4** (Act 3) | 15:30 | 20:15 | 4:15–5:15 | The **S3 climax** in the 65–85% window (runtime 14:20–18:40); anchor scene 4, the confrontation; micro slot F-C | The resolution (t) |
 | **Tag + button** | 20:15 | 21:17 | 0:45–1:15 | One thread only. The button is ≤ 15 s; a hook after it is ≤ 5 s. | The button |
-| End credits | 21:17 | 22:00 | 0:43 | Legal-card read time. Optional stinger ≤ 5 s. | — |
+| End credits | 21:17 | 22:00 | 0:43 | The legal card's read time; a placeholder, since no notice is on screen (2026-09-27). Optional stinger ≤ 5 s. | — |
 
 - The midpoint act-out usually falls from **10:00 to 14:15** (45–65% of runtime). It lands on a T, and rarely between THE PLAN and its set-piece.
 - **The pilot is the sanctioned exception.** Its Blip is a 7:30 fourth movement, told twice, with its own internal act-out at the `WHAT THEY DIDN'T KNOW` card ([§14](#14-worked-example-ep1-projected-map)).
@@ -377,7 +377,7 @@ Built from content-density's 7-minute column for Ep1 ([appendix A.1](content-den
   - the GLYPH dissolve
   - a 1-BIT and an EARLY-WEB16 flashback
   - 2TONE cards
-  - `(REPORTED)` truth labels
+  - ~~`(REPORTED)` truth labels~~ (retired from the screen, 2026-09-27)
   - a face-carried run
   - an S3
 
@@ -468,10 +468,11 @@ Use the **highest rung that works**. The lower the rung, the more time it costs 
 
 In **cutscene mode**, which the pixeladv beat already uses ("the interface dims into cutscene mode"), the 480 × 67 band below the room goes dark. That dark band becomes the fixed home for:
 - date chyrons
-- `REPORTED`, `(DISPUTED)`, `HIS VERSION` and `RECONSTRUCTED`
 - the date tags on quotes
 
-This gives the [truth grammar](../bible/guardrails.md#4-how-facts-appear-on-screen) one screen position. The viewer learns where facts live and reads them faster, and chyrons never cover the room.
+*(Until 2026-09-27 it also carried `REPORTED`, `(DISPUTED)`, `HIS VERSION` and `RECONSTRUCTED`. On-screen truth labels are retired: [guardrails §4](../bible/guardrails.md#4-how-facts-appear-on-screen).)*
+
+This gives dates one screen position. The viewer learns where facts live and reads them faster, and chyrons never cover the room.
 
 ### 8.4 The quote box (proposed; needs the guardrails owner's sign-off)
 
@@ -503,7 +504,7 @@ The drafts voice dozens of real lines per episode. A full-screen dated quote car
  │ └────────┘                                    └────────┘  │
  ├───────────────────────────────────────────────────────────┤ y=203
  │ THE BAND (480 × 67) · cutscene mode: dark = CHYRON RAIL   │  lit ≤ 2× per episode:
- │ date chyrons · REPORTED · truth labels · quote date tags  │  verb bar + inventory
+ │ date chyrons · quote date tags                            │  verb bar + inventory
  └───────────────────────────────────────────────────────────┘ y=270
 ```
 
@@ -949,4 +950,4 @@ This combines the two sibling files' asks:
 | 13 | The dread curve (§11.2) | Adopt it, including the Ep12 exception for model-POV holds over 2 s, which needs explicit approval | Showrunner |
 | 14 | Name cards | ≤ 16 in Eps 1–4, ≤ 10 afterwards, plates for everyone else | Room |
 | 15 | Critics | Three critics (the Outsider, the Insider, the Editor) score every draft from a slate animatic. RED items block lock. | Showrunner |
-| 16 | No announced climaxes (L9, [§2.4](#24-no-announced-climaxes-l9)) | **Decided** by the showrunner's notes of 2026-09-25: hints only; no flash-forward chyrons, countdowns or outcome cards; no on-screen speculation label (the Ep9 card is gone, the end-credits legal card covers dramatization) | Showrunner (decided) |
+| 16 | No announced climaxes (L9, [§2.4](#24-no-announced-climaxes-l9)) | **Decided** by the showrunner's notes of 2026-09-25: hints only; no flash-forward chyrons, countdowns or outcome cards; no on-screen speculation label (the Ep9 card is gone; since 2026-09-27 no notice is on screen at all, and the writing covers dramatization) | Showrunner (decided) |

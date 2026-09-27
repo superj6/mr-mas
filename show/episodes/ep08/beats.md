@@ -19,7 +19,7 @@ The only exit from his view is F8.2, Tasya's key, now a micro.
    - THE CALENDAR gets **no name card here.** Its card lands at the verdict (#19), the first moment it's true.
    - The cold open is a time-jump (pacing-model §8.1). Beat #9's key turning in the courthouse door catches up to this frame. The folded document on the table is THE PLAN's sheet (#8), seen before we know what it is.
 
-## INTRO → `ep1.7_statute_of_limitations.pdf` + disclaimer
+## INTRO → `ep1.7_statute_of_limitations.pdf`
 See [intro-slot.md](intro-slot.md): the five spoiler-safe changes only. Nothing in it states the verdict.
 
 ## ACT 1: "WHO?" (Mar 31 → Apr 26)

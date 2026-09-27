@@ -235,7 +235,7 @@ Each option is described as the **base look of the episode body**. The rest of t
 4. **Readable in one frame.** A viewer should know "this is money," "this is the machine's view" or "this is 1993" before any dialogue.
 5. **Mas stays recognizable in every style**, and **he never freezes** in any of them.
 6. **No switch smuggles in realism.** Engraving, painterly or camcorder looks never become photoreal faces.
-7. **Truth labels ride on top of every switch.** `HIS VERSION`, `RECONSTRUCTED` and `(DISPUTED)` stay legible in any style.
+7. **Truth labels ride on top of every switch.** `HIS VERSION`, `RECONSTRUCTED` and `(DISPUTED)` stay legible in any style. *(2026-09-27: on-screen truth labels are retired, [guardrails §4](guardrails.md#4-how-facts-appear-on-screen); this now holds for date rails and for story devices such as `HIS VERSION` where a scene uses them.)*
 
 ---
 

@@ -26,6 +26,7 @@ Written by **MR. MAS writers' room** · **Draft 3.6 · 2026-09-26 · dialogue pa
 - **The lobby's floor plan (Draft 3.4, locked for sc 4, 11, 13, 14, 21 and 22).** Reception frame left, with the ticker strip over it, the lobby TV above the desk and the class photo on the wall behind it. The revolving door frame right, the street beyond it; the pilot's old door leans on the wall beside it from sc 11 on. The tall Bay window on the back wall between them. SHIPMAS builds its calendar and GPU tree along the right-hand wall by the door, clear of the window. One master (from the front of the lobby, all three in depth) and one reverse (from the window). **Screen direction is meaning:** people leaving exit frame right, through the door (Gerg in sc 4, Rima in sc 11); money and returns enter moving left (the investors in sc 14, Gerg in sc 21). People out, money in, without a word. The one thing that goes the other way is money being sent back: the `$7T` pallet leaves frame right through the queue in sc 14 (3.5).
 - **Voices, for the stick-figure reel.** Record each turn whole, in one read at the character's own pace; never time-stretch a take to fit a picture, and cut the picture to the takes. One clip is reused on purpose: Rima's "Thank you all." (sc 11), locked to the same drawing and the same wing position both times.
 - `CARD:` a 2-tone name-card freeze that rides its shot. `PLATE:` a name plate, no freeze. `RAIL:` the chyron rail (y 203–270). It stamps the moment an event lands.
+- **No hedge labels on screen (2026-09-27, [SHOWRUNNER-NOTES](../../production/SHOWRUNNER-NOTES.md) note 3).** The `(REPORTED)` tags, the † marks and the `RECONSTRUCTED` stamp are off the on-screen text; the solid part stays. Bracketed tags and notes are off screen and unchanged.
 - **`MAS (V.O.)`** is Mas's narration and nobody else's: [INVENTED], lowercase, never in quotation marks, tagged with its device ([pov-and-framing §2.3](../../bible/pov-and-framing.md#23-the-devices)). Nobody in the world hears it. Anyone else heard off picture is `(O.S.)` or `(filter)`.
 - Mas's subtitles are lowercase. Always.
 - **Voices (animatic).** Synthetic voices are designed from a text description only ([guardrails §5](../../bible/guardrails.md#5-legal-hygiene)). No stock preset sold as a celebrity or politician sound-alike, for any character, including RUMPT, NOTNIH, MOSWEN, RENEIW, SUCRAM and MAS. RUMPT's final voice is a human actor.
@@ -118,7 +119,7 @@ SMASH TO:
 4. **Couch gag:** the pocketed keycap is `MUTE`.
 5. **Roll call:** RUMPT's pointing hand and cuff catch the podium's gold; the cursor window grows one token eye.
 
-**FILENAME + DISCLAIMER CARD (2 s):** `ep1.2_strawberry.jpg` · *A parody. Events dramatized; scenes invented. Names changed to protect the valuations.*
+**FILENAME CARD (2 s):** `ep1.2_strawberry.jpg`, alone *(2026-09-27: the disclaimer line is cut; SHOWRUNNER-NOTES note 3)*
 
 ---
 
@@ -483,7 +484,7 @@ MUSIC: DARK ROOM, solo felt piano over the F–C drone and the server hum. It th
 
 `[LOW·desk]` MAS at the monitor's post composer, the essay ready to go. He sets his glass down beside his phone, and the tap wakes the lock screen in the same frame. Its wallpaper is a photograph, the only one in the dark room: a strawberry, close up. Over it, on an opaque banner so the words read first, one unread notification, stamped with its own time:
 
-ON SCREEN (his phone): `SEP 17 · ELGOOG PAUSES CHILE DATA CENTER OVER WATER (REPORTED)` [H]
+ON SCREEN (his phone): `SEP 17 · ELGOOG PAUSES CHILE DATA CENTER OVER WATER` [H]
 
 *(**Style moment (proposed)** · style-range 3.A micro · drastic, in a bezel (tier 2, about 2 s) · a near-photoreal strawberry photo, inside the phone's bezel only. Motivation: he posted a real photograph, and the phone keeps it; it's the plant for J5, the first photographic image to leave its frame. A generic strawberry drawn fresh, never the real photo and never its garden (X1).)*
 
@@ -793,7 +794,7 @@ MUSIC: LEVERAGE, low, under the pledge. The odometer builds it into SET-PIECE SW
 
 `[W]` The lobby master. The revolving door is spinning again, with an INVESTOR in every wing, all of them coming in, moving left: money in. A queue of more (tiled silhouettes, lit faces only at the front) snakes from the street, through the door and up the stairs. Over reception, the ticker strip he tapped reads `NOPEAI  $86,000,000,000`. On each revolution a heavy *clunk* travels up through the building.
 
-Against the flow, in the same wide: a COURIER wheels a shrink-wrapped pallet down the stairs and out through the queue, moving right, `$7T` on its side. Across it, big: **RETURN TO SENDER**. In its corner, small, a fresh red stamp: `PODCASTING BRO` † `(REPORTED)`. The queue parts for it and closes behind it. It rides the one wing of the door going out: the only thing leaving while the money comes in. *(3.5: it rides the establishing wide instead of banging into the boardroom, so nobody has to deal with it and nobody needs its history. Ep2's chip-plan rail, `$5–7 TRILLION (REPORTED)`, and XEL's question are the insider's layer; for anyone else, a seven-trillion-dollar pallet going back while everyone else pushes in is the joke. It keeps beat #12's pallet and facts row 10's stamp.)*
+Against the flow, in the same wide: a COURIER wheels a shrink-wrapped pallet down the stairs and out through the queue, moving right, `$7T` on its side. Across it, big: **RETURN TO SENDER**. In its corner, small, a fresh red stamp: `PODCASTING BRO`. The queue parts for it and closes behind it. It rides the one wing of the door going out: the only thing leaving while the money comes in. *(3.5: it rides the establishing wide instead of banging into the boardroom, so nobody has to deal with it and nobody needs its history. Ep2's chip-plan rail, `$5–7 TRILLION (REPORTED)`, and XEL's question are the insider's layer; for anyone else, a seven-trillion-dollar pallet going back while everyone else pushes in is the joke. It keeps beat #12's pallet and facts row 10's stamp.)*
 
 RAIL: `OCT 2, 2024`
 
@@ -808,7 +809,7 @@ I, the undersigned, solemnly swear not to fund any competitor of NopeAI, includi
 *(lowering the card; to Mas)*
 Which ones, exactly?
 
-`[HIGH]` The table from overhead: an aide hands him a list. Its header reads big and clean, `COMPETITORS` [V/K] `(REPORTED)`; below it the list unrolls down the table, over the edge, across the carpet and out of the door, far too small and far too long to read. *(3.5: nothing on it is legible yet, so the lemonade stand is the investor's to find and Mas's to confirm. 3.6, the insider read: the rail `REPORTED: INVESTORS ASKED NOT TO FUND RIVALS` is cut, because it repeated the pledge he had just read aloud. The `(REPORTED)` label moves onto the prop that dramatises the ask. The insider asked for the pledge card's fine print, but the card faces Mas in a side-on two-shot, where it can't be read. The list's header reads in the same overhead shot the rail rode.)*
+`[HIGH]` The table from overhead: an aide hands him a list. Its header reads big and clean, `COMPETITORS` [V/K; 2026-09-27: the `(REPORTED)` label is off]; below it the list unrolls down the table, over the edge, across the carpet and out of the door, far too small and far too long to read. *(3.5: nothing on it is legible yet, so the lemonade stand is the investor's to find and Mas's to confirm. 3.6, the insider read: the rail `REPORTED: INVESTORS ASKED NOT TO FUND RIVALS` is cut, because it repeated the pledge he had just read aloud. The `(REPORTED)` label moves onto the prop that dramatises the ask. The insider asked for the pledge card's fine print, but the card faces Mas in a side-on two-shot, where it can't be read. The list's header reads in the same overhead shot the rail rode.)*
 
 `[2S]` The INVESTOR leans in to Mas over the list, which is still unrolling.
 
@@ -837,7 +838,7 @@ It's very good lemonade. `[INVENTED · 3.4: he loses, and the pledge ends on his
 
 AUHSOJ steps up holding a single sheet of paper. He takes the chair at the far end of the table, facing Mas down its length, lays the sheet flat and uncaps a pen. He says nothing yet.
 
-PLATE (two lines): `AUHSOJ · EVIRHT` / `LEADS THE ROUND (REPORTED)` [K] *(3.6, the newcomer read: EVIRHT is the name on Ep1's `$86B` check, so an insider sees why he says "Remind me"; for a newcomer the plate still just says he's the money.)*
+PLATE (two lines): `AUHSOJ · EVIRHT` / `LEADS THE ROUND` [K] *(3.6, the newcomer read: EVIRHT is the name on Ep1's `$86B` check, so an insider sees why he says "Remind me"; for a newcomer the plate still just says he's the money.)*
 
 The Orb ignores him and scans the paper.
 
@@ -1165,7 +1166,7 @@ MUSIC: ERA TIER, the knee motif on a road-trip acoustic guitar; a sighing violin
 
 A TOUR BUS crosses the pop-up hills. Hand-lettered on its side, in a generic band script: `NOPE AI`. Everyone on board is typing.
 
-**THE BREAKUP.** The bus splits across the middle with a paper tear, and the tear gets the scene's longest hold: it is the one idea a newcomer needs. The front half keeps driving. The rear half rolls off the other way with ELEVEN aboard (a row of seated figures), MARIO and ADELINA among them, HALO in the back seat, ADELINA holding the keys. The rear half has no engine. It rolls downhill anyway. On the back seat beside HALO: a recipe book, `SCALING LAWS`, with a small `RECONSTRUCTED` stamp on its cover [K · JAN 2020].
+**THE BREAKUP.** The bus splits across the middle with a paper tear, and the tear gets the scene's longest hold: it is the one idea a newcomer needs. The front half keeps driving. The rear half rolls off the other way with ELEVEN aboard (a row of seated figures), MARIO and ADELINA among them, HALO in the back seat, ADELINA holding the keys. The rear half has no engine. It rolls downhill anyway. On the back seat beside HALO: a recipe book, `SCALING LAWS` [K · JAN 2020; 2026-09-27: the `RECONSTRUCTED` stamp on its cover is cut].
 
 RAIL: `ELEVEN LEAVE` [V] *(3.4: the rail does the counting, so nobody has to count eleven moving figures; the `RECONSTRUCTED` label moves off the rail onto the book it describes)*
 
@@ -1209,7 +1210,7 @@ MUSIC: THE RUN, boom-bap and chip, adding a layer every four bars, a knee stab o
 
 1. `[POV]` A plain fact card: **`NOV 5, 2024 · ELECTION. HE WINS.`** [K → upgrade to V before lock; the race was called Nov 6. The facts review calls the upgrade trivial, and the card doesn't air as [K]]. Beside `HE`, small, the one image on the card: the gold podium seen from behind, the icon of the thing that has climbed the hill all episode. No crowd, no map, no face. *(Needs the guardrails owner's ruling on X11, whose excluded column names "election results": [open-questions](open-questions.md) #3. 3.6, the newcomer read: the only president a newcomer has met is NEDIB, so "HE" needed a referent. The reader offered the red tie or the gold cuff. The tie is saved for the button's reveal, and the podium is what a newcomer has been tracking, so the card carries the podium. If X11 excludes the card, the icon goes with it.)*
 2. `[POV]` THE PODIUM, gold, still facing away, is wheeled the last stretch up the green hill by two unlit aides and reaches the top, beside a white building. Ep2's `SO SCARY` balloon hangs off it, slack on its string. From behind the podium, a HAND in a gold cuff waves once. *(The podium meter, 4 of 4. The hand is drawn at normal proportion and never in close-up.)*
-3. `[POV]` NOLE sits down on the podium's step, arms crossed, grinning like he bought the hill. Label: `FIRST BUDDY (REPORTED)` [K]. *(3.6, the facts review: no quotation marks, because a [K] item never sits in a quote.)*
+3. `[POV]` NOLE sits down on the podium's step, arms crossed, grinning like he bought the hill. Label: `FIRST BUDDY` [K]. *(3.6, the facts review: no quotation marks, because a [K] item never sits in a quote.)*
 4. `[POV]` Beside the step, a dog-shaped neon sign flickers on: `EGOD` [V]. Nobody explains it.
 
    `[ECU]` (≈ 1 s) Back to the glass on the desk: the water line still flat. *(3.4: the run's one return to Mas before the pen, a neutral non-reaction, well clear of the election card; the guardrails owner decides whether it may sit closer.)*
@@ -1443,9 +1444,9 @@ Hello? It's Sozeb. I'd like it noted that I do AI now. `[INVENTED · on the basi
 
 The hand points: *next.*
 
-A small CANDLE floats past the podium's step, the kind from Ep2's email séance. Its paper sleeve carries a post's title, with its own `(REPORTED)` tag:
+A small CANDLE floats past the podium's step, the kind from Ep2's email séance. Its paper sleeve carries a post's title:
 
-ON SCREEN (the sleeve): `NOLE WANTED A NOPEAI FOR-PROFIT` † `(REPORTED)` [K]
+ON SCREEN (the sleeve): `NOLE WANTED A NOPEAI FOR-PROFIT` [K]
 
 NOLE leans over from the step and blows it out.
 
@@ -1585,7 +1586,7 @@ SFX: the ice creaks once.
 
 CUT TO BLACK on the downbeat.
 
-**END OF EPISODE.** End credits (0:43, legal card per [overview §8](../../bible/overview.md#8-disclaimer-cards)).
+**END OF EPISODE.** End credits (0:43 placeholder until the outro is chosen; no legal card or notice on screen, and the credit is "by Opus 5.5": [overview §8](../../bible/overview.md#8-disclaimer-cards), 2026-09-27).
 
 ---
 
@@ -1940,7 +1941,7 @@ The outs rotate (diegetic, THREAT, a stop plus DREAD, the brass), and none repea
    - **The `Give` verb** stays greyed out and unused.
 10. **Runtime (showrunner, 3.2; 3.3; 3.4; 3.5; 3.6):** the conversation pass planned the episode at ≈ 20:13 of story, up from 17:27 and inside the 22:00 frame; 3.3 planned ≈ 20:07; 3.4 ≈ 21:39; 3.5 ≈ 21:48; 3.6 plans ≈ 22:06 (see #16). It's an estimate from word counts; the reel's takes will settle it.
 11. **Guardrails pass on 3.2's, 3.3's, 3.4's, 3.5's and 3.6's new invented lines at real events** (guardrails owner): the lists are in §9. Legal may want a look at the investors' pledge card, which dramatises a reported ask, and at AUHSOJ's ownership exchange (3.4, extended in 3.5 with the blank owner's line on his sheet), which puts invented words on a real investor's parody at a real round. New in 3.5: the invented interview question now plays inside a clip of the real interview (sc 23). New in 3.6 (§9's 3.6 list): Maon's and Mario's fuller turns at the o1-preview launch, Reneiw's and Moswen's longer turns at the veto (the naturalness critic asked for these to go through the pass), the reworded interview question, Nole's reworded step line, the list's `(REPORTED)` header, and the election card's podium icon.
-12. **The stick-figure reel (showrunner note 1):** 3.6 should be read aloud at pace and cut as a stick-figure reel with real takes before any pixel work, so the conversations can be heard and approved. See [open-questions](open-questions.md) #31–#35 for what a human must check and the resources to ask for.
+12. **The stick-figure reel (showrunner note 10):** 3.6 should be read aloud at pace and cut as a stick-figure reel with real takes before any pixel work, so the conversations can be heard and approved. See [open-questions](open-questions.md) #31–#35 for what a human must check and the resources to ask for.
 13. **The election card and X11 (guardrails owner, 3.3):** X11's excluded column names "election results", and its "instead" column bans only midterm results. `NOV 5, 2024 · ELECTION. HE WINS.` (sc 20) needs a ruling on which applies ([open-questions](open-questions.md) #3). 3.6 adds one small image to the card (the gold podium from behind, so "HE" has a referent for a newcomer); the ruling covers the icon too.
 14. **Voicing [H] words (guardrails owner, 3.3):** "not that worried" (sc 23) is [H] and spoken; guardrails §3 keeps [H] to chyrons and headline cards. Either upgrade it to [V] from the interview's video or transcript, or rule that voicing [H] words is allowed. The same pattern is in Ep1 and Ep2. 3.5 plays the interview as a clip on a phone in the line, in its own medium, with Mas watching himself: if the line is upgraded, it's voiced from the clip; the fallback was the clip with its sound down and the words on a `REPORTED` chyron under it. **3.6 (the insider read):** the fallback is now to cut the clip whole (≈ −8 s), because muted it would carry three words that Nole's exchange then plays out anyway. 3.6 also rewords the invented question ("Nole's suing you, and he's close to the new administration. How worried should you be?") so it doesn't share a rhythm with Ep1's and Ep2's unseen askers ([open-questions](open-questions.md) #37).
 15. **Mas's line length (showrunner, 3.3; 3.4):** the showrunner's note says not to cut dialogue to "only a few words per character". Mas's median stays 3 words (his longest invented line, the exit interview's "on a scale of one to five…", is 13), by design: he's the calm, literal centre. 3.4 takes the screenwriter's test for keeping it: his brevity stays only where the counterpart in the scene talks in full, and 3.4 makes that true in every anchor (Rima's handover, AUHSOJ's pushes, Mario and Adelina, Nole's step). Is that the right reading of the note for the lead? ([open-questions](open-questions.md) #39)
@@ -2083,7 +2084,7 @@ Sources: the continuity, drama, newcomer, insider and facts critics' notes on Ep
 
 ## 12. Revision log (conversation pass, 2026-09-26)
 
-Draft 3.1 → 3.2, by the Ep3 dialogue writer. Written to the showrunner's note on Ep1's Act Four v4 (below), [SHOWRUNNER-NOTES](../../production/SHOWRUNNER-NOTES.md) notes 1 and 2, [flow-and-continuity §4](../../bible/flow-and-continuity.md#4-dialogue-rhythm), [tone-and-dialogue](../../bible/tone-and-dialogue.md) R17–R21 and the §6 rhythms, the fifteen rules in [dialogue-craft §4](../../_sources/research/dialogue-craft.md#4-fifteen-rules-for-mr-mas-dialogue), and Ep1's Act Four (drafts 5.0 and 5.1) as the model of the voice. **Nothing in 3.2 has been read aloud, recorded, heard or watched.** Every length is planned from words (§2), and every count below is taken from the script text.
+Draft 3.1 → 3.2, by the Ep3 dialogue writer. Written to the showrunner's note on Ep1's Act Four v4 (below), [SHOWRUNNER-NOTES](../../production/SHOWRUNNER-NOTES.md) notes 10 and 11, [flow-and-continuity §4](../../bible/flow-and-continuity.md#4-dialogue-rhythm), [tone-and-dialogue](../../bible/tone-and-dialogue.md) R17–R21 and the §6 rhythms, the fifteen rules in [dialogue-craft §4](../../_sources/research/dialogue-craft.md#4-fifteen-rules-for-mr-mas-dialogue), and Ep1's Act Four (drafts 5.0 and 5.1) as the model of the voice. **Nothing in 3.2 has been read aloud, recorded, heard or watched.** Every length is planned from words (§2), and every count below is taken from the script text.
 
 > **Showrunner, 2026-09-26:** "it is getting cloesr. however, a lot of the dialoge is unnatural and the cuts are still quite fast. a few time dialogue seems to randomly blurt out or cut off. it seems since v2 you didn't allow any conversation to play out for more than a few seconds which makes it hard to follow. i said to cut down empty time, but not to cut every dialogue into only a few words per character"
 
@@ -2189,7 +2190,7 @@ Draft 3.1 → 3.2, by the Ep3 dialogue writer. Written to the showrunner's note 
 5. Fresh newcomer and insider reads of 3.2, against §3's must-understand list and the insider's drag list.
 6. The guardrails pass on §9's list of 3.2 lines, and legal on the pledge card.
 
-**Resources that would speed this up** (showrunner note 1; asked through the lead):
+**Resources that would speed this up** (showrunner note 10; asked through the lead):
 - a human read-aloud or table read
 - a TTS with better question intonation (designed voices only, never a clone)
 - a real-time watch of the stick-figure reel
@@ -2279,7 +2280,7 @@ Draft 3.3 → 3.4, by the Ep3 writer (the scene-craft pass). **Nothing in 3.4 ha
 >
 > And, on documentation: "also as far as documentation, we want to be sure that we are leaving appropriate detail where someone could pick up where we left off."
 
-**Sources.** The note above; [SHOWRUNNER-NOTES](../../production/SHOWRUNNER-NOTES.md) notes 1 and 4 (let conversations play out; cut empty time, not talk) as of 2026-09-26; [tone-and-dialogue](../../bible/tone-and-dialogue.md): "Scene craft and film grammar", R1–R21 and §6; the [dialogue-craft reference](../../_sources/research/dialogue-craft.md); [flow-and-continuity](../../bible/flow-and-continuity.md) §4 and §5a; [pov-and-framing](../../bible/pov-and-framing.md) §2.3 and §4.7. Two reviews of 3.3, both page reads that edited nothing: a **screenwriter's scene-craft critique** (S below, nine findings) and a **director and editor's shot review** (D, scene by scene plus eight patterns). Neither review is filed in the repo; everything taken from them, and everything declined, is recorded here so nobody needs them.
+**Sources.** The note above; [SHOWRUNNER-NOTES](../../production/SHOWRUNNER-NOTES.md) notes 8 and 11 (let conversations play out; cut empty time, not talk) as of 2026-09-26; [tone-and-dialogue](../../bible/tone-and-dialogue.md): "Scene craft and film grammar", R1–R21 and §6; the [dialogue-craft reference](../../_sources/research/dialogue-craft.md); [flow-and-continuity](../../bible/flow-and-continuity.md) §4 and §5a; [pov-and-framing](../../bible/pov-and-framing.md) §2.3 and §4.7. Two reviews of 3.3, both page reads that edited nothing: a **screenwriter's scene-craft critique** (S below, nine findings) and a **director and editor's shot review** (D, scene by scene plus eight patterns). Neither review is filed in the repo; everything taken from them, and everything declined, is recorded here so nobody needs them.
 
 **What the note meant here.** 3.2 and 3.3 had already made the lines complete sentences (3.3 by the 3.4 count: 148 turns, 1,165 words, median 6; the lead's own count was ≈ 1,060, and 3.3's script counted 1,187: three parsers, so use one). The problem the reviews found was how the scenes were built:
 - The four scenes that should be felt most (the exit interview, the midpoint, the writing room's turn, the line) ran as relays of gags, and in each the person pressing Mas, or being pressed, barely talked (Rima 15 words; the midpoint's key question from "INVESTOR 4"; AUHSOJ, who leads the round, silent; Nole's confrontation four lines).
@@ -2375,7 +2376,7 @@ Draft 3.3 → 3.4, by the Ep3 writer (the scene-craft pass). **Nothing in 3.4 ha
 6. Whether a newcomer can retell "nobody owns a nonprofit, and he signed anyway" after sc 14 (the §5a newcomer read), and whether an insider finds any of the new talk dragging.
 7. The runtime call (§10 #16).
 
-**Resources that would speed this up** (showrunner note 3; asked through the lead): a human table read; a TTS with better question intonation and a real quiet register (designed voices only, never a clone); a real-time watch of the stick-figure reel.
+**Resources that would speed this up** (showrunner note 10; asked through the lead): a human table read; a TTS with better question intonation and a real quiet register (designed voices only, never a clone); a real-time watch of the stick-figure reel.
 
 **Net runtime:** ≈ +1:32 of planned story, to ≈ 21:39 (§2), of which ≈ 10 s corrects 3.3's plan for the keycap call.
 

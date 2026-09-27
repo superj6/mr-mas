@@ -211,7 +211,7 @@ These are eggs only (never must-read). Every value that states a fact needs a li
 
 | Ep | Firing tally (carved in the desk) | Collars (on the coat hook) | Gold threads (hoodie, optional) | KORG board (zAI tower; the banner `KORG 5: NEXT QUARTER` never changes) | Valuation ticker (NopeAI spire) |
 |---|---|---|---|---|---|
-| 1 | `II`: TPOOL ×2, both faint, `(REPORTED)` in-episode. The premise, not an event | 2 | — | — (cut from Ep1's intro in v2.1) | — (cut from Ep1's intro in v2.1) |
+| 1 | `II`: TPOOL ×2, both faint. The premise, not an event | 2 | — | — (cut from Ep1's intro in v2.1) | — (cut from Ep1's intro in v2.1) |
 | 2 | `III` (Ep1's mark: Nov 17, 2023) | 2 | — | `KORG 1` [K, verify], on the skyline ([SCRIPT §8.3](SCRIPT.md#83-skyline-and-hill-after-the-fact)) | `$86B` [K: the tender Ep1 aired; verify] |
 | 3 | `III` | 3 (the "three by 2024" collar, after Ep2) | — | `KORG 2` [K, verify] | `$86B` |
 | 4 | `III` | 4 | — | `KORG 2` [K] | `$157B` (Oct 2, 2024, Ep3's raise) [V] |

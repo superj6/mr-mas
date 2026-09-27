@@ -79,6 +79,31 @@ The lesson isn't "write better rules". It's to judge the cut the way a viewer ex
 - **Keep screen direction and eyelines consistent** within a sequence, unless breaking them is the point.
 - **Variety in shot size comes naturally from cutting on story.** Two or three shots of the same size in a row are fine in a steady conversation.
 
+## 2a. Arriving and leaving scenes (2026-09-27)
+
+> **Showrunner, 2026-09-27:** "it still is pretty quick on transitions and feels like your not fully pulled into a scene". The measurements are in [pacing-comparison](../_sources/research/pacing-comparison.md). Our shots are no faster than the reference shows'. Our scenes are much shorter, and we leave them abruptly.
+
+- **Stay longer in each place.**
+  - A talk scene usually runs a minute or more, in one room.
+  - A cutaway under about 10 s earns its place (new information someone reacts to) or goes.
+  - Many short stays read as "quick transitions" even when every shot is long.
+- **Arrive.**
+  - Open a new place on the room with its people in it (a wide, or a character in the space), not on an insert or a label. The film studies' pattern: a scene opens wider, then tightens.
+  - Give it 2–4 s before the first line, and longer at a chapter change or a jump in time.
+- **Lead with sound.**
+  - Most scene changes start the new room's tone, or its first line, 0.5–1.5 s under the outgoing shot (a pre-lap or J-cut).
+  - The stick reel can write this: a line's `t` may be negative, down to −4 s.
+  - The mix's rooms lead the cut by about 0.6 s by default.
+- **Let it land.**
+  - After the scene's turn or last line, hold 1.5–3 s on whoever it hit, with the room breathing. Big turns get 4–6 s.
+  - Music or room tone can hang over the next picture (an L-cut).
+  - Cutting out on the last syllable is for comic hard cuts, and they're rare.
+- **Vary transitions by story:**
+  - hard cuts for momentum and cross-cutting
+  - a sound bridge or a held exterior when time passes
+  - a match cut when two places rhyme
+- **"Cut empty time" still holds, inside scenes.** Air at a scene's edges isn't empty: it's where the audience catches up and feels the turn. When a cut is needed for length, take a whole beat that nobody in the scene cares about, not the breath around the ones they do.
+
 ## 3. Sound: a continuous bed
 
 - **Room tone and ambience keep running.** Each location has a bed under every shot in it, crossfaded (roughly 0.5–2 s) across sequence changes.

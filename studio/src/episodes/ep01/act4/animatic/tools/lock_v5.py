@@ -190,7 +190,7 @@ PLAN: dict[str, dict] = {
     "S5.06": dict(verdict="C", v4="S5.06", marks=dict(
         q1=("txt", "“…unable", "at", 0), q2=("txt", "“…unless", "at", 0), q3=("txt", "“…positions", "at", 0),
         c650=("txt", "SIGNED 650", "at", 0), c700=("txt", "SIGNED 700", "at", 0), clunk=("snd", "odometer_ratchet", 1, 0),
-        scroll=("on", "a5-29-11", 0), alyi=("txt", "ALYI (REPORTED)", "at", 0), chime=("snd", "bell_ding_F6", 1, 0)),
+        scroll=("on", "a5-29-11", 0), alyi=("txt", "ALYI", "at", 0), chime=("snd", "bell_ding_F6", 1, 0)),
         face={"GERG": "lip", "MAS": None}),
     "S5.07b": dict(verdict="N", v4="S5.10", face={"MAS": "lip", "GERG": None}),
     "S5.08": dict(verdict="R", v4="S5.08", marks=dict(slide=("snd", "SLOT", 1, 0), flat=("f", 8), stamp=("snd", "rubber_stamp_C", 1, 0)), face={"GERG": None}),

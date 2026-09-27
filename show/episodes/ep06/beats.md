@@ -12,7 +12,7 @@
 1. **REAL (Sep 10, 2025).** YRRAL, briefly the world's richest man ($393B), stands on his yacht wearing a sash: `RICHEST MAN ALIVE (ONE DAY ONLY)` (no date on the sash, so Act One's `SEP 4` doesn't read as a step back). The hull opens into a server hall.
 2. **INVENTED.** At midnight the sash fades like a Cinderella gown. A $300B ELCARO check blows off the deck, lands on a carousel on the pier and starts it turning. Mas steps up to the ticket booth: *one ticket, please.* Attendant: *You own the ride.* Mas: *one ticket, please. [INVENTED]* **Hard cut to the intro.** (No V.O. in a cold open.)
 
-## INTRO (EP06 variant) → `ep1.5_backstop.xlsx` + disclaimer
+## INTRO (EP06 variant) → `ep1.5_backstop.xlsx`
 See [intro-slot.md](intro-slot.md).
 
 ## ACT 1: "HIGH-IQ GROUP" (Sep 4 → Oct 30)

@@ -34,7 +34,7 @@ The season tracker (setup → payoff) is in [gags/recurring-gags.md](../../gags/
 | **Lines on floors** | ODNOMIAR paints a cut line (Dec 2). NESNEJ measures a smaller chip against it | Ep2: the limbo. Ep5: RUMPT's CUT DIAL. Ep7: Mario's red lines |
 | **Hourglasses** | TTEMME's hourglass flips, then shatters | Ep7: RUMPT's six-month hourglass |
 | **HTURT hail** | Two hailstones: the cold open's, into his glass, and the bay's, after the repost | Ep2: one faint bubble in the intro sky |
-| **The moth** | Flies out of his Senate wallet (no equity), out of THE PLAN's empty equity box, and settles on the legal card in the credits | — |
+| **The moth** | Flies out of his Senate wallet (no equity), out of THE PLAN's empty equity box, and settles in the credits (no legal card since 2026-09-27; where it lands waits on the chosen outro) | — |
 | **MADA's chair** | The one chair THE PLAN's musical chairs can't remove | — |
 
 ## One-liners

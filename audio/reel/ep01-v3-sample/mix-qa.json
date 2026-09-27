@@ -1,0 +1,85 @@
+{
+ "length_s": 332.875,
+ "layers": [
+  {
+   "room": "bullpen",
+   "from": 2.2,
+   "to": 129.86
+  },
+  {
+   "room": "basement",
+   "from": 128.86,
+   "to": 131.44
+  },
+  {
+   "room": "bullpen",
+   "from": 130.44,
+   "to": 138.98
+  },
+  {
+   "room": "basement",
+   "from": 137.98,
+   "to": 146.48
+  },
+  {
+   "room": "bullpen",
+   "from": 145.48,
+   "to": 160.63
+  },
+  {
+   "room": "suite",
+   "from": 162.53,
+   "to": 219.32
+  },
+  {
+   "room": "dark",
+   "from": 218.32,
+   "to": 225.23
+  },
+  {
+   "room": "tpool",
+   "from": 224.23,
+   "to": 229.23
+  },
+  {
+   "room": "dark",
+   "from": 228.23,
+   "to": 233.13
+  },
+  {
+   "room": "dark",
+   "from": 235.03,
+   "to": 332.88
+  },
+  {
+   "silence": [
+    208.98,
+    212.68
+   ],
+   "what": "rooms out, room tone at -50 LUFS"
+  },
+  {
+   "music": "MISSING: built without a score"
+  },
+  {
+   "bus": "dialogue",
+   "lufs_pre_master": -15.97
+  },
+  {
+   "bus": "rooms",
+   "lufs_pre_master": -38.89
+  },
+  {
+   "bus": "sfx",
+   "lufs_pre_master": -34.67
+  },
+  {
+   "bus": "music",
+   "lufs_pre_master": null
+  }
+ ],
+ "sfx": 59,
+ "lines": 69,
+ "lufs_integrated": -16.0,
+ "peak_dbfs": -1.23
+}

@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **What this is** | A conversation-by-conversation audit of the full Ep1 stick reel, `out/ep01/reel/ep01-full-v2.mp4` (22:20.5). It covers the dialogue (complete thoughts, real answers, blurts, cut-offs, whether each scene's want, obstacle, turn and cost come through), the coverage, how each take is delivered, the sound bed, and the chapter seams. Every spot that hurts has an episode timecode and a fix (§2). |
-| **Why** | The showrunner, 2026-09-26: "we should've been iterating on cheaper stick figure runs to nail down flow and dialogue before final render". The notes this audit checks against: SHOWRUNNER-NOTES 4 (scenes to be felt), 7 (let conversations play out; no blurts or random cut-offs), 13 (no random pauses of silence; the score must not play in fragments) and 9 (clear to a newcomer). **The lead's call on length:** the fixes here are for clarity and naturalness, not length. Length is in [length-v2.md](length-v2.md) (the `ep1s-length` pass), and nothing here is a cut. |
+| **Why** | The showrunner, 2026-09-26: "we should've been iterating on cheaper stick figure runs to nail down flow and dialogue before final render". The notes this audit checks against: SHOWRUNNER-NOTES 8 (scenes to be felt), 11 (let conversations play out; no blurts or random cut-offs), 17 (no random pauses of silence; the score must not play in fragments) and 13 (clear to a newcomer). **The lead's call on length:** the fixes here are for clarity and naturalness, not length. Length is in [length-v2.md](length-v2.md) (the `ep1s-length` pass), and nothing here is a cut. |
 | **Who, when** | The `ep1s-flowaudit` pass, 2026-09-27, about 02:30 → 03:00. |
 | **State** | Report only. This is the only file I wrote in the repo. `script.md` was not touched, and nothing was committed. |
 | **Honesty** | I can't watch or listen. Every number comes from a tool: the timelines, the take rows, pYIN pitch on every take, Whisper's transcripts (already in the take rows), a level pass over the episode mix, one decode of 6 s of the MP4's audio, and 18 frames from the MP4. **Question intonation** rests on two machine signals (pYIN contour and Whisper's punctuation). Where they agree I report it, but an ear decides. **Missing sound effects** are inferred from the bed labels and segment notes, and confirmed as flat room tone in the level measurements. Nobody has listened to them. |
@@ -26,7 +26,7 @@ The reply gaps vary naturally (no mechanical runs), no read is flat, and dialogu
    - the pop, the THUD, KA-CHING and the bell, Sydney's tick, the underline's squeak, the tear's tsss and the siren's J-cut;
    - the anchor's murmur in the sc 14 bridge.
 
-   The score is written to stop *on* four of those sounds (4:19.35, 5:33.0, 6:33.25, 10:14.5). With the sound missing, it just drops out to room tone: exactly the "random pauses of silence" of note 13.
+   The score is written to stop *on* four of those sounds (4:19.35, 5:33.0, 6:33.25, 10:14.5). With the sound missing, it just drops out to room tone: exactly the "random pauses of silence" of note 17.
 2. **The room ducks to near-silence between lines.** In the room-tone scenes the mixer ducks the bed 10 dB under every line. Launch night (sc 5, the series' first scene) and Tasya's terms play with the room at about −48.5 dBFS in every gap, 10–17 dB below the gaps in scored scenes.
 3. **Four of the nine chapter seams hurt:**
    - intro → Act One drops 25 LU into 8.9 s of bare room;
@@ -148,7 +148,7 @@ A **conversation** is a run of lines in one scene with no gap over 3 s, the defi
 | 12:51.7 | Act Four | see §6 | 101 lines; the longest conversation is 61 s (Gerg at 2 AM) | §6 |
 | 21:30.1 | 32–33, the tag | 2 one-word buttons | By design (a witness that never speaks) | #38, #39 |
 
-**What this says against the showrunner's note 7:**
+**What this says against the showrunner's note 11:**
 - Acts One–Three have 4 conversations over 30 s (43.3, 40.6, 36.9 and 31.4 s) and 4 more over 20 s (Gerg's call, Elgoog, the terms, Sydney).
 - The median line is 5–6 words, and 33 of 116 lines are three words or fewer. Most of the short ones are buttons or quick replies inside longer exchanges, not stand-alone blurts.
 - The one act that is structurally short on talk is Act Three: 30 % speech, against 41–44 % in Acts One and Two. That's by the script's design (Mas and a silent witness), and Gerg's call holds it together.

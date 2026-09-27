@@ -1,0 +1,29 @@
+{
+ "reel": "out/ep01/reel/ep01-v3-sample.mp4",
+ "manifest": "show/reel/trials/ep01-v3-sample-reel.manifest.json",
+ "fps": 24,
+ "chapters": [
+  {
+   "id": "title",
+   "label": "TITLE",
+   "kind": "title",
+   "start": 0,
+   "end": 3,
+   "episodeStart": 0,
+   "source": "manifest",
+   "sound": "silence (the reel slate)"
+  },
+  {
+   "id": "sample",
+   "label": "V3 SAMPLE",
+   "kind": "reel",
+   "start": 3,
+   "end": 335.875,
+   "episodeStart": 3,
+   "source": "ep01-v3-sample",
+   "sound": "its own mix: audio/reel/ep01-v3-sample/mix.wav from 0 s"
+  }
+ ],
+ "beds": [],
+ "warnings": []
+}

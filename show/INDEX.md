@@ -17,7 +17,7 @@ A new writer can get oriented in about an hour by reading these in order.
 | # | Read | Why |
 |---|---|---|
 | 1 | [README.md](README.md) | Folder layout and the five rules of the room. |
-| 2 | [bible/overview.md](bible/overview.md) | Logline, tone, theme, the 12-episode table, Mas and RUMPT as the two spines, THE PLAN device, disclaimer cards. |
+| 2 | [bible/overview.md](bible/overview.md) | Logline, tone, theme, the 12-episode table, Mas and RUMPT as the two spines, THE PLAN device, the notice (off screen; no disclaimer cards). |
 | 3 | [bible/guardrails.md](bible/guardrails.md) | The hard exclusions (X1–X12), the fairness rules, the fact tags and how facts appear on screen. Read before writing a single joke. |
 | 4 | [bible/naming.md](bible/naming.md) | The only source of names: people, orgs, products, places, collision rulings and proposed coinages. |
 | 5 | [timeline/master-timeline.md](timeline/master-timeline.md) | The verified fact spine, 1985 → Sep 25, 2026, with tags and the episode each event lands in. Skim the legend and the episode windows first. |
@@ -56,7 +56,7 @@ All twelve episodes are **drafted** (seven files each: outline, beats, flashback
 
 | File | What it is |
 |---|---|
-| [bible/overview.md](bible/overview.md) | Series overview: logline, tagline, tone, theme, season shape, the Mas and RUMPT spines, THE PLAN per episode, disclaimer cards, open decisions. |
+| [bible/overview.md](bible/overview.md) | Series overview: logline, tagline, tone, theme, season shape, the Mas and RUMPT spines, THE PLAN per episode, the notice (off screen; no disclaimer cards since 2026-09-27), open decisions. |
 | [bible/naming.md](bible/naming.md) | Canonical naming registry: scheme rules, every person/org/product/place, collision rulings, alternates, banned names, proposed coinages, pronunciations. |
 | [bible/guardrails.md](bible/guardrails.md) | Hard exclusions, fairness rules and the per-episode camp matrix, fact tags, on-screen fact grammar (incl. the casing rule), legal hygiene, per-character never-do list, pre-lock checklist. |
 | [bible/style-status.md](bible/style-status.md) | Visual style, **DECIDED: pixel art primary**, plus the options explored and the style-switch vocabulary. |

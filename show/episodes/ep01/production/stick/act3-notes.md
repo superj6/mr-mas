@@ -259,7 +259,7 @@ So `act3_bed.py` builds one temp stem from the timeline (the tag chapter does th
 | Gaps | median 1.12 s; quick replies 0.30–0.55 s; loaded 0.8–1.5 s |
 | SFX placements | 53 (in the stem) |
 
-For comparison, Act Four v4 was criticised at a median of 4 words a line and a longest conversation of 10 s (SHOWRUNNER-NOTES 7). Act Three is the act "with nobody in the room to talk to" (the script's header), so its talk is short by design outside the call.
+For comparison, Act Four v4 was criticised at a median of 4 words a line and a longest conversation of 10 s (SHOWRUNNER-NOTES 11). Act Three is the act "with nobody in the room to talk to" (the script's header), so its talk is short by design outside the call.
 
 ## 8. What the script leaves unclear for staging
 
@@ -443,7 +443,7 @@ In the real studio, `node src/reel/sync.mjs` (run from `studio/`) now copies `sh
 - **For the ear:**
   - the laugh (a laugh, or three spoken "ha"s?);
   - the new 1.75 s look between "which one's real?" and "the one with the pen." (filled by three servo whirs);
-  - the 2.5 s act-out black, now with no pre-lap: a deliberate silence, or a hole? This is note 13 territory, and it ends once F5 lands;
+  - the 2.5 s act-out black, now with no pre-lap: a deliberate silence, or a hole? This is note 17 territory, and it ends once F5 lands;
   - the 1.2 s of bare room before MM-01 enters at the Act Two seam.
 - **Scratch** (temporary, not needed to re-run anything), in `/tmp/claude-1000/-home-jgon-project-art-mrmas/a5e7723c-6ab4-4824-a1ed-8e367fdb82e5/scratchpad/ep1s-act3fix/`:
   - `*.before.*`: the plan, lines JSON, timeline, builder, stem script and QA as they were before this pass;

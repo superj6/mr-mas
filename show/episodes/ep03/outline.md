@@ -103,7 +103,7 @@ Five lines, one catch each, in all four movements (script notes §4): "nobody ev
 ≈ 74%, up from the reel's 65%. The stadium is watched from his seat in the box; the veto opens on his lobby TV; the Nobels and the November run play on his monitor with his glass in frame. **One exit:** the Misanthropic run (sc 18–19, ≈ 9%), which leaves through his window on the beacon's sweep and comes back through his glass, with Adelina measuring the essay against his inside it.
 
 ## World, public and lore
-- **PP3.1, THE STACK starts** (sc 10, Sep 23): his glass wakes his phone beside the essay: `SEP 17 · ELGOOG PAUSES CHILE DATA CENTER OVER WATER (REPORTED)` [H], on an opaque banner over his strawberry wallpaper. He turns it face down, unread. It rhymes with the essay's compute and causes nothing. +2.5 s, paid by the alley scene's trim; net 0.
+- **PP3.1, THE STACK starts** (sc 10, Sep 23): his glass wakes his phone beside the essay: `SEP 17 · ELGOOG PAUSES CHILE DATA CENTER OVER WATER` [H], on an opaque banner over his strawberry wallpaper. He turns it face down, unread. It rhymes with the essay's compute and causes nothing. +2.5 s, paid by the alley scene's trim; net 0.
 - **O3.1, PLANTAIR** (sc 20, item 5): a houseplant with an antenna on Misanthropic's step, beside NOZAMA's box. Nobody looks at it. 0 s.
 - **The state thread:** the veto is legible now (`SB 1047 · AI SAFETY`, `CALIFORNIA'S GOVERNOR.`), because the finale's `CALIFORNIA` cord depends on it. 0 s.
 - No China beat, no DOT and no China card this episode, by design (plan §15).

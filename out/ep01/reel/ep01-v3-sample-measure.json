@@ -1,0 +1,86 @@
+{
+ "manifest": "show/reel/trials/ep01-v3-sample-reel.manifest.json",
+ "key": "ep01-v3-sample-reel",
+ "host": {
+  "cores": 14,
+  "load1": 2.03
+ },
+ "jobs": 2,
+ "concurrency": 4,
+ "seg": 90,
+ "scale": 1,
+ "steps": {
+  "sync": 0.1,
+  "bundle": 5.5,
+  "plan": 0.2,
+  "mix": 2.4,
+  "render": 92.4,
+  "concat": 0.1,
+  "mixWaitAfterPicture": 0,
+  "mux": 7.1
+ },
+ "renderedSeconds": 335.9,
+ "segments": [
+  {
+   "file": "000-title-0-72-e6c5fc6dc7.mp4",
+   "chapter": "title",
+   "frames": 72,
+   "wall": 3.1
+  },
+  {
+   "file": "001-sample-72-2069-cb1d1077d7.mp4",
+   "chapter": "sample",
+   "frames": 1997,
+   "wall": 44.5
+  },
+  {
+   "file": "002-sample-2069-4067-5ff01d0001.mp4",
+   "chapter": "sample",
+   "frames": 1998,
+   "wall": 44.5
+  },
+  {
+   "file": "003-sample-4067-6064-1208e945be.mp4",
+   "chapter": "sample",
+   "frames": 1997,
+   "wall": 45.5
+  },
+  {
+   "file": "004-sample-6064-8061-6f5a9273e0.mp4",
+   "chapter": "sample",
+   "frames": 1997,
+   "wall": 44.8
+  }
+ ],
+ "frames": {
+  "expected": 8061,
+  "got": 8061
+ },
+ "wall": 105.5,
+ "reelSeconds": 335.9,
+ "speed": {
+  "reelSecondsPerMinuteWall": 191,
+  "renderedSecondsPerMinuteOfRenderStep": 218.1
+ },
+ "out": "out/ep01/reel/ep01-v3-sample.mp4",
+ "outBytes": 21147895,
+ "mix": {
+  "lufs": -15.958,
+  "peak": -1.232,
+  "missing": [],
+  "silences": [
+   [
+    0,
+    5.2
+   ],
+   [
+    163.65,
+    165.5
+   ],
+   [
+    236.15,
+    238
+   ]
+  ]
+ }
+}

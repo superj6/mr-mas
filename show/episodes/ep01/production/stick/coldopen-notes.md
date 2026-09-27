@@ -275,7 +275,7 @@ cp show/reel/ep01-full/ep01-coldopen-v2.json $RT/show/reel/
 - **The counter** answers "too far — from what?" with a picture, not a line. It plants Act One's year without a rail and costs no time: it rides the scrub's 3 s.
   - The intro then plays the same years forward from 1993 (2008, 2014, 2015).
   - The hold on `2022` is 1.05 s: a 4-character read needs about 0.45 s, so it reads as a stop, not a flicker.
-- **The hum** is the audit's "random pauses of silence" in this chapter (SHOWRUNNER-NOTES 13). The script already said "never to silence"; the v2 stem honoured that only on full-range speakers.
+- **The hum** is the audit's "random pauses of silence" in this chapter (SHOWRUNNER-NOTES 17). The script already said "never to silence"; the v2 stem honoured that only on full-range speakers.
 
 ### 9.3 Measured (the fix pass's test render)
 

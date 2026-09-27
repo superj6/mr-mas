@@ -19,7 +19,7 @@ The rail rolls like the odometer. The only exit from his view is F7.1, Mario's 2
    - **Pull back:** the frame shrinks into the bezel of Mas's dark-room monitor, his glass in the foreground. He's already scrolling past it. **Intro.**
    - *No-spoiler rule ([pacing-model L9](../../format/pacing-model.md#24-no-announced-climaxes-l9)):* the stamp waits in the frame, face hidden, until #18, when its face is seen for the first time. Viewers who know March get the chill; everyone else gets a very large stamp.
 
-## INTRO → `ep1.6_supply_chain_risk.pdf` + disclaimer
+## INTRO → `ep1.6_supply_chain_risk.pdf`
 See [intro-slot.md](intro-slot.md): the five spoiler-safe changes only.
 
 ## ACT 1: "RENAMED THRICE" (Jan → Feb 14)

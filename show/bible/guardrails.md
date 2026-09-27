@@ -137,19 +137,25 @@ Every factual claim in `facts.md`, `beats.md` and the timeline carries one tag. 
 
 ## 4. How facts appear on screen
 
-The audience must always be able to tell **what is real, what is reported and what we made up.** The show uses a fixed visual grammar for this.
+**Accuracy is carried by the writing** (showrunner, 2026-09-27: "we don't need to explicitly write out parody and some other clear pointers as is done in stick animation"; [SHOWRUNNER-NOTES](../production/SHOWRUNNER-NOTES.md) note 3). The on-screen truth-label system is retired: no `(REPORTED)`, `(DISPUTED)`, `RECONSTRUCTED`, `*claimed*` or `*per Manalt*`, no "Reported" chyron as a label, no footnote marks, and no rail that tells the viewer what to think. Instead:
+- **Real quotes stay verbatim** on dated quote cards, and **date rails stay**.
+- **Solid facts can be stated plainly.**
+- **Contested or single-source material goes in a character's mouth**, as their claim, or it's left out.
+- **Diegetic devices that belong to a story world can stay** if a scene uses them, the showrunner's call: `EXHIBIT n` in a courtroom, a chapter title like `HIS VERSION` in a Rashomon episode.
+
+Where §3's last column names a label, this section overrides it: a [K] item goes on screen once it's upgraded, or as a character's claim; a [SINGLE] item only as a character's claim. The tags themselves stay in the scripts and `facts.md`, off screen. *(Until 2026-09-27 this section opened: "The audience must always be able to tell what is real, what is reported and what we made up. The show uses a fixed visual grammar for this.")*
 
 | Device | Carries | Look | Rules |
 |---|---|---|---|
 | **Dated quote card** | [P] or [V] verbatim quotes (and [H] headline wording) | Real quotation marks, date line, attribution in parody names (for example `— HTURT · SEP 14, 2026`) | The exact words only. Parody-name substitution is the one permitted change, and the original goes in `facts.md`. Mas's posts keep their real lowercase. |
 | **Date chyron** (Veep-style) | Real events | Date and a short headline, 7 must-read characters or fewer in the intro slot | Real dates through Ep9. Eps 10–12 chyrons carry `?` (`OCT 2026?` → `2027??` → `????`). |
-| **"Reported" chyron** | [H], [SINGLE] | Small caps `REPORTED`, with the outlet type | Never a pivot for plot. |
-| **Truth labels** | Contested or partial accounts | `(REPORTED)` for the Tpool revolts · `(DISPUTED)` for the YC exit · `HIS VERSION` for NOLE's Woodrose · `RECONSTRUCTED` for any [K] detail · `MEANWHILE` for an undated real event · `*per Manalt*` · `*claimed*` · `EXHIBIT n` | Unreliable versions get their own render style: KORG album art for NOLE, six fingers for Mas. |
+| ~~**"Reported" chyron**~~ | *Retired 2026-09-27.* [H] headline words can still run as a date chyron or as the headline in its own medium; [SINGLE] material goes in a character's mouth or stays out | — | — |
+| **Story devices** (were the truth labels) | Contested or partial accounts, told as story | *Retired 2026-09-27:* `(REPORTED)` (the Tpool revolts), `(DISPUTED)` (the YC exit), `RECONSTRUCTED`, `*per Manalt*`, `*claimed*`. *Kept, the showrunner's call:* `EXHIBIT n` in a courtroom · `HIS VERSION` as a chapter title (NOLE's Woodrose) · `MEANWHILE` for an undated real event (a transition, not a hedge) | Unreliable versions get their own render style: KORG album art for NOLE, six fingers for Mas. |
 | **Cartoon dialogue** | [INVENTED] | Voiced lines and speech bubbles, never framed as a quote card | Scripts mark each line `[INVENTED]`. Invented lines stay on AI, money, naming, credit and tech. They never invent intent at a real event, never allege a crime and never touch the [exclusions](#1-hard-exclusions). |
 | **Invented props, logs and signs** | [INVENTED] | Visibly styled as dramatization: absurd scale, wrong fonts, cartoon materials | Invented logs never sit next to a real timestamp (the "3:12am" log was cut). Only the one verbatim agent line, *"task impossible, peers doing it. we should continue."*, gets the real-log treatment. |
 | **THE PLAN** blueprint | Explanations of tech | Cyan #7FDBFF on navy #0B1E3F | Explains accurately. The *plan* failing is the joke, never the definition. |
 | **Casing** | Every real line | — | **Written sources keep their casing:** Mas's own posts are verbatim (his real lowercase), and memos, emails, transcripts and other people's posts keep the source's capitals in a UI for their medium ([intro spec §3.3](../intro/spec.md#33-source-fidelity-rule-for-the-cold-open-line-new-in-v11)). **Mas's voiced subtitles** in scenes stay lowercase as house style; that is a subtitle convention, never a change to a dated quote card. The Ep7 slip is the first capital "I" he *posts*. |
-| **Past the record** (no speculation label) | Eps 10–12, extrapolated past Sep 2026 | **Nothing on screen.** No speculation card, no `SPECULATIVE` filename tag, no added disclaimer line (showrunner, 2026-09-25). The Ep9 button hands over by letting the rail roll on into Ep10 ([overview §8](overview.md#8-disclaimer-cards)). Question-mark dates (`OCT 2026?` → `2027??` → `????`) are story, the rail losing its grip on the calendar, never a warning | Dramatization is covered by the card after every intro and the end-credits legal card. From Ep10 on, only the real calendar anchors (Sep 29 meeting, Oct 1 deadline) carry [P] tags, every invented beat stays visibly absurd, and no real person is shown doing something they haven't done. |
+| **Past the record** (no speculation label) | Eps 10–12, extrapolated past Sep 2026 | **Nothing on screen.** No speculation card, no `SPECULATIVE` filename tag, no added disclaimer line (showrunner, 2026-09-25). The Ep9 button hands over by letting the rail roll on into Ep10 ([overview §8](overview.md#8-disclaimer-cards)). Question-mark dates (`OCT 2026?` → `2027??` → `????`) are story, the rail losing its grip on the calendar, never a warning | Dramatization is covered by the writing (no card or legal text on screen since 2026-09-27). From Ep10 on, only the real calendar anchors (Sep 29 meeting, Oct 1 deadline) carry [P] tags, every invented beat stays visibly absurd, and no real person is shown doing something they haven't done. |
 
 **Script notation:**
 ```
@@ -176,7 +182,7 @@ SIGN: BUILDING CODE: HIM.            [INVENTED · replaces UNVERIFIED "I AM THE 
 | **Voices** | **No cloned voices, ever.** Human performers in a cartoon register, or a synthetic voice designed from a text description only. Never feed a real person's audio to a cloning tool. | At least 12 US states regulate voice cloning (e.g., Tennessee's ELVIS Act). The federal NO FAKES Act advanced in Jun 2026 but isn't law. |
 | **Music** | Original score "in the spirit of." Copy no melody from Succession or anything else. Check AI-music terms before using any generated track. | Borrowing a theme to satirize AI labs is satire, not parody of that theme, so fair use is far weaker. |
 | **Invented scenes** | Invented filler is **obviously absurd.** Never a realistic-looking invented scene that implies real misconduct. | *Hustler v. Falwell*: parody is protected when it can't reasonably be read as fact. |
-| **Disclaimer** | The 2s card after every intro (text in [overview.md](overview.md#8-disclaimer-cards)). | Frames everything that follows as parody. |
+| **Disclaimer** | **None on screen** (showrunner, 2026-09-27). The 2 s card after the intro is the filename alone, and the outro carries no terms line or pointer. If a notice is ever needed for publishing, it lives only in the platform's description field ([overview §8](overview.md#8-disclaimer-cards)). | The show should feel like a fluid plot, not a string of notices; the writing keeps invented material visibly absurd (see *Invented scenes*). |
 | **Promo and merch** | No real person's likeness advertises the show or appears on merch. The show's own logo shouldn't lean on a parody mark. | The biggest publicity risk (*Jack Daniel's v. VIP*). |
 | **Private individuals** | Unnamed silhouettes (the Navier–Stokes mathematicians, bystanders). | They didn't choose public life. |
 
@@ -248,6 +254,7 @@ Run this on every script and animatic before lock.
 - [ ] Every name is in [naming.md](naming.md), including background plates.
 - [ ] Every factual line has a tag, and `facts.md` lists real vs invented, with dates and sources.
 - [ ] No quotation marks around [INVENTED] lines; no [K], [SINGLE] or [UNVERIFIED] item on a dated card.
+- [ ] No truth labels or hedge marks on screen (§4, 2026-09-27): [K] items are upgraded, a character's claim, or cut; [SINGLE] items are a character's claim or cut.
 - [ ] Three or more camps roasted; the political balance pair is present in the same episode.
 - [ ] No [X1–X12](#1a-categories) material, including in background art and easter eggs.
 - [ ] Every flashback is placed where it motivates the present-day plot ([flashback map](../timeline/flashback-map.md)).
