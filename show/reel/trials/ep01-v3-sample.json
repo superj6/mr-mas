@@ -9,20 +9,8 @@
  "dialogueReel": true,
  "cast": {
   "mas": {
-   "role": "MAN AT THE DESK"
-  },
-  "orb": {
-   "name": "THE ORB",
+   "role": "MAN AT THE DESK",
    "known": true
-  },
-  "neleh": {
-   "role": "BLUEPRINT FIGURE"
-  },
-  "mada": {
-   "role": "SPINNER ICON"
-  },
-  "alyi": {
-   "role": "VOICE ON THE CALL"
   },
   "gerg": {
    "role": "CO-FOUNDER"
@@ -30,26 +18,75 @@
   "rima": {
    "role": "WOMAN IN THE SPOTLIGHT"
   },
-  "employee": {
-   "name": "EMPLOYEE",
-   "role": "EMPLOYEE"
+  "alyi": {
+   "role": "VOICE ON THE CALL"
+  },
+  "chatgtp": {
+   "name": "CHATGTP",
+   "role": "SPEECH BUBBLE"
   },
   "staff": {
    "name": "STAFF",
    "role": "STAFF",
    "known": true
   },
+  "nole": {
+   "role": "MAN IN THE POST"
+  },
+  "radnus": {
+   "role": "MAN WITH THE EXTINGUISHER"
+  },
+  "nirb": {
+   "name": "NIRB",
+   "role": "FOUNDER"
+  },
+  "egap": {
+   "name": "EGAP",
+   "role": "FOUNDER WITH THE MUG"
+  },
+  "tasya": {
+   "role": "MAN AT THE DOOR",
+   "known": true
+  },
+  "sydney": {
+   "name": "SYDNEY",
+   "role": "CHAT BUBBLE"
+  },
+  "kram": {
+   "role": "MAN IN THE HOODIE"
+  },
   "mario": {
    "role": "MAN AT THE LIGHTHOUSE"
+  },
+  "clod": {
+   "name": "CLOD",
+   "role": "CLAY FIGURE"
+  },
+  "oigneb": {
+   "name": "OIGNEB",
+   "role": "MAN WITH THE SIGN"
+  },
+  "orb": {
+   "name": "THE ORB",
+   "known": true
+  },
+  "neleh": {
+   "role": "BLUEPRINT FIGURE",
+   "known": true
+  },
+  "mada": {
+   "role": "SPINNER ICON",
+   "known": true
+  },
+  "employee": {
+   "name": "EMPLOYEE",
+   "role": "EMPLOYEE"
   },
   "adelina": {
    "role": "WOMAN AT THE LIGHTHOUSE"
   },
   "ttemme": {
    "role": "MAN IN THE HOODIE"
-  },
-  "tasya": {
-   "role": "MAN AT THE DOOR"
   },
   "terb": {
    "role": "MAN WITH THE EXTINGUISHER"
@@ -386,7 +423,21 @@
     }
    ],
    "reelDur": 7.86,
-   "fx": []
+   "fx": [],
+   "names": [
+    {
+     "id": "gerg",
+     "at": 1.265
+    },
+    {
+     "id": "rima",
+     "at": 2.815
+    },
+    {
+     "id": "alyi",
+     "at": 4.715
+    }
+   ]
   },
   {
    "id": "5.03",
@@ -2952,7 +3003,7 @@
    "fx": [],
    "seq": {
     "id": "S1",
-    "side": "HIS SIDE",
+    "side": "",
     "place": "Las Vegas: the hotel suite",
     "time": "Fri Nov 17, 2023 · ~noon"
    },
@@ -3240,7 +3291,8 @@
    "seq": {
     "sub": "THE PLAN",
     "place": "THE PLAN: the blueprint behind the button",
-    "time": "noon"
+    "time": "noon",
+    "side": ""
    },
    "names": [
     {
@@ -3663,7 +3715,8 @@
    "seq": {
     "sub": "the call",
     "place": "the board call, on his laptop",
-    "time": "noon"
+    "time": "noon",
+    "side": ""
    },
    "speak": [
     {
@@ -3931,7 +3984,7 @@
    "fx": [],
    "seq": {
     "id": "S2",
-    "side": "HIS SIDE",
+    "side": "",
     "place": "his dark room",
     "time": "Fri Nov 17 · that night"
    },
@@ -4104,7 +4157,7 @@
    "fx": [],
    "seq": {
     "id": "S5",
-    "side": "HIS SIDE",
+    "side": "",
     "place": "his dark room (Gerg on the monitor)",
     "time": "Mon Nov 20 · ~2:06 AM"
    },

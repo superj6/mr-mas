@@ -40,6 +40,8 @@ def get(bid, new_id=None):
     if new_id:
         b['id'] = new_id
     b['side'] = ''  # no HIS SIDE / THE BOARD'S SIDE badges: the voice tells us whose side we're on
+    if isinstance(b.get('seq'), dict):
+        b['seq']['side'] = ''
     on = []
     for o in b.get('onscreen', []):
         t = o['text'] if isinstance(o, dict) else o
@@ -107,6 +109,9 @@ b = get('5.01'); dur(b, 3.0); beats.append(b)
 note('5.01', '2.0 -> 3.0 s', 'arrival: the bullpen room tone under the button before anything happens')
 
 b = get('5.02'); b['lines'] = [vo_line('v3s-01', 1.2)]; dur(b, 1.2 + vo_len('v3s-01') + 1.0)
+# his voice names them: the strip and the figures switch from roles to names on each name's word
+_w = {w[0].strip('.,').lower(): w[1] for w in b['lines'][0]['words']}
+b['names'] = [{'id': k, 'at': round(1.2 + _w.get(k, 0.0), 3)} for k in ('gerg', 'rima', 'alyi')]
 b['caption'] = 'The bullpen after hours, held: the room and the three people in it before anyone speaks.'
 beats.append(b)
 note('5.02', f"4.4 -> {b['reelDur']:.1f} s; V.O. v3s-01", 'arrival, and the introduction the plates did: who wants what, in his read')
@@ -210,7 +215,9 @@ ep = {
     'dateSpan': 'Nov 30, 2022 · Nov 17-20, 2023',
     'runtimeMin': round(total / 60, 2),
     'dialogueReel': True,
-    'cast': A4.get('cast', {}),
+    'cast': {**A1.get('cast', {}), **A4.get('cast', {}),
+             # the sample starts mid-episode: Mas was named in the cold open, the board and the landlord before Act Four
+             **{k: {**A4.get('cast', {}).get(k, {}), 'known': True} for k in ('mas', 'neleh', 'mada', 'tasya', 'orb')}},
     '_source': 'audio/reel/ep01-v3-sample/build_timeline.py (v3-plan.md §8)',
     '_edits': EDITS,
     'beats': beats,

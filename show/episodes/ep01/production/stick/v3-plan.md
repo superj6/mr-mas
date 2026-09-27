@@ -252,7 +252,7 @@ These are drafts. The guide's tests (§ "is it corny?") apply to each.
 
 - **What:** about 4 minutes of stick reel. It runs launch night through the bill (sc 5–7), Vegas through the night (S1–S2), and 2 AM (S5). The three are chosen for three moods: warm, suspense and loyal.
 - **Built with every v3 change:** arrivals and aftermaths, J/L cuts, the inner voice (recorded), the new temp music colours, and no pointers.
-- **Checked** with the newcomer read on the sample alone before the showrunner sees it.
+- **Built** by `audio/reel/ep01-v3-sample/build_timeline.py` (the timeline, with every edit and its reason in `_edits`), `mix.py` (takes, rooms leading the cuts, SFX, the one silence, the ducked score) and the composer's temp stem in `audio/reel/ep01-v3-sample/music/`. It's 5:33 because Vegas keeps THE PLAN's blueprint whole. No cold read yet: the showrunner sees it first.
 - **Output:** `out/ep01/reel/ep01-v3-sample.mp4`.
 - **Then the full pass** (§9), after the showrunner's notes on the sample.
 
