@@ -1,19 +1,27 @@
-// MR. MAS · range E1-P2: the exit, the [2S] at the dark-room desk, pure pixel, from the shared plate as it is
-// (rooms/twoshots.ts drawDark2S: Mas, the Orb, three marks in the wood, the glass with its flat water line, the GUEST
-// lanyard, the phone face down). The monitor, small at frame left, still holds the stills: the same three holds, now
-// in the room's own pixels (each still downsampled and snapped to the master palette, the way every screen in the show
-// renders its content). Until the iris steps back to Mas, the Orb's eye-light is still a cyan spot on that glass.
-// The rack's slot starts to whir: its activity LED blinks and the magazine's edge shows in the mouth.
+// MR. MAS · range E1-P2: the exit, the [2S] at the dark-room desk, pure pixel (v5). It is the shared plate
+// (rooms/darkroom-plate.ts) composed here in drawDark2S's own order, so this shot can do what the shared helper
+// doesn't: Mas breathes (his back image rises a pixel on a slow cycle; the forearms stay on the desk), turns his head
+// from the screen to the Orb and gives the one-pixel smile, his hands clasped (v4's resting fists read as lumps), and
+// the GUEST card sits a rung down in the room's light (v4 drew it in flat paper, the brightest, most saturated thing in
+// the frame: the cold review's eye went to it before his face).
+// The monitor, small at frame left, holds the same player the [OTS] showed: the same title strip (play glyph, a clean
+// title bar, three dots: v4's tiny type sampled into garbage), the same 3 x 2 contact sheet of the same six stills,
+// in the room's own pixels (each still downsampled and snapped to the master palette, the way every screen in the
+// show renders its content), and the chyron under them as marks. The rack's slot starts to whir: its activity LED
+// blinks and the magazine's edge shows in the mouth.
 import {Buf, rect} from '../../../shared/pixel/px';
-import {PAL, nearest, FAMILIES} from '../../../shared/pixel/palette';
-import {drawDark2S} from '../../../shared/pixel/rooms/twoshots';
-import {DPLATE, DPLATE_LOOK} from '../../../shared/pixel/rooms/darkroom-plate';
+import {PAL, FAMILIES} from '../../../shared/pixel/palette';
+import {DPLATE, DPLATE_LOOK, DarkPlateOpts, drawDarkPlate, drawDarkPlateDesk, drawDarkPlateFront} from '../../../shared/pixel/rooms/darkroom-plate';
 import {tiny} from '../../../shared/pixel/rooms/kit-b';
+import * as OM from '../../../shared/pixel/cast/orb-medium';
+import * as MM from '../../../shared/pixel/cast/mas-medium';
+import type {Img} from '../../../shared/pixel/figure';
 import type {Beat} from './plan';
 
 /** a still as palette pixels (w x h), from the host (it reads the take frame's pixels once) */
 export type StillPx = {w: number; h: number; c: Uint32Array};
-export const SMALL = {w: 30, h: 17};
+/** the monitor's virtual screen is 96 x 60 (the plate samples it onto its turned quad): six 29 x 16 thumbnails */
+export const SMALL = {w: 29, h: 16};
 /** snap an RGBA thumbnail to the master palette, matching in CIELAB so the duck keeps its hue (a plain RGB nearest
  *  after dimming sent the yellow to the tungsten family's browns). Low-chroma pixels (the sweep) match on the greys and
  *  paper only, so the backdrop reads as one grey field; coloured pixels match on tungsten, paper and greys, hue weighted.
@@ -45,43 +53,70 @@ export const toPalette = (rgba: Uint8ClampedArray, w: number, h: number): StillP
   }
   return {w, h, c};
 };
-void nearest;
 
 const MID: [number, number] = [(DPLATE_LOOK.grid[0] + DPLATE_LOOK.face[0]) / 2, (DPLATE_LOOK.grid[1] + DPLATE_LOOK.face[1]) / 2];
 // the monitor in this plate is at frame left and slightly below the Orb: its look into the screen
 const MONITOR_LOOK: [number, number] = [-0.96, 0.02];
 
+/** the player on the plate's monitor: the [OTS]'s layout at the virtual screen's size */
+const player = (stills: StillPx[]) => (scr: Buf) => {
+  rect(0, 0, scr.w, scr.h, scr.ink(PAL.N1));
+  // the title strip: the play glyph, the title as one clean bar (type this small only samples into noise), the dots
+  rect(0, 0, scr.w, 7, scr.ink(PAL.G0));
+  rect(0, 7, scr.w, 1, scr.ink(PAL.N0));
+  for (let k = 0; k < 3; k++) rect(3 + k, 1 + k, 1, 5 - 2 * k, scr.ink(PAL.G5));
+  rect(9, 3, 30, 1, scr.ink(PAL.P0));
+  for (let i = 0; i < 3; i++) rect(scr.w - 16 + i * 5, 3, 2, 2, scr.ink(PAL.G2));
+  // the sheet: 3 x 2, hairline gaps
+  stills.forEach((s, i) => {
+    const x0 = 2 + (i % 3) * (SMALL.w + 2), y0 = 11 + Math.floor(i / 3) * (SMALL.h + 2);
+    rect(x0 - 1, y0 - 1, SMALL.w + 2, SMALL.h + 2, scr.ink(PAL.N0));
+    for (let y = 0; y < s.h; y++) for (let x = 0; x < s.w; x++) scr.set(x0 + x, y0 + y, s.c[y * s.w + x]);
+  });
+  // the chyron under it, as marks (it was read in the [OTS]; here it only has to be the same bar)
+  rect(2, 48, 91, 7, scr.ink(PAL.N0));
+  rect(2, 48, 2, 7, scr.ink(PAL.R2));
+  for (let x = 7; x < 70; x++) if (x % 5 !== 4 && x % 17 !== 0) scr.set(x, 51, PAL.P1);
+};
+
+/** the GUEST lanyard laid square beside the glass, a rung down (the plate's own drawing, in the room's light) */
+const dimLanyard = (b: Buf) => {
+  const {x, y} = DPLATE.lanyard;
+  for (let i = 2; i < 24; i++) { b.set(x + i, y - 9, PAL.G2); b.set(x + i, y - 8, PAL.G1); }
+  for (let j = -8; j < 0; j++) { b.set(x + 1, y + j, PAL.G2); b.set(x + 24, y + j, PAL.G1); }
+  rect(x + 10, y - 2, 6, 3, b.ink(PAL.G2)); rect(x + 10, y - 2, 6, 1, b.ink(PAL.G4));
+  rect(x, y, 26, 15, b.ink(PAL.G3)); rect(x, y, 26, 4, b.ink(PAL.R1)); rect(x, y + 14, 26, 1, b.ink(PAL.G2));
+  rect(x, y, 26, 1, b.ink(PAL.C2));                                   // its top edge catches the monitor
+  rect(x + 26, y + 1, 1, 15, b.ink(PAL.N0)); rect(x + 1, y + 15, 26, 1, b.ink(PAL.N0));
+  tiny(b, 'GUEST', x + 3, y + 7, PAL.N1);
+};
+
+/** Mas breathes on 2s: his back image (head, shoulders) rises one pixel on a slow cycle; the forearms stay put */
+const breath2S = (f: number) => {
+  const e = f - (f % 2);
+  return (e + 36) % 96 >= 44 && (e + 36) % 96 < 80 ? -1 : 0;
+};
+const put = (b: Buf, img: Img, x: number, y: number, yMax = Infinity) => {
+  for (let j = 0; j < img.h; j++) for (let i = 0; i < img.w; i++) {
+    const v = img.c[j * img.w + i];
+    if (v < 0 || y + j >= yMax) continue;
+    b.set(x + i, y + j, v);
+  }
+};
+
 export const draw2S = (b: Buf, f: number, beat: Beat, stills: StillPx[]) => {
   const look = beat.iris === 'monitor' ? MONITOR_LOOK : beat.iris === 'mid' ? MID : DPLATE_LOOK.face;
-  const screen = (scr: Buf) => {
-    rect(0, 0, scr.w, scr.h, scr.ink(PAL.N1));
-    rect(0, 0, scr.w, 7, scr.ink(PAL.G0));
-    tiny(scr, 'ELGOOG DEMO', 5, 1, PAL.P0);
-    stills.forEach((s, i) => {
-      const x0 = 2 + i * (SMALL.w + 2), y0 = 16;
-      rect(x0 - 1, y0 - 1, SMALL.w + 2, SMALL.h + 2, scr.ink(PAL.N0));
-      for (let y = 0; y < s.h; y++) for (let x = 0; x < s.w; x++) scr.set(x0 + x, y0 + y, s.c[y * s.w + x]);
-    });
-    // the chyron, as marks (unreadable at this size, and it doesn't need to be read again)
-    rect(2, 40, 84, 7, scr.ink(PAL.N0));
-    rect(2, 40, 2, 7, scr.ink(PAL.R2));
-    for (let x = 7; x < 83; x++) if (x % 5 !== 4 && x % 17 !== 0) scr.set(x, 43, PAL.P1);
-    if (beat.iris === 'monitor') {
-      // the Orb's eye-light, still on the glass over the middle still
-      const cx = 2 + SMALL.w + 2 + SMALL.w / 2, cy = 24;
-      for (let y = -5; y <= 5; y++) for (let x = -8; x <= 8; x++) {
-        const d = Math.hypot(x / 8, y / 5);
-        if (d > 1) continue;
-        const X = Math.round(cx + x), Y = cy + y;
-        if (d > 0.75) { if (((X + Y) & 1) === 0) scr.set(X, Y, PAL.C4); } else scr.set(X, Y, d < 0.45 ? PAL.C3 : scr.get(X, Y) === PAL.N1 ? PAL.C1 : scr.get(X, Y));
-      }
-    }
-  };
-  drawDark2S(b, f, {
-    mas: {head: '34', arm: 'rest', look: -1},
-    orb: {look, aperture: 0.5},
-    plate: {tally: 3, glass: true, lanyard: true, phone: 'down', screen},
-  });
+  const o: DarkPlateOpts = {tally: 3, glass: true, lanyard: false, phone: 'down', screen: player(stills)};
+  drawDarkPlate(b, f, o);
+  const [ox, oy] = DPLATE.orb;
+  OM.drawOrb(b, ox, oy + OM.orbBob(f), OM.ORB_MR, {look, aperture: 0.5, monitor: -1});
+  const s: MM.MasMediumState = {...MM.MAS_MEDIUM_DEFAULT, head: beat.head, arm: 'clasp', look: beat.masLook, brow: beat.brow, mouth: beat.smile ? 'smile' : 'rest'};
+  const [mx, my] = DPLATE.mas;
+  put(b, MM.masMediumBack(s), mx, my + breath2S(f));
+  drawDarkPlateDesk(b, f, o);
+  dimLanyard(b);
+  put(b, MM.masMediumFront(s), mx, my);
+  drawDarkPlateFront(b, f, o);
   if (beat.whir >= 0) {
     // the slot starts to whir: its activity LED blinks on 2s, and from a beat in, the magazine's edge in the mouth
     const {x, y, w, h} = DPLATE.slot;

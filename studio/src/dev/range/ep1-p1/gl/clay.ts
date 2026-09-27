@@ -118,7 +118,7 @@ const ball = (r: number, sx = 1, sy = 1, sz = 1, seed = 0, amp = 0.0012) => { co
 const capsule = (r: number, len: number, seed: number) => handPush(new THREE.CapsuleGeometry(r, len, 12, 32), 0.0021, seed);
 
 /** weld, mark (dents, smears: PINNED by the part's own seed), colour (mottling: by the SURFACE's seed) */
-const finish = (g0: Any, seed: number, marks: number, surf: number) => {
+const finish = (g0: Any, seed: number, marks: number, surf: number, clean = false) => {
   let g = g0.index ? g0.toNonIndexed() : g0;
   g.deleteAttribute('uv'); g.deleteAttribute('normal');
   g = mergeVertices(g, 1e-5);
@@ -126,7 +126,7 @@ const finish = (g0: Any, seed: number, marks: number, surf: number) => {
   const p = g.attributes.position, nrm = g.attributes.normal, n = p.count;
   const P = (i: number) => [p.getX(i), p.getY(i), p.getZ(i)];
   const disp = new Float32Array(n), shade = new Float32Array(n);
-  const dents = Math.round(24 * marks);
+  const dents = clean ? 0 : Math.round(24 * marks);
   for (let k = 0; k < dents; k++) {
     const c = P(Math.floor(h01(k, 1, seed) * n)), R = 0.008 + h01(k, 2, seed) * 0.011, dep = (0.0009 + h01(k, 3, seed) * 0.0014) * Math.min(1, marks);
     const el = 0.6 + h01(k, 4, seed) * 0.5, ang = h01(k, 5, seed) * Math.PI;
@@ -140,7 +140,7 @@ const finish = (g0: Any, seed: number, marks: number, surf: number) => {
       shade[i] += bowl * 0.08 - lip * 0.05;
     }
   }
-  const smears = Math.round(9 * marks);
+  const smears = clean ? 0 : Math.round(9 * marks);
   for (let k = 0; k < smears; k++) {
     const a = P(Math.floor(h01(k, 11, seed) * n)), b = P(Math.floor(h01(k, 12, seed) * n));
     const L = Math.hypot(b[0] - a[0], b[1] - a[1], b[2] - a[2]);
@@ -165,8 +165,10 @@ const finish = (g0: Any, seed: number, marks: number, surf: number) => {
     const lump = (vnoise(q[0] * 180 + S.lump, q[1] * 180 + q[2] * 97, S.lump) - 0.5) * 0.0003;
     const dd = disp[i] + lump;
     p.setXYZ(i, q[0] + nrm.getX(i) * dd, q[1] + nrm.getY(i) * dd, q[2] + nrm.getZ(i) * dd);
-    const mott = (vnoise(q[0] * 40 + S.mott, q[1] * 40 + q[2] * 23, S.mott) - 0.5) * 0.08;
-    const grit = h01(i, 7, seed) > 0.992 ? -0.12 : 0;
+    // round 6: a clean part (the clipboard's page) takes no mottling and no grit: on the page they read as
+    // "camouflage, a texture error" at full size
+    const mott = clean ? 0 : (vnoise(q[0] * 40 + S.mott, q[1] * 40 + q[2] * 23, S.mott) - 0.5) * 0.08;
+    const grit = !clean && h01(i, 7, seed) > 0.992 ? -0.12 : 0;
     const k = 1 - shade[i] + mott + grit;
     col[i * 3] = k; col[i * 3 + 1] = k; col[i * 3 + 2] = k;
   }
@@ -176,7 +178,7 @@ const finish = (g0: Any, seed: number, marks: number, surf: number) => {
 };
 
 // ------------------------------------------------------------------ the rest puppet: parts with a rig role
-interface Part { geo: Any; mat: string; id: number; role: 'soft' | 'rigid' | 'wheel'; anchor?: number[]; arm?: boolean; marks?: number }
+interface Part { geo: Any; mat: string; id: number; role: 'soft' | 'rigid' | 'wheel'; anchor?: number[]; arm?: boolean; marks?: number; clean?: boolean }
 const RIG = {hipY: 0.075, neckY: 0.213, neckZ: 0.004, shoulder: [0.082, 0.168, 0.03]};
 const bake = (g: Any, pos: number[], rot: number[] = [0, 0, 0]) => {
   const m = new THREE.Matrix4().compose(new THREE.Vector3(...pos), new THREE.Quaternion().setFromEuler(new THREE.Euler(rot[0], rot[1], rot[2])), new THREE.Vector3(1, 1, 1));
@@ -263,7 +265,8 @@ const buildParts = (seed: number, mouth: 0 | 1 | 2, lid: 0 | 1 | 2 = 0): Part[] 
       q.setXYZ(i, x + (x / r) * g, y, z + (z / r) * g);
     }
   }
-  // the niche for the potter's wheel: the chest pressed in with a thumb (a bowl 14 mm deep inside the ring)
+  // the niche for the potter's wheel: the chest pressed in with a thumb (round 6: a shallow bowl, 5 mm: at 9 mm
+  // its dark back and the wheel's pale crescent read as "a hole or a wound" at phone size)
   {
     const q = bodyG.attributes.position;
     for (let i = 0; i < q.count; i++) {
@@ -271,7 +274,7 @@ const buildParts = (seed: number, mouth: 0 | 1 | 2, lid: 0 | 1 | 2 = 0): Part[] 
       if (z <= 0) continue;
       const r = Math.hypot(x, y - 0.125) / 0.024;
       if (r >= 1) continue;
-      const rr = Math.hypot(x, z) || 1, d = 0.009 * Math.sqrt(1 - r * r);
+      const rr = Math.hypot(x, z) || 1, d = 0.005 * Math.sqrt(1 - r * r);
       q.setXYZ(i, x - (x / rr) * d, y, z - (z / rr) * d);
     }
   }
@@ -287,9 +290,18 @@ const buildParts = (seed: number, mouth: 0 | 1 | 2, lid: 0 | 1 | 2 = 0): Part[] 
   // the clipboard, gripped against the belly
   const clip = (g: Any) => bake(g, [0.058, 0.108, 0.082], [-0.3, 0.42, -0.06]);
   add(clip(handPush(new THREE.BoxGeometry(0.07, 0.09, 0.007, 20, 24, 3), 0.0011, seed + 20)), 'board', 3, 'rigid', RIG.shoulder, true);
-  add(clip(bake(handPush(new THREE.BoxGeometry(0.058, 0.07, 0.0025, 16, 18, 2), 0.0007, seed + 22), [0.001, -0.006, 0.0045])), 'paper', 4, 'rigid', RIG.shoulder, true);
+  add(clip(bake(new THREE.BoxGeometry(0.058, 0.07, 0.0025, 16, 18, 2), [0.001, -0.006, 0.0045])), 'paper', 4, 'rigid', RIG.shoulder, true);
+  parts[parts.length - 1].clean = true; parts[parts.length - 1].marks = 0;
   add(clip(bake(handPush(new THREE.BoxGeometry(0.032, 0.013, 0.011, 8, 5, 3), 0.0012, seed + 21), [0, 0.043, 0.006])), 'dark', 2, 'rigid', RIG.shoulder, true);
-  for (let k = 0; k < 3; k++) add(clip(bake(capsule(0.0016, 0.034 - k * 0.007, seed + 30 + k), [-0.004 - k * 0.002, 0.018 - k * 0.015, 0.0068], [0, 0, Math.PI / 2 + (h01(k, 3, seed) - 0.5) * 0.12])), 'dark', 2, 'rigid', RIG.shoulder, true);
+  // round 6: a checklist that reads as one: three bold rolled lines and a big tick (it was three hairlines on a
+  // mottled page, "camouflage")
+  const stroke = (a: number[], b: number[], r: number, mat: string, s2: number) => {
+    const dx = b[0] - a[0], dy = b[1] - a[1], L = Math.hypot(dx, dy);
+    add(clip(bake(capsule(r, Math.max(0.001, L - 2 * r), s2), [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2, 0.0068], [0, 0, Math.atan2(-dx, dy)])), mat, 2, 'rigid', RIG.shoulder, true);
+  };
+  for (let k = 0; k < 3; k++) { const y = 0.02 - k * 0.013, w = 0.036 - k * 0.008; stroke([-0.022, y], [-0.022 + w, y + (h01(k, 3, seed) - 0.5) * 0.002], 0.0024, 'dark', seed + 30 + k); }
+  stroke([0.002, -0.021], [0.008, -0.029], 0.0027, 'tick', seed + 34);
+  stroke([0.008, -0.029], [0.022, -0.011], 0.0027, 'tick', seed + 35);
   add(bake(ball(0.021, 0.9, 1.1, 1.0, seed + 14), [0.093, 0.1, 0.07]), 'terracotta', 1, 'rigid', RIG.shoulder, true);
   add(bake(ball(0.0085, 1.3, 0.8, 0.8, seed + 15, 0.0006), [0.084, 0.108, 0.094], [0, 0, 0.4]), 'terracotta', 1, 'rigid', RIG.shoulder, true);
   // the bow tie
@@ -304,11 +316,13 @@ const buildParts = (seed: number, mouth: 0 | 1 | 2, lid: 0 | 1 | 2 = 0): Part[] 
   add(bake(new THREE.TorusGeometry(0.024, 0.0045, 16, 64), [0, 0.125, 0.076], [-0.12, 0, 0]), 'terracotta', 1, 'rigid', [0, 0.125, 0.076]);
   add(bake(new THREE.CircleGeometry(0.023, 48), [0, 0.125, 0.0705], [-0.12, 0, 0]), 'hollow', 5, 'rigid', [0, 0.125, 0.076]);
   const wheelG = new THREE.CylinderGeometry(0.0165, 0.0175, 0.0045, 48);
-  add(wheelG, 'wheel', 5, 'wheel', [0, 0.12, 0.071]);
-  add(lathe([[0.0005, 0], [0.008, 0.001], [0.0065, 0.008], [0.0045, 0.013], [0.0055, 0.015], [0.0005, 0.0155]], 32), 'terracotta', 1, 'wheel', [0, 0.12, 0.071]);
+  add(wheelG, 'wheel', 5, 'wheel', [0, 0.12, 0.077]);
+  // round 6: the thrown lump is a POT (a belly, a neck, a lip), a shade lighter than CLOD, so the wheel reads as a
+  // potter's wheel with work on it, not a dent
+  add(lathe([[0.0005, 0], [0.0075, 0.0008], [0.0092, 0.005], [0.0078, 0.0095], [0.0055, 0.0125], [0.0062, 0.0145], [0.0005, 0.013]], 40), 'pot', 1, 'wheel', [0, 0.12, 0.077]);
   // the wheel's fleck (a dot of dark clay on its rim) and a thumb groove on the lump: the turn reads from these
-  add(bake(ball(0.0026, 0.8, 1.1, 1.3, seed + 60, 0.0002), [0.0172, 0, 0]), 'dark', 2, 'wheel', [0, 0.12, 0.071]);
-  add(bake(ball(0.0019, 0.7, 1.6, 0.9, seed + 61, 0.0001), [0.0062, 0.0065, 0]), 'dark', 2, 'wheel', [0, 0.12, 0.071]);
+  add(bake(ball(0.0026, 0.8, 1.1, 1.3, seed + 60, 0.0002), [0.0172, 0, 0]), 'dark', 2, 'wheel', [0, 0.12, 0.077]);
+  add(bake(ball(0.0019, 0.7, 1.6, 0.9, seed + 61, 0.0001), [0.0062, 0.0065, 0]), 'dark', 2, 'wheel', [0, 0.12, 0.077]);
   // the face: two pressed eyes, and the mouth of the drawing
   // (glossy beads of dark clay, a little bigger than P3's so the face reads at 480 x 270; they catch the can)
   for (const s of [-1, 1]) { add(bake(ball(0.0066, 1, 1.15, 0.7, seed + 50 + s, 0.0003), [s * 0.0145, 0.263, 0.053]), 'eye', 2, 'rigid', [0, 0.25, 0.05]); parts[parts.length - 1].marks = 0; }
@@ -359,21 +373,23 @@ const rigidFor = (anchor: number[], pz: Pose, arm: boolean) => {
 export interface Puppet { group: Any; meshes: Any[] }
 /** the wheel's tip toward the lens (rad about x): a level camera saw its head edge-on, so the turn and the thrown
  *  lump didn't read and the niche read as a hole; tipped ~40 degrees its head is an ellipse with the fleck on it */
-const WHEEL_TILT = 0.7;
+const WHEEL_TILT = 0.95; // round 6: 0.7 -> 0.95, and the wheel sits 6 mm further out (the niche is shallower): its head is a grey disc, not a crescent
 const MATS = (tex: ClayTex, surf: number, mode: ClayMode): Record<string, Any> => {
   if (mode === 'id') {
     // the part's code, flat, in the red channel (40 x id / 255, written linear: no colour management on a code)
     const b = (id: number) => new THREE.MeshBasicMaterial({color: new THREE.Color().setRGB((id * 40) / 255, 0, 0, THREE.LinearSRGBColorSpace)});
-    return {terracotta: b(1), dark: b(2), eye: b(2), board: b(3), paper: b(4), wheel: b(5), hollow: b(5), mouth: b(2), tongue: b(2)};
+    return {terracotta: b(1), dark: b(2), eye: b(2), board: b(3), paper: b(4), wheel: b(5), hollow: b(5), mouth: b(2), tongue: b(2), tick: b(2), pot: b(1)};
   }
   return {
     terracotta: clayMat(0xb04e32, tex, surf, {scale: 5, rough: 0.52, str: 1.9, cc: 0.22}),
     dark: clayMat(0x2e3a4a, tex, surf, {scale: 11, rough: 0.5, str: 1.2, cc: 0.18}),
     eye: clayMat(0x1a202c, tex, surf, {scale: 14, rough: 0.32, str: 0.4, grainStr: 0.3, cc: 0.75}),
-    board: clayMat(0xc9a27c, tex, surf, {scale: 9, rough: 0.72, str: 1.3}),
-    paper: clayMat(0xe0d2b6, tex, surf, {scale: 12, rough: 0.8, str: 0.9}),
-    wheel: clayMat(0x9aa0a8, tex, surf, {scale: 12, rough: 0.45, str: 0.9, cc: 0.3}),
-    hollow: clayMat(0x4a1c12, tex, surf, {scale: 14, rough: 0.7, str: 0.8}),
+    board: clayMat(0xc9a27c, tex, surf, {scale: 9, rough: 0.72, str: 0.7, grainStr: 0.5}),
+    paper: clayMat(0xe6dcc4, tex, surf, {scale: 12, rough: 0.85, str: 0.08, grainStr: 0.06}),
+    tick: clayMat(0xa83a2c, tex, surf, {scale: 14, rough: 0.5, str: 0.4, cc: 0.15}),
+    wheel: clayMat(0x7f8792, tex, surf, {scale: 12, rough: 0.5, str: 0.9, cc: 0.12}),
+    hollow: clayMat(0x7a3322, tex, surf, {scale: 14, rough: 0.7, str: 0.8}),
+    pot: clayMat(0xd28358, tex, surf, {scale: 7, rough: 0.5, str: 1.2, cc: 0.2}),
     mouth: clayMat(0x2a0f10, tex, surf, {scale: 14, rough: 0.5, str: 0.6}),
     tongue: clayMat(0x7a2a26, tex, surf, {scale: 14, rough: 0.45, str: 0.6}),
   };
@@ -385,7 +401,7 @@ export const makePuppet = (tex: ClayTex, o: {pose: string; pz?: Pose; mouth: 0 |
   const key = `${o.mouth}:${o.surface}:${o.lid ?? 0}`;
   let parts = restCache.get(key);
   if (!parts) {
-    parts = buildParts(seed, o.mouth, o.lid ?? 0).map((p, i) => ({...p, geo: finish(p.geo, seed * 31 + i * 7, p.marks ?? (p.mat === 'terracotta' && p.role === 'soft' ? 1.4 : p.mat === 'terracotta' ? 0.45 : 0.15), o.surface)}));
+    parts = buildParts(seed, o.mouth, o.lid ?? 0).map((p, i) => ({...p, geo: finish(p.geo, seed * 31 + i * 7, p.marks ?? (p.mat === 'terracotta' && p.role === 'soft' ? 1.4 : p.mat === 'terracotta' ? 0.45 : 0.15), o.surface, p.clean)}));
     restCache.set(key, parts);
   }
   const pz = o.pz ?? POSES[o.pose];

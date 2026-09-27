@@ -9,16 +9,17 @@
 // of this frame (P1.tsx), and this frame supplies what the clay touches (the pool in rungs, the clay's shadow in rungs).
 import {Buf, rect, line, poly, ellipse, bayer, hash, clamp} from '../../../shared/pixel/px';
 import {PAL, stepColor, familyOf, oklab, ALL_COLORS} from '../../../shared/pixel/palette';
-import {blitImg, Img} from '../../../shared/pixel/figure';
+import {blitImg, Img, renderFigure, P as FP, Part} from '../../../shared/pixel/figure';
+import {seg} from '../../../shared/pixel/cast/bosses';
 import {text, textWidth, bigText, bigTextWidth} from '../../../shared/pixel/font';
 import {drawBullpen, walkoutExtra} from '../../../shared/pixel/rooms/bullpen';
 import {drawLighthouse, LIGHTHOUSE, STAIR_STEPS} from '../../../shared/pixel/rooms/lighthouse';
 import type {RoomOut} from '../../../shared/pixel/rooms/kit-b';
-import {marioImg, MARIO_BASE, MARIO_FOOT, MARIO_W, MarioPose} from '../../../shared/pixel/cast/mario';
+import {marioImg, marioFigure, marioRig, MARIO_BASE, MARIO_FOOT, MARIO_W, MarioPose} from '../../../shared/pixel/cast/mario';
 import {drawGergTable, GERG_DEFAULT, gergTypeAt} from '../../../shared/pixel/cast/gerg';
 import {drawMasDesk, MAS_DESK_DEFAULT, masPortrait, MAS_PORTRAIT_DEFAULT} from '../../../shared/pixel/cast/mas';
 import {drawBand} from '../p4/passes/band';
-import {FRAMES, LINES, T, BEAT, BAND_FADE, STARTLE, lightAt} from './timeline';
+import {FRAMES, LINES, T, BEAT, STARTLE, lightAt, flashAt, safetyDipAt} from './timeline';
 
 export const RH = 203;
 export const PANE_W = 238;
@@ -54,6 +55,8 @@ export const ptextW = (s: string) => { let w = 0; for (const ch of s) { if (ch =
  *  rungs are excluded from the targets, so Mario's blue fleece goes toward a warm grey-violet, never toward red) */
 const WARM_POOL = ALL_COLORS.filter((c) => { const f = familyOf(c); return f && !['R', 'Q', 'C', 'K', 'L', 'I'].includes(f[0]) && !(f[0] === 'U' && f[1] >= 4); });
 const warmCache = new Map<string, number>();
+/** a palette colour's Rec.709 luma, 0..255 (colours are 0xRRGGBB) */
+const luma8 = (c: number) => 0.2126 * ((c >> 16) & 255) + 0.7152 * ((c >> 8) & 255) + 0.0722 * (c & 255);
 export const warmStep = (c: number, k: number, amberBias = 1): number => {
   const key = `${c}:${k}:${amberBias}`;
   const hit = warmCache.get(key);
@@ -64,6 +67,7 @@ export const warmStep = (c: number, k: number, amberBias = 1): number => {
   for (const p of WARM_POOL) {
     const [L, a, bb] = oklab(p);
     if (L < L0 - 0.01) continue; // a light never darkens
+    if (luma8(p) > 199 && luma8(p) > luma8(c)) continue; // round 5: the spill never lifts anything past 78 % white
     const d = (L - tL) ** 2 * 3 + (a - ta) ** 2 + (bb - tb) ** 2;
     if (d < bd) { bd = d; best = p; }
   }
@@ -210,6 +214,8 @@ const drawCanLight = (b: Buf, on: boolean, kick: boolean, lv = 1) => {
   for (const i of [3, 6, 9]) for (let j = 2; j < 10; j++) if (can[j][i] === '1') b.set(headX - 12 + i, headY - 6 + j, on ? PAL.G2 : PAL.N2);
   // the lens's hot centre: W7 (the ceiling), never W8
   if (on && lv >= 0.58) for (const [dx, dy] of [[6, 2], [5, 3], [6, 3], [7, 3], [6, 4]]) b.set(headX + dx, headY + dy, lv < 0.8 ? PAL.W6 : PAL.W7);
+  // round 6: the strike's first drawing: the lens flares, a small four-point star at the ceiling colour
+  if (on && FL) for (let q = 1; q <= 4; q++) for (const [dx, dy] of [[q, 0], [-q, 0], [0, q], [0, -q]]) b.set(headX + 6 + dx, headY + 3 + dy, q <= 2 ? PAL.W7 : PAL.W6);
   // the barn door's top leaf, open over the lens
   line(headX + 4, headY - 5, headX + 10, headY - 1, b.ink(on ? PAL.G2 : PAL.N1));
   // the cable off the stand, along the floor, out of the pane
@@ -238,7 +244,7 @@ const plinthShadow = (x: number, y: number) => {
   return false;
 };
 /** a level (0..1, the filament's ramp) applied to whole rungs */
-const atLv = (k: number, lv: number) => (k <= 0 ? 0 : Math.round(k * lv));
+const atLv = (k: number, lv: number) => (k <= 0 ? 0 : Math.round(k * lv) + FL);
 const warmPool = (b: Buf, floor: (x: number, y: number) => boolean, deskFront: (x: number, y: number) => boolean, sh: (x: number, y: number) => [number, number], lv: number) => {
   // round 5: hard rung edges (no ordered-dither seam): the seams read as speckle round the clay at full size
   for (let y = Math.floor(POOL.cy - POOL.ry) - 1; y <= POOL.cy + POOL.ry + 1; y++) for (let x = POOL.cx - POOL.rx - 1; x <= POOL.cx + POOL.rx + 1; x++) {
@@ -295,9 +301,10 @@ const beam = (b: Buf, air: (x: number, y: number) => boolean, lv: number) => {
     const d = Math.hypot(dx, dy);
     if (d < 6) continue;
     const t = d / len;
-    if (t > 0.66) continue;
-    if (t > 0.54 && (x + y) % 2) continue; // the taper: one band of checker
-    const k = atLv(d < 18 ? 2 : 1, lv);
+    // round 6: the beam in hard steps along its length (two rungs by the lens, one down the cone, a clean stepped
+    // end), no checker taper: at phone size the checker blended into a soft gradient, "not pixel-quantized"
+    if (t > 0.6) continue;
+    const k = atLv(t < 0.2 ? 2 : 1, lv);
     if (k) b.set(x, y, warmStep(b.get(x, y), k, 0.7));
   }
 };
@@ -356,31 +363,81 @@ export const setMouthTrack = (memo: Array<{f: number; shape: string}>, add: Arra
 };
 const mouthAt = (f: number): 0 | 1 | 2 => { let v: 0 | 1 | 2 = 0; for (const [t, s] of MOUTH) { if (t <= f) v = s; else break; } return v; };
 
-export interface MarioState { pose: MarioPose; hand: [number, number]; scroll: 'trail' | 'write' | 'unroll' | 'spindle'; phone: boolean; dx: number }
+export type MarioHead = 'level' | 'up' | 'down';
+export interface MarioState {
+  pose: MarioPose; hand: [number, number]; scroll: 'trail' | 'write' | 'unroll' | 'spindle'; phone: boolean; dx: number;
+  /** round 6: a whole-body hop (px, - = up), the head's attitude, the writing hand's stroke (-1 = not writing) */
+  dy: number; head: MarioHead; write: number;
+}
+/** his blinks: uneven gaps (70-117 f), so he never blinks on a clock */
+const MARIO_BLINKS: number[] = (() => { const out: number[] = []; let t = 30; for (let i = 0; t < FRAMES; i++) { out.push(t - (t & 1)); t += 70 + Math.floor(hash(i, 5, 61) * 48); } return out; })();
+/** Round 6: he ACTS, in held drawings a phone-size viewer can see (round 5's startle, look-up and "adds a line" were
+ *  one- or two-frame changes nobody saw at 480 x 270). Dictating the memo he writes it down, jabs the key point with
+ *  his finger, and is back at the page, absorbed, when the can strikes: a hop back, a squint, a hand to his chest, a
+ *  gasp, held; he watches it bow at him; he looks up past it to the split line (the same day), held; "Addendum.",
+ *  finger up; he reads the post on his phone, head down; he writes his line, the pen hand moving along it. */
 export const marioAt = (f: number): MarioState => {
   const k = on2(f);
   const talking = (k >= LINES.memo.at && k < LINES.memo.at + LINES.memo.frames) || (k >= LINES.addendum.at && k < LINES.addendum.at + LINES.addendum.frames);
-  let arm: MarioPose['arm'] = 'scroll', blink = false, brow: 0 | 1 = 0, scroll: MarioState['scroll'] = 'trail', phone = false, dx = 0;
-  // phrase 1: "Memo, on race dynamics." finger up; "Point one:" finger up again; writing through the rest
-  if (k < 58) arm = 'raise';
-  else if (k < 64) arm = 'down';
-  else if (k < 86) arm = 'raise2';
-  else if (k < T.slam) { arm = 'scroll'; blink = k >= 90 && k < 150; scroll = 'write'; }
-  else if (k < STARTLE[1]) {
-    // round 5: the slam startles him: a squint into the light, a hand to his chest, a pixel back on the clunk
-    arm = 'chest'; brow = 1; blink = k < T.slam + 4; dx = k < T.slam + 8 ? 1 : 0;
-  } else if (k < T.lookUp1) { arm = 'scroll'; blink = false; brow = 1; } // ...then he watches it bow at him
-  else if (k < T.lookUp2) { arm = 'scroll'; blink = false; }
-  else if (k < T.phoneUp) { arm = k >= LINES.addendum.at - 4 ? 'raise' : 'scroll'; brow = 1; }
-  else if (k < T.marioWrite[0]) { arm = 'chest'; phone = k >= T.marioPhone; blink = true; }
-  else if (k < T.marioWrite[1]) { arm = 'scroll'; blink = true; scroll = 'write'; }
-  else if (k < T.unroll) { arm = 'down'; }
-  else if (k < T.spindle) { arm = 'scroll'; scroll = 'unroll'; brow = 1; }
-  else { arm = 'raise'; scroll = 'spindle'; blink = true; brow = 1; }
-  // a rare blink while talking
-  if (!blink && (k % 96 === 40 || k % 96 === 42)) blink = true;
-  const mouth = talking ? mouthAt(k) : 0;
-  return {pose: {...MARIO_BASE, legs: 'stand', arm, scroll: true, mouth, brow, blink, light: 'lit'}, hand: [0, 0], scroll, phone, dx};
+  let arm: MarioPose['arm'] = 'scroll', blink = false, brow: 0 | 1 = 0, scroll: MarioState['scroll'] = 'trail', phone = false, dx = 0, dy = 0;
+  let head: MarioHead = 'level', write = -1, gasp = false;
+  const writing = (from: number) => { write = ((k - from) >> 2) % 5; head = 'down'; scroll = 'write'; };
+  const addEnd = LINES.addendum.at + LINES.addendum.frames;
+  if (k < 58) arm = 'raise'; //                                   "Memo, on race dynamics."
+  else if (k < 70) arm = 'down';
+  else if (k < 96) arm = 'raise2'; //                             "Point one:"
+  else if (k < 128) writing(96); //                               "we must not launch" (he writes it as he says it)
+  else if (k < 166) { arm = 'raise'; brow = 1; } //               "...on the same day as them." (the finger: the point)
+  else if (k < T.slam) writing(166); //                           "That's how a race starts." (back at the page)
+  else if (k < T.slam + 4) { arm = 'chest'; brow = 1; blink = true; dx = 3; dy = -1; gasp = true; } // the strike: a hop back, a squint
+  else if (k < STARTLE[1]) { arm = 'chest'; brow = 1; dx = 2; gasp = k < T.slam + 12; } // held: hand to his chest, staring
+  else if (k < T.lookUp1) { arm = 'down'; brow = 1; dx = 1; } //  it bows at him; he watches it
+  else if (k < LINES.addendum.at - 4) { arm = 'down'; head = 'up'; dx = 1; } // up past it, to the split line: the same day
+  else if (k < addEnd + 6) { arm = 'raise'; brow = 1; dx = 1; } // "Addendum."
+  else if (k < T.phoneUp) { arm = 'down'; dx = 1; }
+  else if (k < T.marioWrite[0]) { arm = 'chest'; phone = k >= T.marioPhone; head = k >= T.marioPhone ? 'down' : 'level'; dx = 1; } // his post
+  else if (k < T.marioWrite[1]) { writing(T.marioWrite[0]); dx = 1; } // he adds a line
+  else if (k < T.unroll) { arm = 'down'; dx = 1; }
+  else if (k < T.spindle) { arm = 'scroll'; scroll = 'unroll'; brow = 1; dx = 1; }
+  else { arm = 'raise'; scroll = 'spindle'; brow = 1; dx = 1; }
+  if (!blink && head !== 'down' && MARIO_BLINKS.some((t) => k >= t && k < t + 4)) blink = true;
+  const mouth = talking ? mouthAt(k) : gasp ? 2 : 0;
+  return {pose: {...MARIO_BASE, legs: 'stand', arm, scroll: true, mouth, brow, blink, light: 'lit'}, hand: [0, 0], scroll, phone, dx, dy, head, write};
+};
+
+/** Mario's sprite for a state: the cast's own drawing, with (round 6, composed here, the cast file untouched) the head
+ *  raised or bowed a pixel with the eyes following it, and a writing arm: the near forearm across his belly to the
+ *  roll at his far hand, the pen hand stepping along the line and back */
+const MX = 10; // the cast rig's x margin (mario.ts X)
+const mImgCache = new Map<string, Img>();
+const marioImgFor = (m: MarioState): Img => {
+  if (m.head === 'level' && m.write < 0) return marioImg(m.pose);
+  const key = JSON.stringify([m.pose, m.head, m.write]);
+  const hit = mImgCache.get(key);
+  if (hit) return hit;
+  const fig = marioFigure(m.write >= 0 ? {...m.pose, arm: 'scroll'} : m.pose);
+  const stamps = [...(fig.stamps ?? [])];
+  const hs = {...stamps[0], rows: stamps[0].rows.slice()};
+  if (m.head === 'up') { hs.y -= 1; hs.x -= 1; }
+  if (m.head === 'down') {
+    hs.y += 1; hs.x += 1;
+    if (!m.pose.blink) { hs.rows[10] = hs.rows[10].replace('4eL', '44L'); hs.rows[11] = hs.rows[11].replace('g4444g', 'g4e44g'); }
+  }
+  stamps[0] = hs;
+  let parts = fig.parts;
+  if (m.write >= 0) {
+    const hx = 19 + [0, 1, 2, 3, 1][m.write], hy = 40 + (m.write === 4 ? 1 : 0);
+    const sx = 30.6, sy = 25.6, ex = 31.4, ey = 35.6;
+    const armN: Part = {group: 'armN', mat: 'fleece', prims: [FP.ell(sx + MX, sy, 4, 4.2), seg(sx + MX, sy, 7.4, ex + MX, ey, 6.6), seg(ex + MX, ey, 6.4, hx + MX, hy, 5.6), FP.ell(ex + MX, ey, 3.2, 3.2)]};
+    parts = [...parts.filter((q) => q.group !== 'armN'), armN];
+    // the fist (the cast's own), and the pen: two dark pixels out of it toward the roll
+    stamps.splice(3);
+    stamps.push({x: Math.round(hx + MX) - 2, y: Math.round(hy) - 1, rows: ['.oo.', 'o34o', 'o345', 'o234', '.o2o'], pal: {o: ['skin', 0], '2': ['skin', 2], '3': ['skin', 3], '4': ['skin', 4], '5': ['skin', 5]}});
+    stamps.push({x: Math.round(hx + MX) - 4, y: Math.round(hy) + 2, rows: ['p.', '.p'], pal: {p: ['hair', 0]}});
+  }
+  const img = renderFigure({...fig, parts, stamps}, marioRig(m.pose.light));
+  mImgCache.set(key, img);
+  return img;
 };
 
 /** Mario is drawn flipped (facing screen-left, toward the split line and the pane beyond it: the script's facing) */
@@ -391,15 +448,48 @@ const marioTop = () => MARIO_AT.foot - MARIO_FOOT[1];
 /** the scroll, leftward: from the back hand down to the floor, then along the floor toward the split line.
  *  Round 5 (it read as "a ruler, a ladder or piano keys stuck to his leg", then "a progress bar or a cable"): paper
  *  first. The roll's ends show either side of his hand; the sheet is wider, hangs from his far hand BEHIND him,
- *  bellying back with the curl a scroll keeps, and turns onto the floor in a lip; the writing is ink-blue lines of uneven length with a
- *  margin, in paragraphs, never evenly spaced ticks; on the floor the sheet is seen edge-on, so the writing is only a
- *  faint mottle, it throws a shadow, and its leading end is a round roll. */
-const SCROLL_Y = 199; // the floor line it runs along (in front of the plinth)
+ *  bellying back with the curl a scroll keeps; the writing is ink-blue lines of uneven length with a margin, in
+ *  paragraphs, never evenly spaced ticks.
+ *  Round 6 (on the floor it still "hugged the bottom edge of both panels... a loading bar"): the floor run leaves
+ *  the frame's edge and lies IN the room. It runs along a meandering path that recedes toward the split line (y 195
+ *  at his heels, 190 at the divider, back down to 194 at Gerg's desk), passes BEHIND the plinth and the can's
+ *  tripod (they're drawn over it), takes the pool's light where it crosses it, lifts off the floor in curls with
+ *  their shadow under them, throws a two-row shadow, and leads with a round roll. */
 const PAPER_W = 8;
-/** the belly of the hanging sheet (px toward screen-right, i.e. behind him: it hangs from his far hand at his back
- *  and swings back under his heels) at row j of a drop h */
-const belly = (j: number, h: number) => Math.round(6 * Math.sin(Math.PI * Math.min(1, j / Math.max(1, h)) * 0.9));
+/** the paper's floor path (frame coords): its near edge's row at column fx */
+export const pathY = (fx: number) => {
+  const base = fx >= RX0 ? 190 + ((fx - RX0) * 5) / 190 : 190 + ((RX0 - fx) * 4) / 152;
+  return Math.round(base + 1.1 * Math.sin(fx / 13 + 0.4) + 0.6 * Math.sin(fx / 5.3 + 1.7));
+};
+/** the curls: where the sheet lifts off the floor (frame coords), 0..2 px */
+const CURLS: number[] = (() => { const out: number[] = []; for (let x = 470, i = 0; x > 60; i++) { x -= 30 + Math.floor(hash(i, 1, 57) * 34); out.push(x); } return out; })();
+const liftAt = (fx: number) => { let v = 0; for (const c of CURLS) v = Math.max(v, 2 * (1 - Math.abs(fx - c) / 4.5)); return Math.max(0, Math.round(v)); };
+/** one column of the sheet on the floor. (b, x) in the buffer's coords; fx is the same column in frame coords */
+const ribbonCol = (b: Buf, x: number, fx: number, seed: number, extra = 0) => {
+  const y0 = pathY(fx), lift = Math.max(liftAt(fx), extra), top = y0 - 3 - lift, bot = y0 - lift;
+  for (let y = top; y <= bot; y++) {
+    let c = y === bot ? PAL.P0 : PAL.P1;
+    if (y > top && y < bot && hash(fx, y * 7, seed) < 0.13) c = PAL.P0; // the writing, edge-on: a faint mottle
+    b.set(x, y, c);
+  }
+  for (let y = bot + 1; y <= y0; y++) b.set(x, y, stepColor(b.get(x, y), -3)); // under a curl: its shadow
+  b.set(x, y0 + 1, stepColor(b.get(x, y0 + 1), -2)); // the sheet's own shadow (the can is up and to the left)
+  if (hash(fx, 3, seed) < 0.6) b.set(x, y0 + 2, stepColor(b.get(x, y0 + 2), -1));
+};
+/** the leading roll, end-on: a round of paper with its spiral, standing on the path; its shadow down and right */
+const rollEndAt = (b: Buf, x: number, fx: number) => {
+  const y = pathY(fx + 3) - 6;
+  const rows = ['..ooo..', '.o222o.', 'o22pp1o', 'o2p2p1o', 'o21pp1o', '.o111o.', '..ooo..'];
+  const pal: Record<string, number> = {o: PAL.N0, '1': PAL.P0, '2': PAL.P1, p: PAL.N4};
+  rows.forEach((r, j) => [...r].forEach((ch, i) => { if (pal[ch] !== undefined) b.set(x + i, y + j, pal[ch]); }));
+  for (let i = 1; i < 8; i++) b.set(x + i, y + 7, stepColor(b.get(x + i, y + 7), -2));
+};
+/** the sheet along the floor, room coords (the lighthouse), from column xRight down to xLeft (clipped at the pane) */
+const floorRunR = (b: Buf, xRight: number, xLeft: number, seed: number) => {
+  for (let x = xRight; x >= Math.max(xLeft, SX_R - 2); x--) ribbonCol(b, x, rToF(x), seed);
+};
 /** handwriting on a hanging sheet: a line every 3 rows, a gap between paragraphs; lengths and starts hashed */
+const belly = (j: number, h: number) => Math.round(6 * Math.sin(Math.PI * Math.min(1, j / Math.max(1, h)) * 0.9));
 const inkRow = (j: number, seed: number): [number, number] | null => {
   if (j % 3 !== 1) return null;
   const line = Math.floor(j / 3);
@@ -412,70 +502,87 @@ const drawRollEnds = (b: Buf, hx: number, hy: number) => {
   for (const [x0, w] of [[hx - 6, 3], [hx + 3, 3]] as Array<[number, number]>) {
     rect(x0, hy - 1, w, 5, b.ink(PAL.N0));
     rect(x0 + (x0 < hx ? 1 : 0), hy, w - 1, 3, b.ink(PAL.P1));
-    rect(x0 + (x0 < hx ? 1 : 0), hy, w - 1, 1, b.ink(PAL.P2));
   }
   b.set(hx - 6, hy + 1, PAL.D3); // the spindle's knob
 };
-const paperFloor = (b: Buf, xRight: number, xLeft: number, seed: number) => {
-  for (let x = xLeft; x <= xRight; x++) {
-    // a sheet a hand wide lying flat, seen a little from above: 5-6 rows (its far edge lifts here and there)
-    const top = SCROLL_Y - 4 + (hash(Math.floor(x / 5), 5, seed) < 0.18 ? -1 : 0);
-    for (let y = top; y <= SCROLL_Y; y++) {
-      let c = y === top ? PAL.P2 : y === SCROLL_Y ? PAL.P0 : PAL.P1;
-      if (y > top && y < SCROLL_Y && hash(x, y * 7, seed) < 0.16) c = PAL.P0; // the writing, edge-on: a faint mottle
-      b.set(x, y, c);
-    }
-    b.set(x, SCROLL_Y + 1, stepColor(b.get(x, SCROLL_Y + 1), -2)); // its shadow on the floor
-  }
+/** the scroll's geometry this frame (room coords): his far hand, where the sheet turns onto the floor, how far it runs */
+interface ScrollGeo { hx: number; hy: number; lipX: number; run: number; hang: boolean; roll: boolean; seed: number }
+const scrollGeo = (m: MarioState, f: number, mx: number, my: number): ScrollGeo => {
+  const hx = mx + (MARIO_W - 1 - 25), hy = my + 45;
+  const drop = pathY(rToF(hx)) - 3 - (hy + 3);
+  const lipX = hx - 4 + belly(drop, drop);
+  const c01 = (v: number) => Math.min(1, Math.max(0, v));
+  if (m.scroll === 'unroll') return {hx, hy, lipX, run: 6 + Math.floor((on2(f) - T.unroll) * 3.2), hang: true, roll: true, seed: 9};
+  if (m.scroll === 'spindle') return {hx, hy, lipX: hx + 3 - PAPER_W + 1, run: 999, hang: false, roll: false, seed: 9};
+  // the first scroll feeds out a little as he writes (the memo, then his line under the post)
+  const run = 20 + Math.round(c01((f - 96) / 32) * 3 + c01((f - 166) / 74) * 4 + c01((f - T.marioWrite[0]) / 60) * 9);
+  return {hx, hy, lipX, run, hang: true, roll: false, seed: 3};
 };
-const rollEnd = (b: Buf, x: number) => {
-  // the leading roll, end-on: a round of paper with its spiral
-  const y = SCROLL_Y - 6;
-  const rows = ['.ooo.', 'o221o', 'o2p1o', 'o1p1o', 'o111o', 'o111o', '.ooo.'];
-  const pal: Record<string, number> = {o: PAL.N0, '1': PAL.P1, '2': PAL.P2, p: PAL.P0};
-  rows.forEach((r, j) => [...r].forEach((ch, i) => { if (pal[ch] !== undefined) b.set(x + i, y + j, pal[ch]); }));
-  b.set(x + 5, SCROLL_Y + 1, stepColor(b.get(x + 5, SCROLL_Y + 1), -2));
+/** the floor run (drawn before the light, the plinth and the can, so they sit on it and the pool lights it) */
+const drawScrollRun = (R: Buf, g: ScrollGeo) => {
+  const xl = g.lipX - g.run;
+  floorRunR(R, g.lipX + PAPER_W - 1, xl, g.seed);
+  if (g.roll && xl - 7 >= SX_R - 2) rollEndAt(R, xl - 7, rToF(xl - 7));
+  // the first sheet's free end: it curls up off the floor (no roll: the roll is in his hand)
+  if (!g.roll) for (let i = 0; i < 4; i++) ribbonCol(R, xl + i, rToF(xl + i), g.seed, [3, 2, 1, 1][i]);
 };
-const drawScrollLeft = (b: Buf, hx: number, hy: number, len: number, o: {roll?: boolean; seed?: number} = {}) => {
-  const seed = o.seed ?? 3;
-  const top = hy + 3;
-  const drop = SCROLL_Y - 3 - top;
-  const hang = Math.min(len, drop);
-  for (let j = 0; j < hang; j++) {
+/** the hanging sheet and the roll's ends at his far hand (drawn behind him, after the floor run) */
+const drawScrollHang = (R: Buf, g: ScrollGeo) => {
+  if (!g.hang) return;
+  const top = g.hy + 3, drop = pathY(rToF(g.hx)) - 3 - top;
+  for (let j = 0; j < drop; j++) {
     const off = belly(j, drop);
-    const ink = inkRow(j, seed);
+    const ink = inkRow(j, g.seed);
     for (let i = 0; i < PAPER_W; i++) {
-      const x = hx - 4 + i + off, y = top + j;
+      const x = g.hx - 4 + i + off, y = top + j;
       // lit from the can (screen-left): the left edge catches it, the right edge turns away
-      let c = i === 0 ? PAL.P2 : i === PAPER_W - 1 ? PAL.N2 : i === PAPER_W - 2 ? PAL.P0 : PAL.P1;
+      // (P1 is the paper's top: P2 measures 91 % white, too hot for the night lighthouse and the light's 80 % rule)
+      let c = i === 0 ? PAL.P1 : i === PAPER_W - 1 ? PAL.N2 : i === PAPER_W - 2 ? PAL.P0 : PAL.P1;
       if (ink && i >= ink[0] && i < ink[1]) c = PAL.F3; // ink-blue, a step light: writing at a distance, not rungs
-      b.set(x, y, c);
+      R.set(x, y, c);
     }
   }
-  drawRollEnds(b, hx, hy);
-  const run = Math.max(0, len - drop);
-  // the lip where it turns onto the floor
-  const xl = hx - 4 + belly(drop, drop);
-  if (len > drop) {
-    for (let i = 0; i < PAPER_W; i++) { b.set(xl + i, SCROLL_Y - 3, PAL.P1); b.set(xl + i, SCROLL_Y - 2, i < 2 ? PAL.P2 : PAL.P0); }
-    if (run > 0) paperFloor(b, xl + PAPER_W - 1, xl - run, seed);
-    if (o.roll !== false && run > 0) rollEnd(b, xl - run - 5);
-  }
+  drawRollEnds(R, g.hx, g.hy);
 };
 /** Mario's phone (reading the post): a small dark slab with a cyan screen, at the chest hand */
 const drawSmallPhone = (b: Buf, x: number, y: number) => { rect(x, y, 4, 6, b.ink(PAL.N0)); rect(x + 1, y + 1, 2, 4, b.ink(PAL.C5)); b.set(x + 1, y + 1, PAL.C7); };
+
+/** the flash's extra rungs this frame (set by drawRight: the strike's first drawing) */
+let FL = 0;
+
+/** Round 6: the lighthouse's SAFETY lantern browns out on the strike (the launch light pulls the power): its lamp
+ *  and its sign step down k rungs for two held steps, then come back */
+const SAFETY_BOX = {x0: 196, x1: 284, y0: 0, y1: 58};
+const safetyDip = (R: Buf, k: number) => {
+  if (!k) return;
+  const {cx, cy, rx, ry} = LIGHTHOUSE.lamp;
+  for (let y = SAFETY_BOX.y0; y <= SAFETY_BOX.y1; y++) for (let x = SAFETY_BOX.x0; x <= SAFETY_BOX.x1; x++) {
+    const c = R.get(x, y), fam = familyOf(c);
+    if (!fam || (fam[0] !== 'W' && fam[0] !== 'P')) continue; // the lamp's warm glass, its glow and the sign's letters
+    if (inEll(x, y, cx, cy + 14, rx + 26, ry + 22) > 1) continue;
+    R.set(x, y, stepColor(c, -k * 2));
+  }
+};
 
 /** the lighthouse pane: the room, the plinth and the can, CLOD (pixel until the slam), Mario, his scroll, the light */
 export const drawRight = (R: Buf, f: number, clay: ClayState) => {
   const room = drawLighthouse(R, LAMP_F, {meters: 0, throne: 'on'});
   eraseRail(R, room);
+  safetyDip(R, safetyDipAt(f));
   const lit = f >= T.slam;
   const lv = lightAt(f);
+  FL = lit ? flashAt(f) : 0;
+  // Mario and his scroll's geometry (the floor run goes down first: the light, the plinth and the can sit on it)
+  const m = marioAt(f);
+  const img = marioImgFor(m);
+  const mx = marioLeft() + m.dx, my = marioTop() + m.dy;
+  const sg = scrollGeo(m, f, mx, my);
+  drawScrollRun(R, sg);
   // the clay's shadow, looked up in room coords (the shadow map is in frame coords)
   const sh = (x: number, y: number) => shadowAt(lit ? clay.poseId : null, x - SX_R + RX0, y);
-  // the light (all in whole rungs, scaled by the filament's level): the hot spot where the cone lands on the back
-  // wall and the desk behind CLOD, the beam through the air, the pool on the floor, the spill on the desk front; the
-  // clay's key shadow and its contact occlusion come off them in rungs
+  // the light (all in whole rungs): the hot spot where the cone lands on the back wall and the desk behind CLOD, the
+  // beam through the air, the pool on the floor, the spill on the desk front; the clay's key shadow and its contact
+  // occlusion come off them in rungs
   const mask = (name: string) => { const a = room.masks[name]?.a; return (x: number, y: number) => !!a && x >= 0 && y >= 0 && x < R.w && y < RH && a[y * R.w + x] > 0; };
   const onFloor = mask('floor');
   if (lit) {
@@ -494,18 +601,14 @@ export const drawRight = (R: Buf, f: number, clay: ClayState) => {
   drawPlinth(R, CLOD_AT.x, CLOD_AT.top, lit, sh, lv);
   // the pixel CLOD (before the slam): its two held drawings, the wheel turning
   if (!lit && CLOD_PX && CLOD_PX.frames.length) {
-    const img = CLOD_PX.frames[Math.floor(f / 6) % CLOD_PX.frames.length];
-    blitImg(R, img, CLOD_PX.x - RX0 + SX_R, CLOD_PX.y);
+    const ci = CLOD_PX.frames[Math.floor(f / 6) % CLOD_PX.frames.length];
+    blitImg(R, ci, CLOD_PX.x - RX0 + SX_R, CLOD_PX.y);
   } else if (!lit) {
     // stand-in until gen/clod-px.json exists (never in a delivered render: the build makes it first)
     ellipse(CLOD_AT.x, CLOD_AT.top - 30, 13, 30, R.ink(PAL.N1));
   }
-  // Mario
-  const m = marioAt(f);
-  const img = marioImg(m.pose);
-  const mx = marioLeft() + m.dx, my = marioTop();
   // his shadow from the can, thrown right along the floor from his feet (one rung, while the light is up)
-  if (lv >= 0.5) {
+  if (lit) {
     const fx = MARIO_AT.x + m.dx, fy = MARIO_AT.foot;
     for (let y = fy - 1; y <= fy + 2; y++) for (let x = fx + 1; x < fx + 22; x++) {
       if (!onFloor(x, y)) continue;
@@ -513,37 +616,30 @@ export const drawRight = (R: Buf, f: number, clay: ClayState) => {
     }
   }
   // the scroll hangs from his FAR hand, so it's drawn behind him (in front of his near leg it read as a ruler
-  // strapped to it): it shows between and in front of his legs, then runs along the floor. Hand: the flipped back hand
-  const handX = mx + (MARIO_W - 1 - 25), handY = my + 45;
-  if (m.scroll === 'trail' || m.scroll === 'write') drawScrollLeft(R, handX, handY, (SCROLL_Y - handY) + 18 + (f >= T.marioWrite[1] ? 6 : 0));
-  else if (m.scroll === 'unroll') {
-    // the second scroll: it unrolls along the floor toward the split line on 2s, whole pixels, and keeps going
-    const k = on2(f) - T.unroll;
-    const len = (SCROLL_Y - handY) + Math.floor(k * 3.2);
-    drawScrollLeft(R, handX, handY, len, {roll: true, seed: 9});
-  } else if (m.scroll === 'spindle') {
+  // strapped to it)
+  drawScrollHang(R, sg);
+  if (m.scroll === 'spindle') {
     // the empty spindle in his raised hand: a bare dowel (the paper is all in the other pane)
     const sx = mx + 16, sy = my + 22;
     rect(sx, sy, 2, 9, R.ink(PAL.D4)); R.set(sx, sy, PAL.W4); R.set(sx + 1, sy + 8, PAL.D2);
-    // the sheet still lies along the floor, from his feet to the split line
-    paperFloor(R, handX + 3, SX_R - 2, 9);
   }
   blitImg(R, img, mx, my, {flip: true});
   if (lit) {
-    // round 5: his near side takes the can (amber, never red): two rungs on the edge facing it, one on the next
-    // three columns (it was one rung on four, which nobody saw)
-    const k2 = atLv(2, lv), k1 = atLv(1, lv);
-    for (let j = 0; j < img.h; j++) {
-      let n = 0;
-      for (let i = 0; i < img.w && n < 5; i++) {
-        const v = img.c[j * img.w + (img.w - 1 - i)];
-        if (v < 0) continue;
-        const k = n < 2 ? k2 : k1;
-        const x = mx + i, y = my + j;
-        if (k) R.set(x, y, warmStep(R.get(x, y), k, 1.2));
-        n++;
-      }
+    // round 6: the can catches his EDGE, not his whole side. Round 5 walked five columns of him to the nearest warm
+    // colour, which turned the blue fleece into "a flat, hard-edged brown fill... a second brown coat". Now the pixels
+    // on his silhouette's edge facing the lens (left, and the upper-left corners) take the tungsten ladder three
+    // rungs up (an amber rim line), and the pixel inside each takes one step up its OWN ramp: the blue stays blue.
+    const op = (i: number, j: number) => i >= 0 && j >= 0 && i < img.w && j < img.h && img.c[j * img.w + (img.w - 1 - i)] >= 0;
+    const inner: Array<[number, number]> = [];
+    for (let j = 0; j < img.h; j++) for (let i = 0; i < img.w; i++) {
+      if (!op(i, j)) continue;
+      const edge = !op(i - 1, j) || (!op(i - 1, j - 1) && !op(i, j - 1));
+      if (!edge) continue;
+      const x = mx + i, y = my + j;
+      R.set(x, y, tung(R.get(x, y), 3 + FL));
+      if (op(i + 1, j)) inner.push([x + 1, y]);
     }
+    for (const [x, y] of inner) R.set(x, y, stepColor(R.get(x, y), 1));
   }
   if (m.phone) drawSmallPhone(R, mx + 18, my + 28);
   return m;
@@ -666,6 +762,8 @@ const MAS_DAY = (c: number) => {
   if (fam === 'C') return i >= 6 ? PAL.G5 : i >= 3 ? PAL.G3 : PAL.G1;
   return c;
 };
+/** Mas's breath: its two drawings at uneven gaps (40-63 f), not a toggle every 48 f (a 2 s metronome) */
+const masBreath = (f: number): 0 | 1 => { let t = 0, i = 0; while (t <= f) { t += 40 + Math.floor(hash(i, 1, 77) * 24); i++; } return (i & 1) as 0 | 1; };
 const drawCoworker = (b: Buf, x: number, y: number, f: number, cheer: 0 | 1 | 2) => {
   drawGergTable(b, x, y, {...GERG_DEFAULT, type: cheer ? 0 : gergTypeAt(f + 5), look: 1}, f, {flip: true, capsFrom: 1e9, map: COWORKER_DAY});
   if (!cheer) return;
@@ -692,8 +790,8 @@ const drawBanner = (b: Buf) => {
     if (j === -1 || j === h || i === 0 || i === w - 1) { b.set(x + i, y + j, PAL.N0); continue; }
     b.set(x + i, y + j, j >= h - 2 ? PAL.P0 : (i + j) % 17 === 0 ? PAL.P0 : PAL.P1);
   }
-  // the marker letters: hand-drawn at a fat nib (the 7 px font's G reads as a 6 when it's thickened), each letter
-  // bobbing a pixel the way a hand letters a banner
+  // the marker letters: hand-drawn at a fat nib (the 7 px font's G reads as a 6 when it's thickened). Round 6: on
+  // one baseline (the raised T read as "a font baseline bug", not a hand)
   const G: Record<string, string[]> = {
     G: ['.####.', '##..##', '##....', '##.###', '##..##', '##..##', '.####.'],
     T: ['######', '..##..', '..##..', '..##..', '..##..', '..##..', '..##..'],
@@ -705,7 +803,7 @@ const drawBanner = (b: Buf) => {
   const tw = word.reduce((q, ch) => q + G[ch][0].length + 2, -2);
   let cx = x + Math.round((w - tw) / 2);
   word.forEach((ch, k) => {
-    const bob = [0, -1, 0, 0, 1][k];
+    const bob = 0; void k;
     G[ch].forEach((row, j) => [...row].forEach((c, i) => { if (c === '#') b.set(cx + i, y + 3 + bob + j, PAL.N1); }));
     cx += G[ch][0].length + 2;
   });
@@ -730,12 +828,14 @@ export const drawLeft = (L: Buf, f: number) => {
   const napkin = f >= T.napkinUp && f < T.napkinDown;
   const snap2 = f >= T.snap2 - 6 && f < T.snap2 + 8;
   // (his keycap popcorn is off here: at this size the caps read as dead pixels round him, "white specks")
-  drawGergTable(L, gx, gy, {...GERG_DEFAULT, type: napkin || snap2 ? 0 : gergTypeAt(f), look: napkin ? 1 : 0}, f, {capsFrom: 1e9, map: GERG_DAY});
+  // round 5: he glances up at the site as it goes live (both times), then back to the keys
+  const glance = (f >= T.site2 && f < T.site2 + 22) || (f >= T.site4 && f < T.site4 + 14);
+  drawGergTable(L, gx, gy, {...GERG_DEFAULT, type: napkin || snap2 || glance ? 0 : gergTypeAt(f), look: napkin || glance ? 1 : 0}, f, {capsFrom: 1e9, map: GERG_DAY});
   if (napkin) gergArmUp(L, gx, gy - 8, f >= T.napkinSnap - 8 ? 'both' : 'napkin', f >= T.napkinSnap && f < T.napkinSnap + 2);
   if (snap2) gergArmUp(L, gx, gy - 4, 'phone', f >= T.snap2 && f < T.snap2 + 2);
   const [mx, my] = room.anchors.masDesk;
   const phoneUp = f >= T.phoneUp && f < T.cheer2 + 30;
-  drawMasDesk(L, mx, my, {...MAS_DESK_DEFAULT, head: phoneUp ? 'screen' : 'turn', light: 'monitor', breathe: (Math.floor(f / 48) % 2) as 0 | 1}, undefined, MAS_DAY);
+  drawMasDesk(L, mx, my, {...MAS_DESK_DEFAULT, head: phoneUp ? 'screen' : 'turn', light: 'monitor', breathe: masBreath(f)}, undefined, MAS_DAY);
   if (phoneUp) masPhoneUp(L, mx, my);
   void walkoutExtra;
   drawDemoScreen(L, f);
@@ -744,45 +844,57 @@ export const drawLeft = (L: Buf, f: number) => {
 };
 
 // ------------------------------------------------------------------ the crossing, the post, the plates
-/** the second scroll's sheet across the split line and the left pane, and its end climbing onto Gerg's desk */
+/** the second scroll's sheet across the split line and the left pane, and its end climbing onto Gerg's desk
+ *  (round 6: along the same meandering floor path, with its curls and shadow, never along the frame's edge) */
 const drawCrossing = (fb: Buf, f: number, m: MarioState) => {
   if (f < T.unroll) return;
-  const handX = rToF(marioLeft() + m.dx + (MARIO_W - 1 - 25));
-  const k = on2(f) - T.unroll;
-  // the sheet's left end if it kept going (as drawScrollLeft lays it: the lip at handX - 4 + belly, then the run)
-  const hy = marioTop() + 45, drop = SCROLL_Y - 3 - (hy + 3);
-  const run = (SCROLL_Y - hy) + Math.floor(k * 3.2) - drop;
-  const lead = handX - 4 + belly(drop, drop) - run;
+  const g = scrollGeo({...m, scroll: 'unroll'}, f, marioLeft() + m.dx, marioTop() + m.dy);
+  const lead = rToF(g.lipX - g.run); // the sheet's left end, in frame coords, if it kept going
   if (lead >= RX0) return; // still in the lighthouse pane (drawn there)
   // the sheet over the divider and across the bullpen floor, to Gerg's desk front (frame x 86)
-  paperFloor(fb, RX0 + 1, Math.max(lead, 86), 9);
-  if (lead > 86) rollEnd(fb, lead - 5);
+  for (let x = RX0 + 1; x >= Math.max(lead, 86); x--) ribbonCol(fb, x, x, 9);
+  if (lead > 86) rollEndAt(fb, lead - 7, lead - 7);
   else {
     // at Gerg's desk: the end climbs the bench front and lands on the desk top in two drawings (the landing, p540)
     const up = f < T.land - 4 ? 1 : 2;
     const topY = up === 1 ? 172 : 150;
-    for (let y = topY; y < SCROLL_Y - 3; y++) for (let i = 0; i < 5; i++) {
-      let c = i === 0 ? PAL.P0 : i === 4 ? PAL.P2 : PAL.P1;
+    for (let y = topY; y < pathY(86) - 3; y++) for (let i = 0; i < 5; i++) {
+      let c = i === 0 ? PAL.P0 : PAL.P1;
       if (i >= 1 && i <= 3 && y % 3 === 0 && hash(y, i, 13) < 0.7) c = PAL.F2;
       fb.set(83 + i, y, c);
     }
-    if (up === 2) { rect(74, 145, 16, 5, fb.ink(PAL.N0)); rect(75, 146, 14, 3, fb.ink(PAL.P1)); rect(75, 146, 14, 1, fb.ink(PAL.P2)); rect(72, 144, 5, 7, fb.ink(PAL.N0)); rect(73, 145, 3, 5, fb.ink(PAL.P1)); fb.set(74, 147, PAL.P0); }
+    if (up === 2) { rect(74, 145, 16, 5, fb.ink(PAL.N0)); rect(75, 146, 14, 3, fb.ink(PAL.P1)); rect(72, 144, 5, 7, fb.ink(PAL.N0)); rect(73, 145, 3, 5, fb.ink(PAL.P1)); fb.set(74, 147, PAL.P0); }
   }
 };
 
-/** his post, in his own lowercase: a card that pops over the left pane in two held drawings */
+/** his post, in his own lowercase: a card that pops over the left pane in two held drawings. Round 6: the quote is
+ *  set in the 14 px display face on two lines (in the 7 px face it was "just barely readable" at 480 x 270) */
+const bigQ = (fb: Buf, str: string, x: number, y: number, col: number) => {
+  // '…' as three square dots on the baseline, curly quotes as the face's straight ones
+  let cx = x;
+  for (const ch of str) {
+    if (ch === '…') { for (let q = 0; q < 3; q++) { rect(cx + q * 4 + 1, y + 13, 2, 2, fb.ink(PAL.N0)); rect(cx + q * 4, y + 12, 2, 2, fb.ink(col)); } cx += 13; continue; }
+    if (ch === ' ') { cx += 7; continue; }
+    const c2 = ch === '“' || ch === '”' ? '"' : ch;
+    bigText(fb, c2, cx, y, col, {shadow: PAL.N0});
+    cx += bigTextWidth(c2) + 2;
+  }
+  return cx - x;
+};
+const bigQW = (str: string) => { let w = 0; for (const ch of str) { if (ch === '…') { w += 13; continue; } if (ch === ' ') { w += 7; continue; } const c2 = ch === '“' || ch === '”' ? '"' : ch; w += bigTextWidth(c2) + 2; } return w; };
 const drawPost = (fb: Buf, f: number) => {
   if (f < T.post || f >= T.unroll - 6) return;
   const k = f - T.post;
-  const s = '"…still flawed, still limited…"';
-  const w = ptextW(s) + 14, x = 2, y = 16; // at the pane's edge: it covers the GTP-4 banner whole, never half of it
-  const h = k < 3 ? 12 : 34;
+  const l1 = '"…still flawed,', l2 = 'still limited…"';
+  const w = Math.max(bigQW(l1), bigQW(l2) + 12) + 14, x = 1, y = 16; // at the pane's edge: it covers the GTP-4 banner whole
+  const h = k < 3 ? 12 : 55;
   rect(x - 1, y - 1, w + 2, h + 2, fb.ink(PAL.N0)); rect(x, y, w, h, fb.ink(PAL.N2)); rect(x, y, w, 1, fb.ink(PAL.C6));
   if (k < 3) return;
   rect(x + 5, y + 4, 8, 8, fb.ink(PAL.C5)); rect(x + 7, y + 6, 4, 4, fb.ink(PAL.N2)); // his avatar (a plain square)
   ptext(fb, 'mas', x + 17, y + 5, PAL.N7);
   ptext(fb, 'MAR 14', x + w - 6 - ptextW('MAR 14'), y + 5, PAL.N5);
-  ptext(fb, s, x + 7, y + 20, PAL.P1);
+  bigQ(fb, l1, x + 7, y + 19, PAL.P1);
+  bigQ(fb, l2, x + 19, y + 36, PAL.P1);
 };
 
 /** the name plates, in Act Four's plate style (a dark tab, an accent rule, the name then its line typing on) */
@@ -823,7 +935,7 @@ export const drawSc12 = (fb: Buf, f: number) => {
     bigText(fb, h2, mx + 14, my + 36, PAL.N1);
     void bigTextWidth;
     rect(mx + 14, my + 56, 120, 1, fb.ink(PAL.N5));
-    for (let j = 0; j < 6; j++) rect(mx + 14, my + 64 + j * 8, mw - 40 - ((j * 37) % 60), 2, fb.ink(PAL.P0));
+    for (let j = 0; j < 5; j++) rect(mx + 14, my + 64 + j * 8, mw - 40 - ((j * 37) % 60) - (j === 4 ? 70 : 0), 2, fb.ink(PAL.P0));
     rect(mx + mw - 84, my + mh - 22, 70, 12, fb.ink(PAL.N3)); ptext(fb, 'SIGN', mx + mw - 64, my + mh - 20, PAL.P2);
   }
   // his desk edge and keyboard in the foreground
@@ -859,17 +971,12 @@ export const drawFrame = (fb: Buf, f: number, clay: ClayState) => {
     if (f >= T.plateMario[0] && f < T.plateMario[1]) plate(fb, 250, 8, 'MARIO', 'EX-NOPEAI · THE CAREFUL RIVAL', f - T.plateMario[0], PAL.F5);
     if (f >= T.plateClod[0] && f < T.plateClod[1]) plate(fb, 250, 8, 'CLOD 1', 'SAME DAY', f - T.plateClod[0], PAL.W5);
   } else drawSc12(fb, f);
-  // the band: the verb band, dimmed (the record's band); the rail on its sentence line. Round 5: after the opening
-  // beat its verbs and inventory step out in three held steps (4 f each), and the band stays as a quiet bar under the
-  // panes (its position never moves: "the band's content changes, never its position")
-  drawBand(fb, {cutscene: true});
-  const fade = f < BAND_FADE ? 0 : Math.min(3, 1 + Math.floor((f - BAND_FADE) / 4));
-  if (fade) for (let y = 206; y < 270; y++) for (let x = 0; x < 480; x++) {
-    let c = fb.get(x, y);
-    if (fade >= 3) c = PAL.N1;
-    else for (let q = 0; q < fade * 2; q++) { const d = stepColor(c, -1); if (d === c || oklab(d)[0] < oklab(PAL.N1)[0]) { c = PAL.N1; break; } c = d; }
-    fb.set(x, y, c);
-  }
+  // the band: the adventure layout's own verb band, undimmed and whole for the clip. Round 5 stepped its verbs and
+  // inventory out after 4 s, and the bottom quarter read as "empty black... unfinished"; the dimmed band before it
+  // read as "too dim... the jokes near-illegible at 480". Round 6 keeps it on screen and readable: `Open` struck
+  // out, and Mas's inventory (a nonprofit charter, a GPU, an orb) is the frame's running joke. Its position never
+  // moves ("the band's content changes, never its position").
+  drawBand(fb, {cutscene: false});
   const rail = f < T.cut ? 'MAR 14, 2023' : 'MAR 22, 2023'.slice(0, Math.max(0, f - T.rail + 1));
   ptext(fb, rail, 12, 209, PAL.P1, PAL.N0);
   return m;

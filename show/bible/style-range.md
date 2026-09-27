@@ -944,6 +944,151 @@ The critic's verdict held the core rule (Mas's world stays pixel; each rival's p
 | 15 | Put R22's real option to the showrunner | **Taken** | R22 now lists four options, with (c), a model for the clay body only and code for the mouths and timing, stated against principle 4. The default is the filler, with nothing spent |
 | 16 | Out-of-date status | **Taken, with one correction** | The status now carries the recorded takes and the finished v5 reel (8:38.5). The critic's "≈ 22:18 against the 22:00 target" compares a story clock with a runtime: ≈ 22:18 is the story clock (≈ 1:03 past the top of its 20:45 ± 0:30 band); with the intro, the card and the credits (≈ 1:15), the pilot runs ≈ 23:33 against the 22:00 target. Acts One to Three are still estimates |
 
+### 6.1b Ep1 prototype results (2026-09-27)
+
+*Added 2026-09-27, after one polish round on each Ep1 prototype against its cold review.* E1-P1, E1-P2 (both cuts) and E1-P3 are built fully in code and re-rendered with temp sound. No external API was called and nothing was spent. Each builder checked its own encoded file at full size and at 480×270. **None has had a blind read, nobody has watched one at speed, and nobody has listened to any of the sound.** The approval gate holds: nothing here enters the episode before the showrunner's call. §6.1a's beat tables stay the briefs; where a clip now differs, this subsection says so, and the tables change after approval, not before. E1-T1 (the copy's look test) isn't built yet.
+
+#### The review reel
+
+- **`out/range/ep1/ep1-range-reel.mp4`**: 1920×1080, 24 fps, 2,009 frames (83.7 s), H.264 at crf 14 with 256 kbps stereo AAC at 48 kHz, 8.8 MB. **It runs in the pilot's scene order**, not prototype order: slate, E1-P1 (sc 11), 1 s of black, slate, E1-P3 (sc 30), black, slate, E1-P2 A (sc 32), black, slate, E1-P2 B, black. Cuts A and B sit back to back so they can be compared. Each slate is 3.5 s and silent, fades in and out of black over 8 frames, and gives the id, tier, medium, the moment (slate id, scene, date), the owner, the length and the final route. The clips and their sound are unchanged, apart from a 5 ms ramp at each edge against clicks. E1-P3's soft English subtitle track is copied in, shifted to where the clip starts (35.5 s); the muxer drifts its cues by 14 ms at most, under a frame. **Internal only:** it carries Act Four and the tag.
+- **`out/range/ep1/ep1-range-sheet.png`**: one key still per output, pulled from the encoded reel: E1-P1 p268 (clay CLOD up out of its bow, `CLOD 1 · SAME DAY`), E1-P3 p318 (the room in the landlord's style, Tasya and Mas pixel), E1-P2 A p040 (the film on 1s, the same in both cuts to p71) and E1-P2 B p122 (the break held: the six stills and the caption).
+- **Rebuild** (from the repo root, about 35 s): `ops/heavy.sh audio/.venv-mix/bin/python studio/src/dev/range/tools/reel_ep1.py <scratchDir>`. It is `reel.py`'s method pointed at `out/range/ep1/`: the slates drawn with PIL as PNG sequences in scratch, one `concat` encode, the audio sample-exact at 2,000 samples a frame. `REEL_THREADS` sets x264's threads (default 6). Scratch is deleted afterwards.
+- **Checks on the encode:** all 2,009 frames are there, and the audio matches the picture's length (83.708 s). Each clip's first, middle, last and key frames match their sources to within 0.22 levels on average (99.9th percentile 5 levels or less), so nothing slipped a frame. The black holds at level 0–1.
+
+| Segment | Reel frames | Time (s) |
+|---|---|---|
+| Slate 1 | 0–83 | 0.00–3.50 |
+| E1-P1 | 84–743 | 3.50–31.00 |
+| Black | 744–767 | 31.00–32.00 |
+| Slate 2 | 768–851 | 32.00–35.50 |
+| E1-P3 | 852–1288 | 35.50–53.71 |
+| Black | 1289–1312 | 53.71–54.71 |
+| Slate 3 | 1313–1396 | 54.71–58.21 |
+| E1-P2 A | 1397–1660 | 58.21–69.21 |
+| Black | 1661–1684 | 69.21–70.21 |
+| Slate 4 | 1685–1768 | 70.21–73.71 |
+| E1-P2 B | 1769–1984 | 73.71–82.71 |
+| Black | 1985–2008 | 82.71–83.71 |
+
+| Clip | Length | Integrated | True peak | Builder's own figure |
+|---|---|---|---|---|
+| E1-P1 | 27.5 s | −16.4 LUFS | −1.8 dBTP | −16.0 LUFS |
+| E1-P3 | 18.2 s | −17.5 LUFS | −4.5 dBTP | −16.9 LUFS (the v5 mix's level here) |
+| E1-P2 A | 11.0 s | −24.1 LUFS | −5.0 dBTP | −23.7 LUFS |
+| E1-P2 B | 9.0 s | −24.2 LUFS | −4.8 dBTP | −23.8 LUFS |
+| The reel | 83.7 s | −17.4 LUFS | −1.9 dBTP | — |
+
+Loudness is measured with ffmpeg's `loudnorm` on the encoded AAC, so it reads a few tenths lower than the builders' figures. **E1-P2 sits about 7 LU under the other two**, which you'll hear as a drop at the third clip. The tag is a quiet dark room (its bed is about −39 dBFS RMS and the film is silent), so some of that is intended, but its builder gave no target. The soundtrack pass should set one against the episode's mix, not against this reel.
+
+#### E1-P1 · CLOD under its launch light (1.A, sc 11)
+
+**Final state.** `out/range/ep1/ep1-p1.mp4`: 660 f (27.5 s), round 6. The clay frames render with three.js on the iGPU (143 s), and the clip renders in 72 s at `--concurrency=4`. Code and handoff are in `studio/src/dev/range/ep1-p1/` (README, round 6).
+- **p0–239, the pixel split.** Gerg photographs the napkin. CLOD stands unlit on its plinth as a pixel figure made from the clay's first key. Mario dictates the memo while he writes it and jabs his finger on "…the same day as them."
+- **p240, the strike.** The can's clunk, and in the same frame the light is full and CLOD is clay, hidden inside a 2-frame flash: one extra rung of light and a lens star, with the clay overexposed and settling over 6 frames. Mario hops back and holds his startle to p255.
+- **The bow and the hold.** The bow plays on 2s toward Mario, with "You're absolutely right!" on three replacement mouths. CLOD then rises and squares to the lens (p262–280) and holds, its surface boiling through four replacement surfaces in a hashed order and its head acting on the scene's beats. `CLOD 1 · SAME DAY` holds for 80 frames.
+- **Around it,** the duel plays out: the post, the cheers, the second scroll (which now lies in the room and passes behind the plinth) and the empty spindle. The band stays whole and readable throughout. The cut to sc 12 is at p600.
+- **Measured:** moves land exactly on 2s (an odd frame differs from the one before by 0.034, a new drawing by 5.8). The hold's boil is 4.5 a drawing, with 3 near-identical pairs in 13,041. Clay whites are capped at 76.5%. The mix is −16.0 LUFS, peak −1.58 dBFS.
+
+**Where it departs from §6.1a.**
+- The clip opens a bar early (660 f, not 600), because Mario's temp memo runs 206 f. Every brief frame is +60, as the brief allows.
+- **CLOD faces the camera for the hold** (from p262) instead of holding its bow's last key, and the hold's beats are head moves.
+- **The switch is hidden in a flash** rather than a clean light step, and the `SAFETY` lantern browns out for 10 frames on the clunk, a beat the brief didn't have.
+- The clipboard is a clean page with a red tick, and the belly's wheel is a grey disc with a small pot.
+
+**Honest read.** The clay now sits in the pane, not on it: tighter focus, a 2 px light blend at the edge, a stepped cone, and one frame in which the light and the medium change together. At 480×270, CLOD's eyes, smile, bow tie and tick read, and so do the plate, the post and the band. It is a convincing code filler for a puppet, but not yet a puppet: it's still a 3D render in a pixel pane, and a stop-motion animator would see the render. Mario's acting now reads at phone size, but only just.
+
+**Weaknesses.**
+- The 2-frame flash could read as a glitch rather than the camera catching up.
+- Whether CLOD presenting itself to the lens plays is untested.
+- Mario's look-up is a 1 px head move, his writing arm may read as clasped hands, and the rim light draws an amber line on both legs.
+- At phone size the belly reads as a button or an eye, not a potter's wheel.
+- The band's verbs sit at about 3:1 contrast. Those are the show's approved colours, so brightening them is a show-wide change, not this clip's.
+- The paper is still a thin strip at phone size.
+- The `SAFETY` dip may be too cute.
+- Unwatched and unheard: whether the 15 s hold loops, the temp mix and the stock voices.
+- `ep1-p1-b.mp4` (the whole pane in clay) isn't built, because R24 is unruled.
+
+**Final route.** R22, still open: (a) the one-puppet stop-motion day, (b) a scanned maquette, (c) a video model for the clay body only (the bow and the surface), with code keeping the three mouths and every frame of timing, or (d) this filler. **What a final adds:** real plasticine under a real key, true stop-motion irregularity, and fingerprints no shader invents. The voices move from stock presets to the voice plan's cast (designed from text descriptions or performed, never imitating anyone).
+
+#### E1-P2 · What the quack (1.H, sc 32)
+
+**Final state.** `ep1-p2.mp4` (A, the ramp: 264 f, 11.0 s) and `ep1-p2-b.mp4` (B, the break: 216 f, 9.0 s), the folder's v5. The film is a new Blender take (EEVEE on the iGPU, about 36 min for 120 frames): a procedural rubber duck turning 90° on a turntable under product light, 0.75° a frame, while the camera pushes in. The composites render on the CPU in under 30 s a cut. Code and handoff are in `studio/src/dev/range/ep1-p2/`. The inputs for the outside-layer test are in `out/range/ep1/ep1-p2-inputs/`: two Cycles stills at the move's ends (701 s), the screen matte (now from x 264) and the filler's take.
+- **The `[OTS]`** is shot from Mas's other shoulder: the monitor on the left, Mas on the right looking left, the window behind him and the Orb on his far side, matching the `[2S]`. `DEC 6, 2023` types in the band's sentence line at the start, and the player's title strip reads `ELGOOG DEMO`.
+- **A:** the film on 1s, then on 2s (p72), on 4s (p96, where the Orb's iris narrows) and on 8s (p112, where Mas leans in and the Orb fires its scan beam over his head onto the glass). At p120 the frozen frame steps down into the last cell of a 3×2 contact sheet, each still numbered with its take frame (F000…F112), and the caption types across the full width.
+- **B:** at p72 the film breaks straight to the sheet (F000…F071), with the same lean, beam and caption.
+- **The `[2S]`:** Mas breathes, turns from the screen to the Orb, lifts his brow and gives the one-pixel smile. The rack's slot whirs 0.25 s before its LED blinks.
+- **Measured:** new drawings come out at 71 · 12 · 4 · 1 on 1s · 2s · 4s · 8s, as planned. The film's brightest channel is 204 (80%). The super clears the duck by at least 69 px on every frame. The mixes are −23.7 and −23.8 LUFS.
+
+**Where it departs from §6.1a.** It uses six stills, not three. The Orb's doubt is a silent scan beam, with its iris narrowing and the Orb firing, where the brief kept it to an eye-light on the glass with no narrowing. The date types at the scene's start instead of riding the title strip, which now reads `ELGOOG DEMO` alone. The `[OTS]` is restaged from the other shoulder. The README lists each departure.
+
+**Honest read.** The strongest single image in the slate. At full size the film reads as a product shot inside our monitor, and the exposure is legible in both cuts. It is still a clean CG render that an expert at 1:1 would call CG, which is exactly what the outside layer is for. Which cut wins is open, and only a viewer can answer it.
+
+**Weaknesses.**
+- **"Within a stop of the room" is unruled** (R27): the film is +4.5 stops over the room's average and about +0.37 over its lit surfaces.
+- At first the ramp may still read as a player hitching, and the beam may read as a UI effect rather than light.
+- At phone size the head turn reads, but the one-pixel smile doesn't.
+- In the new `[OTS]` the Orb is a cheat: strictly, it would be behind the camera.
+- The small monitor's ducks look yellow-orange with brown bills, and the three tally marks read as thin bright lines in front of Mas's hands.
+- Whether an 18°/s spin is too brisk for a product film is a taste call.
+- **For the facts owner:** `ELGOOG DEMO`, `DEC 6, 2023`, and the caption `LATER: ELGOOG'S DEMO WASN'T REAL-TIME`, which still differs from the script's `LATER: THE DEMO WASN'T REAL-TIME`.
+
+**Final route.** Unchanged from §6.1a, and on paper only (R23): VIDEO in its native look, the first outside-layer test. That means image-to-video on the Runway key, conditioned on the two Cycles stills, 720p, audio off, with 3 takes each on Veo 3.1 Fast and Wan 3.0 (24 s, about $2.40). The take is composited unconverted in the matte, and code keeps the title strip, the super, the exposure and the caption. The fallbacks are Cycles for the whole take, then the filler. **What it adds:** a film a viewer would take for a real product shoot, so the pilot's one near-photoreal image, which is staged, is also convincing.
+
+#### E1-P3 · Below, above, around (1.D, sc 30)
+
+**Final state.** `out/range/ep1/ep1-p3.mp4`: 437 f (18.21 s), with the v5 sound rebuilt plus this pass's additions, and a soft English subtitle track. The CPU render takes 27 s and the sound 55 s. Code and handoff are in `studio/src/dev/range/ep1-p3/`, and `tools/build.sh` gains a `NOPROMOTE=1` option.
+- **The change reads as designed.** On "below" the vector floor is laid out along the room's own perspective lines from the line under Tasya, crisp, with a thin white seam. "above" does the same for the ceiling. On "around" a crisp iris with a thin white rim closes onto Mas's island, and everything outside it turns at once. The room noise fades with the ring.
+- **The holds move.** In the wide, a woman walks out past the hall and is gone by p75, before Mas's question. A colleague glances after her, boxes are re-gripped, and everyone breathes. Drizzle runs past the windows (with a faint rain sound at −44 dBFS) until the landlord's style swaps it for blue sky. Tasya breathes before each phrase, nods on his stressed words, dips on "below", lifts on "above", and leans toward Mas from "We are". Mas breathes and blinks, and on "Hello." his brow goes up and his head dips toward the floor.
+- **Measured:** the share of the picture changing per frame in the wide went from 0.00% (0 of 119 frames moving) to 0.53% (96 of 119), and in Tasya's close-up from 0.03% to 0.28%. The mix is −16.9 LUFS, the v5 mix's level here, and the rebuilt v5 sound nulls against the v5 mix (−143.6 dBFS residual).
+
+**Where it departs from §6.1a.**
+- The brief's two held drawings per surface became a laid-out floor and ceiling and an iris, and the staff turn as the ring passes them rather than in three held steps from back to front.
+- Tasya's close-up has its own camera, with him on the left third facing Mas and his hands below the frame.
+- There is no contact shadow under Mas (the brief had the floor draw one).
+- The rain and the walker are new.
+
+**Honest read.** The most finished of the three as design, and the one whose filler is its final. "above" and "around" read clearly as the landlord taking the room, and Mas reads as the one pixel thing left in it. "below" is the weakest move at phone size. The vector room looks like a corporate template, which is the satire; whether a blind reader says "clip art" is the test.
+
+**Weaknesses.**
+- **The splice.** The clip ends 5 frames before S7.05 ends in the v5 reel, and the fire light this folder added isn't in the reel's S7.05, so the glow would pop off for those 5 frames. Either extend the clip to p442 or give the reel's shot the fire light (the Act Four pass).
+- At phone size "below" reads as a thin strip of floor lightening, because the new floor is close in value to the old one.
+- The walker is a 4-drawing walk, her feet slide a little, and she may pull the eye away from Mas.
+- The rain is new weather for the scene, and its sound hasn't been heard.
+- Tasya's lighting still changes as the ring passes him, and Mas's close-up still shows only his bust.
+- The Rhodes chords are a temp instrument. There's no blind read yet.
+
+**Final route.** CODE: the filler is the final (§6.1a), with no outside layer on the picture. What's left for the final is sound: the real OST cue in place of the temp Rhodes, and the scene's final voices from the voice plan in place of the v5 stock takes.
+
+#### What the Ep1 three taught
+
+1. **A change of medium lands in one frame, with its cause.** E1-P1's light and clay now change together on the clunk, and E1-P3's surfaces are laid along the room's own lines. The stepped and dimmed versions before them read as effects. Every door here has a cause on screen: the can-light, the player's freeze and the Orb's beam, Tasya's words.
+2. **A held shot needs life, or the medium reads as a still.** Every cold read first flagged frozen people: Mario, Mas and the Orb, the bullpen. Breath, blinks and head moves on the scene's beats fixed it, measured as the share of the picture changing per frame.
+3. **Phone size is still the hard test,** as in §11.5. What fails at 480×270 is 1 px acting (Mario's look-up, Mas's smile), thin props (the paper, the belly's wheel) and close values ("below").
+4. **The builders now go past their briefs** (CLOD facing us, the Orb's beam, the rain), and each departure is logged in its README. They're rulings for the showrunner (below), not defaults.
+5. **The same gaps as §11.5 remain:** no blind read, nobody has watched at speed or listened, and the sound is temp.
+
+#### Rulings and handoffs from 6.1b
+
+| # | Ruling | Default until answered |
+|---|---|---|
+| R26 | E1-P1: CLOD rises from its bow and faces the lens for the hold, and the switch hides in a 2-frame flash with the `SAFETY` lantern browning out | Keep both until the blind read. If the flash reads as a glitch, drop it to one rung with no star; if the lantern's dip reads as cute, drop it |
+| R27 | E1-P2: "within a stop of the room" measured against the room's average (+4.5 stops) or its lit surfaces (+0.37) | Its lit surfaces, with whites ≤ 80% as the hard cap: a monitor in a dark room is judged against what it lights, not against the dark around it. Check by eye at the gate |
+| R28 | E1-P2's departures: six stills, the Orb's silent beam with its iris narrowing (the brief kept its doubt to an eye-light), the date at the scene's start, the restaged `[OTS]` | Keep, pending the blind read. If the beam reads as UI, fall back to the eye-light on the glass |
+| R29 | E1-P3's new rain and walker in sc 30 | The prototype keeps them. The episode takes them only if the Act Four pass agrees, since sc 30 is theirs |
+
+| To | What |
+|---|---|
+| **The Act Four pass** (H3) | E1-P3's 5-frame splice at S7.05 (extend to p442, or add the fire light to the reel's shot); the rain and the walker (R29). R25 stands |
+| **The season revision** (H2) | sc 11 as E1-P1 plays it, if R26 keeps it: CLOD faces us for the hold. sc 32: the date types in the band at the tag's start, and the player's strip reads `ELGOOG DEMO` |
+| **The facts owner** | E1-P2's `ELGOOG DEMO`, `DEC 6, 2023` and the caption's wording against the script's |
+| **The soundtrack pass** (H4) | A loudness target for the tag (E1-P2 sits about 7 LU under the others in the reel). All four mixes are unheard |
+
+**Next.**
+- **Blind reads**, with the uncaptioned sheets (`ep1-p1-sheet-blind.png`, `ep1-p2-blind.png`, `ep1-p2-b-blind.png`, `ep1-p3-sheet-blind.png`) and then the mp4s at full size and phone size. For A against B, whichever cut gets "faked" sooner wins, and a tie goes to B.
+- **Watch and listen at speed:** the reel above is built for it.
+- **The showrunner's gate** with this reel, and R22, R24 and R26–R29.
+- **E1-T1** is still to build.
+
 ### 6.2 Ep2 · `ep1.1_her.wav` (Jan → Aug 2024)
 
 | Id | Beat | Tier · medium · owner | In → out | Length | FILLER (now) | FINAL | Status |

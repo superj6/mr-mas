@@ -60,7 +60,7 @@ for step in $STEPS; do
         rm -f "$S/$ID-video.mp4"
       done
       npx remotion still src/dev/range/ep1-p2/entry.tsx ep1-p2-matte "$IN/screen-matte.png" --public-dir="$S/public" --log=error
-      printf '{"frame": [1920, 1080], "screen_px": {"x": 600, "y": 56, "w": 1056, "h": 592}, "title_strip_h": 44, "native_scale": 4, "note": "white = the film; the title strip and the caption are drawn over it by code"}\n' > "$IN/screen-matte.json"
+      printf '{"frame": [1920, 1080], "screen_px": {"x": 264, "y": 56, "w": 1056, "h": 592}, "title_strip_h": 44, "native_scale": 4, "note": "white = the film; the title strip and the caption are drawn over it by code"}\n' > "$IN/screen-matte.json"
       ;;
     review)
       $PY $HERE/tools/sheet.py sheet "$OUT/ep1-p2.mp4" A "$OUT/ep1-p2-sheet.png" "$OUT/ep1-p2-blind.png"

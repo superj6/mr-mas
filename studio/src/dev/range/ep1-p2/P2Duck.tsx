@@ -1,19 +1,21 @@
-// MR. MAS · range E1-P2 (1.H, WHAT THE QUACK): the Remotion host. CPU only (2D canvas), one canvas per frame:
+// MR. MAS · range E1-P2 (1.H, WHAT THE QUACK): the Remotion host (v5). CPU only (2D canvas), one canvas per frame:
 //   1. the native 480 x 270 pixel frame: the [OTS] room (ots.ts) or the [2S] (twoshot.ts), and the band with the rail,
 //      presented at 4x nearest-neighbour;
-//   2. [OTS] only: ELGOOG's product film at output resolution inside the screen: one frame of the Blender take (or the
-//      strip of three stills), the film's own super drawn INTO it, then graded (grade.ts) so it sits in the room;
-//   3. the monitor's own pixel UI over the film (the player's title strip, the chyron caption);
-//   4. the Orb's eye-light on the glass, drawn on the native grid (4 x 4 cells), screen-blended over the film.
+//   2. [OTS] only: ELGOOG's product film at output resolution inside the screen: one frame of the Blender take, the
+//      film's own super drawn INTO it, then graded (grade.ts) so it sits in the room; or the contact sheet of six
+//      stills (the frozen frame stepping down into the last cell, the others dealt in);
+//   3. the monitor's own pixel UI over the film (the player's title strip, the sheet's frame numbers, the chyron);
+//   4. the Orb's scan beam, drawn on the native grid (4 x 4 cells) and screen-blended over the room and the glass;
+//   5. the cast layer: Mas's silhouette and the Orb (nearer the lens than him), native, over everything.
 // The take's frames are served from --public-dir (tools/build.sh points it at the scratch folder holding take/f###.png).
 import React, {useLayoutEffect, useRef} from 'react';
 import {AbsoluteFill, cancelRender, continueRender, delayRender, staticFile, useCurrentFrame} from 'remotion';
-import {Buf, TRANSPARENT} from '../../../shared/pixel/px';
+import {Buf, TRANSPARENT, rect} from '../../../shared/pixel/px';
 import {PAL, hex} from '../../../shared/pixel/palette';
 import {text} from '../../../shared/pixel/font';
 import {drawBand} from '../p4/passes/band';
 import {plan, framesOf, Version, SUPER, RAIL, Beat} from './plan';
-import {drawOTS, drawTitleStrip, drawCaption, drawStripField, newUI, SCR, SCALE, STILL, stillX, eyeCells, EYE_STEPS} from './ots';
+import {drawOTS, drawCast, drawTitleStrip, drawCaption, drawSheetField, drawStillTabs, newUI, SCR, SCALE, STILL, cellXY, beamCells, orbLens, FILM_RECT, GRID_RECT, Rect} from './ots';
 import {draw2S, toPalette, SMALL, StillPx} from './twoshot';
 import {gradeRGBA} from './grade';
 
@@ -63,7 +65,7 @@ const filmFrame = (im: HTMLImageElement, superA: number, t: number) => {
   x.putImageData(d, 0, 0);
   return c;
 };
-/** a still for the strip: the full graded frame, reduced (the super only on the first) */
+/** a still for the sheet: the full graded frame, reduced (the super only on the first) */
 const stillCache = new Map<string, HTMLCanvasElement>();
 const stillOf = (im: HTMLImageElement, t: number, withSuper: boolean) => {
   const key = `${t}:${withSuper}`;
@@ -108,20 +110,28 @@ const present = (ctx: CanvasRenderingContext2D, b: Buf) => {
   ctx.drawImage(c, 0, 0, b.w * SCALE, b.h * SCALE);
 };
 
-/** the Orb's eye-light: its cells on the native grid, screen-blended over the glass */
-const eyeLight = (ctx: CanvasRenderingContext2D, step: number) => {
-  if (step <= 0) return;
-  const cx = EYE_STEPS[Math.min(3, step - 1)];
+/** the Orb's scan beam: its cells on the native grid, screen-blended over the room and the glass */
+const BEAM_INK: Record<number, [number, number]> = {1: [PAL.C3, 0.55], 2: [PAL.C4, 0.6], 3: [PAL.C2, 0.22], 4: [PAL.C6, 0.95], 5: [PAL.C6, 0.5], 6: [PAL.C3, 0.35]};
+const drawBeam = (ctx: CanvasRenderingContext2D, lens: [number, number], fp: Rect, t: number) => {
   ctx.save();
   ctx.globalCompositeOperation = 'screen';
-  const fill: Record<number, [number, number]> = {1: [PAL.C2, 0.55], 2: [PAL.C2, 0.4], 3: [PAL.C5, 0.62], 4: [PAL.C7, 0.9]};
-  for (const [x, y, k] of eyeCells(cx)) {
-    const [col, a] = fill[k];
+  for (const [x, y, k] of beamCells(lens, fp, t)) {
+    const [col, a] = BEAM_INK[k];
     ctx.globalAlpha = a;
     ctx.fillStyle = hex(col);
     ctx.fillRect(x * SCALE, y * SCALE, SCALE, SCALE);
   }
   ctx.restore();
+};
+/** the frozen frame's rect while it steps down into the sheet's last cell (native): 1 = halfway, 2 = in its cell */
+const frozenRect = (shrink: number): Rect => {
+  const [cx, cy] = cellXY(5);
+  const cell = {x: SCR.x + cx, y: SCR.y + cy, w: STILL.w, h: STILL.h};
+  if (shrink >= 2) return cell;
+  const k = 0.5;
+  const full = {x: SCR.x, y: SCR.y, w: SCR.w, h: SCR.h};
+  const w = Math.round(full.w + (cell.w - full.w) * k), h = Math.round(full.h + (cell.h - full.h) * k);
+  return {x: Math.round(full.x + (cell.x - full.x) * k), y: Math.round(full.y + (cell.y - full.y) * k), w, h};
 };
 
 /** the band: the adventure layout's verb band, dimmed for a cutscene; the rail types on its sentence line */
@@ -148,20 +158,43 @@ export const drawFrame = async (ctx: CanvasRenderingContext2D, v: Version, p: nu
   drawOTS(fb, p);
   band(fb, beat);
   present(ctx, fb);
-  const ui = newUI();
   const X = SCR.x * SCALE, Y = SCR.y * SCALE;
+  let fp: Rect = FILM_RECT;
+  const ui2 = newUI();
   if (beat.film.kind === 'frame') {
     ctx.drawImage(filmFrame(ims[0], beat.superA, beat.film.t), X, Y);
   } else {
-    drawStripField(ui);
+    const f = beat.film;
+    const dealt = Array.from({length: f.n}, (_, i) => i);
+    const cells = f.shrink >= 2 ? [...dealt, 5] : dealt;
+    const ui = newUI();
+    drawSheetField(ui, cells);
     present(ctx, ui);
-    beat.film.ts.forEach((t, i) => ctx.drawImage(stillOf(ims[i], t, i === 0), (SCR.x + stillX(i)) * SCALE, (SCR.y + STILL.y0) * SCALE));
+    dealt.forEach((i) => { const [cx, cy] = cellXY(i); ctx.drawImage(stillOf(ims[i], f.ts[i], i === 0), (SCR.x + cx) * SCALE, (SCR.y + cy) * SCALE); });
+    // (the super rides on the first still and on the frozen one, the film's frame as it froze)
+    // the frozen frame: halfway (a reduced copy of the full graded frame), then in its cell
+    const r = frozenRect(f.shrink);
+    const last = f.ts[5];
+    if (f.shrink >= 2) ctx.drawImage(stillOf(ims[5], last, true), r.x * SCALE, r.y * SCALE);
+    else {
+      rect(r.x - 1, r.y - 1, r.w + 2, r.h + 2, ui2.ink(PAL.N0));
+      present(ctx, ui2);
+      ui2.c.fill(TRANSPARENT);
+      ctx.save(); ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
+      ctx.drawImage(filmFrame(ims[5], 1, last), r.x * SCALE, r.y * SCALE, r.w * SCALE, r.h * SCALE);
+      ctx.restore();
+    }
+    drawStillTabs(ui2, cells, f.ts);
+    // the beam stays on the whole picture while the frozen frame steps down and the others are dealt, then takes the sheet
+    fp = f.shrink >= 2 && f.n >= 5 ? GRID_RECT : FILM_RECT;
   }
-  const ui2 = newUI();
   drawTitleStrip(ui2);
   drawCaption(ui2, beat.caption);
   present(ctx, ui2);
-  eyeLight(ctx, beat.eye);
+  if (beat.beam > 0) drawBeam(ctx, orbLens(p), fp, beat.beam);
+  const cast = newUI();
+  drawCast(cast, p, {lean: beat.lean, orbAp: beat.orbAp, fire: beat.fire});
+  present(ctx, cast);
   return beat;
 };
 

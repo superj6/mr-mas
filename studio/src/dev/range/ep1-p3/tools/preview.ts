@@ -18,7 +18,7 @@ for (const p of [200, 247, 270, 300]) {
   writePNG(`${out}/tasya-${p}.png`, 480, 270, b.c, 2);
 }
 {
-  const pl = plate(true, 0);
+  const pl = plate('all', 0);
   const b = pl.buf.clone();
   for (let i = 0; i < 480 * 203; i++) if (pl.own[i]) { const t = TINT[pl.own[i]]; const c = b.c[i]; b.c[i] = (((((c >> 16) & 255) + ((t >> 16) & 255)) >> 1) << 16) | (((((c >> 8) & 255) + ((t >> 8) & 255)) >> 1) << 8) | (((c & 255) + (t & 255)) >> 1); }
   writePNG(`${out}/owners.png`, 480, 270, b.c, 2);

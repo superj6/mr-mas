@@ -25,7 +25,7 @@ export const T = {
   // phrase 2 (bars 5-6): the launch
   slam: B(180),                      // the can slams on: CLOD is clay from here to the cut
   press: B(188),                     // the bow's down key (a dry clay press)
-  plateClod: [B(195), B(235)] as [number, number],
+  plateClod: [B(192), B(272)] as [number, number], // round 6: held 3.3 s like Mario's (40 f was too short to read)
   site1: B(210), site2: B(217),      // the napkin becomes a website, in two drawings
   lookUp1: B(240), lookUp2: B(246),  // Mario looks up to the split line
   cheer1: B(285),                    // the bullpen cheers, two held frames
@@ -43,12 +43,23 @@ export const T = {
  *  beats, its surface boiling on 2s) until the cut */
 export const HOLD_FROM = B(222);
 
-/** Round 5: the band's content steps down to a quiet bar after the opening beat (the plate has cleared): the
- *  verbs and the inventory leave in three held steps and the rail's date stays. Its position never moves. */
-export const BAND_FADE = 100;
-/** Mario's startle at the slam (a hand to his chest, brows up, a pixel back), then he looks at CLOD */
+/** Round 6: the band stays whole and readable for the clip (the adventure layout's own band, undimmed): its
+ *  verbs and Mas's inventory are the frame's running joke (`Open` struck out; a nonprofit charter, a GPU, an orb),
+ *  and a dead bar there read as unfinished. Its position never moves. */
+export const BAND_FADE = Infinity;
+/** Mario's startle at the slam: a recoil (a step back and a hop, a squint, a hand to his chest, a gasp), HELD so it
+ *  reads at phone size (round 5's one-frame version didn't), then he watches CLOD bow at him */
 export const STARTLE: [number, number] = [B(180), B(196)];
-/** The can's filament: the clunk at the slam, then the light comes up in four held steps on 2s (8 f) instead of
- *  one frame. Level 0..1: the pixel light's rungs scale by it, and the clay blends from its night key to its lit one. */
-export const LIGHT_RAMP = [0.3, 0.58, 0.84];
-export const lightAt = (f: number) => (f < T.slam || f >= T.cut ? 0 : LIGHT_RAMP[(f - T.slam) >> 1] ?? 1);
+/** Round 6: the can doesn't fade up. It STRIKES: the clunk, and in the same frame the light is full and CLOD is
+ *  clay (the swap happens inside the flash, never a dim clay CLOD before the light). The flash is the camera's
+ *  exposure catching up: one extra rung on the pixel light for the first drawing, and the clay overexposed and
+ *  settling over three drawings (FLASH_EXP). */
+export const lightAt = (f: number) => (f < T.slam || f >= T.cut ? 0 : 1);
+/** extra rungs of light on drawing 1 of the strike (the pixel side of the flash) */
+export const flashAt = (f: number) => (f >= T.slam && f < T.slam + 2 ? 1 : 0);
+/** the clay's exposure over the strike's first drawings: blown, bright, a touch hot, then normal */
+export const FLASH_EXP = [1.9, 1.38, 1.12];
+export const flashExpAt = (f: number) => (f < T.slam || f >= T.cut ? 1 : FLASH_EXP[(f - T.slam) >> 1] ?? 1);
+/** Round 6: the lighthouse's SAFETY lantern browns out as the launch light pulls power: two held steps, then back */
+export const SAFETY_DIP: Array<[number, number, number]> = [[B(180), B(184), 2], [B(184), B(190), 1]];
+export const safetyDipAt = (f: number) => { for (const [a, b, k] of SAFETY_DIP) if (f >= a && f < b) return k; return 0; };

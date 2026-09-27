@@ -12,14 +12,16 @@ from PIL import Image, ImageDraw, ImageFont
 OUT, DIR = sys.argv[1], sys.argv[2]
 BLIND = len(sys.argv) > 3 and sys.argv[3] == 'blind'
 NOTES = {
-    0: 'phrase 1: the split, all pixel', 60: 'Gerg snaps the napkin', 120: 'the memo; CLOD unlit, pixel', 179: 'CLOD pixel (night rungs)',
-    238: 'last pixel frames', 239: 'p239: the pixel CLOD', 240: 'p240 THE SLAM: clay', 242: 'the can on, the pool',
-    244: '"You\'re..." antic', 246: 'the bow, going down', 248: 'the press (down key)', 252: 'settle', 256: 'rising',
-    262: 'rising, face to Mario', 268: '"...right!" (open mouth)', 276: 'the hold begins', 300: 'Mario looks up',
-    330: '"Addendum." (light on)', 345: 'the bullpen claps', 354: 'a blink (replacement lids)', 380: 'his post; the hold (boil)', 420: 'cheers harder; hold',
-    452: 'Mario adds a line; hold', 480: 'the second scroll unrolls', 500: 'it crosses the split', 540: 'lands on Gerg\'s desk',
-    560: 'the site (memo)', 585: 'the empty spindle', 599: 'last clay frame', 600: 'CUT: sc 12 [OTS], night',
-    610: 'PAUSE GIANT AI EXPERIMENTS', 659: 'MAR 22, 2023 (end)',
+    0: 'phrase 1: the split, all pixel', 60: 'Gerg snaps the napkin', 110: 'Mario writes the memo; CLOD unlit', 150: '"...same day as them." (finger)',
+    179: 'CLOD pixel (night rungs)', 200: 'back at the page, absorbed', 238: 'last pixel frames', 239: 'p239: the pixel CLOD',
+    240: 'p240 THE STRIKE: clay in the flash', 242: 'exposure settling; Mario hops back', 244: '"You\'re..." antic; SAFETY dips',
+    246: 'full light; the bow', 248: 'the press (down key)', 250: 'Mario startled, held', 256: 'rising',
+    268: '"...right!" squaring to the lens', 276: 'the hold: facing us, breathing', 290: 'CLOD 1 · SAME DAY (held)',
+    300: 'Mario looks up; CLOD follows', 312: 'CLOD looks at the split', 330: '"Addendum.", head cocked', 354: 'a blink (replacement lids)',
+    380: 'his post; Mario reads it', 400: 'CLOD nods along', 424: 'Mario writes his line', 452: 'Mario adds a line; hold',
+    480: 'the second scroll unrolls', 500: 'CLOD follows the paper', 520: 'behind the plinth, across the floor', 540: 'lands on Gerg\'s desk',
+    560: 'the site (memo)', 585: 'the empty spindle', 590: 'CLOD turns back, grins', 599: 'last clay frame',
+    600: 'CUT: sc 12 [OTS], night', 610: 'PAUSE GIANT AI EXPERIMENTS', 659: 'MAR 22, 2023 (end)',
 }
 files = sorted(f for f in os.listdir(DIR) if f.endswith('.png'))
 first = Image.open(os.path.join(DIR, files[0]))
@@ -49,7 +51,7 @@ if BLIND:
     d.text((10, 38), 'frames in order, from the encoded mp4', fill=(120, 150, 160), font=font(14))
 else:
     d.text((10, 10), 'MR. MAS  STYLE-RANGE E1-P1  CLOD UNDER ITS LAUNCH LIGHT (1.A)  EP1 SC 11 -> 12' + ('  (480x270 CHECK)' if small else ''), fill=(230, 214, 180), font=font(20, True))
-    d.text((10, 38), '660 f @ 24 fps, 96 BPM (opens a bar early: the memo runs 206 f)  |  pixel p0-239  |  clay CLOD p240-599  |  sc 12 p600-659  |  from the encoded mp4', fill=(120, 150, 160), font=font(14))
+    d.text((10, 38), '660 f @ 24 fps, 96 BPM (opens a bar early: the memo runs 206 f)  |  pixel p0-239  |  clay CLOD p240-599 (the strike p240-245)  |  sc 12 p600-659  |  round 6, from the encoded mp4', fill=(120, 150, 160), font=font(14))
 for i, f in enumerate(files):
     fr = int(f[1:4])
     im = Image.open(os.path.join(DIR, f)).convert('RGB').resize((tw, th), Image.LANCZOS if not small else Image.NEAREST)

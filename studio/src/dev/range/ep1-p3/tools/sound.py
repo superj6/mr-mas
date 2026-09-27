@@ -18,9 +18,11 @@ Everything upstream is read-only:
          rendered with the OST engine's GeneralUser Rhodes (TEMP), its calibration cache redirected to scratch;
        - a sparse packing rustle in the bullpen (cardboard flaps, a tape pull) before the change (synthesised: the SFX
          library has no cardboard);
-       - the room changes medium: from p296 the murmur and the key taps thin in three held steps (p296, p300, p304) to
-         nothing, and the HVAC hands over in the same steps to a clean, airless corporate hush (steady filtered noise,
-         no modulation, no events);
+       - the room changes medium: as the ring closes in on Mas (p292-308) the murmur and the key taps go with the share
+         of the frame still pixel, and the HVAC hands over on the same curve to a clean, airless corporate hush (steady
+         filtered noise, no modulation, no events) (pass 7; pass 6 stepped at p296/300/304 for the batch pops);
+       - pass 7: a faint drizzle on the windows (-44 dBFS RMS, from the window side) under the pixel room, ending with it;
+         the packing flaps land on the boxes you see re-gripped;
        - his key ring jangles once from inside the wall at p312 (synthesised: muffled, boxed, low);
        - "Hello." (a5-30-07) is placed a little low and close (a +3 dB low shelf at 180 Hz, -2 dB above 6 kHz), from
          under him.
@@ -173,20 +175,15 @@ rh *= (dpk * db(-13.0)) / (np.max(np.abs(rh)) + 1e-12)
 print(f'rhodes rendered: {time.time() - t0:.1f} s')
 
 # ------------------------------------------------------------------ 2b. the room changes medium
-def held_steps(points, ramp_ms=15):
-    """a gain curve in HELD steps: [(frame, gain)], each step ramped over a few ms (no clicks, no fades)"""
-    y = np.full(N, points[0][1])
-    r = int(SR * ramp_ms / 1000)
-    for (p, v), (p_prev, v_prev) in zip(points[1:], points[:-1]):
-        i = fs(p)
-        y[i:] = v
-        y[i:i + r] = np.linspace(v_prev, v, min(r, N - i))
-    return y
-
-
-MURMUR_G = held_steps([(0, 1.0), (296, 0.5), (300, 0.2), (304, 0.0)])
-HVAC_G = held_steps([(0, 1.0), (296, 0.7), (300, 0.4), (304, 0.12)])
-HUSH_G = held_steps([(0, 0.0), (296, 0.4), (300, 0.72), (304, 1.0)])
+# pass 7: the room no longer turns in three batches (p296/300/304) but under one ring closing in on Mas (p292-308,
+# radius R0 (1-t)^2.2, P3.tsx ringR). The pixel room's sound follows the share of the frame still pixel (the ring's
+# area), sample by sample: the murmur and the taps go with it, the HVAC hands over to the hush on the same curve.
+_pf = np.arange(N) / SR * FPS
+_tr = np.clip((_pf - 292) / (308 - 292), 0, 1)
+PIX_LEFT = np.clip(((1 - _tr) ** 2.2) ** 2, 0, 1)          # 1 before the ring, 0 once it has closed
+MURMUR_G = np.sqrt(PIX_LEFT)
+HVAC_G = 0.12 + 0.88 * np.sqrt(PIX_LEFT)
+HUSH_G = 1 - np.sqrt(PIX_LEFT)
 # the corporate hush: steady, band-limited, airless (no modulation, no events), a touch under the HVAC it replaces
 w = rng.standard_normal((N + SR, 2))
 hush = bpf(w, 90, 1400, 2)[SR:]
@@ -216,8 +213,9 @@ def tape_pull(dur=0.4):
 
 rustle = np.zeros((N, 2))
 # only in the gaps between lines (before Mas's question, between the two turns, inside Tasya's pauses)
-for p, kind, gain, pan in [(12, 'flap', -34, -0.5), (30, 'flap', -37, -0.45), (114, 'tape', -39, 0.55), (154, 'flap', -38, 0.3),
-                           (233, 'flap', -40, -0.2)]:
+# pass 7: each flap lands on a box you can see being re-gripped (pixel.ts HITCH) or on the walker's box as she turns
+for p, kind, gain, pan in [(12, 'flap', -34, -0.5), (36, 'flap', -37, 0.6), (114, 'tape', -39, 0.55), (124, 'flap', -38, 0.5),
+                           (154, 'flap', -39, 0.3), (236, 'flap', -40, -0.2)]:
     x = flap(bright=rng.uniform(0.8, 1.2)) if kind == 'flap' else tape_pull()
     x = x * db(gain)
     i = fs(p)
@@ -225,6 +223,27 @@ for p, kind, gain, pan in [(12, 'flap', -34, -0.5), (30, 'flap', -37, -0.45), (1
     rustle[i:i + n_, 0] += x[:n_] * (1 - max(0, pan))
     rustle[i:i + n_, 1] += x[:n_] * (1 + min(0, pan))
 rustle *= MURMUR_G[:, None]
+
+
+# pass 7: the drizzle on the windows (the picture's rain, pixel.ts rainOn): soft hiss on the glass, band-limited, with
+# sparse beads ticking, from the window side (screen right); it ends with the pixel room (the brochure has a blue sky)
+def rain_bed():
+    w_ = rng.standard_normal((N + SR, 2))
+    x = bpf(w_, 1800, 7500, 2)[SR:] * 0.6
+    x += lpf(bpf(w_[:, ::-1], 400, 1800, 2)[SR:], 1200, 1) * 0.35
+    ticks = np.zeros((N, 2))
+    for at in rng.integers(0, N - 2000, 70):
+        n_ = int(0.012 * SR)
+        tk = hpf(rng.standard_normal(n_), 2500, 2) * np.exp(-np.arange(n_) / (0.0025 * SR)) * rng.uniform(0.3, 1.0)
+        ch = rng.integers(0, 2)
+        ticks[at:at + n_, ch] += tk
+    x = x / (np.sqrt(np.mean(x ** 2)) + 1e-12) + ticks * 1.5
+    return x * np.array([0.8, 1.0])
+
+
+rain = rain_bed()
+rain *= db(-44.0) / (np.sqrt(np.mean(rain ** 2)) + 1e-12)
+rain *= (PIX_LEFT * bp['env'])[:, None]
 
 
 # the key ring, once, from inside the wall (p312): metal clinks with inharmonic partials, then boxed and muffled
@@ -286,7 +305,7 @@ treated *= np.sqrt(np.mean(raw ** 2)) / (np.sqrt(np.mean(treated ** 2)) + 1e-12)
 dlg_new = dlg + np.column_stack([treated - raw, treated - raw]) * 0.7071
 
 # ------------------------------------------------------------------ 3. the master (the v5 master's limiter)
-mix = dlg_new + music + rh + room_new + sfx + rustle + key_sfx
+mix = dlg_new + music + rh + room_new + sfx + rustle + key_sfx + rain
 env = np.max(np.abs(mix), axis=1)
 k_ = int(0.005 * SR)
 pk = signal.convolve(np.maximum.reduce([np.roll(env, s) for s in range(0, k_, 48)]), np.ones(k_) / k_, 'same')
@@ -323,6 +342,7 @@ qa = dict(
     music_rms_under_line_dbfs=round(rms_db(seg(music, 128, 307)), 1),
     keyring=dict(frame=312, peak_dbfs=round(20 * np.log10(np.max(np.abs(key_sfx)) + 1e-12), 1)),
     rustle_peak_dbfs=round(20 * np.log10(np.max(np.abs(rustle)) + 1e-12), 1),
+    rain_rms_dbfs_p0_290=round(rms_db(seg(rain, 0, 290)), 1),
     hello=dict(take='a5-30-07', frame=round((hl['on'] - P0) * FPS, 1), shelf='+3 dB @180 Hz, -2 dB @6 kHz, level-matched'),
     render_s=round(time.time() - t0, 1),
 )

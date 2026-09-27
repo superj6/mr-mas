@@ -4,17 +4,19 @@
 // Act Four animatic's MCU helpers (copied into px-kit.ts). What this file adds:
 //   - the BOOKKEEPING the medium change needs: which layer of the room owns each native pixel (shell / the bench's
 //     back / the back row / the bench's front / Mas's island / the front row) and which shell surface it is;
-//   - the crowd's idle life (pass 6): every walkout extra breathes on held drawings (head, shoulders and box drop one
-//     native pixel on the out-breath), each on its own period, so the wide is never a frozen plate;
-//   - local, palette-true fixes on the shared drawings (pass 6, from the cold review): Tasya's hands and cuffs redrawn so
-//     they read as hands, his skin in daylight from the cut in; Mas's desk sprite without the mint (zombie) face; Mas's
-//     MCU without the orange edge fringe, his window-side rim cool, breathing, one blink and a brow on "Hello."; the
-//     fires in S7.05 lighting what is around them, with embers. Nothing in src/shared is edited.
+//   - the crowd's life (pass 7, replacing pass 6's breathing-only buffer shift): every extra is re-stamped per frame in
+//     the room's own draw order, in a pose (breath, a box re-grip, a glance), and one of them walks out; a drizzle on
+//     the windows (drawCrowdAt, rainOn);
+//   - local, palette-true fixes on the shared drawings (passes 6-7, from the cold reviews): Tasya's single framed with
+//     his hands below the frame (arms 'none'), his skin in daylight from the cut in, breathing, nods and a lean; Mas's
+//     desk sprite without the mint (zombie) face; Mas's MCU without the orange edge fringe or the black hole in his hood,
+//     his window-side rim cool, breathing, one blink, a brow and a listening dip on "Hello."; the fires in S7.05
+//     lighting what is around them, with embers. Nothing in src/shared is edited.
 import {Buf, rect, bayer} from '../../../shared/pixel/px';
-import {PAL, stepColor, nearest, toLinear, fromLinear} from '../../../shared/pixel/palette';
+import {PAL, stepColor, nearest, toLinear, fromLinear, lightness} from '../../../shared/pixel/palette';
 import type {Img} from '../../../shared/pixel/figure';
 import {drawBullpen, BULLPEN, WALKOUT_CROWD, walkoutExtra, EXTRA_H, CROWD_LOOK_X, packedBox} from '../../../shared/pixel/rooms/bullpen';
-import {h01} from '../../../shared/pixel/rooms/kit-b';
+import {h01, put} from '../../../shared/pixel/rooms/kit-b';
 import {drawMasDesk, MAS_DESK_DEFAULT, MasDeskPose} from '../../../shared/pixel/cast/mas';
 import {drawTasyaRoom, TASYA_ROOM_DEFAULT, tasyaSpeakPortrait, TasyaPortraitState} from '../../../shared/pixel/cast/tasya-speak';
 import {masLookDown} from '../../../shared/pixel/cast/swaps-act4';
@@ -73,45 +75,165 @@ const stamp = (own: Uint8Array | Int16Array, img: Img, x: number, y: number, v: 
 };
 const deskBoxAt = (i: number): [number, number, number] => { const [a, b] = G.stations[i]; return [Math.round((a + b) / 2) - 8 + (i === 3 ? 6 : 0), G.bench.back - 24, i === 3 ? 3 : (i * 3 + 1) % 5]; };
 
-// ================================================================== the crowd's idle: breathing on held drawings
+// ================================================================== the crowd's life (pass 7): poses on held drawings
 /**
- * The draw rank of every native room pixel (the room's own order: the room 0, the behind-bench extras 10+k, the desk
- * boxes 60, the credenza box 61, the rest of the crowd 70+k), so a breathing figure only ever moves over what is behind
- * it and never over what is in front of it.
+ * Which extras a shot's room has. The wide has them all. The MCUs have the BACK row only (the behind-bench four and the
+ * pair by the window): the front row stands at Tasya's own depth (feet on rows 188-197, his on 197), so in a closer
+ * camera they would be his size, off to the sides of the lens, never small figures in the room behind him (pass 6).
  */
-const RANK = (() => {
-  const r = new Int16Array(480 * RH);
-  CROWD.forEach((e, k) => { if (e.behind) stamp(r, extraImg(e), e.x - 15, e.foot - EXTRA_H + 1, 10 + k, (_x, y) => y < G.bench.back); });
-  for (let s = 0; s < 4; s++) { const [bx, by, kind] = deskBoxAt(s); stamp(r, packedBox(kind), bx, by, 60); }
-  stamp(r, packedBox(4), G.win.x0 + 30, G.win.y1 + 9 - 25, 61);
-  CROWD.forEach((e, k) => { if (!e.behind) stamp(r, extraImg(e), e.x - 15, e.foot - EXTRA_H + 1, 70 + k); });
-  return r;
-})();
-/** each extra's upper body (hair to the box's bottom edge: walkoutExtra rows 0..43 + its height offset) and its breath */
-const FIGS = CROWD.map((e, k) => {
-  const top = e.foot - EXTRA_H + 1 - 4, dy = Math.floor(h01(e.seed, 29) * 4);
-  const per = 2 * (26 + Math.floor(h01(e.seed, 81) * 14)); // 52..78 frames a breath, never in step with a neighbour
-  return {k, rank: e.behind ? 10 + k : 70 + k, x0: e.x - 15, x1: e.x + 15, top, waist: e.foot - EXTRA_H + 1 + 44 + dy,
-    clipY: e.behind ? G.bench.back : RH, per, ph: Math.floor(h01(e.seed, 82) * per)};
-});
+export type CrowdSet = 'all' | 'back' | 'none';
+const inSet = (e: typeof CROWD[number], set: CrowdSet) => set === 'all' || (set === 'back' && e.layer === OWN.back);
+/** each extra's breath: 52..78 frames, never in step with a neighbour (vector.ts breathAt uses the same clock) */
+const breathClock = (seed: number) => { const per = 2 * (26 + Math.floor(h01(seed, 81) * 14)); return {per, ph: Math.floor(h01(seed, 82) * per)}; };
 /** out-breath: the upper body one native pixel down, held (on 2s, like every held drawing in the room) */
-export const exhale = (k: number, p: number) => { const f = FIGS[k]; const q = p - (p % 2); return (q + f.ph) % f.per >= f.per / 2; };
+export const exhale = (seed: number, p: number) => { const {per, ph} = breathClock(seed); const q = p - (p % 2); return (q + ph) % per >= per / 2; };
 /**
- * Every extra on its out-breath drops its upper body (head, shoulders, arms and box) one native pixel onto its own
- * coat: pixels move only onto what the figure already covers or what lies behind it; the row it uncovers shows what
- * is behind it (`bg`, the crowd-free room). `protect` pixels are never written (Mas's island).
+ * The pass-6 crowd only breathed (one native pixel, 0.2% of the frame changing: the cold read called the wide a frozen
+ * plate). Pass 7 gives the walkout its life, every beat with a reason in the scene, all on held drawings:
+ *  - WALKER (the wide only): seed 40, front row left, has had enough. She turns and walks out past the hall mouth and
+ *    off frame left as the wide opens (gone by p75, before Mas's question lands).
+ *  - LOOK (a glance: the head turned the other way, then back): seed 8 looks back after her (p22-57); on Mas's
+ *    question the woman by the window (seed 5) turns to her neighbour (p70-99), "did he just ask that?"; in Tasya's
+ *    single she does it again on "all the IP rights" (p184-209), and seed 3, at the left end, glances toward the hall
+ *    where people are leaving (p146-175).
+ *  - HITCH (a box re-gripped: the box, the arms and the hands up one pixel for 4 frames): arms get tired.
+ * Nothing moves between p284 and p312: the ring hands the room to the landlord there and the staff take over the
+ * pixel poses as they stand (vector.ts draws no glances).
  */
-export const breathe = (b: Buf, bg: Buf, p: number, protect?: Uint8Array) => {
-  const src = b.c.slice(0, 480 * RH);
-  for (const f of FIGS) {
-    if (!exhale(f.k, p)) continue;
-    for (let y = Math.min(f.waist, f.clipY - 1); y >= Math.max(0, f.top); y--) for (let x = Math.max(0, f.x0); x <= Math.min(479, f.x1); x++) {
-      const i = y * 480 + x;
-      if (protect && protect[i]) continue;
-      const up = y - 1 >= Math.max(0, f.top) ? RANK[i - 480] : -1;
-      if (up === f.rank && RANK[i] <= f.rank) b.c[i] = src[i - 480];
-      else if (RANK[i] === f.rank) b.c[i] = bg.c[i];
+const WALK = {seed: 40, x0: 150, speed: 2.2, hold: 4, stride: 5};
+const LOOK: Record<number, Array<[number, number]>> = {8: [[22, 58]], 5: [[70, 100], [184, 210]], 3: [[146, 176]]};
+const HITCH: Record<number, number[]> = {26: [36], 14: [92, 236], 30: [124, 168], 3: [214], 21: [256], 18: [102]};
+const inAny = (p: number, spans?: Array<[number, number]>) => !!spans && spans.some(([a, b]) => p >= a && p < b);
+export interface Pose { breath: boolean; hitch: boolean; look: boolean; walk: number }
+export const poseAt = (seed: number, p: number): Pose => ({
+  breath: exhale(seed, p),
+  hitch: (HITCH[seed] ?? []).some((a) => p >= a && p < a + 4),
+  look: inAny(p, LOOK[seed]),
+  walk: seed === WALK.seed ? Math.floor(p / WALK.hold) % 4 : -1,
+});
+/** the walker's x (native, the sprite's centre) at clip frame p; she is gone once it is under -15 */
+const walkerX = (p: number) => Math.round(WALK.x0 - WALK.speed * p);
+const poseMemo = new Map<string, Img>();
+/**
+ * A walkout extra's drawing in a pose, stepped k soft rungs (the MCU's rack). Built on the shared walkoutExtra drawing
+ * (rows: head 0..12+dy, the box 32..43+dy, the coat's hem at legTop), moved in whole native pixels, never redrawn.
+ */
+const poseImg = (e: typeof CROWD[number], pose: Pose, k: number): Img => {
+  const key = `${e.seed}:${+pose.breath}${+pose.hitch}${+pose.look}:${pose.walk}:${k}`;
+  let im = poseMemo.get(key);
+  if (im) return im;
+  const src = walkoutExtra(e.seed, {coat: e.coat});
+  const W = src.w, H = src.h, dy = Math.floor(h01(e.seed, 29) * 4);
+  let c = src.c.slice();
+  const row = (a: Int32Array, y: number) => a.subarray(y * W, (y + 1) * W);
+  if (pose.walk >= 0) {
+    // four drawings: contact (near leg forward), passing, contact (far leg forward), passing; the legs lean from the
+    // hem as whole-pixel shears (rows further down shift further), the body down a pixel on the contacts
+    const legTop = (h01(e.seed, 25) < 0.55 ? 58 : 48) + dy;
+    const pants = src.c[(legTop + 3) * W + 11];
+    for (let y = legTop; y < H; y++) row(c, y).fill(-1);
+    const s = pose.walk === 0 ? WALK.stride : pose.walk === 2 ? -WALK.stride : 0;
+    const shear = (y: number, k2: number) => Math.round((k2 * (y - legTop)) / (H - 1 - legTop));
+    const leg = (x0: number, x1: number, k2: number, lit: boolean) => {
+      for (let y = legTop; y < 75; y++) for (let x = x0; x <= x1; x++) {
+        const X = x + shear(y, k2);
+        if (X >= 0 && X < W) c[y * W + X] = x === x0 && !lit ? PAL.N0 : x === x1 && lit ? stepColor(pants, 1) : pants;
+      }
+      for (let y = 75; y < 78; y++) for (let x = x0 - (lit ? 0 : 1); x <= x1 + (lit ? 2 : 0); x++) {
+        const X = x + shear(y, k2);
+        if (X >= 0 && X < W) c[y * W + X] = y === 75 && lit ? PAL.N1 : PAL.N0;
+      }
+    };
+    leg(9, 13, -s, false); // the far leg (screen-left in the unflipped drawing)
+    leg(16, 20, s, true); // the near leg, toward the light
+    if (pose.walk === 1 || pose.walk === 3) { // passing: the trailing foot clears the floor by a pixel
+      const [a, b2] = pose.walk === 1 ? [8, 13] : [16, 22];
+      for (let x = a; x <= b2; x++) { for (let y = 74; y < 77; y++) c[y * W + x] = c[(y + 1) * W + x]; c[77 * W + x] = -1; }
     }
+    if (pose.walk === 0 || pose.walk === 2) { // the body settles a pixel on the contacts
+      const d = c.slice();
+      for (let y = legTop; y >= 1; y--) row(c, y).set(row(d, y - 1));
+      row(c, 0).fill(-1);
+    }
+  }
+  if (pose.look) {
+    // the head (rows up to the chin) mirrored about the head's own centre column (15)
+    const d = c.slice();
+    for (let y = 0; y <= 12 + dy; y++) for (let x = 0; x < W; x++) { const sx = 30 - x; c[y * W + x] = sx >= 0 && sx < W ? d[y * W + sx] : -1; }
+  }
+  if (pose.hitch) {
+    // the box, the thing in it, the arms and the hands up one pixel (columns 4..25, rows 21..43 + dy)
+    const d = c.slice();
+    for (let y = 21 + dy; y <= 43 + dy; y++) for (let x = 4; x <= 25; x++) c[y * W + x] = d[(y + 1) * W + x];
+  }
+  if (pose.breath && pose.walk < 0) {
+    // the out-breath: head, shoulders, arms and box down one pixel onto the coat
+    const d = c.slice();
+    const waist = 44 + dy;
+    for (let y = waist + 1; y >= 1; y--) row(c, y).set(row(d, y - 1));
+    row(c, 0).fill(-1);
+  }
+  const flip = seedFaces(e) < 0;
+  if (flip) { const d = c.slice(); for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) c[y * W + x] = d[y * W + (W - 1 - x)]; }
+  if (k) for (let i = 0; i < c.length; i++) if (c[i] >= 0) c[i] = stepColor(c[i], -k);
+  im = {w: W, h: H, c};
+  poseMemo.set(key, im);
+  if (poseMemo.size > 400) poseMemo.delete(poseMemo.keys().next().value as string);
+  return im;
+};
+/** which way an extra faces: +1 screen-right (toward Tasya from the left), -1 screen-left; the walker faces her exit */
+const seedFaces = (e: typeof CROWD[number]) => (e.seed === WALK.seed ? -1 : e.x > CROWD_LOOK_X ? -1 : 1);
+const softMemo = new Map<string, Img>();
+const softImg = (key: string, im: Img, k: number): Img => {
+  if (!k) return im;
+  let o = softMemo.get(`${key}:${k}`);
+  if (!o) { o = {w: im.w, h: im.h, c: im.c.map((v) => (v >= 0 ? stepColor(v, -k) : v))}; softMemo.set(`${key}:${k}`, o); }
+  return o;
+};
+/**
+ * The crowd (set) at clip frame p, in the room's own draw order, onto a room drawn WITHOUT its crowd: the behind-bench
+ * extras (cut by the desk top), the desk boxes and the credenza box over them, then the rest front to back.
+ */
+export const drawCrowdAt = (b: Buf, p: number, set: CrowdSet, k = 0) => {
+  const at = (e: typeof CROWD[number]) => (e.seed === WALK.seed ? walkerX(p) : e.x);
+  for (const e of CROWD.filter((q) => q.behind && inSet(q, set))) put(b, poseImg(e, poseAt(e.seed, p), k), e.x - 15, e.foot - EXTRA_H + 1, {clip: (_x, y) => y < G.bench.back});
+  for (let s = 0; s < 4; s++) { const [bx, by, kind] = deskBoxAt(s); put(b, softImg(`box${kind}`, packedBox(kind), k), bx, by); }
+  put(b, softImg('box4', packedBox(4), k), G.win.x0 + 30, G.win.y1 + 9 - 25);
+  for (const e of CROWD.filter((q) => !q.behind && inSet(q, set))) {
+    const x = at(e);
+    if (x < -16) continue;
+    put(b, poseImg(e, poseAt(e.seed, p), k), x - 15, e.foot - EXTRA_H + 1, {clip: (_x, y) => y < RH});
+  }
+};
+
+// ================================================================== rain on the windows (pass 7)
+/**
+ * The pixel bullpen's day is grey and wet: a drizzle falls past the windows (thin streaks, one rung off the exterior
+ * behind them: darker on the pale sky, lighter on the towers), on 2s, and a few beads run down the glass. It moves
+ * under every held shot of the room (the cold read took the glass sheen for rain that never moved), and it is what
+ * the landlord's brochure swaps for a blue sky. Only on the exterior's own pixels (masks.window), drawn before the crowd.
+ */
+const RAIN = Array.from({length: 58}, (_, n) => ({x: Math.floor(h01(n, 91) * 160) - 12, ph: Math.floor(h01(n, 92) * 997), len: 3 + Math.floor(h01(n, 93) * 4), sp: 8 + Math.floor(h01(n, 94) * 4)}));
+const BEADS = Array.from({length: 7}, (_, n) => ({x: Math.floor(h01(n, 95) * 134) + 1, ph: Math.floor(h01(n, 96) * 60), life: 30 + Math.floor(h01(n, 97) * 20), y0: Math.floor(h01(n, 98) * 50)}));
+export const rainOn = (b: Buf, p: number, win: Uint8Array) => {
+  const {x0, y0, y1} = G.win;
+  const H = y1 - y0 + 14, t = Math.floor(p / 2);
+  const hit = (x: number, y: number, k: number) => {
+    if (x < 0 || x >= 480 || y < 0 || y >= RH || !win[y * 480 + x]) return;
+    const c = b.c[y * 480 + x];
+    b.c[y * 480 + x] = stepColor(c, lightness(c) > 0.62 ? -k : k);
+  };
+  for (const d of RAIN) {
+    const u = (d.ph + t * d.sp) % H;
+    const hy = y0 - 7 + u, hx = x0 + d.x + Math.floor(u * 0.18);
+    for (let j = 0; j < d.len; j++) hit(hx - Math.floor(j * 0.18), hy - j, 1);
+  }
+  for (const d of BEADS) {
+    const age = (t + d.ph) % d.life;
+    const y = y0 + d.y0 + Math.floor(age * 0.8), x = x0 + d.x;
+    if (y > y1) continue;
+    hit(x, y, 2);
+    if (age > 2) hit(x, y - 1, 1);
   }
 };
 
@@ -147,19 +269,27 @@ export const masDesk = (b: Buf, pose: Partial<MasDeskPose>, own?: Uint8Array, so
 };
 
 // ================================================================== the plates (Tasya's MCU)
-export interface Plate { buf: Buf; own: Uint8Array; reg: Uint8Array }
+export interface Plate { buf: Buf; own: Uint8Array; reg: Uint8Array; win: Uint8Array }
 export const REG = {none: 0, floor: 1, ceiling: 2, walls: 3} as const;
 const cache = new Map<string, Plate>();
 /**
  * The bullpen walkout as the MCU sees it (Tasya's bust is drawn later): the room plate, Mas at his end desk, the
- * crowd (or not), soft `k`. `own` is the layer of every pixel, `reg` the shell surface of every shell pixel.
+ * crowd set, soft `k`. `own` is the layer of every pixel, `reg` the shell surface of every shell pixel.
  */
-export const plate = (crowd: boolean, k = TASYA_SOFT): Plate => {
+export const plate = (crowd: CrowdSet, k = TASYA_SOFT): Plate => {
   const key = `${crowd}:${k}`;
   const hit = cache.get(key);
   if (hit) return hit;
   const buf = new Buf(480, 270, PAL.N0);
-  const room = drawBullpen(buf, 0, {variant: 'walkout', crowd, masGlass: false});
+  const room = drawBullpen(buf, 0, {variant: 'walkout', crowd: crowd === 'all', masGlass: false});
+  if (crowd === 'back') {
+    // the room's own order, replayed with the back row only: behind-bench extras (cut by the desk top), the desk boxes
+    // and the credenza box over them, then the pair by the window
+    for (const e of CROWD.filter((q) => q.behind)) put(buf, extraImg(e), e.x - 15, e.foot - EXTRA_H + 1, {clip: (_x, y) => y < G.bench.back});
+    for (let s = 0; s < 4; s++) { const [bx, by, kind] = deskBoxAt(s); put(buf, packedBox(kind), bx, by); }
+    put(buf, packedBox(4), G.win.x0 + 30, G.win.y1 + 9 - 25);
+    for (const e of CROWD.filter((q) => !q.behind && q.layer === OWN.back)) put(buf, extraImg(e), e.x - 15, e.foot - EXTRA_H + 1);
+  }
   const own = new Uint8Array(480 * RH);
   const reg = new Uint8Array(480 * RH);
   const m = room.masks;
@@ -171,10 +301,10 @@ export const plate = (crowd: boolean, k = TASYA_SOFT): Plate => {
     else if (m.dressing.a[i]) own[i] = OWN.back; // re-owned below by the replay
   }
   // replay the room's own draw order for the dressing: behind-crowd, desk boxes, the credenza box, then the rest
-  if (crowd) for (const e of CROWD.filter((q) => q.behind)) stamp(own, extraImg(e), e.x - 15, e.foot - EXTRA_H + 1, OWN.back, (_x, y) => y < G.bench.back);
+  for (const e of CROWD.filter((q) => q.behind && inSet(q, crowd))) stamp(own, extraImg(e), e.x - 15, e.foot - EXTRA_H + 1, OWN.back, (_x, y) => y < G.bench.back);
   for (let s = 0; s < 4; s++) { const [bx, by, kind] = deskBoxAt(s); stamp(own, packedBox(kind), bx, by, s === 3 ? OWN.island : OWN.benchFront); }
   stamp(own, packedBox(4), G.win.x0 + 30, G.win.y1 + 9 - 25, OWN.back);
-  if (crowd) for (const e of CROWD.filter((q) => !q.behind)) stamp(own, extraImg(e), e.x - 15, e.foot - EXTRA_H + 1, e.layer);
+  for (const e of CROWD.filter((q) => !q.behind && inSet(q, crowd))) stamp(own, extraImg(e), e.x - 15, e.foot - EXTRA_H + 1, e.layer);
   for (let i = 0; i < 480 * RH; i++) if (own[i] !== OWN.shell) reg[i] = REG.none;
   // Mas is the subject in the depth: the rack is held on him, so his island (him, his chair, his end desk, its box) keeps
   // its full value while the room around him sits k soft rungs back (pass 6: one rung back, his island printed as a
@@ -183,17 +313,23 @@ export const plate = (crowd: boolean, k = TASYA_SOFT): Plate => {
   soft(buf, k);
   for (let i = 0; i < 480 * RH; i++) if (own[i] === OWN.island) buf.c[i] = sharp[i];
   masDesk(buf, {}, own, 0);
-  const out = {buf, own, reg};
+  const win = Uint8Array.from(m.window.a, (v) => (v ? 1 : 0));
+  const out = {buf, own, reg, win};
   cache.set(key, out);
   return out;
 };
-let islandMask: Uint8Array | null = null;
-/** Tasya's MCU plate at clip frame p: the crowd breathing (the island never moves) */
+let islandPx: Int32Array | null = null;
+/**
+ * Tasya's MCU plate at clip frame p: the crowd-free room (soft, the island sharp), the rain on the windows, then the
+ * back row in its poses (pre-stepped to the same soft rungs); the island is re-stamped on top (it never moves).
+ */
 export const plateAt = (p: number): Buf => {
-  const a = plate(true), bg = plate(false);
-  if (!islandMask) { islandMask = new Uint8Array(480 * RH); for (let i = 0; i < 480 * RH; i++) islandMask[i] = a.own[i] === OWN.island ? 1 : 0; }
-  const b = a.buf.clone();
-  breathe(b, bg.buf, p, islandMask);
+  const base = plate('none');
+  if (!islandPx) { const l: number[] = []; for (let i = 0; i < 480 * RH; i++) if (base.own[i] === OWN.island) l.push(i); islandPx = Int32Array.from(l); }
+  const b = base.buf.clone();
+  rainOn(b, p, base.win);
+  drawCrowdAt(b, p, 'back', TASYA_SOFT);
+  for (const i of islandPx) b.c[i] = base.buf.c[i];
   return b;
 };
 
@@ -205,41 +341,35 @@ export const plateAt = (p: number): Buf => {
  */
 export const TASYA_DX = -10;
 export const TASYA_SOFT = 2;
+/**
+ * His hands (pass 7). The portrait's clasp stamp read as a bread roll or a bow tie (cold read, pass 5), and pass 6's
+ * redrawn laced fingers still read as a loaf at phone size. The single now frames him with his hands clasped at his
+ * waist, below the frame (the portrait's own arms 'none': the blazer front, the shirt, the lapels): the wide shows the
+ * clasp, the single shows his face, and nothing at chest height has to be read as hands.
+ */
 export const tasyaState = (p: number): TasyaPortraitState => ({
   mouth: mouthAt('a5-30-06', p) === 'rest' && p >= 310 ? 'smile' : mouthAt('a5-30-06', p) === 'rest' && p < 126 ? 'smile' : mouthAt('a5-30-06', p),
-  lid: blinkAt(p, [141, 214, 318]), brow: 'warm', arms: 'clasp', jangle: 0,
+  lid: blinkAt(p, TASYA_BLINKS), brow: 'warm', arms: 'none', jangle: 0,
 });
 /**
- * His hands (pass 6). The portrait's clasp stamp (22 x 10, a checker of two cool rungs inside one oval, with no wrists)
- * read as a bread roll or a bow tie at every size. Redrawn in the same place: two hands with their fingers laced (one
- * knuckle bump per finger along the top, the seam between the hands), the two thumbs resting on top, the heels of the
- * hands underneath, lit from camera-left like his face; the shirt cuffs brought up a rung so each wrist reads going into
- * its sleeve. Warm skin rungs (his daylight skin, below).
+ * His life in the single (pass 7; the cold read saw "only mouth flaps and blinks: no breathing, no head movement"), all
+ * in whole native pixels on held drawings, the drawing itself never changed:
+ *  - breath: an in-breath lifts the whole bust a pixel before each phrase (p118-126, p158-166, p232-240), and after
+ *    "around them" he settles a pixel on a satisfied out-breath (p312 on);
+ *  - his head (above the collar) dips a pixel on the stressed syllables of the first two phrases ("fine", "IP",
+ *    "ca-PA-bility") and follows his own words in the third: down on "below", up on "above", level again on "around";
+ *  - from "We are" (p241) he leans a pixel toward Mas, and stays there;
+ *  - blinks every 1.5-3 s (never on "below" / "above" / "around").
  */
-const HANDS = {x: 44, y: 110, rows: [
-  '...........oooo...........',
-  '..........ohLlmo..........',
-  '.....oooo.oLLlmo.oooo.....',
-  '....ohLLlooLlmmoolllmo....',
-  '...ohLLlLdLlLlmdlmlmmmo...',
-  '..oohLLdLLdLldmmdlmdmmoo..',
-  '..oLhLLdLLdLllmmdmmdmmdo..',
-  '..oLLLLdLLdlllmmdmmdmmdo..',
-  '..olLLldLldllmmmdmmdmddo..',
-  '...olllllllmmmmmmmmmddo...',
-  '....ooolllmmmmmmmmdooo....',
-  '.......oooooooooooo.......',
-], pal: {o: PAL.S1, h: PAL.S6, L: PAL.S5, l: PAL.S4, m: PAL.S3, d: PAL.S2} as Record<string, number>};
-/** the cuffs (the portrait's shirt-mat polys around the wrists, G4 on G3/G4 shirt): lifted to read as white cuffs */
-const CUFFS: Array<[number, number, number]> = [];
-{
-  const inPoly = (pts: number[], x: number, y: number) => { let c = false; for (let i = 0, j = pts.length - 2; i < pts.length; j = i, i += 2) { const xi = pts[i], yi = pts[i + 1], xj = pts[j], yj = pts[j + 1]; if ((yi > y) !== (yj > y) && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi) c = !c; } return c; };
-  const L = [46, 120, 52, 118, 56, 124, 51, 128], R = [68, 118, 74, 120, 71, 128, 65, 124];
-  for (let y = 116; y < 130; y++) for (let x = 40; x < 80; x++) {
-    if (inPoly(L, x + 0.5, y + 0.5)) CUFFS.push([x, y, PAL.G5]);
-    else if (inPoly(R, x + 0.5, y + 0.5)) CUFFS.push([x, y, PAL.G4]);
-  }
-}
+const TASYA_BLINKS = [141, 186, 230, 262, 318];
+const TASYA_NECK = 95; // the portrait row between his chin and his collar: the head above it moves on its own
+export const tasyaMotion = (p: number) => {
+  const inhale = [[118, 126], [158, 166], [232, 240]].some(([a, b]) => p >= a && p < b);
+  const q = p - (p % 2);
+  const nod = [[142, 146], [182, 186], [210, 214]].some(([a, b]) => q >= a && q < b);
+  const head = nod || (q >= 247 && q < 262) ? 1 : q >= 270 && q < 286 ? -1 : 0;
+  return {body: inhale ? -1 : p >= 312 ? 1 : 0, head, lean: p >= 241 ? 1 : 0};
+};
 /** Tasya's skin in the bullpen's daylight (the whole shot): skin-under-cyan walks to the warm skin ramp */
 const TASYA_SKIN = new Map<number, number>([[PAL.K0, PAL.S1], [PAL.K1, PAL.S2], [PAL.K2, PAL.S4], [PAL.K3, PAL.S5], [PAL.K4, PAL.S6], [PAL.K5, PAL.P2]]);
 const tasyaImgs = new Map<string, Img>();
@@ -249,8 +379,6 @@ const tasyaImg = (s: TasyaPortraitState): Img => {
   if (im) return im;
   const src = tasyaSpeakPortrait(s);
   im = {w: src.w, h: src.h, c: src.c.slice()};
-  for (const [x, y, c] of CUFFS) if (im.c[y * im.w + x] >= 0) im.c[y * im.w + x] = c;
-  HANDS.rows.forEach((row, j) => [...row].forEach((ch, i) => { if (ch !== '.') im!.c[(HANDS.y + j) * im!.w + HANDS.x + i] = HANDS.pal[ch]; }));
   for (let i = 0; i < im.c.length; i++) { const v = im.c[i]; if (v >= 0) im.c[i] = TASYA_SKIN.get(v) ?? v; }
   const W = im.w, fl = im.c.slice();
   for (let y = 0; y < im.h; y++) for (let x = 0; x < W; x++) im.c[y * W + x] = fl[y * W + (W - 1 - x)];
@@ -265,7 +393,8 @@ const tasyaImg = (s: TasyaPortraitState): Img => {
  */
 export const tasyaLayer = (p: number, lit: boolean): Buf => {
   const b = new Buf(480, 270, TRANSP);
-  drawBust(b, tasyaImg(tasyaState(p)), 'L', TASYA_DX, 22, undefined, lit ? BUST_CAP.tasyaLit : 5, 1 / 6);
+  const m = tasyaMotion(p);
+  drawBust(b, tasyaImg(tasyaState(p)), 'L', TASYA_DX + m.lean, 22 + m.body, undefined, lit ? BUST_CAP.tasyaLit : 5, 1 / 6, {split: TASYA_NECK, dx: 0, dy: m.head});
   if (lit) {
     for (let i = 0; i < 480 * RH; i++) { const v = b.c[i]; if (v !== TRANSP) b.c[i] = BLAZER_DAY.get(v) ?? v; }
     bodyRim(b, 108);
@@ -303,6 +432,7 @@ export const BUST_CAP = {tasyaLit: 3, mas: 4};
  *    brow goes up (masLookDown's brow 1) and stays up: he heard the floor.
  */
 export const MAS_MCU_DX = 0;
+const MAS_NECK = 86; // the look-down portrait's row between his chin and the hood
 const masImgs = new Map<string, Img>();
 const masImg = (brow: 0 | 1, blink: boolean): Img => {
   const key = `${brow}:${blink}`;
@@ -321,6 +451,9 @@ const masImg = (brow: 0 | 1, blink: boolean): Img => {
       im.c[y * W + x] = rep >= 0 ? rep : PAL.B2;
     } else if (v === PAL.C2) im.c[y * W + x] = y < 80 ? PAL.G4 : PAL.N7;
   }
+  // pass 7: the hood's opening beside his neck was pure black (N0), a hole in the hoodie at every size (cold read); it
+  // takes the hood's own deepest rung, so it reads as the inside of the hood
+  for (let y = 84; y <= 92; y++) for (let x = 58; x <= 80; x++) if (src.c[y * W + x] === PAL.N0) im.c[y * W + x] = PAL.G0;
   if (blink) {
     // lids closed over the lowered eyes: the iris row takes the lid's skin (the lash line above stays)
     const sN = src.c[46 * W + 51], sF = src.c[46 * W + 38];
@@ -336,21 +469,27 @@ export const masLayer = (p: number): Buf => {
   const down = (k >= 16 && k < 28) || (k >= 44 && k < 56); // two held out-breaths; the in-breath lands on "Hello."
   const blink = k === 7 || k === 8;
   const brow: 0 | 1 = p >= T.hello + 4 ? 1 : 0;
-  drawBust(b, masImg(brow, blink), 'R', MAS_MCU_DX, down ? 23 : 22, undefined, BUST_CAP.mas, 1 / 6);
+  // pass 7: on "Hello." his head (above the hood) dips a pixel toward the floor it came from, and stays: he listens
+  const lean = p >= T.hello + 3 ? 1 : 0;
+  drawBust(b, masImg(brow, blink), 'R', MAS_MCU_DX, down ? 23 : 22, undefined, BUST_CAP.mas, 1 / 6, {split: MAS_NECK, dx: 0, dy: lean});
   return b;
 };
 
 /** S7.02, the wide (all pixel): Mas asks, Tasya mid-floor, delighted; the crowd in coats with boxes in arms, breathing */
-let wideBg: Buf | null = null;
+let wideBg: {buf: Buf; win: Uint8Array; tasya: [number, number]} | null = null;
 export const wideFrame = (p: number): Buf => {
-  const b = new Buf(480, 270, PAL.N0);
-  const room = drawBullpen(b, 0, {variant: 'walkout', masGlass: false});
-  if (!wideBg) { wideBg = new Buf(480, 270, PAL.N0); drawBullpen(wideBg, 0, {variant: 'walkout', masGlass: false, crowd: false}); }
-  breathe(b, wideBg, p);
+  if (!wideBg) {
+    const buf = new Buf(480, 270, PAL.N0);
+    const room = drawBullpen(buf, 0, {variant: 'walkout', masGlass: false, crowd: false});
+    wideBg = {buf, win: Uint8Array.from(room.masks.window.a, (v) => (v ? 1 : 0)), tasya: room.anchors.tasyaFloor as [number, number]};
+  }
+  const b = wideBg.buf.clone();
+  rainOn(b, p, wideBg.win);
+  drawCrowdAt(b, p, 'all', 0);
   // Tasya stands in the middle of the floor IN FRONT of the bench (his feet on row 197, the bench's feet on 174), so
   // he is drawn over the desk and its box (pass 6: the room's `front` pass re-painted the bench over him, which put
   // the desk box over his chest and his legs through the desk front)
-  const [tx, ty] = room.anchors.tasyaFloor;
+  const [tx, ty] = wideBg.tasya;
   drawTasyaRoom(b, tx, ty, {...TASYA_ROOM_DEFAULT, arm: 'clasp', mouth: 'smile', blink: blinkAt(p, [30, 101]) > 0});
   const v = mouthAt('a5-30-05', p);
   masDesk(b, {head: 'turn', mouth: v === 'rest' || v === 'M' || v === 'smile' ? 'rest' : 'open'});

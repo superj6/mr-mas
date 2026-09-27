@@ -13,7 +13,7 @@ import {AbsoluteFill, cancelRender, continueRender, delayRender, staticFile, use
 import {Buf} from '../../../shared/pixel/px';
 import {drawFrame, setClodPixel, setMouthTrack} from './pixel';
 import {celIndexAt, clayAt, nightIndexAt, setClodMouth, TILE} from './gl/cels';
-import {lightAt} from './timeline';
+import {lightAt, flashExpAt} from './timeline';
 import {loadClodPixel, ClodPixelJSON} from './clodpx';
 import clodPx from './gen/clod-px.json';
 import takes from './gen/takes.json';
@@ -71,6 +71,10 @@ export const P1: React.FC<{hold?: number}> = ({hold}) => {
         const ni = nightIndexAt(f);
         const night = ni >= 0 ? await read(ni) : null;
         const lv = lightAt(f);
+        // round 6: the strike. The clay is lit from its first frame (no dim clay before the light), overexposed and
+        // settling over three drawings (the camera catching up with the can), warm first; then a soft shoulder keeps
+        // every pixel under 78 % luma, the frame's white ceiling
+        const ex = flashExpAt(f), lift = ex > 1.5 ? 38 : 0;
         // the lit render's weight and its tungsten tint while the filament comes up
         const wl = night ? lv : 1;
         const tint = night ? [1, 0.8 + 0.2 * lv, 0.58 + 0.42 * lv] : [1, 1, 1];
@@ -85,7 +89,8 @@ export const P1: React.FC<{hold?: number}> = ({hold}) => {
           for (let x = 0; x < W; x++) { let acc = 0; for (let y = -r; y <= r; y++) acc += tmp[Math.min(H - 1, Math.max(0, y)) * W + x]; for (let y = 0; y < H; y++) { out[y * W + x] = acc / n; acc += tmp[Math.min(H - 1, y + r + 1) * W + x] - tmp[Math.max(0, y - r) * W + x]; } }
           return out;
         };
-        const aB = box(alpha, 5);
+        // round 6: a narrow wrap (2 px, weaker): at 5 px it haloed the silhouette, "smooth, softened edges"
+        const aB = box(alpha, 2);
         const bgB: Float32Array[] = [0, 1, 2].map((k) => { const ch = new Float32Array(W * H); for (let q = 0; q < W * H; q++) ch[q] = d[q * 4 + k] * (1 - alpha[q]); return box(box(ch, 9), 9); });
         const covB = box(box(Float32Array.from(alpha, (a) => 1 - a), 9), 9);
         for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
@@ -93,13 +98,19 @@ export const P1: React.FC<{hold?: number}> = ({hold}) => {
           const a = alpha[q];
           if (a <= 0.002) continue;
           const i = q * 4, c = (y * W2 + x) * 4;
-          const wrap = Math.min(1, Math.max(0, a * (1 - aB[q]) * 2.4)) * 0.55;
+          const wrap = Math.min(1, Math.max(0, a * (1 - aB[q]) * 2.4)) * 0.35;
           for (let k = 0; k < 3; k++) {
             const lit = cel[c + k] * tint[k];
             let v = night ? lit * wl + night[c + k] * (1 - wl) : lit;
+            if (ex !== 1) v = v * ex * [1, 0.86, 0.66][k] + lift * [1, 0.68, 0.36][k] * a; // tungsten: amber, not lemon
             const env = covB[q] > 0.02 ? bgB[k][q] / covB[q] : 0; // the plate's light round this point, clay excluded
             v += (255 - v) * (env / 255) * wrap * a;
             d[i + k] = Math.min(255, Math.round(v + (1 - a) * d[i + k]));
+          }
+          if (ex !== 1) {
+            const Y = 0.2126 * d[i] + 0.7152 * d[i + 1] + 0.0722 * d[i + 2];
+            // (the shoulder tops out at 192, 75 %: at 199 the encode lifted the flash to 79.6 %)
+            if (Y > 150) { const s2 = (150 + 42 * (1 - Math.exp(-(Y - 150) / 42))) / Y; for (let k = 0; k < 3; k++) d[i + k] = Math.round(d[i + k] * s2); }
           }
         }
         ctx.putImageData(bg, TILE.x, TILE.y);

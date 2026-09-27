@@ -10,12 +10,13 @@ import React, {useLayoutEffect, useRef} from 'react';
 import {AbsoluteFill, cancelRender, continueRender, delayRender, useCurrentFrame} from 'remotion';
 import {THREE, Any, FS, fsMat, rt, halton} from '../../p3/gl/kit';
 import {makeClayTex, makePuppet, disposePuppet, ClayTex} from './clay';
-import {CELS, TILE, Cel} from './cels';
+import {CELS, TILE, Cel, POSES} from './cels';
 
 export const CEL_W = TILE.w * 3, CEL_H = TILE.h;
 // round 5: the aperture is roughly halved (0.075 -> 0.04). At 0.075 the lower body and the clipboard went soft, and
-// that softness against the pixel pane's hard edges was the likeliest "pasted-in" tell; the face stays the focus
-export const CAM = {D: 1.6, eyeH: 0.26, f: 1280, cx: 1280, cy: 704 - (1280 * 0.26) / 1.6, focus: 1.56, aperture: 0.04};
+// that softness against the pixel pane's hard edges was the likeliest "pasted-in" tell; the face stays the focus.
+// Round 6: halved again (0.02): the cold review still read "smooth, softened edges pasted onto a hard-pixel world"
+export const CAM = {D: 1.6, eyeH: 0.26, f: 1280, cx: 1280, cy: 704 - (1280 * 0.26) / 1.6, focus: 1.56, aperture: 0.02};
 export const YAW = 0.4;
 const N_LIT = 56, N_NIGHT = 32;
 
@@ -99,7 +100,8 @@ const aim = (cam: Any, jx: number, jy: number, lx: number, ly: number) => {
 const renderCel = (g: GL, cel: Cel) => {
   const {r, scene, key, dome, rim, bounce, cam} = g;
   const pup = makePuppet(g.tex, cel);
-  pup.group.rotation.y = YAW;
+  // round 6: the whole puppet turns on its tie-down (pose.body): it bows at Mario, then squares to the lens
+  pup.group.rotation.y = YAW + (cel.pz?.body ?? POSES[cel.pose]?.body ?? 0);
   pup.group.position.set(0, 0.003, 0);
   scene.add(pup.group);
   const lit = cel.mode === 'lit', id = cel.mode === 'id';

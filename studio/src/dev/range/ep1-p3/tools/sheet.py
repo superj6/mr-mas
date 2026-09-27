@@ -11,15 +11,15 @@ from PIL import Image, ImageDraw, ImageFont
 OUT, DIR = sys.argv[1], sys.argv[2]
 BLIND = len(sys.argv) > 3 and sys.argv[3] == 'blind'
 NOTES = {
-    0: 'S7.02 [W] the bullpen walkout, pixel', 60: 'Mas asks (a5-30-05); the crowd breathes', 119: 'last frame of the wide',
-    120: 'CUT: S7.02b [MCU] Tasya, closer camera', 160: '"Oh, we\'d be fine."', 230: '"...all the capability"',
-    246: '"below": the floor starts under him', 249: 'the floor spreads out (chord p250)', 252: 'the floor reaches the window',
-    256: 'the vector floor, pixel room', 269: '"above": the ceiling starts over him', 272: 'the ceiling spreads (chord p273)',
-    276: 'the vector ceiling lands', 292: '"around": the ring enters', 296: 'the ring closes (chord p296)',
-    300: 'the ring passes the staff', 304: 'the ring passes Tasya: his rim', 308: 'the ring lands on Mas: the island',
-    318: 'hold: the landlord\'s room', 326: 'CUT: S7.03 [MCU] Mas, own camera', 354: '"Hello." from the floor',
-    388: 'his brow is up: last frame', 389: 'CUT: S7.05 Mada, pixel', 400: 'the rail types; the fires light the room',
-    436: 'last frame',
+    0: 'S7.02 [W] the bullpen walkout, pixel; rain', 24: 'she walks out; he glances after her', 48: 'Mas asks (a5-30-05)',
+    96: 'she turns to her neighbour', 119: 'last frame of the wide',
+    120: 'CUT: S7.02b [MCU] Tasya, closer camera', 142: '"...fine." (a nod)', 200: '"...IP rights..." (a glance)',
+    248: '"below": the floor is laid from under him', 252: 'the floor laid (chord p250)', 256: 'the vector floor, pixel room',
+    272: '"above": the ceiling laid (chord p273)', 276: 'the vector ceiling lands', 294: '"around": the iris enters',
+    298: 'the iris passes the staff and Tasya', 302: 'the iris closes on Mas', 306: 'the island: Mas in pixel',
+    312: 'hold: the landlord\'s room', 326: 'CUT: S7.03 [MCU] Mas, own camera', 344: 'the room steps back (p336-351)',
+    360: '"Hello." heard: brow up, head dips', 388: 'last frame of S7.03', 389: 'CUT: S7.05 Mada, pixel',
+    400: 'the rail types; the fires light the room', 436: 'last frame',
 }
 files = sorted(f for f in os.listdir(DIR) if f.endswith('.png'))
 cols, tw = 5, 384
@@ -46,7 +46,7 @@ if BLIND:
     d.text((10, 38), 'frames in order, from the encoded mp4', fill=(120, 150, 160), font=font(14))
 else:
     d.text((10, 10), 'MR. MAS  STYLE-RANGE E1-P3  BELOW, ABOVE, AROUND (1.D)  EP1 SC 30', fill=(230, 214, 180), font=font(20, True))
-    d.text((10, 38), '437 f @ 24 fps, v5 takes | pixel p0-245 | slate + vector steps p246-308 | vector room, pixel Mas/Tasya to p388 | pixel p389-436 | frames from the encoded mp4',
+    d.text((10, 38), '437 f @ 24 fps, v5 takes | pixel p0-245 | floor, ceiling laid + iris p246-308 | vector room, pixel Mas/Tasya to p388 | pixel p389-436 | from the encoded mp4',
            fill=(120, 150, 160), font=font(13))
 for i, f in enumerate(files):
     p = int(f[1:4])

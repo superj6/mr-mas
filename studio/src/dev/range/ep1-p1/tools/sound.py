@@ -8,6 +8,8 @@ to scratch and redirected there, so nothing under audio/ is written):
 centre, the right pane (the lighthouse, the quartet, CLOD) right of centre; the dialogue only leans (+-0.2).
   MM-04 (TEMP; no render of it exists yet): Gerg's BUILD on the chip against Mario's ADDENDUM on a string quartet,
     trading bars (bar 1 chip, 2 quartet, 3 chip, 4 quartet), ducked under the memo.
+  round 5: the lighthouse's lamp is held (its gear's 3-frame tick is gone); the filament's buzz swells under the
+        ramp (p240-247); Mario's startle is a dry rustle; Gerg's typing stops while he glances at the site.
   p240  bar 5: the can's CLUNK on the downbeat (no switch, no click); the wheel's whirr starts in the pool and runs
         to the cut; one felted-upright phrase doubles the quartet under the bow; a dry clay PRESS on the down key
         (p248). No pizzicato "ad cue".
@@ -216,6 +218,27 @@ def clay_press(seed=3):
     return x / np.max(np.abs(x))
 
 
+def filament():
+    """a tungsten can coming up: a 100 Hz mains buzz with its odd harmonics, swelling over the ramp (0.33 s) and
+    settling to a low hum that dies away inside a second"""
+    n = int(1.1 * SR)
+    t = np.arange(n) / SR
+    buzz = sum(np.sin(2 * np.pi * 100 * k * t + k * 0.7) / k for k in (1, 3, 5, 7, 9))
+    env = np.clip(t / 0.33, 0, 1) ** 1.5 * np.where(t < 0.33, 1.0, np.exp(-(t - 0.33) / 0.28) * 0.7 + 0.3 * np.exp(-(t - 0.33) / 0.08))
+    x = lowp(buzz * env, 1800)
+    return x / np.max(np.abs(x))
+
+
+def rustle(seed):
+    """a short dry cloth-and-paper rustle (a startle): two overlapping bursts of band noise"""
+    r = np.random.default_rng(seed)
+    n = int(0.32 * SR)
+    t = np.arange(n) / SR
+    e = (1 - np.exp(-t / 0.01)) * np.exp(-t / 0.07) + 0.5 * np.exp(-np.maximum(0, t - 0.09) / 0.05) * (t > 0.09)
+    x = band(r.standard_normal(n), 900, 5200) * e
+    return x / np.max(np.abs(x))
+
+
 def whirr(n):
     """the potter's wheel turning in its chest: a small bearing hum (90 Hz + harmonics) and a felt-on-clay rush,
     modulated once a turn (1.5 turns a second, as the picture's wheel)"""
@@ -304,13 +327,11 @@ def main():
     g_day = env_lin([(0, 1), (T_CUT - 1, 1), (T_CUT, 0), (FRAMES, 0)])
     put(bed, bp * g_day, 0, db(-38), pan=-0.55)
     put(bed, lh * g_day, 0, db(-37), pan=0.55)
-    # the lamp's gear, a soft tick every held step of its turn (3 f), under the lighthouse
-    tick = band(rng.standard_normal(int(0.01 * SR)), 900, 3500) * np.hanning(int(0.01 * SR))
-    for p in range(0, T_CUT, 3):
-        put(bed, tick, fs(p), db(-50), pan=0.5)
+    # (round 5: the lighthouse's lamp is held still in this scene, so its gear's 3-frame tick is gone: it was a
+    # metronome under the whole right pane)
     # Gerg types on 1s (the house typing loop, low, left), except while he holds things up
     typ = load('typing_soft.wav')
-    typ_g = env_lin([(0, 1), (40, 1), (42, 0), (72, 0), (74, 1), (B(489), 1), (B(490), 0), (B(503), 0), (B(504), 1), (T_CUT - 1, 1), (T_CUT, 0), (FRAMES, 0)])
+    typ_g = env_lin([(0, 1), (40, 1), (42, 0), (72, 0), (74, 1), (B(216), 1), (B(217), 0), (B(238), 0), (B(239), 1), (B(489), 1), (B(490), 0), (B(503), 0), (B(504), 1), (B(511), 1), (B(512), 0), (B(525), 0), (B(526), 1), (T_CUT - 1, 1), (T_CUT, 0), (FRAMES, 0)])  # round 5: he stops to glance at the site twice
     reps = int(np.ceil(N / typ.shape[1]))
     typl = np.tile(typ, (1, reps))[:, :N]
     bed += typl * typ_g * db(-33) * np.array([[1.2], [0.5]])
@@ -326,6 +347,10 @@ def main():
     put(fx, load('camera_shutter.wav'), fs(B(495)), db(-20), pan=-0.55)
     # THE CLUNK on the downbeat, and the clay's first press on the bow's down key
     put(fx, clunk(), fs(T_SLAM), db(-9), pan=0.25)
+    # the filament's mains buzz under the strike (round 6: the light strikes full; the buzz swells and settles), and
+    # Mario's startle (his hop back, his sleeve and the scroll's roll: a dry rustle, right)
+    put(fx, filament(), fs(T_SLAM), db(-31), pan=0.25)
+    put(fx, rustle(5), fs(T_SLAM + 1), db(-30), pan=0.5)
     put(fx, clay_press(3), fs(T_PRESS), db(-19), pan=0.3)
     put(fx, clay_press(4) * 0.6, fs(B(204)), db(-24), pan=0.3)  # the rise, a softer handling of the clay
     # the wheel's whirr in the pool, from the slam to the cut (lower under the post)
@@ -337,7 +362,10 @@ def main():
     put(fx, claps(5, 2.1, 9), fs(B(360)), db(-24), pan=-0.55)
     # his post pops (the house post click)
     put(fx, load('post_click.wav'), fs(B(305)), db(-24), pan=-0.45)
-    # Mario's pen on the scroll while he adds a line
+    # Mario's pen on the scroll while he adds a line; round 6: and (quieter, under his memo) while he writes the memo
+    for p in list(range(96, 128, 5)) + list(range(166, T_SLAM - 2, 5)):
+        L = int(0.03 * SR)
+        put(fx, band(rng.standard_normal(L), 2500, 7000) * np.hanning(L), fs(p), db(-45 + 4 * rng.random()), pan=0.45)
     for p in range(B(330), B(390), 5):
         L = int(0.03 * SR)
         put(fx, band(rng.standard_normal(L), 2500, 7000) * np.hanning(L), fs(p), db(-40 + 4 * rng.random()), pan=0.45)

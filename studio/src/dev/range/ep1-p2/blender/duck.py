@@ -1,4 +1,4 @@
-"""MR. MAS · range E1-P2 (1.H, WHAT THE QUACK): the scene script for ELGOOG's product film (v3, the ep1r-p2r3 pass).
+"""MR. MAS · range E1-P2 (1.H, WHAT THE QUACK): the scene script for ELGOOG's product film (v5, the ep1r-p2r5 pass).
 
 A near-photoreal product shot, built procedurally (no downloaded assets, no model-made anything):
   - a generic yellow rubber duck (no toy brand): one molded vinyl body from metaballs (a round chest and body, an
@@ -14,8 +14,9 @@ A near-photoreal product shot, built procedurally (no downloaded assets, no mode
     pool of light behind the duck (a classic product gradient, and it keeps the film inside a stop of the room).
   - softbox lighting: a big key camera-left, a strip kicker behind for the rim, an overhead sheet (the contact
     shadow), a weak fill, and a soft spot pool on the sweep. Real falloff only: nothing is painted.
-  - one camera move: a slow macro arc from three-quarter to profile with a slight push-in, 100 mm, f/4, focused on
-    the near eye, motion blur on. Frames 0..119 of the arc (the prototype's p0..p119).
+  - one move (v5): the duck turns on a turntable under the fixed product light, from just past profile to nearly
+    facing the lens (90 degrees in 5 s), while the camera pushes in on a slight arc; 100 mm, f/4, focused on the
+    nearer eye, motion blur on. Frames 0..119 (the prototype's p0..p119).
 
 Run (Blender 4.5.3 LTS; EEVEE Next on the Intel iGPU, Cycles on the CPU):
   BL=/home/jgon/Downloads/blender-4.5.3-linux-x64/blender
@@ -455,7 +456,14 @@ w.node_tree.nodes['Background'].inputs['Color'].default_value = (0.012, 0.012, 0
 w.node_tree.nodes['Background'].inputs['Strength'].default_value = 1.0
 
 
-# ------------------------------------------------------------------ the camera: one macro arc (three-quarter -> profile)
+# ------------------------------------------------------------------ the move (v5): a turntable spin under a slow push
+# v4 was one camera arc, three-quarter -> profile, 52 degrees in 5 s: so slow that the ramp's dropped frames read as
+# mild judder, and its stills looked alike. v5 keeps the product light fixed to the camera (the classic turntable
+# hero) and turns the DUCK instead: from just past profile to nearly facing the lens, 90 degrees in 5 s (18 deg/s, a
+# brisk product spin), one speed, no ease (the film is already playing at p0 and is still turning when it freezes).
+# The specular slides across the vinyl as it turns; the camera adds a slight arc and a push for parallax.
+# a = the duck's apparent angle to the lens: 90 = profile (bill screen-left), 0 = facing the lens.
+SPIN_A0, SPIN_A1 = 100.0, 10.0
 cam_d = bpy.data.cameras.new('cam')
 cam_d.lens = 100.0
 cam_d.sensor_width = 36.0
@@ -469,33 +477,38 @@ sc.camera = cam
 focus = bpy.data.objects.new('focus', None)
 sc.collection.objects.link(focus)
 cam_d.dof.focus_object = focus
-eye_w = duck.matrix_world @ EYES[0]
 
 
-def arc(f):
+def move(f):
     t = f / (ARC_FRAMES - 1)
-    te = t + 0.06 * math.sin(math.pi * t) * (1 - t)     # a nearly even move, a hair of ease-out
-    th = math.radians(34.0 + 52.0 * te)                 # three-quarter front -> profile
-    dist = 0.60 - 0.065 * te                            # a slow push
-    h = 0.098 + 0.006 * te
-    tgt = Vector((0.000, 0.0, 0.041 + 0.002 * te))
+    th = math.radians(50.0 + 10.0 * t)                  # the camera: a slight arc (the key stays camera-left)
+    a = math.radians(SPIN_A0 + (SPIN_A1 - SPIN_A0) * t)  # the spin: one speed
+    rot = th - a                                         # the turntable's angle
+    dist = 0.60 - 0.05 * t                               # a slow push
+    h = 0.098 + 0.006 * t
+    tgt = Vector((0.000, 0.0, 0.041 + 0.002 * t))
     loc = Vector((dist * math.cos(th), dist * math.sin(th), h))
     # compose the duck right of centre (the film's super sits lower left): shift the aim toward screen-left
     fwd = (tgt - loc).normalized()
     left = Vector((0, 0, 1)).cross(fwd).normalized()
     tgt = tgt + left * 0.028
-    return loc, tgt
+    return loc, tgt, rot
 
 
 for f in range(ARC_FRAMES):
-    loc, tgt = arc(f)
+    loc, tgt, rot = move(f)
     cam.location = loc
     cam.rotation_euler = (tgt - loc).to_track_quat('-Z', 'Y').to_euler()
     cam.keyframe_insert('location', frame=f)
     cam.keyframe_insert('rotation_euler', frame=f)
-    focus.location = eye_w.lerp(Vector(tgt), 0.25)
+    duck.rotation_euler = (0.0, 0.0, rot)
+    duck.keyframe_insert('rotation_euler', frame=f)
+    # focus on the eye nearer the lens (pulled a quarter toward the aim), so the face stays sharp as it turns to us
+    Rz = Matrix.Rotation(rot, 4, 'Z')
+    near = min((Rz @ e for e in EYES), key=lambda p: (p - loc).length)
+    focus.location = near.lerp(Vector(tgt), 0.25)
     focus.keyframe_insert('location', frame=f)
-for ob in (cam, focus):
+for ob in (cam, focus, duck):
     if ob.animation_data and ob.animation_data.action:
         act = ob.animation_data.action
         fcs = getattr(act, 'fcurves', None)

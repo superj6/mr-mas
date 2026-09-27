@@ -11,7 +11,7 @@
 //   node <scratch>/pxclod.cjs <cels dir (cel-NNN.png)> <out gen/clod-px.json>
 import * as fs from 'fs';
 import * as zlib from 'zlib';
-import {CELS, TILE, celKey} from '../gl/cels';
+import {CELS, TILE, celKey, POSES} from '../gl/cels';
 import {PAL} from '../../../../shared/pixel/palette';
 
 const readPNG = (path: string) => {
@@ -130,18 +130,25 @@ const pixelClod = (nightI: number, idI: number) => {
     if (out[(j - 1) * NW + i] === PAL.N0 && part[(j - 1) * NW + i] !== 2 && !op(i, j - 2)) out[k] = PAL.W4;
   }
   const seen = new Uint8Array(NW * NH);
+  const beads: number[][] = [];
   for (let j = minY; j < headBot; j++) for (let i = minX; i <= maxX; i++) {
     const k0 = j * NW + i;
     if (part[k0] !== 2 || seen[k0] || cols[k0] < 0) continue;
     const comp: number[] = [], st = [k0]; seen[k0] = 1;
     while (st.length) { const k = st.pop()!; comp.push(k); const x = k % NW, y = (k / NW) | 0; for (const [dx, dy] of [[1, 0], [-1, 0], [0, 1], [0, -1]]) { const q = (y + dy) * NW + x + dx; if (x + dx < 0 || x + dx >= NW || y + dy < 0 || y + dy >= NH || seen[q] || part[q] !== 2) continue; seen[q] = 1; st.push(q); } }
-    if (comp.length > 8) continue; // the bow tie and the smile are bigger (or below): only the beads get a glint
+    if (comp.length > 8) continue; // the bow tie is bigger: only the beads (and the smile) are candidates
+    beads.push(comp);
+  }
+  // the two highest small marks are the eyes (the smile sits below them): one glint each, top-right
+  beads.sort((a, b) => Math.min(...a.map((k) => (k / NW) | 0)) - Math.min(...b.map((k) => (k / NW) | 0)));
+  for (const comp of beads.slice(0, 2)) {
     const g = comp.reduce((a, b) => ((b % NW) - ((b / NW) | 0) * 0.5 > (a % NW) - ((a / NW) | 0) * 0.5 ? b : a));
     out[g] = PAL.W5;
   }
   return {out, minX, minY, maxX, maxY};
 };
-const nights = CELS.map((c, i) => [c, i]).filter(([c]) => c.mode === 'night');
+// (the phrase-1 night keys only: round 5's ramp adds night twins of the first lit drawings, which carry a pose)
+const nights = CELS.map((c, i) => [c, i]).filter(([c]) => c.mode === 'night' && !c.pz);
 const ids = CELS.map((c, i) => [c, i]).filter(([c]) => c.mode === 'id');
 const drawings = nights.map(([c, i]) => pixelClod(i, ids.find(([d]) => d.wheel === c.wheel)[1]));
 const bx0 = Math.min(...drawings.map((d) => d.minX)), by0 = Math.min(...drawings.map((d) => d.minY));
@@ -157,7 +164,12 @@ const frames = drawings.map((d) => {
 const shadow: Record<string, {x: number; y: number; w: number; h: number; k: string}> = {};
 const cover: Record<string, string> = {};
 for (const pose of [...new Set(CELS.filter((c) => c.mode === 'lit').map((c) => c.pose))]) {
-  const i = CELS.findIndex((c) => c.mode === 'lit' && c.pose === pose);
+  // round 6: the drawing nearest the key itself (the first drawing named for a key can be mid-move: the hold's
+  // first one is still turning out of the bow)
+  const K = POSES[pose];
+  const dist = (c) => { const p = c.pz ?? K; return (p.lean - K.lean) ** 2 + (p.nod - K.nod) ** 2 + (p.tilt - K.tilt) ** 2 + ((p.turn ?? 0) - (K.turn ?? 0)) ** 2 + ((p.body ?? 0) - (K.body ?? 0)) ** 2; };
+  let i = -1;
+  CELS.forEach((c, q) => { if (c.mode === 'lit' && c.pose === pose && (i < 0 || dist(c) < dist(CELS[i]))) i = q; });
   const S = cel(i);
   let s = '';
   for (let j = 0; j < NH; j++) for (let i2 = 0; i2 < NW; i2++) {

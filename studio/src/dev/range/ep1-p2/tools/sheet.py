@@ -16,18 +16,20 @@ from PIL import Image, ImageDraw, ImageFont
 
 FF = '/home/jgon/project/art/mrmas/studio/node_modules/@remotion/compositor-linux-x64-gnu'
 ENV = dict(os.environ, LD_LIBRARY_PATH=FF)
-# the screen at output resolution (ots.ts SCR x4) and the film under the title strip
-SCR = (600, 56, 1056, 592)
+# the screen at output resolution (ots.ts SCR x4; v5 moved the monitor left of centre) and the film under the title strip
+SCR = (264, 56, 1056, 592)
 TITLE_H = 44
 
 BEATS = {
     'A': [(10, 'the film, on 1s'), (40, 'the super set'), (71, 'last frame on 1s'), (86, 'the ramp: on 2s'),
-          (104, 'on 4s'), (116, 'on 8s'), (121, 'the strip of stills'), (125, 'eye-light sliding in'),
-          (130, 'eye-light landed'), (142, 'the caption types'), (180, 'the caption holds'), (196, '[2S] iris on the monitor'),
-          (212, 'iris back on Mas'), (244, 'the slot whirs; the rail'), (263, 'last frame')],
-    'B': [(10, 'the film, on 1s'), (40, 'the super set'), (71, 'last frame of the film'), (72, 'the break: three stills'),
-          (77, 'eye-light sliding in'), (82, 'eye-light landed'), (94, 'the caption types'), (130, 'the caption holds'),
-          (148, '[2S] iris on the monitor'), (164, 'iris back on Mas'), (196, 'the slot whirs; the rail'), (215, 'last frame')],
+          (104, 'on 4s; the Orb\'s iris narrows'), (116, 'frozen on 8s; the Orb\'s beam'), (121, 'the frame steps down'),
+          (124, 'the stills dealt'), (142, 'the caption types'), (180, 'the caption holds'), (196, '[2S] iris on the monitor'),
+          (208, 'iris back on Mas'), (216, 'he turns to the Orb'), (232, 'the one-pixel smile'), (250, 'the slot whirs'),
+          (263, 'last frame')],
+    'B': [(10, 'the film, on 1s'), (40, 'the super set'), (71, 'last frame of the film'), (72, 'the break: six stills'),
+          (78, 'the Orb\'s beam scans'), (94, 'the caption types'), (130, 'the caption holds'), (148, '[2S] iris on the monitor'),
+          (160, 'iris back on Mas'), (168, 'he turns to the Orb'), (184, 'the one-pixel smile'), (202, 'the slot whirs'),
+          (215, 'last frame')],
 }
 KEYS = {
     'A': [(40, 'the-film'), (170, 'exposed'), (230, 'two-shot')],
@@ -120,7 +122,8 @@ def measure(mp4, ver, out):
     # 2) the grade: the film inside the screen vs the room around it (OTS frames only)
     ots_end = 192 if ver == 'A' else 144
     Y = lambda im: 0.2126 * s2l(im[..., 0]) + 0.7152 * s2l(im[..., 1]) + 0.0722 * s2l(im[..., 2])
-    fl = fr[:film_end:6, y + TITLE_H:y + h, x:x + w]
+    # (A: only the frames before the Orb fires at p112, so its beam's light on the glass isn't counted as the film)
+    fl = fr[:min(film_end, 112):6, y + TITLE_H:y + h, x:x + w]
     lum_film = Y(fl.astype(np.float64))
     mask = np.ones((1080, 1920), bool)
     mask[y - 28:y + h + 44, x - 28:x + w + 28] = False     # the screen and bezel
@@ -133,6 +136,7 @@ def measure(mp4, ver, out):
     m = {
         'version': ver, 'frames': int(len(fr)),
         'new_drawings_in_the_film': holds,
+        **({'note_8s': 'the film holds take frame 112 from p112 (1 new drawing); the other 3 changes counted in p112-119 are the Orb\'s beam on the glass: it comes on at p114 and its scan line steps at p116 and p118'} if ver == 'A' else {}),
         'film_rgb_max_8bit': int(fl.max()), 'film_rgb_p999_8bit': float(np.percentile(fl, 99.9)),
         'film_luma_max_display': round(enc(float(lum_film.max())), 3),
         'film_luma_mean_display': round(enc(float(lum_film.mean())), 3),

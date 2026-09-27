@@ -156,7 +156,9 @@ def led_ticks():
 
 def whir():
     """the slot: a small motor spinning up, the feed's rollers, the magazine's edge starting through"""
-    i0 = S(T['whir'])
+    # v5: the motor starts 0.25 s before the LED's first blink, so its spin-up (about 0.3 s to be heard) is audible ON
+    # the blink rather than after it (v4's whir was measured audible ~0.3 s late)
+    i0 = S(T['whir']) - S(0.25 * 24)
     n = N - i0
     if n <= 0:
         return np.zeros((N, 2))

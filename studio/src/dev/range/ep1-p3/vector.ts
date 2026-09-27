@@ -478,7 +478,9 @@ const item = (c: Ctx, x: number, y: number, kind: number) => {
 const SKIN = ['#8C5C45', '#B27C5E', '#E0B290', '#603F33', '#C99476'];
 const SKIN_LIT = ['#9E6B52', '#C38D6E', '#EDC3A2', '#71493B', '#D8A585'];
 const HAIR = ['#211C20', '#37282B', '#56392D', '#7B5540', '#9EA5B2', '#1E2232'];
-const COAT: Array<[string, string]> = [['#8B90A0', '#A2A7B6'], ['#3E4B6D', '#52618A'], ['#474F62', '#5B6479'], ['#5C7784', '#71909E'], ['#686384', '#7E79A0'], ['#5B6B8C', '#7283A8'], ['#A9B2C4', '#C1C9D8']];
+/** the pixel coats in the house's muted key (pass 7: the camel trench had turned grey and the green parka teal, so a
+ *  staff member changed identity as the ring passed; each keeps its own hue family now, only quieter) */
+const COAT: Array<[string, string]> = [['#9A8878', '#B3A291'], ['#3E4B6D', '#52618A'], ['#474F62', '#5B6479'], ['#5D7B6C', '#739383'], ['#686384', '#7E79A0'], ['#5B6B8C', '#7283A8'], ['#A9B2C4', '#C1C9D8']];
 const PANTS = ['#272D40', '#363C4D', '#2E3552', '#3B3439'];
 const UNDER = ['#EEF1F6', '#B8C0CE', '#3A4460', '#7089BA', '#A5B1CA'];
 export interface StaffDef { x: number; foot: number; seed: number; coat: number; flip: boolean }

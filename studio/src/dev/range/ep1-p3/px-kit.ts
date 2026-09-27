@@ -71,22 +71,31 @@ export const bust = (img: Img, extend = 48, side = 34, cap = 6, taper = 0): Img 
   return out;
 };
 export const MCU_X = {L: 100, R: 262};
-/** the bust composed straight into the frame (third L/R + dx), eyes on the upper third; pixels also go to `mask` */
-export const drawBust = (b: Buf, img: Img, third: 'L' | 'R', dx = 0, y = 22, mask?: Uint8Array, cap = 6, taper = 0) => {
+/** the bust composed straight into the frame (third L/R + dx), eyes on the upper third; pixels also go to `mask`.
+ *  `head` (E1-P3 pass 7, not in the animatic): the rows above `split` (the neck, between chin and collar) move on their
+ *  own by (dx, dy) whole pixels, drawn over the body; the body starts a row early so a lifted head never opens a gap. */
+export const drawBust = (b: Buf, img: Img, third: 'L' | 'R', dx = 0, y = 22, mask?: Uint8Array, cap = 6, taper = 0,
+  head?: {split: number; dx: number; dy: number}) => {
   const bs = bust(img, 48, 34, cap, taper);
   const x = MCU_X[third] + dx;
-  for (let j = 0; j < bs.h; j++) {
-    const Y = y + j;
-    if (Y < 0 || Y >= RH) continue;
-    for (let i = 0; i < bs.w; i++) {
-      const v = bs.c[j * bs.w + i];
-      if (v < 0) continue;
-      const X = x + i;
-      if (X < 0 || X >= W) continue;
-      b.c[Y * W + X] = v;
-      if (mask) mask[Y * W + X] = 1;
+  const moved = head && (head.dx || head.dy);
+  const pass = (j0: number, j1: number, ox: number, oy: number) => {
+    for (let j = j0; j < j1; j++) {
+      const Y = y + j + oy;
+      if (Y < 0 || Y >= RH) continue;
+      for (let i = 0; i < bs.w; i++) {
+        const v = bs.c[j * bs.w + i];
+        if (v < 0) continue;
+        const X = x + i + ox;
+        if (X < 0 || X >= W) continue;
+        b.c[Y * W + X] = v;
+        if (mask) mask[Y * W + X] = 1;
+      }
     }
-  }
+  };
+  if (!moved) { pass(0, bs.h, 0, 0); return; }
+  pass(head!.split - 1, bs.h, 0, 0);
+  pass(0, head!.split, head!.dx, head!.dy);
 };
 
 // ------------------------------------------------------------------ text with the extra glyphs the rail needs

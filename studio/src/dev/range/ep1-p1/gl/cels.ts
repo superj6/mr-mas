@@ -17,6 +17,7 @@ export interface Pose {
   /** the clipboard arm's lift (rad) */ arm: number;
   /** head turn at the neck (rad, + = toward its left, i.e. toward Mario; - = toward the split line) */ turn?: number;
   /** chest swell (-1..1, a breath) */ breath?: number;
+  /** round 6: the whole puppet's turn on its tie-down (rad, added to the camera yaw; - = square to the lens) */ body?: number;
 }
 export const POSES: Record<string, Pose> = {
   up: {lean: 0, nod: 0, tilt: 0, arm: 0},
@@ -24,18 +25,22 @@ export const POSES: Record<string, Pose> = {
   down1: {lean: 0.3, nod: 0.12, tilt: 0.03, arm: 0.06},
   down: {lean: 0.52, nod: 0.2, tilt: 0.04, arm: 0.08},
   down2: {lean: 0.49, nod: 0.18, tilt: 0.05, arm: 0.08},
-  rise1: {lean: 0.4, nod: 0.02, tilt: 0.08, arm: 0.07},
-  rise2: {lean: 0.34, nod: -0.1, tilt: 0.12, arm: 0.06},
-  /** the bow's last key: a greeter's bow, the face lifted to Mario, smiling */
-  hold: {lean: 0.3, nod: -0.16, tilt: 0.14, arm: 0.05, turn: 0},
+  rise1: {lean: 0.34, nod: 0.0, tilt: 0.07, arm: 0.07, body: -0.06},
+  rise2: {lean: 0.17, nod: -0.08, tilt: 0.1, arm: 0.06, body: -0.18},
+  /** Round 6: the bow's button is a PRESENTATION: it straightens up and squares to the lens like a product on its
+   *  launch plinth, the face lifted, the head a touch toward Mario (round 5 held the bow hunched and turned 3/4 away,
+   *  so the new medium's star showed us its back and its face didn't read at phone size) */
+  hold: {lean: 0.03, nod: -0.1, tilt: 0.12, arm: 0.05, turn: 0.14, body: -0.34},
   /** looking where Mario looks: up and across to the split line (the same day) */
-  lookSplit: {lean: 0.26, nod: -0.24, tilt: 0.02, arm: 0.05, turn: -0.42},
-  /** back on Mario for "Addendum.", the head cocked a little further */
-  attend: {lean: 0.31, nod: -0.12, tilt: 0.24, arm: 0.05, turn: 0.08},
+  lookSplit: {lean: 0.02, nod: -0.2, tilt: 0.0, arm: 0.05, turn: -0.38, body: -0.34},
+  /** back on Mario for "Addendum.", the head cocked */
+  attend: {lean: 0.06, nod: -0.1, tilt: 0.22, arm: 0.05, turn: 0.36, body: -0.34},
   /** the nod's down key (agreeing with whatever he writes) */
-  nodDown: {lean: 0.34, nod: 0.03, tilt: 0.18, arm: 0.06, turn: 0.06},
+  nodDown: {lean: 0.1, nod: 0.07, tilt: 0.18, arm: 0.06, turn: 0.32, body: -0.34},
   /** following the scroll along the floor toward the split line */
-  watch: {lean: 0.37, nod: 0.12, tilt: 0.04, arm: 0.06, turn: -0.46},
+  watch: {lean: 0.08, nod: 0.15, tilt: 0.04, arm: 0.06, turn: -0.34, body: -0.34},
+  /** the button: back to Mario at his empty spindle, square to us, grinning */
+  beam: {lean: 0.04, nod: -0.12, tilt: 0.1, arm: 0.05, turn: 0.28, body: -0.3},
 };
 const KEY_NAMES = Object.keys(POSES);
 
@@ -44,7 +49,7 @@ export interface Cel { pose: string; pz?: Pose; mouth: 0 | 1 | 2; surface: 0 | 1
 const r3 = (v: number | undefined) => Math.round((v ?? 0) * 1000);
 export const celKey = (c: Cel) => {
   const p = c.pz;
-  const pk = p ? `${r3(p.lean)},${r3(p.nod)},${r3(p.tilt)},${r3(p.arm)},${r3(p.turn)},${r3(p.breath)}` : '';
+  const pk = p ? `${r3(p.lean)},${r3(p.nod)},${r3(p.tilt)},${r3(p.arm)},${r3(p.turn)},${r3(p.breath)},${r3(p.body)}` : '';
   return `${c.mode}:${c.pose}:${pk}:${c.mouth}:${c.surface}:${c.wheel}:${c.lid ?? 0}`;
 };
 
@@ -59,17 +64,19 @@ const lidAt = (k: number): 0 | 1 | 2 => {
 // ------------------------------------------------------------------ the bow, drawing by drawing (clip frames, on 2s)
 const BOW: Array<[number, string]> = [
   [T.slam, 'up'], [T.slam + 4, 'antic'], [T.slam + 6, 'down1'], [T.press, 'down'], [T.press + 4, 'down2'],
-  [T.press + 8, 'rise1'], [T.press + 12, 'rise2'], [T.press + 16, 'hold'],
+  [T.press + 8, 'rise1'], [T.press + 12, 'rise2'],
 ];
-export const HOLD_START = T.press + 16;
+/** round 6: from here the hold's moves take over (the first one is the turn to the lens, from rise2) */
+export const HOLD_START = T.press + 14;
 /** the moving hold: [from, to, key]. Each move eases (slow in, slow out) from wherever CLOD is to the key, on 2s */
 export const MOVES: Array<[number, number, string]> = [
+  [T.press + 14, T.press + 32, 'hold'], // round 6: it rises out of the bow and squares to us, finishing "...right!"
   [B(240), B(252), 'lookSplit'], // Mario looks up to the split line; CLOD looks where he looks
   [B(252), B(262), 'attend'], //    back to Mario for "Addendum.", head cocked
   [B(332), B(340), 'nodDown'], [B(340), B(348), 'attend'], // it nods along while he writes his line
   [B(362), B(370), 'nodDown'], [B(370), B(378), 'attend'],
   [B(426), B(450), 'watch'], //     it follows the scroll across the floor toward the split
-  [B(510), B(524), 'hold'], //      and turns back to Mario, who is looking at the empty spindle
+  [B(510), B(524), 'beam'], //      and turns back to Mario, who is looking at the empty spindle
 ];
 /** from here the closed smile is swapped for the grin (a replacement mouth): CLOD grins at Mario and the spindle */
 export const GRIN_FROM = B(526);
@@ -78,6 +85,7 @@ const ease = (t: number) => t * t * (3 - 2 * t);
 const lerpPose = (a: Pose, b: Pose, t: number): Pose => ({
   lean: a.lean + (b.lean - a.lean) * t, nod: a.nod + (b.nod - a.nod) * t, tilt: a.tilt + (b.tilt - a.tilt) * t,
   arm: a.arm + (b.arm - a.arm) * t, turn: (a.turn ?? 0) + ((b.turn ?? 0) - (a.turn ?? 0)) * t,
+  body: (a.body ?? 0) + ((b.body ?? 0) - (a.body ?? 0)) * t,
 });
 /** the breath: an uneven slow cycle (each breath 64-88 f), fading in after the bow; -1..1 */
 const BREATHS: number[] = (() => { const out = [0]; let t = 0, x = 0x2545f491; while (t < FRAMES + 200) { x ^= x << 13; x ^= x >>> 17; x ^= x << 5; x >>>= 0; t += 64 + (x % 25); out.push(t); } return out; })();
@@ -93,20 +101,22 @@ const breathAt = (k: number) => {
 /** the pose on drawing k (explicit numbers), and the name of the nearest key (for the pixel side's shadow) */
 export const poseAt = (k: number): {pz: Pose; key: string} => {
   if (k < HOLD_START) { let p = 'up'; for (const [t, q] of BOW) if (k >= t) p = q; return {pz: {...POSES[p]}, key: p}; }
-  let cur: Pose = {...POSES.hold};
+  let cur: Pose = {...POSES.rise2};
   for (const [a, b, key] of MOVES) {
     if (k >= b) cur = {...POSES[key]};
     else if (k >= a) cur = lerpPose(cur, POSES[key], ease((k - a) / (b - a)));
   }
   const br = breathAt(k);
   const pz: Pose = {...cur, lean: cur.lean + 0.014 * br, nod: cur.nod - 0.012 * br, breath: br};
-  return {pz, key: nearestKey(pz)};
+  return {pz, key: nearestKey(pz, HOLD_KEYS)};
 };
-export const nearestKey = (p: Pose) => {
+/** round 6: in the hold, a drawing's shadow comes from the nearest HOLD key (the bow's keys stand elsewhere) */
+const HOLD_KEYS = ['hold', 'lookSplit', 'attend', 'nodDown', 'watch', 'beam'];
+export const nearestKey = (p: Pose, keys: string[] = KEY_NAMES) => {
   let best = 'hold', bd = Infinity;
-  for (const k of KEY_NAMES) {
+  for (const k of keys) {
     const q = POSES[k];
-    const d = (p.lean - q.lean) ** 2 + (p.nod - q.nod) ** 2 + (p.tilt - q.tilt) ** 2 + ((p.turn ?? 0) - (q.turn ?? 0)) ** 2;
+    const d = (p.lean - q.lean) ** 2 + (p.nod - q.nod) ** 2 + (p.tilt - q.tilt) ** 2 + ((p.turn ?? 0) - (q.turn ?? 0)) ** 2 + ((p.body ?? 0) - (q.body ?? 0)) ** 2;
     if (d < bd) { bd = d; best = k; }
   }
   return best;
@@ -150,13 +160,9 @@ export const celAt = (f: number): Cel | null => {
   const {pz, key} = poseAt(k);
   return {pose: key, pz, mouth: mouthAt(k), surface: SURF[d % SURF.length] as 0 | 1 | 2 | 3, wheel: d % 8, mode: 'lit', lid: lidAt(k)};
 };
-/** during the filament's ramp the clip blends each drawing's night key into its lit one: the night twin */
-export const RAMP_FRAMES = 8;
-export const nightTwinAt = (f: number): Cel | null => {
-  if (f < T.slam || f >= T.slam + RAMP_FRAMES) return null;
-  const c = celAt(f)!;
-  return {...c, mode: 'night'};
-};
+/** round 5 blended night twins into the first lit drawings (a dim clay CLOD before the light: "a pop, then a
+ *  light"). Round 6 strikes the light instead (timeline.ts flashExpAt), so there are no twins */
+export const nightTwinAt = (_f: number): Cel | null => null;
 
 /** the night key for the pixel CLOD (phrase 1): the first key, unlit, the wheel in two held drawings */
 export const NIGHT_CELS: Cel[] = [

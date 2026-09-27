@@ -58,7 +58,7 @@ if has clip; then
 fi
 if has sound; then
   T0=$(date +%s)
-  OST_WORKERS=4 $ROOT/audio/.venv-theme/bin/python $HERE/tools/sound.py $S/sound.wav $S
+  OST_WORKERS=2 $ROOT/audio/.venv-theme/bin/python $HERE/tools/sound.py $S/sound.wav $S
   echo "sound: $(( $(date +%s) - T0 )) s"
 fi
 if has mux; then
@@ -72,7 +72,8 @@ if has stills; then
   grab 150 $OUT/ep1-p1-key-1-pixel-clod-p150.png
   grab 268 $OUT/ep1-p1-key-2-launch-p268.png
   grab 452 $OUT/ep1-p1-key-3-the-hold-p452.png
-  for f in 0 60 120 179 238 239 240 242 244 246 248 252 256 262 268 276 300 330 345 354 380 420 452 480 500 540 560 585 599 600 610 659; do grab $f $S/frames/f$(printf %03d $f).png; done
+  grab 520 $OUT/ep1-p1-key-4-watching-p520.png
+  for f in 0 60 110 150 200 238 239 240 242 244 248 250 256 268 276 290 300 312 330 354 380 400 424 480 500 520 540 560 585 590 599 600 610 659; do grab $f $S/frames/f$(printf %03d $f).png; done
   for p in $S/frames/*.png; do $FF/ffmpeg -v error -y -i $p -vf scale=480:270:flags=area $S/frames-small/$(basename $p); done
   $ROOT/audio/.venv-mix/bin/python $HERE/tools/sheet.py $OUT/ep1-p1-sheet.png $S/frames
   $ROOT/audio/.venv-mix/bin/python $HERE/tools/sheet.py $OUT/ep1-p1-sheet-blind.png $S/frames blind
