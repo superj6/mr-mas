@@ -1,0 +1,160 @@
+{
+ "schema": "mrmas-reel-music/1",
+ "id": "e01-v3-coldopen-el",
+ "segment": "coldopen",
+ "file": "audio/ost/tracks/e01-v3-coldopen/render/music-el.wav",
+ "timeline": "show/reel/ep01-v3-el/ep01-v3-el-coldopen.json",
+ "length_s": 30.041666666666668,
+ "frames": 721,
+ "samples": 1442000,
+ "sample_rate": 48000,
+ "channels": 2,
+ "clock": "the segment's own clock: 0 = its first frame (timeEpisode, head 0)",
+ "level": "v2's: MM-06 at -26 LUFS over its first 12 s (the v2 bed's relation to the hall); dry of dialogue",
+ "cues": [
+  {
+   "cue": "MM-06 Beeper, 1993 (underscore master, movement I)",
+   "start": 19.542,
+   "end": 30.042,
+   "what": "the Orb's rewind and the 1993 dialog; in 0.3 s under the F4's decay; a 3 ms cut on the smash to the main titles",
+   "render": "audio/ost/tracks/mm06-beeper-1993-sample-chip-2008/render/mm06-beeper-1993-sample-chip-2008-underscore.wav",
+   "file_in_s": 0.0,
+   "gain_db": -3.45,
+   "level": {
+    "lufs_i": -26.12,
+    "st_p95": -25.55,
+    "st_max": -25.38,
+    "true_peak_dbtp": -20.53
+   },
+   "engine_qa": {
+    "knee_whole": 0,
+    "f_major_ok": true,
+    "note": "MM-06's own cue sheet (unchanged file)"
+   }
+  }
+ ],
+ "sync": [
+  {
+   "t": 13.708,
+   "what": "the freeze: piano_fired_F4 (MM-14 \"Freeze F4\"), a timeline sound: the sound stem lays it, this stem enters under its decay"
+  },
+  {
+   "t": 19.542,
+   "what": "MM-06 in (0.3 s fade) on 3.01, the Orb's iris"
+  }
+ ],
+ "silences_designed": [
+  {
+   "t0": 0.0,
+   "t1": 19.541666666666668,
+   "why": "no score under the hall (sc 1-2): the room, the freeze's F4 (a timeline sound)"
+  }
+ ],
+ "measured": {
+  "length_s": 30.0417,
+  "samples": 1442000,
+  "frames": 721,
+  "exact": true,
+  "whole": {
+   "lufs_i": -26.23,
+   "st_p95": -25.69,
+   "st_max": -25.46,
+   "true_peak_dbtp": -20.53
+  },
+  "cues": {
+   "mm06": {
+    "lufs_i": -26.12,
+    "st_p95": -25.55,
+    "st_max": -25.38,
+    "true_peak_dbtp": -20.53
+   }
+  },
+  "rows": [
+   {
+    "section": "3.01 the Orb's iris steps (MM-06 fades in)",
+    "start": 19.54,
+    "end": 21.54,
+    "lufs_i": -25.49,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -21.4
+   },
+   {
+    "section": "3.02 the room scrubs back (the rewind)",
+    "start": 21.54,
+    "end": 24.54,
+    "lufs_i": -26.33,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -20.53
+   },
+   {
+    "section": "4.01-4.02 1993: the dialog, the toast; the smash cuts it",
+    "start": 24.54,
+    "end": 30.04,
+    "lufs_i": -26.17,
+    "st_p95": -25.53,
+    "st_max": -25.38,
+    "true_peak_dbtp": -20.9
+   }
+  ],
+  "digital_silence": [
+   {
+    "t0": 0.0,
+    "t1": 19.542,
+    "dur": 19.542,
+    "marked": true,
+    "why": "no score under the hall (sc 1-2): the room, the freeze's F4 (a timeline sound)"
+   }
+  ],
+  "unmarked_digital_silence": [],
+  "holes_below_-60": [
+   {
+    "t0": 0.0,
+    "t1": 19.5,
+    "inside_marked": true
+   },
+   {
+    "t0": 21.35,
+    "t1": 21.7,
+    "inside_marked": false
+   },
+   {
+    "t0": 22.25,
+    "t1": 22.65,
+    "inside_marked": false
+   },
+   {
+    "t0": 27.95,
+    "t1": 28.25,
+    "inside_marked": false
+   }
+  ],
+  "music_runs": [
+   {
+    "t0": 19.5,
+    "t1": 30.0,
+    "dur": 10.5
+   }
+  ],
+  "fragments_under_2s": [],
+  "undesigned_fragments": []
+ },
+ "laid": [
+  {
+   "name": "mm06",
+   "file": "audio/ost/tracks/mm06-beeper-1993-sample-chip-2008/render/mm06-beeper-1993-sample-chip-2008-underscore.wav",
+   "laid_at_s": 19.5417,
+   "window": [
+    19.542,
+    30.042
+   ],
+   "fade_in_s": 0.3,
+   "fade_out_s": 0.003,
+   "gain_db": -3.45,
+   "post": null
+  }
+ ],
+ "source": "audio/ost/tracks/e01-v3-coldopen/track.py",
+ "heard": "nothing here has been listened to; every number is measured"
+}

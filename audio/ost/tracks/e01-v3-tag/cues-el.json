@@ -1,0 +1,258 @@
+{
+ "schema": "mrmas-reel-music/1",
+ "id": "e01-v3-tag-el",
+ "segment": "tag",
+ "file": "audio/ost/tracks/e01-v3-tag/render/music-el.wav",
+ "timeline": "show/reel/ep01-v3-el/ep01-v3-el-tag.json",
+ "length_s": 33.708333333333336,
+ "frames": 809,
+ "samples": 1618000,
+ "sample_rate": 48000,
+ "channels": 2,
+ "clock": "the segment's own clock: 0 = its first frame (timeEpisode, head 0)",
+ "level": "underscore (-21 LUFS-I target, the engine's master), dry of dialogue; the mixer ducks it",
+ "cues": [
+  {
+   "cue": "tag_december",
+   "start": 0.0,
+   "end": 33.708333333333336,
+   "what": "MM-12 december (to picture): the felt takes the vault's F; the Water Line; the verdict two beats late; cut by the thud; the button with no third",
+   "render": "audio/ost/tracks/e01-v3-tag/render/_work/el/tag_december-underscore.wav",
+   "laid_at_s": 0.6,
+   "level": {
+    "lufs_i": -21.03,
+    "st_p95": -19.58,
+    "st_max": -18.88,
+    "true_peak_dbtp": -3.71
+   },
+   "engine_qa": {
+    "masters": {
+     "target_lufs": -21.0,
+     "ceiling_dbtp": -3.0,
+     "comp": {
+      "thresh_db": -28,
+      "ratio": 1.3,
+      "att_ms": 40.0,
+      "rel_ms": 350.0
+     },
+     "dialog_pocket": {
+      "f": 2500.0,
+      "db": -2.0,
+      "q": 0.7
+     },
+     "measured": {
+      "lufs": -21.0,
+      "lra": 9.41,
+      "true_peak_db": -3.71,
+      "peak_db": -3.72,
+      "rms_db": -26.11,
+      "crest_db": 22.39,
+      "seconds": 33.1083
+     }
+    },
+    "f_major_ok": true,
+    "f_major_ok_written": true,
+    "f_major_worst": 0.119,
+    "knee_whole": 0,
+    "knee_completion": 0,
+    "hit_check": {
+     "within_10ms": 4,
+     "of": 5,
+     "worst_ms": 12.7
+    },
+    "warnings": [
+     "marker at 29.8833 s: no clear onset within 10 ms ({'t': 29.8833, 'offset_ms': np.float64(12.7), 'strength': 4.23})"
+    ]
+   },
+   "note_qa": {
+    "notes": 53,
+    "written_third_ok": true,
+    "written_third_events": [],
+    "grazes": 0,
+    "knee_completion": 0,
+    "knee_whole": 0
+   },
+   "sync": [
+    {
+     "t": 0.6,
+     "what": "the felt's open fifth takes the F over from the vault hum",
+     "hit": false
+    },
+    {
+     "t": 3.1,
+     "what": "the Water Line, plain (F F F G-sw F | C F); the chip on the nudge",
+     "hit": true
+    },
+    {
+     "t": 8.1,
+     "what": "one held Bbm9 under the V.O. (nothing moves)",
+     "hit": false
+    },
+    {
+     "t": 13.078,
+     "what": "THE VERDICT: F5 (after the toast's blink, never on it)",
+     "hit": true
+    },
+    {
+     "t": 14.928,
+     "what": "THE VERDICT: C6 (after the toast's blink, never on it)",
+     "hit": true
+    },
+    {
+     "t": 19.958,
+     "what": "the back wall: the Water Line once more",
+     "hit": true
+    },
+    {
+     "t": 23.083,
+     "what": "THE THUD: the line stops dead before its settle (3 ms, tails cut)",
+     "hit": false
+    },
+    {
+     "t": 30.483,
+     "what": "THE BUTTON: F3 C4 G4 C5, no third (the vault's F hum is its root)",
+     "hit": true
+    }
+   ]
+  }
+ ],
+ "silences_designed": [
+  {
+   "t0": 23.083,
+   "t1": 30.483,
+   "why": "the thud -> the button: no score (the front page, \"noted.\")"
+  },
+  {
+   "t0": 0.0,
+   "t1": 0.6,
+   "why": "the tag's head: the vault hum (a timeline sound) until the felt takes its F"
+  }
+ ],
+ "measured": {
+  "length_s": 33.7083,
+  "samples": 1618000,
+  "frames": 809,
+  "exact": true,
+  "whole": {
+   "lufs_i": -21.03,
+   "st_p95": -19.58,
+   "st_max": -18.88,
+   "true_peak_dbtp": -3.71
+  },
+  "cues": {
+   "tag_december": {
+    "lufs_i": -21.03,
+    "st_p95": -19.58,
+    "st_max": -18.88,
+    "true_peak_dbtp": -3.71
+   }
+  },
+  "rows": [
+   {
+    "section": "the dark room: the felt takes the F; the Water Line, plain",
+    "start": 0.0,
+    "end": 8.1,
+    "lufs_i": -20.19,
+    "st_p95": -19.08,
+    "st_max": -18.88,
+    "true_peak_dbtp": -4.51
+   },
+   {
+    "section": "the V.O., then the Orb's scans (felt held)",
+    "start": 8.1,
+    "end": 15.96,
+    "lufs_i": -24.83,
+    "st_p95": -23.59,
+    "st_max": -23.5,
+    "true_peak_dbtp": -7.26
+   },
+   {
+    "section": "the back wall: the Water Line, cut by the thud",
+    "start": 17.63,
+    "end": 23.08,
+    "lufs_i": -19.77,
+    "st_p95": -19.51,
+    "st_max": -19.25,
+    "true_peak_dbtp": -6.06
+   },
+   {
+    "section": "no score: the front page, \"noted.\" (designed)",
+    "start": 23.08,
+    "end": 30.48,
+    "lufs_i": -Infinity,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -41.33
+   },
+   {
+    "section": "the button: the chord with no third, rings into the black",
+    "start": 30.48,
+    "end": 33.71,
+    "lufs_i": -20.72,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -3.71
+   }
+  ],
+  "digital_silence": [
+   {
+    "t0": 0.0,
+    "t1": 0.6,
+    "dur": 0.6,
+    "marked": true,
+    "why": "the tag's head: the vault hum (a timeline sound) until the felt takes its F"
+   },
+   {
+    "t0": 23.083,
+    "t1": 30.473,
+    "dur": 7.39,
+    "marked": true,
+    "why": "the thud -> the button: no score (the front page, \"noted.\")"
+   }
+  ],
+  "unmarked_digital_silence": [],
+  "holes_below_-60": [
+   {
+    "t0": 0.0,
+    "t1": 0.6,
+    "inside_marked": true
+   },
+   {
+    "t0": 23.1,
+    "t1": 30.45,
+    "inside_marked": true
+   }
+  ],
+  "music_runs": [
+   {
+    "t0": 0.6,
+    "t1": 23.1,
+    "dur": 22.5
+   },
+   {
+    "t0": 30.45,
+    "t1": 33.5,
+    "dur": 3.05
+   }
+  ],
+  "fragments_under_2s": [],
+  "undesigned_fragments": []
+ },
+ "laid": [
+  {
+   "name": "tag_december",
+   "file": "audio/ost/tracks/e01-v3-tag/render/_work/el/tag_december-underscore.wav",
+   "laid_at_s": 0.6,
+   "window": [
+    0.0,
+    33.708
+   ],
+   "fade_in_s": 0.0,
+   "fade_out_s": 0.05,
+   "gain_db": 0.0,
+   "post": null
+  }
+ ],
+ "source": "audio/ost/tracks/e01-v3-tag/track.py",
+ "heard": "nothing here has been listened to; every number is measured"
+}
