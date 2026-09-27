@@ -2276,3 +2276,80 @@ The 16:50 revision was checked again, item by item, against the critic's finding
 | 8 | `undo` left empty parent folders behind (`out/season/`). | `undo` removes them if empty and is re-runnable (Appendix B, item 6). |
 | 9 | The 5a shim repoint had no command, and the 5a invariant used `rg`, which is a wrapper function in this harness. | A tested `sed` line, run after `apply`, and a `git grep` invariant. |
 | 10 | Phases 4 and 5b had no ready-made hand-fix commands. | Tested `sed` lines for both are in §4, with phase 4's ok-list verbatim. |
+
+---
+
+## Verification (v2) (`orgv2-verify`, 2026-09-27, about 02:09–03:05)
+
+Written by the `orgv2-verify` pass. It was read-only for the project apart from this section, didn't read `.env`, and ran nothing through `.secrets/`. One side effect on the real tree is recorded under issue 5.
+
+**The copy.** A throwaway copy of the tree as of 02:09 (`HEAD` `9b407e1` plus the working tree), made the Appendix D way and deleted afterwards:
+- 1,767 tracked and untracked text files and 130 small ignored text files (the QA logs, `.backups/*.js`, caches) were copied. The 18 audio inputs that `mix_intro.py --dry V1` and the OST loudness test read were copied for real. So were `audio/sfx/` and `audio/intro-sfx/` (788 files), for a real SFX rebuild.
+- The other 5,288 binaries and ignored media became empty placeholders, so moves carry them and check 1 counts them (7,228 files in the §7.2 list).
+- `studio/node_modules`, the seven venvs and the sample libraries were symlinks, used read-only. From 02:35 `node_modules` was a folder of per-package symlinks with its own empty `.cache/` (issue 5).
+- 531 MB, committed to a fresh git repo. Appendix B and B.2 were extracted from this file. Their md5 matches the copy `orgv2-planfix-r3` tested.
+
+**The run.** Phases in the §0.2 order (0, 2, 3, 1 simulated, 5a, 4, 2d, 5b, 6), each applied with `apply`, then hand-fixed with the §4 `sed` lines and ok-lists. §7.5 block 1 steps 1–5 and 9 ran after each one, and then the phase was committed in the copy. Heavy steps went through `ops/heavy.sh`, one at a time:
+- the typecheck;
+- `npx remotion compositions -q` on seven entries, one per area: `src/index.ts` (intro, reels, jumps, lookdev), the `mcoldopen` moment, the intro entry, the reel entry, the Act Four animatic, range p1 and outro B;
+- the OST tests and `build.py --index`;
+- `mix_intro.py --dry V1`;
+- the SFX rebuild.
+
+### Per-phase verdicts
+
+| Phase | Verdict | Evidence (on the copy) |
+|---|---|---|
+| **0** | **PASS, with the corrections in issue 7** | The QA-log exception works: `record.log` is no longer ignored and the 8 logs are added. `audio/reel/**/*.wav` is ignored. 25 scripts were copied into `ops/workflows/`. The pattern half of the secret scan found 0 credential-shaped strings (1,546 lines; the real `.backups/*.js`, read-only). The size guard (real tree, on a copy of the index) printed nothing for the 809 files `git add -A` would add. **`git add -A` would remove 10 files**, all outro stills and QA frames under `out/lookdev/outro/{a,b,c,d}/`, deleted after `9b407e1` (02:04). The value half of the scan wasn't run; it reads `.env`, so the lead runs it. |
+| **2** | **PASS** | 3 moves, 5 files, 0 MANUAL. `frag` exited 0 with no ok-list, `fraggrep.sh 2` went from 1 line to 0, and the whole-path grep printed 0 lines. Files 7,228 → 7,228. Git showed 33 `R` and 5 `M`. The eleven 2.6 folders were checked in the real tree: all exist and are empty. 2.7 is moot (issue 7). |
+| **3** | **PASS, with issue 2** | 14 moves, 139 files (132 at 22:03). The new references are in `captions/tools/build_access.py`, `range/ep1-p3/tools/sound.py`, `show/reel/ep01-full/ep01-full-v2.manifest.json` and four docs; all were rewritten. The 3 FRAGMENT lines are the three hand fixes. The `sed` lines match by content (`ep1-p3/tools/build.sh` is `:12` now). After them and `phase3.ok.tsv`: `frag` exited 0, fraggrep went from 122 lines to 0, and the grep printed 0 lines. Git showed 618 `R` and 129 `M`, and every changed `.py`, `.sh` and `.mjs` compiles. The typecheck was identical to the baseline (11 `Buffer` errors, exit 2). The compositions were identical (7 entries, 255 IDs). The probes resolve: `build_all.py` `PICTURE=out/season/reels`, `render_all.sh` `OUT=${REEL_OUT:-$ROOT/out/season/reels}`, `encode_mux.sh` `PIC`/`OUT` under `out/season/intro`, and `EVENTS`/`EVENTS_JSON` at `out/season/intro/picture/intro-events.json`, which exists. `sync.mjs` changed the generated reel data only in the intro `src`. `episode.mjs --plan` puts the intro chapter at `out/season/intro/intro-ep1-V1-1080p.mp4`. |
+| **1** | **PASS for what was simulated** (it's a hand edit) | **Scope is now 89 code files.** The 8 new since 22:03 are `audio/ep01/act4/sfx-v5/{qa_board,render_v5,spot_v5}.py`, `audio/ost/tracks/e01-act4-v5/s1-s4_render.py`, `studio/src/dev/outro/e/entry.tsx` and `animatic/tools/{lock_v5.py,lock_v5_mixcheck.py,render5.ts}`. 16 files were converted with the §4 resolvers: the 3 DEPTH files, `mixlib.py`, `verify.py:22`, `run_all.sh`, `encode_mux.sh`, the OST and theme `sampler.py`/`export.py`, `dsp.py` and the 4 OST editor tools. All compile. Then the phase 4 dry run showed `DEPTH (0)`. In a `git worktree`, the block 2 Python probe resolved `REPO` to the worktree. The Bash resolver did too, run from the root, from `/` and from `audio/`, but see issue 3. The Node resolver has no code in §4, so it wasn't tested. |
+| **5a** | **PASS** | 5 moves, 119 files, 2 COMPOSED and 12 FRAGMENT, as §4 says. With a 14-row ok-list, `frag` exited 0. After the shim `sed`, the invariant lists only `src/intro/scenes.ts` and the 14 wrappers. fraggrep went from 36 lines to 8: the 7 known ones, plus one new comment, `art-v5/j1/entry.tsx:5` ("no src/dev/makeRoot import"). The typecheck and the compositions were identical. |
+| **4** | **PASS, with issues 2 and 4** | 7 moves, 39 files (35 at 22:03). DEPTH was 0 after the phase 1 simulation. After the three hand fixes and `phase4.ok.tsv`, `frag` exited 0. fraggrep went from 56 lines to 8: the 6 prose lines in §4, plus `audio/samples/fetch_samples.sh:17,20`. The whole-path grep printed 1 line (issue 4). The probes resolve: `OUT_DIR=audio/intro/mix`, `SRC=audio/intro/sfx/src`, `SFXLIB=audio/sfx`, `VO=audio/intro/vocals/vo/…`, `encode_mux.sh` `MIX=$ROOT/audio/intro/mix`, `run_all.sh` `PY=$REPO/audio/.venv-mix/bin/python`, `assemble.py:82` → `intro/history/sketch-mix/music/…`, and both full-episode manifests → `audio/intro/mix/…`. **`mix_intro.py --dry V1` exited 0, and its measurements were byte-identical before and after the move.** **The SFX rebuild** (`audio/.venv/bin/python audio/intro/sfx/build_intro_sfx.py`, real inputs) exited 0 and wrote `"present": true`. Neither `audio/intro-sfx` nor `audio/intro-mix` was recreated. Every stem came out bit-identical: git showed only `spotting.json` and `alt/spotting_script-v2.1-frames.json` changed, and only in their path labels. After that, the ok-list needs only the `ivlib.py` row. |
+| **2d** | **PASS** | 1 move, 3 files (the 7 join lines), 10 FRAGMENT. With them in the ok-list, `frag` exited 0. fraggrep went from 8 lines to 2: `lines_a4.py:505,508`, which are `"files": ["retired/…"]` lists rather than prose, so edit them to `history/`. The three tools compile, `history/3.1/lines.json` is there, and `lines.json` (227 paths) and `lines-v5.json` (541) have 0 missing. |
+| **5b** | **PASS** | 14 moves, 132 files (after 5a). The `events.ts` `sed` clears both COMPOSED lines. The 14 FRAGMENT lines are the 13 records plus `J1Preview.tsx:7`, a comment naming `./entry.tsx`, which is a false positive. With them in the ok-list, `frag` exited 0. fraggrep went from 119 lines to 7. Git showed 7 `D` + 7 `A` pairs, each `A` at its `D`'s manifest destination (checked by script). Only the 8 lookdev wrappers still import `src/dev/`. The typecheck was identical, and so were the compositions with the entry paths mapped. **The events export** (esbuild + node) gave 153 events. Before 5b it was byte-identical to the committed `intro-events.json`. After 5b, only `src` differed, and every change was `studio/src/dev/<m>/` → `studio/src/intro/moments/<m>/`. `master.sh 1080` wasn't run (a full render). |
+| **6** | **PASS** | 26 moves, 26 files, 1 COMPOSED (`report_v4.py:137`) and 33 FRAGMENT, as §4 says. With a 34-row ok-list, `frag` exited 0. Git showed 24 `R` and 26 `M`, and no `D`. The three KEEP files are in place. `lock_v3.py` reads `history/shots-v3.json`, `plan_v3.py` loads `history/shots-locked-v2.json`, and `report_v4.py`'s `load_cut("v3")` still finds `shots-locked-v3.json` and `act4-mix-v3.*`. |
+| **All, at the end** | **PASS, apart from issues 2 and 4** | The whole-path grep over all 70 manifest rows printed 1 line (`fetch_samples.sh:17`). The typecheck and the compositions (255 IDs) were identical to the baseline. OST: 49 tests passed, the same as after the phase 1 simulation. `build.py --index` gave rows identical to the pre-phase-4 build (35 tracks; the committed `ost-index.json` has 24 and is stale, which has nothing to do with the reorg). `mix --dry V1` was identical. The dialogue paths had 0 missing. `sync.mjs` and `episode.mjs --plan` resolve every chapter. |
+| **Undo and rollback** | **PASS** | On a second copy: apply phase 3, commit, `undo`, `git reset --hard` gave files **and folders** identical (7,952 entries). A second `undo` printed "already undone". The post-push sequence (§7.6: undo, `reset --hard`, `reset --soft`, a revert commit) left a tree identical to the checkpoint and a clean status. |
+
+**Not tested here:** the 7 probe stills (md5), the 48-frame reel smoke render, a full `run_all.sh` (the mux and `verify.py` need the real picture masters), `master.sh 1080`, the phase 1 conversion of all 89 files, and the value half of the secret scan. §7.5 runs them on the real tree.
+
+### Issues still to fix (most important first)
+
+1. **Check 6 can't fail as written.** `npx remotion compositions <entry> --log=error` prints no IDs (tested: exit 0, empty output), so the §7.2 step 2 file is empty and its diff always passes. Use `-q`, which prints the IDs (this pass's baseline was 255 IDs over 7 entries):
+   ```bash
+   (cd studio && for e in src/index.ts $(git ls-files '*entry.tsx'); do echo "== $e"; npx remotion compositions "$e" -q 2>&1; done) > "$B/compositions.txt"
+   ```
+   There are 52 tracked entries, so that's 52 bundles. Run it through `ops/heavy.sh`, or probe one entry per area as this pass did.
+2. **The tool rewrites `<old>.<ext>` as if it were `<old>`.** The literal lookahead accepts `.`, so a file named like a moved folder plus an extension is rewritten. Three lines now, all comments or records:
+   - Phase 4: in `studio/src/dev/outro/b/entry.tsx:108` and `outro/d/entry.tsx:12`, the outro's own `audio/mix.py` becomes `audio/intro/history/sketch-mix.py`.
+   - Phase 3: in `show/_sources/plan-v1.md:461`, `out/intro.mp4` becomes `out/season/intro.mp4`.
+   - Fix those lines back by hand after `apply`, or change the tool's lookahead so a `.` counts only before whitespace, a quote or the end. To find such lines before a phase, for each row:
+   ```bash
+   git grep -nP "(?:^|(?<=[\s\"'\`(\[=:,]))$(printf '%s' "$OLD" | sed 's/[.]/\\./g')\.[A-Za-z]"
+   ```
+3. **The §4 Bash resolver can hang for ever.** If its inner `cd` fails, `d` is empty, `dirname ""` gives `.`, and the loop never reaches `/`.
+   - That happens if the line is pasted after a script's own `cd "$(dirname "$0")"`, and the script is started by a relative path from another folder. `run_all.sh:4` is that `cd`, and §4 says to convert line 5. Tested: it hung until `timeout 5` killed it.
+   - Put the `REPO=` line before any `cd`, and make it fail instead of looping, for example `d=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd) || exit 1` in front of the loop, and `[ "$d" = / ] || [ "$d" = . ]` as the stop test.
+   - With the line before the `cd`, it resolved correctly from every cwd tried.
+4. **`audio/samples/fetch_samples.sh:17,20` isn't rewritten, so check 2 fails after phase 4.** The file is tracked, but the tool's `SKIP` covers `audio/samples/`, and its comments name `audio/mix` (`:17`) and `intro-sfx, intro-vox, intro-mix, vocals` (`:20`). The `r3` copy had no `audio/samples/`, so it didn't see them. Edit the two comments by hand in phase 4, or add `':!audio/samples/**'` to the step 2 pathspecs and list the lines as records.
+5. **`--bundle-cache=false` deletes the shared webpack cache.** It isn't just "no cache": Remotion prints "🧹 Cache disabled but found. Deleting..." and removes `studio/node_modules/.cache/webpack/remotion-production-4.0.529/`, whoever made it.
+   - §7.2 and §7.5 use the flag, which is acceptable only because no pass may be running.
+   - `render_all.sh:51` and `episode.mjs:100` also pass it on every reel render, so concurrent passes delete each other's cache.
+   - **Side effect of this verification:** its phase 3 compositions run, at about 02:26–02:31, deleted that real cache three times through the copy's `node_modules` symlink, before the copy got its own `.cache/`. The cache is regenerable and ignored; no source or media changed. The next bundle was cold; another pass rebuilt the cache at 02:49.
+   - A copy for Remotion checks needs its own `node_modules/.cache` (a folder of per-package symlinks plus an empty `.cache/`), not a symlink to the real `node_modules`.
+6. **The heavy commands don't use `ops/heavy.sh`.** SHOWRUNNER-NOTES (09-27) says every heavy command goes through it, but the §7.2 and §7.5 commands don't: the renders and stills, the typecheck, the OST tests, the SFX rebuild, `run_all.sh` and `master.sh`. Prefix them, and keep `--concurrency` at 4 or less.
+7. **The tree has changed since 22:03**, so §0.1, §6, §7.1 and §9 need updating:
+   - **The seven duplicate PNG deletions are no longer uncommitted.** `8c76d3f` (09-26 23:45) committed them, and it's on `origin/main`. `HEAD` no longer has the files, so `git checkout HEAD -- <path>` (§6) can't restore them. Use `git checkout eaad42a -- <path> …`; all seven are in `eaad42a`. §9 item 4's question to the showrunner stands, but it's now about an undo, not a gate on phase 0.
+   - The `audio/reel/**/*.wav` rule was committed in `eaad42a` (22:54).
+   - `ops/` already exists and is tracked (`heavy.sh` and `README.md`, `9b407e1`). Phase 0 adds to its README instead of writing a new one, and §3's tree should list `heavy.sh`.
+   - `git add -A` would now add 809 files and remove 10, all outro stills. The outro pass is presumably re-rendering them; ask before the checkpoint.
+   - Phase 1 is 89 files.
+   - `episode.mjs:58` still writes `out/season/reel/` (singular).
+8. **Unconverted `/home/jgon` constants make copies unsafe to run in.** Until phase 1 has run, 79 or more code files in any copy or worktree still point at the real project. For example, `encode_mux.sh`'s `ROOT` writes the real `out/intro/`, and the OST `sampler.py` `CACHE` writes the real `audio/ost/cache`. Appendix D should say to run nothing from a copy that still holds the constant, or to convert it first, as this pass did for the 16 files it ran.
+9. **Small corrections:**
+   - Appendix A's `# phase5a.tsv (after the shim repoint, step 1)` contradicts §4, where the shim repoint is step 2, after `apply`.
+   - `git check-ignore -v` prints the QA log too, with its `!` rule, even though the log isn't ignored. Use `git check-ignore -q audio/ep01/act4/dialogue/qa/record.log || echo "not ignored"`.
+   - The 5a and 5b ok-lists now have 14 rows each; the new ones are `art-v5/j1/entry.tsx:5` (5a fraggrep) and `J1Preview.tsx:7` (5b).
+
+**Throwaway files:** the copies and the `node_modules` shim were deleted after this section was written. The ok-lists and logs used are in `scratchpad/orgv2-verify/v2/{man,res}/`, which doesn't persist. The older `orgv2-verify/{manifests,tools,x}/`, left by an earlier run, weren't touched.
