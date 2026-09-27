@@ -161,7 +161,11 @@ const POST_KEY: Record<string, keyof typeof POSTS> = {
 /** a4p5 finish: the facts check's text fixes the lock (generated from the stick timeline, owned upstream) doesn't carry
  *  yet (facts.md, Act Four v5 lock checks L2: Gerg's post is lowercase as posted). The picture draws these words; the
  *  lock, the stick timeline and the script change only through their owners (build_timeline.py, then lock_v5.py) */
-const POST_FACTS5: Record<string, string> = {'a5-27-P1': '…i quit.'};
+export const POST_FACTS5: Record<string, string> = {'a5-27-P1': '…i quit.'};
+/** the same for quoted words inside lines (facts L1: the letter spells "judgement"; the take is unchanged, it sounds the
+ *  same). The review band and the transcript use factsText5 */
+const TEXT_FACTS5: Array<[string, string]> = [['competence, judgment and care', 'competence, judgement and care']];
+export const factsText5 = (id: string, text: string) => TEXT_FACTS5.reduce((t, [a, b]) => t.split(a).join(b), POST_FACTS5[id] ?? text);
 const postSpec = (sh: ShotV5, id: string): PostSpec => {
   const base = POSTS[POST_KEY[id]];
   const l = lineOf5(sh, id);
@@ -345,7 +349,7 @@ S5('S1.03', 'C', 'v4 plan4.ts THE PLAN (one sheet, the tilt) + BP-NELEH-POINTER 
   });
   return {full: true};
 });
-S5('S1.04', 'C', 'v4 plan4.ts the 2x zeros detail + BP-NELEH-POINTER bpTipIn: the pointer\'s tip on the key ring, then on the CEO box ("And the CEO?"); bpVoice: MADA\'s spinner icon, turning while he speaks', (fb, k, sh, f) => {
+S5('S1.04', 'C', 'v4 plan4.ts the 2x zeros detail + BP-NELEH-POINTER bpTipIn: the pointer\'s tip on the key ring, then on the CEO box ("And the CEO?"); bpVoice: MADA\'s spinner icon, turning while he speaks · a4p5 finish: the zero stamps and (HE TOLD THE SENATE) lifted 10 px clear of the border rule (plan4 zerosLift)', (fb, k, sh, f) => {
   drawPlan4(fb, asV4(sh, 'S1.04'), k, {zerosLift: 10}); // a4p5 finish: (HE TOLD THE SENATE) clear of the border rule
   const tipCeo = mk(sh, 'tipCeo', 124), jangle = mk(sh, 'jangle', 7);
   inkOver(fb, (b) => {
@@ -360,7 +364,7 @@ S5('S1.05', 'C', 'v4 plan4.ts the path, the curl, the tear, re-clocked on the v5
   return {full: true};
 });
 R5('S1.06', 'S1.06');
-S5('S1.07', 'C', 'v4 S1.07 (callgrid G5 on ONE clock, the NELEH card, the dialog on the beat) + STATE-SMALL 5: ALYI\'s tile takes the speaking ring and a silent mouth (callgrid TileState.mouth) + STYLE-1G-NEON: his own tile\'s neon on the 8-frame guardrail', (fb, k, sh, f) => {
+S5('S1.07', 'C', 'v4 S1.07 (callgrid G5 on ONE clock, the NELEH card, the dialog on the beat) + STATE-SMALL 5: ALYI\'s tile takes the speaking ring and a silent mouth (callgrid TileState.mouth) + STYLE-1G-NEON: his own tile\'s neon on the 8-frame guardrail · a4p5 finish: the dialog 16 px right (DLG5): its left border no longer runs off the frame', (fb, k, sh, f) => {
   const b = ui();
   const card = mk(sh, 'card', 9), cardEnd = mk(sh, 'cardEnd', 84), dlg = mk(sh, 'dialog', 110), sp0 = mk(sh, 'speak', 84), sp1 = mk(sh, 'speakEnd', 132);
   callChrome(b, {title: 'board sync', clock: null, controls: false});
@@ -378,7 +382,7 @@ S5('S1.07', 'C', 'v4 S1.07 (callgrid G5 on ONE clock, the NELEH card, the dialog
   if (k >= card && k < Math.min(cardEnd, dlg)) blipCard(fb, k - card, 'NELEH', 'NELEH', 'READ THE CHARTER. LITERALLY.', 'FOOTNOTES: ∞', {f}, 'R');
 });
 R5('S1.08', 'S1.08');
-S5('S1.09', 'C', 'v4 S1.09 as it was (G5 + dialog; the ALYI / CO-FOUNDER arrow stepping onto Cancel, Cancel lit under it; the click; the masked GLYPH dissolve (its layers, drawn by the host) + G5 -> G4; the notice) with his tile\'s neon on the 1.G guardrail (STYLE-1G-NEON)', (fb, k, sh, f) => {
+S5('S1.09', 'C', 'v4 S1.09 as it was (G5 + dialog; the ALYI / CO-FOUNDER arrow stepping onto Cancel, Cancel lit under it; the click; the masked GLYPH dissolve (its layers, drawn by the host) + G5 -> G4; the notice) with his tile\'s neon on the 1.G guardrail (STYLE-1G-NEON) · a4p5 finish: the dialog 16 px right (DLG5); the emptied plate falls behind the four, under the notice; the notice\'s icon a filled door with an arrow', (fb, k, sh, f) => {
   const b = ui();
   const c = mk(sh, 'click', 57), s1 = mk(sh, 'step1', 19), s2 = mk(sh, 'step2', 38);
   const layers: GlyphLayer[] = [];
@@ -461,14 +465,14 @@ R5('S2.05', 'S2.05');
 
 // ================================================================== S3 · FRIDAY, THE BOARD'S SIDE (Neleh's desk)
 const otsScreen = () => new Buf(NDESK.screen.w, NDESK.screen.h, PAL.N1);
-S5('S3.00a', 'N', 'ROOM-NELEH-DESK neleh-desk drawNelehDeskOTS (day, the slow whole-px push, her pen on step 1) + CAST-NELEH-OTS-R (she leans in on "Is his feed frozen?") + UI-CALL-V5 call-boardside drawBoardCall at 1:1 on her laptop (the empty fifth tile, the clock 11:59 -> 12:00, his tile connecting, perfectly still, the neon chasing behind him: STYLE-1G-NEON); ALYI lip-synced in his tile, NELEH in hers', (fb, k, sh, f) => {
+S5('S3.00a', 'N', 'ROOM-NELEH-DESK neleh-desk drawNelehDeskOTS (day, the slow whole-px push, her pen on step 1) + CAST-NELEH-OTS-R (she leans in on "Is his feed frozen?") + UI-CALL-V5 call-boardside drawBoardCall at 1:1 on her laptop (the empty fifth tile, the clock 11:59 -> 12:00, his tile connecting, perfectly still, the neon chasing behind him: STYLE-1G-NEON); ALYI lip-synced in his tile, NELEH in hers · a4p5 finish: ALYI lit in his open doorway (call-boardside alyiLit)', (fb, k, sh, f) => {
   const con = mk(sh, 'connect', 33), lean = mk(sh, 'lean', 328);
   const s = otsScreen();
   drawBoardCall(s, {f, clock: clockAt(sh, k, '11:59'), fifth: k < con ? {kind: 'waiting', k} : {kind: 'mas', k: k - con}, speaking: boardSpeaker(sh, k), mouths: boardMouths(sh, k), softMas: OPT5.soft1G, alyiLit: OPT5.alyiLit});
   const push = Math.min(NDESK.pushMax, Math.floor((k * (NDESK.pushMax + 1)) / Math.max(1, len5(sh))));
   drawNelehDeskOTS(fb, f, {time: 'day', push, pen: 'step1', neleh: {turn: k >= lean ? 1 : 0}, screen: s});
 });
-S5('S3.01', 'C', 'UI-CALL-V5 drawBoardCall in ROOM-NELEH-DESK drawNelehBezel (day): his tile simply goes, the four close ranks, the notice MAS MANALT was removed from the meeting., the MAS MANALT · audio chip lit while "super." plays, then greyed (v4\'s live caption is gone)', (fb, k, sh, f) => {
+S5('S3.01', 'C', 'UI-CALL-V5 drawBoardCall in ROOM-NELEH-DESK drawNelehBezel (day): his tile simply goes, the four close ranks, the notice MAS MANALT was removed from the meeting., the MAS MANALT · audio chip lit while "super." plays, then greyed (v4\'s live caption is gone) · a4p5 finish: ALYI lit in his open doorway (alyiLit); the notice\'s icon a filled door with an arrow', (fb, k, sh, f) => {
   const rm = mk(sh, 'removed', 1), sOn = mk(sh, 'superOn', 37), sEnd = mk(sh, 'superEnd', 56), grey = mk(sh, 'grey', 68);
   const n = textOf(sh, 'toast');
   const s = sui();
@@ -513,7 +517,7 @@ S5('S3.02', 'C', '[HIGH] v4 S3.02 (rooms-a drawTableInsert: the blueprint\'s ste
   const x = k < r0 ? 70 + textWidth('1. NOON · VIDEO CALL ') + 10 : 64;
   drawNelehPenHand(fb, x, y + 6, {tool: 'pen', pose: k >= r0 && k < r1 ? 'lift' : 'rest'});
 });
-S5('S3.03', 'C', 'UI-BLOG-DRAFT blog-draft drawBlogDraft in drawNelehBezel (day): the post in its editor, both sentences, Post; her pointer onto Post, the click on the tick, PUBLISHED; the call small in the corner', (fb, k, sh, f) => {
+S5('S3.03', 'C', 'UI-BLOG-DRAFT blog-draft drawBlogDraft in drawNelehBezel (day): the post in its editor, both sentences, Post; her pointer onto Post, the click on the tick, PUBLISHED; the call small in the corner · a4p5 finish: the words she has read are underlined as she reads them (blog-draft read)', (fb, k, sh, f) => {
   const ptr = mk(sh, 'point', 334), post = mk(sh, 'post', 358);
   const s = sui();
   // a4p5 finish (audit §2.13): the words she has read aloud are underlined as she reads them (her take's word times)
@@ -522,7 +526,7 @@ S5('S3.03', 'C', 'UI-BLOG-DRAFT blog-draft drawBlogDraft in drawNelehBezel (day)
   drawBlogDraft(s, {f, k, pointer: k < ptr ? 'rest' : 'post', click: k >= post ? k - post : undefined, read});
   drawNelehBezel(fb, s, {time: 'day'});
 });
-S5('S3.04', 'N', 'ROOM-NELEH-DESK drawNelehDeskOTS (day, held, pen gone) + UI-CALL-V5: Rima\'s join (the ring, the hard spotlight searching, landing on her slot), STATE-SMALL 8 her jacket smoothed (rima-v5), the speaking ring passing between RIMA, ALYI and NELEH (all lip-synced in their tiles); platePx RIMA TAMURI · HIS CTO', (fb, k, sh, f) => {
+S5('S3.04', 'N', 'ROOM-NELEH-DESK drawNelehDeskOTS (day, held, pen gone) + UI-CALL-V5: Rima\'s join (the ring, the hard spotlight searching, landing on her slot), STATE-SMALL 8 her jacket smoothed (rima-v5), the speaking ring passing between RIMA, ALYI and NELEH (all lip-synced in their tiles); platePx RIMA TAMURI · HIS CTO · a4p5 finish: ALYI lit in his open doorway (alyiLit)', (fb, k, sh, f) => {
   const j = mk(sh, 'join', 4), sm = mk(sh, 'smooth', 134);
   const s = otsScreen();
   const hand = k >= sm && k < sm + 16 ? ((k - sm) >> 3) % 2 ? 'smooth1' : 'smooth0' : 'none';
@@ -555,7 +559,7 @@ S5('S3.07', 'C', 'v3 27.08\'s [MCU·door] (the all-hands soft 1, the jamb and le
   dimRectL(fb, 318, 0, 162, RH, 2);
   doorFrame(fb, 282, 140, {leaf: 'right'});
 });
-S5('S3.05', 'C', 'UI-CALL-V5 drawBoardCall in drawNelehBezel (EVENING: her lamp on the bezel) + UI-POST post-card \'notify\' (Gerg\'s "…I quit.", his green glow, the lock\'s words) + keycapRain; ALYI and NELEH lip-synced in their tiles', (fb, k, sh, f) => {
+S5('S3.05', 'C', 'UI-CALL-V5 drawBoardCall in drawNelehBezel (EVENING: her lamp on the bezel) + UI-POST post-card \'notify\' (Gerg\'s "…I quit.", his green glow, the lock\'s words) + keycapRain; ALYI and NELEH lip-synced in their tiles · a4p5 finish: ALYI lit (alyiLit); Gerg\'s post as a popup with his profile line (president & chairman, nopeai) in the facts check\'s casing (…i quit.) over THE QUIET VOTE\'s tile; his keycaps pop out of the card and fall out of frame (keycapPop5), not v4\'s resting rain', (fb, k, sh, f) => {
   const post = mk(sh, 'post', 7), keys = mk(sh, 'keys', 16);
   const s = sui();
   drawBoardCall(s, {f, clock: '6:12', removed: 999, fifth: {kind: 'rima', k: 99, mouth: 'rest'}, speaking: boardSpeaker(sh, k), mouths: boardMouths(sh, k), alyiLit: OPT5.alyiLit});
@@ -668,7 +672,7 @@ const meterTag = (b: Buf, x: number, y: number, name: string, amt: string) => {
   rect(x + Math.round(w / 2), y - 12, 1, 12, b.ink(PAL.G3));
 };
 const marioMouth = (v: Viseme): 0 | 1 | 2 => (v === 'rest' || v === 'M' || v === 'smile' ? 0 : v === 'A' || v === 'O' ? 2 : 1);
-S5('S4.08', 'C', 'v4 S4.08\'s [SPLIT] (two 238 x 203 panes: the boardroom with the speakerphone lit | the lighthouse: the throne, the phones, the meters, the ELGOOG tag, NOZAMA\'s caller ID) + room-scale mouths for NELEH, MARIO and ADELINA; Mario\'s finger rise on "hypothetically"; Adelina crossing in, taking phone 1 ("no."), then phone 2 and handing it over; the v5 plates MARIO · RUNS THE RIVAL LAB · (REPORTED) and ADELINA · MARIO\'S CO-FOUNDER', (fb, k, sh) => {
+S5('S4.08', 'C', 'v4 S4.08\'s [SPLIT] (two 238 x 203 panes: the boardroom with the speakerphone lit | the lighthouse: the throne, the phones, the meters, the ELGOOG tag, NOZAMA\'s caller ID) + room-scale mouths for NELEH, MARIO and ADELINA; Mario\'s finger rise on "hypothetically"; Adelina crossing in, taking phone 1 ("no."), then phone 2 and handing it over; the v5 plates MARIO · RUNS THE RIVAL LAB · (REPORTED) and ADELINA · MARIO\'S CO-FOUNDER · a4p5 finish: the rent meters dark until Nozama rings, then lit; after the hang-up her pane steps down two palette steps and the pod says CALL ENDED', (fb, k, sh) => {
   const click = mk(sh, 'click', 500), ring = mk(sh, 'ring', 4), ring2 = mk(sh, 'ring2', 514), grab = mk(sh, 'grab', 529);
   const raise = mk(sh, 'raise', 445), hand = mk(sh, 'handover', 586), ad0 = mk(sh, 'adelina', 442);
   const ad = lineOf5(sh, 'a5-27-32');
@@ -734,7 +738,7 @@ S5('S4.10', 'C', 'v4 S4.10 (the boardroom wide, now night: the spot swings in 3 
   const t = textOf(sh, 'plate');
   if (t) { const [name, lines] = plateOf(t.text, 1); platePx(fb, 22, 150, name, lines.join(' · '), k - t.s, PAL.U5, pt, pw); }
 });
-S5('S4.10b', 'N', 'PLATE-BOARD-HEAD boardroom-head drawBoardHead2S: NELEH standing at the table\'s side (neleh-medium, lip-sync), TTEMME in the CEO chair (CAST-TTEMME-MEDIUM, lip-sync), MADA soft beyond with his spinner, UI-CHAT-ROOM at his elbow; PROP-FOLDER: the sealed folder slides across in held steps, he breaks the seal and reads it turned away, closes it; nothing inside is ever shown', (fb, k, sh, f) => {
+S5('S4.10b', 'N', 'PLATE-BOARD-HEAD boardroom-head drawBoardHead2S: NELEH standing at the table\'s side (neleh-medium, lip-sync), TTEMME in the CEO chair (CAST-TTEMME-MEDIUM, lip-sync), MADA soft beyond with his spinner, UI-CHAT-ROOM at his elbow; PROP-FOLDER: the sealed folder slides across in held steps, he breaks the seal and reads it turned away, closes it; nothing inside is ever shown · a4p5 finish: re-staged (boardroom-head stage \'nelehLeft\'): NELEH standing left, MADA right, as S4.10 and S4.12', (fb, k, sh, f) => {
   const slide = mk(sh, 'slide', 276), up = mk(sh, 'up', 296), seal = mk(sh, 'seal', 304), open = mk(sh, 'open', 310), close = mk(sh, 'close', 325);
   let folder: FolderState | null = null;
   if (k >= slide && k < up) folder = {kind: 'table', slide: Math.min(3, Math.floor(((k - slide) * 4) / Math.max(1, up - slide))) / 3};
@@ -774,7 +778,7 @@ S5('S4.12', 'C', 'v3 27.28 as v4 re-clocked it (twoshots drawBoard2S: the wall s
     for (let y = BPLATE.door.y0; y < BPLATE.tableY; y++) for (let x = BPLATE.door.x0; x < BPLATE.door.x1; x++) { const c = t.get(x, y); if (c !== 0x1000000) fb.set(x, y, c); }
   }
 });
-S5('S4.13', 'C', 'v4 S4.13\'s [MCU·door] (the boardroom plate with the slate door, soft 2; the new doorway) with CAST-TASYA-PHONE tasya-phone tasyaPhonePortrait: pleased, the key ring jangling, then reading his statement off his phone (lip-sync); the plate TASYA · THE LANDLORD · MACROSOFT · NOPEAI RUNS ON ITS SERVERS; the sign moves to S4.13e', (fb, k, sh) => {
+S5('S4.13', 'C', 'v4 S4.13\'s [MCU·door] (the boardroom plate with the slate door, soft 2; the new doorway) with CAST-TASYA-PHONE tasya-phone tasyaPhonePortrait: pleased, the key ring jangling, then reading his statement off his phone (lip-sync); the plate TASYA · THE LANDLORD · MACROSOFT · NOPEAI RUNS ON ITS SERVERS; the sign moves to S4.13e · a4p5 finish: the plate\'s third line in full ink', (fb, k, sh) => {
   const rd = mk(sh, 'read', 122), jg = mk(sh, 'jangle', 9);
   held(fb, 's5:s413', (b) => { boardBg({slate: true, door: 5, laptop: false, rolodex: 'still'})(b); soft(b, 2); vignette(b, 318, 2); });
   const talking = lipOn5(sh, k, 'TASYA');
@@ -913,9 +917,9 @@ const s509 = (fb: Buf, k: number, sh: ShotV5, f: number, opened: boolean) => {
   for (let y = T.y + T.h + 8; y < RH; y++) for (let x = T.x - 30; x < T.x + T.w + 30; x++) if (((x + y) & 3) === 0) fb.set(x, y, stepColor(fb.get(x, y), 1));
   blitImg(fb, shoulder(mas({head: '34'}), 70, PAL.L3, 1, true), -38, 30);
 };
-S5('S5.09', 'C', 'v4 S5.09\'s [OTS] (his monitor across the dark room, soft 3; shoulder(masPortrait) in front with the monitor\'s green rim) with the letter already open on it (UI-LETTER-V5\'s page at 1:1) and STATE-SMALL 6: Gerg\'s corner tile rings, Mas clicks, it opens in 3 held steps (drawGergMediumPOV open), then Gerg full, typing, lip-synced', (fb, k, sh, f) => { s509(fb, k, sh, f, false); });
+S5('S5.09', 'C', 'v4 S5.09\'s [OTS] (his monitor across the dark room, soft 3; shoulder(masPortrait) in front with the monitor\'s green rim) with the letter already open on it (UI-LETTER-V5\'s page at 1:1) and STATE-SMALL 6: Gerg\'s corner tile rings, Mas clicks, it opens in 3 held steps (drawGergMediumPOV open), then Gerg full, typing, lip-synced · a4p5 finish: Gerg\'s typing calm (gerg-medium calm)', (fb, k, sh, f) => { s509(fb, k, sh, f, false); });
 let LETTER_L: ReturnType<typeof letterLayout> | null = null;
-S5('S5.06', 'C', 'UI-LETTER-V5 staff-letter drawStaffLetter: the page with its bezel and the window; the three quotes land as Gerg reads them (the lock\'s texts), SIGNED 505 -> 650 -> 700 -> 745 / 770 rolling on the odometer with its clunk, a slow whole-px scroll (1 px / 2 f) that follows the quotes and stops on ALYI (REPORTED), lit; Gerg\'s small tile lip-synced; the window one step greyer from 700', (fb, k, sh, f) => {
+S5('S5.06', 'C', 'UI-LETTER-V5 staff-letter drawStaffLetter: the page with its bezel and the window; the three quotes land as Gerg reads them (the lock\'s texts), SIGNED 505 -> 650 -> 700 -> 745 / 770 rolling on the odometer with its clunk, a slow whole-px scroll (1 px / 2 f) that follows the quotes and stops on ALYI (REPORTED), lit; Gerg\'s small tile lip-synced; the window one step greyer from 700 · a4p5 finish: the last scroll at 6 px / 2 f from the scroll mark, so ALYI (REPORTED) is up before the alyi mark; his thumbnail only from the mark, no vote check; Gerg\'s typing calm (no head bob); judgement as the letter spells it', (fb, k, sh, f) => {
   const q: [number, number, number] = [mk(sh, 'q1', 40), mk(sh, 'q2', 207), mk(sh, 'q3', 344)];
   const sc = mk(sh, 'scroll', 457), alyi = mk(sh, 'alyi', 493), clunk = mk(sh, 'clunk', 450), c700 = mk(sh, 'c700', 310);
   const counts = sh.texts.filter((t) => t.kind === 'label' && /^SIGNED \d+/.test(t.text)).map((t) => ({s: t.s, v: parseInt(t.text.slice(7), 10)})).sort((a, b) => a.s - b.s);
@@ -946,7 +950,7 @@ S5('S5.07b', 'N', 'v3 29.15\'s [MCU·PF] (the QUIET BEAT: the dark room fallen a
   drawBust(fb, mas({look: 0, mouth: mouth5(sh, k, 'MAS'), lid: blink(k, 8)}), {third: 'L'});
 });
 R5('S5.08', 'S5.08');
-S5('S5.09-back', 'C', 'the S5.09 [OTS] again (the same setup, Gerg\'s tile open from the cut): Gerg typing, sunny, lip-synced; his keys stop and he looks up after "case" (the glance)', (fb, k, sh, f) => { s509(fb, k, sh, f, true); });
+S5('S5.09-back', 'C', 'the S5.09 [OTS] again (the same setup, Gerg\'s tile open from the cut): Gerg typing, sunny, lip-synced; his keys stop and he looks up after "case" (the glance) · a4p5 finish: Gerg\'s typing calm', (fb, k, sh, f) => { s509(fb, k, sh, f, true); });
 S5('S5.09b', 'C', 'v4 S5.09b\'s swaps-act4 drawGergTileWide (his tile fills the frame): the glance into his camera, at Mas, held, with his line lip-synced (STATE-SMALL 9); then his eyes drop and he types', (fb, k, sh) => {
   drawGergTileWide(fb, {eyes: k < mk(sh, 'type', 140) ? 'lens' : 'screen', f: k, mouth: mouth5(sh, k, 'GERG')});
 });
@@ -1007,7 +1011,7 @@ const lanyardOnDesk = (b: Buf, x: number, y: number) => {
  *  (doorwayHeart), so "You sent three." has three things to count; twoshots' 7 px hearts read as specks at 1x */
 const HEART13 = ['..kkk...kkk..', '.kRRRk.kRRRk.', 'kRWRRRkRRRRRk', 'kRWRRRRRRRRRk', 'kRRRRRRRRRRRk', '.kRRRRRRRRRk.', '..kRRRRRRRk..', '...kRRRRRk...', '....kRRRk....', '.....kRk.....', '......k......'];
 const drawHeart13 = (b: Buf, x: number, y: number) => HEART13.forEach((r, j) => { for (let i = 0; i < r.length; i++) { const c = ({k: PAL.N0, R: PAL.R3, W: PAL.P2} as Record<string, number>)[r[i]]; if (c !== undefined) b.set(x + i, y + j, c); } });
-S5('S7.01', 'C', '[P2] BOX (the act\'s one deliberate box): CAST-ALYI-PHONE alyi-v5 drawAlyiDoorPhone (twoshots drawDoorwayP2: Alyi reading his post on his phone, then looking up at the three hearts; both men lip-synced; the IOU) + UI-POST \'popup\' (his regret, the lock\'s words) + the GUEST lanyard and PROP-MACROSOFT-BADGE \'p2\' lying on Mas\'s desk', (fb, k, sh) => {
+S5('S7.01', 'C', '[P2] BOX (the act\'s one deliberate box): CAST-ALYI-PHONE alyi-v5 drawAlyiDoorPhone (twoshots drawDoorwayP2: Alyi reading his post on his phone, then looking up at the three hearts; both men lip-synced; the IOU) + UI-POST \'popup\' (his regret, the lock\'s words) + the GUEST lanyard and PROP-MACROSOFT-BADGE \'p2\' lying on Mas\'s desk · a4p5 finish: the three hearts at icon size (13 x 11) on twoshots\' path; the GUEST card as wide as its word', (fb, k, sh) => {
   const h1 = mk(sh, 'heart1', 165), h2 = mk(sh, 'heart2', 177), h3 = mk(sh, 'heart3', 189), up = mk(sh, 'up', 193), iou = mk(sh, 'iou', 408), post = mk(sh, 'post', 24), postEnd = mk(sh, 'postEnd', 163);
   const open = Math.min(1, (k + 1) / 3);
   drawAlyiDoorPhone(fb, k, {phone: k < up, alyi: {mouth: mouth5(sh, k, 'ALYI'), up: k >= up}, mas: {mouth: mouth5(sh, k, 'MAS'), lid: blink(k, 7)}, hearts: [],
@@ -1039,7 +1043,22 @@ S5('S7.02b', 'C', 'v4 S7.02b\'s [MCU] (TASYA right third, lip-synced, over the b
   const ps = {mouth: mouth5(sh, k, 'TASYA'), lid: blink(k, 9), brow: 'warm' as const, arms: 'clasp' as const, jangle: 0 as const};
   drawBust(fb, L.floor >= 1 ? tasyaSpeakPortrait(ps) : tasyaRoomPortrait(ps), o);
 });
-R5('S7.03', 'S7.03');
+S5('S7.03', 'C', 'v3 30.06 as v4 kept it ([MCU·PF] MAS left third, eyes down at the slate floor, the all-slate bullpen soft) + the floor answering: as its "Hello." plays, one slate ripple runs out across the floor from under him in held 3-frame steps (a4p5 finish: the newcomer read heard a greeting with no source)', (fb, k, sh) => {
+  const out = v4(fb, 'S7.03', k, sh);
+  const l = lineOf5(sh, 'a5-30-07');
+  const t = l ? k - l.s : -1;
+  if (t >= 0 && t < 24) {
+    const step = Math.floor(t / 3), rx = 60 + step * 34, ry = Math.round(rx * 0.16), cx = 160, cy = 206;
+    const done = new Uint8Array(480 * RH);
+    for (let a = 0; a < 360; a += 0.4) for (const d of [0, 1]) { // a 2 px band, each pixel stepped once
+      const x = Math.round(cx + Math.cos((a * Math.PI) / 180) * (rx + d * 2)), y = Math.round(cy + Math.sin((a * Math.PI) / 180) * (ry + d));
+      if (y < 150 || y >= RH || x < 0 || x >= 480 || (x >= 84 && x < 238) || done[y * 480 + x]) continue; // behind his bust: hidden
+      done[y * 480 + x] = 1;
+      fb.set(x, y, stepColor(fb.get(x, y), step < 5 ? 2 : 1));
+    }
+  }
+  return out;
+});
 R5('S7.05', 'S7.05');
 const FIRE_PLATES = {A: null, B: 'ALYI', C: null, D: 'NELEH', E: 'THE QUIET VOTE'} as const;
 S5('S7.06', 'C', 'v4 S7.06 as it was (the boardroom wide with the fires, ONE held setup with S7.06-cont merged: the door bangs, TERB in, the helmet -> the FULL FREEZE with the TERB card, Mas walking through in colour and pocketing the pin -> unfreeze, the look-around) + TERB\'s room-scale mouth on "Which room is on fire?" and "…Ah."', (fb, k, sh, f) => {
@@ -1065,7 +1084,7 @@ S5('S7.06', 'C', 'v4 S7.06 as it was (the boardroom wide with the fires, ONE hel
   held(fb, `s5:s706-after-${tx}-${around}-${m}`, (b) => boardRoom(b, 0, {fires: FIRES_SC30, door: 'open', rolodex: 'still', plates: {...FIRE_PLATES}},
     {mada: true, terb: {x: tx + (around === 1 ? 2 : 0), pose: {legs: 'stand', helmet: true, arm: 'carry', pin: false, mouth: m}}, mas: {x: tx - 38, pose: {legs: 'stand', arm: 'pocket', light: 'room'}}}));
 }, true);
-S5('S7.07', 'C', 'CAST-TERB-SHEET calmoff-terms drawCalmOffTerms2S (the calm-off: MAS left, MADA right, TERB in depth between them reading the single sheet, room-scale mouth; between sentences he sprays the chair fire, the sheet under his arm); Mada\'s spinner turning', (fb, k, sh, f) => {
+S5('S7.07', 'C', 'CAST-TERB-SHEET calmoff-terms drawCalmOffTerms2S (the calm-off: MAS left, MADA right, TERB in depth between them reading the single sheet, room-scale mouth; between sentences he sprays the chair fire, the sheet under his arm); Mada\'s spinner turning · a4p5 finish: the chair fire goes out on sprayEnd (smoke, then the scorched seat)', (fb, k, sh, f) => {
   const sp = mk(sh, 'spray', 120), spE = mk(sh, 'sprayEnd', 130);
   const spraying = k >= sp && k < spE;
   // a4p5 finish (audit §2.6): the spray puts the chair fire out on sprayEnd (the plate's own out state: the smoke wisp,
@@ -1079,7 +1098,7 @@ S5('S7.07b', 'N', 'CAST-OTHER-YRRAL calmoff-terms drawOtherYrralM: the seated si
   const nod = mk(sh, 'nod', 12);
   drawOtherYrralM(fb, f, {nod: k >= nod && k < nod + 6 ? 1 : 0});
 });
-S5('S7.07-cont', 'C', 'the S7.07 setup again (drawCalmOffTerms2S): Terb reading on, then looking up to Mada ("He stays."); MAS lip-synced ("of what?"); MADA lip-synced on "Good question." (his face is in the 2S, as v4 drew it), his spinner turning', (fb, k, sh, f) => {
+S5('S7.07-cont', 'C', 'the S7.07 setup again (drawCalmOffTerms2S): Terb reading on, then looking up to Mada ("He stays."); MAS lip-synced ("of what?"); MADA lip-synced on "Good question." (his face is in the 2S, as v4 drew it), his spinner turning · a4p5 finish: the chair fire out (its smoke running on from S7.07)', (fb, k, sh, f) => {
   const lk = mk(sh, 'look', 60);
   drawCalmOffTerms2S(fb, f, {terb: {pose: {mouth: roomMouth5(sh, k, 'TERB'), read: k < lk, blink: blink(k, 11) > 0}}, mas: {mouth: mouth5(sh, k, 'MAS'), lid: blink(k, 7)}, mada: {mouth: mouth5(sh, k, 'MADA')}, spin: f,
     plate: {fires: FIRES_CALMOFF(CHAIR_FIRE_OUT)}});

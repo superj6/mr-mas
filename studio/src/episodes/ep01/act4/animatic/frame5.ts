@@ -25,7 +25,7 @@ import type {GlyphLayer} from '../../../../shared/pixel/glyph';
 import {BLUEPRINT_PRINT} from '../../../../shared/pixel/kits/blueprint';
 import {SHOTS, SUBS, SEQS, RAILS, SOUND_MARKS, MIX, ACT_FRAMES, EP_IN_FRAMES} from './data-v5';
 import type {ShotV5} from './data-v5';
-import {drawShot5, DRAW5, OPT5} from './shots5';
+import {drawShot5, DRAW5, OPT5, factsText5} from './shots5';
 import {railBand, pt, pw, pwrap, RH} from './lay';
 import {whipSmear, shiftRoom} from './framing';
 import {otext} from './frame';
@@ -233,7 +233,7 @@ export const anim5 = (f: number, target?: Buf, o: {n?: Native5; marks?: boolean}
     const label = `${who}${os}: `;
     const col = vo ? PAL.C6 : post ? INK.grey : INK.text;
     const lw = pw(label) * 4 + 4;
-    const lines = owrap(x.text, ANIM_W - 60 - lw, 4);
+    const lines = owrap(factsText5(x.id, x.text), ANIM_W - 60 - lw, 4); // a4p5 finish: the facts check's words, as the picture draws them
     otext(out, label, 28, sy, 4, vo ? PAL.C5 : INK.gold, {italic: vo, shadow: 0x000000});
     lines.slice(0, 2).forEach((l, j) => otext(out, l, 28 + lw, sy + j * 40, 4, col, {italic: vo, shadow: 0x000000}));
     sy += Math.min(2, lines.length) * 40 + 12;

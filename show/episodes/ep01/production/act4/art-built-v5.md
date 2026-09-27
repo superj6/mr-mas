@@ -221,6 +221,30 @@ The rest of round 4's edits are to v5's own new files (committed in 8c76d3f): `c
 2. **S7.13:** draw the table with v4's `drawTableInsert(fb, {f, focus: 'prop'})` (rooms/boardroom.ts) and stand the hourglass on `TABLE_INSERT.prop`: `drawHourglassXL(fb, px - HGX_HIGH.foot[0], py + 3 - HGX_HIGH.foot[1], {view: 'high', …})` (see `highTable` in `demos.ts`). The draft's flat `woodGrain` field is the backing that read as a wall; the new drawing helps even on it, but the plate sells the angle.
 3. **S1.03:** pass `callout: {box: [x, y, w, h], rail}` on the MAS / GERG point pose, with `box` the rect `bpBracket` lights and `rail` a row clear of every label (the demo: `box [176, FOOT + 3, 96, 24]`, `rail FOOT + 41`, the rail shifted by the tilt like the rest). Without it the straight leader is drawn.
 
+## 5b. The finishing pass (a4p5 finish): art changes
+
+**Why.** The v5 picture audit ([audit-v5-pixel.md](audit-v5-pixel.md)), the newcomer and insider reads of the picture film and the facts check found things the art modules had to change. The layouts that use them are in [timing-v5 §9](timing-v5.md#9-the-finishing-pass-a4p5-finish-2026-09-27-about-0335-0500-what-changed-in-the-layouts). **Every change to a file v4 also imports is opt-in, with v4's drawing the default**; `v4check.mjs` pinned to commit `76ea5ba` prints 812 / 812 IDENTICAL for the ten shared files touched here. The asset sheet (`out/ep01/act4/assets/v5/`) was **not** re-rendered: the v5-only modules' defaults changed in three places (`post-card` text and stamp, `staff-letter` spelling, `lobby-low` Mas), so the sheet's `UI-POST`, `UI-LETTER-V5` and `ROOM-LOBBY-LOW` stills are one step stale until the next `sheet.cjs all`.
+
+| File | Change | Default | Used by |
+|---|---|---|---|
+| `shared/pixel/kits/callgrid.ts` | `noticeIcon(b, x, y, 'leave' \| 'rewind')`: a filled door with an arrow out of it, or a ◀◀ transport glyph; `withToastIcon('v5', fn)` makes `callToast` draw it (rewind for "rewinding…") | `'outline'` = v4's 3 × 6 door outline | every v5 frame (`drawShot5` wraps each layout, reused v4 ones included) |
+| `shared/pixel/kits/call-boardside.ts` | `alyiLit`: ALYI's tile at every size but the mini is his open doorway with the man lit in it; the notice uses `noticeIcon` | off (his reflection) | S3.00a, S3.01, S3.02, S3.04, S3.05 |
+| `shared/pixel/cast/alyi-v5.ts` | `drawAlyiTileFit(..., {lit: true})`: the doorway's glass replaced by a dark corridor and `alyiSpeakPortrait` (not mirrored), face centred; no sheen | off | call-boardside |
+| `shared/pixel/kits/staff-letter.ts` | `alyiThumb: 'onMark'` (his thumbnail only once his row is lit, no vote check); `gergCalm`; the first quote spells `judgement` (facts L1) | `'always'`, not calm; **the spelling is the new default** (v5-only kit) | S5.06 |
+| `shared/pixel/cast/gerg-medium.ts` | `GergTileOpts.calm`: the typing drawings on 3s, a 1 px bob every 16 f | off = v4's rhythm | S5.06, S5.09, S5.09-back |
+| `shared/pixel/kits/post-card.ts` | `PostSpec.bio` (a dim profile line under the name, phone / popup sizes); `gergQuit` text `…i quit.` and `masEulogy` stamp `NOV 17` (facts L2, L3) | no bio; **the text and stamp are the new defaults** (v5-only kit) | S3.05, S4.01 |
+| `shared/pixel/kits/blog-draft.ts` | `read`: the words read so far underlined, 1 px, in the editor's cursor colour | off | S3.03 |
+| `shared/pixel/rooms/boardroom-head.ts` | `drawBoardHead2S` `stage: 'nelehLeft'`: the people and props on the other sides (rigs flipped, footnotes drawn after the flip so their digits never mirror); the plate is not mirrored | `'nelehRight'` | S4.10b |
+| `shared/pixel/cast/tasya-phone.ts` | `tasyaRoomPortrait(s)`: tasya-speak's portrait (any arms, `clasp` included; no phone, no glow) with the room's warm skin | new export | S7.02b |
+| `animatic/plan4.ts` | `drawPlan4(fb, sh, k, {zerosLift})`: the two zero stamps and the equity caption lifted | 0 = v4 | S1.04 |
+| `art-v5/extra/lobby-low.ts` | `LOBBY_LOW.masFeet` x 262 → 300, clear of the desk's `NOPE AI` (at 262 it read `NOPE I`) | **new default** (v5-only extra) | S8.01 |
+
+**Drawn in the layouts, not in a module** (shots5.ts, v5 only): the countable tally grooves (`marksGouge5`), the 13 × 11 hearts (`drawHeart13`), the keycap pop (`keycapPop5`), the floor ripple under "Hello.", the S4.08 unlit meters and `CALL ENDED`, the S6.06 caption plate, the S4.13e fingers on the sign, the S3.04b footnote ring, the widened GUEST card.
+
+**The extra art is wired** (art-extra-v5 §1): POLISH-PEN-HAND (S3.02 pen, S4.14 marker), POLISH-SCREW-HAND (S8.09), POLISH-FOLD-CHAIR (S8.10), POLISH-CHAPTER-CARD (S5.01), POLISH-LOBBY-STONE (S8.05), ROOM-LOBBY-LOW (S8.01). Not wired: STYLE-LANDLORD-PX and PROP-PODCAST-BOOM (S7.02b options pending R25).
+
+**Confirmed on** (one reader, stills at native 480×270 and 2–3× crops, nothing in motion): S1.04 k214, S1.09 k50 / k100, S2.02 k8 / k23, S2.04 k24, S3.00a k188 / k358, S3.01 k43, S3.02 k4 / k34, S3.03 k82 / k182, S3.04b k38, S3.05 k12 / k26 / k100, S4.08 k100 / k515 / k521 / k611, S4.10b k43 / k288 / k313, S4.12 k36 / k56, S4.13e k38, S5.06 k500 / k540, S6.06 k122, S7.01 k184 / k240, S7.02 k4 / k16 / k64, S7.02b k54 / k134 / k189, S7.03 k32 / k35, S7.07 k94 / k109 / k119, S7.07-cont k20, S7.08 k27, S8.01 k67, S8.03 k28, S8.05 k34, S8.09 k30, S8.10 k78.
+
 ---
 
 ## 6. How to re-run (from `studio/`)

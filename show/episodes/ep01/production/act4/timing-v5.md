@@ -157,3 +157,71 @@ To see the layouts without the host, bundle a small Node script that imports `SH
 4. **S5.09's Gerg is small in his tile** (drawGergMediumPOV, as in v4): art-needs describes the setup as "Gerg big". An art call, not a timing one.
 5. **The held-frame cache is shared with v4** (`lay.ts held`, keyed by name). v5's own keys all start `s5:`, but the reused v4 layouts keep theirs, so one process rendering v4 and v5 frames with different footnote styles could show a cached drawing in the other style. In separate processes (render4, a render5) this can't happen, and none of the held drawings the reused v4 layouts use here has Neleh in it (the all-hands, the dark plate, the walkout bullpen behind Tasya, the lobby, the shut bullpen, the v3 MCU backgrounds); every boardroom plate with Neleh in v5 is drawn under an `s5:` key.
 6. **STYLE-1G-SOFT and J1** are off pending a blind read / the showrunner's ruling (§3, §4).
+
+---
+
+## 9. The finishing pass (a4p5 finish, 2026-09-27, about 03:35–05:00): what changed in the layouts
+
+**Why.** The brief: "fix what the reads and the audit found (clarity, readability, lip-sync, broken or cheap-looking shots, stand-ins you can replace in time), keeping the approved timing and the stick mix". The inputs were the picture audit ([audit-v5-pixel.md](audit-v5-pixel.md), § numbers below), a newcomer read and an insider read of the 8:38 picture film (relayed in the brief; their numbered confusions are cited as *N#* and *I#*), the facts check ([facts.md](../../facts.md), "Act Four v5 lock checks") and the extra art's hand-off ([art-extra-v5.md](art-extra-v5.md) §1).
+
+**What did not change.** The lock (`data-v5.ts`, `shots-locked-v5.json`): every cut, line, mouth track, text time and story mark is as the lock places it; no mark was moved, so the picture still lands on the final mix's spotted sounds. The temp track is still the stick mix. v4 is byte-identical (§9.3). The art modules' changes are logged in [art-built-v5 §5b](art-built-v5.md#5b-the-finishing-pass-a4p5-finish-art-changes).
+
+### 9.1 Layout changes, shot by shot (`animatic/shots5.ts`)
+
+| Shot | Was | Now | Why |
+|---|---|---|---|
+| S1.04 | `(HE TOLD THE SENATE)` on the frame's last rows, crossed by the border rule | The two zero stamps and the caption 10 px higher (`drawPlan4(..., {zerosLift: 10})`, opt-in in `plan4.ts`) | audit §2.8 |
+| S1.07, S1.09 | The noon dialog's left border ran off the frame (v4's `DLG.x` = −12) | `dialog5` / `DLG5`: the same dialog 16 px right; the arrow's path follows it | audit §2.13 |
+| S1.09 | The emptied tile plate fell over Mada's tile and across the notice | It falls behind the four tiles (drawn before them), so it drops out under the grid and the notice | audit §7 |
+| S1.09, S2.05, S3.01, S6.03–S6.06 | Every toast / notice icon was a 3 × 6 door outline (read as a missing-glyph box); "rewinding…" had a door | `OPT5.toastIcon: 'v5'`: a filled door with an arrow out of it; a ◀◀ rewind glyph on "rewinding…" (`callgrid withToastIcon`, `noticeIcon`) | audit §2.13 |
+| S2.02, S2.04 | The three marks were 1 px dark grooves on dark wood | `marksGouge5`: each groove gets its dark shadow edge and a paler cut wall; the mark the Orb's light is on catches its cyan. Only groove pixels change (his hand is masked out) | audit §2.12 |
+| S3.00a, S3.01, S3.02 (laptop edge), S3.04, S3.05 | Alyi's board-side tile was his navy reflection in a door's glass (the firing line from "a shadow"; the newcomer read him as an android) | `OPT5.alyiLit`: the door open and the man lit in it (his S3.07 face). His side of the call keeps the reflection | audit §2.9, *N6* |
+| S3.02 | v4's layout: a floating orange pencil, v4's call grid on the laptop edge | POLISH-PEN-HAND (`drawNelehPenHand`, pen, lifted for the run); the laptop edge shows v5's board-side call as S3.01 left it | audit §2.13 / §5, art-extra §1 |
+| S3.03 | The blog page sat still for 15.5 s while an unseen voice read it | The words she has read are underlined as she reads them, from her take's word times (`blog-draft read`) | audit §2.13, *N4* |
+| S3.04b | Read as "a lone woman in a dark library" | Her footnote slips orbit her head, as in her tile | *N5* |
+| S3.05 | Gerg's post a small notify card in the corner; keycaps came to rest over the tiles like dead pixels | A popup over THE QUIET VOTE's black tile, with his profile line `president & chairman, nopeai` (what "He'd have kept his job, just not the chair." refers to) and the facts check's `…i quit.`; his keycaps pop out of the card and fall out of frame (`keycapPop5`) | audit §2.13, *N7* (needed), insider minor, facts L2 |
+| S4.01 | The eulogy post's stamp `NOV 18` (the UTC date) | `NOV 17` (`POSTS.masEulogy.ts`); the scene's rail stays NOV 18 | facts L3 |
+| S4.08 | Both rent meters readable from 3:14 ("It's Nozama. About the money." read off the wall); after Adelina hung up, the left pane still held Neleh on a live pod, so "Hi. Yes. We're very worried. How much?" played as said to her | The meters' displays dark until Nozama rings (the lock's label lands there), then lit; from the hang-up the pod's LEDs go out, `CALL ENDED` shows on it for 1.8 s, and her pane steps down two palette steps | *I* shot-choice #3, *N9* |
+| S4.10b | Mada left, Neleh right (S4.10 and S4.12 put Neleh left, Mada right) | `drawBoardHead2S` `stage: 'nelehLeft'`: Neleh standing left (flipped to face him), Mada seated right, Ttemme turned to her, the folder slides from her side, his chat panel at his other elbow; the room's plate itself is not mirrored | audit §2.3 |
+| S4.12 | v3 27.28's nameplates (ALYI at Mada's seat); Tasya slate-lit in the door | A v5 copy of v4's re-clock of 27.28 with S4.06's plates (NELEH, MADA) and Tasya lit by the room | audit §2.7, §2.5 |
+| S4.13 | The plate's third line (NOPEAI RUNS ON ITS SERVERS) in dim grey | Full ink | audit §2.8 |
+| S4.13e | v4's slate portrait, its dark arm, the sign a floating card | A v5 layout on S4.13's setup: `tasyaPhonePortrait` (room skin, the ring in his fist, one jangle on the mark), the sign held at his chest with his fingers on its edge | audit §2.5, §5 |
+| S4.14 | A floating marker | POLISH-PEN-HAND (marker) | audit §5, art-extra §1 |
+| S5.01 | `kit.cards` stand-in | POLISH-CHAPTER-CARD | art-extra §1 |
+| S5.06 | The scroll never reached `ALYI (REPORTED)` (18 px below the fold at the last frame); Alyi's thumbnail with a vote check from frame 0; Gerg's typing jitter | From the `scroll` mark the page moves 6 px every 2 f and stops at its bottom (the row is up about 11 f before the `alyi` mark and lights on it); the thumbnail only from the mark, no check (`staff-letter alyiThumb: 'onMark'`); calm typing; `judgement` as the letter spells it | audit §2.1, §2.11, *N14*, *I* shot-choice #4, facts L1 |
+| S5.09, S5.09-back | Gerg's head bobbed a pixel on a 1–3 f beat while Mas talked (65–70% of Mas's frames) | `gerg-medium calm`: typing drawings on 3s, a 1 px shoulder bob every 16 f | audit §2.11 |
+| S6.06 | `MADA · LAST FIRER STANDING` in 5 px text in the tile's foot, 1.46 s | The call's caption plate under the tile in the display face, opening in v4's 3 held steps on the same mark | audit §2.8 |
+| S7.01 | The three hearts 7 × 7 specks; `GUEST` clipped to `GUES` | Hearts at icon size (13 × 11, keylined) on twoshots' own path; the GUEST card as wide as its word | audit §2.13, *N18* |
+| S7.02 | Tasya behind the bench's front, left of Mas (the singles reversed the wide); a frozen tableau | Tasya on the open floor right of Mas's desk, in front of the bench, facing him; his key ring jangles once early in the hold | audit §2.4 |
+| S7.02b | Tasya teal from frame 0 | Lit by the room (`tasyaRoomPortrait`) until "below", then the slate ramp with the floor (a palette step) | audit §2.5 |
+| S7.03 | The floor's "Hello." had no visible source | A slate ripple runs out across the floor from under Mas in held 3 f steps while it plays (hidden behind his bust) | *N19*, insider minor |
+| S7.07, S7.07-cont, S7.08 | The chair fire survived Terb's spray, then vanished on the cut to S7.09; Mas warm in S7.08, teal in the two-shots | The fire goes out on `sprayEnd` (the plate's own out state: smoke, then the scorched seat) and stays out; S7.08 is a v5 copy of v3 30.14 with the fire out and Mas in the two-shot's cool key (`light: 'monitor'`) | audit §2.6, §2.13 |
+| S8.01 | v3 30.19's cropped wide (stand-in); Mas in front of the A of `NOPE AI` | ROOM-LOBBY-LOW (`drawLobbyLow`, the carton set down in the worker's hand); Mas at the desk's right end (`LOBBY_LOW.masFeet` x 300) | audit §2.13 / §5, art-extra §1 |
+| S8.03 | Mas twice (v4's lobby drew his standing figure behind his own shoulder) | A v5 copy with `lobbyRoom(..., null)` | audit §2.2 |
+| S8.05, S8.09, S8.10 | Stand-ins (the recoloured desk top; a block fist; a blue slab chair and a floating label) | POLISH-LOBBY-STONE, POLISH-SCREW-HAND (the fist rolling a third of a turn every 4 f on each screw), POLISH-FOLD-CHAIR with its reserved-seat card | audit §5, art-extra §1 |
+
+The review band (`frame5.ts`) and the transcript follow the picture's words where the facts check changed them (`factsText5`: `…i quit.`, `judgement`). **Stand-ins left:** S7.06 only (v4's look-around; the extra art pass left it to the cast owner).
+
+### 9.2 Looked at and not changed (the lead's or the showrunner's calls)
+
+- **`VOID IF CEO MISSING` up 1.08 s** (audit §2.8): the fix moves the S5.08 cut about 10 f, off the approved timing.
+- **J1 or GLYPH:** unruled; the main render keeps GLYPH; the comparison clip is re-rendered (report-v5 §5). The newcomer's first read of the click ("they hesitated, cancelled, and he was removed anyway"; the pun came later) is evidence for the ruling: J1's `CANCELLED` certificate states the pun; GLYPH relies on the notice.
+- **Story-level questions the reads raised** (script, read only here): why the board fired him (a deliberate open question), the Orb's identity, `YRRAL (NOT THAT YRRAL)`, Q\* and "it's a preview", the ALYI plate on the door after the chair plate comes off, Tasya's and Alyi's physical presence at 4:21–4:44, and whose screen the flooded call is under HIS SIDE.
+- **Staging that needs new art:** "we'll stand." with Mas seated (a standing calm-off pose), S7.06's look-around, the room-scale mouths (a two-row jaw drop is in v4-shared rigs), S4.13d's flat composition, Mas's pale-teal hands (taste, inherited), S1.04's 2× zeros detail.
+- **S8.09's plate timing** against "zero ill will": the screws are spotted in the final mix at the lock's marks.
+- **S7.02b's remap and podcast boom** (extra art): options pending R25; not wired.
+
+### 9.3 Checks
+
+- `render5.ts check`: 83 layouts, 0 problems; `ledger`: 83 shots, 1 stand-in (S7.06).
+- `tsc --noEmit`: only the 11 pre-existing `src/dev/realism/bake/bake.ts` errors.
+- **v4 unchanged:** `v4check.mjs`, pinned to commit `76ea5ba` (the lead's commit 9e1df60 swept this pass's first edits into HEAD, so HEAD was no longer the baseline) for all ten shared files this pass touched: **812 / 812 frames IDENTICAL**. The scratch copy that takes the ref: `REF=<commit> node <copy of v4check.mjs>` (the only change is `HEAD:` → `${REF}:`).
+- Stills: every changed shot before and after at native 480×270 (2× on the sheet), crops at 2–3× for the marks, the fire and the floor ripple; the render's own checks and the decode in report-v5 §5.
+
+### 9.4 How to re-run, and where the evidence is
+
+- **The render chain** is report-v5 §6's commands (bundle → glyphs → compare → both → contact → ledger + shotlist → transcript → verify → report), one heavy step at a time through `ops/heavy.sh`; then `mix_v5_final.py --mux-only` for the final-mix film (it skips the pixel film if the picture was written in the last 3 minutes, so run it after that). Measured here: bundle 8 s, glyphs 10 s, compare 44 s, both 237 s on 2 workers (load under 5; the thermal zones read about 82 °C when checked), verify 40 s, report 16 s, mux under a minute. Free disk stayed at 7.6–8 GB.
+- **The transcript** writes to `show/episodes/ep01/production/act4/transcript-v5.txt` (`tools/transcript_v5.py <out>`; light).
+- **The v4 check against a given commit:** copy `art-v5/tools/v4check.mjs`, change `HEAD:` to `${process.env.REF ?? 'HEAD'}:` and the `esbuild` import to its absolute path under `studio/node_modules`, then from `studio/`: `REF=76ea5ba ../ops/heavy.sh node <copy> <scratch> <the pinned files>` (about 1 min).
+- **Scratch** (`scratchpad/a4p5-finish/`, may not last): `job-render.sh` / `job-verify.sh` and their logs, the Remotion bundle and the 28 GLYPH PNGs the films spliced (`bundle/`, `glyph/`), `shot.py` (prints a shot's lines, texts and marks from the lock), `tile.py` (still sheets), `rs.sh` (rebuild `r5.cjs` and render native stills), `v4check-ref.mjs`.
+- **Still owed to a person:** a watch at speed of every changed shot (above all S4.08's pane going dark, S4.10b's re-staging after S4.10, S5.06's fast scroll, S7.03's ripple, the S1.09 dialog and plate), and a fresh newcomer read of the new cut.

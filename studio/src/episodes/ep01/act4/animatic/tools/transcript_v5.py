@@ -30,6 +30,25 @@ def const(name):
 SHOTS, SUBS, RAILS = const("SHOTS"), const("SUBS"), const("RAILS")
 ACT_FRAMES, EP_IN = const("ACT_FRAMES"), const("EP_IN_FRAMES")
 
+# a4p5 finish: where the PICTURE's words differ from the lock's (the facts check's fixes, which the lock, generated from
+# the stick timeline, doesn't carry yet), the transcript follows the picture. Mirrors shots5.ts POST_FACTS5 /
+# TEXT_FACTS5 (factsText5) and kits/staff-letter.ts LETTER_QUOTES; keep them in step.
+POST_FIX = {"a5-27-P1": "…i quit."}
+TEXT_FIX = [("competence, judgment and care", "competence, judgement and care")]
+# on-screen text the picture adds that the lock doesn't list (act frame, shot, kind, text); the frames are the layouts'
+PICTURE_ADDS = [
+    (3381, "S3.05", "post profile", "Gerg Mockbran @gerg · president & chairman, nopeai"),
+]
+for x in SUBS:
+    if x["id"] in POST_FIX:
+        x["text"] = POST_FIX[x["id"]]
+    for a, b in TEXT_FIX:
+        x["text"] = x["text"].replace(a, b)
+for sh in SHOTS:
+    for t in sh["texts"]:
+        for a, b in TEXT_FIX:
+            t["text"] = t["text"].replace(a, b)
+
 
 def tc(f):
     s = f / 24
@@ -70,11 +89,14 @@ for s, e, kind, text in ons:
         continue
     rows.append((s, 1, f"[ON SCREEN, {kind}] {text}", shot_at(s)["id"]))
 
+for f, sid, kind, text in PICTURE_ADDS:
+    rows.append((f, 1, f"[ON SCREEN, {kind}] {text}", sid))
 rows.sort(key=lambda r: (r[0], r[1]))
 n_lines = sum(1 for r in rows if r[1] == 0)
 n_text = len(rows) - n_lines
 out = [
-    "MR. MAS - Ep1 \"ACT FOUR\" v5 animatic: transcript (from the timing lock data-v5.ts; the film plays this lock frame for frame)",
+    "MR. MAS - Ep1 \"ACT FOUR\" v5 animatic: transcript (from the timing lock data-v5.ts; the film plays this lock frame for frame;",
+    "where the picture's words differ from the lock's (the facts check's fixes, a4p5 finish), the picture's words are used)",
     f"Act: {ACT_FRAMES} frames at 24 fps ({tc(ACT_FRAMES)}). Episode time = act time + {tc(EP_IN)}.",
     "Columns: act time, episode time, shot, then the line. Speakers are named as the picture has named them so far",
     "(before the S1.03 label names her, NELEH is BLUEPRINT FIGURE). [ON SCREEN] rows: on-screen text of more than 3 words,",
