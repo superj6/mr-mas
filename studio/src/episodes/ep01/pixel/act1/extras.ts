@@ -214,14 +214,15 @@ export interface Deal2SPanState {
   tasya: Partial<TasyaMediumState> | null;
   /** Tasya's x (he leaves frame right on his last line) */
   tasyaX?: number;
-  /** Gerg behind them at the door, tugging the check's corner (the art's drawDeal2S staging) */
-  gerg?: boolean;
+  /** Gerg behind them at the door, tugging the check (the art's drawDeal2S staging at [238, 172]; `at` moves him) */
+  gerg?: boolean | {at: [number, number]; flip?: boolean};
   collars?: number;
   tv?: TvState;
 }
 /** drawDeal2S with the pan as a parameter (the art's own is 110) and Tasya's x free */
 export const deal2S = (fb: Buf, f: number, st: Deal2SPanState) => {
-  softLobbyPan(fb, f, {check: st.check, tv: st.tv, gerg: st.gerg ? {body: 'tug', at: [238, 172], flip: true} : null}, st.pan);
+  const g = st.gerg ? (st.gerg === true ? {at: [238, 172] as [number, number], flip: true} : st.gerg) : null;
+  softLobbyPan(fb, f, {check: st.check, tv: st.tv, gerg: g ? {body: 'tug', at: g.at, flip: g.flip} : null}, st.pan);
   const mx = 6, my = 96;
   drawMasMedium(fb, mx, my, {...MAS_MEDIUM_DEFAULT, light: 'warm', head: '34', look: 1, arm: 'down', ...st.mas}, {flip: true});
   drawCollarsMedium(fb, mx, my, st.collars ?? 3, {flip: true});

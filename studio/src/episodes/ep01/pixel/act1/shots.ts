@@ -450,17 +450,33 @@ L.add('8.06', {
 });
 
 // ================================================================== SC 9 · THE LANDLORD'S DEAL (the NopeAI lobby)
+// ---- the jammed check reads clear: nobody stands in front of its words. The wide's check spans x 22-278 (its stub
+// 22-72, its words from x 81, the amount box 174-270, rows 100-162), so Mas's marks are right of it (x 312), and its
+// pen, which the art clips over the top edge above the amount (x 248), is moved (the kit's own pen pixels) to the
+// check's right edge at his hand's height, where he can take it without standing on the amount
+const PEN_DX = 34, PEN_DY = 46;
+let PEN_PX: Array<[number, number, number]> | null = null;
+const penPixels = () => (PEN_PX ??= (() => {
+  const a = new Buf(480, 270, PAL.N0), b = new Buf(480, 270, PAL.N0), out: Array<[number, number, number]> = [];
+  drawCheck(a, DEAL.checkJam[0], DEAL.checkJam[1], {pen: true, stub: DEAL.stub}); drawCheck(b, DEAL.checkJam[0], DEAL.checkJam[1], {pen: false, stub: DEAL.stub});
+  for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) if (a.get(x, y) !== b.get(x, y)) out.push([x, y, a.get(x, y)]);
+  return out;
+})());
+const edgePen = (b: Buf) => { for (const [x, y, c] of penPixels()) b.set(x + PEN_DX, y + PEN_DY, c); };
+const MAS_MARK = 312; // Mas's mark by the desk, right of the check
+
 L.add('9.01', {
   st: 'ROOM-LOBBY-DEAL drawDealWide (the arrival: the lobby by day, NOPEAI · A NONPROFIT in gold on the door, Tasya already standing there like part of the wall, still, 11 keys) · Mas walks in from frame left to the desk (mas-stand walk) · PROP-CHECK: the check slides in through the doors in held steps and jams in the revolving door on the nudge, legible in the wide',
   marks: {jam: ['snd', 'glass_nudge', 1, 0]},
   draw: (fb, k, sh, f) => {
     const jam = mk(sh, 'jam', 53);
-    const mx = Math.min(150, -16 + Math.round(Math.max(0, k - 2) * 2.4)), walking = mx < 150;
+    // he's through the door as we arrive and crosses to his mark by the desk before the check lands behind him
+    const mx = Math.min(MAS_MARK, 132 + Math.round(k * 3.4)), walking = mx < MAS_MARK;
     const base: DealWideState = {mas: {at: [mx, 190], legs: walking ? masWalkAt(f) : 'stand', collars: 2}, tasya: {at: DEAL.tasya, keys: 11}};
-    if (k >= jam) { drawDealWide(fb, f, {...base, check: 'jammed', pen: true}); return; }
+    if (k >= jam) { underCast(fb, f, {...base, check: 'jammed', pen: false}, edgePen); return; }
     const kk = k - (k % 2);
     if (k < jam - 14) { drawDealWide(fb, f, {...base, check: null}); return; }
-    underCast(fb, f, {...base, check: null, revolve: 1}, (b) => drawCheck(b, DEAL.checkJam[0] - (jam - kk) * 17, DEAL.checkJam[1], {pen: true, stub: DEAL.stub}));
+    underCast(fb, f, {...base, check: null, revolve: 1}, (b) => { const dx = -(jam - kk) * 17; drawCheck(b, DEAL.checkJam[0] + dx, DEAL.checkJam[1], {pen: false, stub: DEAL.stub}); for (const [x, y, c] of penPixels()) b.set(x + PEN_DX + dx, y + PEN_DY, c); });
   },
 });
 L.add('9.04', {
@@ -468,10 +484,13 @@ L.add('9.04', {
   marks: {pen: ['snd', 'pen_tick_1', 1, 0], card: ['txt', 'TASYA', 'at', 0]},
   draw: (fb, k, sh, f) => {
     const pen = mk(sh, 'pen', 80), card = mk(sh, 'card', 2);
-    const mx = Math.min(214, 150 + Math.round(Math.max(0, k - 6) * 1.6)), walking = mx < 214;
-    const arm = k >= pen - 10 && k < pen ? 'reach' : k >= pen && k < pen + 14 ? 'pocket' : 'down';
+    // from his mark he turns to the check and takes the two steps to its right edge, reaches, and pockets the pen on
+    // the tick: his hand at the pen (x 282-287), his body right of the amount (the check's words stay clear)
+    const turn = 12, stop = MAS_MARK - 11;
+    const mx = k < turn ? MAS_MARK : Math.max(stop, MAS_MARK - Math.round((k - turn) * 1.2)), walking = k >= turn && mx > stop;
+    const arm = k >= pen - 12 && k < pen ? 'reach' : k >= pen && k < pen + 14 ? 'pocket' : 'down';
     const live = new Mask(480, 270);
-    drawDealWide(fb, f, {check: 'jammed', pen: k < pen, mas: {at: [mx, 188], flip: true, legs: walking ? masWalkAt(f) : 'stand', arm, collars: 2}, tasya: {at: DEAL.tasya, keys: 11}, live});
+    underCast(fb, f, {check: 'jammed', pen: false, mas: {at: [mx, 190], flip: k >= turn, legs: walking ? masWalkAt(f) : 'stand', arm, collars: 2}, tasya: {at: DEAL.tasya, keys: 11}, live}, (b) => { if (k < pen) edgePen(b); });
     dealFreeze(fb, live);
     // the frame's foot in the print's navy under the V.O. line (the sunlit floor prints cream there)
     const ink = fb.get(476, 150);
@@ -490,11 +509,11 @@ L.add('9.04', {
 });
 const drawTextTyped = (fb: Buf, s: string, x: number, y: number, n: number) => pt(fb, s.slice(0, Math.max(0, n)), x, y, PAL.N8);
 L.add('9.06', {
-  st: 'ROOM-LOBBY-DEAL 2S via extras.deal2S (pan 110, the art\'s; its gap filled from a car-free frame) (the freeze lifts: Mas left, Tasya right, the jammed check between; Tasya lip-synced, warm, blinking) + Gerg at the door behind, tugging the check\'s corner from his entrance',
+  st: 'ROOM-LOBBY-DEAL 2S via extras.deal2S (pan 110, the art\'s; its gap filled from a car-free frame) (the freeze lifts: Mas left, Tasya right, the jammed check between; Tasya lip-synced, warm, blinking) + Gerg at the door behind, tugging the check\'s blank stub where it\'s caught in the wings (left of its words: the art\'s spot put him over the amount)',
   face: {TASYA: 'lip'},
   marks: {gerg: ['f', 83]},
   draw: (fb, k, sh, f) => {
-    deal2S(fb, f, {pan: 110, check: 'jammed', gerg: k >= mk(sh, 'gerg', 83), collars: 2, tasya: {mouth: lipOn(sh, k, 'TASYA') ? mouth(sh, k, 'TASYA') : 'smile', lid: blinkLid(k, 4, 89), brow: 'warm'}, mas: {look: 1}});
+    deal2S(fb, f, {pan: 110, check: 'jammed', gerg: k >= mk(sh, 'gerg', 83) ? {at: [12, 174]} : false, collars: 2, tasya: {mouth: lipOn(sh, k, 'TASYA') ? mouth(sh, k, 'TASYA') : 'smile', lid: blinkLid(k, 4, 89), brow: 'warm'}, mas: {look: 1}});
   },
 });
 L.add('9.07', {
@@ -502,8 +521,10 @@ L.add('9.07', {
   marks: {slide: ['snd', 'folder_slide', 1, 0], step: ['snd', 'footstep_hard_2', 1, 0]},
   draw: (fb, k, sh, f) => {
     const sl = mk(sh, 'slide', 7), stp = mk(sh, 'step', 49);
-    const mx = Math.min(152, 110 + Math.round(Math.max(0, k - (stp - 20)) * 2.1)), walking = mx < 152;
-    const base: DealWideState = {mas: {at: [mx, 184], legs: walking ? masWalkAt(f) : 'stand', collars: 2}, tasya: {at: [336, 186], keys: 11}, gerg: {body: 'tug', at: [60, 178]}};
+    // from his mark right of the jammed check (clear of its words), he walks left onto it the moment it's a floor
+    const land = sl + 6, dest = 200;
+    const mx = k < land ? MAS_MARK - 12 : Math.max(dest, MAS_MARK - 12 - Math.round((k - land) * ((MAS_MARK - 12 - dest) / Math.max(1, stp - land)))), walking = k >= land && mx > dest;
+    const base: DealWideState = {mas: {at: [mx, 184], flip: true, legs: walking ? masWalkAt(f) : 'stand', collars: 2}, tasya: {at: [352, 186], keys: 11}, gerg: {body: 'tug', at: [14, 178]}};
     if (k < sl) { drawDealWide(fb, f, {...base, check: 'jammed', revolve: 1}); return; }
     if (k < sl + 6) {
       const off = [-120, -120, -60, -60, -20, -20][k - sl];
