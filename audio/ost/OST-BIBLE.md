@@ -1506,6 +1506,7 @@ Run these on every render (`engine/analysis.py`), and write the results to the c
 
   The credits are in [LICENSES.md](../samples/LICENSES.md) and in each cue sheet.
 - **No generative-AI music models and no voices.** The chant and the PAD belong to the vocal team. The score is rendered from code and licensed samples, which keeps guardrails §5's "check AI-music terms" trivially satisfied.
+  - *Proposed exception (showrunner, 2026-09-26, under discussion): an AI-generated outro song with lyrics for the season finale only; see [show/bible/ai-media-range.md](../../show/bible/ai-media-range.md).*
 - **Originality:** copy no melody. Check every motif and every head against §1.7's list before it ships.
 - **Content ID:** distribution is open ([overview §9](../../show/bible/overview.md#9-decisions-still-open)). **Don't register the score** with Content ID or a library service until it's decided.
 
