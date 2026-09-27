@@ -91,3 +91,45 @@ audio/ep01/v3/ · audio/ep01/v3-el/       takes (Kokoro, ElevenLabs); WAVs git-i
 audio/reel/ep01-v3/                       beds and stems;   audio/ost/tracks/e01-v3-*/   the score
 out/ep01/full-v3/                         the films and mixes (git-ignored)
 ```
+
+---
+
+## 5. v3.1: the finalizing round (from 2026-09-27 ~16:00)
+
+**The showrunner, on the v3 films:**
+- "it is looking pretty good as a whole otherwise. i think you did a good job on narrative and pacing overall. however there are still a few confusing transitions that just seem to come out of nowhere… also, i want to bring back the syney and atem references at least… the elevenlabs voices are not as good as i hoped, especially sam who sounds strangely russian"
+- "i didn't mean for you to overkill and make it sound goofy level hapy" · "the cold open to intro is not very good transition"
+- "i'll let you make your own review, judgements, and update to the full next version" · "you can also attempt the runway transition variations, try your best to get a fully finalized version"
+- "also when you finish, remove the old ones if ur able and upload the new variants to drive"
+
+**The work list:**
+1. **Reviews:** a newcomer cold read (`read-v3-newcomer.md`) and an editor's transitions and naturalness critique (`review-v3-critic.md`).
+2. **Script v3.1:**
+   - Fix every weak or bad transition (setup lines, orienting V.O., pre-laps, arrivals, match cuts).
+   - Rewrite unnatural lines.
+   - **Restore, with context and stakes:**
+     - Sydney (sc 10)
+     - the Atem weights leak (sc 11)
+     - a short "hands runner" in Act Three: everyone in power asks to be regulated, framed by one V.O. line
+     - Rezeile's op-ed as one beat inside the pause-letter scene
+   - Keep the runtime near the band by trimming elsewhere, never the breath.
+3. **Score:** restrained, per the note ("intensity and texture, not genre"). Composers X and Y are re-scoring; then refit to the v3.1 timing.
+4. **Cold open:** it ends on the rewind collapsing into the intro's first frame (done in picture; its sound is being redone).
+5. **Voices:**
+   - Mas's ElevenLabs voice is recast to a neutral American voice, picked by measurement, with an audition file kept.
+   - The other principals get an accent check.
+   - Kokoro stays the primary film.
+6. **Runway:**
+   - The tag's Elgoog demo film: near-photoreal, objects only (a toy duck, the parody logo, no people or hands). It's exposed as stills, a pixel-to-native-to-pixel transition. Try variations and keep the best.
+   - If credits remain, the hourglass shatter at the return.
+   - 500 credits.
+   - Fallback: the programmatic version.
+7. **Polish:**
+   - the intro's flash (4 in a second at its whip smear, intro frames 221–224): dim those frames in the episode assembly
+   - the 160 ms digital zero at Act Three's black
+   - the act-break level jumps
+   - the Vegas practice laps' level
+   - the V.O./rail overlap at S1.01
+8. **Rebuild, check, final read:**
+   - Rebuild both films and run QA, then a last cold read.
+   - **Drive:** move the old `ep01-v3.mp4` and `ep01-v3-el.mp4` to the trash (rclone remote `mrmas-drive:`, folder "MR MAS Ep1 v3"), upload the new films, and share them with jgon@mit.edu (Drive API permissions through rclone's token; retry on the shared client's rate limit).
