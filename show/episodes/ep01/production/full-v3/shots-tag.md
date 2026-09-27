@@ -95,3 +95,5 @@ cd .. && audio/.venv-casting/bin/python studio/src/episodes/ep01/pixel/coldopen/
 4. **32.03:** art-b's fingertips sit on the edge of the cover's `CEO OF THE YEAR` line.
 5. **33.01** is on the two-shot plate (the lock calls it WIDE), as art-b built it. Only the Orb hops.
 6. **The walk in 32.07** is 22 frames of the stand rig's cycle. It hasn't been seen in motion.
+
+> **V.O. mouth check (`v3-shots-act1`, 2026-09-27, for the lead):** the pipeline's `face` table draws a speaker's mouth on his V.O. lines too (found in Act One). The tag is clear of it: the V.O. "it looks calmer than me." plays on 32.03, whose layout passes no mouth and has no `face`; the `face: {MAS: 'lip'}` shots (32.05, 33.04) hear only his spoken lines. Measured on 32.03's frames under the V.O.: only the cover's region changes, never his face. No change to `tag/shots.ts`; `tag.mp4` not re-rendered. (The cold open has no V.O. lines.)
