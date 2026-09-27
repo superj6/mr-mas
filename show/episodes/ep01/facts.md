@@ -83,7 +83,7 @@ Everything real in this episode, with dates and sources, plus notes on what gets
 | 43 | Nov 6, 2023 | DevDay; Nadella's "We love you guys" | mid §2 · [V] | Suggested-replies strip; the odometer reads `100,000,000 / WEEK` (#63) |
 | 44 | Nov 15, 2023 | Xi's APEC banquet with US CEOs; standing ovation | sw-intl · WC-cast · [H] | Mirrored podium across the street |
 | 45 | Nov 16, 2023 | APEC CEO Summit "veil of ignorance" line | mid §3 · [V] | Cold open |
-| 46 | Nov 17, 2023 | Fired over Google Meet in a Las Vegas hotel during the F1 weekend (~noon PT); blog post; Brockman quits; Pachocki, Mądry and Sidor resign | mid §3 · gaps §2 #34 · [V] | Falling tile; `+1 FIRING` |
+| 46 | Nov 17, 2023 | Fired over Google Meet in a Las Vegas hotel during the F1 weekend (~noon PT); blog post; Brockman quits; Pachocki, Mądry and Sidor resign | mid §3 · gaps §2 #34 · [V] | Falling tile; `+1 FIRING`. (v3, 2026-09-27: the Las Vegas Grand Prix itself ran on the night of Sat Nov 18, so the V.O. "the race is tomorrow" holds on Friday) |
 | 47 | Nov 17, 2023 | The board: Sutskever, D'Angelo, McCauley and Toner voted | mid §3 · [V] | Four voting tiles; McCauley = THE QUIET VOTE, camera off (WC-crit §B5) |
 | 48 | Nov 18, 2023 | Heart-emoji wave; Murati's 💙; the "eulogy" post | mid §3 · [V] | Heart avalanche, exactly one blue |
 | 49 | Nov 18–19, 2023 | Board approaches Amodei about CEO and a merger; he declines | mid §3 · gaps §2 #9 · [V] (reported by The Information; confirmed by the 2025 deposition) | Hangs up mid-ring, `(REPORTED)` |

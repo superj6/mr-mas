@@ -1,0 +1,179 @@
+{
+ "segment": "tag",
+ "source": "show/reel/ep01-full/ep01-tag-v2.json",
+ "_about": "v3-script beat plan (show/episodes/ep01/production/full-v3/PLAN.md §2). Written against the source timeline's beat ids; every source beat appears once (keep, cut or merge), plus the new beats. est_s is a planning length from word counts and the takes already on file, never a measurement: the v3 lock sets frames from the takes. vo.at = \"start+S\" | \"after:<line id>+S\" | \"before:<line id>-S\". Lines of kept beats are listed keep true/false; new and changed lines carry v3-<seg>-NNNN ids; V.O. lines carry v3-vo-NN ids, and \"take\" says whether a sample take exists. The script is show/episodes/ep01/script.md draft 6; the notes are ../script-v3-notes.md.",
+ "story_s": {
+  "source": 40.62,
+  "estimate": 33.88
+ },
+ "beats": [
+  {
+   "id": "32.01",
+   "action": "keep",
+   "cut_ref": "C12",
+   "src_s": 5.25,
+   "est_s": 4.5,
+   "arrive_s": 4.5,
+   "src_frame": "TWO-SHOT · the desk, three marks in the wood",
+   "lines": [],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "CUT LINE",
+     "ELGOOG DEMO: \"What the quack!\"",
+     "LATER: THE DEMO WASN'T REAL-TIME"
+    ],
+    "add": []
+   },
+   "caption": "Mas and the Orb at the desk, three marks in the wood now. The monitor behind them runs dim with the sound off, nothing on it to read.",
+   "music": "TAG · quiet, wry · MM-12 december on the Water Line's felt; stops once, on the thud; the chord with no third on \"noted.\"",
+   "why": "C12: the monitor's eggs go; the shot is the tag's arrival."
+  },
+  {
+   "id": "32.02",
+   "action": "keep",
+   "src_s": 3.75,
+   "est_s": 3.75,
+   "src_frame": "INSERT · the rack slot: the delivery (a magazine)",
+   "lines": [],
+   "music": "TAG · quiet, wry · MM-12 december on the Water Line's felt; stops once, on the thud; the chord with no third on \"noted.\"",
+   "why": "unchanged: EMIT's year-end issue"
+  },
+  {
+   "id": "32.03",
+   "action": "keep",
+   "src_s": 2.5,
+   "est_s": 3.8,
+   "src_frame": "MEDIUM CLOSE · Mas and the cover, side by side",
+   "lines": [],
+   "vo": [
+    {
+     "id": "v3-vo-24",
+     "who": "mas",
+     "text": "it looks calmer than me.",
+     "kind": "caught",
+     "delivery": "mild and honest; the picture has just shown the cover and the face wearing the same expression",
+     "take": "new",
+     "at": "start+1.0"
+    }
+   ],
+   "music": "TAG · quiet, wry · MM-12 december on the Water Line's felt; stops once, on the thud; the chord with no third on \"noted.\"",
+   "why": "The cover and the face wear the same expression; he thinks the cover looks calmer. The caught line tells us the calm is something he does."
+  },
+  {
+   "id": "32.04",
+   "action": "keep",
+   "src_s": 4.0,
+   "est_s": 4.0,
+   "src_frame": "TWO-SHOT · the Orb's scan, twice",
+   "lines": [],
+   "music": "TAG · quiet, wry · MM-12 december on the Water Line's felt; stops once, on the thud; the chord with no third on \"noted.\"",
+   "why": "unchanged: the Orb re-scans the cover"
+  },
+  {
+   "id": "32.05",
+   "action": "keep",
+   "src_s": 2.333,
+   "est_s": 2.33,
+   "src_frame": "SINGLE · profile: Mas, to the cover",
+   "lines": [
+    {
+     "id": "e1-tg-32-01",
+     "keep": true
+    }
+   ],
+   "music": "TAG · quiet, wry · MM-12 december on the Water Line's felt; stops once, on the thud; the chord with no third on \"noted.\"",
+   "why": "unchanged: \"close.\""
+  },
+  {
+   "id": "32.06",
+   "action": "cut",
+   "cut_ref": "C12",
+   "src_s": 4.25,
+   "est_s": 0.0,
+   "src_frame": "INSERT · the desk drawer",
+   "why": "C12: the drawer insert (CTRL, the pen, the pin, DO NOT REMOVE). One clear button, not three."
+  },
+  {
+   "id": "32.07",
+   "action": "keep",
+   "src_s": 4.25,
+   "est_s": 4.25,
+   "src_frame": "WIDE · the back wall",
+   "lines": [],
+   "music": "TAG · quiet, wry · MM-12 december on the Water Line's felt; stops once, on the thud; the chord with no third on \"noted.\"",
+   "why": "unchanged: the cover pinned, the GUEST lanyard framed"
+  },
+  {
+   "id": "33.01",
+   "action": "keep",
+   "cut_ref": "C12",
+   "src_s": 2.25,
+   "est_s": 2.25,
+   "src_frame": "WIDE · the thud",
+   "lines": [],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "UI: Look at glass of water"
+    ],
+    "add": []
+   },
+   "music": "TAG · quiet, wry · MM-12 december on the Water Line's felt; stops once, on the thud; the chord with no third on \"noted.\"",
+   "why": "C12: the glass prompt goes."
+  },
+  {
+   "id": "33.02",
+   "action": "keep",
+   "src_s": 4.75,
+   "est_s": 4.25,
+   "src_frame": "HIGH · the front page",
+   "lines": [],
+   "music": "TAG · quiet, wry · MM-12 december on the Water Line's felt; stops once, on the thud; the chord with no third on \"noted.\"",
+   "why": "−0.5 s: the stamp reads; THE GREY LADY's complaint is the Ep2 hook"
+  },
+  {
+   "id": "33.03",
+   "action": "cut",
+   "cut_ref": "C12",
+   "src_s": 2.75,
+   "est_s": 0.0,
+   "src_frame": "INSERT · the glass (after the shake)",
+   "why": "C12: the glass insert folds into 33.04: the flat water line sits in his frame."
+  },
+  {
+   "id": "33.04",
+   "action": "keep",
+   "src_s": 3.292,
+   "est_s": 3.5,
+   "src_frame": "SINGLE · profile: Mas, the button",
+   "lines": [
+    {
+     "id": "e1-tg-33-01",
+     "keep": true
+    }
+   ],
+   "caption": "Mas in profile, his glass at his hand in frame: everything on the desk hopped, and its water line is flat. \"noted.\" The chord with no third.",
+   "music": "TAG · quiet, wry · MM-12 december on the Water Line's felt; stops once, on the thud; the chord with no third on \"noted.\"",
+   "why": "The one button: the thud, the flat glass in the same frame, \"noted.\""
+  },
+  {
+   "id": "33.05",
+   "action": "keep",
+   "src_s": 1.25,
+   "est_s": 1.25,
+   "src_frame": "BLACK · on the hum",
+   "lines": [],
+   "music": "TAG · quiet, wry · MM-12 december on the Water Line's felt; stops once, on the thud; the chord with no third on \"noted.\"",
+   "why": "unchanged: CUT TO BLACK on the hum, into the Orb outro (B)"
+  },
+  {
+   "id": "OUT.01",
+   "action": "cut",
+   "src_s": 12.0,
+   "est_s": 0.0,
+   "src_frame": "CARD · OUTRO PLACEHOLDER (pending)",
+   "why": "The 12 s placeholder is replaced by the Orb outro (proposal B), the v3-outro pass's (episode time, not story)."
+  }
+ ]
+}

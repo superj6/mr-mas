@@ -350,3 +350,8 @@ The three-lens read of 5.2 (newcomer, insider, feel), applied scene by scene; th
 - **W2.2**, XEL's "Nuclear-" / "that's what i believe." ×2 (+0:08): the season plan's first reserve for this episode. Restore it if the animatic runs short.
 - **W2.7**, Klarna's "equivalent work of 700" on the lobby TV (+0:03): optional on the world-stakes menu, not allocated.
 - **The lighthouse window** (THE OTHER MAS's certificate and ADELINA's "In plain English: bye.", +0:08): cut as a Mas-less insert; restorable only if it can play on one of his screens.
+
+
+## From Ep1 v3 (2026-09-27)
+
+- **Sydney moves to Ep2.** Ep1 v3 cut sc 10 (the Feb 2023 Bing/"Sydney" beat, cut C1). Ep2 picks up her scene and her real line, in all four sentences and in source order, as restored in Ep1's Act One fix passes (see show/reel/ep01-full/ep01-act1-v2.json, beats 10.xx). Its callback to the `😊` needs its setup here now.

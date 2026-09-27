@@ -1,0 +1,1116 @@
+{
+ "segment": "act1",
+ "source": "show/reel/ep01-full/ep01-act1-v2.json",
+ "_about": "v3-script beat plan (show/episodes/ep01/production/full-v3/PLAN.md §2). Written against the source timeline's beat ids; every source beat appears once (keep, cut or merge), plus the new beats. est_s is a planning length from word counts and the takes already on file, never a measurement: the v3 lock sets frames from the takes. vo.at = \"start+S\" | \"after:<line id>+S\" | \"before:<line id>-S\". Lines of kept beats are listed keep true/false; new and changed lines carry v3-<seg>-NNNN ids; V.O. lines carry v3-vo-NN ids, and \"take\" says whether a sample take exists. The script is show/episodes/ep01/script.md draft 6; the notes are ../script-v3-notes.md.",
+ "story_s": {
+  "source": 359.67,
+  "estimate": 323.33
+ },
+ "beats": [
+  {
+   "id": "5.01",
+   "action": "keep",
+   "src_s": 2.0,
+   "est_s": 3.0,
+   "arrive_s": 1.0,
+   "src_frame": "INSERT · the beige button",
+   "lines": [],
+   "jcut": [
+    {
+     "sound": "the bullpen's room (server hum, one buzzing tube, Gerg's keys) under the filename card's last 0.6 s",
+     "lead_s": 0.6
+    }
+   ],
+   "music": "LAUNCH NIGHT · warm, giddy, late-night garage band · NEW: the Build in a major colour (brushes, Rhodes, chip), low under the talk; thins to Rhodes alone under Alyi",
+   "why": "Arrival: the bullpen's room tone under the button before anything happens (the sample's edit)."
+  },
+  {
+   "id": "5.02",
+   "action": "keep",
+   "src_s": 4.417,
+   "est_s": 7.86,
+   "arrive_s": 1.2,
+   "hold_after_s": 1.0,
+   "src_frame": "WIDE · the bullpen after hours (the home room's one wide)",
+   "lines": [],
+   "vo": [
+    {
+     "id": "v3-vo-01",
+     "who": "mas",
+     "text": "gerg wants to ship it. rima wants it quiet. alyi wants to know what it is first.",
+     "kind": "read",
+     "delivery": "close and dry, unhurried; three even reads of three people, no irony on any of them",
+     "take": "v3s-01 · audio/ep01/v3-sample/vo-v2 (fastrec take, from the v3 sample)",
+     "at": "start+1.2"
+    }
+   ],
+   "caption": "The bullpen after hours, held: the room and the three people in it before anyone speaks. The cursor parks on the button.",
+   "music": "LAUNCH NIGHT · warm, giddy, late-night garage band · NEW: the Build in a major colour (brushes, Rhodes, chip), low under the talk; thins to Rhodes alone under Alyi",
+   "why": "Arrival at a chapter change, and the introduction the plates did: who wants what, in his read (sample 5.02). The Build enters low, in major."
+  },
+  {
+   "id": "5.03",
+   "action": "keep",
+   "src_s": 11.375,
+   "est_s": 13.17,
+   "src_frame": "TWO-SHOT · Mas and Gerg, desk to desk (held)",
+   "lines": [
+    {
+     "id": "e1-a1-5-01",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-5-02",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-5-03",
+     "keep": true
+    }
+   ],
+   "vo": [
+    {
+     "id": "v3-vo-02",
+     "who": "mas",
+     "text": "she'll go for three.",
+     "kind": "prediction",
+     "delivery": "flat, certain, almost fond; a man who has watched her whiteboards for years",
+     "take": "v3s-11 · audio/ep01/v3-sample/vo-v2 (fastrec take, from the v3 sample)",
+     "pays_off": "5.07: Rima underlines LAUNCH: LOW-KEY a third time",
+     "at": "after:e1-a1-5-02+0.4"
+    }
+   ],
+   "jcut": [
+    {
+     "line": "e1-a1-5-01",
+     "lead_s": 0.5
+    }
+   ],
+   "onscreen": {
+    "replace": {
+     "GERG MOCKBRAN · CO-FOUNDER": "GERG MOCKBRAN"
+    },
+    "drop": [],
+    "add": []
+   },
+   "music": "LAUNCH NIGHT · warm, giddy, late-night garage band · NEW: the Build in a major colour (brushes, Rhodes, chip), low under the talk; thins to Rhodes alone under Alyi",
+   "why": "J-cut: Gerg's first line starts under the wide. The prediction is paid in 5.07. Plate cut to the name (v3-plan §5)."
+  },
+  {
+   "id": "5.04",
+   "action": "keep",
+   "src_s": 25.292,
+   "est_s": 29.16,
+   "src_frame": "OTS · over Mas onto Rima (held through the bargain)",
+   "lines": [
+    {
+     "id": "e1-a1-5-04",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-5-05",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-5-06",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-5-07",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-5-08",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-5-09",
+     "keep": true
+    }
+   ],
+   "vo": [
+    {
+     "id": "v3-vo-03",
+     "who": "mas",
+     "text": "she's right. it will break. i don't know which part yet.",
+     "kind": "gap",
+     "delivery": "honest and quick, a little lower than his speech; then the spoken \"it's a preview.\" comes out calm, and the gap is never explained",
+     "take": "v3s-02 · audio/ep01/v3-sample/vo-v2 (fastrec take, from the v3 sample)",
+     "at": "after:e1-a1-5-06+0.5"
+    }
+   ],
+   "onscreen": {
+    "replace": {
+     "RIMA TAMURI · CTO": "RIMA TAMURI"
+    },
+    "drop": [],
+    "add": []
+   },
+   "music": "LAUNCH NIGHT · warm, giddy, late-night garage band · NEW: the Build in a major colour (brushes, Rhodes, chip), low under the talk; thins to Rhodes alone under Alyi",
+   "why": "The gap: the honest thought, then \"it's a preview.\" Rima's question is her moment that isn't a joke (v3-plan §5); the V.O. gives it a beat to land."
+  },
+  {
+   "id": "5.05",
+   "action": "keep",
+   "src_s": 2.625,
+   "est_s": 2.62,
+   "src_frame": "MCU·glass · Alyi in the doorway, seen in its glass (the cut on the turn)",
+   "lines": [
+    {
+     "id": "e1-a1-5-10",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {
+     "ALYI · CHIEF SCIENTIST": "ALYI"
+    },
+    "drop": [],
+    "add": []
+   },
+   "music": "LAUNCH NIGHT · warm, giddy, late-night garage band · NEW: the Build in a major colour (brushes, Rhodes, chip), low under the talk; thins to Rhodes alone under Alyi",
+   "why": "Plate cut to the name; his line, his count and v3-vo-04 say what he is to Mas."
+  },
+  {
+   "id": "5.06",
+   "action": "keep",
+   "src_s": 2.667,
+   "est_s": 2.97,
+   "hold_after_s": 0.6,
+   "src_frame": "MCU · Rima turns to Mas and waits (1 beat, hers)",
+   "lines": [
+    {
+     "id": "e1-a1-5-11",
+     "keep": true
+    }
+   ],
+   "music": "LAUNCH NIGHT · warm, giddy, late-night garage band · NEW: the Build in a major colour (brushes, Rhodes, chip), low under the talk; thins to Rhodes alone under Alyi",
+   "why": "+0.3 s: the hold on Rima after \"…still a preview.\" (sample)"
+  },
+  {
+   "id": "v3-5.06b",
+   "action": "new",
+   "after": "5.06",
+   "est_s": 6.24,
+   "frame": "HOLD · MCU·glass: Alyi in the doorway, seen in the glass (the 5.05 setup), still watching the button",
+   "set": "bullpen",
+   "chars": [
+    "alyi (reflection)"
+   ],
+   "lines": [],
+   "vo": [
+    {
+     "id": "v3-vo-04",
+     "who": "mas",
+     "text": "alyi asks that about everything we build. he means it every time.",
+     "kind": "warmth",
+     "delivery": "warm, plain, no smile in it; the second sentence slower",
+     "take": "v3s-03 · audio/ep01/v3-sample/vo-v2 (fastrec take, from the v3 sample)",
+     "at": "start+0.5"
+    }
+   ],
+   "caption": "Back on Alyi in the glass, held, while Mas thinks about him. Alyi keeps watching the button.",
+   "music": "the Build thins to Rhodes alone",
+   "why": "Warmth for Alyi before the count, and the trust Act Four breaks (sample 5.06b). No new drawing: the 5.05 setup with a slow blink loop."
+  },
+  {
+   "id": "5.07",
+   "action": "keep",
+   "src_s": 4.5,
+   "est_s": 4.5,
+   "src_frame": "TWO-SHOT · Mas and Gerg (Rima back at the board)",
+   "lines": [
+    {
+     "id": "e1-a1-5-12",
+     "keep": true
+    }
+   ],
+   "music": "the Build thins to Rhodes alone",
+   "why": "Pays v3-vo-02: the third underline."
+  },
+  {
+   "id": "5.08",
+   "action": "keep",
+   "src_s": 2.292,
+   "est_s": 2.29,
+   "src_frame": "INSERT · his finger on the button",
+   "lines": [],
+   "music": "the Build thins to Rhodes alone",
+   "why": "unchanged: the click"
+  },
+  {
+   "id": "5.09",
+   "action": "keep",
+   "src_s": 13.708,
+   "est_s": 15.21,
+   "hold_after_s": 1.5,
+   "src_frame": "MCU·glass · Mas soft in the fg; Rima at the board; Alyi in the doorway (glass)",
+   "lines": [
+    {
+     "id": "e1-a1-5-13",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-5-14",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-5-15",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-5-16",
+     "keep": true
+    }
+   ],
+   "music": "the Build thins to Rhodes alone",
+   "why": "Aftermath: +1.5 s after \"let's see if anyone notices.\" on the two of them and the quiet button (sample)."
+  },
+  {
+   "id": "5.10",
+   "action": "keep",
+   "src_s": 14.167,
+   "est_s": 14.17,
+   "src_frame": "OTS · over Mas onto his laptop (the chat's one setup)",
+   "lines": [
+    {
+     "id": "e1-a1-5-17",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-5-18",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-5-19",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-5-20",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-5-21",
+     "keep": true
+    }
+   ],
+   "music": "the Build thins to Rhodes alone",
+   "why": "unchanged"
+  },
+  {
+   "id": "5.11",
+   "action": "keep",
+   "src_s": 5.667,
+   "est_s": 8.21,
+   "hold_after_s": 0.7,
+   "src_frame": "MCU · Mas, lit from below (his one close shot here)",
+   "lines": [
+    {
+     "id": "e1-a1-5-22",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-5-23",
+     "keep": true
+    }
+   ],
+   "vo": [
+    {
+     "id": "v3-vo-05",
+     "who": "mas",
+     "text": "i know. i still read it twice.",
+     "kind": "gap",
+     "delivery": "caught out, quietly amused at himself; \"twice\" lands soft",
+     "take": "v3s-04 · audio/ep01/v3-sample/vo-v2 (fastrec take, from the v3 sample)",
+     "at": "after:e1-a1-5-23+0.4"
+    }
+   ],
+   "music": "the Build thins to Rhodes alone",
+   "why": "He wants to be liked, and says so only to himself (sample)."
+  },
+  {
+   "id": "5.12",
+   "action": "keep",
+   "src_s": 2.583,
+   "est_s": 2.58,
+   "src_frame": "INSERT · the bubble: the counter ticks",
+   "lines": [],
+   "music": "THE ODOMETER · exhilarating · SET-PIECE SWING in major, turning on the tile (heat at the bill)",
+   "why": "The swing enters on the counter's first tick."
+  },
+  {
+   "id": "6.01",
+   "action": "keep",
+   "src_s": 5.0,
+   "est_s": 5.0,
+   "src_frame": "ECU → WIDE · the counter grows (phrase 1, bars 1-2)",
+   "lines": [
+    {
+     "id": "e1-a1-6-01",
+     "keep": false,
+     "who": "mas",
+     "text": "nobody noticed.",
+     "why": "replaced by v3-vo-06 (\"nobody noticed.\" -> \"someone noticed.\")"
+    }
+   ],
+   "vo": [
+    {
+     "id": "v3-vo-06",
+     "who": "mas",
+     "text": "someone noticed.",
+     "kind": "read",
+     "delivery": "wonder held very still; replaces v2's \"nobody noticed.\"",
+     "take": "v3s-05 · audio/ep01/v3-sample/vo-v2 (fastrec take, from the v3 sample)",
+     "at": "start+1.2"
+    }
+   ],
+   "music": "THE ODOMETER · exhilarating · SET-PIECE SWING in major, turning on the tile (heat at the bill)",
+   "why": "Present tense, in the moment: wonder, not a caught line (sample)."
+  },
+  {
+   "id": "6.02",
+   "action": "keep",
+   "src_s": 5.0,
+   "est_s": 5.0,
+   "src_frame": "WIDE · the drop through the desk (bars 3-4)",
+   "lines": [],
+   "music": "THE ODOMETER · exhilarating · SET-PIECE SWING in major, turning on the tile (heat at the bill)",
+   "why": "unchanged"
+  },
+  {
+   "id": "6.03",
+   "action": "cut",
+   "cut_ref": "C5",
+   "src_s": 2.5,
+   "est_s": 0.0,
+   "src_frame": "WIDE · vertical scroll into the kitchen (phrase 2, bar 1)",
+   "why": "C5: the kitchen bar. The drill repeats; the size reads in half the time."
+  },
+  {
+   "id": "6.04",
+   "action": "keep",
+   "src_s": 5.0,
+   "est_s": 5.0,
+   "src_frame": "INSERT · cut up: Gerg's desk, his phone (bars 2-3)",
+   "lines": [],
+   "onscreen": {
+    "replace": {
+     "NOLE · EARLY FUNDER": "NOLE"
+    },
+    "drop": [],
+    "add": []
+   },
+   "music": "THE ODOMETER · exhilarating · SET-PIECE SWING in major, turning on the tile (heat at the bill)",
+   "why": "Nole's post stays (Gerg hearts it, Rima un-hearts it: character business). Plate cut to the name."
+  },
+  {
+   "id": "6.05",
+   "action": "cut",
+   "cut_ref": "C5",
+   "src_s": 2.0,
+   "est_s": 0.0,
+   "src_frame": "WIDE · down the shaft to bedrock (phrase 3)",
+   "why": "C5: the shaft phrase."
+  },
+  {
+   "id": "6.06",
+   "action": "keep",
+   "src_s": 1.583,
+   "est_s": 2.3,
+   "src_frame": "INSERT · the last wheel",
+   "lines": [],
+   "onscreen": {
+    "replace": {},
+    "drop": [],
+    "add": [
+     "RAIL: DEC 5, 2022 (moved from 6.07; lands with the legible 1,000,000)"
+    ]
+   },
+   "caption": "Far down, the odometer has punched into bedrock and stopped (6.05's picture, folded in). Its last wheel clicks over and settles, legible, with its date.",
+   "music": "THE ODOMETER · exhilarating · SET-PIECE SWING in major, turning on the tile (heat at the bill)",
+   "why": "+0.7 s to hold the million with its date, which moves here with 6.07 cut."
+  },
+  {
+   "id": "6.07",
+   "action": "cut",
+   "cut_ref": "C5",
+   "src_s": 3.917,
+   "est_s": 0.0,
+   "src_frame": "INSERT · cut up: Gerg's thumbs, a post composer",
+   "why": "C5: Gerg's second post insert. The odometer's 1,000,000 under DEC 5 carries the five days."
+  },
+  {
+   "id": "6.08",
+   "action": "keep",
+   "src_s": 3.625,
+   "est_s": 3.62,
+   "src_frame": "HIGH · the hole in the floor, Rima peering down",
+   "lines": [
+    {
+     "id": "e1-a1-6-03",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-6-04",
+     "keep": true
+    }
+   ],
+   "music": "THE ODOMETER · exhilarating · SET-PIECE SWING in major, turning on the tile (heat at the bill)",
+   "why": "unchanged: \"Low-key.\" / \"Very low. Basement.\""
+  },
+  {
+   "id": "6.09",
+   "action": "keep",
+   "src_s": 7.5,
+   "est_s": 7.5,
+   "src_frame": "HIGH (held) · the tile, the red glow, the second odometer (phrase 4)",
+   "lines": [],
+   "music": "the swing turns on the tile: the heat, a bass pedal under the shimmer",
+   "why": "unchanged"
+  },
+  {
+   "id": "7.01",
+   "action": "keep",
+   "src_s": 7.042,
+   "est_s": 10.21,
+   "hold_after_s": 1.8,
+   "src_frame": "MCU·PF · Mas looking down the hole",
+   "lines": [
+    {
+     "id": "e1-a1-7-01",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-7-02",
+     "keep": true
+    }
+   ],
+   "vo": [
+    {
+     "id": "v3-vo-07",
+     "who": "mas",
+     "text": "mostly the bill.",
+     "kind": "gap",
+     "delivery": "a beat after \"it's the bill.\"; the one-word correction he will say aloud to the Orb in Act Four (\"mostly.\")",
+     "take": "v3s-06 · audio/ep01/v3-sample/vo-v2 (fastrec take, from the v3 sample)",
+     "at": "after:e1-a1-7-02+0.4"
+    }
+   ],
+   "jcut": [
+    {
+     "line": "e1-a1-7-01",
+     "lead_s": 0.6
+    }
+   ],
+   "music": "THE BILL · the swing's bass pedal and the heat shimmer, then the siren through his phone",
+   "why": "J-cut: Rima's voice pulls us back up to his face. The gap, held 1.8 s; plants \"mostly.\" (S5.05)."
+  },
+  {
+   "id": "7.02",
+   "action": "keep",
+   "src_s": 3.208,
+   "est_s": 4.01,
+   "hold_after_s": 0.8,
+   "src_frame": "HIGH · the tear falls to the GPU",
+   "lines": [],
+   "music": "THE BILL · the swing's bass pedal and the heat shimmer, then the siren through his phone",
+   "why": "+0.8 s on the steam before the siren's J-cut (sample)."
+  },
+  {
+   "id": "8.01",
+   "action": "keep",
+   "src_s": 2.5,
+   "est_s": 2.5,
+   "src_frame": "INSERT · his phone on the desk (1 bar)",
+   "lines": [],
+   "onscreen": {
+    "replace": {
+     "NEWS ALERT": "ELGOOG · CODE RED"
+    },
+    "drop": [],
+    "add": []
+   },
+   "music": "ELGOOG'S CODE RED · comic panic · pizzicato, the siren as a joke (on the phone's small speaker inside the bullpen)",
+   "why": "The alert says whose alarm it is, in the world's own words ([V] facts #5), so Radnus's plate can lose \"RUNS ELGOOG\"."
+  },
+  {
+   "id": "8.02",
+   "action": "keep",
+   "src_s": 2.792,
+   "est_s": 2.79,
+   "src_frame": "POV · his phone, full-bleed: Elgoog's lobby",
+   "lines": [],
+   "music": "ELGOOG'S CODE RED · comic panic · pizzicato, the siren as a joke (on the phone's small speaker inside the bullpen)",
+   "why": "unchanged"
+  },
+  {
+   "id": "8.03",
+   "action": "keep",
+   "src_s": 3.958,
+   "est_s": 3.96,
+   "src_frame": "POV · Radnus beside the hole",
+   "lines": [
+    {
+     "id": "e1-a1-8-01",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {
+     "RADNUS · RUNS ELGOOG · POLITELY ON FIRE": "RADNUS · POLITELY ON FIRE"
+    },
+    "drop": [],
+    "add": []
+   },
+   "music": "ELGOOG'S CODE RED · comic panic · pizzicato, the siren as a joke (on the phone's small speaker inside the bullpen)",
+   "why": "The gag plate stays (one per scene); the alert and the lobby say it is Elgoog."
+  },
+  {
+   "id": "8.04",
+   "action": "keep",
+   "src_s": 21.375,
+   "est_s": 21.38,
+   "src_frame": "POV · the crypt steps, the siren, Radnus (held through the exchange)",
+   "lines": [
+    {
+     "id": "e1-a1-8-02",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-8-03",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-8-04",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-8-05",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-8-06",
+     "keep": true
+    }
+   ],
+   "music": "ELGOOG'S CODE RED · comic panic · pizzicato, the siren as a joke (on the phone's small speaker inside the bullpen)",
+   "why": "unchanged: the founders, \"It is ours. We published it.\", the badges"
+  },
+  {
+   "id": "8.05",
+   "action": "keep",
+   "src_s": 2.417,
+   "est_s": 2.42,
+   "src_frame": "POV · the lanyards",
+   "lines": [],
+   "music": "ELGOOG'S CODE RED · comic panic · pizzicato, the siren as a joke (on the phone's small speaker inside the bullpen)",
+   "why": "unchanged: GUEST, the badge thread's first link"
+  },
+  {
+   "id": "8.06",
+   "action": "keep",
+   "src_s": 2.5,
+   "est_s": 2.5,
+   "src_frame": "OTS · over Mas: the phone in his hand (1 bar)",
+   "lines": [],
+   "lcut": [
+    {
+     "sound": "the NopeAI lobby's revolving door, pre-lapped under his exit",
+     "over_s": 0.8
+    }
+   ],
+   "music": "ELGOOG'S CODE RED · comic panic · pizzicato, the siren as a joke (on the phone's small speaker inside the bullpen)",
+   "why": "unchanged (the sound-led exit was already there)"
+  },
+  {
+   "id": "9.01",
+   "action": "keep",
+   "src_s": 3.417,
+   "est_s": 5.5,
+   "arrive_s": 1.2,
+   "src_frame": "WIDE · the NopeAI lobby",
+   "lines": [],
+   "onscreen": {
+    "replace": {
+     "RAIL: JAN 23, 2023": "RAIL: JAN 23, 2023"
+    },
+    "drop": [],
+    "add": [
+     "the check, legible in the wide: MACROSOFT · \"multiyear, multibillion dollar\" · amount: $ MULTIBILLION"
+    ]
+   },
+   "caption": "Mas walks in with his glass; through the glass doors comes a novelty check, enormous, and jams in the revolving door under NOPEAI · A NONPROFIT. It is big enough to read from here.",
+   "music": "THE LANDLORD'S DEAL · caper, charming · THE JOB swing (MM-05 family), not LEVERAGE; stops on the pop; the lobby's room under the terms; back on the key ring's jangle",
+   "why": "C6: the check arrives inside the lobby wide (9.02 and 9.03 fold in). §10: the ~$10B is gone from the rail and the check; the amount field reads the company's own word, MULTIBILLION."
+  },
+  {
+   "id": "9.02",
+   "action": "merge",
+   "cut_ref": "C6",
+   "into": "9.01",
+   "src_s": 2.583,
+   "est_s": 0.0,
+   "src_frame": "WIDE (cont.) · the delivery",
+   "why": "C6: the delivery folds into the lobby wide."
+  },
+  {
+   "id": "9.03",
+   "action": "merge",
+   "cut_ref": "C6",
+   "into": "9.01",
+   "src_s": 3.292,
+   "est_s": 0.0,
+   "src_frame": "INSERT · the check",
+   "why": "C6: the check is read in the wide; its ~$10B is replaced by $ MULTIBILLION (§10)."
+  },
+  {
+   "id": "9.04",
+   "action": "keep",
+   "src_s": 3.417,
+   "est_s": 4.0,
+   "src_frame": "WIDE · FULL FREEZE: the landlord's card",
+   "lines": [],
+   "vo": [
+    {
+     "id": "v3-vo-08",
+     "who": "mas",
+     "text": "eleven keys. he's here for the twelfth.",
+     "kind": "prediction",
+     "delivery": "counting, not worried; inside the freeze, so it is the only sound but the room",
+     "take": "new",
+     "pays_off": "9.10: weeks on, Tasya's ring has a twelfth key, NopeAI beige",
+     "at": "start+0.9"
+    }
+   ],
+   "caption": "FULL FREEZE: Tasya, already in the lobby like part of the wall, the key ring at his belt. Mas keeps moving in the freeze and pockets the pen clipped to the check.",
+   "music": "THE LANDLORD'S DEAL · caper, charming · THE JOB swing (MM-05 family), not LEVERAGE; stops on the pop; the lobby's room under the terms; back on the key ring's jangle",
+   "why": "The pen goes into the freeze (9.05 folds in, C6). His voice counts the keys: who Tasya is to him (a landlord), and a prediction the picture pays at 9.10. The card is the scene's one gag card."
+  },
+  {
+   "id": "9.05",
+   "action": "merge",
+   "cut_ref": "C6",
+   "into": "9.04",
+   "src_s": 1.292,
+   "est_s": 0.0,
+   "src_frame": "INSERT · the pen into his pocket (still frozen)",
+   "why": "C6: the pen goes into the freeze."
+  },
+  {
+   "id": "9.06",
+   "action": "keep",
+   "src_s": 7.125,
+   "est_s": 7.12,
+   "src_frame": "TWO-SHOT · Mas and Tasya, the jammed door between",
+   "lines": [
+    {
+     "id": "e1-a1-9-01",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-9-02",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-9-03",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "THE CHECK · JAMMED IN THE REVOLVING DOOR"
+    ],
+    "add": []
+   },
+   "music": "THE LANDLORD'S DEAL · caper, charming · THE JOB swing (MM-05 family), not LEVERAGE; stops on the pop; the lobby's room under the terms; back on the key ring's jangle",
+   "why": "unchanged; the stick label is scaffolding"
+  },
+  {
+   "id": "9.07",
+   "action": "keep",
+   "src_s": 3.0,
+   "est_s": 3.0,
+   "src_frame": "WIDE · the check slides under the door",
+   "lines": [],
+   "music": "THE LANDLORD'S DEAL · caper, charming · THE JOB swing (MM-05 family), not LEVERAGE; stops on the pop; the lobby's room under the terms; back on the key ring's jangle",
+   "why": "unchanged"
+  },
+  {
+   "id": "9.08",
+   "action": "keep",
+   "src_s": 1.583,
+   "est_s": 1.58,
+   "src_frame": "MCU · Mas: the third collar",
+   "lines": [],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "COLLAR #3"
+    ],
+    "add": []
+   },
+   "music": "THE JOB stops on the pop",
+   "why": "The meter label is stick scaffolding; the pop and the collar are the picture."
+  },
+  {
+   "id": "9.09",
+   "action": "keep",
+   "src_s": 27.25,
+   "est_s": 28.2,
+   "src_frame": "TWO-SHOT · the terms (held: his one talk with the landlord)",
+   "lines": [
+    {
+     "id": "e1-a1-9-04",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-9-05",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-9-06",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-9-07",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-9-08",
+     "keep": true
+    }
+   ],
+   "vo": [
+    {
+     "id": "v3-vo-09",
+     "who": "mas",
+     "text": "it does.",
+     "kind": "gap",
+     "delivery": "dry, pleased, very small; then aloud, business: \"and the rent?\"",
+     "take": "new",
+     "at": "after:e1-a1-9-04+0.5"
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "COLLAR #3"
+    ],
+    "add": []
+   },
+   "music": "THE JOB stops on the pop",
+   "why": "The gap, inside the hold that is already his: \"it does.\" then \"and the rent?\""
+  },
+  {
+   "id": "9.10",
+   "action": "keep",
+   "src_s": 11.958,
+   "est_s": 12.96,
+   "arrive_s": 2.2,
+   "src_frame": "WIDE · weeks on (the time jump, then held)",
+   "lines": [
+    {
+     "id": "e1-a1-9-09",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-9-10",
+     "keep": true
+    }
+   ],
+   "caption": "Weeks on: the check scuffed grey on the floor; Tasya where he stood, a twelfth key on his ring in NopeAI beige. On the TV, GNIB.",
+   "music": "THE JOB stops on the pop",
+   "why": "+1.0 s of arrival at the time jump. The beige twelfth key pays v3-vo-08 without a word."
+  },
+  {
+   "id": "9.11",
+   "action": "keep",
+   "src_s": 2.417,
+   "est_s": 2.42,
+   "src_frame": "SCR · the lobby TV: Radnus tap-dances",
+   "lines": [],
+   "music": "THE JOB stops on the pop",
+   "why": "unchanged"
+  },
+  {
+   "id": "9.12",
+   "action": "keep",
+   "src_s": 4.917,
+   "est_s": 4.92,
+   "src_frame": "SCR · the TV: the telescope, the ticker",
+   "lines": [],
+   "music": "THE JOB stops on the pop",
+   "why": "unchanged"
+  },
+  {
+   "id": "9.13",
+   "action": "keep",
+   "src_s": 4.5,
+   "est_s": 5.5,
+   "hold_after_s": 1.4,
+   "src_frame": "TWO-SHOT · Gerg looks from the TV to Mas",
+   "lines": [
+    {
+     "id": "e1-a1-9-11",
+     "keep": true
+    }
+   ],
+   "jcut": [
+    {
+     "sound": "the Build's chip arpeggio (sc 11's left pane) under the laptop's close",
+     "lead_s": 0.8
+    }
+   ],
+   "music": "THE JOB stops on the pop",
+   "why": "Aftermath +1.0 s on Gerg's closed laptop, the first half of the match cut into sc 11 (the bridge Sydney's tick used to be)."
+  },
+  {
+   "id": "10.01",
+   "action": "cut",
+   "cut_ref": "C1",
+   "src_s": 3.583,
+   "est_s": 0.0,
+   "src_frame": "WIDE · a chat bubble drifts in",
+   "why": "C1: Sydney moves to Ep2 with her real line. The newcomer couldn't read \"5 turns\" or \"remember me\"; nobody in our story wants anything in it."
+  },
+  {
+   "id": "10.02",
+   "action": "cut",
+   "cut_ref": "C1",
+   "src_s": 19.0,
+   "est_s": 0.0,
+   "src_frame": "TWO-SHOT · Mas and Sydney, a pixel too close (held)",
+   "why": "C1"
+  },
+  {
+   "id": "10.03",
+   "action": "cut",
+   "cut_ref": "C1",
+   "src_s": 4.25,
+   "est_s": 0.0,
+   "src_frame": "TWO-SHOT · Tasya and Sydney: the egg timer",
+   "why": "C1"
+  },
+  {
+   "id": "10.04",
+   "action": "cut",
+   "cut_ref": "C1",
+   "src_s": 3.042,
+   "est_s": 0.0,
+   "src_frame": "WIDE · she floats back out the door",
+   "why": "C1"
+  },
+  {
+   "id": "11.01",
+   "action": "keep",
+   "src_s": 1.583,
+   "est_s": 3.0,
+   "arrive_s": 3.0,
+   "src_frame": "WIDE · the bullpen from the aisle (pre-beat)",
+   "lines": [],
+   "onscreen": {
+    "replace": {
+     "RAIL: MAR 3, 2023": "RAIL: MAR 14, 2023"
+    },
+    "drop": [],
+    "add": [
+     "GTP-4 (the demo banner)"
+    ]
+   },
+   "caption": "MATCH CUT: Gerg's laptop, which closed in the lobby, opens in the bullpen, now dressed as a demo stage under a hand-lettered GTP-4 banner. Mas at his end desk behind it.",
+   "music": "THE DUEL · rivalry · MM-04 Lighthouse: the Build (chip, left pane) against the Addendum (quartet, right)",
+   "why": "Repurposed as the duel's arrival (C2 cuts the crate, C1 cuts Sydney's tick). A match cut where two places rhyme, led by the Build."
+  },
+  {
+   "id": "11.02",
+   "action": "cut",
+   "cut_ref": "C2",
+   "src_s": 10.292,
+   "est_s": 0.0,
+   "src_frame": "INSERT · the wall monitor: an imageboard (his look motivates it)",
+   "why": "C2: Kram's crate (the Atem weights leak). No stakes for anyone in the scene; Atem stays on the intro poster."
+  },
+  {
+   "id": "11.03",
+   "action": "keep",
+   "src_s": 10.0,
+   "est_s": 11.5,
+   "src_frame": "SPLIT · the bullpen | the lighthouse (phrase 1)",
+   "lines": [
+    {
+     "id": "e1-a1-11-01",
+     "keep": true
+    }
+   ],
+   "vo": [
+    {
+     "id": "v3-vo-10",
+     "who": "mas",
+     "text": "mario used to sit where gerg sits. he left to build a careful one.",
+     "kind": "warmth",
+     "delivery": "plain, a little wistful on \"used to\"; \"a careful one\" is wry about his own lab, never a dig at Mario",
+     "take": "new",
+     "at": "start+0.8"
+    }
+   ],
+   "onscreen": {
+    "replace": {
+     "MARIO · EX-NOPEAI · THE CAREFUL RIVAL": "MARIO"
+    },
+    "drop": [
+     "RAIL: MAR 14, 2023"
+    ],
+    "add": []
+   },
+   "music": "THE DUEL · rivalry · MM-04 Lighthouse: the Build (chip, left pane) against the Addendum (quartet, right)",
+   "why": "Mas's voice introduces Mario (who he is to him), so the plate is his name. The rail moved to 11.01. +1.5 s."
+  },
+  {
+   "id": "11.04",
+   "action": "keep",
+   "src_s": 10.0,
+   "est_s": 10.0,
+   "src_frame": "SPLIT · phrase 2",
+   "lines": [
+    {
+     "id": "e1-a1-11-02",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-11-03",
+     "keep": true
+    }
+   ],
+   "music": "THE DUEL · rivalry · MM-04 Lighthouse: the Build (chip, left pane) against the Addendum (quartet, right)",
+   "why": "unchanged"
+  },
+  {
+   "id": "11.05",
+   "action": "keep",
+   "cut_ref": "C3",
+   "src_s": 10.0,
+   "est_s": 5.0,
+   "src_frame": "SPLIT · phrase 3",
+   "lines": [],
+   "music": "THE DUEL · rivalry · MM-04 Lighthouse: the Build (chip, left pane) against the Addendum (quartet, right)",
+   "why": "C3: phrase 3 at 2 bars: the post pops, holds to read, the bullpen cheers; Mario adds a line."
+  },
+  {
+   "id": "11.06",
+   "action": "keep",
+   "cut_ref": "C3",
+   "src_s": 10.0,
+   "est_s": 5.0,
+   "hold_after_s": 0.6,
+   "src_frame": "SPLIT · phrase 4, the turn: the scroll crosses the line",
+   "lines": [],
+   "music": "THE DUEL · rivalry · MM-04 Lighthouse: the Build (chip, left pane) against the Addendum (quartet, right)",
+   "why": "C3: phrase 4 at 2 bars: the scroll crosses the split, MEMO -> WEBSITE, the empty spindle."
+  },
+  {
+   "id": "12.01",
+   "action": "keep",
+   "src_s": 4.292,
+   "est_s": 4.29,
+   "src_frame": "OTS · over Mas onto his monitor, then the push",
+   "lines": [],
+   "jcut": [
+    {
+     "sound": "the monitor's toast pop",
+     "lead_s": 0.4
+    }
+   ],
+   "music": "THE PAUSE LETTER · a chill · MM-17 low from the push; THREAT (MM-14) once, on the pen's lift",
+   "why": "unchanged"
+  },
+  {
+   "id": "12.02",
+   "action": "keep",
+   "src_s": 10.667,
+   "est_s": 10.67,
+   "src_frame": "WIDE · a standing desk in the dark",
+   "lines": [
+    {
+     "id": "e1-a1-12-01",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-12-02",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-12-03",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {
+     "NOLE · EARLY FUNDER · BUILDING HIS OWN": "NOLE · BUILDING HIS OWN",
+     "OIGNEB · AI PIONEER · CITATIONS: ↑": "OIGNEB"
+    },
+    "drop": [],
+    "add": []
+   },
+   "music": "THE PAUSE LETTER · a chill · MM-17 low from the push; THREAT (MM-14) once, on the pen's lift",
+   "why": "Nole's BUILDING HIS OWN is the scene's one gag plate (the plant C4 keeps); Oigneb is his name."
+  },
+  {
+   "id": "12.03",
+   "action": "cut",
+   "cut_ref": "C4",
+   "src_s": 4.708,
+   "est_s": 0.0,
+   "src_frame": "HIGH · the EMIT page lands",
+   "why": "C4: the EMIT page (Rezeile). The newcomer didn't know who or what."
+  },
+  {
+   "id": "12.04",
+   "action": "keep",
+   "src_s": 2.292,
+   "est_s": 2.5,
+   "src_frame": "HIGH · HARD CUT to his desk: Mas writing, the MACROSOFT pen",
+   "lines": [],
+   "jcut": [
+    {
+     "sound": "the pen's scratch, under Nole's last word",
+     "lead_s": 0.5
+    }
+   ],
+   "caption": "The push comes back out of the monitor to his own desk, from above: Mas is already writing, with the MACROSOFT pen from the check. One word: PLEASE.",
+   "music": "THE PAUSE LETTER · a chill · MM-17 low from the push; THREAT (MM-14) once, on the pen's lift",
+   "why": "Without the thud, the cut back to his desk is led by the pen's scratch."
+  },
+  {
+   "id": "12.05",
+   "action": "keep",
+   "src_s": 2.5,
+   "est_s": 2.5,
+   "src_frame": "MCU·glass · Mas bent over the sheet; Alyi in the doorway again, seen in the glass (1 bar)",
+   "lines": [],
+   "caption": "In the conference-room glass, Alyi's reflection is back in its doorway, reading the pause letter on his phone (PAUSE GIANT AI EXPERIMENTS). It doesn't look at Mas. Mas doesn't look up.",
+   "music": "THE PAUSE LETTER · a chill · MM-17 low from the push; THREAT (MM-14) once, on the pen's lift",
+   "why": "The reflection reads the public letter, the page the whole industry read that week, not the cut op-ed; it still plays dry (no score, no motive)."
+  },
+  {
+   "id": "12.06",
+   "action": "keep",
+   "src_s": 2.5,
+   "est_s": 2.5,
+   "src_frame": "INSERT · the sheet (1 bar)",
+   "lines": [],
+   "music": "THE PAUSE LETTER · a chill · MM-17 low from the push; THREAT (MM-14) once, on the pen's lift",
+   "why": "unchanged: THREAT once, on the lift"
+  },
+  {
+   "id": "12.07",
+   "action": "keep",
+   "src_s": 1.0,
+   "est_s": 1.0,
+   "src_frame": "BLACK · the act-out",
+   "lines": [],
+   "music": "THE PAUSE LETTER · a chill · MM-17 low from the push; THREAT (MM-14) once, on the pen's lift",
+   "why": "unchanged"
+  }
+ ]
+}

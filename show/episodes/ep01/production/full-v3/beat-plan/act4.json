@@ -1,0 +1,2148 @@
+{
+ "segment": "act4",
+ "source": "show/reel/ep01-act4-v5.json",
+ "_about": "v3-script beat plan (show/episodes/ep01/production/full-v3/PLAN.md §2). Written against the source timeline's beat ids; every source beat appears once (keep, cut or merge), plus the new beats. est_s is a planning length from word counts and the takes already on file, never a measurement: the v3 lock sets frames from the takes. vo.at = \"start+S\" | \"after:<line id>+S\" | \"before:<line id>-S\". Lines of kept beats are listed keep true/false; new and changed lines carry v3-<seg>-NNNN ids; V.O. lines carry v3-vo-NN ids, and \"take\" says whether a sample take exists. The script is show/episodes/ep01/script.md draft 6; the notes are ../script-v3-notes.md.",
+ "story_s": {
+  "source": 518.46,
+  "estimate": 520.6
+ },
+ "beats": [
+  {
+   "id": "S1.01",
+   "action": "keep",
+   "src_s": 3.5,
+   "est_s": 5.6,
+   "arrive_s": 1.8,
+   "src_frame": "WIDE · establishing",
+   "lines": [],
+   "vo": [
+    {
+     "id": "v3-vo-17",
+     "who": "mas",
+     "text": "the race is tomorrow. the board wants noon today.",
+     "kind": "read",
+     "delivery": "unbothered, logistical; the Strip's engines under it",
+     "take": "new",
+     "at": "start+1.8"
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "caption": "The suite over the Strip, race-weekend banners below (generic: no real series' name, logo or livery), practice-lap engines far off. A crane truck grinds past; every glass shivers except his.",
+   "music": "NOON, LAS VEGAS · suspense · DARK ROOM felt into BLUEPRINT (MM-07); LEVERAGE low from the connect to the Cancel click; then digital silence",
+   "why": "Arrival (sample, 3.5 -> 5.5 s) plus his read: why Vegas, and that the board wants noon. HIS SIDE badge gone."
+  },
+  {
+   "id": "S1.02",
+   "action": "keep",
+   "src_s": 2.5,
+   "est_s": 2.5,
+   "src_frame": "INSERT · hand, glass, laptop",
+   "lines": [],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "caption": "His hand nudges the glass true. On the laptop: BOARD · VIDEO CALL · JOIN, and under it four small attendee icons: a door, a glowing page, a spinner, a black square. None is green.",
+   "music": "NOON, LAS VEGAS · suspense · DARK ROOM felt into BLUEPRINT (MM-07); LEVERAGE low from the connect to the Cancel click; then digital silence",
+   "why": "The attendee row must read here: v3-vo-18 notices who is missing."
+  },
+  {
+   "id": "S1.03",
+   "action": "keep",
+   "src_s": 11.75,
+   "est_s": 11.75,
+   "src_frame": "GFX · THE SHEET",
+   "lines": [
+    {
+     "id": "a5-25-01",
+     "keep": true
+    },
+    {
+     "id": "a5-25-02",
+     "keep": true
+    },
+    {
+     "id": "a5-25-03",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "NOON, LAS VEGAS · suspense · DARK ROOM felt into BLUEPRINT (MM-07); LEVERAGE low from the connect to the Cancel click; then digital silence",
+   "why": "unchanged: THE PLAN is the show's voice; no V.O."
+  },
+  {
+   "id": "S1.04",
+   "action": "keep",
+   "cut_ref": "C16",
+   "src_s": 9.958,
+   "est_s": 9.5,
+   "src_frame": "GFX · detail: THE ZEROS",
+   "lines": [
+    {
+     "id": "a5-25-04",
+     "keep": true
+    },
+    {
+     "id": "a5-25-05",
+     "keep": true
+    },
+    {
+     "id": "a5-25-06",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {
+     "MACROSOFT · ~$10B IN": "MACROSOFT · BILLIONS IN",
+     "EQUITY: 0 (HE TOLD THE SENATE)": "EQUITY: 0"
+    },
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "NOON, LAS VEGAS · suspense · DARK ROOM felt into BLUEPRINT (MM-07); LEVERAGE low from the connect to the Cancel click; then digital silence",
+   "why": "§10: \"billions\" (Neleh's own word) on the key ring; EQUITY: 0 alone, since Act Two now has him say it (C16 trims 0.46 s)."
+  },
+  {
+   "id": "S1.05",
+   "action": "keep",
+   "src_s": 3.208,
+   "est_s": 3.21,
+   "src_frame": "GFX · the path and the break",
+   "lines": [],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "NOON, LAS VEGAS · suspense · DARK ROOM felt into BLUEPRINT (MM-07); LEVERAGE low from the connect to the Cancel click; then digital silence",
+   "why": "unchanged"
+  },
+  {
+   "id": "S1.06",
+   "action": "keep",
+   "src_s": 1.5,
+   "est_s": 5.3,
+   "hold_after_s": 0.7,
+   "src_frame": "INSERT · trackpad, JOIN",
+   "lines": [],
+   "vo": [
+    {
+     "id": "v3-vo-18",
+     "who": "mas",
+     "text": "gerg's not on it. alyi set it up. probably just the budget.",
+     "kind": "gap",
+     "delivery": "he notices, and explains it away; the last four words easy and wrong. The only read in the episode he gets wrong. Then nothing inside him until \"super.\"",
+     "take": "new (the sample take v3s-07 holds the last two sentences; re-record whole)",
+     "at": "start+0.4"
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "caption": "His finger over JOIN while he thinks it through. Then the click; the waltz tape-stops on it.",
+   "music": "NOON, LAS VEGAS · suspense · DARK ROOM felt into BLUEPRINT (MM-07); LEVERAGE low from the connect to the Cancel click; then digital silence",
+   "why": "The one read he gets wrong, just after we have seen the board's plan: suspense by dramatic irony (sample). Then silence inside him for the whole blow."
+  },
+  {
+   "id": "S1.07",
+   "action": "keep",
+   "src_s": 5.5,
+   "est_s": 5.5,
+   "src_frame": "POV · the call grid (his laptop)",
+   "lines": [],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "NOON, LAS VEGAS · suspense · DARK ROOM felt into BLUEPRINT (MM-07); LEVERAGE low from the connect to the Cancel click; then digital silence",
+   "why": "unchanged: no V.O. from the call through \"super.\""
+  },
+  {
+   "id": "S1.08",
+   "action": "keep",
+   "src_s": 1.25,
+   "est_s": 1.25,
+   "src_frame": "SINGLE · ECU his eyes",
+   "lines": [],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "NOON, LAS VEGAS · suspense · DARK ROOM felt into BLUEPRINT (MM-07); LEVERAGE low from the connect to the Cancel click; then digital silence",
+   "why": "unchanged"
+  },
+  {
+   "id": "S1.09",
+   "action": "keep",
+   "src_s": 4.792,
+   "est_s": 4.79,
+   "src_frame": "POV · the call grid",
+   "lines": [],
+   "onscreen": {
+    "replace": {
+     "ALYI / CO-FOUNDER": "ALYI"
+    },
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "NOON, LAS VEGAS · suspense · DARK ROOM felt into BLUEPRINT (MM-07); LEVERAGE low from the connect to the Cancel click; then digital silence",
+   "why": "Launch night told us what Alyi is to him; the arrow's tag is his name."
+  },
+  {
+   "id": "S1.10",
+   "action": "keep",
+   "src_s": 1.0,
+   "est_s": 1.0,
+   "src_frame": "SINGLE · CU Mas, still",
+   "lines": [],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "NOON, LAS VEGAS · suspense · DARK ROOM felt into BLUEPRINT (MM-07); LEVERAGE low from the connect to the Cancel click; then digital silence",
+   "why": "unchanged"
+  },
+  {
+   "id": "S1.11",
+   "action": "keep",
+   "src_s": 1.917,
+   "est_s": 1.92,
+   "src_frame": "INSERT · his phone",
+   "lines": [],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "NOON, LAS VEGAS · suspense · DARK ROOM felt into BLUEPRINT (MM-07); LEVERAGE low from the connect to the Cancel click; then digital silence",
+   "why": "unchanged"
+  },
+  {
+   "id": "S1.12",
+   "action": "keep",
+   "src_s": 2.208,
+   "est_s": 4.6,
+   "hold_after_s": 3.0,
+   "src_frame": "OTS · over Mas onto the laptop",
+   "lines": [
+    {
+     "id": "a5-26-01",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "NOON, LAS VEGAS · suspense · DARK ROOM felt into BLUEPRINT (MM-07); LEVERAGE low from the connect to the Cancel click; then digital silence",
+   "why": "Aftermath of the act's biggest turn: the frozen tiles, the room, no score (sample, 2.2 -> 4.6 s)."
+  },
+  {
+   "id": "S2.01",
+   "action": "keep",
+   "src_s": 4.125,
+   "est_s": 4.12,
+   "src_frame": "INSERT · the desk, the carve",
+   "lines": [
+    {
+     "id": "a5-26a-01",
+     "keep": true,
+     "vo_map": "v3-vo-19",
+     "note": "kept V.O. take, unchanged text: i don't keep score."
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THAT NIGHT · after the silence · DARK ROOM, one felt line; the pedal only under the flash",
+   "why": "\"i don't keep score.\" stays (the kept take, now v3-vo-19): his voice back after the silence."
+  },
+  {
+   "id": "S2.02",
+   "action": "keep",
+   "src_s": 1.792,
+   "est_s": 1.79,
+   "src_frame": "INSERT · the three marks, from above",
+   "lines": [],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THAT NIGHT · after the silence · DARK ROOM, one felt line; the pedal only under the flash",
+   "why": "unchanged"
+  },
+  {
+   "id": "S2.03",
+   "action": "keep",
+   "cut_ref": "C16",
+   "src_s": 4.0,
+   "est_s": 3.5,
+   "src_frame": "FLASH · F1.2 TPOOL",
+   "lines": [],
+   "onscreen": {
+    "replace": {
+     "RAIL: TPOOL, HIS FIRST COMPANY · TWO STAFF REVOLTS": "RAIL: TPOOL, HIS FIRST COMPANY"
+    },
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THAT NIGHT · after the silence · DARK ROOM, one felt line; the pedal only under the flash",
+   "why": "§10: the count leaves the rail; the two shadows at a door carry it. The shorter rail reads faster (C16 trim 0.5 s)."
+  },
+  {
+   "id": "S2.04",
+   "action": "keep",
+   "src_s": 1.5,
+   "est_s": 1.5,
+   "src_frame": "INSERT · the marks",
+   "lines": [],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THAT NIGHT · after the silence · DARK ROOM, one felt line; the pedal only under the flash",
+   "why": "unchanged"
+  },
+  {
+   "id": "S2.05",
+   "action": "keep",
+   "src_s": 2.5,
+   "est_s": 2.5,
+   "src_frame": "SINGLE · the Orb's iris",
+   "lines": [],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "caption": "The iris lifts to his face. Toast: rewinding… A whip right to left, into the same noon from the board's side.",
+   "music": "THAT NIGHT · after the silence · DARK ROOM, one felt line; the pedal only under the flash",
+   "why": "No badge flip: the whip, the rewinding toast and the call's 11:59 say where we are, and his voice going quiet says whose side."
+  },
+  {
+   "id": "S3.00a",
+   "action": "keep",
+   "src_s": 18.958,
+   "est_s": 19.96,
+   "arrive_s": 3.4,
+   "src_frame": "OTS · over Neleh onto her laptop (held, slow push)",
+   "lines": [
+    {
+     "id": "a5-27-01",
+     "keep": true
+    },
+    {
+     "id": "a5-27-02",
+     "keep": true
+    },
+    {
+     "id": "a5-27-03",
+     "keep": true
+    },
+    {
+     "id": "a5-27-04",
+     "keep": true
+    }
+   ],
+   "jcut": [
+    {
+     "sound": "Neleh's office: the clock-tick and the call's waiting tone, under the whip's tail",
+     "lead_s": 0.6
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: THE BOARD'S SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter: clockwork pizzicato, the pedal and the tick under the talk",
+   "why": "+1.0 s arrival: Neleh's desk at 11:59, before the fifth tile connects."
+  },
+  {
+   "id": "S3.01",
+   "action": "keep",
+   "src_s": 3.708,
+   "est_s": 3.71,
+   "src_frame": "SCREEN · her laptop, full frame",
+   "lines": [
+    {
+     "id": "a5-27-05",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: THE BOARD'S SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter: clockwork pizzicato, the pedal and the tick under the talk",
+   "why": "unchanged"
+  },
+  {
+   "id": "S3.02",
+   "action": "keep",
+   "src_s": 2.583,
+   "est_s": 2.58,
+   "src_frame": "OVERHEAD · her desk",
+   "lines": [
+    {
+     "id": "a5-27-06",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: THE BOARD'S SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter: clockwork pizzicato, the pedal and the tick under the talk",
+   "why": "unchanged"
+  },
+  {
+   "id": "S3.03",
+   "action": "keep",
+   "src_s": 15.5,
+   "est_s": 15.5,
+   "src_frame": "SCREEN · the blog, in its own UI",
+   "lines": [
+    {
+     "id": "a5-27-07",
+     "keep": true
+    },
+    {
+     "id": "a5-27-08",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: THE BOARD'S SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter: clockwork pizzicato, the pedal and the tick under the talk",
+   "why": "unchanged"
+  },
+  {
+   "id": "S3.04",
+   "action": "keep",
+   "src_s": 19.25,
+   "est_s": 19.25,
+   "src_frame": "OTS · over Neleh onto the grid (held)",
+   "lines": [
+    {
+     "id": "a5-27-09",
+     "keep": true
+    },
+    {
+     "id": "a5-27-10",
+     "keep": true
+    },
+    {
+     "id": "a5-27-11",
+     "keep": true
+    },
+    {
+     "id": "a5-27-12",
+     "keep": true
+    },
+    {
+     "id": "a5-27-13",
+     "keep": true
+    },
+    {
+     "id": "a5-27-14",
+     "keep": true
+    },
+    {
+     "id": "a5-27-15",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "RIMA TAMURI · HIS CTO",
+     "side badge: THE BOARD'S SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter: clockwork pizzicato, the pedal and the tick under the talk",
+   "why": "The repeat intro goes (insider read); we met her on launch night."
+  },
+  {
+   "id": "S3.04b",
+   "action": "keep",
+   "src_s": 3.583,
+   "est_s": 3.58,
+   "src_frame": "SINGLE · MCU Neleh, one brow up",
+   "lines": [
+    {
+     "id": "a5-27-16",
+     "keep": true
+    },
+    {
+     "id": "a5-27-17",
+     "keep": true
+    }
+   ],
+   "jcut": [
+    {
+     "sound": "the all-hands crowd's hush",
+     "lead_s": 0.8
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: THE BOARD'S SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter: clockwork pizzicato, the pedal and the tick under the talk",
+   "why": "unchanged"
+  },
+  {
+   "id": "S3.06",
+   "action": "keep",
+   "src_s": 3.958,
+   "est_s": 3.96,
+   "src_frame": "WIDE · the all-hands, from the back",
+   "lines": [
+    {
+     "id": "a5-27-18",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: THE BOARD'S SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter: clockwork pizzicato, the pedal and the tick under the talk",
+   "why": "unchanged"
+  },
+  {
+   "id": "S3.07",
+   "action": "keep",
+   "src_s": 10.042,
+   "est_s": 10.84,
+   "hold_after_s": 1.6,
+   "src_frame": "SINGLE · MCU Alyi in the doorway (held)",
+   "lines": [
+    {
+     "id": "a5-27-19",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: THE BOARD'S SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter: clockwork pizzicato, the pedal and the tick under the talk",
+   "why": "+0.8 s: the doorway empties before the match cut back."
+  },
+  {
+   "id": "S3.05",
+   "action": "keep",
+   "src_s": 10.583,
+   "est_s": 10.58,
+   "src_frame": "SCREEN · her laptop, evening",
+   "lines": [
+    {
+     "id": "a5-27-20",
+     "keep": true
+    },
+    {
+     "id": "a5-27-21",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: THE BOARD'S SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter: clockwork pizzicato, the pedal and the tick under the talk",
+   "why": "unchanged: \"Gerg has never waited to be asked.\""
+  },
+  {
+   "id": "S4.01",
+   "action": "keep",
+   "src_s": 4.792,
+   "est_s": 4.79,
+   "src_frame": "SCREEN · the boardroom's wall screen",
+   "lines": [],
+   "jcut": [
+    {
+     "sound": "the heart gliss, stacking",
+     "lead_s": 0.5
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: THE BOARD'S SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter: clockwork pizzicato, the pedal and the tick under the talk",
+   "why": "unchanged"
+  },
+  {
+   "id": "S4.02",
+   "action": "keep",
+   "src_s": 15.25,
+   "est_s": 18.55,
+   "src_frame": "WIDE · the boardroom at night (held)",
+   "lines": [
+    {
+     "id": "a5-27-22",
+     "keep": true
+    },
+    {
+     "id": "a5-27-23",
+     "keep": true
+    },
+    {
+     "id": "a5-27-28",
+     "keep": true,
+     "moved_from": "S4.06",
+     "after": "a5-27-23",
+     "gap_s": 1.6,
+     "delivery": "reflection, not turning, a loaded beat after the first phone goes over the edge (clack)"
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: THE BOARD'S SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "caption": "The boardroom at night, held: four phones buzz and step toward the edge. After Neleh's second turn the first phone goes over: clack. Alyi's reflection, not turning: \"That is the company telling us.\"",
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter: clockwork pizzicato, the pedal and the tick under the talk",
+   "why": "C13 with a sliver: the volley goes, and Alyi's one line stays so THE PLAN's \"Not the other way round.\" still turns. The first phone's fall moves here from S4.06."
+  },
+  {
+   "id": "S4.04",
+   "action": "cut",
+   "cut_ref": "C13",
+   "src_s": 6.917,
+   "est_s": 0.0,
+   "src_frame": "OTS · over Neleh onto the window (Alyi's reflection)",
+   "why": "C13: \"Step four will reveal itself.\" / \"When?\" / \"The company will tell us.\" S4.02 already says the board has nothing for Monday."
+  },
+  {
+   "id": "S4.06",
+   "action": "merge",
+   "cut_ref": "C13",
+   "into": "S4.02",
+   "src_s": 9.333,
+   "est_s": 0.0,
+   "src_frame": "TWO-SHOT · Neleh and Mada, Alyi's reflection between",
+   "why": "C13: \"That isn't a time, Alyi…\" is cut; the clack and \"That is the company telling us.\" move into S4.02."
+  },
+  {
+   "id": "S4.07",
+   "action": "keep",
+   "src_s": 5.0,
+   "est_s": 5.0,
+   "hold_after_s": 1.0,
+   "src_frame": "SINGLE · MCU Neleh (her real face)",
+   "lines": [
+    {
+     "id": "a5-27-29",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: THE BOARD'S SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter: clockwork pizzicato, the pedal and the tick under the talk",
+   "why": "unchanged: Neleh's moment that isn't a joke (the blank line), held"
+  },
+  {
+   "id": "S4.08",
+   "action": "keep",
+   "cut_ref": "C14",
+   "src_s": 28.042,
+   "est_s": 21.5,
+   "src_frame": "SPLIT · both calls, one held shot",
+   "lines": [
+    {
+     "id": "a5-27-30",
+     "keep": true
+    },
+    {
+     "id": "a5-27-31",
+     "keep": true
+    },
+    {
+     "id": "a5-27-32",
+     "keep": true
+    },
+    {
+     "id": "a5-27-33",
+     "keep": false,
+     "who": "adelina",
+     "text": "It's Nozama. About the money.",
+     "why": "C14"
+    },
+    {
+     "id": "a5-27-34",
+     "keep": false,
+     "who": "mario",
+     "text": "Hi. Yes. We're very worried. How much?",
+     "why": "C14"
+    }
+   ],
+   "onscreen": {
+    "replace": {
+     "ADELINA · MARIO'S CO-FOUNDER": "ADELINA"
+    },
+    "drop": [
+     "MARIO · RUNS THE RIVAL LAB",
+     "NOZAMA",
+     "NOZAMA · UP TO $4B  ·  ELGOOG · UP TO $2B",
+     "side badge: THE BOARD'S SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "caption": "Both calls in one held split. Neleh offers Mario the job; he has eleven pages; Adelina takes the phone: no. Click. In the left pane, Neleh and Mada listen to a dial tone.",
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter: clockwork pizzicato, the pedal and the tick under the talk",
+   "why": "C14: Mario's second call goes (sc 19 told the money joke). Mario needs no plate by now; Adelina is her name."
+  },
+  {
+   "id": "S4.09",
+   "action": "keep",
+   "src_s": 15.375,
+   "est_s": 15.38,
+   "src_frame": "OTS · over Neleh onto the lobby camera",
+   "lines": [
+    {
+     "id": "a5-27-35",
+     "keep": true
+    },
+    {
+     "id": "a5-27-36",
+     "keep": true
+    },
+    {
+     "id": "a5-27-37",
+     "keep": true
+    }
+   ],
+   "jcut": [
+    {
+     "sound": "the lobby camera's CCTV hum",
+     "lead_s": 0.5
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: THE BOARD'S SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter: clockwork pizzicato, the pedal and the tick under the talk",
+   "why": "unchanged: the talks with Mas said plainly"
+  },
+  {
+   "id": "S4.10",
+   "action": "keep",
+   "src_s": 4.0,
+   "est_s": 4.0,
+   "src_frame": "WIDE · the boardroom, now night",
+   "lines": [],
+   "onscreen": {
+    "replace": {
+     "TTEMME · RAN A STREAMING SITE": "TTEMME"
+    },
+    "drop": [
+     "side badge: THE BOARD'S SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter: clockwork pizzicato, the pedal and the tick under the talk",
+   "why": "The headset and LIVE · CHAT say what he did; the plate is his name."
+  },
+  {
+   "id": "S4.10b",
+   "action": "keep",
+   "src_s": 15.25,
+   "est_s": 15.25,
+   "src_frame": "TWO-SHOT · Neleh and Ttemme across the table (held)",
+   "lines": [
+    {
+     "id": "a5-27-38",
+     "keep": true
+    },
+    {
+     "id": "a5-27-39",
+     "keep": true
+    },
+    {
+     "id": "a5-27-40",
+     "keep": true
+    },
+    {
+     "id": "a5-27-41",
+     "keep": true
+    },
+    {
+     "id": "a5-27-42",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: THE BOARD'S SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter: clockwork pizzicato, the pedal and the tick under the talk",
+   "why": "unchanged: the sealed folder"
+  },
+  {
+   "id": "S4.11",
+   "action": "keep",
+   "src_s": 3.375,
+   "est_s": 3.38,
+   "src_frame": "LOW · desk level, the hourglass",
+   "lines": [
+    {
+     "id": "a5-27-43",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {
+     "LIVE · CHAT:  F  F  F  F": "LIVE · CHAT (the F spam as a small egg, no hold)"
+    },
+    "drop": [
+     "side badge: THE BOARD'S SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter: clockwork pizzicato, the pedal and the tick under the talk",
+   "why": "The F meme stays an egg; the line carries the runner."
+  },
+  {
+   "id": "S4.12",
+   "action": "keep",
+   "src_s": 2.917,
+   "est_s": 2.92,
+   "src_frame": "TWO-SHOT · Neleh and Mada",
+   "lines": [],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: THE BOARD'S SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter: clockwork pizzicato, the pedal and the tick under the talk",
+   "why": "unchanged"
+  },
+  {
+   "id": "S4.13",
+   "action": "keep",
+   "cut_ref": "C15",
+   "src_s": 6.5,
+   "est_s": 6.5,
+   "src_frame": "SINGLE · MCU Tasya in the new doorway",
+   "lines": [
+    {
+     "id": "a5-27-44",
+     "keep": true
+    },
+    {
+     "id": "a5-27-45",
+     "keep": false,
+     "who": "tasya",
+     "text": "We look forward to getting to know Ttemme and NopeAI's new leadership team and working with them. And we're extremely excited to share the news that Mas Manalt and Gerg Mockbran, together with colleagues, will be joining Macrosoft to lead a new advanced AI research team.",
+     "why": "C15: replaced by v3-a4-0001 (the second sentence alone)"
+    },
+    {
+     "id": "v3-a4-0001",
+     "new": true,
+     "who": "tasya",
+     "text": "\"…we're extremely excited to share the news that Mas Manalt and Gerg Mockbran, together with colleagues, will be joining Macrosoft to lead a new advanced AI research team.\"",
+     "after": "a5-27-44",
+     "gap_s": 0.6,
+     "delivery": "reading from his phone with pleasure, unhurried, one finished sentence; the ellipsis is a print mark, not a trail",
+     "tag": "[V · NOV 19, 2023 · the statement's second sentence (fetched from the primary source 2026-09-26); the first sentence is cut (C15). Replaces a5-27-45]"
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "TASYA · THE LANDLORD · MACROSOFT · NOPEAI RUNS ON ITS SERVERS",
+     "side badge: THE BOARD'S SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter: clockwork pizzicato, the pedal and the tick under the talk",
+   "why": "C15: the statement's first sentence goes; the second (who is joining Macrosoft) is the news. No repeat plate: we met Tasya in the lobby."
+  },
+  {
+   "id": "S4.13c",
+   "action": "cut",
+   "cut_ref": "C15",
+   "src_s": 6.0,
+   "est_s": 0.0,
+   "src_frame": "MEDIUM · Ttemme in the CEO chair, Tasya beyond",
+   "why": "C15: the first sentence's landing on Ttemme."
+  },
+  {
+   "id": "S4.13d",
+   "action": "keep",
+   "src_s": 7.417,
+   "est_s": 7.42,
+   "src_frame": "TWO-SHOT · Neleh and Alyi's reflection",
+   "lines": [],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: THE BOARD'S SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter: clockwork pizzicato, the pedal and the tick under the talk",
+   "why": "unchanged: the second sentence lands on the board"
+  },
+  {
+   "id": "S4.13e",
+   "action": "keep",
+   "src_s": 3.0,
+   "est_s": 3.0,
+   "src_frame": "SINGLE · MCU Tasya lifts the sign",
+   "lines": [],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: THE BOARD'S SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter: clockwork pizzicato, the pedal and the tick under the talk",
+   "why": "unchanged: MAS · GERG ->"
+  },
+  {
+   "id": "S4.14",
+   "action": "keep",
+   "src_s": 2.458,
+   "est_s": 2.46,
+   "src_frame": "OVERHEAD · the blueprint",
+   "lines": [
+    {
+     "id": "a5-27-46",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: THE BOARD'S SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter: clockwork pizzicato, the pedal and the tick under the talk",
+   "why": "unchanged"
+  },
+  {
+   "id": "S4.15",
+   "action": "keep",
+   "src_s": 2.5,
+   "est_s": 2.5,
+   "src_frame": "SINGLE · MCU Mada",
+   "lines": [],
+   "jcut": [
+    {
+     "sound": "the dark room's drone, under Mada's held note",
+     "lead_s": 1.0
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: THE BOARD'S SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter: clockwork pizzicato, the pedal and the tick under the talk",
+   "why": "The board's side ends on Mada; the dark room is heard before it is seen (the door back, now sound instead of a card)."
+  },
+  {
+   "id": "S5.01",
+   "action": "cut",
+   "cut_ref": "C16",
+   "src_s": 1.75,
+   "est_s": 0.0,
+   "src_frame": "CARD",
+   "why": "C16: the WHAT THEY DIDN'T KNOW card. A pointer; his voice returning tells us we are back with him."
+  },
+  {
+   "id": "S5.02",
+   "action": "keep",
+   "src_s": 2.583,
+   "est_s": 4.5,
+   "arrive_s": 4.5,
+   "src_frame": "INSERT · the home shot: glass and lanyard",
+   "lines": [],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "2 AM WITH GERG · warm, loyal, funny · the Build and felt piano in a major colour over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door",
+   "why": "Arrival: the dark room at 2 AM, glass and lanyard (sample, 2.6 -> 4.5 s)."
+  },
+  {
+   "id": "S5.03",
+   "action": "keep",
+   "src_s": 4.0,
+   "est_s": 5.85,
+   "src_frame": "INSERT · his phone and thumb",
+   "lines": [],
+   "vo": [
+    {
+     "id": "v3-vo-20",
+     "who": "mas",
+     "text": "four hundred and six. four hundred and seven. four hundred and six.",
+     "kind": "count",
+     "delivery": "counting the hearts on the beat, then the count slips back one; nothing else changes in the voice",
+     "take": "v3s-08 · audio/ep01/v3-sample/vo-v2 (fastrec take, from the v3 sample)",
+     "at": "start+0.6"
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "2 AM WITH GERG · warm, loyal, funny · the Build and felt piano in a major colour over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door",
+   "why": "The rhythm carries what he won't say: he loses count (sample). The first inner words since the board's side."
+  },
+  {
+   "id": "S5.04",
+   "action": "keep",
+   "src_s": 2.958,
+   "est_s": 2.96,
+   "src_frame": "TWO-SHOT · Mas and the Orb",
+   "lines": [
+    {
+     "id": "a5-29-01",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "2 AM WITH GERG · warm, loyal, funny · the Build and felt piano in a major colour over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door",
+   "why": "unchanged: \"the badge was a joke.\""
+  },
+  {
+   "id": "S5.05",
+   "action": "keep",
+   "src_s": 2.292,
+   "est_s": 2.29,
+   "src_frame": "SINGLE · MCU Mas",
+   "lines": [
+    {
+     "id": "a5-29-02",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "2 AM WITH GERG · warm, loyal, funny · the Build and felt piano in a major colour over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door",
+   "why": "unchanged: \"mostly.\" (planted by v3-vo-07)"
+  },
+  {
+   "id": "S5.09",
+   "action": "keep",
+   "src_s": 14.208,
+   "est_s": 16.53,
+   "src_frame": "OTS · over Mas onto the monitor, Gerg's tile big",
+   "lines": [
+    {
+     "id": "a5-29-03",
+     "keep": true
+    },
+    {
+     "id": "a5-29-04",
+     "keep": true
+    },
+    {
+     "id": "a5-29-05",
+     "keep": true
+    }
+   ],
+   "vo": [
+    {
+     "id": "v3-vo-21",
+     "who": "mas",
+     "text": "gerg. he'll say he's compiling.",
+     "kind": "prediction",
+     "delivery": "fond, certain, as the tile rings",
+     "take": "v3s-09 · audio/ep01/v3-sample/vo-v2 (fastrec take, from the v3 sample)",
+     "pays_off": "S5.09: \"Sorry, one sec. I've got a build compiling.\"",
+     "at": "start+0.3"
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "2 AM WITH GERG · warm, loyal, funny · the Build and felt piano in a major colour over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door",
+   "why": "A read the next line pays off; warmth (sample)."
+  },
+  {
+   "id": "S5.06",
+   "action": "keep",
+   "src_s": 22.792,
+   "est_s": 22.79,
+   "src_frame": "POV · his monitor: the letter, one page, a slow scroll",
+   "lines": [
+    {
+     "id": "a5-29-06",
+     "keep": true
+    },
+    {
+     "id": "a5-29-07",
+     "keep": true
+    },
+    {
+     "id": "a5-29-08",
+     "keep": true
+    },
+    {
+     "id": "a5-29-09",
+     "keep": true
+    },
+    {
+     "id": "a5-29-10",
+     "keep": true
+    },
+    {
+     "id": "a5-29-11",
+     "keep": true
+    },
+    {
+     "id": "a5-29-12",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "2 AM WITH GERG · warm, loyal, funny · the Build and felt piano in a major colour over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door",
+   "why": "unchanged: the letter, read by Gerg; ALYI on the page ([V], facts L4)"
+  },
+  {
+   "id": "S5.07b",
+   "action": "keep",
+   "src_s": 3.5,
+   "est_s": 6.0,
+   "hold_after_s": 4.2,
+   "src_frame": "SINGLE · MCU Mas, the monitor's light",
+   "lines": [
+    {
+     "id": "a5-29-13",
+     "keep": true
+    },
+    {
+     "id": "a5-29-14",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "2 AM WITH GERG · warm, loyal, funny · the Build and felt piano in a major colour over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door",
+   "why": "Silence inside him after \"He did both.\": the held face and the room (sample, 3.5 -> 6.0 s)."
+  },
+  {
+   "id": "S5.08",
+   "action": "keep",
+   "src_s": 5.833,
+   "est_s": 5.83,
+   "src_frame": "INSERT · the check",
+   "lines": [
+    {
+     "id": "a5-29-15",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "2 AM WITH GERG · warm, loyal, funny · the Build and felt piano in a major colour over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door",
+   "why": "unchanged"
+  },
+  {
+   "id": "S5.09-back",
+   "action": "keep",
+   "src_s": 4.958,
+   "est_s": 9.63,
+   "src_frame": "OTS · back over Mas onto the monitor",
+   "lines": [
+    {
+     "id": "a5-29-16",
+     "keep": true
+    },
+    {
+     "id": "a5-29-17",
+     "keep": true
+    }
+   ],
+   "vo": [
+    {
+     "id": "v3-vo-22",
+     "who": "mas",
+     "text": "he's typing like it's launch night.",
+     "kind": "warmth",
+     "delivery": "under the keys, warm; it is why he asks \"what are you building?\"",
+     "take": "new",
+     "at": "start+0.3"
+    },
+    {
+     "id": "v3-vo-23",
+     "who": "mas",
+     "text": "gerg never waits to be asked.",
+     "kind": "warmth",
+     "delivery": "quiet, certain; the board said it on Friday, and he thinks it in present tense",
+     "take": "v3s-10 · audio/ep01/v3-sample/vo-v2 (fastrec take, from the v3 sample)",
+     "at": "after:a5-29-17+0.5"
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "2 AM WITH GERG · warm, loyal, funny · the Build and felt piano in a major colour over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door",
+   "why": "Two Gerg reads bracket the exchange: the loud keys motivate \"what are you building?\", and the bible's planted line lands before his keys stop (v3-vo-15 set up what that stop means)."
+  },
+  {
+   "id": "S5.09b",
+   "action": "keep",
+   "src_s": 6.583,
+   "est_s": 6.58,
+   "src_frame": "POV · cut-in: Gerg's tile fills the monitor",
+   "lines": [
+    {
+     "id": "a5-29-18",
+     "keep": true
+    },
+    {
+     "id": "a5-29-19",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "2 AM WITH GERG · warm, loyal, funny · the Build and felt piano in a major colour over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door",
+   "why": "unchanged: Gerg's moment that isn't a joke"
+  },
+  {
+   "id": "S5.11",
+   "action": "keep",
+   "src_s": 11.375,
+   "est_s": 11.38,
+   "src_frame": "TWO-SHOT · the back wall; the slate door rises",
+   "lines": [
+    {
+     "id": "a5-29-20",
+     "keep": true
+    },
+    {
+     "id": "a5-29-21",
+     "keep": true
+    },
+    {
+     "id": "a5-29-22",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "2 AM WITH GERG · warm, loyal, funny · the Build and felt piano in a major colour over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door",
+   "why": "unchanged: Tasya's door, his moment that isn't a joke; no V.O. near \"leave it open.\" (a contested real moment)"
+  },
+  {
+   "id": "S5.12",
+   "action": "keep",
+   "src_s": 2.917,
+   "est_s": 5.5,
+   "hold_after_s": 4.4,
+   "src_frame": "SINGLE · MCU Mas, the door soft behind",
+   "lines": [
+    {
+     "id": "a5-29-23",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "2 AM WITH GERG · warm, loyal, funny · the Build and felt piano in a major colour over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door",
+   "why": "Aftermath: the door ajar (sample, 2.9 -> 5.5 s)."
+  },
+  {
+   "id": "S6.01",
+   "action": "keep",
+   "src_s": 4.5,
+   "est_s": 4.5,
+   "src_frame": "POV · the board grid (locked)",
+   "lines": [],
+   "jcut": [
+    {
+     "sound": "the first tile's thock",
+     "lead_s": 0.4
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE AVALANCHE · the one full band · SET-PIECE SWING, dead stop on Mada's label",
+   "why": "unchanged"
+  },
+  {
+   "id": "S6.02",
+   "action": "keep",
+   "src_s": 1.5,
+   "est_s": 1.5,
+   "src_frame": "SINGLE · MCU Mas watching",
+   "lines": [],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE AVALANCHE · the one full band · SET-PIECE SWING, dead stop on Mada's label",
+   "why": "unchanged"
+  },
+  {
+   "id": "S6.03",
+   "action": "keep",
+   "src_s": 1.917,
+   "est_s": 1.92,
+   "src_frame": "POV · Alyi's tile, half frame",
+   "lines": [],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE AVALANCHE · the one full band · SET-PIECE SWING, dead stop on Mada's label",
+   "why": "unchanged"
+  },
+  {
+   "id": "S6.04",
+   "action": "keep",
+   "src_s": 1.958,
+   "est_s": 1.96,
+   "src_frame": "POV · Neleh's tile, half frame",
+   "lines": [
+    {
+     "id": "a5-29-24",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE AVALANCHE · the one full band · SET-PIECE SWING, dead stop on Mada's label",
+   "why": "unchanged"
+  },
+  {
+   "id": "S6.06",
+   "action": "keep",
+   "src_s": 5.75,
+   "est_s": 6.25,
+   "hold_after_s": 1.5,
+   "src_frame": "POV · the last gap: Mada",
+   "lines": [],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE AVALANCHE · the one full band · SET-PIECE SWING, dead stop on Mada's label",
+   "why": "+0.5 s on the label after the dead stop."
+  },
+  {
+   "id": "S7.01",
+   "action": "keep",
+   "src_s": 18.333,
+   "est_s": 19.83,
+   "arrive_s": 2.7,
+   "src_frame": "BOX · the two boxes (the act's one box, held)",
+   "lines": [
+    {
+     "id": "a5-30-01",
+     "keep": true
+    },
+    {
+     "id": "a5-30-02",
+     "keep": true
+    },
+    {
+     "id": "a5-30-03",
+     "keep": true
+    },
+    {
+     "id": "a5-30-04",
+     "keep": true
+    }
+   ],
+   "jcut": [
+    {
+     "sound": "the bullpen by day (murmur, packing tape)",
+     "lead_s": 0.8
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11): the violin under Alyi, Tasya's Rhodes floor, LEVERAGE under the terms, a brass stab on the sign",
+   "why": "+1.5 s arrival: Monday by day, the two boxes, before the post pops. Alyi's regret and \"He did both.\" get nothing inside him (mas-inner-voice §5)."
+  },
+  {
+   "id": "S7.02",
+   "action": "keep",
+   "src_s": 5.0,
+   "est_s": 5.0,
+   "src_frame": "WIDE · the bullpen, packed boxes (held)",
+   "lines": [
+    {
+     "id": "a5-30-05",
+     "keep": false,
+     "who": "mas",
+     "text": "what happens to you if nopeai disappears?",
+     "why": "replaced: Tasya offers it unprompted (v3-a4-0002)"
+    },
+    {
+     "id": "v3-a4-0002",
+     "new": true,
+     "who": "tasya",
+     "text": "Everyone's packed. Whatever happens to this place, Mas, don't worry about us.",
+     "after": "start+1.4",
+     "gap_s": 0.0,
+     "delivery": "delighted, to the floor and then to Mas at his desk; unprompted, so the real line answers him, not a question",
+     "tag": "[INVENTED · replaces Mas's \"what happens to you if nopeai disappears?\" (a5-30-05), which the insider read heard as an interviewer's question in his mouth]"
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11): the violin under Alyi, Tasya's Rhodes floor, LEVERAGE under the terms, a brass stab on the sign",
+   "why": "The insider read: \"an interviewer's question put in Mas's mouth\". Tasya volunteers it; Mas stays at his desk."
+  },
+  {
+   "id": "S7.02b",
+   "action": "keep",
+   "src_s": 8.583,
+   "est_s": 8.58,
+   "src_frame": "SINGLE · MCU Tasya",
+   "lines": [
+    {
+     "id": "a5-30-06",
+     "keep": false,
+     "who": "tasya",
+     "text": "Oh, we'd be fine. …we have all the IP rights and all the capability… We are below them, above them, around them.",
+     "why": "replaced by v3-a4-0003 (the record alone)"
+    },
+    {
+     "id": "v3-a4-0003",
+     "new": true,
+     "who": "tasya",
+     "text": "\"…we have all the IP rights and all the capability… We are below them, above them, around them.\"",
+     "after": "start+0.3",
+     "gap_s": 0.0,
+     "delivery": "warm, expansive; one finished read; the floor, ceiling and walls step to slate on below / above / around",
+     "tag": "[V/K · NOV 20, 2023 · the Swisher podcast; re-verify before lock. Replaces a5-30-06 without its invented \"Oh, we'd be fine.\"]"
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11): the violin under Alyi, Tasya's Rhodes floor, LEVERAGE under the terms, a brass stab on the sign",
+   "why": "The record now answers his own \"don't worry about us.\""
+  },
+  {
+   "id": "S7.03",
+   "action": "keep",
+   "src_s": 2.625,
+   "est_s": 2.62,
+   "src_frame": "SINGLE · MCU Mas looking down",
+   "lines": [
+    {
+     "id": "a5-30-07",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11): the violin under Alyi, Tasya's Rhodes floor, LEVERAGE under the terms, a brass stab on the sign",
+   "why": "unchanged: \"Hello.\""
+  },
+  {
+   "id": "S7.05",
+   "action": "keep",
+   "src_s": 2.208,
+   "est_s": 2.21,
+   "src_frame": "MEDIUM · Mada among the fires",
+   "lines": [],
+   "jcut": [
+    {
+     "sound": "the fires' crackle",
+     "lead_s": 0.6
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11): the violin under Alyi, Tasya's Rhodes floor, LEVERAGE under the terms, a brass stab on the sign",
+   "why": "unchanged"
+  },
+  {
+   "id": "S7.06",
+   "action": "keep",
+   "src_s": 2.708,
+   "est_s": 2.71,
+   "src_frame": "WIDE · the boardroom (freeze card)",
+   "lines": [],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11): the violin under Alyi, Tasya's Rhodes floor, LEVERAGE under the terms, a brass stab on the sign",
+   "why": "unchanged: Terb's card; the pin"
+  },
+  {
+   "id": "S7.06-cont",
+   "action": "keep",
+   "src_s": 4.917,
+   "est_s": 4.92,
+   "src_frame": "WIDE · the boardroom (held)",
+   "lines": [
+    {
+     "id": "a5-30-08",
+     "keep": true
+    },
+    {
+     "id": "a5-30-09",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11): the violin under Alyi, Tasya's Rhodes floor, LEVERAGE under the terms, a brass stab on the sign",
+   "why": "unchanged"
+  },
+  {
+   "id": "S7.07",
+   "action": "keep",
+   "src_s": 10.875,
+   "est_s": 9.9,
+   "src_frame": "TWO-SHOT · the calm-off, Terb in depth (held)",
+   "lines": [
+    {
+     "id": "a5-30-10",
+     "keep": false,
+     "who": "terb",
+     "text": "Before this goes out, I'm reading it once, so nobody's surprised. We have reached an agreement in principle for Mas Manalt to return to NopeAI as CEO with a new initial board of Terb (Chair), the Other Yrral, and Mada.",
+     "why": "replaced by v3-a4-0004 (without \"so nobody's surprised\")"
+    },
+    {
+     "id": "v3-a4-0004",
+     "new": true,
+     "who": "terb",
+     "text": "Before this goes out, I'm reading it once. \"We have reached an agreement in principle for Mas Manalt to return to NopeAI as CEO with a new initial board of Terb (Chair), the Other Yrral, and Mada.\"",
+     "after": "start+0.8",
+     "gap_s": 0.0,
+     "delivery": "brisk, reading from the sheet; \"(Chair)\" read as a word about himself without looking up; \"the Other Yrral\" deadpan (YUR-rul)",
+     "tag": "[INVENTED lead-in + V · NOV 21, 2023 · the return announcement's first sentence, whole. Replaces a5-30-10 without \"so nobody's surprised\" (the insider read)]"
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11): the violin under Alyi, Tasya's Rhodes floor, LEVERAGE under the terms, a brass stab on the sign",
+   "why": "The insider read: the explanation isn't needed."
+  },
+  {
+   "id": "S7.07b",
+   "action": "keep",
+   "src_s": 1.583,
+   "est_s": 1.58,
+   "src_frame": "MEDIUM · THE OTHER YRRAL (cutaway)",
+   "lines": [],
+   "onscreen": {
+    "replace": {
+     "YRRAL (NOT THAT YRRAL)": "THE OTHER YRRAL"
+    },
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11): the violin under Alyi, Tasya's Rhodes floor, LEVERAGE under the terms, a brass stab on the sign",
+   "why": "The nameplate matches what Terb reads; there is no other Yrral in Ep1."
+  },
+  {
+   "id": "S7.07-cont",
+   "action": "keep",
+   "src_s": 13.458,
+   "est_s": 13.46,
+   "src_frame": "TWO-SHOT · the calm-off (held)",
+   "lines": [
+    {
+     "id": "a5-30-11",
+     "keep": true
+    },
+    {
+     "id": "a5-30-12",
+     "keep": true
+    },
+    {
+     "id": "a5-30-13",
+     "keep": true
+    },
+    {
+     "id": "a5-30-14",
+     "keep": true
+    },
+    {
+     "id": "a5-30-15",
+     "keep": true
+    },
+    {
+     "id": "a5-30-16",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11): the violin under Alyi, Tasya's Rhodes floor, LEVERAGE under the terms, a brass stab on the sign",
+   "why": "unchanged"
+  },
+  {
+   "id": "S7.08",
+   "action": "keep",
+   "src_s": 2.125,
+   "est_s": 3.0,
+   "hold_after_s": 1.4,
+   "src_frame": "SINGLE · MCU Mas",
+   "lines": [
+    {
+     "id": "a5-30-17",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11): the violin under Alyi, Tasya's Rhodes floor, LEVERAGE under the terms, a brass stab on the sign",
+   "why": "Aftermath: +0.9 s after \"good question.\" into the long hold."
+  },
+  {
+   "id": "S7.09",
+   "action": "keep",
+   "src_s": 6.0,
+   "est_s": 6.0,
+   "src_frame": "TWO-SHOT · the calm-off, the long hold",
+   "lines": [],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11): the violin under Alyi, Tasya's Rhodes floor, LEVERAGE under the terms, a brass stab on the sign",
+   "why": "unchanged: the long hold"
+  },
+  {
+   "id": "S7.13",
+   "action": "keep",
+   "src_s": 8.125,
+   "est_s": 8.12,
+   "src_frame": "OVERHEAD · the hourglass, his chat panel",
+   "lines": [
+    {
+     "id": "a5-30-18",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11): the violin under Alyi, Tasya's Rhodes floor, LEVERAGE under the terms, a brass stab on the sign",
+   "why": "unchanged"
+  },
+  {
+   "id": "S8.01",
+   "action": "keep",
+   "src_s": 3.292,
+   "est_s": 4.0,
+   "arrive_s": 1.0,
+   "src_frame": "LOW · the lobby sign",
+   "lines": [],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11): the violin under Alyi, Tasya's Rhodes floor, LEVERAGE under the terms, a brass stab on the sign",
+   "why": "+0.7 s: the lobby at night before the sign lights."
+  },
+  {
+   "id": "S8.03",
+   "action": "keep",
+   "src_s": 3.0,
+   "est_s": 3.0,
+   "src_frame": "OTS · over Mas onto the last dialog",
+   "lines": [],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11): the violin under Alyi, Tasya's Rhodes floor, LEVERAGE under the terms, a brass stab on the sign",
+   "why": "unchanged"
+  },
+  {
+   "id": "S8.04",
+   "action": "keep",
+   "src_s": 1.75,
+   "est_s": 1.75,
+   "src_frame": "SINGLE · CU Mas",
+   "lines": [],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11): the violin under Alyi, Tasya's Rhodes floor, LEVERAGE under the terms, a brass stab on the sign",
+   "why": "unchanged"
+  },
+  {
+   "id": "S8.05",
+   "action": "keep",
+   "src_s": 2.458,
+   "est_s": 3.26,
+   "hold_after_s": 1.5,
+   "src_frame": "INSERT · the glass on the stone",
+   "lines": [
+    {
+     "id": "a5-30-19",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11): the violin under Alyi, Tasya's Rhodes floor, LEVERAGE under the terms, a brass stab on the sign",
+   "why": "+0.8 s after \"okay.\""
+  },
+  {
+   "id": "S8.06",
+   "action": "keep",
+   "src_s": 2.792,
+   "est_s": 2.79,
+   "src_frame": "INSERT · the Q* vault",
+   "lines": [],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "CODA · the vault's F hum as the pedal; no motif under the memo (the record)",
+   "why": "unchanged; no Q* rail (the vault and its sticky note are enough)"
+  },
+  {
+   "id": "S8.07",
+   "action": "keep",
+   "src_s": 9.875,
+   "est_s": 9.88,
+   "src_frame": "TWO-SHOT · Mas and Gerg, the vault between",
+   "lines": [
+    {
+     "id": "a5-31-01",
+     "keep": true
+    },
+    {
+     "id": "a5-31-02",
+     "keep": true
+    },
+    {
+     "id": "a5-31-03",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "CODA · the vault's F hum as the pedal; no motif under the memo (the record)",
+   "why": "unchanged"
+  },
+  {
+   "id": "S8.08",
+   "action": "keep",
+   "src_s": 8.375,
+   "est_s": 8.38,
+   "src_frame": "WIDE · the bullpen, the memo (slow drift)",
+   "lines": [
+    {
+     "id": "a5-31-04",
+     "keep": true
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "CODA · the vault's F hum as the pedal; no motif under the memo (the record)",
+   "why": "unchanged"
+  },
+  {
+   "id": "S8.09",
+   "action": "keep",
+   "src_s": 3.5,
+   "est_s": 3.5,
+   "src_frame": "INSERT · the nameplate",
+   "lines": [],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "CODA · the vault's F hum as the pedal; no motif under the memo (the record)",
+   "why": "unchanged"
+  },
+  {
+   "id": "S8.09b",
+   "action": "keep",
+   "src_s": 2.0,
+   "est_s": 2.0,
+   "src_frame": "INSERT · the shut door",
+   "lines": [],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "CODA · the vault's F hum as the pedal; no motif under the memo (the record)",
+   "why": "unchanged"
+  },
+  {
+   "id": "S8.10",
+   "action": "keep",
+   "src_s": 4.208,
+   "est_s": 5.2,
+   "hold_after_s": 2.0,
+   "src_frame": "WIDE · the observer chair (the act's last image)",
+   "lines": [],
+   "lcut": [
+    {
+     "sound": "the vault's F pedal, into the tag",
+     "over_s": 1.5
+    }
+   ],
+   "onscreen": {
+    "replace": {},
+    "drop": [
+     "side badge: HIS SIDE"
+    ],
+    "add": [],
+    "side_badge": "removed"
+   },
+   "music": "CODA · the vault's F hum as the pedal; no motif under the memo (the record)",
+   "why": "+1.0 s on the act's last image."
+  }
+ ]
+}

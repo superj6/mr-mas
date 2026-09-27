@@ -1,0 +1,143 @@
+{
+ "segment": "coldopen",
+ "source": "show/reel/ep01-full/ep01-coldopen-v2.json",
+ "_about": "v3-script beat plan (show/episodes/ep01/production/full-v3/PLAN.md §2). Written against the source timeline's beat ids; every source beat appears once (keep, cut or merge), plus the new beats. est_s is a planning length from word counts and the takes already on file, never a measurement: the v3 lock sets frames from the takes. vo.at = \"start+S\" | \"after:<line id>+S\" | \"before:<line id>-S\". Lines of kept beats are listed keep true/false; new and changed lines carry v3-<seg>-NNNN ids; V.O. lines carry v3-vo-NN ids, and \"take\" says whether a sample take exists. The script is show/episodes/ep01/script.md draft 6; the notes are ../script-v3-notes.md.",
+ "story_s": {
+  "source": 30.17,
+  "estimate": 30.66
+ },
+ "beats": [
+  {
+   "id": "1.01",
+   "action": "keep",
+   "src_s": 4.25,
+   "est_s": 4.75,
+   "arrive_s": 1.0,
+   "src_frame": "WIDE · the one wide: stage, banquet, the lit window",
+   "lines": [
+    {
+     "id": "e1-co-1-01",
+     "keep": true
+    }
+   ],
+   "jcut": [
+    {
+     "sound": "the hall's bed (HVAC, a polite crowd) under black before the first frame",
+     "lead_s": 0.5
+    }
+   ],
+   "music": "COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind",
+   "why": "The series' first frame, arrived at on sound: the hall is heard half a second before it is seen. Nothing else changes; no V.O. in the cold open (mas-inner-voice §5)."
+  },
+  {
+   "id": "1.02",
+   "action": "keep",
+   "src_s": 5.583,
+   "est_s": 5.58,
+   "src_frame": "SINGLE · MCU Mas, answering; the window soft behind him",
+   "lines": [
+    {
+     "id": "e1-co-1-02",
+     "keep": true
+    }
+   ],
+   "music": "COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind",
+   "why": "unchanged"
+  },
+  {
+   "id": "1.03",
+   "action": "keep",
+   "src_s": 1.542,
+   "est_s": 1.54,
+   "src_frame": "INSERT · the shared table from above: plink",
+   "lines": [],
+   "music": "COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind",
+   "why": "unchanged; the tent card is the world's own label and stays"
+  },
+  {
+   "id": "1.04",
+   "action": "keep",
+   "src_s": 2.667,
+   "est_s": 2.67,
+   "src_frame": "SINGLE · MCU Mas, the sentence lands",
+   "lines": [],
+   "music": "COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind",
+   "why": "unchanged"
+  },
+  {
+   "id": "2.01",
+   "action": "keep",
+   "src_s": 0.625,
+   "est_s": 0.62,
+   "src_frame": "WIDE · the freeze",
+   "lines": [],
+   "music": "COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind",
+   "why": "unchanged"
+  },
+  {
+   "id": "2.02",
+   "action": "keep",
+   "src_s": 2.5,
+   "est_s": 2.5,
+   "src_frame": "INSERT · the phone: the invite",
+   "lines": [],
+   "music": "COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind",
+   "why": "unchanged"
+  },
+  {
+   "id": "2.03",
+   "action": "keep",
+   "src_s": 2.5,
+   "est_s": 2.5,
+   "src_frame": "SINGLE · MCU Mas: he reads it, looks up",
+   "lines": [
+    {
+     "id": "e1-co-2-01",
+     "keep": true
+    }
+   ],
+   "music": "COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind",
+   "why": "unchanged: \"noted.\" and the sip are the cold open's turn"
+  },
+  {
+   "id": "3.01",
+   "action": "keep",
+   "src_s": 2.0,
+   "est_s": 2.0,
+   "src_frame": "TWO-SHOT · Mas and the Orb: the iris steps",
+   "lines": [],
+   "music": "COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind",
+   "why": "unchanged"
+  },
+  {
+   "id": "3.02",
+   "action": "keep",
+   "src_s": 3.0,
+   "est_s": 3.0,
+   "src_frame": "WIDE · the room scrubs back",
+   "lines": [],
+   "music": "COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind",
+   "why": "unchanged"
+  },
+  {
+   "id": "4.01",
+   "action": "keep",
+   "src_s": 4.0,
+   "est_s": 4.0,
+   "src_frame": "GFX · 1993: the dialog",
+   "lines": [],
+   "music": "COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind",
+   "why": "unchanged"
+  },
+  {
+   "id": "4.02",
+   "action": "keep",
+   "src_s": 1.5,
+   "est_s": 1.5,
+   "src_frame": "GFX · 1993: the toast",
+   "lines": [],
+   "music": "COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind",
+   "why": "unchanged; SMASH TO the intro, then the 2 s filename card (C17, episode time)"
+  }
+ ]
+}
