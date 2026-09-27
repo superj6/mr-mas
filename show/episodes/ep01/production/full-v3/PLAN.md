@@ -144,3 +144,7 @@ out/ep01/full-v3/                         the films and mixes (git-ignored)
   - The waltz moves with it.
   - Alyi's line is heard twice, once per side: the told-twice device working as intended.
 - **The Cancel metaphor is retired from Ep1's call.** The dialog's look is the only rhyme with 1993.
+
+**Added 2026-09-27 (showrunner):** "these are types of things to be looking out for. while you're fixing the new final variant i want you to do analysis on various moods viewer will feel throughout from the different visual, story, an sound aspects amd make sure it is desireable".
+- **The mood analysis** (`mood-analysis.md` and `out/ep01/full-v3/mood-curve.png`) runs alongside the fixes. Its ranked fixes feed the script revision, the score and the shot passes.
+- **It runs again on the final v3.1 film** as part of the final checks, together with the newcomer read.
