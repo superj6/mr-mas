@@ -1,0 +1,122 @@
+{
+ "segment": "act3",
+ "variant": "kokoro",
+ "seconds": 128.042,
+ "frames": 3073,
+ "samples": 6146000,
+ "timeline": "show/reel/ep01-v3/ep01-v3-act3.json",
+ "dialogue": {
+  "lines": 22,
+  "device": {
+   "call": 5,
+   "monitor": 6
+  },
+  "el_matched": 0,
+  "missing": []
+ },
+ "rooms": {
+  "stem": "audio/reel/ep01-v3/act3-room.wav",
+  "dip_under_speech_db": 2.0
+ },
+ "sfx": {
+  "stem": "audio/reel/ep01-v3/act3-sfx.wav",
+  "ducked": false
+ },
+ "score": {
+  "file": "audio/ost/tracks/e01-v3-act3/render/music.wav",
+  "cues": "audio/ost/tracks/e01-v3-act3/cues.json",
+  "length_s": 128.042,
+  "length_vs_segment_s": 0.0,
+  "lufs_as_delivered": -20.02,
+  "duck": {
+   "by_mood_db": [
+    [
+     "THE DARK ROOM",
+     7
+    ],
+    [
+     "ACT-OUT",
+     9
+    ]
+   ],
+   "cue_sheet_overrides": [],
+   "posts_dip_db": -3.0,
+   "envelope": "pre 0.25 s, joined across gaps < 2.5 s, 0.2 s in, 0.6 s out; depth smoothed 1.5 s"
+  },
+  "designed_silences": [
+   [
+    125.542,
+    128.042,
+    "THE CLOCK's dead stop on bar 4's downbeat -> the act's last frame (black; the SFX pre-lap of the crane and the tings carries it)"
+   ]
+  ]
+ },
+ "measured": {
+  "lufs_i": -16.0,
+  "true_peak_dbtp": -1.45,
+  "sample_peak_dbfs": -1.5,
+  "lra_lu": 5.2,
+  "gain_db": 1.89,
+  "limiter_ceiling_dbfs": -1.5,
+  "limiter_active_s": 0.257,
+  "dialogue_lufs": -15.09,
+  "score_lufs_after_duck": -19.26,
+  "score_rms_under_speech_dbfs": -28.9,
+  "score_rms_between_speech_dbfs": -20.6,
+  "score_runs": {
+   "count": 1,
+   "shortest_s": 125.55,
+   "runs": [
+    [
+     0.0,
+     125.55
+    ]
+   ]
+  },
+  "rooms_lufs": -37.34,
+  "sfx_lufs": -23.84,
+  "holes_under_-42dBFS_0.3s": [
+   {
+    "at": 125.7,
+    "s": 0.6,
+    "what": "designed: the act-out black: THE CLOCK's dead stop, the crane pre-lap coming up"
+   }
+  ],
+  "holes_mono_downmix": [
+   {
+    "at": 125.7,
+    "s": 0.6,
+    "what": "designed: the act-out black: THE CLOCK's dead stop, the crane pre-lap coming up"
+   }
+  ],
+  "holes_without_score": [
+   {
+    "at": 125.7,
+    "s": 0.6,
+    "what": "designed: the act-out black: THE CLOCK's dead stop, the crane pre-lap coming up"
+   }
+  ],
+  "unmarked_holes": 0,
+  "unmarked_holes_without_score": 0,
+  "jumps_over_15dB": {
+   "count": 17,
+   "rising": 11,
+   "rising_at_a_word": 4,
+   "rising_at_an_sfx": 0,
+   "rising_other": [
+    22.4,
+    46.2,
+    57.95,
+    75.8,
+    82.05,
+    115.6,
+    116.15
+   ],
+   "falling": 6
+  }
+ },
+ "file": "out/ep01/full-v3/mix/act3-mix.wav",
+ "guard_db": null,
+ "built": "2026-09-27 13:34:41",
+ "heard": "nothing here has been listened to; every number is measured"
+}

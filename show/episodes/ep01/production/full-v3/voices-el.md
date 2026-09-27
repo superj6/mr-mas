@@ -1,18 +1,306 @@
 # Ep1 v3: the ElevenLabs voice pass (`v3-voices-el`, track A4, 2026-09-27)
 
-> **Status: CASTING AND SAMPLE DONE, for the lead's A/B.** The whole-episode render waits for the script lock.
+> **Status: PHASE 2 DONE, for the lead's A/B.** Every line of the final v3 lock (commit 62a7f8f) is rendered in ElevenLabs set A. There is an ElevenLabs-timed copy of the lock and a full stick reel of it: `out/ep01/reel/ep01-v3-el-stick.mp4`. Phase 1 (the casting and the sample) is §1–§8, below the phase-2 part.
 >
 > **Nobody has listened to any of this.** Every statement below is a measurement: duration, pace, pitch, silence at the head and tail, loudness, and what a speech recogniser heard. Whether a voice is natural, funny, or right for the character is still a call for an ear.
 >
-> **Showrunner, 2026-09-27:** "we can also try a pass using elevenlabs samples"
+> **Showrunner, 2026-09-27:** "we can also try a pass using elevenlabs samples", and "i want you to just do a full episode attempt with your best judgement"
 
-**In short:**
+**Phase 2, in short:**
+- **All 228 lines** of the six v3 timelines are rendered with each role's **A voice**. Of those, 83 takes are the sample's and auditions' takes reused, with nothing sent. No new B takes were rendered, and the phase-1 B takes are kept.
+- **Characters:** 7,878 sent and **4,322 billed**, against the 20,000 budget. The subscription went from 5,522 to 9,844 of 131,000.
+- **The EL-timed lock runs 21:06.4 against the Kokoro lock's 20:43.6 (+22.8 s).** Most of that is Mas A's inner voice (+14.2 s over 24 lines), Tasya A (+11.2 s) and Rima A (+8.6 s). §P3.
+- **The reel** (21:51.6 with the title slate) uses the lock pass's own beds, rebuilt to the new beat times. §P6.
+- **Pronunciation:** Macrosoft, badge, Manalt and Gerg (in Mas's voice), plus "Noted." and GTP-4, are fixed. Each was checked with a forced-choice recogniser test that is calibrated on control reads. §P4.
+- **For an ear:** §P7.
+
+**Phase 1, in short:**
 - **The cast:** all 29 speaking roles in Ep1 have library voices, and the 3 derived voices (the clone and the two deepfakes) come from their base voices by processing. Each of the six principals has two candidates: set A and set B.
 - **The sample:** the 69 lines of the lead's v3 sample, each rendered in both sets. They come with fastrec-format lines JSON and retimed copies of the sample timeline.
 - **Auditions:** five candidates each for the principals, and one line for each of the 23 other roles.
 - **Characters:** 10,054 sent and **5,522 billed**, against the 25,000 budget. The subscription went from 0 to 5,522 of 131,000.
 - **Model:** `eleven_multilingual_v2` for everyone. I tested `eleven_v3` and didn't use it (§6).
 - **Decisions for you:** listed in §8.
+
+---
+
+## Phase 2: the whole episode in set A (2026-09-27)
+
+The lead's brief: render every v3 line with each role's A voice, make an ElevenLabs-timed copy of the lock, and render its stick reel. The showrunner hasn't picked A or B, and the lead's default is A.
+
+**The hard rules held:**
+- Only the library voices in `cast-el.json` were used, each role's candidate A. Nothing was cloned, designed or uploaded, and `voice_slots_used` stayed 0.
+- The key was read inside `ellib.py` only. Every output and scratch file was scanned for it before hand-off, with no matches.
+- The heavy steps (the render with its ASR, the beds, the reel) ran through `ops/heavy.sh`.
+- Nothing was committed, and no file of another track was edited. The Kokoro lock in `show/reel/ep01-v3/` and the lock pass's `bed.py` are read, never written. `bed.py` is imported by `tools/el_bed.py`.
+
+### P1. The files
+
+| What | Where |
+|---|---|
+| **The takes** (all 228 lines, set A) | `audio/ep01/v3-el/ep01/<seg>/lines-A.json` (the fastrec format, as in phase 1) with `wav/`. The 44 call and monitor takes also have `wav-device/` copies (the house call filter printed in). The EL-timed lock plays them on the 38 lines the Kokoro lock printed through that chain. Each segment's `manifest.json` has every request, and `log/render.log` has every retake and why |
+| **The EL-timed lock** | `show/reel/ep01-v3-el/ep01-v3-el-{coldopen,act1,act2,act3,act4,tag}.json` |
+| **Its manifest** (key `ep01-v3-el-stick`; the studio shows it as `reel-ep01-v3-el`) | `show/reel/ep01-v3-el/ep01-v3-el.manifest.json` |
+| **The reel** | `out/ep01/reel/ep01-v3-el-stick.mp4` (+ `-chapters.json`, `-measure.json`); work files in `studio/out/reel-work/ep01-v3-el-stick/` |
+| The beds | `audio/reel/ep01-v3-el/<seg>-bed.wav` + `-bed-qa.json`, and `beds.json` (git-ignored WAVs) |
+| Measurements | `audio/ep01/v3-el/ep01/qa/`: `qa-rollup.json` (every take), `names-<seg>.json` (the name check), `probes/` (the pronunciation probes). Also `audio/ep01/v3-el/ep01/el-lock-report.json` (every beat's change) |
+| The spend | `audio/ep01/v3-el/usage.json`, under `phases` |
+| Tools (new or changed) | `tools/el_render.py` (changed), and new: `tools/el_lock.py`, `tools/el_bed.py`, `tools/pron_check.py`, `tools/usage_phase.py` |
+
+**How the takes were made:**
+- `eleven_multilingual_v2`, with each role's phase-1 settings (Mas's V.O. at stability 0.60, speed 0.82).
+- Dry, 48 kHz / 24-bit mono, with 0.35 s room-tone handles.
+- Word timings come from the with-timestamps endpoint. They agree with faster-whisper's word starts to a median of 0.09 s per take (worst 0.47 s).
+
+**Levels:**
+- **Dialogue is at −16 LUFS integrated,** as briefed (−16.0 to −16.6).
+- **The 24 V.O. takes are at −18,** not −16. That is the Kokoro lock's own V.O. level: its 22 v3 V.O. takes sit at −18.0, and its dialogue at −16.0. At −16 the EL inner voice would play 2 dB hotter than the Kokoro one in the A/B. My phase-1 note warned that the louder voice tends to win.
+- **To make the V.O. −16 too:** re-run step 1 of §P8 without `--vo-lufs -18`. It's a free re-dress, with no API calls.
+
+### P2. Characters spent
+
+| Run | Calls | Characters sent | Billed |
+|---|---|---|---|
+| Cold open (3 lines) | 3 | 128 | 70 |
+| Act One (60) | 29 | 1,155 | 631 |
+| Act Two (39) | 39 | 1,367 | 750 |
+| Act Three (22) | 23 | 852 | 468 |
+| Act Four (101) | 87 | 3,732 | 2,052 |
+| Tag (3) | 3 | 36 | 19 |
+| Pronunciation probes (7 lines, including 2 control reads) | 22 | 608 | 332 |
+| **Phase 2** | **206** | **7,878** | **4,322** |
+
+- **The segment runs include every retake:** 17 for a clipped tail or a bad ASR read (8 kept), 21 for pitch outliers (16 kept), 2 asked for, the re-renders after the pronunciation fixes, and the two cut-off lines, which were read whole (184 characters).
+- **83 takes were reused** from the sample and the auditions, where the voice, settings and text as sent were identical. Nothing was sent for those.
+- **The subscription** went from 5,522 to 9,844 of 131,000, exactly the billed total. That leaves 121,156 this cycle.
+- **All phases so far:** 17,932 characters sent and 9,844 billed.
+
+### P3. Lengths against the Kokoro lock
+
+Story time (the lock's frames; the intro, card and outro are unchanged):
+
+| Segment | Kokoro lock | **EL-timed** | Change | Beats changed |
+|---|---|---|---|---|
+| Cold open | 0:30.7 | **0:30.0** | −0.6 s | 3 |
+| Act One | 5:22.5 | **5:37.5** | **+15.0 s** | 23 |
+| Act Two | 3:24.7 | **3:17.2** | −7.6 s | 22 |
+| Act Three | 2:08.0 | **2:05.3** | −2.7 s | 10 |
+| Act Four | 8:43.8 | **9:02.7** | **+18.9 s** | 46 |
+| Tag | 0:33.9 | **0:33.7** | −0.2 s | 3 |
+| **Story** | **20:43.6** | **21:06.4** | **+22.8 s** | 107 of 228 |
+
+**How the timing was carried over** (`tools/el_lock.py`):
+- **Gaps:** every gap the lock chose is kept, between lines, before a beat's first line and after its last.
+- **J-cuts and L-cuts:** every J-cut lead is kept (5.03 −0.5 s, 7.01 −0.6 s), and every L-cut keeps its overrun into the next shot.
+- **Beat lengths** change only by what their takes gained or lost. Beats without lines are unchanged, frame for frame.
+- **Timed items** move through one clock per beat. That covers the onscreen text, name reveals, sounds, a figure's entrance or exit, and a mouth's speak window. They stay put before the first line and are anchored to the matching word inside a line, so a name revealed on a word lands on that word in the new take. They move with the gaps between lines, and by the beat's own change after its last line. In a J-cut beat the cut itself (0.0) stays put.
+- **The two lines cut off by the world** (a5-27-31, Mario's "…hypothetically—"; a5-29-24, Neleh's "…the char—"): the lock's `cut` doesn't mean dropped. These play in the Kokoro lock, recorded whole (the house method). They are read whole here too (`say_full` in `cast-el.json`). Their `dur` is the cut word's end in the EL take, plus the lock's own trail after that word.
+- **Call and monitor lines:** the 38 lines the Kokoro lock printed through the call chain play their EL device copy. Every other take plays dry, as in the lock.
+
+**Where the time goes,** summed over each role's takes:
+
+| Role (set A) | Lines | Change |
+|---|---|---|
+| Mas, V.O. | 24 | **+14.2 s** |
+| Tasya | 15 | **+11.2 s** |
+| Rima | 12 | +8.6 s |
+| Mas, talk | 51 | +5.5 s |
+| Terb | 5 | +3.7 s |
+| Sirrah | 3 | +2.0 s |
+| Radnus | 6 | −4.0 s |
+| Neleh | 24 | −3.5 s |
+| Nedib | 4 | −3.4 s |
+| A senator | 3 | −2.6 s |
+| Alyi | 13 | −2.4 s |
+
+- **The biggest beats:**
+  - 5.04 +7.4 s: Rima's three lines +3.9, and the V.O. "she's right. it will break…" 3.2 → 6.6 s;
+  - S8.08 +4.4 s: Mas's "I love and respect alyi…" 9.4 → 13.8 s;
+  - 9.09 +3.4 s: Tasya's speech +3.6;
+  - S4.13 +3.0 s: Tasya's statement 9.1 → 11.6 s;
+  - S7.07 +2.7 s: Terb's reading.
+- **The shortest:** 8.04 −3.0 s (Radnus and Nirb), 13.09 −2.8 s (Radnus), 21.02 −2.1 s (Nedib and the deepfakes).
+- **Against the target:** 21:06.4 is 21.4 s over the band's top (19:45–20:45). The lever is the same one §7 named. Mas A's V.O. runs 130 wpm against Kokoro's 168, with 83.1 s voiced against 68.9 s. Raising its speed from 0.82 toward 0.88, or taking the lock's trims T2–T7, would bring it back. Neither is done here: the brief says don't change holds.
+
+### P4. Pronunciation: the fixes and how they were checked
+
+**The check** (`tools/pron_check.py`):
+- **Why not the plain read:** a plain ASR read can't settle a parody name. faster-whisper writes "Microsoft" for "Macrosoft" whatever it hears, and it did so for Kokoro's IPA-driven take too.
+- **What it does instead:** for each take it scores the intended transcript and its competitors, as log P(text | audio), through CTranslate2's forced alignment (the per-token probabilities). It reports the margin of the intended text over the best competitor.
+- **It is calibrated on control reads:**
+  - Kokoro's take read from the house IPA /ˈmækɹəsˌɔft/ scores −4.4 against "Microsoft". That is the recogniser's prior for the common word.
+  - A control read of "And go to Microsoft." (Mas's A voice, 20 characters) scores −16.3.
+  - Kokoro's "badge" scores +4.7, and a "batch" control −6.1.
+- **The fix mechanisms,** all in `cast-el.json`. The lines JSON keeps the script's text; only the text as sent changes:
+  - `respell` for everyone;
+  - `respell_roles` for one voice;
+  - `respell_lines` for one take;
+  - `say_lines` for the same words with other punctuation;
+  - `say_full` for a cut-off line read whole.
+
+| Word | The fix | Scope | Margin before | **After** | Kokoro lock's take |
+|---|---|---|---|---|---|
+| **Macrosoft** | "Mack-roh-soft" | everyone (3 lines) | −7.7 (the plain spelling), −5.9 ("Macro-soft") | **+1.05** (Mas), **+0.44** (Gerg), **+1.75** (Tasya); the plain ASR now writes "Macrosoft" | −4.4, −7.7, −8.4 |
+| **badge** | "badj" | a5-29-01 only (Mas) | −0.03 (the sample take, heard "batch"); −0.40 (a new seed) | **+3.05**, heard "badge" | +4.7 |
+| badge / badges (the other three) | none needed | | | +9.7 (Alyi), +4.8 (Neleh), +10.1 (Nirb, "badges") | +10.1, +8.0, +9.2 |
+| **Manalt** | "Man-alt" (naming.md "MAN-alt") | everyone (3 lines) | −1.78, heard "Menalt" | **+1.13** in the probe; +7.0, +4.9, +6.4 in the line check | +6.9, +4.7, +5.7 |
+| **Gerg** in Mas's voice | "Guhrg" | Mas (Giovanni) only | Mas A's "Gurg" is heard as "**Kirk**": −13.4 ("Go to sleep, Gurg."), −2.9, −6.2 | **+2.0, +1.9, +3.1, +3.9**, heard "Gurg"; +0.3 and +0.9 on two lines (best competitor "Greg") | +2.1 to +4.5 |
+| | "…Guhrg" (a soft lead-in) | v3-vo-23 only | "Guhrg" on three seeds −6.2, −11.2, −5.5; with a comma −1.2 | **+1.87** (plain ASR: "Gorog") | +2.1 |
+| | a new seed | v3-vo-21 | −4.5 ("Kirk") | −0.13 against "Greg" (plain ASR: "Gourg"; "Kirk" is out) | +4.2 |
+| **Noted.** | "Noded." (the American flap) | Mas only (2 lines) | "Note it." on three seeds: −0.4, −1.7, −1.3 | **+1.89, +3.23**, heard "Noted." | +4.9, +5.0 |
+| **GTP-4** | "G-T-P four" | everyone (1 line) | (new) | **+9.5** over "GPT-4" | +9.8 |
+
+**What else was tried and measured:**
+- For Gerg in Mas's voice: "Ghurg", "Gurrg" and "Gerg" were all still heard as "Kirk" (−10.8, −8.4, −16.5).
+- Other speakers' "Gurg" was fine and kept: Rima +5.1, Neleh +2.9, Tasya +1.1, Terb +2.8. Alyi's is +0.2 (heard "Gorg").
+
+**One delivery fix:**
+- Mas's "which one am i?" (e1-a2-15-04) came back as a sharp rise on both takes, 226 and 257 Hz. pYIN agrees, 107 → 289 Hz. His brief asks for level or falling finals.
+- It's now sent as "Which one am I." and measures 126 Hz.
+
+### P5. What was measured on the takes
+
+- **Levels:** dialogue −16.0 to −16.6 LUFS, V.O. −18.0. True peak ≤ −1.51 dBTP, no clipped samples, no digital black.
+- **Head and tail:** 0.35–0.50 s of room tone before the first sound, and 0.35–0.88 s after the last.
+- **ASR recall:** every take reads at 0.8 or better except two.
+  - Tasya's "We own camera two." was heard "too" on both takes.
+  - Terb's "…Ah." was heard "uh".
+- **Clipped tails:** six takes still end while sounding, because both of their takes did.
+  - Neleh A: a5-27-11, -16, -37, -40 and -46.
+  - Terb: a5-30-14.
+  - The house 4 ms edge fade is on each. Neleh A's voice cuts its tails often: 7 of her first takes did (12 takes in all).
+
+**The principals (set A), against the Kokoro takes the lock used:**
+
+| Role | Lines | Median F0, EL (Kokoro) | Spread across lines | wpm, EL (Kokoro) | Voiced, EL (Kokoro) |
+|---|---|---|---|---|---|
+| Mas, talk | 51 | 121 Hz (115) | 103–173 | 186 (186) | 83.4 s (77.8) |
+| **Mas, V.O.** | 24 | 118 (115) | 111–137 | **130 (168)** | **83.1 (68.9)** |
+| Neleh | 24 | 200 (163) | 183–249 | 235 (221) | 73.5 (76.7) |
+| **Tasya** | 15 | 138 (146) | **98–203** | 153 (176) | 72.2 (61.0) |
+| Gerg | 28 | 143 (128) | 122–224 | 213 (210) | 72.0 (72.8) |
+| Rima | 12 | 167 (212) | 147–181 | 146 (185) | 39.8 (31.2) |
+| Alyi | 13 | 90 (86) | 83–101 | 190 (156) | 37.9 (40.2) |
+
+- **Mas's inner voice** is the guide's "slower than he talks": 130 wpm against his talk's 186, at the top of the 110–130 band. The time goes into the pauses between sentences.
+- **Tasya A (Tyler Kurk) is the least consistent voice in the cast.**
+  - Six of his 15 takes came back more than 4 st off his typical pitch (94–220 Hz). The pitch retakes pulled three of them in.
+  - Still out: "That collar suits you." (112 Hz), "We love you guys." (109 Hz), "Don't get up, Mas…" (203 Hz, two takes alike) and "Hello." (98 Hz; the retake was 238).
+  - His lane is 130–150.
+- **Some supporting voices run well over their pace bands:** Nedib 258 wpm (145–165), the senator 240 (145–160), Radnus 224 (130–150), Nirb 282 (150–170). They make the shortest beats: 8.04 (Nirb and Radnus, −3.0 s), 13.09 (Radnus, −2.8 s) and 21.02 (Nedib and his deepfakes, −2.1 s).
+
+### P6. The reel
+
+`out/ep01/reel/ep01-v3-el-stick.mp4`: 1280×720, 24 fps, H.264 + AAC. It runs **21:51.6**: the 3 s title slate, then the 21:48.6 episode, against the final Kokoro stick's 21:28.8 (+22.8 s). 107.0 MB. It was rendered with `node src/reel/tools/episode.mjs <manifest> --jobs 2 --conc 4` through `ops/heavy.sh`: 22 segments in 492 s of wall (render 452 s, mix 19 s alongside, mux 32 s).
+
+**The sound:** the lock pass's own recipe, rebuilt to the new beat times (`tools/el_bed.py`). The lock's beds are timed to the Kokoro takes, so they no longer line up.
+- **Acts One to Four and the tag** use the lock's `bed.py` `build()`, imported and pointed at the EL timelines. That gives the rooms leading each cut, all 253 of the beats' sounds at their new times (0 missing), the pads per mood run, and the Cancel-to-buzz silence. Their loudness is within 0.25 LU of the lock's beds.
+- **The card** keeps the lock's own bed.
+- **The cold open's sound** is the v2 stem (hall, SFX and music in one file), and `bed.py` has no room or pad recipe for its stage. So the lock's cold-open bed is spliced per beat instead:
+  - each beat's stretch of the stem is laid at its new start, with 60 ms crossfades;
+  - the splices fall in the hall under the host's question (1.01, −0.46 s) and Mas's answer (1.02, −0.38 s), and in "Noted." (2.03, +0.21 s);
+  - the freeze, the rewind and the Orb are the stem unchanged, 0.63–0.83 s earlier.
+- **The mixer's settings are the Kokoro manifest's:** takes at −3 dB, beds ducked 10 dB under speech.
+
+| Chapter | Starts | Length | Kokoro stick | Mix, LUFS (Kokoro) | Peak, dBFS |
+|---|---|---|---|---|---|
+| title slate | 0:00.0 | 3.0 | 3.0 | (silence) | |
+| cold open | 0:03.0 | 30.0 | 30.7 | −18.9 (−18.7) | −4.7 |
+| intro | 0:33.0 | 30.0 | 30.0 | −17.1 (−16.9) | −4.3 |
+| card | 1:03.0 | 2.0 | 2.0 | −38.0 (−37.9) | −26.8 |
+| Act One | 1:05.0 | 5:37.5 | 5:22.5 | −17.0 (−16.9) | −4.3 |
+| Act Two | 6:42.5 | 3:17.2 | 3:24.8 | −16.7 (−16.5) | −4.5 |
+| Act Three | 9:59.7 | 2:05.3 | 2:08.0 | −17.3 (−17.1) | −4.5 |
+| Act Four | 12:05.0 | 9:02.7 | 8:43.8 | −16.5 (−16.4) | −2.5 |
+| tag | 21:07.8 | 0:33.7 | 0:33.9 | −25.1 (−24.5) | −4.5 |
+| outro | 21:41.5 | 0:10.1 | 0:10.1 | −17.1 (−17.0) | −3.9 |
+
+**What was checked:**
+- **Picture:** 31,478 video frames, the plan's count. Video and audio are both 1311.58 s.
+- **Sound:** the mixer placed all 228 takes and 7 beds, with 0 missing files and no warnings. Every story chapter plays only ElevenLabs takes: 3, 60, 39, 22, 101 and 3.
+- **Loudness:** the whole mix is −16.8 LUFS (the Kokoro stick's −16.7) with a −2.55 dBFS sample peak. The peak is in Act Four, where overlapping lines and L-cuts stack. The only digital silence of 0.5 s or more is the title slate.
+- **The Kokoro reel's chapter levels** are from its lock.md §6 (the final lock). The EL chapters sit 0.1–0.6 LU under them.
+- **Not heard or watched:** the cuts, the takes, the beds' levels and the splices.
+
+### P7. For an ear first
+
+1. **Mas A's inner voice:**
+   - Is 130 wpm, with long pauses between sentences, the right "unhurried"? Or is it slow enough to cost the episode its 21 s? (§P3)
+   - Check v3-vo-03 (5.04) and a5-31-04 (S8.08) first.
+2. **Gerg's name in Mas's voice:**
+   - "Guhrg" measures right on six lines.
+   - Listen to v3-vo-23 (the "…Guhrg" lead-in, which the plain ASR writes "Gorog"), v3-vo-21 ("Gourg"), v3-vo-18 and a5-29-04 (their best competitor is "Greg").
+3. **Tasya A's pitch** jumps between lines (§P5): "That collar suits you.", "We love you guys.", "Don't get up, Mas…", "Hello.". Tasya B (Eric) held 147–151 Hz in the sample. Its switch costs about 850 characters (§P9).
+4. **Neleh A's clipped tails** (§P5): five takes.
+5. **"Macrosoft" as "Mack-roh-soft"** and "badge" as "badj" measure right. Whether they sound natural is for an ear: a5-29-08, a5-29-09, v3-a4-0001 and a5-29-01.
+6. **Small reads:**
+   - "equity **in** NopeAI" was heard as "and" (v3-a2-0001; Kokoro's take too);
+   - Mario's "Nell-eh" was heard as "Nelier" (a5-27-31);
+   - Tasya's "camera two" was heard as "too".
+7. **The supporting voices' pace** in Act Two (Nedib, the senator, Radnus) is well over their bands.
+8. **The cold-open splices** (§P6): three joins in the hall.
+
+### P8. How to rebuild
+
+From the repo root. Every step resumes; only changed lines cost characters.
+
+```sh
+PY=audio/.venv-casting/bin/python; T=audio/ep01/v3-el/tools/el_render.py
+REUSE="audio/ep01/v3-el/sample audio/ep01/v3-el/auditions audio/ep01/v3-el/auditions/principals"
+# 1. the takes (set A; dialogue -16, V.O. -18 LUFS; reuses identical takes; retakes on a bad read, a clipped tail or pitch)
+for s in coldopen act1 act2 act3 act4 tag; do
+  HF_HUB_OFFLINE=1 bash ops/heavy.sh $PY $T render --lines show/reel/ep01-v3/ep01-v3-$s.json --out audio/ep01/v3-el/ep01/$s \
+      --sets A --target-lufs -16 --vo-lufs -18 --reuse $REUSE --max-chars 6000 --retry-bad 1 --retry-pitch; done
+# 2. the name check (no API calls), and a probe when a word needs a fix (the probe's pick is then free in step 1)
+for s in coldopen act1 act2 act3 act4 tag; do HF_HUB_OFFLINE=1 $PY audio/ep01/v3-el/tools/pron_check.py lines \
+    --lines audio/ep01/v3-el/ep01/$s/lines-A.json --timeline show/reel/ep01-v3/ep01-v3-$s.json --out audio/ep01/v3-el/ep01/qa/names-$s.json; done
+# 3. the EL-timed lock, its beds, the manifest, the reel
+$PY audio/ep01/v3-el/tools/el_lock.py
+bash ops/heavy.sh $PY audio/ep01/v3-el/tools/el_bed.py
+$PY audio/ep01/v3-el/tools/el_lock.py --beds audio/reel/ep01-v3-el/beds.json
+cd studio && bash ../ops/heavy.sh node src/reel/tools/episode.mjs ../show/reel/ep01-v3-el/ep01-v3-el.manifest.json --jobs 2 --conc 4
+```
+
+- **If the Kokoro lock is re-run:** repeat step 1 (only new or changed lines are sent) and step 3.
+- **A listening note on a line** (one new take; it keeps the better-measured one): add `--retake <id>` to step 1 for that segment.
+
+### P9. Switching a role to its B voice later
+
+`--cand ROLE=B` renders that role with its B candidate and everyone else with A. The A takes come back from the cache for free. `--label` names the lines file, and `--tag` gives the variant its own timeline keys: the studio copies `show/reel/*/` into one flat folder, so the keys must differ. Mas is the example:
+
+```sh
+PY=audio/.venv-casting/bin/python; T=audio/ep01/v3-el/tools/el_render.py
+REUSE="audio/ep01/v3-el/sample audio/ep01/v3-el/auditions audio/ep01/v3-el/auditions/principals"
+# 0. the cost first (no API calls): what isn't cached or reusable yet
+for s in coldopen act1 act2 act3 act4 tag; do HF_HUB_OFFLINE=1 $PY $T plan --lines show/reel/ep01-v3/ep01-v3-$s.json \
+    --sets A --cand mas-manalt=B --reuse $REUSE --by-role; done
+# 1. render
+for s in coldopen act1 act2 act3 act4 tag; do
+  HF_HUB_OFFLINE=1 bash ops/heavy.sh $PY $T render --lines show/reel/ep01-v3/ep01-v3-$s.json --out audio/ep01/v3-el/ep01/$s \
+      --sets A --cand mas-manalt=B --label AmasB --target-lufs -16 --vo-lufs -18 --reuse $REUSE --max-chars 3000 \
+      --retry-bad 1 --retry-pitch; done
+# 2. the name check on lines-AmasB.json (step 2 of §P8)
+# 3. its own lock, beds, manifest (key ep01-v3-el-masB-stick) and reel
+$PY audio/ep01/v3-el/tools/el_lock.py --set AmasB --tag -masB
+bash ops/heavy.sh $PY audio/ep01/v3-el/tools/el_bed.py --tag -masB
+$PY audio/ep01/v3-el/tools/el_lock.py --set AmasB --tag -masB --beds audio/reel/ep01-v3-el-masB/beds.json
+cd studio && bash ../ops/heavy.sh node src/reel/tools/episode.mjs ../show/reel/ep01-v3-el-masB/ep01-v3-el-masB.manifest.json --jobs 2 --conc 4
+```
+
+- **Several roles at once:** `--cand mas-manalt=B,tasya=B`.
+- **The cost,** from step 0 as things stand. The sample's B takes are already free:
+
+| Role to B | Characters to send | Credits (× 0.55) | With retakes (about +25 %, as this phase) |
+|---|---|---|---|
+| Mas (Evan) | 1,534 | about 845 | about 1,050 |
+| Neleh (Victoria) | 1,090 | about 600 | about 750 |
+| Tasya (Eric) | 852 | about 470 | about 590 |
+| Gerg (Ryan) | 481 | about 265 | about 330 |
+| Alyi (Brent) | 429 | about 235 | about 295 |
+| Rima (Harper) | 70 | about 40 | about 50 |
+| **All six** | **4,456** | **about 2,450** | **about 3,100** |
+
+- **Re-check the fixes after a switch.** `respell_roles` and `respell_lines` are keyed by role and line, not by voice, so Mas's "Guhrg" and "Noded" would also go to Evan. Run step 2, and drop the entry if the plain spelling reads better in the new voice.
 
 ---
 
@@ -237,6 +525,8 @@ The account can use `eleven_v3`, the most expressive model. I tested it on six o
 
 ## 7. The whole episode, later (after the script lock)
 
+> **Done in phase 2** (§P1–§P9 above). The commands there supersede the sketch below: they add `--target-lufs -16 --vo-lufs -18`, `--reuse`, the name check and the EL-timed lock builder.
+
 **The tool:** [tools/el_render.py](../../../../../audio/ep01/v3-el/tools/el_render.py). It reads any lines file:
 - a stick or reel timeline, such as `show/reel/ep01-v3/ep01-v3-<seg>.json`;
 - a fastrec lines JSON, such as `audio/ep01/v3/<seg>/lines.json`;
@@ -292,8 +582,10 @@ $PY audio/ep01/v3-el/tools/retime.py --timeline show/reel/ep01-v3/ep01-v3-act4.j
 **Files written by this pass** (nothing else was touched; nothing was committed):
 - `audio/ep01/v3-el/`:
   - `cast-el.json` and `usage.json`;
-  - `tools/` (`ellib.py`, `elaudio.py`, `el_render.py`, `retime.py`, `cast_el.py`);
+  - `tools/` (`ellib.py`, `elaudio.py`, `el_render.py`, `retime.py`, `cast_el.py`; phase 2 adds `el_lock.py`, `el_bed.py`, `pron_check.py` and `usage_phase.py`);
   - `sample/`, `auditions/` and `casting/`;
+  - phase 2: `ep01/` (the takes per segment, `qa/` and `el-lock-report.json`);
   - `cache/` (git-ignored).
+- Phase 2: `show/reel/ep01-v3-el/` (the EL-timed lock and its manifest), `audio/reel/ep01-v3-el/` (the beds; the WAVs are git-ignored) and `out/ep01/reel/ep01-v3-el-stick.*` (the reel). Running the reel also let `studio/src/reel/sync.mjs` copy the new timelines into `studio/src/reel/data/`, as every reel render does.
 - `show/episodes/ep01/production/full-v3/voices-el.md` (this file).
 - Scratch went to the session scratchpad under `v3-voices-el/`: the full 2,111-voice pool, the preview MP3s, and the audition and v3 test renders.

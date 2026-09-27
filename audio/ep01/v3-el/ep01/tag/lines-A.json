@@ -1,0 +1,339 @@
+[
+ {
+  "id": "v3-vo-24",
+  "kind": "vo",
+  "scene": "32.03",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "it looks calmer than me.",
+  "spoken_as": "It looks calmer than me.",
+  "tag": "V.O.",
+  "delivery": "mild and honest; the picture has just shown the cover and the face wearing the same expression",
+  "on_camera": "vo",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/ep01/tag/wav/v3-vo-24__mas-manalt-A.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 2.511,
+  "frames_24": 60,
+  "voiced_span_s": 1.33,
+  "pace": {
+   "audible_in_s": 0.42,
+   "audible_out_s": 1.75,
+   "measured": {
+    "span_s": 1.33,
+    "wpm": 225.6,
+    "syllables": 6,
+    "articulation_sps": 4.51,
+    "pauses_s": []
+   },
+   "longest_internal_gap_s": 0.0,
+   "words": 5,
+   "wpm": 225.6,
+   "speed": 0.82,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "It",
+    "t0": 0.4,
+    "t1": 0.536
+   },
+   {
+    "w": "looks",
+    "t0": 0.594,
+    "t1": 0.861
+   },
+   {
+    "w": "calmer",
+    "t0": 0.93,
+    "t1": 1.302
+   },
+   {
+    "w": "than",
+    "t0": 1.36,
+    "t1": 1.499
+   },
+   {
+    "w": "me",
+    "t0": 1.557,
+    "t1": 1.755
+   }
+  ],
+  "qa": {
+   "asr": "It looks calmer than me.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -1.63,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 132.6,
+   "f0_range_st": 7.7,
+   "speech_head_s": 0.42,
+   "speech_tail_s": 0.761,
+   "raw_tail_cut": false,
+   "align_median_s": 0.08
+  },
+  "voice": "ElevenLabs library voice 'Giovanni - Tranquil, Clever and Educated' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.82",
+  "voiceId": "g6fJBFvZZp41FerGMMx7",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "mas-manalt",
+   "voice_id": "g6fJBFvZZp41FerGMMx7",
+   "voice_name": "Giovanni - Tranquil, Clever and Educated",
+   "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.82
+   },
+   "seed": 70224915,
+   "chars_sent": 24,
+   "request_key": "0ed2cb8444b5af45",
+   "derived_from": null,
+   "reused_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/v3/tag/wav/v3-vo-24.wav",
+   "mode": "on-mic",
+   "lufs_i": -18.0,
+   "duration_s": 2.73,
+   "audible_in_s": 0.58,
+   "audible_out_s": 2.0,
+   "wpm": 211.3,
+   "median_f0_hz": 104.3,
+   "f0_range_st": 13.6,
+   "delivery": "mild and honest; the picture has just shown the cover and the face wearing the same expression",
+   "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.850",
+   "timeline_in": 0.58,
+   "timeline_dur": 1.42
+  }
+ },
+ {
+  "id": "e1-tg-32-01",
+  "kind": "dialogue",
+  "scene": "32.05",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "close.",
+  "spoken_as": "Close.",
+  "tag": "",
+  "delivery": "To the magazine cover he holds beside his face, not to the Orb. Level, dry, privately amused: a verdict on a likeness, graded one notch short. One word, complete, falling. Quiet: the room is small.",
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/ep01/tag/wav/e1-tg-32-01__mas-manalt-A.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 1.722,
+  "frames_24": 41,
+  "voiced_span_s": 0.67,
+  "pace": {
+   "audible_in_s": 0.4,
+   "audible_out_s": 1.07,
+   "measured": {
+    "span_s": 0.67,
+    "wpm": 89.6,
+    "syllables": 1,
+    "articulation_sps": 1.49,
+    "pauses_s": []
+   },
+   "longest_internal_gap_s": 0.0,
+   "words": 1,
+   "wpm": 89.6,
+   "speed": 0.86,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Close",
+    "t0": 0.38,
+    "t1": 0.954
+   }
+  ],
+  "qa": {
+   "asr": "Close.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -16.48,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -3.51,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 133.1,
+   "f0_range_st": 12.8,
+   "speech_head_s": 0.4,
+   "speech_tail_s": 0.652,
+   "raw_tail_cut": false,
+   "align_median_s": 0.38
+  },
+  "voice": "ElevenLabs library voice 'Giovanni - Tranquil, Clever and Educated' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.86",
+  "voiceId": "g6fJBFvZZp41FerGMMx7",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "mas-manalt",
+   "voice_id": "g6fJBFvZZp41FerGMMx7",
+   "voice_name": "Giovanni - Tranquil, Clever and Educated",
+   "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.86
+   },
+   "seed": 2820986358,
+   "chars_sent": 6,
+   "request_key": "678c00b1b47366da",
+   "derived_from": null,
+   "reused_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/tag/dialogue/fast-v1/wav/e1-tg-32-01.wav",
+   "mode": "on-mic",
+   "lufs_i": -16.0,
+   "duration_s": 1.76,
+   "audible_in_s": 0.54,
+   "audible_out_s": 1.19,
+   "wpm": 92.3,
+   "median_f0_hz": 113.6,
+   "f0_range_st": 9.8,
+   "delivery": "To the magazine cover he holds beside his face, not to the Orb. Level, dry, privately amused: a verdict on a likeness, graded one notch short. One word, complete, falling. Quiet: the room is small.",
+   "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.900",
+   "timeline_in": 0.54,
+   "timeline_dur": 0.65
+  }
+ },
+ {
+  "id": "e1-tg-33-01",
+  "kind": "dialogue",
+  "scene": "33.04",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "noted.",
+  "spoken_as": "Noded.",
+  "tag": "",
+  "delivery": "The cold open's word, bookended: he accepts a lawsuit the way he accepted Friday's invite, like a lunch order. Flat, unbothered, complete, falling. Lands on the chord with no third.",
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/ep01/tag/wav/e1-tg-33-01__mas-manalt-A.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 1.629,
+  "frames_24": 39,
+  "voiced_span_s": 0.6,
+  "pace": {
+   "audible_in_s": 0.38,
+   "audible_out_s": 0.98,
+   "measured": {
+    "span_s": 0.6,
+    "wpm": 100.0,
+    "syllables": 2,
+    "articulation_sps": 3.33,
+    "pauses_s": [
+     0.09
+    ]
+   },
+   "longest_internal_gap_s": 0.09,
+   "words": 1,
+   "wpm": 100.0,
+   "speed": 0.86,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Noted",
+    "t0": 0.36,
+    "t1": 0.872
+   }
+  ],
+  "qa": {
+   "asr": "Noted.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -1.71,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 130.7,
+   "f0_range_st": 5.9,
+   "speech_head_s": 0.38,
+   "speech_tail_s": 0.649,
+   "raw_tail_cut": false,
+   "align_median_s": 0.36
+  },
+  "voice": "ElevenLabs library voice 'Giovanni - Tranquil, Clever and Educated' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.86",
+  "voiceId": "g6fJBFvZZp41FerGMMx7",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "mas-manalt",
+   "voice_id": "g6fJBFvZZp41FerGMMx7",
+   "voice_name": "Giovanni - Tranquil, Clever and Educated",
+   "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.86
+   },
+   "seed": 2257985711,
+   "chars_sent": 6,
+   "request_key": "57e7f7c69c9ac9d2",
+   "derived_from": null,
+   "reused_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/tag/dialogue/fast-v1/wav/e1-tg-33-01.wav",
+   "mode": "on-mic",
+   "lufs_i": -16.0,
+   "duration_s": 1.805,
+   "audible_in_s": 0.5,
+   "audible_out_s": 1.21,
+   "wpm": 84.5,
+   "median_f0_hz": 115.2,
+   "f0_range_st": 8.1,
+   "delivery": "The cold open's word, bookended: he accepts a lawsuit the way he accepted Friday's invite, like a lunch order. Flat, unbothered, complete, falling. Lands on the chord with no third.",
+   "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.900",
+   "timeline_in": 0.5,
+   "timeline_dur": 0.71
+  }
+ }
+]

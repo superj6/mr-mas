@@ -17,9 +17,12 @@
   "Ttemme": "Temmy",
   "Tasya": "Tahs-yuh",
   "Neleh": "Nell-eh",
-  "Nole": "Knoll"
+  "Nole": "Knoll",
+  "Macrosoft": "Mack-roh-soft",
+  "Manalt": "Man-alt",
+  "GTP-4": "G-T-P four"
  },
- "respell_note": "names as the house lexicon (cast.json 'lexicon', naming.md §9) says them, respelled for the voice: Mas /mɑs/ -> 'Moss', Gerg /ɡɜɹɡ/ -> 'Gurg', Alyi /ˈælji/ -> 'Al-yee'. Only the text sent changes; lines JSON keep the script's text.",
+ "respell_note": "names as the house lexicon (cast.json 'lexicon', naming.md §9) says them, respelled for the voice: Mas /mɑs/ -> 'Moss', Gerg /ɡɜɹɡ/ -> 'Gurg', Alyi /ˈælji/ -> 'Al-yee'. Only the text sent changes; lines JSON keep the script's text. Phase 2 (2026-09-27), chosen by a forced-choice ASR check (tools/pron_check.py; voices-el.md §9): Macrosoft -> 'Mack-roh-soft' (margin over 'Microsoft' +1.05; the plain spelling -7.71, 'Macro-soft' -5.88, Kokoro's IPA take -4.41, a 'Microsoft' control -16.34); Manalt -> 'Man-alt' (naming.md 'MAN-alt'; +1.13 over 'Menalt' etc., plain -1.78); GTP-4 -> 'G-T-P four' (the swap is the joke, as CHATGTP). respell_lines: a per-line fix, only where that take needed it: a5-29-01 'badge' -> 'badj' (+3.05 over 'batch'; the sample take -0.03, a new seed -0.40, a 'batch' control -6.05). respell_roles: where one voice needs its own spelling. mas-manalt (Giovanni): 'Gerg' -> 'Guhrg' (his 'Gurg' devoices to 'Kirk': 'Go to sleep, Gurg.' scored Kirk 13.8 over the name; 'Guhrg' puts the name 9.0 over Kirk and the plain ASR writes 'Gurg'; 'Ghurg', 'Gurrg' and 'Gerg' were still heard as Kirk); 'Noted' -> 'Noded' (the American flap; 'Noted.' was heard as 'Note it.' on three seeds, -0.37/-1.66/-1.31; 'Noded.' +1.89, heard 'Noted.'). v3-vo-23 (V.O., 'gerg never waits to be asked.'): 'Guhrg' was still heard as Kirk on three seeds (-6.19, -11.19, -5.52) and with a comma (-1.22); a soft lead-in '...Guhrg' +1.87 (the plain ASR writes 'Gorog': for an ear). v3-vo-21: a new seed (retake, bump 307), heard 'Gourg'.",
  "names": [
   "mas",
   "manalt",
@@ -1913,5 +1916,28 @@
    "pitch_st": 0.7,
    "why": "The same as DEEPFAKE NEDIB, raised 0.7 st so the two fakes are told apart."
   }
- }
+ },
+ "respell_lines": {
+  "a5-29-01": {
+   "badge": "badj"
+  },
+  "v3-vo-23": {
+   "Gerg": "...Guhrg"
+  }
+ },
+ "respell_roles": {
+  "mas-manalt": {
+   "Gerg": "Guhrg",
+   "Noted": "Noded"
+  }
+ },
+ "say_lines": {
+  "e1-a2-15-04": "Which one am I."
+ },
+ "say_lines_note": "Per-line readings: the same words with other punctuation, sent instead of the line (the lines JSON keeps the script's text). e1-a2-15-04: Mas's 'which one am i?' came back as a sharp rise on both takes (median F0 226 and 257 Hz, pYIN 107 -> 289 Hz), against his brief's level or falling finals; sent as a statement.",
+ "say_full": {
+  "a5-27-31": "Neleh, hi. Wow. I've actually written up some thoughts on exactly this. Eleven pages, on the conditions under which we might, hypothetically, consider it.",
+  "a5-29-24": "Has anyone read the charter?"
+ },
+ "say_full_note": "Lines cut off by the world (the timeline's 'cut', text ending in a dash) are read whole, as the Kokoro takes were (their spoken_as in audio/ep01/act4/dialogue/lines-v5.json); the lock's 'dur' marks the cut-off and the mixer plays the whole file."
 }

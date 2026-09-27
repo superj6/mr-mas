@@ -1,0 +1,145 @@
+{
+ "line": "a5-29-01",
+ "texts": [
+  "The badge was a joke.",
+  "The batch was a joke.",
+  "The band was a joke."
+ ],
+ "results": [
+  {
+   "variant": "plain",
+   "sent": "The badge was a joke.",
+   "chars": 0,
+   "file": "../../../../../tmp/claude-1000/-home-jgon-project-art-mrmas/a5e7723c-6ab4-4824-a1ed-8e367fdb82e5/scratchpad/v3-voices-el/probes/wav/a5-29-01~plain.wav",
+   "asr": "The batch was a joke",
+   "margin": -0.032,
+   "scores": [
+    [
+     "The badge was a joke.",
+     -1.215,
+     6
+    ],
+    [
+     "The batch was a joke.",
+     -1.183,
+     6
+    ],
+    [
+     "The band was a joke.",
+     -11.381,
+     6
+    ]
+   ],
+   "f0": 110.1,
+   "dur": 2.279
+  },
+  {
+   "variant": "seed307",
+   "sent": "The badge was a joke.",
+   "chars": 21,
+   "file": "../../../../../tmp/claude-1000/-home-jgon-project-art-mrmas/a5e7723c-6ab4-4824-a1ed-8e367fdb82e5/scratchpad/v3-voices-el/probes/wav/a5-29-01~seed307.wav",
+   "asr": "The batch was a joke",
+   "margin": -0.397,
+   "scores": [
+    [
+     "The badge was a joke.",
+     -1.301,
+     6
+    ],
+    [
+     "The batch was a joke.",
+     -0.904,
+     6
+    ],
+    [
+     "The band was a joke.",
+     -10.627,
+     6
+    ]
+   ],
+   "f0": 118.2,
+   "dur": 2.279
+  },
+  {
+   "variant": "badj",
+   "sent": "The badj was a joke.",
+   "chars": 20,
+   "file": "../../../../../tmp/claude-1000/-home-jgon-project-art-mrmas/a5e7723c-6ab4-4824-a1ed-8e367fdb82e5/scratchpad/v3-voices-el/probes/wav/a5-29-01~badj.wav",
+   "asr": "The badge was a joke",
+   "margin": 3.048,
+   "scores": [
+    [
+     "The badge was a joke.",
+     -0.609,
+     6
+    ],
+    [
+     "The batch was a joke.",
+     -3.657,
+     6
+    ],
+    [
+     "The band was a joke.",
+     -10.872,
+     6
+    ]
+   ],
+   "f0": 104.9,
+   "dur": 2.279
+  },
+  {
+   "variant": "badge-comma",
+   "sent": "The badge was a joke.",
+   "chars": 0,
+   "file": "../../../../../tmp/claude-1000/-home-jgon-project-art-mrmas/a5e7723c-6ab4-4824-a1ed-8e367fdb82e5/scratchpad/v3-voices-el/probes/wav/a5-29-01~badge-comma.wav",
+   "asr": "The batch was a joke",
+   "margin": -0.032,
+   "scores": [
+    [
+     "The badge was a joke.",
+     -1.215,
+     6
+    ],
+    [
+     "The batch was a joke.",
+     -1.183,
+     6
+    ],
+    [
+     "The band was a joke.",
+     -11.381,
+     6
+    ]
+   ],
+   "f0": 110.1,
+   "dur": 2.279
+  },
+  {
+   "variant": "extra0",
+   "sent": "The batch was a joke.",
+   "chars": 21,
+   "file": "../../../../../tmp/claude-1000/-home-jgon-project-art-mrmas/a5e7723c-6ab4-4824-a1ed-8e367fdb82e5/scratchpad/v3-voices-el/probes/wav/a5-29-01-ctl4~extra0.wav",
+   "asr": "The batch was a joke",
+   "margin": -6.05,
+   "scores": [
+    [
+     "The badge was a joke.",
+     -6.501,
+     6
+    ],
+    [
+     "The batch was a joke.",
+     -0.451,
+     6
+    ],
+    [
+     "The band was a joke.",
+     -12.292,
+     6
+    ]
+   ],
+   "f0": 105.8,
+   "dur": 2.372
+  }
+ ]
+}

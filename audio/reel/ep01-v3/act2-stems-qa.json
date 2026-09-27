@@ -1,0 +1,421 @@
+{
+ "segment": "act2",
+ "variant": "kokoro",
+ "timeline": "show/reel/ep01-v3/ep01-v3-act2.json",
+ "timeline_variant": "kokoro",
+ "seconds": 204.75,
+ "frames": 4914,
+ "rooms": [
+  {
+   "room": "whitehouse",
+   "from": -1.0,
+   "to": 75.083,
+   "first": "13.01",
+   "last": "13.14",
+   "lead": 1.0,
+   "trail": 1.0,
+   "lift_db": 3.6
+  },
+  {
+   "room": "bullpen-night",
+   "from": 73.483,
+   "to": 77.067,
+   "first": "14.01",
+   "last": "14.01",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 4.5
+  },
+  {
+   "room": "bay",
+   "from": 76.067,
+   "to": 83.95,
+   "first": "14.02",
+   "last": "14.05",
+   "lead": 0.6,
+   "trail": 0.2,
+   "lift_db": 3.8
+  },
+  {
+   "room": "senate",
+   "from": 84.083,
+   "to": 156.233,
+   "first": "15.01",
+   "last": "15.18",
+   "lead": 1.0,
+   "trail": 0.4,
+   "lift_db": 1.1
+  },
+  {
+   "room": "street",
+   "from": 155.233,
+   "to": 164.233,
+   "first": "16.01",
+   "last": "16.01",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 6.0
+  },
+  {
+   "room": "rooftop",
+   "from": 163.233,
+   "to": 204.1,
+   "first": "17.01",
+   "last": "17.12",
+   "lead": 0.6,
+   "trail": 0.1,
+   "lift_db": 3.1
+  }
+ ],
+ "sfx": [
+  [
+   "13.03",
+   "freeze_hit_F",
+   11.333,
+   -20
+  ],
+  [
+   "13.05",
+   "paper_flutter",
+   23.795,
+   -26
+  ],
+  [
+   "13.06",
+   "landing_thunk",
+   25.075,
+   -30
+  ],
+  [
+   "13.06",
+   "landing_thunk",
+   25.625,
+   -30
+  ],
+  [
+   "13.06",
+   "landing_thunk",
+   26.175,
+   -30
+  ],
+  [
+   "13.10",
+   "flame_whoomph",
+   54.575,
+   -26
+  ],
+  [
+   "13.12",
+   "camera_shutter",
+   62.292,
+   -14
+  ],
+  [
+   "13.12",
+   "freeze_hit_F",
+   62.312,
+   -22
+  ],
+  [
+   "13.14",
+   "camera_shutter",
+   68.167,
+   -30
+  ],
+  [
+   "14.04",
+   "post_click",
+   80.533,
+   -18
+  ],
+  [
+   "14.05",
+   "synth:plink",
+   82.333,
+   -14
+  ],
+  [
+   "14.05",
+   "key_tap_soft_01",
+   83.233,
+   -34
+  ],
+  [
+   "15.04",
+   "freeze_hit_C",
+   95.583,
+   -22
+  ],
+  [
+   "15.05",
+   "typing_soft",
+   96.408,
+   -30
+  ],
+  [
+   "15.11",
+   "typing_soft",
+   126.032,
+   -26
+  ],
+  [
+   "15.12",
+   "cloth_rustle",
+   130.342,
+   -30
+  ],
+  [
+   "15.12",
+   "synth:moth",
+   131.392,
+   -30
+  ],
+  [
+   "15.13",
+   "synth:gasp",
+   133.742,
+   -17
+  ],
+  [
+   "15.14",
+   "rubber_stamp_C",
+   136.892,
+   -20
+  ],
+  [
+   "15.14",
+   "rubber_stamp_C",
+   137.242,
+   -20
+  ],
+  [
+   "15.14",
+   "rubber_stamp_C",
+   137.592,
+   -20
+  ],
+  [
+   "15.15",
+   "folder_slide",
+   146.142,
+   -28
+  ],
+  [
+   "15.15",
+   "rubber_stamp_C",
+   147.492,
+   -16
+  ],
+  [
+   "15.16",
+   "paper_curl",
+   150.083,
+   -30
+  ],
+  [
+   "16.01",
+   "rubber_stamp_C",
+   155.533,
+   -18,
+   "sound J-cut from the beat before: leads the cut by 0.3 s"
+  ],
+  [
+   "16.01",
+   "paper_whip",
+   156.393,
+   -22
+  ],
+  [
+   "16.01",
+   "rubber_stamp_C",
+   157.033,
+   -18
+  ],
+  [
+   "16.01",
+   "post_click",
+   160.073,
+   -18
+  ],
+  [
+   "16.01",
+   "rubber_stamp_C",
+   160.993,
+   -18
+  ],
+  [
+   "16.01",
+   "rubber_stamp_C",
+   161.973,
+   -16
+  ],
+  [
+   "17.01",
+   "pen_scribble_short",
+   165.633,
+   -30
+  ],
+  [
+   "17.01",
+   "pen_scribble_short",
+   166.773,
+   -30
+  ],
+  [
+   "17.01",
+   "pen_run",
+   168.153,
+   -30
+  ],
+  [
+   "17.01",
+   "pen_scribble_short",
+   168.933,
+   -30
+  ],
+  [
+   "17.01",
+   "pen_tick_1",
+   169.473,
+   -32
+  ],
+  [
+   "17.02",
+   "pen_scribble_short",
+   170.033,
+   -34
+  ],
+  [
+   "17.02",
+   "pen_scribble_short",
+   174.433,
+   -34
+  ],
+  [
+   "17.02",
+   "pen_scribble_short",
+   178.733,
+   -34
+  ],
+  [
+   "17.03",
+   "synth:roll",
+   180.208,
+   -24
+  ],
+  [
+   "17.04",
+   "freeze_hit_F",
+   181.625,
+   -22
+  ],
+  [
+   "17.07",
+   "ka_ching",
+   189.558,
+   -12
+  ],
+  [
+   "17.07",
+   "synth:bell",
+   189.578,
+   -18
+  ],
+  [
+   "17.10",
+   "paper_curl",
+   192.783,
+   -32
+  ]
+ ],
+ "sfx_missing": [],
+ "sfx_dropped": [
+  {
+   "beat": "16.01",
+   "name": "synth:stab",
+   "claimed_by_score": "knee-stabs",
+   "evidence": "155.83 s: the knee stab on stamp 1 (C F Bb Eb over Ab)"
+  },
+  {
+   "beat": "16.01",
+   "name": "synth:stab",
+   "claimed_by_score": "knee-stabs",
+   "evidence": "155.83 s: the knee stab on stamp 1 (C F Bb Eb over Ab)"
+  },
+  {
+   "beat": "16.01",
+   "name": "synth:stab",
+   "claimed_by_score": "knee-stabs",
+   "evidence": "155.83 s: the knee stab on stamp 1 (C F Bb Eb over Ab)"
+  },
+  {
+   "beat": "16.01",
+   "name": "synth:stab",
+   "claimed_by_score": "knee-stabs",
+   "evidence": "155.83 s: the knee stab on stamp 1 (C F Bb Eb over Ab)"
+  }
+ ],
+ "added": [
+  {
+   "what": "the anchor's too-smooth murmur (no words) through the phone",
+   "at": 74.08,
+   "to": 84.1,
+   "lufs": -34,
+   "why": "14.01 sound cue: \"the anchor's too-smooth murmur, no words: a made formant voice\"; stops for the clone's first word"
+  }
+ ],
+ "score_hints": {
+  "score": "audio/ost/tracks/e01-v3-act2/render/music.wav",
+  "cues": "audio/ost/tracks/e01-v3-act2/cues.json",
+  "drop": [
+   "knee-stabs"
+  ],
+  "why": {
+   "knee-stabs": "155.83 s: the knee stab on stamp 1 (C F Bb Eb over Ab)"
+  },
+  "grid": null
+ },
+ "room_stem": {
+  "lufs": -37.23,
+  "peak_dbfs": -21.1,
+  "p10_50ms_dbfs": -39.8
+ },
+ "sfx_stem": {
+  "lufs": -33.19,
+  "peak_dbfs": -12.0,
+  "p10_50ms_dbfs": -240.0
+ },
+ "room_under_-55dBFS_0.3s": [],
+ "room_levels": [
+  {
+   "room": "whitehouse@act2:13.01",
+   "p5_50ms_dbfs": -43.6,
+   "lift_db": 3.6
+  },
+  {
+   "room": "bullpen-night@act2:14.01",
+   "p5_50ms_dbfs": -44.5,
+   "lift_db": 4.5
+  },
+  {
+   "room": "bay@act2:14.02",
+   "p5_50ms_dbfs": -43.8,
+   "lift_db": 3.8
+  },
+  {
+   "room": "senate@act2:15.01",
+   "p5_50ms_dbfs": -41.1,
+   "lift_db": 1.1
+  },
+  {
+   "room": "street@act2:16.01",
+   "p5_50ms_dbfs": -47.2,
+   "lift_db": 6.0
+  },
+  {
+   "room": "rooftop@act2:17.01",
+   "p5_50ms_dbfs": -43.1,
+   "lift_db": 3.1
+  }
+ ]
+}

@@ -1,0 +1,104 @@
+{
+ "segment": "tag",
+ "variant": "kokoro",
+ "seconds": 33.875,
+ "frames": 813,
+ "samples": 1626000,
+ "timeline": "show/reel/ep01-v3/ep01-v3-tag.json",
+ "dialogue": {
+  "lines": 3,
+  "device": {},
+  "el_matched": 0,
+  "missing": []
+ },
+ "rooms": {
+  "stem": "audio/reel/ep01-v3/tag-room.wav",
+  "dip_under_speech_db": 2.0
+ },
+ "sfx": {
+  "stem": "audio/reel/ep01-v3/tag-sfx.wav",
+  "ducked": false
+ },
+ "score": {
+  "file": "audio/ost/tracks/e01-v3-tag/render/music.wav",
+  "cues": "audio/ost/tracks/e01-v3-tag/cues.json",
+  "length_s": 33.875,
+  "length_vs_segment_s": 0.0,
+  "lufs_as_delivered": -21.08,
+  "duck": {
+   "by_mood_db": [
+    [
+     "TAG",
+     7
+    ]
+   ],
+   "cue_sheet_overrides": [],
+   "posts_dip_db": -3.0,
+   "envelope": "pre 0.25 s, joined across gaps < 2.5 s, 0.2 s in, 0.6 s out; depth smoothed 1.5 s"
+  },
+  "designed_silences": [
+   [
+    23.125,
+    30.635,
+    "the thud -> the button: no score (the front page, \"noted.\")"
+   ],
+   [
+    0.0,
+    0.6,
+    "the tag's head: the vault hum (a timeline sound) until the felt takes its F"
+   ]
+  ]
+ },
+ "measured": {
+  "lufs_i": -16.68,
+  "true_peak_dbtp": -1.49,
+  "sample_peak_dbfs": -1.5,
+  "lra_lu": 11.5,
+  "gain_db": 3.68,
+  "limiter_ceiling_dbfs": -1.5,
+  "limiter_active_s": 0.065,
+  "dialogue_lufs": -13.18,
+  "score_lufs_after_duck": -17.76,
+  "score_rms_under_speech_dbfs": -44.8,
+  "score_rms_between_speech_dbfs": -22.5,
+  "score_runs": {
+   "count": 3,
+   "shortest_s": 3.0,
+   "runs": [
+    [
+     0.6,
+     16.2
+    ],
+    [
+     18.35,
+     4.8
+    ],
+    [
+     30.6,
+     3.0
+    ]
+   ]
+  },
+  "rooms_lufs": -34.72,
+  "sfx_lufs": -30.51,
+  "holes_under_-42dBFS_0.3s": [],
+  "holes_mono_downmix": [],
+  "holes_without_score": [],
+  "unmarked_holes": 0,
+  "unmarked_holes_without_score": 0,
+  "jumps_over_15dB": {
+   "count": 4,
+   "rising": 4,
+   "rising_at_a_word": 3,
+   "rising_at_an_sfx": 0,
+   "rising_other": [
+    20.0
+   ],
+   "falling": 0
+  }
+ },
+ "file": "out/ep01/full-v3/mix/tag-mix.wav",
+ "guard_db": -0.67,
+ "built": "2026-09-27 13:34:51",
+ "heard": "nothing here has been listened to; every number is measured"
+}

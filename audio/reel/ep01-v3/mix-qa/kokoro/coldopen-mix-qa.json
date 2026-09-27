@@ -1,0 +1,130 @@
+{
+ "segment": "coldopen",
+ "variant": "kokoro",
+ "seconds": 30.667,
+ "frames": 736,
+ "samples": 1472000,
+ "timeline": "show/reel/ep01-v3/ep01-v3-coldopen.json",
+ "dialogue": {
+  "lines": 3,
+  "device": {},
+  "el_matched": 0,
+  "missing": []
+ },
+ "rooms": {
+  "stem": "audio/reel/ep01-v3/coldopen-room.wav",
+  "dip_under_speech_db": 2.0
+ },
+ "sfx": {
+  "stem": "audio/reel/ep01-v3/coldopen-sfx.wav",
+  "ducked": false
+ },
+ "score": {
+  "file": "audio/ost/tracks/e01-v3-coldopen/render/music.wav",
+  "cues": "audio/ost/tracks/e01-v3-coldopen/cues.json",
+  "length_s": 30.667,
+  "length_vs_segment_s": 0.0,
+  "lufs_as_delivered": -26.2,
+  "duck": {
+   "by_mood_db": [
+    [
+     "COLD OPEN",
+     9
+    ],
+    [
+     "",
+     9.0
+    ]
+   ],
+   "cue_sheet_overrides": [],
+   "posts_dip_db": -3.0,
+   "envelope": "pre 0.25 s, joined across gaps < 2.5 s, 0.2 s in, 0.6 s out; depth smoothed 1.5 s"
+  },
+  "designed_silences": [
+   [
+    0.0,
+    20.166666666666668,
+    "no score under the hall (sc 1-2): the room, the freeze's F4 (a timeline sound)"
+   ]
+  ]
+ },
+ "measured": {
+  "lufs_i": -16.0,
+  "true_peak_dbtp": -3.71,
+  "sample_peak_dbfs": -3.79,
+  "lra_lu": 11.0,
+  "gain_db": 2.67,
+  "limiter_ceiling_dbfs": -1.5,
+  "limiter_active_s": 0.0,
+  "dialogue_lufs": -13.29,
+  "score_lufs_after_duck": -23.53,
+  "score_rms_under_speech_dbfs": -240.0,
+  "score_rms_between_speech_dbfs": -28.0,
+  "score_runs": {
+   "count": 4,
+   "shortest_s": 0.5,
+   "runs": [
+    [
+     20.15,
+     1.8
+    ],
+    [
+     22.35,
+     0.5
+    ],
+    [
+     23.25,
+     5.35
+    ],
+    [
+     28.9,
+     1.75
+    ]
+   ]
+  },
+  "rooms_lufs": -33.16,
+  "sfx_lufs": -26.35,
+  "holes_under_-42dBFS_0.3s": [],
+  "holes_mono_downmix": [
+   {
+    "at": 19.45,
+    "s": 0.35,
+    "what": "UNMARKED (in beat 2.03)"
+   },
+   {
+    "at": 28.6,
+    "s": 0.3,
+    "what": "designed: the rewind reaching white"
+   }
+  ],
+  "holes_without_score": [
+   {
+    "at": 24.0,
+    "s": 1.35,
+    "what": "designed: the rewind reaching white"
+   }
+  ],
+  "unmarked_holes": 0,
+  "unmarked_holes_without_score": 0,
+  "jumps_over_15dB": {
+   "count": 13,
+   "rising": 11,
+   "rising_at_a_word": 3,
+   "rising_at_an_sfx": 1,
+   "rising_other": [
+    3.0,
+    7.4,
+    9.25,
+    10.8,
+    24.2,
+    28.9,
+    30.15
+   ],
+   "falling": 2
+  }
+ },
+ "file": "out/ep01/full-v3/mix/coldopen-mix.wav",
+ "guard_db": null,
+ "built": "2026-09-27 13:34:28",
+ "heard": "nothing here has been listened to; every number is measured"
+}

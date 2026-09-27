@@ -1,0 +1,68 @@
+{
+ "fingerprint": "80704196af67c32530ae76acf645f372434fe1af",
+ "variant": "kokoro",
+ "timelines": {
+  "coldopen": "show/reel/ep01-v3/ep01-v3-coldopen.json",
+  "act1": "show/reel/ep01-v3/ep01-v3-act1.json",
+  "act2": "show/reel/ep01-v3/ep01-v3-act2.json",
+  "act3": "show/reel/ep01-v3/ep01-v3-act3.json",
+  "act4": "show/reel/ep01-v3/ep01-v3-act4.json",
+  "tag": "show/reel/ep01-v3/ep01-v3-tag.json"
+ },
+ "hints": {
+  "coldopen": {
+   "score": "audio/ost/tracks/e01-v3-coldopen/render/music.wav",
+   "cues": "audio/ost/tracks/e01-v3-coldopen/cues.json",
+   "drop": [
+    "freeze-F4"
+   ],
+   "why": {
+    "freeze-F4": "14.54 s: the freeze: piano_fired_F4 (MM-14 \"Freeze F4\"), a timeline sound: the sound stem lays it, "
+   },
+   "grid": null
+  },
+  "act1": {
+   "score": null,
+   "cues": null,
+   "drop": [],
+   "why": {},
+   "grid": null
+  },
+  "act2": {
+   "score": "audio/ost/tracks/e01-v3-act2/render/music.wav",
+   "cues": "audio/ost/tracks/e01-v3-act2/cues.json",
+   "drop": [
+    "knee-stabs"
+   ],
+   "why": {
+    "knee-stabs": "155.83 s: the knee stab on stamp 1 (C F Bb Eb over Ab)"
+   },
+   "grid": null
+  },
+  "act3": {
+   "score": "audio/ost/tracks/e01-v3-act3/render/music.wav",
+   "cues": "audio/ost/tracks/e01-v3-act3/cues.json",
+   "drop": [],
+   "why": {},
+   "grid": null
+  },
+  "act4": {
+   "score": null,
+   "cues": null,
+   "drop": [],
+   "why": {},
+   "grid": null
+  },
+  "tag": {
+   "score": "audio/ost/tracks/e01-v3-tag/render/music.wav",
+   "cues": "audio/ost/tracks/e01-v3-tag/cues.json",
+   "drop": [
+    "button-chord"
+   ],
+   "why": {
+    "button-chord": "30.64 s: THE BUTTON: F3 C4 G4 C5, no third (the vault's F hum is its root)"
+   },
+   "grid": null
+  }
+ }
+}

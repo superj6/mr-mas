@@ -1,0 +1,42 @@
+{
+ "segment": "card",
+ "variant": "kokoro",
+ "seconds": 2.0,
+ "frames": 48,
+ "samples": 96000,
+ "timeline": null,
+ "layers": {
+  "rooms": "the card room stem",
+  "sfx": "none",
+  "dialogue": "none",
+  "score": "none"
+ },
+ "measured": {
+  "lufs_i": -37.01,
+  "true_peak_dbtp": -24.77,
+  "sample_peak_dbfs": -24.78,
+  "lra_lu": null,
+  "gain_db": 0.56,
+  "limiter_ceiling_dbfs": 0.0,
+  "limiter_active_s": 0.0,
+  "rooms_lufs": -37.01,
+  "sfx_lufs": null,
+  "holes_under_-42dBFS_0.3s": [],
+  "holes_mono_downmix": [],
+  "holes_without_score": [],
+  "unmarked_holes": 0,
+  "unmarked_holes_without_score": 0,
+  "jumps_over_15dB": {
+   "count": 0,
+   "rising": 0,
+   "rising_at_a_word": 0,
+   "rising_at_an_sfx": 0,
+   "rising_other": [],
+   "falling": 0
+  }
+ },
+ "file": "out/ep01/full-v3/mix/card-mix.wav",
+ "guard_db": null,
+ "built": "2026-09-27 13:34:51",
+ "heard": "nothing here has been listened to; every number is measured"
+}

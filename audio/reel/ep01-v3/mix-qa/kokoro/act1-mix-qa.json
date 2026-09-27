@@ -1,0 +1,193 @@
+{
+ "segment": "act1",
+ "variant": "kokoro",
+ "seconds": 322.5,
+ "frames": 7740,
+ "samples": 15480000,
+ "timeline": "show/reel/ep01-v3/ep01-v3-act1.json",
+ "dialogue": {
+  "lines": 60,
+  "device": {
+   "phone": 6
+  },
+  "el_matched": 0,
+  "missing": []
+ },
+ "rooms": {
+  "stem": "audio/reel/ep01-v3/act1-room.wav",
+  "dip_under_speech_db": 2.0
+ },
+ "sfx": {
+  "stem": "audio/reel/ep01-v3/act1-sfx.wav",
+  "ducked": false
+ },
+ "score": {
+  "file": null,
+  "cues": null,
+  "missing": true
+ },
+ "measured": {
+  "lufs_i": -16.0,
+  "true_peak_dbtp": -1.9,
+  "sample_peak_dbfs": -1.93,
+  "lra_lu": 19.3,
+  "gain_db": 0.56,
+  "limiter_ceiling_dbfs": -1.5,
+  "limiter_active_s": 0.0,
+  "dialogue_lufs": -15.85,
+  "rooms_lufs": -37.3,
+  "sfx_lufs": -36.57,
+  "holes_under_-42dBFS_0.3s": [
+   {
+    "at": 321.55,
+    "s": 0.45,
+    "what": "designed: the act-out black (the bullpen cuts with the picture)"
+   }
+  ],
+  "holes_mono_downmix": [
+   {
+    "at": 196.4,
+    "s": 0.5,
+    "what": "UNMARKED (in beat 9.04)"
+   },
+   {
+    "at": 199.85,
+    "s": 0.45,
+    "what": "UNMARKED (in beat 9.06)"
+   },
+   {
+    "at": 201.6,
+    "s": 0.4,
+    "what": "UNMARKED (in beat 9.06)"
+   },
+   {
+    "at": 210.4,
+    "s": 0.3,
+    "what": "UNMARKED (in beat 9.09)"
+   },
+   {
+    "at": 212.95,
+    "s": 0.35,
+    "what": "UNMARKED (in beat 9.09)"
+   },
+   {
+    "at": 216.6,
+    "s": 0.3,
+    "what": "UNMARKED (in beat 9.09)"
+   },
+   {
+    "at": 228.9,
+    "s": 0.3,
+    "what": "UNMARKED (in beat 9.09)"
+   },
+   {
+    "at": 233.05,
+    "s": 0.35,
+    "what": "UNMARKED (in beat 9.09)"
+   },
+   {
+    "at": 257.95,
+    "s": 0.35,
+    "what": "UNMARKED (in beat 9.13)"
+   },
+   {
+    "at": 305.25,
+    "s": 0.35,
+    "what": "UNMARKED (in beat 12.02)"
+   },
+   {
+    "at": 312.1,
+    "s": 0.35,
+    "what": "UNMARKED (in beat 12.02)"
+   },
+   {
+    "at": 321.55,
+    "s": 0.5,
+    "what": "designed: the act-out black (the bullpen cuts with the picture)"
+   }
+  ],
+  "holes_without_score": [
+   {
+    "at": 321.55,
+    "s": 0.45,
+    "what": "designed: the act-out black (the bullpen cuts with the picture)"
+   }
+  ],
+  "unmarked_holes": 0,
+  "unmarked_holes_without_score": 0,
+  "jumps_over_15dB": {
+   "count": 133,
+   "rising": 101,
+   "rising_at_a_word": 40,
+   "rising_at_an_sfx": 0,
+   "rising_other": [
+    5.25,
+    11.95,
+    14.1,
+    20.75,
+    25.1,
+    26.3,
+    27.4,
+    28.85,
+    30.6,
+    33.45,
+    34.75,
+    36.35,
+    37.35,
+    40.55,
+    43.15,
+    46.95,
+    48.45,
+    49.7,
+    59.7,
+    61.55,
+    62.2,
+    66.2,
+    74.45,
+    82.65,
+    88.3,
+    90.6,
+    103.3,
+    103.4,
+    106.3,
+    107.0,
+    116.0,
+    140.5,
+    165.55,
+    168.25,
+    170.15,
+    170.65,
+    173.4,
+    173.65,
+    180.65,
+    194.55,
+    195.2,
+    197.5,
+    215.6,
+    217.55,
+    219.85,
+    221.15,
+    223.4,
+    226.0,
+    233.7,
+    242.55,
+    246.35,
+    247.9,
+    259.3,
+    268.45,
+    269.1,
+    274.3,
+    276.85,
+    307.9,
+    309.4,
+    309.8,
+    311.2
+   ],
+   "falling": 32
+  }
+ },
+ "file": "out/ep01/full-v3/mix/act1-mix.wav",
+ "guard_db": null,
+ "built": "2026-09-27 13:34:33",
+ "heard": "nothing here has been listened to; every number is measured"
+}

@@ -56,5 +56,84 @@
   "calls": 228,
   "chars_sent": 10054,
   "credits_billed": 5522
+ },
+ "phases": {
+  "phase 2: the whole episode, set A": {
+   "budget_chars": 20000,
+   "_about": "Phase 2 (2026-09-27): every Ep1 v3 line in set A, -16 LUFS, plus pronunciation probes and retakes. Budget 20,000 characters.",
+   "subscription_before": {
+    "tier": "creator",
+    "character_count": 5522,
+    "character_limit": 131000,
+    "next_character_count_reset_unix": 1793049484,
+    "voice_limit": 30,
+    "voice_slots_used": 0,
+    "professional_voice_limit": 1,
+    "can_extend_character_limit": false,
+    "status": "active",
+    "checked_at": "2026-09-27T12:49:04"
+   },
+   "subscription_after": {
+    "tier": "creator",
+    "character_count": 9844,
+    "character_limit": 131000,
+    "next_character_count_reset_unix": 1793049484,
+    "voice_limit": 30,
+    "voice_slots_used": 0,
+    "professional_voice_limit": 1,
+    "can_extend_character_limit": false,
+    "status": "active",
+    "checked_at": "2026-09-27T13:20:17"
+   },
+   "runs": {
+    "audio/ep01/v3-el/ep01/act1": {
+     "calls": 29,
+     "chars_sent": 1155,
+     "credits_billed": 631
+    },
+    "audio/ep01/v3-el/ep01/act2": {
+     "calls": 39,
+     "chars_sent": 1367,
+     "credits_billed": 750
+    },
+    "audio/ep01/v3-el/ep01/act3": {
+     "calls": 23,
+     "chars_sent": 852,
+     "credits_billed": 468
+    },
+    "audio/ep01/v3-el/ep01/act4": {
+     "calls": 87,
+     "chars_sent": 3732,
+     "credits_billed": 2052
+    },
+    "audio/ep01/v3-el/ep01/coldopen": {
+     "calls": 3,
+     "chars_sent": 128,
+     "credits_billed": 70
+    },
+    "audio/ep01/v3-el/ep01/tag": {
+     "calls": 3,
+     "chars_sent": 36,
+     "credits_billed": 19
+    },
+    "pronunciation probes (scratchpad v3-voices-el/probes; 22 calls, incl. 2 control reads)": {
+     "calls": 22,
+     "chars_sent": 608,
+     "credits_billed": 332
+    }
+   },
+   "total": {
+    "calls": 206,
+    "chars_sent": 7878,
+    "credits_billed": 4322
+   },
+   "used_by_subscription": 4322,
+   "note": "chars_sent counts the text as sent; credits_billed is each response's character-cost header, which is what the subscription counts (it agrees: 5,522 -> 9,844). Retakes and the per-line fixes are inside the segment runs."
+  }
+ },
+ "all_phases_total": {
+  "chars_sent": 17932,
+  "credits_billed": 9844,
+  "subscription_character_count": 9844
  }
 }

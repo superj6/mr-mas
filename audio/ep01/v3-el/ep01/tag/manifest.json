@@ -1,0 +1,304 @@
+{
+ "takes": {
+  "v3-vo-24__mas-manalt-A": {
+   "take": "v3-vo-24__mas-manalt-A",
+   "key": "0ed2cb8444b5af45",
+   "base_key": "0ed2cb8444b5af45",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -18 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep01/v3-el/ep01/tag/wav/v3-vo-24__mas-manalt-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.511,
+   "offset_s": 0.35,
+   "sent": "It looks calmer than me.",
+   "seed": 70224915,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.82
+   },
+   "voice_id": "g6fJBFvZZp41FerGMMx7",
+   "voice_name": "Giovanni - Tranquil, Clever and Educated",
+   "cand": "A",
+   "role": "mas-manalt",
+   "measured": {
+    "audible_in_s": 0.42,
+    "audible_out_s": 1.75,
+    "span_s": 1.33,
+    "words": 5,
+    "wpm": 225.6,
+    "syllables": 6,
+    "articulation_sps": 4.51,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.42,
+    "speech_tail_s": 0.761,
+    "tail_to_60_s": 0.006,
+    "median_f0_hz": 132.6,
+    "f0_range_st": 7.7
+   },
+   "words": [
+    {
+     "w": "It",
+     "t0": 0.4,
+     "t1": 0.536
+    },
+    {
+     "w": "looks",
+     "t0": 0.594,
+     "t1": 0.861
+    },
+    {
+     "w": "calmer",
+     "t0": 0.93,
+     "t1": 1.302
+    },
+    {
+     "w": "than",
+     "t0": 1.36,
+     "t1": 1.499
+    },
+    {
+     "w": "me",
+     "t0": 1.557,
+     "t1": 1.755
+    }
+   ],
+   "qa": {
+    "asr": "It looks calmer than me.",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -18.0,
+    "target_lufs": -18.0,
+    "true_peak_dbtp": -1.63,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 132.6,
+    "f0_range_st": 7.7,
+    "speech_head_s": 0.42,
+    "speech_tail_s": 0.761,
+    "raw_tail_cut": false,
+    "align_median_s": 0.08
+   },
+   "raw": {
+    "raw_first_sound_s": 0.075,
+    "raw_len_s": 1.811,
+    "raw_tail_cut": false
+   },
+   "kokoro": {
+    "file": "audio/ep01/v3/tag/wav/v3-vo-24.wav",
+    "mode": "on-mic",
+    "lufs_i": -18.0,
+    "duration_s": 2.73,
+    "audible_in_s": 0.58,
+    "audible_out_s": 2.0,
+    "wpm": 211.3,
+    "median_f0_hz": 104.3,
+    "f0_range_st": 13.6,
+    "delivery": "mild and honest; the picture has just shown the cover and the face wearing the same expression",
+    "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.850"
+   }
+  },
+  "e1-tg-32-01__mas-manalt-A": {
+   "take": "e1-tg-32-01__mas-manalt-A",
+   "key": "678c00b1b47366da",
+   "base_key": "678c00b1b47366da",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep01/v3-el/ep01/tag/wav/e1-tg-32-01__mas-manalt-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 1.722,
+   "offset_s": 0.35,
+   "sent": "Close.",
+   "seed": 2820986358,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.86
+   },
+   "voice_id": "g6fJBFvZZp41FerGMMx7",
+   "voice_name": "Giovanni - Tranquil, Clever and Educated",
+   "cand": "A",
+   "role": "mas-manalt",
+   "measured": {
+    "audible_in_s": 0.4,
+    "audible_out_s": 1.07,
+    "span_s": 0.67,
+    "words": 1,
+    "wpm": 89.6,
+    "syllables": 1,
+    "articulation_sps": 1.49,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.652,
+    "tail_to_60_s": 0.002,
+    "median_f0_hz": 133.1,
+    "f0_range_st": 12.8
+   },
+   "words": [
+    {
+     "w": "Close",
+     "t0": 0.38,
+     "t1": 0.954
+    }
+   ],
+   "qa": {
+    "asr": "Close.",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.48,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.51,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 133.1,
+    "f0_range_st": 12.8,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.652,
+    "raw_tail_cut": false,
+    "align_median_s": 0.38
+   },
+   "raw": {
+    "raw_first_sound_s": 0.055,
+    "raw_len_s": 1.022,
+    "raw_tail_cut": false
+   },
+   "kokoro": {
+    "file": "audio/ep01/tag/dialogue/fast-v1/wav/e1-tg-32-01.wav",
+    "mode": "on-mic",
+    "lufs_i": -16.0,
+    "duration_s": 1.76,
+    "audible_in_s": 0.54,
+    "audible_out_s": 1.19,
+    "wpm": 92.3,
+    "median_f0_hz": 113.6,
+    "f0_range_st": 9.8,
+    "delivery": "To the magazine cover he holds beside his face, not to the Orb. Level, dry, privately amused: a verdict on a likeness, graded one notch short. One word, complete, falling. Quiet: the room is small.",
+    "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.900"
+   }
+  },
+  "e1-tg-33-01__mas-manalt-A": {
+   "take": "e1-tg-33-01__mas-manalt-A",
+   "key": "57e7f7c69c9ac9d2",
+   "base_key": "57e7f7c69c9ac9d2",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep01/v3-el/ep01/tag/wav/e1-tg-33-01__mas-manalt-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 1.629,
+   "offset_s": 0.35,
+   "sent": "Noded.",
+   "seed": 2257985711,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.86
+   },
+   "voice_id": "g6fJBFvZZp41FerGMMx7",
+   "voice_name": "Giovanni - Tranquil, Clever and Educated",
+   "cand": "A",
+   "role": "mas-manalt",
+   "measured": {
+    "audible_in_s": 0.38,
+    "audible_out_s": 0.98,
+    "span_s": 0.6,
+    "words": 1,
+    "wpm": 100.0,
+    "syllables": 2,
+    "articulation_sps": 3.33,
+    "pauses_s": [
+     0.09
+    ],
+    "longest_internal_gap_s": 0.09,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.649,
+    "tail_to_60_s": 0.004,
+    "median_f0_hz": 130.7,
+    "f0_range_st": 5.9
+   },
+   "words": [
+    {
+     "w": "Noted",
+     "t0": 0.36,
+     "t1": 0.872
+    }
+   ],
+   "qa": {
+    "asr": "Noted.",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -1.71,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 130.7,
+    "f0_range_st": 5.9,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.649,
+    "raw_tail_cut": false,
+    "align_median_s": 0.36
+   },
+   "raw": {
+    "raw_first_sound_s": 0.04,
+    "raw_len_s": 0.929,
+    "raw_tail_cut": false
+   },
+   "kokoro": {
+    "file": "audio/ep01/tag/dialogue/fast-v1/wav/e1-tg-33-01.wav",
+    "mode": "on-mic",
+    "lufs_i": -16.0,
+    "duration_s": 1.805,
+    "audible_in_s": 0.5,
+    "audible_out_s": 1.21,
+    "wpm": 84.5,
+    "median_f0_hz": 115.2,
+    "f0_range_st": 8.1,
+    "delivery": "The cold open's word, bookended: he accepts a lawsuit the way he accepted Friday's invite, like a lunch order. Flat, unbothered, complete, falling. Lands on the chord with no third.",
+    "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.900"
+   }
+  }
+ },
+ "calls": [
+  {
+   "take": "v3-vo-24__mas-manalt-A",
+   "key": "0ed2cb8444b5af45",
+   "chars": 24,
+   "cost_header": "13",
+   "request_id": "FeiO9nT02cLQAxZEzKjl",
+   "at": "13:07:19"
+  },
+  {
+   "take": "e1-tg-32-01__mas-manalt-A",
+   "key": "678c00b1b47366da",
+   "chars": 6,
+   "cost_header": "3",
+   "request_id": "ZukER89xVrtZrlYe0QCt",
+   "at": "13:07:23"
+  },
+  {
+   "take": "e1-tg-33-01__mas-manalt-A",
+   "key": "57e7f7c69c9ac9d2",
+   "chars": 6,
+   "cost_header": "3",
+   "request_id": "KqAAnNXARMQCsZHc1BVk",
+   "at": "13:07:25"
+  }
+ ]
+}

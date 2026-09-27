@@ -1,0 +1,43 @@
+{
+ "segment": "card",
+ "variant": "kokoro",
+ "timeline": null,
+ "timeline_variant": "kokoro",
+ "seconds": 2.0,
+ "frames": 48,
+ "rooms": [
+  {
+   "room": "card",
+   "from": 0.0,
+   "to": 2.4,
+   "first": "card.01",
+   "last": "card.01",
+   "lead": 0.0,
+   "trail": 0.4,
+   "lift_db": 0.0
+  }
+ ],
+ "sfx": [],
+ "sfx_missing": [],
+ "sfx_dropped": [],
+ "added": [],
+ "score_hints": null,
+ "room_stem": {
+  "lufs": -37.56,
+  "peak_dbfs": -25.34,
+  "p10_50ms_dbfs": -39.8
+ },
+ "sfx_stem": {
+  "lufs": -99.0,
+  "peak_dbfs": -240.0,
+  "p10_50ms_dbfs": -240.0
+ },
+ "room_under_-55dBFS_0.3s": [],
+ "room_levels": [
+  {
+   "room": "card@card:card.01",
+   "p5_50ms_dbfs": -39.9,
+   "lift_db": 0.0
+  }
+ ]
+}

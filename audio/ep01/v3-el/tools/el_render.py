@@ -55,7 +55,13 @@ import elaudio as E  # noqa: E402
 
 REPO = ellib.REPO
 CAST = os.path.join(REPO, "audio/ep01/v3-el/cast-el.json")
-PROC_VERSION = "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -18 LUFS; -1.5 dBTP)"
+def proc_version(tgt=-18.0):
+    """the dressing's identity: a take whose stored proc differs is re-dressed (free). -18 gives phase 1's exact string."""
+    return f"el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; {tgt:g} LUFS; -1.5 dBTP)"
+
+
+PROC_VERSION = proc_version(-18.0)
+MONTHS = set("january february april june july august september october november december".split())
 FPS = 24
 
 
@@ -75,11 +81,11 @@ def read_rows(path):
     if isinstance(d, dict) and "beats" in d and any("lines" in b for b in d["beats"]):
         for b in d["beats"]:
             for ln in b.get("lines", []) or []:
-                if ln.get("cut") or not ln.get("text"):
-                    continue
+                if not ln.get("text"):
+                    continue                      # 'cut' is a line cut off by the world (it is played): kept
                 rows.append(dict(id=ln["id"], who=ln["who"], text=ln["text"], tag=ln.get("tag") or "",
                                  beat=b.get("id"), ref_audio=ln.get("audio"), ref_in=ln.get("in"),
-                                 ref_dur=ln.get("dur"), delivery=ln.get("delivery")))
+                                 ref_dur=ln.get("dur"), delivery=ln.get("delivery"), cut=bool(ln.get("cut"))))
     elif isinstance(d, list):
         for r in d:
             if not r.get("text"):
@@ -151,28 +157,38 @@ class Cast:
             c = dict(c, settings=dict(c["settings"], **(r.get("settings_override") or {})), derived=r["derived_from"])
         return c, r
 
-    def respell(self, text):
-        """names as the voice should say them (house lexicon: cast.json 'lexicon', naming.md §9), per word.
+    def respell(self, text, line_id=None, role=None):
+        """names as the voice should say them (house lexicon: cast.json 'lexicon', naming.md §9), per word, then any
+        per-role override (cast 'respell_roles': {role: {word: respelling}}, where one voice needs its own spelling)
+        and per-line override (cast 'respell_lines': {line id: {word: respelling}}, for a fix one take needs).
         -> (text as sent, [(word, sent piece)] one per word)"""
         rs = {k.lower(): v for k, v in self.d.get("respell", {}).items()}
+        rs.update({k.lower(): v for k, v in (self.d.get("respell_roles", {}).get(role) or {}).items()})
+        rs.update({k.lower(): v for k, v in (self.d.get("respell_lines", {}).get(line_id) or {}).items()})
         pieces, pairs = [], []
         for w in text.split():
             m = re.match(r"^([^A-Za-z0-9]*)([A-Za-z0-9\-]+?)('s)?([^A-Za-z0-9]*)$", w)
             piece = w
             if m and m.group(2).lower() in rs:
-                rep = rs[m.group(2).lower()]
-                if m.group(2)[0].islower() and rep[0].isupper() and " " not in rep:
-                    rep = rep[0].lower() + rep[1:]
+                rep = rs[m.group(2).lower()]                   # the respelling's own case: a name is a name
                 piece = m.group(1) + rep + (m.group(3) or "") + m.group(4)
+                piece = re.sub(r"(?<!\.)\.\.(?!\.)", ".", piece)       # "Nope A.I." + "." -> one full stop
             pieces.append(piece)
             pairs.append((w, piece))
         return " ".join(pieces), pairs
 
 
-def sentence_case(t):
-    """Mas's subtitles are lowercase by rule; the voice gets ordinary sentence case (and 'I') so it reads them as speech"""
+def sentence_case(t, names=()):
+    """Mas's subtitles are lowercase by rule; the voice gets ordinary sentence case (and 'I') so it reads them as speech.
+    Names (cast 'names') and months are capitalised too, so 'gerg', 'alyi', 'macrosoft', 'november' read as proper nouns."""
     t = re.sub(r"\bi\b", "I", t)
     t = re.sub(r"\bi'(m|ll|d|ve)\b", lambda m: "I'" + m.group(1), t)
+    caps = set(names) | MONTHS
+
+    def cap(m):
+        w = m.group(0)
+        return w[0].upper() + w[1:] if w.lower() in caps else w
+    t = re.sub(r"(?<![A-Za-z0-9'\-])[a-z][a-z0-9]*(?![A-Za-z0-9\-])", cap, t)
     return re.sub(r"(^|[.!?]\s+|…\s*)([a-z])", lambda m: m.group(1) + m.group(2).upper(), t)
 
 
@@ -188,6 +204,11 @@ def normalise_text(t):
     t = t.replace("…", "... ").replace("...  ", "... ")
     t = re.sub(r"\s+", " ", t).strip()
     t = re.sub(r"(\.\.\.)$", "", t).strip()                 # a trailing print ellipsis (a quote cut short) ends the thought
+    t = re.sub(r"\s*\(([^()]*)\)", r", \1,", t)               # "Terb (Chair)" is read "Terb, Chair," (as Kokoro read it)
+    t = re.sub(r",\s*,", ",", t)
+    t = re.sub(r",\s*([.!?])", r"\1", t)
+    if t and t[0].islower():
+        t = t[0].upper() + t[1:]                            # a quote fragment that starts lowercase is read as a sentence
     if t and t[-1] not in ".!?":
         t += "."                                            # a finished line lands (the house reads quotes as finished)
     return t
@@ -195,14 +216,19 @@ def normalise_text(t):
 
 def text_to_send(row, cast, role, pairs=False):
     """-> text as sent (and optionally [(display word, sent piece)] one per word of the line)"""
-    norm = normalise_text(row["text"])
+    full = (cast.d.get("say_full") or {}).get(row.get("id"))
+    src = full or row["text"]                   # a cut-off line is read whole, as the house records it (say_full)
+    norm = normalise_text(src)
     if cast.roles[role].get("sentence_case"):
-        norm = sentence_case(norm)
-    sent, pr = cast.respell(norm)
+        norm = sentence_case(norm, cast.d.get("names", []))
+    say = (cast.d.get("say_lines") or {}).get(row.get("id"))
+    if say and len(say.split()) == len(norm.split()):
+        norm = say                          # a per-line reading (same words, other punctuation), e.g. a flat final
+    sent, pr = cast.respell(norm, row.get("id"), role)
     sent = re.sub(r"\s+", " ", sent).strip()
     if not pairs:
         return sent
-    orig = normalise_text(row["text"]).split()
+    orig = normalise_text(src).split()
     if len(orig) == len(pr):
         pr = [(o, sp) for o, (_, sp) in zip(orig, pr)]
     return sent, pr
@@ -266,8 +292,43 @@ def save_manifest(out, m):
     ellib.jdump(m, os.path.join(out, "manifest.json"))
 
 
+_REUSE = None
+
+
+def reuse_lookup(args, cast, voice_id, model, settings, sent):
+    """a take already rendered elsewhere (--reuse DIR: another render's manifest, e.g. the sample) with the same voice,
+    model, settings and text as sent -> {key, seed, from}. Its cached MP3 is used as is: no characters are sent."""
+    global _REUSE
+    if not getattr(args, "reuse", None):
+        return None
+    if _REUSE is None:
+        _REUSE = {}
+        cdir = os.path.join(REPO, cast.d.get("cache_dir", "audio/ep01/v3-el/cache"))
+        for d in args.reuse:
+            mp = os.path.join(os.path.abspath(d), "manifest.json")
+            if not os.path.exists(mp):
+                continue
+            for t in jload(mp)["takes"].values():
+                if not t.get("key") or not os.path.exists(os.path.join(cdir, t["key"] + ".mp3")):
+                    continue
+                k = (t["voice_id"], t["model"], json.dumps(t["settings"], sort_keys=True), t["sent"])
+                _REUSE.setdefault(k, dict(key=t["key"], seed=t["seed"], bump=t.get("bump") or 0,
+                                          frm=f"{rel(os.path.dirname(mp))}:{t['take']}"))
+    return _REUSE.get((voice_id, model, json.dumps(settings, sort_keys=True), sent))
+
+
+def target_of(args, cast, vo=False):
+    """integrated loudness per take: --vo-lufs for V.O. rows when given, else --target-lufs, else the cast's target"""
+    if vo and getattr(args, "vo_lufs", None) is not None:
+        return float(args.vo_lufs)
+    t = getattr(args, "target_lufs", None)
+    return float(t) if t is not None else float(cast.d.get("target_lufs", -18.0))
+
+
 def render_take(row, role, c, rdef, cast, out, man, args, log, bump=0):
     vo = row["tag"] == "V.O."
+    tgt = target_of(args, cast, vo)
+    proc = proc_version(tgt)
     settings = dict(c["settings"])
     if vo and c.get("vo_settings"):
         settings = dict(settings, **c["vo_settings"])
@@ -285,10 +346,21 @@ def render_take(row, role, c, rdef, cast, out, man, args, log, bump=0):
     cache_mp3 = os.path.join(cdir, key + ".mp3")
     cache_js = os.path.join(cdir, key + ".json")
     prev = man["takes"].get(take_name)
-    if (bump == 0 and prev and prev.get("base_key") == base_key and prev.get("proc") == PROC_VERSION
+    if (bump == 0 and prev and prev.get("base_key") == base_key and prev.get("proc") == proc
             and os.path.exists(os.path.join(REPO, prev["file"])) and not args.redress):
         return prev, 0                                             # unchanged: never sent again
-    if bump == 0 and prev and prev.get("base_key") == base_key and prev.get("bump"):
+    reused = None
+    if bump == 0 and prev and prev.get("base_key") == base_key and prev.get("reused_from"):
+        key, seed, reused = prev["key"], prev["seed"], prev["reused_from"]     # a re-dress of a reused take
+        cache_mp3 = os.path.join(cdir, key + ".mp3")
+        cache_js = os.path.join(cdir, key + ".json")
+    elif bump == 0 and not (prev and prev.get("base_key") == base_key):
+        ru = reuse_lookup(args, cast, c["voice_id"], model, settings, sent)
+        if ru:
+            key, seed, reused = ru["key"], ru["seed"], ru["frm"]
+            cache_mp3 = os.path.join(cdir, key + ".mp3")
+            cache_js = os.path.join(cdir, key + ".json")
+    if reused is None and bump == 0 and prev and prev.get("base_key") == base_key and prev.get("bump"):
         bump = prev["bump"]                                        # keep the retake that was picked last time
         seed = seed0 + bump
         key = request_key(c["voice_id"], model, settings, sent, seed, fmt)
@@ -322,7 +394,6 @@ def render_take(row, role, c, rdef, cast, out, man, args, log, bump=0):
     kref = kokoro_ref(row)
     dev = "call" if (row["tag"].lower() in ("monitor", "call") or row.get("device") == "call"
                      or kref.get("mode") == "call") else None
-    tgt = cast.d.get("target_lufs", -18.0)
     wav_dry, off, info = E.dress(y, seed, tgt)
     E.write24(wav, wav_dry)
     wav_dev = None
@@ -344,7 +415,7 @@ def render_take(row, role, c, rdef, cast, out, man, args, log, bump=0):
               digital_black_runs=E.zero_runs(wav_dry), median_f0_hz=m["median_f0_hz"], f0_range_st=m["f0_range_st"],
               speech_head_s=m["speech_head_s"], speech_tail_s=m["speech_tail_s"], raw_tail_cut=info["raw_tail_cut"],
               align_median_s=align_check(words, asr_ws) if words else None)
-    rec = dict(take=take_name, key=key, base_key=base_key, bump=bump, proc=PROC_VERSION, file=rel(wav),
+    rec = dict(take=take_name, key=key, base_key=base_key, bump=bump, proc=proc, reused_from=reused, file=rel(wav),
                file_device=rel(wav_dev) if wav_dev else None, device=dev, duration_s=round(len(wav_dry) / E.SR, 3),
                offset_s=round(off, 3), sent=sent, seed=seed, model=model, settings=settings, voice_id=c["voice_id"],
                voice_name=c["voice_name"], cand=c["cand"], role=role, measured=m, words=words, qa=qa, raw=info,
@@ -410,12 +481,14 @@ def row_out(row, rec, role, rdef, c):
         "voiceId": rec["voice_id"], "model": f"ElevenLabs {rec['model']} (REST API, text-to-speech with timestamps)",
         "el": {"cand": rec["cand"], "role": role, "voice_id": rec["voice_id"], "voice_name": rec["voice_name"],
                "source": c.get("source"), "model_id": rec["model"], "settings": rec["settings"], "seed": rec["seed"],
-               "chars_sent": len(rec["sent"]), "request_key": rec["key"], "derived_from": c.get("derived")},
+               "chars_sent": len(rec["sent"]), "request_key": rec["key"], "derived_from": c.get("derived"),
+               "reused_from": rec.get("reused_from")},
         "status": "el", "take": f"el-{rec['cand']}",
         "processing": ["ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)", "HPF 60 Hz",
                        "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; "
                        "0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
-                       "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"]
+                       f"48 kHz / 24-bit mono; {rec['qa'].get('target_lufs', -18.0):g} LUFS integrated; true-peak ceiling -1.5 dBTP; "
+                       "DRY (rooms are mix sends)"]
                       + (["file_device: the same take through a copy of house.call_filter() (HPF 200, LPF 7k, "
                           "+1.5 dB @1.8k, 2.5:1), as the Kokoro take printed it"] if rec.get("device") else []),
         "kokoro_ref": dict(rec.get("kokoro") or {}, timeline_in=row.get("ref_in"), timeline_dur=row.get("ref_dur")),
@@ -452,7 +525,7 @@ def pitch_pass(lines, rows, cast, s, out, man, a, log):
             if abs(_st(f, ref)) <= 4 or in_wide:
                 continue
             r = byrow[ln["id"]]
-            c, rdef = cast.voice(role, s, strict=a.strict)
+            c, rdef = cast.voice(role, cand_map(a).get(role, s), strict=a.strict)
             prev = man["takes"].get(f"{r['id']}__{role}-{c['cand']}", {})
             if prev.get("pitch_retry"):
                 continue                                             # retried once already (a previous run)
@@ -478,26 +551,64 @@ def pitch_pass(lines, rows, cast, s, out, man, a, log):
     return [out_lines[ln["id"]] for ln in lines]
 
 
+def cand_map(a):
+    """--cand mas-manalt=B,rima-tamuri=B -> {role: candidate}: that role's candidate whatever the set"""
+    out = {}
+    for kv in [x for x in (getattr(a, "cand", "") or "").split(",") if "=" in x]:
+        k, _, v = kv.partition("=")
+        out[k.strip()] = v.strip()
+    return out
+
+
+def to_send_cost(r, cast, role, c, a):
+    """characters this row would still send: 0 if its take is cached (own seed) or reusable from a --reuse dir"""
+    vo = r["tag"] == "V.O."
+    settings = dict(c["settings"])
+    if vo and c.get("vo_settings"):
+        settings = dict(settings, **c["vo_settings"])
+    model = c.get("model") or cast.d["model_default"]
+    fmt = cast.d.get("output_format", "mp3_44100_192")
+    sent = text_to_send(r, cast, role)
+    key = request_key(c["voice_id"], model, settings, sent, seed_of(r["id"], c["voice_id"]), fmt)
+    cdir = os.path.join(REPO, cast.d.get("cache_dir", "audio/ep01/v3-el/cache"))
+    if os.path.exists(os.path.join(cdir, key + ".mp3")) or reuse_lookup(a, cast, c["voice_id"], model, settings, sent):
+        return 0, len(sent)
+    return len(sent), len(sent)
+
+
 def cmd_plan(a):
     cast = Cast(a.cast)
     rows = read_rows(a.lines)
+    cm = cand_map(a)
     miss = sorted({r["who"] for r in rows if not cast.role_of(r["who"])})
-    tot = {}
+    tot, left, per_role = {}, {}, {}
     for s in a.sets:
-        n = 0
+        n = m = 0
         for r in rows:
             role = cast.role_of(r["who"])
             if not role:
                 continue
-            c, _ = cast.voice(role, s, strict=a.strict)
+            c, _ = cast.voice(role, cm.get(role, s), strict=a.strict)
             if c is None:
                 continue
-            n += len(text_to_send(r, cast, role))
+            todo, full = to_send_cost(r, cast, role, c, a)
+            n += full
+            m += todo
+            pr = per_role.setdefault((s, role + "-" + c["cand"]), [0, 0, 0])
+            pr[0] += 1
+            pr[1] += full
+            pr[2] += todo
         tot[s] = n
+        left[s] = m
     for r in rows:
         role = cast.role_of(r["who"])
         print(f"{r['id']:14s} {str(role):16s} {r['tag']:8s} {text_to_send(r, cast, role) if role else r['text']}")
-    print(f"rows {len(rows)}; speakers with no role: {miss or 'none'}; chars per set (before cache): {tot}")
+    print(f"rows {len(rows)}; speakers with no role: {miss or 'none'}; chars per set (before cache): {tot}; "
+          f"still to send (not cached or reusable): {left}")
+    if a.by_role:
+        for (s, rc), (nr, full, todo) in sorted(per_role.items(), key=lambda kv: -kv[1][2]):
+            if todo:
+                print(f"  {s} {rc:22s} rows {nr:3d}  chars {full:5d}  to send {todo:5d}")
 
 
 def cmd_render(a):
@@ -521,6 +632,7 @@ def cmd_render(a):
 
     man = load_manifest(out)
     a.budget_left = a.max_chars
+    cm = cand_map(a)
     a._retake = set(x for x in (a.retake or "").split(",") if x)
     log(f"== render {rel(a.lines)} -> {rel(out)} sets {a.sets} at {time.strftime('%Y-%m-%d %H:%M:%S')} (max chars {a.max_chars})")
     spent = 0
@@ -533,7 +645,7 @@ def cmd_render(a):
                 if not role:
                     log(f"  NO ROLE for speaker {r['who']!r} ({r['id']}); skipped")
                     continue
-                c, rdef = cast.voice(role, s, strict=a.strict)
+                c, rdef = cast.voice(role, cm.get(role, s), strict=a.strict)
                 if c is None:
                     continue
                 rec, n = render_take(r, role, c, rdef, cast, out, man, a, log)
@@ -575,7 +687,7 @@ def cmd_render(a):
                 lines = pitch_pass(lines, rows, cast, s, out, man, a, log)
                 spent += a._pitch_spent
             if lines:
-                p = os.path.join(out, f"lines-{s}.json")
+                p = os.path.join(out, f"lines-{a.label or s}.json")
                 ellib.jdump(lines, p)
                 per_set[s] = len(lines)
                 log(f"  wrote {rel(p)} ({len(lines)} rows)")
@@ -607,6 +719,8 @@ def main(argv=None):
         p.add_argument("--cast", default=CAST)
         p.add_argument("--sets", nargs="+", default=["A"])
         p.add_argument("--strict", action="store_true", help="a role without this set's candidate is skipped (auditions)")
+        p.add_argument("--cand", default="", help="per-role candidate over the set, e.g. mas-manalt=B,rima-tamuri=B")
+        p.add_argument("--reuse", nargs="*", default=[], help="other render dirs whose takes are reused when voice, model, settings and text as sent match (no characters sent)")
         if name == "render":
             p.add_argument("--out", required=True)
             p.add_argument("--only", default="")
@@ -616,7 +730,13 @@ def main(argv=None):
             p.add_argument("--retake", default="", help="comma-separated line ids: send one new-seed take each and keep the better")
             p.add_argument("--retry-pitch", action="store_true", help="re-send once any take > 4 st off its role's typical pitch (and outside the lane)")
             p.add_argument("--redress", action="store_true", help="re-dress every cached take (no API calls)")
+            p.add_argument("--target-lufs", type=float, default=None, help="integrated loudness per take (default: cast-el.json target_lufs)")
+            p.add_argument("--vo-lufs", type=float, default=None, help="integrated loudness per V.O. take (default: --target-lufs)")
+
             p.add_argument("--dry-run", action="store_true")
+            p.add_argument("--label", default="", help="the lines file is lines-<label>.json (default: the set), e.g. with --cand")
+        else:
+            p.add_argument("--by-role", action="store_true", help="print what each role still has to send")
     q = sp.add_parser("qa")
     q.add_argument("files", nargs="+")
     a = ap.parse_args(argv)

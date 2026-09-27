@@ -1,0 +1,133 @@
+{
+ "segment": "tag",
+ "variant": "kokoro",
+ "timeline": "show/reel/ep01-v3/ep01-v3-tag.json",
+ "timeline_variant": "kokoro",
+ "seconds": 33.875,
+ "frames": 813,
+ "rooms": [
+  {
+   "room": "dark",
+   "from": -0.6,
+   "to": 33.875,
+   "first": "32.01",
+   "last": "33.05",
+   "lead": 0.6,
+   "trail": 0.0,
+   "lift_db": 1.5
+  }
+ ],
+ "sfx": [
+  [
+   "32.02",
+   "tape_start",
+   4.5,
+   -24
+  ],
+  [
+   "32.04",
+   "orb_scan_sweep",
+   12.342,
+   -21
+  ],
+  [
+   "32.04",
+   "glyph_blink",
+   13.042,
+   -27
+  ],
+  [
+   "32.04",
+   "orb_scan_sweep",
+   13.242,
+   -24
+  ],
+  [
+   "32.04",
+   "glyph_blink",
+   14.892,
+   -27
+  ],
+  [
+   "32.07",
+   "key_tap_soft_03",
+   18.875,
+   -24
+  ],
+  [
+   "32.07",
+   "key_tap_soft_05",
+   20.225,
+   -26
+  ],
+  [
+   "33.01",
+   "synth:thud",
+   23.125,
+   -8
+  ],
+  [
+   "33.02",
+   "paper_curl",
+   25.143,
+   -30
+  ],
+  [
+   "33.02",
+   "paper_curl",
+   27.47,
+   -35
+  ],
+  [
+   "33.04",
+   "vault_hum_F",
+   30.635,
+   -31
+  ]
+ ],
+ "sfx_missing": [],
+ "sfx_dropped": [
+  {
+   "beat": "33.04",
+   "name": "synth:button_chord",
+   "claimed_by_score": "button-chord",
+   "evidence": "30.64 s: THE BUTTON: F3 C4 G4 C5, no third (the vault's F hum is its root)"
+  }
+ ],
+ "added": [
+  {
+   "what": "the vault's F hum, L-cut from Act Four",
+   "to": 1.5,
+   "why": "plan S8.10 lcut 1.5 s"
+  }
+ ],
+ "score_hints": {
+  "score": "audio/ost/tracks/e01-v3-tag/render/music.wav",
+  "cues": "audio/ost/tracks/e01-v3-tag/cues.json",
+  "drop": [
+   "button-chord"
+  ],
+  "why": {
+   "button-chord": "30.64 s: THE BUTTON: F3 C4 G4 C5, no third (the vault's F hum is its root)"
+  },
+  "grid": null
+ },
+ "room_stem": {
+  "lufs": -38.13,
+  "peak_dbfs": -24.12,
+  "p10_50ms_dbfs": -39.8
+ },
+ "sfx_stem": {
+  "lufs": -34.19,
+  "peak_dbfs": -8.0,
+  "p10_50ms_dbfs": -240.0
+ },
+ "room_under_-55dBFS_0.3s": [],
+ "room_levels": [
+  {
+   "room": "dark@tag:32.01",
+   "p5_50ms_dbfs": -41.5,
+   "lift_db": 1.5
+  }
+ ]
+}
