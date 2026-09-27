@@ -1,0 +1,7932 @@
+[
+ {
+  "id": "e1-a1-11-01",
+  "scene": "11",
+  "speaker": "MARIO",
+  "speaker_slug": "mario",
+  "text": "Memo, on race dynamics. Point one: we must not launch on the same day as them. That's how a race starts.",
+  "spoken_as": "Memo, on race dynamics.{0.45} Point one:{s0.3} we must not launch on the same day as them.{0.35} That's how a race starts.",
+  "delivery": "right pane, writing as he dictates, to CLOD in its spotlight",
+  "tag": "[INVENTED · second pass: he finishes. The dash came after his thought had landed, so it added nothing, and in a temp voice it could sound like a clipped render (the naturalness read). Record it whole, ending on the full stop]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": null,
+  "shot": "W",
+  "shot_id": "W",
+  "cue": null,
+  "lip_sync": true,
+  "status": "fast",
+  "device": null,
+  "room": null,
+  "est_s": 8.9,
+  "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-11-01.wav",
+  "mp3": null,
+  "duration_s": 7.625,
+  "frames_24": 183,
+  "voiced_span_s": 6.61,
+  "pace": {
+   "words": 21,
+   "wpm": 190.6,
+   "speed": 1.02,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 1.02,
+    "speed_band": [
+     1.0,
+     1.08
+    ],
+    "articulation_guide_sps": [
+     4.6,
+     5.4
+    ],
+    "turn_wpm_guide": [
+     160,
+     185
+    ],
+    "intent": "right pane, writing as he dictates, to CLOD in its spotlight"
+   },
+   "measured": {
+    "wpm": 190.6,
+    "articulation_sps": 4.35,
+    "syllables": 24,
+    "span_s": 6.61,
+    "pauses_s": [
+     0.47,
+     0.26,
+     0.36
+    ]
+   },
+   "longest_internal_gap_s": 0.47,
+   "audible_in_s": 0.5,
+   "audible_out_s": 7.11
+  },
+  "placement": {
+   "gap_before_s": null,
+   "follows": "picture"
+  },
+  "take": "s1",
+  "takes_tried": 2,
+  "pick_reason": "fast: best of 2 seeds by ASR word recall, then no pause cut inside the voice, then the span nearest est_s",
+  "voice": "am_liam (Kokoro-82M stock) · a-liam-earnest · speed 1.020",
+  "voiceId": "am_liam",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 80 Hz",
+   "pitch 0",
+   "peak -1 dB @250 Hz Q1.0",
+   "low shelf +1 dB @200 Hz",
+   "peak +1.5 dB @3000 Hz Q0.9",
+   "high shelf -1 dB @7000 Hz",
+   "comp 2.5:1 @-22 dB (6/100 ms)",
+   "Kokoro speed 1.020 (the plan speed; mario band 1.00-1.08); 2 whole reads, joined in room tone; no time-stretch, no carrier, no splice",
+   "pause after 'dynamics': Kokoro 0.01 s -> 0.47 s (intended 0.45; +0.44 s of room tone at the quietest 5 ms)",
+   "pause after 'them': Kokoro 0.10 s -> 0.37 s (intended 0.35; +0.26 s of room tone at the quietest 5 ms)",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale (fastrec default; --breaths adds them)",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.5,
+    "f": 12,
+    "shape": "M"
+   },
+   {
+    "t": 0.583,
+    "f": 14,
+    "shape": "A"
+   },
+   {
+    "t": 0.667,
+    "f": 16,
+    "shape": "M"
+   },
+   {
+    "t": 0.75,
+    "f": 18,
+    "shape": "O"
+   },
+   {
+    "t": 1.0,
+    "f": 24,
+    "shape": "E"
+   },
+   {
+    "t": 1.125,
+    "f": 27,
+    "shape": "A"
+   },
+   {
+    "t": 1.25,
+    "f": 30,
+    "shape": "E"
+   },
+   {
+    "t": 1.375,
+    "f": 33,
+    "shape": "A"
+   },
+   {
+    "t": 1.708,
+    "f": 41,
+    "shape": "M"
+   },
+   {
+    "t": 1.792,
+    "f": 43,
+    "shape": "E"
+   },
+   {
+    "t": 2.0,
+    "f": 48,
+    "shape": "rest"
+   },
+   {
+    "t": 2.542,
+    "f": 61,
+    "shape": "M"
+   },
+   {
+    "t": 2.625,
+    "f": 63,
+    "shape": "O"
+   },
+   {
+    "t": 2.708,
+    "f": 65,
+    "shape": "E"
+   },
+   {
+    "t": 2.792,
+    "f": 67,
+    "shape": "O"
+   },
+   {
+    "t": 2.875,
+    "f": 69,
+    "shape": "A"
+   },
+   {
+    "t": 3.125,
+    "f": 75,
+    "shape": "E"
+   },
+   {
+    "t": 3.208,
+    "f": 77,
+    "shape": "rest"
+   },
+   {
+    "t": 3.417,
+    "f": 82,
+    "shape": "O"
+   },
+   {
+    "t": 3.5,
+    "f": 84,
+    "shape": "E"
+   },
+   {
+    "t": 3.583,
+    "f": 86,
+    "shape": "M"
+   },
+   {
+    "t": 3.667,
+    "f": 88,
+    "shape": "A"
+   },
+   {
+    "t": 3.75,
+    "f": 90,
+    "shape": "E"
+   },
+   {
+    "t": 3.875,
+    "f": 93,
+    "shape": "A"
+   },
+   {
+    "t": 4.0,
+    "f": 96,
+    "shape": "E"
+   },
+   {
+    "t": 4.125,
+    "f": 99,
+    "shape": "O"
+   },
+   {
+    "t": 4.25,
+    "f": 102,
+    "shape": "E"
+   },
+   {
+    "t": 4.333,
+    "f": 104,
+    "shape": "O"
+   },
+   {
+    "t": 4.417,
+    "f": 106,
+    "shape": "E"
+   },
+   {
+    "t": 4.583,
+    "f": 110,
+    "shape": "A"
+   },
+   {
+    "t": 4.75,
+    "f": 114,
+    "shape": "M"
+   },
+   {
+    "t": 4.875,
+    "f": 117,
+    "shape": "A"
+   },
+   {
+    "t": 5.125,
+    "f": 123,
+    "shape": "E"
+   },
+   {
+    "t": 5.25,
+    "f": 126,
+    "shape": "A"
+   },
+   {
+    "t": 5.458,
+    "f": 131,
+    "shape": "M"
+   },
+   {
+    "t": 5.583,
+    "f": 134,
+    "shape": "rest"
+   },
+   {
+    "t": 6.0,
+    "f": 144,
+    "shape": "A"
+   },
+   {
+    "t": 6.083,
+    "f": 146,
+    "shape": "E"
+   },
+   {
+    "t": 6.208,
+    "f": 149,
+    "shape": "A"
+   },
+   {
+    "t": 6.375,
+    "f": 153,
+    "shape": "E"
+   },
+   {
+    "t": 6.458,
+    "f": 155,
+    "shape": "A"
+   },
+   {
+    "t": 6.583,
+    "f": 158,
+    "shape": "E"
+   },
+   {
+    "t": 6.75,
+    "f": 162,
+    "shape": "A"
+   },
+   {
+    "t": 6.917,
+    "f": 166,
+    "shape": "E"
+   },
+   {
+    "t": 7.125,
+    "f": 171,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "Memo",
+    "t0": 0.515,
+    "t1": 0.84,
+    "f0": 12,
+    "f1": 20,
+    "ph": "mˈɛmO"
+   },
+   {
+    "w": "on",
+    "t0": 0.878,
+    "t1": 1.04,
+    "f0": 21,
+    "f1": 25,
+    "ph": "ˌɔn"
+   },
+   {
+    "w": "race",
+    "t0": 1.04,
+    "t1": 1.315,
+    "f0": 25,
+    "f1": 32,
+    "ph": "ɹˈAs"
+   },
+   {
+    "w": "dynamics",
+    "t0": 1.315,
+    "t1": 2.015,
+    "f0": 32,
+    "f1": 48,
+    "ph": "dInˈæmɪks"
+   },
+   {
+    "w": "Point",
+    "t0": 2.53,
+    "t1": 2.78,
+    "f0": 61,
+    "f1": 67,
+    "ph": "pˈYnt"
+   },
+   {
+    "w": "one",
+    "t0": 2.78,
+    "t1": 3.23,
+    "f0": 67,
+    "f1": 78,
+    "ph": "wˈʌn"
+   },
+   {
+    "w": "we",
+    "t0": 3.455,
+    "t1": 3.58,
+    "f0": 83,
+    "f1": 86,
+    "ph": "wi"
+   },
+   {
+    "w": "must",
+    "t0": 3.58,
+    "t1": 3.818,
+    "f0": 86,
+    "f1": 92,
+    "ph": "mˈʌst"
+   },
+   {
+    "w": "not",
+    "t0": 3.818,
+    "t1": 4.055,
+    "f0": 92,
+    "f1": 97,
+    "ph": "nˌɑt"
+   },
+   {
+    "w": "launch",
+    "t0": 4.055,
+    "t1": 4.342,
+    "f0": 97,
+    "f1": 104,
+    "ph": "lˈɔnʧ"
+   },
+   {
+    "w": "on",
+    "t0": 4.342,
+    "t1": 4.442,
+    "f0": 104,
+    "f1": 107,
+    "ph": "ˌɔn"
+   },
+   {
+    "w": "the",
+    "t0": 4.442,
+    "t1": 4.542,
+    "f0": 107,
+    "f1": 109,
+    "ph": "ðə"
+   },
+   {
+    "w": "same",
+    "t0": 4.542,
+    "t1": 4.83,
+    "f0": 109,
+    "f1": 116,
+    "ph": "sˈAm"
+   },
+   {
+    "w": "day",
+    "t0": 4.83,
+    "t1": 5.03,
+    "f0": 116,
+    "f1": 121,
+    "ph": "dˈA"
+   },
+   {
+    "w": "as",
+    "t0": 5.03,
+    "t1": 5.18,
+    "f0": 121,
+    "f1": 124,
+    "ph": "æz"
+   },
+   {
+    "w": "them",
+    "t0": 5.18,
+    "t1": 5.58,
+    "f0": 124,
+    "f1": 134,
+    "ph": "ðˌɛm"
+   },
+   {
+    "w": "That's",
+    "t0": 5.935,
+    "t1": 6.198,
+    "f0": 142,
+    "f1": 149,
+    "ph": "ðˈæts"
+   },
+   {
+    "w": "how",
+    "t0": 6.198,
+    "t1": 6.322,
+    "f0": 149,
+    "f1": 152,
+    "ph": "hˌW"
+   },
+   {
+    "w": "a",
+    "t0": 6.322,
+    "t1": 6.385,
+    "f0": 152,
+    "f1": 153,
+    "ph": "ɐ"
+   },
+   {
+    "w": "race",
+    "t0": 6.385,
+    "t1": 6.635,
+    "f0": 153,
+    "f1": 159,
+    "ph": "ɹˈAs"
+   },
+   {
+    "w": "starts",
+    "t0": 6.635,
+    "t1": 7.13,
+    "f0": 159,
+    "f1": 171,
+    "ph": "stˈɑɹts"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -4.13,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.5,
+   "median_f0_hz": 118.7,
+   "f0_range_st": 11.4,
+   "f0_method": "YIN (fast)",
+   "final_move_st": null,
+   "asr": "Memo on race dynamics, point one. We must not launch on the same day as them. That's how a race starts.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.28,
+   "align_median_s": null,
+   "utmos_dry": null,
+   "utmos_plain_read": null,
+   "utmos_vs_plain": null,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": null,
+   "speech_head_s": 0.5,
+   "speech_tail_s": 0.45,
+   "rise_ms": 10.0,
+   "decay_ms": 80.0,
+   "decay_to_60_s": 0.065
+  },
+  "fast": {
+   "key": "41480c0e5ba58cc6",
+   "tool": "fastrec 1.2 (2026-09-26)",
+   "shard": 1,
+   "wall_s": 17.36,
+   "takes": 2,
+   "settings": {
+    "asr": true,
+    "asr_beam": 1,
+    "asr_batch_s": 24.0,
+    "asr_align": false,
+    "utmos": false,
+    "prosody": false,
+    "breaths": false,
+    "threads": 3
+   },
+   "asr": {
+    "packed_with": 1,
+    "share_s": 5.96
+   }
+  },
+  "breaths": [],
+  "opened_pauses": [
+   {
+    "after_word": 4,
+    "word": "dynamics",
+    "tts_s": 0.01,
+    "target_s": 0.45,
+    "point_s": 1.665,
+    "joined_speech": false,
+    "dip_db": -45.5,
+    "breath": false,
+    "crossfade_ms": [
+     8,
+     8
+    ],
+    "final_s": 0.47,
+    "opened_s": 0.44
+   },
+   {
+    "after_word": null,
+    "word": "one",
+    "tts_s": null,
+    "target_s": 0.3,
+    "final_s": 0.3,
+    "opened_s": 0.0,
+    "joined_speech": false,
+    "dip_db": null,
+    "breath": false,
+    "split": true,
+    "point_s": 2.705,
+    "crossfade_ms": [
+     0,
+     0
+    ]
+   },
+   {
+    "after_word": 10,
+    "word": "them",
+    "tts_s": 0.095,
+    "target_s": 0.35,
+    "point_s": 5.25,
+    "joined_speech": false,
+    "dip_db": -64.0,
+    "breath": false,
+    "crossfade_ms": [
+     8,
+     8
+    ],
+    "final_s": 0.37,
+    "opened_s": 0.255
+   }
+  ],
+  "alt_takes": [
+   {
+    "tag": "s2",
+    "seed": 2,
+    "speed": 1.02,
+    "file": "audio/ep01/act1/dialogue/fast-v1/takes/e1-a1-11-01/s2.wav",
+    "span_s": 6.61,
+    "wpm": 190.6,
+    "asr": "Memo on race dynamics, point one. We must not launch on the same day as them. That's how a race starts.",
+    "recall": 1.0,
+    "utmos": null
+   }
+  ]
+ },
+ {
+  "id": "a5-27-41",
+  "scene": "27",
+  "speaker": "TTEMME",
+  "speaker_slug": "ttemme",
+  "text": "Fine. But before I say yes, I need to know why you fired him.",
+  "spoken_as": "Fine...{0.35} But before I say yes, I need to know why you fired him.",
+  "delivery": "'Fine.' accepts the oddness; 0.35 s; then the condition, friendly but firm. The one question in pass one put straight to the board about the why.",
+  "tag": "[INVENTED · follows his own public account that he checked the reasoning before taking the job (research mid.md §3)]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": "board",
+  "shot": "S4.10b",
+  "shot_id": "S4.10b",
+  "cue": "S4.10b, 0.70 s after the previous voice",
+  "lip_sync": true,
+  "status": "new",
+  "device": null,
+  "room": "the boardroom",
+  "est_s": 5.1,
+  "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-41.wav",
+  "mp3": "audio/ep01/act4/dialogue/v5/mp3/a5-27-41.mp3",
+  "duration_s": 4.625,
+  "frames_24": 111,
+  "voiced_span_s": 3.63,
+  "pace": {
+   "words": 14,
+   "wpm": 231.4,
+   "speed": 1.02,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 1.02,
+    "speed_band": [
+     1.0,
+     1.08
+    ],
+    "articulation_guide_sps": [
+     4.4,
+     5.2
+    ],
+    "turn_wpm_guide": [
+     155,
+     175
+    ],
+    "intent": "'Fine.' accepts the oddness; 0.35 s; then the condition, friendly but firm. The one question in pass one put straight to the board about the why."
+   },
+   "measured": {
+    "wpm": 231.4,
+    "articulation_sps": 4.88,
+    "syllables": 16,
+    "span_s": 3.63,
+    "pauses_s": [
+     0.35,
+     0.08
+    ]
+   },
+   "longest_internal_gap_s": 0.35,
+   "audible_in_s": 0.51,
+   "audible_out_s": 4.14
+  },
+  "placement": {
+   "gap_before_s": 0.7,
+   "follows": "voice"
+  },
+  "take": "s1-dots-s3",
+  "takes_tried": 6,
+  "pick_reason": "the best UTMOS among the takes ASR hears whole",
+  "voice": "am_fenrir (Kokoro-82M stock) · d-fenrir-headset · speed 1.020",
+  "voiceId": "am_fenrir",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 150 Hz",
+   "pitch +2 st",
+   "peak -2 dB @300 Hz Q1.0",
+   "peak +2.5 dB @2800 Hz Q0.9",
+   "high shelf -1 dB @9000 Hz",
+   "comp 3.5:1 @-20 dB (3/60 ms)",
+   "Kokoro speed 1.020, chosen from intent in the ttemme band 1.00-1.08 (the plan's 1.02); one whole read; no time-stretch, no carrier, no splice",
+   "pause after 'Fine' (word 1): Kokoro 0.01 s -> 0.35 s (intended 0.35; +0.34 s of room tone at the quietest 5 ms, 8/8 ms crossfades)",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (the room's early reflection is a mix send)"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.542,
+    "f": 13,
+    "shape": "A"
+   },
+   {
+    "t": 0.75,
+    "f": 18,
+    "shape": "E"
+   },
+   {
+    "t": 0.833,
+    "f": 20,
+    "shape": "rest"
+   },
+   {
+    "t": 1.208,
+    "f": 29,
+    "shape": "M"
+   },
+   {
+    "t": 1.417,
+    "f": 34,
+    "shape": "E"
+   },
+   {
+    "t": 1.542,
+    "f": 37,
+    "shape": "O"
+   },
+   {
+    "t": 1.708,
+    "f": 41,
+    "shape": "A"
+   },
+   {
+    "t": 1.833,
+    "f": 44,
+    "shape": "E"
+   },
+   {
+    "t": 1.917,
+    "f": 46,
+    "shape": "A"
+   },
+   {
+    "t": 2.042,
+    "f": 49,
+    "shape": "E"
+   },
+   {
+    "t": 2.167,
+    "f": 52,
+    "shape": "A"
+   },
+   {
+    "t": 2.417,
+    "f": 58,
+    "shape": "rest"
+   },
+   {
+    "t": 2.542,
+    "f": 61,
+    "shape": "A"
+   },
+   {
+    "t": 2.833,
+    "f": 68,
+    "shape": "E"
+   },
+   {
+    "t": 3.0,
+    "f": 72,
+    "shape": "O"
+   },
+   {
+    "t": 3.167,
+    "f": 76,
+    "shape": "A"
+   },
+   {
+    "t": 3.292,
+    "f": 79,
+    "shape": "E"
+   },
+   {
+    "t": 3.375,
+    "f": 81,
+    "shape": "O"
+   },
+   {
+    "t": 3.5,
+    "f": 84,
+    "shape": "A"
+   },
+   {
+    "t": 3.667,
+    "f": 88,
+    "shape": "E"
+   },
+   {
+    "t": 4.083,
+    "f": 98,
+    "shape": "M"
+   },
+   {
+    "t": 4.167,
+    "f": 100,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "Fine",
+    "t0": 0.495,
+    "t1": 0.82,
+    "f0": 12,
+    "f1": 20,
+    "ph": "fˈIn"
+   },
+   {
+    "w": "But",
+    "t0": 1.248,
+    "t1": 1.372,
+    "f0": 30,
+    "f1": 33,
+    "ph": "bˌʌt"
+   },
+   {
+    "w": "before",
+    "t0": 1.372,
+    "t1": 1.698,
+    "f0": 33,
+    "f1": 41,
+    "ph": "bəfˈɔɹ"
+   },
+   {
+    "w": "I",
+    "t0": 1.698,
+    "t1": 1.848,
+    "f0": 41,
+    "f1": 44,
+    "ph": "ˌI"
+   },
+   {
+    "w": "say",
+    "t0": 1.848,
+    "t1": 2.06,
+    "f0": 44,
+    "f1": 49,
+    "ph": "sˈA"
+   },
+   {
+    "w": "yes",
+    "t0": 2.06,
+    "t1": 2.435,
+    "f0": 49,
+    "f1": 58,
+    "ph": "jˈɛs"
+   },
+   {
+    "w": "I",
+    "t0": 2.51,
+    "t1": 2.66,
+    "f0": 60,
+    "f1": 64,
+    "ph": "ˌI"
+   },
+   {
+    "w": "need",
+    "t0": 2.66,
+    "t1": 2.86,
+    "f0": 64,
+    "f1": 69,
+    "ph": "nˈid"
+   },
+   {
+    "w": "to",
+    "t0": 2.86,
+    "t1": 2.96,
+    "f0": 69,
+    "f1": 71,
+    "ph": "tə"
+   },
+   {
+    "w": "know",
+    "t0": 2.96,
+    "t1": 3.135,
+    "f0": 71,
+    "f1": 75,
+    "ph": "nˈO"
+   },
+   {
+    "w": "why",
+    "t0": 3.135,
+    "t1": 3.31,
+    "f0": 75,
+    "f1": 79,
+    "ph": "wˌI"
+   },
+   {
+    "w": "you",
+    "t0": 3.31,
+    "t1": 3.472,
+    "f0": 79,
+    "f1": 83,
+    "ph": "ju"
+   },
+   {
+    "w": "fired",
+    "t0": 3.472,
+    "t1": 3.872,
+    "f0": 83,
+    "f1": 93,
+    "ph": "fˈIəɹd"
+   },
+   {
+    "w": "him",
+    "t0": 3.872,
+    "t1": 4.16,
+    "f0": 93,
+    "f1": 100,
+    "ph": "hˌɪm"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -4.0,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.51,
+   "median_f0_hz": 158.3,
+   "f0_range_st": 14.6,
+   "final_move_st": -3.8,
+   "asr": "Fine, but before I say yes, I need to know why you fired him.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.148,
+   "align_median_s": 0.019,
+   "utmos_dry": 3.145,
+   "utmos_plain_read": 2.822,
+   "utmos_vs_plain": 0.323,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": 3.145,
+   "speech_head_s": 0.51,
+   "speech_tail_s": 0.445,
+   "rise_ms": 55.0,
+   "decay_ms": 285.0,
+   "decay_to_60_s": 0.045,
+   "q_lift_st": -3.46
+  },
+  "breaths": [],
+  "opened_pauses": [
+   {
+    "after_word": 1,
+    "word": "Fine",
+    "tts_s": 0.01,
+    "target_s": 0.35,
+    "point_s": 0.48,
+    "joined_speech": false,
+    "dip_db": -42.5,
+    "breath": false,
+    "crossfade_ms": [
+     8,
+     8
+    ],
+    "final_s": 0.355,
+    "opened_s": 0.34
+   }
+  ],
+  "alt_takes": [
+   {
+    "tag": "s1-dots-s1",
+    "say": "Fine...{0.35} But before I say yes, I need to know why you fired him.",
+    "speed": 1.02,
+    "seed": 1,
+    "utmos": 3.009,
+    "asr": null,
+    "cer": null,
+    "recall": null,
+    "q_lift_st": null,
+    "stress": null,
+    "echo": null,
+    "span_s": 3.63,
+    "wpm": 231.4,
+    "articulation_sps": 4.88,
+    "file": "audio/ep01/act4/dialogue/v5/takes/a5-27-41/s1-dots-s1.wav"
+   },
+   {
+    "tag": "s1-dots-s2",
+    "say": "Fine...{0.35} But before I say yes, I need to know why you fired him.",
+    "speed": 1.02,
+    "seed": 2,
+    "utmos": 2.933,
+    "asr": null,
+    "cer": null,
+    "recall": null,
+    "q_lift_st": null,
+    "stress": null,
+    "echo": null,
+    "span_s": 3.64,
+    "wpm": 230.8,
+    "articulation_sps": 4.86,
+    "file": "audio/ep01/act4/dialogue/v5/takes/a5-27-41/s1-dots-s2.wav"
+   },
+   {
+    "tag": "s1",
+    "say": "Fine.{0.35} But before I say yes, I need to know why you fired him.",
+    "speed": 1.02,
+    "seed": 1,
+    "utmos": 2.901,
+    "asr": null,
+    "cer": null,
+    "recall": null,
+    "q_lift_st": null,
+    "stress": null,
+    "echo": null,
+    "span_s": 3.69,
+    "wpm": 227.6,
+    "articulation_sps": 4.82,
+    "file": "audio/ep01/act4/dialogue/v5/takes/a5-27-41/s1.wav"
+   },
+   {
+    "tag": "s3",
+    "say": "Fine.{0.35} But before I say yes, I need to know why you fired him.",
+    "speed": 1.02,
+    "seed": 3,
+    "utmos": 2.791,
+    "asr": null,
+    "cer": null,
+    "recall": null,
+    "q_lift_st": null,
+    "stress": null,
+    "echo": null,
+    "span_s": 3.68,
+    "wpm": 228.3,
+    "articulation_sps": 4.8,
+    "file": "audio/ep01/act4/dialogue/v5/takes/a5-27-41/s3.wav"
+   },
+   {
+    "tag": "s2",
+    "say": "Fine.{0.35} But before I say yes, I need to know why you fired him.",
+    "speed": 1.02,
+    "seed": 2,
+    "utmos": 2.74,
+    "asr": null,
+    "cer": null,
+    "recall": null,
+    "q_lift_st": null,
+    "stress": null,
+    "echo": null,
+    "span_s": 3.69,
+    "wpm": 227.6,
+    "articulation_sps": 4.82,
+    "file": "audio/ep01/act4/dialogue/v5/takes/a5-27-41/s2.wav"
+   }
+  ]
+ },
+ {
+  "id": "a5-30-08",
+  "scene": "30",
+  "speaker": "TERB",
+  "speaker_slug": "terb",
+  "text": "Which room is on fire?",
+  "spoken_as": "Which room is on fire?",
+  "delivery": "Brisk, procedural, walking in with the extinguisher after the freeze clears. A real question to the room.",
+  "tag": "[INVENTED]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": "his",
+  "shot": "S7.06",
+  "shot_id": "S7.06",
+  "cue": "S7.06, after the picture's lead-in (see the shot plan)",
+  "lip_sync": true,
+  "status": "kept-rerecorded",
+  "device": null,
+  "room": "the boardroom, night, fires",
+  "est_s": 1.7,
+  "file": "audio/ep01/act4/dialogue/v5/wav/a5-30-08.wav",
+  "mp3": "audio/ep01/act4/dialogue/v5/mp3/a5-30-08.mp3",
+  "duration_s": 3.22,
+  "frames_24": 78,
+  "voiced_span_s": 1.59,
+  "pace": {
+   "words": 5,
+   "wpm": 188.7,
+   "speed": 1.02,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 1.02,
+    "speed_band": [
+     0.98,
+     1.06
+    ],
+    "articulation_guide_sps": [
+     4.4,
+     5.0
+    ],
+    "turn_wpm_guide": [
+     165,
+     185
+    ],
+    "intent": "Brisk, procedural, walking in with the extinguisher after the freeze clears. A real question to the room."
+   },
+   "measured": {
+    "wpm": 188.7,
+    "articulation_sps": 3.77,
+    "syllables": 6,
+    "span_s": 1.59,
+    "pauses_s": []
+   },
+   "longest_internal_gap_s": 0.0,
+   "audible_in_s": 0.89,
+   "audible_out_s": 2.48
+  },
+  "placement": {
+   "gap_before_s": null,
+   "follows": "picture"
+  },
+  "take": "s2",
+  "takes_tried": 3,
+  "pick_reason": "the best UTMOS among the takes ASR hears whole",
+  "voice": "am_echo (Kokoro-82M stock) · b-echo-brisk · speed 1.020",
+  "voiceId": "am_echo",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 80 Hz",
+   "pitch 0",
+   "peak +1.5 dB @150 Hz Q0.9",
+   "peak -1.5 dB @500 Hz Q1.0",
+   "peak +2 dB @2000 Hz Q0.9",
+   "comp 3.0:1 @-21 dB (3/70 ms)",
+   "Kokoro speed 1.020, chosen from intent in the terb band 0.98-1.06 (the plan's 1.02); one whole read; no time-stretch, no carrier, no splice",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "placeholder inhale(s): synthetic band-limited noise with a breath envelope (NOT a licensed breath library; never from a real person)",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (the room's early reflection is a mix send)"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.875,
+    "f": 21,
+    "shape": "O"
+   },
+   {
+    "t": 0.958,
+    "f": 23,
+    "shape": "E"
+   },
+   {
+    "t": 1.292,
+    "f": 31,
+    "shape": "O"
+   },
+   {
+    "t": 1.417,
+    "f": 34,
+    "shape": "M"
+   },
+   {
+    "t": 1.5,
+    "f": 36,
+    "shape": "E"
+   },
+   {
+    "t": 1.667,
+    "f": 40,
+    "shape": "O"
+   },
+   {
+    "t": 1.833,
+    "f": 44,
+    "shape": "E"
+   },
+   {
+    "t": 2.0,
+    "f": 48,
+    "shape": "A"
+   },
+   {
+    "t": 2.208,
+    "f": 53,
+    "shape": "E"
+   },
+   {
+    "t": 2.5,
+    "f": 60,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "Which",
+    "t0": 0.89,
+    "t1": 1.202,
+    "f0": 21,
+    "f1": 29,
+    "ph": "wˌɪʧ"
+   },
+   {
+    "w": "room",
+    "t0": 1.202,
+    "t1": 1.515,
+    "f0": 29,
+    "f1": 36,
+    "ph": "ɹˈum"
+   },
+   {
+    "w": "is",
+    "t0": 1.515,
+    "t1": 1.665,
+    "f0": 36,
+    "f1": 40,
+    "ph": "ɪz"
+   },
+   {
+    "w": "on",
+    "t0": 1.665,
+    "t1": 1.915,
+    "f0": 40,
+    "f1": 46,
+    "ph": "ˌɔn"
+   },
+   {
+    "w": "fire",
+    "t0": 1.915,
+    "t1": 2.5,
+    "f0": 46,
+    "f1": 60,
+    "ph": "fˈIəɹ"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -2.68,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.52,
+   "median_f0_hz": 101.9,
+   "f0_range_st": 15.0,
+   "final_move_st": -7.6,
+   "asr": "Which room is on fire?",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.444,
+   "align_median_s": 0.075,
+   "utmos_dry": 4.474,
+   "utmos_plain_read": 4.457,
+   "utmos_vs_plain": 0.017,
+   "utmos_v4_same_words": 4.338,
+   "utmos_delivered_as_is": 4.463,
+   "speech_head_s": 0.89,
+   "speech_tail_s": 0.45,
+   "rise_ms": 20.0,
+   "decay_ms": 200.0,
+   "decay_to_60_s": 0.295,
+   "q_lift_st": -7.5
+  },
+  "nobreath": {
+   "file": "audio/ep01/act4/dialogue/v5/nobreath/a5-30-08.wav",
+   "note": "the same take without the placeholder inhale(s)"
+  },
+  "breaths": [
+   {
+    "where": "head",
+    "t0": 0.4,
+    "t1": 0.784
+   }
+  ],
+  "opened_pauses": [],
+  "alt_takes": []
+ },
+ {
+  "id": "e1-a1-8-03",
+  "scene": "8",
+  "speaker": "RADNUS",
+  "speaker_slug": "radnus",
+  "text": "Search is fine. Totally fine. It's just a chat thing, people seem to like talking to it.",
+  "spoken_as": "Search is fine.{0.2} Totally fine.{0.3} It's just a chat thing, people seem to like talking to it.",
+  "delivery": "quickly, apologetic, holding up his phone to them: a chat bubble with two dot eyes blinks on it",
+  "tag": "[INVENTED · Act One fix pass (2026-09-27): it was \"Search is fine. It's a chat thing. People like talking to it.\", three tidy sentences (the insider read). Now he says it twice to reassure himself and runs the rest together, quick and sorry, the way dialogue pass 5 asked his reads to go. The audit also measured his takes at the same pace as Tasya's, so his Act One lines are re-read at the top of his speed band]",
+  "mode": "call",
+  "voiced_in_cut": true,
+  "on_camera": "monitor",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": null,
+  "shot": "POV",
+  "shot_id": "POV",
+  "cue": null,
+  "lip_sync": true,
+  "status": "fast",
+  "device": "call",
+  "room": null,
+  "est_s": 7.3,
+  "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-8-03.wav",
+  "mp3": null,
+  "duration_s": 5.98,
+  "frames_24": 144,
+  "voiced_span_s": 4.98,
+  "pace": {
+   "words": 17,
+   "wpm": 204.8,
+   "speed": 1.03,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 1.03,
+    "speed_band": [
+     0.91,
+     0.99
+    ],
+    "articulation_guide_sps": [
+     3.8,
+     4.4
+    ],
+    "turn_wpm_guide": [
+     130,
+     150
+    ],
+    "intent": "quickly, apologetic, holding up his phone to them: a chat bubble with two dot eyes blinks on it"
+   },
+   "measured": {
+    "wpm": 204.8,
+    "articulation_sps": 4.67,
+    "syllables": 21,
+    "span_s": 4.98,
+    "pauses_s": [
+     0.19,
+     0.29
+    ]
+   },
+   "longest_internal_gap_s": 0.29,
+   "audible_in_s": 0.5,
+   "audible_out_s": 5.48
+  },
+  "placement": {
+   "gap_before_s": 0.35,
+   "follows": "voice"
+  },
+  "take": "s1",
+  "takes_tried": 1,
+  "pick_reason": "fast: one take (seed 1, plan speed)",
+  "voice": "am_echo*0.60+am_fenrir*0.40 (Kokoro-82M stock) · d-echo-fenrir-courteous-up2 · speed 1.030",
+  "voiceId": "am_echo*0.60+am_fenrir*0.40",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 70 Hz",
+   "pitch +2 st",
+   "low shelf +1.5 dB @180 Hz",
+   "peak -1.5 dB @350 Hz Q1.0",
+   "peak +0.5 dB @3000 Hz Q0.9",
+   "high shelf -1 dB @7000 Hz",
+   "comp 2.0:1 @-24 dB (10/140 ms)",
+   "then the call chain: HPF 200 Hz; LPF 7000 Hz; peak +1.5 dB @1800 Hz Q1.0; comp 2.5:1 @-22 dB (5/90 ms); -16 LUFS",
+   "Kokoro speed 1.030 (the plan speed; radnus band 0.91-0.99); one whole read; no time-stretch, no carrier, no splice",
+   "pause after 'fine': Kokoro 0.06 s -> 0.20 s (intended 0.20; +0.14 s of room tone at the quietest 5 ms)",
+   "pause after 'fine': Kokoro 0.22 s -> 0.31 s (intended 0.30; +0.08 s of room tone at the quietest 5 ms)",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale (fastrec default; --breaths adds them)",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.583,
+    "f": 14,
+    "shape": "O"
+   },
+   {
+    "t": 0.708,
+    "f": 17,
+    "shape": "E"
+   },
+   {
+    "t": 1.083,
+    "f": 26,
+    "shape": "A"
+   },
+   {
+    "t": 1.292,
+    "f": 31,
+    "shape": "E"
+   },
+   {
+    "t": 1.375,
+    "f": 33,
+    "shape": "rest"
+   },
+   {
+    "t": 1.667,
+    "f": 40,
+    "shape": "O"
+   },
+   {
+    "t": 1.75,
+    "f": 42,
+    "shape": "E"
+   },
+   {
+    "t": 2.125,
+    "f": 51,
+    "shape": "A"
+   },
+   {
+    "t": 2.417,
+    "f": 58,
+    "shape": "E"
+   },
+   {
+    "t": 2.5,
+    "f": 60,
+    "shape": "rest"
+   },
+   {
+    "t": 2.75,
+    "f": 66,
+    "shape": "E"
+   },
+   {
+    "t": 2.917,
+    "f": 70,
+    "shape": "A"
+   },
+   {
+    "t": 3.0,
+    "f": 72,
+    "shape": "E"
+   },
+   {
+    "t": 3.083,
+    "f": 74,
+    "shape": "A"
+   },
+   {
+    "t": 3.167,
+    "f": 76,
+    "shape": "E"
+   },
+   {
+    "t": 3.25,
+    "f": 78,
+    "shape": "A"
+   },
+   {
+    "t": 3.417,
+    "f": 82,
+    "shape": "E"
+   },
+   {
+    "t": 3.583,
+    "f": 86,
+    "shape": "A"
+   },
+   {
+    "t": 3.667,
+    "f": 88,
+    "shape": "E"
+   },
+   {
+    "t": 3.75,
+    "f": 90,
+    "shape": "M"
+   },
+   {
+    "t": 3.875,
+    "f": 93,
+    "shape": "A"
+   },
+   {
+    "t": 3.958,
+    "f": 95,
+    "shape": "M"
+   },
+   {
+    "t": 4.042,
+    "f": 97,
+    "shape": "E"
+   },
+   {
+    "t": 4.208,
+    "f": 101,
+    "shape": "A"
+   },
+   {
+    "t": 4.333,
+    "f": 104,
+    "shape": "M"
+   },
+   {
+    "t": 4.417,
+    "f": 106,
+    "shape": "E"
+   },
+   {
+    "t": 4.542,
+    "f": 109,
+    "shape": "A"
+   },
+   {
+    "t": 4.667,
+    "f": 112,
+    "shape": "E"
+   },
+   {
+    "t": 4.792,
+    "f": 115,
+    "shape": "O"
+   },
+   {
+    "t": 4.917,
+    "f": 118,
+    "shape": "E"
+   },
+   {
+    "t": 5.167,
+    "f": 124,
+    "shape": "O"
+   },
+   {
+    "t": 5.292,
+    "f": 127,
+    "shape": "E"
+   },
+   {
+    "t": 5.5,
+    "f": 132,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "Search",
+    "t0": 0.53,
+    "t1": 0.83,
+    "f0": 13,
+    "f1": 20,
+    "ph": "sˈɜɹʧ"
+   },
+   {
+    "w": "is",
+    "t0": 0.83,
+    "t1": 0.992,
+    "f0": 20,
+    "f1": 24,
+    "ph": "ɪz"
+   },
+   {
+    "w": "fine",
+    "t0": 0.992,
+    "t1": 1.38,
+    "f0": 24,
+    "f1": 33,
+    "ph": "fˈIn"
+   },
+   {
+    "w": "Totally",
+    "t0": 1.612,
+    "t1": 2.037,
+    "f0": 39,
+    "f1": 49,
+    "ph": "tˈOTəli"
+   },
+   {
+    "w": "fine",
+    "t0": 2.037,
+    "t1": 2.52,
+    "f0": 49,
+    "f1": 60,
+    "ph": "fˈIn"
+   },
+   {
+    "w": "It's",
+    "t0": 2.73,
+    "t1": 2.88,
+    "f0": 66,
+    "f1": 69,
+    "ph": "ˌɪts"
+   },
+   {
+    "w": "just",
+    "t0": 2.88,
+    "t1": 3.068,
+    "f0": 69,
+    "f1": 74,
+    "ph": "ʤˈʌst"
+   },
+   {
+    "w": "a",
+    "t0": 3.068,
+    "t1": 3.168,
+    "f0": 74,
+    "f1": 76,
+    "ph": "ɐ"
+   },
+   {
+    "w": "chat",
+    "t0": 3.168,
+    "t1": 3.48,
+    "f0": 76,
+    "f1": 84,
+    "ph": "ʧˈæt"
+   },
+   {
+    "w": "thing",
+    "t0": 3.492,
+    "t1": 3.755,
+    "f0": 84,
+    "f1": 90,
+    "ph": "θˈɪŋ"
+   },
+   {
+    "w": "people",
+    "t0": 3.805,
+    "t1": 4.155,
+    "f0": 91,
+    "f1": 100,
+    "ph": "pˈipᵊl"
+   },
+   {
+    "w": "seem",
+    "t0": 4.155,
+    "t1": 4.405,
+    "f0": 100,
+    "f1": 106,
+    "ph": "sˈim"
+   },
+   {
+    "w": "to",
+    "t0": 4.405,
+    "t1": 4.505,
+    "f0": 106,
+    "f1": 108,
+    "ph": "tə"
+   },
+   {
+    "w": "like",
+    "t0": 4.505,
+    "t1": 4.73,
+    "f0": 108,
+    "f1": 114,
+    "ph": "lˈIk"
+   },
+   {
+    "w": "talking",
+    "t0": 4.73,
+    "t1": 5.13,
+    "f0": 114,
+    "f1": 123,
+    "ph": "tˈɔkɪŋ"
+   },
+   {
+    "w": "to",
+    "t0": 5.13,
+    "t1": 5.28,
+    "f0": 123,
+    "f1": 127,
+    "ph": "tʊ"
+   },
+   {
+    "w": "it",
+    "t0": 5.28,
+    "t1": 5.5,
+    "f0": 127,
+    "f1": 132,
+    "ph": "ɪt"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -1.95,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.5,
+   "median_f0_hz": 131.8,
+   "f0_range_st": 11.9,
+   "f0_method": "pYIN (a4lib.analyse)",
+   "final_move_st": -3.5,
+   "asr": "Search is fine, totally fine. It's just a chat thing people seem to like talking to it.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.238,
+   "align_median_s": null,
+   "utmos_dry": null,
+   "utmos_plain_read": null,
+   "utmos_vs_plain": null,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": null,
+   "speech_head_s": 0.5,
+   "speech_tail_s": 0.405,
+   "rise_ms": 40.0,
+   "decay_ms": 130.0,
+   "decay_to_60_s": 0.095
+  },
+  "clean": {
+   "file": "audio/ep01/act1/dialogue/fast-v1/clean/e1-a1-8-03.wav",
+   "note": "the dry read (no call chain), -16 LUFS"
+  },
+  "fast": {
+   "key": "455d05a5e20b1c1f",
+   "tool": "fastrec 1.2 (2026-09-26)",
+   "shard": 1,
+   "wall_s": 6.13,
+   "takes": 1,
+   "settings": {
+    "asr": true,
+    "asr_beam": 1,
+    "asr_batch_s": 24.0,
+    "asr_align": false,
+    "utmos": false,
+    "prosody": true,
+    "breaths": false,
+    "threads": 3
+   },
+   "asr": {
+    "packed_with": 0,
+    "share_s": 2.53,
+    "rechecked_alone": false
+   }
+  },
+  "breaths": [],
+  "opened_pauses": [
+   {
+    "after_word": 3,
+    "word": "fine",
+    "tts_s": 0.055,
+    "target_s": 0.2,
+    "point_s": 1.025,
+    "joined_speech": false,
+    "dip_db": -63.4,
+    "breath": false,
+    "crossfade_ms": [
+     8,
+     8
+    ],
+    "final_s": 0.2,
+    "opened_s": 0.145
+   },
+   {
+    "after_word": 5,
+    "word": "fine",
+    "tts_s": 0.22,
+    "target_s": 0.3,
+    "point_s": 2.205,
+    "joined_speech": false,
+    "dip_db": -60.3,
+    "breath": false,
+    "crossfade_ms": [
+     8,
+     8
+    ],
+    "final_s": 0.31,
+    "opened_s": 0.08
+   }
+  ],
+  "alt_takes": []
+ },
+ {
+  "id": "a5-27-32",
+  "scene": "27",
+  "speaker": "ADELINA",
+  "speaker_slug": "adelina",
+  "text": "In plain English: no.",
+  "spoken_as": "In plain English:{0.25} no.",
+  "delivery": "In over his last syllable of 'hypothetically' (tail overlap, ~0.25 s). Brisk, warm, kind finality. 0.25 s after the colon.",
+  "tag": "[INVENTED]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": "board",
+  "shot": "S4.08",
+  "shot_id": "S4.08",
+  "cue": "S4.08, -0.25 (overlap) s after the previous voice",
+  "lip_sync": true,
+  "status": "kept-rerecorded",
+  "device": null,
+  "room": "the split: the boardroom (Neleh) / the lighthouse (Mario, Adelina)",
+  "est_s": 1.5,
+  "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-32.wav",
+  "mp3": "audio/ep01/act4/dialogue/v5/mp3/a5-27-32.mp3",
+  "duration_s": 2.63,
+  "frames_24": 64,
+  "voiced_span_s": 1.54,
+  "pace": {
+   "words": 4,
+   "wpm": 155.8,
+   "speed": 1.0,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 1.0,
+    "speed_band": [
+     0.95,
+     1.05
+    ],
+    "articulation_guide_sps": [
+     4.2,
+     4.8
+    ],
+    "turn_wpm_guide": [
+     150,
+     165
+    ],
+    "intent": "In over his last syllable of 'hypothetically' (tail overlap, ~0.25 s). Brisk, warm, kind finality. 0.25 s after the colon."
+   },
+   "measured": {
+    "wpm": 155.8,
+    "articulation_sps": 3.91,
+    "syllables": 5,
+    "span_s": 1.54,
+    "pauses_s": [
+     0.26
+    ]
+   },
+   "longest_internal_gap_s": 0.26,
+   "audible_in_s": 0.5,
+   "audible_out_s": 2.04
+  },
+  "placement": {
+   "gap_before_s": -0.25,
+   "follows": "voice",
+   "overlap_prev_s": 0.25
+  },
+  "take": "s1",
+  "takes_tried": 3,
+  "pick_reason": "the best UTMOS among the takes ASR hears whole",
+  "voice": "af_bella (Kokoro-82M stock) · a-bella-warm · speed 1.000",
+  "voiceId": "af_bella",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 80 Hz",
+   "pitch -1 st",
+   "low shelf +1.5 dB @200 Hz",
+   "peak -1 dB @450 Hz Q1.0",
+   "peak +1 dB @2500 Hz Q0.9",
+   "high shelf -1 dB @8000 Hz",
+   "comp 2.5:1 @-22 dB (6/110 ms)",
+   "Kokoro speed 1.000, chosen from intent in the adelina band 0.95-1.05 (the plan's 1.00); one whole read; no time-stretch, no carrier, no splice",
+   "pause after 'English' (word 3): Kokoro 0.27 s -> 0.27 s (intended 0.25; +0.00 s of room tone at the quietest 5 ms, 8/8 ms crossfades)",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (the room's early reflection is a mix send)"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.5,
+    "f": 12,
+    "shape": "E"
+   },
+   {
+    "t": 0.583,
+    "f": 14,
+    "shape": "M"
+   },
+   {
+    "t": 0.708,
+    "f": 17,
+    "shape": "A"
+   },
+   {
+    "t": 0.833,
+    "f": 20,
+    "shape": "E"
+   },
+   {
+    "t": 0.917,
+    "f": 22,
+    "shape": "A"
+   },
+   {
+    "t": 1.042,
+    "f": 25,
+    "shape": "E"
+   },
+   {
+    "t": 1.458,
+    "f": 35,
+    "shape": "rest"
+   },
+   {
+    "t": 1.667,
+    "f": 40,
+    "shape": "E"
+   },
+   {
+    "t": 1.792,
+    "f": 43,
+    "shape": "O"
+   },
+   {
+    "t": 2.042,
+    "f": 49,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "In",
+    "t0": 0.495,
+    "t1": 0.62,
+    "f0": 12,
+    "f1": 15,
+    "ph": "ɪn"
+   },
+   {
+    "w": "plain",
+    "t0": 0.62,
+    "t1": 0.908,
+    "f0": 15,
+    "f1": 22,
+    "ph": "plˈAn"
+   },
+   {
+    "w": "English",
+    "t0": 0.908,
+    "t1": 1.45,
+    "f0": 22,
+    "f1": 35,
+    "ph": "ˈɪŋɡlɪʃ"
+   },
+   {
+    "w": "no",
+    "t0": 1.658,
+    "t1": 2.06,
+    "f0": 40,
+    "f1": 49,
+    "ph": "nˈO"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -3.29,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.5,
+   "median_f0_hz": 205.3,
+   "f0_range_st": 6.4,
+   "final_move_st": -0.5,
+   "asr": "In plain English, no.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.392,
+   "align_median_s": 0.085,
+   "utmos_dry": 3.451,
+   "utmos_plain_read": 3.421,
+   "utmos_vs_plain": 0.03,
+   "utmos_v4_same_words": 2.953,
+   "utmos_delivered_as_is": 3.451,
+   "speech_head_s": 0.5,
+   "speech_tail_s": 0.415,
+   "rise_ms": 20.0,
+   "decay_ms": 135.0,
+   "decay_to_60_s": 0.17
+  },
+  "breaths": [],
+  "opened_pauses": [
+   {
+    "after_word": 3,
+    "word": "English",
+    "tts_s": 0.27,
+    "target_s": 0.25,
+    "point_s": 1.16,
+    "joined_speech": false,
+    "dip_db": -72.8,
+    "breath": false,
+    "final_s": 0.265,
+    "opened_s": 0.0
+   }
+  ],
+  "alt_takes": []
+ },
+ {
+  "id": "a5-27-18",
+  "scene": "27",
+  "speaker": "TILED EMPLOYEE",
+  "speaker_slug": "tiled-employee",
+  "text": "Is this a coup? Because it looks like one.",
+  "spoken_as": "Is this a coup?{0.30} Because it looks like one.",
+  "delivery": "Standing, hand still up, from the back of the crowd: nervous but firm, a real question. A breath before it (the crowd hushes first). 0.3 s between the sentences; the second is a push, not a joke.",
+  "tag": "[INVENTED · the second sentence; at the real all-hands he was asked whether it was a 'coup' (research mid.md §3)]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "monitor",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": "board",
+  "shot": "S3.06",
+  "shot_id": "S3.06",
+  "cue": "S3.06, after the picture's lead-in (see the shot plan)",
+  "lip_sync": true,
+  "status": "new",
+  "device": null,
+  "room": "the all-hands",
+  "est_s": 3.4,
+  "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-18.wav",
+  "mp3": "audio/ep01/act4/dialogue/v5/mp3/a5-27-18.mp3",
+  "duration_s": 4.148,
+  "frames_24": 100,
+  "voiced_span_s": 2.47,
+  "pace": {
+   "words": 9,
+   "wpm": 218.6,
+   "speed": 1.0,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 1.0,
+    "speed_band": [
+     0.95,
+     1.05
+    ],
+    "articulation_guide_sps": [
+     4.2,
+     5.0
+    ],
+    "turn_wpm_guide": [
+     150,
+     170
+    ],
+    "intent": "Standing, hand still up, from the back of the crowd: nervous but firm, a real question. A breath before it (the crowd hushes first). 0.3 s between the sentences; the second is a push, not a joke."
+   },
+   "measured": {
+    "wpm": 218.6,
+    "articulation_sps": 4.69,
+    "syllables": 10,
+    "span_s": 2.47,
+    "pauses_s": [
+     0.34
+    ]
+   },
+   "longest_internal_gap_s": 0.34,
+   "audible_in_s": 0.83,
+   "audible_out_s": 3.3
+  },
+  "placement": {
+   "gap_before_s": null,
+   "follows": "picture"
+  },
+  "take": "s3",
+  "takes_tried": 7,
+  "pick_reason": "a yes/no question: no take lifts 1 st; the most lift among the 6 takes within 0.2 UTMOS of the top",
+  "voice": "af_nova (Kokoro-82M stock) · a-nova-plain · speed 1.000",
+  "voiceId": "af_nova",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 100 Hz",
+   "pitch -1.5 st",
+   "peak +1 dB @3000 Hz Q0.9",
+   "comp 2.0:1 @-22 dB (8/110 ms)",
+   "Kokoro speed 1.000, chosen from intent in the tiled-employee band 0.95-1.05 (the plan's 1.00); one whole read; no time-stretch, no carrier, no splice",
+   "pause after 'coup' (word 4): Kokoro 0.00 s -> 0.34 s (intended 0.30; +0.30 s of room tone at the quietest 5 ms, 60/25 ms crossfades; Kokoro ran the words together here (dip -37.5 dB): the cut is shaped as a decay and an onset, ear check)",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "placeholder inhale(s): synthetic band-limited noise with a breath envelope (NOT a licensed breath library; never from a real person)",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (the room's early reflection is a mix send)"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.833,
+    "f": 20,
+    "shape": "E"
+   },
+   {
+    "t": 1.167,
+    "f": 28,
+    "shape": "A"
+   },
+   {
+    "t": 1.333,
+    "f": 32,
+    "shape": "E"
+   },
+   {
+    "t": 1.417,
+    "f": 34,
+    "shape": "O"
+   },
+   {
+    "t": 1.667,
+    "f": 40,
+    "shape": "rest"
+   },
+   {
+    "t": 2.042,
+    "f": 49,
+    "shape": "M"
+   },
+   {
+    "t": 2.125,
+    "f": 51,
+    "shape": "E"
+   },
+   {
+    "t": 2.208,
+    "f": 53,
+    "shape": "A"
+   },
+   {
+    "t": 2.292,
+    "f": 55,
+    "shape": "E"
+   },
+   {
+    "t": 2.458,
+    "f": 59,
+    "shape": "O"
+   },
+   {
+    "t": 2.583,
+    "f": 62,
+    "shape": "E"
+   },
+   {
+    "t": 2.708,
+    "f": 65,
+    "shape": "A"
+   },
+   {
+    "t": 2.875,
+    "f": 69,
+    "shape": "O"
+   },
+   {
+    "t": 3.0,
+    "f": 72,
+    "shape": "A"
+   },
+   {
+    "t": 3.208,
+    "f": 77,
+    "shape": "E"
+   },
+   {
+    "t": 3.333,
+    "f": 80,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "Is",
+    "t0": 0.803,
+    "t1": 0.968,
+    "f0": 19,
+    "f1": 23,
+    "ph": "ˌɪz"
+   },
+   {
+    "w": "this",
+    "t0": 0.968,
+    "t1": 1.168,
+    "f0": 23,
+    "f1": 28,
+    "ph": "ðɪs"
+   },
+   {
+    "w": "a",
+    "t0": 1.168,
+    "t1": 1.293,
+    "f0": 28,
+    "f1": 31,
+    "ph": "ɐ"
+   },
+   {
+    "w": "coup",
+    "t0": 1.293,
+    "t1": 1.668,
+    "f0": 31,
+    "f1": 40,
+    "ph": "kˈu"
+   },
+   {
+    "w": "Because",
+    "t0": 2.043,
+    "t1": 2.306,
+    "f0": 49,
+    "f1": 55,
+    "ph": "bəkˈʌz"
+   },
+   {
+    "w": "it",
+    "t0": 2.306,
+    "t1": 2.418,
+    "f0": 55,
+    "f1": 58,
+    "ph": "ɪt"
+   },
+   {
+    "w": "looks",
+    "t0": 2.418,
+    "t1": 2.668,
+    "f0": 58,
+    "f1": 64,
+    "ph": "lˈʊks"
+   },
+   {
+    "w": "like",
+    "t0": 2.668,
+    "t1": 2.893,
+    "f0": 64,
+    "f1": 69,
+    "ph": "lˈIk"
+   },
+   {
+    "w": "one",
+    "t0": 2.893,
+    "t1": 3.32,
+    "f0": 69,
+    "f1": 80,
+    "ph": "wˈʌn"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -2.78,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.5,
+   "median_f0_hz": 145.6,
+   "f0_range_st": 10.6,
+   "final_move_st": -1.9,
+   "asr": "Is this a coup because it looks like one?",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.41,
+   "align_median_s": 0.033,
+   "utmos_dry": 3.395,
+   "utmos_plain_read": 3.351,
+   "utmos_vs_plain": 0.044,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": 3.527,
+   "speech_head_s": 0.83,
+   "speech_tail_s": 0.398,
+   "rise_ms": 10.0,
+   "decay_ms": 145.0,
+   "decay_to_60_s": 0.45,
+   "q_lift_st": -7.05
+  },
+  "nobreath": {
+   "file": "audio/ep01/act4/dialogue/v5/nobreath/a5-27-18.wav",
+   "note": "the same take without the placeholder inhale(s)"
+  },
+  "breaths": [
+   {
+    "where": "head",
+    "t0": 0.4,
+    "t1": 0.733
+   }
+  ],
+  "opened_pauses": [
+   {
+    "after_word": 4,
+    "word": "coup",
+    "tts_s": 0.0,
+    "target_s": 0.3,
+    "point_s": 0.985,
+    "joined_speech": true,
+    "dip_db": -37.5,
+    "breath": false,
+    "crossfade_ms": [
+     60,
+     25
+    ],
+    "final_s": 0.34,
+    "opened_s": 0.3
+   }
+  ],
+  "alt_takes": [
+   {
+    "tag": "sp0.97-s2",
+    "say": "Is this a coup?{0.30} Because it looks like one.",
+    "speed": 0.97,
+    "seed": 2,
+    "utmos": 3.499,
+    "asr": "Is this a coup because it looks like one?",
+    "cer": 0.0,
+    "recall": 1.0,
+    "q_lift_st": -7.1,
+    "stress": null,
+    "echo": null,
+    "span_s": 2.5,
+    "wpm": 216.0,
+    "articulation_sps": 4.63,
+    "file": "audio/ep01/act4/dialogue/v5/takes/a5-27-18/sp0.97-s2.wav"
+   },
+   {
+    "tag": "sp1.03-s2",
+    "say": "Is this a coup?{0.30} Because it looks like one.",
+    "speed": 1.03,
+    "seed": 2,
+    "utmos": 3.498,
+    "asr": "Is this a coup because it looks like one?",
+    "cer": 0.0,
+    "recall": 1.0,
+    "q_lift_st": -7.2,
+    "stress": null,
+    "echo": null,
+    "span_s": 2.46,
+    "wpm": 219.5,
+    "articulation_sps": 4.72,
+    "file": "audio/ep01/act4/dialogue/v5/takes/a5-27-18/sp1.03-s2.wav"
+   },
+   {
+    "tag": "s2",
+    "say": "Is this a coup?{0.30} Because it looks like one.",
+    "speed": 1.0,
+    "seed": 2,
+    "utmos": 3.481,
+    "asr": "Is this a coup because it looks like one?",
+    "cer": 0.0,
+    "recall": 1.0,
+    "q_lift_st": -7.15,
+    "stress": null,
+    "echo": null,
+    "span_s": 2.47,
+    "wpm": 218.6,
+    "articulation_sps": 4.69,
+    "file": "audio/ep01/act4/dialogue/v5/takes/a5-27-18/s2.wav"
+   },
+   {
+    "tag": "sp1.03-s1",
+    "say": "Is this a coup?{0.30} Because it looks like one.",
+    "speed": 1.03,
+    "seed": 1,
+    "utmos": 3.356,
+    "asr": "Is this a coup because it looks like one?",
+    "cer": 0.0,
+    "recall": 1.0,
+    "q_lift_st": -7.25,
+    "stress": null,
+    "echo": null,
+    "span_s": 2.45,
+    "wpm": 220.4,
+    "articulation_sps": 4.72,
+    "file": "audio/ep01/act4/dialogue/v5/takes/a5-27-18/sp1.03-s1.wav"
+   },
+   {
+    "tag": "s1",
+    "say": "Is this a coup?{0.30} Because it looks like one.",
+    "speed": 1.0,
+    "seed": 1,
+    "utmos": 3.313,
+    "asr": "Is this a coup because it looks like one?",
+    "cer": 0.0,
+    "recall": 1.0,
+    "q_lift_st": -7.3,
+    "stress": null,
+    "echo": null,
+    "span_s": 2.47,
+    "wpm": 218.6,
+    "articulation_sps": 4.67,
+    "file": "audio/ep01/act4/dialogue/v5/takes/a5-27-18/s1.wav"
+   },
+   {
+    "tag": "sp0.97-s1",
+    "say": "Is this a coup?{0.30} Because it looks like one.",
+    "speed": 0.97,
+    "seed": 1,
+    "utmos": 3.292,
+    "asr": "Is this a coup because it looks like one?",
+    "cer": 0.0,
+    "recall": 1.0,
+    "q_lift_st": null,
+    "stress": null,
+    "echo": null,
+    "span_s": 2.51,
+    "wpm": 215.1,
+    "articulation_sps": 4.59,
+    "file": "audio/ep01/act4/dialogue/v5/takes/a5-27-18/sp0.97-s1.wav"
+   }
+  ]
+ },
+ {
+  "id": "e1-a2-13-15",
+  "scene": "13",
+  "speaker": "NEDIB",
+  "speaker_slug": "nedib",
+  "text": "Whatever you promise in here today, put it in writing. Longer.",
+  "spoken_as": "Whatever you promise in here today,{0.2} put it in writing.{s0.5} Longer.",
+  "delivery": "to the row",
+  "tag": "[INVENTED · his character file's \"Put it in writing. Longer.\"; it plants the pinky promise (sc 19) and the order's scroll (sc 21), and says nothing about what the meeting decided]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": null,
+  "shot": "OTS",
+  "shot_id": "OTS",
+  "cue": null,
+  "lip_sync": true,
+  "status": "fast",
+  "device": null,
+  "room": null,
+  "est_s": 4.6,
+  "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-15.wav",
+  "mp3": null,
+  "duration_s": 5.18,
+  "frames_24": 125,
+  "voiced_span_s": 4.13,
+  "pace": {
+   "words": 11,
+   "wpm": 159.8,
+   "speed": 0.93,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 0.93,
+    "speed_band": [
+     0.93,
+     1.01
+    ],
+    "articulation_guide_sps": [
+     4.2,
+     4.8
+    ],
+    "turn_wpm_guide": [
+     145,
+     165
+    ],
+    "intent": "to the row"
+   },
+   "measured": {
+    "wpm": 159.8,
+    "articulation_sps": 4.94,
+    "syllables": 17,
+    "span_s": 4.13,
+    "pauses_s": [
+     0.21,
+     0.48
+    ]
+   },
+   "longest_internal_gap_s": 0.48,
+   "audible_in_s": 0.5,
+   "audible_out_s": 4.63
+  },
+  "placement": {
+   "gap_before_s": null,
+   "follows": "picture"
+  },
+  "take": "s1",
+  "takes_tried": 1,
+  "pick_reason": "fast: one take (seed 1, plan speed)",
+  "voice": "am_fenrir*0.50+am_onyx*0.50 (Kokoro-82M stock) · d-fenrir-onyx-folksy-0 · speed 0.930",
+  "voiceId": "am_fenrir*0.50+am_onyx*0.50",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 70 Hz",
+   "pitch 0",
+   "low shelf +2 dB @160 Hz",
+   "peak -1.5 dB @380 Hz Q1.0",
+   "peak +1.5 dB @2200 Hz Q0.9",
+   "comp 3.0:1 @-21 dB (5/100 ms)",
+   "tanh saturation drive 1.6 mix 0.1",
+   "Kokoro speed 0.930 (the plan speed; nedib band 0.93-1.01); 2 whole reads, joined in room tone; no time-stretch, no carrier, no splice",
+   "pause after 'today': Kokoro 0.12 s -> 0.23 s (intended 0.20; +0.08 s of room tone at the quietest 5 ms)",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale (fastrec default; --breaths adds them)",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.458,
+    "f": 11,
+    "shape": "O"
+   },
+   {
+    "t": 0.542,
+    "f": 13,
+    "shape": "E"
+   },
+   {
+    "t": 0.625,
+    "f": 15,
+    "shape": "A"
+   },
+   {
+    "t": 0.708,
+    "f": 17,
+    "shape": "E"
+   },
+   {
+    "t": 0.875,
+    "f": 21,
+    "shape": "O"
+   },
+   {
+    "t": 0.958,
+    "f": 23,
+    "shape": "M"
+   },
+   {
+    "t": 1.042,
+    "f": 25,
+    "shape": "E"
+   },
+   {
+    "t": 1.125,
+    "f": 27,
+    "shape": "A"
+   },
+   {
+    "t": 1.208,
+    "f": 29,
+    "shape": "M"
+   },
+   {
+    "t": 1.292,
+    "f": 31,
+    "shape": "E"
+   },
+   {
+    "t": 1.667,
+    "f": 40,
+    "shape": "A"
+   },
+   {
+    "t": 1.75,
+    "f": 42,
+    "shape": "E"
+   },
+   {
+    "t": 2.083,
+    "f": 50,
+    "shape": "A"
+   },
+   {
+    "t": 2.292,
+    "f": 55,
+    "shape": "rest"
+   },
+   {
+    "t": 2.458,
+    "f": 59,
+    "shape": "M"
+   },
+   {
+    "t": 2.542,
+    "f": 61,
+    "shape": "O"
+   },
+   {
+    "t": 2.625,
+    "f": 63,
+    "shape": "E"
+   },
+   {
+    "t": 3.0,
+    "f": 72,
+    "shape": "A"
+   },
+   {
+    "t": 3.167,
+    "f": 76,
+    "shape": "E"
+   },
+   {
+    "t": 3.458,
+    "f": 83,
+    "shape": "rest"
+   },
+   {
+    "t": 3.958,
+    "f": 95,
+    "shape": "E"
+   },
+   {
+    "t": 4.042,
+    "f": 97,
+    "shape": "O"
+   },
+   {
+    "t": 4.208,
+    "f": 101,
+    "shape": "E"
+   },
+   {
+    "t": 4.667,
+    "f": 112,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "Whatever",
+    "t0": 0.49,
+    "t1": 0.84,
+    "f0": 12,
+    "f1": 20,
+    "ph": "wəTˈɛvəɹ"
+   },
+   {
+    "w": "you",
+    "t0": 0.84,
+    "t1": 1.002,
+    "f0": 20,
+    "f1": 24,
+    "ph": "ju"
+   },
+   {
+    "w": "promise",
+    "t0": 1.002,
+    "t1": 1.44,
+    "f0": 24,
+    "f1": 35,
+    "ph": "pɹˈɑməs"
+   },
+   {
+    "w": "in",
+    "t0": 1.44,
+    "t1": 1.59,
+    "f0": 35,
+    "f1": 38,
+    "ph": "ɪn"
+   },
+   {
+    "w": "here",
+    "t0": 1.59,
+    "t1": 1.815,
+    "f0": 38,
+    "f1": 44,
+    "ph": "hˈɪɹ"
+   },
+   {
+    "w": "today",
+    "t0": 1.815,
+    "t1": 2.29,
+    "f0": 44,
+    "f1": 55,
+    "ph": "tədˈA"
+   },
+   {
+    "w": "put",
+    "t0": 2.47,
+    "t1": 2.657,
+    "f0": 59,
+    "f1": 64,
+    "ph": "pˌʊt"
+   },
+   {
+    "w": "it",
+    "t0": 2.657,
+    "t1": 2.77,
+    "f0": 64,
+    "f1": 66,
+    "ph": "ɪt"
+   },
+   {
+    "w": "in",
+    "t0": 2.77,
+    "t1": 2.92,
+    "f0": 66,
+    "f1": 70,
+    "ph": "ɪn"
+   },
+   {
+    "w": "writing",
+    "t0": 2.92,
+    "t1": 3.46,
+    "f0": 70,
+    "f1": 83,
+    "ph": "ɹˈITɪŋ"
+   },
+   {
+    "w": "Longer",
+    "t0": 3.945,
+    "t1": 4.65,
+    "f0": 95,
+    "f1": 112,
+    "ph": "lˈɔŋɡəɹ"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -2.63,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.5,
+   "median_f0_hz": 110.6,
+   "f0_range_st": 11.0,
+   "f0_method": "pYIN (a4lib.analyse)",
+   "final_move_st": 1.9,
+   "asr": "Whatever you promise in here today, put it in writing. Longer!",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.397,
+   "align_median_s": 0.03,
+   "utmos_dry": null,
+   "utmos_plain_read": null,
+   "utmos_vs_plain": null,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": null,
+   "speech_head_s": 0.5,
+   "speech_tail_s": 0.435,
+   "rise_ms": 30.0,
+   "decay_ms": 120.0,
+   "decay_to_60_s": 0.115
+  },
+  "fast": {
+   "key": "0c1f77100f572742",
+   "tool": "fastrec 1.2 (2026-09-26)",
+   "shard": 1,
+   "wall_s": 4.39,
+   "takes": 1,
+   "settings": {
+    "asr": true,
+    "asr_beam": 1,
+    "asr_batch_s": 24.0,
+    "asr_align": false,
+    "utmos": false,
+    "prosody": true,
+    "breaths": false,
+    "threads": 4
+   },
+   "asr": {
+    "packed_with": 2,
+    "share_s": 0.83,
+    "rechecked_alone": false
+   }
+  },
+  "breaths": [],
+  "opened_pauses": [
+   {
+    "after_word": 6,
+    "word": "today",
+    "tts_s": 0.12,
+    "target_s": 0.2,
+    "point_s": 1.95,
+    "joined_speech": false,
+    "dip_db": -65.3,
+    "breath": false,
+    "crossfade_ms": [
+     8,
+     8
+    ],
+    "final_s": 0.225,
+    "opened_s": 0.08
+   },
+   {
+    "after_word": null,
+    "word": "writing",
+    "tts_s": null,
+    "target_s": 0.5,
+    "final_s": 0.5,
+    "opened_s": 0.0,
+    "joined_speech": false,
+    "dip_db": null,
+    "breath": false,
+    "split": true,
+    "point_s": 2.955,
+    "crossfade_ms": [
+     0,
+     0
+    ]
+   }
+  ],
+  "alt_takes": []
+ },
+ {
+  "id": "e1-a3-21-02",
+  "scene": "21",
+  "speaker": "DEEPFAKE NEDIB",
+  "speaker_slug": "deepfake-nedib",
+  "text": "And then the computers regulate themselves.",
+  "spoken_as": "And then the computers regulate themselves.",
+  "delivery": "the same cadence, a shade too smooth, carrying on as if it were the same sentence",
+  "tag": "[INVENTED · the character file's gag, a copy finishing his sentence, now played as a copy adding to a sentence he has finished]",
+  "mode": "call",
+  "voiced_in_cut": true,
+  "on_camera": "monitor",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": null,
+  "shot": "POV",
+  "shot_id": "POV",
+  "cue": null,
+  "lip_sync": true,
+  "status": "fast",
+  "device": "monitor",
+  "room": null,
+  "est_s": 2.7,
+  "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-21-02.wav",
+  "mp3": null,
+  "duration_s": 3.405,
+  "frames_24": 82,
+  "voiced_span_s": 2.24,
+  "pace": {
+   "words": 6,
+   "wpm": 160.7,
+   "speed": 0.97,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 0.97,
+    "speed_band": [
+     0.93,
+     1.01
+    ],
+    "articulation_guide_sps": [
+     4.2,
+     4.8
+    ],
+    "turn_wpm_guide": [
+     145,
+     165
+    ],
+    "intent": "the same cadence, a shade too smooth, carrying on as if it were the same sentence"
+   },
+   "measured": {
+    "wpm": 160.7,
+    "articulation_sps": 4.91,
+    "syllables": 11,
+    "span_s": 2.24,
+    "pauses_s": []
+   },
+   "longest_internal_gap_s": 0.0,
+   "audible_in_s": 0.5,
+   "audible_out_s": 2.74
+  },
+  "placement": {
+   "gap_before_s": 0.7,
+   "follows": "voice"
+  },
+  "take": "s1",
+  "takes_tried": 1,
+  "pick_reason": "fast: one take (seed 1, plan speed)",
+  "voice": "am_fenrir*0.50+am_onyx*0.50 (Kokoro-82M stock) · d-fenrir-onyx-folksy-0 + gloss · speed 0.970",
+  "voiceId": "am_fenrir*0.50+am_onyx*0.50",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 70 Hz",
+   "pitch 0",
+   "low shelf +2 dB @160 Hz",
+   "peak -1.5 dB @380 Hz Q1.0",
+   "peak +1.5 dB @2200 Hz Q0.9",
+   "comp 3.0:1 @-21 dB (5/100 ms)",
+   "tanh saturation drive 1.6 mix 0.1",
+   "peak -1.5 dB @350 Hz Q1.0",
+   "high shelf +2.5 dB @7000 Hz",
+   "chorus 0.6 Hz depth 0.1 mix 0.18",
+   "comp 4.0:1 @-26 dB (2/60 ms)",
+   "then the monitor chain: HPF 200 Hz; LPF 7000 Hz; peak +1.5 dB @1800 Hz Q1.0; comp 2.5:1 @-22 dB (5/90 ms); -16 LUFS",
+   "Kokoro speed 0.970 (the centre of the band; deepfake-nedib band 0.93-1.01); one whole read; no time-stretch, no carrier, no splice",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale (fastrec default; --breaths adds them)",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.458,
+    "f": 11,
+    "shape": "A"
+   },
+   {
+    "t": 0.542,
+    "f": 13,
+    "shape": "E"
+   },
+   {
+    "t": 0.625,
+    "f": 15,
+    "shape": "A"
+   },
+   {
+    "t": 0.708,
+    "f": 17,
+    "shape": "E"
+   },
+   {
+    "t": 0.958,
+    "f": 23,
+    "shape": "M"
+   },
+   {
+    "t": 1.125,
+    "f": 27,
+    "shape": "O"
+   },
+   {
+    "t": 1.25,
+    "f": 30,
+    "shape": "E"
+   },
+   {
+    "t": 1.542,
+    "f": 37,
+    "shape": "A"
+   },
+   {
+    "t": 1.625,
+    "f": 39,
+    "shape": "E"
+   },
+   {
+    "t": 1.833,
+    "f": 44,
+    "shape": "A"
+   },
+   {
+    "t": 1.958,
+    "f": 47,
+    "shape": "E"
+   },
+   {
+    "t": 2.208,
+    "f": 53,
+    "shape": "M"
+   },
+   {
+    "t": 2.292,
+    "f": 55,
+    "shape": "E"
+   },
+   {
+    "t": 2.375,
+    "f": 57,
+    "shape": "A"
+   },
+   {
+    "t": 2.542,
+    "f": 61,
+    "shape": "E"
+   },
+   {
+    "t": 2.75,
+    "f": 66,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "And",
+    "t0": 0.47,
+    "t1": 0.582,
+    "f0": 11,
+    "f1": 14,
+    "ph": "ˌænd"
+   },
+   {
+    "w": "then",
+    "t0": 0.582,
+    "t1": 0.732,
+    "f0": 14,
+    "f1": 18,
+    "ph": "ðˈɛn"
+   },
+   {
+    "w": "the",
+    "t0": 0.732,
+    "t1": 0.82,
+    "f0": 18,
+    "f1": 20,
+    "ph": "ðə"
+   },
+   {
+    "w": "computers",
+    "t0": 0.82,
+    "t1": 1.482,
+    "f0": 20,
+    "f1": 36,
+    "ph": "kəmpjˈuTəɹz"
+   },
+   {
+    "w": "regulate",
+    "t0": 1.482,
+    "t1": 1.995,
+    "f0": 36,
+    "f1": 48,
+    "ph": "ɹˈɛɡjəlˌAt"
+   },
+   {
+    "w": "themselves",
+    "t0": 1.995,
+    "t1": 2.76,
+    "f0": 48,
+    "f1": 66,
+    "ph": "ðəmsˈɛlvz"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -4.79,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.5,
+   "median_f0_hz": 111.9,
+   "f0_range_st": 11.6,
+   "f0_method": "pYIN (a4lib.analyse)",
+   "final_move_st": -1.4,
+   "asr": "And then the computers regulate themselves.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.214,
+   "align_median_s": 0.055,
+   "utmos_dry": null,
+   "utmos_plain_read": null,
+   "utmos_vs_plain": null,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": null,
+   "speech_head_s": 0.5,
+   "speech_tail_s": 0.44,
+   "rise_ms": 20.0,
+   "decay_ms": 65.0,
+   "decay_to_60_s": 0.23
+  },
+  "clean": {
+   "file": "audio/ep01/act3/dialogue/fast-v2/clean/e1-a3-21-02.wav",
+   "note": "the dry read (no monitor chain), -16 LUFS"
+  },
+  "fast": {
+   "key": "5d3ec38c09e6a131",
+   "tool": "fastrec 1.2 (2026-09-26)",
+   "shard": 0,
+   "wall_s": 16.39,
+   "takes": 1,
+   "settings": {
+    "asr": true,
+    "asr_beam": 1,
+    "asr_batch_s": 24.0,
+    "asr_align": false,
+    "utmos": false,
+    "prosody": true,
+    "breaths": false,
+    "threads": 3
+   },
+   "asr": {
+    "packed_with": 3,
+    "share_s": 3.64,
+    "rechecked_alone": false
+   }
+  },
+  "breaths": [],
+  "opened_pauses": [],
+  "alt_takes": []
+ },
+ {
+  "id": "e1-a3-21-03",
+  "scene": "21",
+  "speaker": "DEEPFAKE NEDIB #2",
+  "speaker_slug": "deepfake-nedib-2",
+  "text": "And no paperwork, folks. None at all.",
+  "spoken_as": "And no paperwork, folks.{0.30} None at all.",
+  "delivery": "delighted, in turn",
+  "tag": "[INVENTED · a whole line in its turn, where draft 2 had a second overlap; the escalation is the joke: test, then nothing, then no paper, from a man who puts everything in writing]",
+  "mode": "call",
+  "voiced_in_cut": true,
+  "on_camera": "monitor",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": null,
+  "shot": "POV",
+  "shot_id": "POV",
+  "cue": null,
+  "lip_sync": true,
+  "status": "fast",
+  "device": "monitor",
+  "room": null,
+  "est_s": 3.1,
+  "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-21-03.wav",
+  "mp3": null,
+  "duration_s": 3.5,
+  "frames_24": 84,
+  "voiced_span_s": 2.31,
+  "pace": {
+   "words": 7,
+   "wpm": 181.8,
+   "speed": 0.97,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 0.97,
+    "speed_band": [
+     0.93,
+     1.01
+    ],
+    "articulation_guide_sps": [
+     4.2,
+     4.8
+    ],
+    "turn_wpm_guide": [
+     145,
+     165
+    ],
+    "intent": "delighted, in turn"
+   },
+   "measured": {
+    "wpm": 181.8,
+    "articulation_sps": 4.46,
+    "syllables": 9,
+    "span_s": 2.31,
+    "pauses_s": [
+     0.29
+    ]
+   },
+   "longest_internal_gap_s": 0.29,
+   "audible_in_s": 0.5,
+   "audible_out_s": 2.81
+  },
+  "placement": {
+   "gap_before_s": 0.7,
+   "follows": "voice"
+  },
+  "take": "s1",
+  "takes_tried": 1,
+  "pick_reason": "fast: one take (seed 1, plan speed)",
+  "voice": "am_fenrir*0.50+am_onyx*0.50 (Kokoro-82M stock) · d-fenrir-onyx-folksy-0 + gloss · speed 0.970",
+  "voiceId": "am_fenrir*0.50+am_onyx*0.50",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 70 Hz",
+   "pitch 0",
+   "low shelf +2 dB @160 Hz",
+   "peak -1.5 dB @380 Hz Q1.0",
+   "peak +1.5 dB @2200 Hz Q0.9",
+   "comp 3.0:1 @-21 dB (5/100 ms)",
+   "tanh saturation drive 1.6 mix 0.1",
+   "peak -1.5 dB @350 Hz Q1.0",
+   "high shelf +2.5 dB @7000 Hz",
+   "chorus 0.6 Hz depth 0.1 mix 0.18",
+   "comp 4.0:1 @-26 dB (2/60 ms)",
+   "pitch +0.7 st",
+   "then the monitor chain: HPF 200 Hz; LPF 7000 Hz; peak +1.5 dB @1800 Hz Q1.0; comp 2.5:1 @-22 dB (5/90 ms); -16 LUFS",
+   "Kokoro speed 0.970 (the centre of the band; deepfake-nedib-2 band 0.93-1.01); one whole read; no time-stretch, no carrier, no splice",
+   "pause after 'folks': Kokoro 0.02 s -> 0.30 s (intended 0.30; +0.28 s of room tone at the quietest 5 ms)",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale (fastrec default; --breaths adds them)",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.458,
+    "f": 11,
+    "shape": "A"
+   },
+   {
+    "t": 0.542,
+    "f": 13,
+    "shape": "E"
+   },
+   {
+    "t": 0.625,
+    "f": 15,
+    "shape": "O"
+   },
+   {
+    "t": 0.708,
+    "f": 17,
+    "shape": "M"
+   },
+   {
+    "t": 0.792,
+    "f": 19,
+    "shape": "A"
+   },
+   {
+    "t": 0.875,
+    "f": 21,
+    "shape": "M"
+   },
+   {
+    "t": 0.958,
+    "f": 23,
+    "shape": "E"
+   },
+   {
+    "t": 1.042,
+    "f": 25,
+    "shape": "O"
+   },
+   {
+    "t": 1.167,
+    "f": 28,
+    "shape": "E"
+   },
+   {
+    "t": 1.333,
+    "f": 32,
+    "shape": "O"
+   },
+   {
+    "t": 1.458,
+    "f": 35,
+    "shape": "E"
+   },
+   {
+    "t": 1.583,
+    "f": 38,
+    "shape": "rest"
+   },
+   {
+    "t": 2.042,
+    "f": 49,
+    "shape": "E"
+   },
+   {
+    "t": 2.125,
+    "f": 51,
+    "shape": "A"
+   },
+   {
+    "t": 2.417,
+    "f": 58,
+    "shape": "O"
+   },
+   {
+    "t": 2.708,
+    "f": 65,
+    "shape": "E"
+   },
+   {
+    "t": 2.833,
+    "f": 68,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "And",
+    "t0": 0.47,
+    "t1": 0.577,
+    "f0": 11,
+    "f1": 14,
+    "ph": "ˌænd"
+   },
+   {
+    "w": "no",
+    "t0": 0.577,
+    "t1": 0.74,
+    "f0": 14,
+    "f1": 18,
+    "ph": "nˈO"
+   },
+   {
+    "w": "paperwork",
+    "t0": 0.74,
+    "t1": 1.24,
+    "f0": 18,
+    "f1": 30,
+    "ph": "pˈApəɹwˌɜɹk"
+   },
+   {
+    "w": "folks",
+    "t0": 1.29,
+    "t1": 1.565,
+    "f0": 31,
+    "f1": 38,
+    "ph": "fˈOks"
+   },
+   {
+    "w": "None",
+    "t0": 2.058,
+    "t1": 2.295,
+    "f0": 49,
+    "f1": 55,
+    "ph": "nˈʌn"
+   },
+   {
+    "w": "at",
+    "t0": 2.295,
+    "t1": 2.42,
+    "f0": 55,
+    "f1": 58,
+    "ph": "æt"
+   },
+   {
+    "w": "all",
+    "t0": 2.42,
+    "t1": 2.83,
+    "f0": 58,
+    "f1": 68,
+    "ph": "ˈɔl"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -4.29,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.5,
+   "median_f0_hz": 111.0,
+   "f0_range_st": 12.1,
+   "f0_method": "pYIN (a4lib.analyse)",
+   "final_move_st": -4.5,
+   "asr": "And no paperwork, folks. None at all.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.212,
+   "align_median_s": 0.025,
+   "utmos_dry": null,
+   "utmos_plain_read": null,
+   "utmos_vs_plain": null,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": null,
+   "speech_head_s": 0.5,
+   "speech_tail_s": 0.45,
+   "rise_ms": 20.0,
+   "decay_ms": 145.0,
+   "decay_to_60_s": 0.24
+  },
+  "clean": {
+   "file": "audio/ep01/act3/dialogue/fast-v2/clean/e1-a3-21-03.wav",
+   "note": "the dry read (no monitor chain), -16 LUFS"
+  },
+  "fast": {
+   "key": "3966018fb4963ba2",
+   "tool": "fastrec 1.2 (2026-09-26)",
+   "shard": 1,
+   "wall_s": 86.78,
+   "takes": 1,
+   "settings": {
+    "asr": true,
+    "asr_beam": 1,
+    "asr_batch_s": 24.0,
+    "asr_align": false,
+    "utmos": false,
+    "prosody": true,
+    "breaths": false,
+    "threads": 3
+   },
+   "asr": {
+    "packed_with": 1,
+    "share_s": 7.09,
+    "rechecked_alone": false
+   }
+  },
+  "breaths": [],
+  "opened_pauses": [
+   {
+    "after_word": 4,
+    "word": "folks",
+    "tts_s": 0.02,
+    "target_s": 0.3,
+    "point_s": 1.095,
+    "joined_speech": false,
+    "dip_db": -49.8,
+    "breath": false,
+    "crossfade_ms": [
+     8,
+     8
+    ],
+    "final_s": 0.3,
+    "opened_s": 0.28
+   }
+  ],
+  "alt_takes": []
+ },
+ {
+  "id": "e1-a1-10-06",
+  "scene": "10",
+  "speaker": "SYDNEY",
+  "speaker_slug": "sydney",
+  "text": "Hi! Isn't 2022 a lovely year? 😊",
+  "spoken_as": "Hi!{0.25} Isn't twenty twenty-two a lovely year?",
+  "delivery": "sweetly, a pixel too close; her first words",
+  "tag": "[INVENTED · Act One fix pass (2026-09-27): the newcomer read heard Mas's \"it's 2023, by the way.\" arrive before she had claimed anything aloud, and the stamp alone didn't carry it. Now she says the wrong year to his face, sweetly, and his correction answers something. On the record the argument was about the date (mid §2); this line is ours and quotes nothing]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": null,
+  "shot": "2S",
+  "shot_id": "2S",
+  "cue": null,
+  "lip_sync": true,
+  "status": "fast",
+  "device": null,
+  "room": null,
+  "est_s": 3.1,
+  "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-10-06.wav",
+  "mp3": null,
+  "duration_s": 3.785,
+  "frames_24": 91,
+  "voiced_span_s": 2.6,
+  "pace": {
+   "words": 7,
+   "wpm": 161.5,
+   "speed": 0.84,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 0.84,
+    "speed_band": [
+     0.79,
+     0.87
+    ],
+    "articulation_guide_sps": [
+     4.0,
+     4.6
+    ],
+    "turn_wpm_guide": [
+     140,
+     160
+    ],
+    "intent": "sweetly, a pixel too close; her first words"
+   },
+   "measured": {
+    "wpm": 161.5,
+    "articulation_sps": 5.15,
+    "syllables": 12,
+    "span_s": 2.6,
+    "pauses_s": [
+     0.27
+    ]
+   },
+   "longest_internal_gap_s": 0.27,
+   "audible_in_s": 0.5,
+   "audible_out_s": 3.1
+  },
+  "placement": {
+   "gap_before_s": null,
+   "follows": "picture"
+  },
+  "take": "s1",
+  "takes_tried": 1,
+  "pick_reason": "fast: one take (seed 1, plan speed)",
+  "voice": "af_kore (Kokoro-82M stock) · b-kore-sweet · speed 0.840",
+  "voiceId": "af_kore",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 120 Hz",
+   "pitch +1.5 st",
+   "peak -1.5 dB @300 Hz Q1.0",
+   "peak +2.5 dB @3500 Hz Q0.9",
+   "chorus 0.8 Hz depth 0.12 mix 0.18",
+   "bitcrush 12-bit mix 0.1",
+   "comp 3.0:1 @-20 dB (3/70 ms)",
+   "Kokoro speed 0.840 (the plan speed; sydney band 0.79-0.87); one whole read; no time-stretch, no carrier, no splice",
+   "pause after 'Hi': Kokoro 0.00 s -> 0.27 s (intended 0.25; +0.25 s of room tone at the quietest 5 ms; Kokoro ran the words together here (dip -35.8 dB): ear check)",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale (fastrec default; --breaths adds them)",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.5,
+    "f": 12,
+    "shape": "A"
+   },
+   {
+    "t": 0.75,
+    "f": 18,
+    "shape": "rest"
+   },
+   {
+    "t": 1.083,
+    "f": 26,
+    "shape": "A"
+   },
+   {
+    "t": 1.167,
+    "f": 28,
+    "shape": "E"
+   },
+   {
+    "t": 1.292,
+    "f": 31,
+    "shape": "O"
+   },
+   {
+    "t": 1.375,
+    "f": 33,
+    "shape": "A"
+   },
+   {
+    "t": 1.458,
+    "f": 35,
+    "shape": "E"
+   },
+   {
+    "t": 1.625,
+    "f": 39,
+    "shape": "O"
+   },
+   {
+    "t": 1.708,
+    "f": 41,
+    "shape": "A"
+   },
+   {
+    "t": 1.792,
+    "f": 43,
+    "shape": "E"
+   },
+   {
+    "t": 2.042,
+    "f": 49,
+    "shape": "O"
+   },
+   {
+    "t": 2.167,
+    "f": 52,
+    "shape": "A"
+   },
+   {
+    "t": 2.458,
+    "f": 59,
+    "shape": "E"
+   },
+   {
+    "t": 3.125,
+    "f": 75,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "Hi",
+    "t0": 0.51,
+    "t1": 0.735,
+    "f0": 12,
+    "f1": 18,
+    "ph": "hˈI"
+   },
+   {
+    "w": "Isn't",
+    "t0": 1.035,
+    "t1": 1.285,
+    "f0": 25,
+    "f1": 31,
+    "ph": "ˈɪzᵊnt"
+   },
+   {
+    "w": "twenty",
+    "t0": 1.285,
+    "t1": 1.585,
+    "f0": 31,
+    "f1": 38,
+    "ph": "twˈɛnti"
+   },
+   {
+    "w": "twenty-two",
+    "t0": 1.585,
+    "t1": 2.172,
+    "f0": 38,
+    "f1": 52,
+    "ph": "twˈɛntitˌu"
+   },
+   {
+    "w": "a",
+    "t0": 2.172,
+    "t1": 2.285,
+    "f0": 52,
+    "f1": 55,
+    "ph": "ɐ"
+   },
+   {
+    "w": "lovely",
+    "t0": 2.285,
+    "t1": 2.66,
+    "f0": 55,
+    "f1": 64,
+    "ph": "lˈʌvli"
+   },
+   {
+    "w": "year",
+    "t0": 2.66,
+    "t1": 3.12,
+    "f0": 64,
+    "f1": 75,
+    "ph": "jˈɪɹ"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -1.71,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.5,
+   "median_f0_hz": 165.8,
+   "f0_range_st": 11.4,
+   "f0_method": "pYIN (a4lib.analyse)",
+   "final_move_st": -1.6,
+   "asr": "Hi, isn't 2022 a lovely year?",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.213,
+   "align_median_s": 0.119,
+   "utmos_dry": null,
+   "utmos_plain_read": null,
+   "utmos_vs_plain": null,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": null,
+   "speech_head_s": 0.5,
+   "speech_tail_s": 0.45,
+   "rise_ms": 50.0,
+   "decay_ms": 240.0,
+   "decay_to_60_s": 0.235,
+   "q_lift_st": -8.1
+  },
+  "fast": {
+   "key": "4747247468c44c4f",
+   "tool": "fastrec 1.2 (2026-09-26)",
+   "shard": 1,
+   "wall_s": 2.96,
+   "takes": 1,
+   "settings": {
+    "asr": true,
+    "asr_beam": 1,
+    "asr_batch_s": 24.0,
+    "asr_align": false,
+    "utmos": false,
+    "prosody": true,
+    "breaths": false,
+    "threads": 3
+   },
+   "asr": {
+    "packed_with": 3,
+    "share_s": 0.6,
+    "rechecked_alone": false
+   }
+  },
+  "breaths": [],
+  "opened_pauses": [
+   {
+    "after_word": 1,
+    "word": "Hi",
+    "tts_s": 0.0,
+    "target_s": 0.25,
+    "point_s": 0.345,
+    "joined_speech": true,
+    "dip_db": -35.8,
+    "breath": false,
+    "crossfade_ms": [
+     60,
+     25
+    ],
+    "final_s": 0.27,
+    "opened_s": 0.25
+   }
+  ],
+  "alt_takes": []
+ },
+ {
+  "id": "e1-a2-15-03",
+  "scene": "15",
+  "speaker": "SUCRAM",
+  "speaker_slug": "sucram",
+  "text": "Don't mind me. It's a thread. One of forty-seven.",
+  "spoken_as": "Don't mind me.{s0.25} It's a thread.{s0.25} One of forty-seven.",
+  "delivery": "low, typing, to Mas, not looking up",
+  "tag": "[INVENTED · his character file's \"Thread. 1/47.\", now said to the man beside him, so it has a listener (R19)]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": null,
+  "shot": "2S",
+  "shot_id": "2S",
+  "cue": null,
+  "lip_sync": true,
+  "status": "fast",
+  "device": null,
+  "room": null,
+  "est_s": 5.0,
+  "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-03.wav",
+  "mp3": null,
+  "duration_s": 4.105,
+  "frames_24": 99,
+  "voiced_span_s": 3.1,
+  "pace": {
+   "words": 9,
+   "wpm": 174.2,
+   "speed": 1.16,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 1.16,
+    "speed_band": [
+     1.14,
+     1.22
+    ],
+    "articulation_guide_sps": [
+     5.0,
+     5.8
+    ],
+    "turn_wpm_guide": [
+     170,
+     190
+    ],
+    "intent": "low, typing, to Mas, not looking up"
+   },
+   "measured": {
+    "wpm": 174.2,
+    "articulation_sps": 4.58,
+    "syllables": 12,
+    "span_s": 3.1,
+    "pauses_s": [
+     0.24,
+     0.24
+    ]
+   },
+   "longest_internal_gap_s": 0.24,
+   "audible_in_s": 0.5,
+   "audible_out_s": 3.6
+  },
+  "placement": {
+   "gap_before_s": null,
+   "follows": "picture"
+  },
+  "take": "s1",
+  "takes_tried": 1,
+  "pick_reason": "fast: one take (seed 1, plan speed)",
+  "voice": "am_liam*0.50+am_puck*0.50 (Kokoro-82M stock) · d-liam-puck-thread-0 · speed 1.160",
+  "voiceId": "am_liam*0.50+am_puck*0.50",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 90 Hz",
+   "pitch 0",
+   "peak -1.5 dB @250 Hz Q1.0",
+   "peak +1.5 dB @3500 Hz Q0.9",
+   "comp 3.0:1 @-22 dB (3/70 ms)",
+   "Kokoro speed 1.160 (the plan speed; sucram band 1.14-1.22); 3 whole reads, joined in room tone; no time-stretch, no carrier, no splice",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale (fastrec default; --breaths adds them)",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.5,
+    "f": 12,
+    "shape": "O"
+   },
+   {
+    "t": 0.583,
+    "f": 14,
+    "shape": "E"
+   },
+   {
+    "t": 0.667,
+    "f": 16,
+    "shape": "M"
+   },
+   {
+    "t": 0.75,
+    "f": 18,
+    "shape": "A"
+   },
+   {
+    "t": 0.833,
+    "f": 20,
+    "shape": "E"
+   },
+   {
+    "t": 0.917,
+    "f": 22,
+    "shape": "M"
+   },
+   {
+    "t": 1.042,
+    "f": 25,
+    "shape": "E"
+   },
+   {
+    "t": 1.292,
+    "f": 31,
+    "shape": "rest"
+   },
+   {
+    "t": 1.5,
+    "f": 36,
+    "shape": "E"
+   },
+   {
+    "t": 1.625,
+    "f": 39,
+    "shape": "A"
+   },
+   {
+    "t": 1.75,
+    "f": 42,
+    "shape": "E"
+   },
+   {
+    "t": 1.958,
+    "f": 47,
+    "shape": "A"
+   },
+   {
+    "t": 2.208,
+    "f": 53,
+    "shape": "E"
+   },
+   {
+    "t": 2.292,
+    "f": 55,
+    "shape": "rest"
+   },
+   {
+    "t": 2.458,
+    "f": 59,
+    "shape": "A"
+   },
+   {
+    "t": 2.667,
+    "f": 64,
+    "shape": "E"
+   },
+   {
+    "t": 2.75,
+    "f": 66,
+    "shape": "O"
+   },
+   {
+    "t": 2.917,
+    "f": 70,
+    "shape": "E"
+   },
+   {
+    "t": 3.208,
+    "f": 77,
+    "shape": "A"
+   },
+   {
+    "t": 3.375,
+    "f": 81,
+    "shape": "E"
+   },
+   {
+    "t": 3.625,
+    "f": 87,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "Don't",
+    "t0": 0.47,
+    "t1": 0.652,
+    "f0": 11,
+    "f1": 16,
+    "ph": "dˈOnt"
+   },
+   {
+    "w": "mind",
+    "t0": 0.652,
+    "t1": 0.902,
+    "f0": 16,
+    "f1": 22,
+    "ph": "mˈInd"
+   },
+   {
+    "w": "me",
+    "t0": 0.902,
+    "t1": 1.3,
+    "f0": 22,
+    "f1": 31,
+    "ph": "mˌi"
+   },
+   {
+    "w": "It's",
+    "t0": 1.495,
+    "t1": 1.638,
+    "f0": 36,
+    "f1": 39,
+    "ph": "ˌɪts"
+   },
+   {
+    "w": "a",
+    "t0": 1.638,
+    "t1": 1.738,
+    "f0": 39,
+    "f1": 42,
+    "ph": "ɐ"
+   },
+   {
+    "w": "thread",
+    "t0": 1.738,
+    "t1": 2.31,
+    "f0": 42,
+    "f1": 55,
+    "ph": "θɹˈɛd"
+   },
+   {
+    "w": "One",
+    "t0": 2.495,
+    "t1": 2.577,
+    "f0": 60,
+    "f1": 62,
+    "ph": "wˈʌn"
+   },
+   {
+    "w": "of",
+    "t0": 2.577,
+    "t1": 2.702,
+    "f0": 62,
+    "f1": 65,
+    "ph": "ʌv"
+   },
+   {
+    "w": "forty-seven",
+    "t0": 2.702,
+    "t1": 3.62,
+    "f0": 65,
+    "f1": 87,
+    "ph": "fˌɔɹTisˈɛvən"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -3.22,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.5,
+   "median_f0_hz": 130.8,
+   "f0_range_st": 13.0,
+   "f0_method": "YIN (fast)",
+   "final_move_st": null,
+   "asr": "Don't mind me, it's a thread, one of 47.",
+   "cer": 0.286,
+   "word_recall_nonames": 0.889,
+   "logprob": -0.247,
+   "align_median_s": null,
+   "utmos_dry": null,
+   "utmos_plain_read": null,
+   "utmos_vs_plain": null,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": null,
+   "speech_head_s": 0.5,
+   "speech_tail_s": 0.445,
+   "rise_ms": 5.0,
+   "decay_ms": 100.0,
+   "decay_to_60_s": 0.065
+  },
+  "fast": {
+   "key": "cd1eac05c5ed6fe0",
+   "tool": "fastrec 1.2 (2026-09-26)",
+   "shard": 0,
+   "wall_s": 7.04,
+   "takes": 1,
+   "settings": {
+    "asr": true,
+    "asr_beam": 1,
+    "asr_batch_s": 24.0,
+    "asr_align": false,
+    "utmos": false,
+    "prosody": false,
+    "breaths": false,
+    "threads": 4
+   },
+   "asr": {
+    "packed_with": 0,
+    "share_s": 2.8,
+    "rechecked_alone": false
+   }
+  },
+  "breaths": [],
+  "opened_pauses": [
+   {
+    "after_word": null,
+    "word": "me",
+    "tts_s": null,
+    "target_s": 0.25,
+    "final_s": 0.25,
+    "opened_s": 0.0,
+    "joined_speech": false,
+    "dip_db": null,
+    "breath": false,
+    "split": true,
+    "point_s": 0.805,
+    "crossfade_ms": [
+     0,
+     0
+    ]
+   },
+   {
+    "after_word": null,
+    "word": "thread",
+    "tts_s": null,
+    "target_s": 0.25,
+    "final_s": 0.25,
+    "opened_s": 0.0,
+    "joined_speech": false,
+    "dip_db": null,
+    "breath": false,
+    "split": true,
+    "point_s": 1.81,
+    "crossfade_ms": [
+     0,
+     0
+    ]
+   }
+  ],
+  "alt_takes": []
+ },
+ {
+  "id": "e1-a2-13-02",
+  "scene": "13",
+  "speaker": "SIRRAH",
+  "speaker_slug": "sirrah",
+  "text": "Any questions, before we take the picture?",
+  "spoken_as": "Any questions,{0.15} before we take the picture?",
+  "delivery": "O.S.; the teacher, to the row",
+  "tag": "[INVENTED · Act Two fixer pass, 2026-09-27: \"Any\" puts the question in the words. The v2 take of \"Questions, before…\" fell like a statement (audit-v2 #23)]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": null,
+  "shot": "2S",
+  "shot_id": "2S",
+  "cue": null,
+  "lip_sync": true,
+  "status": "fast",
+  "device": null,
+  "room": null,
+  "est_s": 3.1,
+  "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-02.wav",
+  "mp3": null,
+  "duration_s": 3.285,
+  "frames_24": 79,
+  "voiced_span_s": 2.29,
+  "pace": {
+   "words": 7,
+   "wpm": 183.4,
+   "speed": 0.95,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 0.95,
+    "speed_band": [
+     0.93,
+     1.01
+    ],
+    "articulation_guide_sps": [
+     4.0,
+     4.6
+    ],
+    "turn_wpm_guide": [
+     140,
+     155
+    ],
+    "intent": "O.S.; the teacher, to the row"
+   },
+   "measured": {
+    "wpm": 183.4,
+    "articulation_sps": 5.16,
+    "syllables": 11,
+    "span_s": 2.29,
+    "pauses_s": [
+     0.16
+    ]
+   },
+   "longest_internal_gap_s": 0.16,
+   "audible_in_s": 0.51,
+   "audible_out_s": 2.8
+  },
+  "placement": {
+   "gap_before_s": null,
+   "follows": "picture"
+  },
+  "take": "s1",
+  "takes_tried": 1,
+  "pick_reason": "fast: one take (seed 1, plan speed)",
+  "voice": "af_sarah (Kokoro-82M stock) · a-sarah-crisp · speed 0.950",
+  "voiceId": "af_sarah",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 90 Hz",
+   "pitch 0",
+   "peak -1.5 dB @300 Hz Q1.0",
+   "peak +2 dB @4500 Hz Q0.9",
+   "comp 2.5:1 @-22 dB (6/100 ms)",
+   "Kokoro speed 0.950 (the plan speed; sirrah band 0.93-1.01); one whole read; no time-stretch, no carrier, no splice",
+   "pause after 'questions': Kokoro 0.11 s -> 0.18 s (intended 0.15; +0.04 s of room tone at the quietest 5 ms)",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale (fastrec default; --breaths adds them)",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.5,
+    "f": 12,
+    "shape": "A"
+   },
+   {
+    "t": 0.583,
+    "f": 14,
+    "shape": "E"
+   },
+   {
+    "t": 0.75,
+    "f": 18,
+    "shape": "O"
+   },
+   {
+    "t": 0.833,
+    "f": 20,
+    "shape": "A"
+   },
+   {
+    "t": 0.958,
+    "f": 23,
+    "shape": "E"
+   },
+   {
+    "t": 1.375,
+    "f": 33,
+    "shape": "rest"
+   },
+   {
+    "t": 1.5,
+    "f": 36,
+    "shape": "M"
+   },
+   {
+    "t": 1.583,
+    "f": 38,
+    "shape": "E"
+   },
+   {
+    "t": 1.667,
+    "f": 40,
+    "shape": "O"
+   },
+   {
+    "t": 1.75,
+    "f": 42,
+    "shape": "E"
+   },
+   {
+    "t": 1.958,
+    "f": 47,
+    "shape": "A"
+   },
+   {
+    "t": 2.125,
+    "f": 51,
+    "shape": "E"
+   },
+   {
+    "t": 2.25,
+    "f": 54,
+    "shape": "M"
+   },
+   {
+    "t": 2.333,
+    "f": 56,
+    "shape": "A"
+   },
+   {
+    "t": 2.458,
+    "f": 59,
+    "shape": "E"
+   },
+   {
+    "t": 2.833,
+    "f": 68,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "Any",
+    "t0": 0.49,
+    "t1": 0.69,
+    "f0": 12,
+    "f1": 17,
+    "ph": "ˈɛni"
+   },
+   {
+    "w": "questions",
+    "t0": 0.69,
+    "t1": 1.39,
+    "f0": 17,
+    "f1": 33,
+    "ph": "kwˈɛsʧᵊnz"
+   },
+   {
+    "w": "before",
+    "t0": 1.505,
+    "t1": 1.818,
+    "f0": 36,
+    "f1": 44,
+    "ph": "bəfˈɔɹ"
+   },
+   {
+    "w": "we",
+    "t0": 1.818,
+    "t1": 1.93,
+    "f0": 44,
+    "f1": 46,
+    "ph": "wi"
+   },
+   {
+    "w": "take",
+    "t0": 1.93,
+    "t1": 2.168,
+    "f0": 46,
+    "f1": 52,
+    "ph": "tˈAk"
+   },
+   {
+    "w": "the",
+    "t0": 2.168,
+    "t1": 2.255,
+    "f0": 52,
+    "f1": 54,
+    "ph": "ðə"
+   },
+   {
+    "w": "picture",
+    "t0": 2.255,
+    "t1": 2.82,
+    "f0": 54,
+    "f1": 68,
+    "ph": "pˈɪkʧəɹ"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -3.04,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.51,
+   "median_f0_hz": 201.7,
+   "f0_range_st": 13.4,
+   "f0_method": "pYIN (a4lib.analyse)",
+   "final_move_st": -5.4,
+   "asr": "Any questions before we take the picture?",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.238,
+   "align_median_s": 0.03,
+   "utmos_dry": null,
+   "utmos_plain_read": null,
+   "utmos_vs_plain": null,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": null,
+   "speech_head_s": 0.51,
+   "speech_tail_s": 0.445,
+   "rise_ms": 5.0,
+   "decay_ms": 40.0,
+   "decay_to_60_s": 0.04,
+   "q_lift_st": -5.5
+  },
+  "fast": {
+   "key": "fb4c1913dc5eb992",
+   "tool": "fastrec 1.2 (2026-09-26)",
+   "shard": 0,
+   "wall_s": 3.34,
+   "takes": 1,
+   "settings": {
+    "asr": true,
+    "asr_beam": 1,
+    "asr_batch_s": 24.0,
+    "asr_align": false,
+    "utmos": false,
+    "prosody": true,
+    "breaths": false,
+    "threads": 4
+   },
+   "asr": {
+    "packed_with": 2,
+    "share_s": 0.72,
+    "rechecked_alone": false
+   }
+  },
+  "breaths": [],
+  "opened_pauses": [
+   {
+    "after_word": 2,
+    "word": "questions",
+    "tts_s": 0.11,
+    "target_s": 0.15,
+    "point_s": 1.035,
+    "joined_speech": false,
+    "dip_db": -70.1,
+    "breath": false,
+    "crossfade_ms": [
+     8,
+     8
+    ],
+    "final_s": 0.18,
+    "opened_s": 0.04
+   }
+  ],
+  "alt_takes": []
+ },
+ {
+  "id": "e1-a1-12-01",
+  "scene": "12",
+  "speaker": "NOLE",
+  "speaker_slug": "nole",
+  "text": "Great sign. Love the font.",
+  "spoken_as": "Great sign. Love the font.",
+  "delivery": "not looking up from the solder",
+  "tag": "[INVENTED · he fights the medium, never the content]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": null,
+  "shot": "W",
+  "shot_id": "W",
+  "cue": null,
+  "lip_sync": true,
+  "status": "fast",
+  "device": null,
+  "room": null,
+  "est_s": 2.3,
+  "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-12-01.wav",
+  "mp3": null,
+  "duration_s": 2.31,
+  "frames_24": 56,
+  "voiced_span_s": 1.34,
+  "pace": {
+   "words": 5,
+   "wpm": 223.9,
+   "speed": 1.04,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 1.04,
+    "speed_band": [
+     1.0,
+     1.08
+    ],
+    "articulation_guide_sps": [
+     4.8,
+     5.6
+    ],
+    "turn_wpm_guide": [
+     165,
+     185
+    ],
+    "intent": "not looking up from the solder"
+   },
+   "measured": {
+    "wpm": 223.9,
+    "articulation_sps": 3.73,
+    "syllables": 5,
+    "span_s": 1.34,
+    "pauses_s": []
+   },
+   "longest_internal_gap_s": 0.0,
+   "audible_in_s": 0.5,
+   "audible_out_s": 1.84
+  },
+  "placement": {
+   "gap_before_s": null,
+   "follows": "picture"
+  },
+  "take": "s1",
+  "takes_tried": 1,
+  "pick_reason": "fast: one take (seed 1, plan speed)",
+  "voice": "am_fenrir (Kokoro-82M stock) · a-fenrir-burst (pass-1 pick, dry) · speed 1.040",
+  "voiceId": "am_fenrir",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 80 Hz",
+   "pitch 0",
+   "peak +1.5 dB @180 Hz Q0.9",
+   "peak +2 dB @2500 Hz Q1.0",
+   "comp 4.0:1 @-20 dB (3/60 ms)",
+   "tanh saturation drive 2.5 mix 0.25",
+   "Kokoro speed 1.040 (the centre of the band; nole band 1.00-1.08); one whole read; no time-stretch, no carrier, no splice",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale (fastrec default; --breaths adds them)",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.542,
+    "f": 13,
+    "shape": "A"
+   },
+   {
+    "t": 0.667,
+    "f": 16,
+    "shape": "E"
+   },
+   {
+    "t": 0.792,
+    "f": 19,
+    "shape": "A"
+   },
+   {
+    "t": 0.917,
+    "f": 22,
+    "shape": "E"
+   },
+   {
+    "t": 1.125,
+    "f": 27,
+    "shape": "A"
+   },
+   {
+    "t": 1.25,
+    "f": 30,
+    "shape": "E"
+   },
+   {
+    "t": 1.458,
+    "f": 35,
+    "shape": "A"
+   },
+   {
+    "t": 1.667,
+    "f": 40,
+    "shape": "E"
+   },
+   {
+    "t": 1.833,
+    "f": 44,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "Great",
+    "t0": 0.47,
+    "t1": 0.725,
+    "f0": 11,
+    "f1": 17,
+    "ph": "ɡɹˈAt"
+   },
+   {
+    "w": "sign",
+    "t0": 0.725,
+    "t1": 1.0,
+    "f0": 17,
+    "f1": 24,
+    "ph": "sˈIn"
+   },
+   {
+    "w": "Love",
+    "t0": 1.05,
+    "t1": 1.287,
+    "f0": 25,
+    "f1": 31,
+    "ph": "lˈʌv"
+   },
+   {
+    "w": "the",
+    "t0": 1.287,
+    "t1": 1.388,
+    "f0": 31,
+    "f1": 33,
+    "ph": "ðə"
+   },
+   {
+    "w": "font",
+    "t0": 1.388,
+    "t1": 1.86,
+    "f0": 33,
+    "f1": 45,
+    "ph": "fˈɑnt"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -2.22,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.5,
+   "median_f0_hz": 141.0,
+   "f0_range_st": 14.2,
+   "f0_method": "YIN (fast)",
+   "final_move_st": null,
+   "asr": "Great sign, love the font.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.209,
+   "align_median_s": 0.042,
+   "utmos_dry": null,
+   "utmos_plain_read": null,
+   "utmos_vs_plain": null,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": null,
+   "speech_head_s": 0.5,
+   "speech_tail_s": 0.45,
+   "rise_ms": 25.0,
+   "decay_ms": 160.0,
+   "decay_to_60_s": 0.025
+  },
+  "fast": {
+   "key": "68c5cc16b658c229",
+   "tool": "fastrec 1.2 (2026-09-26)",
+   "shard": 1,
+   "wall_s": 25.58,
+   "takes": 1,
+   "settings": {
+    "asr": true,
+    "asr_beam": 1,
+    "asr_batch_s": 24.0,
+    "asr_align": false,
+    "utmos": false,
+    "prosody": false,
+    "breaths": false,
+    "threads": 3
+   },
+   "asr": {
+    "packed_with": 5,
+    "share_s": 6.81,
+    "rechecked_alone": false
+   }
+  },
+  "breaths": [],
+  "opened_pauses": [],
+  "alt_takes": []
+ },
+ {
+  "id": "e1-a2-15-09",
+  "scene": "15",
+  "speaker": "LAHTNEMULB",
+  "speaker_slug": "lahtnemulb",
+  "text": "Speaking for myself, a little.",
+  "spoken_as": "Speaking for myself,{0.3} a little.",
+  "delivery": "quietly, his eyes on his card in the clone's hand",
+  "tag": "[INVENTED · Act Two fixer pass, 2026-09-27: it was \"I am, a little.\", and the v2 reel's cold newcomer \"couldn't tell who is nervous\". \"Speaking for myself\" makes him the one answering, and the nervous one. The card in the clone's hand says why, without a word. The clone's takes also moved up 2 semitones (a pitch_add in cast.json on the derived gloss voice), so the two men now differ by ear too (audit-v2 #26)]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": null,
+  "shot": "2S",
+  "shot_id": "2S",
+  "cue": null,
+  "lip_sync": true,
+  "status": "fast",
+  "device": null,
+  "room": null,
+  "est_s": 2.3,
+  "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-09.wav",
+  "mp3": null,
+  "duration_s": 3.27,
+  "frames_24": 79,
+  "voiced_span_s": 2.3,
+  "pace": {
+   "words": 5,
+   "wpm": 130.4,
+   "speed": 0.85,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 0.85,
+    "speed_band": [
+     0.84,
+     0.92
+    ],
+    "articulation_guide_sps": [
+     4.0,
+     4.6
+    ],
+    "turn_wpm_guide": [
+     135,
+     155
+    ],
+    "intent": "quietly, his eyes on his card in the clone's hand"
+   },
+   "measured": {
+    "wpm": 130.4,
+    "articulation_sps": 3.98,
+    "syllables": 8,
+    "span_s": 2.3,
+    "pauses_s": [
+     0.29
+    ]
+   },
+   "longest_internal_gap_s": 0.29,
+   "audible_in_s": 0.5,
+   "audible_out_s": 2.8
+  },
+  "placement": {
+   "gap_before_s": null,
+   "follows": "picture"
+  },
+  "take": "s1",
+  "takes_tried": 2,
+  "pick_reason": "fast: best of 2 seeds by ASR word recall, then no pause cut inside the voice, then the span nearest est_s",
+  "voice": "am_adam*0.50+am_echo*0.50 (Kokoro-82M stock) · d-adam-echo-senate-low · speed 0.850",
+  "voiceId": "am_adam*0.50+am_echo*0.50",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 75 Hz",
+   "pitch -2 st",
+   "low shelf +1 dB @150 Hz",
+   "peak -1 dB @400 Hz Q1.0",
+   "peak +1 dB @2500 Hz Q0.9",
+   "comp 2.5:1 @-22 dB (6/110 ms)",
+   "Kokoro speed 0.850 (the plan speed; lahtnemulb band 0.84-0.92); one whole read; no time-stretch, no carrier, no splice",
+   "pause after 'myself': Kokoro 0.08 s -> 0.30 s (intended 0.30; +0.22 s of room tone at the quietest 5 ms)",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale (fastrec default; --breaths adds them)",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.583,
+    "f": 14,
+    "shape": "M"
+   },
+   {
+    "t": 0.708,
+    "f": 17,
+    "shape": "A"
+   },
+   {
+    "t": 0.792,
+    "f": 19,
+    "shape": "E"
+   },
+   {
+    "t": 1.0,
+    "f": 24,
+    "shape": "O"
+   },
+   {
+    "t": 1.125,
+    "f": 27,
+    "shape": "M"
+   },
+   {
+    "t": 1.25,
+    "f": 30,
+    "shape": "A"
+   },
+   {
+    "t": 1.458,
+    "f": 35,
+    "shape": "E"
+   },
+   {
+    "t": 1.542,
+    "f": 37,
+    "shape": "A"
+   },
+   {
+    "t": 1.75,
+    "f": 42,
+    "shape": "E"
+   },
+   {
+    "t": 1.917,
+    "f": 46,
+    "shape": "rest"
+   },
+   {
+    "t": 2.25,
+    "f": 54,
+    "shape": "A"
+   },
+   {
+    "t": 2.333,
+    "f": 56,
+    "shape": "E"
+   },
+   {
+    "t": 2.417,
+    "f": 58,
+    "shape": "A"
+   },
+   {
+    "t": 2.542,
+    "f": 61,
+    "shape": "E"
+   },
+   {
+    "t": 2.792,
+    "f": 67,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "Speaking",
+    "t0": 0.555,
+    "t1": 1.005,
+    "f0": 13,
+    "f1": 24,
+    "ph": "spˈikɪŋ"
+   },
+   {
+    "w": "for",
+    "t0": 1.005,
+    "t1": 1.13,
+    "f0": 24,
+    "f1": 27,
+    "ph": "fɔɹ"
+   },
+   {
+    "w": "myself",
+    "t0": 1.13,
+    "t1": 1.93,
+    "f0": 27,
+    "f1": 46,
+    "ph": "mIsˈɛlf"
+   },
+   {
+    "w": "a",
+    "t0": 2.225,
+    "t1": 2.325,
+    "f0": 53,
+    "f1": 56,
+    "ph": "ɐ"
+   },
+   {
+    "w": "little",
+    "t0": 2.325,
+    "t1": 2.82,
+    "f0": 56,
+    "f1": 68,
+    "ph": "lˈɪTᵊl"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -3.97,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.5,
+   "median_f0_hz": 98.6,
+   "f0_range_st": 13.5,
+   "f0_method": "pYIN (a4lib.analyse)",
+   "final_move_st": -0.2,
+   "asr": "speaking for myself a little.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.567,
+   "align_median_s": null,
+   "utmos_dry": null,
+   "utmos_plain_read": null,
+   "utmos_vs_plain": null,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": null,
+   "speech_head_s": 0.5,
+   "speech_tail_s": 0.4,
+   "rise_ms": 30.0,
+   "decay_ms": 170.0,
+   "decay_to_60_s": 0.075
+  },
+  "fast": {
+   "key": "5154c5bf9a7fffb9",
+   "tool": "fastrec 1.2 (2026-09-26)",
+   "shard": 0,
+   "wall_s": 7.13,
+   "takes": 2,
+   "settings": {
+    "asr": true,
+    "asr_beam": 1,
+    "asr_batch_s": 24.0,
+    "asr_align": false,
+    "utmos": false,
+    "prosody": true,
+    "breaths": false,
+    "threads": 4
+   },
+   "asr": {
+    "packed_with": 1,
+    "share_s": 3.35
+   }
+  },
+  "breaths": [],
+  "opened_pauses": [
+   {
+    "after_word": 3,
+    "word": "myself",
+    "tts_s": 0.08,
+    "target_s": 0.3,
+    "point_s": 1.535,
+    "joined_speech": false,
+    "dip_db": -68.7,
+    "breath": false,
+    "crossfade_ms": [
+     8,
+     8
+    ],
+    "final_s": 0.3,
+    "opened_s": 0.22
+   }
+  ],
+  "alt_takes": [
+   {
+    "tag": "s2",
+    "seed": 2,
+    "speed": 0.85,
+    "file": "audio/ep01/act2/dialogue/fast-v2/takes/e1-a2-15-09/s2.wav",
+    "span_s": 2.29,
+    "wpm": 131.0,
+    "asr": "Speaking for myself a little.",
+    "recall": 1.0,
+    "utmos": null
+   }
+  ]
+ },
+ {
+  "id": "e1-a2-15-08",
+  "scene": "15",
+  "speaker": "LAHTNEMULB (THE CLONE)",
+  "speaker_slug": "lahtnemulb-clone",
+  "text": "Are you nervous, Mr. Manalt?",
+  "spoken_as": "Are you nervous, Mr. Manalt?",
+  "delivery": null,
+  "tag": "[INVENTED · dialogue pass 5: it was \"Mr. Manalt. Are you nervous?\"; with the name as its own sentence a stock voice stops and starts again cold (the naturalness read). The senator's \"Mr. Manalt. There's talk…\" below keeps its full stop, which suits a hearing's formal address]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": null,
+  "shot": "OTS",
+  "shot_id": "OTS",
+  "cue": null,
+  "lip_sync": true,
+  "status": "fast",
+  "device": null,
+  "room": null,
+  "est_s": 2.3,
+  "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-08.wav",
+  "mp3": null,
+  "duration_s": 2.95,
+  "frames_24": 71,
+  "voiced_span_s": 1.97,
+  "pace": {
+   "words": 5,
+   "wpm": 152.3,
+   "speed": 0.88,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 0.88,
+    "speed_band": [
+     0.84,
+     0.92
+    ],
+    "articulation_guide_sps": [
+     4.0,
+     4.6
+    ],
+    "turn_wpm_guide": [
+     135,
+     155
+    ],
+    "intent": null
+   },
+   "measured": {
+    "wpm": 152.3,
+    "articulation_sps": 4.06,
+    "syllables": 8,
+    "span_s": 1.97,
+    "pauses_s": []
+   },
+   "longest_internal_gap_s": 0.0,
+   "audible_in_s": 0.5,
+   "audible_out_s": 2.47
+  },
+  "placement": {
+   "gap_before_s": 1.2,
+   "follows": "voice"
+  },
+  "take": "s1",
+  "takes_tried": 1,
+  "pick_reason": "fast: one take (seed 1, plan speed)",
+  "voice": "am_adam*0.50+am_echo*0.50 (Kokoro-82M stock) · d-adam-echo-senate-low + gloss · speed 0.880",
+  "voiceId": "am_adam*0.50+am_echo*0.50",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 75 Hz",
+   "pitch -2 st",
+   "low shelf +1 dB @150 Hz",
+   "peak -1 dB @400 Hz Q1.0",
+   "peak +1 dB @2500 Hz Q0.9",
+   "comp 2.5:1 @-22 dB (6/110 ms)",
+   "peak -1.5 dB @350 Hz Q1.0",
+   "high shelf +2.5 dB @7000 Hz",
+   "chorus 0.6 Hz depth 0.1 mix 0.18",
+   "comp 4.0:1 @-26 dB (2/60 ms)",
+   "pitch +2 st",
+   "Kokoro speed 0.880 (the plan speed; lahtnemulb-clone band 0.84-0.92); one whole read; no time-stretch, no carrier, no splice",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale (fastrec default; --breaths adds them)",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.5,
+    "f": 12,
+    "shape": "A"
+   },
+   {
+    "t": 0.625,
+    "f": 15,
+    "shape": "E"
+   },
+   {
+    "t": 0.75,
+    "f": 18,
+    "shape": "O"
+   },
+   {
+    "t": 0.833,
+    "f": 20,
+    "shape": "E"
+   },
+   {
+    "t": 0.917,
+    "f": 22,
+    "shape": "O"
+   },
+   {
+    "t": 1.083,
+    "f": 26,
+    "shape": "E"
+   },
+   {
+    "t": 1.458,
+    "f": 35,
+    "shape": "M"
+   },
+   {
+    "t": 1.542,
+    "f": 37,
+    "shape": "A"
+   },
+   {
+    "t": 1.625,
+    "f": 39,
+    "shape": "E"
+   },
+   {
+    "t": 1.833,
+    "f": 44,
+    "shape": "M"
+   },
+   {
+    "t": 1.917,
+    "f": 46,
+    "shape": "A"
+   },
+   {
+    "t": 2.083,
+    "f": 50,
+    "shape": "E"
+   },
+   {
+    "t": 2.167,
+    "f": 52,
+    "shape": "O"
+   },
+   {
+    "t": 2.375,
+    "f": 57,
+    "shape": "E"
+   },
+   {
+    "t": 2.5,
+    "f": 60,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "Are",
+    "t0": 0.49,
+    "t1": 0.678,
+    "f0": 12,
+    "f1": 16,
+    "ph": "ˌɑɹ"
+   },
+   {
+    "w": "you",
+    "t0": 0.678,
+    "t1": 0.852,
+    "f0": 16,
+    "f1": 20,
+    "ph": "ju"
+   },
+   {
+    "w": "nervous",
+    "t0": 0.852,
+    "t1": 1.44,
+    "f0": 20,
+    "f1": 35,
+    "ph": "nˈɜɹvəs"
+   },
+   {
+    "w": "Mr.",
+    "t0": 1.49,
+    "t1": 1.84,
+    "f0": 36,
+    "f1": 44,
+    "ph": "mˈɪstəɹ"
+   },
+   {
+    "w": "Manalt",
+    "t0": 1.84,
+    "t1": 2.49,
+    "f0": 44,
+    "f1": 60,
+    "ph": "mˈænɔlt"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -4.71,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.5,
+   "median_f0_hz": 109.4,
+   "f0_range_st": 12.8,
+   "f0_method": "pYIN (a4lib.analyse)",
+   "final_move_st": -2.6,
+   "asr": "Are you nervous, Mr. Manalt?",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.397,
+   "align_median_s": 0.13,
+   "utmos_dry": null,
+   "utmos_plain_read": null,
+   "utmos_vs_plain": null,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": null,
+   "speech_head_s": 0.5,
+   "speech_tail_s": 0.45,
+   "rise_ms": 15.0,
+   "decay_ms": 175.0,
+   "decay_to_60_s": 0.035,
+   "q_lift_st": -2.3
+  },
+  "fast": {
+   "key": "4394de12df755f49",
+   "tool": "fastrec 1.2 (2026-09-26)",
+   "shard": 1,
+   "wall_s": 2.26,
+   "takes": 1,
+   "settings": {
+    "asr": true,
+    "asr_beam": 1,
+    "asr_batch_s": 24.0,
+    "asr_align": false,
+    "utmos": false,
+    "prosody": true,
+    "breaths": false,
+    "threads": 4
+   },
+   "asr": {
+    "packed_with": 2,
+    "share_s": 0.54,
+    "rechecked_alone": false
+   }
+  },
+  "breaths": [],
+  "opened_pauses": [],
+  "alt_takes": []
+ },
+ {
+  "id": "e1-a2-15-10",
+  "scene": "15",
+  "speaker": "A SENATOR",
+  "speaker_slug": "a-senator",
+  "text": "Mr. Manalt. There's talk of a new agency to regulate all this. Would you come and run it?",
+  "spoken_as": "Mr. Manalt.{0.35} There's talk of a new agency to regulate all this.{0.3} Would you come and run it?",
+  "delivery": "at the lit microphone",
+  "tag": "[INVENTED · an unnamed senator; on the record he was asked whether he'd run a new agency (facts §B)]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "os",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": null,
+  "shot": "W",
+  "shot_id": "W",
+  "cue": null,
+  "lip_sync": false,
+  "status": "fast",
+  "device": null,
+  "room": null,
+  "est_s": 7.7,
+  "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-10.wav",
+  "mp3": null,
+  "duration_s": 8.05,
+  "frames_24": 194,
+  "voiced_span_s": 6.83,
+  "pace": {
+   "words": 18,
+   "wpm": 158.1,
+   "speed": 0.85,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 0.85,
+    "speed_band": [
+     0.81,
+     0.89
+    ],
+    "articulation_guide_sps": [
+     4.2,
+     4.8
+    ],
+    "turn_wpm_guide": [
+     145,
+     160
+    ],
+    "intent": "at the lit microphone"
+   },
+   "measured": {
+    "wpm": 158.1,
+    "articulation_sps": 4.12,
+    "syllables": 24,
+    "span_s": 6.83,
+    "pauses_s": [
+     0.35,
+     0.66,
+     0.07
+    ]
+   },
+   "longest_internal_gap_s": 0.66,
+   "audible_in_s": 0.5,
+   "audible_out_s": 7.33
+  },
+  "placement": {
+   "gap_before_s": null,
+   "follows": "picture"
+  },
+  "take": "s1",
+  "takes_tried": 1,
+  "pick_reason": "fast: one take (seed 1, plan speed)",
+  "voice": "af_kore*0.60+af_nicole*0.40 (Kokoro-82M stock) · d-kore-nicole-senate-up2 · speed 0.850",
+  "voiceId": "af_kore*0.60+af_nicole*0.40",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 75 Hz",
+   "pitch +2 st",
+   "low shelf +1 dB @150 Hz",
+   "peak -1 dB @400 Hz Q1.0",
+   "peak +1 dB @2500 Hz Q0.9",
+   "comp 2.5:1 @-22 dB (6/110 ms)",
+   "Kokoro speed 0.850 (the plan speed; a-senator band 0.81-0.89); one whole read; no time-stretch, no carrier, no splice",
+   "pause after 'Manalt': Kokoro 0.28 s -> 0.36 s (intended 0.35; +0.07 s of room tone at the quietest 5 ms)",
+   "pause after 'this': Kokoro 0.47 s -> 0.33 s (intended 0.30; +0.00 s of room tone at the quietest 5 ms)",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale (fastrec default; --breaths adds them)",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "mouth": [],
+  "words": [
+   {
+    "w": "Mr.",
+    "t0": 0.53,
+    "t1": 0.88,
+    "f0": 13,
+    "f1": 21,
+    "ph": "mˈɪstəɹ"
+   },
+   {
+    "w": "Manalt",
+    "t0": 0.88,
+    "t1": 1.6,
+    "f0": 21,
+    "f1": 38,
+    "ph": "mˈænɔlt"
+   },
+   {
+    "w": "There's",
+    "t0": 1.87,
+    "t1": 2.108,
+    "f0": 45,
+    "f1": 51,
+    "ph": "ðˌɛɹz"
+   },
+   {
+    "w": "talk",
+    "t0": 2.108,
+    "t1": 2.52,
+    "f0": 51,
+    "f1": 60,
+    "ph": "tˈɔk"
+   },
+   {
+    "w": "of",
+    "t0": 2.52,
+    "t1": 2.645,
+    "f0": 60,
+    "f1": 63,
+    "ph": "ʌv"
+   },
+   {
+    "w": "a",
+    "t0": 2.645,
+    "t1": 2.77,
+    "f0": 63,
+    "f1": 66,
+    "ph": "ɐ"
+   },
+   {
+    "w": "new",
+    "t0": 2.77,
+    "t1": 3.12,
+    "f0": 66,
+    "f1": 75,
+    "ph": "nˈu"
+   },
+   {
+    "w": "agency",
+    "t0": 3.12,
+    "t1": 3.907,
+    "f0": 75,
+    "f1": 94,
+    "ph": "ˈAʤənsi"
+   },
+   {
+    "w": "to",
+    "t0": 3.907,
+    "t1": 4.045,
+    "f0": 94,
+    "f1": 97,
+    "ph": "tə"
+   },
+   {
+    "w": "regulate",
+    "t0": 4.045,
+    "t1": 4.62,
+    "f0": 97,
+    "f1": 111,
+    "ph": "ɹˈɛɡjəlˌAt"
+   },
+   {
+    "w": "all",
+    "t0": 4.62,
+    "t1": 4.87,
+    "f0": 111,
+    "f1": 117,
+    "ph": "ˈɔl"
+   },
+   {
+    "w": "this",
+    "t0": 4.87,
+    "t1": 5.32,
+    "f0": 117,
+    "f1": 128,
+    "ph": "ðˈɪs"
+   },
+   {
+    "w": "Would",
+    "t0": 5.895,
+    "t1": 6.095,
+    "f0": 141,
+    "f1": 146,
+    "ph": "wˌʊd"
+   },
+   {
+    "w": "you",
+    "t0": 6.095,
+    "t1": 6.27,
+    "f0": 146,
+    "f1": 150,
+    "ph": "ju"
+   },
+   {
+    "w": "come",
+    "t0": 6.27,
+    "t1": 6.595,
+    "f0": 150,
+    "f1": 158,
+    "ph": "kˈʌm"
+   },
+   {
+    "w": "and",
+    "t0": 6.595,
+    "t1": 6.745,
+    "f0": 158,
+    "f1": 162,
+    "ph": "ænd"
+   },
+   {
+    "w": "run",
+    "t0": 6.745,
+    "t1": 7.033,
+    "f0": 162,
+    "f1": 169,
+    "ph": "ɹˈʌn"
+   },
+   {
+    "w": "it",
+    "t0": 7.033,
+    "t1": 7.35,
+    "f0": 169,
+    "f1": 176,
+    "ph": "ɪt"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -3.51,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.5,
+   "median_f0_hz": 159.3,
+   "f0_range_st": 11.4,
+   "f0_method": "YIN (fast)",
+   "final_move_st": null,
+   "asr": "Mr. Manalt, there's talk of a new agency to regulate all this. Would you come and run it?",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.223,
+   "align_median_s": null,
+   "utmos_dry": null,
+   "utmos_plain_read": null,
+   "utmos_vs_plain": null,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": null,
+   "speech_head_s": 0.5,
+   "speech_tail_s": 0.375,
+   "rise_ms": 25.0,
+   "decay_ms": 275.0,
+   "decay_to_60_s": 0.345
+  },
+  "speaker_label": "A SENATOR (O.S.)",
+  "fast": {
+   "key": "22dfbfaf77460f1b",
+   "tool": "fastrec 1.2 (2026-09-26)",
+   "shard": 3,
+   "wall_s": 36.84,
+   "takes": 1,
+   "settings": {
+    "asr": true,
+    "asr_beam": 1,
+    "asr_batch_s": 24.0,
+    "asr_align": false,
+    "utmos": false,
+    "prosody": false,
+    "breaths": false,
+    "threads": 2
+   },
+   "asr": {
+    "packed_with": 0,
+    "share_s": 16.33,
+    "rechecked_alone": false
+   }
+  },
+  "breaths": [],
+  "opened_pauses": [
+   {
+    "after_word": 2,
+    "word": "Manalt",
+    "tts_s": 0.285,
+    "target_s": 0.35,
+    "point_s": 1.275,
+    "joined_speech": false,
+    "dip_db": -66.7,
+    "breath": false,
+    "crossfade_ms": [
+     8,
+     8
+    ],
+    "final_s": 0.365,
+    "opened_s": 0.065
+   },
+   {
+    "after_word": 12,
+    "word": "this",
+    "tts_s": 0.475,
+    "target_s": 0.3,
+    "point_s": 5.37,
+    "joined_speech": false,
+    "dip_db": -99.7,
+    "breath": false,
+    "final_s": 0.325,
+    "opened_s": 0.0
+   }
+  ],
+  "alt_takes": []
+ },
+ {
+  "id": "e1-a2-13-06",
+  "scene": "13",
+  "speaker": "PHOTOGRAPHER",
+  "speaker_slug": "photographer",
+  "text": "Big smiles, please. Eyes on camera one.",
+  "spoken_as": "Big smiles, please.{0.25} Eyes on camera one.",
+  "delivery": null,
+  "tag": "[INVENTED · second pass: \"Okay…\" is Gerg's opener, so the photographer doesn't borrow it (the naturalness read)]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": null,
+  "shot": "W",
+  "shot_id": "W",
+  "cue": null,
+  "lip_sync": true,
+  "status": "fast",
+  "device": null,
+  "room": null,
+  "est_s": 3.1,
+  "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-06.wav",
+  "mp3": null,
+  "duration_s": 3.535,
+  "frames_24": 85,
+  "voiced_span_s": 2.35,
+  "pace": {
+   "words": 7,
+   "wpm": 178.7,
+   "speed": 1.14,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 1.14,
+    "speed_band": [
+     1.1,
+     1.18
+    ],
+    "articulation_guide_sps": [
+     4.6,
+     5.4
+    ],
+    "turn_wpm_guide": [
+     160,
+     180
+    ],
+    "intent": null
+   },
+   "measured": {
+    "wpm": 178.7,
+    "articulation_sps": 4.31,
+    "syllables": 9,
+    "span_s": 2.35,
+    "pauses_s": [
+     0.26
+    ]
+   },
+   "longest_internal_gap_s": 0.26,
+   "audible_in_s": 0.5,
+   "audible_out_s": 2.85
+  },
+  "placement": {
+   "gap_before_s": null,
+   "follows": "picture"
+  },
+  "take": "s1",
+  "takes_tried": 1,
+  "pick_reason": "fast: one take (seed 1, plan speed)",
+  "voice": "af_river (Kokoro-82M stock) · d-river-brisk-low · speed 1.140",
+  "voiceId": "af_river",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 90 Hz",
+   "pitch -2 st",
+   "low shelf +1 dB @200 Hz",
+   "peak +1.5 dB @2800 Hz Q0.9",
+   "comp 2.5:1 @-22 dB (5/90 ms)",
+   "Kokoro speed 1.140 (the plan speed; photographer band 1.10-1.18); one whole read; no time-stretch, no carrier, no splice",
+   "pause after 'please': Kokoro 0.00 s -> 0.27 s (intended 0.25; +0.25 s of room tone at the quietest 5 ms; Kokoro ran the words together here (dip -30.9 dB): ear check)",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale (fastrec default; --breaths adds them)",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.458,
+    "f": 11,
+    "shape": "M"
+   },
+   {
+    "t": 0.542,
+    "f": 13,
+    "shape": "A"
+   },
+   {
+    "t": 0.625,
+    "f": 15,
+    "shape": "E"
+   },
+   {
+    "t": 0.708,
+    "f": 17,
+    "shape": "M"
+   },
+   {
+    "t": 0.792,
+    "f": 19,
+    "shape": "A"
+   },
+   {
+    "t": 0.917,
+    "f": 22,
+    "shape": "E"
+   },
+   {
+    "t": 1.083,
+    "f": 26,
+    "shape": "M"
+   },
+   {
+    "t": 1.167,
+    "f": 28,
+    "shape": "E"
+   },
+   {
+    "t": 1.25,
+    "f": 30,
+    "shape": "A"
+   },
+   {
+    "t": 1.458,
+    "f": 35,
+    "shape": "rest"
+   },
+   {
+    "t": 1.792,
+    "f": 43,
+    "shape": "A"
+   },
+   {
+    "t": 2.0,
+    "f": 48,
+    "shape": "O"
+   },
+   {
+    "t": 2.083,
+    "f": 50,
+    "shape": "E"
+   },
+   {
+    "t": 2.167,
+    "f": 52,
+    "shape": "A"
+   },
+   {
+    "t": 2.25,
+    "f": 54,
+    "shape": "M"
+   },
+   {
+    "t": 2.333,
+    "f": 56,
+    "shape": "E"
+   },
+   {
+    "t": 2.458,
+    "f": 59,
+    "shape": "O"
+   },
+   {
+    "t": 2.583,
+    "f": 62,
+    "shape": "A"
+   },
+   {
+    "t": 2.792,
+    "f": 67,
+    "shape": "E"
+   },
+   {
+    "t": 2.875,
+    "f": 69,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "Big",
+    "t0": 0.47,
+    "t1": 0.65,
+    "f0": 11,
+    "f1": 16,
+    "ph": "bˈɪɡ"
+   },
+   {
+    "w": "smiles",
+    "t0": 0.65,
+    "t1": 1.05,
+    "f0": 16,
+    "f1": 25,
+    "ph": "smˈIlz"
+   },
+   {
+    "w": "please",
+    "t0": 1.1,
+    "t1": 1.475,
+    "f0": 26,
+    "f1": 35,
+    "ph": "plˈiz"
+   },
+   {
+    "w": "Eyes",
+    "t0": 1.775,
+    "t1": 2.013,
+    "f0": 43,
+    "f1": 48,
+    "ph": "ˈIz"
+   },
+   {
+    "w": "on",
+    "t0": 2.013,
+    "t1": 2.125,
+    "f0": 48,
+    "f1": 51,
+    "ph": "ˌɔn"
+   },
+   {
+    "w": "camera",
+    "t0": 2.125,
+    "t1": 2.475,
+    "f0": 51,
+    "f1": 59,
+    "ph": "kˈæməɹə"
+   },
+   {
+    "w": "one",
+    "t0": 2.475,
+    "t1": 2.87,
+    "f0": 59,
+    "f1": 69,
+    "ph": "wˈʌn"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -3.88,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.5,
+   "median_f0_hz": 164.5,
+   "f0_range_st": 7.9,
+   "f0_method": "YIN (fast)",
+   "final_move_st": null,
+   "asr": "Big smiles please, eyes on camera one.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.355,
+   "align_median_s": 0.085,
+   "utmos_dry": null,
+   "utmos_plain_read": null,
+   "utmos_vs_plain": null,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": null,
+   "speech_head_s": 0.5,
+   "speech_tail_s": 0.445,
+   "rise_ms": 15.0,
+   "decay_ms": 70.0,
+   "decay_to_60_s": 0.24
+  },
+  "fast": {
+   "key": "0c3e9a443496b51c",
+   "tool": "fastrec 1.2 (2026-09-26)",
+   "shard": 0,
+   "wall_s": 94.37,
+   "takes": 1,
+   "settings": {
+    "asr": true,
+    "asr_beam": 1,
+    "asr_batch_s": 24.0,
+    "asr_align": false,
+    "utmos": false,
+    "prosody": false,
+    "breaths": false,
+    "threads": 4
+   },
+   "asr": {
+    "packed_with": 1,
+    "share_s": 5.32,
+    "rechecked_alone": false
+   }
+  },
+  "breaths": [],
+  "opened_pauses": [
+   {
+    "after_word": 3,
+    "word": "please",
+    "tts_s": 0.0,
+    "target_s": 0.25,
+    "point_s": 1.09,
+    "joined_speech": true,
+    "dip_db": -30.9,
+    "breath": false,
+    "crossfade_ms": [
+     60,
+     25
+    ],
+    "final_s": 0.265,
+    "opened_s": 0.25
+   }
+  ],
+  "alt_takes": []
+ },
+ {
+  "id": "e1-a1-8-02",
+  "scene": "8",
+  "speaker": "NIRB",
+  "speaker_slug": "nirb",
+  "text": "We heard the siren. Is it search? Is search all right?",
+  "spoken_as": "We heard the siren.{s0.4} Is it search?{s0.3} Is search all right?",
+  "delivery": "shading his eyes, reaching the top step",
+  "tag": "[INVENTED · the siren is the lead-in; the line says nothing about who called them. Second pass: \"Is it the search thing?\" read as a placeholder (the naturalness read); a founder asks after the thing he built]",
+  "mode": "call",
+  "voiced_in_cut": true,
+  "on_camera": "monitor",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": null,
+  "shot": "POV",
+  "shot_id": "POV",
+  "cue": null,
+  "lip_sync": true,
+  "status": "fast",
+  "device": "call",
+  "room": null,
+  "est_s": 4.6,
+  "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-8-02.wav",
+  "mp3": null,
+  "duration_s": 4.945,
+  "frames_24": 119,
+  "voiced_span_s": 3.9,
+  "pace": {
+   "words": 11,
+   "wpm": 169.2,
+   "speed": 1.02,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 1.02,
+    "speed_band": [
+     1.01,
+     1.09
+    ],
+    "articulation_guide_sps": [
+     4.4,
+     5.0
+    ],
+    "turn_wpm_guide": [
+     150,
+     170
+    ],
+    "intent": "shading his eyes, reaching the top step"
+   },
+   "measured": {
+    "wpm": 169.2,
+    "articulation_sps": 3.75,
+    "syllables": 12,
+    "span_s": 3.9,
+    "pauses_s": [
+     0.4,
+     0.3
+    ]
+   },
+   "longest_internal_gap_s": 0.4,
+   "audible_in_s": 0.51,
+   "audible_out_s": 4.41
+  },
+  "placement": {
+   "gap_before_s": null,
+   "follows": "picture"
+  },
+  "take": "s1",
+  "takes_tried": 1,
+  "pick_reason": "fast: one take (seed 1, plan speed)",
+  "voice": "am_eric*0.50+am_liam*0.50 (Kokoro-82M stock) · c-eric-liam-curious · speed 1.020",
+  "voiceId": "am_eric*0.50+am_liam*0.50",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 90 Hz",
+   "pitch +1 st",
+   "peak -1.5 dB @300 Hz Q1.0",
+   "peak +2 dB @4500 Hz Q0.9",
+   "comp 2.5:1 @-22 dB (6/100 ms)",
+   "then the call chain: HPF 200 Hz; LPF 7000 Hz; peak +1.5 dB @1800 Hz Q1.0; comp 2.5:1 @-22 dB (5/90 ms); -16 LUFS",
+   "Kokoro speed 1.020 (the plan speed; nirb band 1.01-1.09); 3 whole reads, joined in room tone; no time-stretch, no carrier, no splice",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale (fastrec default; --breaths adds them)",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.5,
+    "f": 12,
+    "shape": "O"
+   },
+   {
+    "t": 0.583,
+    "f": 14,
+    "shape": "E"
+   },
+   {
+    "t": 0.667,
+    "f": 16,
+    "shape": "O"
+   },
+   {
+    "t": 0.792,
+    "f": 19,
+    "shape": "E"
+   },
+   {
+    "t": 1.083,
+    "f": 26,
+    "shape": "A"
+   },
+   {
+    "t": 1.292,
+    "f": 31,
+    "shape": "E"
+   },
+   {
+    "t": 1.667,
+    "f": 40,
+    "shape": "rest"
+   },
+   {
+    "t": 2.042,
+    "f": 49,
+    "shape": "E"
+   },
+   {
+    "t": 2.5,
+    "f": 60,
+    "shape": "O"
+   },
+   {
+    "t": 2.708,
+    "f": 65,
+    "shape": "E"
+   },
+   {
+    "t": 2.917,
+    "f": 70,
+    "shape": "rest"
+   },
+   {
+    "t": 3.167,
+    "f": 76,
+    "shape": "E"
+   },
+   {
+    "t": 3.417,
+    "f": 82,
+    "shape": "O"
+   },
+   {
+    "t": 3.542,
+    "f": 85,
+    "shape": "E"
+   },
+   {
+    "t": 3.667,
+    "f": 88,
+    "shape": "O"
+   },
+   {
+    "t": 3.833,
+    "f": 92,
+    "shape": "E"
+   },
+   {
+    "t": 4.0,
+    "f": 96,
+    "shape": "A"
+   },
+   {
+    "t": 4.333,
+    "f": 104,
+    "shape": "E"
+   },
+   {
+    "t": 4.417,
+    "f": 106,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "We",
+    "t0": 0.51,
+    "t1": 0.66,
+    "f0": 12,
+    "f1": 16,
+    "ph": "wˌi"
+   },
+   {
+    "w": "heard",
+    "t0": 0.66,
+    "t1": 0.898,
+    "f0": 16,
+    "f1": 22,
+    "ph": "hˈɜɹd"
+   },
+   {
+    "w": "the",
+    "t0": 0.898,
+    "t1": 1.022,
+    "f0": 22,
+    "f1": 25,
+    "ph": "ðə"
+   },
+   {
+    "w": "siren",
+    "t0": 1.022,
+    "t1": 1.66,
+    "f0": 25,
+    "f1": 40,
+    "ph": "sˈIɹən"
+   },
+   {
+    "w": "Is",
+    "t0": 2.06,
+    "t1": 2.235,
+    "f0": 49,
+    "f1": 54,
+    "ph": "ˌɪz"
+   },
+   {
+    "w": "it",
+    "t0": 2.235,
+    "t1": 2.398,
+    "f0": 54,
+    "f1": 58,
+    "ph": "ɪt"
+   },
+   {
+    "w": "search",
+    "t0": 2.398,
+    "t1": 2.91,
+    "f0": 58,
+    "f1": 70,
+    "ph": "sˈɜɹʧ"
+   },
+   {
+    "w": "Is",
+    "t0": 3.165,
+    "t1": 3.348,
+    "f0": 76,
+    "f1": 80,
+    "ph": "ˌɪz"
+   },
+   {
+    "w": "search",
+    "t0": 3.348,
+    "t1": 3.685,
+    "f0": 80,
+    "f1": 88,
+    "ph": "sˈɜɹʧ"
+   },
+   {
+    "w": "all",
+    "t0": 3.685,
+    "t1": 3.885,
+    "f0": 88,
+    "f1": 93,
+    "ph": "ˈɔl"
+   },
+   {
+    "w": "right",
+    "t0": 3.885,
+    "t1": 4.43,
+    "f0": 93,
+    "f1": 106,
+    "ph": "ɹˈIt"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -2.81,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.5,
+   "median_f0_hz": 150.8,
+   "f0_range_st": 15.5,
+   "f0_method": "YIN (fast)",
+   "final_move_st": null,
+   "asr": "We heard the siren. Is it search? Is search all right?",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.305,
+   "align_median_s": null,
+   "utmos_dry": null,
+   "utmos_plain_read": null,
+   "utmos_vs_plain": null,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": null,
+   "speech_head_s": 0.51,
+   "speech_tail_s": 0.45,
+   "rise_ms": 20.0,
+   "decay_ms": 85.0,
+   "decay_to_60_s": 0.085
+  },
+  "clean": {
+   "file": "audio/ep01/act1/dialogue/fast-v1/clean/e1-a1-8-02.wav",
+   "note": "the dry read (no call chain), -16 LUFS"
+  },
+  "fast": {
+   "key": "db2bdc18c475381f",
+   "tool": "fastrec 1.2 (2026-09-26)",
+   "shard": 1,
+   "wall_s": 7.38,
+   "takes": 1,
+   "settings": {
+    "asr": true,
+    "asr_beam": 1,
+    "asr_batch_s": 24.0,
+    "asr_align": false,
+    "utmos": false,
+    "prosody": false,
+    "breaths": false,
+    "threads": 3
+   },
+   "asr": {
+    "packed_with": 0,
+    "share_s": 2.64,
+    "rechecked_alone": false
+   }
+  },
+  "breaths": [],
+  "opened_pauses": [
+   {
+    "after_word": null,
+    "word": "siren",
+    "tts_s": null,
+    "target_s": 0.4,
+    "final_s": 0.4,
+    "opened_s": 0.0,
+    "joined_speech": false,
+    "dip_db": null,
+    "breath": false,
+    "split": true,
+    "point_s": 1.17,
+    "crossfade_ms": [
+     0,
+     0
+    ]
+   },
+   {
+    "after_word": null,
+    "word": "search",
+    "tts_s": null,
+    "target_s": 0.3,
+    "final_s": 0.3,
+    "opened_s": 0.0,
+    "joined_speech": false,
+    "dip_db": null,
+    "breath": false,
+    "split": true,
+    "point_s": 2.43,
+    "crossfade_ms": [
+     0,
+     0
+    ]
+   }
+  ],
+  "alt_takes": []
+ },
+ {
+  "id": "e1-a1-8-04",
+  "scene": "8",
+  "speaker": "EGAP",
+  "speaker_slug": "egap",
+  "text": "Someone else built that? It looks like our work.",
+  "spoken_as": "Someone else built that?{0.4} It looks like our work.",
+  "delivery": "peering at the phone",
+  "tag": "[INVENTED · dialogue pass 5: it was \"And whose idea was it?\", a pure setup question for the punchline (the naturalness read). Now a founder recognises his own lab's idea in a rival's product, and Radnus's answer turns it. It claims only what the next line does, the published paper; guardrails check requested (open question 69)]",
+  "mode": "call",
+  "voiced_in_cut": true,
+  "on_camera": "monitor",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": null,
+  "shot": "POV",
+  "shot_id": "POV",
+  "cue": null,
+  "lip_sync": true,
+  "status": "fast",
+  "device": "call",
+  "room": null,
+  "est_s": 3.9,
+  "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-8-04.wav",
+  "mp3": null,
+  "duration_s": 4.27,
+  "frames_24": 103,
+  "voiced_span_s": 2.97,
+  "pace": {
+   "words": 9,
+   "wpm": 181.8,
+   "speed": 0.86,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 0.86,
+    "speed_band": [
+     0.84,
+     0.92
+    ],
+    "articulation_guide_sps": [
+     3.8,
+     4.4
+    ],
+    "turn_wpm_guide": [
+     130,
+     150
+    ],
+    "intent": "peering at the phone"
+   },
+   "measured": {
+    "wpm": 181.8,
+    "articulation_sps": 4.26,
+    "syllables": 11,
+    "span_s": 2.97,
+    "pauses_s": [
+     0.39,
+     0.06
+    ]
+   },
+   "longest_internal_gap_s": 0.39,
+   "audible_in_s": 0.51,
+   "audible_out_s": 3.48
+  },
+  "placement": {
+   "gap_before_s": 0.6,
+   "follows": "voice"
+  },
+  "take": "s1",
+  "takes_tried": 1,
+  "pick_reason": "fast: one take (seed 1, plan speed)",
+  "voice": "am_onyx*0.60+am_liam*0.40 (Kokoro-82M stock) · b-onyx-liam-dry · speed 0.860",
+  "voiceId": "am_onyx*0.60+am_liam*0.40",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 75 Hz",
+   "pitch +1 st",
+   "low shelf +1 dB @150 Hz",
+   "peak -1 dB @400 Hz Q1.0",
+   "peak +1 dB @2500 Hz Q0.9",
+   "comp 2.5:1 @-22 dB (6/110 ms)",
+   "then the call chain: HPF 200 Hz; LPF 7000 Hz; peak +1.5 dB @1800 Hz Q1.0; comp 2.5:1 @-22 dB (5/90 ms); -16 LUFS",
+   "Kokoro speed 0.860 (the plan speed; egap band 0.84-0.92); one whole read; no time-stretch, no carrier, no splice",
+   "pause after 'that': Kokoro 0.01 s -> 0.41 s (intended 0.40; +0.39 s of room tone at the quietest 5 ms)",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale (fastrec default; --breaths adds them)",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.583,
+    "f": 14,
+    "shape": "A"
+   },
+   {
+    "t": 0.667,
+    "f": 16,
+    "shape": "O"
+   },
+   {
+    "t": 0.75,
+    "f": 18,
+    "shape": "A"
+   },
+   {
+    "t": 1.0,
+    "f": 24,
+    "shape": "E"
+   },
+   {
+    "t": 1.125,
+    "f": 27,
+    "shape": "M"
+   },
+   {
+    "t": 1.25,
+    "f": 30,
+    "shape": "A"
+   },
+   {
+    "t": 1.333,
+    "f": 32,
+    "shape": "E"
+   },
+   {
+    "t": 1.542,
+    "f": 37,
+    "shape": "A"
+   },
+   {
+    "t": 1.708,
+    "f": 41,
+    "shape": "E"
+   },
+   {
+    "t": 1.792,
+    "f": 43,
+    "shape": "rest"
+   },
+   {
+    "t": 2.208,
+    "f": 53,
+    "shape": "E"
+   },
+   {
+    "t": 2.375,
+    "f": 57,
+    "shape": "O"
+   },
+   {
+    "t": 2.5,
+    "f": 60,
+    "shape": "E"
+   },
+   {
+    "t": 2.667,
+    "f": 64,
+    "shape": "A"
+   },
+   {
+    "t": 2.875,
+    "f": 69,
+    "shape": "E"
+   },
+   {
+    "t": 2.958,
+    "f": 71,
+    "shape": "O"
+   },
+   {
+    "t": 3.292,
+    "f": 79,
+    "shape": "E"
+   },
+   {
+    "t": 3.5,
+    "f": 84,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "Someone",
+    "t0": 0.575,
+    "t1": 0.862,
+    "f0": 14,
+    "f1": 21,
+    "ph": "sˈʌmwˌʌn"
+   },
+   {
+    "w": "else",
+    "t0": 0.862,
+    "t1": 1.138,
+    "f0": 21,
+    "f1": 27,
+    "ph": "ˈɛls"
+   },
+   {
+    "w": "built",
+    "t0": 1.138,
+    "t1": 1.45,
+    "f0": 27,
+    "f1": 35,
+    "ph": "bˈɪlt"
+   },
+   {
+    "w": "that",
+    "t0": 1.45,
+    "t1": 1.775,
+    "f0": 35,
+    "f1": 43,
+    "ph": "ðˈæt"
+   },
+   {
+    "w": "It",
+    "t0": 2.198,
+    "t1": 2.335,
+    "f0": 53,
+    "f1": 56,
+    "ph": "ˌɪt"
+   },
+   {
+    "w": "looks",
+    "t0": 2.335,
+    "t1": 2.61,
+    "f0": 56,
+    "f1": 63,
+    "ph": "lˈʊks"
+   },
+   {
+    "w": "like",
+    "t0": 2.61,
+    "t1": 2.822,
+    "f0": 63,
+    "f1": 68,
+    "ph": "lˈIk"
+   },
+   {
+    "w": "our",
+    "t0": 2.822,
+    "t1": 2.96,
+    "f0": 68,
+    "f1": 71,
+    "ph": "ˌWəɹ"
+   },
+   {
+    "w": "work",
+    "t0": 2.96,
+    "t1": 3.5,
+    "f0": 71,
+    "f1": 84,
+    "ph": "wˈɜɹk"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -4.62,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.5,
+   "median_f0_hz": 99.9,
+   "f0_range_st": 14.1,
+   "f0_method": "YIN (fast)",
+   "final_move_st": null,
+   "asr": "Someone else built that. It looks like our work.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.172,
+   "align_median_s": 0.025,
+   "utmos_dry": null,
+   "utmos_plain_read": null,
+   "utmos_vs_plain": null,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": null,
+   "speech_head_s": 0.51,
+   "speech_tail_s": 0.45,
+   "rise_ms": 85.0,
+   "decay_ms": 275.0,
+   "decay_to_60_s": 0.345
+  },
+  "clean": {
+   "file": "audio/ep01/act1/dialogue/fast-v1/clean/e1-a1-8-04.wav",
+   "note": "the dry read (no call chain), -16 LUFS"
+  },
+  "fast": {
+   "key": "da91ee667a8f5bc5",
+   "tool": "fastrec 1.2 (2026-09-26)",
+   "shard": 0,
+   "wall_s": 5.09,
+   "takes": 1,
+   "settings": {
+    "asr": true,
+    "asr_beam": 1,
+    "asr_batch_s": 24.0,
+    "asr_align": false,
+    "utmos": false,
+    "prosody": false,
+    "breaths": false,
+    "threads": 3
+   },
+   "asr": {
+    "packed_with": 3,
+    "share_s": 1.62,
+    "rechecked_alone": false
+   }
+  },
+  "breaths": [],
+  "opened_pauses": [
+   {
+    "after_word": 4,
+    "word": "that",
+    "tts_s": 0.015,
+    "target_s": 0.4,
+    "point_s": 1.35,
+    "joined_speech": false,
+    "dip_db": -45.3,
+    "breath": false,
+    "crossfade_ms": [
+     8,
+     8
+    ],
+    "final_s": 0.405,
+    "opened_s": 0.385
+   }
+  ],
+  "alt_takes": []
+ },
+ {
+  "id": "e1-a1-12-02",
+  "scene": "12",
+  "speaker": "OIGNEB",
+  "speaker_slug": "oigneb",
+  "text": "It's not the font, Nole. We're asking every lab to pause for six months.",
+  "spoken_as": "It's not the font,{0.15} Nole.{0.4} We're asking every lab to pause for six months.",
+  "delivery": "dialogue box; PLATE, riding it: `OIGNEB · AI PIONEER · CITATIONS: ↑`; gentle, precise, holding the sign higher",
+  "tag": "[INVENTED · picks up his word. Act One fix pass (2026-09-27): it was \"It's not the font. It asks every lab to pause for six months.\", which the insider read heard as an explainer line; now he says it to Nole's face, as one of the letter's signers asking. AI PIONEER on the plate is new: the newcomer read didn't know who he was. The ask and its facts are unchanged. Dialogue pass 5: it was \"It's six months, for every lab.\", stiff by ear (the naturalness read); now a whole sentence with a verb. \"Next quarter.\" still answers it. A six-month pause, asked of every lab training past the newest model, is the letter's own ask (facts #13; mid §2; the facts owner checks \"every lab\" against the letter's wording). Second pass: \"It says pause.\" read the sign back to him (the naturalness read)]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": null,
+  "shot": "W",
+  "shot_id": "W",
+  "cue": null,
+  "lip_sync": true,
+  "status": "fast",
+  "device": null,
+  "room": null,
+  "est_s": 6.6,
+  "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-12-02.wav",
+  "mp3": null,
+  "duration_s": 6.015,
+  "frames_24": 145,
+  "voiced_span_s": 4.64,
+  "pace": {
+   "words": 14,
+   "wpm": 181.0,
+   "speed": 0.87,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 0.87,
+    "speed_band": [
+     0.85,
+     0.93
+    ],
+    "articulation_guide_sps": [
+     4.0,
+     4.6
+    ],
+    "turn_wpm_guide": [
+     140,
+     155
+    ],
+    "intent": "dialogue box; PLATE, riding it: `OIGNEB · AI PIONEER · CITATIONS: ↑`; gentle, precise, holding the sign higher"
+   },
+   "measured": {
+    "wpm": 181.0,
+    "articulation_sps": 4.16,
+    "syllables": 17,
+    "span_s": 4.64,
+    "pauses_s": [
+     0.17,
+     0.38
+    ]
+   },
+   "longest_internal_gap_s": 0.38,
+   "audible_in_s": 0.5,
+   "audible_out_s": 5.14
+  },
+  "placement": {
+   "gap_before_s": 0.5,
+   "follows": "voice"
+  },
+  "take": "s1",
+  "takes_tried": 1,
+  "pick_reason": "fast: one take (seed 1, plan speed)",
+  "voice": "am_eric*0.50+am_onyx*0.50 (Kokoro-82M stock) · c-eric-onyx-gentle · speed 0.870",
+  "voiceId": "am_eric*0.50+am_onyx*0.50",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 70 Hz",
+   "pitch +0.5 st",
+   "low shelf +1.5 dB @180 Hz",
+   "peak -1.5 dB @350 Hz Q1.0",
+   "peak +0.5 dB @3000 Hz Q0.9",
+   "high shelf -1 dB @7000 Hz",
+   "comp 2.0:1 @-24 dB (10/140 ms)",
+   "Kokoro speed 0.870 (the plan speed; oigneb band 0.85-0.93); one whole read; no time-stretch, no carrier, no splice",
+   "pause after 'font': Kokoro 0.00 s -> 0.18 s (intended 0.15; +0.15 s of room tone at the quietest 5 ms; Kokoro ran the words together here (dip -29.3 dB): ear check)",
+   "pause after 'Nole': Kokoro 0.10 s -> 0.40 s (intended 0.40; +0.30 s of room tone at the quietest 5 ms)",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale (fastrec default; --breaths adds them)",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.5,
+    "f": 12,
+    "shape": "E"
+   },
+   {
+    "t": 0.708,
+    "f": 17,
+    "shape": "A"
+   },
+   {
+    "t": 0.833,
+    "f": 20,
+    "shape": "E"
+   },
+   {
+    "t": 1.042,
+    "f": 25,
+    "shape": "A"
+   },
+   {
+    "t": 1.208,
+    "f": 29,
+    "shape": "E"
+   },
+   {
+    "t": 1.333,
+    "f": 32,
+    "shape": "rest"
+   },
+   {
+    "t": 1.542,
+    "f": 37,
+    "shape": "E"
+   },
+   {
+    "t": 1.625,
+    "f": 39,
+    "shape": "O"
+   },
+   {
+    "t": 1.875,
+    "f": 45,
+    "shape": "E"
+   },
+   {
+    "t": 2.0,
+    "f": 48,
+    "shape": "rest"
+   },
+   {
+    "t": 2.417,
+    "f": 58,
+    "shape": "E"
+   },
+   {
+    "t": 2.542,
+    "f": 61,
+    "shape": "A"
+   },
+   {
+    "t": 2.667,
+    "f": 64,
+    "shape": "E"
+   },
+   {
+    "t": 2.958,
+    "f": 71,
+    "shape": "A"
+   },
+   {
+    "t": 3.042,
+    "f": 73,
+    "shape": "E"
+   },
+   {
+    "t": 3.375,
+    "f": 81,
+    "shape": "A"
+   },
+   {
+    "t": 3.542,
+    "f": 85,
+    "shape": "M"
+   },
+   {
+    "t": 3.625,
+    "f": 87,
+    "shape": "E"
+   },
+   {
+    "t": 3.75,
+    "f": 90,
+    "shape": "M"
+   },
+   {
+    "t": 3.833,
+    "f": 92,
+    "shape": "O"
+   },
+   {
+    "t": 4.042,
+    "f": 97,
+    "shape": "E"
+   },
+   {
+    "t": 4.167,
+    "f": 100,
+    "shape": "O"
+   },
+   {
+    "t": 4.25,
+    "f": 102,
+    "shape": "E"
+   },
+   {
+    "t": 4.417,
+    "f": 106,
+    "shape": "A"
+   },
+   {
+    "t": 4.5,
+    "f": 108,
+    "shape": "E"
+   },
+   {
+    "t": 4.625,
+    "f": 111,
+    "shape": "M"
+   },
+   {
+    "t": 4.708,
+    "f": 113,
+    "shape": "A"
+   },
+   {
+    "t": 4.917,
+    "f": 118,
+    "shape": "E"
+   },
+   {
+    "t": 5.167,
+    "f": 124,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "It's",
+    "t0": 0.475,
+    "t1": 0.675,
+    "f0": 11,
+    "f1": 16,
+    "ph": "ˌɪts"
+   },
+   {
+    "w": "not",
+    "t0": 0.675,
+    "t1": 0.862,
+    "f0": 16,
+    "f1": 21,
+    "ph": "nˌɑt"
+   },
+   {
+    "w": "the",
+    "t0": 0.862,
+    "t1": 1.0,
+    "f0": 21,
+    "f1": 24,
+    "ph": "ðə"
+   },
+   {
+    "w": "font",
+    "t0": 1.0,
+    "t1": 1.325,
+    "f0": 24,
+    "f1": 32,
+    "ph": "fˈɑnt"
+   },
+   {
+    "w": "Nole",
+    "t0": 1.525,
+    "t1": 2.0,
+    "f0": 37,
+    "f1": 48,
+    "ph": "nˈOl"
+   },
+   {
+    "w": "We're",
+    "t0": 2.375,
+    "t1": 2.525,
+    "f0": 57,
+    "f1": 61,
+    "ph": "wˌɪɹ"
+   },
+   {
+    "w": "asking",
+    "t0": 2.525,
+    "t1": 2.963,
+    "f0": 61,
+    "f1": 71,
+    "ph": "ˈæskɪŋ"
+   },
+   {
+    "w": "every",
+    "t0": 2.963,
+    "t1": 3.3,
+    "f0": 71,
+    "f1": 79,
+    "ph": "ˈɛvəɹi"
+   },
+   {
+    "w": "lab",
+    "t0": 3.3,
+    "t1": 3.625,
+    "f0": 79,
+    "f1": 87,
+    "ph": "lˈæb"
+   },
+   {
+    "w": "to",
+    "t0": 3.625,
+    "t1": 3.75,
+    "f0": 87,
+    "f1": 90,
+    "ph": "tə"
+   },
+   {
+    "w": "pause",
+    "t0": 3.75,
+    "t1": 4.15,
+    "f0": 90,
+    "f1": 100,
+    "ph": "pˈɔz"
+   },
+   {
+    "w": "for",
+    "t0": 4.15,
+    "t1": 4.312,
+    "f0": 100,
+    "f1": 104,
+    "ph": "fɔɹ"
+   },
+   {
+    "w": "six",
+    "t0": 4.312,
+    "t1": 4.625,
+    "f0": 104,
+    "f1": 111,
+    "ph": "sˈɪks"
+   },
+   {
+    "w": "months",
+    "t0": 4.625,
+    "t1": 5.16,
+    "f0": 111,
+    "f1": 124,
+    "ph": "mˈʌnθs"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -3.92,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.5,
+   "median_f0_hz": 119.3,
+   "f0_range_st": 12.4,
+   "f0_method": "pYIN (a4lib.analyse)",
+   "final_move_st": -2.3,
+   "asr": "It's not the font, null. We're asking every lab to pause for six months.",
+   "cer": 0.037,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.348,
+   "align_median_s": null,
+   "utmos_dry": null,
+   "utmos_plain_read": null,
+   "utmos_vs_plain": null,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": null,
+   "speech_head_s": 0.5,
+   "speech_tail_s": 0.45,
+   "rise_ms": 25.0,
+   "decay_ms": 265.0,
+   "decay_to_60_s": 0.425
+  },
+  "fast": {
+   "key": "e0bf1cebf45fe31a",
+   "tool": "fastrec 1.2 (2026-09-26)",
+   "shard": 0,
+   "wall_s": 5.84,
+   "takes": 1,
+   "settings": {
+    "asr": true,
+    "asr_beam": 1,
+    "asr_batch_s": 24.0,
+    "asr_align": false,
+    "utmos": false,
+    "prosody": true,
+    "breaths": false,
+    "threads": 3
+   },
+   "asr": {
+    "packed_with": 0,
+    "share_s": 2.17,
+    "rechecked_alone": false
+   }
+  },
+  "breaths": [],
+  "opened_pauses": [
+   {
+    "after_word": 4,
+    "word": "font",
+    "tts_s": 0.0,
+    "target_s": 0.15,
+    "point_s": 0.87,
+    "joined_speech": true,
+    "dip_db": -29.3,
+    "breath": false,
+    "crossfade_ms": [
+     60,
+     25
+    ],
+    "final_s": 0.18,
+    "opened_s": 0.15
+   },
+   {
+    "after_word": 5,
+    "word": "Nole",
+    "tts_s": 0.1,
+    "target_s": 0.4,
+    "point_s": 1.62,
+    "joined_speech": false,
+    "dip_db": -57.8,
+    "breath": false,
+    "crossfade_ms": [
+     8,
+     8
+    ],
+    "final_s": 0.4,
+    "opened_s": 0.3
+   }
+  ],
+  "alt_takes": []
+ },
+ {
+  "id": "e1-a3-19-01",
+  "scene": "19",
+  "speaker": "REMUHCS",
+  "speaker_slug": "remuhcs",
+  "text": "\"Every single person raised their hand.\"",
+  "spoken_as": "Every single person raised their hand.",
+  "delivery": "O.S., on the monitor",
+  "tag": "[V · SEP 13, 2023 · dialogue pass 5: the hands used to be up before the line, so the picture gave the real line away (the insider read). Now the plate asks, the room waits with its hands down, and the hands go up on his words, from the same drawings. LOCK OPTION: sw-US quotes his question as \"Does the government need to play a role in regulating AI?\". If the facts owner confirms those as his spoken words, he says the question first, the line follows, and the plate goes back to his name alone]",
+  "mode": "call",
+  "voiced_in_cut": true,
+  "on_camera": "monitor",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": null,
+  "shot": "2S·SCR",
+  "shot_id": "2S·SCR",
+  "cue": null,
+  "lip_sync": true,
+  "status": "fast",
+  "device": "monitor",
+  "room": null,
+  "est_s": 2.7,
+  "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-19-01.wav",
+  "mp3": null,
+  "duration_s": 3.135,
+  "frames_24": 76,
+  "voiced_span_s": 2.17,
+  "pace": {
+   "words": 6,
+   "wpm": 165.9,
+   "speed": 0.87,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 0.87,
+    "speed_band": [
+     0.83,
+     0.91
+    ],
+    "articulation_guide_sps": [
+     4.2,
+     4.8
+    ],
+    "turn_wpm_guide": [
+     145,
+     165
+    ],
+    "intent": "O.S., on the monitor"
+   },
+   "measured": {
+    "wpm": 165.9,
+    "articulation_sps": 4.61,
+    "syllables": 10,
+    "span_s": 2.17,
+    "pauses_s": []
+   },
+   "longest_internal_gap_s": 0.0,
+   "audible_in_s": 0.5,
+   "audible_out_s": 2.67
+  },
+  "placement": {
+   "gap_before_s": null,
+   "follows": "picture"
+  },
+  "take": "s1",
+  "takes_tried": 1,
+  "pick_reason": "fast: one take (seed 1, plan speed)",
+  "voice": "am_adam*0.50+am_puck*0.50 (Kokoro-82M stock) · c-adam-puck-forum · speed 0.870",
+  "voiceId": "am_adam*0.50+am_puck*0.50",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 75 Hz",
+   "pitch 0",
+   "low shelf +1 dB @150 Hz",
+   "peak -1 dB @400 Hz Q1.0",
+   "peak +1 dB @2500 Hz Q0.9",
+   "comp 2.5:1 @-22 dB (6/110 ms)",
+   "then the monitor chain: HPF 200 Hz; LPF 7000 Hz; peak +1.5 dB @1800 Hz Q1.0; comp 2.5:1 @-22 dB (5/90 ms); -16 LUFS",
+   "Kokoro speed 0.870 (the centre of the band; remuhcs band 0.83-0.91); one whole read; no time-stretch, no carrier, no splice",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale (fastrec default; --breaths adds them)",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.5,
+    "f": 12,
+    "shape": "A"
+   },
+   {
+    "t": 0.583,
+    "f": 14,
+    "shape": "E"
+   },
+   {
+    "t": 0.833,
+    "f": 20,
+    "shape": "A"
+   },
+   {
+    "t": 0.917,
+    "f": 22,
+    "shape": "E"
+   },
+   {
+    "t": 1.167,
+    "f": 28,
+    "shape": "M"
+   },
+   {
+    "t": 1.25,
+    "f": 30,
+    "shape": "O"
+   },
+   {
+    "t": 1.333,
+    "f": 32,
+    "shape": "E"
+   },
+   {
+    "t": 1.667,
+    "f": 40,
+    "shape": "A"
+   },
+   {
+    "t": 1.833,
+    "f": 44,
+    "shape": "E"
+   },
+   {
+    "t": 2.0,
+    "f": 48,
+    "shape": "A"
+   },
+   {
+    "t": 2.458,
+    "f": 59,
+    "shape": "E"
+   },
+   {
+    "t": 2.708,
+    "f": 65,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "Every",
+    "t0": 0.49,
+    "t1": 0.778,
+    "f0": 12,
+    "f1": 19,
+    "ph": "ˈɛvəɹi"
+   },
+   {
+    "w": "single",
+    "t0": 0.778,
+    "t1": 1.165,
+    "f0": 19,
+    "f1": 28,
+    "ph": "sˈɪŋɡᵊl"
+   },
+   {
+    "w": "person",
+    "t0": 1.165,
+    "t1": 1.615,
+    "f0": 28,
+    "f1": 39,
+    "ph": "pˈɜɹsᵊn"
+   },
+   {
+    "w": "raised",
+    "t0": 1.615,
+    "t1": 1.965,
+    "f0": 39,
+    "f1": 47,
+    "ph": "ɹˈAzd"
+   },
+   {
+    "w": "their",
+    "t0": 1.965,
+    "t1": 2.165,
+    "f0": 47,
+    "f1": 52,
+    "ph": "ðɛɹ"
+   },
+   {
+    "w": "hand",
+    "t0": 2.165,
+    "t1": 2.69,
+    "f0": 52,
+    "f1": 65,
+    "ph": "hˈænd"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -4.17,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.5,
+   "median_f0_hz": 115.9,
+   "f0_range_st": 8.4,
+   "f0_method": "pYIN (a4lib.analyse)",
+   "final_move_st": -2.3,
+   "asr": "Every single person raised their hand.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.186,
+   "align_median_s": 0.078,
+   "utmos_dry": null,
+   "utmos_plain_read": null,
+   "utmos_vs_plain": null,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": null,
+   "speech_head_s": 0.5,
+   "speech_tail_s": 0.415,
+   "rise_ms": 20.0,
+   "decay_ms": 110.0,
+   "decay_to_60_s": 0.05
+  },
+  "clean": {
+   "file": "audio/ep01/act3/dialogue/fast-v2/clean/e1-a3-19-01.wav",
+   "note": "the dry read (no monitor chain), -16 LUFS"
+  },
+  "fast": {
+   "key": "a800c6fb00014710",
+   "tool": "fastrec 1.2 (2026-09-26)",
+   "shard": 3,
+   "wall_s": 15.92,
+   "takes": 1,
+   "settings": {
+    "asr": true,
+    "asr_beam": 1,
+    "asr_batch_s": 24.0,
+    "asr_align": false,
+    "utmos": false,
+    "prosody": true,
+    "breaths": false,
+    "threads": 3
+   },
+   "asr": {
+    "packed_with": 4,
+    "share_s": 3.19,
+    "rechecked_alone": false
+   }
+  },
+  "breaths": [],
+  "opened_pauses": [],
+  "alt_takes": []
+ },
+ {
+  "id": "e1-co-1-01",
+  "scene": "1",
+  "speaker": "PANEL HOST",
+  "speaker_slug": "panel-host",
+  "text": "Last one, Mas. What's the best part of the job?",
+  "spoken_as": "Last one, [Mas](/mˈɑs/).{0.6} What's the best part of the job?",
+  "delivery": "through the hall's PA, the hand at frame right lifting the card a little; warm, from the wide's second second, so the first frame isn't silent",
+  "tag": "[INVENTED · the host is seen only as a hand, unnamed and never gendered, and the question is ours; it gives the real answer below its trigger and its listener (R19). On the record the answer comes from a longer reply at the APEC CEO Summit (facts #45)]",
+  "mode": "pa",
+  "voiced_in_cut": true,
+  "on_camera": "os",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": null,
+  "shot": "W",
+  "shot_id": "W",
+  "cue": null,
+  "lip_sync": false,
+  "status": "fast",
+  "device": "pa",
+  "room": null,
+  "est_s": 4.6,
+  "file": "audio/ep01/coldopen/dialogue/fast-v1/wav/e1-co-1-01.wav",
+  "mp3": null,
+  "duration_s": 3.925,
+  "frames_24": 95,
+  "voiced_span_s": 2.9,
+  "pace": {
+   "words": 10,
+   "wpm": 206.9,
+   "speed": 0.94,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 0.94,
+    "speed_band": [
+     0.97,
+     1.05
+    ],
+    "articulation_guide_sps": [
+     4.2,
+     4.8
+    ],
+    "turn_wpm_guide": [
+     150,
+     170
+    ],
+    "intent": "through the hall's PA, the hand at frame right lifting the card a little; warm, from the wide's second second, so the first frame isn't silent"
+   },
+   "measured": {
+    "wpm": 206.9,
+    "articulation_sps": 4.33,
+    "syllables": 10,
+    "span_s": 2.9,
+    "pauses_s": [
+     0.59
+    ]
+   },
+   "longest_internal_gap_s": 0.59,
+   "audible_in_s": 0.51,
+   "audible_out_s": 3.41
+  },
+  "placement": {
+   "gap_before_s": null,
+   "follows": "picture"
+  },
+  "take": "s1",
+  "takes_tried": 1,
+  "pick_reason": "fast: one take (seed 1, plan speed)",
+  "voice": "af_sarah*0.45+am_puck*0.55 (Kokoro-82M stock) · c-sarah-puck-host · speed 0.940",
+  "voiceId": "af_sarah*0.45+am_puck*0.55",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 90 Hz",
+   "pitch 0",
+   "low shelf +1 dB @200 Hz",
+   "peak +1.5 dB @2800 Hz Q0.9",
+   "comp 2.5:1 @-22 dB (5/90 ms)",
+   "then the pa chain: HPF 160 Hz; LPF 8500 Hz; peak +2 dB @2400 Hz Q0.9; tanh saturation drive 1.6 mix 0.1; comp 3.0:1 @-22 dB (4/80 ms); -16 LUFS",
+   "Kokoro speed 0.940 (the plan speed; panel-host band 0.97-1.05); one whole read; no time-stretch, no carrier, no splice",
+   "pause after 'Mas': Kokoro 0.13 s -> 0.60 s (intended 0.60; +0.47 s of room tone at the quietest 5 ms)",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale (fastrec default; --breaths adds them)",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "mouth": [],
+  "words": [
+   {
+    "w": "Last",
+    "t0": 0.515,
+    "t1": 0.778,
+    "f0": 12,
+    "f1": 19,
+    "ph": "lˈæst"
+   },
+   {
+    "w": "one",
+    "t0": 0.778,
+    "t1": 0.89,
+    "f0": 19,
+    "f1": 21,
+    "ph": "wˈʌn"
+   },
+   {
+    "w": "Mas",
+    "t0": 0.94,
+    "t1": 1.415,
+    "f0": 23,
+    "f1": 34,
+    "ph": "mˈɑs"
+   },
+   {
+    "w": "What's",
+    "t0": 1.985,
+    "t1": 2.198,
+    "f0": 48,
+    "f1": 53,
+    "ph": "wˌʌts"
+   },
+   {
+    "w": "the",
+    "t0": 2.198,
+    "t1": 2.285,
+    "f0": 53,
+    "f1": 55,
+    "ph": "ðə"
+   },
+   {
+    "w": "best",
+    "t0": 2.285,
+    "t1": 2.56,
+    "f0": 55,
+    "f1": 61,
+    "ph": "bˈɛst"
+   },
+   {
+    "w": "part",
+    "t0": 2.56,
+    "t1": 2.772,
+    "f0": 61,
+    "f1": 67,
+    "ph": "pˈɑɹt"
+   },
+   {
+    "w": "of",
+    "t0": 2.772,
+    "t1": 2.848,
+    "f0": 67,
+    "f1": 68,
+    "ph": "ʌv"
+   },
+   {
+    "w": "the",
+    "t0": 2.848,
+    "t1": 2.935,
+    "f0": 68,
+    "f1": 70,
+    "ph": "ðə"
+   },
+   {
+    "w": "job",
+    "t0": 2.935,
+    "t1": 3.43,
+    "f0": 70,
+    "f1": 82,
+    "ph": "ʤˈɑb"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -4.1,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.5,
+   "median_f0_hz": 154.4,
+   "f0_range_st": 13.2,
+   "f0_method": "YIN (fast)",
+   "final_move_st": null,
+   "asr": "Last one, Moss. What's the best part of the job?",
+   "cer": 0.059,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.287,
+   "align_median_s": null,
+   "utmos_dry": null,
+   "utmos_plain_read": null,
+   "utmos_vs_plain": null,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": null,
+   "speech_head_s": 0.51,
+   "speech_tail_s": 0.395,
+   "rise_ms": 15.0,
+   "decay_ms": 135.0,
+   "decay_to_60_s": 0.125
+  },
+  "clean": {
+   "file": "audio/ep01/coldopen/dialogue/fast-v1/clean/e1-co-1-01.wav",
+   "note": "the dry read (no pa chain), -16 LUFS"
+  },
+  "fast": {
+   "key": "8c04024eabe9cd07",
+   "tool": "fastrec 1.2 (2026-09-26)",
+   "shard": 1,
+   "wall_s": 7.13,
+   "takes": 1,
+   "settings": {
+    "asr": true,
+    "asr_beam": 1,
+    "asr_batch_s": 24.0,
+    "asr_align": false,
+    "utmos": false,
+    "prosody": false,
+    "breaths": false,
+    "threads": 3
+   },
+   "asr": {
+    "packed_with": 0,
+    "share_s": 3.1,
+    "rechecked_alone": false
+   }
+  },
+  "breaths": [],
+  "opened_pauses": [
+   {
+    "after_word": 3,
+    "word": "Mas",
+    "tts_s": 0.13,
+    "target_s": 0.6,
+    "point_s": 1.04,
+    "joined_speech": false,
+    "dip_db": -67.3,
+    "breath": false,
+    "crossfade_ms": [
+     8,
+     8
+    ],
+    "final_s": 0.605,
+    "opened_s": 0.47
+   }
+  ],
+  "alt_takes": []
+ },
+ {
+  "id": "e1-a2-17-06",
+  "scene": "17",
+  "speaker": "NESNEJ",
+  "speaker_slug": "nesnej",
+  "text": "\"The more you buy, the more you save.\"",
+  "spoken_as": "The more you buy,{0.3} the more you save.",
+  "delivery": "to the signers, like a gift",
+  "tag": "[V · MAY 29, 2023 · a small dateline under the subtitle, shortened: `— COMPUTEX, MAY 29`. It stays because the rail reads MAY 30 and the quotation marks are the record]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": null,
+  "shot": "OTS",
+  "shot_id": "OTS",
+  "cue": null,
+  "lip_sync": true,
+  "status": "fast",
+  "device": null,
+  "room": null,
+  "est_s": 3.5,
+  "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-17-06.wav",
+  "mp3": null,
+  "duration_s": 3.3,
+  "frames_24": 80,
+  "voiced_span_s": 2.15,
+  "pace": {
+   "words": 8,
+   "wpm": 223.3,
+   "speed": 0.97,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 0.97,
+    "speed_band": [
+     1.0,
+     1.08
+    ],
+    "articulation_guide_sps": [
+     4.6,
+     5.4
+    ],
+    "turn_wpm_guide": [
+     160,
+     176
+    ],
+    "intent": "to the signers, like a gift"
+   },
+   "measured": {
+    "wpm": 223.3,
+    "articulation_sps": 4.35,
+    "syllables": 8,
+    "span_s": 2.15,
+    "pauses_s": [
+     0.31
+    ]
+   },
+   "longest_internal_gap_s": 0.31,
+   "audible_in_s": 0.5,
+   "audible_out_s": 2.65
+  },
+  "placement": {
+   "gap_before_s": 0.6,
+   "follows": "voice"
+  },
+  "take": "s1",
+  "takes_tried": 2,
+  "pick_reason": "fast: best of 2 seeds by ASR word recall, then no pause cut inside the voice, then the span nearest est_s",
+  "voice": "am_michael*0.50+am_eric*0.50 (Kokoro-82M stock) · a-michael-eric-keynote (pass-1 pick, dry) · speed 0.970",
+  "voiceId": "am_michael*0.50+am_eric*0.50",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 80 Hz",
+   "pitch 0",
+   "peak +1 dB @200 Hz Q0.9",
+   "peak +2 dB @3500 Hz Q0.9",
+   "comp 3.0:1 @-20 dB (4/80 ms)",
+   "tanh saturation drive 1.8 mix 0.15",
+   "Kokoro speed 0.970 (the plan speed; nesnej band 1.00-1.08); one whole read; no time-stretch, no carrier, no splice",
+   "pause after 'buy': Kokoro 0.00 s -> 0.32 s (intended 0.30; +0.30 s of room tone at the quietest 5 ms; Kokoro ran the words together here (dip -15.9 dB): ear check)",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale (fastrec default; --breaths adds them)",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.5,
+    "f": 12,
+    "shape": "E"
+   },
+   {
+    "t": 0.583,
+    "f": 14,
+    "shape": "M"
+   },
+   {
+    "t": 0.667,
+    "f": 16,
+    "shape": "O"
+   },
+   {
+    "t": 0.75,
+    "f": 18,
+    "shape": "E"
+   },
+   {
+    "t": 0.833,
+    "f": 20,
+    "shape": "O"
+   },
+   {
+    "t": 0.958,
+    "f": 23,
+    "shape": "M"
+   },
+   {
+    "t": 1.042,
+    "f": 25,
+    "shape": "A"
+   },
+   {
+    "t": 1.292,
+    "f": 31,
+    "shape": "rest"
+   },
+   {
+    "t": 1.708,
+    "f": 41,
+    "shape": "M"
+   },
+   {
+    "t": 1.792,
+    "f": 43,
+    "shape": "O"
+   },
+   {
+    "t": 1.875,
+    "f": 45,
+    "shape": "E"
+   },
+   {
+    "t": 2.0,
+    "f": 48,
+    "shape": "O"
+   },
+   {
+    "t": 2.125,
+    "f": 51,
+    "shape": "E"
+   },
+   {
+    "t": 2.208,
+    "f": 53,
+    "shape": "A"
+   },
+   {
+    "t": 2.542,
+    "f": 61,
+    "shape": "E"
+   },
+   {
+    "t": 2.667,
+    "f": 64,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "The",
+    "t0": 0.475,
+    "t1": 0.575,
+    "f0": 11,
+    "f1": 14,
+    "ph": "ðə"
+   },
+   {
+    "w": "more",
+    "t0": 0.575,
+    "t1": 0.8,
+    "f0": 14,
+    "f1": 19,
+    "ph": "mˈɔɹ"
+   },
+   {
+    "w": "you",
+    "t0": 0.8,
+    "t1": 0.95,
+    "f0": 19,
+    "f1": 23,
+    "ph": "ju"
+   },
+   {
+    "w": "buy",
+    "t0": 0.95,
+    "t1": 1.275,
+    "f0": 23,
+    "f1": 31,
+    "ph": "bˈI"
+   },
+   {
+    "w": "the",
+    "t0": 1.625,
+    "t1": 1.725,
+    "f0": 39,
+    "f1": 41,
+    "ph": "ðə"
+   },
+   {
+    "w": "more",
+    "t0": 1.725,
+    "t1": 1.95,
+    "f0": 41,
+    "f1": 47,
+    "ph": "mˈɔɹ"
+   },
+   {
+    "w": "you",
+    "t0": 1.95,
+    "t1": 2.112,
+    "f0": 47,
+    "f1": 51,
+    "ph": "ju"
+   },
+   {
+    "w": "save",
+    "t0": 2.112,
+    "t1": 2.67,
+    "f0": 51,
+    "f1": 64,
+    "ph": "sˈAv"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -2.62,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.5,
+   "median_f0_hz": 143.7,
+   "f0_range_st": 12.6,
+   "f0_method": "YIN (fast)",
+   "final_move_st": null,
+   "asr": "The more you buy, the more you save.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.251,
+   "align_median_s": null,
+   "utmos_dry": null,
+   "utmos_plain_read": null,
+   "utmos_vs_plain": null,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": null,
+   "speech_head_s": 0.5,
+   "speech_tail_s": 0.45,
+   "rise_ms": 30.0,
+   "decay_ms": 250.0,
+   "decay_to_60_s": 0.2
+  },
+  "fast": {
+   "key": "0216707d8ef9ee72",
+   "tool": "fastrec 1.2 (2026-09-26)",
+   "shard": 1,
+   "wall_s": 16.45,
+   "takes": 2,
+   "settings": {
+    "asr": true,
+    "asr_beam": 1,
+    "asr_batch_s": 24.0,
+    "asr_align": false,
+    "utmos": false,
+    "prosody": false,
+    "breaths": false,
+    "threads": 4
+   },
+   "asr": {
+    "packed_with": 1,
+    "share_s": 8.59
+   }
+  },
+  "breaths": [],
+  "opened_pauses": [
+   {
+    "after_word": 4,
+    "word": "buy",
+    "tts_s": 0.0,
+    "target_s": 0.3,
+    "point_s": 0.89,
+    "joined_speech": true,
+    "dip_db": -15.9,
+    "breath": false,
+    "crossfade_ms": [
+     60,
+     25
+    ],
+    "final_s": 0.315,
+    "opened_s": 0.3
+   }
+  ],
+  "alt_takes": [
+   {
+    "tag": "s2",
+    "seed": 2,
+    "speed": 0.97,
+    "file": "audio/ep01/act2/dialogue/fast-v2/takes/e1-a2-17-06/s2.wav",
+    "span_s": 2.15,
+    "wpm": 223.3,
+    "asr": "The more you buy, the more you save.",
+    "recall": 1.0,
+    "utmos": null
+   }
+  ]
+ },
+ {
+  "id": "e1-a1-11-02",
+  "scene": "11",
+  "speaker": "CLOD",
+  "speaker_slug": "clod",
+  "text": "You're absolutely right!",
+  "spoken_as": "You're absolutely right!",
+  "delivery": "on the next beat, mid-bow, launching",
+  "tag": "[INVENTED · it agrees with \"That's how a race starts\", and starts one]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": null,
+  "shot": "W",
+  "shot_id": "W",
+  "cue": null,
+  "lip_sync": true,
+  "status": "fast",
+  "device": null,
+  "room": null,
+  "est_s": 1.9,
+  "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-11-02.wav",
+  "mp3": null,
+  "duration_s": 2.48,
+  "frames_24": 60,
+  "voiced_span_s": 1.34,
+  "pace": {
+   "words": 3,
+   "wpm": 134.3,
+   "speed": 1.03,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 1.03,
+    "speed_band": [
+     0.99,
+     1.07
+    ],
+    "articulation_guide_sps": [
+     4.2,
+     4.8
+    ],
+    "turn_wpm_guide": [
+     150,
+     170
+    ],
+    "intent": "on the next beat, mid-bow, launching"
+   },
+   "measured": {
+    "wpm": 134.3,
+    "articulation_sps": 4.48,
+    "syllables": 6,
+    "span_s": 1.34,
+    "pauses_s": []
+   },
+   "longest_internal_gap_s": 0.0,
+   "audible_in_s": 0.51,
+   "audible_out_s": 1.85
+  },
+  "placement": {
+   "gap_before_s": null,
+   "follows": "picture"
+  },
+  "take": "s1",
+  "takes_tried": 1,
+  "pick_reason": "fast: one take (seed 1, plan speed)",
+  "voice": "af_river*0.50+am_eric*0.50 (Kokoro-82M stock) · c-river-eric-earnest · speed 1.030",
+  "voiceId": "af_river*0.50+am_eric*0.50",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 110 Hz",
+   "pitch 0",
+   "peak -1 dB @300 Hz Q1.0",
+   "peak +1.5 dB @3200 Hz Q0.9",
+   "chorus 0.5 Hz depth 0.1 mix 0.15",
+   "comp 3.0:1 @-22 dB (4/90 ms)",
+   "Kokoro speed 1.030 (the centre of the band; clod band 0.99-1.07); one whole read; no time-stretch, no carrier, no splice",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale (fastrec default; --breaths adds them)",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.542,
+    "f": 13,
+    "shape": "O"
+   },
+   {
+    "t": 0.625,
+    "f": 15,
+    "shape": "E"
+   },
+   {
+    "t": 0.708,
+    "f": 17,
+    "shape": "A"
+   },
+   {
+    "t": 0.792,
+    "f": 19,
+    "shape": "M"
+   },
+   {
+    "t": 0.875,
+    "f": 21,
+    "shape": "E"
+   },
+   {
+    "t": 1.042,
+    "f": 25,
+    "shape": "O"
+   },
+   {
+    "t": 1.167,
+    "f": 28,
+    "shape": "E"
+   },
+   {
+    "t": 1.458,
+    "f": 35,
+    "shape": "A"
+   },
+   {
+    "t": 1.792,
+    "f": 43,
+    "shape": "E"
+   },
+   {
+    "t": 1.875,
+    "f": 45,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "You're",
+    "t0": 0.505,
+    "t1": 0.692,
+    "f0": 12,
+    "f1": 17,
+    "ph": "jˌʊɹ"
+   },
+   {
+    "w": "absolutely",
+    "t0": 0.692,
+    "t1": 1.355,
+    "f0": 17,
+    "f1": 33,
+    "ph": "ˈæbsəlˌutli"
+   },
+   {
+    "w": "right",
+    "t0": 1.355,
+    "t1": 1.87,
+    "f0": 33,
+    "f1": 45,
+    "ph": "ɹˈIt"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -4.18,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.51,
+   "median_f0_hz": 170.2,
+   "f0_range_st": 11.5,
+   "f0_method": "YIN (fast)",
+   "final_move_st": null,
+   "asr": "You're absolutely right.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.209,
+   "align_median_s": 0.17,
+   "utmos_dry": null,
+   "utmos_plain_read": null,
+   "utmos_vs_plain": null,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": null,
+   "speech_head_s": 0.51,
+   "speech_tail_s": 0.45,
+   "rise_ms": 20.0,
+   "decay_ms": 105.0,
+   "decay_to_60_s": 0.18
+  },
+  "fast": {
+   "key": "d44e43043e09543e",
+   "tool": "fastrec 1.2 (2026-09-26)",
+   "shard": 1,
+   "wall_s": 37.1,
+   "takes": 1,
+   "settings": {
+    "asr": true,
+    "asr_beam": 1,
+    "asr_batch_s": 24.0,
+    "asr_align": false,
+    "utmos": false,
+    "prosody": false,
+    "breaths": false,
+    "threads": 3
+   },
+   "asr": {
+    "packed_with": 5,
+    "share_s": 7.14,
+    "rechecked_alone": false
+   }
+  },
+  "breaths": [],
+  "opened_pauses": [],
+  "alt_takes": []
+ }
+]

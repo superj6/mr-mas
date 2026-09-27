@@ -1,0 +1,3510 @@
+[
+ {
+  "id": "e1-a1-11-01",
+  "kind": "dialogue",
+  "scene": "11",
+  "speaker": "MARIO",
+  "speaker_slug": "mario",
+  "text": "Memo, on race dynamics. Point one: we must not launch on the same day as them. That's how a race starts.",
+  "spoken_as": "Memo, on race dynamics. Point one: we must not launch on the same day as them. That's how a race starts.",
+  "tag": "",
+  "delivery": "right pane, writing as he dictates, to CLOD in its spotlight",
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/auditions/wav/e1-a1-11-01__mario-A.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 7.202,
+  "frames_24": 173,
+  "voiced_span_s": 6.46,
+  "pace": {
+   "audible_in_s": 0.37,
+   "audible_out_s": 6.83,
+   "measured": {
+    "span_s": 6.46,
+    "wpm": 195.0,
+    "syllables": 24,
+    "articulation_sps": 3.88,
+    "pauses_s": [
+     0.1,
+     0.18
+    ]
+   },
+   "longest_internal_gap_s": 0.18,
+   "words": 21,
+   "wpm": 195.0,
+   "speed": 1.0,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Memo",
+    "t0": 0.35,
+    "t1": 0.803
+   },
+   {
+    "w": "on",
+    "t0": 1.139,
+    "t1": 1.348
+   },
+   {
+    "w": "race",
+    "t0": 1.441,
+    "t1": 1.906
+   },
+   {
+    "w": "dynamics",
+    "t0": 2.022,
+    "t1": 2.684
+   },
+   {
+    "w": "Point",
+    "t0": 2.974,
+    "t1": 3.229
+   },
+   {
+    "w": "one",
+    "t0": 3.311,
+    "t1": 3.496
+   },
+   {
+    "w": "we",
+    "t0": 3.543,
+    "t1": 3.624
+   },
+   {
+    "w": "must",
+    "t0": 3.682,
+    "t1": 3.845
+   },
+   {
+    "w": "not",
+    "t0": 3.891,
+    "t1": 4.054
+   },
+   {
+    "w": "launch",
+    "t0": 4.1,
+    "t1": 4.332
+   },
+   {
+    "w": "on",
+    "t0": 4.367,
+    "t1": 4.425
+   },
+   {
+    "w": "the",
+    "t0": 4.46,
+    "t1": 4.53
+   },
+   {
+    "w": "same",
+    "t0": 4.564,
+    "t1": 4.762
+   },
+   {
+    "w": "day",
+    "t0": 4.797,
+    "t1": 4.936
+   },
+   {
+    "w": "as",
+    "t0": 4.982,
+    "t1": 5.064
+   },
+   {
+    "w": "them",
+    "t0": 5.122,
+    "t1": 5.319
+   },
+   {
+    "w": "That's",
+    "t0": 5.389,
+    "t1": 5.598
+   },
+   {
+    "w": "how",
+    "t0": 5.644,
+    "t1": 5.737
+   },
+   {
+    "w": "a",
+    "t0": 5.783,
+    "t1": 5.818
+   },
+   {
+    "w": "race",
+    "t0": 5.865,
+    "t1": 6.062
+   },
+   {
+    "w": "starts",
+    "t0": 6.085,
+    "t1": 6.457
+   }
+  ],
+  "qa": {
+   "asr": "Memo on race dynamics point one we must not launch on the same day as them. That's how a race starts",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -4.21,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 128.2,
+   "f0_range_st": 9.3,
+   "speech_head_s": 0.37,
+   "speech_tail_s": 0.372,
+   "raw_tail_cut": false,
+   "align_median_s": 0.085
+  },
+  "voice": "ElevenLabs library voice 'Caleb - Youthful, Quirky and Clear' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+  "voiceId": "n5FCw0ouOVMADam2lTvQ",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "mario",
+   "voice_id": "n5FCw0ouOVMADam2lTvQ",
+   "voice_name": "Caleb - Youthful, Quirky and Clear",
+   "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "seed": 2206367427,
+   "chars_sent": 104,
+   "request_key": "7641f11e8a7687c9",
+   "derived_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-11-01.wav",
+   "mode": "on-mic",
+   "lufs_i": -16.0,
+   "duration_s": 7.625,
+   "audible_in_s": 0.5,
+   "audible_out_s": 7.11,
+   "wpm": 190.6,
+   "median_f0_hz": 118.7,
+   "f0_range_st": 11.4,
+   "delivery": "right pane, writing as he dictates, to CLOD in its spotlight",
+   "voice": "am_liam (Kokoro-82M stock) · a-liam-earnest · speed 1.020",
+   "timeline_in": 0.5,
+   "timeline_dur": 7.625
+  }
+ },
+ {
+  "id": "a5-27-41",
+  "kind": "dialogue",
+  "scene": "27",
+  "speaker": "TTEMME",
+  "speaker_slug": "ttemme",
+  "text": "Fine. But before I say yes, I need to know why you fired him.",
+  "spoken_as": "Fine. But before I say yes, I need to know why you fired him.",
+  "tag": "",
+  "delivery": "'Fine.' accepts the oddness; 0.35 s; then the condition, friendly but firm. The one question in pass one put straight to the board about the why.",
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/auditions/wav/a5-27-41__ttemme-A.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 4.555,
+  "frames_24": 109,
+  "voiced_span_s": 3.82,
+  "pace": {
+   "audible_in_s": 0.35,
+   "audible_out_s": 4.17,
+   "measured": {
+    "span_s": 3.82,
+    "wpm": 219.9,
+    "syllables": 15,
+    "articulation_sps": 4.09,
+    "pauses_s": [
+     0.07,
+     0.15
+    ]
+   },
+   "longest_internal_gap_s": 0.15,
+   "words": 14,
+   "wpm": 219.9,
+   "speed": 1.0,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Fine",
+    "t0": 0.35,
+    "t1": 0.78
+   },
+   {
+    "w": "But",
+    "t0": 1.139,
+    "t1": 1.29
+   },
+   {
+    "w": "before",
+    "t0": 1.325,
+    "t1": 1.581
+   },
+   {
+    "w": "I",
+    "t0": 1.615,
+    "t1": 1.639
+   },
+   {
+    "w": "say",
+    "t0": 1.697,
+    "t1": 1.848
+   },
+   {
+    "w": "yes",
+    "t0": 1.917,
+    "t1": 2.173
+   },
+   {
+    "w": "I",
+    "t0": 2.266,
+    "t1": 2.312
+   },
+   {
+    "w": "need",
+    "t0": 2.405,
+    "t1": 2.568
+   },
+   {
+    "w": "to",
+    "t0": 2.602,
+    "t1": 2.649
+   },
+   {
+    "w": "know",
+    "t0": 2.695,
+    "t1": 2.823
+   },
+   {
+    "w": "why",
+    "t0": 2.893,
+    "t1": 3.125
+   },
+   {
+    "w": "you",
+    "t0": 3.206,
+    "t1": 3.287
+   },
+   {
+    "w": "fired",
+    "t0": 3.38,
+    "t1": 3.717
+   },
+   {
+    "w": "him",
+    "t0": 3.752,
+    "t1": 3.879
+   }
+  ],
+  "qa": {
+   "asr": "Fine, but before I say yes, I need to know why you fired him.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -5.0,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 129.2,
+   "f0_range_st": 11.3,
+   "speech_head_s": 0.35,
+   "speech_tail_s": 0.385,
+   "raw_tail_cut": false,
+   "align_median_s": 0.095
+  },
+  "voice": "ElevenLabs library voice 'Sean - Expressive and Conversational' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+  "voiceId": "DwwuoY7Uz8AP8zrY5TAo",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "ttemme",
+   "voice_id": "DwwuoY7Uz8AP8zrY5TAo",
+   "voice_name": "Sean - Expressive and Conversational",
+   "source": "shared Voice Library (high-quality instant voice of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "seed": 1877743063,
+   "chars_sent": 61,
+   "request_key": "dfe520297125bbf7",
+   "derived_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-41.wav",
+   "mode": "on-mic",
+   "lufs_i": -16.0,
+   "duration_s": 4.625,
+   "audible_in_s": 0.51,
+   "audible_out_s": 4.14,
+   "wpm": 231.4,
+   "median_f0_hz": 158.3,
+   "f0_range_st": 14.6,
+   "delivery": "'Fine.' accepts the oddness; 0.35 s; then the condition, friendly but firm. The one question in pass one put straight to the board about the why.",
+   "voice": "am_fenrir (Kokoro-82M stock) · d-fenrir-headset · speed 1.020",
+   "timeline_in": 0.51,
+   "timeline_dur": 4.625
+  }
+ },
+ {
+  "id": "a5-30-08",
+  "kind": "dialogue",
+  "scene": "30",
+  "speaker": "TERB",
+  "speaker_slug": "terb",
+  "text": "Which room is on fire?",
+  "spoken_as": "Which room is on fire?",
+  "tag": "",
+  "delivery": "Brisk, procedural, walking in with the extinguisher after the freeze clears. A real question to the room.",
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/auditions/wav/a5-30-08__terb-A.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 2.186,
+  "frames_24": 52,
+  "voiced_span_s": 1.36,
+  "pace": {
+   "audible_in_s": 0.43,
+   "audible_out_s": 1.79,
+   "measured": {
+    "span_s": 1.36,
+    "wpm": 220.6,
+    "syllables": 5,
+    "articulation_sps": 3.68,
+    "pauses_s": [
+     0.08
+    ]
+   },
+   "longest_internal_gap_s": 0.08,
+   "words": 5,
+   "wpm": 220.6,
+   "speed": 1.05,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Which",
+    "t0": 0.41,
+    "t1": 0.594
+   },
+   {
+    "w": "room",
+    "t0": 0.652,
+    "t1": 0.803
+   },
+   {
+    "w": "is",
+    "t0": 0.849,
+    "t1": 0.907
+   },
+   {
+    "w": "on",
+    "t0": 0.965,
+    "t1": 1.047
+   },
+   {
+    "w": "fire",
+    "t0": 1.116,
+    "t1": 1.534
+   }
+  ],
+  "qa": {
+   "asr": "Which room is on fire?",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -2.0,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 109.4,
+   "f0_range_st": 7.4,
+   "speech_head_s": 0.43,
+   "speech_tail_s": 0.396,
+   "raw_tail_cut": false,
+   "align_median_s": 0.089
+  },
+  "voice": "ElevenLabs library voice 'Ethan - Calm, Optimistic and Clear' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.05",
+  "voiceId": "Pcfg2Zc6kmNWQ9ji3J5F",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "terb",
+   "voice_id": "Pcfg2Zc6kmNWQ9ji3J5F",
+   "voice_name": "Ethan - Calm, Optimistic and Clear",
+   "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.05
+   },
+   "seed": 119807126,
+   "chars_sent": 22,
+   "request_key": "a65fdc462ab8feec",
+   "derived_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/act4/dialogue/v5/wav/a5-30-08.wav",
+   "mode": "on-mic",
+   "lufs_i": -16.0,
+   "duration_s": 3.22,
+   "audible_in_s": 0.89,
+   "audible_out_s": 2.48,
+   "wpm": 188.7,
+   "median_f0_hz": 101.9,
+   "f0_range_st": 15.0,
+   "delivery": "Brisk, procedural, walking in with the extinguisher after the freeze clears. A real question to the room.",
+   "voice": "am_echo (Kokoro-82M stock) · b-echo-brisk · speed 1.020",
+   "timeline_in": 0.89,
+   "timeline_dur": 3.22
+  }
+ },
+ {
+  "id": "e1-a1-8-03",
+  "kind": "dialogue",
+  "scene": "8",
+  "speaker": "RADNUS",
+  "speaker_slug": "radnus",
+  "text": "Search is fine. Totally fine. It's just a chat thing, people seem to like talking to it.",
+  "spoken_as": "Search is fine. Totally fine. It's just a chat thing, people seem to like talking to it.",
+  "tag": "",
+  "delivery": "quickly, apologetic, holding up his phone to them: a chat bubble with two dot eyes blinks on it",
+  "on_camera": "on",
+  "mode": "call",
+  "device": "call",
+  "file": "audio/ep01/v3-el/auditions/wav/e1-a1-8-03__radnus-A.wav",
+  "file_device": "audio/ep01/v3-el/auditions/wav-device/e1-a1-8-03__radnus-A.call.wav",
+  "mp3": null,
+  "duration_s": 5.344,
+  "frames_24": 128,
+  "voiced_span_s": 4.43,
+  "pace": {
+   "audible_in_s": 0.36,
+   "audible_out_s": 4.79,
+   "measured": {
+    "span_s": 4.43,
+    "wpm": 230.2,
+    "syllables": 21,
+    "articulation_sps": 5.51,
+    "pauses_s": [
+     0.47,
+     0.15
+    ]
+   },
+   "longest_internal_gap_s": 0.47,
+   "words": 17,
+   "wpm": 230.2,
+   "speed": 0.9,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Search",
+    "t0": 0.35,
+    "t1": 0.652
+   },
+   {
+    "w": "is",
+    "t0": 0.698,
+    "t1": 0.78
+   },
+   {
+    "w": "fine",
+    "t0": 0.849,
+    "t1": 1.221
+   },
+   {
+    "w": "Totally",
+    "t0": 1.755,
+    "t1": 2.115
+   },
+   {
+    "w": "fine",
+    "t0": 2.161,
+    "t1": 2.393
+   },
+   {
+    "w": "It's",
+    "t0": 2.44,
+    "t1": 2.544
+   },
+   {
+    "w": "just",
+    "t0": 2.579,
+    "t1": 2.718
+   },
+   {
+    "w": "a",
+    "t0": 2.753,
+    "t1": 2.788
+   },
+   {
+    "w": "chat",
+    "t0": 2.835,
+    "t1": 3.067
+   },
+   {
+    "w": "thing",
+    "t0": 3.136,
+    "t1": 3.299
+   },
+   {
+    "w": "people",
+    "t0": 3.357,
+    "t1": 3.589
+   },
+   {
+    "w": "seem",
+    "t0": 3.624,
+    "t1": 3.763
+   },
+   {
+    "w": "to",
+    "t0": 3.81,
+    "t1": 3.856
+   },
+   {
+    "w": "like",
+    "t0": 3.926,
+    "t1": 4.065
+   },
+   {
+    "w": "talking",
+    "t0": 4.088,
+    "t1": 4.367
+   },
+   {
+    "w": "to",
+    "t0": 4.413,
+    "t1": 4.472
+   },
+   {
+    "w": "it",
+    "t0": 4.553,
+    "t1": 4.669
+   }
+  ],
+  "qa": {
+   "asr": "Search is fine. Totally fine. It's just a chat thing. People seem to like talking to it.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -3.04,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 134.9,
+   "f0_range_st": 7.6,
+   "speech_head_s": 0.36,
+   "speech_tail_s": 0.554,
+   "raw_tail_cut": false,
+   "align_median_s": 0.09
+  },
+  "voice": "ElevenLabs library voice 'Dylan Malc - Calm & Educational' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.9",
+  "voiceId": "PMWmvqAOXhLm54FLpmYS",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "radnus",
+   "voice_id": "PMWmvqAOXhLm54FLpmYS",
+   "voice_name": "Dylan Malc - Calm & Educational",
+   "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 0.9
+   },
+   "seed": 114823319,
+   "chars_sent": 88,
+   "request_key": "07928793403afc51",
+   "derived_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)",
+   "file_device: the same take through a copy of house.call_filter() (HPF 200, LPF 7k, +1.5 dB @1.8k, 2.5:1), as the Kokoro take printed it"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-8-03.wav",
+   "mode": "call",
+   "lufs_i": -16.0,
+   "duration_s": 5.98,
+   "audible_in_s": 0.5,
+   "audible_out_s": 5.48,
+   "wpm": 204.8,
+   "median_f0_hz": 131.8,
+   "f0_range_st": 11.9,
+   "delivery": "quickly, apologetic, holding up his phone to them: a chat bubble with two dot eyes blinks on it",
+   "voice": "am_echo*0.60+am_fenrir*0.40 (Kokoro-82M stock) · d-echo-fenrir-courteous-up2 · speed 1.030",
+   "timeline_in": 0.5,
+   "timeline_dur": 5.98
+  }
+ },
+ {
+  "id": "a5-27-32",
+  "kind": "dialogue",
+  "scene": "27",
+  "speaker": "ADELINA",
+  "speaker_slug": "adelina",
+  "text": "In plain English: no.",
+  "spoken_as": "In plain English: no.",
+  "tag": "",
+  "delivery": "In over his last syllable of 'hypothetically' (tail overlap, ~0.25 s). Brisk, warm, kind finality. 0.25 s after the colon.",
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/auditions/wav/a5-27-32__adelina-A.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 2.186,
+  "frames_24": 52,
+  "voiced_span_s": 1.44,
+  "pace": {
+   "audible_in_s": 0.37,
+   "audible_out_s": 1.81,
+   "measured": {
+    "span_s": 1.44,
+    "wpm": 166.7,
+    "syllables": 5,
+    "articulation_sps": 3.47,
+    "pauses_s": []
+   },
+   "longest_internal_gap_s": 0.0,
+   "words": 4,
+   "wpm": 166.7,
+   "speed": 1.0,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "In",
+    "t0": 0.35,
+    "t1": 0.466
+   },
+   {
+    "w": "plain",
+    "t0": 0.524,
+    "t1": 0.768
+   },
+   {
+    "w": "English",
+    "t0": 0.826,
+    "t1": 1.163
+   },
+   {
+    "w": "no",
+    "t0": 1.232,
+    "t1": 1.441
+   }
+  ],
+  "qa": {
+   "asr": "In plain English, no.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -3.86,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 223.3,
+   "f0_range_st": 9.6,
+   "speech_head_s": 0.37,
+   "speech_tail_s": 0.376,
+   "raw_tail_cut": false,
+   "align_median_s": 0.188
+  },
+  "voice": "ElevenLabs library voice 'Gracy - Clear, Articulate and Steady' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+  "voiceId": "biKKUtquxxZTxOnPw4Tk",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "adelina",
+   "voice_id": "biKKUtquxxZTxOnPw4Tk",
+   "voice_name": "Gracy - Clear, Articulate and Steady",
+   "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "seed": 3816985440,
+   "chars_sent": 21,
+   "request_key": "19fe759e91bccb19",
+   "derived_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-32.wav",
+   "mode": "on-mic",
+   "lufs_i": -16.0,
+   "duration_s": 2.63,
+   "audible_in_s": 0.5,
+   "audible_out_s": 2.04,
+   "wpm": 155.8,
+   "median_f0_hz": 205.3,
+   "f0_range_st": 6.4,
+   "delivery": "In over his last syllable of 'hypothetically' (tail overlap, ~0.25 s). Brisk, warm, kind finality. 0.25 s after the colon.",
+   "voice": "af_bella (Kokoro-82M stock) · a-bella-warm · speed 1.000",
+   "timeline_in": 0.5,
+   "timeline_dur": 2.63
+  }
+ },
+ {
+  "id": "a5-27-18",
+  "kind": "dialogue",
+  "scene": "27",
+  "speaker": "TILED EMPLOYEE",
+  "speaker_slug": "tiled-employee",
+  "text": "Is this a coup? Because it looks like one.",
+  "spoken_as": "Is this a coup? Because it looks like one.",
+  "tag": "",
+  "delivery": "Standing, hand still up, from the back of the crowd: nervous but firm, a real question. A breath before it (the crowd hushes first). 0.3 s between the sentences; the second is a push, not a joke.",
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/auditions/wav/a5-27-18__tiled-employee-A.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 2.86,
+  "frames_24": 69,
+  "voiced_span_s": 1.98,
+  "pace": {
+   "audible_in_s": 0.42,
+   "audible_out_s": 2.4,
+   "measured": {
+    "span_s": 1.98,
+    "wpm": 272.7,
+    "syllables": 10,
+    "articulation_sps": 5.71,
+    "pauses_s": [
+     0.23
+    ]
+   },
+   "longest_internal_gap_s": 0.23,
+   "words": 9,
+   "wpm": 272.7,
+   "speed": 0.95,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Is",
+    "t0": 0.4,
+    "t1": 0.524
+   },
+   {
+    "w": "this",
+    "t0": 0.559,
+    "t1": 0.698
+   },
+   {
+    "w": "a",
+    "t0": 0.756,
+    "t1": 0.791
+   },
+   {
+    "w": "coup",
+    "t0": 0.849,
+    "t1": 1.07
+   },
+   {
+    "w": "Because",
+    "t0": 1.372,
+    "t1": 1.65
+   },
+   {
+    "w": "it",
+    "t0": 1.674,
+    "t1": 1.732
+   },
+   {
+    "w": "looks",
+    "t0": 1.755,
+    "t1": 1.941
+   },
+   {
+    "w": "like",
+    "t0": 1.975,
+    "t1": 2.126
+   },
+   {
+    "w": "one",
+    "t0": 2.184,
+    "t1": 2.405
+   }
+  ],
+  "qa": {
+   "asr": "Is this a coup? Because it looks like one.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -3.7,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 169.3,
+   "f0_range_st": 9.4,
+   "speech_head_s": 0.42,
+   "speech_tail_s": 0.46,
+   "raw_tail_cut": false,
+   "align_median_s": 0.076
+  },
+  "voice": "ElevenLabs library voice 'Avery - Healthcare & Clinical Education' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.95",
+  "voiceId": "w25dAwxibNES1hcDBvXx",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "tiled-employee",
+   "voice_id": "w25dAwxibNES1hcDBvXx",
+   "voice_name": "Avery - Healthcare & Clinical Education",
+   "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "seed": 518239264,
+   "chars_sent": 42,
+   "request_key": "cd04451c81c5f242",
+   "derived_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-18.wav",
+   "mode": "on-mic",
+   "lufs_i": -16.0,
+   "duration_s": 4.148,
+   "audible_in_s": 0.83,
+   "audible_out_s": 3.3,
+   "wpm": 218.6,
+   "median_f0_hz": 145.6,
+   "f0_range_st": 10.6,
+   "delivery": "Standing, hand still up, from the back of the crowd: nervous but firm, a real question. A breath before it (the crowd hushes first). 0.3 s between the sentences; the second is a push, not a joke.",
+   "voice": "af_nova (Kokoro-82M stock) · a-nova-plain · speed 1.000",
+   "timeline_in": 0.83,
+   "timeline_dur": 4.148
+  }
+ },
+ {
+  "id": "e1-a2-13-15",
+  "kind": "dialogue",
+  "scene": "13",
+  "speaker": "NEDIB",
+  "speaker_slug": "nedib",
+  "text": "Whatever you promise in here today, put it in writing. Longer.",
+  "spoken_as": "Whatever you promise in here today, put it in writing. Longer.",
+  "tag": "",
+  "delivery": "to the row",
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/auditions/wav/e1-a2-13-15__nedib-A.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 3.951,
+  "frames_24": 95,
+  "voiced_span_s": 3.21,
+  "pace": {
+   "audible_in_s": 0.35,
+   "audible_out_s": 3.56,
+   "measured": {
+    "span_s": 3.21,
+    "wpm": 205.6,
+    "syllables": 17,
+    "articulation_sps": 5.3,
+    "pauses_s": []
+   },
+   "longest_internal_gap_s": 0.0,
+   "words": 11,
+   "wpm": 205.6,
+   "speed": 1.0,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Whatever",
+    "t0": 0.35,
+    "t1": 0.687
+   },
+   {
+    "w": "you",
+    "t0": 0.722,
+    "t1": 0.791
+   },
+   {
+    "w": "promise",
+    "t0": 0.849,
+    "t1": 1.139
+   },
+   {
+    "w": "in",
+    "t0": 1.163,
+    "t1": 1.221
+   },
+   {
+    "w": "here",
+    "t0": 1.267,
+    "t1": 1.407
+   },
+   {
+    "w": "today",
+    "t0": 1.441,
+    "t1": 1.697
+   },
+   {
+    "w": "put",
+    "t0": 1.778,
+    "t1": 1.941
+   },
+   {
+    "w": "it",
+    "t0": 1.975,
+    "t1": 2.057
+   },
+   {
+    "w": "in",
+    "t0": 2.103,
+    "t1": 2.161
+   },
+   {
+    "w": "writing",
+    "t0": 2.208,
+    "t1": 2.556
+   },
+   {
+    "w": "Longer",
+    "t0": 2.869,
+    "t1": 3.264
+   }
+  ],
+  "qa": {
+   "asr": "Whatever you promise in here today, put it in writing. Longer.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -4.58,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 126.1,
+   "f0_range_st": 13.2,
+   "speech_head_s": 0.35,
+   "speech_tail_s": 0.391,
+   "raw_tail_cut": false,
+   "align_median_s": 0.063
+  },
+  "voice": "ElevenLabs library voice 'Johnny - Friendly, Optimistic and Warm' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+  "voiceId": "II2zvu784M1JmLdcOa7B",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "nedib",
+   "voice_id": "II2zvu784M1JmLdcOa7B",
+   "voice_name": "Johnny - Friendly, Optimistic and Warm",
+   "source": "shared Voice Library (high-quality instant voice of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "seed": 311117866,
+   "chars_sent": 62,
+   "request_key": "ef5c3b9af2865740",
+   "derived_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-15.wav",
+   "mode": "on-mic",
+   "lufs_i": -16.0,
+   "duration_s": 5.18,
+   "audible_in_s": 0.5,
+   "audible_out_s": 4.63,
+   "wpm": 159.8,
+   "median_f0_hz": 110.6,
+   "f0_range_st": 11.0,
+   "delivery": "to the row",
+   "voice": "am_fenrir*0.50+am_onyx*0.50 (Kokoro-82M stock) · d-fenrir-onyx-folksy-0 · speed 0.930",
+   "timeline_in": 0.5,
+   "timeline_dur": 5.18
+  }
+ },
+ {
+  "id": "e1-a3-21-02",
+  "kind": "dialogue",
+  "scene": "21",
+  "speaker": "DEEPFAKE NEDIB",
+  "speaker_slug": "deepfake-nedib",
+  "text": "And then the computers regulate themselves.",
+  "spoken_as": "And then the computers regulate themselves.",
+  "tag": "",
+  "delivery": "the same cadence, a shade too smooth, carrying on as if it were the same sentence",
+  "on_camera": "on",
+  "mode": "call",
+  "device": "call",
+  "file": "audio/ep01/v3-el/auditions/wav/e1-a3-21-02__deepfake-nedib-A.wav",
+  "file_device": "audio/ep01/v3-el/auditions/wav-device/e1-a3-21-02__deepfake-nedib-A.call.wav",
+  "mp3": null,
+  "duration_s": 2.65,
+  "frames_24": 64,
+  "voiced_span_s": 1.83,
+  "pace": {
+   "audible_in_s": 0.42,
+   "audible_out_s": 2.25,
+   "measured": {
+    "span_s": 1.83,
+    "wpm": 196.7,
+    "syllables": 11,
+    "articulation_sps": 6.01,
+    "pauses_s": []
+   },
+   "longest_internal_gap_s": 0.0,
+   "words": 6,
+   "wpm": 196.7,
+   "speed": 1.0,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "And",
+    "t0": 0.4,
+    "t1": 0.513
+   },
+   {
+    "w": "then",
+    "t0": 0.559,
+    "t1": 0.675
+   },
+   {
+    "w": "the",
+    "t0": 0.722,
+    "t1": 0.791
+   },
+   {
+    "w": "computers",
+    "t0": 0.826,
+    "t1": 1.244
+   },
+   {
+    "w": "regulate",
+    "t0": 1.302,
+    "t1": 1.685
+   },
+   {
+    "w": "themselves",
+    "t0": 1.72,
+    "t1": 2.208
+   }
+  ],
+  "qa": {
+   "asr": "and then the computers regulate themselves.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -5.25,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 133.0,
+   "f0_range_st": 13.5,
+   "speech_head_s": 0.42,
+   "speech_tail_s": 0.4,
+   "raw_tail_cut": false,
+   "align_median_s": 0.18
+  },
+  "voice": "ElevenLabs library voice 'Johnny - Friendly, Optimistic and Warm' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+  "voiceId": "II2zvu784M1JmLdcOa7B",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "deepfake-nedib",
+   "voice_id": "II2zvu784M1JmLdcOa7B",
+   "voice_name": "Johnny - Friendly, Optimistic and Warm",
+   "source": "shared Voice Library (high-quality instant voice of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.85,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "seed": 1402639688,
+   "chars_sent": 43,
+   "request_key": "027f4189a81f2d85",
+   "derived_from": "nedib"
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)",
+   "file_device: the same take through a copy of house.call_filter() (HPF 200, LPF 7k, +1.5 dB @1.8k, 2.5:1), as the Kokoro take printed it"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-21-02.wav",
+   "mode": "call",
+   "lufs_i": -16.0,
+   "duration_s": 3.405,
+   "audible_in_s": 0.5,
+   "audible_out_s": 2.74,
+   "wpm": 160.7,
+   "median_f0_hz": 111.9,
+   "f0_range_st": 11.6,
+   "delivery": "the same cadence, a shade too smooth, carrying on as if it were the same sentence",
+   "voice": "am_fenrir*0.50+am_onyx*0.50 (Kokoro-82M stock) · d-fenrir-onyx-folksy-0 + gloss · speed 0.970",
+   "timeline_in": 0.5,
+   "timeline_dur": 3.405
+  }
+ },
+ {
+  "id": "e1-a3-21-03",
+  "kind": "dialogue",
+  "scene": "21",
+  "speaker": "DEEPFAKE NEDIB #2",
+  "speaker_slug": "deepfake-nedib-2",
+  "text": "And no paperwork, folks. None at all.",
+  "spoken_as": "And no paperwork, folks. None at all.",
+  "tag": "",
+  "delivery": "delighted, in turn",
+  "on_camera": "on",
+  "mode": "call",
+  "device": "call",
+  "file": "audio/ep01/v3-el/auditions/wav/e1-a3-21-03__deepfake-nedib-2-A.wav",
+  "file_device": "audio/ep01/v3-el/auditions/wav-device/e1-a3-21-03__deepfake-nedib-2-A.call.wav",
+  "mp3": null,
+  "duration_s": 2.883,
+  "frames_24": 69,
+  "voiced_span_s": 1.94,
+  "pace": {
+   "audible_in_s": 0.39,
+   "audible_out_s": 2.33,
+   "measured": {
+    "span_s": 1.94,
+    "wpm": 216.5,
+    "syllables": 9,
+    "articulation_sps": 5.08,
+    "pauses_s": [
+     0.17
+    ]
+   },
+   "longest_internal_gap_s": 0.17,
+   "words": 7,
+   "wpm": 216.5,
+   "speed": 1.0,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "And",
+    "t0": 0.37,
+    "t1": 0.501
+   },
+   {
+    "w": "no",
+    "t0": 0.559,
+    "t1": 0.652
+   },
+   {
+    "w": "paperwork",
+    "t0": 0.722,
+    "t1": 1.151
+   },
+   {
+    "w": "folks",
+    "t0": 1.198,
+    "t1": 1.488
+   },
+   {
+    "w": "None",
+    "t0": 1.755,
+    "t1": 1.964
+   },
+   {
+    "w": "at",
+    "t0": 1.999,
+    "t1": 2.057
+   },
+   {
+    "w": "all",
+    "t0": 2.103,
+    "t1": 2.3
+   }
+  ],
+  "qa": {
+   "asr": "And no paperwork folks, none at all.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.19,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -4.89,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 122.8,
+   "f0_range_st": 13.2,
+   "speech_head_s": 0.39,
+   "speech_tail_s": 0.553,
+   "raw_tail_cut": false,
+   "align_median_s": 0.063
+  },
+  "voice": "ElevenLabs library voice 'Johnny - Friendly, Optimistic and Warm' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+  "voiceId": "II2zvu784M1JmLdcOa7B",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "deepfake-nedib-2",
+   "voice_id": "II2zvu784M1JmLdcOa7B",
+   "voice_name": "Johnny - Friendly, Optimistic and Warm",
+   "source": "shared Voice Library (high-quality instant voice of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.85,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "seed": 3607771326,
+   "chars_sent": 37,
+   "request_key": "8a5360182fe558d6",
+   "derived_from": "nedib"
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)",
+   "file_device: the same take through a copy of house.call_filter() (HPF 200, LPF 7k, +1.5 dB @1.8k, 2.5:1), as the Kokoro take printed it"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-21-03.wav",
+   "mode": "call",
+   "lufs_i": -16.0,
+   "duration_s": 3.5,
+   "audible_in_s": 0.5,
+   "audible_out_s": 2.81,
+   "wpm": 181.8,
+   "median_f0_hz": 111.0,
+   "f0_range_st": 12.1,
+   "delivery": "delighted, in turn",
+   "voice": "am_fenrir*0.50+am_onyx*0.50 (Kokoro-82M stock) · d-fenrir-onyx-folksy-0 + gloss · speed 0.970",
+   "timeline_in": 0.5,
+   "timeline_dur": 3.5
+  }
+ },
+ {
+  "id": "e1-a1-10-06",
+  "kind": "dialogue",
+  "scene": "10",
+  "speaker": "SYDNEY",
+  "speaker_slug": "sydney",
+  "text": "Hi! Isn't 2022 a lovely year? 😊",
+  "spoken_as": "Hi! Isn't 2022 a lovely year?",
+  "tag": "",
+  "delivery": "sweetly, a pixel too close; her first words",
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/auditions/wav/e1-a1-10-06__sydney-A.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 2.83,
+  "frames_24": 68,
+  "voiced_span_s": 1.86,
+  "pace": {
+   "audible_in_s": 0.42,
+   "audible_out_s": 2.28,
+   "measured": {
+    "span_s": 1.86,
+    "wpm": 193.5,
+    "syllables": 13,
+    "articulation_sps": 7.51,
+    "pauses_s": [
+     0.13
+    ]
+   },
+   "longest_internal_gap_s": 0.13,
+   "words": 6,
+   "wpm": 193.5,
+   "speed": 0.9,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Hi",
+    "t0": 0.4,
+    "t1": 0.687
+   },
+   {
+    "w": "Isn't",
+    "t0": 0.814,
+    "t1": 1.093
+   },
+   {
+    "w": "2022",
+    "t0": 1.139,
+    "t1": 1.708
+   },
+   {
+    "w": "a",
+    "t0": 1.755,
+    "t1": 1.778
+   },
+   {
+    "w": "lovely",
+    "t0": 1.824,
+    "t1": 2.045
+   },
+   {
+    "w": "year",
+    "t0": 2.08,
+    "t1": 2.266
+   }
+  ],
+  "qa": {
+   "asr": "Hi, isn't 2020 to a lovely year?",
+   "cer": 0.022,
+   "word_recall_nonames": 0.889,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -1.65,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 296.1,
+   "f0_range_st": 6.3,
+   "speech_head_s": 0.42,
+   "speech_tail_s": 0.55,
+   "raw_tail_cut": false,
+   "align_median_s": 0.106
+  },
+  "voice": "ElevenLabs library voice 'Layla' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.9",
+  "voiceId": "WQhVGGVQ8EhNpBYHFE8c",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "sydney",
+   "voice_id": "WQhVGGVQ8EhNpBYHFE8c",
+   "voice_name": "Layla",
+   "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.45,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 0.9
+   },
+   "seed": 3533879264,
+   "chars_sent": 29,
+   "request_key": "d73d8cdeb3390cdf",
+   "derived_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-10-06.wav",
+   "mode": "on-mic",
+   "lufs_i": -16.0,
+   "duration_s": 3.785,
+   "audible_in_s": 0.5,
+   "audible_out_s": 3.1,
+   "wpm": 161.5,
+   "median_f0_hz": 165.8,
+   "f0_range_st": 11.4,
+   "delivery": "sweetly, a pixel too close; her first words",
+   "voice": "af_kore (Kokoro-82M stock) · b-kore-sweet · speed 0.840",
+   "timeline_in": 0.5,
+   "timeline_dur": 3.785
+  }
+ },
+ {
+  "id": "e1-a2-15-03",
+  "kind": "dialogue",
+  "scene": "15",
+  "speaker": "SUCRAM",
+  "speaker_slug": "sucram",
+  "text": "Don't mind me. It's a thread. One of forty-seven.",
+  "spoken_as": "Don't mind me. It's a thread. One of forty-seven.",
+  "tag": "",
+  "delivery": "low, typing, to Mas, not looking up",
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/auditions/wav/e1-a2-15-03__sucram-A.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 3.394,
+  "frames_24": 81,
+  "voiced_span_s": 2.35,
+  "pace": {
+   "audible_in_s": 0.38,
+   "audible_out_s": 2.73,
+   "measured": {
+    "span_s": 2.35,
+    "wpm": 229.8,
+    "syllables": 12,
+    "articulation_sps": 5.74,
+    "pauses_s": [
+     0.26
+    ]
+   },
+   "longest_internal_gap_s": 0.26,
+   "words": 9,
+   "wpm": 229.8,
+   "speed": 1.12,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Don't",
+    "t0": 0.36,
+    "t1": 0.594
+   },
+   {
+    "w": "mind",
+    "t0": 0.629,
+    "t1": 0.78
+   },
+   {
+    "w": "me",
+    "t0": 0.826,
+    "t1": 1.023
+   },
+   {
+    "w": "It's",
+    "t0": 1.139,
+    "t1": 1.314
+   },
+   {
+    "w": "a",
+    "t0": 1.348,
+    "t1": 1.372
+   },
+   {
+    "w": "thread",
+    "t0": 1.418,
+    "t1": 1.72
+   },
+   {
+    "w": "One",
+    "t0": 1.975,
+    "t1": 2.126
+   },
+   {
+    "w": "of",
+    "t0": 2.15,
+    "t1": 2.196
+   },
+   {
+    "w": "forty-seven",
+    "t0": 2.231,
+    "t1": 2.742
+   }
+  ],
+  "qa": {
+   "asr": "Don't mind me, it's a thread, 1 of 47.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -3.86,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 114.6,
+   "f0_range_st": 15.6,
+   "speech_head_s": 0.38,
+   "speech_tail_s": 0.664,
+   "raw_tail_cut": false,
+   "align_median_s": 0.05
+  },
+  "voice": "ElevenLabs library voice 'Mark - Natural Conversations' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.12",
+  "voiceId": "UgBBYS2sOqTuMpoF3BR0",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "sucram",
+   "voice_id": "UgBBYS2sOqTuMpoF3BR0",
+   "voice_name": "Mark - Natural Conversations",
+   "source": "shared Voice Library (high-quality instant voice of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.12
+   },
+   "seed": 2925526430,
+   "chars_sent": 49,
+   "request_key": "3cf7d6e8d880d6a9",
+   "derived_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-03.wav",
+   "mode": "on-mic",
+   "lufs_i": -16.0,
+   "duration_s": 4.105,
+   "audible_in_s": 0.5,
+   "audible_out_s": 3.6,
+   "wpm": 174.2,
+   "median_f0_hz": 130.8,
+   "f0_range_st": 13.0,
+   "delivery": "low, typing, to Mas, not looking up",
+   "voice": "am_liam*0.50+am_puck*0.50 (Kokoro-82M stock) · d-liam-puck-thread-0 · speed 1.160",
+   "timeline_in": 0.5,
+   "timeline_dur": 4.105
+  }
+ },
+ {
+  "id": "e1-a2-13-02",
+  "kind": "dialogue",
+  "scene": "13",
+  "speaker": "SIRRAH",
+  "speaker_slug": "sirrah",
+  "text": "Any questions, before we take the picture?",
+  "spoken_as": "Any questions, before we take the picture?",
+  "tag": "",
+  "delivery": "O.S.; the teacher, to the row",
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/auditions/wav/e1-a2-13-02__sirrah-A.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 3.394,
+  "frames_24": 81,
+  "voiced_span_s": 2.67,
+  "pace": {
+   "audible_in_s": 0.35,
+   "audible_out_s": 3.02,
+   "measured": {
+    "span_s": 2.67,
+    "wpm": 157.3,
+    "syllables": 11,
+    "articulation_sps": 4.12,
+    "pauses_s": []
+   },
+   "longest_internal_gap_s": 0.0,
+   "words": 7,
+   "wpm": 157.3,
+   "speed": 0.95,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Any",
+    "t0": 0.35,
+    "t1": 0.582
+   },
+   {
+    "w": "questions",
+    "t0": 0.64,
+    "t1": 1.244
+   },
+   {
+    "w": "before",
+    "t0": 1.383,
+    "t1": 1.72
+   },
+   {
+    "w": "we",
+    "t0": 1.755,
+    "t1": 1.836
+   },
+   {
+    "w": "take",
+    "t0": 1.894,
+    "t1": 2.103
+   },
+   {
+    "w": "the",
+    "t0": 2.138,
+    "t1": 2.208
+   },
+   {
+    "w": "picture",
+    "t0": 2.254,
+    "t1": 2.695
+   }
+  ],
+  "qa": {
+   "asr": "Any questions before we take the picture?",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -3.48,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 229.8,
+   "f0_range_st": 7.4,
+   "speech_head_s": 0.35,
+   "speech_tail_s": 0.374,
+   "raw_tail_cut": false,
+   "align_median_s": 0.08
+  },
+  "voice": "ElevenLabs library voice 'Marie - Professional & Warm' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.95",
+  "voiceId": "wsL2AB1kHVzgox3WvQP2",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "sirrah",
+   "voice_id": "wsL2AB1kHVzgox3WvQP2",
+   "voice_name": "Marie - Professional & Warm",
+   "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "seed": 492026541,
+   "chars_sent": 42,
+   "request_key": "b7522844250df8b2",
+   "derived_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-02.wav",
+   "mode": "on-mic",
+   "lufs_i": -16.0,
+   "duration_s": 3.285,
+   "audible_in_s": 0.51,
+   "audible_out_s": 2.8,
+   "wpm": 183.4,
+   "median_f0_hz": 201.7,
+   "f0_range_st": 13.4,
+   "delivery": "O.S.; the teacher, to the row",
+   "voice": "af_sarah (Kokoro-82M stock) · a-sarah-crisp · speed 0.950",
+   "timeline_in": 0.51,
+   "timeline_dur": 3.285
+  }
+ },
+ {
+  "id": "e1-a1-12-01",
+  "kind": "dialogue",
+  "scene": "12",
+  "speaker": "NOLE",
+  "speaker_slug": "nole",
+  "text": "Great sign. Love the font.",
+  "spoken_as": "Great sign. Love the font.",
+  "tag": "",
+  "delivery": "not looking up from the solder",
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/auditions/wav/e1-a1-12-01__nole-A.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 2.233,
+  "frames_24": 54,
+  "voiced_span_s": 1.44,
+  "pace": {
+   "audible_in_s": 0.37,
+   "audible_out_s": 1.81,
+   "measured": {
+    "span_s": 1.44,
+    "wpm": 208.3,
+    "syllables": 5,
+    "articulation_sps": 3.73,
+    "pauses_s": [
+     0.1
+    ]
+   },
+   "longest_internal_gap_s": 0.1,
+   "words": 5,
+   "wpm": 208.3,
+   "speed": 1.05,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Great",
+    "t0": 0.35,
+    "t1": 0.629
+   },
+   {
+    "w": "sign",
+    "t0": 0.687,
+    "t1": 0.965
+   },
+   {
+    "w": "Love",
+    "t0": 1.139,
+    "t1": 1.348
+   },
+   {
+    "w": "the",
+    "t0": 1.383,
+    "t1": 1.453
+   },
+   {
+    "w": "font",
+    "t0": 1.499,
+    "t1": 1.778
+   }
+  ],
+  "qa": {
+   "asr": "Great sign. Love the font.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -3.06,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 95.3,
+   "f0_range_st": 14.0,
+   "speech_head_s": 0.37,
+   "speech_tail_s": 0.423,
+   "raw_tail_cut": false,
+   "align_median_s": 0.103
+  },
+  "voice": "ElevenLabs library voice 'Ryan - Confident and Bold' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.05",
+  "voiceId": "ya031zGCAxyRGrvB3or9",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "nole",
+   "voice_id": "ya031zGCAxyRGrvB3or9",
+   "voice_name": "Ryan - Confident and Bold",
+   "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.35,
+    "similarity_boost": 0.75,
+    "style": 0.2,
+    "use_speaker_boost": true,
+    "speed": 1.05
+   },
+   "seed": 300538149,
+   "chars_sent": 26,
+   "request_key": "8e32eeebca1838f8",
+   "derived_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-12-01.wav",
+   "mode": "on-mic",
+   "lufs_i": -16.0,
+   "duration_s": 2.31,
+   "audible_in_s": 0.5,
+   "audible_out_s": 1.84,
+   "wpm": 223.9,
+   "median_f0_hz": 141.0,
+   "f0_range_st": 14.2,
+   "delivery": "not looking up from the solder",
+   "voice": "am_fenrir (Kokoro-82M stock) · a-fenrir-burst (pass-1 pick, dry) · speed 1.040",
+   "timeline_in": 0.5,
+   "timeline_dur": 2.31
+  }
+ },
+ {
+  "id": "e1-a2-15-09",
+  "kind": "dialogue",
+  "scene": "15",
+  "speaker": "LAHTNEMULB",
+  "speaker_slug": "lahtnemulb",
+  "text": "Speaking for myself, a little.",
+  "spoken_as": "Speaking for myself, a little.",
+  "tag": "",
+  "delivery": "quietly, his eyes on his card in the clone's hand",
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/auditions/wav/e1-a2-15-09__lahtnemulb-A.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 2.34,
+  "frames_24": 56,
+  "voiced_span_s": 1.51,
+  "pace": {
+   "audible_in_s": 0.37,
+   "audible_out_s": 1.88,
+   "measured": {
+    "span_s": 1.51,
+    "wpm": 198.7,
+    "syllables": 8,
+    "articulation_sps": 5.3,
+    "pauses_s": []
+   },
+   "longest_internal_gap_s": 0.0,
+   "words": 5,
+   "wpm": 198.7,
+   "speed": 0.92,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Speaking",
+    "t0": 0.35,
+    "t1": 0.78
+   },
+   {
+    "w": "for",
+    "t0": 0.826,
+    "t1": 0.93
+   },
+   {
+    "w": "myself",
+    "t0": 0.977,
+    "t1": 1.441
+   },
+   {
+    "w": "a",
+    "t0": 1.511,
+    "t1": 1.546
+   },
+   {
+    "w": "little",
+    "t0": 1.604,
+    "t1": 1.9
+   }
+  ],
+  "qa": {
+   "asr": "speaking for myself a little",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -4.12,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 97.9,
+   "f0_range_st": 12.1,
+   "speech_head_s": 0.37,
+   "speech_tail_s": 0.46,
+   "raw_tail_cut": false,
+   "align_median_s": 0.146
+  },
+  "voice": "ElevenLabs library voice 'Will – Grounded Narrator' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.92",
+  "voiceId": "zL8BUx7dljdEZMmcSu8V",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "lahtnemulb",
+   "voice_id": "zL8BUx7dljdEZMmcSu8V",
+   "voice_name": "Will – Grounded Narrator",
+   "source": "shared Voice Library (high-quality instant voice of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.92
+   },
+   "seed": 2444925997,
+   "chars_sent": 30,
+   "request_key": "b28ee8f1a3b1eea0",
+   "derived_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-09.wav",
+   "mode": "on-mic",
+   "lufs_i": -16.0,
+   "duration_s": 3.27,
+   "audible_in_s": 0.5,
+   "audible_out_s": 2.8,
+   "wpm": 130.4,
+   "median_f0_hz": 98.6,
+   "f0_range_st": 13.5,
+   "delivery": "quietly, his eyes on his card in the clone's hand",
+   "voice": "am_adam*0.50+am_echo*0.50 (Kokoro-82M stock) · d-adam-echo-senate-low · speed 0.850",
+   "timeline_in": 0.5,
+   "timeline_dur": 3.27
+  }
+ },
+ {
+  "id": "e1-a2-15-08",
+  "kind": "dialogue",
+  "scene": "15",
+  "speaker": "LAHTNEMULB (THE CLONE)",
+  "speaker_slug": "lahtnemulb-clone",
+  "text": "Are you nervous, Mr. Manalt?",
+  "spoken_as": "Are you nervous, Mr. Manalt?",
+  "tag": "",
+  "delivery": null,
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/auditions/wav/e1-a2-15-08__lahtnemulb-clone-A.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 2.418,
+  "frames_24": 58,
+  "voiced_span_s": 1.38,
+  "pace": {
+   "audible_in_s": 0.39,
+   "audible_out_s": 1.77,
+   "measured": {
+    "span_s": 1.38,
+    "wpm": 217.4,
+    "syllables": 7,
+    "articulation_sps": 5.07,
+    "pauses_s": []
+   },
+   "longest_internal_gap_s": 0.0,
+   "words": 5,
+   "wpm": 217.4,
+   "speed": 0.92,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Are",
+    "t0": 0.37,
+    "t1": 0.513
+   },
+   {
+    "w": "you",
+    "t0": 0.547,
+    "t1": 0.629
+   },
+   {
+    "w": "nervous",
+    "t0": 0.687,
+    "t1": 0.965
+   },
+   {
+    "w": "Mr",
+    "t0": 1.012,
+    "t1": 1.279
+   },
+   {
+    "w": "Manalt",
+    "t0": 1.348,
+    "t1": 1.732
+   }
+  ],
+  "qa": {
+   "asr": "Are you nervous, Mr. Minolt?",
+   "cer": 0.08,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.26,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -3.3,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 127.1,
+   "f0_range_st": 5.5,
+   "speech_head_s": 0.39,
+   "speech_tail_s": 0.648,
+   "raw_tail_cut": false,
+   "align_median_s": 0.168
+  },
+  "voice": "ElevenLabs library voice 'Will – Grounded Narrator' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.92",
+  "voiceId": "zL8BUx7dljdEZMmcSu8V",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "lahtnemulb-clone",
+   "voice_id": "zL8BUx7dljdEZMmcSu8V",
+   "voice_name": "Will – Grounded Narrator",
+   "source": "shared Voice Library (high-quality instant voice of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.85,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.92
+   },
+   "seed": 1917554502,
+   "chars_sent": 28,
+   "request_key": "8d3138e92efd7447",
+   "derived_from": "lahtnemulb"
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-08.wav",
+   "mode": "on-mic",
+   "lufs_i": -16.0,
+   "duration_s": 2.95,
+   "audible_in_s": 0.5,
+   "audible_out_s": 2.47,
+   "wpm": 152.3,
+   "median_f0_hz": 109.4,
+   "f0_range_st": 12.8,
+   "delivery": null,
+   "voice": "am_adam*0.50+am_echo*0.50 (Kokoro-82M stock) · d-adam-echo-senate-low + gloss · speed 0.880",
+   "timeline_in": 0.5,
+   "timeline_dur": 2.95
+  }
+ },
+ {
+  "id": "e1-a2-15-10",
+  "kind": "dialogue",
+  "scene": "15",
+  "speaker": "A SENATOR",
+  "speaker_slug": "a-senator",
+  "text": "Mr. Manalt. There's talk of a new agency to regulate all this. Would you come and run it?",
+  "spoken_as": "Mr. Manalt. There's talk of a new agency to regulate all this. Would you come and run it?",
+  "tag": "O.S.",
+  "delivery": "at the lit microphone",
+  "on_camera": "os",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/auditions/wav/e1-a2-15-10__a-senator-A.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 5.54,
+  "frames_24": 133,
+  "voiced_span_s": 4.7,
+  "pace": {
+   "audible_in_s": 0.38,
+   "audible_out_s": 5.08,
+   "measured": {
+    "span_s": 4.7,
+    "wpm": 229.8,
+    "syllables": 24,
+    "articulation_sps": 6.12,
+    "pauses_s": [
+     0.54,
+     0.24
+    ]
+   },
+   "longest_internal_gap_s": 0.54,
+   "words": 18,
+   "wpm": 229.8,
+   "speed": 0.95,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Mr",
+    "t0": 0.36,
+    "t1": 0.675
+   },
+   {
+    "w": "Manalt",
+    "t0": 0.722,
+    "t1": 1.139
+   },
+   {
+    "w": "There's",
+    "t0": 1.615,
+    "t1": 1.848
+   },
+   {
+    "w": "talk",
+    "t0": 1.883,
+    "t1": 2.057
+   },
+   {
+    "w": "of",
+    "t0": 2.103,
+    "t1": 2.15
+   },
+   {
+    "w": "a",
+    "t0": 2.196,
+    "t1": 2.219
+   },
+   {
+    "w": "new",
+    "t0": 2.277,
+    "t1": 2.393
+   },
+   {
+    "w": "agency",
+    "t0": 2.451,
+    "t1": 2.893
+   },
+   {
+    "w": "to",
+    "t0": 2.951,
+    "t1": 3.009
+   },
+   {
+    "w": "regulate",
+    "t0": 3.078,
+    "t1": 3.485
+   },
+   {
+    "w": "all",
+    "t0": 3.508,
+    "t1": 3.612
+   },
+   {
+    "w": "this",
+    "t0": 3.659,
+    "t1": 3.961
+   },
+   {
+    "w": "Would",
+    "t0": 4.216,
+    "t1": 4.402
+   },
+   {
+    "w": "you",
+    "t0": 4.437,
+    "t1": 4.506
+   },
+   {
+    "w": "come",
+    "t0": 4.553,
+    "t1": 4.704
+   },
+   {
+    "w": "and",
+    "t0": 4.727,
+    "t1": 4.797
+   },
+   {
+    "w": "run",
+    "t0": 4.831,
+    "t1": 4.959
+   },
+   {
+    "w": "it",
+    "t0": 5.006,
+    "t1": 5.1
+   }
+  ],
+  "qa": {
+   "asr": "Mr. Menalt, there's talk of a new agency to regulate all this. Would you come and run it?",
+   "cer": 0.012,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.09,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -4.28,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 167.3,
+   "f0_range_st": 9.4,
+   "speech_head_s": 0.38,
+   "speech_tail_s": 0.46,
+   "raw_tail_cut": false,
+   "align_median_s": 0.059
+  },
+  "voice": "ElevenLabs library voice 'Clara – Corporate & Training Trusted Professional' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.95",
+  "voiceId": "tMXujoAjiboschVOhAnk",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "a-senator",
+   "voice_id": "tMXujoAjiboschVOhAnk",
+   "voice_name": "Clara – Corporate & Training Trusted Professional",
+   "source": "shared Voice Library (high-quality instant voice of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "seed": 2160511808,
+   "chars_sent": 89,
+   "request_key": "b1d6721701653911",
+   "derived_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-10.wav",
+   "mode": "on-mic",
+   "lufs_i": -16.0,
+   "duration_s": 8.05,
+   "audible_in_s": 0.5,
+   "audible_out_s": 7.33,
+   "wpm": 158.1,
+   "median_f0_hz": 159.3,
+   "f0_range_st": 11.4,
+   "delivery": "at the lit microphone",
+   "voice": "af_kore*0.60+af_nicole*0.40 (Kokoro-82M stock) · d-kore-nicole-senate-up2 · speed 0.850",
+   "timeline_in": 0.5,
+   "timeline_dur": 8.05
+  }
+ },
+ {
+  "id": "e1-a2-13-06",
+  "kind": "dialogue",
+  "scene": "13",
+  "speaker": "PHOTOGRAPHER",
+  "speaker_slug": "photographer",
+  "text": "Big smiles, please. Eyes on camera one.",
+  "spoken_as": "Big smiles, please. Eyes on camera one.",
+  "tag": "",
+  "delivery": null,
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/auditions/wav/e1-a2-13-06__photographer-A.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 2.743,
+  "frames_24": 66,
+  "voiced_span_s": 1.63,
+  "pace": {
+   "audible_in_s": 0.45,
+   "audible_out_s": 2.08,
+   "measured": {
+    "span_s": 1.63,
+    "wpm": 257.7,
+    "syllables": 9,
+    "articulation_sps": 5.52,
+    "pauses_s": [
+     0.07
+    ]
+   },
+   "longest_internal_gap_s": 0.07,
+   "words": 7,
+   "wpm": 257.7,
+   "speed": 1.08,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Big",
+    "t0": 0.43,
+    "t1": 0.547
+   },
+   {
+    "w": "smiles",
+    "t0": 0.582,
+    "t1": 0.849
+   },
+   {
+    "w": "please",
+    "t0": 0.896,
+    "t1": 1.174
+   },
+   {
+    "w": "Eyes",
+    "t0": 1.267,
+    "t1": 1.441
+   },
+   {
+    "w": "on",
+    "t0": 1.488,
+    "t1": 1.557
+   },
+   {
+    "w": "camera",
+    "t0": 1.604,
+    "t1": 1.859
+   },
+   {
+    "w": "one",
+    "t0": 1.917,
+    "t1": 2.091
+   }
+  ],
+  "qa": {
+   "asr": "Big smiles, please. Eyes on camera one.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -1.56,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 184.9,
+   "f0_range_st": 10.0,
+   "speech_head_s": 0.45,
+   "speech_tail_s": 0.663,
+   "raw_tail_cut": false,
+   "align_median_s": 0.113
+  },
+  "voice": "ElevenLabs library voice 'Christina - Natural and Conversational' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.08",
+  "voiceId": "X03mvPuTfprif8QBAVeJ",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "photographer",
+   "voice_id": "X03mvPuTfprif8QBAVeJ",
+   "voice_name": "Christina - Natural and Conversational",
+   "source": "shared Voice Library (high-quality instant voice of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 1.08
+   },
+   "seed": 2677694924,
+   "chars_sent": 39,
+   "request_key": "fded5225182b1463",
+   "derived_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-06.wav",
+   "mode": "on-mic",
+   "lufs_i": -16.0,
+   "duration_s": 3.535,
+   "audible_in_s": 0.5,
+   "audible_out_s": 2.85,
+   "wpm": 178.7,
+   "median_f0_hz": 164.5,
+   "f0_range_st": 7.9,
+   "delivery": null,
+   "voice": "af_river (Kokoro-82M stock) · d-river-brisk-low · speed 1.140",
+   "timeline_in": 0.5,
+   "timeline_dur": 3.535
+  }
+ },
+ {
+  "id": "e1-a1-8-02",
+  "kind": "dialogue",
+  "scene": "8",
+  "speaker": "NIRB",
+  "speaker_slug": "nirb",
+  "text": "We heard the siren. Is it search? Is search all right?",
+  "spoken_as": "We heard the siren. Is it search? Is search all right?",
+  "tag": "",
+  "delivery": "shading his eyes, reaching the top step",
+  "on_camera": "on",
+  "mode": "call",
+  "device": "call",
+  "file": "audio/ep01/v3-el/auditions/wav/e1-a1-8-02__nirb-A.wav",
+  "file_device": "audio/ep01/v3-el/auditions/wav-device/e1-a1-8-02__nirb-A.call.wav",
+  "mp3": null,
+  "duration_s": 3.811,
+  "frames_24": 91,
+  "voiced_span_s": 2.64,
+  "pace": {
+   "audible_in_s": 0.45,
+   "audible_out_s": 3.09,
+   "measured": {
+    "span_s": 2.64,
+    "wpm": 250.0,
+    "syllables": 12,
+    "articulation_sps": 6.28,
+    "pauses_s": [
+     0.22,
+     0.24,
+     0.27
+    ]
+   },
+   "longest_internal_gap_s": 0.27,
+   "words": 11,
+   "wpm": 250.0,
+   "speed": 1.05,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "We",
+    "t0": 0.43,
+    "t1": 0.513
+   },
+   {
+    "w": "heard",
+    "t0": 0.559,
+    "t1": 0.698
+   },
+   {
+    "w": "the",
+    "t0": 0.733,
+    "t1": 0.803
+   },
+   {
+    "w": "siren",
+    "t0": 0.838,
+    "t1": 1.198
+   },
+   {
+    "w": "Is",
+    "t0": 1.627,
+    "t1": 1.755
+   },
+   {
+    "w": "it",
+    "t0": 1.79,
+    "t1": 1.848
+   },
+   {
+    "w": "search",
+    "t0": 1.883,
+    "t1": 2.15
+   },
+   {
+    "w": "Is",
+    "t0": 2.428,
+    "t1": 2.568
+   },
+   {
+    "w": "search",
+    "t0": 2.591,
+    "t1": 2.788
+   },
+   {
+    "w": "all",
+    "t0": 2.823,
+    "t1": 2.904
+   },
+   {
+    "w": "right",
+    "t0": 2.951,
+    "t1": 3.11
+   }
+  ],
+  "qa": {
+   "asr": "We heard the siren. Is it search? Is search alright?",
+   "cer": 0.039,
+   "word_recall_nonames": 0.818,
+   "lufs_i": -17.84,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -3.59,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 157.3,
+   "f0_range_st": 12.2,
+   "speech_head_s": 0.45,
+   "speech_tail_s": 0.721,
+   "raw_tail_cut": false,
+   "align_median_s": 0.043
+  },
+  "voice": "ElevenLabs library voice 'Arlo – Engaging Real-World Storyteller' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.05",
+  "voiceId": "RckSZHfvva0yOVRPzRfv",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "nirb",
+   "voice_id": "RckSZHfvva0yOVRPzRfv",
+   "voice_name": "Arlo – Engaging Real-World Storyteller",
+   "source": "shared Voice Library (high-quality instant voice of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 1.05
+   },
+   "seed": 1696986579,
+   "chars_sent": 54,
+   "request_key": "fc5c9a930eb2da8f",
+   "derived_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)",
+   "file_device: the same take through a copy of house.call_filter() (HPF 200, LPF 7k, +1.5 dB @1.8k, 2.5:1), as the Kokoro take printed it"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-8-02.wav",
+   "mode": "call",
+   "lufs_i": -16.0,
+   "duration_s": 4.945,
+   "audible_in_s": 0.51,
+   "audible_out_s": 4.41,
+   "wpm": 169.2,
+   "median_f0_hz": 150.8,
+   "f0_range_st": 15.5,
+   "delivery": "shading his eyes, reaching the top step",
+   "voice": "am_eric*0.50+am_liam*0.50 (Kokoro-82M stock) · c-eric-liam-curious · speed 1.020",
+   "timeline_in": 0.51,
+   "timeline_dur": 4.945
+  }
+ },
+ {
+  "id": "e1-a1-8-04",
+  "kind": "dialogue",
+  "scene": "8",
+  "speaker": "EGAP",
+  "speaker_slug": "egap",
+  "text": "Someone else built that? It looks like our work.",
+  "spoken_as": "Someone else built that? It looks like our work.",
+  "tag": "",
+  "delivery": "peering at the phone",
+  "on_camera": "on",
+  "mode": "call",
+  "device": "call",
+  "file": "audio/ep01/v3-el/auditions/wav/e1-a1-8-04__egap-A.wav",
+  "file_device": "audio/ep01/v3-el/auditions/wav-device/e1-a1-8-04__egap-A.call.wav",
+  "mp3": null,
+  "duration_s": 3.805,
+  "frames_24": 91,
+  "voiced_span_s": 2.91,
+  "pace": {
+   "audible_in_s": 0.42,
+   "audible_out_s": 3.33,
+   "measured": {
+    "span_s": 2.91,
+    "wpm": 185.6,
+    "syllables": 10,
+    "articulation_sps": 4.55,
+    "pauses_s": [
+     0.06,
+     0.71,
+     0.07
+    ]
+   },
+   "longest_internal_gap_s": 0.71,
+   "words": 9,
+   "wpm": 185.6,
+   "speed": 0.9,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Someone",
+    "t0": 0.4,
+    "t1": 0.733
+   },
+   {
+    "w": "else",
+    "t0": 0.768,
+    "t1": 0.954
+   },
+   {
+    "w": "built",
+    "t0": 0.989,
+    "t1": 1.209
+   },
+   {
+    "w": "that",
+    "t0": 1.244,
+    "t1": 1.511
+   },
+   {
+    "w": "It",
+    "t0": 2.208,
+    "t1": 2.347
+   },
+   {
+    "w": "looks",
+    "t0": 2.382,
+    "t1": 2.556
+   },
+   {
+    "w": "like",
+    "t0": 2.591,
+    "t1": 2.718
+   },
+   {
+    "w": "our",
+    "t0": 2.753,
+    "t1": 2.858
+   },
+   {
+    "w": "work",
+    "t0": 2.927,
+    "t1": 3.241
+   }
+  ],
+  "qa": {
+   "asr": "Someone else built that? It looks like our work.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -3.87,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 100.6,
+   "f0_range_st": 11.1,
+   "speech_head_s": 0.42,
+   "speech_tail_s": 0.475,
+   "raw_tail_cut": false,
+   "align_median_s": 0.087
+  },
+  "voice": "ElevenLabs library voice 'Declan - Serious & Straightforward' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.9",
+  "voiceId": "nmmIJ8k3ukOa1CSFlor3",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "egap",
+   "voice_id": "nmmIJ8k3ukOa1CSFlor3",
+   "voice_name": "Declan - Serious & Straightforward",
+   "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.9
+   },
+   "seed": 1049629603,
+   "chars_sent": 48,
+   "request_key": "72cec9c2c086cc68",
+   "derived_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)",
+   "file_device: the same take through a copy of house.call_filter() (HPF 200, LPF 7k, +1.5 dB @1.8k, 2.5:1), as the Kokoro take printed it"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-8-04.wav",
+   "mode": "call",
+   "lufs_i": -16.0,
+   "duration_s": 4.27,
+   "audible_in_s": 0.51,
+   "audible_out_s": 3.48,
+   "wpm": 181.8,
+   "median_f0_hz": 99.9,
+   "f0_range_st": 14.1,
+   "delivery": "peering at the phone",
+   "voice": "am_onyx*0.60+am_liam*0.40 (Kokoro-82M stock) · b-onyx-liam-dry · speed 0.860",
+   "timeline_in": 0.51,
+   "timeline_dur": 4.27
+  }
+ },
+ {
+  "id": "e1-a1-12-02",
+  "kind": "dialogue",
+  "scene": "12",
+  "speaker": "OIGNEB",
+  "speaker_slug": "oigneb",
+  "text": "It's not the font, Nole. We're asking every lab to pause for six months.",
+  "spoken_as": "It's not the font, Knoll. We're asking every lab to pause for six months.",
+  "tag": "",
+  "delivery": "dialogue box; PLATE, riding it: `OIGNEB · AI PIONEER · CITATIONS: ↑`; gentle, precise, holding the sign higher",
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/auditions/wav/e1-a1-12-02__oigneb-A.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 4.97,
+  "frames_24": 119,
+  "voiced_span_s": 3.94,
+  "pace": {
+   "audible_in_s": 0.4,
+   "audible_out_s": 4.34,
+   "measured": {
+    "span_s": 3.94,
+    "wpm": 213.2,
+    "syllables": 18,
+    "articulation_sps": 5.22,
+    "pauses_s": [
+     0.27,
+     0.22
+    ]
+   },
+   "longest_internal_gap_s": 0.27,
+   "words": 14,
+   "wpm": 213.2,
+   "speed": 0.92,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "It's",
+    "t0": 0.38,
+    "t1": 0.547
+   },
+   {
+    "w": "not",
+    "t0": 0.594,
+    "t1": 0.733
+   },
+   {
+    "w": "the",
+    "t0": 0.768,
+    "t1": 0.838
+   },
+   {
+    "w": "font",
+    "t0": 0.884,
+    "t1": 1.116
+   },
+   {
+    "w": "Nole",
+    "t0": 1.163,
+    "t1": 1.453
+   },
+   {
+    "w": "We're",
+    "t0": 1.883,
+    "t1": 2.103
+   },
+   {
+    "w": "asking",
+    "t0": 2.138,
+    "t1": 2.44
+   },
+   {
+    "w": "every",
+    "t0": 2.521,
+    "t1": 2.776
+   },
+   {
+    "w": "lab",
+    "t0": 2.835,
+    "t1": 3.044
+   },
+   {
+    "w": "to",
+    "t0": 3.09,
+    "t1": 3.148
+   },
+   {
+    "w": "pause",
+    "t0": 3.206,
+    "t1": 3.461
+   },
+   {
+    "w": "for",
+    "t0": 3.496,
+    "t1": 3.601
+   },
+   {
+    "w": "six",
+    "t0": 3.659,
+    "t1": 3.856
+   },
+   {
+    "w": "months",
+    "t0": 3.937,
+    "t1": 4.263
+   }
+  ],
+  "qa": {
+   "asr": "It's not the font null, we're asking every lab to pause for six months.",
+   "cer": 0.029,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -3.8,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 112.6,
+   "f0_range_st": 14.6,
+   "speech_head_s": 0.4,
+   "speech_tail_s": 0.63,
+   "raw_tail_cut": false,
+   "align_median_s": 0.068
+  },
+  "voice": "ElevenLabs library voice 'CJ - Articulate & Educational' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.92",
+  "voiceId": "fIoDqeVKE9jI9AGvEvZU",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "oigneb",
+   "voice_id": "fIoDqeVKE9jI9AGvEvZU",
+   "voice_name": "CJ - Articulate & Educational",
+   "source": "shared Voice Library (high-quality instant voice of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.92
+   },
+   "seed": 1765123757,
+   "chars_sent": 73,
+   "request_key": "f09c184907651063",
+   "derived_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-12-02.wav",
+   "mode": "on-mic",
+   "lufs_i": -16.0,
+   "duration_s": 6.015,
+   "audible_in_s": 0.5,
+   "audible_out_s": 5.14,
+   "wpm": 181.0,
+   "median_f0_hz": 119.3,
+   "f0_range_st": 12.4,
+   "delivery": "dialogue box; PLATE, riding it: `OIGNEB · AI PIONEER · CITATIONS: ↑`; gentle, precise, holding the sign higher",
+   "voice": "am_eric*0.50+am_onyx*0.50 (Kokoro-82M stock) · c-eric-onyx-gentle · speed 0.870",
+   "timeline_in": 0.5,
+   "timeline_dur": 6.015
+  }
+ },
+ {
+  "id": "e1-a3-19-01",
+  "kind": "dialogue",
+  "scene": "19",
+  "speaker": "REMUHCS",
+  "speaker_slug": "remuhcs",
+  "text": "\"Every single person raised their hand.\"",
+  "spoken_as": "Every single person raised their hand.",
+  "tag": "",
+  "delivery": "O.S., on the monitor",
+  "on_camera": "on",
+  "mode": "call",
+  "device": "call",
+  "file": "audio/ep01/v3-el/auditions/wav/e1-a3-19-01__remuhcs-A.wav",
+  "file_device": "audio/ep01/v3-el/auditions/wav-device/e1-a3-19-01__remuhcs-A.call.wav",
+  "mp3": null,
+  "duration_s": 2.615,
+  "frames_24": 63,
+  "voiced_span_s": 1.76,
+  "pace": {
+   "audible_in_s": 0.38,
+   "audible_out_s": 2.14,
+   "measured": {
+    "span_s": 1.76,
+    "wpm": 204.5,
+    "syllables": 10,
+    "articulation_sps": 5.68,
+    "pauses_s": []
+   },
+   "longest_internal_gap_s": 0.0,
+   "words": 6,
+   "wpm": 204.5,
+   "speed": 0.95,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Every",
+    "t0": 0.36,
+    "t1": 0.64
+   },
+   {
+    "w": "single",
+    "t0": 0.687,
+    "t1": 0.965
+   },
+   {
+    "w": "person",
+    "t0": 1.0,
+    "t1": 1.314
+   },
+   {
+    "w": "raised",
+    "t0": 1.372,
+    "t1": 1.604
+   },
+   {
+    "w": "their",
+    "t0": 1.627,
+    "t1": 1.778
+   },
+   {
+    "w": "hand",
+    "t0": 1.824,
+    "t1": 2.115
+   }
+  ],
+  "qa": {
+   "asr": "Every single person raised their hand.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -3.88,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 119.0,
+   "f0_range_st": 13.0,
+   "speech_head_s": 0.38,
+   "speech_tail_s": 0.475,
+   "raw_tail_cut": false,
+   "align_median_s": 0.14
+  },
+  "voice": "ElevenLabs library voice 'Marc Laurent - Confident and Engaging' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.95",
+  "voiceId": "o0t0Wz5oSDuuCV6p7rba",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "remuhcs",
+   "voice_id": "o0t0Wz5oSDuuCV6p7rba",
+   "voice_name": "Marc Laurent - Confident and Engaging",
+   "source": "shared Voice Library (high-quality instant voice of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "seed": 4274836895,
+   "chars_sent": 38,
+   "request_key": "76838be8eb5bf6a0",
+   "derived_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)",
+   "file_device: the same take through a copy of house.call_filter() (HPF 200, LPF 7k, +1.5 dB @1.8k, 2.5:1), as the Kokoro take printed it"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-19-01.wav",
+   "mode": "call",
+   "lufs_i": -16.0,
+   "duration_s": 3.135,
+   "audible_in_s": 0.5,
+   "audible_out_s": 2.67,
+   "wpm": 165.9,
+   "median_f0_hz": 115.9,
+   "f0_range_st": 8.4,
+   "delivery": "O.S., on the monitor",
+   "voice": "am_adam*0.50+am_puck*0.50 (Kokoro-82M stock) · c-adam-puck-forum · speed 0.870",
+   "timeline_in": 0.5,
+   "timeline_dur": 3.135
+  }
+ },
+ {
+  "id": "e1-co-1-01",
+  "kind": "dialogue",
+  "scene": "1",
+  "speaker": "PANEL HOST",
+  "speaker_slug": "panel-host",
+  "text": "Last one, Mas. What's the best part of the job?",
+  "spoken_as": "Last one, Moss. What's the best part of the job?",
+  "tag": "O.S.",
+  "delivery": "through the hall's PA, the hand at frame right lifting the card a little; warm, from the wide's second second, so the first frame isn't silent",
+  "on_camera": "os",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/auditions/wav/e1-co-1-01__panel-host-A.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 3.345,
+  "frames_24": 80,
+  "voiced_span_s": 2.44,
+  "pace": {
+   "audible_in_s": 0.42,
+   "audible_out_s": 2.86,
+   "measured": {
+    "span_s": 2.44,
+    "wpm": 245.9,
+    "syllables": 10,
+    "articulation_sps": 4.78,
+    "pauses_s": [
+     0.35
+    ]
+   },
+   "longest_internal_gap_s": 0.35,
+   "words": 10,
+   "wpm": 245.9,
+   "speed": 1.0,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Last",
+    "t0": 0.4,
+    "t1": 0.652
+   },
+   {
+    "w": "one",
+    "t0": 0.71,
+    "t1": 0.838
+   },
+   {
+    "w": "Mas",
+    "t0": 0.884,
+    "t1": 1.256
+   },
+   {
+    "w": "What's",
+    "t0": 1.581,
+    "t1": 1.813
+   },
+   {
+    "w": "the",
+    "t0": 1.859,
+    "t1": 1.929
+   },
+   {
+    "w": "best",
+    "t0": 1.975,
+    "t1": 2.15
+   },
+   {
+    "w": "part",
+    "t0": 2.196,
+    "t1": 2.335
+   },
+   {
+    "w": "of",
+    "t0": 2.359,
+    "t1": 2.405
+   },
+   {
+    "w": "the",
+    "t0": 2.44,
+    "t1": 2.509
+   },
+   {
+    "w": "job",
+    "t0": 2.544,
+    "t1": 2.835
+   }
+  ],
+  "qa": {
+   "asr": "Last one, Moss. What's the best part of the job?",
+   "cer": 0.045,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -3.58,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 164.8,
+   "f0_range_st": 10.8,
+   "speech_head_s": 0.42,
+   "speech_tail_s": 0.485,
+   "raw_tail_cut": false,
+   "align_median_s": 0.059
+  },
+  "voice": "ElevenLabs library voice 'River - Relaxed, Neutral, Informative' (premade (ElevenLabs default voice)) · cand A · eleven_multilingual_v2 · speed 1.0",
+  "voiceId": "SAz9YHcvj6GT2YYXdXww",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "panel-host",
+   "voice_id": "SAz9YHcvj6GT2YYXdXww",
+   "voice_name": "River - Relaxed, Neutral, Informative",
+   "source": "premade (ElevenLabs default voice)",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "seed": 3951076266,
+   "chars_sent": 48,
+   "request_key": "29bd116185ead3f7",
+   "derived_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/coldopen/dialogue/fast-v1/wav/e1-co-1-01.wav",
+   "mode": "pa",
+   "lufs_i": -16.0,
+   "duration_s": 3.925,
+   "audible_in_s": 0.51,
+   "audible_out_s": 3.41,
+   "wpm": 206.9,
+   "median_f0_hz": 154.4,
+   "f0_range_st": 13.2,
+   "delivery": "through the hall's PA, the hand at frame right lifting the card a little; warm, from the wide's second second, so the first frame isn't silent",
+   "voice": "af_sarah*0.45+am_puck*0.55 (Kokoro-82M stock) · c-sarah-puck-host · speed 0.940",
+   "timeline_in": 0.51,
+   "timeline_dur": 3.925
+  }
+ },
+ {
+  "id": "e1-a2-17-06",
+  "kind": "dialogue",
+  "scene": "17",
+  "speaker": "NESNEJ",
+  "speaker_slug": "nesnej",
+  "text": "\"The more you buy, the more you save.\"",
+  "spoken_as": "The more you buy, the more you save.",
+  "tag": "",
+  "delivery": "to the signers, like a gift",
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/auditions/wav/e1-a2-17-06__nesnej-A.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 3.161,
+  "frames_24": 76,
+  "voiced_span_s": 2.29,
+  "pace": {
+   "audible_in_s": 0.42,
+   "audible_out_s": 2.71,
+   "measured": {
+    "span_s": 2.29,
+    "wpm": 209.6,
+    "syllables": 8,
+    "articulation_sps": 3.88,
+    "pauses_s": [
+     0.23
+    ]
+   },
+   "longest_internal_gap_s": 0.23,
+   "words": 8,
+   "wpm": 209.6,
+   "speed": 1.05,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "The",
+    "t0": 0.4,
+    "t1": 0.524
+   },
+   {
+    "w": "more",
+    "t0": 0.582,
+    "t1": 0.791
+   },
+   {
+    "w": "you",
+    "t0": 0.838,
+    "t1": 0.942
+   },
+   {
+    "w": "buy",
+    "t0": 1.012,
+    "t1": 1.36
+   },
+   {
+    "w": "the",
+    "t0": 1.674,
+    "t1": 1.79
+   },
+   {
+    "w": "more",
+    "t0": 1.848,
+    "t1": 2.033
+   },
+   {
+    "w": "you",
+    "t0": 2.08,
+    "t1": 2.184
+   },
+   {
+    "w": "save",
+    "t0": 2.254,
+    "t1": 2.707
+   }
+  ],
+  "qa": {
+   "asr": "The more you buy the more you save",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -4.01,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 107.3,
+   "f0_range_st": 11.6,
+   "speech_head_s": 0.42,
+   "speech_tail_s": 0.451,
+   "raw_tail_cut": false,
+   "align_median_s": 0.098
+  },
+  "voice": "ElevenLabs library voice 'Bryan - Polished, Measured and Engaging' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.05",
+  "voiceId": "bPMKpgEe88vKSwusXTMU",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "nesnej",
+   "voice_id": "bPMKpgEe88vKSwusXTMU",
+   "voice_name": "Bryan - Polished, Measured and Engaging",
+   "source": "shared Voice Library (high-quality instant voice of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.45,
+    "similarity_boost": 0.75,
+    "style": 0.2,
+    "use_speaker_boost": true,
+    "speed": 1.05
+   },
+   "seed": 744838357,
+   "chars_sent": 36,
+   "request_key": "b20b44d83326dcb6",
+   "derived_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-17-06.wav",
+   "mode": "on-mic",
+   "lufs_i": -16.0,
+   "duration_s": 3.3,
+   "audible_in_s": 0.5,
+   "audible_out_s": 2.65,
+   "wpm": 223.3,
+   "median_f0_hz": 143.7,
+   "f0_range_st": 12.6,
+   "delivery": "to the signers, like a gift",
+   "voice": "am_michael*0.50+am_eric*0.50 (Kokoro-82M stock) · a-michael-eric-keynote (pass-1 pick, dry) · speed 0.970",
+   "timeline_in": 0.5,
+   "timeline_dur": 3.3
+  }
+ },
+ {
+  "id": "e1-a1-11-02",
+  "kind": "dialogue",
+  "scene": "11",
+  "speaker": "CLOD",
+  "speaker_slug": "clod",
+  "text": "You're absolutely right!",
+  "spoken_as": "You're absolutely right!",
+  "tag": "",
+  "delivery": "on the next beat, mid-bow, launching",
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/auditions/wav/e1-a1-11-02__clod-A.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 2.465,
+  "frames_24": 59,
+  "voiced_span_s": 1.27,
+  "pace": {
+   "audible_in_s": 0.42,
+   "audible_out_s": 1.69,
+   "measured": {
+    "span_s": 1.27,
+    "wpm": 141.7,
+    "syllables": 7,
+    "articulation_sps": 5.51,
+    "pauses_s": []
+   },
+   "longest_internal_gap_s": 0.0,
+   "words": 3,
+   "wpm": 141.7,
+   "speed": 1.0,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "You're",
+    "t0": 0.4,
+    "t1": 0.605
+   },
+   {
+    "w": "absolutely",
+    "t0": 0.652,
+    "t1": 1.325
+   },
+   {
+    "w": "right",
+    "t0": 1.395,
+    "t1": 1.71
+   }
+  ],
+  "qa": {
+   "asr": "You're absolutely right.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -1.81,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 198.1,
+   "f0_range_st": 11.4,
+   "speech_head_s": 0.42,
+   "speech_tail_s": 0.775,
+   "raw_tail_cut": false,
+   "align_median_s": 0.315
+  },
+  "voice": "ElevenLabs library voice 'Alex - Friendly & Professional' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+  "voiceId": "RCEgsn4n25vzQMwvNZ94",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "clod",
+   "voice_id": "RCEgsn4n25vzQMwvNZ94",
+   "voice_name": "Alex - Friendly & Professional",
+   "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "seed": 1477262282,
+   "chars_sent": 24,
+   "request_key": "3333aa8af5f2939f",
+   "derived_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-11-02.wav",
+   "mode": "on-mic",
+   "lufs_i": -16.0,
+   "duration_s": 2.48,
+   "audible_in_s": 0.51,
+   "audible_out_s": 1.85,
+   "wpm": 134.3,
+   "median_f0_hz": 170.2,
+   "f0_range_st": 11.5,
+   "delivery": "on the next beat, mid-bow, launching",
+   "voice": "af_river*0.50+am_eric*0.50 (Kokoro-82M stock) · c-river-eric-earnest · speed 1.030",
+   "timeline_in": 0.51,
+   "timeline_dur": 2.48
+  }
+ }
+]

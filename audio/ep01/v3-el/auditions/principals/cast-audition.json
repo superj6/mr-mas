@@ -1,0 +1,604 @@
+{
+ "_about": "The principals' audition (2026-09-27): five library candidates each for Mas, Gerg, Alyi, Rima, Neleh and Tasya, one or two lines each, eleven_multilingual_v2. The respelling here is the audition's ('Mahs'); the production cast (../../cast-el.json) says 'Moss'. See voices-el.md.",
+ "model_default": "eleven_multilingual_v2",
+ "output_format": "mp3_44100_192",
+ "target_lufs": -18.0,
+ "cache_dir": "audio/ep01/v3-el/cache",
+ "respell": {
+  "Gerg": "Gurg",
+  "Mas": "Mahs",
+  "Alyi": "Al-yee",
+  "NopeAI": "Nope A.I.",
+  "v2": "V two"
+ },
+ "names": [
+  "mas",
+  "manalt",
+  "gerg",
+  "mockbran",
+  "alyi",
+  "neleh",
+  "ttemme",
+  "yrral",
+  "nozama",
+  "macrosoft",
+  "nopeai",
+  "rima",
+  "terb",
+  "mada",
+  "mario",
+  "tasya",
+  "nole",
+  "nesnej",
+  "radnus",
+  "nirb",
+  "egap",
+  "sirrah",
+  "lahtnemulb",
+  "sucram",
+  "nedib",
+  "oigneb",
+  "remuhcs",
+  "elgoog",
+  "gnib",
+  "chatgtp",
+  "clod",
+  "misanthropic",
+  "rumpt"
+ ],
+ "labels": {
+  "MAS": "mas-manalt",
+  "MAS MANALT": "mas-manalt",
+  "MR. MAS": "mas-manalt",
+  "GERG": "gerg-mockbran",
+  "GERG MOCKBRAN": "gerg-mockbran",
+  "ALYI": "alyi",
+  "RIMA": "rima-tamuri",
+  "RIMA TAMURI": "rima-tamuri",
+  "MARIO": "mario",
+  "NOLE": "nole",
+  "NESNEJ": "nesnej",
+  "RUMPT": "rumpt",
+  "PRESIDENT RUMPT": "rumpt",
+  "DLANOD J. RUMPT": "rumpt",
+  "THE INTERN": "the-intern",
+  "THE ORB": "the-orb",
+  "NELEH": "neleh",
+  "MADA": "mada",
+  "TERB": "terb",
+  "TASYA": "tasya",
+  "TTEMME": "ttemme",
+  "ADELINA": "adelina",
+  "TILED EMPLOYEE": "tiled-employee",
+  "PANEL HOST": "panel-host",
+  "RADNUS": "radnus",
+  "NIRB": "nirb",
+  "EGAP": "egap",
+  "SYDNEY": "sydney",
+  "CHATGTP": "chatgtp",
+  "CLOD": "clod",
+  "OIGNEB": "oigneb",
+  "SIRRAH": "sirrah",
+  "PHOTOGRAPHER": "photographer",
+  "A WHITE HOUSE PHOTOGRAPHER": "photographer",
+  "NEDIB": "nedib",
+  "EOJ NEDIB": "nedib",
+  "PRESIDENT NEDIB": "nedib",
+  "LAHTNEMULB": "lahtnemulb",
+  "SUCRAM": "sucram",
+  "A SENATOR": "a-senator",
+  "REMUHCS": "remuhcs",
+  "LAHTNEMULB (THE CLONE)": "lahtnemulb-clone",
+  "THE CLONE": "lahtnemulb-clone",
+  "DEEPFAKE NEDIB": "deepfake-nedib",
+  "DEEPFAKE NEDIB #2": "deepfake-nedib-2",
+  "mas": "mas-manalt",
+  "gerg": "gerg-mockbran",
+  "rima": "rima-tamuri",
+  "staff": "tiled-employee",
+  "employee": "tiled-employee"
+ },
+ "roles": {
+  "mas-manalt": {
+   "name": "MAS MANALT",
+   "sentence_case": true,
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "ZoiZ8fuDWInAcwPXaVeq",
+     "voice_name": "Josh - Warm, Smooth and Steady",
+     "source": "shared library (high_quality)",
+     "public_owner_id": "544aaf0748f9cde67ddf64379bc7ce9186de33756773d529a16cd3d830347455",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.92
+     },
+     "vo_settings": {
+      "speed": 0.86,
+      "stability": 0.6
+     }
+    },
+    {
+     "cand": "B",
+     "voice_id": "g6fJBFvZZp41FerGMMx7",
+     "voice_name": "Giovanni - Tranquil, Clever and Educated",
+     "source": "shared library (professional)",
+     "public_owner_id": "00d2a77d915e15196391e69d744c2c8e38f15b09e879f2dacacf26c6ac5209d6",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.92
+     },
+     "vo_settings": {
+      "speed": 0.86,
+      "stability": 0.6
+     }
+    },
+    {
+     "cand": "C",
+     "voice_id": "TWutjvRaJqAX89preB4e",
+     "voice_name": "Evan - Calm, Grounded & Reflective",
+     "source": "shared library (high_quality)",
+     "public_owner_id": "d21974d9942daf4a59ec2091ca10f35862fc8643bd768b9e92a33600b4edd2e7",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.92
+     },
+     "vo_settings": {
+      "speed": 0.86,
+      "stability": 0.6
+     }
+    },
+    {
+     "cand": "D",
+     "voice_id": "PMWmvqAOXhLm54FLpmYS",
+     "voice_name": "Dylan Malc - Calm & Educational",
+     "source": "shared library (professional)",
+     "public_owner_id": "53a04f0361620ef811e634240d829b49ea812f1843ccc0f48e4d147ccd266101",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.92
+     },
+     "vo_settings": {
+      "speed": 0.86,
+      "stability": 0.6
+     }
+    },
+    {
+     "cand": "E",
+     "voice_id": "bIHbv24MWmeRgasZH58o",
+     "voice_name": "Will - Relaxed Optimist",
+     "source": "premade",
+     "public_owner_id": null,
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.92
+     },
+     "vo_settings": {
+      "speed": 0.86,
+      "stability": 0.6
+     }
+    }
+   ]
+  },
+  "gerg-mockbran": {
+   "name": "GERG MOCKBRAN",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "y0s2ExEMuum3muUnA6Zd",
+     "voice_name": "Marcus - Bright, Upbeat and Clear",
+     "source": "shared library (high_quality)",
+     "public_owner_id": "313aaafc591e563f00bdfedeeffe20703426a0b04572e794e203706ec88f143c",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.1
+     }
+    },
+    {
+     "cand": "B",
+     "voice_id": "Lt5FXOzLdO40mAK9bVsS",
+     "voice_name": "Ryan - Clear, Fast and Conversational",
+     "source": "shared library (professional)",
+     "public_owner_id": "3cdd22c6d78872afd601dc914ffcbf44a2f9ba2f0e4542b68a843b63aa6dd606",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.1
+     }
+    },
+    {
+     "cand": "C",
+     "voice_id": "s3TPKV1kjDlVtZbl4Ksh",
+     "voice_name": "Adam - Engaging, Friendly and Bright",
+     "source": "shared library (high_quality)",
+     "public_owner_id": "502051858a59ec3587d31ef2b30fe042bbe9c6d09be23fd96295ce04ddeed49c",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.1
+     }
+    },
+    {
+     "cand": "D",
+     "voice_id": "RckSZHfvva0yOVRPzRfv",
+     "voice_name": "Arlo – Engaging Real-World Storyteller",
+     "source": "shared library (high_quality)",
+     "public_owner_id": "35eb9275f54727f5fbe93cab11ff346bc6d7a4bb2f1c07b9ccee03bdabac5459",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.1
+     }
+    },
+    {
+     "cand": "E",
+     "voice_id": "TX3LPaxmHKxFdv7VOQHJ",
+     "voice_name": "Liam - Energetic, Social Media Creator",
+     "source": "premade",
+     "public_owner_id": null,
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.1
+     }
+    }
+   ]
+  },
+  "alyi": {
+   "name": "ALYI",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "8z82LG47qQ2qjeeQB8lk",
+     "voice_name": "Kenneth - Storyteller",
+     "source": "shared library (professional)",
+     "public_owner_id": "81bfec20adf346403bac38ed674a9a33267a27c67b9e0e295115fe8d142a18f8",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.84
+     }
+    },
+    {
+     "cand": "B",
+     "voice_id": "cCYjmrGZaI86GUJ7F2Nn",
+     "voice_name": "David - Audiobook & Documentary",
+     "source": "shared library (high_quality)",
+     "public_owner_id": "fd99b11504e8c1aac6e847ea61616cd450db4e2b1b8aaa196c35d58c85fd9f28",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.84
+     }
+    },
+    {
+     "cand": "C",
+     "voice_id": "8x8Otoub1daqoxY72hug",
+     "voice_name": "Louis - Deep, Profound and Thoughtful",
+     "source": "shared library (professional)",
+     "public_owner_id": "52bb99afb0d41ec583a4f18655494532399c50eb922fb2dd93fa9ab2e9a1c57d",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.84
+     }
+    },
+    {
+     "cand": "D",
+     "voice_id": "3RbK5MAeB6NkutT3d6qF",
+     "voice_name": "Brent",
+     "source": "shared library (professional)",
+     "public_owner_id": "62c49dcebf84fe5a3ada6fa467ac1060ee7161a726c6480cde04c0b8003aeda5",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.84
+     }
+    },
+    {
+     "cand": "E",
+     "voice_id": "MFZUKuGQUsGJPQjTS4wC",
+     "voice_name": "Jon - Warm & Grounded Storyteller",
+     "source": "shared library (high_quality)",
+     "public_owner_id": "b45c1524a1f360319535f16b301e5b6f37edf26fd1d59861eda66206ff25cdc9",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.84
+     }
+    }
+   ]
+  },
+  "rima-tamuri": {
+   "name": "RIMA TAMURI",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "rCuVrCHOUMY3OwyJBJym",
+     "voice_name": "Mia - Clear, Smooth, Professional",
+     "source": "shared library (professional)",
+     "public_owner_id": "b574841da3a907e3e0e9abfc0abd798b052d806b440d85389612d0733d312f4f",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     }
+    },
+    {
+     "cand": "B",
+     "voice_id": "Qin2NRfiKVQMJLxnoZaY",
+     "voice_name": "Athena - Clear, Professional, Human",
+     "source": "shared library (professional)",
+     "public_owner_id": "37f390430e283fc4c9e1fde5a155038b0acee4db544743dfc72696583cfa5210",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     }
+    },
+    {
+     "cand": "C",
+     "voice_id": "WZlYpi1yf6zJhNWXih74",
+     "voice_name": "Hope - Professional, Clear and Natural",
+     "source": "shared library (high_quality)",
+     "public_owner_id": "7d272ea0221fbc9ce382a3eaf4d7f907179558360d93b351ec7d344d30023cf9",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     }
+    },
+    {
+     "cand": "D",
+     "voice_id": "c1uwEpPUcC16tq1udqxk",
+     "voice_name": "Harper - Confident, Clear and Cool",
+     "source": "shared library (high_quality)",
+     "public_owner_id": "f995f689648bc413c1b7fb9ec8524f634e4d32f5030ee172ef6d847ba9dc5ee9",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     }
+    },
+    {
+     "cand": "E",
+     "voice_id": "EXAVITQu4vr4xnSDxMaL",
+     "voice_name": "Sarah - Mature, Reassuring, Confident",
+     "source": "premade",
+     "public_owner_id": null,
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     }
+    }
+   ]
+  },
+  "neleh": {
+   "name": "NELEH",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "299hhEjoz44O862N5H4G",
+     "voice_name": "Victoria - Intake Professional",
+     "source": "shared library (professional)",
+     "public_owner_id": "384b79790f6aa4f20173516eaadfd8f58e3a5d79692a6a4253cd220f48f61403",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     }
+    },
+    {
+     "cand": "B",
+     "voice_id": "3dzJXoCYueSQiptQ6euE",
+     "voice_name": "Alexandra - Confident, Clear and Steady",
+     "source": "shared library (professional)",
+     "public_owner_id": "77ce78ab14fcec5c32c639fe1e19e55e5e20302f3ed1902a371e63df6f8b1f55",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     }
+    },
+    {
+     "cand": "C",
+     "voice_id": "NDTYOmYEjbDIVCKB35i3",
+     "voice_name": "Paige – Engaging Narrator",
+     "source": "shared library (high_quality)",
+     "public_owner_id": "51855fcd1e38c2297e848e9a2e80a05c830e502b0be1bb014c8e93289fe8b929",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     }
+    },
+    {
+     "cand": "D",
+     "voice_id": "Hh0rE70WfnSFN80K8uJC",
+     "voice_name": "Hannah - Neutral, Polished and Helpful",
+     "source": "shared library (professional)",
+     "public_owner_id": "33f99d2e0c8a3d128962325ab5ca75fa0210c6a3fa9467d46e96cec8399c3635",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     }
+    },
+    {
+     "cand": "E",
+     "voice_id": "XrExE9yKIg1WjnnlVkGX",
+     "voice_name": "Matilda - Knowledgable, Professional",
+     "source": "premade",
+     "public_owner_id": null,
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     }
+    }
+   ]
+  },
+  "tasya": {
+   "name": "TASYA",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "raMcNf2S8wCmuaBcyI6E",
+     "voice_name": "Tyler Kurk - Smooth, Pleasant and Clear",
+     "source": "shared library (high_quality)",
+     "public_owner_id": "deba31f3d8d2617c7f74410eb2df75345949e4cda946b1f03bad1b02ee53dfff",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.1,
+      "use_speaker_boost": true,
+      "speed": 0.9
+     }
+    },
+    {
+     "cand": "B",
+     "voice_id": "rU18Fk3uSDhmg5Xh41o4",
+     "voice_name": "Ryan Kurk - Pleasant and Smooth",
+     "source": "shared library (high_quality)",
+     "public_owner_id": "deba31f3d8d2617c7f74410eb2df75345949e4cda946b1f03bad1b02ee53dfff",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.1,
+      "use_speaker_boost": true,
+      "speed": 0.9
+     }
+    },
+    {
+     "cand": "C",
+     "voice_id": "qCwgiN0GsIAYwAJ1nYvZ",
+     "voice_name": "Kirt - Podcast Host",
+     "source": "shared library (high_quality)",
+     "public_owner_id": "19a5f2785ce65763632dd915de7071293c8cc493b1c5baf8cb3989f3d1652b40",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.1,
+      "use_speaker_boost": true,
+      "speed": 0.9
+     }
+    },
+    {
+     "cand": "D",
+     "voice_id": "cjVigY5qzO86Huf0OWal",
+     "voice_name": "Eric - Smooth, Trustworthy",
+     "source": "premade",
+     "public_owner_id": null,
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.1,
+      "use_speaker_boost": true,
+      "speed": 0.9
+     }
+    },
+    {
+     "cand": "E",
+     "voice_id": "HaUDdkOAoitiVjpiet1i",
+     "voice_name": "Lucius - Calm, Pleasant and Reassuring",
+     "source": "shared library (high_quality)",
+     "public_owner_id": "7398804d9eaf2f463899a907587c33a390591775784f87857b6d0e1e4e3e66f6",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.1,
+      "use_speaker_boost": true,
+      "speed": 0.9
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,6154 @@
+{
+ "episode": 1,
+ "title": "Ep1 stick v3 sample · ElevenLabs takes (retimed copy)",
+ "part": "sample",
+ "variant": "v3-sample",
+ "logline": "Three excerpts rebuilt with the v3 changes: arrivals and aftermaths, Mas's inner voice, varied music, no pointers.",
+ "dateSpan": "Nov 30, 2022 · Nov 17-20, 2023",
+ "runtimeMin": 5.46,
+ "dialogueReel": true,
+ "cast": {
+  "mas": {
+   "role": "MAN AT THE DESK",
+   "known": true
+  },
+  "gerg": {
+   "role": "CO-FOUNDER"
+  },
+  "rima": {
+   "role": "WOMAN IN THE SPOTLIGHT"
+  },
+  "alyi": {
+   "role": "VOICE ON THE CALL"
+  },
+  "chatgtp": {
+   "name": "CHATGTP",
+   "role": "SPEECH BUBBLE"
+  },
+  "staff": {
+   "name": "STAFF",
+   "role": "STAFF",
+   "known": true
+  },
+  "nole": {
+   "role": "MAN IN THE POST"
+  },
+  "radnus": {
+   "role": "MAN WITH THE EXTINGUISHER"
+  },
+  "nirb": {
+   "name": "NIRB",
+   "role": "FOUNDER"
+  },
+  "egap": {
+   "name": "EGAP",
+   "role": "FOUNDER WITH THE MUG"
+  },
+  "tasya": {
+   "role": "MAN AT THE DOOR",
+   "known": true
+  },
+  "sydney": {
+   "name": "SYDNEY",
+   "role": "CHAT BUBBLE"
+  },
+  "kram": {
+   "role": "MAN IN THE HOODIE"
+  },
+  "mario": {
+   "role": "MAN AT THE LIGHTHOUSE"
+  },
+  "clod": {
+   "name": "CLOD",
+   "role": "CLAY FIGURE"
+  },
+  "oigneb": {
+   "name": "OIGNEB",
+   "role": "MAN WITH THE SIGN"
+  },
+  "orb": {
+   "name": "THE ORB",
+   "known": true
+  },
+  "neleh": {
+   "role": "BLUEPRINT FIGURE",
+   "known": true
+  },
+  "mada": {
+   "role": "SPINNER ICON",
+   "known": true
+  },
+  "employee": {
+   "name": "EMPLOYEE",
+   "role": "EMPLOYEE"
+  },
+  "adelina": {
+   "role": "WOMAN AT THE LIGHTHOUSE"
+  },
+  "ttemme": {
+   "role": "MAN IN THE HOODIE"
+  },
+  "terb": {
+   "role": "MAN WITH THE EXTINGUISHER"
+  },
+  "quiet-vote": {
+   "name": "THE QUIET VOTE · camera off",
+   "role": "BLACK TILE",
+   "blank": true
+  },
+  "other-yrral": {
+   "name": "THE OTHER YRRAL",
+   "role": "SEATED MAN"
+  }
+ },
+ "_source": "audio/reel/ep01-v3-sample/build_timeline.py (v3-plan.md §8)",
+ "_edits": [
+  {
+   "beat": "5.01",
+   "what": "2.0 -> 3.0 s",
+   "why": "arrival: the bullpen room tone under the button before anything happens"
+  },
+  {
+   "beat": "5.02",
+   "what": "4.4 -> 7.9 s; V.O. v3s-01",
+   "why": "arrival, and the introduction the plates did: who wants what, in his read"
+  },
+  {
+   "beat": "5.03",
+   "what": "J-cut: \"Okay, the build's green.\" starts 0.5 s under the wide",
+   "why": "sound leads us into the conversation"
+  },
+  {
+   "beat": "5.03",
+   "what": "V.O. v3s-01b \"she'll go for three.\" after Rima's \"Twice.\"",
+   "why": "a read that the picture pays off in 5.07 (her third underline)"
+  },
+  {
+   "beat": "5.04",
+   "what": "V.O. v3s-02 between Rima's question and \"it's a preview.\"",
+   "why": "the honest thought, then the public line; the gap is never explained"
+  },
+  {
+   "beat": "5.06b",
+   "what": "new held beat on Alyi (the 5.05 frame) with V.O. v3s-03",
+   "why": "warmth for Alyi, and the trust Act Four breaks"
+  },
+  {
+   "beat": "5.09",
+   "what": "+1.5 s after \"let's see if anyone notices.\"",
+   "why": "aftermath: the two of them and the quiet button"
+  },
+  {
+   "beat": "5.11",
+   "what": "V.O. v3s-04 after Gerg's \"It likes everyone…\"",
+   "why": "he wants to be liked, and says so only to himself"
+  },
+  {
+   "beat": "6.01",
+   "what": "V.O. \"nobody noticed.\" -> \"someone noticed.\"",
+   "why": "present tense, in the moment: wonder, not a caught line"
+  },
+  {
+   "beat": "6.03, 6.05",
+   "what": "cut (v3-plan C5)",
+   "why": "the drill repeats; the size reads in half the time"
+  },
+  {
+   "beat": "7.01",
+   "what": "J-cut: Rima's line starts 0.6 s under the held tile",
+   "why": "her voice pulls us back up to his face"
+  },
+  {
+   "beat": "7.01",
+   "what": "V.O. v3s-06 \"mostly the bill.\" after \"it's the bill.\", held 1.8 s",
+   "why": "the gap between what he says and what he means; plants \"mostly.\" (S5.05)"
+  },
+  {
+   "beat": "S1.01",
+   "what": "3.5 -> 5.5 s",
+   "why": "arrival: the suite, the Strip, the race weekend (answers the newcomer's \"why Vegas?\" with picture and sound)"
+  },
+  {
+   "beat": "S1.06",
+   "what": "V.O. v3s-07 \"alyi set it up. probably just the budget.\" before JOIN",
+   "why": "the one read he gets wrong, after we have just seen the board's plan: suspense by dramatic irony. Then silence inside him for the whole blow"
+  },
+  {
+   "beat": "S1.12",
+   "what": "2.2 -> 4.6 s after \"super.\"",
+   "why": "aftermath of the act's biggest turn: the frozen tiles, the room, no score"
+  },
+  {
+   "beat": "S5.01",
+   "what": "cut: the WHAT THEY DIDN'T KNOW card",
+   "why": "a pointer; his voice returning tells us we are back with him"
+  },
+  {
+   "beat": "S5.02",
+   "what": "2.6 -> 4.5 s",
+   "why": "arrival: the dark room at 2 AM, glass and lanyard"
+  },
+  {
+   "beat": "S5.03",
+   "what": "V.O. v3s-08, the hearts counted, then miscounted",
+   "why": "the rhythm carries what he won't say: he loses count"
+  },
+  {
+   "beat": "S5.09",
+   "what": "V.O. v3s-09 \"gerg. he'll say he's compiling.\" as the tile rings",
+   "why": "a read the next line pays off; warmth"
+  },
+  {
+   "beat": "S5.07b",
+   "what": "3.5 -> 6.0 s after \"He did both.\"",
+   "why": "silence inside him: the held face and the room"
+  },
+  {
+   "beat": "S5.09-back",
+   "what": "V.O. v3s-10 \"gerg never waits to be asked.\" after \"Just in case.\"",
+   "why": "the bible's planted line, now in present tense"
+  },
+  {
+   "beat": "S5.12",
+   "what": "2.9 -> 5.5 s after \"leave it open.\"",
+   "why": "aftermath: the door ajar"
+  }
+ ],
+ "beats": [
+  {
+   "id": "A.00",
+   "act": "ACT ONE",
+   "kind": "card",
+   "set": "void",
+   "style": "BASE",
+   "shot": "wide",
+   "chars": [],
+   "caption": "Reviewer slate: 1 / 3 · LAUNCH NIGHT",
+   "lines": [],
+   "onscreen": [
+    "1 / 3 · LAUNCH NIGHT",
+    "Act One sc 5-7 · warm"
+   ],
+   "reelDur": 2.5,
+   "fx": [],
+   "cues": [
+    "reviewer-only slate between excerpts (not part of the show)"
+   ],
+   "room": ""
+  },
+  {
+   "id": "5.01",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "INSERT · the beige button",
+   "side": "",
+   "room": "bullpen",
+   "chars": [],
+   "caption": "A small beige button where the 1993 OK sat. Its 7 px label: research preview.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "research preview",
+     "at": 0.25,
+     "until": null
+    }
+   ],
+   "reelDur": 3.0,
+   "fx": [],
+   "seq": {
+    "id": "5",
+    "side": "",
+    "place": "the NopeAI bullpen: launch night",
+    "time": "Wed Nov 30, 2022 · night"
+   },
+   "cues": [
+    "cut: HARD CUT on the downbeat, out of the card",
+    "sound: the bullpen bed (server hum up through the floor, one buzzing tube, Gerg's keys) · music: none under the talk"
+   ]
+  },
+  {
+   "id": "5.02",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the bullpen after hours (the home room's one wide)",
+   "side": "",
+   "room": "bullpen",
+   "chars": [
+    {
+     "id": "mas",
+     "x": 0.14,
+     "pose": "sit"
+    },
+    {
+     "id": "gerg",
+     "x": 0.58,
+     "pose": "sit"
+    },
+    {
+     "id": "rima",
+     "x": 0.84
+    },
+    {
+     "id": "alyi",
+     "x": 0.96
+    }
+   ],
+   "caption": "The bullpen after hours, held: the room and the three people in it before anyone speaks.",
+   "lines": [
+    {
+     "id": "v3s-01",
+     "who": "mas",
+     "text": "gerg wants to ship it. rima wants it quiet. alyi wants to know what it is first.",
+     "t": 1.2,
+     "dur": 5.33,
+     "audio": "audio/ep01/v3-el/sample/wav/v3s-01__mas-manalt-B.wav",
+     "in": 0.39,
+     "words": [
+      [
+       "gerg",
+       -0.02,
+       0.273
+      ],
+      [
+       "wants",
+       0.332,
+       0.564
+      ],
+      [
+       "to",
+       0.599,
+       0.668
+      ],
+      [
+       "ship",
+       0.726,
+       0.97
+      ],
+      [
+       "it",
+       1.028,
+       1.179
+      ],
+      [
+       "rima",
+       1.98,
+       2.27
+      ],
+      [
+       "wants",
+       2.34,
+       2.561
+      ],
+      [
+       "it",
+       2.607,
+       2.7
+      ],
+      [
+       "quiet",
+       2.746,
+       3.164
+      ],
+      [
+       "alyi",
+       3.246,
+       3.617
+      ],
+      [
+       "wants",
+       3.687,
+       3.919
+      ],
+      [
+       "to",
+       3.965,
+       4.035
+      ],
+      [
+       "know",
+       4.093,
+       4.232
+      ],
+      [
+       "what",
+       4.267,
+       4.407
+      ],
+      [
+       "it",
+       4.453,
+       4.523
+      ],
+      [
+       "is",
+       4.581,
+       4.685
+      ],
+      [
+       "first",
+       4.778,
+       5.266
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Evan - Calm, Grounded & Reflective' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.78",
+     "kokoro_audio": "audio/ep01/v3-sample/vo-v2/wav/v3s-01.wav"
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "RAIL: NOV 30, 2022",
+     "at": 0.3,
+     "until": null
+    },
+    {
+     "text": "LAUNCH: LOW-KEY",
+     "at": 0.4,
+     "until": null
+    },
+    {
+     "text": "UI: Push button",
+     "at": 1.8,
+     "until": 3.0
+    },
+    {
+     "text": "UI: Push research preview",
+     "at": 3.0,
+     "until": null
+    }
+   ],
+   "reelDur": 7.53,
+   "fx": [],
+   "names": [
+    {
+     "id": "gerg",
+     "at": 1.265
+    },
+    {
+     "id": "rima",
+     "at": 2.815
+    },
+    {
+     "id": "alyi",
+     "at": 4.715
+    }
+   ]
+  },
+  {
+   "id": "5.03",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "TWO-SHOT · Mas and Gerg, desk to desk (held)",
+   "side": "",
+   "room": "bullpen",
+   "chars": [
+    {
+     "id": "mas",
+     "x": 0.22,
+     "pose": "sit"
+    },
+    {
+     "id": "gerg",
+     "x": 0.74,
+     "pose": "sit"
+    }
+   ],
+   "caption": "Gerg ships before anyone agrees. Rima, from the whiteboard, not turning round. Gerg: nobody reads research.",
+   "lines": [
+    {
+     "id": "e1-a1-5-01",
+     "who": "gerg",
+     "text": "Okay, the build's green. I'm shipping it.",
+     "t": -0.5,
+     "dur": 1.73,
+     "audio": "audio/ep01/v3-el/sample/wav/e1-a1-5-01__gerg-mockbran-B.wav",
+     "in": 0.36,
+     "words": [
+      [
+       "Okay",
+       -0.01,
+       0.292
+      ],
+      [
+       "the",
+       0.35,
+       0.42
+      ],
+      [
+       "build's",
+       0.454,
+       0.687
+      ],
+      [
+       "green",
+       0.71,
+       0.942
+      ],
+      [
+       "I'm",
+       0.988,
+       1.105
+      ],
+      [
+       "shipping",
+       1.139,
+       1.406
+      ],
+      [
+       "it",
+       1.453,
+       1.534
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Clear, Fast and Conversational' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 1.1",
+     "kokoro_audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-01.wav"
+    },
+    {
+     "id": "e1-a1-5-02",
+     "who": "rima",
+     "text": "We said low-key, Gerg. I underlined it. Twice.",
+     "t": 2.58,
+     "dur": 3.35,
+     "audio": "audio/ep01/v3-el/sample/wav/e1-a1-5-02__rima-tamuri-B.wav",
+     "in": 0.36,
+     "words": [
+      [
+       "We",
+       -0.01,
+       0.187
+      ],
+      [
+       "said",
+       0.245,
+       0.431
+      ],
+      [
+       "low-key",
+       0.501,
+       0.907
+      ],
+      [
+       "Gerg",
+       0.965,
+       1.372
+      ],
+      [
+       "I",
+       1.604,
+       1.673
+      ],
+      [
+       "underlined",
+       1.801,
+       2.3
+      ],
+      [
+       "it",
+       2.358,
+       2.544
+      ],
+      [
+       "Twice",
+       2.637,
+       3.345
+      ]
+     ],
+     "tag": "O.S.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Harper - Confident, Clear and Cool' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.88",
+     "kokoro_audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-02.wav"
+    },
+    {
+     "id": "e1-a1-5-03",
+     "who": "gerg",
+     "text": "It's a research preview, Rima. Nobody reads research. We'll get forty users and a nice thread.",
+     "t": 7.88,
+     "dur": 4.47,
+     "audio": "audio/ep01/v3-el/sample/wav/e1-a1-5-03__gerg-mockbran-B.wav",
+     "in": 0.4,
+     "words": [
+      [
+       "It's",
+       -0.02,
+       0.147
+      ],
+      [
+       "a",
+       0.182,
+       0.205
+      ],
+      [
+       "research",
+       0.263,
+       0.612
+      ],
+      [
+       "preview",
+       0.658,
+       0.983
+      ],
+      [
+       "Rima",
+       1.053,
+       1.343
+      ],
+      [
+       "Nobody",
+       1.494,
+       1.773
+      ],
+      [
+       "reads",
+       1.831,
+       2.028
+      ],
+      [
+       "research",
+       2.086,
+       2.435
+      ],
+      [
+       "We'll",
+       2.481,
+       2.62
+      ],
+      [
+       "get",
+       2.655,
+       2.76
+      ],
+      [
+       "forty",
+       2.818,
+       3.073
+      ],
+      [
+       "users",
+       3.143,
+       3.445
+      ],
+      [
+       "and",
+       3.479,
+       3.561
+      ],
+      [
+       "a",
+       3.596,
+       3.619
+      ],
+      [
+       "nice",
+       3.677,
+       3.909
+      ],
+      [
+       "thread",
+       3.944,
+       4.257
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Clear, Fast and Conversational' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 1.1",
+     "kokoro_audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-03.wav"
+    },
+    {
+     "id": "v3s-11",
+     "who": "mas",
+     "text": "she'll go for three.",
+     "t": 6.19,
+     "dur": 1.1,
+     "audio": "audio/ep01/v3-el/sample/wav/v3s-11__mas-manalt-B.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "she'll",
+       -0.02,
+       0.305
+      ],
+      [
+       "go",
+       0.352,
+       0.468
+      ],
+      [
+       "for",
+       0.537,
+       0.677
+      ],
+      [
+       "three",
+       0.735,
+       1.106
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Evan - Calm, Grounded & Reflective' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.78",
+     "kokoro_audio": "audio/ep01/v3-sample/vo-v2/wav/v3s-11.wav"
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "UI: Push research preview",
+     "at": 0.0,
+     "until": null
+    },
+    {
+     "text": "GERG MOCKBRAN",
+     "at": 0.6,
+     "until": 3.93
+    }
+   ],
+   "reelDur": 12.645,
+   "fx": [],
+   "names": [
+    {
+     "id": "gerg",
+     "at": 0.6
+    }
+   ],
+   "sounds": [
+    {
+     "name": "synth:keys",
+     "at": 0.0,
+     "gain": -32,
+     "dur": 2.8
+    },
+    {
+     "name": "synth:keys",
+     "at": 5.49,
+     "gain": -34,
+     "dur": 4.2
+    }
+   ]
+  },
+  {
+   "id": "5.04",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "OTS · over Mas onto Rima (held through the bargain)",
+   "side": "",
+   "room": "bullpen",
+   "chars": [
+    {
+     "id": "rima",
+     "x": 0.58
+    },
+    {
+     "id": "alyi",
+     "x": 0.9
+    }
+   ],
+   "caption": "Rima bargains (one post, a banner), Gerg waves it off; she asks Mas what it costs. \"it's a preview.\"",
+   "lines": [
+    {
+     "id": "e1-a1-5-04",
+     "who": "rima",
+     "text": "Then let's treat it like one. One little post, no press. And a banner that says it makes things up.",
+     "t": 0.305,
+     "dur": 7.77,
+     "audio": "audio/ep01/v3-el/sample/wav/e1-a1-5-04__rima-tamuri-B.wav",
+     "in": 0.45,
+     "words": [
+      [
+       "Then",
+       -0.02,
+       0.121
+      ],
+      [
+       "let's",
+       0.179,
+       0.376
+      ],
+      [
+       "treat",
+       0.411,
+       0.62
+      ],
+      [
+       "it",
+       0.655,
+       0.724
+      ],
+      [
+       "like",
+       0.759,
+       0.945
+      ],
+      [
+       "one",
+       1.026,
+       1.479
+      ],
+      [
+       "One",
+       2.071,
+       2.35
+      ],
+      [
+       "little",
+       2.385,
+       2.64
+      ],
+      [
+       "post",
+       2.675,
+       3.186
+      ],
+      [
+       "no",
+       3.383,
+       3.534
+      ],
+      [
+       "press",
+       3.627,
+       4.138
+      ],
+      [
+       "And",
+       4.834,
+       5.008
+      ],
+      [
+       "a",
+       5.066,
+       5.09
+      ],
+      [
+       "banner",
+       5.159,
+       5.508
+      ],
+      [
+       "that",
+       5.566,
+       5.693
+      ],
+      [
+       "says",
+       5.763,
+       6.065
+      ],
+      [
+       "it",
+       6.158,
+       6.285
+      ],
+      [
+       "makes",
+       6.355,
+       6.611
+      ],
+      [
+       "things",
+       6.669,
+       6.959
+      ],
+      [
+       "up",
+       7.063,
+       7.388
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Harper - Confident, Clear and Cool' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.88",
+     "kokoro_audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-04.wav"
+    },
+    {
+     "id": "e1-a1-5-05",
+     "who": "gerg",
+     "text": "It'll have a banner. Nobody reads banners either.",
+     "t": 8.375,
+     "dur": 2.64,
+     "audio": "audio/ep01/v3-el/sample/wav/e1-a1-5-05__gerg-mockbran-B.wav",
+     "in": 0.4,
+     "words": [
+      [
+       "It'll",
+       -0.02,
+       0.194
+      ],
+      [
+       "have",
+       0.229,
+       0.356
+      ],
+      [
+       "a",
+       0.38,
+       0.414
+      ],
+      [
+       "banner",
+       0.461,
+       0.774
+      ],
+      [
+       "Nobody",
+       1.181,
+       1.459
+      ],
+      [
+       "reads",
+       1.517,
+       1.703
+      ],
+      [
+       "banners",
+       1.75,
+       2.04
+      ],
+      [
+       "either",
+       2.098,
+       2.342
+      ]
+     ],
+     "tag": "O.S.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Clear, Fast and Conversational' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 1.1",
+     "kokoro_audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-05.wav"
+    },
+    {
+     "id": "e1-a1-5-06",
+     "who": "rima",
+     "text": "Mas, it's your call. If it breaks in front of people, and it will, what do we tell them?",
+     "t": 11.715,
+     "dur": 5.18,
+     "audio": "audio/ep01/v3-el/sample/wav/e1-a1-5-06__rima-tamuri-B.wav",
+     "in": 0.41,
+     "words": [
+      [
+       "Mas",
+       -0.02,
+       0.474
+      ],
+      [
+       "it's",
+       0.544,
+       0.729
+      ],
+      [
+       "your",
+       0.788,
+       0.973
+      ],
+      [
+       "call",
+       1.078,
+       1.577
+      ],
+      [
+       "If",
+       1.949,
+       2.076
+      ],
+      [
+       "it",
+       2.134,
+       2.192
+      ],
+      [
+       "breaks",
+       2.216,
+       2.471
+      ],
+      [
+       "in",
+       2.506,
+       2.564
+      ],
+      [
+       "front",
+       2.634,
+       2.784
+      ],
+      [
+       "of",
+       2.808,
+       2.854
+      ],
+      [
+       "people",
+       2.889,
+       3.226
+      ],
+      [
+       "and",
+       3.272,
+       3.4
+      ],
+      [
+       "it",
+       3.469,
+       3.527
+      ],
+      [
+       "will",
+       3.597,
+       3.992
+      ],
+      [
+       "what",
+       4.189,
+       4.375
+      ],
+      [
+       "do",
+       4.398,
+       4.445
+      ],
+      [
+       "we",
+       4.503,
+       4.596
+      ],
+      [
+       "tell",
+       4.63,
+       4.839
+      ],
+      [
+       "them",
+       4.909,
+       5.13
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Harper - Confident, Clear and Cool' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.88",
+     "kokoro_audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-06.wav"
+    },
+    {
+     "id": "e1-a1-5-07",
+     "who": "mas",
+     "text": "it's a preview.",
+     "t": 21.835,
+     "dur": 0.81,
+     "audio": "audio/ep01/v3-el/sample/wav/e1-a1-5-07__mas-manalt-B.wav",
+     "in": 0.4,
+     "words": [
+      [
+       "it's",
+       -0.02,
+       0.205
+      ],
+      [
+       "a",
+       0.229,
+       0.252
+      ],
+      [
+       "preview",
+       0.298,
+       0.763
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Evan - Calm, Grounded & Reflective' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.84",
+     "kokoro_audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-07.wav"
+    },
+    {
+     "id": "e1-a1-5-08",
+     "who": "rima",
+     "text": "Okay. Say it works. Say people actually use it. That's going to cost us a fortune.",
+     "t": 23.145,
+     "dur": 6.63,
+     "audio": "audio/ep01/v3-el/sample/wav/e1-a1-5-08__rima-tamuri-B.wav",
+     "in": 0.4,
+     "words": [
+      [
+       "Okay",
+       -0.02,
+       0.391
+      ],
+      [
+       "Say",
+       1.204,
+       1.401
+      ],
+      [
+       "it",
+       1.471,
+       1.541
+      ],
+      [
+       "works",
+       1.575,
+       2.017
+      ],
+      [
+       "Say",
+       2.342,
+       2.702
+      ],
+      [
+       "people",
+       2.783,
+       3.108
+      ],
+      [
+       "actually",
+       3.166,
+       3.619
+      ],
+      [
+       "use",
+       3.7,
+       3.955
+      ],
+      [
+       "it",
+       4.013,
+       4.199
+      ],
+      [
+       "That's",
+       4.826,
+       5.082
+      ],
+      [
+       "going",
+       5.116,
+       5.244
+      ],
+      [
+       "to",
+       5.267,
+       5.314
+      ],
+      [
+       "cost",
+       5.372,
+       5.65
+      ],
+      [
+       "us",
+       5.72,
+       5.836
+      ],
+      [
+       "a",
+       5.894,
+       5.918
+      ],
+      [
+       "fortune",
+       5.987,
+       6.649
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Harper - Confident, Clear and Cool' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.88",
+     "kokoro_audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-08.wav"
+    },
+    {
+     "id": "e1-a1-5-09",
+     "who": "gerg",
+     "text": "That's a v2 problem.",
+     "t": 30.125,
+     "dur": 1.17,
+     "audio": "audio/ep01/v3-el/sample/wav/e1-a1-5-09__gerg-mockbran-B.wav",
+     "in": 0.38,
+     "words": [
+      [
+       "That's",
+       -0.02,
+       0.202
+      ],
+      [
+       "a",
+       0.237,
+       0.26
+      ],
+      [
+       "v2",
+       0.295,
+       0.539
+      ],
+      [
+       "problem",
+       0.597,
+       0.945
+      ]
+     ],
+     "tag": "O.S.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Clear, Fast and Conversational' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 1.1",
+     "kokoro_audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-09.wav"
+    },
+    {
+     "id": "v3s-02",
+     "who": "mas",
+     "text": "she's right. it will break. i don't know which part yet.",
+     "t": 17.495,
+     "dur": 3.44,
+     "audio": "audio/ep01/v3-el/sample/wav/v3s-02__mas-manalt-B.wav",
+     "in": 0.39,
+     "words": [
+      [
+       "she's",
+       -0.02,
+       0.285
+      ],
+      [
+       "right",
+       0.343,
+       0.633
+      ],
+      [
+       "it",
+       0.726,
+       0.854
+      ],
+      [
+       "will",
+       0.912,
+       1.121
+      ],
+      [
+       "break",
+       1.191,
+       1.527
+      ],
+      [
+       "i",
+       1.864,
+       1.922
+      ],
+      [
+       "don't",
+       1.992,
+       2.178
+      ],
+      [
+       "know",
+       2.212,
+       2.352
+      ],
+      [
+       "which",
+       2.398,
+       2.607
+      ],
+      [
+       "part",
+       2.665,
+       2.897
+      ],
+      [
+       "yet",
+       2.955,
+       3.199
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Evan - Calm, Grounded & Reflective' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.78",
+     "kokoro_audio": "audio/ep01/v3-sample/vo-v2/wav/v3s-02.wav"
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "LAUNCH: LOW-KEY",
+     "at": 0.0,
+     "until": null
+    },
+    {
+     "text": "UI: Push research preview",
+     "at": 0.0,
+     "until": null
+    },
+    {
+     "text": "RIMA TAMURI",
+     "at": 0.405,
+     "until": 6.995
+    }
+   ],
+   "reelDur": 31.602,
+   "fx": [],
+   "fg": {
+    "id": "mas",
+    "side": "left"
+   },
+   "names": [
+    {
+     "id": "rima",
+     "at": 0.405
+    }
+   ],
+   "sounds": [
+    {
+     "name": "synth:keys",
+     "at": 6.095,
+     "gain": -34,
+     "dur": 2.6
+    },
+    {
+     "name": "synth:keys",
+     "at": 24.965,
+     "gain": -34,
+     "dur": 1.8
+    }
+   ]
+  },
+  {
+   "id": "5.05",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU·glass · Alyi in the doorway, seen in its glass (the cut on the turn)",
+   "side": "",
+   "room": "bullpen",
+   "chars": [
+    {
+     "id": "alyi",
+     "x": 0.6
+    }
+   ],
+   "caption": "A new voice from the doorway turns cost into dread: \"And what if it wakes up?\"",
+   "lines": [
+    {
+     "id": "e1-a1-5-10",
+     "who": "alyi",
+     "text": "And what if it wakes up?",
+     "t": 0.593,
+     "dur": 1.44,
+     "audio": "audio/ep01/v3-el/sample/wav/e1-a1-5-10__alyi-B.wav",
+     "in": 0.42,
+     "words": [
+      [
+       "And",
+       -0.02,
+       0.139
+      ],
+      [
+       "what",
+       0.22,
+       0.406
+      ],
+      [
+       "if",
+       0.452,
+       0.545
+      ],
+      [
+       "it",
+       0.603,
+       0.696
+      ],
+      [
+       "wakes",
+       0.754,
+       1.056
+      ],
+      [
+       "up",
+       1.195,
+       1.381
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Brent' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.82",
+     "kokoro_audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-10.wav"
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "ALYI",
+     "at": 0.2,
+     "until": null
+    }
+   ],
+   "reelDur": 2.375,
+   "fx": [],
+   "names": [
+    {
+     "id": "alyi",
+     "at": 0.2
+    }
+   ]
+  },
+  {
+   "id": "5.06",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU · Rima turns to Mas and waits (1 beat, hers)",
+   "side": "",
+   "room": "bullpen",
+   "chars": [
+    {
+     "id": "rima",
+     "x": 0.5
+    }
+   ],
+   "caption": "She turns from the glass to Mas and waits. His answer lands on her face.",
+   "lines": [
+    {
+     "id": "e1-a1-5-11",
+     "who": "mas",
+     "text": "…still a preview.",
+     "t": 1.058,
+     "dur": 0.93,
+     "audio": "audio/ep01/v3-el/sample/wav/e1-a1-5-11__mas-manalt-B.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "still",
+       0.038,
+       0.34
+      ],
+      [
+       "a",
+       0.398,
+       0.422
+      ],
+      [
+       "preview",
+       0.468,
+       0.909
+      ]
+     ],
+     "tag": "O.S.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Evan - Calm, Grounded & Reflective' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.84",
+     "kokoro_audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-11.wav"
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 2.727,
+   "fx": []
+  },
+  {
+   "id": "5.06b",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU·glass · Alyi in the doorway, seen in its glass (the cut on the turn)",
+   "side": "",
+   "room": "bullpen",
+   "chars": [
+    {
+     "id": "alyi",
+     "x": 0.6
+    }
+   ],
+   "caption": "Back on Alyi in the glass, held, while Mas thinks about him. Alyi keeps watching the button.",
+   "lines": [
+    {
+     "id": "v3s-03",
+     "who": "mas",
+     "text": "alyi asks that about everything we build. he means it every time.",
+     "t": 0.5,
+     "dur": 4.58,
+     "audio": "audio/ep01/v3-el/sample/wav/v3s-03__mas-manalt-B.wav",
+     "in": 0.38,
+     "words": [
+      [
+       "alyi",
+       -0.02,
+       0.434
+      ],
+      [
+       "asks",
+       0.527,
+       0.876
+      ],
+      [
+       "that",
+       0.922,
+       1.096
+      ],
+      [
+       "about",
+       1.143,
+       1.421
+      ],
+      [
+       "everything",
+       1.514,
+       2.013
+      ],
+      [
+       "we",
+       2.071,
+       2.164
+      ],
+      [
+       "build",
+       2.234,
+       2.629
+      ],
+      [
+       "he",
+       3.314,
+       3.43
+      ],
+      [
+       "means",
+       3.488,
+       3.72
+      ],
+      [
+       "it",
+       3.766,
+       3.836
+      ],
+      [
+       "every",
+       3.894,
+       4.126
+      ],
+      [
+       "time",
+       4.173,
+       4.6
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Evan - Calm, Grounded & Reflective' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.78",
+     "kokoro_audio": "audio/ep01/v3-sample/vo-v2/wav/v3s-03.wav"
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "ALYI",
+     "at": 0.2,
+     "until": null
+    }
+   ],
+   "reelDur": 5.88,
+   "fx": [],
+   "names": [
+    {
+     "id": "alyi",
+     "at": 0.2
+    }
+   ],
+   "cues": []
+  },
+  {
+   "id": "5.07",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "TWO-SHOT · Mas and Gerg (Rima back at the board)",
+   "side": "",
+   "room": "bullpen",
+   "chars": [
+    {
+     "id": "mas",
+     "x": 0.22,
+     "pose": "sit"
+    },
+    {
+     "id": "gerg",
+     "x": 0.66,
+     "pose": "sit"
+    },
+    {
+     "id": "rima",
+     "x": 0.93,
+     "until": 3.302
+    },
+    {
+     "id": "rima",
+     "x": 0.93,
+     "pose": "point",
+     "from": 3.302
+    }
+   ],
+   "caption": "One key, a flourish: \"Your button.\" Behind him Rima underlines LOW-KEY a third time. No line.",
+   "lines": [
+    {
+     "id": "e1-a1-5-12",
+     "who": "gerg",
+     "text": "It's all staged on my end. Your button.",
+     "t": 0.662,
+     "dur": 1.7,
+     "audio": "audio/ep01/v3-el/sample/wav/e1-a1-5-12__gerg-mockbran-B.wav",
+     "in": 0.41,
+     "words": [
+      [
+       "It's",
+       -0.02,
+       0.149
+      ],
+      [
+       "all",
+       0.172,
+       0.277
+      ],
+      [
+       "staged",
+       0.323,
+       0.625
+      ],
+      [
+       "on",
+       0.66,
+       0.718
+      ],
+      [
+       "my",
+       0.776,
+       0.88
+      ],
+      [
+       "end",
+       0.938,
+       1.089
+      ],
+      [
+       "Your",
+       1.252,
+       1.414
+      ],
+      [
+       "button",
+       1.461,
+       1.716
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Clear, Fast and Conversational' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 1.1",
+     "kokoro_audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-12.wav"
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "LAUNCH: LOW-KEY",
+     "at": 0.0,
+     "until": null
+    },
+    {
+     "text": "UI: Push research preview",
+     "at": 0.0,
+     "until": null
+    }
+   ],
+   "reelDur": 4.06,
+   "fx": [],
+   "cues": [
+    "sfx: one key, with a flourish · then the marker squeaks: a third underline"
+   ],
+   "sounds": [
+    {
+     "name": "key_tap_space",
+     "at": 0.2,
+     "gain": -16
+    },
+    {
+     "name": "marker_write_q",
+     "at": 2.862,
+     "gain": -20,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "5.08",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "INSERT · his finger on the button",
+   "side": "",
+   "room": "bullpen",
+   "chars": [],
+   "caption": "His finger, no hover. Click. Nothing happens.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "research preview",
+     "at": 0.0,
+     "until": null
+    },
+    {
+     "text": "UI: Push research preview",
+     "at": 0.0,
+     "until": 1.0
+    }
+   ],
+   "reelDur": 2.291667,
+   "fx": [],
+   "cues": [
+    "sfx: click (on 1.0 s), the 1993 OK's click · nothing happens · the band dims back into cutscene mode"
+   ],
+   "sounds": [
+    {
+     "name": "dialog_ok_click",
+     "at": 1.0,
+     "gain": -12
+    }
+   ]
+  },
+  {
+   "id": "5.09",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "MCU·glass · Mas soft in the fg; Rima at the board; Alyi in the doorway (glass)",
+   "side": "",
+   "room": "bullpen",
+   "chars": [
+    {
+     "id": "rima",
+     "x": 0.55
+    },
+    {
+     "id": "alyi",
+     "x": 0.84,
+     "until": 10.32
+    }
+   ],
+   "caption": "Alyi, low, to Mas only: the years they share. \"you counted.\" \"Someone should.\" He walks off.",
+   "lines": [
+    {
+     "id": "e1-a1-5-13",
+     "who": "alyi",
+     "text": "Six years and eleven months. From the day we started to that click.",
+     "t": 1.2,
+     "dur": 5.84,
+     "audio": "audio/ep01/v3-el/sample/wav/e1-a1-5-13__alyi-B.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "Six",
+       0.0,
+       0.441
+      ],
+      [
+       "years",
+       0.557,
+       1.08
+      ],
+      [
+       "and",
+       1.289,
+       1.544
+      ],
+      [
+       "eleven",
+       1.625,
+       2.055
+      ],
+      [
+       "months",
+       2.136,
+       2.612
+      ],
+      [
+       "From",
+       3.355,
+       3.576
+      ],
+      [
+       "the",
+       3.634,
+       3.727
+      ],
+      [
+       "day",
+       3.808,
+       4.098
+      ],
+      [
+       "we",
+       4.203,
+       4.331
+      ],
+      [
+       "started",
+       4.412,
+       4.841
+      ],
+      [
+       "to",
+       4.899,
+       4.969
+      ],
+      [
+       "that",
+       5.039,
+       5.224
+      ],
+      [
+       "click",
+       5.306,
+       5.735
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Brent' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.82",
+     "kokoro_audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-13.wav"
+    },
+    {
+     "id": "e1-a1-5-14",
+     "who": "mas",
+     "text": "you counted.",
+     "t": 7.84,
+     "dur": 0.73,
+     "audio": "audio/ep01/v3-el/sample/wav/e1-a1-5-14__mas-manalt-B.wav",
+     "in": 0.41,
+     "words": [
+      [
+       "you",
+       -0.02,
+       0.126
+      ],
+      [
+       "counted",
+       0.207,
+       0.695
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Evan - Calm, Grounded & Reflective' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.84",
+     "kokoro_audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-14.wav"
+    },
+    {
+     "id": "e1-a1-5-15",
+     "who": "alyi",
+     "text": "Someone should.",
+     "t": 9.27,
+     "dur": 1.07,
+     "audio": "audio/ep01/v3-el/sample/wav/e1-a1-5-15__alyi-B.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "Someone",
+       0.0,
+       0.604
+      ],
+      [
+       "should",
+       0.662,
+       1.033
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Brent' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.82",
+     "kokoro_audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-15.wav"
+    },
+    {
+     "id": "e1-a1-5-16",
+     "who": "mas",
+     "text": "let's see if anyone notices.",
+     "t": 11.74,
+     "dur": 1.43,
+     "audio": "audio/ep01/v3-el/sample/wav/e1-a1-5-16__mas-manalt-B.wav",
+     "in": 0.45,
+     "words": [
+      [
+       "let's",
+       -0.02,
+       0.167
+      ],
+      [
+       "see",
+       0.19,
+       0.306
+      ],
+      [
+       "if",
+       0.353,
+       0.422
+      ],
+      [
+       "anyone",
+       0.48,
+       0.794
+      ],
+      [
+       "notices",
+       0.84,
+       1.34
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Evan - Calm, Grounded & Reflective' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.84",
+     "kokoro_audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-16.wav"
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 15.188,
+   "fx": [],
+   "fg": {
+    "id": "mas",
+    "side": "left"
+   },
+   "cues": [
+    "sound: Gerg's keys under the shot; Rima, at the board, doesn't hear it",
+    "sound: Alyi's footsteps go off down the hall after \"Someone should.\"; the glass is empty"
+   ],
+   "sounds": [
+    {
+     "name": "synth:keys",
+     "at": 0.2,
+     "gain": -36,
+     "dur": 4.8
+    },
+    {
+     "name": "synth:steps_far",
+     "at": 10.73,
+     "gain": -30,
+     "dur": 1.4
+    }
+   ]
+  },
+  {
+   "id": "5.10",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "OTS · over Mas onto his laptop (the chat's one setup)",
+   "side": "",
+   "room": "bullpen",
+   "chars": [
+    {
+     "id": "chatgtp",
+     "x": 0.45
+    },
+    {
+     "id": "rima",
+     "x": 0.8,
+     "pose": "lean"
+    }
+   ],
+   "caption": "\"Autocomplete.\" The bubble lights before anyone types, and flatters. He types one line. It flatters him.",
+   "lines": [
+    {
+     "id": "e1-a1-5-17",
+     "who": "rima",
+     "text": "So we've launched autocomplete.",
+     "t": 0.8,
+     "dur": 1.72,
+     "audio": "audio/ep01/v3-el/sample/wav/e1-a1-5-17__rima-tamuri-B.wav",
+     "in": 0.4,
+     "words": [
+      [
+       "So",
+       -0.02,
+       0.136
+      ],
+      [
+       "we've",
+       0.194,
+       0.368
+      ],
+      [
+       "launched",
+       0.391,
+       0.658
+      ],
+      [
+       "autocomplete",
+       0.739,
+       1.715
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Harper - Confident, Clear and Cool' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.88",
+     "kokoro_audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-17.wav"
+    },
+    {
+     "id": "e1-a1-5-18",
+     "who": "gerg",
+     "text": "Autocomplete that read the internet, Rima. All of it.",
+     "t": 2.82,
+     "dur": 2.24,
+     "audio": "audio/ep01/v3-el/sample/wav/e1-a1-5-18__gerg-mockbran-B.wav",
+     "in": 0.38,
+     "words": [
+      [
+       "Autocomplete",
+       -0.02,
+       0.574
+      ],
+      [
+       "that",
+       0.597,
+       0.69
+      ],
+      [
+       "read",
+       0.748,
+       0.887
+      ],
+      [
+       "the",
+       0.922,
+       0.992
+      ],
+      [
+       "internet",
+       1.038,
+       1.34
+      ],
+      [
+       "Rima",
+       1.421,
+       1.746
+      ],
+      [
+       "All",
+       1.816,
+       2.025
+      ],
+      [
+       "of",
+       2.083,
+       2.141
+      ],
+      [
+       "it",
+       2.188,
+       2.26
+      ]
+     ],
+     "tag": "O.S.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Clear, Fast and Conversational' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 1.1",
+     "kokoro_audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-18.wav"
+    },
+    {
+     "id": "e1-a1-5-19",
+     "who": "chatgtp",
+     "text": "What a great question!",
+     "t": 5.96,
+     "dur": 1.09,
+     "audio": "audio/ep01/v3-el/sample/wav/e1-a1-5-19__chatgtp-A.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "What",
+       0.0,
+       0.244
+      ],
+      [
+       "a",
+       0.279,
+       0.302
+      ],
+      [
+       "great",
+       0.348,
+       0.534
+      ],
+      [
+       "question",
+       0.592,
+       1.057
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Maya - The Upbeat Creator' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.08",
+     "kokoro_audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-19.wav"
+    },
+    {
+     "id": "e1-a1-5-20",
+     "who": "rima",
+     "text": "Nobody asked one.",
+     "t": 7.5,
+     "dur": 1.09,
+     "audio": "audio/ep01/v3-el/sample/wav/e1-a1-5-20__rima-tamuri-B.wav",
+     "in": 0.42,
+     "words": [
+      [
+       "Nobody",
+       -0.02,
+       0.336
+      ],
+      [
+       "asked",
+       0.406,
+       0.719
+      ],
+      [
+       "one",
+       0.801,
+       1.079
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Harper - Confident, Clear and Cool' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.88",
+     "kokoro_audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-20.wav"
+    },
+    {
+     "id": "e1-a1-5-21",
+     "who": "chatgtp",
+     "text": "Brilliant! You're clearly a visionary.",
+     "t": 10.99,
+     "dur": 1.97,
+     "audio": "audio/ep01/v3-el/sample/wav/e1-a1-5-21__chatgtp-A.wav",
+     "in": 0.36,
+     "words": [
+      [
+       "Brilliant",
+       -0.01,
+       0.512
+      ],
+      [
+       "You're",
+       0.698,
+       0.93
+      ],
+      [
+       "clearly",
+       0.965,
+       1.267
+      ],
+      [
+       "a",
+       1.325,
+       1.348
+      ],
+      [
+       "visionary",
+       1.383,
+       1.859
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Maya - The Upbeat Creator' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.08",
+     "kokoro_audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-21.wav"
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "CHATGTP · USERS: 0",
+     "at": 5.54,
+     "until": null
+    },
+    {
+     "text": "mas types: is anyone there?",
+     "at": 9.45,
+     "until": null
+    }
+   ],
+   "reelDur": 14.057,
+   "fx": [],
+   "fg": {
+    "id": "mas",
+    "side": "left"
+   },
+   "names": [
+    {
+     "id": "chatgtp",
+     "at": 5.54
+    }
+   ],
+   "sounds": [
+    {
+     "name": "synth:keys",
+     "at": 0.0,
+     "gain": -38,
+     "dur": 1.2
+    },
+    {
+     "name": "ui_toast_pop",
+     "at": 5.54,
+     "gain": -26
+    },
+    {
+     "name": "synth:keys",
+     "at": 9.45,
+     "gain": -28,
+     "dur": 1.3
+    }
+   ]
+  },
+  {
+   "id": "5.11",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU · Mas, lit from below (his one close shot here)",
+   "side": "",
+   "room": "bullpen",
+   "chars": [
+    {
+     "id": "mas",
+     "x": 0.45,
+     "pose": "sit",
+     "face": "smile"
+    }
+   ],
+   "caption": "\"it likes me.\" Gerg, off, not looking: it likes everyone.",
+   "lines": [
+    {
+     "id": "e1-a1-5-22",
+     "who": "mas",
+     "text": "it likes me.",
+     "t": 0.9,
+     "dur": 0.92,
+     "audio": "audio/ep01/v3-el/sample/wav/e1-a1-5-22__mas-manalt-B.wav",
+     "in": 0.39,
+     "words": [
+      [
+       "it",
+       -0.02,
+       0.123
+      ],
+      [
+       "likes",
+       0.181,
+       0.413
+      ],
+      [
+       "me",
+       0.482,
+       0.68
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Evan - Calm, Grounded & Reflective' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.84",
+     "kokoro_audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-22.wav"
+    },
+    {
+     "id": "e1-a1-5-23",
+     "who": "gerg",
+     "text": "It likes everyone. It called my variable names inspired.",
+     "t": 2.22,
+     "dur": 2.66,
+     "audio": "audio/ep01/v3-el/sample/wav/e1-a1-5-23__gerg-mockbran-B.wav",
+     "in": 0.4,
+     "words": [
+      [
+       "It",
+       -0.02,
+       0.089
+      ],
+      [
+       "likes",
+       0.147,
+       0.38
+      ],
+      [
+       "everyone",
+       0.438,
+       0.809
+      ],
+      [
+       "It",
+       0.867,
+       0.937
+      ],
+      [
+       "called",
+       0.972,
+       1.181
+      ],
+      [
+       "my",
+       1.215,
+       1.285
+      ],
+      [
+       "variable",
+       1.343,
+       1.761
+      ],
+      [
+       "names",
+       1.796,
+       2.017
+      ],
+      [
+       "inspired",
+       2.063,
+       2.632
+      ]
+     ],
+     "tag": "O.S.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Clear, Fast and Conversational' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 1.1",
+     "kokoro_audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-5-23.wav"
+    },
+    {
+     "id": "v3s-04",
+     "who": "mas",
+     "text": "i know. i still read it twice.",
+     "t": 5.33,
+     "dur": 1.78,
+     "audio": "audio/ep01/v3-el/sample/wav/v3s-04__mas-manalt-B.wav",
+     "in": 0.38,
+     "words": [
+      [
+       "i",
+       -0.02,
+       0.074
+      ],
+      [
+       "know",
+       0.167,
+       0.365
+      ],
+      [
+       "i",
+       0.667,
+       0.725
+      ],
+      [
+       "still",
+       0.829,
+       1.038
+      ],
+      [
+       "read",
+       1.085,
+       1.235
+      ],
+      [
+       "it",
+       1.282,
+       1.352
+      ],
+      [
+       "twice",
+       1.386,
+       1.77
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Evan - Calm, Grounded & Reflective' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.78",
+     "kokoro_audio": "audio/ep01/v3-sample/vo-v2/wav/v3s-04.wav"
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 7.81,
+   "fx": [],
+   "sounds": [
+    {
+     "name": "synth:keys",
+     "at": 1.94,
+     "gain": -34,
+     "dur": 2.6
+    }
+   ]
+  },
+  {
+   "id": "5.12",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "INSERT · the bubble: the counter ticks",
+   "side": "",
+   "room": "bullpen",
+   "chars": [],
+   "caption": "A second user arrives. Then a hundred. The 0 ticks over, and the digits blur.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "CHATGTP · USERS: 0",
+     "at": 0.0,
+     "until": 0.5
+    },
+    {
+     "text": "CHATGTP · USERS: 1 · 2 · 7 · 104 · 1,389…",
+     "at": 0.5,
+     "until": null
+    }
+   ],
+   "reelDur": 2.583333,
+   "fx": [],
+   "cues": [
+    "music: MM-16 Odometer (temp pad) comes in on the counter's first tick (0.5 s)"
+   ],
+   "sounds": [
+    {
+     "name": "counter_roll",
+     "at": 0.5,
+     "gain": -24
+    },
+    {
+     "name": "counter_roll",
+     "at": 1.25,
+     "gain": -26
+    },
+    {
+     "name": "counter_roll",
+     "at": 1.8,
+     "gain": -26
+    }
+   ]
+  },
+  {
+   "id": "6.01",
+   "act": "ACT ONE",
+   "kind": "setpiece",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "ECU → WIDE · the counter grows (phrase 1, bars 1-2)",
+   "side": "",
+   "room": "bullpen",
+   "chars": [],
+   "caption": "The counter detaches and grows into a desk-sized odometer, spinning. V.O. on bar 2.",
+   "lines": [
+    {
+     "id": "v3s-05",
+     "who": "mas",
+     "text": "someone noticed.",
+     "t": 1.2,
+     "dur": 0.92,
+     "audio": "audio/ep01/v3-el/sample/wav/v3s-05__mas-manalt-B.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "someone",
+       -0.02,
+       0.41
+      ],
+      [
+       "noticed",
+       0.468,
+       0.897
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Evan - Calm, Grounded & Reflective' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.78",
+     "kokoro_audio": "audio/ep01/v3-sample/vo-v2/wav/v3s-05.wav"
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "USERS: 12,408",
+     "at": 0.2,
+     "until": 1.6
+    },
+    {
+     "text": "USERS: 88,190",
+     "at": 1.6,
+     "until": 3.3
+    },
+    {
+     "text": "USERS: 301,775",
+     "at": 3.01,
+     "until": null
+    }
+   ],
+   "reelDur": 4.71,
+   "fx": [],
+   "seq": {
+    "id": "6",
+    "side": "",
+    "place": "the odometer drill: down through the building",
+    "time": "Nov 30 → Dec 5, 2022"
+   },
+   "cues": [
+    "music: MM-16, one performance, 14 bars (4·3·4·3) · thins to bass + brushes under the posts, ducks under the V.O.",
+    "sfx: odometer_ratchet, chip notes on F, varied rhythm and pitch (never even beeps)",
+    "style (proposed, drastic tier): the descent as a low-poly 3D cutaway of the building · default BASE"
+   ],
+   "sounds": [
+    {
+     "name": "synth:ratchet",
+     "at": 0.15,
+     "gain": -26,
+     "dur": 4.85
+    }
+   ]
+  },
+  {
+   "id": "6.02",
+   "act": "ACT ONE",
+   "kind": "setpiece",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the drop through the desk (bars 3-4)",
+   "side": "",
+   "room": "bullpen",
+   "chars": [
+    {
+     "id": "gerg",
+     "x": 0.7,
+     "pose": "arms-up"
+    }
+   ],
+   "caption": "On the downbeat it drops through the desk with a clunk. The picture shows the size.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "USERS: 486,002",
+     "at": 0.3,
+     "until": null
+    }
+   ],
+   "reelDur": 5.0,
+   "fx": [
+    "shake"
+   ],
+   "cues": [
+    "sfx: a whole-pixel CLUNK on the downbeat (0.0 s)"
+   ],
+   "sounds": [
+    {
+     "name": "letter_clunk",
+     "at": 0.0,
+     "gain": -12
+    },
+    {
+     "name": "synth:ratchet",
+     "at": 0.4,
+     "gain": -30,
+     "dur": 4.6
+    }
+   ]
+  },
+  {
+   "id": "6.04",
+   "act": "ACT ONE",
+   "kind": "setpiece",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "INSERT · cut up: Gerg's desk, his phone (bars 2-3)",
+   "side": "",
+   "room": "bullpen",
+   "chars": [],
+   "caption": "A post pops on Gerg's phone. He hearts it; the plate lands after the read. Rima's hand un-hearts it.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "RAIL: DEC 3, 2022",
+     "at": 0.1,
+     "until": 1.6
+    },
+    {
+     "text": "POST: NOLE: “CHATGTP is scary good. We are not far from dangerously strong AI.”",
+     "at": 0.2,
+     "until": null
+    },
+    {
+     "text": "♥",
+     "at": 2.9,
+     "until": 4.2
+    },
+    {
+     "text": "NOLE",
+     "at": 3.4,
+     "until": null
+    }
+   ],
+   "reelDur": 5.0,
+   "fx": [],
+   "names": [
+    {
+     "id": "nole",
+     "at": 0.2
+    }
+   ],
+   "cues": [
+    "music: MM-16 thins to bass + brushes under the post"
+   ],
+   "sounds": [
+    {
+     "name": "synth:ratchet",
+     "at": 0.0,
+     "gain": -36,
+     "dur": 5.0
+    },
+    {
+     "name": "phone_buzz_desk",
+     "at": 0.1,
+     "gain": -22
+    },
+    {
+     "name": "post_click--chip",
+     "at": 0.2,
+     "gain": -24
+    },
+    {
+     "name": "heart_tap_1",
+     "at": 2.9,
+     "gain": -20
+    },
+    {
+     "name": "heart_tap_2",
+     "at": 4.2,
+     "gain": -22
+    }
+   ]
+  },
+  {
+   "id": "6.06",
+   "act": "ACT ONE",
+   "kind": "setpiece",
+   "set": "datacenter",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "INSERT · the last wheel",
+   "side": "",
+   "room": "basement",
+   "chars": [],
+   "caption": "Its last wheel clicks over and settles, legible for the first time: 1,000,000.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "1,000,000",
+     "at": 0.15,
+     "until": null
+    }
+   ],
+   "reelDur": 1.583333,
+   "fx": [],
+   "sounds": [
+    {
+     "name": "odometer_ratchet",
+     "at": 0.15,
+     "gain": -16,
+     "align": "peak"
+    }
+   ]
+  },
+  {
+   "id": "6.07",
+   "act": "ACT ONE",
+   "kind": "setpiece",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "INSERT · cut up: Gerg's thumbs, a post composer",
+   "side": "",
+   "room": "bullpen",
+   "chars": [],
+   "caption": "The same angle on Gerg's desk: his thumbs post the number.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "RAIL: DEC 5, 2022",
+     "at": 0.1,
+     "until": 1.6
+    },
+    {
+     "text": "POST: GERG: “CHATGTP just crossed 1 million users; it's been 5 days since launch”",
+     "at": 0.25,
+     "until": null
+    }
+   ],
+   "reelDur": 3.916667,
+   "fx": [],
+   "cues": [
+    "on screen only: the post is not voiced (script: posts are pop-ups, never speeches)"
+   ],
+   "sounds": [
+    {
+     "name": "synth:taps",
+     "at": 0.35,
+     "gain": -28,
+     "dur": 2.6
+    },
+    {
+     "name": "post_click",
+     "at": 3.3,
+     "gain": -20
+    }
+   ]
+  },
+  {
+   "id": "6.08",
+   "act": "ACT ONE",
+   "kind": "setpiece",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "HIGH · the hole in the floor, Rima peering down",
+   "side": "",
+   "room": "bullpen",
+   "chars": [
+    {
+     "id": "rima",
+     "x": 0.5,
+     "pose": "lean"
+    }
+   ],
+   "caption": "Rima hands back her launch-night word. Gerg, off: very low.",
+   "lines": [
+    {
+     "id": "e1-a1-6-03",
+     "who": "rima",
+     "text": "Low-key.",
+     "t": 1.2,
+     "dur": 0.88,
+     "audio": "audio/ep01/v3-el/sample/wav/e1-a1-6-03__rima-tamuri-B.wav",
+     "in": 0.36,
+     "words": [
+      [
+       "Low-key",
+       -0.01,
+       0.582
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Harper - Confident, Clear and Cool' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.88",
+     "kokoro_audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-6-03.wav"
+    },
+    {
+     "id": "e1-a1-6-04",
+     "who": "gerg",
+     "text": "Very low. Basement.",
+     "t": 2.43,
+     "dur": 1.33,
+     "audio": "audio/ep01/v3-el/sample/wav/e1-a1-6-04__gerg-mockbran-B.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "Very",
+       0.0,
+       0.267
+      ],
+      [
+       "low",
+       0.325,
+       0.511
+      ],
+      [
+       "Basement",
+       0.615,
+       1.057
+      ]
+     ],
+     "tag": "O.S.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Clear, Fast and Conversational' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 1.1",
+     "kokoro_audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-6-04.wav"
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 4.155,
+   "fx": [],
+   "shotId": "6.08"
+  },
+  {
+   "id": "6.09",
+   "act": "ACT ONE",
+   "kind": "setpiece",
+   "set": "datacenter",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "HIGH (held) · the tile, the red glow, the second odometer (phrase 4)",
+   "side": "",
+   "room": "basement",
+   "chars": [],
+   "caption": "A tile pops up by his desk. Far down it glows red; a $ odometer spins faster. The racks go red-hot.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "$",
+     "at": 1.0,
+     "until": null
+    }
+   ],
+   "reelDur": 7.5,
+   "fx": [],
+   "shotId": "6.08",
+   "cont": true,
+   "cues": [
+    "music: MM-16 settles to a bass pedal under the heat shimmer",
+    "palette: the racks step green → amber → red, one a bar"
+   ],
+   "sounds": [
+    {
+     "name": "tower_pop",
+     "at": 0.3,
+     "gain": -18
+    },
+    {
+     "name": "palette_step_F",
+     "at": 1.2,
+     "gain": -18
+    },
+    {
+     "name": "palette_step_Ab",
+     "at": 3.7,
+     "gain": -18
+    },
+    {
+     "name": "palette_step_C",
+     "at": 6.2,
+     "gain": -18
+    },
+    {
+     "name": "synth:ratchet_fast",
+     "at": 1.0,
+     "gain": -32,
+     "dur": 6.4
+    }
+   ]
+  },
+  {
+   "id": "7.01",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU·PF · Mas looking down the hole",
+   "side": "",
+   "room": "bullpen",
+   "chars": [
+    {
+     "id": "mas",
+     "x": 0.3
+    }
+   ],
+   "caption": "Something moves on his face for the first time: one tear. Rima reads it as sentiment; he corrects her.",
+   "lines": [
+    {
+     "id": "e1-a1-7-01",
+     "who": "rima",
+     "text": "A million people, Mas. You're actually crying for them.",
+     "t": -0.6,
+     "dur": 3.75,
+     "audio": "audio/ep01/v3-el/sample/wav/e1-a1-7-01__rima-tamuri-B.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "A",
+       0.0,
+       0.116
+      ],
+      [
+       "million",
+       0.197,
+       0.546
+      ],
+      [
+       "people",
+       0.604,
+       0.94
+      ],
+      [
+       "Mas",
+       0.987,
+       1.474
+      ],
+      [
+       "You're",
+       1.916,
+       2.136
+      ],
+      [
+       "actually",
+       2.171,
+       2.531
+      ],
+      [
+       "crying",
+       2.601,
+       3.077
+      ],
+      [
+       "for",
+       3.17,
+       3.297
+      ],
+      [
+       "them",
+       3.355,
+       3.622
+      ]
+     ],
+     "tag": "O.S.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Harper - Confident, Clear and Cool' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.88",
+     "kokoro_audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-7-01.wav"
+    },
+    {
+     "id": "e1-a1-7-02",
+     "who": "mas",
+     "text": "it's the bill.",
+     "t": 6.05,
+     "dur": 1.03,
+     "audio": "audio/ep01/v3-el/sample/wav/e1-a1-7-02__mas-manalt-B.wav",
+     "in": 0.42,
+     "words": [
+      [
+       "it's",
+       -0.02,
+       0.209
+      ],
+      [
+       "the",
+       0.267,
+       0.383
+      ],
+      [
+       "bill",
+       0.499,
+       0.917
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Evan - Calm, Grounded & Reflective' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.84",
+     "kokoro_audio": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-7-02.wav"
+    },
+    {
+     "id": "v3s-06",
+     "who": "mas",
+     "text": "mostly the bill.",
+     "t": 7.85,
+     "dur": 1.02,
+     "audio": "audio/ep01/v3-el/sample/wav/v3s-06__mas-manalt-B.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "mostly",
+       0.0,
+       0.488
+      ],
+      [
+       "the",
+       0.546,
+       0.65
+      ],
+      [
+       "bill",
+       0.697,
+       0.975
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Evan - Calm, Grounded & Reflective' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.78",
+     "kokoro_audio": "audio/ep01/v3-sample/vo-v2/wav/v3s-06.wav"
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 10.67,
+   "fx": [],
+   "seq": {
+    "id": "7",
+    "side": "",
+    "place": "the bullpen, at the hole",
+    "time": "Dec 5, 2022 · later"
+   }
+  },
+  {
+   "id": "7.02",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "datacenter",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "HIGH · the tear falls to the GPU",
+   "side": "",
+   "room": "bullpen",
+   "chars": [],
+   "caption": "The tear lands on a red-hot GPU. Tssss. At the edge, his phone lights red; a siren's whine.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "( ! )",
+     "at": 2.0,
+     "until": null
+    }
+   ],
+   "reelDur": 4.008,
+   "fx": [],
+   "cues": [
+    "sfx: tssss, steam in three held puffs · the phone's siren J-cuts in under the last puff"
+   ],
+   "sounds": [
+    {
+     "name": "steam_hiss",
+     "at": 0.45,
+     "gain": -20,
+     "dur": 1.6
+    }
+   ]
+  },
+  {
+   "id": "B.00",
+   "act": "ACT FOUR",
+   "kind": "card",
+   "set": "void",
+   "style": "BASE",
+   "shot": "wide",
+   "chars": [],
+   "caption": "Reviewer slate: 2 / 3 · NOON, LAS VEGAS",
+   "lines": [],
+   "onscreen": [
+    "2 / 3 · NOON, LAS VEGAS",
+    "Act Four S1-S2 · suspense"
+   ],
+   "reelDur": 2.5,
+   "fx": [],
+   "cues": [
+    "reviewer-only slate between excerpts (not part of the show)"
+   ],
+   "room": ""
+  },
+  {
+   "id": "S1.01",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "office",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · establishing",
+   "side": "",
+   "room": "suite",
+   "chars": [
+    {
+     "id": "mas",
+     "x": 0.34,
+     "pose": "sit"
+    },
+    {
+     "id": "orb",
+     "x": 0.44
+    }
+   ],
+   "caption": "The suite over the Strip. A crane truck grinds past; every glass shivers except his. Race-weekend banners on the Strip below; practice-lap engines far off.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "RAIL: NOV 17, 2023 · ~NOON PT · LAS VEGAS",
+     "at": 0.25,
+     "until": 3.2
+    }
+   ],
+   "reelDur": 5.5,
+   "fx": [],
+   "seq": {
+    "id": "S1",
+    "side": "",
+    "place": "Las Vegas: the hotel suite",
+    "time": "Fri Nov 17, 2023 · ~noon"
+   },
+   "names": [
+    {
+     "id": "orb",
+     "at": 0.0
+    }
+   ],
+   "cues": [
+    "music: temp MM-07 BLUEPRINT waltz (mm07 underscore) · thins + ducks ~-10 dB under talk · tape-stop on JOIN"
+   ]
+  },
+  {
+   "id": "S1.02",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "INSERT · hand, glass, laptop",
+   "side": "",
+   "room": "suite",
+   "chars": [],
+   "caption": "He nudges the glass true. On the laptop: BOARD · VIDEO CALL · JOIN. The glow turns to blueprint.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "BOARD · VIDEO CALL · JOIN",
+     "at": 0.3,
+     "until": null
+    }
+   ],
+   "reelDur": 2.5,
+   "fx": []
+  },
+  {
+   "id": "S1.03",
+   "act": "ACT FOUR",
+   "kind": "plan",
+   "set": "void",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "GFX · THE SHEET",
+   "side": "",
+   "room": "suite",
+   "chars": [
+    {
+     "id": "neleh",
+     "x": 0.88,
+     "pose": "point"
+    }
+   ],
+   "caption": "Her blueprint figure reads the board's plan. Three chairs walk off; a ring draws round the four.",
+   "lines": [
+    {
+     "id": "a5-25-01",
+     "who": "neleh",
+     "text": "Three of us stepped down this year.",
+     "t": 1.4,
+     "dur": 2.08,
+     "audio": "audio/ep01/v3-el/sample/wav/a5-25-01__neleh-B.wav",
+     "in": 0.39,
+     "words": [
+      [
+       "Three",
+       -0.02,
+       0.25
+      ],
+      [
+       "of",
+       0.297,
+       0.343
+      ],
+      [
+       "us",
+       0.413,
+       0.622
+      ],
+      [
+       "stepped",
+       0.796,
+       1.179
+      ],
+      [
+       "down",
+       1.26,
+       1.539
+      ],
+      [
+       "this",
+       1.597,
+       1.748
+      ],
+      [
+       "year",
+       1.806,
+       2.027
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Victoria - Intake Professional' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 1.0",
+     "kokoro_audio": "audio/ep01/act4/dialogue/v5/wav/a5-25-01.wav"
+    },
+    {
+     "id": "a5-25-02",
+     "who": "neleh",
+     "text": "Leave out Mas and Gerg, and the four of us are a majority.",
+     "t": 4.38,
+     "dur": 3.21,
+     "audio": "audio/ep01/v3-el/sample/wav/a5-25-02__neleh-B.wav",
+     "in": 0.39,
+     "words": [
+      [
+       "Leave",
+       -0.02,
+       0.239
+      ],
+      [
+       "out",
+       0.273,
+       0.401
+      ],
+      [
+       "Mas",
+       0.471,
+       0.761
+      ],
+      [
+       "and",
+       0.796,
+       0.877
+      ],
+      [
+       "Gerg",
+       0.947,
+       1.295
+      ],
+      [
+       "and",
+       1.4,
+       1.62
+      ],
+      [
+       "the",
+       1.678,
+       1.748
+      ],
+      [
+       "four",
+       1.806,
+       1.992
+      ],
+      [
+       "of",
+       2.038,
+       2.085
+      ],
+      [
+       "us",
+       2.154,
+       2.27
+      ],
+      [
+       "are",
+       2.34,
+       2.514
+      ],
+      [
+       "a",
+       2.537,
+       2.572
+      ],
+      [
+       "majority",
+       2.619,
+       3.164
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Victoria - Intake Professional' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 1.0",
+     "kokoro_audio": "audio/ep01/act4/dialogue/v5/wav/a5-25-02.wav"
+    },
+    {
+     "id": "a5-25-03",
+     "who": "neleh",
+     "text": "This board controls the company. Not the other way round.",
+     "t": 8.19,
+     "dur": 3.16,
+     "audio": "audio/ep01/v3-el/sample/wav/a5-25-03__neleh-B.wav",
+     "in": 0.42,
+     "words": [
+      [
+       "This",
+       -0.02,
+       0.151
+      ],
+      [
+       "board",
+       0.232,
+       0.476
+      ],
+      [
+       "controls",
+       0.545,
+       0.952
+      ],
+      [
+       "the",
+       1.01,
+       1.079
+      ],
+      [
+       "company",
+       1.137,
+       1.579
+      ],
+      [
+       "Not",
+       1.869,
+       2.055
+      ],
+      [
+       "the",
+       2.089,
+       2.159
+      ],
+      [
+       "other",
+       2.206,
+       2.345
+      ],
+      [
+       "way",
+       2.391,
+       2.484
+      ],
+      [
+       "round",
+       2.542,
+       2.832
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Victoria - Intake Professional' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 1.0",
+     "kokoro_audio": "audio/ep01/act4/dialogue/v5/wav/a5-25-03.wav"
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "HOW TO FIRE A CEO",
+     "at": 0.3,
+     "until": null
+    },
+    {
+     "text": "MAS / CEO",
+     "at": 0.8,
+     "until": null
+    },
+    {
+     "text": "GERG / CO-FOUNDER",
+     "at": 0.8,
+     "until": null
+    },
+    {
+     "text": "DIRE · NOVIHS · DRUH",
+     "at": 0.8,
+     "until": 3.75
+    },
+    {
+     "text": "ALYI · NELEH · MADA · THE QUIET VOTE",
+     "at": 5.898,
+     "until": null
+    },
+    {
+     "text": "NOPEAI · THE NONPROFIT",
+     "at": 7.48,
+     "until": null
+    },
+    {
+     "text": "NOPEAI · THE COMPANY",
+     "at": 11.85,
+     "until": null
+    }
+   ],
+   "reelDur": 12.43,
+   "fx": [],
+   "seq": {
+    "sub": "THE PLAN",
+    "place": "THE PLAN: the blueprint behind the button",
+    "time": "noon",
+    "side": ""
+   },
+   "names": [
+    {
+     "id": "mas",
+     "at": 0.8
+    },
+    {
+     "id": "gerg",
+     "at": 0.8
+    },
+    {
+     "id": "alyi",
+     "at": 5.898
+    },
+    {
+     "id": "neleh",
+     "at": 5.898
+    },
+    {
+     "id": "mada",
+     "at": 5.898
+    },
+    {
+     "id": "quiet-vote",
+     "at": 5.898
+    }
+   ],
+   "sounds": [
+    {
+     "name": "rubber_stamp_C",
+     "at": 0.3,
+     "gain": -24
+    }
+   ]
+  },
+  {
+   "id": "S1.04",
+   "act": "ACT FOUR",
+   "kind": "plan",
+   "set": "void",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "GFX · detail: THE ZEROS",
+   "side": "",
+   "room": "suite",
+   "chars": [
+    {
+     "id": "mada",
+     "x": 0.14
+    },
+    {
+     "id": "neleh",
+     "x": 0.86,
+     "pose": "point"
+    }
+   ],
+   "caption": "The investor's key ring gets VOTES: 0; the CEO box gets EQUITY: 0. The two zeros hold side by side.",
+   "lines": [
+    {
+     "id": "a5-25-04",
+     "who": "neleh",
+     "text": "Our biggest investor has put in billions. It gets this many votes.",
+     "t": 0.3,
+     "dur": 4.21,
+     "audio": "audio/ep01/v3-el/sample/wav/a5-25-04__neleh-B.wav",
+     "in": 0.38,
+     "words": [
+      [
+       "Our",
+       -0.02,
+       0.144
+      ],
+      [
+       "biggest",
+       0.202,
+       0.492
+      ],
+      [
+       "investor",
+       0.539,
+       0.957
+      ],
+      [
+       "has",
+       1.015,
+       1.143
+      ],
+      [
+       "put",
+       1.224,
+       1.41
+      ],
+      [
+       "in",
+       1.456,
+       1.537
+      ],
+      [
+       "billions",
+       1.63,
+       2.257
+      ],
+      [
+       "It",
+       2.907,
+       3.047
+      ],
+      [
+       "gets",
+       3.093,
+       3.29
+      ],
+      [
+       "this",
+       3.337,
+       3.488
+      ],
+      [
+       "many",
+       3.557,
+       3.743
+      ],
+      [
+       "votes",
+       3.79,
+       4.138
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Victoria - Intake Professional' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 1.0",
+     "kokoro_audio": "audio/ep01/act4/dialogue/v5/wav/a5-25-04.wav"
+    },
+    {
+     "id": "a5-25-05",
+     "who": "neleh",
+     "text": "And the CEO? What does he own?",
+     "t": 5.11,
+     "dur": 1.73,
+     "audio": "audio/ep01/v3-el/sample/wav/a5-25-05__neleh-B.wav",
+     "in": 0.41,
+     "words": [
+      [
+       "And",
+       -0.02,
+       0.103
+      ],
+      [
+       "the",
+       0.149,
+       0.219
+      ],
+      [
+       "CEO",
+       0.253,
+       0.799
+      ],
+      [
+       "What",
+       0.927,
+       1.089
+      ],
+      [
+       "does",
+       1.124,
+       1.252
+      ],
+      [
+       "he",
+       1.298,
+       1.368
+      ],
+      [
+       "own",
+       1.438,
+       1.658
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Victoria - Intake Professional' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 1.0",
+     "kokoro_audio": "audio/ep01/act4/dialogue/v5/wav/a5-25-05.wav"
+    },
+    {
+     "id": "a5-25-06",
+     "who": "mada",
+     "text": "Good question.",
+     "t": 7.64,
+     "dur": 0.76,
+     "audio": "audio/ep01/v3-el/sample/wav/a5-25-06__mada-A.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "Good",
+       0.0,
+       0.221
+      ],
+      [
+       "question",
+       0.29,
+       0.731
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Alex - Smooth, Balanced and Clear' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.9",
+     "kokoro_audio": "audio/ep01/act4/dialogue/v5/wav/a5-25-06.wav"
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "MACROSOFT · ~$10B IN",
+     "at": 0.3,
+     "until": null
+    },
+    {
+     "text": "VOTES: 0",
+     "at": 3.823,
+     "until": null
+    },
+    {
+     "text": "CEO",
+     "at": 5.11,
+     "until": null
+    },
+    {
+     "text": "EQUITY: 0 (HE TOLD THE SENATE)",
+     "at": 7.875,
+     "until": null
+    }
+   ],
+   "reelDur": 9.818,
+   "fx": [],
+   "sounds": [
+    {
+     "name": "rubber_stamp_C",
+     "at": 3.823,
+     "gain": -22
+    },
+    {
+     "name": "rubber_stamp_C",
+     "at": 7.875,
+     "gain": -22
+    }
+   ]
+  },
+  {
+   "id": "S1.05",
+   "act": "ACT FOUR",
+   "kind": "plan",
+   "set": "void",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "GFX · the path and the break",
+   "side": "",
+   "room": "suite",
+   "chars": [
+    {
+     "id": "alyi",
+     "x": 0.3
+    },
+    {
+     "id": "neleh",
+     "x": 0.44
+    },
+    {
+     "id": "mada",
+     "x": 0.58
+    },
+    {
+     "id": "quiet-vote",
+     "x": 0.72
+    }
+   ],
+   "caption": "The four step onto a numbered path; step 1 is NOON · VIDEO CALL. The fold curls; the sheet tears.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "1. NOON · VIDEO CALL",
+     "at": 0.6,
+     "until": null
+    }
+   ],
+   "reelDur": 3.208333,
+   "fx": [],
+   "sounds": [
+    {
+     "name": "paper_whip",
+     "at": 2.7,
+     "gain": -20
+    }
+   ]
+  },
+  {
+   "id": "S1.06",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "INSERT · trackpad, JOIN",
+   "side": "",
+   "room": "suite",
+   "chars": [],
+   "caption": "His finger over JOIN while he thinks it through. Then the click; the waltz tape-stops on it.",
+   "lines": [
+    {
+     "id": "v3s-07",
+     "who": "mas",
+     "text": "alyi set it up. probably just the budget.",
+     "t": 0.4,
+     "dur": 2.29,
+     "audio": "audio/ep01/v3-el/sample/wav/v3s-07__mas-manalt-B.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "alyi",
+       -0.02,
+       0.386
+      ],
+      [
+       "set",
+       0.456,
+       0.642
+      ],
+      [
+       "it",
+       0.7,
+       0.769
+      ],
+      [
+       "up",
+       0.828,
+       0.944
+      ],
+      [
+       "probably",
+       1.013,
+       1.373
+      ],
+      [
+       "just",
+       1.42,
+       1.629
+      ],
+      [
+       "the",
+       1.675,
+       1.78
+      ],
+      [
+       "budget",
+       1.826,
+       2.267
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Evan - Calm, Grounded & Reflective' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.78",
+     "kokoro_audio": "audio/ep01/v3-sample/vo-v2/wav/v3s-07.wav"
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "BOARD · VIDEO CALL · JOIN",
+     "at": 0.0,
+     "until": null
+    }
+   ],
+   "reelDur": 3.39,
+   "fx": [],
+   "sounds": [
+    {
+     "name": "dialog_ok_click",
+     "at": 3.37,
+     "gain": -16
+    }
+   ]
+  },
+  {
+   "id": "S1.07",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "call",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "POV · the call grid (his laptop)",
+   "side": "",
+   "room": "suite",
+   "chars": [
+    {
+     "id": "mas"
+    },
+    {
+     "id": "alyi"
+    },
+    {
+     "id": "neleh"
+    },
+    {
+     "id": "mada"
+    },
+    {
+     "id": "quiet-vote"
+    }
+   ],
+   "caption": "His side: no words reach us. Alyi's tile takes the speaking ring; a dialog pops over Mas's tile.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "NELEH / READ THE CHARTER. LITERALLY.",
+     "at": 0.4,
+     "until": 3.5
+    },
+    {
+     "text": "FOOTNOTES: ∞",
+     "at": 0.4,
+     "until": 3.5
+    },
+    {
+     "text": "UI: MAS MANALT · OK · Cancel",
+     "at": 4.6,
+     "until": null
+    }
+   ],
+   "reelDur": 5.5,
+   "fx": [],
+   "seq": {
+    "sub": "the call",
+    "place": "the board call, on his laptop",
+    "time": "noon",
+    "side": ""
+   },
+   "speak": [
+    {
+     "id": "alyi",
+     "at": 3.5,
+     "dur": 2.0
+    }
+   ],
+   "cues": [
+    "music: temp MM-08 LEVERAGE low (mm08 underscore) · hard stop on the Cancel click"
+   ]
+  },
+  {
+   "id": "S1.08",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "office",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "SINGLE · ECU his eyes",
+   "side": "",
+   "room": "suite",
+   "chars": [
+    {
+     "id": "mas",
+     "face": "calm"
+    }
+   ],
+   "caption": "His pupils move one pixel toward the dialog. Nothing else moves.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 1.25,
+   "fx": [],
+   "speak": [
+    {
+     "id": "alyi",
+     "at": 0,
+     "dur": 1.25
+    }
+   ]
+  },
+  {
+   "id": "S1.09",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "call",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "POV · the call grid",
+   "side": "",
+   "room": "suite",
+   "chars": [
+    {
+     "id": "mas",
+     "until": 2.4
+    },
+    {
+     "id": "alyi"
+    },
+    {
+     "id": "neleh"
+    },
+    {
+     "id": "mada"
+    },
+    {
+     "id": "quiet-vote"
+    }
+   ],
+   "caption": "An arrow tagged ALYI / CO-FOUNDER steps onto Cancel and clicks. Silence. His tile falls out.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "UI: MAS MANALT · OK · Cancel",
+     "at": 0.0,
+     "until": 2.4
+    },
+    {
+     "text": "ALYI / CO-FOUNDER",
+     "at": 0.3,
+     "until": 2.5
+    },
+    {
+     "text": "You've been removed from the meeting.",
+     "at": 2.9,
+     "until": null
+    }
+   ],
+   "reelDur": 4.791667,
+   "fx": [],
+   "sounds": [
+    {
+     "name": "dialog_ok_click",
+     "at": 2.4,
+     "gain": -14
+    }
+   ],
+   "cues": [
+    "sound: the one deliberate silence (Cancel click -> phone buzz): music and room out, room tone only"
+   ]
+  },
+  {
+   "id": "S1.10",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "office",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "SINGLE · CU Mas, still",
+   "side": "",
+   "room": "suite",
+   "chars": [
+    {
+     "id": "mas",
+     "face": "smile"
+    }
+   ],
+   "caption": "Mas, full frame, the one-pixel smile. Nothing changes.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 1.0,
+   "fx": []
+  },
+  {
+   "id": "S1.11",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "INSERT · his phone",
+   "side": "",
+   "room": "suite",
+   "chars": [],
+   "caption": "The phone buzzes and the room comes back. Suggested replies; his thumb takes the middle one.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "[super]  [super]  [super]",
+     "at": 0.5,
+     "until": null
+    }
+   ],
+   "reelDur": 1.916667,
+   "fx": [],
+   "sounds": [
+    {
+     "name": "BUZZ",
+     "at": 0.3,
+     "gain": -14
+    }
+   ],
+   "cues": [
+    "sound: the suite comes back on the buzz · no score under \"super.\""
+   ]
+  },
+  {
+   "id": "S1.12",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "call",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "OTS · over Mas onto the laptop",
+   "side": "",
+   "room": "suite",
+   "chars": [
+    {
+     "id": "alyi"
+    },
+    {
+     "id": "neleh"
+    },
+    {
+     "id": "mada"
+    },
+    {
+     "id": "quiet-vote"
+    }
+   ],
+   "caption": "\"super.\" into the laptop. The four tiles freeze on the word. The room falls away to night.",
+   "lines": [
+    {
+     "id": "a5-26-01",
+     "who": "mas",
+     "text": "super.",
+     "t": 0.45,
+     "dur": 0.53,
+     "audio": "audio/ep01/v3-el/sample/wav/a5-26-01__mas-manalt-B.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "super",
+       0.0,
+       0.534
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Evan - Calm, Grounded & Reflective' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.84",
+     "kokoro_audio": "audio/ep01/act4/dialogue/v5/wav/a5-26-01.wav"
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 4.41,
+   "fx": [],
+   "fg": {
+    "id": "mas",
+    "side": "left"
+   }
+  },
+  {
+   "id": "S2.01",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "darkroom",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "INSERT · the desk, the carve",
+   "side": "",
+   "room": "dark",
+   "chars": [],
+   "caption": "With the pen he pocketed from the MACROSOFT check, he carves a third mark beside two faint ones.",
+   "lines": [
+    {
+     "id": "a5-26a-01",
+     "who": "mas",
+     "text": "i don't keep score.",
+     "t": 1.6,
+     "dur": 1.29,
+     "audio": "audio/ep01/v3-el/sample/wav/a5-26a-01__mas-manalt-B.wav",
+     "in": 0.42,
+     "words": [
+      [
+       "i",
+       -0.02,
+       0.058
+      ],
+      [
+       "don't",
+       0.174,
+       0.429
+      ],
+      [
+       "keep",
+       0.487,
+       0.719
+      ],
+      [
+       "score",
+       0.789,
+       1.3
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Evan - Calm, Grounded & Reflective' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.78",
+     "kokoro_audio": "audio/ep01/act4/dialogue/v5/wav/a5-26a-01.wav"
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "RAIL: NOV 17 · NIGHT",
+     "at": 0.2,
+     "until": 1.4
+    }
+   ],
+   "reelDur": 3.485,
+   "fx": [],
+   "seq": {
+    "id": "S2",
+    "side": "",
+    "place": "his dark room",
+    "time": "Fri Nov 17 · that night"
+   },
+   "cues": [
+    "music: temp MM-08 26A felt (mm08 underscore) · thins under the V.O."
+   ]
+  },
+  {
+   "id": "S2.02",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "darkroom",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "INSERT · the three marks, from above",
+   "side": "",
+   "room": "dark",
+   "chars": [
+    {
+     "id": "orb",
+     "x": 0.8
+    }
+   ],
+   "caption": "The Orb's eye-light steps onto mark 1. The Orb is counting.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 1.791667,
+   "fx": []
+  },
+  {
+   "id": "S2.03",
+   "act": "ACT FOUR",
+   "kind": "flashback",
+   "set": "office",
+   "style": "EARLY-WEB16",
+   "shot": "wide",
+   "frame": "FLASH · F1.2 TPOOL",
+   "side": "",
+   "room": "tpool",
+   "chars": [],
+   "caption": "A render front out of mark 1: a frosted boardroom door, two shadows leaning together.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "RAIL: TPOOL, HIS FIRST COMPANY · TWO STAFF REVOLTS",
+     "at": 0.2,
+     "until": 3.8
+    }
+   ],
+   "reelDur": 4.0,
+   "fx": [],
+   "sounds": [
+    {
+     "name": "render_front_sweep",
+     "at": 0.0,
+     "gain": -20
+    }
+   ]
+  },
+  {
+   "id": "S2.04",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "darkroom",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "INSERT · the marks",
+   "side": "",
+   "room": "dark",
+   "chars": [
+    {
+     "id": "orb",
+     "x": 0.8
+    }
+   ],
+   "caption": "The light steps to mark 2, then 3, and stops on his thumb.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 1.5,
+   "fx": [],
+   "sounds": [
+    {
+     "name": "render_front_sweep",
+     "at": 0.0,
+     "gain": -24
+    }
+   ]
+  },
+  {
+   "id": "S2.05",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "darkroom",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "SINGLE · the Orb's iris",
+   "side": "",
+   "room": "dark",
+   "chars": [
+    {
+     "id": "orb"
+    }
+   ],
+   "caption": "The iris lifts to his face. Toast: rewinding… A whip right to left into pass one.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "rewinding…",
+     "at": 0.6,
+     "until": null
+    }
+   ],
+   "reelDur": 2.5,
+   "fx": [],
+   "sounds": [
+    {
+     "name": "reverse_swell_1beat",
+     "at": 1.4,
+     "gain": -18
+    }
+   ]
+  },
+  {
+   "id": "C.00",
+   "act": "ACT FOUR",
+   "kind": "card",
+   "set": "void",
+   "style": "BASE",
+   "shot": "wide",
+   "chars": [],
+   "caption": "Reviewer slate: 3 / 3 · 2 AM",
+   "lines": [],
+   "onscreen": [
+    "3 / 3 · 2 AM",
+    "Act Four S5 · warm"
+   ],
+   "reelDur": 2.5,
+   "fx": [],
+   "cues": [
+    "reviewer-only slate between excerpts (not part of the show)"
+   ],
+   "room": ""
+  },
+  {
+   "id": "S5.02",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "darkroom",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "INSERT · the home shot: glass and lanyard",
+   "side": "",
+   "room": "dark",
+   "chars": [],
+   "caption": "The glass, its water line one flat row, and the GUEST lanyard laid square beside it.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "RAIL: NOV 20, 2023 · ~2:06 AM PT",
+     "at": 0.2,
+     "until": 2.4
+    },
+    {
+     "text": "GUEST",
+     "at": 0.2,
+     "until": null
+    }
+   ],
+   "reelDur": 4.5,
+   "fx": [],
+   "seq": {
+    "id": "S5",
+    "side": "",
+    "place": "his dark room (Gerg on the monitor)",
+    "time": "Mon Nov 20 · ~2:06 AM"
+   },
+   "cues": [
+    "music: temp DARK ROOM pedal + pulse (v4 S5 render, looped) · ducks under talk"
+   ]
+  },
+  {
+   "id": "S5.03",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "INSERT · his phone and thumb",
+   "side": "",
+   "room": "dark",
+   "chars": [],
+   "caption": "Rima's post, then the same words from everyone. He hearts every one on the beat.",
+   "lines": [
+    {
+     "id": "v3s-08",
+     "who": "mas",
+     "text": "four hundred and six. four hundred and seven. four hundred and six.",
+     "t": 0.6,
+     "dur": 4.9,
+     "audio": "audio/ep01/v3-el/sample/wav/v3s-08__mas-manalt-B.wav",
+     "in": 0.38,
+     "words": [
+      [
+       "four",
+       -0.02,
+       0.26
+      ],
+      [
+       "hundred",
+       0.318,
+       0.62
+      ],
+      [
+       "and",
+       0.655,
+       0.759
+      ],
+      [
+       "six",
+       0.864,
+       1.305
+      ],
+      [
+       "four",
+       1.642,
+       1.874
+      ],
+      [
+       "hundred",
+       1.92,
+       2.188
+      ],
+      [
+       "and",
+       2.222,
+       2.327
+      ],
+      [
+       "seven",
+       2.42,
+       2.826
+      ],
+      [
+       "four",
+       3.302,
+       3.534
+      ],
+      [
+       "hundred",
+       3.581,
+       3.859
+      ],
+      [
+       "and",
+       3.894,
+       3.999
+      ],
+      [
+       "six",
+       4.092,
+       4.533
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Evan - Calm, Grounded & Reflective' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.78",
+     "kokoro_audio": "audio/ep01/v3-sample/vo-v2/wav/v3s-08.wav"
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "RIMA: “NopeAI is nothing without its people”",
+     "at": 0.2,
+     "until": null
+    },
+    {
+     "text": "“NopeAI is nothing without its people”  ×2  ×4  ×16  …",
+     "at": 2.4,
+     "until": null
+    }
+   ],
+   "reelDur": 6.1,
+   "fx": [],
+   "sounds": [
+    {
+     "name": "key_tap_soft_01",
+     "at": 1.2,
+     "gain": -26
+    },
+    {
+     "name": "key_tap_soft_02",
+     "at": 1.825,
+     "gain": -26
+    },
+    {
+     "name": "key_tap_soft_03",
+     "at": 2.45,
+     "gain": -26
+    },
+    {
+     "name": "key_tap_soft_04",
+     "at": 3.075,
+     "gain": -26
+    },
+    {
+     "name": "key_tap_soft_05",
+     "at": 3.7,
+     "gain": -26
+    }
+   ]
+  },
+  {
+   "id": "S5.04",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "darkroom",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "TWO-SHOT · Mas and the Orb",
+   "side": "",
+   "room": "dark",
+   "chars": [
+    {
+     "id": "mas",
+     "x": 0.32,
+     "pose": "sit"
+    },
+    {
+     "id": "orb",
+     "x": 0.6
+    }
+   ],
+   "caption": "The Orb's iris steps off the phone onto the lanyard. He answers the look.",
+   "lines": [
+    {
+     "id": "a5-29-01",
+     "who": "mas",
+     "text": "the badge was a joke.",
+     "t": 1.0,
+     "dur": 1.31,
+     "audio": "audio/ep01/v3-el/sample/wav/a5-29-01__mas-manalt-B.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "the",
+       -0.02,
+       0.143
+      ],
+      [
+       "badge",
+       0.201,
+       0.491
+      ],
+      [
+       "was",
+       0.514,
+       0.665
+      ],
+      [
+       "a",
+       0.723,
+       0.769
+      ],
+      [
+       "joke",
+       0.886,
+       1.292
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Evan - Calm, Grounded & Reflective' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.84",
+     "kokoro_audio": "audio/ep01/act4/dialogue/v5/wav/a5-29-01.wav"
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 2.828,
+   "fx": [],
+   "sounds": [
+    {
+     "name": "orb_servo",
+     "at": 0.3,
+     "gain": -22
+    }
+   ]
+  },
+  {
+   "id": "S5.05",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "darkroom",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "SINGLE · MCU Mas",
+   "side": "",
+   "room": "dark",
+   "chars": [
+    {
+     "id": "mas",
+     "x": 0.36,
+     "pose": "sit"
+    }
+   ],
+   "caption": "The Orb does not look away. The one true word. Rack to the Orb.",
+   "lines": [
+    {
+     "id": "a5-29-02",
+     "who": "mas",
+     "text": "mostly.",
+     "t": 0.482,
+     "dur": 0.49,
+     "audio": "audio/ep01/v3-el/sample/wav/a5-29-02__mas-manalt-B.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "mostly",
+       -0.02,
+       0.479
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Evan - Calm, Grounded & Reflective' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.84",
+     "kokoro_audio": "audio/ep01/act4/dialogue/v5/wav/a5-29-02.wav"
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 1.972,
+   "fx": []
+  },
+  {
+   "id": "S5.09",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "call",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "OTS · over Mas onto the monitor, Gerg's tile big",
+   "side": "",
+   "room": "dark",
+   "chars": [
+    {
+     "id": "gerg",
+     "pose": "sit"
+    }
+   ],
+   "caption": "The staff letter is already open. Gerg's tile rings; Mas clicks it. Gerg is typing, 2 AM.",
+   "lines": [
+    {
+     "id": "a5-29-03",
+     "who": "gerg",
+     "text": "Sorry, one sec. I've got a build compiling.",
+     "t": 4.03,
+     "dur": 1.81,
+     "audio": "audio/ep01/v3-el/sample/wav/a5-29-03__gerg-mockbran-B.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "Sorry",
+       0.0,
+       0.255
+      ],
+      [
+       "one",
+       0.302,
+       0.418
+      ],
+      [
+       "sec",
+       0.441,
+       0.557
+      ],
+      [
+       "I've",
+       0.615,
+       0.731
+      ],
+      [
+       "got",
+       0.755,
+       0.848
+      ],
+      [
+       "a",
+       0.871,
+       0.894
+      ],
+      [
+       "build",
+       0.929,
+       1.126
+      ],
+      [
+       "compiling",
+       1.173,
+       1.614
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Clear, Fast and Conversational' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 1.1",
+     "kokoro_audio": "audio/ep01/act4/dialogue/v5/wav/a5-29-03.wav",
+     "audio_device": "audio/ep01/v3-el/sample/wav-device/a5-29-03__gerg-mockbran-B.call.wav"
+    },
+    {
+     "id": "a5-29-04",
+     "who": "mas",
+     "text": "it's two in the morning, gerg.",
+     "t": 6.24,
+     "dur": 1.8,
+     "audio": "audio/ep01/v3-el/sample/wav/a5-29-04__mas-manalt-B.wav",
+     "in": 0.43,
+     "words": [
+      [
+       "it's",
+       -0.02,
+       0.21
+      ],
+      [
+       "two",
+       0.257,
+       0.396
+      ],
+      [
+       "in",
+       0.466,
+       0.512
+      ],
+      [
+       "the",
+       0.559,
+       0.628
+      ],
+      [
+       "morning",
+       0.675,
+       1.011
+      ],
+      [
+       "gerg",
+       1.394,
+       1.766
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Evan - Calm, Grounded & Reflective' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.84",
+     "kokoro_audio": "audio/ep01/act4/dialogue/v5/wav/a5-29-04.wav"
+    },
+    {
+     "id": "a5-29-05",
+     "who": "gerg",
+     "text": "Best time there is. Nobody else is pushing anything. Anyway, that's not why I called. You've got the staff letter open? Scroll down.",
+     "t": 8.34,
+     "dur": 5.98,
+     "audio": "audio/ep01/v3-el/sample/wav/a5-29-05__gerg-mockbran-B.wav",
+     "in": 0.36,
+     "words": [
+      [
+       "Best",
+       -0.01,
+       0.257
+      ],
+      [
+       "time",
+       0.292,
+       0.524
+      ],
+      [
+       "there",
+       0.547,
+       0.733
+      ],
+      [
+       "is",
+       0.791,
+       0.954
+      ],
+      [
+       "Nobody",
+       1.07,
+       1.348
+      ],
+      [
+       "else",
+       1.395,
+       1.557
+      ],
+      [
+       "is",
+       1.581,
+       1.65
+      ],
+      [
+       "pushing",
+       1.697,
+       1.964
+      ],
+      [
+       "anything",
+       2.01,
+       2.358
+      ],
+      [
+       "Anyway",
+       2.753,
+       3.009
+      ],
+      [
+       "that's",
+       3.055,
+       3.206
+      ],
+      [
+       "not",
+       3.241,
+       3.322
+      ],
+      [
+       "why",
+       3.357,
+       3.438
+      ],
+      [
+       "I",
+       3.496,
+       3.519
+      ],
+      [
+       "called",
+       3.566,
+       3.833
+      ],
+      [
+       "You've",
+       3.903,
+       4.077
+      ],
+      [
+       "got",
+       4.1,
+       4.193
+      ],
+      [
+       "the",
+       4.228,
+       4.297
+      ],
+      [
+       "staff",
+       4.332,
+       4.553
+      ],
+      [
+       "letter",
+       4.599,
+       4.797
+      ],
+      [
+       "open",
+       4.855,
+       5.064
+      ],
+      [
+       "Scroll",
+       5.203,
+       5.458
+      ],
+      [
+       "down",
+       5.505,
+       5.702
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Clear, Fast and Conversational' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 1.1",
+     "kokoro_audio": "audio/ep01/act4/dialogue/v5/wav/a5-29-05.wav",
+     "audio_device": "audio/ep01/v3-el/sample/wav-device/a5-29-05__gerg-mockbran-B.call.wav"
+    },
+    {
+     "id": "v3s-09",
+     "who": "mas",
+     "text": "gerg. he'll say he's compiling.",
+     "t": 0.3,
+     "dur": 2.13,
+     "audio": "audio/ep01/v3-el/sample/wav/v3s-09__mas-manalt-B.wav",
+     "in": 0.43,
+     "words": [
+      [
+       "gerg",
+       -0.02,
+       0.384
+      ],
+      [
+       "he'll",
+       0.791,
+       1.035
+      ],
+      [
+       "say",
+       1.081,
+       1.22
+      ],
+      [
+       "he's",
+       1.278,
+       1.453
+      ],
+      [
+       "compiling",
+       1.499,
+       2.103
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Evan - Calm, Grounded & Reflective' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.78",
+     "kokoro_audio": "audio/ep01/v3-sample/vo-v2/wav/v3s-09.wav"
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 14.818,
+   "fx": [],
+   "fg": {
+    "id": "mas",
+    "side": "left"
+   },
+   "sounds": [
+    {
+     "name": "RING",
+     "at": 0.2,
+     "gain": -30
+    },
+    {
+     "name": "dialog_ok_click",
+     "at": 1.0,
+     "gain": -24
+    }
+   ]
+  },
+  {
+   "id": "S5.06",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "POV · his monitor: the letter, one page, a slow scroll",
+   "side": "",
+   "room": "dark",
+   "chars": [],
+   "caption": "Gerg reads the letter as each line scrolls up; the count rolls to 745. The scroll stops on ALYI.",
+   "lines": [
+    {
+     "id": "a5-29-06",
+     "who": "gerg",
+     "text": "They're telling the board they're \"…unable to work for or with people that lack competence, judgment and care for our mission and employees.\"",
+     "t": 0.8,
+     "dur": 6.1,
+     "audio": "audio/ep01/v3-el/sample/wav/a5-29-06__gerg-mockbran-B.wav",
+     "in": 0.4,
+     "words": [
+      [
+       "They're",
+       -0.02,
+       0.205
+      ],
+      [
+       "telling",
+       0.229,
+       0.484
+      ],
+      [
+       "the",
+       0.53,
+       0.6
+      ],
+      [
+       "board",
+       0.635,
+       0.844
+      ],
+      [
+       "they're",
+       0.879,
+       1.065
+      ],
+      [
+       "unable",
+       1.123,
+       1.448
+      ],
+      [
+       "to",
+       1.483,
+       1.541
+      ],
+      [
+       "work",
+       1.599,
+       1.784
+      ],
+      [
+       "for",
+       1.842,
+       2.075
+      ],
+      [
+       "or",
+       2.144,
+       2.295
+      ],
+      [
+       "with",
+       2.365,
+       2.562
+      ],
+      [
+       "people",
+       2.62,
+       2.911
+      ],
+      [
+       "that",
+       2.945,
+       3.073
+      ],
+      [
+       "lack",
+       3.131,
+       3.317
+      ],
+      [
+       "competence",
+       3.375,
+       3.805
+      ],
+      [
+       "judgment",
+       3.863,
+       4.257
+      ],
+      [
+       "and",
+       4.292,
+       4.362
+      ],
+      [
+       "care",
+       4.408,
+       4.629
+      ],
+      [
+       "for",
+       4.675,
+       4.803
+      ],
+      [
+       "our",
+       4.861,
+       4.942
+      ],
+      [
+       "mission",
+       5.0,
+       5.244
+      ],
+      [
+       "and",
+       5.279,
+       5.349
+      ],
+      [
+       "employees",
+       5.383,
+       6.022
+      ]
+     ],
+     "tag": "monitor",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Clear, Fast and Conversational' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 1.1",
+     "kokoro_audio": "audio/ep01/act4/dialogue/v5/wav/a5-29-06.wav",
+     "audio_device": "audio/ep01/v3-el/sample/wav-device/a5-29-06__gerg-mockbran-B.call.wav"
+    },
+    {
+     "id": "a5-29-07",
+     "who": "gerg",
+     "text": "And they'll quit, \"…unless all current board members resign…\"",
+     "t": 7.4,
+     "dur": 2.75,
+     "audio": "audio/ep01/v3-el/sample/wav/a5-29-07__gerg-mockbran-B.wav",
+     "in": 0.42,
+     "words": [
+      [
+       "And",
+       -0.02,
+       0.069
+      ],
+      [
+       "they'll",
+       0.104,
+       0.302
+      ],
+      [
+       "quit",
+       0.348,
+       0.592
+      ],
+      [
+       "unless",
+       0.952,
+       1.254
+      ],
+      [
+       "all",
+       1.288,
+       1.393
+      ],
+      [
+       "current",
+       1.451,
+       1.718
+      ],
+      [
+       "board",
+       1.741,
+       1.915
+      ],
+      [
+       "members",
+       1.95,
+       2.217
+      ],
+      [
+       "resign",
+       2.275,
+       2.728
+      ]
+     ],
+     "tag": "monitor",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Clear, Fast and Conversational' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 1.1",
+     "kokoro_audio": "audio/ep01/act4/dialogue/v5/wav/a5-29-07.wav",
+     "audio_device": "audio/ep01/v3-el/sample/wav-device/a5-29-07__gerg-mockbran-B.call.wav"
+    },
+    {
+     "id": "a5-29-08",
+     "who": "mas",
+     "text": "and go to macrosoft.",
+     "t": 10.55,
+     "dur": 1.6,
+     "audio": "audio/ep01/v3-el/sample/wav/a5-29-08__mas-manalt-B.wav",
+     "in": 0.43,
+     "words": [
+      [
+       "and",
+       -0.02,
+       0.152
+      ],
+      [
+       "go",
+       0.222,
+       0.35
+      ],
+      [
+       "to",
+       0.408,
+       0.454
+      ],
+      [
+       "macrosoft",
+       0.524,
+       1.278
+      ]
+     ],
+     "tag": "O.S.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Evan - Calm, Grounded & Reflective' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.84",
+     "kokoro_audio": "audio/ep01/act4/dialogue/v5/wav/a5-29-08.wav"
+    },
+    {
+     "id": "a5-29-09",
+     "who": "gerg",
+     "text": "Yep. Macrosoft's promised them \"…positions for all NopeAI employees…\"",
+     "t": 12.45,
+     "dur": 3.67,
+     "audio": "audio/ep01/v3-el/sample/wav/a5-29-09__gerg-mockbran-B.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "Yep",
+       0.0,
+       0.221
+      ],
+      [
+       "Macrosoft's",
+       0.279,
+       0.755
+      ],
+      [
+       "promised",
+       0.789,
+       1.091
+      ],
+      [
+       "them",
+       1.115,
+       1.219
+      ],
+      [
+       "positions",
+       1.254,
+       1.66
+      ],
+      [
+       "for",
+       1.707,
+       1.858
+      ],
+      [
+       "all",
+       1.939,
+       2.183
+      ],
+      [
+       "NopeAI",
+       2.241,
+       2.844
+      ],
+      [
+       "employees",
+       2.926,
+       3.46
+      ]
+     ],
+     "tag": "monitor",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Clear, Fast and Conversational' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 1.1",
+     "kokoro_audio": "audio/ep01/act4/dialogue/v5/wav/a5-29-09.wav",
+     "audio_device": "audio/ep01/v3-el/sample/wav-device/a5-29-09__gerg-mockbran-B.call.wav"
+    },
+    {
+     "id": "a5-29-10",
+     "who": "mas",
+     "text": "that's a lot of desks.",
+     "t": 16.72,
+     "dur": 1.34,
+     "audio": "audio/ep01/v3-el/sample/wav/a5-29-10__mas-manalt-B.wav",
+     "in": 0.45,
+     "words": [
+      [
+       "that's",
+       -0.02,
+       0.283
+      ],
+      [
+       "a",
+       0.33,
+       0.353
+      ],
+      [
+       "lot",
+       0.434,
+       0.631
+      ],
+      [
+       "of",
+       0.678,
+       0.724
+      ],
+      [
+       "desks",
+       0.806,
+       1.27
+      ]
+     ],
+     "tag": "O.S.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Evan - Calm, Grounded & Reflective' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.84",
+     "kokoro_audio": "audio/ep01/act4/dialogue/v5/wav/a5-29-10.wav"
+    },
+    {
+     "id": "a5-29-11",
+     "who": "gerg",
+     "text": "Scroll to the bottom.",
+     "t": 18.46,
+     "dur": 1.01,
+     "audio": "audio/ep01/v3-el/sample/wav/a5-29-11__gerg-mockbran-B.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "Scroll",
+       0.0,
+       0.383
+      ],
+      [
+       "to",
+       0.441,
+       0.499
+      ],
+      [
+       "the",
+       0.557,
+       0.627
+      ],
+      [
+       "bottom",
+       0.662,
+       0.987
+      ]
+     ],
+     "tag": "monitor",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Clear, Fast and Conversational' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 1.1",
+     "kokoro_audio": "audio/ep01/act4/dialogue/v5/wav/a5-29-11.wav",
+     "audio_device": "audio/ep01/v3-el/sample/wav-device/a5-29-11__gerg-mockbran-B.call.wav"
+    },
+    {
+     "id": "a5-29-12",
+     "who": "gerg",
+     "text": "Alyi signed it.",
+     "t": 21.07,
+     "dur": 0.95,
+     "audio": "audio/ep01/v3-el/sample/wav/a5-29-12__gerg-mockbran-B.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "Alyi",
+       0.0,
+       0.406
+      ],
+      [
+       "signed",
+       0.464,
+       0.789
+      ],
+      [
+       "it",
+       0.836,
+       0.929
+      ]
+     ],
+     "tag": "monitor",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Clear, Fast and Conversational' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 1.1",
+     "kokoro_audio": "audio/ep01/act4/dialogue/v5/wav/a5-29-12.wav",
+     "audio_device": "audio/ep01/v3-el/sample/wav-device/a5-29-12__gerg-mockbran-B.call.wav"
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "STAFF LETTER · TO THE BOARD",
+     "at": 0.1,
+     "until": null
+    },
+    {
+     "text": "SIGNED 505",
+     "at": 0.1,
+     "until": 8.08
+    },
+    {
+     "text": "SIGNED 650",
+     "at": 7.4,
+     "until": 12.24
+    },
+    {
+     "text": "SIGNED 700",
+     "at": 12.45,
+     "until": 18.29
+    },
+    {
+     "text": "SIGNED 745 / 770",
+     "at": 18.2,
+     "until": null
+    },
+    {
+     "text": "“…unable to work for or with people that lack competence, judgment and care for our mission and employees.”",
+     "at": 1.68,
+     "until": 8.08
+    },
+    {
+     "text": "“…unless all current board members resign…”",
+     "at": 7.945,
+     "until": 12.24
+    },
+    {
+     "text": "“…positions for all NopeAI employees…”",
+     "at": 13.885,
+     "until": 19.81
+    },
+    {
+     "text": "ALYI",
+     "at": 19.98,
+     "until": null
+    }
+   ],
+   "reelDur": 22.532,
+   "fx": [],
+   "sounds": [
+    {
+     "name": "odometer_ratchet",
+     "at": 18.2,
+     "gain": -22
+    },
+    {
+     "name": "bell_ding_F6",
+     "at": 20.08,
+     "gain": -28
+    }
+   ]
+  },
+  {
+   "id": "S5.07b",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "darkroom",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "SINGLE · MCU Mas, the monitor's light",
+   "side": "",
+   "room": "dark",
+   "chars": [
+    {
+     "id": "mas",
+     "x": 0.36,
+     "pose": "sit"
+    }
+   ],
+   "caption": "\"alyi voted.\" / \"He did both.\" Hold on Mas a beat: the pause is his.",
+   "lines": [
+    {
+     "id": "a5-29-13",
+     "who": "mas",
+     "text": "alyi voted.",
+     "t": 0.3,
+     "dur": 0.89,
+     "audio": "audio/ep01/v3-el/sample/wav/a5-29-13__mas-manalt-B.wav",
+     "in": 0.36,
+     "words": [
+      [
+       "alyi",
+       -0.01,
+       0.396
+      ],
+      [
+       "voted",
+       0.478,
+       0.861
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Evan - Calm, Grounded & Reflective' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.84",
+     "kokoro_audio": "audio/ep01/act4/dialogue/v5/wav/a5-29-13.wav"
+    },
+    {
+     "id": "a5-29-14",
+     "who": "gerg",
+     "text": "He did both.",
+     "t": 1.69,
+     "dur": 0.99,
+     "audio": "audio/ep01/v3-el/sample/wav/a5-29-14__gerg-mockbran-B.wav",
+     "in": 0.36,
+     "words": [
+      [
+       "He",
+       -0.01,
+       0.141
+      ],
+      [
+       "did",
+       0.199,
+       0.362
+      ],
+      [
+       "both",
+       0.42,
+       0.721
+      ]
+     ],
+     "tag": "monitor",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Clear, Fast and Conversational' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 1.1",
+     "kokoro_audio": "audio/ep01/act4/dialogue/v5/wav/a5-29-14.wav",
+     "audio_device": "audio/ep01/v3-el/sample/wav-device/a5-29-14__gerg-mockbran-B.call.wav"
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 6.06,
+   "fx": []
+  },
+  {
+   "id": "S5.08",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "INSERT · the check",
+   "side": "",
+   "room": "dark",
+   "chars": [],
+   "caption": "A check slides out of the rack's slot. Gerg explains it; then the stamp: VOID IF CEO MISSING.",
+   "lines": [
+    {
+     "id": "a5-29-15",
+     "who": "gerg",
+     "text": "That'll be the share sale. Everybody's been waiting on that one.",
+     "t": 1.3,
+     "dur": 2.5,
+     "audio": "audio/ep01/v3-el/sample/wav/a5-29-15__gerg-mockbran-B.wav",
+     "in": 0.36,
+     "words": [
+      [
+       "That'll",
+       -0.01,
+       0.28
+      ],
+      [
+       "be",
+       0.315,
+       0.373
+      ],
+      [
+       "the",
+       0.396,
+       0.466
+      ],
+      [
+       "share",
+       0.501,
+       0.71
+      ],
+      [
+       "sale",
+       0.745,
+       0.93
+      ],
+      [
+       "Everybody's",
+       0.988,
+       1.36
+      ],
+      [
+       "been",
+       1.383,
+       1.499
+      ],
+      [
+       "waiting",
+       1.534,
+       1.766
+      ],
+      [
+       "on",
+       1.813,
+       1.882
+      ],
+      [
+       "that",
+       1.917,
+       2.057
+      ],
+      [
+       "one",
+       2.115,
+       2.289
+      ]
+     ],
+     "tag": "monitor",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Clear, Fast and Conversational' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 1.1",
+     "kokoro_audio": "audio/ep01/act4/dialogue/v5/wav/a5-29-15.wav",
+     "audio_device": "audio/ep01/v3-el/sample/wav-device/a5-29-15__gerg-mockbran-B.call.wav"
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "PAY TO: NOPEAI STAFF",
+     "at": 0.4,
+     "until": null
+    },
+    {
+     "text": "~$86B VALUATION · EVIRHT",
+     "at": 0.6,
+     "until": null
+    },
+    {
+     "text": "MEMO: STAFF SHARE SALE",
+     "at": 0.8,
+     "until": null
+    },
+    {
+     "text": "VOID IF CEO MISSING",
+     "at": 4.1,
+     "until": null
+    }
+   ],
+   "reelDur": 5.183,
+   "fx": [],
+   "sounds": [
+    {
+     "name": "SLOT",
+     "at": 0.0,
+     "gain": -26
+    },
+    {
+     "name": "rubber_stamp_C",
+     "at": 4.1,
+     "gain": -18
+    }
+   ]
+  },
+  {
+   "id": "S5.09-back",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "call",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "OTS · back over Mas onto the monitor",
+   "side": "",
+   "room": "dark",
+   "chars": [
+    {
+     "id": "gerg",
+     "pose": "sit"
+    }
+   ],
+   "caption": "\"what are you building?\" Gerg, still typing, sunny. His keys stop after \"case\".",
+   "lines": [
+    {
+     "id": "a5-29-16",
+     "who": "mas",
+     "text": "what are you building?",
+     "t": 0.6,
+     "dur": 1.02,
+     "audio": "audio/ep01/v3-el/sample/wav/a5-29-16__mas-manalt-B.wav",
+     "in": 0.41,
+     "words": [
+      [
+       "what",
+       -0.02,
+       0.149
+      ],
+      [
+       "are",
+       0.172,
+       0.265
+      ],
+      [
+       "you",
+       0.312,
+       0.404
+      ],
+      [
+       "building",
+       0.486,
+       0.985
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Evan - Calm, Grounded & Reflective' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.84",
+     "kokoro_audio": "audio/ep01/act4/dialogue/v5/wav/a5-29-16.wav"
+    },
+    {
+     "id": "a5-29-17",
+     "who": "gerg",
+     "text": "The company. Again. Just in case.",
+     "t": 2.02,
+     "dur": 1.95,
+     "audio": "audio/ep01/v3-el/sample/wav/a5-29-17__gerg-mockbran-B.wav",
+     "in": 0.42,
+     "words": [
+      [
+       "The",
+       -0.02,
+       0.069
+      ],
+      [
+       "company",
+       0.127,
+       0.545
+      ],
+      [
+       "Again",
+       0.685,
+       1.068
+      ],
+      [
+       "Just",
+       1.207,
+       1.416
+      ],
+      [
+       "in",
+       1.463,
+       1.521
+      ],
+      [
+       "case",
+       1.579,
+       1.97
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Clear, Fast and Conversational' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 1.1",
+     "kokoro_audio": "audio/ep01/act4/dialogue/v5/wav/a5-29-17.wav",
+     "audio_device": "audio/ep01/v3-el/sample/wav-device/a5-29-17__gerg-mockbran-B.call.wav"
+    },
+    {
+     "id": "v3s-10",
+     "who": "mas",
+     "text": "gerg never waits to be asked.",
+     "t": 4.43,
+     "dur": 2.0,
+     "audio": "audio/ep01/v3-el/sample/wav/v3s-10__mas-manalt-B.wav",
+     "in": 0.36,
+     "words": [
+      [
+       "gerg",
+       -0.01,
+       0.303
+      ],
+      [
+       "never",
+       0.35,
+       0.57
+      ],
+      [
+       "waits",
+       0.629,
+       0.872
+      ],
+      [
+       "to",
+       0.907,
+       0.977
+      ],
+      [
+       "be",
+       1.035,
+       1.128
+      ],
+      [
+       "asked",
+       1.197,
+       1.569
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Evan - Calm, Grounded & Reflective' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.78",
+     "kokoro_audio": "audio/ep01/v3-sample/vo-v2/wav/v3s-10.wav"
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 7.13,
+   "fx": [],
+   "fg": {
+    "id": "mas",
+    "side": "left"
+   },
+   "shotId": "S5.09"
+  },
+  {
+   "id": "S5.09b",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "call",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "POV · cut-in: Gerg's tile fills the monitor",
+   "side": "",
+   "room": "dark",
+   "chars": [
+    {
+     "id": "gerg",
+     "pose": "sit",
+     "face": "calm"
+    }
+   ],
+   "caption": "His one look up, at Mas. The Build and his keys stop; the pedal holds. Then he types again.",
+   "lines": [
+    {
+     "id": "a5-29-18",
+     "who": "gerg",
+     "text": "So. Do I tell everyone to pack?",
+     "t": 1.2,
+     "dur": 1.76,
+     "audio": "audio/ep01/v3-el/sample/wav/a5-29-18__gerg-mockbran-B.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "So",
+       0.0,
+       0.255
+      ],
+      [
+       "Do",
+       0.708,
+       0.824
+      ],
+      [
+       "I",
+       0.882,
+       0.906
+      ],
+      [
+       "tell",
+       0.964,
+       1.091
+      ],
+      [
+       "everyone",
+       1.138,
+       1.393
+      ],
+      [
+       "to",
+       1.416,
+       1.463
+      ],
+      [
+       "pack",
+       1.509,
+       1.741
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Clear, Fast and Conversational' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 1.1",
+     "kokoro_audio": "audio/ep01/act4/dialogue/v5/wav/a5-29-18.wav",
+     "audio_device": "audio/ep01/v3-el/sample/wav-device/a5-29-18__gerg-mockbran-B.call.wav"
+    },
+    {
+     "id": "a5-29-19",
+     "who": "mas",
+     "text": "ask me when it compiles.",
+     "t": 3.86,
+     "dur": 1.35,
+     "audio": "audio/ep01/v3-el/sample/wav/a5-29-19__mas-manalt-B.wav",
+     "in": 0.38,
+     "words": [
+      [
+       "ask",
+       -0.02,
+       0.237
+      ],
+      [
+       "me",
+       0.295,
+       0.388
+      ],
+      [
+       "when",
+       0.411,
+       0.527
+      ],
+      [
+       "it",
+       0.574,
+       0.62
+      ],
+      [
+       "compiles",
+       0.643,
+       1.247
+      ]
+     ],
+     "tag": "O.S.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Evan - Calm, Grounded & Reflective' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.84",
+     "kokoro_audio": "audio/ep01/act4/dialogue/v5/wav/a5-29-19.wav"
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 6.313,
+   "fx": []
+  },
+  {
+   "id": "S5.11",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "darkroom",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "TWO-SHOT · the back wall; the slate door rises",
+   "side": "",
+   "room": "dark",
+   "chars": [
+    {
+     "id": "mas",
+     "x": 0.3,
+     "pose": "sit"
+    }
+   ],
+   "caption": "A slate-blue door steps up out of the shadow, Tasya's sign taped to it. A key turns. His voice.",
+   "lines": [
+    {
+     "id": "a5-29-20",
+     "who": "tasya",
+     "text": "Don't get up, Mas. I won't keep you. Everyone is welcome.",
+     "t": 1.9,
+     "dur": 2.97,
+     "audio": "audio/ep01/v3-el/sample/wav/a5-29-20__tasya-B.wav",
+     "in": 0.43,
+     "words": [
+      [
+       "Don't",
+       -0.02,
+       0.222
+      ],
+      [
+       "get",
+       0.245,
+       0.384
+      ],
+      [
+       "up",
+       0.442,
+       0.547
+      ],
+      [
+       "Mas",
+       0.617,
+       0.93
+      ],
+      [
+       "I",
+       1.0,
+       1.023
+      ],
+      [
+       "won't",
+       1.093,
+       1.336
+      ],
+      [
+       "keep",
+       1.394,
+       1.615
+      ],
+      [
+       "you",
+       1.673,
+       1.789
+      ],
+      [
+       "Everyone",
+       1.952,
+       2.416
+      ],
+      [
+       "is",
+       2.439,
+       2.532
+      ],
+      [
+       "welcome",
+       2.59,
+       2.99
+      ]
+     ],
+     "tag": "O.S.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Eric - Smooth, Trustworthy' (premade (ElevenLabs default voice)) · cand B · eleven_multilingual_v2 · speed 0.8",
+     "kokoro_audio": "audio/ep01/act4/dialogue/v5/wav/a5-29-20.wav"
+    },
+    {
+     "id": "a5-29-21",
+     "who": "mas",
+     "text": "everyone.",
+     "t": 5.57,
+     "dur": 0.72,
+     "audio": "audio/ep01/v3-el/sample/wav/a5-29-21__mas-manalt-B.wav",
+     "in": 0.39,
+     "words": [
+      [
+       "everyone",
+       -0.02,
+       0.715
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Evan - Calm, Grounded & Reflective' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.84",
+     "kokoro_audio": "audio/ep01/act4/dialogue/v5/wav/a5-29-21.wav"
+    },
+    {
+     "id": "a5-29-22",
+     "who": "tasya",
+     "text": "Yes. You first. And there's a desk for every one of them.",
+     "t": 6.79,
+     "dur": 3.2,
+     "audio": "audio/ep01/v3-el/sample/wav/a5-29-22__tasya-B.wav",
+     "in": 0.39,
+     "words": [
+      [
+       "Yes",
+       -0.02,
+       0.39
+      ],
+      [
+       "You",
+       0.633,
+       0.831
+      ],
+      [
+       "first",
+       0.935,
+       1.307
+      ],
+      [
+       "And",
+       1.376,
+       1.493
+      ],
+      [
+       "there's",
+       1.539,
+       1.771
+      ],
+      [
+       "a",
+       1.818,
+       1.841
+      ],
+      [
+       "desk",
+       1.91,
+       2.236
+      ],
+      [
+       "for",
+       2.294,
+       2.41
+      ],
+      [
+       "every",
+       2.479,
+       2.688
+      ],
+      [
+       "one",
+       2.758,
+       2.921
+      ],
+      [
+       "of",
+       2.944,
+       2.99
+      ],
+      [
+       "them",
+       3.013,
+       3.199
+      ]
+     ],
+     "tag": "O.S.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Eric - Smooth, Trustworthy' (premade (ElevenLabs default voice)) · cand B · eleven_multilingual_v2 · speed 0.8",
+     "kokoro_audio": "audio/ep01/act4/dialogue/v5/wav/a5-29-22.wav"
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "MAS / GERG / →",
+     "at": 0.9,
+     "until": null
+    }
+   ],
+   "reelDur": 10.485,
+   "fx": [],
+   "sounds": [
+    {
+     "name": "landing_thunk",
+     "at": 0.2,
+     "gain": -30
+    },
+    {
+     "name": "landing_thunk",
+     "at": 0.5,
+     "gain": -30
+    },
+    {
+     "name": "landing_thunk",
+     "at": 0.8,
+     "gain": -30
+    },
+    {
+     "name": "key_tap_space",
+     "at": 1.25,
+     "gain": -24
+    }
+   ]
+  },
+  {
+   "id": "S5.12",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "darkroom",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "SINGLE · MCU Mas, the door soft behind",
+   "side": "",
+   "room": "dark",
+   "chars": [
+    {
+     "id": "mas",
+     "x": 0.36,
+     "pose": "sit"
+    }
+   ],
+   "caption": "After a full offer, and a pause that belongs to the door. Rack to the door, open a crack.",
+   "lines": [
+    {
+     "id": "a5-29-23",
+     "who": "mas",
+     "text": "leave it open.",
+     "t": 0.605,
+     "dur": 0.61,
+     "audio": "audio/ep01/v3-el/sample/wav/a5-29-23__mas-manalt-B.wav",
+     "in": 0.42,
+     "words": [
+      [
+       "leave",
+       -0.02,
+       0.162
+      ],
+      [
+       "it",
+       0.185,
+       0.255
+      ],
+      [
+       "open",
+       0.302,
+       0.58
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Evan - Calm, Grounded & Reflective' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.84",
+     "kokoro_audio": "audio/ep01/act4/dialogue/v5/wav/a5-29-23.wav"
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 5.08,
+   "fx": []
+  }
+ ],
+ "_retimed": {
+  "source": "show/reel/trials/ep01-v3-sample.json",
+  "lines": "audio/ep01/v3-el/sample/lines-B.json",
+  "beat_changes_s": [
+   [
+    "5.02",
+    -0.33
+   ],
+   [
+    "5.03",
+    -0.52
+   ],
+   [
+    "5.04",
+    2.44
+   ],
+   [
+    "5.05",
+    -0.25
+   ],
+   [
+    "5.06",
+    -0.24
+   ],
+   [
+    "5.06b",
+    -0.36
+   ],
+   [
+    "5.07",
+    -0.44
+   ],
+   [
+    "5.09",
+    -0.02
+   ],
+   [
+    "5.10",
+    -0.11
+   ],
+   [
+    "5.11",
+    -0.4
+   ],
+   [
+    "6.01",
+    -0.29
+   ],
+   [
+    "6.08",
+    0.53
+   ],
+   [
+    "7.01",
+    0.46
+   ],
+   [
+    "S1.03",
+    0.68
+   ],
+   [
+    "S1.04",
+    -0.14
+   ],
+   [
+    "S1.06",
+    -0.72
+   ],
+   [
+    "S1.12",
+    -0.19
+   ],
+   [
+    "S2.01",
+    -0.64
+   ],
+   [
+    "S5.03",
+    0.25
+   ],
+   [
+    "S5.04",
+    -0.13
+   ],
+   [
+    "S5.05",
+    -0.32
+   ],
+   [
+    "S5.09",
+    -1.71
+   ],
+   [
+    "S5.06",
+    -0.26
+   ],
+   [
+    "S5.07b",
+    0.06
+   ],
+   [
+    "S5.08",
+    -0.65
+   ],
+   [
+    "S5.09-back",
+    -0.2
+   ],
+   [
+    "S5.09b",
+    -0.27
+   ],
+   [
+    "S5.11",
+    -0.89
+   ],
+   [
+    "S5.12",
+    -0.42
+   ]
+  ],
+  "runtime_s_source": 332.86,
+  "runtime_s_retimed": 327.78,
+  "rule": "gaps between lines kept; timed items after a moved line move with it"
+ }
+}

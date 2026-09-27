@@ -1,0 +1,60 @@
+{
+ "_about": "ElevenLabs usage for the v3-voices-el casting-and-sample phase (budget: 25,000 characters). chars_sent = characters of text sent; credits_billed = the character-cost header of each response (what the subscription counts).",
+ "subscription_before": {
+  "tier": "creator",
+  "character_count": 0,
+  "character_limit": 131000,
+  "next_character_count_reset_unix": 1793049484,
+  "voice_limit": 30,
+  "voice_slots_used": 0,
+  "professional_voice_limit": 1,
+  "can_extend_character_limit": false,
+  "status": "active",
+  "checked_at": "2026-09-27T11:15:04"
+ },
+ "subscription_after": {
+  "tier": "creator",
+  "character_count": 5522,
+  "character_limit": 131000,
+  "next_character_count_reset_unix": 1793049484,
+  "voice_limit": 30,
+  "voice_slots_used": 0,
+  "professional_voice_limit": 1,
+  "can_extend_character_limit": false,
+  "status": "active",
+  "checked_at": "2026-09-27T12:20:32"
+ },
+ "used_by_subscription": 5522,
+ "runs": {
+  "tests (model probes, 3 calls)": {
+   "calls": 3,
+   "chars_sent": 65,
+   "credits_billed": 35
+  },
+  "principal auditions (5 candidates x 6 roles)": {
+   "calls": 35,
+   "chars_sent": 2395,
+   "credits_billed": 1315
+  },
+  "eleven_v3 comparison (6 lines)": {
+   "calls": 6,
+   "chars_sent": 294,
+   "credits_billed": 162
+  },
+  "sample, sets A and B (incl. retakes)": {
+   "calls": 156,
+   "chars_sent": 5956,
+   "credits_billed": 3272
+  },
+  "supporting-role auditions (24 lines)": {
+   "calls": 28,
+   "chars_sent": 1344,
+   "credits_billed": 738
+  }
+ },
+ "total": {
+  "calls": 228,
+  "chars_sent": 10054,
+  "credits_billed": 5522
+ }
+}

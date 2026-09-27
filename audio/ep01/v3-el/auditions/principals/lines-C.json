@@ -1,0 +1,1117 @@
+[
+ {
+  "id": "v3s-01",
+  "kind": "vo",
+  "scene": null,
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "gerg wants to ship it. rima wants it quiet. alyi wants to know what it is first.",
+  "spoken_as": "Gurg wants to ship it. Rima wants it quiet. Al-yee wants to know what it is first.",
+  "tag": "V.O.",
+  "delivery": null,
+  "on_camera": "vo",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/auditions/principals/wav/v3s-01__mas-manalt-C.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 5.669,
+  "frames_24": 136,
+  "voiced_span_s": 4.58,
+  "pace": {
+   "audible_in_s": 0.39,
+   "audible_out_s": 4.97,
+   "measured": {
+    "span_s": 4.58,
+    "wpm": 222.7,
+    "syllables": 19,
+    "articulation_sps": 4.95,
+    "pauses_s": [
+     0.74,
+     0.07
+    ]
+   },
+   "longest_internal_gap_s": 0.74,
+   "words": 17,
+   "wpm": 222.7,
+   "speed": 0.86,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "gerg",
+    "t0": 0.37,
+    "t1": 0.663
+   },
+   {
+    "w": "wants",
+    "t0": 0.722,
+    "t1": 0.907
+   },
+   {
+    "w": "to",
+    "t0": 0.93,
+    "t1": 0.977
+   },
+   {
+    "w": "ship",
+    "t0": 1.035,
+    "t1": 1.267
+   },
+   {
+    "w": "it",
+    "t0": 1.325,
+    "t1": 1.453
+   },
+   {
+    "w": "rima",
+    "t0": 2.184,
+    "t1": 2.463
+   },
+   {
+    "w": "wants",
+    "t0": 2.533,
+    "t1": 2.695
+   },
+   {
+    "w": "it",
+    "t0": 2.73,
+    "t1": 2.8
+   },
+   {
+    "w": "quiet",
+    "t0": 2.835,
+    "t1": 3.206
+   },
+   {
+    "w": "alyi",
+    "t0": 3.264,
+    "t1": 3.589
+   },
+   {
+    "w": "wants",
+    "t0": 3.659,
+    "t1": 3.833
+   },
+   {
+    "w": "to",
+    "t0": 3.868,
+    "t1": 3.914
+   },
+   {
+    "w": "know",
+    "t0": 3.972,
+    "t1": 4.065
+   },
+   {
+    "w": "what",
+    "t0": 4.088,
+    "t1": 4.181
+   },
+   {
+    "w": "it",
+    "t0": 4.216,
+    "t1": 4.263
+   },
+   {
+    "w": "is",
+    "t0": 4.321,
+    "t1": 4.413
+   },
+   {
+    "w": "first",
+    "t0": 4.495,
+    "t1": 4.936
+   }
+  ],
+  "qa": {
+   "asr": "Gerg wants to ship it. Rima wants it quiet. Alyi wants to know what it is first.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -4.06,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 102.7,
+   "f0_range_st": 14.5,
+   "speech_head_s": 0.39,
+   "speech_tail_s": 0.699,
+   "raw_tail_cut": false,
+   "align_median_s": 0.082
+  },
+  "voice": "ElevenLabs library voice 'Evan - Calm, Grounded & Reflective' (shared library (high_quality)) · cand C · eleven_multilingual_v2 · speed 0.86",
+  "voiceId": "TWutjvRaJqAX89preB4e",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "C",
+   "role": "mas-manalt",
+   "voice_id": "TWutjvRaJqAX89preB4e",
+   "voice_name": "Evan - Calm, Grounded & Reflective",
+   "source": "shared library (high_quality)",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.86
+   },
+   "seed": 1784788321,
+   "chars_sent": 82,
+   "request_key": "9cebccd3c901be81",
+   "derived_from": null
+  },
+  "status": "el",
+  "take": "el-C",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "timeline_in": null,
+   "timeline_dur": null
+  }
+ },
+ {
+  "id": "a5-29-04",
+  "kind": "dialogue",
+  "scene": null,
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "it's two in the morning, gerg.",
+  "spoken_as": "It's two in the morning, gurg.",
+  "tag": "",
+  "delivery": null,
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/auditions/principals/wav/a5-29-04__mas-manalt-C.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 2.62,
+  "frames_24": 63,
+  "voiced_span_s": 1.46,
+  "pace": {
+   "audible_in_s": 0.48,
+   "audible_out_s": 1.94,
+   "measured": {
+    "span_s": 1.46,
+    "wpm": 246.6,
+    "syllables": 7,
+    "articulation_sps": 6.31,
+    "pauses_s": [
+     0.35
+    ]
+   },
+   "longest_internal_gap_s": 0.35,
+   "words": 6,
+   "wpm": 246.6,
+   "speed": 0.92,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "it's",
+    "t0": 0.46,
+    "t1": 0.594
+   },
+   {
+    "w": "two",
+    "t0": 0.629,
+    "t1": 0.733
+   },
+   {
+    "w": "in",
+    "t0": 0.791,
+    "t1": 0.838
+   },
+   {
+    "w": "the",
+    "t0": 0.872,
+    "t1": 0.942
+   },
+   {
+    "w": "morning",
+    "t0": 0.977,
+    "t1": 1.244
+   },
+   {
+    "w": "gerg",
+    "t0": 1.604,
+    "t1": 1.952
+   }
+  ],
+  "qa": {
+   "asr": "It's two in the morning, gurg.",
+   "cer": 0.036,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -3.35,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 89.6,
+   "f0_range_st": 11.6,
+   "speech_head_s": 0.48,
+   "speech_tail_s": 0.68,
+   "raw_tail_cut": false,
+   "align_median_s": 0.032
+  },
+  "voice": "ElevenLabs library voice 'Evan - Calm, Grounded & Reflective' (shared library (high_quality)) · cand C · eleven_multilingual_v2 · speed 0.92",
+  "voiceId": "TWutjvRaJqAX89preB4e",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "C",
+   "role": "mas-manalt",
+   "voice_id": "TWutjvRaJqAX89preB4e",
+   "voice_name": "Evan - Calm, Grounded & Reflective",
+   "source": "shared library (high_quality)",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.92
+   },
+   "seed": 349061959,
+   "chars_sent": 30,
+   "request_key": "fca3ea7831e0774d",
+   "derived_from": null
+  },
+  "status": "el",
+  "take": "el-C",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "timeline_in": null,
+   "timeline_dur": null
+  }
+ },
+ {
+  "id": "e1-a1-5-03",
+  "kind": "dialogue",
+  "scene": null,
+  "speaker": "GERG MOCKBRAN",
+  "speaker_slug": "gerg-mockbran",
+  "text": "It's a research preview, Rima. Nobody reads research. We'll get forty users and a nice thread.",
+  "spoken_as": "It's a research preview, Rima. Nobody reads research. We'll get forty users and a nice thread.",
+  "tag": "",
+  "delivery": null,
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/auditions/principals/wav/e1-a1-5-03__gerg-mockbran-C.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 5.669,
+  "frames_24": 136,
+  "voiced_span_s": 4.88,
+  "pace": {
+   "audible_in_s": 0.41,
+   "audible_out_s": 5.29,
+   "measured": {
+    "span_s": 4.88,
+    "wpm": 196.7,
+    "syllables": 24,
+    "articulation_sps": 5.67,
+    "pauses_s": [
+     0.3,
+     0.12,
+     0.23
+    ]
+   },
+   "longest_internal_gap_s": 0.3,
+   "words": 16,
+   "wpm": 196.7,
+   "speed": 1.1,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "It's",
+    "t0": 0.39,
+    "t1": 0.571
+   },
+   {
+    "w": "a",
+    "t0": 0.594,
+    "t1": 0.629
+   },
+   {
+    "w": "research",
+    "t0": 0.687,
+    "t1": 1.023
+   },
+   {
+    "w": "preview",
+    "t0": 1.07,
+    "t1": 1.418
+   },
+   {
+    "w": "Rima",
+    "t0": 1.534,
+    "t1": 1.824
+   },
+   {
+    "w": "Nobody",
+    "t0": 2.138,
+    "t1": 2.428
+   },
+   {
+    "w": "reads",
+    "t0": 2.486,
+    "t1": 2.637
+   },
+   {
+    "w": "research",
+    "t0": 2.695,
+    "t1": 3.044
+   },
+   {
+    "w": "We'll",
+    "t0": 3.148,
+    "t1": 3.334
+   },
+   {
+    "w": "get",
+    "t0": 3.369,
+    "t1": 3.485
+   },
+   {
+    "w": "forty",
+    "t0": 3.543,
+    "t1": 3.798
+   },
+   {
+    "w": "users",
+    "t0": 3.856,
+    "t1": 4.146
+   },
+   {
+    "w": "and",
+    "t0": 4.193,
+    "t1": 4.309
+   },
+   {
+    "w": "a",
+    "t0": 4.355,
+    "t1": 4.379
+   },
+   {
+    "w": "nice",
+    "t0": 4.448,
+    "t1": 4.669
+   },
+   {
+    "w": "thread",
+    "t0": 4.704,
+    "t1": 5.017
+   }
+  ],
+  "qa": {
+   "asr": "It's a research preview, Rima. Nobody reads research, we'll get 40 users and a nice thread.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -4.4,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 137.0,
+   "f0_range_st": 9.8,
+   "speech_head_s": 0.41,
+   "speech_tail_s": 0.379,
+   "raw_tail_cut": false,
+   "align_median_s": 0.084
+  },
+  "voice": "ElevenLabs library voice 'Adam - Engaging, Friendly and Bright' (shared library (high_quality)) · cand C · eleven_multilingual_v2 · speed 1.1",
+  "voiceId": "s3TPKV1kjDlVtZbl4Ksh",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "C",
+   "role": "gerg-mockbran",
+   "voice_id": "s3TPKV1kjDlVtZbl4Ksh",
+   "voice_name": "Adam - Engaging, Friendly and Bright",
+   "source": "shared library (high_quality)",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.1
+   },
+   "seed": 1995627224,
+   "chars_sent": 94,
+   "request_key": "17b03d18ecae88fe",
+   "derived_from": null
+  },
+  "status": "el",
+  "take": "el-C",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "timeline_in": null,
+   "timeline_dur": null
+  }
+ },
+ {
+  "id": "e1-a1-5-06",
+  "kind": "dialogue",
+  "scene": null,
+  "speaker": "RIMA TAMURI",
+  "speaker_slug": "rima-tamuri",
+  "text": "Mas, it's your call. If it breaks in front of people, and it will, what do we tell them?",
+  "spoken_as": "Mahs, it's your call. If it breaks in front of people, and it will, what do we tell them?",
+  "tag": "",
+  "delivery": null,
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/auditions/principals/wav/e1-a1-5-06__rima-tamuri-C.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 6.27,
+  "frames_24": 150,
+  "voiced_span_s": 5.41,
+  "pace": {
+   "audible_in_s": 0.39,
+   "audible_out_s": 5.8,
+   "measured": {
+    "span_s": 5.41,
+    "wpm": 210.7,
+    "syllables": 20,
+    "articulation_sps": 4.96,
+    "pauses_s": [
+     0.08,
+     0.72,
+     0.07,
+     0.23,
+     0.43,
+     0.06
+    ]
+   },
+   "longest_internal_gap_s": 0.72,
+   "words": 19,
+   "wpm": 210.7,
+   "speed": 0.95,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Mas",
+    "t0": 0.37,
+    "t1": 0.791
+   },
+   {
+    "w": "it's",
+    "t0": 0.872,
+    "t1": 1.035
+   },
+   {
+    "w": "your",
+    "t0": 1.07,
+    "t1": 1.209
+   },
+   {
+    "w": "call",
+    "t0": 1.279,
+    "t1": 1.592
+   },
+   {
+    "w": "If",
+    "t0": 2.266,
+    "t1": 2.382
+   },
+   {
+    "w": "it",
+    "t0": 2.44,
+    "t1": 2.509
+   },
+   {
+    "w": "breaks",
+    "t0": 2.544,
+    "t1": 2.8
+   },
+   {
+    "w": "in",
+    "t0": 2.846,
+    "t1": 2.916
+   },
+   {
+    "w": "front",
+    "t0": 2.962,
+    "t1": 3.136
+   },
+   {
+    "w": "of",
+    "t0": 3.171,
+    "t1": 3.218
+   },
+   {
+    "w": "people",
+    "t0": 3.276,
+    "t1": 3.682
+   },
+   {
+    "w": "and",
+    "t0": 3.833,
+    "t1": 3.984
+   },
+   {
+    "w": "it",
+    "t0": 4.054,
+    "t1": 4.112
+   },
+   {
+    "w": "will",
+    "t0": 4.158,
+    "t1": 4.448
+   },
+   {
+    "w": "what",
+    "t0": 4.866,
+    "t1": 5.052
+   },
+   {
+    "w": "do",
+    "t0": 5.087,
+    "t1": 5.157
+   },
+   {
+    "w": "we",
+    "t0": 5.215,
+    "t1": 5.284
+   },
+   {
+    "w": "tell",
+    "t0": 5.342,
+    "t1": 5.516
+   },
+   {
+    "w": "them",
+    "t0": 5.574,
+    "t1": 5.749
+   }
+  ],
+  "qa": {
+   "asr": "Moz, it's your call. If it breaks in front of people, and it will, what do we tell them?",
+   "cer": 0.024,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -1.71,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 187.8,
+   "f0_range_st": 11.3,
+   "speech_head_s": 0.39,
+   "speech_tail_s": 0.47,
+   "raw_tail_cut": false,
+   "align_median_s": 0.046
+  },
+  "voice": "ElevenLabs library voice 'Hope - Professional, Clear and Natural' (shared library (high_quality)) · cand C · eleven_multilingual_v2 · speed 0.95",
+  "voiceId": "WZlYpi1yf6zJhNWXih74",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "C",
+   "role": "rima-tamuri",
+   "voice_id": "WZlYpi1yf6zJhNWXih74",
+   "voice_name": "Hope - Professional, Clear and Natural",
+   "source": "shared library (high_quality)",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "seed": 741950252,
+   "chars_sent": 89,
+   "request_key": "9c423234d432e986",
+   "derived_from": null
+  },
+  "status": "el",
+  "take": "el-C",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "timeline_in": null,
+   "timeline_dur": null
+  }
+ },
+ {
+  "id": "e1-a1-5-13",
+  "kind": "dialogue",
+  "scene": null,
+  "speaker": "ALYI",
+  "speaker_slug": "alyi",
+  "text": "Six years and eleven months. From the day we started to that click.",
+  "spoken_as": "Six years and eleven months. From the day we started to that click.",
+  "tag": "",
+  "delivery": null,
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/auditions/principals/wav/e1-a1-5-13__alyi-C.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 6.087,
+  "frames_24": 146,
+  "voiced_span_s": 4.93,
+  "pace": {
+   "audible_in_s": 0.35,
+   "audible_out_s": 5.28,
+   "measured": {
+    "span_s": 4.93,
+    "wpm": 158.2,
+    "syllables": 16,
+    "articulation_sps": 4.0,
+    "pauses_s": [
+     0.93
+    ]
+   },
+   "longest_internal_gap_s": 0.93,
+   "words": 13,
+   "wpm": 158.2,
+   "speed": 0.84,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Six",
+    "t0": 0.35,
+    "t1": 0.722
+   },
+   {
+    "w": "years",
+    "t0": 0.803,
+    "t1": 1.174
+   },
+   {
+    "w": "and",
+    "t0": 1.232,
+    "t1": 1.325
+   },
+   {
+    "w": "eleven",
+    "t0": 1.395,
+    "t1": 1.743
+   },
+   {
+    "w": "months",
+    "t0": 1.824,
+    "t1": 2.231
+   },
+   {
+    "w": "From",
+    "t0": 3.229,
+    "t1": 3.45
+   },
+   {
+    "w": "the",
+    "t0": 3.52,
+    "t1": 3.589
+   },
+   {
+    "w": "day",
+    "t0": 3.67,
+    "t1": 3.903
+   },
+   {
+    "w": "we",
+    "t0": 3.972,
+    "t1": 4.077
+   },
+   {
+    "w": "started",
+    "t0": 4.146,
+    "t1": 4.506
+   },
+   {
+    "w": "to",
+    "t0": 4.553,
+    "t1": 4.622
+   },
+   {
+    "w": "that",
+    "t0": 4.692,
+    "t1": 4.866
+   },
+   {
+    "w": "click",
+    "t0": 4.936,
+    "t1": 5.3
+   }
+  ],
+  "qa": {
+   "asr": "six years and 11 months from the day we started to that click",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.1,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -2.86,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 87.7,
+   "f0_range_st": 12.5,
+   "speech_head_s": 0.35,
+   "speech_tail_s": 0.807,
+   "raw_tail_cut": false,
+   "align_median_s": 0.133
+  },
+  "voice": "ElevenLabs library voice 'Louis - Deep, Profound and Thoughtful' (shared library (professional)) · cand C · eleven_multilingual_v2 · speed 0.84",
+  "voiceId": "8x8Otoub1daqoxY72hug",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "C",
+   "role": "alyi",
+   "voice_id": "8x8Otoub1daqoxY72hug",
+   "voice_name": "Louis - Deep, Profound and Thoughtful",
+   "source": "shared library (professional)",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.84
+   },
+   "seed": 2818654069,
+   "chars_sent": 67,
+   "request_key": "16f105a0fe433419",
+   "derived_from": null
+  },
+  "status": "el",
+  "take": "el-C",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "timeline_in": null,
+   "timeline_dur": null
+  }
+ },
+ {
+  "id": "a5-25-02",
+  "kind": "dialogue",
+  "scene": null,
+  "speaker": "NELEH",
+  "speaker_slug": "neleh",
+  "text": "Leave out Mas and Gerg, and the four of us are a majority.",
+  "spoken_as": "Leave out Mahs and Gurg, and the four of us are a majority.",
+  "tag": "",
+  "delivery": null,
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/auditions/principals/wav/a5-25-02__neleh-C.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 3.79,
+  "frames_24": 91,
+  "voiced_span_s": 2.89,
+  "pace": {
+   "audible_in_s": 0.41,
+   "audible_out_s": 3.3,
+   "measured": {
+    "span_s": 2.89,
+    "wpm": 269.9,
+    "syllables": 16,
+    "articulation_sps": 5.99,
+    "pauses_s": [
+     0.22,
+     0.06
+    ]
+   },
+   "longest_internal_gap_s": 0.22,
+   "words": 13,
+   "wpm": 269.9,
+   "speed": 1.0,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Leave",
+    "t0": 0.39,
+    "t1": 0.605
+   },
+   {
+    "w": "out",
+    "t0": 0.64,
+    "t1": 0.756
+   },
+   {
+    "w": "Mas",
+    "t0": 0.814,
+    "t1": 1.047
+   },
+   {
+    "w": "and",
+    "t0": 1.093,
+    "t1": 1.174
+   },
+   {
+    "w": "Gerg",
+    "t0": 1.221,
+    "t1": 1.569
+   },
+   {
+    "w": "and",
+    "t0": 1.743,
+    "t1": 1.883
+   },
+   {
+    "w": "the",
+    "t0": 1.929,
+    "t1": 1.999
+   },
+   {
+    "w": "four",
+    "t0": 2.033,
+    "t1": 2.231
+   },
+   {
+    "w": "of",
+    "t0": 2.266,
+    "t1": 2.312
+   },
+   {
+    "w": "us",
+    "t0": 2.37,
+    "t1": 2.463
+   },
+   {
+    "w": "are",
+    "t0": 2.533,
+    "t1": 2.718
+   },
+   {
+    "w": "a",
+    "t0": 2.753,
+    "t1": 2.776
+   },
+   {
+    "w": "majority",
+    "t0": 2.823,
+    "t1": 3.299
+   }
+  ],
+  "qa": {
+   "asr": "Leave out Moz and Gerg, and the four of us are a majority.",
+   "cer": 0.036,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.13,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -4.6,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 189.7,
+   "f0_range_st": 9.4,
+   "speech_head_s": 0.41,
+   "speech_tail_s": 0.49,
+   "raw_tail_cut": false,
+   "align_median_s": 0.053
+  },
+  "voice": "ElevenLabs library voice 'Paige – Engaging Narrator' (shared library (high_quality)) · cand C · eleven_multilingual_v2 · speed 1.0",
+  "voiceId": "NDTYOmYEjbDIVCKB35i3",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "C",
+   "role": "neleh",
+   "voice_id": "NDTYOmYEjbDIVCKB35i3",
+   "voice_name": "Paige – Engaging Narrator",
+   "source": "shared library (high_quality)",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "seed": 1618763277,
+   "chars_sent": 59,
+   "request_key": "c10be0c5a99e9918",
+   "derived_from": null
+  },
+  "status": "el",
+  "take": "el-C",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "timeline_in": null,
+   "timeline_dur": null
+  }
+ },
+ {
+  "id": "a5-29-20",
+  "kind": "dialogue",
+  "scene": null,
+  "speaker": "TASYA",
+  "speaker_slug": "tasya",
+  "text": "Don't get up, Mas. I won't keep you. Everyone is welcome.",
+  "spoken_as": "Don't get up, Mahs. I won't keep you. Everyone is welcome.",
+  "tag": "",
+  "delivery": null,
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/auditions/principals/wav/a5-29-20__tasya-C.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 4.11,
+  "frames_24": 99,
+  "voiced_span_s": 3.11,
+  "pace": {
+   "audible_in_s": 0.44,
+   "audible_out_s": 3.55,
+   "measured": {
+    "span_s": 3.11,
+    "wpm": 212.2,
+    "syllables": 14,
+    "articulation_sps": 5.09,
+    "pauses_s": [
+     0.19,
+     0.17
+    ]
+   },
+   "longest_internal_gap_s": 0.19,
+   "words": 11,
+   "wpm": 212.2,
+   "speed": 0.9,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Don't",
+    "t0": 0.42,
+    "t1": 0.605
+   },
+   {
+    "w": "get",
+    "t0": 0.629,
+    "t1": 0.745
+   },
+   {
+    "w": "up",
+    "t0": 0.791,
+    "t1": 0.884
+   },
+   {
+    "w": "Mas",
+    "t0": 0.942,
+    "t1": 1.325
+   },
+   {
+    "w": "I",
+    "t0": 1.627,
+    "t1": 1.697
+   },
+   {
+    "w": "won't",
+    "t0": 1.79,
+    "t1": 1.964
+   },
+   {
+    "w": "keep",
+    "t0": 2.01,
+    "t1": 2.184
+   },
+   {
+    "w": "you",
+    "t0": 2.254,
+    "t1": 2.382
+   },
+   {
+    "w": "Everyone",
+    "t0": 2.637,
+    "t1": 3.02
+   },
+   {
+    "w": "is",
+    "t0": 3.055,
+    "t1": 3.125
+   },
+   {
+    "w": "welcome",
+    "t0": 3.171,
+    "t1": 3.566
+   }
+  ],
+  "qa": {
+   "asr": "Don't get up, Moz. I won't keep you. Everyone is welcome.",
+   "cer": 0.038,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -2.45,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 109.3,
+   "f0_range_st": 10.3,
+   "speech_head_s": 0.44,
+   "speech_tail_s": 0.56,
+   "raw_tail_cut": false,
+   "align_median_s": 0.051
+  },
+  "voice": "ElevenLabs library voice 'Kirt - Podcast Host' (shared library (high_quality)) · cand C · eleven_multilingual_v2 · speed 0.9",
+  "voiceId": "qCwgiN0GsIAYwAJ1nYvZ",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "C",
+   "role": "tasya",
+   "voice_id": "qCwgiN0GsIAYwAJ1nYvZ",
+   "voice_name": "Kirt - Podcast Host",
+   "source": "shared library (high_quality)",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 0.9
+   },
+   "seed": 1291072769,
+   "chars_sent": 58,
+   "request_key": "a832371276292ec8",
+   "derived_from": null
+  },
+  "status": "el",
+  "take": "el-C",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "timeline_in": null,
+   "timeline_dur": null
+  }
+ }
+]
