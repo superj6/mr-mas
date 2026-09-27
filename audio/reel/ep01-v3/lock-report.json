@@ -1,0 +1,1167 @@
+{
+ "coldopen": {
+  "timeline": "show/reel/ep01-v3/ep01-v3-coldopen.json",
+  "source": "show/reel/ep01-full/ep01-coldopen-v2.json",
+  "trims": [],
+  "source_story_s": 30.167,
+  "estimate_s": 30.66,
+  "seconds": 30.667,
+  "beats": 12,
+  "lines": 3,
+  "vo": 0,
+  "jcuts": [],
+  "lcuts": [
+   "e1-co-1-02 (1.02)"
+  ],
+  "edits": [
+   {
+    "beat": "1.00",
+    "what": "new 0.5 s black before 1.01: 1.01's sound J-cut \"under black before the first frame\""
+   }
+  ],
+  "deviations": [],
+  "safety_net": []
+ },
+ "act1": {
+  "timeline": "show/reel/ep01-v3/ep01-v3-act1.json",
+  "source": "show/reel/ep01-full/ep01-act1-v2.json",
+  "trims": [],
+  "source_story_s": 359.667,
+  "estimate_s": 323.33,
+  "seconds": 322.51,
+  "beats": 48,
+  "lines": 60,
+  "vo": 10,
+  "jcuts": [
+   "e1-a1-5-01 (5.03, -0.50)",
+   "e1-a1-7-01 (7.01, -0.60)"
+  ],
+  "lcuts": [],
+  "edits": [
+   {
+    "beat": "5.01",
+    "what": "arrival +1.00 s at the head (arrive_s 1.0)"
+   },
+   {
+    "beat": "5.02",
+    "what": "V.O. v3-vo-01 (5.80 s) at start+1.2"
+   },
+   {
+    "beat": "5.02",
+    "what": "length 8.00 s from the V.O. (est_s 7.86)"
+   },
+   {
+    "beat": "5.02",
+    "what": "+3.58 s at the tail"
+   },
+   {
+    "beat": "5.02",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "5.02",
+    "what": "names[]: gerg at 1.25 s (his voice names them)"
+   },
+   {
+    "beat": "5.02",
+    "what": "names[]: rima at 3.02 s (his voice names them)"
+   },
+   {
+    "beat": "5.02",
+    "what": "names[]: alyi at 4.93 s (his voice names them)"
+   },
+   {
+    "beat": "5.03",
+    "what": "V.O. v3-vo-02 (1.24 s) at after:e1-a1-5-02+0.4"
+   },
+   {
+    "beat": "5.03",
+    "what": "J-cut: e1-a1-5-01 starts 0.5 s under the outgoing shot; it and what follows move up 1.00 s, and the beat shortens by the same"
+   },
+   {
+    "beat": "5.04",
+    "what": "V.O. v3-vo-03 (3.17 s) at after:e1-a1-5-06+0.5"
+   },
+   {
+    "beat": "5.06",
+    "what": "hold +0.30 s at the tail (hold_after_s 0.6)"
+   },
+   {
+    "beat": "v3-5.06b",
+    "what": "new beat from the 5.05 setup"
+   },
+   {
+    "beat": "v3-5.06b",
+    "what": "V.O. v3-vo-04 (5.05 s) at start+0.5"
+   },
+   {
+    "beat": "v3-5.06b",
+    "what": "names[]: alyi at 0.59 s (his voice names them)"
+   },
+   {
+    "beat": "5.09",
+    "what": "hold +1.50 s at the tail (hold_after_s 1.5)"
+   },
+   {
+    "beat": "5.11",
+    "what": "V.O. v3-vo-05 (1.91 s) at after:e1-a1-5-23+0.4"
+   },
+   {
+    "beat": "6.01",
+    "what": "line e1-a1-6-01 dropped (\"nobody noticed.\")"
+   },
+   {
+    "beat": "6.01",
+    "what": "V.O. v3-vo-06 (1.21 s) at start+1.2"
+   },
+   {
+    "beat": "6.01",
+    "what": "every line replaced: the beat keeps the plan's 5.0 s (computed 3.70 s)"
+   },
+   {
+    "beat": "6.03",
+    "what": "cut (C5): 2.50 s"
+   },
+   {
+    "beat": "6.05",
+    "what": "cut (C5): 2.00 s"
+   },
+   {
+    "beat": "6.06",
+    "what": "on-screen add: \"RAIL: DEC 5, 2022\""
+   },
+   {
+    "beat": "6.06",
+    "what": "+0.72 s at the tail"
+   },
+   {
+    "beat": "6.06",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "6.07",
+    "what": "cut (C5): 3.92 s"
+   },
+   {
+    "beat": "7.01",
+    "what": "V.O. v3-vo-07 (1.11 s) at after:e1-a1-7-02+0.4"
+   },
+   {
+    "beat": "7.01",
+    "what": "J-cut: e1-a1-7-01 starts 0.6 s under the outgoing shot; it and what follows move up 2.10 s, and the beat shortens by the same"
+   },
+   {
+    "beat": "7.02",
+    "what": "+0.80 s at the tail"
+   },
+   {
+    "beat": "9.01",
+    "what": "on-screen add: \"MACROSOFT · \"multiyear, multibillion dollar\" · $ MULTIBILLION\""
+   },
+   {
+    "beat": "9.01",
+    "what": "9.02 merged in (C6): 2 sound(s), 0 line(s) of which 0 moved"
+   },
+   {
+    "beat": "9.01",
+    "what": "9.03 merged in (C6): 0 sound(s), 0 line(s) of which 0 moved"
+   },
+   {
+    "beat": "9.01",
+    "what": "9.29 -> 5.50 s, timed items scaled ×0.59"
+   },
+   {
+    "beat": "9.01",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "9.04",
+    "what": "9.05 merged in (C6): 2 sound(s), 0 line(s) of which 0 moved"
+   },
+   {
+    "beat": "9.04",
+    "what": "V.O. v3-vo-08 (2.87 s) at start+0.9"
+   },
+   {
+    "beat": "9.04",
+    "what": "length 4.37 s from the V.O. (est_s 4.0)"
+   },
+   {
+    "beat": "9.04",
+    "what": "4.71 -> 4.37 s, timed items scaled ×0.93"
+   },
+   {
+    "beat": "9.04",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "9.09",
+    "what": "V.O. v3-vo-09 (0.79 s) at after:e1-a1-9-04+0.5"
+   },
+   {
+    "beat": "9.10",
+    "what": "arrival +1.00 s at the head (arrive_s 2.2; first line at 3.60 s)"
+   },
+   {
+    "beat": "9.10",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "9.13",
+    "what": "hold +1.00 s at the tail (hold_after_s 1.4)"
+   },
+   {
+    "beat": "10.01",
+    "what": "cut (C1): 3.58 s"
+   },
+   {
+    "beat": "10.02",
+    "what": "cut (C1): 19.00 s"
+   },
+   {
+    "beat": "10.03",
+    "what": "cut (C1): 4.25 s"
+   },
+   {
+    "beat": "10.04",
+    "what": "cut (C1): 3.04 s"
+   },
+   {
+    "beat": "11.01",
+    "what": "on-screen add: \"GTP-4\""
+   },
+   {
+    "beat": "11.01",
+    "what": "arrival +1.42 s at the head (arrive_s 3.0)"
+   },
+   {
+    "beat": "11.01",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "11.02",
+    "what": "cut (C2): 10.29 s"
+   },
+   {
+    "beat": "11.03",
+    "what": "V.O. v3-vo-10 (4.59 s) at start+0.8"
+   },
+   {
+    "beat": "11.03",
+    "what": "names[]: mario 5.89 -> 0.84 s (his voice names them before the plate)"
+   },
+   {
+    "beat": "11.03",
+    "what": "names[]: gerg at 2.23 s (his voice names them)"
+   },
+   {
+    "beat": "11.05",
+    "what": "10.00 -> 5.00 s, timed items scaled ×0.50"
+   },
+   {
+    "beat": "11.06",
+    "what": "10.00 -> 5.00 s, timed items scaled ×0.50"
+   },
+   {
+    "beat": "12.03",
+    "what": "cut (C4): 4.71 s"
+   },
+   {
+    "beat": "12.04",
+    "what": "+0.21 s at the tail"
+   },
+   {
+    "beat": "12.04",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "12.05",
+    "what": "caption from the plan"
+   }
+  ],
+  "deviations": [],
+  "safety_net": []
+ },
+ "act2": {
+  "timeline": "show/reel/ep01-v3/ep01-v3-act2.json",
+  "source": "show/reel/ep01-full/ep01-act2-v2.json",
+  "trims": [],
+  "source_story_s": 219.792,
+  "estimate_s": 202.63,
+  "seconds": 204.739,
+  "beats": 50,
+  "lines": 39,
+  "vo": 3,
+  "jcuts": [],
+  "lcuts": [
+   "e1-a2-15-01 (14.06)"
+  ],
+  "edits": [
+   {
+    "beat": "13.01",
+    "what": "V.O. v3-vo-11 (5.92 s) at start+1.0"
+   },
+   {
+    "beat": "13.01",
+    "what": "length 7.52 s from the V.O. (est_s 5.5)"
+   },
+   {
+    "beat": "13.01",
+    "what": "+4.27 s at the tail"
+   },
+   {
+    "beat": "13.01",
+    "what": "names[]: radnus at 3.77 s (his voice names them)"
+   },
+   {
+    "beat": "13.09",
+    "what": "V.O. v3-vo-12 (1.12 s) at after:e1-a2-13-11+0.4"
+   },
+   {
+    "beat": "13.11",
+    "what": "V.O. v3-vo-13 (2.40 s) at start+0.5"
+   },
+   {
+    "beat": "13.11",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "13.13",
+    "what": "line e1-a2-13-16 dropped (\"How much longer?\")"
+   },
+   {
+    "beat": "13.13",
+    "what": "line e1-a2-13-17 dropped (\"Longer than that. I've got a big desk.\")"
+   },
+   {
+    "beat": "13.13",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "13.14",
+    "what": "hold +0.98 s at the tail (hold_after_s 1.5)"
+   },
+   {
+    "beat": "15.03",
+    "what": "3.00 -> 2.50 s, timed items scaled ×0.83"
+   },
+   {
+    "beat": "15.07",
+    "what": "line e1-a2-15-08 dropped (\"Are you nervous, Mr. Manalt?\")"
+   },
+   {
+    "beat": "15.08",
+    "what": "cut (C8): 1.50 s"
+   },
+   {
+    "beat": "15.09",
+    "what": "cut (C8): 3.17 s"
+   },
+   {
+    "beat": "15.14",
+    "what": "new line v3-a2-0001 (mas, 2.25 s) after e1-a2-15-14 +0.5"
+   },
+   {
+    "beat": "15.18",
+    "what": "+0.80 s at the tail"
+   },
+   {
+    "beat": "16.01",
+    "what": "sound(s) rubber_stamp_C, synth:stab dropped with the on-screen item they start on"
+   },
+   {
+    "beat": "16.01",
+    "what": "name reveal(s) noterb dropped with the on-screen item they start on"
+   },
+   {
+    "beat": "16.01",
+    "what": "16.05 merged in (C7): 0 sound(s), 0 line(s) of which 0 moved"
+   },
+   {
+    "beat": "16.01",
+    "what": "20.00 -> 8.00 s, timed items scaled ×0.40"
+   },
+   {
+    "beat": "16.01",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "17.01",
+    "what": "name reveal(s) notnih dropped with the on-screen item they start on"
+   },
+   {
+    "beat": "17.01",
+    "what": "10.00 -> 6.00 s, timed items scaled ×0.60"
+   },
+   {
+    "beat": "17.12",
+    "what": "+0.50 s at the tail"
+   }
+  ],
+  "deviations": [],
+  "safety_net": []
+ },
+ "act3": {
+  "timeline": "show/reel/ep01-v3/ep01-v3-act3.json",
+  "source": "show/reel/ep01-full/ep01-act3-v2.json",
+  "trims": [],
+  "source_story_s": 153.667,
+  "estimate_s": 126.82,
+  "seconds": 128.037,
+  "beats": 28,
+  "lines": 22,
+  "vo": 3,
+  "jcuts": [],
+  "lcuts": [],
+  "edits": [
+   {
+    "beat": "18.01",
+    "what": "arrival +1.58 s at the head (arrive_s 3.5)"
+   },
+   {
+    "beat": "18.06",
+    "what": "hold +0.99 s at the tail (hold_after_s 1.0)"
+   },
+   {
+    "beat": "19.01",
+    "what": "sound(s) dialog_ok_click--chip dropped with the on-screen item they start on"
+   },
+   {
+    "beat": "19.02",
+    "what": "cut (C10): 4.29 s"
+   },
+   {
+    "beat": "19.03",
+    "what": "cut (C10): 1.79 s"
+   },
+   {
+    "beat": "19.04",
+    "what": "cut (C10): 1.92 s"
+   },
+   {
+    "beat": "19.05",
+    "what": "cut (C10): 4.08 s"
+   },
+   {
+    "beat": "19.06",
+    "what": "cut (C10): 2.21 s"
+   },
+   {
+    "beat": "19.07",
+    "what": "cut (C10): 2.79 s"
+   },
+   {
+    "beat": "19.08",
+    "what": "cut (C10): 2.42 s"
+   },
+   {
+    "beat": "19.09",
+    "what": "cut (C10): 2.75 s"
+   },
+   {
+    "beat": "19.09b",
+    "what": "cut (C10): 2.71 s"
+   },
+   {
+    "beat": "19.10",
+    "what": "cut (C10): 3.54 s"
+   },
+   {
+    "beat": "19.11",
+    "what": "on-screen add: \"MISANTHROPIC\""
+   },
+   {
+    "beat": "19.11",
+    "what": "+0.29 s at the tail"
+   },
+   {
+    "beat": "19.12",
+    "what": "+0.71 s at the tail"
+   },
+   {
+    "beat": "20.06",
+    "what": "V.O. v3-vo-15 (4.29 s) at after:e1-a3-20-09+0.6"
+   },
+   {
+    "beat": "20.06",
+    "what": "names[]: gerg at 14.26 s (his voice names them)"
+   },
+   {
+    "beat": "21.01",
+    "what": "cut (C11): 3.92 s"
+   },
+   {
+    "beat": "21.02",
+    "what": "sequence marker SC21 moved here from a cut beat"
+   },
+   {
+    "beat": "21.02",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "21.05",
+    "what": "+0.51 s at the tail"
+   },
+   {
+    "beat": "21.06",
+    "what": "cut (C11): 3.42 s"
+   },
+   {
+    "beat": "21.07",
+    "what": "cut (C11): 2.00 s"
+   },
+   {
+    "beat": "22.02",
+    "what": "V.O. v3-vo-16 (3.41 s) at start+1.3"
+   },
+   {
+    "beat": "22.02",
+    "what": "length 5.31 s from the V.O. (est_s 5.0)"
+   },
+   {
+    "beat": "22.02",
+    "what": "+2.31 s at the tail"
+   },
+   {
+    "beat": "22.02",
+    "what": "key_tap_soft_01 2.60 -> 4.91 s: it ends the beat (\"then …\" in the caption)"
+   },
+   {
+    "beat": "22.02",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "22.03",
+    "what": "hold +0.80 s at the tail (hold_after_s 1.4)"
+   }
+  ],
+  "deviations": [],
+  "safety_net": [
+   "21.03: \"RAIL: OCT 30, 2023 · EO 14110\" -> \"RAIL: OCT 30, 2023\" (script-v3-notes §4)"
+  ]
+ },
+ "act4": {
+  "timeline": "show/reel/ep01-v3/ep01-v3-act4.json",
+  "source": "show/reel/ep01-act4-v5.json",
+  "trims": [],
+  "source_story_s": 518.458,
+  "estimate_s": 520.6,
+  "seconds": 523.791,
+  "beats": 80,
+  "lines": 101,
+  "vo": 7,
+  "jcuts": [],
+  "lcuts": [
+   "a5-27-06 (S3.02)",
+   "v3-a4-0001 (S4.13)",
+   "v3-a4-0004 (S7.07)",
+   "a5-31-04 (S8.08)"
+  ],
+  "edits": [
+   {
+    "beat": "S1.01",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S1.01",
+    "what": "V.O. v3-vo-17 (3.34 s) at start+1.8"
+   },
+   {
+    "beat": "S1.01",
+    "what": "length 5.74 s from the V.O. (est_s 5.6)"
+   },
+   {
+    "beat": "S1.01",
+    "what": "+2.24 s at the tail"
+   },
+   {
+    "beat": "S1.01",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S1.02",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S1.02",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S1.03",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S1.04",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S1.04",
+    "what": "trim 0.46 s off the tail (1.42 -> 0.96 s after the last word)"
+   },
+   {
+    "beat": "S1.05",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S1.06",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S1.06",
+    "what": "V.O. v3-vo-18 (4.76 s) at start+0.4"
+   },
+   {
+    "beat": "S1.06",
+    "what": "length 5.86 s from the V.O. (est_s 5.3)"
+   },
+   {
+    "beat": "S1.06",
+    "what": "+4.36 s at the tail"
+   },
+   {
+    "beat": "S1.06",
+    "what": "dialog_ok_click 1.25 -> 5.61 s: it ends the beat (\"then …\" in the caption)"
+   },
+   {
+    "beat": "S1.06",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S1.06",
+    "what": "names[]: gerg at 0.46 s (his voice names them)"
+   },
+   {
+    "beat": "S1.06",
+    "what": "names[]: alyi at 2.12 s (his voice names them)"
+   },
+   {
+    "beat": "S1.07",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S1.08",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S1.09",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S1.10",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S1.11",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S1.12",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S1.12",
+    "what": "hold +2.39 s at the tail (hold_after_s 3.0)"
+   },
+   {
+    "beat": "S2.01",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S2.02",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S2.03",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S2.03",
+    "what": "4.00 -> 3.50 s, timed items scaled ×0.88"
+   },
+   {
+    "beat": "S2.04",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S2.05",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S2.05",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S3.00a",
+    "what": "side badge \"THE BOARD'S SIDE\" removed"
+   },
+   {
+    "beat": "S3.00a",
+    "what": "arrival +1.00 s at the head (arrive_s 3.4; first line at 3.40 s)"
+   },
+   {
+    "beat": "S3.01",
+    "what": "side badge \"THE BOARD'S SIDE\" removed"
+   },
+   {
+    "beat": "S3.02",
+    "what": "side badge \"THE BOARD'S SIDE\" removed"
+   },
+   {
+    "beat": "S3.03",
+    "what": "side badge \"THE BOARD'S SIDE\" removed"
+   },
+   {
+    "beat": "S3.04",
+    "what": "side badge \"THE BOARD'S SIDE\" removed"
+   },
+   {
+    "beat": "S3.04b",
+    "what": "side badge \"THE BOARD'S SIDE\" removed"
+   },
+   {
+    "beat": "S3.06",
+    "what": "side badge \"THE BOARD'S SIDE\" removed"
+   },
+   {
+    "beat": "S3.07",
+    "what": "side badge \"THE BOARD'S SIDE\" removed"
+   },
+   {
+    "beat": "S3.07",
+    "what": "hold +0.80 s at the tail (hold_after_s 1.6)"
+   },
+   {
+    "beat": "S3.05",
+    "what": "side badge \"THE BOARD'S SIDE\" removed"
+   },
+   {
+    "beat": "S4.01",
+    "what": "side badge \"THE BOARD'S SIDE\" removed"
+   },
+   {
+    "beat": "S4.02",
+    "what": "side badge \"THE BOARD'S SIDE\" removed"
+   },
+   {
+    "beat": "S4.02",
+    "what": "S4.06 merged in (C13): 1 sound(s), 2 line(s) of which 1 moved"
+   },
+   {
+    "beat": "S4.02",
+    "what": "line a5-27-28 moved in from S4.06 after a5-27-23 (+1.6 s), with 1 sound(s)"
+   },
+   {
+    "beat": "S4.02",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S4.04",
+    "what": "cut (C13): 6.92 s"
+   },
+   {
+    "beat": "S4.07",
+    "what": "side badge \"THE BOARD'S SIDE\" removed"
+   },
+   {
+    "beat": "S4.08",
+    "what": "side badge \"THE BOARD'S SIDE\" removed"
+   },
+   {
+    "beat": "S4.08",
+    "what": "sound(s) RING dropped with the on-screen item they start on"
+   },
+   {
+    "beat": "S4.08",
+    "what": "name reveal(s) mario dropped with the on-screen item they start on"
+   },
+   {
+    "beat": "S4.08",
+    "what": "line a5-27-33 dropped (\"It's Nozama. About the money.\")"
+   },
+   {
+    "beat": "S4.08",
+    "what": "line a5-27-34 dropped (\"Hi. Yes. We're very worried. How much?\")"
+   },
+   {
+    "beat": "S4.08",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S4.09",
+    "what": "side badge \"THE BOARD'S SIDE\" removed"
+   },
+   {
+    "beat": "S4.10",
+    "what": "side badge \"THE BOARD'S SIDE\" removed"
+   },
+   {
+    "beat": "S4.10b",
+    "what": "side badge \"THE BOARD'S SIDE\" removed"
+   },
+   {
+    "beat": "S4.11",
+    "what": "side badge \"THE BOARD'S SIDE\" removed"
+   },
+   {
+    "beat": "S4.12",
+    "what": "side badge \"THE BOARD'S SIDE\" removed"
+   },
+   {
+    "beat": "S4.13",
+    "what": "side badge \"THE BOARD'S SIDE\" removed"
+   },
+   {
+    "beat": "S4.13",
+    "what": "name reveal(s) tasya dropped with the on-screen item they start on"
+   },
+   {
+    "beat": "S4.13",
+    "what": "line a5-27-45 dropped (\"We look forward to getting to know Ttemme and Nope\")"
+   },
+   {
+    "beat": "S4.13",
+    "what": "new line v3-a4-0001 (tasya, 9.10 s) after a5-27-44 +0.6 replacing a5-27-45"
+   },
+   {
+    "beat": "S4.13c",
+    "what": "cut (C15): 6.00 s"
+   },
+   {
+    "beat": "S4.13d",
+    "what": "side badge \"THE BOARD'S SIDE\" removed"
+   },
+   {
+    "beat": "S4.13e",
+    "what": "side badge \"THE BOARD'S SIDE\" removed"
+   },
+   {
+    "beat": "S4.14",
+    "what": "side badge \"THE BOARD'S SIDE\" removed"
+   },
+   {
+    "beat": "S4.15",
+    "what": "side badge \"THE BOARD'S SIDE\" removed"
+   },
+   {
+    "beat": "S5.01",
+    "what": "cut (C16): 1.75 s"
+   },
+   {
+    "beat": "S5.02",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S5.02",
+    "what": "arrival +1.92 s at the head (arrive_s 4.5)"
+   },
+   {
+    "beat": "S5.03",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S5.03",
+    "what": "V.O. v3-vo-20 (4.65 s) at start+0.6"
+   },
+   {
+    "beat": "S5.03",
+    "what": "+1.85 s at the tail"
+   },
+   {
+    "beat": "S5.04",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S5.05",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S5.09",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S5.09",
+    "what": "V.O. v3-vo-21 (2.24 s) at start+0.3"
+   },
+   {
+    "beat": "S5.09",
+    "what": "names[]: gerg at 0.34 s (his voice names them)"
+   },
+   {
+    "beat": "S5.06",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S5.07b",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S5.07b",
+    "what": "hold +2.50 s at the tail (hold_after_s 4.2)"
+   },
+   {
+    "beat": "S5.08",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S5.09-back",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S5.09-back",
+    "what": "V.O. v3-vo-22 (1.91 s) at start+0.3"
+   },
+   {
+    "beat": "S5.09-back",
+    "what": "V.O. v3-vo-23 (1.87 s) at after:a5-29-17+0.5"
+   },
+   {
+    "beat": "S5.09-back",
+    "what": "names[]: gerg at 7.00 s (his voice names them)"
+   },
+   {
+    "beat": "S5.09b",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S5.11",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S5.12",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S5.12",
+    "what": "hold +2.58 s at the tail (hold_after_s 4.4)"
+   },
+   {
+    "beat": "S6.01",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S6.02",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S6.03",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S6.04",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S6.06",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S6.06",
+    "what": "+0.50 s at the tail"
+   },
+   {
+    "beat": "S7.01",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S7.01",
+    "what": "arrival +1.50 s at the head (arrive_s 2.7; first line at 9.70 s)"
+   },
+   {
+    "beat": "S7.02",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S7.02",
+    "what": "line a5-30-05 dropped (\"what happens to you if nopeai disappears?\")"
+   },
+   {
+    "beat": "S7.02",
+    "what": "new line v3-a4-0002 (tasya, 4.24 s) after start+1.4 replacing a5-30-05"
+   },
+   {
+    "beat": "S7.02b",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S7.02b",
+    "what": "line a5-30-06 dropped (\"Oh, we'd be fine. …we have all the IP rights and a\")"
+   },
+   {
+    "beat": "S7.02b",
+    "what": "new line v3-a4-0003 (tasya, 6.93 s) after start+0.3 replacing a5-30-06"
+   },
+   {
+    "beat": "S7.02b",
+    "what": "every line replaced: the beat keeps the plan's 8.58 s (computed 8.02 s)"
+   },
+   {
+    "beat": "S7.03",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S7.05",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S7.06",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S7.06-cont",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S7.07",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S7.07",
+    "what": "line a5-30-10 dropped (\"Before this goes out, I'm reading it once, so nobo\")"
+   },
+   {
+    "beat": "S7.07",
+    "what": "new line v3-a4-0004 (terb, 10.60 s) after start+0.8 replacing a5-30-10"
+   },
+   {
+    "beat": "S7.07b",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S7.07-cont",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S7.08",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S7.08",
+    "what": "hold +0.88 s at the tail (hold_after_s 1.4)"
+   },
+   {
+    "beat": "S7.09",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S7.13",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S8.01",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S8.01",
+    "what": "arrival +0.71 s at the head (arrive_s 1.0)"
+   },
+   {
+    "beat": "S8.03",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S8.04",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S8.05",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S8.05",
+    "what": "hold +0.80 s at the tail (hold_after_s 1.5)"
+   },
+   {
+    "beat": "S8.06",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S8.07",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S8.08",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S8.09",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S8.09b",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S8.10",
+    "what": "side badge \"HIS SIDE\" removed"
+   },
+   {
+    "beat": "S8.10",
+    "what": "+0.99 s at the tail"
+   }
+  ],
+  "deviations": [
+   {
+    "beat": "S7.02b",
+    "what": "the source caption quoted a dropped line; now \"Then the record: below, above, around. The floor, ceiling and walls turn slate.\""
+   }
+  ],
+  "safety_net": []
+ },
+ "tag": {
+  "timeline": "show/reel/ep01-v3/ep01-v3-tag.json",
+  "source": "show/reel/ep01-full/ep01-tag-v2.json",
+  "trims": [],
+  "source_story_s": 40.625,
+  "estimate_s": 33.88,
+  "seconds": 33.883,
+  "beats": 10,
+  "lines": 3,
+  "vo": 1,
+  "jcuts": [],
+  "lcuts": [],
+  "edits": [
+   {
+    "beat": "32.01",
+    "what": "5.25 -> 4.50 s, timed items scaled ×0.86"
+   },
+   {
+    "beat": "32.01",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "32.03",
+    "what": "V.O. v3-vo-24 (1.42 s) at start+1.0"
+   },
+   {
+    "beat": "32.03",
+    "what": "+1.30 s at the tail"
+   },
+   {
+    "beat": "32.06",
+    "what": "cut (C12): 4.25 s"
+   },
+   {
+    "beat": "33.02",
+    "what": "4.75 -> 4.25 s, timed items scaled ×0.89"
+   },
+   {
+    "beat": "33.03",
+    "what": "cut (C12): 2.75 s"
+   },
+   {
+    "beat": "33.04",
+    "what": "hold +0.21 s at the tail"
+   },
+   {
+    "beat": "33.04",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "OUT.01",
+    "what": "cut (): 12.00 s"
+   }
+  ],
+  "deviations": [],
+  "safety_net": []
+ }
+}

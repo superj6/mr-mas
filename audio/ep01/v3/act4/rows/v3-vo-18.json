@@ -1,0 +1,274 @@
+{
+ "id": "v3-vo-18",
+ "scene": "S1",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "gerg's not on it. alyi set it up. probably just the budget.",
+ "spoken_as": "[gerg's](/ɡˈɜɹɡz/) not on it.{0.4} [alyi](/ˈælji/) set it up.{0.45} probably just the budget.",
+ "delivery": "he notices, and explains it away; the last four words easy and wrong. The only read in the episode he gets wrong. Then nothing inside him until \"super.\"",
+ "tag": "[INVENTED · VO · v3 inner voice]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "vo",
+ "kind": "vo",
+ "side": "none",
+ "pov": null,
+ "shot": "S1.06",
+ "shot_id": "S1.06",
+ "cue": null,
+ "lip_sync": false,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v3/act4/wav/v3-vo-18.wav",
+ "mp3": null,
+ "duration_s": 5.995,
+ "frames_24": 144,
+ "voiced_span_s": 4.76,
+ "pace": {
+  "words": 12,
+  "wpm": 151.3,
+  "speed": 0.85,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.85,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.4,
+    4.0
+   ],
+   "turn_wpm_guide": [
+    120,
+    140
+   ],
+   "intent": "he notices, and explains it away; the last four words easy and wrong. The only read in the episode he gets wrong. Then nothing inside him until \"super.\""
+  },
+  "measured": {
+   "wpm": 151.3,
+   "articulation_sps": 4.43,
+   "syllables": 17,
+   "span_s": 4.76,
+   "pauses_s": [
+    0.46,
+    0.09,
+    0.46
+   ]
+  },
+  "longest_internal_gap_s": 0.46,
+  "audible_in_s": 0.58,
+  "audible_out_s": 5.34
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.850",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 60 Hz",
+  "pitch 0",
+  "low shelf +2.5 dB @150 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak -1 dB @3200 Hz Q0.8",
+  "high shelf -2.5 dB @7500 Hz",
+  "comp 2.5:1 @-26 dB (15/160 ms)",
+  "Kokoro speed 0.850 (the plan speed; mas-manalt-vo band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'it': Kokoro 0.21 s -> 0.47 s (intended 0.40; +0.19 s of room tone at the quietest 5 ms)",
+  "pause after 'up': Kokoro 0.10 s -> 0.48 s (intended 0.45; +0.34 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [],
+ "words": [
+  {
+   "w": "gerg's",
+   "t0": 0.64,
+   "t1": 1.065,
+   "f0": 15,
+   "f1": 26,
+   "ph": "ɡˈɜɹɡz"
+  },
+  {
+   "w": "not",
+   "t0": 1.065,
+   "t1": 1.34,
+   "f0": 26,
+   "f1": 32,
+   "ph": "nˌɑt"
+  },
+  {
+   "w": "on",
+   "t0": 1.34,
+   "t1": 1.59,
+   "f0": 32,
+   "f1": 38,
+   "ph": "ˌɔn"
+  },
+  {
+   "w": "it",
+   "t0": 1.59,
+   "t1": 1.76,
+   "f0": 38,
+   "f1": 42,
+   "ph": "ɪt"
+  },
+  {
+   "w": "alyi",
+   "t0": 2.305,
+   "t1": 2.78,
+   "f0": 55,
+   "f1": 67,
+   "ph": "ˈælji"
+  },
+  {
+   "w": "set",
+   "t0": 2.78,
+   "t1": 3.018,
+   "f0": 67,
+   "f1": 72,
+   "ph": "sˈɛt"
+  },
+  {
+   "w": "it",
+   "t0": 3.018,
+   "t1": 3.13,
+   "f0": 72,
+   "f1": 75,
+   "ph": "ɪt"
+  },
+  {
+   "w": "up",
+   "t0": 3.13,
+   "t1": 3.455,
+   "f0": 75,
+   "f1": 83,
+   "ph": "ˌʌp"
+  },
+  {
+   "w": "probably",
+   "t0": 3.912,
+   "t1": 4.425,
+   "f0": 94,
+   "f1": 106,
+   "ph": "pɹˈɑbəbli"
+  },
+  {
+   "w": "just",
+   "t0": 4.425,
+   "t1": 4.675,
+   "f0": 106,
+   "f1": 112,
+   "ph": "ʤˈʌst"
+  },
+  {
+   "w": "the",
+   "t0": 4.675,
+   "t1": 4.812,
+   "f0": 112,
+   "f1": 116,
+   "ph": "ðə"
+  },
+  {
+   "w": "budget",
+   "t0": 4.812,
+   "t1": 5.36,
+   "f0": 116,
+   "f1": 129,
+   "ph": "bˈʌʤət"
+  }
+ ],
+ "qa": {
+  "lufs_i": -18.0,
+  "target_lufs": -18.0,
+  "true_peak_dbtp": -4.51,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.58,
+  "median_f0_hz": 113.0,
+  "f0_range_st": 11.2,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Gerg's not on it. Ali set it up. Probably just the budget.",
+  "cer": 0.023,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.381,
+  "align_median_s": 0.052,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.58,
+  "speech_tail_s": 0.395,
+  "rise_ms": 40.0,
+  "decay_ms": 165.0,
+  "decay_to_60_s": 0.26
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 4,
+   "word": "it",
+   "tts_s": 0.21,
+   "target_s": 0.4,
+   "point_s": 1.37,
+   "joined_speech": false,
+   "dip_db": -55.6,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.475,
+   "opened_s": 0.19
+  },
+  {
+   "after_word": 8,
+   "word": "up",
+   "tts_s": 0.105,
+   "target_s": 0.45,
+   "point_s": 3.14,
+   "joined_speech": false,
+   "dip_db": -56.2,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.48,
+   "opened_s": 0.345
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "d6d944103effce88",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 7.04,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 2,
+   "share_s": 1.13,
+   "rechecked_alone": false
+  }
+ }
+}

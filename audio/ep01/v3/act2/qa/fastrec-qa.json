@@ -1,0 +1,26 @@
+{
+ "problems": [],
+ "flags": [
+  {
+   "id": "v3-vo-12",
+   "kind": "pace",
+   "note": "articulation 2.68 syll/s against the guide 3.4-4.0"
+  },
+  {
+   "id": "v3-a2-0001",
+   "kind": "asr",
+   "note": "ASR missed a word: 'I have no equity and no pay I.' (recall 0.8)"
+  }
+ ],
+ "totals": {
+  "lines": 4,
+  "words": 28,
+  "audible_s": 11.7,
+  "wpm_overall": 144.0
+ },
+ "stringouts": [
+  "audio/ep01/v3/act2/reel/sc13-fast-stringout.mp3",
+  "audio/ep01/v3/act2/reel/sc15-fast-stringout.mp3"
+ ],
+ "method": "fastrec qa_generic: qa_v5.py's hard checks and ear flags, without its Act Four conversation table"
+}

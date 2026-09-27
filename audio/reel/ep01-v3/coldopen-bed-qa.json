@@ -1,0 +1,23 @@
+{
+ "segment": "coldopen",
+ "layers": [
+  {
+   "music+rooms+sfx": "audio/reel/ep01-coldopen-v2/coldopen-bed.wav",
+   "offset_s": 0.5,
+   "why": "the cold open is v2 timing after the 0.5 s black, so its v2 stem lines up; the black gets the stem's first 0.5 s"
+  }
+ ],
+ "sfx": [
+  [
+   "(in the v2 stem)"
+  ]
+ ],
+ "sfx_missing": [],
+ "decisions": [
+  "1.01: \"the hall's bed (HVAC, a polite crowd) under black before the first frame\" = its room, leading the cut by 0.5 s"
+ ],
+ "seconds": 30.767,
+ "chapter_seconds": 30.667,
+ "lufs": -26.05,
+ "peak_dbfs": -3.73
+}

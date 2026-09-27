@@ -1,0 +1,825 @@
+{
+ "id": "v3-a4-0004",
+ "scene": "S7",
+ "speaker": "TERB",
+ "speaker_slug": "terb",
+ "text": "Before this goes out, I'm reading it once. \"We have reached an agreement in principle for Mas Manalt to return to NopeAI as CEO with a new initial board of Terb (Chair), the Other Yrral, and Mada.",
+ "spoken_as": "Before this goes out, I'm reading it once.{0.50} We have reached an agreement in principle for [Mas](/mˈɑs/) Manalt to return to NopeAI as CEO with a new initial board of Terb, Chair, the Other [Yrral](/jˈɜɹəl/), and Mada.",
+ "delivery": "brisk, reading from the sheet; \"(Chair)\" read as a word about himself without looking up; \"the Other Yrral\" deadpan (YUR-rul)",
+ "tag": "[INVENTED lead-in + V · NOV 21, 2023 · the return announcement's first sentence, whole. Replaces a5-30-10 without \"so nobody's surprised\" (the insider read)]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "S7.07",
+ "shot_id": "S7.07",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v3/act4/wav/v3-a4-0004.wav",
+ "mp3": null,
+ "duration_s": 11.815,
+ "frames_24": 284,
+ "voiced_span_s": 10.6,
+ "pace": {
+  "words": 37,
+  "wpm": 209.4,
+  "speed": 1.02,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.02,
+   "speed_band": [
+    0.98,
+    1.06
+   ],
+   "articulation_guide_sps": [
+    4.4,
+    5.0
+   ],
+   "turn_wpm_guide": [
+    165,
+    185
+   ],
+   "intent": "brisk, reading from the sheet; \"(Chair)\" read as a word about himself without looking up; \"the Other Yrral\" deadpan (YUR-rul)"
+  },
+  "measured": {
+   "wpm": 209.4,
+   "articulation_sps": 5.66,
+   "syllables": 54,
+   "span_s": 10.6,
+   "pauses_s": [
+    0.1,
+    0.52,
+    0.06,
+    0.19,
+    0.25,
+    0.08
+   ]
+  },
+  "longest_internal_gap_s": 0.52,
+  "audible_in_s": 0.5,
+  "audible_out_s": 11.1
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_echo (Kokoro-82M stock) · b-echo-brisk · speed 1.020",
+ "voiceId": "am_echo",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 80 Hz",
+  "pitch 0",
+  "peak +1.5 dB @150 Hz Q0.9",
+  "peak -1.5 dB @500 Hz Q1.0",
+  "peak +2 dB @2000 Hz Q0.9",
+  "comp 3.0:1 @-21 dB (3/70 ms)",
+  "Kokoro speed 1.020 (the plan speed; terb band 0.98-1.06); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'once': Kokoro 0.28 s -> 0.51 s (intended 0.50; +0.22 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.458,
+   "f": 11,
+   "shape": "M"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "E"
+  },
+  {
+   "t": 0.625,
+   "f": 15,
+   "shape": "O"
+  },
+  {
+   "t": 0.708,
+   "f": 17,
+   "shape": "E"
+  },
+  {
+   "t": 0.958,
+   "f": 23,
+   "shape": "O"
+  },
+  {
+   "t": 1.125,
+   "f": 27,
+   "shape": "A"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "E"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "A"
+  },
+  {
+   "t": 1.542,
+   "f": 37,
+   "shape": "M"
+  },
+  {
+   "t": 1.667,
+   "f": 40,
+   "shape": "A"
+  },
+  {
+   "t": 1.75,
+   "f": 42,
+   "shape": "E"
+  },
+  {
+   "t": 2.042,
+   "f": 49,
+   "shape": "O"
+  },
+  {
+   "t": 2.167,
+   "f": 52,
+   "shape": "A"
+  },
+  {
+   "t": 2.333,
+   "f": 56,
+   "shape": "E"
+  },
+  {
+   "t": 2.5,
+   "f": 60,
+   "shape": "rest"
+  },
+  {
+   "t": 3.0,
+   "f": 72,
+   "shape": "E"
+  },
+  {
+   "t": 3.083,
+   "f": 74,
+   "shape": "A"
+  },
+  {
+   "t": 3.167,
+   "f": 76,
+   "shape": "E"
+  },
+  {
+   "t": 3.25,
+   "f": 78,
+   "shape": "A"
+  },
+  {
+   "t": 3.333,
+   "f": 80,
+   "shape": "E"
+  },
+  {
+   "t": 3.458,
+   "f": 83,
+   "shape": "A"
+  },
+  {
+   "t": 3.542,
+   "f": 85,
+   "shape": "E"
+  },
+  {
+   "t": 3.667,
+   "f": 88,
+   "shape": "A"
+  },
+  {
+   "t": 3.75,
+   "f": 90,
+   "shape": "M"
+  },
+  {
+   "t": 3.833,
+   "f": 92,
+   "shape": "E"
+  },
+  {
+   "t": 4.417,
+   "f": 106,
+   "shape": "M"
+  },
+  {
+   "t": 4.5,
+   "f": 108,
+   "shape": "E"
+  },
+  {
+   "t": 4.583,
+   "f": 110,
+   "shape": "O"
+  },
+  {
+   "t": 4.708,
+   "f": 113,
+   "shape": "M"
+  },
+  {
+   "t": 4.792,
+   "f": 115,
+   "shape": "A"
+  },
+  {
+   "t": 4.958,
+   "f": 119,
+   "shape": "M"
+  },
+  {
+   "t": 5.042,
+   "f": 121,
+   "shape": "A"
+  },
+  {
+   "t": 5.167,
+   "f": 124,
+   "shape": "O"
+  },
+  {
+   "t": 5.292,
+   "f": 127,
+   "shape": "E"
+  },
+  {
+   "t": 5.667,
+   "f": 136,
+   "shape": "O"
+  },
+  {
+   "t": 5.75,
+   "f": 138,
+   "shape": "E"
+  },
+  {
+   "t": 6.0,
+   "f": 144,
+   "shape": "O"
+  },
+  {
+   "t": 6.208,
+   "f": 149,
+   "shape": "M"
+  },
+  {
+   "t": 6.292,
+   "f": 151,
+   "shape": "A"
+  },
+  {
+   "t": 6.583,
+   "f": 158,
+   "shape": "E"
+  },
+  {
+   "t": 6.667,
+   "f": 160,
+   "shape": "A"
+  },
+  {
+   "t": 6.75,
+   "f": 162,
+   "shape": "E"
+  },
+  {
+   "t": 7.167,
+   "f": 172,
+   "shape": "O"
+  },
+  {
+   "t": 7.417,
+   "f": 178,
+   "shape": "E"
+  },
+  {
+   "t": 7.542,
+   "f": 181,
+   "shape": "A"
+  },
+  {
+   "t": 7.625,
+   "f": 183,
+   "shape": "E"
+  },
+  {
+   "t": 7.708,
+   "f": 185,
+   "shape": "O"
+  },
+  {
+   "t": 7.875,
+   "f": 189,
+   "shape": "E"
+  },
+  {
+   "t": 8.0,
+   "f": 192,
+   "shape": "A"
+  },
+  {
+   "t": 8.083,
+   "f": 194,
+   "shape": "E"
+  },
+  {
+   "t": 8.25,
+   "f": 198,
+   "shape": "M"
+  },
+  {
+   "t": 8.333,
+   "f": 200,
+   "shape": "O"
+  },
+  {
+   "t": 8.417,
+   "f": 202,
+   "shape": "E"
+  },
+  {
+   "t": 8.5,
+   "f": 204,
+   "shape": "A"
+  },
+  {
+   "t": 8.583,
+   "f": 206,
+   "shape": "E"
+  },
+  {
+   "t": 8.667,
+   "f": 208,
+   "shape": "O"
+  },
+  {
+   "t": 8.833,
+   "f": 212,
+   "shape": "E"
+  },
+  {
+   "t": 8.917,
+   "f": 214,
+   "shape": "M"
+  },
+  {
+   "t": 9.0,
+   "f": 216,
+   "shape": "rest"
+  },
+  {
+   "t": 9.167,
+   "f": 220,
+   "shape": "E"
+  },
+  {
+   "t": 9.25,
+   "f": 222,
+   "shape": "A"
+  },
+  {
+   "t": 9.458,
+   "f": 227,
+   "shape": "E"
+  },
+  {
+   "t": 9.542,
+   "f": 229,
+   "shape": "rest"
+  },
+  {
+   "t": 9.75,
+   "f": 234,
+   "shape": "E"
+  },
+  {
+   "t": 9.833,
+   "f": 236,
+   "shape": "A"
+  },
+  {
+   "t": 9.917,
+   "f": 238,
+   "shape": "E"
+  },
+  {
+   "t": 10.167,
+   "f": 244,
+   "shape": "O"
+  },
+  {
+   "t": 10.292,
+   "f": 247,
+   "shape": "E"
+  },
+  {
+   "t": 10.708,
+   "f": 257,
+   "shape": "M"
+  },
+  {
+   "t": 10.792,
+   "f": 259,
+   "shape": "A"
+  },
+  {
+   "t": 10.917,
+   "f": 262,
+   "shape": "E"
+  },
+  {
+   "t": 11.125,
+   "f": 267,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Before",
+   "t0": 0.47,
+   "t1": 0.735,
+   "f0": 11,
+   "f1": 18,
+   "ph": "bəfˈɔɹ"
+  },
+  {
+   "w": "this",
+   "t0": 0.735,
+   "t1": 0.935,
+   "f0": 18,
+   "f1": 22,
+   "ph": "ðɪs"
+  },
+  {
+   "w": "goes",
+   "t0": 0.935,
+   "t1": 1.135,
+   "f0": 22,
+   "f1": 27,
+   "ph": "ɡˈOz"
+  },
+  {
+   "w": "out",
+   "t0": 1.135,
+   "t1": 1.36,
+   "f0": 27,
+   "f1": 33,
+   "ph": "ˈWt"
+  },
+  {
+   "w": "I'm",
+   "t0": 1.41,
+   "t1": 1.61,
+   "f0": 34,
+   "f1": 39,
+   "ph": "ˌIm"
+  },
+  {
+   "w": "reading",
+   "t0": 1.61,
+   "t1": 1.91,
+   "f0": 39,
+   "f1": 46,
+   "ph": "ɹˈidɪŋ"
+  },
+  {
+   "w": "it",
+   "t0": 1.91,
+   "t1": 2.06,
+   "f0": 46,
+   "f1": 49,
+   "ph": "ɪt"
+  },
+  {
+   "w": "once",
+   "t0": 2.06,
+   "t1": 2.53,
+   "f0": 49,
+   "f1": 61,
+   "ph": "wˈʌns"
+  },
+  {
+   "w": "We",
+   "t0": 2.955,
+   "t1": 3.068,
+   "f0": 71,
+   "f1": 74,
+   "ph": "wˌi"
+  },
+  {
+   "w": "have",
+   "t0": 3.068,
+   "t1": 3.18,
+   "f0": 74,
+   "f1": 76,
+   "ph": "hæv"
+  },
+  {
+   "w": "reached",
+   "t0": 3.18,
+   "t1": 3.442,
+   "f0": 76,
+   "f1": 83,
+   "ph": "ɹˈiʧt"
+  },
+  {
+   "w": "an",
+   "t0": 3.442,
+   "t1": 3.53,
+   "f0": 83,
+   "f1": 85,
+   "ph": "ɐn"
+  },
+  {
+   "w": "agreement",
+   "t0": 3.53,
+   "t1": 3.955,
+   "f0": 85,
+   "f1": 95,
+   "ph": "əɡɹˈimᵊnt"
+  },
+  {
+   "w": "in",
+   "t0": 3.955,
+   "t1": 4.105,
+   "f0": 95,
+   "f1": 99,
+   "ph": "ɪn"
+  },
+  {
+   "w": "principle",
+   "t0": 4.105,
+   "t1": 4.58,
+   "f0": 99,
+   "f1": 110,
+   "ph": "pɹˈɪnsəpᵊl"
+  },
+  {
+   "w": "for",
+   "t0": 4.58,
+   "t1": 4.705,
+   "f0": 110,
+   "f1": 113,
+   "ph": "fɔɹ"
+  },
+  {
+   "w": "Mas",
+   "t0": 4.705,
+   "t1": 4.955,
+   "f0": 113,
+   "f1": 119,
+   "ph": "mˈɑs"
+  },
+  {
+   "w": "Manalt",
+   "t0": 4.955,
+   "t1": 5.38,
+   "f0": 119,
+   "f1": 129,
+   "ph": "mˈænɔlt"
+  },
+  {
+   "w": "to",
+   "t0": 5.38,
+   "t1": 5.48,
+   "f0": 129,
+   "f1": 132,
+   "ph": "tə"
+  },
+  {
+   "w": "return",
+   "t0": 5.48,
+   "t1": 5.83,
+   "f0": 132,
+   "f1": 140,
+   "ph": "ɹətˈɜɹn"
+  },
+  {
+   "w": "to",
+   "t0": 5.83,
+   "t1": 5.93,
+   "f0": 140,
+   "f1": 142,
+   "ph": "tə"
+  },
+  {
+   "w": "NopeAI",
+   "t0": 5.93,
+   "t1": 6.618,
+   "f0": 142,
+   "f1": 159,
+   "ph": "nˌOpˈAˌI"
+  },
+  {
+   "w": "as",
+   "t0": 6.618,
+   "t1": 6.78,
+   "f0": 159,
+   "f1": 163,
+   "ph": "æz"
+  },
+  {
+   "w": "CEO",
+   "t0": 6.78,
+   "t1": 7.38,
+   "f0": 163,
+   "f1": 177,
+   "ph": "sˌiˌiˈO"
+  },
+  {
+   "w": "with",
+   "t0": 7.38,
+   "t1": 7.518,
+   "f0": 177,
+   "f1": 180,
+   "ph": "wɪð"
+  },
+  {
+   "w": "a",
+   "t0": 7.518,
+   "t1": 7.618,
+   "f0": 180,
+   "f1": 183,
+   "ph": "ɐ"
+  },
+  {
+   "w": "new",
+   "t0": 7.618,
+   "t1": 7.855,
+   "f0": 183,
+   "f1": 189,
+   "ph": "nˈu"
+  },
+  {
+   "w": "initial",
+   "t0": 7.855,
+   "t1": 8.255,
+   "f0": 189,
+   "f1": 198,
+   "ph": "ɪnˈɪʃᵊl"
+  },
+  {
+   "w": "board",
+   "t0": 8.255,
+   "t1": 8.492,
+   "f0": 198,
+   "f1": 204,
+   "ph": "bˈɔɹd"
+  },
+  {
+   "w": "of",
+   "t0": 8.492,
+   "t1": 8.605,
+   "f0": 204,
+   "f1": 207,
+   "ph": "ʌv"
+  },
+  {
+   "w": "Terb",
+   "t0": 8.605,
+   "t1": 9.0,
+   "f0": 207,
+   "f1": 216,
+   "ph": "tˈɜɹb"
+  },
+  {
+   "w": "Chair",
+   "t0": 9.142,
+   "t1": 9.56,
+   "f0": 219,
+   "f1": 229,
+   "ph": "ʧˈɛɹ"
+  },
+  {
+   "w": "the",
+   "t0": 9.705,
+   "t1": 9.83,
+   "f0": 233,
+   "f1": 236,
+   "ph": "ði"
+  },
+  {
+   "w": "Other",
+   "t0": 9.83,
+   "t1": 10.105,
+   "f0": 236,
+   "f1": 243,
+   "ph": "ˈʌðəɹ"
+  },
+  {
+   "w": "Yrral",
+   "t0": 10.105,
+   "t1": 10.505,
+   "f0": 243,
+   "f1": 252,
+   "ph": "jˈɜɹəl"
+  },
+  {
+   "w": "and",
+   "t0": 10.58,
+   "t1": 10.705,
+   "f0": 254,
+   "f1": 257,
+   "ph": "ænd"
+  },
+  {
+   "w": "Mada",
+   "t0": 10.705,
+   "t1": 11.12,
+   "f0": 257,
+   "f1": 267,
+   "ph": "mˈɑdə"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.58,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 103.8,
+  "f0_range_st": 13.1,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Before this goes out, I'm reading it once. We have reached an agreement in principle for Mossmannault to return to No Pei as CEO with a new initial board of Terb, Chair, the other Ural and Mata.",
+  "cer": 0.053,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.376,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.4,
+  "rise_ms": 15.0,
+  "decay_ms": 175.0,
+  "decay_to_60_s": 0.315
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 8,
+   "word": "once",
+   "tts_s": 0.28,
+   "target_s": 0.5,
+   "point_s": 2.255,
+   "joined_speech": false,
+   "dip_db": -68.4,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.51,
+   "opened_s": 0.22
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "10672e44c65e4af9",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 12.68,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 3.11,
+   "rechecked_alone": false
+  }
+ }
+}

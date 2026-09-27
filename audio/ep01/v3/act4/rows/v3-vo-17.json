@@ -1,0 +1,231 @@
+{
+ "id": "v3-vo-17",
+ "scene": "S1",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "the race is tomorrow. the board wants noon today.",
+ "spoken_as": "the race is tomorrow.{0.4} the board wants noon today.",
+ "delivery": "unbothered, logistical; the Strip's engines under it",
+ "tag": "[INVENTED · VO · v3 inner voice]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "vo",
+ "kind": "vo",
+ "side": "none",
+ "pov": null,
+ "shot": "S1.01",
+ "shot_id": "S1.01",
+ "cue": null,
+ "lip_sync": false,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v3/act4/wav/v3-vo-17.wav",
+ "mp3": null,
+ "duration_s": 4.555,
+ "frames_24": 110,
+ "voiced_span_s": 3.34,
+ "pace": {
+  "words": 9,
+  "wpm": 161.7,
+  "speed": 0.87,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.87,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.4,
+    4.0
+   ],
+   "turn_wpm_guide": [
+    120,
+    140
+   ],
+   "intent": "unbothered, logistical; the Strip's engines under it"
+  },
+  "measured": {
+   "wpm": 161.7,
+   "articulation_sps": 4.1,
+   "syllables": 12,
+   "span_s": 3.34,
+   "pauses_s": [
+    0.41
+   ]
+  },
+  "longest_internal_gap_s": 0.41,
+  "audible_in_s": 0.52,
+  "audible_out_s": 3.86
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.870",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 60 Hz",
+  "pitch 0",
+  "low shelf +2.5 dB @150 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak -1 dB @3200 Hz Q0.8",
+  "high shelf -2.5 dB @7500 Hz",
+  "comp 2.5:1 @-26 dB (15/160 ms)",
+  "Kokoro speed 0.870 (the plan speed; mas-manalt-vo band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'tomorrow': Kokoro 0.36 s -> 0.30 s (intended 0.40; +0.04 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [],
+ "words": [
+  {
+   "w": "the",
+   "t0": 0.515,
+   "t1": 0.64,
+   "f0": 12,
+   "f1": 15,
+   "ph": "ðə"
+  },
+  {
+   "w": "race",
+   "t0": 0.64,
+   "t1": 1.015,
+   "f0": 15,
+   "f1": 24,
+   "ph": "ɹˈAs"
+  },
+  {
+   "w": "is",
+   "t0": 1.015,
+   "t1": 1.165,
+   "f0": 24,
+   "f1": 28,
+   "ph": "ɪz"
+  },
+  {
+   "w": "tomorrow",
+   "t0": 1.165,
+   "t1": 1.83,
+   "f0": 28,
+   "f1": 44,
+   "ph": "təmˈɑɹO"
+  },
+  {
+   "w": "the",
+   "t0": 2.155,
+   "t1": 2.293,
+   "f0": 52,
+   "f1": 55,
+   "ph": "ðə"
+  },
+  {
+   "w": "board",
+   "t0": 2.293,
+   "t1": 2.63,
+   "f0": 55,
+   "f1": 63,
+   "ph": "bˈɔɹd"
+  },
+  {
+   "w": "wants",
+   "t0": 2.63,
+   "t1": 2.968,
+   "f0": 63,
+   "f1": 71,
+   "ph": "wˈɑnts"
+  },
+  {
+   "w": "noon",
+   "t0": 2.968,
+   "t1": 3.33,
+   "f0": 71,
+   "f1": 80,
+   "ph": "nˈun"
+  },
+  {
+   "w": "today",
+   "t0": 3.33,
+   "t1": 3.88,
+   "f0": 80,
+   "f1": 93,
+   "ph": "tədˈA"
+  }
+ ],
+ "qa": {
+  "lufs_i": -18.0,
+  "target_lufs": -18.0,
+  "true_peak_dbtp": -4.81,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.52,
+  "median_f0_hz": 112.9,
+  "f0_range_st": 10.8,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "The race is tomorrow. The board wants noon today.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.167,
+  "align_median_s": 0.065,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.52,
+  "speech_tail_s": 0.45,
+  "rise_ms": 45.0,
+  "decay_ms": 175.0,
+  "decay_to_60_s": 0.245
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 4,
+   "word": "tomorrow",
+   "tts_s": 0.36,
+   "target_s": 0.4,
+   "point_s": 1.655,
+   "joined_speech": false,
+   "dip_db": -56.6,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.3,
+   "opened_s": 0.04
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "ab359813c933f653",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 6.35,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 3,
+   "share_s": 0.95,
+   "rechecked_alone": false
+  }
+ }
+}

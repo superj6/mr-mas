@@ -1,0 +1,199 @@
+{
+ "id": "v3-vo-21",
+ "scene": "S5",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "gerg. he'll say he's compiling.",
+ "spoken_as": "[gerg](/ɡˈɜɹɡ/).{0.35} he'll say he's compiling.",
+ "delivery": "fond, certain, as the tile rings",
+ "tag": "[INVENTED · VO · v3 inner voice]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "vo",
+ "kind": "vo",
+ "side": "none",
+ "pov": null,
+ "shot": "S5.09",
+ "shot_id": "S5.09",
+ "cue": null,
+ "lip_sync": false,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v3/act4/wav/v3-vo-21.wav",
+ "mp3": null,
+ "duration_s": 3.54,
+ "frames_24": 85,
+ "voiced_span_s": 2.24,
+ "pace": {
+  "words": 5,
+  "wpm": 133.9,
+  "speed": 0.88,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.88,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.4,
+    4.0
+   ],
+   "turn_wpm_guide": [
+    120,
+    140
+   ],
+   "intent": "fond, certain, as the tile rings"
+  },
+  "measured": {
+   "wpm": 133.9,
+   "articulation_sps": 3.74,
+   "syllables": 7,
+   "span_s": 2.24,
+   "pauses_s": [
+    0.37
+   ]
+  },
+  "longest_internal_gap_s": 0.37,
+  "audible_in_s": 0.57,
+  "audible_out_s": 2.81
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.880",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 60 Hz",
+  "pitch 0",
+  "low shelf +2.5 dB @150 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak -1 dB @3200 Hz Q0.8",
+  "high shelf -2.5 dB @7500 Hz",
+  "comp 2.5:1 @-26 dB (15/160 ms)",
+  "Kokoro speed 0.880 (the plan speed; mas-manalt-vo band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'gerg': Kokoro 0.00 s -> 0.38 s (intended 0.35; +0.35 s of room tone at the quietest 5 ms; Kokoro ran the words together here (dip -34.9 dB): ear check)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [],
+ "words": [
+  {
+   "w": "gerg",
+   "t0": 0.615,
+   "t1": 0.99,
+   "f0": 15,
+   "f1": 24,
+   "ph": "ɡˈɜɹɡ"
+  },
+  {
+   "w": "he'll",
+   "t0": 1.39,
+   "t1": 1.578,
+   "f0": 33,
+   "f1": 38,
+   "ph": "hil"
+  },
+  {
+   "w": "say",
+   "t0": 1.578,
+   "t1": 1.815,
+   "f0": 38,
+   "f1": 44,
+   "ph": "sˈA"
+  },
+  {
+   "w": "he's",
+   "t0": 1.815,
+   "t1": 2.015,
+   "f0": 44,
+   "f1": 48,
+   "ph": "hiz"
+  },
+  {
+   "w": "compiling",
+   "t0": 2.015,
+   "t1": 2.83,
+   "f0": 48,
+   "f1": 68,
+   "ph": "kəmpˈIlɪŋ"
+  }
+ ],
+ "qa": {
+  "lufs_i": -18.0,
+  "target_lufs": -18.0,
+  "true_peak_dbtp": -2.78,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.57,
+  "median_f0_hz": 118.6,
+  "f0_range_st": 10.6,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Gerg, he'll say he's compiling.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.167,
+  "align_median_s": 0.03,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.57,
+  "speech_tail_s": 0.45,
+  "rise_ms": 80.0,
+  "decay_ms": 190.0,
+  "decay_to_60_s": 0.28
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 1,
+   "word": "gerg",
+   "tts_s": 0.0,
+   "target_s": 0.35,
+   "point_s": 0.565,
+   "joined_speech": true,
+   "dip_db": -34.9,
+   "breath": false,
+   "crossfade_ms": [
+    60,
+    25
+   ],
+   "final_s": 0.375,
+   "opened_s": 0.35
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "5a04e8f173ea6215",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 3.26,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 3,
+   "share_s": 0.78,
+   "rechecked_alone": false
+  }
+ }
+}

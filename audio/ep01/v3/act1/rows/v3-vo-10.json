@@ -1,0 +1,269 @@
+{
+ "id": "v3-vo-10",
+ "scene": "11",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "mario used to sit where gerg sits. he left to build a careful one.",
+ "spoken_as": "mario used to sit where [gerg](/ɡˈɜɹɡ/) sits.{0.4} he left to build a careful one.",
+ "delivery": "plain, a little wistful on \"used to\"; \"a careful one\" is wry about his own lab, never a dig at Mario",
+ "tag": "[INVENTED · VO · v3 inner voice]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "vo",
+ "kind": "vo",
+ "side": "none",
+ "pov": null,
+ "shot": "11.03",
+ "shot_id": "11.03",
+ "cue": null,
+ "lip_sync": false,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v3/act1/wav/v3-vo-10.wav",
+ "mp3": null,
+ "duration_s": 5.885,
+ "frames_24": 142,
+ "voiced_span_s": 4.59,
+ "pace": {
+  "words": 14,
+  "wpm": 183.0,
+  "speed": 0.87,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.87,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.4,
+    4.0
+   ],
+   "turn_wpm_guide": [
+    120,
+    140
+   ],
+   "intent": "plain, a little wistful on \"used to\"; \"a careful one\" is wry about his own lab, never a dig at Mario"
+  },
+  "measured": {
+   "wpm": 183.0,
+   "articulation_sps": 3.95,
+   "syllables": 17,
+   "span_s": 4.59,
+   "pauses_s": [
+    0.06,
+    0.29,
+    0.08
+   ]
+  },
+  "longest_internal_gap_s": 0.29,
+  "audible_in_s": 0.57,
+  "audible_out_s": 5.16
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.870",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 60 Hz",
+  "pitch 0",
+  "low shelf +2.5 dB @150 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak -1 dB @3200 Hz Q0.8",
+  "high shelf -2.5 dB @7500 Hz",
+  "comp 2.5:1 @-26 dB (15/160 ms)",
+  "Kokoro speed 0.870 (the plan speed; mas-manalt-vo band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'sits': Kokoro 0.43 s -> 0.43 s (intended 0.40; +0.00 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [],
+ "words": [
+  {
+   "w": "mario",
+   "t0": 0.615,
+   "t1": 1.178,
+   "f0": 15,
+   "f1": 28,
+   "ph": "mˈɑɹiO"
+  },
+  {
+   "w": "used",
+   "t0": 1.178,
+   "t1": 1.402,
+   "f0": 28,
+   "f1": 34,
+   "ph": "jˈust"
+  },
+  {
+   "w": "to",
+   "t0": 1.402,
+   "t1": 1.527,
+   "f0": 34,
+   "f1": 37,
+   "ph": "tə"
+  },
+  {
+   "w": "sit",
+   "t0": 1.527,
+   "t1": 1.79,
+   "f0": 37,
+   "f1": 43,
+   "ph": "sˈɪt"
+  },
+  {
+   "w": "where",
+   "t0": 1.79,
+   "t1": 2.002,
+   "f0": 43,
+   "f1": 48,
+   "ph": "wˌɛɹ"
+  },
+  {
+   "w": "gerg",
+   "t0": 2.002,
+   "t1": 2.39,
+   "f0": 48,
+   "f1": 57,
+   "ph": "ɡˈɜɹɡ"
+  },
+  {
+   "w": "sits",
+   "t0": 2.39,
+   "t1": 2.95,
+   "f0": 57,
+   "f1": 71,
+   "ph": "sˈɪts"
+  },
+  {
+   "w": "he",
+   "t0": 3.302,
+   "t1": 3.465,
+   "f0": 79,
+   "f1": 83,
+   "ph": "hi"
+  },
+  {
+   "w": "left",
+   "t0": 3.465,
+   "t1": 3.74,
+   "f0": 83,
+   "f1": 90,
+   "ph": "lˈɛft"
+  },
+  {
+   "w": "to",
+   "t0": 3.74,
+   "t1": 3.865,
+   "f0": 90,
+   "f1": 93,
+   "ph": "tə"
+  },
+  {
+   "w": "build",
+   "t0": 3.865,
+   "t1": 4.152,
+   "f0": 93,
+   "f1": 100,
+   "ph": "bˈɪld"
+  },
+  {
+   "w": "a",
+   "t0": 4.152,
+   "t1": 4.265,
+   "f0": 100,
+   "f1": 102,
+   "ph": "ɐ"
+  },
+  {
+   "w": "careful",
+   "t0": 4.265,
+   "t1": 4.79,
+   "f0": 102,
+   "f1": 115,
+   "ph": "kˈɛɹfᵊl"
+  },
+  {
+   "w": "one",
+   "t0": 4.79,
+   "t1": 5.18,
+   "f0": 115,
+   "f1": 124,
+   "ph": "wˈʌn"
+  }
+ ],
+ "qa": {
+  "lufs_i": -18.0,
+  "target_lufs": -18.0,
+  "true_peak_dbtp": -4.71,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.57,
+  "median_f0_hz": 111.8,
+  "f0_range_st": 13.1,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Mario used to sit where Gerg sits. He left to build a careful one.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.244,
+  "align_median_s": 0.044,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.57,
+  "speech_tail_s": 0.385,
+  "rise_ms": 15.0,
+  "decay_ms": 200.0,
+  "decay_to_60_s": 0.35
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 7,
+   "word": "sits",
+   "tts_s": 0.43,
+   "target_s": 0.4,
+   "point_s": 2.58,
+   "joined_speech": false,
+   "dip_db": -58.8,
+   "breath": false,
+   "final_s": 0.43,
+   "opened_s": 0.0
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "32fc18d8e5c2fff1",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 4.61,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 1,
+   "share_s": 1.28,
+   "rechecked_alone": false
+  }
+ }
+}

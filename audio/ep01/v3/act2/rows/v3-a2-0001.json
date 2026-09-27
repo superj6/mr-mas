@@ -1,0 +1,243 @@
+{
+ "id": "v3-a2-0001",
+ "scene": "15",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "…i have no equity in nopeai.",
+ "spoken_as": "i have no equity in NopeAI.",
+ "delivery": "quiet, to the dais, a plain fact after the stamp; lowercase house style; no comic scoring under it",
+ "tag": "[P · MAY 16, 2023 · facts L22: \"I have no equity in OpenAI.\" Parody name swapped. It replaces RAIL: TESTIFIES HE HAS NO EQUITY]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "15.14",
+ "shot_id": "15.14",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v3/act2/wav/v3-a2-0001.wav",
+ "mp3": null,
+ "duration_s": 3.3,
+ "frames_24": 80,
+ "voiced_span_s": 2.25,
+ "pace": {
+  "words": 6,
+  "wpm": 160.0,
+  "speed": 0.88,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.88,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.6,
+    4.2
+   ],
+   "turn_wpm_guide": [
+    135,
+    155
+   ],
+   "intent": "quiet, to the dais, a plain fact after the stamp; lowercase house style; no comic scoring under it"
+  },
+  "measured": {
+   "wpm": 160.0,
+   "articulation_sps": 4.44,
+   "syllables": 10,
+   "span_s": 2.25,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.5,
+  "audible_out_s": 2.75
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.880",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch 0",
+  "low shelf +2 dB @160 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak +1 dB @3200 Hz Q0.8",
+  "high shelf -1.5 dB @8000 Hz",
+  "comp 2.0:1 @-24 dB (10/120 ms)",
+  "Kokoro speed 0.880 (the plan speed; mas-manalt band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "A"
+  },
+  {
+   "t": 0.958,
+   "f": 23,
+   "shape": "E"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "O"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "A"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "O"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "E"
+  },
+  {
+   "t": 2.0,
+   "f": 48,
+   "shape": "O"
+  },
+  {
+   "t": 2.25,
+   "f": 54,
+   "shape": "M"
+  },
+  {
+   "t": 2.333,
+   "f": 56,
+   "shape": "A"
+  },
+  {
+   "t": 2.75,
+   "f": 66,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "i",
+   "t0": 0.59,
+   "t1": 0.765,
+   "f0": 14,
+   "f1": 18,
+   "ph": "ˈI"
+  },
+  {
+   "w": "have",
+   "t0": 0.765,
+   "t1": 1.002,
+   "f0": 18,
+   "f1": 24,
+   "ph": "hæv"
+  },
+  {
+   "w": "no",
+   "t0": 1.002,
+   "t1": 1.277,
+   "f0": 24,
+   "f1": 31,
+   "ph": "nˈO"
+  },
+  {
+   "w": "equity",
+   "t0": 1.277,
+   "t1": 1.765,
+   "f0": 31,
+   "f1": 42,
+   "ph": "ˈɛkwəTi"
+  },
+  {
+   "w": "in",
+   "t0": 1.765,
+   "t1": 1.915,
+   "f0": 42,
+   "f1": 46,
+   "ph": "ɪn"
+  },
+  {
+   "w": "NopeAI",
+   "t0": 1.915,
+   "t1": 2.77,
+   "f0": 46,
+   "f1": 66,
+   "ph": "nˌOpˈAˌI"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.75,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 113.3,
+  "f0_range_st": 9.2,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "I have no equity and no pay I.",
+  "cer": 0.19,
+  "word_recall_nonames": 0.8,
+  "logprob": -0.447,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.365,
+  "rise_ms": 120.0,
+  "decay_ms": 155.0,
+  "decay_to_60_s": 0.185
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "c76e8758f0572df7",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 3.74,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 1.79,
+   "rechecked_alone": false
+  }
+ }
+}

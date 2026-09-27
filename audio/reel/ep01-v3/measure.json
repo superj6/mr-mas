@@ -1,0 +1,648 @@
+{
+ "plan_total_s": 1288.75,
+ "chapters": [
+  {
+   "id": "title",
+   "from": "0:00.00",
+   "seconds": 3.0
+  },
+  {
+   "id": "coldopen",
+   "from": "0:03.00",
+   "seconds": 30.667
+  },
+  {
+   "id": "intro",
+   "from": "0:33.67",
+   "seconds": 30.0
+  },
+  {
+   "id": "card",
+   "from": "1:03.67",
+   "seconds": 2.0
+  },
+  {
+   "id": "act1",
+   "from": "1:05.67",
+   "seconds": 322.5
+  },
+  {
+   "id": "act2",
+   "from": "6:28.17",
+   "seconds": 204.75
+  },
+  {
+   "id": "act3",
+   "from": "9:52.92",
+   "seconds": 128.042
+  },
+  {
+   "id": "act4",
+   "from": "12:00.96",
+   "seconds": 523.792
+  },
+  {
+   "id": "tag",
+   "from": "20:44.75",
+   "seconds": 33.875
+  },
+  {
+   "id": "outro",
+   "from": "21:18.62",
+   "seconds": 10.125
+  }
+ ],
+ "segments": {
+  "coldopen": {
+   "v3_s": 30.667,
+   "v2_s": 30.167,
+   "estimate_s": 30.66,
+   "vs_estimate_s": 0.01,
+   "vs_v2_s": 0.5
+  },
+  "act1": {
+   "v3_s": 322.5,
+   "v2_s": 359.667,
+   "estimate_s": 323.33,
+   "vs_estimate_s": -0.83,
+   "vs_v2_s": -37.17
+  },
+  "act2": {
+   "v3_s": 204.75,
+   "v2_s": 219.792,
+   "estimate_s": 202.63,
+   "vs_estimate_s": 2.12,
+   "vs_v2_s": -15.04
+  },
+  "act3": {
+   "v3_s": 128.042,
+   "v2_s": 153.667,
+   "estimate_s": 126.82,
+   "vs_estimate_s": 1.22,
+   "vs_v2_s": -25.62
+  },
+  "act4": {
+   "v3_s": 523.792,
+   "v2_s": 518.458,
+   "estimate_s": 520.6,
+   "vs_estimate_s": 3.19,
+   "vs_v2_s": 5.33
+  },
+  "tag": {
+   "v3_s": 33.875,
+   "v2_s": 40.625,
+   "estimate_s": 33.88,
+   "vs_estimate_s": -0.01,
+   "vs_v2_s": -6.75
+  }
+ },
+ "story_v3_s": 1243.626,
+ "story_v2_s": 1322.376,
+ "pacing": {
+  "v2": {
+   "shots": 261,
+   "minutes": 22.24,
+   "asl_s": 5.11,
+   "median_shot_s": 3.42,
+   "stays": 53,
+   "median_stay_s": 12.7,
+   "stays_under_10": 25,
+   "stays_10_30": 11,
+   "stays_30_60": 13,
+   "stays_60_plus": 4,
+   "talk_stays": 30,
+   "entry_air_median_s": 3.8,
+   "entry_air_2s_or_less": 7,
+   "exit_air_median_s": 2.1,
+   "exit_air_1p5s_or_less": 13,
+   "lines": 226,
+   "jcut_lines": 0,
+   "lcut_lines": 6
+  },
+  "v3": {
+   "shots": 228,
+   "minutes": 20.73,
+   "asl_s": 5.45,
+   "median_shot_s": 3.9,
+   "stays": 50,
+   "median_stay_s": 12.3,
+   "stays_under_10": 23,
+   "stays_10_30": 10,
+   "stays_30_60": 12,
+   "stays_60_plus": 5,
+   "talk_stays": 31,
+   "entry_air_median_s": 3.7,
+   "entry_air_2s_or_less": 11,
+   "exit_air_median_s": 2.8,
+   "exit_air_1p5s_or_less": 10,
+   "lines": 228,
+   "jcut_lines": 2,
+   "lcut_lines": 6
+  },
+  "v2_spoken_only": {
+   "shots": 261,
+   "minutes": 22.24,
+   "asl_s": 5.11,
+   "median_shot_s": 3.42,
+   "stays": 53,
+   "median_stay_s": 12.7,
+   "stays_under_10": 25,
+   "stays_10_30": 11,
+   "stays_30_60": 13,
+   "stays_60_plus": 4,
+   "talk_stays": 30,
+   "entry_air_median_s": 3.8,
+   "entry_air_2s_or_less": 7,
+   "exit_air_median_s": 2.1,
+   "exit_air_1p5s_or_less": 13,
+   "lines": 223,
+   "jcut_lines": 0,
+   "lcut_lines": 6
+  },
+  "v3_spoken_only": {
+   "shots": 228,
+   "minutes": 20.73,
+   "asl_s": 5.45,
+   "median_shot_s": 3.9,
+   "stays": 50,
+   "median_stay_s": 12.3,
+   "stays_under_10": 23,
+   "stays_10_30": 10,
+   "stays_30_60": 12,
+   "stays_60_plus": 5,
+   "talk_stays": 30,
+   "entry_air_median_s": 5.3,
+   "entry_air_2s_or_less": 7,
+   "exit_air_median_s": 2.8,
+   "exit_air_1p5s_or_less": 9,
+   "lines": 204,
+   "jcut_lines": 2,
+   "lcut_lines": 6
+  }
+ },
+ "speech": {
+  "v2": {
+   "words": 1786,
+   "mas_words": 243,
+   "mas_share": 0.136,
+   "vo_lines": 3,
+   "vo_words": 12
+  },
+  "v3": {
+   "words": 1800,
+   "mas_words": 396,
+   "mas_share": 0.22,
+   "vo_lines": 24,
+   "vo_words": 185
+  }
+ },
+ "render_chapters": {
+  "reel": "out/ep01/reel/ep01-v3-stick.mp4",
+  "manifest": "show/reel/ep01-v3/ep01-v3.manifest.json",
+  "fps": 24,
+  "chapters": [
+   {
+    "id": "title",
+    "label": "TITLE",
+    "kind": "title",
+    "start": 0,
+    "end": 3,
+    "episodeStart": 0,
+    "source": "manifest",
+    "sound": "silence (the reel slate)"
+   },
+   {
+    "id": "coldopen",
+    "label": "COLD OPEN",
+    "kind": "reel",
+    "start": 3,
+    "end": 33.667,
+    "episodeStart": 3,
+    "source": "ep01-v3-coldopen",
+    "sound": "3 recorded take(s) over the temp bed"
+   },
+   {
+    "id": "intro",
+    "label": "INTRO",
+    "kind": "video",
+    "start": 33.667,
+    "end": 63.667,
+    "episodeStart": 33.667,
+    "source": "out/intro/intro-ep1-V1-1080p.mp4",
+    "sound": "its own sound at -3 dB; hard cut in, 0.3 s tail out"
+   },
+   {
+    "id": "card",
+    "label": "CARD",
+    "kind": "reel",
+    "start": 63.667,
+    "end": 65.667,
+    "episodeStart": 63.667,
+    "source": "ep01-full-part1",
+    "sound": "the temp bed (no recorded takes yet)"
+   },
+   {
+    "id": "act1",
+    "label": "ACT ONE",
+    "kind": "reel",
+    "start": 65.667,
+    "end": 388.167,
+    "episodeStart": 65.667,
+    "source": "ep01-v3-act1",
+    "sound": "60 recorded take(s) over the temp bed"
+   },
+   {
+    "id": "act2",
+    "label": "ACT TWO",
+    "kind": "reel",
+    "start": 388.167,
+    "end": 592.917,
+    "episodeStart": 388.167,
+    "source": "ep01-v3-act2",
+    "sound": "39 recorded take(s) over the temp bed"
+   },
+   {
+    "id": "act3",
+    "label": "ACT THREE",
+    "kind": "reel",
+    "start": 592.917,
+    "end": 720.958,
+    "episodeStart": 592.917,
+    "source": "ep01-v3-act3",
+    "sound": "22 recorded take(s) over the temp bed"
+   },
+   {
+    "id": "act4",
+    "label": "ACT FOUR",
+    "kind": "reel",
+    "start": 720.958,
+    "end": 1244.75,
+    "episodeStart": 720.958,
+    "source": "ep01-v3-act4",
+    "sound": "101 recorded take(s) over the temp bed"
+   },
+   {
+    "id": "tag",
+    "label": "TAG",
+    "kind": "reel",
+    "start": 1244.75,
+    "end": 1278.625,
+    "episodeStart": 1244.75,
+    "source": "ep01-v3-tag",
+    "sound": "3 recorded take(s) over the temp bed"
+   },
+   {
+    "id": "outro",
+    "label": "OUTRO",
+    "kind": "video",
+    "start": 1278.625,
+    "end": 1288.75,
+    "episodeStart": 1278.625,
+    "source": "out/ep01/outro/outro-b-v3.mp4",
+    "sound": "its own sound at -1 dB; hard cut in, hard cut out"
+   }
+  ],
+  "beds": [
+   {
+    "label": "the v2 cold-open stem (hall, plink, F4, rewind, MM-06), 0.5 s later: its timing still lines up",
+    "from": 3,
+    "to": 63.666666666666664
+   },
+   {
+    "label": "room tone (the v2 card stand-in level) + the bullpen leading the cut",
+    "from": 63.666666666666664,
+    "to": 65.66666666666667
+   },
+   {
+    "label": "act1 stick bed (rooms leading the cuts, the beats' sounds, a quiet temp pad per mood run)",
+    "from": 65.66666666666667,
+    "to": 388.1666666666667
+   },
+   {
+    "label": "act2 stick bed (rooms leading the cuts, the beats' sounds, a quiet temp pad per mood run)",
+    "from": 388.1666666666667,
+    "to": 592.9166666666666
+   },
+   {
+    "label": "act3 stick bed (rooms leading the cuts, the beats' sounds, a quiet temp pad per mood run)",
+    "from": 592.9166666666666,
+    "to": 720.9583333333334
+   },
+   {
+    "label": "act4 stick bed (rooms leading the cuts, the beats' sounds, a quiet temp pad per mood run)",
+    "from": 720.9583333333334,
+    "to": 1244.75
+   },
+   {
+    "label": "tag stick bed (rooms leading the cuts, the beats' sounds, a quiet temp pad per mood run)",
+    "from": 1244.75,
+    "to": 1288.75
+   }
+  ],
+  "warnings": []
+ },
+ "render_measure": {
+  "manifest": "show/reel/ep01-v3/ep01-v3.manifest.json",
+  "key": "ep01-v3-stick",
+  "host": {
+   "cores": 14,
+   "load1": 1.4
+  },
+  "jobs": 2,
+  "concurrency": 4,
+  "seg": 90,
+  "scale": 1,
+  "steps": {
+   "sync": 0.1,
+   "bundle": 5.5,
+   "plan": 0.3,
+   "mix": 10.9,
+   "render": 386.7,
+   "concat": 0.3,
+   "mixWaitAfterPicture": 0,
+   "mux": 25.5
+  },
+  "renderedSeconds": 1288.8,
+  "segments": [
+   {
+    "file": "000-title-0-72-dd64250a64.mp4",
+    "chapter": "title",
+    "frames": 72,
+    "wall": 3.7
+   },
+   {
+    "file": "001-coldopen-72-808-389a3fd61a.mp4",
+    "chapter": "coldopen",
+    "frames": 736,
+    "wall": 22.8
+   },
+   {
+    "file": "002-intro-808-1528-35da804135.mp4",
+    "chapter": "intro",
+    "frames": 720,
+    "wall": 5.1
+   },
+   {
+    "file": "003-card-1528-1576-c38716d2bb.mp4",
+    "chapter": "card",
+    "frames": 48,
+    "wall": 2.8
+   },
+   {
+    "file": "004-act1-1576-3511-34bf17bd65.mp4",
+    "chapter": "act1",
+    "frames": 1935,
+    "wall": 49.5
+   },
+   {
+    "file": "005-act1-3511-5446-ff260ddfc3.mp4",
+    "chapter": "act1",
+    "frames": 1935,
+    "wall": 48.6
+   },
+   {
+    "file": "006-act1-5446-7381-94c616d4bf.mp4",
+    "chapter": "act1",
+    "frames": 1935,
+    "wall": 49.4
+   },
+   {
+    "file": "007-act1-7381-9316-3ff7b948b0.mp4",
+    "chapter": "act1",
+    "frames": 1935,
+    "wall": 48.2
+   },
+   {
+    "file": "008-act2-9316-10954-522dd1550d.mp4",
+    "chapter": "act2",
+    "frames": 1638,
+    "wall": 43.4
+   },
+   {
+    "file": "009-act2-10954-12592-cfacedb5c4.mp4",
+    "chapter": "act2",
+    "frames": 1638,
+    "wall": 43.3
+   },
+   {
+    "file": "010-act2-12592-14230-e1b367a3f3.mp4",
+    "chapter": "act2",
+    "frames": 1638,
+    "wall": 43.9
+   },
+   {
+    "file": "011-act3-14230-15767-6b42a83e58.mp4",
+    "chapter": "act3",
+    "frames": 1537,
+    "wall": 40
+   },
+   {
+    "file": "012-act3-15767-17303-4bc8864040.mp4",
+    "chapter": "act3",
+    "frames": 1536,
+    "wall": 39.6
+   },
+   {
+    "file": "013-act4-17303-19398-e004b176f2.mp4",
+    "chapter": "act4",
+    "frames": 2095,
+    "wall": 49.1
+   },
+   {
+    "file": "014-act4-19398-21493-2409b10950.mp4",
+    "chapter": "act4",
+    "frames": 2095,
+    "wall": 53.1
+   },
+   {
+    "file": "015-act4-21493-23589-121d71b0f2.mp4",
+    "chapter": "act4",
+    "frames": 2096,
+    "wall": 49.6
+   },
+   {
+    "file": "016-act4-23589-25684-b835239016.mp4",
+    "chapter": "act4",
+    "frames": 2095,
+    "wall": 51.9
+   },
+   {
+    "file": "017-act4-25684-27779-71bf13f8af.mp4",
+    "chapter": "act4",
+    "frames": 2095,
+    "wall": 53
+   },
+   {
+    "file": "018-act4-27779-29874-3db46e78f2.mp4",
+    "chapter": "act4",
+    "frames": 2095,
+    "wall": 53.2
+   },
+   {
+    "file": "019-tag-29874-30687-6fa1776a89.mp4",
+    "chapter": "tag",
+    "frames": 813,
+    "wall": 21.5
+   },
+   {
+    "file": "020-outro-30687-30930-b606e276d3.mp4",
+    "chapter": "outro",
+    "frames": 243,
+    "wall": 0.9
+   }
+  ],
+  "frames": {
+   "expected": 30930,
+   "got": 30930
+  },
+  "wall": 418.5,
+  "reelSeconds": 1288.8,
+  "speed": {
+   "reelSecondsPerMinuteWall": 184.8,
+   "renderedSecondsPerMinuteOfRenderStep": 200
+  },
+  "out": "out/ep01/reel/ep01-v3-stick.mp4",
+  "outBytes": 105608658,
+  "mix": {
+   "lufs": -16.677,
+   "peak": -4.156,
+   "missing": [],
+   "silences": [
+    [
+     0,
+     3
+    ]
+   ]
+  }
+ },
+ "mix_qa": {
+  "seconds": 1288.75,
+  "master": {
+   "preLufs": null,
+   "gainDb": 0,
+   "limiter": {
+    "engaged": false,
+    "samples": 0,
+    "minGainDb": 0
+   },
+   "lufs": -16.677,
+   "samplePeakDb": -4.156,
+   "ceilingDb": -1,
+   "note": "sample peak (not true peak); BS.1770 integrated loudness computed in JS"
+  },
+  "dialogue": {
+   "takes": 228,
+   "duckSpans": 58,
+   "duckDb": -10
+  },
+  "silences": [
+   [
+    0,
+    3
+   ]
+  ],
+  "missing": [],
+  "chapters": [
+   {
+    "id": "title",
+    "label": "TITLE",
+    "from": 0,
+    "seconds": 3,
+    "lufs": null,
+    "rmsDb": null,
+    "peakDb": null,
+    "audio": "silence (the reel slate)"
+   },
+   {
+    "id": "coldopen",
+    "label": "COLD OPEN",
+    "from": 3,
+    "seconds": 30.667,
+    "lufs": -18.715,
+    "rmsDb": -22.677,
+    "peakDb": -6.533,
+    "audio": "3 recorded take(s) over the temp bed"
+   },
+   {
+    "id": "intro",
+    "label": "INTRO",
+    "from": 33.667,
+    "seconds": 30,
+    "lufs": -16.948,
+    "rmsDb": -20.028,
+    "peakDb": -4.3,
+    "audio": "its own sound at -3 dB; hard cut in, 0.3 s tail out"
+   },
+   {
+    "id": "card",
+    "label": "CARD",
+    "from": 63.667,
+    "seconds": 2,
+    "lufs": -37.882,
+    "rmsDb": -39.092,
+    "peakDb": -26.248,
+    "audio": "the temp bed (no recorded takes yet)"
+   },
+   {
+    "id": "act1",
+    "label": "ACT ONE",
+    "from": 65.667,
+    "seconds": 322.5,
+    "lufs": -16.868,
+    "rmsDb": -21.859,
+    "peakDb": -4.663,
+    "audio": "60 recorded take(s) over the temp bed"
+   },
+   {
+    "id": "act2",
+    "label": "ACT TWO",
+    "from": 388.167,
+    "seconds": 204.75,
+    "lufs": -16.464,
+    "rmsDb": -21.716,
+    "peakDb": -4.568,
+    "audio": "39 recorded take(s) over the temp bed"
+   },
+   {
+    "id": "act3",
+    "label": "ACT THREE",
+    "from": 592.917,
+    "seconds": 128.042,
+    "lufs": -17.086,
+    "rmsDb": -22.969,
+    "peakDb": -5.217,
+    "audio": "22 recorded take(s) over the temp bed"
+   },
+   {
+    "id": "act4",
+    "label": "ACT FOUR",
+    "from": 720.958,
+    "seconds": 523.792,
+    "lufs": -16.357,
+    "rmsDb": -21.426,
+    "peakDb": -4.449,
+    "audio": "101 recorded take(s) over the temp bed"
+   },
+   {
+    "id": "tag",
+    "label": "TAG",
+    "from": 1244.75,
+    "seconds": 33.875,
+    "lufs": -24.537,
+    "rmsDb": -28.33,
+    "peakDb": -5.635,
+    "audio": "3 recorded take(s) over the temp bed"
+   },
+   {
+    "id": "outro",
+    "label": "OUTRO",
+    "from": 1278.625,
+    "seconds": 10.125,
+    "lufs": -16.968,
+    "rmsDb": -18.92,
+    "peakDb": -4.156,
+    "audio": "its own sound at -1 dB; hard cut in, hard cut out"
+   }
+  ]
+ }
+}

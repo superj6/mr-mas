@@ -1,0 +1,215 @@
+{
+ "id": "v3-vo-08",
+ "scene": "9",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "eleven keys. he's here for the twelfth.",
+ "spoken_as": "eleven keys.{0.45} he's here for the twelfth.",
+ "delivery": "counting, not worried; inside the freeze, so it is the only sound but the room",
+ "tag": "[INVENTED · VO · v3 inner voice]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "vo",
+ "kind": "vo",
+ "side": "none",
+ "pov": null,
+ "shot": "9.04",
+ "shot_id": "9.04",
+ "cue": null,
+ "lip_sync": false,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v3/act1/wav/v3-vo-08.wav",
+ "mp3": null,
+ "duration_s": 4.035,
+ "frames_24": 97,
+ "voiced_span_s": 2.87,
+ "pace": {
+  "words": 7,
+  "wpm": 146.3,
+  "speed": 0.87,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.87,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.4,
+    4.0
+   ],
+   "turn_wpm_guide": [
+    120,
+    140
+   ],
+   "intent": "counting, not worried; inside the freeze, so it is the only sound but the room"
+  },
+  "measured": {
+   "wpm": 146.3,
+   "articulation_sps": 3.69,
+   "syllables": 9,
+   "span_s": 2.87,
+   "pauses_s": [
+    0.43
+   ]
+  },
+  "longest_internal_gap_s": 0.43,
+  "audible_in_s": 0.52,
+  "audible_out_s": 3.39
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.870",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 60 Hz",
+  "pitch 0",
+  "low shelf +2.5 dB @150 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak -1 dB @3200 Hz Q0.8",
+  "high shelf -2.5 dB @7500 Hz",
+  "comp 2.5:1 @-26 dB (15/160 ms)",
+  "Kokoro speed 0.870 (the plan speed; mas-manalt-vo band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'keys': Kokoro 0.28 s -> 0.43 s (intended 0.45; +0.17 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [],
+ "words": [
+  {
+   "w": "eleven",
+   "t0": 0.615,
+   "t1": 1.027,
+   "f0": 15,
+   "f1": 25,
+   "ph": "əlˈɛvᵊn"
+  },
+  {
+   "w": "keys",
+   "t0": 1.027,
+   "t1": 1.68,
+   "f0": 25,
+   "f1": 40,
+   "ph": "kˈiz"
+  },
+  {
+   "w": "he's",
+   "t0": 2.04,
+   "t1": 2.265,
+   "f0": 49,
+   "f1": 54,
+   "ph": "hiz"
+  },
+  {
+   "w": "here",
+   "t0": 2.265,
+   "t1": 2.49,
+   "f0": 54,
+   "f1": 60,
+   "ph": "hˈɪɹ"
+  },
+  {
+   "w": "for",
+   "t0": 2.49,
+   "t1": 2.602,
+   "f0": 60,
+   "f1": 62,
+   "ph": "fɔɹ"
+  },
+  {
+   "w": "the",
+   "t0": 2.602,
+   "t1": 2.728,
+   "f0": 62,
+   "f1": 65,
+   "ph": "ðə"
+  },
+  {
+   "w": "twelfth",
+   "t0": 2.728,
+   "t1": 3.41,
+   "f0": 65,
+   "f1": 82,
+   "ph": "twˈɛlfθ"
+  }
+ ],
+ "qa": {
+  "lufs_i": -18.0,
+  "target_lufs": -18.0,
+  "true_peak_dbtp": -4.68,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.52,
+  "median_f0_hz": 118.1,
+  "f0_range_st": 12.1,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Eleven keys. He's here for the twelfth.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.28,
+  "align_median_s": 0.035,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.52,
+  "speech_tail_s": 0.4,
+  "rise_ms": 110.0,
+  "decay_ms": 280.0,
+  "decay_to_60_s": 0.24
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 2,
+   "word": "keys",
+   "tts_s": 0.275,
+   "target_s": 0.45,
+   "point_s": 1.395,
+   "joined_speech": false,
+   "dip_db": -59.1,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.43,
+   "opened_s": 0.175
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "ba5695956cd4ea1f",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 3.07,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 2,
+   "share_s": 0.82,
+   "rechecked_alone": false
+  }
+ }
+}
