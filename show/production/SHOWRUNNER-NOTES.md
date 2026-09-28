@@ -24,6 +24,11 @@
      - **Corrected:** "no i want only biden to have deepfake, not senate".
        - Only the president's deepfake stays (Act Three, "which one's real?"), paying off the Orb's "for when it gets harder to tell.".
        - The Senate's cloned voice is cut, including "That voice was not mine." and the clone's "Health insurance.".
+   - **Voices (same day):**
+     - "harris's voice is not very good. the rest are fine": recast SIRRAH's ElevenLabs voice, currently 'Marie - Professional & Warm'.
+       - Audition 3–4 library voices, and the showrunner picks.
+       - Never imitate the real person; no laugh mimicry (guardrails §6).
+     - "i actually liked dario's kokoro voice more. let's just keep that while the rest are elevenlabs": in the ElevenLabs film, MARIO keeps his Kokoro voice, and everyone else is ElevenLabs.
    - **Alyi's reversal (same day):** "it's also ont clear why alyi changed his mind"
      - Show the cause, which is on the record: the company he built emptying into Macrosoft, and the staff letter with his own name on it.
      - Close it with his own public words, including "I love everything we've built together… reunite the company.".
