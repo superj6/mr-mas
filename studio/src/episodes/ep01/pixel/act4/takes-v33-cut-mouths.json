@@ -1,0 +1,361 @@
+[
+ {
+  "id": "v33-a4-0002",
+  "scene": "S7",
+  "speaker": "TASYA",
+  "speaker_slug": "tasya",
+  "text": "We are below them above them around them",
+  "spoken_as": "We have all the IP rights and all the capability.{s0.40} We are below them,{s0.35} above them,{s0.38} around them.",
+  "delivery": "warm, expansive; one finished read; the floor, ceiling and walls step to slate on below / above / around",
+  "tag": "[V/K · NOV 20, 2023 · the Swisher podcast; re-verify before lock. Replaces a5-30-06 without its invented \"Oh, we'd be fine.\"]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": null,
+  "shot": "S7.02b",
+  "shot_id": "S7.02b",
+  "cue": null,
+  "lip_sync": true,
+  "status": "fast",
+  "device": "tv",
+  "room": null,
+  "est_s": null,
+  "file": "audio/ep01/v33/act4/wav/v33-a4-0002.wav",
+  "duration_s": 4.455,
+  "frames_24": 194,
+  "voiced_span_s": 6.93,
+  "pace": {
+   "words": 18,
+   "wpm": 155.8,
+   "speed": 0.85,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 0.85,
+    "speed_band": [
+     0.88,
+     0.96
+    ],
+    "articulation_guide_sps": [
+     3.8,
+     4.4
+    ],
+    "turn_wpm_guide": [
+     125,
+     145
+    ],
+    "intent": "warm, expansive; one finished read; the floor, ceiling and walls step to slate on below / above / around"
+   },
+   "measured": {
+    "wpm": 155.8,
+    "articulation_sps": 4.45,
+    "syllables": 26,
+    "span_s": 6.93,
+    "pauses_s": [
+     0.39,
+     0.33,
+     0.37
+    ]
+   },
+   "longest_internal_gap_s": 0.39,
+   "audible_in_s": 0.33,
+   "audible_out_s": 4.185
+  },
+  "placement": {
+   "gap_before_s": null,
+   "follows": "picture"
+  },
+  "take": "s1",
+  "takes_tried": 1,
+  "pick_reason": "fast: one take (seed 1, plan speed)",
+  "voice": "am_eric (Kokoro-82M stock) · b-eric-warm · speed 0.850",
+  "voiceId": "am_eric",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 70 Hz",
+   "pitch -1.5 st",
+   "low shelf +2 dB @180 Hz",
+   "peak -1.5 dB @350 Hz Q1.0",
+   "high shelf +1.5 dB @6000 Hz",
+   "comp 2.0:1 @-24 dB (12/150 ms)",
+   "Kokoro speed 0.850 (the plan speed; tasya band 0.88-0.96); 4 whole reads, joined in room tone; no time-stretch, no carrier, no splice",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale (fastrec default; --breaths adds them)",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "words": [
+   {
+    "w": "We",
+    "t0": 0.35,
+    "t1": 0.55,
+    "f0": 89,
+    "f1": 93,
+    "ph": "wˌi"
+   },
+   {
+    "w": "are",
+    "t0": 0.55,
+    "t1": 0.7,
+    "f0": 93,
+    "f1": 97,
+    "ph": "ɑɹ"
+   },
+   {
+    "w": "below",
+    "t0": 0.7,
+    "t1": 1.15,
+    "f0": 97,
+    "f1": 108,
+    "ph": "bəlˈO"
+   },
+   {
+    "w": "them",
+    "t0": 1.15,
+    "t1": 1.575,
+    "f0": 108,
+    "f1": 118,
+    "ph": "ðˌɛm"
+   },
+   {
+    "w": "above",
+    "t0": 1.965,
+    "t1": 2.315,
+    "f0": 127,
+    "f1": 136,
+    "ph": "əbˈʌv"
+   },
+   {
+    "w": "them",
+    "t0": 2.315,
+    "t1": 2.765,
+    "f0": 136,
+    "f1": 147,
+    "ph": "ðˌɛm"
+   },
+   {
+    "w": "around",
+    "t0": 3.19,
+    "t1": 3.615,
+    "f0": 157,
+    "f1": 167,
+    "ph": "əɹˈWnd"
+   },
+   {
+    "w": "them",
+    "t0": 3.615,
+    "t1": 4.105,
+    "f0": 167,
+    "f1": 179,
+    "ph": "ðˌɛm"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -5.02,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.5,
+   "median_f0_hz": 152.5,
+   "f0_range_st": 12.8,
+   "f0_method": "YIN (fast)",
+   "final_move_st": null,
+   "asr": "We have all the IP rights and all the capability. We are below them, above them, around them.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.243,
+   "align_median_s": null,
+   "utmos_dry": null,
+   "utmos_plain_read": null,
+   "utmos_vs_plain": null,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": null,
+   "speech_head_s": 0.5,
+   "speech_tail_s": 0.45,
+   "rise_ms": 20.0,
+   "decay_ms": 75.0,
+   "decay_to_60_s": 0.17
+  },
+  "fast": {
+   "key": "6e02e4f22ff47f7c",
+   "tool": "fastrec 1.2 (2026-09-26)",
+   "shard": 0,
+   "wall_s": 8.41,
+   "takes": 1,
+   "settings": {
+    "asr": true,
+    "asr_beam": 1,
+    "asr_batch_s": 24.0,
+    "asr_align": false,
+    "utmos": false,
+    "prosody": false,
+    "breaths": false,
+    "threads": 3
+   },
+   "asr": {
+    "packed_with": 0,
+    "share_s": 2.45,
+    "rechecked_alone": false
+   }
+  },
+  "breaths": [],
+  "opened_pauses": [
+   {
+    "after_word": null,
+    "word": "capability",
+    "tts_s": null,
+    "target_s": 0.4,
+    "final_s": 0.4,
+    "opened_s": 0.0,
+    "joined_speech": false,
+    "dip_db": null,
+    "breath": false,
+    "split": true,
+    "point_s": 2.775,
+    "crossfade_ms": [
+     0,
+     0
+    ]
+   },
+   {
+    "after_word": null,
+    "word": "them",
+    "tts_s": null,
+    "target_s": 0.35,
+    "final_s": 0.35,
+    "opened_s": 0.0,
+    "joined_speech": false,
+    "dip_db": null,
+    "breath": false,
+    "split": true,
+    "point_s": 4.415,
+    "crossfade_ms": [
+     0,
+     0
+    ]
+   },
+   {
+    "after_word": null,
+    "word": "them",
+    "tts_s": null,
+    "target_s": 0.38,
+    "final_s": 0.38,
+    "opened_s": 0.0,
+    "joined_speech": false,
+    "dip_db": null,
+    "breath": false,
+    "split": true,
+    "point_s": 5.615,
+    "crossfade_ms": [
+     0,
+     0
+    ]
+   }
+  ],
+  "cut_from": "v3-a4-0003 words 10-17 (audio/ep01/v3/act4/wav/v3-a4-0003.wav, 3.482-7.530 s), 12 ms fades, room-tone handles to 0.35 s; then fastrec's tv chain, -16 LUFS",
+  "mouth": [
+   {
+    "t": 0.0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.363,
+    "shape": "O"
+   },
+   {
+    "t": 0.447,
+    "shape": "E"
+   },
+   {
+    "t": 0.53,
+    "shape": "A"
+   },
+   {
+    "t": 0.697,
+    "shape": "M"
+   },
+   {
+    "t": 0.78,
+    "shape": "E"
+   },
+   {
+    "t": 0.988,
+    "shape": "O"
+   },
+   {
+    "t": 1.155,
+    "shape": "E"
+   },
+   {
+    "t": 1.238,
+    "shape": "A"
+   },
+   {
+    "t": 1.447,
+    "shape": "M"
+   },
+   {
+    "t": 1.572,
+    "shape": "rest"
+   },
+   {
+    "t": 1.947,
+    "shape": "E"
+   },
+   {
+    "t": 2.072,
+    "shape": "M"
+   },
+   {
+    "t": 2.155,
+    "shape": "A"
+   },
+   {
+    "t": 2.28,
+    "shape": "E"
+   },
+   {
+    "t": 2.405,
+    "shape": "A"
+   },
+   {
+    "t": 2.655,
+    "shape": "M"
+   },
+   {
+    "t": 2.78,
+    "shape": "rest"
+   },
+   {
+    "t": 3.197,
+    "shape": "E"
+   },
+   {
+    "t": 3.363,
+    "shape": "A"
+   },
+   {
+    "t": 3.488,
+    "shape": "E"
+   },
+   {
+    "t": 3.738,
+    "shape": "A"
+   },
+   {
+    "t": 3.988,
+    "shape": "M"
+   },
+   {
+    "t": 4.113,
+    "shape": "rest"
+   },
+   {
+    "t": 4.145,
+    "shape": "rest"
+   }
+  ],
+  "mouth_from": "v3-a4-0003 words 10-17, shifted -3.345 s (cut_mouths.py)"
+ }
+]

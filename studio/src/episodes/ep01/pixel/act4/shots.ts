@@ -1,5 +1,5 @@
-// MR. MAS — Ep1 v3.2 · ACT FOUR, "five days, told twice", on the v3.2 stick lock (the v3-shots-act4 pass; the v3 round,
-// the v3.1 round, 2026-09-27, then the v3.2 round, 2026-09-28).
+// MR. MAS — Ep1 v3.3 · ACT FOUR, "five days, told twice", on the v3.3 stick lock (the v3-shots-act4 pass; the v3 round,
+// the v3.1 round, 2026-09-27, the v3.2 round, then the v3.3 polish, 2026-09-28).
 //
 // A PORT with the v3.1 and v3.2 re-cuts drawn in. Act Four v5's layouts (act4/animatic/shots5.ts DRAW5, through its own
 // drawShot5, as the pipeline's act4-v5 test runs them) draw every shot v3.x kept as it was, handed this lock's shots
@@ -10,6 +10,13 @@
 // (kits/face-light.ts), and this pass's additive opt-in states in ./art/ (race.ts, invite.ts, texts.ts, v31.ts, v32.ts).
 // A layout below that changes a v5 layout is a copy of it with the change (each says so).
 //
+// v3.3's polish (PLAN.md §6, script draft 8.2): P12 the boardroom wide pushes in during Neleh's second speech as the
+//   stepped push (the wide drifting, [M] on her first word, her [MCU] on "Monday", the wide again for the phone's fall,
+//   the glass with the row of phones lighting up on Alyi's line); P13 the lobby dated once, by the camera's plate; S2 /
+//   P15 Rima's label flips back to CTO as the spot leaves her (S4.10) and Ttemme's page has a blank back (S4.10b, "Okay."
+//   cut); P16 the heart count ticks visibly; S3 "Down here." cut (S7.03 is v5's again); S4 / S5 / P17 the employee
+//   speaks among the boxes and Tasya's interview plays on the bullpen's wall TV at a podcast mic (S7.02, S7.02b); P18
+//   the face light in Alyi's reflection and on the new MCU. Everything else is v3.2's; the shock opening is unchanged.
 // v3.2's Act Four (script draft 8.1, script-v32-notes.md §3.4, §4, §10; agency-v32.md; the lead's brief): HIS MOVES
 //   read on screen: after "super." he picks up his phone (S1.12) and writes his own post, 1:46 PM, before the room falls
 //   to night (v32-S1.13); inside the board's side, the lobby is his, in full colour at his shoulder: the GUEST lanyard
@@ -35,6 +42,7 @@
 // J1 off), race weekend on the Strip, the JOIN screen's four attendees, MACROSOFT · BILLIONS IN and EQUITY: 0 alone,
 // C13's phone falling, C14's split, the letter's ALYI, and Mas's inner voice never moving his mouth.
 import {Buf, rect, bayer, hash} from '../../../../shared/pixel/px';
+import {text, textWidth} from '../../../../shared/pixel/font';
 import {PAL, stepColor, familyOf} from '../../../../shared/pixel/palette';
 import type {GlyphLayer} from '../../../../shared/pixel/glyph';
 import type {Viseme} from '../../../../shared/pixel/cast/talk';
@@ -66,16 +74,20 @@ import type {BoardPlateOpts} from '../../../../shared/pixel/rooms/boardroom-plat
 import {drawDarkPlate, drawDarkPlateDesk, drawDarkPlateFront, DPLATE, DPLATE_LOOK} from '../../../../shared/pixel/rooms/darkroom-plate';
 import type {DarkPlateOpts} from '../../../../shared/pixel/rooms/darkroom-plate';
 import {drawSlateDoorOpen, slateDoorSign, SLATE_GAP, keyTurnAt} from '../../../../shared/pixel/rooms/slate-desks';
+import {drawBullpen} from '../../../../shared/pixel/rooms/bullpen';
+import {drawBoardHead2S, BHEAD} from '../../../../shared/pixel/rooms/boardroom-head';
+import {TTEMME_M_FOLDER} from '../../../../shared/pixel/cast/ttemme-medium';
+import type {FolderState} from '../../../../shared/pixel/kits/folder';
 import {drawCalmOffTerms2S} from '../../../../shared/pixel/rooms/calmoff-terms';
-import {drawCalmOff2S, FIRES_CALMOFF, drawDark2S} from '../../../../shared/pixel/rooms/twoshots';
+import {drawCalmOff2S, FIRES_CALMOFF, drawDark2S, drawBoard2S} from '../../../../shared/pixel/rooms/twoshots';
 import {alyiReflection} from '../../../../shared/pixel/cast/alyi-speak';
 import {marioImg, MARIO_BASE, MARIO_FOOT} from '../../../../shared/pixel/cast/mario';
 import type {MarioArm} from '../../../../shared/pixel/cast/mario';
 import {drawAdelinaRoom, ADELINA_ROOM_DEFAULT} from '../../../../shared/pixel/cast/adelina';
 import type {AdelinaArm} from '../../../../shared/pixel/cast/adelina';
-import {drawTasyaRoom, TASYA_ROOM_DEFAULT} from '../../../../shared/pixel/cast/tasya-speak';
 import {tasyaPhonePortrait} from '../../../../shared/pixel/cast/tasya-phone';
 import {masPortrait, MAS_PORTRAIT_DEFAULT} from '../../../../shared/pixel/cast/mas';
+import {nelehPortrait, NELEH_PORTRAIT_DEFAULT} from '../../../../shared/pixel/cast/neleh';
 import type {MasPortraitState} from '../../../../shared/pixel/cast/mas';
 import {drawTerbRoom, TERB_ROOM_DEFAULT, terbWalkAt} from '../../../../shared/pixel/cast/terb';
 import {drawMasStand, MAS_STAND_DEFAULT, masWalkAt} from '../../../../shared/pixel/cast/mas-stand';
@@ -94,8 +106,9 @@ import type {ShotV4} from '../../act4/animatic/data-v4';
 import {LOCK} from './data';
 import {drawSuiteRace} from './art/race';
 import {drawNudgeJoinInvite, CORNER_ARROW, cornerTileTip} from './art/invite';
-import {planZerosV3, letterAlyiV3, plateName, plateRel} from './art/texts';
+import {planZerosV3, letterAlyiV3, plateRel} from './art/texts';
 import {phonePickup, blogTyped, blogSpeakerWindow, rimaTileLabel, heartCount, BLOG_CHARS} from './art/v32';
+import {drawBlankPage, drawEmployee, EMPLOYEE, drawWallTV} from './art/v33';
 import {drawWindowTwoShot, wifiBars, planChairV3, firstTileStrip, alyiTileLit} from './art/v31';
 
 const L = registry();
@@ -419,11 +432,55 @@ const fallPhone = (fb: Buf, x: number, t: number, f: number) => {
   for (let i = 1; i < 6; i++) put(x + i, y, lit);
   put(x + 1, y, PAL.C8);
 };
-L.add('S4.02', {kind: 'V', st: V('S4.02', 'v5 S4.02 re-built for C13: backs boardRoom (the wide at night, held; three phones C, D, R) + phone A composited from its own room render (its body and glow): it steps with the others, then on the second buzz walks on to the table\'s edge, teeters (a silent buzz), tips and falls, clack on the landing_thunk, lies lit on the floor; the phones buzz on 2s (v5 held one offset); NELEH room-scale mouth; and v3.1\'s cutaway on his line: kits/act4-v31 drawAlyiGlass [MCU·glass], ALYI\'s reflection in the dark window, lip-synced, "That is the company telling us.", v3.2: his reflection turning to the phones on "company" (drawAlyiGlass look \'door\', our right, where they are); the caller IDs (the lock\'s words), phone A\'s gone when it falls; v5\'s small wall screen'),
+/** the glass cutaway's four reflected phone screens (kits/act4-v31 drawAlyiGlass lays them at these spots, 26 x 7) */
+const GLASS_PHONES: Array<[number, number]> = [[330, 150], [362, 154], [396, 158], [432, 162]];
+/** Alyi's reflected head in the glass cutaway (drawAlyiGlass: his reflection's face and hair, measured on the stills) */
+const GLASS_HEAD: [number, number, number, number] = [214, 84, 290, 160];
+/** the face light in a reflection (P18: "Alyi in the glass"): the reflection is drawn in the glass's blue ramps, not skin,
+ *  so kits/face-light can't find it; here his face's lit rungs (the N family from N3 up, and the cyan rim) inside the
+ *  head's rect step up `k`, the dark glass (N0-N2) and the Valley's lights untouched */
+const glassFaceKey = (fb: Buf, k: number) => {
+  const [x0, y0, x1, y1] = GLASS_HEAD;
+  for (let y = y0; y < y1; y++) for (let x = x0; x < x1; x++) {
+    const c = fb.c[y * 480 + x], fm = familyOf(c);
+    if (fm && ((fm[0] === 'N' && fm[1] >= 3) || fm[0] === 'C')) fb.c[y * 480 + x] = stepColor(c, k);
+  }
+};
+L.add('S4.02', {kind: 'V', st: V('S4.02', 'v3.3 (P12): the push in during Neleh\'s second speech, as the stepped push (pov-and-framing §4.7.2: up the ladder, one drawn size a cut): v3.2\'s wide (C13: backs boardRoom, phone A composited from its own room render, the buzzes, the caller IDs, v5\'s small wall screen) with a slow whole-pixel drift toward her; on her second speech\'s first word the cut in to [M] (rooms/twoshots drawBoard2S: NELEH medium, speaking; Mada; the phones lit on the table), drifting on toward her; on "Monday" her [MCU] (S4.07\'s framing: the board plate soft behind her with its phones, nelehPortrait lip-synced, the face light, 2 steps); at her speech\'s end back to the wide for phone A\'s teeter, fall and clack; then v3.1\'s glass cutaway on Alyi\'s line (kits/act4-v31 drawAlyiGlass, lip-synced; on "company" his reflection turns to the phones) with the row of phones lighting up in the glass one by one from "That" to "company", and the face light in the reflection (P18)'),
   face: {ALYI: 'lip'},
+  marks: {push1: ['on', 'a5-27-23', 0], push2: ['w', 'a5-27-23', 'Monday', 0], back: ['end', 'a5-27-23', 2]},
   draw: (fb, k, sh, f) => {
     const cut = mk(sh, 'alyi', 99999);
-    if (k >= cut) { drawAlyiGlass(fb, f, {mouth: mouth(sh, k, 'ALYI'), look: k >= mk(sh, 'turn', cut + 20) ? 'door' : undefined}); return; } // v3.1: CUT to his reflection for his line (the MCU·glass cutaway); v3.2: on "company" it turns to the phones
+    const p1 = mk(sh, 'push1', 220), p2 = mk(sh, 'push2', 280), back = Math.min(mk(sh, 'back', 352), cut - 12);
+    if (k >= cut) { // the glass: Alyi's reflection, his line; the row of phones lights up across "That is the company"
+      drawAlyiGlass(fb, f, {mouth: mouth(sh, k, 'ALYI'), look: k >= mk(sh, 'turn', cut + 20) ? 'door' : undefined});
+      const l = lineOf(sh, 'a5-27-28'), co = l?.words.find((w) => w[0].startsWith('company'));
+      const t0 = cut + 2, t1 = l && co ? l.s + co[1] : cut + 16; // the first lights on "That", the last on "company"
+      GLASS_PHONES.forEach(([px, py], i) => {
+        const at = t0 + Math.round(((t1 - t0) * i) / 3), lit = k >= at;
+        for (let y = py; y < py + 7; y++) for (let x = px; x < px + 26; x++) {
+          const c = fb.c[y * 480 + x], fm = familyOf(c);
+          if (fm && fm[0] === 'C') fb.c[y * 480 + x] = stepColor(c, lit ? (k < at + 2 ? 3 : 2) : -1);
+        }
+      });
+      glassFaceKey(fb, 1);
+      return;
+    }
+    if (k >= p1 && k < back) {
+      if (k < p2) { // [M]: Neleh at the table's end, speaking, Mada beyond; the phones lit on the table; a drift on toward her
+        const bz2 = mk(sh, 'buzz2', 203), jig = k < bz2 + 30 ? 1 + ((k >> 1) % 2) : 0;
+        drawBoard2S(fb, f, {neleh: {mouth: mouth(sh, k, 'NELEH'), lid: blink(k, 2)}, mada: {}, spin: f,
+          plate: {phones: {lit: true, buzz: jig !== 0, step: 3}}});
+        shiftRoom(fb, Math.min(8, Math.floor((k - p1) / 6)));
+        return;
+      }
+      // [MCU]: her real face (S4.07's framing), lip-synced, the face light (P18)
+      held(fb, 'v3a4:s402-mcu-bg', (b) => { boardBg({phones: {lit: true, buzz: false, step: 3}, reflection: null})(b); vignette(b, MCU_X.R + 56, 2); soft(b, 2); });
+      drawBust(fb, nelehPortrait({...NELEH_PORTRAIT_DEFAULT, lid: blink(k, 2), look: -1, mouth: mouth(sh, k, 'NELEH')}), {third: 'R'});
+      faceLight(fb, [HEAD_R[0], HEAD_R[1], HEAD_R[2], 112], 2, -1);
+      return;
+    }
+    // the wide (v3.2's C13), drifting toward her
     const bz = mk(sh, 'buzz', 7), bz2 = mk(sh, 'buzz2', 203), tip = mk(sh, 'tip', 369);
     const step = Math.min(3, (k >= bz ? 1 : 0) + (k >= bz + 15 ? 1 : 0) + (k >= bz2 ? 1 : 0));
     const buzz = (k >= bz && k < bz + 30) || (k >= bz2 && k < bz2 + 30);
@@ -438,13 +495,14 @@ L.add('S4.02', {kind: 'V', st: V('S4.02', 'v5 S4.02 re-built for C13: backs boar
       for (let i = 0; i < 480 * RH; i++) if (one.c[i] !== bare.c[i]) fb.c[i] = one.c[i];
     } else fallPhone(fb, PHONE_AT[0][0] + 1, k - tip, f);
     wallScreen(fb, 222, 30, f);
-    if (k >= bz) PHONE_IDS.forEach((s, i) => {
+    if (k >= bz) PHONE_IDS.forEach((s2, i) => {
       if (i === 0 && k >= tip) return; // it went over
       const st = i === 0 ? stepA : step;
       const [px, py] = PHONE_AT[i];
-      const x = px + 4 - Math.round(pw(s) / 2), y = py + st * 3 - 13;
-      rect(x - 2, y - 1, pw(s) + 4, 9, fb.ink(PAL.N0)); rect(x - 2, y + 8, pw(s) + 4, 1, fb.ink(PAL.C4)); pt(fb, s, x, y, PAL.C7);
+      const x = px + 4 - Math.round(pw(s2) / 2), y = py + st * 3 - 13;
+      rect(x - 2, y - 1, pw(s2) + 4, 9, fb.ink(PAL.N0)); rect(x - 2, y + 8, pw(s2) + 4, 1, fb.ink(PAL.C4)); pt(fb, s2, x, y, PAL.C7);
     });
+    shiftRoom(fb, Math.min(8, Math.floor(Math.max(0, Math.min(k, p1) - 40) / 22))); // 1 px / 22 f toward her from k40, held after
   }});
 L.add('S4.07', {kind: 'V', st: V31('the v5 layout + the face light on Neleh (kits/face-light faceKey, 2 steps, keyed from the frame\'s left, her head only)'),
   draw: (fb, k, sh, f) => { const out = v5(fb, k, sh, f); faceLight(fb, [HEAD_R[0], HEAD_R[1], HEAD_R[2], 112], 2, -1); return out; }});
@@ -490,19 +548,21 @@ L.add('S4.08', {kind: 'V', st: V('S4.08', 'v5 S4.08 copied for C14: rooms/lighth
 // ---- S4.09: Sunday, the reversal on screen: the phones in a row, the ticker, "The staff want him back…"
 const feedPhase = (k: number, turn: number, walk: number): [LobbyFeedPhase, number] => (k < turn ? ['stand', k] : k < walk ? ['turn', k - turn] : ['walk', k - walk]);
 // ---- v32-S5.00 (new): the lobby, his side of it, told twice: in colour at his shoulder, then out into their camera
-L.add('v32-S5.00', {kind: 'V', st: V32('[MCU] kits/act4-v32 drawReceptionMCU, full colour at his shoulder, the day lobby soft behind: a receptionist\'s hand (no face) slides the GUEST lanyard across the stone (4 held positions); he puts it on himself (the strap over his head on the cloth_rustle, then round his neck); the selfie at arm\'s length, one white flash step on the camera_shutter; his post up in its own UI on the post_click ("first and last time i ever wear one of these", the post card kit\'s masBadge, moved here from S4.09); he looks up once at the corner camera (the near-front head, the same face); on the look the picture cuts into that camera\'s own frame (drawLobbyCCTVStep: the lobby wide, him at the desk in the lanyard) and steps into its grade one palette step a beat, grain up, NOPEAI HQ · LOBBY · NOV 19 and REC on the last; S4.09 opens on it as their wall screen'),
-  marks: {rustle: ['snd', 'cloth_rustle', 1, 0], shutter: ['snd', 'camera_shutter', 1, 0], post: ['snd', 'post_click', 1, 0], step: ['len', -36]},
+L.add('v32-S5.00', {kind: 'V', st: V32('[MCU] kits/act4-v32 drawReceptionMCU, full colour at his shoulder, the day lobby soft behind: a receptionist\'s hand (no face) slides the GUEST lanyard across the stone (4 held positions); he puts it on himself (the strap over his head on the cloth_rustle, then round his neck); the selfie at arm\'s length, one white flash step on the camera_shutter; his post up in its own UI on the post_click ("first and last time i ever wear one of these", the post card kit\'s masBadge, moved here from S4.09); he looks up once at the corner camera (the near-front head, the same face); on the look the picture cuts into that camera\'s own frame (drawLobbyCCTVStep: the lobby wide, him at the desk in the lanyard) and steps into its grade one palette step each 8 f, grain up, REC on the last; S4.09 opens on it as their wall screen; v3.3 (P13): no rail (the lock drops it), dated once by the camera\'s plate, the lock\'s NOPEAI HQ · LOBBY · NOV 19 · 1:03 PM, up from the cut into the camera (1.9 s) in the kit\'s plate style'),
+  marks: {rustle: ['snd', 'cloth_rustle', 1, 0], shutter: ['snd', 'camera_shutter', 1, 0], post: ['snd', 'post_click', 1, 0], step: ['len', -46]},
   draw: (fb, k, sh, f) => {
-    const ru = mk(sh, 'rustle', 24), sn = mk(sh, 'shutter', 57), po = mk(sh, 'post', 100), st0 = mk(sh, 'step', 156);
-    if (k >= st0) { // their camera's frame, stepping into its grade
-      const step = Math.min(4, Math.floor((k - st0) / 6)) as 0 | 1 | 2 | 3 | 4;
+    const ru = mk(sh, 'rustle', 24), sn = mk(sh, 'shutter', 57), po = mk(sh, 'post', 100), st0 = mk(sh, 'step', 146);
+    if (k >= st0) { // their camera's frame, stepping into its grade; v3.3 (P13): dated once, by the camera's own plate
+      const step = Math.min(4, Math.floor((k - st0) / 8)) as 0 | 1 | 2 | 3 | 4;
       drawLobbyCCTVStep(fb, f, {step});
+      const pl = textOf(sh, 'label', 'NOPEAI HQ');
+      if (pl) { const x = 15, y = 8; rect(x - 2, y - 2, textWidth(pl.text) + 4, 11, fb.ink(PAL.N1)); text(fb, pl.text, x, y, PAL.G6); } // the kit's plate style (its chrome), the lock's words
       return;
     }
     const slide = (k < ru - 8 ? Math.min(3, Math.floor(k / 4)) : null) as 0 | 1 | 2 | 3 | null;
     const lanyard = k < ru - 8 ? null : k < ru + 8 ? 'lift' : 'on';
     const selfie = k >= sn - 14 && k < sn + 12;
-    const look = k >= po + 26;
+    const look = k >= po + 22;
     drawReceptionMCU(fb, f, {slide, lanyard, selfie, flash: k >= sn && k < sn + 2, look, post: k >= po ? k - po : null, mas: {lid: look ? 0 : blink(k, 3)}});
   }});
 L.add('S4.09', {kind: 'V', st: V31('kits/act4-v31 drawSundayOTS (v5\'s wall-screen OTS with the lobby feed at 1:1, his GUEST card, ALYI\'s reflection lip-synced; v3.2: no post card on the CCTV tile, his post is his, in v32-S5.00) + the phones set in a row on the table\'s edge, STAFF · STAFF · INVESTORS · INVESTORS, buzzing in turn, and the ticker crawling in under the CCTV tile, INVESTORS PUSH TO BRING MANALT BACK (the lock\'s words); on "here" he turns and walks out'),
@@ -514,7 +574,16 @@ L.add('S4.09', {kind: 'V', st: V31('kits/act4-v31 drawSundayOTS (v5\'s wall-scre
     drawLobbyFeed(feed, {f, phase, k: kk});
     drawSundayOTS(fb, f, {feed, alyi: {mouth: mouth(sh, k, 'ALYI')}, ticker: tk ? k - tk.s : null, buzz: k});
   }});
-L.add('S4.10', {kind: 'V', st: V('S4.10', 'v5 S4.10 copied; v3.1: his card over the room frozen in two tones while the lock\'s card text is up (lay blipCard TTEMME / INTERIM CEO, TAKE TWO · CHAT: LIVE; freezePrint), then the room unfreezes (a name plate if the lock has one: art/texts plateName)'),
+/** the wall screen's name bar for its lit tile (S4.10: Rima's), hung under the screen (wallScreen's 64 x 38 tiles are
+ *  too small to letter): the call app's own chip, the UI face; `k` = frames since the label changed (a 2-frame flip) */
+const wallTileLabel = (fb: Buf, s: string, k: number) => {
+  const w = pw(s) + 10, x = 254 - Math.round(w / 2), y = 71;
+  rect(x - 1, y - 1, w + 2, 11, fb.ink(PAL.N0)); rect(x, y, w, 9, fb.ink(PAL.N2)); rect(x, y, w, 1, fb.ink(PAL.N4));
+  rect(251, 68, 6, 3, fb.ink(PAL.N0)); // its tab to the screen's foot
+  if (k >= 0 && k < 2) return; // the flip: one blank chip for 2 frames, then the new words
+  pt(fb, s, x + 5, y + 1, PAL.P1);
+};
+L.add('S4.10', {kind: 'V', st: V('S4.10', 'v5 S4.10 copied; v3.1: his card over the room frozen in two tones while the lock\'s card text is up (lay blipCard TTEMME / INTERIM CEO, TAKE TWO · CHAT: LIVE; freezePrint), then the room unfreezes; v3.3 (S2 / P15): the wall screen\'s name bar for Rima\'s lit tile reads RIMA TAMURI · INTERIM CEO, and as the spot leaves her (the lock\'s 0.8 s) it flips back to RIMA TAMURI · CTO (the lock\'s text), drawn in the room, so the card\'s freeze prints it too'),
   draw: (fb, k, sh, f) => {
     const step = Math.max(0, Math.min(2, Math.floor((k - mk(sh, 'swing', 0)) / 8)));
     const spots = [{x: 254, y: 56, r: 20}, {x: 254, y: 82, r: 26}, {x: 254, y: 100, r: 30}];
@@ -523,9 +592,28 @@ L.add('S4.10', {kind: 'V', st: V('S4.10', 'v5 S4.10 copied; v3.1: his card over 
     const chat = textOf(sh, 'label', 'LIVE');
     if (chat && k >= chat.s && step >= 1) drawChatPanel(fb, BR.SEATS.C.x + 30, BR.WALL_FLOOR_Y - 44, 'room', f);
     const t = textOf(sh, 'plate');
-    if (t) plateName(fb, 22, 150, t.text, k - t.s, PAL.U5);
+    if (t) wallTileLabel(fb, k < t.s ? 'RIMA TAMURI · INTERIM CEO' : t.text, k - t.s); // v3.3 (S2): her tile's label steps back to CTO as the spot leaves her
     const cd = textOf(sh, 'card', 'TTEMME /'); // v3.1: his 2-TONE card on the spot's landing
     if (cd && k >= cd.s && k < cd.e) { freezePrint(fb); blipCard(fb, k - cd.s, 'TTEMME', 'TTEMME', 'INTERIM CEO, TAKE TWO', 'CHAT: LIVE', {f: sh.s + cd.s}, 'L'); }
+  }});
+// ---- S4.10b (v3.3, S2 / P15): "Okay." is cut: he turns the page over toward us, and its back is blank
+const PAGE_AT: [number, number] = [BHEAD.ttemme[0] + TTEMME_M_FOLDER[0], BHEAD.ttemme[1] + TTEMME_M_FOLDER[1]]; // the folder's spot in his rig (unflipped: stage 'nelehLeft')
+L.add('S4.10b', {kind: 'V', st: V('S4.10b', 'v3.3 (S2 / P15): v5 S4.10b copied (rooms/boardroom-head drawBoardHead2S, stage nelehLeft: NELEH standing left, TTEMME at the head, Mada soft beyond, his chat panel; PROP-FOLDER: the sealed folder slides across, he breaks the seal and reads it turned away) to the read; then, with "Okay." gone, he turns the page over toward us (art/v33 drawBlankPage: edge-on, three-quarters, then the sheet facing us, BLANK, 1.3 s) and holds Neleh\'s eye, his brow unsure; the next shot is his hand on the hourglass'),
+  draw: (fb, k, sh, f) => {
+    const slide = mk(sh, 'slide', 276), up = mk(sh, 'up', 296), seal = mk(sh, 'seal', 304), open = mk(sh, 'open', 310), close = mk(sh, 'close', 320);
+    let folder: FolderState | null = null;
+    if (k >= slide && k < up) folder = {kind: 'table', slide: Math.min(3, Math.floor(((k - slide) * 4) / Math.max(1, up - slide))) / 3};
+    else if (k >= up && k < seal) folder = {kind: 'up', seal: 'whole', open: 0};
+    else if (k >= seal && k < open) folder = {kind: 'up', seal: 'broken', open: 0};
+    else if (k >= open && k < close) folder = {kind: 'up', seal: 'broken', open: k < open + 3 ? 1 : 2};
+    else if (k >= close) folder = {kind: 'up', seal: 'broken', open: 0};
+    const reading = k >= open && k < close;
+    drawBoardHead2S(fb, f, {
+      ttemme: {mouth: mouth(sh, k, 'TTEMME'), lid: blink(k, 6), head: reading ? 'down' : '34', brow: k >= close + 6 ? 'unsure' : 'level'},
+      neleh: {mouth: mouth(sh, k, 'NELEH'), lid: blink(k, 2)},
+      mada: {spin: f}, folder, chat: f, stage: 'nelehLeft',
+    });
+    if (k >= close) drawBlankPage(fb, PAGE_AT[0], PAGE_AT[1], k < close + 3 ? 'edge' : k < close + 6 ? 'turn' : 'blank');
   }});
 // ---- S4.13e: the statement's tail (C15: its second sentence runs 0.8 s into this shot) on Tasya's own mouth
 const boardBg = (o: BoardPlateOpts = {}) => (b: Buf) => { const opt: BoardPlateOpts = {laptop: true, rolodex: true, blueprint: 0, ...o}; drawBoardPlate(b, 0, opt); drawBoardPlateTable(b, 0, opt); drawBoardPlateFront(b, 0, opt); };
@@ -554,14 +642,17 @@ L.add('S4.15', {kind: 'V', st: V31('the v5 layout (v3 27.31, Mada right third, h
 L.add('S5.02', {kind: 'V', st: V('S5.02', 'v5 (v2 29.00 the home shot) + the arrival (2.6 -> 4.5 s) as a slow drift, 1 px / 12 f (9 px)'),
   draw: (fb, k, sh, f) => { const out = v5(fb, k, sh, f); shiftRoom(fb, drift(k, 12, 9)); return out; }});
 // ---- S5.03 (v3.2): the app's heart count on screen, 406 -> 407 -> 406, as his count says it
-L.add('S5.03', {kind: 'V', st: V('S5.03', 'v3.2: the v5 layout + the app\'s heart count in the app bar over the phone\'s screen (art/v32 heartCount): 405 until his first heart, 406 on it, 407 and back to 406 a beat before his inner voice says each (the count is on the phone, script-v32-notes §10.7)'),
+L.add('S5.03', {kind: 'V', st: V('S5.03', 'v3.2: the v5 layout + the app\'s heart count in the app bar over the phone\'s screen (art/v32 heartCount): 405 until his first heart, 406 on it, 407 and back to 406 a beat before his inner voice says each (the count is on the phone, script-v32-notes §10.7); v3.3 (P16): each change ticks visibly, the number rolling up in 2 held frames and the heart beating a rung brighter'),
   marks: {c407: ['w', 'v3-vo-20', 'seven', -6]},
   draw: (fb, k, sh, f) => {
     const out = v5(fb, k, sh, f);
     const t1 = mk(sh, 'tap1', 28), c7 = mk(sh, 'c407', 66), l = lineOf(sh, 'v3-vo-20');
     const w6 = l ? l.words.filter((w) => w[0] === 'six') : [];
     const c6b = w6.length > 1 ? l!.s + w6[1][1] - 6 : c7 + 40;
-    heartCount(fb, k < t1 ? 405 : k < c7 ? 406 : k < c6b ? 407 : 406);
+    const ch: Array<[number, number]> = [[t1, 406], [c7, 407], [c6b, 406]]; // (frame, the count from it)
+    let cur = 405, prev = 405, since = 99;
+    for (const [at, v] of ch) if (k >= at) { prev = cur; cur = v; since = k - at; }
+    heartCount(fb, cur, undefined, {prev, k: since});
     return out;
   }});
 L.add('S5.05', {kind: 'V', st: V31('the v5 layout (v3 29.05, Mas left third turned to the Orb, the rack) + the face light (kits/face-light faceKey, 2 steps, the Orb\'s side)'),
@@ -675,33 +766,46 @@ L.add('S6.01', {kind: 'V', st: V31('the v5 layout (v4\'s avalanche on the board 
   draw: (fb, k, sh, f) => { const out = v5(fb, k, sh, f); firstTileStrip(fb, avT(k)); return out; }});
 
 // ================================================================== S7 · THE RETURN
-L.add('S7.02', {kind: 'V', st: V('S7.02', 'v5 S7.02 copied (the walkout wide, held; Tasya on the floor right of Mas\'s desk, facing him; the badges on his desk; the key ring once) with Tasya speaking now (v3-a4-0002, room-scale mouth) and Mas silent at his desk'),
-  face: {TASYA: 'room'},
-  draw: (fb, k, sh) => {
-    const tm = roomMouth(sh, k, 'TASYA');
-    const arm = k >= 12 && k < 24 ? ((Math.floor(k / 3) % 2) ? 'keys1' : 'keys0') : 'clasp';
-    held(fb, `v3a4:s702-${tm}-${arm}`, (b) => {
+// ---- S7.02 / S7.02b (v3.3, S4 / S5 / P17): the employee speaks among the boxes; then Tasya's interview on the wall TV
+/** the walkout crowd's pixels (the room with its crowd against the room without): the wall TV hangs behind them */
+let CROWD_MASK: Uint8Array | null = null;
+const crowdMask = () => (CROWD_MASK ??= (() => {
+  const a = new Buf(480, 270, PAL.N0), b = new Buf(480, 270, PAL.N0);
+  drawBullpen(a, 0, {variant: 'walkout'}); drawBullpen(b, 0, {variant: 'walkout', crowd: false});
+  const m = new Uint8Array(480 * RH);
+  for (let i = 0; i < 480 * RH; i++) m[i] = a.c[i] !== b.c[i] ? 1 : 0;
+  return m;
+})());
+const tvFree = (x: number, y: number) => !crowdMask()[y * 480 + x];
+const EMP_AT: [number, number] = [372, 199]; // where Tasya stood in v3.2's S7.02, facing Mas at his end desk
+const S702_DRIFT = (k: number) => -Math.min(10, Math.floor(k / 14)); // toward her, 1 px / 14 f
+const slateStep = (k: number, t: number) => (k < t ? 0 : k < t + 5 ? 1 : k < t + 10 ? 2 : 3); // v5 stepOf5
+L.add('S7.02', {kind: 'V', st: V('S7.02', 'v3.3 (S4 / P17): v5 S7.02\'s walkout wide (coats, packed boxes, Mas at his end desk, the badges on it) with THE EMPLOYEE who asked "Is this a coup?" where Tasya stood, a box in her arms, facing Mas (art/v33 drawEmployee: the room\'s own walkout extra with her tile\'s hair and skin, the green parka), speaking: her mouth opens on the take\'s syllables (v33-a4-0001, room scale), her face lit one rung (kits/face-light, "her mouth lit"), and the frame drifting toward her, 1 px / 14 f; behind, the bullpen\'s wall TV plays softly (art/v33 drawWallTV: Tasya at a podcast mic, listening), hung behind the crowd'),
+  face: {EMPLOYEE: 'room', MAS: null},
+  draw: (fb, k, sh, f) => {
+    const em = roomMouth(sh, k, 'EMPLOYEE');
+    held(fb, `v3a4:s702e-${em}`, (b) => {
       const A = bullpenRoom(b, 0, {variant: 'walkout'}, {mas: {mouth: 'rest'}, tasya: null, landlord: {floor: 0, ceiling: 0, walls: 0},
-        stage: (bb) => drawTasyaRoom(bb, 372, 199, {...TASYA_ROOM_DEFAULT, arm, light: 'room', mouth: tm === 'open' ? 'open' : 'smile'}, {flip: true})});
+        stage: (bb) => drawEmployee(bb, EMP_AT[0], EMP_AT[1], {mouth: em, flip: true})});
+      badgesOnDeskRoom(b, A.masDesk[0] + BADGES_ROOM_AT[0], A.masDesk[1] + BADGES_ROOM_AT[1]);
+      const [hx0, hy0, hx1, hy1] = EMPLOYEE.head, x0 = EMP_AT[0] - EMPLOYEE.foot[0], y0 = EMP_AT[1] - EMPLOYEE.foot[1];
+      faceKey(b, x0 + EMPLOYEE.w - hx1, y0 + hy0, x0 + EMPLOYEE.w - hx0, y0 + hy1, 1, -1); // her face, flipped: lit from Mas's side
+    });
+    drawWallTV(fb, {f, mouth: 'smile', lid: blink(k, 9)}, tvFree);
+    shiftRoom(fb, S702_DRIFT(k));
+  }});
+L.add('S7.02b', {kind: 'V', st: V('S7.02b', 'v3.3 (S5 / P17): the same wide, held on (the cut is continuous; Tasya is off the floor): the bullpen\'s wall TV plays his interview clip, TASYA at a podcast mic lip-synced (art/v33 drawWallTV, v33-a4-0002 on the TV\'s small speaker), while the staff stand packed in front of it and the employee holds her box; on "below" the floor steps to Macrosoft slate, on "above" the ceiling, on "around" the walls (v5\'s landlord steps, 3 held steps each); the TV doesn\'t step'),
+  face: {TASYA: 'lip'},
+  draw: (fb, k, sh, f) => {
+    const L2 = {floor: slateStep(k, mk(sh, 'below', 20)), ceiling: slateStep(k, mk(sh, 'above', 51)), walls: slateStep(k, mk(sh, 'around', 80))};
+    held(fb, `v3a4:s702b-${L2.floor}${L2.ceiling}${L2.walls}`, (b) => {
+      const A = bullpenRoom(b, 0, {variant: 'walkout'}, {mas: {mouth: 'rest'}, tasya: null, landlord: L2,
+        stage: (bb) => drawEmployee(bb, EMP_AT[0], EMP_AT[1], {flip: true})});
       badgesOnDeskRoom(b, A.masDesk[0] + BADGES_ROOM_AT[0], A.masDesk[1] + BADGES_ROOM_AT[1]);
     });
-  }});
-L.add('S7.03', {kind: 'V', st: V31('the v5 layout (v3 30.06: Mas left third, eyes down at the slate floor) with its slate ripple now answering Tasya\'s "Down here." (v31-a4-0014, from under him): one ripple out across the floor in held 3-frame steps'),
-  draw: (fb, k, sh, f) => {
-    const out = v5(fb, k, sh, f);
-    const l = lineOf(sh, 'v31-a4-0014');
-    const t = l ? k - l.s : -1;
-    if (t >= 0 && t < 24) {
-      const step = Math.floor(t / 3), rx = 60 + step * 34, ry = Math.round(rx * 0.16), cx = 160, cy = 206;
-      const done = new Uint8Array(480 * RH);
-      for (let a = 0; a < 360; a += 0.4) for (const d of [0, 1]) {
-        const x = Math.round(cx + Math.cos((a * Math.PI) / 180) * (rx + d * 2)), y = Math.round(cy + Math.sin((a * Math.PI) / 180) * (ry + d));
-        if (y < 150 || y >= RH || x < 0 || x >= 480 || (x >= 84 && x < 238) || done[y * 480 + x]) continue;
-        done[y * 480 + x] = 1;
-        fb.set(x, y, stepColor(fb.get(x, y), step < 5 ? 2 : 1));
-      }
-    }
-    return out;
+    drawWallTV(fb, {f, mouth: mouth(sh, k, 'TASYA'), lid: blink(k, 9)}, tvFree);
+    const s702 = shotOf('S7.02');
+    shiftRoom(fb, S702_DRIFT(s702 ? len(s702) : 143));
   }});
 L.add('v31-S7.03b', {kind: 'V', st: V31('kits/act4-v31 drawTuesdayInvite [ECU]: his end desk, the GUEST lanyard and the MACROSOFT badge; his phone wakes and the invite slides down in the cold open\'s calendar UI (Board · Tue 10:00 PM, Accept / Decline, a spinner, a fire helmet, a blank); his thumb straight down on Accept on the tap\'s sound (no hover); accepted'),
   marks: {tap: ['snd', 'key_tap_soft_02', 1, 0]},
@@ -860,11 +964,11 @@ export const SEGMENT = defineSegment({
   options: {badge: false, vo: 'typed', voLowercase: true, subs: 'off', standin: 'stick', j1: false, hourglass: true},
   review: {
     title: 'MR. MAS · EP1 · ACT FOUR',
-    subtitle: 'PIXEL v3.2 · LOCK act4 (THE v3.2 STICK TIMING)',
-    kindNames: {P: 'P · THE v5 LAYOUT, ON THE v3.2 LOCK', V: 'V · A v3 / v3.1 / v3.2 CHANGE (see st)'},
+    subtitle: 'PIXEL v3.3 · LOCK act4 (THE v3.3 STICK TIMING)',
+    kindNames: {P: 'P · THE v5 LAYOUT, ON THE v3.3 LOCK', V: 'V · A v3 – v3.3 CHANGE (see st)'},
     sideBadge: false,
-    durNote: 'AS THE v3.2 STICK',
-    soundLabel: 'SOUND · TEMP TRACK = THE v3.2 STICK MIX (ACT FOUR)',
+    durNote: 'AS THE v3.3 STICK',
+    soundLabel: 'SOUND · TEMP TRACK = THE v3.3 STICK MIX (ACT FOUR)',
     textFix: factsText5,
   },
   // S7.13 k128-263: the Runway hourglass insert, spliced from PNGs (studio/src/dev/genvideo/runway/hourglass.py --png

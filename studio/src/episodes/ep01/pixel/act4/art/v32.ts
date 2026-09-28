@@ -13,7 +13,8 @@
 //   rimaTileLabel(s, t)         S3.04: Rima's tile label in two rows, `RIMA TAMURI` over `INTERIM CEO` (the world
 //                               carries her new role: script-v32-notes §10.3 "her tile's own label"); the tile is too
 //                               narrow for the one-line `RIMA TAMURI · INTERIM CEO`
-//   heartCount(fb, n)           S5.03: the app's heart count on the phone's screen, in the app's own bar (406 → 407 → 406)
+//   heartCount(fb, n, scr, tick) S5.03: the app's heart count on the phone's screen, in the app's own bar (406 → 407 → 406);
+//                               v3.3: each change ticks (the number rolls, the heart beats), tick = {prev, k since the change}
 import {Buf, rect} from '../../../../../shared/pixel/px';
 import {PAL} from '../../../../../shared/pixel/palette';
 import {text, textWidth} from '../../../../../shared/pixel/font';
@@ -126,10 +127,17 @@ export const rimaTileLabel = (s: Buf) => {
 // ================================================================== S5.03: the app's heart count
 const HEART = ['.#.#.', '#####', '#####', '.###.', '..#..'];
 /** the app bar over the top of the phone's screen (inserts-mas PHONE29.screen, as v5's S5.03 lays its cards) */
-export const heartCount = (fb: Buf, n: number, scr = {x0: 124, y0: 36, x1: 194}) => {
+export const heartCount = (fb: Buf, n: number, scr = {x0: 124, y0: 36, x1: 194}, tick: {prev?: number; k?: number} = {}) => {
   const w = scr.x1 - scr.x0 + 1;
   rect(scr.x0, scr.y0, w, 11, fb.ink(PAL.N0)); rect(scr.x0, scr.y0 + 11, w, 1, fb.ink(PAL.N3));
   const s = String(n), x = scr.x0 + Math.round((w - pw(s) - 8) / 2);
-  HEART.forEach((r, j) => { for (let i = 0; i < 5; i++) if (r[i] === '#') fb.set(x + i, scr.y0 + 3 + j, PAL.R3); });
-  pt(fb, s, x + 8, scr.y0 + 2, PAL.P2);
+  // v3.3 (P16): the count ticks visibly: the old number rolls up out of the bar and the new one up into it (2 held
+  // frames, clipped to the bar), and the heart beats one rung brighter for 4 frames
+  const k = tick.k ?? 99, beat = k < 4;
+  HEART.forEach((r, j) => { for (let i = 0; i < 5; i++) if (r[i] === '#') fb.set(x + i, scr.y0 + 3 + j, beat ? PAL.P2 : PAL.R3); });
+  const bar = new Buf(w, 11, PAL.N0);
+  if (k === 0 && tick.prev !== undefined) pt(bar, String(tick.prev), x + 8 - scr.x0, -2, PAL.P1);
+  else if (k === 1) pt(bar, s, x + 8 - scr.x0, 5, PAL.P2);
+  else pt(bar, s, x + 8 - scr.x0, 2, PAL.P2);
+  for (let j = 1; j < 11; j++) for (let i = 7 + x - scr.x0; i < w; i++) fb.set(scr.x0 + i, scr.y0 + j, bar.get(i, j));
 };

@@ -1,8 +1,105 @@
-# Ep1 v3.2: Act Four's shots (`v3-shots-act4`, 2026-09-27 / 28)
+# Ep1 v3.3: Act Four's shots (`v3-shots-act4`, 2026-09-27 / 28)
 
-> **Status: v3.2 built, checked and rendered. Nothing committed.** Track P2 of [PLAN.md](PLAN.md) for the `act4` segment ("five days, told twice", **8:28.46**), on the **final v3.2 stick lock** (`show/reel/ep01-v32/ep01-v32-act4.json`, [lock-v32.md](lock-v32.md)). **§V32 below is the current state.** §V31 is the v3.1 round's record (everything it built still stands unless §V32 says otherwise), and §1–§8 are the v3 round's; `pixel/act4/data.ts` is now the v3.2 lock.
+> **Status: v3.3 built, checked and rendered. Nothing committed.** Track P2 of [PLAN.md](PLAN.md) for the `act4` segment ("five days, told twice", **8:25.75**), on the **v3.3 Kokoro lock** (`show/reel/ep01-v33/ep01-v33-act4.json`, committed a756708; [lock-v33.md](lock-v33.md)). **§V33 below is the current state.** It's a polish (PLAN §6), so §V32 and §V31 still describe everything V33 doesn't mention. §1–§8 are the v3 round's record. `pixel/act4/data.ts` is now the v3.3 lock.
 >
-> **Nothing here has been watched or heard.** Stills, crops and frames decoded from the render were looked at (§V32.6, §V31.6). The render's and the checks' numbers are measured.
+> **Nothing here has been watched or heard.** Stills, crops and frames decoded from the render were looked at (§V33.5). The render's and the checks' numbers are measured.
+
+## V33. The v3.3 polish (PLAN.md §6; script draft 8.2, [script-v33-notes.md](script-v33-notes.md))
+
+### V33.1 The lock and the temp track
+
+- **The lock:** `tools/lock.py --seg act4 --plan pixel/act4/plan.json` on the v3.3 timeline gives **79 shots from 80 beats, 12,138 f (8:25.75)**, episode frame 17117 (11:53:05). There are 98 lines (4 of them the inner voice, all face null, as before), 6 posts and 44 on-camera mouths. Every check passes. D6 is 5.08 s, unchanged. S7.13 is frames **10955–11218**, and the Runway splice is at k128–263 (11083–11218; `hourglass.py --s713 10955`).
+- **The plan:**
+  - It adds `audio/ep01/v33/act4/lines-v33.json` and `takes-v33-cut-mouths.json`. `cut_mouths.py` now runs both rounds (its v3.1 output is byte-identical) and gives Tasya's TV cut `v33-a4-0002` the mouth of its source, `v3-a4-0003` (words 10–17, shifted −3.345 s).
+  - **Re-anchored:** S4.09 `post` (its text is gone), S4.10b `close` (it was on "Okay.", now the read +10 f), S7.02b's below / above / around (on the new take's words).
+  - **Faces:** S7.02 is EMPLOYEE `room`; S7.02b is TASYA `lip` (on the TV).
+- **The temp track:** there's no v3.3 mix pass and no stick reel yet. So the reel's own mixer (`studio/src/reel/tools/mixer.mjs`) ran on the lock's render plan (`studio/out/reel-work/ep01-v33-stick/plan.json`): 235 takes over the 7 beds, −16.63 LUFS, 8 s of wall time, through `ops/heavy.sh`. Its Act Four chapter was cut sample-exact to `out/ep01/full-v3/picture/act4-v33-stick-mix.wav`: 24,276,000 samples = 12,138 f. The full-episode WAV and v3.2's Act Four cut were then deleted.
+
+### V33.2 The changed shots
+
+| Item | Shot | What it draws now |
+|---|---|---|
+| **P12** | S4.02 (18.92 s) | **The push in, as the stepped push.** pov-and-framing §4.7.2 allows no smooth zooms and no scaled art, so the push is a ladder of drawn sizes. <ul><li>**The wide (k0–219).** v3.2's C13 (the phones buzzing and walking, the caller IDs), now with a whole-pixel drift toward Neleh from k40 (1 px every 22 f, 8 px).</li><li>**[M] on her second speech's first word (k220).** `rooms/twoshots drawBoard2S`: NELEH medium, lip-synced, Mada beyond, the phones lit on the table. It drifts on toward her (1 px every 6 f).</li><li>**Her [MCU] on "Monday" (k280).** S4.07's framing: the board plate soft behind her, its phones in frame, `nelehPortrait` lip-synced, the face light at 2 steps.</li><li>**The wide again (k352–378),** after her line, for phone A's teeter, fall and clack. C13 is kept, and the drift holds.</li><li>**The glass cutaway on Alyi's line (k379).** **The row of phones lights up in frame:** the four reflected screens start one rung dim and light one by one, from "That" to "company". Each takes a 2-frame pop, then sits two rungs up. His reflection turns on "company" (v3.2), and it carries a face light (P18).</li></ul>The held-frame scan finds no run of identical frames in the shot of 2 s or more |
+| **P13** | v32-S5.00 (8.00 s) | **Dated once.** The lock drops the rail, and the host's rail band draws nothing here now. The camera's plate is the lock's `NOPEAI HQ · LOBBY · NOV 19 · 1:03 PM`, in the kit's own plate style. <ul><li>It is up from the cut into the camera to the end: 46 f, 1.9 s. In v3.2 the plate came only on the last grade step, as the shorter `… NOV 19`.</li><li>So that the plate can be read, the look up at the camera starts 4 f earlier (post +22) and the cut into the camera comes 10 f earlier (len −46).</li><li>The grade steps come every 8 f.</li></ul> |
+| **S2 / P15** | S4.10 (4.29 s) | Rima's tile on the wall screen is 29 × 16 px, too small to letter. So her label is the call's **name bar hung under the screen**. It reads `RIMA TAMURI · INTERIM CEO`, and at the lock's 0.8 s (the spot leaving her) it flips, with one blank chip for 2 frames, to the lock's `RIMA TAMURI · CTO`. It is drawn in the room, so Ttemme's card freeze prints it in two tones, still legible. **Not drawn:** her jacket smooth (the tile is too small) |
+| **S2 / P15** | S4.10b (15.21 s) | v5's two-shot copied. "Okay." is gone. **After the read (open +10 f), he turns the page over toward us** (`art/v33 drawBlankPage`): edge-on for 3 f, three-quarters for 3 f, then **the sheet facing us, blank**, from k326 to the cut (1.6 s), in his two hands. His brow goes unsure while he holds Neleh's eye. The next shot is his hand on the hourglass. **Timing:** the lock's `paper_whip` (11.77 s = k282) falls inside v5's folder slide (k276–296), so it plays as the slide. The turn is timed from the read, not from that sound |
+| **P16** | S5.03 (5.88 s) | v3.2's 405 → 406 → 407 → 406 app bar now **ticks visibly**. On each change the old number rolls up out of the bar and the new one rolls up in (2 held frames), and the heart beats one rung brighter for 4 frames. Each change lands 6 f before the inner voice says the number (the 407 on "seven", the last 406 on the second "six") |
+| **S3** | S7.03 (2.17 s) | "Down here." is cut. My v3.1 slate ripple answered that line, so the override is gone, and it's v5's MCU as it was (a port) |
+| **S4 / P17** | S7.02 (5.96 s) | v5's walkout wide. **The EMPLOYEE** stands where Tasya stood, facing Mas, with a box in her arms. <ul><li>**Her figure** (`art/v33 drawEmployee`) is the room's own walkout extra, seed 73 in the green parka. A search over the extras picked it because its hair colour, its long hair and its skin are her S3.06 tile's.</li><li>**Visibly the one speaking:** her mouth opens on the take's syllables (v33-a4-0001, room scale), her face is lit one rung ("her mouth lit"), and the frame drifts toward her (1 px every 14 f, 10 px).</li><li>**Behind her, the bullpen's wall TV plays softly** (`drawWallTV`): Tasya at a podcast mic, listening, hung behind the crowd.</li></ul> |
+| **S5 / P17** | S7.02b (5.71 s) | **The same wide, held on,** so the cut from S7.02 is continuous (same framing and drift offset, the employee still holding her box). Both beats are framed WIDE in the lock, and two different wides of this one room would be a jump cut. <ul><li>**The wall TV** plays his interview clip: **TASYA at a podcast mic**, lip-synced (his medium rig, cast/tasya-medium), with the mic on its boom arm in from the frame's left, clear of his face.</li><li>**The staff stand packed in front of it**, their heads over its lower edge, since the TV is drawn only where no crowd pixel is.</li><li>On "below" the floor steps to Macrosoft slate, on "above" the ceiling, on "around" the walls (v5's landlord steps). The TV doesn't step.</li><li>Tasya isn't on the floor.</li></ul>**The TV** is 100 × 56, hung on the conference glass over the room's own dark screen. That screen is 50 × 28, too small for a readable mic |
+| **P18** | the close-ups | See §V33.3 |
+
+**Kept as v3.2 built it:**
+- the shock opening (the code for S1.01–S1.11 is untouched, and the hard cut still lands at frames 575/576);
+- the Runway splice;
+- the inner voice with no mouth (all 4 V.O. lines are face null, and the guard still wraps every layout);
+- every other v3.2 layout.
+
+### V33.3 P18, the face light: what was already there, and what's new
+
+The list's close-ups already carry face lights from v3.1 (kits/face-light `faceKey`, the face only):
+- "alyi voted." (S5.07b) and "good question." (S7.08): Mas at 1 step;
+- Gerg's look (S5.09b): 2 steps;
+- Neleh's real face (S3.04b, S4.07): 2 steps;
+- Mada (S4.15): 2 steps.
+
+**Measured on native frames:** the lit face pixels in each head's rect average **25–40% relative luminance**. The frames average 1–2%. The mood analysis's 4.5–5.4% are frame means, and a light on the face only can hardly move a frame mean while the room stays untouched, which is the rule.
+
+**New this round:**
+- **Alyi in the glass (S4.02):** his reflection is drawn in the glass's blue ramps, not in skin, so `faceKey` can't find it. `glassFaceKey` steps his face's lit rungs (N3 and up, and the cyan rim) up one inside the head's rect, and leaves the dark glass and the Valley's lights alone. The rect's lit pixels measure 7.5%, a reflection's level, deliberately.
+- **Neleh's new MCU inside S4.02:** 2 steps.
+- **"The toast" (S2.05):** the Orb's iris ECU with the `rewinding…` toast. No face is in frame, so there's nothing to light. If the mood analysis meant another act's toast (Act Three's "thanks."), that shot isn't mine.
+
+### V33.4 Checks and render
+
+1. **The lock:** every check passes. **`r.cjs check`:** exit 0, 79 shots, 79 layouts (46 `V`, 33 `P`), **0 stand-ins**, 0 problems, 164 browser frames (28 GLYPH + 136 hourglass).
+2. **The EL lock** (the assembly builds the EL picture from it). I tested it in scratch:
+   - `lock.py` on `show/reel/ep01-v33-el/ep01-v33-el-act4.json`, with `--plan pixel/act4/plan.json` and `--out-json` / `--out-ts` into scratch, gives 12,398 f, every check passing. The takes were v3.2's EL takes plus this round's Kokoro two, as stand-ins, because el-v33's takes don't exist yet.
+   - `assembly/tools/build_el.mjs act4` against it builds, and its `check` exits 0.
+   - Sample frames of every changed shot render on it: S4.02's ladder lands on the EL marks (the glass at k352), and so do S4.10b's page, S7.02 / S7.02b and S5.03.
+   - The segment reads everything from marks on lines, words and sounds, and from shot lengths, so it follows either lock.
+   - **For the assembly:** v33-a4-0002's EL take needs a mouth track for the TV, as its Kokoro cut does here.
+3. **Photosensitivity:**
+   - **flashcheck.py on the MP4**, in four overlapping chunks: one run over the whole act was killed at the heavy scope's 8 GB, so the chunks were area-scaled to the tool's own 160 × 90 and kept lossless. **At most 1 flash in any 1 s** (the selfie's white step, frames 4712 / 4716), **0 red. Pass.** This includes the Runway insert. The largest single-frame mean-luminance step is the hard cut, 0.573 at frame 576.
+   - **`flash.ts` on the native frames:** at most 2 in any 1 s (S5.08, as before), 0 red. Pass.
+4. **Held frames** (`flash.ts`'s new scan, the picture area, every native frame): **the longest run of identical frames in the act is 4.4 s** (S5.08). There are 7 runs of 2 s or more, none in S4.02, and nothing near 8 s.
+5. **`tsc --noEmit -p .`:** 20 errors, none in `pixel/act4/` (bake.ts 11, runway pxframes 5, streamframes 4, as before).
+6. **The render** was one job through `ops/heavy.sh` (`heavy-run33.sh`: build, check, flash, bundle, glyphs with hourglass off, `hourglass.py --png … --s713 10955`, picture, sheet, tsc; then `fc33.sh` for flashcheck). `picture --jobs 2` took **120 s wall**.
+   - **`out/ep01/full-v3/picture/act4.mp4`** replaces v3.2's: H.264 1920 × 1080, **12,138 frames, 505.75 s (8:25.75)**, 43.8 MB, with the v3.3 stick mix as AAC temp audio (505.75 s).
+   - Beside it: `act4.srt` and **`act4-sheet.png`** (79 shots, stand-ins: none).
+   - Deleted from scratch afterwards: the bundle, the insert's PNGs, the hourglass intermediates and the flash chunks.
+
+### V33.5 What I looked at, and what's weakest
+
+**Looked at:**
+- **Native stills:**
+  - S4.02 through the ladder (wide, drift, [M], [MCU], the wide for the fall, the glass), with a 3× crop of the phones lighting and a 4× crop of the lit reflection;
+  - S5.00's cut into the camera, its plate and the grade steps;
+  - S4.10 before and after the flip, and in the freeze;
+  - S4.10b's read, turn and blank page;
+  - S5.03's count;
+  - S7.02 and S7.02b, with 4× crops of the employee speaking and of the TV (a first mic's boom crossed his face and was re-drawn);
+  - the P18 faces.
+- **Decoded from the MP4:** frames 3860, 3930, 3995, 4020, 4830, 5130, 5560, 6380, 9430, 9600 and 11150 (the Runway insert in place).
+- **The contact sheet.**
+
+**Weakest:**
+1. **The employee is a 78 px figure with a 2 px mouth.** She's the room's walkout extra, and two other extras in the crowd wear the same green parka (seeds at x 180 and 438). The mouth, the lit face and the drift point to her, but a newcomer may still hunt for the speaker. A distinct figure would need a new rig, or the shared crowd changed.
+2. **S4.02's return to the wide** for the phone's fall (1.1 s between the MCU and the glass) is a quick cut out and back. I kept C13's gag rather than lose it off-screen.
+3. **S7.02b is the same wide as S7.02** (continuous). The TV is the new subject, but the framing doesn't change.
+4. **Rima's CTO flip** is readable for 5 f before the card's freeze and for 12 f after it. In between it reads in the two-tone print (the lock's clock: the label at 0.8 s, the card at 1.0 s).
+5. **The blank page** is up 1.6 s, squeezed by v5's folder marks after "…why you fired him.".
+6. **The temp track** is this pass's run of the stick mixer, not a mix pass's.
+
+**To re-render** (from the repo root; `S` = the scratch folder):
+
+```sh
+python3 studio/src/episodes/ep01/pixel/act4/cut_mouths.py
+python3 studio/src/episodes/ep01/pixel/tools/lock.py --seg act4 --plan studio/src/episodes/ep01/pixel/act4/plan.json
+bash ops/heavy.sh bash $S/mix33.sh        # the temp mix (the reel's mixer on the v3.3 render plan) + its Act Four cut
+bash ops/heavy.sh bash $S/heavy-run33.sh  # build, check, flash, bundle, glyphs (hourglass=false), hourglass.py --png, picture, sheet, tsc
+bash ops/heavy.sh bash $S/fc33.sh         # flashcheck.py on the MP4, in four chunks
+```
 
 ## V32. The v3.2 round (script draft 8.1; SHOWRUNNER-NOTES 00 and 0: "Mas needs agency", the rise-to-power spine, [calibration](../../../../bible/calibration.md))
 
