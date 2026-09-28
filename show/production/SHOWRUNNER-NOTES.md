@@ -4,6 +4,16 @@
 
 ## Current notes, newest first
 
+00000. **Human, fast, a show (2026-09-28):**
+   - **The notes, verbatim:**
+     - "are we getting any openai development flashback besides the dinner? i would prefere having more to explore at the dinner later and use another partial progress more"
+     - "how do we make people feel more human, even if mas is not fully revealing how can we show he is surprised and has to frantically figure out how to fix things post firing? remember that this is a show, not a documentary. i think social network is good inspiration"
+     - "maybe some dialogue back and forth could also be faster paced to be more natural as well, tho it's not too bad now"
+   - **What it means for Ep1 (v3.5):**
+     - THE WOODROSE is saved for later (from Ep3).
+     - Ep1's development flashback is **Mar 2019, the structure:** the capped profit under the nonprofit's board, and Mas with no equity. He built the board that fires him.
+     - **After the blow, his side is a Social Network-style scramble:** still face, frantic actions, calls, options and terms. Human beats for Gerg, Tasya, Alyi, Neleh and the staff.
+     - **Exchanges get tempo marks:** quick banter at 0.15–0.35 s gaps; Mas's own lines stay unhurried.
 0000. **Motives, flashbacks and milestones (2026-09-28):**
    - **The notes, verbatim:**
      - "for none of the people including mas it is never shown why they're doing that… mas at least should have a bit more"
