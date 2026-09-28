@@ -30,6 +30,10 @@
        - His V.O. hints at a long game, where each move sets up the next.
        - On his return he lets us see he'd built a position nobody could run the company without. He couldn't stop the vote, but his foresight is why he's back.
        - He's a mastermind **by foresight and arrangement**, never by a claimed secret act at a contested moment. No line says he organized the staff letter.
+     - **Nuance (same day):** "make sure in general writing is well nuanced within the context. don't make anything too on the nose"
+       - The mastermind reads through specifics and payoffs, never a declaration. No "plan", "long game", "all along" or "as i intended" in the V.O.
+       - Lines read as ordinary on a first watch and as foresight on the second.
+       - No character explains a scene's subtext.
      - **Season:** Mario and the other key leaders (Tasya, Nole and others) scheme too, and seem to move things more than it appears. They should read as players, not bystanders to the news.
      - "in the intro mas's voice is not replaced": the EL film's intro still plays the Kokoro Mas.
 00. **Nuance, and the spine (2026-09-28):** "more generally, do a pass and make sure no previous advice was taken too extreme. it feels like we're close to what we want to see, but we keep swinging around what is the correct nuance. however mas's lack of agency is very apparent in [v3.1] and makes it feel like watching a random sequence of events then about mr mas's rise to power"
