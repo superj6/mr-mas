@@ -4,6 +4,28 @@
 
 ## Current notes, newest first
 
+0000. **Motives, flashbacks and milestones (2026-09-28):**
+   - **The notes, verbatim:**
+     - "for none of the people including mas it is never shown why they're doing that… mas at least should have a bit more"
+     - "i thought we would have some brief flashback for this. also why was the loopt flashback taken out"
+     - "the first episode is to introduce the ai race, sam's ability to play the game, and a first glimpse at some of the other key people"
+     - "throughout the season we'll want all key characters motivations fleshed out further… still with mas in the forefront"
+     - "it's still not emphasized why mas was fired"
+     - "i don't want flashback to 1993. i was thinking more like earlier in the founding of openai they state they're after agi"
+     - "more flashbacks that reveal the timeline of openai's development before chatgpt as well as other relevant history"
+     - "make sure we have key ai development steps, particularly related to the story's main players. stuff like alphago, atari rl, dota, rubik's cube"
+     - "at least one more related thing in the first episode where we can emphasize more of mas's vision with openai"
+   - **The plans:**
+     - [motives-and-the-race](../bible/motives-and-the-race.md)
+     - [setups-and-payoffs](../bible/setups-and-payoffs.md)
+     - [season-flashbacks-overview](../timeline/season-flashbacks-overview.md): the chronology, and §4, the milestones layer (each milestone owned by a player and entered on a present-day trigger)
+   - **Ep1 (v3.5):**
+     - THE WOODROSE 2015 (the stated aim, AGI; "how far behind are we?"; the napkin; Breakout on a phone)
+     - TPOOL, rebuilt
+     - Mas's Feb 2023 "Planning for AGI and beyond" post, his vision in his own words
+     - Mario's line and Nole's two hands
+     - the board desk's props (the firing's why felt as a question)
+     - The Ep2 podcast is restored as the answer.
 000. **Mas plans and directs; the board is the one thing he didn't plan (2026-09-28, on the v3.3 films):**
    - "one main issue i still have is mas's dialogue is too much just predicting what someone is going to say next, rather than useful nrration/insight into what he's thinking/planning"
    - "the goal should be to have mas look like he is mostly planning and directing things as he intends, with the exception he was not expecting the board [firing]. this should be thinking about higher level goals, not just immediately what people do right away"
