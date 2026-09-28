@@ -129,6 +129,10 @@ def device_chain(y, dev):
         x = np.asarray(pb.Pedalboard([pb.Compressor(threshold_db=-22, ratio=3.0, attack_ms=4, release_ms=80)])(
             x.astype(np.float32), SR), dtype=np.float32).reshape(-1)
         return x
+    if dev == "tv":                                     # a copy of house.tv_speaker() (fastrec; the v3.3 bullpen TV)
+        board = pb.Pedalboard([pb.HighpassFilter(150), pb.LowpassFilter(6500), pb.PeakFilter(1200, 2.0, 1.0),
+                               pb.Compressor(threshold_db=-22, ratio=2.5, attack_ms=5, release_ms=90)])
+        return np.asarray(board(y.astype(np.float32), SR), dtype=np.float32).reshape(-1)
     if dev not in ("call", "monitor"):
         return y
     board = pb.Pedalboard([pb.HighpassFilter(200), pb.LowpassFilter(7000), pb.PeakFilter(1800, 1.5, 1.0),

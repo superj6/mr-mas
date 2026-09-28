@@ -153,7 +153,7 @@ def build_seg(seg, cand):
             prev_old_end, prev_new_end = old_t + old_dur, new_t + new_dur
             kref = r.get("kokoro_ref") or {}
             use_dev = bool(r.get("file_device")) and (kref.get("mode") == "call" or
-                                                      kref.get("device") in ("call", "monitor", "pa"))
+                                                      kref.get("device") in ("call", "monitor", "pa", "tv"))
             kok = {"audio": l.get("audio"), "in": l.get("in"), "t": old_t, "dur": old_dur}
             l.update(t=round(new_t, 3), dur=new_dur, audio=(r["file_device"] if use_dev else r["file"]), **{"in": a_in},
                      words=ew)
@@ -262,7 +262,7 @@ def main():
     ap.add_argument("--set", default="A")
     ap.add_argument("--beds", default=None, help="a JSON file {chapter: {src, label, ...}} for the manifest's beds")
     ap.add_argument("--tag", default="", help="a variant tag (see above)")
-    ap.add_argument("--lock", default="v3", choices=["v3", "v31", "v32"], help="the Kokoro lock: v3 (show/reel/ep01-v3/), v31 or v32")
+    ap.add_argument("--lock", default="v3", choices=["v3", "v31", "v32", "v33"], help="the Kokoro lock: v3 (show/reel/ep01-v3/), v31, v32 or v33")
     ap.add_argument("--fixed", nargs="*", default=None, help="beats with a reserved length (v31 default: S7.13 v31-32.01d)")
     a = ap.parse_args()
     global DST, TAG, SRC, TAKES, LOCK, FIXED
@@ -270,7 +270,7 @@ def main():
     SRC = f"show/reel/ep01-{LOCK}"
     DST = f"show/reel/ep01-{LOCK}-el{TAG}"
     TAKES = "audio/ep01/v3-el/ep01" if LOCK == "v3" else f"audio/ep01/v3-el/ep01-{LOCK}"
-    FIXED = set(a.fixed if a.fixed is not None else (["S7.13", "v31-32.01d"] if LOCK in ("v31", "v32") else []))
+    FIXED = set(a.fixed if a.fixed is not None else (["S7.13", "v31-32.01d"] if LOCK in ("v31", "v32", "v33") else []))
     segs = a.segs or SEGS
     rep = {"set": a.set, "segments": []}
     for s in segs:

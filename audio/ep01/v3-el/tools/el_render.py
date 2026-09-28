@@ -407,6 +407,8 @@ def render_take(row, role, c, rdef, cast, out, man, args, log, bump=0):
     kref = kokoro_ref(row)
     if kref.get("device") == "pa" or row["tag"].lower() == "stage":
         dev = "pa"                                      # v3.2: the hall PA from the stage (fastrec's pa chain)
+    elif kref.get("device") == "tv" or row["tag"].lower() == "tv":
+        dev = "tv"                                      # v3.3: the bullpen TV (fastrec's tv chain)
     elif (row["tag"].lower() in ("monitor", "call") or row.get("device") == "call" or kref.get("mode") == "call"
           or kref.get("device") in ("call", "monitor")):
         dev = "call"
@@ -417,7 +419,7 @@ def render_take(row, role, c, rdef, cast, out, man, args, log, bump=0):
     wav_dev = None
     if dev:
         ydev, _, _ = E.dress(y, seed, tgt, dev=dev)
-        wav_dev = os.path.join(out, "wav-device", take_name + (".stage.wav" if dev == "pa" else ".call.wav"))
+        wav_dev = os.path.join(out, "wav-device", take_name + {"pa": ".stage.wav", "tv": ".tv.wav"}.get(dev, ".call.wav"))
         E.write24(wav_dev, ydev)
     m = E.measure(wav_dry, row["text"])
     asr_txt, asr_ws = E.asr(wav_dry)
@@ -458,7 +460,8 @@ def kokoro_ref(row):
                         + glob.glob(os.path.join(REPO, "audio/ep01/v3/*/lines*.json"))
                         + glob.glob(os.path.join(REPO, "audio/ep01/v31/*/lines*.json"))
                         + glob.glob(os.path.join(REPO, "audio/ep01/v32/*/lines*.json"))
-                        + glob.glob(os.path.join(REPO, "audio/ep01/v32/*/wav/*.restage.json"))):
+                        + glob.glob(os.path.join(REPO, "audio/ep01/v32/*/wav/*.restage.json"))
+                        + glob.glob(os.path.join(REPO, "audio/ep01/v33/*/lines*.json"))):
             try:
                 d = jload(p)
             except Exception:  # noqa: BLE001

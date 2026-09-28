@@ -36,7 +36,7 @@ SEGS = ["coldopen", "act1", "act2", "act3", "act4", "tag"]
 LOCK = sys.argv[sys.argv.index("--lock") + 1] if "--lock" in sys.argv else "v31"      # v31 or v32
 OUT = os.path.join(REPO, f"audio/ep01/v3-el/ep01-{LOCK}")
 OLDS = [os.path.join(REPO, "audio/ep01/v3-el/ep01"), os.path.join(REPO, "audio/ep01/v3-el/ep01-v31"),
-        os.path.join(REPO, "audio/ep01/v3-el/ep01-v32")]        # every EL render; the newest wins
+        os.path.join(REPO, "audio/ep01/v3-el/ep01-v32"), os.path.join(REPO, "audio/ep01/v3-el/ep01-v33")]   # the newest wins
 # the lock's table (audio/ep01/v31/takes.py CUT): id -> (source line, first word index, last word index)
 CUT = {
     "v31-a1-0007": ("e1-a1-10-06", 0, 0),     # Hi!
@@ -53,6 +53,10 @@ CUT_V32 = {
     "v32-a1-0001": ("e1-a1-5-01", 0, 3),      # Okay, the build's green.
     "v32-a1-0006": ("v31-a1-0006", 0, 2),     # House rules, Sydney.
     "v32-a2-0002": ("e1-a2-15-10", 12, 17),   # Would you come and run it?
+}
+# the v3.3 lock's own (audio/ep01/v33/takes.py): Tasya's last sentence, now a clip on the bullpen TV (the tv chain)
+CUT_V33 = {
+    "v33-a4-0002": ("v3-a4-0003", 10, 17),    # We are below them, above them, around them.
 }
 HANDLE, FADE = 0.35, 0.012
 
@@ -73,8 +77,10 @@ def main():
             for l in b["lines"]:
                 tl[l["id"]] = (s, l)
     table = {k: v for k, v in CUT.items() if k in tl}
-    if LOCK == "v32":
-        table.update(CUT_V32)
+    if LOCK in ("v32", "v33"):
+        table.update({k: v for k, v in CUT_V32.items() if k in tl})
+    if LOCK == "v33":
+        table.update(CUT_V33)
     src_rows = {}
     for base in OLDS[: OLDS.index(OUT) + 1]:                  # the newest render (up to this lock's) wins
         for s in SEGS:
@@ -117,6 +123,17 @@ def main():
             os.makedirs(os.path.dirname(outp), exist_ok=True)
             E.write24(outp, y)
             files[kind] = (outp, y, pre - aa)
+        kref0 = R.kokoro_ref(dict(ref_audio=line.get("audio")))
+        tdev = kref0.get("device")
+        if tdev in ("tv", "pa") and "device" not in files:
+            # the lock puts this cut on a device its source never had: the dry cut through that chain, -16 LUFS
+            # (as the house re-stages: the chain on the clean take, then levelled)
+            y0 = files["dry"][1]
+            yd = E.normalise(E.device_chain(y0, tdev), -16.0)
+            outd = os.path.join(OUT, seg, "wav-device", take + (".tv.wav" if tdev == "tv" else ".stage.wav"))
+            os.makedirs(os.path.dirname(outd), exist_ok=True)
+            E.write24(outd, yd)
+            files["device"] = (outd, yd, files["dry"][2])
         outp, y, off = files["dry"]
         m = E.measure(y, line["text"])
         asr_txt, _ = E.asr(y)
@@ -138,6 +155,8 @@ def main():
                          clipped_samples=int((abs(y) >= 0.999).sum()), median_f0_hz=m["median_f0_hz"], f0_range_st=m["f0_range_st"],
                          speech_head_s=m["speech_head_s"], speech_tail_s=m["speech_tail_s"], raw_tail_cut=False)
         new["el"] = dict(new["el"], cut_from=src, chars_sent=0, reused_from=None)
+        if "device" in files:
+            new["device"] = tdev if tdev in ("tv", "pa") else (new.get("device") or "call")
         new["kokoro_ref"] = dict(kref, timeline_in=line.get("in"), timeline_dur=line.get("dur"))
         added.setdefault(seg, []).append(new)
         print(f"{cid:12s} {seg:8s} from {src:12s} {new['duration_s']:5.2f} s  lufs {new['qa']['lufs_i']:6.2f}  "
