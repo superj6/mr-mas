@@ -336,3 +336,14 @@ out/ep01/full-v3/                         the films and mixes (git-ignored)
 8. QA, then the final checks: a newcomer read, the critic's transition table on the new seams, and the sound audit.
 
 **Rules:** everything goes through ops/heavy.sh, at most 3 agents at once, and a commit after each step.
+
+**After the film:** the file reorganization.
+- Showrunner: "did we ever do the file reoganization? if not that should be done when the episode is finished".
+- It was never run. [docs/ORGANIZATION-PLAN.md](../../../../../docs/ORGANIZATION-PLAN.md) (v2, 2026-09-26) is planned and tested on copies, but nothing has moved.
+- **The tree has changed a lot since** (the full-v3 production, the v3.x locks, the EL tooling, the pixel engine). So the steps are:
+  1. Re-measure the tree and revise the plan.
+  2. Take a checkpoint commit.
+  3. Show the showrunner a short summary of the moves.
+  4. Run it phase by phase, with no passes running.
+  5. Smoke-test the pipelines (a lock build, a mix, a picture render and assembly).
+  6. Commit each phase.
