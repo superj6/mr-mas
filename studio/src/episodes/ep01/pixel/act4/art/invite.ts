@@ -40,22 +40,32 @@ export const attendee = (b: Buf, cx: number, cy: number, kind: 0 | 1 | 2 | 3, f:
 };
 
 // ------------------------------------------------------------------ S1.02: the join corner under his hand
+const ARROW0 = ['#.......', '##......', '#o#.....', '#oo#....', '#ooo#...', '#oooo#..', '#ooooo#.', '#ooo####', '#o#o#...', '##.#o#..', '#..#o#..', '....##..'];
 /** join-corner's tile preview: the four board tiles (40 x 23), in the kit's order */
 const CORNER_TILES = (() => { const S = JOIN_CORNER.screen; return [[S.x0 + 10, S.y0 + 18], [S.x0 + 54, S.y0 + 18], [S.x0 + 98, S.y0 + 18], [S.x0 + 32, S.y0 + 44]] as Array<[number, number]>; })();
 const cornerGlare = (b: Buf, x0: number, y0: number, w: number, h: number) => { // join-corner's glare band, re-laid on the repainted tiles
   const S = JOIN_CORNER.screen;
   for (let y = y0; y < y0 + h; y++) for (let x = x0; x < x0 + w; x++) { const u = x - S.x0 + (y - S.y0) * 0.7; if (u > 120 && u < 128 && bayer(x, y) < 0.25) b.set(x, y, PAL.N4); }
 };
-export const drawJoinCornerInvite = (b: Buf, f: number, o: Parameters<typeof drawJoinCorner>[1] = {}) => {
-  drawJoinCorner(b, o);
+/** join-corner's tiles (40 x 23 each) and the laptop's arrow at `arrow` (its tip; the kit draws its own only 'beside' or
+ *  'on' JOIN), the tile under it lit (`hover`) */
+export const CORNER_TILE_BOX = CORNER_TILES.map(([x, y]) => [x, y, 40, 23] as [number, number, number, number]);
+export interface CornerInviteOpts { pointer?: 'beside' | 'on' | 'none'; glow?: 0 | 1 | 2; click?: boolean; arrow?: [number, number]; hover?: number }
+export const drawJoinCornerInvite = (b: Buf, f: number, o: CornerInviteOpts = {}) => {
+  drawJoinCorner(b, {pointer: o.arrow ? 'none' : o.pointer, glow: o.glow, click: o.click});
   CORNER_TILES.forEach(([tx, ty], i) => {
     rect(tx, ty, 40, 23, b.ink(PAL.N3));
     attendee(b, tx + 20, ty + 11, i as 0 | 1 | 2 | 3, f);
     cornerGlare(b, tx, ty, 40, 23);
   });
+  if (o.hover !== undefined && o.hover >= 0) {
+    const [x, y, w, h] = CORNER_TILE_BOX[o.hover];
+    rect(x - 1, y - 1, w + 2, 1, b.ink(PAL.C4)); rect(x - 1, y + h, w + 2, 1, b.ink(PAL.C4)); rect(x - 1, y, 1, h, b.ink(PAL.C4)); rect(x + w, y, 1, h, b.ink(PAL.C4));
+  }
+  if (o.arrow) { const [ax, ay] = o.arrow; ARROW0.forEach((r, j) => [...r].forEach((ch, i) => { if (ch === '#') b.set(ax + i, ay + j, PAL.N0); else if (ch === 'o') b.set(ax + i, ay + j, PAL.P2); })); }
 };
 /** S1.02 as one call: join-corner's drawNudgeJoin (the corner composited under his hand and sleeve), with the icons */
-export const drawNudgeJoinInvite = (b: Buf, step: NudgeStep, f: number, o: Parameters<typeof drawJoinCorner>[1] = {}) => {
+export const drawNudgeJoinInvite = (b: Buf, step: NudgeStep, f: number, o: CornerInviteOpts = {}) => {
   const bare = new Buf(INS_W, INS_H, PAL.N0);
   drawNudgeInsert(bare, 'suite', 'gone');
   drawNudgeInsert(b, 'suite', step);
@@ -67,6 +77,9 @@ export const drawNudgeJoinInvite = (b: Buf, step: NudgeStep, f: number, o: Param
     if (b.c[i] === bare.c[i] && lay.c[i] !== bare.c[i]) b.c[i] = lay.c[i];
   }
 };
+/** the arrow's tips in the corner framing: beside JOIN (the kit's 'beside'), on JOIN ('on'), over each attendee tile */
+export const CORNER_ARROW = (() => { const J = JOIN_CORNER.join; return {beside: [J.x + J.w + 7, J.y + 3] as [number, number], on: [J.x + 30, J.y + 6] as [number, number]}; })();
+export const cornerTileTip = (i: number): [number, number] => [CORNER_TILES[i][0] + 26, CORNER_TILES[i][1] + 13];
 
 // ------------------------------------------------------------------ S1.06: the click insert (kits/inserts-mas.ts drawClickInsert)
 const CS = 7.4, CE = 50; // inserts-mas's own hand size and eye distance for this framing (private there)

@@ -1,12 +1,168 @@
-# Ep1 v3: Act Four's shots (`v3-shots-act4`, 2026-09-27)
+# Ep1 v3.1: Act Four's shots (`v3-shots-act4`, 2026-09-27)
 
-> **Status: built, checked and rendered. Nothing committed.** Track P2 of [PLAN.md](PLAN.md) for the `act4` segment (8:43.8, "the Blip, told twice"), on the final v3 stick lock.
+> **Status: v3.1 built, checked and rendered. Nothing committed.** Track P2 of [PLAN.md](PLAN.md) for the `act4` segment ("five days, told twice", **8:37.75**), on the **final v3.1 stick lock** (`show/reel/ep01-v31/ep01-v31-act4.json`, [lock-v31.md](lock-v31.md)). **§V31 below is the current state.** §1–§8 are the v3 round's record; the v3 lock they describe is superseded, and `pixel/act4/data.ts` is now the v3.1 lock.
 >
-> **What it is:** a port. Act Four v5's 83 layouts (`studio/src/episodes/ep01/act4/animatic/shots5.ts`, through its own `drawShot5`, the same way the pipeline's `act4-v5` test runs them) draw every shot v3 kept, on the v3 lock's frames. Only what v3 changed is drawn anew: 21 of the 79 shots. Nothing in `act4/animatic`, `pixel/act4-v5`, `shared/pixel` or the art passes' registries was edited. The v3 art is three new modules in `pixel/act4/art/`, as additive opt-in states.
->
-> **Nothing here has been watched or heard.** Stills and crops were looked at (listed in §6). The render's numbers are measured.
+> **Nothing here has been watched or heard.** Stills, crops and frames decoded from the render were looked at (§V31.6). The render's and the checks' numbers are measured.
 
-## 1. Files
+## V31. The v3.1 round (script draft 7; the showrunner: "it should feel like a sudden shock to viewer he's fired, but the viewer just becomes aware through the plan, the video call is a bit hard to understand what cancel means")
+
+### V31.1 What changed, and where
+
+**The lock:** `tools/lock.py --seg act4 --plan pixel/act4/plan.json` on the v3.1 timeline gives **77 shots from 78 beats, 12,426 f (8:37.75)**, 105 lines (5 of them the inner voice), 7 posts and 44 on-camera mouths. Every check passes.
+- **The plan** still reads lock_v5.py's tables and the v4 base lock. Its `shots` entries are updated for v3.1: S1.07's `freeze` on "company" +3; S1.09 now opening after the click; the Remove click (`v31-S1.08d`); S3.04's jacket on Rima's first line; S5.09b's `type` after "keep building." +12; S5.09-back's glance back to v5's anchor (after "case").
+- **Text kinds:** the board side's `ALYI removed MAS MANALT from the meeting.` is a toast, and `TTEMME / INTERIM CEO, TAKE TWO · CHAT: LIVE` is a card.
+- **The temp track** is the v3.1 mix pass's `out/ep01/full-v3/mix-v31/act4-mix.wav`: exactly 12,426 f, repo-relative. The v3.1 stick's reel-work mix is gone.
+- **Episode timecode:** 17820 (12:22:12).
+- **D6** (the Remove click to the buzz) is **5.08 s on this lock**, not v5's 3.7 s. The check's range was widened to what lock-v31 §5 sets, and the length is the lock's.
+- **Three cut takes had no mouth tracks** (v31-a4-0001 from a5-27-01, v31-a4-0005 from a5-27-35, v31-a4-0007 from a5-29-05). `pixel/act4/cut_mouths.py` gives each the source take's track, moved onto the cut file's clock. The shift is measured from the first word (−0.533, −2.648, −0.120 s). It writes `takes-v31-cut-mouths.json`, the last takes file in the plan.
+
+**The layouts:** 39 `V` (changed) and 38 `P` (v5's as it was). **Stand-ins: 0.**
+
+| Shot | s | What it draws now |
+|---|---|---|
+| S1.01 | 6.21 | the suite and race weekend (v3's), no V.O. now: the arrival as ordinary life (the truck, the shiver, his still glass), the drift over the whole shot |
+| **v31-S1.01b** | 3.21 | **new** (`art/v31 drawWindowTwoShot`). A two-shot at the suite's window: the suite's own view, race-dressed, one step soft. A generic race car (plain red, a blank number disc, no livery) on the near straight in whole-px steps, two passes. MAS's bust turned to the Orb. The Orb's iris follows the car, holds where it lost it, and snaps back to find it. He blinks. **Not drawn:** the sip |
+| S1.02 | 7.00 | **S1.06 folded in.** The nudge ECU with the JOIN corner and the four attendee circles; his hand leaves; the laptop pings (JOIN's halo in held steps). On "gerg's" the arrow steps across the four icons, on "alyi" it goes back to the door, on "probably" beside JOIN; then onto JOIN, and the click on its sound. The V.O. rows on shadow |
+| S1.07 | 7.58 | v5's grid **without the NELEH card or the Cancel dialog**: five tiles with their own name labels. **ALYI's first sentence on camera, lip-synced** (`art/v31 alyiTileLit`: the board side's lit doorway drawing with its viseme mouth; v5's his-side tile, his reflection, hid the mouth under the glass's bar). On "company." the four board tiles freeze, his mouth mid-word, and the Wi-Fi drops 3 → 2 → 1 bars. His own tile stays live |
+| **v31-S1.08d** | 2.38 | **new** (kits/act4-v31 `drawRemoveDialog`): **the HARD CUT, bright.** The frame goes cream, the dialog opens in two held outline steps (`Remove MAS MANALT` / `from the meeting?` · `Remove`) and holds to read. ALYI's arrow steps on from his tag's time (4 held positions) and clicks on `dialog_ok_click`; the pressed button holds to the cut. The one silence starts on the click |
+| S1.09 | 3.29 | v5's drop, now after the Remove we saw. His tile falls and comes apart (the GLYPH dissolve, 28 Remotion frames spliced), and the four close up, **still frozen as S1.07 froze them** (Alyi lit). Wi-Fi at one bar; the notice |
+| S1.12 | 4.63 | v3 26.09 copied: the four frozen from S1.07's freeze (not live until "super.") and Alyi lit; the fallaway; the neon on his rim |
+| S2.02 | 2.58 | **S2.04 folded in** (the TPOOL flash is cut): the eye-light on his thumb, then marks 1, 2 and 3 = his thumb, the last on `render_front_sweep` (v5's S2.02 then S2.04, one framing) |
+| **v31-S3.00p** | 4.63 | **new** (kits/act4-v31 `drawNelehDeskHigh`). The rewind lands on **her desk from above at 11:52**: MADA joined early, three slots waiting; THE PLAN unfolded; her pen ticking on it while she says "Once more, before the others join.". Her card sits on the right (the laptop's early tile stays in view). Then the push into the paper: an 8 f bayer dissolve onto S1.03's first sheet frame, her pen by her plate |
+| S1.03 | 11.75 | **THE PLAN on the board's side.** v5's copied, with **GERG / CHAIR** (`art/v31 planChairV3`: the plate re-drawn from the same sheet and ink) and **her figure stepping out of her own NELEH chair** on the stamp and walking to the sheet's edge before her first line |
+| S1.04 | 9.50 | v3's (BILLIONS IN, EQUITY: 0 alone); Mada's line from his spinner icon, as v5 |
+| S1.05 | 2.79 | the path with **no curl or tear**, then the pull back: a 4 f dissolve landing on the `paper_whip`, onto her desk from above at 11:59, her pen on step 1 |
+| S3.00a–S3.06 | | ports (the lock's shorter arrival and grid). S3.01's notice reads `ALYI removed MAS MANALT from the meeting.` from the lock. **Not drawn:** "his reflection's hand moves, once" in Alyi's tile (no such state in call-boardside) |
+| S3.04b · S3.07 · S4.07 · S4.15 · S5.05 · S5.07b · S5.09b · S7.08 | | **the face lights** (kits/face-light `faceKey`, skin in the head's rect only, the lit edge one more). **2 steps** on Neleh, Alyi, Mada and Gerg. **1 step on Mas:** at 2 his cyan-lit face went flat and pale in the crops, and at 1 it reads with its features |
+| S4.02 | 18.88 | v3's wide (phone A falls: clack), then **the MCU·glass cutaway** on Alyi's line (kits/act4-v31 `drawAlyiGlass`, lip-synced) |
+| S4.09 | 15.63 | **Sunday:** kits/act4-v31 `drawSundayOTS`, the phones in a row (STAFF · STAFF · INVESTORS · INVESTORS) buzzing in turn, and the ticker `INVESTORS PUSH TO BRING MANALT BACK` crawling in. His badge post is moved above the ticker (it had covered the post's first line) |
+| S4.10 | 4.29 | v3's, and **Ttemme's card**: the room frozen in two tones while the lock's card text is up (`blipCard` TTEMME / INTERIM CEO, TAKE TWO · CHAT: LIVE) |
+| S5.09 | 14.88 | **He calls Gerg:** v5's OTS copied with kits/act4-v31 `callOutPainter` on the monitor (the app, GERG pressed, `Calling…` under the RING). On `dialog_ok_click` (the pick-up) v5's tile opens and Gerg is there. **Weak:** the app and the press last about 4 f before the ring, because the RING sound sits at 0.2 s |
+| S5.06 | 22.79 | v3's (the letter, its ALYI). **Not drawn:** "the letter slides over" (it cuts in) |
+| S6.01 | 4.50 | v5's avalanche, with **the letter's header strip on the first employee tile** (`art/v31 firstTileStrip`: kits/act4-v31 `letterHeaderStrip`, the short form `STAFF LETTER` where the board's tiles leave less room). It follows the tile down, and the pour buries it |
+| S7.03 | 2.79 | v5's MCU; the slate ripple now answers "Down here." |
+| **v31-S7.03b** | 2.58 | **new** (kits/act4-v31 `drawTuesdayInvite`): his desk, the two badges, the invite `Board · Tue 10:00 PM`, his thumb on Accept on the tap's sound, accepted |
+| S7.06 | 9.13 | **re-staged on the lock's sounds.** The door; TERB; **the FREEZE on `freeze_hit_F` (k6)** with his card while Mas walks through in colour to his side; the unfreeze; **Terb's dry squeeze on `extinguisher_pin` (k67)** (kits/act4-v31 `drawDrySqueeze`: click, nothing, the 1 px kick) and he frowns; **Mas beside him pulls the pin** and pockets it. Then v5's after: his line and the look-around turns. **Deviation:** the caption has the click before the freeze, but the lock's sounds put the freeze at 0.25 s and the click at 2.8 s. The picture follows the sounds. To get the caption's order, the lock owner can move `freeze_hit_F` after `extinguisher_pin` |
+| S7.07 | | v3's re-anchored spray (a port) |
+| S7.07-cont | 17.38 | v3's copy, and on "Gerg comes back too." **Terb writes it in** (kits/act4-v31 `drawTerbWriting`, 4 held steps, his room mouth), composited behind the table and the two men the way the 2S composites him |
+| S7.13 | 11.00 | k0–127: v5's layout (`fall` re-anchored to shatter +10, so k194 is the heap the insert's last frames hold). **k128–263: the Runway insert**, spliced as 136 PNGs from `studio/src/dev/genvideo/runway/hourglass.py --png … --s713 11181`. The segment declares them as browser frames (option `hourglass`, default on; the Remotion GLYPH step runs with it off) |
+| S8.03 | 3.00 | **the lobby's greyed Remove:** v5's copied with kits/act4-v31 `drawRemoveDialog` (field `screen`). Remove greys a dither step a beat; the empty-tagged arrow steps on and clicks on the bonk; the button doesn't go down; the shake |
+| cut | | S1.06 (folded into S1.02), S1.08, S2.03, S2.04 (folded into S2.02), S7.07b, S8.09b. **The v3 S7.07b nameplate state is unused now** |
+
+**Kept from v3:**
+- no side badges, and no WHAT THEY DIDN'T KNOW card;
+- plates cut to names;
+- race weekend on the Strip, and the four attendee circles;
+- the S1.04 text states;
+- C13's falling phone and C14's split;
+- the letter's ALYI;
+- Mas's inner voice never moves his mouth (the guard over every layout). On this lock all 5 V.O. lines have face null.
+
+### V31.2 New and changed files
+
+- **`pixel/act4/shots.ts`:** rewritten for v3.1, with the v3 layouts carried over where they still hold.
+- **`pixel/act4/plan.json`:** the v3.1 lock plan.
+- **`pixel/act4/cut_mouths.py` → `takes-v31-cut-mouths.json`:** the cut takes' mouth tracks.
+- **`pixel/act4/art/v31.ts` (new):** the window two-shot, the Wi-Fi bars, GERG / CHAIR, the first tile's strip, Alyi's lit tile.
+- **`pixel/act4/art/invite.ts`:** the join corner gains the arrow and hover knobs.
+- **Everything else is imported:**
+  - kits/act4-v31 (the v3-art-b pass);
+  - kits/face-light (art-a);
+  - the Runway pass's hourglass.py, run with this lock's S7.13 start;
+  - v5's modules.
+
+  Nothing in those was edited.
+
+### V31.3 Checks
+
+1. **`node r.cjs check`:** exit 0. 77 shots, 77 layouts, **0 stand-ins**, 0 problems, no V.O.-over-rail notes. The browser frames are the 28 GLYPH frames plus S7.13's 136.
+2. **The lock's checks all pass** (§V31.1), including "every on-camera mouth has a track", after the cut-take mouths.
+3. **Photosensitivity** (`flash.ts`, WCAG 2.x general and red flash, as §4.3): **at most 2 flashes in any 1 s** (in one window at S5.08, as in v3), **0 red. Pass.**
+   - **The hard cut to the Remove dialog** counts as one transition into cream (S1.08d k0) and one out (S1.09 k0), 57 frames apart. That is one flash across 2.4 s.
+   - **Ttemme's 2-TONE card** is one flash.
+   - **The measure covers the pipeline's own frames.** For S7.13 k128–263 that means the v5 drawing, not the Runway insert. The insert measured **0 flashes** in the Runway pass's check (runway.md §11.3).
+4. **The GLYPH step** (Remotion, with `hourglass` off): its plain frames are identical to Node's, and its 28 GLYPH frames are identical outside the room area. 0 missing.
+5. **`tsc --noEmit -p .`:** 20 errors, **none in `pixel/act4/`** or anything it imports: all are in `src/dev/realism/bake` and the Runway pass's `src/dev/genvideo/runway/{pxframes,streamframes}.ts`.
+6. **The V.O. mouth guard:** all 5 V.O. lines are face null on this lock, so no mouth is drawn for them.
+
+### V31.4 Render
+
+The heavy steps ran as one job through `ops/heavy.sh` (`scratchpad/v3-shots-act4/heavy-run31.sh`):
+- build and check;
+- `flash.ts`, 369 s;
+- `bundle`, then `glyphs --opt hourglass=false` (the 28 GLYPH frames);
+- `hourglass.py --scratch … --out … --png $S/glyph31 --s713 11181`, which wrote the 136 insert PNGs, numbered by segment frame;
+- `picture --jobs 2` with `GLYPH_DIR`: **149 s wall**, 19.4 ms a frame per worker;
+- the contact sheet;
+- `tsc`.
+
+**The result:** `out/ep01/full-v3/picture/act4.mp4`.
+- **The file:** H.264 1920 × 1080, **12,426 frames, 517.75 s (8:37.75)**, with the v3.1 mix's Act Four as AAC temp audio of the same length. `act4.srt` sits beside it.
+- **Browser frames spliced:** 164 (28 GLYPH + 136 hourglass), 0 missing, 0 stand-in marks, 0 failed layouts, **0 stand-ins**.
+- **The sheet:** `out/ep01/full-v3/picture/act4-sheet.png`.
+- **The hard cut, measured on the decoded MP4:** frame 575 (S1.07's last) has a mean luma of 20.9 / 255, and frame 576 (the dialog's first) 172.5. The cut sits on the shot boundary.
+- **Deleted from scratch afterwards:** the insert's PNGs, the Remotion bundles, the old v3 mix cut and the hourglass intermediates (the disk had 5.5 GB free). hourglass.py re-makes the PNGs.
+
+**To re-render** (from the repo root, then `studio/`; `S` = the scratch folder):
+
+```sh
+python3 studio/src/episodes/ep01/pixel/act4/cut_mouths.py
+python3 studio/src/episodes/ep01/pixel/tools/lock.py --seg act4 --plan studio/src/episodes/ep01/pixel/act4/plan.json
+bash ops/heavy.sh bash $S/heavy-run31.sh      # build, check, flash, bundle, glyphs (hourglass=false), hourglass.py --png, picture, sheet, tsc
+```
+
+### V31.5 What's weakest (v3.1)
+
+1. **The Remove dialog lives or dies in motion.** The picture does what the brief asks:
+   - a hard cut to cream (a luma spike from the call's ~11%);
+   - the dialog readable for about 1.1 s before the arrow;
+   - the click on the lock's sound, into the silence.
+
+   Whether it lands as a shock is for someone watching with the mix.
+2. **S5.09's call out is nearly instant:** the app and the press last 4 frames before the ring, because the lock's RING is at 0.2 s. The V.O. carries the intent. A longer app beat needs the lock to move the ring.
+3. **S7.06's order** follows the lock's sounds, not the caption (V31.1).
+4. **v31-S1.01b is a bust in front of the view.** It isn't a staged two-shot at the glass: there's no rig for Mas standing at a window, and the sip isn't drawn. The car is 18 px and passes in under a second.
+5. **Face lights are rect-based:** any skin-family pixel in the head's rect steps up. The crops showed only faces (and Neleh's neck) moving.
+6. **Not drawn:** Alyi's reflection's hand in S3.01, and the letter sliding over in S5.06.
+7. **The hourglass insert** is the Runway pass's picture, unchanged. The tail's pixel chat corner still says F there (runway.md §11.5 item 7).
+
+### V31.6 What I looked at (stills, crops and decoded frames, not motion)
+
+**The new opening, frame by frame, as the lead asked** (native frames at 2x):
+- S1.01b at k1, 13, 26, 41, 51, 66, 76;
+- S1.02 at k6, 36, 44, 74, 114, 146, 156, 162, 164, 167: the nudge, the ping, the arrow's path, the click;
+- S1.07 at k16, 66, 106, 144, 147, 151, 166, 181, plus a 3x crop of Alyi's tile over his line (k76–96, the mouth moving) and at the freeze;
+- **the join into the Remove card:** S1.07 k181 → v31-S1.08d k0, 1, 3, 24, 30, 36, 42, 46, 56;
+- S1.09 k1, 17, 47, 78.
+
+**The board side's arrival:**
+- S2.02;
+- v31-S3.00p at k6, 46, 86, 90, 101, 110;
+- S1.03 k1, 15, 55, 275;
+- S1.04; S1.05 k25, 60.
+
+**The rest:**
+- S3.01's notice;
+- S4.02's cutaway;
+- S4.09 (before and after moving the post);
+- S4.10's card;
+- S5.09's ring and open;
+- S6.01's strip;
+- v31-S7.03b;
+- S7.06 k22, 62, 82, 102, 122, 152;
+- S7.07-cont's writing;
+- S8.03;
+- every face light, with Mas's at 1 and 2 steps side by side;
+- the V.O. frames (S1.02, S5.03, S5.09, S5.09b);
+- the contact sheet;
+- **frames decoded from the rendered MP4** (the bundled ffmpeg, by time):
+  - v31-S1.01b, S1.02, S1.07 (Alyi speaking, lit);
+  - the cut: S1.07's last frame against S1.08d's first, measured;
+  - S1.08d at the arrow and the click, S1.09;
+  - the Runway insert in context (the stream, the sand standing, back to the pixel heap);
+  - S8.03.
+
+## 1. Files (the v3 round)
 
 | What | Where |
 |---|---|
