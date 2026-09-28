@@ -160,3 +160,5 @@ out/ep01/full-v3/                         the films and mixes (git-ignored)
   - unintended out-of-the-blue beats, and Mas's agency
   - sound transitions measured at every cut, every chapter seam and the designed silence
 - **It runs on the v3.1 film** (its findings feed v3.2) **and again on the v3.2 film as the last gate** before the Drive swap.
+
+**2026-09-28 (showrunner):** "don't worry about the drive anymore". No more Drive uploads or shares. The v3.2 films stay local at out/ep01/full-v3/. (The v3.1 swap had already finished: the v3.1 films were uploaded and shared, and the v3 films moved to the Drive trash.)
