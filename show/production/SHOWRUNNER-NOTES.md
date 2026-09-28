@@ -4,6 +4,9 @@
 
 ## Current notes, newest first
 
+00. **Nuance, and the spine (2026-09-28):** "more generally, do a pass and make sure no previous advice was taken too extreme. it feels like we're close to what we want to see, but we keep swinging around what is the correct nuance. however mas's lack of agency is very apparent in [v3.1] and makes it feel like watching a random sequence of events then about mr mas's rise to power"
+   - **Apply each note proportionately.** A note usually names a symptom in one place. Fix that, then check the scope before any broad change. The balanced target for every dimension we've swung on is in [calibration](../bible/calibration.md) (being written); it governs over any single older note.
+   - **The episode is Mas's rise to power**, a spine of cause and effect driven by his moves. It isn't a chronicle of events: every scene is his step, or a reaction to one.
 0. **Mas needs agency, not narration (2026-09-28):** "also in the previous version, it felt like a bunch of altman inner thoughts felt forced. i think an issue that made viewer have less connection with mas is that it is not really showing him take any action, just existing through the moments. if he is the main character he should be showing agency"
    - **The lead drives the plot.** In every act Mas decides something and acts on it on screen, and the next scene follows from his move. Events don't just happen to him.
    - **Actions come from the public record or from invented small stakes,** never from invented motives at contested moments. He calls, asks, pushes, signs, walks in, posts and sets terms. He does **not** orchestrate the staff revolt.
