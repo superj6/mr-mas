@@ -9,6 +9,11 @@ Tasya's Rhodes gives one soft chord on the door and a second on "desk" over the 
 under "leave it open.", then the felt takes the landlord's chord back WITHOUT ITS THIRD and settles C4 -> F4 over it,
 ringing out to the avalanche's first frame.  Nothing below C3 (the dark room's drone).
 
+v3.2 (script draft 8.1): "gerg never waits to be asked." is cut (the pad alone holds the look); the MACROSOFT badge
+slides under the door after "Due on the first.": the floor holds through the slide and the tick against his chair
+leg, and when he sets the badge down beside the GUEST lanyard, unworn, the floor's third (vln1 C5) leaves, so the
+chord is already open when the felt takes it back without its third after "leave it open."
+
 The grid: 96 BPM, swung, bar 4 on the first heart.  Nothing here was listened to.
 """
 from __future__ import annotations
@@ -176,7 +181,7 @@ def build():
 
     # ---------------------------------------------------------------- the Build returns; the look (the held note)
     back = c.B('S5.09-back')
-    v23 = L['v3-vo-23']
+    v23 = L.get('v3-vo-23')                            # (v3.2 cuts "gerg never waits to be asked.")
     what, again = L['a5-29-16'], L['a5-29-17']
     look = c.B('S5.09b')
     v22 = L.get('v3-vo-22')                            # (v3.1 cuts "he's typing like it's launch night.")
@@ -200,8 +205,9 @@ def build():
     tt, k3 = build16(cue, again['end'] + 0.25, 12, 0.34, stop_at=look, felt_every=4, felt_vel=0.15)
     cue.mark(tt, f'S5 the Build: a pass cut DEAD on his look up after {k3}')
     cue.mark(look, 'S5 HIS LOOK UP: the Build stops dead; the pad (Ab3/Eb4) holds (a ring-out)', hit=False)
-    fch(['Db3', 'Ab3', 'C4', 'F4'], v23['on'] - 0.5, v23['end'] - v23['on'] + 0.9, 0.19)   # "gerg never waits..."
-    cue.section('S5 the Build returns; the V.O.; the look (the held note)', back, c.B('S5.11'))
+    if v23:
+        fch(['Db3', 'Ab3', 'C4', 'F4'], v23['on'] - 0.5, v23['end'] - v23['on'] + 0.9, 0.19)   # "gerg never waits..."
+    cue.section('S5 the Build returns; the look (the held note)', back, c.B('S5.11'))
 
     # ---------------------------------------------------------------- the door: Tasya's floor; two Rhodes chords
     door = c.B('S5.11')
@@ -214,21 +220,37 @@ def build():
              (f1, f2 + 0.7, {'vc': 'C3', 'vla': 'E4', 'vln2': 'G4', 'vln1': 'B4'}, 'Cmaj9'),
              (f2, f3 + 0.7, {'vc': 'E3', 'vla': 'E4', 'vln2': 'Ab4', 'vln1': 'B4'}, 'Emaj9'),
              (f3, leave['on'] - 0.25, {'vc': 'Ab3', 'vla': 'Eb4', 'vln2': 'G4', 'vln1': 'C5'}, 'Abmaj9')]
+    # v3.2, the MACROSOFT badge under the door (S5.11): it slides in and ticks against his chair leg with the floor
+    # holding (the offer, held open); when he sets it down beside the GUEST lanyard, square, and doesn't put it on,
+    # the floor's third leaves (vln1's C5): the chord goes open, the offer considered with his hands (the felt's
+    # chord after "leave it open." is the same one without its third)
+    names_ = [x['name'] for x in c.SOUNDS if x['beat'] == 'S5.11']
+    badge = c.snd('S5.11', 'folder_slide') if 'folder_slide' in names_ else None
+    setdown = None
+    if badge is not None:
+        taps = [x['at'] for x in c.SOUNDS if x['beat'] == 'S5.11' and x['name'] == 'key_tap_space' and x['at'] > badge]
+        setdown = taps[0] if taps else None
     for i, (t0, t1, voices, name) in enumerate(FLOOR):
         for inst, p in voices.items():
             if i == 0 and inst in ('vc', 'vla'):
                 continue
             last = i == len(FLOOR) - 1
-            cue.n(inst, p, t0, t1 - t0, 0.21 if inst in ('vc', 'vla') else 0.2, art='sus', att=0.9,
+            t1_ = setdown if (last and inst == 'vln1' and setdown is not None and t0 < setdown < t1) else t1
+            cue.n(inst, p, t0, t1_ - t0, 0.21 if inst in ('vc', 'vla') else 0.2, art='sus', att=0.9,
                   rel=1.1 if last else 0.6, lp=2600)
         cue.mark(t0, f"S5 Tasya's floor: {name} (silent attack)", hit=False)
+    if setdown is not None:
+        cue.mark(badge, 'S5 the MACROSOFT badge slides under the door: the floor holds (the offer, open)', hit=False)
+        cue.mark(setdown, 'S5 he sets the badge down beside the lanyard, unworn: the floor\'s third (C5) leaves; the '
+                          'chord goes open', hit=False)
     key = c.snd('S5.11', 'key_tap_space')
     tr1 = key + 0.2 if key + 0.7 < c.Lon('a5-29-20') else door + 0.03
     cue.ch('rhodes', ['G3', 'Bb3', 'C4', 'Eb4'], tr1, 2.0, 0.3, roll=0.008)
     cue.ch('rhodes', ['G3', 'Bb3', 'C4', 'Eb4'], desk, 2.2, 0.3, roll=0.008)
     cue.mark(tr1, "S5 the door: one soft Rhodes chord (Tasya's)")
     cue.mark(desk, 'S5 home: Abmaj9 on "desk" (the second Rhodes chord)')
-    cue.section("S5 the door: Tasya's floor (Ab -> C -> E -> Ab), two Rhodes chords", door, c.B('S5.12'))
+    cue.section("S5 the door: Tasya's floor (Ab -> C -> E -> Ab), two Rhodes chords" +
+                ('; the badge (the third leaves)' if setdown is not None else ''), door, c.B('S5.12'))
 
     # ---------------------------------------------------------------- "leave it open.": the chord back, no third
     tr = leave['end'] + 0.2

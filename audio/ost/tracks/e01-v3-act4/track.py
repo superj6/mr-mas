@@ -7,35 +7,41 @@ full band (the avalanche), a triumph one size too big (Monday and the return), s
 handing off to the tag.  Act Four v5's score (tracks/e01-act4-v5/, read-only) and the v3 sample's cues (audio/reel/
 ep01-v3-sample/music/, read-only) are the material, copied here and re-spotted to the v3 lock.
 
-  v3.1 (the final lock, show/reel/ep01-v31/; script draft 7): his side opens on the shock and THE PLAN moves to the
-  board's side.  Seven cues:
+  v3.2 (the final lock, show/reel/ep01-v32/; script draft 8.1): v3.1's shock opening unchanged; his 1:46 PM post
+  after the blow (no score), the lobby told twice inside the board's side, the badge under the door.  Seven cues:
   cue (module)            segment s (kokoro)   what
   S1  cue_noon.py         0 -> 25.90           the suite's ordinary life (a sul-tasto pedal, his felt Water Line bar
                                                with the nudge on his glass), LEVERAGE low from the JOIN click, thinned
                                                to its pedal under Alyi's sentence, back up for the bright Remove dialog
                                                (Step Four on the pointer), DEAD STOP on the Remove click (D6)
-      -                   25.90 -> 37.21       no score: D6 to the buzz, then "super." in the suite's air
-  S2  cue_night.py        37.21 -> 46.42       the felt's open fifth on the carve, the nudge before "i don't keep
+      -                   25.90 -> 41.41       no score: D6 to the buzz, "super." in the suite's air, his 1:46 PM post
+                                               and the fall to night (the suite's air, then the drone: SFX)
+  S2  cue_night.py        41.41 -> 50.63       the felt's open fifth on the carve, the nudge before "i don't keep
                                                score.", the pedal under the Orb's count, the settle, THE REWIND
-  PLAN cue_plan.py        46.42 -> 75.08       Neleh's desk at 11:52: her clockwork on her card, the Blueprint pad
+  PLAN cue_plan.py        50.62 -> 79.29       Neleh's desk at 11:52: her clockwork on her card, the Blueprint pad
                                                under her pointer, the waltz's walk-offs, the labels, the zeros, the
                                                path, the stuck loop and the tape-stop into the 11:59 tick
-  S3-4 cue_board.py       75.08 -> ~266        PROCEDURE, lighter (the first round's), from the 11:59 tick through the
-                                               Sunday reversal to "Step four, Mada?" and the held C into the dark room
-  S5  cue_two_am.py       263.54 -> 362.67     2 AM (the first round's): the Water Line warm, the count, the Build with
-                                               Gerg (it stops dead on his look), the letter, Tasya's floor, the open 6/9
-  S6  cue_avalanche.py    362.67 -> 376.84     SET-PIECE SWING, the one full band, its peak about 2 dB down, DEAD STOP
+  S3-4 cue_board.py       79.29 -> ~260        PROCEDURE, lighter (the first round's), from the 11:59 tick (Step Four
+                                               in eighths on her pen's faster run) through the split's dial tone;
+                                               THE LOBBY, his side (v32-S5.00): no score, ONE FELT NOTE (the nudge G4)
+                                               on his look up at their camera; the Sunday reversal (a pizz per phone,
+                                               her clockwork only in the gaps) to "Step four, Mada?" and the held C
+  S5  cue_two_am.py       258.33 -> 356.00     2 AM (the first round's): the Water Line warm, the count, the Build with
+                                               Gerg (it stops dead on his look), the letter, Tasya's floor; the
+                                               MACROSOFT badge under the door: the floor's third leaves as he sets it
+                                               down unworn; the open 6/9 after "leave it open."
+  S6  cue_avalanche.py    356.00 -> 370.17     SET-PIECE SWING, the one full band, its peak about 2 dB down, DEAD STOP
                                                on Mada's label
-  S7-8 cue_return.py      378.79 -> 517.75     the violin, the floor, Tuesday's invite (one felt F4 on his Accept),
+  S7-8 cue_return.py      372.13 -> 508.46     the violin, the floor, Tuesday's invite (one felt F4 on his Accept),
                                                LEVERAGE (the pin's click keeps its beat) to a dead stop on "of what?",
                                                the stamp's pedal, the hourglass: THE TURN on the chat's "we're so
                                                back", the shatter's held beat, the Build compiling into the sign's
                                                VICTORY LAP, the flat line and the bonk, "okay." onto the vault's F
 
 TIMING IS PARAMETRIC: every sync point is read from the timeline (beat starts, line spans, words, sounds, texts).
-    --variant kokoro   show/reel/ep01-v31/ep01-v31-act4.json        -> render/music.wav, cues.json      (default)
-    --variant el       show/reel/ep01-v31-el/ep01-v31-el-act4.json  -> render/music-el.wav, cues-el.json
-    (MRMAS_V3_LOCK=v3 points at the first v3 lock, show/reel/ep01-v3/; this v3.1 score needs v3.1's beats)
+    --variant kokoro   show/reel/ep01-v32/ep01-v32-act4.json        -> render/music.wav, cues.json      (default)
+    --variant el       show/reel/ep01-v32-el/ep01-v32-el-act4.json  -> render/music-el.wav, cues-el.json
+    (MRMAS_V3_LOCK=v31 points at the v3.1 lock, show/reel/ep01-v31/; the cues check for v3.2's new beats)
     --timeline PATH    any timeline with the same ids              -> render/music-custom.wav
 The act ends on the vault's pedal; its natural release (the ~4 s past the act's last frame) is written beside the
 stem as render/music[-el]-ringout.wav, for the mix to lay at the tag's first frame if the tag's own cue doesn't carry it.
@@ -135,6 +141,9 @@ def assemble(c, variant):
               "the board's designed rest for the four dial tones (the sincere beat's release)"),
              (c.snd('S8.03', 'alert_bonk'), c.Lend('a5-30-19') + 0.1,
               'the lobby: the CU "silent like the first" and "okay." on the neon\'s F')]
+    if c.has('v32-S5.00'):                               # v3.2: the lobby by day, his side: no score to his look up
+        rests.append((c.B('v32-S5.00') + 0.3, c.snd('v32-S5.00', 'post_click') + 26 / 24 - 0.05,
+                      "the lobby by day, his side (v3.2): no score, the lobby's room; one felt note on his look up"))
     secs = []
     for k in ORDER:
         for lab, a0, a1 in lays[k]['sections']:

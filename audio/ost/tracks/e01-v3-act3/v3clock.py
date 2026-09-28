@@ -5,9 +5,9 @@ studio/src/reel/schema.ts timeEpisode() lays it with head 0 (Math.round, so .5 r
 its beat's start + t, its last sound that + dur; a word is the first sound + its word time; a sound is the beat's start
 + at; an on-screen text runs from the beat's start + at to + until (or the beat's end).
 
-    clk = Clock('act4')                       # the Kokoro lock: show/reel/ep01-v31/ep01-v31-act4.json (v3.1, final)
-    clk = Clock('act4', variant='el')         # show/reel/ep01-v31-el/ep01-v31-el-act4.json
-    (MRMAS_V3_LOCK=v3 selects the first lock, show/reel/ep01-v3/)
+    clk = Clock('act4')                       # the Kokoro lock: show/reel/ep01-v32/ep01-v32-act4.json (v3.2, final)
+    clk = Clock('act4', variant='el')         # show/reel/ep01-v32-el/ep01-v32-el-act4.json
+    (MRMAS_V3_LOCK=v31 or v3 selects an earlier lock, show/reel/ep01-v31/ or ep01-v3/)
     clk = Clock('act4', path='some.json')     # any timeline with the same beat and line ids
 
     clk.B(id) clk.BE(id)                      beat start / end
@@ -38,12 +38,13 @@ def js_round(x):
     return int(math.floor(x + 0.5))
 
 
-LOCK = os.environ.get('MRMAS_V3_LOCK', 'v31')           # the final lock is v3.1 (2026-09-27); 'v3' = the first lock
+LOCK = os.environ.get('MRMAS_V3_LOCK', 'v32')           # the final lock is v3.2 (2026-09-28); 'v31', 'v3' = earlier
+TAGS = {'v32': 'ep01-v32', 'v31': 'ep01-v31', 'v3': 'ep01-v3'}
 
 
 def timeline_path(seg, variant='kokoro', lock=None):
     lock = lock or LOCK
-    tag = 'ep01-v31' if lock == 'v31' else 'ep01-v3'
+    tag = TAGS[lock]
     if variant in (None, '', 'kokoro'):
         return os.path.join(REPO, 'show', 'reel', tag, f'{tag}-{seg}.json')
     if variant == 'el':

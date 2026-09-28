@@ -363,6 +363,10 @@ def build():
                  silences=[(stop, st, 'the dead stop on "of what?" -> the stamp (Mada\'s pause, "Good question.", '
                                       '"good question." and the long hold play in the room)')]
                  + ([(sand, E['slump'], "the hourglass shatters: the sand holds its shape (k173-207) and the music "
-                                        "holds its breath with it (runway.md §11.6)")] if long_s713 else []),
+                                        "holds its breath with it (runway.md §11.6)")] if long_s713 else [])
+                 + [(E['bonk'] + 0.25, cc - 0.02, 'the lobby CU "silent like the first" and "okay.": no score after '
+                                                  "the bonk (the neon's F); the flat line's tail is cut under the "
+                                                  'bonk (v3.2 EL: it hovered at -60 dBFS and read as a 50 ms '
+                                                  'fragment)')],
                  ringout=True)
     return sc, cue.T0, window, extra

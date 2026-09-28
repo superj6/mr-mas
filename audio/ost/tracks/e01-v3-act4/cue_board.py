@@ -17,8 +17,9 @@ into the dark room, where it becomes the major seventh of his D-flat chord).
   a         Bbm(add9) + harp harmonics on the whip; the clockwork under  S3.00a 11:59 at Neleh's desk; the connect;
             the wait; the pedal from the connect, the whisper in the      "Mas. The board has decided..."
             gaps; the clockwork creeps back under the tinny "super.";    S3.01 "super." through their laptop
-            STEP FOUR in quarters on the pen's run; the blank's F under  S3.02 the list; S3.03 the post [V] read once;
-            the post; a tick under "Any objections?"; Post on a tick      "Any objections?"; Post
+            STEP FOUR on the pen's run (v3.2: in eighths, one on each     S3.02 the list; S3.03 the post, read silently
+            item: her pen runs faster); the blank's F under the post; a  (v3.2); "Any objections?"; Post
+            tick under "Any objections?"; Post on a tick
   b         the pedal; one pizz figure after the join chime; the         S3.04 Rima's appointment; S3.04b "Will we?"
             clockwork in the gaps (none after a punchline)                / "More. Soon."
   c         the hush: the pedal alone under Alyi's answer [V]; then the  S3.06-S3.07 the all-hands; S3.05 the evening,
@@ -30,7 +31,11 @@ into the dark room, where it becomes the major seventh of his D-flat chord).
             Four); a designed rest for the dial tones
   e         the Lighthouse on the first ring (thinned to half notes      S4.08 the split: the offer; the eleven pages;
             under the talk); the Addendum on "some", cut by "no."; the    "In plain English: no."; the dial tone
-            pedal holds under the dial tone
+            pedal holds under the dial tone (v3.2: to the lobby's cut)
+  lobby     v3.2, HIS SIDE, INSIDE THEIRS: no score (the lobby's room by   v32-S5.00 the lobby by day: the GUEST
+            day); ONE FELT NOTE, the nudge's G4, on his look up at their  lanyard, the selfie, his post; his look up
+            camera (post_click + 26 f, the pixel pass's look), ringing    at the corner camera; the picture steps out
+            as the picture steps out into their frame                    into their camera (-> S4.09)
   f         v3.1, THE SUNDAY REVERSAL: one dry cello pizz per phone in   S4.09 Sunday: the phones in a row (STAFF STAFF
             the row (B-flat B-flat F F), her clockwork only in the gaps  INVESTORS INVESTORS); "The staff want him
             between her lines (the procedure, no closer), the pedal;     back..."; the lobby camera; S4.10 the
@@ -77,6 +82,8 @@ def syncmap():
         CLACK=SND('S4.02', 'landing_thunk'), SINCERE=A('S4.07'), TONE1=SND('S4.07', 'DTMF', 0),
         SPLIT=A('S4.08'), RING=SND('S4.08', 'RING', 0), SOME=W('a5-27-31', 'some'), NO=W('a5-27-32', 'no'),
         CLICK8=SND('S4.08', 'dialog_ok_click'), DIALTONE=SND('S4.08', 'DIALTONE'), LOBBY=A('S4.09'),
+        HIS=A('v32-S5.00') if CLK.has('v32-S5.00') else None,                # v3.2: the lobby, his side of it
+        LOOK=(SND('v32-S5.00', 'post_click') + 26) if CLK.has('v32-S5.00') else None,   # his look up (pixel: post + 26 f)
         SPOT=A('S4.10'), FOLDER0=Lend('a5-27-41'), OKAY=Lon('a5-27-42'), FLIP=A('S4.11', 2),
         SLATE=A('S4.12', 2), OPEN=A('S4.12', 36), TASYA=A('S4.13'), GOOD=Lon('a5-27-44'),
         STMT=Lon('v3-a4-0001'), SIGN=A('S4.13e'), BOARD=A('S4.14'), MADA=A('S4.15'), HOME=A('S5.02'))
@@ -190,14 +197,21 @@ def build():
     clock16(s(LIST - 45), 8, 'G5', 0.13)
     clock16(s(LIST - 15), 4, 'F5', 0.15)
     cue.mark(LIST - 75, 'a: the clockwork creeps back (under the tinny "super.": the procedure going on)')
+    # the pen's run down the list: Step Four one step a beat; (v3.2) her pen runs faster (the four items appear
+    # within 0.85 s), so the steps go in eighths, each on its item
+    unit = 0.5 if CLK.BE('S3.02') - LIST / FPS < 2.0 else 1.0
+    su = 15 * unit                                           # frames per step
     L = cue.sec(LIST, bars=3)
-    mm09.step_four(L.a, 1, top='cl', inner=('vla', 'vln2', 'vln1'), vel=0.2, top_vel=0.22, blank=False, unit=1.0)
+    mm09.step_four(L.a, 1, top='cl', inner=('vla', 'vln2', 'vln1'), vel=0.2, top_vel=0.22, blank=False, unit=unit)
     L.commit()
-    rebow(a, 'vc', 'F2', s(LIST + 45), s(POSTCLICK + 4), 0.18, seg=5.0, xf=1.0, first_att=0.05, art='sus', lp=TASTO)
-    rebow(a, 'vla', 'C3', s(LIST + 45), s(POSTCLICK + 4), 0.13, seg=5.0, xf=1.0, first_att=0.3, art='sus', lp=TASTO)
+    rebow(a, 'vc', 'F2', s(LIST + 3 * su), s(POSTCLICK + 4), 0.18, seg=5.0, xf=1.0, first_att=0.05, art='sus',
+          lp=TASTO)
+    rebow(a, 'vla', 'C3', s(LIST + 3 * su), s(POSTCLICK + 4), 0.13, seg=5.0, xf=1.0, first_att=0.3, art='sus',
+          lp=TASTO)
     for k, lab in enumerate(['Bbm(add9) (1 ✓)', 'Ab(add9) (2. BLOG POST)', 'Gbmaj7 (3. INTERIM CEO)',
                              'the blank: the F bass alone (4. ____)']):
-        cue.mark(LIST + 15 * k, f'a: STEP FOUR on the list: {lab}', hit=(k < 3))
+        cue.mark(LIST + su * k, f'a: STEP FOUR on the list: {lab}' + (' (eighths: her pen runs)' if unit < 1 and k == 0
+                                                                        else ''), hit=(k < 3))
     tick([POSTCLICK - 15 * k for k in range(5, -1, -1)], 0.24)
     cue.mark(POSTCLICK - 75, 'a: the clock tick (under "Any objections?" and its silence)')
     cue.mark(POSTCLICK, 'a: the Post click is a tick; the pedal back')
@@ -286,7 +300,12 @@ def build():
         k += 1
     ea.n('celesta', 'F5', fl(RING), 0.6, 0.2, lock=True)
     E_.commit()
-    rebow(a, 'vc', 'Bb2', s(RING), s(LOBBY + 8), 0.18, seg=4.5, xf=0.8, first_att=0.3, last_rel=1.0, art='sus', lp=TASTO)
+    HIS, LOOK = M['HIS'], M['LOOK']
+    SPLIT_END = HIS if HIS is not None else LOBBY
+    # the pedal holds under the dial tone; (v3.2) it leaves on the cut to the lobby by day, whose room J-cuts in under
+    # the dial tone: the lobby is his side, and gets no score
+    rebow(a, 'vc', 'Bb2', s(RING), s(SPLIT_END + (2 if HIS is not None else 8)), 0.18, seg=4.5, xf=0.8, first_att=0.3,
+          last_rel=0.8 if HIS is not None else 1.0, art='sus', lp=TASTO)
     cue.mark(RING, 'e: the Lighthouse on the first ring')
     Qd = cue.sec(SOME, bars=4)
     qa = Qd.a
@@ -305,10 +324,19 @@ def build():
     cue.mark(SOME, 'e: the Addendum (Mario\'s quartet, thin), on "some thoughts"')
     cue.mark(NO, 'e: "no." CUTS the tail (and nothing lands after it: the dial tone)', hit=False)
 
+    # ======================================================================= the lobby, his side (v3.2)
+    if HIS is not None:
+        # no score: the lobby's room by day, the lanyard, the selfie, his post; then ONE FELT NOTE on his look up at
+        # their camera (the one-pixel smile): the nudge's G4, his small move (the glass at noon), ringing as the picture
+        # steps out into their camera's frame; the CCTV hum L-cuts into S4.09, where PROCEDURE resumes
+        a.n('felt', 'G4', s(LOOK), s(LOBBY) - s(LOOK) + 0.2, 0.2, lock=True, rel=0.9)
+        cue.mark(HIS, 'the lobby, his side (v3.2): no score; the lobby\'s room by day', hit=False)
+        cue.mark(LOOK, 'the lobby: ONE FELT NOTE on his look up at their camera (the nudge G4, his move)')
+
     # ======================================================================= f · Sunday
     SPOT, FOLDER0, FLIP, SLATE = M['SPOT'], M['FOLDER0'], M['FLIP'], M['SLATE']
     pedal(LOBBY + 10, SLATE + 4, 0.16, first_att=1.2)
-    if 'v31-a4-0004' in CLK.LINES:
+    if 'v31-a4-0004' in CLK.LINES or 'v31-a4-0005' in CLK.LINES:
         # v3.1: THE SUNDAY REVERSAL.  The phones picked up and set in a row, face up (STAFF · STAFF · INVESTORS ·
         # INVESTORS), then Neleh: "The staff want him back. The investors want him back." / "...and we're no closer."
         # The four phones get one dry cello pizz each, in pairs (the d section's buzz cells' roots); her clockwork
@@ -319,7 +347,7 @@ def build():
                 a.n('vc', p, s(fr), '1/8', 0.24 * (1.1 if k % 2 == 0 else 0.9), lock=True, art='pizz')
         cue.mark(LOBBY + 3, 'f: SUNDAY, THE REVERSAL: the four phones in a row, one dry pizz each (STAFF STAFF '
                             'INVESTORS INVESTORS)')
-        got = gap_clockwork(Lend('v31-a4-0004'), SPOT - 4, vel=0.18)
+        got = gap_clockwork(Lend('v31-a4-0004') if 'v31-a4-0004' in CLK.LINES else LOBBY + 30, SPOT - 4, vel=0.18)
         if got:
             cue.mark(got[0][0], "f: her clockwork in the gaps only (the procedure, no closer)")
         tick([f for f in range(int(LOBBY + 83), int(SPOT) - 10, 15)], 0.2)
@@ -403,7 +431,11 @@ def build():
                         ('c the all-hands and the evening', HANDS, M['S4']), ('d NOV 18 hearts', M['S4'], ROOM),
                         ('d the boardroom: the phones, the glass', ROOM, M['SINCERE']),
                         ('d the sincere beat', M['SINCERE'], M['TONE1']), ('rest: the dial tones', M['TONE1'], RING),
-                        ('e the rival lab (the split)', RING, LOBBY), ('f Sunday: the reversal (the phones), the lobby camera' if 'v31-a4-0004' in CLK.LINES else
+                        ('e the rival lab (the split)', RING, SPLIT_END)] + (
+                       [('the lobby, his side: no score; one felt note on his look up', HIS, LOBBY)]
+                       if HIS is not None else []) + [
+                        ('f Sunday: the reversal (the phones), the lobby camera'
+                         if ('v31-a4-0004' in CLK.LINES or 'v31-a4-0005' in CLK.LINES) else
                          'f Sunday: the lobby camera', LOBBY, SPOT),
                         ('f Ttemme, the folder, the hourglass', SPOT, SLATE),
                         ("g the door: Tasya's floor", SLATE, BOARD), ('h Step four? (the hang)', BOARD, HOME),
@@ -432,6 +464,8 @@ def build():
                    dict(t=round(s(M['TONE1']), 3), sfx='DTMF x4 (the designed rest)'),
                    dict(t=round(s(RING), 3), sfx='RING: the lighthouse phone'),
                    dict(t=round(s(M['DIALTONE']), 3), sfx='DIALTONE (over the Bb pedal)'),
+                   *([dict(t=round(s(HIS), 3), sfx="the lobby's room by day (J-cut under the dial tone): no score"),
+                      dict(t=round(s(LOOK), 3), sfx='his look up: one felt note (G4)')] if HIS is not None else []),
                    dict(t=round(s(SND('S4.13', 'JANGLE')), 3), sfx='JANGLE (the offbeat)')],
         audition=['the whole file: one procedure, lighter than v5 (the pedals an octave up, the clockwork between '
                   'the lines): dry comedy, never a nag',
@@ -448,5 +482,8 @@ def build():
     window = [WHIP / FPS - 0.005, (HOME + 40) / FPS + 1.4, 0.0, 1.2]
     extra = dict(marks=[(round(t, 4), lab, h) for t, lab, h in cue.log],
                  sections=[(l, round(cue.fr(a0) / FPS, 4), round(cue.fr(a1) / FPS, 4)) for l, a0, a1 in cue.sections],
-                 silences=[], dropped_under_words=dropped)
+                 silences=([(HIS / FPS + 1.5, LOOK / FPS - 0.02,
+                             "the lobby by day, his side (v3.2): no score under the lanyard, the selfie and his post "
+                             "(the lobby's room; the split's pedal released under it) -> one felt note on his look up")]
+                           if HIS is not None else []), dropped_under_words=dropped)
     return sc, cue.T0, window, extra

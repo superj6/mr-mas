@@ -13,7 +13,8 @@ first-round v3 score:
     call); his calm, one felt F4, after it; back up on the dialog's hard cut: the cluster up a semitone, the 1-bit
     F F F on the dialog, trem violins, STEP FOUR on ALYI's pointer's three steps (one a beat);
   * the Remove click (on the downbeat) is a DEAD STOP: D6, every stem and tail to digital zero; no score through the
-    buzz and "super." to the carve.
+    buzz and "super.", and (v3.2) none under his 1:46 PM post (v32-S1.13) and the fall to night: the suite's air, then
+    the dark room's drone (SFX) carry it to the carve.
 Every sync point is read from the timeline: NUDGE = S1.02 + 10 f (v5's pixel offset, kept) · JOIN = S1.02's click ·
 Alyi's line v31-a4-0001 · the dialog = v31-S1.08d · the click = its dialog_ok_click · the steps one beat apart before
 it.  Nothing here was listened to.
@@ -236,6 +237,8 @@ def build():
                  sections=[(lab, round(a0 / FPS, 4), round(a1 / FPS, 4)) for lab, a0, a1 in
                            [(l, cue.fr(a), cue.fr(b)) for l, a, b in cue.sections]],
                  silences=[(M['CLICK'] / FPS, M['CARVE'] / FPS - 0.015,
-                            'D6: the Cancel click -> the phone\'s buzz (every bus at zero in the mix), then no score '
-                            'under "super." (the suite\'s air holds it) -> the carve')])
+                            'D6: the Remove click -> the phone\'s buzz (every bus at zero in the mix), then no score '
+                            'under "super." (the suite\'s air holds it)' +
+                            (', nor under his 1:46 PM post and the fall to night (v32-S1.13: the suite\'s air, then '
+                             'the drone)' if C.CLK.has('v32-S1.13') else '') + ' -> the carve')])
     return sc, cue.T0, window, extra

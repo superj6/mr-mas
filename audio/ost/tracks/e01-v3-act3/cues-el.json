@@ -4,13 +4,13 @@
  "id": "e01-v3-act3-el",
  "file": "audio/ost/tracks/e01-v3-act3/render/music-el.wav",
  "clock": {
-  "timeline": "show/reel/ep01-v31-el/ep01-v31-el-act3.json",
+  "timeline": "show/reel/ep01-v32-el/ep01-v32-el-act3.json",
   "variant": "el",
-  "frames": 3436,
-  "seconds": 143.1667,
-  "samples": 6872000,
-  "beats": 31,
-  "lines": 27
+  "frames": 3330,
+  "seconds": 138.75,
+  "samples": 6660000,
+  "beats": 32,
+  "lines": 23
  },
  "sample_rate": 48000,
  "channels": 2,
@@ -20,10 +20,10 @@
   {
    "id": "e01-v3-act3",
    "laid": {
-    "T0": -1.8333,
+    "T0": -1.25,
     "window": [
      0.0,
-     143.1667
+     138.75
     ],
     "fade": [
      0.0,
@@ -38,7 +38,7 @@
      true
     ],
     [
-     0.6667,
+     1.25,
      "A: THE WATER LINE, warm (F F F G F | C F over Dbmaj9(#11), Bbm9); the chip on the nudge",
      true
     ],
@@ -48,172 +48,197 @@
      true
     ],
     [
-     12.75,
-     "A: the felt under \"my other company. it tells people from machines.\"",
+     13.75,
+     "A: the label (PROOF YOU'RE HUMAN · CO-FOUNDER): Dbmaj9 held, the felt alone",
      true
     ],
     [
-     18.1667,
+     16.25,
      "A: Gbmaj9(#11) + bowed vibes: the lens finds him",
      true
     ],
     [
-     22.875,
+     19.5417,
      "A: GLYPH grains under the scan (the machine, one bar; tokens F5 C6 Db6)",
      true
     ],
     [
-     24.405,
+     21.0717,
      "A: THE VERDICT F5 (verified: human)",
      true
     ],
     [
-     25.03,
+     21.6967,
      "A: THE VERDICT C6 (the open fifth, no third)",
      true
     ],
     [
-     26.5583,
+     23.2667,
      "A: one felt note (Db3 + Ab3): the V.O. sits inside it; nothing under \"you can stay.\"",
      true
     ],
     [
-     31.9167,
+     28.75,
      "A: the settle C4 (after the chime)",
      true
     ],
     [
-     32.5417,
+     29.375,
      "A: F4 over the open fifth: it fits",
      true
     ],
     [
-     39.0483,
+     35.215,
      "B: his gesture 1 on the felt (F F); THE COPY a beat late, breaking off",
      true
     ],
     [
-     40.1483,
+     36.315,
      "B: his gesture 2 on the felt (F G); THE COPY a beat late, breaking off",
      true
     ],
     [
-     41.2483,
+     37.415,
      "B: his gesture 3 on the felt (C F); THE COPY a beat late, breaking off",
      true
     ],
     [
-     48.2483,
-     "B: the felt alone under \"i've had mine up since may.\"",
+     44.115,
+     "B: he lowers his hand himself: the felt alone (E-flat A-flat D-flat)",
      true
     ],
     [
-     51.5917,
+     45.4667,
      "C: the record (he types the post): a held F4 over Dbmaj7 + the pedal; nothing moves",
      false
     ],
     [
-     54.7083,
-     "C: the LEDs stop: the Water Line holds (no attack)",
-     false
+     51.25,
+     "C: Gerg's call: A-flat major, one felt chord a bar, over the record's pedal",
+     true
     ],
     [
-     59.4167,
+     52.5,
      "C: the Build (A-flat), a compile pass of 4",
      true
     ],
     [
-     64.4167,
+     56.25,
      "C: the Build (A-flat), a compile pass of 8",
      true
     ],
     [
-     66.9167,
+     58.75,
      "C: the Build (A-flat), a compile pass of 8",
      true
     ],
     [
-     71.9167,
+     65.0,
      "C: the Build (A-flat), a compile pass of 12",
      true
     ],
     [
-     76.9167,
+     68.75,
      "C: the Build (A-flat), a compile pass of 4",
      true
     ],
     [
-     81.9167,
+     71.25,
      "C: the Build (A-flat), a compile pass of 4",
      true
     ],
     [
-     88.4792,
+     73.75,
+     "C: the Build (A-flat), a compile pass of 4",
+     true
+    ],
+    [
+     75.0,
      "C: the Build (A-flat), a compile pass of 8",
      true
     ],
     [
-     89.9333,
-     "C': Neleh's paper: E-flat minor under the V.O. and the quote (held)",
+     76.4333,
+     "C': Neleh's paper: E-flat minor under the quote (held)",
      false
     ],
     [
-     95.2917,
+     81.3333,
      "C': NELEH'S QUESTION (OST-BIBLE s2.16): one high harmonic, C6 -> D-flat6",
      false
     ],
     [
-     102.95,
+     88.9917,
      "D: Ebm9 in the gap (held under the monitor)",
      false
     ],
     [
-     105.13,
+     91.1717,
      "D: Ab13sus in the gap (held under the monitor)",
      false
     ],
     [
-     111.9067,
+     94.7083,
+     "D: Dbmaj9 for \"which one's real?\" (pre-lapped 0.25 s, soft: his question to his witness)",
+     false
+    ],
+    [
+     97.9483,
      "D: THE VERDICT again: the Orb picks the one with the pen (F5 -> C6)",
      true
     ],
     [
-     113.3967,
+     99.4383,
      "D: NEDIB'S FOUNTAIN PEN (bar 2), pp: the real one signs",
      true
     ],
     [
-     118.1667,
-     "E: TASYA'S RHODES, one chord, as he walks on",
+     100.6883,
+     "the switch: the felt takes the pen's F and holds it (the Water Line's note)",
+     false
+    ],
+    [
+     102.42,
+     "THE TURN: he switches the monitor off: the quartet goes with the glass; the held F turns from B-flat major to D-flat major (his room)",
      true
     ],
     [
-     124.6083,
-     "E: Dbmaj9(#11), the felt alone: \"thrilled is too much...\" sits inside it",
+     103.5,
+     "DevDay, live: the hall's applause takes the cut; no score under the stage (the hall plays it dry)",
+     false
+    ],
+    [
+     115.1917,
+     "E: home: Dbmaj9(#11), the felt alone: \"thrilled is too much...\" sits inside it",
      true
     ],
     [
-     131.2917,
+     121.875,
      "E: the flat line F F F, then the nudge G4 ... the settle never comes",
      true
     ],
     [
-     133.1667,
+     123.75,
+     "E': THE SURGE: the Water Line thins to its pedal (F3/C4, sul tasto) under the counter; the LEDs step to red; his post pauses the sign-ups",
+     false
+    ],
+    [
+     128.75,
      "F: THE CLOCK bar 1: the step on F",
      true
     ],
     [
-     135.6667,
+     131.25,
      "F: THE CLOCK bar 2: the step on G",
      true
     ],
     [
-     138.1667,
+     133.75,
      "F: THE CLOCK bar 3: the step on Ab",
      true
     ],
     [
-     140.6667,
+     136.25,
      "F: DEAD STOP on bar 4's downbeat (tails cut): the C never comes",
      false
     ]
@@ -222,80 +247,100 @@
     [
      "A the home room: the Water Line warm, the Orb, the verdict, the settle",
      0.0,
-     33.7917
+     30.0
     ],
     [
-     "B the monitor: the iris, Sirrah, the hands runner (THE COPY), the V.O.",
-     33.7917,
-     51.2917
+     "B the monitor: the iris, Sirrah, the hands runner (THE COPY), his hand",
+     30.0,
+     45.1667
     ],
     [
-     "C the post (the record) and the LEDs",
-     51.2917,
-     56.2917
+     "C the post (the record)",
+     45.1667,
+     48.5833
     ],
     [
-     "C Gerg's call: A-flat, the Build in passes; the edit (pedal); the V.O. (felt)",
-     56.2917,
-     89.8333
+     "C Gerg's call: A-flat, the Build in passes; the edit (pedal); his keys run on",
+     48.5833,
+     76.3333
     ],
     [
-     "C' Neleh's paper: the V.O., her question",
-     89.8333,
-     96.5
+     "C' Neleh's paper: the quote, her question",
+     76.3333,
+     82.5417
     ],
     [
      "D the order on the monitor; the Orb picks; the pen",
-     96.5,
-     115.4583
+     82.5417,
+     101.5
     ],
     [
-     "E DevDay; the phone; \"super.\"",
-     115.4583,
-     133.1667
+     "the switch: the held F, the turn",
+     101.5,
+     103.5
+    ],
+    [
+     "DevDay, live: no score (the hall's applause, the stage, his line)",
+     103.5,
+     114.7917
+    ],
+    [
+     "E home: the phone; \"super.\"",
+     114.7917,
+     123.75
+    ],
+    [
+     "E' the surge: the pedal (the counter, the LEDs, the pause)",
+     123.75,
+     128.75
     ],
     [
      "F THE CLOCK (3 bars, a layer a bar)",
-     133.1667,
-     140.6667
+     128.75,
+     136.25
     ],
     [
      "the stop: black (the SFX pre-lap carries it)",
-     140.6667,
-     143.1667
+     136.25,
+     138.75
     ]
    ]
   }
  ],
  "silences": [
   {
-   "t0": 140.667,
-   "t1": 143.167,
+   "t0": 104.4,
+   "t1": 115.192,
+   "what": "DevDay, live (v3.2): no score under the stage; the hall's applause, the stage's own sound and his line play it dry; the felt comes back at home"
+  },
+  {
+   "t0": 136.25,
+   "t1": 138.75,
    "what": "THE CLOCK's dead stop on bar 4's downbeat -> the act's last frame (black; the SFX pre-lap of the crane and the tings carries it)"
   }
  ],
  "measured": {
   "file": "/home/jgon/project/art/mrmas/audio/ost/tracks/e01-v3-act3/render/music-el.wav",
-  "samples": 6872000,
-  "seconds": 143.1667,
+  "samples": 6660000,
+  "seconds": 138.75,
   "whole": {
    "lufs_i": -20.02,
    "true_peak_dbtp": -3.15,
    "st": {
-    "p95": -17.57,
-    "median": -21.11,
-    "max": -16.07
+    "p95": -17.63,
+    "median": -20.91,
+    "max": -16.18
    }
   },
   "cues": {
    "e01-v3-act3": {
     "window": [
      0.0,
-     143.167
+     138.75
     ],
     "lufs_i": -20.02,
-    "st_p95": -17.57,
-    "st_max": -16.07,
+    "st_p95": -17.63,
+    "st_max": -16.18,
     "true_peak_dbtp": -3.15
    }
   },
@@ -304,105 +349,147 @@
     "section": "A the home room: the Water Line warm, the Orb, the verdict, the settle",
     "cue": "e01-v3-act3",
     "start": 0.0,
-    "end": 33.792,
-    "lufs_i": -19.48,
-    "st_p95": -17.1,
-    "st_max": -16.16,
+    "end": 30.0,
+    "lufs_i": -19.18,
+    "st_p95": -17.09,
+    "st_max": -16.18,
+    "true_peak_dbtp": -3.26
+   },
+   {
+    "section": "B the monitor: the iris, Sirrah, the hands runner (THE COPY), his hand",
+    "cue": "e01-v3-act3",
+    "start": 30.0,
+    "end": 45.167,
+    "lufs_i": -19.11,
+    "st_p95": -16.57,
+    "st_max": -16.19,
     "true_peak_dbtp": -3.15
    },
    {
-    "section": "B the monitor: the iris, Sirrah, the hands runner (THE COPY), the V.O.",
+    "section": "C the post (the record)",
     "cue": "e01-v3-act3",
-    "start": 33.792,
-    "end": 51.292,
-    "lufs_i": -19.46,
-    "st_p95": -16.37,
-    "st_max": -16.09,
+    "start": 45.167,
+    "end": 48.583,
+    "lufs_i": -19.97,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -3.65
+   },
+   {
+    "section": "C Gerg's call: A-flat, the Build in passes; the edit (pedal); his keys run on",
+    "cue": "e01-v3-act3",
+    "start": 48.583,
+    "end": 76.333,
+    "lufs_i": -20.46,
+    "st_p95": -19.13,
+    "st_max": -18.2,
     "true_peak_dbtp": -3.15
    },
    {
-    "section": "C the post (the record) and the LEDs",
+    "section": "C' Neleh's paper: the quote, her question",
     "cue": "e01-v3-act3",
-    "start": 51.292,
-    "end": 56.292,
-    "lufs_i": -20.45,
-    "st_p95": -20.81,
-    "st_max": -20.68,
-    "true_peak_dbtp": -4.93
-   },
-   {
-    "section": "C Gerg's call: A-flat, the Build in passes; the edit (pedal); the V.O. (felt)",
-    "cue": "e01-v3-act3",
-    "start": 56.292,
-    "end": 89.833,
-    "lufs_i": -19.94,
-    "st_p95": -17.65,
-    "st_max": -17.03,
-    "true_peak_dbtp": -3.15
-   },
-   {
-    "section": "C' Neleh's paper: the V.O., her question",
-    "cue": "e01-v3-act3",
-    "start": 89.833,
-    "end": 96.5,
-    "lufs_i": -22.65,
-    "st_p95": -21.82,
-    "st_max": -20.38,
+    "start": 76.333,
+    "end": 82.542,
+    "lufs_i": -22.52,
+    "st_p95": -21.65,
+    "st_max": -20.25,
     "true_peak_dbtp": -3.15
    },
    {
     "section": "D the order on the monitor; the Orb picks; the pen",
     "cue": "e01-v3-act3",
-    "start": 96.5,
-    "end": 115.458,
-    "lufs_i": -21.37,
-    "st_p95": -19.57,
-    "st_max": -18.63,
-    "true_peak_dbtp": -3.5
+    "start": 82.542,
+    "end": 101.5,
+    "lufs_i": -21.21,
+    "st_p95": -19.48,
+    "st_max": -18.95,
+    "true_peak_dbtp": -3.66
    },
    {
-    "section": "E DevDay; the phone; \"super.\"",
+    "section": "the switch: the held F, the turn",
     "cue": "e01-v3-act3",
-    "start": 115.458,
-    "end": 133.167,
-    "lufs_i": -20.15,
-    "st_p95": -19.09,
-    "st_max": -18.46,
+    "start": 101.5,
+    "end": 103.5,
+    "lufs_i": -19.99,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -8.08
+   },
+   {
+    "section": "DevDay, live: no score (the hall's applause, the stage, his line)",
+    "cue": "e01-v3-act3",
+    "start": 103.5,
+    "end": 114.792,
+    "lufs_i": -38.82,
+    "st_p95": -42.61,
+    "st_max": -42.61,
+    "true_peak_dbtp": -24.59
+   },
+   {
+    "section": "E home: the phone; \"super.\"",
+    "cue": "e01-v3-act3",
+    "start": 114.792,
+    "end": 123.75,
+    "lufs_i": -18.32,
+    "st_p95": -19.22,
+    "st_max": -19.14,
     "true_peak_dbtp": -3.15
+   },
+   {
+    "section": "E' the surge: the pedal (the counter, the LEDs, the pause)",
+    "cue": "e01-v3-act3",
+    "start": 123.75,
+    "end": 128.75,
+    "lufs_i": -25.56,
+    "st_p95": -24.71,
+    "st_max": -24.51,
+    "true_peak_dbtp": -10.77
    },
    {
     "section": "F THE CLOCK (3 bars, a layer a bar)",
     "cue": "e01-v3-act3",
-    "start": 133.167,
-    "end": 140.667,
-    "lufs_i": -19.06,
-    "st_p95": -17.34,
-    "st_max": -17.06,
-    "true_peak_dbtp": -5.12
+    "start": 128.75,
+    "end": 136.25,
+    "lufs_i": -19.33,
+    "st_p95": -17.54,
+    "st_max": -17.21,
+    "true_peak_dbtp": -5.63
    },
    {
     "section": "the stop: black (the SFX pre-lap carries it)",
     "cue": "e01-v3-act3",
-    "start": 140.667,
-    "end": 143.167,
-    "lufs_i": -45.0,
+    "start": 136.25,
+    "end": 138.75,
+    "lufs_i": -45.12,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -15.01
+    "true_peak_dbtp": -13.71
    }
   ],
   "digital_silence": [
    {
-    "t0": 140.67,
-    "t1": 143.16,
+    "t0": 104.41,
+    "t1": 115.17,
+    "marked": true
+   },
+   {
+    "t0": 136.26,
+    "t1": 138.75,
     "marked": true
    }
   ],
   "unmarked_digital_silence": [],
   "marked_silences": [
    {
-    "t0": 140.667,
-    "t1": 143.167,
+    "t0": 104.4,
+    "t1": 115.192,
+    "what": "DevDay, live (v3.2): no score under the stage; the hall's applause, the stage's own sound and his line play it dry; the felt comes back at home",
+    "digital_zero": true,
+    "peak_dbfs": null
+   },
+   {
+    "t0": 136.25,
+    "t1": 138.75,
     "what": "THE CLOCK's dead stop on bar 4's downbeat -> the act's last frame (black; the SFX pre-lap of the crane and the tings carries it)",
     "digital_zero": true,
     "peak_dbfs": null
@@ -410,8 +497,14 @@
   ],
   "holes": [
    {
-    "t0": 140.7,
-    "t1": 143.15,
+    "t0": 104.45,
+    "t1": 115.15,
+    "designed": true,
+    "what": null
+   },
+   {
+    "t0": 136.3,
+    "t1": 138.75,
     "designed": true,
     "what": null
    }
@@ -419,7 +512,11 @@
   "music_runs": [
    [
     0.0,
-    140.7
+    104.45
+   ],
+   [
+    115.15,
+    136.3
    ]
   ],
   "fragments_under_2s": [],
@@ -441,12 +538,12 @@
      },
      "measured": {
       "lufs": -20.0,
-      "lra": 8.2,
+      "lra": 7.89,
       "true_peak_db": -3.15,
       "peak_db": -3.16,
-      "rms_db": -23.19,
-      "crest_db": 20.04,
-      "seconds": 145.2
+      "rms_db": -23.5,
+      "crest_db": 20.35,
+      "seconds": 140.2
      }
     },
     "f_major_written_ok": true,
@@ -454,20 +551,23 @@
     "f_major_fails": [],
     "knee_completion": 0,
     "knee_whole": 0,
-    "st_p95": -17.6,
-    "band_2_6k_db": -21.1,
+    "st_p95": -17.76,
+    "band_2_6k_db": -20.7,
     "balance": {
-     "piano": 68,
-     "orch": 28,
+     "piano": 66,
+     "orch": 31,
      "bigband": 0,
      "chip": 3
     },
     "chip_share": 3,
     "warnings": [
-     "marker at 5.0417 s: no clear onset within 10 ms ({'t': 5.0417, 'offset_ms': np.float64(-44.4), 'strength': 3.41})",
-     "marker at 20.0 s: no clear onset within 10 ms ({'t': 20.0, 'offset_ms': np.float64(18.7), 'strength': 2.8})",
-     "marker at 115.23 s: no clear onset within 10 ms ({'t': 115.23, 'offset_ms': np.float64(-11.3), 'strength': 1.95})",
-     "marker at 120.0 s: no clear onset within 10 ms ({'t': 120.0, 'offset_ms': np.float64(-53.3), 'strength': 2.44})"
+     "marker at 4.4583 s: no clear onset within 10 ms ({'t': 4.4583, 'offset_ms': np.float64(43.0), 'strength': 2.21})",
+     "marker at 17.5 s: no clear onset within 10 ms ({'t': 17.5, 'offset_ms': np.float64(25.3), 'strength': 2.78})",
+     "marker at 20.7917 s: no clear onset within 10 ms ({'t': 20.7917, 'offset_ms': np.float64(-13.0), 'strength': 2.63})",
+     "marker at 24.5167 s: no clear onset within 10 ms ({'t': 24.5167, 'offset_ms': np.float64(-12.7), 'strength': 4.03})",
+     "marker at 30.0 s: no clear onset within 10 ms ({'t': 30.0, 'offset_ms': np.float64(-10.7), 'strength': 7.11})",
+     "marker at 45.365 s: no clear onset within 10 ms ({'t': 45.365, 'offset_ms': np.float64(-10.3), 'strength': 6.21})",
+     "marker at 100.6883 s: no clear onset within 10 ms ({'t': 100.6883, 'offset_ms': np.float64(-53.6), 'strength': 1.86})"
     ]
    }
   }
