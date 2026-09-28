@@ -1,11 +1,12 @@
-// MR. MAS — Ep1 v3.1 pixel picture: THE TAG ("december", sc 32–33), one layout per shot of lock `tag` (the
-// v3-shots-coldopen-tag pass, 2026-09-27). The lock is ./data.ts (tools/lock.py on the FINAL v3.1 lock,
-// show/reel/ep01-v31/ep01-v31-tag.json, with ./takes-mouth.json: the fastrec takes plus mouth tracks for "that was close."
+// MR. MAS — Ep1 v3.2 pixel picture: THE TAG ("december", sc 32–33), one layout per shot of lock `tag` (the
+// v3-shots-coldopen-tag pass, 2026-09-27/28). The lock is ./data.ts (tools/lock.py on the FINAL v3.2 lock,
+// show/reel/ep01-v32/ep01-v32-tag.json, with ./takes-mouth.json: the fastrec takes plus mouth tracks for "that was close."
 // and "noted.", from coldopen/tools/mouths.py).
 // v3.1: 32.01 is 62 frames and its monitor wakes on its own (kits/monitor-v31 screenWake, then the demo's first card);
 // v31-32.01d is the Runway insert, ELGOOG's demo film (out/ep01/full-v3/runway/elgoog-demo-final.mp4, runway.md §6):
-// its i0–216 are BROWSER frames, spliced whole from PNGs (tag/tools/splice.ts writes them from insert.py's, with the
-// host's V.O. line baked in); its i217–232 are drawn here (the two-shot with the held still on his monitor).
+// its i0–216 are BROWSER frames, spliced whole from PNGs (tag/tools/splice.ts writes them from insert.py's, with any host
+// layer baked in: in v3.2 there is none, since "those are stills." is cut); its i217–232 are drawn here (the two-shot with
+// the held still on his monitor). v3.2 (the final lock, show/reel/ep01-v32/ep01-v32-tag.json): only that V.O. changed.
 // The art is v3-art-b's dark room for the tag (rooms/darkroom-act3.ts, kits/emit-cover, kits/orb-toast, kits/grey-lady;
 // show/episodes/ep01/production/full-v3/art/art-b.md §1.6) and this segment's small additive drawings in ./art.ts. The
 // tag ends on its own last frame, black on the vault's hum; the Orb outro (a separate chapter) follows it.
@@ -51,7 +52,7 @@ L.add('32.01', {
 });
 
 L.add('v31-32.01d', {
-  st: 'the RUNWAY INSERT, ELGOOG\'s demo film (runway.md §3-§6: (a) the push-in, no chip; out/ep01/full-v3/runway/elgoog-demo-final.mp4): i0-216 are browser frames, spliced whole from insert.py\'s PNGs with the host\'s V.O. line baked in (tag/tools/splice.ts); here those frames draw only a pixel fallback (the monitor kit\'s [OTS] / [POV] with the demo\'s card or its held still). i217-232: the two-shot, drawDarkA3 with the held still on his monitor (tag/heldstill), Mas looking at it, the Orb\'s iris on it, then to the rack 6 f before 32.02\'s whir',
+  st: 'the RUNWAY INSERT, ELGOOG\'s demo film (runway.md §3-§6: (a) the push-in, no chip; out/ep01/full-v3/runway/elgoog-demo-final.mp4): i0-216 are browser frames, spliced whole from insert.py\'s PNGs through tag/tools/splice.ts (the host\'s layer baked in; none in v3.2); here those frames draw only a pixel fallback (the monitor kit\'s [OTS] / [POV] with the demo\'s card or its held still). i217-232: the two-shot, drawDarkA3 with the held still on his monitor (tag/heldstill), Mas looking at it, the Orb\'s iris on it, then to the rack 6 f before 32.02\'s whir',
   draw: (fb, k, sh, f) => {
     const len = sh.e - sh.s;
     if (k < 22) { drawMonitorOTS(fb, f, cardField, {plate: {tally: 3}, key: 'tag-ots'}); return; }

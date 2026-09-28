@@ -1,12 +1,46 @@
 # Ep1 v3: the tag's pixel shots (`v3-shots-coldopen-tag`, 2026-09-27)
 
-> **Status: v3.1, final: re-locked on the final v3.1 lock with the Runway demo spliced (see the v3.1 section below). The sections after it are the v3 record.** This is track P2 of [PLAN.md](PLAN.md) for the `tag` segment. The cold open's record is [shots-coldopen.md](shots-coldopen.md), which also holds the shared tools.
+> **Status: v3.2, final: re-locked on the final v3.2 lock (the v3.2 section below), the Runway demo spliced (the v3.1 section). The sections after those are the v3 record.** This is track P2 of [PLAN.md](PLAN.md) for the `tag` segment. The cold open's record is [shots-coldopen.md](shots-coldopen.md), which also holds the shared tools.
 >
 > **The tag ends on its own last frame:** black on the vault's hum (33.05). The Orb outro follows as a separate chapter and isn't in this render.
 >
 > **Nothing here was watched or heard.** I looked at the contact sheet, at native stills of every shot at 2x, and at three frames decoded from the MP4. The flash numbers are measured.
 >
 > Nothing was committed.
+
+## v3.2: the final lock (2026-09-28)
+
+**The brief** (the lead): re-lock on the final v3.2 lock (`show/reel/ep01-v32/ep01-v32-tag.json`, lock-v32.md, script draft 8.1). The tag's V.O. "those are stills." is cut (calibration: a caption; the stutter carries the joke), and my v3.1 splice had baked it into the insert's PNGs.
+
+**What changed in the timeline, measured against v3.1:**
+- **Only that line.** v31-vo-07 is gone from v31-32.01d.
+- Every beat's length, every other line, the onscreen text, sounds, fx, cast, frames and captions are identical.
+- **No first-appearance plates fall in the tag.** Its cast is Mas, the Orb and ELGOOG'S DEMO; no plate is drawn.
+
+**What I did:**
+- **The lock:** re-locked on v3.2, on the same takes (`tag/takes-mouth.json`), with a temp track cut from the v3.2 stick reel (`out/ep01/reel/ep01-v32-stick.mp4`, 1235.333 s + 41.333 s → `picture/tag-stick-mix.wav`, 992 f). The episode frame in is 29576.
+  - 992 frames; the lines are v31-tg-0001, v3-vo-24, v31-tg-0002 and e1-tg-33-01.
+  - Against the v3.1 lock, only v31-32.01d's lines and every shot's timecode changed.
+- **The splice PNGs:** rebuilt from scratch (`insert.py --variants a --no-chip --png … --png-offset 62`, `--out` in scratch), then `tag/tools/splice.ts`.
+  - It now lays **no host layer on any of the 217 frames** (`with_host_layer: 0`): no V.O., and the band was already the same.
+  - So the splice frames are the insert's own.
+- **The code:** no layout changes; only the comments and the insert's `st` note, which reach the review margin only.
+- **The render:** `out/ep01/full-v3/picture/tag.mp4`, 992 frames, 41.33 s. 217 browser frames spliced, 0 missing, no stand-ins. It ran as one heavy job: the PNGs, the splice and the render.
+
+**Measured:**
+- **The insert against `elgoog-demo-final.mp4`**, both decoded to 480×270:
+  - worst frame MAD 1.23 of 255 (encode noise);
+  - the V.O. rows (182–203, x 0–130) over i168–211 differ by 12 at most, so no text.
+- **Joins, looked at:**
+  - 61 → 62: the two-shot on the lit card → the insert's `[OTS]`;
+  - 278 → 279: the insert's `[OTS]` on the held still → the layout's two-shot;
+  - 294 → 295: → 32.02's slot.
+  - Stills at 240 and 270 show the still and the pull-back clean.
+- **Flashes:** **0 in any second**, red 0. The transitions are as in v3.1 (72, 265–271, 295, 776–780, 960). The largest mean-luminance step is 0.32 at 878.
+- **The subtitles** (`tag.srt`): four lines, "What the quack!", *it looks calmer than me.*, "that was close." and "noted.".
+- **Checks:** `check` has 0 stand-ins and 0 problems. `tsc` (scoped) is clean.
+
+**For the sound pass:** the v3.2 tag is still 992 frames. The stillness at i167–216 (tag 229–278) is now silent of V.O. (runway.md §7's "Nothing but the room coming back").
 
 ## v3.1: the final lock, and the Runway demo spliced (2026-09-27)
 

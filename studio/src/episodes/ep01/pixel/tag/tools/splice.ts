@@ -1,8 +1,8 @@
 // @ts-nocheck -- Node-only tool (bundled with esbuild by tools/build.mjs --entry), excluded from the browser typecheck.
 // MR. MAS — Ep1 v3.1 tag (the v3-shots-coldopen-tag pass): the Runway insert's SPLICE FRAMES. insert.py --png writes the
 // insert as whole 1920 x 1080 frames (DIR/pic/NNNNN.png, numbered from the tag's frame 62). The Node renderer splices a
-// browser frame's PNG as it is, so anything the host would draw on those frames has to be in the PNG: here, Mas's V.O.
-// "those are stills." (v31-vo-07, typed over the insert's stills and pull-back) and the band. This draws each splice
+// browser frame's PNG as it is, so anything the host would draw on those frames has to be in the PNG: the band, and any
+// V.O. typed over the insert (v3.1's "those are stills.", v31-vo-07; cut in v3.2, so today it lays nothing and checks). This draws each splice
 // frame's host layer (the segment with the insert's layout swapped for a key colour: the band, the V.O. line, nothing
 // else), lays it over the insert's PNG at 4x, and gives the V.O. glyphs a 1-px N0 outline so they read on the pale still
 // (runway.md §6: "the pixel type needs its dark shadow on the pale still"). Frames with no host layer are copied as-is.

@@ -1,10 +1,17 @@
 # Ep1 v3: the cold open's pixel shots (`v3-shots-coldopen-tag`, 2026-09-27)
 
-> **Status: final on the v3.1 lock (the v3.1 section below); re-cut, re-locked and re-rendered (§0), 2026-09-27.** This is track P2 of [PLAN.md](PLAN.md) for the `coldopen` segment. The tag's record is [shots-tag.md](shots-tag.md).
+> **Status: final on the v3.2 lock (the v3.2 and v3.1 sections below); re-cut, re-locked and re-rendered (§0), 2026-09-27.** This is track P2 of [PLAN.md](PLAN.md) for the `coldopen` segment. The tag's record is [shots-tag.md](shots-tag.md).
 >
 > **Nothing here was watched or heard.** I looked at the contact sheet, at native stills of every shot (at 2x, with crops at 4x of the mouths and the iris steps), at frames decoded from the rendered MP4s, and at the last 3 s against the intro's frame 0. The flash and join numbers are measured. Whether the cuts play needs a person.
 >
 > Nothing was committed.
+
+## v3.2 (the final lock, 2026-09-28)
+
+- **The check:** the cold open's v3.2 timeline (`show/reel/ep01-v32/ep01-v32-coldopen.json`) matches v3.1 in every beat: lengths, lines and their text, words, onscreen items, sounds, fx, cast, names, frames and captions. Only the music cue strings and the header differ.
+- **No first-appearance plates fall in the cold open.** Mas is named by the host's line and the tent card.
+- **What I did:** re-locked on v3.2 so the lock points at the final timeline (`lock/coldopen.json`, `coldopen/data.ts`). Against the v3.1 lock, only the shots' `cues` changed, which show in the review margin, not the picture.
+- **Not re-rendered**, as the lead asked. `picture/coldopen.mp4` stands: 640 frames, the same picture as the v3 and v3.1 renders.
 
 ## v3.1 (the final lock, 2026-09-27)
 
