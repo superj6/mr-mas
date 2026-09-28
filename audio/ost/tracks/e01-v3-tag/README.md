@@ -2,7 +2,11 @@
 
 **Composer X (`v3-score-a`), 2026-09-27.** Track A1 of [PLAN.md](../../../../show/episodes/ep01/production/full-v3/PLAN.md). Mood map: *quiet, wry* (the Water Line). **Nothing here has been listened to.** Every number is measured.
 
-## v3.2 (current, 2026-09-28)
+## v3.3 (current, 2026-09-28)
+
+**The locks:** `show/reel/ep01-v33/` and `-el`, 42.333 s (1,016 frames) each, exact. The cover beat (32.03) holds about 1 s longer: the B♭m9 still sits under "it looks calmer than me.", and the C7sus colour after it holds the extra second until the cut to the scans; everything after it follows the timeline. Every rest fades over 5 ms. **Measured:** MM-12 −21.6 LUFS-I, the demo bed −24.2; the same checks pass.
+
+## v3.2 (superseded by v3.3, 2026-09-28)
 
 **The locks:** `show/reel/ep01-v32/ep01-v32-tag.json` (the default) and `show/reel/ep01-v32-el/` (`--el`). Both are 41.333 s (992 frames), exact, with the demo's frames unchanged.
 - **The V.O. "those are stills." is cut** (the stutter carries the joke). The stills now play on the room alone, from the dead cut at i151 to MM-12's return with the pull-back at i199 (a designed silence).

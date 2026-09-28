@@ -3,10 +3,10 @@
  "id": "e01-v3-tag",
  "segment": "tag",
  "file": "audio/ost/tracks/e01-v3-tag/render/music.wav",
- "timeline": "show/reel/ep01-v32/ep01-v32-tag.json",
- "length_s": 41.333333333333336,
- "frames": 992,
- "samples": 1984000,
+ "timeline": "show/reel/ep01-v33/ep01-v33-tag.json",
+ "length_s": 42.333333333333336,
+ "frames": 1016,
+ "samples": 2032000,
  "sample_rate": 48000,
  "channels": 2,
  "clock": "the segment's own clock: 0 = its first frame (timeEpisode, head 0)",
@@ -15,14 +15,14 @@
   {
    "cue": "tag_december",
    "start": 0.0,
-   "end": 41.333333333333336,
+   "end": 42.333333333333336,
    "what": "MM-12 december (to picture): the felt takes the vault's F; the Water Line; the verdict two beats late; cut by the thud; the button with no third",
    "render": "audio/ost/tracks/e01-v3-tag/render/_work/tag_december-underscore.wav",
    "laid_at_s": 0.6,
    "level": {
-    "lufs_i": -21.58,
-    "st_p95": -19.21,
-    "st_max": -18.71,
+    "lufs_i": -21.62,
+    "st_p95": -19.52,
+    "st_max": -19.11,
     "true_peak_dbtp": -3.15
    },
    "engine_qa": {
@@ -41,18 +41,18 @@
       "q": 0.7
      },
      "measured": {
-      "lufs": -21.0,
-      "lra": 12.2,
+      "lufs": -21.03,
+      "lra": 13.43,
       "true_peak_db": -3.15,
       "peak_db": -3.16,
-      "rms_db": -26.72,
-      "crest_db": 23.56,
-      "seconds": 40.7333
+      "rms_db": -26.97,
+      "crest_db": 23.82,
+      "seconds": 41.7333
      }
     },
     "f_major_ok": true,
     "f_major_ok_written": true,
-    "f_major_worst": 0.087,
+    "f_major_worst": 0.068,
     "knee_whole": 0,
     "knee_completion": 0,
     "hit_check": {
@@ -62,8 +62,8 @@
     },
     "warnings": [
      "marker at 10.8583 s: no clear onset within 10 ms ({'t': 10.8583, 'offset_ms': np.float64(37.7), 'strength': 2.55})",
-     "marker at 19.2833 s: no clear onset within 10 ms ({'t': 19.2833, 'offset_ms': np.float64(18.0), 'strength': 1.99})",
-     "marker at 26.8583 s: no clear onset within 10 ms ({'t': 26.8583, 'offset_ms': np.float64(-10.3), 'strength': 3.66})"
+     "marker at 20.2833 s: no clear onset within 10 ms ({'t': 20.2833, 'offset_ms': np.float64(15.4), 'strength': 2.06})",
+     "marker at 27.8583 s: no clear onset within 10 ms ({'t': 27.8583, 'offset_ms': np.float64(-10.3), 'strength': 4.59})"
     ]
    },
    "note_qa": {
@@ -101,32 +101,32 @@
      "hit": false
     },
     {
-     "t": 19.883,
+     "t": 20.883,
      "what": "the cut to the scan two-shot: the felt re-voices to an open F (a designed change on the cut)",
      "hit": true
     },
     {
-     "t": 20.953,
+     "t": 21.953,
      "what": "THE VERDICT: F5 (after the toast's blink, never on it)",
      "hit": true
     },
     {
-     "t": 22.803,
+     "t": 23.803,
      "what": "THE VERDICT: C6 (after the toast's blink, never on it)",
      "hit": true
     },
     {
-     "t": 27.458,
+     "t": 28.458,
      "what": "the back wall: the Water Line once more",
      "hit": true
     },
     {
-     "t": 30.583,
+     "t": 31.583,
      "what": "THE THUD: the line stops dead before its settle (3 ms, tails cut)",
      "hit": false
     },
     {
-     "t": 38.093,
+     "t": 39.093,
      "what": "THE BUTTON: F3 C4 G4 C5, no third (the vault's F hum is its root)",
      "hit": true
     }
@@ -140,7 +140,7 @@
    "render": "audio/ost/tracks/e01-v3-tag/render/_work/demo_film-underscore.wav",
    "laid_at_s": 2.5833,
    "level": {
-    "lufs_i": -24.15,
+    "lufs_i": -24.16,
     "st_p95": -22.85,
     "st_max": -22.39,
     "true_peak_dbtp": -10.58
@@ -224,8 +224,8 @@
  ],
  "silences_designed": [
   {
-   "t0": 30.583,
-   "t1": 38.093,
+   "t0": 31.583,
+   "t1": 39.093,
    "why": "the thud -> the button: no score (the front page, \"noted.\")"
   },
   {
@@ -240,25 +240,25 @@
   }
  ],
  "measured": {
-  "length_s": 41.3333,
-  "samples": 1984000,
-  "frames": 992,
+  "length_s": 42.3333,
+  "samples": 2032000,
+  "frames": 1016,
   "exact": true,
   "whole": {
-   "lufs_i": -21.58,
-   "st_p95": -19.21,
-   "st_max": -18.71,
+   "lufs_i": -21.62,
+   "st_p95": -19.52,
+   "st_max": -19.11,
    "true_peak_dbtp": -3.15
   },
   "cues": {
    "tag_december": {
-    "lufs_i": -21.58,
-    "st_p95": -19.21,
-    "st_max": -18.71,
+    "lufs_i": -21.62,
+    "st_p95": -19.52,
+    "st_max": -19.11,
     "true_peak_dbtp": -3.15
    },
    "demo_film": {
-    "lufs_i": -24.15,
+    "lufs_i": -24.16,
     "st_p95": -22.85,
     "st_max": -22.39,
     "true_peak_dbtp": -10.58
@@ -269,43 +269,43 @@
     "section": "the dark room: the felt takes the F; the Water Line, plain",
     "start": 0.0,
     "end": 15.88,
-    "lufs_i": -21.66,
-    "st_p95": -19.07,
-    "st_max": -19.01,
-    "true_peak_dbtp": -5.11
+    "lufs_i": -21.81,
+    "st_p95": -19.25,
+    "st_max": -19.19,
+    "true_peak_dbtp": -5.29
    },
    {
     "section": "the V.O., then the Orb's scans (felt held)",
     "start": 16.69,
-    "end": 23.83,
-    "lufs_i": -24.55,
-    "st_p95": -22.97,
-    "st_max": -22.88,
-    "true_peak_dbtp": -6.7
+    "end": 24.83,
+    "lufs_i": -24.91,
+    "st_p95": -23.45,
+    "st_max": -23.28,
+    "true_peak_dbtp": -6.87
    },
    {
     "section": "the back wall: the Water Line, cut by the thud",
-    "start": 25.89,
-    "end": 30.58,
-    "lufs_i": -19.29,
-    "st_p95": -18.76,
-    "st_max": -18.6,
-    "true_peak_dbtp": -5.15
+    "start": 26.89,
+    "end": 31.58,
+    "lufs_i": -19.67,
+    "st_p95": -19.16,
+    "st_max": -18.99,
+    "true_peak_dbtp": -5.59
    },
    {
     "section": "no score: the front page, \"noted.\" (designed)",
-    "start": 30.58,
-    "end": 38.09,
+    "start": 31.58,
+    "end": 39.09,
     "lufs_i": -Infinity,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -41.66
+    "true_peak_dbtp": -28.5
    },
    {
     "section": "the button: the chord with no third, rings into the black",
-    "start": 38.09,
-    "end": 41.33,
-    "lufs_i": -21.81,
+    "start": 39.09,
+    "end": 42.33,
+    "lufs_i": -21.86,
     "st_p95": null,
     "st_max": null,
     "true_peak_dbtp": -3.15
@@ -314,7 +314,7 @@
     "section": "demo_film: ELGOOG's product film: the glossy demo bed (its own sound)",
     "start": 2.58,
     "end": 8.88,
-    "lufs_i": -24.15,
+    "lufs_i": -24.16,
     "st_p95": -22.85,
     "st_max": -22.39,
     "true_peak_dbtp": -10.58
@@ -329,8 +329,8 @@
     "why": "the tag's head: the vault hum (a timeline sound) until the felt takes its F"
    },
    {
-    "t0": 30.583,
-    "t1": 38.083,
+    "t0": 31.583,
+    "t1": 39.083,
     "dur": 7.5,
     "marked": true,
     "why": "the thud -> the button: no score (the front page, \"noted.\")"
@@ -349,8 +349,8 @@
     "inside_marked": true
    },
    {
-    "t0": 30.6,
-    "t1": 38.05,
+    "t0": 31.6,
+    "t1": 39.05,
     "inside_marked": true
    }
   ],
@@ -362,12 +362,12 @@
    },
    {
     "t0": 10.85,
-    "t1": 30.6,
-    "dur": 19.75
+    "t1": 31.6,
+    "dur": 20.75
    },
    {
-    "t0": 38.05,
-    "t1": 41.15,
+    "t0": 39.05,
+    "t1": 42.15,
     "dur": 3.1
    }
   ],
@@ -381,7 +381,7 @@
    "laid_at_s": 0.6,
    "window": [
     0.0,
-    41.333
+    42.333
    ],
    "fade_in_s": 0.0,
    "fade_out_s": 0.05,

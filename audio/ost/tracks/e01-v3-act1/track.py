@@ -272,8 +272,13 @@ def cue_a(tl):
         c.mark(bar(b_wake), 'the Ache\'s colour, once, under "And what if it wakes up?" (the Build gives way on the '
                'cut to her)', hit=False)
 
+    # v3.3: the Ache's colour holds until his answer ("still a preview.") when it falls in the next bar, so no chord
+    # change lands just after the cut to Alyi turning to him (5.06; the cut check's +16 dB on the v3.3 lock)
+    ans = [l for l in tl.lines_in(tl.B('5.06'), tl.E('5.06')) if l['who'] == 'mas'] if tl.has('5.06') else []
+    hold_ache = bool(b_wake is not None and ans and bar(b_wake + 1) <= ans[0]['on'] < bar(b_wake + 2))
+
     def harm_ln(b):
-        if b_wake is not None and b == b_wake and b < b_click - 1:
+        if b_wake is not None and (b == b_wake or (hold_ache and b == b_wake + 1)) and b < b_click - 1:
             return 'Fache'
         if b >= b_click - 1:
             return 'Eb13sus4'
@@ -309,7 +314,13 @@ def cue_a(tl):
                 tt = clear_of_mas(tt0, (t + Q * 2) if change else bar(b + 1) - 0.3)
                 if tt is not None:
                     dd = through(tt, min(4.8, 2 * BAR - (tt - t)) if change else bar(b + 1) - tt + 0.3)
-                    fch(fe, tt, dd, 0.15 if change else 0.12, roll=0.02)
+                    if tt == 0.0 and dd > 2.0:
+                        # the head (a lock whose bar 2 falls at the first frame): as on the others, the downbeat
+                        # chord's pedal lifts at 1.45 s, and its low F with it; the chord re-strikes softly at 1.5 s
+                        fch(fe, 0.0, 1.45, 0.15, roll=0.02)
+                        fch(fe, 1.5, dd - 1.5, 0.11, roll=0.02)
+                    else:
+                        fch(fe, tt, dd, 0.15 if change else 0.12, roll=0.02)
                     last_end = tt + dd
                     if b >= pulse_from:
                         c.n('sub', sub, tt, 1.2, 0.34, True, punch=0.0, click=0.0, decay=0.9)
@@ -322,18 +333,23 @@ def cue_a(tl):
                     att=0.004, dec=0.1, sus=0.5, rel=0.04)
 
     def double_dur(t, d=0.5):
-        """the Build's felt double lets go before the next pedalled chord catches it (v3.2, the EL lock's F-major
-        trace: a caught F3 rang on as the bass under the next chord, with the chip's A-flat pulses over it)"""
+        """the Build's felt double (F3) only where no pedal can hold it: a held F3 rings on as the bass under the
+        chord, with the chip's A-flat pulses over it (the F-major check's trace on the v3.2 EL and v3.3 locks).
+        Returns its length, or None (no double) when a pedalled chord is down at the pass or catches it"""
         tc = c.clk(t)
-        nxt = [a for a, _ in c.ped.get('felt', []) if a > tc]
-        return max(0.08, min(d, (min(nxt) - tc - 0.06) if nxt else d))
+        spans = c.ped.get('felt', [])
+        if any(a - 0.01 <= tc <= b for a, b in spans):
+            return None
+        nxt = [a for a, _ in spans if a > tc]
+        d = min(d, (min(nxt) - tc - 0.06) if nxt else d)
+        return d if d >= 0.08 else None
 
     def build_f(t0, count, vel, felt_double=True):
         for i in range(count):
             t = t0 + i * S16
             c.n('lead', BUILD_F[i % 16], t, S16 * 0.62, vel * ACC4[i % 4], True, duty=0.25, att=0.002, dec=0.09,
                 sus=0.45, rel=0.035)
-            if felt_double and i == 0:
+            if felt_double and i == 0 and double_dur(t) is not None:
                 c.n('felt', nm(BUILD_F[0]) - 12, t, double_dur(t), 0.18)
 
     # ---- A1: from the first frame (the felt on the button), the Build in compile passes
@@ -341,7 +357,7 @@ def cue_a(tl):
     # first frame, tight; cues.json marks it `designed_hit`, so the mix's act-head fade leaves it (audit-v31 #13)
     # (the low F under the first chord only; on a lock whose bar 2 falls at the head, the glow's first chord is the
     # downbeat's, struck once)
-    c.n('felt', 'F2', 0.0, 1.1, 0.17, rel=0.35)
+    c.n('felt', 'F2', 0.0, 1.1 if bar(2) < 0.6 else min(1.1, bar(2) - 0.1), 0.17, rel=0.2)   # (off before a pedal can catch it)
     if bar(2) >= 0.6:
         fch(LN['Fm9'][0], 0.0, bar(2) - 0.05, 0.15, roll=0.008)
     c.mark(0.0, 'A1 THE DOWNBEAT (a designed hit, on the first frame): the felt on the button (Fm9 over its low F); '
@@ -566,10 +582,12 @@ def cue_a(tl):
         VL += [('G5', m + 2 * Q, Q), ('Eb5', m + 3 * Q, Q)]
         pc = tl.snd_any('post_click', tl.B('6.06'), tl.E('6.06'))
         post_t = pc[0] if pc else None
-        if post_t is not None and hit - m > 3.2:
+        rem = hit - (m + 4 * Q)
+        if post_t is not None and rem > 0.3:
             # v3.2 (6.06): HIS POST pops over the million (its send pop on F, the SFX's): no band attack on it; the
-            # drive runs on and the violins climb F5 -> Ab5 into the cut to Rima
-            VL += [('F5', m + 4 * Q, 2 * Q), ('Ab5', m + 6 * Q, max(Q, hit - m - 6 * Q))]
+            # drive runs on and the violins climb F5 -> Ab5 into the cut to Rima (v3.3's shorter 6.06: F5 alone)
+            VL += ([('F5', m + 4 * Q, 2 * Q), ('Ab5', m + 6 * Q, rem - 2 * Q - 0.02)] if rem >= 3 * Q else
+                   [('F5', m + 4 * Q, rem - 0.02)])
             c.mark(post_t, 'his post pops over the million (the SFX\'s pop on F); the drive runs on, the violins '
                    'climb to the cut', hit=False)
     # one band hit on the cut to Rima, then a held Abmaj9 under the two short lines

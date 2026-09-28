@@ -2,7 +2,22 @@
 
 **Composer X (`v3-score-a`), 2026-09-27.** Track A1 of [PLAN.md](../../../../show/episodes/ep01/production/full-v3/PLAN.md), on the mood map of [v3-plan §6](../../../../show/episodes/ep01/production/stick/v3-plan.md) ("pomp and comedy"). **Nothing here has been listened to.** Every number is measured.
 
-## v3.2 (current, 2026-09-28): refit to the final lock
+## v3.3 (current, 2026-09-28): refit, and the new act-out
+
+**The locks:** `show/reel/ep01-v33/` and `-el`. **`render/music.wav`: 190.542 s (4,573 frames); `render/music-el.wav`: 180.833 s (4,340 frames); both exact.**
+- **Timing:** "he's not wrong." (13.09) gets the felt under it, as every V.O. does. 17.10 is 0.5 s longer, and the Upsell follows the timeline.
+- **THE ACT-OUT (P8; the glass, 17.12, is cut).** `act_out()` reads the picture's own timing for 17.11: the line lifts at frame 6, its head leaves the top at 40 % of the shot, its tail at 52 %, then the tilt to the empty sky.
+  - The band stops on the cut to the sky with its last word: the close's F–C fifth (bari, trombone, bass) and the grand's chord with no third.
+  - The climb then goes on alone with the line: vibes and chip in 16ths up the F-minor scale, **landing on the bell's own F6 as the line's head leaves the frame**. So the climb that the crack used to cut now lands, on the register's bell.
+  - A high open fifth (bowed vibes F5 + C6) swells in under the landing, holds over the tilt and the empty sky, and dies in 17.13's black with the bell's tail. It reaches digital zero by the act's last frame, so Act Three's head (composer Y's; its room leads 0.6 s under the black) starts clean.
+  - The old designed silence "the bell alone" is gone.
+  - **Measured through 17.11 and the black** (0.4 s windows): −27 → −30 over the climb, −35.6 just after the landing, −31 to −29 under the fifth, −36.5 into the last 0.4 s, and −96 dB in the last 50 ms.
+- **Every rest fades over 5 ms.**
+- **Measured:**
+  - **Levels:** −20.0 LUFS-I on both locks (the White House −20.0, the Senate −21.0, the run −19.0, the Upsell −19.0 with phrase 3 featured at p95 −16.0).
+  - **QA checks:** F-major OK, knee 0, written A♮ over F 0, no unmarked silence, holes or fragments; every 12 dB cut step is marked.
+
+## v3.2 (superseded by v3.3, 2026-09-28): refit to the final lock
 
 **The locks:** `show/reel/ep01-v32/ep01-v32-act2.json` (the default) and `show/reel/ep01-v32-el/` (`--el`). **`render/music.wav`: 193.042 s (4,633 frames); `render/music-el.wav`: 183.250 s (4,398 frames); both exact.** The round-1 score stands.
 - **The White House:** the V.O.s are cut (13.01, 13.09, 13.11), and Mas is already in the seat nearest the teacher. The pomp still runs from the first frame, with no new cue. The print's last B♭ still bridges the match cut (1.1 s), and the bridge is still no score.

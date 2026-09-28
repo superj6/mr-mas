@@ -2,7 +2,11 @@
 
 **Composer X (`v3-score-a`), 2026-09-27; round 2.** Track A1 of [PLAN.md](../../../../show/episodes/ep01/production/full-v3/PLAN.md). **Nothing here has been listened to.** Every number is measured.
 
-## v3.2 (current, 2026-09-28)
+## v3.3 (current, 2026-09-28)
+
+The same cut (640 frames; EL 583), now from `show/reel/ep01-v33/`. `render/music.wav` is 26.667 s and `render/music-el.wav` is 24.292 s, both exact. The rewind is unchanged at −26.0 LUFS-I.
+
+## v3.2 (superseded by v3.3, 2026-09-28)
 
 The v3.2 cold open is the same 640-frame cut; only the timeline's cue labels changed. `track.py` now reads `show/reel/ep01-v32/ep01-v32-coldopen.json` by default. **`render/music.wav`: 26.667 s; `render/music-el.wav` (`show/reel/ep01-v32-el/`): 24.292 s; both exact.** The rewind is unchanged: −26.0 LUFS-I, silence from the first frame to 20.17 s (designed), and digital zero on the last frames into the intro.
 

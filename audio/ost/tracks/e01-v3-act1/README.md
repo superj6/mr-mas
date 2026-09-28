@@ -2,6 +2,23 @@
 
 **Composer X (`v3-score-a`), 2026-09-27.** Track A1 of [PLAN.md](../../../../show/episodes/ep01/production/full-v3/PLAN.md), on the mood map of [v3-plan §6](../../../../show/episodes/ep01/production/stick/v3-plan.md). **Nothing here has been listened to.** Every number below is measured, and the "for an ear" list says what only a person can judge.
 
+## v3.3 (current, 2026-09-28): refit to the final v3.3 lock
+
+**The locks:** `show/reel/ep01-v33/ep01-v33-act1.json` (the default) and `show/reel/ep01-v33-el/` (`--el`). **`render/music.wav`: 330.583 s (7,934 frames); `render/music-el.wav`: 335.792 s (8,059 frames); both exact.**
+- **M1** stays as below.
+- **Timing:** 5.07 is longer (his silent face) and 9.09 is longer (the collar settled, then "it does.", which plays in the room's designed silence after the pop). Both follow the timeline.
+- **6.06, the shorter post** (3.6 s): the violins land F5 alone into the cut to Rima.
+- **Every rest fades to zero over 5 ms** (the lay-in's stops and fades, and the engine's mutes; audit-v32 X2).
+- **Three fixes the v3.3 grid needed:**
+  - The Build's felt double (F3) is gone wherever a pedalled chord would hold it. It had rung on as a bass under the chip's A♭ pulses, and the F-major check traced that as A energy.
+  - The downbeat's low F lets go before the next pedal.
+  - The Ache's colour now holds until his answer "still a preview." when that answer falls in the next bar. Otherwise a chord change lands 0.3 s after the cut to Alyi turning to him (+16 dB, the cut check).
+- **Measured:**
+  - **Levels:** −20.5 LUFS-I on both locks (launch night −20.0, featured odometer p95 −16.6 / −16.8).
+  - **QA checks:** written A♮ over F 0, F-major OK, knee 0, no unmarked silence, holes or fragments.
+  - **The cut check:** every score step of 12 dB or more on a cut is designed and marked.
+  - **`designed_hit`:** t = 0 in `cues.json`, as before.
+
 ## v3.3 M1 (2026-09-28): launch night's one warm accent (in the cue definitions; the v3.3 refit follows its lock)
 
 **The choice: the Build's pass in its A♭ major, not the Rhodes chord.** On "it likes me." (5.11), the felt arrives on A♭ major: Abmaj7, with its root, and the pulse and sub on A♭. That's for his line's bar and the next. Right after his line, the Build plays one 16-note pass in its A♭-major form. That's the colour it has at Gerg's call and at 2 AM, and the one the odometer takes up. It goes under Gerg's "It likes everyone…", on a rounder chip duty (50 %). Then the harmony returns to the E♭ dominant under the V.O. and into the counter.
@@ -10,7 +27,7 @@
 - **Where it lives:** it's built from beat 5.11 and his line, so it carries into the v3.3 refit.
 - **Measured** (v3.2 locks, rendered): the accent's bars −19.95 LUFS (Kokoro) and −19.6 (EL), against the chat's −19.9. It's a colour change, not a level jump. On both locks: F-major OK, knee 0, written A♮ over F 0, the pass's onset within 10 ms of its mark, no unmarked cut step.
 
-## v3.2 (current, 2026-09-28): refit to the final lock, and the v3.1 audit's fixes
+## v3.2 (superseded by v3.3, 2026-09-28): refit to the final lock, and the v3.1 audit's fixes
 
 **The locks:** `show/reel/ep01-v32/ep01-v32-act1.json` (the default) and `show/reel/ep01-v32-el/ep01-v32-el-act1.json` (`--el`). **`render/music.wav`: 329.750 s (7,914 frames); `render/music-el.wav`: 334.958 s (8,039 frames); both exact.** The direction is unchanged: the first-round score, launch night in the show's own voice, the straight odometer, and the Sydney and Atem cues. Script draft 8.1's beats, and what the score does with them:
 

@@ -44,6 +44,7 @@ held on the two of them and cut by the tour's stamp.  README.md has the details.
                                 KA-CHING (a timeline sound) is the downbeat.  Phrase 3 climbs on, featured; at the
                                 crack in the sky (17.11) it DROPS OUT mid-climb (3 ms)
   195.1 - 204.75   -            the act-out: the register's bell alone (a timeline sound), decaying; no score
+                                (v3.3: the glass is cut; the act-out is the upsell's ending, see act_out())
 
 Levels (the engine's underscore masters, normalised per cue): wh -20, senate -21, run_roof -19 (the RUN about 4 dB
 over the pad), upsell -19 (+3.5 dB after the slot).  Dry of dialogue: the mixer ducks it.  Nothing here has been
@@ -670,10 +671,27 @@ def tracks_up():
     return T
 
 
+def act_out(tl):
+    """v3.3 (script draft 8.2, P8): the glass (17.12) is cut; 17.11 ends the act on the register's figure lifting off as
+    the chip-maker's line, climbing off the top of the frame (the intro's curve), then the tilt to the empty sky, and
+    17.13's black carries the bell's tail.  The picture's own timing (pixel act2 17.11): the line lifts at frame 6, its
+    head leaves the top at 40 % of the shot and its tail at 52 %, the tilt up starts 2 frames later.  Returns
+    dict(t0, lift, out, gone, tilt, black) or None on the older locks (the crack, then the glass)"""
+    if not tl.has('17.11') or tl.has('17.12'):
+        return None
+    b = tl.beats[tl.bi['17.11']]
+    n = b['f1'] - b['f0']
+    f = lambda k: b['t0'] + k / V.FPS                    # noqa: E731
+    out, gone = round(n * 0.4), round(n * 0.52)
+    return dict(t0=b['t0'], lift=f(6), out=f(out), gone=f(gone), tilt=f(gone + 2),
+                black=tl.B('17.13') if tl.has('17.13') else b['t1'])
+
+
 def cue_upsell(tl):
     slot = tl.snd('17.07', 'ka_ching', default=tl.B('17.07') + 0.6)
     reg = tl.B('17.03')
     stop = tl.B('17.11')
+    ao = act_out(tl)
     c = V.Cue('upsell', tl, anchor=slot, anchor_bar=5, bars=10, swing=0.0)
     T = tracks_up()
     freeze = tl.B('17.04') if tl.has('17.04') else None
@@ -797,11 +815,51 @@ def cue_upsell(tl):
     V.thin(c, {'real': dict(drop={'vibes', 'tpt', 'lead', 'grand', 'bsax', 'tbn'}, soften={'arp': 0.7, 'jazz': 0.8}),
                'talk': dict(soften={'vibes': 0.8, 'tpt': 0.8, 'grand': 0.85, 'arp': 0.85}),
                'mas': dict(drop={'vibes', 'tpt'})}, t0=t_in, t1=slot - 0.01)
-    c.mark(stop, 'THE CRACK: the score drops out mid-climb (3 ms); the bell decays alone', hit=False)
     c.section('the register rolls in: the walk, the GPU clock, the Upsell\'s cells (dry under his line)', t_in, tc)
     c.section('the close; the slot (the KA-CHING)', tc, slot + Q)
-    c.section('phrase 3: the climb, featured; cut at the crack', slot + Q, stop)
-    macro = [(t_in - 0.5, -1.0), (slot - 0.05, -1.0), (slot + 0.2, 2.5), (stop + 1.0, 2.5)]
+    if ao is None:
+        c.mark(stop, 'THE CRACK: the score drops out mid-climb (3 ms); the bell decays alone', hit=False)
+        c.section('phrase 3: the climb, featured; cut at the crack', slot + Q, stop)
+        macro = [(t_in - 0.5, -1.0), (slot - 0.05, -1.0), (slot + 0.2, 2.5), (stop + 1.0, 2.5)]
+    else:
+        # v3.3 THE ACT-OUT, a proper ending (P8): the band's last word on 17.11's cut (the close's F-C fifth, the grand's
+        # chord with no third: the sale is closed); then the climb goes on alone with the line, vibes and chip in 16ths
+        # up the F-minor scale, landing on the bell's own F6 as the line's head leaves the top of the frame; the tail
+        # gone, a high open fifth (bowed vibes F5 + C6) holds over the tilt to the empty sky with the bell's decay, and
+        # dies in 17.13's black, out by the act's last frame (Act Three's room leads in under the black: its composer's)
+        band = {'ubass', 'cb_pizz', 'grand', 'arp', 'jazz', 'brush', 'swish', 'tpt', 'bsax', 'tbn', 'vibes', 'lead'}
+        t11 = ao['t0']
+        V.clip_before(c, t11, insts=band, rel=0.06)
+        V.drop_window(c, t11 - 0.004, t11 + 60, insts=band)
+        V.drop_window(c, t11 - 0.12, t11, insts={'bsax', 'tbn', 'ubass', 'cb_pizz', 'arp', 'grand'})   # no flam on the cut
+        # (the melody's last note, a pickup, stays: the climb takes it up)
+        V.stab(c, 'bsax', ['F2'], t11, vel=0.6, length=0.5)
+        V.stab(c, 'tbn', ['C3'], t11, vel=0.56, length=0.5)
+        c.n('ubass', 'F2', t11, 0.9, 0.6)
+        c.ch('grand', ['F3', 'C4', 'G4'], t11, 1.2, 0.34, roll=0.006)
+        c.mark(t11, 'THE ACT-OUT (v3.3): the band\'s last word on the cut to the sky: the close\'s F-C fifth, no third')
+        run = ['Eb5', 'F5', 'G5', 'Ab5', 'Bb5', 'C6', 'Db6', 'Eb6', 'F6']
+        k0 = max(0, len(run) - 1 - int((ao['out'] - ao['lift']) / V.S16))
+        for i, p in enumerate(run[k0:]):
+            t = ao['out'] - (len(run) - 1 - k0 - i) * V.S16
+            last = p == 'F6'
+            c.n('vibes', p, t, (2.6 if last else V.S16 * 0.9), 0.3 + 0.012 * i, rel=0.6 if last else 0.2)
+            c.n('lead', p, t, (0.3 if last else V.S16 * 0.6), 0.2, True, duty=0.25, att=0.002, dec=0.1, sus=0.3,
+                rel=0.08)
+        c.mark(ao['lift'] + (ao['out'] - ao['lift']) * 0.2, 'the climb goes on alone with the line (vibes + chip, '
+               '16ths up the F-minor scale)', hit=False)
+        c.mark(ao['out'], 'the line\'s head leaves the top of the frame: the climb lands on the bell\'s F6')
+        for p, v in (('F5', 0.23), ('C6', 0.2)):              # bowed: it swells in under the landing, there as the tail goes
+            c.n('vibes', p, ao['out'] + 0.1, tl.length - ao['out'] - 0.1, v, art='bowed')
+        c.mark(ao['gone'], 'the tail gone: a high open fifth (bowed vibes F5 + C6) over the tilt to the empty sky; it '
+               'dies in the black with the bell', hit=False)
+        c.section('phrase 3: the climb, featured, into the cut to the sky', slot + Q, t11)
+        c.section('THE ACT-OUT: the last fifth; the climb off the top of the frame onto the bell\'s F6', t11,
+                  ao['gone'])
+        c.section('the empty sky and the black: the high fifth and the bell\'s tail, out by the last frame',
+                  ao['gone'], tl.length)
+        macro = [(t_in - 0.5, -1.0), (slot - 0.05, -1.0), (slot + 0.2, 2.5), (t11 + 0.4, 2.5), (ao['gone'], 0.0),
+                 (tl.length, 0.0)]
     meta = dict(
         id='upsell', title='The More You Buy, to picture (Ep1 v3, Act Two sc 17)', mm='MM-05', usage='BI',
         family='P06 THE JOB', tone='a caper with a salesman\'s grin, played straight; the sale closes on the bell',
@@ -812,11 +870,15 @@ def cue_upsell(tl):
         composer='v3-score-a (composer X), 2026-09-27', underscore_lufs=-19.0, album_lufs=-16.0,
         sfx_slots=[dict(t=round(c.clk(slot), 3), sfx='ka_ching (F6 + C7): the downbeat; the band rests'),
                    dict(t=round(c.clk(slot + 0.02), 3), sfx='synth:bell: the register\'s bell, decaying to the black')],
-        silence_windows=[(c.clk(stop) + 0.005, c.clk(stop) + 0.5, 'the crack: the drop-out', -90.0)],
+        silence_windows=([(c.clk(stop) + 0.005, c.clk(stop) + 0.5, 'the crack: the drop-out', -90.0)]
+                         if ao is None else []),
         audition=['the register rolling in: THE JOB swing, charming, not LEVERAGE',
                   'the close into the KA-CHING: does the sale close on the bell?',
                   'phrase 3 cut at the crack: the climb that never lands, and the bell alone'])
-    sc = c.finish(T, meta, length_end=stop + 0.02, mutes=[(stop, stop + 3.0)], macro=macro)
+    if ao is None:
+        sc = c.finish(T, meta, length_end=stop + 0.02, mutes=[(stop, stop + 3.0)], macro=macro)
+    else:
+        sc = c.finish(T, meta, length_end=tl.length, macro=macro, end_fade=(ao['black'] - 0.15, tl.length - 0.02))
     return c, sc
 
 
@@ -833,6 +895,7 @@ def lay(tl, built, work):
     run_end = tl.E('16.01')
     reg = tl.B('17.03')
     crack = tl.B('17.11')
+    ao = act_out(tl)
     up = built['upsell'][0]
     layers = [
         dict(name='wh_pomp', wav=wav('wh'), T0=T0('wh'), a0=0.0, a1=wh_ring_end(tl), fin=0.0, fout=0.3),
@@ -842,13 +905,14 @@ def lay(tl, built, work):
              fout=0.06),
         dict(name='run_roof', wav=wav('run_roof'), T0=T0('run_roof'), a0=tl.B('16.01') - 0.004, a1=reg + 0.7,
              fin=0.004, fout=0.7),
-        dict(name='upsell', wav=wav('upsell'), T0=T0('upsell'), a0=up.next8(reg - 0.02) - 0.05, a1=crack, fin=0.05,
-             fout=0.003),
+        dict(name='upsell', wav=wav('upsell'), T0=T0('upsell'), a0=up.next8(reg - 0.02) - 0.05,
+             a1=crack if ao is None else tl.length, fin=0.05, fout=0.005 if ao is None else 0.02),
     ]
-    stops = [(stop_wallet, t_re - 0.03), (crack, tl.length)]
+    stops = [(stop_wallet, t_re - 0.03)] + ([(crack, tl.length)] if ao is None else [])
     designed = [(wh_ring_end(tl), tl.B('15.01'), 'THE BRIDGE: no score (sc 14: the phone, the water, the plink)'),
-                (stop_wallet, t_re, 'the wallet: the Senate\'s one stop (the room\'s air under it)'),
-                (crack, tl.length, 'the act-out: the register\'s bell alone (a timeline sound), decaying')]
+                (stop_wallet, t_re, 'the wallet: the Senate\'s one stop (the room\'s air under it)')]
+    if ao is None:
+        designed.append((crack, tl.length, 'the act-out: the register\'s bell alone (a timeline sound), decaying'))
     return layers, stops, designed
 
 

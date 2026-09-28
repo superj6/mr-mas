@@ -3,10 +3,10 @@
  "id": "e01-v3-act2",
  "segment": "act2",
  "file": "audio/ost/tracks/e01-v3-act2/render/music.wav",
- "timeline": "show/reel/ep01-v32/ep01-v32-act2.json",
- "length_s": 193.04166666666666,
- "frames": 4633,
- "samples": 9266000,
+ "timeline": "show/reel/ep01-v33/ep01-v33-act2.json",
+ "length_s": 190.54166666666666,
+ "frames": 4573,
+ "samples": 9146000,
  "sample_rate": 48000,
  "channels": 2,
  "clock": "the segment's own clock: 0 = its first frame (timeEpisode, head 0)",
@@ -15,16 +15,16 @@
   {
    "cue": "wh_pomp",
    "start": 0.0,
-   "end": 68.85,
+   "end": 70.35,
    "what": "light chamber pomp, then the Fountain Pen signs it",
    "family": "P13 THE PODIUM (NEDIB's chamber colours)",
    "render": "audio/ost/tracks/e01-v3-act2/render/_work/wh_pomp-underscore.wav",
    "laid_at_s": 0.0,
    "level": {
     "lufs_i": -20.0,
-    "st_p95": -17.89,
-    "st_max": -17.08,
-    "true_peak_dbtp": -3.86
+    "st_p95": -17.85,
+    "st_max": -17.06,
+    "true_peak_dbtp": -3.71
    },
    "target_lufs": -20.0,
    "engine_qa": {
@@ -44,31 +44,30 @@
      },
      "measured": {
       "lufs": -20.0,
-      "lra": 4.08,
-      "true_peak_db": -3.86,
-      "peak_db": -3.87,
+      "lra": 4.12,
+      "true_peak_db": -3.71,
+      "peak_db": -3.72,
       "rms_db": -22.01,
-      "crest_db": 18.15,
-      "seconds": 68.85
+      "crest_db": 18.29,
+      "seconds": 70.35
      }
     },
     "f_major_ok": true,
     "f_major_ok_written": true,
-    "f_major_worst": 0.194,
+    "f_major_worst": 0.22,
     "knee_whole": 0,
     "knee_completion": 0,
     "hit_check": {
-     "within_10ms": 3,
+     "within_10ms": 4,
      "of": 5,
-     "worst_ms": 34.3
+     "worst_ms": 21.3
     },
     "warnings": [
-     "marker at 50.9583 s: no clear onset within 10 ms ({'t': 50.9583, 'offset_ms': np.float64(31.0), 'strength': 1.85})",
-     "marker at 61.2583 s: no clear onset within 10 ms ({'t': 61.2583, 'offset_ms': np.float64(-34.3), 'strength': 1.5})"
+     "marker at 62.8 s: no clear onset within 10 ms ({'t': 62.8, 'offset_ms': np.float64(21.3), 'strength': 1.63})"
     ]
    },
    "note_qa": {
-    "notes": 401,
+    "notes": 407,
     "written_third_ok": true,
     "written_third_events": [],
     "grazes": 0,
@@ -97,17 +96,22 @@
      "hit": false
     },
     {
-     "t": 50.958,
+     "t": 46.212,
+     "what": "the felt under the V.O. (v3-vo-12)",
+     "hit": false
+    },
+    {
+     "t": 52.458,
      "what": "ON THE DOOR: the Fountain Pen (the flat line on the straight mute); the march yields",
      "hit": true
     },
     {
-     "t": 61.258,
+     "t": 62.8,
      "what": "the Fountain Pen's leap and pen-stroke turn: it signs the print",
      "hit": true
     },
     {
-     "t": 63.413,
+     "t": 64.913,
      "what": "the final B-flat, held under \"it's a good photo.\"; it bridges the match cut (v3.1)",
      "hit": false
     }
@@ -115,16 +119,16 @@
   },
   {
    "cue": "senate_a",
-   "start": 79.875,
-   "end": 134.333,
+   "start": 81.417,
+   "end": 135.833,
    "what": "procedural comedy: deadpan pizzicato, brushes, a muted aside",
    "family": "P02 PROCEDURE (the court), lighter",
    "render": "audio/ost/tracks/e01-v3-act2/render/_work/senate_a-underscore.wav",
-   "laid_at_s": 78.875,
+   "laid_at_s": 80.4167,
    "level": {
-    "lufs_i": -21.05,
-    "st_p95": -18.48,
-    "st_max": -17.19,
+    "lufs_i": -21.0,
+    "st_p95": -18.41,
+    "st_max": -17.12,
     "true_peak_dbtp": -3.15
    },
    "target_lufs": -21.0,
@@ -144,13 +148,13 @@
       "q": 0.7
      },
      "measured": {
-      "lufs": -21.05,
-      "lra": 6.14,
+      "lufs": -21.0,
+      "lra": 6.13,
       "true_peak_db": -3.15,
       "peak_db": -3.16,
-      "rms_db": -22.85,
-      "crest_db": 19.7,
-      "seconds": 55.4783
+      "rms_db": -22.81,
+      "crest_db": 19.66,
+      "seconds": 55.4367
      }
     },
     "f_major_ok": true,
@@ -168,7 +172,7 @@
     ]
    },
    "note_qa": {
-    "notes": 115,
+    "notes": 114,
     "written_third_ok": true,
     "written_third_events": [],
     "grazes": 0,
@@ -177,77 +181,77 @@
    },
    "sync": [
     {
-     "t": 79.875,
+     "t": 81.417,
      "what": "the court's F: a bowed pedal under the clone's real line",
      "hit": false
     },
     {
-     "t": 88.875,
+     "t": 90.417,
      "what": "a straight-mute aside (a gap)",
      "hit": true
     },
     {
-     "t": 84.825,
+     "t": 86.367,
      "what": "a low-string pedal only under the real line (v31-a2-0003)",
      "hit": false
     },
     {
-     "t": 88.795,
+     "t": 90.337,
      "what": "the pedal lets go after the real line (v31-a2-0003); the groove, if any, goes on",
      "hit": false
     },
     {
-     "t": 99.3,
+     "t": 100.842,
      "what": "a low-string pedal only under the real line (e1-a2-15-06)",
      "hit": false
     },
     {
-     "t": 105.83,
+     "t": 107.372,
      "what": "the pedal lets go after the real line (e1-a2-15-06); the groove, if any, goes on",
      "hit": false
     },
     {
-     "t": 105.93,
+     "t": 107.472,
      "what": "a low-string pedal only under the real line (e1-a2-15-07)",
      "hit": false
     },
     {
-     "t": 111.79,
+     "t": 113.332,
      "what": "the pedal lets go after the real line (e1-a2-15-07); the groove, if any, goes on",
      "hit": false
     },
     {
-     "t": 115.325,
+     "t": 116.825,
      "what": "a low-string pedal only under the real line (v32-a2-0001)",
      "hit": false
     },
     {
-     "t": 122.595,
+     "t": 124.095,
      "what": "the pedal lets go after the real line (v32-a2-0001); the groove, if any, goes on",
      "hit": false
     },
     {
-     "t": 128.022,
+     "t": 129.522,
      "what": "a low-string pedal only under the real line (e1-a2-15-11)",
      "hit": false
     },
     {
-     "t": 130.212,
+     "t": 131.712,
      "what": "the pedal lets go after the real line (e1-a2-15-11); the groove, if any, goes on",
      "hit": false
     },
     {
-     "t": 123.25,
+     "t": 124.792,
      "what": "PLEASE REGULATE ME, handed over: the straight mute's one rising line as the senators lean in",
      "hit": true
     },
     {
-     "t": 91.542,
+     "t": 93.083,
      "what": "Sucram's card: the groove holds its beat",
      "hit": false
     },
     {
-     "t": 134.333,
+     "t": 135.833,
      "what": "THE WALLET: the music stops (3 ms; the room's air under it)",
      "hit": false
     }
@@ -255,12 +259,12 @@
   },
   {
    "cue": "senate_b",
-   "start": 146.103,
-   "end": 147.125,
+   "start": 147.603,
+   "end": 148.625,
    "what": "the re-entry after his last word, a suspension held, the tour's stamp",
    "family": "P02 PROCEDURE (the court), lighter",
    "render": "audio/ost/tracks/e01-v3-act2/render/_work/senate_b-underscore.wav",
-   "laid_at_s": 141.1233,
+   "laid_at_s": 142.6233,
    "level": {
     "lufs_i": -20.97,
     "st_p95": null,
@@ -317,7 +321,7 @@
    },
    "sync": [
     {
-     "t": 146.123,
+     "t": 147.623,
      "what": "MM-20 back on a new phrase after \"...no equity\": F7sus(b9) held on the two of them; the tour's stamp cuts it",
      "hit": true
     }
@@ -325,14 +329,14 @@
   },
   {
    "cue": "run_roof",
-   "start": 147.121,
-   "end": 169.2,
+   "start": 148.621,
+   "end": 170.7,
    "what": "the run, then grand, then uneasy",
    "family": "P07 THE RUN -> a held pad",
    "render": "audio/ost/tracks/e01-v3-act2/render/_work/run_roof-underscore.wav",
-   "laid_at_s": 147.125,
+   "laid_at_s": 148.625,
    "level": {
-    "lufs_i": -19.02,
+    "lufs_i": -19.01,
     "st_p95": -16.03,
     "st_max": -15.54,
     "true_peak_dbtp": -3.15
@@ -390,47 +394,47 @@
    },
    "sync": [
     {
-     "t": 147.125,
+     "t": 148.625,
      "what": "the knee stab on stamp 1 (C F Bb Eb over Ab)",
      "hit": true
     },
     {
-     "t": 147.875,
+     "t": 149.375,
      "what": "the knee stab on stamp 2 (C F Bb Eb over Db)",
      "hit": true
     },
     {
-     "t": 150.35,
+     "t": 151.85,
      "what": "the knee stab on stamp 3 (C F Bb Eb over Bb)",
      "hit": true
     },
     {
-     "t": 150.962,
+     "t": 152.462,
      "what": "the knee stab on stamp 4 (C F Bb Eb over Eb)",
      "hit": true
     },
     {
-     "t": 150.962,
+     "t": 152.462,
      "what": "the rooftop pad: Eb69sus",
      "hit": false
     },
     {
-     "t": 152.125,
+     "t": 153.625,
      "what": "the rooftop pad: Abmaj9",
      "hit": false
     },
     {
-     "t": 161.445,
+     "t": 162.945,
      "what": "the rooftop pad: Dbmaj9#11",
      "hit": false
     },
     {
-     "t": 164.705,
+     "t": 166.205,
      "what": "the rooftop pad: Bbm9",
      "hit": false
     },
     {
-     "t": 166.185,
+     "t": 167.685,
      "what": "the rooftop pad: C7susb9",
      "hit": false
     }
@@ -438,17 +442,17 @@
   },
   {
    "cue": "upsell",
-   "start": 168.737,
-   "end": 183.375,
+   "start": 170.237,
+   "end": 190.542,
    "what": "a caper with a salesman's grin, played straight; the sale closes on the bell",
    "family": "P06 THE JOB",
    "render": "audio/ost/tracks/e01-v3-act2/render/_work/upsell-underscore.wav",
-   "laid_at_s": 167.85,
+   "laid_at_s": 169.35,
    "level": {
-    "lufs_i": -18.96,
-    "st_p95": -16.64,
-    "st_max": -16.56,
-    "true_peak_dbtp": -4.3
+    "lufs_i": -18.99,
+    "st_p95": -16.0,
+    "st_max": -15.87,
+    "true_peak_dbtp": -3.61
    },
    "target_lufs": -19.0,
    "engine_qa": {
@@ -468,12 +472,12 @@
      },
      "measured": {
       "lufs": -19.0,
-      "lra": 5.48,
-      "true_peak_db": -4.3,
-      "peak_db": -4.31,
-      "rms_db": -21.04,
-      "crest_db": 16.73,
-      "seconds": 15.545
+      "lra": 8.09,
+      "true_peak_db": -3.61,
+      "peak_db": -3.62,
+      "rms_db": -21.26,
+      "crest_db": 17.64,
+      "seconds": 21.1917
      }
     },
     "f_major_ok": true,
@@ -482,17 +486,18 @@
     "knee_whole": 0,
     "knee_completion": 0,
     "hit_check": {
-     "within_10ms": 6,
-     "of": 7,
+     "within_10ms": 7,
+     "of": 9,
      "worst_ms": 60.0
     },
     "warnings": [
      "marker at 8.8413 s: no clear onset within 10 ms ({'t': 8.8413, 'offset_ms': np.float64(-60.0), 'strength': 1.91})",
-     "underscore short-term p95 -16.62 LUFS > -17 (underscore) (s6.5): the loudest moments sit high above the bed"
+     "marker at 16.025 s: no clear onset within 10 ms ({'t': 16.025, 'offset_ms': np.float64(28.3), 'strength': 1.57})",
+     "underscore short-term p95 -15.97 LUFS > -17 (underscore) (s6.5): the loudest moments sit high above the bed"
     ]
    },
    "note_qa": {
-    "notes": 384,
+    "notes": 407,
     "written_third_ok": true,
     "written_third_events": [],
     "grazes": 0,
@@ -501,53 +506,68 @@
    },
    "sync": [
     {
-     "t": 170.662,
+     "t": 172.162,
      "what": "the Upsell: cell 1 (C4 ... G4), a step higher",
      "hit": true
     },
     {
-     "t": 172.85,
+     "t": 174.35,
      "what": "the Upsell: cell 2 (Eb4 ... Ab4), a step higher",
      "hit": true
     },
     {
-     "t": 178.475,
+     "t": 179.975,
      "what": "the Upsell: cell 3 (F4 ... Bb4), a step higher",
      "hit": true
     },
     {
-     "t": 180.35,
+     "t": 181.85,
      "what": "the Upsell: cell 4 (G4 ... C5), a step higher",
      "hit": true
     },
     {
-     "t": 182.85,
+     "t": 184.35,
      "what": "the Upsell: cell 5 (Ab4 ... Db5), a step higher",
      "hit": true
     },
     {
-     "t": 176.691,
+     "t": 178.191,
      "what": "THE CLOSE: C5 G4 F4 (after his real line)",
      "hit": true
     },
     {
-     "t": 177.225,
+     "t": 178.725,
      "what": "the close's fifth (bari F2 + trombone C3) on the cut to his finger",
      "hit": true
     },
     {
-     "t": 177.85,
+     "t": 179.35,
      "what": "THE SLOT: the KA-CHING (a timeline sound) is the downbeat; the band rests",
      "hit": false
     },
     {
-     "t": 169.917,
+     "t": 171.417,
      "what": "Nesnej's card: one held chord for its beat",
      "hit": false
     },
     {
-     "t": 183.375,
-     "what": "THE CRACK: the score drops out mid-climb (3 ms); the bell decays alone",
+     "t": 185.375,
+     "what": "THE ACT-OUT (v3.3): the band's last word on the cut to the sky: the close's F-C fifth, no third",
+     "hit": true
+    },
+    {
+     "t": 185.925,
+     "what": "the climb goes on alone with the line (vibes + chip, 16ths up the F-minor scale)",
+     "hit": false
+    },
+    {
+     "t": 187.125,
+     "what": "the line's head leaves the top of the frame: the climb lands on the bell's F6",
+     "hit": true
+    },
+    {
+     "t": 187.667,
+     "what": "the tail gone: a high open fifth (bowed vibes F5 + C6) over the tilt to the empty sky; it dies in the black with the bell",
      "hit": false
     }
    ]
@@ -555,53 +575,44 @@
  ],
  "silences_designed": [
   {
-   "t0": 68.85,
-   "t1": 79.875,
+   "t0": 70.35,
+   "t1": 81.417,
    "why": "THE BRIDGE: no score (sc 14: the phone, the water, the plink)"
   },
   {
-   "t0": 134.333,
-   "t1": 146.123,
+   "t0": 135.833,
+   "t1": 147.623,
    "why": "the wallet: the Senate's one stop (the room's air under it)"
-  },
-  {
-   "t0": 183.375,
-   "t1": 193.042,
-   "why": "the act-out: the register's bell alone (a timeline sound), decaying"
   }
  ],
  "hard_stops": [
   {
-   "t": 134.333,
+   "t": 135.833,
    "what": "the wallet: the Senate's one stop (the room's air under it)"
-  },
-  {
-   "t": 183.375,
-   "what": "the act-out: the register's bell alone (a timeline sound), decaying"
   }
  ],
  "measured": {
-  "length_s": 193.0417,
-  "samples": 9266000,
-  "frames": 4633,
+  "length_s": 190.5417,
+  "samples": 9146000,
+  "frames": 4573,
   "exact": true,
   "whole": {
-   "lufs_i": -20.05,
-   "st_p95": -17.4,
+   "lufs_i": -20.01,
+   "st_p95": -17.18,
    "st_max": -15.6,
    "true_peak_dbtp": -3.15
   },
   "cues": {
    "wh_pomp": {
     "lufs_i": -20.0,
-    "st_p95": -17.89,
-    "st_max": -17.08,
-    "true_peak_dbtp": -3.86
+    "st_p95": -17.85,
+    "st_max": -17.06,
+    "true_peak_dbtp": -3.71
    },
    "senate_a": {
-    "lufs_i": -21.05,
-    "st_p95": -18.48,
-    "st_max": -17.19,
+    "lufs_i": -21.0,
+    "st_p95": -18.41,
+    "st_max": -17.12,
     "true_peak_dbtp": -3.15
    },
    "senate_b": {
@@ -611,68 +622,68 @@
     "true_peak_dbtp": -8.61
    },
    "run_roof": {
-    "lufs_i": -19.02,
+    "lufs_i": -19.01,
     "st_p95": -16.03,
     "st_max": -15.54,
     "true_peak_dbtp": -3.15
    },
    "upsell": {
-    "lufs_i": -18.96,
-    "st_p95": -16.64,
-    "st_max": -16.56,
-    "true_peak_dbtp": -4.3
+    "lufs_i": -18.99,
+    "st_p95": -16.0,
+    "st_max": -15.87,
+    "true_peak_dbtp": -3.61
    }
   },
   "rows": [
    {
     "section": "wh: the pomp: a straight processional in B-flat",
     "start": 0.0,
-    "end": 50.96,
-    "lufs_i": -20.69,
-    "st_p95": -18.71,
-    "st_max": -18.15,
-    "true_peak_dbtp": -4.1
+    "end": 52.46,
+    "lufs_i": -20.66,
+    "st_p95": -18.79,
+    "st_max": -18.21,
+    "true_peak_dbtp": -4.16
    },
    {
     "section": "wh: ON THE DOOR: the Fountain Pen (NEDIB) takes over",
-    "start": 50.96,
-    "end": 61.26,
-    "lufs_i": -18.56,
-    "st_p95": -17.49,
+    "start": 52.46,
+    "end": 62.8,
+    "lufs_i": -18.61,
+    "st_p95": -17.47,
     "st_max": -17.31,
-    "true_peak_dbtp": -5.9
+    "true_peak_dbtp": -3.71
    },
    {
     "section": "wh: the print: the leap and the turn; the final B-flat rings out",
-    "start": 61.26,
-    "end": 67.75,
-    "lufs_i": -18.16,
-    "st_p95": -17.81,
-    "st_max": -17.79,
-    "true_peak_dbtp": -3.86
+    "start": 62.8,
+    "end": 69.25,
+    "lufs_i": -18.19,
+    "st_p95": -17.87,
+    "st_max": -17.86,
+    "true_peak_dbtp": -4.35
    },
    {
     "section": "senate_a: the court's F under the real line",
-    "start": 79.88,
-    "end": 83.88,
-    "lufs_i": -23.84,
-    "st_p95": -23.56,
-    "st_max": -23.55,
-    "true_peak_dbtp": -13.06
+    "start": 81.42,
+    "end": 85.42,
+    "lufs_i": -23.76,
+    "st_p95": -23.47,
+    "st_max": -23.47,
+    "true_peak_dbtp": -12.97
    },
    {
     "section": "senate_a: a lighter Under Oath: the pizz two-feel, brushes, the mute's asides (v3.2: the ask, his real line on the pedal; the senators' delight on the mute)",
-    "start": 83.88,
-    "end": 134.33,
-    "lufs_i": -20.95,
-    "st_p95": -18.47,
-    "st_max": -17.19,
+    "start": 85.42,
+    "end": 135.83,
+    "lufs_i": -20.9,
+    "st_p95": -18.4,
+    "st_max": -17.12,
     "true_peak_dbtp": -3.15
    },
    {
     "section": "senate_b: F7sus(b9) held on the two of them, cut by the tour's stamp (v3.2)",
-    "start": 146.12,
-    "end": 147.12,
+    "start": 147.62,
+    "end": 148.62,
     "lufs_i": -21.18,
     "st_p95": null,
     "st_max": null,
@@ -680,8 +691,8 @@
    },
    {
     "section": "run_roof: THE RUN: the poster, a knee stab per stamp",
-    "start": 147.12,
-    "end": 152.12,
+    "start": 148.62,
+    "end": 153.62,
     "lufs_i": -16.37,
     "st_p95": -16.13,
     "st_max": -16.1,
@@ -689,8 +700,8 @@
    },
    {
     "section": "run_roof: the rooftop: the pad, grand (the statement plays dry)",
-    "start": 152.12,
-    "end": 161.44,
+    "start": 153.62,
+    "end": 162.94,
     "lufs_i": -19.33,
     "st_p95": -18.45,
     "st_max": -17.88,
@@ -698,97 +709,103 @@
    },
    {
     "section": "run_roof: the sheet: uneasy (Dbmaj9#11, Bbm9, C7sus-flat9 on the knife)",
-    "start": 161.44,
-    "end": 169.2,
-    "lufs_i": -21.63,
+    "start": 162.94,
+    "end": 170.7,
+    "lufs_i": -21.57,
     "st_p95": -19.94,
     "st_max": -19.94,
     "true_peak_dbtp": -7.65
    },
    {
     "section": "upsell: the register rolls in: the walk, the GPU clock, the Upsell's cells (dry under his line)",
-    "start": 168.79,
-    "end": 176.69,
-    "lufs_i": -21.31,
-    "st_p95": -20.66,
-    "st_max": -20.64,
-    "true_peak_dbtp": -9.07
+    "start": 170.29,
+    "end": 178.19,
+    "lufs_i": -20.61,
+    "st_p95": -19.97,
+    "st_max": -19.95,
+    "true_peak_dbtp": -8.38
    },
    {
     "section": "upsell: the close; the slot (the KA-CHING)",
-    "start": 176.69,
-    "end": 178.47,
-    "lufs_i": -20.45,
+    "start": 178.19,
+    "end": 179.97,
+    "lufs_i": -19.76,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -7.42
+    "true_peak_dbtp": -6.73
    },
    {
-    "section": "upsell: phrase 3: the climb, featured; cut at the crack",
-    "start": 178.47,
-    "end": 183.38,
-    "lufs_i": -16.57,
-    "st_p95": -16.43,
-    "st_max": -16.39,
-    "true_peak_dbtp": -4.3
+    "section": "upsell: phrase 3: the climb, featured, into the cut to the sky",
+    "start": 179.97,
+    "end": 185.38,
+    "lufs_i": -15.97,
+    "st_p95": -15.76,
+    "st_max": -15.7,
+    "true_peak_dbtp": -3.61
+   },
+   {
+    "section": "upsell: THE ACT-OUT: the last fifth; the climb off the top of the frame onto the bell's F6",
+    "start": 185.38,
+    "end": 187.67,
+    "lufs_i": -22.23,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -6.44
+   },
+   {
+    "section": "upsell: the empty sky and the black: the high fifth and the bell's tail, out by the last frame",
+    "start": 187.67,
+    "end": 190.54,
+    "lufs_i": -26.46,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -17.05
    }
   ],
   "digital_silence": [
    {
-    "t0": 68.829,
-    "t1": 79.875,
-    "dur": 11.046,
+    "t0": 70.33,
+    "t1": 81.417,
+    "dur": 11.087,
     "marked": true,
     "why": "THE BRIDGE: no score (sc 14: the phone, the water, the plink)"
    },
    {
-    "t0": 134.333,
-    "t1": 146.103,
+    "t0": 135.833,
+    "t1": 147.603,
     "dur": 11.77,
     "marked": true,
     "why": "the wallet: the Senate's one stop (the room's air under it)"
-   },
-   {
-    "t0": 183.375,
-    "t1": 193.042,
-    "dur": 9.667,
-    "marked": true,
-    "why": "the act-out: the register's bell alone (a timeline sound), decaying"
    }
   ],
   "unmarked_digital_silence": [],
   "holes_below_-60": [
    {
-    "t0": 68.75,
-    "t1": 79.9,
+    "t0": 70.2,
+    "t1": 81.45,
     "inside_marked": true
    },
    {
-    "t0": 134.35,
-    "t1": 146.1,
-    "inside_marked": true
-   },
-   {
-    "t0": 183.4,
-    "t1": 193.0,
+    "t0": 135.85,
+    "t1": 147.6,
     "inside_marked": true
    }
   ],
   "music_runs": [
    {
     "t0": 0.0,
-    "t1": 68.75,
-    "dur": 68.75
+    "t1": 70.2,
+    "dur": 70.2
    },
    {
-    "t0": 79.9,
-    "t1": 134.35,
-    "dur": 54.45
+    "t0": 81.45,
+    "t1": 135.85,
+    "dur": 54.4
    },
    {
-    "t0": 146.1,
-    "t1": 183.4,
-    "dur": 37.3
+    "t0": 147.6,
+    "t1": 190.45,
+    "dur": 42.85
    }
   ],
   "fragments_under_2s": [],
@@ -801,7 +818,7 @@
    "laid_at_s": 0.0,
    "window": [
     0.0,
-    68.85
+    70.35
    ],
    "fade_in_s": 0.0,
    "fade_out_s": 0.3,
@@ -811,10 +828,10 @@
   {
    "name": "senate_a",
    "file": "audio/ost/tracks/e01-v3-act2/render/_work/senate_a-underscore.wav",
-   "laid_at_s": 78.875,
+   "laid_at_s": 80.4167,
    "window": [
-    79.875,
-    134.333
+    81.417,
+    135.833
    ],
    "fade_in_s": 0.4,
    "fade_out_s": 0.003,
@@ -824,10 +841,10 @@
   {
    "name": "senate_b",
    "file": "audio/ost/tracks/e01-v3-act2/render/_work/senate_b-underscore.wav",
-   "laid_at_s": 141.1233,
+   "laid_at_s": 142.6233,
    "window": [
-    146.103,
-    147.125
+    147.603,
+    148.625
    ],
    "fade_in_s": 0.05,
    "fade_out_s": 0.06,
@@ -837,10 +854,10 @@
   {
    "name": "run_roof",
    "file": "audio/ost/tracks/e01-v3-act2/render/_work/run_roof-underscore.wav",
-   "laid_at_s": 147.125,
+   "laid_at_s": 148.625,
    "window": [
-    147.121,
-    169.2
+    148.621,
+    170.7
    ],
    "fade_in_s": 0.004,
    "fade_out_s": 0.7,
@@ -850,13 +867,13 @@
   {
    "name": "upsell",
    "file": "audio/ost/tracks/e01-v3-act2/render/_work/upsell-underscore.wav",
-   "laid_at_s": 167.85,
+   "laid_at_s": 169.35,
    "window": [
-    168.737,
-    183.375
+    170.237,
+    190.542
    ],
    "fade_in_s": 0.05,
-   "fade_out_s": 0.003,
+   "fade_out_s": 0.02,
    "gain_db": 0.0,
    "post": null
   }

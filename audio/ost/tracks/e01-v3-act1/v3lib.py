@@ -45,13 +45,13 @@ S16 = Q / 4
 
 # ================================================================== which timeline
 def kokoro_path(seg):
-    """the default: the v3.2 lock (final, 2026-09-28); the v3.1 and v3 locks are show/reel/ep01-v31/ and ep01-v3/
-    (pass them with --timeline)"""
-    return os.path.join(REPO, 'show', 'reel', 'ep01-v32', f'ep01-v32-{seg}.json')
+    """the default: the v3.3 lock (final, 2026-09-28); the v3.2, v3.1 and v3 locks are show/reel/ep01-v32/, ep01-v31/
+    and ep01-v3/ (pass them with --timeline)"""
+    return os.path.join(REPO, 'show', 'reel', 'ep01-v33', f'ep01-v33-{seg}.json')
 
 
 def el_path(seg):
-    return os.path.join(REPO, 'show', 'reel', 'ep01-v32-el', f'ep01-v32-el-{seg}.json')
+    return os.path.join(REPO, 'show', 'reel', 'ep01-v33-el', f'ep01-v33-el-{seg}.json')
 
 
 _REAL = None
@@ -91,7 +91,7 @@ def cli(seg, argv=None):
     """--el (the ElevenLabs-timed lock), --timeline PATH, or env V3_TIMELINE; default the Kokoro lock.
     Returns (args, timeline path, variant tag: '' for the Kokoro lock, '-el' for the EL one, '-alt' otherwise)"""
     ap = argparse.ArgumentParser()
-    ap.add_argument('--el', action='store_true', help='the ElevenLabs-timed timeline (show/reel/ep01-v32-el/)')
+    ap.add_argument('--el', action='store_true', help='the ElevenLabs-timed timeline (show/reel/ep01-v33-el/)')
     ap.add_argument('--timeline', default=None, help='any timeline JSON of this segment')
     ap.add_argument('--dry', action='store_true', help='build the scores, note-level QA, no audio')
     ap.add_argument('--render', nargs='*', help='render these cues (all if none named), then assemble')
@@ -102,6 +102,10 @@ def cli(seg, argv=None):
         tag = ''
     elif os.path.abspath(path) == os.path.abspath(el_path(seg)):
         tag = '-el'
+    elif '/ep01-v32/' in os.path.abspath(path):
+        tag = '-v32'
+    elif '/ep01-v32-el/' in os.path.abspath(path):
+        tag = '-v32-el'
     elif '/ep01-v31/' in os.path.abspath(path):
         tag = '-v31'
     elif '/ep01-v31-el/' in os.path.abspath(path):
@@ -344,7 +348,8 @@ class Cue:
                    mutes=[(self.clk(a0), self.clk(a1)) for a0, a1 in mutes],
                    length_s=self.clk(length_end), tail_s=tail_s,
                    end_fade=(self.clk(end_fade[0]), self.clk(end_fade[1])) if end_fade else None,
-                   meta=meta, stem_post=stem_post or {})
+                   meta=meta, stem_post=stem_post or {},
+                   mute_fade_ms=5.0)          # v3.3 (audit-v32 X2): every designed rest fades to zero over 5 ms
         return sc
 
 
@@ -547,9 +552,9 @@ def db(x):
 def assemble(tl, layers, out_wav, stops=(), designed=()):
     """layers: [dict(name, wav, T0, a0, a1, fin=0.0, fout=0.25, gain_db=0.0, post=None, level=None)]:
     the file laid with its t = 0 at segment T0, gated to [a0, a1) with a fade-in of `fin` s after a0 and a
-    fade-out of `fout` s before a1 (fout <= 0.004: a hard stop, 3 ms).  `level`: normalise the laid window to
+    fade-out of `fout` s before a1 (fout <= 0.005: a hard stop, 5 ms).  `level`: normalise the laid window to
     this LUFS-I (after post) instead of gain_db.  stops: [(t0, t1)] forced to digital zero in the final mix
-    (3 ms fades).  designed: [(t0, t1, why)] the marked silences (checked, not forced)."""
+    (5 ms fades: v3.3, every designed rest fades to zero over 5 ms, so no stop ticks; audit-v32 X2).  designed: [(t0, t1, why)] the marked silences (checked, not forced)."""
     import soundfile as sf
     from engine.mix import lufs
     N = tl.samples
@@ -575,7 +580,7 @@ def assemble(tl, layers, out_wav, stops=(), designed=()):
         if fin > 0:
             gate[j0:j0 + fin] *= _fade(min(fin, j1 - j0), 'in')[: max(0, min(fin, j1 - j0))]
         fo = L.get('fout', 0.25)
-        m = int(max(0.003, fo) * SR)
+        m = int(max(0.005, fo) * SR)
         m = min(m, j1 - j0)
         if m > 0 and j1 <= N:
             gate[j1 - m:j1] *= _fade(m, 'out')
@@ -592,7 +597,7 @@ def assemble(tl, layers, out_wav, stops=(), designed=()):
                          fade_out_s=fo, gain_db=round(float(g), 2), post=L.get('post_name')))
     for a0, a1 in stops:
         i0, i1 = int(round(a0 * SR)), min(N, int(round(a1 * SR)))
-        k = int(0.003 * SR)
+        k = int(0.005 * SR)
         mix[:, max(0, i0 - k):i0] *= _fade(min(k, i0), 'out')[None, : min(k, i0)]
         mix[:, i0:i1] = 0.0
     y = mix.T.astype(np.float32)
