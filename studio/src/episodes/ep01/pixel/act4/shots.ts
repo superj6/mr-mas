@@ -1,15 +1,25 @@
-// MR. MAS — Ep1 v3.1 · ACT FOUR, "five days, told twice", on the v3.1 stick lock (the v3-shots-act4 pass; v3 round, then
-// the v3.1 round, 2026-09-27).
+// MR. MAS — Ep1 v3.2 · ACT FOUR, "five days, told twice", on the v3.2 stick lock (the v3-shots-act4 pass; the v3 round,
+// the v3.1 round, 2026-09-27, then the v3.2 round, 2026-09-28).
 //
-// A PORT with the v3.1 re-cut drawn in. Act Four v5's layouts (act4/animatic/shots5.ts DRAW5, through its own drawShot5,
-// as the pipeline's act4-v5 test runs them) draw every shot v3.1 kept as it was, handed this lock's shots (./data.ts:
-// tools/lock.py on show/reel/ep01-v31/ep01-v31-act4.json, lock_v5.py's plan tables and the re-anchors in ./plan.json;
-// the cut takes' mouths from ./cut_mouths.py). What v3 / v3.1 changed is drawn here (kind 'V' in the margin); the rest
-// is kind 'P' (the v5 layout, its v5 verdict R/C/N kept in `st`). Nothing in act4/animatic, act4-v5 or shared/pixel is
-// edited: the new art is the v3-art-b pass's kits/act4-v31.ts, the face lights (kits/face-light.ts), and this pass's
-// additive opt-in states in ./art/ (race.ts, invite.ts, texts.ts, v31.ts). A layout below that changes a v5 layout is
-// a copy of it with the change (each says so).
+// A PORT with the v3.1 and v3.2 re-cuts drawn in. Act Four v5's layouts (act4/animatic/shots5.ts DRAW5, through its own
+// drawShot5, as the pipeline's act4-v5 test runs them) draw every shot v3.x kept as it was, handed this lock's shots
+// (./data.ts: tools/lock.py on show/reel/ep01-v32/ep01-v32-act4.json, lock_v5.py's plan tables and the re-anchors in
+// ./plan.json; the cut takes' mouths from ./cut_mouths.py). What v3 / v3.1 / v3.2 changed is drawn here (kind 'V' in the
+// margin); the rest is kind 'P' (the v5 layout, its v5 verdict R/C/N kept in `st`). Nothing in act4/animatic, act4-v5
+// or shared/pixel is edited: the new art is the v3-art-b pass's kits/act4-v31.ts and kits/act4-v32.ts, the face lights
+// (kits/face-light.ts), and this pass's additive opt-in states in ./art/ (race.ts, invite.ts, texts.ts, v31.ts, v32.ts).
+// A layout below that changes a v5 layout is a copy of it with the change (each says so).
 //
+// v3.2's Act Four (script draft 8.1, script-v32-notes.md §3.4, §4, §10; agency-v32.md; the lead's brief): HIS MOVES
+//   read on screen: after "super." he picks up his phone (S1.12) and writes his own post, 1:46 PM, before the room falls
+//   to night (v32-S1.13); inside the board's side, the lobby is his, in full colour at his shoulder: the GUEST lanyard
+//   slid across, he puts it on himself, the selfie's one white step, his post, his look up at the corner camera, and the
+//   picture steps out into that camera's grade (v32-S5.00) and onto their wall screen (S4.09, the post card gone from
+//   the CCTV tile); at 2 AM the MACROSOFT badge slides under the door, his hand takes it, and the two badges sit on the
+//   desk, square (S5.11). Also: the blog post types itself while Neleh's lips move, silent (S3.03, the read is cut);
+//   Rima's tile label INTERIM CEO (S3.04); Alyi's reflection turning to the phones (S4.02); the first-appearance plate
+//   with one relation word (S4.08 ADELINA · CO-FOUNDER); the app's heart count 406 -> 407 -> 406 (S5.03). The shock
+//   opening is v3.1's, unchanged; the Runway hourglass splice stays at S7.13 k128-263.
 // v3.1's Act Four (script draft 7, script-v31-notes.md §3.1–3.4, §4; the lead's brief): his side opens on the shock:
 //   the suite's ordinary life (S1.01, v31-S1.01b) → JOIN, one beat with the V.O. and the click (S1.02) → the call, and
 //   ALYI's first sentence heard on camera in his tile, lip-synced; on "company." the Wi-Fi drops and the board's tiles
@@ -21,21 +31,20 @@
 //   card (S4.10), the call out to Gerg (S5.09), the letter's header tile (S6.01), Tuesday's invite (v31-S7.03b), Terb's
 //   dry squeeze (S7.06) and his writing (S7.07-cont), the lobby's greyed Remove (S8.03), the Runway hourglass insert at
 //   S7.13 k128-263 (browser / PNG frames: `hourglass`), and the face lights on the non-joke close-ups (mood §4 #4).
-// Kept from the v3 round: no side badges, no WHAT THEY DIDN'T KNOW card, plates cut to names, the GLYPH dissolve on his
-// tile's drop (S1.09; J1 off), race weekend on the Strip, the JOIN screen's four attendees, MACROSOFT · BILLIONS IN and
-// EQUITY: 0 alone, C13's phone falling, C14's split, the letter's ALYI, and Mas's inner voice never moving his mouth.
+// Kept from the v3 round: no side badges, no WHAT THEY DIDN'T KNOW card, the GLYPH dissolve on his tile's drop (S1.09;
+// J1 off), race weekend on the Strip, the JOIN screen's four attendees, MACROSOFT · BILLIONS IN and EQUITY: 0 alone,
+// C13's phone falling, C14's split, the letter's ALYI, and Mas's inner voice never moving his mouth.
 import {Buf, rect, bayer, hash} from '../../../../shared/pixel/px';
 import {PAL, stepColor, familyOf} from '../../../../shared/pixel/palette';
 import type {GlyphLayer} from '../../../../shared/pixel/glyph';
+import type {Viseme} from '../../../../shared/pixel/cast/talk';
 import {blitImg} from '../../../../shared/pixel/figure';
 import {
   callChrome, drawTile, captureTile, tileDrop, slideTiles, tilePlate, dropY, noticeIcon, pointerAt, gridLayout, CALL_BAR_H,
 } from '../../../../shared/pixel/kits/callgrid';
 import {drawStaffLetter, LETTER_SCROLL_MAX, letterLayout} from '../../../../shared/pixel/kits/staff-letter';
 import {drawChatPanel} from '../../../../shared/pixel/kits/chat-panel';
-import {badgesOnDeskRoom, BADGES_ROOM_AT} from '../../../../shared/pixel/kits/macrosoft-badge';
-import {drawPost, POSTS} from '../../../../shared/pixel/kits/post-card';
-import type {PostSpec, PostWho} from '../../../../shared/pixel/kits/post-card';
+import {badgesOnDeskRoom, BADGES_ROOM_AT, macrosoftBadge} from '../../../../shared/pixel/kits/macrosoft-badge';
 import {drawLobbyFeed, FEED_W, FEED_H} from '../../../../shared/pixel/kits/lobby-feed';
 import type {LobbyFeedPhase} from '../../../../shared/pixel/kits/lobby-feed';
 import {drawGergMediumPOV} from '../../../../shared/pixel/cast/gerg-medium';
@@ -45,16 +54,20 @@ import {faceKey} from '../../../../shared/pixel/kits/face-light';
 import {
   drawRemoveDialog, removeButton, drawNelehDeskHigh, drawTuesdayInvite, drawSundayOTS, drawAlyiGlass, callOutPainter, drawDrySqueeze, drawTerbWriting,
 } from '../../../../shared/pixel/kits/act4-v31';
+import {drawSuitePhone, POST_LOVED, drawReceptionMCU, drawLobbyCCTVStep, drawBadgeUnderDoor, drawBadgeReach2S} from '../../../../shared/pixel/kits/act4-v32';
+import {drawBlogDraft} from '../../../../shared/pixel/kits/blog-draft';
+import {drawBoardCall} from '../../../../shared/pixel/kits/call-boardside';
+import {drawNelehDeskOTS, drawNelehBezel, NDESK} from '../../../../shared/pixel/rooms/neleh-desk';
 import {drawLighthouse} from '../../../../shared/pixel/rooms/lighthouse';
 import {drawLaptopInsert, LAPTOP_INSERT} from '../../../../shared/pixel/rooms/vegas-suite';
 import {BR, drawBoardroom, FIRES_SC30} from '../../../../shared/pixel/rooms/boardroom';
 import {drawBoardPlate, drawBoardPlateTable, drawBoardPlateFront, BPLATE} from '../../../../shared/pixel/rooms/boardroom-plate';
 import type {BoardPlateOpts} from '../../../../shared/pixel/rooms/boardroom-plate';
-import {drawDarkPlate, drawDarkPlateDesk, drawDarkPlateFront, DPLATE} from '../../../../shared/pixel/rooms/darkroom-plate';
+import {drawDarkPlate, drawDarkPlateDesk, drawDarkPlateFront, DPLATE, DPLATE_LOOK} from '../../../../shared/pixel/rooms/darkroom-plate';
 import type {DarkPlateOpts} from '../../../../shared/pixel/rooms/darkroom-plate';
-import {drawSlateDoorOpen, slateDoorSign, SLATE_GAP} from '../../../../shared/pixel/rooms/slate-desks';
+import {drawSlateDoorOpen, slateDoorSign, SLATE_GAP, keyTurnAt} from '../../../../shared/pixel/rooms/slate-desks';
 import {drawCalmOffTerms2S} from '../../../../shared/pixel/rooms/calmoff-terms';
-import {drawCalmOff2S, FIRES_CALMOFF} from '../../../../shared/pixel/rooms/twoshots';
+import {drawCalmOff2S, FIRES_CALMOFF, drawDark2S} from '../../../../shared/pixel/rooms/twoshots';
 import {alyiReflection} from '../../../../shared/pixel/cast/alyi-speak';
 import {marioImg, MARIO_BASE, MARIO_FOOT} from '../../../../shared/pixel/cast/mario';
 import type {MarioArm} from '../../../../shared/pixel/cast/mario';
@@ -71,17 +84,18 @@ import {shakeAt, SHAKE_DOOR} from '../../../../shared/pixel/sprite';
 import {defineSegment, layouts as registry, mouth, roomMouth, room3Mouth, lipOn, talking, held, on2, mk, RH, pt, pw, bpt, bpw, soft, softMask, keepRect, vignette, rackStep, RACK, drift, shiftRoom, doorFrame, ACCENT} from '../kit';
 import type {Layout, PxShot} from '../kit';
 import {drawBust, MCU_X, mcuRoom, shoulder} from '../../act4/animatic/framing';
-import {putUI, blipCard, freezePrint, fallaway} from '../../act4/animatic/lay';
-import {G5, G4, ui, board4, masTileState} from '../../act4/animatic/shots';
+import {putUI, blipCard, freezePrint} from '../../act4/animatic/lay';
+import {G5, G4, ui, board4, masTileState, sui} from '../../act4/animatic/shots';
 import {boardRoom, bullpenRoom, doorShake, lobbyRoom} from '../../act4/animatic/backs';
 import {drawPlan4, PLAN4} from '../../act4/animatic/plan4';
-import {DRAW5, drawShot5, factsText5, POST_FACTS5, OPT5} from '../../act4/animatic/shots5';
+import {DRAW5, drawShot5, factsText5, OPT5} from '../../act4/animatic/shots5';
 import type {ShotV5} from '../../act4/animatic/data-v5';
 import type {ShotV4} from '../../act4/animatic/data-v4';
 import {LOCK} from './data';
 import {drawSuiteRace} from './art/race';
 import {drawNudgeJoinInvite, CORNER_ARROW, cornerTileTip} from './art/invite';
-import {planZerosV3, letterAlyiV3, plateName} from './art/texts';
+import {planZerosV3, letterAlyiV3, plateName, plateRel} from './art/texts';
+import {phonePickup, blogTyped, blogSpeakerWindow, rimaTileLabel, heartCount, BLOG_CHARS} from './art/v32';
 import {drawWindowTwoShot, wifiBars, planChairV3, firstTileStrip, alyiTileLit} from './art/v31';
 
 const L = registry();
@@ -206,10 +220,11 @@ L.add('S1.09', {kind: 'V', st: V31('v5 S1.09\'s drop, copied, now after the Remo
     putUI(fb, b, false);
     return {layers};
   }});
-// ---- S1.12: "super." into the laptop, over his shoulder: the four frozen where S1.07 froze them; the room falls to night
+// ---- S1.12: "super." into the laptop, over his shoulder: the four frozen where S1.07 froze them; he picks up his phone
 const LAP = LAPTOP_INSERT.screen, LW = LAP.x1 - LAP.x0 + 1, LH = LAP.y1 - LAP.y0 + 1;
 const LG4 = gridLayout(4, {w: 150, h: 54, gap: 5, area: {x: 0, y: CALL_BAR_H, w: LW, h: LH - CALL_BAR_H}});
-L.add('S1.12', {kind: 'V', st: V31('v3 26.09\'s [OTS] copied (his shoulder with the neon rim over rooms/vegas-suite drawLaptopInsert, the call G4 on its screen) with the four held frozen from S1.07\'s freeze (not live until "super.": his feed froze on "company.") and ALYI\'s tile lit as S1.07 froze him (art/v31 alyiTileLit); v4\'s fallaway over the last 24 f; the aftermath\'s life: the Strip\'s neon breathing one step on his rim and in the window (held 12 f)'),
+L.add('S1.12', {kind: 'V', st: V('S1.12', 'v3 26.09\'s [OTS] copied (his shoulder with the neon rim over rooms/vegas-suite drawLaptopInsert, the call G4 on its screen) with the four held frozen from S1.07\'s freeze and ALYI\'s tile lit as S1.07 froze him (art/v31 alyiTileLit); the aftermath\'s life: the Strip\'s neon breathing one step on his rim and in the window (held 12 f); v3.2: the fall to night moves to v32-S1.13, and after the 2.6 s hold he picks up his phone (art/v32 phonePickup: the phone on the desk, his hand from the silhouette, the screen waking, the lift toward him in held steps)'),
+  marks: {pick: ['len', -22]},
   draw: (fb, k, sh, f) => {
     drawLaptopInsert(fb, {f: k, screen: (bb) => {
       const s2 = new Buf(LW, LH, PAL.N1);
@@ -219,13 +234,25 @@ L.add('S1.12', {kind: 'V', st: V31('v3 26.09\'s [OTS] copied (his shoulder with 
       for (let y = 0; y < LH; y++) for (let x = 0; x < LW; x++) bb.set(LAP.x0 + x, LAP.y0 + y, s2.get(x, y));
     }, mic: true});
     blitImg(fb, shoulder(mas({head: '34'}), 70, PAL.R3, 1, true), -38, 30);
-    const fa = mk(sh, 'fall', len(sh) - 24);
-    if (k >= fa) fallaway(fb, k, 3, fa, 6);
+    const pick = mk(sh, 'pick', len(sh) - 22);
+    phonePickup(fb, k >= pick ? k - pick : null);
     if (Math.floor((k + 6) / 12) % 2) for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) {
       if (x >= 90 && x < 440) continue; // his rim (left) and the window strip (right) only, never the frozen call
       const c = fb.c[y * 480 + x], fam = familyOf(c);
       if (fam && fam[0] === 'R' && fam[1] >= 1) fb.c[y * 480 + x] = stepColor(c, 1);
     }
+  }});
+// ---- v32-S1.13: his own post, 1:46 PM, then the room falls to night (moved from S1.12)
+const V32 = (what: string) => `V3.2 · ${what}`;
+const POST_LOVED_LEN = POST_LOVED.text.length;
+L.add('v32-S1.13', {kind: 'V', st: V32('[ECU] kits/act4-v32 drawSuitePhone: his phone in his hand in the suite\'s afternoon light; his thumb types, unhurried, from the first key tap (two held thumb drawings on 3s, no suggestions): "i loved my time at nopeai. … will have more to say about what\'s next later." and the salute; on the post_click the post goes up in its own UI, 1:46 PM; then the room falls to night in three held palette steps (a rung down, dusk navy, night) while the screen stays lit'),
+  marks: {type: ['snd', 'key_tap_soft_03', 1, 0], post: ['snd', 'post_click', 1, 0]},
+  draw: (fb, k, sh, f) => {
+    const t0 = mk(sh, 'type', 14), post = mk(sh, 'post', 86), n = len(sh);
+    const chars = POST_LOVED_LEN;
+    const typed = k < t0 ? 0 : Math.min(chars, Math.floor(((on2(k) - t0) * chars) / Math.max(1, post - 6 - t0)));
+    const night = (k >= n - 6 ? 3 : k >= n - 14 ? 2 : k >= n - 22 ? 1 : 0) as 0 | 1 | 2 | 3;
+    drawSuitePhone(fb, f, k < post ? {typed, thumb: (typed < chars ? Math.floor(k / 3) % 2 : 0) as 0 | 1, night} : {post: k - post, night});
   }});
 
 // ================================================================== S2 · THAT NIGHT
@@ -299,6 +326,38 @@ L.add('S1.05', {kind: 'V', st: V31('plan4.ts\'s S1.05 path (the four onto 1. NOO
     const a = new Buf(480, 270, PAL.N0); path(a);
     dither(fb, a, desk, (k - whip + 5) / 5);
   }});
+/** her lips as she reads to herself: small shapes held on 4s (no open jaw: silent) */
+const MOUTHING: Viseme[] = ['E', 'M', 'rest', 'E', 'O', 'M', 'E', 'rest'];
+// ---- S3.03 (v3.2): the post types itself in its own editor while her lips move, silent (the read aloud is cut)
+L.add('S3.03', {kind: 'V', st: V('S3.03', 'v3.2: v5 S3.03 copied (kits/blog-draft drawBlogDraft in rooms/neleh-desk drawNelehBezel, day; her pointer onto Post, the click on the tick, PUBLISHED) with the post typing itself in the source\'s words (art/v32 blogTyped: the page past the typed characters, the caret at the typing point; held to read after), and the corner call window in its speaker layout (art/v32 blogSpeakerWindow: NELEH large, her lips moving as she reads, silent, then lip-synced on "Any objections?" with the speaking ring; the three minis beside her); no underline (the read is cut)'),
+  face: {NELEH: 'lip'},
+  draw: (fb, k, sh, f) => {
+    const ptr = mk(sh, 'point', 189), post = mk(sh, 'post', 213);
+    const t0 = 6, t1 = Math.min(ptr - 60, 110); // typing, then held to read
+    const typed = k < t0 ? 0 : k >= t1 ? BLOG_CHARS : Math.floor(((on2(k) - t0) * BLOG_CHARS) / (t1 - t0));
+    const s = sui();
+    drawBlogDraft(s, {f, k, pointer: k < ptr ? 'rest' : 'post', click: k >= post ? k - post : undefined});
+    if (typed < BLOG_CHARS) blogTyped(s, typed, k);
+    const voiced = talking(sh, k, 'NELEH');
+    const reading = k >= t0 + 4 && k < t1 + 18; // her lips follow the page, silent
+    blogSpeakerWindow(s, f, {mouth: voiced ? mouth(sh, k, 'NELEH') : reading ? MOUTHING[Math.floor((k - t0) / 4) % MOUTHING.length] : 'rest', speaking: voiced});
+    drawNelehBezel(fb, s, {time: 'day'});
+  }});
+// ---- S3.04 (v3.2): Rima's join; her tile's own label carries INTERIM CEO (the lock's plate text: the world, not a plate)
+const boardSpeaker = (sh: PxShot, k: number): 'alyi' | 'neleh' | 'rima' | null => {
+  for (const w of ['RIMA', 'ALYI', 'NELEH']) if (talking(sh, k, w)) return w.toLowerCase() as 'alyi' | 'neleh' | 'rima';
+  return null;
+};
+L.add('S3.04', {kind: 'V', st: V('S3.04', 'v3.2: v5 S3.04 copied (rooms/neleh-desk drawNelehDeskOTS, day, held, pen gone; kits/call-boardside drawBoardCall: Rima\'s join, the ring, the spotlight search, her jacket smoothed, the speaking ring passing, all lip-synced in their tiles; ALYI lit) with her tile\'s own label in two rows, RIMA TAMURI over INTERIM CEO (art/v32 rimaTileLabel), in place of v5\'s show plate (the lock\'s text RIMA TAMURI · INTERIM CEO is her tile\'s label: script-v32-notes §10.3)'),
+  draw: (fb, k, sh, f) => {
+    const j = mk(sh, 'join', 4), sm = mk(sh, 'smooth', 134);
+    const s = new Buf(NDESK.screen.w, NDESK.screen.h, PAL.N1);
+    const hand = (k >= sm && k < sm + 16 ? (((k - sm) >> 3) % 2 ? 'smooth1' : 'smooth0') : 'none') as 'smooth1' | 'smooth0' | 'none';
+    drawBoardCall(s, {f, clock: '12:04', removed: 999, fifth: k < j ? null : {kind: 'rima', k: k - j, mouth: mouth(sh, k, 'RIMA'), lid: blink(k, 5), hand},
+      speaking: boardSpeaker(sh, k), mouths: {alyi: mouth(sh, k, 'ALYI'), neleh: mouth(sh, k, 'NELEH'), rima: mouth(sh, k, 'RIMA')}, alyiLit: OPT5.alyiLit});
+    if (k - j >= 6) rimaTileLabel(s);
+    drawNelehDeskOTS(fb, f, {time: 'day', push: 4, pen: 'gone', neleh: {turn: 0}, screen: s});
+  }});
 L.add('S3.04b', {kind: 'V', st: V31('the v5 layout + the face light on Neleh (kits/face-light faceKey, 2 steps, the key from the window side)'),
   draw: (fb, k, sh, f) => { const out = v5(fb, k, sh, f); faceLight(fb, HEAD_R, 2, -1); return out; }});
 L.add('S3.07', {kind: 'V', st: V('S3.07', 'v3.1: the face light on Alyi (kits/face-light faceKey, 2 steps, from the door\'s side) · v5 S3.07 + the doorway\'s aftermath (+0.8 s): after he steps back the door leaf eases a few px toward shut in 3 held steps, then rests'),
@@ -360,11 +419,11 @@ const fallPhone = (fb: Buf, x: number, t: number, f: number) => {
   for (let i = 1; i < 6; i++) put(x + i, y, lit);
   put(x + 1, y, PAL.C8);
 };
-L.add('S4.02', {kind: 'V', st: V('S4.02', 'v5 S4.02 re-built for C13: backs boardRoom (the wide at night, held; three phones C, D, R) + phone A composited from its own room render (its body and glow): it steps with the others, then on the second buzz walks on to the table\'s edge, teeters (a silent buzz), tips and falls, clack on the landing_thunk, lies lit on the floor; the phones buzz on 2s (v5 held one offset); NELEH room-scale mouth; and v3.1\'s cutaway on his line: kits/act4-v31 drawAlyiGlass [MCU·glass], ALYI\'s reflection in the dark window, lip-synced, "That is the company telling us."; the caller IDs (the lock\'s words), phone A\'s gone when it falls; v5\'s small wall screen'),
+L.add('S4.02', {kind: 'V', st: V('S4.02', 'v5 S4.02 re-built for C13: backs boardRoom (the wide at night, held; three phones C, D, R) + phone A composited from its own room render (its body and glow): it steps with the others, then on the second buzz walks on to the table\'s edge, teeters (a silent buzz), tips and falls, clack on the landing_thunk, lies lit on the floor; the phones buzz on 2s (v5 held one offset); NELEH room-scale mouth; and v3.1\'s cutaway on his line: kits/act4-v31 drawAlyiGlass [MCU·glass], ALYI\'s reflection in the dark window, lip-synced, "That is the company telling us.", v3.2: his reflection turning to the phones on "company" (drawAlyiGlass look \'door\', our right, where they are); the caller IDs (the lock\'s words), phone A\'s gone when it falls; v5\'s small wall screen'),
   face: {ALYI: 'lip'},
   draw: (fb, k, sh, f) => {
     const cut = mk(sh, 'alyi', 99999);
-    if (k >= cut) { drawAlyiGlass(fb, f, {mouth: mouth(sh, k, 'ALYI')}); return; } // v3.1: CUT to his reflection for his line (the MCU·glass cutaway)
+    if (k >= cut) { drawAlyiGlass(fb, f, {mouth: mouth(sh, k, 'ALYI'), look: k >= mk(sh, 'turn', cut + 20) ? 'door' : undefined}); return; } // v3.1: CUT to his reflection for his line (the MCU·glass cutaway); v3.2: on "company" it turns to the phones
     const bz = mk(sh, 'buzz', 7), bz2 = mk(sh, 'buzz2', 203), tip = mk(sh, 'tip', 369);
     const step = Math.min(3, (k >= bz ? 1 : 0) + (k >= bz + 15 ? 1 : 0) + (k >= bz2 ? 1 : 0));
     const buzz = (k >= bz && k < bz + 30) || (k >= bz2 && k < bz2 + 30);
@@ -393,7 +452,7 @@ L.add('S4.07', {kind: 'V', st: V31('the v5 layout + the face light on Neleh (kit
 // no NOZAMA; Adelina's plate her name; after "no." and the click, the left pane goes dark and CALL ENDED
 const pane = (fb: Buf, src: Buf, sx: number, dx: number) => { for (let y = 0; y < RH; y++) for (let x = 0; x < 238; x++) fb.set(dx + x, y, src.get(sx + x, y)); };
 const dimL = (b: Buf, x: number, y: number, w: number, h: number, k: number) => { for (let j = y; j < Math.min(RH, y + h); j++) for (let i = Math.max(0, x); i < Math.min(480, x + w); i++) b.set(i, j, stepColor(b.get(i, j), -k)); };
-L.add('S4.08', {kind: 'V', st: V('S4.08', 'v5 S4.08 copied for C14: rooms/lighthouse with no rent meters (meters 0: no RENT flags, no NOZAMA / ELGOOG, no meter tag, no NOZAMA caller ID), the second call gone (after the click the throne falls, the pane dims, CALL ENDED; Mario\'s arm down); plates from the lock\'s text, names only (art/texts plateName: ADELINA)'),
+L.add('S4.08', {kind: 'V', st: V('S4.08', 'v5 S4.08 copied for C14: rooms/lighthouse with no rent meters (meters 0: no RENT flags, no NOZAMA / ELGOOG, no meter tag, no NOZAMA caller ID), the second call gone (after the click the throne falls, the pane dims, CALL ENDED; Mario\'s arm down); v3.2: the first-appearance plate with one relation word (art/texts plateRel, v5\'s plate layout: ADELINA · CO-FOUNDER)'),
   draw: (fb, k, sh) => {
     const click = mk(sh, 'click', 500), ring = mk(sh, 'ring', 4), raise = mk(sh, 'raise', 445), ad0 = mk(sh, 'adelina', 442);
     const ad = lineOf(sh, 'a5-27-32');
@@ -425,24 +484,34 @@ L.add('S4.08', {kind: 'V', st: V('S4.08', 'v5 S4.08 copied for C14: rooms/lighth
     rect(238, 0, 4, RH, fb.ink(PAL.N0));
     for (const t of sh.texts.filter((x) => x.kind === 'plate')) {
       if (k < t.s || k >= t.e) continue;
-      plateName(fb, 248, 8, t.text, k - t.s, t.text === 'MARIO' ? PAL.F5 : PAL.W5);
+      plateRel(fb, 248, 8, t.text, k - t.s, t.text.startsWith('MARIO') ? PAL.F5 : PAL.W5); // v3.2: the name and one relation word
     }
   }});
 // ---- S4.09: Sunday, the reversal on screen: the phones in a row, the ticker, "The staff want him back…"
-const POST_KEY: Record<string, keyof typeof POSTS> = {'a5-27-P3': 'masBadge'};
-const postSpec = (sh: PxShot, id: string): PostSpec => {
-  const base = POSTS[POST_KEY[id]], l = lineOf(sh, id);
-  return {...base, who: (l ? l.who.toLowerCase() : base.who) as PostWho, text: POST_FACTS5[id] ?? (l ? l.text : base.text)};
-};
 const feedPhase = (k: number, turn: number, walk: number): [LobbyFeedPhase, number] => (k < turn ? ['stand', k] : k < walk ? ['turn', k - turn] : ['walk', k - walk]);
-L.add('S4.09', {kind: 'V', st: V31('kits/act4-v31 drawSundayOTS (v5\'s wall-screen OTS with the lobby feed at 1:1, his GUEST card, his badge post in the feed\'s corner, ALYI\'s reflection lip-synced) + the phones set in a row on the table\'s edge, STAFF · STAFF · INVESTORS · INVESTORS, buzzing in turn, and the ticker crawling in under the CCTV tile, INVESTORS PUSH TO BRING MANALT BACK (the lock\'s words); on "here" he turns and walks out'),
+// ---- v32-S5.00 (new): the lobby, his side of it, told twice: in colour at his shoulder, then out into their camera
+L.add('v32-S5.00', {kind: 'V', st: V32('[MCU] kits/act4-v32 drawReceptionMCU, full colour at his shoulder, the day lobby soft behind: a receptionist\'s hand (no face) slides the GUEST lanyard across the stone (4 held positions); he puts it on himself (the strap over his head on the cloth_rustle, then round his neck); the selfie at arm\'s length, one white flash step on the camera_shutter; his post up in its own UI on the post_click ("first and last time i ever wear one of these", the post card kit\'s masBadge, moved here from S4.09); he looks up once at the corner camera (the near-front head, the same face); on the look the picture cuts into that camera\'s own frame (drawLobbyCCTVStep: the lobby wide, him at the desk in the lanyard) and steps into its grade one palette step a beat, grain up, NOPEAI HQ · LOBBY · NOV 19 and REC on the last; S4.09 opens on it as their wall screen'),
+  marks: {rustle: ['snd', 'cloth_rustle', 1, 0], shutter: ['snd', 'camera_shutter', 1, 0], post: ['snd', 'post_click', 1, 0], step: ['len', -36]},
   draw: (fb, k, sh, f) => {
-    const turn = mk(sh, 'turn', 330), walk = mk(sh, 'walk', 336), post = mk(sh, 'post', 19);
+    const ru = mk(sh, 'rustle', 24), sn = mk(sh, 'shutter', 57), po = mk(sh, 'post', 100), st0 = mk(sh, 'step', 156);
+    if (k >= st0) { // their camera's frame, stepping into its grade
+      const step = Math.min(4, Math.floor((k - st0) / 6)) as 0 | 1 | 2 | 3 | 4;
+      drawLobbyCCTVStep(fb, f, {step});
+      return;
+    }
+    const slide = (k < ru - 8 ? Math.min(3, Math.floor(k / 4)) : null) as 0 | 1 | 2 | 3 | null;
+    const lanyard = k < ru - 8 ? null : k < ru + 8 ? 'lift' : 'on';
+    const selfie = k >= sn - 14 && k < sn + 12;
+    const look = k >= po + 26;
+    drawReceptionMCU(fb, f, {slide, lanyard, selfie, flash: k >= sn && k < sn + 2, look, post: k >= po ? k - po : null, mas: {lid: look ? 0 : blink(k, 3)}});
+  }});
+L.add('S4.09', {kind: 'V', st: V31('kits/act4-v31 drawSundayOTS (v5\'s wall-screen OTS with the lobby feed at 1:1, his GUEST card, ALYI\'s reflection lip-synced; v3.2: no post card on the CCTV tile, his post is his, in v32-S5.00) + the phones set in a row on the table\'s edge, STAFF · STAFF · INVESTORS · INVESTORS, buzzing in turn, and the ticker crawling in under the CCTV tile, INVESTORS PUSH TO BRING MANALT BACK (the lock\'s words); on "here" he turns and walks out'),
+  draw: (fb, k, sh, f) => {
+    const turn = mk(sh, 'turn', 233), walk = mk(sh, 'walk', 239);
     const tk = textOf(sh, 'label', 'INVESTORS PUSH');
     const feed = new Buf(FEED_W, FEED_H, PAL.N0);
     const [phase, kk] = feedPhase(k, turn, walk);
     drawLobbyFeed(feed, {f, phase, k: kk});
-    if (k >= post) drawPost(feed, 6, FEED_H - 76, postSpec(sh, 'a5-27-P3'), {size: 'notify', w: 150, k: k - post}); // above the ticker
     drawSundayOTS(fb, f, {feed, alyi: {mouth: mouth(sh, k, 'ALYI')}, ticker: tk ? k - tk.s : null, buzz: k});
   }});
 L.add('S4.10', {kind: 'V', st: V('S4.10', 'v5 S4.10 copied; v3.1: his card over the room frozen in two tones while the lock\'s card text is up (lay blipCard TTEMME / INTERIM CEO, TAKE TWO · CHAT: LIVE; freezePrint), then the room unfreezes (a name plate if the lock has one: art/texts plateName)'),
@@ -484,6 +553,17 @@ L.add('S4.15', {kind: 'V', st: V31('the v5 layout (v3 27.31, Mada right third, h
 // ================================================================== S5 · HIS SIDE, 2 AM
 L.add('S5.02', {kind: 'V', st: V('S5.02', 'v5 (v2 29.00 the home shot) + the arrival (2.6 -> 4.5 s) as a slow drift, 1 px / 12 f (9 px)'),
   draw: (fb, k, sh, f) => { const out = v5(fb, k, sh, f); shiftRoom(fb, drift(k, 12, 9)); return out; }});
+// ---- S5.03 (v3.2): the app's heart count on screen, 406 -> 407 -> 406, as his count says it
+L.add('S5.03', {kind: 'V', st: V('S5.03', 'v3.2: the v5 layout + the app\'s heart count in the app bar over the phone\'s screen (art/v32 heartCount): 405 until his first heart, 406 on it, 407 and back to 406 a beat before his inner voice says each (the count is on the phone, script-v32-notes §10.7)'),
+  marks: {c407: ['w', 'v3-vo-20', 'seven', -6]},
+  draw: (fb, k, sh, f) => {
+    const out = v5(fb, k, sh, f);
+    const t1 = mk(sh, 'tap1', 28), c7 = mk(sh, 'c407', 66), l = lineOf(sh, 'v3-vo-20');
+    const w6 = l ? l.words.filter((w) => w[0] === 'six') : [];
+    const c6b = w6.length > 1 ? l!.s + w6[1][1] - 6 : c7 + 40;
+    heartCount(fb, k < t1 ? 405 : k < c7 ? 406 : k < c6b ? 407 : 406);
+    return out;
+  }});
 L.add('S5.05', {kind: 'V', st: V31('the v5 layout (v3 29.05, Mas left third turned to the Orb, the rack) + the face light (kits/face-light faceKey, 2 steps, the Orb\'s side)'),
   draw: (fb, k, sh, f) => { const out = v5(fb, k, sh, f); faceLight(fb, HEAD_L, 1, 1); return out; }});
 // ---- S5.09: HE calls Gerg (draft 7): the call app, GERG clicked, the ring out, then v5's tile opening
@@ -541,7 +621,38 @@ L.add('S5.07b', {kind: 'V', st: V31('the v5 layout (the quiet beat, "alyi voted.
   draw: (fb, k, sh, f) => { const out = v5(fb, k, sh, f); faceLight(fb, HEAD_L, 1, -1); return out; }});
 L.add('S5.09b', {kind: 'V', st: V31('the v5 layout (swaps-act4 drawGergTileWide: his look up into the lens, held; his eyes drop and he types after "keep building.") + the face light on his face (kits/face-light faceKey, 2 steps, from above)'),
   draw: (fb, k, sh, f) => { const out = v5(fb, k, sh, f); faceLight(fb, [150, 0, 340, 150], 2, -1); return out; }});
-L.add('S5.12', {kind: 'V', st: V('S5.12', 'v5 S5.12 copied + his blinks through the aftermath (2.9 -> 5.5 s): the rack to the door, then the hold is his'),
+// ---- S5.11 (v3.2): the door, the desks, the rent; then the MACROSOFT badge under the door, his hand, both badges
+L.add('S5.11', {kind: 'V', st: V('S5.11', 'v3.2: v5 S5.11 copied (twoshots drawDark2S, Mas lip-synced; the slate door steps up on the thunks, Tasya\'s sign, the key in 3 held drawings, the crack, and on "desk" the desks beyond) to "Due on the first."; then the badge: CUT to kits/act4-v32 drawBadgeUnderDoor [ECU] at floor level, the MACROSOFT badge sliding out under the door in held positions from the folder_slide and ticking against his chair leg on the pen_tick; his hand comes down and lifts it; back in the 2S (drawBadgeReach2S, v5\'s door layered as v5 does) he leans down for it without getting up, sits up looking down, and on the key_tap_space sets it on the desk beside the GUEST lanyard, square; he doesn\'t put it on'),
+  marks: {key: ['mark', 'door4', 4], slide: ['snd', 'folder_slide', 1, 0], tick: ['snd', 'pen_tick_1', 1, 0], set: ['snd', 'key_tap_space', 2, 0]},
+  draw: (fb, k, sh, f) => {
+    const d = [mk(sh, 'door1', 4), mk(sh, 'door2', 12), mk(sh, 'door3', 19), mk(sh, 'door4', 26)];
+    const key = mk(sh, 'key', 30), crack = mk(sh, 'crack', 50), open = mk(sh, 'open', 162);
+    const sl = mk(sh, 'slide', 297), tick = mk(sh, 'tick', 319), set = mk(sh, 'set', 357);
+    const ecu0 = sl - 6, back = tick + 16;
+    if (k >= ecu0 && k < back) { // the floor at the door: the badge slides out and ticks against his chair leg; his hand
+      const slide = (k < sl ? 0 : k < tick ? 1 + Math.min(2, Math.floor(((k - sl) * 3) / Math.max(1, tick - sl))) : 4) as 0 | 1 | 2 | 3 | 4;
+      const hand = (k < tick + 7 ? 0 : k < tick + 11 ? 1 : 2) as 0 | 1 | 2;
+      drawBadgeUnderDoor(fb, f, {slide, hand});
+      return;
+    }
+    const door = d.filter((t) => k >= t).length as 0 | 1 | 2 | 3 | 4;
+    const layDoor = () => {
+      if (door >= 4) { drawSlateDoorOpen(fb, k, {key: keyTurnAt(k, key), gap: k >= open ? SLATE_GAP.open : k >= crack ? SLATE_GAP.crack : 0}); slateDoorSign(fb, 0); }
+      else if (door >= 2) slateDoorSign(fb, 4 - door);
+    };
+    if (k < ecu0) { // v5's S5.11
+      drawDark2S(fb, k, {mas: {arm: 'rest', mouth: mouth(sh, k, 'MAS'), lid: blink(k, 7)}, orb: {look: door >= 1 ? DPLATE_LOOK.door : DPLATE_LOOK.face}, plate: {tally: 3, lanyard: true, phone: 'up', door}});
+      layDoor();
+      return;
+    }
+    const reach = k < back + 12;
+    const badges = k >= set;
+    const lookDown = k < set + 8;
+    drawBadgeReach2S(fb, f, {reach, badges, plate: {tally: 3, lanyard: true, phone: 'up', door: 4},
+      mas: reach ? {lid: 0} : {head: lookDown ? 'down' : '34', arm: 'rest', lid: blink(k, 7)}, orbLook: reach ? undefined : badges ? DPLATE_LOOK.lanyard : DPLATE_LOOK.face});
+    layDoor();
+  }});
+L.add('S5.12', {kind: 'V', st: V('S5.12', 'v5 S5.12 copied + his blinks through the aftermath (2.9 -> 5.5 s): the rack to the door, then the hold is his; v3.2: the MACROSOFT badge on the desk beside the lanyard, where S5.11 set it (drawBadgeReach2S\'s spot)'),
   draw: (fb, k, sh) => {
     const st = rackStep(k, mk(sh, 'rack', 41));
     const [kA, kB] = RACK[st];
@@ -550,7 +661,7 @@ L.add('S5.12', {kind: 'V', st: V('S5.12', 'v5 S5.12 copied + his blinks through 
     held(fb, `v3a4:s512:${kB}`, (b) => {
       const plate: DarkPlateOpts = {tally: 3, glass: true, lanyard: true, phone: 'up', door: 4};
       drawDarkPlate(b, 0, plate); drawSlateDoorOpen(b, 0, {gap: SLATE_GAP.open}); slateDoorSign(b, 0);
-      drawDarkPlateDesk(b, 0, plate); drawDarkPlateFront(b, 0, plate);
+      drawDarkPlateDesk(b, 0, plate); macrosoftBadge(b, DPLATE.lanyard.x + 46, DPLATE.lanyard.y + 3, 'desk'); drawDarkPlateFront(b, 0, plate); // v3.2: the badge he set down in S5.11
       soft(b, 2, doorMask); softMask(b, kB, doorMask); vignette(b, MCU_X.L + 56, 2);
     });
     drawBust(fb, mas({mouth: mouth(sh, k, 'MAS'), look: -1, lid: blink(k + 40, 7)}), {third: 'L', faceK: kA});
@@ -749,11 +860,11 @@ export const SEGMENT = defineSegment({
   options: {badge: false, vo: 'typed', voLowercase: true, subs: 'off', standin: 'stick', j1: false, hourglass: true},
   review: {
     title: 'MR. MAS · EP1 · ACT FOUR',
-    subtitle: 'PIXEL v3.1 · LOCK act4 (THE v3.1 STICK TIMING)',
-    kindNames: {P: 'P · THE v5 LAYOUT, ON THE v3.1 LOCK', V: 'V · A v3 / v3.1 CHANGE (see st)'},
+    subtitle: 'PIXEL v3.2 · LOCK act4 (THE v3.2 STICK TIMING)',
+    kindNames: {P: 'P · THE v5 LAYOUT, ON THE v3.2 LOCK', V: 'V · A v3 / v3.1 / v3.2 CHANGE (see st)'},
     sideBadge: false,
-    durNote: 'AS THE v3.1 STICK',
-    soundLabel: 'SOUND · TEMP TRACK = THE v3.1 MIX (ACT FOUR)',
+    durNote: 'AS THE v3.2 STICK',
+    soundLabel: 'SOUND · TEMP TRACK = THE v3.2 STICK MIX (ACT FOUR)',
     textFix: factsText5,
   },
   // S7.13 k128-263: the Runway hourglass insert, spliced from PNGs (studio/src/dev/genvideo/runway/hourglass.py --png

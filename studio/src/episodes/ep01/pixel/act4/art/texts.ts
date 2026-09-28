@@ -17,6 +17,9 @@
 //                               where drawBoardPlateFront doesn't cover them (the original order)
 //   plateName(b, x, y, name, k, accent)   a show plate with the NAME alone (plates cut to names, v3): v5's plateN
 //                               (shots5.ts, private) with no lines, typed on in its 3 held steps
+//   plateRel(b, x, y, text, k, accent)   v3.2 (calibration §3, script-v32-notes §10.3): a first-appearance plate with ONE
+//                               relation word, the lock's 'NAME · RELATION' as v5 laid its plates out (plateN: the name,
+//                               the relation on the line under it, typed on after it); no new style
 import {Buf, rect} from '../../../../../shared/pixel/px';
 import {PAL} from '../../../../../shared/pixel/palette';
 import {BPX, bpSheet, bpText, bpTextWidth, inkBlueprint} from '../../../../../shared/pixel/kits/blueprint';
@@ -113,4 +116,17 @@ export const plateName = (b: Buf, x: number, y: number, name: string, k: number,
   rect(x - 1, y - 1, w + 2, hh + 2, b.ink(PAL.N0)); rect(x, y, w, hh, b.ink(PAL.N1)); rect(x, y, w, 1, b.ink(accent));
   if (open < 1) return;
   pt(b, name.slice(0, Math.max(0, (k - 2) * 3)), x + 8, y + 5, accent);
+};
+
+// ------------------------------------------------------------------ v3.2: a show plate with the name and one relation word
+export const plateRel = (b: Buf, x: number, y: number, text: string, k: number, accent: number) => {
+  if (k < 0) return;
+  const [name, ...rest] = text.split(' · ');
+  const lines = rest.length ? [rest.join(' · ')] : [];
+  const w = Math.max(pw(name), ...lines.map(pw)) + 16;
+  const full = 16 + lines.length * 10, open = Math.min(1, (k + 1) / 3), hh = Math.max(2, Math.round(full * open));
+  rect(x - 1, y - 1, w + 2, hh + 2, b.ink(PAL.N0)); rect(x, y, w, hh, b.ink(PAL.N1)); rect(x, y, w, 1, b.ink(accent));
+  if (open < 1) return;
+  pt(b, name.slice(0, Math.max(0, (k - 2) * 3)), x + 8, y + 5, accent);
+  lines.forEach((l, i) => pt(b, l.slice(0, Math.max(0, (k - 5 - i * 4) * 3)), x + 8, y + 15 + i * 10, PAL.P1));
 };

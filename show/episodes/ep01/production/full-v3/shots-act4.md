@@ -1,8 +1,111 @@
-# Ep1 v3.1: Act Four's shots (`v3-shots-act4`, 2026-09-27)
+# Ep1 v3.2: Act Four's shots (`v3-shots-act4`, 2026-09-27 / 28)
 
-> **Status: v3.1 built, checked and rendered. Nothing committed.** Track P2 of [PLAN.md](PLAN.md) for the `act4` segment ("five days, told twice", **8:37.75**), on the **final v3.1 stick lock** (`show/reel/ep01-v31/ep01-v31-act4.json`, [lock-v31.md](lock-v31.md)). **§V31 below is the current state.** §1–§8 are the v3 round's record; the v3 lock they describe is superseded, and `pixel/act4/data.ts` is now the v3.1 lock.
+> **Status: v3.2 built, checked and rendered. Nothing committed.** Track P2 of [PLAN.md](PLAN.md) for the `act4` segment ("five days, told twice", **8:28.46**), on the **final v3.2 stick lock** (`show/reel/ep01-v32/ep01-v32-act4.json`, [lock-v32.md](lock-v32.md)). **§V32 below is the current state.** §V31 is the v3.1 round's record (everything it built still stands unless §V32 says otherwise), and §1–§8 are the v3 round's; `pixel/act4/data.ts` is now the v3.2 lock.
 >
-> **Nothing here has been watched or heard.** Stills, crops and frames decoded from the render were looked at (§V31.6). The render's and the checks' numbers are measured.
+> **Nothing here has been watched or heard.** Stills, crops and frames decoded from the render were looked at (§V32.6, §V31.6). The render's and the checks' numbers are measured.
+
+## V32. The v3.2 round (script draft 8.1; SHOWRUNNER-NOTES 00 and 0: "Mas needs agency", the rise-to-power spine, [calibration](../../../../bible/calibration.md))
+
+### V32.1 What changed, and where
+
+**The lock:** `tools/lock.py --seg act4 --plan pixel/act4/plan.json` on the v3.2 timeline gives **79 shots from 80 beats, 12,203 f (8:28.46)**, 100 lines (4 of them the inner voice, all face null), 6 posts and 43 on-camera mouths. Every check passes.
+- **The plan:** the timeline and `audio/ep01/v32/act4/lines-v32.json` (v32-a4-0001, Neleh's new "Step three…", which has its own mouth track, so `cut_mouths.py` needs no change). New or re-anchored marks: S1.12 `pick` (len −22); S4.02 `turn` (on "company"); S5.11 `key` (door4 + 4, as in v3.1: v3.2 moved the first `key_tap_space` to −1.0 s, Gerg's last tap under Tasya's J-cut) and the badge's `slide` / `tick` / `set` (`folder_slide`, `pen_tick_1`, the second `key_tap_space`). Faces: S3.03 NELEH (she is on camera now, in the editor's call window); S3.04 without ALYI (his line there is cut).
+- **Text kinds:** plates match the lock's `NAME · RELATION` (`RIMA TAMURI · INTERIM CEO`, `ADELINA · CO-FOUNDER`). S4.09's post is empty in the lock (`POST: MAS: “”`: the badge post moved to v32-S5.00, where the lock writes it as a label). That text is a label here. lock_v5's POST_IDS still expects `a5-27-P3`, and a plan can't drop a key, so `post_ids` points S4.09 at S4.01's id; the silent-post check then counts the six posts that remain.
+- **The temp track:** there's no v3.2 mix pass yet, so it's **the v3.2 stick reel's Act Four chapter**. `out/ep01/reel/ep01-v32-stick.mp4` from 726.875 s for 508.458 s is cut to `out/ep01/full-v3/picture/act4-v32-stick-mix.wav` (24-bit, 48 kHz): **24,406,000 samples = exactly 12,203 f**. The Act One pass cut its mix the same way.
+- **Episode timecode:** 17373 (12:03:21) = 640 + 720 + 48 + 7914 + 4633 + 3418.
+- **D6** (the Remove click to the buzz) is 5.08 s, unchanged.
+
+**The layouts:** 45 `V`, 34 `P`. **Stand-ins: 0.**
+
+| Shot | s | What it draws now |
+|---|---|---|
+| S1.01 – S1.11 | | **the shock opening, exactly v3.1's.** The code is identical (a diff of the section), and so are this lock's frames, marks and lines for those eight shots. The hard cut measured on the decoded MP4: frame 575 has a luma of 22.4 / 255, and frame 576 (the dialog's first frame) 173.7 |
+| S1.12 | 3.83 | v3.1's OTS without the fall to night (that moved to S1.13). After the 2.6 s hold, **he picks up his phone** (`art/v32 phonePickup`): his hand and the phone rise into frame in silhouette, in front of the lit call, in 4 held steps from len −22 (black, the Strip's red neon on its right edge, the screen's cyan light on its top edge), and it holds in his hand to the cut |
+| **v32-S1.13** | 5.00 | **new** (kits/act4-v32 `drawSuitePhone`): **his post after the blow.** His thumb types from the first key tap (two held thumb drawings on 3s) up to "…will have more to say about what's next later." and the salute. On `post_click` (k86) the post goes up in its own UI, `1:46 PM`. Then the room falls to night in three held steps (len −22, −14, −6) while the screen stays lit |
+| S3.02 | 1.63 | a port. v5's layout scales the pen run to the lock's shorter marks |
+| S3.03 | 9.00 | v5's copied. **The post types itself** (`art/v32 blogTyped`, k6–110). The untyped glyphs, descenders included, are erased exactly: the rest of each line is lettered by the same call into a mask. The caret sits at the typing point. Then it holds to read. **Neleh's lips move, silent:** the editor's corner call window is redrawn in its speaker layout (`blogSpeakerWindow`: NELEH large, her own tile painter, small mouth shapes on 4s while she reads, then lip-synced on "Any objections?" with the speaking ring; the other three as the kit's minis). The kit draws all four as minis, where no mouth reads. Post on the tick, PUBLISHED |
+| S3.04 | 10.83 | v5's copied. **Rima's tile label** is two rows, `RIMA TAMURI` over `INTERIM CEO` (`rimaTileLabel`), in place of v5's show plate: the notes call it "her tile's own label". The tile is too narrow for one line |
+| S4.02 | 18.92 | v3.1's, and in the glass cutaway **his reflection turns to the phones on "company"** (kits/act4-v31 `drawAlyiGlass` `look: 'door'`). **Small:** the head moves a few pixels, and the eyes' change is lost in the glass's dark ramp (art-b §7.3 says the same) |
+| S4.08 | 18.79 | v3.1's, with **the first-appearance plate carrying one relation word**: `ADELINA` / `CO-FOUNDER` (`art/texts plateRel`: v5's plate layout, the relation typed on under the name). No new style |
+| **v32-S5.00** | 8.00 | **new: walking in as a guest.** kits/act4-v32 `drawReceptionMCU`, full colour at his shoulder: <ul><li>a hand slides the GUEST lanyard across the stone (4 held positions, k0–15);</li><li>**he puts it on himself** (the strap over his head, k16–31, round the `cloth_rustle`);</li><li>the selfie at arm's length, with **one white flash step** for 2 f on `camera_shutter`;</li><li>**his post** in its own UI on `post_click` (k100, `POSTS.masBadge`);</li><li>**his look up at the corner camera** from k126 (the near-front head, the same face);</li><li>on the look, a cut into that camera's own frame (`drawLobbyCCTVStep`: the lobby wide, him at the desk in the lanyard), stepping into its grade one step each 6 f, with the chrome and REC on the last.</li></ul>S4.09 opens on the same feed as their wall screen |
+| S4.09 | 11.33 | v3.1's Sunday **without the post card on the CCTV tile** (the post is his now, in S5.00): the phones in a row and the ticker |
+| S5.03 | 5.88 | v5's, with **the app's heart count** in an app bar over the phone's screen (`art/v32 heartCount`): **405** until his first heart, **406** on it, **407** and **back to 406**, each 6 f before his inner voice says it |
+| S5.11 | 15.63 | v5's copied (the door, Tasya, "and the rent?", "Due on the first.") to k290. Then **the badge he doesn't wear:** <ul><li>a CUT to kits/act4-v32 `drawBadgeUnderDoor` [ECU] at floor level. The MACROSOFT badge slides out under the door from `folder_slide` (k297) and ticks against his chair leg on `pen_tick_1` (k319). His hand comes down and lifts it.</li><li>Back in the 2S (`drawBadgeReach2S`, with v5's door layered as v5 does), he leans down for it without getting up and sits up looking down.</li><li>On the second `key_tap_space` (k357) he sets it on the desk beside the GUEST lanyard, square.</li></ul> |
+| S5.12 | 5.50 | v3.1's, with the MACROSOFT badge on the desk where S5.11 set it (continuity) |
+| S7.06 · S7.07-cont | | **his terms**, as v3.1 built them: he pulls the pin, and on "gerg comes back too." Terb writes it in. Unchanged |
+| S7.13 | 11.00 | the **Runway hourglass splice at k128–263**, now segment frames 11149–11284 (`hourglass.py --s713 11021`) |
+| other shots | | ports, or v3.1's layouts on the lock's new lengths: S3.06 and S8.08 (the J-cuts; the pre-lapped speakers aren't faced in the shot before), S5.09b ("keep building." sooner), S4.15 |
+
+**His moves, where each reads:**
+1. **The post after the blow:** S1.12's pick-up, then S1.13, 5.0 s. The typing runs 2.75 s and the post is up for the last 1.4 s.
+2. **Walking in as a guest:** S5.00, 6.5 s at his shoulder and 1.5 s in their camera, then their screen in S4.09.
+3. **The badge he doesn't wear:** S5.11 k290–375, 3.5 s, and it stays on the desk in S5.12 (and in S7.01 and v31-S7.03b, as before).
+4. **His terms:** S7.06 and S7.07-cont (v3.1's).
+
+**Time away from him** (the board's side, v31-S3.00p to S4.15, less his lobby), measured on this lock: **3:19.7 in two parts**, 2:23.3 (frames 1215–4655) and 0:56.4 (4847–6200), with his lobby's 8.0 s between them.
+
+### V32.2 New and changed files
+
+- **`pixel/act4/shots.ts`:** v3.2's layouts (S1.12, v32-S1.13, S3.03, S3.04, S4.02, S4.08, v32-S5.00, S4.09, S5.03, S5.11, S5.12), the header and review labels.
+- **`pixel/act4/plan.json`:** the v3.2 lock plan (§V32.1).
+- **`pixel/act4/art/v32.ts` (new):** `phonePickup`, `blogTyped`, `blogSpeakerWindow`, `rimaTileLabel`, `heartCount`.
+- **`pixel/act4/art/texts.ts`:** `plateRel` (the name and one relation word).
+- **Everything else is imported:** kits/act4-v32 and kits/act4-v31 (the v3-art-b pass), and v5's and the shared modules. Nothing in them was edited.
+- **Generated:** `pixel/act4/data.ts` and `full-v3/lock/act4.json`.
+- **The temp mix:** `out/ep01/full-v3/picture/act4-v32-stick-mix.wav`.
+
+### V32.3 Checks
+
+1. **`node r.cjs check`:** exit 0. 79 shots, 79 layouts, **0 stand-ins**, 0 problems. The browser frames are the 28 GLYPH frames plus S7.13's 136.
+2. **The lock's checks all pass** (§V32.1).
+3. **Photosensitivity** (`flash.ts`, WCAG 2.x general and red flash, over all 12,203 native frames, 340 s): **at most 2 flashes in any 1 s** (one window at S5.08, as before), **0 red. Pass.**
+   - The selfie's white step is one flash (frames 4712 and 4714).
+   - The fall to night steps one way only, so it makes no pairs.
+   - The measure covers the pipeline's own frames. For S7.13 k128–263 that means the v5 drawing, not the Runway insert, which measured 0 flashes in the Runway pass's check.
+4. **The inner voice:** all 4 V.O. lines are face null on this lock, and the guard still wraps every layout.
+5. **`tsc --noEmit -p .`:** 20 errors, **none in `pixel/act4/`** or anything it imports (bake.ts 11, runway pxframes 5, streamframes 4, as before).
+
+### V32.4 Render
+
+One job through `ops/heavy.sh` (`scratchpad/v3-shots-act4/heavy-run32.sh`): build, check, flash, bundle, `glyphs --opt hourglass=false`, `hourglass.py --png … --s713 11021`, `picture --jobs 2` (**124 s wall**, 16.8 ms a frame per worker), the sheet, tsc.
+- **`out/ep01/full-v3/picture/act4.mp4`:** H.264 1920 × 1080, **12,203 frames, 508.458 s (8:28.46)**, 43.8 MB, with the v3.2 stick mix's Act Four as AAC temp audio (508.458 s). `act4.srt` sits beside it.
+- **Browser frames spliced:** 164 (28 GLYPH + 136 hourglass). 0 missing, 0 stand-in marks, 0 failed layouts.
+- **The sheet:** `out/ep01/full-v3/picture/act4-sheet.png` (79 shots, stand-ins: none).
+- **Deleted from scratch afterwards:** the bundle, the insert's PNGs and the hourglass intermediates (6.1 GB free on the disk).
+
+**To re-render** (from the repo root):
+
+```sh
+python3 studio/src/episodes/ep01/pixel/tools/lock.py --seg act4 --plan studio/src/episodes/ep01/pixel/act4/plan.json
+bash ops/heavy.sh bash $S/heavy-run32.sh      # build, check, flash, bundle, glyphs (hourglass=false), hourglass.py --png, picture, sheet, tsc
+```
+
+If a v3.2 mix pass lands, point `plan.json`'s `mix.path` at it (repo-relative), re-lock, and re-run.
+
+### V32.5 What's weakest (v3.2)
+
+1. **Alyi's turn (S4.02)** is a few pixels in a dark reflection. It may not read in motion.
+2. **The pick-up (S1.12)** is a silhouette about 30 px wide over the frozen call, for the last 0.9 s. It reads as a phone in stills. The cut to S1.13's ECU does the rest.
+3. **The badge reach (S5.11's 2S):** the desk hides his hands, so it reads as a lean (art-b §7.3). The floor ECU carries the pickup.
+4. **The reception MCU's lobby** is the wide's pixels stepped down, not redrawn at MCU depth (art-b's note). The receptionist's hand is small at slide 0.
+5. **S3.03's speaker window** is my layout of the kit's pieces (Neleh's tile at 82 × 70, the three minis beside her). It isn't a state the call kit draws.
+6. **The temp track is the stick's mix**, not a mix pass's.
+
+### V32.6 What I looked at (stills, crops and decoded frames, not motion)
+
+- **Native stills:**
+  - S1.12 k68–91 (the rise), with a 4× crop;
+  - S1.13 at typing start, mid, full, posted, and the three night steps;
+  - S3.03 at 4 typing points (a 2× crop to check for stray descenders: an earlier rect mask left the 'g' tails; the glyph mask fixed it), the held page, "Any objections?" with the ring, and the click;
+  - S3.04 after the join;
+  - S4.02 either side of the turn (a 4× crop);
+  - S4.08's plate;
+  - S5.00 at every phase (slide, lift, on, flash, post, look, the four grade steps) and S4.09's first frame;
+  - S5.03 at 405 / 406 / 407 / 406;
+  - S5.11's ECU through the tick and the hand, the reach, the sit-up and the two badges;
+  - S5.12.
+- **Decoded from the MP4:** frames 572–579 (the cut), 860, 974, 2500, 2860, 4030, 4595, 4690, 4712 (the flash), 4790, 4830, 8364, 8400, 9990 and 11201 (the Runway insert in place).
+- **The contact sheet.**
 
 ## V31. The v3.1 round (script draft 7; the showrunner: "it should feel like a sudden shock to viewer he's fired, but the viewer just becomes aware through the plan, the video call is a bit hard to understand what cancel means")
 
