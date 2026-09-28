@@ -2,11 +2,11 @@
 
 | | |
 |---|---|
-| **What this is** | The record of Act Three's pixel layouts on the stick lock: every shot, what it's built from, what's new, the checks, how to re-render it, and what's weakest. **Now on the v3.1 lock: [§8](#8-v31-the-v31-lock-script-draft-7) is current**; §1–§7 are the v3 pass, kept for the record. |
-| **Who, when** | The `v3-shots-act2-act3` pass (track P2 of [PLAN.md](PLAN.md)), 2026-09-27. Nothing was committed: the lead commits. |
+| **What this is** | The record of Act Three's pixel layouts on the stick lock: every shot, what it's built from, what's new, the checks, how to re-render it, and what's weakest. **Now on the v3.2 lock: [§9](#9-v32-the-v32-lock-script-draft-81) is current**; §8 is the v3.1 round and §1–§7 the v3 pass, kept for the record. |
+| **Who, when** | The `v3-shots-act2-act3` pass (track P2 of [PLAN.md](PLAN.md)), 2026-09-27; the v3.2 round 2026-09-28. Nothing was committed: the lead commits. |
 | **The files** | Layouts: `studio/src/episodes/ep01/pixel/act3/shots.ts`. It uses the helpers in `act2/kit2.ts`. The lock: `act3/data.ts` and [lock/act3.json](lock/act3.json). |
-| **The picture** | **v3.1:** `out/ep01/full-v3/picture/act3.mp4` (1920 × 1080, 24 fps, H.264 + AAC, **2:25.13, 3,483 frames**, 11.9 MB; rendered in 31 s on 2 workers), muxed with the v3.1 stick mix as temp audio (`out/ep01/full-v3/picture/act3-v31-stick-mix.wav`). (The v3 render it replaced ran 2:08.04, 3,073 frames.) Beside it: `act3.srt`, `act3.mp4.render.json` and the contact sheet `act3-sheet.png`. The 5 GLYPH frames are the Remotion host's, spliced in. |
-| **Measured** | 25 of 25 shots have a layout; 0 stand-ins; `check` passes; `tsc` prints nothing; the flash check passes (§4); the GLYPH check passes (the plain frames around them are identical Node against Remotion, and nothing outside the room area differs). |
+| **The picture** | **v3.2:** `out/ep01/full-v3/picture/act3.mp4` (1920 × 1080, 24 fps, H.264 + AAC, **2:22.42, 3,418 frames**, 11.7 MB), muxed with the v3.2 stick mix (`act3-v32-stick-mix.wav`); see §9.4. The v3.1 render it replaced was `out/ep01/full-v3/picture/act3.mp4` (1920 × 1080, 24 fps, H.264 + AAC, **2:25.13, 3,483 frames**, 11.9 MB; rendered in 31 s on 2 workers), muxed with the v3.1 stick mix as temp audio (`out/ep01/full-v3/picture/act3-v31-stick-mix.wav`). (The v3 render it replaced ran 2:08.04, 3,073 frames.) Beside it: `act3.srt`, `act3.mp4.render.json` and the contact sheet `act3-sheet.png`. The 5 GLYPH frames are the Remotion host's, spliced in. |
+| **Measured** | v3.2: 29 of 29 shots have a layout, 0 stand-ins, `check`, `tsc` and the GLYPH check clean, the flash check passes (§9.4). v3: 25 of 25 shots have a layout; 0 stand-ins; `check` passes; `tsc` prints nothing; the flash check passes (§4); the GLYPH check passes (the plain frames around them are identical Node against Remotion, and nothing outside the room area differs). |
 | **Needs a person** | Nothing has been watched in motion or heard. I looked at the contact sheet and at about 45 sampled native frames (the arrival, every V.O. frame, every POV, the scan and its GLYPH frame, the call), and at one GLYPH frame from the Remotion host. |
 
 ---
@@ -204,3 +204,82 @@ GLYPH_DIR=$S/glyph-act3 SEGDIR=$S X264_THREADS=1 bash ../ops/heavy.sh node $S/r-
 2. **The runner's forum at two-shot scale:** the raised hands are small ticks. The joke is the tiling, and the stick's own caption says legibility at this scale is a call.
 3. **Tasya's lip-sync on the lobby clip** is a pixel patch over the painter's portrait. It depends on the painter keeping its placement (12 % of the screen, y 10).
 4. **21.02's last 1.5 s** holds on the turned NEDIB with only the chip changing.
+
+## 9. v3.2: the v3.2 lock (script draft 8.1)
+
+**The brief** (the lead, 2026-09-28; SHOWRUNNER-NOTES 00 and 0, "Mas needs agency"; the calibration ledger, `show/bible/calibration.md`):
+- re-lock on `show/reel/ep01-v32/ep01-v32-act3.json`;
+- update the shots with art-b's v3.2 art ([art/art-b.md §7](art/art-b.md));
+- his moves must read on screen: in Act Three, **the switch, DevDay live and pausing sign-ups**;
+- first-appearance plates carry one relation word;
+- keep the v3.1 fixes;
+- re-render;
+- the flash check.
+
+### 9.1 The lock
+
+```sh
+# the temp track: Act Three's chapter of the v3.2 stick reel (out/ep01/reel/ep01-v32-stick.mp4, from reel frame 14,027),
+# decoded with the bundled ffmpeg, trimmed to 3,418 frames x 2,000 samples, 48 kHz 24-bit
+python3 studio/src/episodes/ep01/pixel/tools/lock.py --seg act3 --timeline show/reel/ep01-v32/ep01-v32-act3.json \
+    --takes audio/ep01/act3/dialogue/lines-fast-v2.json --takes audio/ep01/v3/act3/lines-v3.json \
+    --takes audio/ep01/v31/act3/lines-v31.json --takes audio/ep01/v32/act3/lines-v32.json \
+    --mix out/ep01/full-v3/picture/act3-v32-stick-mix.wav --mix-offset 0
+```
+
+- **Result:** 29 shots from 32 beats, 3,418 frames (2:22.42). 23 lines, every one with a take. Every check is `ok`.
+- **The V.O.:** two lines remain, "i made it for everyone else." (18.06, restored) and "thrilled is too much. enthusiastic is a lot." (22.02). Mas's mouth is shut on both.
+
+### 9.2 What changed, shot by shot
+
+| Shot | v3.2 |
+|---|---|
+| v31-18.00 | The room (the arrival, wide) plays for 1.8 s. Then it cuts in to `drawTallyECU`: the two faint old marks on the desk, framed legibly (8.1), for 1.4 s, drifting along the marks by whole pixels. |
+| v31-18.00b | "thirteen." (V.O.) is cut, so the POV is drawn at its own height, and v3.1's 10 px lift is gone. `keyLarge`: the thirteenth key hangs large, Atem blue, on "welcome". KRAM's first-appearance plate reads `KRAM · RUNS ATEM`. It sits top right of the screen, clear of his OPEN SOURCE hoodie and the chyron. |
+| 18.02 | The V.O. is cut, so the dark strip at the frame's foot is gone. The label plays in full. |
+| v31-19.03 | The V.O. is cut, and its job is now an action. His hand is up before the room's. After Nole's "referee", he lowers it himself, 3 f after the line, and turns straight to his keys, head down, 8 f later. The Orb looks at him. |
+| 20.02 | cut |
+| 20.06 | The V.O. is cut. The hold is Gerg's keys running on, with Mas's eyes on the monitor. |
+| v31-20.07 | Her plate reads `NELEH · NOPEAI BOARD`, on the title page for 1.7 s. The pages are re-timed for the quote: the title 1.1 s, p. 29 0.75 s, and p. 30 3.2 s. The quote gets another 0.6 s in v31-20.08 before the tab closes, 3.9 s in all. |
+| v31-20.08 | `withTabs`: he closes the paper's tab (its x lit at 0.6 s), and the next tab opens: the order, live. |
+| **v32-21.06** (new) | **His move: the switch.** `drawDark2SSCR {hand: 'switch', off}`. The copy is still clapping on the big monitor. He reaches over, from 9 f, and on the click (k 21) the glass goes black in one step. The Orb looks from the black glass to him. |
+| 22.01 | **His move: DevDay, live.** The home two-shot and the bezel egg are gone. The shot runs [W] → [MCU] → [W]:<br>- **[W]**, `drawDevDayFull`, the stage full frame: the applause carries over, and the crowd along the foot claps in held steps. The odometer rises through the floor in three held steps on the ratchet (k 43, 51 and 59), and its drums kick on the thunk (k 104). Mas says "and today," with a room-scale mouth.<br>- **[MCU]**, `drawDevDayMCU`, from "you" (k 64) to the line's end: "…you can build your own chatgtp.", lip-synced.<br>- **[W]** again: Tasya walks on and stops clear of the figure. "so, how's the partnership going?" and "We love you guys." play with room-scale mouths. |
+| 22.02 | caption only (that night, home) |
+| **v32-22.04** (new) | **His move: pausing the sign-ups** (the record). `drawMonitorOTS` + `signupPainter` + `drawRackSlice`:<br>- the drums blur on the fast ratchet;<br>- the rack's LEDs step green → amber (k 23) → red (k 47);<br>- he types his post (k 27–66), and it goes up as a card on the post click (k 72);<br>- SIGN UP greys (k 87) and reads NOTIFY ME on the blink (k 93). |
+| 23.02 | `avatars`: each hover card carries the member's small call tile, and Mada's face sits under his spinner. |
+| unchanged (retimed by the lock only) | 18.01, 18.03, 18.04, 18.06, 19.01, v31-19.02, 20.01, 20.03–20.05, 21.02, 21.04, 21.05, 22.03, 23.01, 23.03, 23.04 |
+
+### 9.3 Kept from v3.1
+
+- **Mouths:** Mas's mouth never moves on a V.O. (`kit2.spoken`).
+- **The Orb:** it stays at home in the outline through 19.01 and sits at his shoulder from 19.03 on.
+- **Face lights:** on 18.04's toast and on 22.03.
+- **The GLYPH:** it stays inside the scan cone only, for 5 frames.
+- **`cleanUnder`:** not applicable here (it exists only on Act One's MCU).
+
+### 9.4 Checks (v3.2)
+
+| Check | Result |
+|---|---|
+| `node r-act3.cjs check` | 29 layouts for 29 shots, 0 stand-ins, 0 notes, 0 problems; the track is 3,418 frames |
+| `tsc` | prints nothing |
+| **GLYPH check** (`glyphspan`, `bundle`, `glyphs`) | frames 491–495 (18.04g). The plain frames around them are identical Node against Remotion, and nothing outside the room area differs. |
+| **Flash check** | **Worst: 2 transitions (1 flash) in any second; red: 0. Passes.** |
+| Longest still runs | 23.04 60 f (the black act-out), 21.02 36 f (the desk held between the order's lines, as in v3.1), v31-20.07 30 f (p. 30 held to read). The first audit found two holds that didn't change: v31-18.00's tally ECU, still for 33 f, and 22.01's opening wide, still for 43 f until the ratchet. The ECU now drifts along the marks by whole pixels (1 px every 8 f). In the wide, the hall claps in held steps while the applause runs: alternate groups of heads rise a pixel on alternate 4-frame beats. Both were re-rendered. |
+| Looked at | about 35 sampled native frames: the arrival and the tally, the key and Kram's plate (at 2×), 18.02, the hand lowering and the turn to the keys, 20.06, the three paper pages and the plate, the tab closing and the order opening, the reach and the black glass, DevDay (the wide, the MCU, Tasya on), the sign-up OTS at four steps, and 23.02's two hover cards; plus the contact sheet |
+
+**The picture:** `out/ep01/full-v3/picture/act3.mp4`: 1920 × 1080, 24 fps, H.264 + AAC, **2:22.42, 3,418 frames**, 11.7 MB, rendered in 26 s on 2 workers. The 5 GLYPH frames are spliced in from the Remotion host. It's muxed with the v3.2 stick mix (`act3-v32-stick-mix.wav`). Beside it: `act3.srt`, `act3.mp4.render.json` and `act3-sheet.png`.
+
+**Render** (from `studio/`): `node $S/r-act3.cjs bundle $S/bundle32`, then `BUNDLE=$S/bundle32 node $S/r-act3.cjs glyphs $S/glyph32-act3 2`, then `GLYPH_DIR=$S/glyph32-act3 SEGDIR=$S X264_THREADS=1 bash ../ops/heavy.sh node $S/r-act3.cjs picture --jobs 2`.
+
+### 9.5 Weakest in v3.2 (to my eye, from stills)
+
+1. **v32-21.06's reach.** The desk hides his hand, so it may read as a lean. That's art-b's own note. The black glass is the payoff.
+2. **22.01's wide.**
+   - Mas is about 40 px tall on a big stage, and the odometer's figure is small at 1×. The MCU carries his line.
+   - The stick's landing thunk (k 104) falls inside the MCU, so the drums' kick on it is off screen. The rise itself lands on the ratchet.
+3. **v31-20.07's quote** holds 3.9 s against its 4.8 s read floor, because the title (with the plate) and p. 29 had to fit first. **For the lead:** hold p. 30 from the start, or trim p. 29.
+4. **v32-22.04's OTS:** the back of his head is the monitor kit's dithered dark shape, as in 20.01.
+5. **From v3.1, still open:**
+   - 21.02 still has the stick's second `tower_pop` (k 251) with one copy on screen;
+   - 22.03's small monitor still shows DevDay that night.

@@ -2,11 +2,11 @@
 
 | | |
 |---|---|
-| **What this is** | The record of Act Two's pixel layouts on the stick lock: every shot, what it's built from, what's new, the checks, how to re-render it, and what's weakest. **Now on the v3.1 lock: [§8](#8-v31-the-v31-lock-script-draft-7) is current**; §1–§7 are the v3 pass, kept for the record. |
-| **Who, when** | The `v3-shots-act2-act3` pass (track P2 of [PLAN.md](PLAN.md)), 2026-09-27. Nothing was committed: the lead commits. |
+| **What this is** | The record of Act Two's pixel layouts on the stick lock: every shot, what it's built from, what's new, the checks, how to re-render it, and what's weakest. **Now on the v3.2 lock: [§9](#9-v32-the-v32-lock-script-draft-81) is current**; §8 is the v3.1 round and §1–§7 the v3 pass, kept for the record. |
+| **Who, when** | The `v3-shots-act2-act3` pass (track P2 of [PLAN.md](PLAN.md)), 2026-09-27; the v3.2 round 2026-09-28. Nothing was committed: the lead commits. |
 | **The files** | Layouts: `studio/src/episodes/ep01/pixel/act2/shots.ts`. Helpers shared with Act Three: `act2/kit2.ts`. New art: `act2/art/radnus-bust.ts`. The lock: `act2/data.ts` and [lock/act2.json](lock/act2.json). |
-| **The picture** | **v3.1:** `out/ep01/full-v3/picture/act2.mp4` (1920 × 1080, 24 fps, H.264 + AAC, **3:21.25, 4,830 frames**, 15.3 MB; rendered in 33 s on 2 workers), muxed with the v3.1 stick mix as temp audio (`out/ep01/full-v3/picture/act2-v31-stick-mix.wav`). (The v3 render it replaced ran 3:24.75, 4,914 frames, on `act2-stick-mix.wav`.) Beside it: `act2.srt`, `act2.mp4.render.json` and the contact sheet `act2-sheet.png` (one still per shot, each shot's middle frame). |
-| **Measured** | 43 of 43 shots have a layout; 0 stand-ins; `check` passes; `tsc` over both segments prints nothing; the flash check passes (§4). |
+| **The picture** | **v3.2:** `out/ep01/full-v3/picture/act2.mp4` (1920 × 1080, 24 fps, H.264 + AAC, **3:13.04, 4,633 frames**, 14.9 MB), muxed with the v3.2 stick mix (`act2-v32-stick-mix.wav`); see §9.4. The v3.1 render it replaced was `out/ep01/full-v3/picture/act2.mp4` (1920 × 1080, 24 fps, H.264 + AAC, **3:21.25, 4,830 frames**, 15.3 MB; rendered in 33 s on 2 workers), muxed with the v3.1 stick mix as temp audio (`out/ep01/full-v3/picture/act2-v31-stick-mix.wav`). (The v3 render it replaced ran 3:24.75, 4,914 frames, on `act2-stick-mix.wav`.) Beside it: `act2.srt`, `act2.mp4.render.json` and the contact sheet `act2-sheet.png` (one still per shot, each shot's middle frame). |
+| **Measured** | v3.2: 39 of 39 shots have a layout, 0 stand-ins, `check` and `tsc` clean, the flash check passes (§9.4). v3: 43 of 43 shots have a layout; 0 stand-ins; `check` passes; `tsc` over both segments prints nothing; the flash check passes (§4). |
 | **Needs a person** | Nothing here has been watched in motion or heard. I looked at the contact sheet and at about 90 sampled native frames (every arrival, every V.O. frame, the dialogue shots, every freeze and card), and fixed what didn't read to me (§5). That's one reader's look at stills. |
 
 ---
@@ -241,3 +241,80 @@ python3 studio/src/episodes/ep01/pixel/tools/lock.py --seg act2 --timeline show/
 1. **The match cut is a match of centres, not of hands.** The print's left edge (and the fingers on it) sits about 100 px left of the phone's, because the print is 332 px wide and the phone 118. That's the art's geometry, followed as it is. Whether the cut reads as "the print became the phone" needs a person to watch it.
 2. **13.13's look down at the scroll** is a 1-px iris move plus a brow. It may not read at 1×.
 3. The v3 list (§7) still stands: the small White House wides, the collar insert, the rooftop freeze.
+
+## 9. v3.2: the v3.2 lock (script draft 8.1)
+
+**The brief** (the lead, 2026-09-28; SHOWRUNNER-NOTES 00 and 0, "Mas needs agency"; the calibration ledger, `show/bible/calibration.md`):
+- re-lock on `show/reel/ep01-v32/ep01-v32-act2.json`;
+- update the shots with art-b's v3.2 art ([art/art-b.md §7](art/art-b.md));
+- his moves must read on screen: in Act Two, **the seat, proposing the agency and the stamp**;
+- first-appearance plates carry one relation word;
+- keep the v3.1 fixes;
+- re-render;
+- the flash check.
+
+### 9.1 The lock
+
+```sh
+# the temp track: Act Two's chapter of the v3.2 stick reel (out/ep01/reel/ep01-v32-stick.mp4, from reel frame 9,394),
+# decoded with the bundled ffmpeg, trimmed to 4,633 frames x 2,000 samples, 48 kHz 24-bit
+python3 studio/src/episodes/ep01/pixel/tools/lock.py --seg act2 --timeline show/reel/ep01-v32/ep01-v32-act2.json \
+    --takes audio/ep01/act2/dialogue/lines-fast-v2.json --takes audio/ep01/v3/act2/lines-v3.json \
+    --takes audio/ep01/v31/act2/lines-v31.json --takes audio/ep01/v32/act2/lines-v32.json \
+    --mix out/ep01/full-v3/picture/act2-v32-stick-mix.wav --mix-offset 0
+```
+
+- **Result:** 39 shots from 46 beats, 4,633 frames (3:13.04). 38 lines, every one with a take. Every check is `ok`.
+- **Act Two has no V.O. now** (draft 8.1: he performs in public here). `kit2.spoken` still guards his mouth.
+
+### 9.2 What changed, shot by shot
+
+| Shot | v3.2 |
+|---|---|
+| 13.01 | **His move: the seat.** `drawWHWide {settle, masGlass}`. Mas is already seated nearest Sirrah, his own glass set down square in front of him. Radnus is half-risen and Mario is still arriving, and both settle into their seats over the first 2.7 s. Radnus's silent mouthing and Mario's finger are kept from v3.1. The V.O. that named the mouthing is cut, and so is its mark. |
+| 13.09 | The V.O. is cut. After Radnus's courtesy ends, Mas's eyes drop off him for a beat, starting 4 f later. They come back for "how's the dancing?". |
+| 13.10 | `drawRadnusFlameMCU` with this pass's RADNUS bust (`radnusBust2` with `RADNUS2_COLLAR`): his face and the flame together, replacing the collar ECU. The flame goes up one size on the whoomph. From "We're being thoughtful." (O.S.), his hand pats at it every 6 frames; his mouth stays shut and he blinks once. |
+| 14.01 | `drawBridgeOTS {scrub, tagBig}`. The ALTERED AUDIO tag is drawn to read. **His move:** his thumb drags the clip back (two drawings), and the clip plays again, late again. The V.O. is cut. |
+| 14.03 | `drawLitWindow {repost}`, with 14.04 folded in: the thumb presses, then ✓ REPOSTED on the click. |
+| 14.04 | cut (folded into 14.03) |
+| 15.02 | The plate reads `LAHTNEMULB · CHAIRMAN`. |
+| 15.10 | The moved question: "Is there anything you'd like this committee to do?" (e1-a2-15-15). The red light and the room-scale mouth are on it. |
+| 15.15 | **His move: the proposal.** It opens on 15.07's OTS, from behind him onto the dais, with the chairman blinking, for "i would form a new agency…" (his own testimony). On "licenses", it cuts to the HIGH. His hand slides `PLEASE REGULATE ME` across in held steps as he goes on (the OTS drifts in 1 px every 10 f before the cut). Sucram's stamp comes down mid-slide, and the sheet leaves frame as his line ends, so there's no empty table under him. |
+| 15.16 | caption only (every senator wants to sign it) |
+| 15.11 | The moved question ("Would you come and run it?") now opens the shot. Under it, Sucram glances down and Mas blinks; his "i love my current job." and the pocket on "money" are kept. |
+| 16.01 | **His moves.** His thumb on his phone in the frame's corner posts the walk-back, and the post pops over the poster; UN-CANCELLED follows. Then his own hand comes in with a rubber stamp and stamps `ADDED DUE TO POPULAR DEMAND` on its mark: in for 8 f, the stamp for 4 f, out for 8 f. |
+| 17.12 | `drawGlassSide {surface}`: his face on the water's surface. The reflected crack runs across it in held steps and breaks it under the eyes. |
+| unchanged (retimed by the lock only) | 13.02, 13.05–13.08, 13.11, 13.13, 13.14, 14.05, 14.06, 15.01, 15.03–15.07, 15.12–15.14, 17.01–17.11, 17.13 |
+
+### 9.3 Kept from v3.1
+
+- **Mouths:** Mas's mouth never moves on a V.O. There are none in Act Two now, and the guard stays.
+- **The match cut** (13.14): the print is at the phone's geometry, with no tripods and no dip.
+- **The rest:**
+  - the rail clears at 2.6 s (the timeline's);
+  - the gag cards sit in empty corners;
+  - the freezes keep Mas in colour;
+  - the RADNUS bust is used in every medium and close shot (13.07, 13.09, 13.10).
+- **Face lights and `cleanUnder`:** the v3.2 notes ask for none in Act Two. `cleanUnder` still exists only on Act One's MCU.
+
+### 9.4 Checks (v3.2)
+
+| Check | Result |
+|---|---|
+| `node r-act2.cjs check` | 39 layouts for 39 shots, 0 stand-ins, 0 notes, 0 problems; the track is 4,633 frames |
+| `tsc` (both segments and everything they import) | prints nothing |
+| **Flash check** (every native frame, the §4 method) | **Worst: 3 transitions (1 flash) in any second; red: 0. Passes.** |
+| Longest still runs | 17.12 46 f (the still water, deliberate), 15.07 40 f, 17.11 34 f, 14.06 32 f (the black match cut), 13.07 30 f (the lens look), 15.15 30 f. The first audit found two holds that didn't change: 15.15's OTS, still for 60 f under his proposal, and the head of 15.11, still for 59 f now that the moved question opens it. The OTS now drifts in by whole pixels (1 px every 10 f), with the chairman and the clone blinking. In 15.11, Sucram glances down and Mas blinks under the question. Both were re-rendered. |
+| Looked at | about 30 sampled native frames: 13.01's settle, 13.09's look away, 13.10 (the pat on and off), 14.01's scrub, 14.03's repost, 15.02's plate, 15.10, 15.15 (the OTS, the slide, the stamp, the exit), 16.01 (the phone, the hand in, the stamp, after), and 17.12; plus the contact sheet |
+
+**The picture:** `out/ep01/full-v3/picture/act2.mp4`: 1920 × 1080, 24 fps, H.264 + AAC, **3:13.04, 4,633 frames**, 14.9 MB, rendered in 26 s on 2 workers. It's muxed with the v3.2 stick mix (`act2-v32-stick-mix.wav`). Beside it: `act2.srt`, `act2.mp4.render.json` and `act2-sheet.png`.
+
+**Render** (from `studio/`): `node src/episodes/ep01/pixel/tools/build.mjs act2 $S/r-act2.cjs`, then `node $S/r-act2.cjs check`, then `SEGDIR=$S X264_THREADS=1 bash ../ops/heavy.sh node $S/r-act2.cjs picture --jobs 2`.
+
+### 9.5 Weakest in v3.2 (to my eye, from stills)
+
+1. **13.10 is a single at the two-shot's bust size, not a true MCU.** The art sets the bust at native size (X 250, Y 22), and the flame grows from 9 to 14 px. It reads as his face with a small flame.
+2. **For the sound pass:** 15.15's stick SFX sit before the cut on "licenses" (k 68): `folder_slide` is at k 8 and `rubber_stamp_C` at k 40. In the picture, the slide's first step lands at k 78 and the stamp comes down at k 110.
+3. **16.01:** the walk-back post and his stamping arm overlap for a few frames. The card stays up until UN-CANCELLED plus 16 f.
+4. **13.01's settle** is small at the wide's scale, where the figures are about 20 px tall. Whether "he's already in the seat" reads needs a person to watch it.
+5. **17.12's face on the water** is small, as the art notes. If it doesn't read in motion, the art's fallback is the cut.

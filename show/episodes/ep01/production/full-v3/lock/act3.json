@@ -4,11 +4,12 @@
   "episode": "ep01",
   "seg": "act3",
   "label": "ACT THREE",
-  "timeline": "show/reel/ep01-v31/ep01-v31-act3.json",
+  "timeline": "show/reel/ep01-v32/ep01-v32-act3.json",
   "takes": [
    "audio/ep01/act3/dialogue/lines-fast-v2.json",
    "audio/ep01/v3/act3/lines-v3.json",
-   "audio/ep01/v31/act3/lines-v31.json"
+   "audio/ep01/v31/act3/lines-v31.json",
+   "audio/ep01/v32/act3/lines-v32.json"
   ],
   "plan": null,
   "plan_py": null,
@@ -28,33 +29,33 @@
   "note": "Nothing here was watched or heard. The numbers are measured from the files; whether the picture reads needs a person."
  },
  "summary": {
-  "shots": 28,
-  "beats": 31,
-  "frames": 3483,
-  "seconds": 145.125,
-  "length": "2:25.12",
+  "shots": 29,
+  "beats": 32,
+  "frames": 3418,
+  "seconds": 142.417,
+  "length": "2:22.42",
   "episode_in": "00:00:00",
-  "episode_out": "02:25:03",
+  "episode_out": "02:22:10",
   "verdicts": {
-   "-": 28
+   "-": 29
   },
-  "mean_s": 5.183,
-  "median_s": 3.458,
+  "mean_s": 4.911,
+  "median_s": 3.417,
   "min_s": 1.208,
-  "max_s": 17.375,
-  "lines": 27,
+  "max_s": 14.958,
+  "lines": 23,
   "posts": 0,
-  "vo": 7,
-  "lines_with_mouth": 18,
+  "vo": 2,
+  "lines_with_mouth": 19,
   "mouths_from_words": 0,
   "on_camera_mouths": [],
   "lines_crossing_a_cut": [],
   "prelaps": [],
   "reviewer_slates": [],
   "mix": {
-   "path": "out/ep01/full-v3/picture/act3-v31-stick-mix.wav",
+   "path": "out/ep01/full-v3/picture/act3-v32-stick-mix.wav",
    "offset_frames": 0,
-   "frames": 3483.0
+   "frames": 3418.0
   },
   "refs": {}
  },
@@ -62,22 +63,22 @@
   {
    "check": "shot frames = their beats' frames",
    "ok": true,
-   "detail": "28 shots from 31 beats"
+   "detail": "29 shots from 32 beats"
   },
   {
    "check": "shots tile the segment with no gap",
    "ok": true,
-   "detail": "0 -> 3483"
+   "detail": "0 -> 3418"
   },
   {
    "check": "the lock vs the stick reel's own line frames",
    "ok": true,
-   "detail": "same frame: 0; 1 f earlier (the onset falls inside the frame): 27; other: 0"
+   "detail": "same frame: 0; 1 f earlier (the onset falls inside the frame): 23; other: 0"
   },
   {
    "check": "every line has a take",
    "ok": true,
-   "detail": "27 of 27 placed; no take: []"
+   "detail": "23 of 23 placed; no take: []"
   },
   {
    "check": "every line's speech lies inside its take file",
@@ -87,7 +88,7 @@
   {
    "check": "mouth tracks carried over",
    "ok": true,
-   "detail": "18 lines with a mouth track; lost: []"
+   "detail": "19 lines with a mouth track; lost: []"
   },
   {
    "check": "every on-camera mouth has a track",
@@ -97,7 +98,7 @@
   {
    "check": "the mix = its offset + the segment",
    "ok": true,
-   "detail": "mix 3483.00 f vs 0 + 3483"
+   "detail": "mix 3418.00 f vs 0 + 3418"
   }
  ],
  "sequences": [
@@ -107,7 +108,7 @@
    "place": "his dark room (the home room)",
    "time": "Mon Jul 24, 2023 · night",
    "s": 0,
-   "e": 802,
+   "e": 730,
    "shots": [
     "v31-18.00",
     "v31-18.00b",
@@ -119,18 +120,18 @@
    ],
    "chapter": "Mon Jul 24, 2023 · night",
    "title": "his dark room (the home room)",
-   "cue": "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black · sound: the dark room bed: rack fans, LEDs ticking in straight eighths, the cyan key's faint buzz · sfx: the rack's drive slot whirs and slides a box out like a tray (~1.8 s) · sfx: a servo whirrs; the sphere rises in three held steps (0.3-1.5 s); the lens swivels, dilates · STYLE · GLYPH-MASKED next: 5 frames, inside the scan cone only (GLYPH use 1 of 2) · STYLE · GLYPH-MASKED (the stick reel dissolves the whole frame; the show masks only the cone) · sfx: CHIME ~0.35 s after \"you can stay.\": a soft two-note chip chime on F (never a startup chime)",
-   "frames": 802,
+   "cue": "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black · sound: the dark room bed: rack fans, LEDs ticking in straight eighths, the cyan key's faint buzz · sfx: the rack's drive slot whirs and slides a box out like a tray (~1.8 s) · sfx: a servo whirrs; the sphere rises in three held steps (0.3-1.5 s); the lens swivels, dilates · STYLE · GLYPH-MASKED next: 5 frames, inside the scan cone only (GLYPH use 1 of 2) · STYLE · GLYPH-MASKED (the stick reel dissolves the whole frame; the show masks only the cone) · sfx: CHIME ~0.35 s after \"you can stay.\": a soft two-note chip chime on F (never a startup chime)",
+   "frames": 730,
    "tc_in": "00:00:00",
-   "tc_out": "00:33:10"
+   "tc_out": "00:30:10"
   },
   {
    "id": "SC19",
    "side": "",
    "place": "his dark room (the home room) · the monitor",
    "time": "catching up: Jun 7 - Sep 25, 2023",
-   "s": 802,
-   "e": 1230,
+   "s": 730,
+   "e": 1109,
    "shots": [
     "19.01",
     "v31-19.02",
@@ -138,21 +139,20 @@
    ],
    "chapter": "catching up: Jun 7 - Sep 25, 2023",
    "title": "his dark room (the home room) · the monitor",
-   "cue": "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black · the run: every item lands back on Mas and the Orb from its own angle; the rail rolls like the odometer, no slates",
-   "frames": 428,
-   "tc_in": "00:33:10",
-   "tc_out": "00:51:06"
+   "cue": "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black · the run: every item lands back on Mas and the Orb from its own angle; the rail rolls like the odometer, no slates",
+   "frames": 379,
+   "tc_in": "00:30:10",
+   "tc_out": "00:46:05"
   },
   {
    "id": "SC20",
    "side": "",
    "place": "his dark room (the home room)",
    "time": "~Tue Sep 26, 2023 · night",
-   "s": 1230,
-   "e": 2149,
+   "s": 1109,
+   "e": 1873,
    "shots": [
     "20.01",
-    "20.02",
     "20.03",
     "20.04",
     "20.05",
@@ -160,55 +160,56 @@
    ],
    "chapter": "~Tue Sep 26, 2023 · night",
    "title": "his dark room (the home room)",
-   "cue": "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black · sfx: his keys (typed, not voiced; source casing) · sound: the act's one quiet beat (< 2 s): the LEDs' tick drops out, the fans turn, the Water Line holds · sfx: the counter's whirr; his phone's ring pre-laps from the desk (~1.9 s) · sound: Gerg's keys come down the line under the whole call · sfx: the edit click; the comment rewrites itself in place, letter by letter · sound: the LEDs resume on the cut, relieved; the counter keeps climbing, faster, soft at frame right · sound: Gerg's keys keep going after the last line (the scene ends on Gerg and the world)",
-   "frames": 919,
-   "tc_in": "00:51:06",
-   "tc_out": "01:29:13"
+   "cue": "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black · sfx: his keys (typed, not voiced; source casing) · sfx: the counter's whirr; his phone's ring pre-laps from the desk (~1.9 s) · sound: Gerg's keys come down the line under the whole call · sfx: the edit click; the comment rewrites itself in place, letter by letter · sound: the LEDs resume on the cut, relieved; the counter keeps climbing, faster, soft at frame right · sound: Gerg's keys keep going after the last line (the scene ends on Gerg and the world)",
+   "frames": 764,
+   "tc_in": "00:46:05",
+   "tc_out": "01:18:01"
   },
   {
    "id": "20A",
    "side": "",
    "place": "his monitor: Neleh's paper",
    "time": "Oct 2023",
-   "s": 2149,
-   "e": 2298,
+   "s": 1873,
+   "e": 2022,
    "shots": [
     "v31-20.07",
     "v31-20.08"
    ],
    "chapter": "Oct 2023",
    "title": "his monitor: Neleh's paper",
-   "cue": "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "cue": "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
    "frames": 149,
-   "tc_in": "01:29:13",
-   "tc_out": "01:35:18"
+   "tc_in": "01:18:01",
+   "tc_out": "01:24:06"
   },
   {
    "id": "SC21",
    "side": "",
    "place": "his dark room (the home room) · the monitor",
    "time": "Oct 2023 · Mon Oct 30, 2023",
-   "s": 2298,
-   "e": 2818,
+   "s": 2022,
+   "e": 2590,
    "shots": [
     "21.02",
     "21.04",
-    "21.05"
+    "21.05",
+    "v32-21.06"
    ],
    "chapter": "Oct 2023 · Mon Oct 30, 2023",
    "title": "his dark room (the home room) · the monitor",
-   "cue": "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black · sfx: two pops (cut paper); the copies: scissor edges, glossier, tie a shade the wrong colour · Mas asks his witness; the Orb's iris flicks across the three NEDIBs (0.35 / 0.75 / 1.15 s after the question) and settles on the one with the pen; then he agrees · sfx: the pen, in ink; the copies clap, and keep clapping",
-   "frames": 520,
-   "tc_in": "01:35:18",
-   "tc_out": "01:57:10"
+   "cue": "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black · sfx: two pops (cut paper); the copies: scissor edges, glossier, tie a shade the wrong colour · Mas asks his witness; the Orb's iris flicks across the three NEDIBs (0.35 / 0.75 / 1.15 s after the question) and settles on the one with the pen; then he agrees · sfx: the pen, in ink; the copies clap, and keep clapping · music (v3.2): ACT THREE · the Water Line holds its note under the switch; the hall's applause takes the cut",
+   "frames": 568,
+   "tc_in": "01:24:06",
+   "tc_out": "01:47:22"
   },
   {
    "id": "SC22",
    "side": "",
    "place": "his dark room (the home room) · the monitor",
    "time": "Mon Nov 6, 2023 · DevDay",
-   "s": 2818,
-   "e": 3243,
+   "s": 2590,
+   "e": 3058,
    "shots": [
     "22.01",
     "22.02",
@@ -216,18 +217,35 @@
    ],
    "chapter": "Mon Nov 6, 2023 · DevDay",
    "title": "his dark room (the home room) · the monitor",
-   "cue": "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black · sound: the copies' clap carried over as the crowd's applause · sfx: launch night's odometer clunks up through the stage floor (0.8 s) and settles, legible · egg in the bezel (zero read): zAI's rafters; an egg cracks; a chrome creature hatches, already muzzled · meter G04: the suggested-replies strip · sfx: his thumb taps [super] (~2.7 s)",
-   "frames": 425,
-   "tc_in": "01:57:10",
-   "tc_out": "02:15:03"
+   "cue": "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black · sound: the copies' clap carried over as the crowd's applause · sfx: launch night's odometer clunks up through the stage floor (0.8 s) and settles, legible · egg in the bezel (zero read): zAI's rafters; an egg cracks; a chrome creature hatches, already muzzled · meter G04: the suggested-replies strip · sfx: his thumb taps [super] (~2.7 s)",
+   "frames": 468,
+   "tc_in": "01:47:22",
+   "tc_out": "02:07:10"
+  },
+  {
+   "id": "22A",
+   "side": "",
+   "place": "the dark room: the sign-ups",
+   "time": "Tue Nov 14, 2023",
+   "s": 3058,
+   "e": 3178,
+   "shots": [
+    "v32-22.04"
+   ],
+   "chapter": "Tue Nov 14, 2023",
+   "title": "the dark room: the sign-ups",
+   "cue": "music (v3.2): ACT THREE · the Water Line thins to its pedal under the counter's chip notes; THE CLOCK's first step is the next bar (23.01)",
+   "frames": 120,
+   "tc_in": "02:07:10",
+   "tc_out": "02:12:10"
   },
   {
    "id": "SC23",
    "side": "",
    "place": "his dark room (the home room)",
    "time": "Thu Nov 16 -> Fri Nov 17, 2023",
-   "s": 3243,
-   "e": 3483,
+   "s": 3178,
+   "e": 3418,
    "shots": [
     "23.01",
     "23.02",
@@ -236,10 +254,10 @@
    ],
    "chapter": "Thu Nov 16 -> Fri Nov 17, 2023",
    "title": "his dark room (the home room)",
-   "cue": "music (v3.1): THE CLOCK · MM-14's step figure, bar 1 to the dead stop on bar 4 · the hailstone bobs in his glass, the host's glass floods the table, the ovation across the street · the four attendee circles: a doorway, a glowing page, a spinner, a black square; the iris steps one a beat · the pilot's one rail glance: Mas looks down at the interface itself, and back up; the reminder goes dark · sfx pre-lap under the black (the script's crane grind and glass tings): HELD OUT of the stick reel until Act Four's premix carries the crane (audit #37); see PRELAP below",
+   "cue": "music (v3.2): THE CLOCK · MM-14's step figure, bar 1 to the dead stop on bar 4 · the hailstone bobs in his glass, the host's glass floods the table, the ovation across the street · the four attendee circles: a doorway, a glowing page, a spinner, a black square; the iris steps one a beat · the pilot's one rail glance: Mas looks down at the interface itself, and back up; the reminder goes dark · sfx pre-lap under the black (the script's crane grind and glass tings): HELD OUT of the stick reel until Act Four's premix carries the crane (audit #37); see PRELAP below",
    "frames": 240,
-   "tc_in": "02:15:03",
-   "tc_out": "02:25:03"
+   "tc_in": "02:12:10",
+   "tc_out": "02:22:10"
   }
  ],
  "shots": [
@@ -268,7 +286,7 @@
     "mas"
    ],
    "cues": [
-    "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black"
+    "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black"
    ],
    "sounds": [],
    "spots": [],
@@ -310,27 +328,27 @@
     "v31-18.00b"
    ],
    "s": 77,
-   "e": 227,
+   "e": 197,
    "onscreen": [
     {
      "text": "MACROSOFT WELCOMES ATEM",
      "s": 4,
-     "e": 150
+     "e": 120
     },
     {
      "text": "JUL 18",
      "s": 4,
-     "e": 150
+     "e": 120
     },
     {
-     "text": "KRAM",
+     "text": "KRAM · RUNS ATEM",
      "s": 4,
-     "e": 150
+     "e": 120
     },
     {
      "text": "OPEN SOURCE",
      "s": 4,
-     "e": 150
+     "e": 120
     }
    ],
    "lines": [
@@ -370,33 +388,6 @@
      ],
      "tag": "monitor",
      "pre": false
-    },
-    {
-     "id": "v31-vo-03",
-     "kind": "vo",
-     "mode": "on-mic",
-     "who": "MAS",
-     "text": "thirteen.",
-     "s": 108,
-     "e": 131,
-     "fs": 95,
-     "fe": 146,
-     "os": false,
-     "via": null,
-     "face": null,
-     "lip": false,
-     "carry": false,
-     "cut": false,
-     "mouth": [],
-     "words": [
-      [
-       "thirteen",
-       1,
-       23
-      ]
-     ],
-     "tag": "V.O.",
-     "pre": false
     }
    ],
    "seq": "SC18",
@@ -415,7 +406,7 @@
     "tasya"
    ],
    "cues": [
-    "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black"
+    "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black"
    ],
    "sounds": [],
    "spots": [],
@@ -463,34 +454,34 @@
      "kind": "plate",
      "text": "MACROSOFT WELCOMES ATEM",
      "s": 4,
-     "e": 150,
+     "e": 120,
      "must": true
     },
     {
      "kind": "plate",
      "text": "JUL 18",
      "s": 4,
-     "e": 150,
+     "e": 120,
      "must": true
     },
     {
      "kind": "plate",
-     "text": "KRAM",
+     "text": "KRAM · RUNS ATEM",
      "s": 4,
-     "e": 150,
+     "e": 120,
      "must": true
     },
     {
      "kind": "plate",
      "text": "OPEN SOURCE",
      "s": 4,
-     "e": 150,
+     "e": 120,
      "must": true
     }
    ],
    "tc_in": "00:03:05",
-   "tc_out": "00:09:11",
-   "frames": 150
+   "tc_out": "00:08:05",
+   "frames": 120
   },
   {
    "id": "18.01",
@@ -498,8 +489,8 @@
    "beats": [
     "18.01"
    ],
-   "s": 227,
-   "e": 308,
+   "s": 197,
+   "e": 278,
    "onscreen": [
     {
      "text": "COINWORLD",
@@ -528,7 +519,7 @@
     "mas"
    ],
    "cues": [
-    "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+    "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
     "sound: the dark room bed: rack fans, LEDs ticking in straight eighths, the cyan key's faint buzz",
     "sfx: the rack's drive slot whirs and slides a box out like a tray (~1.8 s)"
    ],
@@ -583,8 +574,8 @@
      "must": true
     }
    ],
-   "tc_in": "00:09:11",
-   "tc_out": "00:12:20",
+   "tc_in": "00:08:05",
+   "tc_out": "00:11:14",
    "frames": 81
   },
   {
@@ -593,84 +584,21 @@
    "beats": [
     "18.02"
    ],
-   "s": 308,
-   "e": 415,
+   "s": 278,
+   "e": 355,
    "onscreen": [
     {
      "text": "FROM: COINWORLD · PROOF YOU'RE HUMAN",
      "s": 4,
-     "e": 107
+     "e": 77
     },
     {
      "text": "SHIP TO: MAS MANALT, CO-FOUNDER",
      "s": 16,
-     "e": 107
+     "e": 77
     }
    ],
-   "lines": [
-    {
-     "id": "v31-vo-04",
-     "kind": "vo",
-     "mode": "on-mic",
-     "who": "MAS",
-     "text": "my other company. it tells people from machines.",
-     "s": 9,
-     "e": 93,
-     "fs": -4,
-     "fe": 109,
-     "os": false,
-     "via": null,
-     "face": null,
-     "lip": false,
-     "carry": false,
-     "cut": false,
-     "mouth": [],
-     "words": [
-      [
-       "my",
-       2,
-       6
-      ],
-      [
-       "other",
-       6,
-       14
-      ],
-      [
-       "company",
-       14,
-       28
-      ],
-      [
-       "it",
-       38,
-       41
-      ],
-      [
-       "tells",
-       41,
-       49
-      ],
-      [
-       "people",
-       49,
-       58
-      ],
-      [
-       "from",
-       58,
-       62
-      ],
-      [
-       "machines",
-       62,
-       84
-      ]
-     ],
-     "tag": "V.O.",
-     "pre": false
-    }
-   ],
+   "lines": [],
    "seq": "SC18",
    "verdict": "",
    "v4": null,
@@ -684,7 +612,7 @@
    "does": "The box's label, legible as he reaches for the lid: who sent it, and to whom. His other company's device.",
    "chars": [],
    "cues": [
-    "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black"
+    "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black"
    ],
    "sounds": [],
    "spots": [],
@@ -710,20 +638,20 @@
      "kind": "label",
      "text": "FROM: COINWORLD · PROOF YOU'RE HUMAN",
      "s": 4,
-     "e": 107,
+     "e": 77,
      "must": true
     },
     {
      "kind": "label",
      "text": "SHIP TO: MAS MANALT, CO-FOUNDER",
      "s": 16,
-     "e": 107,
+     "e": 77,
      "must": true
     }
    ],
-   "tc_in": "00:12:20",
-   "tc_out": "00:17:07",
-   "frames": 107
+   "tc_in": "00:11:14",
+   "tc_out": "00:14:19",
+   "frames": 77
   },
   {
    "id": "18.03",
@@ -731,8 +659,8 @@
    "beats": [
     "18.03"
    ],
-   "s": 415,
-   "e": 533,
+   "s": 355,
+   "e": 473,
    "onscreen": [
     {
      "text": "THE ORB / IT'S SEEN THINGS. MOSTLY IRISES.",
@@ -762,7 +690,7 @@
     "orb"
    ],
    "cues": [
-    "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+    "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
     "sfx: a servo whirrs; the sphere rises in three held steps (0.3-1.5 s); the lens swivels, dilates"
    ],
    "sounds": [
@@ -854,8 +782,8 @@
      "must": true
     }
    ],
-   "tc_in": "00:17:07",
-   "tc_out": "00:22:05",
+   "tc_in": "00:14:19",
+   "tc_out": "00:19:17",
    "frames": 118
   },
   {
@@ -866,8 +794,8 @@
     "18.04g",
     "18.05"
    ],
-   "s": 533,
-   "e": 617,
+   "s": 473,
+   "e": 557,
    "onscreen": [
     {
      "text": "verified: human",
@@ -940,11 +868,11 @@
     "mas"
    ],
    "cues": [
-    "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+    "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
     "STYLE · GLYPH-MASKED next: 5 frames, inside the scan cone only (GLYPH use 1 of 2)",
-    "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+    "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
     "STYLE · GLYPH-MASKED (the stick reel dissolves the whole frame; the show masks only the cone)",
-    "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black"
+    "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black"
    ],
    "sounds": [
     "orb_scan_sweep @0",
@@ -1007,8 +935,8 @@
      "must": true
     }
    ],
-   "tc_in": "00:22:05",
-   "tc_out": "00:25:17",
+   "tc_in": "00:19:17",
+   "tc_out": "00:23:05",
    "frames": 84
   },
   {
@@ -1017,8 +945,8 @@
    "beats": [
     "18.06"
    ],
-   "s": 617,
-   "e": 802,
+   "s": 557,
+   "e": 730,
    "onscreen": [],
    "lines": [
     {
@@ -1079,10 +1007,10 @@
      "mode": "on-mic",
      "who": "MAS",
      "text": "you can stay.",
-     "s": 101,
-     "e": 125,
-     "fs": 88,
-     "fe": 140,
+     "s": 89,
+     "e": 113,
+     "fs": 76,
+     "fe": 128,
      "os": false,
      "via": null,
      "face": null,
@@ -1152,12 +1080,12 @@
     "orb"
    ],
    "cues": [
-    "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+    "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
     "sfx: CHIME ~0.35 s after \"you can stay.\": a soft two-note chip chime on F (never a startup chime)"
    ],
    "sounds": [
     "orb_servo @7",
-    "synth:chime @133"
+    "synth:chime @121"
    ],
    "spots": [
     {
@@ -1167,7 +1095,7 @@
     },
     {
      "name": "synth:chime",
-     "k": 133,
+     "k": 121,
      "dur": null
     }
    ],
@@ -1206,9 +1134,9 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "00:25:17",
-   "tc_out": "00:33:10",
-   "frames": 185
+   "tc_in": "00:23:05",
+   "tc_out": "00:30:10",
+   "frames": 173
   },
   {
    "id": "19.01",
@@ -1216,8 +1144,8 @@
    "beats": [
     "19.01"
    ],
-   "s": 802,
-   "e": 845,
+   "s": 730,
+   "e": 773,
    "onscreen": [],
    "lines": [],
    "seq": "SC19",
@@ -1236,7 +1164,7 @@
     "orb"
    ],
    "cues": [
-    "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+    "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
     "the run: every item lands back on Mas and the Orb from its own angle; the rail rolls like the odometer, no slates"
    ],
    "sounds": [],
@@ -1276,8 +1204,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "00:33:10",
-   "tc_out": "00:35:05",
+   "tc_in": "00:30:10",
+   "tc_out": "00:32:05",
    "frames": 43
   },
   {
@@ -1286,8 +1214,8 @@
    "beats": [
     "v31-19.02"
    ],
-   "s": 845,
-   "e": 932,
+   "s": 773,
+   "e": 860,
    "onscreen": [
     {
      "text": "JUL 12",
@@ -1321,7 +1249,7 @@
     "sirrah"
    ],
    "cues": [
-    "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black"
+    "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black"
    ],
    "sounds": [],
    "spots": [],
@@ -1374,8 +1302,8 @@
      "must": true
     }
    ],
-   "tc_in": "00:35:05",
-   "tc_out": "00:38:20",
+   "tc_in": "00:32:05",
+   "tc_out": "00:35:20",
    "frames": 87
   },
   {
@@ -1384,23 +1312,23 @@
    "beats": [
     "v31-19.03"
    ],
-   "s": 932,
-   "e": 1230,
+   "s": 860,
+   "e": 1109,
    "onscreen": [
     {
      "text": "JUL 21 · PINKY PROMISE · SIGNED: 7 AI COMPANIES",
      "s": 4,
-     "e": 298
+     "e": 249
     },
     {
      "text": "SEP 13 · REMUHCS · ASKED THE ROOM: SHOULD GOVERNMENT REGULATE AI?",
      "s": 4,
-     "e": 298
+     "e": 249
     },
     {
      "text": "BILLS: 0",
      "s": 4,
-     "e": 298
+     "e": 249
     }
    ],
    "lines": [
@@ -1623,58 +1551,6 @@
      ],
      "tag": "monitor",
      "pre": false
-    },
-    {
-     "id": "v31-vo-05",
-     "kind": "vo",
-     "mode": "on-mic",
-     "who": "MAS",
-     "text": "i've had mine up since may.",
-     "s": 240,
-     "e": 280,
-     "fs": 225,
-     "fe": 296,
-     "os": false,
-     "via": null,
-     "face": null,
-     "lip": false,
-     "carry": false,
-     "cut": false,
-     "mouth": [],
-     "words": [
-      [
-       "i've",
-       -1,
-       4
-      ],
-      [
-       "had",
-       4,
-       8
-      ],
-      [
-       "mine",
-       8,
-       16
-      ],
-      [
-       "up",
-       16,
-       21
-      ],
-      [
-       "since",
-       21,
-       28
-      ],
-      [
-       "may",
-       28,
-       39
-      ]
-     ],
-     "tag": "V.O.",
-     "pre": false
     }
    ],
    "seq": "SC19",
@@ -1687,7 +1563,7 @@
    "frame": "2S·SCR · the hands runner: one held room frame",
    "cls": "SW",
    "move": "hold",
-   "does": "One held frame: Mas and the Orb at the desk, the monitor large at frame right. Mas holds up two fingers to the Orb; the Orb, which has no fingers, whirrs. The monitor changes (chip JUL 21): NEDIB unrolls a PINKY PROMISE scroll, seven pinky-prints, one in NopeAI beige; Mas raises his pinky; the Orb rotates. The monitor changes (chip SEP 13): a room of tiled figures under REMUHCS's question; on his line every hand goes up at once; NOLE's is highest; BILLS: 0 in the corner. At the desk, Mas's hand is already up. The Orb rises one pixel. Then he lowers his hand.",
+   "does": "One held room frame: Mas's two fingers, his pinky, the forum's tiled hands. REMUHCS: \"Every single person raised their hand.\" NOLE: \"It's important for us to have a referee.\" At the desk his hand is already up. He lowers it himself and turns straight to his keyboard: he is one hand among hundreds.",
    "chars": [
     "mas",
     "nedib",
@@ -1696,7 +1572,7 @@
     "remuhcs"
    ],
    "cues": [
-    "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black"
+    "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black"
    ],
    "sounds": [
     "orb_servo @19",
@@ -1727,7 +1603,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "One held frame: Mas and the Orb at the desk, the monitor large at frame right. Mas holds up two fingers to the Orb; the Orb, which has no fingers, whirrs. The monitor changes (chip JUL 21): NEDIB unrolls a PINKY PROMISE scroll, seven pinky-prints, one in NopeAI beige; Mas raises his pinky; the Orb rotates. The monitor changes (chip SEP 13): a room of tiled figures under REMUHCS's question; on his line every hand goes up at once; NOLE's is highest; BILLS: 0 in the corner. At the desk, Mas's hand is already up. The Orb rises one pixel. Then he lowers his hand.",
+   "caption": "One held room frame: Mas's two fingers, his pinky, the forum's tiled hands. REMUHCS: \"Every single person raised their hand.\" NOLE: \"It's important for us to have a referee.\" At the desk his hand is already up. He lowers it himself and turns straight to his keyboard: he is one hand among hundreds.",
    "cast": [
     {
      "id": "mas",
@@ -1783,27 +1659,27 @@
      "kind": "label",
      "text": "JUL 21 · PINKY PROMISE · SIGNED: 7 AI COMPANIES",
      "s": 4,
-     "e": 298,
+     "e": 249,
      "must": true
     },
     {
      "kind": "label",
      "text": "SEP 13 · REMUHCS · ASKED THE ROOM: SHOULD GOVERNMENT REGULATE AI?",
      "s": 4,
-     "e": 298,
+     "e": 249,
      "must": true
     },
     {
      "kind": "label",
      "text": "BILLS: 0",
      "s": 4,
-     "e": 298,
+     "e": 249,
      "must": true
     }
    ],
-   "tc_in": "00:38:20",
-   "tc_out": "00:51:06",
-   "frames": 298
+   "tc_in": "00:35:20",
+   "tc_out": "00:46:05",
+   "frames": 249
   },
   {
    "id": "20.01",
@@ -1811,8 +1687,8 @@
    "beats": [
     "20.01"
    ],
-   "s": 1230,
-   "e": 1312,
+   "s": 1109,
+   "e": 1191,
    "onscreen": [
     {
      "text": "RAIL: ~SEP 26, 2023",
@@ -1841,10 +1717,10 @@
    "frame": "OTS · over Mas's shoulder onto the monitor (TIDDER)",
    "cls": "OTS",
    "move": "hold",
-   "does": "A generic forum reply box on the parody site TIDDER. He types, in source casing.",
+   "does": "Straight from the forum's raised hands: over Mas's shoulder onto a reply box on TIDDER. He types, in source casing: \"Agi has been achieved internally\"",
    "chars": [],
    "cues": [
-    "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+    "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
     "sfx: his keys (typed, not voiced; source casing)"
    ],
    "sounds": [
@@ -1864,7 +1740,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "A generic forum reply box on the parody site TIDDER. He types, in source casing.",
+   "caption": "Straight from the forum's raised hands: over Mas's shoulder onto a reply box on TIDDER. He types, in source casing: \"Agi has been achieved internally\"",
    "cast": [],
    "speak": [],
    "beat_starts": {
@@ -1893,79 +1769,9 @@
      "must": true
     }
    ],
-   "tc_in": "00:51:06",
-   "tc_out": "00:54:16",
+   "tc_in": "00:46:05",
+   "tc_out": "00:49:15",
    "frames": 82
-  },
-  {
-   "id": "20.02",
-   "setup": "20.02",
-   "beats": [
-    "20.02"
-   ],
-   "s": 1312,
-   "e": 1350,
-   "onscreen": [],
-   "lines": [],
-   "seq": "SC20",
-   "verdict": "",
-   "v4": null,
-   "side": "MAS",
-   "side_label": "",
-   "badge": null,
-   "whip": null,
-   "frame": "TWO-SHOT · the LEDs stop",
-   "cls": "M",
-   "move": "hold",
-   "does": "The rack's LEDs, which have blinked in straight eighths all episode, stop. All of them. The Orb doesn't move.",
-   "chars": [
-    "mas",
-    "orb"
-   ],
-   "cues": [
-    "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
-    "sound: the act's one quiet beat (< 2 s): the LEDs' tick drops out, the fans turn, the Water Line holds"
-   ],
-   "sounds": [],
-   "spots": [],
-   "v4_frames": null,
-   "kind": "scene",
-   "set": "darkroom",
-   "room": "dark",
-   "style": "BASE",
-   "fx": [],
-   "slate": false,
-   "caption": "The rack's LEDs, which have blinked in straight eighths all episode, stop. All of them. The Orb doesn't move.",
-   "cast": [
-    {
-     "id": "mas",
-     "pose": "sit",
-     "face": "calm",
-     "x": 0.45,
-     "from": null,
-     "until": null
-    },
-    {
-     "id": "orb",
-     "pose": "stand",
-     "face": "calm",
-     "x": 0.35,
-     "from": null,
-     "until": null
-    }
-   ],
-   "speak": [],
-   "beat_starts": {
-    "20.02": 0
-   },
-   "names": [],
-   "fg": null,
-   "marks": {},
-   "mark_src": {},
-   "texts": [],
-   "tc_in": "00:54:16",
-   "tc_out": "00:56:06",
-   "frames": 38
   },
   {
    "id": "20.03",
@@ -1973,8 +1779,8 @@
    "beats": [
     "20.03"
    ],
-   "s": 1350,
-   "e": 1412,
+   "s": 1191,
+   "e": 1253,
    "onscreen": [
     {
      "text": "Agi has been achieved internally",
@@ -2001,7 +1807,7 @@
    "does": "He posts. A reply counter spins, a blur; the first reply is legible, held just long enough.",
    "chars": [],
    "cues": [
-    "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+    "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
     "sfx: the counter's whirr; his phone's ring pre-laps from the desk (~1.9 s)"
    ],
    "sounds": [
@@ -2059,8 +1865,8 @@
      "must": true
     }
    ],
-   "tc_in": "00:56:06",
-   "tc_out": "00:58:20",
+   "tc_in": "00:49:15",
+   "tc_out": "00:52:05",
    "frames": 62
   },
   {
@@ -2069,8 +1875,8 @@
    "beats": [
     "20.04"
    ],
-   "s": 1412,
-   "e": 1658,
+   "s": 1253,
+   "e": 1499,
    "onscreen": [
     {
      "text": "GERG",
@@ -2484,7 +2290,7 @@
     "orb"
    ],
    "cues": [
-    "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+    "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
     "sound: Gerg's keys come down the line under the whole call"
    ],
    "sounds": [
@@ -2551,8 +2357,8 @@
      "must": true
     }
    ],
-   "tc_in": "00:58:20",
-   "tc_out": "01:09:02",
+   "tc_in": "00:52:05",
+   "tc_out": "01:02:11",
    "frames": 246
   },
   {
@@ -2561,8 +2367,8 @@
    "beats": [
     "20.05"
    ],
-   "s": 1658,
-   "e": 1732,
+   "s": 1499,
+   "e": 1573,
    "onscreen": [
     {
      "text": "\"…just memeing, y'all have no chill…\"",
@@ -2584,7 +2390,7 @@
    "does": "He clicks edit. Framed tight on the middle, the comment rewrites itself. Held to read.",
    "chars": [],
    "cues": [
-    "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+    "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
     "sfx: the edit click; the comment rewrites itself in place, letter by letter"
    ],
    "sounds": [
@@ -2629,8 +2435,8 @@
      "must": true
     }
    ],
-   "tc_in": "01:09:02",
-   "tc_out": "01:12:04",
+   "tc_in": "01:02:11",
+   "tc_out": "01:05:13",
    "frames": 74
   },
   {
@@ -2639,13 +2445,13 @@
    "beats": [
     "20.06"
    ],
-   "s": 1732,
-   "e": 2149,
+   "s": 1573,
+   "e": 1873,
    "onscreen": [
     {
      "text": "GERG",
      "s": 0,
-     "e": 417
+     "e": 300
     }
    ],
    "lines": [
@@ -3080,83 +2886,6 @@
      ],
      "tag": "call",
      "pre": false
-    },
-    {
-     "id": "v3-vo-15",
-     "kind": "vo",
-     "mode": "on-mic",
-     "who": "MAS",
-     "text": "gerg types louder when he's happy. he's been happy since november.",
-     "s": 277,
-     "e": 381,
-     "fs": 263,
-     "fe": 398,
-     "os": false,
-     "via": null,
-     "face": null,
-     "lip": false,
-     "carry": false,
-     "cut": false,
-     "mouth": [],
-     "words": [
-      [
-       "gerg",
-       1,
-       9
-      ],
-      [
-       "types",
-       9,
-       20
-      ],
-      [
-       "louder",
-       20,
-       30
-      ],
-      [
-       "when",
-       30,
-       33
-      ],
-      [
-       "he's",
-       33,
-       38
-      ],
-      [
-       "happy",
-       38,
-       51
-      ],
-      [
-       "he's",
-       59,
-       65
-      ],
-      [
-       "been",
-       65,
-       70
-      ],
-      [
-       "happy",
-       70,
-       81
-      ],
-      [
-       "since",
-       81,
-       87
-      ],
-      [
-       "november",
-       87,
-       104
-      ]
-     ],
-     "tag": "V.O.",
-     "pre": false
     }
    ],
    "seq": "SC20",
@@ -3169,13 +2898,13 @@
    "frame": "TWO-SHOT · the call, continued",
    "cls": "M",
    "move": "hold",
-   "does": "Back on the two-shot. The LEDs resume. Two night owls on the line; the counter keeps climbing anyway.",
+   "does": "Back on the two-shot, Gerg's tile small in the corner; on the monitor the counter keeps climbing, faster. \"Okay. That's patched.\" / \"how's the build?\" / \"Still running. I don't go to bed till it's green.\" / \"go to sleep, gerg.\" / \"When it compiles.\" His keys run on.",
    "chars": [
     "mas",
     "orb"
    ],
    "cues": [
-    "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+    "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
     "sound: the LEDs resume on the cut, relieved; the counter keeps climbing, faster, soft at frame right",
     "sound: Gerg's keys keep going after the last line (the scene ends on Gerg and the world)"
    ],
@@ -3188,7 +2917,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "Back on the two-shot. The LEDs resume. Two night owls on the line; the counter keeps climbing anyway.",
+   "caption": "Back on the two-shot, Gerg's tile small in the corner; on the monitor the counter keeps climbing, faster. \"Okay. That's patched.\" / \"how's the build?\" / \"Still running. I don't go to bed till it's green.\" / \"go to sleep, gerg.\" / \"When it compiles.\" His keys run on.",
    "cast": [
     {
      "id": "mas",
@@ -3225,13 +2954,13 @@
      "kind": "label",
      "text": "GERG",
      "s": 0,
-     "e": 417,
+     "e": 300,
      "must": true
     }
    ],
-   "tc_in": "01:12:04",
-   "tc_out": "01:29:13",
-   "frames": 417
+   "tc_in": "01:05:13",
+   "tc_out": "01:18:01",
+   "frames": 300
   },
   {
    "id": "v31-20.07",
@@ -3239,8 +2968,8 @@
    "beats": [
     "v31-20.07"
    ],
-   "s": 2149,
-   "e": 2269,
+   "s": 1873,
+   "e": 1993,
    "onscreen": [
     {
      "text": "RAIL: OCT 2023",
@@ -3253,7 +2982,7 @@
      "e": 120
     },
     {
-     "text": "NELEH",
+     "text": "NELEH · NOPEAI BOARD",
      "s": 4,
      "e": 120
     },
@@ -3268,65 +2997,7 @@
      "e": 120
     }
    ],
-   "lines": [
-    {
-     "id": "v31-vo-06",
-     "kind": "vo",
-     "mode": "on-mic",
-     "who": "MAS",
-     "text": "neleh's on our board. she quoted us.",
-     "s": 19,
-     "e": 85,
-     "fs": 5,
-     "fe": 102,
-     "os": false,
-     "via": null,
-     "face": null,
-     "lip": false,
-     "carry": false,
-     "cut": false,
-     "mouth": [],
-     "words": [
-      [
-       "neleh's",
-       2,
-       11
-      ],
-      [
-       "on",
-       11,
-       14
-      ],
-      [
-       "our",
-       14,
-       19
-      ],
-      [
-       "board",
-       19,
-       32
-      ],
-      [
-       "she",
-       42,
-       46
-      ],
-      [
-       "quoted",
-       46,
-       57
-      ],
-      [
-       "us",
-       57,
-       66
-      ]
-     ],
-     "tag": "V.O.",
-     "pre": false
-    }
-   ],
+   "lines": [],
    "seq": "20A",
    "verdict": "",
    "v4": null,
@@ -3340,7 +3011,7 @@
    "does": "A paper's title page on the monitor, a small glowing page icon beside it and footnote numbers orbiting. It scrolls to page 29, where the words research preview sit in the paper's own quotation marks, then to the next paragraph: two small logos side by side, NopeAI's and the lighthouse, and a sentence held to read. The scrollbar's thumb shrinks to a sliver as the endnotes load.",
    "chars": [],
    "cues": [
-    "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black"
+    "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black"
    ],
    "sounds": [],
    "spots": [],
@@ -3376,7 +3047,7 @@
     },
     {
      "kind": "plate",
-     "text": "NELEH",
+     "text": "NELEH · NOPEAI BOARD",
      "s": 4,
      "e": 120,
      "must": true
@@ -3396,8 +3067,8 @@
      "must": true
     }
    ],
-   "tc_in": "01:29:13",
-   "tc_out": "01:34:13",
+   "tc_in": "01:18:01",
+   "tc_out": "01:23:01",
    "frames": 120
   },
   {
@@ -3406,8 +3077,8 @@
    "beats": [
     "v31-20.08"
    ],
-   "s": 2269,
-   "e": 2298,
+   "s": 1993,
+   "e": 2022,
    "onscreen": [],
    "lines": [],
    "seq": "20A",
@@ -3420,13 +3091,13 @@
    "frame": "TWO-SHOT · Mas and the Orb, the paper soft on the monitor",
    "cls": "M",
    "move": "hold",
-   "does": "He reads on. The Orb reads him. Nobody says anything.",
+   "does": "Mas and the Orb, the paper soft on the monitor. He reads on; the Orb reads him. He closes the paper, and the monitor's next tab is the president's order, live.",
    "chars": [
     "mas",
     "orb"
    ],
    "cues": [
-    "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black"
+    "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black"
    ],
    "sounds": [],
    "spots": [],
@@ -3437,7 +3108,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "He reads on. The Orb reads him. Nobody says anything.",
+   "caption": "Mas and the Orb, the paper soft on the monitor. He reads on; the Orb reads him. He closes the paper, and the monitor's next tab is the president's order, live.",
    "cast": [
     {
      "id": "mas",
@@ -3465,8 +3136,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "01:34:13",
-   "tc_out": "01:35:18",
+   "tc_in": "01:23:01",
+   "tc_out": "01:24:06",
    "frames": 29
   },
   {
@@ -3476,8 +3147,8 @@
     "21.02",
     "21.03"
    ],
-   "s": 2298,
-   "e": 2657,
+   "s": 2022,
+   "e": 2381,
    "onscreen": [
     {
      "text": "RAIL: OCT 30, 2023",
@@ -4018,9 +3689,9 @@
     "nedib"
    ],
    "cues": [
-    "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+    "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
     "sfx: two pops (cut paper); the copies: scissor edges, glossier, tie a shade the wrong colour",
-    "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black"
+    "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black"
    ],
    "sounds": [
     "tower_pop @187",
@@ -4105,8 +3776,8 @@
      "must": true
     }
    ],
-   "tc_in": "01:35:18",
-   "tc_out": "01:50:17",
+   "tc_in": "01:24:06",
+   "tc_out": "01:39:05",
    "frames": 359
   },
   {
@@ -4115,18 +3786,18 @@
    "beats": [
     "21.04"
    ],
-   "s": 2657,
-   "e": 2763,
+   "s": 2381,
+   "e": 2486,
    "onscreen": [
     {
      "text": "DEEPFAKES OF ME: SEEN 1",
      "s": 0,
-     "e": 106
+     "e": 105
     },
     {
      "text": "verified: human",
      "s": 4,
-     "e": 106
+     "e": 105
     }
    ],
    "lines": [
@@ -4217,7 +3888,7 @@
     "orb"
    ],
    "cues": [
-    "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+    "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
     "Mas asks his witness; the Orb's iris flicks across the three NEDIBs (0.35 / 0.75 / 1.15 s after the question) and settles on the one with the pen; then he agrees"
    ],
    "sounds": [
@@ -4281,20 +3952,20 @@
      "kind": "label",
      "text": "DEEPFAKES OF ME: SEEN 1",
      "s": 0,
-     "e": 106,
+     "e": 105,
      "must": true
     },
     {
      "kind": "label",
      "text": "verified: human",
      "s": 4,
-     "e": 106,
+     "e": 105,
      "must": true
     }
    ],
-   "tc_in": "01:50:17",
-   "tc_out": "01:55:03",
-   "frames": 106
+   "tc_in": "01:39:05",
+   "tc_out": "01:43:14",
+   "frames": 105
   },
   {
    "id": "21.05",
@@ -4302,8 +3973,8 @@
    "beats": [
     "21.05"
    ],
-   "s": 2763,
-   "e": 2818,
+   "s": 2486,
+   "e": 2542,
    "onscreen": [],
    "lines": [],
    "seq": "SC21",
@@ -4323,7 +3994,7 @@
     "nedib"
    ],
    "cues": [
-    "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+    "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
     "sfx: the pen, in ink; the copies clap, and keep clapping"
    ],
    "sounds": [
@@ -4385,9 +4056,83 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "01:55:03",
-   "tc_out": "01:57:10",
-   "frames": 55
+   "tc_in": "01:43:14",
+   "tc_out": "01:45:22",
+   "frames": 56
+  },
+  {
+   "id": "v32-21.06",
+   "setup": "v32-21.06",
+   "beats": [
+    "v32-21.06"
+   ],
+   "s": 2542,
+   "e": 2590,
+   "onscreen": [],
+   "lines": [],
+   "seq": "SC21",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "2S·SCR · Mas and the Orb, the monitor at frame right",
+   "cls": "SW",
+   "move": "cut",
+   "does": "The deepfake is still clapping on the monitor. Mas reaches over and switches the monitor off. The glass goes black, and the clapping doesn't stop: it grows, and it's a hall's applause.",
+   "chars": [
+    "mas"
+   ],
+   "cues": [
+    "music (v3.2): ACT THREE · the Water Line holds its note under the switch; the hall's applause takes the cut"
+   ],
+   "sounds": [
+    "synth:claps @0",
+    "key_tap_space @21"
+   ],
+   "spots": [
+    {
+     "name": "synth:claps",
+     "k": 0,
+     "dur": 2.0
+    },
+    {
+     "name": "key_tap_space",
+     "k": 21,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "darkroom",
+   "room": "dark",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "The deepfake is still clapping on the monitor. Mas reaches over and switches the monitor off. The glass goes black, and the clapping doesn't stop: it grows, and it's a hall's applause.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "v32-21.06": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "01:45:22",
+   "tc_out": "01:47:22",
+   "frames": 48
   },
   {
    "id": "22.01",
@@ -4395,33 +4140,168 @@
    "beats": [
     "22.01"
    ],
-   "s": 2818,
-   "e": 3036,
+   "s": 2590,
+   "e": 2851,
    "onscreen": [
     {
      "text": "RAIL: NOV 6, 2023 · DEVDAY",
      "s": 26,
-     "e": 218
+     "e": 261
     },
     {
      "text": "100,000,000 / WEEK",
      "s": 46,
-     "e": 218
+     "e": 261
     }
    ],
    "lines": [
+    {
+     "id": "v32-a3-0001",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "MAS",
+     "text": "and today, you can build your own chatgtp.",
+     "s": 48,
+     "e": 119,
+     "fs": 35,
+     "fe": 133,
+     "os": false,
+     "via": "pa",
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "rest"
+      ],
+      [
+       1,
+       "A"
+      ],
+      [
+       3,
+       "E"
+      ],
+      [
+       11,
+       "A"
+      ],
+      [
+       16,
+       "rest"
+      ],
+      [
+       20,
+       "O"
+      ],
+      [
+       23,
+       "A"
+      ],
+      [
+       26,
+       "M"
+      ],
+      [
+       28,
+       "A"
+      ],
+      [
+       30,
+       "E"
+      ],
+      [
+       34,
+       "O"
+      ],
+      [
+       42,
+       "E"
+      ],
+      [
+       46,
+       "A"
+      ],
+      [
+       50,
+       "E"
+      ],
+      [
+       64,
+       "M"
+      ],
+      [
+       66,
+       "A"
+      ],
+      [
+       68,
+       "E"
+      ],
+      [
+       70,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "and",
+       1,
+       4
+      ],
+      [
+       "today",
+       4,
+       16
+      ],
+      [
+       "you",
+       19,
+       22
+      ],
+      [
+       "can",
+       22,
+       26
+      ],
+      [
+       "build",
+       26,
+       33
+      ],
+      [
+       "your",
+       33,
+       37
+      ],
+      [
+       "own",
+       37,
+       44
+      ],
+      [
+       "chatgtp",
+       44,
+       70
+      ]
+     ],
+     "tag": "stage",
+     "pre": false
+    },
     {
      "id": "e1-a3-22-01",
      "kind": "dialogue",
      "mode": "call",
      "who": "MAS",
      "text": "so, how's the partnership going?",
-     "s": 103,
-     "e": 147,
-     "fs": 91,
-     "fe": 164,
+     "s": 146,
+     "e": 191,
+     "fs": 134,
+     "fe": 207,
      "os": false,
-     "via": "monitor",
+     "via": "pa",
      "face": null,
      "lip": false,
      "carry": false,
@@ -4499,7 +4379,7 @@
        44
       ]
      ],
-     "tag": "monitor",
+     "tag": "",
      "pre": false
     },
     {
@@ -4508,12 +4388,12 @@
      "mode": "call",
      "who": "TASYA",
      "text": "We love you guys.",
-     "s": 157,
-     "e": 200,
-     "fs": 145,
-     "fe": 216,
+     "s": 200,
+     "e": 243,
+     "fs": 188,
+     "fe": 259,
      "os": false,
-     "via": "monitor",
+     "via": "pa",
      "face": null,
      "lip": false,
      "carry": false,
@@ -4563,22 +4443,22 @@
      "words": [
       [
        "Ha",
-       0,
+       1,
        5
       ],
       [
        "ha",
        5,
-       10
+       11
       ],
       [
        "ha",
-       10,
-       16
+       11,
+       17
       ],
       [
        "We",
-       17,
+       18,
        21
       ],
       [
@@ -4589,15 +4469,15 @@
       [
        "you",
        25,
-       28
+       29
       ],
       [
        "guys",
-       28,
+       29,
        42
       ]
      ],
-     "tag": "monitor",
+     "tag": "",
      "pre": false
     }
    ],
@@ -4608,16 +4488,16 @@
    "side_label": "",
    "badge": null,
    "whip": null,
-   "frame": "POV · DevDay on the monitor",
-   "cls": "SC",
+   "frame": "WIDE → MCU · DevDay, live: the stage, the hall's applause (no monitor, no bezel)",
+   "cls": "W",
    "move": "cut",
-   "does": "Open for 1 s on the two-shot: Mas at his desk, the keynote on the monitor behind the Orb. Then the POV: DevDay on the monitor, the odometer climbs through the stage, TASYA walks on laughing. Behind him, the Sydney bubble bobs on its egg-timer chain, silent.",
+   "does": "Live: Mas on the DevDay stage, the applause carried over the cut. Behind him the launch-night odometer clunks up through the stage floor and settles, legible: 100,000,000 / WEEK. \"and today, you can build your own chatgtp.\" Tasya walks on beside him, laughing, arms open; behind him the Sydney bubble bobs on its egg-timer chain. \"so, how's the partnership going?\" / \"We love you guys.\"",
    "chars": [
     "mas",
     "tasya"
    ],
    "cues": [
-    "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+    "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
     "sound: the copies' clap carried over as the crowd's applause",
     "sfx: launch night's odometer clunks up through the stage floor (0.8 s) and settles, legible",
     "egg in the bezel (zero read): zAI's rafters; an egg cracks; a chrome creature hatches, already muzzled"
@@ -4625,7 +4505,7 @@
    "sounds": [
     "synth:applause @24",
     "odometer_ratchet @43",
-    "landing_thunk @61"
+    "landing_thunk @104"
    ],
    "spots": [
     {
@@ -4640,7 +4520,7 @@
     },
     {
      "name": "landing_thunk",
-     "k": 61,
+     "k": 104,
      "dur": null
     }
    ],
@@ -4651,7 +4531,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "Open for 1 s on the two-shot: Mas at his desk, the keynote on the monitor behind the Orb. Then the POV: DevDay on the monitor, the odometer climbs through the stage, TASYA walks on laughing. Behind him, the Sydney bubble bobs on its egg-timer chain, silent.",
+   "caption": "Live: Mas on the DevDay stage, the applause carried over the cut. Behind him the launch-night odometer clunks up through the stage floor and settles, legible: 100,000,000 / WEEK. \"and today, you can build your own chatgtp.\" Tasya walks on beside him, laughing, arms open; behind him the Sydney bubble bobs on its egg-timer chain. \"so, how's the partnership going?\" / \"We love you guys.\"",
    "cast": [
     {
      "id": "mas",
@@ -4666,7 +4546,7 @@
      "pose": "walk",
      "face": "smile",
      "x": 0.72,
-     "from": 82,
+     "from": 125,
      "until": null
     }
    ],
@@ -4683,13 +4563,13 @@
      "kind": "label",
      "text": "100,000,000 / WEEK",
      "s": 46,
-     "e": 218,
+     "e": 261,
      "must": true
     }
    ],
-   "tc_in": "01:57:10",
-   "tc_out": "02:06:12",
-   "frames": 218
+   "tc_in": "01:47:22",
+   "tc_out": "01:58:19",
+   "frames": 261
   },
   {
    "id": "22.02",
@@ -4697,8 +4577,8 @@
    "beats": [
     "22.02"
    ],
-   "s": 3036,
-   "e": 3164,
+   "s": 2851,
+   "e": 2979,
    "onscreen": [
     {
      "text": "How did the keynote go?",
@@ -4795,10 +4675,10 @@
    "frame": "HIGH · the desk from above: his phone",
    "cls": "W",
    "move": "cut",
-   "does": "The desk from above: How did the keynote go? and the strip [super] [enthusiastic] [thrilled]. His thumb hovers over the strip (the one hover in the episode; at noon the phone offers only super, and he takes it at once), then taps the first.",
+   "does": "That night, home: the desk from above. His phone lights with a generic app prompt, How did the keynote go?, and the strip [super] [enthusiastic] [thrilled]. His thumb hovers: the one hover in the episode. thrilled is too much. enthusiastic is a lot. (V.O.) He taps the first.",
    "chars": [],
    "cues": [
-    "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+    "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
     "meter G04: the suggested-replies strip",
     "sfx: his thumb taps [super] (~2.7 s)"
    ],
@@ -4825,7 +4705,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "The desk from above: How did the keynote go? and the strip [super] [enthusiastic] [thrilled]. His thumb hovers over the strip (the one hover in the episode; at noon the phone offers only super, and he takes it at once), then taps the first.",
+   "caption": "That night, home: the desk from above. His phone lights with a generic app prompt, How did the keynote go?, and the strip [super] [enthusiastic] [thrilled]. His thumb hovers: the one hover in the episode. thrilled is too much. enthusiastic is a lot. (V.O.) He taps the first.",
    "cast": [],
    "speak": [],
    "beat_starts": {
@@ -4865,8 +4745,8 @@
      "must": true
     }
    ],
-   "tc_in": "02:06:12",
-   "tc_out": "02:11:20",
+   "tc_in": "01:58:19",
+   "tc_out": "02:04:03",
    "frames": 128
   },
   {
@@ -4875,8 +4755,8 @@
    "beats": [
     "22.03"
    ],
-   "s": 3164,
-   "e": 3243,
+   "s": 2979,
+   "e": 3058,
    "onscreen": [],
    "lines": [
     {
@@ -4948,7 +4828,7 @@
     "orb"
    ],
    "cues": [
-    "music (v3.1): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black"
+    "music (v3.2): ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black"
    ],
    "sounds": [],
    "spots": [],
@@ -4987,9 +4867,120 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "02:11:20",
-   "tc_out": "02:15:03",
+   "tc_in": "02:04:03",
+   "tc_out": "02:07:10",
    "frames": 79
+  },
+  {
+   "id": "v32-22.04",
+   "setup": "v32-22.04",
+   "beats": [
+    "v32-22.04"
+   ],
+   "s": 3058,
+   "e": 3178,
+   "onscreen": [
+    {
+     "text": "RAIL: NOV 14, 2023",
+     "s": 4,
+     "e": 120
+    },
+    {
+     "text": "SIGN UP → NOTIFY ME",
+     "s": 4,
+     "e": 120
+    },
+    {
+     "text": "MAS (post): \"we are pausing new CHATGTP Plus sign-ups for a bit :(\"",
+     "s": 4,
+     "e": 120
+    }
+   ],
+   "lines": [],
+   "seq": "22A",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "OTS · over Mas onto the monitor: the sign-up page; the rack beside him",
+   "cls": "OTS",
+   "move": "hold",
+   "does": "A week later. Over Mas's shoulder onto the monitor: the sign-up page, its counter spinning to a blur. Beside him the rack's LEDs step green, amber, red (launch night's heat, one step a beat). He types; his post goes up in its own UI: \"we are pausing new CHATGTP Plus sign-ups for a bit :(\". On the page, SIGN UP greys to NOTIFY ME. The Orb looks from the rack to him.",
+   "chars": [
+    "mas"
+   ],
+   "cues": [
+    "music (v3.2): ACT THREE · the Water Line thins to its pedal under the counter's chip notes; THE CLOCK's first step is the next bar (23.01)"
+   ],
+   "sounds": [
+    "synth:ratchet_fast @7",
+    "post_click @72",
+    "glyph_blink @93"
+   ],
+   "spots": [
+    {
+     "name": "synth:ratchet_fast",
+     "k": 7,
+     "dur": 2.0
+    },
+    {
+     "name": "post_click",
+     "k": 72,
+     "dur": null
+    },
+    {
+     "name": "glyph_blink",
+     "k": 93,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "darkroom",
+   "room": "dark",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "A week later. Over Mas's shoulder onto the monitor: the sign-up page, its counter spinning to a blur. Beside him the rack's LEDs step green, amber, red (launch night's heat, one step a beat). He types; his post goes up in its own UI: \"we are pausing new CHATGTP Plus sign-ups for a bit :(\". On the page, SIGN UP greys to NOTIFY ME. The Orb looks from the rack to him.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "v32-22.04": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "label",
+     "text": "SIGN UP → NOTIFY ME",
+     "s": 4,
+     "e": 120,
+     "must": true
+    },
+    {
+     "kind": "label",
+     "text": "MAS (post): \"we are pausing new CHATGTP Plus sign-ups for a bit :(\"",
+     "s": 4,
+     "e": 120,
+     "must": true
+    }
+   ],
+   "tc_in": "02:07:10",
+   "tc_out": "02:12:10",
+   "frames": 120
   },
   {
    "id": "23.01",
@@ -4997,8 +4988,8 @@
    "beats": [
     "23.01"
    ],
-   "s": 3243,
-   "e": 3303,
+   "s": 3178,
+   "e": 3238,
    "onscreen": [
     {
      "text": "RAIL: NOV 16, 2023",
@@ -5023,7 +5014,7 @@
     "panel-host"
    ],
    "cues": [
-    "music (v3.1): THE CLOCK · MM-14's step figure, bar 1 to the dead stop on bar 4",
+    "music (v3.2): THE CLOCK · MM-14's step figure, bar 1 to the dead stop on bar 4",
     "the hailstone bobs in his glass, the host's glass floods the table, the ovation across the street"
    ],
    "sounds": [],
@@ -5063,8 +5054,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "02:15:03",
-   "tc_out": "02:17:15",
+   "tc_in": "02:12:10",
+   "tc_out": "02:14:22",
    "frames": 60
   },
   {
@@ -5073,8 +5064,8 @@
    "beats": [
     "23.02"
    ],
-   "s": 3303,
-   "e": 3363,
+   "s": 3238,
+   "e": 3298,
    "onscreen": [
     {
      "text": "Board sync · Fri 12:00",
@@ -5101,7 +5092,7 @@
    "does": "The invite, now a reminder. As the Orb's iris steps along the four circles, each shows its name, the calendar's own tooltip: ALYI, NELEH, MADA, THE QUIET VOTE. It stops on the black square.",
    "chars": [],
    "cues": [
-    "music (v3.1): THE CLOCK · MM-14's step figure, bar 1 to the dead stop on bar 4",
+    "music (v3.2): THE CLOCK · MM-14's step figure, bar 1 to the dead stop on bar 4",
     "the four attendee circles: a doorway, a glowing page, a spinner, a black square; the iris steps one a beat"
    ],
    "sounds": [
@@ -5147,8 +5138,8 @@
      "must": true
     }
    ],
-   "tc_in": "02:17:15",
-   "tc_out": "02:20:03",
+   "tc_in": "02:14:22",
+   "tc_out": "02:17:10",
    "frames": 60
   },
   {
@@ -5157,8 +5148,8 @@
    "beats": [
     "23.03"
    ],
-   "s": 3363,
-   "e": 3423,
+   "s": 3298,
+   "e": 3358,
    "onscreen": [
     {
      "text": "RAIL: NOV 16, 2023 · 11:59 PM",
@@ -5188,7 +5179,7 @@
     "orb"
    ],
    "cues": [
-    "music (v3.1): THE CLOCK · MM-14's step figure, bar 1 to the dead stop on bar 4",
+    "music (v3.2): THE CLOCK · MM-14's step figure, bar 1 to the dead stop on bar 4",
     "the pilot's one rail glance: Mas looks down at the interface itself, and back up; the reminder goes dark"
    ],
    "sounds": [],
@@ -5228,8 +5219,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "02:20:03",
-   "tc_out": "02:22:15",
+   "tc_in": "02:17:10",
+   "tc_out": "02:19:22",
    "frames": 60
   },
   {
@@ -5238,8 +5229,8 @@
    "beats": [
     "23.04"
    ],
-   "s": 3423,
-   "e": 3483,
+   "s": 3358,
+   "e": 3418,
    "onscreen": [],
    "lines": [],
    "seq": "SC23",
@@ -5255,7 +5246,7 @@
    "does": "CUT TO BLACK. (In the show the next scene's sound pre-laps under it: a crane, then glass tings.)",
    "chars": [],
    "cues": [
-    "music (v3.1): THE CLOCK · MM-14's step figure, bar 1 to the dead stop on bar 4",
+    "music (v3.2): THE CLOCK · MM-14's step figure, bar 1 to the dead stop on bar 4",
     "sfx pre-lap under the black (the script's crane grind and glass tings): HELD OUT of the stick reel until Act Four's premix carries the crane (audit #37); see PRELAP below"
    ],
    "sounds": [],
@@ -5278,8 +5269,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "02:22:15",
-   "tc_out": "02:25:03",
+   "tc_in": "02:19:22",
+   "tc_out": "02:22:10",
    "frames": 60
   }
  ],
@@ -5330,111 +5321,6 @@
    "pre": false
   },
   {
-   "id": "v31-vo-03",
-   "shot": "v31-18.00b",
-   "beat": "v31-18.00b",
-   "kind": "vo",
-   "mode": "on-mic",
-   "who": "MAS",
-   "text": "thirteen.",
-   "tag": "V.O.",
-   "on_s": 7.7183,
-   "end_s": 8.6483,
-   "file_s": 7.1983,
-   "abs_in": 185,
-   "abs_out": 208,
-   "file_in": 172,
-   "file_out": 223,
-   "file": "audio/ep01/v31/act3/wav/v31-vo-03.wav",
-   "stick_t": 4.51,
-   "stick_in": 0.52,
-   "cut": false,
-   "on_camera": "vo",
-   "take_lip_sync": false,
-   "os": false,
-   "via": null,
-   "words": [
-    [
-     "thirteen",
-     1,
-     23
-    ]
-   ],
-   "mouth": [],
-   "mouth_src": "none",
-   "pre": false
-  },
-  {
-   "id": "v31-vo-04",
-   "shot": "18.02",
-   "beat": "18.02",
-   "kind": "vo",
-   "mode": "on-mic",
-   "who": "MAS",
-   "text": "my other company. it tells people from machines.",
-   "tag": "V.O.",
-   "on_s": 13.2333,
-   "end_s": 16.6933,
-   "file_s": 12.6833,
-   "abs_in": 317,
-   "abs_out": 401,
-   "file_in": 304,
-   "file_out": 417,
-   "file": "audio/ep01/v31/act3/wav/v31-vo-04.wav",
-   "stick_t": 0.4,
-   "stick_in": 0.55,
-   "cut": false,
-   "on_camera": "vo",
-   "take_lip_sync": false,
-   "os": false,
-   "via": null,
-   "words": [
-    [
-     "my",
-     2,
-     6
-    ],
-    [
-     "other",
-     6,
-     14
-    ],
-    [
-     "company",
-     14,
-     28
-    ],
-    [
-     "it",
-     38,
-     41
-    ],
-    [
-     "tells",
-     41,
-     49
-    ],
-    [
-     "people",
-     49,
-     58
-    ],
-    [
-     "from",
-     58,
-     62
-    ],
-    [
-     "machines",
-     62,
-     84
-    ]
-   ],
-   "mouth": [],
-   "mouth_src": "none",
-   "pre": false
-  },
-  {
    "id": "e1-a3-18-01",
    "shot": "18.04",
    "beat": "18.05",
@@ -5443,13 +5329,13 @@
    "who": "MAS",
    "text": "thanks.",
    "tag": "",
-   "on_s": 24.5083,
-   "end_s": 25.1983,
-   "file_s": 23.9983,
-   "abs_in": 588,
-   "abs_out": 605,
-   "file_in": 575,
-   "file_out": 618,
+   "on_s": 22.0083,
+   "end_s": 22.6983,
+   "file_s": 21.4983,
+   "abs_in": 528,
+   "abs_out": 545,
+   "file_in": 515,
+   "file_out": 558,
    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-18-01.wav",
    "stick_t": 1.05,
    "stick_in": 0.51,
@@ -5499,13 +5385,13 @@
    "who": "MAS",
    "text": "i made it for everyone else.",
    "tag": "V.O.",
-   "on_s": 26.5083,
-   "end_s": 28.4383,
-   "file_s": 25.9783,
-   "abs_in": 636,
-   "abs_out": 683,
-   "file_in": 623,
-   "file_out": 699,
+   "on_s": 24.0083,
+   "end_s": 25.9383,
+   "file_s": 23.4783,
+   "abs_in": 576,
+   "abs_out": 623,
+   "file_in": 563,
+   "file_out": 639,
    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-18-04.wav",
    "stick_t": 0.8,
    "stick_in": 0.53,
@@ -5559,15 +5445,15 @@
    "who": "MAS",
    "text": "you can stay.",
    "tag": "",
-   "on_s": 29.9383,
-   "end_s": 30.9083,
-   "file_s": 29.4083,
-   "abs_in": 718,
-   "abs_out": 742,
-   "file_in": 705,
-   "file_out": 757,
+   "on_s": 26.9383,
+   "end_s": 27.9083,
+   "file_s": 26.4083,
+   "abs_in": 646,
+   "abs_out": 670,
+   "file_in": 633,
+   "file_out": 685,
    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-18-03.wav",
-   "stick_t": 4.23,
+   "stick_t": 3.73,
    "stick_in": 0.53,
    "cut": false,
    "on_camera": "on",
@@ -5629,13 +5515,13 @@
    "who": "REMUHCS",
    "text": "Every single person raised their hand.",
    "tag": "monitor",
-   "on_s": 43.1333,
-   "end_s": 45.3033,
-   "file_s": 42.6333,
-   "abs_in": 1035,
-   "abs_out": 1088,
-   "file_in": 1023,
-   "file_out": 1099,
+   "on_s": 40.1333,
+   "end_s": 42.3033,
+   "file_s": 39.6333,
+   "abs_in": 963,
+   "abs_out": 1016,
+   "file_in": 951,
+   "file_out": 1027,
    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-19-01.wav",
    "stick_t": 4.3,
    "stick_in": 0.5,
@@ -5738,13 +5624,13 @@
    "who": "NOLE",
    "text": "It's important for us to have a referee.",
    "tag": "monitor",
-   "on_s": 45.8033,
-   "end_s": 48.0533,
-   "file_s": 45.3033,
-   "abs_in": 1099,
-   "abs_out": 1154,
-   "file_in": 1087,
-   "file_out": 1165,
+   "on_s": 42.8033,
+   "end_s": 45.0533,
+   "file_s": 42.3033,
+   "abs_in": 1027,
+   "abs_out": 1082,
+   "file_in": 1015,
+   "file_out": 1093,
    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-19-02.wav",
    "stick_t": 6.97,
    "stick_in": 0.5,
@@ -5857,66 +5743,6 @@
    "pre": false
   },
   {
-   "id": "v31-vo-05",
-   "shot": "v31-19.03",
-   "beat": "v31-19.03",
-   "kind": "vo",
-   "mode": "on-mic",
-   "who": "MAS",
-   "text": "i've had mine up since may.",
-   "tag": "V.O.",
-   "on_s": 48.8533,
-   "end_s": 50.4733,
-   "file_s": 48.2333,
-   "abs_in": 1172,
-   "abs_out": 1212,
-   "file_in": 1157,
-   "file_out": 1228,
-   "file": "audio/ep01/v31/act3/wav/v31-vo-05.wav",
-   "stick_t": 10.02,
-   "stick_in": 0.62,
-   "cut": false,
-   "on_camera": "vo",
-   "take_lip_sync": false,
-   "os": false,
-   "via": null,
-   "words": [
-    [
-     "i've",
-     -1,
-     4
-    ],
-    [
-     "had",
-     4,
-     8
-    ],
-    [
-     "mine",
-     8,
-     16
-    ],
-    [
-     "up",
-     16,
-     21
-    ],
-    [
-     "since",
-     21,
-     28
-    ],
-    [
-     "may",
-     28,
-     39
-    ]
-   ],
-   "mouth": [],
-   "mouth_src": "none",
-   "pre": false
-  },
-  {
    "id": "e1-a3-20-02",
    "shot": "20.04",
    "beat": "20.04",
@@ -5925,13 +5751,13 @@
    "who": "GERG",
    "text": "Mas, did you just post on Tidder?",
    "tag": "call",
-   "on_s": 59.9333,
-   "end_s": 61.6933,
-   "file_s": 59.4333,
-   "abs_in": 1438,
-   "abs_out": 1481,
-   "file_in": 1426,
-   "file_out": 1497,
+   "on_s": 53.3083,
+   "end_s": 55.0683,
+   "file_s": 52.8083,
+   "abs_in": 1279,
+   "abs_out": 1322,
+   "file_in": 1267,
+   "file_out": 1338,
    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-20-02.wav",
    "stick_t": 1.1,
    "stick_in": 0.5,
@@ -6047,13 +5873,13 @@
    "who": "MAS",
    "text": "i'm editing it.",
    "tag": "",
-   "on_s": 62.1433,
-   "end_s": 63.3633,
-   "file_s": 61.6233,
-   "abs_in": 1491,
-   "abs_out": 1521,
-   "file_in": 1478,
-   "file_out": 1535,
+   "on_s": 55.5183,
+   "end_s": 56.7383,
+   "file_s": 54.9983,
+   "abs_in": 1332,
+   "abs_out": 1362,
+   "file_in": 1319,
+   "file_out": 1376,
    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-20-03.wav",
    "stick_t": 3.31,
    "stick_in": 0.52,
@@ -6117,13 +5943,13 @@
    "who": "GERG",
    "text": "Half the replies think it's a leak. The other half want to know which floor it's on.",
    "tag": "call",
-   "on_s": 64.4633,
-   "end_s": 68.6533,
-   "file_s": 63.9533,
-   "abs_in": 1547,
-   "abs_out": 1648,
-   "file_in": 1534,
-   "file_out": 1666,
+   "on_s": 57.8383,
+   "end_s": 62.0283,
+   "file_s": 57.3283,
+   "abs_in": 1388,
+   "abs_out": 1489,
+   "file_in": 1375,
+   "file_out": 1507,
    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-20-04.wav",
    "stick_t": 5.63,
    "stick_in": 0.51,
@@ -6337,13 +6163,13 @@
    "who": "GERG",
    "text": "Okay. That's patched.",
    "tag": "call",
-   "on_s": 72.8667,
-   "end_s": 74.2167,
-   "file_s": 72.5367,
-   "abs_in": 1748,
-   "abs_out": 1782,
-   "file_in": 1740,
-   "file_out": 1867,
+   "on_s": 66.2417,
+   "end_s": 67.5917,
+   "file_s": 65.9117,
+   "abs_in": 1589,
+   "abs_out": 1623,
+   "file_in": 1581,
+   "file_out": 1708,
    "file": "audio/ep01/v31/act3/wav/v31-a3-0002.wav",
    "stick_t": 0.7,
    "stick_in": 0.33,
@@ -6382,13 +6208,13 @@
    "who": "MAS",
    "text": "how's the build?",
    "tag": "",
-   "on_s": 74.7667,
-   "end_s": 75.8267,
-   "file_s": 74.2167,
-   "abs_in": 1794,
-   "abs_out": 1820,
-   "file_in": 1781,
-   "file_out": 1836,
+   "on_s": 68.1417,
+   "end_s": 69.2017,
+   "file_s": 67.5917,
+   "abs_in": 1635,
+   "abs_out": 1661,
+   "file_in": 1622,
+   "file_out": 1677,
    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-20-06.wav",
    "stick_t": 2.6,
    "stick_in": 0.55,
@@ -6456,13 +6282,13 @@
    "who": "GERG",
    "text": "Still running. I don't go to bed till it's green. It's bad luck.",
    "tag": "call",
-   "on_s": 76.1267,
-   "end_s": 79.7067,
-   "file_s": 75.6267,
-   "abs_in": 1827,
-   "abs_out": 1913,
-   "file_in": 1815,
-   "file_out": 1930,
+   "on_s": 69.5017,
+   "end_s": 73.0817,
+   "file_s": 69.0017,
+   "abs_in": 1668,
+   "abs_out": 1754,
+   "file_in": 1656,
+   "file_out": 1771,
    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-20-07.wav",
    "stick_t": 3.96,
    "stick_in": 0.5,
@@ -6648,13 +6474,13 @@
    "who": "MAS",
    "text": "go to sleep, gerg.",
    "tag": "",
-   "on_s": 80.6067,
-   "end_s": 81.9867,
-   "file_s": 80.0367,
-   "abs_in": 1934,
-   "abs_out": 1968,
-   "file_in": 1920,
-   "file_out": 1984,
+   "on_s": 73.9817,
+   "end_s": 75.3617,
+   "file_s": 73.4117,
+   "abs_in": 1775,
+   "abs_out": 1809,
+   "file_in": 1761,
+   "file_out": 1825,
    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-20-08.wav",
    "stick_t": 8.44,
    "stick_in": 0.57,
@@ -6739,13 +6565,13 @@
    "who": "GERG",
    "text": "When it compiles.",
    "tag": "call",
-   "on_s": 82.3367,
-   "end_s": 83.1467,
-   "file_s": 81.8267,
-   "abs_in": 1976,
-   "abs_out": 1996,
-   "file_in": 1963,
-   "file_out": 2008,
+   "on_s": 75.7117,
+   "end_s": 76.5217,
+   "file_s": 75.2017,
+   "abs_in": 1817,
+   "abs_out": 1837,
+   "file_in": 1804,
+   "file_out": 1849,
    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-20-09.wav",
    "stick_t": 10.17,
    "stick_in": 0.51,
@@ -6801,156 +6627,6 @@
    "pre": false
   },
   {
-   "id": "v3-vo-15",
-   "shot": "20.06",
-   "beat": "20.06",
-   "kind": "vo",
-   "mode": "on-mic",
-   "who": "MAS",
-   "text": "gerg types louder when he's happy. he's been happy since november.",
-   "tag": "V.O.",
-   "on_s": 83.7467,
-   "end_s": 88.0367,
-   "file_s": 83.1467,
-   "abs_in": 2009,
-   "abs_out": 2113,
-   "file_in": 1995,
-   "file_out": 2130,
-   "file": "audio/ep01/v3/act3/wav/v3-vo-15.wav",
-   "stick_t": 11.58,
-   "stick_in": 0.6,
-   "cut": false,
-   "on_camera": "vo",
-   "take_lip_sync": false,
-   "os": false,
-   "via": null,
-   "words": [
-    [
-     "gerg",
-     1,
-     9
-    ],
-    [
-     "types",
-     9,
-     20
-    ],
-    [
-     "louder",
-     20,
-     30
-    ],
-    [
-     "when",
-     30,
-     33
-    ],
-    [
-     "he's",
-     33,
-     38
-    ],
-    [
-     "happy",
-     38,
-     51
-    ],
-    [
-     "he's",
-     59,
-     65
-    ],
-    [
-     "been",
-     65,
-     70
-    ],
-    [
-     "happy",
-     70,
-     81
-    ],
-    [
-     "since",
-     81,
-     87
-    ],
-    [
-     "november",
-     87,
-     104
-    ]
-   ],
-   "mouth": [],
-   "mouth_src": "none",
-   "pre": false
-  },
-  {
-   "id": "v31-vo-06",
-   "shot": "v31-20.07",
-   "beat": "v31-20.07",
-   "kind": "vo",
-   "mode": "on-mic",
-   "who": "MAS",
-   "text": "neleh's on our board. she quoted us.",
-   "tag": "V.O.",
-   "on_s": 90.3417,
-   "end_s": 93.0717,
-   "file_s": 89.7517,
-   "abs_in": 2168,
-   "abs_out": 2234,
-   "file_in": 2154,
-   "file_out": 2251,
-   "file": "audio/ep01/v31/act3/wav/v31-vo-06.wav",
-   "stick_t": 0.8,
-   "stick_in": 0.59,
-   "cut": false,
-   "on_camera": "vo",
-   "take_lip_sync": false,
-   "os": false,
-   "via": null,
-   "words": [
-    [
-     "neleh's",
-     2,
-     11
-    ],
-    [
-     "on",
-     11,
-     14
-    ],
-    [
-     "our",
-     14,
-     19
-    ],
-    [
-     "board",
-     19,
-     32
-    ],
-    [
-     "she",
-     42,
-     46
-    ],
-    [
-     "quoted",
-     46,
-     57
-    ],
-    [
-     "us",
-     57,
-     66
-    ]
-   ],
-   "mouth": [],
-   "mouth_src": "none",
-   "pre": false
-  },
-  {
    "id": "e1-a3-21-01",
    "shot": "21.02",
    "beat": "21.02",
@@ -6959,13 +6635,13 @@
    "who": "NEDIB",
    "text": "Here's the deal, folks. This order says if you build the big ones, you test them, and you show us the results.",
    "tag": "monitor",
-   "on_s": 96.65,
-   "end_s": 103.5,
-   "file_s": 96.14,
-   "abs_in": 2319,
-   "abs_out": 2484,
-   "file_in": 2307,
-   "file_out": 2503,
+   "on_s": 85.15,
+   "end_s": 92.0,
+   "file_s": 84.64,
+   "abs_in": 2043,
+   "abs_out": 2208,
+   "file_in": 2031,
+   "file_out": 2227,
    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-21-01.wav",
    "stick_t": 0.9,
    "stick_in": 0.51,
@@ -7248,13 +6924,13 @@
    "who": "DEEPFAKE",
    "text": "And then the computers regulate themselves.",
    "tag": "monitor",
-   "on_s": 103.85,
-   "end_s": 106.09,
-   "file_s": 103.35,
-   "abs_in": 2492,
-   "abs_out": 2547,
-   "file_in": 2480,
-   "file_out": 2562,
+   "on_s": 92.35,
+   "end_s": 94.59,
+   "file_s": 91.85,
+   "abs_in": 2216,
+   "abs_out": 2271,
+   "file_in": 2204,
+   "file_out": 2286,
    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-21-02.wav",
    "stick_t": 8.1,
    "stick_in": 0.5,
@@ -7373,13 +7049,13 @@
    "who": "NEDIB",
    "text": "When the hell did I say that?",
    "tag": "monitor",
-   "on_s": 106.8753,
-   "end_s": 108.9753,
-   "file_s": 106.3753,
-   "abs_in": 2565,
-   "abs_out": 2616,
-   "file_in": 2553,
-   "file_out": 2629,
+   "on_s": 95.3753,
+   "end_s": 97.4753,
+   "file_s": 94.8753,
+   "abs_in": 2289,
+   "abs_out": 2340,
+   "file_in": 2277,
+   "file_out": 2353,
    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-21-04.wav",
    "stick_t": 0.542,
    "stick_in": 0.5,
@@ -7487,13 +7163,13 @@
    "who": "MAS",
    "text": "which one's real?",
    "tag": "",
-   "on_s": 111.5083,
-   "end_s": 112.6783,
-   "file_s": 110.9083,
-   "abs_in": 2676,
-   "abs_out": 2705,
-   "file_in": 2661,
-   "file_out": 2720,
+   "on_s": 100.0083,
+   "end_s": 101.1783,
+   "file_s": 99.4083,
+   "abs_in": 2400,
+   "abs_out": 2429,
+   "file_in": 2385,
+   "file_out": 2444,
    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-21-06.wav",
    "stick_t": 0.8,
    "stick_in": 0.6,
@@ -7557,6 +7233,149 @@
    "pre": false
   },
   {
+   "id": "v32-a3-0001",
+   "shot": "22.01",
+   "beat": "22.01",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "MAS",
+   "text": "and today, you can build your own chatgtp.",
+   "tag": "stage",
+   "on_s": 109.9167,
+   "end_s": 112.8367,
+   "file_s": 109.3967,
+   "abs_in": 2638,
+   "abs_out": 2709,
+   "file_in": 2625,
+   "file_out": 2723,
+   "file": "audio/ep01/v32/act3/wav/v32-a3-0001.wav",
+   "stick_t": 2.0,
+   "stick_in": 0.52,
+   "cut": false,
+   "on_camera": "monitor",
+   "take_lip_sync": true,
+   "os": false,
+   "via": "pa",
+   "words": [
+    [
+     "and",
+     1,
+     4
+    ],
+    [
+     "today",
+     4,
+     16
+    ],
+    [
+     "you",
+     19,
+     22
+    ],
+    [
+     "can",
+     22,
+     26
+    ],
+    [
+     "build",
+     26,
+     33
+    ],
+    [
+     "your",
+     33,
+     37
+    ],
+    [
+     "own",
+     37,
+     44
+    ],
+    [
+     "chatgtp",
+     44,
+     70
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "rest"
+    ],
+    [
+     1,
+     "A"
+    ],
+    [
+     3,
+     "E"
+    ],
+    [
+     11,
+     "A"
+    ],
+    [
+     16,
+     "rest"
+    ],
+    [
+     20,
+     "O"
+    ],
+    [
+     23,
+     "A"
+    ],
+    [
+     26,
+     "M"
+    ],
+    [
+     28,
+     "A"
+    ],
+    [
+     30,
+     "E"
+    ],
+    [
+     34,
+     "O"
+    ],
+    [
+     42,
+     "E"
+    ],
+    [
+     46,
+     "A"
+    ],
+    [
+     50,
+     "E"
+    ],
+    [
+     64,
+     "M"
+    ],
+    [
+     66,
+     "A"
+    ],
+    [
+     68,
+     "E"
+    ],
+    [
+     70,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  },
+  {
    "id": "e1-a3-22-01",
    "shot": "22.01",
    "beat": "22.01",
@@ -7564,22 +7383,22 @@
    "mode": "call",
    "who": "MAS",
    "text": "so, how's the partnership going?",
-   "tag": "monitor",
-   "on_s": 121.7337,
-   "end_s": 123.5337,
-   "file_s": 121.2337,
-   "abs_in": 2921,
-   "abs_out": 2965,
-   "file_in": 2909,
-   "file_out": 2982,
-   "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-22-01.wav",
-   "stick_t": 4.317,
+   "tag": "",
+   "on_s": 114.0367,
+   "end_s": 115.8367,
+   "file_s": 113.5367,
+   "abs_in": 2736,
+   "abs_out": 2781,
+   "file_in": 2724,
+   "file_out": 2797,
+   "file": "audio/ep01/v32/act3/wav/e1-a3-22-01.stage.wav",
+   "stick_t": 6.12,
    "stick_in": 0.5,
    "cut": false,
    "on_camera": "monitor",
    "take_lip_sync": true,
    "os": false,
-   "via": "monitor",
+   "via": "pa",
    "words": [
     [
      "so",
@@ -7664,41 +7483,41 @@
    "mode": "call",
    "who": "TASYA",
    "text": "We love you guys.",
-   "tag": "monitor",
-   "on_s": 123.9837,
-   "end_s": 125.7137,
-   "file_s": 123.4837,
-   "abs_in": 2975,
-   "abs_out": 3018,
-   "file_in": 2963,
-   "file_out": 3034,
-   "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-22-02.wav",
-   "stick_t": 6.567,
+   "tag": "",
+   "on_s": 116.2867,
+   "end_s": 118.0167,
+   "file_s": 115.7867,
+   "abs_in": 2790,
+   "abs_out": 2833,
+   "file_in": 2778,
+   "file_out": 2849,
+   "file": "audio/ep01/v32/act3/wav/e1-a3-22-02.stage.wav",
+   "stick_t": 8.37,
    "stick_in": 0.5,
    "cut": false,
    "on_camera": "monitor",
    "take_lip_sync": true,
    "os": false,
-   "via": "monitor",
+   "via": "pa",
    "words": [
     [
      "Ha",
-     0,
+     1,
      5
     ],
     [
      "ha",
      5,
-     10
+     11
     ],
     [
      "ha",
-     10,
-     16
+     11,
+     17
     ],
     [
      "We",
-     17,
+     18,
      21
     ],
     [
@@ -7709,11 +7528,11 @@
     [
      "you",
      25,
-     28
+     29
     ],
     [
      "guys",
-     28,
+     29,
      42
     ]
    ],
@@ -7771,13 +7590,13 @@
    "who": "MAS",
    "text": "thrilled is too much. enthusiastic is a lot.",
    "tag": "V.O.",
-   "on_s": 127.8,
-   "end_s": 131.21,
-   "file_s": 127.28,
-   "abs_in": 3067,
-   "abs_out": 3150,
-   "file_in": 3054,
-   "file_out": 3166,
+   "on_s": 120.0917,
+   "end_s": 123.5017,
+   "file_s": 119.5717,
+   "abs_in": 2882,
+   "abs_out": 2965,
+   "file_in": 2869,
+   "file_out": 2981,
    "file": "audio/ep01/v3/act3/wav/v3-vo-16.wav",
    "stick_t": 1.3,
    "stick_in": 0.52,
@@ -7841,13 +7660,13 @@
    "who": "MAS",
    "text": "super.",
    "tag": "",
-   "on_s": 132.2833,
-   "end_s": 133.0133,
-   "file_s": 131.7733,
-   "abs_in": 3174,
-   "abs_out": 3193,
-   "file_in": 3162,
-   "file_out": 3207,
+   "on_s": 124.575,
+   "end_s": 125.305,
+   "file_s": 124.065,
+   "abs_in": 2989,
+   "abs_out": 3008,
+   "file_in": 2977,
+   "file_out": 3022,
    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-22-03.wav",
    "stick_t": 0.45,
    "stick_in": 0.51,
@@ -7897,64 +7716,71 @@
  "rails": [
   {
    "text": "JUL 24, 2023",
-   "s": 264,
-   "e": 308,
+   "s": 234,
+   "e": 278,
    "shot": "18.01",
    "floor_f": 21
   },
   {
    "text": "~SEP 26, 2023",
-   "s": 1232,
-   "e": 1312,
+   "s": 1111,
+   "e": 1191,
    "shot": "20.01",
    "floor_f": 22
   },
   {
    "text": "OCT 2023",
-   "s": 2153,
-   "e": 2269,
+   "s": 1877,
+   "e": 1993,
    "shot": "v31-20.07",
    "floor_f": 16
   },
   {
    "text": "OCT 30, 2023",
-   "s": 2300,
-   "e": 2657,
+   "s": 2024,
+   "e": 2381,
    "shot": "21.02",
    "floor_f": 21
   },
   {
    "text": "OCT 30, 2023",
-   "s": 2552,
-   "e": 2657,
+   "s": 2276,
+   "e": 2381,
    "shot": "21.02",
    "floor_f": 21
   },
   {
    "text": "NOV 6, 2023 · DEVDAY",
-   "s": 2844,
-   "e": 3036,
+   "s": 2616,
+   "e": 2851,
    "shot": "22.01",
    "floor_f": 30
   },
   {
+   "text": "NOV 14, 2023",
+   "s": 3062,
+   "e": 3178,
+   "shot": "v32-22.04",
+   "floor_f": 21
+  },
+  {
    "text": "NOV 16, 2023",
-   "s": 3245,
-   "e": 3303,
+   "s": 3180,
+   "e": 3238,
    "shot": "23.01",
    "floor_f": 21
   },
   {
    "text": "NOV 16, 2023 · 11:59 PM",
-   "s": 3363,
-   "e": 3387,
+   "s": 3298,
+   "e": 3322,
    "shot": "23.03",
    "floor_f": 34
   },
   {
    "text": "NOV 17, 2023",
-   "s": 3387,
-   "e": 3423,
+   "s": 3322,
+   "e": 3358,
    "shot": "23.03",
    "floor_f": 21
   }
@@ -7974,33 +7800,9 @@
    "os": false
   },
   {
-   "s": 185,
-   "e": 208,
-   "hold_to": 220,
-   "who": "MAS",
-   "shown": "MAS",
-   "text": "thirteen.",
-   "kind": "vo",
-   "mode": "on-mic",
-   "id": "v31-vo-03",
-   "os": false
-  },
-  {
-   "s": 317,
-   "e": 401,
-   "hold_to": 413,
-   "who": "MAS",
-   "shown": "MAS",
-   "text": "my other company. it tells people from machines.",
-   "kind": "vo",
-   "mode": "on-mic",
-   "id": "v31-vo-04",
-   "os": false
-  },
-  {
-   "s": 588,
-   "e": 605,
-   "hold_to": 617,
+   "s": 528,
+   "e": 545,
+   "hold_to": 557,
    "who": "MAS",
    "shown": "MAS",
    "text": "thanks.",
@@ -8010,9 +7812,9 @@
    "os": false
   },
   {
-   "s": 636,
-   "e": 683,
-   "hold_to": 695,
+   "s": 576,
+   "e": 623,
+   "hold_to": 635,
    "who": "MAS",
    "shown": "MAS",
    "text": "i made it for everyone else.",
@@ -8022,9 +7824,9 @@
    "os": false
   },
   {
-   "s": 718,
-   "e": 742,
-   "hold_to": 754,
+   "s": 646,
+   "e": 670,
+   "hold_to": 682,
    "who": "MAS",
    "shown": "MAS",
    "text": "you can stay.",
@@ -8034,9 +7836,9 @@
    "os": false
   },
   {
-   "s": 1035,
-   "e": 1088,
-   "hold_to": 1099,
+   "s": 963,
+   "e": 1016,
+   "hold_to": 1027,
    "who": "REMUHCS",
    "shown": "SENATOR (O.S.)",
    "text": "Every single person raised their hand.",
@@ -8046,9 +7848,9 @@
    "os": false
   },
   {
-   "s": 1099,
-   "e": 1154,
-   "hold_to": 1166,
+   "s": 1027,
+   "e": 1082,
+   "hold_to": 1094,
    "who": "NOLE",
    "shown": "NOLE",
    "text": "It's important for us to have a referee.",
@@ -8058,21 +7860,9 @@
    "os": false
   },
   {
-   "s": 1172,
-   "e": 1212,
-   "hold_to": 1224,
-   "who": "MAS",
-   "shown": "MAS",
-   "text": "i've had mine up since may.",
-   "kind": "vo",
-   "mode": "on-mic",
-   "id": "v31-vo-05",
-   "os": false
-  },
-  {
-   "s": 1438,
-   "e": 1481,
-   "hold_to": 1491,
+   "s": 1279,
+   "e": 1322,
+   "hold_to": 1332,
    "who": "GERG",
    "shown": "GERG",
    "text": "Mas, did you just post on Tidder?",
@@ -8082,9 +7872,9 @@
    "os": false
   },
   {
-   "s": 1491,
-   "e": 1521,
-   "hold_to": 1533,
+   "s": 1332,
+   "e": 1362,
+   "hold_to": 1374,
    "who": "MAS",
    "shown": "MAS",
    "text": "i'm editing it.",
@@ -8094,9 +7884,9 @@
    "os": false
   },
   {
-   "s": 1547,
-   "e": 1648,
-   "hold_to": 1660,
+   "s": 1388,
+   "e": 1489,
+   "hold_to": 1501,
    "who": "GERG",
    "shown": "GERG",
    "text": "Half the replies think it's a leak. The other half want to know which floor it's on.",
@@ -8106,9 +7896,9 @@
    "os": false
   },
   {
-   "s": 1748,
-   "e": 1782,
-   "hold_to": 1794,
+   "s": 1589,
+   "e": 1623,
+   "hold_to": 1635,
    "who": "GERG",
    "shown": "GERG",
    "text": "Okay. That's patched.",
@@ -8118,9 +7908,9 @@
    "os": false
   },
   {
-   "s": 1794,
-   "e": 1820,
-   "hold_to": 1827,
+   "s": 1635,
+   "e": 1661,
+   "hold_to": 1668,
    "who": "MAS",
    "shown": "MAS",
    "text": "how's the build?",
@@ -8130,9 +7920,9 @@
    "os": false
   },
   {
-   "s": 1827,
-   "e": 1913,
-   "hold_to": 1925,
+   "s": 1668,
+   "e": 1754,
+   "hold_to": 1766,
    "who": "GERG",
    "shown": "GERG",
    "text": "Still running. I don't go to bed till it's green. It's bad luck.",
@@ -8142,9 +7932,9 @@
    "os": false
   },
   {
-   "s": 1934,
-   "e": 1968,
-   "hold_to": 1976,
+   "s": 1775,
+   "e": 1809,
+   "hold_to": 1817,
    "who": "MAS",
    "shown": "MAS",
    "text": "go to sleep, gerg.",
@@ -8154,9 +7944,9 @@
    "os": false
   },
   {
-   "s": 1976,
-   "e": 1996,
-   "hold_to": 2008,
+   "s": 1817,
+   "e": 1837,
+   "hold_to": 1849,
    "who": "GERG",
    "shown": "GERG",
    "text": "When it compiles.",
@@ -8166,33 +7956,9 @@
    "os": false
   },
   {
-   "s": 2009,
-   "e": 2113,
-   "hold_to": 2125,
-   "who": "MAS",
-   "shown": "MAS",
-   "text": "gerg types louder when he's happy. he's been happy since november.",
-   "kind": "vo",
-   "mode": "on-mic",
-   "id": "v3-vo-15",
-   "os": false
-  },
-  {
-   "s": 2168,
-   "e": 2234,
-   "hold_to": 2246,
-   "who": "MAS",
-   "shown": "MAS",
-   "text": "neleh's on our board. she quoted us.",
-   "kind": "vo",
-   "mode": "on-mic",
-   "id": "v31-vo-06",
-   "os": false
-  },
-  {
-   "s": 2319,
-   "e": 2484,
-   "hold_to": 2492,
+   "s": 2043,
+   "e": 2208,
+   "hold_to": 2216,
    "who": "NEDIB",
    "shown": "NEDIB",
    "text": "Here's the deal, folks. This order says if you build the big ones, you test them, and you show us the results.",
@@ -8202,9 +7968,9 @@
    "os": false
   },
   {
-   "s": 2492,
-   "e": 2547,
-   "hold_to": 2559,
+   "s": 2216,
+   "e": 2271,
+   "hold_to": 2283,
    "who": "DEEPFAKE",
    "shown": "CUT-PAPER COPY",
    "text": "And then the computers regulate themselves.",
@@ -8214,9 +7980,9 @@
    "os": false
   },
   {
-   "s": 2565,
-   "e": 2616,
-   "hold_to": 2628,
+   "s": 2289,
+   "e": 2340,
+   "hold_to": 2352,
    "who": "NEDIB",
    "shown": "NEDIB",
    "text": "When the hell did I say that?",
@@ -8226,9 +7992,9 @@
    "os": false
   },
   {
-   "s": 2676,
-   "e": 2705,
-   "hold_to": 2717,
+   "s": 2400,
+   "e": 2429,
+   "hold_to": 2441,
    "who": "MAS",
    "shown": "MAS",
    "text": "which one's real?",
@@ -8238,9 +8004,21 @@
    "os": false
   },
   {
-   "s": 2921,
-   "e": 2965,
-   "hold_to": 2975,
+   "s": 2638,
+   "e": 2709,
+   "hold_to": 2721,
+   "who": "MAS",
+   "shown": "MAS",
+   "text": "and today, you can build your own chatgtp.",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "v32-a3-0001",
+   "os": false
+  },
+  {
+   "s": 2736,
+   "e": 2781,
+   "hold_to": 2790,
    "who": "MAS",
    "shown": "MAS",
    "text": "so, how's the partnership going?",
@@ -8250,9 +8028,9 @@
    "os": false
   },
   {
-   "s": 2975,
-   "e": 3018,
-   "hold_to": 3030,
+   "s": 2790,
+   "e": 2833,
+   "hold_to": 2845,
    "who": "TASYA",
    "shown": "TASYA",
    "text": "We love you guys.",
@@ -8262,9 +8040,9 @@
    "os": false
   },
   {
-   "s": 3067,
-   "e": 3150,
-   "hold_to": 3162,
+   "s": 2882,
+   "e": 2965,
+   "hold_to": 2977,
    "who": "MAS",
    "shown": "MAS",
    "text": "thrilled is too much. enthusiastic is a lot.",
@@ -8274,9 +8052,9 @@
    "os": false
   },
   {
-   "s": 3174,
-   "e": 3193,
-   "hold_to": 3205,
+   "s": 2989,
+   "e": 3008,
+   "hold_to": 3020,
    "who": "MAS",
    "shown": "MAS",
    "text": "super.",
@@ -8290,11 +8068,10 @@
  "v4_ids": {},
  "base_marks_scaled": [],
  "decisions": [
-  "16 beat lengths are not whole frames (v31-18.00, v31-18.00b, 18.01, 18.02, 18.06, 19.01...): beats start on the rounded running total, as the stick reel draws them",
+  "15 beat lengths are not whole frames (v31-18.00, 18.01, 18.02, 18.06, 19.01, v31-19.02...): beats start on the rounded running total, as the stick reel draws them",
   "v31-19.02: label 'VP SIRRAH: \"AI is kind of a fanc' is up 83 f, under its read floor 94 f (the stick's timing; kept)",
   "rail 'NOV 16, 2023 · 11:59 PM' is up 24 f, under its read floor 34 f (the stick's; kept)",
-  "3 takes are not in the timeline: ['e1-a3-20-05', 'e1-a3-21-03', 'e1-a3-21-07']",
-  "V.O. on screen with a rail item (§5.2 wants one must-read at a time; stagger by a beat): [\"v31-vo-06~'OCT 2023'\"]"
+  "8 takes are not in the timeline: ['e1-a3-20-05', 'e1-a3-21-03', 'e1-a3-21-07', 'v3-vo-15', 'v31-vo-03', 'v31-vo-04', 'v31-vo-05', 'v31-vo-06']"
  ],
  "problems": []
 }

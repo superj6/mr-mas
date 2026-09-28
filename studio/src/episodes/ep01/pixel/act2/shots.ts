@@ -6,11 +6,16 @@
 // v3.1 (script draft 7, the v3.1 lock show/reel/ep01-v31/ep01-v31-act2.json): 13.13 splits "Longer.", 13.14 -> 14.01 is a
 // match cut (the print in his hand becomes his phone in the same place in frame), the feed scrolls from his own post to
 // the clip under his V.O., 14.02 / 15.17 / 15.18 are cut, 15.02 is the chairman's real line, 17.12 is the glass side-on.
+// v3.2 (script draft 8.1, show/reel/ep01-v32/ep01-v32-act2.json; SHOWRUNNER-NOTES 00 and 0: his moves read on screen):
+// 13.01 he's already in the seat nearest the teacher while the others settle; the V.O. lines are cut (his moves carry
+// them); 13.10 is Radnus's MCU with the flame; 14.01 his thumb drags the clip back and plays it again under a readable
+// tag; 14.03 folds the repost in; 15.15 his proposal, over his shoulder, then the sheet slides on "licenses"; 16.01 his
+// own hand stamps the added date; 17.12 his face on the water, broken by the crack. Plates carry one relation word.
 // Rules kept: native 480 x 270, the master palette, whole-pixel moves, held drawings; Mas frame left; arrivals open wide
 // on the room with its people; marks land on the stick's sound spots and the takes' words; mouths only where the framing
 // shows one (the `face` table); no side badges, no pointer text: plates are names only, and the four gag cards
 // (SIRRAH, NEDIB, SUCRAM, NESNEJ) are the show's freeze-frame cards, placed so they never cover the face they name.
-import {defineSegment, layouts, mk, mouth, roomMouth, RH} from '../kit';
+import {defineSegment, layouts, mk, mouth, roomMouth, RH, shiftRoom} from '../kit';
 import type {Viseme} from '../../../../shared/pixel/cast/talk';
 import {Buf, rect, hash, bayer, clamp} from '../../../../shared/pixel/px';
 import {PAL, stepColor} from '../../../../shared/pixel/palette';
@@ -52,15 +57,14 @@ const CARD_NESNEJ: GagCard = {x: 470, y: 12, name: 'NESNEJ', lines: ['SELLS SHOV
 
 // =================================================================== sc 13 · THE WHITE HOUSE
 L.add('13.01', {
-  st: 'ARRIVAL · rooms/whitehouse drawWHWide: the row (MAS · RADNUS (art-a cast/radnus) · MARIO · TASYA) facing SIRRAH at the head, her pointer between the A block and the class; Radnus\'s small collar flame; Mario\'s finger half up on "table"; v3.1: Radnus mouths his sentence silently from the first frame (a room-scale mouth in phrases with breaths), the V.O. naming it',
+  st: 'ARRIVAL · rooms/whitehouse drawWHWide {settle, masGlass} (v3.2: HIS MOVE, the seat: MAS is already seated nearest SIRRAH, his own glass set down square in front of him, while RADNUS and MARIO are still settling into theirs, half-risen and arriving, and settle as the shot runs); SIRRAH\'s pointer between the A block and the class; Radnus\'s small collar flame; Radnus mouthing his sentence silently from the first frame; Mario\'s finger half up once he\'s down',
   enter: {kind: 'dip', frames: 8},
-  marks: {finger: ['w', 'v31-vo-01', 'table', 0]},
   draw: (fb, k, sh, f) => {
-    // mouthing the same sentence since they sat down: three-second phrases, a breath between them
     const ph = k % 72;
     const rm = ph < 52 ? silentRoom(ph) : 'smile';
     const on = (k % 56) < 36 ? 'A' : 'row';
-    WH.drawWHWide(fb, f, {sirrah: {on, mouth: 'smile'}, finger: k >= mk(sh, 'finger', 40) ? 1 : 0, flame: 1, mouths: {radnus: rm}});
+    const settle = {radnus: (k < 44 ? 1 : 0) as 0 | 1 | 2, mario: (k < 22 ? 2 : k < 64 ? 1 : 0) as 0 | 1 | 2};
+    WH.drawWHWide(fb, f, {sirrah: {on, mouth: 'smile'}, settle, masGlass: true, finger: k >= 72 ? 1 : 0, flame: 1, mouths: {radnus: rm}});
   },
 });
 L.add('13.02', {
@@ -139,11 +143,11 @@ L.add('13.08', {
   },
 });
 L.add('13.09', {
-  st: 'rooms/whitehouse drawWH2S: MAS (masPortrait warm, flipped to face him) + RADNUS (NEW bust, leaning across, lip-sync, the serene smile between lines; his extinguisher on the table; the small flame on his collar he hasn\'t noticed); Mas\'s eyes drop off Radnus for the V.O. and come back for "how\'s the dancing?"',
+  st: 'rooms/whitehouse drawWH2S: MAS (masPortrait warm, flipped to face him) + RADNUS (NEW bust, leaning across, lip-sync, the serene smile between lines; his extinguisher on the table; the small flame on his collar he hasn\'t noticed); v3.2 (the V.O. cut): after Radnus\'s courtesy Mas\'s eyes drop off him for a beat, then come back for the knife, "how\'s the dancing?"',
   face: {RADNUS: 'lip', MAS: 'lip'},
-  marks: {first: ['on', 'e1-a2-13-09', 0], apol: ['on', 'e1-a2-13-11', 0], apolEnd: ['w', 'e1-a2-13-11', 'And', 0], vo: ['on', 'v3-vo-12', 0], dance: ['on', 'e1-a2-13-12', 0]},
+  marks: {first: ['on', 'e1-a2-13-09', 0], apol: ['on', 'e1-a2-13-11', 0], apolEnd: ['w', 'e1-a2-13-11', 'And', 0], apolDone: ['end', 'e1-a2-13-11', 0], dance: ['on', 'e1-a2-13-12', 0]},
   draw: (fb, k, sh, f) => {
-    const vo = mk(sh, 'vo', 299), dance = mk(sh, 'dance', 347);
+    const vo = mk(sh, 'apolDone', 290) + 4, dance = mk(sh, 'dance', 311);
     const lean = k >= mk(sh, 'first', 14) - 4;
     const R = radnusBust2({...RADNUS2_DEFAULT, arm: lean ? 'lean' : 'fold', mouth: talk(mouth(sh, k, 'RADNUS'), 'smile'), lid: blink(k, 2), look: -1,
       brow: k >= mk(sh, 'apol', 156) && k < mk(sh, 'apolEnd', 230) ? 1 : 0});
@@ -156,11 +160,12 @@ L.add('13.09', {
   },
 });
 L.add('13.10', {
-  st: 'rooms/whitehouse drawCollarFlame [ECU] (the art\'s collar in art-a\'s navy and pale collar): the flame grows one size on the whoomph; his hand pats at it in two held drawings from "We\'re being thoughtful." (O.S.)',
+  st: 'rooms/whitehouse drawRadnusFlameMCU [MCU] (v3.2: his face and the flame together, replacing the ECU) with the NEW RADNUS bust (./art/radnus-bust, its collar point): the flame grows one size on the whoomph; his far hand pats at it from "We\'re being thoughtful." (O.S.: his mouth stays shut, the serene smile), blinking once',
   marks: {whoomph: ['snd', 'flame_whoomph', 1, 0], pat: ['on', 'e1-a2-13-13', 0]},
   draw: (fb, k, sh, f) => {
     const w = mk(sh, 'whoomph', 4), p = mk(sh, 'pat', 13);
-    WH.drawCollarFlame(fb, f, {size: k >= w ? 2 : 1, pat: k >= p ? (((k - p) / 6) % 2 < 1 ? 1 : 2) : 0});
+    const patting = k >= p && ((k - p) / 6) % 2 < 1;
+    WH.drawRadnusFlameMCU(fb, f, {size: k >= w ? 2 : 1, bust: radnusBust2({...RADNUS2_DEFAULT, arm: patting ? 'pat' : 'fold', mouth: 'smile', lid: blink(k + 60, 2), look: 0}), collar: RADNUS2_COLLAR});
   },
 });
 // the flash frame's state: what CLASS PHOTO #1 prints (13.14 prints THIS state, so the print matches the flash)
@@ -234,21 +239,23 @@ L.add('13.14', {
 
 // =================================================================== sc 14 · THE BRIDGE
 L.add('14.01', {
-  st: 'rooms/bay-bridge drawBridgeOTS {feed, hearts}: v3.1, the MATCH CUT: over Mas\'s shoulder at the dark bullpen window, his phone where the print was, his own CLASS PHOTO #1 post on it, the hearts climbing; his thumb scrolls (whole-pixel held steps) to the next item, the anchor clip (her mouth a beat late on its own clock), the ALTERED AUDIO tag, the progress bar running, under his V.O.; the skyline and the one lit window beyond',
+  st: 'rooms/bay-bridge drawBridgeOTS {feed, hearts, scrub, tagBig}: the MATCH CUT: over Mas\'s shoulder at the dark bullpen window, his phone where the print was, his own CLASS PHOTO #1 post on it, the hearts climbing; his thumb scrolls to the next item, the anchor clip (her mouth a beat late) under the ALTERED AUDIO tag drawn to read; v3.2, HIS MOVE: his thumb drags the clip back and plays it again (late again) (the V.O. is cut); the skyline and the one lit window beyond',
   marks: {scroll: ['txt', 'CLASS PHOTO #1', 'until', 0]},
   draw: (fb, k, sh, f) => {
-    const sc = mk(sh, 'scroll', 43);
+    const sc = mk(sh, 'scroll', 43), len = sh.e - sh.s;
     const feed = k < sc ? 0 : heldLerp(k, sc, sc + 14, 0, 100, 2) / 100;
     const hearts = 406 + Math.min(k, sc) * 19;
+    const drag0 = sc + 52, drag1 = drag0 + 10; // it plays, he drags it back (two drawings), it plays again
+    const progress = k < drag0 ? 0.3 + clamp((k - sc) / 150, 0, 1) * 0.6 : k < drag1 ? 0.12 : 0.12 + clamp((k - drag1) / 150, 0, 1) * 0.6;
     const m = (((k + 6) >> 2) % 3 === 0 ? 0 : 1) as 0 | 1;
-    BB.drawBridgeOTS(fb, f, {f, mouth: k < sc + 16 ? 0 : m, progress: 0.3 + clamp((k - sc) / 158, 0, 1) * 0.4, feed, hearts});
+    BB.drawBridgeOTS(fb, f, {f, mouth: k < sc + 16 || (k >= drag0 && k < drag1 + 6) ? 0 : m, progress, feed, hearts, scrub: k >= drag0 - 6 && k < drag1 + 4 ? 1 : 0, tagBig: true});
+    void len;
   },
 });
-L.add('14.03', {st: 'rooms/bay-bridge drawLitWindow: push 2 of 3, the lit window close, RUMPT\'s silhouette (props and pose only) with the same clip on its phone, nodding on the audio\'s beat (8 f)', draw: (fb, k, sh, f) => { BB.drawLitWindow(fb, f, {nod: ((k >> 3) & 1) as 0 | 1}); }});
-L.add('14.04', {
-  st: 'rooms/bay-bridge drawRepostECU: push 3 of 3, a thumb over the repost arrow under the same tag, the press, the click (post_click), REPOSTED',
+L.add('14.03', {
+  st: 'rooms/bay-bridge drawLitWindow {repost}: push 2 of 3, the lit window close, RUMPT\'s silhouette (props and pose only) with the same clip on its phone, nodding on the audio\'s beat (8 f); v3.2 (14.04 folded in): its thumb presses, then ✓ REPOSTED, on the click',
   marks: {click: ['snd', 'post_click', 1, 0]},
-  draw: (fb, k, sh, f) => { const c = mk(sh, 'click', 16); BB.drawRepostECU(fb, f, {step: k < c - 5 ? 'hover' : k < c ? 'press' : 'done'}); },
+  draw: (fb, k, sh, f) => { const c = mk(sh, 'click', 44); BB.drawLitWindow(fb, f, {nod: ((k >> 3) & 1) as 0 | 1, repost: k < c - 4 ? undefined : k < c ? 1 : 2}); },
 });
 L.add('14.05', {
   st: 'rooms/bay-bridge drawBayWide: a hailstone drops from the lit window into the bay, the plink\'s rings on the water (synth:plink), the phone\'s glow clicks off (the key tap); the silhouette doesn\'t move',
@@ -267,13 +274,13 @@ L.add('15.01', {
   draw: (fb, k, sh, f) => { SN.drawSenateMCU(fb, f, {bust: lahtBust({...LAHT_BUST_DEFAULT, clone: true, arm: 'mic', mouth: mouth(sh, k, 'CLONE'), lid: 0}), third: 'R', bg: 'dais', mic: true, lit: true}); },
 });
 L.add('15.02', {
-  st: 'rooms/senate drawSenateWide: the hearing room (the dais, the gallery, the witness table with MAS and SUCRAM); v3.1: the matte chairman takes the red light from the clone\'s mic and tells the room the truth about the voice it just heard ("That voice was not mine. The words were not mine.", room-scale mouth); the clone still; the name plate LAHTNEMULB (a name only)',
+  st: 'rooms/senate drawSenateWide: the hearing room (the dais, the gallery, the witness table with MAS and SUCRAM); v3.1: the matte chairman takes the red light from the clone\'s mic and tells the room the truth about the voice it just heard ("That voice was not mine. The words were not mine.", room-scale mouth); the clone still; the name plate LAHTNEMULB · CHAIRMAN (v3.2: a name and one relation word)',
   face: {LAHTNEMULB: 'room'},
   marks: {line: ['on', 'v31-a2-0003', 0], plate: ['txt', 'LAHTNEMULB', 'at', 0]},
   draw: (fb, k, sh, f) => {
     const line = mk(sh, 'line', 31);
     SN.drawSenateWide(fb, f, {chair: {arm: 'card', mouth: roomMouth(sh, k, 'LAHTNEMULB')}, clone: {arm: 'down'}, lit: k < line - 10 ? 'clone' : 'chair'});
-    namePlate(fb, k - mk(sh, 'plate', 7), 'LAHTNEMULB', 340, 168, PAL.G6);
+    namePlate(fb, k - mk(sh, 'plate', 7), 'LAHTNEMULB · CHAIRMAN', 318, 168, PAL.G6); // v3.2: the plate carries one relation word
   },
 });
 L.add('15.03', {
@@ -317,12 +324,12 @@ L.add('15.07', {
   },
 });
 L.add('15.10', {
-  st: 'rooms/senate drawSenateWide: the dais leans in; one microphone\'s red light comes on and the senator behind it speaks (room-scale mouth)',
+  st: 'rooms/senate drawSenateWide: the dais leans in; one microphone\'s red light comes on and the senator behind it asks (room-scale mouth); v3.2: the question is the committee asking for his ask ("Is there anything you\'d like this committee to do?")',
   face: {SENATOR: 'room'},
-  marks: {line: ['on', 'e1-a2-15-10', 0]},
+  marks: {line: ['on', 'e1-a2-15-15', 0]},
   draw: (fb, k, sh, f) => {
-    const line = mk(sh, 'line', 18);
-    SN.drawSenateWide(fb, f, {lean: k >= 6, lit: k >= line - 8 ? 'senB' : null, senMouth: roomMouth(sh, k, 'SENATOR') === 'open' ? 'senB' : null, chair: {arm: 'card'}});
+    const line = mk(sh, 'line', 9);
+    SN.drawSenateWide(fb, f, {lean: k >= 4, lit: k >= line - 6 ? 'senB' : null, senMouth: roomMouth(sh, k, 'SENATOR') === 'open' ? 'senB' : null, chair: {arm: 'card'}});
   },
 });
 L.add('15.11', {
@@ -332,7 +339,8 @@ L.add('15.11', {
   draw: (fb, k, sh, f) => {
     const mm = spoken(sh, k, 'MAS');
     const fast = k >= mk(sh, 'fast', 47);
-    SN.drawWitness2S(fb, f, {mas: {mouth: mm === 'smile' ? 'rest' : mm, look: -1}, sucram: {arm: 'phone', lid: fast && (k >> 2) % 5 === 0 ? 2 : 1}, pocket: k >= mk(sh, 'money', 110)});
+    // v3.2: the question now opens the shot, so Sucram's glance down and Mas's blink keep the head of it alive before the typing speeds up
+    SN.drawWitness2S(fb, f, {mas: {mouth: mm === 'smile' ? 'rest' : mm, look: -1, lid: blink(k + 60, 5)}, sucram: {arm: 'phone', lid: fast ? ((k >> 2) % 5 === 0 ? 2 : 1) : ((k >> 3) % 4 === 0 ? 2 : 1)}, pocket: k >= mk(sh, 'money', 110)});
   },
 });
 L.add('15.12', {
@@ -370,27 +378,35 @@ L.add('15.14', {
   },
 });
 L.add('15.15', {
-  st: 'kits/senate-props drawSheetHigh [HIGH]: PLEASE REGULATE ME, signed, slides toward the dais in held steps (folder_slide); Sucram\'s stamp comes down mid-slide on the stamp (CALLED IT. (BEFORE LAUNCH.)) and the sheet leaves frame right',
-  marks: {slide: ['snd', 'folder_slide', 1, 0], stamp: ['snd', 'rubber_stamp_C', 1, 0]},
+  st: 'v3.2, HIS MOVE (the proposal): rooms/senate drawSenateOTS (15.07\'s setup: from behind Mas onto the dais, the chairman and the clone listening, the chairman blinking) for "i would form a new agency…" (his own testimony, the record); on "licenses" the cut to kits/senate-props drawSheetHigh [HIGH]: his hand slides PLEASE REGULATE ME, signed, toward the dais in held steps as he goes on; Sucram\'s stamp comes down mid-slide (CALLED IT. (BEFORE LAUNCH.)) and the sheet leaves frame right. (The stick\'s slide and stamp sounds sit before the cut: for the sound pass)',
+  marks: {cut: ['w', 'v32-a2-0001', 'licenses', 0]},
   draw: (fb, k, sh, f) => {
-    const s = mk(sh, 'slide', 8), st = mk(sh, 'stamp', 40);
-    const slide = (k < s ? 0 : k < s + 12 ? 1 : k < st + 8 ? 2 : k < st + 22 ? 3 : 4) as 0 | 1 | 2 | 3 | 4;
-    SP.drawSheetHigh(fb, f, {slide, stamp: k < st - 12 ? null : k < st ? 'up' : k < st + 5 ? 'down' : 'done'});
+    const c = mk(sh, 'cut', 68);
+    // the OTS drifts in on him by whole pixels (1 px / 10 f) while he proposes it; the chairman and the clone blink
+    if (k < c) { SN.drawSenateOTS(fb, f, {take: 0, chair: {lid: blink(k, 1), look: 0}, clone: {lid: blink(k + 40, 3)}}); shiftRoom(fb, -Math.min(6, Math.floor(k / 10))); return; }
+    const kk = k - c;
+    // the slide spread over the rest of his sentence: the sheet leaves frame as the line ends (no empty table under him)
+    const slide = (kk < 10 ? 0 : kk < 24 ? 1 : kk < 64 ? 2 : kk < 94 ? 3 : 4) as 0 | 1 | 2 | 3 | 4;
+    SP.drawSheetHigh(fb, f, {slide, stamp: kk < 34 ? null : kk < 42 ? 'up' : kk < 47 ? 'down' : 'done'});
   },
 });
 L.add('15.16', {
-  st: 'rooms/senate drawSenateDais: a match on action, the sheet arrives from frame left into the clone\'s hand; the senators lean in, delighted, turn it over and hold its back up (paper_curl)',
+  st: 'rooms/senate drawSenateDais: a match on action, the sheet arrives from frame left into the clone\'s hand; the senators lean in, delighted: every one of them wants to sign it (they turn it over on the paper curl)',
   marks: {curl: ['snd', 'paper_curl', 1, 0]},
   draw: (fb, k, sh, f) => { const c = mk(sh, 'curl', 24); SN.drawSenateDais(fb, f, {sheet: k < 6 ? 1 : k < c ? 2 : 3, lean: k >= 10 && k < c, chair: {arm: 'card', nod: k >= c ? (((k >> 3) & 1) as 0 | 1) : 0}}); },
 });
 // =================================================================== sc 16 · THE TOUR (one held poster)
 L.add('16.01', {
-  st: 'kits/tour-poster drawTourPoster: ONE held poster (16.05 merged); the strip slaps across on the paper whip, EU CANCELLED, his post pops over it, UN-CANCELLED, ADDED DUE TO POPULAR DEMAND, each on its stamp; passing cars\' lights sweep the brick twice, one each way (a one-step band, the hold\'s life); the one-pixel smile holds',
+  st: 'kits/tour-poster drawTourPoster: ONE held poster (16.05 merged); the strip slaps across on the paper whip, EU CANCELLED; v3.2, HIS MOVES: his thumb on his phone in the corner posts "…no plans to leave" (the post pops), UN-CANCELLED, and his own hand comes in with a rubber stamp and stamps ADDED DUE TO POPULAR DEMAND (in, stamp, out, on the stamp); passing cars\' lights sweep the brick twice, one each way (a one-step band, the hold\'s life); the one-pixel smile holds',
   marks: {strip: ['snd', 'paper_whip', 1, 0], c1: ['snd', 'rubber_stamp_C', 2, 0], post: ['snd', 'post_click', 1, 0], un: ['snd', 'rubber_stamp_C', 3, 0], add: ['snd', 'rubber_stamp_C', 4, 0]},
   draw: (fb, k, sh, f) => {
     const since = (m: string, d: number) => (k >= mk(sh, m, d) ? k - mk(sh, m, d) : null);
     const post = since('post', 101);
-    TP.drawTourPoster(fb, f, {strip: k >= mk(sh, 'strip', 13), cancelled: since('c1', 28), post: post !== null && k < mk(sh, 'un', 123) + 16 ? post : null, un: since('un', 123), added: since('add', 147)});
+    const pc = mk(sh, 'post', 63), ad = mk(sh, 'add', 92);
+    // v3.2, HIS MOVES: his thumb on his phone in the frame's corner posts the walk-back; his own hand stamps the last slot
+    const phone = k >= pc - 14 && k < pc + 20 ? ((k >= pc - 2 && k < pc + 4 ? 1 : 0) as 0 | 1) : null;
+    const hand = k >= ad - 8 && k < ad ? 'in' : k >= ad && k < ad + 4 ? 'stamp' : k >= ad + 4 && k < ad + 12 ? 'out' : null;
+    TP.drawTourPoster(fb, f, {strip: k >= mk(sh, 'strip', 13), cancelled: since('c1', 28), post: post !== null && k < mk(sh, 'un', 123) + 16 ? post : null, un: since('un', 123), added: since('add', 147), phone, hand});
     // the headlight: a soft band of one palette step crossing the wall and the poster, left to right, in 4-px steps
     const len = sh.e - sh.s;
     sweep(fb, k, Math.round(len * 0.2), Math.round(len * 0.52), -60, 540);
@@ -481,8 +497,8 @@ L.add('17.11', {
   },
 });
 L.add('17.12', {
-  st: 'rooms/rooftop drawGlassSide [ECU] (v3.1: his glass side-on at table height, the sheet beyond, the sky with its crack stopped): the act-out; through the water the crack runs on in jags, one whole-pixel step, then another, bending down across his small reflection; the water doesn\'t move; held while the bell decays',
-  draw: (fb, k, sh, f) => { RT.drawGlassSide(fb, f, {run: stepOf(k, [22, 42, 62]) as 0 | 1 | 2 | 3}); },
+  st: 'rooms/rooftop drawGlassSide {surface} [ECU] (v3.2, the audit\'s #8: the camera a little above the rim, his face ON the water\'s surface, no body, no ring): the act-out; the reflected crack runs on across the surface in jags, one whole-pixel step, then another, and crosses his face under the eyes and breaks it; the water doesn\'t move; held while the bell decays',
+  draw: (fb, k, sh, f) => { RT.drawGlassSide(fb, f, {run: stepOf(k, [22, 42, 62]) as 0 | 1 | 2 | 3, surface: true}); },
 });
 L.add('17.13', {st: 'BLACK on the bell\'s last partial (the act-out)', draw: (fb) => { rect(0, 0, 480, RH, fb.ink(PAL.N0)); return {noVo: true}; }});
 
@@ -491,5 +507,5 @@ export const SEGMENT = defineSegment({
   lock: LOCK,
   layouts: L.all,
   options: {badge: false, vo: 'typed', voLowercase: true, subs: 'off', standin: 'stick'},
-  review: {title: 'MR. MAS · EP1 · ACT TWO', subtitle: 'PIXEL v3.1 · LOCK act2 (THE v3.1 STICK LOCK)', durNote: 'AS THE STICK LOCK', soundLabel: 'SOUND · TEMP TRACK = THE v3.1 STICK MIX'},
+  review: {title: 'MR. MAS · EP1 · ACT TWO', subtitle: 'PIXEL v3.2 · LOCK act2 (THE v3.2 STICK LOCK)', durNote: 'AS THE STICK LOCK', soundLabel: 'SOUND · TEMP TRACK = THE v3.2 STICK MIX'},
 });
