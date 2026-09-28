@@ -137,6 +137,11 @@ Every factual claim in `facts.md`, `beats.md` and the timeline carries one tag. 
 
 ## 4. How facts appear on screen
 
+> **Calibrated 2026-09-28** ([calibration](calibration.md) §3, §9; SHOWRUNNER-NOTES 00). The showrunner: "we can use reported and similar sparingly if not clear what referencing, but most things should just be presented. the goal is a story, not a documentary".
+> - **How a viewer learns what something is, in order of preference:** the world itself; then a line said in conflict; then a **first-appearance plate with one relation word** (for example `ALYI / CO-FOUNDER`, `TASYA · THE LANDLORD`). Then, at most 0–2 times an episode, a `(REPORTED)`-type label where the reference would otherwise be unclear.
+> - **Never** disclaimers, asterisks or explanatory rails, and never V.O. used as a caption.
+> - **"Contested" (§6, and the inner-voice rules) is narrow:** the reasons for the firing, who wrote or organized the staff letter, testimony, and the sealed memo. Everywhere else Mas may make visible choices and public moves (calling, asking, signing, posting, proposing, walking in, setting terms). The lead must drive the story.
+
 **Accuracy is carried by the writing** (showrunner, 2026-09-27: "we don't need to explicitly write out parody and some other clear pointers as is done in stick animation"; [SHOWRUNNER-NOTES](../production/SHOWRUNNER-NOTES.md) note 3). The on-screen truth-label system is retired: no `(REPORTED)`, `(DISPUTED)`, `RECONSTRUCTED`, `*claimed*` or `*per Manalt*`, no "Reported" chyron as a label, no footnote marks, and no rail that tells the viewer what to think. Instead:
 - **Real quotes stay verbatim** on dated quote cards, and **date rails stay**.
 - **Solid facts can be stated plainly.**
