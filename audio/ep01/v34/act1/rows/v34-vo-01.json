@@ -1,0 +1,258 @@
+{
+ "id": "v34-vo-01",
+ "scene": "5",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "she's right. it will break. it goes out tonight anyway.",
+ "spoken_as": "she's right.{0.35} it will break.{0.4} it goes out tonight anyway.",
+ "delivery": "level, certain, to himself: the decision, not a speech",
+ "tag": "[INVENTED · VO · v3.4 planner voice · gap + decision (ship first, unsaid)]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "vo",
+ "kind": "vo",
+ "side": "none",
+ "pov": null,
+ "shot": "5.04",
+ "shot_id": "5.04",
+ "cue": null,
+ "lip_sync": false,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v34/act1/wav/v34-vo-01.wav",
+ "mp3": null,
+ "duration_s": 5.095,
+ "frames_24": 123,
+ "voiced_span_s": 3.85,
+ "pace": {
+  "words": 10,
+  "wpm": 155.8,
+  "speed": 0.87,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.87,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.4,
+    4.0
+   ],
+   "turn_wpm_guide": [
+    120,
+    140
+   ],
+   "intent": "level, certain, to himself: the decision, not a speech"
+  },
+  "measured": {
+   "wpm": 155.8,
+   "articulation_sps": 4.29,
+   "syllables": 13,
+   "span_s": 3.85,
+   "pauses_s": [
+    0.35,
+    0.07,
+    0.47
+   ]
+  },
+  "longest_internal_gap_s": 0.47,
+  "audible_in_s": 0.52,
+  "audible_out_s": 4.37
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.870",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 60 Hz",
+  "pitch 0",
+  "low shelf +2.5 dB @150 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak -1 dB @3200 Hz Q0.8",
+  "high shelf -2.5 dB @7500 Hz",
+  "comp 2.5:1 @-26 dB (15/160 ms)",
+  "Kokoro speed 0.870 (the plan speed; mas-manalt-vo band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'right': Kokoro 0.04 s -> 0.35 s (intended 0.35; +0.32 s of room tone at the quietest 5 ms)",
+  "pause after 'break': Kokoro 0.33 s -> 0.29 s (intended 0.40; +0.07 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [],
+ "words": [
+  {
+   "w": "she's",
+   "t0": 0.59,
+   "t1": 0.828,
+   "f0": 14,
+   "f1": 20,
+   "ph": "ʃiz"
+  },
+  {
+   "w": "right",
+   "t0": 0.828,
+   "t1": 1.165,
+   "f0": 20,
+   "f1": 28,
+   "ph": "ɹˈIt"
+  },
+  {
+   "w": "it",
+   "t0": 1.53,
+   "t1": 1.642,
+   "f0": 37,
+   "f1": 39,
+   "ph": "ɪt"
+  },
+  {
+   "w": "will",
+   "t0": 1.642,
+   "t1": 1.792,
+   "f0": 39,
+   "f1": 43,
+   "ph": "wɪl"
+  },
+  {
+   "w": "break",
+   "t0": 1.792,
+   "t1": 2.32,
+   "f0": 43,
+   "f1": 56,
+   "ph": "bɹˈAk"
+  },
+  {
+   "w": "it",
+   "t0": 2.718,
+   "t1": 2.855,
+   "f0": 65,
+   "f1": 69,
+   "ph": "ɪt"
+  },
+  {
+   "w": "goes",
+   "t0": 2.855,
+   "t1": 3.155,
+   "f0": 69,
+   "f1": 76,
+   "ph": "ɡˈOz"
+  },
+  {
+   "w": "out",
+   "t0": 3.155,
+   "t1": 3.38,
+   "f0": 76,
+   "f1": 81,
+   "ph": "ˈWt"
+  },
+  {
+   "w": "tonight",
+   "t0": 3.38,
+   "t1": 3.73,
+   "f0": 81,
+   "f1": 90,
+   "ph": "tənˈIt"
+  },
+  {
+   "w": "anyway",
+   "t0": 3.73,
+   "t1": 4.39,
+   "f0": 90,
+   "f1": 105,
+   "ph": "ˈɛniwˌA"
+  }
+ ],
+ "qa": {
+  "lufs_i": -18.0,
+  "target_lufs": -18.0,
+  "true_peak_dbtp": -1.95,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.52,
+  "median_f0_hz": 115.9,
+  "f0_range_st": 11.0,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "She's right, it will break. It goes out tonight anyway.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.332,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.52,
+  "speech_tail_s": 0.45,
+  "rise_ms": 35.0,
+  "decay_ms": 180.0,
+  "decay_to_60_s": 0.28
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 2,
+   "word": "right",
+   "tts_s": 0.035,
+   "target_s": 0.35,
+   "point_s": 0.775,
+   "joined_speech": false,
+   "dip_db": -58.8,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.35,
+   "opened_s": 0.315
+  },
+  {
+   "after_word": 5,
+   "word": "break",
+   "tts_s": 0.325,
+   "target_s": 0.4,
+   "point_s": 2.13,
+   "joined_speech": false,
+   "dip_db": -52.9,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.29,
+   "opened_s": 0.075
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "5774a2f2465555a4",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 4.79,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 2.08,
+   "rechecked_alone": false
+  }
+ }
+}

@@ -42,8 +42,14 @@
 ### 5. Mas's inner voice
 - **Asked:** "everything still feels distance" (9-27); "a bunch of altman inner thoughts felt forced" (9-28).
 - **Too few:** v2, 3 lines. **Too many:** v3 24, v3.1 28, including captions ("those are stills.") and explanations ("i'll turn when he finishes the sentence.").
-- **Target:** about 10–14 lines, each doing what nothing else can: the gap between thought and speech, a prediction the picture pays, the one wrong read, a count under pressure. A thought an action could show becomes the action. *This:* "she's right. it will break." → "it's a preview." *Not that:* "i've had mine up since may." (show the hand up).
-- **Check:** strip each line; if only information is lost, put it in the world.
+- **Also asked (9-28, on v3.3):** "too much just predicting what someone is going to say next, rather than useful narration/insight into what he's thinking/planning"; "mas [should] look like he is mostly planning and directing things as he intends, with the exception he was not expecting the board"; then "we want mas to look like the mastermind who has higher foresight and planning than others usually" (SHOWRUNNER-NOTES 000).
+- **Too reactive:** v3.3, whose lines were mostly reads and predictions of the next five seconds ("she'll go for three.", "gerg. he'll say he's compiling.").
+- **Target (supersedes the 10–14 above, 2026-09-28):** about **14–18 lines** (fewer, better ones beat the full count), and most of them **his plan**: the higher-level goal behind the move on screen (ship first; compute through a landlord until he can build his own; be in the room where the rules get written; the platform; proof of personhood), hinting that each move sets up the next. After the blow the voice plans the comeback, and his return pays off the foresight. Keep the gap between thought and speech, the one wrong read (he plans right into the Friday call), the count under pressure and a few caught lines. **Predictions: at most one an episode.** A thought an action could show still becomes the action.
+  - **Hinted, not declared** (9-28: "don't make anything too on the nose"): a small practical thought that reads as ordinary once and as foresight on a rewatch. No "plan" words, no thesis; at a payoff, a count, one dry word or nothing.
+  - *This:* "mostly the bill. we can't buy that many servers. someone can." → he calls the landlord.
+  - *Not that:* "she'll go for three." (the next five seconds), or "that part i planned." (the thesis, on the nose).
+- **Still firm:** silence from the call's first tile to "super."; nothing at the Senate testimony; no motive about the firing's reasons; no line that has him rally, count on or organize the staff letter; the sealed memo stays out; no aphorisms, puns, winks, taglines or narrating the picture.
+- **Check:** strip each line; if only information is lost, put it in the world; if it says what someone will do next, make it his goal or cut it.
 
 ### 6. Music mood
 - **Asked:** "not everything needs to sound super suspenseful"; "goofy level hapy"; "keeping a unique sound, not toning down to overly generic" (9-27).
@@ -68,9 +74,9 @@
 
 ### 9. Agency
 - **Asked:** "if he is the main character he should be showing agency" (9-28).
-- **Too passive:** v2–v3, "carried from event to event" (newcomer): Act Three watches a monitor, others win Act Four, an 8-word cap kept him terse. **Too active (the v3.2 risk):** a declared schemer: plans in V.O., orchestrating the staff letter, a motive at a contested moment.
+- **Too passive:** v2–v3, "carried from event to event" (newcomer): Act Three watches a monitor, others win Act Four, an 8-word cap kept him terse. **Too active (the risk):** a claimed secret act at a contested moment: orchestrating the staff letter, a backroom where he flips votes, a motive for the firing. *(2026-09-28, SHOWRUNNER-NOTES 000: "plans in V.O." is no longer a risk; it's the target. He's a mastermind by foresight and arrangement: his voice shows the plan behind his public moves, never a secret act the record doesn't hold.)*
 - **v3.1:** late Act Four moves (calling Gerg, "keep building.", "gerg comes back too.") and the PLEASE sheet; Acts Two and Three still witness.
-- **Target:** every act, one to three decisions with a visible alternative, from the public record or invented small stakes, each causing the next scene. Brief in reply; full sentences when he asks, decides or sets terms. We see what he does, never why at a contested moment.
+- **Target:** every act, one to three decisions with a visible alternative, from the public record or invented small stakes, each causing the next scene. Brief in reply; full sentences when he asks, decides or sets terms. His inner voice gives the plan behind the move; we never hear why at a contested moment (§10). **Other principals scheme too** in later episodes: see [overview §6a](overview.md#6a-everyone-schemes-later-episodes).
 - **Check:** the chain test.
 
 ### 10. Rules against guidelines
@@ -91,8 +97,8 @@
 5. At the top he accepts the board's invite without looking → the call.
 6. Fired, he moves (posts, calls Gerg, answers Tasya, leaves the door open, sets one term) → the return.
 
-**Not a declared schemer:** no plan or reason in V.O., no backroom where he flips votes or writes the letter, no wink. His moves are small, public and polite; the audience infers the pattern.
+**A mastermind by foresight, not a declared schemer** *(updated 2026-09-28, SHOWRUNNER-NOTES 000; "no plan or reason in V.O." is superseded)*: his inner voice now gives the plan behind each public move and hints at the longer game, and his return pays it off. Still no backroom where he flips votes or writes the letter, no motive for the firing, no wink, no villain's speech. His moves stay small, public and polite.
 
 **The chain test:** retell each act in 8–14 sentences starting "So Mas…" or "Because of that…". A link that only works as "and then" is a chronicle beat: attach it to a move or cut it. Without the date rails, cause should still force the order.
 
-**Overrides until updated:** mas-inner-voice §7; guardrails §4 (labels rare, not retired); pov-and-framing §3.1, §3.7 (blank surface only at contested moments); style-range §6.1a (the slate is a menu).
+**Overrides until updated:** mas-inner-voice §3, §4, §7 (updated 2026-09-28 to the planner voice); guardrails §4 (labels rare, not retired); pov-and-framing §3.1, §3.7 (blank surface only at contested moments); style-range §6.1a (the slate is a menu).

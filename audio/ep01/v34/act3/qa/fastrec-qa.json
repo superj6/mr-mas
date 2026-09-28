@@ -1,0 +1,26 @@
+{
+ "problems": [],
+ "flags": [
+  {
+   "id": "v34-vo-05",
+   "kind": "pace",
+   "note": "articulation 4.84 syll/s against the guide 3.4-4.0"
+  },
+  {
+   "id": "v34-vo-06",
+   "kind": "asr",
+   "note": "ASR missed a word: 'A year ago, 40 users and a nice thread.' (recall 0.889)"
+  }
+ ],
+ "totals": {
+  "lines": 2,
+  "words": 19,
+  "audible_s": 6.4,
+  "wpm_overall": 178.0
+ },
+ "stringouts": [
+  "audio/ep01/v34/act3/reel/sc18-fast-stringout.mp3",
+  "audio/ep01/v34/act3/reel/sc22-fast-stringout.mp3"
+ ],
+ "method": "fastrec qa_generic: qa_v5.py's hard checks and ear flags, without its Act Four conversation table"
+}

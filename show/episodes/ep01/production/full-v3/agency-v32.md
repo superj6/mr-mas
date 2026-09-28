@@ -29,7 +29,7 @@
 
 **The rooms get bigger with him:** the bullpen → the lobby → the White House → the Senate → the world (the tour) → the DevDay stage → APEC. The collar pops once, on the money.
 
-**What he is not** (the other half of note 00). He isn't a declared schemer: no speech or voice-over announces ambition, and there's no villain turn. His agency shows as precise moves with consequences, which is the bible's "win without being seen to play". The inner voice is 11 lines (draft 8.1), and the silences stay silent.
+**What he is not** (the other half of note 00). He isn't a declared schemer: no speech or voice-over announces ambition, and there's no villain turn. *(Draft 8.3, SHOWRUNNER-NOTES 000: his voice now hints at the plan behind each move, and his return pays off the foresight, in small practical thoughts, never stated as a plan; see [script-v34-notes](script-v34-notes.md).)* His agency shows as precise moves with consequences, which is the bible's "win without being seen to play". The inner voice is 11 lines (draft 8.1), and the silences stay silent.
 
 ---
 

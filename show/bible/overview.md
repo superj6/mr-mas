@@ -117,7 +117,7 @@ Twelve episodes. Episode titles are filenames, *Mr. Robot*-style. Folders are `e
 
 | Ep | How he appears | Phase | Anchor (verified) |
 |---|---|---|---|
-| 1 | Silhouette: a phone glow at OGAL-A-RAM; one HTURT hailstone | Out of office | Reposts an AI-altered anchor clip, May 12, 2023 [H] |
+| 1 | Not on screen (v3.4 cut the May 12 repost and the hailstone) | Out of office | — (he enters in Ep2) |
 | 2 | Voice and hands, face hidden | **FEAR** | "maybe the most dangerous thing out there…" / "it is so scary" (Feb 2, 2024) [V] |
 | 3 | **THE PODIUM turns around** (button) | Wins | Mas's $1M to the inaugural fund [V] |
 | 4–6 | MAJOR | **LOVE** | "It's not artificial. It's genius." (Jul 23, 2025) [P✓] |
@@ -127,6 +127,15 @@ Twelve episodes. Episode titles are filenames, *Mr. Robot*-style. Folders are `e
 | 10–12 | The spine of the stakes (extrapolated) | Credit | "It was my idea." [INVENTED echo of the real Jan 21, 2026 Davos remark] |
 
 He wants six things, in order: **numbers** (pledges), **a cut** (10/15/25%), **the win** ("WHOEVER WINS AI, WINS!" [P✓]), **obedience** (the ban), **credit** and **naming rights**. He is the only character who renames things in-world. That mirrors the show itself, and his renaming ends when the Intern steals his label gun.
+
+### 6a. Everyone schemes (later episodes)
+
+*Added 2026-09-28, from the showrunner:* "in later episodes dario and a few other main leaders should also show similar scheming, the key people should look like they know and have some ability to move things more than it seems".
+
+- **Mas is the mastermind by foresight** (from Ep1: his inner voice hints at the plan behind each move, in small practical thoughts that read as foresight on a rewatch, never stated; [mas-inner-voice §3](mas-inner-voice.md)). From Ep2 on, **MARIO, TASYA, NOLE and a few other principals** get the same quality in their own scenes: they know more than they say, and each public move sets up a next one.
+- **How it shows** (per character, in their own register): MARIO's careful rival that is also a race entrant (the memo, the footnote, then the chips); TASYA's landlord who is always one step under, above and around ("I'll bring a pen."); NOLE's suits and rival lab as moves in a longer game. They get their plans in lines and in what they arrange, not in voice-over, which stays Mas's alone.
+- **The same limits** ([guardrails](guardrails.md) §6, [calibration](calibration.md) §9 and §10): scheming rides on public moves and invented small stakes, never a claimed secret act at a contested real moment, never a motive the record doesn't hold, never a backroom that reads as what really happened.
+- **In Ep1:** only the light touches already there (Tasya's pen and "below them, above them, around them"; Mario's careful rival). No scenes are added for them.
 
 ---
 

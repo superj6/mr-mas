@@ -1,5 +1,7 @@
 # Mas's inner voice
 
+> **Updated 2026-09-28 (SHOWRUNNER-NOTES 000): the voice is his plan.** §3 (what he thinks about), §4 (rules) and §7 (how much) are rewritten for it; the rest stands. Ep1's list is [script-v34-notes §2](../episodes/ep01/production/full-v3/script-v34-notes.md).
+>
 > **Status: WORKING GUIDE, 2026-09-27** (the lead, answering SHOWRUNNER-NOTES 1). It's being tried in the Ep1 stick v3 sample first ([v3-plan §8](../episodes/ep01/production/stick/v3-plan.md)), and holds unless the showrunner's look at that sample changes it.
 >
 > **Showrunner, 2026-09-27:** "don't make mas's unsound narration forced/corny. it is hard to tell attach to mas as there is little that tells about his thoughts throughout, everything still feels distance"
@@ -45,28 +47,30 @@
 - **Not the viewer.** He performs for everyone already. Speaking to us would be one more performance.
 - **Not the Orb.** The Orb is the witness who can catch him (the one true word aloud, "mostly."). It stays that.
 
-## 3. What he thinks about (four kinds, most to least)
+## 3. What he thinks about (most to least; rewritten 2026-09-28, SHOWRUNNER-NOTES 000)
 
-1. **Reads of other people.**
-   - Checkable details: a count, a name, a prop, a timing, what someone wants.
-   - *"gerg wants to ship it. rima wants it quiet. alyi wants to know what it is first."*
-2. **Predictions the picture pays off.**
-   - *"she'll go for three."*, and she underlines it a third time.
-   - *"gerg. he'll say he's compiling."*, and Gerg says it.
-   - Two or three per episode earn the trust §1.3 spends.
-3. **Warmth.**
-   - Who someone is to him, in one plain line.
-   - *"alyi asks that about everything we build. he means it every time."*
-4. **The gap:** the honest thought, then the line he says. Never explain the gap.
-   - *"she's right. it will break. i don't know which part yet."* → aloud: "it's a preview."
-   - "it's the bill." → *"mostly the bill."*
+The showrunner: "have mas look like he is mostly planning and directing things as he intends, with the exception he was not expecting the board… higher level goals, not just immediately what people do right away"; and "the mastermind who has higher foresight and planning than others usually".
+
+1. **His plan, as a small practical thought.** The goal behind the move on screen, never stated as a goal: the kind of thought a person actually has (a number, a name, a condition), which reads as ordinary the first time and as foresight on a rewatch. (The showrunner, 2026-09-28: "don't make anything too on the nose.")
+   - *"mostly the bill. we can't buy that many servers. someone can."*, and he calls the landlord.
+   - *"mine's half written."*, when the president wants promises in writing; at the Senate he finishes it.
+   - Ep1's goals, never named in the voice: ship first; compute through a landlord; be in the room where the rules are written; the platform; proof of personhood; after the blow, the comeback.
+2. **The foresight, paid off, not announced.** Plants that the return pays; at the payoff the voice can be a count, a single dry word, or nothing.
+   - *"a year ago, forty users and a nice thread."* (Gerg's launch-night forecast, remembered exactly)
+   - *"they had four votes. i had the landlord. the money. gerg."* (the return)
+3. **The gap:** the honest thought, then the line he says. Never explain the gap.
+   - *"she's right. it will break. it goes out tonight anyway."* → aloud: "it's a preview."
+   - "That collar suits you." → *"it does."*
+4. **The one wrong read.** He plans right into the one thing he didn't see coming. *"gerg's not on it. probably the budget. good. i'll ask for more compute."* Then silence.
+5. **Warmth and reads of people:** rare, one plain line where it orients (*"mario used to sit where gerg sits. he left to build a careful one."*).
+6. **Predictions of the next five seconds:** at most one an episode. They made him a commentator on other people, not a man with a plan.
 
 **Rhythm carries what he won't say.** He never says he feels anything. When he's rattled, a count speeds up, restarts or corrects itself:
 - *"four hundred and six. four hundred and seven. four hundred and six."*
 
 ## 4. Rules
 
-1. **Read other people more than himself.** He's reliable about them and unreliable about himself.
+1. **The plan, not the next five seconds** (2026-09-28). A line gives the goal behind what we see, or the step it sets up; it doesn't say what someone will do next. He's reliable about his plans and unreliable about himself.
 2. **Mostly true.** At most a quarter of his lines are "caught" by the picture. A voice that's always caught gets laughed *at*, and that's distance.
 3. **Humour from precision, never from punchline shapes.** If the line would work as a post, cut it: posts are his public register.
 4. **No puns, no aphorisms, no life lessons,** no "little did i know", no "you're probably wondering".
@@ -79,6 +83,8 @@
 10. **Lowercase, plain, short sentences,** with full stops. Length is whatever the thought needs, usually 3–12 words and rarely two sentences over 15.
 11. **Once an episode, the effort shows:** a private rehearsal, a line tried twice, "super." chosen from three.
 12. **Never on the board's side.** When we don't hear him, we aren't with him. That's how the told-twice structure reads without badges.
+13. **Hint, don't declare** (2026-09-28). No "plan", "planned", "long game", "all along", "step one", "that part i…" or any line that states the thesis. Understatement is his register: he notices which contract has his name on it; he doesn't explain why it matters.
+14. **A mastermind by foresight and arrangement, never by a claimed secret act** (2026-09-28). His plans ride on his public moves (the launch, the call, the seat, the stage, the walk-in, the door kept open). Never a line that has him organize, rally or count on the staff letter; no motive for the firing; nothing at the testimony; no villain's speech, and nothing that would work as a post or a tagline.
 
 ## 5. Where he's silent
 
@@ -101,11 +107,12 @@
 
 ## 7. How much
 
-| | Ep1 v2 | v3 target | Reference points |
-|---|---|---|---|
-| Lines | 3 | **15–25**, in 4–6 clusters | Mr. Robot pilot 53 · Dexter pilot 75 · Taxi Driver 36 (in 2 h) |
-| Words | 9 | **200–300** | American Psycho ≈ 650 (in 100 min) · Mr. Robot pilot ≈ 2,200 |
-| Share of runtime | under 1% | about 6–9% | Mr. Robot / Dexter / Wolf 22–26% of dialogue |
+| | Ep1 v2 | v3 target | v3.2–v3.3 (note 0) | **v3.4 target (note 000)** | Reference points |
+|---|---|---|---|---|---|
+| Lines | 3 | 15–25, in 4–6 clusters | 10–14 | **about 14–18**, in every act, most of them his plan | Mr. Robot pilot 53 · Dexter pilot 75 · Taxi Driver 36 (in 2 h) |
+| Words | 9 | 200–300 | 77–82 | **about 180–220** | American Psycho ≈ 650 (in 100 min) · Mr. Robot pilot ≈ 2,200 |
+| Predictions | 0 | 2–3 | 2 | **0–1** | |
+| Share of runtime | under 1% | about 6–9% | about 3% | about 5–6% | Mr. Robot / Dexter / Wolf 22–26% of dialogue |
 
 Eps 10–12 thin it again as the machine's point of view grows (pov-and-framing §5.4's season curve holds). **The Ep12 turn:** the machine answers the question his voice has been answering.
 
@@ -118,6 +125,7 @@ Eps 10–12 thin it again as the machine's point of view grows (pov-and-framing 
 - Is it the third caught line in a row? **Make one true.**
 - Could a newcomer follow the scene better with it? **Keep**, if it passes the four above.
 - Is the moment bigger than any line he could think? **Silence.**
+- Is it on the nose? Does it name the plan, the long game or the thesis, or explain the subtext? **Cut it, or turn it into a small practical thought, an action or silence.** It should read as ordinary the first time and as foresight on a rewatch (2026-09-28).
 
 ## 9. Performance and screen
 

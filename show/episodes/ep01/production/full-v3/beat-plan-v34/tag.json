@@ -1,0 +1,176 @@
+{
+ "segment": "tag",
+ "source": "show/reel/ep01-v33/ep01-v33-tag.json",
+ "_about": "v34 beat plan (script draft 8.3: Mas the planner and the mastermind by foresight; PLAN §7, SHOWRUNNER-NOTES 000 and the showrunner's update), in the PLAN §2 format with the v3.1-v3.3 plans' fields, written as deltas on the v3.3 LOCK (show/reel/ep01-v33/ep01-v33-<seg>.json). Every v3.3 beat appears once (keep, cut, merge). est_s is a planning length (new V.O. lengths are the recorded takes' audible lengths), never a measurement. New V.O. lines are new lines with \"vo\": true and tag V.O. (takes in audio/ep01/v34/); restored V.O. carries \"restored\": true and its take path. Fix codes: A the planner voice, MM the mastermind layer, B one deepfake, C the duck cut, G guardrails §2a rule 3. The script is show/episodes/ep01/script.md (draft 8.3); the notes are ../script-v34-notes.md; the spec is _spec_v34.py.",
+ "story_s": {
+  "source": 42.33,
+  "estimate": 33.24
+ },
+ "beats": [
+  {
+   "id": "32.01",
+   "action": "keep",
+   "est_s": 3.2,
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "caption": "Mas and the Orb at the desk, three marks in the wood now. The monitor behind them is dark.",
+   "onscreen": {
+    "drop": [
+     "RAIL: DEC 6, 2023"
+    ]
+   },
+   "fix": [
+    "C"
+   ],
+   "why": "C: the duck is cut; the tag arrives on the room.",
+   "src_s": 2.583,
+   "src_frame": "TWO-SHOT · the desk, three marks in the wood",
+   "lines": []
+  },
+  {
+   "id": "v31-32.01d",
+   "action": "cut",
+   "est_s": 0.0,
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "fix": [
+    "C"
+   ],
+   "why": "C (the showrunner): the Elgoog demo film, the Runway insert and \"What the quack!\" are cut.",
+   "src_s": 9.708,
+   "src_frame": "POV → NATIVE · ELGOOG's demo film (the Runway insert)",
+   "lines": [
+    {
+     "id": "v31-tg-0001",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "32.02",
+   "action": "keep",
+   "est_s": 3.75,
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "onscreen": {
+    "add": [
+     "RAIL: DEC 6, 2023"
+    ]
+   },
+   "fix": [
+    "C"
+   ],
+   "why": "The rail moves onto the cover's delivery.",
+   "src_s": 3.75,
+   "src_frame": "INSERT · the rack slot: the delivery (a magazine)",
+   "lines": []
+  },
+  {
+   "id": "32.03",
+   "action": "keep",
+   "est_s": 4.8,
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 4.8,
+   "src_frame": "MEDIUM CLOSE · Mas and the cover, side by side",
+   "lines": [
+    {
+     "id": "v3-vo-24",
+     "keep": true,
+     "vo": true
+    }
+   ]
+  },
+  {
+   "id": "32.04",
+   "action": "keep",
+   "est_s": 4.0,
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "shot_note": "C: the monitor behind is dark: no demo, no frozen duck.",
+   "fix": [
+    "C"
+   ],
+   "why": "unchanged",
+   "src_s": 4.0,
+   "src_frame": "TWO-SHOT · the Orb's scan, twice",
+   "lines": []
+  },
+  {
+   "id": "32.05",
+   "action": "keep",
+   "est_s": 2.743,
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 2.743,
+   "src_frame": "SINGLE · profile: Mas, to the cover",
+   "lines": [
+    {
+     "id": "v31-tg-0002",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "32.07",
+   "action": "keep",
+   "est_s": 3.5,
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 3.5,
+   "src_frame": "WIDE · the back wall",
+   "lines": []
+  },
+  {
+   "id": "33.01",
+   "action": "keep",
+   "est_s": 2.25,
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "shot_note": "C: the monitor behind is dark: no frozen duck.",
+   "fix": [
+    "C"
+   ],
+   "why": "unchanged",
+   "src_s": 2.25,
+   "src_frame": "WIDE · the thud",
+   "lines": []
+  },
+  {
+   "id": "33.02",
+   "action": "keep",
+   "est_s": 4.25,
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 4.25,
+   "src_frame": "HIGH · the front page",
+   "lines": []
+  },
+  {
+   "id": "33.04",
+   "action": "keep",
+   "est_s": 3.5,
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 3.5,
+   "src_frame": "SINGLE · profile: Mas, the button",
+   "lines": [
+    {
+     "id": "e1-tg-33-01",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "33.05",
+   "action": "keep",
+   "est_s": 1.25,
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 1.25,
+   "src_frame": "BLACK · on the hum",
+   "lines": []
+  }
+ ]
+}

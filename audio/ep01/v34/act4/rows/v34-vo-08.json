@@ -1,0 +1,243 @@
+{
+ "id": "v34-vo-08",
+ "scene": "5",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "if i'm in the building, they decide with me in it.",
+ "spoken_as": "if i'm in the building,{0.35} they decide with me in it.",
+ "delivery": "as the lanyard comes across the stone; plain, the comeback's first move",
+ "tag": "[INVENTED · VO · v3.4 planner voice · plan (the comeback)]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "vo",
+ "kind": "vo",
+ "side": "none",
+ "pov": null,
+ "shot": "v32-S5.00",
+ "shot_id": "v32-S5.00",
+ "cue": null,
+ "lip_sync": false,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v34/act4/wav/v34-vo-08.wav",
+ "mp3": null,
+ "duration_s": 4.28,
+ "frames_24": 103,
+ "voiced_span_s": 3.08,
+ "pace": {
+  "words": 11,
+  "wpm": 214.3,
+  "speed": 0.86,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.86,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.4,
+    4.0
+   ],
+   "turn_wpm_guide": [
+    120,
+    140
+   ],
+   "intent": "as the lanyard comes across the stone; plain, the comeback's first move"
+  },
+  "measured": {
+   "wpm": 214.3,
+   "articulation_sps": 4.78,
+   "syllables": 13,
+   "span_s": 3.08,
+   "pauses_s": [
+    0.36
+   ]
+  },
+  "longest_internal_gap_s": 0.36,
+  "audible_in_s": 0.53,
+  "audible_out_s": 3.61
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.860",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 60 Hz",
+  "pitch 0",
+  "low shelf +2.5 dB @150 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak -1 dB @3200 Hz Q0.8",
+  "high shelf -2.5 dB @7500 Hz",
+  "comp 2.5:1 @-26 dB (15/160 ms)",
+  "Kokoro speed 0.860 (the plan speed; mas-manalt-vo band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'building': Kokoro 0.37 s -> 0.27 s (intended 0.35; +0.00 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [],
+ "words": [
+  {
+   "w": "if",
+   "t0": 0.62,
+   "t1": 0.77,
+   "f0": 15,
+   "f1": 18,
+   "ph": "ɪf"
+  },
+  {
+   "w": "i'm",
+   "t0": 0.77,
+   "t1": 1.007,
+   "f0": 18,
+   "f1": 24,
+   "ph": "ˌIm"
+  },
+  {
+   "w": "in",
+   "t0": 1.007,
+   "t1": 1.108,
+   "f0": 24,
+   "f1": 27,
+   "ph": "ɪn"
+  },
+  {
+   "w": "the",
+   "t0": 1.108,
+   "t1": 1.195,
+   "f0": 27,
+   "f1": 29,
+   "ph": "ðə"
+  },
+  {
+   "w": "building",
+   "t0": 1.195,
+   "t1": 1.78,
+   "f0": 29,
+   "f1": 43,
+   "ph": "bˈɪldɪŋ"
+  },
+  {
+   "w": "they",
+   "t0": 2.07,
+   "t1": 2.22,
+   "f0": 50,
+   "f1": 53,
+   "ph": "ðA"
+  },
+  {
+   "w": "decide",
+   "t0": 2.22,
+   "t1": 2.82,
+   "f0": 53,
+   "f1": 68,
+   "ph": "dəsˈId"
+  },
+  {
+   "w": "with",
+   "t0": 2.82,
+   "t1": 2.995,
+   "f0": 68,
+   "f1": 72,
+   "ph": "wɪð"
+  },
+  {
+   "w": "me",
+   "t0": 2.995,
+   "t1": 3.208,
+   "f0": 72,
+   "f1": 77,
+   "ph": "mˌi"
+  },
+  {
+   "w": "in",
+   "t0": 3.208,
+   "t1": 3.37,
+   "f0": 77,
+   "f1": 81,
+   "ph": "ɪn"
+  },
+  {
+   "w": "it",
+   "t0": 3.37,
+   "t1": 3.63,
+   "f0": 81,
+   "f1": 87,
+   "ph": "ɪt"
+  }
+ ],
+ "qa": {
+  "lufs_i": -18.0,
+  "target_lufs": -18.0,
+  "true_peak_dbtp": -4.89,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.53,
+  "median_f0_hz": 110.6,
+  "f0_range_st": 11.9,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "If I'm in the building, they decide with me in it.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.214,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.53,
+  "speech_tail_s": 0.41,
+  "rise_ms": 100.0,
+  "decay_ms": 220.0,
+  "decay_to_60_s": 0.27
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 5,
+   "word": "building",
+   "tts_s": 0.37,
+   "target_s": 0.35,
+   "point_s": 1.585,
+   "joined_speech": false,
+   "dip_db": -57.0,
+   "breath": false,
+   "final_s": 0.265,
+   "opened_s": 0.0
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "6003f1331cc9985b",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 4.11,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 1.8,
+   "rechecked_alone": false
+  }
+ }
+}

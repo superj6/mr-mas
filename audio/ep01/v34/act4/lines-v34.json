@@ -1,0 +1,772 @@
+[
+ {
+  "id": "v34-vo-07",
+  "scene": "1",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "gerg's not on it. probably the budget. good. i'll ask for more compute.",
+  "spoken_as": "[gerg](/ɡˈɜɹɡ/)'s not on it.{0.3} probably the budget.{0.3} good.{0.3} i'll ask for more compute.",
+  "delivery": "planning right into it: brisk, pleased, the pointer beside JOIN",
+  "tag": "[INVENTED · VO · v3.4 planner voice · the one wrong read, planning]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "vo",
+  "kind": "vo",
+  "side": "none",
+  "pov": null,
+  "shot": "S1.02",
+  "shot_id": "S1.02",
+  "cue": null,
+  "lip_sync": false,
+  "status": "fast",
+  "device": null,
+  "room": null,
+  "est_s": null,
+  "file": "audio/ep01/v34/act4/wav/v34-vo-07.wav",
+  "mp3": null,
+  "duration_s": 6.235,
+  "frames_24": 150,
+  "voiced_span_s": 5.03,
+  "pace": {
+   "words": 14,
+   "wpm": 167.0,
+   "speed": 0.87,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 0.87,
+    "speed_band": [
+     0.88,
+     0.95
+    ],
+    "articulation_guide_sps": [
+     3.4,
+     4.0
+    ],
+    "turn_wpm_guide": [
+     120,
+     140
+    ],
+    "intent": "planning right into it: brisk, pleased, the pointer beside JOIN"
+   },
+   "measured": {
+    "wpm": 167.0,
+    "articulation_sps": 4.08,
+    "syllables": 17,
+    "span_s": 5.03,
+    "pauses_s": [
+     0.33,
+     0.29,
+     0.24
+    ]
+   },
+   "longest_internal_gap_s": 0.33,
+   "audible_in_s": 0.57,
+   "audible_out_s": 5.6
+  },
+  "placement": {
+   "gap_before_s": null,
+   "follows": "picture"
+  },
+  "take": "s1",
+  "takes_tried": 1,
+  "pick_reason": "fast: one take (seed 1, plan speed)",
+  "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.870",
+  "voiceId": "am_michael",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 60 Hz",
+   "pitch 0",
+   "low shelf +2.5 dB @150 Hz",
+   "peak -2 dB @320 Hz Q1.0",
+   "peak -1 dB @3200 Hz Q0.8",
+   "high shelf -2.5 dB @7500 Hz",
+   "comp 2.5:1 @-26 dB (15/160 ms)",
+   "Kokoro speed 0.870 (the plan speed; mas-manalt-vo band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+   "pause after 'it': Kokoro 0.13 s -> 0.34 s (intended 0.30; +0.17 s of room tone at the quietest 5 ms)",
+   "pause after 'budget': Kokoro 0.19 s -> 0.30 s (intended 0.30; +0.11 s of room tone at the quietest 5 ms)",
+   "pause after 'good': Kokoro 0.10 s -> 0.30 s (intended 0.30; +0.20 s of room tone at the quietest 5 ms)",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale (fastrec default; --breaths adds them)",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "mouth": [],
+  "words": [
+   {
+    "w": "gerg",
+    "t0": 0.615,
+    "t1": 0.89,
+    "f0": 15,
+    "f1": 21,
+    "ph": "ɡˈɜɹɡ"
+   },
+   {
+    "w": "'s",
+    "t0": 0.89,
+    "t1": 0.965,
+    "f0": 21,
+    "f1": 23,
+    "ph": "s"
+   },
+   {
+    "w": "not",
+    "t0": 0.965,
+    "t1": 1.215,
+    "f0": 23,
+    "f1": 29,
+    "ph": "nˌɑt"
+   },
+   {
+    "w": "on",
+    "t0": 1.215,
+    "t1": 1.44,
+    "f0": 29,
+    "f1": 35,
+    "ph": "ˌɔn"
+   },
+   {
+    "w": "it",
+    "t0": 1.44,
+    "t1": 1.59,
+    "f0": 35,
+    "f1": 38,
+    "ph": "ɪt"
+   },
+   {
+    "w": "probably",
+    "t0": 1.848,
+    "t1": 2.335,
+    "f0": 44,
+    "f1": 56,
+    "ph": "pɹˈɑbəbli"
+   },
+   {
+    "w": "the",
+    "t0": 2.335,
+    "t1": 2.472,
+    "f0": 56,
+    "f1": 59,
+    "ph": "ðə"
+   },
+   {
+    "w": "budget",
+    "t0": 2.472,
+    "t1": 2.88,
+    "f0": 59,
+    "f1": 69,
+    "ph": "bˈʌʤət"
+   },
+   {
+    "w": "good",
+    "t0": 3.145,
+    "t1": 3.605,
+    "f0": 75,
+    "f1": 87,
+    "ph": "ɡˈʊd"
+   },
+   {
+    "w": "i'll",
+    "t0": 4.025,
+    "t1": 4.238,
+    "f0": 97,
+    "f1": 102,
+    "ph": "ˌIl"
+   },
+   {
+    "w": "ask",
+    "t0": 4.238,
+    "t1": 4.55,
+    "f0": 102,
+    "f1": 109,
+    "ph": "ˈæsk"
+   },
+   {
+    "w": "for",
+    "t0": 4.55,
+    "t1": 4.675,
+    "f0": 109,
+    "f1": 112,
+    "ph": "fɔɹ"
+   },
+   {
+    "w": "more",
+    "t0": 4.675,
+    "t1": 4.9,
+    "f0": 112,
+    "f1": 118,
+    "ph": "mˈɔɹ"
+   },
+   {
+    "w": "compute",
+    "t0": 4.9,
+    "t1": 5.62,
+    "f0": 118,
+    "f1": 135,
+    "ph": "kəmpjˈut"
+   }
+  ],
+  "qa": {
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -4.25,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.57,
+   "median_f0_hz": 114.9,
+   "f0_range_st": 10.5,
+   "f0_method": "YIN (fast)",
+   "final_move_st": null,
+   "asr": "Gerg's not on it, probably the budget. Good. I'll ask for more compute.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.286,
+   "align_median_s": 0.235,
+   "utmos_dry": null,
+   "utmos_plain_read": null,
+   "utmos_vs_plain": null,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": null,
+   "speech_head_s": 0.57,
+   "speech_tail_s": 0.37,
+   "rise_ms": 50.0,
+   "decay_ms": 215.0,
+   "decay_to_60_s": 0.265
+  },
+  "fast": {
+   "key": "b57f0f28f2f4415e",
+   "tool": "fastrec 1.2 (2026-09-26)",
+   "shard": 0,
+   "wall_s": 5.15,
+   "takes": 1,
+   "settings": {
+    "asr": true,
+    "asr_beam": 1,
+    "asr_batch_s": 24.0,
+    "asr_align": false,
+    "utmos": false,
+    "prosody": false,
+    "breaths": false,
+    "threads": 3
+   },
+   "asr": {
+    "packed_with": 1,
+    "share_s": 1.27,
+    "rechecked_alone": false
+   }
+  },
+  "breaths": [],
+  "opened_pauses": [
+   {
+    "after_word": 5,
+    "word": "it",
+    "tts_s": 0.13,
+    "target_s": 0.3,
+    "point_s": 1.245,
+    "joined_speech": false,
+    "dip_db": -61.1,
+    "breath": false,
+    "crossfade_ms": [
+     8,
+     8
+    ],
+    "final_s": 0.335,
+    "opened_s": 0.17
+   },
+   {
+    "after_word": 8,
+    "word": "budget",
+    "tts_s": 0.19,
+    "target_s": 0.3,
+    "point_s": 2.45,
+    "joined_speech": false,
+    "dip_db": -60.2,
+    "breath": false,
+    "crossfade_ms": [
+     8,
+     8
+    ],
+    "final_s": 0.3,
+    "opened_s": 0.11
+   },
+   {
+    "after_word": 9,
+    "word": "good",
+    "tts_s": 0.095,
+    "target_s": 0.3,
+    "point_s": 3.135,
+    "joined_speech": false,
+    "dip_db": -50.0,
+    "breath": false,
+    "crossfade_ms": [
+     8,
+     8
+    ],
+    "final_s": 0.3,
+    "opened_s": 0.205
+   }
+  ],
+  "alt_takes": []
+ },
+ {
+  "id": "v34-vo-09",
+  "scene": "5",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "gerg walked out for me.",
+  "spoken_as": "[gerg](/ɡˈɜɹɡ/) walked out for me.",
+  "delivery": "as he clicks GERG; warm, flat",
+  "tag": "[INVENTED · VO · v3.4 planner voice · a read (paid by \"gerg comes back too.\")]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "vo",
+  "kind": "vo",
+  "side": "none",
+  "pov": null,
+  "shot": "S5.09",
+  "shot_id": "S5.09",
+  "cue": null,
+  "lip_sync": false,
+  "status": "fast",
+  "device": null,
+  "room": null,
+  "est_s": null,
+  "file": "audio/ep01/v34/act4/wav/v34-vo-09.wav",
+  "mp3": null,
+  "duration_s": 2.755,
+  "frames_24": 67,
+  "voiced_span_s": 1.43,
+  "pace": {
+   "words": 5,
+   "wpm": 209.8,
+   "speed": 0.87,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 0.87,
+    "speed_band": [
+     0.88,
+     0.95
+    ],
+    "articulation_guide_sps": [
+     3.4,
+     4.0
+    ],
+    "turn_wpm_guide": [
+     120,
+     140
+    ],
+    "intent": "as he clicks GERG; warm, flat"
+   },
+   "measured": {
+    "wpm": 209.8,
+    "articulation_sps": 3.5,
+    "syllables": 5,
+    "span_s": 1.43,
+    "pauses_s": []
+   },
+   "longest_internal_gap_s": 0.0,
+   "audible_in_s": 0.6,
+   "audible_out_s": 2.03
+  },
+  "placement": {
+   "gap_before_s": null,
+   "follows": "picture"
+  },
+  "take": "s1",
+  "takes_tried": 1,
+  "pick_reason": "fast: one take (seed 1, plan speed)",
+  "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.870",
+  "voiceId": "am_michael",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 60 Hz",
+   "pitch 0",
+   "low shelf +2.5 dB @150 Hz",
+   "peak -2 dB @320 Hz Q1.0",
+   "peak -1 dB @3200 Hz Q0.8",
+   "high shelf -2.5 dB @7500 Hz",
+   "comp 2.5:1 @-26 dB (15/160 ms)",
+   "Kokoro speed 0.870 (the plan speed; mas-manalt-vo band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale (fastrec default; --breaths adds them)",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "mouth": [],
+  "words": [
+   {
+    "w": "gerg",
+    "t0": 0.665,
+    "t1": 1.015,
+    "f0": 16,
+    "f1": 24,
+    "ph": "ɡˈɜɹɡ"
+   },
+   {
+    "w": "walked",
+    "t0": 1.015,
+    "t1": 1.34,
+    "f0": 24,
+    "f1": 32,
+    "ph": "wˈɔkt"
+   },
+   {
+    "w": "out",
+    "t0": 1.34,
+    "t1": 1.565,
+    "f0": 32,
+    "f1": 38,
+    "ph": "ˈWt"
+   },
+   {
+    "w": "for",
+    "t0": 1.565,
+    "t1": 1.69,
+    "f0": 38,
+    "f1": 41,
+    "ph": "fɔɹ"
+   },
+   {
+    "w": "me",
+    "t0": 1.69,
+    "t1": 2.05,
+    "f0": 41,
+    "f1": 49,
+    "ph": "mˌi"
+   }
+  ],
+  "qa": {
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -3.92,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.6,
+   "median_f0_hz": 111.9,
+   "f0_range_st": 10.0,
+   "f0_method": "YIN (fast)",
+   "final_move_st": null,
+   "asr": "Gerg walked out for me.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.435,
+   "align_median_s": null,
+   "utmos_dry": null,
+   "utmos_plain_read": null,
+   "utmos_vs_plain": null,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": null,
+   "speech_head_s": 0.6,
+   "speech_tail_s": 0.45,
+   "rise_ms": 105.0,
+   "decay_ms": 160.0,
+   "decay_to_60_s": 0.28
+  },
+  "fast": {
+   "key": "dbb6ed10929edb11",
+   "tool": "fastrec 1.2 (2026-09-26)",
+   "shard": 1,
+   "wall_s": 3.81,
+   "takes": 1,
+   "settings": {
+    "asr": true,
+    "asr_beam": 1,
+    "asr_batch_s": 24.0,
+    "asr_align": false,
+    "utmos": false,
+    "prosody": false,
+    "breaths": false,
+    "threads": 3
+   },
+   "asr": {
+    "packed_with": 0,
+    "share_s": 1.91,
+    "rechecked_alone": false
+   }
+  },
+  "breaths": [],
+  "opened_pauses": [],
+  "alt_takes": []
+ },
+ {
+  "id": "v34-vo-11",
+  "scene": "8",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "they had four votes. i had the landlord. the money. gerg.",
+  "spoken_as": "they had four votes.{0.45} i had the landlord.{0.3} the money.{0.3} [gerg](/ɡˈɜɹɡ/).",
+  "delivery": "on the firing's drawing, now with a voice: a count, quiet and exact, not a boast",
+  "tag": "[INVENTED · VO · v3.4 planner voice · the return's tally (what he'd put in place, stated as a count)]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "vo",
+  "kind": "vo",
+  "side": "none",
+  "pov": null,
+  "shot": "S8.04",
+  "shot_id": "S8.04",
+  "cue": null,
+  "lip_sync": false,
+  "status": "fast",
+  "device": null,
+  "room": null,
+  "est_s": null,
+  "file": "audio/ep01/v34/act4/wav/v34-vo-11.wav",
+  "mp3": null,
+  "duration_s": 5.945,
+  "frames_24": 143,
+  "voiced_span_s": 4.64,
+  "pace": {
+   "words": 11,
+   "wpm": 142.2,
+   "speed": 0.87,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 0.87,
+    "speed_band": [
+     0.88,
+     0.95
+    ],
+    "articulation_guide_sps": [
+     3.4,
+     4.0
+    ],
+    "turn_wpm_guide": [
+     120,
+     140
+    ],
+    "intent": "on the firing's drawing, now with a voice: a count, quiet and exact, not a boast"
+   },
+   "measured": {
+    "wpm": 142.2,
+    "articulation_sps": 3.61,
+    "syllables": 13,
+    "span_s": 4.64,
+    "pauses_s": [
+     0.45,
+     0.09,
+     0.3,
+     0.29
+    ]
+   },
+   "longest_internal_gap_s": 0.45,
+   "audible_in_s": 0.6,
+   "audible_out_s": 5.24
+  },
+  "placement": {
+   "gap_before_s": null,
+   "follows": "picture"
+  },
+  "take": "s1",
+  "takes_tried": 1,
+  "pick_reason": "fast: one take (seed 1, plan speed)",
+  "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.870",
+  "voiceId": "am_michael",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 60 Hz",
+   "pitch 0",
+   "low shelf +2.5 dB @150 Hz",
+   "peak -2 dB @320 Hz Q1.0",
+   "peak -1 dB @3200 Hz Q0.8",
+   "high shelf -2.5 dB @7500 Hz",
+   "comp 2.5:1 @-26 dB (15/160 ms)",
+   "Kokoro speed 0.870 (the plan speed; mas-manalt-vo band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+   "pause after 'votes': Kokoro 0.20 s -> 0.45 s (intended 0.45; +0.26 s of room tone at the quietest 5 ms)",
+   "pause after 'landlord': Kokoro 0.04 s -> 0.30 s (intended 0.30; +0.26 s of room tone at the quietest 5 ms)",
+   "pause after 'money': Kokoro 0.03 s -> 0.30 s (intended 0.30; +0.27 s of room tone at the quietest 5 ms)",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale (fastrec default; --breaths adds them)",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "mouth": [],
+  "words": [
+   {
+    "w": "they",
+    "t0": 0.59,
+    "t1": 0.715,
+    "f0": 14,
+    "f1": 17,
+    "ph": "ðA"
+   },
+   {
+    "w": "had",
+    "t0": 0.715,
+    "t1": 0.965,
+    "f0": 17,
+    "f1": 23,
+    "ph": "hæd"
+   },
+   {
+    "w": "four",
+    "t0": 0.965,
+    "t1": 1.277,
+    "f0": 23,
+    "f1": 31,
+    "ph": "fˈɔɹ"
+   },
+   {
+    "w": "votes",
+    "t0": 1.277,
+    "t1": 1.85,
+    "f0": 31,
+    "f1": 44,
+    "ph": "vˈOts"
+   },
+   {
+    "w": "i",
+    "t0": 2.333,
+    "t1": 2.545,
+    "f0": 56,
+    "f1": 61,
+    "ph": "ˈI"
+   },
+   {
+    "w": "had",
+    "t0": 2.545,
+    "t1": 2.708,
+    "f0": 61,
+    "f1": 65,
+    "ph": "hæd"
+   },
+   {
+    "w": "the",
+    "t0": 2.708,
+    "t1": 2.82,
+    "f0": 65,
+    "f1": 68,
+    "ph": "ðə"
+   },
+   {
+    "w": "landlord",
+    "t0": 2.82,
+    "t1": 3.47,
+    "f0": 68,
+    "f1": 83,
+    "ph": "lˈændlˌɔɹd"
+   },
+   {
+    "w": "the",
+    "t0": 3.775,
+    "t1": 3.912,
+    "f0": 91,
+    "f1": 94,
+    "ph": "ðə"
+   },
+   {
+    "w": "money",
+    "t0": 3.912,
+    "t1": 4.35,
+    "f0": 94,
+    "f1": 104,
+    "ph": "mˈʌni"
+   },
+   {
+    "w": "gerg",
+    "t0": 4.708,
+    "t1": 5.26,
+    "f0": 113,
+    "f1": 126,
+    "ph": "ɡˈɜɹɡ"
+   }
+  ],
+  "qa": {
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -4.7,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.6,
+   "median_f0_hz": 112.1,
+   "f0_range_st": 10.4,
+   "f0_method": "YIN (fast)",
+   "final_move_st": null,
+   "asr": "They had four votes. I had the landlord, the money, Gerg.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.347,
+   "align_median_s": null,
+   "utmos_dry": null,
+   "utmos_plain_read": null,
+   "utmos_vs_plain": null,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": null,
+   "speech_head_s": 0.6,
+   "speech_tail_s": 0.38,
+   "rise_ms": 35.0,
+   "decay_ms": 225.0,
+   "decay_to_60_s": 0.32
+  },
+  "fast": {
+   "key": "a8a418ffa2a17fc8",
+   "tool": "fastrec 1.2 (2026-09-26)",
+   "shard": 0,
+   "wall_s": 4.14,
+   "takes": 1,
+   "settings": {
+    "asr": true,
+    "asr_beam": 1,
+    "asr_batch_s": 24.0,
+    "asr_align": false,
+    "utmos": false,
+    "prosody": false,
+    "breaths": false,
+    "threads": 3
+   },
+   "asr": {
+    "packed_with": 0,
+    "share_s": 1.68,
+    "rechecked_alone": false
+   }
+  },
+  "breaths": [],
+  "opened_pauses": [
+   {
+    "after_word": 4,
+    "word": "votes",
+    "tts_s": 0.195,
+    "target_s": 0.45,
+    "point_s": 1.54,
+    "joined_speech": false,
+    "dip_db": -53.0,
+    "breath": false,
+    "crossfade_ms": [
+     8,
+     8
+    ],
+    "final_s": 0.45,
+    "opened_s": 0.255
+   },
+   {
+    "after_word": 8,
+    "word": "landlord",
+    "tts_s": 0.045,
+    "target_s": 0.3,
+    "point_s": 3.075,
+    "joined_speech": false,
+    "dip_db": -49.5,
+    "breath": false,
+    "crossfade_ms": [
+     8,
+     8
+    ],
+    "final_s": 0.3,
+    "opened_s": 0.255
+   },
+   {
+    "after_word": 10,
+    "word": "money",
+    "tts_s": 0.03,
+    "target_s": 0.3,
+    "point_s": 3.96,
+    "joined_speech": false,
+    "dip_db": -45.5,
+    "breath": false,
+    "crossfade_ms": [
+     8,
+     8
+    ],
+    "final_s": 0.3,
+    "opened_s": 0.27
+   }
+  ],
+  "alt_takes": []
+ }
+]
