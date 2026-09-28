@@ -89,7 +89,7 @@
    "S6.04:NELEH:lip",
    "S7.01:ALYI:lip",
    "S7.01:MAS:lip",
-   "S7.02:EMPLOYEE:room",
+   "S7.02:EMPLOYEE:lip",
    "S7.02b:TASYA:lip",
    "S7.06:TERB:room",
    "S7.07-cont:MADA:lip",
@@ -16715,8 +16715,8 @@
      "fe": 151,
      "os": false,
      "via": null,
-     "face": "room",
-     "lip": false,
+     "face": "lip",
+     "lip": true,
      "carry": false,
      "cut": false,
      "mouth": [
@@ -16968,8 +16968,12 @@
    },
    "names": [],
    "fg": null,
-   "marks": {},
-   "mark_src": {},
+   "marks": {
+    "push": 33
+   },
+   "mark_src": {
+    "push": "on v33-a4-0001 0"
+   },
    "texts": [],
    "tc_in": "18:24:16",
    "tc_out": "18:30:15",

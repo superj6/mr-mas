@@ -101,6 +101,52 @@ bash ops/heavy.sh bash $S/heavy-run33.sh  # build, check, flash, bundle, glyphs 
 bash ops/heavy.sh bash $S/fc33.sh         # flashcheck.py on the MP4, in four chunks
 ```
 
+### V33.6 v3.3b: two readability fixes (the newcomer's notes; after 08d73ba, not committed)
+
+**Beat lengths are unchanged.** The frame count is still exactly **12,138**, and every shot's frames match 08d73ba's lock. The only lock change is S7.02's plan entry: a `push` mark on the employee's first word, and the face EMPLOYEE `lip`. Composer Y's refit lengths still hold.
+
+**1. S7.02, "I can't find who's speaking."** The fix has two parts:
+- **She's the one green coat.** `art/v33 recolourCrowd` re-coats the two other green-parka extras (rooms/bullpen WALKOUT_CROWD at x 180 and 438) in plum and charcoal. It paints only where each extra's own pixels show, so the bench and the boxes in front of them are untouched. It runs in the wide and in the [M]'s background.
+- **The stepped push, one drawn size:** the wide (k0–32) cuts on her line's first word (k33, the new `push` mark) to her **[M]**. That is `art/v33 drawEmployeeM`:
+  - **The figure:** a new bust on the civic kit (cast/civic-kit `bustHead` + the jacket torso: the shared skull, 3/4 camera-left, six mouths). Her tile's long dark hair (a centre part, falling past the far shoulder), her skin, the green parka with its hood and quilting, a cream top.
+  - **Her face:** lip-synced (v33-a4-0001) and blinking.
+  - **The box in her arms** across the frame's foot, her hands gripping its top edge.
+  - **The framing:** she's at the right third, looking across the frame (camera-left) to Mas off screen, over the bullpen soft behind her (framing `mcuRoom`) with a whole-pixel drift.
+  - The cut is the one added cut, motivated by the speaker.
+
+**2. S7.02b, the podcast mic.** A **cut in from the wide to an insert of the wall TV** (`art/v33 drawTVInsert`): the screen (420 × 152) fills the frame.
+- **In the clip:**
+  - Tasya's warm portrait (cast/tasya-phone `tasyaRoomPortrait`) lip-synced (v33-a4-0002), on an interview set: acoustic-foam wall tiles, two warm practicals, the desk's edge;
+  - a **broadcast mic with a foam windscreen on a boom arm**, angled up at his mouth from below-left, clear of it: the cap's mottled foam and its rim ring, the body, the yoke, the arm in two segments with its spring, the desk clamp;
+  - a **`PODCAST` bug** in the screen's top-left corner (a red dot, the UI face).
+- **Round the TV:** the bullpen's ceiling, walls and floor. They step to Macrosoft slate column by column (rooms/bullpen `toSlate`, 3 held steps) on "above", "around" and "below".
+- **In the foreground:** a colleague's head and shoulders (bottom-left) and a packed box with a lamp arm (bottom-right), in silhouette, rimmed by the TV's light, to keep us in the bullpen.
+- **The hold:** the 1.35 s after "…around them." stays on the screen.
+- **Not kept:** the S7.02 wall TV (`drawWallTV`) still plays softly in the wide. The v3.3 S7.02b "same wide, held on" is gone.
+
+**3. The EL take of the TV cut.** `cut_mouths.py` has a third job. The EL `v33-a4-0002` is cut from the EL `v3-a4-0003` (words 10–17), so its mouth is that take's (the assembly's el_takes.py track, `assembly/el-v32/act4-takes.json`), shifted −4.238 s. Every one of the 8 words lines up at that shift, and the result is 25 shapes.
+- It goes to **`audio/ep01/v3-el/ep01-v33/act4/lines-A-cut-mouths.json`**, the whole EL row plus `mouth`. The EL `lines-A.json` is not touched.
+- **For the assembly:** pass it after the EL takes (later files win).
+- **Tested:** locked in scratch on `show/reel/ep01-v33-el/ep01-v33-el-act4.json` with `--plan pixel/act4/plan.json` (12,398 f), and `build_el.mjs act4` + `check` exit 0. v33-a4-0002 carries its 23-key track there, and Tasya's mouth moves on the TV at the EL frames.
+- **Still needed:** the EL employee take (v33-a4-0001) gets its mouth from el_takes.py like every other EL take. It isn't a cut.
+- The Kokoro outputs of `cut_mouths.py` are byte-identical to before.
+
+**Checks and render** (one job through `ops/heavy.sh`: `heavy-run33.sh`, then `fc33.sh`):
+- **The lock:** passes, 12,138 f. **`r.cjs check`:** exit 0, 79 layouts, 0 stand-ins, 0 problems.
+- **Render:** `picture --jobs 2` took 134 s wall. **`act4.mp4`: 12,138 frames, 505.75 s**, 1080p, with the v3.3 stick mix. `act4.srt` and `act4-sheet.png` (0 stand-ins) are re-made.
+- **flashcheck.py on the MP4, in four chunks:** **at most 1 flash in any 1 s** (the selfie, 4712 / 4716), **0 red. Pass.** The cut into her [M] is one darkening transition (frame 9428), not a flash.
+- **Native `flash.ts`:** at most 2 (S5.08), 0 red. **Longest held run:** 4.4 s (S5.08).
+- **tsc:** the same 20 errors, none in act4.
+
+**Looked at** (native stills, 3–4× crops, decoded MP4 frames 9410–9670):
+- the wide with one green coat;
+- her [M] talking (the mouth open and shut) and her hands on the box (a first version's fingers read as ribbing, and a plant's leaves read as buttons on her chest, so both were redrawn or cut);
+- the TV insert across the slate steps (a first mic, at 16 × 24, was a grey smudge against the foam wall; now 24 × 46 with its arm).
+
+**Weakest:**
+- The [M]'s background is the wide's pixels softened (the house MCU convention), so the room behind her is small-scale.
+- Tasya's mouth on the TV is his portrait's, under the beard: it moves, but the mic and the bug carry the "podcast" read more than the lips do.
+
 ## V32. The v3.2 round (script draft 8.1; SHOWRUNNER-NOTES 00 and 0: "Mas needs agency", the rise-to-power spine, [calibration](../../../../bible/calibration.md))
 
 ### V32.1 What changed, and where

@@ -108,7 +108,7 @@ import {drawSuiteRace} from './art/race';
 import {drawNudgeJoinInvite, CORNER_ARROW, cornerTileTip} from './art/invite';
 import {planZerosV3, letterAlyiV3, plateRel} from './art/texts';
 import {phonePickup, blogTyped, blogSpeakerWindow, rimaTileLabel, heartCount, BLOG_CHARS} from './art/v32';
-import {drawBlankPage, drawEmployee, EMPLOYEE, drawWallTV} from './art/v33';
+import {drawBlankPage, drawEmployee, EMPLOYEE, drawWallTV, recolourCrowd, drawEmployeeM, drawTVInsert} from './art/v33';
 import {drawWindowTwoShot, wifiBars, planChairV3, firstTileStrip, alyiTileLit} from './art/v31';
 
 const L = registry();
@@ -780,13 +780,22 @@ const tvFree = (x: number, y: number) => !crowdMask()[y * 480 + x];
 const EMP_AT: [number, number] = [372, 199]; // where Tasya stood in v3.2's S7.02, facing Mas at his end desk
 const S702_DRIFT = (k: number) => -Math.min(10, Math.floor(k / 14)); // toward her, 1 px / 14 f
 const slateStep = (k: number, t: number) => (k < t ? 0 : k < t + 5 ? 1 : k < t + 10 ? 2 : 3); // v5 stepOf5
-L.add('S7.02', {kind: 'V', st: V('S7.02', 'v3.3 (S4 / P17): v5 S7.02\'s walkout wide (coats, packed boxes, Mas at his end desk, the badges on it) with THE EMPLOYEE who asked "Is this a coup?" where Tasya stood, a box in her arms, facing Mas (art/v33 drawEmployee: the room\'s own walkout extra with her tile\'s hair and skin, the green parka), speaking: her mouth opens on the take\'s syllables (v33-a4-0001, room scale), her face lit one rung (kits/face-light, "her mouth lit"), and the frame drifting toward her, 1 px / 14 f; behind, the bullpen\'s wall TV plays softly (art/v33 drawWallTV: Tasya at a podcast mic, listening), hung behind the crowd'),
-  face: {EMPLOYEE: 'room', MAS: null},
+L.add('S7.02', {kind: 'V', st: V('S7.02', 'v3.3: v5 S7.02\'s walkout wide (coats, packed boxes, Mas at his end desk, the badges on it) with THE EMPLOYEE who asked "Is this a coup?" where Tasya stood, a box in her arms, facing Mas (art/v33 drawEmployee: the room\'s walkout extra with her tile\'s hair and skin, the green parka), her face lit one rung, the frame drifting toward her; v3.3b (the newcomer: "I can\'t find who\'s speaking"): the two other green parkas re-coated (art/v33 recolourCrowd), so hers is the one green coat, and on her line\'s first word the stepped push in, one drawn size: her [M] (art/v33 drawEmployeeM, on the civic kit: her long dark hair, the green parka, the box in her arms, lip-synced, blinking) over the bullpen soft behind her (framing mcuRoom), a whole-pixel drift; behind her in the wide, the bullpen\'s wall TV plays softly (art/v33 drawWallTV: Tasya at a podcast mic, listening)'),
+  face: {EMPLOYEE: 'lip', MAS: null},
+  marks: {push: ['on', 'v33-a4-0001', 0]},
   draw: (fb, k, sh, f) => {
+    const push = mk(sh, 'push', 33);
+    if (k >= push) { // [M]: her, close, speaking
+      held(fb, 'v3a4:s702-m-bg', (b) => { bullpenRoom(b, 0, {variant: 'walkout'}, {mas: false, tasya: null, landlord: {floor: 0, ceiling: 0, walls: 0}}); recolourCrowd(b); mcuRoom(b, {third: 'R'}); });
+      shiftRoom(fb, -Math.min(6, Math.floor((k - push) / 16)));
+      drawEmployeeM(fb, {mouth: mouth(sh, k, 'EMPLOYEE'), lid: blink(k, 4), look: -1});
+      return;
+    }
     const em = roomMouth(sh, k, 'EMPLOYEE');
     held(fb, `v3a4:s702e-${em}`, (b) => {
       const A = bullpenRoom(b, 0, {variant: 'walkout'}, {mas: {mouth: 'rest'}, tasya: null, landlord: {floor: 0, ceiling: 0, walls: 0},
         stage: (bb) => drawEmployee(bb, EMP_AT[0], EMP_AT[1], {mouth: em, flip: true})});
+      recolourCrowd(b);
       badgesOnDeskRoom(b, A.masDesk[0] + BADGES_ROOM_AT[0], A.masDesk[1] + BADGES_ROOM_AT[1]);
       const [hx0, hy0, hx1, hy1] = EMPLOYEE.head, x0 = EMP_AT[0] - EMPLOYEE.foot[0], y0 = EMP_AT[1] - EMPLOYEE.foot[1];
       faceKey(b, x0 + EMPLOYEE.w - hx1, y0 + hy0, x0 + EMPLOYEE.w - hx0, y0 + hy1, 1, -1); // her face, flipped: lit from Mas's side
@@ -794,18 +803,11 @@ L.add('S7.02', {kind: 'V', st: V('S7.02', 'v3.3 (S4 / P17): v5 S7.02\'s walkout 
     drawWallTV(fb, {f, mouth: 'smile', lid: blink(k, 9)}, tvFree);
     shiftRoom(fb, S702_DRIFT(k));
   }});
-L.add('S7.02b', {kind: 'V', st: V('S7.02b', 'v3.3 (S5 / P17): the same wide, held on (the cut is continuous; Tasya is off the floor): the bullpen\'s wall TV plays his interview clip, TASYA at a podcast mic lip-synced (art/v33 drawWallTV, v33-a4-0002 on the TV\'s small speaker), while the staff stand packed in front of it and the employee holds her box; on "below" the floor steps to Macrosoft slate, on "above" the ceiling, on "around" the walls (v5\'s landlord steps, 3 held steps each); the TV doesn\'t step'),
+L.add('S7.02b', {kind: 'V', st: V('S7.02b', 'v3.3b (audit #10: "the podcast mic isn\'t drawn"; the newcomer): the cut in to the bullpen\'s wall TV, from the wide to an insert (art/v33 drawTVInsert): the screen fills the frame, and his interview plays on it: TASYA warm-lit on the interview set (acoustic foam, two practicals, the desk), lip-synced (v33-a4-0002 on the TV\'s small speaker), a foam-covered podcast mic on a boom arm in front of him, a PODCAST bug in the corner; a colleague\'s head and a packed box in silhouette in the foreground keep us in the bullpen; round the TV the wall, ceiling and floor step to Macrosoft slate on "around", "above" and "below" (rooms/bullpen toSlate, 3 held steps each); the 1.35 s hold after "…around them." stays on the screen'),
   face: {TASYA: 'lip'},
   draw: (fb, k, sh, f) => {
-    const L2 = {floor: slateStep(k, mk(sh, 'below', 20)), ceiling: slateStep(k, mk(sh, 'above', 51)), walls: slateStep(k, mk(sh, 'around', 80))};
-    held(fb, `v3a4:s702b-${L2.floor}${L2.ceiling}${L2.walls}`, (b) => {
-      const A = bullpenRoom(b, 0, {variant: 'walkout'}, {mas: {mouth: 'rest'}, tasya: null, landlord: L2,
-        stage: (bb) => drawEmployee(bb, EMP_AT[0], EMP_AT[1], {flip: true})});
-      badgesOnDeskRoom(b, A.masDesk[0] + BADGES_ROOM_AT[0], A.masDesk[1] + BADGES_ROOM_AT[1]);
-    });
-    drawWallTV(fb, {f, mouth: mouth(sh, k, 'TASYA'), lid: blink(k, 9)}, tvFree);
-    const s702 = shotOf('S7.02');
-    shiftRoom(fb, S702_DRIFT(s702 ? len(s702) : 143));
+    const slate = {floor: slateStep(k, mk(sh, 'below', 20)), ceiling: slateStep(k, mk(sh, 'above', 51)), walls: slateStep(k, mk(sh, 'around', 80))};
+    drawTVInsert(fb, {f, mouth: mouth(sh, k, 'TASYA'), lid: blink(k, 9), slate});
   }});
 L.add('v31-S7.03b', {kind: 'V', st: V31('kits/act4-v31 drawTuesdayInvite [ECU]: his end desk, the GUEST lanyard and the MACROSOFT badge; his phone wakes and the invite slides down in the cold open\'s calendar UI (Board · Tue 10:00 PM, Accept / Decline, a spinner, a fire helmet, a blank); his thumb straight down on Accept on the tap\'s sound (no hover); accepted'),
   marks: {tap: ['snd', 'key_tap_soft_02', 1, 0]},
