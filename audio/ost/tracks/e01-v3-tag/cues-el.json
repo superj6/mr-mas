@@ -3,10 +3,10 @@
  "id": "e01-v3-tag-el",
  "segment": "tag",
  "file": "audio/ost/tracks/e01-v3-tag/render/music-el.wav",
- "timeline": "show/reel/ep01-v33-el/ep01-v33-el-tag.json",
- "length_s": 42.333333333333336,
- "frames": 1016,
- "samples": 2032000,
+ "timeline": "show/reel/ep01-v34-el/ep01-v34-el-tag.json",
+ "length_s": 33.25,
+ "frames": 798,
+ "samples": 1596000,
  "sample_rate": 48000,
  "channels": 2,
  "clock": "the segment's own clock: 0 = its first frame (timeEpisode, head 0)",
@@ -15,15 +15,15 @@
   {
    "cue": "tag_december",
    "start": 0.0,
-   "end": 42.333333333333336,
+   "end": 33.25,
    "what": "MM-12 december (to picture): the felt takes the vault's F; the Water Line; the verdict two beats late; cut by the thud; the button with no third",
    "render": "audio/ost/tracks/e01-v3-tag/render/_work/el/tag_december-underscore.wav",
    "laid_at_s": 0.6,
    "level": {
-    "lufs_i": -21.65,
-    "st_p95": -19.49,
-    "st_max": -19.08,
-    "true_peak_dbtp": -3.15
+    "lufs_i": -21.03,
+    "st_p95": -19.31,
+    "st_max": -18.87,
+    "true_peak_dbtp": -3.16
    },
    "engine_qa": {
     "masters": {
@@ -41,33 +41,31 @@
       "q": 0.7
      },
      "measured": {
-      "lufs": -21.03,
-      "lra": 13.06,
-      "true_peak_db": -3.15,
+      "lufs": -21.0,
+      "lra": 10.29,
+      "true_peak_db": -3.16,
       "peak_db": -3.16,
-      "rms_db": -26.96,
-      "crest_db": 23.81,
-      "seconds": 41.7333
+      "rms_db": -26.02,
+      "crest_db": 22.86,
+      "seconds": 32.65
      }
     },
     "f_major_ok": true,
     "f_major_ok_written": true,
-    "f_major_worst": 0.068,
+    "f_major_worst": 0.066,
     "knee_whole": 0,
     "knee_completion": 0,
     "hit_check": {
-     "within_10ms": 4,
-     "of": 7,
-     "worst_ms": 37.7
+     "within_10ms": 5,
+     "of": 6,
+     "worst_ms": 30.6
     },
     "warnings": [
-     "marker at 10.8583 s: no clear onset within 10 ms ({'t': 10.8583, 'offset_ms': np.float64(37.7), 'strength': 2.55})",
-     "marker at 20.45 s: no clear onset within 10 ms ({'t': 20.45, 'offset_ms': np.float64(19.3), 'strength': 2.45})",
-     "marker at 27.8583 s: no clear onset within 10 ms ({'t': 27.8583, 'offset_ms': np.float64(-10.3), 'strength': 4.36})"
+     "marker at 11.3667 s: no clear onset within 10 ms ({'t': 11.3667, 'offset_ms': np.float64(30.6), 'strength': 2.3})"
     ]
    },
    "note_qa": {
-    "notes": 54,
+    "notes": 53,
     "written_third_ok": true,
     "written_third_events": [],
     "grazes": 0,
@@ -81,243 +79,124 @@
      "hit": false
     },
     {
-     "t": 3.5,
-     "what": "the demo opens up: MM-12 ducks to the room (the film plays its own bed)",
-     "hit": false
-    },
-    {
-     "t": 11.458,
-     "what": "a tiny chip blip as the monitor's still snaps back to the grid (i213)",
+     "t": 3.1,
+     "what": "the Water Line, plain (F F F G-sw F | C F); the chip on the nudge",
      "hit": true
     },
     {
-     "t": 10.875,
-     "what": "the Water Line, plain (F F F G-sw F | C F); the chip on the nudge (the room returns with the pull-back, i199)",
-     "hit": true
-    },
-    {
-     "t": 16.692,
+     "t": 7.608,
      "what": "one held Bbm9 under the V.O. (nothing moves)",
      "hit": false
     },
     {
-     "t": 21.05,
+     "t": 11.967,
      "what": "the cut to the scan two-shot: the felt re-voices to an open F (a designed change on the cut)",
      "hit": true
     },
     {
-     "t": 22.12,
+     "t": 13.037,
      "what": "THE VERDICT: F5 (after the toast's blink, never on it)",
      "hit": true
     },
     {
-     "t": 23.97,
+     "t": 14.887,
      "what": "THE VERDICT: C6 (after the toast's blink, never on it)",
      "hit": true
     },
     {
-     "t": 28.458,
+     "t": 19.375,
      "what": "the back wall: the Water Line once more",
      "hit": true
     },
     {
-     "t": 31.583,
-     "what": "THE THUD: the line stops dead before its settle (3 ms, tails cut)",
+     "t": 22.5,
+     "what": "THE THUD: the line stops dead before its settle (5 ms, tails cut)",
      "hit": false
     },
     {
-     "t": 39.093,
+     "t": 30.01,
      "what": "THE BUTTON: F3 C4 G4 C5, no third (the vault's F hum is its root)",
      "hit": true
-    }
-   ]
-  },
-  {
-   "cue": "demo_film",
-   "start": 2.583,
-   "end": 8.875,
-   "what": "ELGOOG's product film, its own (diegetic) bed: glossy, airy, no melody; small on the monitor to i22; chopped on the stutter; dead on the first still",
-   "render": "audio/ost/tracks/e01-v3-tag/render/_work/el/demo_film-underscore.wav",
-   "laid_at_s": 2.5833,
-   "level": {
-    "lufs_i": -24.15,
-    "st_p95": -22.85,
-    "st_max": -22.39,
-    "true_peak_dbtp": -10.58
-   },
-   "engine_qa": {
-    "masters": {
-     "target_lufs": -20.0,
-     "ceiling_dbtp": -3.0,
-     "comp": {
-      "thresh_db": -28,
-      "ratio": 1.3,
-      "att_ms": 40.0,
-      "rel_ms": 350.0
-     },
-     "dialog_pocket": {
-      "f": 2500.0,
-      "db": -2.0,
-      "q": 0.7
-     },
-     "measured": {
-      "lufs": -20.0,
-      "lra": 7.55,
-      "true_peak_db": -6.28,
-      "peak_db": -6.28,
-      "rms_db": -22.8,
-      "crest_db": 16.51,
-      "seconds": 6.3333
-     }
-    },
-    "f_major_ok": true,
-    "f_major_ok_written": true,
-    "f_major_worst": 0.0,
-    "knee_whole": 0,
-    "knee_completion": 0,
-    "hit_check": {
-     "within_10ms": 0,
-     "of": 1,
-     "worst_ms": 20.4
-    },
-    "warnings": [
-     "marker at 3.9583 s: no clear onset within 10 ms ({'t': 3.9583, 'offset_ms': np.float64(20.4), 'strength': 1.68})",
-     "2-6 kHz band -13.8 dB > -15 dB (s6.5: under dialogue)"
-    ]
-   },
-   "note_qa": {
-    "notes": 21,
-    "written_third_ok": true,
-    "written_third_events": [],
-    "grazes": 0,
-    "knee_completion": 0,
-    "knee_whole": 0
-   },
-   "sync": [
-    {
-     "t": 2.583,
-     "what": "the demo film: its bed, small on the monitor",
-     "hit": false
-    },
-    {
-     "t": 3.5,
-     "what": "the sheen opens up (the grid dissolves)",
-     "hit": false
-    },
-    {
-     "t": 6.542,
-     "what": "the glow as the duck becomes real",
-     "hit": true
-    },
-    {
-     "t": 8.292,
-     "what": "the stutter: the bed chopped in step with the held frames",
-     "hit": false
-    },
-    {
-     "t": 8.875,
-     "what": "the first still: the sheen cuts out dead",
-     "hit": false
     }
    ]
   }
  ],
  "silences_designed": [
   {
-   "t0": 31.583,
-   "t1": 39.093,
+   "t0": 22.5,
+   "t1": 30.01,
    "why": "the thud -> the button: no score (the front page, \"noted.\")"
   },
   {
    "t0": 0.0,
    "t1": 0.6,
    "why": "the tag's head: the vault hum (a timeline sound) until the felt takes its F"
-  },
-  {
-   "t0": 8.875,
-   "t1": 10.875,
-   "why": "the stills: the demo's sheen cut dead (i151); nothing but the room until MM-12 returns with the pull-back (i199)"
   }
  ],
  "measured": {
-  "length_s": 42.3333,
-  "samples": 2032000,
-  "frames": 1016,
+  "length_s": 33.25,
+  "samples": 1596000,
+  "frames": 798,
   "exact": true,
   "whole": {
-   "lufs_i": -21.65,
-   "st_p95": -19.49,
-   "st_max": -19.08,
-   "true_peak_dbtp": -3.15
+   "lufs_i": -21.03,
+   "st_p95": -19.31,
+   "st_max": -18.87,
+   "true_peak_dbtp": -3.16
   },
   "cues": {
    "tag_december": {
-    "lufs_i": -21.65,
-    "st_p95": -19.49,
-    "st_max": -19.08,
-    "true_peak_dbtp": -3.15
-   },
-   "demo_film": {
-    "lufs_i": -24.15,
-    "st_p95": -22.85,
-    "st_max": -22.39,
-    "true_peak_dbtp": -10.58
+    "lufs_i": -21.03,
+    "st_p95": -19.31,
+    "st_max": -18.87,
+    "true_peak_dbtp": -3.16
    }
   },
   "rows": [
    {
     "section": "the dark room: the felt takes the F; the Water Line, plain",
     "start": 0.0,
-    "end": 15.88,
-    "lufs_i": -21.8,
-    "st_p95": -19.22,
-    "st_max": -19.16,
-    "true_peak_dbtp": -5.26
+    "end": 8.1,
+    "lufs_i": -20.06,
+    "st_p95": -19.07,
+    "st_max": -18.87,
+    "true_peak_dbtp": -4.5
    },
    {
     "section": "the V.O., then the Orb's scans (felt held)",
-    "start": 16.69,
-    "end": 25.0,
-    "lufs_i": -24.89,
-    "st_p95": -23.54,
-    "st_max": -23.26,
-    "true_peak_dbtp": -8.2
+    "start": 7.61,
+    "end": 15.92,
+    "lufs_i": -25.06,
+    "st_p95": -23.25,
+    "st_max": -22.81,
+    "true_peak_dbtp": -7.41
    },
    {
     "section": "the back wall: the Water Line, cut by the thud",
-    "start": 26.9,
-    "end": 31.58,
-    "lufs_i": -19.68,
-    "st_p95": -19.13,
-    "st_max": -18.96,
-    "true_peak_dbtp": -5.56
+    "start": 17.82,
+    "end": 22.5,
+    "lufs_i": -19.6,
+    "st_p95": -19.04,
+    "st_max": -18.89,
+    "true_peak_dbtp": -7.11
    },
    {
     "section": "no score: the front page, \"noted.\" (designed)",
-    "start": 31.58,
-    "end": 39.09,
+    "start": 22.5,
+    "end": 30.01,
     "lufs_i": -Infinity,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -28.48
+    "true_peak_dbtp": -27.16
    },
    {
     "section": "the button: the chord with no third, rings into the black",
-    "start": 39.09,
-    "end": 42.33,
-    "lufs_i": -21.84,
+    "start": 30.01,
+    "end": 33.25,
+    "lufs_i": -22.17,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -3.15
-   },
-   {
-    "section": "demo_film: ELGOOG's product film: the glossy demo bed (its own sound)",
-    "start": 2.58,
-    "end": 8.88,
-    "lufs_i": -24.15,
-    "st_p95": -22.85,
-    "st_max": -22.39,
-    "true_peak_dbtp": -10.58
+    "true_peak_dbtp": -3.16
    }
   ],
   "digital_silence": [
@@ -329,8 +208,8 @@
     "why": "the tag's head: the vault hum (a timeline sound) until the felt takes its F"
    },
    {
-    "t0": 31.583,
-    "t1": 39.083,
+    "t0": 22.5,
+    "t1": 30.0,
     "dur": 7.5,
     "marked": true,
     "why": "the thud -> the button: no score (the front page, \"noted.\")"
@@ -344,31 +223,21 @@
     "inside_marked": true
    },
    {
-    "t0": 8.9,
-    "t1": 10.85,
-    "inside_marked": true
-   },
-   {
-    "t0": 31.6,
-    "t1": 39.05,
+    "t0": 22.5,
+    "t1": 30.0,
     "inside_marked": true
    }
   ],
   "music_runs": [
    {
     "t0": 0.6,
-    "t1": 8.9,
-    "dur": 8.3
+    "t1": 22.5,
+    "dur": 21.9
    },
    {
-    "t0": 10.85,
-    "t1": 31.6,
-    "dur": 20.75
-   },
-   {
-    "t0": 39.05,
-    "t1": 42.15,
-    "dur": 3.1
+    "t0": 30.0,
+    "t1": 33.05,
+    "dur": 3.05
    }
   ],
   "fragments_under_2s": [],
@@ -381,25 +250,12 @@
    "laid_at_s": 0.6,
    "window": [
     0.0,
-    42.333
+    33.25
    ],
    "fade_in_s": 0.0,
    "fade_out_s": 0.05,
    "gain_db": 0.0,
    "post": null
-  },
-  {
-   "name": "demo_film",
-   "file": "audio/ost/tracks/e01-v3-tag/render/_work/el/demo_film-underscore.wav",
-   "laid_at_s": 2.5833,
-   "window": [
-    2.583,
-    9.583
-   ],
-   "fade_in_s": 0.1,
-   "fade_out_s": 0.003,
-   "gain_db": -3.98,
-   "post": "the monitor speaker to i22; the stutter's chops; dead on the first still (DEMO=0 drops the layer)"
   }
  ],
  "source": "audio/ost/tracks/e01-v3-tag/track.py",

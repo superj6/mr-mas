@@ -298,6 +298,9 @@ def cue_a(tl):
             name = harm(b)
             fe, root, sub = LN[name]
             t = bar(b) if bar(b) >= 0.6 else 0.0             # (a bar at the head: its chord is the act's downbeat)
+            cut_ = [bb['t0'] for bb in tl.beats if 0.0 < t - bb['t0'] < 0.35]
+            if cut_ and t >= 0.6:                            # v3.4: a change just after a cut pre-laps it instead
+                t = cut_[0] - 0.1                            # (sound leads; no chord lands 0.1-0.3 s after a cut)
             vo = vo_bar(b)
             change = name != prev
             prev = name
@@ -778,7 +781,7 @@ def cue_code_red(tl):
     c.n('snare', 38, lany + 0.1, 0.1, 0.3)
     V.clip_before(c, lock, rel=0.03)
     V.drop_window(c, lock, lock + 30)
-    c.mark(lock, 'THE LOCK: the phone locks; its audio stops dead (3 ms)', hit=False)
+    c.mark(lock, 'THE LOCK: the phone locks; its audio stops dead (5 ms)', hit=False)
     V.thin(c, {'talk': dict(drop={'xylo', 'woodclick', 'hn_s', 'siren2'}, soften={'siren1': 0.6, 'bsn': 0.7,
                                                                                     'tuba': 0.7, 'timp': 0.6}),
                'real': dict(drop={'xylo', 'woodclick', 'hn_s', 'siren1', 'siren2', 'pz2', 'pzv'}),
@@ -929,7 +932,7 @@ def cue_lobby(tl):
     c.mark(pushp, 'the last push (C7#9) on the swung and-of-4')
     V.clip_before(c, pop, rel=0.03)
     V.drop_window(c, pop, pop + 30)
-    c.mark(pop, 'THE POP: the band stops dead on the downbeat (3 ms); the collar #3', hit=False)
+    c.mark(pop, 'THE POP: the band stops dead on the downbeat (5 ms); the collar #3', hit=False)
     # the freeze: the band keeps moving (Mas does) but thins; the felt under the V.O.
     for l in tl.lines_in(freeze, tl.B('9.06'), kinds={'vo'}):
         c.pch('felt', ['Ab3', 'C4', 'Eb4'], l['on'] - 0.3, l['end'] - l['on'] + 0.6, 0.13, roll=0.02)
@@ -1354,7 +1357,7 @@ def cue_pause(tl):
     else:
         V.clip_before(c, thud, rel=0.02)
         V.drop_window(c, thud, thud + 60)
-        c.mark(thud, 'EMIT\'s THUD stops it dead (3 ms)', hit=False)
+        c.mark(thud, 'EMIT\'s THUD stops it dead (5 ms)', hit=False)
     V.thin(c, {'talk': dict(drop={'hn_m', 'lead2'}, soften={'grand': 0.8}),
                'real': dict(drop={'hn_m', 'lead2', 'grand'}),
                'mas': dict(drop={'hn_m', 'lead2'})}, t0=push, t1=stop - 0.02)

@@ -25,7 +25,7 @@ held on the two of them and cut by the tour's stamp.  README.md has the details.
                                 clone's real line, then a deadpan pizzicato two-feel in D-flat over the court's F
                                 (low strings pizz, brushed snare, bassoon, straight-mute trumpet asides in the gaps);
                                 a low-string pedal only under every real line; Sucram's card holds its beat;
-                                IT STOPS on the wallet (15.12), 3 ms (the room's air under it)
+                                IT STOPS on the wallet (15.12), 5 ms (the room's air under it)
   130.3 - 142.1    -            the wallet, the gasp, "Health insurance.", the stamps, "...no equity": no score
   142.1 - 155.8    senate_b     back on a new phrase after his line; the ask (PLEASE REGULATE ME) gets the
                                 trumpet's one rising line before Sucram's stamp; the back of the sheet leaves the
@@ -42,7 +42,7 @@ held on the two of them and cut by the tour's stamp.  README.md has the details.
                                 each time (vibes + straight mute), dry under his real line; THE CLOSE (C G F + the
                                 bari/trombone fifth) lands on the cut to his finger and LEAVES THE DOWNBEAT: the
                                 KA-CHING (a timeline sound) is the downbeat.  Phrase 3 climbs on, featured; at the
-                                crack in the sky (17.11) it DROPS OUT mid-climb (3 ms)
+                                crack in the sky (17.11) it DROPS OUT mid-climb (5 ms)
   195.1 - 204.75   -            the act-out: the register's bell alone (a timeline sound), decaying; no score
                                 (v3.3: the glass is cut; the act-out is the upsell's ending, see act_out())
 
@@ -207,10 +207,12 @@ def cue_wh(tl):
     vo_felt(c, chord_at, 0.0, door - 0.1)
     # ---- ON THE DOOR: the Fountain Pen (NEDIB): the march yields; legato quartet; the muted trumpet's flat line
     V.clip_before(c, door, insts={'vc', 'cb', 'vla_d', 'vln2_d', 'harp', 'vln1'}, rel=0.5)
-    vo13 = [l for l in tl.lines_in(door, end, kinds={'vo'})]
+    flash = tl.B('13.12') if tl.has('13.12') else door + 5.7
+    # (the V.O. between the door and the flash gets the Gm7 after it; v3.4's "mine's half written." falls after the
+    # flash, between Nedib's two lines: the Ebmaj7 pad holds under it, nothing attacks)
+    vo13 = [l for l in tl.lines_in(door, flash, kinds={'vo'})]
     ned = [l for l in tl.lines_in(door, end) if l['who'] == 'nedib']
     mas_ph = [l for l in tl.lines_in(tl.B('13.14'), end) if l['who'] == 'mas']
-    flash = tl.B('13.12') if tl.has('13.12') else door + 5.7
     t_gm = (vo13[0]['end'] + 0.1) if vo13 else door + 3.0
     w0 = (ned[-1]['end'] + 0.05) if ned else tl.B('13.14') - 0.6
     w1 = (mas_ph[0]['on'] - 0.12) if mas_ph else w0 + 2.6
@@ -221,6 +223,7 @@ def cue_wh(tl):
            'Cm7': ['C3', 'G3', 'Eb4', 'Bb4'], 'Bb/D': ['D3', 'F3', 'Bb3', 'F4'], 'F9sus4': ['F2', 'Eb3', 'Bb3', 'G4']}
     fin = w0 + 4 * st
     pads.append((fin, 'Bb'))
+    pads = [p for i, p in enumerate(pads) if i == 0 or p[0] > pads[i - 1][0] + 0.2]   # strictly in time order
     for i, (t, name) in enumerate(pads):
         t1 = pads[i + 1][0] if i + 1 < len(pads) else ring_end - 0.3
         for inst, p in zip(('vc', 'vla', 'vln2', 'vln1'), PAD[name]):
@@ -398,7 +401,7 @@ def cue_senate_a(tl):
         c.n('vla', 'C4', freeze - 0.02, Q + 0.2, 0.18, art='sus', att=0.02, rel=0.3)
         c.mark(freeze, 'Sucram\'s card: the groove holds its beat', hit=False)
     V.clip_before(c, stop, rel=0.05)
-    c.mark(stop, 'THE WALLET: the music stops (3 ms; the room\'s air under it)', hit=False)
+    c.mark(stop, 'THE WALLET: the music stops (5 ms; the room\'s air under it)', hit=False)
     c.section('the court\'s F under the real line', start, groove0)
     c.section('a lighter Under Oath: the pizz two-feel, brushes, the mute\'s asides' + (' (v3.2: the ask, his real '
               'line on the pedal; the senators\' delight on the mute)' if ask else ''), groove0, stop)
@@ -818,7 +821,7 @@ def cue_upsell(tl):
     c.section('the register rolls in: the walk, the GPU clock, the Upsell\'s cells (dry under his line)', t_in, tc)
     c.section('the close; the slot (the KA-CHING)', tc, slot + Q)
     if ao is None:
-        c.mark(stop, 'THE CRACK: the score drops out mid-climb (3 ms); the bell decays alone', hit=False)
+        c.mark(stop, 'THE CRACK: the score drops out mid-climb (5 ms); the bell decays alone', hit=False)
         c.section('phrase 3: the climb, featured; cut at the crack', slot + Q, stop)
         macro = [(t_in - 0.5, -1.0), (slot - 0.05, -1.0), (slot + 0.2, 2.5), (stop + 1.0, 2.5)]
     else:
@@ -906,7 +909,9 @@ def lay(tl, built, work):
         dict(name='run_roof', wav=wav('run_roof'), T0=T0('run_roof'), a0=tl.B('16.01') - 0.004, a1=reg + 0.7,
              fin=0.004, fout=0.7),
         dict(name='upsell', wav=wav('upsell'), T0=T0('upsell'), a0=up.next8(reg - 0.02) - 0.05,
-             a1=crack if ao is None else tl.length, fin=0.05, fout=0.005 if ao is None else 0.02),
+             a1=crack if ao is None else tl.length, fin=0.05, fout=0.005 if ao is None else 0.02,
+             gain_db=0.0 if ao is None else -0.6),     # (v3.3+: the act-out's quiet tail lifts the cue's master by
+                                                        #  ~0.5 dB; laid 0.6 dB down, phrase 3 stays under -16 p95)
     ]
     stops = [(stop_wallet, t_re - 0.03)] + ([(crack, tl.length)] if ao is None else [])
     designed = [(wh_ring_end(tl), tl.B('15.01'), 'THE BRIDGE: no score (sc 14: the phone, the water, the plink)'),

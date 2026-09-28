@@ -2,7 +2,19 @@
 
 **Composer X (`v3-score-a`), 2026-09-27.** Track A1 of [PLAN.md](../../../../show/episodes/ep01/production/full-v3/PLAN.md). Mood map: *quiet, wry* (the Water Line). **Nothing here has been listened to.** Every number is measured.
 
-## v3.3 (current, 2026-09-28)
+## v3.4 (current, 2026-09-28)
+
+**The locks:** `show/reel/ep01-v34/` and `-el`, 33.250 s (798 frames) each, exact. **The duck is cut:** 32.01 is a plain 77-frame arrival, so the demo layer is gone (it's built only when the demo beat exists). MM-12 plays through as on the v3 lock:
+- the felt's fifth takes the F;
+- the Water Line comes in with the delivery (3.1 s);
+- the B♭m9 goes under "it looks calmer than me.";
+- the verdict follows the toasts;
+- the back wall's Water Line is cut by the thud;
+- then no score until the button.
+
+**Measured:** −21.0 LUFS-I; F-major OK, knee 0, no unmarked silence or fragments; the cut check is clean.
+
+## v3.3 (superseded by v3.4, 2026-09-28)
 
 **The locks:** `show/reel/ep01-v33/` and `-el`, 42.333 s (1,016 frames) each, exact. The cover beat (32.03) holds about 1 s longer: the B♭m9 still sits under "it looks calmer than me.", and the C7sus colour after it holds the extra second until the cut to the scans; everything after it follows the timeline. Every rest fades over 5 ms. **Measured:** MM-12 −21.6 LUFS-I, the demo bed −24.2; the same checks pass.
 

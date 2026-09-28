@@ -2,7 +2,11 @@
 
 **Composer X (`v3-score-a`), 2026-09-27; round 2.** Track A1 of [PLAN.md](../../../../show/episodes/ep01/production/full-v3/PLAN.md). **Nothing here has been listened to.** Every number is measured.
 
-## v3.3 (current, 2026-09-28)
+## v3.4 (current, 2026-09-28)
+
+The same cut (640 frames; EL 583), now from `show/reel/ep01-v34/`, exact; −26.0 LUFS-I.
+
+## v3.3 (superseded by v3.4, 2026-09-28)
 
 The same cut (640 frames; EL 583), now from `show/reel/ep01-v33/`. `render/music.wav` is 26.667 s and `render/music-el.wav` is 24.292 s, both exact. The rewind is unchanged at −26.0 LUFS-I.
 

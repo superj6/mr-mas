@@ -3,10 +3,10 @@
  "id": "e01-v3-act1",
  "segment": "act1",
  "file": "audio/ost/tracks/e01-v3-act1/render/music.wav",
- "timeline": "show/reel/ep01-v33/ep01-v33-act1.json",
- "length_s": 330.5833333333333,
- "frames": 7934,
- "samples": 15868000,
+ "timeline": "show/reel/ep01-v34/ep01-v34-act1.json",
+ "length_s": 337.5416666666667,
+ "frames": 8101,
+ "samples": 16202000,
  "sample_rate": 48000,
  "channels": 2,
  "clock": "the segment's own clock: 0 = its first frame (timeEpisode, head 0)",
@@ -15,16 +15,16 @@
   {
    "cue": "a_launch",
    "start": 0.0,
-   "end": 154.508,
+   "end": 157.092,
    "what": "warm and curious in the show's voice; then a drive that builds; then the first dark bar",
    "family": "P01 colours (felt, a soft chip pulse, the Build) -> P11 energy, straight (a driving figure) -> the Ache",
    "render": "audio/ost/tracks/e01-v3-act1/render/_work/a_launch-underscore.wav",
-   "laid_at_s": -2.4583,
+   "laid_at_s": -3.2083,
    "post": null,
    "level": {
-    "lufs_i": -20.01,
-    "st_p95": -16.59,
-    "st_max": -14.31,
+    "lufs_i": -20.02,
+    "st_p95": -16.5,
+    "st_max": -14.32,
     "true_peak_dbtp": -3.15
    },
    "target_lufs": -20.0,
@@ -45,17 +45,17 @@
      },
      "measured": {
       "lufs": -20.0,
-      "lra": 12.44,
+      "lra": 12.33,
       "true_peak_db": -3.15,
       "peak_db": -3.16,
       "rms_db": -23.18,
-      "crest_db": 20.02,
-      "seconds": 156.9667
+      "crest_db": 20.03,
+      "seconds": 160.3
      }
     },
     "f_major_ok": true,
     "f_major_ok_written": true,
-    "f_major_worst": 3.546,
+    "f_major_worst": 3.302,
     "knee_whole": 0,
     "knee_completion": 0,
     "hit_check": {
@@ -64,15 +64,15 @@
      "worst_ms": 58.2
     },
     "warnings": [
+     "marker at 7.8125 s: no clear onset within 10 ms ({'t': 7.8125, 'offset_ms': np.float64(32.8), 'strength': 1.74})",
      "marker at 120.6875 s: no clear onset within 10 ms ({'t': 120.6875, 'offset_ms': np.float64(-58.2), 'strength': 2.69})",
      "marker at 128.2083 s: no clear onset within 10 ms ({'t': 128.2083, 'offset_ms': np.float64(-43.0), 'strength': 1.71})",
-     "marker at 154.8067 s: no clear onset within 10 ms ({'t': 154.8067, 'offset_ms': np.float64(25.3), 'strength': 2.24})",
-     "sub under server_hum (the bullpen, up through the floor) 2.458-156.967 s: < 60 Hz reads -11.6 dB of the total (limit -18.0; from {'bass': 99})",
-     "underscore short-term p95 -16.63 LUFS > -17 (underscore) (s6.5): the loudest moments sit high above the bed"
+     "sub under server_hum (the bullpen, up through the floor) 3.208-160.3 s: < 60 Hz reads -11.6 dB of the total (limit -18.0; from {'bass': 99})",
+     "underscore short-term p95 -16.69 LUFS > -17 (underscore) (s6.5): the loudest moments sit high above the bed"
     ]
    },
    "note_qa": {
-    "notes": 610,
+    "notes": 611,
     "written_third_ok": true,
     "written_third_events": [],
     "grazes": 0,
@@ -82,7 +82,7 @@
    "clock_notes": [],
    "sync": [
     {
-     "t": 50.042,
+     "t": 49.292,
      "what": "the Ache's colour, once, under \"And what if it wakes up?\" (the Build gives way on the cut to her)",
      "hit": false
     },
@@ -92,177 +92,177 @@
      "hit": true
     },
     {
-     "t": 0.667,
+     "t": 0.698,
      "what": "the Build: compile pass (4)",
      "hit": true
     },
     {
-     "t": 1.917,
+     "t": 1.948,
      "what": "the Build: compile pass (8)",
      "hit": true
     },
     {
-     "t": 4.573,
+     "t": 4.604,
      "what": "the Build: compile pass (16)",
      "hit": true
     },
     {
-     "t": 8.792,
+     "t": 8.823,
      "what": "the Build: compile pass (8)",
      "hit": true
     },
     {
-     "t": 15.667,
+     "t": 13.979,
      "what": "the Build: compile pass (16)",
      "hit": true
     },
     {
-     "t": 19.885,
+     "t": 18.198,
      "what": "the Build: compile pass (4)",
      "hit": true
     },
     {
-     "t": 27.698,
-     "what": "the Build: compile pass (12)",
+     "t": 26.167,
+     "what": "the Build: compile pass (16)",
      "hit": true
     },
     {
-     "t": 48.479,
+     "t": 47.729,
      "what": "the Build: compile pass (8)",
      "hit": true
     },
     {
-     "t": 55.042,
+     "t": 54.292,
      "what": "the Build: compile pass (16)",
      "hit": true
     },
     {
-     "t": 59.26,
+     "t": 58.51,
      "what": "the Build: compile pass (12)",
      "hit": true
     },
     {
-     "t": 64.104,
+     "t": 63.354,
      "what": "the Build: compile pass (16)",
      "hit": true
     },
     {
-     "t": 69.417,
+     "t": 68.667,
      "what": "the click: the knee's flat line on the chip (F F F F): nothing happens yet",
      "hit": true
     },
     {
-     "t": 76.227,
+     "t": 75.477,
      "what": "the Door: Ab4 (after his first line)",
      "hit": true
     },
     {
-     "t": 76.647,
+     "t": 75.897,
      "what": "the Door: Db5",
      "hit": true
     },
     {
-     "t": 77.987,
+     "t": 77.237,
      "what": "the Door: C5 (after \"you counted.\")",
      "hit": true
     },
     {
-     "t": 78.327,
+     "t": 77.577,
      "what": "the Door: G4, the #4 held (it never cadences)",
      "hit": true
     },
     {
-     "t": 70.042,
+     "t": 69.292,
      "what": "A2: felt only, Dbmaj9(#11) (the deceptive IV after the click)",
      "hit": true
     },
     {
-     "t": 85.042,
+     "t": 84.292,
      "what": "the Build: compile pass (4)",
      "hit": true
     },
     {
-     "t": 89.573,
+     "t": 88.823,
      "what": "the Build: compile pass (8)",
      "hit": true
     },
     {
-     "t": 94.729,
+     "t": 93.979,
      "what": "the Build: compile pass (8)",
      "hit": true
     },
     {
-     "t": 100.042,
+     "t": 99.292,
      "what": "M1: the felt arrives on A-flat major (Abmaj7) with \"it likes me.\" (the one warm arrival)",
      "hit": false
     },
     {
-     "t": 101.292,
+     "t": 100.542,
      "what": "M1 THE WARM ACCENT: the Build's pass in its A-flat major (16), after \"it likes me.\" (the payoff to the click)",
      "hit": true
     },
     {
-     "t": 107.542,
+     "t": 106.792,
      "what": "A4 THE LIFT: the counter ticks (the pulse, the Build 4 + 8)",
      "hit": true
     },
     {
-     "t": 110.042,
+     "t": 109.292,
      "what": "phrase 1: the odometer grows: the knee's kink (G Ab C), left hanging",
      "hit": true
     },
     {
-     "t": 115.042,
+     "t": 114.292,
      "what": "THE CLUNK: through the desk, the harmony drops a major third (E); the spiccato joins",
      "hit": true
     },
     {
-     "t": 117.542,
+     "t": 116.792,
      "what": "the last second before the million: B13sus, the tremolo swell, the Build climbing",
      "hit": true
     },
     {
-     "t": 117.917,
+     "t": 117.167,
      "what": "a one-beat break before the million",
      "hit": false
     },
     {
-     "t": 118.229,
+     "t": 117.479,
      "what": "the push into the MILLION (the and-of-4): brass + the tag \"shipped\" (Eb5 -> Ab5)",
      "hit": true
     },
     {
-     "t": 118.542,
+     "t": 117.792,
      "what": "THE MILLION: no attack on the downbeat (the odometer ratchet owns it)",
      "hit": false
     },
     {
-     "t": 119.325,
+     "t": 118.575,
      "what": "his post pops over the million (the SFX's pop on F); the drive runs on, the violins climb to the cut",
      "hit": false
     },
     {
-     "t": 122.125,
+     "t": 121.375,
      "what": "the band hit on the cut to Rima; then the held chord (thin under \"Low-key.\" / \"Basement.\")",
      "hit": true
     },
     {
-     "t": 125.75,
+     "t": 125.0,
      "what": "THE TURN: Abmaj9 -> the Ache over F (vc Ab2 -> F2, vln Eb5 -> Db5; C and G held)",
      "hit": true
     },
     {
-     "t": 140.458,
+     "t": 143.042,
      "what": "the tear: the Ache rings once more; the F pedal holds on into the call",
      "hit": false
     },
     {
-     "t": 145.458,
+     "t": 148.042,
      "what": "THE CALL (v3.2): the F pedal and the shimmer hold under it",
      "hit": false
     },
     {
-     "t": 152.348,
+     "t": 154.932,
      "what": "the call: Tasya's Rhodes, one soft chord on \"pen\" (his colour before he arrives); the glass D-flat falls to C",
      "hit": true
     }
@@ -270,18 +270,18 @@
   },
   {
    "cue": "code_red",
-   "start": 153.808,
-   "end": 186.858,
+   "start": 156.392,
+   "end": 189.4,
    "what": "comic panic, the siren as a joke",
    "family": "comic panic (a v3 colour): P11 energy, pizzicato; diegetic through the phone",
    "render": "audio/ost/tracks/e01-v3-act1/render/_work/code_red-underscore.wav",
-   "laid_at_s": 149.4583,
+   "laid_at_s": 152.0417,
    "post": "era.futz('phone'): his phone's small speaker",
    "level": {
-    "lufs_i": -22.01,
-    "st_p95": -20.77,
-    "st_max": -19.8,
-    "true_peak_dbtp": -12.51
+    "lufs_i": -22.0,
+    "st_p95": -20.79,
+    "st_max": -19.82,
+    "true_peak_dbtp": -12.53
    },
    "target_lufs": -22.0,
    "engine_qa": {
@@ -301,12 +301,12 @@
      },
      "measured": {
       "lufs": -20.0,
-      "lra": 2.88,
-      "true_peak_db": -6.25,
-      "peak_db": -6.26,
+      "lra": 2.89,
+      "true_peak_db": -6.27,
+      "peak_db": -6.27,
       "rms_db": -22.71,
-      "crest_db": 16.45,
-      "seconds": 37.42
+      "crest_db": 16.44,
+      "seconds": 37.3783
      }
     },
     "f_major_ok": true,
@@ -335,41 +335,41 @@
    "clock_notes": null,
    "sync": [
     {
-     "t": 153.808,
+     "t": 156.392,
      "what": "the siren's whine J-cuts in as he lowers the phone, after the hang-up (v3.2) (on his phone)",
      "hit": false
     },
     {
-     "t": 156.958,
+     "t": 159.542,
      "what": "THE SIREN AS A JOKE: the tower rises; the orchestra wails the swoop",
      "hit": true
     },
     {
-     "t": 164.008,
+     "t": 166.592,
      "what": "the crypt: a staccato ascent (tuba + bassoon)",
      "hit": true
     },
     {
-     "t": 186.858,
-     "what": "THE LOCK: the phone locks; its audio stops dead (3 ms)",
+     "t": 189.4,
+     "what": "THE LOCK: the phone locks; its audio stops dead (5 ms)",
      "hit": false
     }
    ]
   },
   {
    "cue": "lobby",
-   "start": 187.2,
-   "end": 207.875,
+   "start": 189.783,
+   "end": 210.458,
    "what": "caper, charming: a swinging deal that stops on a pop",
    "family": "P06 THE JOB (Tasya's Rhodes colour)",
    "render": "audio/ost/tracks/e01-v3-act1/render/_work/lobby-underscore.wav",
-   "laid_at_s": 185.375,
+   "laid_at_s": 187.9583,
    "post": null,
    "level": {
     "lufs_i": -19.98,
-    "st_p95": -18.83,
-    "st_max": -18.47,
-    "true_peak_dbtp": -6.45
+    "st_p95": -18.79,
+    "st_max": -18.48,
+    "true_peak_dbtp": -6.41
    },
    "target_lufs": -20.0,
    "engine_qa": {
@@ -390,30 +390,30 @@
      "measured": {
       "lufs": -20.0,
       "lra": 2.81,
-      "true_peak_db": -6.45,
-      "peak_db": -6.45,
-      "rms_db": -21.83,
-      "crest_db": 15.37,
+      "true_peak_db": -6.41,
+      "peak_db": -6.41,
+      "rms_db": -21.81,
+      "crest_db": 15.4,
       "seconds": 22.52
      }
     },
     "f_major_ok": true,
     "f_major_ok_written": true,
-    "f_major_worst": 0.052,
+    "f_major_worst": 0.042,
     "knee_whole": 0,
     "knee_completion": 0,
     "hit_check": {
      "within_10ms": 5,
      "of": 7,
-     "worst_ms": 49.6
+     "worst_ms": 36.3
     },
     "warnings": [
-     "marker at 5.3723 s: no clear onset within 10 ms ({'t': 5.3723, 'offset_ms': np.float64(-49.6), 'strength': 1.52})",
-     "marker at 22.2917 s: no clear onset within 10 ms ({'t': 22.2917, 'offset_ms': np.float64(36.3), 'strength': 2.37})"
+     "marker at 5.3307 s: no clear onset within 10 ms ({'t': 5.3307, 'offset_ms': np.float64(16.0), 'strength': 1.53})",
+     "marker at 22.2917 s: no clear onset within 10 ms ({'t': 22.2917, 'offset_ms': np.float64(36.3), 'strength': 2.36})"
     ]
    },
    "note_qa": {
-    "notes": 272,
+    "notes": 270,
     "written_third_ok": true,
     "written_third_events": [],
     "grazes": 0,
@@ -423,60 +423,60 @@
    "clock_notes": null,
    "sync": [
     {
-     "t": 187.25,
+     "t": 189.833,
      "what": "the bass walks in under the revolving door",
      "hit": false
     },
     {
-     "t": 190.747,
+     "t": 193.289,
      "what": "the check jams: a push on the swung and-of-4",
      "hit": true
     },
     {
-     "t": 187.875,
+     "t": 190.458,
      "what": "THE JOB's head (bar 2)",
      "hit": true
     },
     {
-     "t": 190.375,
+     "t": 192.958,
      "what": "THE JOB's head (bar 3)",
      "hit": true
     },
     {
-     "t": 192.875,
+     "t": 195.458,
      "what": "THE JOB's head (bar 4)",
      "hit": true
     },
     {
-     "t": 201.625,
+     "t": 204.208,
      "what": "a vibes fill (a gap)",
      "hit": true
     },
     {
-     "t": 205.375,
+     "t": 207.958,
      "what": "the check slides under the door: the head's tag",
      "hit": true
     },
     {
-     "t": 207.667,
+     "t": 210.25,
      "what": "the last push (C7#9) on the swung and-of-4",
      "hit": true
     },
     {
-     "t": 207.875,
-     "what": "THE POP: the band stops dead on the downbeat (3 ms); the collar #3",
+     "t": 210.458,
+     "what": "THE POP: the band stops dead on the downbeat (5 ms); the collar #3",
      "hit": false
     }
    ]
   },
   {
    "cue": "floor",
-   "start": 215.538,
-   "end": 232.417,
+   "start": 218.122,
+   "end": 235.0,
    "what": "a welcome that is a lease",
    "family": "the landlord's colour (OST-BIBLE s2.16): held mediants, silent attacks",
    "render": "audio/ost/tracks/e01-v3-act1/render/_work/floor-underscore.wav",
-   "laid_at_s": 215.5383,
+   "laid_at_s": 218.1217,
    "post": null,
    "level": {
     "lufs_i": -21.7,
@@ -529,27 +529,27 @@
    "clock_notes": null,
    "sync": [
     {
-     "t": 215.538,
+     "t": 218.122,
      "what": "Tasya's floor: Abmaj9 (silent attack; one Rhodes chord on her sentence break)",
      "hit": false
     },
     {
-     "t": 218.088,
+     "t": 220.672,
      "what": "Tasya's floor: Cmaj9 (silent attack; one Rhodes chord on her sentence break)",
      "hit": false
     },
     {
-     "t": 220.693,
+     "t": 223.277,
      "what": "Tasya's floor: Emaj9 (silent attack; one Rhodes chord on her sentence break)",
      "hit": false
     },
     {
-     "t": 224.193,
+     "t": 226.777,
      "what": "Tasya's floor: Abmaj9 (silent attack; one Rhodes chord on her sentence break)",
      "hit": false
     },
     {
-     "t": 231.317,
+     "t": 233.9,
      "what": "the key ring's jangle: the floor lets go (v3.2: the ring, large, weeks on; the swing comes in on it)",
      "hit": false
     }
@@ -557,12 +557,12 @@
   },
   {
    "cue": "lobby2",
-   "start": 231.267,
-   "end": 253.3,
+   "start": 233.85,
+   "end": 255.883,
    "what": "the deal is done; the landlord where he stood",
    "family": "P06 THE JOB, light",
    "render": "audio/ost/tracks/e01-v3-act1/render/_work/lobby2-underscore.wav",
-   "laid_at_s": 230.0667,
+   "laid_at_s": 232.65,
    "post": null,
    "level": {
     "lufs_i": -20.93,
@@ -621,17 +621,17 @@
    "clock_notes": null,
    "sync": [
     {
-     "t": 242.5,
+     "t": 245.083,
      "what": "the TV: the band holds a chord (the tap-dance is the TV's)",
      "hit": false
     },
     {
-     "t": 232.567,
+     "t": 235.15,
      "what": "a vibes fragment (a gap)",
      "hit": true
     },
     {
-     "t": 250.067,
+     "t": 252.65,
      "what": "the last chord (Fm9, no motion), held under his line; it crossfades into Sydney on the cut (0.4 s)",
      "hit": false
     }
@@ -639,18 +639,18 @@
   },
   {
    "cue": "duel",
-   "start": 279.458,
-   "end": 308.658,
+   "start": 282.042,
+   "end": 315.617,
    "what": "rivalry: the same cell, two panes, one tempo",
    "family": "P02 room colour (Misanthropic) x the Build",
    "render": "audio/ost/tracks/e01-v3-act1/render/_work/duel-underscore.wav",
-   "laid_at_s": 278.4583,
+   "laid_at_s": 280.4167,
    "post": null,
    "level": {
-    "lufs_i": -19.82,
-    "st_p95": -17.42,
-    "st_max": -17.14,
-    "true_peak_dbtp": -4.99
+    "lufs_i": -19.85,
+    "st_p95": -16.91,
+    "st_max": -16.54,
+    "true_peak_dbtp": -3.79
    },
    "target_lufs": -20.0,
    "engine_qa": {
@@ -670,31 +670,32 @@
      },
      "measured": {
       "lufs": -20.0,
-      "lra": 9.39,
-      "true_peak_db": -4.99,
-      "peak_db": -5.0,
-      "rms_db": -22.62,
-      "crest_db": 17.62,
-      "seconds": 30.2
+      "lra": 9.41,
+      "true_peak_db": -3.79,
+      "peak_db": -3.79,
+      "rms_db": -22.64,
+      "crest_db": 18.85,
+      "seconds": 35.2
      }
     },
     "f_major_ok": true,
     "f_major_ok_written": true,
-    "f_major_worst": 0.014,
+    "f_major_worst": 0.036,
     "knee_whole": 0,
     "knee_completion": 0,
     "hit_check": {
-     "within_10ms": 7,
-     "of": 9,
-     "worst_ms": 20.0
+     "within_10ms": 5,
+     "of": 8,
+     "worst_ms": 42.7
     },
     "warnings": [
-     "marker at 17.5 s: no clear onset within 10 ms ({'t': 17.5, 'offset_ms': np.float64(20.0), 'strength': 1.53})",
-     "marker at 22.5 s: no clear onset within 10 ms ({'t': 22.5, 'offset_ms': np.float64(17.3), 'strength': 1.67})"
+     "marker at 20.0 s: no clear onset within 10 ms ({'t': 20.0, 'offset_ms': np.float64(24.0), 'strength': 2.42})",
+     "marker at 25.0 s: no clear onset within 10 ms ({'t': 25.0, 'offset_ms': np.float64(42.7), 'strength': 2.03})",
+     "marker at 27.5 s: no clear onset within 10 ms ({'t': 27.5, 'offset_ms': np.float64(36.0), 'strength': 1.78})"
     ]
    },
    "note_qa": {
-    "notes": 222,
+    "notes": 228,
     "written_third_ok": true,
     "written_third_events": [],
     "grazes": 0,
@@ -704,52 +705,47 @@
    "clock_notes": null,
    "sync": [
     {
-     "t": 287.677,
+     "t": 290.26,
      "what": "the laptop opens: the chip boots (4)",
      "hit": true
     },
     {
-     "t": 288.458,
+     "t": 297.917,
      "what": "the Build's bar (Gerg, left pane): 8",
      "hit": true
     },
     {
-     "t": 290.958,
+     "t": 300.417,
      "what": "the Addendum's bar (Mario, right pane), its tail 1",
      "hit": true
     },
     {
-     "t": 293.458,
+     "t": 302.917,
      "what": "the Build's bar (Gerg, left pane): 8",
      "hit": true
     },
     {
-     "t": 295.958,
+     "t": 305.417,
      "what": "the Addendum's bar (Mario, right pane), its tail 2",
      "hit": true
     },
     {
-     "t": 298.458,
-     "what": "the Build's bar (Gerg, left pane): 8",
-     "hit": true
-    },
-    {
-     "t": 301.958,
+     "t": 308.917,
      "what": "HIS CLICK ships GTP-4 (the picture's click, 11.04 frame 108; the sound pass lays it): the Build's whole pass on the chip, from the click",
      "hit": true
     },
     {
-     "t": 300.958,
+     "t": 307.917,
      "what": "THE TURN: the Addendum crosses the split",
      "hit": true
     },
     {
-     "t": 304.24,
+     "t": 311.198,
      "what": "the website: the chip plays Mario's tail (his side ships it)",
      "hit": true
     },
     {
-     "t": 305.958,
+     "t": 312.917,
      "what": "the letter lights: a held Bbm(add9), ringing out",
      "hit": false
     }
@@ -757,18 +753,18 @@
   },
   {
    "cue": "pause",
-   "start": 308.108,
-   "end": 317.667,
+   "start": 315.067,
+   "end": 324.667,
    "what": "a chill, played straight: a cold pedal nobody pauses",
    "family": "P04 / P08 colours, low (Nole)",
    "render": "audio/ost/tracks/e01-v3-act1/render/_work/pause-underscore.wav",
-   "laid_at_s": 308.1583,
+   "laid_at_s": 315.1167,
    "post": null,
    "level": {
-    "lufs_i": -21.02,
-    "st_p95": -19.64,
-    "st_max": -19.47,
-    "true_peak_dbtp": -8.34
+    "lufs_i": -21.01,
+    "st_p95": -19.41,
+    "st_max": -19.37,
+    "true_peak_dbtp": -8.69
    },
    "target_lufs": -21.0,
    "engine_qa": {
@@ -788,12 +784,12 @@
      },
      "measured": {
       "lufs": -21.0,
-      "lra": 2.96,
-      "true_peak_db": -8.34,
-      "peak_db": -8.34,
+      "lra": 2.82,
+      "true_peak_db": -8.69,
+      "peak_db": -8.7,
       "rms_db": -22.97,
-      "crest_db": 14.62,
-      "seconds": 9.5283
+      "crest_db": 14.27,
+      "seconds": 9.57
      }
     },
     "f_major_ok": true,
@@ -815,20 +811,20 @@
    "clock_notes": null,
    "sync": [
     {
-     "t": 317.667,
-     "what": "EMIT's THUD stops it dead (3 ms)",
+     "t": 324.667,
+     "what": "EMIT's THUD stops it dead (5 ms)",
      "hit": false
     }
    ]
   },
   {
    "cue": "threat",
-   "start": 328.573,
-   "end": 330.583,
+   "start": 335.532,
+   "end": 337.542,
    "what": "one chill",
    "family": "P08 OUTS KIT: THREAT",
    "render": "audio/ost/tracks/e01-v3-act1/render/_work/threat-underscore.wav",
-   "laid_at_s": 326.0833,
+   "laid_at_s": 333.0417,
    "post": null,
    "level": {
     "lufs_i": -18.33,
@@ -885,7 +881,7 @@
    "clock_notes": null,
    "sync": [
     {
-     "t": 328.583,
+     "t": 335.542,
      "what": "THREAT, once, on the pen's lift: F-C-Gb (low brass + sub), no third",
      "hit": true
     }
@@ -893,12 +889,12 @@
   },
   {
    "cue": "sydney",
-   "start": 252.623,
-   "end": 279.458,
+   "start": 255.207,
+   "end": 282.042,
    "what": "uncanny and clingy",
    "family": "P05 GLYPH colours, sweetened",
    "render": "audio/ost/tracks/e01-v3-act1/render/_work/sydney-underscore.wav",
-   "laid_at_s": 250.25,
+   "laid_at_s": 252.8333,
    "post": null,
    "level": {
     "lufs_i": -21.97,
@@ -955,12 +951,12 @@
    "clock_notes": null,
    "sync": [
     {
-     "t": 261.442,
+     "t": 264.025,
      "what": "her real line: the glass pad turns to the Ache (e1-a1-10-02)",
      "hit": false
     },
     {
-     "t": 253.15,
+     "t": 255.733,
      "what": "SYDNEY: the music box and its late chip echo (clingy)",
      "hit": true
     }
@@ -968,15 +964,15 @@
   },
   {
    "cue": "atem",
-   "start": 279.438,
-   "end": 281.658,
+   "start": 282.022,
+   "end": 284.242,
    "what": "cool, brief",
    "family": "P08 OUTS KIT: DREAD (brief)",
    "render": "audio/ost/tracks/e01-v3-act1/render/_work/atem-underscore.wav",
-   "laid_at_s": 276.9583,
+   "laid_at_s": 279.5417,
    "post": null,
    "level": {
-    "lufs_i": -19.18,
+    "lufs_i": -19.1,
     "st_p95": null,
     "st_max": null,
     "true_peak_dbtp": -5.19
@@ -1030,7 +1026,7 @@
    "clock_notes": null,
    "sync": [
     {
-     "t": 279.458,
+     "t": 282.042,
      "what": "THE ATEM LEAK: a cool sting on the crate (F-C, the chip's fifth, the Ache)",
      "hit": true
     }
@@ -1039,18 +1035,18 @@
  ],
  "silences_designed": [
   {
-   "t0": 186.858,
-   "t1": 187.2,
+   "t0": 189.4,
+   "t1": 189.783,
    "why": "the phone locks (a diegetic stop) -> the lobby's pickup under the revolving door"
   },
   {
-   "t0": 207.875,
-   "t1": 215.538,
+   "t0": 210.458,
+   "t1": 218.122,
    "why": "the collar's pop: the swing stops dead; the lobby's room under \"That collar suits you.\" / \"it does.\" / \"and the rent?\""
   },
   {
-   "t0": 317.667,
-   "t1": 328.583,
+   "t0": 324.667,
+   "t1": 335.542,
    "why": "EMIT's THUD stops the pause letter: no score through the page, his desk and the reflection, until the THREAT on the pen's lift"
   }
  ],
@@ -1063,34 +1059,34 @@
   }
  ],
  "measured": {
-  "length_s": 330.5833,
-  "samples": 15868000,
-  "frames": 7934,
+  "length_s": 337.5417,
+  "samples": 16202000,
+  "frames": 8101,
   "exact": true,
   "whole": {
-   "lufs_i": -20.53,
-   "st_p95": -17.88,
-   "st_max": -14.31,
+   "lufs_i": -20.51,
+   "st_p95": -17.8,
+   "st_max": -14.32,
    "true_peak_dbtp": -3.15
   },
   "cues": {
    "a_launch": {
-    "lufs_i": -20.01,
-    "st_p95": -16.59,
-    "st_max": -14.31,
+    "lufs_i": -20.02,
+    "st_p95": -16.5,
+    "st_max": -14.32,
     "true_peak_dbtp": -3.15
    },
    "code_red": {
-    "lufs_i": -22.01,
-    "st_p95": -20.77,
-    "st_max": -19.8,
-    "true_peak_dbtp": -12.51
+    "lufs_i": -22.0,
+    "st_p95": -20.79,
+    "st_max": -19.82,
+    "true_peak_dbtp": -12.53
    },
    "lobby": {
     "lufs_i": -19.98,
-    "st_p95": -18.83,
-    "st_max": -18.47,
-    "true_peak_dbtp": -6.45
+    "st_p95": -18.79,
+    "st_max": -18.48,
+    "true_peak_dbtp": -6.41
    },
    "floor": {
     "lufs_i": -21.7,
@@ -1105,16 +1101,16 @@
     "true_peak_dbtp": -8.62
    },
    "duel": {
-    "lufs_i": -19.82,
-    "st_p95": -17.42,
-    "st_max": -17.14,
-    "true_peak_dbtp": -4.99
+    "lufs_i": -19.85,
+    "st_p95": -16.91,
+    "st_max": -16.54,
+    "true_peak_dbtp": -3.79
    },
    "pause": {
-    "lufs_i": -21.02,
-    "st_p95": -19.64,
-    "st_max": -19.47,
-    "true_peak_dbtp": -8.34
+    "lufs_i": -21.01,
+    "st_p95": -19.41,
+    "st_max": -19.37,
+    "true_peak_dbtp": -8.69
    },
    "threat": {
     "lufs_i": -18.33,
@@ -1129,7 +1125,7 @@
     "true_peak_dbtp": -8.59
    },
    "atem": {
-    "lufs_i": -19.18,
+    "lufs_i": -19.1,
     "st_p95": null,
     "st_max": null,
     "true_peak_dbtp": -5.19
@@ -1139,160 +1135,160 @@
    {
     "section": "a_launch: A1 launch night: the felt, a soft pulse, the Build (F minor, the chip)",
     "start": 0.0,
-    "end": 67.54,
-    "lufs_i": -22.35,
-    "st_p95": -21.91,
-    "st_max": -20.24,
-    "true_peak_dbtp": -3.15
+    "end": 66.79,
+    "lufs_i": -22.33,
+    "st_p95": -21.84,
+    "st_max": -20.22,
+    "true_peak_dbtp": -4.43
    },
    {
     "section": "a_launch: the click: one held chord, the flat line",
-    "start": 67.54,
-    "end": 70.04,
-    "lufs_i": -23.16,
+    "start": 66.79,
+    "end": 69.29,
+    "lufs_i": -23.17,
     "st_p95": null,
     "st_max": null,
     "true_peak_dbtp": -4.28
    },
    {
     "section": "a_launch: A2 the two-hander: felt only (the Door in the gaps)",
-    "start": 70.04,
-    "end": 85.04,
+    "start": 69.29,
+    "end": 84.29,
     "lufs_i": -21.6,
     "st_p95": -21.14,
     "st_max": -21.03,
-    "true_peak_dbtp": -4.39
+    "true_peak_dbtp": -4.4
    },
    {
     "section": "a_launch: M1 the warm accent: A-flat major, the Build's pass (the payoff to the click)",
-    "start": 100.04,
-    "end": 105.04,
-    "lufs_i": -19.44,
-    "st_p95": -18.34,
-    "st_max": -18.19,
+    "start": 99.29,
+    "end": 104.29,
+    "lufs_i": -19.45,
+    "st_p95": -18.35,
+    "st_max": -18.2,
     "true_peak_dbtp": -6.03
    },
    {
     "section": "a_launch: A3 the chatbot flatters: the felt, the pulse, the Build",
-    "start": 85.04,
-    "end": 107.54,
-    "lufs_i": -19.83,
-    "st_p95": -18.6,
-    "st_max": -18.19,
+    "start": 84.29,
+    "end": 106.79,
+    "lufs_i": -19.84,
+    "st_p95": -18.61,
+    "st_max": -18.2,
     "true_peak_dbtp": -3.15
    },
    {
     "section": "a_launch: A4 the counter: a driving figure (the pulse, the chip Build, the violins, brass accents)",
-    "start": 107.54,
-    "end": 122.12,
+    "start": 106.79,
+    "end": 121.38,
     "lufs_i": -16.47,
-    "st_p95": -14.38,
+    "st_p95": -14.39,
     "st_max": -14.35,
     "true_peak_dbtp": -3.15
    },
    {
     "section": "a_launch: A5 the held chord, then THE TURN: the Ache, the F pedal (the heat, the bill)",
-    "start": 122.12,
-    "end": 145.46,
-    "lufs_i": -20.88,
-    "st_p95": -19.61,
-    "st_max": -18.19,
-    "true_peak_dbtp": -3.24
+    "start": 121.38,
+    "end": 148.04,
+    "lufs_i": -20.99,
+    "st_p95": -20.08,
+    "st_max": -18.2,
+    "true_peak_dbtp": -3.25
    },
    {
     "section": "a_launch: THE CALL (v3.2): the F pedal and the shimmer hold; Tasya's Rhodes on \"pen\"",
-    "start": 145.46,
-    "end": 153.81,
-    "lufs_i": -22.43,
-    "st_p95": -21.68,
-    "st_max": -21.61,
-    "true_peak_dbtp": -8.27
+    "start": 148.04,
+    "end": 156.39,
+    "lufs_i": -21.73,
+    "st_p95": -20.21,
+    "st_max": -20.2,
+    "true_peak_dbtp": -8.85
    },
    {
     "section": "code_red: the whine (J-cut: after the call's hang-up)",
-    "start": 153.81,
-    "end": 154.46,
-    "lufs_i": -32.69,
+    "start": 156.39,
+    "end": 157.04,
+    "lufs_i": -34.05,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -19.12
+    "true_peak_dbtp": -21.96
    },
    {
     "section": "code_red: the alert: the panic ostinato (pizz 16ths)",
-    "start": 154.46,
-    "end": 156.96,
-    "lufs_i": -25.92,
+    "start": 157.04,
+    "end": 159.54,
+    "lufs_i": -25.94,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -15.63
+    "true_peak_dbtp": -15.65
    },
    {
     "section": "code_red: the tower rises: the siren as a joke, the whole orchestra",
-    "start": 156.96,
-    "end": 159.75,
-    "lufs_i": -19.76,
+    "start": 159.54,
+    "end": 162.33,
+    "lufs_i": -19.78,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -12.51
+    "true_peak_dbtp": -12.53
    },
    {
     "section": "code_red: Radnus, serene; the crypt; the founders (thin under every line)",
-    "start": 159.75,
-    "end": 183.54,
-    "lufs_i": -21.86,
-    "st_p95": -21.08,
-    "st_max": -20.82,
-    "true_peak_dbtp": -13.2
+    "start": 162.33,
+    "end": 186.08,
+    "lufs_i": -21.89,
+    "st_p95": -21.1,
+    "st_max": -20.84,
+    "true_peak_dbtp": -13.22
    },
    {
     "section": "code_red: the lanyards; the lock: dead stop",
-    "start": 183.54,
-    "end": 186.86,
-    "lufs_i": -24.06,
+    "start": 186.08,
+    "end": 189.4,
+    "lufs_i": -23.68,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -14.02
+    "true_peak_dbtp": -14.12
    },
    {
     "section": "lobby: the pickup under the revolving door; the check jams",
-    "start": 186.62,
-    "end": 190.38,
-    "lufs_i": -19.07,
-    "st_p95": -18.95,
-    "st_max": -18.91,
-    "true_peak_dbtp": -6.9
+    "start": 189.21,
+    "end": 192.96,
+    "lufs_i": -19.04,
+    "st_p95": -18.91,
+    "st_max": -18.87,
+    "true_peak_dbtp": -6.87
    },
    {
     "section": "lobby: THE JOB's head; the freeze",
-    "start": 190.38,
-    "end": 197.75,
-    "lufs_i": -19.91,
-    "st_p95": -19.2,
-    "st_max": -19.19,
-    "true_peak_dbtp": -6.45
+    "start": 192.96,
+    "end": 200.33,
+    "lufs_i": -19.98,
+    "st_p95": -19.29,
+    "st_max": -19.28,
+    "true_peak_dbtp": -6.41
    },
    {
     "section": "lobby: the partnership (thin under the talk; fills in the gaps)",
-    "start": 197.75,
-    "end": 205.38,
-    "lufs_i": -21.4,
-    "st_p95": -20.89,
-    "st_max": -20.81,
-    "true_peak_dbtp": -8.79
+    "start": 200.33,
+    "end": 207.96,
+    "lufs_i": -21.36,
+    "st_p95": -20.86,
+    "st_max": -20.78,
+    "true_peak_dbtp": -8.76
    },
    {
     "section": "lobby: the check slides under the door; the push; the pop",
-    "start": 205.38,
-    "end": 207.88,
-    "lufs_i": -18.23,
+    "start": 207.96,
+    "end": 210.46,
+    "lufs_i": -18.19,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -6.7
+    "true_peak_dbtp": -6.66
    },
    {
     "section": "floor: THE TERMS: Tasya's floor (Ab -> C -> E -> Ab), on her sentence breaks",
-    "start": 215.54,
-    "end": 231.32,
+    "start": 218.12,
+    "end": 233.9,
     "lufs_i": -21.89,
     "st_p95": -21.25,
     "st_max": -21.05,
@@ -1300,8 +1296,8 @@
    },
    {
     "section": "lobby2: weeks on: the swing back on a new phrase from the jangle",
-    "start": 231.32,
-    "end": 242.5,
+    "start": 233.9,
+    "end": 245.08,
     "lufs_i": -20.23,
     "st_p95": -18.57,
     "st_max": -18.53,
@@ -1309,8 +1305,8 @@
    },
    {
     "section": "lobby2: the TV and the telescope: one held chord, then the walk",
-    "start": 242.5,
-    "end": 249.83,
+    "start": 245.08,
+    "end": 252.42,
     "lufs_i": -21.19,
     "st_p95": -20.76,
     "st_max": -20.62,
@@ -1318,8 +1314,8 @@
    },
    {
     "section": "lobby2: \"ours does that too.\": the last chord, into Sydney (a crossfade)",
-    "start": 249.83,
-    "end": 252.75,
+    "start": 252.42,
+    "end": 255.33,
     "lufs_i": -23.87,
     "st_p95": null,
     "st_max": null,
@@ -1327,44 +1323,44 @@
    },
    {
     "section": "duel: the laptop opens (the match cut): the boot, the pulse",
-    "start": 279.46,
-    "end": 288.25,
-    "lufs_i": -23.05,
-    "st_p95": -21.5,
-    "st_max": -20.08,
+    "start": 282.04,
+    "end": 290.83,
+    "lufs_i": -22.74,
+    "st_p95": -21.36,
+    "st_max": -20.0,
     "true_peak_dbtp": -5.19
    },
    {
     "section": "duel: the split: the Build against the Addendum, trading bars over the Lighthouse",
-    "start": 288.25,
-    "end": 300.96,
-    "lufs_i": -19.14,
-    "st_p95": -17.56,
-    "st_max": -17.46,
-    "true_peak_dbtp": -5.7
+    "start": 290.83,
+    "end": 307.92,
+    "lufs_i": -19.73,
+    "st_p95": -18.14,
+    "st_max": -17.97,
+    "true_peak_dbtp": -4.25
    },
    {
     "section": "duel: the turn: the Addendum crosses; the chip copies its tail; the held chord",
-    "start": 300.96,
-    "end": 307.36,
-    "lufs_i": -18.16,
-    "st_p95": -17.15,
-    "st_max": -17.14,
-    "true_peak_dbtp": -4.99
+    "start": 307.92,
+    "end": 314.32,
+    "lufs_i": -17.62,
+    "st_p95": -16.46,
+    "st_max": -16.44,
+    "true_peak_dbtp": -3.79
    },
    {
     "section": "pause: MM-17 low: the C/G-flat pedal, the low tritone, the Launch stack in the gaps",
-    "start": 308.16,
-    "end": 317.67,
+    "start": 315.12,
+    "end": 324.67,
     "lufs_i": -21.0,
-    "st_p95": -19.66,
-    "st_max": -19.5,
-    "true_peak_dbtp": -8.34
+    "st_p95": -19.42,
+    "st_max": -19.38,
+    "true_peak_dbtp": -8.69
    },
    {
     "section": "threat: THREAT on the pen's lift, its tail into the black",
-    "start": 328.58,
-    "end": 330.58,
+    "start": 335.54,
+    "end": 337.54,
     "lufs_i": -18.39,
     "st_p95": null,
     "st_max": null,
@@ -1372,8 +1368,8 @@
    },
    {
     "section": "sydney: Sydney: uncanny and clingy",
-    "start": 252.75,
-    "end": 279.46,
+    "start": 255.33,
+    "end": 282.04,
     "lufs_i": -21.95,
     "st_p95": -19.94,
     "st_max": -19.81,
@@ -1381,9 +1377,9 @@
    },
    {
     "section": "atem: the Atem leak: the sting",
-    "start": 279.46,
-    "end": 281.46,
-    "lufs_i": -18.88,
+    "start": 282.04,
+    "end": 284.04,
+    "lufs_i": -18.78,
     "st_p95": null,
     "st_max": null,
     "true_peak_dbtp": -5.19
@@ -1391,23 +1387,23 @@
   ],
   "digital_silence": [
    {
-    "t0": 186.858,
-    "t1": 187.2,
-    "dur": 0.342,
+    "t0": 189.4,
+    "t1": 189.783,
+    "dur": 0.383,
     "marked": true,
     "why": "the phone locks (a diegetic stop) -> the lobby's pickup under the revolving door"
    },
    {
-    "t0": 207.875,
-    "t1": 215.538,
+    "t0": 210.458,
+    "t1": 218.122,
     "dur": 7.663,
     "marked": true,
     "why": "the collar's pop: the swing stops dead; the lobby's room under \"That collar suits you.\" / \"it does.\" / \"and the rent?\""
    },
    {
-    "t0": 317.667,
-    "t1": 328.573,
-    "dur": 10.907,
+    "t0": 324.667,
+    "t1": 335.532,
+    "dur": 10.865,
     "marked": true,
     "why": "EMIT's THUD stops the pause letter: no score through the page, his desk and the reflection, until the THREAT on the pen's lift"
    }
@@ -1415,43 +1411,43 @@
   "unmarked_digital_silence": [],
   "holes_below_-60": [
    {
-    "t0": 186.9,
-    "t1": 187.25,
+    "t0": 189.4,
+    "t1": 189.8,
     "inside_marked": true
    },
    {
-    "t0": 207.9,
-    "t1": 215.55,
+    "t0": 210.5,
+    "t1": 218.15,
     "inside_marked": true
    },
    {
-    "t0": 317.7,
-    "t1": 328.55,
+    "t0": 324.7,
+    "t1": 335.5,
     "inside_marked": true
    }
   ],
   "music_runs": [
    {
     "t0": 0.0,
-    "t1": 207.9,
-    "dur": 207.9
+    "t1": 210.5,
+    "dur": 210.5
    },
    {
-    "t0": 215.55,
-    "t1": 317.7,
-    "dur": 102.15
+    "t0": 218.15,
+    "t1": 324.7,
+    "dur": 106.55
    },
    {
-    "t0": 328.55,
-    "t1": 330.45,
-    "dur": 1.9
+    "t0": 335.5,
+    "t1": 337.45,
+    "dur": 1.95
    }
   ],
   "fragments_under_2s": [
    {
-    "t0": 328.55,
-    "t1": 330.45,
-    "dur": 1.9,
+    "t0": 335.5,
+    "t1": 337.45,
+    "dur": 1.95,
     "designed_sting": "THREAT (the act-out sting)"
    }
   ],
@@ -1462,10 +1458,10 @@
   {
    "name": "a_launch",
    "file": "audio/ost/tracks/e01-v3-act1/render/_work/a_launch-underscore.wav",
-   "laid_at_s": -2.4583,
+   "laid_at_s": -3.2083,
    "window": [
     0.0,
-    154.508
+    157.092
    ],
    "fade_in_s": 0.0,
    "fade_out_s": 0.9,
@@ -1475,23 +1471,23 @@
   {
    "name": "code_red",
    "file": "audio/ost/tracks/e01-v3-act1/render/_work/code_red-underscore.wav",
-   "laid_at_s": 149.4583,
+   "laid_at_s": 152.0417,
    "window": [
-    153.808,
-    186.858
+    156.392,
+    189.4
    ],
    "fade_in_s": 0.4,
    "fade_out_s": 0.003,
-   "gain_db": -4.91,
+   "gain_db": -4.92,
    "post": "era.futz('phone'): his phone's small speaker"
   },
   {
    "name": "lobby",
    "file": "audio/ost/tracks/e01-v3-act1/render/_work/lobby-underscore.wav",
-   "laid_at_s": 185.375,
+   "laid_at_s": 187.9583,
    "window": [
-    187.2,
-    207.875
+    189.783,
+    210.458
    ],
    "fade_in_s": 0.05,
    "fade_out_s": 0.003,
@@ -1501,10 +1497,10 @@
   {
    "name": "floor",
    "file": "audio/ost/tracks/e01-v3-act1/render/_work/floor-underscore.wav",
-   "laid_at_s": 215.5383,
+   "laid_at_s": 218.1217,
    "window": [
-    215.538,
-    232.417
+    218.122,
+    235.0
    ],
    "fade_in_s": 0.8,
    "fade_out_s": 0.6,
@@ -1514,10 +1510,10 @@
   {
    "name": "lobby2",
    "file": "audio/ost/tracks/e01-v3-act1/render/_work/lobby2-underscore.wav",
-   "laid_at_s": 230.0667,
+   "laid_at_s": 232.65,
    "window": [
-    231.267,
-    253.3
+    233.85,
+    255.883
    ],
    "fade_in_s": 0.05,
    "fade_out_s": 0.04,
@@ -1527,10 +1523,10 @@
   {
    "name": "duel",
    "file": "audio/ost/tracks/e01-v3-act1/render/_work/duel-underscore.wav",
-   "laid_at_s": 278.4583,
+   "laid_at_s": 280.4167,
    "window": [
-    279.458,
-    308.658
+    282.042,
+    315.617
    ],
    "fade_in_s": 0.0,
    "fade_out_s": 1.0,
@@ -1540,10 +1536,10 @@
   {
    "name": "pause",
    "file": "audio/ost/tracks/e01-v3-act1/render/_work/pause-underscore.wav",
-   "laid_at_s": 308.1583,
+   "laid_at_s": 315.1167,
    "window": [
-    308.108,
-    317.667
+    315.067,
+    324.667
    ],
    "fade_in_s": 0.05,
    "fade_out_s": 0.003,
@@ -1553,10 +1549,10 @@
   {
    "name": "threat",
    "file": "audio/ost/tracks/e01-v3-act1/render/_work/threat-underscore.wav",
-   "laid_at_s": 326.0833,
+   "laid_at_s": 333.0417,
    "window": [
-    328.573,
-    330.583
+    335.532,
+    337.542
    ],
    "fade_in_s": 0.005,
    "fade_out_s": 0.3,
@@ -1566,10 +1562,10 @@
   {
    "name": "sydney",
    "file": "audio/ost/tracks/e01-v3-act1/render/_work/sydney-underscore.wav",
-   "laid_at_s": 250.25,
+   "laid_at_s": 252.8333,
    "window": [
-    252.623,
-    279.458
+    255.207,
+    282.042
    ],
    "fade_in_s": 0.02,
    "fade_out_s": 0.35,
@@ -1579,10 +1575,10 @@
   {
    "name": "atem",
    "file": "audio/ost/tracks/e01-v3-act1/render/_work/atem-underscore.wav",
-   "laid_at_s": 276.9583,
+   "laid_at_s": 279.5417,
    "window": [
-    279.438,
-    281.658
+    282.022,
+    284.242
    ],
    "fade_in_s": 0.005,
    "fade_out_s": 0.4,

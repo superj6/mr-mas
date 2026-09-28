@@ -2,7 +2,21 @@
 
 **Composer X (`v3-score-a`), 2026-09-27.** Track A1 of [PLAN.md](../../../../show/episodes/ep01/production/full-v3/PLAN.md), on the mood map of [v3-plan §6](../../../../show/episodes/ep01/production/stick/v3-plan.md). **Nothing here has been listened to.** Every number below is measured, and the "for an ear" list says what only a person can judge.
 
-## v3.3 (current, 2026-09-28): refit to the final v3.3 lock
+## v3.4 (current, 2026-09-28): refit to the v3.4 lock
+
+**The locks:** `show/reel/ep01-v34/` (the default) and `-el`. **`render/music.wav`: 337.542 s (8,101 frames); `render/music-el.wav`: 343.333 s (8,240 frames); both exact.**
+- **The new and restored V.O.s play in the felt, with nothing attacking under them:**
+  - 5.04 "…it goes out tonight anyway." (the felt under it; the pulse hasn't started yet);
+  - 7.01 "mostly the bill. we can't buy that many…" (the heat's held strings only);
+  - 11.03 Mario's V.O. (the duel thins as in round 1: no chip, Addendum or marimba under it; the felt holds).
+- **One new rule:** a chord change that would land 0.1–0.35 s after a cut now pre-laps the cut by 0.1 s instead. The v3.4 grid had put one 0.08 s after the cut into 5.04 (+15 dB).
+- **M1 and the act's `designed_hit` (t = 0)** are kept.
+- **Measured:**
+  - **Levels:** −20.5 LUFS-I on both locks.
+  - **QA checks:** F-major OK, knee 0, written A♮ over F 0, no unmarked silence, holes or fragments.
+  - **The cut check:** every score step of 12 dB or more on a cut is designed and marked.
+
+## v3.3 (superseded by v3.4, 2026-09-28): refit to the final v3.3 lock
 
 **The locks:** `show/reel/ep01-v33/ep01-v33-act1.json` (the default) and `show/reel/ep01-v33-el/` (`--el`). **`render/music.wav`: 330.583 s (7,934 frames); `render/music-el.wav`: 335.792 s (8,059 frames); both exact.**
 - **M1** stays as below.

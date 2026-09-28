@@ -2,7 +2,18 @@
 
 **Composer X (`v3-score-a`), 2026-09-27.** Track A1 of [PLAN.md](../../../../show/episodes/ep01/production/full-v3/PLAN.md), on the mood map of [v3-plan §6](../../../../show/episodes/ep01/production/stick/v3-plan.md) ("pomp and comedy"). **Nothing here has been listened to.** Every number is measured.
 
-## v3.3 (current, 2026-09-28): refit, and the new act-out
+## v3.4 (current, 2026-09-28): refit to the v3.4 lock
+
+**The locks:** `show/reel/ep01-v34/` and `-el`. **`render/music.wav`: 181.208 s (4,349 frames); `render/music-el.wav`: 170.167 s (4,084 frames); both exact.**
+- **Sirrah's line (13.02) and 13.09's V.O. are cut:** the pomp follows the timeline.
+- **"mine's half written." (13.13)** falls after the flash, between Nedib's lines. The Ebmaj7 pad holds under it with no attack. The door's Gm7 now only follows a V.O. that falls between the door and the flash.
+- **The May 12 clip beats (14.03, 14.05) are cut:** the bridge is shorter and still has no score.
+- **The act-out (17.11)** is kept as in v3.3. The Upsell is laid 0.6 dB down, because the act-out's quiet tail had lifted the cue's master; phrase 3's p95 is now −16.4 / −16.3.
+- **Measured:**
+  - **Levels:** −20.1 / −20.05 LUFS-I.
+  - **QA checks:** F-major OK, knee 0, written A♮ over F 0, no unmarked silence, holes or fragments; every 12 dB cut step is marked.
+
+## v3.3 (superseded by v3.4, 2026-09-28): refit, and the new act-out
 
 **The locks:** `show/reel/ep01-v33/` and `-el`. **`render/music.wav`: 190.542 s (4,573 frames); `render/music-el.wav`: 180.833 s (4,340 frames); both exact.**
 - **Timing:** "he's not wrong." (13.09) gets the felt under it, as every V.O. does. 17.10 is 0.5 s longer, and the Upsell follows the timeline.

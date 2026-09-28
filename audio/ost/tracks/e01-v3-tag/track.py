@@ -31,7 +31,7 @@ chord's root."  (MM-12 isn't built; this is its Ep1 to-picture cut, in P01 DARK 
   "that was close." the felt's F held through it; nothing starts under his line; the back wall's chord pre-laps
                     its cut just after it
   the back wall     the Water Line once more, timed so its settle (the last F4) would land on the THUD: the C4
-                    sounds, and the THUD cuts the line dead before the F.  The one stop (3 ms, tails cut).
+                    sounds, and the THUD cuts the line dead before the F.  The one stop (5 ms, tails cut).
   THUD -> button    no score: the front page, "noted." (the room holds; designed)
   33.04             THE BUTTON: the chord with no third (felt F3 C4 G4 C5), held on his face; the vault's F hum
                     (a timeline sound) is its root.  It rings down into the black and is out by the tag's last frame,
@@ -160,7 +160,7 @@ def build(tl):
     water_line(c, bar_a, vel=0.15, stop_at=thud)
     c.pch('felt', ['Db3', 'F3', 'Ab3'], bar_b, V.Q * 1.4, 0.09, roll=0.0)
     c.mark(bar_a, 'the back wall: the Water Line once more')
-    c.mark(thud, 'THE THUD: the line stops dead before its settle (3 ms, tails cut)', hit=False)
+    c.mark(thud, 'THE THUD: the line stops dead before its settle (5 ms, tails cut)', hit=False)
     c.section('the back wall: the Water Line, cut by the thud', t_wall, thud)
     # THE BUTTON: the chord with no third, on the downbeat after "noted."
     noted = [l for l in tl.lines if l['beat'] == '33.04']
