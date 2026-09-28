@@ -445,3 +445,18 @@ audio/.venv-casting/bin/python studio/src/episodes/ep01/pixel/coldopen/tools/fla
 3. **The repaired frames (k152–172)** keep a faint seam where the old sand surface was, visible at 1:1 in the zoomed stills. It's small at pane size.
 4. **The site chrome is deliberately generic.** It's dark, with no mark, and doesn't echo any real streaming site's colours or layout beyond a player and a chat.
 5. **SYNTH again:** as with the duck, a near-raw clip inside a bezel is the showrunner's call on picture.
+
+---
+
+## 12. The third insert: the tear on the red-hot GPU (Act One 7.02, style leap 9A, v3.5)
+
+The `p-act1` picture pass, 2026-09-28 (PLAN §8, choice 9A). The full record is [shots-act1.md §15.5](shots-act1.md).
+
+| # | What | Model | Credits (balance) | Verdict |
+|---|---|---|---|---|
+| **t1** | Image-to-video from **our** Blender keyframe (`inputs/tear-702-first-keyframe.png`, `tear_scene.py`: the heatsink red-hot, a bead of water, INVIDIA in raised metal) | veo3.1_fast, 4 s, seed 702 | **40 (205 → 165)** | **KEPT.** Clean: no person, hand or face. f012–f021 carry a thin falling thread, so the insert uses f022–f081 |
+
+- **The prompt** names only physics, material, light and camera (the bead dancing on its own vapour, boiling away, two puffs of steam; locked-off macro). **The negative prompt:** hands, people, faces, fire, flames, explosion, sparks, camera movement, new or changing letters, watermark, captions.
+- **Every letter is ours:** `tear.py` lays the keyframe's INVIDIA over each frame (aligned per frame).
+- **Outputs:** `tear-702.mp4` (the 60-frame insert, silent), `tear-702-sheet.png`, `tear-702-timing.json`; spliced into Act One 7.02 k28–87 as the segment's browser frames.
+- **Balance now 165 of 500.**

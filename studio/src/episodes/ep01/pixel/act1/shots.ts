@@ -58,6 +58,12 @@ import {
   blinkLid, cursorPath, ease2, sleepLed, fingerECU, otsRima, glassCount, deal2S, passerBy, guestCard, bottomShade, grains,
   castMask, chatCard, twelfthKey, callMcu, handOnPhone, paneButton, postPreview, settleHand, mcuMasDesk, tearGlint,
 } from './extras';
+import {
+  montage10, phoneLights, ots3am, mcu3am, counterECU, renderFront, office2018, office2S, alyiMcu2018, loneDesk, glassInHand,
+  windowGlass, windowWide, window2S, windowLamp, editorPage, editorPOV, feedAfter, VISION, waitlistTV, filedECU, filedPapers,
+  gnibChyron, paneBar, paneUsersLine, paneAlyi, HIS_PHONE,
+} from './art/v35';
+import {drawTvScreen as tvScreenBare} from '../../../../shared/pixel/kits/tv-news';
 import {LOCK} from './data';
 
 const L = layouts();
@@ -97,24 +103,8 @@ const openRest = (sh: PxShot, k: number, who: string): 'open' | 'rest' => room2(
 /** the collars' drawing everywhere in v3.1 (mas-collars 'v31': the gold third, taller points; one design across the
  *  episode, so the pop at 9.08 adds a collar and changes nothing else) */
 const CS = 'v31' as const;
-/** v3.4: the host's typed V.O. line (frame.ts voLine: lowercase, x 12, baseline 191, C6 on an N0 shadow, wrapped upward
- *  past 456 px, held 15 frames after its last sound), with one change: it types at 0.5 characters a frame OR faster, so
- *  it has finished typing when the voice finishes. The planner's lines are long (55–66 characters over 93–111 frames),
- *  and at a flat 0.5 the host clears them before their last characters appear. The layout returns {noVo: true} */
-const VO_W = 456;
-const voTyped = (fb: Buf, sh: PxShot, k: number): LayoutOut => {
-  for (const l of sh.lines) {
-    if (l.kind !== 'vo' || k < l.s || k >= l.e + 15) continue;
-    const text = l.text.toLowerCase();
-    const rate = Math.max(0.5, text.length / Math.max(1, l.e - l.s));
-    const n = clamp(Math.floor((k - l.s) * rate), 0, text.length);
-    if (pw(text) <= VO_W) { pt(fb, text.slice(0, n), 12, 191, PAL.C6, {shadow: PAL.N0}); continue; }
-    const rows = pwrap(text, VO_W);
-    let left = n;
-    rows.forEach((r, i) => { pt(fb, r.slice(0, Math.max(0, left)), 12, 191 - (rows.length - 1 - i) * 11, PAL.C6, {shadow: PAL.N0}); left -= r.length + 1; });
-  }
-  return {noVo: true};
-};
+/** v3.5: the V.O. types through the host's shared voLine (frame.ts: it finishes 4 frames before the voice), so the
+ *  layouts no longer draw it themselves (v3.4's voTyped is retired) */
 /** his breath at the desk (the desk sprite's breathe drawing, a slow held loop) */
 const breathe = (f: number) => (Math.floor(f / 36) % 2) as 0 | 1;
 
@@ -174,7 +164,6 @@ L.add('5.04', {
       alyi: {soft: true, eyes: blinkLid(k, 9, 157) === 2 ? 'closed' : 'open', mouth: 'rest', t: f},
     });
     plate(fb, sh, k, 'RIMA', 122, 150, 'RIMA');
-    return voTyped(fb, sh, k);
   },
 });
 L.add('5.05', {
@@ -248,6 +237,11 @@ L.add('5.09', {
   },
 });
 // ---- the chat: the bubble lights before anyone types
+/** v3.5: the product's banner in the words the first weeks show (10.06; script-v35-notes §7 #8: the show's own UI line,
+ *  `research preview · may make things up`, grounded in the launch post), over the chat window's banner row
+ *  (drawLaunchOTSLaptop's window at 100, 12, 300 wide: the banner is rows 24-32) */
+const BANNER35 = 'research preview · may make things up';
+const banner35 = (fb: Buf) => { rect(100, 24, 300, 9, fb.ink(PAL.W2)); pt(fb, BANNER35, 104, 25, PAL.W6); };
 const BOT1 = 'What a great question!', BOT2 = "Brilliant! You're clearly a visionary.", USER = 'is anyone there?';
 L.add('5.10', {
   st: 'ROOM-BULLPEN-LAUNCH drawLaunchOTSLaptop {warm: 1} + UI-CHAT drawChatWindow + CAST-CHATGTP (the room behind a step warmer; the bubble idle, then lit with its glow before anyone types; it talks on its lines; its replies type on; he types his one line in the input row, sends it; the plate CHATGTP · USERS: 0 is the window\'s own) · Rima leaning in, lip-synced, blinking · Gerg\'s hands typing at the frame edge',
@@ -267,6 +261,7 @@ L.add('5.10', {
     });
     // the second reply: the window's own card, set below the product plate (the window would stack it over the plate)
     if (k >= b2) chatCard(fb, 152, 88, 242, BOT2.slice(0, Math.floor((k - b2) * 1.1)));
+    banner35(fb);
   },
 });
 L.add('5.11', {
@@ -281,10 +276,26 @@ L.add('5.11', {
   },
 });
 L.add('5.12', {
-  st: 'UI-CHAT drawChatECU (the bubble; its plate\'s counter ticks 0 → 1 · 2 · 7 · 104 · 1,389 on the counter rolls, then the digits blur; the bubble glows on the first tick and talks as the count climbs)',
-  marks: {t1: ['snd', 'counter_roll', 1, 0], t2: ['snd', 'counter_roll', 2, 0], t3: ['snd', 'counter_roll', 3, 0]},
+  st: 'v3.5 (sc 6, the wait): ROOM-BULLPEN-LAUNCH drawLaunchOTSLaptop {warm: 1} held as 5.10 left it (the chat, his line, both replies; the plate CHATGTP · USERS: 0), Gerg\'s hands at the frame\'s edge tapping refresh three times on the three taps (one held drawing each, still between), Rima leaning in, her lids half down, not looking; on the third tap she looks (lids up, brow lifted); nothing else moves → UI-CHAT drawChatECU (the bubble; its plate\'s counter holds at 0, then ticks 0 → 1 · 2 · 7 · 104 · 1,389 on the counter rolls, then the digits blur; the bubble glows on the first tick and talks as the count climbs)',
+  marks: {t1: ['snd', 'counter_roll', 1, 0], t2: ['snd', 'counter_roll', 2, 0], t3: ['snd', 'counter_roll', 3, 0], r1: ['snd', 'key_tap_soft_01', 1, 0], r2: ['snd', 'key_tap_soft_02', 1, 0], r3: ['snd', 'key_tap_soft_03', 1, 0]},
   draw: (fb, k, sh, f) => {
-    const t1 = mk(sh, 't1', 12), t2 = mk(sh, 't2', 30), t3 = mk(sh, 't3', 43);
+    const t1 = mk(sh, 't1', 60), t2 = mk(sh, 't2', 78), t3 = mk(sh, 't3', 91), r1 = mk(sh, 'r1', 12), r2 = mk(sh, 'r2', 26), r3 = mk(sh, 'r3', 41);
+    // the insert comes 12 frames before the first tick: the 0 on the plate, waiting, then the tick
+    const ins = t1 - 12;
+    if (k < ins) {
+      const taps = [r1, r2, r3].filter((r) => k >= r).length;
+      // his hands hold between taps (their typing clock stops), one drawing on each tap
+      const fh = sh.s + taps * 7;
+      const looks = k >= r3 + 3;
+      drawLaunchOTSLaptop(fb, fh, {
+        f: fh, gergHands: true, warm: 1,
+        rima: {mouth: 'rest', lid: looks ? 0 : 1, brow: looks ? 'lift' : 'level'},
+        chat: {bubble: 'lit', users: 0, lines: [{who: 'bot', text: BOT1}, {who: 'user', text: USER}]},
+      });
+      chatCard(fb, 152, 88, 242, BOT2);
+      banner35(fb);
+      return;
+    }
     let users = 0, roll: number | undefined, spin = false;
     if (k >= t1 && k < t1 + 4) { users = 0; roll = 0.5; }
     else if (k >= t1 + 4 && k < t1 + 10) users = 1;
@@ -364,38 +375,96 @@ L.add('7.01', {
     drawLaunchMcuPF(fb, f, {tear, tearCatch: k >= catchK - 12, collarStyle: CS, glow: k < 30 ? 1 : 2, mas: {mouth: say(sh, k, 'MAS'), lid: up ? 0 : 1, look: up ? 1 : toPhone ? -1 : 0}});
     // the glint made readable on her word: a three-armed catch-light round the bright pixel, 4 frames
     if (tear !== null && k >= catchK - 2 && k < catchK + 2) tearGlint(fb, MAS_TEAR_PATH[0][0], MAS_TEAR_PATH[0][1]);
-    return voTyped(fb, sh, k);
   },
 });
 L.add('7.02', {
-  st: 'SET-DRILL: drawHoleHigh (the tear falls down the shaft) → drawGpuTear (it lands on a red-hot GPU: the splash, tssss, three held puffs) → drawHoleHigh again, the last steam rising, and under it his hand comes down over the desk\'s edge onto his phone at the top edge (extras.handOnPhone, held steps): the call he\'s about to make (the phone stays dark: its red is the call\'s end now); three setups inside the stick\'s one beat',
-  marks: {hiss: ['snd', 'steam_hiss', 1, 0], phone: ['txt', '( ! )', 'at', 0], hand: ['txt', '( ! )', 'at', 14]},
+  st: 'SET-DRILL: drawHoleHigh (the tear falls down the shaft) → drawGpuTear (it lands on the red-hot GPU on the hiss: the splash, the first puff; v3.5: INVIDIA in raised letters on the card\'s edge) → **STYLE LEAP 9A** (k29-88, the lock\'s INVIDIA span): the near-photoreal macro, objects only (studio/src/dev/genvideo/runway/tear.py: our Blender keyframe of the heatsink with INVIDIA in brushed metal, the bead of water, veo3.1_fast\'s take of it dancing and boiling away in two puffs of steam; every letter ours), in through the grid (palette on the native grid, the native grid, 2 px) and out the same way, spliced as PNG frames (the segment\'s browser frames, option tear); the pixel GPU stands under them in stills → drawHoleHigh again, the last steam rising, and under it his hand comes down over the desk\'s edge onto his phone at the top edge (extras.handOnPhone, held steps): the call he\'s about to make',
+  marks: {hiss: ['snd', 'steam_hiss', 1, 0], macro: ['txt', 'INVIDIA', 'at', 0], back: ['txt', 'INVIDIA', 'until', 0]},
   draw: (fb, k, sh, f) => {
-    const land = mk(sh, 'hiss', 10), ph = mk(sh, 'phone', 48), hd = mk(sh, 'hand', 62);
+    const land = mk(sh, 'hiss', 11), back = mk(sh, 'back', 89), hd = back + 6;
     if (k < land) { drawHoleHigh(fb, f, {tile: 'gone', glow: 3, racks: 2, dollar: true, tear: k / land, phone: 'dark'}); return; }
-    if (k < ph) { drawGpuTear(fb, f, {k: k - land}); return; }
+    if (k < back) { drawGpuTear(fb, f, {k: k - land}); invidiaCard(fb); return; }
     drawHoleHigh(fb, f, {tile: 'gone', glow: 3, racks: 2, dollar: true, tear: null, phone: 'dark'});
     handOnPhone(fb, k < hd ? 0 : k < hd + 4 ? 1 : k < hd + 8 ? 2 : 3);
     // the last of the steam rising out of the shaft (held on 3s)
-    const B = HIGH.bottom, rise = Math.floor((k - ph) / 3);
+    const B = HIGH.bottom, rise = Math.floor((k - back) / 3);
     for (let i = 0; i < 6; i++) { const x = B.x0 + 14 + ((i * 7) % 26), y = B.y0 + 10 - rise * 2 - i * 3; if (y > HIGH.hole.y0) { fb.set(x, y, PAL.G5); fb.set(x + 1, y, PAL.G4); } }
   },
 });
+/** v3.5: the maker's name on the pixel card (drill.ts drawGpuTear's card at 100, 50, 280 x 110: its near edge), raised
+ *  letters, so the pixel frames either side of the macro carry the same INVIDIA */
+const invidiaCard = (fb: Buf) => {
+  const s = 'INVIDIA', w = pw(s) + 10, x = 240 - (w >> 1), y = 148;
+  rect(x, y, w, 11, fb.ink(PAL.N0)); rect(x, y, w, 1, fb.ink(PAL.G2));
+  pt(fb, s, x + 5, y + 3, PAL.G3); pt(fb, s, x + 5, y + 2, PAL.G6);
+};
+/** 7.02's macro: the segment frames the Runway insert replaces (the lock's INVIDIA span on 7.02) */
+const S702 = LOCK.shots.find((s) => s.id === '7.02')!;
+const T702 = S702.texts.find((t) => t.text.includes('INVIDIA'));
+export const TEAR = {from: S702.s + (T702?.s ?? 29), to: S702.s + (T702?.e ?? 89)};
 
 // ---- v32-7.03 · THE CALL (draft 8.1; the lead's ruling on art-a §8: open on the ECU of the phone ringing on the desk,
 // the contact large; then Mas with the phone at his ear, its screen to him, at normal size)
 L.add('v32-7.03', {
-  st: 'SET-CALL drawCallScreenECU (his phone on the desk, ringing on the ring: TASYA · MACROSOFT over the key-ring avatar, large, the tile\'s red on the desk; the world carries the name, no pipeline plate) → extras.callMcu (later that night at his end desk, 7.01\'s fallaway behind him, the tile\'s red from below as a clean rim: the phone at his ear, its back to us, a real phone\'s size; "Mas." through the filter; his full ask lip-synced, "it\'s the bill. we\'re going to need more servers."; "I\'ll bring a pen." and the one-pixel smile; he lowers the phone in a held step; on the hang-up it lights red before it reaches the desk, its red on his chin, and his eyes drop to it)',
+  st: 'SET-CALL drawCallScreenECU (his phone on the desk, ringing on the ring: TASYA · MACROSOFT over the key-ring avatar, large, the tile\'s red on the desk; the world carries the name, no pipeline plate) → extras.callMcu (later that night at his end desk, 7.01\'s fallaway behind him, the tile\'s red from below as a clean rim: the phone at his ear, its back to us, a real phone\'s size; "Mas." through the filter; his full ask lip-synced, "it\'s the bill. we\'re going to need more servers."; "I\'ll bring a pen." and the one-pixel smile; he lowers the phone in a held step; v3.5: on the hang-up it lights (cool white, not red), his eyes drop to it, and we cut to it on the desk (kits/phone-alert drawAlertInsert\'s frame) as strangers\' screenshots of their chats pop up its screen, one, then another, then a stack: v35 phoneLights, the match into the first weeks)',
   face: {MAS: 'lip'},
   marks: {ring: ['snd', 'call_ring', 1, 0], hello: ['on', 'v32-a1-0002', -6], pen: ['end', 'v32-a1-0004', 0], hang: ['snd', 'handset_hangup', 1, 0]},
   draw: (fb, k, sh, f) => {
     const ring = mk(sh, 'ring', 7), cut = mk(sh, 'hello', 30), pen = mk(sh, 'pen', 173), hang = mk(sh, 'hang', 199);
     if (k < cut) { drawCallScreenECU(fb, k < ring ? 0 : f, {state: 'ringing'}); return; }
+    // v3.5 (the exit): on the hang-up the lowered phone lights (not red now: a cool white, strangers' screenshots
+    // arriving), his eyes drop to it, and 4 frames on we cut to it on the desk as they pop up the screen (the match:
+    // his screen becomes the first stranger's, 10.01)
+    const lit = hang + 2, ecu = lit + 4;
+    if (k >= ecu) { phoneLights(fb, f, k - ecu); return; }
     const down = pen + 6;
-    const phone = k < down ? 'ear' : k < down + 6 ? 'mid' : k < hang + 2 ? 'low' : 'red';
-    const m = saying(sh, k, 'MAS') ? mouth(sh, k, 'MAS') : k >= pen && k < hang + 2 ? 'smile' : 'rest';
-    callMcu(fb, f, {phone, mas: {mouth: m, lid: phone === 'red' ? 1 : 0, look: 0}});
+    const phone = k < down ? 'ear' : k < down + 6 ? 'mid' : 'low';
+    const m = saying(sh, k, 'MAS') ? mouth(sh, k, 'MAS') : k >= pen && k < lit ? 'smile' : 'rest';
+    callMcu(fb, f, {phone, mas: {mouth: m, lid: k >= lit ? 1 : 0, look: 0}});
+    if (k >= lit) {
+      // the lowered phone's screen edge (callMcu's 'low' slab at 149, 151, 18 x 5) lit, its cool light on his chin
+      rect(149, 151, 18, 5, fb.ink(PAL.C6)); rect(149, 151, 18, 1, fb.ink(PAL.C8));
+      for (let x = 150; x < 166; x += 3) fb.set(x, 153, PAL.P2);
+    }
   },
+});
+
+// ================================================================== SC 10 (v3.5) · THE FIRST WEEKS (a montage, on the pulse)
+// hands only, prompts only, never a face or a name (guardrails: the first weeks show prompts, never private people)
+L.add('v35-10.01', {
+  st: 'v35 montage10: MATCH from his phone: a stranger\'s phone in the same place and size in frame (HIS_PHONE), held up in a dorm\'s lamplight (a hand: the thumb up its edge, four fingertips round it), CHATGTP open: the prompt in its bubble, "write my essay on the fall of rome. make it sound like me" (the lock\'s wording less "500 words.", for the read floor), and the answer pouring down the screen (word bars)',
+  draw: (fb, k, sh, f) => { montage10(fb, f, sh.id, k, sh.e - sh.s); },
+});
+L.add('v35-10.02', {
+  st: 'v35 montage10: someone\'s laptop at night: a code editor, one line red; CHATGTP\'s panel beside it with "why does this crash"; on the pulse (half way) the line turns green; their hands (another stranger) on the deck',
+  draw: (fb, k, sh, f) => { montage10(fb, f, sh.id, k, sh.e - sh.s); },
+});
+L.add('v35-10.03', {
+  st: 'v35 montage10: a phone in another hand on a couch at night: "king james verse: a peanut butter sandwich stuck in a VCR" (the viral prompt of Dec 1, 2022, shortened for the read floor; its poster never named), then the answer in a King James page\'s face, a red initial: "And it came to pass…", the rest pouring',
+  draw: (fb, k, sh, f) => { montage10(fb, f, sh.id, k, sh.e - sh.s); },
+});
+L.add('v35-10.04', {
+  st: 'v35 montage10 + feedPost: a feed on a phone, close: NOLE\'s post, a reply to Mas (replying to @masa), "CHATGTP is scary good. We are not far from dangerously strong AI." (the name swaps only), whole from its first frame (the read floor); his plate NOLE beside it',
+  draw: (fb, k, sh, f) => {
+    montage10(fb, f, sh.id, k, sh.e - sh.s);
+    plate(fb, sh, k, 'NOLE', 330, 160, PAL.R3);
+  },
+});
+L.add('v35-10.05', {
+  st: 'v35 montage10: two phones, a split: a kitchen at dusk ("eggs, half an onion, rice. what\'s dinner"), a dark bedroom ("how do i say sorry to my sister": the one a stranger\'s post answers at 3 AM); the answers pouring',
+  draw: (fb, k, sh, f) => { montage10(fb, f, sh.id, k, sh.e - sh.s); },
+});
+L.add('v35-10.06', {
+  st: 'v35 montage10: a chat window, close (its own pixels doubled): "what is 7 × 8", the answer "7 × 8 = 54." large, and under the input row the small print nobody reads, "research preview · may make things up" (the show\'s banner, as 5.10 now reads it)',
+  draw: (fb, k, sh, f) => { montage10(fb, f, sh.id, k, sh.e - sh.s); },
+});
+L.add('v35-10.07', {
+  st: 'v35 montage10: the coders\' question site, close (its pixels doubled): STACK UNDERFLOW (a parody name; its mark a stack upside down, generic colours), the notice "Temporary policy: CHATGTP is banned" in bold, the questions under it',
+  draw: (fb, k, sh, f) => { montage10(fb, f, sh.id, k, sh.e - sh.s); },
+});
+L.add('v35-10.08', {
+  st: 'v35 montage10: pull back: his desk at night from above, covered in lit phones, a stranger\'s chat on every one; among them his own lights red (ELGOOG · CODE RED: its siren glyph, the red on the desk round it) as the siren J-cuts in',
+  draw: (fb, k, sh, f) => { montage10(fb, f, sh.id, k, sh.e - sh.s); },
 });
 
 // ================================================================== SC 8 · THE CODE RED, ON HIS PHONE
@@ -474,30 +543,111 @@ L.add('8.05', {
   },
 });
 L.add('8.06', {
-  st: 'UI-ALERT drawPhoneLockOTS (over his shoulder: the siren turning on the phone in his hand; he locks it and the red goes out of the frame) → he gets up and goes right: his figure (the kit\'s own pixels) crosses the lens in five frames, a foreground wipe, and the soft bullpen is left empty under the lobby door\'s pre-lap',
-  marks: {lock: ['snd', 'dialog_ok_click--chip', 1, 0], go: ['snd', 'revolving_door', 1, -2]},
+  st: 'UI-ALERT drawPhoneLockOTS (over his shoulder: the siren turning on the phone in his hand; he locks it and the red goes out of the frame) → v3.5: he turns back to his laptop: the phone and his hand go down out of frame in three held steps (the kit\'s own pixels moved whole; his shoulder stays), and his laptop\'s cool light comes up from below on the dark bullpen: 3 AM, the feed still pouring (the siren\'s tail becomes the fans)',
+  marks: {lock: ['snd', 'dialog_ok_click--chip', 1, 0]},
   draw: (fb, k, sh, f) => {
-    const lk = mk(sh, 'lock', 21), go = mk(sh, 'go', 32);
+    const lk = mk(sh, 'lock', 21), go = lk + 8;
     if (k < go) { drawPhoneLockOTS(fb, f, {locked: k >= lk}); return; }
     const man = new Buf(480, 270, PAL.N0), bg = new Buf(480, 270, PAL.N0);
     drawPhoneLockOTS(man, f, {locked: true});
     launchBackM(bg, 380, {soft: 2, alyi: 'gone', underlines: 3});
-    fb.c.set(bg.c.subarray(0, 480 * RH), 0);
-    // he gets up and goes right: his shoulder, arm and phone cross the lens in five frames (a foreground wipe, the
-    // kit's own pixels moved whole), and the bullpen is left empty under the lobby door's pre-lap
-    const st = Math.min(4, k - go), dx = [60, 150, 260, 380, 520][st], dy = 0;
-    // his figure: what the kit changed over the bare back wall, plus the whole shoulder silhouette (its dark body
-    // matches the dark wall in places, so the difference alone would leave it behind)
     const sil = new Buf(480, 270, 0x1000000);
     otsShoulder(sil, -40, 58, PAL.N3, {flip: true});
+    fb.c.set(bg.c.subarray(0, 480 * RH), 0);
+    const st = Math.min(3, Math.floor((k - go) / 2)), dy = [24, 70, 140, 400][st];
     for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) {
       const i = y * 480 + x;
-      if (man.c[i] === bg.c[i] && sil.c[i] === 0x1000000) continue;
-      const X = x + dx, Y = y + dy;
-      if (X >= 0 && X < 480 && Y >= 0 && Y < RH) fb.c[Y * 480 + X] = man.c[i];
+      if (sil.c[i] !== 0x1000000) { fb.c[i] = man.c[i]; continue; }
+      if (man.c[i] === bg.c[i]) continue;
+      const Y = y + dy;
+      if (Y < RH) fb.c[Y * 480 + x] = man.c[i];
     }
+    // his laptop's light from below, coming up as he turns to it (whole rungs, dithered from the frame's foot)
+    const up = Math.min(1, (k - go) / 16);
+    for (let y = 120; y < RH; y++) for (let x = 60; x < 480; x++) { const t = (y - 120) / (RH - 120); if (sil.c[y * 480 + x] === 0x1000000 && bayer(x, y) < t * t * 0.5 * up) fb.set(x, y, t > 0.8 ? PAL.C2 : PAL.C1); }
   },
 });
+
+// ================================================================== SC 12 (v3.5) · 3 AM
+L.add('v35-12.01', {
+  st: 'v35 ots3am: over his shoulder at 3 AM (the bullpen two rungs darker, his laptop the one light): the at-capacity page (CHATGTP IS AT CAPACITY RIGHT NOW in the display face, the bubble asleep, "try again"; up from the first frame for the read floor), the reload\'s spinner, then the feed: the first post back is a stranger\'s, legible, no name, no face, a plain grey disc: "asked it how to say sorry to my sister. it helped." (it opens in 3 held steps) · the menu bar: the corner counter CHATGTP · USERS: (its wheels a spinning blur, never a figure) and the clock, 3:04 AM',
+  marks: {post: ['txt', 'asked it how', 'at', 0]},
+  draw: (fb, k, sh, f) => {
+    const p = mk(sh, 'post', 41);
+    ots3am(fb, f, k < p - 6 ? 'capacity' : k < p ? 'reload' : 'feed', k - p);
+  },
+});
+L.add('v35-12.02', {
+  st: 'v35 mcu3am (drawLaunchMcuMas\'s frame at 3 AM: the room two rungs darker, the laptop\'s cyan from below as a clean rim; two collars): he reads the post: his eyes travel its two lines (the dart camera-left to centre, on held steps), go back to the start, and travel them again; at the second read\'s end the one pixel: the smile. His V.O. types through the host (lips still)',
+  draw: (fb, k, sh, f) => {
+    // the reading: [until, look] pairs, each held 6+ frames
+    const R: Array<[number, -1 | 0]> = [[10, -1], [20, 0], [26, -1], [36, 0], [48, -1], [58, 0], [64, -1], [78, 0]];
+    const look = (R.find(([u]) => k < u)?.[1] ?? 0) as -1 | 0;
+    mcu3am(fb, f, {look, mouth: k >= 84 ? 'smile' : 'rest'});
+  },
+});
+L.add('v35-12.03', {
+  st: 'v35 counterECU → renderFront → office2018: his screen\'s top-left corner close (its pixels doubled): the corner counter CHATGTP · USERS: (spinning); on its text\'s mark the same place, size and face read PLAYED AGAINST ITSELF TODAY: 180 YEARS; then the intro\'s glowing seam sweeps left to right and re-draws the frame behind it as 2018 (progressive: 8 px, then 4 px blocks, then whole), the counter\'s words holding their place as the LED sign at the top of the old office\'s wall',
+  marks: {swap: ['txt', 'PLAYED AGAINST', 'at', 0]},
+  draw: (fb, k, sh, f) => {
+    const sw = mk(sh, 'swap', 7), s0 = sw + 8, len = sh.e - sh.s;
+    const a = new Buf(480, 270, PAL.N0);
+    counterECU(a, f, k >= sw);
+    if (k < s0) { fb.c.set(a.c.subarray(0, 480 * RH), 0); return; }
+    const to = new Buf(480, 270, PAL.N0);
+    office2018(to, f, OFFICE_AT);
+    renderFront(fb, a, to, Math.round(((k - s0 + 1) / (len - s0)) * 500), 1);
+  },
+});
+
+// ================================================================== SC 13 (v3.5) · THE NIGHT THE MACHINE TAUGHT ITSELF (JUN 2018)
+// the T3 memory tier (flashback-map §0.1): cut paper (flat shapes, one-rung shadows, paper grain), lit by the monitors;
+// the ATOD arena on the monitor wall in its own game medium. No inner voice in a memory
+const OFFICE_AT = {alyi: {x: 158}, mas: {x: 394, flip: true}};
+L.add('v35-13.01', {
+  st: 'v35 office2018: NopeAI\'s first office at night, June 2018, in cut paper: the warehouse windows on the city, the LED sign at the top of the wall (PLAYED AGAINST ITSELF TODAY: 180 YEARS, where 12.03\'s counter was), the monitor wall of six screens, a match of ATOD on each (top-down: the river, three lanes, two bases, towers, creeps marching, two heroes fighting; its HUD; held on 3s), the racks beside it with INVIDIA on their doors and over them (the second plant), their LEDs stepping; Alyi (hands clasped) and Mas (his glass) either side of the wall, their edges lit in the arena\'s colour of the moment; Gerg at his desk at the back in his green; the lone desk in the far corner, its small screen, a sticky note, a hoodie on the empty chair',
+  draw: (fb, k, sh, f) => { office2018(fb, f, OFFICE_AT); },
+});
+L.add('v35-13.02', {
+  st: 'v35 office2S: Alyi (left, in person, lit: his one direct face before Act Four) and Mas (right) facing the monitor wall off frame left, cut paper, the arena\'s colour on their edges and a face light a step up, stepping slowly; the far office dark behind (the window\'s city, Gerg\'s green, the lone desk\'s glow at right) · both lip-synced (spoken lines); Alyi blinks; held',
+  face: {ALYI: 'lip', MAS: 'lip'},
+  draw: (fb, k, sh, f) => {
+    office2S(fb, f, {alyi: {mouth: mouth(sh, k, 'ALYI'), eyes: blinkLid(k, 3, 131) === 2 ? 'closed' : 'open'}, mas: {mouth: say(sh, k, 'MAS'), look: -1}});
+  },
+});
+L.add('v35-13.03', {
+  st: 'v35 alyiMcu2018: Alyi alone, the arena\'s light on him, cut paper, his face a step up: happy not to know; lip-synced; Mas\'s "then a lot more computers." O.S.',
+  face: {ALYI: 'lip'},
+  draw: (fb, k, sh, f) => { alyiMcu2018(fb, f, {mouth: mouth(sh, k, 'ALYI'), eyes: blinkLid(k, 5, 113) === 2 ? 'closed' : 'open'}); },
+});
+L.add('v35-13.04', {
+  st: 'v35 office2S: Alyi turns to Mas (his portrait flipped) for "Something that can learn anything, Mas. What else would you build?"; Mas holds his eye through it; no answer: 6 frames after the line his eyes leave Alyi (the dart away, camera-right) for the lone desk behind him and stay',
+  face: {ALYI: 'lip'},
+  marks: {end: ['end', 'v35-a1-0007', 6]},
+  draw: (fb, k, sh, f) => {
+    const e = mk(sh, 'end', 118);
+    office2S(fb, f, {alyiFlip: true, alyi: {mouth: mouth(sh, k, 'ALYI'), eyes: 'open'}, mas: {look: k >= e ? 1 : -1}});
+  },
+});
+L.add('v35-13.05', {
+  st: 'v35 loneDesk: the lone desk, close, cut paper: a beige 2018 monitor, its terminal ("> sample --len 12", then "the cat sat on the the mat of the" and a blinking block), a sticky note on the bezel ("text?" / "(side project)"), a grey hoodie slung over the empty chair in the foreground; its green the only light. Never pointed at: no push, no sting; its researcher never drawn',
+  draw: (fb, k, sh, f) => { loneDesk(fb, f, k); },
+});
+L.add('v35-13.06', {
+  st: 'v35 office2018 → renderFront (back) → ROOM-LOBBY-DEAL drawDealWide: he walks out of the 2018 office with his glass (walking right, into frame from the left); the glowing seam sweeps back right to left, and behind it he is walking into NopeAI\'s lobby in January with the same glass, at the same place in frame (9.01 picks up his walk at x 132); the revolving door\'s squeal is the sound lead',
+  draw: (fb, k, sh, f) => {
+    const len = sh.e - sh.s, mx = Math.round(132 - (len - k) * 3.4), legs = masWalkAt(f);
+    const a = new Buf(480, 270, PAL.N0), to = new Buf(480, 270, PAL.N0);
+    office2018(a, f, {alyi: {x: 158}, mas: {x: mx, legs}});
+    drawDealWide(to, f, {check: null, mas: {at: [mx, 190], legs, collars: 2, collarStyle: CS}, tasya: {at: DEAL.tasya, keys: 11}});
+    glassInHand(to, mx + GLASS_DX, 190 + GLASS_DY);
+    const s0 = 6;
+    if (k < s0) { fb.c.set(a.c.subarray(0, 480 * RH), 0); return; }
+    renderFront(fb, a, to, Math.round(480 - ((k - s0 + 1) / (len - s0)) * 500), -1);
+  },
+});
+/** where his glass sits in his near hand (mas-stand's 'down' arm, unflipped: walking right) */
+const GLASS_DX = 9, GLASS_DY = -30;
 
 // ================================================================== SC 9 · THE LANDLORD'S DEAL (the NopeAI lobby)
 // ---- the jammed check reads clear: nobody stands in front of its words. The wide's check spans x 22-278 (its stub
@@ -516,17 +666,20 @@ const edgePen = (b: Buf) => { for (const [x, y, c] of penPixels()) b.set(x + PEN
 const MAS_MARK = 312; // Mas's mark by the desk, right of the check
 
 L.add('9.01', {
-  st: 'ROOM-LOBBY-DEAL drawDealWide (the arrival: the lobby by day, NOPEAI · A NONPROFIT in gold on the door, Tasya already standing there like part of the wall, still, 11 keys) · Mas walks in from frame left to the desk (mas-stand walk) · PROP-CHECK: the check slides in through the doors in held steps and jams in the revolving door on the nudge, legible in the wide',
+  st: 'v3.5: the MATCH out of 2018 (he walks in with the same glass, at the same place in frame as 13.06 left him) · ROOM-LOBBY-DEAL drawDealWide (the arrival: the lobby by day, NOPEAI · A NONPROFIT in gold on the door, Tasya already standing there like part of the wall, still, 11 keys) · Mas walks in from frame left to the desk (mas-stand walk) · PROP-CHECK: the check slides in through the doors in held steps and jams in the revolving door on the nudge, legible in the wide',
   marks: {jam: ['snd', 'glass_nudge', 1, 0]},
   draw: (fb, k, sh, f) => {
     const jam = mk(sh, 'jam', 53);
     // he's through the door as we arrive and crosses to his mark by the desk before the check lands behind him
     const mx = Math.min(MAS_MARK, 132 + Math.round(k * 3.4)), walking = mx < MAS_MARK;
     const base: DealWideState = {mas: {at: [mx, 190], legs: walking ? masWalkAt(f) : 'stand', collars: 2, collarStyle: CS}, tasya: {at: DEAL.tasya, keys: 11}};
-    if (k >= jam) { underCast(fb, f, {...base, check: 'jammed', pen: false}, edgePen); return; }
+    // v3.5: his glass from 2018, in his near hand (the match out of the flashback)
+    const glass = () => glassInHand(fb, mx + GLASS_DX, 190 + GLASS_DY);
+    if (k >= jam) { underCast(fb, f, {...base, check: 'jammed', pen: false}, edgePen); glass(); return; }
     const kk = k - (k % 2);
-    if (k < jam - 14) { drawDealWide(fb, f, {...base, check: null}); return; }
+    if (k < jam - 14) { drawDealWide(fb, f, {...base, check: null}); glass(); return; }
     underCast(fb, f, {...base, check: null, revolve: 1}, (b) => { const dx = -(jam - kk) * 17; drawCheck(b, DEAL.checkJam[0] + dx, DEAL.checkJam[1], {pen: false, stub: DEAL.stub}); for (const [x, y, c] of penPixels()) b.set(x + PEN_DX + dx, y + PEN_DY, c); });
+    glass();
   },
 });
 L.add('9.04', {
@@ -624,9 +777,9 @@ L.add('v32-9.10k', {
   },
 });
 L.add('9.10', {
-  st: 'ROOM-LOBBY-DEAL drawDealWide (weeks on, the time jump held: the check scuffed grey on the floor, Gerg sitting on its edge with his laptop, Mas at the desk, Tasya where he stood with a twelfth key in NopeAI beige that catches the light; the TV comes on with GNIB, Sydney in its box; Gerg looks up from his laptop to it for his line and stays on Tasya, a listener reacting, through "…we made them dance…") + extras.passerBy (an employee crossing the check without looking down) · Gerg and Tasya at room scale from their takes',
+  st: 'ROOM-LOBBY-DEAL drawDealWide (weeks on, the time jump held: the check scuffed grey on the floor, Gerg sitting on its edge with his laptop, Mas at the desk, Tasya where he stood with a twelfth key in NopeAI beige that catches the light; the TV comes on with GNIB, CHATGTP\'s two-dot face in GNIB\'s colours in its box, v3.5\'s chyron THE NEW GNIB · POWERED BY NOPEAI; Gerg looks up from his laptop to it for his line (v3.5: his earlier take, "That\'s our model in your search engine…") and stays on Tasya, a listener reacting, through "…we made them dance…") + extras.passerBy (an employee crossing the check without looking down) · Gerg and Tasya at room scale from their takes',
   face: {GERG: 'room', TASYA: 'room'},
-  marks: {tv: ['txt', 'TV: MACROSOFT', 'at', 0], walk: ['snd', 'synth:steps_stone', 1, -16]},
+  marks: {tv: ['txt', 'TV: THE NEW GNIB', 'at', 0], walk: ['snd', 'synth:steps_stone', 1, -16]},
   draw: (fb, k, sh, f) => {
     const tv = mk(sh, 'tv', 50), w0 = mk(sh, 'walk', 12);
     const st: DealWideState = {
@@ -636,6 +789,8 @@ L.add('9.10', {
       gerg: {body: 'sit', at: [96, 190], mouth: roomMouth(sh, k, 'GERG') === 'open' ? 'open' : 'rest', look: k >= tv ? 'up' : 'screen'},
     };
     drawDealWide(fb, f, st);
+    // v3.5: the TV's chyron reads THE NEW GNIB · POWERED BY NOPEAI (its box keeps CHATGTP's face in GNIB's colours)
+    if (k >= tv) gnibChyron(fb, 'wide');
     // someone crossing the check without looking down: from the desk's end, left across it and out by the door
     const x = 262 - Math.round((k - w0) * 2.1);
     if (k >= w0 && x > -30) {
@@ -669,6 +824,7 @@ L.add('9.13', {
     const said = mk(sh, 'said', 25), se = mk(sh, 'saidEnd', 67);
     const blink: SydneyFace | undefined = k >= se - 6 && k < se - 2 ? 'blink' : undefined;
     drawDealGerg2S(fb, f, {lid: 0, collars: 3, collarStyle: CS, tv: {show: 'gnib', bubble: 'sydney', bubbleFace: blink}, mas: {mouth: say(sh, k, 'MAS')}, gerg: {head: 'up', look: k >= said ? -1 : 0, lid: 0}});
+    gnibChyron(fb, 'wide', true);
   },
 });
 
@@ -682,6 +838,10 @@ L.add('v31-10.01', {
     if (k < out) {
       const step = (k < pop ? 0 : k < pop + 3 ? 1 : k < pop + 6 ? 2 : k < pop + 9 ? 3 : 4) as 0 | 1 | 2 | 3 | 4;
       drawSydneyTvExit(fb, f, {step, face: k >= pop - 5 && k < pop - 2 ? 'blink' : 'dots'});
+      // v3.5: the chyron's new words over the caption band, wherever Sydney isn't (she crosses it on her way out)
+      const bare = new Buf(480, 270, PAL.N0), neu = new Buf(480, 270, PAL.N0);
+      tvScreenBare(bare, f, {show: 'gnib', bubble: 'gone'}); neu.c.set(bare.c); gnibChyron(neu, 'full');
+      for (let y = 169; y < 188; y++) for (let x = 31; x < 449; x++) { const i = y * 480 + x; if (fb.c[i] === bare.c[i]) fb.c[i] = neu.c[i]; }
       // her plate under GNIB's box, beside her way out (the box's own field stays clear: it isn't a search query)
       plate(fb, sh, k, 'SYDNEY', 150, 124, SYD);
       return;
@@ -737,15 +897,81 @@ L.add('v31-10.04', {
   },
 });
 
+// ================================================================== SC 18 (v3.5) · THE WINDOW (that evening)
+L.add('v35-18.01', {
+  st: 'v35 windowGlass → windowWide: the bullpen window\'s glass close, dusk over the city beyond: the users line in Gerg\'s green marker, and on the squeak his hand carries it on up and off the top of the glass; the clipping taped to the glass, its headline legible (CHATGTP SETS RECORD FOR FASTEST-GROWING USER BASE, no figure); the paid plan in Rima\'s red on the glass, PLUS · $20, an arrow to the line (the lock\'s "board", moved to the glass so it shares the frame with the line) → the wide at dusk (the medium panorama\'s window, launch night\'s bullpen warmed by the evening): Gerg by the glass looking up at his line, Alyi with his laptop open to Rima, Rima leaning in to it, Mas by the hall\'s light, the four of them backlit',
+  marks: {squeak: ['snd', 'marker_write_q', 1, 0]},
+  draw: (fb, k, sh, f) => {
+    const sq = mk(sh, 'squeak', 7), wide = 80;
+    if (k < wide) { windowGlass(fb, {marker: Math.min(1, Math.max(0, (k - sq) / 40)), hand: k >= sq - 6 && k < sq + 50, f}); return; }
+    windowWide(fb, {f});
+  },
+});
+L.add('v35-18.02', {
+  st: 'v35 window2S → windowWide: Mas (left, three collars, turned to her) and Rima (right, turned to him) at the window, the dusk and his line soft behind them, the evening\'s light on their faces; "Still a preview?" (her brow up, teasing) and "still a preview." (launch night\'s own take), both lip-synced → the wide: all four laugh (four held drawings: shoulders up and down on 4s, out of step; mouths open, his the one-pixel smile); the sound pass lays a group laugh',
+  face: {RIMA: 'lip', MAS: 'lip'},
+  marks: {said: ['end', 'v35-a1-0010', 8]},
+  draw: (fb, k, sh, f) => {
+    const said = mk(sh, 'said', 80);
+    if (k < said) { window2S(fb, f, {mas: {mouth: say(sh, k, 'MAS'), look: 0}, rima: {mouth: mouth(sh, k, 'RIMA'), brow: k < 30 ? 'lift' : 'level', lid: blinkLid(k, 2, 71)}}); return; }
+    windowWide(fb, {f, laugh: true});
+  },
+});
+L.add('v35-18.03', {
+  st: 'v35 windowLamp: the others gone home; Mas at his end desk under one lamp (mas-medium at his desk, the lamp\'s pool), the window dark now, Gerg\'s line over the city\'s lights in the glass behind him; he opens his laptop (a blank page): its cyan comes up on his face',
+  draw: (fb, k, sh, f) => { windowLamp(fb, f, k >= 30 ? 1 : 0); },
+});
+
+// ================================================================== SC 19 (v3.5) · THE VISION POST
+L.add('v35-19.01', {
+  st: 'v35 editorPOV + editorPage: his laptop at night from above his hands (gerg-laptop\'s POV frame, the room dark, his cuffs in the screen\'s light): a plain blog editor (generic: New post, Publish), and on its mark he types the title, "Planning for AGI and beyond", in the display face, a caret at its end',
+  marks: {title: ['txt', 'Planning for AGI', 'at', 0]},
+  draw: (fb, k, sh, f) => {
+    const t0 = mk(sh, 'title', 19);
+    editorPOV(fb, f, 0, true, (S) => editorPage(fb, S, {title: Math.max(0, Math.min(VISION.title.length, Math.floor((k - t0) * 1.1)))}));
+  },
+});
+L.add('v35-19.02', {
+  st: 'v35 editorPage full frame (the page\'s own layout): the title, and the three passages typed at his rate one at a time, each landing whole in under a second and held to read (script-v35-notes §7: checked word for word), the earlier ones dimmed above it but still there to read (the read floor); the caret on the line being typed',
+  marks: {p1: ['txt', 'Our mission', 'at', 0], p2: ['txt', 'a gradual transition', 'at', 0], p3: ['txt', 'perhaps the most important', 'at', 0]},
+  draw: (fb, k, sh, f) => {
+    const at = [mk(sh, 'p1', 7), mk(sh, 'p2', 162), mk(sh, 'p3', 245)];
+    const passages = at.filter((a) => k >= a).map((a, i) => Math.min(VISION.p[i].length, Math.floor((k - a) * 5)));
+    editorPage(fb, {x: 0, y: 0, w: 480, h: RH}, {title: VISION.title.length, passages, dim: passages.length - 1});
+    void f;
+  },
+});
+L.add('v35-19.03', {
+  st: 'v35 mcu3am (the same MCU at his desk, the page\'s light on him from below, the room dark): held, the post finished; his V.O. through the host (lips still)',
+  draw: (fb, k, sh, f) => { mcu3am(fb, f, {look: -1}); },
+});
+L.add('v35-19.04', {
+  st: 'v35 editorPOV: his cursor to Publish and the click (the pill lights, Published), the page gives way to his feed: his post at the top, and on its mark a rival\'s the same day, ATEM · A NEW MODEL · FOR RESEARCHERS ONLY, opening in 3 held steps; he closes the lid (half, then shut: GERG_LAPTOP.shut, the same slab 11.01 opens in the same place in frame)',
+  marks: {atem: ['txt', 'ATEM', 'at', 0]},
+  draw: (fb, k, sh, f) => {
+    const len = sh.e - sh.s, click = 12, atem = mk(sh, 'atem', 29);
+    const lid = (k < len - 8 ? 0 : k < len - 4 ? 1 : 2) as 0 | 1 | 2;
+    editorPOV(fb, f, lid, lid === 0, (S) => {
+      if (k < click + 6) {
+        editorPage(fb, S, {title: VISION.title.length, passages: [VISION.p[0].length], publish: k < click ? 0 : k < click + 4 ? 1 : 2});
+        if (k < click + 2) { const tx = S.x + S.w - 30 - Math.max(0, 8 - k) * 6, ty = S.y + 4 + Math.max(0, 8 - k) * 5; drawCursor(fb, tx, ty); }
+        return;
+      }
+      feedAfter(fb, S, k - click - 6, k >= atem ? k - atem : -1);
+    });
+  },
+});
+
 // ================================================================== SC 11 · THE DUEL (a meanwhile split, by a match cut)
 L.add('11.01', {
-  st: 'MATCH CUT on the lid: INSERT-GERG-LAPTOP drawGergLaptopPOV place bullpen (the same slab in the same place in frame as v31-10.04\'s last frame, on the demo desk: lid 2 → 1 → 0 in held steps, opening on the Atem thread: the tipped crate ATEM · MODEL WEIGHTS · RESEARCHERS ONLY, anon · 03/03/23) → SPLIT-DUEL drawDemoArrival (the bullpen\'s arrival: the day room dressed as the demo stage under the hand-lettered GTP-4 banner, Mas at his end desk behind; Gerg on camera for his line, lip-synced) → back on his screen for Mas\'s O.S. "give it a minute. it\'ll be open source.", and on "open source" he scrolls down to the replies piling up; the frame splits on the downbeat (11.03)',
+  st: 'MATCH CUT on the lid: INSERT-GERG-LAPTOP drawGergLaptopPOV place bullpen (the same slab in the same place in frame as v31-10.04\'s last frame, on the demo desk: lid 2 → 1 → 0 in held steps, opening on the Atem thread: the tipped crate ATEM · MODEL WEIGHTS · RESEARCHERS ONLY, anon · 03/03/23) → SPLIT-DUEL drawDemoArrival (the bullpen\'s arrival: the day room dressed as the demo stage (v3.5: the GTP-4 banner not up yet, patched out: it comes with the split), Mas at his end desk behind; Gerg on camera for his line, lip-synced) → back on his screen for Mas\'s O.S. "give it a minute. it\'ll be open source.", and on "open source" he scrolls down to the replies piling up; the frame splits on the downbeat (11.03)',
   face: {GERG: 'lip'},
   marks: {line: ['on', 'e1-a1-11-04', -2], lineEnd: ['end', 'e1-a1-11-04', 4], open: ['w', 'e1-a1-11-05', 'open', 0]},
   draw: (fb, k, sh, f) => {
     const g0 = mk(sh, 'line', 26), g1 = mk(sh, 'lineEnd', 116), op = mk(sh, 'open', 166);
     if (k >= g0 && k < g1) {
       drawDemoArrival(fb, f, {lid: 0, gerg: {head: lipOn(sh, k, 'GERG') ? 'talk' : 'type', mouth: mouth(sh, k, 'GERG'), lid: blinkLid(k, 4, 83) === 2 ? 2 : 1}});
+      unBanner(fb);
       return;
     }
     const lid = (k < 4 ? 2 : k < 8 ? 1 : 0) as 0 | 1 | 2;
@@ -755,16 +981,27 @@ L.add('11.01', {
     drawGergLaptopPOV(fb, f, {place: 'bullpen', lid, screen: 'thread', thread: {replies: 3, scroll}, hands: lid === 0, f: 0});
   },
 });
+/** v3.5 (11.01, Mar 3): the GTP-4 banner isn't up yet (it comes with the split, Mar 14). drawDemoArrival hangs it at
+ *  (95-173, 34-50) on two wires from the ceiling (x 97-99, 169-171): the wall behind it (and the neon it half hid) is
+ *  patched from the same rows 110 px to its right (the plain wall over the glass partition), the wires from the ceiling
+ *  beside them */
+const unBanner = (fb: Buf) => {
+  for (let y = 33; y < 52; y++) for (let x = 70; x < 176; x++) fb.set(x, y, fb.get(x + 110, y));
+  for (let y = 4; y < 33; y++) for (const x0 of [96, 168]) for (let x = x0; x < x0 + 5; x++) fb.set(x, y, fb.get(x + 8, y));
+};
 /** the split's foot a rung down (both panes): the V.O. rows on shadow (the left pane is a day room) */
 const splitFoot = (fb: Buf) => bottomShade(fb, 180, 1);
 L.add('11.03', {
   st: 'SPLIT-DUEL drawDuelSplit phrase 1: the right pane held clean for Mas\'s V.O. (CLOD unlit, waiting; Mario writing, no scroll yet; the left pane quiet, Gerg typing) · then LEFT the demo (Gerg holding up the napkin and photographing it on the shutter; the photo on the demo screen) · RIGHT Mario dictating his memo as the scroll grows · plates CLOD 1 · SAME DAY and MARIO in the right pane (v3.4: the restored V.O. carries the relation, so the plate is his name again, at v3.1\'s spot)',
-  marks: {memo: ['on', 'e1-a1-11-01', 0], memoEnd: ['end', 'e1-a1-11-01', 0], snap: ['snd', 'camera_shutter', 1, 0]},
+  marks: {memo: ['on', 'e1-a1-11-01', 0], memoEnd: ['end', 'v35-a1-0011', 0], snap: ['snd', 'camera_shutter', 1, 0]},
   draw: (fb, k, sh, f) => {
-    const m0 = mk(sh, 'memo', 141), m1 = mk(sh, 'memoEnd', 300), snap = mk(sh, 'snap', 206);
+    // v3.5: the memo runs on into point two ("if someone's going to build it, it should be someone who's scared of it."):
+    // he dictates, finger up, through both points (the right pane is duel-split's own drawing: CLOD stays its draw
+    // call, so the claymation insert can replace it frame for frame)
+    const m0 = mk(sh, 'memo', 141), m1 = mk(sh, 'memoEnd', 405), snap = mk(sh, 'snap', 206);
     const gerg = k < snap - 40 ? 'type' : k < snap ? 'napkin' : k < snap + 3 ? 'snap' : 'type';
     // the scroll: none under the V.O., then it grows with the memo (to phrase 2's 50 px by its end)
-    const scroll = k < m0 ? 0 : Math.min(50, Math.floor((k - m0) / 3.2));
+    const scroll = k < m0 ? 0 : Math.min(50, Math.floor((k - m0) / 5.2));
     drawDuelSplit(fb, f, {
       left: {gerg, screen: k >= snap + 4 ? 'napkin' : 'blank'},
       right: {light: 0, mario: k >= m0 && k < m1 ? 'dictate' : 'write', scroll, f},
@@ -773,12 +1010,11 @@ L.add('11.03', {
     plate(fb, sh, k, 'CLOD', 250, 14, PAL.W5);
     const mt = textOf(sh, 'label', 'MARIO');
     if (mt && k >= mt.s && k < mt.e) drawPlate(fb, {...mt, kind: 'plate'}, k - mt.s, 404, 90, ACCENT.MARIO ?? PAL.F6);
-    return voTyped(fb, sh, k);
   },
 });
 L.add('11.04', {
-  st: 'SPLIT-DUEL drawDuelSplit phrase 2 {left.caption: false}: RIGHT the launch light slams on and CLOD bows ("You\'re absolutely right!"), then rises; Mario looks up at the split line (the same day), "Addendum.", writes · LEFT, GTP-4 goes out on HIS click: the pane cuts in to 5.08\'s insert (extras.paneButton: the beige button, research preview; his finger comes in with no hover in 5.08\'s held steps; touch, the click, the LED), and on the click the pane is back in the bullpen with the napkin swapped into a working website, no caption, the room cheering in two held drawings on the cheer · HOLD on Mario writing',
-  marks: {clod: ['on', 'e1-a1-11-02', -2], clodEnd: ['end', 'e1-a1-11-02', 0], add: ['on', 'e1-a1-11-03', 0], cheer: ['snd', 'synth:cheer', 1, 0]},
+  st: 'SPLIT-DUEL drawDuelSplit phrase 2 {left.caption: false}: RIGHT the launch light slams on and CLOD bows ("You\'re absolutely right!"), then rises; Mario looks up at the split line (the same day), "Addendum.", writes · LEFT, GTP-4 goes out on HIS click: the pane cuts in to 5.08\'s insert (extras.paneButton: the beige button, research preview; his finger comes in with no hover in 5.08\'s held steps; touch, the click, the LED), and on the click the pane is back in the bullpen with the napkin swapped into a working website, no caption, the room cheering in two held drawings on the cheer · v3.5 (left pane): the users line on the bullpen glass jumps on the click (Gerg\'s green, three held strokes off the glass\'s top); Alyi\'s reflection in the glass leans in toward the website (his awe, before his distance at 12.05); the bar-exam card pops over the website on its mark, SIMULATED BAR EXAM · TOP 10% · HOLD on Mario writing (2 s longer)',
+  marks: {clod: ['on', 'e1-a1-11-02', -2], clodEnd: ['end', 'e1-a1-11-02', 0], add: ['on', 'e1-a1-11-03', 0], cheer: ['snd', 'synth:cheer', 1, 0], bar: ['txt', 'SIMULATED BAR EXAM', 'at', 0]},
   draw: (fb, k, sh, f) => {
     const c0 = mk(sh, 'clod', 6), c1 = mk(sh, 'clodEnd', 41), add = mk(sh, 'add', 76), ch = mk(sh, 'cheer', 114), site = ch - 4;
     const mario = k < c1 + 10 ? 'write' : k < add ? 'lookup' : k < add + 22 ? 'dictate' : 'write';
@@ -794,9 +1030,22 @@ L.add('11.04', {
       const steps: Array<[number, number, number]> = [[in0, -400, -300], [a0, -96, -64], [a0 + 4, -48, -32], [a0 + 8, -14, -9], [a0 + 12, 0, 0]];
       const st = steps.filter(([s0]) => k >= s0).pop()!;
       paneButton(fb, (k >= clk ? 2 : k >= clk - 3 ? 1 : 0) as 0 | 1 | 2, st[1], st[2], k >= clk);
+    } else {
+      // v3.5, the LEFT pane only (the right pane stays duel-split's own, for CLOD's insert): the users line on the
+      // bullpen glass jumps on his click (three held strokes up off the glass's top); Alyi's reflection in the glass,
+      // leaning in toward the website; then the bar-exam card over the website
+      paneUsersLine(fb, k < out + 4 ? 0 : Math.min(1, Math.floor((k - out - 4) / 4 + 1) / 3));
+      paneAlyi(fb, k < out + 6 ? 0 : k < out + 10 ? 0.5 : 1);
+      paneBar(fb, k - mk(sh, 'bar', 125));
     }
     splitFoot(fb);
   },
+});
+
+// ================================================================== SC 22 (v3.5) · ELGOOG'S WAITLIST
+L.add('v35-22.01', {
+  st: 'v35 waitlistTV: the bullpen\'s wall TV by day: DRAB\'s page (the name in Elgoog\'s skewed primaries), a velvet rope between brass stanchions snapping taut on the snap (the sound lead), JOIN THE WAITLIST; past the TV\'s edge, the bullpen window and Gerg\'s users line far above it, off the top of the glass',
+  draw: (fb, k, sh, f) => { waitlistTV(fb, k, 4); void f; },
 });
 
 // ================================================================== SC 12 · THE PAUSE LETTER (the act-out)
@@ -822,19 +1071,26 @@ L.add('12.01', {
   },
 });
 L.add('12.02', {
-  st: 'ROOM-NOLE-DESK drawNoleDesk (a standing desk in the dark, his lamp: the clipboard glides in from the left in held steps and lands at desk size under Nole\'s pre-lap; he signs with his left hand (the flourish on the scribble) and solders a GPU under the desk with his right (sparks on the crackles); OIGNEB holds up PAUSE, higher for "You signed it. Now put the iron down.") · Nole and Oigneb at room scale from their takes · plates NOLE · EARLY FUNDER · BUILDING HIS OWN (riding the sparks) and OIGNEB',
+  st: 'ROOM-NOLE-DESK drawNoleDesk (a standing desk in the dark, his lamp: the clipboard glides in from the left in held steps and lands at desk size under Nole\'s pre-lap; he signs with his left hand, the flourish on the scribble; OIGNEB holds up PAUSE, higher for his line) → v3.5: on the first stamp, the cut-in (v35 filedECU): his desk top from above, two hands in one frame: his left signing PAUSE GIANT AI EXPERIMENTS · 6 MONTHS on the clipboard, his right stamping ZAI CORP. · ARTICLES OF INCORPORATION · NEVADA: FILED, the top sheet slid away, FILED again on the second (no date on the papers); his plate NOLE · BUILDING HIS OWN over it → back to the wide for OIGNEB\'s "You signed it. Now put the stamp down." (the sign up) and Nole\'s "Next quarter.": the papers on the shelf under his desk now, FILED on them, where the soldered board was · Nole and Oigneb at room scale from their takes · plates as before',
   face: {NOLE: 'room', OIGNEB: 'room'},
-  marks: {sign: ['snd', 'pen_scribble_short', 1, 0], c1: ['snd', 'synth:crackle', 1, 0], c2: ['snd', 'synth:crackle', 2, 0], og: ['on', 'v32-a1-0007', -2], ogEnd: ['end', 'v32-a1-0007', 12]},
+  marks: {sign: ['snd', 'pen_scribble_short', 1, 0], s1: ['snd', 'rubber_stamp_C', 1, 0], s2: ['snd', 'rubber_stamp_C', 2, 0], og: ['on', 'v35-a1-0012', -2], ogEnd: ['end', 'v35-a1-0012', 12]},
   draw: (fb, k, sh, f) => {
-    const sg = mk(sh, 'sign', 7), c1 = mk(sh, 'c1', 19), c2 = mk(sh, 'c2', 86), og = mk(sh, 'og', 67), ogE = mk(sh, 'ogEnd', 142);
+    const sg = mk(sh, 'sign', 7), s1 = mk(sh, 's1', 22), s2 = mk(sh, 's2', 50), og = mk(sh, 'og', 67), ogE = mk(sh, 'ogEnd', 142);
+    const cin = s1 - 3, cout = og - 4;
+    if (k >= cin && k < cout) {
+      const stamp = (k < s1 ? 0 : k < s1 + 4 ? 1 : k < s2 - 8 ? 2 : k < s2 ? 0 : k < s2 + 4 ? 1 : 2) as 0 | 1 | 2;
+      filedECU(fb, f, {sign: Math.min(1, 0.55 + (k - cin) / 60), stamp, filed: k >= s2 ? 2 : k >= s1 ? 1 : 0, slide: k < s2 - 14 ? 0 : k < s2 - 8 ? (k - (s2 - 14)) / 6 : 1});
+      plate(fb, sh, k, 'NOLE', 208, 8, PAL.R3);
+      return;
+    }
     const clip = k < 2 ? 1 : k < 4 ? 2 : k < 6 ? 3 : 4;
-    const sparks = k >= c1 && k < c1 + 34 ? k - c1 : k >= c2 && k < c2 + 24 ? k - c2 : null;
     drawNoleDesk(fb, f, {
-      clip, signed: k < sg ? 0 : k < sg + 6 ? 1 : 2, sparks,
+      clip, signed: k < sg ? 0 : k < sg + 6 ? 1 : 2, sparks: null,
       nole: {mouth: room3Mouth(sh, k, 'NOLE')},
       oigneb: {sign: k >= og && k < ogE ? 'high' : 'chest', mouth: roomMouth(sh, k, 'OIGNEB') === 'open' ? 'open' : 'rest', blink: blinkLid(k, 8, 91) === 2},
     });
-    // his plate above him, in the dark (the relation words make it wide: at his feet it would run over Oigneb)
+    // the shelf under the desk: the papers (FILED on them after the stamps) where the board and the GPU were
+    filedPapers(fb, 190, 139, k >= cout ? 2 : 0);
     plate(fb, sh, k, 'NOLE', 132, 40, PAL.R3);
     plate(fb, sh, k, 'OIGNEB', 356, 58, PAL.N7);
   },
@@ -881,4 +1137,11 @@ L.add('12.07', {
 });
 
 void LAUNCH; void stepColor; void ease2; void rect;
-export const SEGMENT = defineSegment({seg: 'act1', lock: LOCK, layouts: L.all, review: {subtitle: 'PIXEL v3.4 · LOCK ACT1 (v3.4 STICK TIMING) · v3-shots-act1'}});
+export const SEGMENT = defineSegment({
+  seg: 'act1', lock: LOCK, layouts: L.all,
+  review: {subtitle: 'PIXEL v3.5 · LOCK ACT1 (v3.5 BASE LOCK, KOKORO TIMING) · p-act1'},
+  // 7.02's style leap (9A): the macro's frames are PNGs (studio/src/dev/genvideo/runway/tear.py writes them numbered by
+  // segment frame into GLYPH_DIR/pic); the pipeline's pixel GPU stands under them in stills. --opt tear=false renders
+  // the pixel shot alone (the fallback)
+  browser: {frames: (f, o) => o.tear !== false && f >= TEAR.from && f < TEAR.to, note: '7.02 k29-88: the tear macro (style leap 9A; PNG frames; option tear)'},
+});
