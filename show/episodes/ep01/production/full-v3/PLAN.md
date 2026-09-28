@@ -162,3 +162,11 @@ out/ep01/full-v3/                         the films and mixes (git-ignored)
 - **It runs on the v3.1 film** (its findings feed v3.2) **and again on the v3.2 film as the last gate** before the Drive swap.
 
 **2026-09-28 (showrunner):** "don't worry about the drive anymore". No more Drive uploads or shares. The v3.2 films stay local at out/ep01/full-v3/. (The v3.1 swap had already finished: the v3.1 films were uploaded and shared, and the v3 films moved to the Drive trash.)
+
+**v3.2 sound items** (from audit-v31 §C), for the rebuild:
+- **Tag → outro:** a +20 dB jump in 100 ms at 21:41.58. Hold the tag's hum 2 s, crossfade, and bring the outro's first hit down 6 dB (assembly and outro audio).
+- **Act One's head:** the 1.0–1.2 s act-head fade softens the **designed downbeat** at film 0:58.7. Exempt designed hits from the fade (sound pass).
+- **Act One at film 5:08.6:** a −16 dB music dip, a gap left where a cue moved (composer X).
+- **Three music accents with no cue mark,** at film 1:56.3, 11:48.1 and 21:20.1: the composers confirm or remove them.
+- **4 pre-laps:** lines leading in at place changes (the script marks them as J-cuts; the lock builds them).
+- The cold open → intro seam gets an ear.
