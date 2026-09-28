@@ -74,7 +74,8 @@ export const signupPainter = (st: SignupState = {}): Painter => (scr, f) => {
     ls.slice(-2).forEach((l, i) => pt(scr, l, cx + 4, cy + 14 + i * 10, PAL.P2));
     if (Math.floor(f / 8) % 2 === 0) { const last = ls[ls.length - 1] ?? ''; rect(cx + 4 + pw(last) + 1, cy + 14 + (Math.min(2, ls.length) - 1) * 10, 1, 8, scr.ink(PAL.C6)); }
   }
-  if (st.post !== null && st.post !== undefined) drawPost(scr, 16, H - 62, POST_PAUSE, {size: 'popup', w: W - 40, k: st.post});
+  // the card goes up over the page's head, so the button under it stays in sight as it greys
+  if (st.post !== null && st.post !== undefined) drawPost(scr, 16, 16, POST_PAUSE, {size: 'popup', w: W - 40, k: st.post});
 };
 
 // ------------------------------------------------------------------ the rack beside him (v32-22.04)
@@ -126,8 +127,8 @@ export const drawDevDayMCU = (b: Buf, f: number, st: {mas?: Partial<MasPortraitS
   // the backdrop's word, huge and cut by the frame behind him (a stage, never a caption)
   bigText(b, 'DEVDAY', 300, 36, PAL.C5, {shadow: PAL.C0});
   putBustCut(b, masPortrait({...MAS_PORTRAIT_DEFAULT, head: 'front', light: 'monitor', ...st.mas}), 150, 24, RH);
-  // the stage mic's thin boom at his chin, off the frame's foot
-  line(236, 110, 262, RH, b.ink(PAL.N0)); rect(232, 106, 6, 5, b.ink(PAL.G1)); rect(232, 106, 6, 1, b.ink(PAL.G3));
+  // a lavalier mic clipped to the hoodie's neckline (a stage, not a podium: no boom across his face)
+  rect(222, 118, 3, 3, b.ink(PAL.N0)); b.set(223, 118, PAL.G4);
 };
 
 // ------------------------------------------------------------------ the tally, framed legibly (v31-18.00)
@@ -137,16 +138,19 @@ export const drawTallyECU = (b: Buf, f: number, st: {n?: 2 | 3} = {}) => {
   for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) {
     const g = Math.floor(y * 0.35 + Math.sin(x / 60 + y / 50) * 1.5);
     let c: number = g % 4 === 0 && hash(x >> 3, y, 5) < 0.6 ? PAL.D0 : PAL.D1;
-    const lit = 1 - x / 520; // the monitor's light from the left
-    if (bayer(x, y) < lit * 0.45) c = x < 200 ? PAL.C1 : stepColor(c, 1);
+    const lit = 1 - x / 480; // the monitor's light from the left, falling off across the wood
+    if (bayer(x, y) < lit * 0.55) c = stepColor(c, 1);
     b.set(x, y, c);
   }
+  // each mark a groove 4 px wide, its far wall catching the monitor's cyan, its floor dark; the old two worn (broken,
+  // shallower), the third fresh
   const mark = (x: number, worn: boolean, seed: number) => {
-    for (let j = 0; j < 90; j++) {
-      if (worn && hash(j >> 2, seed, 9) < 0.22) continue; // broken, worn smooth in places
-      const xx = x + Math.round(j * 0.12);
-      rect(xx, 50 + j, 3, 1, b.ink(worn ? PAL.N1 : PAL.N0)); b.set(xx - 1, 50 + j, worn ? PAL.C1 : PAL.C3); // the groove, its lit wall
-      if (!worn) b.set(xx + 3, 50 + j, PAL.D3);
+    for (let j = 0; j < 96; j++) {
+      if (worn && hash(j >> 2, seed, 9) < 0.2) continue;
+      const xx = x + Math.round(j * 0.14);
+      b.set(xx - 1, 48 + j, worn ? PAL.C2 : PAL.C4); // the lit wall
+      rect(xx, 48 + j, worn ? 2 : 3, 1, b.ink(PAL.N0)); // the floor
+      b.set(xx + (worn ? 2 : 3), 48 + j, worn ? PAL.D2 : PAL.D3); // the near lip
     }
   };
   mark(170, true, 1); mark(222, true, 2);

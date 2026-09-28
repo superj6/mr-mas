@@ -152,21 +152,40 @@ const stampInHand = (b: Buf, x: number, y: number, w: number) => {
   const kx = x + (w >> 1);
   rect(kx - 3, y + 4, 6, 8, b.ink(PAL.D2)); rect(kx - 3, y + 4, 1, 8, b.ink(PAL.D4)); // the stem
   for (let j = -5; j <= 4; j++) for (let i = -7; i <= 7; i++) if (Math.hypot(i / 7, j / 5) <= 1) b.set(kx + i, y + 1 + j, j < -2 ? PAL.D4 : PAL.D3); // the knob
-  // his hand round the knob (knuckles on top, lit from the left), the sleeve to the right edge
-  for (let j = -9; j <= 6; j++) for (let i = -9; i <= 13; i++) { const d = Math.hypot(i / 11, j / 8); if (d > 1) continue; b.set(kx + i, y - 1 + j, d > 0.88 ? PAL.S1 : i < -3 ? PAL.S5 : j > 2 ? PAL.S3 : PAL.S4); }
-  for (const i of [-5, -1, 3, 7]) b.set(kx + i, y - 8, PAL.S2);
-  for (let j = -10; j <= 4; j++) for (let xx = kx + 12; xx < 480; xx++) { const yy = y - 4 + j + Math.round((xx - kx - 12) * -0.18); b.set(xx, yy, j === -10 || j === 4 ? PAL.N0 : j < -6 ? PAL.G3 : PAL.G2); }
+  // his hand round the knob (the poster's scale: a hand ~70 px), knuckles on top, lit from the left; the sleeve (a
+  // wide cuff, its folds) off the frame's right edge
+  for (let j = -14; j <= 16; j++) for (let xx = kx + 18; xx < 480; xx++) {
+    const yy = y - 6 + j + Math.round((xx - kx - 18) * -0.22);
+    if (yy < 0 || yy >= RH) continue;
+    const fold = (xx + j * 2) % 23 === 0;
+    b.set(xx, yy, j === -14 || j === 16 ? PAL.N0 : xx < kx + 24 ? PAL.G4 : fold ? PAL.G1 : j < -6 ? PAL.G3 : PAL.G2);
+  }
+  // the fist: the back of the hand (a rounded block, its top lit), the four curled fingers along its front as rounded
+  // pads with creases between, the thumb wrapped over the knob at the left
+  const hx0 = kx - 12, hy0 = y - 14, hw = 38, hh = 18;
+  for (let j = 0; j < hh; j++) for (let i = 0; i < hw; i++) {
+    const corner = (i < 3 && j < 3 && i + j < 3) || (i > hw - 4 && j < 3 && hw - 1 - i + j < 3);
+    if (corner) continue;
+    b.set(hx0 + i, hy0 + j, i === 0 || j === 0 || i === hw - 1 ? PAL.S1 : j < 5 ? PAL.S5 : PAL.S4);
+  }
+  for (let k = 0; k < 4; k++) for (let j = 0; j < 9; j++) for (let i = 0; i < 9; i++) {
+    const d = Math.hypot((i - 4) / 4.5, (j - 4) / 4.5);
+    if (d > 1) continue;
+    b.set(hx0 + 2 + k * 8 + i, hy0 + hh - 4 + j, d > 0.8 ? PAL.S2 : j < 3 ? PAL.S5 : PAL.S3);
+  }
+  for (let j = 0; j < 10; j++) for (let i = 0; i < 12; i++) { const d = Math.hypot((i - 6) / 6, (j - 5) / 5); if (d <= 1) b.set(hx0 - 8 + i, hy0 + 6 + j, d > 0.8 ? PAL.S1 : i < 5 ? PAL.S5 : PAL.S4); } // the thumb
+  for (const i of [9, 17, 25]) b.set(hx0 + i, hy0 + 2, PAL.S3); // the knuckles' tops
 };
 /** his phone at the frame's lower-right corner, over the brick (off the poster), its screen lit with the post going up,
  *  his thumb on it; `tap` 1 = the thumb down on the post button */
 const cornerPhone = (b: Buf, tap: 0 | 1) => {
-  const px = 398, py = 122, pw2 = 70, ph = 100;
+  const px = 422, py = 156, pw2 = 58, ph = 100;
   rect(px + 3, py + 3, pw2, ph, b.ink(PAL.N0));
   rect(px, py, pw2, ph, b.ink(PAL.N0)); rect(px + 1, py + 1, pw2 - 2, ph, b.ink(PAL.G1)); rect(px + 1, py, pw2 - 2, 1, b.ink(PAL.G3));
   rect(px + 4, py + 5, pw2 - 8, ph, b.ink(PAL.N2));
   // the compose screen: his words, the post button
-  pt(b, '…no plans', px + 8, py + 12, PAL.P2); pt(b, 'to leave', px + 8, py + 22, PAL.P2);
-  const bx = px + pw2 - 30, by = py + 36;
+  pt(b, '…no plans', px + 6, py + 10, PAL.P2); pt(b, 'to leave', px + 6, py + 20, PAL.P2);
+  const bx = px + pw2 - 28, by = py + 32;
   rect(bx, by, 24, 11, b.ink(tap ? PAL.C3 : PAL.C5)); pt(b, 'post', bx + 3, by + 2, PAL.N0);
   // his thumb from the lower right onto the button (the nail up)
   const tx = bx + 12, ty = by + 6 + tap;

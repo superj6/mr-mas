@@ -497,7 +497,7 @@ export const drawAlyiGlass = (b: Buf, f: number, st: {mouth?: Viseme; eyes?: 'op
   });
   // ALYI's reflection, not turning: mirrored, cool, the glass showing through its faintest rung
   const im = st.look ? alyiReflectionLook({mouth: st.mouth ?? 'rest', eyes: st.eyes ?? 'open', t: f}, st.look) : alyiReflection({mouth: st.mouth ?? 'rest', eyes: st.eyes ?? 'open', t: f, mirror: true});
-  const X = 196, Y = RH - im.h;
+  const X = 196 + (st.look && st.look !== 'ahead' ? 3 : 0), Y = RH - im.h; // turning: his head a step toward them too
   for (let j = 0; j < im.h; j++) for (let i = 0; i < im.w; i++) { const v = im.c[j * im.w + i]; if (v >= 0) b.set(X + i, Y + j, v); }
   // the glass's sheen (two thin streaks, fixed to the glass), the mullion, the sill catching the room's light
   for (let j = 0; j < RH; j++) for (let i = 0; i < 480; i++) { const u = i + j * 0.55; if (((u > 300 && u < 302) || (u > 316 && u < 317)) && bayer(i, j) < 0.5) b.set(i, j, stepColor(b.get(i, j), 1)); }

@@ -295,7 +295,7 @@ export const drawGlassSide = (b: Buf, f: number, st: {run: 0 | 1 | 2 | 3; surfac
  * another, and on `run` 3 crosses his face and breaks it (the two halves a pixel apart).
  */
 const glassSurface = (b: Buf, gx0: number, gx1: number, gy0: number, wy: number, run: 0 | 1 | 2 | 3) => {
-  const cx = (gx0 + gx1) >> 1, rx = ((gx1 - gx0) >> 1) - 4, ry = 9;
+  const cx = (gx0 + gx1) >> 1, rx = ((gx1 - gx0) >> 1) - 4, ry = 15;
   // the rim, seen from a little above: a thin ellipse, its near lip lit
   for (let a = 0; a < 360; a++) { const t = (a / 180) * Math.PI, x = Math.round(cx + Math.cos(t) * (rx + 3)), y = Math.round(gy0 + 8 + Math.sin(t) * (ry + 1)); b.set(x, y, Math.sin(t) > 0 ? PAL.C8 : PAL.C5); }
   // the surface: the sky's reflection on the water, paler toward the far side
@@ -307,17 +307,18 @@ const glassSurface = (b: Buf, gx0: number, gx1: number, gy0: number, wy: number,
   }
   // his face on it (squashed by the angle): the hair's dark cap, the cool skin, the two dots, the smile
   const fx = cx + 20, fy = wy;
-  const F = ['....hhhhhh....', '..hhhhhhhhhh..', '.hhhhhhhhhhhh.', '.hssssssssssh.', '.ssessssssess.', '.sssssssssssss', '..ssssmmmsss..', '...sssssssm...', '.....ssss.....'];
-  const pal: Record<string, number> = {h: PAL.B1, s: PAL.K3, e: PAL.N0, m: PAL.X1};
-  const breakX = run >= 3 ? fx - 1 : 999; // where the crack crosses it: the right half drops a pixel
-  F.forEach((r, j) => { for (let i = 0; i < r.length; i++) { const c = pal[r[i]]; if (c === undefined) continue; const X = fx - 7 + i, Y = fy - 5 + j + (X >= breakX ? 1 : 0); if (inS(X, Y)) b.set(X, Y, c); } });
-  b.set(fx - 3, fy - 6, PAL.B1); // the cowlick
+  const F = ['......hhhhhhhhh.......', '....hhhhhhhhhhhhh.....', '...hhhhhhhhhhhhhhh....', '..hhhssssssssssshhh...', '..hsssssssssssssssS...',
+    '..sssseessssseessSS...', '..sssseessssseessSS...', '..sssssssssssssssSS...', '...sssssssssssssSS....', '....sssssmmmmmsmSS....', '.....ssssssssssSS.....', '.......sssssssS.......'];
+  const pal: Record<string, number> = {h: PAL.B0, s: PAL.S3, S: PAL.S2, e: PAL.N0, m: PAL.S1}; // darker than the bright sky it floats on
+  const breakX = run >= 3 ? fx + 1 : 999; // where the crack crosses it: the right half drops a pixel
+  F.forEach((r, j) => { for (let i = 0; i < r.length; i++) { const c = pal[r[i]]; if (c === undefined) continue; const X = fx - 11 + i, Y = fy - 6 + j + (X >= breakX ? 1 : 0); if (inS(X, Y)) b.set(X, Y, c); } });
+  b.set(fx - 3, fy - 7, PAL.B1); b.set(fx - 4, fy - 8, PAL.B1); // the cowlick
   // the crack on the surface: in from the left edge, a step further each run, the last one across his face
-  const ends = [cx - 30, cx - 12, cx + 4, fx + 10];
-  let y = wy - 2;
+  const ends = [cx - 34, cx - 14, cx + 6, fx + 14];
+  let y = wy + 2;
   for (let x = cx - rx + 2; x < ends[run]; x++) {
     if (hash(x >> 1, 41, 73) < 0.4) y += hash(x, 43, 73) < 0.5 ? -1 : 1;
-    y = clamp(y, wy - ry + 3, wy + ry - 3);
+    y = clamp(y, wy + 1, wy + 3); // it crosses his face under the eyes
     if (!inS(x, y)) continue;
     b.set(x, y, PAL.W9); if (inS(x, y + 1)) b.set(x, y + 1, PAL.N3);
   }

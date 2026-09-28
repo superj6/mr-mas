@@ -56,14 +56,19 @@ const drawHand = (b: Buf, x: number, y: number, kind: keyof typeof HANDS, drop =
 /** his near arm reaching across the desk to the monitor's switch: the hoodie sleeve from his shoulder, the hand with one
  *  finger on the button (lit by the screen, camera-right) */
 const reachSwitch = (b: Buf, mx: number, sx: number, sy: number) => {
-  const ax = mx + 58, ay = 90, L = Math.hypot(sx - 8 - ax, sy - 2 - ay), ux = (sx - 8 - ax) / L, uy = (sy - 2 - ay) / L;
-  for (let t = 0; t <= L; t += 0.5) for (let s = -4.5; s <= 4.5; s += 0.5) {
-    const X = Math.round(ax + ux * t - uy * s), Y = Math.round(ay + uy * t + ux * s);
-    b.set(X, Y, s <= -4 ? PAL.C4 : s >= 4 ? PAL.N0 : t > L - 3 ? PAL.G3 : s < -1 ? PAL.G2 : PAL.G1);
-  }
-  const hx = sx - 8, hy = sy - 5;
-  for (let j = 0; j < 8; j++) for (let i = 0; i < 9; i++) { const d = Math.hypot((i - 4) / 4.5, (j - 4) / 4); if (d <= 1) b.set(hx - 3 + i, hy + j, d > 0.85 ? PAL.X1 : i > 5 ? PAL.K3 : PAL.K2); }
-  rect(hx + 5, hy + 3, 4, 2, b.ink(PAL.K3)); b.set(hx + 8, hy + 3, PAL.K4); // the finger on the button
+  // two segments: the upper arm down and forward from his shoulder to the elbow, the forearm out to the switch
+  const seg = (ax: number, ay: number, zx: number, zy: number, w: number, cuff: boolean) => {
+    const L = Math.hypot(zx - ax, zy - ay), ux = (zx - ax) / L, uy = (zy - ay) / L;
+    for (let t = 0; t <= L; t += 0.5) for (let s = -w; s <= w; s += 0.5) {
+      const X = Math.round(ax + ux * t - uy * s), Y = Math.round(ay + uy * t + ux * s);
+      b.set(X, Y, s <= -w + 0.5 ? PAL.C4 : s >= w - 0.5 ? PAL.N0 : cuff && t > L - 3 ? PAL.G3 : s < -1 ? PAL.G2 : PAL.G1);
+    }
+  };
+  const shx = mx + 56, shy = 84, elx = mx + 74, ely = 112, hx = sx - 9, hy = sy - 4;
+  seg(shx, shy, elx, ely, 5, false);
+  seg(elx, ely, hx, hy, 4.5, true);
+  for (let j = 0; j < 10; j++) for (let i = 0; i < 12; i++) { const d = Math.hypot((i - 6) / 6, (j - 5) / 5); if (d <= 1) b.set(hx - 5 + i, hy - 5 + j, d > 0.85 ? PAL.X1 : i > 7 ? PAL.K3 : PAL.K2); }
+  rect(hx + 5, hy - 1, 4, 2, b.ink(PAL.K3)); b.set(hx + 8, hy - 1, PAL.K4); // the finger on the button
 };
 export const drawDark2SSCR = (b: Buf, f: number, st: Dark2SSCRState = {}) => {
   const o: DarkPlateOpts = {tally: 2, glass: true, ...st.plate};
@@ -82,8 +87,9 @@ export const drawDark2SSCR = (b: Buf, f: number, st: Dark2SSCRState = {}) => {
     if (mode === 'whirr' && Math.floor(f / 3) % 2 === 0) { b.set(ox - OM.ORB_MR - 3, oy - 2, PAL.C5); b.set(ox - OM.ORB_MR - 5, oy, PAL.C4); b.set(ox - OM.ORB_MR - 3, oy + 2, PAL.C5); }
   }
   // MAS at the desk facing the monitor (flipped), his hands in his lap unless one is up
-  const [mx, my] = DARK_SCR.mas;
   const hand = st.hand ?? null;
+  // he leans toward the monitor to reach its switch (18 px: the medium's arm can't span the desk otherwise)
+  const mx = DARK_SCR.mas[0] + (hand === 'switch' ? 18 : 0), my = DARK_SCR.mas[1];
   MM.drawMasMedium(b, mx, my, {...MM.MAS_MEDIUM_DEFAULT, arm: hand ? 'down' : 'rest', look: 1, ...st.mas}, {flip: true, desk: (bb) => {
     drawDarkPlateDesk(bb, f, o);
     // the monitor's pool across the desk from the right

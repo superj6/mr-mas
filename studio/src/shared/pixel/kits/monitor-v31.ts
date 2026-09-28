@@ -66,14 +66,21 @@ const blueKey = (b: Buf, x: number, y: number, lean = 0) => {
   const pal: Record<string, number> = {O: PAL.F3, L: PAL.F6, h: PAL.P2, D: PAL.F5};
   K.forEach((r, j) => { for (let i = 0; i < r.length; i++) { const c = pal[r[i]]; if (c !== undefined) b.set(x + i + Math.round(j * lean), y + j, c); } });
 };
-/** the thirteenth key drawn large (12 x 28: the bow's ring, the long blade, three teeth), Atem blue with a paper glint,
+/** the thirteenth key drawn large (17 x 41: the bow's ring, the long blade, three teeth), Atem blue with a paper glint,
  *  hanging off the ring's foot in front of the brass: it reads at a glance */
 const bigBlueKey = (b: Buf, x: number, y: number) => {
-  const K = ['...OOOOOO...', '..OhhLLLLO..', '.OhLLLLLLLO.', 'OhLL....LLLO', 'OLL......LLO', 'OLL......LLO', 'OLL......LLO', '.OLL....LLO.', '..OLLLLLLO..',
-    '...OOLDOO...', '....OLDO....', '....OLDO....', '....OLDO....', '....OLDO....', '....OLDO....', '....OLDO....', '....OLDOOO..', '....OLDLLLO.',
-    '....OLDOOO..', '....OLDO....', '....OLDOO...', '....OLDLLO..', '....OLDOO...', '....OLDO....', '....OLDOOO..', '....OLDLLLO.', '....OLLOOO..', '....OOO.....'];
-  const pal: Record<string, number> = {O: PAL.F3, L: PAL.F6, h: PAL.P2, D: PAL.F5};
-  K.forEach((r, j) => { for (let i = 0; i < r.length; i++) { const c = pal[r[i]]; if (c !== undefined) b.set(x + i, y + j, c); } });
+  // the bow: a thick ring (its hole on the ring), the blade 3 px wide, the bit's teeth; outlined, lit on its left
+  const O = PAL.F2, M = PAL.F5, L = PAL.F6;
+  const bx = x + 7, by = y + 7;
+  for (let j = -7; j <= 7; j++) for (let i = -8; i <= 8; i++) {
+    const d = Math.hypot(i / 8, j / 7), h = Math.hypot(i / 3.2, j / 2.6);
+    if (d > 1 || h < 1) continue;
+    b.set(bx + i, by + j, d > 0.82 || h < 1.35 ? O : i < -2 ? L : M);
+  }
+  for (let j = 14; j < 40; j++) { b.set(bx - 2, y + j, O); b.set(bx - 1, y + j, L); b.set(bx, y + j, M); b.set(bx + 1, y + j, M); b.set(bx + 2, y + j, O); }
+  for (const [ty, tw] of [[27, 4], [31, 3], [35, 5]] as Array<[number, number]>) { rect(bx + 3, y + ty, tw, 3, b.ink(M)); rect(bx + 3, y + ty, tw, 1, b.ink(L)); rect(bx + 3 + tw, y + ty, 1, 3, b.ink(O)); rect(bx + 3, y + ty + 3, tw + 1, 1, b.ink(O)); }
+  rect(bx - 2, y + 40, 5, 1, b.ink(O));
+  b.set(bx - 5, by - 3, PAL.P2); b.set(bx - 1, y + 18, PAL.P2); // the glints
 };
 export const lobbyPainter = (st: LobbyV31State): Painter => (scr, f) => {
   const W = scr.w, H = scr.h;

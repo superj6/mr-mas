@@ -1678,5 +1678,435 @@
   "standin": "",
   "native": "native/KIT-FACE-LIGHT--S5.09b-tile.png",
   "full": "full/KIT-FACE-LIGHT--S5.09b-tile.png"
+ },
+ {
+  "key": "ROOM-WH@v32-wide-settling",
+  "id": "ROOM-WH",
+  "state": "v32-wide-settling",
+  "module": "shared/pixel/rooms/whitehouse.ts drawWHWide {settle, masGlass}",
+  "note": "v32 13.01 Mas already seated nearest Sirrah, his glass set down square; Radnus half-risen, Mario just arriving",
+  "standin": "",
+  "native": "native/ROOM-WH--v32-wide-settling.png",
+  "full": "full/ROOM-WH--v32-wide-settling.png"
+ },
+ {
+  "key": "ROOM-WH@v32-wide-settled",
+  "id": "ROOM-WH",
+  "state": "v32-wide-settled",
+  "module": "shared/pixel/rooms/whitehouse.ts drawWHWide {settle, masGlass}",
+  "note": "v32 13.01 settled: all seated, his glass in front of him (13.02: Mario's finger up on \"trained\")",
+  "standin": "",
+  "native": "native/ROOM-WH--v32-wide-settled.png",
+  "full": "full/ROOM-WH--v32-wide-settled.png"
+ },
+ {
+  "key": "ROOM-WH@v32-radnus-flame-mcu",
+  "id": "ROOM-WH",
+  "state": "v32-radnus-flame-mcu",
+  "module": "shared/pixel/rooms/whitehouse.ts drawRadnusFlameMCU + episodes act2/art radnusBust2",
+  "note": "v32 13.10 [MCU] Radnus's face and the flame together (the Act Two shot pass's bust, its collar point)",
+  "standin": "",
+  "native": "native/ROOM-WH--v32-radnus-flame-mcu.png",
+  "full": "full/ROOM-WH--v32-radnus-flame-mcu.png"
+ },
+ {
+  "key": "ROOM-WH@v32-radnus-flame-mcu-2",
+  "id": "ROOM-WH",
+  "state": "v32-radnus-flame-mcu-2",
+  "module": "shared/pixel/rooms/whitehouse.ts drawRadnusFlameMCU",
+  "note": "v32 13.10 the flame one size up, his hand patting at it (\"We're being thoughtful.\")",
+  "standin": "",
+  "native": "native/ROOM-WH--v32-radnus-flame-mcu-2.png",
+  "full": "full/ROOM-WH--v32-radnus-flame-mcu-2.png"
+ },
+ {
+  "key": "ROOM-BRIDGE@v32-scrub-1",
+  "id": "ROOM-BRIDGE",
+  "state": "v32-scrub-1",
+  "module": "shared/pixel/rooms/bay-bridge.ts drawBridgeOTS {scrub, tagBig}",
+  "note": "v32 14.01 the clip, the tag at a readable size; his thumb on the scrub bar at the playhead",
+  "standin": "",
+  "native": "native/ROOM-BRIDGE--v32-scrub-1.png",
+  "full": "full/ROOM-BRIDGE--v32-scrub-1.png"
+ },
+ {
+  "key": "ROOM-BRIDGE@v32-scrub-2",
+  "id": "ROOM-BRIDGE",
+  "state": "v32-scrub-2",
+  "module": "shared/pixel/rooms/bay-bridge.ts drawBridgeOTS {scrub}",
+  "note": "v32 14.01 dragged back (the second drawing): he plays it again; the mouth lands late again",
+  "standin": "",
+  "native": "native/ROOM-BRIDGE--v32-scrub-2.png",
+  "full": "full/ROOM-BRIDGE--v32-scrub-2.png"
+ },
+ {
+  "key": "ROOM-BRIDGE@v32-lit-window-repost",
+  "id": "ROOM-BRIDGE",
+  "state": "v32-lit-window-repost",
+  "module": "shared/pixel/rooms/bay-bridge.ts drawLitWindow {repost}",
+  "note": "v32 14.03 (14.04 folded in) the silhouette's thumb presses; ✓ REPOSTED in the same shot",
+  "standin": "",
+  "native": "native/ROOM-BRIDGE--v32-lit-window-repost.png",
+  "full": "full/ROOM-BRIDGE--v32-lit-window-repost.png"
+ },
+ {
+  "key": "KIT-TOUR-POSTER@v32-phone-post",
+  "id": "KIT-TOUR-POSTER",
+  "state": "v32-phone-post",
+  "module": "shared/pixel/kits/tour-poster.ts {phone}",
+  "note": "v32 16.01 his thumb on his phone in the frame's corner; the post pops: \"…no plans to leave\"",
+  "standin": "",
+  "native": "native/KIT-TOUR-POSTER--v32-phone-post.png",
+  "full": "full/KIT-TOUR-POSTER--v32-phone-post.png"
+ },
+ {
+  "key": "KIT-TOUR-POSTER@v32-stamp-in",
+  "id": "KIT-TOUR-POSTER",
+  "state": "v32-stamp-in",
+  "module": "shared/pixel/kits/tour-poster.ts {hand}",
+  "note": "v32 16.01 his own hand comes in with a rubber stamp over the last slot (one drawing in)",
+  "standin": "",
+  "native": "native/KIT-TOUR-POSTER--v32-stamp-in.png",
+  "full": "full/KIT-TOUR-POSTER--v32-stamp-in.png"
+ },
+ {
+  "key": "KIT-TOUR-POSTER@v32-stamp-down",
+  "id": "KIT-TOUR-POSTER",
+  "state": "v32-stamp-down",
+  "module": "shared/pixel/kits/tour-poster.ts {hand}",
+  "note": "v32 16.01 the stamp (one drawing)",
+  "standin": "",
+  "native": "native/KIT-TOUR-POSTER--v32-stamp-down.png",
+  "full": "full/KIT-TOUR-POSTER--v32-stamp-down.png"
+ },
+ {
+  "key": "KIT-TOUR-POSTER@v32-stamp-out",
+  "id": "KIT-TOUR-POSTER",
+  "state": "v32-stamp-out",
+  "module": "shared/pixel/kits/tour-poster.ts {hand}",
+  "note": "v32 16.01 out, and the slot reads ADDED DUE TO POPULAR DEMAND (one drawing out)",
+  "standin": "",
+  "native": "native/KIT-TOUR-POSTER--v32-stamp-out.png",
+  "full": "full/KIT-TOUR-POSTER--v32-stamp-out.png"
+ },
+ {
+  "key": "PROP-GLASS-SIDE@v32-surface-0",
+  "id": "PROP-GLASS-SIDE",
+  "state": "v32-surface-0",
+  "module": "shared/pixel/rooms/rooftop.ts drawGlassSide {surface}",
+  "note": "v32 17.12 (the audit's #8) his face on the water's surface only, the sky's light on it; no body, no ring",
+  "standin": "",
+  "native": "native/PROP-GLASS-SIDE--v32-surface-0.png",
+  "full": "full/PROP-GLASS-SIDE--v32-surface-0.png"
+ },
+ {
+  "key": "PROP-GLASS-SIDE@v32-surface-3",
+  "id": "PROP-GLASS-SIDE",
+  "state": "v32-surface-3",
+  "module": "shared/pixel/rooms/rooftop.ts drawGlassSide {surface}",
+  "note": "v32 17.12 the reflected crack runs on across the surface, crosses his face and breaks it",
+  "standin": "",
+  "native": "native/PROP-GLASS-SIDE--v32-surface-3.png",
+  "full": "full/PROP-GLASS-SIDE--v32-surface-3.png"
+ },
+ {
+  "key": "ROOM-DARK-2SSCR@v32-switch",
+  "id": "ROOM-DARK-2SSCR",
+  "state": "v32-switch",
+  "module": "shared/pixel/rooms/darkroom-v31.ts drawDark2SSCR {hand: switch}",
+  "note": "v32-21.06 [2S·SCR] the deepfake still clapping; Mas reaches over to the monitor's switch",
+  "standin": "",
+  "native": "native/ROOM-DARK-2SSCR--v32-switch.png",
+  "full": "full/ROOM-DARK-2SSCR--v32-switch.png"
+ },
+ {
+  "key": "ROOM-DARK-2SSCR@v32-off",
+  "id": "ROOM-DARK-2SSCR",
+  "state": "v32-off",
+  "module": "shared/pixel/rooms/darkroom-v31.ts drawDark2SSCR {off}",
+  "note": "v32-21.06 the glass black in one step (the applause grows over the cut)",
+  "standin": "",
+  "native": "native/ROOM-DARK-2SSCR--v32-off.png",
+  "full": "full/ROOM-DARK-2SSCR--v32-off.png"
+ },
+ {
+  "key": "UI-DEVDAY@v32-full",
+  "id": "UI-DEVDAY",
+  "state": "v32-full",
+  "module": "shared/pixel/kits/monitor-v32.ts drawDevDayFull",
+  "note": "v32 22.01 live, full frame, no bezel: the painter at the frame's size; the odometer up, Mas speaking",
+  "standin": "",
+  "native": "native/UI-DEVDAY--v32-full.png",
+  "full": "full/UI-DEVDAY--v32-full.png"
+ },
+ {
+  "key": "UI-DEVDAY@v32-full-tasya",
+  "id": "UI-DEVDAY",
+  "state": "v32-full-tasya",
+  "module": "shared/pixel/kits/monitor-v32.ts drawDevDayFull",
+  "note": "v32 22.01 Tasya walking on, arms open (the partnership question)",
+  "standin": "",
+  "native": "native/UI-DEVDAY--v32-full-tasya.png",
+  "full": "full/UI-DEVDAY--v32-full-tasya.png"
+ },
+ {
+  "key": "UI-DEVDAY@v32-mcu",
+  "id": "UI-DEVDAY",
+  "state": "v32-mcu",
+  "module": "shared/pixel/kits/monitor-v32.ts drawDevDayMCU",
+  "note": "v32 22.01 the push to [MCU]: \"and today, you can build your own chatgtp.\"",
+  "standin": "",
+  "native": "native/UI-DEVDAY--v32-mcu.png",
+  "full": "full/UI-DEVDAY--v32-mcu.png"
+ },
+ {
+  "key": "UI-SIGNUP@spin-green",
+  "id": "UI-SIGNUP",
+  "state": "spin-green",
+  "module": "shared/pixel/kits/monitor-v32.ts signupPainter + drawRackSlice",
+  "note": "v32-22.04 [OTS] the sign-up page, its counter a blur; the rack's LEDs green beside him",
+  "standin": "",
+  "native": "native/UI-SIGNUP--spin-green.png",
+  "full": "full/UI-SIGNUP--spin-green.png"
+ },
+ {
+  "key": "UI-SIGNUP@typing-amber",
+  "id": "UI-SIGNUP",
+  "state": "typing-amber",
+  "module": "shared/pixel/kits/monitor-v32.ts signupPainter {typed}",
+  "note": "v32-22.04 the LEDs a step to amber; he types his post in its own box",
+  "standin": "",
+  "native": "native/UI-SIGNUP--typing-amber.png",
+  "full": "full/UI-SIGNUP--typing-amber.png"
+ },
+ {
+  "key": "UI-SIGNUP@post-red-notify",
+  "id": "UI-SIGNUP",
+  "state": "post-red-notify",
+  "module": "shared/pixel/kits/monitor-v32.ts signupPainter {btn, post}",
+  "note": "v32-22.04 red; the post goes up; SIGN UP greys to NOTIFY ME",
+  "standin": "",
+  "native": "native/UI-SIGNUP--post-red-notify.png",
+  "full": "full/UI-SIGNUP--post-red-notify.png"
+ },
+ {
+  "key": "UI-SIGNUP@pov-greying",
+  "id": "UI-SIGNUP",
+  "state": "pov-greying",
+  "module": "shared/pixel/kits/monitor-v32.ts signupPainter",
+  "note": "v32-22.04 at POV scale: the button mid-grey (btn 1), the drums never readable",
+  "standin": "",
+  "native": "native/UI-SIGNUP--pov-greying.png",
+  "full": "full/UI-SIGNUP--pov-greying.png"
+ },
+ {
+  "key": "UI-LOBBY-V31@v32-key-large",
+  "id": "UI-LOBBY-V31",
+  "state": "v32-key-large",
+  "module": "shared/pixel/kits/monitor-v31.ts lobbyPainter {keyLarge}",
+  "note": "v32 (v31-18.00b) the thirteenth key large: Atem blue, twice the brass, in front",
+  "standin": "",
+  "native": "native/UI-LOBBY-V31--v32-key-large.png",
+  "full": "full/UI-LOBBY-V31--v32-key-large.png"
+ },
+ {
+  "key": "ROOM-DARK-A3@v32-tally-ecu",
+  "id": "ROOM-DARK-A3",
+  "state": "v32-tally-ecu",
+  "module": "shared/pixel/kits/monitor-v32.ts drawTallyECU",
+  "note": "v32 (v31-18.00) the two faint marks, framed legibly: the desk top close in the monitor's light",
+  "standin": "",
+  "native": "native/ROOM-DARK-A3--v32-tally-ecu.png",
+  "full": "full/ROOM-DARK-A3--v32-tally-ecu.png"
+ },
+ {
+  "key": "UI-PAPER@v32-tab-close",
+  "id": "UI-PAPER",
+  "state": "v32-tab-close",
+  "module": "shared/pixel/kits/monitor-v32.ts withTabs + shared/pixel/kits/monitor-v31.ts paperPainter",
+  "note": "v32 (v31-20.08) he closes the paper: the tab's x lit",
+  "standin": "",
+  "native": "native/UI-PAPER--v32-tab-close.png",
+  "full": "full/UI-PAPER--v32-tab-close.png"
+ },
+ {
+  "key": "UI-PAPER@v32-tab-next",
+  "id": "UI-PAPER",
+  "state": "v32-tab-next",
+  "module": "shared/pixel/kits/monitor-v32.ts withTabs + kits/eo-signing.ts",
+  "note": "v32 (v31-20.08) the next tab opens: the order",
+  "standin": "",
+  "native": "native/UI-PAPER--v32-tab-next.png",
+  "full": "full/UI-PAPER--v32-tab-next.png"
+ },
+ {
+  "key": "UI-PHONE-HIGH@v32-hover-avatar",
+  "id": "UI-PHONE-HIGH",
+  "state": "v32-hover-avatar",
+  "module": "shared/pixel/kits/phone-high.ts {hover, avatars}",
+  "note": "v32 23.02 the hover card with the member's small tile: MADA's face under his spinner",
+  "standin": "",
+  "native": "native/UI-PHONE-HIGH--v32-hover-avatar.png",
+  "full": "full/UI-PHONE-HIGH--v32-hover-avatar.png"
+ },
+ {
+  "key": "UI-SUITE-PHONE@typing",
+  "id": "UI-SUITE-PHONE",
+  "state": "typing",
+  "module": "shared/pixel/kits/act4-v32.ts drawSuitePhone",
+  "note": "v32-S1.13 [ECU] his phone in the suite's afternoon light, his thumb typing (no suggestions)",
+  "standin": "",
+  "native": "native/UI-SUITE-PHONE--typing.png",
+  "full": "full/UI-SUITE-PHONE--typing.png"
+ },
+ {
+  "key": "UI-SUITE-PHONE@posted",
+  "id": "UI-SUITE-PHONE",
+  "state": "posted",
+  "module": "shared/pixel/kits/act4-v32.ts drawSuitePhone {post}",
+  "note": "v32-S1.13 the post up in its own UI, 1:46 PM",
+  "standin": "",
+  "native": "native/UI-SUITE-PHONE--posted.png",
+  "full": "full/UI-SUITE-PHONE--posted.png"
+ },
+ {
+  "key": "UI-SUITE-PHONE@night-2",
+  "id": "UI-SUITE-PHONE",
+  "state": "night-2",
+  "module": "shared/pixel/kits/act4-v32.ts drawSuitePhone {night}",
+  "note": "v32-S1.13 the room falling to night in held palette steps (2 of 3); the screen stays lit",
+  "standin": "",
+  "native": "native/UI-SUITE-PHONE--night-2.png",
+  "full": "full/UI-SUITE-PHONE--night-2.png"
+ },
+ {
+  "key": "ROOM-RECEPTION@slide",
+  "id": "ROOM-RECEPTION",
+  "state": "slide",
+  "module": "shared/pixel/kits/act4-v32.ts drawReceptionMCU",
+  "note": "v32-S5.00 [MCU] full colour at his shoulder: a hand (no face) slides the GUEST lanyard across the stone",
+  "standin": "",
+  "native": "native/ROOM-RECEPTION--slide.png",
+  "full": "full/ROOM-RECEPTION--slide.png"
+ },
+ {
+  "key": "ROOM-RECEPTION@lift",
+  "id": "ROOM-RECEPTION",
+  "state": "lift",
+  "module": "shared/pixel/kits/act4-v32.ts drawReceptionMCU {lanyard}",
+  "note": "v32-S5.00 he puts it on himself",
+  "standin": "",
+  "native": "native/ROOM-RECEPTION--lift.png",
+  "full": "full/ROOM-RECEPTION--lift.png"
+ },
+ {
+  "key": "ROOM-RECEPTION@selfie-flash",
+  "id": "ROOM-RECEPTION",
+  "state": "selfie-flash",
+  "module": "shared/pixel/kits/act4-v32.ts drawReceptionMCU {selfie, flash}",
+  "note": "v32-S5.00 the selfie at arm's length: click, one white flash step",
+  "standin": "",
+  "native": "native/ROOM-RECEPTION--selfie-flash.png",
+  "full": "full/ROOM-RECEPTION--selfie-flash.png"
+ },
+ {
+  "key": "ROOM-RECEPTION@look-post",
+  "id": "ROOM-RECEPTION",
+  "state": "look-post",
+  "module": "shared/pixel/kits/act4-v32.ts drawReceptionMCU {look, post}",
+  "note": "v32-S5.00 his post up; he looks up once at the corner camera, the one-pixel smile",
+  "standin": "",
+  "native": "native/ROOM-RECEPTION--look-post.png",
+  "full": "full/ROOM-RECEPTION--look-post.png"
+ },
+ {
+  "key": "ROOM-LOBBY-CCTV@step-0",
+  "id": "ROOM-LOBBY-CCTV",
+  "state": "step-0",
+  "module": "shared/pixel/kits/act4-v32.ts drawLobbyCCTVStep",
+  "note": "v32-S5.00 the camera's own frame, still in colour",
+  "standin": "",
+  "native": "native/ROOM-LOBBY-CCTV--step-0.png",
+  "full": "full/ROOM-LOBBY-CCTV--step-0.png"
+ },
+ {
+  "key": "ROOM-LOBBY-CCTV@step-2",
+  "id": "ROOM-LOBBY-CCTV",
+  "state": "step-2",
+  "module": "shared/pixel/kits/act4-v32.ts drawLobbyCCTVStep",
+  "note": "v32-S5.00 one palette step a beat: colour down, grain up (2 of 4)",
+  "standin": "",
+  "native": "native/ROOM-LOBBY-CCTV--step-2.png",
+  "full": "full/ROOM-LOBBY-CCTV--step-2.png"
+ },
+ {
+  "key": "ROOM-LOBBY-CCTV@step-4",
+  "id": "ROOM-LOBBY-CCTV",
+  "state": "step-4",
+  "module": "shared/pixel/kits/act4-v32.ts drawLobbyCCTVStep",
+  "note": "v32-S5.00 the grade and its chrome (then the cut to the boardroom's wall screen)",
+  "standin": "",
+  "native": "native/ROOM-LOBBY-CCTV--step-4.png",
+  "full": "full/ROOM-LOBBY-CCTV--step-4.png"
+ },
+ {
+  "key": "PROP-BADGE-DOOR@slide-1",
+  "id": "PROP-BADGE-DOOR",
+  "state": "slide-1",
+  "module": "shared/pixel/kits/act4-v32.ts drawBadgeUnderDoor",
+  "note": "S5.11 [ECU] the MACROSOFT badge slides out under the slate door onto the floorboards",
+  "standin": "",
+  "native": "native/PROP-BADGE-DOOR--slide-1.png",
+  "full": "full/PROP-BADGE-DOOR--slide-1.png"
+ },
+ {
+  "key": "PROP-BADGE-DOOR@slide-4",
+  "id": "PROP-BADGE-DOOR",
+  "state": "slide-4",
+  "module": "shared/pixel/kits/act4-v32.ts drawBadgeUnderDoor",
+  "note": "S5.11 it ticks to a stop against his chair leg",
+  "standin": "",
+  "native": "native/PROP-BADGE-DOOR--slide-4.png",
+  "full": "full/PROP-BADGE-DOOR--slide-4.png"
+ },
+ {
+  "key": "PROP-BADGE-DOOR@hand",
+  "id": "PROP-BADGE-DOOR",
+  "state": "hand",
+  "module": "shared/pixel/kits/act4-v32.ts drawBadgeUnderDoor {hand}",
+  "note": "S5.11 his hand comes down and picks it up",
+  "standin": "",
+  "native": "native/PROP-BADGE-DOOR--hand.png",
+  "full": "full/PROP-BADGE-DOOR--hand.png"
+ },
+ {
+  "key": "ROOM-DARK-2S-BADGE@reach",
+  "id": "ROOM-DARK-2S-BADGE",
+  "state": "reach",
+  "module": "shared/pixel/kits/act4-v32.ts drawBadgeReach2S {reach}",
+  "note": "S5.11 [2S] without getting up he leans down for it",
+  "standin": "",
+  "native": "native/ROOM-DARK-2S-BADGE--reach.png",
+  "full": "full/ROOM-DARK-2S-BADGE--reach.png"
+ },
+ {
+  "key": "ROOM-DARK-2S-BADGE@badges",
+  "id": "ROOM-DARK-2S-BADGE",
+  "state": "badges",
+  "module": "shared/pixel/kits/act4-v32.ts drawBadgeReach2S {badges}",
+  "note": "S5.11 the two badges side by side on the desk, square; he doesn't put it on",
+  "standin": "",
+  "native": "native/ROOM-DARK-2S-BADGE--badges.png",
+  "full": "full/ROOM-DARK-2S-BADGE--badges.png"
+ },
+ {
+  "key": "ROOM-ALYI-GLASS@v32-look-phones",
+  "id": "ROOM-ALYI-GLASS",
+  "state": "v32-look-phones",
+  "module": "shared/pixel/kits/act4-v31.ts drawAlyiGlass {look}",
+  "note": "v32 S4.02 \"That is the company telling us.\": his reflection turns to the phones",
+  "standin": "",
+  "native": "native/ROOM-ALYI-GLASS--v32-look-phones.png",
+  "full": "full/ROOM-ALYI-GLASS--v32-look-phones.png"
  }
 ]

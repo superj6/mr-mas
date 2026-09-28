@@ -3,10 +3,10 @@
 | | |
 |---|---|
 | **What this is** | The record of the pixel assets built for Acts Two, Three and the tag (sc 13–23, 32–33) for the full-episode pixel preview. For each asset it gives the id, the module, the entry points a shot layout calls, the states, and what is still a stand-in. |
-| **Who, when** | The `v3-art-b` pass (track P1b of [PLAN.md](../PLAN.md)), 2026-09-27; the v3.1 round (script draft 7) the same day, **§6**. Nothing was committed by this pass: the lead commits (commit 38c5d18 took in some of this pass's v3.1 files as they stood mid-round; the later edits are uncommitted). |
+| **Who, when** | The `v3-art-b` pass (track P1b of [PLAN.md](../PLAN.md)), 2026-09-27; the v3.1 round (script draft 7) the same day, **§6**; the v3.2 round (script draft 8.1) on 2026-09-28, **§7**. Nothing was committed by this pass: the lead commits (commit 38c5d18 took in some of this pass's v3.1 files as they stood mid-round; the later edits are uncommitted). |
 | **Built against** | [script.md](../../../script.md) (Acts Two, Three and the tag); the v2 stick timelines `show/reel/ep01-full/ep01-{act2,act3,tag}-v2.json`; the cuts C7–C12 in [stick/v3-plan.md §3](../../stick/v3-plan.md); the v3 beat plans `beat-plan/{act2,act3,tag}.json` (read about 11:40, after they landed); and the P1b list in [script-v3-notes.md §7](../script-v3-notes.md). |
-| **Where it is** | **Code:** new additive modules in `studio/src/shared/pixel/{rooms,cast,kits}/` (the tables below; v3.1's in §6). The stills registry is `studio/src/episodes/ep01/pixel/art-b/demos.ts`, with its sheet tool at `tools/sheet.ts`. **Stills:** `out/ep01/full-v3/assets/art-b/`, holding `sheet-native.png` (168 stills at 1x, 4 across: the 113 of v3, then v3.1's 55), `native/` (480×270), `full/` (1920×1080, 4× nearest) and `index.json`. |
-| **Measured** | 168 stills render. `sheet.cjs strays` prints `ok` for all 168 (the master palette, plus the engine's LEDGER set for the flash-print and its ONEBIT ink and paper for v3.1's Remove dialog). `tsc` over the registry and every module it imports (95 shared files) prints nothing. v3.1 edited only this pass's own files, each change an opt-in state or a fix to its own drawing (§6.4); no other track's file was edited, Act Four's included. |
+| **Where it is** | **Code:** new additive modules in `studio/src/shared/pixel/{rooms,cast,kits}/` (the tables below; v3.1's in §6, v3.2's in §7). The stills registry is `studio/src/episodes/ep01/pixel/art-b/demos.ts`, with its sheet tool at `tools/sheet.ts`. **Stills:** `out/ep01/full-v3/assets/art-b/`, holding `sheet-native.png` (211 stills at 1x, 4 across: the 113 of v3, v3.1's 55, then v3.2's 43), `native/` (480×270), `full/` (1920×1080, 4× nearest) and `index.json`. |
+| **Measured** | 211 stills render. `sheet.cjs strays` prints `ok` for all 211 (the master palette, plus the engine's LEDGER set for the flash-print and its ONEBIT ink and paper for v3.1's Remove dialog). `tsc` over the registry and every module it imports (98 shared files) prints nothing. v3.1 and v3.2 edited only this pass's own files, each change an opt-in state or a fix to its own drawing (§6.4); no other track's file was edited, Act Four's included. |
 | **Needs a person** | I looked at every still at 1x and 2x, and cropped the doubtful ones at 3–6× (v3.1's too). I fixed what didn't read to me (§4, §6.4). That is one reader's judgment, not a blind read. Nothing has been seen in motion: every held-step timing is on paper. Each still shows its asset in a demo framing (the beat it serves is in its note); the shot passes own the shots. |
 
 ---
@@ -40,6 +40,7 @@
   - the tag's drawer, the duck and the glass prompt.
 - **Not taken:** the Act Four items in script-v3-notes §7 (S1.01–S7.07b). They're edits to Act Four's own modules and are left for the Act Four shot pass (§5).
 - **v3.1 (§6):** the draft 7 items for Acts Two and Three, the tag and Act Four, 55 stills: the match cut and the feed, the glass side-on, KRAM and the Atem lobby, the hands runner's two-shot with the monitor large, Neleh's paper, one deepfake, the hover names; the Remove dialog (the hard cut and S8.03's grey), Neleh's desk at 11:52 and the paper, Tuesday's invite, Sunday's phones and ticker, Alyi in the glass, the call out to Gerg, Terb's dry squeeze and his writing, the letter's header tile; and the face lights (one step, face only).
+- **v3.2 (§7):** draft 8.1's items for Acts Two, Three and Four, 43 stills: his seat and glass at the White House, Radnus's face with the flame, the readable tag and his scrubbing thumb, the repost in the lit window, his hand and stamp and his phone on the poster, his face on the water's surface; the switch-off, DevDay full frame and its MCU, the sign-up page and the rack's LEDs, the thirteenth key large, the tally framed, the tabs, the hover avatars; the suite phone and the fall to night, the reception desk (the lanyard, the selfie, the corner camera), the lobby camera stepping into its grade, the badge under the door and on the desk, Alyi turning to the phones.
 
 ---
 
@@ -250,7 +251,61 @@ The lead's brief for this round: Act Two's, Act Three's, the tag's and Act Four'
 
 **Still weakest, to my eye:** Terb's dry squeeze (the spray arm is the rig's own, small at room scale; the click lives in the sound); the forum's tiled rows (the joke is the tiling, but it reads as wallpaper at 1x); the 22.03 face light (one rung on a 20 px face is subtle); Neleh from above (a head's crown and a long reach).
 
-## 7. Run (from `studio/`)
+---
+
+## 7. v3.2: script draft 8.1 ([script-v32-notes.md §4, §10.7](../script-v32-notes.md))
+
+The lead's brief (the showrunner's notes 00 and 0: agency, the rise-to-power spine, calibration): the Act Two, Act Three and Act Four new art and 8.1's picture notes, additive and opt-in. 43 new stills (`v32-*` states and the new ids below).
+
+### 7.1 The new and changed assets
+
+| Id | Module | Entry points | States (beat) | Stand-in / open |
+|---|---|---|---|---|
+| **ROOM-WH** | `rooms/whitehouse.ts drawWHWide` | `{settle, masGlass}` | Mas already seated nearest Sirrah, his own glass set down square in front of him; Radnus and Mario still settling (`settle` 1 half-risen, 2 just arriving) (13.01); Mario's finger on "trained" is the existing `finger` (13.02) | — |
+| **ROOM-WH** (new entry) | `rooms/whitehouse.ts drawRadnusFlameMCU` | `(b, f, {size, pat, mouth, bust, collar})` | [MCU] Radnus's face and the flame together, one size up on `size` 2 (13.10, replacing the ECU). Takes any bust: the demos pass the Act Two shot pass's `radnusBust2` with `RADNUS2_COLLAR` | defaults to my stand-in bust |
+| **ROOM-BRIDGE** | `rooms/bay-bridge.ts drawBridgeOTS`, `alteredTagBig` | `{scrub, tagBig}` | `⚠ ALTERED AUDIO` in the display face on two lines, readable; his thumb on the scrub bar, two drawings as two `progress` values (14.01) | — |
+| **ROOM-BRIDGE** | `drawLitWindow` | `{repost: 1 \| 2}` | the silhouette's press (its phone's glow up a rung), then `✓ REPOSTED` in the same shot (14.03, 14.04 folded in) | — |
+| **KIT-TOUR-POSTER** | `kits/tour-poster.ts` | `{hand, phone}` | his own hand with a rubber stamp on the last slot, one drawing each: `in` · `stamp` · `out`; his thumb on his phone in the frame's corner for "…no plans to leave" (16.01) | — |
+| **PROP-GLASS-SIDE** | `rooms/rooftop.ts drawGlassSide` | `{surface: true}` | the camera a little above the rim: the rim and the water's surface thin ellipses, the sky's light on the surface and his face ON it (hair, eyes, smile; no body, no ripple ring); the reflected crack steps on across the surface and, on `run` 3, crosses his face under the eyes and breaks it (17.12, the audit's #8) | fallback per the notes: cut 17.12 |
+| **ROOM-DARK-2SSCR** | `rooms/darkroom-v31.ts drawDark2SSCR` | `{hand: 'switch', off}` | he leans over (18 px) and reaches, elbow bent, to the switch on the bezel's near corner; the glass black in one step, its LED out (v32-21.06) | the switch is now drawn in every 2S·SCR frame (a small bezel detail) |
+| **UI-DEVDAY** (new entries) | `kits/monitor-v32.ts drawDevDayFull`, `drawDevDayMCU` | `(b, f, DevDayState)`, `(b, f, {mas})` | the stage live, full frame, no bezel: the existing painter drawn at the frame's 480 × 203. **It holds:** the painter lays itself out by size, nothing crops, the odometer reads; it plays as a [W] with Mas at room scale. The push to [MCU]: his portrait (the near-front head) against the backdrop, a lavalier mic (22.01) | the 1 s home two-shot and the zAI egg are the shot pass's cuts (the painter has no zAI egg) |
+| **UI-SIGNUP** (new) | `kits/monitor-v32.ts signupPainter`, `drawRackSlice` | `({spin, btn, typed, post})`, `(b, x0, step, f)`, `POST_PAUSE` | the sign-up page (`CHATGTP Plus`): the counter's drums a smear, never a figure; `SIGN UP` → greying → `NOTIFY ME`; his post typing in its box, then up as a card over the page's head; the rack's edge beside the monitor, its LEDs green → amber → red (v32-22.04) | — |
+| **UI-LOBBY-V31** | `kits/monitor-v31.ts lobbyPainter` | `{keyLarge}` | the thirteenth key large (17 × 41, its own drawing), Atem blue, hung in front of the brass (v31-18.00b, 8.1) | — |
+| **ROOM-DARK-A3** (tally) | `kits/monitor-v32.ts drawTallyECU` | `(b, f, {n})` | the desk top close in the monitor's light: the two faint old grooves (worn, broken), the third fresh on `n` 3 (v31-18.00, "framed legibly") | — |
+| **UI-PAPER** (tabs) | `kits/monitor-v32.ts withTabs` | `(painter, {tabs, active, closing})` | a tab strip over any painter: the paper's tab `x` lit, then the order's tab open (v31-20.08) | — |
+| **UI-PHONE-HIGH** | `kits/phone-high.ts` | `{hover, avatars}` | the hover card carries the member's small call tile over the name: ALYI, NELEH, MADA (his face under his spinner), the quiet vote's black tile (23.02) | the tiles are Act Four's `drawAlyiMini` / `drawNelehMini` / `drawMadaMini` |
+| **UI-SUITE-PHONE** (new) | `kits/act4-v32.ts drawSuitePhone` | `(b, f, {typed, post, night, thumb})`, `POST_LOVED` | his phone in his hand in the suite's afternoon light, his thumb typing (no suggestion strip), the post up at `1:46 PM` with the salute drawn after it, the room falling to night in held steps (1 a rung down, 2 dusk navy, 3 night) while the screen stays lit (v32-S1.13) | the suite behind is a soft stand-in for `rooms/vegas-suite.ts` at this depth |
+| **ROOM-RECEPTION** (new) | `kits/act4-v32.ts drawReceptionMCU`, `drawCornerCam` | `(b, f, {slide, lanyard, selfie, flash, look, post, mas})` | [MCU] full colour at his shoulder: the day lobby soft behind him, the stone counter and its brass nosing; a hand (no face) sliding the `GUEST` lanyard across (4 held positions); him putting it on (arms up, the strap over his head) and wearing it; the selfie at arm's length (the phone's back, its lens) and one white flash step; his look at the corner camera (the near-front head, the same face); his badge post (`POSTS.masBadge`, moved here from S4.09) (v32-S5.00) | — |
+| **ROOM-LOBBY-CCTV** (new) | `kits/act4-v32.ts drawLobbyCCTVStep` | `(b, f, {step})` | the lobby camera's frame full frame (the day lobby, Mas at the desk in the lanyard), stepping into its grade one palette step a beat: each step the nearest palette colour at that share of the way, more grain; at 4 the grade and its chrome, `NOPEAI HQ · LOBBY · NOV 19`, REC (8.1: it ends by stepping out into the camera) | the cut onto the wall screen is v5's `drawBoardScreenOTS` |
+| **ROOM-BOARD-SCREEN-V31** | `kits/act4-v31.ts drawSundayOTS` | unchanged | S4.09 without the post card: this composition never drew it (v5's S4.09 draws it into the feed; the Act Four shot pass drops that call) | — |
+| **PROP-BADGE-DOOR** (new) | `kits/act4-v32.ts drawBadgeUnderDoor` | `(b, f, {slide, hand})` | [ECU] at floor level: the slate door's foot and its gap of light, the `MACROSOFT` badge sliding out across the floorboards (5 held positions) to tick against his chair leg; his hand coming down and picking it up (S5.11) | — |
+| **ROOM-DARK-2S-BADGE** (new) | `kits/act4-v32.ts drawBadgeReach2S` | `(b, f, {reach, badges, plate, mas, orbLook})` | v5's dark two-shot: Mas leaning down out of his chair for it (the Orb looking down), then the two badges side by side on the desk, square (S5.11) | the slate door's states are v5's `drawSlateDoorOpen`, layered by the shot pass |
+| **ROOM-ALYI-GLASS** | `kits/act4-v31.ts drawAlyiGlass` | `{look}` | "That is the company telling us.": his reflection turns to the phones (Act Four's `alyiReflectionLook`, and the head a step toward them) (S4.02) | the eyes' change is small in the glass's dark ramp |
+
+### 7.2 Not mine, or not built
+
+- **Act One's items** (v32-7.03, 6.06, 11.04, v32-9.10k, 9.09, v31-10.03, 12.01) are art-a's.
+- **The first-appearance plates** (§10.3) are text the host draws; every plate here uses the existing plate style, so no art was needed.
+- **The Act Four shot pass's, as states of v5's modules:** 15.15 (a reuse of 15.07 and 15.15); S3.03's self-typing post and Neleh's silent lips; S3.04's `INTERIM CEO` tile label; S5.03's heart count 406 → 407 → 406 (the post card kit's `hearts`); 8.04's cut-in. The un-draws (20.02's LEDs stopping, 22.01's home two-shot) are theirs to drop.
+
+### 7.3 What the v3.2 review changed
+
+- **The scrubbing thumb** first came in as a stylus-thin pole across the tag; it now lies along the bar with its pad just above it, so the tag stays whole, and the heel of the hand sits behind the phone's edge.
+- **The stamp's hand** was an oval on a pole; now a fist (the back of the hand, four curled fingers, the thumb round the knob) on a wide sleeve at the poster's scale.
+- **The corner phone** sat under the post card; it moved into the frame's corner.
+- **The face on the water** was a dark speck, then a cyan face lost on the pale surface; now a darker, bigger face with the crack under its eyes.
+- **The switch reach** was a straight 97 px pole; now two segments with an elbow, and he leans 18 px toward the monitor.
+- **The post on the sign-up page** covered the button whose greying is the beat; it now goes up over the page's head.
+- **The thirteenth key** was barely bigger than the brass; now 17 × 41, outlined, in front.
+- **The tally ECU** had a hard lit/unlit edge down the middle and the marks went missing in an edit; now a smooth falloff and two grooves with lit walls.
+- **The fall to night** stepped the warm room darker and redder; its steps now go to dusk navy, then night.
+- **The receptionist's hand** was a speck and then covered the card's word; now a hand with fingertips at the card's edge. **Putting the lanyard on** had two floating balls for hands; now his forearms go up from his shoulders.
+- **The badge pickup** had an oval hand; now fingers over the badge's edge and a thumb.
+- **The DevDay MCU's** mic boom read as a scratch across him; now a lavalier.
+
+**Still weakest, to my eye:** the reach in the two-shot (the desk hides what he does, so it reads as a lean); Alyi's turn (the glass's dark ramp swallows the eyes' change); the face on the water (small, as the script wants it: if it doesn't read in motion, the fallback is the cut); the day lobby behind the reception MCU (the wide's pixels stepped down, not redrawn at MCU depth).
+
+## 8. Run (from `studio/`)
 
 ```bash
 S=<scratch dir>        # your own subfolder of the session scratchpad

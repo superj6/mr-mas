@@ -50,6 +50,10 @@ import {nelehPortrait, NELEH_PORTRAIT_DEFAULT} from '../../../../shared/pixel/ca
 import {madaPortrait, MADA_PORTRAIT_DEFAULT} from '../../../../shared/pixel/cast/mada';
 import {drawGergMediumTile, GERG_MEDIUM_DEFAULT} from '../../../../shared/pixel/cast/gerg-medium';
 import {employeeFace} from '../../../../shared/pixel/kits/callgrid';
+// v3.2 (script draft 8.1)
+import * as M32 from '../../../../shared/pixel/kits/monitor-v32';
+import * as A42 from '../../../../shared/pixel/kits/act4-v32';
+import {radnusBust2, RADNUS2_DEFAULT, RADNUS2_COLLAR} from '../act2/art/radnus-bust';
 
 export interface AssetDemo {
   id: string;
@@ -295,4 +299,55 @@ D({id: 'KIT-FACE-LIGHT', state: 'S5.09b-tile', module: M + 'kits/face-light.ts f
   faceKey(fb, 250 + 60, 20, 250 + 150, 20 + 110, 1, -1);
   label(fb, 'BEFORE', 20, 176); label(fb, 'FACEKEY 1 (THE FACE\'S RECT)', 250, 176); }});
 void lumaOf;
+
+// =================================================================== v3.2 (script draft 8.1, script-v32-notes.md §4, §10.7) · ACT TWO
+D({id: 'ROOM-WH', state: 'v32-wide-settling', module: whM + ' drawWHWide {settle, masGlass}', note: 'v32 13.01 Mas already seated nearest Sirrah, his glass set down square; Radnus half-risen, Mario just arriving', draw: (fb) => { WH.drawWHWide(fb, 0, {sirrah: {on: 'A'}, settle: {radnus: 1, mario: 2}, masGlass: true, flame: 1, finger: 1}); }});
+D({id: 'ROOM-WH', state: 'v32-wide-settled', module: whM + ' drawWHWide {settle, masGlass}', note: 'v32 13.01 settled: all seated, his glass in front of him (13.02: Mario\'s finger up on "trained")', draw: (fb) => { WH.drawWHWide(fb, 0, {sirrah: {on: 'I', mouth: 'open'}, masGlass: true, flame: 1, finger: 2}); }});
+D({id: 'ROOM-WH', state: 'v32-radnus-flame-mcu', module: whM + ' drawRadnusFlameMCU + episodes act2/art radnusBust2', note: 'v32 13.10 [MCU] Radnus\'s face and the flame together (the Act Two shot pass\'s bust, its collar point)', draw: (fb) => { WH.drawRadnusFlameMCU(fb, 0, {size: 1, bust: radnusBust2({...RADNUS2_DEFAULT, arm: 'fold', mouth: 'smile'}), collar: RADNUS2_COLLAR}); }});
+D({id: 'ROOM-WH', state: 'v32-radnus-flame-mcu-2', module: whM + ' drawRadnusFlameMCU', note: 'v32 13.10 the flame one size up, his hand patting at it ("We\'re being thoughtful.")', draw: (fb) => { WH.drawRadnusFlameMCU(fb, 3, {size: 2, bust: radnusBust2({...RADNUS2_DEFAULT, arm: 'pat', mouth: 'E'}), collar: RADNUS2_COLLAR}); }});
+D({id: 'ROOM-BRIDGE', state: 'v32-scrub-1', module: bbM + ' drawBridgeOTS {scrub, tagBig}', note: 'v32 14.01 the clip, the tag at a readable size; his thumb on the scrub bar at the playhead', draw: (fb) => { BB.drawBridgeOTS(fb, 0, {f: 0, mouth: 1, feed: 1, progress: 0.62, scrub: 1, tagBig: true}); }});
+D({id: 'ROOM-BRIDGE', state: 'v32-scrub-2', module: bbM + ' drawBridgeOTS {scrub}', note: 'v32 14.01 dragged back (the second drawing): he plays it again; the mouth lands late again', draw: (fb) => { BB.drawBridgeOTS(fb, 0, {f: 0, mouth: 0, feed: 1, progress: 0.12, scrub: 1, tagBig: true}); }});
+D({id: 'ROOM-BRIDGE', state: 'v32-lit-window-repost', module: bbM + ' drawLitWindow {repost}', note: 'v32 14.03 (14.04 folded in) the silhouette\'s thumb presses; ✓ REPOSTED in the same shot', draw: (fb) => { BB.drawLitWindow(fb, 0, {nod: 1, repost: 2}); }});
+D({id: 'KIT-TOUR-POSTER', state: 'v32-phone-post', module: tpM + ' {phone}', note: 'v32 16.01 his thumb on his phone in the frame\'s corner; the post pops: "…no plans to leave"', draw: (fb) => { TP.drawTourPoster(fb, 0, {strip: true, cancelled: 5, post: 3, phone: 1}); }});
+D({id: 'KIT-TOUR-POSTER', state: 'v32-stamp-in', module: tpM + ' {hand}', note: 'v32 16.01 his own hand comes in with a rubber stamp over the last slot (one drawing in)', draw: (fb) => { TP.drawTourPoster(fb, 0, {strip: true, cancelled: 5, un: 4, hand: 'in'}); }});
+D({id: 'KIT-TOUR-POSTER', state: 'v32-stamp-down', module: tpM + ' {hand}', note: 'v32 16.01 the stamp (one drawing)', draw: (fb) => { TP.drawTourPoster(fb, 0, {strip: true, cancelled: 5, un: 4, hand: 'stamp'}); }});
+D({id: 'KIT-TOUR-POSTER', state: 'v32-stamp-out', module: tpM + ' {hand}', note: 'v32 16.01 out, and the slot reads ADDED DUE TO POPULAR DEMAND (one drawing out)', draw: (fb) => { TP.drawTourPoster(fb, 0, {strip: true, cancelled: 5, un: 4, added: 4, hand: 'out'}); }});
+D({id: 'PROP-GLASS-SIDE', state: 'v32-surface-0', module: rtM + ' drawGlassSide {surface}', note: 'v32 17.12 (the audit\'s #8) his face on the water\'s surface only, the sky\'s light on it; no body, no ring', draw: (fb) => { RT.drawGlassSide(fb, 0, {run: 0, surface: true}); }});
+D({id: 'PROP-GLASS-SIDE', state: 'v32-surface-3', module: rtM + ' drawGlassSide {surface}', note: 'v32 17.12 the reflected crack runs on across the surface, crosses his face and breaks it', draw: (fb) => { RT.drawGlassSide(fb, 0, {run: 3, surface: true}); }});
+
+// =================================================================== v3.2 · ACT THREE
+const m32 = M + 'kits/monitor-v32.ts';
+D({id: 'ROOM-DARK-2SSCR', state: 'v32-switch', module: d31 + ' {hand: switch}', note: 'v32-21.06 [2S·SCR] the deepfake still clapping; Mas reaches over to the monitor\'s switch', draw: (fb) => { drawDark2SSCR(fb, 4, {screen: eoPainter({copies: 1, pen: 'sign', signK: 5, clap: true}), hand: 'switch', orb: {mode: 'look'}}); }});
+D({id: 'ROOM-DARK-2SSCR', state: 'v32-off', module: d31 + ' {off}', note: 'v32-21.06 the glass black in one step (the applause grows over the cut)', draw: (fb) => { drawDark2SSCR(fb, 4, {hand: 'switch', off: true, orb: {mode: 'look'}}); }});
+D({id: 'UI-DEVDAY', state: 'v32-full', module: m32 + ' drawDevDayFull', note: 'v32 22.01 live, full frame, no bezel: the painter at the frame\'s size; the odometer up, Mas speaking', draw: (fb) => { M32.drawDevDayFull(fb, 0, {rise: 3, tasya: null, mouth: 'open'}); }});
+D({id: 'UI-DEVDAY', state: 'v32-full-tasya', module: m32 + ' drawDevDayFull', note: 'v32 22.01 Tasya walking on, arms open (the partnership question)', draw: (fb) => { M32.drawDevDayFull(fb, 6, {rise: 3, tasya: 0.7, laugh: true}); }});
+D({id: 'UI-DEVDAY', state: 'v32-mcu', module: m32 + ' drawDevDayMCU', note: 'v32 22.01 the push to [MCU]: "and today, you can build your own chatgtp."', draw: (fb) => { M32.drawDevDayMCU(fb, 0, {mas: {mouth: 'E'}}); }});
+D({id: 'UI-SIGNUP', state: 'spin-green', module: m32 + ' signupPainter + drawRackSlice', note: 'v32-22.04 [OTS] the sign-up page, its counter a blur; the rack\'s LEDs green beside him', draw: (fb) => { MON.drawMonitorOTS(fb, 3, M32.signupPainter({spin: 3})); M32.drawRackSlice(fb, 432, 0, 0); }});
+D({id: 'UI-SIGNUP', state: 'typing-amber', module: m32 + ' signupPainter {typed}', note: 'v32-22.04 the LEDs a step to amber; he types his post in its own box', draw: (fb) => { MON.drawMonitorOTS(fb, 5, M32.signupPainter({spin: 5, typed: 34})); M32.drawRackSlice(fb, 432, 1, 5); }});
+D({id: 'UI-SIGNUP', state: 'post-red-notify', module: m32 + ' signupPainter {btn, post}', note: 'v32-22.04 red; the post goes up; SIGN UP greys to NOTIFY ME', draw: (fb) => { MON.drawMonitorOTS(fb, 7, M32.signupPainter({spin: 7, btn: 2, post: 3})); M32.drawRackSlice(fb, 432, 2, 7); }});
+D({id: 'UI-SIGNUP', state: 'pov-greying', module: m32 + ' signupPainter', note: 'v32-22.04 at POV scale: the button mid-grey (btn 1), the drums never readable', draw: (fb) => { MON.drawMonitorPOV(fb, 2, M32.signupPainter({spin: 2, btn: 1})); }});
+D({id: 'UI-LOBBY-V31', state: 'v32-key-large', module: m31 + ' lobbyPainter {keyLarge}', note: 'v32 (v31-18.00b) the thirteenth key large: Atem blue, twice the brass, in front', draw: (fb) => { MON.drawMonitorPOV(fb, 0, lobbyPainter({key: 2, kram: 2, caption: true, chip: true, keyLarge: true})); }});
+D({id: 'ROOM-DARK-A3', state: 'v32-tally-ecu', module: m32 + ' drawTallyECU', note: 'v32 (v31-18.00) the two faint marks, framed legibly: the desk top close in the monitor\'s light', draw: (fb) => { M32.drawTallyECU(fb, 0, {n: 2}); }});
+D({id: 'UI-PAPER', state: 'v32-tab-close', module: m32 + ' withTabs + ' + m31 + ' paperPainter', note: 'v32 (v31-20.08) he closes the paper: the tab\'s x lit', draw: (fb) => { MON.drawMonitorPOV(fb, 0, M32.withTabs(paperPainter({page: 'p30', thumb: 2}), {tabs: ['DECODING INTENTIONS.pdf', 'EXECUTIVE ORDER'], active: 0, closing: 0})); }});
+D({id: 'UI-PAPER', state: 'v32-tab-next', module: m32 + ' withTabs + kits/eo-signing.ts', note: 'v32 (v31-20.08) the next tab opens: the order', draw: (fb) => { MON.drawMonitorPOV(fb, 0, M32.withTabs(eoPainter({copies: 0, pen: 'raised', mouth: 'E'}), {tabs: ['EXECUTIVE ORDER'], active: 0})); }});
+D({id: 'UI-PHONE-HIGH', state: 'v32-hover-avatar', module: M + 'kits/phone-high.ts {hover, avatars}', note: 'v32 23.02 the hover card with the member\'s small tile: MADA\'s face under his spinner', draw: (fb) => { drawPhoneHigh(fb, 0, {screen: 'reminder', orb: ORB_CIRCLE_LOOKS[2], hover: 2, avatars: true}); }});
+
+// =================================================================== v3.2 · ACT FOUR
+const a42 = M + 'kits/act4-v32.ts';
+D({id: 'UI-SUITE-PHONE', state: 'typing', module: a42 + ' drawSuitePhone', note: 'v32-S1.13 [ECU] his phone in the suite\'s afternoon light, his thumb typing (no suggestions)', draw: (fb) => { A42.drawSuitePhone(fb, 0, {typed: 60}); }});
+D({id: 'UI-SUITE-PHONE', state: 'posted', module: a42 + ' drawSuitePhone {post}', note: 'v32-S1.13 the post up in its own UI, 1:46 PM', draw: (fb) => { A42.drawSuitePhone(fb, 0, {post: 3}); }});
+D({id: 'UI-SUITE-PHONE', state: 'night-2', module: a42 + ' drawSuitePhone {night}', note: 'v32-S1.13 the room falling to night in held palette steps (2 of 3); the screen stays lit', draw: (fb) => { A42.drawSuitePhone(fb, 0, {post: 3, night: 2}); }});
+D({id: 'ROOM-RECEPTION', state: 'slide', module: a42 + ' drawReceptionMCU', note: 'v32-S5.00 [MCU] full colour at his shoulder: a hand (no face) slides the GUEST lanyard across the stone', draw: (fb) => { A42.drawReceptionMCU(fb, 0, {slide: 2}); }});
+D({id: 'ROOM-RECEPTION', state: 'lift', module: a42 + ' drawReceptionMCU {lanyard}', note: 'v32-S5.00 he puts it on himself', draw: (fb) => { A42.drawReceptionMCU(fb, 0, {lanyard: 'lift'}); }});
+D({id: 'ROOM-RECEPTION', state: 'selfie-flash', module: a42 + ' drawReceptionMCU {selfie, flash}', note: 'v32-S5.00 the selfie at arm\'s length: click, one white flash step', draw: (fb) => { A42.drawReceptionMCU(fb, 0, {lanyard: 'on', selfie: true, flash: true}); }});
+D({id: 'ROOM-RECEPTION', state: 'look-post', module: a42 + ' drawReceptionMCU {look, post}', note: 'v32-S5.00 his post up; he looks up once at the corner camera, the one-pixel smile', draw: (fb) => { A42.drawReceptionMCU(fb, 0, {lanyard: 'on', look: true, post: 3}); }});
+D({id: 'ROOM-LOBBY-CCTV', state: 'step-0', module: a42 + ' drawLobbyCCTVStep', note: 'v32-S5.00 the camera\'s own frame, still in colour', draw: (fb) => { A42.drawLobbyCCTVStep(fb, 0, {step: 0}); }});
+D({id: 'ROOM-LOBBY-CCTV', state: 'step-2', module: a42 + ' drawLobbyCCTVStep', note: 'v32-S5.00 one palette step a beat: colour down, grain up (2 of 4)', draw: (fb) => { A42.drawLobbyCCTVStep(fb, 0, {step: 2}); }});
+D({id: 'ROOM-LOBBY-CCTV', state: 'step-4', module: a42 + ' drawLobbyCCTVStep', note: 'v32-S5.00 the grade and its chrome (then the cut to the boardroom\'s wall screen)', draw: (fb) => { A42.drawLobbyCCTVStep(fb, 0, {step: 4}); }});
+D({id: 'PROP-BADGE-DOOR', state: 'slide-1', module: a42 + ' drawBadgeUnderDoor', note: 'S5.11 [ECU] the MACROSOFT badge slides out under the slate door onto the floorboards', draw: (fb) => { A42.drawBadgeUnderDoor(fb, 0, {slide: 1}); }});
+D({id: 'PROP-BADGE-DOOR', state: 'slide-4', module: a42 + ' drawBadgeUnderDoor', note: 'S5.11 it ticks to a stop against his chair leg', draw: (fb) => { A42.drawBadgeUnderDoor(fb, 0, {slide: 4}); }});
+D({id: 'PROP-BADGE-DOOR', state: 'hand', module: a42 + ' drawBadgeUnderDoor {hand}', note: 'S5.11 his hand comes down and picks it up', draw: (fb) => { A42.drawBadgeUnderDoor(fb, 0, {slide: 4, hand: 2}); }});
+D({id: 'ROOM-DARK-2S-BADGE', state: 'reach', module: a42 + ' drawBadgeReach2S {reach}', note: 'S5.11 [2S] without getting up he leans down for it', draw: (fb) => { A42.drawBadgeReach2S(fb, 0, {reach: true, plate: {phone: 'up'}}); }});
+D({id: 'ROOM-DARK-2S-BADGE', state: 'badges', module: a42 + ' drawBadgeReach2S {badges}', note: 'S5.11 the two badges side by side on the desk, square; he doesn\'t put it on', draw: (fb) => { A42.drawBadgeReach2S(fb, 0, {badges: true, plate: {phone: 'up'}}); }});
+D({id: 'ROOM-ALYI-GLASS', state: 'v32-look-phones', module: a4M + ' drawAlyiGlass {look}', note: 'v32 S4.02 "That is the company telling us.": his reflection turns to the phones', draw: (fb) => { A4.drawAlyiGlass(fb, 0, {mouth: 'E', look: 'door'}); }});
 void blitImg; void drawBigFlame; void drawTasyaStage; void drawToast;

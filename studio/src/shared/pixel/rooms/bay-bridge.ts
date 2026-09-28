@@ -233,19 +233,23 @@ export const drawBridgeOTS = (b: Buf, f: number, st: BridgeOTSState) => {
   // v3.2: his thumb from the phone's right edge onto the scrub bar at the playhead (the clip's bar is 2 px, 2 from its
   // foot), lit by the screen; two held drawings as he drags it back are two `progress` values
   if (st.scrub) {
-    const cy = P.y + 12 + feedH - scroll + 82 - 2, tx = P.x + 3 + Math.round((P.w - 6) * clamp(st.progress ?? 0.4, 0, 1));
-    if (cy > P.y + 10 && cy < P.y + P.h) {
-      const ux = 0.94, uy = 0.34, r = 8;
-      for (let yy = cy - 12; yy < cy + 40; yy++) for (let xx = tx - 10; xx < 480; xx++) {
-        const qx = xx - tx - ux * r * 0.6, qy = yy - cy - uy * r * 0.6, t = Math.max(0, Math.min(200, qx * ux + qy * uy)), d = Math.hypot(qx - ux * t, qy - uy * t);
-        if (d > r) continue;
-        const side = (qx - ux * t) * uy - (qy - uy * t) * ux;
-        const nail = t < r * 1.6 && side > -r * 0.55 && side < r * 0.3;
-        b.set(xx, yy, d > r - 1.1 ? PAL.S0 : nail ? (t < r * 0.5 ? PAL.K4 : PAL.K3) : side > r * 0.4 ? PAL.K3 : side < -r * 0.3 ? PAL.X1 : PAL.X2);
+    // the pad just above the bar (the tag below stays clear), the thumb lying along it back to his hand at the phone's
+    // right edge: a rounded tip, the nail on its top side, the screen's light on its top
+    const bar = P.y + 12 + feedH - scroll + 82 - 2, tx = P.x + 3 + Math.round((P.w - 6) * clamp(st.progress ?? 0.4, 0, 1));
+    if (bar > P.y + 10 && bar < P.y + P.h) {
+      const cy = bar - 5, r = 7, x1 = P.x + P.w + 10;
+      for (let yy = cy - r; yy <= cy + r + 18; yy++) for (let xx = tx - r; xx < Math.min(480, x1 + 26); xx++) {
+        const inThumb = xx >= tx && Math.abs(yy - cy - (xx - tx) * 0.06) <= r && xx <= x1;
+        const dTip = Math.hypot(xx - tx, yy - cy);
+        const palm = Math.hypot((xx - x1 - 6) / 11, (yy - cy - 18) / 20) <= 1;
+        if (!(inThumb || dTip <= r || palm)) continue;
+        const dy = yy - cy - Math.max(0, xx - tx) * 0.06;
+        const edge = palm && !inThumb ? Math.hypot((xx - x1 - 6) / 11, (yy - cy - 18) / 20) > 0.88 : (Math.abs(dy) > r - 1 || (xx < tx + 1 && dTip > r - 1));
+        const nail = !palm && xx > tx + 1 && xx < tx + 12 && dy > -r + 1 && dy < -1;
+        b.set(xx, yy, edge ? PAL.S0 : nail ? (xx < tx + 5 ? PAL.K4 : PAL.K3) : palm && !inThumb ? (xx < x1 ? PAL.X2 : PAL.X1) : dy < -2 ? PAL.K3 : dy > 3 ? PAL.X1 : PAL.X2);
       }
     }
   }
-  for (let j = 0; j < 60; j++) for (let i = 0; i < 44; i++) if (Math.hypot((i - 22) / 22, (j - 30) / 30) < 1) b.set(P.x + P.w - 30 + i, P.y + P.h - 18 + j, i < 14 ? PAL.K2 : PAL.X1);
 };
 
 // ------------------------------------------------------------------ 14.02 / 14.05 the bay wide
