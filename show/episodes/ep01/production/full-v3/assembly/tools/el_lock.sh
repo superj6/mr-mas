@@ -40,10 +40,14 @@ for s in "${@:-coldopen act1 act2 act3 act4 tag}"; do
   for seg in $s; do
     extra=()
     [ "$seg" = act4 ] && extra=(--plan studio/src/episodes/ep01/pixel/act4/plan.json)
+    # a shots pass's own EL mouth tracks for cut takes (v3.3: Tasya's TV cut, v33-a4-0002), laid after ours (later wins)
+    CUTM=audio/ep01/v3-el/ep01-$LOCKV/$seg/lines-A-cut-mouths.json
+    TAKES=(--takes $EL/$seg-takes.json)
+    [ "$LOCKV" != v3 ] && [ -f $CUTM ] && TAKES+=(--takes $CUTM) && echo "   (+ $CUTM)"
     MIXARG=(--mix $MIX/$seg-mix.wav --mix-offset 0)
     [ -f $MIX/$seg-mix.wav ] || { echo "   (no $MIX/$seg-mix.wav yet: locked without --mix)"; MIXARG=(); }
     echo "== $seg ($LOCKV, ep-in ${EPIN[$seg]})"
-    python3 $LOCKPY --seg "$seg" --timeline $TL-$seg.json --takes $EL/$seg-takes.json \
+    python3 $LOCKPY --seg "$seg" --timeline $TL-$seg.json "${TAKES[@]}" \
       "${MIXARG[@]}" --ep-in "${EPIN[$seg]}" --label "${LABEL[$seg]}" \
       --out-json $EL/lock-$seg.json --out-ts $EL/data-$seg.ts "${extra[@]}"
   done

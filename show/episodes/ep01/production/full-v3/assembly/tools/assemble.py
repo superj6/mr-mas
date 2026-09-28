@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """assemble.py - Ep1 v3, the v3-assemble pass (PLAN.md track F): the full episode film, one per voice variant.
 
-  audio/.venv-casting/bin/python show/episodes/ep01/production/full-v3/assembly/tools/assemble.py kokoro|el|kokoro-v31|el-v31|kokoro-v32|el-v32 [--dry]
+  audio/.venv-casting/bin/python show/episodes/ep01/production/full-v3/assembly/tools/assemble.py kokoro|el|kokoro-v31|el-v31|kokoro-v32|el-v32|kokoro-v33|el-v33 [--dry]
   (run it through ops/heavy.sh: the encode is heavy)
 
 The order is the v3 manifest's: cold open -> intro -> the filename card -> Acts One to Four -> tag -> the Orb outro.
@@ -69,6 +69,15 @@ VARIANTS = {
                    label="v3.2, ElevenLabs voices", locks="show/episodes/ep01/production/full-v3/assembly/el-v32/lock-{seg}.json",
                    transcript="transcript-v32-el.txt", titles={"act4": "Act Four · five days, told twice"}, outro_audio="outro-mix.wav",
                    hum_gap=dict(frames=18, tail="audio/reel/ep01-v3/v32/el/tag-tail.flac", out="out/ep01/full-v3/assembly-v32-el")),
+    # v3.3, the polish round: as v3.2 (the outro-mix.wav outro, the hum gap), on the v3.3 locks, pictures and mixes
+    "kokoro-v33": dict(man="show/reel/ep01-v33/ep01-v33.manifest.json", pic="picture", mix="mix-v33", film="ep01-v33", label="v3.3",
+                       locks="show/episodes/ep01/production/full-v3/lock/{seg}.json", transcript="transcript-v33.txt",
+                       titles={"act4": "Act Four · five days, told twice"}, outro_audio="outro-mix.wav",
+                       hum_gap=dict(frames=18, tail="audio/reel/ep01-v3/v33/tag-tail.wav", out="out/ep01/full-v3/assembly-v33")),
+    "el-v33": dict(man="show/reel/ep01-v33-el/ep01-v33-el.manifest.json", pic="picture-el", mix="mix-v33-el", film="ep01-v33-el",
+                   label="v3.3, ElevenLabs voices", locks="show/episodes/ep01/production/full-v3/assembly/el-v33/lock-{seg}.json",
+                   transcript="transcript-v33-el.txt", titles={"act4": "Act Four · five days, told twice"}, outro_audio="outro-mix.wav",
+                   hum_gap=dict(frames=18, tail="audio/reel/ep01-v3/v33/el/tag-tail.flac", out="out/ep01/full-v3/assembly-v33-el")),
 }
 
 

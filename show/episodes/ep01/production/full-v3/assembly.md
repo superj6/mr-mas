@@ -1,10 +1,113 @@
-# Ep1 v3, v3.1 and v3.2: the full episode films (`v3-assemble`, track F, 2026-09-27 and 28)
+# Ep1 v3 → v3.3: the full episode films (`v3-assemble`, track F, 2026-09-27 and 28)
 
-> **Status: v3.2 BUILT AND MEASURED, both films (2026-09-28, the agency pass; SHOWRUNNER-NOTES 00 and 0). §W below is the current state.** §V is the v3.1 round's record, and everything after it the v3 round's. Track F of [PLAN.md](PLAN.md), under the showrunner's "i want you to just do a full episode attempt with your best judgement" and "try your best to get a fully finalized version".
+> **Status: v3.3 BUILT AND MEASURED, both films (2026-09-28, the polish round). §X below is the current state.** §W (v3.2), §V (v3.1) and the v3 round are the record; their films were deleted as each next round passed. Track F of [PLAN.md](PLAN.md).
 >
-> **Nothing here was watched or heard.** Every number below is measured from the files. I looked at stills only (§W.3). Whether any cut, seam or line plays needs a person. Nothing was committed.
+> **Nothing here was watched or heard.** Every number below is measured from the files. I looked at stills only (§X.2). Nothing was committed.
 
-## W. v3.2 (2026-09-28): the final films
+## X. v3.3 (2026-09-28): the polish round
+
+**The films:**
+
+| | Kokoro voices (primary) | ElevenLabs voices (set A) |
+|---|---|---|
+| **File** | `out/ep01/full-v3/ep01-v33.mp4` | `out/ep01/full-v3/ep01-v33-el.mp4` |
+| **Length** | **21:12.17** (30,532 frames) | **21:12.46** (30,539 frames) |
+| Size | 126.2 MB | 125.2 MB |
+| Contact sheet (every 10 s) | `ep01-v33-sheet.png` (128) | `ep01-v33-el-sheet.png` (128) |
+| Transcript (235 lines) | [assembly/transcript-v33.txt](assembly/transcript-v33.txt) | [assembly/transcript-v33-el.txt](assembly/transcript-v33-el.txt) |
+| Records | `assembly/kokoro-v33-{assembly,qa}.json` | `assembly/el-v33-{assembly,qa}.json`, `el-v33-pictures.json` |
+| The hum gap's files | `out/ep01/full-v3/assembly-v33/` | `out/ep01/full-v3/assembly-v33-el/` |
+
+- **Built exactly as v3.2** (§W), with the v3.3 manifests, pictures and mixes:
+  - the mixes are `mix-v33/` (08:40) and `mix-v33-el/` (08:34), committed in b04344e;
+  - the flash-fixed intro at −3 dB, and the 2 s card;
+  - `outro-mix.wav` at −1 dB, with the 0.75 s hum hold (hum gain fitted +2.79 / +2.83 dB; the residual against `outro-mix.wav` is 1.2e-7);
+  - nine titled chapters.
+- **The Kokoro pictures** are the shot passes' v3.3 finals. Act Four is the re-render, at 12,138 frames.
+- **The v3.2 films** (`ep01-v32.mp4`, `ep01-v32-el.mp4`) and my v3.2 hum-gap files were **deleted** after both v3.3 films passed. `picture-el/` now holds only v3.3 renders.
+
+### X.1 Chapter times
+
+| # | Chapter | Kokoro start · length | EL start · length |
+|---|---|---|---|
+| 1 | Cold open | 0:00.00 · 26.67 | 0:00.00 · 24.29 |
+| 2 | Intro | 0:26.67 · 30.00 | 0:24.29 · 30.00 |
+| 3 | ep1.0_research_preview.md | 0:56.67 · 2.00 | 0:54.29 · 2.00 |
+| 4 | Act One · research preview | 0:58.67 · 5:30.58 | 0:56.29 · 5:35.79 |
+| 5 | Act Two · the regulate-me tour | 6:29.25 · 3:10.54 | 6:32.08 · 3:00.83 |
+| 6 | Act Three · verified: human | 9:39.79 · 2:13.42 | 9:32.92 · 2:09.75 |
+| 7 | Act Four · five days, told twice | 11:53.21 · 8:25.75 | 11:42.67 · 8:36.58 |
+| 8 | Tag · december (with the 0.75 s hum hold) | 20:18.96 · 43.08 | 20:19.25 · 43.08 |
+| 9 | Outro · credits | 21:02.04 · 10.13 | 21:02.33 · 10.13 |
+
+### X.2 The EL pictures for v3.3
+
+All six segments are on `show/reel/ep01-v33-el/` (a170aaa) with `audio/ep01/v3-el/ep01-v33/`, all under `assembly/el-v33/`.
+
+- **The takes and locks:** `el_takes.py --lock v33`, then `LOCK=v33 el_lock.sh`.
+  - Act Four also reads the Act Four pass's `lines-A-cut-mouths.json` (Tasya's TV cut, v33-a4-0002), laid after my takes.
+  - The employee's line (v33-a4-0001) has its own mouth track, and S7.02's `push` mark resolves.
+  - The locks were re-run with the final mixes: every check passes, and each segment equals its mix.
+  - Act Four has 44 on-camera mouths, as Kokoro.
+- **Frames:** cold open 583, Act One 8,059, Act Two 4,340, Act Three 3,114, Act Four 12,398, tag 1,016.
+- **Splices:**
+  - Act Three: 5 GLYPH frames. Act Four: 28 GLYPH frames and the hourglass (S7.13, 264 f, `--s713 11204 --back-at 170`).
+  - The tag: the demo's 217 frames at 62–278 (32.01 is 62 f and the insert 233 f), with no host layer.
+  - Both GLYPH checks hold: plain frames identical, nothing outside the room area differs.
+- **Renders:** 0 stand-ins, 0 failed layouts, 0 stand-in marks. Each is muxed with its final EL mix.
+- **Flashes, per picture:** cold open 1, Act One 2, Act Two 3, Act Three 0, Act Four 1, tag 0; red 0. All pass.
+  - Act Two's 3 is at 13.14's cut in (the class photo). I compared it frame by frame with the Kokoro picture: it's the same drawing, and the Kokoro picture reads 1 there.
+  - So the extra 2 come from the encode's noise on a busy dither, as at the cold open's freeze.
+- **Looked at** (EL beside Kokoro): S7.02 (the employee's push), S7.02b (Tasya's TV clip), the Remove dialog, S7.13's shatter and aftermath, and 13.13 → 13.14. EL and Kokoro match at every one.
+
+### X.3 QA (both films)
+
+| Check | Kokoro v3.3 | EL v3.3 |
+|---|---|---|
+| **Full decode** | **0 error lines**, 30,532 frames | **0 error lines**, 30,539 frames |
+| **A/V lag per chapter** | **0 samples in all nine** (correlation 0.9997–1.0) | **0 in all nine** |
+| The hum gap's correlation | peaks at 1,100 samples: a false reading on a steady tone (§W.3); the join is continuous | the same |
+| A/V, the total | the audio runs 4.0 ms past the last frame (AAC padding) | 11.0 ms |
+| **Chapter edge frames** against their sources | 0.00–0.13 of 255 on the story chapters; the intro 0.24; the hum-gap still 0.67 | the same |
+| **Integrated loudness** | **−16.08 LUFS** | **−16.10 LUFS** |
+| **True peak** | **−1.05 dBTP** (the tag) | **−1.42 dBTP** |
+| Chapters (LUFS-I) | cold open −16.1 · intro −17.1 · card −36.0 · acts −16.0 · tag −17.5 · outro −17.2 | −16.0 · −17.1 · −36.1 · −16.0 · −17.6 · −17.2 |
+| Digital zero / holes | **none / none** | **none / none** |
+| **Flashes, whole film** | **max 2 in 1 s** (the cold open's freeze, 0:14.5); red 0. **Pass** | **max 3** (the freeze, 0:12.4, at the limit; the picture alone reads 1); Act Two 2 in the film; red 0. **Pass** |
+| Chapters | nine, titled, matching the assembly to the millisecond | the same |
+
+**Seams** (200 ms RMS step, momentary loudness over 400 ms):
+
+| Join | Kokoro at | Step (dB) | Momentary (LUFS) | EL at | Step | |
+|---|---|---|---|---|---|---|
+| cold open → intro | 0:26.67 | −11.3 | −15.9 → −30.4 | 0:24.29 | −11.3 | the rewind collapsing into the intro (designed) |
+| intro → card | 0:56.67 | +0.5 | −28.8 → −36.7 | 0:54.29 | +0.5 | |
+| **card → Act One** | 0:58.67 | **+19.6** | −33.4 → −13.4 | 0:56.29 | **+20.1** | the designed downbeat |
+| Act One → Two | 6:29.25 | −0.1 | −36.0 → −32.9 | 6:32.08 | 0.0 | |
+| Act Two → Three | 9:39.79 | +1.5 | −38.2 → −33.2 | 9:32.92 | +0.6 | |
+| Act Three → Four | 11:53.21 | +0.9 | −31.0 → −30.1 | 11:42.67 | +0.5 | |
+| Act Four → tag | 20:18.96 | +0.9 | −25.6 → −24.1 | 20:19.25 | −1.2 | |
+| tag → hum gap | 21:01.29 | −0.3 | −33.8 → −34.7 | 21:01.58 | −0.5 | the hum, continuous |
+| **hum → outro** | 21:02.04 | **+12.7** | −34.5 → −21.2 | 21:02.33 | **+12.7** | the first hit, 6 dB down |
+
+Every sample jump is under 0.01.
+
+### X.4 Watch these first
+
+Kokoro / EL:
+1. **The end:** the tag's black and the hum alone from 21:00.0 / 21:00.3, then the outro at 21:02.0 / 21:02.3.
+2. **The card → Act One downbeat** at 0:58.7 / 0:56.3.
+3. **Act Four's new beats:**
+   - the employee's push, S7.02, at 18:24.7 / 18:21.1;
+   - Tasya's TV clip, S7.02b, at 18:30.6 / 18:27.7.
+4. **Act Two's class-photo cut,** 13.14, at 7:32.6 / 7:32.4 (the EL picture's flash reading there is 3; the EL film's is 2).
+5. **The cold open's freeze flash,** 0:14.5 / 0:12.4.
+
+### X.5 How to rebuild v3.3
+
+As §V.6 and §W.6, with `v33`. Act Four's EL lock picks up `audio/ep01/v3-el/ep01-v33/act4/lines-A-cut-mouths.json` by itself (`el_lock.sh`).
+
+## W. v3.2 (2026-09-28): the record (superseded by §X; its films were deleted)
 
 **The films:**
 
