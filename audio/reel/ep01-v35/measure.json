@@ -1,0 +1,357 @@
+{
+ "plan_total_s": 1388.667,
+ "chapters": [
+  {
+   "id": "title",
+   "from": "0:00.00",
+   "seconds": 3.0
+  },
+  {
+   "id": "coldopen",
+   "from": "0:03.00",
+   "seconds": 26.667
+  },
+  {
+   "id": "intro",
+   "from": "0:29.67",
+   "seconds": 30.0
+  },
+  {
+   "id": "card",
+   "from": "0:59.67",
+   "seconds": 2.0
+  },
+  {
+   "id": "act1",
+   "from": "1:01.67",
+   "seconds": 449.75
+  },
+  {
+   "id": "act2",
+   "from": "8:31.42",
+   "seconds": 211.417
+  },
+  {
+   "id": "act3",
+   "from": "12:02.83",
+   "seconds": 139.125
+  },
+  {
+   "id": "act4",
+   "from": "14:21.96",
+   "seconds": 483.333
+  },
+  {
+   "id": "tag",
+   "from": "22:25.29",
+   "seconds": 33.25
+  },
+  {
+   "id": "outro",
+   "from": "22:58.54",
+   "seconds": 10.125
+  }
+ ],
+ "segments": {
+  "coldopen": {
+   "v35_s": 26.667,
+   "v35_frames": 640,
+   "v34_s": 26.667,
+   "v34_frames": 640,
+   "estimate_s": 26.67,
+   "vs_estimate_s": -0.0,
+   "vs_v34_s": 0.0
+  },
+  "act1": {
+   "v35_s": 449.75,
+   "v35_frames": 10794,
+   "v34_s": 337.542,
+   "v34_frames": 8101,
+   "estimate_s": 449.74,
+   "vs_estimate_s": 0.01,
+   "vs_v34_s": 112.21
+  },
+  "act2": {
+   "v35_s": 211.417,
+   "v35_frames": 5074,
+   "v34_s": 181.208,
+   "v34_frames": 4349,
+   "estimate_s": 211.43,
+   "vs_estimate_s": -0.01,
+   "vs_v34_s": 30.21
+  },
+  "act3": {
+   "v35_s": 139.125,
+   "v35_frames": 3339,
+   "v34_s": 125.292,
+   "v34_frames": 3007,
+   "estimate_s": 139.12,
+   "vs_estimate_s": 0.0,
+   "vs_v34_s": 13.83
+  },
+  "act4": {
+   "v35_s": 483.333,
+   "v35_frames": 11600,
+   "v34_s": 507.792,
+   "v34_frames": 12187,
+   "estimate_s": 482.32,
+   "vs_estimate_s": 1.01,
+   "vs_v34_s": -24.46
+  },
+  "tag": {
+   "v35_s": 33.25,
+   "v35_frames": 798,
+   "v34_s": 33.25,
+   "v34_frames": 798,
+   "estimate_s": 33.24,
+   "vs_estimate_s": 0.01,
+   "vs_v34_s": 0.0
+  }
+ },
+ "story_v35_s": 1343.542,
+ "story_v35_frames": 32245,
+ "story_v34_s": 1211.751,
+ "story_estimate_s": 1342.52,
+ "gaps": {
+  "coldopen": {
+   "v34": {
+    "inside_beats_median_s": null,
+    "inside_beats_n": 0,
+    "inside_beats_quick_share": null,
+    "act_clock_median_s": 3.053,
+    "act_clock_n": 2,
+    "spoken_only_act_clock_median_s": 3.053,
+    "overlaps": 0
+   },
+   "v35": {
+    "inside_beats_median_s": null,
+    "inside_beats_n": 0,
+    "inside_beats_quick_share": null,
+    "act_clock_median_s": 3.053,
+    "act_clock_n": 2,
+    "spoken_only_act_clock_median_s": 3.053,
+    "overlaps": 0
+   }
+  },
+  "act1": {
+   "v34": {
+    "inside_beats_median_s": 0.6,
+    "inside_beats_n": 44,
+    "inside_beats_quick_share": 0.14,
+    "act_clock_median_s": 0.8,
+    "act_clock_n": 67,
+    "spoken_only_act_clock_median_s": 0.9,
+    "overlaps": 0
+   },
+   "v35": {
+    "inside_beats_median_s": 0.45,
+    "inside_beats_n": 51,
+    "inside_beats_quick_share": 0.35,
+    "act_clock_median_s": 0.65,
+    "act_clock_n": 80,
+    "spoken_only_act_clock_median_s": 0.8,
+    "overlaps": 1
+   }
+  },
+  "act2": {
+   "v34": {
+    "inside_beats_median_s": 0.5,
+    "inside_beats_n": 17,
+    "inside_beats_quick_share": 0.12,
+    "act_clock_median_s": 0.857,
+    "act_clock_n": 37,
+    "spoken_only_act_clock_median_s": 0.897,
+    "overlaps": 0
+   },
+   "v35": {
+    "inside_beats_median_s": 0.475,
+    "inside_beats_n": 24,
+    "inside_beats_quick_share": 0.17,
+    "act_clock_median_s": 0.7,
+    "act_clock_n": 45,
+    "spoken_only_act_clock_median_s": 0.8,
+    "overlaps": 0
+   }
+  },
+  "act3": {
+   "v34": {
+    "inside_beats_median_s": 0.525,
+    "inside_beats_n": 10,
+    "inside_beats_quick_share": 0.2,
+    "act_clock_median_s": 1.15,
+    "act_clock_n": 20,
+    "spoken_only_act_clock_median_s": 1.2,
+    "overlaps": 0
+   },
+   "v35": {
+    "inside_beats_median_s": 0.45,
+    "inside_beats_n": 11,
+    "inside_beats_quick_share": 0.27,
+    "act_clock_median_s": 1.1,
+    "act_clock_n": 23,
+    "spoken_only_act_clock_median_s": 1.15,
+    "overlaps": 0
+   }
+  },
+  "act4": {
+   "v34": {
+    "inside_beats_median_s": 0.55,
+    "inside_beats_n": 52,
+    "inside_beats_quick_share": 0.04,
+    "act_clock_median_s": 0.899,
+    "act_clock_n": 97,
+    "spoken_only_act_clock_median_s": 0.806,
+    "overlaps": 1
+   },
+   "v35": {
+    "inside_beats_median_s": 0.4,
+    "inside_beats_n": 53,
+    "inside_beats_quick_share": 0.42,
+    "act_clock_median_s": 0.75,
+    "act_clock_n": 98,
+    "spoken_only_act_clock_median_s": 0.7,
+    "overlaps": 2
+   }
+  },
+  "tag": {
+   "v34": {
+    "inside_beats_median_s": null,
+    "inside_beats_n": 0,
+    "inside_beats_quick_share": null,
+    "act_clock_median_s": 9.281,
+    "act_clock_n": 2,
+    "spoken_only_act_clock_median_s": 11.483,
+    "overlaps": 0
+   },
+   "v35": {
+    "inside_beats_median_s": null,
+    "inside_beats_n": 0,
+    "inside_beats_quick_share": null,
+    "act_clock_median_s": 9.281,
+    "act_clock_n": 2,
+    "spoken_only_act_clock_median_s": 11.483,
+    "overlaps": 0
+   }
+  }
+ },
+ "inner_voice": {
+  "lines": 17,
+  "rows": [
+   "act1 5.04 v34-vo-01: she's right. it will break. it goes out tonight anyway.",
+   "act1 5.11 v3-vo-05: i know. i still read it twice.",
+   "act1 7.01 v34-vo-02: mostly the bill. we can't buy that many servers. someone can.",
+   "act1 v35-12.02 v35-vo-01: they've stopped testing it. they're using it.",
+   "act1 9.09 v3-vo-09: it does.",
+   "act1 v35-19.03 v35-vo-02: someone gets to be in the room.",
+   "act1 11.03 v3-vo-10: mario used to sit where gerg sits. he left to build a careful one.",
+   "act2 13.13 v34-vo-04: mine's half written.",
+   "act3 18.02 v34-vo-05: my other company. for when it gets harder to tell.",
+   "act3 22.01 v34-vo-06: a year ago, forty users and a nice thread.",
+   "act3 22.02 v3-vo-16: thrilled is too much. enthusiastic is a lot.",
+   "act4 S1.02 v34-vo-07: gerg's not on it. probably the budget. good. i'll ask for more compute.",
+   "act4 v35-41.01 v35-vo-03: the budget. i said the budget.",
+   "act4 v35-41.04 v35-vo-04: gerg. tasya. the money. the money. the money.",
+   "act4 S2.01 a5-26a-01: i don't keep score.",
+   "act4 S8.04 v34-vo-11: they had four votes. i had the landlord. the money. gerg.",
+   "tag 32.03 v3-vo-24: it looks calmer than me."
+  ]
+ },
+ "pacing": {
+  "v34": {
+   "shots": 223,
+   "minutes": 20.2,
+   "asl_s": 5.43,
+   "median_shot_s": 4.0,
+   "stays": 48,
+   "median_stay_s": 15.2,
+   "stays_under_10": 17,
+   "stays_10_30": 17,
+   "stays_30_60": 9,
+   "stays_60_plus": 5,
+   "talk_stays": 31,
+   "entry_air_median_s": 3.7,
+   "entry_air_2s_or_less": 15,
+   "exit_air_median_s": 3.2,
+   "exit_air_1p5s_or_less": 6,
+   "lines": 231,
+   "jcut_lines": 6,
+   "lcut_lines": 5
+  },
+  "v35": {
+   "shots": 260,
+   "minutes": 22.39,
+   "asl_s": 5.17,
+   "median_shot_s": 3.71,
+   "stays": 52,
+   "median_stay_s": 16.6,
+   "stays_under_10": 20,
+   "stays_10_30": 17,
+   "stays_30_60": 9,
+   "stays_60_plus": 6,
+   "talk_stays": 33,
+   "entry_air_median_s": 3.8,
+   "entry_air_2s_or_less": 14,
+   "exit_air_median_s": 2.9,
+   "exit_air_1p5s_or_less": 8,
+   "lines": 256,
+   "jcut_lines": 7,
+   "lcut_lines": 4
+  },
+  "v34_spoken_only": {
+   "shots": 223,
+   "minutes": 20.2,
+   "asl_s": 5.43,
+   "median_shot_s": 4.0,
+   "stays": 48,
+   "median_stay_s": 15.2,
+   "stays_under_10": 17,
+   "stays_10_30": 17,
+   "stays_30_60": 9,
+   "stays_60_plus": 5,
+   "talk_stays": 30,
+   "entry_air_median_s": 5.2,
+   "entry_air_2s_or_less": 12,
+   "exit_air_median_s": 3.3,
+   "exit_air_1p5s_or_less": 6,
+   "lines": 216,
+   "jcut_lines": 6,
+   "lcut_lines": 5
+  },
+  "v35_spoken_only": {
+   "shots": 260,
+   "minutes": 22.39,
+   "asl_s": 5.17,
+   "median_shot_s": 3.71,
+   "stays": 52,
+   "median_stay_s": 16.6,
+   "stays_under_10": 20,
+   "stays_10_30": 17,
+   "stays_30_60": 9,
+   "stays_60_plus": 6,
+   "talk_stays": 32,
+   "entry_air_median_s": 3.8,
+   "entry_air_2s_or_less": 13,
+   "exit_air_median_s": 3.4,
+   "exit_air_1p5s_or_less": 8,
+   "lines": 239,
+   "jcut_lines": 7,
+   "lcut_lines": 4
+  }
+ },
+ "speech": {
+  "v34": {
+   "words": 1712,
+   "mas_words": 389,
+   "mas_share": 0.227,
+   "vo_lines": 15,
+   "vo_words": 124
+  },
+  "v35": {
+   "words": 1837,
+   "mas_words": 463,
+   "mas_share": 0.252,
+   "vo_lines": 17,
+   "vo_words": 135
+  }
+ }
+}

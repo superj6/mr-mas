@@ -1,0 +1,3656 @@
+{
+ "coldopen": {
+  "timeline": "show/reel/ep01-v35/ep01-v35-coldopen.json",
+  "source": "show/reel/ep01-v34/ep01-v34-coldopen.json",
+  "source_story_s": 26.667,
+  "estimate_s": 26.67,
+  "seconds": 26.667,
+  "frames": 640,
+  "source_frames": 640,
+  "beats": 10,
+  "lines": 3,
+  "vo": 0,
+  "vo_lines": [],
+  "jcuts": [],
+  "lcuts": [
+   "e1-co-1-02 (1.02)"
+  ],
+  "median_gap_v34": {
+   "inside_beats_s": null,
+   "inside_beats_n": 0,
+   "segment_s": 3.053,
+   "segment_n": 2,
+   "spoken_only_segment_s": 3.053
+  },
+  "median_gap_v35": {
+   "inside_beats_s": null,
+   "inside_beats_n": 0,
+   "segment_s": 3.053,
+   "segment_n": 2,
+   "spoken_only_segment_s": 3.053
+  },
+  "beat_lengths": [],
+  "tempo": [],
+  "check_failures": [],
+  "edits": [],
+  "deviations": [],
+  "safety_net": []
+ },
+ "act1": {
+  "timeline": "show/reel/ep01-v35/ep01-v35-act1.json",
+  "source": "show/reel/ep01-v34/ep01-v34-act1.json",
+  "source_story_s": 337.549,
+  "estimate_s": 449.74,
+  "seconds": 449.746,
+  "frames": 10794,
+  "source_frames": 8101,
+  "beats": 77,
+  "lines": 81,
+  "vo": 7,
+  "vo_lines": [
+   "v34-vo-01 (5.04): she's right. it will break. it goes out tonight anyway.",
+   "v3-vo-05 (5.11): i know. i still read it twice.",
+   "v34-vo-02 (7.01): mostly the bill. we can't buy that many servers. someone can.",
+   "v35-vo-01 (v35-12.02): they've stopped testing it. they're using it.",
+   "v3-vo-09 (9.09): it does.",
+   "v35-vo-02 (v35-19.03): someone gets to be in the room.",
+   "v3-vo-10 (11.03): mario used to sit where gerg sits. he left to build a careful one."
+  ],
+  "jcuts": [
+   "v32-a1-0001 (5.03, -0.50)",
+   "v31-a1-0003 (7.01, -0.60)",
+   "e1-a1-12-01 (12.02, -0.50)"
+  ],
+  "lcuts": [],
+  "median_gap_v34": {
+   "inside_beats_s": 0.6,
+   "inside_beats_n": 44,
+   "segment_s": 0.8,
+   "segment_n": 67,
+   "spoken_only_segment_s": 0.9
+  },
+  "median_gap_v35": {
+   "inside_beats_s": 0.45,
+   "inside_beats_n": 51,
+   "segment_s": 0.65,
+   "segment_n": 80,
+   "spoken_only_segment_s": 0.8
+  },
+  "beat_lengths": [
+   {
+    "beat": "5.03",
+    "action": "keep",
+    "scene": 4,
+    "src_s": 9.725,
+    "est_s": 9.47,
+    "lock_s": 9.475,
+    "diff_s": 0.005
+   },
+   {
+    "beat": "5.04",
+    "action": "keep",
+    "scene": 4,
+    "src_s": 29.642,
+    "est_s": 28.34,
+    "lock_s": 28.342,
+    "diff_s": 0.002
+   },
+   {
+    "beat": "5.10",
+    "action": "keep",
+    "scene": 6,
+    "src_s": 14.167,
+    "est_s": 13.97,
+    "lock_s": 13.967,
+    "diff_s": -0.003
+   },
+   {
+    "beat": "5.11",
+    "action": "keep",
+    "scene": 6,
+    "src_s": 8.16,
+    "est_s": 8.01,
+    "lock_s": 8.01,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "5.12",
+    "action": "keep",
+    "scene": 6,
+    "src_s": 2.583,
+    "est_s": 4.6,
+    "lock_s": 4.6,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "7.01",
+    "action": "keep",
+    "scene": 8,
+    "src_s": 10.56,
+    "est_s": 10.36,
+    "lock_s": 10.36,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "7.02",
+    "action": "keep",
+    "scene": 8,
+    "src_s": 5.0,
+    "est_s": 5.0,
+    "lock_s": 5.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v32-7.03",
+    "action": "keep",
+    "scene": 9,
+    "src_s": 9.0,
+    "est_s": 8.6,
+    "lock_s": 8.6,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-10.01",
+    "action": "new",
+    "scene": 10,
+    "src_s": null,
+    "est_s": 2.5,
+    "lock_s": 2.5,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-10.02",
+    "action": "new",
+    "scene": 10,
+    "src_s": null,
+    "est_s": 2.0,
+    "lock_s": 2.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-10.03",
+    "action": "new",
+    "scene": 10,
+    "src_s": null,
+    "est_s": 2.5,
+    "lock_s": 2.5,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-10.04",
+    "action": "new",
+    "scene": 10,
+    "src_s": null,
+    "est_s": 3.0,
+    "lock_s": 3.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-10.05",
+    "action": "new",
+    "scene": 10,
+    "src_s": null,
+    "est_s": 2.0,
+    "lock_s": 2.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-10.06",
+    "action": "new",
+    "scene": 10,
+    "src_s": null,
+    "est_s": 2.5,
+    "lock_s": 2.5,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-10.07",
+    "action": "new",
+    "scene": 10,
+    "src_s": null,
+    "est_s": 2.5,
+    "lock_s": 2.5,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-10.08",
+    "action": "new",
+    "scene": 10,
+    "src_s": null,
+    "est_s": 1.5,
+    "lock_s": 1.5,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "8.01",
+    "action": "keep",
+    "scene": 11,
+    "src_s": 2.5,
+    "est_s": 2.5,
+    "lock_s": 2.5,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "8.06",
+    "action": "keep",
+    "scene": 11,
+    "src_s": 2.5,
+    "est_s": 2.5,
+    "lock_s": 2.5,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-12.01",
+    "action": "new",
+    "scene": 12,
+    "src_s": null,
+    "est_s": 4.5,
+    "lock_s": 4.5,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-12.02",
+    "action": "new",
+    "scene": 12,
+    "src_s": null,
+    "est_s": 4.31,
+    "lock_s": 4.31,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-12.03",
+    "action": "new",
+    "scene": 12,
+    "src_s": null,
+    "est_s": 1.8,
+    "lock_s": 1.8,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-13.01",
+    "action": "new",
+    "scene": 13,
+    "src_s": null,
+    "est_s": 3.2,
+    "lock_s": 3.2,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-13.02",
+    "action": "new",
+    "scene": 13,
+    "src_s": null,
+    "est_s": 13.55,
+    "lock_s": 13.55,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-13.03",
+    "action": "new",
+    "scene": 13,
+    "src_s": null,
+    "est_s": 7.37,
+    "lock_s": 7.37,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-13.04",
+    "action": "new",
+    "scene": 13,
+    "src_s": null,
+    "est_s": 6.01,
+    "lock_s": 6.01,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-13.05",
+    "action": "new",
+    "scene": 13,
+    "src_s": null,
+    "est_s": 2.5,
+    "lock_s": 2.5,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-13.06",
+    "action": "new",
+    "scene": 13,
+    "src_s": null,
+    "est_s": 1.5,
+    "lock_s": 1.5,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "9.01",
+    "action": "keep",
+    "scene": 14,
+    "src_s": 5.5,
+    "est_s": 5.5,
+    "lock_s": 5.5,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "9.06",
+    "action": "keep",
+    "scene": 14,
+    "src_s": 7.125,
+    "est_s": 6.97,
+    "lock_s": 6.975,
+    "diff_s": 0.005
+   },
+   {
+    "beat": "9.09",
+    "action": "keep",
+    "scene": 14,
+    "src_s": 21.48,
+    "est_s": 23.18,
+    "lock_s": 23.18,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "9.10",
+    "action": "keep",
+    "scene": 15,
+    "src_s": 9.988,
+    "est_s": 11.61,
+    "lock_s": 11.608,
+    "diff_s": -0.002
+   },
+   {
+    "beat": "v31-10.02",
+    "action": "keep",
+    "scene": 17,
+    "src_s": 18.5,
+    "est_s": 17.75,
+    "lock_s": 17.75,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v31-10.04",
+    "action": "keep",
+    "scene": 17,
+    "src_s": 3.0,
+    "est_s": 3.0,
+    "lock_s": 3.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-18.01",
+    "action": "new",
+    "scene": 18,
+    "src_s": null,
+    "est_s": 6.0,
+    "lock_s": 6.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-18.02",
+    "action": "new",
+    "scene": 18,
+    "src_s": null,
+    "est_s": 5.0,
+    "lock_s": 5.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-18.03",
+    "action": "new",
+    "scene": 18,
+    "src_s": null,
+    "est_s": 2.5,
+    "lock_s": 2.5,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-19.01",
+    "action": "new",
+    "scene": 19,
+    "src_s": null,
+    "est_s": 3.0,
+    "lock_s": 3.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-19.02",
+    "action": "new",
+    "scene": 19,
+    "src_s": null,
+    "est_s": 14.0,
+    "lock_s": 14.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-19.03",
+    "action": "new",
+    "scene": 19,
+    "src_s": null,
+    "est_s": 4.02,
+    "lock_s": 4.02,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-19.04",
+    "action": "new",
+    "scene": 19,
+    "src_s": null,
+    "est_s": 3.5,
+    "lock_s": 3.5,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "11.01",
+    "action": "keep",
+    "scene": 20,
+    "src_s": 8.79,
+    "est_s": 8.64,
+    "lock_s": 8.64,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "11.03",
+    "action": "keep",
+    "scene": 21,
+    "src_s": 13.59,
+    "est_s": 17.94,
+    "lock_s": 17.94,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "11.04",
+    "action": "keep",
+    "scene": 21,
+    "src_s": 8.5,
+    "est_s": 10.5,
+    "lock_s": 10.5,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-22.01",
+    "action": "new",
+    "scene": 22,
+    "src_s": null,
+    "est_s": 3.0,
+    "lock_s": 3.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "12.01",
+    "action": "keep",
+    "scene": 23,
+    "src_s": 4.292,
+    "est_s": 4.292,
+    "lock_s": 4.292,
+    "diff_s": -0.0
+   },
+   {
+    "beat": "12.02",
+    "action": "keep",
+    "scene": 23,
+    "src_s": 7.447,
+    "est_s": 7.25,
+    "lock_s": 7.247,
+    "diff_s": -0.003
+   }
+  ],
+  "tempo": [
+   {
+    "beat": "5.03",
+    "line": "e1-a1-5-03",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "5.04",
+    "line": "e1-a1-5-06",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "5.04",
+    "line": "e1-a1-5-08",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "5.04",
+    "line": "e1-a1-5-09",
+    "plan_s": -0.25,
+    "lock_s": -0.25,
+    "ok": true
+   },
+   {
+    "beat": "5.10",
+    "line": "e1-a1-5-20",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "5.11",
+    "line": "e1-a1-5-23",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "7.01",
+    "line": "e1-a1-7-02",
+    "plan_s": 0.6,
+    "lock_s": 0.6,
+    "ok": true
+   },
+   {
+    "beat": "v32-7.03",
+    "line": "v32-a1-0003",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   },
+   {
+    "beat": "v32-7.03",
+    "line": "v32-a1-0004",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "9.06",
+    "line": "e1-a1-9-03",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "9.09",
+    "line": "v31-a1-0005",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "9.09",
+    "line": "v35-a1-0008",
+    "plan_s": 0.35,
+    "lock_s": 0.35,
+    "ok": true
+   },
+   {
+    "beat": "9.09",
+    "line": "e1-a1-9-07",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   },
+   {
+    "beat": "9.09",
+    "line": "e1-a1-9-08",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "9.10",
+    "line": "e1-a1-9-10",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "v31-10.02",
+    "line": "e1-a1-10-01",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   },
+   {
+    "beat": "v31-10.02",
+    "line": "e1-a1-10-02",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "v31-10.02",
+    "line": "e1-a1-10-03",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   },
+   {
+    "beat": "v35-18.02",
+    "line": "v35-a1-0010",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   },
+   {
+    "beat": "11.01",
+    "line": "e1-a1-11-05",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   },
+   {
+    "beat": "11.03",
+    "line": "v35-a1-0011",
+    "plan_s": 0.4,
+    "lock_s": 0.4,
+    "ok": true
+   },
+   {
+    "beat": "12.02",
+    "line": "e1-a1-12-03",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   }
+  ],
+  "check_failures": [],
+  "edits": [
+   {
+    "beat": "5.03",
+    "what": "line e1-a1-5-03 retimed: gap after e1-a1-5-02 0.50 -> 0.25 s"
+   },
+   {
+    "beat": "5.04",
+    "what": "line e1-a1-5-06 retimed: gap after e1-a1-5-05 0.70 -> 0.25 s"
+   },
+   {
+    "beat": "5.04",
+    "what": "line e1-a1-5-08 retimed: gap after e1-a1-5-07 0.50 -> 0.25 s"
+   },
+   {
+    "beat": "5.04",
+    "what": "line e1-a1-5-09 retimed: gap after e1-a1-5-08 0.35 -> -0.25 s (an overlap)"
+   },
+   {
+    "beat": "5.10",
+    "what": "line e1-a1-5-20 retimed: gap after e1-a1-5-19 0.45 -> 0.25 s"
+   },
+   {
+    "beat": "5.11",
+    "what": "line e1-a1-5-23 retimed: gap after e1-a1-5-22 0.40 -> 0.25 s"
+   },
+   {
+    "beat": "5.12",
+    "what": "+2.02 s at the tail"
+   },
+   {
+    "beat": "5.12",
+    "what": "onscreen retime: \"CHATGTP · USERS: 1 · 2 · 7 · 104 · 1,389…\" 0.5 -> 2.5 s; the item before it holds until then; its sounds move with it (counter_roll, counter_roll, counter_roll)"
+   },
+   {
+    "beat": "5.12",
+    "what": "frame from the plan"
+   },
+   {
+    "beat": "5.12",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "5.12",
+    "what": "sound key_tap_soft_01 at 0.50 s (the plan's)"
+   },
+   {
+    "beat": "5.12",
+    "what": "sound key_tap_soft_02 at 1.10 s (the plan's)"
+   },
+   {
+    "beat": "5.12",
+    "what": "sound key_tap_soft_03 at 1.70 s (the plan's)"
+   },
+   {
+    "beat": "7.01",
+    "what": "line e1-a1-7-02 retimed: gap after v31-a1-0003 0.80 -> 0.60 s"
+   },
+   {
+    "beat": "7.02",
+    "what": "on-screen add: \"INVIDIA\" (1.2-3.7)"
+   },
+   {
+    "beat": "7.02",
+    "what": "cue: \" · the phone's siren J-cuts in under the…\" -> \" · under the last puff his hand finds th…\" (the v3.5 picture)"
+   },
+   {
+    "beat": "v32-7.03",
+    "what": "sounds_drop \"the siren's J-cut (moves to the end of the first weeks, v35-10.08)\": a J-cut an earlier plan named, which the bed never laid; nothing in the lock to take away (the bed follows the v3.5 J-/L-cuts)"
+   },
+   {
+    "beat": "v32-7.03",
+    "what": "line v32-a1-0003 retimed: gap after v32-a1-0002 0.60 -> 0.45 s"
+   },
+   {
+    "beat": "v32-7.03",
+    "what": "line v32-a1-0004 retimed: gap after v32-a1-0003 0.50 -> 0.25 s"
+   },
+   {
+    "beat": "v32-7.03",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "v35-10.01",
+    "what": "new beat (montage): INSERT · a stranger's phone (match from his) (screen, phone, no figures)"
+   },
+   {
+    "beat": "v35-10.01",
+    "what": "on-screen add: \"RAIL: DEC 2022\""
+   },
+   {
+    "beat": "v35-10.01",
+    "what": "on-screen add: \"write my essay on the fall of rome. 500 words. make it sound like me\" (0.4-None)"
+   },
+   {
+    "beat": "v35-10.01",
+    "what": "sequence marker 7A: the first weeks: phones everywhere"
+   },
+   {
+    "beat": "v35-10.02",
+    "what": "new beat (montage): INSERT · a laptop: the bug fix (screen, phone, no figures)"
+   },
+   {
+    "beat": "v35-10.02",
+    "what": "on-screen add: \"why does this crash\""
+   },
+   {
+    "beat": "v35-10.03",
+    "what": "new beat (montage): INSERT · a phone: the sandwich in the VCR (screen, phone, no figures)"
+   },
+   {
+    "beat": "v35-10.03",
+    "what": "on-screen add: \"a bible verse, king james style, about getting a peanut butter sandwic\""
+   },
+   {
+    "beat": "v35-10.03",
+    "what": "on-screen add: \"And it came to pass…\" (1.2-None)"
+   },
+   {
+    "beat": "v35-10.04",
+    "what": "new beat (montage): INSERT · a post card: NOLE (screen, phone, no figures)"
+   },
+   {
+    "beat": "v35-10.04",
+    "what": "on-screen add: \"@masa CHATGTP is scary good. We are not far from dangerously strong AI\""
+   },
+   {
+    "beat": "v35-10.04",
+    "what": "on-screen add: \"NOLE\""
+   },
+   {
+    "beat": "v35-10.04",
+    "what": "names[]: nole at 0.2 s (its plate)"
+   },
+   {
+    "beat": "v35-10.05",
+    "what": "new beat (montage): INSERT · two phones, a split (screen, phone, no figures)"
+   },
+   {
+    "beat": "v35-10.05",
+    "what": "on-screen add: \"eggs, half an onion, rice. what's dinner\""
+   },
+   {
+    "beat": "v35-10.05",
+    "what": "on-screen add: \"how do i say sorry to my sister\""
+   },
+   {
+    "beat": "v35-10.06",
+    "what": "new beat (montage): INSERT · the banner, and the wrong sum (screen, phone, no figures)"
+   },
+   {
+    "beat": "v35-10.06",
+    "what": "on-screen add: \"research preview · may make things up\""
+   },
+   {
+    "beat": "v35-10.06",
+    "what": "on-screen add: \"7 × 8 = 54.\""
+   },
+   {
+    "beat": "v35-10.07",
+    "what": "new beat (montage): INSERT · STACK UNDERFLOW (screen, phone, no figures)"
+   },
+   {
+    "beat": "v35-10.07",
+    "what": "on-screen add: \"STACK UNDERFLOW\""
+   },
+   {
+    "beat": "v35-10.07",
+    "what": "on-screen add: \"Temporary policy: CHATGTP is banned\""
+   },
+   {
+    "beat": "v35-10.08",
+    "what": "new beat (montage): WIDE · the desk of phones (bullpen, bullpen, mas)"
+   },
+   {
+    "beat": "v35-10.08",
+    "what": "sound siren_whoop_F at 1.20 s (the plan's sound note, as a stick SFX)"
+   },
+   {
+    "beat": "8.01",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "8.06",
+    "what": "sound revolving_door at 1.45 dropped (sounds_drop: \"the NopeAI lobby's revolving door pre-lap (moves to the end of the 2018 flashback)\"); it moves to v35-13.06"
+   },
+   {
+    "beat": "8.06",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "v35-12.01",
+    "what": "new beat (scene): OTS · over Mas onto his laptop, the bullpen dark, 3 AM (bullpen, bullpen-night, mas)"
+   },
+   {
+    "beat": "v35-12.01",
+    "what": "on-screen add: \"CHATGTP IS AT CAPACITY RIGHT NOW\" (0.2-1.7)"
+   },
+   {
+    "beat": "v35-12.01",
+    "what": "on-screen add: \"asked it how to say sorry to my sister. it helped.\" (1.7-None)"
+   },
+   {
+    "beat": "v35-12.01",
+    "what": "on-screen add: \"CHATGTP · USERS:\""
+   },
+   {
+    "beat": "v35-12.01",
+    "what": "sequence marker 8A: the bullpen, dark: his laptop"
+   },
+   {
+    "beat": "v35-12.02",
+    "what": "new beat (scene): MCU · Mas, the laptop's light (bullpen, bullpen-night, mas)"
+   },
+   {
+    "beat": "v35-12.02",
+    "what": "new line v35-vo-01 (mas, 2.61 s, new take) at start+0.8"
+   },
+   {
+    "beat": "v35-12.02",
+    "what": "the plan's 4.31 s: its tail 0.90 s after the last line"
+   },
+   {
+    "beat": "v35-12.03",
+    "what": "new beat (scene): INSERT · the corner counter (match) (screen, bullpen-night, no figures)"
+   },
+   {
+    "beat": "v35-12.03",
+    "what": "on-screen add: \"PLAYED AGAINST ITSELF TODAY: 180 YEARS\" (0.3-None)"
+   },
+   {
+    "beat": "v35-13.01",
+    "what": "new beat (flashback): WIDE · NopeAI's first office, night: the wall of monitors (office, office_night, mas, alyi, gerg)"
+   },
+   {
+    "beat": "v35-13.01",
+    "what": "on-screen add: \"RAIL: JUN 2018\""
+   },
+   {
+    "beat": "v35-13.01",
+    "what": "on-screen add: \"INVIDIA\""
+   },
+   {
+    "beat": "v35-13.01",
+    "what": "on-screen add: \"ATOD\""
+   },
+   {
+    "beat": "v35-13.01",
+    "what": "sequence marker 8B: NopeAI's first office, night (a memory)"
+   },
+   {
+    "beat": "v35-13.02",
+    "what": "new beat (flashback): 2S · Mas and Alyi at the wall, the arena's light on them (held) (office, office_night, mas, alyi)"
+   },
+   {
+    "beat": "v35-13.02",
+    "what": "new line v35-a1-0001 (alyi, 3.38 s, new take) at start+0.6"
+   },
+   {
+    "beat": "v35-13.02",
+    "what": "new line v35-a1-0002 (mas, 3.10 s, new take) after v35-a1-0001 +0.6"
+   },
+   {
+    "beat": "v35-13.02",
+    "what": "new line v35-a1-0003 (alyi, 3.06 s, new take) after v35-a1-0002 +0.6"
+   },
+   {
+    "beat": "v35-13.02",
+    "what": "new line v35-a1-0004 (mas, 1.11 s, new take) after v35-a1-0003 +0.6"
+   },
+   {
+    "beat": "v35-13.02",
+    "what": "the plan's 13.55 s: its tail 0.50 s after the last line"
+   },
+   {
+    "beat": "v35-13.03",
+    "what": "new beat (flashback): MCU · Alyi, lit by the arena (office, office_night, alyi)"
+   },
+   {
+    "beat": "v35-13.03",
+    "what": "new line v35-a1-0005 (alyi, 4.07 s, new take) at start+0.4"
+   },
+   {
+    "beat": "v35-13.03",
+    "what": "new line v35-a1-0006 (mas, 1.80 s, new take) after v35-a1-0005 +0.6"
+   },
+   {
+    "beat": "v35-13.03",
+    "what": "the plan's 7.37 s: its tail 0.50 s after the last line"
+   },
+   {
+    "beat": "v35-13.04",
+    "what": "new beat (flashback): 2S · Alyi turns to Mas (office, office_night, mas, alyi)"
+   },
+   {
+    "beat": "v35-13.04",
+    "what": "new line v35-a1-0007 (alyi, 4.41 s, new take) at start+0.3"
+   },
+   {
+    "beat": "v35-13.04",
+    "what": "the plan's 6.01 s: its tail 1.30 s after the last line"
+   },
+   {
+    "beat": "v35-13.05",
+    "what": "new beat (flashback): INSERT · the lone desk: the side project (office, office_night, no figures)"
+   },
+   {
+    "beat": "v35-13.05",
+    "what": "on-screen add: \"the cat sat on the the mat of the\""
+   },
+   {
+    "beat": "v35-13.05",
+    "what": "on-screen add: \"text? (side project)\""
+   },
+   {
+    "beat": "v35-13.06",
+    "what": "new beat (flashback): WIDE → MATCH · he walks out with his glass (office, office_night, mas)"
+   },
+   {
+    "beat": "v35-13.06",
+    "what": "sound revolving_door at 1.00 s (from 8.06: the pre-lap moves to the end of the 2018 flashback (the plan's L 0.5 s into the lobby, 9.01))"
+   },
+   {
+    "beat": "9.01",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "9.06",
+    "what": "line e1-a1-9-03 retimed: gap after e1-a1-9-02 0.40 -> 0.25 s"
+   },
+   {
+    "beat": "9.09",
+    "what": "line v31-a1-0005 retimed: gap after e1-a1-9-05 0.60 -> 0.25 s"
+   },
+   {
+    "beat": "9.09",
+    "what": "line e1-a1-9-07 retimed: re-placed at after:v35-a1-0008+0.45"
+   },
+   {
+    "beat": "9.09",
+    "what": "line e1-a1-9-08 retimed: re-placed at after:e1-a1-9-07+0.25"
+   },
+   {
+    "beat": "9.09",
+    "what": "new line v35-a1-0008 (tasya, 2.20 s, new take) after v31-a1-0005 +0.35"
+   },
+   {
+    "beat": "9.10",
+    "what": "on-screen replace: \"TV: MACROSOFT UNVEILS THE NEW GNIB\" -> \"TV: THE NEW GNIB · POWERED BY NOPEAI\""
+   },
+   {
+    "beat": "9.10",
+    "what": "line v32-a1-0005 dropped (\"Elgoog's going to hear about this from a search bo\")"
+   },
+   {
+    "beat": "9.10",
+    "what": "line e1-a1-9-10 retimed: re-placed at after:e1-a1-9-09+0.25"
+   },
+   {
+    "beat": "9.10",
+    "what": "restored line e1-a1-9-09 (gerg, 4.15 s, restored take) at start+2.6"
+   },
+   {
+    "beat": "9.10",
+    "what": "caption: the dropped line's quote -> the restored one's (the plan gives no caption)"
+   },
+   {
+    "beat": "v31-10.02",
+    "what": "line e1-a1-10-01 retimed: gap after e1-a1-10-06 0.60 -> 0.45 s"
+   },
+   {
+    "beat": "v31-10.02",
+    "what": "line e1-a1-10-02 retimed: gap after e1-a1-10-01 0.50 -> 0.25 s"
+   },
+   {
+    "beat": "v31-10.02",
+    "what": "line e1-a1-10-03 retimed: gap after e1-a1-10-02 0.80 -> 0.45 s"
+   },
+   {
+    "beat": "v31-10.04",
+    "what": "sounds_drop \"the Build's chip line J-cut (moves to the vision post's Publish click)\": a J-cut an earlier plan named, which the bed never laid; nothing in the lock to take away (the bed follows the v3.5 J-/L-cuts)"
+   },
+   {
+    "beat": "v31-10.04",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "v35-18.01",
+    "what": "new beat (scene): WIDE · the bullpen window at dusk, the users line (bullpen, bullpen, gerg, rima, alyi, mas)"
+   },
+   {
+    "beat": "v35-18.01",
+    "what": "on-screen add: \"CHATGTP SETS RECORD FOR FASTEST-GROWING USER BASE\""
+   },
+   {
+    "beat": "v35-18.01",
+    "what": "on-screen add: \"PLUS · $20\""
+   },
+   {
+    "beat": "v35-18.01",
+    "what": "sequence marker 10A: the bullpen window"
+   },
+   {
+    "beat": "v35-18.01",
+    "what": "sound marker_write_q at 0.30 s (the plan's)"
+   },
+   {
+    "beat": "v35-18.02",
+    "what": "new beat (scene): 2S → W · the four of them at the window (bullpen, bullpen, mas, rima, gerg, alyi)"
+   },
+   {
+    "beat": "v35-18.02",
+    "what": "new line v35-a1-0009 (rima, 0.88 s, new take) at start+0.5"
+   },
+   {
+    "beat": "v35-18.02",
+    "what": "new line v35-a1-0010 (mas, 1.17 s, reused take e1-a1-5-11) after v35-a1-0009 +0.45"
+   },
+   {
+    "beat": "v35-18.02",
+    "what": "the plan's 5.0 s: its tail 2.00 s after the last line"
+   },
+   {
+    "beat": "v35-18.03",
+    "what": "new beat (scene): WIDE · Mas alone under one lamp (bullpen, bullpen-night, mas)"
+   },
+   {
+    "beat": "v35-19.01",
+    "what": "new beat (scene): INSERT · his hands, the post editor (screen, bullpen-night, mas)"
+   },
+   {
+    "beat": "v35-19.01",
+    "what": "on-screen add: \"RAIL: FEB 24, 2023\""
+   },
+   {
+    "beat": "v35-19.01",
+    "what": "on-screen add: \"Planning for AGI and beyond\" (0.8-None)"
+   },
+   {
+    "beat": "v35-19.01",
+    "what": "sequence marker 10B: his end desk: the vision post"
+   },
+   {
+    "beat": "v35-19.02",
+    "what": "new beat (scene): POV · the post, three passages typed and held (screen, bullpen-night, no figures)"
+   },
+   {
+    "beat": "v35-19.02",
+    "what": "on-screen add: \"Our mission is to ensure that artificial general intelligence—AI syste\" (0.3-6.76)"
+   },
+   {
+    "beat": "v35-19.02",
+    "what": "on-screen add: \"…a gradual transition to a world with AGI is better than a sudden one.\" (6.76-10.22)"
+   },
+   {
+    "beat": "v35-19.02",
+    "what": "on-screen add: \"…perhaps the most important—and hopeful, and scary—project in human hi\" (10.22-None)"
+   },
+   {
+    "beat": "v35-19.03",
+    "what": "new beat (scene): MCU · Mas, the page's light on his face (bullpen, bullpen-night, mas)"
+   },
+   {
+    "beat": "v35-19.03",
+    "what": "new line v35-vo-02 (mas, 1.82 s, new take) at start+1.0"
+   },
+   {
+    "beat": "v35-19.03",
+    "what": "the plan's 4.02 s: its tail 1.20 s after the last line"
+   },
+   {
+    "beat": "v35-19.04",
+    "what": "new beat (scene): POV → MATCH · Publish; a rival answers; the lid closes (screen, bullpen-night, mas)"
+   },
+   {
+    "beat": "v35-19.04",
+    "what": "on-screen add: \"ATEM · A NEW MODEL · FOR RESEARCHERS ONLY\" (1.2-None)"
+   },
+   {
+    "beat": "11.01",
+    "what": "on-screen drop: \"RAIL: MAR 14, 2023\""
+   },
+   {
+    "beat": "11.01",
+    "what": "on-screen drop: \"GTP-4\""
+   },
+   {
+    "beat": "11.01",
+    "what": "on-screen add: \"RAIL: MAR 3, 2023\" (1.617-None)"
+   },
+   {
+    "beat": "11.01",
+    "what": "line e1-a1-11-05 retimed: gap after e1-a1-11-04 0.60 -> 0.45 s"
+   },
+   {
+    "beat": "11.01",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "11.03",
+    "what": "on-screen add: \"RAIL: MAR 14, 2023\""
+   },
+   {
+    "beat": "11.03",
+    "what": "new line v35-a1-0011 (mario, 3.95 s, new take) after e1-a1-11-01 +0.4"
+   },
+   {
+    "beat": "11.04",
+    "what": "on-screen add: \"SIMULATED BAR EXAM · TOP 10%\" (5.2-None)"
+   },
+   {
+    "beat": "11.04",
+    "what": "sounds_drop \"the pause letter's toast pop J-cut (moves to the end of sc 22)\": a J-cut an earlier plan named, which the bed never laid; nothing in the lock to take away (the bed follows the v3.5 J-/L-cuts)"
+   },
+   {
+    "beat": "11.04",
+    "what": "+2.00 s at the tail"
+   },
+   {
+    "beat": "11.04",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "v35-22.01",
+    "what": "new beat (scene): SCR · the bullpen's wall TV (screen, bullpen, no figures)"
+   },
+   {
+    "beat": "v35-22.01",
+    "what": "on-screen add: \"RAIL: MAR 21, 2023\""
+   },
+   {
+    "beat": "v35-22.01",
+    "what": "on-screen add: \"DRAB · JOIN THE WAITLIST\""
+   },
+   {
+    "beat": "v35-22.01",
+    "what": "sequence marker 11A: the bullpen's wall TV: Elgoog's waitlist"
+   },
+   {
+    "beat": "12.01",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "12.02",
+    "what": "on-screen add: \"ZAI CORP. · ARTICLES OF INCORPORATION · NEVADA\" (0.6-None)"
+   },
+   {
+    "beat": "12.02",
+    "what": "on-screen add: \"FILED\" (0.9-None)"
+   },
+   {
+    "beat": "12.02",
+    "what": "sound synth:crackle at 0.8 dropped (sounds_drop: \"the solder's sparks\")"
+   },
+   {
+    "beat": "12.02",
+    "what": "sound synth:crackle at 0.8 dropped (sounds_drop: \"the solder's sparks\")"
+   },
+   {
+    "beat": "12.02",
+    "what": "line v32-a1-0007 dropped (\"You signed it. Now put the iron down.\")"
+   },
+   {
+    "beat": "12.02",
+    "what": "line e1-a1-12-03 retimed: re-placed at after:v35-a1-0012+0.25"
+   },
+   {
+    "beat": "12.02",
+    "what": "new line v35-a1-0012 (oigneb, 2.57 s, new take) after e1-a1-12-01 +2.05"
+   },
+   {
+    "beat": "12.02",
+    "what": "names[]: nole 0.00 -> -0.50 s (the J-cut line leads its plate)"
+   },
+   {
+    "beat": "12.02",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "12.02",
+    "what": "sound rubber_stamp_C at 0.90 s (the plan's)"
+   },
+   {
+    "beat": "12.02",
+    "what": "sound rubber_stamp_C at 2.10 s (the plan's)"
+   }
+  ],
+  "deviations": [],
+  "safety_net": []
+ },
+ "act2": {
+  "timeline": "show/reel/ep01-v35/ep01-v35-act2.json",
+  "source": "show/reel/ep01-v34/ep01-v34-act2.json",
+  "source_story_s": 181.189,
+  "estimate_s": 211.43,
+  "seconds": 211.435,
+  "frames": 5074,
+  "source_frames": 4349,
+  "beats": 49,
+  "lines": 46,
+  "vo": 1,
+  "vo_lines": [
+   "v34-vo-04 (13.13): mine's half written."
+  ],
+  "jcuts": [],
+  "lcuts": [],
+  "median_gap_v34": {
+   "inside_beats_s": 0.5,
+   "inside_beats_n": 17,
+   "segment_s": 0.857,
+   "segment_n": 37,
+   "spoken_only_segment_s": 0.897
+  },
+  "median_gap_v35": {
+   "inside_beats_s": 0.475,
+   "inside_beats_n": 24,
+   "segment_s": 0.7,
+   "segment_n": 45,
+   "spoken_only_segment_s": 0.8
+  },
+  "beat_lengths": [
+   {
+    "beat": "13.12",
+    "action": "keep",
+    "scene": 25,
+    "src_s": 0.625,
+    "est_s": 0.625,
+    "lock_s": 0.625,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "13.13",
+    "action": "keep",
+    "scene": 25,
+    "src_s": 7.18,
+    "est_s": 7.18,
+    "lock_s": 7.18,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "14.01",
+    "action": "keep",
+    "scene": 26,
+    "src_s": 4.0,
+    "est_s": 6.0,
+    "lock_s": 6.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-27.00",
+    "action": "new",
+    "scene": 27,
+    "src_s": null,
+    "est_s": 3.8,
+    "lock_s": 3.8,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "15.05",
+    "action": "keep",
+    "scene": 27,
+    "src_s": 7.083,
+    "est_s": 6.88,
+    "lock_s": 6.883,
+    "diff_s": 0.003
+   },
+   {
+    "beat": "15.06",
+    "action": "keep",
+    "scene": 27,
+    "src_s": 6.625,
+    "est_s": 6.625,
+    "lock_s": 6.625,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "15.07",
+    "action": "keep",
+    "scene": 27,
+    "src_s": 6.122,
+    "est_s": 6.122,
+    "lock_s": 6.122,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "15.16",
+    "action": "keep",
+    "scene": 27,
+    "src_s": 2.792,
+    "est_s": 2.792,
+    "lock_s": 2.792,
+    "diff_s": -0.0
+   },
+   {
+    "beat": "15.11",
+    "action": "keep",
+    "scene": 27,
+    "src_s": 8.405,
+    "est_s": 7.9,
+    "lock_s": 7.905,
+    "diff_s": 0.005
+   },
+   {
+    "beat": "15.13",
+    "action": "keep",
+    "scene": 27,
+    "src_s": 3.5,
+    "est_s": 4.22,
+    "lock_s": 4.22,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "15.14",
+    "action": "keep",
+    "scene": 27,
+    "src_s": 6.3,
+    "est_s": 6.3,
+    "lock_s": 6.3,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-28.01",
+    "action": "new",
+    "scene": 28,
+    "src_s": null,
+    "est_s": 2.3,
+    "lock_s": 2.3,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-28.02",
+    "action": "new",
+    "scene": 28,
+    "src_s": null,
+    "est_s": 13.8,
+    "lock_s": 13.8,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-28.03",
+    "action": "new",
+    "scene": 28,
+    "src_s": null,
+    "est_s": 4.43,
+    "lock_s": 4.43,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-28.04",
+    "action": "new",
+    "scene": 28,
+    "src_s": null,
+    "est_s": 2.8,
+    "lock_s": 2.8,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-28.05",
+    "action": "new",
+    "scene": 28,
+    "src_s": null,
+    "est_s": 2.5,
+    "lock_s": 2.5,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-29.01",
+    "action": "new",
+    "scene": 29,
+    "src_s": null,
+    "est_s": 4.0,
+    "lock_s": 4.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-29.02",
+    "action": "new",
+    "scene": 29,
+    "src_s": null,
+    "est_s": 4.91,
+    "lock_s": 4.91,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-29.03",
+    "action": "new",
+    "scene": 29,
+    "src_s": null,
+    "est_s": 2.8,
+    "lock_s": 2.8,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-29.04",
+    "action": "new",
+    "scene": 29,
+    "src_s": null,
+    "est_s": 3.0,
+    "lock_s": 3.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-29.05",
+    "action": "new",
+    "scene": 29,
+    "src_s": null,
+    "est_s": 1.4,
+    "lock_s": 1.4,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "17.01",
+    "action": "keep",
+    "scene": 30,
+    "src_s": 6.0,
+    "est_s": 6.5,
+    "lock_s": 6.5,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "17.10",
+    "action": "keep",
+    "scene": "30A",
+    "src_s": 3.0,
+    "est_s": 3.0,
+    "lock_s": 3.0,
+    "diff_s": 0.0
+   }
+  ],
+  "tempo": [
+   {
+    "beat": "15.05",
+    "line": "e1-a2-15-05",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "15.11",
+    "line": "e1-a2-15-11",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   },
+   {
+    "beat": "15.11",
+    "line": "e1-a2-15-12",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "v35-28.02",
+    "line": "v35-a2-0003",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   },
+   {
+    "beat": "v35-28.02",
+    "line": "v35-a2-0004",
+    "plan_s": 0.8,
+    "lock_s": 0.8,
+    "ok": true
+   },
+   {
+    "beat": "v35-28.02",
+    "line": "v35-a2-0005",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   },
+   {
+    "beat": "v35-28.02",
+    "line": "v35-a2-0006",
+    "plan_s": 0.8,
+    "lock_s": 0.8,
+    "ok": true
+   },
+   {
+    "beat": "v35-28.02",
+    "line": "v35-a2-0007",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   },
+   {
+    "beat": "v35-28.03",
+    "line": "v35-a2-0009",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   },
+   {
+    "beat": "v35-28.03",
+    "line": "v35-a2-0010",
+    "plan_s": 0.5,
+    "lock_s": 0.5,
+    "ok": true
+   }
+  ],
+  "check_failures": [],
+  "edits": [
+   {
+    "beat": "13.12",
+    "what": "on-screen add: \"DEEPFAKES OF ME: SEEN 0\" restored from the v3.3 lock (0.0-None s)"
+   },
+   {
+    "beat": "13.13",
+    "what": "on-screen add: \"DEEPFAKES OF ME: SEEN 0\" restored from the v3.3 lock (0.0-1.9 s)"
+   },
+   {
+    "beat": "14.01",
+    "what": "on-screen add: \"SENATE JUDICIARY · MAY 16 · TESTIFY\" (1.6-None)"
+   },
+   {
+    "beat": "14.01",
+    "what": "on-screen add: \"PLEASE REG—\" (3.4-None)"
+   },
+   {
+    "beat": "14.01",
+    "what": "+2.00 s at the tail"
+   },
+   {
+    "beat": "14.01",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "14.01",
+    "what": "cue: \"(the anchor's too-smooth murmur, no word…\" -> \"(the reminder's slide), then the gavel's…\" (the v3.5 picture)"
+   },
+   {
+    "beat": "14.06",
+    "what": "cut: 1.33 s (The cloned voice over black is cut (the Senate's fake, SN 00000).)"
+   },
+   {
+    "beat": "15.01",
+    "what": "cut: 4.00 s (The voice finds a mouth: the clone, cut.)"
+   },
+   {
+    "beat": "15.02",
+    "what": "cut: 5.18 s (\"That voice was not mine. The words were not mine.\" is cut with the clone. The hearing roo)"
+   },
+   {
+    "beat": "15.03",
+    "what": "cut: 2.50 s (The chairman and the clone: cut.)"
+   },
+   {
+    "beat": "v35-27.00",
+    "what": "new beat (scene): HIGH → WIDE · the witness table, then the hearing room (senate, senate, mas, sucram, lahtnemulb, gallery)"
+   },
+   {
+    "beat": "v35-27.00",
+    "what": "on-screen add: \"RAIL: MAY 16, 2023 · SENATE JUDICIARY\""
+   },
+   {
+    "beat": "v35-27.00",
+    "what": "sequence marker 15 moved here from a cut beat"
+   },
+   {
+    "beat": "v35-27.00",
+    "what": "sound landing_thunk at 0.00 s (the plan's)"
+   },
+   {
+    "beat": "15.05",
+    "what": "line e1-a2-15-05 retimed: gap after e1-a2-15-04 0.45 -> 0.25 s"
+   },
+   {
+    "beat": "15.06",
+    "what": "on-screen add: \"LAHTNEMULB · CHAIRMAN\""
+   },
+   {
+    "beat": "15.06",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "15.06",
+    "what": "names[]: lahtnemulb at 0.2 s (its plate)"
+   },
+   {
+    "beat": "15.07",
+    "what": "clone removed from chars / names[]: the Senate's cloned voice is cut (SN 00000, notes §3): the clone isn't drawn at the dais"
+   },
+   {
+    "beat": "15.07",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "15.10",
+    "what": "clone removed from chars / names[]: the Senate's cloned voice is cut (SN 00000, notes §3): the clone isn't drawn at the dais"
+   },
+   {
+    "beat": "15.16",
+    "what": "clone removed from chars / names[]: the Senate's cloned voice is cut (SN 00000, notes §3): the clone isn't drawn at the dais"
+   },
+   {
+    "beat": "15.16",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "15.11",
+    "what": "line e1-a2-15-11 retimed: gap after v32-a2-0002 0.60 -> 0.45 s"
+   },
+   {
+    "beat": "15.11",
+    "what": "line e1-a2-15-12 retimed: gap after e1-a2-15-11 0.60 -> 0.25 s"
+   },
+   {
+    "beat": "15.13",
+    "what": "line e1-a2-15-13 dropped (\"Health insurance.\")"
+   },
+   {
+    "beat": "15.13",
+    "what": "new line v35-a2-0001 (mas, 2.22 s, new take) at start+1.0"
+   },
+   {
+    "beat": "15.13",
+    "what": "every line replaced: the beat keeps the plan's 4.22 s (computed 3.82 s)"
+   },
+   {
+    "beat": "15.13",
+    "what": "clone removed from chars / names[]: the Senate's cloned voice is cut (SN 00000, notes §3): the clone isn't drawn at the dais"
+   },
+   {
+    "beat": "15.13",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "15.13",
+    "what": "sound synth:gasp 0.45 -> 3.32 s (the plan's)"
+   },
+   {
+    "beat": "15.14",
+    "what": "sounds_drop \"the tour's first stamp thunk (moves to the gavel at the end of sc 28)\": a J-cut an earlier plan named, which the bed never laid; nothing in the lock to take away (the bed follows the v3.5 J-/L-cuts)"
+   },
+   {
+    "beat": "15.14",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "v35-28.01",
+    "what": "new beat (flashback): INSERT → MATCH · the hand, the marker (office, office, mas)"
+   },
+   {
+    "beat": "v35-28.01",
+    "what": "on-screen add: \"RAIL: MAR 2019\""
+   },
+   {
+    "beat": "v35-28.01",
+    "what": "sequence marker 15A: NopeAI's first office, by day (a memory)"
+   },
+   {
+    "beat": "v35-28.02",
+    "what": "new beat (flashback): W → 2S · the whiteboard (held) (office, office, mas, gerg, alyi)"
+   },
+   {
+    "beat": "v35-28.02",
+    "what": "on-screen add: \"NONPROFIT · THE BOARD\""
+   },
+   {
+    "beat": "v35-28.02",
+    "what": "on-screen add: \"CAPPED PROFIT\" (line:v35-a2-0003+0.2-None)"
+   },
+   {
+    "beat": "v35-28.02",
+    "what": "on-screen add: \"100x\" (line:v35-a2-0005+0.1-None)"
+   },
+   {
+    "beat": "v35-28.02",
+    "what": "new line v35-a2-0002 (gerg, 3.15 s, new take) at start+0.4"
+   },
+   {
+    "beat": "v35-28.02",
+    "what": "new line v35-a2-0003 (mas, 2.16 s, new take) after v35-a2-0002 +0.45"
+   },
+   {
+    "beat": "v35-28.02",
+    "what": "new line v35-a2-0004 (alyi, 1.04 s, new take) after v35-a2-0003 +0.8"
+   },
+   {
+    "beat": "v35-28.02",
+    "what": "new line v35-a2-0005 (mas, 1.22 s, new take) after v35-a2-0004 +0.45"
+   },
+   {
+    "beat": "v35-28.02",
+    "what": "new line v35-a2-0006 (alyi, 1.48 s, new take) after v35-a2-0005 +0.8"
+   },
+   {
+    "beat": "v35-28.02",
+    "what": "new line v35-a2-0007 (mas, 0.80 s, new take) after v35-a2-0006 +0.45"
+   },
+   {
+    "beat": "v35-28.02",
+    "what": "the plan's 13.8 s: its tail 0.60 s after the last line"
+   },
+   {
+    "beat": "v35-28.03",
+    "what": "new beat (flashback): 2S · Mada at the table; the Quiet Vote's chair turned away (office, office, mas, mada, quiet-vote)"
+   },
+   {
+    "beat": "v35-28.03",
+    "what": "on-screen add: \"CEO · EQUITY: 0\" (line:v35-a2-0009+0.0-None)"
+   },
+   {
+    "beat": "v35-28.03",
+    "what": "new line v35-a2-0008 (mada, 0.72 s, new take) at start+0.6"
+   },
+   {
+    "beat": "v35-28.03",
+    "what": "new line v35-a2-0009 (mas, 0.74 s, new take) after v35-a2-0008 +0.45"
+   },
+   {
+    "beat": "v35-28.03",
+    "what": "new line v35-a2-0010 (mada, 0.82 s, new take) after v35-a2-0009 +0.5"
+   },
+   {
+    "beat": "v35-28.03",
+    "what": "the plan's 4.43 s: its tail 0.60 s after the last line"
+   },
+   {
+    "beat": "v35-28.04",
+    "what": "new beat (flashback): INSERT · under the door (office, office, no figures)"
+   },
+   {
+    "beat": "v35-28.04",
+    "what": "on-screen add: \"MACROSOFT · $1,000,000,000\""
+   },
+   {
+    "beat": "v35-28.04",
+    "what": "on-screen add: \"JUL 2019\""
+   },
+   {
+    "beat": "v35-28.05",
+    "what": "new beat (scene): WIDE · the dais, nothing to write (senate, senate, lahtnemulb, gallery)"
+   },
+   {
+    "beat": "v35-28.05",
+    "what": "sequence marker the hearing: Senate Judiciary: the hearing room"
+   },
+   {
+    "beat": "v35-28.05",
+    "what": "sound landing_thunk at 1.90 s (the plan's)"
+   },
+   {
+    "beat": "16.01",
+    "what": "cut: 5.00 s (The tour poster is rebuilt as sc 29 (v35-29.01–05): the stamps, the lectern, NOTERB's post)"
+   },
+   {
+    "beat": "v35-29.01",
+    "what": "new beat (montage): INSERT · his passport, the stamps; hands under flags (void, none, mas)"
+   },
+   {
+    "beat": "v35-29.01",
+    "what": "on-screen add: \"RIO DE JANEIRO\" (0.3-None)"
+   },
+   {
+    "beat": "v35-29.01",
+    "what": "on-screen add: \"LAGOS\" (0.8-None)"
+   },
+   {
+    "beat": "v35-29.01",
+    "what": "on-screen add: \"MADRID\" (1.3-None)"
+   },
+   {
+    "beat": "v35-29.01",
+    "what": "on-screen add: \"WARSAW\" (1.8-None)"
+   },
+   {
+    "beat": "v35-29.01",
+    "what": "on-screen add: \"PARIS\" (2.3-None)"
+   },
+   {
+    "beat": "v35-29.01",
+    "what": "on-screen add: \"LONDON\" (2.8-None)"
+   },
+   {
+    "beat": "v35-29.01",
+    "what": "on-screen add: \"MUNICH\" (3.3-None)"
+   },
+   {
+    "beat": "v35-29.01",
+    "what": "sequence marker 16 moved here from a cut beat"
+   },
+   {
+    "beat": "v35-29.01",
+    "what": "sequence marker 16: place \"the regulate-me tour: the stamps, the lectern, the posts\", time \"May 18 - 26, 2023\""
+   },
+   {
+    "beat": "v35-29.01",
+    "what": "sound rubber_stamp_C at 0.30 s (the plan's)"
+   },
+   {
+    "beat": "v35-29.01",
+    "what": "sound rubber_stamp_C at 0.80 s (the plan's)"
+   },
+   {
+    "beat": "v35-29.01",
+    "what": "sound rubber_stamp_C at 1.30 s (the plan's)"
+   },
+   {
+    "beat": "v35-29.01",
+    "what": "sound rubber_stamp_C at 1.80 s (the plan's)"
+   },
+   {
+    "beat": "v35-29.01",
+    "what": "sound rubber_stamp_C at 2.30 s (the plan's)"
+   },
+   {
+    "beat": "v35-29.01",
+    "what": "sound rubber_stamp_C at 2.80 s (the plan's)"
+   },
+   {
+    "beat": "v35-29.01",
+    "what": "sound rubber_stamp_C at 3.30 s (the plan's)"
+   },
+   {
+    "beat": "v35-29.02",
+    "what": "new beat (scene): M · a lectern in a London hall (stage, none, mas)"
+   },
+   {
+    "beat": "v35-29.02",
+    "what": "on-screen add: \"RAIL: MAY 24, 2023 · LONDON\""
+   },
+   {
+    "beat": "v35-29.02",
+    "what": "new line v35-a2-0011 (mas, 4.11 s, new take) at start+0.4"
+   },
+   {
+    "beat": "v35-29.02",
+    "what": "the plan's 4.91 s: its tail 0.40 s after the last line"
+   },
+   {
+    "beat": "v35-29.03",
+    "what": "new beat (montage): POV · his phone: NOTERB's post (screen, phone, no figures)"
+   },
+   {
+    "beat": "v35-29.03",
+    "what": "on-screen add: \"NOTERB\""
+   },
+   {
+    "beat": "v35-29.03",
+    "what": "on-screen add: \"There is no point in attempting blackmail…\""
+   },
+   {
+    "beat": "v35-29.03",
+    "what": "names[]: noterb at 0.2 s (its plate)"
+   },
+   {
+    "beat": "v35-29.04",
+    "what": "new beat (montage): INSERT · his thumb, his post (screen, phone, mas)"
+   },
+   {
+    "beat": "v35-29.04",
+    "what": "on-screen add: \"RAIL: MAY 26, 2023\""
+   },
+   {
+    "beat": "v35-29.04",
+    "what": "on-screen add: \"…we are excited to continue to operate here and of course have no plan\""
+   },
+   {
+    "beat": "v35-29.05",
+    "what": "new beat (montage): INSERT → MATCH · his pen, a guest book (void, none, mas)"
+   },
+   {
+    "beat": "17.01",
+    "what": "on-screen add: \"MAS MANALT · MARIO · SIMED · NOTNIH · OIGNEB\" (1.56-None)"
+   },
+   {
+    "beat": "17.01",
+    "what": "on-screen add: \"+ HUNDREDS MORE\" (3.4-None)"
+   },
+   {
+    "beat": "17.01",
+    "what": "+0.50 s at the tail"
+   },
+   {
+    "beat": "17.01",
+    "what": "frame from the plan"
+   },
+   {
+    "beat": "17.01",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "17.10",
+    "what": "caption from the plan"
+   }
+  ],
+  "deviations": [],
+  "safety_net": []
+ },
+ "act3": {
+  "timeline": "show/reel/ep01-v35/ep01-v35-act3.json",
+  "source": "show/reel/ep01-v34/ep01-v34-act3.json",
+  "source_story_s": 125.304,
+  "estimate_s": 139.12,
+  "seconds": 139.119,
+  "frames": 3339,
+  "source_frames": 3007,
+  "beats": 30,
+  "lines": 24,
+  "vo": 3,
+  "vo_lines": [
+   "v34-vo-05 (18.02): my other company. for when it gets harder to tell.",
+   "v34-vo-06 (22.01): a year ago, forty users and a nice thread.",
+   "v3-vo-16 (22.02): thrilled is too much. enthusiastic is a lot."
+  ],
+  "jcuts": [],
+  "lcuts": [],
+  "median_gap_v34": {
+   "inside_beats_s": 0.525,
+   "inside_beats_n": 10,
+   "segment_s": 1.15,
+   "segment_n": 20,
+   "spoken_only_segment_s": 1.2
+  },
+  "median_gap_v35": {
+   "inside_beats_s": 0.45,
+   "inside_beats_n": 11,
+   "segment_s": 1.1,
+   "segment_n": 23,
+   "spoken_only_segment_s": 1.15
+  },
+  "beat_lengths": [
+   {
+    "beat": "20.06",
+    "action": "keep",
+    "scene": 33,
+    "src_s": 12.48,
+    "est_s": 11.93,
+    "lock_s": 11.93,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "21.02",
+    "action": "keep",
+    "scene": 35,
+    "src_s": 8.008,
+    "est_s": 10.6,
+    "lock_s": 10.598,
+    "diff_s": -0.002
+   },
+   {
+    "beat": "21.03",
+    "action": "new",
+    "scene": 35,
+    "src_s": null,
+    "est_s": 4.38,
+    "lock_s": 4.375,
+    "diff_s": -0.005
+   },
+   {
+    "beat": "21.04",
+    "action": "new",
+    "scene": 35,
+    "src_s": null,
+    "est_s": 4.4,
+    "lock_s": 4.4,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "21.05",
+    "action": "keep",
+    "scene": 35,
+    "src_s": 2.3,
+    "est_s": 2.3,
+    "lock_s": 2.3,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v32-21.06",
+    "action": "keep",
+    "scene": 35,
+    "src_s": 2.0,
+    "est_s": 2.0,
+    "lock_s": 2.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "22.01",
+    "action": "keep",
+    "scene": 36,
+    "src_s": 14.323,
+    "est_s": 17.32,
+    "lock_s": 17.323,
+    "diff_s": 0.003
+   }
+  ],
+  "tempo": [
+   {
+    "beat": "20.06",
+    "line": "e1-a3-20-06",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   },
+   {
+    "beat": "20.06",
+    "line": "e1-a3-20-08",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   }
+  ],
+  "check_failures": [],
+  "edits": [
+   {
+    "beat": "20.06",
+    "what": "line e1-a3-20-06 retimed: gap after v31-a3-0002 0.55 -> 0.45 s"
+   },
+   {
+    "beat": "20.06",
+    "what": "line e1-a3-20-08 retimed: gap after e1-a3-20-07 0.90 -> 0.45 s"
+   },
+   {
+    "beat": "21.02",
+    "what": "restored line e1-a3-21-02 (deepfake, 2.24 s, restored take) after e1-a3-21-01 +0.35"
+   },
+   {
+    "beat": "21.02",
+    "what": "deepfake-2 removed from chars / names[]: the second copy stays un-drawn (notes §3, 21.02: one copy)"
+   },
+   {
+    "beat": "21.02",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "21.02",
+    "what": "cue: \"sfx: two pops (cut paper); the copies:…\" -> \"sfx: one pop (cut paper); the copy:…\" (the v3.5 picture)"
+   },
+   {
+    "beat": "21.02",
+    "what": "sound tower_pop at 7.80 s (the plan's)"
+   },
+   {
+    "beat": "21.03",
+    "what": "chars cut to the plan's (deepfake, nedib): deepfake-2 go"
+   },
+   {
+    "beat": "21.03",
+    "what": "restored from show/reel/ep01-v33/ep01-v33-act3.json#21.03 (4.375 s; 1 line(s) where they were)"
+   },
+   {
+    "beat": "21.03",
+    "what": "on-screen add \"RAIL: OCT 30, 2023\" is already in the beat (kept as it was)"
+   },
+   {
+    "beat": "21.03",
+    "what": "on-screen add \"DEEPFAKES OF ME: SEEN 1\" is already in the beat (kept as it was)"
+   },
+   {
+    "beat": "21.03",
+    "what": "deepfake-2 removed from chars / names[]: the second copy stays un-drawn (notes §3, 21.02: one copy)"
+   },
+   {
+    "beat": "21.03",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "21.03",
+    "what": "sounds: the plan's list replaces the restored beat's (post_click--chip@2.892)"
+   },
+   {
+    "beat": "21.03",
+    "what": "sound post_click--chip at 2.89 s (the plan's)"
+   },
+   {
+    "beat": "21.04",
+    "what": "restored from show/reel/ep01-v33/ep01-v33-act3.json#21.04 (4.400 s; 1 line(s) where they were)"
+   },
+   {
+    "beat": "21.04",
+    "what": "on-screen add \"DEEPFAKES OF ME: SEEN 1\" is already in the beat (kept as it was)"
+   },
+   {
+    "beat": "21.04",
+    "what": "on-screen add \"verified: human\" is already in the beat (kept as it was)"
+   },
+   {
+    "beat": "21.04",
+    "what": "frame from the plan"
+   },
+   {
+    "beat": "21.04",
+    "what": "cue: \"flicks across the three NEDIBs (0.35 / 0…\" -> \"flicks across the two NEDIBs (0.35 / 0.7…\" (the v3.5 picture)"
+   },
+   {
+    "beat": "21.04",
+    "what": "sounds: the plan's list replaces the restored beat's (orb_servo@2.32, orb_servo@2.72, orb_servo@3.12)"
+   },
+   {
+    "beat": "21.04",
+    "what": "sound orb_servo at 2.32 s (the plan's)"
+   },
+   {
+    "beat": "21.04",
+    "what": "sound orb_servo at 2.72 s (the plan's)"
+   },
+   {
+    "beat": "21.05",
+    "what": "deepfake-2 removed from chars / names[]: the second copy stays un-drawn (notes §3, 21.02: one copy)"
+   },
+   {
+    "beat": "21.05",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "21.05",
+    "what": "cue: \"the copies clap, and keep clapping…\" -> \"the copy claps, and keeps clapping…\" (the v3.5 picture)"
+   },
+   {
+    "beat": "v32-21.06",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "22.01",
+    "what": "line v34-vo-06 retimed: head 1.80 -> 4.80 s (start+4.8)"
+   },
+   {
+    "beat": "22.01",
+    "what": "kept at the source's times (the V.O. now waits for the counter to land (4.37 s) and be read: the rail, the counter, the applause, the odometer and its landing stay at the stage's opening): RAIL: NOV 6, 2023 · DEVDAY 4.12->1.12, 100,000,000 / WEEK 4.92->1.92, synth:applause 4.02->1.02, odometer_ratchet 4.82->1.82, landing_thunk 7.37->4.37"
+   },
+   {
+    "beat": "22.01",
+    "what": "cue: \"the copies' clap carried over…\" -> \"the copy's clap carried over…\" (the v3.5 picture)"
+   }
+  ],
+  "deviations": [],
+  "safety_net": []
+ },
+ "act4": {
+  "timeline": "show/reel/ep01-v35/ep01-v35-act4.json",
+  "source": "show/reel/ep01-v34/ep01-v34-act4.json",
+  "source_story_s": 507.792,
+  "estimate_s": 482.32,
+  "seconds": 483.316,
+  "frames": 11600,
+  "source_frames": 12187,
+  "beats": 84,
+  "lines": 99,
+  "vo": 5,
+  "vo_lines": [
+   "v34-vo-07 (S1.02): gerg's not on it. probably the budget. good. i'll ask for more compute.",
+   "v35-vo-03 (v35-41.01): the budget. i said the budget.",
+   "v35-vo-04 (v35-41.04): gerg. tasya. the money. the money. the money.",
+   "a5-26a-01 (S2.01): i don't keep score.",
+   "v34-vo-11 (S8.04): they had four votes. i had the landlord. the money. gerg."
+  ],
+  "jcuts": [
+   "v35-a4-0004 (v35-41.03, -0.30)",
+   "v35-a4-0007 (v35-41.04, -0.30)",
+   "a5-29-20 (S5.11, -0.80)",
+   "a5-31-04 (S8.08, -1.00)"
+  ],
+  "lcuts": [
+   "v3-a4-0001 (S4.13)",
+   "v35-a4-0008 (S7.07)",
+   "a5-31-04 (S8.08)"
+  ],
+  "median_gap_v34": {
+   "inside_beats_s": 0.55,
+   "inside_beats_n": 52,
+   "segment_s": 0.899,
+   "segment_n": 97,
+   "spoken_only_segment_s": 0.806
+  },
+  "median_gap_v35": {
+   "inside_beats_s": 0.4,
+   "inside_beats_n": 53,
+   "segment_s": 0.75,
+   "segment_n": 98,
+   "spoken_only_segment_s": 0.7
+  },
+  "beat_lengths": [
+   {
+    "beat": "v32-S1.13",
+    "action": "keep",
+    "scene": 40,
+    "src_s": 5.0,
+    "est_s": 8.0,
+    "lock_s": 8.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-41.01",
+    "action": "new",
+    "scene": 41,
+    "src_s": null,
+    "est_s": 2.91,
+    "lock_s": 2.91,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-41.02",
+    "action": "new",
+    "scene": 41,
+    "src_s": null,
+    "est_s": 6.12,
+    "lock_s": 6.12,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-41.03",
+    "action": "new",
+    "scene": 41,
+    "src_s": null,
+    "est_s": 6.75,
+    "lock_s": 6.75,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-41.04",
+    "action": "new",
+    "scene": 41,
+    "src_s": null,
+    "est_s": 4.02,
+    "lock_s": 4.02,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-41.05",
+    "action": "new",
+    "scene": 41,
+    "src_s": null,
+    "est_s": 2.6,
+    "lock_s": 2.6,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-41.06",
+    "action": "new",
+    "scene": 41,
+    "src_s": null,
+    "est_s": 1.6,
+    "lock_s": 1.6,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-42.01",
+    "action": "new",
+    "scene": 42,
+    "src_s": null,
+    "est_s": 3.0,
+    "lock_s": 3.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "S2.01",
+    "action": "keep",
+    "scene": 43,
+    "src_s": 4.125,
+    "est_s": 4.125,
+    "lock_s": 4.125,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "S2.02",
+    "action": "keep",
+    "scene": 43,
+    "src_s": 2.6,
+    "est_s": 2.0,
+    "lock_s": 2.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-43.01",
+    "action": "new",
+    "scene": 43,
+    "src_s": null,
+    "est_s": 3.5,
+    "lock_s": 3.5,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-43.02",
+    "action": "new",
+    "scene": 43,
+    "src_s": null,
+    "est_s": 2.5,
+    "lock_s": 2.5,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "S2.05",
+    "action": "keep",
+    "scene": 43,
+    "src_s": 2.5,
+    "est_s": 3.0,
+    "lock_s": 3.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v31-S3.00p",
+    "action": "keep",
+    "scene": 44,
+    "src_s": 4.6,
+    "est_s": 5.6,
+    "lock_s": 5.6,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "S1.03",
+    "action": "keep",
+    "scene": 44,
+    "src_s": 11.75,
+    "est_s": 9.3,
+    "lock_s": 9.3,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "S3.00a",
+    "action": "keep",
+    "scene": 45,
+    "src_s": 15.2,
+    "est_s": 14.2,
+    "lock_s": 15.2,
+    "diff_s": 1.0
+   },
+   {
+    "beat": "S3.01",
+    "action": "keep",
+    "scene": 45,
+    "src_s": 4.0,
+    "est_s": 2.6,
+    "lock_s": 2.6,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-45.01",
+    "action": "new",
+    "scene": 45,
+    "src_s": null,
+    "est_s": 1.2,
+    "lock_s": 1.2,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "S3.03",
+    "action": "keep",
+    "scene": 45,
+    "src_s": 9.0,
+    "est_s": 5.5,
+    "lock_s": 5.5,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "S3.04",
+    "action": "keep",
+    "scene": 46,
+    "src_s": 10.83,
+    "est_s": 9.88,
+    "lock_s": 9.88,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "S3.04b",
+    "action": "keep",
+    "scene": 46,
+    "src_s": 3.263,
+    "est_s": 3.01,
+    "lock_s": 3.013,
+    "diff_s": 0.003
+   },
+   {
+    "beat": "S3.06",
+    "action": "keep",
+    "scene": 46,
+    "src_s": 2.358,
+    "est_s": 3.96,
+    "lock_s": 3.958,
+    "diff_s": -0.002
+   },
+   {
+    "beat": "S3.05",
+    "action": "keep",
+    "scene": 46,
+    "src_s": 10.1,
+    "est_s": 5.5,
+    "lock_s": 5.5,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "S4.02",
+    "action": "keep",
+    "scene": 47,
+    "src_s": 17.4,
+    "est_s": 9.0,
+    "lock_s": 9.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "S4.08",
+    "action": "keep",
+    "scene": 47,
+    "src_s": 18.792,
+    "est_s": 17.44,
+    "lock_s": 17.44,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "S4.09",
+    "action": "keep",
+    "scene": 49,
+    "src_s": 11.337,
+    "est_s": 10.24,
+    "lock_s": 10.237,
+    "diff_s": -0.003
+   },
+   {
+    "beat": "S4.10b",
+    "action": "keep",
+    "scene": 49,
+    "src_s": 15.2,
+    "est_s": 14.05,
+    "lock_s": 14.05,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "S4.11",
+    "action": "keep",
+    "scene": 49,
+    "src_s": 1.995,
+    "est_s": 1.995,
+    "lock_s": 1.995,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "S4.13",
+    "action": "keep",
+    "scene": 49,
+    "src_s": 5.7,
+    "est_s": 6.25,
+    "lock_s": 6.25,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "S4.13d",
+    "action": "keep",
+    "scene": 49,
+    "src_s": 7.417,
+    "est_s": 8.6,
+    "lock_s": 8.6,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "S4.07",
+    "action": "keep",
+    "scene": 49,
+    "src_s": 5.0,
+    "est_s": 3.0,
+    "lock_s": 3.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-49A.01",
+    "action": "new",
+    "scene": "49A",
+    "src_s": null,
+    "est_s": 5.0,
+    "lock_s": 5.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "S5.03",
+    "action": "keep",
+    "scene": 50,
+    "src_s": 5.85,
+    "est_s": 2.5,
+    "lock_s": 2.5,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "S5.02",
+    "action": "keep",
+    "scene": 50,
+    "src_s": 4.5,
+    "est_s": 3.0,
+    "lock_s": 3.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "S5.09",
+    "action": "keep",
+    "scene": 50,
+    "src_s": 14.063,
+    "est_s": 12.33,
+    "lock_s": 12.333,
+    "diff_s": 0.003
+   },
+   {
+    "beat": "S5.06",
+    "action": "keep",
+    "scene": 50,
+    "src_s": 22.792,
+    "est_s": 22.49,
+    "lock_s": 22.492,
+    "diff_s": 0.002
+   },
+   {
+    "beat": "S5.09-back",
+    "action": "keep",
+    "scene": 50,
+    "src_s": 5.4,
+    "est_s": 5.25,
+    "lock_s": 5.25,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "S5.11",
+    "action": "keep",
+    "scene": 51,
+    "src_s": 15.6,
+    "est_s": 14.85,
+    "lock_s": 14.85,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "S6.01",
+    "action": "keep",
+    "scene": 52,
+    "src_s": 4.5,
+    "est_s": 2.3,
+    "lock_s": 2.3,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "S6.02",
+    "action": "keep",
+    "scene": 52,
+    "src_s": 1.5,
+    "est_s": 1.0,
+    "lock_s": 1.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "S6.03",
+    "action": "keep",
+    "scene": 52,
+    "src_s": 1.917,
+    "est_s": 1.2,
+    "lock_s": 1.2,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "S6.04",
+    "action": "keep",
+    "scene": 52,
+    "src_s": 1.958,
+    "est_s": 1.6,
+    "lock_s": 1.6,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "S6.06",
+    "action": "keep",
+    "scene": 52,
+    "src_s": 6.25,
+    "est_s": 2.9,
+    "lock_s": 2.9,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "S7.01",
+    "action": "keep",
+    "scene": 53,
+    "src_s": 18.6,
+    "est_s": 20.1,
+    "lock_s": 20.1,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "S7.06",
+    "action": "keep",
+    "scene": 54,
+    "src_s": 4.2,
+    "est_s": 3.4,
+    "lock_s": 3.4,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "S7.06-cont",
+    "action": "keep",
+    "scene": 54,
+    "src_s": 4.917,
+    "est_s": 4.32,
+    "lock_s": 4.317,
+    "diff_s": -0.003
+   },
+   {
+    "beat": "S7.07",
+    "action": "keep",
+    "scene": 54,
+    "src_s": 10.875,
+    "est_s": 8.55,
+    "lock_s": 8.55,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "S7.07-cont",
+    "action": "keep",
+    "scene": 54,
+    "src_s": 17.358,
+    "est_s": 17.11,
+    "lock_s": 17.108,
+    "diff_s": -0.002
+   },
+   {
+    "beat": "S8.06",
+    "action": "keep",
+    "scene": 56,
+    "src_s": 2.792,
+    "est_s": 2.2,
+    "lock_s": 2.2,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "S8.07",
+    "action": "keep",
+    "scene": 56,
+    "src_s": 9.0,
+    "est_s": 6.51,
+    "lock_s": 6.51,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "S8.10",
+    "action": "keep",
+    "scene": 56,
+    "src_s": 5.2,
+    "est_s": 3.8,
+    "lock_s": 3.8,
+    "diff_s": 0.0
+   }
+  ],
+  "tempo": [
+   {
+    "beat": "v35-41.02",
+    "line": "v35-a4-0002",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   },
+   {
+    "beat": "v35-41.02",
+    "line": "v35-a4-0003",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "v35-41.03",
+    "line": "v35-a4-0005",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   },
+   {
+    "beat": "v35-41.03",
+    "line": "v35-a4-0006",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "S3.04",
+    "line": "a5-27-13",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "S3.04",
+    "line": "a5-27-14",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "S3.04",
+    "line": "a5-27-15",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "S3.04b",
+    "line": "v31-a4-0003",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "S4.08",
+    "line": "a5-27-31",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "S4.09",
+    "line": "a5-27-36",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "S4.09",
+    "line": "a5-27-37",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "S4.10b",
+    "line": "a5-27-39",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "S4.10b",
+    "line": "a5-27-40",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "S4.10b",
+    "line": "a5-27-41",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "S5.09",
+    "line": "v31-a4-0007",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "S5.09",
+    "line": "v31-a4-0008",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   },
+   {
+    "beat": "S5.06",
+    "line": "a5-29-10",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   },
+   {
+    "beat": "S5.06",
+    "line": "a5-29-11",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "S5.09-back",
+    "line": "a5-29-17",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "S5.11",
+    "line": "a5-29-21",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   },
+   {
+    "beat": "S5.11",
+    "line": "a5-29-22",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "S5.11",
+    "line": "v31-a4-0013",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "S7.06-cont",
+    "line": "a5-30-09",
+    "plan_s": 1.0,
+    "lock_s": 1.0,
+    "ok": true
+   },
+   {
+    "beat": "S7.07-cont",
+    "line": "a5-30-13",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   },
+   {
+    "beat": "S7.07-cont",
+    "line": "v31-a4-0016",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "S7.07-cont",
+    "line": "a5-30-15",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   },
+   {
+    "beat": "S8.07",
+    "line": "a5-31-03",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   }
+  ],
+  "check_failures": [],
+  "edits": [
+   {
+    "beat": "v32-S1.13",
+    "what": "on-screen add: \"i loved my time at nopeai.\" (0.6-3.2)"
+   },
+   {
+    "beat": "v32-S1.13",
+    "what": "on-screen add: \"1:46 PM\" (6.6-None)"
+   },
+   {
+    "beat": "v32-S1.13",
+    "what": "+3.00 s at 1.6 s: the first sentence typed, deleted letter by letter, typed again, before the post goes up"
+   },
+   {
+    "beat": "v32-S1.13",
+    "what": "\"MAS (post): \"i loved my time at nopeai. …\" at 0.2 -> 3.2 s: the card types from the retyped sentence on and posts on the click (6.6 s); 4.8 s to read, as in v3.4"
+   },
+   {
+    "beat": "v32-S1.13",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "v35-41.01",
+    "what": "new beat (scene): ECU · his phone on the suite desk, lighting and not stopping (call, suite, mas)"
+   },
+   {
+    "beat": "v35-41.01",
+    "what": "on-screen add: \"GERG\" (0.3-None)"
+   },
+   {
+    "beat": "v35-41.01",
+    "what": "on-screen add: \"TASYA · MACROSOFT\" (0.55-None)"
+   },
+   {
+    "beat": "v35-41.01",
+    "what": "on-screen add: \"AUHSOJ\" (0.8-None)"
+   },
+   {
+    "beat": "v35-41.01",
+    "what": "on-screen add: \"THE FIRST CHECK\" (1.05-None)"
+   },
+   {
+    "beat": "v35-41.01",
+    "what": "on-screen add: \"FOUNDER MODE\" (1.3-None)"
+   },
+   {
+    "beat": "v35-41.01",
+    "what": "on-screen add: \"NOR\" (1.55-None)"
+   },
+   {
+    "beat": "v35-41.01",
+    "what": "new line v35-vo-03 (mas, 2.11 s, new take) at start+0.5"
+   },
+   {
+    "beat": "v35-41.01",
+    "what": "the plan's 2.91 s: its tail 0.30 s after the last line"
+   },
+   {
+    "beat": "v35-41.01",
+    "what": "sequence marker S1A: the suite: the war room"
+   },
+   {
+    "beat": "v35-41.01",
+    "what": "names[]: gerg at 0.3 s (its plate)"
+   },
+   {
+    "beat": "v35-41.01",
+    "what": "names[]: tasya at 0.55 s (its plate)"
+   },
+   {
+    "beat": "v35-41.01",
+    "what": "names[]: auhsoj at 0.8 s (its plate)"
+   },
+   {
+    "beat": "v35-41.02",
+    "what": "new beat (scene): 2S (tile) · Mas at the desk, Gerg's call tile (call, suite, mas, gerg)"
+   },
+   {
+    "beat": "v35-41.02",
+    "what": "new line v35-a4-0001 (gerg, 2.86 s, new take) at start+0.3"
+   },
+   {
+    "beat": "v35-41.02",
+    "what": "new line v35-a4-0002 (mas, 1.22 s, new take) after v35-a4-0001 +0.45"
+   },
+   {
+    "beat": "v35-41.02",
+    "what": "new line v35-a4-0003 (gerg, 0.74 s, new take) after v35-a4-0002 +0.25"
+   },
+   {
+    "beat": "v35-41.02",
+    "what": "the plan's 6.12 s: its tail 0.30 s after the last line"
+   },
+   {
+    "beat": "v35-41.03",
+    "what": "new beat (scene): 2S (tile) · Tasya's call tile (call, suite, mas, tasya)"
+   },
+   {
+    "beat": "v35-41.03",
+    "what": "new line v35-a4-0004 (tasya, 3.80 s, new take) at start-0.3"
+   },
+   {
+    "beat": "v35-41.03",
+    "what": "new line v35-a4-0005 (mas, 1.33 s, new take) after v35-a4-0004 +0.45"
+   },
+   {
+    "beat": "v35-41.03",
+    "what": "new line v35-a4-0006 (tasya, 1.22 s, new take) after v35-a4-0005 +0.25"
+   },
+   {
+    "beat": "v35-41.03",
+    "what": "the plan's 6.75 s: its tail 0.00 s after the last line"
+   },
+   {
+    "beat": "v35-41.04",
+    "what": "new beat (scene): QUICK-CUT · the tiles overlap (call, suite, mas)"
+   },
+   {
+    "beat": "v35-41.04",
+    "what": "new line v35-a4-0007 (auhsoj, 1.26 s, new take) at start-0.3"
+   },
+   {
+    "beat": "v35-41.04",
+    "what": "new line v35-vo-04 (mas, 3.42 s, new take) at start+0.4"
+   },
+   {
+    "beat": "v35-41.04",
+    "what": "v35-vo-04 at start+0.4: after v35-a4-0007 (an earlier line), at 0.40 s, over it by 0.56 s (overlap)"
+   },
+   {
+    "beat": "v35-41.04",
+    "what": "the plan's 4.02 s: its tail 0.20 s after the last line"
+   },
+   {
+    "beat": "v35-41.04",
+    "what": "names[]: gerg at 0.43 s (his voice names them)"
+   },
+   {
+    "beat": "v35-41.04",
+    "what": "names[]: tasya at 1.05 s (his voice names them)"
+   },
+   {
+    "beat": "v35-41.05",
+    "what": "new beat (scene): POV · his post, 9:32 PM; the window now night (screen, suite, mas)"
+   },
+   {
+    "beat": "v35-41.05",
+    "what": "on-screen add: \"9:32 PM\""
+   },
+   {
+    "beat": "v35-41.05",
+    "what": "on-screen add: \"if i start going off, the nopeai board should go after me for the full\""
+   },
+   {
+    "beat": "v35-41.06",
+    "what": "new beat (scene): INSERT · the hotel notepad (void, suite, mas)"
+   },
+   {
+    "beat": "v35-41.06",
+    "what": "on-screen add: \"NEW COMPANY\""
+   },
+   {
+    "beat": "v35-41.06",
+    "what": "on-screen add: \"MACROSOFT\""
+   },
+   {
+    "beat": "v35-41.06",
+    "what": "on-screen add: \"BACK\""
+   },
+   {
+    "beat": "v35-42.01",
+    "what": "new beat (scene): INSERT · a small plane's tray, daylight (void, none, mas)"
+   },
+   {
+    "beat": "v35-42.01",
+    "what": "on-screen add: \"RAIL: NOV 18\""
+   },
+   {
+    "beat": "v35-42.01",
+    "what": "on-screen add: \"TERMS\""
+   },
+   {
+    "beat": "v35-42.01",
+    "what": "on-screen add: \"1. GERG\" (1.0-None)"
+   },
+   {
+    "beat": "v35-42.01",
+    "what": "sequence marker S1B: a small plane"
+   },
+   {
+    "beat": "S2.01",
+    "what": "on-screen replace: \"RAIL: NOV 17 · NIGHT\" -> \"RAIL: NOV 18 · NIGHT\""
+   },
+   {
+    "beat": "S2.01",
+    "what": "sequence marker S2: time \"Sat Nov 18 · night\""
+   },
+   {
+    "beat": "S2.01",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S2.02",
+    "what": "2.60 -> 2.00 s, timed items scaled ×0.77"
+   },
+   {
+    "beat": "S2.02",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "v35-43.01",
+    "what": "new beat (flashback): WIDE · TPOOL's office, 240p: the first sheet (office, office, staff)"
+   },
+   {
+    "beat": "v35-43.01",
+    "what": "on-screen add: \"TPOOL\""
+   },
+   {
+    "beat": "v35-43.01",
+    "what": "on-screen add: \"TO THE BOARD\""
+   },
+   {
+    "beat": "v35-43.01",
+    "what": "sequence marker TPOOL: TPOOL (a memory, 240p)"
+   },
+   {
+    "beat": "v35-43.02",
+    "what": "new beat (flashback): WIDE · the same, again: he walks out (office, office, mas, staff)"
+   },
+   {
+    "beat": "v35-43.02",
+    "what": "on-screen add: \"CEO\" (1.0-None)"
+   },
+   {
+    "beat": "S2.05",
+    "what": "+0.50 s at the head (the plan: the beat opens earlier)"
+   },
+   {
+    "beat": "S2.05",
+    "what": "sequence marker the desk: his dark room"
+   },
+   {
+    "beat": "S2.05",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "v31-S3.00p",
+    "what": "on-screen add: \"CHATGTP launched on wednesday. today it crossed 1 million users!\" (0.5-None)"
+   },
+   {
+    "beat": "v31-S3.00p",
+    "what": "on-screen add: \"…frantic corner-cutting…\" (1.2-None)"
+   },
+   {
+    "beat": "v31-S3.00p",
+    "what": "+1.00 s at 1.0 s: the desk's two props read before her line (the plan: legible a beat each; she squares them)"
+   },
+   {
+    "beat": "v31-S3.00p",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S1.03",
+    "what": "line a5-25-01 dropped (\"Three of us stepped down this year.\")"
+   },
+   {
+    "beat": "S1.03",
+    "what": "line a5-25-02 retimed: head 1.40 -> 1.40 s (start+1.4)"
+   },
+   {
+    "beat": "S1.03",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S1.03",
+    "what": "\"DIRE · NOVIHS · DRUH\" until 1.3 -> 2.9: the three walk off before the ring draws round the four (2.92 s); the line they read under is cut"
+   },
+   {
+    "beat": "S3.01",
+    "what": "on-screen drop: \"ALYI removed MAS MANALT from the meeting.\""
+   },
+   {
+    "beat": "S3.01",
+    "what": "trim 4.00 -> 2.60 s: head −0.54, tail −0.86"
+   },
+   {
+    "beat": "S3.01",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "v35-45.01",
+    "what": "new beat (scene): SCR · Alyi's tile: his face holds (call, office, alyi)"
+   },
+   {
+    "beat": "S3.02",
+    "what": "cut: 1.60 s (12A: the overhead of her desk and its tick go; step 4's blank is on the table on Saturday )"
+   },
+   {
+    "beat": "S3.03",
+    "what": "line a5-27-08 dropped (\"Any objections?\")"
+   },
+   {
+    "beat": "S3.03",
+    "what": "no line left: the plan's 5.5 s (head 6.80 + the old tail would be 7.98 s)"
+   },
+   {
+    "beat": "S3.03",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S3.04",
+    "what": "line a5-27-13 retimed: gap after v32-a4-0001 0.50 -> 0.25 s"
+   },
+   {
+    "beat": "S3.04",
+    "what": "line a5-27-14 retimed: gap after a5-27-13 0.50 -> 0.25 s"
+   },
+   {
+    "beat": "S3.04",
+    "what": "line a5-27-15 retimed: gap after a5-27-14 0.70 -> 0.25 s"
+   },
+   {
+    "beat": "S3.04b",
+    "what": "line v31-a4-0003 retimed: gap after a5-27-16 0.50 -> 0.25 s"
+   },
+   {
+    "beat": "S3.06",
+    "what": "line a5-27-18 retimed: head -0.60 -> 1.00 s (start+1.0)"
+   },
+   {
+    "beat": "S3.06",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S3.05",
+    "what": "line a5-27-20 dropped (\"Nobody asked him to go. He'd have kept his job, ju\")"
+   },
+   {
+    "beat": "S3.05",
+    "what": "line a5-27-21 retimed: head 1.62 -> 2.20 s (start+2.2)"
+   },
+   {
+    "beat": "S3.05",
+    "what": "5.97 -> 5.50 s, to the plan's 5.5 s: tail −0.47"
+   },
+   {
+    "beat": "S3.05",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S4.01",
+    "what": "cut: 4.79 s (12A: the eulogy post card and the wall screen go.)"
+   },
+   {
+    "beat": "S4.02",
+    "what": "on-screen add: \"RAIL: NOV 18\""
+   },
+   {
+    "beat": "S4.02",
+    "what": "sound phone_buzz_step_1 at 15.8 dropped: the v3.4 delta's row of phones lighting: the v3.5 caption ends on the first phone going over, and nobody picking it up"
+   },
+   {
+    "beat": "S4.02",
+    "what": "line a5-27-23 dropped (\"What they actually want to know is what happens on\")"
+   },
+   {
+    "beat": "S4.02",
+    "what": "10.74 -> 9.00 s, to the plan's 9.0 s: tail −1.74"
+   },
+   {
+    "beat": "S4.02",
+    "what": "sequence marker S4 moved here from a cut beat"
+   },
+   {
+    "beat": "S4.02",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S4.02",
+    "what": "sound landing_thunk 8.95 -> 8.40 s: the clack: the first phone goes over after Neleh's turn (it ends 7.92 s), and nobody picks it up; 0.6 s held to the cut"
+   },
+   {
+    "beat": "S4.08",
+    "what": "sound RING at 0.2 dropped: the dial tones take the head (the plan: \"four dial tones pre-lapped under the cut\"); one ring stays before Mario picks up"
+   },
+   {
+    "beat": "S4.08",
+    "what": "line a5-27-31 retimed: gap after v31-a4-0017 0.60 -> 0.25 s"
+   },
+   {
+    "beat": "S4.08",
+    "what": "18.44 -> 17.44 s, to the plan's 17.44 s: head −0.50, tail −0.50"
+   },
+   {
+    "beat": "S4.08",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S4.08",
+    "what": "sound DTMF at 0.00 s (the plan's sound note, as a stick SFX)"
+   },
+   {
+    "beat": "S4.09",
+    "what": "line v31-a4-0005 retimed: head 1.20 -> 0.80 s (start+0.8)"
+   },
+   {
+    "beat": "S4.09",
+    "what": "line a5-27-36 retimed: gap after v31-a4-0005 0.70 -> 0.25 s"
+   },
+   {
+    "beat": "S4.09",
+    "what": "line a5-27-37 retimed: gap after a5-27-36 0.50 -> 0.25 s"
+   },
+   {
+    "beat": "S4.10",
+    "what": "cut: 4.30 s (12A: \"the boardroom, now night\" goes; Ttemme's card and CHAT: LIVE plate move to S4.10b's )"
+   },
+   {
+    "beat": "S4.10b",
+    "what": "on-screen add: \"TTEMME / INTERIM CEO, TAKE TWO · CHAT: LIVE\""
+   },
+   {
+    "beat": "S4.10b",
+    "what": "on-screen add: \"RIMA TAMURI · CTO\""
+   },
+   {
+    "beat": "S4.10b",
+    "what": "line a5-27-38 retimed: head 0.80 -> 0.80 s (start+0.8)"
+   },
+   {
+    "beat": "S4.10b",
+    "what": "line a5-27-39 retimed: gap after a5-27-38 0.40 -> 0.25 s"
+   },
+   {
+    "beat": "S4.10b",
+    "what": "line a5-27-40 retimed: gap after a5-27-39 0.60 -> 0.25 s"
+   },
+   {
+    "beat": "S4.10b",
+    "what": "line a5-27-41 retimed: gap after a5-27-40 0.70 -> 0.25 s"
+   },
+   {
+    "beat": "S4.10b",
+    "what": "14.25 -> 14.05 s, to the plan's 14.05 s: tail −0.20"
+   },
+   {
+    "beat": "S4.10b",
+    "what": "sequence marker Sunday night moved here from a cut beat"
+   },
+   {
+    "beat": "S4.10b",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S4.10b",
+    "what": "names[]: ttemme at 0.2 s (its plate)"
+   },
+   {
+    "beat": "S4.11",
+    "what": "on-screen drop: \"LIVE · CHAT:  F  F  F  F\""
+   },
+   {
+    "beat": "S4.11",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S4.13",
+    "what": "on-screen add: \"RAIL: NOV 19 · ~11:53 PM PT\" (0.2-1.9)"
+   },
+   {
+    "beat": "S4.13",
+    "what": "S4.12 merged in: 4 sound(s) at the head, on their own clock (MERGE_HEAD)"
+   },
+   {
+    "beat": "S4.13",
+    "what": "line a5-27-44 retimed: head 1.60 -> 2.40 s (start+2.4)"
+   },
+   {
+    "beat": "S4.13",
+    "what": "line v3-a4-0001 retimed: gap after a5-27-44 0.60 -> 0.35 s"
+   },
+   {
+    "beat": "S4.13",
+    "what": "sequence marker ~11:53 PM from the merged S4.12"
+   },
+   {
+    "beat": "S4.13",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S4.13d",
+    "what": "+1.18 s at the tail"
+   },
+   {
+    "beat": "S4.13d",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S4.13e",
+    "what": "cut: 3.00 s (12A: Tasya's sign goes (the S5.11 door keeps its own).)"
+   },
+   {
+    "beat": "S4.14",
+    "what": "cut: 2.79 s (12A: \"Step four, Mada?\" goes; Neleh's look (S4.07, moved) replaces it.)"
+   },
+   {
+    "beat": "S4.15",
+    "what": "cut: 2.50 s (12A: Mada's held note goes; the bridge is Alyi alone (sc 49A).)"
+   },
+   {
+    "beat": "S4.07",
+    "what": "sound DTMF at 3.4 dropped: the plan: \"No speakerphone, no dial.\" (her look only); the tones pre-lap S4.08 now (NEW_SOUNDS)"
+   },
+   {
+    "beat": "S4.07",
+    "what": "sound DTMF at 3.75 dropped: the plan: \"No speakerphone, no dial.\" (her look only); the tones pre-lap S4.08 now (NEW_SOUNDS)"
+   },
+   {
+    "beat": "S4.07",
+    "what": "sound DTMF at 4.1 dropped: the plan: \"No speakerphone, no dial.\" (her look only); the tones pre-lap S4.08 now (NEW_SOUNDS)"
+   },
+   {
+    "beat": "S4.07",
+    "what": "sound DTMF at 4.45 dropped: the plan: \"No speakerphone, no dial.\" (her look only); the tones pre-lap S4.08 now (NEW_SOUNDS)"
+   },
+   {
+    "beat": "S4.07",
+    "what": "line a5-27-29 dropped (\"Then we'll write step four ourselves.\")"
+   },
+   {
+    "beat": "S4.07",
+    "what": "no line left: the plan's 3.0 s (head 1.30 + the old tail would be 3.40 s)"
+   },
+   {
+    "beat": "S4.07",
+    "what": "moved (after S4.02 (v3.4) -> after S4.13d): it keeps its room (boardroom; before it, boardroom)"
+   },
+   {
+    "beat": "S4.07",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "v35-49A.01",
+    "what": "new beat (scene): WIDE → MCU · Alyi alone in the bullpen at night (bullpen, bullpen-night, alyi)"
+   },
+   {
+    "beat": "v35-49A.01",
+    "what": "on-screen add: \"RAIL: NOV 20, 2023 · ~2:06 AM PT\""
+   },
+   {
+    "beat": "v35-49A.01",
+    "what": "on-screen add: \"RIMA: “NopeAI is nothing without its people”\""
+   },
+   {
+    "beat": "v35-49A.01",
+    "what": "sequence marker S4A: the bullpen at night: Alyi alone"
+   },
+   {
+    "beat": "S5.03",
+    "what": "on-screen add: \"RAIL: NOV 20, 2023 · ~2:06 AM PT\" (0.0-1.6)"
+   },
+   {
+    "beat": "S5.03",
+    "what": "line v3-vo-20 dropped (\"four hundred and six. four hundred and seven. four\")"
+   },
+   {
+    "beat": "S5.03",
+    "what": "no line left: the plan's 2.5 s (head 0.60 + the old tail would be 1.20 s)"
+   },
+   {
+    "beat": "S5.03",
+    "what": "moved (after S5.02 (v3.4) -> after v35-49A.01): it keeps its room (dark; before it, bullpen-night)"
+   },
+   {
+    "beat": "S5.03",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S5.02",
+    "what": "on-screen drop: \"RAIL: NOV 20, 2023 · ~2:06 AM PT\""
+   },
+   {
+    "beat": "S5.02",
+    "what": "4.50 -> 3.00 s, timed items scaled ×0.67"
+   },
+   {
+    "beat": "S5.02",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S5.09",
+    "what": "line v34-vo-09 dropped (\"gerg walked out for me.\")"
+   },
+   {
+    "beat": "S5.09",
+    "what": "line a5-29-03 retimed: head 0.30 -> 0.80 s (start+0.8)"
+   },
+   {
+    "beat": "S5.09",
+    "what": "line v31-a4-0007 retimed: gap after a5-29-04 0.40 -> 0.25 s"
+   },
+   {
+    "beat": "S5.09",
+    "what": "line v31-a4-0008 retimed: gap after v31-a4-0007 0.60 -> 0.45 s"
+   },
+   {
+    "beat": "S5.06",
+    "what": "line a5-29-10 retimed: gap after a5-29-09 0.60 -> 0.45 s"
+   },
+   {
+    "beat": "S5.06",
+    "what": "line a5-29-11 retimed: gap after a5-29-10 0.40 -> 0.25 s"
+   },
+   {
+    "beat": "S5.09-back",
+    "what": "line a5-29-17 retimed: gap after a5-29-16 0.40 -> 0.25 s"
+   },
+   {
+    "beat": "S5.11",
+    "what": "line a5-29-21 retimed: gap after a5-29-20 0.70 -> 0.45 s"
+   },
+   {
+    "beat": "S5.11",
+    "what": "line a5-29-22 retimed: gap after a5-29-21 0.50 -> 0.25 s"
+   },
+   {
+    "beat": "S5.11",
+    "what": "line v31-a4-0013 retimed: gap after v31-a4-0012 0.50 -> 0.25 s"
+   },
+   {
+    "beat": "S6.01",
+    "what": "4.50 -> 2.30 s, timed items scaled ×0.51"
+   },
+   {
+    "beat": "S6.02",
+    "what": "1.50 -> 1.00 s, timed items scaled ×0.67"
+   },
+   {
+    "beat": "S6.03",
+    "what": "1.92 -> 1.20 s, timed items scaled ×0.63"
+   },
+   {
+    "beat": "S6.04",
+    "what": "trim 1.96 -> 1.60 s: head −0.10, tail −0.26"
+   },
+   {
+    "beat": "S6.06",
+    "what": "6.25 -> 2.90 s, timed items scaled ×0.46"
+   },
+   {
+    "beat": "S6.06",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S6.06",
+    "what": "\"MADA · LAST FIRER STANDING\" at 1.995 -> 1.35: the read floor (1.55 s): the label flips 1.55 s before the cut (scaled, it had 0.9 s)"
+   },
+   {
+    "beat": "S6.06",
+    "what": "sound freeze_hit_F 2.00 -> 1.35 s: the dead stop stays on Mada's label (moved for its read floor)"
+   },
+   {
+    "beat": "S7.01",
+    "what": "on-screen replace: \"POST: ALYI: “I deeply regret my participation in t\" -> \"POST: ALYI: “I deeply regret my participation in the board's actions. \""
+   },
+   {
+    "beat": "S7.01",
+    "what": "+1.50 s at 7.245 s: Alyi's post in full, held about 1.5 s longer (the plan)"
+   },
+   {
+    "beat": "S7.01",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S7.06",
+    "what": "4.20 -> 3.40 s, timed items scaled ×0.81"
+   },
+   {
+    "beat": "S7.06-cont",
+    "what": "line a5-30-09 retimed: gap after a5-30-08 1.60 -> 1.00 s"
+   },
+   {
+    "beat": "S7.07",
+    "what": "line v3-a4-0004 dropped (\"Before this goes out, I'm reading it once. We have\")"
+   },
+   {
+    "beat": "S7.07",
+    "what": "new line v35-a4-0008 (terb, 8.27 s, cut from v3-a4-0004) at start+0.8 replacing v3-a4-0004"
+   },
+   {
+    "beat": "S7.07",
+    "what": "every line replaced: the beat keeps the plan's 8.55 s (computed 8.54 s)"
+   },
+   {
+    "beat": "S7.07-cont",
+    "what": "line a5-30-13 retimed: gap after a5-30-12 0.50 -> 0.45 s"
+   },
+   {
+    "beat": "S7.07-cont",
+    "what": "line v31-a4-0016 retimed: gap after v31-a4-0015 0.40 -> 0.25 s"
+   },
+   {
+    "beat": "S7.07-cont",
+    "what": "line a5-30-15 retimed: gap after a5-30-14 0.50 -> 0.45 s"
+   },
+   {
+    "beat": "S8.06",
+    "what": "2.79 -> 2.20 s, timed items scaled ×0.79"
+   },
+   {
+    "beat": "S8.06",
+    "what": "\"RAIL: NOV 22, 2023\" until 1.261 -> 1.4: the read floor (1.2 s; scaled, it had 1.1 s)"
+   },
+   {
+    "beat": "S8.07",
+    "what": "line a5-31-03 retimed: gap after a5-31-02 0.50 -> 0.25 s"
+   },
+   {
+    "beat": "S8.07",
+    "what": "8.75 -> 6.51 s, to the plan's 6.51 s: tail −2.24"
+   },
+   {
+    "beat": "S8.10",
+    "what": "5.20 -> 3.80 s, timed items scaled ×0.73"
+   },
+   {
+    "beat": "S5.03",
+    "what": "sequence marker S5 moved here from S5.02 (the scene now opens here)"
+   },
+   {
+    "beat": "S7.13",
+    "what": "exactly 264 frames (the Runway insert)"
+   }
+  ],
+  "deviations": [
+   {
+    "beat": "S3.00a",
+    "what": "the plan's -1.0 s is \"the join's pre-roll (the 11:59 wait)\", but Alyi's first word is at 0.3 s (v3.1 trimmed the head to 0.3); every gap is weighted and the held beat after \"Do you have any questions?\" stays (notes §6: weighted, untouched), so there is nothing the plan allows to cut: the beat keeps 15.2 s (+1.0 s on est_s)"
+   }
+  ],
+  "safety_net": []
+ },
+ "tag": {
+  "timeline": "show/reel/ep01-v35/ep01-v35-tag.json",
+  "source": "show/reel/ep01-v34/ep01-v34-tag.json",
+  "source_story_s": 33.243,
+  "estimate_s": 33.24,
+  "seconds": 33.243,
+  "frames": 798,
+  "source_frames": 798,
+  "beats": 10,
+  "lines": 3,
+  "vo": 1,
+  "vo_lines": [
+   "v3-vo-24 (32.03): it looks calmer than me."
+  ],
+  "jcuts": [],
+  "lcuts": [],
+  "median_gap_v34": {
+   "inside_beats_s": null,
+   "inside_beats_n": 0,
+   "segment_s": 9.281,
+   "segment_n": 2,
+   "spoken_only_segment_s": 11.483
+  },
+  "median_gap_v35": {
+   "inside_beats_s": null,
+   "inside_beats_n": 0,
+   "segment_s": 9.281,
+   "segment_n": 2,
+   "spoken_only_segment_s": 11.483
+  },
+  "beat_lengths": [],
+  "tempo": [],
+  "check_failures": [],
+  "edits": [],
+  "deviations": [],
+  "safety_net": []
+ }
+}
