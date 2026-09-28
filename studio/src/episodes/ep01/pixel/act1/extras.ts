@@ -4,26 +4,22 @@
 // cast rigs) with a parameter the packaged setup fixes (a camera x, a mouth, a lifted prop), or adds a few pixels of
 // idle life (a sleep LED, a passer-by, a scrolling phone page). All whole-pixel, master palette, pure in (k, f).
 //
-//   litBand(fb, sh, k, f, rails, lit)   the adventure-game BAND lit for the launch (sc 5: "the band lights, and a
-//                                        cursor drifts to the button"): the host's band, rail and V.O. line, plus the
-//                                        sentence line (`Push research preview`) at level 0..3; the layout returns
-//                                        {full: true} while it draws the band itself
 //   cursorPath(k, k0, k1, from, to)      the cursor's drift, held on 2s, easing into its park
 //   sleepLed(fb, f)                      5.01: his closed laptop's sleep LED breathing (held steps)
 //   fingerECU(fb, press, dx, dy)         5.08: the ECU button with his finger offset (the approach in held steps)
-//   rimaMarkerHand(fb, f, wet, gerg)     5.07: Rima's hand and marker at the board behind Gerg, drawing the third line
-//   otsRima(fb, f, st)                   5.04: drawLaunchOTSRima re-composed with a drifting back wall, his desk's edge
-//                                        and the button lifted clear of the V.O. rows
-//   glassCount(fb, f, st)                5.09: drawLaunchGlass's composite with Mas's and Alyi's mouths
-//   deal2S(fb, f, st)                    9.09: drawDeal2S with the soft lobby's pan as a parameter (a slow drift)
+//   otsRima(fb, f, st)                   5.04: drawLaunchOTSRima re-composed (its v3.1 warm key kept) with his desk's
+//                                        edge and the button lifted clear of the V.O. rows
+//   glassCount(fb, f, st)                5.09: drawLaunchGlass's composite with Mas's and Alyi's mouths and the v3.1
+//                                        rack to the glass in held steps (st.rack 0..2)
+//   deal2S(fb, f, st)                    9.06 / 9.09: drawDeal2S with the pan, Tasya's x and Gerg's spot as parameters
 //   passerBy(fb, f, x, y, bg)            9.10: an employee crossing the check (Gerg's walk, recoloured), behind the cast
 //   guestCard(fb, x, y)                  8.05: the GUEST card on a lanyard, legible
 //   bottomShade(fb, y0, n)               a lighting note: the frame's foot a rung or two darker (the V.O. rows on shadow)
 import {Buf, rect, line, bayer, hash, clamp} from '../../../../shared/pixel/px';
 import {PAL, stepColor, lightness, familyOf} from '../../../../shared/pixel/palette';
 import {tiny, tinyWidth} from '../../../../shared/pixel/rooms/kit-b';
-import {textWidth} from '../../../../shared/pixel/font';
-import {launchBackM, putBust, otsShoulder, drawCursor, LAUNCH_M} from '../../../../shared/pixel/rooms/bullpen-launch';
+import {launchBackM, putBust, otsShoulder, drawCursor} from '../../../../shared/pixel/rooms/bullpen-launch';
+import {faceKey} from '../../../../shared/pixel/kits/face-light';
 import type {LaunchMState} from '../../../../shared/pixel/rooms/bullpen-launch';
 import {drawButtonECU, drawBeigeButton} from '../../../../shared/pixel/kits/launch-button';
 import {masPortrait, MAS_PORTRAIT_DEFAULT} from '../../../../shared/pixel/cast/mas';
@@ -32,9 +28,6 @@ import {rimaSpeakPortrait, RIMA_PORTRAIT_DEFAULT} from '../../../../shared/pixel
 import type {RimaPortraitState} from '../../../../shared/pixel/cast/rima-speak';
 import {drawRimaStand, RIMA_STAND_DEFAULT} from '../../../../shared/pixel/cast/rima-stand';
 import type {RimaStandPose} from '../../../../shared/pixel/cast/rima-stand';
-import {gergMedium, GERG_MEDIUM_DEFAULT} from '../../../../shared/pixel/cast/gerg-medium';
-import type {GergMediumState} from '../../../../shared/pixel/cast/gerg-medium';
-import {gergTypeAt} from '../../../../shared/pixel/cast/gerg';
 import {drawDealWide} from '../../../../shared/pixel/rooms/lobby-deal';
 import type {DealWideState} from '../../../../shared/pixel/rooms/lobby-deal';
 import {drawMasMedium, MAS_MEDIUM_DEFAULT} from '../../../../shared/pixel/cast/mas-medium';
@@ -44,8 +37,7 @@ import {drawTasyaMedium} from '../../../../shared/pixel/cast/tasya-medium';
 import type {TasyaMediumState} from '../../../../shared/pixel/cast/tasya-medium';
 import {drawGergStand, GERG_STAND_DEFAULT, gergWalkAt} from '../../../../shared/pixel/cast/gerg-stand';
 import type {TvState} from '../../../../shared/pixel/kits/tv-news';
-import {pt, pw, pwrap, RH} from '../kit';
-import type {PxShot, PxRail} from '../types';
+import {pt, pwrap, RH} from '../kit';
 
 // ------------------------------------------------------------------ small clocks
 /** a blink on a long loop: 1 (half), 2 (shut), 1, each held 2 frames (the show's minimum hold), else 0 */
@@ -61,40 +53,6 @@ export const ease2 = (k: number, k0: number, k1: number, a: number, b: number) =
 };
 export const cursorPath = (k: number, k0: number, k1: number, from: [number, number], to: [number, number]): [number, number] =>
   [ease2(k, k0, k1, from[0], to[0]), ease2(k, k0, k1, from[1], to[1])];
-
-// ------------------------------------------------------------------ the lit band (sc 5, the one lit-UI moment of Act One)
-export const SENTENCE = 'Push research preview';
-/** the host's band (frame.ts band + voLine, the same pixels) with the adventure game's sentence line. level: 3 lit (the
- *  sentence in paper, the rule a lit line), 2 and 1 the dim-out's held steps, 0 = the host's own band exactly */
-export const litBand = (fb: Buf, sh: PxShot, k: number, f: number, rails: PxRail[], lit: {level: number; text: string | null}) => {
-  const L = clamp(Math.round(lit.level), 0, 3);
-  rect(0, RH, 480, 270 - RH, fb.ink(PAL.N0));
-  rect(0, RH, 480, 1, fb.ink([PAL.N3, PAL.N4, PAL.N5, PAL.G4][L]));
-  if (L >= 2) for (let x = 0; x < 480; x++) if (bayer(x, 0) < 0.5) fb.set(x, RH + 1, PAL.N2);
-  // the rail, exactly as the host types it (2 characters a frame from its start)
-  const r = rails.find((q) => f >= q.s && f < q.e);
-  if (r) {
-    const s = r.text.slice(0, Math.max(0, (f - r.s) * 2));
-    pwrap(s, 440).slice(0, 3).forEach((l, i) => pt(fb, l, 12, RH + 12 + i * 11, PAL.P1, {shadow: PAL.N2}));
-  }
-  // the sentence line: the verb and the object under the cursor, centred low in the band
-  if (L > 0 && lit.text) {
-    const col = [PAL.N0, PAL.N5, PAL.P0, PAL.P2][L];
-    const x = Math.round(240 - pw(lit.text) / 2);
-    pt(fb, lit.text, x, RH + 44, col, {shadow: L >= 2 ? PAL.N2 : undefined});
-  }
-  // Mas's V.O. line, as the host draws it (pov-and-framing §5.2): lowercase, x 12, baseline 198, C6 on an N0 shadow,
-  // 0.5 characters a frame, held 15 frames after its last sound; wrapped upward if wider than 456
-  for (const l of sh.lines) {
-    if (l.kind !== 'vo' || k < l.s || k >= l.e + 15) continue;
-    const text = l.text.toLowerCase();
-    const n = clamp(Math.floor((k - l.s) * 0.5), 0, text.length);
-    if (pw(text) <= 456) { pt(fb, text.slice(0, n), 12, 191, PAL.C6, {shadow: PAL.N0}); continue; }
-    const rows = pwrap(text, 456);
-    let left = n;
-    rows.forEach((row, i) => { pt(fb, row.slice(0, Math.max(0, left)), 12, 191 - (rows.length - 1 - i) * 11, PAL.C6, {shadow: PAL.N0}); left -= row.length + 1; });
-  }
-};
 
 // ------------------------------------------------------------------ 5.01: his closed laptop, asleep
 /** the sleep LED on the laptop's front edge in the button ECU (drawButtonECU's corner, x 380-480): breathing in held
@@ -124,48 +82,26 @@ export const fingerECU = (fb: Buf, press: 0 | 1 | 2, dx: number, dy: number, lit
   }
 };
 
-// ------------------------------------------------------------------ 5.07: the third underline, with her hand in it
-/** Rima's hand and marker at the whiteboard behind Gerg in drawLaunch2S (camX 330): the marker's tip rides the third
- *  underline's wet end; her sleeve runs up and away behind Gerg's head (his sprite's pixels are kept) */
-export const rimaMarkerHand = (fb: Buf, f: number, wet: number, gerg: Partial<GergMediumState>) => {
-  const camX = 330, bx = LAUNCH_M.board.x0 - camX, by = LAUNCH_M.board.y0;
-  const lx = bx + 10 + textWidth('LAUNCH: '), uw = textWidth('LOW-KEY') + 3;
-  const len = Math.round(uw * clamp(wet, 0, 1));
-  const tx = lx - 1 + len, ty = by + 21 + 6 + (len > uw * 0.6 ? 1 : 0);
-  const g = gergMedium({...GERG_MEDIUM_DEFAULT, type: gergTypeAt(f), ...gerg});
-  const gx = 300, gy = 66;
-  const isGerg = (x: number, y: number) => { const i = x - gx, j = y - gy; return i >= 0 && j >= 0 && i < g.w && j < g.h && g.c[j * g.w + i] >= 0; };
-  const put = (x: number, y: number, c: number) => { if (!isGerg(x, y)) fb.set(x, y, c); };
-  // the sleeve: her forearm running back to the right, rising gently toward her shoulder behind Gerg's head; the
-  // jacket's grey with its lit top edge (the board's cool light) and a darker underside
-  for (let s = 0; s < 40; s++) {
-    const x = tx + 6 + s, yc = ty - 6 - Math.round(s * 0.35), hw = 3 + (s > 14 ? 1 : 0);
-    for (let w = -hw; w <= hw; w++) put(x, yc + w, w === -hw ? PAL.G5 : w === hw ? PAL.N1 : w > 1 ? PAL.G1 : PAL.G3);
-  }
-  rect(tx + 5, ty - 10, 2, 8, (x, y) => put(x, y, PAL.P1)); // her shirt cuff
-  // the hand closed on the marker (knuckles up), and the marker: a dark barrel, the red tip on the line
-  const HAND = ['.3443.', '345543', '345554', '234443', '.2332.'];
-  const hc: Record<string, number> = {'2': PAL.S2, '3': PAL.S3, '4': PAL.S4, '5': PAL.S5};
-  HAND.forEach((r, j) => { for (let i = 0; i < r.length; i++) if (hc[r[i]] !== undefined) put(tx + 1 + i, ty - 8 + j, hc[r[i]]); });
-  put(tx, ty - 1, PAL.R2); put(tx, ty - 2, PAL.N0); put(tx + 1, ty - 3, PAL.N0); put(tx + 1, ty - 2, PAL.N1); put(tx + 2, ty - 4, PAL.N1);
-};
-
 // ------------------------------------------------------------------ 5.04: over his shoulder onto Rima
 export interface OtsRimaState {
   camX: number;
   rima: Partial<RimaPortraitState>;
   cursor: boolean;
   alyi?: LaunchMState['alyi'];
+  /** v3.1: launch night warmed a step (the back wall's warm variant, his desk lamp's key on her face, the shoulder's
+   *  rim in the lamp's tungsten): drawLaunchOTSRima's own warm branch */
+  warm?: 0 | 1;
 }
-/** drawLaunchOTSRima's setup, re-composed: the back wall at camX (a slow drift), Rima's portrait at his desk, HIS DESK's
- *  near edge across the frame's foot (she stopped at it: the V.O. rows sit on its shadow), the button and the parked
- *  cursor on it at frame right, clear of the V.O. line, and his shoulder in the foreground */
+/** drawLaunchOTSRima's setup, re-composed: the back wall at camX, Rima's portrait at his desk, HIS DESK's near edge
+ *  across the frame's foot (she stopped at it: the V.O. rows sit on its shadow), the button and the parked cursor on it
+ *  at frame right, clear of the V.O. line, and his shoulder in the foreground */
 export const otsRima = (fb: Buf, f: number, st: OtsRimaState) => {
-  launchBackM(fb, st.camX, {alyi: st.alyi ?? {soft: true}, soft: 1});
+  launchBackM(fb, st.camX, {alyi: st.alyi ?? {soft: true}, soft: 1, warm: st.warm});
   putBust(fb, rimaSpeakPortrait({...RIMA_PORTRAIT_DEFAULT, ...st.rima}), 232, 44, {flip: true});
+  if (st.warm) faceKey(fb, 232, 44, 344, 128, 1, -1);
   const top = 178;
   for (let y = top; y < RH; y++) for (let x = 0; x < 480; x++) fb.set(x, y, y === top ? PAL.G3 : y < top + 3 ? PAL.G2 : bayer(x, y) < 0.3 ? PAL.N2 : PAL.N1);
-  otsShoulder(fb, -44, 64, PAL.C4, {flip: true});
+  otsShoulder(fb, -44, 64, st.warm ? PAL.W4 : PAL.C4, {flip: true});
   drawBeigeButton(fb, 364, top + 4, {scale: 'medium'});
   if (st.cursor) drawCursor(fb, 382, top + 6);
   void f;
@@ -176,13 +112,31 @@ export interface GlassCountState {
   alyi: LaunchMState['alyi'];
   rima: Partial<RimaStandPose>;
   mas: Partial<MasPortraitState>;
+  /** v3.1 (5.09's shot note, drawLaunchGlass rack 'glass'): the focus racks to the reflection. 0 none (v3's frame) ·
+   *  1 the held half step (a quarter of Rima's pixels a rung down, Alyi's face one step) · 2 racked (Rima soft as the
+   *  art softens her, Alyi's face two steps) */
+  rack?: 0 | 1 | 2;
+  warm?: 0 | 1;
 }
-/** drawLaunchGlass(b, f, {mas: true, rima}) re-composed so Mas's soft foreground head can speak and turn: the medium
- *  back wall at camX 460 with Alyi's reflection (any speaking state), Rima at the board, Mas soft (two rungs toward the
- *  dark) in the foreground, the button under his hand */
+const TRANS = 0x1000000;
+/** drawLaunchGlass(b, f, {mas: true, rima, rack}) re-composed so Mas's soft foreground head can speak and turn: the
+ *  medium back wall at camX 460 with Alyi's reflection (any speaking state), Rima at the board, Mas soft (two rungs
+ *  toward the dark) in the foreground, the button under his hand */
 export const glassCount = (fb: Buf, f: number, st: GlassCountState) => {
-  launchBackM(fb, 460, {alyi: st.alyi, underlines: 3});
-  drawRimaStand(fb, 250, 176, {...RIMA_STAND_DEFAULT, body: 'cap', head: 'back', light: 'board', ...st.rima});
+  const rack = st.rack ?? 0;
+  launchBackM(fb, 460, {alyi: st.alyi, underlines: 3, warm: st.warm, faceLight: rack});
+  const rp: RimaStandPose = {...RIMA_STAND_DEFAULT, body: 'cap', head: 'back', light: 'board', ...st.rima};
+  if (!rack) drawRimaStand(fb, 250, 176, rp);
+  else {
+    // racked off her: whole pixels a rung down on the dither (the art's own softening), half of it on the held step
+    const t = new Buf(480, RH, TRANS);
+    drawRimaStand(t, 250, 176, rp);
+    for (let i = 0; i < 480 * RH; i++) {
+      const v = t.c[i]; if (v === TRANS) continue;
+      const x = i % 480, y = (i / 480) | 0, d = bayer(x, y);
+      fb.c[y * fb.w + x] = rack === 2 ? (d < 0.5 ? stepColor(v, -1) : stepColor(v, lightness(v) > 0.35 ? -1 : 0)) : d < 0.25 ? stepColor(v, -1) : v;
+    }
+  }
   putBust(fb, masPortrait({...MAS_PORTRAIT_DEFAULT, light: 'monitor', look: 1, ...st.mas}), -30, 48, {flip: true, map: (c) => stepColor(c, -2)});
   drawBeigeButton(fb, 70, 190, {scale: 'medium'});
   void f;
@@ -219,13 +173,14 @@ export interface Deal2SPanState {
   collars?: number;
   tv?: TvState;
 }
-/** drawDeal2S with the pan as a parameter (the art's own is 110) and Tasya's x free */
+/** drawDeal2S with the pan as a parameter (the art's own is 110) and Tasya's x free; the v3.1 collars (mas-collars
+ *  'v31': one design across the episode) */
 export const deal2S = (fb: Buf, f: number, st: Deal2SPanState) => {
   const g = st.gerg ? (st.gerg === true ? {at: [238, 172] as [number, number], flip: true} : st.gerg) : null;
   softLobbyPan(fb, f, {check: st.check, tv: st.tv, gerg: g ? {body: 'tug', at: g.at, flip: g.flip} : null}, st.pan);
   const mx = 6, my = 96;
   drawMasMedium(fb, mx, my, {...MAS_MEDIUM_DEFAULT, light: 'warm', head: '34', look: 1, arm: 'down', ...st.mas}, {flip: true});
-  drawCollarsMedium(fb, mx, my, st.collars ?? 3, {flip: true});
+  drawCollarsMedium(fb, mx, my, st.collars ?? 3, {flip: true, style: 'v31'});
   if (st.tasya) drawTasyaMedium(fb, st.tasyaX ?? 380, 96, {arm: 'clasp', ...st.tasya});
 };
 
