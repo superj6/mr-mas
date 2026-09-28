@@ -9,7 +9,11 @@
 //   v3.3 (P8, opt-in `chipLine`; the `v3-shots-act2-act3` pass): 17.11's act-out is the chip-maker's price lifting off
 //                                the register's flag window as a line (the intro's curve: flat, then straight up), its
 //                                head running up and off the top of the frame in whole-pixel steps, its tail following
-//                                it out, so the sky is left empty (drawChipLine; `head` / `tail` 0..1 along the path)
+//                                it out, so the sky is left empty (drawChipLine; `head` / `tail` 0..1 along the path);
+//                                the line is a 2 px white core in a 1 px cyan glow (reads at 1080p). drawRooftopMasUp:
+//                                [MCU] his own beat after it: MAS against the sky (the horizon at his shoulders), eyes
+//                                level on the table, then up after the line (`up`, a swapped eye drawing: the irises high
+//                                under a lifted lid, the brows up), his face a light step up, keyed from above
 //   drawRooftopWide(b, f, st)    [W] (17.01, 17.03, 17.04, 17.11): `signers` who is at the table (the queue from the
 //                                right, each signing in turn), `register` its roll-in position 0 (off) .. 1 (stopped at
 //                                Nesnej), `crack` 0..1 its whole-pixel run L -> R (12 frames), `look` who looks up
@@ -34,6 +38,7 @@ import {marioImg, MARIO_BASE, MARIO_FOOT, marioPortraitImg, MARIO_PORTRAIT_REST,
 import {drawRegisterRoom, drawRegisterBust, REG_BUST} from '../kits/register';
 import {drawIndexUp} from './whitehouse';
 import {putBustCut} from '../cast/civic-kit';
+import {faceLightImg} from '../kits/face-light-img';
 
 const RH = 203;
 export const ROOF = {
@@ -195,9 +200,36 @@ export const drawChipLine = (b: Buf, head: number, tail = 0, f = 0) => {
   const h = Math.round(clamp(head, 0, 1) * (n - 1)), t = Math.round(clamp(tail, 0, 1) * (n - 1));
   if (h <= t) return;
   const put = (x: number, y: number, c: number) => { if (x >= 0 && x < 480 && y >= 0 && y < RH) b.set(x, y, c); };
-  for (let i = t; i <= h; i++) { const [x, y] = CHIP_PATH[i]; put(x - 1, y, PAL.C6); put(x + 1, y, PAL.C6); put(x, y + 1, PAL.C5); }
-  for (let i = t; i <= h; i++) { const [x, y] = CHIP_PATH[i]; put(x, y, PAL.W9); }
-  if (head < 1) { const [x, y] = CHIP_PATH[h]; for (const [dx, dy] of [[0, 0], [1, 0], [0, 1], [1, 1]]) put(x + dx, y + dy, PAL.W9); put(x - 1, y - 1, f % 4 < 2 ? PAL.C8 : PAL.C7); put(x + 2, y + 2, PAL.C7); }
+  // v3.3.1 (the audit's §3 #2: "a 2-3 px line"): a 2 x 2 white core on every path pixel inside a 1 px cyan glow
+  for (let i = t; i <= h; i++) { const [x, y] = CHIP_PATH[i]; for (let dy = -1; dy <= 2; dy++) for (let dx = -1; dx <= 2; dx++) put(x + dx, y + dy, (dy === 2 || dx === 2) ? PAL.C5 : PAL.C6); }
+  for (let i = t; i <= h; i++) { const [x, y] = CHIP_PATH[i]; put(x, y, PAL.W9); put(x + 1, y, PAL.W9); put(x, y + 1, PAL.W9); put(x + 1, y + 1, PAL.W9); }
+  if (head < 1) { const [x, y] = CHIP_PATH[h]; for (let dy = -1; dy <= 2; dy++) for (let dx = -1; dx <= 2; dx++) put(x + dx, y + dy, PAL.W9); put(x - 2, y - 2, f % 4 < 2 ? PAL.C8 : PAL.C7); put(x + 3, y + 3, PAL.C7); put(x + 3, y - 2, PAL.C7); }
+};
+
+// ------------------------------------------------------------------ v3.3.1 (P8): his beat after the line (17.11)
+/** the portrait's look-up drawing: the same eye stamps' footprints (masPortrait's 3/4 head, lid 0) redrawn with the
+ *  irises high under a lifted lid and the whites below (a swapped drawing, never an in-between) */
+const lookUp = (im: Img, closed: Img): Img => {
+  const out: Img = {w: im.w, h: im.h, c: new Int32Array(im.c)};
+  // where the eye stamps landed: the first row where the open and the closed lids differ (the stamps' own row 0)
+  let top = 44;
+  for (let y = 0, found = false; y < im.h && !found; y++) for (let x = 30; x < 70; x++) if (im.c[y * im.w + x] !== closed.c[y * im.w + x]) { top = y; found = true; break; }
+  const pal = (near: boolean): Record<string, number> => ({L: PAL.N0, w: near ? PAL.S4 : PAL.S5, i: PAL.B3, I: PAL.N0, g: PAL.W8, k: PAL.X1});
+  const put = (x: number, y: number, rows: string[], p: Record<string, number>) => rows.forEach((r, j) => { for (let i = 0; i < r.length; i++) { const c = p[r[i]]; if (c !== undefined) out.c[(y + j) * out.w + x + i] = c; } });
+  put(49, top, ['...LLLLLLL....', '.LLLiIIgiLLL..', 'LwwwiIIIiwww..', '.wwwwwwwwww...', '..kkkkkkkk....'], pal(true));
+  put(37, top, ['..LLL..', 'LiIgLL.', 'wiIIw..', 'wwwww..', '.kkk...'], pal(false));
+  return out;
+};
+export const drawRooftopMasUp = (b: Buf, f: number, st: {up?: boolean; lid?: 0 | 1 | 2} = {}) => {
+  // the sky a step closer than the 2S (the horizon at his shoulders), him alone at frame left of centre, facing right
+  // (where the line went)
+  const sky = paintSky(172);
+  b.c.set(sky.c.subarray(0, 480 * RH));
+  const base = masPortrait({...MAS_PORTRAIT_DEFAULT, light: 'warm', look: st.up ? 0 : 1, lid: st.up ? 0 : (st.lid ?? 1), brow: st.up ? 1 : 0});
+  const im = st.up ? lookUp(base, masPortrait({...MAS_PORTRAIT_DEFAULT, light: 'warm', look: 0, lid: 2, brow: 1})) : base;
+  // looking up into the open sky: the face one light step up, keyed from above the way he looks (image left: flipped)
+  putBustCut(b, st.up ? faceLightImg(im, 1, {key: [-1, -0.8]}) : im, 150, 30, RH, true);
+  void f;
 };
 
 // ------------------------------------------------------------------ the two-shot at the sheet (17.02, 17.05)

@@ -391,3 +391,17 @@ Act Two has no three-part plate. `LAHTNEMULB · CHAIRMAN` is its one first-appea
 1. **17.11's line is compact.** It rises at the frame's right edge, where the register stands, so its flat run is short before it turns up. Whether it reads as the intro's curve (the act's out) rather than a stock chart needs a person to watch it (the script notes, §8 item 7).
 2. **14.01's anchor is small on the phone** (the clip is 112 px wide). The desk and the blank bar carry "anchor" at 1×.
 3. **17.10: Mas's empty hand** is a plain drawing (a flat open hand). Mario's sleeve carries the beat.
+
+### 10.6 v3.3.1: the micro-pass (audit-v33 §1, §3 #2, §6 #4; frames unchanged)
+
+- **17.11, the act-out:**
+  - **The line** is now a 2 × 2 white core on every path pixel inside a 1 px cyan glow, 4 px across, with a 4 × 4 spark at its head. It reads at 1080p.
+  - **Composer X's timing is kept:** the lift at frame 6, the head out at 40 % (k 42), the tail out at 52 % (k 55).
+  - **Mas's beat is his, and last.** In the wide his eyes stay down on the table while Nesnej and then Mario look up. Three frames after the tail leaves, it cuts in to `rooms/rooftop drawRooftopMasUp` [MCU], new and opt-in: him alone against the sky, facing where the line went. His eyes are level for 6 f, then turn up in one swapped drawing (the irises high under a lifted lid, the brows up, his face a light step up, keyed from above). He holds it 18 f (0.75 s), with no voice.
+  - **Then** it's back on the wide, him looking up now. The tilt steps 6 px every 2 f to 36 px, then holds 0.5 s on the empty sky.
+- **Checks:**
+  - **Kokoro:** `check` 38 / 38, 4,573 frames, and `tsc` is clean.
+  - **EL:** it builds and checks on the assembly's `el-v33` lock, 38 layouts, 4,340 frames, 0 stand-ins, 0 notes, 0 problems.
+  - **Flash:** `flashcheck.py` finds at worst 1 flash in any second, red 0; it passes.
+  - **The picture:** `out/ep01/full-v3/picture/act2.mp4`, 4,573 frames (3:10.54), 14.7 MB, 28 s on 2 workers, with its .srt and contact sheet re-written.
+- **For a person:** whether the cut-in reads as his beat (him looking after the price) or as a reaction insert.

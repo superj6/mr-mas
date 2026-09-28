@@ -76,7 +76,7 @@ const tabsPlus = (p: Painter) => M32.withTabs(p, {tabs: [PAPER_TAB, 'chatgtp.plu
 
 // =================================================================== sc 18 · the Orb arrives
 L.add('v31-18.00', {
-  st: 'ARRIVAL · v3.3 (P5: v31-18.00b merged in) rooms/darkroom-v31 drawDark2SSCR {orb: null} (the home room with the monitor LARGE at frame right, the desk, the rack\'s LEDs, the glass, the faded sphere outline on the wall, empty; MAS at the desk watching it): the landlord\'s lobby playing softly on it (kits/monitor-v31 lobbyPainter {keyLarge}, no date chip): TASYA hangs the thirteenth key, Atem blue, on his ring in held steps and it hangs LARGE on "welcome" (his lips on "Everyone is welcome.", the take\'s visemes over the painter\'s portrait); KRAM steps into the lobby in the dry OPEN SOURCE hoodie, and his two-part plate KRAM · RUNS ATEM comes up; MACROSOFT WELCOMES ATEM on the monitor\'s own chyron. (The v3.2 tally cut-in gives way: the two faint marks stay on the desk.)',
+  st: 'ARRIVAL · v3.3 (P5: v31-18.00b merged in) rooms/darkroom-v31 drawDark2SSCR {orb: null} (the home room with the monitor LARGE at frame right, the desk, the rack\'s LEDs, the glass, the faded sphere outline on the wall, empty; MAS at the desk watching it): the landlord\'s lobby playing softly on it (kits/monitor-v31 lobbyPainter {keyLarge}, no date chip): TASYA hangs the thirteenth key, Atem blue, on his ring in held steps and it hangs LARGE on "welcome" (his lips on "Everyone is welcome.", the take\'s visemes over the painter\'s portrait); KRAM steps into the lobby in the dry OPEN SOURCE hoodie; MACROSOFT WELCOMES ATEM on the monitor\'s own chyron (v3.3.1: Kram\'s plate dropped, the audit\'s §3 #1: the chyron and the hoodie carry it). (The v3.2 tally cut-in gives way: the two faint marks stay on the desk.)',
   enter: {kind: 'dip', frames: 8},
   face: {TASYA: 'lip'},
   marks: {line: ['on', 'v31-a3-0001', 0], hang: ['w', 'v31-a3-0001', 'welcome', 0]},
@@ -85,7 +85,7 @@ L.add('v31-18.00', {
     const key = (k < 10 ? 0 : k < hang ? 1 : 2) as 0 | 1 | 2;
     const kram = (k < 4 ? 0 : k < line - 6 ? 1 : 2) as 0 | 1 | 2;
     drawDark2SSCR(fb, f, {screen: withTasyaMouth(lobbyPainter({key, kram, caption: true, chip: false, f, keyLarge: true}), mouth(sh, k, 'TASYA')), orb: null, mas: {look: 1}});
-    namePlate(fb, k - 6, 'KRAM · RUNS ATEM', DARK_SCR.screen.x + DARK_SCR.screen.w - 118, DARK_SCR.screen.y + DARK_SCR.screen.h + 12, PAL.G6); // under the bezel, below him
+    // v3.3.1 (the audit's §3 #1): no plate; the chyron and his hoodie carry the reference
   },
 });
 L.add('18.01', {
@@ -314,15 +314,16 @@ L.add('22.03', {
 });
 
 L.add('v32-22.04', {
-  st: 'v3.2, HIS MOVE (pausing the sign-ups; the record, his post\'s first sentence): kits/mas-monitor drawMonitorOTS + kits/monitor-v32 signupPainter [OTS]: a week later, over his shoulder, the CHATGTP Plus sign-up page, its counter\'s drums a smear on the fast ratchet (never a figure); beside him the rack\'s edge (drawRackSlice), its LEDs stepping green, amber, red, one step a beat (launch night\'s heat); he types his post in its box, and it goes up as a card on the post click; v3.3 (P11): once it\'s up it collapses to the post UI\'s compact card at the page\'s head; SIGN UP greys, then reads NOTIFY ME on the blink, and it stays; the counter stops; the paper\'s tab in his strip',
+  st: 'v3.2, HIS MOVE (pausing the sign-ups; the record, his post\'s first sentence): kits/mas-monitor drawMonitorOTS + kits/monitor-v32 signupPainter [OTS]: a week later, over his shoulder, the CHATGTP Plus sign-up page, its counter\'s drums a smear on the fast ratchet (never a figure); beside him the rack\'s edge (drawRackSlice), its LEDs stepping green, amber, red, one step a beat (launch night\'s heat); he types his post in its box, and it goes up as a card on the post click; SIGN UP greys, then reads NOTIFY ME on the blink, and it stays; v3.3.1 (P11): then the post, read, collapses away (two held steps) and the page is NOTIFY ME alone; the counter stops; the paper\'s tab in his strip',
   marks: {spin: ['snd', 'synth:ratchet_fast', 1, 0], post: ['snd', 'post_click', 1, 0], grey: ['snd', 'glyph_blink', 1, 0]},
   draw: (fb, k, sh, f) => {
     const sp = mk(sh, 'spin', 7), post = mk(sh, 'post', 72), grey = mk(sh, 'grey', 93);
     const typed0 = sp + 20, n = M32.POST_PAUSE.text.length;
     const typed = k < typed0 ? null : Math.min(n, Math.floor((k - typed0) * n / Math.max(8, post - 6 - typed0)));
     const btn = (k < grey - 6 ? 0 : k < grey ? 1 : 2) as 0 | 1 | 2;
-    // v3.3 (P11): once it's up and read, his post collapses to the compact card at the page's head; NOTIFY ME stays
-    const col = post + Math.max(10, Math.round((grey - post) * 0.6));
+    // v3.3.1 (P11): once it's up and read (and SIGN UP has turned to NOTIFY ME), his post collapses away in two held
+    // steps; NOTIFY ME stays on the page
+    const col = grey + 8;
     MON.drawMonitorOTS(fb, f, tabsPlus(M32.signupPainter({spin: k >= sp && k < grey ? f : 0, btn, typed, post: k >= post ? k - post : null, collapse: k >= col ? k - col : null})));
     M32.drawRackSlice(fb, 432, stepOf(k, [sp + 16, sp + 40]) as 0 | 1 | 2, f);
   },
@@ -333,12 +334,12 @@ L.add('23.01', {st: 'kits/monitor-items coldOpenPainter [POV] (art-a rooms/apec-
 /** the Orb at his shoulder, in at the POV frame's right edge: its looks to the reminder's four circles, whole steps */
 const ORB_REMIND: Array<[number, number]> = [[-0.94, -0.33], [-0.93, -0.36], [-0.92, -0.4], [-0.9, -0.44]];
 L.add('23.02', {
-  st: 'v3.3 (P10) kits/mas-monitor drawMonitorPOV [SCR]: bar 2, his monitor: his own NOTIFY ME page (signupPainter, the post collapsed at its head), the DECODING INTENTIONS tab still in his strip, and the Friday reminder popping up over them (kits/monitor-v32 withReminder: Board sync · Fri 12:00, the four attendee circles); the Orb at his shoulder, in at the frame\'s right edge, steps its iris along them, and each one\'s card shows the member\'s small call tile and name (ALYI, NELEH, MADA, THE QUIET VOTE); it stops on the black square',
+  st: 'v3.3 (P10) kits/mas-monitor drawMonitorPOV [SCR]: bar 2, his monitor: his own NOTIFY ME page (signupPainter; v3.3.1: his post collapsed away), the DECODING INTENTIONS tab still in his strip, and the Friday reminder popping up over them (kits/monitor-v32 withReminder: Board sync · Fri 12:00, the four attendee circles); the Orb at his shoulder, in at the frame\'s right edge, steps its iris along them, and each one\'s card shows the member\'s small call tile and name (ALYI, NELEH, MADA, THE QUIET VOTE); it stops on the black square',
   marks: {chip: ['snd', 'post_click--chip', 1, 0]},
   draw: (fb, k, sh, f) => {
     const c = mk(sh, 'chip', 3);
     const n = k < c + 6 ? null : (Math.min(3, Math.floor((k - c - 6) / 11)) as 0 | 1 | 2 | 3);
-    MON.drawMonitorPOV(fb, f, tabsPlus(M32.withReminder(M32.signupPainter({spin: 0, btn: 2, post: 99, collapse: 99}), {k: k - c, hover: n})));
+    MON.drawMonitorPOV(fb, f, tabsPlus(M32.withReminder(M32.signupPainter({spin: 0, btn: 2, post: null}), {k: k - c, hover: n})));
     drawOrb(fb, 454, 150, 26, {look: ORB_REMIND[n ?? 0], aperture: 0.55, monitor: -1});
   },
 });
@@ -346,7 +347,7 @@ L.add('23.03', {
   st: 'rooms/darkroom-act3 drawDarkA3: bar 3, the rail rolls past midnight to NOV 17 (the host\'s band); Mas looks down at the rail itself, then back up; v3.3: the reminder on his monitor (over his NOTIFY ME page) goes dark on its own; the phone on the desk is dark',
   draw: (fb, k, sh, f) => {
     A3.drawDarkA3(fb, f, {orb: {at: 'shoulder', look: DPLATE_LOOK.face}, outline: true, mas: {head: k >= 25 && k < 41 ? 'down' : '34', look: -1},
-      plate: {phone: 'up', phoneScreen: phoneMini('off'), screen: tabsPlus(M32.withReminder(M32.signupPainter({spin: 0, btn: 2, post: 99, collapse: 99}), {k: k < 46 ? 99 : -1}))}});
+      plate: {phone: 'up', phoneScreen: phoneMini('off'), screen: tabsPlus(M32.withReminder(M32.signupPainter({spin: 0, btn: 2, post: null}), {k: k < 46 ? 99 : -1}))}});
   },
 });
 L.add('23.04', {st: 'BLACK · bar 4 (ACT-OUT 2): THE CLOCK stops on the downbeat', draw: (fb) => { rect(0, 0, 480, RH, fb.ink(PAL.N0)); return {noVo: true}; }});

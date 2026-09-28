@@ -14,8 +14,9 @@
 //   drawTallyECU(b, f, st)      v31-18.00 (8.1: "framed legibly"): the desk top close, the two faint old marks (and the
 //                               third carved, `n` 3), the monitor's light across the wood
 // v3.3 (script draft 8.2; additive, opt-in; the `v3-shots-act2-act3` pass):
-//   signupPainter({collapse})   P11: once his post is up, it collapses (two held steps) to the post UI's own compact
-//                               card at the page's head, so NOTIFY ME stays in sight
+//   signupPainter({collapse})   P11: once his post is up and read, it collapses away in two held steps (the card folded
+//                               to its top half, then a 2 px strip rolled into the page's head, then gone), so the page
+//                               is NOTIFY ME alone
 //   withReminder(paint, st)     P10 (23.02): the Friday reminder popping up over any page (two held steps): `Board sync`,
 //                               `Fri 12:00`, the four attendee circles (kits/phone-high), and the hovered one's card with
 //                               the member's small call tile and name (Mada's face under his spinner); a mini for the
@@ -96,7 +97,8 @@ export const signupPainter = (st: SignupState = {}): Painter => (scr, f) => {
       const keep = 16 + Math.round(box.h * 0.45);
       for (let y = 0; y < keep; y++) for (let x = 0; x < W; x++) { const v = tmp.get(x, y); if (v !== 0x1000000) scr.set(x, y, v); }
       rect(16, keep, W - 40, 1, scr.ink(PAL.N0));
-    } else drawPost(scr, 16, 16, POST_PAUSE, {size: 'notify', w: W - 40, k: 99});
+    } else if (c < 5) { rect(16, 16, W - 40, 2, scr.ink(PAL.G3)); rect(16, 18, W - 40, 1, scr.ink(PAL.N0)); } // the strip, rolling away
+    // c >= 5: gone
   }
 };
 

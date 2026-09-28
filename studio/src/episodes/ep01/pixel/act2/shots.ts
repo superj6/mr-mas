@@ -498,16 +498,18 @@ L.add('17.10', {
   },
 });
 L.add('17.11', {
-  st: 'v3.3 (P8, the act-out; the crack and the glass are gone): rooms/rooftop drawRooftopWide {chipLine}: phrase 4, the bell decaying; the register\'s window figure, the chip-maker\'s price, lifts off as a line (the intro\'s curve: flat, then straight up), its head climbing in whole-pixel held steps and off the top of the frame, its tail following it out; Nesnej looks up, then Mario (and writes it down), then Mas, last; the frame tilts up in held steps and holds on the empty sky where the line left',
+  st: 'v3.3 (P8, the act-out; the crack and the glass are gone): rooms/rooftop drawRooftopWide {chipLine}: phrase 4, the bell decaying; the register\'s window figure, the chip-maker\'s price, lifts off as a line (the intro\'s curve: flat, then straight up; v3.3.1: a 2 px white core in a cyan glow), its head climbing in whole-pixel held steps and off the top of the frame by 40 %, its tail out by 52 % (composer X\'s timing); Nesnej looks up, then Mario (and writes it down); Mas, eyes still down on the table; v3.3.1 (the audit\'s §3 #2): HIS beat, last: drawRooftopMasUp [MCU], his eyes level, then up after it (one swapped drawing), held, no voice; back on the wide (him looking up now) the frame tilts up in held steps and holds on the empty sky where the line left',
   draw: (fb, k, sh, f) => {
     const len = sh.e - sh.s;
     const lift = 6, out = Math.round(len * 0.4), gone = Math.round(len * 0.52);
+    const m0 = gone + 3, mUp = m0 + 6, m1 = m0 + Math.round(len * 0.23); // his single: level, then up, held
+    if (k >= m0 && k < m1) { RT.drawRooftopMasUp(fb, f, {up: k >= mUp, lid: 1}); return; }
     const head = k < lift ? 0 : heldLerp(k, lift, out, 0, 100, 2) / 100 * 1.02;
     const tail = k < out - 10 ? 0 : heldLerp(k, out - 10, gone, 0, 100, 2) / 100;
-    const look = {nesnej: k >= 14, mario: k >= 22, mas: 'up' as const};
+    const look = {nesnej: k >= 14, mario: k >= 22, mas: (k >= m1 ? 'up' : 'glass') as 'up' | 'glass'};
     RT.drawRooftopWide(fb, f, {mas: 'stand', mario: k >= 28 && k < 64 ? 'write' : 'stand', register: 1, nesnej: {arm: 'down'}, look, chipLine: tail >= 1 ? null : {head, tail}});
-    // then the tilt up to the empty sky: the frame's content steps down (3 px every 2 f), the sky above it deepening
-    const t0 = gone + 2, dy = k < t0 ? 0 : Math.min(36, Math.floor((k - t0) / 2) * 3);
+    // then the tilt up to the empty sky: the frame's content steps down (6 px every 2 f, to 36), the sky above it deepening
+    const t0 = m1, dy = k < t0 ? 0 : Math.min(36, Math.floor((k - t0) / 2) * 6);
     if (dy) { shiftRoom(fb, 0, dy); for (let y = 0; y < dy; y++) for (let x = 0; x < 480; x++) fb.set(x, y, bayer(x, y) < 0.18 + (dy - y) / 200 ? PAL.F3 : PAL.F4); }
   },
 });

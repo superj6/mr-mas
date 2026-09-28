@@ -364,3 +364,18 @@ Act Three has no three-part plate: `KRAM · RUNS ATEM` and `NELEH · NOPEAI BOAR
    - Kram's forehead is cropped by the screen's top in the arrival.
    - The MCU at page 30 shows his face and the room only; the page itself is the shot before.
    - The reminder card covers the right end of the drums.
+
+### 10.6 v3.3.1: the micro-pass (audit-v33 §1 P11, §3 #1, §6 #2-3; frames unchanged)
+
+- **v31-18.00:** `KRAM · RUNS ATEM` is dropped. The monitor's chyron `MACROSOFT WELCOMES ATEM` and his OPEN SOURCE hoodie carry the reference. Two text items now, plus "Everyone is welcome.".
+- **v32-22.04 (P11):**
+  - His post goes up on the click and holds while SIGN UP greys to NOTIFY ME.
+  - 8 f after the blink, the post collapses away in two held steps (the card folded to its top half, then a 2 px strip, then gone).
+  - The shot ends on the page alone: `CHATGTP Plus` and NOTIFY ME, with the paper's tab in the strip.
+- **23.02 and 23.03:** the page is drawn without the post, so the reminder pops up over NOTIFY ME with DECODING INTENTIONS beside it.
+- **Checks:**
+  - **Kokoro:** `check` 27 / 27, 3,202 frames, and `tsc` is clean.
+  - **EL:** it builds and checks on the assembly's `el-v33` lock, 27 layouts, 3,114 frames, 0 stand-ins, 0 notes, 0 problems.
+  - **GLYPH:** 386–390; the plain frames are identical.
+  - **Flash:** `flashcheck.py` finds 0 flashes in any second, red 0; it passes.
+  - **The picture:** `out/ep01/full-v3/picture/act3.mp4`, 3,202 frames (2:13.42), 10.6 MB, 24 s on 2 workers, with its .srt and contact sheet re-written.
