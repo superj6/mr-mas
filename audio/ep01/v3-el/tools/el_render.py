@@ -405,14 +405,19 @@ def render_take(row, role, c, rdef, cast, out, man, args, log, bump=0):
     if rdef.get("pitch_st"):
         y = E.pitch(y, float(rdef["pitch_st"]))
     kref = kokoro_ref(row)
-    dev = "call" if (row["tag"].lower() in ("monitor", "call") or row.get("device") == "call"
-                     or kref.get("mode") == "call") else None
+    if kref.get("device") == "pa" or row["tag"].lower() == "stage":
+        dev = "pa"                                      # v3.2: the hall PA from the stage (fastrec's pa chain)
+    elif (row["tag"].lower() in ("monitor", "call") or row.get("device") == "call" or kref.get("mode") == "call"
+          or kref.get("device") in ("call", "monitor")):
+        dev = "call"
+    else:
+        dev = None
     wav_dry, off, info = E.dress(y, seed, tgt)
     E.write24(wav, wav_dry)
     wav_dev = None
     if dev:
         ydev, _, _ = E.dress(y, seed, tgt, dev=dev)
-        wav_dev = os.path.join(out, "wav-device", take_name + ".call.wav")
+        wav_dev = os.path.join(out, "wav-device", take_name + (".stage.wav" if dev == "pa" else ".call.wav"))
         E.write24(wav_dev, ydev)
     m = E.measure(wav_dry, row["text"])
     asr_txt, asr_ws = E.asr(wav_dry)
@@ -451,11 +456,15 @@ def kokoro_ref(row):
         for p in sorted(glob.glob(os.path.join(REPO, "audio/ep01/*/dialogue/lines*.json"))
                         + glob.glob(os.path.join(REPO, "audio/ep01/v3-sample/*/lines.json"))
                         + glob.glob(os.path.join(REPO, "audio/ep01/v3/*/lines*.json"))
-                        + glob.glob(os.path.join(REPO, "audio/ep01/v31/*/lines*.json"))):
+                        + glob.glob(os.path.join(REPO, "audio/ep01/v31/*/lines*.json"))
+                        + glob.glob(os.path.join(REPO, "audio/ep01/v32/*/lines*.json"))
+                        + glob.glob(os.path.join(REPO, "audio/ep01/v32/*/wav/*.restage.json"))):
             try:
                 d = jload(p)
             except Exception:  # noqa: BLE001
                 continue
+            if isinstance(d, dict) and d.get("file"):
+                d = [d]                                   # a single re-staged take (v3.2 takes.py restage)
             if not isinstance(d, list):
                 continue
             for r in d:
@@ -465,7 +474,7 @@ def kokoro_ref(row):
                                            audible_out_s=(r.get("pace") or {}).get("audible_out_s"),
                                            wpm=(r.get("pace") or {}).get("wpm"), median_f0_hz=(r.get("qa") or {}).get("median_f0_hz"),
                                            f0_range_st=(r.get("qa") or {}).get("f0_range_st"), delivery=r.get("delivery"),
-                                           voice=r.get("voice"))
+                                           voice=r.get("voice"), device=r.get("device"))
     return dict(_KOK.get(row.get("ref_audio") or "", {}))
 
 
@@ -503,8 +512,10 @@ def row_out(row, rec, role, rdef, c):
                        "0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
                        f"48 kHz / 24-bit mono; {rec['qa'].get('target_lufs', -18.0):g} LUFS integrated; true-peak ceiling -1.5 dBTP; "
                        "DRY (rooms are mix sends)"]
-                      + (["file_device: the same take through a copy of house.call_filter() (HPF 200, LPF 7k, "
-                          "+1.5 dB @1.8k, 2.5:1), as the Kokoro take printed it"] if rec.get("device") else []),
+                      + (["file_device: the same take through a copy of house.pa_speaker() (HPF 160, LPF 8.5k, +2 dB "
+                          "@2.4k, 10 % saturation, 3:1), the v3.2 stage, as the Kokoro take printed it"] if rec.get("device") == "pa"
+                         else ["file_device: the same take through a copy of house.call_filter() (HPF 200, LPF 7k, "
+                               "+1.5 dB @1.8k, 2.5:1), as the Kokoro take printed it"] if rec.get("device") else []),
         "kokoro_ref": dict(rec.get("kokoro") or {}, timeline_in=row.get("ref_in"), timeline_dur=row.get("ref_dur")),
     }
 

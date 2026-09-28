@@ -31,7 +31,7 @@ import soundfile as sf
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.abspath(os.path.join(HERE, "../../../.."))
-LOCK = sys.argv[sys.argv.index("--lock") + 1] if "--lock" in sys.argv else "v3"      # v3 or v31
+LOCK = sys.argv[sys.argv.index("--lock") + 1] if "--lock" in sys.argv else "v3"      # v3, v31 or v32
 LOCK_BEDS = os.path.join(REPO, f"audio/reel/ep01-{LOCK}")
 OUT = os.path.join(REPO, f"audio/reel/ep01-{LOCK}-el")
 SR = 48000

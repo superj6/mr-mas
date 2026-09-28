@@ -280,6 +280,62 @@
     "credits_billed": 1201
    },
    "used_by_subscription": 1201
+  },
+  "phase 5: the v3.2 lock": {
+   "budget_chars": 4000,
+   "_about": "Phase 5 (2026-09-28): the v3.2 lock's 8 new reads (set A, Mas = Jeremy); its 3 cuts and the v3.1 cuts cut from EL takes; stage-chain copies for the DevDay lines; the EL-timed v3.2 variant. No reel. Budget 4,000 characters.",
+   "subscription_before": {
+    "tier": "creator",
+    "character_count": 13894,
+    "character_limit": 131000,
+    "next_character_count_reset_unix": 1793049484,
+    "voice_limit": 30,
+    "voice_slots_used": 2,
+    "professional_voice_limit": 1,
+    "can_extend_character_limit": false,
+    "status": "active",
+    "checked_at": "2026-09-28T03:37:06"
+   },
+   "subscription_after": {
+    "tier": "creator",
+    "character_count": 14085,
+    "character_limit": 131000,
+    "next_character_count_reset_unix": 1793049484,
+    "voice_limit": 30,
+    "voice_slots_used": 2,
+    "professional_voice_limit": 1,
+    "can_extend_character_limit": false,
+    "status": "active",
+    "checked_at": "2026-09-28T03:46:13"
+   },
+   "runs": {
+    "audio/ep01/v3-el/ep01-v32/act1": {
+     "calls": 6,
+     "chars_sent": 164,
+     "credits_billed": 90
+    },
+    "audio/ep01/v3-el/ep01-v32/act2": {
+     "calls": 1,
+     "chars_sent": 89,
+     "credits_billed": 49
+    },
+    "audio/ep01/v3-el/ep01-v32/act3": {
+     "calls": 1,
+     "chars_sent": 45,
+     "credits_billed": 25
+    },
+    "audio/ep01/v3-el/ep01-v32/act4": {
+     "calls": 1,
+     "chars_sent": 49,
+     "credits_billed": 27
+    }
+   },
+   "total": {
+    "calls": 9,
+    "chars_sent": 347,
+    "credits_billed": 191
+   },
+   "used_by_subscription": 191
   }
  },
  "all_phases_total": {

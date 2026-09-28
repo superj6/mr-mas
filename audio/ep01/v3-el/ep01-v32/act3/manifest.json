@@ -1,0 +1,2405 @@
+{
+ "takes": {
+  "e1-a3-18-01__mas-manalt-C": {
+   "take": "e1-a3-18-01__mas-manalt-C",
+   "key": "e603463afdab07da",
+   "base_key": "e603463afdab07da",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": "audio/ep01/v3-el/ep01/act3:e1-a3-18-01__mas-manalt-C",
+   "file": "audio/ep01/v3-el/ep01-v32/act3/wav/e1-a3-18-01__mas-manalt-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 1.425,
+   "offset_s": 0.35,
+   "sent": "Thanks.",
+   "seed": 3391310813,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "cand": "C",
+   "role": "mas-manalt",
+   "measured": {
+    "audible_in_s": 0.43,
+    "audible_out_s": 0.96,
+    "span_s": 0.53,
+    "words": 1,
+    "wpm": 113.2,
+    "syllables": 1,
+    "articulation_sps": 1.89,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.43,
+    "speech_tail_s": 0.465,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 110.7,
+    "f0_range_st": 11.5
+   },
+   "words": [
+    {
+     "w": "Thanks",
+     "t0": 0.41,
+     "t1": 0.838
+    }
+   ],
+   "qa": {
+    "asr": "Thanks.",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -1.68,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 110.7,
+    "f0_range_st": 11.5,
+    "speech_head_s": 0.43,
+    "speech_tail_s": 0.465,
+    "raw_tail_cut": false,
+    "align_median_s": 0.41
+   },
+   "raw": {
+    "raw_first_sound_s": 0.09,
+    "raw_len_s": 0.836,
+    "raw_tail_cut": false
+   },
+   "kokoro": {
+    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-18-01.wav",
+    "mode": "on-mic",
+    "lufs_i": -16.0,
+    "duration_s": 1.765,
+    "audible_in_s": 0.51,
+    "audible_out_s": 1.2,
+    "wpm": 87.0,
+    "median_f0_hz": 130.8,
+    "f0_range_st": 5.7,
+    "delivery": null,
+    "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.915",
+    "device": null
+   }
+  },
+  "e1-a3-18-04__mas-manalt-C": {
+   "take": "e1-a3-18-04__mas-manalt-C",
+   "key": "5eefa0a6a4e0fdcb",
+   "base_key": "5eefa0a6a4e0fdcb",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -18 LUFS; -1.5 dBTP)",
+   "reused_from": "audio/ep01/v3-el/ep01/act3:e1-a3-18-04__mas-manalt-C",
+   "file": "audio/ep01/v3-el/ep01-v32/act3/wav/e1-a3-18-04__mas-manalt-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.68,
+   "offset_s": 0.35,
+   "sent": "I made it for everyone else.",
+   "seed": 2444875780,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.85
+   },
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "cand": "C",
+   "role": "mas-manalt",
+   "measured": {
+    "audible_in_s": 0.39,
+    "audible_out_s": 2.22,
+    "span_s": 1.83,
+    "words": 6,
+    "wpm": 196.7,
+    "syllables": 8,
+    "articulation_sps": 4.37,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.39,
+    "speech_tail_s": 0.46,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 107.0,
+    "f0_range_st": 8.5
+   },
+   "words": [
+    {
+     "w": "I",
+     "t0": 0.37,
+     "t1": 0.466
+    },
+    {
+     "w": "made",
+     "t0": 0.605,
+     "t1": 0.826
+    },
+    {
+     "w": "it",
+     "t0": 0.872,
+     "t1": 0.942
+    },
+    {
+     "w": "for",
+     "t0": 1.0,
+     "t1": 1.139
+    },
+    {
+     "w": "everyone",
+     "t0": 1.209,
+     "t1": 1.685
+    },
+    {
+     "w": "else",
+     "t0": 1.743,
+     "t1": 2.138
+    }
+   ],
+   "qa": {
+    "asr": "I made it for everyone else.",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -18.0,
+    "target_lufs": -18.0,
+    "true_peak_dbtp": -3.83,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 107.0,
+    "f0_range_st": 8.5,
+    "speech_head_s": 0.39,
+    "speech_tail_s": 0.46,
+    "raw_tail_cut": false,
+    "align_median_s": 0.112
+   },
+   "raw": {
+    "raw_first_sound_s": 0.04,
+    "raw_len_s": 2.183,
+    "raw_tail_cut": false
+   },
+   "kokoro": {
+    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-18-04.wav",
+    "mode": "on-mic",
+    "lufs_i": -18.0,
+    "duration_s": 3.16,
+    "audible_in_s": 0.53,
+    "audible_out_s": 2.46,
+    "wpm": 186.5,
+    "median_f0_hz": 115.2,
+    "f0_range_st": 8.6,
+    "delivery": null,
+    "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.850",
+    "device": null
+   }
+  },
+  "e1-a3-18-03__mas-manalt-C": {
+   "take": "e1-a3-18-03__mas-manalt-C",
+   "key": "6c5592f5c910c524",
+   "base_key": "6c5592f5c910c524",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": "audio/ep01/v3-el/ep01/act3:e1-a3-18-03__mas-manalt-C",
+   "file": "audio/ep01/v3-el/ep01-v32/act3/wav/e1-a3-18-03__mas-manalt-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 1.88,
+   "offset_s": 0.35,
+   "sent": "You can stay.",
+   "seed": 3921771064,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "cand": "C",
+   "role": "mas-manalt",
+   "measured": {
+    "audible_in_s": 0.4,
+    "audible_out_s": 1.36,
+    "span_s": 0.96,
+    "words": 3,
+    "wpm": 187.5,
+    "syllables": 3,
+    "articulation_sps": 3.12,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.52,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 114.5,
+    "f0_range_st": 5.1
+   },
+   "words": [
+    {
+     "w": "You",
+     "t0": 0.38,
+     "t1": 0.536
+    },
+    {
+     "w": "can",
+     "t0": 0.582,
+     "t1": 0.733
+    },
+    {
+     "w": "stay",
+     "t0": 0.803,
+     "t1": 1.232
+    }
+   ],
+   "qa": {
+    "asr": "You can stay.",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.35,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.41,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 114.5,
+    "f0_range_st": 5.1,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.52,
+    "raw_tail_cut": false,
+    "align_median_s": 0.083
+   },
+   "raw": {
+    "raw_first_sound_s": 0.055,
+    "raw_len_s": 1.254,
+    "raw_tail_cut": false
+   },
+   "kokoro": {
+    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-18-03.wav",
+    "mode": "on-mic",
+    "lufs_i": -16.0,
+    "duration_s": 2.13,
+    "audible_in_s": 0.53,
+    "audible_out_s": 1.5,
+    "wpm": 185.6,
+    "median_f0_hz": 114.2,
+    "f0_range_st": 9.3,
+    "delivery": null,
+    "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.915",
+    "device": null
+   }
+  },
+  "e1-a3-19-01__remuhcs-A": {
+   "take": "e1-a3-19-01__remuhcs-A",
+   "key": "76838be8eb5bf6a0",
+   "base_key": "76838be8eb5bf6a0",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": "audio/ep01/v3-el/auditions:e1-a3-19-01__remuhcs-A",
+   "file": "audio/ep01/v3-el/ep01-v32/act3/wav/e1-a3-19-01__remuhcs-A.wav",
+   "file_device": "audio/ep01/v3-el/ep01-v32/act3/wav-device/e1-a3-19-01__remuhcs-A.call.wav",
+   "device": "call",
+   "duration_s": 2.615,
+   "offset_s": 0.35,
+   "sent": "Every single person raised their hand.",
+   "seed": 4274836895,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "voice_id": "o0t0Wz5oSDuuCV6p7rba",
+   "voice_name": "Marc Laurent - Confident and Engaging",
+   "cand": "A",
+   "role": "remuhcs",
+   "measured": {
+    "audible_in_s": 0.38,
+    "audible_out_s": 2.14,
+    "span_s": 1.76,
+    "words": 6,
+    "wpm": 204.5,
+    "syllables": 10,
+    "articulation_sps": 5.68,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.475,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 119.0,
+    "f0_range_st": 13.0
+   },
+   "words": [
+    {
+     "w": "Every",
+     "t0": 0.36,
+     "t1": 0.64
+    },
+    {
+     "w": "single",
+     "t0": 0.687,
+     "t1": 0.965
+    },
+    {
+     "w": "person",
+     "t0": 1.0,
+     "t1": 1.314
+    },
+    {
+     "w": "raised",
+     "t0": 1.372,
+     "t1": 1.604
+    },
+    {
+     "w": "their",
+     "t0": 1.627,
+     "t1": 1.778
+    },
+    {
+     "w": "hand",
+     "t0": 1.824,
+     "t1": 2.115
+    }
+   ],
+   "qa": {
+    "asr": "Every single person raised their hand.",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.85,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 119.0,
+    "f0_range_st": 13.0,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.475,
+    "raw_tail_cut": false,
+    "align_median_s": 0.14
+   },
+   "raw": {
+    "raw_first_sound_s": 0.035,
+    "raw_len_s": 2.09,
+    "raw_tail_cut": false
+   },
+   "kokoro": {
+    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-19-01.wav",
+    "mode": "call",
+    "lufs_i": -16.0,
+    "duration_s": 3.135,
+    "audible_in_s": 0.5,
+    "audible_out_s": 2.67,
+    "wpm": 165.9,
+    "median_f0_hz": 115.9,
+    "f0_range_st": 8.4,
+    "delivery": "O.S., on the monitor",
+    "voice": "am_adam*0.50+am_puck*0.50 (Kokoro-82M stock) · c-adam-puck-forum · speed 0.870",
+    "device": "monitor"
+   }
+  },
+  "e1-a3-19-02__nole-A": {
+   "take": "e1-a3-19-02__nole-A",
+   "key": "2266d43a08ff5064",
+   "base_key": "e3dcf02e1cbf355a",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": "audio/ep01/v3-el/ep01-v31/act3:e1-a3-19-02__nole-A",
+   "file": "audio/ep01/v3-el/ep01-v32/act3/wav/e1-a3-19-02__nole-A.wav",
+   "file_device": "audio/ep01/v3-el/ep01-v32/act3/wav-device/e1-a3-19-02__nole-A.call.wav",
+   "device": "call",
+   "duration_s": 2.883,
+   "offset_s": 0.35,
+   "sent": "It's important for us to have a referee.",
+   "seed": 791260508,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.35,
+    "similarity_boost": 0.75,
+    "style": 0.2,
+    "use_speaker_boost": true,
+    "speed": 1.05
+   },
+   "voice_id": "ya031zGCAxyRGrvB3or9",
+   "voice_name": "Ryan - Confident and Bold",
+   "cand": "A",
+   "role": "nole",
+   "measured": {
+    "audible_in_s": 0.41,
+    "audible_out_s": 2.44,
+    "span_s": 2.03,
+    "words": 8,
+    "wpm": 236.5,
+    "syllables": 12,
+    "articulation_sps": 5.91,
+    "pauses_s": [
+     0.09
+    ],
+    "longest_internal_gap_s": 0.09,
+    "speech_head_s": 0.41,
+    "speech_tail_s": 0.443,
+    "tail_to_60_s": 0.003,
+    "median_f0_hz": 94.2,
+    "f0_range_st": 12.3
+   },
+   "words": [
+    {
+     "w": "It's",
+     "t0": 0.39,
+     "t1": 0.571
+    },
+    {
+     "w": "important",
+     "t0": 0.605,
+     "t1": 1.023
+    },
+    {
+     "w": "for",
+     "t0": 1.058,
+     "t1": 1.163
+    },
+    {
+     "w": "us",
+     "t0": 1.221,
+     "t1": 1.314
+    },
+    {
+     "w": "to",
+     "t0": 1.36,
+     "t1": 1.407
+    },
+    {
+     "w": "have",
+     "t0": 1.476,
+     "t1": 1.615
+    },
+    {
+     "w": "a",
+     "t0": 1.65,
+     "t1": 1.674
+    },
+    {
+     "w": "referee",
+     "t0": 1.732,
+     "t1": 2.242
+    }
+   ],
+   "qa": {
+    "asr": "It's important for us to have a referee.",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.5,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 94.2,
+    "f0_range_st": 12.3,
+    "speech_head_s": 0.41,
+    "speech_tail_s": 0.443,
+    "raw_tail_cut": false,
+    "align_median_s": 0.07
+   },
+   "raw": {
+    "raw_first_sound_s": 0.06,
+    "raw_len_s": 2.183,
+    "raw_tail_cut": false
+   },
+   "kokoro": {
+    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-19-02.wav",
+    "mode": "call",
+    "lufs_i": -16.0,
+    "duration_s": 3.23,
+    "audible_in_s": 0.5,
+    "audible_out_s": 2.75,
+    "wpm": 213.3,
+    "median_f0_hz": 133.9,
+    "f0_range_st": 13.9,
+    "delivery": "on the monitor",
+    "voice": "am_fenrir (Kokoro-82M stock) · a-fenrir-burst (pass-1 pick, dry) · speed 0.950",
+    "device": "monitor"
+   },
+   "pitch_retry": true
+  },
+  "e1-a3-20-02__gerg-mockbran-A": {
+   "take": "e1-a3-20-02__gerg-mockbran-A",
+   "key": "531a3649f0b30f16",
+   "base_key": "531a3649f0b30f16",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": "audio/ep01/v3-el/ep01/act3:e1-a3-20-02__gerg-mockbran-A",
+   "file": "audio/ep01/v3-el/ep01-v32/act3/wav/e1-a3-20-02__gerg-mockbran-A.wav",
+   "file_device": "audio/ep01/v3-el/ep01-v32/act3/wav-device/e1-a3-20-02__gerg-mockbran-A.call.wav",
+   "device": "call",
+   "duration_s": 2.743,
+   "offset_s": 0.35,
+   "sent": "Moss, did you just post on Tidder?",
+   "seed": 3680886982,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "y0s2ExEMuum3muUnA6Zd",
+   "voice_name": "Marcus - Bright, Upbeat and Clear",
+   "cand": "A",
+   "role": "gerg-mockbran",
+   "measured": {
+    "audible_in_s": 0.36,
+    "audible_out_s": 2.35,
+    "span_s": 1.99,
+    "words": 7,
+    "wpm": 211.1,
+    "syllables": 8,
+    "articulation_sps": 4.02,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.36,
+    "speech_tail_s": 0.393,
+    "tail_to_60_s": 0.003,
+    "median_f0_hz": 165.3,
+    "f0_range_st": 12.2
+   },
+   "words": [
+    {
+     "w": "Mas",
+     "t0": 0.35,
+     "t1": 0.745
+    },
+    {
+     "w": "did",
+     "t0": 0.884,
+     "t1": 1.058
+    },
+    {
+     "w": "you",
+     "t0": 1.093,
+     "t1": 1.174
+    },
+    {
+     "w": "just",
+     "t0": 1.232,
+     "t1": 1.383
+    },
+    {
+     "w": "post",
+     "t0": 1.418,
+     "t1": 1.627
+    },
+    {
+     "w": "on",
+     "t0": 1.674,
+     "t1": 1.743
+    },
+    {
+     "w": "Tidder",
+     "t0": 1.801,
+     "t1": 2.091
+    }
+   ],
+   "qa": {
+    "asr": "Moss, did you just post on Titter?",
+    "cer": 0.129,
+    "word_recall_nonames": 0.833,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -4.04,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 165.3,
+    "f0_range_st": 12.2,
+    "speech_head_s": 0.36,
+    "speech_tail_s": 0.393,
+    "raw_tail_cut": false,
+    "align_median_s": 0.073
+   },
+   "raw": {
+    "raw_first_sound_s": 0.015,
+    "raw_len_s": 2.043,
+    "raw_tail_cut": false
+   },
+   "kokoro": {
+    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-20-02.wav",
+    "mode": "call",
+    "lufs_i": -16.0,
+    "duration_s": 2.92,
+    "audible_in_s": 0.5,
+    "audible_out_s": 2.26,
+    "wpm": 238.6,
+    "median_f0_hz": 134.7,
+    "f0_range_st": 9.0,
+    "delivery": "filter, typing",
+    "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.020",
+    "device": "call"
+   }
+  },
+  "e1-a3-20-03__mas-manalt-C": {
+   "take": "e1-a3-20-03__mas-manalt-C",
+   "key": "433c5bb4e0d8ae74",
+   "base_key": "433c5bb4e0d8ae74",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": "audio/ep01/v3-el/ep01/act3:e1-a3-20-03__mas-manalt-C",
+   "file": "audio/ep01/v3-el/ep01-v32/act3/wav/e1-a3-20-03__mas-manalt-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 1.86,
+   "offset_s": 0.35,
+   "sent": "I'm editing it.",
+   "seed": 3206924476,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "cand": "C",
+   "role": "mas-manalt",
+   "measured": {
+    "audible_in_s": 0.37,
+    "audible_out_s": 1.39,
+    "span_s": 1.02,
+    "words": 3,
+    "wpm": 176.5,
+    "syllables": 5,
+    "articulation_sps": 4.9,
+    "pauses_s": [
+     0.06
+    ],
+    "longest_internal_gap_s": 0.06,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.47,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 103.8,
+    "f0_range_st": 8.4
+   },
+   "words": [
+    {
+     "w": "I'm",
+     "t0": 0.35,
+     "t1": 0.559
+    },
+    {
+     "w": "editing",
+     "t0": 0.64,
+     "t1": 1.023
+    },
+    {
+     "w": "it",
+     "t0": 1.093,
+     "t1": 1.279
+    }
+   ],
+   "qa": {
+    "asr": "I'm editing it.",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.32,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.32,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 103.8,
+    "f0_range_st": 8.4,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.47,
+    "raw_tail_cut": false,
+    "align_median_s": 0.193
+   },
+   "raw": {
+    "raw_first_sound_s": 0.025,
+    "raw_len_s": 1.3,
+    "raw_tail_cut": false
+   },
+   "kokoro": {
+    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-20-03.wav",
+    "mode": "on-mic",
+    "lufs_i": -16.0,
+    "duration_s": 2.375,
+    "audible_in_s": 0.52,
+    "audible_out_s": 1.74,
+    "wpm": 147.5,
+    "median_f0_hz": 110.3,
+    "f0_range_st": 8.9,
+    "delivery": "eyes on the counter",
+    "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.880",
+    "device": null
+   }
+  },
+  "e1-a3-20-04__gerg-mockbran-A": {
+   "take": "e1-a3-20-04__gerg-mockbran-A",
+   "key": "de119744dfa89039",
+   "base_key": "de119744dfa89039",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": "audio/ep01/v3-el/ep01/act3:e1-a3-20-04__gerg-mockbran-A",
+   "file": "audio/ep01/v3-el/ep01-v32/act3/wav/e1-a3-20-04__gerg-mockbran-A.wav",
+   "file_device": "audio/ep01/v3-el/ep01-v32/act3/wav-device/e1-a3-20-04__gerg-mockbran-A.call.wav",
+   "device": "call",
+   "duration_s": 4.601,
+   "offset_s": 0.35,
+   "sent": "Half the replies think it's a leak. The other half want to know which floor it's on.",
+   "seed": 2125105659,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "y0s2ExEMuum3muUnA6Zd",
+   "voice_name": "Marcus - Bright, Upbeat and Clear",
+   "cand": "A",
+   "role": "gerg-mockbran",
+   "measured": {
+    "audible_in_s": 0.39,
+    "audible_out_s": 3.99,
+    "span_s": 3.6,
+    "words": 17,
+    "wpm": 283.3,
+    "syllables": 18,
+    "articulation_sps": 5.59,
+    "pauses_s": [
+     0.38
+    ],
+    "longest_internal_gap_s": 0.38,
+    "speech_head_s": 0.39,
+    "speech_tail_s": 0.611,
+    "tail_to_60_s": 0.006,
+    "median_f0_hz": 138.8,
+    "f0_range_st": 13.8
+   },
+   "words": [
+    {
+     "w": "Half",
+     "t0": 0.37,
+     "t1": 0.605
+    },
+    {
+     "w": "the",
+     "t0": 0.652,
+     "t1": 0.722
+    },
+    {
+     "w": "replies",
+     "t0": 0.78,
+     "t1": 1.151
+    },
+    {
+     "w": "think",
+     "t0": 1.186,
+     "t1": 1.325
+    },
+    {
+     "w": "it's",
+     "t0": 1.372,
+     "t1": 1.476
+    },
+    {
+     "w": "a",
+     "t0": 1.511,
+     "t1": 1.534
+    },
+    {
+     "w": "leak",
+     "t0": 1.581,
+     "t1": 1.836
+    },
+    {
+     "w": "The",
+     "t0": 2.289,
+     "t1": 2.417
+    },
+    {
+     "w": "other",
+     "t0": 2.475,
+     "t1": 2.649
+    },
+    {
+     "w": "half",
+     "t0": 2.707,
+     "t1": 2.846
+    },
+    {
+     "w": "want",
+     "t0": 2.893,
+     "t1": 2.997
+    },
+    {
+     "w": "to",
+     "t0": 3.02,
+     "t1": 3.067
+    },
+    {
+     "w": "know",
+     "t0": 3.102,
+     "t1": 3.194
+    },
+    {
+     "w": "which",
+     "t0": 3.229,
+     "t1": 3.369
+    },
+    {
+     "w": "floor",
+     "t0": 3.403,
+     "t1": 3.589
+    },
+    {
+     "w": "it's",
+     "t0": 3.636,
+     "t1": 3.74
+    },
+    {
+     "w": "on",
+     "t0": 3.787,
+     "t1": 3.961
+    }
+   ],
+   "qa": {
+    "asr": "Half the replies think it's a leak. The other half want to know which floor it's on.",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.86,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 138.8,
+    "f0_range_st": 13.8,
+    "speech_head_s": 0.39,
+    "speech_tail_s": 0.611,
+    "raw_tail_cut": false,
+    "align_median_s": 0.063
+   },
+   "raw": {
+    "raw_first_sound_s": 0.05,
+    "raw_len_s": 3.901,
+    "raw_tail_cut": false
+   },
+   "kokoro": {
+    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-20-04.wav",
+    "mode": "call",
+    "lufs_i": -16.0,
+    "duration_s": 5.485,
+    "audible_in_s": 0.51,
+    "audible_out_s": 4.7,
+    "wpm": 243.4,
+    "median_f0_hz": 122.8,
+    "f0_range_st": 10.4,
+    "delivery": "filter",
+    "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.020",
+    "device": "call"
+   }
+  },
+  "e1-a3-20-06__mas-manalt-C": {
+   "take": "e1-a3-20-06__mas-manalt-C",
+   "key": "2bf756113b251e7e",
+   "base_key": "2bf756113b251e7e",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": "audio/ep01/v3-el/ep01/act3:e1-a3-20-06__mas-manalt-C",
+   "file": "audio/ep01/v3-el/ep01-v32/act3/wav/e1-a3-20-06__mas-manalt-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 1.954,
+   "offset_s": 0.35,
+   "sent": "How's the build?",
+   "seed": 681420164,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "cand": "C",
+   "role": "mas-manalt",
+   "measured": {
+    "audible_in_s": 0.39,
+    "audible_out_s": 1.3,
+    "span_s": 0.91,
+    "words": 3,
+    "wpm": 197.8,
+    "syllables": 3,
+    "articulation_sps": 3.3,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.39,
+    "speech_tail_s": 0.654,
+    "tail_to_60_s": 0.004,
+    "median_f0_hz": 113.5,
+    "f0_range_st": 9.9
+   },
+   "words": [
+    {
+     "w": "How's",
+     "t0": 0.37,
+     "t1": 0.652
+    },
+    {
+     "w": "the",
+     "t0": 0.71,
+     "t1": 0.791
+    },
+    {
+     "w": "build",
+     "t0": 0.849,
+     "t1": 1.232
+    }
+   ],
+   "qa": {
+    "asr": "How's the build?",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.15,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 113.5,
+    "f0_range_st": 9.9,
+    "speech_head_s": 0.39,
+    "speech_tail_s": 0.654,
+    "raw_tail_cut": false,
+    "align_median_s": 0.049
+   },
+   "raw": {
+    "raw_first_sound_s": 0.05,
+    "raw_len_s": 1.254,
+    "raw_tail_cut": false
+   },
+   "kokoro": {
+    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-20-06.wav",
+    "mode": "on-mic",
+    "lufs_i": -16.0,
+    "duration_s": 2.28,
+    "audible_in_s": 0.55,
+    "audible_out_s": 1.61,
+    "wpm": 169.8,
+    "median_f0_hz": 130.1,
+    "f0_range_st": 10.3,
+    "delivery": "hearing the keys on the line",
+    "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.915",
+    "device": null
+   }
+  },
+  "e1-a3-20-07__gerg-mockbran-A": {
+   "take": "e1-a3-20-07__gerg-mockbran-A",
+   "key": "17d00eb658c707af",
+   "base_key": "17d00eb658c707af",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": "audio/ep01/v3-el/ep01/act3:e1-a3-20-07__gerg-mockbran-A",
+   "file": "audio/ep01/v3-el/ep01-v32/act3/wav/e1-a3-20-07__gerg-mockbran-A.wav",
+   "file_device": "audio/ep01/v3-el/ep01-v32/act3/wav-device/e1-a3-20-07__gerg-mockbran-A.call.wav",
+   "device": "call",
+   "duration_s": 3.985,
+   "offset_s": 0.35,
+   "sent": "Still running. I don't go to bed till it's green. It's bad luck.",
+   "seed": 3762109739,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "y0s2ExEMuum3muUnA6Zd",
+   "voice_name": "Marcus - Bright, Upbeat and Clear",
+   "cand": "A",
+   "role": "gerg-mockbran",
+   "measured": {
+    "audible_in_s": 0.37,
+    "audible_out_s": 3.47,
+    "span_s": 3.1,
+    "words": 13,
+    "wpm": 251.6,
+    "syllables": 14,
+    "articulation_sps": 5.07,
+    "pauses_s": [
+     0.07,
+     0.34
+    ],
+    "longest_internal_gap_s": 0.34,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.515,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 138.8,
+    "f0_range_st": 12.4
+   },
+   "words": [
+    {
+     "w": "Still",
+     "t0": 0.35,
+     "t1": 0.605
+    },
+    {
+     "w": "running",
+     "t0": 0.652,
+     "t1": 0.872
+    },
+    {
+     "w": "I",
+     "t0": 1.128,
+     "t1": 1.174
+    },
+    {
+     "w": "don't",
+     "t0": 1.232,
+     "t1": 1.36
+    },
+    {
+     "w": "go",
+     "t0": 1.383,
+     "t1": 1.441
+    },
+    {
+     "w": "to",
+     "t0": 1.476,
+     "t1": 1.523
+    },
+    {
+     "w": "bed",
+     "t0": 1.557,
+     "t1": 1.674
+    },
+    {
+     "w": "till",
+     "t0": 1.697,
+     "t1": 1.801
+    },
+    {
+     "w": "it's",
+     "t0": 1.836,
+     "t1": 1.941
+    },
+    {
+     "w": "green",
+     "t0": 1.975,
+     "t1": 2.231
+    },
+    {
+     "w": "It's",
+     "t0": 2.649,
+     "t1": 2.835
+    },
+    {
+     "w": "bad",
+     "t0": 2.881,
+     "t1": 3.044
+    },
+    {
+     "w": "luck",
+     "t0": 3.113,
+     "t1": 3.357
+    }
+   ],
+   "qa": {
+    "asr": "Still running. I don't go to bed till it's green. It's bad luck.",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.95,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 138.8,
+    "f0_range_st": 12.4,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.515,
+    "raw_tail_cut": false,
+    "align_median_s": 0.043
+   },
+   "raw": {
+    "raw_first_sound_s": 0.025,
+    "raw_len_s": 3.39,
+    "raw_tail_cut": false
+   },
+   "kokoro": {
+    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-20-07.wav",
+    "mode": "call",
+    "lufs_i": -16.0,
+    "duration_s": 4.765,
+    "audible_in_s": 0.5,
+    "audible_out_s": 4.08,
+    "wpm": 217.9,
+    "median_f0_hz": 122.8,
+    "f0_range_st": 11.2,
+    "delivery": "cheerful, typing",
+    "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.020",
+    "device": "call"
+   }
+  },
+  "e1-a3-20-08__mas-manalt-C": {
+   "take": "e1-a3-20-08__mas-manalt-C",
+   "key": "6be318fc0bcec149",
+   "base_key": "6be318fc0bcec149",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": "audio/ep01/v3-el/ep01/act3:e1-a3-20-08__mas-manalt-C",
+   "file": "audio/ep01/v3-el/ep01-v32/act3/wav/e1-a3-20-08__mas-manalt-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.186,
+   "offset_s": 0.35,
+   "sent": "Go to sleep, Gurg.",
+   "seed": 4215725470,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "cand": "C",
+   "role": "mas-manalt",
+   "measured": {
+    "audible_in_s": 0.43,
+    "audible_out_s": 1.57,
+    "span_s": 1.14,
+    "words": 4,
+    "wpm": 210.5,
+    "syllables": 4,
+    "articulation_sps": 3.51,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.43,
+    "speech_tail_s": 0.616,
+    "tail_to_60_s": 0.006,
+    "median_f0_hz": 101.7,
+    "f0_range_st": 15.1
+   },
+   "words": [
+    {
+     "w": "Go",
+     "t0": 0.41,
+     "t1": 0.536
+    },
+    {
+     "w": "to",
+     "t0": 0.582,
+     "t1": 0.64
+    },
+    {
+     "w": "sleep",
+     "t0": 0.698,
+     "t1": 1.023
+    },
+    {
+     "w": "gerg",
+     "t0": 1.093,
+     "t1": 1.511
+    }
+   ],
+   "qa": {
+    "asr": "Go to sleep, gurg.",
+    "cer": 0.062,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.02,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 101.7,
+    "f0_range_st": 15.1,
+    "speech_head_s": 0.43,
+    "speech_tail_s": 0.616,
+    "raw_tail_cut": false,
+    "align_median_s": 0.042
+   },
+   "raw": {
+    "raw_first_sound_s": 0.085,
+    "raw_len_s": 1.486,
+    "raw_tail_cut": false
+   },
+   "kokoro": {
+    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-20-08.wav",
+    "mode": "on-mic",
+    "lufs_i": -16.0,
+    "duration_s": 2.64,
+    "audible_in_s": 0.57,
+    "audible_out_s": 1.95,
+    "wpm": 173.9,
+    "median_f0_hz": 116.9,
+    "f0_range_st": 9.0,
+    "delivery": null,
+    "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.915",
+    "device": null
+   }
+  },
+  "e1-a3-20-09__gerg-mockbran-A": {
+   "take": "e1-a3-20-09__gerg-mockbran-A",
+   "key": "ff1ddd87fa1c999d",
+   "base_key": "ff1ddd87fa1c999d",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": "audio/ep01/v3-el/ep01/act3:e1-a3-20-09__gerg-mockbran-A",
+   "file": "audio/ep01/v3-el/ep01-v32/act3/wav/e1-a3-20-09__gerg-mockbran-A.wav",
+   "file_device": "audio/ep01/v3-el/ep01-v32/act3/wav-device/e1-a3-20-09__gerg-mockbran-A.call.wav",
+   "device": "call",
+   "duration_s": 2.0,
+   "offset_s": 0.35,
+   "sent": "When it compiles.",
+   "seed": 2099842113,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "y0s2ExEMuum3muUnA6Zd",
+   "voice_name": "Marcus - Bright, Upbeat and Clear",
+   "cand": "A",
+   "role": "gerg-mockbran",
+   "measured": {
+    "audible_in_s": 0.38,
+    "audible_out_s": 1.39,
+    "span_s": 1.01,
+    "words": 3,
+    "wpm": 178.2,
+    "syllables": 4,
+    "articulation_sps": 3.96,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.61,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 130.8,
+    "f0_range_st": 14.7
+   },
+   "words": [
+    {
+     "w": "When",
+     "t0": 0.36,
+     "t1": 0.536
+    },
+    {
+     "w": "it",
+     "t0": 0.571,
+     "t1": 0.64
+    },
+    {
+     "w": "compiles",
+     "t0": 0.698,
+     "t1": 1.29
+    }
+   ],
+   "qa": {
+    "asr": "when it compiles.",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.85,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 130.8,
+    "f0_range_st": 14.7,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.61,
+    "raw_tail_cut": false,
+    "align_median_s": 0.051
+   },
+   "raw": {
+    "raw_first_sound_s": 0.06,
+    "raw_len_s": 1.3,
+    "raw_tail_cut": false
+   },
+   "kokoro": {
+    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-20-09.wav",
+    "mode": "call",
+    "lufs_i": -16.0,
+    "duration_s": 1.87,
+    "audible_in_s": 0.51,
+    "audible_out_s": 1.32,
+    "wpm": 222.2,
+    "median_f0_hz": 147.3,
+    "f0_range_st": 4.0,
+    "delivery": "cheerful",
+    "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.060",
+    "device": "call"
+   }
+  },
+  "e1-a3-21-01__nedib-A": {
+   "take": "e1-a3-21-01__nedib-A",
+   "key": "ea3fb54641ad8c61",
+   "base_key": "ea3fb54641ad8c61",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": "audio/ep01/v3-el/ep01/act3:e1-a3-21-01__nedib-A",
+   "file": "audio/ep01/v3-el/ep01-v32/act3/wav/e1-a3-21-01__nedib-A.wav",
+   "file_device": "audio/ep01/v3-el/ep01-v32/act3/wav-device/e1-a3-21-01__nedib-A.call.wav",
+   "device": "call",
+   "duration_s": 6.459,
+   "offset_s": 0.35,
+   "sent": "Here's the deal, folks. This order says if you build the big ones, you test them, and you show us the results.",
+   "seed": 517590967,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "II2zvu784M1JmLdcOa7B",
+   "voice_name": "Johnny - Friendly, Optimistic and Warm",
+   "cand": "A",
+   "role": "nedib",
+   "measured": {
+    "audible_in_s": 0.42,
+    "audible_out_s": 5.91,
+    "span_s": 5.49,
+    "words": 22,
+    "wpm": 240.4,
+    "syllables": 25,
+    "articulation_sps": 4.69,
+    "pauses_s": [
+     0.16,
+     0.07,
+     0.08
+    ],
+    "longest_internal_gap_s": 0.16,
+    "speech_head_s": 0.42,
+    "speech_tail_s": 0.549,
+    "tail_to_60_s": 0.004,
+    "median_f0_hz": 112.7,
+    "f0_range_st": 12.9
+   },
+   "words": [
+    {
+     "w": "Here's",
+     "t0": 0.4,
+     "t1": 0.64
+    },
+    {
+     "w": "the",
+     "t0": 0.687,
+     "t1": 0.756
+    },
+    {
+     "w": "deal",
+     "t0": 0.791,
+     "t1": 0.965
+    },
+    {
+     "w": "folks",
+     "t0": 1.035,
+     "t1": 1.348
+    },
+    {
+     "w": "This",
+     "t0": 1.592,
+     "t1": 1.836
+    },
+    {
+     "w": "order",
+     "t0": 1.917,
+     "t1": 2.173
+    },
+    {
+     "w": "says",
+     "t0": 2.231,
+     "t1": 2.463
+    },
+    {
+     "w": "if",
+     "t0": 2.533,
+     "t1": 2.626
+    },
+    {
+     "w": "you",
+     "t0": 2.672,
+     "t1": 2.765
+    },
+    {
+     "w": "build",
+     "t0": 2.846,
+     "t1": 3.032
+    },
+    {
+     "w": "the",
+     "t0": 3.067,
+     "t1": 3.136
+    },
+    {
+     "w": "big",
+     "t0": 3.206,
+     "t1": 3.392
+    },
+    {
+     "w": "ones",
+     "t0": 3.461,
+     "t1": 3.67
+    },
+    {
+     "w": "you",
+     "t0": 3.752,
+     "t1": 3.868
+    },
+    {
+     "w": "test",
+     "t0": 3.937,
+     "t1": 4.216
+    },
+    {
+     "w": "them",
+     "t0": 4.274,
+     "t1": 4.413
+    },
+    {
+     "w": "and",
+     "t0": 4.483,
+     "t1": 4.622
+    },
+    {
+     "w": "you",
+     "t0": 4.681,
+     "t1": 4.762
+    },
+    {
+     "w": "show",
+     "t0": 4.843,
+     "t1": 5.017
+    },
+    {
+     "w": "us",
+     "t0": 5.075,
+     "t1": 5.168
+    },
+    {
+     "w": "the",
+     "t0": 5.226,
+     "t1": 5.296
+    },
+    {
+     "w": "results",
+     "t0": 5.342,
+     "t1": 5.865
+    }
+   ],
+   "qa": {
+    "asr": "Here's the deal folks, this order says if you build the big ones you test them and you show us the results.",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.19,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 112.7,
+    "f0_range_st": 12.9,
+    "speech_head_s": 0.42,
+    "speech_tail_s": 0.549,
+    "raw_tail_cut": false,
+    "align_median_s": 0.077
+   },
+   "raw": {
+    "raw_first_sound_s": 0.075,
+    "raw_len_s": 5.759,
+    "raw_tail_cut": false
+   },
+   "kokoro": {
+    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-21-01.wav",
+    "mode": "call",
+    "lufs_i": -16.0,
+    "duration_s": 8.16,
+    "audible_in_s": 0.51,
+    "audible_out_s": 7.36,
+    "wpm": 192.7,
+    "median_f0_hz": 103.8,
+    "f0_range_st": 11.2,
+    "delivery": "on the monitor, pen raised, to the room",
+    "voice": "am_fenrir*0.50+am_onyx*0.50 (Kokoro-82M stock) · d-fenrir-onyx-folksy-0 · speed 0.930",
+    "device": "monitor"
+   }
+  },
+  "e1-a3-21-02__deepfake-nedib-A": {
+   "take": "e1-a3-21-02__deepfake-nedib-A",
+   "key": "027f4189a81f2d85",
+   "base_key": "d0751a5449882ba9",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": "audio/ep01/v3-el/auditions:e1-a3-21-02__deepfake-nedib-A",
+   "file": "audio/ep01/v3-el/ep01-v32/act3/wav/e1-a3-21-02__deepfake-nedib-A.wav",
+   "file_device": "audio/ep01/v3-el/ep01-v32/act3/wav-device/e1-a3-21-02__deepfake-nedib-A.call.wav",
+   "device": "call",
+   "duration_s": 2.65,
+   "offset_s": 0.35,
+   "sent": "And then the computers regulate themselves.",
+   "seed": 1402639688,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.85,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "II2zvu784M1JmLdcOa7B",
+   "voice_name": "Johnny - Friendly, Optimistic and Warm",
+   "cand": "A",
+   "role": "deepfake-nedib",
+   "measured": {
+    "audible_in_s": 0.42,
+    "audible_out_s": 2.25,
+    "span_s": 1.83,
+    "words": 6,
+    "wpm": 196.7,
+    "syllables": 11,
+    "articulation_sps": 6.01,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.42,
+    "speech_tail_s": 0.4,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 133.2,
+    "f0_range_st": 13.4
+   },
+   "words": [
+    {
+     "w": "And",
+     "t0": 0.4,
+     "t1": 0.513
+    },
+    {
+     "w": "then",
+     "t0": 0.559,
+     "t1": 0.675
+    },
+    {
+     "w": "the",
+     "t0": 0.722,
+     "t1": 0.791
+    },
+    {
+     "w": "computers",
+     "t0": 0.826,
+     "t1": 1.244
+    },
+    {
+     "w": "regulate",
+     "t0": 1.302,
+     "t1": 1.685
+    },
+    {
+     "w": "themselves",
+     "t0": 1.72,
+     "t1": 2.208
+    }
+   ],
+   "qa": {
+    "asr": "and then the computers regulate themselves.",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.99,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 133.2,
+    "f0_range_st": 13.4,
+    "speech_head_s": 0.42,
+    "speech_tail_s": 0.4,
+    "raw_tail_cut": false,
+    "align_median_s": 0.18
+   },
+   "raw": {
+    "raw_first_sound_s": 0.075,
+    "raw_len_s": 1.95,
+    "raw_tail_cut": false
+   },
+   "kokoro": {
+    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-21-02.wav",
+    "mode": "call",
+    "lufs_i": -16.0,
+    "duration_s": 3.405,
+    "audible_in_s": 0.5,
+    "audible_out_s": 2.74,
+    "wpm": 160.7,
+    "median_f0_hz": 111.9,
+    "f0_range_st": 11.6,
+    "delivery": "the same cadence, a shade too smooth, carrying on as if it were the same sentence",
+    "voice": "am_fenrir*0.50+am_onyx*0.50 (Kokoro-82M stock) · d-fenrir-onyx-folksy-0 + gloss · speed 0.970",
+    "device": "monitor"
+   }
+  },
+  "e1-a3-21-04__nedib-A": {
+   "take": "e1-a3-21-04__nedib-A",
+   "key": "9da74d618756371f",
+   "base_key": "9da74d618756371f",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": "audio/ep01/v3-el/ep01/act3:e1-a3-21-04__nedib-A",
+   "file": "audio/ep01/v3-el/ep01-v32/act3/wav/e1-a3-21-04__nedib-A.wav",
+   "file_device": "audio/ep01/v3-el/ep01-v32/act3/wav-device/e1-a3-21-04__nedib-A.call.wav",
+   "device": "call",
+   "duration_s": 2.14,
+   "offset_s": 0.35,
+   "sent": "When the hell did I say that?",
+   "seed": 3662967953,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "II2zvu784M1JmLdcOa7B",
+   "voice_name": "Johnny - Friendly, Optimistic and Warm",
+   "cand": "A",
+   "role": "nedib",
+   "measured": {
+    "audible_in_s": 0.35,
+    "audible_out_s": 1.66,
+    "span_s": 1.31,
+    "words": 7,
+    "wpm": 320.6,
+    "syllables": 7,
+    "articulation_sps": 5.34,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.48,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 100.3,
+    "f0_range_st": 11.5
+   },
+   "words": [
+    {
+     "w": "When",
+     "t0": 0.35,
+     "t1": 0.559
+    },
+    {
+     "w": "the",
+     "t0": 0.594,
+     "t1": 0.663
+    },
+    {
+     "w": "hell",
+     "t0": 0.698,
+     "t1": 0.814
+    },
+    {
+     "w": "did",
+     "t0": 0.861,
+     "t1": 0.965
+    },
+    {
+     "w": "I",
+     "t0": 1.0,
+     "t1": 1.035
+    },
+    {
+     "w": "say",
+     "t0": 1.093,
+     "t1": 1.256
+    },
+    {
+     "w": "that",
+     "t0": 1.314,
+     "t1": 1.557
+    }
+   ],
+   "qa": {
+    "asr": "When the hell did I say that?",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.4,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 100.3,
+    "f0_range_st": 11.5,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.48,
+    "raw_tail_cut": false,
+    "align_median_s": 0.06
+   },
+   "raw": {
+    "raw_first_sound_s": 0.01,
+    "raw_len_s": 1.44,
+    "raw_tail_cut": false
+   },
+   "kokoro": {
+    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-21-04.wav",
+    "mode": "call",
+    "lufs_i": -16.0,
+    "duration_s": 3.16,
+    "audible_in_s": 0.5,
+    "audible_out_s": 2.6,
+    "wpm": 200.0,
+    "median_f0_hz": 130.1,
+    "f0_range_st": 10.4,
+    "delivery": null,
+    "voice": "am_fenrir*0.50+am_onyx*0.50 (Kokoro-82M stock) · d-fenrir-onyx-folksy-0 · speed 0.880",
+    "device": "monitor"
+   }
+  },
+  "e1-a3-21-06__mas-manalt-C": {
+   "take": "e1-a3-21-06__mas-manalt-C",
+   "key": "8752ac03160ad4a2",
+   "base_key": "8752ac03160ad4a2",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": "audio/ep01/v3-el/ep01/act3:e1-a3-21-06__mas-manalt-C",
+   "file": "audio/ep01/v3-el/ep01-v32/act3/wav/e1-a3-21-06__mas-manalt-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 1.95,
+   "offset_s": 0.35,
+   "sent": "Which one's real?",
+   "seed": 3827145956,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "cand": "C",
+   "role": "mas-manalt",
+   "measured": {
+    "audible_in_s": 0.42,
+    "audible_out_s": 1.44,
+    "span_s": 1.02,
+    "words": 3,
+    "wpm": 176.5,
+    "syllables": 4,
+    "articulation_sps": 3.92,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.42,
+    "speech_tail_s": 0.51,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 93.7,
+    "f0_range_st": 11.1
+   },
+   "words": [
+    {
+     "w": "Which",
+     "t0": 0.4,
+     "t1": 0.617
+    },
+    {
+     "w": "one's",
+     "t0": 0.687,
+     "t1": 0.907
+    },
+    {
+     "w": "real",
+     "t0": 0.977,
+     "t1": 1.314
+    }
+   ],
+   "qa": {
+    "asr": "Which one's real?",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.66,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 93.7,
+    "f0_range_st": 11.1,
+    "speech_head_s": 0.42,
+    "speech_tail_s": 0.51,
+    "raw_tail_cut": false,
+    "align_median_s": 0.127
+   },
+   "raw": {
+    "raw_first_sound_s": 0.08,
+    "raw_len_s": 1.347,
+    "raw_tail_cut": false
+   },
+   "kokoro": {
+    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-21-06.wav",
+    "mode": "on-mic",
+    "lufs_i": -16.0,
+    "duration_s": 2.425,
+    "audible_in_s": 0.6,
+    "audible_out_s": 1.77,
+    "wpm": 153.8,
+    "median_f0_hz": 122.1,
+    "f0_range_st": 8.9,
+    "delivery": "to the Orb, a small test; a wh-question, so it falls",
+    "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.915",
+    "device": null
+   }
+  },
+  "v32-a3-0001__mas-manalt-C": {
+   "take": "v32-a3-0001__mas-manalt-C",
+   "key": "2121adaa3c5ec32e",
+   "base_key": "2121adaa3c5ec32e",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep01/v3-el/ep01-v32/act3/wav/v32-a3-0001__mas-manalt-C.wav",
+   "file_device": "audio/ep01/v3-el/ep01-v32/act3/wav-device/v32-a3-0001__mas-manalt-C.stage.wav",
+   "device": "pa",
+   "duration_s": 4.58,
+   "offset_s": 0.35,
+   "sent": "And today, you can build your own Chat G-T-P.",
+   "seed": 1790711263,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "cand": "C",
+   "role": "mas-manalt",
+   "measured": {
+    "audible_in_s": 0.38,
+    "audible_out_s": 4.06,
+    "span_s": 3.68,
+    "words": 8,
+    "wpm": 130.4,
+    "syllables": 9,
+    "articulation_sps": 2.7,
+    "pauses_s": [
+     0.35
+    ],
+    "longest_internal_gap_s": 0.35,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.52,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 112.7,
+    "f0_range_st": 9.6
+   },
+   "words": [
+    {
+     "w": "And",
+     "t0": 0.36,
+     "t1": 0.513
+    },
+    {
+     "w": "today",
+     "t0": 0.571,
+     "t1": 1.047
+    },
+    {
+     "w": "you",
+     "t0": 1.476,
+     "t1": 1.581
+    },
+    {
+     "w": "can",
+     "t0": 1.639,
+     "t1": 1.755
+    },
+    {
+     "w": "build",
+     "t0": 1.813,
+     "t1": 2.01
+    },
+    {
+     "w": "your",
+     "t0": 2.068,
+     "t1": 2.208
+    },
+    {
+     "w": "own",
+     "t0": 2.277,
+     "t1": 2.451
+    },
+    {
+     "w": "chatgtp",
+     "t0": 2.533,
+     "t1": 3.717
+    }
+   ],
+   "qa": {
+    "asr": "And today, you can build your own chat GTP.",
+    "cer": 0.025,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -1.91,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 112.7,
+    "f0_range_st": 9.6,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.52,
+    "raw_tail_cut": false,
+    "align_median_s": 0.044
+   },
+   "raw": {
+    "raw_first_sound_s": 0.04,
+    "raw_len_s": 3.947,
+    "raw_tail_cut": false
+   },
+   "kokoro": {
+    "file": "audio/ep01/v32/act3/wav/v32-a3-0001.wav",
+    "mode": "on-mic",
+    "lufs_i": -16.0,
+    "duration_s": 4.08,
+    "audible_in_s": 0.52,
+    "audible_out_s": 3.44,
+    "wpm": 164.4,
+    "median_f0_hz": 114.6,
+    "f0_range_st": 10.6,
+    "delivery": "keynote-polite and pleased, the lowercase register at hall size; a gift, not a pitch",
+    "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.915",
+    "device": "pa"
+   }
+  },
+  "e1-a3-22-01__mas-manalt-C": {
+   "take": "e1-a3-22-01__mas-manalt-C",
+   "key": "aef2db4548057e2b",
+   "base_key": "aef2db4548057e2b",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": "audio/ep01/v3-el/ep01/act3:e1-a3-22-01__mas-manalt-C",
+   "file": "audio/ep01/v3-el/ep01-v32/act3/wav/e1-a3-22-01__mas-manalt-C.wav",
+   "file_device": "audio/ep01/v3-el/ep01-v32/act3/wav-device/e1-a3-22-01__mas-manalt-C.stage.wav",
+   "device": "pa",
+   "duration_s": 2.655,
+   "offset_s": 0.35,
+   "sent": "So, how's the partnership going?",
+   "seed": 3981881470,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "cand": "C",
+   "role": "mas-manalt",
+   "measured": {
+    "audible_in_s": 0.37,
+    "audible_out_s": 2.17,
+    "span_s": 1.8,
+    "words": 5,
+    "wpm": 166.7,
+    "syllables": 7,
+    "articulation_sps": 3.89,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.485,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 105.3,
+    "f0_range_st": 13.2
+   },
+   "words": [
+    {
+     "w": "So",
+     "t0": 0.35,
+     "t1": 0.652
+    },
+    {
+     "w": "how's",
+     "t0": 0.733,
+     "t1": 0.989
+    },
+    {
+     "w": "the",
+     "t0": 1.047,
+     "t1": 1.116
+    },
+    {
+     "w": "partnership",
+     "t0": 1.163,
+     "t1": 1.72
+    },
+    {
+     "w": "going",
+     "t0": 1.778,
+     "t1": 2.126
+    }
+   ],
+   "qa": {
+    "asr": "So, how's the partnership going?",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.7,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 105.3,
+    "f0_range_st": 13.2,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.485,
+    "raw_tail_cut": false,
+    "align_median_s": 0.043
+   },
+   "raw": {
+    "raw_first_sound_s": 0.025,
+    "raw_len_s": 2.136,
+    "raw_tail_cut": false
+   },
+   "kokoro": {
+    "file": "audio/ep01/v32/act3/wav/e1-a3-22-01.stage.wav",
+    "mode": "call",
+    "lufs_i": -16.0,
+    "duration_s": 3.01,
+    "audible_in_s": 0.5,
+    "audible_out_s": 2.3,
+    "wpm": 166.7,
+    "median_f0_hz": 121.3,
+    "f0_range_st": 10.9,
+    "delivery": "on the monitor, on stage, turning to him; keynote-polite",
+    "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.915",
+    "device": "pa"
+   }
+  },
+  "e1-a3-22-02__tasya-A": {
+   "take": "e1-a3-22-02__tasya-A",
+   "key": "de265563da2d0ece",
+   "base_key": "de265563da2d0ece",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": "audio/ep01/v3-el/ep01/act3:e1-a3-22-02__tasya-A",
+   "file": "audio/ep01/v3-el/ep01-v32/act3/wav/e1-a3-22-02__tasya-A.wav",
+   "file_device": "audio/ep01/v3-el/ep01-v32/act3/wav-device/e1-a3-22-02__tasya-A.stage.wav",
+   "device": "pa",
+   "duration_s": 2.205,
+   "offset_s": 0.35,
+   "sent": "We love you guys.",
+   "seed": 2769618434,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 0.9
+   },
+   "voice_id": "raMcNf2S8wCmuaBcyI6E",
+   "voice_name": "Tyler Kurk - Smooth, Pleasant and Clear",
+   "cand": "A",
+   "role": "tasya",
+   "measured": {
+    "audible_in_s": 0.38,
+    "audible_out_s": 1.75,
+    "span_s": 1.37,
+    "words": 4,
+    "wpm": 175.2,
+    "syllables": 4,
+    "articulation_sps": 2.92,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.455,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 108.9,
+    "f0_range_st": 13.0
+   },
+   "words": [
+    {
+     "w": "We",
+     "t0": 0.36,
+     "t1": 0.559
+    },
+    {
+     "w": "love",
+     "t0": 0.663,
+     "t1": 0.907
+    },
+    {
+     "w": "you",
+     "t0": 0.954,
+     "t1": 1.058
+    },
+    {
+     "w": "guys",
+     "t0": 1.151,
+     "t1": 1.65
+    }
+   ],
+   "qa": {
+    "asr": "We love you guys",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.74,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 108.9,
+    "f0_range_st": 13.0,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.455,
+    "raw_tail_cut": false,
+    "align_median_s": 0.154
+   },
+   "raw": {
+    "raw_first_sound_s": 0.045,
+    "raw_len_s": 1.718,
+    "raw_tail_cut": false
+   },
+   "kokoro": {
+    "file": "audio/ep01/v32/act3/wav/e1-a3-22-02.stage.wav",
+    "mode": "call",
+    "lufs_i": -16.0,
+    "duration_s": 2.925,
+    "audible_in_s": 0.5,
+    "audible_out_s": 2.23,
+    "wpm": 242.8,
+    "median_f0_hz": 141.8,
+    "f0_range_st": 14.3,
+    "delivery": "on the monitor; a hearty laugh first",
+    "voice": "am_eric (Kokoro-82M stock) · b-eric-warm · speed 0.920",
+    "device": "pa"
+   },
+   "pitch_retry": true
+  },
+  "v3-vo-16__mas-manalt-C": {
+   "take": "v3-vo-16__mas-manalt-C",
+   "key": "8fc8dc55f07e8ec1",
+   "base_key": "8fc8dc55f07e8ec1",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -18 LUFS; -1.5 dBTP)",
+   "reused_from": "audio/ep01/v3-el/ep01/act3:v3-vo-16__mas-manalt-C",
+   "file": "audio/ep01/v3-el/ep01-v32/act3/wav/v3-vo-16__mas-manalt-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 4.54,
+   "offset_s": 0.35,
+   "sent": "Thrilled is too much. Enthusiastic is a lot.",
+   "seed": 1688756543,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.85
+   },
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "cand": "C",
+   "role": "mas-manalt",
+   "measured": {
+    "audible_in_s": 0.39,
+    "audible_out_s": 4.08,
+    "span_s": 3.69,
+    "words": 8,
+    "wpm": 130.1,
+    "syllables": 11,
+    "articulation_sps": 3.15,
+    "pauses_s": [
+     0.2
+    ],
+    "longest_internal_gap_s": 0.2,
+    "speech_head_s": 0.39,
+    "speech_tail_s": 0.46,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 109.0,
+    "f0_range_st": 14.6
+   },
+   "words": [
+    {
+     "w": "Thrilled",
+     "t0": 0.37,
+     "t1": 0.907
+    },
+    {
+     "w": "is",
+     "t0": 0.965,
+     "t1": 1.07
+    },
+    {
+     "w": "too",
+     "t0": 1.139,
+     "t1": 1.302
+    },
+    {
+     "w": "much",
+     "t0": 1.383,
+     "t1": 1.743
+    },
+    {
+     "w": "enthusiastic",
+     "t0": 2.103,
+     "t1": 3.194
+    },
+    {
+     "w": "is",
+     "t0": 3.264,
+     "t1": 3.369
+    },
+    {
+     "w": "a",
+     "t0": 3.438,
+     "t1": 3.485
+    },
+    {
+     "w": "lot",
+     "t0": 3.566,
+     "t1": 4.007
+    }
+   ],
+   "qa": {
+    "asr": "Thrilled is too much. Enthusiastic is a lot.",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -18.0,
+    "target_lufs": -18.0,
+    "true_peak_dbtp": -4.06,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 109.0,
+    "f0_range_st": 14.6,
+    "speech_head_s": 0.39,
+    "speech_tail_s": 0.46,
+    "raw_tail_cut": false,
+    "align_median_s": 0.099
+   },
+   "raw": {
+    "raw_first_sound_s": 0.055,
+    "raw_len_s": 4.04,
+    "raw_tail_cut": false
+   },
+   "kokoro": {
+    "file": "audio/ep01/v3/act3/wav/v3-vo-16.wav",
+    "mode": "on-mic",
+    "lufs_i": -18.0,
+    "duration_s": 4.64,
+    "audible_in_s": 0.52,
+    "audible_out_s": 3.93,
+    "wpm": 140.8,
+    "median_f0_hz": 115.2,
+    "f0_range_st": 11.5,
+    "delivery": "weighing the reply strip, precise and private: the one place in the episode where we watch him choose \"super.\"",
+    "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.870",
+    "device": null
+   }
+  },
+  "e1-a3-22-03__mas-manalt-C": {
+   "take": "e1-a3-22-03__mas-manalt-C",
+   "key": "e1dd6e34917a64d1",
+   "base_key": "e1dd6e34917a64d1",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": "audio/ep01/v3-el/ep01/act3:e1-a3-22-03__mas-manalt-C",
+   "file": "audio/ep01/v3-el/ep01-v32/act3/wav/e1-a3-22-03__mas-manalt-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 1.582,
+   "offset_s": 0.35,
+   "sent": "Super.",
+   "seed": 3425721218,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "cand": "C",
+   "role": "mas-manalt",
+   "measured": {
+    "audible_in_s": 0.35,
+    "audible_out_s": 1.15,
+    "span_s": 0.8,
+    "words": 1,
+    "wpm": 75.0,
+    "syllables": 2,
+    "articulation_sps": 3.08,
+    "pauses_s": [
+     0.15
+    ],
+    "longest_internal_gap_s": 0.15,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.432,
+    "tail_to_60_s": 0.002,
+    "median_f0_hz": 104.4,
+    "f0_range_st": 11.2
+   },
+   "words": [
+    {
+     "w": "Super",
+     "t0": 0.35,
+     "t1": 0.884
+    }
+   ],
+   "qa": {
+    "asr": "Super.",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -1.51,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 104.4,
+    "f0_range_st": 11.2,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.432,
+    "raw_tail_cut": false,
+    "align_median_s": 0.35
+   },
+   "raw": {
+    "raw_first_sound_s": 0.0,
+    "raw_len_s": 0.882,
+    "raw_tail_cut": false
+   },
+   "kokoro": {
+    "file": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-22-03.wav",
+    "mode": "on-mic",
+    "lufs_i": -16.0,
+    "duration_s": 1.86,
+    "audible_in_s": 0.51,
+    "audible_out_s": 1.24,
+    "wpm": 82.2,
+    "median_f0_hz": 107.5,
+    "f0_range_st": 9.8,
+    "delivery": "half under his breath, a beat after the tap: a man who reads his replies aloud",
+    "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.915",
+    "device": null
+   }
+  }
+ },
+ "calls": [
+  {
+   "take": "v32-a3-0001__mas-manalt-C",
+   "key": "2121adaa3c5ec32e",
+   "chars": 45,
+   "cost_header": "25",
+   "request_id": "YbwisLhfcC7TFbULQUs7",
+   "at": "03:40:46"
+  }
+ ]
+}

@@ -115,8 +115,20 @@ def zero_runs(y, min_s=0.01):
 
 
 def device_chain(y, dev):
-    """the call / monitor small speaker, a copy of house.call_filter(): HPF 200, LPF 7k, +1.5 dB @1.8k, 2.5:1"""
+    """the call / monitor small speaker, a copy of house.call_filter(): HPF 200, LPF 7k, +1.5 dB @1.8k, 2.5:1;
+    'pa', a copy of house.pa_speaker() (fastrec; the v3.2 stage): HPF 160, LPF 8.5k, +2 dB @2.4k (Q 0.9), 10 % driver
+    saturation (vcast's _sat, drive 1.6), 3:1 at -22 dB (4/80 ms). No room: the hall is a mix send."""
     import pedalboard as pb
+    if dev == "pa":
+        x = y.astype(np.float32)
+        x = np.asarray(pb.Pedalboard([pb.HighpassFilter(160), pb.LowpassFilter(8500), pb.PeakFilter(2400, 2.0, 0.9)])(x, SR),
+                       dtype=np.float32).reshape(-1)
+        pk = float(np.max(np.abs(x))) + 1e-9
+        u = x / pk
+        x = ((1 - 0.10) * u + 0.10 * (np.tanh(1.6 * u) / np.tanh(1.6))) * pk          # vcast._sat(drive 1.6, mix 0.10)
+        x = np.asarray(pb.Pedalboard([pb.Compressor(threshold_db=-22, ratio=3.0, attack_ms=4, release_ms=80)])(
+            x.astype(np.float32), SR), dtype=np.float32).reshape(-1)
+        return x
     if dev not in ("call", "monitor"):
         return y
     board = pb.Pedalboard([pb.HighpassFilter(200), pb.LowpassFilter(7000), pb.PeakFilter(1800, 1.5, 1.0),

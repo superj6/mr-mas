@@ -1,0 +1,477 @@
+[
+ {
+  "id": "e1-co-1-01",
+  "kind": "dialogue",
+  "scene": "1.01",
+  "speaker": "PANEL HOST",
+  "speaker_slug": "panel-host",
+  "text": "Last one, Mas. What's the best part of the job?",
+  "spoken_as": "Last one, Moss. What's the best part of the job?",
+  "tag": "",
+  "delivery": "through the hall's PA, the hand at frame right lifting the card a little; warm, from the wide's second second, so the first frame isn't silent",
+  "on_camera": "on",
+  "mode": "pa",
+  "device": "pa",
+  "file": "audio/ep01/v3-el/ep01-v32/coldopen/wav/e1-co-1-01__panel-host-A.wav",
+  "file_device": "audio/ep01/v3-el/ep01-v32/coldopen/wav-device/e1-co-1-01__panel-host-A.stage.wav",
+  "mp3": null,
+  "duration_s": 3.345,
+  "frames_24": 80,
+  "voiced_span_s": 2.44,
+  "pace": {
+   "audible_in_s": 0.42,
+   "audible_out_s": 2.86,
+   "measured": {
+    "span_s": 2.44,
+    "wpm": 245.9,
+    "syllables": 10,
+    "articulation_sps": 4.78,
+    "pauses_s": [
+     0.35
+    ]
+   },
+   "longest_internal_gap_s": 0.35,
+   "words": 10,
+   "wpm": 245.9,
+   "speed": 1.0,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Last",
+    "t0": 0.4,
+    "t1": 0.652
+   },
+   {
+    "w": "one",
+    "t0": 0.71,
+    "t1": 0.838
+   },
+   {
+    "w": "Mas",
+    "t0": 0.884,
+    "t1": 1.256
+   },
+   {
+    "w": "What's",
+    "t0": 1.581,
+    "t1": 1.813
+   },
+   {
+    "w": "the",
+    "t0": 1.859,
+    "t1": 1.929
+   },
+   {
+    "w": "best",
+    "t0": 1.975,
+    "t1": 2.15
+   },
+   {
+    "w": "part",
+    "t0": 2.196,
+    "t1": 2.335
+   },
+   {
+    "w": "of",
+    "t0": 2.359,
+    "t1": 2.405
+   },
+   {
+    "w": "the",
+    "t0": 2.44,
+    "t1": 2.509
+   },
+   {
+    "w": "job",
+    "t0": 2.544,
+    "t1": 2.835
+   }
+  ],
+  "qa": {
+   "asr": "Last one, Moss, what's the best part of the job?",
+   "cer": 0.045,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -2.26,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 162.8,
+   "f0_range_st": 11.8,
+   "speech_head_s": 0.42,
+   "speech_tail_s": 0.485,
+   "raw_tail_cut": false,
+   "align_median_s": 0.044
+  },
+  "voice": "ElevenLabs library voice 'River - Relaxed, Neutral, Informative' (premade (ElevenLabs default voice)) · cand A · eleven_multilingual_v2 · speed 1.0",
+  "voiceId": "SAz9YHcvj6GT2YYXdXww",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "panel-host",
+   "voice_id": "SAz9YHcvj6GT2YYXdXww",
+   "voice_name": "River - Relaxed, Neutral, Informative",
+   "source": "premade (ElevenLabs default voice)",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "seed": 3951076266,
+   "chars_sent": 48,
+   "request_key": "29bd116185ead3f7",
+   "derived_from": null,
+   "reused_from": "audio/ep01/v3-el/auditions:e1-co-1-01__panel-host-A"
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)",
+   "file_device: the same take through a copy of house.pa_speaker() (HPF 160, LPF 8.5k, +2 dB @2.4k, 10 % saturation, 3:1), the v3.2 stage, as the Kokoro take printed it"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/coldopen/dialogue/fast-v1/wav/e1-co-1-01.wav",
+   "mode": "pa",
+   "lufs_i": -16.0,
+   "duration_s": 3.925,
+   "audible_in_s": 0.51,
+   "audible_out_s": 3.41,
+   "wpm": 206.9,
+   "median_f0_hz": 154.4,
+   "f0_range_st": 13.2,
+   "delivery": "through the hall's PA, the hand at frame right lifting the card a little; warm, from the wide's second second, so the first frame isn't silent",
+   "voice": "af_sarah*0.45+am_puck*0.55 (Kokoro-82M stock) · c-sarah-puck-host · speed 0.940",
+   "device": "pa",
+   "timeline_in": 0.51,
+   "timeline_dur": 2.9
+  }
+ },
+ {
+  "id": "e1-co-1-02",
+  "kind": "dialogue",
+  "scene": "1.02",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "i've gotten to be in the room when we sort of push the veil of ignorance back—and the frontier of discovery forward…",
+  "spoken_as": "I've gotten to be in the room when we sort of push the veil of ignorance back—and the frontier of discovery forward.",
+  "tag": "",
+  "delivery": "unhurried; a lunch order",
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/ep01-v32/coldopen/wav/e1-co-1-02__mas-manalt-C.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 7.595,
+  "frames_24": 182,
+  "voiced_span_s": 6.58,
+  "pace": {
+   "audible_in_s": 0.39,
+   "audible_out_s": 6.97,
+   "measured": {
+    "span_s": 6.58,
+    "wpm": 200.6,
+    "syllables": 31,
+    "articulation_sps": 4.99,
+    "pauses_s": [
+     0.09,
+     0.06,
+     0.37
+    ]
+   },
+   "longest_internal_gap_s": 0.37,
+   "words": 22,
+   "wpm": 200.6,
+   "speed": 0.95,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "I've",
+    "t0": 0.37,
+    "t1": 0.571
+   },
+   {
+    "w": "gotten",
+    "t0": 0.605,
+    "t1": 0.861
+   },
+   {
+    "w": "to",
+    "t0": 0.884,
+    "t1": 0.93
+   },
+   {
+    "w": "be",
+    "t0": 0.977,
+    "t1": 1.058
+   },
+   {
+    "w": "in",
+    "t0": 1.105,
+    "t1": 1.163
+   },
+   {
+    "w": "the",
+    "t0": 1.209,
+    "t1": 1.279
+   },
+   {
+    "w": "room",
+    "t0": 1.348,
+    "t1": 1.592
+   },
+   {
+    "w": "when",
+    "t0": 1.639,
+    "t1": 1.755
+   },
+   {
+    "w": "we",
+    "t0": 1.801,
+    "t1": 1.906
+   },
+   {
+    "w": "sort",
+    "t0": 1.987,
+    "t1": 2.208
+   },
+   {
+    "w": "of",
+    "t0": 2.242,
+    "t1": 2.3
+   },
+   {
+    "w": "push",
+    "t0": 2.382,
+    "t1": 2.66
+   },
+   {
+    "w": "the",
+    "t0": 2.73,
+    "t1": 2.8
+   },
+   {
+    "w": "veil",
+    "t0": 2.858,
+    "t1": 3.078
+   },
+   {
+    "w": "of",
+    "t0": 3.136,
+    "t1": 3.183
+   },
+   {
+    "w": "ignorance",
+    "t0": 3.252,
+    "t1": 3.717
+   },
+   {
+    "w": "back—and",
+    "t0": 3.763,
+    "t1": 4.739
+   },
+   {
+    "w": "the",
+    "t0": 4.797,
+    "t1": 4.866
+   },
+   {
+    "w": "frontier",
+    "t0": 4.936,
+    "t1": 5.528
+   },
+   {
+    "w": "of",
+    "t0": 5.586,
+    "t1": 5.644
+   },
+   {
+    "w": "discovery",
+    "t0": 5.714,
+    "t1": 6.248
+   },
+   {
+    "w": "forward",
+    "t0": 6.341,
+    "t1": 6.933
+   }
+  ],
+  "qa": {
+   "asr": "I've gotten to be in the room when we sort of push the veil of ignorance back and the frontier of discovery forward.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -2.06,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 116.2,
+   "f0_range_st": 12.7,
+   "speech_head_s": 0.39,
+   "speech_tail_s": 0.625,
+   "raw_tail_cut": false,
+   "align_median_s": 0.048
+  },
+  "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
+  "voiceId": "EwzF7Z2UMSib9JaKx0Kg",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "C",
+   "role": "mas-manalt",
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "source": "shared Voice Library (high_quality), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "seed": 2496092891,
+   "chars_sent": 116,
+   "request_key": "22c5e156b3a17fec",
+   "derived_from": null,
+   "reused_from": "audio/ep01/v3-el/ep01/coldopen:e1-co-1-02__mas-manalt-C"
+  },
+  "status": "el",
+  "take": "el-C",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/coldopen/dialogue/fast-v1/wav/e1-co-1-02.wav",
+   "mode": "on-mic",
+   "lufs_i": -16.0,
+   "duration_s": 9.325,
+   "audible_in_s": 0.53,
+   "audible_out_s": 8.79,
+   "wpm": 167.1,
+   "median_f0_hz": 111.5,
+   "f0_range_st": 12.3,
+   "delivery": "unhurried; a lunch order",
+   "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.850",
+   "device": null,
+   "timeline_in": 0.53,
+   "timeline_dur": 8.26
+  }
+ },
+ {
+  "id": "e1-co-2-01",
+  "kind": "dialogue",
+  "scene": "2.03",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "noted.",
+  "spoken_as": "Noted.",
+  "tag": "",
+  "delivery": null,
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/ep01-v32/coldopen/wav/e1-co-2-01__mas-manalt-C.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 1.36,
+  "frames_24": 33,
+  "voiced_span_s": 0.49,
+  "pace": {
+   "audible_in_s": 0.37,
+   "audible_out_s": 0.86,
+   "measured": {
+    "span_s": 0.49,
+    "wpm": 122.4,
+    "syllables": 2,
+    "articulation_sps": 4.08,
+    "pauses_s": []
+   },
+   "longest_internal_gap_s": 0.0,
+   "words": 1,
+   "wpm": 122.4,
+   "speed": 0.95,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Noted",
+    "t0": 0.35,
+    "t1": 0.838
+   }
+  ],
+  "qa": {
+   "asr": "Noted.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -2.01,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 119.0,
+   "f0_range_st": 5.1,
+   "speech_head_s": 0.37,
+   "speech_tail_s": 0.5,
+   "raw_tail_cut": false,
+   "align_median_s": 0.35
+  },
+  "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
+  "voiceId": "EwzF7Z2UMSib9JaKx0Kg",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "C",
+   "role": "mas-manalt",
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "source": "shared Voice Library (high_quality), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "seed": 1416124045,
+   "chars_sent": 6,
+   "request_key": "68fdcbf2d977b6e1",
+   "derived_from": null,
+   "reused_from": "audio/ep01/v3-el/ep01/coldopen:e1-co-2-01__mas-manalt-C"
+  },
+  "status": "el",
+  "take": "el-C",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/coldopen/dialogue/fast-v1/wav/e1-co-2-01.wav",
+   "mode": "on-mic",
+   "lufs_i": -16.0,
+   "duration_s": 1.805,
+   "audible_in_s": 0.5,
+   "audible_out_s": 1.21,
+   "wpm": 84.5,
+   "median_f0_hz": 114.7,
+   "f0_range_st": 8.6,
+   "delivery": null,
+   "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.900",
+   "device": null,
+   "timeline_in": 0.5,
+   "timeline_dur": 0.71
+  }
+ }
+]

@@ -8,7 +8,8 @@ boundaries, so that the same performance is heard (Alyi's sentence told twice, S
 way: at the middle of the pause (or at most 0.35 s from the word), 12 ms fades, room-tone handles out to 0.35 s from the
 take's own head, then the house level per take (-16 LUFS; V.O. -18). A take with a device copy (the call chain) is cut at the same times.
 
-  audio/.venv-casting/bin/python audio/ep01/v3-el/tools/el_cut.py
+  audio/.venv-casting/bin/python audio/ep01/v3-el/tools/el_cut.py [--lock v31|v32]
+      v32: the v3.1 cuts still in the v3.2 lock, plus the v3.2 lock's own three (CUT_V32)
       reads  show/reel/ep01-v31/ep01-v31-<seg>.json (which segment each cut line is in, its text, its Kokoro take)
              the source EL takes: audio/ep01/v3-el/ep01-v31/<seg>/lines-A.json, else audio/ep01/v3-el/ep01/<seg>/lines-A.json
       writes audio/ep01/v3-el/ep01-v31/<seg>/wav/<id>__<role>-<cand>.wav, and adds the rows to that segment's lines-A.json
@@ -32,8 +33,10 @@ import el_render as R  # noqa: E402
 
 REPO = ellib.REPO
 SEGS = ["coldopen", "act1", "act2", "act3", "act4", "tag"]
-OUT = os.path.join(REPO, "audio/ep01/v3-el/ep01-v31")
-OLD = os.path.join(REPO, "audio/ep01/v3-el/ep01")
+LOCK = sys.argv[sys.argv.index("--lock") + 1] if "--lock" in sys.argv else "v31"      # v31 or v32
+OUT = os.path.join(REPO, f"audio/ep01/v3-el/ep01-{LOCK}")
+OLDS = [os.path.join(REPO, "audio/ep01/v3-el/ep01"), os.path.join(REPO, "audio/ep01/v3-el/ep01-v31"),
+        os.path.join(REPO, "audio/ep01/v3-el/ep01-v32")]        # every EL render; the newest wins
 # the lock's table (audio/ep01/v31/takes.py CUT): id -> (source line, first word index, last word index)
 CUT = {
     "v31-a1-0007": ("e1-a1-10-06", 0, 0),     # Hi!
@@ -44,6 +47,12 @@ CUT = {
     "v31-a4-0001": ("a5-27-01", 0, 12),       # Mas. The board has decided that you will no longer lead the company.
     "v31-a4-0005": ("a5-27-35", 7, 18),       # We've talked all day about him coming back, and we're no closer.
     "v31-a4-0007": ("a5-29-05", 0, 8),        # Best time there is. Nobody else is pushing anything.
+}
+# the v3.2 lock's own (audio/ep01/v32/takes.py CUT); v3.2 keeps all eight v3.1 cuts too
+CUT_V32 = {
+    "v32-a1-0001": ("e1-a1-5-01", 0, 3),      # Okay, the build's green.
+    "v32-a1-0006": ("v31-a1-0006", 0, 2),     # House rules, Sydney.
+    "v32-a2-0002": ("e1-a2-15-10", 12, 17),   # Would you come and run it?
 }
 HANDLE, FADE = 0.35, 0.012
 
@@ -60,18 +69,21 @@ def norm(w):
 def main():
     where, tl = {}, {}
     for s in SEGS:
-        for b in jload(os.path.join(REPO, f"show/reel/ep01-v31/ep01-v31-{s}.json"))["beats"]:
+        for b in jload(os.path.join(REPO, f"show/reel/ep01-{LOCK}/ep01-{LOCK}-{s}.json"))["beats"]:
             for l in b["lines"]:
                 tl[l["id"]] = (s, l)
+    table = {k: v for k, v in CUT.items() if k in tl}
+    if LOCK == "v32":
+        table.update(CUT_V32)
     src_rows = {}
-    for base in (OLD, OUT):                                   # the v3.1 render wins where both have the line
+    for base in OLDS[: OLDS.index(OUT) + 1]:                  # the newest render (up to this lock's) wins
         for s in SEGS:
             p = os.path.join(base, s, "lines-A.json")
             if os.path.exists(p):
                 for r in jload(p):
                     src_rows[r["id"]] = r
     added = {}
-    for cid, (src, i0, i1) in CUT.items():
+    for cid, (src, i0, i1) in table.items():
         seg, line = tl[cid]
         r = src_rows[src]
         W = r["words"]
@@ -116,7 +128,7 @@ def main():
                    duration_s=round(len(y) / E.SR, 3), frames_24=int(round(len(y) / E.SR * 24)), voiced_span_s=m["span_s"],
                    words=words, spoken_as=" ".join(w["w"] for w in words),
                    cut_from=f"{src} words {i0}-{i1} ({r['file']}, {a:.3f}-{e:.3f} s), 12 ms fades, room-tone handles to {HANDLE} s "
-                            "(the v3.1 lock's CUT, applied to the EL take)")
+                            f"(the {LOCK} lock's CUT, applied to the EL take)")
         new["pace"] = dict(new["pace"], audible_in_s=m["audible_in_s"], audible_out_s=m["audible_out_s"], words=m["words"],
                            wpm=m["wpm"], measured={k: m[k] for k in ("span_s", "wpm", "syllables", "articulation_sps", "pauses_s")},
                            longest_internal_gap_s=m["longest_internal_gap_s"])
@@ -133,7 +145,7 @@ def main():
     for seg, rows in added.items():
         p = os.path.join(OUT, seg, "lines-A.json")
         L = [x for x in jload(p) if x["id"] not in {r["id"] for r in rows}]
-        order = [l["id"] for b in jload(os.path.join(REPO, f"show/reel/ep01-v31/ep01-v31-{seg}.json"))["beats"] for l in b["lines"]]
+        order = [l["id"] for b in jload(os.path.join(REPO, f"show/reel/ep01-{LOCK}/ep01-{LOCK}-{seg}.json"))["beats"] for l in b["lines"]]
         L += rows
         L.sort(key=lambda x: order.index(x["id"]) if x["id"] in order else 10 ** 6)
         ellib.jdump(L, p)

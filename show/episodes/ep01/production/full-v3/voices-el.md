@@ -1,6 +1,6 @@
 # Ep1 v3: the ElevenLabs voice pass (`v3-voices-el`, track A4, 2026-09-27)
 
-> **Status: PHASE 4 DONE: THE v3.1 LOCK IN ELEVENLABS.** Every line of the final v3.1 lock (commit 3861671) has an EL take, with Mas as Jeremy. There is an EL-timed copy of the v3.1 lock (`show/reel/ep01-v31-el/`, key `ep01-v31-el-stick`) and its stick reel, `out/ep01/reel/ep01-v31-el-stick.mp4`. That's §V, directly below. The Mas recast is §R, phase 2 (the v3 lock in set A) is §P1–§P9, and phase 1 (the casting and the sample) is §1–§8. Where phase 2 describes Mas, it describes Giovanni.
+> **Status: PHASE 5 DONE: THE v3.2 LOCK IN ELEVENLABS.** Every line of the final v3.2 lock (commit fc46cac) has an EL take, with Mas as Jeremy. There is an EL-timed copy of the v3.2 lock (`show/reel/ep01-v32-el/`, key `ep01-v32-el-stick`) with beds, ready to render. No reel was made this time (the lead's call: disk and time). That's §W, directly below. v3.1 is §V, the Mas recast §R, phase 2 (the v3 lock) §P1–§P9, and phase 1 (the casting and the sample) §1–§8. Where phase 2 describes Mas, it describes Giovanni.
 >
 > **Nobody has listened to any of this.** Every statement below is a measurement: duration, pace, pitch, silence at the head and tail, loudness, and what a speech recogniser heard. Whether a voice is natural, funny, or right for the character is still a call for an ear.
 >
@@ -21,6 +21,63 @@
 - **Characters:** 10,054 sent and **5,522 billed**, against the 25,000 budget. The subscription went from 0 to 5,522 of 131,000.
 - **Model:** `eleven_multilingual_v2` for everyone. I tested `eleven_v3` and didn't use it (§6).
 - **Decisions for you:** listed in §8.
+
+---
+
+## W. Phase 5: the v3.2 lock (2026-09-28)
+
+**The brief:**
+- Render the v3.2 lines that need new EL takes (lock-v32.md §3: 8 new reads and 3 cuts), with the current cast and Mas as Jeremy.
+- Build the EL-timed v3.2 variant the same way as before: every gap and J-cut lead kept, and the Runway frames reserved (S7.13 at 264; the tag's demo at 233 from frame 62).
+- Give its manifest a distinct key, and skip the reel.
+- The budget is 4,000 characters.
+
+**In short:**
+- **All 235 lines** have EL takes, for **347 characters sent (191 billed)**.
+- **The subscription** went from 13,894 to 14,085 of 131,000.
+- **The EL-timed v3.2 story runs 20:44.3 against the Kokoro lock's 20:41.7 (+2.6 s).**
+
+### W1. The takes
+
+`audio/ep01/v3-el/ep01-v32/<seg>/lines-A.json` + `wav/` and `wav-device/`, made by `tools/render_v32.sh` (the same method as §V).
+
+- **The 8 new reads** were sent, with one retake: Tasya's one-word "Mas." came back low (88 → 94 Hz; Kokoro's read is flagged the same way).
+- **The 3 new cuts** (v32-a1-0001 "Okay, the build's green.", v32-a1-0006 "House rules, Sydney.", v32-a2-0002 "Would you come and run it?") are cut from the EL takes of the same source lines, by `tools/el_cut.py --lock v32`. So are the eight v3.1 cuts the lock keeps. Nothing was sent for them.
+- **Everything else** keeps its phase-2/3/4 EL take. The v3.2 texts that changed only in print were checked against the text as sent: every other line sends exactly what its earlier take sent.
+- **The stage chain (new in v3.2):**
+  - The DevDay lines play through the hall PA: v32-a3-0001 (read on it), and e1-a3-22-01 / -02 (re-staged in the lock, "the take stands").
+  - `elaudio.py` now has a copy of the house `pa_speaker()` chain: HPF 160 Hz, LPF 8.5 kHz, +2 dB at 2.4 kHz, 10 % saturation, 3:1.
+  - The three EL takes have `.stage.wav` device copies, and the timelines play those.
+- **The call chain:** v32-a1-0002 and -0004 (Tasya) and v32-a4-0001 (Neleh) play their `.call.wav` copies.
+  - v3.2's Kokoro rows mark a device in `device`, with `mode: on-mic`, so the device rule now reads both.
+  - **A flag for the v3.1 variant:** four v3.1 takes of that kind (v31-a1-0004, v31-a4-0003, -0009, -0010) play dry in `show/reel/ep01-v31-el/`, where their Kokoro takes are on the call filter. v3.2 has them right. The v3.1 variant is left as delivered.
+
+### W2. The EL-timed v3.2 lock
+
+- **The files:** `show/reel/ep01-v32-el/ep01-v32-el-<seg>.json` and `ep01-v32-el.manifest.json` (key `ep01-v32-el-stick`; the studio shows `reel-ep01-v32-el`).
+- **The build:** `tools/el_lock.py --lock v32`.
+- **The J-cuts:** all six leads are kept (5.03 −0.5, 7.01 −0.6, 12.02 −0.5, S3.06 −0.6, S5.11 −0.8, S8.08 −1.0 s).
+- **The Runway frames are reserved,** counted with the renderer's own rounding: S7.13 is 264 frames, 32.01 is 62, and the demo beat v31-32.01d is 233 from frame 62. Their line starts, sounds and captions are the lock's. No overlaps or overruns were flagged.
+
+| Segment | Kokoro v3.2 lock | **EL-timed** | Change | Beats changed |
+|---|---|---|---|---|
+| Cold open | 0:26.7 | **0:24.3** | −2.4 s | 3 |
+| Act One | 5:29.8 | **5:35.0** | +5.2 s | 24 |
+| Act Two | 3:13.0 | **3:03.3** | −9.8 s | 22 |
+| Act Three | 2:22.4 | **2:18.8** | −3.7 s | 12 |
+| Act Four | 8:28.5 | **8:41.6** | +13.2 s | 45 |
+| Tag | 0:41.3 | **0:41.3** | 0.0 s | 2 (+0.16 and −0.16) |
+| **Story** | **20:41.7** | **20:44.3** | **+2.6 s** | 108 |
+
+**The beds** are built (`tools/el_bed.py --lock v32`, the v3.2 lock's own `bed.py`; 228 MB in `audio/reel/ep01-v32-el/`, all sounds resolved). The card is the lock's own.
+
+**The manifest validates:** `episode.mjs --plan` gives 21:29.3 (30,944 frames), all 235 takes and 7 beds, and no warnings.
+
+**To render the reel** (about 8 minutes of wall and about 0.7 GB):
+
+```sh
+cd studio && bash ../ops/heavy.sh node src/reel/tools/episode.mjs ../show/reel/ep01-v32-el/ep01-v32-el.manifest.json --jobs 2 --conc 4
+```
 
 ---
 
