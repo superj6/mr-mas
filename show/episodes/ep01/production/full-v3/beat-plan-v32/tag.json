@@ -1,10 +1,10 @@
 {
  "segment": "tag",
  "source": "show/reel/ep01-v31/ep01-v31-tag.json",
- "_about": "v32-agency beat plan (PLAN §2 format, plus the v3.1 plans' additive fields), written against the v3.1 LOCK's beat and line ids (show/reel/ep01-v31/ep01-v31-<seg>.json). Every v3.1 beat appears once (keep, cut, merge, or keep with \"moved\"), plus the new beats, listed in their v3.2 order. est_s is a planning length (the lock's measured lengths, line timings on file, word counts), never a measurement. Kept lines are keep true/false; kept V.O. carries \"vo\": true; new lines carry v32-<seg>-NNNN ids with who/text/after/gap_s/delivery/take; \"at\" on a kept line retimes it (start+S | after:<line id>+S); moved lines carry moved_from / moves_to. There are no new V.O. lines: the inner voice is pruned from 28 lines to 12 (SHOWRUNNER-NOTES note 0), all on existing takes. Fix codes: A0 = note 0 (the lead drives the plot); A1-A4 = the brief's direction for Acts One to Four; P = the V.O. prune (a thought that could be an action becomes the action; forced or writerly lines go); N1 = the newcomer's \"I couldn't tell what Mas wants\"; R = runtime. The v3.1 rules stand: subtitles without quotation marks or print ellipses on spoken real lines; every call grid names its speaking tile; no band prompt. The script is show/episodes/ep01/script.md (draft 8); the notes are ../script-v32-notes.md; the agency map is ../agency-v32.md; the builder is _build_v32.py.",
+ "_about": "v32-agency beat plan (PLAN §2 format, plus the v3.1 plans' additive fields), written against the v3.1 LOCK's beat and line ids (show/reel/ep01-v31/ep01-v31-<seg>.json). Every v3.1 beat appears once (keep, cut, merge, or keep with \"moved\"), plus the new beats, listed in their v3.2 order. est_s is a planning length (the lock's measured lengths, line timings on file, word counts), never a measurement. Kept lines are keep true/false; kept V.O. carries \"vo\": true; new lines carry v32-<seg>-NNNN ids with who/text/after/gap_s/delivery/take; \"at\" on a kept line retimes it (start+S | after:<line id>+S); moved lines carry moved_from / moves_to. There are no new V.O. lines: the inner voice is pruned from 28 lines to 11 (SHOWRUNNER-NOTES note 0; draft 8.1 per show/bible/calibration.md §5), all on existing takes. Fix codes: A0 = note 0 (the lead drives the plot); A1-A4 = the brief's direction for Acts One to Four; P = the V.O. prune (a thought that could be an action becomes the action; forced or writerly lines go); N1 = the newcomer's \"I couldn't tell what Mas wants\"; R = runtime. The v3.1 rules stand: subtitles without quotation marks or print ellipses on spoken real lines; every call grid names its speaking tile; no band prompt. Draft 8.1 adds calibration codes C3/C5/C9 and the v3.1 audit's AUD codes (../audit-v31.md). The script is show/episodes/ep01/script.md (draft 8.1); the notes are ../script-v32-notes.md; the agency map is ../agency-v32.md; the builder is _build_v32.py.",
  "story_s": {
   "source": 41.33,
-  "estimate": 40.13
+  "estimate": 41.33
  },
  "beats": [
   {
@@ -23,8 +23,10 @@
    "action": "keep",
    "est_s": 9.708,
    "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
-   "fix": [],
-   "why": "unchanged",
+   "fix": [
+    "C5"
+   ],
+   "why": "Unchanged picture and length (the Runway insert's 233 frames); no voice-over over the stills.",
    "src_s": 9.708,
    "src_frame": "POV → NATIVE · ELGOOG's demo film (the Runway insert)",
    "lines": [
@@ -34,8 +36,11 @@
     },
     {
      "id": "v31-vo-07",
-     "keep": true,
-     "vo": true
+     "keep": false,
+     "who": "mas",
+     "text": "those are stills.",
+     "vo": true,
+     "why": "8.1 (calibration §5; the lead): a caption; the stutter into stills carries the joke"
     }
    ]
   },
@@ -53,22 +58,20 @@
   {
    "id": "32.03",
    "action": "keep",
-   "est_s": 2.6,
+   "est_s": 3.8,
    "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
    "fix": [
-    "P"
+    "P",
+    "C5"
    ],
-   "why": "He holds the cover up by his face; the Orb does the rest.",
+   "why": "8.1 (calibration §5; the audit keeps it): \"it looks calmer than me.\" is restored. The picture shows the cover and his face alike; only the voice can say which one he thinks is performing. The coda line.",
    "src_s": 3.8,
    "src_frame": "MEDIUM CLOSE · Mas and the cover, side by side",
    "lines": [
     {
      "id": "v3-vo-24",
-     "keep": false,
-     "who": "mas",
-     "text": "it looks calmer than me.",
-     "vo": true,
-     "why": "P (note 0): pruned; \"it looks calmer than me.\": the cover and his face wear the same expression, and the Orb's slower verdict (32.04) makes the joke"
+     "keep": true,
+     "vo": true
     }
    ]
   },

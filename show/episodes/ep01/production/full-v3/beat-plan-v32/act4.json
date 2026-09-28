@@ -1,10 +1,10 @@
 {
  "segment": "act4",
  "source": "show/reel/ep01-v31/ep01-v31-act4.json",
- "_about": "v32-agency beat plan (PLAN §2 format, plus the v3.1 plans' additive fields), written against the v3.1 LOCK's beat and line ids (show/reel/ep01-v31/ep01-v31-<seg>.json). Every v3.1 beat appears once (keep, cut, merge, or keep with \"moved\"), plus the new beats, listed in their v3.2 order. est_s is a planning length (the lock's measured lengths, line timings on file, word counts), never a measurement. Kept lines are keep true/false; kept V.O. carries \"vo\": true; new lines carry v32-<seg>-NNNN ids with who/text/after/gap_s/delivery/take; \"at\" on a kept line retimes it (start+S | after:<line id>+S); moved lines carry moved_from / moves_to. There are no new V.O. lines: the inner voice is pruned from 28 lines to 12 (SHOWRUNNER-NOTES note 0), all on existing takes. Fix codes: A0 = note 0 (the lead drives the plot); A1-A4 = the brief's direction for Acts One to Four; P = the V.O. prune (a thought that could be an action becomes the action; forced or writerly lines go); N1 = the newcomer's \"I couldn't tell what Mas wants\"; R = runtime. The v3.1 rules stand: subtitles without quotation marks or print ellipses on spoken real lines; every call grid names its speaking tile; no band prompt. The script is show/episodes/ep01/script.md (draft 8); the notes are ../script-v32-notes.md; the agency map is ../agency-v32.md; the builder is _build_v32.py.",
+ "_about": "v32-agency beat plan (PLAN §2 format, plus the v3.1 plans' additive fields), written against the v3.1 LOCK's beat and line ids (show/reel/ep01-v31/ep01-v31-<seg>.json). Every v3.1 beat appears once (keep, cut, merge, or keep with \"moved\"), plus the new beats, listed in their v3.2 order. est_s is a planning length (the lock's measured lengths, line timings on file, word counts), never a measurement. Kept lines are keep true/false; kept V.O. carries \"vo\": true; new lines carry v32-<seg>-NNNN ids with who/text/after/gap_s/delivery/take; \"at\" on a kept line retimes it (start+S | after:<line id>+S); moved lines carry moved_from / moves_to. There are no new V.O. lines: the inner voice is pruned from 28 lines to 11 (SHOWRUNNER-NOTES note 0; draft 8.1 per show/bible/calibration.md §5), all on existing takes. Fix codes: A0 = note 0 (the lead drives the plot); A1-A4 = the brief's direction for Acts One to Four; P = the V.O. prune (a thought that could be an action becomes the action; forced or writerly lines go); N1 = the newcomer's \"I couldn't tell what Mas wants\"; R = runtime. The v3.1 rules stand: subtitles without quotation marks or print ellipses on spoken real lines; every call grid names its speaking tile; no band prompt. Draft 8.1 adds calibration codes C3/C5/C9 and the v3.1 audit's AUD codes (../audit-v31.md). The script is show/episodes/ep01/script.md (draft 8.1); the notes are ../script-v32-notes.md; the agency map is ../agency-v32.md; the builder is _build_v32.py.",
  "story_s": {
   "source": 517.74,
-  "estimate": 531.21
+  "estimate": 508.83
  },
  "beats": [
   {
@@ -320,60 +320,92 @@
   {
    "id": "S3.02",
    "action": "keep",
-   "est_s": 2.583,
+   "est_s": 1.6,
    "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
-   "fix": [],
+   "caption": "Her desk from above: her pen ticks 1. NOON · VIDEO CALL and runs down what the fold hid: 2. BLOG POST · 3. INTERIM CEO · 4. ______, and stops on the blank.",
+   "fix": [
+    "AUD #6"
+   ],
    "why": "unchanged",
    "src_s": 2.583,
    "src_frame": "OVERHEAD · her desk",
    "lines": [
     {
      "id": "a5-27-06",
-     "keep": true
+     "keep": false,
+     "who": "neleh",
+     "text": "Step two. I'll read it once before it goes up.",
+     "why": "8.1 (AUD #6): the read-it-aloud device, used twice; Terb keeps his (he's in a room with people), Neleh's excuse goes"
     }
    ]
   },
   {
    "id": "S3.03",
    "action": "keep",
-   "est_s": 14.0,
+   "est_s": 9.0,
    "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
-   "fix": [],
-   "why": "unchanged",
+   "caption": "Her laptop: the NopeAI blog in its own UI; the post types itself in the source's words, held to read: \"…he was not consistently candid in his communications with the board… The board no longer has confidence in his ability to continue leading NopeAI.\" Her lips move as she reads it. \"Any objections?\" Nobody answers. She clicks Post, on a tick.",
+   "onscreen": {
+    "add": [
+     "the post's text, typing in its own UI: \"…he was not consistently candid in his communications with the board… The board no longer has confidence in his ability to continue leading NopeAI.\" [V · NOV 17, 2023 · L8]"
+    ]
+   },
+   "fix": [
+    "AUD #6"
+   ],
+   "why": "The board's only public reason stays on screen, whole and verbatim; it's read, not recited.",
    "src_s": 14.0,
    "src_frame": "SCREEN · the blog, in its own UI",
    "lines": [
     {
      "id": "a5-27-07",
-     "keep": true
+     "keep": false,
+     "who": "neleh",
+     "text": "he was not consistently candid in his communications with the board… The board no longer has confidence in his ability to continue leading NopeAI.",
+     "why": "8.1 (AUD #6): the post types itself on screen in the source's words, and she reads it with her lips, silent"
     },
     {
      "id": "a5-27-08",
-     "keep": true
+     "keep": true,
+     "at": "start+6.8"
     }
    ]
   },
   {
    "id": "S3.04",
    "action": "keep",
-   "est_s": 16.34,
+   "est_s": 10.9,
    "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
-   "fix": [],
-   "why": "unchanged",
+   "onscreen": {
+    "add": [
+     "RIMA TAMURI · INTERIM CEO (her tile's own label)"
+    ]
+   },
+   "fix": [
+    "AUD #5"
+   ],
+   "why": "Neleh wants something from Rima (ready, and on message); the tile's label says what Rima now is.",
    "src_s": 16.34,
    "src_frame": "OTS · over Neleh onto the grid (held)",
    "lines": [
     {
      "id": "a5-27-09",
-     "keep": true
+     "keep": false,
+     "who": "neleh",
+     "text": "Step three. Rima, thank you for agreeing to serve as interim CEO while we search.",
+     "why": "8.1 (AUD #5): an \"as you know\" line (thanking Rima for what she agreed to); her tile's label carries the fact"
     },
     {
      "id": "a5-27-12",
-     "keep": true
+     "keep": false,
+     "who": "alyi",
+     "text": "The staff will ask you what happened.",
+     "why": "8.1 (AUD #5): folded into Neleh's new line"
     },
     {
      "id": "a5-27-13",
-     "keep": true
+     "keep": true,
+     "at": "after:v32-a4-0001+0.5"
     },
     {
      "id": "a5-27-14",
@@ -382,6 +414,18 @@
     {
      "id": "a5-27-15",
      "keep": true
+    },
+    {
+     "id": "v32-a4-0001",
+     "new": true,
+     "who": "neleh",
+     "text": "Step three. Rima, the staff will come to you now.",
+     "after": "start+1.1",
+     "gap_s": 0.0,
+     "delivery": "efficient, a little kind: she wants Rima ready, and on the post",
+     "tag": "call",
+     "take": "new",
+     "note": "[INVENTED] procedure only; no reason"
     }
    ]
   },
@@ -408,16 +452,26 @@
   {
    "id": "S3.06",
    "action": "keep",
-   "est_s": 3.958,
+   "est_s": 2.6,
    "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
-   "fix": [],
+   "jcut": [
+    {
+     "line": "a5-27-18",
+     "lead_s": 0.6,
+     "note": "AUD #11: \"Is this a coup?\" leads the place change, over Neleh's brow"
+    }
+   ],
+   "fix": [
+    "AUD #11"
+   ],
    "why": "unchanged",
    "src_s": 3.958,
    "src_frame": "WIDE · the all-hands, from the back",
    "lines": [
     {
      "id": "a5-27-18",
-     "keep": true
+     "keep": true,
+     "at": "start-0.6"
     }
    ]
   },
@@ -473,7 +527,10 @@
    "action": "keep",
    "est_s": 18.9,
    "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
-   "fix": [],
+   "shot_note": "on \"That is the company telling us.\" Alyi's reflection turns to the row of phones, their caller IDs beside him (AUD B.2 #6: the referent)",
+   "fix": [
+    "AUD B.2 #6"
+   ],
    "why": "unchanged",
    "src_s": 18.9,
    "src_frame": "WIDE · the boardroom at night (held)",
@@ -513,7 +570,15 @@
    "action": "keep",
    "est_s": 18.792,
    "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
-   "fix": [],
+   "caption": "Act One's split, both calls in one held shot. LEFT: the speakerphone, Neleh and Mada leaning in. RIGHT: the lighthouse; a phone with a small throne attached; Mario picks up, finger rising. The offer; \"Eleven pages…\"; ADELINA takes the phone: \"In plain English: no.\" Click. HOLD on the dial tone; under it, the lobby's room by day comes up (the J-cut into v32-S5.00).",
+   "onscreen": {
+    "replace": {
+     "ADELINA": "ADELINA · CO-FOUNDER"
+    }
+   },
+   "fix": [
+    "C3"
+   ],
    "why": "unchanged",
    "src_s": 18.792,
    "src_frame": "SPLIT · both calls, one held shot",
@@ -533,30 +598,78 @@
    ]
   },
   {
+   "id": "v32-S5.00",
+   "action": "new",
+   "after": "S4.08",
+   "est_s": 8.0,
+   "frame": "MCU → CCTV · at his shoulder in the lobby by day, then out into their camera's frame",
+   "set": "lobby",
+   "room": "lobby",
+   "chars": [
+    "mas"
+   ],
+   "lines": [],
+   "caption": "Sunday, 1:03 PM. Full colour at floor level, at his shoulder: MAS at the reception desk. A receptionist's hand (no face) slides a lanyard across the stone: GUEST. He puts it on himself. He lifts his phone at arm's length and takes the photo: a click, one white flash step. His post goes up in its own UI: \"first and last time i ever wear one of these\". He looks up, once, at the camera in the corner, the one-pixel smile; and the picture steps back out into that camera's frame, grainy, NOPEAI HQ · LOBBY · NOV 19, on the boardroom's wall screen (S4.09).",
+   "onscreen": {
+    "add": [
+     "NOPEAI HQ · LOBBY · NOV 19 · 1:03 PM (the camera's own chrome, as in S4.09)",
+     "GUEST (the lanyard: Radnus's design from Act One, 8.05)",
+     "MAS (post): \"first and last time i ever wear one of these\" [P · NOV 19, 2023, 1:03 PM PT · L13; moved here from S4.09]",
+     "RAIL: NOV 19, 2023 · ~1 PM PT"
+    ]
+   },
+   "jcut": [
+    {
+     "sound": "the lobby's room by day (the revolving door's sweep), under S4.08's dial tone",
+     "lead_s": 0.8
+    }
+   ],
+   "lcut": [
+    {
+     "sound": "the CCTV hum, carried into S4.09 as the picture steps into the camera's grade"
+    }
+   ],
+   "music": "none: the lobby's room; one felt note on his look up; PROCEDURE resumes under S4.09",
+   "art": "S4.09's CCTV plate full frame, stepping out of its grade (grain off, colour up) in palette steps; the reception desk at floor level by day (rooms/lobby.ts, the S8 lobby); a receptionist's hand sliding the lanyard; Mas putting the lanyard on (a new pose); the selfie (arm out, the phone; one white flash step); the corner camera (a small prop, the one whose frame we saw)",
+   "sounds": "the CCTV hum; the lobby by day; the lanyard's clip; the phone's shutter; his post's send pop",
+   "fix": [
+    "A4",
+    "A0",
+    "AUD #3"
+   ],
+   "why": "His move first, their reaction second (AUD #3; calibration's chain test): he walks into his own company as a guest and posts it, and the next scene is the board watching that small figure and talking all day about him coming back. It's told twice in one cut: his side, then their camera. It also breaks the 3:37 away from him into two stretches. His side of the act still opens at 2 AM on the count."
+  },
+  {
    "id": "S4.09",
    "action": "keep",
-   "est_s": 15.627,
+   "est_s": 11.3,
    "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
-   "caption": "INT. NOPEAI BOARDROOM — SUNDAY. The phones in a row, face up, still buzzing: STAFF · STAFF · INVESTORS · INVESTORS. On the wall screen, the lobby camera and the ticker. At reception, a small familiar figure in a GUEST lanyard, as if he's been there a while. On \"here\" he walks out.",
+   "caption": "INT. NOPEAI BOARDROOM — SUNDAY. The phones in a row, still buzzing: STAFF · STAFF · INVESTORS · INVESTORS. On the wall screen, the lobby camera and the ticker: the small figure we just left, in his GUEST lanyard. \"We've talked all day about him coming back, and we're no closer.\" / \"They gave him a guest badge.\" / \"It's the correct badge. He doesn't work here.\" On \"here\" he walks out.",
    "onscreen": {
     "drop": [
      "his post in the CCTV tile's corner (\"first and last time i ever wear one of these\"): it moves to his side, v32-S5.00, where he posts it"
     ]
    },
    "fix": [
-    "A4"
+    "A4",
+    "AUD #5",
+    "AUD #3"
    ],
-   "why": "Told twice now: small on their camera here; his own move, and his post, on his side.",
+   "why": "Cause, then effect (AUD #3): his walk-in comes first (v32-S5.00), and their talk follows from it, played on the phones.",
    "src_s": 15.627,
    "src_frame": "OTS · over Neleh onto the lobby camera",
    "lines": [
     {
      "id": "v31-a4-0004",
-     "keep": true
+     "keep": false,
+     "who": "neleh",
+     "text": "The staff want him back. The investors want him back.",
+     "why": "8.1 (AUD #5): the phones and the ticker show it; she said what we see"
     },
     {
      "id": "v31-a4-0005",
-     "keep": true
+     "keep": true,
+     "at": "start+1.2"
     },
     {
      "id": "a5-27-36",
@@ -696,56 +809,11 @@
    "action": "keep",
    "est_s": 2.5,
    "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
-   "jcut": [
-    {
-     "sound": "under Mada's held note, the lobby camera's CCTV hum (not the dark room's drone): the door into his side",
-     "lead_s": 1.0
-    }
-   ],
    "fix": [],
-   "why": "Unchanged picture; the J-cut now leads into the lobby camera.",
+   "why": "unchanged",
    "src_s": 2.5,
    "src_frame": "SINGLE · MCU Mada",
    "lines": []
-  },
-  {
-   "id": "v32-S5.00",
-   "action": "new",
-   "after": "S4.15",
-   "est_s": 8.0,
-   "frame": "CCTV → MCU · the lobby camera's frame, then down into colour at his shoulder",
-   "set": "lobby",
-   "room": "lobby",
-   "chars": [
-    "mas"
-   ],
-   "lines": [],
-   "caption": "The lobby camera's frame from the boardroom's wall screen fills the screen, grainy, its chrome NOPEAI HQ · LOBBY · NOV 19 and a clock, 1:03 PM: the small figure at reception. The picture steps down out of the camera, one palette step a beat, into full colour at floor level at his shoulder: MAS at the reception desk. A receptionist's hand (no face) slides a lanyard across the stone: GUEST. He puts it on himself. He lifts his phone at arm's length and takes the photo: a click, one white flash step. His post goes up in its own UI: \"first and last time i ever wear one of these\". He looks up, once, at the camera in the corner, the one-pixel smile.",
-   "onscreen": {
-    "add": [
-     "NOPEAI HQ · LOBBY · NOV 19 · 1:03 PM (the camera's own chrome, as in S4.09)",
-     "GUEST (the lanyard: Radnus's design from Act One, 8.05)",
-     "MAS (post): \"first and last time i ever wear one of these\" [P · NOV 19, 2023, 1:03 PM PT · L13; moved here from S4.09]"
-    ]
-   },
-   "jcut": [
-    {
-     "sound": "the CCTV hum, under Mada's held note (S4.15)",
-     "lead_s": 1.0
-    },
-    {
-     "sound": "the dark room's drone, under his look up (into S5.02)",
-     "lead_s": 0.8
-    }
-   ],
-   "music": "none: the CCTV hum, then the lobby's room by day as the grade lifts; one felt note on his look up",
-   "art": "S4.09's CCTV plate full frame, stepping out of its grade (grain off, colour up) in palette steps; the reception desk at floor level by day (rooms/lobby.ts, the S8 lobby); a receptionist's hand sliding the lanyard; Mas putting the lanyard on (a new pose); the selfie (arm out, the phone; one white flash step); the corner camera (a small prop, the one whose frame we saw)",
-   "sounds": "the CCTV hum; the lobby by day; the lanyard's clip; the phone's shutter; his post's send pop",
-   "fix": [
-    "A4",
-    "A0"
-   ],
-   "why": "Told twice, like noon: the board watched a small figure in a guest badge; this is the same minute from inside it, and it's his move. He walks into his own company as a guest, puts the badge on himself and posts it. The talks that follow are theirs (S4.09: \"we're no closer\"); his side shows only what he did in public. His exit is the one their camera saw; the cut goes to 2 AM."
   },
   {
    "id": "S5.02",
@@ -764,7 +832,10 @@
    "action": "keep",
    "est_s": 5.85,
    "music": "2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door",
-   "fix": [],
+   "shot_note": "the heart counter on the phone reads with him, 406 → 407 → 406, so the count is readable (AUD A.1)",
+   "fix": [
+    "AUD A.1"
+   ],
    "why": "unchanged",
    "src_s": 5.85,
    "src_frame": "INSERT · his phone and thumb",
@@ -976,13 +1047,21 @@
   {
    "id": "S5.11",
    "action": "keep",
-   "est_s": 18.3,
+   "est_s": 15.6,
    "music": "2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door",
    "caption": "The slate door steps up out of the shadow, Tasya's sign taped to it. \"Everyone is welcome.\" / \"everyone.\" / \"…a desk for every one of them.\" The crack of desks. \"and the rent?\" / \"Due on the first.\" Under the door a slate-blue badge slides into the light, MACROSOFT, and skids to a stop against his chair leg. Without getting up he picks it up, looks at it, and sets it on the desk beside the GUEST lanyard, square. He doesn't put it on.",
+   "jcut": [
+    {
+     "line": "a5-29-20",
+     "lead_s": 0.8,
+     "note": "AUD #11: \"Don't get up, Mas.\" leads the cut, under Gerg's tile"
+    }
+   ],
    "art": "kits/macrosoft-badge.ts sliding under the door and across the floor; Mas reaching down for it (a pose); the two badges side by side on the desk (they are S7.01's)",
    "sounds": "the badge's slide on the floor; a soft tick against the chair leg; the badge set down on the wood",
    "fix": [
-    "A4"
+    "A4",
+    "AUD #11"
    ],
    "why": "He considers the offer with his hands: he takes the badge and doesn't wear it. It fits the record (by his own later post he had decided to join Macrosoft on Sunday evening, facts W5, held, not quoted), and \"leave it open.\" keeps both badges on the desk. S7.01's two badges now have an origin.",
    "src_s": 15.115,
@@ -990,7 +1069,8 @@
    "lines": [
     {
      "id": "a5-29-20",
-     "keep": true
+     "keep": true,
+     "at": "start-0.8"
     },
     {
      "id": "a5-29-21",
@@ -1405,16 +1485,26 @@
   {
    "id": "S8.08",
    "action": "keep",
-   "est_s": 8.375,
+   "est_s": 5.8,
    "music": "CODA · the vault's F hum as the pedal; no motif under the memo",
-   "fix": [],
+   "jcut": [
+    {
+     "line": "a5-31-04",
+     "lead_s": 1.0,
+     "note": "AUD #11: the memo's first words lead the cut, over the vault"
+    }
+   ],
+   "fix": [
+    "AUD #11"
+   ],
    "why": "unchanged",
    "src_s": 8.375,
    "src_frame": "WIDE · the bullpen, the memo (slow drift)",
    "lines": [
     {
      "id": "a5-31-04",
-     "keep": true
+     "keep": true,
+     "at": "start-1.0"
     }
    ]
   },

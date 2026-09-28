@@ -1,10 +1,10 @@
 {
  "segment": "act2",
  "source": "show/reel/ep01-v31/ep01-v31-act2.json",
- "_about": "v32-agency beat plan (PLAN §2 format, plus the v3.1 plans' additive fields), written against the v3.1 LOCK's beat and line ids (show/reel/ep01-v31/ep01-v31-<seg>.json). Every v3.1 beat appears once (keep, cut, merge, or keep with \"moved\"), plus the new beats, listed in their v3.2 order. est_s is a planning length (the lock's measured lengths, line timings on file, word counts), never a measurement. Kept lines are keep true/false; kept V.O. carries \"vo\": true; new lines carry v32-<seg>-NNNN ids with who/text/after/gap_s/delivery/take; \"at\" on a kept line retimes it (start+S | after:<line id>+S); moved lines carry moved_from / moves_to. There are no new V.O. lines: the inner voice is pruned from 28 lines to 12 (SHOWRUNNER-NOTES note 0), all on existing takes. Fix codes: A0 = note 0 (the lead drives the plot); A1-A4 = the brief's direction for Acts One to Four; P = the V.O. prune (a thought that could be an action becomes the action; forced or writerly lines go); N1 = the newcomer's \"I couldn't tell what Mas wants\"; R = runtime. The v3.1 rules stand: subtitles without quotation marks or print ellipses on spoken real lines; every call grid names its speaking tile; no band prompt. The script is show/episodes/ep01/script.md (draft 8); the notes are ../script-v32-notes.md; the agency map is ../agency-v32.md; the builder is _build_v32.py.",
+ "_about": "v32-agency beat plan (PLAN §2 format, plus the v3.1 plans' additive fields), written against the v3.1 LOCK's beat and line ids (show/reel/ep01-v31/ep01-v31-<seg>.json). Every v3.1 beat appears once (keep, cut, merge, or keep with \"moved\"), plus the new beats, listed in their v3.2 order. est_s is a planning length (the lock's measured lengths, line timings on file, word counts), never a measurement. Kept lines are keep true/false; kept V.O. carries \"vo\": true; new lines carry v32-<seg>-NNNN ids with who/text/after/gap_s/delivery/take; \"at\" on a kept line retimes it (start+S | after:<line id>+S); moved lines carry moved_from / moves_to. There are no new V.O. lines: the inner voice is pruned from 28 lines to 11 (SHOWRUNNER-NOTES note 0; draft 8.1 per show/bible/calibration.md §5), all on existing takes. Fix codes: A0 = note 0 (the lead drives the plot); A1-A4 = the brief's direction for Acts One to Four; P = the V.O. prune (a thought that could be an action becomes the action; forced or writerly lines go); N1 = the newcomer's \"I couldn't tell what Mas wants\"; R = runtime. The v3.1 rules stand: subtitles without quotation marks or print ellipses on spoken real lines; every call grid names its speaking tile; no band prompt. Draft 8.1 adds calibration codes C3/C5/C9 and the v3.1 audit's AUD codes (../audit-v31.md). The script is show/episodes/ep01/script.md (draft 8.1); the notes are ../script-v32-notes.md; the agency map is ../agency-v32.md; the builder is _build_v32.py.",
  "story_s": {
   "source": 201.25,
-  "estimate": 194.19
+  "estimate": 193.18
  },
  "beats": [
   {
@@ -36,7 +36,10 @@
    "action": "keep",
    "est_s": 3.833,
    "music": "THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
-   "fix": [],
+   "shot_note": "Mario's finger goes up on \"trained\": the catchphrase becomes the room's problem (AUD A.2 #4)",
+   "fix": [
+    "AUD A.2 #4"
+   ],
    "why": "unchanged",
    "src_s": 3.833,
    "src_frame": "MCU · SIRRAH at the blocks",
@@ -187,8 +190,12 @@
    "id": "13.10",
    "action": "keep",
    "est_s": 2.25,
+   "frame": "MCU · Radnus's face and the flame on his collar together, growing one size",
    "music": "THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
-   "fix": [],
+   "shot_note": "not an ECU: framed alone, the flame read as a burning note (AUD B.2 #8)",
+   "fix": [
+    "AUD B.2 #8"
+   ],
    "why": "unchanged",
    "src_s": 2.25,
    "src_frame": "INSERT · the flame on Radnus's collar",
@@ -301,21 +308,27 @@
   {
    "id": "14.03",
    "action": "keep",
-   "est_s": 1.917,
+   "est_s": 2.4,
    "music": "THE BRIDGE · a hush · no score: the phone's small speaker, then water on pilings",
-   "fix": [],
-   "why": "unchanged",
+   "caption": "The building, its lit window: a silhouette with a phone (no face); the same clip plays on its screen; the silhouette nods on the audio's beat. In the same shot, its thumb presses the repost arrow under the ⚠ ALTERED AUDIO tag: click, ✓ REPOSTED.",
+   "fix": [
+    "AUD B.2 #12"
+   ],
+   "why": "14.04 folds in: the lit-window stranger stays at 4.8 s with the hailstone and doesn't grow (AUD B.2 #12: keep it ≤ about 4 s).",
    "src_s": 1.917,
    "src_frame": "WIDE · the building, its lit window (push 2 of 3)",
    "lines": []
   },
   {
    "id": "14.04",
-   "action": "keep",
-   "est_s": 1.5,
+   "action": "merge",
+   "est_s": 0.0,
    "music": "THE BRIDGE · a hush · no score: the phone's small speaker, then water on pilings",
-   "fix": [],
-   "why": "unchanged",
+   "into": "14.03",
+   "fix": [
+    "AUD B.2 #12"
+   ],
+   "why": "The repost click folds into 14.03's shot.",
    "src_s": 1.5,
    "src_frame": "INSERT · a thumb on a repost arrow (push 3 of 3)",
    "lines": []
@@ -363,7 +376,14 @@
    "action": "keep",
    "est_s": 5.18,
    "music": "THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged",
-   "fix": [],
+   "onscreen": {
+    "replace": {
+     "LAHTNEMULB": "LAHTNEMULB · CHAIRMAN"
+    }
+   },
+   "fix": [
+    "C3"
+   ],
    "why": "unchanged",
    "src_s": 5.18,
    "src_frame": "WIDE · the hearing room",
@@ -638,10 +658,11 @@
    "action": "keep",
    "est_s": 5.0,
    "music": "THE TOUR · THE RUN (MM-03), a knee stab on each stamp",
-   "caption": "MATCH on the thunk: the tour poster, MAS MANALT: THE REGULATE-ME TOUR, its cities. LONDON's strip: \"…cease operating…\" and EU gets CANCELLED; his post \"…no plans to leave\" and UN-CANCELLED lands over it. The last date slot: his own hand comes into frame with a rubber stamp and stamps it, ADDED DUE TO POPULAR DEMAND. The frame holds on his one-pixel smile to the bar's end.",
-   "art": "his hand and a rubber stamp entering the poster GFX (one drawing in, one stamp, one out)",
+   "caption": "MATCH on the thunk: the tour poster, MAS MANALT: THE REGULATE-ME TOUR, its cities. LONDON's strip: \"…cease operating…\" and EU gets CANCELLED. His thumb comes into the corner of frame on his phone and posts \"…no plans to leave\" [H]; UN-CANCELLED lands over the stamp. The last date slot: his own hand stamps it, ADDED DUE TO POPULAR DEMAND. The frame holds on his one-pixel smile to the bar's end.",
+   "art": "his thumb on a phone entering the poster GFX's corner for the post; his hand and a rubber stamp for the last slot",
    "fix": [
-    "A2"
+    "A2",
+    "AUD B.3"
    ],
    "why": "The tour is his play: he threatens, walks it back (both his own public words) and adds the dates himself.",
    "src_s": 5.0,
@@ -801,7 +822,10 @@
    "action": "keep",
    "est_s": 4.5,
    "music": "THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)",
-   "fix": [],
+   "shot_note": "AUD #8: it read as a man floating in a tank (a head and a ring in the glass). Draw the reflection on the water's surface: his face only, broken by the crack, no body and no ring. Fallback: cut 17.12 and end the act on the sky's crack and his look down (17.11), −4.5 s.",
+   "fix": [
+    "AUD #8"
+   ],
    "why": "unchanged",
    "src_s": 4.5,
    "src_frame": "INSERT · Mas's glass (the act-out)",

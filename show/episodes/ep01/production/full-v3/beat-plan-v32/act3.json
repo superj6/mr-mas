@@ -1,10 +1,10 @@
 {
  "segment": "act3",
  "source": "show/reel/ep01-v31/ep01-v31-act3.json",
- "_about": "v32-agency beat plan (PLAN §2 format, plus the v3.1 plans' additive fields), written against the v3.1 LOCK's beat and line ids (show/reel/ep01-v31/ep01-v31-<seg>.json). Every v3.1 beat appears once (keep, cut, merge, or keep with \"moved\"), plus the new beats, listed in their v3.2 order. est_s is a planning length (the lock's measured lengths, line timings on file, word counts), never a measurement. Kept lines are keep true/false; kept V.O. carries \"vo\": true; new lines carry v32-<seg>-NNNN ids with who/text/after/gap_s/delivery/take; \"at\" on a kept line retimes it (start+S | after:<line id>+S); moved lines carry moved_from / moves_to. There are no new V.O. lines: the inner voice is pruned from 28 lines to 12 (SHOWRUNNER-NOTES note 0), all on existing takes. Fix codes: A0 = note 0 (the lead drives the plot); A1-A4 = the brief's direction for Acts One to Four; P = the V.O. prune (a thought that could be an action becomes the action; forced or writerly lines go); N1 = the newcomer's \"I couldn't tell what Mas wants\"; R = runtime. The v3.1 rules stand: subtitles without quotation marks or print ellipses on spoken real lines; every call grid names its speaking tile; no band prompt. The script is show/episodes/ep01/script.md (draft 8); the notes are ../script-v32-notes.md; the agency map is ../agency-v32.md; the builder is _build_v32.py.",
+ "_about": "v32-agency beat plan (PLAN §2 format, plus the v3.1 plans' additive fields), written against the v3.1 LOCK's beat and line ids (show/reel/ep01-v31/ep01-v31-<seg>.json). Every v3.1 beat appears once (keep, cut, merge, or keep with \"moved\"), plus the new beats, listed in their v3.2 order. est_s is a planning length (the lock's measured lengths, line timings on file, word counts), never a measurement. Kept lines are keep true/false; kept V.O. carries \"vo\": true; new lines carry v32-<seg>-NNNN ids with who/text/after/gap_s/delivery/take; \"at\" on a kept line retimes it (start+S | after:<line id>+S); moved lines carry moved_from / moves_to. There are no new V.O. lines: the inner voice is pruned from 28 lines to 11 (SHOWRUNNER-NOTES note 0; draft 8.1 per show/bible/calibration.md §5), all on existing takes. Fix codes: A0 = note 0 (the lead drives the plot); A1-A4 = the brief's direction for Acts One to Four; P = the V.O. prune (a thought that could be an action becomes the action; forced or writerly lines go); N1 = the newcomer's \"I couldn't tell what Mas wants\"; R = runtime. The v3.1 rules stand: subtitles without quotation marks or print ellipses on spoken real lines; every call grid names its speaking tile; no band prompt. Draft 8.1 adds calibration codes C3/C5/C9 and the v3.1 audit's AUD codes (../audit-v31.md). The script is show/episodes/ep01/script.md (draft 8.1); the notes are ../script-v32-notes.md; the agency map is ../agency-v32.md; the builder is _build_v32.py.",
  "story_s": {
   "source": 145.13,
-  "estimate": 142.42
+  "estimate": 141.33
  },
  "beats": [
   {
@@ -12,7 +12,10 @@
    "action": "keep",
    "est_s": 3.2,
    "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
-   "fix": [],
+   "shot_note": "frame the two faint marks in the wood close enough to read as tally marks (AUD B.2 #4); the carve pays them in Act Four",
+   "fix": [
+    "AUD B.2 #4"
+   ],
    "why": "unchanged",
    "src_s": 3.2,
    "src_frame": "TWO-SHOT · the home room, opened close; the monitor lit",
@@ -23,8 +26,16 @@
    "action": "keep",
    "est_s": 5.0,
    "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "onscreen": {
+    "replace": {
+     "KRAM": "KRAM · RUNS ATEM"
+    }
+   },
+   "shot_note": "the thirteenth key, Atem blue, is hung large enough to read (it pays v32-9.10k's twelfth; AUD #7)",
    "fix": [
-    "P"
+    "P",
+    "C3",
+    "AUD #7"
    ],
    "why": "The Atem payoff stays whole in the picture.",
    "src_s": 6.24,
@@ -129,27 +140,25 @@
   {
    "id": "18.06",
    "action": "keep",
-   "est_s": 5.7,
+   "est_s": 7.2,
    "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
    "fix": [
-    "P"
+    "P",
+    "C5"
    ],
-   "why": "The Orb drifts to his shoulder; \"you can stay.\": he keeps his own witness.",
+   "why": "8.1 (calibration §5; the audit keeps it): \"i made it for everyone else.\" is restored. It's a line only the voice can do: he exempts himself from his own device a beat after its scan saw tokens. Then \"you can stay.\": he keeps his own witness.",
    "src_s": 7.7,
    "src_frame": "TWO-SHOT · the Orb drifts to his shoulder (held)",
    "lines": [
     {
      "id": "e1-a3-18-04",
-     "keep": false,
-     "who": "mas",
-     "text": "i made it for everyone else.",
-     "vo": true,
-     "why": "P (note 0): pruned; \"i made it for everyone else.\" (v3-vo-14): the tokens and the verdict make the irony; his act is the invitation"
+     "keep": true,
+     "vo": true
     },
     {
      "id": "e1-a3-18-03",
      "keep": true,
-     "at": "start+2.2"
+     "at": "after:e1-a3-18-04+1.0"
     }
    ]
   },
@@ -180,10 +189,12 @@
    "action": "keep",
    "est_s": 10.4,
    "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "caption": "One held room frame: Mas's two fingers, his pinky, the forum's tiled hands. REMUHCS: \"Every single person raised their hand.\" NOLE: \"It's important for us to have a referee.\" At the desk his hand is already up. He lowers it himself and turns straight to his keyboard: he is one hand among hundreds.",
    "fix": [
-    "P"
+    "P",
+    "AUD #2"
    ],
-   "why": "The runner stays whole (a v3.1 restoration); it ends on his hand coming down.",
+   "why": "The runner stays whole (a v3.1 restoration); it ends on his hand coming down. Draft 8.1: The Tidder post now comes out of this (AUD #2): one hand among hundreds, he turns to the keys. No reason is stated.",
    "src_s": 12.44,
    "src_frame": "2S·SCR · the hands runner: one held room frame",
    "lines": [
@@ -210,19 +221,25 @@
    "action": "keep",
    "est_s": 3.417,
    "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
-   "fix": [],
-   "why": "unchanged",
+   "caption": "Straight from the forum's raised hands: over Mas's shoulder onto a reply box on TIDDER. He types, in source casing: \"Agi has been achieved internally\"",
+   "fix": [
+    "AUD #2"
+   ],
+   "why": "The post follows the room (AUD #2); the show still plays no reason for it.",
    "src_s": 3.417,
    "src_frame": "OTS · over Mas's shoulder onto the monitor (TIDDER)",
    "lines": []
   },
   {
    "id": "20.02",
-   "action": "keep",
-   "est_s": 1.583,
+   "action": "cut",
+   "est_s": 0.0,
    "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
-   "fix": [],
-   "why": "unchanged",
+   "fix": [
+    "AUD #2",
+    "AUD B.2 #1"
+   ],
+   "why": "The LEDs stopping was an omen that never paid off (AUD B.2 #1); the Orb's long look at him (20.04) keeps the hint.",
    "src_s": 1.583,
    "src_frame": "TWO-SHOT · the LEDs stop",
    "lines": []
@@ -278,6 +295,7 @@
    "action": "keep",
    "est_s": 12.5,
    "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "caption": "Back on the two-shot, Gerg's tile small in the corner; on the monitor the counter keeps climbing, faster. \"Okay. That's patched.\" / \"how's the build?\" / \"Still running. I don't go to bed till it's green.\" / \"go to sleep, gerg.\" / \"When it compiles.\" His keys run on.",
    "fix": [
     "P"
    ],
@@ -318,17 +336,28 @@
   {
    "id": "v31-20.07",
    "action": "keep",
-   "est_s": 5.0,
+   "est_s": 4.0,
    "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
-   "fix": [],
-   "why": "unchanged",
+   "onscreen": {
+    "replace": {
+     "NELEH": "NELEH · NOPEAI BOARD"
+    }
+   },
+   "fix": [
+    "C3",
+    "C5"
+   ],
+   "why": "The board's seed is now in the world (her plate); he reads, says nothing, and the Orb reads him. His doing anything about the paper would sit at a contested moment (facts #36), so he doesn't.",
    "src_s": 5.0,
    "src_frame": "POV · the monitor: Neleh's paper",
    "lines": [
     {
      "id": "v31-vo-06",
-     "keep": true,
-     "vo": true
+     "keep": false,
+     "who": "mas",
+     "text": "neleh's on our board. she quoted us.",
+     "vo": true,
+     "why": "8.1 (calibration §3, §5; AUD A.1 'convert'): a caption; the byline plate NELEH · NOPEAI BOARD carries it"
     }
    ]
   },
@@ -337,8 +366,11 @@
    "action": "keep",
    "est_s": 1.2,
    "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
-   "fix": [],
-   "why": "unchanged",
+   "caption": "Mas and the Orb, the paper soft on the monitor. He reads on; the Orb reads him. He closes the paper, and the monitor's next tab is the president's order, live.",
+   "fix": [
+    "AUD B.2 #13"
+   ],
+   "why": "A bridge by his hand into the order (AUD B.2 #13).",
    "src_s": 1.2,
    "src_frame": "TWO-SHOT · Mas and the Orb, the paper soft on the monitor",
    "lines": []
@@ -567,7 +599,10 @@
    "action": "keep",
    "est_s": 2.5,
    "music": "THE CLOCK · MM-14's step figure, bar 1 to the dead stop on bar 4",
-   "fix": [],
+   "shot_note": "each hover shows its attendee's small avatar beside the name: Alyi's reflection, Neleh with the glowing page, Mada's face under his spinner, a black square. Mada gets a face before the blow (AUD B.2 #7)",
+   "fix": [
+    "AUD B.2 #7"
+   ],
    "why": "unchanged",
    "src_s": 2.5,
    "src_frame": "HIGH · bar 2: the reminder",

@@ -1,6 +1,6 @@
 # Ep1 v3.2: the spine and the agency map (`v32-agency`, 2026-09-28)
 
-> **Status: DONE, for the lead's review.** It goes with script draft 8, the six [beat-plan-v32](beat-plan-v32/) plans and [script-v32-notes.md](script-v32-notes.md). Nothing here was recorded, timed, heard or watched, and nothing was committed.
+> **Status: DONE, for the lead's review (updated for draft 8.1).** It goes with script draft 8.1, the six [beat-plan-v32](beat-plan-v32/) plans and [script-v32-notes.md](script-v32-notes.md). Nothing here was recorded, timed, heard or watched, and nothing was committed.
 >
 > **What it answers.** SHOWRUNNER-NOTES 00 and 0: "mas's lack of agency is very apparent… makes it feel like watching a random sequence of events [rather] than about mr mas's rise to power"; "it is not really showing him take any action, just existing through the moments"; and "make sure no previous advice was taken too extreme". The v3 newcomer said it first: "I couldn't tell what Mas wants: he is carried along, and others win Act Four for him."
 
@@ -24,12 +24,12 @@
 | **One** · he launches, it explodes, he secures the money | Presses the button (his call, against Rima's caution and Alyi's question) → announces the million → the bill is his problem, so **he calls the landlord** → the check jams the door; he steps on and asks the rent → **GTP-4 goes out on his click** → writes his own ask, `PLEASE` / `REG`, with the landlord's pen | his launch | a race the world wants paused (the letter, the op-ed), and his half-written ask |
 | **Two** · he makes himself the face of it | Gets the seat nearest the teacher and owns the class photo → at the Senate **proposes the agency himself** and slides `PLEASE REGULATE ME` across as he says it → they ask him to run it; he declines; the wallet → he tours the ask, threatens Europe, walks it back, **stamps his own added dates** → signs the extinction table | the ask he started in March | by summer his line is everyone's line; the chip seller rings up the race; a crack runs into his reflection |
 | **Three** · he consolidates | Keeps his own witness (the Orb, his other company) → posts, edits → **switches the monitor off and walks onto the DevDay stage**, live: "and today, you can build your own chatgtp." at 100 million a week, the landlord hugging him in words → a week later **he pauses the sign-ups himself** | everyone copying his ask; his launch outgrowing everything | the stakes the board's Friday invite lands on. **No reason is given anywhere:** no board member watches DevDay, and no line links his moves to their decision |
-| **Four** · the fall, and the climb back | After the blow: **his own post** ("…will have more to say about what's next later.") → **walks into his own company as a guest**, puts the badge on himself and posts it (told twice: their camera saw a small figure) → at 2 AM **calls Gerg and asks for the letter**, "keep building.", asks the landlord the rent **and takes the badge he doesn't wear** → accepts Tuesday's invite looking at it → **pulls the pin**, gives up the seat, **names his term**, out-waits Mada | the board's move (their public words only) | the return, won by what he built (the people he hired, 745 of 770; the landlord's desks he called for in Act One; the money everybody was about to get) and by his moves after the shock |
+| **Four** · the fall, and the climb back | After the blow: **his own post** ("…will have more to say about what's next later.") → **walks into his own company as a guest**, puts the badge on himself and posts it, and the picture steps out into their camera, so their Sunday follows from it (draft 8.1) → at 2 AM **calls Gerg and asks for the letter**, "keep building.", asks the landlord the rent **and takes the badge he doesn't wear** → accepts Tuesday's invite looking at it → **pulls the pin**, gives up the seat, **names his term**, out-waits Mada | the board's move (their public words only) | the return, won by what he built (the people he hired, 745 of 770; the landlord's desks he called for in Act One; the money everybody was about to get) and by his moves after the shock |
 | **Tag** | Pins the crown (CEO of the Year) and frames the badge | the return | the next fight arrives by thud (Ep2) |
 
 **The rooms get bigger with him:** the bullpen → the lobby → the White House → the Senate → the world (the tour) → the DevDay stage → APEC. The collar pops once, on the money.
 
-**What he is not** (the other half of note 00). He isn't a declared schemer: no speech or voice-over announces ambition, and there's no villain turn. His agency shows as precise moves with consequences, which is the bible's "win without being seen to play". The inner voice is 12 lines, and the silences stay silent.
+**What he is not** (the other half of note 00). He isn't a declared schemer: no speech or voice-over announces ambition, and there's no villain turn. His agency shows as precise moves with consequences, which is the bible's "win without being seen to play". The inner voice is 11 lines (draft 8.1), and the silences stay silent.
 
 ---
 
@@ -39,9 +39,9 @@
 
 1. **Cold open → Act One:** the Friday invite, accepted without looking; the Orb rewinds to where this started.
 2. **5 → 6:** he presses the button → the users arrive, and **he announces the million** himself.
-3. **6 → 7:** the million → the heat and the `$` odometer → "it's the bill." → **so he calls the landlord.**
+3. **6 → 7:** the million → the heat and the `$` odometer → "it's the bill." → **so he calls the landlord** ("it's the bill. we're going to need more servers.").
 4. **7 → 8:** **the phone he hangs up lights red**: the rival's alarm at his launch.
-5. **8 → 9:** a month later **the landlord's answer jams the lobby door**, with the promised pen clipped to it.
+5. **8 → 9:** a month later **the landlord's answer jams the lobby door**, with the promised pen clipped to it; weeks on, the landlord's ring carries a key to NopeAI (draft 8.1, shown large).
 6. **9 → 10:** the landlord puts his model in its own search engine, makes the rival dance, and the model comes out of the TV and scolds him: the price of the money.
 7. **10 → 11:** Gerg closes his laptop on it → opens it on the Atem leak → **GTP-4 goes out on Mas's click** → Mario's lab launches the same day: "That's how a race starts."
 8. **11 → 12:** the race → the world asks for a pause, then "Shut It All Down" lands on his desk → he writes his own ask.
@@ -51,11 +51,12 @@
 12. **15 → 16:** the senators want to sign his sheet → he takes it on the road.
 13. **16 → 17:** the tour's last date → the extinction table → the register prices the race.
 14. **17 → 18:** the crack in his glass → home; the landlord has a thirteenth tenant.
-15. **18 → 19 → 20 → 20A → 21:** his witness arrives → his May ask becomes everyone's → he posts → a board member quotes his launch → the president writes the rules down.
+15. **18 → 19 → 20 → 20A → 21:** his witness arrives → his May ask becomes everyone's, and he's one hand among hundreds → **so he turns to his keys and posts** (draft 8.1) → a board member quotes his launch → **he closes it and opens the next tab**: the president writes the rules down.
 16. **21 → 22:** **he switches the monitor off; the clapping becomes a hall's applause, and he's on the stage.**
 17. **22 → 22A → 23:** 100 million a week → **more people than servers, and he shuts the door** → the reminder: Friday.
 18. **Act Four, his side:** the blow → **his post** → the carve → the Orb's rewind to their side.
-19. **Their side → his side:** their lobby camera → **the same minute from inside it: he walks in as a guest** → 2 AM → **he calls Gerg** → the letter → the door, **the badge he takes** → the avalanche → Monday → **the invite he accepts** → **his terms** → the lobby's refused Remove → the coda → the tag.
+19. **Inside their side:** Mario's no → **he walks into his own company as a guest and posts it**; the picture steps out into their camera → **so** they talk all day about him coming back (draft 8.1: cause, then effect).
+20. **His side:** 2 AM → **he calls Gerg** → the letter → the door, **the badge he takes** → the avalanche → Monday → **the invite he accepts** → **his terms** → the lobby's refused Remove → the coda → the tag.
 
 **Reference beats that hang only by a thread**, checked against note 00 ("shrink it or connect it"): the Elgoog founders (the rival reacting to his launch), the telescope and the dance (his model, in the landlord's engine, making the rival dance), the bay (his face in the feed, then the fake that opens his hearing; also the balance pair), Nole's pause letter (the world reacting to his race), Sirrah's two letters and the order (the government answering the ask he started; also the balance pair). Each now hangs on one of his moves, so none was cut; none grew.
 
@@ -100,8 +101,8 @@
 |---|---|---|---|---|
 | 18 the Orb | a witness | opens his own company's device; "you can stay." | he has a witness in the room | reactive → reactive |
 | 19 the hands | credit | his hand is already up; he lowers it himself | — | passive → reactive |
-| 20 Tidder | (no motive is played) | posts "Agi has been achieved internally"; edits it; tells Gerg to sleep | the counter climbs anyway | active → active |
-| 20A Neleh's paper | — | reads it | the board is seeded | passive → passive |
+| 20 Tidder | (no motive is played) | straight from the forum's raised hands, posts "Agi has been achieved internally"; edits it; tells Gerg to sleep (8.1: the LEDs omen is cut) | the counter climbs anyway | active → active |
+| 20A Neleh's paper | — | reads it; closes it (8.1); her plate says `NELEH · NOPEAI BOARD` | the board is seeded | passive → passive |
 | 21 the order | — | "which one's real?"; **switches the monitor off** | he's on a stage | passive → **reactive, ending on his move** |
 | 22 DevDay | the stage | **launches "build your own", live**; asks the landlord on stage; chooses "super." | 100 million a week; the landlord's hug | passive → **active** |
 | 22A the surge (new) | to hold what he built | **pauses the sign-ups** (his real post, facts W3) | the door shuts on a crowd; the reminder comes next | — → **active** |
@@ -117,7 +118,7 @@
 | S1.13 the post (new) | to say what's next himself | **writes his own post**, 1:46 PM (facts W4) | "will have more to say about what's next later." | — → **active** |
 | 26A that night | — | carves the third mark ("i don't keep score.") | the Orb counts; the rewind | reactive → reactive |
 | 27 the board's side | — | *absent*; his public moves land there: his eulogy post buries their call in hearts, and he's a small figure on their camera | — | absent → absent |
-| S5.00 the lobby (new) | back in | **walks into his own company as a guest, puts the badge on himself and posts it**; looks up at their camera | they talk all day, "no closer" (their side) | — → **active** |
+| S5.00 the lobby (new; 8.1: inside the board's side, before their Sunday) | back in | **walks into his own company as a guest, puts the badge on himself and posts it**; looks up at their camera | the picture steps into their camera; they talk all day, "no closer" | — → **active** |
 | 29 2 AM | to know, and to keep what he built | hearts every post (the count goes); **calls Gerg; asks for the letter**; "keep building."; asks the rent first; **takes the MACROSOFT badge and doesn't wear it**; "leave it open." | Gerg keeps building; both doors stay open | active → **active (more)** |
 | S6 the avalanche | — | watches | the board leaves the call | passive → passive |
 | 30 Monday | — | three hearts to Alyi (his real act); "one for each day."; **accepts Tuesday's invite, looking at it** | Tuesday | reactive → reactive (with a move) |
@@ -158,7 +159,7 @@ Guardrails §1–2 and §6: no invented motive at a contested real moment; nothi
 | "and today, you can build your own chatgtp." | invented paraphrase of the real GPTs launch (#43) | no | **nothing links DevDay to the board**: no board member watches it, no line connects them, and Mada's product is never mentioned (research mid §4: that rumour is unverified) |
 | He pauses the sign-ups | **record** (W3, [P]) | no | his own post, first sentence |
 | His post after the blow | **record** (W4, [P]) | the blow is contested; **the post is his public act** | shown as a post, verbatim; no inner voice until the night (mas-inner-voice §5) |
-| He walks in as a guest and posts | **record** (#50, L13, [P]) | the Sunday talks are contested | we see only his public acts (the badge, the post); the talks stay theirs and off screen; his look at the camera is one beat, the same one-pixel smile, no expression change |
+| He walks in as a guest and posts | **record** (#50, L13, [P]) | no, by calibration §10's scope (his public act); the Sunday talks stay theirs | we see only his public acts (the badge, the post); the talks stay off screen; his look at the camera is one beat, the same one-pixel smile, no expression change |
 | He takes the MACROSOFT badge and doesn't wear it | invented small action | yes (the five days) | consistent with his own later account (W5: he had decided to join on Sunday evening), which is **held, not quoted**: his stated motive in that post stays off screen. The badge states no reason |
 | The staff letter | the staff's (record) | yes | **he never orchestrates it**: he asks to hear it after it exists; he hearts the posts (record); "keep building." is about Gerg's fallback and names no destination |
 
@@ -167,10 +168,76 @@ Guardrails §1–2 and §6: no invented motive at a contested real moment; nothi
 ## 4. Not overcorrected (note 00's other half)
 
 - **No schemer.** No line, spoken or thought, states what he's after. Every move is small, precise and has a consequence; the comedy of "win without being seen to play" stays.
-- **The inner voice is 12 lines, not 28 and not 0.** The misread before the blow, the silence at the blow and the lost count at 2 AM all stay; Act Two has none (he performs in public there), and not every silence was filled.
-- **The told-twice structure is untouched.** It gains one retold moment (the lobby, which was only on their camera).
+- **The inner voice is 11 lines, not 28 and not 0** (draft 8.1, calibration §5: each line does what only the voice can). The misread before the blow, the silence at the blow and the lost count at 2 AM all stay; Act Two has none (he performs in public there), and not every silence was filled.
+- **The told-twice structure is untouched.** It gains one retold moment (the lobby: his side, then their camera, in one cut).
 - **Conversations play out as before.** No exchange was shortened except where a voice-over sat between two lines.
 - **The board's side is whole** (3:37, no inner voice, every sincere beat).
 - **Every restoration stays** (Sydney, the Atem thread, the hands runner, Rezeile's op-ed, the Runway demo), and every v3.1 fix keeps its job ([script-v32-notes §3.4](script-v32-notes.md) lists where each cut V.O. line's job went).
 - **Newcomer clarity without a lecture.** The orienting V.O. lines that went are replaced by picture (the label, the tag, the lips) and by cause and effect, not by new explanations.
-- **The calibration guide** ([calibration](../../../../bible/calibration.md)) was not written yet when this pass ran; where it disagrees, it governs.
+- **The calibration guide** ([calibration](../../../../bible/calibration.md)) is folded in by draft 8.1: plates with one relation word, no `(REPORTED)` label needed, the voice at 11, recap and "as you know" cut, and "contested" read at its scope (the firing's reasons, the staff letter's authorship, testimony, the memo).
+
+---
+
+## 5. The retell test (calibration: "So Mas… / Because of that…")
+
+Each act retold from the script alone, with no date rails. A link that only works as "and then" is marked **(weak)**, with why it stays.
+
+**Cold open and Act One**
+1. So Mas, at the top of his rise the day before it breaks, accepts a Friday board invite without looking.
+2. Because of that we rewind to where it started: launch night, where Gerg has built it all and left Mas the button.
+3. So Mas, knowing it will break, over Rima's caution and Alyi's question, presses it.
+4. Because of that a million people arrive in five days, and he announces it himself.
+5. Because of that the servers glow red, and the bill arrives with the million.
+6. So Mas calls the landlord: "it's the bill. we're going to need more servers."
+7. Because his launch is everywhere, the rival sounds its alarm, on the phone he just hung up.
+8. Because he called, the landlord's check jams the lobby door a month later, the promised pen clipped to it.
+9. So Mas pockets the pen, steps onto the money and asks the rent; everything will run on the landlord's servers, and weeks later the landlord's ring carries a key to NopeAI.
+10. Because the landlord now owns the floor, it puts Mas's model in its own search engine, makes the rival dance, and lets the model scold Mas in its colours until it resets it on a timer.
+11. So Mas launches again on the same button, the day his old colleague's lab launches too, and the race is on.
+12. Because of the race, the world asks every lab to pause, and a magazine asks for everything.
+13. So Mas, with the landlord's pen, starts writing his own ask: `PLEASE` / `REG`.
+
+**Act Two**
+1. Because his launch made AI the story, the White House calls the four CEOs in, and Mas is already in the seat nearest the teacher.
+2. So Mas answers the rival's worry with a knife, doesn't turn for the president, and is the only one in the class photo looking at the lens.
+3. Because of that photo, his face is in everyone's feed that night, beside a clip with a fake voice. **(weak: the clip is the world's, not his; it stays as the episode's political balance pair, at one shot, and it sets up the hearing's first line)**
+4. Because of fakes like that, the Senate hearing opens on a cloned voice, disowned.
+5. So Mas, asked what the committee should do, proposes the agency himself and slides `PLEASE REGULATE ME` across.
+6. Because he proposed it, they ask him to run it, and he declines: "i love my current job."
+7. Because they then press his pay, he shows a wallet with one card in it and says he owns nothing.
+8. Because every senator wants to sign his ask, he takes it on the road: he threatens Europe, walks it back himself, and stamps his own added dates.
+9. So Mas signs the extinction warning at the tour's last table, where his old colleague won't give back the pen.
+10. Because the race he leads needs chips, the chip seller rings it up at a trillion.
+11. Because of that the sky cracks, and the crack runs into his reflection.
+
+**Act Three**
+1. Because of the summer he spent on the road, he comes home to the landlord welcoming another tenant: the free rival he predicted.
+2. So Mas opens his own other company's device and keeps it as his witness, though its scan saw tokens where his face should be.
+3. Because the ask he made in May is now everyone's line, he's one raised hand among hundreds.
+4. So Mas turns to his keys and posts that his lab has reached human-level AI, then edits it; the replies climb anyway.
+5. Because of his launch, a member of his own board publishes a paper that quotes it as corner-cutting.
+6. So Mas closes it; because everyone asked for rules, the next tab is the president writing them down, and a fake of him cheering.
+7. So Mas switches the monitor off and walks onto his own stage.
+8. Because he's live at DevDay at 100 million a week, he launches "build your own", and the landlord hugs him in words.
+9. Because of that, a week later more people want in than his servers can hold.
+10. So Mas shuts the door himself.
+11. Because he accepted it on the APEC stage without looking, the Friday invite comes back as a reminder, and the clock runs out.
+
+**Act Four and the tag**
+1. Because he accepted without looking, he joins a call he reads as the budget.
+2. Because the board has decided (their move, in their words only), he's removed.
+3. So Mas, after one silence and "super.", writes his own post: "…will have more to say about what's next later."
+4. Because we saw only his side, the Orb rewinds to theirs: their plan, noon, their post, Rima appointed; Gerg quits; Mas's own post buries their call in hearts.
+5. Because the staff and investors keep calling, the board offers his job to the rival, who says no.
+6. So Mas walks into his own company as a guest, puts the badge on and posts it.
+7. Because he's in the building, the board talks all day about him coming back and gets nowhere; they appoint a second interim, and the landlord announces he's hiring Mas.
+8. Because the staff are signing a letter at 2 AM, Mas calls Gerg and asks him to read it.
+9. Because Alyi's name is on it, the share sale is void without him, and Gerg asks, Mas decides: "keep building."
+10. Because the landlord comes to his door with a desk for everyone, Mas asks the rent, takes the badge, doesn't wear it, and leaves the door open.
+11. Because the staff he hired fill the board's call until the firers leave it, the board invites him back, and he accepts, looking.
+12. So Mas walks into the burning boardroom, makes the new chair's extinguisher work, gives up the seat, names his one term and out-waits the last firer.
+13. Because of that, the deal is signed, and the lobby's sign resets to zero.
+14. So Mas reads his memo to the staff who stayed, and the landlord gets a chair.
+15. So Mas pins up CEO of the Year and frames the badge, and the next fight arrives by thud.
+
+**Result:** every act's chain runs on his moves; the one weak link is the bay's clip (Act Two, 3), kept at one shot as the balance pair. The board's reasons never enter any link.

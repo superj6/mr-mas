@@ -1,10 +1,10 @@
 {
  "segment": "act1",
  "source": "show/reel/ep01-v31/ep01-v31-act1.json",
- "_about": "v32-agency beat plan (PLAN §2 format, plus the v3.1 plans' additive fields), written against the v3.1 LOCK's beat and line ids (show/reel/ep01-v31/ep01-v31-<seg>.json). Every v3.1 beat appears once (keep, cut, merge, or keep with \"moved\"), plus the new beats, listed in their v3.2 order. est_s is a planning length (the lock's measured lengths, line timings on file, word counts), never a measurement. Kept lines are keep true/false; kept V.O. carries \"vo\": true; new lines carry v32-<seg>-NNNN ids with who/text/after/gap_s/delivery/take; \"at\" on a kept line retimes it (start+S | after:<line id>+S); moved lines carry moved_from / moves_to. There are no new V.O. lines: the inner voice is pruned from 28 lines to 12 (SHOWRUNNER-NOTES note 0), all on existing takes. Fix codes: A0 = note 0 (the lead drives the plot); A1-A4 = the brief's direction for Acts One to Four; P = the V.O. prune (a thought that could be an action becomes the action; forced or writerly lines go); N1 = the newcomer's \"I couldn't tell what Mas wants\"; R = runtime. The v3.1 rules stand: subtitles without quotation marks or print ellipses on spoken real lines; every call grid names its speaking tile; no band prompt. The script is show/episodes/ep01/script.md (draft 8); the notes are ../script-v32-notes.md; the agency map is ../agency-v32.md; the builder is _build_v32.py.",
+ "_about": "v32-agency beat plan (PLAN §2 format, plus the v3.1 plans' additive fields), written against the v3.1 LOCK's beat and line ids (show/reel/ep01-v31/ep01-v31-<seg>.json). Every v3.1 beat appears once (keep, cut, merge, or keep with \"moved\"), plus the new beats, listed in their v3.2 order. est_s is a planning length (the lock's measured lengths, line timings on file, word counts), never a measurement. Kept lines are keep true/false; kept V.O. carries \"vo\": true; new lines carry v32-<seg>-NNNN ids with who/text/after/gap_s/delivery/take; \"at\" on a kept line retimes it (start+S | after:<line id>+S); moved lines carry moved_from / moves_to. There are no new V.O. lines: the inner voice is pruned from 28 lines to 11 (SHOWRUNNER-NOTES note 0; draft 8.1 per show/bible/calibration.md §5), all on existing takes. Fix codes: A0 = note 0 (the lead drives the plot); A1-A4 = the brief's direction for Acts One to Four; P = the V.O. prune (a thought that could be an action becomes the action; forced or writerly lines go); N1 = the newcomer's \"I couldn't tell what Mas wants\"; R = runtime. The v3.1 rules stand: subtitles without quotation marks or print ellipses on spoken real lines; every call grid names its speaking tile; no band prompt. Draft 8.1 adds calibration codes C3/C5/C9 and the v3.1 audit's AUD codes (../audit-v31.md). The script is show/episodes/ep01/script.md (draft 8.1); the notes are ../script-v32-notes.md; the agency map is ../agency-v32.md; the builder is _build_v32.py.",
  "story_s": {
   "source": 337.46,
-  "estimate": 335.03
+  "estimate": 331.07
  },
  "beats": [
   {
@@ -47,11 +47,17 @@
    "est_s": 11.0,
    "music": "LAUNCH NIGHT · warm and curious, then giddy · for its first minute only Gerg's Build (chip) and Mas's felt (mood §4 #2); the trio arrives when the chat flatters him (5.10) and hands to the swing on the counter; every stop kept",
    "caption": "Mas and Gerg, desk to desk, the dark laptop and the button in the foreground. \"Okay, the build's green.\" / \"We said low-key, Gerg. I underlined it. Twice.\" / she'll go for three. (V.O.) / \"It's a research preview, Rima…\"",
+   "onscreen": {
+    "replace": {
+     "GERG MOCKBRAN": "GERG MOCKBRAN · CO-FOUNDER"
+    }
+   },
    "fix": [
     "A1",
-    "N1"
+    "N1",
+    "C3"
    ],
-   "why": "The launch becomes his call. Gerg has built and staged it (the man who never waits to be asked), but he never says he's shipping it: the button is Mas's (\"Your button.\", 5.07) and Rima says so (\"Mas, it's your call.\", 5.04). The prediction stays: his reads are right, which is why the budget read hurts.",
+   "why": "The launch becomes his call. Gerg has built and staged it (the man who never waits to be asked), but he never says he's shipping it: the button is Mas's (\"Your button.\", 5.07) and Rima says so (\"Mas, it's your call.\", 5.04). The prediction stays: his reads are right, which is why the budget read hurts. Draft 8.1: The first-appearance plate gets its one relation word (calibration §3).",
    "src_s": 12.015,
    "src_frame": "TWO-SHOT · Mas and Gerg, desk to desk (held)",
    "lines": [
@@ -94,10 +100,16 @@
    "action": "keep",
    "est_s": 28.962,
    "music": "LAUNCH NIGHT · warm and curious, then giddy · for its first minute only Gerg's Build (chip) and Mas's felt (mood §4 #2); the trio arrives when the chat flatters him (5.10) and hands to the swing on the counter; every stop kept",
+   "onscreen": {
+    "replace": {
+     "RIMA TAMURI": "RIMA TAMURI · CTO"
+    }
+   },
    "fix": [
-    "A1"
+    "A1",
+    "C3"
    ],
-   "why": "unchanged. v3-vo-03 stays (one of the twelve): \"she's right. it will break.\" makes the click a choice made knowing, against Rima's caution and Alyi's; aloud, \"it's a preview.\"",
+   "why": "unchanged. v3-vo-03 stays (one of the twelve): \"she's right. it will break.\" makes the click a choice made knowing, against Rima's caution and Alyi's; aloud, \"it's a preview.\" Draft 8.1: Plate: RIMA TAMURI · CTO (calibration §3).",
    "src_s": 28.962,
    "src_frame": "OTS · over Mas onto Rima (held through the bargain)",
    "lines": [
@@ -137,8 +149,15 @@
    "action": "keep",
    "est_s": 2.625,
    "music": "LAUNCH NIGHT · warm and curious, then giddy · for its first minute only Gerg's Build (chip) and Mas's felt (mood §4 #2); the trio arrives when the chat flatters him (5.10) and hands to the swing on the counter; every stop kept",
-   "fix": [],
-   "why": "unchanged",
+   "onscreen": {
+    "replace": {
+     "ALYI": "ALYI · CO-FOUNDER"
+    }
+   },
+   "fix": [
+    "C3"
+   ],
+   "why": "unchanged in picture. Plate: ALYI · CO-FOUNDER (calibration §3; v4.2's reads found it worked).",
    "src_s": 2.625,
    "src_frame": "MCU·glass · Alyi in the doorway, seen in its glass (the cut on the turn)",
    "lines": [
@@ -455,7 +474,7 @@
    "id": "v32-7.03",
    "action": "new",
    "after": "7.02",
-   "est_s": 7.2,
+   "est_s": 9.0,
    "frame": "MCU · Mas at his end desk, the phone at his ear; the open tile's red glow under him",
    "set": "bullpen",
    "room": "bullpen",
@@ -480,12 +499,12 @@
      "id": "v32-a1-0003",
      "new": true,
      "who": "mas",
-     "text": "it's the bill.",
+     "text": "it's the bill. we're going to need more servers.",
      "after": "v32-a1-0002",
      "gap_s": 0.6,
-     "delivery": "plain; the same words he gave Rima, now a request",
+     "delivery": "plain, a full ask (calibration §9: full sentences when he asks); the first three words the same as to Rima",
      "tag": "",
-     "take": "reuse e1-a1-7-02 (the same line, the same take: what he told Rima he now tells the landlord)",
+     "take": "new (8.1: a full sentence replaces the reuse of e1-a1-7-02)",
      "note": "[INVENTED]"
     },
     {
@@ -501,10 +520,11 @@
      "note": "[INVENTED] the pen clipped to the check (9.04), the one Mas pockets and writes PLEASE with (12.04)"
     }
    ],
-   "caption": "Later that night. Mas at his desk, the tile's red glow under him, the phone at his ear; on its lit screen by his cheek, the contact reads TASYA over a key-ring avatar. One filtered ring. \"Mas.\" / \"it's the bill.\" / \"I'll bring a pen.\" He lowers the phone; before it reaches the desk it lights red, and a siren whines through its small speaker.",
+   "caption": "Later that night. Mas at his desk, the tile's red glow under him, the phone at his ear; on its lit screen by his cheek, the contact reads TASYA · MACROSOFT over a key-ring avatar. One filtered ring. \"Mas.\" / \"it's the bill. we're going to need more servers.\" / \"I'll bring a pen.\" He lowers the phone; before it reaches the desk it lights red, and a siren whines through its small speaker.",
    "onscreen": {
     "add": [
-     "TASYA (the phone's contact name, over a key-ring avatar)"
+     "TASYA (the phone's contact name, over a key-ring avatar)",
+     "TASYA · MACROSOFT (the phone's contact name, over a key-ring avatar; replaces TASYA)"
     ]
    },
    "jcut": [
@@ -519,7 +539,9 @@
    "fix": [
     "A1",
     "A0",
-    "N1"
+    "N1",
+    "C9",
+    "C3"
    ],
    "why": "Cause and effect: the bill is his problem, and he's the one who calls the landlord about it. The check that jams in the lobby door (9.01) is Tasya's answer, and the pen clipped to it is the one he promised. No terms, no figures, no motive: the investment is the record (facts #6); the call is a small invented action and reads as cartoon (the key-ring avatar, the pen)."
   },
@@ -551,8 +573,15 @@
    "action": "keep",
    "est_s": 3.958,
    "music": "ELGOOG'S CODE RED · comic panic · pizzicato on the phone's small speaker · unchanged",
-   "fix": [],
-   "why": "unchanged",
+   "onscreen": {
+    "replace": {
+     "RADNUS · POLITELY ON FIRE": "RADNUS · RUNS ELGOOG · POLITELY ON FIRE"
+    }
+   },
+   "fix": [
+    "C3"
+   ],
+   "why": "unchanged in picture. The gag plate gains its relation (calibration §3).",
    "src_s": 3.958,
    "src_frame": "POV · Radnus beside the hole",
    "lines": [
@@ -633,20 +662,24 @@
   {
    "id": "9.04",
    "action": "keep",
-   "est_s": 4.37,
+   "est_s": 3.8,
    "music": "THE LANDLORD'S DEAL · caper, charming · THE JOB swing (MM-05 family); stops on the pop · unchanged",
-   "caption": "FULL FREEZE: TASYA / THE LANDLORD · RUNS MACROSOFT. Tasya already in the lobby, eleven keys at his belt. Mas keeps moving in the freeze: he walks to the jammed door and pockets the pen clipped to the check, the pen Tasya said he'd bring. eleven keys. he's here for the twelfth. (V.O.)",
+   "caption": "FULL FREEZE: TASYA / THE LANDLORD · RUNS MACROSOFT. Tasya already in the lobby, the key ring at his belt. Mas keeps moving in the freeze: he walks to the jammed door and pockets the pen clipped to the check, the pen Tasya said he'd bring.",
    "fix": [
-    "A1"
+    "A1",
+    "AUD #7"
    ],
-   "why": "The prediction stays (one of the twelve: a read of Tasya that the twelfth key pays at 9.10). The pen he pockets is now the one promised on the phone; it writes PLEASE (12.04) and carves the third mark (S2.01).",
+   "why": "The card is his first on-screen appearance and carries the relation (THE LANDLORD). The pen he pockets is the one promised on the phone; it writes PLEASE (12.04) and carves the third mark (S2.01).",
    "src_s": 4.37,
    "src_frame": "WIDE · FULL FREEZE: the landlord's card",
    "lines": [
     {
      "id": "v3-vo-08",
-     "keep": true,
-     "vo": true
+     "keep": false,
+     "who": "mas",
+     "text": "eleven keys. he's here for the twelfth.",
+     "vo": true,
+     "why": "8.1 (AUD #7; the lead): the key count is a code a newcomer can't read at that size; the ring is shown large instead (v32-9.10k)"
     }
    ]
   },
@@ -701,8 +734,11 @@
    "action": "keep",
    "est_s": 20.7,
    "music": "THE LANDLORD'S DEAL · caper, charming · THE JOB swing (MM-05 family); stops on the pop · unchanged",
+   "sounds": "on \"That collar suits you.\", the key ring clinks once against the new collar",
+   "shot_note": "the key ring's clink against the collar, in picture: the collar reads as the landlord's (AUD B.2 #9)",
    "fix": [
-    "P"
+    "P",
+    "AUD B.2 #9"
    ],
    "why": "The hold after \"That collar suits you.\" stays his (he looks down at the check); \"and the rent?\" comes 1.2 s sooner.",
    "src_s": 21.88,
@@ -740,22 +776,74 @@
    ]
   },
   {
+   "id": "v32-9.10k",
+   "action": "new",
+   "after": "9.09",
+   "est_s": 1.6,
+   "frame": "ECU · Tasya's key ring at his belt, large for the first time",
+   "set": "lobby",
+   "room": "lobby",
+   "chars": [
+    "tasya"
+   ],
+   "lines": [],
+   "caption": "Weeks on. The key ring at Tasya's belt, big in frame: eleven keys, and a twelfth, new, in NopeAI beige, stamped NOPEAI. It jangles as he turns toward the TV.",
+   "onscreen": {
+    "add": [
+     "RAIL: FEB 7, 2023",
+     "NOPEAI (stamped on the twelfth key)"
+    ]
+   },
+   "music": "LOBBY · the caper's new phrase comes in on the jangle",
+   "art": "the key ring at insert scale (the kit's ring, redrawn large): eleven keys and a beige twelfth stamped NOPEAI",
+   "sounds": "the ring's jangle, on the offbeat",
+   "fix": [
+    "AUD #7"
+   ],
+   "why": "The key count, readable without a voice (AUD #7): the landlord now carries a key to NopeAI. It tells the time jump, pays the collar, and sets up the thirteenth key (Act Three) and the jangles in Act Four."
+  },
+  {
    "id": "9.10",
    "action": "keep",
-   "est_s": 12.96,
+   "est_s": 11.1,
    "music": "THE LANDLORD'S DEAL · caper, charming · THE JOB swing (MM-05 family); stops on the pop · unchanged",
-   "fix": [],
-   "why": "unchanged",
+   "caption": "The same lobby, weeks on; the check scuffed grey on the floor. Mas at the desk with his glass; Gerg on the check's edge with his laptop. On the TV: GNIB's launch, a search box with a chat bubble inside it. \"Elgoog's going to hear about this from a search box.\" Tasya, delighted: \"Oh, yes. …I want people to know that we made them dance…\" Gerg grins at it (a listener who reacts: AUD #12).",
+   "onscreen": {
+    "drop": [
+     "RAIL: FEB 7, 2023"
+    ]
+   },
+   "fix": [
+    "AUD #5",
+    "AUD #12"
+   ],
+   "why": "The arrival (the time jump) moves to the key-ring insert before it; the talk is now two people wanting something from the TV.",
    "src_s": 12.96,
    "src_frame": "WIDE · weeks on (the time jump, then held)",
    "lines": [
     {
      "id": "e1-a1-9-09",
-     "keep": true
+     "keep": false,
+     "who": "gerg",
+     "text": "That's our model in your search engine. Are you really going after Elgoog with it?",
+     "why": "8.1 (AUD #5): an \"as you know\" line, Gerg telling Tasya his own product; rewritten as something Gerg wants (v32-a1-0005)"
     },
     {
      "id": "e1-a1-9-10",
-     "keep": true
+     "keep": true,
+     "at": "after:v32-a1-0005+0.6"
+    },
+    {
+     "id": "v32-a1-0005",
+     "new": true,
+     "who": "gerg",
+     "text": "Elgoog's going to hear about this from a search box.",
+     "after": "start+2.6",
+     "gap_s": 0.0,
+     "delivery": "delighted, eyes on the TV: his work, beating the rival in its own game",
+     "tag": "",
+     "take": "new",
+     "note": "[INVENTED] the new GNIB ran on the lab's model (facts #8)"
     }
    ]
   },
@@ -839,16 +927,38 @@
   {
    "id": "v31-10.03",
    "action": "keep",
-   "est_s": 5.46,
+   "est_s": 3.4,
    "music": "SYDNEY · rides the lobby's running cue, no new colour (mood §4 #5); the egg timer ticks in its tempo and carries the match cut into the duel (as v2), then the Build takes over",
-   "fix": [],
+   "onscreen": {
+    "add": [
+     "5 QUESTIONS (the egg timer's own face)"
+    ]
+   },
+   "fix": [
+    "AUD A.2 #4"
+   ],
    "why": "unchanged",
    "src_s": 5.46,
    "src_frame": "TWO-SHOT · Tasya and Sydney: the egg timer",
    "lines": [
     {
      "id": "v31-a1-0006",
-     "keep": true
+     "keep": false,
+     "who": "tasya",
+     "text": "House rules, Sydney. Five questions, then a fresh start.",
+     "why": "8.1 (AUD A.2 #4): the turn limit explained to a chatbot; its first sentence stays (v32-a1-0006) and the timer's face carries the rule"
+    },
+    {
+     "id": "v32-a1-0006",
+     "new": true,
+     "who": "tasya",
+     "text": "House rules, Sydney.",
+     "after": "start+1.2",
+     "gap_s": 0.0,
+     "delivery": "warmly, to her, and for Mas",
+     "tag": "",
+     "take": "cut from v31-a1-0006 (its first sentence)",
+     "note": "[INVENTED] the Feb 17, 2023 five-turn cap (facts #9)"
     }
    ]
   },
@@ -894,10 +1004,16 @@
    "est_s": 9.2,
    "music": "THE DUEL · rivalry · MM-04 Lighthouse (the Build against the Addendum) · two phrases now, not four",
    "caption": "The split. RIGHT: the lighthouse; CLOD in the spotlight; MARIO, finger raised, drafting on a scroll; his plate. He dictates. LEFT: the bullpen demo, Gerg photographing the napkin, Mas at his end desk by the beige button.",
+   "onscreen": {
+    "replace": {
+     "MARIO": "MARIO · EX-NOPEAI"
+    }
+   },
    "fix": [
-    "P"
+    "P",
+    "C3"
    ],
-   "why": "The right pane still opens first and holds clean; Mario's memo is the introduction.",
+   "why": "The right pane still opens first and holds clean; Mario's memo is the introduction. Draft 8.1: Plate: MARIO · EX-NOPEAI, the one relation his cut V.O. carried (calibration §3; AUD A.1 'convert').",
    "src_s": 13.59,
    "src_frame": "SPLIT · the bullpen | the lighthouse (phrase 1)",
    "lines": [
@@ -955,24 +1071,60 @@
   {
    "id": "12.02",
    "action": "keep",
-   "est_s": 10.667,
+   "est_s": 7.8,
    "music": "THE PAUSE LETTER · a chill, played straight · a cold pedal and Nole's stack, nothing walking (mood §4 #2); the THUD stops it; THREAT (MM-14) once, on the pen's lift",
-   "fix": [],
-   "why": "unchanged",
+   "onscreen": {
+    "add": [
+     "6 MONTHS (the clipboard letter's own line, under PAUSE GIANT AI EXPERIMENTS) [V · facts #13]"
+    ],
+    "replace": {
+     "NOLE · BUILDING HIS OWN": "NOLE · EARLY FUNDER · BUILDING HIS OWN"
+    }
+   },
+   "jcut": [
+    {
+     "line": "e1-a1-12-01",
+     "lead_s": 0.5,
+     "note": "AUD #11: Nole's \"Great sign.\" leads the place change, under the letter becoming a clipboard"
+    }
+   ],
+   "fix": [
+    "AUD #5",
+    "AUD #11",
+    "C3"
+   ],
+   "why": "Nole's line pulls us into the room; Oigneb wants something from him (the iron down), and the six months sit on the clipboard.",
    "src_s": 10.667,
    "src_frame": "WIDE · a standing desk in the dark",
    "lines": [
     {
      "id": "e1-a1-12-01",
-     "keep": true
+     "keep": true,
+     "at": "start-0.5"
     },
     {
      "id": "e1-a1-12-02",
-     "keep": true
+     "keep": false,
+     "who": "oigneb",
+     "text": "It's not the font, Nole. We're asking every lab to pause for six months.",
+     "why": "8.1 (AUD #5): an \"as you know\" line, the letter explained to one of its signers"
     },
     {
      "id": "e1-a1-12-03",
-     "keep": true
+     "keep": true,
+     "at": "after:v32-a1-0007+0.5"
+    },
+    {
+     "id": "v32-a1-0007",
+     "new": true,
+     "who": "oigneb",
+     "text": "You signed it. Now put the iron down.",
+     "after": "e1-a1-12-01",
+     "gap_s": 0.6,
+     "delivery": "gentle, precise, the PAUSE sign held higher; he wants the soldering iron put down",
+     "tag": "",
+     "take": "new",
+     "note": "[INVENTED] the letter's ask (six months) is on the clipboard"
     }
    ]
   },

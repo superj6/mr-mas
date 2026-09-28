@@ -39,12 +39,12 @@ ABOUT = (
     "measurement. Kept lines are keep true/false; kept V.O. carries \"vo\": true; new lines carry "
     "v32-<seg>-NNNN ids with who/text/after/gap_s/delivery/take; \"at\" on a kept line retimes it "
     "(start+S | after:<line id>+S); moved lines carry moved_from / moves_to. There are no new V.O. lines: "
-    "the inner voice is pruned from 28 lines to 12 (SHOWRUNNER-NOTES note 0), all on existing takes. "
+    "the inner voice is pruned from 28 lines to 11 (SHOWRUNNER-NOTES note 0; draft 8.1 per show/bible/calibration.md §5), all on existing takes. "
     "Fix codes: A0 = note 0 (the lead drives the plot); A1-A4 = the brief's direction for Acts One to Four; "
     "P = the V.O. prune (a thought that could be an action becomes the action; forced or writerly lines go); "
     "N1 = the newcomer's \"I couldn't tell what Mas wants\"; R = runtime. The v3.1 rules stand: subtitles "
     "without quotation marks or print ellipses on spoken real lines; every call grid names its speaking tile; "
-    "no band prompt. The script is show/episodes/ep01/script.md (draft 8); the notes are "
+    "no band prompt. Draft 8.1 adds calibration codes C3/C5/C9 and the v3.1 audit's AUD codes (../audit-v31.md). The script is show/episodes/ep01/script.md (draft 8.1); the notes are "
     "../script-v32-notes.md; the agency map is ../agency-v32.md; the builder is _build_v32.py."
 )
 
@@ -473,6 +473,264 @@ NEW = {
 
 
 # ---------------------------------------------------------------------------------------------
+# DRAFT 8.1 (2026-09-28): the calibration ledger (show/bible/calibration.md) and the v3.1 audit
+# (../audit-v31.md), as an overlay on draft 8's spec above. Semantics, per beat:
+#   drop / retime / onscreen.replace merge; add / onscreen.add / onscreen.drop / fix extend;
+#   undrop restores a line draft 8 dropped; reset returns a beat to v3.1 (no draft 8 change);
+#   any other key replaces draft 8's value; why81 is appended to the beat's why.
+# NEW_OV edits draft 8's new beats (lines_replace swaps a new line by id); NEW81 adds beats.
+# Fix codes added: C3 / C5 / C9 = calibration §3 (plates), §5 (the voice), §9 (agency);
+# AUD #n = the audit's ranked fix n; AUD B.2 #n / B.3 = its out-of-the-blue and carried lists.
+# ---------------------------------------------------------------------------------------------
+
+def _plate(old, new):
+    return {"replace": {old: new}}
+
+
+OV = {
+    "act1": {
+        "5.03": {"onscreen": _plate("GERG MOCKBRAN", "GERG MOCKBRAN · CO-FOUNDER"), "fix": ["C3"],
+                 "why81": "The first-appearance plate gets its one relation word (calibration §3)."},
+        "5.04": {"onscreen": _plate("RIMA TAMURI", "RIMA TAMURI · CTO"), "fix": ["C3"],
+                 "why81": "Plate: RIMA TAMURI · CTO (calibration §3)."},
+        "5.05": {"onscreen": _plate("ALYI", "ALYI · CO-FOUNDER"), "fix": ["C3"],
+                 "why": "unchanged in picture. Plate: ALYI · CO-FOUNDER (calibration §3; v4.2's reads found it worked)."},
+        "9.04": {"est_s": 3.8,
+                 "drop": {"v3-vo-08": "8.1 (AUD #7; the lead): the key count is a code a newcomer can't read at that size; the ring is shown large instead (v32-9.10k)"},
+                 "caption": "FULL FREEZE: TASYA / THE LANDLORD · RUNS MACROSOFT. Tasya already in the lobby, the key ring at his belt. Mas keeps moving in the freeze: he walks to the jammed door and pockets the pen clipped to the check, the pen Tasya said he'd bring.",
+                 "fix": ["AUD #7"],
+                 "why": "The card is his first on-screen appearance and carries the relation (THE LANDLORD). The pen he pockets is the one promised on the phone; it writes PLEASE (12.04) and carves the third mark (S2.01)."},
+        "9.09": {"sounds": "on \"That collar suits you.\", the key ring clinks once against the new collar",
+                 "shot_note": "the key ring's clink against the collar, in picture: the collar reads as the landlord's (AUD B.2 #9)",
+                 "fix": ["AUD B.2 #9"]},
+        "9.10": {"est_s": 11.1,
+                 "drop": {"e1-a1-9-09": "8.1 (AUD #5): an \"as you know\" line, Gerg telling Tasya his own product; rewritten as something Gerg wants (v32-a1-0005)"},
+                 "add": [{"id": "v32-a1-0005", "who": "gerg", "text": "Elgoog's going to hear about this from a search box.",
+                          "after": "start+2.6", "gap_s": 0.0,
+                          "delivery": "delighted, eyes on the TV: his work, beating the rival in its own game",
+                          "tag": "", "take": "new", "note": "[INVENTED] the new GNIB ran on the lab's model (facts #8)"}],
+                 "retime": {"e1-a1-9-10": "after:v32-a1-0005+0.6"},
+                 "onscreen": {"drop": ["RAIL: FEB 7, 2023"]},
+                 "caption": "The same lobby, weeks on; the check scuffed grey on the floor. Mas at the desk with his glass; Gerg on the check's edge with his laptop. On the TV: GNIB's launch, a search box with a chat bubble inside it. \"Elgoog's going to hear about this from a search box.\" Tasya, delighted: \"Oh, yes. …I want people to know that we made them dance…\" Gerg grins at it (a listener who reacts: AUD #12).",
+                 "fix": ["AUD #5", "AUD #12"],
+                 "why": "The arrival (the time jump) moves to the key-ring insert before it; the talk is now two people wanting something from the TV."},
+        "v31-10.03": {"est_s": 3.4,
+                      "drop": {"v31-a1-0006": "8.1 (AUD A.2 #4): the turn limit explained to a chatbot; its first sentence stays (v32-a1-0006) and the timer's face carries the rule"},
+                      "add": [{"id": "v32-a1-0006", "who": "tasya", "text": "House rules, Sydney.",
+                               "after": "start+1.2", "gap_s": 0.0, "delivery": "warmly, to her, and for Mas",
+                               "tag": "", "take": "cut from v31-a1-0006 (its first sentence)", "note": "[INVENTED] the Feb 17, 2023 five-turn cap (facts #9)"}],
+                      "onscreen": {"add": ["5 QUESTIONS (the egg timer's own face)"]},
+                      "fix": ["AUD A.2 #4"]},
+        "8.03": {"onscreen": _plate("RADNUS · POLITELY ON FIRE", "RADNUS · RUNS ELGOOG · POLITELY ON FIRE"), "fix": ["C3"],
+                 "why": "unchanged in picture. The gag plate gains its relation (calibration §3)."},
+        "11.03": {"onscreen": _plate("MARIO", "MARIO · EX-NOPEAI"), "fix": ["C3"],
+                  "why81": "Plate: MARIO · EX-NOPEAI, the one relation his cut V.O. carried (calibration §3; AUD A.1 'convert')."},
+        "12.02": {"est_s": 7.8,
+                  "retime": {"e1-a1-12-01": "start-0.5", "e1-a1-12-03": "after:v32-a1-0007+0.5"},
+                  "jcut": [{"line": "e1-a1-12-01", "lead_s": 0.5, "note": "AUD #11: Nole's \"Great sign.\" leads the place change, under the letter becoming a clipboard"}],
+                  "drop": {"e1-a1-12-02": "8.1 (AUD #5): an \"as you know\" line, the letter explained to one of its signers"},
+                  "add": [{"id": "v32-a1-0007", "who": "oigneb", "text": "You signed it. Now put the iron down.",
+                           "after": "e1-a1-12-01", "gap_s": 0.6,
+                           "delivery": "gentle, precise, the PAUSE sign held higher; he wants the soldering iron put down",
+                           "tag": "", "take": "new", "note": "[INVENTED] the letter's ask (six months) is on the clipboard"}],
+                  "onscreen": {"add": ["6 MONTHS (the clipboard letter's own line, under PAUSE GIANT AI EXPERIMENTS) [V · facts #13]"],
+                               "replace": {"NOLE · BUILDING HIS OWN": "NOLE · EARLY FUNDER · BUILDING HIS OWN"}},
+                  "fix": ["AUD #5", "AUD #11", "C3"],
+                  "why": "Nole's line pulls us into the room; Oigneb wants something from him (the iron down), and the six months sit on the clipboard."},
+    },
+    "act2": {
+        "13.02": {"shot_note": "Mario's finger goes up on \"trained\": the catchphrase becomes the room's problem (AUD A.2 #4)", "fix": ["AUD A.2 #4"]},
+        "13.10": {"frame": "MCU · Radnus's face and the flame on his collar together, growing one size",
+                  "shot_note": "not an ECU: framed alone, the flame read as a burning note (AUD B.2 #8)", "fix": ["AUD B.2 #8"]},
+        "14.03": {"est_s": 2.4,
+                  "caption": "The building, its lit window: a silhouette with a phone (no face); the same clip plays on its screen; the silhouette nods on the audio's beat. In the same shot, its thumb presses the repost arrow under the ⚠ ALTERED AUDIO tag: click, ✓ REPOSTED.",
+                  "fix": ["AUD B.2 #12"],
+                  "why": "14.04 folds in: the lit-window stranger stays at 4.8 s with the hailstone and doesn't grow (AUD B.2 #12: keep it ≤ about 4 s)."},
+        "14.04": {"action": "merge", "into": "14.03", "est_s": 0.0, "fix": ["AUD B.2 #12"],
+                  "why": "The repost click folds into 14.03's shot."},
+        "15.02": {"onscreen": _plate("LAHTNEMULB", "LAHTNEMULB · CHAIRMAN"), "fix": ["C3"]},
+        "16.01": {"caption": "MATCH on the thunk: the tour poster, MAS MANALT: THE REGULATE-ME TOUR, its cities. LONDON's strip: \"…cease operating…\" and EU gets CANCELLED. His thumb comes into the corner of frame on his phone and posts \"…no plans to leave\" [H]; UN-CANCELLED lands over the stamp. The last date slot: his own hand stamps it, ADDED DUE TO POPULAR DEMAND. The frame holds on his one-pixel smile to the bar's end.",
+                  "art": "his thumb on a phone entering the poster GFX's corner for the post; his hand and a rubber stamp for the last slot",
+                  "fix": ["AUD B.3"]},
+        "17.12": {"shot_note": "AUD #8: it read as a man floating in a tank (a head and a ring in the glass). Draw the reflection on the water's surface: his face only, broken by the crack, no body and no ring. Fallback: cut 17.12 and end the act on the sky's crack and his look down (17.11), −4.5 s.",
+                  "fix": ["AUD #8"]},
+    },
+    "act3": {
+        "v31-18.00": {"shot_note": "frame the two faint marks in the wood close enough to read as tally marks (AUD B.2 #4); the carve pays them in Act Four", "fix": ["AUD B.2 #4"]},
+        "v31-18.00b": {"onscreen": {"replace": {"KRAM": "KRAM · RUNS ATEM"}},
+                       "shot_note": "the thirteenth key, Atem blue, is hung large enough to read (it pays v32-9.10k's twelfth; AUD #7)",
+                       "fix": ["C3", "AUD #7"]},
+        "18.06": {"est_s": 7.2, "undrop": ["e1-a3-18-04"],
+                  "retime": {"e1-a3-18-03": "after:e1-a3-18-04+1.0"},
+                  "fix": ["C5"],
+                  "why": "8.1 (calibration §5; the audit keeps it): \"i made it for everyone else.\" is restored. It's a line only the voice can do: he exempts himself from his own device a beat after its scan saw tokens. Then \"you can stay.\": he keeps his own witness."},
+        "v31-19.03": {"caption": "One held room frame: Mas's two fingers, his pinky, the forum's tiled hands. REMUHCS: \"Every single person raised their hand.\" NOLE: \"It's important for us to have a referee.\" At the desk his hand is already up. He lowers it himself and turns straight to his keyboard: he is one hand among hundreds.",
+                      "fix": ["AUD #2"],
+                      "why81": "The Tidder post now comes out of this (AUD #2): one hand among hundreds, he turns to the keys. No reason is stated."},
+        "20.01": {"caption": "Straight from the forum's raised hands: over Mas's shoulder onto a reply box on TIDDER. He types, in source casing: \"Agi has been achieved internally\"",
+                  "fix": ["AUD #2"], "why": "The post follows the room (AUD #2); the show still plays no reason for it."},
+        "20.02": {"action": "cut", "est_s": 0.0, "fix": ["AUD #2", "AUD B.2 #1"],
+                  "why": "The LEDs stopping was an omen that never paid off (AUD B.2 #1); the Orb's long look at him (20.04) keeps the hint."},
+        "20.06": {"caption": "Back on the two-shot, Gerg's tile small in the corner; on the monitor the counter keeps climbing, faster. \"Okay. That's patched.\" / \"how's the build?\" / \"Still running. I don't go to bed till it's green.\" / \"go to sleep, gerg.\" / \"When it compiles.\" His keys run on."},
+        "v31-20.07": {"est_s": 4.0,
+                      "drop": {"v31-vo-06": "8.1 (calibration §3, §5; AUD A.1 'convert'): a caption; the byline plate NELEH · NOPEAI BOARD carries it"},
+                      "onscreen": {"replace": {"NELEH": "NELEH · NOPEAI BOARD"}},
+                      "fix": ["C3", "C5"],
+                      "why": "The board's seed is now in the world (her plate); he reads, says nothing, and the Orb reads him. His doing anything about the paper would sit at a contested moment (facts #36), so he doesn't."},
+        "v31-20.08": {"caption": "Mas and the Orb, the paper soft on the monitor. He reads on; the Orb reads him. He closes the paper, and the monitor's next tab is the president's order, live.",
+                      "fix": ["AUD B.2 #13"], "why": "A bridge by his hand into the order (AUD B.2 #13)."},
+        "23.02": {"shot_note": "each hover shows its attendee's small avatar beside the name: Alyi's reflection, Neleh with the glowing page, Mada's face under his spinner, a black square. Mada gets a face before the blow (AUD B.2 #7)",
+                  "fix": ["AUD B.2 #7"]},
+    },
+    "act4": {
+        "S3.02": {"est_s": 1.6,
+                  "drop": {"a5-27-06": "8.1 (AUD #6): the read-it-aloud device, used twice; Terb keeps his (he's in a room with people), Neleh's excuse goes"},
+                  "caption": "Her desk from above: her pen ticks 1. NOON · VIDEO CALL and runs down what the fold hid: 2. BLOG POST · 3. INTERIM CEO · 4. ______, and stops on the blank.",
+                  "fix": ["AUD #6"]},
+        "S3.03": {"est_s": 9.0,
+                  "drop": {"a5-27-07": "8.1 (AUD #6): the post types itself on screen in the source's words, and she reads it with her lips, silent"},
+                  "retime": {"a5-27-08": "start+6.8"},
+                  "caption": "Her laptop: the NopeAI blog in its own UI; the post types itself in the source's words, held to read: \"…he was not consistently candid in his communications with the board… The board no longer has confidence in his ability to continue leading NopeAI.\" Her lips move as she reads it. \"Any objections?\" Nobody answers. She clicks Post, on a tick.",
+                  "onscreen": {"add": ["the post's text, typing in its own UI: \"…he was not consistently candid in his communications with the board… The board no longer has confidence in his ability to continue leading NopeAI.\" [V · NOV 17, 2023 · L8]"]},
+                  "fix": ["AUD #6"],
+                  "why": "The board's only public reason stays on screen, whole and verbatim; it's read, not recited."},
+        "S3.04": {"est_s": 10.9,
+                  "drop": {"a5-27-09": "8.1 (AUD #5): an \"as you know\" line (thanking Rima for what she agreed to); her tile's label carries the fact",
+                           "a5-27-12": "8.1 (AUD #5): folded into Neleh's new line"},
+                  "add": [{"id": "v32-a4-0001", "who": "neleh", "text": "Step three. Rima, the staff will come to you now.",
+                           "after": "start+1.1", "gap_s": 0.0,
+                           "delivery": "efficient, a little kind: she wants Rima ready, and on the post",
+                           "tag": "call", "take": "new", "note": "[INVENTED] procedure only; no reason"}],
+                  "retime": {"a5-27-13": "after:v32-a4-0001+0.5"},
+                  "onscreen": {"add": ["RIMA TAMURI · INTERIM CEO (her tile's own label)"]},
+                  "fix": ["AUD #5"],
+                  "why": "Neleh wants something from Rima (ready, and on message); the tile's label says what Rima now is."},
+        "S3.06": {"est_s": 2.6, "retime": {"a5-27-18": "start-0.6"},
+                  "jcut": [{"line": "a5-27-18", "lead_s": 0.6, "note": "AUD #11: \"Is this a coup?\" leads the place change, over Neleh's brow"}],
+                  "fix": ["AUD #11"]},
+        "S4.02": {"shot_note": "on \"That is the company telling us.\" Alyi's reflection turns to the row of phones, their caller IDs beside him (AUD B.2 #6: the referent)",
+                  "fix": ["AUD B.2 #6"]},
+        "S4.08": {"onscreen": _plate("ADELINA", "ADELINA · CO-FOUNDER"),
+                  "caption": "Act One's split, both calls in one held shot. LEFT: the speakerphone, Neleh and Mada leaning in. RIGHT: the lighthouse; a phone with a small throne attached; Mario picks up, finger rising. The offer; \"Eleven pages…\"; ADELINA takes the phone: \"In plain English: no.\" Click. HOLD on the dial tone; under it, the lobby's room by day comes up (the J-cut into v32-S5.00).",
+                  "fix": ["C3"]},
+        "S4.09": {"est_s": 11.3,
+                  "drop": {"v31-a4-0004": "8.1 (AUD #5): the phones and the ticker show it; she said what we see"},
+                  "retime": {"v31-a4-0005": "start+1.2"},
+                  "caption": "INT. NOPEAI BOARDROOM — SUNDAY. The phones in a row, still buzzing: STAFF · STAFF · INVESTORS · INVESTORS. On the wall screen, the lobby camera and the ticker: the small figure we just left, in his GUEST lanyard. \"We've talked all day about him coming back, and we're no closer.\" / \"They gave him a guest badge.\" / \"It's the correct badge. He doesn't work here.\" On \"here\" he walks out.",
+                  "fix": ["AUD #5", "AUD #3"],
+                  "why": "Cause, then effect (AUD #3): his walk-in comes first (v32-S5.00), and their talk follows from it, played on the phones."},
+        "S4.15": {"reset": True},
+        "S5.03": {"shot_note": "the heart counter on the phone reads with him, 406 → 407 → 406, so the count is readable (AUD A.1)", "fix": ["AUD A.1"]},
+        "S5.11": {"est_s": 15.6, "retime": {"a5-29-20": "start-0.8"},
+                  "jcut": [{"line": "a5-29-20", "lead_s": 0.8, "note": "AUD #11: \"Don't get up, Mas.\" leads the cut, under Gerg's tile"}],
+                  "fix": ["AUD #11"]},
+        "S8.08": {"est_s": 5.8, "retime": {"a5-31-04": "start-1.0"},
+                  "jcut": [{"line": "a5-31-04", "lead_s": 1.0, "note": "AUD #11: the memo's first words lead the cut, over the vault"}],
+                  "fix": ["AUD #11"]},
+    },
+    "tag": {
+        "v31-32.01d": {"drop": {"v31-vo-07": "8.1 (calibration §5; the lead): a caption; the stutter into stills carries the joke"},
+                       "fix": ["C5"], "why": "Unchanged picture and length (the Runway insert's 233 frames); no voice-over over the stills."},
+        "32.03": {"est_s": 3.8, "undrop": ["v3-vo-24"], "fix": ["C5"],
+                  "why": "8.1 (calibration §5; the audit keeps it): \"it looks calmer than me.\" is restored. The picture shows the cover and his face alike; only the voice can say which one he thinks is performing. The coda line."},
+    },
+}
+
+NEW_OV = {
+    "v32-7.03": {
+        "est_s": 9.0,
+        "lines_replace": {"v32-a1-0003": {
+            "id": "v32-a1-0003", "who": "mas", "text": "it's the bill. we're going to need more servers.",
+            "after": "v32-a1-0002", "gap_s": 0.6,
+            "delivery": "plain, a full ask (calibration §9: full sentences when he asks); the first three words the same as to Rima",
+            "tag": "", "take": "new (8.1: a full sentence replaces the reuse of e1-a1-7-02)", "note": "[INVENTED]"}},
+        "onscreen": {"add": ["TASYA · MACROSOFT (the phone's contact name, over a key-ring avatar; replaces TASYA)"]},
+        "caption": "Later that night. Mas at his desk, the tile's red glow under him, the phone at his ear; on its lit screen by his cheek, the contact reads TASYA · MACROSOFT over a key-ring avatar. One filtered ring. \"Mas.\" / \"it's the bill. we're going to need more servers.\" / \"I'll bring a pen.\" He lowers the phone; before it reaches the desk it lights red, and a siren whines through its small speaker.",
+        "fix": ["C9", "C3"],
+    },
+    "v32-S5.00": {
+        "after": "S4.08",
+        "est_s": 8.0,
+        "frame": "MCU → CCTV · at his shoulder in the lobby by day, then out into their camera's frame",
+        "caption": "Sunday, 1:03 PM. Full colour at floor level, at his shoulder: MAS at the reception desk. A receptionist's hand (no face) slides a lanyard across the stone: GUEST. He puts it on himself. He lifts his phone at arm's length and takes the photo: a click, one white flash step. His post goes up in its own UI: \"first and last time i ever wear one of these\". He looks up, once, at the camera in the corner, the one-pixel smile; and the picture steps back out into that camera's frame, grainy, NOPEAI HQ · LOBBY · NOV 19, on the boardroom's wall screen (S4.09).",
+        "onscreen": {"add": ["RAIL: NOV 19, 2023 · ~1 PM PT"]},
+        "jcut": [{"sound": "the lobby's room by day (the revolving door's sweep), under S4.08's dial tone", "lead_s": 0.8}],
+        "lcut": [{"sound": "the CCTV hum, carried into S4.09 as the picture steps into the camera's grade"}],
+        "music": "none: the lobby's room; one felt note on his look up; PROCEDURE resumes under S4.09",
+        "fix": ["A4", "A0", "AUD #3"],
+        "why": "His move first, their reaction second (AUD #3; calibration's chain test): he walks into his own company as a guest and posts it, and the next scene is the board watching that small figure and talking all day about him coming back. It's told twice in one cut: his side, then their camera. It also breaks the 3:37 away from him into two stretches. His side of the act still opens at 2 AM on the count.",
+    },
+}
+
+NEW81 = {
+    "act1": [
+        {
+            "id": "v32-9.10k", "after": "9.09", "est_s": 1.6,
+            "frame": "ECU · Tasya's key ring at his belt, large for the first time",
+            "set": "lobby", "room": "lobby", "chars": ["tasya"], "lines": [],
+            "caption": "Weeks on. The key ring at Tasya's belt, big in frame: eleven keys, and a twelfth, new, in NopeAI beige, stamped NOPEAI. It jangles as he turns toward the TV.",
+            "onscreen": {"add": ["RAIL: FEB 7, 2023", "NOPEAI (stamped on the twelfth key)"]},
+            "music": "LOBBY · the caper's new phrase comes in on the jangle",
+            "art": "the key ring at insert scale (the kit's ring, redrawn large): eleven keys and a beige twelfth stamped NOPEAI",
+            "sounds": "the ring's jangle, on the offbeat",
+            "fix": ["AUD #7"],
+            "why": "The key count, readable without a voice (AUD #7): the landlord now carries a key to NopeAI. It tells the time jump, pays the collar, and sets up the thirteenth key (Act Three) and the jangles in Act Four.",
+        },
+    ],
+}
+
+
+def _apply_81():
+    for seg, beats in OV.items():
+        ch = CHANGES.setdefault(seg, {})
+        for bid, o in beats.items():
+            if o.get("reset"):
+                ch.pop(bid, None)
+                continue
+            c = ch.setdefault(bid, {})
+            for k, v in o.items():
+                if k == "undrop":
+                    for lid in v:
+                        c.get("drop", {}).pop(lid, None)
+                elif k in ("drop", "retime"):
+                    c.setdefault(k, {}).update(v)
+                elif k == "add":
+                    c.setdefault("add", []).extend(v)
+                elif k == "fix":
+                    c["fix"] = list(dict.fromkeys(c.get("fix", []) + v))
+                elif k == "onscreen":
+                    os_ = c.setdefault("onscreen", {})
+                    for kk, vv in v.items():
+                        if kk == "replace":
+                            os_.setdefault("replace", {}).update(vv)
+                        else:
+                            os_.setdefault(kk, []).extend(vv)
+                elif k == "why81":
+                    c["why"] = (c.get("why", "unchanged") + " Draft 8.1: " + v).strip()
+                else:
+                    c[k] = v
+    new_by_id = {n["id"]: n for seg in NEW for n in NEW[seg]}
+    for nid, o in NEW_OV.items():
+        n = new_by_id[nid]
+        for k, v in o.items():
+            if k == "lines_replace":
+                n["lines"] = [v.get(l["id"], l) for l in n["lines"]]
+            elif k == "onscreen":
+                os_ = n.setdefault("onscreen", {})
+                for kk, vv in v.items():
+                    os_.setdefault(kk, []).extend(vv)
+            elif k == "fix":
+                n["fix"] = list(dict.fromkeys(n.get("fix", []) + v))
+            else:
+                n[k] = v
+    for seg, beats in NEW81.items():
+        NEW[seg].extend(beats)
+
+
+_apply_81()
+
+
+# ---------------------------------------------------------------------------------------------
 # The builder
 # ---------------------------------------------------------------------------------------------
 
@@ -581,6 +839,8 @@ def build(seg):
         if "frame" in c:
             entry["frame"] = c["frame"]
         entry["music"] = c.get("music", default_music(b, v31))
+        if "into" in c:
+            entry["into"] = c["into"]
         for k in ("caption", "onscreen", "jcut", "lcut", "art", "sounds", "shot_note", "device"):
             if k in c:
                 entry[k] = c[k]
