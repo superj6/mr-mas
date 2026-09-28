@@ -1,7 +1,9 @@
 // MR. MAS — Ep1 pixel v3.2, ACT ONE: one layout per shot of the v3.2 lock (sc 5–12, 51 shots, 5:29.8; the timeline
 // show/reel/ep01-v32/ep01-v32-act1.json, script draft 8.1). The `v3-shots-act1` pass, 2026-09-27/28 (its v3 round, the
 // v3.1 round, then v3.2: Mas's moves read on screen: the button press, the million post, the call, the click that
-// ships GTP-4). Built on the art-a modules (show/episodes/ep01/production/full-v3/art/art-a.md, §7 for v3.1); the few
+// ships GTP-4; then the v3.3 polish on show/reel/ep01-v33/ep01-v33-act1.json, 7,934 frames, 5:30.6: his face not answering
+// in 5.07, the post as a preview under his thumb in 6.06, the tear's glint at his eye in 7.01, the landlord's hand
+// settling the new collar in 9.09 with "it does." restored, the two-part plates). Built on the art-a modules (show/episodes/ep01/production/full-v3/art/art-a.md, §7 for v3.1); the few
 // pieces those modules fix inside a packaged setup (a camera x, a lifted prop, a speaking mouth in a composite) are
 // re-composed from their exported parts in ./extras.ts. No existing drawing is edited.
 //
@@ -24,7 +26,7 @@ import {Buf, rect, bayer} from '../../../../shared/pixel/px';
 import {PAL, stepColor} from '../../../../shared/pixel/palette';
 import {Mask} from '../../../../shared/pixel/mask';
 import {nameCard} from '../../../../shared/pixel/ui';
-import {drawLaunchWide, drawLaunch2S, drawLaunchGlass, drawLaunchMcuRima, drawLaunchMcuMas, drawLaunchOTSLaptop, drawLaunchMcuPF, drawCursor, launchBackM, otsShoulder, LAUNCH} from '../../../../shared/pixel/rooms/bullpen-launch';
+import {drawLaunchWide, drawLaunch2S, drawLaunchGlass, drawLaunchMcuRima, drawLaunchMcuMas, drawLaunchOTSLaptop, drawLaunchMcuPF, drawCursor, launchBackM, otsShoulder, LAUNCH, MAS_TEAR_PATH} from '../../../../shared/pixel/rooms/bullpen-launch';
 import {drawButtonECU, BUTTON_ECU} from '../../../../shared/pixel/kits/launch-button';
 import {drawChatECU} from '../../../../shared/pixel/kits/chat-window';
 import type {ChatLine} from '../../../../shared/pixel/kits/chat-window';
@@ -54,7 +56,7 @@ import {masWalkAt} from '../../../../shared/pixel/cast/mas-stand';
 import {gergTypeAt} from '../../../../shared/pixel/cast/gerg';
 import {
   blinkLid, cursorPath, ease2, sleepLed, fingerECU, otsRima, glassCount, deal2S, passerBy, guestCard, bottomShade, grains,
-  castMask, chatCard, twelfthKey, callMcu, handOnPhone, paneButton,
+  castMask, chatCard, twelfthKey, callMcu, handOnPhone, paneButton, postPreview, settleHand, mcuMasDesk, tearGlint,
 } from './extras';
 import {LOCK} from './data';
 
@@ -178,11 +180,13 @@ L.add('v3-5.06b', {
   },
 });
 L.add('5.07', {
-  st: 'ROOM-BULLPEN-LAUNCH drawLaunch2S {warm: 1, rima} (the board seed: Gerg one key with a flourish, then "Your button." without looking up, lip-synced; Mas\'s head goes down to the button; behind Gerg, Rima at the board, her back to us (cast/rima-board): she draws the third underline on the marker\'s squeak, caps the marker and asks the room "Did anyone tell the rest of the board?" without turning round; Gerg answers with the phrase, looking up, lip-synced; nobody else answers; the hold into the click)',
+  st: 'ROOM-BULLPEN-LAUNCH drawLaunch2S {warm: 1, rima} (the board seed: Gerg one key with a flourish, then "Your button." without looking up, lip-synced; Mas\'s head goes down to the button; behind Gerg, Rima at the board, her back to us (cast/rima-board): she draws the third underline on the marker\'s squeak, caps the marker and asks the room "Did anyone tell the rest of the board?" without turning round; Gerg answers with the phrase, looking up, lip-synced; nobody else answers; the hold into the click) · v3.3 (P1): under Gerg\'s "It\'s a research preview." a cut-in to Mas\'s MCU (5.11\'s drawing re-composed as extras.mcuMasDesk: without the chat\'s glow, the laptop dark, so in the lamp\'s warm light): his face, not answering, turned away to his desk, no look at Rima; after the line his lids come half down to the button, into 5.08',
   face: {GERG: 'lip'},
-  marks: {key: ['snd', 'key_tap_space', 1, 0], squeak: ['snd', 'marker_write_q', 1, 0], button: ['end', 'e1-a1-5-12', 8], ask: ['on', 'v31-a1-0001', 0], answerEnd: ['end', 'v31-a1-0002', 14]},
+  marks: {key: ['snd', 'key_tap_space', 1, 0], squeak: ['snd', 'marker_write_q', 1, 0], button: ['end', 'e1-a1-5-12', 8], ask: ['on', 'v31-a1-0001', 0], answerEnd: ['end', 'v31-a1-0002', 14], cutIn: ['on', 'v31-a1-0002', -2], toButton: ['end', 'v31-a1-0002', 16]},
   draw: (fb, k, sh, f) => {
     const key = mk(sh, 'key', 4), sq = mk(sh, 'squeak', 79), down = mk(sh, 'button', 76), ask = mk(sh, 'ask', 91), after = mk(sh, 'answerEnd', 187);
+    const ci = mk(sh, 'cutIn', 143), tb = mk(sh, 'toButton', 189);
+    if (k >= ci) { mcuMasDesk(fb, f, {mouth: 'rest', look: -1, lid: k >= tb ? 1 : 0}); return; }
     const talk = lipOn(sh, k, 'GERG');
     const gerg = {head: (talk ? 'talk' : 'type') as 'talk' | 'type', mouth: mouth(sh, k, 'GERG'), type: (k >= key && k < key + 3 ? 2 : k >= key + 3 && k < key + 6 ? 1 : 0) as 0 | 1 | 2};
     const wet = clamp((k - sq) / 12, 0, 1);
@@ -298,14 +302,15 @@ L.add('6.02', {
   },
 });
 L.add('6.06', {
-  st: 'INSERT-MILLION-POST drawMillionPost (far down, wedged in the bedrock: the last wheel settles in held steps on the ratchet, then holds legible, 1,000,000; on the post\'s click HIS post pops over it in post-card\'s own UI and held steps, his avatar and name: "CHATGTP launched on wednesday. today it crossed 1 million users!" · DEC 4 · 11:35 PM, held to read) + grit trickling round the wheel, clear of the card',
+  st: 'INSERT-MILLION-POST drawMillionPost (far down, wedged in the bedrock: the last wheel lands in held steps on the ratchet, 1,000,000) → v3.3 (P2): no hold on the digits; his phone\'s compose strip slides up at the frame\'s foot with only the post\'s first line as a preview, "CHATGTP launched on wednesday. today it crossed…" (extras.postPreview: post-card\'s chip and type), his thumb comes up and presses Post on the post\'s click, the pill lighting, then "Posted"; the line holds to read + grit trickling round the wheel',
   marks: {r: ['snd', 'odometer_ratchet', 1, 0], post: ['snd', 'post_click', 1, 0]},
   draw: (fb, k, sh, f) => {
-    const r = mk(sh, 'r', 3), p = mk(sh, 'post', 24);
+    const r = mk(sh, 'r', 2), p = mk(sh, 'post', 18);
     const settle = k < r ? 0 : k < r + 5 ? 1 : k < r + 9 ? 2 : 3;
-    // the card opens in post-card's three held steps (2 frames each), then holds
-    drawMillionPost(fb, f, {settle, k: k < p ? null : Math.min(3, Math.floor((k - p) / 2))});
+    drawMillionPost(fb, f, {settle, k: null});
     grains(fb, f, 260, 360, 84, 120, 5, 71, PAL.D2);
+    // the strip comes up as the wheel lands (10 frames before the post's click), his thumb, the click
+    postPreview(fb, k, p, Math.max(r + 5, p - 10));
   },
 });
 L.add('6.08', {
@@ -321,15 +326,19 @@ L.add('6.08', {
 
 // ================================================================== SC 7 · THE BILL
 L.add('7.01', {
-  st: 'CAST-MAS-TEAR drawLaunchMcuPF (looking down the hole, the bullpen stepped down behind him, the hole\'s red rim under his jaw rising a step as Rima speaks; the tear wells and slides down his cheek a pixel every 4 f, then holds at the jaw; on Rima\'s word "tear" it catches the light, its one bright pixel the hottest white); "it\'s the bill." lip-synced with his eyes up toward her, then down again for "mostly the bill."',
+  st: 'CAST-MAS-TEAR drawLaunchMcuPF (looking down the hole, the bullpen stepped down behind him, the hole\'s red rim under his jaw rising a step as Rima speaks; the tear wells at his lower lid and holds at his eye, catching the light as Rima asks, its one bright pixel the hottest white (v3.3, P3), then slides down his cheek a pixel every 4 f toward the jaw); "it\'s the bill." lip-synced with his eyes up toward her, then down again for "mostly the bill."',
   face: {MAS: 'lip'},
   marks: {bill: ['on', 'e1-a1-7-02', -4], billEnd: ['end', 'e1-a1-7-02', 4], tear: ['w', 'v31-a1-0003', 'tear', 0]},
   draw: (fb, k, sh, f) => {
     const b0 = mk(sh, 'bill', 67), b1 = mk(sh, 'billEnd', 98), catchK = mk(sh, 'tear', 40);
     const up = k >= b0 && k < b1;
-    // the tear wells at his lower lid and holds a second (Rima sees it), then slides a pixel every 4 f to reach his jaw as he says it
+    // v3.3 (P3): the tear wells at his lower lid and holds there, AT HIS EYE, glinting as Rima asks "Is that a tear?"
+    // (the catch-light from 12 frames before her word "tear"), then slides a pixel every 4 f toward his jaw as he answers
     const well = Math.max(0, b0 - 56);
-    drawLaunchMcuPF(fb, f, {tear: k < well ? 0 : k - well, tearCatch: k >= catchK, collarStyle: CS, glow: k < 30 ? 1 : 2, mas: {mouth: say(sh, k, 'MAS'), lid: up ? 0 : 1, look: up ? 1 : 0}});
+    const tear = k < well ? null : k < catchK ? 0 : k - catchK;
+    drawLaunchMcuPF(fb, f, {tear, tearCatch: k >= catchK - 12, collarStyle: CS, glow: k < 30 ? 1 : 2, mas: {mouth: say(sh, k, 'MAS'), lid: up ? 0 : 1, look: up ? 1 : 0}});
+    // the glint made readable on her word: a three-armed catch-light round the bright pixel, 4 frames
+    if (tear !== null && k >= catchK - 2 && k < catchK + 2) tearGlint(fb, MAS_TEAR_PATH[0][0], MAS_TEAR_PATH[0][1]);
   },
 });
 L.add('7.02', {
@@ -555,20 +564,27 @@ L.add('9.08', {
   },
 });
 L.add('9.09', {
-  st: 'extras.deal2S = ROOM-LOBBY-DEAL\'s 2S re-composed (pan 110, held steady): Mas (three collars, v31, lip-synced) standing on the check, Tasya warm and unhurried (lip-synced, blinking; on "That collar suits you." the ring clinks and the new gold collar hops a pixel, the landlord\'s; the ring comes up again on "our servers", 11 keys; he walks out of frame right on "Everyone is welcome", the jangles going with him); Mas looks down at what he is standing on before "and the rent?"',
+  st: 'v3.3 (P4, V1): it opens in 9.08\'s MCU (ROOM-LOBBY-DEAL drawDealMcuMas, the new gold collar just surfaced) and Tasya\'s hand comes in from frame right in held steps (extras.settleHand: the blazer\'s navy, the cuff, his key ring hanging from his fingers) and settles the collar on "That collar suits you.", the ring clinking against it once (the collar\'s hop, a glint), Mas\'s one-pixel smile; the hand goes, then extras.deal2S = ROOM-LOBBY-DEAL\'s 2S re-composed (pan 110, held steady) for "it does." (V.O., his lips still) and the terms: Mas (three collars, v31, lip-synced) standing on the check, Tasya warm and unhurried (lip-synced, blinking; the ring comes up on "our servers", 11 keys; he walks out of frame right on "Everyone is welcome", the jangles going with him); Mas looks down at what he is standing on before "and the rent?"',
   face: {TASYA: 'lip', MAS: 'lip'},
-  marks: {clink: ['snd', 'key_ring_jangle_3', 1, 0], itdoes: ['end', 'e1-a1-9-04', 12], rent: ['on', 'e1-a1-9-05', -3], servers: ['w', 'v31-a1-0005', 'servers', -8], lights: ['w', 'v31-a1-0005', 'lights', -4], lot: ['on', 'e1-a1-9-07', 0], leave: ['on', 'e1-a1-9-08', -6]},
+  marks: {clink: ['snd', 'key_ring_jangle_3', 1, 0], suits: ['end', 'e1-a1-9-04', 0], itdoes: ['end', 'v3-vo-09', 4], rent: ['on', 'e1-a1-9-05', -3], servers: ['w', 'v31-a1-0005', 'servers', -8], lights: ['w', 'v31-a1-0005', 'lights', -4], lot: ['on', 'e1-a1-9-07', 0], leave: ['on', 'e1-a1-9-08', -6]},
   draw: (fb, k, sh, f) => {
-    const cl = mk(sh, 'clink', 21), itd = mk(sh, 'itdoes', 66), rent = mk(sh, 'rent', 91), srv = mk(sh, 'servers', 220), lts = mk(sh, 'lights', 260), leave = mk(sh, 'leave', 368);
+    const cl = mk(sh, 'clink', 21), se = mk(sh, 'suits', 54), itd = mk(sh, 'itdoes', 89), rent = mk(sh, 'rent', 110), srv = mk(sh, 'servers', 240), lts = mk(sh, 'lights', 280), leave = mk(sh, 'leave', 387);
+    // the settle, in 9.08's MCU: his hand in (held steps), on the collar through the line, the clink, out; cut on the line's end
+    const cut = se + 2, out = se - 10;
+    if (k < cut) {
+      const step = (k < 4 ? 0 : k < 8 ? 1 : k < 12 ? 2 : k < out ? 3 : k < out + 4 ? 2 : k < out + 8 ? 1 : 0) as 0 | 1 | 2 | 3;
+      drawDealMcuMas(fb, f, {collars: 3, collarStyle: CS, check: 'floor', collarPop: k >= cl ? k - cl : undefined, mas: {look: 1, mouth: k >= cl + 3 ? 'smile' : 'rest'}});
+      settleHand(fb, {step, swing: k >= cl - 1 && k < cl + 3, glint: k >= cl && k < cl + 2});
+      return;
+    }
     const tx = k < leave ? 380 : 380 + (Math.floor((k - leave) / 2) + 1) * 10;
-    const clinking = k >= cl - 4 && k < cl + 12;
-    const tArm = (k >= srv && k < lts) || clinking ? 'ring' : 'clasp';
+    const tArm = k >= srv && k < lts ? 'ring' : 'clasp';
     const tMouth = lipOn(sh, k, 'TASYA') ? mouth(sh, k, 'TASYA') : 'smile';
     const masDown = k >= itd && k < rent;
     deal2S(fb, f, {
-      pan: 110, check: 'floor', collars: 3, collarPop: k >= cl && k < cl + 4 ? k - cl : undefined,
+      pan: 110, check: 'floor', collars: 3,
       mas: {mouth: say(sh, k, 'MAS'), head: masDown ? 'down' : '34', lid: masDown ? 1 : 0, look: k >= mk(sh, 'lot', 355) - 30 && k < mk(sh, 'lot', 355) ? 0 : 1},
-      tasya: tx < 480 ? {mouth: tMouth, lid: blinkLid(k, 6, 103), brow: 'warm', arm: tArm, keys: 11, jangle: (clinking ? (k >= cl && k < cl + 3 ? 1 : 0) : tArm === 'ring' ? Math.floor(f / 5) % 2 : 0) as 0 | 1} : null,
+      tasya: tx < 480 ? {mouth: tMouth, lid: blinkLid(k, 6, 103), brow: 'warm', arm: tArm, keys: 11, jangle: (tArm === 'ring' ? Math.floor(f / 5) % 2 : 0) as 0 | 1} : null,
       tasyaX: tx,
     });
   },
@@ -838,4 +854,4 @@ L.add('12.07', {
 });
 
 void LAUNCH; void stepColor; void ease2; void rect;
-export const SEGMENT = defineSegment({seg: 'act1', lock: LOCK, layouts: L.all, review: {subtitle: 'PIXEL v3.2 · LOCK ACT1 (v3.2 STICK TIMING) · v3-shots-act1'}});
+export const SEGMENT = defineSegment({seg: 'act1', lock: LOCK, layouts: L.all, review: {subtitle: 'PIXEL v3.3 · LOCK ACT1 (v3.3 STICK TIMING) · v3-shots-act1'}});

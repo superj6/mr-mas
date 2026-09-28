@@ -20,12 +20,19 @@
 //   handOnPhone(fb, step)                7.02: his hand coming down onto the phone at the HIGH's top edge (held steps)
 //   paneButton(fb, press, dx, dy, lit)   11.04: 5.08's finger approach (fingerECU) cropped into the split's left pane,
 //                                        the same crop duel-split's `button` state makes
+//   postPreview(fb, k, click)            6.06 (v3.3, P2): his phone's compose strip at the frame's foot, only the post's
+//                                        first line (post-card's own avatar chip and type), his thumb on Post, the click
+//   mcuMasDesk(fb, f, mas)               5.07 (v3.3, P1): 5.11's MCU (drawLaunchMcuMas) without the chat: his laptop is
+//                                        dark here, so his portrait in the lamp's warm light, the warm rim, warm collars
+//   tearGlint(fb, i, k)                  7.01 (v3.3, P3): a three-armed catch-light round the tear's bright pixel
+//   settleHand(fb, st)                   9.09 (v3.3, P4): Tasya's hand coming into 9.08's MCU from frame right to settle
+//                                        the new collar, his key ring hanging from his fingers and clinking against it
 //   bottomShade(fb, y0, n)               a lighting note: the frame's foot a rung or two darker (the V.O. rows on shadow)
 import {Buf, rect, line, bayer, hash, clamp} from '../../../../shared/pixel/px';
 import {PAL, stepColor, lightness, familyOf} from '../../../../shared/pixel/palette';
 import {tiny, tinyWidth} from '../../../../shared/pixel/rooms/kit-b';
 import {launchBackM, putBust, otsShoulder, drawCursor} from '../../../../shared/pixel/rooms/bullpen-launch';
-import {faceKey} from '../../../../shared/pixel/kits/face-light';
+import {faceKey, warmRim} from '../../../../shared/pixel/kits/face-light';
 import type {LaunchMState} from '../../../../shared/pixel/rooms/bullpen-launch';
 import {drawButtonECU, drawBeigeButton} from '../../../../shared/pixel/kits/launch-button';
 import {masPortrait, MAS_PORTRAIT_DEFAULT} from '../../../../shared/pixel/cast/mas';
@@ -45,7 +52,8 @@ import {drawTasyaMedium} from '../../../../shared/pixel/cast/tasya-medium';
 import type {TasyaMediumState} from '../../../../shared/pixel/cast/tasya-medium';
 import {drawGergStand, GERG_STAND_DEFAULT, gergWalkAt} from '../../../../shared/pixel/cast/gerg-stand';
 import type {TvState} from '../../../../shared/pixel/kits/tv-news';
-import {pt, pwrap, RH} from '../kit';
+import {pt, pw, pwrap, RH} from '../kit';
+import {drawAvatar9} from '../../../../shared/pixel/kits/post-card';
 
 // ------------------------------------------------------------------ small clocks
 /** a blink on a long loop: 1 (half), 2 (shut), 1, each held 2 frames (the show's minimum hold), else 0 */
@@ -405,4 +413,95 @@ export const paneButton = (fb: Buf, press: 0 | 1 | 2, dx: number, dy: number, li
   fingerECU(E, press, dx, dy, lit);
   const x0 = Math.max(0, Math.min(480 - DUEL.paneW, BUTTON_ECU[0] - (DUEL.paneW >> 1) + 20));
   for (let y = 0; y < RH; y++) for (let x = 0; x < DUEL.paneW; x++) fb.c[y * fb.w + x] = E.c[y * 480 + x0 + x];
+};
+
+// ------------------------------------------------------------------ 6.06 (v3.3): the post as a preview, under his thumb
+export const POST_PREVIEW = 'CHATGTP launched on wednesday. today it crossed…';
+/** his phone's compose strip over the odometer ECU, at the frame's foot (post-card's colours: the popup's N2 card, his C6
+ *  accent rule, his 9 px chip), one line only, and the Post pill; his thumb comes up from the frame's bottom right in
+ *  held steps and presses it on the post's click (k = click), the pill lighting; then it lifts away and the line holds.
+ *  `in` is when the strip slides up (2 held steps) */
+export const postPreview = (fb: Buf, k: number, click: number, into: number) => {
+  if (k < into) return;
+  const x = 16, w = 330, h = 24, y = 166 + (k < into + 2 ? 16 : k < into + 4 ? 6 : 0);
+  rect(x + 3, y + 3, w, h, fb.ink(PAL.N0));
+  rect(x - 1, y - 1, w + 2, h + 2, fb.ink(PAL.N0)); rect(x, y, w, h, fb.ink(PAL.N2));
+  rect(x, y, w, 1, fb.ink(PAL.C6)); rect(x, y + h - 1, w, 1, fb.ink(PAL.N1));
+  drawAvatar9(fb, x + 6, y + 8, 'mas');
+  pt(fb, POST_PREVIEW, x + 20, y + 9, PAL.P2);
+  // the Post pill at the strip's right end: dim until he presses it, lit on the click, then "Posted" in his accent
+  const px = x + w - 50, py = y + 6, pressed = k >= click && k < click + 6, done = k >= click + 6;
+  rect(px, py, 42, 12, fb.ink(pressed ? PAL.C6 : done ? PAL.N3 : PAL.N4)); rect(px, py, 42, 1, fb.ink(pressed ? PAL.C8 : PAL.N5));
+  const label = done ? 'Posted' : 'Post';
+  pt(fb, label, px + Math.round((42 - pw(label)) / 2), py + 3, pressed ? PAL.N1 : done ? PAL.C6 : PAL.P2);
+  // his thumb: up from the frame's bottom right to the pill (held steps: low, near, on it; the press sinks 1 px; lift)
+  const tipX = px + 22, tipY = py + 7;
+  const off = k < click - 8 ? null : k < click - 4 ? 22 : k < click ? 8 : k < click + 6 ? -1 : k < click + 10 ? 10 : k < click + 14 ? 26 : null;
+  if (off === null) return;
+  const ty = tipY + off;
+  for (let yy = ty; yy < RH; yy++) {
+    const t = yy - ty, cx = tipX + Math.round(t * 0.55), hw = Math.min(7, 3 + Math.floor(t / 3));
+    for (let xx = cx - hw; xx <= cx + hw; xx++) {
+      const edge = xx === cx - hw || xx === cx + hw;
+      fb.set(xx, yy, edge ? PAL.S2 : t < 2 ? PAL.S5 : xx < cx - 1 ? PAL.S5 : PAL.S4);
+    }
+    if (t >= 2 && t < 6) for (let xx = cx - 2; xx <= cx + 2; xx++) fb.set(xx, yy, t === 2 ? PAL.P2 : PAL.S5); // the nail
+  }
+};
+
+// ------------------------------------------------------------------ 9.09 (v3.3): Tasya's hand settles the collar
+/** Tasya's hand in 9.08's MCU (lobby-deal drawDealMcuMas, Mas's portrait at (100, 34); the gold third collar spans x
+ *  141..173, rows 113..127, its right point at x ~172): his forearm up from the frame's bottom right in the blazer's navy
+ *  (tasya-medium's N4 / N5 lit / N3 shade), the shirt cuff, the hand pinching the collar's point, and his key ring
+ *  hanging from his fingers (brass, eleven keys shown as five at this size). step 0 none · 1 far · 2 near · 3 on the
+ *  collar; `swing` puts the ring against the collar (the clink), `glint` lights the contact */
+export interface SettleHandState { step: 0 | 1 | 2 | 3; swing?: boolean; glint?: boolean }
+export const settleHand = (fb: Buf, st: SettleHandState) => {
+  if (!st.step) return;
+  const [dx, dy] = [[0, 0], [56, 44], [26, 20], [0, 0]][st.step];
+  const hx = 176 + dx, hy = 114 + dy; // the fingertips' left end at the collar's point
+  // the sleeve: from the wrist (hx + 20, hy + 10) down-right to the frame's bottom
+  const wx = hx + 22, wy = hy + 10;
+  for (let yy = wy; yy < RH; yy++) {
+    const t = (yy - wy) / Math.max(1, RH - wy), cx = Math.round(wx + 6 + t * 60), hw = 8 + Math.round(t * 5);
+    for (let xx = cx - hw; xx <= cx + hw; xx++) fb.set(xx, yy, xx <= cx - hw + 1 ? PAL.N5 : xx >= cx + hw - 2 ? PAL.N3 : PAL.N4);
+  }
+  // the cuff at the wrist, then the back of the hand, the fingers reaching to the point
+  for (let j = 0; j < 12; j++) for (let i = 0; i < 4; i++) fb.set(wx - 2 + i + Math.round(j * 0.2), wy - 4 + j, i === 0 ? PAL.G5 : PAL.P1);
+  for (let j = 0; j < 11; j++) for (let i = 0; i < 16; i++) {
+    if (Math.hypot((i - 7.5) / 8, (j - 5) / 5.5) >= 1) continue;
+    fb.set(hx + 6 + i, hy - 1 + j, j < 2 ? PAL.S4 : j > 8 ? PAL.X2 : PAL.S3);
+  }
+  for (let k = 0; k < 3; k++) for (let i = 0; i < 7; i++) { const X = hx + i, Y = hy + k * 3; fb.set(X, Y, PAL.S3); fb.set(X, Y + 1, i === 0 ? PAL.X2 : PAL.S4); }
+  fb.set(hx - 1, hy + 1, PAL.X1); // the fingertip on the collar's edge
+  // the key ring from his fingers: a brass ring and five keys fanned under it
+  const rx = hx + 8 - (st.swing ? 6 : 0), ry = hy + 19;
+  for (let yy = -6; yy <= 6; yy++) for (let xx = -6; xx <= 6; xx++) { const d = Math.hypot(xx, yy); if (d >= 4.6 && d <= 6.2) fb.set(rx + xx, ry + yy, xx + yy < 0 ? PAL.W7 : PAL.W5); }
+  line(hx + 8, hy + 8, rx, ry - 6, fb.ink(PAL.W4));
+  const keys: Array<[number, number]> = [[-5, PAL.G5], [-2, PAL.W6], [0, PAL.G6], [2, PAL.W4], [5, PAL.G5]];
+  for (const [kx, col] of keys) for (let j = 0; j < 8; j++) fb.set(rx + kx + Math.round(kx * 0.12 * j), ry + 6 + j, col);
+  if (st.glint) { fb.set(rx - 6, ry - 2, PAL.W9); fb.set(rx - 7, ry - 2, PAL.W8); fb.set(rx - 6, ry - 3, PAL.W8); }
+};
+
+// ------------------------------------------------------------------ 5.07 (v3.3): his face, not answering
+/** drawLaunchMcuMas's frame re-composed for 5.07: the launch back wall (warm, soft 2, camX 330), his portrait at (96, 34)
+ *  lit by the desk lamp ('warm', its rim down his left side), the two collars in the warm ramp; no chat light (the
+ *  laptop is dark until the click) */
+export const mcuMasDesk = (fb: Buf, f: number, mas: Partial<MasPortraitState>) => {
+  launchBackM(fb, 330, {soft: 2, alyi: 'gone', warm: 1});
+  const s: MasPortraitState = {...MAS_PORTRAIT_DEFAULT, light: 'warm', look: -1, ...mas};
+  const x = 96, y = 34;
+  putBust(fb, masPortrait(s), x, y);
+  warmRim(fb, x, y, x + 112, y + 96, -1, 3);
+  drawCollarsPortrait(fb, x, y, 2, {head: s.head ?? '34', light: 'warm', style: 'v31'});
+  void f;
+};
+
+// ------------------------------------------------------------------ 7.01 (v3.3): the tear's glint, readable
+/** the catch-light round the tear's bright pixel in drawLaunchMcuPF's frame (portrait at (96, 34); the bead's bright
+ *  pixel is MAS_TEAR_PATH[i] one row up): one pixel out up, left and right in the lamp's tungsten, for the frames the
+ *  layout gives it (never below: that's his cheek's wet track) */
+export const tearGlint = (fb: Buf, tx: number, ty: number) => {
+  const x = 96 + tx, y = 34 + ty - 1;
+  fb.set(x, y - 1, PAL.W7); fb.set(x - 1, y, PAL.W6); fb.set(x + 1, y, PAL.W6);
 };
