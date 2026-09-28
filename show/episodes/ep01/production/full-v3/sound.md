@@ -1,22 +1,20 @@
 # Ep1 v3: rooms, SFX and the final mix (`v3-sound`, 2026-09-27)
 
-> **Status (v3.4): the cold open, Act One, Act Two and the tag are mixed on the v3.4 lock, both variants (§X). Acts Three and Four, the card and the episode report wait on composer Y's refit.** The v3.3 lock is MIXED, both variants, on the final v3.3 scores (§W). The v3.2 lock was mixed, both variants (§V; its mix folders were deleted after v3.3 passed QA, for disk; `--lock v32` rebuilds them). The v3.1 lock is mixed, both variants (§0). Tracks A2 (rooms and SFX stems) and A3 (the mix) of [PLAN.md](PLAN.md), under the showrunner's "just do a full episode attempt with your best judgement".
+> **Status (v3.4): the v3.4 lock is MIXED, both variants, on the final v3.4 scores (§X).** The v3.3 lock was mixed, both variants (§W); its mixes and stems were deleted after v3.4 passed, for disk (`--lock v33` rebuilds them).
 >
 > **Nothing here was heard.** Every number below is measured from the files. I also looked at envelope plots of the stems and mixes around the moments listed in §5. Whether a room sounds like its room, whether the keys read as Gerg, and whether any cut plays all need an ear.
 > Nothing was committed.
 >
 > §W is the v3.3 polish round's tool changes, §V the v3.2 round, §0 the v3.1 round. §1–§8 are the v3 round: the method, which still holds, and the v3 lock's numbers.
 
-## X. v3.4: the lock (script draft 8.3), first four segments
+## X. v3.4: the lock (script draft 8.3), MIXED
 
-**Re-run:**
-- `mix_episode.py coldopen act1 act2 tag` (the default lock is v34 now), and the same with `--variant el`.
-- The whole episode, once Y's Acts Three and Four name the v3.4 timelines: `mix_episode.py --all`, and the same with `--variant el`.
+**Re-run:** `mix_episode.py --all` (the default lock is v34), and the same with `--variant el`.
 
 **The files:**
 - Stems: `audio/reel/ep01-v3/v34/` (WAV) and `v34/el/` (FLAC).
 - Mixes: `out/ep01/full-v3/mix-v34/` and `mix-v34-el/`.
-- QA: `audio/reel/ep01-v3/mix-qa/v34/<variant>/`.
+- QA and the episode report: `audio/reel/ep01-v3/mix-qa/v34/<variant>/`.
 
 **Frames:**
 
@@ -28,46 +26,69 @@
 **What changed in the tools:**
 - The `v34` lock entries.
 - Act Three's 0.6 s lead under 17.13's black, kept for v3.4.
+- **`TP_MAX` −1.0 → −1.05 dBTP**, a margin so no report reads "−1.0". Kokoro Act Three first measured −1.00; re-mastered alone, it's −1.15 at the same gain (+1.96 dB). Nothing else was over −1.05.
 
 Everything else follows the v3.4 timelines by beat id:
-- **The tag:** v31-32.01d is cut, so the demo film's claims, the room duck and return, the stutter clicks and the LED-off span are all skipped. Each was already guarded on that beat. Its stems are the dark room plus the vault's hum, L-cut from Act Four.
-- **S4.02:** the new phones (`phone_buzz_step_1`, −26) are laid.
-- **Beats that are gone:** 14.03/14.05 (the bay clip and the repost click) and 21.03/21.04 (the deepfake lines and pops) take their sounds with them. 21.05's claps carry into the switch-off.
+- **The tag:** v31-32.01d is cut, so the demo film's claims, the room duck and return, the stutter clicks and the LED-off span are all skipped. Each was already guarded on that beat. The tag's stems are the dark room plus the vault's hum, L-cut from Act Four.
+- **S4.02:** the new phones (`phone_buzz_step_1`, −26) are laid, under Y's pizz chord (his `designed_hit`).
+- **Beats that are gone:** 14.03/14.05 and 21.03/21.04 take their sounds with them. 21.05's claps carry into the switch-off.
 - **Kept from earlier rounds:**
-  - the dial-tone fix (S4.08 still ends 0.25 s after its beat, over 0.35 s);
+  - the dial-tone fix (S4.08 ends 0.25 s after its beat, over 0.35 s);
   - the LED ticks off room cuts;
   - the 10 ms room fades;
   - the 20 ms SFX tails;
-  - X6's row (by beat id, so it follows v3.4).
+  - VO_GAIN_DB 2.0.
 
-**Measured:**
+**The runs:**
+- The first four segments were mixed first. The whole episode was mixed once Y's Acts Three and Four named v3.4 (39f26d3); the stems rebuilt for both variants on the new score hints.
+- The first EL whole-episode run was killed by systemd-oomd during the premixes (machine-wide pressure, at 12:09; its stems had been written). The re-run, one job alone, finished.
+- **By md5,** the whole-episode run leaves the cold open, Act One and Act Two byte-identical to the four-segment run, in both variants.
+  - Only the tag changed: it now has Act Four's gain ramp at its head, and in EL, Y's EL ring-out.
+  - The Kokoro outro changed with its tag. The EL outro is identical.
+  - Both cold opens are also byte-identical to v3.3's.
+
+**Measured (the episode report):**
 
 | | Kokoro | EL |
 |---|---|---|
-| Cold open · Act One · Act Two (LUFS-I) | −16.0 · −16.0 · −16.0 | −16.0 · −16.0 · −16.0 |
-| Tag | −17.22 (the dialogue guard, −1.20 dB) | −17.06 (guard −0.95) |
-| True peak (highest) | −1.06 dBTP (the tag) | −1.40 dBTP (the tag) |
-| The odometer (set piece over the talk) | +2.40 LU | +2.50 LU |
-| Unmarked holes · missing lines · missing SFX | 0 · 0 · 0 | 0 · 0 · 0 |
+| Cold open · Act One · Act Two · Act Three · Act Four (LUFS-I) | −16.0 · −16.0 · −16.0 · −16.02 · −16.01 | −16.0 · −16.0 · −16.0 · −16.02 · −16.01 |
+| Tag | −17.28 (the dialogue guard, −1.24 dB) | −17.13 (guard −0.97) |
+| Card | −36.42 | −36.23 |
+| **Episode** (the story plus the card, 20:13.8 / 20:16.8) | **−16.03 LUFS**, LRA 6.9 | **−16.02 LUFS**, LRA 7.0 |
+| Highest true peak | −1.06 dBTP (the tag) | −1.40 dBTP (the tag) |
+| Dialogue spread · reference | 1.84 LU · −14.78 | 1.85 LU · −14.69 |
+| Unmarked holes (with the score / without) · missing lines · missing SFX | 0 / 0 · 0 · 0 | 0 / 0 · 0 · 0 |
+| **X6**, the avalanche (S6.01 to S6.06's freeze hit) | −15.90 → −14.23 (+1.66 LU, 1.84 dB) | −15.98 → −14.31 (+1.67 LU) |
+| Set pieces over the talk: the avalanche · the shatter · the odometer | +2.50 · +2.23 · +2.40 LU | +2.49 · +2.38 · +2.50 LU |
+| The night's re-entry (X3): first 100 ms · 400 ms over the room | +10.8 · +15.8 dB | +11.2 · +16.3 dB |
+| Seams (200 ms either side): act1→2 · act2→3 · act3→4 · act4→tag | 0.3 · 1.8 · 0.4 · −0.8 dB | 0.9 · 0.7 · 1.4 · −0.5 dB |
+| The outro: hum held · first hit · seam (400 ms) | 2.0 s · −6 dB · 11.3 dB | 2.0 s · −6 dB · 12.8 dB |
 
+**The tag's head:**
+- **The ring-out:** both tags now take Act Four's vault ring-out (`music-ringout.wav`, EL `music-el-ringout.wav`, Y's v3.4 renders, 4.2 s). It plays full from the tag's first sample and fades out, equal power, over 2.5 s from the tag score's entry at 0.60 s.
+- **The gain:** it ramps from Act Four's gain over 2 s (+1.02 → +2.72 dB Kokoro, +1.06 → +2.80 EL).
+- **At the seam:**
+  - Act Four's last 200 ms read −26.4 dBFS. The tag's first 200 ms read −27.1 (Kokoro) and −26.9 (EL).
+  - The sample jump across the seam is 0.006 / 0.0007.
+- **In 0.5 s windows** (dBFS RMS), the head reads −27.7, −22.5, −28, −33, −34, −35, then −16.6 at 3.0 s, as 32.02 comes in. There's no demo and no duck now: the room, the score's entry and the ring-out's fade, then the arrival.
 - **The tag's LRA is 19.4 / 19.0** (v3.3: 13.7). The tag is 9 s shorter, so its quiet end (about 4 s at −35 LUFS short-term, the hum after the thud) is a larger share of it.
-- **Its head** now reads −24.5 → −16 LUFS over its first 4 s (v3.3: −25 to −29 under the demo).
 
-**The click scan** at every beat boundary (room, SFX, score, mix; over 10× local):
-- **Room:** no flags in either variant.
-- **SFX:** no truncations. The only non-onset boundary flags are laid attacks on their cuts:
+**The click scan** at every beat boundary (room, SFX, score, mix; over 10× local; then a whole-stem cut-off sweep):
+- **Room:** no flags, in any segment of either variant.
+- **SFX:** no truncations. The non-onset boundary flags are all laid attacks on their cuts:
   - Act One: `freeze_hit_F` (9.04), `collar_pop_F5` (9.08), `synth:thud` (v31-12.03), and in EL the egg timer's tick on the match cut;
-  - Act Two: `freeze_hit_F` (13.03, 17.04).
-- **Score:** one flag in each variant, the Senate cue's pizzicato as the pedal lets go (Act Two 15.10 in Kokoro, 15.07 in EL).
-- **The mix:** only the thud, the 13.03 freeze hit and the 13.12 shutter. There are no whole-stem cut-offs.
+  - Act Two: `freeze_hit_F` (13.03, 17.04);
+  - Act Three: `post_click` (20.03).
+- **Score, two designed flags per variant:**
+  - Act Two: the Senate pizzicato as the pedal lets go (15.10 / 15.07);
+  - Act Three 23.01: THE CLOCK's step on F.
+- **Act Four:** no flags at any boundary, in any stem.
+- **The mix:** only those moments, plus 13.12's shutter. Its whole-stem sweep finds only Act Three's `dialog_ok_click--chip` decay (Kokoro 18.2 s).
+- **Level jumps:** Act Four's QA lists a few rises over 15 dB that aren't at a word or an SFX (Kokoro 6, EL 8), for the ear. One sits on Y's cue marks (S5.04, the Orb's look; EL S5.03). S8.08's head has no mark.
 
-**Provisional until Y's refit is in:**
-- **The tag, and the outro made with it.** The tag's head takes Act Four's vault ring-out (`music-ringout.wav`) and the seam ramp from Act Four's gain.
-  - Y's Kokoro Act Four render landed at 11:48, mid-run, so the Kokoro tag has Y's new ring-out.
-  - The EL tag has none: the EL Act Four sheet still named v3.3.
-  - Neither tag has the seam ramp.
-- **Act Two's last 0.6 s and the tag's head.** Once Y's cue sheets name v3.4, the stems' score hints change (the dark room's LED grid), and the next run rebuilds the stems.
-- The whole-episode run then re-mixes every segment for both variants.
+**Disk:**
+- After both passed, I deleted `mix-v33/`, `mix-v33-el/` and the v3.3 stems.
+- The v3.3 assembly files and the cold open's picture lock (`lock/coldopen.json`) still name `mix-v33/coldopen-mix.wav`. `mix-v34/coldopen-mix.wav` is byte-identical to it (md5 `adf243dd…`; EL `6e2b6c50…`), so re-pointing changes no audio.
 
 ## W. v3.3: the polish round (PLAN.md §6, the X items) and the mix
 

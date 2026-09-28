@@ -58,17 +58,17 @@
  },
  "checks": [],
  "measured": {
-  "lufs_i": -17.22,
+  "lufs_i": -17.28,
   "true_peak_dbtp": -1.06,
   "sample_peak_dbfs": -1.5,
   "lra_lu": 19.4,
-  "gain_db": 2.76,
+  "gain_db": 2.72,
   "limiter_ceiling_dbfs": -1.5,
-  "limiter_active_s": 0.217,
-  "dialogue_lufs": -13.23,
-  "score_lufs_after_duck": -19.04,
+  "limiter_active_s": 0.216,
+  "dialogue_lufs": -13.28,
+  "score_lufs_after_duck": -19.08,
   "score_rms_under_speech_dbfs": -36.9,
-  "score_rms_between_speech_dbfs": -23.3,
+  "score_rms_between_speech_dbfs": -23.4,
   "score_runs": {
    "count": 2,
    "shortest_s": 2.95,
@@ -83,8 +83,8 @@
     ]
    ]
   },
-  "rooms_lufs": -35.72,
-  "sfx_lufs": -31.21,
+  "rooms_lufs": -35.76,
+  "sfx_lufs": -31.26,
   "holes_under_-42dBFS_0.3s": [],
   "holes_mono_downmix": [],
   "holes_without_score": [],
@@ -102,8 +102,13 @@
   }
  },
  "file": "out/ep01/full-v3/mix-v34/tag-mix.wav",
- "guard_db": -1.2,
- "seam_head": null,
- "built": "2026-09-28 11:50:51",
+ "guard_db": -1.24,
+ "seam_head": {
+  "from_gain_db": 1.02,
+  "to_gain_db": 2.72,
+  "ramp_s": 2.0,
+  "after": "act4"
+ },
+ "built": "2026-09-28 12:05:59",
  "heard": "nothing here has been listened to; every number is measured"
 }

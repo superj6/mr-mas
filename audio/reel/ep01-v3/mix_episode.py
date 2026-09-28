@@ -88,7 +88,7 @@ def set_lock(name):
     global OUT, QA_DIR
     S.set_lock(name)
     OUT, QA_DIR = OUTS[name], QA_DIRS[name]
-TARGET, CEIL, TP_MAX = -16.0, -1.5, -1.0
+TARGET, CEIL, TP_MAX = -16.0, -1.5, -1.05   # v3.4: TP_MAX 0.05 dB inside -1 dBTP, so no report reads "-1.0" (v3.4 act3: -1.00)
 GUARD_LU = 1.5
 ROOM_DIP = {}                           # (the cold open's extra 8 dB for its hall and banquet is baked into its stem)
 ROOM_DIP_DEFAULT = 2.0

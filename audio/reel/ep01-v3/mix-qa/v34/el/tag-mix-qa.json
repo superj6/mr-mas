@@ -24,8 +24,14 @@
   "cues": "audio/ost/tracks/e01-v3-tag/cues-el.json",
   "length_s": 33.25,
   "length_vs_segment_s": 0.0,
+  "act4_ringout": {
+   "file": "audio/ost/tracks/e01-v3-act4/render/music-el-ringout.wav",
+   "seconds": 4.2,
+   "crossfade": "full from 0 s, out (equal power) over 2.5 s from the tag score's entry at 0.60 s",
+   "why": "the act4 score's hand-off and the lead's note: the vault pedal's release at the tag's head, crossfading under the tag's own score, so the seam doesn't cut it"
+  },
   "lufs_as_delivered": -21.03,
-  "lufs_after_gain": -21.03,
+  "lufs_after_gain": -21.08,
   "duck": {
    "by_mood_db": [
     [
@@ -52,7 +58,7 @@
  },
  "checks": [],
  "measured": {
-  "lufs_i": -17.06,
+  "lufs_i": -17.13,
   "true_peak_dbtp": -1.4,
   "sample_peak_dbfs": -1.5,
   "lra_lu": 19.0,
@@ -60,16 +66,16 @@
   "limiter_ceiling_dbfs": -1.5,
   "limiter_active_s": 0.302,
   "dialogue_lufs": -13.19,
-  "score_lufs_after_duck": -18.92,
+  "score_lufs_after_duck": -18.95,
   "score_rms_under_speech_dbfs": -36.9,
-  "score_rms_between_speech_dbfs": -23.5,
+  "score_rms_between_speech_dbfs": -23.4,
   "score_runs": {
    "count": 2,
    "shortest_s": 2.95,
    "runs": [
     [
-     0.6,
-     21.9
+     0.0,
+     22.5
     ],
     [
      30.0,
@@ -96,8 +102,13 @@
   }
  },
  "file": "out/ep01/full-v3/mix-v34-el/tag-mix.wav",
- "guard_db": -0.95,
- "seam_head": null,
- "built": "2026-09-28 11:53:05",
+ "guard_db": -0.97,
+ "seam_head": {
+  "from_gain_db": 1.06,
+  "to_gain_db": 2.8,
+  "ramp_s": 2.0,
+  "after": "act4"
+ },
+ "built": "2026-09-28 12:12:56",
  "heard": "nothing here has been listened to; every number is measured"
 }
