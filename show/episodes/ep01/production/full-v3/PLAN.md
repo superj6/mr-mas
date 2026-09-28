@@ -310,3 +310,29 @@ out/ep01/full-v3/                         the films and mixes (git-ignored)
 1. The writer (A, B and C's lines).
 2. In parallel: the EL intro (D) and the tag's duck prototype.
 3. Takes (Kokoro and EL), then the v3.4 locks, then the picture passes, the score refit, the mix, assembly, and a focused check.
+
+## 8. v3.5: the final version (from 2026-09-28, agreed)
+
+**Showrunner:** "i think we're now seeming fully on the same page. i now trust your judgement to put everything we've discussed into the final rendering. go for it"
+
+**The spec:** [proposal-v35.md](proposal-v35.md) (967170b), with the lead's choices:
+- 1A, 2A, 3A, 4A;
+- **5A** (TPOOL at 6 s, not the echo);
+- 6A, 7A, 8A;
+- **9A** (the second style leap: the tear on the heatsink);
+- 10A;
+- **11A** (one film: the ElevenLabs cast, MARIO on Kokoro, SIRRAH recast);
+- **12A amended plus the quicker board exit**;
+- CLOD's pane as a 3D claymation insert, if the Blender test reads.
+
+**Order:**
+1. Draft 8.4 and beat plans, plus the Kokoro takes, the season and bible docs, and verification of every "confirm before lock" item.
+2. The base lock (Kokoro timing).
+3. ElevenLabs takes: every new line except MARIO, SIRRAH auditioned and picked. Then the ElevenLabs lock with MARIO's Kokoro takes cast in.
+4. Picture passes on the ElevenLabs lock only: new art for 2018, 2019, the first weeks, 3 AM, the window, the vision post, GNIB, the waitlist, the stamp, the tour, the statement and chips, the INVIDIA plants, the war room, the flight, TPOOL, Neleh's desk, Alyi alone, the president's deepfake restored, and the Senate without the clone. Plus the two inserts: the tear macro and CLOD.
+5. The score on the ElevenLabs lock: a refit plus the new cues (the war room's pulse, 2018, 2019, the first weeks, the window).
+6. Stems and the mix, ElevenLabs only.
+7. Assembly: one film, `ep01-v35.mp4`.
+8. QA, then the final checks: a newcomer read, the critic's transition table on the new seams, and the sound audit.
+
+**Rules:** everything goes through ops/heavy.sh, at most 3 agents at once, and a commit after each step.
