@@ -271,6 +271,43 @@
        "kokoro_voiced_s": 32.48
       }
      }
+    },
+    {
+     "cand": "C",
+     "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+     "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+     "source": "shared Voice Library (high_quality), used by voice_id",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     },
+     "vo_settings": {
+      "stability": 0.65,
+      "speed": 0.85
+     },
+     "labels": {
+      "age": "middle_aged",
+      "use_case": "informative_educational",
+      "descriptive": "relaxed",
+      "description": "An American Adult male with a warm and trustworthy voice, speaking at a relaxed pace with a calm tone. Perfect for educational content. Professional Studio Quality Audio."
+     },
+     "why": "Phase 3 recast (2026-09-27), picked by measurement (audio/ep01/v3-el/mas-recast.json): the only candidate whose V.O. runs near the 110-140 wpm band at steady settings (146 wpm at speed 0.9; the others 170-233, which no speed setting in the 0.7-1.2 range brings in), mid-lane pitch (114 Hz in 105-125), no clipped tails or pitch outliers, and an English-detection score beside Kokoro's American takes (p(en) per take 0.976, joined 0.996; Giovanni 0.907 / 0.972). V.O. speed 0.85 (from the audition's 0.9) to land the V.O. inside the band.",
+     "audition": {
+      "file": "out/ep01/full-v3/voices/mas-recast.mp3",
+      "number": 2,
+      "measured": {
+       "p_en_takes": 0.9761,
+       "p_en_min": 0.9,
+       "f0": 114.0,
+       "vo_wpm": 146.1,
+       "talk_sps": 3.59,
+       "tail_cuts": []
+      }
+     }
     }
    ],
    "sentence_case": true
@@ -1917,27 +1954,41 @@
    "why": "The same as DEEPFAKE NEDIB, raised 0.7 st so the two fakes are told apart."
   }
  },
- "respell_lines": {
-  "a5-29-01": {
-   "badge": "badj"
-  },
-  "v3-vo-23": {
-   "Gerg": "...Guhrg"
-  }
- },
- "respell_roles": {
-  "mas-manalt": {
-   "Gerg": "Guhrg",
-   "Noted": "Noded"
-  }
- },
- "say_lines": {
-  "e1-a2-15-04": "Which one am I."
- },
+ "respell_lines": {},
+ "respell_roles": {},
+ "say_lines": {},
  "say_lines_note": "Per-line readings: the same words with other punctuation, sent instead of the line (the lines JSON keeps the script's text). e1-a2-15-04: Mas's 'which one am i?' came back as a sharp rise on both takes (median F0 226 and 257 Hz, pYIN 107 -> 289 Hz), against his brief's level or falling finals; sent as a statement.",
  "say_full": {
   "a5-27-31": "Neleh, hi. Wow. I've actually written up some thoughts on exactly this. Eleven pages, on the conditions under which we might, hypothetically, consider it.",
   "a5-29-24": "Has anyone read the charter?"
  },
- "say_full_note": "Lines cut off by the world (the timeline's 'cut', text ending in a dash) are read whole, as the Kokoro takes were (their spoken_as in audio/ep01/act4/dialogue/lines-v5.json); the lock's 'dur' marks the cut-off and the mixer plays the whole file."
+ "say_full_note": "Lines cut off by the world (the timeline's 'cut', text ending in a dash) are read whole, as the Kokoro takes were (their spoken_as in audio/ep01/act4/dialogue/lines-v5.json); the lock's 'dur' marks the cut-off and the mixer plays the whole file.",
+ "set_cand": {
+  "A": {
+   "mas-manalt": "C"
+  }
+ },
+ "set_cand_note": "Per-set overrides of the candidate letter. Set A (the episode set) uses candidate C for Mas since the phase-3 recast: the showrunner heard A (Giovanni) as accented ('strangely russian'). Giovanni stays on file as candidate A.",
+ "respell_voices": {
+  "g6fJBFvZZp41FerGMMx7": {
+   "words": {
+    "Gerg": "Guhrg",
+    "Noted": "Noded"
+   },
+   "lines": {
+    "a5-29-01": {
+     "badge": "badj"
+    },
+    "v3-vo-23": {
+     "Gerg": "...Guhrg"
+    }
+   },
+   "say": {
+    "e1-a2-15-04": "Which one am I."
+   },
+   "name": "Giovanni (Mas, candidate A)",
+   "note": "The phase-2 fixes fitted to this voice (respell_note, say_lines_note): they apply only when this voice speaks."
+  }
+ },
+ "respell_voices_note": "respell_voices: {voice_id: {words, lines, say}}, fixes that belong to one voice (a new voice starts from the house respellings and gets its own name check). The phase-2 Mas fixes moved here from respell_roles, respell_lines and say_lines on 2026-09-27, when Mas was recast."
 }

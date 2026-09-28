@@ -129,11 +129,101 @@
    },
    "used_by_subscription": 4322,
    "note": "chars_sent counts the text as sent; credits_billed is each response's character-cost header, which is what the subscription counts (it agrees: 5,522 -> 9,844). Retakes and the per-line fixes are inside the segment runs."
+  },
+  "phase 3: Mas recast auditions": {
+   "budget_chars": 12000,
+   "_about": "Phase 3 (2026-09-27): the showrunner heard Mas A (Giovanni) as accented. Recast by measurement (voices-el.md §R): 8 candidates auditioned on the same 6 lines, the winner (Jeremy) rendered on all 75 Mas lines. Budget 12,000 characters.",
+   "subscription_before": {
+    "tier": "creator",
+    "character_count": 9844,
+    "character_limit": 131000,
+    "next_character_count_reset_unix": 1793049484,
+    "voice_limit": 30,
+    "voice_slots_used": 0,
+    "professional_voice_limit": 1,
+    "can_extend_character_limit": false,
+    "status": "active",
+    "checked_at": "2026-09-27T16:24:30"
+   },
+   "subscription_after": {
+    "tier": "creator",
+    "character_count": 12693,
+    "character_limit": 131000,
+    "next_character_count_reset_unix": 1793049484,
+    "voice_limit": 30,
+    "voice_slots_used": 2,
+    "professional_voice_limit": 1,
+    "can_extend_character_limit": false,
+    "status": "active",
+    "checked_at": "2026-09-27T17:30:30"
+   },
+   "runs": {
+    "voice design (1 call: 3 previews of the six test lines; no cost header, billed 242 by the subscription)": {
+     "calls": 1,
+     "chars_sent": 242,
+     "credits_billed": 242
+    },
+    "auditions: 9 voices x 6 lines, eleven_multilingual_v2 (8 candidates + Giovanni as the reference)": {
+     "calls": 54,
+     "chars_sent": 2133,
+     "credits_billed": 1170
+    },
+    "auditions: eleven_v3 on the best two (Jeremy, Dennis)": {
+     "calls": 12,
+     "chars_sent": 474,
+     "credits_billed": 260
+    },
+    "the episode: all 75 Mas lines with the winner (Jeremy, candidate C), incl. 3 retakes": {
+     "calls": 78,
+     "chars_sent": 2145,
+     "credits_billed": 1177,
+     "per_segment": {
+      "audio/ep01/v3-el/ep01/act1": {
+       "calls": 19,
+       "chars_sent": 557,
+       "credits_billed": 305
+      },
+      "audio/ep01/v3-el/ep01/act2": {
+       "calls": 11,
+       "chars_sent": 332,
+       "credits_billed": 183
+      },
+      "audio/ep01/v3-el/ep01/act3": {
+       "calls": 12,
+       "chars_sent": 283,
+       "credits_billed": 155
+      },
+      "audio/ep01/v3-el/ep01/act4": {
+       "calls": 30,
+       "chars_sent": 809,
+       "credits_billed": 445
+      },
+      "audio/ep01/v3-el/ep01/coldopen": {
+       "calls": 2,
+       "chars_sent": 122,
+       "credits_billed": 67
+      },
+      "audio/ep01/v3-el/ep01/tag": {
+       "calls": 4,
+       "chars_sent": 42,
+       "credits_billed": 22
+      }
+     }
+    }
+   },
+   "total": {
+    "calls": 145,
+    "chars_sent": 4994,
+    "credits_billed": 2849
+   },
+   "used_by_subscription": 2849,
+   "voice_slots_used_after": 2,
+   "note": "Two designed voices were saved to the account (voice_slots_used 0 -> 2): mrmas-mas-design-2027-2, -2027-1."
   }
  },
  "all_phases_total": {
-  "chars_sent": 17932,
-  "credits_billed": 9844,
-  "subscription_character_count": 9844
+  "chars_sent": 22926,
+  "credits_billed": 12693,
+  "subscription_character_count": 12693
  }
 }

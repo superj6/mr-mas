@@ -157,14 +157,17 @@ class Cast:
             c = dict(c, settings=dict(c["settings"], **(r.get("settings_override") or {})), derived=r["derived_from"])
         return c, r
 
-    def respell(self, text, line_id=None, role=None):
+    def respell(self, text, line_id=None, role=None, voice_id=None):
         """names as the voice should say them (house lexicon: cast.json 'lexicon', naming.md §9), per word, then any
         per-role override (cast 'respell_roles': {role: {word: respelling}}, where one voice needs its own spelling)
         and per-line override (cast 'respell_lines': {line id: {word: respelling}}, for a fix one take needs).
         -> (text as sent, [(word, sent piece)] one per word)"""
         rs = {k.lower(): v for k, v in self.d.get("respell", {}).items()}
         rs.update({k.lower(): v for k, v in (self.d.get("respell_roles", {}).get(role) or {}).items()})
+        pv = (self.d.get("respell_voices") or {}).get(voice_id) or {}     # fixes fitted to one voice only
+        rs.update({k.lower(): v for k, v in (pv.get("words") or {}).items()})
         rs.update({k.lower(): v for k, v in (self.d.get("respell_lines", {}).get(line_id) or {}).items()})
+        rs.update({k.lower(): v for k, v in ((pv.get("lines") or {}).get(line_id) or {}).items()})
         pieces, pairs = [], []
         for w in text.split():
             m = re.match(r"^([^A-Za-z0-9]*)([A-Za-z0-9\-]+?)('s)?([^A-Za-z0-9]*)$", w)
@@ -214,17 +217,18 @@ def normalise_text(t):
     return t
 
 
-def text_to_send(row, cast, role, pairs=False):
+def text_to_send(row, cast, role, pairs=False, voice_id=None):
     """-> text as sent (and optionally [(display word, sent piece)] one per word of the line)"""
     full = (cast.d.get("say_full") or {}).get(row.get("id"))
     src = full or row["text"]                   # a cut-off line is read whole, as the house records it (say_full)
     norm = normalise_text(src)
     if cast.roles[role].get("sentence_case"):
         norm = sentence_case(norm, cast.d.get("names", []))
-    say = (cast.d.get("say_lines") or {}).get(row.get("id"))
+    say = (cast.d.get("say_lines") or {}).get(row.get("id")) or \
+        (((cast.d.get("respell_voices") or {}).get(voice_id) or {}).get("say") or {}).get(row.get("id"))
     if say and len(say.split()) == len(norm.split()):
         norm = say                          # a per-line reading (same words, other punctuation), e.g. a flat final
-    sent, pr = cast.respell(norm, row.get("id"), role)
+    sent, pr = cast.respell(norm, row.get("id"), role, voice_id)
     sent = re.sub(r"\s+", " ", sent).strip()
     if not pairs:
         return sent
@@ -334,7 +338,7 @@ def render_take(row, role, c, rdef, cast, out, man, args, log, bump=0):
         settings = dict(settings, **c["vo_settings"])
     model = c.get("model") or cast.d["model_default"]
     fmt = cast.d.get("output_format", "mp3_44100_192")
-    sent, pairs = text_to_send(row, cast, role, pairs=True)
+    sent, pairs = text_to_send(row, cast, role, pairs=True, voice_id=c["voice_id"])
     seed0 = seed_of(row["id"], c["voice_id"])
     base_key = request_key(c["voice_id"], model, settings, sent, seed0, fmt)
     seed = seed0 + bump
@@ -525,7 +529,7 @@ def pitch_pass(lines, rows, cast, s, out, man, a, log):
             if abs(_st(f, ref)) <= 4 or in_wide:
                 continue
             r = byrow[ln["id"]]
-            c, rdef = cast.voice(role, cand_map(a).get(role, s), strict=a.strict)
+            c, rdef = cast.voice(role, cand_map(a, cast, s).get(role, s), strict=a.strict)
             prev = man["takes"].get(f"{r['id']}__{role}-{c['cand']}", {})
             if prev.get("pitch_retry"):
                 continue                                             # retried once already (a previous run)
@@ -551,9 +555,10 @@ def pitch_pass(lines, rows, cast, s, out, man, a, log):
     return [out_lines[ln["id"]] for ln in lines]
 
 
-def cand_map(a):
-    """--cand mas-manalt=B,rima-tamuri=B -> {role: candidate}: that role's candidate whatever the set"""
-    out = {}
+def cand_map(a, cast=None, s=None):
+    """-> {role: candidate}: the set's own choices (cast-el.json 'set_cand': {set: {role: cand}}, e.g. the recast Mas in
+    set A), then --cand mas-manalt=B,rima-tamuri=B over them (that role's candidate whatever the set)"""
+    out = dict(((cast.d.get("set_cand") or {}).get(s) or {}) if cast is not None else {})
     for kv in [x for x in (getattr(a, "cand", "") or "").split(",") if "=" in x]:
         k, _, v = kv.partition("=")
         out[k.strip()] = v.strip()
@@ -568,7 +573,7 @@ def to_send_cost(r, cast, role, c, a):
         settings = dict(settings, **c["vo_settings"])
     model = c.get("model") or cast.d["model_default"]
     fmt = cast.d.get("output_format", "mp3_44100_192")
-    sent = text_to_send(r, cast, role)
+    sent = text_to_send(r, cast, role, voice_id=c["voice_id"])
     key = request_key(c["voice_id"], model, settings, sent, seed_of(r["id"], c["voice_id"]), fmt)
     cdir = os.path.join(REPO, cast.d.get("cache_dir", "audio/ep01/v3-el/cache"))
     if os.path.exists(os.path.join(cdir, key + ".mp3")) or reuse_lookup(a, cast, c["voice_id"], model, settings, sent):
@@ -579,10 +584,10 @@ def to_send_cost(r, cast, role, c, a):
 def cmd_plan(a):
     cast = Cast(a.cast)
     rows = read_rows(a.lines)
-    cm = cand_map(a)
     miss = sorted({r["who"] for r in rows if not cast.role_of(r["who"])})
     tot, left, per_role = {}, {}, {}
     for s in a.sets:
+        cm = cand_map(a, cast, s)
         n = m = 0
         for r in rows:
             role = cast.role_of(r["who"])
@@ -632,13 +637,13 @@ def cmd_render(a):
 
     man = load_manifest(out)
     a.budget_left = a.max_chars
-    cm = cand_map(a)
     a._retake = set(x for x in (a.retake or "").split(",") if x)
     log(f"== render {rel(a.lines)} -> {rel(out)} sets {a.sets} at {time.strftime('%Y-%m-%d %H:%M:%S')} (max chars {a.max_chars})")
     spent = 0
     per_set = {}
     try:
         for s in a.sets:
+            cm = cand_map(a, cast, s)
             lines = []
             for r in rows:
                 role = cast.role_of(r["who"])

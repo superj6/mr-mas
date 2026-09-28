@@ -5,7 +5,7 @@
  "variant": "stick-figure dialogue reel v3 LOCK · v2/v5 takes + the v3 takes (Mas's inner voice, the new lines) · temp bed · ElevenLabs set A takes (eleven_multilingual_v2, library voices), EL-timed: the lock's gaps kept, beats changed only by the takes' lengths",
  "logline": "The v3 stick lock of coldopen: the beat plan applied to ep01-coldopen-v2.json (arrivals, aftermaths, Mas's inner voice, the cuts, no pointers).",
  "dateSpan": "Nov 16, 2023",
- "runtimeMin": 0.43,
+ "runtimeMin": 0.41,
  "dialogueReel": true,
  "cast": {
   "mas": {
@@ -31,7 +31,7 @@
   "builder": "audio/reel/ep01-v3/build_timeline.py",
   "bed": "audio/reel/ep01-v3/bed.py -> audio/reel/ep01-v3/coldopen-bed.wav",
   "notes": "show/episodes/ep01/production/full-v3/lock.md",
-  "seconds": 26.027,
+  "seconds": 24.307,
   "kokoro_lock": "show/reel/ep01-v3/ep01-v3-coldopen.json",
   "el_builder": "audio/ep01/v3-el/tools/el_lock.py",
   "el_notes": "show/episodes/ep01/production/full-v3/voices-el.md"
@@ -210,128 +210,128 @@
      "who": "mas",
      "text": "\"…i've gotten to be in the room when we sort of push the veil of ignorance back—and the frontier of discovery forward…\"",
      "t": 0.3,
-     "dur": 7.89,
-     "audio": "audio/ep01/v3-el/ep01/coldopen/wav/e1-co-1-02__mas-manalt-A.wav",
-     "in": 0.43,
+     "dur": 6.58,
+     "audio": "audio/ep01/v3-el/ep01/coldopen/wav/e1-co-1-02__mas-manalt-C.wav",
+     "in": 0.39,
      "words": [
       [
        "I've",
        -0.02,
-       0.199
+       0.181
       ],
       [
        "gotten",
-       0.257,
-       0.535
+       0.215,
+       0.471
       ],
       [
        "to",
-       0.605,
-       0.675
+       0.494,
+       0.54
       ],
       [
        "be",
-       0.756,
-       0.895
+       0.587,
+       0.668
       ],
       [
        "in",
-       0.93,
-       1.0
+       0.715,
+       0.773
       ],
       [
        "the",
-       1.058,
-       1.127
+       0.819,
+       0.889
       ],
       [
        "room",
-       1.185,
-       1.441
+       0.958,
+       1.202
       ],
       [
        "when",
-       1.534,
-       1.731
+       1.249,
+       1.365
       ],
       [
        "we",
-       1.766,
-       1.859
+       1.411,
+       1.516
       ],
       [
        "sort",
-       1.94,
-       2.219
+       1.597,
+       1.818
       ],
       [
        "of",
-       2.254,
-       2.312
+       1.852,
+       1.91
       ],
       [
        "push",
-       2.416,
-       2.741
+       1.992,
+       2.27
       ],
       [
        "the",
-       2.834,
-       2.939
+       2.34,
+       2.41
       ],
       [
        "veil",
-       3.008,
-       3.287
+       2.468,
+       2.688
       ],
       [
        "of",
-       3.357,
-       3.415
+       2.746,
+       2.793
       ],
       [
        "ignorance",
-       3.507,
-       4.007
+       2.862,
+       3.327
       ],
       [
        "back—and",
-       4.065,
-       5.783
+       3.373,
+       4.349
       ],
       [
        "the",
-       5.841,
-       5.911
+       4.407,
+       4.476
       ],
       [
        "frontier",
-       5.992,
-       6.561
+       4.546,
+       5.138
       ],
       [
        "of",
-       6.631,
-       6.689
+       5.196,
+       5.254
       ],
       [
        "discovery",
-       6.758,
-       7.316
+       5.324,
+       5.858
       ],
       [
        "forward",
-       7.397,
-       7.873
+       5.951,
+       6.543
       ]
      ],
      "tag": "",
      "cut": false,
-     "voice": "ElevenLabs library voice 'Giovanni - Tranquil, Clever and Educated' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.86",
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
      "el": {
-      "take": "e1-co-1-02__mas-manalt-A.wav",
+      "take": "e1-co-1-02__mas-manalt-C.wav",
       "device_copy": false,
-      "dry": "audio/ep01/v3-el/ep01/coldopen/wav/e1-co-1-02__mas-manalt-A.wav",
+      "dry": "audio/ep01/v3-el/ep01/coldopen/wav/e1-co-1-02__mas-manalt-C.wav",
       "reused_from": null
      },
      "kokoro": {
@@ -343,7 +343,7 @@
     }
    ],
    "onscreen": [],
-   "reelDur": 5.213333,
+   "reelDur": 3.903333,
    "fx": [],
    "cues": [
     "music (v3): COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind",
@@ -540,23 +540,23 @@
      "who": "mas",
      "text": "noted.",
      "t": 1.1,
-     "dur": 0.9,
-     "audio": "audio/ep01/v3-el/ep01/coldopen/wav/e1-co-2-01__mas-manalt-A.wav",
-     "in": 0.35,
+     "dur": 0.49,
+     "audio": "audio/ep01/v3-el/ep01/coldopen/wav/e1-co-2-01__mas-manalt-C.wav",
+     "in": 0.37,
      "words": [
       [
        "Noted",
-       0.0,
-       0.511
+       -0.02,
+       0.468
       ]
      ],
      "tag": "",
      "cut": false,
-     "voice": "ElevenLabs library voice 'Giovanni - Tranquil, Clever and Educated' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.86",
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
      "el": {
-      "take": "e1-co-2-01__mas-manalt-A.wav",
+      "take": "e1-co-2-01__mas-manalt-C.wav",
       "device_copy": false,
-      "dry": "audio/ep01/v3-el/ep01/coldopen/wav/e1-co-2-01__mas-manalt-A.wav",
+      "dry": "audio/ep01/v3-el/ep01/coldopen/wav/e1-co-2-01__mas-manalt-C.wav",
       "reused_from": null
      },
      "kokoro": {
@@ -568,7 +568,7 @@
     }
    ],
    "onscreen": [],
-   "reelDur": 2.69,
+   "reelDur": 2.28,
    "fx": [],
    "cues": [
     "music (v3): COLD OPEN · poised, curious · no score under the hall; MM-14 \"Freeze F4\" on the freeze; MM-06 carries the rewind",
@@ -579,7 +579,7 @@
    "sounds": [
     {
      "name": "key_tap_soft_03",
-     "at": 1.332,
+     "at": 1.273,
      "gain": -26
     }
    ]
@@ -750,14 +750,6 @@
    ]
   }
  ],
- "_el_retimed": {
-  "rule": "gaps between lines, before the first and after the last kept; J-cut leads kept; beats change only by the takes' lengths; timed items follow the words",
-  "seconds_kokoro": 26.667,
-  "seconds_el": 26.027,
-  "delta_s": -0.64,
-  "beats_changed": 3,
-  "missing_takes": []
- },
  "_v3_edits": [
   {
    "date": "2026-09-27",
@@ -765,5 +757,13 @@
    "what": "cut 4.01 + 4.02 (the cold open's own 1993 dialog, 5.5 s); 3.02 3.0 -> 4.5 s: the counter slips on toward 1993, `rewinding… too far` lands at 3.0 s (glyph_blink), the frame smears (3.92 s) and collapses (4.17 s) into the intro's first frame, its cyan cursor on black; the intro's own 1993 pays off \"too far\"",
    "record": "show/episodes/ep01/production/full-v3/shots-coldopen.md §0"
   }
- ]
+ ],
+ "_el_retimed": {
+  "rule": "gaps between lines, before the first and after the last kept; J-cut leads kept; beats change only by the takes' lengths; timed items follow the words",
+  "seconds_kokoro": 26.667,
+  "seconds_el": 24.307,
+  "delta_s": -2.36,
+  "beats_changed": 3,
+  "missing_takes": []
+ }
 }

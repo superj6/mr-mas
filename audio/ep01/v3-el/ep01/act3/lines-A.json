@@ -12,35 +12,33 @@
   "on_camera": "on",
   "mode": "on-mic",
   "device": null,
-  "file": "audio/ep01/v3-el/ep01/act3/wav/e1-a3-18-01__mas-manalt-A.wav",
+  "file": "audio/ep01/v3-el/ep01/act3/wav/e1-a3-18-01__mas-manalt-C.wav",
   "file_device": null,
   "mp3": null,
-  "duration_s": 1.629,
-  "frames_24": 39,
-  "voiced_span_s": 0.59,
+  "duration_s": 1.425,
+  "frames_24": 34,
+  "voiced_span_s": 0.53,
   "pace": {
-   "audible_in_s": 0.42,
-   "audible_out_s": 1.01,
+   "audible_in_s": 0.43,
+   "audible_out_s": 0.96,
    "measured": {
-    "span_s": 0.59,
-    "wpm": 101.7,
+    "span_s": 0.53,
+    "wpm": 113.2,
     "syllables": 1,
-    "articulation_sps": 1.69,
-    "pauses_s": [
-     0.08
-    ]
+    "articulation_sps": 1.89,
+    "pauses_s": []
    },
-   "longest_internal_gap_s": 0.08,
+   "longest_internal_gap_s": 0.0,
    "words": 1,
-   "wpm": 101.7,
-   "speed": 0.86,
+   "wpm": 113.2,
+   "speed": 0.95,
    "tsm": 1.0
   },
   "words": [
    {
     "w": "Thanks",
-    "t0": 0.4,
-    "t1": 0.907
+    "t0": 0.41,
+    "t1": 0.838
    }
   ],
   "qa": {
@@ -49,41 +47,41 @@
    "word_recall_nonames": 1.0,
    "lufs_i": -16.0,
    "target_lufs": -16.0,
-   "true_peak_dbtp": -3.02,
+   "true_peak_dbtp": -1.68,
    "clipped_samples": 0,
    "digital_black_runs": 0,
-   "median_f0_hz": 143.9,
-   "f0_range_st": 8.5,
-   "speech_head_s": 0.42,
-   "speech_tail_s": 0.619,
+   "median_f0_hz": 110.7,
+   "f0_range_st": 11.5,
+   "speech_head_s": 0.43,
+   "speech_tail_s": 0.465,
    "raw_tail_cut": false,
-   "align_median_s": 0.4
+   "align_median_s": 0.41
   },
-  "voice": "ElevenLabs library voice 'Giovanni - Tranquil, Clever and Educated' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.86",
-  "voiceId": "g6fJBFvZZp41FerGMMx7",
+  "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
+  "voiceId": "EwzF7Z2UMSib9JaKx0Kg",
   "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
   "el": {
-   "cand": "A",
+   "cand": "C",
    "role": "mas-manalt",
-   "voice_id": "g6fJBFvZZp41FerGMMx7",
-   "voice_name": "Giovanni - Tranquil, Clever and Educated",
-   "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "source": "shared Voice Library (high_quality), used by voice_id",
    "model_id": "eleven_multilingual_v2",
    "settings": {
-    "stability": 0.55,
+    "stability": 0.6,
     "similarity_boost": 0.75,
     "style": 0.0,
     "use_speaker_boost": true,
-    "speed": 0.86
+    "speed": 0.95
    },
-   "seed": 2938121185,
+   "seed": 3391310813,
    "chars_sent": 7,
-   "request_key": "2f6b3b0fc460724a",
+   "request_key": "e603463afdab07da",
    "derived_from": null,
    "reused_from": null
   },
   "status": "el",
-  "take": "el-A",
+  "take": "el-C",
   "processing": [
    "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
    "HPF 60 Hz",
@@ -119,60 +117,58 @@
   "on_camera": "vo",
   "mode": "on-mic",
   "device": null,
-  "file": "audio/ep01/v3-el/ep01/act3/wav/e1-a3-18-04__mas-manalt-A.wav",
+  "file": "audio/ep01/v3-el/ep01/act3/wav/e1-a3-18-04__mas-manalt-C.wav",
   "file_device": null,
   "mp3": null,
-  "duration_s": 2.604,
-  "frames_24": 62,
+  "duration_s": 2.68,
+  "frames_24": 64,
   "voiced_span_s": 1.83,
   "pace": {
-   "audible_in_s": 0.4,
-   "audible_out_s": 2.23,
+   "audible_in_s": 0.39,
+   "audible_out_s": 2.22,
    "measured": {
     "span_s": 1.83,
     "wpm": 196.7,
     "syllables": 8,
-    "articulation_sps": 4.97,
-    "pauses_s": [
-     0.22
-    ]
+    "articulation_sps": 4.37,
+    "pauses_s": []
    },
-   "longest_internal_gap_s": 0.22,
+   "longest_internal_gap_s": 0.0,
    "words": 6,
    "wpm": 196.7,
-   "speed": 0.82,
+   "speed": 0.85,
    "tsm": 1.0
   },
   "words": [
    {
     "w": "I",
-    "t0": 0.38,
+    "t0": 0.37,
     "t1": 0.466
    },
    {
     "w": "made",
-    "t0": 0.547,
-    "t1": 0.78
+    "t0": 0.605,
+    "t1": 0.826
    },
    {
     "w": "it",
-    "t0": 0.803,
-    "t1": 0.872
+    "t0": 0.872,
+    "t1": 0.942
    },
    {
     "w": "for",
-    "t0": 0.919,
-    "t1": 1.07
+    "t0": 1.0,
+    "t1": 1.139
    },
    {
     "w": "everyone",
-    "t0": 1.128,
-    "t1": 1.534
+    "t0": 1.209,
+    "t1": 1.685
    },
    {
     "w": "else",
-    "t0": 1.581,
-    "t1": 1.929
+    "t0": 1.743,
+    "t1": 2.138
    }
   ],
   "qa": {
@@ -181,41 +177,41 @@
    "word_recall_nonames": 1.0,
    "lufs_i": -18.0,
    "target_lufs": -18.0,
-   "true_peak_dbtp": -4.38,
+   "true_peak_dbtp": -3.83,
    "clipped_samples": 0,
    "digital_black_runs": 0,
-   "median_f0_hz": 120.1,
-   "f0_range_st": 6.5,
-   "speech_head_s": 0.4,
-   "speech_tail_s": 0.374,
+   "median_f0_hz": 107.0,
+   "f0_range_st": 8.5,
+   "speech_head_s": 0.39,
+   "speech_tail_s": 0.46,
    "raw_tail_cut": false,
-   "align_median_s": 0.103
+   "align_median_s": 0.112
   },
-  "voice": "ElevenLabs library voice 'Giovanni - Tranquil, Clever and Educated' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.82",
-  "voiceId": "g6fJBFvZZp41FerGMMx7",
+  "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.85",
+  "voiceId": "EwzF7Z2UMSib9JaKx0Kg",
   "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
   "el": {
-   "cand": "A",
+   "cand": "C",
    "role": "mas-manalt",
-   "voice_id": "g6fJBFvZZp41FerGMMx7",
-   "voice_name": "Giovanni - Tranquil, Clever and Educated",
-   "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "source": "shared Voice Library (high_quality), used by voice_id",
    "model_id": "eleven_multilingual_v2",
    "settings": {
-    "stability": 0.6,
+    "stability": 0.65,
     "similarity_boost": 0.75,
     "style": 0.0,
     "use_speaker_boost": true,
-    "speed": 0.82
+    "speed": 0.85
    },
-   "seed": 222001981,
+   "seed": 2444875780,
    "chars_sent": 28,
-   "request_key": "08d56b349191e73c",
+   "request_key": "5eefa0a6a4e0fdcb",
    "derived_from": null,
    "reused_from": null
   },
   "status": "el",
-  "take": "el-A",
+  "take": "el-C",
   "processing": [
    "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
    "HPF 60 Hz",
@@ -251,86 +247,86 @@
   "on_camera": "on",
   "mode": "on-mic",
   "device": null,
-  "file": "audio/ep01/v3-el/ep01/act3/wav/e1-a3-18-03__mas-manalt-A.wav",
+  "file": "audio/ep01/v3-el/ep01/act3/wav/e1-a3-18-03__mas-manalt-C.wav",
   "file_device": null,
   "mp3": null,
-  "duration_s": 2.0,
-  "frames_24": 48,
-  "voiced_span_s": 0.85,
+  "duration_s": 1.88,
+  "frames_24": 45,
+  "voiced_span_s": 0.96,
   "pace": {
-   "audible_in_s": 0.43,
-   "audible_out_s": 1.28,
+   "audible_in_s": 0.4,
+   "audible_out_s": 1.36,
    "measured": {
-    "span_s": 0.85,
-    "wpm": 211.8,
+    "span_s": 0.96,
+    "wpm": 187.5,
     "syllables": 3,
-    "articulation_sps": 3.53,
+    "articulation_sps": 3.12,
     "pauses_s": []
    },
    "longest_internal_gap_s": 0.0,
    "words": 3,
-   "wpm": 211.8,
-   "speed": 0.86,
+   "wpm": 187.5,
+   "speed": 0.95,
    "tsm": 1.0
   },
   "words": [
    {
     "w": "You",
-    "t0": 0.41,
+    "t0": 0.38,
     "t1": 0.536
    },
    {
     "w": "can",
-    "t0": 0.594,
-    "t1": 0.756
+    "t0": 0.582,
+    "t1": 0.733
    },
    {
     "w": "stay",
-    "t0": 0.838,
-    "t1": 1.244
+    "t0": 0.803,
+    "t1": 1.232
    }
   ],
   "qa": {
    "asr": "You can stay.",
    "cer": 0.0,
    "word_recall_nonames": 1.0,
-   "lufs_i": -16.0,
+   "lufs_i": -16.35,
    "target_lufs": -16.0,
-   "true_peak_dbtp": -2.45,
+   "true_peak_dbtp": -2.41,
    "clipped_samples": 0,
    "digital_black_runs": 0,
-   "median_f0_hz": 128.9,
-   "f0_range_st": 13.5,
-   "speech_head_s": 0.43,
-   "speech_tail_s": 0.72,
+   "median_f0_hz": 114.5,
+   "f0_range_st": 5.1,
+   "speech_head_s": 0.4,
+   "speech_tail_s": 0.52,
    "raw_tail_cut": false,
-   "align_median_s": 0.098
+   "align_median_s": 0.083
   },
-  "voice": "ElevenLabs library voice 'Giovanni - Tranquil, Clever and Educated' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.86",
-  "voiceId": "g6fJBFvZZp41FerGMMx7",
+  "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
+  "voiceId": "EwzF7Z2UMSib9JaKx0Kg",
   "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
   "el": {
-   "cand": "A",
+   "cand": "C",
    "role": "mas-manalt",
-   "voice_id": "g6fJBFvZZp41FerGMMx7",
-   "voice_name": "Giovanni - Tranquil, Clever and Educated",
-   "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "source": "shared Voice Library (high_quality), used by voice_id",
    "model_id": "eleven_multilingual_v2",
    "settings": {
-    "stability": 0.55,
+    "stability": 0.6,
     "similarity_boost": 0.75,
     "style": 0.0,
     "use_speaker_boost": true,
-    "speed": 0.86
+    "speed": 0.95
    },
-   "seed": 3535901383,
+   "seed": 3921771064,
    "chars_sent": 13,
-   "request_key": "0e50737b3502972e",
+   "request_key": "6c5592f5c910c524",
    "derived_from": null,
    "reused_from": null
   },
   "status": "el",
-  "take": "el-A",
+  "take": "el-C",
   "processing": [
    "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
    "HPF 60 Hz",
@@ -502,88 +498,88 @@
   "on_camera": "on",
   "mode": "on-mic",
   "device": null,
-  "file": "audio/ep01/v3-el/ep01/act3/wav/e1-a3-20-03__mas-manalt-A.wav",
+  "file": "audio/ep01/v3-el/ep01/act3/wav/e1-a3-20-03__mas-manalt-C.wav",
   "file_device": null,
   "mp3": null,
-  "duration_s": 2.0,
-  "frames_24": 48,
-  "voiced_span_s": 1.22,
+  "duration_s": 1.86,
+  "frames_24": 45,
+  "voiced_span_s": 1.02,
   "pace": {
-   "audible_in_s": 0.39,
-   "audible_out_s": 1.61,
+   "audible_in_s": 0.37,
+   "audible_out_s": 1.39,
    "measured": {
-    "span_s": 1.22,
-    "wpm": 147.5,
+    "span_s": 1.02,
+    "wpm": 176.5,
     "syllables": 5,
-    "articulation_sps": 4.1,
+    "articulation_sps": 4.9,
     "pauses_s": [
      0.06
     ]
    },
    "longest_internal_gap_s": 0.06,
    "words": 3,
-   "wpm": 147.5,
-   "speed": 0.86,
+   "wpm": 176.5,
+   "speed": 0.95,
    "tsm": 1.0
   },
   "words": [
    {
     "w": "I'm",
-    "t0": 0.37,
-    "t1": 0.582
+    "t0": 0.35,
+    "t1": 0.559
    },
    {
     "w": "editing",
-    "t0": 0.687,
-    "t1": 1.093
+    "t0": 0.64,
+    "t1": 1.023
    },
    {
     "w": "it",
-    "t0": 1.163,
+    "t0": 1.093,
     "t1": 1.279
    }
   ],
   "qa": {
-   "asr": "I'm editing it",
+   "asr": "I'm editing it.",
    "cer": 0.0,
    "word_recall_nonames": 1.0,
-   "lufs_i": -16.0,
+   "lufs_i": -16.32,
    "target_lufs": -16.0,
-   "true_peak_dbtp": -2.52,
+   "true_peak_dbtp": -2.32,
    "clipped_samples": 0,
    "digital_black_runs": 0,
-   "median_f0_hz": 112.7,
-   "f0_range_st": 9.2,
-   "speech_head_s": 0.39,
-   "speech_tail_s": 0.39,
+   "median_f0_hz": 103.8,
+   "f0_range_st": 8.4,
+   "speech_head_s": 0.37,
+   "speech_tail_s": 0.47,
    "raw_tail_cut": false,
-   "align_median_s": 0.203
+   "align_median_s": 0.193
   },
-  "voice": "ElevenLabs library voice 'Giovanni - Tranquil, Clever and Educated' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.86",
-  "voiceId": "g6fJBFvZZp41FerGMMx7",
+  "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
+  "voiceId": "EwzF7Z2UMSib9JaKx0Kg",
   "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
   "el": {
-   "cand": "A",
+   "cand": "C",
    "role": "mas-manalt",
-   "voice_id": "g6fJBFvZZp41FerGMMx7",
-   "voice_name": "Giovanni - Tranquil, Clever and Educated",
-   "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "source": "shared Voice Library (high_quality), used by voice_id",
    "model_id": "eleven_multilingual_v2",
    "settings": {
-    "stability": 0.55,
+    "stability": 0.6,
     "similarity_boost": 0.75,
     "style": 0.0,
     "use_speaker_boost": true,
-    "speed": 0.86
+    "speed": 0.95
    },
-   "seed": 2511299665,
+   "seed": 3206924476,
    "chars_sent": 15,
-   "request_key": "13c77ffb87d3b147",
+   "request_key": "433c5bb4e0d8ae74",
    "derived_from": null,
    "reused_from": null
   },
   "status": "el",
-  "take": "el-A",
+  "take": "el-C",
   "processing": [
    "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
    "HPF 60 Hz",
@@ -978,45 +974,43 @@
   "on_camera": "on",
   "mode": "on-mic",
   "device": null,
-  "file": "audio/ep01/v3-el/ep01/act3/wav/e1-a3-20-06__mas-manalt-A.wav",
+  "file": "audio/ep01/v3-el/ep01/act3/wav/e1-a3-20-06__mas-manalt-C.wav",
   "file_device": null,
   "mp3": null,
-  "duration_s": 2.14,
-  "frames_24": 51,
-  "voiced_span_s": 1.27,
+  "duration_s": 1.954,
+  "frames_24": 47,
+  "voiced_span_s": 0.91,
   "pace": {
-   "audible_in_s": 0.49,
-   "audible_out_s": 1.76,
+   "audible_in_s": 0.39,
+   "audible_out_s": 1.3,
    "measured": {
-    "span_s": 1.27,
-    "wpm": 141.7,
+    "span_s": 0.91,
+    "wpm": 197.8,
     "syllables": 3,
-    "articulation_sps": 2.94,
-    "pauses_s": [
-     0.25
-    ]
+    "articulation_sps": 3.3,
+    "pauses_s": []
    },
-   "longest_internal_gap_s": 0.25,
+   "longest_internal_gap_s": 0.0,
    "words": 3,
-   "wpm": 141.7,
-   "speed": 0.86,
+   "wpm": 197.8,
+   "speed": 0.95,
    "tsm": 1.0
   },
   "words": [
    {
     "w": "How's",
-    "t0": 0.47,
-    "t1": 0.884
+    "t0": 0.37,
+    "t1": 0.652
    },
    {
     "w": "the",
-    "t0": 0.942,
-    "t1": 1.012
+    "t0": 0.71,
+    "t1": 0.791
    },
    {
     "w": "build",
-    "t0": 1.081,
-    "t1": 1.453
+    "t0": 0.849,
+    "t1": 1.232
    }
   ],
   "qa": {
@@ -1025,41 +1019,41 @@
    "word_recall_nonames": 1.0,
    "lufs_i": -16.0,
    "target_lufs": -16.0,
-   "true_peak_dbtp": -1.78,
+   "true_peak_dbtp": -2.15,
    "clipped_samples": 0,
    "digital_black_runs": 0,
-   "median_f0_hz": 134.1,
-   "f0_range_st": 8.4,
-   "speech_head_s": 0.49,
-   "speech_tail_s": 0.38,
+   "median_f0_hz": 113.5,
+   "f0_range_st": 9.9,
+   "speech_head_s": 0.39,
+   "speech_tail_s": 0.654,
    "raw_tail_cut": false,
-   "align_median_s": 0.062
+   "align_median_s": 0.049
   },
-  "voice": "ElevenLabs library voice 'Giovanni - Tranquil, Clever and Educated' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.86",
-  "voiceId": "g6fJBFvZZp41FerGMMx7",
+  "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
+  "voiceId": "EwzF7Z2UMSib9JaKx0Kg",
   "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
   "el": {
-   "cand": "A",
+   "cand": "C",
    "role": "mas-manalt",
-   "voice_id": "g6fJBFvZZp41FerGMMx7",
-   "voice_name": "Giovanni - Tranquil, Clever and Educated",
-   "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "source": "shared Voice Library (high_quality), used by voice_id",
    "model_id": "eleven_multilingual_v2",
    "settings": {
-    "stability": 0.55,
+    "stability": 0.6,
     "similarity_boost": 0.75,
     "style": 0.0,
     "use_speaker_boost": true,
-    "speed": 0.86
+    "speed": 0.95
    },
-   "seed": 1303272871,
+   "seed": 681420164,
    "chars_sent": 16,
-   "request_key": "4149a8998bf59d61",
+   "request_key": "2bf756113b251e7e",
    "derived_from": null,
    "reused_from": null
   },
   "status": "el",
-  "take": "el-A",
+  "take": "el-C",
   "processing": [
    "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
    "HPF 60 Hz",
@@ -1258,97 +1252,97 @@
   "speaker": "MAS MANALT",
   "speaker_slug": "mas-manalt",
   "text": "go to sleep, gerg.",
-  "spoken_as": "Go to sleep, Guhrg.",
+  "spoken_as": "Go to sleep, Gurg.",
   "tag": "",
   "delivery": null,
   "on_camera": "on",
   "mode": "on-mic",
   "device": null,
-  "file": "audio/ep01/v3-el/ep01/act3/wav/e1-a3-20-08__mas-manalt-A.wav",
+  "file": "audio/ep01/v3-el/ep01/act3/wav/e1-a3-20-08__mas-manalt-C.wav",
   "file_device": null,
   "mp3": null,
-  "duration_s": 2.233,
-  "frames_24": 54,
-  "voiced_span_s": 1.13,
+  "duration_s": 2.186,
+  "frames_24": 52,
+  "voiced_span_s": 1.14,
   "pace": {
-   "audible_in_s": 0.44,
+   "audible_in_s": 0.43,
    "audible_out_s": 1.57,
    "measured": {
-    "span_s": 1.13,
-    "wpm": 212.4,
+    "span_s": 1.14,
+    "wpm": 210.5,
     "syllables": 4,
-    "articulation_sps": 3.54,
+    "articulation_sps": 3.51,
     "pauses_s": []
    },
    "longest_internal_gap_s": 0.0,
    "words": 4,
-   "wpm": 212.4,
-   "speed": 0.86,
+   "wpm": 210.5,
+   "speed": 0.95,
    "tsm": 1.0
   },
   "words": [
    {
     "w": "Go",
-    "t0": 0.42,
-    "t1": 0.547
+    "t0": 0.41,
+    "t1": 0.536
    },
    {
     "w": "to",
-    "t0": 0.617,
-    "t1": 0.663
+    "t0": 0.582,
+    "t1": 0.64
    },
    {
     "w": "sleep",
     "t0": 0.698,
-    "t1": 1.0
+    "t1": 1.023
    },
    {
     "w": "gerg",
-    "t0": 1.105,
-    "t1": 1.534
+    "t0": 1.093,
+    "t1": 1.511
    }
   ],
   "qa": {
-   "asr": "Go to sleep, Gurg.",
+   "asr": "Go to sleep, gurg.",
    "cer": 0.062,
    "word_recall_nonames": 1.0,
    "lufs_i": -16.0,
    "target_lufs": -16.0,
-   "true_peak_dbtp": -2.95,
+   "true_peak_dbtp": -2.02,
    "clipped_samples": 0,
    "digital_black_runs": 0,
-   "median_f0_hz": 115.9,
-   "f0_range_st": 9.2,
-   "speech_head_s": 0.44,
-   "speech_tail_s": 0.663,
+   "median_f0_hz": 101.7,
+   "f0_range_st": 15.1,
+   "speech_head_s": 0.43,
+   "speech_tail_s": 0.616,
    "raw_tail_cut": false,
-   "align_median_s": 0.057
+   "align_median_s": 0.042
   },
-  "voice": "ElevenLabs library voice 'Giovanni - Tranquil, Clever and Educated' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.86",
-  "voiceId": "g6fJBFvZZp41FerGMMx7",
+  "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
+  "voiceId": "EwzF7Z2UMSib9JaKx0Kg",
   "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
   "el": {
-   "cand": "A",
+   "cand": "C",
    "role": "mas-manalt",
-   "voice_id": "g6fJBFvZZp41FerGMMx7",
-   "voice_name": "Giovanni - Tranquil, Clever and Educated",
-   "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "source": "shared Voice Library (high_quality), used by voice_id",
    "model_id": "eleven_multilingual_v2",
    "settings": {
-    "stability": 0.55,
+    "stability": 0.6,
     "similarity_boost": 0.75,
     "style": 0.0,
     "use_speaker_boost": true,
-    "speed": 0.86
+    "speed": 0.95
    },
-   "seed": 3982248708,
-   "chars_sent": 19,
-   "request_key": "3503a77878cf0045",
+   "seed": 4215725470,
+   "chars_sent": 18,
+   "request_key": "6be318fc0bcec149",
    "derived_from": null,
    "reused_from": null
   },
   "status": "el",
-  "take": "el-A",
+  "take": "el-C",
   "processing": [
    "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
    "HPF 60 Hz",
@@ -1494,58 +1488,59 @@
   "speaker": "MAS MANALT",
   "speaker_slug": "mas-manalt",
   "text": "gerg types louder when he's happy. he's been happy since november.",
-  "spoken_as": "Guhrg types louder when he's happy. He's been happy since November.",
+  "spoken_as": "Gurg types louder when he's happy. He's been happy since November.",
   "tag": "V.O.",
   "delivery": "over Gerg's keys on the speaker, near a smile; plants 2 AM, where the keys stop",
   "on_camera": "vo",
   "mode": "on-mic",
   "device": null,
-  "file": "audio/ep01/v3-el/ep01/act3/wav/v3-vo-15__mas-manalt-A.wav",
+  "file": "audio/ep01/v3-el/ep01/act3/wav/v3-vo-15__mas-manalt-C.wav",
   "file_device": null,
   "mp3": null,
-  "duration_s": 6.459,
-  "frames_24": 155,
-  "voiced_span_s": 5.29,
+  "duration_s": 6.075,
+  "frames_24": 146,
+  "voiced_span_s": 5.17,
   "pace": {
-   "audible_in_s": 0.43,
-   "audible_out_s": 5.72,
+   "audible_in_s": 0.44,
+   "audible_out_s": 5.61,
    "measured": {
-    "span_s": 5.29,
-    "wpm": 124.8,
+    "span_s": 5.17,
+    "wpm": 127.7,
     "syllables": 16,
-    "articulation_sps": 3.97,
+    "articulation_sps": 3.51,
     "pauses_s": [
-     0.12,
-     0.6,
-     0.54
+     0.06,
+     0.61,
+     0.07,
+     0.06
     ]
    },
-   "longest_internal_gap_s": 0.6,
+   "longest_internal_gap_s": 0.61,
    "words": 11,
-   "wpm": 124.8,
-   "speed": 0.82,
+   "wpm": 127.7,
+   "speed": 0.85,
    "tsm": 1.0
   },
   "words": [
    {
     "w": "Gerg",
-    "t0": 0.41,
-    "t1": 0.78
+    "t0": 0.42,
+    "t1": 0.814
    },
    {
     "w": "types",
-    "t0": 0.849,
-    "t1": 1.256
+    "t0": 0.896,
+    "t1": 1.29
    },
    {
     "w": "louder",
-    "t0": 1.372,
-    "t1": 1.824
+    "t0": 1.383,
+    "t1": 1.801
    },
    {
     "w": "when",
-    "t0": 1.894,
-    "t1": 2.033
+    "t0": 1.871,
+    "t1": 2.045
    },
    {
     "w": "he's",
@@ -1555,75 +1550,75 @@
    {
     "w": "happy",
     "t0": 2.335,
-    "t1": 2.753
+    "t1": 2.835
    },
    {
     "w": "he's",
-    "t0": 3.949,
-    "t1": 4.193
+    "t0": 3.496,
+    "t1": 3.752
    },
    {
     "w": "been",
-    "t0": 4.239,
-    "t1": 4.437
+    "t0": 3.81,
+    "t1": 4.007
    },
    {
     "w": "happy",
-    "t0": 4.495,
-    "t1": 4.808
+    "t0": 4.065,
+    "t1": 4.413
    },
    {
     "w": "since",
-    "t0": 4.866,
-    "t1": 5.133
+    "t0": 4.483,
+    "t1": 4.785
    },
    {
     "w": "november",
-    "t0": 5.18,
-    "t1": 5.725
+    "t0": 4.855,
+    "t1": 5.516
    }
   ],
   "qa": {
-   "asr": "Gurg types louder when he's happy. He's been happy since November.",
-   "cer": 0.016,
+   "asr": "Gerg types louder when he's happy. He's been happy since November.",
+   "cer": 0.0,
    "word_recall_nonames": 1.0,
    "lufs_i": -18.0,
    "target_lufs": -18.0,
-   "true_peak_dbtp": -2.89,
+   "true_peak_dbtp": -4.03,
    "clipped_samples": 0,
    "digital_black_runs": 0,
-   "median_f0_hz": 118.5,
-   "f0_range_st": 10.6,
-   "speech_head_s": 0.43,
-   "speech_tail_s": 0.739,
+   "median_f0_hz": 108.3,
+   "f0_range_st": 12.3,
+   "speech_head_s": 0.44,
+   "speech_tail_s": 0.465,
    "raw_tail_cut": false,
-   "align_median_s": 0.129
+   "align_median_s": 0.136
   },
-  "voice": "ElevenLabs library voice 'Giovanni - Tranquil, Clever and Educated' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.82",
-  "voiceId": "g6fJBFvZZp41FerGMMx7",
+  "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.85",
+  "voiceId": "EwzF7Z2UMSib9JaKx0Kg",
   "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
   "el": {
-   "cand": "A",
+   "cand": "C",
    "role": "mas-manalt",
-   "voice_id": "g6fJBFvZZp41FerGMMx7",
-   "voice_name": "Giovanni - Tranquil, Clever and Educated",
-   "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "source": "shared Voice Library (high_quality), used by voice_id",
    "model_id": "eleven_multilingual_v2",
    "settings": {
-    "stability": 0.6,
+    "stability": 0.65,
     "similarity_boost": 0.75,
     "style": 0.0,
     "use_speaker_boost": true,
-    "speed": 0.82
+    "speed": 0.85
    },
-   "seed": 937925593,
-   "chars_sent": 67,
-   "request_key": "18abf08f66d594c9",
+   "seed": 2681546888,
+   "chars_sent": 66,
+   "request_key": "acddd9b020807eea",
    "derived_from": null,
    "reused_from": null
   },
   "status": "el",
-  "take": "el-A",
+  "take": "el-C",
   "processing": [
    "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
    "HPF 60 Hz",
@@ -2280,43 +2275,43 @@
   "on_camera": "on",
   "mode": "on-mic",
   "device": null,
-  "file": "audio/ep01/v3-el/ep01/act3/wav/e1-a3-21-06__mas-manalt-A.wav",
+  "file": "audio/ep01/v3-el/ep01/act3/wav/e1-a3-21-06__mas-manalt-C.wav",
   "file_device": null,
   "mp3": null,
-  "duration_s": 2.115,
-  "frames_24": 51,
-  "voiced_span_s": 0.98,
+  "duration_s": 1.95,
+  "frames_24": 47,
+  "voiced_span_s": 1.02,
   "pace": {
-   "audible_in_s": 0.5,
-   "audible_out_s": 1.48,
+   "audible_in_s": 0.42,
+   "audible_out_s": 1.44,
    "measured": {
-    "span_s": 0.98,
-    "wpm": 183.7,
+    "span_s": 1.02,
+    "wpm": 176.5,
     "syllables": 4,
-    "articulation_sps": 4.08,
+    "articulation_sps": 3.92,
     "pauses_s": []
    },
    "longest_internal_gap_s": 0.0,
    "words": 3,
-   "wpm": 183.7,
-   "speed": 0.86,
+   "wpm": 176.5,
+   "speed": 0.95,
    "tsm": 1.0
   },
   "words": [
    {
     "w": "Which",
-    "t0": 0.48,
-    "t1": 0.697
+    "t0": 0.4,
+    "t1": 0.617
    },
    {
     "w": "one's",
-    "t0": 0.778,
-    "t1": 1.022
+    "t0": 0.687,
+    "t1": 0.907
    },
    {
     "w": "real",
-    "t0": 1.114,
-    "t1": 1.416
+    "t0": 0.977,
+    "t1": 1.314
    }
   ],
   "qa": {
@@ -2325,41 +2320,41 @@
    "word_recall_nonames": 1.0,
    "lufs_i": -16.0,
    "target_lufs": -16.0,
-   "true_peak_dbtp": -1.81,
+   "true_peak_dbtp": -2.66,
    "clipped_samples": 0,
    "digital_black_runs": 0,
-   "median_f0_hz": 140.3,
-   "f0_range_st": 12.5,
-   "speech_head_s": 0.5,
-   "speech_tail_s": 0.635,
+   "median_f0_hz": 93.7,
+   "f0_range_st": 11.1,
+   "speech_head_s": 0.42,
+   "speech_tail_s": 0.51,
    "raw_tail_cut": false,
-   "align_median_s": 0.118
+   "align_median_s": 0.127
   },
-  "voice": "ElevenLabs library voice 'Giovanni - Tranquil, Clever and Educated' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.86",
-  "voiceId": "g6fJBFvZZp41FerGMMx7",
+  "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
+  "voiceId": "EwzF7Z2UMSib9JaKx0Kg",
   "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
   "el": {
-   "cand": "A",
+   "cand": "C",
    "role": "mas-manalt",
-   "voice_id": "g6fJBFvZZp41FerGMMx7",
-   "voice_name": "Giovanni - Tranquil, Clever and Educated",
-   "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "source": "shared Voice Library (high_quality), used by voice_id",
    "model_id": "eleven_multilingual_v2",
    "settings": {
-    "stability": 0.55,
+    "stability": 0.6,
     "similarity_boost": 0.75,
     "style": 0.0,
     "use_speaker_boost": true,
-    "speed": 0.86
+    "speed": 0.95
    },
-   "seed": 2447003692,
+   "seed": 3827145956,
    "chars_sent": 17,
-   "request_key": "372b78ddca1f472e",
+   "request_key": "8752ac03160ad4a2",
    "derived_from": null,
    "reused_from": null
   },
   "status": "el",
-  "take": "el-A",
+  "take": "el-C",
   "processing": [
    "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
    "HPF 60 Hz",
@@ -2395,100 +2390,96 @@
   "on_camera": "on",
   "mode": "on-mic",
   "device": null,
-  "file": "audio/ep01/v3-el/ep01/act3/wav/e1-a3-21-07__mas-manalt-A.wav",
+  "file": "audio/ep01/v3-el/ep01/act3/wav/e1-a3-21-07__mas-manalt-C.wav",
   "file_device": null,
   "mp3": null,
   "duration_s": 2.233,
   "frames_24": 54,
-  "voiced_span_s": 1.47,
+  "voiced_span_s": 1.12,
   "pace": {
-   "audible_in_s": 0.35,
-   "audible_out_s": 1.82,
+   "audible_in_s": 0.44,
+   "audible_out_s": 1.56,
    "measured": {
-    "span_s": 1.47,
-    "wpm": 204.1,
+    "span_s": 1.12,
+    "wpm": 267.9,
     "syllables": 5,
-    "articulation_sps": 3.94,
-    "pauses_s": [
-     0.09,
-     0.06,
-     0.2
-    ]
+    "articulation_sps": 4.46,
+    "pauses_s": []
    },
-   "longest_internal_gap_s": 0.2,
+   "longest_internal_gap_s": 0.0,
    "words": 5,
-   "wpm": 204.1,
-   "speed": 0.86,
+   "wpm": 267.9,
+   "speed": 0.95,
    "tsm": 1.0
   },
   "words": [
    {
     "w": "The",
-    "t0": 0.35,
-    "t1": 0.536
+    "t0": 0.42,
+    "t1": 0.524
    },
    {
     "w": "one",
-    "t0": 0.629,
-    "t1": 0.849
+    "t0": 0.594,
+    "t1": 0.756
    },
    {
     "w": "with",
-    "t0": 0.872,
-    "t1": 1.023
+    "t0": 0.791,
+    "t1": 0.93
    },
    {
     "w": "the",
-    "t0": 1.047,
-    "t1": 1.116
+    "t0": 0.965,
+    "t1": 1.035
    },
    {
     "w": "pen",
-    "t0": 1.174,
-    "t1": 1.511
+    "t0": 1.093,
+    "t1": 1.476
    }
   ],
   "qa": {
-   "asr": "The one with the pen",
+   "asr": "The one with the pen.",
    "cer": 0.0,
    "word_recall_nonames": 1.0,
    "lufs_i": -16.0,
    "target_lufs": -16.0,
-   "true_peak_dbtp": -3.13,
+   "true_peak_dbtp": -1.6,
    "clipped_samples": 0,
    "digital_black_runs": 0,
-   "median_f0_hz": 116.7,
-   "f0_range_st": 6.1,
-   "speech_head_s": 0.35,
-   "speech_tail_s": 0.413,
+   "median_f0_hz": 106.3,
+   "f0_range_st": 5.3,
+   "speech_head_s": 0.44,
+   "speech_tail_s": 0.673,
    "raw_tail_cut": false,
-   "align_median_s": 0.089
+   "align_median_s": 0.065
   },
-  "voice": "ElevenLabs library voice 'Giovanni - Tranquil, Clever and Educated' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.86",
-  "voiceId": "g6fJBFvZZp41FerGMMx7",
+  "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
+  "voiceId": "EwzF7Z2UMSib9JaKx0Kg",
   "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
   "el": {
-   "cand": "A",
+   "cand": "C",
    "role": "mas-manalt",
-   "voice_id": "g6fJBFvZZp41FerGMMx7",
-   "voice_name": "Giovanni - Tranquil, Clever and Educated",
-   "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "source": "shared Voice Library (high_quality), used by voice_id",
    "model_id": "eleven_multilingual_v2",
    "settings": {
-    "stability": 0.55,
+    "stability": 0.6,
     "similarity_boost": 0.75,
     "style": 0.0,
     "use_speaker_boost": true,
-    "speed": 0.86
+    "speed": 0.95
    },
-   "seed": 211845091,
+   "seed": 857555134,
    "chars_sent": 21,
-   "request_key": "28a31a21f94c46b9",
+   "request_key": "13b3e0095f631bbf",
    "derived_from": null,
    "reused_from": null
   },
   "status": "el",
-  "take": "el-A",
+  "take": "el-C",
   "processing": [
    "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
    "HPF 60 Hz",
@@ -2524,57 +2515,53 @@
   "on_camera": "on",
   "mode": "call",
   "device": "call",
-  "file": "audio/ep01/v3-el/ep01/act3/wav/e1-a3-22-01__mas-manalt-A.wav",
-  "file_device": "audio/ep01/v3-el/ep01/act3/wav-device/e1-a3-22-01__mas-manalt-A.call.wav",
+  "file": "audio/ep01/v3-el/ep01/act3/wav/e1-a3-22-01__mas-manalt-C.wav",
+  "file_device": "audio/ep01/v3-el/ep01/act3/wav-device/e1-a3-22-01__mas-manalt-C.call.wav",
   "mp3": null,
-  "duration_s": 3.354,
-  "frames_24": 80,
-  "voiced_span_s": 2.33,
+  "duration_s": 2.655,
+  "frames_24": 64,
+  "voiced_span_s": 1.8,
   "pace": {
-   "audible_in_s": 0.49,
-   "audible_out_s": 2.82,
+   "audible_in_s": 0.37,
+   "audible_out_s": 2.17,
    "measured": {
-    "span_s": 2.33,
-    "wpm": 128.8,
+    "span_s": 1.8,
+    "wpm": 166.7,
     "syllables": 7,
-    "articulation_sps": 3.41,
-    "pauses_s": [
-     0.17,
-     0.06,
-     0.11
-    ]
+    "articulation_sps": 3.89,
+    "pauses_s": []
    },
-   "longest_internal_gap_s": 0.17,
+   "longest_internal_gap_s": 0.0,
    "words": 5,
-   "wpm": 128.8,
-   "speed": 0.86,
+   "wpm": 166.7,
+   "speed": 0.95,
    "tsm": 1.0
   },
   "words": [
    {
     "w": "So",
-    "t0": 0.47,
-    "t1": 0.902
+    "t0": 0.35,
+    "t1": 0.652
    },
    {
     "w": "how's",
-    "t0": 1.216,
-    "t1": 1.506
+    "t0": 0.733,
+    "t1": 0.989
    },
    {
     "w": "the",
-    "t0": 1.541,
-    "t1": 1.61
+    "t0": 1.047,
+    "t1": 1.116
    },
    {
     "w": "partnership",
-    "t0": 1.668,
-    "t1": 2.191
+    "t0": 1.163,
+    "t1": 1.72
    },
    {
     "w": "going",
-    "t0": 2.26,
-    "t1": 2.597
+    "t0": 1.778,
+    "t1": 2.126
    }
   ],
   "qa": {
@@ -2583,41 +2570,41 @@
    "word_recall_nonames": 1.0,
    "lufs_i": -16.0,
    "target_lufs": -16.0,
-   "true_peak_dbtp": -1.97,
+   "true_peak_dbtp": -2.7,
    "clipped_samples": 0,
    "digital_black_runs": 0,
-   "median_f0_hz": 123.1,
-   "f0_range_st": 8.3,
-   "speech_head_s": 0.49,
-   "speech_tail_s": 0.534,
+   "median_f0_hz": 105.3,
+   "f0_range_st": 13.2,
+   "speech_head_s": 0.37,
+   "speech_tail_s": 0.485,
    "raw_tail_cut": false,
-   "align_median_s": 0.028
+   "align_median_s": 0.043
   },
-  "voice": "ElevenLabs library voice 'Giovanni - Tranquil, Clever and Educated' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.86",
-  "voiceId": "g6fJBFvZZp41FerGMMx7",
+  "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
+  "voiceId": "EwzF7Z2UMSib9JaKx0Kg",
   "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
   "el": {
-   "cand": "A",
+   "cand": "C",
    "role": "mas-manalt",
-   "voice_id": "g6fJBFvZZp41FerGMMx7",
-   "voice_name": "Giovanni - Tranquil, Clever and Educated",
-   "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "source": "shared Voice Library (high_quality), used by voice_id",
    "model_id": "eleven_multilingual_v2",
    "settings": {
-    "stability": 0.55,
+    "stability": 0.6,
     "similarity_boost": 0.75,
     "style": 0.0,
     "use_speaker_boost": true,
-    "speed": 0.86
+    "speed": 0.95
    },
-   "seed": 3146271681,
+   "seed": 3981881470,
    "chars_sent": 32,
-   "request_key": "e94839f2d98e2338",
+   "request_key": "aef2db4548057e2b",
    "derived_from": null,
    "reused_from": null
   },
   "status": "el",
-  "take": "el-A",
+  "take": "el-C",
   "processing": [
    "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
    "HPF 60 Hz",
@@ -2775,70 +2762,70 @@
   "on_camera": "vo",
   "mode": "on-mic",
   "device": null,
-  "file": "audio/ep01/v3-el/ep01/act3/wav/v3-vo-16__mas-manalt-A.wav",
+  "file": "audio/ep01/v3-el/ep01/act3/wav/v3-vo-16__mas-manalt-C.wav",
   "file_device": null,
   "mp3": null,
-  "duration_s": 4.926,
-  "frames_24": 118,
-  "voiced_span_s": 3.74,
+  "duration_s": 4.54,
+  "frames_24": 109,
+  "voiced_span_s": 3.69,
   "pace": {
-   "audible_in_s": 0.42,
-   "audible_out_s": 4.16,
+   "audible_in_s": 0.39,
+   "audible_out_s": 4.08,
    "measured": {
-    "span_s": 3.74,
-    "wpm": 128.3,
+    "span_s": 3.69,
+    "wpm": 130.1,
     "syllables": 11,
-    "articulation_sps": 3.97,
+    "articulation_sps": 3.15,
     "pauses_s": [
-     0.97
+     0.2
     ]
    },
-   "longest_internal_gap_s": 0.97,
+   "longest_internal_gap_s": 0.2,
    "words": 8,
-   "wpm": 128.3,
-   "speed": 0.82,
+   "wpm": 130.1,
+   "speed": 0.85,
    "tsm": 1.0
   },
   "words": [
    {
     "w": "Thrilled",
-    "t0": 0.4,
-    "t1": 0.791
+    "t0": 0.37,
+    "t1": 0.907
    },
    {
     "w": "is",
-    "t0": 0.849,
-    "t1": 0.954
+    "t0": 0.965,
+    "t1": 1.07
    },
    {
     "w": "too",
-    "t0": 1.012,
-    "t1": 1.186
+    "t0": 1.139,
+    "t1": 1.302
    },
    {
     "w": "much",
-    "t0": 1.256,
-    "t1": 1.546
+    "t0": 1.383,
+    "t1": 1.743
    },
    {
     "w": "enthusiastic",
-    "t0": 2.579,
-    "t1": 3.531
+    "t0": 2.103,
+    "t1": 3.194
    },
    {
     "w": "is",
-    "t0": 3.589,
-    "t1": 3.682
+    "t0": 3.264,
+    "t1": 3.369
    },
    {
     "w": "a",
-    "t0": 3.74,
-    "t1": 3.763
+    "t0": 3.438,
+    "t1": 3.485
    },
    {
     "w": "lot",
-    "t0": 3.833,
-    "t1": 4.146
+    "t0": 3.566,
+    "t1": 4.007
    }
   ],
   "qa": {
@@ -2847,41 +2834,41 @@
    "word_recall_nonames": 1.0,
    "lufs_i": -18.0,
    "target_lufs": -18.0,
-   "true_peak_dbtp": -3.79,
+   "true_peak_dbtp": -4.06,
    "clipped_samples": 0,
    "digital_black_runs": 0,
-   "median_f0_hz": 120.7,
-   "f0_range_st": 10.4,
-   "speech_head_s": 0.42,
-   "speech_tail_s": 0.766,
+   "median_f0_hz": 109.0,
+   "f0_range_st": 14.6,
+   "speech_head_s": 0.39,
+   "speech_tail_s": 0.46,
    "raw_tail_cut": false,
-   "align_median_s": 0.08
+   "align_median_s": 0.099
   },
-  "voice": "ElevenLabs library voice 'Giovanni - Tranquil, Clever and Educated' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.82",
-  "voiceId": "g6fJBFvZZp41FerGMMx7",
+  "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.85",
+  "voiceId": "EwzF7Z2UMSib9JaKx0Kg",
   "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
   "el": {
-   "cand": "A",
+   "cand": "C",
    "role": "mas-manalt",
-   "voice_id": "g6fJBFvZZp41FerGMMx7",
-   "voice_name": "Giovanni - Tranquil, Clever and Educated",
-   "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "source": "shared Voice Library (high_quality), used by voice_id",
    "model_id": "eleven_multilingual_v2",
    "settings": {
-    "stability": 0.6,
+    "stability": 0.65,
     "similarity_boost": 0.75,
     "style": 0.0,
     "use_speaker_boost": true,
-    "speed": 0.82
+    "speed": 0.85
    },
-   "seed": 691273516,
+   "seed": 1688756543,
    "chars_sent": 44,
-   "request_key": "bada5242d45a8707",
+   "request_key": "8fc8dc55f07e8ec1",
    "derived_from": null,
    "reused_from": null
   },
   "status": "el",
-  "take": "el-A",
+  "take": "el-C",
   "processing": [
    "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
    "HPF 60 Hz",
@@ -2917,33 +2904,35 @@
   "on_camera": "on",
   "mode": "on-mic",
   "device": null,
-  "file": "audio/ep01/v3-el/ep01/act3/wav/e1-a3-22-03__mas-manalt-A.wav",
+  "file": "audio/ep01/v3-el/ep01/act3/wav/e1-a3-22-03__mas-manalt-C.wav",
   "file_device": null,
   "mp3": null,
   "duration_s": 1.582,
   "frames_24": 38,
-  "voiced_span_s": 0.55,
+  "voiced_span_s": 0.8,
   "pace": {
    "audible_in_s": 0.35,
-   "audible_out_s": 0.9,
+   "audible_out_s": 1.15,
    "measured": {
-    "span_s": 0.55,
-    "wpm": 109.1,
+    "span_s": 0.8,
+    "wpm": 75.0,
     "syllables": 2,
-    "articulation_sps": 3.64,
-    "pauses_s": []
+    "articulation_sps": 3.08,
+    "pauses_s": [
+     0.15
+    ]
    },
-   "longest_internal_gap_s": 0.0,
+   "longest_internal_gap_s": 0.15,
    "words": 1,
-   "wpm": 109.1,
-   "speed": 0.86,
+   "wpm": 75.0,
+   "speed": 0.95,
    "tsm": 1.0
   },
   "words": [
    {
     "w": "Super",
     "t0": 0.35,
-    "t1": 0.872
+    "t1": 0.884
    }
   ],
   "qa": {
@@ -2952,41 +2941,41 @@
    "word_recall_nonames": 1.0,
    "lufs_i": -16.0,
    "target_lufs": -16.0,
-   "true_peak_dbtp": -2.64,
+   "true_peak_dbtp": -1.51,
    "clipped_samples": 0,
    "digital_black_runs": 0,
-   "median_f0_hz": 110.2,
-   "f0_range_st": 13.1,
+   "median_f0_hz": 104.4,
+   "f0_range_st": 11.2,
    "speech_head_s": 0.35,
-   "speech_tail_s": 0.682,
+   "speech_tail_s": 0.432,
    "raw_tail_cut": false,
    "align_median_s": 0.35
   },
-  "voice": "ElevenLabs library voice 'Giovanni - Tranquil, Clever and Educated' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.86",
-  "voiceId": "g6fJBFvZZp41FerGMMx7",
+  "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
+  "voiceId": "EwzF7Z2UMSib9JaKx0Kg",
   "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
   "el": {
-   "cand": "A",
+   "cand": "C",
    "role": "mas-manalt",
-   "voice_id": "g6fJBFvZZp41FerGMMx7",
-   "voice_name": "Giovanni - Tranquil, Clever and Educated",
-   "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "source": "shared Voice Library (high_quality), used by voice_id",
    "model_id": "eleven_multilingual_v2",
    "settings": {
-    "stability": 0.55,
+    "stability": 0.6,
     "similarity_boost": 0.75,
     "style": 0.0,
     "use_speaker_boost": true,
-    "speed": 0.86
+    "speed": 0.95
    },
-   "seed": 1307821136,
+   "seed": 3425721218,
    "chars_sent": 6,
-   "request_key": "dca49f1aa36865f2",
+   "request_key": "e1dd6e34917a64d1",
    "derived_from": null,
-   "reused_from": "audio/ep01/v3-el/sample:a5-26-01__mas-manalt-A"
+   "reused_from": null
   },
   "status": "el",
-  "take": "el-A",
+  "take": "el-C",
   "processing": [
    "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
    "HPF 60 Hz",

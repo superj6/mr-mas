@@ -1,12 +1,12 @@
 # Ep1 v3: the ElevenLabs voice pass (`v3-voices-el`, track A4, 2026-09-27)
 
-> **Status: PHASE 2 DONE, for the lead's A/B.** Every line of the final v3 lock (commit 62a7f8f) is rendered in ElevenLabs set A. There is an ElevenLabs-timed copy of the lock and a full stick reel of it: `out/ep01/reel/ep01-v3-el-stick.mp4`. Phase 1 (the casting and the sample) is §1–§8, below the phase-2 part.
+> **Status: PHASE 3 DONE: MAS IS RECAST.** The showrunner listened and heard Mas A (Giovanni) as accented ("strangely russian"). Mas is now **Jeremy** (candidate C), picked by measurement, and all 75 of his lines are re-rendered. The EL-timed lock and its reel are rebuilt. The audition file, `out/ep01/full-v3/voices/mas-recast.mp3`, is there for the showrunner to overrule the pick. The recast is §R, directly below. Phase 2 (the whole episode in set A) is §P1–§P9, and phase 1 (the casting and the sample) is §1–§8. Where phase 2 describes Mas, it describes Giovanni.
 >
 > **Nobody has listened to any of this.** Every statement below is a measurement: duration, pace, pitch, silence at the head and tail, loudness, and what a speech recogniser heard. Whether a voice is natural, funny, or right for the character is still a call for an ear.
 >
-> **Showrunner, 2026-09-27:** "we can also try a pass using elevenlabs samples", and "i want you to just do a full episode attempt with your best judgement"
+> **Showrunner, 2026-09-27:** "we can also try a pass using elevenlabs samples", and "i want you to just do a full episode attempt with your best judgement". After listening: "the elevenlabs voices are not as good as i hoped, especially sam who sounds strangely russian", then "i'll let you make your own review, judgements, and update to the full next version"
 
-**Phase 2, in short:**
+**Phase 2, in short** (with Giovanni as Mas):
 - **All 228 lines** of the six v3 timelines are rendered with each role's **A voice**. Of those, 83 takes are the sample's and auditions' takes reused, with nothing sent. No new B takes were rendered, and the phase-1 B takes are kept.
 - **Characters:** 7,878 sent and **4,322 billed**, against the 20,000 budget. The subscription went from 5,522 to 9,844 of 131,000.
 - **The EL-timed lock runs 21:06.4 against the Kokoro lock's 20:43.6 (+22.8 s).** Most of that is Mas A's inner voice (+14.2 s over 24 lines), Tasya A (+11.2 s) and Rima A (+8.6 s). §P3.
@@ -21,6 +21,218 @@
 - **Characters:** 10,054 sent and **5,522 billed**, against the 25,000 budget. The subscription went from 0 to 5,522 of 131,000.
 - **Model:** `eleven_multilingual_v2` for everyone. I tested `eleven_v3` and didn't use it (§6).
 - **Decisions for you:** listed in §8.
+
+---
+
+## R. Phase 3: the Mas recast (2026-09-27)
+
+**The brief** (the lead, after the showrunner's listen):
+- Recast Mas with an American, neutral accent, and pick the winner by measurement: accent, the 105–125 Hz lane, a calm 110–140 wpm pace, and no clipped tails or artifacts.
+- Make an audition file, so the showrunner can overrule the pick.
+- Re-render all of Mas's lines with the winner and rebuild the EL-timed timelines, keeping every gap.
+- Check the other principals' A voices for a strong non-American accent, and flag any without recasting them.
+- The budget is 12,000 characters.
+
+**In short:**
+- **The pick: Jeremy - Warm, Trustworthy, Sincere** (shared Voice Library, high-quality; `EwzF7Z2UMSib9JaKx0Kg`), on `eleven_multilingual_v2`. He is now candidate C for Mas, and set A uses him (`set_cand` in `cast-el.json`).
+- **The characters:** 4,994 sent and **2,849 billed**, against the 12,000 budget. The subscription went from 9,844 to 12,693 of 131,000.
+- **The story:** the EL-timed lock now runs **20:46.6** against the Kokoro lock's 20:39.6 (+7.0 s). It was +22.8 s with Giovanni. §R4.
+- **The other principals:** none shows a strong accent. Rima A (Mia) is the lowest, a mild flag for an ear. §R5.
+- **The account:** two designed voices are saved to it, so `voice_slots_used` went from 0 to 2. Nothing was cloned.
+
+### R1. Why a label isn't enough, and what was measured
+
+**Labels don't tell you the accent.**
+- Giovanni's library labels say `accent: american`, and his description starts "An American male voice".
+- His own preview (the owner's recording) measures like any American voice.
+- Only the speech ElevenLabs generates from him measures as accented. So every candidate was judged on its rendered lines, never on its label or preview.
+
+**The accent measure** (`tools/mas_recast.py`):
+- faster-whisper **small**, the multilingual model, which I downloaded for this (the house small.en can't detect language). Each take is run with the language left to detection, and I read p(en).
+- Each voice gets two numbers: the mean of p(en) over its six takes, and its worst take.
+- **What calibrates it:**
+  - Kokoro's American stock voice (the lock's takes of the same lines): mean 0.985, worst 0.948.
+  - **Giovanni, rendered on the same six lines and settings: mean 0.907, worst 0.740.** He is far under everyone else, the one voice the showrunner heard as accented.
+- **Tried and not used:** the free-decode log-probability, and the forced log-probability per token of the exact text (§P4's check, here for accent). Neither separated Giovanni from the rest. They are recorded in `mas-recast.json`.
+
+**The same six lines for every candidate:**
+- spoken: "it's a preview.", "super.", "ask me when it compiles.";
+- V.O.: "gerg wants to ship it. rima wants it quiet. alyi wants to know what it is first.", "alyi set it up. probably just the budget.", "four hundred and six. four hundred and seven. four hundred and six.".
+- They are sent in the house spellings (Gurg, Al-yee, Moss), with steady settings the same for everyone:
+  - spoken: stability 0.6, style 0, speed 0.95;
+  - V.O.: stability 0.65, speed 0.9;
+  - both: similarity 0.75, speaker boost on.
+- There were no automatic retakes, so the first takes are the measure.
+
+**The candidates:**
+- **Evan**, the existing B voice.
+- **Five library voices**, from a free screen. The phase-1 pool, with its red-flag screen, filtered to male, `middle_aged`, conversational or educational and one credit per character, leaves 219 voices. The 40 whose descriptions best fit "soft-spoken, calm, measured, conversational, not narrator-polished" were measured on their previews for pitch and accent. The five in the lane with American, calm, conversational descriptions were rendered.
+- **Two voice-design voices.** One call to `/v1/text-to-voice/design` (`eleven_multilingual_ttv_v2`), with the description *"American man in his late thirties, soft-spoken and measured, calm and warm, light baritone, plain neutral American accent, conversational, understated, slight smile in the voice."* and the six lines as its text. There was no reference audio. It returned three previews. The two with the highest p(en) were saved as account voices, so they could render with the same model and settings as the rest.
+- **eleven_v3** on the best two.
+
+### R2. The ranking
+
+Lower is better. The score adds:
+- accent: 1 point per 0.01 of mean p(en) under Kokoro's, and 1 per 0.05 of the worst take under 0.95;
+- the lane: semitones outside 105–125 Hz;
+- the V.O. pace: 1 point per 10 wpm outside 110–140;
+- artifacts: 2 per clipped tail, 1 per line more than 4 st off the voice's own median, 2 if ASR recall is under 0.8.
+
+"Speed for 125 wpm" is the V.O. speed setting that would bring each voice to the middle of the band. ElevenLabs honours 0.7–1.2.
+
+| # | Audition | Voice (source) | Score | p(en) mean / worst (joined) | F0 | V.O. wpm | Spoken syll/s | Clipped tails | Speed for 125 wpm |
+|---|---|---|---|---|---|---|---|---|---|
+| **1** | **2** | **Jeremy - Warm, Trustworthy, Sincere** (library, HQ) | **2.5** | 0.976 / 0.900 (0.996) | **114.0** | **146** | **3.59** | 0 | **0.77** |
+| 2 | 3 | Dennis - Warm, Calm, and Confident (library, HQ) | 6.7 | 0.980 / 0.936 (0.990) | 105.4 | 188 | 4.88 | 0 | 0.60 |
+| 3 | 5 | Mike Belkowski (library, prof.) | 7.1 | 0.977 / 0.943 (0.995) | 114.0 | 201 | 5.06 | 0 | 0.56 |
+| 4 | 1 | Evan - Calm, Grounded & Reflective (library, HQ; the B voice) | 7.3 | **0.987 / 0.965** (0.999) | 106.8 | 213 | 4.80 | 0 | 0.53 |
+| 5 | 8 | mrmas-mas-design-2027-1 (voice design) | 8.3 | 0.975 / 0.933 (0.993) | 107.4 | 170 | 3.85 | **2** | 0.66 |
+| 6 | 7 | mrmas-mas-design-2027-2 (voice design) | 8.4 | 0.985 / 0.951 (0.992) | 102.1 | 179 | 3.77 | **2** | 0.63 |
+| 7 | 4 | Christian Rivera - Unperturbed, Informed (library, prof.) | 10.3 | 0.985 / 0.963 (0.993) | 107.7 | 233 | 3.88 | 0 | 0.48 |
+| 8 | 6 | Brady J – Friendly, Casual, Warm (library, HQ) | 13.1 | 0.965 / 0.843 (0.994) | 104.0 | 228 | 4.76 | 0 | 0.49 |
+| — | 2 on v3 | Jeremy, `eleven_v3` | 11.8 | 0.982 / 0.921 | 125.6 | 148 | 5.13 | **5 of 6** | — |
+| — | 3 on v3 | Dennis, `eleven_v3` | 14.3 | 0.987 / 0.966 | 99.7 | 164 | 4.23 | **4 of 6** | — |
+| ref | — | Giovanni (Mas A, heard as accented) | 12.3 | **0.907 / 0.740** (0.972) | 122.3 | 143 | 3.70 | 0 | — |
+| ref | — | Kokoro (the lock's stock voice) | | 0.985 / 0.948 (0.994) | 114.6 | 168 | | | |
+
+**Why Jeremy:**
+- **Accent:** every candidate is far from Giovanni and within 0.01–0.02 of Kokoro's American takes. Evan measures the most American, and Jeremy's mean is 0.009 under Kokoro's. His worst take is "Super.", a one-word clip, which every voice scores lowest (Giovanni's was 0.80). Joined, his six lines score 0.996, above Kokoro's.
+- **Pace decides it:**
+  - Jeremy is the one candidate whose V.O. is near the band at steady settings: 146 wpm, where the others run 170–233.
+  - Bringing any other voice into the band would take a speed of 0.48–0.66, below the 0.7 floor ElevenLabs honours.
+  - His spoken lines are also the calmest, at 3.59 syllables a second.
+- **The lane:** 114 Hz, the middle of 105–125.
+- **Clean takes:** no clipped tails, no pitch outliers, and ASR recall 1.0.
+- **Against the designed voices:** both clipped two tails out of six, and one sits under the lane.
+- **eleven_v3 still isn't usable:** it clipped 4–5 of 6 tails, as in phase 1.
+
+**The audition file:** `out/ep01/full-v3/voices/mas-recast.mp3` (4:43).
+- A Kokoro slate (af_heart, a stock American voice) opens it, and another comes before each candidate: "candidate one" and so on. Each is followed by the six lines, with spoken takes at −16 LUFS and V.O. at −18.
+- The order is 1 Evan, 2 Jeremy, 3 Dennis, 4 Christian Rivera, 5 Mike Belkowski, 6 Brady J, 7 and 8 the designed voices. Then candidates 2 and 3 on `eleven_v3`.
+- The index (number, voice, id, source, settings, measurements, start time) is `audio/ep01/v3-el/mas-recast.json`. The takes are in `audio/ep01/v3-el/mas-recast/<candidate>/`.
+
+### R3. The episode, with Jeremy
+
+**How the settings were set:**
+- Candidate C in `cast-el.json`: spoken as in the audition (stability 0.6, speed 0.95).
+- **V.O. at speed 0.85,** not the audition's 0.9, to bring his 146 wpm into the band.
+- The render is the §P8 command. Everything but Mas was already cached, so only his 75 lines were sent.
+- Three retakes: "four hundred and six…" came back as "406. 406.", and two lines were pitch outliers.
+
+**His pronunciation fixes:**
+- **Giovanni's fixes now apply only to Giovanni.** "Guhrg", "Noded", "badj", the "…Guhrg" lead-in and "Which one am I." were fitted to his voice, so they moved to `respell_voices` under his voice id.
+- **Jeremy renders from the house spellings** and passes every name check with no fix:
+  - Gurg +1.8 to +4.6 on eight lines;
+  - Macrosoft +3.2 (Kokoro's IPA take: −4.1);
+  - badge +8.6;
+  - Noted +4.7 and +4.1;
+  - GTP-4 +10.7.
+
+**Measured over all 75 lines:**
+
+| | Jeremy (C) | Giovanni (A) | Kokoro |
+|---|---|---|---|
+| Median F0, spoken / V.O. | 110 / 109 Hz | 121 / 118 | 115 / 115 |
+| V.O. pace, 24 lines | **141 wpm** | 130 | 168 |
+| Spoken pace (median, lines of 5+ words) | 201 wpm | 186 | 186 |
+| Voiced, spoken / V.O. | 71.9 / 78.7 s | 83.4 / 83.1 | 77.8 / 68.9 |
+| p(en), his 8 longest spoken lines: mean (worst) | **0.995 (0.983)** | 0.959 (0.879) | 0.990 |
+| Clipped tails | 0 | 0 | |
+
+**Worth knowing:**
+- **The V.O. runs 141 wpm,** 1 over the band's top. Speed 0.80 would bring it in: about 1,000 characters (the 24 V.O. lines are 988), and about +5 s on the story (78.7 s voiced × 0.85/0.80).
+- **His spoken lines are quicker than Kokoro's** (201 against 186 wpm) but, per syllable, the calmest of the candidates.
+- **Eight lines sit just outside 100–132 Hz:**
+  - five low finals, at 94–99 Hz: "mostly the bill.", "which one's real?", "super.", "everyone." and "okay.";
+  - three at 132–135 Hz: "how's the dancing?", "it's a good photo." and "and go to macrosoft.".
+- **For an ear:** "That's a lot of desks." was heard as "dasks" (+0.9 over it: narrow). "Equity **in** NopeAI" is heard as "and", as Kokoro's take was.
+
+### R4. The EL-timed lock, rebuilt
+
+`tools/el_lock.py` was run on the new takes, exactly as in §P3: every gap and J-cut lead kept, beats changed only by the takes' lengths.
+
+**The Kokoro lock has changed since phase 2.** The lock pass's d00939d cut the 1993 dialog from the cold open (12 beats → 10, 26.7 s), and 5201f60 retimed Act Two's White House rail. The EL copy follows them. The cut had already been applied by hand to `ep01-v3-el-coldopen.json` in d00939d, and the rebuild reproduces that edit beat for beat.
+
+| Segment | Kokoro lock (now) | EL, Giovanni (phase 2) | **EL, Jeremy** | Jeremy vs Kokoro |
+|---|---|---|---|---|
+| Cold open | 0:26.7 | (0:30.0, before the cut) | **0:24.3** | −2.4 s |
+| Act One | 5:22.5 | 5:37.5 | **5:33.7** | +11.2 s |
+| Act Two | 3:24.7 | 3:17.2 | **3:15.9** | −8.8 s |
+| Act Three | 2:08.0 | 2:05.3 | **2:04.1** | −4.0 s |
+| Act Four | 8:43.8 | 9:02.7 | **8:54.6** | +10.8 s |
+| Tag | 0:33.9 | 0:33.7 | **0:34.0** | +0.1 s |
+| **Story** | **20:39.6** | 21:06.4 (with the old cold open) | **20:46.6** | **+7.0 s** |
+
+- **Over Acts One to Four and the tag, Jeremy is 14.1 s shorter than Giovanni.** Mas's V.O. is now +9.8 s against Kokoro's (it was +14.2), and his spoken lines are −5.9 s.
+- **The story is 1.6 s over the band's top** (19:45–20:45). It was 21.4 s over. The rest of the difference is Tasya A (+11.2 s) and Rima A (+8.6 s), as in §P3.
+
+**The beds** were rebuilt as in §P6.
+- **The lock's own cold-open bed predates the cut:** it is still 30.67 s, built at 12:44. So the splice now maps beats by their id against the timeline that bed was built from (62a7f8f, found in git by its length).
+- **Beat 3.02 grew from 3.0 to 4.5 s** in the cut, and the moments that followed it in the stem (the 1993 flashback) were cut. So the stem fades over 0.4 s at its old end and holds 1.5 s of room tone at −50 LUFS. When the lock pass rebuilds its cold-open bed, `el_bed.py` will use it directly.
+
+**The reel:** `out/ep01/reel/ep01-v3-el-stick.mp4`, re-rendered with the recast. It replaces the phase-2 file at the same path.
+- **Length:** **21:31.8** (the title slate plus the 21:28.8 episode), 105.9 MB, 448 s of wall.
+- **Checks:** 31,002 frames, the plan's count; the mixer placed all 228 takes and 7 beds, with 0 missing and no warnings; the whole mix is −16.8 LUFS with a −2.3 dBFS peak; the only digital silence of 0.5 s or more is the title slate.
+
+| Chapter | Starts | Length | Mix, LUFS | Peak, dBFS |
+|---|---|---|---|---|
+| cold open | 0:03.0 | 24.3 | −18.2 | −4.7 |
+| intro | 0:27.3 | 30.0 | −17.1 | −4.2 |
+| card | 0:57.3 | 2.0 | −37.9 | −27.1 |
+| Act One | 0:59.3 | 5:33.7 | −17.0 | −4.0 |
+| Act Two | 6:33.0 | 3:16.0 | −16.7 | −4.3 |
+| Act Three | 9:49.0 | 2:04.0 | −17.3 | −3.8 |
+| Act Four | 11:53.0 | 8:54.6 | −16.4 | −2.3 |
+| tag | 20:47.6 | 0:34.0 | −24.3 | −4.7 |
+| outro | 21:21.6 | 0:10.1 | −17.1 | −4.1 |
+
+### R5. The other principals' A voices
+
+Each role's eight longest spoken lines are measured in the EL takes and in the Kokoro lock's takes of the same lines (`audio/ep01/v3-el/ep01/qa/accent-principals.json`). The difference is what matters: Giovanni sits 0.031 under his Kokoro lines.
+
+| Role | A voice | p(en) EL: mean (worst) | Kokoro, same lines | Difference |
+|---|---|---|---|---|
+| Mas (reference) | Giovanni | 0.959 (0.879) | 0.990 | **−0.031** |
+| Mas (the recast) | Jeremy | 0.995 (0.983) | 0.990 | +0.004 |
+| Gerg | Marcus | 0.998 (0.996) | 0.991 | +0.007 |
+| Alyi | Louis | 0.990 (0.980) | 0.987 | +0.003 |
+| **Rima** | **Mia** | **0.984 (0.966)** | 0.997 | **−0.012** |
+| Neleh | Alexandra | 0.994 (0.991) | 0.995 | −0.001 |
+| Tasya | Tyler Kurk | 0.995 (0.991) | 0.990 | +0.005 |
+
+- **No strong accent in the other principals.**
+- **Rima A is the one mild flag:** 0.012 under her Kokoro lines, the only other voice under its counterpart by more than 0.001. Her worst take (0.966) is far from Giovanni's (0.879). She is worth a listen, and she isn't recast.
+- **Rima B (Harper) is on file.** Switching her costs about 50 credits (§P9).
+
+### R6. Files and how to redo it
+
+**Files written in this phase:**
+- `audio/ep01/v3-el/mas-recast.json` (the index, the measurements and the ranking) and `audio/ep01/v3-el/mas-recast/` (the takes and the design previews);
+- `out/ep01/full-v3/voices/mas-recast.mp3`;
+- `tools/mas_recast.py`.
+
+**Files changed in this phase:**
+- `cast-el.json`: candidate C, `set_cand`, and `respell_voices`;
+- `tools/el_render.py`: per-voice fixes and `set_cand`;
+- `tools/el_bed.py`: the splice by beat id;
+- the Mas takes and `lines-A.json` in `audio/ep01/v3-el/ep01/<seg>/`;
+- `show/reel/ep01-v3-el/`;
+- `audio/reel/ep01-v3-el/`;
+- `audio/ep01/v3-el/usage.json`, under phase 3.
+
+```sh
+PY=audio/.venv-casting/bin/python; M=audio/ep01/v3-el/tools/mas_recast.py
+$PY $M screen --n 40                    # previews: free
+$PY $M add <voice_id> ...               # into the index
+$PY $M design --seed 2027               # 3 design previews of the six lines (about 242 credits)
+$PY $M save 2027:2 2027:1               # save chosen previews as account voices
+$PY $M render --max-chars 2600          # the six lines per candidate (--models eleven_v3 --only a b)
+$PY $M accent; $PY $M rank; $PY $M audition
+$PY $M principals                       # the accent check of the principals' A voices (free)
+```
+
+- **To go back to Giovanni, or to another candidate:** drop `set_cand`, or point it at another letter, then re-run §P8. Only Mas's lines would change.
+- **To audition a candidate in the episode without switching:** use `--cand mas-manalt=B --label AmasB` (§P9).
 
 ---
 
@@ -190,6 +402,8 @@ Story time (the lock's frames; the intro, card and outro are unchanged):
 - **Some supporting voices run well over their pace bands:** Nedib 258 wpm (145–165), the senator 240 (145–160), Radnus 224 (130–150), Nirb 282 (150–170). They make the shortest beats: 8.04 (Nirb and Radnus, −3.0 s), 13.09 (Radnus, −2.8 s) and 21.02 (Nedib and his deepfakes, −2.1 s).
 
 ### P6. The reel
+
+> **Superseded by §R4:** the file at this path now has the recast Mas. The figures below are the phase-2 (Giovanni) render.
 
 `out/ep01/reel/ep01-v3-el-stick.mp4`: 1280×720, 24 fps, H.264 + AAC. It runs **21:51.6**: the 3 s title slate, then the 21:48.6 episode, against the final Kokoro stick's 21:28.8 (+22.8 s). 107.0 MB. It was rendered with `node src/reel/tools/episode.mjs <manifest> --jobs 2 --conc 4` through `ops/heavy.sh`: 22 segments in 492 s of wall (render 452 s, mix 19 s alongside, mux 32 s).
 

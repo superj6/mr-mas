@@ -5,7 +5,7 @@
  "variant": "stick-figure dialogue reel v3 LOCK · v2/v5 takes + the v3 takes (Mas's inner voice, the new lines) · temp bed · ElevenLabs set A takes (eleven_multilingual_v2, library voices), EL-timed: the lock's gaps kept, beats changed only by the takes' lengths",
  "logline": "The v3 stick lock of act2: the beat plan applied to ep01-act2-v2.json (arrivals, aftermaths, Mas's inner voice, the cuts, no pointers).",
  "dateSpan": "May 4 - 30, 2023",
- "runtimeMin": 3.29,
+ "runtimeMin": 3.27,
  "dialogueReel": true,
  "cast": {
   "mas": {
@@ -82,7 +82,7 @@
   "builder": "audio/reel/ep01-v3/build_timeline.py",
   "bed": "audio/reel/ep01-v3/bed.py -> audio/reel/ep01-v3/act2-bed.wav",
   "notes": "show/episodes/ep01/production/full-v3/lock.md",
-  "seconds": 197.189,
+  "seconds": 195.939,
   "kokoro_lock": "show/reel/ep01-v3/ep01-v3-act2.json",
   "el_builder": "audio/ep01/v3-el/tools/el_lock.py",
   "el_notes": "show/episodes/ep01/production/full-v3/voices-el.md"
@@ -132,78 +132,78 @@
      "who": "mas",
      "text": "four companies, one table. radnus has been rehearsing something since the lobby.",
      "t": 1.0,
-     "dur": 6.27,
-     "audio": "audio/ep01/v3-el/ep01/act2/wav/v3-vo-11__mas-manalt-A.wav",
-     "in": 0.39,
+     "dur": 6.58,
+     "audio": "audio/ep01/v3-el/ep01/act2/wav/v3-vo-11__mas-manalt-C.wav",
+     "in": 0.36,
      "words": [
       [
        "Four",
-       -0.02,
-       0.297
+       -0.01,
+       0.35
       ],
       [
        "companies",
-       0.401,
-       1.051
+       0.443,
+       1.163
       ],
       [
        "one",
-       1.446,
-       1.69
+       1.546,
+       1.836
       ],
       [
        "table",
-       1.736,
-       2.236
+       1.894,
+       2.533
       ],
       [
        "radnus",
-       3.269,
-       3.768
+       3.287,
+       3.821
       ],
       [
        "has",
-       3.838,
-       4.0
+       3.891,
+       4.019
       ],
       [
        "been",
-       4.07,
-       4.267
+       4.077,
+       4.274
       ],
       [
        "rehearsing",
-       4.325,
-       4.859
+       4.344,
+       4.878
       ],
       [
        "something",
-       4.929,
-       5.324
+       4.959,
+       5.423
       ],
       [
        "since",
-       5.382,
-       5.637
+       5.505,
+       5.795
       ],
       [
        "the",
-       5.684,
-       5.777
+       5.853,
+       5.923
       ],
       [
        "lobby",
-       5.858,
-       6.276
+       6.004,
+       6.526
       ]
      ],
      "tag": "V.O.",
      "cut": false,
-     "voice": "ElevenLabs library voice 'Giovanni - Tranquil, Clever and Educated' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.82",
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.85",
      "el": {
-      "take": "v3-vo-11__mas-manalt-A.wav",
+      "take": "v3-vo-11__mas-manalt-C.wav",
       "device_copy": false,
-      "dry": "audio/ep01/v3-el/ep01/act2/wav/v3-vo-11__mas-manalt-A.wav",
+      "dry": "audio/ep01/v3-el/ep01/act2/wav/v3-vo-11__mas-manalt-C.wav",
       "reused_from": null
      },
      "kokoro": {
@@ -218,7 +218,7 @@
     {
      "text": "RAIL: MAY 4, 2023 · THE WHITE HOUSE",
      "at": 0.25,
-     "until": 2.6
+     "until": 2.926
     },
     {
      "text": "[A] [I]",
@@ -226,7 +226,7 @@
      "until": null
     }
    ],
-   "reelDur": 7.87,
+   "reelDur": 8.18,
    "fx": [],
    "seq": {
     "id": "13",
@@ -241,7 +241,7 @@
    "names": [
     {
      "id": "radnus",
-     "at": 4.269
+     "at": 4.287
     }
    ]
   },
@@ -1137,28 +1137,28 @@
      "who": "mas",
      "text": "thank you.",
      "t": 3.71,
-     "dur": 0.54,
-     "audio": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-13-10__mas-manalt-A.wav",
-     "in": 0.41,
+     "dur": 0.62,
+     "audio": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-13-10__mas-manalt-C.wav",
+     "in": 0.39,
      "words": [
       [
        "Thank",
        -0.02,
-       0.3
+       0.273
       ],
       [
        "you",
-       0.37,
-       0.52
+       0.332,
+       0.494
       ]
      ],
      "tag": "",
      "cut": false,
-     "voice": "ElevenLabs library voice 'Giovanni - Tranquil, Clever and Educated' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.86",
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
      "el": {
-      "take": "e1-a2-13-10__mas-manalt-A.wav",
+      "take": "e1-a2-13-10__mas-manalt-C.wav",
       "device_copy": false,
-      "dry": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-13-10__mas-manalt-A.wav",
+      "dry": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-13-10__mas-manalt-C.wav",
       "reused_from": null
      },
      "kokoro": {
@@ -1172,7 +1172,7 @@
      "id": "e1-a2-13-11",
      "who": "radnus",
      "text": "They ask it the things they used to ask us. And it tells them what a great question it was.",
-     "t": 4.85,
+     "t": 4.93,
      "dur": 4.5,
      "audio": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-13-11__radnus-A.wav",
      "in": 0.45,
@@ -1298,34 +1298,34 @@
      "id": "v3-vo-12",
      "who": "mas",
      "text": "he's not wrong.",
-     "t": 9.75,
-     "dur": 1.08,
-     "audio": "audio/ep01/v3-el/ep01/act2/wav/v3-vo-12__mas-manalt-A.wav",
-     "in": 0.42,
+     "t": 9.83,
+     "dur": 1.19,
+     "audio": "audio/ep01/v3-el/ep01/act2/wav/v3-vo-12__mas-manalt-C.wav",
+     "in": 0.41,
      "words": [
       [
        "He's",
        -0.02,
-       0.22
+       0.23
       ],
       [
        "not",
-       0.29,
-       0.476
+       0.3,
+       0.509
       ],
       [
        "wrong",
-       0.534,
-       0.894
+       0.579,
+       1.078
       ]
      ],
      "tag": "V.O.",
      "cut": false,
-     "voice": "ElevenLabs library voice 'Giovanni - Tranquil, Clever and Educated' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.82",
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.85",
      "el": {
-      "take": "v3-vo-12__mas-manalt-A.wav",
+      "take": "v3-vo-12__mas-manalt-C.wav",
       "device_copy": false,
-      "dry": "audio/ep01/v3-el/ep01/act2/wav/v3-vo-12__mas-manalt-A.wav",
+      "dry": "audio/ep01/v3-el/ep01/act2/wav/v3-vo-12__mas-manalt-C.wav",
       "reused_from": null
      },
      "kokoro": {
@@ -1339,34 +1339,34 @@
      "id": "e1-a2-13-12",
      "who": "mas",
      "text": "how's the dancing?",
-     "t": 11.73,
-     "dur": 1.26,
-     "audio": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-13-12__mas-manalt-A.wav",
-     "in": 0.49,
+     "t": 11.92,
+     "dur": 1.06,
+     "audio": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-13-12__mas-manalt-C.wav",
+     "in": 0.42,
      "words": [
       [
        "How's",
        -0.02,
-       0.245
+       0.243
       ],
       [
        "the",
-       0.303,
-       0.372
+       0.302,
+       0.383
       ],
       [
        "dancing",
-       0.43,
-       0.941
+       0.429,
+       0.975
       ]
      ],
      "tag": "",
      "cut": false,
-     "voice": "ElevenLabs library voice 'Giovanni - Tranquil, Clever and Educated' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.86",
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
      "el": {
-      "take": "e1-a2-13-12__mas-manalt-A.wav",
+      "take": "e1-a2-13-12__mas-manalt-C.wav",
       "device_copy": false,
-      "dry": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-13-12__mas-manalt-A.wav",
+      "dry": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-13-12__mas-manalt-C.wav",
       "reused_from": null
      },
      "kokoro": {
@@ -1378,7 +1378,7 @@
     }
    ],
    "onscreen": [],
-   "reelDur": 13.427,
+   "reelDur": 13.417,
    "fx": [],
    "cues": [
     "music (v3): THE WHITE HOUSE · pomp and comedy · MM-19 light chamber pomp; Nedib's muted-trumpet Fountain Pen motif on the door"
@@ -1502,53 +1502,53 @@
      "who": "mas",
      "text": "i'll turn when he finishes the sentence.",
      "t": 0.5,
-     "dur": 2.19,
-     "audio": "audio/ep01/v3-el/ep01/act2/wav/v3-vo-13__mas-manalt-A.wav",
-     "in": 0.5,
+     "dur": 2.62,
+     "audio": "audio/ep01/v3-el/ep01/act2/wav/v3-vo-13__mas-manalt-C.wav",
+     "in": 0.4,
      "words": [
       [
        "I'll",
        -0.02,
-       0.178
+       0.263
       ],
       [
        "turn",
-       0.236,
-       0.492
+       0.322,
+       0.681
       ],
       [
        "when",
-       0.538,
-       0.678
+       0.751,
+       0.914
       ],
       [
        "he",
-       0.724,
-       0.794
+       0.937,
+       0.983
       ],
       [
        "finishes",
-       0.898,
-       1.409
+       1.065,
+       1.564
       ],
       [
        "the",
-       1.455,
-       1.525
+       1.645,
+       1.761
       ],
       [
        "sentence",
-       1.583,
-       2.21
+       1.831,
+       2.527
       ]
      ],
      "tag": "V.O.",
      "cut": false,
-     "voice": "ElevenLabs library voice 'Giovanni - Tranquil, Clever and Educated' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.82",
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.85",
      "el": {
-      "take": "v3-vo-13__mas-manalt-A.wav",
+      "take": "v3-vo-13__mas-manalt-C.wav",
       "device_copy": false,
-      "dry": "audio/ep01/v3-el/ep01/act2/wav/v3-vo-13__mas-manalt-A.wav",
+      "dry": "audio/ep01/v3-el/ep01/act2/wav/v3-vo-13__mas-manalt-C.wav",
       "reused_from": null
      },
      "kokoro": {
@@ -1562,7 +1562,7 @@
      "id": "e1-a2-13-14",
      "who": "nedib",
      "text": "Folks, I just want to say one thing.",
-     "t": 3.19,
+     "t": 3.62,
      "dur": 1.74,
      "audio": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-13-14__nedib-A.wav",
      "in": 0.42,
@@ -1626,7 +1626,7 @@
     }
    ],
    "onscreen": [],
-   "reelDur": 5.123,
+   "reelDur": 5.553,
    "fx": [],
    "cues": [
     "music (v3): THE WHITE HOUSE · pomp and comedy · MM-19 light chamber pomp; Nedib's muted-trumpet Fountain Pen motif on the door"
@@ -1855,38 +1855,38 @@
      "who": "mas",
      "text": "it's a good photo.",
      "t": 1.7,
-     "dur": 1.58,
-     "audio": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-13-18__mas-manalt-A.wav",
-     "in": 0.43,
+     "dur": 1.03,
+     "audio": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-13-18__mas-manalt-C.wav",
+     "in": 0.39,
      "words": [
       [
        "It's",
        -0.02,
-       0.744
+       0.181
       ],
       [
        "a",
-       0.779,
-       0.802
+       0.215,
+       0.25
       ],
       [
        "good",
-       0.86,
-       1.046
+       0.297,
+       0.459
       ],
       [
        "photo",
-       1.104,
-       1.58
+       0.506,
+       0.947
       ]
      ],
      "tag": "O.S.",
      "cut": false,
-     "voice": "ElevenLabs library voice 'Giovanni - Tranquil, Clever and Educated' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.86",
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
      "el": {
-      "take": "e1-a2-13-18__mas-manalt-A.wav",
+      "take": "e1-a2-13-18__mas-manalt-C.wav",
       "device_copy": false,
-      "dry": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-13-18__mas-manalt-A.wav",
+      "dry": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-13-18__mas-manalt-C.wav",
       "reused_from": null
      },
      "kokoro": {
@@ -1904,7 +1904,7 @@
      "until": null
     }
    ],
-   "reelDur": 6.15,
+   "reelDur": 5.6,
    "fx": [],
    "sounds": [
     {
@@ -2546,38 +2546,38 @@
      "who": "mas",
      "text": "which one am i?",
      "t": 3.31,
-     "dur": 1.06,
-     "audio": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-15-04__mas-manalt-A.wav",
-     "in": 0.43,
+     "dur": 0.98,
+     "audio": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-15-04__mas-manalt-C.wav",
+     "in": 0.4,
      "words": [
       [
        "Which",
        -0.02,
-       0.245
+       0.229
       ],
       [
        "one",
-       0.326,
-       0.524
+       0.31,
+       0.472
       ],
       [
        "am",
-       0.547,
-       0.675
+       0.507,
+       0.635
       ],
       [
        "i",
-       0.814,
-       0.965
+       0.728,
+       0.856
       ]
      ],
      "tag": "",
      "cut": false,
-     "voice": "ElevenLabs library voice 'Giovanni - Tranquil, Clever and Educated' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.86",
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
      "el": {
-      "take": "e1-a2-15-04__mas-manalt-A.wav",
+      "take": "e1-a2-15-04__mas-manalt-C.wav",
       "device_copy": false,
-      "dry": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-15-04__mas-manalt-A.wav",
+      "dry": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-15-04__mas-manalt-C.wav",
       "reused_from": null
      },
      "kokoro": {
@@ -2591,7 +2591,7 @@
      "id": "e1-a2-15-05",
      "who": "sucram",
      "text": "Most of them.",
-     "t": 4.82,
+     "t": 4.74,
      "dur": 0.69,
      "audio": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-15-05__sucram-A.wav",
      "in": 0.37,
@@ -2641,7 +2641,7 @@
      "until": 2.449
     }
    ],
-   "reelDur": 6.003333,
+   "reelDur": 5.923333,
    "fx": [],
    "shotId": "15.04",
    "cont": true,
@@ -2838,83 +2838,83 @@
      "who": "mas",
      "text": "\"gtp-4 and other systems like it are good at doing tasks, not jobs.\"",
      "t": 0.405,
-     "dur": 7.13,
-     "audio": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-15-07__mas-manalt-A.wav",
-     "in": 0.41,
+     "dur": 5.89,
+     "audio": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-15-07__mas-manalt-C.wav",
+     "in": 0.35,
      "words": [
       [
        "Gtp-4",
-       -0.02,
-       1.066
+       0.0,
+       1.405
       ],
       [
        "and",
-       1.658,
-       1.914
+       1.625,
+       1.858
       ],
       [
        "other",
-       1.995,
-       2.262
+       1.927,
+       2.125
       ],
       [
        "systems",
-       2.332,
-       2.866
+       2.194,
+       2.647
       ],
       [
        "like",
-       2.935,
-       3.214
+       2.728,
+       2.984
       ],
       [
        "it",
-       3.272,
-       3.446
+       3.03,
+       3.111
       ],
       [
        "are",
-       3.725,
-       3.957
+       3.146,
+       3.262
       ],
       [
        "good",
-       4.038,
-       4.271
+       3.309,
+       3.471
       ],
       [
        "at",
-       4.329,
-       4.445
+       3.506,
+       3.564
       ],
       [
        "doing",
-       4.526,
-       4.863
+       3.611,
+       3.855
       ],
       [
        "tasks",
-       4.932,
-       5.559
+       3.924,
+       4.598
       ],
       [
        "not",
-       5.931,
-       6.175
+       4.899,
+       5.155
       ],
       [
        "jobs",
-       6.279,
-       6.778
+       5.224,
+       5.817
       ]
      ],
      "tag": "",
      "cut": false,
-     "voice": "ElevenLabs library voice 'Giovanni - Tranquil, Clever and Educated' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.86",
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
      "el": {
-      "take": "e1-a2-15-07__mas-manalt-A.wav",
+      "take": "e1-a2-15-07__mas-manalt-C.wav",
       "device_copy": false,
-      "dry": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-15-07__mas-manalt-A.wav",
+      "dry": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-15-07__mas-manalt-C.wav",
       "reused_from": null
      },
      "kokoro": {
@@ -2926,7 +2926,7 @@
     }
    ],
    "onscreen": [],
-   "reelDur": 7.992,
+   "reelDur": 6.752,
    "fx": [],
    "fg": {
     "id": "mas",
@@ -3123,43 +3123,43 @@
      "who": "mas",
      "text": "\"i love my current job.\"",
      "t": 0.3,
-     "dur": 1.59,
-     "audio": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-15-11__mas-manalt-A.wav",
-     "in": 0.43,
+     "dur": 1.48,
+     "audio": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-15-11__mas-manalt-C.wav",
+     "in": 0.38,
      "words": [
       [
        "I",
        -0.02,
-       0.048
+       0.074
       ],
       [
        "love",
-       0.141,
-       0.361
+       0.202,
+       0.411
       ],
       [
        "my",
-       0.419,
-       0.489
+       0.458,
+       0.562
       ],
       [
        "current",
-       0.57,
-       0.86
+       0.632,
+       0.957
       ],
       [
        "job",
-       0.918,
-       1.255
+       1.015,
+       1.41
       ]
      ],
      "tag": "",
      "cut": false,
-     "voice": "ElevenLabs library voice 'Giovanni - Tranquil, Clever and Educated' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.86",
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
      "el": {
-      "take": "e1-a2-15-11__mas-manalt-A.wav",
+      "take": "e1-a2-15-11__mas-manalt-C.wav",
       "device_copy": false,
-      "dry": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-15-11__mas-manalt-A.wav",
+      "dry": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-15-11__mas-manalt-C.wav",
       "reused_from": null
      },
      "kokoro": {
@@ -3173,7 +3173,7 @@
      "id": "e1-a2-15-12",
      "who": "senator",
      "text": "You love it. Do you make a lot of money doing it?",
-     "t": 2.49,
+     "t": 2.38,
      "dur": 2.67,
      "audio": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-15-12__a-senator-A.wav",
      "in": 0.4,
@@ -3257,12 +3257,12 @@
     }
    ],
    "onscreen": [],
-   "reelDur": 5.5,
+   "reelDur": 5.39,
    "fx": [],
    "sounds": [
     {
      "name": "typing_soft",
-     "at": 1.99,
+     "at": 1.88,
      "gain": -26
     }
    ],
@@ -3472,48 +3472,48 @@
      "who": "mas",
      "text": "\"…i have no equity in nopeai.\"",
      "t": 2.46,
-     "dur": 2.04,
-     "audio": "audio/ep01/v3-el/ep01/act2/wav/v3-a2-0001__mas-manalt-A.wav",
-     "in": 0.44,
+     "dur": 1.9,
+     "audio": "audio/ep01/v3-el/ep01/act2/wav/v3-a2-0001__mas-manalt-C.wav",
+     "in": 0.37,
      "words": [
       [
        "I",
        -0.02,
-       0.038
+       0.073
       ],
       [
        "have",
-       0.096,
-       0.247
+       0.154,
+       0.317
       ],
       [
        "no",
-       0.27,
-       0.479
+       0.352,
+       0.444
       ],
       [
        "equity",
-       0.618,
-       1.071
+       0.514,
+       0.862
       ],
       [
        "in",
-       1.106,
-       1.164
+       0.909,
+       0.967
       ],
       [
        "nopeai",
-       1.199,
-       1.919
+       1.037,
+       1.803
       ]
      ],
      "tag": "",
      "cut": false,
-     "voice": "ElevenLabs library voice 'Giovanni - Tranquil, Clever and Educated' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.86",
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
      "el": {
-      "take": "v3-a2-0001__mas-manalt-A.wav",
+      "take": "v3-a2-0001__mas-manalt-C.wav",
       "device_copy": false,
-      "dry": "audio/ep01/v3-el/ep01/act2/wav/v3-a2-0001__mas-manalt-A.wav",
+      "dry": "audio/ep01/v3-el/ep01/act2/wav/v3-a2-0001__mas-manalt-C.wav",
       "reused_from": null
      },
      "kokoro": {
@@ -3527,7 +3527,7 @@
      "id": "e1-a2-15-15",
      "who": "senator",
      "text": "Is there anything you'd like this committee to do?",
-     "t": 5.4,
+     "t": 5.26,
      "dur": 2.25,
      "audio": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-15-15__a-senator-A.wav",
      "in": 0.42,
@@ -3596,7 +3596,7 @@
     }
    ],
    "onscreen": [],
-   "reelDur": 8.0,
+   "reelDur": 7.86,
    "fx": [],
    "sounds": [
     {
@@ -4137,33 +4137,33 @@
      "who": "mas",
      "text": "we'll read it.",
      "t": 6.71,
-     "dur": 0.7,
-     "audio": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-17-03__mas-manalt-A.wav",
-     "in": 0.46,
+     "dur": 0.84,
+     "audio": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-17-03__mas-manalt-C.wav",
+     "in": 0.41,
      "words": [
       [
        "We'll",
        -0.02,
-       0.169
+       0.23
       ],
       [
        "read",
-       0.238,
-       0.459
+       0.3,
+       0.52
       ],
       [
        "it",
-       0.517,
-       0.621
+       0.579,
+       0.753
       ]
      ],
      "tag": "",
      "cut": false,
-     "voice": "ElevenLabs library voice 'Giovanni - Tranquil, Clever and Educated' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.86",
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
      "el": {
-      "take": "e1-a2-17-03__mas-manalt-A.wav",
+      "take": "e1-a2-17-03__mas-manalt-C.wav",
       "device_copy": false,
-      "dry": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-17-03__mas-manalt-A.wav",
+      "dry": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-17-03__mas-manalt-C.wav",
       "reused_from": null
      },
      "kokoro": {
@@ -4177,7 +4177,7 @@
      "id": "e1-a2-17-04",
      "who": "mario",
      "text": "It has an appendix.",
-     "t": 7.91,
+     "t": 8.05,
      "dur": 1.21,
      "audio": "audio/ep01/v3-el/ep01/act2/wav/e1-a2-17-04__mario-A.wav",
      "in": 0.41,
@@ -4221,7 +4221,7 @@
     }
    ],
    "onscreen": [],
-   "reelDur": 9.805,
+   "reelDur": 9.945,
    "fx": [],
    "sounds": [
     {
@@ -4236,7 +4236,7 @@
     },
     {
      "name": "pen_scribble_short",
-     "at": 8.386,
+     "at": 8.526,
      "gain": -34
     }
    ],
@@ -4783,8 +4783,8 @@
  "_el_retimed": {
   "rule": "gaps between lines, before the first and after the last kept; J-cut leads kept; beats change only by the takes' lengths; timed items follow the words",
   "seconds_kokoro": 204.739,
-  "seconds_el": 197.189,
-  "delta_s": -7.55,
+  "seconds_el": 195.939,
+  "delta_s": -8.8,
   "beats_changed": 22,
   "missing_takes": []
  }
