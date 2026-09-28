@@ -221,7 +221,8 @@ export const drawDuelLeft = (b: Buf, f: number, st: DuelLeftState = {}) => {
 export interface DuelRightState {
   /** the launch light: 0 off (CLOD unlit, waiting) · 1 on (it slammed on and stays on) */
   light?: 0 | 1;
-  clod?: Partial<ClodState>;
+  /** CLOD's state; `hidden`: the pane draws no pixel CLOD (the 3D clay insert stands on the plinth instead) */
+  clod?: Partial<ClodState> & {hidden?: boolean};
   /** Mario: dictating (finger up) · writing · looking up at the split line · reading his phone · the empty spindle */
   mario?: 'dictate' | 'write' | 'lookup' | 'phone' | 'spindle';
   /** the first scroll's length (px of paper shown), and the second, longer one unrolling (phrase 4: 0..1 of its run) */
@@ -249,7 +250,7 @@ export const drawDuelRight = (b: Buf, f: number, st: DuelRightState = {}) => {
   }
   // the plinth, and CLOD on it
   for (let y = ky; y < ky + 17; y++) for (let x = kx - 20; x <= kx + 20; x++) { const top = y < ky + 3 && Math.hypot((x - kx) / 20, (y - ky - 1.5) / 3) < 1; const side = y >= ky + 1 && Math.abs(x - kx) <= 20; if (top) W.set(x, y, lit ? PAL.G6 : PAL.G3); else if (side) W.set(x, y, x < kx - 12 ? (lit ? PAL.G5 : PAL.G2) : lit ? PAL.G4 : PAL.G1); }
-  drawClod(W, kx, ky + 1, {lit: lit ? 1 : 0, wheel: Math.floor(f / 5), pose: lit ? 'up' : 'wait', ...st.clod});
+  if (!st.clod?.hidden) drawClod(W, kx, ky + 1, {lit: lit ? 1 : 0, wheel: Math.floor(f / 5), pose: lit ? 'up' : 'wait', ...st.clod});
   // Mario beside it, facing the split line (frame left): his poses from the cast rig
   const pose: MarioPose = {...MARIO_BASE};
   const m = st.mario ?? 'dictate';

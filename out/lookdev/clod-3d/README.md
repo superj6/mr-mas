@@ -1,5 +1,11 @@
 # CLOD in 3D: look-development test (2026-09-28)
 
+> **Approved and finalized:** the final insert is `out/ep01/full-v3/inserts/clod-v35-el/`, on the EL-timed lock and
+> delivered as RGBA layers for the episode's own renderer. It keeps this test's look and changes only the expression.
+> The "O" mouth became the open smile, and there are new warm (half-moon) eyes and longer happy-shut eyes on the nods.
+> That change lives in the shared rig and in `pane_insert.py`. Re-running this test's steps now renders the new mouth,
+> and in the pane the new eyes too. The stills and clips in this folder are the test as it was.
+
 The showrunner asked: "also can we try replacing claude with an actual 3d rendering". This folder is that test: CLOD
 as a real 3D clay puppet rendered in Blender 4.5.3 (Cycles, CPU), under the bible's Claymation rules
 (style-range.md, "Claymation"; 1.A "CLOD under its launch light"). **It is a test only.** Nothing in the episode

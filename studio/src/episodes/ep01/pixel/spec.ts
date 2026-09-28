@@ -66,6 +66,11 @@ export interface Layout {
   exit?: Transition;
   /** it may return GLYPH layers: the Node renderer probes its frames and splices the browser host's frames there */
   glyph?: boolean;
+  /** RGBA frames made outside the pipeline (act1 11.04: the 3D claymation CLOD), laid over this shot's picture and
+   *  review frame, room area only, by the Node renderer (tools/render.ts; the Remotion host does not draw them).
+   *  `manifest` (repo-relative) lists the layer PNGs (1920 x 1080, straight alpha, bottom first) per shot frame k; the
+   *  renderer refuses it, loudly, when its shot length or its check line's start differ from this lock's */
+  overlay?: {manifest: string};
 }
 
 export interface SegmentOptions {

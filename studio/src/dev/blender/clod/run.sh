@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
-# MR. MAS: CLOD look-dev (a test, not the episode). Re-runs every deliverable into out/lookdev/clod-3d/.
+# MR. MAS: CLOD in 3D. The look-dev test's deliverables (out/lookdev/clod-3d/) and the final insert for Ep1 11.04
+# (out/ep01/full-v3/inserts/clod-v35-el/, steps final-*).
 # From the repo root:   studio/src/dev/blender/clod/run.sh [turnaround] [clip] [pane] [plates] [composite] [clean]
-# (no steps = all of them, in that order). Every render goes through ops/heavy.sh, one at a time.
+#                       studio/src/dev/blender/clod/run.sh final-lock final-pane final-layers final-preview
+# (no steps = the test's five, in that order). Every render goes through ops/heavy.sh, one at a time.
 # Env: BLENDER (default ~/Downloads/blender-4.5.3-linux-x64/blender), LOCK (default the full-v3 act1 lock),
 #      SHOT (11.04), SAMPLES_STILL (128), SAMPLES_CLIP (48), SAMPLES_PANE (64).
 # Small timing logs are kept in out/lookdev/clod-3d/logs/; 'clean' deletes out/lookdev/clod-3d/tmp/ entirely.
@@ -20,6 +22,13 @@ LOCK=${LOCK:-show/episodes/ep01/production/full-v3/lock/act1.json}
 SHOT=${SHOT:-11.04}
 TAKE=audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-11-02.wav      # CLOD's Kokoro take, "You're absolutely right!"
 MIX=out/ep01/full-v3/picture/act1-v34-stick-mix.wav              # the act's temp track, as muxed into act1.mp4
+# the final insert (steps final-*): the final film's EL-timed Act One, its deliverable folder and work dir
+FTL=${FINAL_TIMELINE:-show/reel/ep01-v35-el/ep01-v35-el-act1.json}
+FKEY=${FINAL_KEY:-ep01-v35-el-stick}
+FIN=${FINAL_OUT:-out/ep01/full-v3/inserts/clod-v35-el}
+FW=${FINAL_WORK:-$OUT/tmp/final}; case $FW in /*) ;; *) FW=$REPO/$FW ;; esac
+FBED=${FINAL_BED:-audio/reel/ep01-v35-el/act1-bed.wav}
+FTAKES="audio/ep01/act1/dialogue/lines-fast-v1.json audio/ep01/v3/act1/lines-v3.json audio/ep01/v31/act1/lines-v31.json audio/ep01/v32/act1/lines-v32.json audio/ep01/v34/act1/lines-v34.json audio/ep01/v35/act1/lines-v35.json audio/ep01/v3-el/ep01-v35/act1/lines-A.json"
 mkdir -p "$W" "$OUT/logs"
 steps=("$@")
 [ ${#steps[@]} -eq 0 ] && steps=(turnaround clip pane plates composite)
@@ -69,6 +78,39 @@ for step in "${steps[@]}"; do
     rm -f $W/comp/c*.png ;;
   clean)
     rm -rf "$OUT/tmp" ;;
+  # ---------------------------------------------------------------- THE FINAL INSERT (2026-09-28): the EL-timed lock
+  # final-lock: the lock for the final film's Act One (lock.py on the EL timeline, written to the work dir, not the
+  #   episode's lock/ or data.ts) · final-pane: the clay and shadow drawings (Blender, ~9 s a drawing) ·
+  # final-layers: 1080p RGBA layers + manifest.json into $FIN · final-preview: the episode's own renderer with the
+  #   overlay declared at bundle time (preview-build.mjs): a sheet, a before/after pair and a short MP4 into $FIN/preview
+  final-lock)
+    mkdir -p "$FW"
+    python3 studio/src/episodes/ep01/pixel/tools/lock.py --seg act1 --timeline "$FTL" $(for t in $FTAKES; do echo --takes "$t"; done) \
+      --out-json "$FW/lock.json" --out-ts "$FW/data.ts" --quiet ;;
+  final-pane)
+    rm -rf "$FW/pane"
+    $H "$B" -b --factory-startup --python $HERE/pane_insert.py -- --outdir "$FW/pane" --lock "$FW/lock.json" --shot 11.04 \
+      --samples "${SAMPLES_PANE:-64}" ;;
+  final-layers)
+    rm -rf "$FIN/clay" "$FIN/shadow"; mkdir -p "$FIN/logs"
+    $H "$PY" $HERE/insert_layers.py --pane "$FW/pane" --out "$FIN" --seg act1 --key "$FKEY" --timeline "$FTL"
+    cp "$FW/pane/pane-log.json" "$FIN/logs/render-log.json"
+    rm -f "$FW"/pane/*.png ;;
+  final-preview)
+    read -r F0 F1 < <(python3 -c "import json;s=[x for x in json.load(open('$FW/lock.json'))['shots'] if x['id']=='11.04'][0];print(s['s'],s['e'])")
+    PA=$((F0 - 50)); PB=$((F1 + 24)); mkdir -p "$FIN/preview" "$FW/stills"
+    (cd studio && node src/dev/blender/clod/preview-build.mjs "$FW/data.ts" "$FW/r-act1-preview.cjs" "$FIN/manifest.json")
+    PICK="$((F0 - 6)) $((F0 + 8)) $((F0 + 12)) $((F0 + 16)) $((F0 + 26)) $((F0 + 44)) $((F0 + 86)) $((F0 + 150))"
+    (cd studio && $H node "$FW/r-act1-preview.cjs" picstills "$FW/stills" $PICK $((F0 + 20)) > /dev/null \
+      && $H node "$FW/r-act1-preview.cjs" picture "$FW/preview-silent.mp4" --from $PA --to $PB --jobs 1 --no-audio)
+    "$PY" $HERE/preview_mix.py --lock "$FW/lock.json" --bed "$FBED" --from $PA --to $PB --out "$FW/preview-mix.wav"
+    $H env LD_LIBRARY_PATH=$FFD "$FFD/ffmpeg" -hide_banner -loglevel error -y -i "$FW/preview-silent.mp4" -i "$FW/preview-mix.wav" \
+      -map 0:v -map 1:a -c:v copy -c:a aac -b:a 192k -movflags +faststart "$FIN/preview/clod-v35-el-in-act1-$PA-$PB.mp4"
+    "$PY" $HERE/preview_sheet.py --stills "$FW/stills" --pick "$(echo $PICK | tr ' ' ',')" --out "$FIN/preview/clod-v35-el-sheet.png"
+    "$PY" $HERE/preview_sheet.py --before $OUT/clod-in-episode-f7326.png --after "$(ls "$FW"/stills/p$(printf %05d $((F0 + 20)))-*.png)" \
+      --out "$FIN/preview/expression-before-after.png"
+    cp "$(ls "$FW"/stills/p$(printf %05d $((F0 + 12)))-*.png)" "$FIN/preview/clod-v35-el-f$((F0 + 12)).png"
+    rm -rf "$FW/stills" "$FW"/preview-* "$FW"/*.srt "$FW"/*.render.json ;;
   *) echo "unknown step $step"; exit 2 ;;
   esac
 done

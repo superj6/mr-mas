@@ -1013,6 +1013,7 @@ L.add('11.03', {
   },
 });
 L.add('11.04', {
+  overlay: {manifest: 'out/ep01/full-v3/inserts/clod-v35-el/manifest.json'},   // the 3D clay CLOD (v3.5 final, EL lock), launch light to the cut
   st: 'SPLIT-DUEL drawDuelSplit phrase 2 {left.caption: false}: RIGHT the launch light slams on and CLOD bows ("You\'re absolutely right!"), then rises; Mario looks up at the split line (the same day), "Addendum.", writes · LEFT, GTP-4 goes out on HIS click: the pane cuts in to 5.08\'s insert (extras.paneButton: the beige button, research preview; his finger comes in with no hover in 5.08\'s held steps; touch, the click, the LED), and on the click the pane is back in the bullpen with the napkin swapped into a working website, no caption, the room cheering in two held drawings on the cheer · v3.5 (left pane): the users line on the bullpen glass jumps on the click (Gerg\'s green, three held strokes off the glass\'s top); Alyi\'s reflection in the glass leans in toward the website (his awe, before his distance at 12.05); the bar-exam card pops over the website on its mark, SIMULATED BAR EXAM · TOP 10% · HOLD on Mario writing (2 s longer)',
   marks: {clod: ['on', 'e1-a1-11-02', -2], clodEnd: ['end', 'e1-a1-11-02', 0], add: ['on', 'e1-a1-11-03', 0], cheer: ['snd', 'synth:cheer', 1, 0], bar: ['txt', 'SIMULATED BAR EXAM', 'at', 0]},
   draw: (fb, k, sh, f) => {
@@ -1024,7 +1025,7 @@ L.add('11.04', {
     const clk = site - 2, a0 = clk - 16, in0 = a0 - 8, out = clk + 4;
     drawDuelSplit(fb, f, {
       left: {gerg: k < out ? 'glance' : 'type', screen: k < out ? 'napkin' : k < out + 6 ? 'site1' : 'site2', cheer, caption: false},
-      right: {light: k >= c0 ? 1 : 0, clod: k >= c0 && k < c1 + 4 ? {pose: 'bow', smile: true} : {}, mario, scroll: 50 + Math.floor(Math.max(0, k - add) / 10), f},
+      right: {light: k >= c0 ? 1 : 0, clod: k >= c0 ? {hidden: true} : {}, mario, scroll: 50 + Math.floor(Math.max(0, k - add) / 10), f},
     });
     if (k >= in0 && k < out) {
       const steps: Array<[number, number, number]> = [[in0, -400, -300], [a0, -96, -64], [a0 + 4, -48, -32], [a0 + 8, -14, -9], [a0 + 12, 0, 0]];

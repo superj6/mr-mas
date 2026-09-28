@@ -37,7 +37,43 @@ line = [l for l in shot['lines'] if l['id'] == A['line']][0]
 others = [l for l in shot['lines'] if l['who'] == 'MARIO']
 ls, le = line['s'], line['e']
 words = {w[0].lower().strip('!.,'): (ls + w[1], ls + w[2]) for w in line['words']}
-MOUTH = [(ls + m[0], m[1]) for m in line['mouth']]
+
+
+def take_mouth(path, fs, s, e, open_at=0.20):
+    """a mouth track from the take itself, for a lock whose take has no visemes (the ElevenLabs takes): per frame of
+    the line, the take's RMS against the line's loudest frame; open (the open smile) above `open_at`, else rest"""
+    import wave
+    import numpy as np
+    w = wave.open(path)
+    sr, sw, ch, n = w.getframerate(), w.getsampwidth(), w.getnchannels(), w.getnframes()
+    raw = w.readframes(n)
+    if sw == 3:
+        b = np.frombuffer(raw, np.uint8).reshape(-1, 3).astype(np.int32)
+        x = b[:, 0] | (b[:, 1] << 8) | (b[:, 2] << 16)
+        x = np.where(x >= 1 << 23, x - (1 << 24), x) / float(1 << 23)
+    else:
+        x = np.frombuffer(raw, '<i2') / 32768.0
+    x = x.reshape(-1, ch).mean(axis=1)
+    rms = []
+    for k in range(s, e):
+        a, b2 = int((k - fs) * sr / 24), int((k + 1 - fs) * sr / 24)
+        seg = x[max(0, a):max(0, b2)]
+        rms.append(float(np.sqrt(np.mean(seg * seg))) if len(seg) else 0.0)
+    top = max(rms) or 1.0
+    out = [(s - 1, 'rest')]
+    for k, r in zip(range(s, e), rms):
+        shape = 'A' if r / top > open_at else 'rest'
+        if shape != out[-1][1]:
+            out.append((k, shape))
+    out.append((e, 'rest'))
+    return out
+
+
+TAKE = next((l.get('file') for l in lock.get('lines', []) if l.get('id') == A['line']), None)
+if line.get('mouth'):
+    MOUTH, MOUTH_SRC = [(ls + m[0], m[1]) for m in line['mouth']], 'the lock (the take\'s visemes)'
+else:
+    MOUTH, MOUTH_SRC = take_mouth(os.path.join(REPO, TAKE), line['fs'], ls, le), f'the take\'s loudness ({TAKE})'
 k_on = ls - 2                    # the layout's own mark: the launch light slams on 2 frames before the line
 add = others[0]['s'] if others else le + 35
 cheer = next((sp['k'] for sp in shot.get('spots', []) if 'cheer' in sp['name']), add + 38)
@@ -68,7 +104,11 @@ TR = AC.Track([
     (cheer + 52, {'turn': 4.0, 'head': 1.0, 'tilt': 3.0}),
     (K_END, {'turn': 4.0}),
 ])
-HAPPY = [(ab + 1, ab + 7), (rt + 2, rt + 8), (add + 12, add + 16), (cheer + 64, cheer + 66)]
+# the final's expression (2026-09-28): happy-shut through each nod and its hold (the test shut them for the squash
+# only; with the head pitched forward, open eyes read as a frown), warm eyes (the smiling open eye) through the rest of
+# the line, its rise and the agreement with "Addendum."; the tall dots only when it looks up at the split and at the cheer
+HAPPY = [(ab + 1, rt - 2), (rt + 2, le + 4), (add + 12, add + 18), (cheer + 64, cheer + 66)]
+WARM = [(k_on, le + 16), (add - 6, add + 24)]
 steps = list(range(k_on, K_END, 2))
 BOIL = R.boil_order(len(steps), seed=13)
 WHEEL, a = [], 0.0
@@ -79,7 +119,7 @@ for k in steps:
 
 def pose_at(i, k):
     d = TR.at(k)
-    eyes = 'happy' if any(x <= k < y for x, y in HAPPY) else 'open'
+    eyes = 'happy' if any(x <= k < y for x, y in HAPPY) else 'warm' if any(x <= k < y for x, y in WARM) else 'open'
     return R.Pose(bow=d['bow'], head=d['head'], turn=d['turn'], tilt=d['tilt'], squash=d['squash'],
                   mouth=R.mouth_of(AC.mouth_at(MOUTH, k)), eyes=eyes, boil=BOIL[i], wheel=WHEEL[i],
                   jitter=tuple(x * 0.001 for x in AC.jitter(AC.PUPPET_JITTER, i)))
@@ -155,7 +195,9 @@ p0 = world_to_camera_view(sc, cam, Vector((0, 0, 0)))
 p1 = world_to_camera_view(sc, cam, Vector((0, 0, R.H)))
 meta = {'crop': CROP, 'foot_px': [p0.x * 1920, (1 - p0.y) * 1080], 'top_px': [p1.x * 1920, (1 - p1.y) * 1080],
         'shot': A['shot'], 'shot_start': shot['s'], 'k_on': k_on, 'k_end': K_END, 'marks': {'ls': ls, 'le': le, 'ab': ab, 'rt': rt, 'add': add, 'cheer': cheer},
-        'mouth': MOUTH, 'engine': eid, 'samples': A['samples'], 'drawings': []}
+        'mouth': MOUTH, 'mouth_src': MOUTH_SRC, 'take': TAKE, 'line': A['line'], 'line_se': [ls, le], 'shot_len': K_END,
+        'lock': A['lock'], 'lock_timeline': lock.get('meta', {}).get('timeline'), 'warm': WARM, 'happy': HAPPY,
+        'engine': eid, 'samples': A['samples'], 'shadow_samples': A['shadow_samples'], 'key_w': A['key'], 'drawings': []}
 print('[clod] foot at', meta['foot_px'], 'top at', meta['top_px'], flush=True)
 T.mark('scene')
 

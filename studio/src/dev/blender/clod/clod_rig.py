@@ -635,6 +635,17 @@ def _conformed_blob(name, x0, z0, shape_fn, seg=40, rings=18, embed=0.0008):
     return bpy.data.objects.new(name, me)
 
 
+def _warm_eye(q, a=0.0056, top=0.0060, bot=0.0024, lift=0.0018, c=0.0002):
+    """the warm eye's piece: a round top over a lower lid pushed up flat by the cheeks, its corners round (a pointed
+    crescent turned into a scowling wedge when the head turned). Each column of the unit sphere (its x) maps linearly
+    between the lid c - bot s + lift (1 - x^2) and the dome c + top s (s = sqrt(1 - x^2)), so the piece never folds"""
+    x = max(-1.0, min(1.0, q.x))
+    s = math.sqrt(max(1e-9, 1 - x * x))
+    t = 0.5 * (max(-1.0, min(1.0, q.z / s)) + 1)
+    lo, hi = c - bot * s + lift * (1 - x * x), c + top * s
+    return (x * a, lo + t * (hi - lo), _hd(q.y, 0.0032))
+
+
 def _arc_tube(name, x0, z0, pts2d, r, embed=0.0012, ring=16):
     """a thin roll of clay laid along a 2D path on the face (u, v offsets from x0, z0)"""
     path = []
@@ -845,6 +856,13 @@ def build(collection_name='CLOD', body_res=150, seed=1):
         _link(coll, a)
         _skin(a, arm, anchor_z=ez_)
         c.eyes.setdefault('happy', []).append(a)
+        # warm (the final, 2026-09-28): a half-moon, the dot's round top over a lower lid pushed up flat by the cheeks.
+        # An open, smiling eye: eager, where the tall dot read startled when the head turned
+        w = _conformed_blob(f'clod_eyeWarm{side}', sx * 0.0225, ez_, _warm_eye, embed=0.0003)
+        w.data.materials.append(MAT['dark'])
+        _link(coll, w)
+        _skin(w, arm, anchor_z=ez_)
+        c.eyes.setdefault('warm', []).append(w)
     mz = 0.2105
     sm = _arc_tube('clod_mouthSmile', 0, mz, [(u, 0.0052 * (u / 0.0135) ** 2 - 0.0004) for u in np.linspace(-0.0135, 0.0135, 9)], 0.0021)
     mo = _conformed_blob('clod_mouthO', 0, mz - 0.0012, lambda q: (q.x * 0.0058, q.z * 0.0074, _hd(q.y, 0.0016)), embed=0.0003)
@@ -1016,5 +1034,6 @@ def boil_order(n, seed=7):
 
 
 def mouth_of(shape):
-    """the take's mouth shapes to three replacement mouths"""
-    return {'rest': 'smile', 'M': 'smile', 'O': 'O', 'E': 'open', 'A': 'open'}.get(shape, 'smile')
+    """the take's mouth shapes to the replacement mouths. The final (2026-09-28): every open shape is the open smile, so
+    "You're absolutely right!" reads eager and warm; the round "O" read startled when it turned (the piece is kept)"""
+    return {'rest': 'smile', 'M': 'smile', 'O': 'open', 'E': 'open', 'A': 'open'}.get(shape, 'smile')

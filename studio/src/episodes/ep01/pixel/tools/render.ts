@@ -5,6 +5,9 @@
 // track (the lock's mix, or --mix). Frames only a browser can draw (GLYPH tokens; a segment's browser frames, e.g. Act
 // Four's J1) are spliced in from the Remotion host's own PNGs (`glyphs`, then GLYPH_DIR); a GLYPH frame with no PNG
 // falls back to v4's 2-pixel marks and is reported. Shots with no layout render as the host's STAND-IN, loudly.
+// A layout may declare an `overlay` (spec.ts): RGBA frames made outside the pipeline (act1 11.04's 3D claymation CLOD),
+// laid over the picture and the review frame in the room area after everything else; shots that declare none are
+// untouched. The overlay stage refuses a manifest made for another lock, and reports any refusal or missing file.
 //
 // Build one renderer per segment (from studio/):   node src/episodes/ep01/pixel/tools/build.mjs <seg> $S/r-<seg>.cjs
 // Run every heavy mode through ops/heavy.sh (at most 2 heavy jobs machine-wide, low priority):
@@ -31,7 +34,7 @@ import * as zlib from 'zlib';
 import * as crypto from 'crypto';
 import {Buf} from '../../../../shared/pixel/px';
 import {PAL} from '../../../../shared/pixel/palette';
-import {prepare, native, picture, review, browserFrames, glyphFrames, srt, tcOf, wideVo, PIC_W, PIC_H, ANIM_W, ANIM_H} from '../frame';
+import {prepare, native, picture, review, browserFrames, glyphFrames, srt, tcOf, wideVo, PIC_W, PIC_H, ANIM_W, ANIM_H, RH} from '../frame';
 import {otext} from '../text';
 import {drawHeadSlate} from '../standin';
 
@@ -55,8 +58,8 @@ export const writePNG = (file, b, scale = 1) => {
   fs.mkdirSync(path.dirname(file), {recursive: true});
   fs.writeFileSync(file, Buffer.concat([Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]), chunk('IHDR', h), chunk('IDAT', zlib.deflateSync(raw, {level: 6})), chunk('IEND', Buffer.alloc(0))]));
 };
-/** 8-bit RGB / RGBA PNG (non-interlaced, as Remotion writes them) -> Buf */
-export const readPNG = (file) => {
+/** 8-bit RGB / RGBA PNG (non-interlaced, as Remotion and Blender write them) -> its pixels, unfiltered */
+const decodePNG = (file) => {
   const d = fs.readFileSync(file);
   let o = 8, W = 0, H = 0, ct = 0; const idat = [];
   while (o < d.length) {
@@ -69,10 +72,10 @@ export const readPNG = (file) => {
   const bpp = ct === 6 ? 4 : ct === 2 ? 3 : 0;
   if (!bpp) throw new Error(`${file}: colour type ${ct}`);
   const raw = zlib.inflateSync(Buffer.concat(idat)), stride = W * bpp;
-  const cur = Buffer.alloc(stride), prev = Buffer.alloc(stride);
-  const b = new Buf(W, H, 0);
+  const px = Buffer.alloc(stride * H), zero = Buffer.alloc(stride);
   for (let y = 0; y < H; y++) {
     const ft = raw[y * (stride + 1)], src = raw.subarray(y * (stride + 1) + 1, (y + 1) * (stride + 1));
+    const cur = px.subarray(y * stride, (y + 1) * stride), prev = y ? px.subarray((y - 1) * stride, y * stride) : zero;
     for (let i = 0; i < stride; i++) {
       const a = i >= bpp ? cur[i - bpp] : 0, up = prev[i], c = i >= bpp ? prev[i - bpp] : 0;
       let v = src[i];
@@ -80,10 +83,23 @@ export const readPNG = (file) => {
       else if (ft === 4) { const p = a + up - c, pa = Math.abs(p - a), pb = Math.abs(p - up), pc = Math.abs(p - c); v += pa <= pb && pa <= pc ? a : pb <= pc ? up : c; }
       cur[i] = v & 255;
     }
-    for (let x = 0; x < W; x++) b.c[y * W + x] = (cur[x * bpp] << 16) | (cur[x * bpp + 1] << 8) | cur[x * bpp + 2];
-    cur.copy(prev);
   }
+  return {W, H, bpp, px};
+};
+/** 8-bit RGB / RGBA PNG -> Buf (alpha dropped) */
+export const readPNG = (file) => {
+  const {W, H, bpp, px} = decodePNG(file);
+  const b = new Buf(W, H, 0);
+  for (let i = 0, o = 0; i < W * H; i++, o += bpp) b.c[i] = (px[o] << 16) | (px[o + 1] << 8) | px[o + 2];
   return b;
+};
+/** 8-bit RGBA PNG -> {w, h, px (RGBA bytes, straight alpha), box: [x0, y0, x1, y1] of its non-zero alpha} */
+export const readRGBA = (file) => {
+  const {W, H, bpp, px} = decodePNG(file);
+  if (bpp !== 4) throw new Error(`${file}: an overlay layer must be RGBA`);
+  let x0 = W, y0 = H, x1 = 0, y1 = 0;
+  for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) if (px[(y * W + x) * 4 + 3]) { if (x < x0) x0 = x; if (x >= x1) x1 = x + 1; if (y < y0) y0 = y; if (y >= y1) y1 = y + 1; }
+  return {w: W, h: H, px, box: x1 > x0 ? [x0, y0, x1, y1] : [0, 0, 0, 0]};
 };
 
 // ------------------------------------------------------------------ the encoder: raw BGRX frames in an AVI stream -> x264
@@ -162,7 +178,56 @@ export const main = (SEGMENT) => {
   const pngOf = (kind, f) => (GLYPH_DIR ? path.join(GLYPH_DIR, kind, `${String(f).padStart(5, '0')}.png`) : '');
   const BROWSER = new Set();
   const spliced = {pic: 0, anim: 0}, marked = [], spliceOff = [], missing = [];
+  // ------------------------------------------------------------------ declared overlays (a layout's `overlay`)
+  const OVL = new Map(), LAYER = new Map(), overlaid = {pic: 0, anim: 0}, overlayMissing = [], overlayRefused = {};
+  /** the shot's overlay: null when its layout declares none; {frames} when accepted; {why} when refused */
+  const overlayOf = (sh) => {
+    const decl = seg.layoutOf(sh)?.overlay;
+    if (!decl) return null;
+    if (OVL.has(sh.id)) return OVL.get(sh.id);
+    const file = path.resolve(REPO, decl.manifest), o = {frames: null, why: ''};
+    try {
+      const m = JSON.parse(fs.readFileSync(file, 'utf8')), len = sh.e - sh.s;
+      const line = m.check?.line ? sh.lines.find((l) => l.id === m.check.line) : null;
+      if (m.shot !== sh.id) o.why = `the manifest is for shot ${m.shot}`;
+      else if (m.shot_len !== len) o.why = `made for a ${m.shot_len}-frame ${sh.id}; this lock's is ${len} frames`;
+      else if (m.check?.line && (!line || line.s !== m.check.s)) o.why = `${m.check.line} starts at k${line?.s ?? '?'} in this lock, k${m.check.s} in the insert`;
+      else o.frames = new Map(m.frames.map((x) => [x.k, x.layers.map((p) => path.resolve(path.dirname(file), p))]));
+    } catch (e) { o.why = String(e?.message ?? e); }
+    if (o.why) { overlayRefused[sh.id] = o.why; process.stderr.write(`OVERLAY REFUSED: ${sh.id} (${decl.manifest}): ${o.why}\n`); }
+    OVL.set(sh.id, o);
+    return o;
+  };
+  /** lay the shot's overlay layers for frame f over `target` (the picture at 4x, 1:1; the review frame at 3x, nearest),
+   *  above the band only; straight alpha, bottom layer first */
+  const overlayInto = (f, kind, target, n) => {
+    const o = overlayOf(n.sh);
+    const layers = o?.frames?.get(n.k);
+    if (!layers) return;
+    const sc = kind === 'pic' ? 4 : 3, T = target.c, TW = target.w;
+    for (const file of layers) {
+      if (!fs.existsSync(file)) { overlayMissing.push(`${f}:${path.basename(file)}`); continue; }
+      let r = LAYER.get(file);
+      if (!r) { if (LAYER.size >= 4) LAYER.clear(); r = readRGBA(file); LAYER.set(file, r); } // on 2s: a drawing serves two frames
+      const [bx0, by0, bx1, by1] = r.box, P = r.px;
+      const ya = Math.floor((by0 * sc) / 4), yb = Math.min(RH * sc, Math.ceil((by1 * sc) / 4)), xa = Math.floor((bx0 * sc) / 4), xb = Math.ceil((bx1 * sc) / 4);
+      for (let y = ya; y < yb; y++) {
+        const sy = sc === 4 ? y : Math.floor((y * 4) / sc);
+        for (let x = xa; x < xb; x++) {
+          const i = (sy * r.w + (sc === 4 ? x : Math.floor((x * 4) / sc))) * 4, a = P[i + 3];
+          if (!a) continue;
+          const t = y * TW + x, d = T[t], b = 255 - a;
+          T[t] = ((((P[i] * a + ((d >> 16) & 255) * b + 127) / 255) | 0) << 16) | ((((P[i + 1] * a + ((d >> 8) & 255) * b + 127) / 255) | 0) << 8) | (((P[i + 2] * a + (d & 255) * b + 127) / 255) | 0);
+        }
+      }
+    }
+    overlaid[kind]++;
+  };
   const frameInto = (f, kind, target, n) => {
+    frameDraw(f, kind, target, n);
+    overlayInto(f, kind, target, n);
+  };
+  const frameDraw = (f, kind, target, n) => {
     const need = n.layers.length > 0 || BROWSER.has(f);
     const png = need && glyphMode === 'splice' ? pngOf(kind, f) : '';
     if (png && fs.existsSync(png)) {
@@ -266,11 +331,13 @@ export const main = (SEGMENT) => {
     fs.rmSync(tmp, {recursive: true, force: true});
     report.seconds = Math.round((Date.now() - t0) / 1000);
     report.ms_per_frame_per_worker = report.segments.length ? +(report.segments.reduce((a, s) => a + s.ms / (s.to - s.from), 0) / report.segments.length).toFixed(2) : null;
-    const sp = report.segments.reduce((a, s) => ({pic: a.pic + s.spliced.pic, anim: a.anim + s.spliced.anim, marked: a.marked.concat(s.marked), off: a.off.concat(s.spliceOff), missing: a.missing.concat(s.missing), failed: {...a.failed, ...s.failed}}), {pic: 0, anim: 0, marked: [], off: [], missing: [], failed: {}});
+    const sp = report.segments.reduce((a, s) => ({pic: a.pic + s.spliced.pic, anim: a.anim + s.spliced.anim, marked: a.marked.concat(s.marked), off: a.off.concat(s.spliceOff), missing: a.missing.concat(s.missing), failed: {...a.failed, ...s.failed},
+      overlaid: {pic: a.overlaid.pic + s.overlaid.pic, anim: a.overlaid.anim + s.overlaid.anim}, overlayMissing: a.overlayMissing.concat(s.overlayMissing), overlayRefused: {...a.overlayRefused, ...s.overlayRefused}}),
+    {pic: 0, anim: 0, marked: [], off: [], missing: [], failed: {}, overlaid: {pic: 0, anim: 0}, overlayMissing: [], overlayRefused: {}});
     report.summary = sp;
     const rep = `${outs.pic ?? outs.anim}.render.json`;
     fs.writeFileSync(rep, JSON.stringify(report, null, 1));
-    console.log(`done in ${report.seconds} s (${report.ms_per_frame_per_worker} ms/f per worker, ${jobs} workers) · browser frames spliced: pic ${sp.pic}, anim ${sp.anim} (off-room mismatches: ${sp.off.length ? sp.off.join(' ') : 'none'}; browser frames with no PNG: ${sp.missing.length}) · GLYPH stand-in marks: ${sp.marked.length} · failed layouts: ${Object.keys(sp.failed).length ? JSON.stringify(sp.failed) : 'none'} · STAND-INS: ${seg.standins.length} · srt ${srtFile} · ${rep}`);
+    console.log(`done in ${report.seconds} s (${report.ms_per_frame_per_worker} ms/f per worker, ${jobs} workers) · browser frames spliced: pic ${sp.pic}, anim ${sp.anim} (off-room mismatches: ${sp.off.length ? sp.off.join(' ') : 'none'}; browser frames with no PNG: ${sp.missing.length}) · GLYPH stand-in marks: ${sp.marked.length} · failed layouts: ${Object.keys(sp.failed).length ? JSON.stringify(sp.failed) : 'none'} · STAND-INS: ${seg.standins.length}${sp.overlaid.pic + sp.overlaid.anim || sp.overlayMissing.length || Object.keys(sp.overlayRefused).length ? ` · OVERLAYS: pic ${sp.overlaid.pic}, anim ${sp.overlaid.anim} frames; missing files ${sp.overlayMissing.length}; refused ${JSON.stringify(sp.overlayRefused)}` : ''} · srt ${srtFile} · ${rep}`);
     loud();
   };
 
@@ -290,7 +357,7 @@ export const main = (SEGMENT) => {
       const [a, p, from, to] = pos;
       const outs = {anim: a !== '-' ? a : null, pic: p !== '-' ? p : null};
       const r = await encodeRange(outs, Number(from), Number(to));
-      fs.writeFileSync(path.join(path.dirname(a !== '-' ? a : p), `seg-${from}.json`), JSON.stringify({from: Number(from), to: Number(to), ms: r.ms, spliced, marked, spliceOff, missing, failed: Object.fromEntries(seg.failed)}));
+      fs.writeFileSync(path.join(path.dirname(a !== '-' ? a : p), `seg-${from}.json`), JSON.stringify({from: Number(from), to: Number(to), ms: r.ms, spliced, marked, spliceOff, missing, failed: Object.fromEntries(seg.failed), overlaid, overlayMissing, overlayRefused}));
       process.exit(0);
     },
     picture: () => renderSeg({pic: path.resolve(pos[0] ?? `${REPO}/out/ep01/full-v3/picture/${SEG}.mp4`)}, Number(flags.jobs ?? 2), Number(flags.from ?? 0), Number(flags.to ?? N)),
@@ -378,6 +445,7 @@ export const main = (SEGMENT) => {
       if (extra.length) problems.push(`layouts for shots the lock does not have (a re-lock renamed them?): ${extra.join(' ')}`);
       let t = 0; for (const s of SHOTS) { if (s.s !== t) problems.push(`gap before ${s.id}`); t = s.e; }
       if (t !== N) problems.push(`shots end at ${t}, the segment is ${N}`);
+      for (const s of SHOTS) { const o = overlayOf(s); if (!o) continue; if (!o.frames) { problems.push(`${s.id}: overlay refused: ${o.why}`); continue; } const gone = [...new Set([...o.frames.values()].flat())].filter((p) => !fs.existsSync(p)); if (gone.length) problems.push(`${s.id}: overlay files missing: ${gone.length} (${path.basename(gone[0])}...)`); else notes.push(`${s.id}: overlay on ${o.frames.size} frames`); }
       for (const s of SHOTS) for (const f of [s.s, Math.floor((s.s + s.e) / 2), s.e - 1]) { const n = native(seg, f); if (n.host === 'threw') problems.push(`${s.id} f${f}: the layout threw (${seg.failed.get(s.id)})`); else if (n.fallback && n.host === 'layout') problems.push(`${s.id} f${f}: the layout drew its own fallback`); }
       const vo = seg.lock.subs.filter((x) => x.kind === 'vo'), rails = seg.lock.rails;
       for (const v of vo) for (const r of rails) if (v.s < r.e && r.s < v.e + 15) notes.push(`V.O. ${v.id} shares the screen with the rail "${r.text.slice(0, 24)}" (pov-and-framing §5.2: stagger them)`);
@@ -399,7 +467,7 @@ export const main = (SEGMENT) => {
       const f = Number(s), n = native(seg, f, {marks: true});
       const name = `${m === 'native' ? 'n' : m === 'picstills' ? 'p' : 'f'}${String(f).padStart(5, '0')}-${n.sh.id}.png`;
       if (m === 'native') writePNG(`${dir}/${name}`, n.fb, 2);
-      else writePNG(`${dir}/${name}`, m === 'stills' ? review(seg, f, undefined, {n}) : picture(seg, f, undefined, {n}));
+      else { const b = m === 'stills' ? review(seg, f, undefined, {n}) : picture(seg, f, undefined, {n}); overlayInto(f, m === 'stills' ? 'anim' : 'pic', b, n); writePNG(`${dir}/${name}`, b); }
       console.log('wrote', `${dir}/${name}`, n.layers.length ? '(GLYPH frame: stand-in marks in a Node still)' : '', n.host !== 'layout' ? `(${n.host.toUpperCase()})` : '');
     }
   };

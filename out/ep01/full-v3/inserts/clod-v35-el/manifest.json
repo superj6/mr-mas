@@ -1,0 +1,2026 @@
+{
+ "kind": "pixel-overlay",
+ "what": "Ep1 11.04, the 3D claymation CLOD in the lighthouse pane, from the launch light to the cut (\"You're absolutely right!\", then \"Addendum.\")",
+ "seg": "act1",
+ "shot": "11.04",
+ "beat": "11.04",
+ "lock": {
+  "key": "ep01-v35-el-stick",
+  "timeline": "show/reel/ep01-v35-el/ep01-v35-el-act1.json",
+  "timeline_sha1": "7fc0a61efcb85022457691107c24b7ec166586b6",
+  "lock_json": "studio/src/episodes/ep01/pixel/tools/lock.py --timeline show/reel/ep01-v35-el/ep01-v35-el-act1.json"
+ },
+ "shot_s": 10046,
+ "shot_e": 10296,
+ "shot_len": 250,
+ "check": {
+  "line": "e1-a1-11-02",
+  "s": 8,
+  "e": 39
+ },
+ "k_from": 6,
+ "k_to": 250,
+ "f_from": 10052,
+ "f_to": 10296,
+ "frame_count": 244,
+ "drawings": 122,
+ "marks": {
+  "ls": 8,
+  "le": 39,
+  "ab": 13,
+  "rt": 31,
+  "add": 74,
+  "cheer": 112
+ },
+ "take": "audio/ep01/v3-el/ep01-v35/act1/wav/e1-a1-11-02__clod-A.wav",
+ "mouth_src": "the take's loudness (audio/ep01/v3-el/ep01-v35/act1/wav/e1-a1-11-02__clod-A.wav)",
+ "size": [
+  1920,
+  1080
+ ],
+ "alpha": "straight",
+ "layers": "bottom first: the shadow, then the clay",
+ "area": "the room (above the band)",
+ "look": {
+  "engine": "CYCLES",
+  "samples": 64,
+  "shadow_samples": 24,
+  "can_light_w": 30.0,
+  "grade": [
+   0.8799999952316284,
+   0.7799999713897705,
+   0.7400000095367432
+  ],
+  "shadow_rungs": [
+   [
+    0.1,
+    0.34
+   ],
+   [
+    0.32,
+    0.62
+   ]
+  ],
+  "shadow_strength": 0.62,
+  "crop": [
+   1080,
+   388,
+   1480,
+   788
+  ]
+ },
+ "frames": [
+  {
+   "k": 6,
+   "f": 10052,
+   "layers": [
+    "shadow/s10052.png",
+    "clay/c10052.png"
+   ]
+  },
+  {
+   "k": 7,
+   "f": 10053,
+   "layers": [
+    "shadow/s10052.png",
+    "clay/c10052.png"
+   ]
+  },
+  {
+   "k": 8,
+   "f": 10054,
+   "layers": [
+    "shadow/s10054.png",
+    "clay/c10054.png"
+   ]
+  },
+  {
+   "k": 9,
+   "f": 10055,
+   "layers": [
+    "shadow/s10054.png",
+    "clay/c10054.png"
+   ]
+  },
+  {
+   "k": 10,
+   "f": 10056,
+   "layers": [
+    "shadow/s10056.png",
+    "clay/c10056.png"
+   ]
+  },
+  {
+   "k": 11,
+   "f": 10057,
+   "layers": [
+    "shadow/s10056.png",
+    "clay/c10056.png"
+   ]
+  },
+  {
+   "k": 12,
+   "f": 10058,
+   "layers": [
+    "shadow/s10058.png",
+    "clay/c10058.png"
+   ]
+  },
+  {
+   "k": 13,
+   "f": 10059,
+   "layers": [
+    "shadow/s10058.png",
+    "clay/c10058.png"
+   ]
+  },
+  {
+   "k": 14,
+   "f": 10060,
+   "layers": [
+    "shadow/s10060.png",
+    "clay/c10060.png"
+   ]
+  },
+  {
+   "k": 15,
+   "f": 10061,
+   "layers": [
+    "shadow/s10060.png",
+    "clay/c10060.png"
+   ]
+  },
+  {
+   "k": 16,
+   "f": 10062,
+   "layers": [
+    "shadow/s10062.png",
+    "clay/c10062.png"
+   ]
+  },
+  {
+   "k": 17,
+   "f": 10063,
+   "layers": [
+    "shadow/s10062.png",
+    "clay/c10062.png"
+   ]
+  },
+  {
+   "k": 18,
+   "f": 10064,
+   "layers": [
+    "shadow/s10064.png",
+    "clay/c10064.png"
+   ]
+  },
+  {
+   "k": 19,
+   "f": 10065,
+   "layers": [
+    "shadow/s10064.png",
+    "clay/c10064.png"
+   ]
+  },
+  {
+   "k": 20,
+   "f": 10066,
+   "layers": [
+    "shadow/s10066.png",
+    "clay/c10066.png"
+   ]
+  },
+  {
+   "k": 21,
+   "f": 10067,
+   "layers": [
+    "shadow/s10066.png",
+    "clay/c10066.png"
+   ]
+  },
+  {
+   "k": 22,
+   "f": 10068,
+   "layers": [
+    "shadow/s10068.png",
+    "clay/c10068.png"
+   ]
+  },
+  {
+   "k": 23,
+   "f": 10069,
+   "layers": [
+    "shadow/s10068.png",
+    "clay/c10068.png"
+   ]
+  },
+  {
+   "k": 24,
+   "f": 10070,
+   "layers": [
+    "shadow/s10070.png",
+    "clay/c10070.png"
+   ]
+  },
+  {
+   "k": 25,
+   "f": 10071,
+   "layers": [
+    "shadow/s10070.png",
+    "clay/c10070.png"
+   ]
+  },
+  {
+   "k": 26,
+   "f": 10072,
+   "layers": [
+    "shadow/s10072.png",
+    "clay/c10072.png"
+   ]
+  },
+  {
+   "k": 27,
+   "f": 10073,
+   "layers": [
+    "shadow/s10072.png",
+    "clay/c10072.png"
+   ]
+  },
+  {
+   "k": 28,
+   "f": 10074,
+   "layers": [
+    "shadow/s10074.png",
+    "clay/c10074.png"
+   ]
+  },
+  {
+   "k": 29,
+   "f": 10075,
+   "layers": [
+    "shadow/s10074.png",
+    "clay/c10074.png"
+   ]
+  },
+  {
+   "k": 30,
+   "f": 10076,
+   "layers": [
+    "shadow/s10076.png",
+    "clay/c10076.png"
+   ]
+  },
+  {
+   "k": 31,
+   "f": 10077,
+   "layers": [
+    "shadow/s10076.png",
+    "clay/c10076.png"
+   ]
+  },
+  {
+   "k": 32,
+   "f": 10078,
+   "layers": [
+    "shadow/s10078.png",
+    "clay/c10078.png"
+   ]
+  },
+  {
+   "k": 33,
+   "f": 10079,
+   "layers": [
+    "shadow/s10078.png",
+    "clay/c10078.png"
+   ]
+  },
+  {
+   "k": 34,
+   "f": 10080,
+   "layers": [
+    "shadow/s10080.png",
+    "clay/c10080.png"
+   ]
+  },
+  {
+   "k": 35,
+   "f": 10081,
+   "layers": [
+    "shadow/s10080.png",
+    "clay/c10080.png"
+   ]
+  },
+  {
+   "k": 36,
+   "f": 10082,
+   "layers": [
+    "shadow/s10082.png",
+    "clay/c10082.png"
+   ]
+  },
+  {
+   "k": 37,
+   "f": 10083,
+   "layers": [
+    "shadow/s10082.png",
+    "clay/c10082.png"
+   ]
+  },
+  {
+   "k": 38,
+   "f": 10084,
+   "layers": [
+    "shadow/s10084.png",
+    "clay/c10084.png"
+   ]
+  },
+  {
+   "k": 39,
+   "f": 10085,
+   "layers": [
+    "shadow/s10084.png",
+    "clay/c10084.png"
+   ]
+  },
+  {
+   "k": 40,
+   "f": 10086,
+   "layers": [
+    "shadow/s10086.png",
+    "clay/c10086.png"
+   ]
+  },
+  {
+   "k": 41,
+   "f": 10087,
+   "layers": [
+    "shadow/s10086.png",
+    "clay/c10086.png"
+   ]
+  },
+  {
+   "k": 42,
+   "f": 10088,
+   "layers": [
+    "shadow/s10088.png",
+    "clay/c10088.png"
+   ]
+  },
+  {
+   "k": 43,
+   "f": 10089,
+   "layers": [
+    "shadow/s10088.png",
+    "clay/c10088.png"
+   ]
+  },
+  {
+   "k": 44,
+   "f": 10090,
+   "layers": [
+    "shadow/s10090.png",
+    "clay/c10090.png"
+   ]
+  },
+  {
+   "k": 45,
+   "f": 10091,
+   "layers": [
+    "shadow/s10090.png",
+    "clay/c10090.png"
+   ]
+  },
+  {
+   "k": 46,
+   "f": 10092,
+   "layers": [
+    "shadow/s10092.png",
+    "clay/c10092.png"
+   ]
+  },
+  {
+   "k": 47,
+   "f": 10093,
+   "layers": [
+    "shadow/s10092.png",
+    "clay/c10092.png"
+   ]
+  },
+  {
+   "k": 48,
+   "f": 10094,
+   "layers": [
+    "shadow/s10094.png",
+    "clay/c10094.png"
+   ]
+  },
+  {
+   "k": 49,
+   "f": 10095,
+   "layers": [
+    "shadow/s10094.png",
+    "clay/c10094.png"
+   ]
+  },
+  {
+   "k": 50,
+   "f": 10096,
+   "layers": [
+    "shadow/s10096.png",
+    "clay/c10096.png"
+   ]
+  },
+  {
+   "k": 51,
+   "f": 10097,
+   "layers": [
+    "shadow/s10096.png",
+    "clay/c10096.png"
+   ]
+  },
+  {
+   "k": 52,
+   "f": 10098,
+   "layers": [
+    "shadow/s10098.png",
+    "clay/c10098.png"
+   ]
+  },
+  {
+   "k": 53,
+   "f": 10099,
+   "layers": [
+    "shadow/s10098.png",
+    "clay/c10098.png"
+   ]
+  },
+  {
+   "k": 54,
+   "f": 10100,
+   "layers": [
+    "shadow/s10100.png",
+    "clay/c10100.png"
+   ]
+  },
+  {
+   "k": 55,
+   "f": 10101,
+   "layers": [
+    "shadow/s10100.png",
+    "clay/c10100.png"
+   ]
+  },
+  {
+   "k": 56,
+   "f": 10102,
+   "layers": [
+    "shadow/s10102.png",
+    "clay/c10102.png"
+   ]
+  },
+  {
+   "k": 57,
+   "f": 10103,
+   "layers": [
+    "shadow/s10102.png",
+    "clay/c10102.png"
+   ]
+  },
+  {
+   "k": 58,
+   "f": 10104,
+   "layers": [
+    "shadow/s10104.png",
+    "clay/c10104.png"
+   ]
+  },
+  {
+   "k": 59,
+   "f": 10105,
+   "layers": [
+    "shadow/s10104.png",
+    "clay/c10104.png"
+   ]
+  },
+  {
+   "k": 60,
+   "f": 10106,
+   "layers": [
+    "shadow/s10106.png",
+    "clay/c10106.png"
+   ]
+  },
+  {
+   "k": 61,
+   "f": 10107,
+   "layers": [
+    "shadow/s10106.png",
+    "clay/c10106.png"
+   ]
+  },
+  {
+   "k": 62,
+   "f": 10108,
+   "layers": [
+    "shadow/s10108.png",
+    "clay/c10108.png"
+   ]
+  },
+  {
+   "k": 63,
+   "f": 10109,
+   "layers": [
+    "shadow/s10108.png",
+    "clay/c10108.png"
+   ]
+  },
+  {
+   "k": 64,
+   "f": 10110,
+   "layers": [
+    "shadow/s10110.png",
+    "clay/c10110.png"
+   ]
+  },
+  {
+   "k": 65,
+   "f": 10111,
+   "layers": [
+    "shadow/s10110.png",
+    "clay/c10110.png"
+   ]
+  },
+  {
+   "k": 66,
+   "f": 10112,
+   "layers": [
+    "shadow/s10112.png",
+    "clay/c10112.png"
+   ]
+  },
+  {
+   "k": 67,
+   "f": 10113,
+   "layers": [
+    "shadow/s10112.png",
+    "clay/c10112.png"
+   ]
+  },
+  {
+   "k": 68,
+   "f": 10114,
+   "layers": [
+    "shadow/s10114.png",
+    "clay/c10114.png"
+   ]
+  },
+  {
+   "k": 69,
+   "f": 10115,
+   "layers": [
+    "shadow/s10114.png",
+    "clay/c10114.png"
+   ]
+  },
+  {
+   "k": 70,
+   "f": 10116,
+   "layers": [
+    "shadow/s10116.png",
+    "clay/c10116.png"
+   ]
+  },
+  {
+   "k": 71,
+   "f": 10117,
+   "layers": [
+    "shadow/s10116.png",
+    "clay/c10116.png"
+   ]
+  },
+  {
+   "k": 72,
+   "f": 10118,
+   "layers": [
+    "shadow/s10118.png",
+    "clay/c10118.png"
+   ]
+  },
+  {
+   "k": 73,
+   "f": 10119,
+   "layers": [
+    "shadow/s10118.png",
+    "clay/c10118.png"
+   ]
+  },
+  {
+   "k": 74,
+   "f": 10120,
+   "layers": [
+    "shadow/s10120.png",
+    "clay/c10120.png"
+   ]
+  },
+  {
+   "k": 75,
+   "f": 10121,
+   "layers": [
+    "shadow/s10120.png",
+    "clay/c10120.png"
+   ]
+  },
+  {
+   "k": 76,
+   "f": 10122,
+   "layers": [
+    "shadow/s10122.png",
+    "clay/c10122.png"
+   ]
+  },
+  {
+   "k": 77,
+   "f": 10123,
+   "layers": [
+    "shadow/s10122.png",
+    "clay/c10122.png"
+   ]
+  },
+  {
+   "k": 78,
+   "f": 10124,
+   "layers": [
+    "shadow/s10124.png",
+    "clay/c10124.png"
+   ]
+  },
+  {
+   "k": 79,
+   "f": 10125,
+   "layers": [
+    "shadow/s10124.png",
+    "clay/c10124.png"
+   ]
+  },
+  {
+   "k": 80,
+   "f": 10126,
+   "layers": [
+    "shadow/s10126.png",
+    "clay/c10126.png"
+   ]
+  },
+  {
+   "k": 81,
+   "f": 10127,
+   "layers": [
+    "shadow/s10126.png",
+    "clay/c10126.png"
+   ]
+  },
+  {
+   "k": 82,
+   "f": 10128,
+   "layers": [
+    "shadow/s10128.png",
+    "clay/c10128.png"
+   ]
+  },
+  {
+   "k": 83,
+   "f": 10129,
+   "layers": [
+    "shadow/s10128.png",
+    "clay/c10128.png"
+   ]
+  },
+  {
+   "k": 84,
+   "f": 10130,
+   "layers": [
+    "shadow/s10130.png",
+    "clay/c10130.png"
+   ]
+  },
+  {
+   "k": 85,
+   "f": 10131,
+   "layers": [
+    "shadow/s10130.png",
+    "clay/c10130.png"
+   ]
+  },
+  {
+   "k": 86,
+   "f": 10132,
+   "layers": [
+    "shadow/s10132.png",
+    "clay/c10132.png"
+   ]
+  },
+  {
+   "k": 87,
+   "f": 10133,
+   "layers": [
+    "shadow/s10132.png",
+    "clay/c10132.png"
+   ]
+  },
+  {
+   "k": 88,
+   "f": 10134,
+   "layers": [
+    "shadow/s10134.png",
+    "clay/c10134.png"
+   ]
+  },
+  {
+   "k": 89,
+   "f": 10135,
+   "layers": [
+    "shadow/s10134.png",
+    "clay/c10134.png"
+   ]
+  },
+  {
+   "k": 90,
+   "f": 10136,
+   "layers": [
+    "shadow/s10136.png",
+    "clay/c10136.png"
+   ]
+  },
+  {
+   "k": 91,
+   "f": 10137,
+   "layers": [
+    "shadow/s10136.png",
+    "clay/c10136.png"
+   ]
+  },
+  {
+   "k": 92,
+   "f": 10138,
+   "layers": [
+    "shadow/s10138.png",
+    "clay/c10138.png"
+   ]
+  },
+  {
+   "k": 93,
+   "f": 10139,
+   "layers": [
+    "shadow/s10138.png",
+    "clay/c10138.png"
+   ]
+  },
+  {
+   "k": 94,
+   "f": 10140,
+   "layers": [
+    "shadow/s10140.png",
+    "clay/c10140.png"
+   ]
+  },
+  {
+   "k": 95,
+   "f": 10141,
+   "layers": [
+    "shadow/s10140.png",
+    "clay/c10140.png"
+   ]
+  },
+  {
+   "k": 96,
+   "f": 10142,
+   "layers": [
+    "shadow/s10142.png",
+    "clay/c10142.png"
+   ]
+  },
+  {
+   "k": 97,
+   "f": 10143,
+   "layers": [
+    "shadow/s10142.png",
+    "clay/c10142.png"
+   ]
+  },
+  {
+   "k": 98,
+   "f": 10144,
+   "layers": [
+    "shadow/s10144.png",
+    "clay/c10144.png"
+   ]
+  },
+  {
+   "k": 99,
+   "f": 10145,
+   "layers": [
+    "shadow/s10144.png",
+    "clay/c10144.png"
+   ]
+  },
+  {
+   "k": 100,
+   "f": 10146,
+   "layers": [
+    "shadow/s10146.png",
+    "clay/c10146.png"
+   ]
+  },
+  {
+   "k": 101,
+   "f": 10147,
+   "layers": [
+    "shadow/s10146.png",
+    "clay/c10146.png"
+   ]
+  },
+  {
+   "k": 102,
+   "f": 10148,
+   "layers": [
+    "shadow/s10148.png",
+    "clay/c10148.png"
+   ]
+  },
+  {
+   "k": 103,
+   "f": 10149,
+   "layers": [
+    "shadow/s10148.png",
+    "clay/c10148.png"
+   ]
+  },
+  {
+   "k": 104,
+   "f": 10150,
+   "layers": [
+    "shadow/s10150.png",
+    "clay/c10150.png"
+   ]
+  },
+  {
+   "k": 105,
+   "f": 10151,
+   "layers": [
+    "shadow/s10150.png",
+    "clay/c10150.png"
+   ]
+  },
+  {
+   "k": 106,
+   "f": 10152,
+   "layers": [
+    "shadow/s10152.png",
+    "clay/c10152.png"
+   ]
+  },
+  {
+   "k": 107,
+   "f": 10153,
+   "layers": [
+    "shadow/s10152.png",
+    "clay/c10152.png"
+   ]
+  },
+  {
+   "k": 108,
+   "f": 10154,
+   "layers": [
+    "shadow/s10154.png",
+    "clay/c10154.png"
+   ]
+  },
+  {
+   "k": 109,
+   "f": 10155,
+   "layers": [
+    "shadow/s10154.png",
+    "clay/c10154.png"
+   ]
+  },
+  {
+   "k": 110,
+   "f": 10156,
+   "layers": [
+    "shadow/s10156.png",
+    "clay/c10156.png"
+   ]
+  },
+  {
+   "k": 111,
+   "f": 10157,
+   "layers": [
+    "shadow/s10156.png",
+    "clay/c10156.png"
+   ]
+  },
+  {
+   "k": 112,
+   "f": 10158,
+   "layers": [
+    "shadow/s10158.png",
+    "clay/c10158.png"
+   ]
+  },
+  {
+   "k": 113,
+   "f": 10159,
+   "layers": [
+    "shadow/s10158.png",
+    "clay/c10158.png"
+   ]
+  },
+  {
+   "k": 114,
+   "f": 10160,
+   "layers": [
+    "shadow/s10160.png",
+    "clay/c10160.png"
+   ]
+  },
+  {
+   "k": 115,
+   "f": 10161,
+   "layers": [
+    "shadow/s10160.png",
+    "clay/c10160.png"
+   ]
+  },
+  {
+   "k": 116,
+   "f": 10162,
+   "layers": [
+    "shadow/s10162.png",
+    "clay/c10162.png"
+   ]
+  },
+  {
+   "k": 117,
+   "f": 10163,
+   "layers": [
+    "shadow/s10162.png",
+    "clay/c10162.png"
+   ]
+  },
+  {
+   "k": 118,
+   "f": 10164,
+   "layers": [
+    "shadow/s10164.png",
+    "clay/c10164.png"
+   ]
+  },
+  {
+   "k": 119,
+   "f": 10165,
+   "layers": [
+    "shadow/s10164.png",
+    "clay/c10164.png"
+   ]
+  },
+  {
+   "k": 120,
+   "f": 10166,
+   "layers": [
+    "shadow/s10166.png",
+    "clay/c10166.png"
+   ]
+  },
+  {
+   "k": 121,
+   "f": 10167,
+   "layers": [
+    "shadow/s10166.png",
+    "clay/c10166.png"
+   ]
+  },
+  {
+   "k": 122,
+   "f": 10168,
+   "layers": [
+    "shadow/s10168.png",
+    "clay/c10168.png"
+   ]
+  },
+  {
+   "k": 123,
+   "f": 10169,
+   "layers": [
+    "shadow/s10168.png",
+    "clay/c10168.png"
+   ]
+  },
+  {
+   "k": 124,
+   "f": 10170,
+   "layers": [
+    "shadow/s10170.png",
+    "clay/c10170.png"
+   ]
+  },
+  {
+   "k": 125,
+   "f": 10171,
+   "layers": [
+    "shadow/s10170.png",
+    "clay/c10170.png"
+   ]
+  },
+  {
+   "k": 126,
+   "f": 10172,
+   "layers": [
+    "shadow/s10172.png",
+    "clay/c10172.png"
+   ]
+  },
+  {
+   "k": 127,
+   "f": 10173,
+   "layers": [
+    "shadow/s10172.png",
+    "clay/c10172.png"
+   ]
+  },
+  {
+   "k": 128,
+   "f": 10174,
+   "layers": [
+    "shadow/s10174.png",
+    "clay/c10174.png"
+   ]
+  },
+  {
+   "k": 129,
+   "f": 10175,
+   "layers": [
+    "shadow/s10174.png",
+    "clay/c10174.png"
+   ]
+  },
+  {
+   "k": 130,
+   "f": 10176,
+   "layers": [
+    "shadow/s10176.png",
+    "clay/c10176.png"
+   ]
+  },
+  {
+   "k": 131,
+   "f": 10177,
+   "layers": [
+    "shadow/s10176.png",
+    "clay/c10176.png"
+   ]
+  },
+  {
+   "k": 132,
+   "f": 10178,
+   "layers": [
+    "shadow/s10178.png",
+    "clay/c10178.png"
+   ]
+  },
+  {
+   "k": 133,
+   "f": 10179,
+   "layers": [
+    "shadow/s10178.png",
+    "clay/c10178.png"
+   ]
+  },
+  {
+   "k": 134,
+   "f": 10180,
+   "layers": [
+    "shadow/s10180.png",
+    "clay/c10180.png"
+   ]
+  },
+  {
+   "k": 135,
+   "f": 10181,
+   "layers": [
+    "shadow/s10180.png",
+    "clay/c10180.png"
+   ]
+  },
+  {
+   "k": 136,
+   "f": 10182,
+   "layers": [
+    "shadow/s10182.png",
+    "clay/c10182.png"
+   ]
+  },
+  {
+   "k": 137,
+   "f": 10183,
+   "layers": [
+    "shadow/s10182.png",
+    "clay/c10182.png"
+   ]
+  },
+  {
+   "k": 138,
+   "f": 10184,
+   "layers": [
+    "shadow/s10184.png",
+    "clay/c10184.png"
+   ]
+  },
+  {
+   "k": 139,
+   "f": 10185,
+   "layers": [
+    "shadow/s10184.png",
+    "clay/c10184.png"
+   ]
+  },
+  {
+   "k": 140,
+   "f": 10186,
+   "layers": [
+    "shadow/s10186.png",
+    "clay/c10186.png"
+   ]
+  },
+  {
+   "k": 141,
+   "f": 10187,
+   "layers": [
+    "shadow/s10186.png",
+    "clay/c10186.png"
+   ]
+  },
+  {
+   "k": 142,
+   "f": 10188,
+   "layers": [
+    "shadow/s10188.png",
+    "clay/c10188.png"
+   ]
+  },
+  {
+   "k": 143,
+   "f": 10189,
+   "layers": [
+    "shadow/s10188.png",
+    "clay/c10188.png"
+   ]
+  },
+  {
+   "k": 144,
+   "f": 10190,
+   "layers": [
+    "shadow/s10190.png",
+    "clay/c10190.png"
+   ]
+  },
+  {
+   "k": 145,
+   "f": 10191,
+   "layers": [
+    "shadow/s10190.png",
+    "clay/c10190.png"
+   ]
+  },
+  {
+   "k": 146,
+   "f": 10192,
+   "layers": [
+    "shadow/s10192.png",
+    "clay/c10192.png"
+   ]
+  },
+  {
+   "k": 147,
+   "f": 10193,
+   "layers": [
+    "shadow/s10192.png",
+    "clay/c10192.png"
+   ]
+  },
+  {
+   "k": 148,
+   "f": 10194,
+   "layers": [
+    "shadow/s10194.png",
+    "clay/c10194.png"
+   ]
+  },
+  {
+   "k": 149,
+   "f": 10195,
+   "layers": [
+    "shadow/s10194.png",
+    "clay/c10194.png"
+   ]
+  },
+  {
+   "k": 150,
+   "f": 10196,
+   "layers": [
+    "shadow/s10196.png",
+    "clay/c10196.png"
+   ]
+  },
+  {
+   "k": 151,
+   "f": 10197,
+   "layers": [
+    "shadow/s10196.png",
+    "clay/c10196.png"
+   ]
+  },
+  {
+   "k": 152,
+   "f": 10198,
+   "layers": [
+    "shadow/s10198.png",
+    "clay/c10198.png"
+   ]
+  },
+  {
+   "k": 153,
+   "f": 10199,
+   "layers": [
+    "shadow/s10198.png",
+    "clay/c10198.png"
+   ]
+  },
+  {
+   "k": 154,
+   "f": 10200,
+   "layers": [
+    "shadow/s10200.png",
+    "clay/c10200.png"
+   ]
+  },
+  {
+   "k": 155,
+   "f": 10201,
+   "layers": [
+    "shadow/s10200.png",
+    "clay/c10200.png"
+   ]
+  },
+  {
+   "k": 156,
+   "f": 10202,
+   "layers": [
+    "shadow/s10202.png",
+    "clay/c10202.png"
+   ]
+  },
+  {
+   "k": 157,
+   "f": 10203,
+   "layers": [
+    "shadow/s10202.png",
+    "clay/c10202.png"
+   ]
+  },
+  {
+   "k": 158,
+   "f": 10204,
+   "layers": [
+    "shadow/s10204.png",
+    "clay/c10204.png"
+   ]
+  },
+  {
+   "k": 159,
+   "f": 10205,
+   "layers": [
+    "shadow/s10204.png",
+    "clay/c10204.png"
+   ]
+  },
+  {
+   "k": 160,
+   "f": 10206,
+   "layers": [
+    "shadow/s10206.png",
+    "clay/c10206.png"
+   ]
+  },
+  {
+   "k": 161,
+   "f": 10207,
+   "layers": [
+    "shadow/s10206.png",
+    "clay/c10206.png"
+   ]
+  },
+  {
+   "k": 162,
+   "f": 10208,
+   "layers": [
+    "shadow/s10208.png",
+    "clay/c10208.png"
+   ]
+  },
+  {
+   "k": 163,
+   "f": 10209,
+   "layers": [
+    "shadow/s10208.png",
+    "clay/c10208.png"
+   ]
+  },
+  {
+   "k": 164,
+   "f": 10210,
+   "layers": [
+    "shadow/s10210.png",
+    "clay/c10210.png"
+   ]
+  },
+  {
+   "k": 165,
+   "f": 10211,
+   "layers": [
+    "shadow/s10210.png",
+    "clay/c10210.png"
+   ]
+  },
+  {
+   "k": 166,
+   "f": 10212,
+   "layers": [
+    "shadow/s10212.png",
+    "clay/c10212.png"
+   ]
+  },
+  {
+   "k": 167,
+   "f": 10213,
+   "layers": [
+    "shadow/s10212.png",
+    "clay/c10212.png"
+   ]
+  },
+  {
+   "k": 168,
+   "f": 10214,
+   "layers": [
+    "shadow/s10214.png",
+    "clay/c10214.png"
+   ]
+  },
+  {
+   "k": 169,
+   "f": 10215,
+   "layers": [
+    "shadow/s10214.png",
+    "clay/c10214.png"
+   ]
+  },
+  {
+   "k": 170,
+   "f": 10216,
+   "layers": [
+    "shadow/s10216.png",
+    "clay/c10216.png"
+   ]
+  },
+  {
+   "k": 171,
+   "f": 10217,
+   "layers": [
+    "shadow/s10216.png",
+    "clay/c10216.png"
+   ]
+  },
+  {
+   "k": 172,
+   "f": 10218,
+   "layers": [
+    "shadow/s10218.png",
+    "clay/c10218.png"
+   ]
+  },
+  {
+   "k": 173,
+   "f": 10219,
+   "layers": [
+    "shadow/s10218.png",
+    "clay/c10218.png"
+   ]
+  },
+  {
+   "k": 174,
+   "f": 10220,
+   "layers": [
+    "shadow/s10220.png",
+    "clay/c10220.png"
+   ]
+  },
+  {
+   "k": 175,
+   "f": 10221,
+   "layers": [
+    "shadow/s10220.png",
+    "clay/c10220.png"
+   ]
+  },
+  {
+   "k": 176,
+   "f": 10222,
+   "layers": [
+    "shadow/s10222.png",
+    "clay/c10222.png"
+   ]
+  },
+  {
+   "k": 177,
+   "f": 10223,
+   "layers": [
+    "shadow/s10222.png",
+    "clay/c10222.png"
+   ]
+  },
+  {
+   "k": 178,
+   "f": 10224,
+   "layers": [
+    "shadow/s10224.png",
+    "clay/c10224.png"
+   ]
+  },
+  {
+   "k": 179,
+   "f": 10225,
+   "layers": [
+    "shadow/s10224.png",
+    "clay/c10224.png"
+   ]
+  },
+  {
+   "k": 180,
+   "f": 10226,
+   "layers": [
+    "shadow/s10226.png",
+    "clay/c10226.png"
+   ]
+  },
+  {
+   "k": 181,
+   "f": 10227,
+   "layers": [
+    "shadow/s10226.png",
+    "clay/c10226.png"
+   ]
+  },
+  {
+   "k": 182,
+   "f": 10228,
+   "layers": [
+    "shadow/s10228.png",
+    "clay/c10228.png"
+   ]
+  },
+  {
+   "k": 183,
+   "f": 10229,
+   "layers": [
+    "shadow/s10228.png",
+    "clay/c10228.png"
+   ]
+  },
+  {
+   "k": 184,
+   "f": 10230,
+   "layers": [
+    "shadow/s10230.png",
+    "clay/c10230.png"
+   ]
+  },
+  {
+   "k": 185,
+   "f": 10231,
+   "layers": [
+    "shadow/s10230.png",
+    "clay/c10230.png"
+   ]
+  },
+  {
+   "k": 186,
+   "f": 10232,
+   "layers": [
+    "shadow/s10232.png",
+    "clay/c10232.png"
+   ]
+  },
+  {
+   "k": 187,
+   "f": 10233,
+   "layers": [
+    "shadow/s10232.png",
+    "clay/c10232.png"
+   ]
+  },
+  {
+   "k": 188,
+   "f": 10234,
+   "layers": [
+    "shadow/s10234.png",
+    "clay/c10234.png"
+   ]
+  },
+  {
+   "k": 189,
+   "f": 10235,
+   "layers": [
+    "shadow/s10234.png",
+    "clay/c10234.png"
+   ]
+  },
+  {
+   "k": 190,
+   "f": 10236,
+   "layers": [
+    "shadow/s10236.png",
+    "clay/c10236.png"
+   ]
+  },
+  {
+   "k": 191,
+   "f": 10237,
+   "layers": [
+    "shadow/s10236.png",
+    "clay/c10236.png"
+   ]
+  },
+  {
+   "k": 192,
+   "f": 10238,
+   "layers": [
+    "shadow/s10238.png",
+    "clay/c10238.png"
+   ]
+  },
+  {
+   "k": 193,
+   "f": 10239,
+   "layers": [
+    "shadow/s10238.png",
+    "clay/c10238.png"
+   ]
+  },
+  {
+   "k": 194,
+   "f": 10240,
+   "layers": [
+    "shadow/s10240.png",
+    "clay/c10240.png"
+   ]
+  },
+  {
+   "k": 195,
+   "f": 10241,
+   "layers": [
+    "shadow/s10240.png",
+    "clay/c10240.png"
+   ]
+  },
+  {
+   "k": 196,
+   "f": 10242,
+   "layers": [
+    "shadow/s10242.png",
+    "clay/c10242.png"
+   ]
+  },
+  {
+   "k": 197,
+   "f": 10243,
+   "layers": [
+    "shadow/s10242.png",
+    "clay/c10242.png"
+   ]
+  },
+  {
+   "k": 198,
+   "f": 10244,
+   "layers": [
+    "shadow/s10244.png",
+    "clay/c10244.png"
+   ]
+  },
+  {
+   "k": 199,
+   "f": 10245,
+   "layers": [
+    "shadow/s10244.png",
+    "clay/c10244.png"
+   ]
+  },
+  {
+   "k": 200,
+   "f": 10246,
+   "layers": [
+    "shadow/s10246.png",
+    "clay/c10246.png"
+   ]
+  },
+  {
+   "k": 201,
+   "f": 10247,
+   "layers": [
+    "shadow/s10246.png",
+    "clay/c10246.png"
+   ]
+  },
+  {
+   "k": 202,
+   "f": 10248,
+   "layers": [
+    "shadow/s10248.png",
+    "clay/c10248.png"
+   ]
+  },
+  {
+   "k": 203,
+   "f": 10249,
+   "layers": [
+    "shadow/s10248.png",
+    "clay/c10248.png"
+   ]
+  },
+  {
+   "k": 204,
+   "f": 10250,
+   "layers": [
+    "shadow/s10250.png",
+    "clay/c10250.png"
+   ]
+  },
+  {
+   "k": 205,
+   "f": 10251,
+   "layers": [
+    "shadow/s10250.png",
+    "clay/c10250.png"
+   ]
+  },
+  {
+   "k": 206,
+   "f": 10252,
+   "layers": [
+    "shadow/s10252.png",
+    "clay/c10252.png"
+   ]
+  },
+  {
+   "k": 207,
+   "f": 10253,
+   "layers": [
+    "shadow/s10252.png",
+    "clay/c10252.png"
+   ]
+  },
+  {
+   "k": 208,
+   "f": 10254,
+   "layers": [
+    "shadow/s10254.png",
+    "clay/c10254.png"
+   ]
+  },
+  {
+   "k": 209,
+   "f": 10255,
+   "layers": [
+    "shadow/s10254.png",
+    "clay/c10254.png"
+   ]
+  },
+  {
+   "k": 210,
+   "f": 10256,
+   "layers": [
+    "shadow/s10256.png",
+    "clay/c10256.png"
+   ]
+  },
+  {
+   "k": 211,
+   "f": 10257,
+   "layers": [
+    "shadow/s10256.png",
+    "clay/c10256.png"
+   ]
+  },
+  {
+   "k": 212,
+   "f": 10258,
+   "layers": [
+    "shadow/s10258.png",
+    "clay/c10258.png"
+   ]
+  },
+  {
+   "k": 213,
+   "f": 10259,
+   "layers": [
+    "shadow/s10258.png",
+    "clay/c10258.png"
+   ]
+  },
+  {
+   "k": 214,
+   "f": 10260,
+   "layers": [
+    "shadow/s10260.png",
+    "clay/c10260.png"
+   ]
+  },
+  {
+   "k": 215,
+   "f": 10261,
+   "layers": [
+    "shadow/s10260.png",
+    "clay/c10260.png"
+   ]
+  },
+  {
+   "k": 216,
+   "f": 10262,
+   "layers": [
+    "shadow/s10262.png",
+    "clay/c10262.png"
+   ]
+  },
+  {
+   "k": 217,
+   "f": 10263,
+   "layers": [
+    "shadow/s10262.png",
+    "clay/c10262.png"
+   ]
+  },
+  {
+   "k": 218,
+   "f": 10264,
+   "layers": [
+    "shadow/s10264.png",
+    "clay/c10264.png"
+   ]
+  },
+  {
+   "k": 219,
+   "f": 10265,
+   "layers": [
+    "shadow/s10264.png",
+    "clay/c10264.png"
+   ]
+  },
+  {
+   "k": 220,
+   "f": 10266,
+   "layers": [
+    "shadow/s10266.png",
+    "clay/c10266.png"
+   ]
+  },
+  {
+   "k": 221,
+   "f": 10267,
+   "layers": [
+    "shadow/s10266.png",
+    "clay/c10266.png"
+   ]
+  },
+  {
+   "k": 222,
+   "f": 10268,
+   "layers": [
+    "shadow/s10268.png",
+    "clay/c10268.png"
+   ]
+  },
+  {
+   "k": 223,
+   "f": 10269,
+   "layers": [
+    "shadow/s10268.png",
+    "clay/c10268.png"
+   ]
+  },
+  {
+   "k": 224,
+   "f": 10270,
+   "layers": [
+    "shadow/s10270.png",
+    "clay/c10270.png"
+   ]
+  },
+  {
+   "k": 225,
+   "f": 10271,
+   "layers": [
+    "shadow/s10270.png",
+    "clay/c10270.png"
+   ]
+  },
+  {
+   "k": 226,
+   "f": 10272,
+   "layers": [
+    "shadow/s10272.png",
+    "clay/c10272.png"
+   ]
+  },
+  {
+   "k": 227,
+   "f": 10273,
+   "layers": [
+    "shadow/s10272.png",
+    "clay/c10272.png"
+   ]
+  },
+  {
+   "k": 228,
+   "f": 10274,
+   "layers": [
+    "shadow/s10274.png",
+    "clay/c10274.png"
+   ]
+  },
+  {
+   "k": 229,
+   "f": 10275,
+   "layers": [
+    "shadow/s10274.png",
+    "clay/c10274.png"
+   ]
+  },
+  {
+   "k": 230,
+   "f": 10276,
+   "layers": [
+    "shadow/s10276.png",
+    "clay/c10276.png"
+   ]
+  },
+  {
+   "k": 231,
+   "f": 10277,
+   "layers": [
+    "shadow/s10276.png",
+    "clay/c10276.png"
+   ]
+  },
+  {
+   "k": 232,
+   "f": 10278,
+   "layers": [
+    "shadow/s10278.png",
+    "clay/c10278.png"
+   ]
+  },
+  {
+   "k": 233,
+   "f": 10279,
+   "layers": [
+    "shadow/s10278.png",
+    "clay/c10278.png"
+   ]
+  },
+  {
+   "k": 234,
+   "f": 10280,
+   "layers": [
+    "shadow/s10280.png",
+    "clay/c10280.png"
+   ]
+  },
+  {
+   "k": 235,
+   "f": 10281,
+   "layers": [
+    "shadow/s10280.png",
+    "clay/c10280.png"
+   ]
+  },
+  {
+   "k": 236,
+   "f": 10282,
+   "layers": [
+    "shadow/s10282.png",
+    "clay/c10282.png"
+   ]
+  },
+  {
+   "k": 237,
+   "f": 10283,
+   "layers": [
+    "shadow/s10282.png",
+    "clay/c10282.png"
+   ]
+  },
+  {
+   "k": 238,
+   "f": 10284,
+   "layers": [
+    "shadow/s10284.png",
+    "clay/c10284.png"
+   ]
+  },
+  {
+   "k": 239,
+   "f": 10285,
+   "layers": [
+    "shadow/s10284.png",
+    "clay/c10284.png"
+   ]
+  },
+  {
+   "k": 240,
+   "f": 10286,
+   "layers": [
+    "shadow/s10286.png",
+    "clay/c10286.png"
+   ]
+  },
+  {
+   "k": 241,
+   "f": 10287,
+   "layers": [
+    "shadow/s10286.png",
+    "clay/c10286.png"
+   ]
+  },
+  {
+   "k": 242,
+   "f": 10288,
+   "layers": [
+    "shadow/s10288.png",
+    "clay/c10288.png"
+   ]
+  },
+  {
+   "k": 243,
+   "f": 10289,
+   "layers": [
+    "shadow/s10288.png",
+    "clay/c10288.png"
+   ]
+  },
+  {
+   "k": 244,
+   "f": 10290,
+   "layers": [
+    "shadow/s10290.png",
+    "clay/c10290.png"
+   ]
+  },
+  {
+   "k": 245,
+   "f": 10291,
+   "layers": [
+    "shadow/s10290.png",
+    "clay/c10290.png"
+   ]
+  },
+  {
+   "k": 246,
+   "f": 10292,
+   "layers": [
+    "shadow/s10292.png",
+    "clay/c10292.png"
+   ]
+  },
+  {
+   "k": 247,
+   "f": 10293,
+   "layers": [
+    "shadow/s10292.png",
+    "clay/c10292.png"
+   ]
+  },
+  {
+   "k": 248,
+   "f": 10294,
+   "layers": [
+    "shadow/s10294.png",
+    "clay/c10294.png"
+   ]
+  },
+  {
+   "k": 249,
+   "f": 10295,
+   "layers": [
+    "shadow/s10294.png",
+    "clay/c10294.png"
+   ]
+  }
+ ]
+}
