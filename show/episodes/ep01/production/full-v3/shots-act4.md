@@ -1,8 +1,56 @@
-# Ep1 v3.3: Act Four's shots (`v3-shots-act4`, 2026-09-27 / 28)
+# Ep1 v3.4: Act Four's shots (`v3-shots-act4`, 2026-09-27 / 28)
 
-> **Status: v3.3 built, checked and rendered. Nothing committed.** Track P2 of [PLAN.md](PLAN.md) for the `act4` segment ("five days, told twice", **8:25.75**), on the **v3.3 Kokoro lock** (`show/reel/ep01-v33/ep01-v33-act4.json`, committed a756708; [lock-v33.md](lock-v33.md)). **§V33 below is the current state.** It's a polish (PLAN §6), so §V32 and §V31 still describe everything V33 doesn't mention. §1–§8 are the v3 round's record. `pixel/act4/data.ts` is now the v3.3 lock.
+> **Status: v3.4 built, checked and rendered. Nothing committed.** Track P2 of [PLAN.md](PLAN.md) for the `act4` segment ("five days, told twice", **8:27.79**), on the **v3.4 Kokoro lock** (`show/reel/ep01-v34/ep01-v34-act4.json`, commit 4309e86; [lock-v34.md](lock-v34.md)). **§V34 below is the current state.** It changes four beats, so §V33, §V32 and §V31 still describe everything V34 doesn't mention. §1–§8 are the v3 round's record. `pixel/act4/data.ts` is now the v3.4 lock.
 >
-> **Nothing here has been watched or heard.** Stills, crops and frames decoded from the render were looked at (§V33.5). The render's and the checks' numbers are measured.
+> **Nothing here has been watched or heard.** Stills, crops and frames decoded from the render were looked at. The render's and the checks' numbers are measured.
+
+## V34. The v3.4 round (script draft 8.3; SHOWRUNNER-NOTES 000: "Mas plans and directs", the mastermind by specifics, never on the nose)
+
+### V34.1 The lock and the temp track
+
+- **The lock:** 79 shots from 80 beats, **12,187 f (8:27.79)**, episode frame 16865 (11:42:17). There are 98 lines (5 of them the inner voice, all face null) and 6 posts. Every check passes. D6 is 5.12 s. **S7.13 is frames 10906–11169 (264 f)**, and the Runway splice is at k128–263 (`hourglass.py --s713 10906`).
+- **The plan:** it adds `audio/ep01/v34/act4/lines-v34.json` (the three new V.O. reads).
+  - S1.02's marks move to v34-vo-07's words: `look` on "gerg", `door` on "budget", `back` on "good".
+  - S4.02's `alyi` and `turn` marks go with his line. A `lit` mark lands on the lock's `phone_buzz_step_1`, and the face is NELEH only.
+- **The temp track:** the reel's mixer on the v3.4 render plan (231 takes, −16.65 LUFS, 10 s), cut sample-exact to `out/ep01/full-v3/picture/act4-v34-stick-mix.wav` (24,374,000 samples = 12,187 f). The v3.3 cut and the full-episode WAV were deleted.
+
+### V34.2 The changed shots
+
+| Shot | s | What it draws now |
+|---|---|---|
+| S1.02 | 7.25 | **The new V.O.** (v34-vo-07, "gerg's not on it. probably the budget. good. i'll ask for more compute."), and his confident read of the invite in the arrow. <ul><li>On "gerg" it steps across the four attendee icons, each lit as it passes.</li><li>On "budget" it settles on the glowing page.</li><li>On "good." it comes back beside JOIN and waits there through "i'll ask for more compute.".</li><li>Then onto JOIN, and the click on its sound.</li></ul>No face is in frame, and the V.O. rows sit on shadow. The host types the line (with the coordinator's `voLine` fix, so it completes) |
+| S4.02 | 17.38 | Alyi's "That is the company telling us." is cut, and so is the glass cutaway. <ul><li>**The stepped push** (wide → [M] on her second speech → her [MCU] on "Monday") and the return to the wide for phone A's fall are as v3.3 built them.</li><li>**On the lock's `phone_buzz_step_1` (k379, 15.8 s) the whole row of phones lights up at once:** the three on the table and phone A on the floor.</li><li>Each phone goes two rungs up after a 2-frame pop at three. Its light pools on the table in an ellipse, a rung up with a two-rung core, and the caller IDs brighten.</li><li>They buzz on 2s for half a second, then hold lit to the cut (1.6 s).</li></ul>"Then we'll write step four ourselves." follows in S4.07, unchanged |
+| S5.09 | 14.06 | The new V.O. (v34-vo-09, "gerg walked out for me.") plays over the call going out, with his shoulder only, so there's no mouth. **The layout is unchanged.** The lock's RING sits at 0.2 s, so the app and the press still last only the first 4 f (V31.5 item 2) |
+| **S8.04** | 5.83 | **The return's count** (v34-vo-11). v5's CU is as it was: the firing's drawing (S1.10's), with the lobby's tungsten behind him. His face doesn't change. `art/v34 drawCount` strikes the count into the empty right of the frame, in three held steps (2 f apart) on each word. <ul><li>**Theirs, a quiet echo of Neleh's blueprint** in its own lettering (kits/blueprint `bpText`), pencilled in the tungsten two rungs down: on "four" the four seats' plates, one a held step; on "votes" their bracket and `VOTES`; then the CEO's box with `EQUITY: 0` under it.</li><li>**His, in his cyan** (C6 with a C2 shadow line, so it holds on the cream and on the orange): on "landlord" the key (the bow, the shaft, the bit); on "money" the ticker (its frame, the line climbing, the arrow); on "gerg" Gerg's badge (the lanyard, the card, its photo and two lines, with no name: the word says it).</li><li>Nothing else is lettered, so the only text is the V.O. line.</li><li>All three things he holds are up for the last 1.3 s before the cut to the glass on the stone.</li></ul> |
+
+**Unchanged:**
+- the shock opening;
+- the S7.13 hourglass (264 f);
+- v3.3b's S7.02 / S7.02b fixes (the one green coat, her [M], the podcast insert);
+- Mas's lips on the V.O. (all 5 V.O. lines are face null, and the guard still wraps every layout).
+
+### V34.3 Checks and render
+
+- **Checks:** the lock passes, and `r.cjs check` exits 0: 79 layouts (47 `V`, 32 `P`), 0 stand-ins, 0 problems, 164 browser frames.
+- **The EL lock** (ep01-v34-el, 12,477 f). Tested in scratch:
+  - `lock.py` on its Act Four with `--plan pixel/act4/plan.json` passes every check.
+  - `build_el.mjs act4` + `check` exit 0, with 0 stand-ins.
+  - Its S1.02, S4.02 and S8.04 frames render with the marks on the EL words and sounds: the page hover, the lit row, the full count.
+  - The stand-in takes were the EL v3.3 takes, this round's Kokoro V.O. (V.O. needs no mouth) and the v3.3b EL cut mouth.
+- **Native `flash.ts`** (the first v3.4 build): at most 2 flashes in any 1 s (S5.08), 0 red. The longest held frame is 4.4 s (S5.08).
+- **tsc:** the same 20 errors, none in act4.
+- **The render:**
+  - Rendered twice through `ops/heavy.sh`. The second build picks up the coordinator's shared `frame.ts` `voLine` fix (the V.O. now types at max(0.5, length / (voice frames − 4)), so the long lines finish). It is `heavy-run34b.sh`, then `fc33.sh` in chunks.
+  - `picture --jobs 2` took 144 s wall.
+  - **`out/ep01/full-v3/picture/act4.mp4`:** 1080p, **12,187 frames, 507.79 s**, with the v3.4 stick mix. `act4.srt` and `act4-sheet.png` (0 stand-ins) are re-made.
+- **flashcheck.py on the MP4, in four chunks:** **at most 1 flash in any 1 s** (the selfie, 4682 / 4686), **0 red. Pass.** The largest single-frame luminance step is the hard cut (0.573, frame 582).
+- **Decoded from the MP4:** frames 370 and 395 (S1.02: the V.O. line complete on the typed band, the arrow onto JOIN), 4016 and 4050 (S4.02: the row lit), and 11440 and 11472 (S8.04 mid-count and complete, with the line complete).
+
+### V34.4 What's weakest (v3.4)
+
+1. **The count is small against the tungsten.** The pencilled echo is deliberately faint. The cyan items are line drawings about 20–60 px wide. They read in stills at 1080p, but not at a glance on a small screen.
+2. **"The row lights up"** in the wide is phones 7 px wide and their pools. It's visible, not big.
+3. **S5.09's call app** is still 4 f before the ring (the lock's RING at 0.2 s). The new V.O. plays over the ringing.
 
 ## V33. The v3.3 polish (PLAN.md §6; script draft 8.2, [script-v33-notes.md](script-v33-notes.md))
 

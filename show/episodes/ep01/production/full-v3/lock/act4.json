@@ -4,7 +4,7 @@
   "episode": "ep01",
   "seg": "act4",
   "label": "ACT FOUR",
-  "timeline": "show/reel/ep01-v33/ep01-v33-act4.json",
+  "timeline": "show/reel/ep01-v34/ep01-v34-act4.json",
   "takes": [
    "audio/ep01/act4/dialogue/lines-v5.json",
    "audio/ep01/v3/act4/lines-v3.json",
@@ -12,15 +12,16 @@
    "studio/src/episodes/ep01/pixel/act4/takes-v31-cut-mouths.json",
    "audio/ep01/v32/act4/lines-v32.json",
    "audio/ep01/v33/act4/lines-v33.json",
-   "studio/src/episodes/ep01/pixel/act4/takes-v33-cut-mouths.json"
+   "studio/src/episodes/ep01/pixel/act4/takes-v33-cut-mouths.json",
+   "audio/ep01/v34/act4/lines-v34.json"
   ],
   "plan": "studio/src/episodes/ep01/pixel/act4/plan.json",
   "plan_py": "studio/src/episodes/ep01/act4/animatic/tools/lock_v5.py",
   "base_lock": "show/episodes/ep01/production/act4/shots-locked-v4.json",
   "generator": "studio/src/episodes/ep01/pixel/tools/lock.py",
   "fps": 24,
-  "ep_in": "11:53:05",
-  "ep_in_frames": 17117,
+  "ep_in": "11:42:17",
+  "ep_in_frames": 16865,
   "rules": [
    "the picture is cut to the stick timeline: its beats are the shots, its lines are the lines, nothing re-timed",
    "a continuation beat that follows its own shot directly merges into it",
@@ -34,25 +35,25 @@
  "summary": {
   "shots": 79,
   "beats": 80,
-  "frames": 12138,
-  "seconds": 505.75,
-  "length": "8:25.75",
-  "episode_in": "11:53:05",
-  "episode_out": "20:18:23",
+  "frames": 12187,
+  "seconds": 507.792,
+  "length": "8:27.79",
+  "episode_in": "11:42:17",
+  "episode_out": "20:10:12",
   "verdicts": {
    "-": 6,
    "C": 34,
    "N": 7,
    "R": 32
   },
-  "mean_s": 6.402,
+  "mean_s": 6.428,
   "median_s": 5.0,
   "min_s": 1.0,
   "max_s": 22.792,
   "lines": 98,
   "posts": 6,
-  "vo": 4,
-  "lines_with_mouth": 84,
+  "vo": 5,
+  "lines_with_mouth": 83,
   "mouths_from_words": 0,
   "on_camera_mouths": [
    "S1.07:ALYI:lip",
@@ -66,7 +67,6 @@
    "S3.05:NELEH:lip",
    "S3.06:EMPLOYEE:room",
    "S3.07:ALYI:lip",
-   "S4.02:ALYI:lip",
    "S4.02:NELEH:room",
    "S4.07:NELEH:lip",
    "S4.08:ADELINA:room",
@@ -112,14 +112,14 @@
   ],
   "reviewer_slates": [],
   "mix": {
-   "path": "out/ep01/full-v3/picture/act4-v33-stick-mix.wav",
+   "path": "out/ep01/full-v3/picture/act4-v34-stick-mix.wav",
    "offset_frames": 0,
-   "frames": 12138.0
+   "frames": 12187.0
   },
   "refs": {
    "D6": [
-    621,
-    743
+    627,
+    750
    ]
   }
  },
@@ -132,7 +132,7 @@
   {
    "check": "D6 as the v3.1 lock sets it (lock-v31.md §5: the Remove click to the buzz)",
    "ok": true,
-   "detail": "v31-S1.08d.click f 621 -> S1.11.buzz f 743 = 5.08 s"
+   "detail": "v31-S1.08d.click f 627 -> S1.11.buzz f 750 = 5.12 s"
   },
   {
    "check": "shot frames = their beats' frames",
@@ -142,7 +142,7 @@
   {
    "check": "shots tile the segment with no gap",
    "ok": true,
-   "detail": "0 -> 12138"
+   "detail": "0 -> 12187"
   },
   {
    "check": "the lock vs the stick reel's own line frames",
@@ -162,17 +162,17 @@
   {
    "check": "mouth tracks carried over",
    "ok": true,
-   "detail": "84 lines with a mouth track; lost: []"
+   "detail": "83 lines with a mouth track; lost: []"
   },
   {
    "check": "every on-camera mouth has a track",
    "ok": true,
-   "detail": "69 faced rows; without a track: []"
+   "detail": "68 faced rows; without a track: []"
   },
   {
    "check": "the mix = its offset + the segment",
    "ok": true,
-   "detail": "mix 12138.00 f vs 0 + 12138"
+   "detail": "mix 12187.00 f vs 0 + 12187"
   }
  ],
  "sequences": [
@@ -182,7 +182,7 @@
    "place": "Las Vegas: the hotel suite",
    "time": "Fri Nov 17, 2023 · ~noon",
    "s": 0,
-   "e": 994,
+   "e": 1000,
    "shots": [
     "S1.01",
     "v31-S1.01b",
@@ -197,18 +197,18 @@
    ],
    "chapter": "HIS SIDE · the blow",
    "title": "NOON, LAS VEGAS: THE PLAN AND THE CALL",
-   "cue": "music (v3.3): NOON, LAS VEGAS · suspense · a felt bar (MM-07 felt) under the suite's ordinary life; LEVERAGE low from the JOIN click, thinned to its pedal under Alyi's sentence, back up for the dialog; D6 drop-out on the Remove click (mood §4 #1b; the waltz no longer plays on his side) · sound: the one deliberate silence (Cancel click -> phone buzz): music and room out, room tone only · sound: the suite comes back on the buzz · no score under \"super.\" · music (v3.3): none: the suite's air; the drone comes up under the fall to night",
-   "frames": 994,
-   "tc_in": "11:53:05",
-   "tc_out": "12:34:15"
+   "cue": "music (v3.4): NOON, LAS VEGAS · suspense · a felt bar (MM-07 felt) under the suite's ordinary life; LEVERAGE low from the JOIN click, thinned to its pedal under Alyi's sentence, back up for the dialog; D6 drop-out on the Remove click (mood §4 #1b; the waltz no longer plays on his side) · sound: the one deliberate silence (Cancel click -> phone buzz): music and room out, room tone only · sound: the suite comes back on the buzz · no score under \"super.\" · music (v3.4): none: the suite's air; the drone comes up under the fall to night",
+   "frames": 1000,
+   "tc_in": "11:42:17",
+   "tc_out": "12:24:09"
   },
   {
    "id": "S2",
    "side": "",
    "place": "his dark room",
    "time": "Fri Nov 17 · that night",
-   "s": 994,
-   "e": 1215,
+   "s": 1000,
+   "e": 1221,
    "shots": [
     "S2.01",
     "S2.02",
@@ -216,18 +216,18 @@
    ],
    "chapter": "HIS SIDE · the blow",
    "title": "THAT NIGHT: THE THIRD MARK",
-   "cue": "music (v3.3): THAT NIGHT · after the silence · DARK ROOM, one felt line; out through the rewind",
+   "cue": "music (v3.4): THAT NIGHT · after the silence · DARK ROOM, one felt line; out through the rewind",
    "frames": 221,
-   "tc_in": "12:34:15",
-   "tc_out": "12:43:20"
+   "tc_in": "12:24:09",
+   "tc_out": "12:33:14"
   },
   {
    "id": "S3",
    "side": "",
    "place": "Neleh's desk: the board's side",
    "time": "Fri Nov 17, 2023 · 11:52 AM",
-   "s": 1215,
-   "e": 1903,
+   "s": 1221,
+   "e": 1909,
    "shots": [
     "v31-S3.00p",
     "S1.03",
@@ -236,18 +236,18 @@
    ],
    "chapter": "THE BOARD'S SIDE · blind",
    "title": "FRIDAY, THE BOARD'S SIDE: STEPS ONE TO THREE",
-   "cue": "music (v3.3): THE BOARD'S SIDE, 11:52 · Neleh's office clock first, then the waltz (BLUEPRINT, MM-07) under her pointer at underscore (about −20 LUFS), building; it hands to PROCEDURE on the call clock's 11:59 tick (mood §4 #6)",
+   "cue": "music (v3.4): THE BOARD'S SIDE, 11:52 · Neleh's office clock first, then the waltz (BLUEPRINT, MM-07) under her pointer at underscore (about −20 LUFS), building; it hands to PROCEDURE on the call clock's 11:59 tick (mood §4 #6)",
    "frames": 688,
-   "tc_in": "12:43:20",
-   "tc_out": "13:12:12"
+   "tc_in": "12:33:14",
+   "tc_out": "13:02:06"
   },
   {
    "id": "S3",
    "side": "",
    "place": "Neleh's desk: the board call",
    "time": "Fri Nov 17 · 11:59 AM",
-   "s": 1903,
-   "e": 3515,
+   "s": 1909,
+   "e": 3522,
    "shots": [
     "S3.00a",
     "S3.01",
@@ -261,18 +261,18 @@
    ],
    "chapter": "THE BOARD'S SIDE · blind",
    "title": "FRIDAY, THE BOARD'S SIDE: STEPS ONE TO THREE",
-   "cue": "music (v3.3): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
-   "frames": 1612,
-   "tc_in": "13:12:12",
-   "tc_out": "14:19:16"
+   "cue": "music (v3.4): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
+   "frames": 1613,
+   "tc_in": "13:02:06",
+   "tc_out": "14:09:11"
   },
   {
    "id": "S4",
    "side": "",
    "place": "the boardroom",
    "time": "Sat Nov 18 · night",
-   "s": 3515,
-   "e": 4655,
+   "s": 3522,
+   "e": 4625,
    "shots": [
     "S4.01",
     "S4.02",
@@ -281,18 +281,18 @@
    ],
    "chapter": "THE BOARD'S SIDE · blind",
    "title": "THE WEEKEND, THE BOARDROOM: STEP FOUR",
-   "cue": "music (v3.3): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
-   "frames": 1140,
-   "tc_in": "14:19:16",
-   "tc_out": "15:07:04"
+   "cue": "music (v3.4): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
+   "frames": 1103,
+   "tc_in": "14:09:11",
+   "tc_out": "14:55:10"
   },
   {
    "id": "S4L",
    "side": "",
    "place": "the NopeAI lobby, Sunday: his walk-in (inside the board's side)",
    "time": "Sun Nov 19, 2023 · 1:03 PM",
-   "s": 4655,
-   "e": 6218,
+   "s": 4625,
+   "e": 6189,
    "shots": [
     "v32-S5.00",
     "S4.09",
@@ -308,18 +308,18 @@
    ],
    "chapter": "S4L",
    "title": "the NopeAI lobby, Sunday: his walk-in (inside the board's side)",
-   "cue": "music (v3.3): none: the lobby's room; one felt note on his look up; PROCEDURE resumes under S4.09 · music (v3.3): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
-   "frames": 1563,
-   "tc_in": "15:07:04",
-   "tc_out": "16:12:07"
+   "cue": "music (v3.4): none: the lobby's room; one felt note on his look up; PROCEDURE resumes under S4.09 · music (v3.4): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
+   "frames": 1564,
+   "tc_in": "14:55:10",
+   "tc_out": "16:00:14"
   },
   {
    "id": "S5",
    "side": "",
    "place": "his dark room (Gerg on the monitor)",
    "time": "Mon Nov 20 · ~2:06 AM",
-   "s": 6218,
-   "e": 8562,
+   "s": 6189,
+   "e": 8513,
    "shots": [
     "S5.02",
     "S5.03",
@@ -336,18 +336,18 @@
    ],
    "chapter": "HIS SIDE · what they didn't know",
    "title": "HIS SIDE, 2 AM: WHAT THEY DIDN'T KNOW",
-   "cue": "music (v3.3): 2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door",
-   "frames": 2344,
-   "tc_in": "16:12:07",
-   "tc_out": "17:49:23"
+   "cue": "music (v3.4): 2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door",
+   "frames": 2324,
+   "tc_in": "16:00:14",
+   "tc_out": "17:37:10"
   },
   {
    "id": "S6",
    "side": "",
    "place": "his monitor: the board call",
    "time": "Monday",
-   "s": 8562,
-   "e": 8949,
+   "s": 8513,
+   "e": 8900,
    "shots": [
     "S6.01",
     "S6.02",
@@ -357,18 +357,18 @@
    ],
    "chapter": "HIS SIDE · what they didn't know",
    "title": "THE AVALANCHE",
-   "cue": "music (v3.3): THE AVALANCHE · the one full band · SET-PIECE SWING, dead stop on Mada's label; +2-3 LU (mood §4 #3, the mix)",
+   "cue": "music (v3.4): THE AVALANCHE · the one full band · SET-PIECE SWING, dead stop on Mada's label; +2-3 LU (mood §4 #3, the mix)",
    "frames": 387,
-   "tc_in": "17:49:23",
-   "tc_out": "18:06:02"
+   "tc_in": "17:37:10",
+   "tc_out": "17:53:13"
   },
   {
    "id": "S7",
    "side": "",
    "place": "the bullpen, back wall",
    "time": "Mon Nov 20 · day",
-   "s": 8949,
-   "e": 11219,
+   "s": 8900,
+   "e": 11170,
    "shots": [
     "S7.01",
     "S7.02",
@@ -385,18 +385,18 @@
    ],
    "chapter": "HIS SIDE · what they didn't know",
    "title": "THE RETURN: MONDAY AT HQ, TUESDAY IN THE BOARDROOM",
-   "cue": "music (v3.3): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged",
+   "cue": "music (v3.4): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged",
    "frames": 2270,
-   "tc_in": "18:06:02",
-   "tc_out": "19:40:16"
+   "tc_in": "17:53:13",
+   "tc_out": "19:28:03"
   },
   {
    "id": "S8",
    "side": "",
    "place": "the lobby",
    "time": "Tue Nov 21 · that night",
-   "s": 11219,
-   "e": 12138,
+   "s": 11170,
+   "e": 12187,
    "shots": [
     "S8.01",
     "S8.03",
@@ -410,10 +410,10 @@
    ],
    "chapter": "HIS SIDE · the lobby and after",
    "title": "THE LOBBY, AND AFTER",
-   "cue": "music (v3.3): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged · music (v3.3): CODA · the vault's F hum as the pedal; no motif under the memo",
-   "frames": 919,
-   "tc_in": "19:40:16",
-   "tc_out": "20:18:23"
+   "cue": "music (v3.4): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged · music (v3.4): CODA · the vault's F hum as the pedal; no motif under the memo",
+   "frames": 1017,
+   "tc_in": "19:28:03",
+   "tc_out": "20:10:12"
   }
  ],
  "shots": [
@@ -449,7 +449,7 @@
     "orb"
    ],
    "cues": [
-    "music (v3.3): NOON, LAS VEGAS · suspense · a felt bar (MM-07 felt) under the suite's ordinary life; LEVERAGE low from the JOIN click, thinned to its pedal under Alyi's sentence, back up for the dialog; D6 drop-out on the Remove click (mood §4 #1b; the waltz no longer plays on his side)"
+    "music (v3.4): NOON, LAS VEGAS · suspense · a felt bar (MM-07 felt) under the suite's ordinary life; LEVERAGE low from the JOIN click, thinned to its pedal under Alyi's sentence, back up for the dialog; D6 drop-out on the Remove click (mood §4 #1b; the waltz no longer plays on his side)"
    ],
    "sounds": [],
    "spots": [],
@@ -493,8 +493,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "11:53:05",
-   "tc_out": "11:59:10",
+   "tc_in": "11:42:17",
+   "tc_out": "11:48:22",
    "frames": 149
   },
   {
@@ -523,7 +523,7 @@
     "orb"
    ],
    "cues": [
-    "music (v3.3): NOON, LAS VEGAS · suspense · a felt bar (MM-07 felt) under the suite's ordinary life; LEVERAGE low from the JOIN click, thinned to its pedal under Alyi's sentence, back up for the dialog; D6 drop-out on the Remove click (mood §4 #1b; the waltz no longer plays on his side)"
+    "music (v3.4): NOON, LAS VEGAS · suspense · a felt bar (MM-07 felt) under the suite's ordinary life; LEVERAGE low from the JOIN click, thinned to its pedal under Alyi's sentence, back up for the dialog; D6 drop-out on the Remove click (mood §4 #1b; the waltz no longer plays on his side)"
    ],
    "sounds": [],
    "spots": [],
@@ -562,8 +562,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "11:59:10",
-   "tc_out": "12:02:15",
+   "tc_in": "11:48:22",
+   "tc_out": "11:52:03",
    "frames": 77
   },
   {
@@ -573,25 +573,25 @@
     "S1.02"
    ],
    "s": 226,
-   "e": 394,
+   "e": 400,
    "onscreen": [
     {
      "text": "BOARD · VIDEO CALL · JOIN",
      "s": 7,
-     "e": 168
+     "e": 174
     }
    ],
    "lines": [
     {
-     "id": "v3-vo-18",
+     "id": "v34-vo-07",
      "kind": "vo",
      "mode": "on-mic",
      "who": "MAS",
-     "text": "gerg's not on it. alyi set it up. probably just the budget.",
+     "text": "gerg's not on it. probably the budget. good. i'll ask for more compute.",
      "s": 28,
-     "e": 144,
-     "fs": 14,
-     "fe": 158,
+     "e": 150,
+     "fs": 15,
+     "fe": 165,
      "os": false,
      "via": null,
      "face": null,
@@ -601,64 +601,74 @@
      "mouth": [],
      "words": [
       [
-       "gerg's",
-       2,
-       12
+       "gerg",
+       1,
+       8
+      ],
+      [
+       "'s",
+       8,
+       10
       ],
       [
        "not",
-       12,
-       19
+       10,
+       16
       ],
       [
        "on",
-       19,
+       16,
+       21
+      ],
+      [
+       "it",
+       21,
        25
       ],
       [
-       "it",
-       25,
-       29
-      ],
-      [
-       "alyi",
-       42,
-       53
-      ],
-      [
-       "set",
-       53,
-       59
-      ],
-      [
-       "it",
-       59,
-       62
-      ],
-      [
-       "up",
-       62,
-       69
-      ],
-      [
        "probably",
-       80,
-       93
-      ],
-      [
-       "just",
-       93,
-       99
+       31,
+       43
       ],
       [
        "the",
-       99,
-       102
+       43,
+       46
       ],
       [
        "budget",
-       102,
-       115
+       46,
+       56
+      ],
+      [
+       "good",
+       62,
+       73
+      ],
+      [
+       "i'll",
+       83,
+       88
+      ],
+      [
+       "ask",
+       88,
+       96
+      ],
+      [
+       "for",
+       96,
+       99
+      ],
+      [
+       "more",
+       99,
+       104
+      ],
+      [
+       "compute",
+       104,
+       122
       ]
      ],
      "tag": "V.O.",
@@ -678,15 +688,15 @@
    "does": "His hand nudges the glass one pixel true. The laptop pings: BOARD · VIDEO CALL · JOIN, four small attendee icons under it (a door, a glowing page, a spinner, a black square), none green. His pointer waits beside JOIN while he thinks it through; then the click.",
    "chars": [],
    "cues": [
-    "music (v3.3): NOON, LAS VEGAS · suspense · a felt bar (MM-07 felt) under the suite's ordinary life; LEVERAGE low from the JOIN click, thinned to its pedal under Alyi's sentence, back up for the dialog; D6 drop-out on the Remove click (mood §4 #1b; the waltz no longer plays on his side)"
+    "music (v3.4): NOON, LAS VEGAS · suspense · a felt bar (MM-07 felt) under the suite's ordinary life; LEVERAGE low from the JOIN click, thinned to its pedal under Alyi's sentence, back up for the dialog; D6 drop-out on the Remove click (mood §4 #1b; the waltz no longer plays on his side)"
    ],
    "sounds": [
-    "dialog_ok_click @162"
+    "dialog_ok_click @168"
    ],
    "spots": [
     {
      "name": "dialog_ok_click",
-     "k": 162,
+     "k": 168,
      "dur": null
     }
    ],
@@ -706,11 +716,7 @@
    "names": [
     {
      "id": "gerg",
-     "k": 30
-    },
-    {
-     "id": "alyi",
-     "k": 70
+     "k": 29
     }
    ],
    "fg": null,
@@ -719,27 +725,33 @@
     "out1": 24,
     "out2": 32,
     "glow": 44,
-    "print": 52
+    "print": 52,
+    "look": 29,
+    "door": 74,
+    "back": 90
    },
    "mark_src": {
     "nudge": "f 10",
     "out1": "f 24",
     "out2": "f 32",
     "glow": "f 44",
-    "print": "f 52"
+    "print": "f 52",
+    "look": "w v34-vo-07 gerg 0",
+    "door": "w v34-vo-07 budget 0",
+    "back": "w v34-vo-07 good 0"
    },
    "texts": [
     {
      "kind": "label",
      "text": "BOARD · VIDEO CALL · JOIN",
      "s": 7,
-     "e": 168,
+     "e": 174,
      "must": true
     }
    ],
-   "tc_in": "12:02:15",
-   "tc_out": "12:09:15",
-   "frames": 168
+   "tc_in": "11:52:03",
+   "tc_out": "11:59:09",
+   "frames": 174
   },
   {
    "id": "S1.07",
@@ -747,8 +759,8 @@
    "beats": [
     "S1.07"
    ],
-   "s": 394,
-   "e": 576,
+   "s": 400,
+   "e": 582,
    "onscreen": [
     {
      "text": "MAS MANALT · ALYI · NELEH · MADA · THE QUIET VOTE",
@@ -961,7 +973,7 @@
     "quiet-vote"
    ],
    "cues": [
-    "music (v3.3): NOON, LAS VEGAS · suspense · a felt bar (MM-07 felt) under the suite's ordinary life; LEVERAGE low from the JOIN click, thinned to its pedal under Alyi's sentence, back up for the dialog; D6 drop-out on the Remove click (mood §4 #1b; the waltz no longer plays on his side)"
+    "music (v3.4): NOON, LAS VEGAS · suspense · a felt bar (MM-07 felt) under the suite's ordinary life; LEVERAGE low from the JOIN click, thinned to its pedal under Alyi's sentence, back up for the dialog; D6 drop-out on the Remove click (mood §4 #1b; the waltz no longer plays on his side)"
    ],
    "sounds": [],
    "spots": [],
@@ -1052,8 +1064,8 @@
      "must": true
     }
    ],
-   "tc_in": "12:09:15",
-   "tc_out": "12:17:05",
+   "tc_in": "11:59:09",
+   "tc_out": "12:06:23",
    "frames": 182
   },
   {
@@ -1062,23 +1074,23 @@
    "beats": [
     "v31-S1.08d"
    ],
-   "s": 576,
-   "e": 633,
+   "s": 582,
+   "e": 640,
    "onscreen": [
     {
      "text": "Remove MAS MANALT from the meeting?",
      "s": 4,
-     "e": 57
+     "e": 58
     },
     {
      "text": "[ Remove ]",
      "s": 4,
-     "e": 57
+     "e": 58
     },
     {
      "text": "ALYI",
      "s": 28,
-     "e": 57
+     "e": 58
     }
    ],
    "lines": [],
@@ -1095,7 +1107,7 @@
    "does": "HARD CUT, bright, full frame, in the 1993 dialog's cream and bevel: Remove MAS MANALT from the meeting? and one button, Remove. Held 1.5 s to read. An arrow pointer tagged ALYI steps onto Remove, one whole-pixel step a beat, and clicks on the downbeat.",
    "chars": [],
    "cues": [
-    "music (v3.3): NOON, LAS VEGAS · suspense · a felt bar (MM-07 felt) under the suite's ordinary life; LEVERAGE low from the JOIN click, thinned to its pedal under Alyi's sentence, back up for the dialog; D6 drop-out on the Remove click (mood §4 #1b; the waltz no longer plays on his side)"
+    "music (v3.4): NOON, LAS VEGAS · suspense · a felt bar (MM-07 felt) under the suite's ordinary life; LEVERAGE low from the JOIN click, thinned to its pedal under Alyi's sentence, back up for the dialog; D6 drop-out on the Remove click (mood §4 #1b; the waltz no longer plays on his side)"
    ],
    "sounds": [
     "dialog_ok_click @45"
@@ -1138,27 +1150,27 @@
      "kind": "label",
      "text": "Remove MAS MANALT from the meeting?",
      "s": 4,
-     "e": 57,
+     "e": 58,
      "must": true
     },
     {
      "kind": "label",
      "text": "[ Remove ]",
      "s": 4,
-     "e": 57,
+     "e": 58,
      "must": true
     },
     {
      "kind": "label",
      "text": "ALYI",
      "s": 28,
-     "e": 57,
+     "e": 58,
      "must": true
     }
    ],
-   "tc_in": "12:17:05",
-   "tc_out": "12:19:14",
-   "frames": 57
+   "tc_in": "12:06:23",
+   "tc_out": "12:09:09",
+   "frames": 58
   },
   {
    "id": "S1.09",
@@ -1166,8 +1178,8 @@
    "beats": [
     "S1.09"
    ],
-   "s": 633,
-   "e": 712,
+   "s": 640,
+   "e": 719,
    "onscreen": [
     {
      "text": "You've been removed from the meeting.",
@@ -1195,7 +1207,7 @@
     "quiet-vote"
    ],
    "cues": [
-    "music (v3.3): NOON, LAS VEGAS · suspense · a felt bar (MM-07 felt) under the suite's ordinary life; LEVERAGE low from the JOIN click, thinned to its pedal under Alyi's sentence, back up for the dialog; D6 drop-out on the Remove click (mood §4 #1b; the waltz no longer plays on his side)",
+    "music (v3.4): NOON, LAS VEGAS · suspense · a felt bar (MM-07 felt) under the suite's ordinary life; LEVERAGE low from the JOIN click, thinned to its pedal under Alyi's sentence, back up for the dialog; D6 drop-out on the Remove click (mood §4 #1b; the waltz no longer plays on his side)",
     "sound: the one deliberate silence (Cancel click -> phone buzz): music and room out, room tone only"
    ],
    "sounds": [],
@@ -1275,8 +1287,8 @@
      "must": true
     }
    ],
-   "tc_in": "12:19:14",
-   "tc_out": "12:22:21",
+   "tc_in": "12:09:09",
+   "tc_out": "12:12:16",
    "frames": 79
   },
   {
@@ -1285,8 +1297,8 @@
    "beats": [
     "S1.10"
    ],
-   "s": 712,
-   "e": 736,
+   "s": 719,
+   "e": 743,
    "onscreen": [],
    "lines": [],
    "seq": "S1",
@@ -1304,7 +1316,7 @@
     "mas"
    ],
    "cues": [
-    "music (v3.3): NOON, LAS VEGAS · suspense · a felt bar (MM-07 felt) under the suite's ordinary life; LEVERAGE low from the JOIN click, thinned to its pedal under Alyi's sentence, back up for the dialog; D6 drop-out on the Remove click (mood §4 #1b; the waltz no longer plays on his side)"
+    "music (v3.4): NOON, LAS VEGAS · suspense · a felt bar (MM-07 felt) under the suite's ordinary life; LEVERAGE low from the JOIN click, thinned to its pedal under Alyi's sentence, back up for the dialog; D6 drop-out on the Remove click (mood §4 #1b; the waltz no longer plays on his side)"
    ],
    "sounds": [],
    "spots": [],
@@ -1335,8 +1347,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "12:22:21",
-   "tc_out": "12:23:21",
+   "tc_in": "12:12:16",
+   "tc_out": "12:13:16",
    "frames": 24
   },
   {
@@ -1345,8 +1357,8 @@
    "beats": [
     "S1.11"
    ],
-   "s": 736,
-   "e": 782,
+   "s": 743,
+   "e": 789,
    "onscreen": [
     {
      "text": "[super]  [super]  [super]",
@@ -1368,7 +1380,7 @@
    "does": "The phone buzzes and the room comes back. Suggested replies; his thumb takes the middle one.",
    "chars": [],
    "cues": [
-    "music (v3.3): NOON, LAS VEGAS · suspense · a felt bar (MM-07 felt) under the suite's ordinary life; LEVERAGE low from the JOIN click, thinned to its pedal under Alyi's sentence, back up for the dialog; D6 drop-out on the Remove click (mood §4 #1b; the waltz no longer plays on his side)",
+    "music (v3.4): NOON, LAS VEGAS · suspense · a felt bar (MM-07 felt) under the suite's ordinary life; LEVERAGE low from the JOIN click, thinned to its pedal under Alyi's sentence, back up for the dialog; D6 drop-out on the Remove click (mood §4 #1b; the waltz no longer plays on his side)",
     "sound: the suite comes back on the buzz · no score under \"super.\""
    ],
    "sounds": [
@@ -1411,8 +1423,8 @@
      "must": true
     }
    ],
-   "tc_in": "12:23:21",
-   "tc_out": "12:25:19",
+   "tc_in": "12:13:16",
+   "tc_out": "12:15:14",
    "frames": 46
   },
   {
@@ -1421,8 +1433,8 @@
    "beats": [
     "S1.12"
    ],
-   "s": 782,
-   "e": 874,
+   "s": 789,
+   "e": 880,
    "onscreen": [],
    "lines": [
     {
@@ -1496,7 +1508,7 @@
     "quiet-vote"
    ],
    "cues": [
-    "music (v3.3): NOON, LAS VEGAS · suspense · a felt bar (MM-07 felt) under the suite's ordinary life; LEVERAGE low from the JOIN click, thinned to its pedal under Alyi's sentence, back up for the dialog; D6 drop-out on the Remove click (mood §4 #1b; the waltz no longer plays on his side)"
+    "music (v3.4): NOON, LAS VEGAS · suspense · a felt bar (MM-07 felt) under the suite's ordinary life; LEVERAGE low from the JOIN click, thinned to its pedal under Alyi's sentence, back up for the dialog; D6 drop-out on the Remove click (mood §4 #1b; the waltz no longer plays on his side)"
    ],
    "sounds": [],
    "spots": [],
@@ -1552,17 +1564,17 @@
     "side": "left"
    },
    "marks": {
-    "fall": 68,
-    "pick": 70
+    "fall": 67,
+    "pick": 69
    },
    "mark_src": {
     "fall": "len -24",
     "pick": "len -22"
    },
    "texts": [],
-   "tc_in": "12:25:19",
-   "tc_out": "12:29:15",
-   "frames": 92
+   "tc_in": "12:15:14",
+   "tc_out": "12:19:09",
+   "frames": 91
   },
   {
    "id": "v32-S1.13",
@@ -1570,8 +1582,8 @@
    "beats": [
     "v32-S1.13"
    ],
-   "s": 874,
-   "e": 994,
+   "s": 880,
+   "e": 1000,
    "onscreen": [
     {
      "text": "MAS (post): \"i loved my time at nopeai. … will have more to say about what's next later. 🫡\"",
@@ -1595,7 +1607,7 @@
     "mas"
    ],
    "cues": [
-    "music (v3.3): none: the suite's air; the drone comes up under the fall to night"
+    "music (v3.4): none: the suite's air; the drone comes up under the fall to night"
    ],
    "sounds": [
     "key_tap_soft_03 @14",
@@ -1648,8 +1660,8 @@
      "must": true
     }
    ],
-   "tc_in": "12:29:15",
-   "tc_out": "12:34:15",
+   "tc_in": "12:19:09",
+   "tc_out": "12:24:09",
    "frames": 120
   },
   {
@@ -1658,8 +1670,8 @@
    "beats": [
     "S2.01"
    ],
-   "s": 994,
-   "e": 1093,
+   "s": 1000,
+   "e": 1099,
    "onscreen": [
     {
      "text": "RAIL: NOV 17 · NIGHT",
@@ -1724,7 +1736,7 @@
    "does": "With the pen he pocketed from the MACROSOFT check, he carves a third mark beside two faint ones.",
    "chars": [],
    "cues": [
-    "music (v3.3): THAT NIGHT · after the silence · DARK ROOM, one felt line; out through the rewind"
+    "music (v3.4): THAT NIGHT · after the silence · DARK ROOM, one felt line; out through the rewind"
    ],
    "sounds": [],
    "spots": [],
@@ -1750,8 +1762,8 @@
     "brush": "f 62"
    },
    "texts": [],
-   "tc_in": "12:34:15",
-   "tc_out": "12:38:18",
+   "tc_in": "12:24:09",
+   "tc_out": "12:28:12",
    "frames": 99
   },
   {
@@ -1760,8 +1772,8 @@
    "beats": [
     "S2.02"
    ],
-   "s": 1093,
-   "e": 1155,
+   "s": 1099,
+   "e": 1161,
    "onscreen": [],
    "lines": [],
    "seq": "S2",
@@ -1779,7 +1791,7 @@
     "orb"
    ],
    "cues": [
-    "music (v3.3): THAT NIGHT · after the silence · DARK ROOM, one felt line; out through the rewind"
+    "music (v3.4): THAT NIGHT · after the silence · DARK ROOM, one felt line; out through the rewind"
    ],
    "sounds": [
     "render_front_sweep @33"
@@ -1822,8 +1834,8 @@
     "mark1": "v4 14/42 scaled"
    },
    "texts": [],
-   "tc_in": "12:38:18",
-   "tc_out": "12:41:08",
+   "tc_in": "12:28:12",
+   "tc_out": "12:31:02",
    "frames": 62
   },
   {
@@ -1832,8 +1844,8 @@
    "beats": [
     "S2.05"
    ],
-   "s": 1155,
-   "e": 1215,
+   "s": 1161,
+   "e": 1221,
    "onscreen": [
     {
      "text": "rewinding…",
@@ -1857,7 +1869,7 @@
     "orb"
    ],
    "cues": [
-    "music (v3.3): THAT NIGHT · after the silence · DARK ROOM, one felt line; out through the rewind"
+    "music (v3.4): THAT NIGHT · after the silence · DARK ROOM, one felt line; out through the rewind"
    ],
    "sounds": [
     "reverse_swell_1beat @33"
@@ -1910,8 +1922,8 @@
      "must": true
     }
    ],
-   "tc_in": "12:41:08",
-   "tc_out": "12:43:20",
+   "tc_in": "12:31:02",
+   "tc_out": "12:33:14",
    "frames": 60
   },
   {
@@ -1920,23 +1932,23 @@
    "beats": [
     "v31-S3.00p"
    ],
-   "s": 1215,
-   "e": 1325,
+   "s": 1221,
+   "e": 1332,
    "onscreen": [
     {
      "text": "11:52",
      "s": 4,
-     "e": 110
+     "e": 111
     },
     {
      "text": "NELEH / READ THE CHARTER. LITERALLY.",
      "s": 4,
-     "e": 110
+     "e": 111
     },
     {
      "text": "FOOTNOTES: ∞",
      "s": 4,
-     "e": 110
+     "e": 111
     }
    ],
    "lines": [
@@ -2066,7 +2078,7 @@
     "neleh"
    ],
    "cues": [
-    "music (v3.3): THE BOARD'S SIDE, 11:52 · Neleh's office clock first, then the waltz (BLUEPRINT, MM-07) under her pointer at underscore (about −20 LUFS), building; it hands to PROCEDURE on the call clock's 11:59 tick (mood §4 #6)"
+    "music (v3.4): THE BOARD'S SIDE, 11:52 · Neleh's office clock first, then the waltz (BLUEPRINT, MM-07) under her pointer at underscore (about −20 LUFS), building; it hands to PROCEDURE on the call clock's 11:59 tick (mood §4 #6)"
    ],
    "sounds": [],
    "spots": [],
@@ -2109,27 +2121,27 @@
      "kind": "clock",
      "text": "11:52",
      "s": 4,
-     "e": 110,
+     "e": 111,
      "must": false
     },
     {
      "kind": "card",
      "text": "NELEH / READ THE CHARTER. LITERALLY.",
      "s": 4,
-     "e": 110,
+     "e": 111,
      "must": true
     },
     {
      "kind": "card",
      "text": "FOOTNOTES: ∞",
      "s": 4,
-     "e": 110,
+     "e": 111,
      "must": true
     }
    ],
-   "tc_in": "12:43:20",
-   "tc_out": "12:48:10",
-   "frames": 110
+   "tc_in": "12:33:14",
+   "tc_out": "12:38:05",
+   "frames": 111
   },
   {
    "id": "S1.03",
@@ -2137,8 +2149,8 @@
    "beats": [
     "S1.03"
    ],
-   "s": 1325,
-   "e": 1607,
+   "s": 1332,
+   "e": 1614,
    "onscreen": [
     {
      "text": "HOW TO FIRE A CEO",
@@ -2604,7 +2616,7 @@
     "neleh"
    ],
    "cues": [
-    "music (v3.3): THE BOARD'S SIDE, 11:52 · Neleh's office clock first, then the waltz (BLUEPRINT, MM-07) under her pointer at underscore (about −20 LUFS), building; it hands to PROCEDURE on the call clock's 11:59 tick (mood §4 #6)"
+    "music (v3.4): THE BOARD'S SIDE, 11:52 · Neleh's office clock first, then the waltz (BLUEPRINT, MM-07) under her pointer at underscore (about −20 LUFS), building; it hands to PROCEDURE on the call clock's 11:59 tick (mood §4 #6)"
    ],
    "sounds": [
     "rubber_stamp_C @7"
@@ -2740,8 +2752,8 @@
      "must": true
     }
    ],
-   "tc_in": "12:48:10",
-   "tc_out": "13:00:04",
+   "tc_in": "12:38:05",
+   "tc_out": "12:49:23",
    "frames": 282
   },
   {
@@ -2750,8 +2762,8 @@
    "beats": [
     "S1.04"
    ],
-   "s": 1607,
-   "e": 1835,
+   "s": 1614,
+   "e": 1842,
    "onscreen": [
     {
      "text": "MACROSOFT · BILLIONS IN",
@@ -3130,7 +3142,7 @@
     "neleh"
    ],
    "cues": [
-    "music (v3.3): THE BOARD'S SIDE, 11:52 · Neleh's office clock first, then the waltz (BLUEPRINT, MM-07) under her pointer at underscore (about −20 LUFS), building; it hands to PROCEDURE on the call clock's 11:59 tick (mood §4 #6)"
+    "music (v3.4): THE BOARD'S SIDE, 11:52 · Neleh's office clock first, then the waltz (BLUEPRINT, MM-07) under her pointer at underscore (about −20 LUFS), building; it hands to PROCEDURE on the call clock's 11:59 tick (mood §4 #6)"
    ],
    "sounds": [
     "rubber_stamp_C @91",
@@ -3224,8 +3236,8 @@
      "must": true
     }
    ],
-   "tc_in": "13:00:04",
-   "tc_out": "13:09:16",
+   "tc_in": "12:49:23",
+   "tc_out": "12:59:11",
    "frames": 228
   },
   {
@@ -3234,13 +3246,13 @@
    "beats": [
     "S1.05"
    ],
-   "s": 1835,
-   "e": 1903,
+   "s": 1842,
+   "e": 1909,
    "onscreen": [
     {
      "text": "1. NOON · VIDEO CALL",
      "s": 12,
-     "e": 68
+     "e": 67
     }
    ],
    "lines": [],
@@ -3262,7 +3274,7 @@
     "quiet-vote"
    ],
    "cues": [
-    "music (v3.3): THE BOARD'S SIDE, 11:52 · Neleh's office clock first, then the waltz (BLUEPRINT, MM-07) under her pointer at underscore (about −20 LUFS), building; it hands to PROCEDURE on the call clock's 11:59 tick (mood §4 #6)"
+    "music (v3.4): THE BOARD'S SIDE, 11:52 · Neleh's office clock first, then the waltz (BLUEPRINT, MM-07) under her pointer at underscore (about −20 LUFS), building; it hands to PROCEDURE on the call clock's 11:59 tick (mood §4 #6)"
    ],
    "sounds": [
     "paper_whip @56"
@@ -3339,13 +3351,13 @@
      "kind": "label",
      "text": "1. NOON · VIDEO CALL",
      "s": 12,
-     "e": 68,
+     "e": 67,
      "must": true
     }
    ],
-   "tc_in": "13:09:16",
-   "tc_out": "13:12:12",
-   "frames": 68
+   "tc_in": "12:59:11",
+   "tc_out": "13:02:06",
+   "frames": 67
   },
   {
    "id": "S3.00a",
@@ -3353,8 +3365,8 @@
    "beats": [
     "S3.00a"
    ],
-   "s": 1903,
-   "e": 2267,
+   "s": 1909,
+   "e": 2274,
    "onscreen": [
     {
      "text": "Waiting for MAS MANALT to join…",
@@ -3369,7 +3381,7 @@
     {
      "text": "12:00",
      "s": 238,
-     "e": 364
+     "e": 365
     }
    ],
    "lines": [
@@ -3873,7 +3885,7 @@
     "quiet-vote"
    ],
    "cues": [
-    "music (v3.3): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
+    "music (v3.4): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
    ],
    "sounds": [
     "bell_ding_F6 @5"
@@ -3973,13 +3985,13 @@
      "kind": "clock",
      "text": "12:00",
      "s": 238,
-     "e": 364,
+     "e": 365,
      "must": false
     }
    ],
-   "tc_in": "13:12:12",
-   "tc_out": "13:27:16",
-   "frames": 364
+   "tc_in": "13:02:06",
+   "tc_out": "13:17:11",
+   "frames": 365
   },
   {
    "id": "S3.01",
@@ -3987,8 +3999,8 @@
    "beats": [
     "S3.01"
    ],
-   "s": 2267,
-   "e": 2363,
+   "s": 2274,
+   "e": 2370,
    "onscreen": [
     {
      "text": "ALYI removed MAS MANALT from the meeting.",
@@ -4048,7 +4060,7 @@
     "quiet-vote"
    ],
    "cues": [
-    "music (v3.3): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
+    "music (v3.4): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
    ],
    "sounds": [],
    "spots": [],
@@ -4128,8 +4140,8 @@
      "must": true
     }
    ],
-   "tc_in": "13:27:16",
-   "tc_out": "13:31:16",
+   "tc_in": "13:17:11",
+   "tc_out": "13:21:11",
    "frames": 96
   },
   {
@@ -4138,28 +4150,28 @@
    "beats": [
     "S3.02"
    ],
-   "s": 2363,
-   "e": 2402,
+   "s": 2370,
+   "e": 2408,
    "onscreen": [
     {
      "text": "1. NOON · VIDEO CALL  ✓",
      "s": 4,
-     "e": 39
+     "e": 38
     },
     {
      "text": "2. BLOG POST",
      "s": 13,
-     "e": 39
+     "e": 38
     },
     {
      "text": "3. INTERIM CEO",
      "s": 19,
-     "e": 39
+     "e": 38
     },
     {
      "text": "4. ______________",
      "s": 25,
-     "e": 39
+     "e": 38
     }
    ],
    "lines": [],
@@ -4176,7 +4188,7 @@
    "does": "Her desk from above: her pen ticks 1. NOON · VIDEO CALL and runs down what the fold hid: 2. BLOG POST · 3. INTERIM CEO · 4. ______, and stops on the blank.",
    "chars": [],
    "cues": [
-    "music (v3.3): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
+    "music (v3.4): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
    ],
    "sounds": [
     "key_tap_space @4"
@@ -4218,34 +4230,34 @@
      "kind": "label",
      "text": "1. NOON · VIDEO CALL  ✓",
      "s": 4,
-     "e": 39,
+     "e": 38,
      "must": true
     },
     {
      "kind": "label",
      "text": "2. BLOG POST",
      "s": 13,
-     "e": 39,
+     "e": 38,
      "must": true
     },
     {
      "kind": "label",
      "text": "3. INTERIM CEO",
      "s": 19,
-     "e": 39,
+     "e": 38,
      "must": true
     },
     {
      "kind": "label",
      "text": "4. ______________",
      "s": 25,
-     "e": 39,
+     "e": 38,
      "must": true
     }
    ],
-   "tc_in": "13:31:16",
-   "tc_out": "13:33:07",
-   "frames": 39
+   "tc_in": "13:21:11",
+   "tc_out": "13:23:01",
+   "frames": 38
   },
   {
    "id": "S3.03",
@@ -4253,8 +4265,8 @@
    "beats": [
     "S3.03"
    ],
-   "s": 2402,
-   "e": 2618,
+   "s": 2408,
+   "e": 2624,
    "onscreen": [
     {
      "text": "NOPEAI BLOG · DRAFT",
@@ -4354,7 +4366,7 @@
    "does": "Her laptop: the NopeAI blog in its own UI; the post types itself in the source's words, held to read: \"…he was not consistently candid in his communications with the board… The board no longer has confidence in his ability to continue leading NopeAI.\" Her lips move as she reads it. \"Any objections?\" Nobody answers. She clicks Post, on a tick.",
    "chars": [],
    "cues": [
-    "music (v3.3): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
+    "music (v3.4): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
    ],
    "sounds": [
     "post_click @213"
@@ -4426,8 +4438,8 @@
      "must": true
     }
    ],
-   "tc_in": "13:33:07",
-   "tc_out": "13:42:07",
+   "tc_in": "13:23:01",
+   "tc_out": "13:32:01",
    "frames": 216
   },
   {
@@ -4436,8 +4448,8 @@
    "beats": [
     "S3.04"
    ],
-   "s": 2618,
-   "e": 2878,
+   "s": 2624,
+   "e": 2884,
    "onscreen": [
     {
      "text": "RIMA TAMURI · INTERIM CEO",
@@ -4945,7 +4957,7 @@
     "rima"
    ],
    "cues": [
-    "music (v3.3): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
+    "music (v3.4): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
    ],
    "sounds": [
     "bell_ding_F6 @4"
@@ -5038,8 +5050,8 @@
      "must": true
     }
    ],
-   "tc_in": "13:42:07",
-   "tc_out": "13:53:03",
+   "tc_in": "13:32:01",
+   "tc_out": "13:42:21",
    "frames": 260
   },
   {
@@ -5048,8 +5060,8 @@
    "beats": [
     "S3.04b"
    ],
-   "s": 2878,
-   "e": 2956,
+   "s": 2884,
+   "e": 2962,
    "onscreen": [],
    "lines": [
     {
@@ -5295,7 +5307,7 @@
     "neleh"
    ],
    "cues": [
-    "music (v3.3): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
+    "music (v3.4): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
    ],
    "sounds": [
     "key_tap_space @68"
@@ -5338,8 +5350,8 @@
     "tick": "snd key_tap_space 1 0"
    },
    "texts": [],
-   "tc_in": "13:53:03",
-   "tc_out": "13:56:09",
+   "tc_in": "13:42:21",
+   "tc_out": "13:46:03",
    "frames": 78
   },
   {
@@ -5348,8 +5360,8 @@
    "beats": [
     "S3.06"
    ],
-   "s": 2956,
-   "e": 3013,
+   "s": 2962,
+   "e": 3019,
    "onscreen": [],
    "lines": [
     {
@@ -5502,7 +5514,7 @@
     "staff"
    ],
    "cues": [
-    "music (v3.3): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
+    "music (v3.4): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
    ],
    "sounds": [],
    "spots": [],
@@ -5557,8 +5569,8 @@
     "handDown": "end a5-27-18 5"
    },
    "texts": [],
-   "tc_in": "13:56:09",
-   "tc_out": "13:58:18",
+   "tc_in": "13:46:03",
+   "tc_out": "13:48:12",
    "frames": 57
   },
   {
@@ -5567,8 +5579,8 @@
    "beats": [
     "S3.07"
    ],
-   "s": 3013,
-   "e": 3273,
+   "s": 3019,
+   "e": 3279,
    "onscreen": [],
    "lines": [
     {
@@ -5885,7 +5897,7 @@
     "alyi"
    ],
    "cues": [
-    "music (v3.3): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
+    "music (v3.4): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
    ],
    "sounds": [],
    "spots": [],
@@ -5924,8 +5936,8 @@
     "step": "end a5-27-19 10"
    },
    "texts": [],
-   "tc_in": "13:58:18",
-   "tc_out": "14:09:14",
+   "tc_in": "13:48:12",
+   "tc_out": "13:59:08",
    "frames": 260
   },
   {
@@ -5934,13 +5946,13 @@
    "beats": [
     "S3.05"
    ],
-   "s": 3273,
-   "e": 3515,
+   "s": 3279,
+   "e": 3522,
    "onscreen": [
     {
      "text": "POST: GERG: “…i quit.”",
      "s": 5,
-     "e": 242
+     "e": 243
     }
    ],
    "lines": [
@@ -5951,7 +5963,7 @@
      "who": "GERG",
      "text": "…i quit.",
      "s": 5,
-     "e": 242,
+     "e": 243,
      "fs": null,
      "fe": null,
      "os": false,
@@ -6300,7 +6312,7 @@
     "rima"
    ],
    "cues": [
-    "music (v3.3): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
+    "music (v3.4): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
    ],
    "sounds": [
     "keycap_popcorn @12"
@@ -6377,9 +6389,9 @@
     "post": "txt POST: GERG at 0"
    },
    "texts": [],
-   "tc_in": "14:09:14",
-   "tc_out": "14:19:16",
-   "frames": 242
+   "tc_in": "13:59:08",
+   "tc_out": "14:09:11",
+   "frames": 243
   },
   {
    "id": "S4.01",
@@ -6387,8 +6399,8 @@
    "beats": [
     "S4.01"
    ],
-   "s": 3515,
-   "e": 3630,
+   "s": 3522,
+   "e": 3637,
    "onscreen": [
     {
      "text": "RAIL: NOV 18",
@@ -6443,7 +6455,7 @@
     "rima"
    ],
    "cues": [
-    "music (v3.3): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
+    "music (v3.4): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
    ],
    "sounds": [
     "heart_gliss @7"
@@ -6522,8 +6534,8 @@
     "post": "txt POST: MAS at 0"
    },
    "texts": [],
-   "tc_in": "14:19:16",
-   "tc_out": "14:24:11",
+   "tc_in": "14:09:11",
+   "tc_out": "14:14:06",
    "frames": 115
   },
   {
@@ -6532,13 +6544,13 @@
    "beats": [
     "S4.02"
    ],
-   "s": 3630,
-   "e": 4084,
+   "s": 3637,
+   "e": 4054,
    "onscreen": [
     {
      "text": "STAFF · STAFF · INVESTORS · STAFF",
      "s": 6,
-     "e": 454
+     "e": 417
     }
    ],
    "lines": [
@@ -7078,103 +7090,6 @@
      ],
      "tag": "",
      "pre": false
-    },
-    {
-     "id": "a5-27-28",
-     "kind": "dialogue",
-     "mode": "on-mic",
-     "who": "ALYI",
-     "text": "That is the company telling us.",
-     "s": 379,
-     "e": 443,
-     "fs": 358,
-     "fe": 454,
-     "os": false,
-     "via": null,
-     "face": "lip",
-     "lip": true,
-     "carry": false,
-     "cut": false,
-     "mouth": [
-      [
-       0,
-       "rest"
-      ],
-      [
-       3,
-       "A"
-      ],
-      [
-       7,
-       "E"
-      ],
-      [
-       17,
-       "A"
-      ],
-      [
-       20,
-       "M"
-      ],
-      [
-       22,
-       "E"
-      ],
-      [
-       31,
-       "A"
-      ],
-      [
-       34,
-       "E"
-      ],
-      [
-       41,
-       "A"
-      ],
-      [
-       49,
-       "E"
-      ],
-      [
-       60,
-       "rest"
-      ]
-     ],
-     "words": [
-      [
-       "That",
-       2,
-       8
-      ],
-      [
-       "is",
-       8,
-       12
-      ],
-      [
-       "the",
-       12,
-       16
-      ],
-      [
-       "company",
-       16,
-       30
-      ],
-      [
-       "telling",
-       30,
-       41
-      ],
-      [
-       "us",
-       41,
-       60
-      ]
-     ],
-     "tag": "",
-     "pre": false
     }
    ],
    "seq": "S4",
@@ -7187,19 +7102,20 @@
    "frame": "WIDE · the boardroom at night (held)",
    "cls": "W",
    "move": "hold",
-   "does": "The boardroom at night, held on the wide through Neleh's two turns, the phones buzzing and stepping. The first phone goes over: clack. CUT to Alyi's reflection in the dark window for his line, so it is his.",
+   "does": "The boardroom at night, held on the wide through Neleh's two turns, the phones buzzing and stepping. The first phone goes over: clack. Then the whole row of phones lights up at once.",
    "chars": [
     "alyi",
     "mada",
     "neleh"
    ],
    "cues": [
-    "music (v3.3): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
+    "music (v3.4): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
    ],
    "sounds": [
     "BUZZ @6",
     "BUZZ @200",
-    "landing_thunk @365"
+    "landing_thunk @365",
+    "phone_buzz_step_1 @379"
    ],
    "spots": [
     {
@@ -7216,6 +7132,11 @@
      "name": "landing_thunk",
      "k": 365,
      "dur": null
+    },
+    {
+     "name": "phone_buzz_step_1",
+     "k": 379,
+     "dur": null
     }
    ],
    "v4_frames": 72,
@@ -7225,7 +7146,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "The boardroom at night, held on the wide through Neleh's two turns, the phones buzzing and stepping. The first phone goes over: clack. CUT to Alyi's reflection in the dark window for his line, so it is his.",
+   "caption": "The boardroom at night, held on the wide through Neleh's two turns, the phones buzzing and stepping. The first phone goes over: clack. Then the whole row of phones lights up at once.",
    "cast": [
     {
      "id": "neleh",
@@ -7264,8 +7185,7 @@
     "clack": 365,
     "tip": 360,
     "creep": 200,
-    "alyi": 379,
-    "turn": 395
+    "lit": 379
    },
    "mark_src": {
     "buzz": "snd BUZZ 1 0",
@@ -7273,21 +7193,20 @@
     "clack": "snd landing_thunk 1 0",
     "tip": "mark clack -5",
     "creep": "mark buzz2 0",
-    "alyi": "on a5-27-28 0",
-    "turn": "w a5-27-28 company 0"
+    "lit": "snd phone_buzz_step_1 1 0"
    },
    "texts": [
     {
      "kind": "label",
      "text": "STAFF · STAFF · INVESTORS · STAFF",
      "s": 6,
-     "e": 454,
+     "e": 417,
      "must": true
     }
    ],
-   "tc_in": "14:24:11",
-   "tc_out": "14:43:09",
-   "frames": 454
+   "tc_in": "14:14:06",
+   "tc_out": "14:31:15",
+   "frames": 417
   },
   {
    "id": "S4.07",
@@ -7295,8 +7214,8 @@
    "beats": [
     "S4.07"
    ],
-   "s": 4084,
-   "e": 4204,
+   "s": 4054,
+   "e": 4174,
    "onscreen": [],
    "lines": [
     {
@@ -7420,7 +7339,7 @@
     "neleh"
    ],
    "cues": [
-    "music (v3.3): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
+    "music (v3.4): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
    ],
    "sounds": [
     "DTMF @81",
@@ -7489,8 +7408,8 @@
     "tone4": "snd DTMF 4 0"
    },
    "texts": [],
-   "tc_in": "14:43:09",
-   "tc_out": "14:48:09",
+   "tc_in": "14:31:15",
+   "tc_out": "14:36:15",
    "frames": 120
   },
   {
@@ -7499,8 +7418,8 @@
    "beats": [
     "S4.08"
    ],
-   "s": 4204,
-   "e": 4655,
+   "s": 4174,
+   "e": 4625,
    "onscreen": [
     {
      "text": "ADELINA · CO-FOUNDER",
@@ -8226,7 +8145,7 @@
     "neleh"
    ],
    "cues": [
-    "music (v3.3): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
+    "music (v3.4): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
    ],
    "sounds": [
     "RING @4",
@@ -8344,8 +8263,8 @@
      "must": true
     }
    ],
-   "tc_in": "14:48:09",
-   "tc_out": "15:07:04",
+   "tc_in": "14:36:15",
+   "tc_out": "14:55:10",
    "frames": 451
   },
   {
@@ -8354,8 +8273,8 @@
    "beats": [
     "v32-S5.00"
    ],
-   "s": 4655,
-   "e": 4847,
+   "s": 4625,
+   "e": 4817,
    "onscreen": [
     {
      "text": "NOPEAI HQ · LOBBY · NOV 19 · 1:03 PM",
@@ -8389,7 +8308,7 @@
     "mas"
    ],
    "cues": [
-    "music (v3.3): none: the lobby's room; one felt note on his look up; PROCEDURE resumes under S4.09"
+    "music (v3.4): none: the lobby's room; one felt note on his look up; PROCEDURE resumes under S4.09"
    ],
    "sounds": [
     "cloth_rustle @24",
@@ -8462,8 +8381,8 @@
      "must": true
     }
    ],
-   "tc_in": "15:07:04",
-   "tc_out": "15:15:04",
+   "tc_in": "14:55:10",
+   "tc_out": "15:03:10",
    "frames": 192
   },
   {
@@ -8472,8 +8391,8 @@
    "beats": [
     "S4.09"
    ],
-   "s": 4847,
-   "e": 5119,
+   "s": 4817,
+   "e": 5089,
    "onscreen": [
     {
      "text": "NOPEAI HQ · LOBBY · NOV 19",
@@ -8922,7 +8841,7 @@
    "does": "INT. NOPEAI BOARDROOM — SUNDAY. The phones in a row, still buzzing: STAFF · STAFF · INVESTORS · INVESTORS. On the wall screen, the lobby camera and the ticker: the small figure we just left, in his GUEST lanyard. \"We've talked all day about him coming back, and we're no closer.\" / \"They gave him a guest badge.\" / \"It's the correct badge. He doesn't work here.\" On \"here\" he walks out.",
    "chars": [],
    "cues": [
-    "music (v3.3): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
+    "music (v3.4): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
    ],
    "sounds": [],
    "spots": [],
@@ -8984,8 +8903,8 @@
      "must": true
     }
    ],
-   "tc_in": "15:15:04",
-   "tc_out": "15:26:12",
+   "tc_in": "15:03:10",
+   "tc_out": "15:14:18",
    "frames": 272
   },
   {
@@ -8994,8 +8913,8 @@
    "beats": [
     "S4.10"
    ],
-   "s": 5119,
-   "e": 5222,
+   "s": 5089,
+   "e": 5192,
    "onscreen": [
     {
      "text": "TTEMME / INTERIM CEO, TAKE TWO · CHAT: LIVE",
@@ -9031,7 +8950,7 @@
     "ttemme"
    ],
    "cues": [
-    "music (v3.3): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
+    "music (v3.4): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
    ],
    "sounds": [],
    "spots": [],
@@ -9109,8 +9028,8 @@
      "must": true
     }
    ],
-   "tc_in": "15:26:12",
-   "tc_out": "15:30:19",
+   "tc_in": "15:14:18",
+   "tc_out": "15:19:01",
    "frames": 103
   },
   {
@@ -9119,8 +9038,8 @@
    "beats": [
     "S4.10b"
    ],
-   "s": 5222,
-   "e": 5587,
+   "s": 5192,
+   "e": 5557,
    "onscreen": [],
    "lines": [
     {
@@ -9642,7 +9561,7 @@
     "ttemme"
    ],
    "cues": [
-    "music (v3.3): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
+    "music (v3.4): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
    ],
    "sounds": [
     "paper_whip @282"
@@ -9701,8 +9620,8 @@
     "close": "mark open 10"
    },
    "texts": [],
-   "tc_in": "15:30:19",
-   "tc_out": "15:46:00",
+   "tc_in": "15:19:01",
+   "tc_out": "15:34:06",
    "frames": 365
   },
   {
@@ -9711,8 +9630,8 @@
    "beats": [
     "S4.11"
    ],
-   "s": 5587,
-   "e": 5635,
+   "s": 5557,
+   "e": 5605,
    "onscreen": [
     {
      "text": "LIVE · CHAT:  F  F  F  F",
@@ -9736,7 +9655,7 @@
     "ttemme"
    ],
    "cues": [
-    "music (v3.3): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
+    "music (v3.4): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
    ],
    "sounds": [],
    "spots": [],
@@ -9779,8 +9698,8 @@
      "must": true
     }
    ],
-   "tc_in": "15:46:00",
-   "tc_out": "15:48:00",
+   "tc_in": "15:34:06",
+   "tc_out": "15:36:06",
    "frames": 48
   },
   {
@@ -9789,8 +9708,8 @@
    "beats": [
     "S4.12"
    ],
-   "s": 5635,
-   "e": 5705,
+   "s": 5605,
+   "e": 5675,
    "onscreen": [
     {
      "text": "RAIL: NOV 19 · ~11:53 PM PT",
@@ -9815,7 +9734,7 @@
     "neleh"
    ],
    "cues": [
-    "music (v3.3): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
+    "music (v3.4): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
    ],
    "sounds": [
     "landing_thunk @21",
@@ -9888,8 +9807,8 @@
     "open": "v4 31/60 scaled"
    },
    "texts": [],
-   "tc_in": "15:48:00",
-   "tc_out": "15:50:22",
+   "tc_in": "15:36:06",
+   "tc_out": "15:39:04",
    "frames": 70
   },
   {
@@ -9898,8 +9817,8 @@
    "beats": [
     "S4.13"
    ],
-   "s": 5705,
-   "e": 5841,
+   "s": 5675,
+   "e": 5812,
    "onscreen": [],
    "lines": [
     {
@@ -10452,7 +10371,7 @@
     "tasya"
    ],
    "cues": [
-    "music (v3.3): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
+    "music (v3.4): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
    ],
    "sounds": [
     "JANGLE @5"
@@ -10499,9 +10418,9 @@
     "read": "on v3-a4-0001 -12"
    },
    "texts": [],
-   "tc_in": "15:50:22",
-   "tc_out": "15:56:14",
-   "frames": 136
+   "tc_in": "15:39:04",
+   "tc_out": "15:44:21",
+   "frames": 137
   },
   {
    "id": "S4.13d",
@@ -10509,8 +10428,8 @@
    "beats": [
     "S4.13d"
    ],
-   "s": 5841,
-   "e": 6019,
+   "s": 5812,
+   "e": 5990,
    "onscreen": [],
    "lines": [
     {
@@ -10519,10 +10438,10 @@
      "mode": "on-mic",
      "who": "TASYA",
      "text": "we're extremely excited to share the news that Mas Manalt and Gerg Mockbran, together with colleagues, will be joining Macrosoft to lead a new advanced AI research team.",
-     "s": -21,
-     "e": 198,
-     "fs": -33,
-     "fe": 211,
+     "s": -22,
+     "e": 197,
+     "fs": -34,
+     "fe": 210,
      "os": false,
      "via": null,
      "face": null,
@@ -10929,7 +10848,7 @@
     "neleh"
    ],
    "cues": [
-    "music (v3.3): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
+    "music (v3.4): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
    ],
    "sounds": [],
    "spots": [],
@@ -10966,16 +10885,16 @@
    "names": [],
    "fg": null,
    "marks": {
-    "names": 30,
-    "look": 42
+    "names": 29,
+    "look": 41
    },
    "mark_src": {
     "names": "w v3-a4-0001 mas 0",
     "look": "mark names 12"
    },
    "texts": [],
-   "tc_in": "15:56:14",
-   "tc_out": "16:04:00",
+   "tc_in": "15:44:21",
+   "tc_out": "15:52:07",
    "frames": 178
   },
   {
@@ -10984,8 +10903,8 @@
    "beats": [
     "S4.13e"
    ],
-   "s": 6019,
-   "e": 6091,
+   "s": 5990,
+   "e": 6062,
    "onscreen": [
     {
      "text": "MAS · GERG →",
@@ -11000,10 +10919,10 @@
      "mode": "on-mic",
      "who": "TASYA",
      "text": "we're extremely excited to share the news that Mas Manalt and Gerg Mockbran, together with colleagues, will be joining Macrosoft to lead a new advanced AI research team.",
-     "s": -199,
-     "e": 20,
-     "fs": -211,
-     "fe": 33,
+     "s": -200,
+     "e": 19,
+     "fs": -212,
+     "fe": 32,
      "os": false,
      "via": null,
      "face": "lip",
@@ -11409,7 +11328,7 @@
     "tasya"
    ],
    "cues": [
-    "music (v3.3): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
+    "music (v3.4): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
    ],
    "sounds": [
     "JANGLE @8"
@@ -11462,8 +11381,8 @@
      "must": true
     }
    ],
-   "tc_in": "16:04:00",
-   "tc_out": "16:07:00",
+   "tc_in": "15:52:07",
+   "tc_out": "15:55:07",
    "frames": 72
   },
   {
@@ -11472,8 +11391,8 @@
    "beats": [
     "S4.14"
    ],
-   "s": 6091,
-   "e": 6158,
+   "s": 6062,
+   "e": 6129,
    "onscreen": [
     {
      "text": "1. NOON · VIDEO CALL  ✓",
@@ -11553,7 +11472,7 @@
    "does": "Her marker comes into frame. \"Step four, Mada?\" She writes one mark on it: ?",
    "chars": [],
    "cues": [
-    "music (v3.3): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
+    "music (v3.4): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
    ],
    "sounds": [],
    "spots": [],
@@ -11615,8 +11534,8 @@
      "must": true
     }
    ],
-   "tc_in": "16:07:00",
-   "tc_out": "16:09:19",
+   "tc_in": "15:55:07",
+   "tc_out": "15:58:02",
    "frames": 67
   },
   {
@@ -11625,8 +11544,8 @@
    "beats": [
     "S4.15"
    ],
-   "s": 6158,
-   "e": 6218,
+   "s": 6129,
+   "e": 6189,
    "onscreen": [],
    "lines": [],
    "seq": "S4L",
@@ -11644,7 +11563,7 @@
     "mada"
    ],
    "cues": [
-    "music (v3.3): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
+    "music (v3.4): THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged"
    ],
    "sounds": [],
    "spots": [],
@@ -11675,8 +11594,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "16:09:19",
-   "tc_out": "16:12:07",
+   "tc_in": "15:58:02",
+   "tc_out": "16:00:14",
    "frames": 60
   },
   {
@@ -11685,8 +11604,8 @@
    "beats": [
     "S5.02"
    ],
-   "s": 6218,
-   "e": 6326,
+   "s": 6189,
+   "e": 6297,
    "onscreen": [
     {
      "text": "RAIL: NOV 20, 2023 · ~2:06 AM PT",
@@ -11713,7 +11632,7 @@
    "does": "The home shot: the glass on the dark-room desk, its water line flat, and the GUEST lanyard he put on in the lobby, laid square beside it. The room, held.",
    "chars": [],
    "cues": [
-    "music (v3.3): 2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door"
+    "music (v3.4): 2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door"
    ],
    "sounds": [],
    "spots": [],
@@ -11743,8 +11662,8 @@
      "must": true
     }
    ],
-   "tc_in": "16:12:07",
-   "tc_out": "16:16:19",
+   "tc_in": "16:00:14",
+   "tc_out": "16:05:02",
    "frames": 108
   },
   {
@@ -11753,18 +11672,18 @@
    "beats": [
     "S5.03"
    ],
-   "s": 6326,
-   "e": 6467,
+   "s": 6297,
+   "e": 6437,
    "onscreen": [
     {
      "text": "RIMA: “NopeAI is nothing without its people”",
      "s": 4,
-     "e": 141
+     "e": 140
     },
     {
      "text": "“NopeAI is nothing without its people”  ×2  ×4  ×16  …",
      "s": 57,
-     "e": 141
+     "e": 140
     }
    ],
    "lines": [
@@ -11775,7 +11694,7 @@
      "who": "RIMA",
      "text": "NopeAI is nothing without its people",
      "s": 4,
-     "e": 141,
+     "e": 140,
      "fs": null,
      "fe": null,
      "os": false,
@@ -11885,7 +11804,7 @@
    "does": "Rima's post, then the same words from everyone. He hearts every one on the beat.",
    "chars": [],
    "cues": [
-    "music (v3.3): 2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door"
+    "music (v3.4): 2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door"
    ],
    "sounds": [
     "key_tap_soft_01 @28",
@@ -11957,13 +11876,13 @@
      "kind": "label",
      "text": "“NopeAI is nothing without its people”  ×2  ×4  ×16  …",
      "s": 57,
-     "e": 141,
+     "e": 140,
      "must": true
     }
    ],
-   "tc_in": "16:16:19",
-   "tc_out": "16:22:16",
-   "frames": 141
+   "tc_in": "16:05:02",
+   "tc_out": "16:10:22",
+   "frames": 140
   },
   {
    "id": "S5.04",
@@ -11971,8 +11890,8 @@
    "beats": [
     "S5.04"
    ],
-   "s": 6467,
-   "e": 6538,
+   "s": 6437,
+   "e": 6508,
    "onscreen": [],
    "lines": [
     {
@@ -12080,7 +11999,7 @@
     "orb"
    ],
    "cues": [
-    "music (v3.3): 2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door"
+    "music (v3.4): 2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door"
    ],
    "sounds": [
     "orb_servo @7"
@@ -12133,8 +12052,8 @@
     "turn": "on a5-29-01 -6"
    },
    "texts": [],
-   "tc_in": "16:22:16",
-   "tc_out": "16:25:15",
+   "tc_in": "16:10:22",
+   "tc_out": "16:13:21",
    "frames": 71
   },
   {
@@ -12143,8 +12062,8 @@
    "beats": [
     "S5.05"
    ],
-   "s": 6538,
-   "e": 6593,
+   "s": 6508,
+   "e": 6563,
    "onscreen": [],
    "lines": [
     {
@@ -12211,7 +12130,7 @@
     "mas"
    ],
    "cues": [
-    "music (v3.3): 2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door"
+    "music (v3.4): 2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door"
    ],
    "sounds": [],
    "spots": [],
@@ -12246,8 +12165,8 @@
     "rack": "v4 35/54 scaled"
    },
    "texts": [],
-   "tc_in": "16:25:15",
-   "tc_out": "16:27:22",
+   "tc_in": "16:13:21",
+   "tc_out": "16:16:04",
    "frames": 55
   },
   {
@@ -12256,20 +12175,20 @@
    "beats": [
     "S5.09"
    ],
-   "s": 6593,
-   "e": 6950,
+   "s": 6563,
+   "e": 6901,
    "onscreen": [],
    "lines": [
     {
-     "id": "v3-vo-21",
+     "id": "v34-vo-09",
      "kind": "vo",
      "mode": "on-mic",
      "who": "MAS",
-     "text": "gerg. he'll say he's compiling.",
+     "text": "gerg walked out for me.",
      "s": 7,
-     "e": 61,
-     "fs": -7,
-     "fe": 78,
+     "e": 42,
+     "fs": -8,
+     "fe": 59,
      "os": false,
      "via": null,
      "face": null,
@@ -12284,24 +12203,24 @@
        10
       ],
       [
-       "he'll",
-       19,
-       24
+       "walked",
+       10,
+       17
       ],
       [
-       "say",
-       24,
-       30
+       "out",
+       17,
+       23
       ],
       [
-       "he's",
-       30,
-       34
+       "for",
+       23,
+       26
       ],
       [
-       "compiling",
-       34,
-       54
+       "me",
+       26,
+       35
       ]
      ],
      "tag": "V.O.",
@@ -12313,10 +12232,10 @@
      "mode": "call",
      "who": "GERG",
      "text": "Sorry, one sec. I've got a build compiling.",
-     "s": 72,
-     "e": 126,
-     "fs": 52,
-     "fe": 141,
+     "s": 53,
+     "e": 107,
+     "fs": 33,
+     "fe": 122,
      "os": false,
      "via": "call",
      "face": "lip",
@@ -12403,7 +12322,7 @@
       [
        "sec",
        13,
-       19
+       18
       ],
       [
        "I've",
@@ -12428,7 +12347,7 @@
       [
        "compiling",
        38,
-       54
+       53
       ]
      ],
      "tag": "",
@@ -12440,10 +12359,10 @@
      "mode": "on-mic",
      "who": "MAS",
      "text": "it's two in the morning, gerg.",
-     "s": 135,
-     "e": 174,
-     "fs": 122,
-     "fe": 190,
+     "s": 115,
+     "e": 155,
+     "fs": 103,
+     "fe": 171,
      "os": false,
      "via": null,
      "face": null,
@@ -12456,67 +12375,67 @@
        "rest"
       ],
       [
-       1,
+       2,
        "E"
       ],
       [
-       7,
+       8,
        "O"
       ],
       [
-       11,
+       12,
        "E"
       ],
       [
-       15,
+       16,
        "M"
       ],
       [
-       17,
+       18,
        "O"
       ],
       [
-       19,
+       20,
        "E"
       ],
       [
-       28,
+       29,
        "O"
       ],
       [
-       34,
+       35,
        "E"
       ],
       [
-       38,
+       39,
        "rest"
       ]
      ],
      "words": [
       [
        "it's",
-       1,
+       2,
        6
       ],
       [
        "two",
        6,
-       11
+       12
       ],
       [
        "in",
-       11,
-       13
+       12,
+       14
       ],
       [
        "the",
-       13,
-       15
+       14,
+       16
       ],
       [
        "morning",
-       15,
-       25
+       16,
+       26
       ],
       [
        "gerg",
@@ -12533,10 +12452,10 @@
      "mode": "call",
      "who": "GERG",
      "text": "Best time there is. Nobody else is pushing anything.",
-     "s": 183,
-     "e": 255,
-     "fs": 175,
-     "fe": 399,
+     "s": 163,
+     "e": 236,
+     "fs": 155,
+     "fe": 379,
      "os": false,
      "via": "call",
      "face": "lip",
@@ -12624,12 +12543,12 @@
      "words": [
       [
        "Best",
-       0,
-       5
+       1,
+       6
       ],
       [
        "time",
-       5,
+       6,
        11
       ],
       [
@@ -12640,7 +12559,7 @@
       [
        "is",
        16,
-       20
+       21
       ],
       [
        "Nobody",
@@ -12650,22 +12569,22 @@
       [
        "else",
        37,
-       42
+       43
       ],
       [
        "is",
-       42,
-       46
+       43,
+       47
       ],
       [
        "pushing",
-       46,
-       55
+       47,
+       56
       ],
       [
        "anything",
-       55,
-       69
+       56,
+       70
       ]
      ],
      "tag": "",
@@ -12677,10 +12596,10 @@
      "mode": "on-mic",
      "who": "MAS",
      "text": "read me the letter.",
-     "s": 269,
-     "e": 297,
-     "fs": 256,
-     "fe": 313,
+     "s": 249,
+     "e": 278,
+     "fs": 237,
+     "fe": 294,
      "os": false,
      "via": null,
      "face": null,
@@ -12693,7 +12612,7 @@
        "rest"
       ],
       [
-       2,
+       3,
        "A"
       ],
       [
@@ -12701,15 +12620,15 @@
        "M"
       ],
       [
-       9,
+       10,
        "E"
       ],
       [
-       17,
+       18,
        "A"
       ],
       [
-       21,
+       22,
        "E"
       ],
       [
@@ -12721,22 +12640,22 @@
       [
        "read",
        1,
-       7
+       8
       ],
       [
        "me",
-       7,
+       8,
        12
       ],
       [
        "the",
        12,
-       15
+       16
       ],
       [
        "letter",
-       15,
-       28
+       16,
+       29
       ]
      ],
      "tag": "",
@@ -12748,10 +12667,10 @@
      "mode": "on-mic",
      "who": "GERG",
      "text": "Okay. Pull it up.",
-     "s": 316,
-     "e": 345,
-     "fs": 304,
-     "fe": 358,
+     "s": 296,
+     "e": 326,
+     "fs": 284,
+     "fe": 338,
      "os": false,
      "via": "call",
      "face": "lip",
@@ -12799,23 +12718,23 @@
      "words": [
       [
        "Okay",
-       -1,
+       0,
        6
       ],
       [
        "Pull",
-       14,
-       18
+       15,
+       19
       ],
       [
        "it",
-       18,
-       20
+       19,
+       21
       ],
       [
        "up",
-       20,
-       29
+       21,
+       30
       ]
      ],
      "tag": "",
@@ -12837,7 +12756,7 @@
     "gerg"
    ],
    "cues": [
-    "music (v3.3): 2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door"
+    "music (v3.4): 2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door"
    ],
    "sounds": [
     "RING @4",
@@ -12888,7 +12807,7 @@
     "side": "left"
    },
    "marks": {
-    "glance": 456,
+    "glance": 437,
     "ring": 4,
     "click": 63
    },
@@ -12898,9 +12817,9 @@
     "click": "snd dialog_ok_click 1 0"
    },
    "texts": [],
-   "tc_in": "16:27:22",
-   "tc_out": "16:42:19",
-   "frames": 357
+   "tc_in": "16:16:04",
+   "tc_out": "16:30:06",
+   "frames": 338
   },
   {
    "id": "S5.06",
@@ -12908,8 +12827,8 @@
    "beats": [
     "S5.06"
    ],
-   "s": 6950,
-   "e": 7497,
+   "s": 6901,
+   "e": 7448,
    "onscreen": [
     {
      "text": "STAFF LETTER · TO THE BOARD",
@@ -13938,7 +13857,7 @@
    "does": "He pulls it up: the letter slides over, Gerg's tile to the corner. Gerg reads as each line scrolls; the count rolls to 745; the scroll stops on ALYI.",
    "chars": [],
    "cues": [
-    "music (v3.3): 2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door"
+    "music (v3.4): 2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door"
    ],
    "sounds": [
     "odometer_ratchet @450",
@@ -14064,8 +13983,8 @@
      "must": true
     }
    ],
-   "tc_in": "16:42:19",
-   "tc_out": "17:05:14",
+   "tc_in": "16:30:06",
+   "tc_out": "16:53:01",
    "frames": 547
   },
   {
@@ -14074,8 +13993,8 @@
    "beats": [
     "S5.07b"
    ],
-   "s": 7497,
-   "e": 7641,
+   "s": 7448,
+   "e": 7592,
    "onscreen": [],
    "lines": [
     {
@@ -14188,7 +14107,7 @@
     "mas"
    ],
    "cues": [
-    "music (v3.3): 2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door"
+    "music (v3.4): 2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door"
    ],
    "sounds": [],
    "spots": [],
@@ -14219,8 +14138,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "17:05:14",
-   "tc_out": "17:11:14",
+   "tc_in": "16:53:01",
+   "tc_out": "16:59:01",
    "frames": 144
   },
   {
@@ -14229,8 +14148,8 @@
    "beats": [
     "S5.08"
    ],
-   "s": 7641,
-   "e": 7781,
+   "s": 7592,
+   "e": 7732,
    "onscreen": [
     {
      "text": "PAY TO: NOPEAI STAFF",
@@ -14340,7 +14259,7 @@
    "does": "A check slides out of the rack's slot. Gerg explains it; then the stamp: VOID IF CEO MISSING.",
    "chars": [],
    "cues": [
-    "music (v3.3): 2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door"
+    "music (v3.4): 2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door"
    ],
    "sounds": [
     "SLOT @0",
@@ -14413,8 +14332,8 @@
      "must": true
     }
    ],
-   "tc_in": "17:11:14",
-   "tc_out": "17:17:10",
+   "tc_in": "16:59:01",
+   "tc_out": "17:04:21",
    "frames": 140
   },
   {
@@ -14423,8 +14342,8 @@
    "beats": [
     "S5.09-back"
    ],
-   "s": 7781,
-   "e": 7910,
+   "s": 7732,
+   "e": 7861,
    "onscreen": [],
    "lines": [
     {
@@ -14619,7 +14538,7 @@
     "gerg"
    ],
    "cues": [
-    "music (v3.3): 2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door"
+    "music (v3.4): 2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door"
    ],
    "sounds": [],
    "spots": [],
@@ -14662,8 +14581,8 @@
     "glance": "we a5-29-17 case 4"
    },
    "texts": [],
-   "tc_in": "17:17:10",
-   "tc_out": "17:22:19",
+   "tc_in": "17:04:21",
+   "tc_out": "17:10:06",
    "frames": 129
   },
   {
@@ -14672,8 +14591,8 @@
    "beats": [
     "S5.09b"
    ],
-   "s": 7910,
-   "e": 8055,
+   "s": 7861,
+   "e": 8006,
    "onscreen": [],
    "lines": [
     {
@@ -14907,7 +14826,7 @@
     "gerg"
    ],
    "cues": [
-    "music (v3.3): 2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door"
+    "music (v3.4): 2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door"
    ],
    "sounds": [],
    "spots": [],
@@ -14949,8 +14868,8 @@
     "type": "end v31-a4-0011 12"
    },
    "texts": [],
-   "tc_in": "17:22:19",
-   "tc_out": "17:28:20",
+   "tc_in": "17:10:06",
+   "tc_out": "17:16:07",
    "frames": 145
   },
   {
@@ -14959,8 +14878,8 @@
    "beats": [
     "S5.11"
    ],
-   "s": 8055,
-   "e": 8430,
+   "s": 8006,
+   "e": 8381,
    "onscreen": [
     {
      "text": "MAS / GERG / →",
@@ -15300,7 +15219,7 @@
     "mas"
    ],
    "cues": [
-    "music (v3.3): 2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door"
+    "music (v3.4): 2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door"
    ],
    "sounds": [
     "key_tap_space @-24",
@@ -15407,8 +15326,8 @@
      "must": true
     }
    ],
-   "tc_in": "17:28:20",
-   "tc_out": "17:44:11",
+   "tc_in": "17:16:07",
+   "tc_out": "17:31:22",
    "frames": 375
   },
   {
@@ -15417,8 +15336,8 @@
    "beats": [
     "S5.12"
    ],
-   "s": 8430,
-   "e": 8562,
+   "s": 8381,
+   "e": 8513,
    "onscreen": [],
    "lines": [
     {
@@ -15507,7 +15426,7 @@
     "mas"
    ],
    "cues": [
-    "music (v3.3): 2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door"
+    "music (v3.4): 2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door"
    ],
    "sounds": [],
    "spots": [],
@@ -15542,8 +15461,8 @@
     "rack": "end a5-29-23 1"
    },
    "texts": [],
-   "tc_in": "17:44:11",
-   "tc_out": "17:49:23",
+   "tc_in": "17:31:22",
+   "tc_out": "17:37:10",
    "frames": 132
   },
   {
@@ -15552,8 +15471,8 @@
    "beats": [
     "S6.01"
    ],
-   "s": 8562,
-   "e": 8670,
+   "s": 8513,
+   "e": 8621,
    "onscreen": [
     {
      "text": "745 / 770",
@@ -15586,7 +15505,7 @@
     "staff"
    ],
    "cues": [
-    "music (v3.3): THE AVALANCHE · the one full band · SET-PIECE SWING, dead stop on Mada's label; +2-3 LU (mood §4 #3, the mix)"
+    "music (v3.4): THE AVALANCHE · the one full band · SET-PIECE SWING, dead stop on Mada's label; +2-3 LU (mood §4 #3, the mix)"
    ],
    "sounds": [
     "landing_thunk @19",
@@ -15696,8 +15615,8 @@
      "must": true
     }
    ],
-   "tc_in": "17:49:23",
-   "tc_out": "17:54:11",
+   "tc_in": "17:37:10",
+   "tc_out": "17:41:22",
    "frames": 108
   },
   {
@@ -15706,8 +15625,8 @@
    "beats": [
     "S6.02"
    ],
-   "s": 8670,
-   "e": 8706,
+   "s": 8621,
+   "e": 8657,
    "onscreen": [],
    "lines": [],
    "seq": "S6",
@@ -15725,7 +15644,7 @@
     "mas"
    ],
    "cues": [
-    "music (v3.3): THE AVALANCHE · the one full band · SET-PIECE SWING, dead stop on Mada's label; +2-3 LU (mood §4 #3, the mix)"
+    "music (v3.4): THE AVALANCHE · the one full band · SET-PIECE SWING, dead stop on Mada's label; +2-3 LU (mood §4 #3, the mix)"
    ],
    "sounds": [],
    "spots": [],
@@ -15756,8 +15675,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "17:54:11",
-   "tc_out": "17:55:23",
+   "tc_in": "17:41:22",
+   "tc_out": "17:43:10",
    "frames": 36
   },
   {
@@ -15766,8 +15685,8 @@
    "beats": [
     "S6.03"
    ],
-   "s": 8706,
-   "e": 8752,
+   "s": 8657,
+   "e": 8703,
    "onscreen": [
     {
      "text": "ALYI left the call",
@@ -15795,7 +15714,7 @@
     "staff"
    ],
    "cues": [
-    "music (v3.3): THE AVALANCHE · the one full band · SET-PIECE SWING, dead stop on Mada's label; +2-3 LU (mood §4 #3, the mix)"
+    "music (v3.4): THE AVALANCHE · the one full band · SET-PIECE SWING, dead stop on Mada's label; +2-3 LU (mood §4 #3, the mix)"
    ],
    "sounds": [],
    "spots": [],
@@ -15866,8 +15785,8 @@
      "must": true
     }
    ],
-   "tc_in": "17:55:23",
-   "tc_out": "17:57:21",
+   "tc_in": "17:43:10",
+   "tc_out": "17:45:08",
    "frames": 46
   },
   {
@@ -15876,8 +15795,8 @@
    "beats": [
     "S6.04"
    ],
-   "s": 8752,
-   "e": 8799,
+   "s": 8703,
+   "e": 8750,
    "onscreen": [
     {
      "text": "ALYI left the call",
@@ -15998,7 +15917,7 @@
     "staff"
    ],
    "cues": [
-    "music (v3.3): THE AVALANCHE · the one full band · SET-PIECE SWING, dead stop on Mada's label; +2-3 LU (mood §4 #3, the mix)"
+    "music (v3.4): THE AVALANCHE · the one full band · SET-PIECE SWING, dead stop on Mada's label; +2-3 LU (mood §4 #3, the mix)"
    ],
    "sounds": [
     "landing_thunk @32"
@@ -16076,8 +15995,8 @@
      "must": true
     }
    ],
-   "tc_in": "17:57:21",
-   "tc_out": "17:59:20",
+   "tc_in": "17:45:08",
+   "tc_out": "17:47:07",
    "frames": 47
   },
   {
@@ -16086,8 +16005,8 @@
    "beats": [
     "S6.06"
    ],
-   "s": 8799,
-   "e": 8949,
+   "s": 8750,
+   "e": 8900,
    "onscreen": [
     {
      "text": "THE QUIET VOTE left the call",
@@ -16118,7 +16037,7 @@
     "staff"
    ],
    "cues": [
-    "music (v3.3): THE AVALANCHE · the one full band · SET-PIECE SWING, dead stop on Mada's label; +2-3 LU (mood §4 #3, the mix)"
+    "music (v3.4): THE AVALANCHE · the one full band · SET-PIECE SWING, dead stop on Mada's label; +2-3 LU (mood §4 #3, the mix)"
    ],
    "sounds": [
     "freeze_hit_F @103"
@@ -16196,8 +16115,8 @@
      "must": true
     }
    ],
-   "tc_in": "17:59:20",
-   "tc_out": "18:06:02",
+   "tc_in": "17:47:07",
+   "tc_out": "17:53:13",
    "frames": 150
   },
   {
@@ -16206,8 +16125,8 @@
    "beats": [
     "S7.01"
    ],
-   "s": 8949,
-   "e": 9395,
+   "s": 8900,
+   "e": 9346,
    "onscreen": [
     {
      "text": "RAIL: NOV 20",
@@ -16590,7 +16509,7 @@
     "mas"
    ],
    "cues": [
-    "music (v3.3): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
+    "music (v3.4): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
    ],
    "sounds": [
     "key_tap_soft_02 @175",
@@ -16689,8 +16608,8 @@
      "must": true
     }
    ],
-   "tc_in": "18:06:02",
-   "tc_out": "18:24:16",
+   "tc_in": "17:53:13",
+   "tc_out": "18:12:03",
    "frames": 446
   },
   {
@@ -16699,8 +16618,8 @@
    "beats": [
     "S7.02"
    ],
-   "s": 9395,
-   "e": 9538,
+   "s": 9346,
+   "e": 9489,
    "onscreen": [],
    "lines": [
     {
@@ -16924,7 +16843,7 @@
     "staff"
    ],
    "cues": [
-    "music (v3.3): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
+    "music (v3.4): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
    ],
    "sounds": [],
    "spots": [],
@@ -16975,8 +16894,8 @@
     "push": "on v33-a4-0001 0"
    },
    "texts": [],
-   "tc_in": "18:24:16",
-   "tc_out": "18:30:15",
+   "tc_in": "18:12:03",
+   "tc_out": "18:18:02",
    "frames": 143
   },
   {
@@ -16985,8 +16904,8 @@
    "beats": [
     "S7.02b"
    ],
-   "s": 9538,
-   "e": 9675,
+   "s": 9489,
+   "e": 9626,
    "onscreen": [],
    "lines": [
     {
@@ -17161,7 +17080,7 @@
     "staff"
    ],
    "cues": [
-    "music (v3.3): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
+    "music (v3.4): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
    ],
    "sounds": [],
    "spots": [],
@@ -17208,8 +17127,8 @@
     "around": "w v33-a4-0002 around 0"
    },
    "texts": [],
-   "tc_in": "18:30:15",
-   "tc_out": "18:36:08",
+   "tc_in": "18:18:02",
+   "tc_out": "18:23:19",
    "frames": 137
   },
   {
@@ -17218,8 +17137,8 @@
    "beats": [
     "S7.03"
    ],
-   "s": 9675,
-   "e": 9727,
+   "s": 9626,
+   "e": 9678,
    "onscreen": [],
    "lines": [],
    "seq": "S7",
@@ -17237,7 +17156,7 @@
     "mas"
    ],
    "cues": [
-    "music (v3.3): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
+    "music (v3.4): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
    ],
    "sounds": [],
    "spots": [],
@@ -17268,8 +17187,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "18:36:08",
-   "tc_out": "18:38:12",
+   "tc_in": "18:23:19",
+   "tc_out": "18:25:23",
    "frames": 52
   },
   {
@@ -17278,8 +17197,8 @@
    "beats": [
     "v31-S7.03b"
    ],
-   "s": 9727,
-   "e": 9790,
+   "s": 9678,
+   "e": 9741,
    "onscreen": [
     {
      "text": "Board · Tue 10:00 PM",
@@ -17306,7 +17225,7 @@
    "does": "His end desk: beside the GUEST lanyard and the MACROSOFT badge, his phone lights with an invite in the cold open's calendar UI: Board · Tue 10:00 PM, Accept / Decline, three attendee circles (a spinner, a fire helmet, a blank). His thumb taps Accept, no hover.",
    "chars": [],
    "cues": [
-    "music (v3.3): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
+    "music (v3.4): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
    ],
    "sounds": [
     "key_tap_soft_02 @43"
@@ -17351,8 +17270,8 @@
      "must": true
     }
    ],
-   "tc_in": "18:38:12",
-   "tc_out": "18:41:03",
+   "tc_in": "18:25:23",
+   "tc_out": "18:28:14",
    "frames": 63
   },
   {
@@ -17361,8 +17280,8 @@
    "beats": [
     "S7.05"
    ],
-   "s": 9790,
-   "e": 9843,
+   "s": 9741,
+   "e": 9794,
    "onscreen": [
     {
      "text": "RAIL: NOV 21, 2023 · ~10 PM PT",
@@ -17386,7 +17305,7 @@
     "mada"
    ],
    "cues": [
-    "music (v3.3): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
+    "music (v3.4): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
    ],
    "sounds": [],
    "spots": [],
@@ -17417,8 +17336,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "18:41:03",
-   "tc_out": "18:43:08",
+   "tc_in": "18:28:14",
+   "tc_out": "18:30:19",
    "frames": 53
   },
   {
@@ -17428,8 +17347,8 @@
     "S7.06",
     "S7.06-cont"
    ],
-   "s": 9843,
-   "e": 10062,
+   "s": 9794,
+   "e": 10013,
    "onscreen": [
     {
      "text": "TERB / THE NEW CHAIR",
@@ -17589,8 +17508,8 @@
     "terb"
    ],
    "cues": [
-    "music (v3.3): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged",
-    "music (v3.3): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
+    "music (v3.4): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged",
+    "music (v3.4): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
    ],
    "sounds": [
     "landing_thunk @0",
@@ -17694,8 +17613,8 @@
      "must": true
     }
    ],
-   "tc_in": "18:43:08",
-   "tc_out": "18:52:11",
+   "tc_in": "18:30:19",
+   "tc_out": "18:39:22",
    "frames": 219
   },
   {
@@ -17704,8 +17623,8 @@
    "beats": [
     "S7.07"
    ],
-   "s": 10062,
-   "e": 10323,
+   "s": 10013,
+   "e": 10274,
    "onscreen": [],
    "lines": [
     {
@@ -18222,7 +18141,7 @@
     "terb"
    ],
    "cues": [
-    "music (v3.3): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
+    "music (v3.4): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
    ],
    "sounds": [],
    "spots": [],
@@ -18275,8 +18194,8 @@
     "sprayEnd": "w v3-a4-0004 we -1"
    },
    "texts": [],
-   "tc_in": "18:52:11",
-   "tc_out": "19:03:08",
+   "tc_in": "18:39:22",
+   "tc_out": "18:50:19",
    "frames": 261
   },
   {
@@ -18285,8 +18204,8 @@
    "beats": [
     "S7.07-cont"
    ],
-   "s": 10323,
-   "e": 10739,
+   "s": 10274,
+   "e": 10690,
    "onscreen": [],
    "lines": [
     {
@@ -19455,7 +19374,7 @@
     "terb"
    ],
    "cues": [
-    "music (v3.3): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
+    "music (v3.4): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
    ],
    "sounds": [],
    "spots": [],
@@ -19508,8 +19427,8 @@
     "stop": "end a5-30-15 0"
    },
    "texts": [],
-   "tc_in": "19:03:08",
-   "tc_out": "19:20:16",
+   "tc_in": "18:50:19",
+   "tc_out": "19:08:03",
    "frames": 416
   },
   {
@@ -19518,8 +19437,8 @@
    "beats": [
     "S7.08"
    ],
-   "s": 10739,
-   "e": 10811,
+   "s": 10690,
+   "e": 10762,
    "onscreen": [],
    "lines": [
     {
@@ -19599,7 +19518,7 @@
     "mas"
    ],
    "cues": [
-    "music (v3.3): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
+    "music (v3.4): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
    ],
    "sounds": [],
    "spots": [],
@@ -19630,8 +19549,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "19:20:16",
-   "tc_out": "19:23:16",
+   "tc_in": "19:08:03",
+   "tc_out": "19:11:03",
    "frames": 72
   },
   {
@@ -19640,8 +19559,8 @@
    "beats": [
     "S7.09"
    ],
-   "s": 10811,
-   "e": 10955,
+   "s": 10762,
+   "e": 10906,
    "onscreen": [
     {
      "text": "POST: GERG: “Returning to NopeAI & getting back to coding tonight.”",
@@ -19689,7 +19608,7 @@
     "terb"
    ],
    "cues": [
-    "music (v3.3): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
+    "music (v3.4): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
    ],
    "sounds": [
     "rubber_stamp_C @52",
@@ -19764,8 +19683,8 @@
     "post": "txt POST: GERG at 0"
    },
    "texts": [],
-   "tc_in": "19:23:16",
-   "tc_out": "19:29:16",
+   "tc_in": "19:11:03",
+   "tc_out": "19:17:03",
    "frames": 144
   },
   {
@@ -19774,8 +19693,8 @@
    "beats": [
     "S7.13"
    ],
-   "s": 10955,
-   "e": 11219,
+   "s": 10906,
+   "e": 11170,
    "onscreen": [
     {
      "text": "LIVE · CHAT",
@@ -19866,7 +19785,7 @@
    "does": "The last grain runs out. Ttemme's post holds and clears; then, to his chat. The glass shatters.",
    "chars": [],
    "cues": [
-    "music (v3.3): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
+    "music (v3.4): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
    ],
    "sounds": [
     "hourglass_shatter @173"
@@ -19916,8 +19835,8 @@
      "must": true
     }
    ],
-   "tc_in": "19:29:16",
-   "tc_out": "19:40:16",
+   "tc_in": "19:17:03",
+   "tc_out": "19:28:03",
    "frames": 264
   },
   {
@@ -19926,8 +19845,8 @@
    "beats": [
     "S8.01"
    ],
-   "s": 11219,
-   "e": 11315,
+   "s": 11170,
+   "e": 11266,
    "onscreen": [
     {
      "text": "DAYS SINCE SOMEONE TRIED TO FIRE MAS: 0",
@@ -19951,7 +19870,7 @@
     "mas"
    ],
    "cues": [
-    "music (v3.3): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
+    "music (v3.4): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
    ],
    "sounds": [
     "neon_ignite @19"
@@ -20002,8 +19921,8 @@
      "must": true
     }
    ],
-   "tc_in": "19:40:16",
-   "tc_out": "19:44:16",
+   "tc_in": "19:28:03",
+   "tc_out": "19:32:03",
    "frames": 96
   },
   {
@@ -20012,8 +19931,8 @@
    "beats": [
     "S8.03"
    ],
-   "s": 11315,
-   "e": 11387,
+   "s": 11266,
+   "e": 11338,
    "onscreen": [
     {
      "text": "Remove MAS MANALT from the meeting?  [ Remove ]",
@@ -20035,7 +19954,7 @@
    "does": "Over his shoulder: the host's dialog once more, Remove MAS MANALT from the meeting?, and Remove greys out one dither step a beat. The pointer with an empty name tag clicks it. Bonk. The dialog shakes, refused.",
    "chars": [],
    "cues": [
-    "music (v3.3): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
+    "music (v3.4): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
    ],
    "sounds": [
     "alert_bonk @57"
@@ -20086,8 +20005,8 @@
      "must": true
     }
    ],
-   "tc_in": "19:44:16",
-   "tc_out": "19:47:16",
+   "tc_in": "19:32:03",
+   "tc_out": "19:35:03",
    "frames": 72
   },
   {
@@ -20096,10 +20015,88 @@
    "beats": [
     "S8.04"
    ],
-   "s": 11387,
-   "e": 11429,
+   "s": 11338,
+   "e": 11478,
    "onscreen": [],
-   "lines": [],
+   "lines": [
+    {
+     "id": "v34-vo-11",
+     "kind": "vo",
+     "mode": "on-mic",
+     "who": "MAS",
+     "text": "they had four votes. i had the landlord. the money. gerg.",
+     "s": 9,
+     "e": 121,
+     "fs": -5,
+     "fe": 138,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [],
+     "words": [
+      [
+       "they",
+       0,
+       3
+      ],
+      [
+       "had",
+       3,
+       9
+      ],
+      [
+       "four",
+       9,
+       16
+      ],
+      [
+       "votes",
+       16,
+       30
+      ],
+      [
+       "i",
+       42,
+       47
+      ],
+      [
+       "had",
+       47,
+       51
+      ],
+      [
+       "the",
+       51,
+       53
+      ],
+      [
+       "landlord",
+       53,
+       69
+      ],
+      [
+       "the",
+       76,
+       80
+      ],
+      [
+       "money",
+       80,
+       90
+      ],
+      [
+       "gerg",
+       99,
+       112
+      ]
+     ],
+     "tag": "V.O.",
+     "pre": false
+    }
+   ],
    "seq": "S8",
    "verdict": "R",
    "v4": "S8.04",
@@ -20115,7 +20112,7 @@
     "mas"
    ],
    "cues": [
-    "music (v3.3): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
+    "music (v3.4): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
    ],
    "sounds": [],
    "spots": [],
@@ -20146,9 +20143,9 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "19:47:16",
-   "tc_out": "19:49:10",
-   "frames": 42
+   "tc_in": "19:35:03",
+   "tc_out": "19:40:23",
+   "frames": 140
   },
   {
    "id": "S8.05",
@@ -20156,8 +20153,8 @@
    "beats": [
     "S8.05"
    ],
-   "s": 11429,
-   "e": 11507,
+   "s": 11478,
+   "e": 11557,
    "onscreen": [],
    "lines": [
     {
@@ -20222,7 +20219,7 @@
    "does": "He sets the glass down and nudges it one pixel true. Over the hands: \"okay.\"",
    "chars": [],
    "cues": [
-    "music (v3.3): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
+    "music (v3.4): THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged"
    ],
    "sounds": [],
    "spots": [],
@@ -20250,9 +20247,9 @@
     "nudge": "f 10"
    },
    "texts": [],
-   "tc_in": "19:49:10",
-   "tc_out": "19:52:16",
-   "frames": 78
+   "tc_in": "19:40:23",
+   "tc_out": "19:44:06",
+   "frames": 79
   },
   {
    "id": "S8.06",
@@ -20260,8 +20257,8 @@
    "beats": [
     "S8.06"
    ],
-   "s": 11507,
-   "e": 11574,
+   "s": 11557,
+   "e": 11624,
    "onscreen": [
     {
      "text": "RAIL: NOV 22, 2023",
@@ -20288,7 +20285,7 @@
    "does": "A squat steel vault stencilled Q*. It hums at the score's root, F.",
    "chars": [],
    "cues": [
-    "music (v3.3): CODA · the vault's F hum as the pedal; no motif under the memo"
+    "music (v3.4): CODA · the vault's F hum as the pedal; no motif under the memo"
    ],
    "sounds": [],
    "spots": [],
@@ -20318,8 +20315,8 @@
      "must": true
     }
    ],
-   "tc_in": "19:52:16",
-   "tc_out": "19:55:11",
+   "tc_in": "19:44:06",
+   "tc_out": "19:47:01",
    "frames": 67
   },
   {
@@ -20328,8 +20325,8 @@
    "beats": [
     "S8.07"
    ],
-   "s": 11574,
-   "e": 11790,
+   "s": 11624,
+   "e": 11840,
    "onscreen": [
     {
      "text": "DO NOT OPEN. DO NOT EXPLAIN.",
@@ -20957,7 +20954,7 @@
     "orb"
    ],
    "cues": [
-    "music (v3.3): CODA · the vault's F hum as the pedal; no motif under the memo"
+    "music (v3.4): CODA · the vault's F hum as the pedal; no motif under the memo"
    ],
    "sounds": [],
    "spots": [],
@@ -21018,8 +21015,8 @@
      "must": true
     }
    ],
-   "tc_in": "19:55:11",
-   "tc_out": "20:04:11",
+   "tc_in": "19:47:01",
+   "tc_out": "19:56:01",
    "frames": 216
   },
   {
@@ -21028,8 +21025,8 @@
    "beats": [
     "S8.08"
    ],
-   "s": 11790,
-   "e": 11929,
+   "s": 11840,
+   "e": 11978,
    "onscreen": [
     {
      "text": "RAIL: NOV 29, 2023",
@@ -21430,7 +21427,7 @@
     "staff"
    ],
    "cues": [
-    "music (v3.3): CODA · the vault's F hum as the pedal; no motif under the memo"
+    "music (v3.4): CODA · the vault's F hum as the pedal; no motif under the memo"
    ],
    "sounds": [],
    "spots": [],
@@ -21473,9 +21470,9 @@
     "drift": "f 0"
    },
    "texts": [],
-   "tc_in": "20:04:11",
-   "tc_out": "20:10:06",
-   "frames": 139
+   "tc_in": "19:56:01",
+   "tc_out": "20:01:19",
+   "frames": 138
   },
   {
    "id": "S8.09",
@@ -21483,8 +21480,8 @@
    "beats": [
     "S8.09"
    ],
-   "s": 11929,
-   "e": 12013,
+   "s": 11978,
+   "e": 12062,
    "onscreen": [
     {
      "text": "ALYI",
@@ -21499,10 +21496,10 @@
      "mode": "on-mic",
      "who": "MAS",
      "text": "i love and respect alyi, i think he's a guiding light of the field and a gem of a human being. i harbor zero ill will towards him.",
-     "s": -163,
-     "e": 63,
-     "fs": -186,
-     "fe": 75,
+     "s": -162,
+     "e": 64,
+     "fs": -185,
+     "fe": 76,
      "os": false,
      "via": null,
      "face": null,
@@ -21882,7 +21879,7 @@
    "does": "The second sentence lands on a prop: four screws, and the ALYI plate comes off the scorched chair.",
    "chars": [],
    "cues": [
-    "music (v3.3): CODA · the vault's F hum as the pedal; no motif under the memo"
+    "music (v3.4): CODA · the vault's F hum as the pedal; no motif under the memo"
    ],
    "sounds": [
     "key_tap_soft_01 @12",
@@ -21948,8 +21945,8 @@
      "must": true
     }
    ],
-   "tc_in": "20:10:06",
-   "tc_out": "20:13:18",
+   "tc_in": "20:01:19",
+   "tc_out": "20:05:07",
    "frames": 84
   },
   {
@@ -21958,8 +21955,8 @@
    "beats": [
     "S8.10"
    ],
-   "s": 12013,
-   "e": 12138,
+   "s": 12062,
+   "e": 12187,
    "onscreen": [
     {
      "text": "MACROSOFT · OBSERVER (NON-VOTING)",
@@ -21981,7 +21978,7 @@
    "does": "A MACROSOFT-blue folding chair unfolds itself by the window. It stays empty. A key ring drops.",
    "chars": [],
    "cues": [
-    "music (v3.3): CODA · the vault's F hum as the pedal; no motif under the memo"
+    "music (v3.4): CODA · the vault's F hum as the pedal; no motif under the memo"
    ],
    "sounds": [
     "bell_ding_F6 @76"
@@ -22025,31 +22022,31 @@
      "must": true
     }
    ],
-   "tc_in": "20:13:18",
-   "tc_out": "20:18:23",
+   "tc_in": "20:05:07",
+   "tc_out": "20:10:12",
    "frames": 125
   }
  ],
  "lines": [
   {
-   "id": "v3-vo-18",
+   "id": "v34-vo-07",
    "shot": "S1.02",
    "beat": "S1.02",
    "kind": "vo",
    "mode": "on-mic",
    "who": "MAS",
-   "text": "gerg's not on it. alyi set it up. probably just the budget.",
+   "text": "gerg's not on it. probably the budget. good. i'll ask for more compute.",
    "tag": "V.O.",
    "on_s": 10.6167,
-   "end_s": 15.3767,
-   "file_s": 10.0367,
+   "end_s": 15.6467,
+   "file_s": 10.0467,
    "abs_in": 254,
-   "abs_out": 370,
-   "file_in": 240,
-   "file_out": 384,
-   "file": "audio/ep01/v3/act4/wav/v3-vo-18.wav",
+   "abs_out": 376,
+   "file_in": 241,
+   "file_out": 391,
+   "file": "audio/ep01/v34/act4/wav/v34-vo-07.wav",
    "stick_t": 1.2,
-   "stick_in": 0.58,
+   "stick_in": 0.57,
    "cut": false,
    "on_camera": "vo",
    "take_lip_sync": false,
@@ -22057,64 +22054,74 @@
    "via": null,
    "words": [
     [
-     "gerg's",
-     2,
-     12
+     "gerg",
+     1,
+     8
+    ],
+    [
+     "'s",
+     8,
+     10
     ],
     [
      "not",
-     12,
-     19
+     10,
+     16
     ],
     [
      "on",
-     19,
+     16,
+     21
+    ],
+    [
+     "it",
+     21,
      25
     ],
     [
-     "it",
-     25,
-     29
-    ],
-    [
-     "alyi",
-     42,
-     53
-    ],
-    [
-     "set",
-     53,
-     59
-    ],
-    [
-     "it",
-     59,
-     62
-    ],
-    [
-     "up",
-     62,
-     69
-    ],
-    [
      "probably",
-     80,
-     93
-    ],
-    [
-     "just",
-     93,
-     99
+     31,
+     43
     ],
     [
      "the",
-     99,
-     102
+     43,
+     46
     ],
     [
      "budget",
-     102,
-     115
+     46,
+     56
+    ],
+    [
+     "good",
+     62,
+     73
+    ],
+    [
+     "i'll",
+     83,
+     88
+    ],
+    [
+     "ask",
+     88,
+     96
+    ],
+    [
+     "for",
+     96,
+     99
+    ],
+    [
+     "more",
+     99,
+     104
+    ],
+    [
+     "compute",
+     104,
+     122
     ]
    ],
    "mouth": [],
@@ -22130,13 +22137,13 @@
    "who": "ALYI",
    "text": "Mas. The board has decided that you will no longer lead the company.",
    "tag": "call",
-   "on_s": 18.8167,
-   "end_s": 23.1967,
-   "file_s": 18.4867,
-   "abs_in": 451,
-   "abs_out": 557,
-   "file_in": 443,
-   "file_out": 641,
+   "on_s": 19.0667,
+   "end_s": 23.4467,
+   "file_s": 18.7367,
+   "abs_in": 457,
+   "abs_out": 563,
+   "file_in": 449,
+   "file_out": 647,
    "file": "audio/ep01/v31/act4/wav/v31-a4-0001.wav",
    "stick_t": 2.4,
    "stick_in": 0.33,
@@ -22322,13 +22329,13 @@
    "who": "MAS",
    "text": "super.",
    "tag": "",
-   "on_s": 33.0333,
-   "end_s": 33.7533,
-   "file_s": 32.1133,
-   "abs_in": 792,
-   "abs_out": 811,
-   "file_in": 770,
-   "file_out": 825,
+   "on_s": 33.325,
+   "end_s": 34.045,
+   "file_s": 32.405,
+   "abs_in": 799,
+   "abs_out": 818,
+   "file_in": 777,
+   "file_out": 832,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-26-01.wav",
    "stick_t": 0.45,
    "stick_in": 0.92,
@@ -22382,13 +22389,13 @@
    "who": "MAS",
    "text": "i don't keep score.",
    "tag": "V.O.",
-   "on_s": 43.0167,
-   "end_s": 44.9467,
-   "file_s": 42.1067,
-   "abs_in": 1032,
-   "abs_out": 1079,
-   "file_in": 1010,
-   "file_out": 1094,
+   "on_s": 43.2667,
+   "end_s": 45.1967,
+   "file_s": 42.3567,
+   "abs_in": 1038,
+   "abs_out": 1085,
+   "file_in": 1016,
+   "file_out": 1100,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-26a-01.wav",
    "stick_t": 1.6,
    "stick_in": 0.91,
@@ -22432,13 +22439,13 @@
    "who": "NELEH",
    "text": "Once more, before the others join.",
    "tag": "",
-   "on_s": 52.625,
-   "end_s": 54.345,
-   "file_s": 52.125,
-   "abs_in": 1263,
-   "abs_out": 1305,
-   "file_in": 1251,
-   "file_out": 1316,
+   "on_s": 52.875,
+   "end_s": 54.595,
+   "file_s": 52.375,
+   "abs_in": 1269,
+   "abs_out": 1311,
+   "file_in": 1257,
+   "file_out": 1322,
    "file": "audio/ep01/v31/act4/wav/v31-a4-0002.wav",
    "stick_t": 2.0,
    "stick_in": 0.5,
@@ -22549,13 +22556,13 @@
    "who": "NELEH",
    "text": "Three of us stepped down this year.",
    "tag": "",
-   "on_s": 56.6083,
-   "end_s": 58.1583,
-   "file_s": 55.6983,
-   "abs_in": 1358,
-   "abs_out": 1396,
-   "file_in": 1336,
-   "file_out": 1407,
+   "on_s": 56.9,
+   "end_s": 58.45,
+   "file_s": 55.99,
+   "abs_in": 1365,
+   "abs_out": 1403,
+   "file_in": 1343,
+   "file_out": 1414,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-25-01.wav",
    "stick_t": 1.4,
    "stick_in": 0.91,
@@ -22659,13 +22666,13 @@
    "who": "NELEH",
    "text": "Leave out Mas and Gerg, and the four of us are a majority.",
    "tag": "",
-   "on_s": 59.0583,
-   "end_s": 61.9583,
-   "file_s": 58.1583,
-   "abs_in": 1417,
-   "abs_out": 1487,
-   "file_in": 1395,
-   "file_out": 1498,
+   "on_s": 59.35,
+   "end_s": 62.25,
+   "file_s": 58.45,
+   "abs_in": 1424,
+   "abs_out": 1494,
+   "file_in": 1402,
+   "file_out": 1505,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-25-02.wav",
    "stick_t": 3.85,
    "stick_in": 0.9,
@@ -22823,13 +22830,13 @@
    "who": "NELEH",
    "text": "This board controls the company. Not the other way round.",
    "tag": "",
-   "on_s": 62.5583,
-   "end_s": 65.8783,
-   "file_s": 62.0483,
-   "abs_in": 1501,
-   "abs_out": 1582,
-   "file_in": 1489,
-   "file_out": 1593,
+   "on_s": 62.85,
+   "end_s": 66.17,
+   "file_s": 62.34,
+   "abs_in": 1508,
+   "abs_out": 1589,
+   "file_in": 1496,
+   "file_out": 1600,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-25-03.wav",
    "stick_t": 7.35,
    "stick_in": 0.51,
@@ -22984,13 +22991,13 @@
    "who": "NELEH",
    "text": "Our biggest investor has put in billions. It gets this many votes.",
    "tag": "",
-   "on_s": 67.2583,
-   "end_s": 71.3283,
-   "file_s": 66.4183,
-   "abs_in": 1614,
-   "abs_out": 1712,
-   "file_in": 1594,
-   "file_out": 1724,
+   "on_s": 67.55,
+   "end_s": 71.62,
+   "file_s": 66.71,
+   "abs_in": 1621,
+   "abs_out": 1719,
+   "file_in": 1601,
+   "file_out": 1731,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-25-04.wav",
    "stick_t": 0.3,
    "stick_in": 0.84,
@@ -23167,13 +23174,13 @@
    "who": "NELEH",
    "text": "And the CEO? What does he own?",
    "tag": "",
-   "on_s": 71.9283,
-   "end_s": 73.7983,
-   "file_s": 71.4283,
-   "abs_in": 1726,
-   "abs_out": 1772,
-   "file_in": 1714,
-   "file_out": 1783,
+   "on_s": 72.22,
+   "end_s": 74.09,
+   "file_s": 71.72,
+   "abs_in": 1733,
+   "abs_out": 1779,
+   "file_in": 1721,
+   "file_out": 1790,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-25-05.wav",
    "stick_t": 4.97,
    "stick_in": 0.5,
@@ -23277,13 +23284,13 @@
    "who": "MADA",
    "text": "Good question.",
    "tag": "",
-   "on_s": 74.5983,
-   "end_s": 75.4983,
-   "file_s": 74.0883,
-   "abs_in": 1790,
-   "abs_out": 1812,
-   "file_in": 1778,
-   "file_out": 1824,
+   "on_s": 74.89,
+   "end_s": 75.79,
+   "file_s": 74.38,
+   "abs_in": 1797,
+   "abs_out": 1819,
+   "file_in": 1785,
+   "file_out": 1831,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-25-06.wav",
    "stick_t": 7.64,
    "stick_in": 0.51,
@@ -23346,13 +23353,13 @@
    "who": "ALYI",
    "text": "Mas. The board has decided that you will no longer lead the company. It will be announced shortly.",
    "tag": "",
-   "on_s": 79.5917,
-   "end_s": 86.4917,
-   "file_s": 78.7517,
-   "abs_in": 1910,
-   "abs_out": 2076,
-   "file_in": 1890,
-   "file_out": 2088,
+   "on_s": 79.8417,
+   "end_s": 86.7417,
+   "file_s": 79.0017,
+   "abs_in": 1916,
+   "abs_out": 2082,
+   "file_in": 1896,
+   "file_out": 2094,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-01.wav",
    "stick_t": 0.3,
    "stick_in": 0.84,
@@ -23599,13 +23606,13 @@
    "who": "ALYI",
    "text": "Do you have any questions?",
    "tag": "",
-   "on_s": 86.9737,
-   "end_s": 88.8137,
-   "file_s": 86.0737,
-   "abs_in": 2087,
-   "abs_out": 2132,
-   "file_in": 2065,
-   "file_out": 2143,
+   "on_s": 87.2237,
+   "end_s": 89.0637,
+   "file_s": 86.3237,
+   "abs_in": 2093,
+   "abs_out": 2138,
+   "file_in": 2071,
+   "file_out": 2149,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-02.wav",
    "stick_t": 7.682,
    "stick_in": 0.9,
@@ -23687,13 +23694,13 @@
    "who": "NELEH",
    "text": "Is his feed frozen?",
    "tag": "",
-   "on_s": 89.8137,
-   "end_s": 91.0537,
-   "file_s": 88.9137,
-   "abs_in": 2155,
-   "abs_out": 2186,
-   "file_in": 2133,
-   "file_out": 2196,
+   "on_s": 90.0637,
+   "end_s": 91.3037,
+   "file_s": 89.1637,
+   "abs_in": 2161,
+   "abs_out": 2192,
+   "file_in": 2139,
+   "file_out": 2202,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-03.wav",
    "stick_t": 10.522,
    "stick_in": 0.9,
@@ -23762,13 +23769,13 @@
    "who": "ALYI",
    "text": "No. That is just him.",
    "tag": "",
-   "on_s": 91.5437,
-   "end_s": 94.2037,
-   "file_s": 90.9937,
-   "abs_in": 2197,
-   "abs_out": 2261,
-   "file_in": 2183,
-   "file_out": 2272,
+   "on_s": 91.7937,
+   "end_s": 94.4537,
+   "file_s": 91.2437,
+   "abs_in": 2203,
+   "abs_out": 2267,
+   "file_in": 2189,
+   "file_out": 2278,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-04.wav",
    "stick_t": 12.252,
    "stick_in": 0.55,
@@ -23858,13 +23865,13 @@
    "who": "MAS",
    "text": "super.",
    "tag": "laptop",
-   "on_s": 96.0403,
-   "end_s": 96.7603,
-   "file_s": 95.1203,
-   "abs_in": 2304,
-   "abs_out": 2323,
-   "file_in": 2282,
-   "file_out": 2337,
+   "on_s": 96.332,
+   "end_s": 97.052,
+   "file_s": 95.412,
+   "abs_in": 2311,
+   "abs_out": 2330,
+   "file_in": 2289,
+   "file_out": 2344,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-05.wav",
    "stick_t": 1.582,
    "stick_in": 0.92,
@@ -23893,13 +23900,13 @@
    "who": "NELEH",
    "text": "Any objections?",
    "tag": "O.S.",
-   "on_s": 106.8833,
-   "end_s": 107.9033,
-   "file_s": 106.3833,
-   "abs_in": 2565,
-   "abs_out": 2590,
-   "file_in": 2553,
-   "file_out": 2602,
+   "on_s": 107.1333,
+   "end_s": 108.1533,
+   "file_s": 106.6333,
+   "abs_in": 2571,
+   "abs_out": 2596,
+   "file_in": 2559,
+   "file_out": 2608,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-08.wav",
    "stick_t": 6.8,
    "stick_in": 0.5,
@@ -23958,13 +23965,13 @@
    "who": "NELEH",
    "text": "Step three. Rima, the staff will come to you now.",
    "tag": "call",
-   "on_s": 110.1833,
-   "end_s": 112.8533,
-   "file_s": 109.6833,
-   "abs_in": 2644,
-   "abs_out": 2709,
-   "file_in": 2632,
-   "file_out": 2720,
+   "on_s": 110.4333,
+   "end_s": 113.1033,
+   "file_s": 109.9333,
+   "abs_in": 2650,
+   "abs_out": 2715,
+   "file_in": 2638,
+   "file_out": 2726,
    "file": "audio/ep01/v32/act4/wav/v32-a4-0001.wav",
    "stick_t": 1.1,
    "stick_in": 0.5,
@@ -24119,13 +24126,13 @@
    "who": "RIMA",
    "text": "What should I tell them?",
    "tag": "",
-   "on_s": 113.3533,
-   "end_s": 114.4633,
-   "file_s": 112.8533,
-   "abs_in": 2720,
-   "abs_out": 2748,
-   "file_in": 2708,
-   "file_out": 2760,
+   "on_s": 113.6033,
+   "end_s": 114.7133,
+   "file_s": 113.1033,
+   "abs_in": 2726,
+   "abs_out": 2754,
+   "file_in": 2714,
+   "file_out": 2766,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-13.wav",
    "stick_t": 4.27,
    "stick_in": 0.5,
@@ -24207,13 +24214,13 @@
    "who": "NELEH",
    "text": "What the post says. That's all the board is saying for now.",
    "tag": "",
-   "on_s": 114.9633,
-   "end_s": 117.8733,
-   "file_s": 114.4633,
-   "abs_in": 2759,
-   "abs_out": 2829,
-   "file_in": 2747,
-   "file_out": 2841,
+   "on_s": 115.2133,
+   "end_s": 118.1233,
+   "file_s": 114.7133,
+   "abs_in": 2765,
+   "abs_out": 2835,
+   "file_in": 2753,
+   "file_out": 2847,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-14.wav",
    "stick_t": 5.88,
    "stick_in": 0.5,
@@ -24386,13 +24393,13 @@
    "who": "RIMA",
    "text": "We'll share more soon.",
    "tag": "",
-   "on_s": 118.5733,
-   "end_s": 119.6133,
-   "file_s": 118.0633,
-   "abs_in": 2845,
-   "abs_out": 2871,
-   "file_in": 2833,
-   "file_out": 2884,
+   "on_s": 118.8233,
+   "end_s": 119.8633,
+   "file_s": 118.3133,
+   "abs_in": 2851,
+   "abs_out": 2877,
+   "file_in": 2839,
+   "file_out": 2890,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-15.wav",
    "stick_t": 9.49,
    "stick_in": 0.51,
@@ -24469,13 +24476,13 @@
    "who": "NELEH",
    "text": "Will we?",
    "tag": "",
-   "on_s": 120.2167,
-   "end_s": 120.8567,
-   "file_s": 119.7067,
-   "abs_in": 2885,
-   "abs_out": 2901,
-   "file_in": 2872,
-   "file_out": 2912,
+   "on_s": 120.4667,
+   "end_s": 121.1067,
+   "file_s": 119.9567,
+   "abs_in": 2891,
+   "abs_out": 2907,
+   "file_in": 2878,
+   "file_out": 2918,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-16.wav",
    "stick_t": 0.3,
    "stick_in": 0.51,
@@ -24530,13 +24537,13 @@
    "who": "RIMA",
    "text": "We'll say we will.",
    "tag": "O.S.",
-   "on_s": 121.3567,
-   "end_s": 122.2867,
-   "file_s": 120.8567,
-   "abs_in": 2912,
-   "abs_out": 2935,
-   "file_in": 2900,
-   "file_out": 2949,
+   "on_s": 121.6067,
+   "end_s": 122.5367,
+   "file_s": 121.1067,
+   "abs_in": 2918,
+   "abs_out": 2941,
+   "file_in": 2906,
+   "file_out": 2955,
    "file": "audio/ep01/v31/act4/wav/v31-a4-0003.wav",
    "stick_t": 1.44,
    "stick_in": 0.5,
@@ -24580,13 +24587,13 @@
    "who": "EMPLOYEE",
    "text": "Is this a coup? Because it looks like one.",
    "tag": "",
-   "on_s": 122.5667,
-   "end_s": 125.0367,
-   "file_s": 121.7367,
-   "abs_in": 2941,
-   "abs_out": 3001,
-   "file_in": 2921,
-   "file_out": 3021,
+   "on_s": 122.8167,
+   "end_s": 125.2867,
+   "file_s": 121.9867,
+   "abs_in": 2947,
+   "abs_out": 3007,
+   "file_in": 2927,
+   "file_out": 3027,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-18.wav",
    "stick_t": -0.6,
    "stick_in": 0.83,
@@ -24720,13 +24727,13 @@
    "who": "ALYI",
    "text": "You can call it this way… I disagree with this. This was the board doing its duty to the mission of the nonprofit…",
    "tag": "",
-   "on_s": 126.0537,
-   "end_s": 133.9037,
-   "file_s": 125.1537,
-   "abs_in": 3025,
-   "abs_out": 3214,
-   "file_in": 3003,
-   "file_out": 3226,
+   "on_s": 126.3037,
+   "end_s": 134.1537,
+   "file_s": 125.4037,
+   "abs_in": 3031,
+   "abs_out": 3220,
+   "file_in": 3009,
+   "file_out": 3232,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-19.wav",
    "stick_t": 0.512,
    "stick_in": 0.9,
@@ -25026,13 +25033,13 @@
    "who": "NELEH",
    "text": "Nobody asked him to go. He'd have kept his job, just not the chair.",
    "tag": "",
-   "on_s": 137.992,
-   "end_s": 141.902,
-   "file_s": 137.092,
-   "abs_in": 3311,
-   "abs_out": 3406,
-   "file_in": 3290,
-   "file_out": 3417,
+   "on_s": 138.242,
+   "end_s": 142.152,
+   "file_s": 137.342,
+   "abs_in": 3317,
+   "abs_out": 3412,
+   "file_in": 3296,
+   "file_out": 3423,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-20.wav",
    "stick_t": 1.617,
    "stick_in": 0.9,
@@ -25227,13 +25234,13 @@
    "who": "ALYI",
    "text": "Gerg has never waited to be asked.",
    "tag": "",
-   "on_s": 142.702,
-   "end_s": 145.462,
-   "file_s": 142.192,
-   "abs_in": 3424,
-   "abs_out": 3492,
-   "file_in": 3412,
-   "file_out": 3505,
+   "on_s": 142.952,
+   "end_s": 145.712,
+   "file_s": 142.442,
+   "abs_in": 3430,
+   "abs_out": 3498,
+   "file_in": 3418,
+   "file_out": 3511,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-21.wav",
    "stick_t": 6.327,
    "stick_in": 0.51,
@@ -25357,13 +25364,13 @@
    "who": "NELEH",
    "text": "They're all asking whether it was allowed. It was. The charter, footnote three. I've read it four times tonight.",
    "tag": "",
-   "on_s": 152.5,
-   "end_s": 159.17,
-   "file_s": 151.61,
-   "abs_in": 3660,
-   "abs_out": 3821,
-   "file_in": 3638,
-   "file_out": 3831,
+   "on_s": 152.7917,
+   "end_s": 159.4617,
+   "file_s": 151.9017,
+   "abs_in": 3667,
+   "abs_out": 3828,
+   "file_in": 3645,
+   "file_out": 3838,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-22.wav",
    "stick_t": 1.25,
    "stick_in": 0.89,
@@ -25639,13 +25646,13 @@
    "who": "NELEH",
    "text": "What they actually want to know is what happens on Monday. I'd like to be able to tell them something.",
    "tag": "",
-   "on_s": 160.43,
-   "end_s": 165.83,
-   "file_s": 159.52,
-   "abs_in": 3850,
-   "abs_out": 3980,
-   "file_in": 3828,
-   "file_out": 3991,
+   "on_s": 160.7217,
+   "end_s": 166.1217,
+   "file_s": 159.8117,
+   "abs_in": 3857,
+   "abs_out": 3987,
+   "file_in": 3835,
+   "file_out": 3998,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-23.wav",
    "stick_t": 9.18,
    "stick_in": 0.91,
@@ -25902,111 +25909,6 @@
    "pre": false
   },
   {
-   "id": "a5-27-28",
-   "shot": "S4.02",
-   "beat": "S4.02",
-   "kind": "dialogue",
-   "mode": "on-mic",
-   "who": "ALYI",
-   "text": "That is the company telling us.",
-   "tag": "",
-   "on_s": 167.08,
-   "end_s": 169.67,
-   "file_s": 166.19,
-   "abs_in": 4009,
-   "abs_out": 4073,
-   "file_in": 3988,
-   "file_out": 4084,
-   "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-28.wav",
-   "stick_t": 15.83,
-   "stick_in": 0.89,
-   "cut": false,
-   "on_camera": "reflection",
-   "take_lip_sync": true,
-   "os": false,
-   "via": null,
-   "words": [
-    [
-     "That",
-     2,
-     8
-    ],
-    [
-     "is",
-     8,
-     12
-    ],
-    [
-     "the",
-     12,
-     16
-    ],
-    [
-     "company",
-     16,
-     30
-    ],
-    [
-     "telling",
-     30,
-     41
-    ],
-    [
-     "us",
-     41,
-     60
-    ]
-   ],
-   "mouth": [
-    [
-     0,
-     "rest"
-    ],
-    [
-     3,
-     "A"
-    ],
-    [
-     7,
-     "E"
-    ],
-    [
-     17,
-     "A"
-    ],
-    [
-     20,
-     "M"
-    ],
-    [
-     22,
-     "E"
-    ],
-    [
-     31,
-     "A"
-    ],
-    [
-     34,
-     "E"
-    ],
-    [
-     41,
-     "A"
-    ],
-    [
-     49,
-     "E"
-    ],
-    [
-     60,
-     "rest"
-    ]
-   ],
-   "mouth_src": "take",
-   "pre": false
-  },
-  {
    "id": "a5-27-29",
    "shot": "S4.07",
    "beat": "S4.07",
@@ -26015,13 +25917,13 @@
    "who": "NELEH",
    "text": "Then we'll write step four ourselves.",
    "tag": "",
-   "on_s": 171.4667,
-   "end_s": 173.0667,
-   "file_s": 170.5867,
-   "abs_in": 4115,
-   "abs_out": 4154,
-   "file_in": 4094,
-   "file_out": 4166,
+   "on_s": 170.2167,
+   "end_s": 171.8167,
+   "file_s": 169.3367,
+   "abs_in": 4085,
+   "abs_out": 4124,
+   "file_in": 4064,
+   "file_out": 4136,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-29.wav",
    "stick_t": 1.3,
    "stick_in": 0.88,
@@ -26128,13 +26030,13 @@
    "who": "NELEH",
    "text": "Mario, it's Neleh, from the NopeAI board. We'd like to offer you the job of CEO, and to discuss a merger.",
    "tag": "",
-   "on_s": 176.6667,
-   "end_s": 183.2267,
-   "file_s": 176.1567,
-   "abs_in": 4240,
-   "abs_out": 4398,
-   "file_in": 4227,
-   "file_out": 4408,
+   "on_s": 175.4167,
+   "end_s": 181.9767,
+   "file_s": 174.9067,
+   "abs_in": 4210,
+   "abs_out": 4368,
+   "file_in": 4197,
+   "file_out": 4378,
    "file": "audio/ep01/v31/act4/wav/v31-a4-0017.wav",
    "stick_t": 1.5,
    "stick_in": 0.51,
@@ -26412,13 +26314,13 @@
    "who": "MARIO",
    "text": "Neleh, hi. Wow. I've actually written up some thoughts on exactly this. Eleven pages, on the conditions under which we might, hypothetically—",
    "tag": "",
-   "on_s": 183.8267,
-   "end_s": 191.4267,
-   "file_s": 182.9267,
-   "abs_in": 4411,
-   "abs_out": 4595,
-   "file_in": 4390,
-   "file_out": 4605,
+   "on_s": 182.5767,
+   "end_s": 190.1767,
+   "file_s": 181.6767,
+   "abs_in": 4381,
+   "abs_out": 4565,
+   "file_in": 4360,
+   "file_out": 4575,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-31.wav",
    "stick_t": 8.66,
    "stick_in": 0.9,
@@ -26759,13 +26661,13 @@
    "who": "ADELINA",
    "text": "In plain English: no.",
    "tag": "",
-   "on_s": 191.1027,
-   "end_s": 192.6427,
-   "file_s": 190.6027,
-   "abs_in": 4586,
-   "abs_out": 4624,
-   "file_in": 4574,
-   "file_out": 4638,
+   "on_s": 189.8527,
+   "end_s": 191.3927,
+   "file_s": 189.3527,
+   "abs_in": 4556,
+   "abs_out": 4594,
+   "file_in": 4544,
+   "file_out": 4608,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-32.wav",
    "stick_t": 15.936,
    "stick_in": 0.5,
@@ -26850,13 +26752,13 @@
    "who": "NELEH",
    "text": "We've talked all day about him coming back, and we're no closer.",
    "tag": "",
-   "on_s": 203.1583,
-   "end_s": 206.5103,
-   "file_s": 202.8283,
-   "abs_in": 4875,
-   "abs_out": 4957,
-   "file_in": 4867,
-   "file_out": 5028,
+   "on_s": 201.9083,
+   "end_s": 205.2603,
+   "file_s": 201.5783,
+   "abs_in": 4845,
+   "abs_out": 4927,
+   "file_in": 4837,
+   "file_out": 4998,
    "file": "audio/ep01/v31/act4/wav/v31-a4-0005.wav",
    "stick_t": 1.2,
    "stick_in": 0.33,
@@ -27045,13 +26947,13 @@
    "who": "ALYI",
    "text": "They gave him a guest badge.",
    "tag": "O.S.",
-   "on_s": 207.2103,
-   "end_s": 209.1903,
-   "file_s": 206.7003,
-   "abs_in": 4973,
-   "abs_out": 5021,
-   "file_in": 4960,
-   "file_out": 5032,
+   "on_s": 205.9603,
+   "end_s": 207.9403,
+   "file_s": 205.4503,
+   "abs_in": 4943,
+   "abs_out": 4991,
+   "file_in": 4930,
+   "file_out": 5002,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-36.wav",
    "stick_t": 5.252,
    "stick_in": 0.51,
@@ -27154,13 +27056,13 @@
    "who": "NELEH",
    "text": "It's the correct badge. He doesn't work here.",
    "tag": "",
-   "on_s": 209.6903,
-   "end_s": 212.0903,
-   "file_s": 209.1903,
-   "abs_in": 5032,
-   "abs_out": 5091,
-   "file_in": 5020,
-   "file_out": 5101,
+   "on_s": 208.4403,
+   "end_s": 210.8403,
+   "file_s": 207.9403,
+   "abs_in": 5002,
+   "abs_out": 5061,
+   "file_in": 4990,
+   "file_out": 5071,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-37.wav",
    "stick_t": 7.732,
    "stick_in": 0.5,
@@ -27285,13 +27187,13 @@
    "who": "NELEH",
    "text": "Ttemme, we'd like you to serve as interim CEO.",
    "tag": "",
-   "on_s": 218.3833,
-   "end_s": 220.8333,
-   "file_s": 217.5433,
-   "abs_in": 5241,
-   "abs_out": 5300,
-   "file_in": 5221,
-   "file_out": 5312,
+   "on_s": 217.1333,
+   "end_s": 219.5833,
+   "file_s": 216.2933,
+   "abs_in": 5211,
+   "abs_out": 5270,
+   "file_in": 5191,
+   "file_out": 5282,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-38.wav",
    "stick_t": 0.8,
    "stick_in": 0.84,
@@ -27433,13 +27335,13 @@
    "who": "TTEMME",
    "text": "You already have an interim CEO.",
    "tag": "",
-   "on_s": 221.2333,
-   "end_s": 222.8833,
-   "file_s": 220.7233,
-   "abs_in": 5309,
-   "abs_out": 5350,
-   "file_in": 5297,
-   "file_out": 5361,
+   "on_s": 219.9833,
+   "end_s": 221.6333,
+   "file_s": 219.4733,
+   "abs_in": 5279,
+   "abs_out": 5320,
+   "file_in": 5267,
+   "file_out": 5331,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-39.wav",
    "stick_t": 3.65,
    "stick_in": 0.51,
@@ -27534,13 +27436,13 @@
    "who": "NELEH",
    "text": "We'd like a different one.",
    "tag": "",
-   "on_s": 223.4833,
-   "end_s": 224.6533,
-   "file_s": 222.9733,
-   "abs_in": 5363,
-   "abs_out": 5392,
-   "file_in": 5351,
-   "file_out": 5403,
+   "on_s": 222.2333,
+   "end_s": 223.4033,
+   "file_s": 221.7233,
+   "abs_in": 5333,
+   "abs_out": 5362,
+   "file_in": 5321,
+   "file_out": 5373,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-40.wav",
    "stick_t": 5.9,
    "stick_in": 0.51,
@@ -27626,13 +27528,13 @@
    "who": "TTEMME",
    "text": "Fine. But before I say yes, I need to know why you fired him.",
    "tag": "",
-   "on_s": 225.3533,
-   "end_s": 228.9833,
-   "file_s": 224.8433,
-   "abs_in": 5408,
-   "abs_out": 5496,
-   "file_in": 5396,
-   "file_out": 5507,
+   "on_s": 224.1033,
+   "end_s": 227.7333,
+   "file_s": 223.5933,
+   "abs_in": 5378,
+   "abs_out": 5466,
+   "file_in": 5366,
+   "file_out": 5477,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-41.wav",
    "stick_t": 7.77,
    "stick_in": 0.51,
@@ -27819,13 +27721,13 @@
    "who": "TASYA",
    "text": "Good evening. You'll want to hear our statement.",
    "tag": "",
-   "on_s": 239.3083,
-   "end_s": 241.9183,
-   "file_s": 238.4583,
-   "abs_in": 5743,
-   "abs_out": 5807,
-   "file_in": 5723,
-   "file_out": 5823,
+   "on_s": 238.0583,
+   "end_s": 240.6683,
+   "file_s": 237.2083,
+   "abs_in": 5713,
+   "abs_out": 5777,
+   "file_in": 5693,
+   "file_out": 5793,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-44.wav",
    "stick_t": 1.6,
    "stick_in": 0.85,
@@ -27962,13 +27864,13 @@
    "who": "TASYA",
    "text": "we're extremely excited to share the news that Mas Manalt and Gerg Mockbran, together with colleagues, will be joining Macrosoft to lead a new advanced AI research team.",
    "tag": "",
-   "on_s": 242.5183,
-   "end_s": 251.6183,
-   "file_s": 242.0183,
-   "abs_in": 5820,
-   "abs_out": 6039,
-   "file_in": 5808,
-   "file_out": 6052,
+   "on_s": 241.2683,
+   "end_s": 250.3683,
+   "file_s": 240.7683,
+   "abs_in": 5790,
+   "abs_out": 6009,
+   "file_in": 5778,
+   "file_out": 6022,
    "file": "audio/ep01/v3/act4/wav/v3-a4-0001.wav",
    "stick_t": 4.81,
    "stick_in": 0.5,
@@ -28369,13 +28271,13 @@
    "who": "NELEH",
    "text": "Step four, Mada?",
    "tag": "O.S.",
-   "on_s": 254.7917,
-   "end_s": 255.8617,
-   "file_s": 254.2817,
-   "abs_in": 6115,
-   "abs_out": 6141,
-   "file_in": 6102,
-   "file_out": 6152,
+   "on_s": 253.5833,
+   "end_s": 254.6533,
+   "file_s": 253.0733,
+   "abs_in": 6086,
+   "abs_out": 6112,
+   "file_in": 6073,
+   "file_out": 6123,
    "file": "audio/ep01/v31/act4/wav/v31-a4-0006.wav",
    "stick_t": 1.0,
    "stick_in": 0.51,
@@ -28414,13 +28316,13 @@
    "who": "MAS",
    "text": "four hundred and six. four hundred and seven. four hundred and six.",
    "tag": "V.O.",
-   "on_s": 264.1833,
-   "end_s": 268.8333,
-   "file_s": 263.6633,
-   "abs_in": 6340,
-   "abs_out": 6452,
-   "file_in": 6327,
-   "file_out": 6467,
+   "on_s": 262.975,
+   "end_s": 267.625,
+   "file_s": 262.455,
+   "abs_in": 6311,
+   "abs_out": 6423,
+   "file_in": 6298,
+   "file_out": 6438,
    "file": "audio/ep01/v3/act4/wav/v3-vo-20.wav",
    "stick_t": 0.6,
    "stick_in": 0.52,
@@ -28504,13 +28406,13 @@
    "who": "MAS",
    "text": "the badge was a joke.",
    "tag": "",
-   "on_s": 270.4583,
-   "end_s": 271.8983,
-   "file_s": 269.5583,
-   "abs_in": 6491,
-   "abs_out": 6526,
-   "file_in": 6469,
-   "file_out": 6541,
+   "on_s": 269.2083,
+   "end_s": 270.6483,
+   "file_s": 268.3083,
+   "abs_in": 6461,
+   "abs_out": 6496,
+   "file_in": 6439,
+   "file_out": 6511,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-29-01.wav",
    "stick_t": 1.0,
    "stick_in": 0.9,
@@ -28600,13 +28502,13 @@
    "who": "MAS",
    "text": "mostly.",
    "tag": "",
-   "on_s": 272.8987,
-   "end_s": 273.7087,
-   "file_s": 272.3787,
-   "abs_in": 6549,
-   "abs_out": 6570,
-   "file_in": 6537,
-   "file_out": 6584,
+   "on_s": 271.6487,
+   "end_s": 272.4587,
+   "file_s": 271.1287,
+   "abs_in": 6519,
+   "abs_out": 6540,
+   "file_in": 6507,
+   "file_out": 6554,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-29-02.wav",
    "stick_t": 0.482,
    "stick_in": 0.52,
@@ -28648,24 +28550,24 @@
    "pre": false
   },
   {
-   "id": "v3-vo-21",
+   "id": "v34-vo-09",
    "shot": "S5.09",
    "beat": "S5.09",
    "kind": "vo",
    "mode": "on-mic",
    "who": "MAS",
-   "text": "gerg. he'll say he's compiling.",
+   "text": "gerg walked out for me.",
    "tag": "V.O.",
-   "on_s": 275.0083,
-   "end_s": 277.2483,
-   "file_s": 274.4383,
-   "abs_in": 6600,
-   "abs_out": 6654,
-   "file_in": 6586,
-   "file_out": 6671,
-   "file": "audio/ep01/v3/act4/wav/v3-vo-21.wav",
+   "on_s": 273.7583,
+   "end_s": 275.1883,
+   "file_s": 273.1583,
+   "abs_in": 6570,
+   "abs_out": 6605,
+   "file_in": 6555,
+   "file_out": 6622,
+   "file": "audio/ep01/v34/act4/wav/v34-vo-09.wav",
    "stick_t": 0.3,
-   "stick_in": 0.57,
+   "stick_in": 0.6,
    "cut": false,
    "on_camera": "vo",
    "take_lip_sync": false,
@@ -28678,24 +28580,24 @@
      10
     ],
     [
-     "he'll",
-     19,
-     24
+     "walked",
+     10,
+     17
     ],
     [
-     "say",
-     24,
-     30
+     "out",
+     17,
+     23
     ],
     [
-     "he's",
-     30,
-     34
+     "for",
+     23,
+     26
     ],
     [
-     "compiling",
-     34,
-     54
+     "me",
+     26,
+     35
     ]
    ],
    "mouth": [],
@@ -28711,15 +28613,15 @@
    "who": "GERG",
    "text": "Sorry, one sec. I've got a build compiling.",
    "tag": "",
-   "on_s": 277.7483,
-   "end_s": 279.9383,
-   "file_s": 276.9083,
-   "abs_in": 6665,
-   "abs_out": 6719,
-   "file_in": 6645,
-   "file_out": 6734,
+   "on_s": 275.6883,
+   "end_s": 277.8783,
+   "file_s": 274.8483,
+   "abs_in": 6616,
+   "abs_out": 6670,
+   "file_in": 6596,
+   "file_out": 6685,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-29-03.wav",
-   "stick_t": 3.04,
+   "stick_t": 2.23,
    "stick_in": 0.84,
    "cut": false,
    "on_camera": "monitor",
@@ -28740,7 +28642,7 @@
     [
      "sec",
      13,
-     19
+     18
     ],
     [
      "I've",
@@ -28765,7 +28667,7 @@
     [
      "compiling",
      38,
-     54
+     53
     ]
    ],
    "mouth": [
@@ -28846,15 +28748,15 @@
    "who": "MAS",
    "text": "it's two in the morning, gerg.",
    "tag": "",
-   "on_s": 280.3383,
-   "end_s": 281.9383,
-   "file_s": 279.8183,
-   "abs_in": 6728,
-   "abs_out": 6767,
-   "file_in": 6715,
-   "file_out": 6783,
+   "on_s": 278.2783,
+   "end_s": 279.8783,
+   "file_s": 277.7583,
+   "abs_in": 6678,
+   "abs_out": 6718,
+   "file_in": 6666,
+   "file_out": 6734,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-29-04.wav",
-   "stick_t": 5.63,
+   "stick_t": 4.82,
    "stick_in": 0.52,
    "cut": false,
    "on_camera": "on",
@@ -28864,28 +28766,28 @@
    "words": [
     [
      "it's",
-     1,
+     2,
      6
     ],
     [
      "two",
      6,
-     11
+     12
     ],
     [
      "in",
-     11,
-     13
+     12,
+     14
     ],
     [
      "the",
-     13,
-     15
+     14,
+     16
     ],
     [
      "morning",
-     15,
-     25
+     16,
+     26
     ],
     [
      "gerg",
@@ -28899,39 +28801,39 @@
      "rest"
     ],
     [
-     1,
+     2,
      "E"
     ],
     [
-     7,
+     8,
      "O"
     ],
     [
-     11,
+     12,
      "E"
     ],
     [
-     15,
+     16,
      "M"
     ],
     [
-     17,
+     18,
      "O"
     ],
     [
-     19,
+     20,
      "E"
     ],
     [
-     28,
+     29,
      "O"
     ],
     [
-     34,
+     35,
      "E"
     ],
     [
-     38,
+     39,
      "rest"
     ]
    ],
@@ -28947,15 +28849,15 @@
    "who": "GERG",
    "text": "Best time there is. Nobody else is pushing anything.",
    "tag": "",
-   "on_s": 282.3383,
-   "end_s": 285.3233,
-   "file_s": 282.0083,
-   "abs_in": 6776,
-   "abs_out": 6848,
-   "file_in": 6768,
-   "file_out": 6992,
+   "on_s": 280.2783,
+   "end_s": 283.2633,
+   "file_s": 279.9483,
+   "abs_in": 6726,
+   "abs_out": 6799,
+   "file_in": 6718,
+   "file_out": 6942,
    "file": "audio/ep01/v31/act4/wav/v31-a4-0007.wav",
-   "stick_t": 7.63,
+   "stick_t": 6.82,
    "stick_in": 0.33,
    "cut": false,
    "on_camera": "monitor",
@@ -28965,12 +28867,12 @@
    "words": [
     [
      "Best",
-     0,
-     5
+     1,
+     6
     ],
     [
      "time",
-     5,
+     6,
      11
     ],
     [
@@ -28981,7 +28883,7 @@
     [
      "is",
      16,
-     20
+     21
     ],
     [
      "Nobody",
@@ -28991,22 +28893,22 @@
     [
      "else",
      37,
-     42
+     43
     ],
     [
      "is",
-     42,
-     46
+     43,
+     47
     ],
     [
      "pushing",
-     46,
-     55
+     47,
+     56
     ],
     [
      "anything",
-     55,
-     69
+     56,
+     70
     ]
    ],
    "mouth": [
@@ -29099,15 +29001,15 @@
    "who": "MAS",
    "text": "read me the letter.",
    "tag": "",
-   "on_s": 285.9233,
-   "end_s": 287.0833,
-   "file_s": 285.3933,
-   "abs_in": 6862,
-   "abs_out": 6890,
-   "file_in": 6849,
-   "file_out": 6906,
+   "on_s": 283.8633,
+   "end_s": 285.0233,
+   "file_s": 283.3333,
+   "abs_in": 6812,
+   "abs_out": 6841,
+   "file_in": 6800,
+   "file_out": 6857,
    "file": "audio/ep01/v31/act4/wav/v31-a4-0008.wav",
-   "stick_t": 11.215,
+   "stick_t": 10.405,
    "stick_in": 0.53,
    "cut": false,
    "on_camera": "on",
@@ -29118,22 +29020,22 @@
     [
      "read",
      1,
-     7
+     8
     ],
     [
      "me",
-     7,
+     8,
      12
     ],
     [
      "the",
      12,
-     15
+     16
     ],
     [
      "letter",
-     15,
-     28
+     16,
+     29
     ]
    ],
    "mouth": [
@@ -29142,7 +29044,7 @@
      "rest"
     ],
     [
-     2,
+     3,
      "A"
     ],
     [
@@ -29150,15 +29052,15 @@
      "M"
     ],
     [
-     9,
+     10,
      "E"
     ],
     [
-     17,
+     18,
      "A"
     ],
     [
-     21,
+     22,
      "E"
     ],
     [
@@ -29178,15 +29080,15 @@
    "who": "GERG",
    "text": "Okay. Pull it up.",
    "tag": "",
-   "on_s": 287.8833,
-   "end_s": 289.0833,
-   "file_s": 287.3833,
-   "abs_in": 6909,
-   "abs_out": 6938,
-   "file_in": 6897,
-   "file_out": 6951,
+   "on_s": 285.8233,
+   "end_s": 287.0233,
+   "file_s": 285.3233,
+   "abs_in": 6859,
+   "abs_out": 6889,
+   "file_in": 6847,
+   "file_out": 6901,
    "file": "audio/ep01/v31/act4/wav/v31-a4-0009.wav",
-   "stick_t": 13.175,
+   "stick_t": 12.365,
    "stick_in": 0.5,
    "cut": false,
    "on_camera": "monitor",
@@ -29196,23 +29098,23 @@
    "words": [
     [
      "Okay",
-     -1,
+     0,
      6
     ],
     [
      "Pull",
-     14,
-     18
+     15,
+     19
     ],
     [
      "it",
-     18,
-     20
+     19,
+     21
     ],
     [
      "up",
-     20,
-     29
+     21,
+     30
     ]
    ],
    "mouth": [
@@ -29265,13 +29167,13 @@
    "who": "GERG",
    "text": "They're telling the board they're …unable to work for or with people that lack competence, judgement and care for our mission and employees.",
    "tag": "monitor",
-   "on_s": 290.3833,
-   "end_s": 297.1633,
-   "file_s": 289.4933,
-   "abs_in": 6969,
-   "abs_out": 7132,
-   "file_in": 6947,
-   "file_out": 7154,
+   "on_s": 288.3417,
+   "end_s": 295.1217,
+   "file_s": 287.4517,
+   "abs_in": 6920,
+   "abs_out": 7083,
+   "file_in": 6898,
+   "file_out": 7105,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-29-06.wav",
    "stick_t": 0.8,
    "stick_in": 0.89,
@@ -29611,13 +29513,13 @@
    "who": "GERG",
    "text": "And they'll quit, …unless all current board members resign…",
    "tag": "monitor",
-   "on_s": 297.6633,
-   "end_s": 300.4033,
-   "file_s": 297.1633,
-   "abs_in": 7143,
-   "abs_out": 7210,
-   "file_in": 7131,
-   "file_out": 7226,
+   "on_s": 295.6217,
+   "end_s": 298.3617,
+   "file_s": 295.1217,
+   "abs_in": 7094,
+   "abs_out": 7161,
+   "file_in": 7082,
+   "file_out": 7177,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-29-07.wav",
    "stick_t": 8.08,
    "stick_in": 0.5,
@@ -29767,13 +29669,13 @@
    "who": "MAS",
    "text": "and go to macrosoft.",
    "tag": "O.S.",
-   "on_s": 300.8033,
-   "end_s": 302.2033,
-   "file_s": 300.2133,
-   "abs_in": 7219,
-   "abs_out": 7253,
-   "file_in": 7205,
-   "file_out": 7270,
+   "on_s": 298.7617,
+   "end_s": 300.1617,
+   "file_s": 298.1717,
+   "abs_in": 7170,
+   "abs_out": 7204,
+   "file_in": 7156,
+   "file_out": 7221,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-29-08.wav",
    "stick_t": 11.22,
    "stick_in": 0.59,
@@ -29858,13 +29760,13 @@
    "who": "GERG",
    "text": "Yep. Macrosoft's promised them …positions for all NopeAI employees…",
    "tag": "monitor",
-   "on_s": 302.5033,
-   "end_s": 306.2633,
-   "file_s": 301.9933,
-   "abs_in": 7260,
-   "abs_out": 7351,
-   "file_in": 7247,
-   "file_out": 7367,
+   "on_s": 300.4617,
+   "end_s": 304.2217,
+   "file_s": 299.9517,
+   "abs_in": 7211,
+   "abs_out": 7302,
+   "file_in": 7198,
+   "file_out": 7318,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-29-09.wav",
    "stick_t": 12.92,
    "stick_in": 0.51,
@@ -30042,13 +29944,13 @@
    "who": "MAS",
    "text": "that's a lot of desks.",
    "tag": "O.S.",
-   "on_s": 306.8633,
-   "end_s": 308.2433,
-   "file_s": 306.3233,
-   "abs_in": 7364,
-   "abs_out": 7398,
-   "file_in": 7351,
-   "file_out": 7414,
+   "on_s": 304.8217,
+   "end_s": 306.2017,
+   "file_s": 304.2817,
+   "abs_in": 7315,
+   "abs_out": 7349,
+   "file_in": 7302,
+   "file_out": 7365,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-29-10.wav",
    "stick_t": 17.28,
    "stick_in": 0.54,
@@ -30138,13 +30040,13 @@
    "who": "GERG",
    "text": "Scroll to the bottom.",
    "tag": "monitor",
-   "on_s": 308.6433,
-   "end_s": 309.5633,
-   "file_s": 308.1333,
-   "abs_in": 7407,
-   "abs_out": 7430,
-   "file_in": 7395,
-   "file_out": 7446,
+   "on_s": 306.6017,
+   "end_s": 307.5217,
+   "file_s": 306.0917,
+   "abs_in": 7358,
+   "abs_out": 7381,
+   "file_in": 7346,
+   "file_out": 7397,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-29-11.wav",
    "stick_t": 19.06,
    "stick_in": 0.51,
@@ -30221,13 +30123,13 @@
    "who": "GERG",
    "text": "Alyi signed it.",
    "tag": "monitor",
-   "on_s": 311.1633,
-   "end_s": 311.8633,
-   "file_s": 310.2233,
-   "abs_in": 7467,
-   "abs_out": 7485,
-   "file_in": 7445,
-   "file_out": 7501,
+   "on_s": 309.1217,
+   "end_s": 309.8217,
+   "file_s": 308.1817,
+   "abs_in": 7418,
+   "abs_out": 7436,
+   "file_in": 7396,
+   "file_out": 7452,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-29-12.wav",
    "stick_t": 21.58,
    "stick_in": 0.94,
@@ -30287,13 +30189,13 @@
    "who": "MAS",
    "text": "alyi voted.",
    "tag": "",
-   "on_s": 312.675,
-   "end_s": 313.785,
-   "file_s": 312.155,
-   "abs_in": 7504,
-   "abs_out": 7531,
-   "file_in": 7491,
-   "file_out": 7546,
+   "on_s": 310.6333,
+   "end_s": 311.7433,
+   "file_s": 310.1133,
+   "abs_in": 7455,
+   "abs_out": 7482,
+   "file_in": 7442,
+   "file_out": 7497,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-29-13.wav",
    "stick_t": 0.3,
    "stick_in": 0.52,
@@ -30352,13 +30254,13 @@
    "who": "GERG",
    "text": "He did both.",
    "tag": "monitor",
-   "on_s": 314.285,
-   "end_s": 314.995,
-   "file_s": 313.775,
-   "abs_in": 7542,
-   "abs_out": 7560,
-   "file_in": 7530,
-   "file_out": 7572,
+   "on_s": 312.2433,
+   "end_s": 312.9533,
+   "file_s": 311.7333,
+   "abs_in": 7493,
+   "abs_out": 7511,
+   "file_in": 7481,
+   "file_out": 7523,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-29-14.wav",
    "stick_t": 1.91,
    "stick_in": 0.51,
@@ -30397,13 +30299,13 @@
    "who": "GERG",
    "text": "That's the share sale. Everybody was about to get paid.",
    "tag": "monitor",
-   "on_s": 319.675,
-   "end_s": 322.325,
-   "file_s": 319.165,
-   "abs_in": 7672,
-   "abs_out": 7736,
-   "file_in": 7659,
-   "file_out": 7751,
+   "on_s": 317.6333,
+   "end_s": 320.2833,
+   "file_s": 317.1233,
+   "abs_in": 7623,
+   "abs_out": 7687,
+   "file_in": 7610,
+   "file_out": 7702,
    "file": "audio/ep01/v31/act4/wav/v31-a4-0010.wav",
    "stick_t": 1.3,
    "stick_in": 0.51,
@@ -30477,13 +30379,13 @@
    "who": "MAS",
    "text": "what are you building?",
    "tag": "",
-   "on_s": 324.5083,
-   "end_s": 325.7383,
-   "file_s": 323.5183,
-   "abs_in": 7788,
-   "abs_out": 7818,
-   "file_in": 7764,
-   "file_out": 7833,
+   "on_s": 322.4667,
+   "end_s": 323.6967,
+   "file_s": 321.4767,
+   "abs_in": 7739,
+   "abs_out": 7769,
+   "file_in": 7715,
+   "file_out": 7784,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-29-16.wav",
    "stick_t": 0.3,
    "stick_in": 0.99,
@@ -30560,13 +30462,13 @@
    "who": "GERG",
    "text": "The company. Again. Just in case.",
    "tag": "",
-   "on_s": 326.1383,
-   "end_s": 328.2483,
-   "file_s": 325.6383,
-   "abs_in": 7827,
-   "abs_out": 7878,
-   "file_in": 7815,
-   "file_out": 7892,
+   "on_s": 324.0967,
+   "end_s": 326.2067,
+   "file_s": 323.5967,
+   "abs_in": 7778,
+   "abs_out": 7829,
+   "file_in": 7766,
+   "file_out": 7843,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-29-17.wav",
    "stick_t": 1.93,
    "stick_in": 0.5,
@@ -30669,13 +30571,13 @@
    "who": "GERG",
    "text": "So. Do I tell everyone to pack?",
    "tag": "",
-   "on_s": 330.7833,
-   "end_s": 332.5533,
-   "file_s": 329.8833,
-   "abs_in": 7938,
-   "abs_out": 7982,
-   "file_in": 7917,
-   "file_out": 7996,
+   "on_s": 328.7417,
+   "end_s": 330.5117,
+   "file_s": 327.8417,
+   "abs_in": 7889,
+   "abs_out": 7933,
+   "file_in": 7868,
+   "file_out": 7947,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-29-18.wav",
    "stick_t": 1.2,
    "stick_in": 0.9,
@@ -30783,13 +30685,13 @@
    "who": "MAS",
    "text": "keep building.",
    "tag": "",
-   "on_s": 333.5533,
-   "end_s": 334.5233,
-   "file_s": 332.9833,
-   "abs_in": 8005,
-   "abs_out": 8029,
-   "file_in": 7991,
-   "file_out": 8044,
+   "on_s": 331.5117,
+   "end_s": 332.4817,
+   "file_s": 330.9417,
+   "abs_in": 7956,
+   "abs_out": 7980,
+   "file_in": 7942,
+   "file_out": 7995,
    "file": "audio/ep01/v31/act4/wav/v31-a4-0011.wav",
    "stick_t": 3.97,
    "stick_in": 0.57,
@@ -30823,13 +30725,13 @@
    "who": "TASYA",
    "text": "Don't get up, Mas. I won't keep you. Everyone is welcome.",
    "tag": "O.S.",
-   "on_s": 334.825,
-   "end_s": 338.435,
-   "file_s": 333.925,
-   "abs_in": 8035,
-   "abs_out": 8123,
-   "file_in": 8014,
-   "file_out": 8139,
+   "on_s": 332.7833,
+   "end_s": 336.3933,
+   "file_s": 331.8833,
+   "abs_in": 7986,
+   "abs_out": 8074,
+   "file_in": 7965,
+   "file_out": 8090,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-29-20.wav",
    "stick_t": -0.8,
    "stick_in": 0.9,
@@ -30908,13 +30810,13 @@
    "who": "MAS",
    "text": "everyone.",
    "tag": "",
-   "on_s": 339.135,
-   "end_s": 339.975,
-   "file_s": 338.615,
-   "abs_in": 8139,
-   "abs_out": 8160,
-   "file_in": 8126,
-   "file_out": 8175,
+   "on_s": 337.0933,
+   "end_s": 337.9333,
+   "file_s": 336.5733,
+   "abs_in": 8090,
+   "abs_out": 8111,
+   "file_in": 8077,
+   "file_out": 8126,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-29-21.wav",
    "stick_t": 3.51,
    "stick_in": 0.52,
@@ -30968,13 +30870,13 @@
    "who": "TASYA",
    "text": "Yes. You first. And there's a desk for every one of them.",
    "tag": "O.S.",
-   "on_s": 340.475,
-   "end_s": 343.805,
-   "file_s": 339.575,
-   "abs_in": 8171,
-   "abs_out": 8252,
-   "file_in": 8149,
-   "file_out": 8268,
+   "on_s": 338.4333,
+   "end_s": 341.7633,
+   "file_s": 337.5333,
+   "abs_in": 8122,
+   "abs_out": 8203,
+   "file_in": 8100,
+   "file_out": 8219,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-29-22.wav",
    "stick_t": 4.85,
    "stick_in": 0.9,
@@ -31058,13 +30960,13 @@
    "who": "MAS",
    "text": "and the rent?",
    "tag": "",
-   "on_s": 345.005,
-   "end_s": 345.945,
-   "file_s": 344.485,
-   "abs_in": 8280,
-   "abs_out": 8303,
-   "file_in": 8267,
-   "file_out": 8318,
+   "on_s": 342.9633,
+   "end_s": 343.9033,
+   "file_s": 342.4433,
+   "abs_in": 8231,
+   "abs_out": 8254,
+   "file_in": 8218,
+   "file_out": 8269,
    "file": "audio/ep01/v31/act4/wav/v31-a4-0012.wav",
    "stick_t": 9.38,
    "stick_in": 0.52,
@@ -31128,13 +31030,13 @@
    "who": "TASYA",
    "text": "Due on the first.",
    "tag": "O.S.",
-   "on_s": 346.445,
-   "end_s": 347.545,
-   "file_s": 345.935,
-   "abs_in": 8314,
-   "abs_out": 8342,
-   "file_in": 8302,
-   "file_out": 8355,
+   "on_s": 344.4033,
+   "end_s": 345.5033,
+   "file_s": 343.8933,
+   "abs_in": 8265,
+   "abs_out": 8293,
+   "file_in": 8253,
+   "file_out": 8306,
    "file": "audio/ep01/v31/act4/wav/v31-a4-0013.wav",
    "stick_t": 10.82,
    "stick_in": 0.51,
@@ -31178,13 +31080,13 @@
    "who": "MAS",
    "text": "leave it open.",
    "tag": "",
-   "on_s": 351.855,
-   "end_s": 352.885,
-   "file_s": 350.905,
-   "abs_in": 8444,
-   "abs_out": 8470,
-   "file_in": 8421,
-   "file_out": 8484,
+   "on_s": 349.8133,
+   "end_s": 350.8433,
+   "file_s": 348.8633,
+   "abs_in": 8395,
+   "abs_out": 8421,
+   "file_in": 8372,
+   "file_out": 8435,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-29-23.wav",
    "stick_t": 0.605,
    "stick_in": 0.95,
@@ -31256,13 +31158,13 @@
    "who": "NELEH",
    "text": "Has anyone read the char—",
    "tag": "call",
-   "on_s": 364.9667,
-   "end_s": 366.2867,
-   "file_s": 364.1267,
-   "abs_in": 8759,
-   "abs_out": 8791,
-   "file_in": 8739,
-   "file_out": 8797,
+   "on_s": 362.925,
+   "end_s": 364.245,
+   "file_s": 362.085,
+   "abs_in": 8710,
+   "abs_out": 8742,
+   "file_in": 8690,
+   "file_out": 8748,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-29-24.wav",
    "stick_t": 0.3,
    "stick_in": 0.84,
@@ -31352,13 +31254,13 @@
    "who": "ALYI",
    "text": "You sent three.",
    "tag": "",
-   "on_s": 381.342,
-   "end_s": 382.602,
-   "file_s": 380.452,
-   "abs_in": 9152,
-   "abs_out": 9183,
-   "file_in": 9130,
-   "file_out": 9193,
+   "on_s": 379.3003,
+   "end_s": 380.5603,
+   "file_s": 378.4103,
+   "abs_in": 9103,
+   "abs_out": 9134,
+   "file_in": 9081,
+   "file_out": 9144,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-30-01.wav",
    "stick_t": 8.467,
    "stick_in": 0.89,
@@ -31426,13 +31328,13 @@
    "who": "MAS",
    "text": "one for each day.",
    "tag": "",
-   "on_s": 383.302,
-   "end_s": 384.542,
-   "file_s": 382.732,
-   "abs_in": 9199,
-   "abs_out": 9230,
-   "file_in": 9185,
-   "file_out": 9244,
+   "on_s": 381.2603,
+   "end_s": 382.5003,
+   "file_s": 380.6903,
+   "abs_in": 9150,
+   "abs_out": 9181,
+   "file_in": 9136,
+   "file_out": 9195,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-30-02.wav",
    "stick_t": 10.427,
    "stick_in": 0.57,
@@ -31517,13 +31419,13 @@
    "who": "ALYI",
    "text": "It has been four days.",
    "tag": "",
-   "on_s": 385.342,
-   "end_s": 387.182,
-   "file_s": 384.842,
-   "abs_in": 9248,
-   "abs_out": 9293,
-   "file_in": 9236,
-   "file_out": 9304,
+   "on_s": 383.3003,
+   "end_s": 385.1403,
+   "file_s": 382.8003,
+   "abs_in": 9199,
+   "abs_out": 9244,
+   "file_in": 9187,
+   "file_out": 9255,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-30-03.wav",
    "stick_t": 12.467,
    "stick_in": 0.5,
@@ -31613,13 +31515,13 @@
    "who": "MAS",
    "text": "i'm not counting today.",
    "tag": "",
-   "on_s": 387.682,
-   "end_s": 389.162,
-   "file_s": 387.162,
-   "abs_in": 9304,
-   "abs_out": 9340,
-   "file_in": 9291,
-   "file_out": 9356,
+   "on_s": 385.6403,
+   "end_s": 387.1203,
+   "file_s": 385.1203,
+   "abs_in": 9255,
+   "abs_out": 9291,
+   "file_in": 9242,
+   "file_out": 9307,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-30-04.wav",
    "stick_t": 14.807,
    "stick_in": 0.52,
@@ -31700,13 +31602,13 @@
    "who": "EMPLOYEE",
    "text": "Everyone's packed. Whatever happens to this place, Mas, don't worry about us.",
    "tag": "",
-   "on_s": 392.8583,
-   "end_s": 396.9783,
-   "file_s": 392.3583,
-   "abs_in": 9428,
-   "abs_out": 9528,
-   "file_in": 9416,
-   "file_out": 9546,
+   "on_s": 390.8167,
+   "end_s": 394.9367,
+   "file_s": 390.3167,
+   "abs_in": 9379,
+   "abs_out": 9479,
+   "file_in": 9367,
+   "file_out": 9497,
    "file": "audio/ep01/v33/act4/wav/v33-a4-0001.wav",
    "stick_t": 1.4,
    "stick_in": 0.5,
@@ -31911,13 +31813,13 @@
    "who": "TASYA",
    "text": "We are below them, above them, around them.",
    "tag": "tv",
-   "on_s": 397.9167,
-   "end_s": 401.7717,
-   "file_s": 397.5867,
-   "abs_in": 9550,
-   "abs_out": 9643,
-   "file_in": 9542,
-   "file_out": 9736,
+   "on_s": 395.875,
+   "end_s": 399.73,
+   "file_s": 395.545,
+   "abs_in": 9501,
+   "abs_out": 9594,
+   "file_in": 9493,
+   "file_out": 9687,
    "file": "audio/ep01/v33/act4/wav/v33-a4-0002.wav",
    "stick_t": 0.5,
    "stick_in": 0.33,
@@ -32074,13 +31976,13 @@
    "who": "TERB",
    "text": "Which room is on fire?",
    "tag": "",
-   "on_s": 414.8333,
-   "end_s": 416.4233,
-   "file_s": 413.9433,
-   "abs_in": 9956,
-   "abs_out": 9995,
-   "file_in": 9934,
-   "file_out": 10012,
+   "on_s": 412.7917,
+   "end_s": 414.3817,
+   "file_s": 411.9017,
+   "abs_in": 9907,
+   "abs_out": 9946,
+   "file_in": 9885,
+   "file_out": 9963,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-30-08.wav",
    "stick_t": 0.5,
    "stick_in": 0.89,
@@ -32170,13 +32072,13 @@
    "who": "TERB",
    "text": "Ah.",
    "tag": "",
-   "on_s": 418.0233,
-   "end_s": 418.6433,
-   "file_s": 417.1833,
-   "abs_in": 10032,
-   "abs_out": 10048,
-   "file_in": 10012,
-   "file_out": 10060,
+   "on_s": 415.9817,
+   "end_s": 416.6017,
+   "file_s": 415.1417,
+   "abs_in": 9983,
+   "abs_out": 9999,
+   "file_in": 9963,
+   "file_out": 10011,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-30-09.wav",
    "stick_t": 3.69,
    "stick_in": 0.84,
@@ -32218,13 +32120,13 @@
    "who": "TERB",
    "text": "Before this goes out, I'm reading it once. We have reached an agreement in principle for Mas Manalt to return to NopeAI as CEO with a new initial board of Terb (Chair), the Other Yrral, and Mada.",
    "tag": "",
-   "on_s": 420.05,
-   "end_s": 430.65,
-   "file_s": 419.55,
-   "abs_in": 10081,
-   "abs_out": 10336,
-   "file_in": 10069,
-   "file_out": 10353,
+   "on_s": 418.0083,
+   "end_s": 428.6083,
+   "file_s": 417.5083,
+   "abs_in": 10032,
+   "abs_out": 10287,
+   "file_in": 10020,
+   "file_out": 10304,
    "file": "audio/ep01/v3/act4/wav/v3-a4-0004.wav",
    "stick_t": 0.8,
    "stick_in": 0.5,
@@ -32722,13 +32624,13 @@
    "who": "MAS",
    "text": "you're staying?",
    "tag": "",
-   "on_s": 430.907,
-   "end_s": 431.817,
-   "file_s": 430.337,
-   "abs_in": 10341,
-   "abs_out": 10364,
-   "file_in": 10328,
-   "file_out": 10380,
+   "on_s": 428.8653,
+   "end_s": 429.7753,
+   "file_s": 428.2953,
+   "abs_in": 10292,
+   "abs_out": 10315,
+   "file_in": 10279,
+   "file_out": 10331,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-30-11.wav",
    "stick_t": 0.782,
    "stick_in": 0.57,
@@ -32787,13 +32689,13 @@
    "who": "TERB",
    "text": "He stays. You and Gerg don't sit on the board.",
    "tag": "",
-   "on_s": 432.717,
-   "end_s": 435.467,
-   "file_s": 432.207,
-   "abs_in": 10385,
-   "abs_out": 10452,
-   "file_in": 10372,
-   "file_out": 10469,
+   "on_s": 430.6753,
+   "end_s": 433.4253,
+   "file_s": 430.1653,
+   "abs_in": 10336,
+   "abs_out": 10403,
+   "file_in": 10323,
+   "file_out": 10420,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-30-12.wav",
    "stick_t": 2.592,
    "stick_in": 0.51,
@@ -32948,13 +32850,13 @@
    "who": "MAS",
    "text": "we'll stand.",
    "tag": "",
-   "on_s": 435.967,
-   "end_s": 436.857,
-   "file_s": 435.377,
-   "abs_in": 10463,
-   "abs_out": 10485,
-   "file_in": 10449,
-   "file_out": 10501,
+   "on_s": 433.9253,
+   "end_s": 434.8153,
+   "file_s": 433.3353,
+   "abs_in": 10414,
+   "abs_out": 10436,
+   "file_in": 10400,
+   "file_out": 10452,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-30-13.wav",
    "stick_t": 5.842,
    "stick_in": 0.59,
@@ -33013,13 +32915,13 @@
    "who": "MAS",
    "text": "gerg comes back too.",
    "tag": "",
-   "on_s": 437.457,
-   "end_s": 438.817,
-   "file_s": 436.877,
-   "abs_in": 10498,
-   "abs_out": 10532,
-   "file_in": 10485,
-   "file_out": 10548,
+   "on_s": 435.4153,
+   "end_s": 436.7753,
+   "file_s": 434.8353,
+   "abs_in": 10449,
+   "abs_out": 10483,
+   "file_in": 10436,
+   "file_out": 10499,
    "file": "audio/ep01/v31/act4/wav/v31-a4-0015.wav",
    "stick_t": 7.332,
    "stick_in": 0.58,
@@ -33108,13 +33010,13 @@
    "who": "TERB",
    "text": "Gerg comes back too.",
    "tag": "",
-   "on_s": 439.217,
-   "end_s": 440.757,
-   "file_s": 438.717,
-   "abs_in": 10541,
-   "abs_out": 10579,
-   "file_in": 10529,
-   "file_out": 10594,
+   "on_s": 437.1753,
+   "end_s": 438.7153,
+   "file_s": 436.6753,
+   "abs_in": 10492,
+   "abs_out": 10530,
+   "file_in": 10480,
+   "file_out": 10545,
    "file": "audio/ep01/v31/act4/wav/v31-a4-0016.wav",
    "stick_t": 9.092,
    "stick_in": 0.5,
@@ -33195,13 +33097,13 @@
    "who": "TERB",
    "text": "And there'll be an independent review.",
    "tag": "",
-   "on_s": 441.157,
-   "end_s": 443.377,
-   "file_s": 440.657,
-   "abs_in": 10587,
-   "abs_out": 10642,
-   "file_in": 10575,
-   "file_out": 10658,
+   "on_s": 439.1153,
+   "end_s": 441.3353,
+   "file_s": 438.6153,
+   "abs_in": 10538,
+   "abs_out": 10593,
+   "file_in": 10526,
+   "file_out": 10609,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-30-14.wav",
    "stick_t": 11.032,
    "stick_in": 0.5,
@@ -33308,13 +33210,13 @@
    "who": "MAS",
    "text": "of what?",
    "tag": "",
-   "on_s": 443.877,
-   "end_s": 444.637,
-   "file_s": 443.277,
-   "abs_in": 10653,
-   "abs_out": 10672,
-   "file_in": 10638,
-   "file_out": 10685,
+   "on_s": 441.8353,
+   "end_s": 442.5953,
+   "file_s": 441.2353,
+   "abs_in": 10604,
+   "abs_out": 10623,
+   "file_in": 10589,
+   "file_out": 10636,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-30-15.wav",
    "stick_t": 13.752,
    "stick_in": 0.6,
@@ -33369,13 +33271,13 @@
    "who": "MADA",
    "text": "Good question.",
    "tag": "",
-   "on_s": 446.237,
-   "end_s": 447.137,
-   "file_s": 445.727,
-   "abs_in": 10709,
-   "abs_out": 10732,
-   "file_in": 10697,
-   "file_out": 10743,
+   "on_s": 444.1953,
+   "end_s": 445.0953,
+   "file_s": 443.6853,
+   "abs_in": 10660,
+   "abs_out": 10683,
+   "file_in": 10648,
+   "file_out": 10694,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-30-16.wav",
    "stick_t": 16.112,
    "stick_in": 0.51,
@@ -33438,13 +33340,13 @@
    "who": "MAS",
    "text": "good question.",
    "tag": "",
-   "on_s": 448.0113,
-   "end_s": 448.9813,
-   "file_s": 447.4413,
-   "abs_in": 10752,
-   "abs_out": 10776,
-   "file_in": 10738,
-   "file_out": 10791,
+   "on_s": 445.9697,
+   "end_s": 446.9397,
+   "file_s": 445.3997,
+   "abs_in": 10703,
+   "abs_out": 10727,
+   "file_in": 10689,
+   "file_out": 10742,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-30-17.wav",
    "stick_t": 0.553,
    "stick_in": 0.57,
@@ -33507,13 +33409,13 @@
    "who": "TTEMME",
    "text": "Chat, we're so back.",
    "tag": "O.S.",
-   "on_s": 462.0583,
-   "end_s": 463.3683,
-   "file_s": 461.1583,
-   "abs_in": 11089,
-   "abs_out": 11121,
-   "file_in": 11067,
-   "file_out": 11132,
+   "on_s": 460.0167,
+   "end_s": 461.3267,
+   "file_s": 459.1167,
+   "abs_in": 11040,
+   "abs_out": 11072,
+   "file_in": 11018,
+   "file_out": 11083,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-30-18.wav",
    "stick_t": 5.6,
    "stick_in": 0.9,
@@ -33549,6 +33451,91 @@
    "pre": false
   },
   {
+   "id": "v34-vo-11",
+   "shot": "S8.04",
+   "beat": "S8.04",
+   "kind": "vo",
+   "mode": "on-mic",
+   "who": "MAS",
+   "text": "they had four votes. i had the landlord. the money. gerg.",
+   "tag": "V.O.",
+   "on_s": 472.8167,
+   "end_s": 477.4567,
+   "file_s": 472.2167,
+   "abs_in": 11347,
+   "abs_out": 11459,
+   "file_in": 11333,
+   "file_out": 11476,
+   "file": "audio/ep01/v34/act4/wav/v34-vo-11.wav",
+   "stick_t": 0.4,
+   "stick_in": 0.6,
+   "cut": false,
+   "on_camera": "vo",
+   "take_lip_sync": false,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "they",
+     0,
+     3
+    ],
+    [
+     "had",
+     3,
+     9
+    ],
+    [
+     "four",
+     9,
+     16
+    ],
+    [
+     "votes",
+     16,
+     30
+    ],
+    [
+     "i",
+     42,
+     47
+    ],
+    [
+     "had",
+     47,
+     51
+    ],
+    [
+     "the",
+     51,
+     53
+    ],
+    [
+     "landlord",
+     53,
+     69
+    ],
+    [
+     "the",
+     76,
+     80
+    ],
+    [
+     "money",
+     80,
+     90
+    ],
+    [
+     "gerg",
+     99,
+     112
+    ]
+   ],
+   "mouth": [],
+   "mouth_src": "none",
+   "pre": false
+  },
+  {
    "id": "a5-30-19",
    "shot": "S8.05",
    "beat": "S8.05",
@@ -33557,13 +33544,13 @@
    "who": "MAS",
    "text": "okay.",
    "tag": "O.S.",
-   "on_s": 476.9083,
-   "end_s": 477.6483,
-   "file_s": 475.9583,
-   "abs_in": 11445,
-   "abs_out": 11464,
-   "file_in": 11423,
-   "file_out": 11479,
+   "on_s": 478.95,
+   "end_s": 479.69,
+   "file_s": 478.0,
+   "abs_in": 11494,
+   "abs_out": 11513,
+   "file_in": 11472,
+   "file_out": 11528,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-30-19.wav",
    "stick_t": 0.7,
    "stick_in": 0.95,
@@ -33613,13 +33600,13 @@
    "who": "GERG",
    "text": "Is it ready?",
    "tag": "",
-   "on_s": 483.15,
-   "end_s": 483.78,
-   "file_s": 482.25,
-   "abs_in": 11595,
-   "abs_out": 11611,
-   "file_in": 11574,
-   "file_out": 11625,
+   "on_s": 485.2333,
+   "end_s": 485.8633,
+   "file_s": 484.3333,
+   "abs_in": 11645,
+   "abs_out": 11661,
+   "file_in": 11624,
+   "file_out": 11675,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-31-01.wav",
    "stick_t": 0.9,
    "stick_in": 0.9,
@@ -33675,13 +33662,13 @@
    "who": "MAS",
    "text": "it's a preview.",
    "tag": "",
-   "on_s": 484.18,
-   "end_s": 485.35,
-   "file_s": 483.66,
-   "abs_in": 11620,
-   "abs_out": 11649,
-   "file_in": 11607,
-   "file_out": 11664,
+   "on_s": 486.2633,
+   "end_s": 487.4333,
+   "file_s": 485.7433,
+   "abs_in": 11670,
+   "abs_out": 11699,
+   "file_in": 11657,
+   "file_out": 11714,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-31-02.wav",
    "stick_t": 1.93,
    "stick_in": 0.52,
@@ -33757,13 +33744,13 @@
    "who": "GERG",
    "text": "You said that about the last one.",
    "tag": "",
-   "on_s": 485.85,
-   "end_s": 487.11,
-   "file_s": 485.35,
-   "abs_in": 11660,
-   "abs_out": 11691,
-   "file_in": 11648,
-   "file_out": 11706,
+   "on_s": 487.9333,
+   "end_s": 489.1933,
+   "file_s": 487.4333,
+   "abs_in": 11710,
+   "abs_out": 11741,
+   "file_in": 11698,
+   "file_out": 11756,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-31-03.wav",
    "stick_t": 3.6,
    "stick_in": 0.5,
@@ -33863,13 +33850,13 @@
    "who": "MAS",
    "text": "i love and respect alyi, i think he's a guiding light of the field and a gem of a human being. i harbor zero ill will towards him.",
    "tag": "",
-   "on_s": 490.25,
-   "end_s": 499.63,
-   "file_s": 489.33,
-   "abs_in": 11766,
-   "abs_out": 11992,
-   "file_in": 11743,
-   "file_out": 12004,
+   "on_s": 492.3333,
+   "end_s": 501.7133,
+   "file_s": 491.4133,
+   "abs_in": 11816,
+   "abs_out": 12042,
+   "file_in": 11793,
+   "file_out": 12054,
    "file": "audio/ep01/act4/dialogue/v5/wav/a5-31-04.wav",
    "stick_t": -1.0,
    "stick_in": 0.92,
@@ -34248,8 +34235,8 @@
    "who": "GERG",
    "text": "…i quit.",
    "tag": "",
-   "abs_in": 3278,
-   "abs_out": 3515,
+   "abs_in": 3284,
+   "abs_out": 3522,
    "words": [],
    "mouth": [],
    "os": false,
@@ -34268,8 +34255,8 @@
    "who": "MAS",
    "text": "…sorta like reading your own eulogy while you're still alive",
    "tag": "",
-   "abs_in": 3536,
-   "abs_out": 3630,
+   "abs_in": 3543,
+   "abs_out": 3637,
    "words": [],
    "mouth": [],
    "os": false,
@@ -34288,8 +34275,8 @@
    "who": "RIMA",
    "text": "NopeAI is nothing without its people",
    "tag": "",
-   "abs_in": 6330,
-   "abs_out": 6467,
+   "abs_in": 6301,
+   "abs_out": 6437,
    "words": [],
    "mouth": [],
    "os": false,
@@ -34308,8 +34295,8 @@
    "who": "ALYI",
    "text": "I deeply regret my participation in the board's actions. I never intended to harm NopeAI…",
    "tag": "",
-   "abs_in": 9001,
-   "abs_out": 9122,
+   "abs_in": 8952,
+   "abs_out": 9073,
    "words": [],
    "mouth": [],
    "os": false,
@@ -34328,8 +34315,8 @@
    "who": "GERG",
    "text": "Returning to NopeAI & getting back to coding tonight.",
    "tag": "",
-   "abs_in": 10878,
-   "abs_out": 10955,
+   "abs_in": 10829,
+   "abs_out": 10906,
    "words": [],
    "mouth": [],
    "os": false,
@@ -34348,8 +34335,8 @@
    "who": "TTEMME",
    "text": "I am deeply pleased by this result, after ~72 very intense hours of work.",
    "tag": "",
-   "abs_in": 10976,
-   "abs_out": 11082,
+   "abs_in": 10927,
+   "abs_out": 11033,
    "words": [],
    "mouth": [],
    "os": false,
@@ -34370,57 +34357,57 @@
   },
   {
    "text": "NOV 17 · NIGHT",
-   "s": 998,
-   "e": 1027,
+   "s": 1004,
+   "e": 1033,
    "shot": "S2.01",
    "floor_f": 23
   },
   {
    "text": "NOV 18",
-   "s": 3519,
-   "e": 3553,
+   "s": 3526,
+   "e": 3560,
    "shot": "S4.01",
    "floor_f": 14
   },
   {
    "text": "NOV 19 · ~11:53 PM PT",
-   "s": 5639,
-   "e": 5680,
+   "s": 5609,
+   "e": 5650,
    "shot": "S4.12",
    "floor_f": 32
   },
   {
    "text": "NOV 20, 2023 · ~2:06 AM PT",
-   "s": 6268,
-   "e": 6321,
+   "s": 6239,
+   "e": 6292,
    "shot": "S5.02",
    "floor_f": 38
   },
   {
    "text": "NOV 20",
-   "s": 8984,
-   "e": 9009,
+   "s": 8935,
+   "e": 8960,
    "shot": "S7.01",
    "floor_f": 14
   },
   {
    "text": "NOV 21, 2023 · ~10 PM PT",
-   "s": 9794,
-   "e": 9838,
+   "s": 9745,
+   "e": 9789,
    "shot": "S7.05",
    "floor_f": 35
   },
   {
    "text": "NOV 22, 2023",
-   "s": 11511,
-   "e": 11545,
+   "s": 11561,
+   "e": 11595,
    "shot": "S8.06",
    "floor_f": 21
   },
   {
    "text": "NOV 29, 2023",
-   "s": 11794,
-   "e": 11826,
+   "s": 11844,
+   "e": 11876,
    "shot": "S8.08",
    "floor_f": 21
   }
@@ -34430,15 +34417,15 @@
    "kind": "stop",
    "n": 1,
    "name": "D6: the Remove click's digital silence",
-   "s": 621,
-   "e": 743,
+   "s": 627,
+   "e": 750,
    "shot": "v31-S1.08d"
   },
   {
    "kind": "stop",
    "n": 2,
    "name": "dead stop on MADA's label",
-   "s": 8902,
+   "s": 8853,
    "e": null,
    "shot": "S6.06"
   },
@@ -34446,15 +34433,15 @@
    "kind": "stop",
    "n": 3,
    "name": "dead stop after \"of what?\"",
-   "s": 10672,
-   "e": 10709,
+   "s": 10623,
+   "e": 10660,
    "shot": "S7.07-cont"
   },
   {
    "kind": "ringout",
    "n": 1,
    "name": "Gerg's look (the Build stops, the pedal holds)",
-   "s": 7910,
+   "s": 7861,
    "e": null,
    "shot": "S5.09b"
   }
@@ -34462,22 +34449,22 @@
  "subs": [
   {
    "s": 254,
-   "e": 370,
-   "hold_to": 382,
+   "e": 376,
+   "hold_to": 388,
    "who": "MAS",
    "shown": "MAN AT THE DESK",
-   "text": "gerg's not on it. alyi set it up. probably just the budget.",
+   "text": "gerg's not on it. probably the budget. good. i'll ask for more compute.",
    "kind": "vo",
    "mode": "on-mic",
-   "id": "v3-vo-18",
+   "id": "v34-vo-07",
    "os": false
   },
   {
-   "s": 451,
-   "e": 557,
-   "hold_to": 569,
+   "s": 457,
+   "e": 563,
+   "hold_to": 575,
    "who": "ALYI",
-   "shown": "ALYI",
+   "shown": "VOICE ON THE CALL",
    "text": "Mas. The board has decided that you will no longer lead the company.",
    "kind": "dialogue",
    "mode": "call",
@@ -34485,9 +34472,9 @@
    "os": false
   },
   {
-   "s": 792,
-   "e": 811,
-   "hold_to": 823,
+   "s": 799,
+   "e": 818,
+   "hold_to": 830,
    "who": "MAS",
    "shown": "MAN AT THE DESK",
    "text": "super.",
@@ -34497,9 +34484,9 @@
    "os": false
   },
   {
-   "s": 1032,
-   "e": 1079,
-   "hold_to": 1091,
+   "s": 1038,
+   "e": 1085,
+   "hold_to": 1097,
    "who": "MAS",
    "shown": "MAN AT THE DESK",
    "text": "i don't keep score.",
@@ -34509,9 +34496,9 @@
    "os": false
   },
   {
-   "s": 1263,
-   "e": 1305,
-   "hold_to": 1317,
+   "s": 1269,
+   "e": 1311,
+   "hold_to": 1323,
    "who": "NELEH",
    "shown": "BLUEPRINT FIGURE",
    "text": "Once more, before the others join.",
@@ -34521,9 +34508,9 @@
    "os": false
   },
   {
-   "s": 1358,
-   "e": 1396,
-   "hold_to": 1408,
+   "s": 1365,
+   "e": 1403,
+   "hold_to": 1415,
    "who": "NELEH",
    "shown": "BLUEPRINT FIGURE",
    "text": "Three of us stepped down this year.",
@@ -34533,9 +34520,9 @@
    "os": false
   },
   {
-   "s": 1417,
-   "e": 1487,
-   "hold_to": 1499,
+   "s": 1424,
+   "e": 1494,
+   "hold_to": 1506,
    "who": "NELEH",
    "shown": "BLUEPRINT FIGURE",
    "text": "Leave out Mas and Gerg, and the four of us are a majority.",
@@ -34545,9 +34532,9 @@
    "os": false
   },
   {
-   "s": 1501,
-   "e": 1582,
-   "hold_to": 1594,
+   "s": 1508,
+   "e": 1589,
+   "hold_to": 1601,
    "who": "NELEH",
    "shown": "NELEH",
    "text": "This board controls the company. Not the other way round.",
@@ -34557,9 +34544,9 @@
    "os": false
   },
   {
-   "s": 1614,
-   "e": 1712,
-   "hold_to": 1724,
+   "s": 1621,
+   "e": 1719,
+   "hold_to": 1731,
    "who": "NELEH",
    "shown": "NELEH",
    "text": "Our biggest investor has put in billions. It gets this many votes.",
@@ -34569,9 +34556,9 @@
    "os": false
   },
   {
-   "s": 1726,
-   "e": 1772,
-   "hold_to": 1784,
+   "s": 1733,
+   "e": 1779,
+   "hold_to": 1791,
    "who": "NELEH",
    "shown": "NELEH",
    "text": "And the CEO? What does he own?",
@@ -34581,9 +34568,9 @@
    "os": false
   },
   {
-   "s": 1790,
-   "e": 1812,
-   "hold_to": 1824,
+   "s": 1797,
+   "e": 1819,
+   "hold_to": 1831,
    "who": "MADA",
    "shown": "MADA",
    "text": "Good question.",
@@ -34593,9 +34580,9 @@
    "os": false
   },
   {
-   "s": 1910,
-   "e": 2076,
-   "hold_to": 2087,
+   "s": 1916,
+   "e": 2082,
+   "hold_to": 2093,
    "who": "ALYI",
    "shown": "ALYI",
    "text": "Mas. The board has decided that you will no longer lead the company. It will be announced shortly.",
@@ -34605,9 +34592,9 @@
    "os": false
   },
   {
-   "s": 2087,
-   "e": 2132,
-   "hold_to": 2144,
+   "s": 2093,
+   "e": 2138,
+   "hold_to": 2150,
    "who": "ALYI",
    "shown": "ALYI",
    "text": "Do you have any questions?",
@@ -34617,9 +34604,9 @@
    "os": false
   },
   {
-   "s": 2155,
-   "e": 2186,
-   "hold_to": 2197,
+   "s": 2161,
+   "e": 2192,
+   "hold_to": 2203,
    "who": "NELEH",
    "shown": "NELEH",
    "text": "Is his feed frozen?",
@@ -34629,9 +34616,9 @@
    "os": false
   },
   {
-   "s": 2197,
-   "e": 2261,
-   "hold_to": 2273,
+   "s": 2203,
+   "e": 2267,
+   "hold_to": 2279,
    "who": "ALYI",
    "shown": "ALYI",
    "text": "No. That is just him.",
@@ -34641,9 +34628,9 @@
    "os": false
   },
   {
-   "s": 2304,
-   "e": 2323,
-   "hold_to": 2335,
+   "s": 2311,
+   "e": 2330,
+   "hold_to": 2342,
    "who": "MAS",
    "shown": "MAS",
    "text": "super.",
@@ -34653,9 +34640,9 @@
    "os": true
   },
   {
-   "s": 2565,
-   "e": 2590,
-   "hold_to": 2602,
+   "s": 2571,
+   "e": 2596,
+   "hold_to": 2608,
    "who": "NELEH",
    "shown": "NELEH",
    "text": "Any objections?",
@@ -34665,9 +34652,9 @@
    "os": false
   },
   {
-   "s": 2644,
-   "e": 2709,
-   "hold_to": 2720,
+   "s": 2650,
+   "e": 2715,
+   "hold_to": 2726,
    "who": "NELEH",
    "shown": "NELEH",
    "text": "Step three. Rima, the staff will come to you now.",
@@ -34677,9 +34664,9 @@
    "os": false
   },
   {
-   "s": 2720,
-   "e": 2748,
-   "hold_to": 2759,
+   "s": 2726,
+   "e": 2754,
+   "hold_to": 2765,
    "who": "RIMA",
    "shown": "RIMA",
    "text": "What should I tell them?",
@@ -34689,9 +34676,9 @@
    "os": false
   },
   {
-   "s": 2759,
-   "e": 2829,
-   "hold_to": 2841,
+   "s": 2765,
+   "e": 2835,
+   "hold_to": 2847,
    "who": "NELEH",
    "shown": "NELEH",
    "text": "What the post says. That's all the board is saying for now.",
@@ -34701,9 +34688,9 @@
    "os": false
   },
   {
-   "s": 2845,
-   "e": 2871,
-   "hold_to": 2883,
+   "s": 2851,
+   "e": 2877,
+   "hold_to": 2889,
    "who": "RIMA",
    "shown": "RIMA",
    "text": "We'll share more soon.",
@@ -34713,9 +34700,9 @@
    "os": false
   },
   {
-   "s": 2885,
-   "e": 2901,
-   "hold_to": 2912,
+   "s": 2891,
+   "e": 2907,
+   "hold_to": 2918,
    "who": "NELEH",
    "shown": "NELEH",
    "text": "Will we?",
@@ -34725,9 +34712,9 @@
    "os": false
   },
   {
-   "s": 2912,
-   "e": 2935,
-   "hold_to": 2941,
+   "s": 2918,
+   "e": 2941,
+   "hold_to": 2947,
    "who": "RIMA",
    "shown": "RIMA",
    "text": "We'll say we will.",
@@ -34737,9 +34724,9 @@
    "os": true
   },
   {
-   "s": 2941,
-   "e": 3001,
-   "hold_to": 3013,
+   "s": 2947,
+   "e": 3007,
+   "hold_to": 3019,
    "who": "EMPLOYEE",
    "shown": "EMPLOYEE",
    "text": "Is this a coup? Because it looks like one.",
@@ -34749,9 +34736,9 @@
    "os": false
   },
   {
-   "s": 3025,
-   "e": 3214,
-   "hold_to": 3226,
+   "s": 3031,
+   "e": 3220,
+   "hold_to": 3232,
    "who": "ALYI",
    "shown": "ALYI",
    "text": "You can call it this way… I disagree with this. This was the board doing its duty to the mission of the nonprofit…",
@@ -34761,9 +34748,9 @@
    "os": false
   },
   {
-   "s": 3278,
-   "e": 3515,
-   "hold_to": 3515,
+   "s": 3284,
+   "e": 3522,
+   "hold_to": 3522,
    "who": "GERG",
    "shown": "GERG",
    "text": "…i quit.",
@@ -34773,9 +34760,9 @@
    "os": false
   },
   {
-   "s": 3311,
-   "e": 3406,
-   "hold_to": 3418,
+   "s": 3317,
+   "e": 3412,
+   "hold_to": 3424,
    "who": "NELEH",
    "shown": "NELEH",
    "text": "Nobody asked him to go. He'd have kept his job, just not the chair.",
@@ -34785,9 +34772,9 @@
    "os": false
   },
   {
-   "s": 3424,
-   "e": 3492,
-   "hold_to": 3504,
+   "s": 3430,
+   "e": 3498,
+   "hold_to": 3510,
    "who": "ALYI",
    "shown": "ALYI",
    "text": "Gerg has never waited to be asked.",
@@ -34797,9 +34784,9 @@
    "os": false
   },
   {
-   "s": 3536,
-   "e": 3630,
-   "hold_to": 3630,
+   "s": 3543,
+   "e": 3637,
+   "hold_to": 3637,
    "who": "MAS",
    "shown": "MAS",
    "text": "…sorta like reading your own eulogy while you're still alive",
@@ -34809,9 +34796,9 @@
    "os": false
   },
   {
-   "s": 3660,
-   "e": 3821,
-   "hold_to": 3833,
+   "s": 3667,
+   "e": 3828,
+   "hold_to": 3840,
    "who": "NELEH",
    "shown": "NELEH",
    "text": "They're all asking whether it was allowed. It was. The charter, footnote three. I've read it four times tonight.",
@@ -34821,9 +34808,9 @@
    "os": false
   },
   {
-   "s": 3850,
-   "e": 3980,
-   "hold_to": 3992,
+   "s": 3857,
+   "e": 3987,
+   "hold_to": 3999,
    "who": "NELEH",
    "shown": "NELEH",
    "text": "What they actually want to know is what happens on Monday. I'd like to be able to tell them something.",
@@ -34833,21 +34820,9 @@
    "os": false
   },
   {
-   "s": 4009,
-   "e": 4073,
-   "hold_to": 4085,
-   "who": "ALYI",
-   "shown": "ALYI",
-   "text": "That is the company telling us.",
-   "kind": "dialogue",
-   "mode": "on-mic",
-   "id": "a5-27-28",
-   "os": false
-  },
-  {
-   "s": 4115,
-   "e": 4154,
-   "hold_to": 4166,
+   "s": 4085,
+   "e": 4124,
+   "hold_to": 4136,
    "who": "NELEH",
    "shown": "NELEH",
    "text": "Then we'll write step four ourselves.",
@@ -34857,9 +34832,9 @@
    "os": false
   },
   {
-   "s": 4240,
-   "e": 4398,
-   "hold_to": 4410,
+   "s": 4210,
+   "e": 4368,
+   "hold_to": 4380,
    "who": "NELEH",
    "shown": "NELEH",
    "text": "Mario, it's Neleh, from the NopeAI board. We'd like to offer you the job of CEO, and to discuss a merger.",
@@ -34869,9 +34844,9 @@
    "os": false
   },
   {
-   "s": 4411,
-   "e": 4595,
-   "hold_to": 4595,
+   "s": 4381,
+   "e": 4565,
+   "hold_to": 4565,
    "who": "MARIO",
    "shown": "MAN AT THE LIGHTHOUSE",
    "text": "Neleh, hi. Wow. I've actually written up some thoughts on exactly this. Eleven pages, on the conditions under which we might, hypothetically—",
@@ -34881,9 +34856,9 @@
    "os": false
   },
   {
-   "s": 4586,
-   "e": 4624,
-   "hold_to": 4636,
+   "s": 4556,
+   "e": 4594,
+   "hold_to": 4606,
    "who": "ADELINA",
    "shown": "ADELINA",
    "text": "In plain English: no.",
@@ -34893,9 +34868,9 @@
    "os": false
   },
   {
-   "s": 4875,
-   "e": 4957,
-   "hold_to": 4969,
+   "s": 4845,
+   "e": 4927,
+   "hold_to": 4939,
    "who": "NELEH",
    "shown": "NELEH",
    "text": "We've talked all day about him coming back, and we're no closer.",
@@ -34905,9 +34880,9 @@
    "os": false
   },
   {
-   "s": 4973,
-   "e": 5021,
-   "hold_to": 5032,
+   "s": 4943,
+   "e": 4991,
+   "hold_to": 5002,
    "who": "ALYI",
    "shown": "ALYI",
    "text": "They gave him a guest badge.",
@@ -34917,9 +34892,9 @@
    "os": false
   },
   {
-   "s": 5032,
-   "e": 5091,
-   "hold_to": 5103,
+   "s": 5002,
+   "e": 5061,
+   "hold_to": 5073,
    "who": "NELEH",
    "shown": "NELEH",
    "text": "It's the correct badge. He doesn't work here.",
@@ -34929,9 +34904,9 @@
    "os": false
   },
   {
-   "s": 5241,
-   "e": 5300,
-   "hold_to": 5309,
+   "s": 5211,
+   "e": 5270,
+   "hold_to": 5279,
    "who": "NELEH",
    "shown": "NELEH",
    "text": "Ttemme, we'd like you to serve as interim CEO.",
@@ -34941,9 +34916,9 @@
    "os": false
   },
   {
-   "s": 5309,
-   "e": 5350,
-   "hold_to": 5362,
+   "s": 5279,
+   "e": 5320,
+   "hold_to": 5332,
    "who": "TTEMME",
    "shown": "TTEMME",
    "text": "You already have an interim CEO.",
@@ -34953,9 +34928,9 @@
    "os": false
   },
   {
-   "s": 5363,
-   "e": 5392,
-   "hold_to": 5404,
+   "s": 5333,
+   "e": 5362,
+   "hold_to": 5374,
    "who": "NELEH",
    "shown": "NELEH",
    "text": "We'd like a different one.",
@@ -34965,9 +34940,9 @@
    "os": false
   },
   {
-   "s": 5408,
-   "e": 5496,
-   "hold_to": 5508,
+   "s": 5378,
+   "e": 5466,
+   "hold_to": 5478,
    "who": "TTEMME",
    "shown": "TTEMME",
    "text": "Fine. But before I say yes, I need to know why you fired him.",
@@ -34977,9 +34952,9 @@
    "os": false
   },
   {
-   "s": 5743,
-   "e": 5807,
-   "hold_to": 5819,
+   "s": 5713,
+   "e": 5777,
+   "hold_to": 5789,
    "who": "TASYA",
    "shown": "MAN AT THE DOOR",
    "text": "Good evening. You'll want to hear our statement.",
@@ -34989,9 +34964,9 @@
    "os": false
   },
   {
-   "s": 5820,
-   "e": 6039,
-   "hold_to": 6051,
+   "s": 5790,
+   "e": 6009,
+   "hold_to": 6021,
    "who": "TASYA",
    "shown": "MAN AT THE DOOR",
    "text": "we're extremely excited to share the news that Mas Manalt and Gerg Mockbran, together with colleagues, will be joining Macrosoft to lead a new advanced AI research team.",
@@ -35001,9 +34976,9 @@
    "os": false
   },
   {
-   "s": 6115,
-   "e": 6141,
-   "hold_to": 6153,
+   "s": 6086,
+   "e": 6112,
+   "hold_to": 6124,
    "who": "NELEH",
    "shown": "NELEH",
    "text": "Step four, Mada?",
@@ -35013,9 +34988,9 @@
    "os": true
   },
   {
-   "s": 6330,
-   "e": 6467,
-   "hold_to": 6467,
+   "s": 6301,
+   "e": 6437,
+   "hold_to": 6437,
    "who": "RIMA",
    "shown": "RIMA",
    "text": "NopeAI is nothing without its people",
@@ -35025,9 +35000,9 @@
    "os": false
   },
   {
-   "s": 6340,
-   "e": 6452,
-   "hold_to": 6464,
+   "s": 6311,
+   "e": 6423,
+   "hold_to": 6435,
    "who": "MAS",
    "shown": "MAS",
    "text": "four hundred and six. four hundred and seven. four hundred and six.",
@@ -35037,9 +35012,9 @@
    "os": false
   },
   {
-   "s": 6491,
-   "e": 6526,
-   "hold_to": 6538,
+   "s": 6461,
+   "e": 6496,
+   "hold_to": 6508,
    "who": "MAS",
    "shown": "MAS",
    "text": "the badge was a joke.",
@@ -35049,9 +35024,9 @@
    "os": false
   },
   {
-   "s": 6549,
-   "e": 6570,
-   "hold_to": 6582,
+   "s": 6519,
+   "e": 6540,
+   "hold_to": 6552,
    "who": "MAS",
    "shown": "MAS",
    "text": "mostly.",
@@ -35061,21 +35036,21 @@
    "os": false
   },
   {
-   "s": 6600,
-   "e": 6654,
-   "hold_to": 6665,
+   "s": 6570,
+   "e": 6605,
+   "hold_to": 6616,
    "who": "MAS",
    "shown": "MAS",
-   "text": "gerg. he'll say he's compiling.",
+   "text": "gerg walked out for me.",
    "kind": "vo",
    "mode": "on-mic",
-   "id": "v3-vo-21",
+   "id": "v34-vo-09",
    "os": false
   },
   {
-   "s": 6665,
-   "e": 6719,
-   "hold_to": 6728,
+   "s": 6616,
+   "e": 6670,
+   "hold_to": 6678,
    "who": "GERG",
    "shown": "GERG",
    "text": "Sorry, one sec. I've got a build compiling.",
@@ -35085,9 +35060,9 @@
    "os": false
   },
   {
-   "s": 6728,
-   "e": 6767,
-   "hold_to": 6776,
+   "s": 6678,
+   "e": 6718,
+   "hold_to": 6726,
    "who": "MAS",
    "shown": "MAS",
    "text": "it's two in the morning, gerg.",
@@ -35097,9 +35072,9 @@
    "os": false
   },
   {
-   "s": 6776,
-   "e": 6848,
-   "hold_to": 6860,
+   "s": 6726,
+   "e": 6799,
+   "hold_to": 6811,
    "who": "GERG",
    "shown": "GERG",
    "text": "Best time there is. Nobody else is pushing anything.",
@@ -35109,9 +35084,9 @@
    "os": false
   },
   {
-   "s": 6862,
-   "e": 6890,
-   "hold_to": 6902,
+   "s": 6812,
+   "e": 6841,
+   "hold_to": 6853,
    "who": "MAS",
    "shown": "MAS",
    "text": "read me the letter.",
@@ -35121,9 +35096,9 @@
    "os": false
   },
   {
-   "s": 6909,
-   "e": 6938,
-   "hold_to": 6950,
+   "s": 6859,
+   "e": 6889,
+   "hold_to": 6901,
    "who": "GERG",
    "shown": "GERG",
    "text": "Okay. Pull it up.",
@@ -35133,9 +35108,9 @@
    "os": false
   },
   {
-   "s": 6969,
-   "e": 7132,
-   "hold_to": 7143,
+   "s": 6920,
+   "e": 7083,
+   "hold_to": 7094,
    "who": "GERG",
    "shown": "GERG",
    "text": "They're telling the board they're …unable to work for or with people that lack competence, judgement and care for our mission and employees.",
@@ -35145,9 +35120,9 @@
    "os": false
   },
   {
-   "s": 7143,
-   "e": 7210,
-   "hold_to": 7219,
+   "s": 7094,
+   "e": 7161,
+   "hold_to": 7170,
    "who": "GERG",
    "shown": "GERG",
    "text": "And they'll quit, …unless all current board members resign…",
@@ -35157,9 +35132,9 @@
    "os": false
   },
   {
-   "s": 7219,
-   "e": 7253,
-   "hold_to": 7260,
+   "s": 7170,
+   "e": 7204,
+   "hold_to": 7211,
    "who": "MAS",
    "shown": "MAS",
    "text": "and go to macrosoft.",
@@ -35169,9 +35144,9 @@
    "os": false
   },
   {
-   "s": 7260,
-   "e": 7351,
-   "hold_to": 7363,
+   "s": 7211,
+   "e": 7302,
+   "hold_to": 7314,
    "who": "GERG",
    "shown": "GERG",
    "text": "Yep. Macrosoft's promised them …positions for all NopeAI employees…",
@@ -35181,9 +35156,9 @@
    "os": false
   },
   {
-   "s": 7364,
-   "e": 7398,
-   "hold_to": 7407,
+   "s": 7315,
+   "e": 7349,
+   "hold_to": 7358,
    "who": "MAS",
    "shown": "MAS",
    "text": "that's a lot of desks.",
@@ -35193,9 +35168,9 @@
    "os": false
   },
   {
-   "s": 7407,
-   "e": 7430,
-   "hold_to": 7442,
+   "s": 7358,
+   "e": 7381,
+   "hold_to": 7393,
    "who": "GERG",
    "shown": "GERG",
    "text": "Scroll to the bottom.",
@@ -35205,9 +35180,9 @@
    "os": false
   },
   {
-   "s": 7467,
-   "e": 7485,
-   "hold_to": 7497,
+   "s": 7418,
+   "e": 7436,
+   "hold_to": 7448,
    "who": "GERG",
    "shown": "GERG",
    "text": "Alyi signed it.",
@@ -35217,9 +35192,9 @@
    "os": false
   },
   {
-   "s": 7504,
-   "e": 7531,
-   "hold_to": 7542,
+   "s": 7455,
+   "e": 7482,
+   "hold_to": 7493,
    "who": "MAS",
    "shown": "MAS",
    "text": "alyi voted.",
@@ -35229,9 +35204,9 @@
    "os": false
   },
   {
-   "s": 7542,
-   "e": 7560,
-   "hold_to": 7572,
+   "s": 7493,
+   "e": 7511,
+   "hold_to": 7523,
    "who": "GERG",
    "shown": "GERG",
    "text": "He did both.",
@@ -35241,9 +35216,9 @@
    "os": true
   },
   {
-   "s": 7672,
-   "e": 7736,
-   "hold_to": 7748,
+   "s": 7623,
+   "e": 7687,
+   "hold_to": 7699,
    "who": "GERG",
    "shown": "GERG",
    "text": "That's the share sale. Everybody was about to get paid.",
@@ -35253,9 +35228,9 @@
    "os": true
   },
   {
-   "s": 7788,
-   "e": 7818,
-   "hold_to": 7827,
+   "s": 7739,
+   "e": 7769,
+   "hold_to": 7778,
    "who": "MAS",
    "shown": "MAS",
    "text": "what are you building?",
@@ -35265,9 +35240,9 @@
    "os": false
   },
   {
-   "s": 7827,
-   "e": 7878,
-   "hold_to": 7890,
+   "s": 7778,
+   "e": 7829,
+   "hold_to": 7841,
    "who": "GERG",
    "shown": "GERG",
    "text": "The company. Again. Just in case.",
@@ -35277,9 +35252,9 @@
    "os": false
   },
   {
-   "s": 7938,
-   "e": 7982,
-   "hold_to": 7994,
+   "s": 7889,
+   "e": 7933,
+   "hold_to": 7945,
    "who": "GERG",
    "shown": "GERG",
    "text": "So. Do I tell everyone to pack?",
@@ -35289,9 +35264,9 @@
    "os": false
   },
   {
-   "s": 8005,
-   "e": 8029,
-   "hold_to": 8035,
+   "s": 7956,
+   "e": 7980,
+   "hold_to": 7986,
    "who": "MAS",
    "shown": "MAS",
    "text": "keep building.",
@@ -35301,9 +35276,9 @@
    "os": true
   },
   {
-   "s": 8035,
-   "e": 8123,
-   "hold_to": 8135,
+   "s": 7986,
+   "e": 8074,
+   "hold_to": 8086,
    "who": "TASYA",
    "shown": "MAN AT THE DOOR",
    "text": "Don't get up, Mas. I won't keep you. Everyone is welcome.",
@@ -35313,9 +35288,9 @@
    "os": true
   },
   {
-   "s": 8139,
-   "e": 8160,
-   "hold_to": 8171,
+   "s": 8090,
+   "e": 8111,
+   "hold_to": 8122,
    "who": "MAS",
    "shown": "MAS",
    "text": "everyone.",
@@ -35325,9 +35300,9 @@
    "os": false
   },
   {
-   "s": 8171,
-   "e": 8252,
-   "hold_to": 8264,
+   "s": 8122,
+   "e": 8203,
+   "hold_to": 8215,
    "who": "TASYA",
    "shown": "MAN AT THE DOOR",
    "text": "Yes. You first. And there's a desk for every one of them.",
@@ -35337,9 +35312,9 @@
    "os": true
   },
   {
-   "s": 8280,
-   "e": 8303,
-   "hold_to": 8314,
+   "s": 8231,
+   "e": 8254,
+   "hold_to": 8265,
    "who": "MAS",
    "shown": "MAS",
    "text": "and the rent?",
@@ -35349,9 +35324,9 @@
    "os": false
   },
   {
-   "s": 8314,
-   "e": 8342,
-   "hold_to": 8354,
+   "s": 8265,
+   "e": 8293,
+   "hold_to": 8305,
    "who": "TASYA",
    "shown": "MAN AT THE DOOR",
    "text": "Due on the first.",
@@ -35361,9 +35336,9 @@
    "os": true
   },
   {
-   "s": 8444,
-   "e": 8470,
-   "hold_to": 8482,
+   "s": 8395,
+   "e": 8421,
+   "hold_to": 8433,
    "who": "MAS",
    "shown": "MAS",
    "text": "leave it open.",
@@ -35373,9 +35348,9 @@
    "os": false
   },
   {
-   "s": 8759,
-   "e": 8791,
-   "hold_to": 8803,
+   "s": 8710,
+   "e": 8742,
+   "hold_to": 8754,
    "who": "NELEH",
    "shown": "NELEH",
    "text": "Has anyone read the char—",
@@ -35385,9 +35360,9 @@
    "os": false
   },
   {
-   "s": 9001,
-   "e": 9122,
-   "hold_to": 9122,
+   "s": 8952,
+   "e": 9073,
+   "hold_to": 9073,
    "who": "ALYI",
    "shown": "ALYI",
    "text": "I deeply regret my participation in the board's actions. I never intended to harm NopeAI…",
@@ -35397,9 +35372,9 @@
    "os": false
   },
   {
-   "s": 9152,
-   "e": 9183,
-   "hold_to": 9195,
+   "s": 9103,
+   "e": 9134,
+   "hold_to": 9146,
    "who": "ALYI",
    "shown": "ALYI",
    "text": "You sent three.",
@@ -35409,9 +35384,9 @@
    "os": false
   },
   {
-   "s": 9199,
-   "e": 9230,
-   "hold_to": 9242,
+   "s": 9150,
+   "e": 9181,
+   "hold_to": 9193,
    "who": "MAS",
    "shown": "MAS",
    "text": "one for each day.",
@@ -35421,9 +35396,9 @@
    "os": false
   },
   {
-   "s": 9248,
-   "e": 9293,
-   "hold_to": 9304,
+   "s": 9199,
+   "e": 9244,
+   "hold_to": 9255,
    "who": "ALYI",
    "shown": "ALYI",
    "text": "It has been four days.",
@@ -35433,9 +35408,9 @@
    "os": false
   },
   {
-   "s": 9304,
-   "e": 9340,
-   "hold_to": 9352,
+   "s": 9255,
+   "e": 9291,
+   "hold_to": 9303,
    "who": "MAS",
    "shown": "MAS",
    "text": "i'm not counting today.",
@@ -35445,9 +35420,9 @@
    "os": false
   },
   {
-   "s": 9428,
-   "e": 9528,
-   "hold_to": 9540,
+   "s": 9379,
+   "e": 9479,
+   "hold_to": 9491,
    "who": "EMPLOYEE",
    "shown": "EMPLOYEE",
    "text": "Everyone's packed. Whatever happens to this place, Mas, don't worry about us.",
@@ -35457,9 +35432,9 @@
    "os": false
   },
   {
-   "s": 9550,
-   "e": 9643,
-   "hold_to": 9655,
+   "s": 9501,
+   "e": 9594,
+   "hold_to": 9606,
    "who": "TASYA",
    "shown": "MAN AT THE DOOR",
    "text": "We are below them, above them, around them.",
@@ -35469,9 +35444,9 @@
    "os": false
   },
   {
-   "s": 9956,
-   "e": 9995,
-   "hold_to": 10007,
+   "s": 9907,
+   "e": 9946,
+   "hold_to": 9958,
    "who": "TERB",
    "shown": "TERB",
    "text": "Which room is on fire?",
@@ -35481,9 +35456,9 @@
    "os": false
   },
   {
-   "s": 10032,
-   "e": 10048,
-   "hold_to": 10060,
+   "s": 9983,
+   "e": 9999,
+   "hold_to": 10011,
    "who": "TERB",
    "shown": "TERB",
    "text": "Ah.",
@@ -35493,9 +35468,9 @@
    "os": false
   },
   {
-   "s": 10081,
-   "e": 10336,
-   "hold_to": 10341,
+   "s": 10032,
+   "e": 10287,
+   "hold_to": 10292,
    "who": "TERB",
    "shown": "TERB",
    "text": "Before this goes out, I'm reading it once. We have reached an agreement in principle for Mas Manalt to return to NopeAI as CEO with a new initial board of Terb (Chair), the Other Yrral, and Mada.",
@@ -35505,9 +35480,9 @@
    "os": false
   },
   {
-   "s": 10341,
-   "e": 10364,
-   "hold_to": 10376,
+   "s": 10292,
+   "e": 10315,
+   "hold_to": 10327,
    "who": "MAS",
    "shown": "MAS",
    "text": "you're staying?",
@@ -35517,9 +35492,9 @@
    "os": false
   },
   {
-   "s": 10385,
-   "e": 10452,
-   "hold_to": 10463,
+   "s": 10336,
+   "e": 10403,
+   "hold_to": 10414,
    "who": "TERB",
    "shown": "TERB",
    "text": "He stays. You and Gerg don't sit on the board.",
@@ -35529,9 +35504,9 @@
    "os": false
   },
   {
-   "s": 10463,
-   "e": 10485,
-   "hold_to": 10497,
+   "s": 10414,
+   "e": 10436,
+   "hold_to": 10448,
    "who": "MAS",
    "shown": "MAS",
    "text": "we'll stand.",
@@ -35541,9 +35516,9 @@
    "os": false
   },
   {
-   "s": 10498,
-   "e": 10532,
-   "hold_to": 10541,
+   "s": 10449,
+   "e": 10483,
+   "hold_to": 10492,
    "who": "MAS",
    "shown": "MAS",
    "text": "gerg comes back too.",
@@ -35553,9 +35528,9 @@
    "os": false
   },
   {
-   "s": 10541,
-   "e": 10579,
-   "hold_to": 10587,
+   "s": 10492,
+   "e": 10530,
+   "hold_to": 10538,
    "who": "TERB",
    "shown": "TERB",
    "text": "Gerg comes back too.",
@@ -35565,9 +35540,9 @@
    "os": false
   },
   {
-   "s": 10587,
-   "e": 10642,
-   "hold_to": 10653,
+   "s": 10538,
+   "e": 10593,
+   "hold_to": 10604,
    "who": "TERB",
    "shown": "TERB",
    "text": "And there'll be an independent review.",
@@ -35577,9 +35552,9 @@
    "os": false
   },
   {
-   "s": 10653,
-   "e": 10672,
-   "hold_to": 10684,
+   "s": 10604,
+   "e": 10623,
+   "hold_to": 10635,
    "who": "MAS",
    "shown": "MAS",
    "text": "of what?",
@@ -35589,9 +35564,9 @@
    "os": false
   },
   {
-   "s": 10709,
-   "e": 10732,
-   "hold_to": 10744,
+   "s": 10660,
+   "e": 10683,
+   "hold_to": 10695,
    "who": "MADA",
    "shown": "MADA",
    "text": "Good question.",
@@ -35601,9 +35576,9 @@
    "os": false
   },
   {
-   "s": 10752,
-   "e": 10776,
-   "hold_to": 10788,
+   "s": 10703,
+   "e": 10727,
+   "hold_to": 10739,
    "who": "MAS",
    "shown": "MAS",
    "text": "good question.",
@@ -35613,9 +35588,9 @@
    "os": false
   },
   {
-   "s": 10878,
-   "e": 10955,
-   "hold_to": 10955,
+   "s": 10829,
+   "e": 10906,
+   "hold_to": 10906,
    "who": "GERG",
    "shown": "GERG",
    "text": "Returning to NopeAI & getting back to coding tonight.",
@@ -35625,9 +35600,9 @@
    "os": false
   },
   {
-   "s": 10976,
-   "e": 11082,
-   "hold_to": 11082,
+   "s": 10927,
+   "e": 11033,
+   "hold_to": 11033,
    "who": "TTEMME",
    "shown": "TTEMME",
    "text": "I am deeply pleased by this result, after ~72 very intense hours of work.",
@@ -35637,9 +35612,9 @@
    "os": false
   },
   {
-   "s": 11089,
-   "e": 11121,
-   "hold_to": 11133,
+   "s": 11040,
+   "e": 11072,
+   "hold_to": 11084,
    "who": "TTEMME",
    "shown": "TTEMME",
    "text": "Chat, we're so back.",
@@ -35649,9 +35624,21 @@
    "os": true
   },
   {
-   "s": 11445,
-   "e": 11464,
-   "hold_to": 11476,
+   "s": 11347,
+   "e": 11459,
+   "hold_to": 11471,
+   "who": "MAS",
+   "shown": "MAS",
+   "text": "they had four votes. i had the landlord. the money. gerg.",
+   "kind": "vo",
+   "mode": "on-mic",
+   "id": "v34-vo-11",
+   "os": false
+  },
+  {
+   "s": 11494,
+   "e": 11513,
+   "hold_to": 11525,
    "who": "MAS",
    "shown": "MAS",
    "text": "okay.",
@@ -35661,9 +35648,9 @@
    "os": false
   },
   {
-   "s": 11595,
-   "e": 11611,
-   "hold_to": 11620,
+   "s": 11645,
+   "e": 11661,
+   "hold_to": 11670,
    "who": "GERG",
    "shown": "GERG",
    "text": "Is it ready?",
@@ -35673,9 +35660,9 @@
    "os": false
   },
   {
-   "s": 11620,
-   "e": 11649,
-   "hold_to": 11660,
+   "s": 11670,
+   "e": 11699,
+   "hold_to": 11710,
    "who": "MAS",
    "shown": "MAS",
    "text": "it's a preview.",
@@ -35685,9 +35672,9 @@
    "os": false
   },
   {
-   "s": 11660,
-   "e": 11691,
-   "hold_to": 11703,
+   "s": 11710,
+   "e": 11741,
+   "hold_to": 11753,
    "who": "GERG",
    "shown": "GERG",
    "text": "You said that about the last one.",
@@ -35697,9 +35684,9 @@
    "os": false
   },
   {
-   "s": 11766,
-   "e": 11992,
-   "hold_to": 12004,
+   "s": 11816,
+   "e": 12042,
+   "hold_to": 12054,
    "who": "MAS",
    "shown": "MAS",
    "text": "i love and respect alyi, i think he's a guiding light of the field and a gem of a human being. i harbor zero ill will towards him.",
@@ -35711,8 +35698,8 @@
  ],
  "refs": {
   "D6": [
-   621,
-   743
+   627,
+   750
   ]
  },
  "v4_ids": {
@@ -35746,21 +35733,21 @@
   "S7.13.fall: v4 103/110 scaled -> 247"
  ],
  "decisions": [
-  "39 beat lengths are not whole frames (S1.01, v31-S1.01b, S1.07, v31-S1.08d, S1.09, S1.12...): beats start on the rounded running total, as the stick reel draws them",
+  "41 beat lengths are not whole frames (S1.01, v31-S1.01b, S1.02, S1.07, v31-S1.08d, S1.09...): beats start on the rounded running total, as the stick reel draws them",
   "plan entries with no shot: ['S1.06', 'S1.08', 'S2.03', 'S2.04', 'S4.04', 'S4.06', 'S4.13c', 'S5.01', 'S7.07b', 'S8.09b']",
   "S1.09: toast \"You've been removed from the mee\" is up 32 f, under its read floor 51 f (the stick's timing; kept)",
   "S1.11: label '[super]  [super]  [super]' is up 34 f, under its read floor 36 f (the stick's timing; kept)",
   "S1.03: label 'NOPEAI · THE COMPANY' is up 14 f, under its read floor 30 f (the stick's timing; kept)",
   "S3.00a: label 'Waiting for MAS MANALT to join…' is up 3 f, under its read floor 44 f (the stick's timing; kept)",
-  "S3.02: label '3. INTERIM CEO' is up 20 f, under its read floor 23 f (the stick's timing; kept)",
-  "S3.02: label '4. ______________' is up 14 f, under its read floor 27 f (the stick's timing; kept)",
+  "S3.02: label '3. INTERIM CEO' is up 19 f, under its read floor 23 f (the stick's timing; kept)",
+  "S3.02: label '4. ______________' is up 13 f, under its read floor 27 f (the stick's timing; kept)",
   "S4.11: label 'LIVE · CHAT:  F  F  F  F' is up 24 f, under its read floor 35 f (the stick's timing; kept)",
   "S5.08: stamp 'VOID IF CEO MISSING' is up 26 f, under its read floor 29 f (the stick's timing; kept)",
   "S6.03: toast 'ALYI left the call' is up 18 f, under its read floor 28 f (the stick's timing; kept)",
   "S6.04: toast 'NELEH left the call' is up 15 f, under its read floor 29 f (the stick's timing; kept)",
   "S4.11: the face table names TTEMME, who has no line in the shot",
-  "33 takes are not in the timeline: ['a5-27-06', 'a5-27-07', 'a5-27-09', 'a5-27-10', 'a5-27-11', 'a5-27-12', 'a5-27-17', 'a5-27-24']...",
-  "marks outside their shot (base marks the layout may not read, or anchors on carried lines): ['S1.07.card=230', 'S1.07.dialog=230', 'S1.07.cardEnd=230', 'S1.09.click=-2', 'S4.08.ring2=499', 'S4.08.grab=499', 'S4.08.handover=511', 'S5.09.glance=456']"
+  "36 takes are not in the timeline: ['a5-27-06', 'a5-27-07', 'a5-27-09', 'a5-27-10', 'a5-27-11', 'a5-27-12', 'a5-27-17', 'a5-27-24']...",
+  "marks outside their shot (base marks the layout may not read, or anchors on carried lines): ['S1.07.card=230', 'S1.07.dialog=230', 'S1.07.cardEnd=230', 'S1.09.click=-2', 'S4.08.ring2=499', 'S4.08.grab=499', 'S4.08.handover=511', 'S5.09.glance=437']"
  ],
  "problems": []
 }

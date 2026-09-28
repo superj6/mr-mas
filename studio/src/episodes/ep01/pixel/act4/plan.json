@@ -1,7 +1,7 @@
 {
- "_about": "Act Four on the v3.2 stick lock (the v3-shots-act4 pass: the v3, v3.1 and v3.2 rounds). The per-shot plan (verdicts, marks, faces, whips), the v4 id map, the post ids and the size classes are READ from Act Four v5's lock_v5.py tables (plan_py, parsed, never run), with the v4 lock's marks for the reused v4 layouts (base_lock), as the act4-v5 port reads them. The JSON `shots` entries merge over them where v3 / v3.1 / v3.2 moved something: marks re-anchored on new, moved or dropped lines (S3.04's jacket, S4.02's clack, Alyi's cutaway and his turn, C14's cut call, C15's second sentence, the new Tasya and Terb reads, the 2 AM restaging), the Remove click (v31-S1.08d; S1.09 now opens after it), S1.12's pick-up, S5.11's key (v3.2 moved the first key_tap_space before the shot: Gerg's last tap under Tasya's J-cut) and its badge sounds, and faces (S3.03: Neleh in the editor's call window; S3.04: Alyi has no line now). Text kinds: v5's, with the plates as the lock writes them (v3: names only; v3.2: 'NAME · RELATION'), the board side's Remove notice (a toast) and Ttemme's card. v3.2 empties S4.09's post (`POST: MAS: “”`: the badge post moved to v32-S5.00, where the lock writes it as a label and the layout draws it): that text is a label here, and post_ids points S4.09 at S4.01's id so the silent-post check counts the six posts that remain. The cut beats' python entries (S1.06, S1.08, S2.03, S2.04, S4.04, S4.06, S4.13c, S5.01, S7.07b, S8.09b) have no shot (the lock logs them). The mix is the v3.2 stick reel's Act Four chapter (out/ep01/reel/ep01-v32-stick.mp4 from 726.875 s for 508.458 s, cut to out/ep01/full-v3/picture/act4-v32-stick-mix.wav, exactly the segment; there is no v3.2 mix pass yet); ep_in = Act Four's first episode frame (the cold open 640 + the intro 720 + the card 48 + Acts One to Three 7914 + 4633 + 3418).",
+ "_about": "Act Four on the v3.4 stick lock (the v3-shots-act4 pass: the v3, v3.1, v3.2, v3.3 and v3.4 rounds). The per-shot plan (verdicts, marks, faces, whips), the v4 id map, the post ids and the size classes are READ from Act Four v5's lock_v5.py tables (plan_py, parsed, never run), with the v4 lock's marks for the reused v4 layouts (base_lock), as the act4-v5 port reads them. The JSON `shots` entries merge over them where v3 / v3.1 / v3.2 moved something: marks re-anchored on new, moved or dropped lines (S3.04's jacket, S4.02's clack, Alyi's cutaway and his turn, C14's cut call, C15's second sentence, the new Tasya and Terb reads, the 2 AM restaging), the Remove click (v31-S1.08d; S1.09 now opens after it), S1.12's pick-up, S5.11's key (v3.2 moved the first key_tap_space before the shot: Gerg's last tap under Tasya's J-cut) and its badge sounds, and faces (S3.03: Neleh in the editor's call window; S3.04: Alyi has no line now). Text kinds: v5's, with the plates as the lock writes them (v3: names only; v3.2: 'NAME · RELATION'), the board side's Remove notice (a toast) and Ttemme's card. v3.2 empties S4.09's post (`POST: MAS: “”`: the badge post moved to v32-S5.00, where the lock writes it as a label and the layout draws it): that text is a label here, and post_ids points S4.09 at S4.01's id so the silent-post check counts the six posts that remain. The cut beats' python entries (S1.06, S1.08, S2.03, S2.04, S4.04, S4.06, S4.13c, S5.01, S7.07b, S8.09b) have no shot (the lock logs them). The mix is the v3.2 stick reel's Act Four chapter (out/ep01/reel/ep01-v32-stick.mp4 from 726.875 s for 508.458 s, cut to out/ep01/full-v3/picture/act4-v32-stick-mix.wav, exactly the segment; there is no v3.2 mix pass yet); ep_in = Act Four's first episode frame (the cold open 640 + the intro 720 + the card 48 + Acts One to Three 7914 + 4633 + 3418).",
  "label": "ACT FOUR",
- "timeline": "show/reel/ep01-v33/ep01-v33-act4.json",
+ "timeline": "show/reel/ep01-v34/ep01-v34-act4.json",
  "plan_py": "studio/src/episodes/ep01/act4/animatic/tools/lock_v5.py",
  "base_lock": "show/episodes/ep01/production/act4/shots-locked-v4.json",
  "takes": [
@@ -11,13 +11,14 @@
   "studio/src/episodes/ep01/pixel/act4/takes-v31-cut-mouths.json",
   "audio/ep01/v32/act4/lines-v32.json",
   "audio/ep01/v33/act4/lines-v33.json",
-  "studio/src/episodes/ep01/pixel/act4/takes-v33-cut-mouths.json"
+  "studio/src/episodes/ep01/pixel/act4/takes-v33-cut-mouths.json",
+  "audio/ep01/v34/act4/lines-v34.json"
  ],
  "mix": {
-  "path": "out/ep01/full-v3/picture/act4-v33-stick-mix.wav",
+  "path": "out/ep01/full-v3/picture/act4-v34-stick-mix.wav",
   "offset": 0
  },
- "ep_in": 17117,
+ "ep_in": 16865,
  "text_kinds": [
   [
    "^RAIL: ",
@@ -138,21 +139,15 @@
      "buzz2",
      0
     ],
-    "alyi": [
-     "on",
-     "a5-27-28",
-     0
-    ],
-    "turn": [
-     "w",
-     "a5-27-28",
-     "company",
+    "lit": [
+     "snd",
+     "phone_buzz_step_1",
+     1,
      0
     ]
    },
    "face": {
-    "NELEH": "room",
-    "ALYI": "lip"
+    "NELEH": "room"
    }
   },
   "S4.08": {
@@ -309,6 +304,28 @@
      "mark",
      "open",
      10
+    ]
+   }
+  },
+  "S1.02": {
+   "marks": {
+    "look": [
+     "w",
+     "v34-vo-07",
+     "gerg",
+     0
+    ],
+    "door": [
+     "w",
+     "v34-vo-07",
+     "budget",
+     0
+    ],
+    "back": [
+     "w",
+     "v34-vo-07",
+     "good",
+     0
     ]
    }
   }

@@ -1,5 +1,5 @@
-// MR. MAS — Ep1 v3.3 · ACT FOUR, "five days, told twice", on the v3.3 stick lock (the v3-shots-act4 pass; the v3 round,
-// the v3.1 round, 2026-09-27, the v3.2 round, then the v3.3 polish, 2026-09-28).
+// MR. MAS — Ep1 v3.4 · ACT FOUR, "five days, told twice", on the v3.4 stick lock (the v3-shots-act4 pass; the v3 round,
+// the v3.1 round, 2026-09-27, the v3.2 round, the v3.3 polish and the v3.4 round, 2026-09-28).
 //
 // A PORT with the v3.1 and v3.2 re-cuts drawn in. Act Four v5's layouts (act4/animatic/shots5.ts DRAW5, through its own
 // drawShot5, as the pipeline's act4-v5 test runs them) draw every shot v3.x kept as it was, handed this lock's shots
@@ -10,6 +10,11 @@
 // (kits/face-light.ts), and this pass's additive opt-in states in ./art/ (race.ts, invite.ts, texts.ts, v31.ts, v32.ts).
 // A layout below that changes a v5 layout is a copy of it with the change (each says so).
 //
+// v3.4 (script draft 8.3; SHOWRUNNER-NOTES 000, the planner, never on the nose): S1.02's new V.O. (his confident read of
+//   the invite: the arrow on the page on "budget", settled by JOIN on "good."); S4.02 without Alyi's line (no glass
+//   cutaway: the whole row of phones lights up at once in the wide on the lock's phone_buzz_step_1 and holds); S8.04 the
+//   return's count struck into the firing's drawing (art/v34 drawCount: their VOTES and EQUITY: 0 pencilled, his key,
+//   ticker and Gerg's badge in his cyan, each on its word). S5.09's new V.O. plays over the ring (no change).
 // v3.3's polish (PLAN.md §6, script draft 8.2): P12 the boardroom wide pushes in during Neleh's second speech as the
 //   stepped push (the wide drifting, [M] on her first word, her [MCU] on "Monday", the wide again for the phone's fall,
 //   the glass with the row of phones lighting up on Alyi's line); P13 the lobby dated once, by the camera's plate; S2 /
@@ -60,7 +65,7 @@ import {bpNeleh, inkOver, sweep, bpBracket} from '../../../../shared/pixel/kits/
 import type {BpNelehPose} from '../../../../shared/pixel/kits/bp-pointer';
 import {faceKey} from '../../../../shared/pixel/kits/face-light';
 import {
-  drawRemoveDialog, removeButton, drawNelehDeskHigh, drawTuesdayInvite, drawSundayOTS, drawAlyiGlass, callOutPainter, drawDrySqueeze, drawTerbWriting,
+  drawRemoveDialog, removeButton, drawNelehDeskHigh, drawTuesdayInvite, drawSundayOTS, callOutPainter, drawDrySqueeze, drawTerbWriting,
 } from '../../../../shared/pixel/kits/act4-v31';
 import {drawSuitePhone, POST_LOVED, drawReceptionMCU, drawLobbyCCTVStep, drawBadgeUnderDoor, drawBadgeReach2S} from '../../../../shared/pixel/kits/act4-v32';
 import {drawBlogDraft} from '../../../../shared/pixel/kits/blog-draft';
@@ -109,6 +114,7 @@ import {drawNudgeJoinInvite, CORNER_ARROW, cornerTileTip} from './art/invite';
 import {planZerosV3, letterAlyiV3, plateRel} from './art/texts';
 import {phonePickup, blogTyped, blogSpeakerWindow, rimaTileLabel, heartCount, BLOG_CHARS} from './art/v32';
 import {drawBlankPage, drawEmployee, EMPLOYEE, drawWallTV, recolourCrowd, drawEmployeeM, drawTVInsert} from './art/v33';
+import {drawCount} from './art/v34';
 import {drawWindowTwoShot, wifiBars, planChairV3, firstTileStrip, alyiTileLit} from './art/v31';
 
 const L = registry();
@@ -153,8 +159,8 @@ const glideC = (k: number, k0: number, n: number, a: [number, number], b: [numbe
   const t = Math.max(0, Math.min(1, (on2(k) - k0) / Math.max(1, n)));
   return [Math.round(a[0] + (b[0] - a[0]) * t), Math.round(a[1] + (b[1] - a[1]) * t)];
 };
-L.add('S1.02', {kind: 'V', st: V31('the nudge ECU with the JOIN corner (art/invite drawNudgeJoinInvite: the call app\'s four board tiles carry the invite\'s attendee circles, a door, a glowing page, a spinner, a black square; none green; his slot empty): he nudges the glass true and his hand leaves; the laptop pings (JOIN\'s halo, 2 held steps); on "gerg\'s" the laptop\'s arrow steps across the four icons (each tile lit as it passes), on "alyi" back to the door, on "probably" down beside JOIN; onto JOIN and the click on its sound'),
-  marks: {look: ['w', 'v3-vo-18', 'gerg\'s', 0], door: ['w', 'v3-vo-18', 'alyi', 0], back: ['w', 'v3-vo-18', 'probably', 0], click: ['snd', 'dialog_ok_click', 1, 0]},
+L.add('S1.02', {kind: 'V', st: V31('the nudge ECU with the JOIN corner (art/invite drawNudgeJoinInvite: the call app\'s four board tiles carry the invite\'s attendee circles, a door, a glowing page, a spinner, a black square; none green; his slot empty): he nudges the glass true and his hand leaves; the laptop pings (JOIN\'s halo, 2 held steps); on "gerg\'s" the laptop\'s arrow steps across the four icons (each tile lit as it passes), v3.4 (v34-vo-07, his confident read and his plan for the meeting): on "budget" it settles on the glowing page, on "good." it comes back beside JOIN and waits there through "i\'ll ask for more compute."; onto JOIN and the click on its sound; the V.O. rows on shadow, no face in frame'),
+  marks: {look: ['w', 'v34-vo-07', 'gerg', 0], door: ['w', 'v34-vo-07', 'budget', 0], back: ['w', 'v34-vo-07', 'good', 0], click: ['snd', 'dialog_ok_click', 1, 0]},
   draw: (fb, k, sh) => {
     const nudge = mk(sh, 'nudge', 10), o1 = mk(sh, 'out1', 24), o2 = mk(sh, 'out2', 32), ping = o2 + 4;
     const look = mk(sh, 'look', 30), door = mk(sh, 'door', 70), back = mk(sh, 'back', 108), c = mk(sh, 'click', 162);
@@ -165,8 +171,8 @@ L.add('S1.02', {kind: 'V', st: V31('the nudge ECU with the JOIN corner (art/invi
       const kk = k - look, i = Math.min(3, Math.floor(kk / 8));
       p = i === 0 && kk < 4 ? glideC(k, look, 4, CORNER_ARROW.beside, cornerTileTip(0)) : kk >= i * 8 && kk < i * 8 + 4 ? glideC(k, look + i * 8, 4, cornerTileTip(i - 1), cornerTileTip(i)) : cornerTileTip(i);
       hover = i;
-    } else if (k >= door && k < back) { p = glideC(k, door, 6, cornerTileTip(3), cornerTileTip(0)); hover = k >= door + 6 ? 0 : -1; }
-    else if (k >= back && k < c - 8) p = glideC(k, back, 8, cornerTileTip(0), CORNER_ARROW.beside);
+    } else if (k >= door && k < back) { p = glideC(k, door, 6, cornerTileTip(3), cornerTileTip(1)); hover = k >= door + 6 ? 1 : -1; } // v3.4: "the budget": the glowing page
+    else if (k >= back && k < c - 8) p = glideC(k, back, 8, cornerTileTip(1), CORNER_ARROW.beside);
     else if (k >= c - 8) p = glideC(k, c - 8, 4, CORNER_ARROW.beside, CORNER_ARROW.on);
     drawNudgeJoinInvite(fb, step === 'out2' && k >= o2 + 6 ? 'gone' : step, k, {arrow: p, hover, glow, click: k >= c && k < c + 3});
     voShade(fb, 290);
@@ -432,40 +438,43 @@ const fallPhone = (fb: Buf, x: number, t: number, f: number) => {
   for (let i = 1; i < 6; i++) put(x + i, y, lit);
   put(x + 1, y, PAL.C8);
 };
-/** the glass cutaway's four reflected phone screens (kits/act4-v31 drawAlyiGlass lays them at these spots, 26 x 7) */
-const GLASS_PHONES: Array<[number, number]> = [[330, 150], [362, 154], [396, 158], [432, 162]];
-/** Alyi's reflected head in the glass cutaway (drawAlyiGlass: his reflection's face and hair, measured on the stills) */
-const GLASS_HEAD: [number, number, number, number] = [214, 84, 290, 160];
-/** the face light in a reflection (P18: "Alyi in the glass"): the reflection is drawn in the glass's blue ramps, not skin,
- *  so kits/face-light can't find it; here his face's lit rungs (the N family from N3 up, and the cyan rim) inside the
- *  head's rect step up `k`, the dark glass (N0-N2) and the Valley's lights untouched */
-const glassFaceKey = (fb: Buf, k: number) => {
-  const [x0, y0, x1, y1] = GLASS_HEAD;
-  for (let y = y0; y < y1; y++) for (let x = x0; x < x1; x++) {
-    const c = fb.c[y * 480 + x], fm = familyOf(c);
-    if (fm && ((fm[0] === 'N' && fm[1] >= 3) || fm[0] === 'C')) fb.c[y * 480 + x] = stepColor(c, k);
+/** the three table phones' pixels (C, D, R at their last step), for the row lighting up at once (v3.4): the room with
+ *  them against the room without */
+let ROW_MASK: Uint8Array | null = null;
+const rowMask = () => (ROW_MASK ??= (() => {
+  const bare = new Buf(480, 270, PAL.N0), row = new Buf(480, 270, PAL.N0);
+  boardRoom(bare, 0, roomOpts(null, []), {});
+  boardRoom(row, 0, roomOpts({lit: true, buzz: false, step: 3}, ['C', 'D', 'R']), {});
+  const m = new Uint8Array(480 * RH);
+  for (let i = 0; i < 480 * RH; i++) m[i] = row.c[i] !== bare.c[i] ? 1 : 0;
+  return m;
+})());
+/** the row lighting up: every phone's pixels (the three on the table and phone A on the floor) `k` rungs up, and their
+ *  light one rung up on what's round them (4 px) */
+const rowLight = (fb: Buf, k: number, fallenX: number) => {
+  const m = rowMask().slice();
+  for (let y = 193; y < 201; y++) for (let x = fallenX - 2; x < fallenX + 9; x++) if (familyOf(fb.c[y * 480 + x])?.[0] === 'C') m[y * 480 + x] = 1; // phone A, lit on the floor
+  const near = new Uint8Array(480 * RH);
+  for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) {
+    if (!m[y * 480 + x]) continue;
+    for (let j = -4; j <= 4; j++) for (let i = -4; i <= 4; i++) { const X = x + i, Y = y + j; if (X >= 0 && X < 480 && Y >= 0 && Y < RH && !m[Y * 480 + X] && i * i + j * j <= 16) near[Y * 480 + X] = 1; }
   }
+  // each phone's light pooled on the table (and phone A's on the floor): an ellipse a rung up, its core two, dithered
+  const pools: Array<[number, number]> = [...PHONE_AT.slice(1).map(([px, py]) => [px + 4, py + 10] as [number, number]), [fallenX + 3, 197]];
+  const lift = new Uint8Array(480 * RH);
+  for (const [cx, cy] of pools) for (let y = cy - 8; y <= cy + 8; y++) for (let x = cx - 26; x <= cx + 26; x++) {
+    if (x < 0 || x >= 480 || y < 0 || y >= RH) continue;
+    const d = Math.hypot((x - cx) / 26, (y - cy) / 8);
+    if (d > 1) continue;
+    const v = d < 0.45 ? 2 : d < 0.8 || bayer(x, y) < (1 - d) * 3 ? 1 : 0;
+    lift[y * 480 + x] = Math.max(lift[y * 480 + x], v);
+  }
+  for (let i = 0; i < 480 * RH; i++) { if (m[i]) fb.c[i] = stepColor(fb.c[i], k); else if (lift[i] || near[i]) fb.c[i] = stepColor(fb.c[i], Math.max(lift[i], near[i])); }
 };
-L.add('S4.02', {kind: 'V', st: V('S4.02', 'v3.3 (P12): the push in during Neleh\'s second speech, as the stepped push (pov-and-framing §4.7.2: up the ladder, one drawn size a cut): v3.2\'s wide (C13: backs boardRoom, phone A composited from its own room render, the buzzes, the caller IDs, v5\'s small wall screen) with a slow whole-pixel drift toward her; on her second speech\'s first word the cut in to [M] (rooms/twoshots drawBoard2S: NELEH medium, speaking; Mada; the phones lit on the table), drifting on toward her; on "Monday" her [MCU] (S4.07\'s framing: the board plate soft behind her with its phones, nelehPortrait lip-synced, the face light, 2 steps); at her speech\'s end back to the wide for phone A\'s teeter, fall and clack; then v3.1\'s glass cutaway on Alyi\'s line (kits/act4-v31 drawAlyiGlass, lip-synced; on "company" his reflection turns to the phones) with the row of phones lighting up in the glass one by one from "That" to "company", and the face light in the reflection (P18)'),
-  face: {ALYI: 'lip'},
-  marks: {push1: ['on', 'a5-27-23', 0], push2: ['w', 'a5-27-23', 'Monday', 0], back: ['end', 'a5-27-23', 2]},
+L.add('S4.02', {kind: 'V', st: V('S4.02', 'v3.3 (P12): the push in during Neleh\'s second speech, as the stepped push (pov-and-framing §4.7.2: up the ladder, one drawn size a cut): v3.2\'s wide (C13: backs boardRoom, phone A composited from its own room render, the buzzes, the caller IDs, v5\'s small wall screen) with a slow whole-pixel drift toward her; on her second speech\'s first word the cut in to [M] (rooms/twoshots drawBoard2S: NELEH medium, speaking; Mada; the phones lit on the table), drifting on toward her; on "Monday" her [MCU] (S4.07\'s framing: the board plate soft behind her with its phones, nelehPortrait lip-synced, the face light, 2 steps); at her speech\'s end back to the wide for phone A\'s teeter, fall and clack; v3.4 (Alyi\'s "That is the company telling us." cut; the phones carry it): on the lock\'s phone_buzz_step_1 (15.8 s) the whole row of phones lights up at once, the three on the table and phone A on the floor, two rungs up (a 2-frame pop at three) and their light a rung on what\'s round them, buzzing on 2s for half a second, then held 1.6 s to the cut; Neleh\'s "Then we\'ll write step four ourselves." follows in S4.07'),
+  marks: {push1: ['on', 'a5-27-23', 0], push2: ['w', 'a5-27-23', 'Monday', 0], back: ['end', 'a5-27-23', 2], lit: ['snd', 'phone_buzz_step_1', 1, 0]},
   draw: (fb, k, sh, f) => {
-    const cut = mk(sh, 'alyi', 99999);
-    const p1 = mk(sh, 'push1', 220), p2 = mk(sh, 'push2', 280), back = Math.min(mk(sh, 'back', 352), cut - 12);
-    if (k >= cut) { // the glass: Alyi's reflection, his line; the row of phones lights up across "That is the company"
-      drawAlyiGlass(fb, f, {mouth: mouth(sh, k, 'ALYI'), look: k >= mk(sh, 'turn', cut + 20) ? 'door' : undefined});
-      const l = lineOf(sh, 'a5-27-28'), co = l?.words.find((w) => w[0].startsWith('company'));
-      const t0 = cut + 2, t1 = l && co ? l.s + co[1] : cut + 16; // the first lights on "That", the last on "company"
-      GLASS_PHONES.forEach(([px, py], i) => {
-        const at = t0 + Math.round(((t1 - t0) * i) / 3), lit = k >= at;
-        for (let y = py; y < py + 7; y++) for (let x = px; x < px + 26; x++) {
-          const c = fb.c[y * 480 + x], fm = familyOf(c);
-          if (fm && fm[0] === 'C') fb.c[y * 480 + x] = stepColor(c, lit ? (k < at + 2 ? 3 : 2) : -1);
-        }
-      });
-      glassFaceKey(fb, 1);
-      return;
-    }
+    const p1 = mk(sh, 'push1', 220), p2 = mk(sh, 'push2', 280), back = mk(sh, 'back', 352), lit = mk(sh, 'lit', 379);
     if (k >= p1 && k < back) {
       if (k < p2) { // [M]: Neleh at the table's end, speaking, Mada beyond; the phones lit on the table; a drift on toward her
         const bz2 = mk(sh, 'buzz2', 203), jig = k < bz2 + 30 ? 1 + ((k >> 1) % 2) : 0;
@@ -483,24 +492,25 @@ L.add('S4.02', {kind: 'V', st: V('S4.02', 'v3.3 (P12): the push in during Neleh\
     // the wide (v3.2's C13), drifting toward her
     const bz = mk(sh, 'buzz', 7), bz2 = mk(sh, 'buzz2', 203), tip = mk(sh, 'tip', 369);
     const step = Math.min(3, (k >= bz ? 1 : 0) + (k >= bz + 15 ? 1 : 0) + (k >= bz2 ? 1 : 0));
-    const buzz = (k >= bz && k < bz + 30) || (k >= bz2 && k < bz2 + 30);
+    const buzz = (k >= bz && k < bz + 30) || (k >= bz2 && k < bz2 + 30) || (k >= lit && k < lit + 12);
     const teeter = k >= tip - 12 && k < tip;
     const jig = buzz ? 1 + ((k >> 1) % 2) : 0, jigA = buzz || teeter ? 1 + ((k >> 1) % 2) : 0;
     const stepA = k < bz2 ? step : Math.min(6, 3 + Math.floor((k - bz2) / 8));
-    const nm = roomMouth(sh, k, 'NELEH'), am = mouth(sh, k, 'ALYI');
-    held(fb, `v3a4:s402-${step}-${jig}-${nm}-${am}`, (b) => boardRoom(b, jig, {...roomOpts({lit: true, buzz: jig !== 0, step}, ['C', 'D', 'R']),
-      reflection: {img: alyiReflection({mouth: am, eyes: 'open', t: 0, mirror: true}), x: 40, y: 38, k: 2}}, {neleh: {mouth: nm}, mada: true, alyi: false}));
+    const nm = roomMouth(sh, k, 'NELEH');
+    held(fb, `v3a4:s402-${step}-${jig}-${nm}`, (b) => boardRoom(b, jig, {...roomOpts({lit: true, buzz: jig !== 0, step}, ['C', 'D', 'R']),
+      reflection: {img: alyiReflection({mouth: 'rest', eyes: 'open', t: 0, mirror: true}), x: 40, y: 38, k: 2}}, {neleh: {mouth: nm}, mada: true, alyi: false}));
     if (k < tip) { // phone A on the table: its own pixels over the room
       const {bare, one} = phoneA(stepA, jigA);
       for (let i = 0; i < 480 * RH; i++) if (one.c[i] !== bare.c[i]) fb.c[i] = one.c[i];
     } else fallPhone(fb, PHONE_AT[0][0] + 1, k - tip, f);
+    if (k >= lit) rowLight(fb, k < lit + 2 ? 3 : 2, PHONE_AT[0][0] + 1); // v3.4: the whole row lights up at once, then holds
     wallScreen(fb, 222, 30, f);
     if (k >= bz) PHONE_IDS.forEach((s2, i) => {
       if (i === 0 && k >= tip) return; // it went over
       const st = i === 0 ? stepA : step;
       const [px, py] = PHONE_AT[i];
       const x = px + 4 - Math.round(pw(s2) / 2), y = py + st * 3 - 13;
-      rect(x - 2, y - 1, pw(s2) + 4, 9, fb.ink(PAL.N0)); rect(x - 2, y + 8, pw(s2) + 4, 1, fb.ink(PAL.C4)); pt(fb, s2, x, y, PAL.C7);
+      rect(x - 2, y - 1, pw(s2) + 4, 9, fb.ink(PAL.N0)); rect(x - 2, y + 8, pw(s2) + 4, 1, fb.ink(PAL.C4)); pt(fb, s2, x, y, k >= lit ? PAL.C8 : PAL.C7);
     });
     shiftRoom(fb, Math.min(8, Math.floor(Math.max(0, Math.min(k, p1) - 40) / 22))); // 1 px / 22 f toward her from k40, held after
   }});
@@ -920,6 +930,15 @@ L.add('S8.03', {kind: 'V', st: V31('v5 S8.03 copied (rooms-a lobby at night with
     }
     blitImg(fb, shoulder(mas({look: 1}), 70, PAL.W5, 1, true), -40, 40);
   }});
+// ---- S8.04 (v3.4, the return): the firing's drawing again, and now we hear him count (v34-vo-11)
+L.add('S8.04', {kind: 'V', st: V('S8.04', 'v3.4: v5 S8.04 as it was (the firing\'s CU, S1.10\'s drawing, the lobby\'s tungsten behind him; his face doesn\'t change: dry) with his count struck into the empty right of the frame on its words (art/v34 drawCount, three held steps each): first a quiet echo of Neleh\'s blueprint in its own lettering, pencilled in the tungsten two rungs down: on "four" the four seats\' plates, on "votes" their bracket and VOTES, then the CEO\'s box with EQUITY: 0 under it; then, in his cyan, what he holds: on "landlord" the key, on "money" the ticker climbing, on "gerg" Gerg\'s badge on its lanyard; no caption but the V.O. line; the lips still'),
+  marks: {four: ['w', 'v34-vo-11', 'four', 0], votes: ['w', 'v34-vo-11', 'votes', 0], landlord: ['w', 'v34-vo-11', 'landlord', 0], money: ['w', 'v34-vo-11', 'money', 0], gerg: ['w', 'v34-vo-11', 'gerg', 0]},
+  draw: (fb, k, sh, f) => {
+    const out = v5(fb, k, sh, f);
+    const at = (m: string, d: number) => k - mk(sh, m, d);
+    drawCount(fb, {four: at('four', 18), votes: at('votes', 25), landlord: at('landlord', 62), money: at('money', 89), gerg: at('gerg', 108)});
+    return out;
+  }});
 L.add('S8.05', {kind: 'V', st: V('S8.05', 'v5 S8.05 + the hold after "okay." breathes: the far warm lights (the bokeh, the tea-lights) flicker, each on its own, one palette step on held 5 f (left of the lamp\'s glow)'),
   draw: (fb, k, sh, f) => {
     const out = v5(fb, k, sh, f);
@@ -966,11 +985,11 @@ export const SEGMENT = defineSegment({
   options: {badge: false, vo: 'typed', voLowercase: true, subs: 'off', standin: 'stick', j1: false, hourglass: true},
   review: {
     title: 'MR. MAS · EP1 · ACT FOUR',
-    subtitle: 'PIXEL v3.3 · LOCK act4 (THE v3.3 STICK TIMING)',
-    kindNames: {P: 'P · THE v5 LAYOUT, ON THE v3.3 LOCK', V: 'V · A v3 – v3.3 CHANGE (see st)'},
+    subtitle: 'PIXEL v3.4 · LOCK act4 (THE v3.4 STICK TIMING)',
+    kindNames: {P: 'P · THE v5 LAYOUT, ON THE v3.4 LOCK', V: 'V · A v3 – v3.4 CHANGE (see st)'},
     sideBadge: false,
-    durNote: 'AS THE v3.3 STICK',
-    soundLabel: 'SOUND · TEMP TRACK = THE v3.3 STICK MIX (ACT FOUR)',
+    durNote: 'AS THE v3.4 STICK',
+    soundLabel: 'SOUND · TEMP TRACK = THE v3.4 STICK MIX (ACT FOUR)',
     textFix: factsText5,
   },
   // S7.13 k128-263: the Runway hourglass insert, spliced from PNGs (studio/src/dev/genvideo/runway/hourglass.py --png
