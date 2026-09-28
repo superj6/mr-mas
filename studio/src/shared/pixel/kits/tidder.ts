@@ -8,14 +8,20 @@
 //                       · 'edit' (the comment rewriting itself letter by letter in place: `editK` characters of
 //                       `…just memeing, y'all have no chill…` over what remains of the first; `tight` = framed tight on
 //                       the middle, the must-read phrase at the display size, both ends running out of frame)
+//                       v3.3 (S1 / P9, opt-in; the `v3-shots-act2-act3` pass): `title` the thread he replies to reads
+//                       (its forum `t/singularity` and the crowd's invented question, TIDDER_THREAD, in place of the
+//                       greeked title), `replyBox` false = the thread only, before he opens the reply box
 import {Buf, rect, hash, bayer} from '../px';
 import {PAL} from '../palette';
-import {pt, pw, bpt, bpw} from './uitype';
+import {pt, pw, bpt, bpw, pwrap} from './uitype';
 import {isMini, Painter} from './mas-monitor';
 
 export const TIDDER_POST = 'Agi has been achieved internally';
 export const TIDDER_EDIT = "…just memeing, y'all have no chill…";
 export const TIDDER_REPLY = 'wait. human-level?? internally??';
+/** v3.3 (S1): the thread's title, the crowd's speculation (invented crowd text, facts §D's pattern; no source claimed) */
+export const TIDDER_FORUM = 't/singularity';
+export const TIDDER_THREAD = 'is it already here? anyone actually know?';
 export interface TidderState {
   phase: 'typing' | 'posted' | 'edit';
   /** typing: characters typed so far (the caret blinks on 8s) */
@@ -26,6 +32,10 @@ export interface TidderState {
   /** edit: characters of the edit written in so far */
   editK?: number;
   tight?: boolean;
+  /** v3.3 (S1): the thread's forum and title legible (TIDDER_FORUM, TIDDER_THREAD) */
+  title?: boolean;
+  /** v3.3 (S1): typing phase only; false = the thread before he opens the reply box (default true) */
+  replyBox?: boolean;
 }
 const greek = (b: Buf, x: number, y: number, w: number, col: number, seed: number) => { let cx = x; while (cx < x + w) { const ww = 3 + Math.floor(hash(cx, seed, 5) * 9); rect(cx, y, Math.min(ww, x + w - cx), 3, b.ink(col)); cx += ww + 3; } };
 const counterText = (n: number, spin: boolean, f: number) => {
@@ -65,9 +75,21 @@ export const tidderPainter = (st: TidderState): Painter => (scr, f) => {
   }
   // the thread: its title, the post above (greeked), a comment of someone else's
   let y = 24;
-  greek(scr, 10, y, Math.round(260 * s), PAL.P1, 1); y += 8; greek(scr, 10, y, Math.round(180 * s), PAL.P1, 2); y += 10;
+  if (st.title) {
+    // the forum's name, small, then the thread's title in the forum's own type (it wraps on the OTS's narrower screen)
+    pt(scr, TIDDER_FORUM, 10, y - 3, PAL.G5);
+    const tl = pwrap(TIDDER_THREAD, W - 20);
+    tl.slice(0, 2).forEach((l, i) => pt(scr, l, 10, y + 7 + i * 10, PAL.P2));
+    y += 7 + tl.length * 10 - 8 + 10;
+  } else { greek(scr, 10, y, Math.round(260 * s), PAL.P1, 1); y += 8; greek(scr, 10, y, Math.round(180 * s), PAL.P1, 2); y += 10; }
   pt(scr, '1.2k comments', 10, y, PAL.G4); y += 14;
   rect(10, y, W - 20, 1, scr.ink(PAL.N3)); y += 6;
+  if (st.phase === 'typing' && st.replyBox === false) {
+    // the thread before he replies: two comments of other people's, greeked, the reply button waiting
+    for (let c = 0; c < 2; c++) { rect(10, y, 7, 7, scr.ink(PAL.G3)); greek(scr, 22, y + 2, 40, PAL.G4, 11 + c); greek(scr, 22, y + 12, Math.round((200 - c * 50) * s), PAL.N4, 13 + c); y += 24; }
+    rect(10, y, 52, 12, scr.ink(PAL.N2)); pt(scr, 'reply', 20, y + 3, PAL.G5);
+    return;
+  }
   if (st.phase === 'typing') {
     // the reply box: the typed words in his source casing, the caret, cancel and post
     pt(scr, 'reply as mas', 10, y, PAL.G4); y += 11;

@@ -10,7 +10,13 @@
 // 13.01 he's already in the seat nearest the teacher while the others settle; the V.O. lines are cut (his moves carry
 // them); 13.10 is Radnus's MCU with the flame; 14.01 his thumb drags the clip back and plays it again under a readable
 // tag; 14.03 folds the repost in; 15.15 his proposal, over his shoulder, then the sheet slides on "licenses"; 16.01 his
-// own hand stamps the added date; 17.12 his face on the water, broken by the crack. Plates carry one relation word.
+// own hand stamps the added date; 17.12 his face on the water, broken by the crack (cut in v3.3). Plates carry one relation word.
+// v3.3 (script draft 8.2, show/reel/ep01-v33/ep01-v33-act2.json; a polish): 13.09 "he's not wrong." (V.O.) is back
+// before the knife, his eyes off Radnus and his mouth shut under it; 14.01's clip is drawn unmistakably as a generic
+// anchor at a news desk, its lower third blank (not the senator, nobody real); 17.10's order is in MARIO's hand (his
+// fleece sleeve, his wet footnote, his scroll), Mas's hand half out, empty; the glass (17.12) is cut: 17.11 ends the act on
+// the chip-maker's price lifting off the register as the intro's curve and climbing off the top of the frame, then the
+// empty sky; 17.13's black carries the bell's tail.
 // Rules kept: native 480 x 270, the master palette, whole-pixel moves, held drawings; Mas frame left; arrivals open wide
 // on the room with its people; marks land on the stick's sound spots and the takes' words; mouths only where the framing
 // shows one (the `face` table); no side badges, no pointer text: plates are names only, and the four gag cards
@@ -143,11 +149,13 @@ L.add('13.08', {
   },
 });
 L.add('13.09', {
-  st: 'rooms/whitehouse drawWH2S: MAS (masPortrait warm, flipped to face him) + RADNUS (NEW bust, leaning across, lip-sync, the serene smile between lines; his extinguisher on the table; the small flame on his collar he hasn\'t noticed); v3.2 (the V.O. cut): after Radnus\'s courtesy Mas\'s eyes drop off him for a beat, then come back for the knife, "how\'s the dancing?"',
+  st: 'rooms/whitehouse drawWH2S: MAS (masPortrait warm, flipped to face him) + RADNUS (NEW bust, leaning across, lip-sync, the serene smile between lines; his extinguisher on the table; the small flame on his collar he hasn\'t noticed); v3.3 (V2): after Radnus\'s courtesy Mas\'s eyes drop off him for "he\'s not wrong." (V.O., his mouth shut), then come back for the knife, "how\'s the dancing?"',
   face: {RADNUS: 'lip', MAS: 'lip'},
-  marks: {first: ['on', 'e1-a2-13-09', 0], apol: ['on', 'e1-a2-13-11', 0], apolEnd: ['w', 'e1-a2-13-11', 'And', 0], apolDone: ['end', 'e1-a2-13-11', 0], dance: ['on', 'e1-a2-13-12', 0]},
+  marks: {first: ['on', 'e1-a2-13-09', 0], apol: ['on', 'e1-a2-13-11', 0], apolEnd: ['w', 'e1-a2-13-11', 'And', 0], apolDone: ['end', 'e1-a2-13-11', 0], thought: ['on', 'v3-vo-12', 0], dance: ['on', 'e1-a2-13-12', 0]},
   draw: (fb, k, sh, f) => {
-    const vo = mk(sh, 'apolDone', 290) + 4, dance = mk(sh, 'dance', 311);
+    // v3.3 (V2): "he's not wrong." (V.O.) sits between the courtesy and the knife: his eyes leave Radnus as the line ends
+    // (or just before the thought, whichever is first), his mouth shut under it (spoken), and come back for "how's the dancing?"
+    const vo = Math.min(mk(sh, 'apolDone', 290) + 4, mk(sh, 'thought', 299) - 4), dance = mk(sh, 'dance', 347);
     const lean = k >= mk(sh, 'first', 14) - 4;
     const R = radnusBust2({...RADNUS2_DEFAULT, arm: lean ? 'lean' : 'fold', mouth: talk(mouth(sh, k, 'RADNUS'), 'smile'), lid: blink(k, 2), look: -1,
       brow: k >= mk(sh, 'apol', 156) && k < mk(sh, 'apolEnd', 230) ? 1 : 0});
@@ -239,7 +247,7 @@ L.add('13.14', {
 
 // =================================================================== sc 14 · THE BRIDGE
 L.add('14.01', {
-  st: 'rooms/bay-bridge drawBridgeOTS {feed, hearts, scrub, tagBig}: the MATCH CUT: over Mas\'s shoulder at the dark bullpen window, his phone where the print was, his own CLASS PHOTO #1 post on it, the hearts climbing; his thumb scrolls to the next item, the anchor clip (her mouth a beat late) under the ALTERED AUDIO tag drawn to read; v3.2, HIS MOVE: his thumb drags the clip back and plays it again (late again) (the V.O. is cut); the skyline and the one lit window beyond',
+  st: 'rooms/bay-bridge drawBridgeOTS {feed, hearts, scrub, tagBig, anchorDesk}: v3.3 (P6): the clip is drawn unmistakably as a generic news anchor at a desk (the set\'s lit panels, the glossy desk, her copy), its lower third a blank bar: not the senator, nobody real; the MATCH CUT: over Mas\'s shoulder at the dark bullpen window, his phone where the print was, his own CLASS PHOTO #1 post on it, the hearts climbing; his thumb scrolls to the next item, the anchor clip (her mouth a beat late) under the ALTERED AUDIO tag drawn to read; v3.2, HIS MOVE: his thumb drags the clip back and plays it again (late again) (the V.O. is cut); the skyline and the one lit window beyond',
   marks: {scroll: ['txt', 'CLASS PHOTO #1', 'until', 0]},
   draw: (fb, k, sh, f) => {
     const sc = mk(sh, 'scroll', 43), len = sh.e - sh.s;
@@ -248,7 +256,7 @@ L.add('14.01', {
     const drag0 = sc + 52, drag1 = drag0 + 10; // it plays, he drags it back (two drawings), it plays again
     const progress = k < drag0 ? 0.3 + clamp((k - sc) / 150, 0, 1) * 0.6 : k < drag1 ? 0.12 : 0.12 + clamp((k - drag1) / 150, 0, 1) * 0.6;
     const m = (((k + 6) >> 2) % 3 === 0 ? 0 : 1) as 0 | 1;
-    BB.drawBridgeOTS(fb, f, {f, mouth: k < sc + 16 || (k >= drag0 && k < drag1 + 6) ? 0 : m, progress, feed, hearts, scrub: k >= drag0 - 6 && k < drag1 + 4 ? 1 : 0, tagBig: true});
+    BB.drawBridgeOTS(fb, f, {f, mouth: k < sc + 16 || (k >= drag0 && k < drag1 + 6) ? 0 : m, progress, feed, hearts, scrub: k >= drag0 - 6 && k < drag1 + 4 ? 1 : 0, tagBig: true, anchorDesk: true});
     void len;
   },
 });
@@ -479,10 +487,10 @@ L.add('17.07', {
   },
 });
 L.add('17.10', {
-  st: 'kits/register drawPurchaseOrder [ECU]: the signing pen in Mario\'s hand is now a purchase order; its two rows print in on the lock\'s text times (AI CHIPS · QTY: MORE), a glint crossing the paper\'s header',
+  st: 'kits/register drawPurchaseOrder {mario} [ECU] (v3.3, P7: unambiguously MARIO\'s hand: his ink-blue fleece sleeve out of frame, his footnote still wet on the order, his appendix scroll\'s end at the frame\'s edge, Mas\'s hand half out beside it, empty; held half a second longer): the signing pen in Mario\'s hand is now a purchase order; its two rows print in on the lock\'s text times (AI CHIPS · QTY: MORE), a glint crossing the paper\'s header',
   marks: {rows: ['txt', 'AI CHIPS', 'at', 0]},
   draw: (fb, k, sh, f) => {
-    RG.drawPurchaseOrder(fb, f, {k});
+    RG.drawPurchaseOrder(fb, f, {k, mario: true});
     const r = mk(sh, 'rows', 13);
     if (k < r) rect(150 + 48, 18 + 40, 190 - 58, 54, fb.ink(PAL.P2));
     else if (k < r + 4) rect(150 + 48, 18 + 66, 190 - 58, 28, fb.ink(PAL.P2));
@@ -490,15 +498,18 @@ L.add('17.10', {
   },
 });
 L.add('17.11', {
-  st: 'rooms/rooftop drawRooftopWide: the hairline crack runs across the sky L -> R in 12 frames; Nesnej looks up, then Mario (and writes it down), then Mas, last; then Mas alone lowers his eyes to his glass',
+  st: 'v3.3 (P8, the act-out; the crack and the glass are gone): rooms/rooftop drawRooftopWide {chipLine}: phrase 4, the bell decaying; the register\'s window figure, the chip-maker\'s price, lifts off as a line (the intro\'s curve: flat, then straight up), its head climbing in whole-pixel held steps and off the top of the frame, its tail following it out; Nesnej looks up, then Mario (and writes it down), then Mas, last; the frame tilts up in held steps and holds on the empty sky where the line left',
   draw: (fb, k, sh, f) => {
-    const look = {nesnej: k >= 22, mario: k >= 30, mas: (k >= 76 ? 'glass' : 'up') as 'up' | 'glass'};
-    RT.drawRooftopWide(fb, f, {mas: 'stand', mario: k >= 36 && k < 70 ? 'write' : 'stand', register: 1, nesnej: {arm: 'down'}, crack: clamp((k - 8) / 12, 0, 1), look});
+    const len = sh.e - sh.s;
+    const lift = 6, out = Math.round(len * 0.4), gone = Math.round(len * 0.52);
+    const head = k < lift ? 0 : heldLerp(k, lift, out, 0, 100, 2) / 100 * 1.02;
+    const tail = k < out - 10 ? 0 : heldLerp(k, out - 10, gone, 0, 100, 2) / 100;
+    const look = {nesnej: k >= 14, mario: k >= 22, mas: 'up' as const};
+    RT.drawRooftopWide(fb, f, {mas: 'stand', mario: k >= 28 && k < 64 ? 'write' : 'stand', register: 1, nesnej: {arm: 'down'}, look, chipLine: tail >= 1 ? null : {head, tail}});
+    // then the tilt up to the empty sky: the frame's content steps down (3 px every 2 f), the sky above it deepening
+    const t0 = gone + 2, dy = k < t0 ? 0 : Math.min(36, Math.floor((k - t0) / 2) * 3);
+    if (dy) { shiftRoom(fb, 0, dy); for (let y = 0; y < dy; y++) for (let x = 0; x < 480; x++) fb.set(x, y, bayer(x, y) < 0.18 + (dy - y) / 200 ? PAL.F3 : PAL.F4); }
   },
-});
-L.add('17.12', {
-  st: 'rooms/rooftop drawGlassSide {surface} [ECU] (v3.2, the audit\'s #8: the camera a little above the rim, his face ON the water\'s surface, no body, no ring): the act-out; the reflected crack runs on across the surface in jags, one whole-pixel step, then another, and crosses his face under the eyes and breaks it; the water doesn\'t move; held while the bell decays',
-  draw: (fb, k, sh, f) => { RT.drawGlassSide(fb, f, {run: stepOf(k, [22, 42, 62]) as 0 | 1 | 2 | 3, surface: true}); },
 });
 L.add('17.13', {st: 'BLACK on the bell\'s last partial (the act-out)', draw: (fb) => { rect(0, 0, 480, RH, fb.ink(PAL.N0)); return {noVo: true}; }});
 
@@ -507,5 +518,5 @@ export const SEGMENT = defineSegment({
   lock: LOCK,
   layouts: L.all,
   options: {badge: false, vo: 'typed', voLowercase: true, subs: 'off', standin: 'stick'},
-  review: {title: 'MR. MAS · EP1 · ACT TWO', subtitle: 'PIXEL v3.2 · LOCK act2 (THE v3.2 STICK LOCK)', durNote: 'AS THE STICK LOCK', soundLabel: 'SOUND · TEMP TRACK = THE v3.2 STICK MIX'},
+  review: {title: 'MR. MAS · EP1 · ACT TWO', subtitle: 'PIXEL v3.3 · LOCK act2 (THE v3.3 STICK LOCK)', durNote: 'AS THE STICK LOCK', soundLabel: 'SOUND · TEMP TRACK = THE v3.3 STICK MIX'},
 });

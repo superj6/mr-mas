@@ -17,7 +17,11 @@
 //   drawRepostECU(b, f, st)    [ECU] (14.04) a thumb on a repost arrow just under the same grey tag: 'hover' |
 //                              'press' (the click) | 'done' (`✓ REPOSTED`)
 //   drawNewsClip(b, x, y, w, h, st)  the clip itself at any size ≥ 60 x 64 (the anchor, a lower bar with no network's
-//                              name, the tag strip under it)
+//                              name, the tag strip under it); v3.3 (P6, `desk`, opt-in; the `v3-shots-act2-act3` pass):
+//                              drawn unmistakably as a generic NEWS ANCHOR AT A DESK: a news set behind her (two lit
+//                              panels, a plain globe-less backdrop), the anchor seated behind a wide glossy desk with its
+//                              lit front edge and a sheet of copy in front of her, and a BLANK lower-third bar (an accent
+//                              tab and a pale band, no words, no ticker): nobody real, and not the senator
 import {Buf, rect, line, ellipse, hash, bayer, clamp} from '../px';
 import {PAL, stepColor} from '../palette';
 import {text, textWidth} from '../font';
@@ -60,9 +64,10 @@ export const alteredTagBig = (b: Buf, x: number, y: number, w: number) => {
 };
 
 // ------------------------------------------------------------------ the clip
-export interface ClipState { f: number; mouth: 0 | 1; progress?: number; tag?: boolean; }
+export interface ClipState { f: number; mouth: 0 | 1; progress?: number; tag?: boolean; /** v3.3 (P6): the anchor at a desk, the lower third blank */ desk?: boolean; }
 /** the news clip in a player: the anchor at 2x cells (w >= 100) or 1x, a lower bar (no network's name), the scrub bar, the tag */
 export const drawNewsClip = (b: Buf, x: number, y: number, w: number, h: number, st: ClipState) => {
+  if (st.desk && w >= 100) { drawAnchorDeskClip(b, x, y, w, h, st); return; }
   // the studio behind her: a generic cool set, a blurred skyline graphic
   for (let j = 0; j < h; j++) for (let i = 0; i < w; i++) {
     const c = j < h * 0.55 ? (bayer(x + i, y + j) < 0.5 - j / (h * 2) ? PAL.C2 : PAL.C1) : PAL.N2;
@@ -77,6 +82,33 @@ export const drawNewsClip = (b: Buf, x: number, y: number, w: number, h: number,
   for (let i = 4; i < w - 4; i++) if (hash(i >> 1, 7, 3) < 0.6 && (i >> 1) % 5 !== 0) b.set(x + i, lb + (px === 2 ? 4 : 2), PAL.P1);
   // the scrub bar
   const sb = y + h - (px === 2 ? 4 : 2);
+  rect(x, sb, w, 2, b.ink(PAL.G1)); rect(x, sb, Math.round(w * clamp(st.progress ?? 0.4, 0, 1)), 2, b.ink(PAL.P2));
+};
+
+/** v3.3 (P6): the same invented anchor, seated at a news desk, the lower third a blank bar (2x cells; w >= 100) */
+const drawAnchorDeskClip = (b: Buf, x: number, y: number, w: number, h: number, st: ClipState) => {
+  // the news set: a deep blue wall, two tall lit panels either side of her, a floor-line glow behind the desk
+  for (let j = 0; j < h; j++) for (let i = 0; i < w; i++) {
+    const panel = (i > 4 && i < 20) || (i > w - 21 && i < w - 5);
+    const c = panel ? (j < h * 0.62 ? (bayer(x + i, y + j) < 0.35 ? PAL.C4 : PAL.C3) : PAL.C2) : j < h * 0.62 ? (bayer(x + i, y + j) < 0.4 - j / (h * 2.4) ? PAL.F3 : PAL.F2) : PAL.F1;
+    b.set(x + i, y + j, c);
+  }
+  for (const px0 of [4, w - 21]) { rect(x + px0, y, 1, Math.round(h * 0.62), b.ink(PAL.C6)); rect(x + px0 + 16, y, 1, Math.round(h * 0.62), b.ink(PAL.C1)); }
+  // the anchor behind the desk (her sprite's own desk edge is covered by the real desk below)
+  const ax = x + Math.round(w / 2 - 30), ay = y + 6;
+  drawAnchor(b, ax, ay, {mouth: st.mouth, px: 2, blink: st.f % 90 < 3});
+  // the desk: a wide glossy top (a highlight along its back edge), a sheet of copy under her hands, the curved front
+  // panel with its lit strip; it spans the set, so she reads as seated behind it
+  const dy = ay + 41, dx0 = x + 8, dx1 = x + w - 8;
+  for (let j = 0; j < 6; j++) for (let i = dx0 - (j >> 1); i < dx1 + (j >> 1); i++) b.set(i, dy + j, j === 0 ? PAL.G6 : j < 3 ? PAL.N4 : PAL.N3);
+  rect(ax + 18, dy + 1, 22, 3, b.ink(PAL.P2)); rect(ax + 18, dy + 1, 22, 1, b.ink(PAL.W9)); rect(ax + 21, dy + 2, 14, 1, b.ink(PAL.G5)); // the copy
+  for (let j = 6; j < 16; j++) for (let i = dx0 - 3 + Math.round((j - 6) * 0.6); i < dx1 + 3 - Math.round((j - 6) * 0.6); i++) b.set(i, dy + j, j === 7 ? PAL.C6 : j === 8 ? PAL.C4 : bayer(i, dy + j) < 0.3 ? PAL.N3 : PAL.N2);
+  // the lower third, blank: an accent tab at the left, a pale band where a name would go, its thin rule; no words
+  const lb = y + h - 18;
+  rect(x, lb, 12, 12, b.ink(PAL.R2)); rect(x, lb, 12, 1, b.ink(PAL.R3));
+  rect(x + 12, lb, Math.round(w * 0.72), 12, b.ink(PAL.P1)); rect(x + 12, lb, Math.round(w * 0.72), 1, b.ink(PAL.P2)); rect(x + 12, lb + 11, Math.round(w * 0.72), 1, b.ink(PAL.G5));
+  // the scrub bar
+  const sb = y + h - 4;
   rect(x, sb, w, 2, b.ink(PAL.G1)); rect(x, sb, Math.round(w * clamp(st.progress ?? 0.4, 0, 1)), 2, b.ink(PAL.P2));
 };
 
@@ -189,6 +221,8 @@ export interface BridgeOTSState {
   scrub?: 0 | 1;
   /** v3.2 (14.01): the tag at the display size (alteredTagBig) */
   tagBig?: boolean;
+  /** v3.3 (P6): the clip drawn as a news anchor at a desk, its lower third blank */
+  anchorDesk?: boolean;
 }
 export const BRIDGE_PHONE = {x: 176, y: 22, w: 118, h: 200};
 export const drawBridgeOTS = (b: Buf, f: number, st: BridgeOTSState) => {
@@ -223,7 +257,7 @@ export const drawBridgeOTS = (b: Buf, f: number, st: BridgeOTSState) => {
   const feedH = 104, scroll = Math.round(feedH * clamp(st.feed ?? 1, 0, 1));
   const tall = new Buf(P.w, 340, PAL.N1);
   classPhotoPost(tall, 3, 12, P.w - 6, st.hearts ?? 406, st.f);
-  drawNewsClip(tall, 3, 12 + feedH, P.w - 6, 82, {f, mouth: st.mouth, progress: st.progress});
+  drawNewsClip(tall, 3, 12 + feedH, P.w - 6, 82, {f, mouth: st.mouth, progress: st.progress, desk: st.anchorDesk});
   const tagH = st.tagBig ? alteredTagBig(tall, 4, 12 + feedH + 87, P.w - 8) - 11 : (alteredTag(tall, 5, 12 + feedH + 88), 0);
   for (let k = 0; k < 4; k++) { const ry = 12 + feedH + 108 + tagH + k * 14; rect(4, ry, P.w - 8, 10, tall.ink(PAL.N2)); rect(6, ry + 2, 6, 6, tall.ink(PAL.G3)); for (let i = 0; i < 44 + k * 9; i++) if (i % 6 !== 5) tall.set(16 + i, ry + 5, PAL.G3); }
   for (let y = 10; y < P.h; y++) for (let x = 0; x < P.w; x++) b.set(P.x + x, P.y + y, tall.get(x, y + scroll));

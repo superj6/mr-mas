@@ -14,6 +14,12 @@
 // Neleh's byline plate; he closes the paper's tab and the order opens; HIS MOVES: he switches the monitor off (v32-21.06)
 // and DevDay is live, full frame, his line in MCU (22.01); a week later he pauses the sign-ups (v32-22.04); 23.02's hover
 // cards carry the members' faces.
+// v3.3 (script draft 8.2, show/reel/ep01-v33/ep01-v33-act3.json; a polish, changes inside shots over new cuts): the
+// Atem beat folds into the arrival (v31-18.00b merged: the lobby plays softly on the big monitor behind him, the key hung
+// large, KRAM · RUNS ATEM; the tally cut-in gives way to it); the VP clip and the pinky promise are cut, the forum's hands
+// stay (his hand up at home, lowered, then his keys); 20.01 opens on the Tidder thread's title before his reply; he holds
+// on page 30 (an MCU, the room, no voice), and the paper's tab stays in his tab strip from the order on; the sign-ups post
+// collapses once it's up, NOTIFY ME stays; the Friday reminder pops up over his own NOTIFY ME page beside that tab.
 // Continuity kept here: the Orb settles into the faded outline on the wall at "you can stay." (18.06) and watches from
 // there as the iris flicks to the monitor (19.01); from the hands runner on (19.03) it sits at his shoulder, Act Four's
 // spot, watching with him, and the outline is empty. The big-monitor two-shot (19.03, 20.04, 20.06, 20.08, 21.04, 22.01's
@@ -30,12 +36,13 @@ import {DPLATE_LOOK} from '../../../../shared/pixel/rooms/darkroom-plate';
 import * as MON from '../../../../shared/pixel/kits/mas-monitor';
 import {tidderPainter, TIDDER_POST, TIDDER_EDIT} from '../../../../shared/pixel/kits/tidder';
 import {eoPainter, EO_SHORT} from '../../../../shared/pixel/kits/eo-signing';
-import {lobbyPainter, sirrahPainter, runnerPainter, paperPainter, withGergTile} from '../../../../shared/pixel/kits/monitor-v31';
+import {lobbyPainter, LOBBY_TOP, runnerPainter, paperPainter, withGergTile} from '../../../../shared/pixel/kits/monitor-v31';
 import {drawDark2SSCR, DARK_SCR} from '../../../../shared/pixel/rooms/darkroom-v31';
 import {tasyaSpeakPortrait, TASYA_PORTRAIT_DEFAULT} from '../../../../shared/pixel/cast/tasya-speak';
 import type {Painter} from '../../../../shared/pixel/kits/mas-monitor';
 import {devdayPainter, coldOpenPainter} from '../../../../shared/pixel/kits/monitor-items';
-import {drawPhoneHigh, phoneMini, ORB_CIRCLE_LOOKS} from '../../../../shared/pixel/kits/phone-high';
+import {drawPhoneHigh, phoneMini} from '../../../../shared/pixel/kits/phone-high';
+import {drawOrb} from '../../../../shared/pixel/cast/orb-medium';
 import {spoken, stepOf, heldLerp, drawGagCard, namePlate} from '../act2/kit2';
 import * as M32 from '../../../../shared/pixel/kits/monitor-v32';
 import type {GagCard} from '../act2/kit2';
@@ -50,8 +57,6 @@ const CARD_ORB: GagCard = {x: 470, y: 10, name: 'THE ORB', lines: ["IT'S SEEN TH
 const BOX_X = A3.boxOrbAt(3);
 /** the Orb's looks in the big-monitor two-shot (it sits at his far shoulder, frame left of him; the monitor far right) */
 const SCR = {monitor: [0.86, -0.22] as [number, number], face: [0.95, 0.2] as [number, number]};
-/** a silent viseme track (someone talking on a screen with no words reaching us) */
-const silentLip = (kk: number): Viseme => (['E', 'rest', 'A', 'E', 'rest', 'O', 'rest', 'rest'] as const)[(kk >> 2) % 8];
 /** TASYA's mouth on the lobby clip: lobbyPainter draws his speaking portrait with the rest smile; this lays the take's
  *  viseme over it (only the pixels where the two drawings differ, at the painter's own place: x 12% of the screen, y 10) */
 const withTasyaMouth = (paint: Painter, v: Viseme): Painter => (scr, f) => {
@@ -60,29 +65,27 @@ const withTasyaMouth = (paint: Painter, v: Viseme): Painter => (scr, f) => {
   const jangle = (Math.floor(f / 6) % 2) as 0 | 1;
   const a = tasyaSpeakPortrait({...TASYA_PORTRAIT_DEFAULT, arms: 'ring', mouth: 'smile', brow: 'warm', jangle});
   const b = tasyaSpeakPortrait({...TASYA_PORTRAIT_DEFAULT, arms: 'ring', mouth: v, brow: 'warm', jangle});
-  const tx = Math.round(scr.w * 0.12), ty = 10;
-  for (let j = 40; j < 100; j++) for (let i = 0; i < a.w; i++) { const va = a.c[j * a.w + i], vb = b.c[j * a.w + i]; if (vb >= 0 && va !== vb) scr.set(tx + i, ty + j, vb); }
+  const tx = Math.round(scr.w * 0.12), ty = LOBBY_TOP(scr.h);
+  for (let j = 40; j < 100; j++) for (let i = 0; i < a.w; i++) { const va = a.c[j * a.w + i], vb = b.c[j * a.w + i]; if (vb >= 0 && va !== vb && ty + j >= 0 && ty + j < scr.h) scr.set(tx + i, ty + j, vb); }
 };
+
+/** v3.3 (P10): his browser's tab strip from the order on: Neleh's paper stays open in it */
+const PAPER_TAB = 'DECODING INTENTIONS';
+const tabsOrder = (p: Painter) => M32.withTabs(p, {tabs: [PAPER_TAB, 'LIVE · THE ORDER'], active: 1});
+const tabsPlus = (p: Painter) => M32.withTabs(p, {tabs: [PAPER_TAB, 'chatgtp.plus'], active: 1});
 
 // =================================================================== sc 18 · the Orb arrives
 L.add('v31-18.00', {
-  st: 'ARRIVAL (v3.1) · rooms/darkroom-act3 drawDarkA3 (Act Four\'s dark plate: the desk, the rack\'s blinking LEDs, the cyan key, the glass, the two old marks; MAS at the desk watching; the faded outline of a sphere on the wall, empty) with the monitor lit: kits/monitor-v31 lobbyPainter\'s mini, the landlord\'s slate lobby, its sound low; v3.2 (8.1, "framed legibly"): the cut-in to kits/monitor-v32 drawTallyECU, the desk top close in the monitor\'s light, the two faint old marks (the third comes in Act Four)',
+  st: 'ARRIVAL · v3.3 (P5: v31-18.00b merged in) rooms/darkroom-v31 drawDark2SSCR {orb: null} (the home room with the monitor LARGE at frame right, the desk, the rack\'s LEDs, the glass, the faded sphere outline on the wall, empty; MAS at the desk watching it): the landlord\'s lobby playing softly on it (kits/monitor-v31 lobbyPainter {keyLarge}, no date chip): TASYA hangs the thirteenth key, Atem blue, on his ring in held steps and it hangs LARGE on "welcome" (his lips on "Everyone is welcome.", the take\'s visemes over the painter\'s portrait); KRAM steps into the lobby in the dry OPEN SOURCE hoodie, and his two-part plate KRAM · RUNS ATEM comes up; MACROSOFT WELCOMES ATEM on the monitor\'s own chyron. (The v3.2 tally cut-in gives way: the two faint marks stay on the desk.)',
   enter: {kind: 'dip', frames: 8},
-  draw: (fb, k, sh, f) => {
-    if (k >= 44) { M32.drawTallyECU(fb, f, {n: 2}); shiftRoom(fb, -Math.min(4, Math.floor((k - 44) / 8))); return; } // a whole-pixel drift along the marks
-    A3.drawDarkA3(fb, f, {orb: null, outline: true, mas: {arm: 'rest', look: -1}, plate: {screen: lobbyPainter({key: 0, kram: 0, caption: true, chip: true, f})}});
-  },
-});
-L.add('v31-18.00b', {
-  st: 'kits/monitor-v31 lobbyPainter {keyLarge} [POV] (v3.1; v3.2: the V.O. "thirteen." cut, so the POV sits at its own height): MACROSOFT WELCOMES ATEM · JUL 18 on the news: TASYA (lip-synced on "Everyone is welcome.": the take\'s visemes laid over the painter\'s portrait) hangs a thirteenth key, Atem blue, on his ring in held steps, and it hangs LARGE on "welcome" (8.1); KRAM (mute, OPEN SOURCE on the hoodie) steps into the lobby, and his first-appearance plate comes up: KRAM · RUNS ATEM (one relation word)',
   face: {TASYA: 'lip'},
   marks: {line: ['on', 'v31-a3-0001', 0], hang: ['w', 'v31-a3-0001', 'welcome', 0]},
   draw: (fb, k, sh, f) => {
-    const line = mk(sh, 'line', 57), hang = mk(sh, 'hang', 74);
-    const key = (k < 22 ? 0 : k < hang ? 1 : 2) as 0 | 1 | 2;
-    const kram = (k < 10 ? 0 : k < line - 6 ? 1 : 2) as 0 | 1 | 2;
-    MON.drawMonitorPOV(fb, f, withTasyaMouth(lobbyPainter({key, kram, caption: true, chip: true, f, keyLarge: true}), mouth(sh, k, 'TASYA')));
-    namePlate(fb, k - 14, 'KRAM · RUNS ATEM', 304, 16, PAL.G6);
+    const line = mk(sh, 'line', 33), hang = mk(sh, 'hang', 50);
+    const key = (k < 10 ? 0 : k < hang ? 1 : 2) as 0 | 1 | 2;
+    const kram = (k < 4 ? 0 : k < line - 6 ? 1 : 2) as 0 | 1 | 2;
+    drawDark2SSCR(fb, f, {screen: withTasyaMouth(lobbyPainter({key, kram, caption: true, chip: false, f, keyLarge: true}), mouth(sh, k, 'TASYA')), orb: null, mas: {look: 1}});
+    namePlate(fb, k - 6, 'KRAM · RUNS ATEM', DARK_SCR.screen.x + DARK_SCR.screen.w - 118, DARK_SCR.screen.y + DARK_SCR.screen.h + 12, PAL.G6); // under the bezel, below him
   },
 });
 L.add('18.01', {
@@ -91,7 +94,7 @@ L.add('18.01', {
   draw: (fb, k, sh, f) => {
     const w = mk(sh, 'whir', 59), land = mk(sh, 'land', 89);
     const pos = stepOf(k, [w, w + 9, w + 18, land - 3]) as 0 | 1 | 2 | 3 | 4;
-    A3.drawDarkA3(fb, f, {orb: null, outline: true, box: pos ? {pos} : null, mas: {arm: 'rest', look: k >= w + 8 ? 1 : -1}, plate: {screen: lobbyPainter({key: 2, kram: 2, caption: true, chip: true, f})}});
+    A3.drawDarkA3(fb, f, {orb: null, outline: true, box: pos ? {pos} : null, mas: {arm: 'rest', look: k >= w + 8 ? 1 : -1}, plate: {screen: lobbyPainter({key: 2, kram: 2, caption: true, chip: false, f, keyLarge: true})}});
   },
 });
 L.add('18.02', {
@@ -148,33 +151,29 @@ L.add('18.06', {
 
 // =================================================================== sc 19 · the hands runner
 L.add('19.01', {
-  st: 'rooms/darkroom-act3 drawDarkA3 (later: the box gone): the Orb at home in its outline, its iris flicking from him to the monitor (SIRRAH\'s lectern small on it: kits/monitor-v31 sirrahPainter\'s mini); Mas watching the monitor',
-  draw: (fb, k, sh, f) => { A3.drawDarkA3(fb, f, {orb: {at: 'home', look: k < 12 ? HOME.face : HOME.monitor}, outline: 'filled', mas: {look: -1}, plate: {screen: sirrahPainter({typed: 0})}}); },
+  st: 'rooms/darkroom-act3 drawDarkA3 (later: the box gone): the Orb at home in its outline, its iris flicking from him to the monitor (v3.3: the forum small on it, kits/monitor-v31 runnerPainter\'s mini; the VP clip is cut); Mas watching the monitor',
+  draw: (fb, k, sh, f) => { A3.drawDarkA3(fb, f, {orb: {at: 'home', look: k < 12 ? HOME.face : HOME.monitor}, outline: 'filled', mas: {look: -1}, plate: {screen: runnerPainter({item: 'forum', hands: 0})}}); },
 });
-L.add('v31-19.02', {
-  st: 'kits/monitor-v31 sirrahPainter [POV] (v3.1): JUL 12, SIRRAH at a lectern, the A and I blocks waist-high, talking on the news (a silent mouth: no words reach us); the chyron types on and holds to read',
-  draw: (fb, k, sh, f) => { MON.drawMonitorPOV(fb, f, sirrahPainter({typed: Math.max(0, (k - 4) * 3), mouth: silentLip(k)})); },
-});
-const RUN = {pinky: 46, forum: 100};
 L.add('v31-19.03', {
-  st: 'rooms/darkroom-v31 drawDark2SSCR (v3.1, the hands runner: ONE held room frame, the monitor large at frame right, Mas and the Orb at the desk): the letters item carried on (sirrahPainter); Mas holds up two fingers to the Orb and it whirrs (the first servo); the monitor changes to JUL 21, NEDIB unrolling the PINKY PROMISE (kits/monitor-v31 runnerPainter, the unroll in held steps), Mas\'s pinky up, the Orb rotates (the third servo); SEP 13, the forum, REMUHCS asks the room; Mas\'s hand is already up before every hand goes up on "raised" (NOLE\'s highest); the Orb rises one pixel; v3.2 (the V.O. cut, its job an action): after NOLE\'s "referee" he lowers his hand himself and turns straight to his keys, head down',
-  marks: {o1: ['snd', 'orb_servo', 1, 0], o3: ['snd', 'orb_servo', 3, 0], raised: ['w', 'e1-a3-19-01', 'raised', 0], nole: ['end', 'e1-a3-19-02', 0]},
+  st: 'rooms/darkroom-v31 drawDark2SSCR (the hands runner, v3.3: the forum only; the VP clip and the pinky promise are cut): ONE held room frame, the monitor large at frame right: SEP 13, the forum\'s tiled room, every hand down (kits/monitor-v31 runnerPainter); the Orb whirrs at the monitor (the first servo); at the desk Mas\'s own hand goes up, before anyone\'s, and the Orb turns to it (the second); REMUHCS asks the room and the Orb rises a pixel (the third); every hand goes up at once on "raised" (NOLE\'s highest); after NOLE\'s "referee" he lowers his hand himself and turns straight to his keys, head down',
+  marks: {o1: ['snd', 'orb_servo', 1, 0], o2: ['snd', 'orb_servo', 2, 0], o3: ['snd', 'orb_servo', 3, 0], raised: ['w', 'e1-a3-19-01', 'raised', 0], nole: ['end', 'e1-a3-19-02', 0]},
   draw: (fb, k, sh, f) => {
-    const o1 = mk(sh, 'o1', 19), o3 = mk(sh, 'o3', 72), up = mk(sh, 'raised', 129), nole = mk(sh, 'nole', 222);
+    const o1 = mk(sh, 'o1', 7), o2 = mk(sh, 'o2', 19), o3 = mk(sh, 'o3', 45), up = mk(sh, 'raised', 65), nole = mk(sh, 'nole', 157);
     const low = nole + 3, keys = nole + 11;
-    let screen: Painter, hand: 'two' | 'pinky' | 'up' | 'lower' | null = null, mode: 'whirr' | 'rotate' | 'rise' | 'look' = 'look';
-    if (k < RUN.pinky) { screen = sirrahPainter({typed: 999}); if (k >= o1 - 8) hand = 'two'; if (k >= o1 && k < o1 + 24) mode = 'whirr'; }
-    else if (k < RUN.forum) { screen = runnerPainter({item: 'pinky', unroll: heldLerp(k, RUN.pinky, RUN.pinky + 18, 20, 100, 3) / 100}); if (k >= RUN.pinky + 12) hand = 'pinky'; if (k >= o3 && k < o3 + 24) mode = 'rotate'; }
-    else { screen = runnerPainter({item: 'forum', hands: k >= up ? 1 : 0}); if (k >= up - 14 && k < keys) hand = k >= low ? 'lower' : 'up'; if (k >= up && k < up + 30) mode = 'rise'; }
-    drawDark2SSCR(fb, f, {screen, hand, orb: {mode, look: k >= low ? SCR.face : undefined}, mas: k >= keys ? {head: 'down', look: 0} : {look: 1}});
+    const hand: 'up' | 'lower' | null = k >= o2 - 8 && k < keys ? (k >= low ? 'lower' : 'up') : null;
+    const mode: 'whirr' | 'rotate' | 'rise' | 'look' = k >= o1 && k < o1 + 10 ? 'whirr' : k >= o2 && k < o2 + 20 ? 'rotate' : k >= o3 && k < o3 + 30 ? 'rise' : 'look';
+    drawDark2SSCR(fb, f, {screen: runnerPainter({item: 'forum', hands: k >= up ? 1 : 0}), hand, orb: {mode, look: k >= low ? SCR.face : undefined}, mas: k >= keys ? {head: 'down', look: 0} : {look: 1}});
   },
 });
 
 // =================================================================== sc 20 · the post, and the call
 L.add('20.01', {
-  st: 'kits/mas-monitor drawMonitorOTS + kits/tidder tidderPainter [OTS]: over his shoulder, the TIDDER reply box; he types, in source casing, on the keys',
-  marks: {keys: ['snd', 'synth:keys', 1, 0]},
-  draw: (fb, k, sh, f) => { const kk = mk(sh, 'keys', 12) + 2; MON.drawMonitorOTS(fb, f, tidderPainter({phase: 'typing', typed: Math.floor(clamp((k - kk) * 0.62, 0, TIDDER_POST.length))})); },
+  st: 'kits/mas-monitor drawMonitorOTS + kits/tidder tidderPainter {title, replyBox} [OTS] (v3.3, S1 / P9): over his shoulder onto the monitor, straight from the forum\'s raised hands: a TIDDER thread, t/singularity, its title the crowd\'s invented question ("is it already here? anyone actually know?"), held to read; then he opens the reply box and types his reply into it, in source casing, on the keys',
+  marks: {reply: ['txt', 'TIDDER · reply', 'at', 0], keys: ['snd', 'synth:keys', 1, 0]},
+  draw: (fb, k, sh, f) => {
+    const rb = mk(sh, 'reply', 28), kk = mk(sh, 'keys', 35) + 2;
+    MON.drawMonitorOTS(fb, f, tidderPainter({phase: 'typing', title: true, replyBox: k >= rb, typed: Math.floor(clamp((k - kk) * 0.62, 0, TIDDER_POST.length))}));
+  },
 });
 L.add('20.03', {
   st: 'kits/tidder tidderPainter [POV]: he posts; the reply counter spins, a blur, climbing; the first reply legible, held',
@@ -217,25 +216,23 @@ L.add('v31-20.07', {
   },
 });
 L.add('v31-20.08', {
-  st: 'rooms/darkroom-v31 drawDark2SSCR (v3.1): he reads on, the paper big and soft on the monitor (p. 30); the Orb turns from the page to him and reads him; v3.2 (8.1): kits/monitor-v32 withTabs: he closes the paper\'s tab (its x lit) and the next tab is the president\'s order, live (eoPainter)',
+  st: 'v3.3 (P10, V3: no voice) rooms/darkroom-act3 drawScanMCU (no fan, no toast) [MCU]: his face reading page 30, the page\'s light on it (one face-light step, keyed from the monitor), held about 2 s: the room, nothing on it changes; then he switches tabs, and the light on his face drops a step with the darker page (the paper\'s tab stays in his strip: 21.02 on)',
+  marks: {},
   draw: (fb, k, sh, f) => {
-    const close = 14;
-    const screen = k < close + 3
-      ? M32.withTabs(paperPainter({page: 'p30', thumb: 1}), {tabs: ['DECODING INTENTIONS.pdf', 'LIVE · THE ORDER'], active: 0, closing: k >= close ? 0 : null})
-      : M32.withTabs(eoPainter({copies: 0, pen: 'raised', egg: false}), {tabs: ['LIVE · THE ORDER'], active: 0});
-    drawDark2SSCR(fb, f, {screen, orb: {mode: 'look', look: k < 8 ? SCR.monitor : SCR.face}, mas: {look: 1}});
+    const sw = Math.max(0, sh.e - sh.s - 9);
+    A3.drawScanMCU(fb, f, {mas: {look: 1, mouth: 'rest'}, faceLight: k < sw ? 2 : 1});
   },
 });
 
 // =================================================================== sc 21 · the order, on the monitor
 L.add('21.02', {
-  st: 'kits/eo-signing eoPainter [POV]: NEDIB, pen raised, over an order off both ends of a very big desk (lip-sync); v3.1: ONE cut-paper copy pops up behind the desk on the pop (3 held steps) and speaks (lip-sync); no bezel egg (Neleh\'s paper had its own beat); 21.03 merged: the real one turns to look at it, "When the hell did I say that?", and the stat row updates on the chip: SEEN 1',
+  st: 'kits/eo-signing eoPainter + kits/monitor-v32 withTabs [POV] (v3.3, P10: his tab strip, DECODING INTENTIONS still open beside the live order): NEDIB, pen raised, over an order off both ends of a very big desk (lip-sync); v3.1: ONE cut-paper copy pops up behind the desk on the pop (3 held steps) and speaks (lip-sync); no bezel egg (Neleh\'s paper had its own beat); 21.03 merged: the real one turns to look at it, "When the hell did I say that?", and the stat row updates on the chip: SEEN 1',
   face: {NEDIB: 'lip', DEEPFAKE: 'lip'},
   marks: {p1: ['snd', 'tower_pop', 1, 0], turn: ['beat', '21.03', 0], stat: ['snd', 'post_click--chip', 1, 0]},
   draw: (fb, k, sh, f) => {
     const p1 = mk(sh, 'p1', 187), turn = mk(sh, 'turn', 254), stat = mk(sh, 'stat', 323);
     const copies = (k >= p1 ? 1 : 0) as 0 | 1;
-    MON.drawMonitorPOV(fb, f, eoPainter({copies, pop: copies ? Math.floor((k - p1) / 3) : undefined, pen: 'raised', mouth: talk(mouth(sh, k, 'NEDIB'), 'smile'), copyMouth: talk(mouth(sh, k, 'DEEPFAKE'), 'smile'), turn: k >= turn, stat: k >= stat ? 1 : null, egg: false}));
+    MON.drawMonitorPOV(fb, f, tabsOrder(eoPainter({copies, pop: copies ? Math.floor((k - p1) / 3) : undefined, pen: 'raised', mouth: talk(mouth(sh, k, 'NEDIB'), 'smile'), copyMouth: talk(mouth(sh, k, 'DEEPFAKE'), 'smile'), turn: k >= turn, stat: k >= stat ? 1 : null, egg: false})));
   },
 });
 L.add('21.04', {
@@ -248,8 +245,8 @@ L.add('21.04', {
     const looks: Array<[number, number]> = [k >= ask + 12 ? SCR.face : SCR.monitor, [0.8, 0.12], [0.95, -0.05], [0.95, -0.05]];
     const glance = k >= ask - 4 && k < ask + 30;
     const toastK = k - (o3 + 4);
-    drawDark2SSCR(fb, f, {screen: eoPainter({copies: 1, pen: 'raised', stat: 1}), orb: {mode: 'look', look: looks[o]}, mas: {look: glance ? -1 : 1, mouth: spoken(sh, k, 'MAS')},
-      toasts: toastK >= 0 ? [{s: 'verified: human', k: toastK, x: DARK_SCR.screen.x + EO_SHORT.realX + 30, y: DARK_SCR.screen.y + 3}] : []});
+    drawDark2SSCR(fb, f, {screen: tabsOrder(eoPainter({copies: 1, pen: 'raised', stat: 1})), orb: {mode: 'look', look: looks[o]}, mas: {look: glance ? -1 : 1, mouth: spoken(sh, k, 'MAS')},
+      toasts: toastK >= 0 ? [{s: 'verified: human', k: toastK, x: DARK_SCR.screen.x + EO_SHORT.realX + 30, y: DARK_SCR.screen.y + 15}] : []}); // v3.3: under the tab strip
     shiftRoom(fb, -Math.min(8, Math.floor(k / 12)));
   },
 });
@@ -258,7 +255,7 @@ L.add('21.05', {
   marks: {whip: ['snd', 'paper_whip', 1, 0], claps: ['snd', 'synth:claps', 1, 0]},
   draw: (fb, k, sh, f) => {
     const w = mk(sh, 'whip', 4);
-    MON.drawMonitorPOV(fb, f, eoPainter({copies: 1, pen: 'sign', signK: clamp(Math.floor((k - w) / 3), 0, 5), clap: k >= mk(sh, 'claps', 19), stat: 1, egg: false}));
+    MON.drawMonitorPOV(fb, f, tabsOrder(eoPainter({copies: 1, pen: 'sign', signK: clamp(Math.floor((k - w) / 3), 0, 5), clap: k >= mk(sh, 'claps', 19), stat: 1, egg: false})));
   },
 });
 
@@ -268,7 +265,7 @@ L.add('v32-21.06', {
   draw: (fb, k, sh, f) => {
     const c = mk(sh, 'click', 21);
     const off = k >= c;
-    drawDark2SSCR(fb, f, {screen: eoPainter({copies: 1, pen: 'sign', signK: 5, clap: true, stat: 1, egg: false}), hand: k >= c - 12 && k < c + 10 ? 'switch' : null, off,
+    drawDark2SSCR(fb, f, {screen: tabsOrder(eoPainter({copies: 1, pen: 'sign', signK: 5, clap: true, stat: 1, egg: false})), hand: k >= c - 12 && k < c + 10 ? 'switch' : null, off,
       orb: {mode: 'look', look: k < c + 6 ? SCR.monitor : SCR.face}, mas: {look: 1}});
   },
 });
@@ -317,30 +314,39 @@ L.add('22.03', {
 });
 
 L.add('v32-22.04', {
-  st: 'v3.2, HIS MOVE (pausing the sign-ups; the record, his post\'s first sentence): kits/mas-monitor drawMonitorOTS + kits/monitor-v32 signupPainter [OTS]: a week later, over his shoulder, the CHATGTP Plus sign-up page, its counter\'s drums a smear on the fast ratchet (never a figure); beside him the rack\'s edge (drawRackSlice), its LEDs stepping green, amber, red, one step a beat (launch night\'s heat); he types his post in its box, and it goes up as a card on the post click; SIGN UP greys, then reads NOTIFY ME on the blink',
+  st: 'v3.2, HIS MOVE (pausing the sign-ups; the record, his post\'s first sentence): kits/mas-monitor drawMonitorOTS + kits/monitor-v32 signupPainter [OTS]: a week later, over his shoulder, the CHATGTP Plus sign-up page, its counter\'s drums a smear on the fast ratchet (never a figure); beside him the rack\'s edge (drawRackSlice), its LEDs stepping green, amber, red, one step a beat (launch night\'s heat); he types his post in its box, and it goes up as a card on the post click; v3.3 (P11): once it\'s up it collapses to the post UI\'s compact card at the page\'s head; SIGN UP greys, then reads NOTIFY ME on the blink, and it stays; the counter stops; the paper\'s tab in his strip',
   marks: {spin: ['snd', 'synth:ratchet_fast', 1, 0], post: ['snd', 'post_click', 1, 0], grey: ['snd', 'glyph_blink', 1, 0]},
   draw: (fb, k, sh, f) => {
     const sp = mk(sh, 'spin', 7), post = mk(sh, 'post', 72), grey = mk(sh, 'grey', 93);
     const typed0 = sp + 20, n = M32.POST_PAUSE.text.length;
     const typed = k < typed0 ? null : Math.min(n, Math.floor((k - typed0) * n / Math.max(8, post - 6 - typed0)));
     const btn = (k < grey - 6 ? 0 : k < grey ? 1 : 2) as 0 | 1 | 2;
-    MON.drawMonitorOTS(fb, f, M32.signupPainter({spin: k >= sp ? f : 0, btn, typed, post: k >= post ? k - post : null}));
+    // v3.3 (P11): once it's up and read, his post collapses to the compact card at the page's head; NOTIFY ME stays
+    const col = post + Math.max(10, Math.round((grey - post) * 0.6));
+    MON.drawMonitorOTS(fb, f, tabsPlus(M32.signupPainter({spin: k >= sp && k < grey ? f : 0, btn, typed, post: k >= post ? k - post : null, collapse: k >= col ? k - col : null})));
     M32.drawRackSlice(fb, 432, stepOf(k, [sp + 16, sp + 40]) as 0 | 1 | 2, f);
   },
 });
 
 // =================================================================== sc 23 · catching up (THE CLOCK: one bar a shot)
 L.add('23.01', {st: 'kits/monitor-items coldOpenPainter [POV] (art-a rooms/apec-stage, cropped 1:1): bar 1, the cold open\'s frame on the monitor; we\'ve caught up', draw: (fb, k, sh, f) => { MON.drawMonitorPOV(fb, f, coldOpenPainter()); }});
+/** the Orb at his shoulder, in at the POV frame's right edge: its looks to the reminder's four circles, whole steps */
+const ORB_REMIND: Array<[number, number]> = [[-0.94, -0.33], [-0.93, -0.36], [-0.92, -0.4], [-0.9, -0.44]];
 L.add('23.02', {
-  st: 'kits/phone-high drawPhoneHigh (reminder) [HIGH]: bar 2, the invite he accepted on that stage is a reminder now, Board sync · Fri 12:00, the four circles; the Orb\'s iris steps along them, one a beat, and stops on the black square; v3.1: each circle shows its name on hover as the iris reaches it (ALYI, NELEH, MADA, THE QUIET VOTE); v3.2: each hover card carries the member\'s small call tile over the name (Mada\'s face under his spinner)',
+  st: 'v3.3 (P10) kits/mas-monitor drawMonitorPOV [SCR]: bar 2, his monitor: his own NOTIFY ME page (signupPainter, the post collapsed at its head), the DECODING INTENTIONS tab still in his strip, and the Friday reminder popping up over them (kits/monitor-v32 withReminder: Board sync · Fri 12:00, the four attendee circles); the Orb at his shoulder, in at the frame\'s right edge, steps its iris along them, and each one\'s card shows the member\'s small call tile and name (ALYI, NELEH, MADA, THE QUIET VOTE); it stops on the black square',
   marks: {chip: ['snd', 'post_click--chip', 1, 0]},
-  draw: (fb, k, sh, f) => { const n = Math.min(3, Math.floor(k / 15)) as 0 | 1 | 2 | 3; const lit = k >= mk(sh, 'chip', 3); drawPhoneHigh(fb, f, {screen: lit ? 'reminder' : 'dark', orb: ORB_CIRCLE_LOOKS[n], hover: lit ? n : null, avatars: true}); },
+  draw: (fb, k, sh, f) => {
+    const c = mk(sh, 'chip', 3);
+    const n = k < c + 6 ? null : (Math.min(3, Math.floor((k - c - 6) / 11)) as 0 | 1 | 2 | 3);
+    MON.drawMonitorPOV(fb, f, tabsPlus(M32.withReminder(M32.signupPainter({spin: 0, btn: 2, post: 99, collapse: 99}), {k: k - c, hover: n})));
+    drawOrb(fb, 454, 150, 26, {look: ORB_REMIND[n ?? 0], aperture: 0.55, monitor: -1});
+  },
 });
 L.add('23.03', {
-  st: 'rooms/darkroom-act3 drawDarkA3: bar 3, the rail rolls past midnight to NOV 17 (the host\'s band); Mas looks down at the rail itself, then back up; the reminder on the desk goes dark on its own; the cold open\'s frame on the monitor',
+  st: 'rooms/darkroom-act3 drawDarkA3: bar 3, the rail rolls past midnight to NOV 17 (the host\'s band); Mas looks down at the rail itself, then back up; v3.3: the reminder on his monitor (over his NOTIFY ME page) goes dark on its own; the phone on the desk is dark',
   draw: (fb, k, sh, f) => {
-    A3.drawDarkA3(fb, f, {orb: {at: 'shoulder', look: DPLATE_LOOK.phone}, outline: true, mas: {head: k >= 25 && k < 41 ? 'down' : '34', look: -1},
-      plate: {phone: 'up', phoneScreen: phoneMini(k < 46 ? 'reminder' : 'off'), screen: coldOpenPainter()}});
+    A3.drawDarkA3(fb, f, {orb: {at: 'shoulder', look: DPLATE_LOOK.face}, outline: true, mas: {head: k >= 25 && k < 41 ? 'down' : '34', look: -1},
+      plate: {phone: 'up', phoneScreen: phoneMini('off'), screen: tabsPlus(M32.withReminder(M32.signupPainter({spin: 0, btn: 2, post: 99, collapse: 99}), {k: k < 46 ? 99 : -1}))}});
   },
 });
 L.add('23.04', {st: 'BLACK · bar 4 (ACT-OUT 2): THE CLOCK stops on the downbeat', draw: (fb) => { rect(0, 0, 480, RH, fb.ink(PAL.N0)); return {noVo: true}; }});
@@ -350,5 +356,5 @@ export const SEGMENT = defineSegment({
   lock: LOCK,
   layouts: L.all,
   options: {badge: false, vo: 'typed', voLowercase: true, subs: 'off', standin: 'stick'},
-  review: {title: 'MR. MAS · EP1 · ACT THREE', subtitle: 'PIXEL v3.2 · LOCK act3 (THE v3.2 STICK LOCK)', durNote: 'AS THE STICK LOCK', soundLabel: 'SOUND · TEMP TRACK = THE v3.2 STICK MIX'},
+  review: {title: 'MR. MAS · EP1 · ACT THREE', subtitle: 'PIXEL v3.3 · LOCK act3 (THE v3.3 STICK LOCK)', durNote: 'AS THE STICK LOCK', soundLabel: 'SOUND · TEMP TRACK = THE v3.3 STICK MIX'},
 });

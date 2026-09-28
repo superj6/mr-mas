@@ -6,6 +6,10 @@
 // periwinkle F / N8 / G6 ramp), a stone parapet, the city's tops far below in haze; a white tablecloth.
 //
 // Entry points (each paints rows 0..202 of `b`; deterministic on its state):
+//   v3.3 (P8, opt-in `chipLine`; the `v3-shots-act2-act3` pass): 17.11's act-out is the chip-maker's price lifting off
+//                                the register's flag window as a line (the intro's curve: flat, then straight up), its
+//                                head running up and off the top of the frame in whole-pixel steps, its tail following
+//                                it out, so the sky is left empty (drawChipLine; `head` / `tail` 0..1 along the path)
 //   drawRooftopWide(b, f, st)    [W] (17.01, 17.03, 17.04, 17.11): `signers` who is at the table (the queue from the
 //                                right, each signing in turn), `register` its roll-in position 0 (off) .. 1 (stopped at
 //                                Nesnej), `crack` 0..1 its whole-pixel run L -> R (12 frames), `look` who looks up
@@ -128,11 +132,15 @@ export interface RooftopWideState {
   crack?: number;
   /** who has looked up at the crack */
   look?: {nesnej?: boolean; mario?: boolean; mas?: 'up' | 'glass'};
+  /** v3.3 (P8): the chip-maker's line, drawn over the sky between `tail` and `head` (0..1 along its path) */
+  chipLine?: {head: number; tail?: number} | null;
 }
 export const drawRooftopWide = (b: Buf, f: number, st: RooftopWideState = {}) => {
   const sky = paintSky();
   b.c.set(sky.c.subarray(0, 480 * RH));
   if (st.crack) drawCrack(b, st.crack);
+  // v3.3: the chip line over the sky, behind everyone (Nesnej stands in front of it; the register covers its start)
+  if (st.chipLine) drawChipLine(b, st.chipLine.head, st.chipLine.tail ?? 0, f);
   const clipT = (_x: number, y: number) => y < ROOF.table.top + 1;
   // the queue and the signer at the sheet (behind the table, facing us: 3/4 to camera-left, toward the sheet)
   for (const s of st.signers ?? []) {
@@ -164,6 +172,32 @@ export const drawRooftopWide = (b: Buf, f: number, st: RooftopWideState = {}) =>
     const x = Math.round(520 - (520 - ROOF.regStop) * clamp(st.register, 0, 1));
     drawRegisterRoom(b, x, ROOF.signFoot + 24, {roll: st.register < 1 ? Math.floor(f / 2) : 0, flags: st.nesnej?.arm === 'key'});
   }
+};
+
+// ------------------------------------------------------------------ v3.3 (P8): the chip-maker's line leaves the frame
+/** the path from the register's flag window (its figure) up off the top of the frame: the intro's curve, flat then
+ *  vertical (y falls as e^(4s)), one entry per pixel, 8-connected */
+const CHIP_PATH: Array<[number, number]> = (() => {
+  const x0 = ROOF.regStop + 22, y0 = ROOF.signFoot + 24 - 42 + 4; // the flag window's centre (kits/register REG_ROOM)
+  const out: Array<[number, number]> = [];
+  let last = '';
+  for (let i = 0; i <= 4000; i++) {
+    const sv = i / 4000, x = Math.round(x0 + 58 * sv), y = Math.round(y0 - ((Math.exp(4 * sv) - 1) / (Math.exp(4) - 1)) * (y0 + 24));
+    const key = x + ',' + y;
+    if (key !== last) { out.push([x, y]); last = key; }
+  }
+  return out;
+})();
+/** the line between `tail` and `head` (fractions of the path): a white core, the cyan glow either side, a bright spark at
+ *  its head (the intro's "you are here" dot) while the head is in frame */
+export const drawChipLine = (b: Buf, head: number, tail = 0, f = 0) => {
+  const n = CHIP_PATH.length;
+  const h = Math.round(clamp(head, 0, 1) * (n - 1)), t = Math.round(clamp(tail, 0, 1) * (n - 1));
+  if (h <= t) return;
+  const put = (x: number, y: number, c: number) => { if (x >= 0 && x < 480 && y >= 0 && y < RH) b.set(x, y, c); };
+  for (let i = t; i <= h; i++) { const [x, y] = CHIP_PATH[i]; put(x - 1, y, PAL.C6); put(x + 1, y, PAL.C6); put(x, y + 1, PAL.C5); }
+  for (let i = t; i <= h; i++) { const [x, y] = CHIP_PATH[i]; put(x, y, PAL.W9); }
+  if (head < 1) { const [x, y] = CHIP_PATH[h]; for (const [dx, dy] of [[0, 0], [1, 0], [0, 1], [1, 1]]) put(x + dx, y + dy, PAL.W9); put(x - 1, y - 1, f % 4 < 2 ? PAL.C8 : PAL.C7); put(x + 2, y + 2, PAL.C7); }
 };
 
 // ------------------------------------------------------------------ the two-shot at the sheet (17.02, 17.05)

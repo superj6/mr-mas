@@ -4,7 +4,9 @@
 //   lobbyPainter(st)    v31-18.00 / 18.00b: the landlord's lobby in slate blue, on the news: TASYA with his key ring
 //                       (`key` 0 twelve keys · 1 the thirteenth in his fingers · 2 hung, Atem blue), KRAM stepping in
 //                       (`kram` 0 · 1 · 2) in a hoodie printed OPEN SOURCE; the monitor's own caption `MACROSOFT WELCOMES
-//                       ATEM` and its date chip `JUL 18` (the rail stays out)
+//                       ATEM` and its date chip `JUL 18` (the rail stays out); v3.3 (P5; the `v3-shots-act2-act3` pass): on the
+//                       big-monitor two-shot's screen (216 x 120, `H` < 150) the two are framed higher so the ring, the
+//                       thirteenth key and Kram's OPEN SOURCE all clear the chyron (LOBBY_TOP gives the portrait's top)
 //   sirrahPainter(st)   v31-19.02: SIRRAH at a lectern, the A and I blocks waist-high, the news chyron typing on
 //                       (`typed` characters): `VP SIRRAH: "AI is kind of a fancy thing. First of all, it's two letters."`,
 //                       chip `JUL 12`
@@ -82,6 +84,8 @@ const bigBlueKey = (b: Buf, x: number, y: number) => {
   rect(bx - 2, y + 40, 5, 1, b.ink(O));
   b.set(bx - 5, by - 3, PAL.P2); b.set(bx - 1, y + 18, PAL.P2); // the glints
 };
+/** v3.3: the portrait's top on a screen of height `h` (the two-shot's short screen frames him higher) */
+export const LOBBY_TOP = (h: number) => (h < 150 ? -14 : 10);
 export const lobbyPainter = (st: LobbyV31State): Painter => (scr, f) => {
   const W = scr.w, H = scr.h;
   if (isMini(scr)) {
@@ -94,7 +98,7 @@ export const lobbyPainter = (st: LobbyV31State): Painter => (scr, f) => {
   }
   slateLobby(scr);
   // TASYA left, his speaking portrait (the slate room is his own light), the key ring up; the thirteenth key
-  const tx = Math.round(W * 0.12), ty = 10;
+  const tx = Math.round(W * 0.12), ty = LOBBY_TOP(H);
   // his speaking portrait straight onto the lobby (its own tile background left out: the lobby is his slate), the ring
   const jangle = (Math.floor((st.f ?? f) / 6) % 2) as 0 | 1;
   const inScr = (X: number, Y: number) => X >= 0 && Y >= 0 && X < W && Y < H;
@@ -106,7 +110,7 @@ export const lobbyPainter = (st: LobbyV31State): Painter => (scr, f) => {
   if (st.key === 2 && st.keyLarge) bigBlueKey(scr, rcx - 6, rcy + 10);
   // KRAM steps into the lobby, frame right, facing her (the civic busts' own 3/4 view: never flipped, the hoodie's
   // words would mirror): his bust in the slate light, the words legible
-  if (st.kram) putBustCut(scr, kramBust({...KRAM_BUST_DEFAULT}), Math.round(W * (st.kram === 1 ? 0.66 : 0.56)), 18, H);
+  if (st.kram) putBustCut(scr, kramBust({...KRAM_BUST_DEFAULT}), Math.round(W * (st.kram === 1 ? 0.66 : 0.56)), H < 150 ? -30 : 18, H);
   if (st.chip !== false) chip(scr, 'JUL 18');
   if (st.caption !== false) chyron(scr, 'MACROSOFT WELCOMES ATEM', 999, PAL.N7);
 };

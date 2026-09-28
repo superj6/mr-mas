@@ -1,6 +1,6 @@
 # Ep1 v3: the ElevenLabs voice pass (`v3-voices-el`, track A4, 2026-09-27)
 
-> **Status: PHASE 5 DONE: THE v3.2 LOCK IN ELEVENLABS.** Every line of the final v3.2 lock (commit fc46cac) has an EL take, with Mas as Jeremy. There is an EL-timed copy of the v3.2 lock (`show/reel/ep01-v32-el/`, key `ep01-v32-el-stick`) with beds, ready to render. No reel was made this time (the lead's call: disk and time). That's §W, directly below. v3.1 is §V, the Mas recast §R, phase 2 (the v3 lock) §P1–§P9, and phase 1 (the casting and the sample) §1–§8. Where phase 2 describes Mas, it describes Giovanni.
+> **Status: PHASE 6 DONE: THE v3.3 LOCK IN ELEVENLABS.** Every line of the final v3.3 lock (commit a756708) has an EL take, with Mas as Jeremy. There is an EL-timed copy of it (`show/reel/ep01-v33-el/`, key `ep01-v33-el-stick`) with beds, ready to render. No reel was made. That's §X, directly below. v3.2 is §W, v3.1 §V, the Mas recast §R, phase 2 (the v3 lock) §P1–§P9, and phase 1 (the casting and the sample) §1–§8. Where phase 2 describes Mas, it describes Giovanni.
 >
 > **Nobody has listened to any of this.** Every statement below is a measurement: duration, pace, pitch, silence at the head and tail, loudness, and what a speech recogniser heard. Whether a voice is natural, funny, or right for the character is still a call for an ear.
 >
@@ -21,6 +21,72 @@
 - **Characters:** 10,054 sent and **5,522 billed**, against the 25,000 budget. The subscription went from 0 to 5,522 of 131,000.
 - **Model:** `eleven_multilingual_v2` for everyone. I tested `eleven_v3` and didn't use it (§6).
 - **Decisions for you:** listed in §8.
+
+---
+
+## X. Phase 6: the v3.3 polish (2026-09-28)
+
+**The brief:** script draft 8.2 (`script-v33-notes.md`, PLAN.md §6).
+- The two restored V.O. lines, V1 "it does." (9.09) and V2 "he's not wrong." (13.09).
+- The employee's new line, v33-a4-0001.
+- Tasya's last sentence as a clip on the bullpen TV, v33-a4-0002.
+- Then the EL-timed v3.3 lock, with no reel.
+
+**In short:**
+- **Characters:** 78 sent and **43 billed**. The subscription went from 14,085 to 14,128 of 131,000.
+- **The EL-timed v3.3 story runs 20:29.6** (29,510 frames) against the Kokoro lock's 20:29.3 (29,503; +0.35 s).
+
+### X1. The four lines
+
+| Line | How | Measured |
+|---|---|---|
+| **v3-vo-09** "it does." (9.09) | **reused**: Jeremy's take from the recast (phase 3), −18 LUFS | 0.78 s (Kokoro 0.79) |
+| **v3-vo-12** "he's not wrong." (13.09) | **reused**: Jeremy's take from the recast | 1.19 s (Kokoro 1.12) |
+| **v33-a4-0001**, the employee: "Everyone's packed. Whatever happens to this place, Mas, don't worry about us." | **new read** in her EL voice, Avery (candidate A, speed 0.95; in the room, dry). The only paid line | 4.75 s audible (Kokoro 4.12); 162 Hz, in her 135–175 lane; −16.0 LUFS; true peak −1.85 dBTP; no clipped tail; ASR reads it back verbatim ("Moss" for Mas, as always) |
+| **v33-a4-0002**, Tasya (TV): "…We are below them, above them, around them." | **cut** from her EL take v3-a4-0003 (words 10–17, the lock's own cut; `el_cut.py --lock v33`), then a copy of the house `tv_speaker()` chain (HPF 150 Hz, LPF 6.5 kHz, +2 dB at 1.2 kHz, 2.5:1), levelled to −16 LUFS, as `.tv.wav`. The "IP rights" sentence is dropped | 3.50 s (Kokoro 3.86); ASR "We are below them, above them, around them." |
+
+- `elaudio.py` has the `tv` chain.
+- `el_render.py` detects `device: tv` (fastrec's v3.3 rows).
+- `el_cut.py` makes a device copy from the dry cut when the lock puts a cut on a device its source never had.
+- Every other v3.3 line sends exactly what its earlier EL take sent (checked line by line), so nothing else was read. The v3.1 and v3.2 cuts are cut again from the EL takes.
+
+### X2. The EL-timed v3.3 lock
+
+- **The files:** `show/reel/ep01-v33-el/ep01-v33-el-<seg>.json` and `ep01-v33-el.manifest.json` (key `ep01-v33-el-stick`; the studio shows `reel-ep01-v33-el`).
+- **The build:** `tools/el_lock.py --lock v33`, with the rules of §P3 and §V2.
+- **J-cuts:** all six leads are kept (5.03 −0.5, 7.01 −0.6, 12.02 −0.5, S3.06 −0.6, S5.11 −0.8, S8.08 −1.0 s).
+- **The Runway frames:** S7.13 264, 32.01 62, and v31-32.01d 233 from frame 62, counted with the renderer's rounding.
+- **The lock builder's notes:**
+  - **S7.02b keeps its 1.35 s hold** after "…around them.": the beat changes only by the take (5.71 → 5.35 s).
+  - **Names carried across merged beats** follow the words through each beat's clock.
+  - **The restored V.O.** plays Jeremy's takes.
+  - Nothing failed to apply: no missing takes, no flags.
+
+| Segment | Kokoro v3.3 (frames) | **EL-timed** | Frames | Change |
+|---|---|---|---|---|
+| Cold open | 0:26.7 (640) | **0:24.3** | **583** | −2.4 s |
+| Act One | 5:30.6 (7,934) | **5:35.8** | **8,059** | +5.2 s |
+| Act Two | 3:10.6 (4,573) | **3:00.8** | **4,340** | −9.7 s |
+| Act Three | 2:13.4 (3,202) | **2:09.8** | **3,114** | −3.7 s |
+| Act Four | 8:25.7 (12,138) | **8:36.6** | **12,398** | +10.9 s |
+| Tag | 0:42.3 (1,016) | **0:42.3** | **1,016** | 0.0 s |
+| **Story** | **20:29.3 (29,503)** | **20:29.6** | **29,510** | **+0.35 s** |
+
+- **The beat moves:**
+  - 9.09: "it does." at 3.05 s (Kokoro 2.75: the collar line before it is longer).
+  - 13.09: "he's not wrong." at 9.83 s (Kokoro 12.47: Radnus's two EL takes are 2.4 s shorter). The gap before it is the lock's.
+  - S7.02: +0.63 s, the employee's take.
+- **The beds** are built (`tools/el_bed.py --lock v33`, the v3.3 lock's own `bed.py`, `audio/reel/ep01-v33-el/`; all sounds resolved). The card is the lock's own.
+- **The manifest validates:** `--plan` gives 21:14.7 (30,593 frames), all 234 takes, 7 beds, and no warnings.
+- **The reel,** when wanted (about 8 minutes of wall, about 0.7 GB):
+
+```sh
+bash ops/heavy.sh bash audio/ep01/v3-el/tools/render_v33.sh                     # the takes (free now: all cached)
+audio/.venv-casting/bin/python audio/ep01/v3-el/tools/el_lock.py --lock v33
+bash ops/heavy.sh audio/.venv-casting/bin/python audio/ep01/v3-el/tools/el_bed.py --lock v33
+audio/.venv-casting/bin/python audio/ep01/v3-el/tools/el_lock.py --lock v33 --beds audio/reel/ep01-v33-el/beds.json
+cd studio && bash ../ops/heavy.sh node src/reel/tools/episode.mjs ../show/reel/ep01-v33-el/ep01-v33-el.manifest.json --jobs 2 --conc 4
+```
 
 ---
 

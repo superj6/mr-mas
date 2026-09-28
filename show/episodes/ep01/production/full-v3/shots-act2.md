@@ -2,11 +2,11 @@
 
 | | |
 |---|---|
-| **What this is** | The record of Act Two's pixel layouts on the stick lock: every shot, what it's built from, what's new, the checks, how to re-render it, and what's weakest. **Now on the v3.2 lock: [§9](#9-v32-the-v32-lock-script-draft-81) is current**; §8 is the v3.1 round and §1–§7 the v3 pass, kept for the record. |
-| **Who, when** | The `v3-shots-act2-act3` pass (track P2 of [PLAN.md](PLAN.md)), 2026-09-27; the v3.2 round 2026-09-28. Nothing was committed: the lead commits. |
+| **What this is** | The record of Act Two's pixel layouts on the stick lock: every shot, what it's built from, what's new, the checks, how to re-render it, and what's weakest. **Now on the v3.3 lock: [§10](#10-v33-the-v33-lock-script-draft-82-a-polish) is current**; §9 is the v3.2 round, §8 the v3.1 round and §1–§7 the v3 pass, kept for the record. |
+| **Who, when** | The `v3-shots-act2-act3` pass (track P2 of [PLAN.md](PLAN.md)), 2026-09-27; the v3.2 and v3.3 rounds 2026-09-28. Nothing was committed: the lead commits. |
 | **The files** | Layouts: `studio/src/episodes/ep01/pixel/act2/shots.ts`. Helpers shared with Act Three: `act2/kit2.ts`. New art: `act2/art/radnus-bust.ts`. The lock: `act2/data.ts` and [lock/act2.json](lock/act2.json). |
-| **The picture** | **v3.2:** `out/ep01/full-v3/picture/act2.mp4` (1920 × 1080, 24 fps, H.264 + AAC, **3:13.04, 4,633 frames**, 14.9 MB), muxed with the v3.2 stick mix (`act2-v32-stick-mix.wav`); see §9.4. The v3.1 render it replaced was `out/ep01/full-v3/picture/act2.mp4` (1920 × 1080, 24 fps, H.264 + AAC, **3:21.25, 4,830 frames**, 15.3 MB; rendered in 33 s on 2 workers), muxed with the v3.1 stick mix as temp audio (`out/ep01/full-v3/picture/act2-v31-stick-mix.wav`). (The v3 render it replaced ran 3:24.75, 4,914 frames, on `act2-stick-mix.wav`.) Beside it: `act2.srt`, `act2.mp4.render.json` and the contact sheet `act2-sheet.png` (one still per shot, each shot's middle frame). |
-| **Measured** | v3.2: 39 of 39 shots have a layout, 0 stand-ins, `check` and `tsc` clean, the flash check passes (§9.4). v3: 43 of 43 shots have a layout; 0 stand-ins; `check` passes; `tsc` over both segments prints nothing; the flash check passes (§4). |
+| **The picture** | **v3.3:** `out/ep01/full-v3/picture/act2.mp4` (1920 × 1080, 24 fps, H.264 + AAC, **3:10.54, 4,573 frames**, 14.7 MB), muxed with the v3.3 temp track (`act2-v33-stick-mix.wav`); see §10.4. It replaced v3.2's (3:13.04, 4,633 frames). Before that, the v3.1 render was `out/ep01/full-v3/picture/act2.mp4` (1920 × 1080, 24 fps, H.264 + AAC, **3:21.25, 4,830 frames**, 15.3 MB; rendered in 33 s on 2 workers), muxed with the v3.1 stick mix as temp audio (`out/ep01/full-v3/picture/act2-v31-stick-mix.wav`). (The v3 render it replaced ran 3:24.75, 4,914 frames, on `act2-stick-mix.wav`.) Beside it: `act2.srt`, `act2.mp4.render.json` and the contact sheet `act2-sheet.png` (one still per shot, each shot's middle frame). |
+| **Measured** | v3.3: 38 of 38 shots have a layout, 0 stand-ins, `check` and `tsc` clean, it builds on the v3.3 EL lock, and `flashcheck.py` passes (§10.4). v3.2: 39 of 39 shots have a layout, 0 stand-ins, `check` and `tsc` clean, the flash check passes (§9.4). v3: 43 of 43 shots have a layout; 0 stand-ins; `check` passes; `tsc` over both segments prints nothing; the flash check passes (§4). |
 | **Needs a person** | Nothing here has been watched in motion or heard. I looked at the contact sheet and at about 90 sampled native frames (every arrival, every V.O. frame, the dialogue shots, every freeze and card), and fixed what didn't read to me (§5). That's one reader's look at stills. |
 
 ---
@@ -318,3 +318,76 @@ python3 studio/src/episodes/ep01/pixel/tools/lock.py --seg act2 --timeline show/
 3. **16.01:** the walk-back post and his stamping arm overlap for a few frames. The card stays up until UN-CANCELLED plus 16 f.
 4. **13.01's settle** is small at the wide's scale, where the figures are about 20 px tall. Whether "he's already in the seat" reads needs a person to watch it.
 5. **17.12's face on the water** is small, as the art notes. If it doesn't read in motion, the art's fallback is the cut.
+
+## 10. v3.3: the v3.3 lock (script draft 8.2, a polish)
+
+**The brief** (the coordinator, 2026-09-28; [PLAN.md](PLAN.md) §6, binding; [script-v33-notes.md](script-v33-notes.md) §2, §3.1, §3.3; [lock-v33.md](lock-v33.md)):
+- re-lock on `show/reel/ep01-v33/ep01-v33-act2.json` (committed a756708);
+- the changes:
+  - **V2** (13.09): his lips stay still on the restored V.O.;
+  - **P6** (14.01): the clip is unmistakably a generic news anchor at a desk, with a blank lower third; it is not the senator, and no real person is drawn;
+  - **P7** (17.10): the order is in Mario's hand, held 0.5 s longer;
+  - **P8** (17.11–17.13): the glass is cut, and the act ends on the chip-maker's line climbing off the frame;
+  - **P14:** plates of at most two parts;
+- small art goes in the existing modules, in art-b's conventions;
+- render through `ops/heavy.sh`;
+- run `flashcheck.py`;
+- the segment must build from the EL lock too;
+- delete scratch.
+
+### 10.1 The lock
+
+No stick reel was rendered for v3.3 (disk). The temp track is the reel's own mixer run on the lock pass's render plan, through `ops/heavy.sh` (9.7 s; −16.6 LUFS, 0 missing). The command, from `studio/`, is `node src/reel/tools/mixer.mjs out/reel-work/ep01-v33-stick/plan.json <scratch>/ep01-v33-mix.wav --work <scratch>`. Act Two's chapter was sliced from reel frame 9,414 for 4,573 frames × 2,000 samples into `out/ep01/full-v3/picture/act2-v33-stick-mix.wav`. The full mix was then deleted.
+
+```sh
+python3 studio/src/episodes/ep01/pixel/tools/lock.py --seg act2 --timeline show/reel/ep01-v33/ep01-v33-act2.json \
+    --takes audio/ep01/act2/dialogue/lines-fast-v2.json --takes audio/ep01/v3/act2/lines-v3.json \
+    --takes audio/ep01/v31/act2/lines-v31.json --takes audio/ep01/v32/act2/lines-v32.json \
+    --mix out/ep01/full-v3/picture/act2-v33-stick-mix.wav --mix-offset 0
+```
+
+- **Result:** 38 shots from 45 beats, 4,573 frames (3:10.54). 39 lines, one of them V.O. ("he's not wrong."), every one with a take. Every check is `ok`.
+
+### 10.2 What changed, shot by shot
+
+| Shot | v3.3 |
+|---|---|
+| 13.09 | **V2:** "he's not wrong." (V.O., v3-vo-12) is back between the courtesy and the knife. His eyes leave Radnus as the courtesy ends (a new `thought` mark on the V.O.'s start caps it) and stay off through the thought, with his mouth shut (`spoken`). They come back 4 f before "how's the dancing?". |
+| 14.01 | **P6, as the script notes decided (§3.1): not the senator.** `drawBridgeOTS {anchorDesk}`: the clip is a generic news anchor seated behind a desk.<br>- **The set:** two lit panels and a deep blue wall.<br>- **The desk:** glossy, with a lit front edge and a sheet of copy under her hands.<br>- **The lower third:** blank (a red accent tab and a pale band, no words, no ticker).<br>- **Unchanged:** the anchor sprite (invented, dark hair, slate blazer), her late mouth and the scrub are as before. Nobody real is drawn. |
+| 17.10 | **P7:** `drawPurchaseOrder {mario}`, 3.0 s (the lock's +0.5).<br>- **His hand:** Mario's ink-blue fleece sleeve (ribbed cuff, soft folds, the nap) runs up and out of frame at the lower left.<br>- **His footnote:** a short ink line on the order, its glint stepping along the last strokes (still wet).<br>- **His appendix:** the scroll's rolled end lies at the frame's right edge.<br>- **Mas:** his hand is half out beside it, open and empty, in his grey sleeve. |
+| 17.11 | **P8, the act-out** (the crack is gone with the glass). `drawRooftopWide {chipLine}`:<br>- The register's figure lifts off its flag window as a line. It's the intro's curve: a white core, the cyan glow and a spark at its head, flat and then straight up.<br>- The line climbs in 2-frame held steps behind Nesnej, and its head is off the top of the frame by 40 % of the shot. Its tail follows it out by 52 %.<br>- Nesnej looks up first, then Mario (who writes it down), then Mas, last.<br>- Then the frame tilts up in held steps (3 px every 2 f, to 36 px) and holds about 1 s on the empty sky. |
+| 17.12 | cut (the glass) |
+| 17.13 | unchanged: the black on the bell's tail. Act Three's room leading 0.6 s under it is a sound (lock-v33 §3). |
+| unchanged (retimed by the lock only) | everything else |
+
+**The new art** is small, opt-in and drawn in the existing modules, in art-b's conventions:
+- `rooms/bay-bridge.ts`: `drawNewsClip {desk}`, `drawBridgeOTS {anchorDesk}`;
+- `kits/register.ts`: `drawPurchaseOrder {mario}`;
+- `rooms/rooftop.ts`: `drawChipLine`, `drawRooftopWide {chipLine}`.
+
+Each module's header notes its v3.3 lines, and nothing that was there changed when the option is off.
+
+### 10.3 Plates (P14)
+
+Act Two has no three-part plate. `LAHTNEMULB · CHAIRMAN` is its one first-appearance plate. The gag cards (Sirrah, Nedib, Sucram, Nesnej) are unchanged, as the script notes keep them.
+
+### 10.4 Checks (v3.3)
+
+| Check | Result |
+|---|---|
+| `node r-act2.cjs check` | 38 layouts for 38 shots, 0 stand-ins, 0 notes, 0 problems; 4,573 frames |
+| `tsc` (both segments and everything they import) | prints nothing |
+| **The EL lock** | `show/reel/ep01-v33-el/ep01-v33-el-act2.json`, locked into scratch (lock.py `--out-ts`), then built with the assembly's `build_el.mjs` redirect and checked.<br>- **Result:** 38 layouts for 38 shots, 4,340 frames, 0 stand-ins, 0 problems; the only note is the missing temp track.<br>- **Caveat:** the test lock used the Kokoro takes, so its one take-bounds check failed (e1-a2-13-01). The assembly pass's EL takes (`el_takes.py --lock v33`) will carry the real ones. |
+| **Flash check** (`coldopen/tools/flashcheck.py`) | **Worst: 1 flash in any second; red 0. Passes.** The largest mean-luminance step is 0.277 at frame 4,377 (the cut to the order). This pass's own per-frame audit agrees: 1 flash worst, red 0. |
+| Longest still runs | 15.07 40 f, 14.06 32 f (the black match cut), 13.07 30 f, 15.15 30 f, 17.01 26 f, 17.11 25 f (the empty sky's hold, deliberate) |
+| Looked at | about 25 native stills (13.09 on the V.O. and on the knife; 14.01's anchor at 4×; 17.10; 17.11 at each step of the line and at the tilt) and the contact sheet |
+
+**The picture:** `out/ep01/full-v3/picture/act2.mp4`: 1920 × 1080, 24 fps, H.264 + AAC, **3:10.54, 4,573 frames**, 14.7 MB, rendered in 26 s on 2 workers. It's muxed with the v3.3 temp track (`act2-v33-stick-mix.wav`). Beside it: `act2.srt`, `act2.mp4.render.json` and `act2-sheet.png`.
+
+**Disk:** the v3, v3.1 and v3.2 temp slices (`act2-*stick-mix.wav`, git-ignored, this pass's own) were deleted, and so was this pass's scratch.
+
+### 10.5 Weakest in v3.3, and what I judged
+
+1. **17.11's line is compact.** It rises at the frame's right edge, where the register stands, so its flat run is short before it turns up. Whether it reads as the intro's curve (the act's out) rather than a stock chart needs a person to watch it (the script notes, §8 item 7).
+2. **14.01's anchor is small on the phone** (the clip is 112 px wide). The desk and the blank bar carry "anchor" at 1×.
+3. **17.10: Mas's empty hand** is a plain drawing (a flat open hand). Mario's sleeve carries the beat.

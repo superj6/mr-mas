@@ -2,11 +2,11 @@
 
 | | |
 |---|---|
-| **What this is** | The record of Act Three's pixel layouts on the stick lock: every shot, what it's built from, what's new, the checks, how to re-render it, and what's weakest. **Now on the v3.2 lock: [§9](#9-v32-the-v32-lock-script-draft-81) is current**; §8 is the v3.1 round and §1–§7 the v3 pass, kept for the record. |
-| **Who, when** | The `v3-shots-act2-act3` pass (track P2 of [PLAN.md](PLAN.md)), 2026-09-27; the v3.2 round 2026-09-28. Nothing was committed: the lead commits. |
+| **What this is** | The record of Act Three's pixel layouts on the stick lock: every shot, what it's built from, what's new, the checks, how to re-render it, and what's weakest. **Now on the v3.3 lock: [§10](#10-v33-the-v33-lock-script-draft-82-a-polish) is current**; §9 is the v3.2 round, §8 the v3.1 round and §1–§7 the v3 pass, kept for the record. |
+| **Who, when** | The `v3-shots-act2-act3` pass (track P2 of [PLAN.md](PLAN.md)), 2026-09-27; the v3.2 and v3.3 rounds 2026-09-28. Nothing was committed: the lead commits. |
 | **The files** | Layouts: `studio/src/episodes/ep01/pixel/act3/shots.ts`. It uses the helpers in `act2/kit2.ts`. The lock: `act3/data.ts` and [lock/act3.json](lock/act3.json). |
-| **The picture** | **v3.2:** `out/ep01/full-v3/picture/act3.mp4` (1920 × 1080, 24 fps, H.264 + AAC, **2:22.42, 3,418 frames**, 11.7 MB), muxed with the v3.2 stick mix (`act3-v32-stick-mix.wav`); see §9.4. The v3.1 render it replaced was `out/ep01/full-v3/picture/act3.mp4` (1920 × 1080, 24 fps, H.264 + AAC, **2:25.13, 3,483 frames**, 11.9 MB; rendered in 31 s on 2 workers), muxed with the v3.1 stick mix as temp audio (`out/ep01/full-v3/picture/act3-v31-stick-mix.wav`). (The v3 render it replaced ran 2:08.04, 3,073 frames.) Beside it: `act3.srt`, `act3.mp4.render.json` and the contact sheet `act3-sheet.png`. The 5 GLYPH frames are the Remotion host's, spliced in. |
-| **Measured** | v3.2: 29 of 29 shots have a layout, 0 stand-ins, `check`, `tsc` and the GLYPH check clean, the flash check passes (§9.4). v3: 25 of 25 shots have a layout; 0 stand-ins; `check` passes; `tsc` prints nothing; the flash check passes (§4); the GLYPH check passes (the plain frames around them are identical Node against Remotion, and nothing outside the room area differs). |
+| **The picture** | **v3.3:** `out/ep01/full-v3/picture/act3.mp4` (1920 × 1080, 24 fps, H.264 + AAC, **2:13.42, 3,202 frames**, 10.7 MB), muxed with the v3.3 temp track (`act3-v33-stick-mix.wav`); see §10.4. It replaced v3.2's (2:22.42, 3,418 frames). Before that, the v3.1 render was `out/ep01/full-v3/picture/act3.mp4` (1920 × 1080, 24 fps, H.264 + AAC, **2:25.13, 3,483 frames**, 11.9 MB; rendered in 31 s on 2 workers), muxed with the v3.1 stick mix as temp audio (`out/ep01/full-v3/picture/act3-v31-stick-mix.wav`). (The v3 render it replaced ran 2:08.04, 3,073 frames.) Beside it: `act3.srt`, `act3.mp4.render.json` and the contact sheet `act3-sheet.png`. The 5 GLYPH frames are the Remotion host's, spliced in. |
+| **Measured** | v3.3: 27 of 27 shots have a layout, 0 stand-ins, `check`, `tsc` and the GLYPH check clean, it builds on the v3.3 EL lock, and `flashcheck.py` passes (§10.4). v3.2: 29 of 29 shots have a layout, 0 stand-ins, `check`, `tsc` and the GLYPH check clean, the flash check passes (§9.4). v3: 25 of 25 shots have a layout; 0 stand-ins; `check` passes; `tsc` prints nothing; the flash check passes (§4); the GLYPH check passes (the plain frames around them are identical Node against Remotion, and nothing outside the room area differs). |
 | **Needs a person** | Nothing has been watched in motion or heard. I looked at the contact sheet and at about 45 sampled native frames (the arrival, every V.O. frame, every POV, the scan and its GLYPH frame, the call), and at one GLYPH frame from the Remotion host. |
 
 ---
@@ -283,3 +283,84 @@ python3 studio/src/episodes/ep01/pixel/tools/lock.py --seg act3 --timeline show/
 5. **From v3.1, still open:**
    - 21.02 still has the stick's second `tower_pop` (k 251) with one copy on screen;
    - 22.03's small monitor still shows DevDay that night.
+
+## 10. v3.3: the v3.3 lock (script draft 8.2, a polish)
+
+**The brief** (the coordinator, 2026-09-28; [PLAN.md](PLAN.md) §6, binding; [script-v33-notes.md](script-v33-notes.md); [lock-v33.md](lock-v33.md)):
+- re-lock on `show/reel/ep01-v33/ep01-v33-act3.json`;
+- the changes:
+  - **P5:** v31-18.00b merged into the arrival;
+  - **S1 / P9:** the VP clip and the pinky promise cut, the forum kept; 20.01's Tidder thread title before his reply;
+  - **P10:** his face held on page 30, the paper's tab kept in his strip, and 23.02's reminder over his own NOTIFY ME page;
+  - **P11:** NOTIFY ME stays and the post collapses;
+  - **P14:** plates of at most two parts;
+- **mood §3.6:** Act Three cuts busy (15.2 a minute), so prefer changes inside a shot to new cuts;
+- render through `ops/heavy.sh`, run `flashcheck.py`, build from the EL lock too, and delete scratch.
+
+### 10.1 The lock
+
+The temp track was made as in Act Two (shots-act2.md §10.1): Act Three's chapter from reel frame 13,987, 3,202 frames, into `out/ep01/full-v3/picture/act3-v33-stick-mix.wav`.
+
+```sh
+python3 studio/src/episodes/ep01/pixel/tools/lock.py --seg act3 --timeline show/reel/ep01-v33/ep01-v33-act3.json \
+    --takes audio/ep01/act3/dialogue/lines-fast-v2.json --takes audio/ep01/v3/act3/lines-v3.json \
+    --takes audio/ep01/v31/act3/lines-v31.json --takes audio/ep01/v32/act3/lines-v32.json \
+    --mix out/ep01/full-v3/picture/act3-v33-stick-mix.wav --mix-offset 0
+```
+
+- **Result:** 27 shots from 30 beats, 3,202 frames (2:13.42). 23 lines, two of them V.O. ("i made it for everyone else.", "thrilled is too much…"), every one with a take. Every check is `ok`.
+
+### 10.2 What changed, shot by shot
+
+| Shot | v3.3 |
+|---|---|
+| v31-18.00 | **P5** (v31-18.00b merged in; 3.8 s): `drawDark2SSCR {orb: null}`, the home room with the monitor large at frame right. The Orb hasn't come yet, and its outline on the wall is empty.<br>- **The monitor:** the lobby plays softly on it, from `lobbyPainter {keyLarge}` with no JUL 18 chip.<br>- **Tasya:** his lips move on "Everyone is welcome." The thirteenth key goes on in held steps and hangs large, Atem blue, on "welcome".<br>- **Kram:** he steps in, in the dry OPEN SOURCE hoodie. The monitor's own chyron reads MACROSOFT WELCOMES ATEM.<br>- **The plate:** `KRAM · RUNS ATEM`, two parts, under the bezel below him.<br>For the two-shot's short screen (216 × 120), art-b's lobby painter gets a higher framing (`LOBBY_TOP`: Tasya 24 px up, Kram 48 px up, his forehead cropped by the screen's top), so the ring, the key and OPEN SOURCE all clear the chyron. |
+| 18.01 | the lobby still on the plate's small monitor (the large key, no chip) as the Coinworld box slides out |
+| 19.01 | The forum is small on the monitor, now that the VP clip is cut. |
+| v31-19.02 | cut (the VP clip) |
+| v31-19.03 | **S1:** the forum only; the pinky promise and his two fingers are gone.<br>- On servo 1 the Orb whirrs at the monitor.<br>- His hand goes up at the desk, before anyone's, and on servo 2 the Orb turns to it.<br>- On servo 3 (Remuhcs asking) the Orb rises a pixel.<br>- Every hand goes up on "raised".<br>- After "referee" he lowers his own hand, 3 f after the line, and turns to his keys, head down, 8 f later. |
+| 20.01 | **S1 / P9:** `tidderPainter {title, replyBox}`.<br>- The thread reads from 0.2 s: `t/singularity`, "is it already here? anyone actually know?" (the notes' invented crowd text), with other people's comments greeked.<br>- The reply box opens on the lock's `TIDDER · reply` (1.2 s), and he types his reply on the keys. |
+| v31-20.08 | **P10, V3 (no voice):** an MCU (`drawScanMCU`, no fan, no toast). His face reads page 30 in the page's light, two face-light steps from the monitor's side.<br>- It holds 2.0 s with nothing on his face changing (the room's LEDs tick).<br>- In the last 9 f the light drops a step as he switches tabs. |
+| 21.02, 21.04, 21.05, v32-21.06 | **P10:** his tab strip (`withTabs`) keeps `DECODING INTENTIONS` open beside `LIVE · THE ORDER` until the monitor goes off. 21.04's toast moves under the strip. |
+| v32-22.04 | **P11** (4.5 s):<br>- The post goes up on the click. It collapses in two held steps to the post UI's own compact card at the page's head, 60 % of the way to the blink.<br>- SIGN UP greys, and NOTIFY ME stays.<br>- The counter's drums stop when the button greys.<br>- The paper's tab stays in the strip. |
+| 23.02 | **P10:** an SCR of his monitor (`drawMonitorPOV`): his own NOTIFY ME page with the collapsed post and the paper's tab in the strip.<br>- **The reminder** (`withReminder`) pops up in two held steps: `Board sync · Fri 12:00` and the four attendee circles. It sits at the page's lower right, clear of NOTIFY ME.<br>- **The Orb** at his shoulder, in at the frame's right edge, steps its iris along the circles, one every 11 f. Each circle's card shows the member's call tile and name: ALYI, NELEH, MADA (his face under the spinner), THE QUIET VOTE. It stops on the black square. |
+| 23.03 | The reminder is on the plate's small monitor, over his page, and goes dark on its own. The phone on the desk is dark. |
+| unchanged (retimed by the lock only) | 18.02, 18.03, 18.04, 18.06, 20.03–20.06, v31-20.07, 22.01–22.03, 23.01, 23.04 |
+
+**The new art** is small, opt-in and drawn in the existing modules, in art-b's conventions:
+- `kits/tidder.ts`: `title`, `replyBox`, `TIDDER_FORUM`, `TIDDER_THREAD`;
+- `kits/monitor-v32.ts`: `signupPainter {collapse}`, `withReminder`;
+- `kits/monitor-v31.ts`: `LOBBY_TOP` and Kram's framing on a screen under 150 px tall (the only such use is v31-18.00).
+
+### 10.3 Plates (P14)
+
+Act Three has no three-part plate: `KRAM · RUNS ATEM` and `NELEH · NOPEAI BOARD`. The Orb's gag card is unchanged. Two of the lock's texts have three parts, but both are UI on the monitor, not plates:
+- `SEP 13 · REMUHCS · ASKED THE ROOM: …` is the news chip plus its two-part plate;
+- `TIDDER · t/singularity · "…"` is the site, the forum and the title.
+
+### 10.4 Checks (v3.3)
+
+| Check | Result |
+|---|---|
+| `node r-act3.cjs check` | 27 layouts for 27 shots, 0 stand-ins, 0 notes, 0 problems; 3,202 frames |
+| `tsc` | prints nothing |
+| **The EL lock** | Tested as for Act Two, on `ep01-v33-el-act3.json`: 27 layouts for 27 shots, 3,114 frames, 0 stand-ins, 0 problems. |
+| **GLYPH check** | Frames 386–390 (18.04g). The plain frames either side are identical Node against Remotion, and nothing outside the room area differs. |
+| **Flash check** (`coldopen/tools/flashcheck.py`) | **Worst: 0 flashes in any second; red 0. Passes.** The largest mean-luminance step is 0.483 at frame 173, the cut from the dark room to the label ECU. This pass's own audit finds at most 2 transitions, 1 flash, in one region. |
+| Longest still runs | 23.04 60 f (the black), 21.02 36 f, v31-20.07 30 f (p. 30 held to read), 20.01 28 f (the thread's title held to read) |
+| Looked at | about 40 native stills and the contact sheet:<br>- the arrival at the key's three steps (at 2×);<br>- 19.03's hand up, the room's hands, the lowering and the keys;<br>- the thread, then the reply;<br>- the MCU before and after the switch;<br>- the tab strip in 21.02, 21.04 and 21.05;<br>- 22.04's typing, post, collapse, greying and NOTIFY ME;<br>- 23.02's pop and each card;<br>- 23.03 before and after the reminder goes. |
+
+**The picture:** `out/ep01/full-v3/picture/act3.mp4`: 1920 × 1080, 24 fps, H.264 + AAC, **2:13.42, 3,202 frames**, 10.7 MB, rendered in 24 s on 2 workers. The 5 GLYPH frames are spliced in from the Remotion host. It's muxed with the v3.3 temp track (`act3-v33-stick-mix.wav`). Beside it: `act3.srt`, `act3.mp4.render.json` and `act3-sheet.png`.
+
+### 10.5 What I judged differently, and what's weakest
+
+1. **The tally cut-in (v3.2, draft 8.1's "framed legibly") is dropped from the merged arrival.**
+   - **Why:** the 3.8 s shot now has to carry the lobby, the key, Kram's plate and Tasya's line, and mood §3.6 asks for changes inside shots over new cuts.
+   - **What remains:** the two faint marks stay on the desk in every room shot. The plan's "left alone" list keeps them as they are.
+   - **To restore it:** it's one branch in v31-18.00, since `drawTallyECU` stays in monitor-v32.
+2. **v31-18.00 is the big-monitor two-shot, not the plate from behind the rack.** The lock's text says "from behind the rack" and "at frame right". The two-shot is the only room setup whose monitor is large enough for the plates to read. The cut to 18.01 is then a reverse onto the rack side, where the box comes out.
+3. **23.02's Orb** is drawn in at the POV frame's right edge, so "the Orb's iris steps along them" is seen, not implied.
+4. **Weakest:**
+   - Kram's forehead is cropped by the screen's top in the arrival.
+   - The MCU at page 30 shows his face and the room only; the page itself is the shot before.
+   - The reminder card covers the right end of the drums.

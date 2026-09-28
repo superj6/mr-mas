@@ -10,7 +10,11 @@
 //   drawLedgerPlate(b)                  (17.08) the flash-print's plate, drawn in the show's colours: P2 runs it through the
 //                                       LEDGER palette set (engine palettes.ts); ledgerPrint(b) does both
 //   drawPurchaseOrder(b, f, st)         [INSERT] (17.10) the signing pen in Mario's hand is now a purchase order:
-//                                       `PURCHASE ORDER` · `AI CHIPS · QTY: MORE`
+//                                       `PURCHASE ORDER` · `AI CHIPS · QTY: MORE`; v3.3 (P7, `mario`, opt-in; the
+//                                       `v3-shots-act2-act3` pass): the hand is unambiguously MARIO's: his ink-blue fleece
+//                                       sleeve (ribbed cuff, soft folds) up out of frame, his footnote still wet on the
+//                                       order, his appendix scroll's rolled end at the frame's edge, and MAS's hand half
+//                                       out beside it, empty
 import {Buf, rect, line, ellipse, hash, bayer} from '../px';
 import {PAL} from '../palette';
 import {text, textWidth, bigText, bigTextWidth} from '../font';
@@ -157,7 +161,7 @@ export const drawLedgerPlate = (b: Buf) => {
 export const ledgerPrint = (b: Buf) => { drawLedgerPlate(b); applyPalette(b, PALETTES.LEDGER, {rect: [0, 0, 480, RH]}); };
 
 // ------------------------------------------------------------------ the purchase order (17.10)
-export const drawPurchaseOrder = (b: Buf, f: number, st: {k?: number} = {}) => {
+export const drawPurchaseOrder = (b: Buf, f: number, st: {k?: number; /** v3.3 (P7) */ mario?: boolean} = {}) => {
   // the table's white cloth close, the sheet's corner beyond; Mario's hand holding the order up where the pen was
   for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) b.set(x, y, bayer(x, y) < 0.15 ? PAL.P1 : PAL.P2);
   rect(300, 150, 180, 53, b.ink(PAL.G6)); // the statement sheet's corner
@@ -183,6 +187,53 @@ export const drawPurchaseOrder = (b: Buf, f: number, st: {k?: number} = {}) => {
     }
     rect(fx + 3, fy + 1, 5, 2, b.ink(PAL.P1)); // the nails
   }
-  for (let y = hy + 28; y < RH; y++) for (let x = X - 10; x < X + 66; x++) b.set(x, y, x < X ? PAL.F4 : x > X + 58 ? PAL.F1 : PAL.F2);
-  void f; void st; void pw; void hash;
+  if (!st.mario) for (let y = hy + 28; y < RH; y++) for (let x = X - 10; x < X + 66; x++) b.set(x, y, x < X ? PAL.F4 : x > X + 58 ? PAL.F1 : PAL.F2);
+  else marioOrderExtras(b, f, st.k ?? 0, X, Y, W, H, hy);
+  void pw; void hash;
+};
+/** v3.3 (P7): Mario's fleece sleeve, his wet footnote, his appendix scroll's end, and Mas's empty hand beside the order */
+const marioOrderExtras = (b: Buf, f: number, k: number, X: number, Y: number, W: number, H: number, hy: number) => {
+  // the fleece sleeve: a soft bulky tube from under his fingers down and out of frame at the lower left, lit from the
+  // left (the sun); a ribbed cuff band at the wrist, two soft folds, the fleece's nap in a sparse dither
+  const cx0 = X + 30, cy0 = hy + 30; // the wrist, under the fingers
+  for (let y = cy0 - 2; y < RH; y++) for (let x = X - 60; x < X + 80; x++) {
+    const t = (y - cy0) / 60, mid = cx0 - t * 46, half = 33 + t * 8; // the tube widens and leans left as it leaves frame
+    const u = (x - mid) / half;
+    if (Math.abs(u) > 1) continue;
+    const cuff = y - cy0 < 9;
+    let c = u < -0.72 ? PAL.F5 : u < -0.25 ? PAL.F4 : u < 0.55 ? PAL.F3 : u < 0.85 ? PAL.F2 : PAL.F1;
+    if (cuff) c = (x + (y >> 1)) % 3 === 0 ? PAL.F2 : u < -0.5 ? PAL.F5 : PAL.F4; // the rib
+    else if (bayer(x, y) < 0.12) c = c === PAL.F1 ? PAL.F2 : c === PAL.F5 ? PAL.F4 : c; // the nap
+    const fold = !cuff && (Math.abs(y - (cy0 + 22) - (x - mid) * 0.3) < 1 || Math.abs(y - (cy0 + 38) + (x - mid) * 0.25) < 1) && Math.abs(u) < 0.8;
+    b.set(x, y, fold ? PAL.F2 : Math.abs(u) > 0.96 ? PAL.F0 : c);
+  }
+  rect(cx0 - 33, cy0 + 8, 66, 1, b.ink(PAL.F1)); // the cuff's seam
+  // his footnote on the order, under the rows: an asterisk and a short line of ink, the last strokes still wet (a
+  // glint that steps along them)
+  const fy = Y + 118, fx = X + 14;
+  for (const [i, j] of [[1, 0], [0, 1], [1, 1], [2, 1], [1, 2]] as Array<[number, number]>) b.set(fx + i, fy + j, PAL.F2);
+  for (let i = 0; i < 70; i++) { const yy = fy + 1 + Math.round(Math.sin(i / 3) * 1.2); if (i % 11 !== 10) b.set(fx + 6 + i, yy, i > 52 ? PAL.F4 : PAL.F2); }
+  const gl = 54 + ((Math.floor(f / 3) + (k >> 2)) % 4) * 4; b.set(fx + 6 + gl, fy, PAL.F6); b.set(fx + 7 + gl, fy, PAL.P2);
+  // the appendix: his scroll lying on the cloth, its rolled end at the frame's right edge (the paper's spiral)
+  const sy = 160, sx = 404;
+  for (let y = sy; y < sy + 26; y++) for (let x = sx; x < 480; x++) { const v = (y - sy) / 26; b.set(x, y, v < 0.2 ? PAL.W9 : v < 0.7 ? PAL.P2 : v < 0.9 ? PAL.P1 : PAL.G6); }
+  for (let j = -13; j <= 13; j++) for (let i = -7; i <= 7; i++) {
+    const d = Math.hypot(i / 7, j / 13); if (d > 1) continue;
+    const ring = Math.floor(d * 5 + Math.atan2(j, i) / (Math.PI * 2) * 1) % 2 === 0;
+    b.set(sx + i, sy + 13 + j, d > 0.88 ? PAL.G5 : ring ? PAL.P1 : PAL.G6);
+  }
+  rect(sx - 2, sy + 26, 80, 1, b.ink(PAL.G5)); // its shadow on the cloth
+  // MAS's hand, half out beside it, empty: his grey hoodie sleeve from the right edge, the hand open, palm up, fingers
+  // a little curled (the pen that isn't there)
+  const my = 104;
+  for (let y = my; y < my + 26; y++) for (let x = 404; x < 480; x++) { const v = (y - my) / 26; b.set(x, y, v < 0.15 ? PAL.G5 : v < 0.6 ? PAL.G4 : v < 0.9 ? PAL.G3 : PAL.G2); }
+  rect(402, my - 1, 4, 28, b.ink(PAL.G2)); // the cuff's edge
+  for (let y = my + 2; y < my + 24; y++) for (let x = 360; x < 404; x++) {
+    const palm = Math.hypot((x - 388) / 16, (y - my - 13) / 10) < 1;
+    const fing = x < 380 && y > my + 6 && y < my + 20 && ((y - my - 6) % 5) < 4 && x > 360 + Math.abs(y - my - 13) * 0.6;
+    if (!palm && !fing) continue;
+    const top = y < my + 9;
+    b.set(x, y, top ? PAL.S6 : (fing && (y - my - 6) % 5 === 3) ? PAL.S3 : x < 372 ? PAL.S4 : PAL.S5);
+  }
+  void W; void H;
 };
