@@ -1,6 +1,6 @@
 {
  "variant": "kokoro-v33",
- "built": "2026-09-28 08:48:07",
+ "built": "2026-09-28 09:30:38",
  "chapters": [
   {
    "id": "coldopen",
@@ -73,7 +73,7 @@
    "start_frame": 9342,
    "start_s": 389.25,
    "seconds": 190.5417,
-   "video_head_md5": "ac0b4c1ac075",
+   "video_head_md5": "c573ffcf5397",
    "audio_head_md5": "dd189281f357",
    "audio_mtime": "08:40:19"
   },
@@ -88,7 +88,7 @@
    "start_frame": 13915,
    "start_s": 579.7917,
    "seconds": 133.4167,
-   "video_head_md5": "76ca4a8a8932",
+   "video_head_md5": "075dfad5f300",
    "audio_head_md5": "ce5cb0504503",
    "audio_mtime": "08:40:23"
   },
@@ -104,8 +104,8 @@
    "start_s": 713.2083,
    "seconds": 505.75,
    "video_head_md5": "c826fe34ec7b",
-   "audio_head_md5": "eefe5979f414",
-   "audio_mtime": "08:40:30"
+   "audio_head_md5": "86c9b76d2ed0",
+   "audio_mtime": "09:25:26"
   },
   {
    "id": "tag",
@@ -135,7 +135,7 @@
    "seconds": 0.75,
    "video_head_md5": "ae2839e6f319",
    "audio_head_md5": "973061d308a9",
-   "audio_mtime": "08:48:07"
+   "audio_mtime": "09:30:38"
   },
   {
    "id": "outro",
@@ -150,7 +150,7 @@
    "seconds": 10.125,
    "video_head_md5": "5ccb874c13cc",
    "audio_head_md5": "26684a476c24",
-   "audio_mtime": "08:48:07"
+   "audio_mtime": "09:30:38"
   }
  ],
  "seams": [
@@ -203,7 +203,7 @@
   {
    "join": "act3 -> act4",
    "at_frame": 17117,
-   "sample_jump": 0.00362,
+   "sample_jump": 0.00361,
    "tail200_dbfs": -30.5,
    "head200_dbfs": -29.7,
    "step_db": 0.8,
@@ -212,7 +212,7 @@
   {
    "join": "act4 -> tag",
    "at_frame": 29255,
-   "sample_jump": 0.00159,
+   "sample_jump": 0.0016,
    "tail200_dbfs": -27.5,
    "head200_dbfs": -26.6,
    "step_db": 0.9,
@@ -263,6 +263,6 @@
  "locks": "show/episodes/ep01/production/full-v3/lock/{seg}.json",
  "transcript": "transcript-v33.txt",
  "label": "v3.3",
- "encode_s": 162.3,
- "bytes": 126230191
+ "encode_s": 161.7,
+ "bytes": 126229509
 }

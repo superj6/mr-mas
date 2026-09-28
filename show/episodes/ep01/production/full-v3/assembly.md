@@ -26,6 +26,20 @@
 - **The Kokoro pictures** are the shot passes' v3.3 finals. Act Four is the re-render, at 12,138 frames.
 - **The v3.2 films** (`ep01-v32.mp4`, `ep01-v32-el.mp4`) and my v3.2 hum-gap files were **deleted** after both v3.3 films passed. `picture-el/` now holds only v3.3 renders.
 
+**The micro-pass (09:25–09:40), the films rebuilt to the same paths:**
+- **Kokoro Act Two and Three** are the shot passes' re-renders (f57bddb): 17.11's close-up and thicker curve, 22.04's post collapse, Kram's plate dropped at v31-18.00. Frame counts are unchanged.
+- **The EL Act Two and Act Three** were re-rendered from the `el-v33` locks. `check` passes with 0 stand-ins; Act Three's 5 GLYPH frames were re-drawn and its host check holds. Both are muxed with their EL mixes.
+  - **Flash:** Act Two 3 (at 13.14's cut in, the same reading as before; the EL film reads 2 there), Act Three 0. Both pass.
+- **Act Four's mixes** are the re-entry-swell remix (`mix-v33/act4-mix.wav` 09:25, `mix-v33-el/act4-mix.wav` 09:27); the EL Act Four picture was re-muxed with its new mix.
+- **Re-measured:** both films are the same lengths (30,532 / 30,539 f) with **0 decode errors** and **0-sample A/V lag in every chapter**.
+  - Loudness **−16.08 / −16.10 LUFS**, true peak **−1.12 / −1.40 dBTP**.
+  - No digital zero or holes.
+  - **Flashes max 2 / 3**, both passing, at the cold open's freeze; red 0.
+  - The seams are unchanged: Act Four → tag +0.9 / −1.2 dB, and every other join as in §X.3.
+  - The chapters match to the millisecond.
+  - The edge frames are 0.67 of 255 at most (the hum-gap still).
+  - The tables below are the rebuilt films' numbers, except the true peaks in §X.3, which are now −1.12 / −1.40.
+
 ### X.1 Chapter times
 
 | # | Chapter | Kokoro start · length | EL start · length |
@@ -70,7 +84,7 @@ All six segments are on `show/reel/ep01-v33-el/` (a170aaa) with `audio/ep01/v3-e
 | A/V, the total | the audio runs 4.0 ms past the last frame (AAC padding) | 11.0 ms |
 | **Chapter edge frames** against their sources | 0.00–0.13 of 255 on the story chapters; the intro 0.24; the hum-gap still 0.67 | the same |
 | **Integrated loudness** | **−16.08 LUFS** | **−16.10 LUFS** |
-| **True peak** | **−1.05 dBTP** (the tag) | **−1.42 dBTP** |
+| **True peak** | **−1.12 dBTP** (the tag; −1.05 before the micro-pass) | **−1.40 dBTP** |
 | Chapters (LUFS-I) | cold open −16.1 · intro −17.1 · card −36.0 · acts −16.0 · tag −17.5 · outro −17.2 | −16.0 · −17.1 · −36.1 · −16.0 · −17.6 · −17.2 |
 | Digital zero / holes | **none / none** | **none / none** |
 | **Flashes, whole film** | **max 2 in 1 s** (the cold open's freeze, 0:14.5); red 0. **Pass** | **max 3** (the freeze, 0:12.4, at the limit; the picture alone reads 1); Act Two 2 in the film; red 0. **Pass** |

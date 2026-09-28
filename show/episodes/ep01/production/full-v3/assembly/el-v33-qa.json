@@ -1,7 +1,7 @@
 {
  "variant": "el-v33",
  "film": "out/ep01/full-v3/ep01-v33-el.mp4",
- "measured": "2026-09-28 08:55:22",
+ "measured": "2026-09-28 09:37:49",
  "heard": "nothing here was heard or watched; every number is measured",
  "transcript": {
   "file": "show/episodes/ep01/production/full-v3/assembly/transcript-v33-el.txt",
@@ -12,7 +12,7 @@
   "error_lines": 0,
   "errors": [],
   "frames_decoded": 30539,
-  "seconds": 17.0
+  "seconds": 17.1
  },
  "streams": [
   {
@@ -23,7 +23,7 @@
    "height": 1080,
    "r_frame_rate": "24/1",
    "duration": "1272.458333",
-   "bit_rate": "525304",
+   "bit_rate": "525308",
    "nb_read_packets": "30539"
   },
   {
@@ -34,7 +34,7 @@
    "channels": 2,
    "r_frame_rate": "0/0",
    "duration": "1272.458000",
-   "bit_rate": "256410",
+   "bit_rate": "256406",
    "nb_read_packets": "59648"
   },
   {
@@ -47,7 +47,7 @@
  ],
  "format": {
   "duration": "1272.458333",
-  "size": "125159847",
+  "size": "125159862",
   "bit_rate": "786885",
   "tags": {
    "title": "MR. MAS · ep1.0_research_preview.md (v3.3, ElevenLabs voices)"
@@ -116,7 +116,7 @@
   "picture_seconds": 1272.4583,
   "length_diff_ms": 11.03,
   "integrated_lufs": -16.1,
-  "true_peak_dbtp": -1.42,
+  "true_peak_dbtp": -1.4,
   "sample_peak_dbfs": -1.45,
   "chapters": [
    {
@@ -184,7 +184,7 @@
     "start": "11:42.67",
     "seconds": 516.5833,
     "lufs_i": -16.03,
-    "true_peak_dbtp": -1.46,
+    "true_peak_dbtp": -1.4,
     "max_short_term_lufs": -11.5,
     "sync_lag_samples": 0,
     "sync_corr": 1.0
@@ -214,7 +214,7 @@
     "start": "21:02.33",
     "seconds": 10.125,
     "lufs_i": -17.22,
-    "true_peak_dbtp": -4.1,
+    "true_peak_dbtp": -4.11,
     "max_short_term_lufs": -14.8,
     "sync_lag_samples": 0,
     "sync_corr": 0.9999
@@ -415,5 +415,5 @@
   "file": "out/ep01/full-v3/ep01-v33-el-sheet.png",
   "frames": 128
  },
- "seconds": 100.3
+ "seconds": 97.5
 }

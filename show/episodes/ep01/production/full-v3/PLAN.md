@@ -243,3 +243,14 @@ out/ep01/full-v3/                         the films and mixes (git-ignored)
 3. Renders go one at a time through ops/heavy.sh. Then stems, the mix, assembly and QA.
 4. A measured sound check at every changed cut and the four defects, plus the flash check.
 5. Commit and push after each step. No Drive.
+
+**Done 2026-09-28 (v3.3):**
+- **The films:** `out/ep01/full-v3/ep01-v33.mp4` (Kokoro, 21:12.17) and `ep01-v33-el.mp4` (ElevenLabs, 21:12.46).
+- **QA:** −16.08 / −16.10 LUFS, 0 decode errors, 0-sample A/V lag, flashes ≤3 per second, every seam clean.
+- **The final check:** [audit-v33](audit-v33.md). 34 of 36 items landed. Three of the v3.2 sound defects are gone, and nothing swung.
+- **Its optional items,** done in a micro-pass with frame counts unchanged:
+  - The night re-entry swells in over 200 ms, now +10.9 dB over the room in its first 100 ms (it was about +24).
+  - The sign-ups post collapses before the reminder.
+  - Act Two's act-out gets Mas's close-up beat.
+  - Kram's plate is dropped.
+- **Left alone:** tag → outro at +12.7 dB, which reads as an ending; the Coinworld "CO-FOUNDER", which is lore for later episodes.

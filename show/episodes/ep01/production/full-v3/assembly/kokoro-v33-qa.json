@@ -1,7 +1,7 @@
 {
  "variant": "kokoro-v33",
  "film": "out/ep01/full-v3/ep01-v33.mp4",
- "measured": "2026-09-28 08:53:48",
+ "measured": "2026-09-28 09:36:12",
  "heard": "nothing here was heard or watched; every number is measured",
  "transcript": {
   "file": "show/episodes/ep01/production/full-v3/assembly/transcript-v33.txt",
@@ -23,7 +23,7 @@
    "height": 1080,
    "r_frame_rate": "24/1",
    "duration": "1272.166667",
-   "bit_rate": "533427",
+   "bit_rate": "533423",
    "nb_read_packets": "30532"
   },
   {
@@ -47,8 +47,8 @@
  ],
  "format": {
   "duration": "1272.167000",
-  "size": "126230191",
-  "bit_rate": "793796",
+  "size": "126229509",
+  "bit_rate": "793792",
   "tags": {
    "title": "MR. MAS · ep1.0_research_preview.md (v3.3)"
   }
@@ -116,8 +116,8 @@
   "picture_seconds": 1272.1667,
   "length_diff_ms": 3.97,
   "integrated_lufs": -16.08,
-  "true_peak_dbtp": -1.05,
-  "sample_peak_dbfs": -1.42,
+  "true_peak_dbtp": -1.12,
+  "sample_peak_dbfs": -1.34,
   "chapters": [
    {
     "id": "coldopen",
@@ -184,7 +184,7 @@
     "start": "11:53.21",
     "seconds": 505.75,
     "lufs_i": -16.02,
-    "true_peak_dbtp": -1.48,
+    "true_peak_dbtp": -1.46,
     "max_short_term_lufs": -11.5,
     "sync_lag_samples": 0,
     "sync_corr": 1.0
@@ -194,7 +194,7 @@
     "start": "20:18.96",
     "seconds": 42.3333,
     "lufs_i": -17.48,
-    "true_peak_dbtp": -1.05,
+    "true_peak_dbtp": -1.12,
     "max_short_term_lufs": -13.2,
     "sync_lag_samples": 0,
     "sync_corr": 0.9999
@@ -289,7 +289,7 @@
     "step_db": 0.9,
     "momentary_before_lufs": -25.6,
     "momentary_after_lufs": -24.1,
-    "sample_jump": 0.0016
+    "sample_jump": 0.0017
    },
    {
     "join": "tag -> tag-hum",
@@ -390,5 +390,5 @@
   "file": "out/ep01/full-v3/ep01-v33-sheet.png",
   "frames": 128
  },
- "seconds": 93.2
+ "seconds": 96.9
 }

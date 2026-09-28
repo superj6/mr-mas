@@ -1,6 +1,6 @@
 {
  "variant": "el-v33",
- "built": "2026-09-28 08:50:50",
+ "built": "2026-09-28 09:33:20",
  "chapters": [
   {
    "id": "coldopen",
@@ -73,7 +73,7 @@
    "start_frame": 9410,
    "start_s": 392.0833,
    "seconds": 180.8333,
-   "video_head_md5": "07c258fabbe6",
+   "video_head_md5": "57cb385659fa",
    "audio_head_md5": "fdc124247be8",
    "audio_mtime": "08:34:41"
   },
@@ -88,7 +88,7 @@
    "start_frame": 13750,
    "start_s": 572.9167,
    "seconds": 129.75,
-   "video_head_md5": "8c116c9b22c0",
+   "video_head_md5": "c3a0102b46eb",
    "audio_head_md5": "1e6e6a059ccf",
    "audio_mtime": "08:34:45"
   },
@@ -103,9 +103,9 @@
    "start_frame": 16864,
    "start_s": 702.6667,
    "seconds": 516.5833,
-   "video_head_md5": "2eb350afd09b",
-   "audio_head_md5": "15fcdef7debb",
-   "audio_mtime": "08:34:52"
+   "video_head_md5": "68c1650d9c0e",
+   "audio_head_md5": "9b9741f3ed0b",
+   "audio_mtime": "09:26:59"
   },
   {
    "id": "tag",
@@ -135,7 +135,7 @@
    "seconds": 0.75,
    "video_head_md5": "ae2839e6f319",
    "audio_head_md5": "e6e32b7e24a2",
-   "audio_mtime": "08:50:50"
+   "audio_mtime": "09:33:20"
   },
   {
    "id": "outro",
@@ -150,7 +150,7 @@
    "seconds": 10.125,
    "video_head_md5": "5ccb874c13cc",
    "audio_head_md5": "7a1b966bb324",
-   "audio_mtime": "08:50:50"
+   "audio_mtime": "09:33:20"
   }
  ],
  "seams": [
@@ -203,7 +203,7 @@
   {
    "join": "act3 -> act4",
    "at_frame": 16864,
-   "sample_jump": 0.00405,
+   "sample_jump": 0.00406,
    "tail200_dbfs": -30.5,
    "head200_dbfs": -30.0,
    "step_db": 0.5,
@@ -263,6 +263,6 @@
  "locks": "show/episodes/ep01/production/full-v3/assembly/el-v33/lock-{seg}.json",
  "transcript": "transcript-v33-el.txt",
  "label": "v3.3, ElevenLabs voices",
- "encode_s": 177.6,
- "bytes": 125159847
+ "encode_s": 171.6,
+ "bytes": 125159862
 }
