@@ -19,6 +19,7 @@ The v3-art-a pass (2026-09-27) wrote this folder. It registers every state of ev
 | `demos/v31-laptop.ts` | v3.1: Gerg's laptop screen over his shoulder (the chat face, the Atem thread, the match), the duel's v3.1 frames |
 | `demos/v31-pause.ts` | v3.1: EMIT lands on his desk; PLEASE / REG |
 | `demos/v31-launch.ts` | v3.1: launch night warmed (practicals, face lights, background life), the board seed, 5.09's rack, 12.05's phone, the tear's catch light, the v31 collars |
+| `demos/v32-act1.ts` | v3.2 (script draft 8.1): the call (v32-7.03), his post over the million, 11.04's button in the pane, the key ring large, the collar's clink, `5 QUESTIONS`, `6 MONTHS`, the founders' cut-in |
 | `tools/sheet.ts` | the sheet tool (a copy of Act Four's `art-v5` tool, pointed at this registry) |
 
 The drawing code itself lives in `studio/src/shared/pixel/{rooms,cast,kits}/`. This folder only calls it.
@@ -48,8 +49,8 @@ node $SC/sheet-a.cjs group $SC/x.png UI-TV 1                                    
 ## Measured, and what needs a person
 
 **Measured:**
-- 159 stills render: v3's 109, then the v3.1 round's 50.
-- The 109 v3 stills re-render pixel-identical in the picture area, because every v3.1 change is an opt-in state or a new module.
+- 176 stills render: v3's 109, the v3.1 round's 50, the v3.2 round's 17.
+- Each round's earlier stills re-render pixel-identical in the picture area, because every later change is an opt-in state or a new module.
 - `strays` reports all ok.
 - `tsc` prints nothing for these files or the new shared modules.
 - Every file here and every shared module the pass wrote is new, so no existing drawing changed.

@@ -237,7 +237,7 @@ export const drawRooftopOTS = (b: Buf, f: number, st: RooftopOTSState = {}) => {
  * the water the crack keeps going after the sky's has stopped (`run` 0..3 whole-pixel steps) until it runs across the
  * small reflection of the man looking down into the glass. The water line one flat row: it doesn't move.
  */
-export const drawGlassSide = (b: Buf, f: number, st: {run: 0 | 1 | 2 | 3}) => {
+export const drawGlassSide = (b: Buf, f: number, st: {run: 0 | 1 | 2 | 3; surface?: boolean}) => {
   const sky = paintSky(150);
   // the sky and the city far below at this height (the horizon behind the table), the cloth's edge at 150
   for (let y = 0; y < 150; y++) for (let x = 0; x < 480; x++) b.set(x, y, sky.get(x, y));
@@ -263,6 +263,7 @@ export const drawGlassSide = (b: Buf, f: number, st: {run: 0 | 1 | 2 | 3}) => {
   rect(gx0 + 4, wy, gx1 - gx0 - 8, 1, b.ink(PAL.C9)); // the water line: one flat row
   rect(gx0, gy0, gx1 - gx0, 2, b.ink(PAL.C6)); rect(gx0, gy1 - 6, gx1 - gx0, 6, b.ink(PAL.C4)); rect(gx0, gy1 - 1, gx1 - gx0, 1, b.ink(PAL.C2));
   for (let x = gx0 + 6; x < gx1 + 10; x++) b.set(x, gy1, PAL.G6); // its shadow on the cloth
+  if (st.surface) { glassSurface(b, gx0, gx1, gy0, wy, st.run); return; }
   // his small reflection on the glass's curve, low in the water: the hoodie's shoulders (half there: a reflection),
   // his hair and its cowlick, his face cool in the sky's light, the two dot eyes and the one-pixel smile
   const mx = 262, my = 128;
@@ -284,6 +285,44 @@ export const drawGlassSide = (b: Buf, f: number, st: {run: 0 | 1 | 2 | 3}) => {
     b.set(x, y, PAL.W9); b.set(x, y + 1, PAL.N3);
   }
   void f;
+};
+
+/**
+ * v3.2 (draft 8.1, the audit's #8: the reflection in the water "read as a man floating in a tank"): the camera a little
+ * above the rim, so the rim and the water's surface are thin ellipses; the reflection lives ON the surface: the sky's
+ * pale light, and in it his face only (the hair, the two dots, the one-pixel smile, squashed by the angle: no body, no
+ * ripple ring). The reflected crack runs across the surface one whole-pixel step past where the sky's stopped, then
+ * another, and on `run` 3 crosses his face and breaks it (the two halves a pixel apart).
+ */
+const glassSurface = (b: Buf, gx0: number, gx1: number, gy0: number, wy: number, run: 0 | 1 | 2 | 3) => {
+  const cx = (gx0 + gx1) >> 1, rx = ((gx1 - gx0) >> 1) - 4, ry = 9;
+  // the rim, seen from a little above: a thin ellipse, its near lip lit
+  for (let a = 0; a < 360; a++) { const t = (a / 180) * Math.PI, x = Math.round(cx + Math.cos(t) * (rx + 3)), y = Math.round(gy0 + 8 + Math.sin(t) * (ry + 1)); b.set(x, y, Math.sin(t) > 0 ? PAL.C8 : PAL.C5); }
+  // the surface: the sky's reflection on the water, paler toward the far side
+  const inS = (x: number, y: number) => Math.hypot((x - cx) / rx, (y - wy) / ry) <= 1;
+  for (let y = wy - ry; y <= wy + ry; y++) for (let x = cx - rx; x <= cx + rx; x++) {
+    if (!inS(x, y)) continue;
+    const d = Math.hypot((x - cx) / rx, (y - wy) / ry);
+    b.set(x, y, d > 0.92 ? PAL.C6 : y < wy - 3 ? (bayer(x, y) < 0.5 ? PAL.C8 : PAL.P2) : bayer(x, y) < 0.3 ? PAL.C7 : PAL.C8);
+  }
+  // his face on it (squashed by the angle): the hair's dark cap, the cool skin, the two dots, the smile
+  const fx = cx + 20, fy = wy;
+  const F = ['....hhhhhh....', '..hhhhhhhhhh..', '.hhhhhhhhhhhh.', '.hssssssssssh.', '.ssessssssess.', '.sssssssssssss', '..ssssmmmsss..', '...sssssssm...', '.....ssss.....'];
+  const pal: Record<string, number> = {h: PAL.B1, s: PAL.K3, e: PAL.N0, m: PAL.X1};
+  const breakX = run >= 3 ? fx - 1 : 999; // where the crack crosses it: the right half drops a pixel
+  F.forEach((r, j) => { for (let i = 0; i < r.length; i++) { const c = pal[r[i]]; if (c === undefined) continue; const X = fx - 7 + i, Y = fy - 5 + j + (X >= breakX ? 1 : 0); if (inS(X, Y)) b.set(X, Y, c); } });
+  b.set(fx - 3, fy - 6, PAL.B1); // the cowlick
+  // the crack on the surface: in from the left edge, a step further each run, the last one across his face
+  const ends = [cx - 30, cx - 12, cx + 4, fx + 10];
+  let y = wy - 2;
+  for (let x = cx - rx + 2; x < ends[run]; x++) {
+    if (hash(x >> 1, 41, 73) < 0.4) y += hash(x, 43, 73) < 0.5 ? -1 : 1;
+    y = clamp(y, wy - ry + 3, wy + ry - 3);
+    if (!inS(x, y)) continue;
+    b.set(x, y, PAL.W9); if (inS(x, y + 1)) b.set(x, y + 1, PAL.N3);
+  }
+  // the water line under the surface: one flat row (it doesn't move)
+  rect(gx0 + 4, wy + ry + 1, gx1 - gx0 - 8, 1, b.ink(PAL.C9));
 };
 
 // ------------------------------------------------------------------ the glass (17.12)

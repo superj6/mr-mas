@@ -3,10 +3,10 @@
 | | |
 |---|---|
 | **What this is** | The record of the pixel assets built for the cold open and Act One (sc 1–12) for the full-episode pixel preview. For each asset: its id, the module, the entry points a shot layout calls, its states, and what is still a stand-in or open. |
-| **Who, when** | The `v3-art-a` pass (track P1a of [PLAN.md](../PLAN.md)), 2026-09-27; the v3.1 round (script draft 7) the same day, in §7. Nothing was committed by this pass: the lead commits. |
+| **Who, when** | The `v3-art-a` pass (track P1a of [PLAN.md](../PLAN.md)), 2026-09-27; the v3.1 round (script draft 7) the same day, in §7; the v3.2 round (draft 8.1), 2026-09-28, in §8. Nothing was committed by this pass: the lead commits. |
 | **Built against** | [script.md](../../../script.md) sc 1–12; the v2 stick timelines `show/reel/ep01-full/ep01-{coldopen,act1}-v2.json`; the cuts in [stick/v3-plan.md §3](../../stick/v3-plan.md) (C1 Sydney, C2 Kram's crate, C4 the EMIT page, C5 the drill's kitchen, shaft phrase and Gerg's second post, C6 the folds); the beat plans `beat-plan/{coldopen,act1}.json` and the P1a list in [script-v3-notes.md §4 and §7](../script-v3-notes.md) (read at about 11:55, after they landed). |
-| **Where it is** | **Code:** 30 new modules in `studio/src/shared/pixel/{rooms,cast,kits}/` (the tables below), plus the v3.1 round's 6 new modules and its opt-in states (§7). The stills registry is `studio/src/episodes/ep01/pixel/art-a/` (`demos.ts` → `demos/*.ts`, one file per scene group; `registry.ts`; `tools/sheet.ts`; `README.md` with the commands). **Stills:** `out/ep01/full-v3/assets/art-a/`: `sheet-native.png` (159 stills at 1×, 4 across: v3's 109, then the v3.1 round's 50, their keys marked `v31` or new ids), `native/` (480×270), `full/` (1920×1080, 4× nearest), `index.json`. |
-| **Measured** | v3.1 round: 159 stills render; `strays` prints `all ok`; the 109 v3 stills are **pixel-identical** in the picture area to their v3 renders (every v3.1 change is an opt-in state or a new module); `tsc` prints nothing for this pass's files. v3: 109 stills render. `sheet-a.cjs strays` prints `ok` for all 109 (the master palette, plus the engine's ONEBIT set for 1993 and its LEDGER set for the TV's money print). `tsc` over the project prints nothing for any file of this pass (its only errors are 11 pre-existing ones in `src/dev/realism/bake/bake.ts`). `git status` shows only new files: no existing file was edited, Act Four's included. |
+| **Where it is** | **Code:** 30 new modules in `studio/src/shared/pixel/{rooms,cast,kits}/` (the tables below), plus the v3.1 round's 6 new modules and its opt-in states (§7). The stills registry is `studio/src/episodes/ep01/pixel/art-a/` (`demos.ts` → `demos/*.ts`, one file per scene group; `registry.ts`; `tools/sheet.ts`; `README.md` with the commands). **Stills:** `out/ep01/full-v3/assets/art-a/`: `sheet-native.png` (176 stills at 1×, 4 across: v3's 109, the v3.1 round's 50, the v3.2 round's 17; keys marked `v31` / `v32` or new ids), `native/` (480×270), `full/` (1920×1080, 4× nearest), `index.json`. |
+| **Measured** | v3.2 round: 176 stills render, `strays` all ok, the 159 earlier stills pixel-identical (every v3.2 change is opt-in or new), `tsc` clean for this pass's files. v3.1 round: 159 stills render; `strays` prints `all ok`; the 109 v3 stills are **pixel-identical** in the picture area to their v3 renders (every v3.1 change is an opt-in state or a new module); `tsc` prints nothing for this pass's files. v3: 109 stills render. `sheet-a.cjs strays` prints `ok` for all 109 (the master palette, plus the engine's ONEBIT set for 1993 and its LEDGER set for the TV's money print). `tsc` over the project prints nothing for any file of this pass (its only errors are 11 pre-existing ones in `src/dev/realism/bake/bake.ts`). `git status` shows only new files: no existing file was edited, Act Four's included. |
 | **Needs a person** | v3.1: the same one-reader look at each new still (§7.5). I looked at every still at 1× on the sheet, at 2× one by one, and cropped the doubtful ones at 3–5×, and fixed what didn't read to me (§4). That is one reader's judgment, not a blind read. Nothing has been seen in motion: every held-step timing is on paper. No v3 shot layout exists yet, so each still shows its asset in a demo framing; its note names the beat it serves. |
 
 ---
@@ -263,3 +263,60 @@ The wide warms the most. The medium setups barely move on average: their frames 
 5. **REZEILE:** the pipeline's plate, or printed on the page.
 6. **The warmth is modest in the medium setups** (§7.4).
 7. **For P1b:** Sydney at DevDay (22.01) is `drawSydney(b, x, y, {size: 'room', face: 'smile', timer: {n: 5}})`.
+
+---
+
+## 8. The v3.2 round (script draft 8.1: Act One)
+
+Built against [script-v32-notes.md](../script-v32-notes.md) §4 (Act One) and §10.3 and §10.7 (the plates the world carries, and 8.1's picture notes), and the v3.2 beat plan [beat-plan-v32/act1.json](../beat-plan-v32/act1.json). Additive as before: 4 new modules, opt-in states on 7 modules. **The 159 earlier stills re-render pixel-identical.**
+
+### 8.1 The assets
+
+| Id | Module | Entry points | States | Stand-in / open |
+|---|---|---|---|---|
+| **SET-CALL** (v32-7.03) | `rooms/launch-call.ts` | `drawLaunchCallMcu(b, f, st)` · `drawTasyaContact(b, x, y, w, h, st)` · `drawCallScreenECU` · `drawKeyRingGlyph` · `CALL_TEXT` | [MCU] later that night, 7.01's fallaway behind him, the tile's red under him as a clean rim. `phone`: `ear` (at his ear, **its lit screen out to us**: `TASYA · MACROSOFT` over a key-ring avatar, the call running) · `low` (lowered, the call over) · `red` (lighting red before it reaches the desk: a siren dome, `ELGOOG` / `CODE RED`). The contact screen at any size, with states `ringing` · `call` · `ended`. The ECU option: the phone ringing on his desk, the contact large | **Cartoon, never a real backroom:** the screen faces us (a cartoon licence, so the relation plate reads in the world), with a big friendly key-ring avatar. His face stays open, lit from below like a campfire story, with no second party and no shadows over his eyes. The phone is oversized (42×64) so its words read. A person should judge whether it's too big |
+| **INSERT-MILLION-POST** (6.06) | `kits/act1-v32.ts` | `drawMillionPost(b, f, {k, settle})` · `MAS_MILLION`, `MILLION_POST_AT` | The odometer wedged in bedrock, the last wheel on `1,000,000` (`drill.ts`), his post popping over it in post-card's own UI and held steps. The words: "CHATGTP launched on wednesday. today it crossed 1 million users!", `DEC 4 · 11:35 PM` | Uses `kits/post-card.ts` as is (poster `mas`). `masMillion` is a constant here, not an edit to post-card's `POSTS` |
+| **KIT-KEY-RING** (v32-9.10k) | `kits/key-ring-insert.ts` | `drawKeyRingECU(b, f, st)` · `KEY_RING_ECU` | [ECU] his belt and the ring, large: eleven keys in brass, steel and copper, spread round the lower arc so they can be counted, and a beige twelfth hanging level at the front, its bow stamped `NOPEAI` in the 7 px face. `jangle` 0/1. `keys: 13, thirteenth` gives Act Three's thirteenth in Atem blue (v31-18.00b, for P1b) | The rail `FEB 7, 2023` is the pipeline's. `KEY_RING_ECU` says where the ring is, so the rail can sit clear of it |
+| **ROOM-ELGOOG@v32-cutin-founders** (8.04) | `rooms/elgoog-cutin.ts` + `cast/elgoog-founders.ts` | `drawFoundersCutIn(b, f, st)` · `founderCutIn` / `drawFounderCutIn` (3×) | The one cut-in, for "Someone else built that?". NIRB and EGAP at 3×, re-rastered from their own geometry (vector, never a scaled sprite), backlit, their rims widened for the size. They peer at Radnus's phone held in from frame left, the two-dot bubble on it; the mug reads `RETIRED` / `2019`. Also: the phone's chrome, and the siren's red passing on its turn (`turning`) | The silhouettes are flat by design (no portraits) |
+
+### 8.2 Opt-in states on existing modules
+
+| Module | Option | For |
+|---|---|---|
+| `rooms/duel-split.ts` | `DuelLeftState.button: ButtonEcuState` | 11.04: GTP-4 goes out on his click. The left pane cuts in to 5.08's insert (his finger on the beige button, `research preview`), cropped round the button into the pane (a crop, never a scale); `press` 0/1/2, `lit` |
+| `rooms/lobby-deal.ts` | `Deal2SState.collarPop` | 9.09's note: the ring's clink against the collar. On the jangle's clink the newest collar hops 1 px, as when it surfaced. With the v31 collars it is gold, the ring's brass: the collar reads as the landlord's |
+| `cast/sydney.ts` · `rooms/lobby-sydney.ts` | `EggTimerState.face: 'questions'` · `timerFace` | v31-10.03: the timer's own face reads `5 QUESTIONS`: a chunkier egg with the digit on its dome and a printed band round its waist |
+| `kits/pause-letter.ts` | `months` on `drawLetterPage`, `drawLetterOTS`, `drawClipboard` | 12.01 / 12.02: `6 MONTHS` under the header (the display face in red on the page; micro caps on the 64 px clipboard) |
+| `rooms/nole-desk.ts` | `months`, `bigClip` | 12.02: the 26 px desk clipboard can't carry a word, so `bigClip` glides it in at its 64 px size, with the header and `6 MONTHS` legible in the wide, before it lands small |
+| `cast/elgoog-founders.ts` | `founderCutIn`, `drawFounderCutIn` (new exports) | 8.04's cut-in |
+
+### 8.3 Draft 8.1's list, item by item
+
+| Item | Where |
+|---|---|
+| v32-7.03: the phone at his ear, lit red from below; the contact screen (`TASYA · MACROSOFT`, the key-ring avatar); the phone lighting red as he lowers it | `SET-CALL@ear`, `@low`, `@red`, `@ecu-ringing` |
+| 6.06: his post over the million | `INSERT-MILLION-POST@card`, `@opening` |
+| 11.04: his finger on the beige button in the left pane | `SPLIT-DUEL@v32-p2-button`, `@v32-p2-button-touch` |
+| v32-9.10k: the key ring large, eleven and a beige twelfth stamped `NOPEAI` | `KIT-KEY-RING@ecu-12`, `@ecu-12-jangle` (and `@ecu-13` for P1b) |
+| 9.09: the ring's clink against the collar | `ROOM-LOBBY-DEAL@v32-2s-clink` |
+| v31-10.03: `5 QUESTIONS` | `SET-SYDNEY@v32-2s-tasya-questions` |
+| 12.01 / 12.02: `6 MONTHS` | `UI-PAUSE-LETTER@v32-push-months`, `@v32-clipboard-months`, `ROOM-NOLE-DESK@v32-glide-big` |
+| 8.04: one cut-in on the founders | `ROOM-ELGOOG@v32-cutin-founders` |
+| The plates with a relation word (`GERG MOCKBRAN · CO-FOUNDER`, `RADNUS · RUNS ELGOOG · …`, `MARIO · EX-NOPEAI`, `NOLE · EARLY FUNDER · …`) | The pipeline's text layer: not drawn. `TASYA · MACROSOFT` is the one the world carries, on his phone |
+
+### 8.4 What the look fixed (one reader)
+
+- The key ring was too small for an ECU, with its stamp in micro caps. The ring is now bigger (r 50) with the keys spread, and the stamp is in the 7 px face.
+- The phone's red alert borrowed the insert's card, whose words ran off the phone. It now has its own alert at phone size.
+- The founders at 3× read as cardboard cut-outs with a 1 px rim. The rim is now K px.
+
+### 8.5 Open, and for a decision
+
+1. **The call's phone faces out** (the cartoon licence), so `TASYA · MACROSOFT` reads without a cutaway. The ECU (`@ecu-ringing`) is there if the shot pass would rather keep the phone real and cut in.
+2. **The call phone's size** (42×64, about his head's height): big enough to read, and cartoon. A person should judge whether it tips into silly.
+3. **12.02's `6 MONTHS`** is legible only if the clipboard glides in big (`bigClip`) or 12.01's page carries it. At the desk's size it can't.
+
+**Lead's rulings on §8 (2026-09-28):**
+1. **The call:** open on the **ECU of the phone ringing on the desk** with the contact screen large (`TASYA · MACROSOFT`), then Mas with the phone at his ear, **screen facing him** and at normal size. No outward-facing screen and no oversized phone: the ECU carries the read.
+2. **Phone size:** normal, per 1.
+3. **`6 MONTHS`:** carried by 12.01's letter page. The clipboard stays at desk size.

@@ -12,5 +12,7 @@ import './demos/v31-sydney';
 import './demos/v31-laptop';
 import './demos/v31-pause';
 import './demos/v31-launch';
+// v3.2 round (script draft 8.1)
+import './demos/v32-act1';
 export {DEMOS} from './registry';
 export type {AssetDemo} from './registry';

@@ -19,6 +19,9 @@ import {tiny, tinyWidth} from '../rooms/kit-b';
 import {PHONE29, drawSleeve, contactShadow} from './inserts-mas';
 import {tapHandCaps} from './inserts-hands';
 import {drawOrb} from '../cast/orb-medium';
+import {drawAlyiMini} from '../cast/alyi-speak';
+import {drawNelehMini} from '../cast/neleh';
+import {drawMadaMini, drawSpinner} from '../cast/mada';
 
 const RH = 203;
 // ------------------------------------------------------------------ the desk, from above (the 2 AM insert's plate, re-made)
@@ -114,7 +117,7 @@ const drawScreen = (b: Buf, kind: PhoneScreen, f: number, press: boolean) => {
 export const STRIP_SUPER: [number, number] = [PHONE29.screen.x1 - 10, PHONE29.screen.y0 + 90];
 /** v3.1 (23.02): the four circles' names on hover, as the Orb's iris steps along them */
 export const ATTENDEE_NAMES = ['ALYI', 'NELEH', 'MADA', 'THE QUIET VOTE'];
-export interface PhoneHighState { screen: PhoneScreen; thumb?: 'none' | 'hover' | 'tap'; orb?: [number, number] | null; hover?: 0 | 1 | 2 | 3 | null; }
+export interface PhoneHighState { screen: PhoneScreen; thumb?: 'none' | 'hover' | 'tap'; orb?: [number, number] | null; hover?: 0 | 1 | 2 | 3 | null; /** v3.2: the hover card with the member's small tile (Mada's face under his spinner) */ avatars?: boolean; }
 export const drawPhoneHigh = (b: Buf, f: number, st: PhoneHighState) => {
   const d = desk();
   b.c.set(d.c.subarray(0, 480 * RH));
@@ -126,10 +129,22 @@ export const drawPhoneHigh = (b: Buf, f: number, st: PhoneHighState) => {
     // the hover tooltip over the circle: its name in small caps on a dark chip with a pointer notch
     const S = PHONE29.screen, cx = S.x0 + 6 + 7 + st.hover * 16, cy = S.y0 + 60 + 7; // the circle's centre (attendeeCircles: r 6)
     const name = ATTENDEE_NAMES[st.hover], w = tinyWidth(name) + 6;
-    // under the circles (clear of the title and the date above them), its notch pointing up at the circle
-    const x = Math.max(S.x0 + 1, Math.min(S.x1 - w, cx - (w >> 1))), y = cy + 10;
-    rect(x - 1, y - 1, w + 2, 10, b.ink(PAL.N0)); rect(x, y, w, 8, b.ink(PAL.G1)); b.set(cx, y - 1, PAL.G1); b.set(cx, y - 2, PAL.N0);
-    tiny(b, name, x + 3, y + 2, PAL.P2);
+    // under the circles (clear of the title and the date above them), its notch pointing up at the circle; v3.2 (8.1:
+    // "so Mada has a face before the blow"): with `avatars`, the card carries the member's small call tile over the name
+    if (st.avatars) {
+      const cw = 42, chh = 36, x = Math.max(S.x0 + 1, Math.min(S.x1 - cw, cx - (cw >> 1))), y = cy + 10;
+      rect(x - 1, y - 1, cw + 2, chh + 2, b.ink(PAL.N0)); rect(x, y, cw, chh, b.ink(PAL.G1)); b.set(cx, y - 1, PAL.G1); b.set(cx, y - 2, PAL.N0);
+      const tx = x + 2, ty = y + 2;
+      if (st.hover === 0) drawAlyiMini(b, tx, ty); else if (st.hover === 1) drawNelehMini(b, tx, ty);
+      else if (st.hover === 2) { drawMadaMini(b, tx, ty); drawSpinner(b, tx + 19, ty + 4, f, {size: 'sm'}); }
+      else { rect(tx, ty, 38, 22, b.ink(PAL.N0)); rect(tx + 15, ty + 7, 8, 8, b.ink(PAL.N1)); }
+      const nm = name.length > 9 ? 'QUIET VOTE' : name;
+      tiny(b, nm, x + Math.max(1, Math.round((cw - tinyWidth(nm)) / 2)), y + 27, PAL.P2);
+    } else {
+      const x = Math.max(S.x0 + 1, Math.min(S.x1 - w, cx - (w >> 1))), y = cy + 10;
+      rect(x - 1, y - 1, w + 2, 10, b.ink(PAL.N0)); rect(x, y, w, 8, b.ink(PAL.G1)); b.set(cx, y - 1, PAL.G1); b.set(cx, y - 2, PAL.N0);
+      tiny(b, name, x + 3, y + 2, PAL.P2);
+    }
   }
   // his hand: the thumb over the strip (hover), or down on `super` (tap)
   if (st.thumb && st.thumb !== 'none') {

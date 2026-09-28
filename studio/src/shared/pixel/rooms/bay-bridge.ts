@@ -22,7 +22,7 @@ import {Buf, rect, line, ellipse, hash, bayer, clamp} from '../px';
 import {PAL, stepColor} from '../palette';
 import {text, textWidth} from '../font';
 import {tiny} from './kit-b';
-import {pt} from '../kits/uitype';
+import {pt, pw, bpt} from '../kits/uitype';
 import {drawAnchor, drawRumptWindow} from '../cast/civic-extras';
 
 const RH = 203;
@@ -45,6 +45,18 @@ export const alteredTag = (b: Buf, x: number, y: number) => {
   warnIcon(b, x + 4, y + 2, PAL.G5, PAL.G2);
   text(b, s, x + 14, y + 2, PAL.G6);
   return w;
+};
+
+/** v3.2 (14.01: "drawn large enough to read"): the same tag in the display face on two lines, its warning sign drawn at
+ *  twice the size (its own drawing), for a phone-width feed; returns its height */
+export const alteredTagBig = (b: Buf, x: number, y: number, w: number) => {
+  const h = 36;
+  rect(x + 1, y, w - 2, h, b.ink(PAL.G2)); rect(x, y + 1, w, h - 2, b.ink(PAL.G2)); rect(x + 1, y, w - 2, 1, b.ink(PAL.G3));
+  const T = ['.....##.....', '....####....', '....#..#....', '...##..##...', '...##..##...', '..###..###..', '..###..###..', '.##########.', '.####..####.', '############', '############'];
+  T.forEach((r, j) => { for (let i = 0; i < r.length; i++) if (r[i] === '#') b.set(x + 5 + i, y + 5 + j, PAL.G5); });
+  bpt(b, 'ALTERED', x + 21, y + 3, PAL.G6);
+  bpt(b, 'AUDIO', x + 21, y + 19, PAL.G6);
+  return h;
 };
 
 // ------------------------------------------------------------------ the clip
@@ -173,6 +185,10 @@ export interface BridgeOTSState {
   feed?: number;
   /** the CLASS PHOTO #1 post's heart count (it climbs while he holds it) */
   hearts?: number;
+  /** v3.2 (14.01): his thumb on the clip's scrub bar at the playhead (`progress`), dragging it back: 0 none, 1 on it */
+  scrub?: 0 | 1;
+  /** v3.2 (14.01): the tag at the display size (alteredTagBig) */
+  tagBig?: boolean;
 }
 export const BRIDGE_PHONE = {x: 176, y: 22, w: 118, h: 200};
 export const drawBridgeOTS = (b: Buf, f: number, st: BridgeOTSState) => {
@@ -208,12 +224,27 @@ export const drawBridgeOTS = (b: Buf, f: number, st: BridgeOTSState) => {
   const tall = new Buf(P.w, 340, PAL.N1);
   classPhotoPost(tall, 3, 12, P.w - 6, st.hearts ?? 406, st.f);
   drawNewsClip(tall, 3, 12 + feedH, P.w - 6, 82, {f, mouth: st.mouth, progress: st.progress});
-  alteredTag(tall, 5, 12 + feedH + 88);
-  for (let k = 0; k < 4; k++) { rect(4, 12 + feedH + 108 + k * 14, P.w - 8, 10, tall.ink(PAL.N2)); rect(6, 12 + feedH + 110 + k * 14, 6, 6, tall.ink(PAL.G3)); for (let i = 0; i < 44 + k * 9; i++) if (i % 6 !== 5) tall.set(16 + i, 12 + feedH + 113 + k * 14, PAL.G3); }
+  const tagH = st.tagBig ? alteredTagBig(tall, 4, 12 + feedH + 87, P.w - 8) - 11 : (alteredTag(tall, 5, 12 + feedH + 88), 0);
+  for (let k = 0; k < 4; k++) { const ry = 12 + feedH + 108 + tagH + k * 14; rect(4, ry, P.w - 8, 10, tall.ink(PAL.N2)); rect(6, ry + 2, 6, 6, tall.ink(PAL.G3)); for (let i = 0; i < 44 + k * 9; i++) if (i % 6 !== 5) tall.set(16 + i, ry + 5, PAL.G3); }
   for (let y = 10; y < P.h; y++) for (let x = 0; x < P.w; x++) b.set(P.x + x, P.y + y, tall.get(x, y + scroll));
   rect(P.x + 4, P.y + 4, 22, 3, b.ink(PAL.G3));
   // his fingers round the phone's left edge (lit by its screen), the thumb's heel at the foot
   holdFingers(b, P.x + 2, P.y + 112, 4, [PAL.S0, PAL.X1, PAL.X2, PAL.K3]);
+  // v3.2: his thumb from the phone's right edge onto the scrub bar at the playhead (the clip's bar is 2 px, 2 from its
+  // foot), lit by the screen; two held drawings as he drags it back are two `progress` values
+  if (st.scrub) {
+    const cy = P.y + 12 + feedH - scroll + 82 - 2, tx = P.x + 3 + Math.round((P.w - 6) * clamp(st.progress ?? 0.4, 0, 1));
+    if (cy > P.y + 10 && cy < P.y + P.h) {
+      const ux = 0.94, uy = 0.34, r = 8;
+      for (let yy = cy - 12; yy < cy + 40; yy++) for (let xx = tx - 10; xx < 480; xx++) {
+        const qx = xx - tx - ux * r * 0.6, qy = yy - cy - uy * r * 0.6, t = Math.max(0, Math.min(200, qx * ux + qy * uy)), d = Math.hypot(qx - ux * t, qy - uy * t);
+        if (d > r) continue;
+        const side = (qx - ux * t) * uy - (qy - uy * t) * ux;
+        const nail = t < r * 1.6 && side > -r * 0.55 && side < r * 0.3;
+        b.set(xx, yy, d > r - 1.1 ? PAL.S0 : nail ? (t < r * 0.5 ? PAL.K4 : PAL.K3) : side > r * 0.4 ? PAL.K3 : side < -r * 0.3 ? PAL.X1 : PAL.X2);
+      }
+    }
+  }
   for (let j = 0; j < 60; j++) for (let i = 0; i < 44; i++) if (Math.hypot((i - 22) / 22, (j - 30) / 30) < 1) b.set(P.x + P.w - 30 + i, P.y + P.h - 18 + j, i < 14 ? PAL.K2 : PAL.X1);
 };
 
@@ -236,7 +267,7 @@ export const drawBayWide = (b: Buf, f: number, st: BayState = {}) => {
 };
 
 // ------------------------------------------------------------------ 14.03 the lit window, close
-export interface LitWindowState { nod?: 0 | 1; glow?: boolean; hail?: number | null; }
+export interface LitWindowState { nod?: 0 | 1; glow?: boolean; hail?: number | null; /** v3.2 (14.03, 14.04 folded in): 1 its thumb presses (the phone's glow a rung up), 2 `✓ REPOSTED` pops beside it */ repost?: 0 | 1 | 2; }
 export const LITWIN = {x: 176, y: 58, w: 128, h: 92};
 export const drawLitWindow = (b: Buf, f: number, st: LitWindowState = {}) => {
   // the dark tower's face: a grid of dark panes (a faint cold sheen on the glass), and its ONE lit window
@@ -255,6 +286,16 @@ export const drawLitWindow = (b: Buf, f: number, st: LitWindowState = {}) => {
   rect(x - 3, y - 3, w + 6, 3, b.ink(PAL.N2)); rect(x - 3, y + h, w + 6, 4, b.ink(PAL.N3)); rect(x - 3, y, 3, h, b.ink(PAL.N2)); rect(x + w, y, 3, h, b.ink(PAL.N2));
   // the silhouette at the window, waist up, his phone up, the same clip glowing on it
   drawRumptWindow(b, x + 30, y + h - 78, {nod: st.nod ?? 0, glow: st.glow !== false, size: 2.6});
+  // v3.2: the repost, in the same shot: the press (the phone's glow steps up a rung), then the app's own chip beside it
+  if (st.repost) {
+    const gx = x + 30 + Math.round(21 * 2.6), gy = y + h - 78 + Math.round(14 * 2.6);
+    for (let j = -6; j <= 6; j++) for (let i = -6; i <= 6; i++) if (Math.hypot(i, j) < 6 && bayer(gx + i, gy + j) < 0.4) b.set(gx + i, gy + j, stepColor(b.get(gx + i, gy + j), 1));
+    if (st.repost >= 2) {
+      const s2 = 'REPOSTED', cw = pw(s2) + 22, cx = x + w - cw - 4, cy = y + 6;
+      rect(cx + 1, cy + 1, cw, 13, b.ink(PAL.N0)); rect(cx, cy, cw, 13, b.ink(PAL.G2)); rect(cx, cy, cw, 1, b.ink(PAL.G4));
+      text(b, '✓', cx + 4, cy + 3, PAL.L3); pt(b, s2, cx + 16, cy + 3, PAL.G6);
+    }
+  }
   // its warm reflection on the sill, and the hailstone dropping out of the window's foot
   rect(x, y + h, w, 1, b.ink(PAL.W3));
   if (st.hail !== undefined && st.hail !== null && st.hail < 1) {

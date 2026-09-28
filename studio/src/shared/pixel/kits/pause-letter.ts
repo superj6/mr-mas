@@ -17,11 +17,11 @@ import {pt, pw} from './uitype';
 import {tiny, tinyWidth} from '../rooms/kit-b';
 import {launchBackM, otsShoulder} from '../rooms/bullpen-launch';
 
-export const LETTER = {header: ['PAUSE GIANT AI', 'EXPERIMENTS'], kind: 'an open letter', received: 'PAUSES RECEIVED: 0', names: ['OIGNEB', 'SUCRAM', 'NOLE']};
+export const LETTER = {header: ['PAUSE GIANT AI', 'EXPERIMENTS'], kind: 'an open letter', received: 'PAUSES RECEIVED: 0', names: ['OIGNEB', 'SUCRAM', 'NOLE'], months: '6 MONTHS'};
 const RH = 203;
 /** the page: white, the header in two lines of the display face, one body line, then signature rows (a name in tiny
  *  caps and a scribble), the three names the scene needs among many unnamed ones */
-export const drawLetterPage = (b: Buf, x: number, y: number, w: number, h: number, st: {scroll?: number; print?: boolean} = {}) => {
+export const drawLetterPage = (b: Buf, x: number, y: number, w: number, h: number, st: {scroll?: number; print?: boolean; months?: boolean} = {}) => {
   rect(x, y, w, h, b.ink(PAL.P2));
   // v3.1 (opt-in, st.print: the page printed out, v31-12.03's desk): no browser strip, a thin shadow edge
   if (st.print) { rect(x + w - 1, y, 1, h, b.ink(PAL.P1)); rect(x, y + h - 1, w, 1, b.ink(PAL.P1)); }
@@ -30,9 +30,12 @@ export const drawLetterPage = (b: Buf, x: number, y: number, w: number, h: numbe
   let yy = y + 16 - (st.scroll ?? 0);
   if (big) {
     for (const l of LETTER.header) { bigText(b, l, x + Math.round((w - bigTextWidth(l)) / 2), yy, PAL.N1); yy += 17; }
+    // v3.2 (opt-in; draft 8.1's 12.01/12.02): the letter's own line under its header [V · facts #13]
+    if (st.months) { bigText(b, LETTER.months, x + Math.round((w - bigTextWidth(LETTER.months)) / 2), yy, PAL.R2); yy += 17; }
     pt(b, LETTER.kind, x + Math.round((w - pw(LETTER.kind)) / 2), yy + 2, PAL.G3); yy += 16;
   } else {
     for (const l of LETTER.header) { text(b, l, x + Math.round((w - textWidth(l)) / 2), yy, PAL.N1); yy += 9; }
+    if (st.months) { text(b, LETTER.months, x + Math.round((w - textWidth(LETTER.months)) / 2), yy, PAL.R2); yy += 9; }
     yy += 4;
   }
   // the signature list: rows of tiny names and scribbles (most unnamed: grey blocks)
@@ -50,6 +53,8 @@ export const drawLetterPage = (b: Buf, x: number, y: number, w: number, h: numbe
 };
 
 export interface LetterOTSState {
+  /** v3.2 (opt-in): the page carries its `6 MONTHS` line under the header */
+  months?: boolean;
   /** frames since the monitor lit (the header types on its first line, 2 chars a frame) */
   k?: number;
   /** the push: 0 his monitor in the room · 1..2 the screen's rect growing (held) · 3 full-bleed */
@@ -63,14 +68,14 @@ export const drawLetterOTS = (b: Buf, f: number, st: LetterOTSState = {}) => {
   for (let y = sy - 20; y < RH; y++) for (let x = sx - 30; x < sx + sw + 30; x++) { const d = Math.max(Math.abs(x - sx - sw / 2) - sw / 2, sy - y, 0) / 30; if (lit && d < 1 && bayer(x, y) < (1 - d) * 0.35) b.set(x, y, stepColor(b.get(x, y), 1)); }
   rect(sx - 6, sy - 6, sw + 12, sh + 12, b.ink(PAL.N0)); rect(sx - 5, sy - 5, sw + 10, 1, b.ink(PAL.G2));
   rect(sx + sw / 2 - 10, sy + sh + 6, 20, 16, b.ink(PAL.N1)); rect(sx + sw / 2 - 30, sy + sh + 20, 60, 4, b.ink(PAL.N1));
-  if (lit) drawLetterPage(b, sx, sy, sw, sh);
+  if (lit) drawLetterPage(b, sx, sy, sw, sh, {months: st.months});
   else rect(sx, sy, sw, sh, b.ink(PAL.N1));
   // the push: the page's rect grows to the frame (the page is laid out full-bleed and seen through the growing rect)
   const z = st.push ?? 0;
   if (z > 0) {
     const t = [0, 0.4, 0.75, 1][Math.min(3, z)];
     const x0 = Math.round(sx * (1 - t)), y0 = Math.round(sy * (1 - t)), x1 = Math.round((sx + sw) * (1 - t) + 480 * t), y1 = Math.round((sy + sh) * (1 - t) + RH * t);
-    drawLetterPage(b, x0, y0, x1 - x0, y1 - y0);
+    drawLetterPage(b, x0, y0, x1 - x0, y1 - y0, {months: st.months});
   }
   if (z < 3) otsShoulder(b, -40, 70, PAL.P0, {flip: true});
 };
@@ -80,6 +85,8 @@ export interface ClipboardState {
   signed?: number;
   /** the board's light: 'dark' (in the dark, the lamp's pool on it) · 'screen' (as a page) */
   small?: boolean;
+  /** v3.2 (opt-in): `6 MONTHS` under the header (the big clipboard only: at 26 px it can't carry a word) */
+  months?: boolean;
 }
 /** the clipboard, 64 x 84 (or small: 26 x 34 for a room-scale desk); the fine print on the clip, legible at 64 */
 export const drawClipboard = (b: Buf, x: number, y: number, st: ClipboardState = {}) => {
@@ -96,6 +103,7 @@ export const drawClipboard = (b: Buf, x: number, y: number, st: ClipboardState =
   // the sheet: the header, a rule, the signature rows
   tiny(b, 'PAUSE GIANT', x + Math.round((w - tinyWidth('PAUSE GIANT')) / 2), y + 15, PAL.N1);
   tiny(b, 'AI EXPERIMENTS', x + Math.round((w - tinyWidth('AI EXPERIMENTS')) / 2), y + 22, PAL.N1);
+  if (st.months) tiny(b, LETTER.months, x + Math.round((w - tinyWidth(LETTER.months)) / 2), y + 29, PAL.R2);
   rect(x + 8, y + 35, w - 16, 1, b.ink(PAL.G4));
   for (let r = 0; r < 7; r++) { const ry = y + 40 + r * 5; rect(x + 8, ry, 16 + (r * 5) % 10, 2, b.ink(PAL.G5)); for (let i = 0; i < 14; i++) b.set(x + 30 + i, ry + 1 - Math.round(Math.sin(i * 0.8 + r) * 1), PAL.I0); }
   // Nole's flourish on the next free line (his left hand: a big red loop)

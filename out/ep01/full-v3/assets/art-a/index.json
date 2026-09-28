@@ -1588,5 +1588,175 @@
   "standin": "",
   "native": "native/ROOM-APEC--v31-wide-collars.png",
   "full": "full/ROOM-APEC--v31-wide-collars.png"
+ },
+ {
+  "key": "SET-CALL@ear",
+  "id": "SET-CALL",
+  "state": "ear",
+  "module": "shared/pixel/rooms/launch-call.ts drawLaunchCallMcu",
+  "note": "v32-7.03 [MCU] later that night: the phone at his ear, its lit screen out to us (cartoon): TASYA · MACROSOFT over the key-ring avatar; the tile's red from below",
+  "standin": "",
+  "native": "native/SET-CALL--ear.png",
+  "full": "full/SET-CALL--ear.png"
+ },
+ {
+  "key": "SET-CALL@low",
+  "id": "SET-CALL",
+  "state": "low",
+  "module": "shared/pixel/rooms/launch-call.ts drawLaunchCallMcu",
+  "note": "v32-7.03 \"I'll bring a pen.\" He lowers the phone: the call over",
+  "standin": "",
+  "native": "native/SET-CALL--low.png",
+  "full": "full/SET-CALL--low.png"
+ },
+ {
+  "key": "SET-CALL@red",
+  "id": "SET-CALL",
+  "state": "red",
+  "module": "shared/pixel/rooms/launch-call.ts drawLaunchCallMcu",
+  "note": "v32-7.03 → 8.01: before it reaches the desk it lights red (ELGOOG · CODE RED), its red up his chin",
+  "standin": "",
+  "native": "native/SET-CALL--red.png",
+  "full": "full/SET-CALL--red.png"
+ },
+ {
+  "key": "SET-CALL@ecu-ringing",
+  "id": "SET-CALL",
+  "state": "ecu-ringing",
+  "module": "shared/pixel/rooms/launch-call.ts drawCallScreenECU",
+  "note": "v32-7.03 option: the phone ringing on his desk, the contact screen large (a cut-in on the ring)",
+  "standin": "",
+  "native": "native/SET-CALL--ecu-ringing.png",
+  "full": "full/SET-CALL--ecu-ringing.png"
+ },
+ {
+  "key": "INSERT-MILLION-POST@card",
+  "id": "INSERT-MILLION-POST",
+  "state": "card",
+  "module": "shared/pixel/kits/act1-v32.ts drawMillionPost + kits/post-card.ts",
+  "note": "6.06 the last wheel settled on 1,000,000; his post over it: \"CHATGTP launched on wednesday. today it crossed 1 million users!\" DEC 4 · 11:35 PM",
+  "standin": "",
+  "native": "native/INSERT-MILLION-POST--card.png",
+  "full": "full/INSERT-MILLION-POST--card.png"
+ },
+ {
+  "key": "INSERT-MILLION-POST@opening",
+  "id": "INSERT-MILLION-POST",
+  "state": "opening",
+  "module": "shared/pixel/kits/act1-v32.ts drawMillionPost",
+  "note": "6.06 the card opening (post-card's held step 1)",
+  "standin": "",
+  "native": "native/INSERT-MILLION-POST--opening.png",
+  "full": "full/INSERT-MILLION-POST--opening.png"
+ },
+ {
+  "key": "SPLIT-DUEL@v32-p2-button",
+  "id": "SPLIT-DUEL",
+  "state": "v32-p2-button",
+  "module": "shared/pixel/rooms/duel-split.ts drawDuelSplit {left.button}",
+  "note": "11.04 (draft 8.1) LEFT: Mas's finger on his beige button, no hover: the click (5.08's insert, cropped into the pane); RIGHT: CLOD launches",
+  "standin": "",
+  "native": "native/SPLIT-DUEL--v32-p2-button.png",
+  "full": "full/SPLIT-DUEL--v32-p2-button.png"
+ },
+ {
+  "key": "SPLIT-DUEL@v32-p2-button-touch",
+  "id": "SPLIT-DUEL",
+  "state": "v32-p2-button-touch",
+  "module": "shared/pixel/rooms/duel-split.ts drawDuelSplit {left.button}",
+  "note": "11.04 the touch before the click (press 1)",
+  "standin": "",
+  "native": "native/SPLIT-DUEL--v32-p2-button-touch.png",
+  "full": "full/SPLIT-DUEL--v32-p2-button-touch.png"
+ },
+ {
+  "key": "KIT-KEY-RING@ecu-12",
+  "id": "KIT-KEY-RING",
+  "state": "ecu-12",
+  "module": "shared/pixel/kits/key-ring-insert.ts drawKeyRingECU",
+  "note": "v32-9.10k [ECU] the ring at Tasya's belt, large for the first time: eleven keys and a beige twelfth stamped NOPEAI (the rail FEB 7, 2023 sits on it)",
+  "standin": "",
+  "native": "native/KIT-KEY-RING--ecu-12.png",
+  "full": "full/KIT-KEY-RING--ecu-12.png"
+ },
+ {
+  "key": "KIT-KEY-RING@ecu-12-jangle",
+  "id": "KIT-KEY-RING",
+  "state": "ecu-12-jangle",
+  "module": "shared/pixel/kits/key-ring-insert.ts drawKeyRingECU",
+  "note": "v32-9.10k it jangles as he turns toward the TV (the second held drawing)",
+  "standin": "",
+  "native": "native/KIT-KEY-RING--ecu-12-jangle.png",
+  "full": "full/KIT-KEY-RING--ecu-12-jangle.png"
+ },
+ {
+  "key": "KIT-KEY-RING@ecu-13",
+  "id": "KIT-KEY-RING",
+  "state": "ecu-13",
+  "module": "shared/pixel/kits/key-ring-insert.ts drawKeyRingECU {thirteenth}",
+  "note": "for P1b (v31-18.00b \"the thirteenth key large\"): the thirteenth in Atem blue beside the beige one",
+  "standin": "",
+  "native": "native/KIT-KEY-RING--ecu-13.png",
+  "full": "full/KIT-KEY-RING--ecu-13.png"
+ },
+ {
+  "key": "ROOM-LOBBY-DEAL@v32-2s-clink",
+  "id": "ROOM-LOBBY-DEAL",
+  "state": "v32-2s-clink",
+  "module": "shared/pixel/rooms/lobby-deal.ts drawDeal2S {collarPop}",
+  "note": "9.09 (note) the ring's clink against the collar: Tasya raises the ring on \"our servers\", and on its clink the new collar hops (gold, the ring's brass): the landlord's",
+  "standin": "",
+  "native": "native/ROOM-LOBBY-DEAL--v32-2s-clink.png",
+  "full": "full/ROOM-LOBBY-DEAL--v32-2s-clink.png"
+ },
+ {
+  "key": "SET-SYDNEY@v32-2s-tasya-questions",
+  "id": "SET-SYDNEY",
+  "state": "v32-2s-tasya-questions",
+  "module": "shared/pixel/rooms/lobby-sydney.ts drawSydney2STasya {timerFace}",
+  "note": "v31-10.03 (draft 8.1) the egg timer's own face reads 5 QUESTIONS; \"House rules, Sydney.\"",
+  "standin": "",
+  "native": "native/SET-SYDNEY--v32-2s-tasya-questions.png",
+  "full": "full/SET-SYDNEY--v32-2s-tasya-questions.png"
+ },
+ {
+  "key": "UI-PAUSE-LETTER@v32-push-months",
+  "id": "UI-PAUSE-LETTER",
+  "state": "v32-push-months",
+  "module": "shared/pixel/kits/pause-letter.ts drawLetterOTS {months}",
+  "note": "12.01 (draft 8.1) the letter's own line under its header: 6 MONTHS [V · facts #13]",
+  "standin": "",
+  "native": "native/UI-PAUSE-LETTER--v32-push-months.png",
+  "full": "full/UI-PAUSE-LETTER--v32-push-months.png"
+ },
+ {
+  "key": "UI-PAUSE-LETTER@v32-clipboard-months",
+  "id": "UI-PAUSE-LETTER",
+  "state": "v32-clipboard-months",
+  "module": "shared/pixel/kits/pause-letter.ts drawClipboard {months}",
+  "note": "12.01→12.02 the clipboard carries it too (legible at its 64 px size; the desk's 26 px one can't carry a word)",
+  "standin": "",
+  "native": "native/UI-PAUSE-LETTER--v32-clipboard-months.png",
+  "full": "full/UI-PAUSE-LETTER--v32-clipboard-months.png"
+ },
+ {
+  "key": "ROOM-NOLE-DESK@v32-glide-big",
+  "id": "ROOM-NOLE-DESK",
+  "state": "v32-glide-big",
+  "module": "shared/pixel/rooms/nole-desk.ts drawNoleDesk {bigClip, months}",
+  "note": "12.02 option: the clipboard glides in at its big size so PAUSE GIANT AI EXPERIMENTS / 6 MONTHS read in the wide, then lands small",
+  "standin": "",
+  "native": "native/ROOM-NOLE-DESK--v32-glide-big.png",
+  "full": "full/ROOM-NOLE-DESK--v32-glide-big.png"
+ },
+ {
+  "key": "ROOM-ELGOOG@v32-cutin-founders",
+  "id": "ROOM-ELGOOG",
+  "state": "v32-cutin-founders",
+  "module": "shared/pixel/rooms/elgoog-cutin.ts drawFoundersCutIn + cast/elgoog-founders.ts founderCutIn",
+  "note": "8.04 (draft 8.1) the one cut-in on the founders, \"Someone else built that?\": NIRB and EGAP at 3x peering at Radnus's phone (the two-dot bubble), on his phone's screen",
+  "standin": "",
+  "native": "native/ROOM-ELGOOG--v32-cutin-founders.png",
+  "full": "full/ROOM-ELGOOG--v32-cutin-founders.png"
  }
 ]

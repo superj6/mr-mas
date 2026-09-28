@@ -12,9 +12,11 @@
 //   pose.lanyard: wearing the GUEST lanyard (a red strap, the white card at the chest: it reads even in silhouette)
 //   pose.lit: 0 silhouette (in the crypt's mouth) · 1 half-lit (out in the lobby: their fronts pick up the day)
 //   FOUNDER_H, FOUNDER_FOOT
-import {Buf} from '../px';
+import {Buf, rect} from '../px';
 import {PAL} from '../palette';
-import {FigureDef, LightRig, P, Part, Stamp, renderFigure, blitImg} from '../figure';
+import {FigureDef, LightRig, P, Part, Stamp, Img, renderFigure, blitImg} from '../figure';
+import {scaleParts} from './medium-kit';
+import {text, textWidth} from '../font';
 import {memo, seg} from './kit';
 import {tiny} from '../rooms/kit-b';
 
@@ -103,4 +105,39 @@ export const drawFounder = (b: Buf, who: FounderId, footX: number, footY: number
     tiny(tmp, '2019', mx + 8, my + 6, PAL.R2);
     for (let i = 0; i < tmp.c.length; i++) { const v = tmp.c[i]; if (v === 0x1000000) continue; const X = i % b.w, Y = Math.floor(i / b.w); if (!clip || clip(X, Y)) b.c[i] = v; }
   }
+};
+
+// ------------------------------------------------------------------ v3.2: the cut-in (8.04, draft 8.1)
+/** v3.2 (8.04's "one cut-in on the founders for 'Someone else built that?'"): a founder at 3x, re-rastered from the same
+ *  geometry (medium-kit.ts scaleParts: vector, never a scaled sprite); the small stamps redrawn as parts at this size
+ *  (NIRB's prism, EGAP's mug, its words set in the 7 px face). Top-left (x, y); FOUNDER_W * K wide. */
+const CUT: Map<string, Img> = new Map();
+export const founderCutIn = (who: FounderId, p: FounderPose, K = 3): Img => {
+  const key = `${who}|${p.arm}|${p.legs}|${p.lit}|${K}`;
+  let img = CUT.get(key);
+  if (img) return img;
+  const def = fig(who, p);
+  const parts = scaleParts(def.parts, K);
+  const tall = who === 'nirb';
+  const top = tall ? 2 : 8, stoop = tall ? 0 : 2, sy = top + 22;
+  if (tall) parts.push({group: 'prism', mat: 'prism', tone: 4, prims: [P.poly((16 - stoop) * K, (top + 5) * K, (19 - stoop) * K, (top + 5) * K, (18 - stoop) * K, (top + 7) * K, (16 - stoop) * K, (top + 7) * K)]});
+  if (p.arm === 'mug' && !tall) {
+    parts.push({group: 'mug', mat: 'mug', tone: 4, prims: [P.rect(6 * K, (sy + 1) * K, 30 * K, 12 * K)]});
+    parts.push({group: 'mugH', mat: 'mug', tone: 3, prims: [P.rect(36 * K, (sy + 3) * K, 3 * K, K), P.rect(38 * K, (sy + 3) * K, K, 5 * K), P.rect(36 * K, (sy + 7) * K, 3 * K, K)]});
+  }
+  // the rims at this size: the day behind them wraps a K-px edge (a 1 px rim reads as a cardboard cut-out at 3x)
+  const R = rig(p.lit);
+  img = renderFigure({w: FOUNDER_W * K, h: FOUNDER_H * K, parts}, {...R, backBand: K, keyBand: (R.keyBand ?? 1) + K - 1});
+  CUT.set(key, img);
+  return img;
+};
+export const drawFounderCutIn = (b: Buf, who: FounderId, x: number, y: number, p: FounderPose, K = 3) => {
+  blitImg(b, founderCutIn(who, p, K), x, y);
+  if (who === 'nirb') { const top = 2; b.set(x + 17 * K, y + (top + 5) * K + 1, PAL.C9); }
+  if (who === 'egap' && p.arm === 'mug') {
+    const sy = 8 + 22, mx = x + 6 * K, my = y + (sy + 1) * K, mw = 30 * K;
+    text(b, 'RETIRED', mx + ((mw - textWidth('RETIRED')) >> 1), my + 8, PAL.N1);
+    text(b, '2019', mx + ((mw - textWidth('2019')) >> 1), my + 20, PAL.R2);
+  }
+  void rect;
 };

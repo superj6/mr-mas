@@ -10,6 +10,8 @@
 //                             st.orb: 'whirr' (the aperture ticking, as if counting) · 'rotate' (a turn) · 'rise' (one
 //                             pixel up) · 'look' (still) · its `look` vector; st.toasts: the Orb's toasts (over the
 //                             real NEDIB on the monitor: DARK_SCR.screen + EO_POV-style coordinates scaled by the caller)
+//                             v3.2: hand 'switch' (he reaches over to the switch on the bezel's near corner) and
+//                             `off` (v32-21.06: the glass black in one step)
 //   DARK_SCR                  the big monitor's screen rect (216 x 120) and Mas's / the Orb's anchors
 import {Buf, rect, line, bayer} from '../px';
 import {PAL, stepColor} from '../palette';
@@ -24,7 +26,9 @@ export const DARK_SCR = {screen: {x: 250, y: 12, w: 216, h: 120}, mas: [96, 44] 
 export interface Dark2SSCRState {
   screen?: Painter;
   mas?: Partial<MM.MasMediumState>;
-  hand?: 'two' | 'pinky' | 'up' | 'lower' | null;
+  hand?: 'two' | 'pinky' | 'up' | 'lower' | 'switch' | null;
+  /** v3.2 (v32-21.06): the monitor switched off: the glass black in one step, its LED out */
+  off?: boolean;
   orb?: {mode?: 'whirr' | 'rotate' | 'rise' | 'look'; look?: [number, number]} | null;
   plate?: DarkPlateOpts;
   toasts?: Array<{s: string; k: number; kind?: ToastKind; x: number; y: number; anchor?: 'left' | 'right'}>;
@@ -48,6 +52,18 @@ const drawHand = (b: Buf, x: number, y: number, kind: keyof typeof HANDS, drop =
     b.set(X, Y, s >= 3.5 ? PAL.C4 : s <= -3.5 ? PAL.N0 : t > L - 3 ? PAL.G3 : s > 1 ? PAL.G2 : PAL.G1);
   }
   HANDS[kind].forEach((r, j) => { for (let i = 0; i < r.length; i++) { const c = pal[r[i]]; if (c !== undefined) b.set(x + i, y + j + drop, c); } });
+};
+/** his near arm reaching across the desk to the monitor's switch: the hoodie sleeve from his shoulder, the hand with one
+ *  finger on the button (lit by the screen, camera-right) */
+const reachSwitch = (b: Buf, mx: number, sx: number, sy: number) => {
+  const ax = mx + 58, ay = 90, L = Math.hypot(sx - 8 - ax, sy - 2 - ay), ux = (sx - 8 - ax) / L, uy = (sy - 2 - ay) / L;
+  for (let t = 0; t <= L; t += 0.5) for (let s = -4.5; s <= 4.5; s += 0.5) {
+    const X = Math.round(ax + ux * t - uy * s), Y = Math.round(ay + uy * t + ux * s);
+    b.set(X, Y, s <= -4 ? PAL.C4 : s >= 4 ? PAL.N0 : t > L - 3 ? PAL.G3 : s < -1 ? PAL.G2 : PAL.G1);
+  }
+  const hx = sx - 8, hy = sy - 5;
+  for (let j = 0; j < 8; j++) for (let i = 0; i < 9; i++) { const d = Math.hypot((i - 4) / 4.5, (j - 4) / 4); if (d <= 1) b.set(hx - 3 + i, hy + j, d > 0.85 ? PAL.X1 : i > 5 ? PAL.K3 : PAL.K2); }
+  rect(hx + 5, hy + 3, 4, 2, b.ink(PAL.K3)); b.set(hx + 8, hy + 3, PAL.K4); // the finger on the button
 };
 export const drawDark2SSCR = (b: Buf, f: number, st: Dark2SSCRState = {}) => {
   const o: DarkPlateOpts = {tally: 2, glass: true, ...st.plate};
@@ -73,7 +89,7 @@ export const drawDark2SSCR = (b: Buf, f: number, st: Dark2SSCRState = {}) => {
     // the monitor's pool across the desk from the right
     for (let y = DPLATE.deskY + 1; y < DPLATE.nearY; y++) for (let x = 250; x < 480; x++) if (bayer(x, y) < 0.3 - (480 - x) / 900) bb.set(x, y, stepColor(bb.get(x, y), 1));
   }});
-  if (hand) drawHand(b, mx + 62, 70, hand, hand === 'lower' ? 22 : 0);
+  if (hand && hand !== 'switch') drawHand(b, mx + 62, 70, hand, hand === 'lower' ? 22 : 0);
   // the big monitor at frame right, standing on the desk (drawn after the desk: its foot sits on the desk's top), the
   // screen at 1:1
   const S = DARK_SCR.screen;
@@ -83,9 +99,19 @@ export const drawDark2SSCR = (b: Buf, f: number, st: Dark2SSCRState = {}) => {
   rect(S.x - 7, S.y - 6, S.w + 14, S.h + 13, b.ink(PAL.G0)); rect(S.x - 7, S.y - 6, S.w + 14, 1, b.ink(PAL.G2)); rect(S.x - 1, S.y - 1, S.w + 2, S.h + 2, b.ink(PAL.N0));
   b.set(S.x + S.w + 3, S.y + S.h + 3, PAL.L3);
   const scr = new Buf(S.w, S.h, PAL.N0);
-  (st.screen ?? ((s: Buf) => rect(0, 0, s.w, s.h, s.ink(PAL.N1))))(scr, f);
-  screenScanlines(scr);
+  if (st.off) {
+    // off: black glass, the room's faint reflection in it (the window's glow, a sheen streak), the LED out
+    for (let y = 0; y < S.h; y++) for (let x = 0; x < S.w; x++) scr.set(x, y, bayer(x, y) < 0.05 + (S.h - y) / 2400 ? PAL.N1 : PAL.N0);
+    for (let j = 0; j < S.h; j++) { const x = 40 + Math.round(j * 0.5); if (x < S.w && bayer(x, j) < 0.5) scr.set(x, j, PAL.N2); }
+    b.set(S.x + S.w + 3, S.y + S.h + 3, PAL.G1);
+  } else {
+    (st.screen ?? ((s: Buf) => rect(0, 0, s.w, s.h, s.ink(PAL.N1))))(scr, f);
+    screenScanlines(scr);
+  }
   for (let y = 0; y < S.h; y++) for (let x = 0; x < S.w; x++) b.set(S.x + x, S.y + y, scr.get(x, y));
+  // v3.2: the power switch on the bezel's near corner (bottom-left), and his hand on it: he reaches over and presses
+  rect(S.x - 5, S.y + S.h + 2, 4, 3, b.ink(st.off ? PAL.G1 : PAL.G3));
+  if (hand === 'switch') reachSwitch(b, mx, S.x - 3, S.y + S.h + 3);
 
   drawDarkPlateFront(b, f, o);
   for (const t of st.toasts ?? []) drawToast(b, t.x, t.y, t.s, t.k, {kind: t.kind, anchor: t.anchor, f});

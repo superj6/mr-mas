@@ -57,6 +57,7 @@ import {guestBadge} from './props';
 import {drawPointer} from './callgrid';
 import {isMini, Painter} from './mas-monitor';
 import {alyiReflection} from '../cast/alyi-speak';
+import {alyiReflectionLook, AlyiLookDir} from '../cast/alyi-v5';
 import {drawTerbRoom, TERB_ROOM_DEFAULT, TERB_W, TERB_FOOT} from '../cast/terb';
 import {drawTerbSheetRoom, TERB_SHEET_DEFAULT} from '../cast/terb-sheet';
 import {drawMadaTile, MADA_BUST_DEFAULT, drawSpinner} from '../cast/mada';
@@ -481,7 +482,7 @@ export const drawSundayOTS = (b: Buf, f: number, st: SundayOTSState = {}) => {
 };
 
 // ================================================================== Alyi in the boardroom's dark window (S4.02)
-export const drawAlyiGlass = (b: Buf, f: number, st: {mouth?: Viseme; eyes?: 'open' | 'closed'} = {}) => {
+export const drawAlyiGlass = (b: Buf, f: number, st: {mouth?: Viseme; eyes?: 'open' | 'closed'; /** v3.2 (8.1, S4.02: "That is the company telling us."): his reflection turns to the phones (cast/alyi-v5's looks; 'door' reads as our right, where they are) */ look?: AlyiLookDir} = {}) => {
   // the glass at night: the dark, the Valley's lights far below in the lower third, a mullion off to the left
   for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) {
     let c: number = bayer(x, y) < 0.12 - y * 0.0004 ? PAL.N2 : PAL.N1;
@@ -495,7 +496,7 @@ export const drawAlyiGlass = (b: Buf, f: number, st: {mouth?: Viseme; eyes?: 'op
     rect(x + 5, y + 3, 16, 1, b.ink(stepColor(col, 2)));
   });
   // ALYI's reflection, not turning: mirrored, cool, the glass showing through its faintest rung
-  const im = alyiReflection({mouth: st.mouth ?? 'rest', eyes: st.eyes ?? 'open', t: f, mirror: true});
+  const im = st.look ? alyiReflectionLook({mouth: st.mouth ?? 'rest', eyes: st.eyes ?? 'open', t: f}, st.look) : alyiReflection({mouth: st.mouth ?? 'rest', eyes: st.eyes ?? 'open', t: f, mirror: true});
   const X = 196, Y = RH - im.h;
   for (let j = 0; j < im.h; j++) for (let i = 0; i < im.w; i++) { const v = im.c[j * im.w + i]; if (v >= 0) b.set(X + i, Y + j, v); }
   // the glass's sheen (two thin streaks, fixed to the glass), the mullion, the sill catching the room's light

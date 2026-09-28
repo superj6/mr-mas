@@ -48,7 +48,7 @@ const chyron = (scr: Buf, s: string, typed = 999, accent = PAL.R2) => {
 };
 
 // ------------------------------------------------------------------ the landlord's lobby (v31-18.00, 18.00b)
-export interface LobbyV31State { key: 0 | 1 | 2; kram: 0 | 1 | 2; caption?: boolean; chip?: boolean; f?: number; }
+export interface LobbyV31State { key: 0 | 1 | 2; kram: 0 | 1 | 2; caption?: boolean; chip?: boolean; f?: number; /** v3.2 (8.1: "the thirteenth key large"): the blue key hung in front at twice the brass keys' size (its own drawing) */ keyLarge?: boolean; }
 const slateLobby = (scr: Buf) => {
   // slate walls, a slate floor, a long reception desk, the tall glass behind (cool daylight), no brand's mark
   const W = scr.w, H = scr.h, fy = Math.round(H * 0.72);
@@ -65,6 +65,15 @@ const blueKey = (b: Buf, x: number, y: number, lean = 0) => {
   // the one blue key among the brass: pale Atem blue with a paper glint, so it reads against the slate and his blazer
   const pal: Record<string, number> = {O: PAL.F3, L: PAL.F6, h: PAL.P2, D: PAL.F5};
   K.forEach((r, j) => { for (let i = 0; i < r.length; i++) { const c = pal[r[i]]; if (c !== undefined) b.set(x + i + Math.round(j * lean), y + j, c); } });
+};
+/** the thirteenth key drawn large (12 x 28: the bow's ring, the long blade, three teeth), Atem blue with a paper glint,
+ *  hanging off the ring's foot in front of the brass: it reads at a glance */
+const bigBlueKey = (b: Buf, x: number, y: number) => {
+  const K = ['...OOOOOO...', '..OhhLLLLO..', '.OhLLLLLLLO.', 'OhLL....LLLO', 'OLL......LLO', 'OLL......LLO', 'OLL......LLO', '.OLL....LLO.', '..OLLLLLLO..',
+    '...OOLDOO...', '....OLDO....', '....OLDO....', '....OLDO....', '....OLDO....', '....OLDO....', '....OLDO....', '....OLDOOO..', '....OLDLLLO.',
+    '....OLDOOO..', '....OLDO....', '....OLDOO...', '....OLDLLO..', '....OLDOO...', '....OLDO....', '....OLDOOO..', '....OLDLLLO.', '....OLLOOO..', '....OOO.....'];
+  const pal: Record<string, number> = {O: PAL.F3, L: PAL.F6, h: PAL.P2, D: PAL.F5};
+  K.forEach((r, j) => { for (let i = 0; i < r.length; i++) { const c = pal[r[i]]; if (c !== undefined) b.set(x + i, y + j, c); } });
 };
 export const lobbyPainter = (st: LobbyV31State): Painter => (scr, f) => {
   const W = scr.w, H = scr.h;
@@ -86,7 +95,8 @@ export const lobbyPainter = (st: LobbyV31State): Painter => (scr, f) => {
   drawTasyaKeyRing(scr, inScr, tx - 5, ty, jangle);
   const rcx = tx + 25, rcy = ty + 66; // the ring's centre (tasya-speak drawRing: ox + 30, oy + 66, ox = x - 5)
   if (st.key === 1) blueKey(scr, rcx - 17, rcy + 3, -0.35); // going on: its bow at the ring's left (clear of his face), the blade swinging out
-  if (st.key === 2) blueKey(scr, rcx - 3, rcy + 12, 0.05); // hung, the newest, lowest, in front of the brass
+  if (st.key === 2 && !st.keyLarge) blueKey(scr, rcx - 3, rcy + 12, 0.05); // hung, the newest, lowest, in front of the brass
+  if (st.key === 2 && st.keyLarge) bigBlueKey(scr, rcx - 6, rcy + 10);
   // KRAM steps into the lobby, frame right, facing her (the civic busts' own 3/4 view: never flipped, the hoodie's
   // words would mirror): his bust in the slate light, the words legible
   if (st.kram) putBustCut(scr, kramBust({...KRAM_BUST_DEFAULT}), Math.round(W * (st.kram === 1 ? 0.66 : 0.56)), 18, H);

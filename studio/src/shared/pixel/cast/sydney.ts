@@ -24,7 +24,12 @@ import {text} from '../font';
 import {drawChatBubble, CHAT_BUBBLE} from './chatgtp';
 
 export type SydneyFace = 'dots' | 'smile' | 'blink' | 'blank';
-export interface EggTimerState { n?: number; ding?: 0 | 1 | 2; hand?: boolean }
+export interface EggTimerState {
+  n?: number; ding?: 0 | 1 | 2; hand?: boolean;
+  /** v3.2 (opt-in; draft 8.1's 10.03): the face reads `5 QUESTIONS`: a chunkier egg, the digit on its dome and a
+   *  printed band round its waist with QUESTIONS (legible at the 2S) */
+  face?: 'questions';
+}
 export interface SydneyOpts {
   size?: 'screen' | 'room';
   face?: SydneyFace;
@@ -62,6 +67,7 @@ export const drawEggTimer = (b: Buf, x: number, y: number, o: EggTimerState & {s
     rect(x - 1 + dx, y + 1, 3, 4, b.ink(PAL.P1)); b.set(x - 1 + dx, y + 1, PAL.P2); b.set(x + 1 + dx, y + 4, PAL.P0); b.set(x + dx, y + 3, PAL.N3);
     return;
   }
+  if (o.face === 'questions') { eggQuestions(b, x + dx, y, o); return; }
   // the ring (brass) and the egg: 13 x 14, cream, narrower at the top, its twist line round the waist, the digit
   // printed on its face in dark ink (a kitchen timer's number) under a red index mark
   const X = x + dx;
@@ -70,6 +76,24 @@ export const drawEggTimer = (b: Buf, x: number, y: number, o: EggTimerState & {s
   EGG.forEach((r, j) => { for (let i = 0; i < r.length; i++) { const ch = r[i]; if (ch === '.') continue; b.set(X - 6 + i, y + 3 + j, ch === 'k' ? PAL.N1 : ch === 'H' ? PAL.P2 : ch === 'P' ? PAL.P1 : ch === 't' ? PAL.P0 : PAL.P0); } });
   b.set(X, y + 3 + 5, o.ding ? PAL.R3 : PAL.R2); // the index mark, on the twist line
   text(b, String(o.n ?? 5), X - 2, y + 3 + 6, PAL.N1);
+};
+
+/** the 5 QUESTIONS face: a 23 x 26 egg, the digit on its dome, a printed band (41 x 9) round its waist */
+const eggQuestions = (b: Buf, X: number, y: number, o: EggTimerState) => {
+  b.set(X, y, PAL.W6); b.set(X - 1, y + 1, PAL.W5); b.set(X + 1, y + 1, PAL.W4); b.set(X, y + 2, PAL.W4);
+  const ey = y + 3, w = 23, h = 26;
+  for (let j = 0; j < h; j++) for (let i = 0; i < w; i++) {
+    const u = (i - (w - 1) / 2) / (w / 2), v = (j - h * 0.58) / (h * (j < h * 0.58 ? 0.62 : 0.44));
+    const d = Math.hypot(u, v);
+    if (d > 1) continue;
+    b.set(X - 11 + i, ey + j, d > 0.9 ? PAL.N1 : u < -0.3 && v < -0.2 ? PAL.P2 : u > 0.45 || v > 0.55 ? PAL.P0 : PAL.P1);
+  }
+  text(b, String(o.n ?? 5), X - 2, ey + 3, PAL.N1);
+  // the band: cream paper with a thin rule each side, QUESTIONS printed across it; the index mark over the digit
+  const s = 'QUESTIONS', tw = tinyWidth(s), bw = tw + 6, bx = X - (bw >> 1), by = ey + 12;
+  rect(bx, by, bw, 9, b.ink(PAL.P2)); rect(bx, by, bw, 1, b.ink(PAL.P0)); rect(bx, by + 8, bw, 1, b.ink(PAL.P0)); rect(bx, by, 1, 9, b.ink(PAL.P0)); rect(bx + bw - 1, by, 1, 9, b.ink(PAL.P0));
+  tiny(b, s, bx + 3, by + 2, o.ding ? PAL.R2 : PAL.N1);
+  b.set(X, ey + 11, o.ding ? PAL.R3 : PAL.R2);
 };
 
 const chainAt = (b: Buf, x0: number, x1: number, y0: number, sag: number) => {

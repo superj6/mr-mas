@@ -122,6 +122,8 @@ export interface Sydney2STasyaState {
   clip?: 0 | 1 | 2;
   /** the timer's digit (5 when he clips it) */
   n?: number;
+  /** v3.2 (opt-in): the timer's face reads `5 QUESTIONS` (cast/sydney.ts EggTimerState.face) */
+  timerFace?: 'questions';
 }
 export const SYD_TASYA = {tasya: [372, 96] as [number, number]};
 export const drawSydney2STasya = (b: Buf, f: number, st: Sydney2STasyaState = {}) => {
@@ -133,11 +135,11 @@ export const drawSydney2STasya = (b: Buf, f: number, st: Sydney2STasyaState = {}
   const [hx, hy] = [tx + TASYA_M_CLIP[0], ty + TASYA_M_CLIP[1]];
   const sx = hx - SYDNEY.screen.clip[0], sy = hy - SYDNEY.screen.clip[1] - 1;
   drawTasyaMedium(b, tx, ty, {mouth: 'smile', brow: 'warm', keys: 12, beige: true, ...st.tasya, arm: clip === 1 ? 'clip' : st.tasya?.arm ?? 'clasp'});
-  drawSydney(b, sx, sy, {size: 'screen', ...st.sydney, timer: clip === 2 ? {n: st.n ?? 5} : null});
+  drawSydney(b, sx, sy, {size: 'screen', ...st.sydney, timer: clip === 2 ? {n: st.n ?? 5, face: st.timerFace} : null});
   if (clip === 1) {
     // the timer in his fingers at her chain (drawn over the chain; his fingertips over the ring)
     const [cx, cy] = sydneyChainAt(sx, sy);
-    drawEggTimer(b, cx, cy, {n: st.n ?? 5});
+    drawEggTimer(b, cx, cy, {n: st.n ?? 5, face: st.timerFace});
     rect(cx + 1, cy - 1, 3, 3, b.ink(PAL.S4)); b.set(cx + 1, cy - 1, PAL.S5); b.set(cx + 3, cy + 1, PAL.S3);
   }
 };

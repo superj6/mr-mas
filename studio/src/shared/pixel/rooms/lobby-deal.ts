@@ -138,6 +138,9 @@ export interface Deal2SState {
   collars?: number;
   /** v3.1: the collars' drawing (mas-collars.ts 'v31') */
   collarStyle?: 'v31';
+  /** v3.2 (opt-in; 9.09's note: the ring's clink against the collar, so the collar reads as the landlord's): frames
+   *  since the clink; 0-1 the newest collar hops 1 px (as it did when it surfaced), in time with the jangle */
+  collarPop?: number;
   /** Gerg behind them at the door, tugging the check's corner (room scale: he's further back) */
   gerg?: boolean;
   tv?: TvState;
@@ -147,7 +150,7 @@ export const drawDeal2S = (b: Buf, f: number, st: Deal2SState = {}) => {
   // Mas at frame left, turned to Tasya (flipped), chest-up (the frame's bottom cuts his waist)
   const mx = 6, my = 96;
   drawMasMedium(b, mx, my, {...MAS_MEDIUM_DEFAULT, light: 'warm', head: '34', look: 1, arm: 'down', ...st.mas}, {flip: true});
-  drawCollarsMedium(b, mx, my, st.collars ?? 2, {flip: true, style: st.collarStyle});
+  drawCollarsMedium(b, mx, my, st.collars ?? 2, {flip: true, style: st.collarStyle, pop: st.collarPop});
   // Tasya at frame right, turned to Mas (he's authored facing left), his ring at his belt
   drawTasyaMedium(b, 380, 96, {arm: 'clasp', ...st.tasya});
 };

@@ -9,6 +9,8 @@
 //   post       his post popping over the poster, in his lowercase: `…no plans to leave` (kits/post-card.ts)
 //   un         `UN-CANCELLED` landing over the first stamp
 //   added      the blank last slot stamping itself `ADDED DUE TO POPULAR DEMAND`
+//   hand       v3.2: his own hand with a rubber stamp on that slot, one drawing each: 'in' · 'stamp' · 'out'
+//   phone      v3.2: his thumb on his phone in the frame's corner for the post (0 over it, 1 the tap)
 // (No "blackmail" cuff and no NOTERB plate: cut in the beat plan.) Each stamp lands in 2 held steps (`k`: 0 the
 // stamp's ghost 1 px up and a rung light, then set).
 //   drawTourPoster(b, f, st)        [GFX] the poster over the frame, with its items
@@ -30,6 +32,10 @@ export interface TourPosterState {
   /** each stamp: k frames since it landed (null = not yet) */
   cancelled?: number | null;
   post?: number | null;
+  /** v3.2 (16.01): his own hand with a rubber stamp for the last slot: 'in' (over it), 'stamp' (down on it), 'out' */
+  hand?: 'in' | 'stamp' | 'out' | null;
+  /** v3.2 (16.01, draft 8.1): his thumb on his phone in the frame's corner for "…no plans to leave" (1 = the tap) */
+  phone?: 0 | 1 | null;
   un?: number | null;
   added?: number | null;
 }
@@ -121,12 +127,55 @@ export const drawTourPoster = (b: Buf, f: number, st: TourPosterState = {}) => {
     text(b, 'ADDED DUE TO', X + L.x + 9, ly - 1 + dy, col);
     text(b, 'POPULAR DEMAND', X + L.x + 9, ly + 8 + dy, col);
   }
+  // v3.2: his hand with the rubber stamp (in, stamp, out: one drawing each), in from the frame's right edge
+  if (st.hand) {
+    const ly = Y + L.y + 10 + (TOUR_CITIES.length - 1) * L.row, sx0 = X + L.x + 4, sw = textWidth('ADDED DUE TO') + 32;
+    const lift = st.hand === 'stamp' ? 0 : 16, dx = st.hand === 'out' ? 70 : 0;
+    stampInHand(b, sx0 + dx, ly - 4 - lift, sw);
+  }
+  // v3.2: his phone in the frame's corner, his thumb on it (the reversal is his move)
+  if (st.phone !== undefined && st.phone !== null) cornerPhone(b, st.phone);
   // ITEM 2: his post pops over the poster (the post card kit's notify size, whole from k 3)
   if (st.post !== undefined && st.post !== null) {
     const spec = {who: 'mas' as const, text: '…no plans to leave', ts: 'MAY 26'};
     const w = 176, bx = postBox(spec, 'phone', w);
     drawPost(b, X + W - w + 40, Y + 104, spec, {size: 'popup', w, k: Math.min(3, st.post)});
     void bx;
+  }
+};
+/** a long rubber stamp (its red rubber face, the wood block, the knob) held from above by his hand, the hoodie sleeve
+ *  going off the frame's right edge; (x, y) = the rubber face's top-left, w its width */
+const stampInHand = (b: Buf, x: number, y: number, w: number) => {
+  rect(x + 2, y + 24, w, 2, b.ink(PAL.N0)); // its shadow when it's down
+  rect(x, y + 12, w, 10, b.ink(PAL.D3)); rect(x, y + 12, w, 1, b.ink(PAL.D4)); rect(x, y + 21, w, 1, b.ink(PAL.D1)); // the block
+  rect(x + 1, y + 22, w - 2, 2, b.ink(PAL.R2)); // the rubber
+  const kx = x + (w >> 1);
+  rect(kx - 3, y + 4, 6, 8, b.ink(PAL.D2)); rect(kx - 3, y + 4, 1, 8, b.ink(PAL.D4)); // the stem
+  for (let j = -5; j <= 4; j++) for (let i = -7; i <= 7; i++) if (Math.hypot(i / 7, j / 5) <= 1) b.set(kx + i, y + 1 + j, j < -2 ? PAL.D4 : PAL.D3); // the knob
+  // his hand round the knob (knuckles on top, lit from the left), the sleeve to the right edge
+  for (let j = -9; j <= 6; j++) for (let i = -9; i <= 13; i++) { const d = Math.hypot(i / 11, j / 8); if (d > 1) continue; b.set(kx + i, y - 1 + j, d > 0.88 ? PAL.S1 : i < -3 ? PAL.S5 : j > 2 ? PAL.S3 : PAL.S4); }
+  for (const i of [-5, -1, 3, 7]) b.set(kx + i, y - 8, PAL.S2);
+  for (let j = -10; j <= 4; j++) for (let xx = kx + 12; xx < 480; xx++) { const yy = y - 4 + j + Math.round((xx - kx - 12) * -0.18); b.set(xx, yy, j === -10 || j === 4 ? PAL.N0 : j < -6 ? PAL.G3 : PAL.G2); }
+};
+/** his phone at the frame's lower-right corner, over the brick (off the poster), its screen lit with the post going up,
+ *  his thumb on it; `tap` 1 = the thumb down on the post button */
+const cornerPhone = (b: Buf, tap: 0 | 1) => {
+  const px = 398, py = 122, pw2 = 70, ph = 100;
+  rect(px + 3, py + 3, pw2, ph, b.ink(PAL.N0));
+  rect(px, py, pw2, ph, b.ink(PAL.N0)); rect(px + 1, py + 1, pw2 - 2, ph, b.ink(PAL.G1)); rect(px + 1, py, pw2 - 2, 1, b.ink(PAL.G3));
+  rect(px + 4, py + 5, pw2 - 8, ph, b.ink(PAL.N2));
+  // the compose screen: his words, the post button
+  pt(b, '…no plans', px + 8, py + 12, PAL.P2); pt(b, 'to leave', px + 8, py + 22, PAL.P2);
+  const bx = px + pw2 - 30, by = py + 36;
+  rect(bx, by, 24, 11, b.ink(tap ? PAL.C3 : PAL.C5)); pt(b, 'post', bx + 3, by + 2, PAL.N0);
+  // his thumb from the lower right onto the button (the nail up)
+  const tx = bx + 12, ty = by + 6 + tap;
+  for (let yy = ty - 8; yy < RH; yy++) for (let xx = tx - 10; xx < 480; xx++) {
+    const qx = xx - tx - 3, qy = yy - ty - 5, t = Math.max(0, Math.min(200, qx * 0.45 + qy * 0.89)), d = Math.hypot(qx - 0.45 * t, qy - 0.89 * t);
+    if (d > 9) continue;
+    const side = (qx - 0.45 * t) * 0.89 - (qy - 0.89 * t) * 0.45;
+    const nail = t < 12 && Math.abs(side + 1) < 5;
+    b.set(xx, yy, d > 8 ? PAL.S1 : nail ? (t < 5 ? PAL.P1 : PAL.S5) : side < -3 ? PAL.S5 : side > 4 ? PAL.S3 : PAL.S4);
   }
 };
 /** the cut-in on the poster's photo: his one-pixel smile (the photo's own print, at 2x: a poster's halftone, close) */

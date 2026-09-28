@@ -70,6 +70,11 @@ export interface NoleDeskState {
   sparks?: number | null;
   nole?: Partial<NolePose>;
   oigneb?: Partial<OignebPose> | null;
+  /** v3.2 (opt-in): the clipboard's `6 MONTHS` line (legible only on the big clipboard, st.bigClip) */
+  months?: boolean;
+  /** v3.2 (opt-in): the clipboard at its 64 x 84 size while it glides in (clip 1..3), so its header and 6 MONTHS read
+   *  in the wide before it lands small on the desk */
+  bigClip?: boolean;
 }
 const SPARKS = [
   [[0, -3], [2, -5], [-2, -4], [4, -2], [-3, -1]],
@@ -108,7 +113,8 @@ export const drawNoleDesk = (b: Buf, f: number, st: NoleDeskState = {}) => {
     const [cx, cy] = N.clip;
     const gx = clip >= 4 ? cx : Math.round(-40 + (cx + 40) * [0, 0.35, 0.7, 0.92][clip]);
     const gy = clip >= 4 ? cy : cy - [0, 16, 8, 2][clip];
-    drawClipboard(b, gx, gy, {small: true, signed: st.signed ?? 0});
+    if (st.bigClip && clip < 4) drawClipboard(b, gx, gy - 50, {signed: st.signed ?? 0, months: st.months});
+    else drawClipboard(b, gx, gy, {small: true, signed: st.signed ?? 0, months: st.months});
   }
   // the iron under the desk and the sparks (three held drawings, on 3s), their light on the shelf
   if (st.sparks !== null && st.sparks !== undefined) {

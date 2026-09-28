@@ -23,6 +23,7 @@
 //                               whole-pixel pan R -> L: `pan` 0 (Tasya) .. WH_ROW.panMax (settled on Mas, at the lens)
 //   drawClassPhoto(b, f, st)    [ECU] (13.14) CLASS PHOTO #1: the flash frame printed (the wide's own pixels, a print
 //                               grade, a white border), Mas's hand holding it
+//   drawRadnusFlameMCU(b, f, st) v3.2 [MCU] (13.10): his face and the flame together (it replaces the ECU below)
 //   drawCollarFlame(b, f, st)   [ECU] (13.10) the small flame on Radnus's collar: size 1 | 2, his hand patting (STAND-IN
 //                               collar: art-a owns RADNUS's colours)
 // Cast used: SIRRAH, NEDIB (cast/sirrah.ts, cast/nedib.ts), MAS (cast/mas-stand.ts, cast/mas.ts portrait), MARIO
@@ -246,6 +247,10 @@ export interface WHRowState {
    *  shows past the table's right end, as a strip on the carpet) */
   scroll?: number;
   mouths?: Partial<Record<WHSeat, 'rest' | 'open' | 'smile'>>;
+  /** v3.2 (13.01): still settling: 1 half-risen over the chair (4 px up, leaning 1 px in), 2 just arriving (8 px up) */
+  settle?: Partial<Record<'radnus' | 'mario', 0 | 1 | 2>>;
+  /** v3.2 (13.01): his own glass set down square on the table in front of him (he got there first) */
+  masGlass?: boolean;
 }
 const imgMas = (look: WHLook, mouth: 'rest' | 'open' | 'smile') => masStand({...MAS_STAND_DEFAULT, mouth: mouth === 'smile' ? 'rest' : mouth});
 /** draw one seated figure (a standing sprite cut by the table), its head turned per `look` */
@@ -267,7 +272,8 @@ const drawSeat = (b: Buf, who: WHSeat, look: WHLook, st: WHRowState, f: number) 
   else { img = radnusRoomA({arm: 'fold', fire: null, blink: false, mouth: st.mouths?.radnus === 'open' ? 'open' : 'smile', light: 'room'}); [fx, fy] = RADNUS_FOOT; }
   // every room sprite faces screen-right except art-a's RADNUS (authored facing left)
   const flip = who === 'radnus' ? !faceLeft : faceLeft;
-  const ox = x - (flip ? img.w - 1 - fx : fx), oy = footY - fy;
+  const set = who === 'radnus' || who === 'mario' ? (st.settle?.[who] ?? 0) : 0;
+  const ox = x - (flip ? img.w - 1 - fx : fx) + (set === 1 ? (flip ? -1 : 1) : 0), oy = footY - fy - [0, 4, 8][set];
   blitImg(b, img, ox, oy, {flip, clip});
   // turned round to the door: the back of the head replaces the face
   if (look === 'door' && who !== 'mas') {
@@ -281,7 +287,7 @@ const drawSeat = (b: Buf, who: WHSeat, look: WHLook, st: WHRowState, f: number) 
     const hx0 = ox + (flip ? img.w - 1 - hb.x1 : hb.x0), hw = hb.x1 - hb.x0 + 1;
     stampRows(b, hx0 + Math.round((hw - 16) / 2), oy + hb.y0, MAS_FRONT, MAS_FRONT_PAL, clip);
   }
-  if (who === 'radnus' && st.flame) fire(b, x + (flip ? -3 : 3), footY - 80 + 19, st.flame === 2 ? 'M' : 'S', f, {seed: 3});
+  if (who === 'radnus' && st.flame) fire(b, x + (flip ? -3 : 3), footY - 80 + 19 - [0, 4, 8][set], st.flame === 2 ? 'M' : 'S', f, {seed: 3});
   return {ox, oy, img, flip};
 };
 
@@ -310,6 +316,13 @@ export const drawWHWide = (b: Buf, f: number, st: WHWideState = {}) => {
   const look = st.look ?? {};
   for (const s of ['mas', 'radnus', 'mario', 'tasya'] as WHSeat[]) drawSeat(b, s, look[s] ?? 'head', st, f);
   drawTable(b);
+  if (st.masGlass) {
+    // his own tumbler (the one that goes everywhere with him), square in front of his seat, its water line flat
+    const gx = WH.seats.mas - 3, gy = WH.table.top0 - 6;
+    rect(gx + 1, gy + 11, 7, 1, b.ink(PAL.D1));
+    for (let j = 0; j < 11; j++) for (let i = 0; i < 7; i++) b.set(gx + i, gy + j, i === 0 ? PAL.C6 : i === 6 ? PAL.C2 : j < 3 ? PAL.C4 : PAL.C3);
+    rect(gx + 1, gy + 3, 5, 1, b.ink(PAL.C8));
+  }
   // the scroll: it has slid out of Mario's pocket, down past the table's front and onto the carpet (whole px)
   if (st.scroll) {
     const sx = WH.seats.mario + 6, len = Math.round(st.scroll);
@@ -494,6 +507,23 @@ export const drawSirrahMCU = (b: Buf, f: number, st: SirrahMCUState) => {
   putBustCut(b, img, X, Y, RH);
   if (st.on) drawPointer(b, X + SIRRAH_POINTER_HAND[0], Y + SIRRAH_POINTER_HAND[1], bl[st.on][0] + 4, bl[st.on][1] - 6, 2);
   return {blocks: bl};
+};
+
+// ------------------------------------------------------------------ Radnus's face and the flame together (13.10, v3.2)
+/** v3.2 (draft 8.1, the audit's B.2 #8: framed alone, the flame read as a burning note): an [MCU] with RADNUS's face
+ *  and the flame on his collar in one frame, the flame one size up on `size` 2. `bust` takes any Radnus bust (the Act
+ *  Two shot pass's `radnusBust2`, with its own `collar` point); by default the stand-in's (cast/radnus-standin, its
+ *  RADNUS_COLLAR), his hand patting at it on `pat` */
+export const drawRadnusFlameMCU = (b: Buf, f: number, st: {size?: 1 | 2; pat?: boolean; mouth?: RadnusBustState['mouth']; bust?: Img; collar?: [number, number]} = {}) => {
+  drawWHWall(b, f, {soft: 1});
+  const X = 250, Y = 22;
+  const img = st.bust ?? radnusBust({...RADNUS_BUST_DEFAULT, arm: st.pat ? 'pat' : 'fold', mouth: st.mouth ?? 'rest'});
+  putBustCut(b, img, X, Y, RH);
+  const [cx, cy] = st.collar ?? RADNUS_COLLAR;
+  // the flame's warm light on the cloth and the jaw round it (stepped rings), then the flame
+  const fx = X + cx, fy = Y + cy;
+  for (let j = -18; j <= 8; j++) for (let i = -16; i <= 16; i++) { const d = Math.hypot(i / 16, j / 18); if (d < 1 && bayer(fx + i, fy + j) < (1 - d) * 0.8) b.set(fx + i, fy + j, stepColor(b.get(fx + i, fy + j), 1)); }
+  drawBigFlame(b, fx, fy, (st.size ?? 1) === 2 ? 14 : 9, f);
 };
 
 // ------------------------------------------------------------------ the row at close-up size (13.07)

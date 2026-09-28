@@ -33,6 +33,8 @@ import {drawClod, ClodState} from '../cast/clod';
 import {drawPost} from '../kits/post-card';
 import {gergMedium, GERG_MEDIUM_DEFAULT, GergMediumState} from '../cast/gerg-medium';
 import {drawMatchLid, LOBBY_LID} from './lobby-deal';
+import {drawButtonECU, BUTTON_ECU} from '../kits/launch-button';
+import type {ButtonEcuState} from '../kits/launch-button';
 
 const RH = 203;
 export const DUEL = {
@@ -171,6 +173,9 @@ export interface DuelLeftState {
   phones?: boolean;
   /** v3.1 (opt-in false; draft 7's 11.04): the demo screen's X → WEBSITE caption. Default true (v3) */
   caption?: boolean;
+  /** v3.2 (opt-in; draft 8.1's 11.04: GTP-4 goes out on HIS click): the pane cuts in to 5.08's insert, his finger on the
+   *  beige button, the ECU cropped to the pane round the button (a crop, never a scale); press / lit / finger as 5.08 */
+  button?: ButtonEcuState;
 }
 const ROOM = (() => { let cache: {buf: Buf; anchors: Record<string, [number, number]>} | null = null; return () => {
   if (cache) return cache;
@@ -201,6 +206,13 @@ const demoRoom = (b: Buf, f: number, st: DuelLeftState) => {
   drawTripodCam(b, DUEL.sxL + 26, 202);
 };
 export const drawDuelLeft = (b: Buf, f: number, st: DuelLeftState = {}) => {
+  if (st.button) {
+    const E = new Buf(480, 270, PAL.N0);
+    drawButtonECU(E, f, {finger: true, ...st.button});
+    const x0 = Math.max(0, Math.min(480 - DUEL.paneW, BUTTON_ECU[0] - (DUEL.paneW >> 1) + 20));
+    for (let y = 0; y < RH; y++) for (let x = 0; x < DUEL.paneW; x++) b.set(x, y, E.c[y * 480 + x0 + x]);
+    return;
+  }
   const W = new Buf(480, 270, PAL.N0);
   demoRoom(W, f, st);
   for (let y = 0; y < RH; y++) for (let x = 0; x < DUEL.paneW; x++) b.set(x, y, W.c[y * 480 + DUEL.sxL + x]);
