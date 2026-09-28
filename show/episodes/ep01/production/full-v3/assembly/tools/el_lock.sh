@@ -41,7 +41,10 @@ for s in "${@:-coldopen act1 act2 act3 act4 tag}"; do
     extra=()
     [ "$seg" = act4 ] && extra=(--plan studio/src/episodes/ep01/pixel/act4/plan.json)
     # a shots pass's own EL mouth tracks for cut takes (v3.3: Tasya's TV cut, v33-a4-0002), laid after ours (later wins)
+    # (a later round with no file of its own reuses an earlier round's, only for rows whose take audio is identical:
+    #  tools/el_cutmouths_carry.py writes assembly/el-<v>/<seg>-cut-mouths.json)
     CUTM=audio/ep01/v3-el/ep01-$LOCKV/$seg/lines-A-cut-mouths.json
+    [ -f $CUTM ] || CUTM=$EL/$seg-cut-mouths.json
     TAKES=(--takes $EL/$seg-takes.json)
     [ "$LOCKV" != v3 ] && [ -f $CUTM ] && TAKES+=(--takes $CUTM) && echo "   (+ $CUTM)"
     MIXARG=(--mix $MIX/$seg-mix.wav --mix-offset 0)

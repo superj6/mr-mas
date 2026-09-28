@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """assemble.py - Ep1 v3, the v3-assemble pass (PLAN.md track F): the full episode film, one per voice variant.
 
-  audio/.venv-casting/bin/python show/episodes/ep01/production/full-v3/assembly/tools/assemble.py kokoro|el|kokoro-v31|el-v31|kokoro-v32|el-v32|kokoro-v33|el-v33 [--dry]
+  audio/.venv-casting/bin/python show/episodes/ep01/production/full-v3/assembly/tools/assemble.py kokoro|el|kokoro-v31|el-v31|kokoro-v32|el-v32|kokoro-v33|el-v33|kokoro-v34|el-v34 [--dry]
   (run it through ops/heavy.sh: the encode is heavy)
 
 The order is the v3 manifest's: cold open -> intro -> the filename card -> Acts One to Four -> tag -> the Orb outro.
@@ -16,7 +16,7 @@ The order is the v3 manifest's: cold open -> intro -> the filename card -> Acts 
            Seams (picture never moves): where a join isn't sample-continuous a 3 ms de-click; at intro -> card, where
            the intro's ring-out dies into the card's room tone, the card's room is led in under the intro's last 0.3 s
            (its own first 0.3 s, time-reversed, equal-power fade-in), so the room is there when the ring-out ends.
-           AAC-LC 256 kb/s, 48 kHz.
+           AAC-LC 256 kb/s (libfdk_aac), 48 kHz.
   CHAPTERS the nine chapters, titled, from an ffconcat chapter list (the bundled ffmpeg has no ffmetadata demuxer).
 Writes out/ep01/full-v3/<VARIANTS[v].film>.mp4 (ep01-v3, ep01-v3-el, ep01-v31, ep01-v31-el) and assembly/<variant>-assembly.json (every input, its length and md5 of
 its head, the seams, the chapter table). The episode WAV is a scratch intermediate and is deleted after the mux.
@@ -40,6 +40,10 @@ FF, FP = f"{FFD}/ffmpeg", f"{FFD}/ffprobe"
 ASM = f"{ROOT}/show/episodes/ep01/production/full-v3/assembly"
 SCR = "/tmp/claude-1000/-home-jgon-project-art-mrmas/a5e7723c-6ab4-4824-a1ed-8e367fdb82e5/scratchpad/v3-assemble"
 SR, FPS, SPF = 48000, 24, 2000
+# the AAC-LC encoder: libfdk_aac. The bundled ffmpeg's native `aac` encoder was found (v3.4, 2026-09-28) to write short
+# bursts of garbage on hot transients (4-7 ms, one channel, up to 0.45 of full scale off the source; one clipped to 0 dBFS
+# in Act Two); libfdk_aac on the same input stays within 0.063. qa.py measures it on every film (decoded vs source).
+AAC = "libfdk_aac"
 X264 = ["-c:v", "libx264", "-preset", "medium", "-crf", "18", "-tune", "animation", "-pix_fmt", "yuv420p", "-profile:v", "high",
         "-g", "48", "-threads", "6"]
 
@@ -78,6 +82,15 @@ VARIANTS = {
                    label="v3.3, ElevenLabs voices", locks="show/episodes/ep01/production/full-v3/assembly/el-v33/lock-{seg}.json",
                    transcript="transcript-v33-el.txt", titles={"act4": "Act Four · five days, told twice"}, outro_audio="outro-mix.wav",
                    hum_gap=dict(frames=18, tail="audio/reel/ep01-v3/v33/el/tag-tail.flac", out="out/ep01/full-v3/assembly-v33-el")),
+    # v3.4: as v3.3; the EL manifest's intro audio is the EL master (Jeremy's line, audio/ep01/v3-el/intro/intro-el.json)
+    "kokoro-v34": dict(man="show/reel/ep01-v34/ep01-v34.manifest.json", pic="picture", mix="mix-v34", film="ep01-v34", label="v3.4",
+                       locks="show/episodes/ep01/production/full-v3/lock/{seg}.json", transcript="transcript-v34.txt",
+                       titles={"act4": "Act Four · five days, told twice"}, outro_audio="outro-mix.wav",
+                       hum_gap=dict(frames=18, tail="audio/reel/ep01-v3/v34/tag-tail.wav", out="out/ep01/full-v3/assembly-v34")),
+    "el-v34": dict(man="show/reel/ep01-v34-el/ep01-v34-el.manifest.json", pic="picture-el", mix="mix-v34-el", film="ep01-v34-el",
+                   label="v3.4, ElevenLabs voices", locks="show/episodes/ep01/production/full-v3/assembly/el-v34/lock-{seg}.json",
+                   transcript="transcript-v34-el.txt", titles={"act4": "Act Four · five days, told twice"}, outro_audio="outro-mix.wav",
+                   hum_gap=dict(frames=18, tail="audio/reel/ep01-v3/v34/el/tag-tail.flac", out="out/ep01/full-v3/assembly-v34-el")),
 }
 
 
@@ -278,7 +291,7 @@ def main(variant, dry=False):
     cmd += ["-filter_complex", fc, "-map", "[v]", "-map", f"{len(CH)}:a", "-map_chapters", str(len(CH)), *meta,
             "-map_metadata", "-1", "-metadata", f"title=MR. MAS · ep1.0_research_preview.md ({VARIANTS[variant]['label']})",
             "-r", "24", *X264, "-force_key_frames", keys,
-            "-c:a", "aac", "-b:a", "256k", "-ar", "48000", "-ac", "2", "-movflags", "+faststart", out + ".part.mp4"]
+            "-c:a", AAC, "-b:a", "256k", "-ar", "48000", "-ac", "2", "-movflags", "+faststart", out + ".part.mp4"]
     try:
         subprocess.run(cmd, check=True, env=ENV)
         os.replace(out + ".part.mp4", out)

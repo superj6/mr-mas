@@ -1,10 +1,105 @@
-# Ep1 v3 → v3.3: the full episode films (`v3-assemble`, track F, 2026-09-27 and 28)
+# Ep1 v3 → v3.4: the full episode films (`v3-assemble`, track F, 2026-09-27 and 28)
 
-> **Status: v3.3 BUILT AND MEASURED, both films (2026-09-28, the polish round). §X below is the current state.** §W (v3.2), §V (v3.1) and the v3 round are the record; their films were deleted as each next round passed. Track F of [PLAN.md](PLAN.md).
+> **Status: v3.4 BUILT AND MEASURED, both films (2026-09-28). §Y below is the current state.** §X (v3.3), §W (v3.2), §V (v3.1) and the v3 round are the record; each round's films were deleted once the next passed. Track F of [PLAN.md](PLAN.md).
 >
-> **Nothing here was watched or heard.** Every number below is measured from the files. I looked at stills only (§X.2). Nothing was committed.
+> **Nothing here was watched or heard.** Every number below is measured from the files. I looked at stills only. Nothing was committed.
 
-## X. v3.3 (2026-09-28): the polish round
+## Y. v3.4 (2026-09-28)
+
+**The films:**
+
+| | Kokoro voices (primary) | ElevenLabs voices (set A) |
+|---|---|---|
+| **File** | `out/ep01/full-v3/ep01-v34.mp4` | `out/ep01/full-v3/ep01-v34-el.mp4` |
+| **Length** | **20:54.63** (30,111 frames) | **20:57.71** (30,185 frames) |
+| Size | 122.8 MB | 121.8 MB |
+| Intro audio | the original master (`intro-ep1-mix-V1-chipchamber.wav`), −3 dB | **the EL master** (`intro-ep1-mix-V1-chipchamber-el.wav`, Jeremy's line; `audio/ep01/v3-el/intro/intro-el.json`), −3 dB |
+| Sheet · transcript (231 lines) | `ep01-v34-sheet.png` · [transcript-v34.txt](assembly/transcript-v34.txt) | `ep01-v34-el-sheet.png` · [transcript-v34-el.txt](assembly/transcript-v34-el.txt) |
+| Records | `assembly/kokoro-v34-{assembly,qa}.json` | `assembly/el-v34-{assembly,qa}.json`, `el-v34-pictures.json` |
+
+- **Built as v3.3** (§X), with the v3.4 manifests, pictures and mixes:
+  - the mixes are `mix-v34/` and `mix-v34-el/` (2b29991);
+  - the flash-fixed intro and the 2 s card;
+  - `outro-mix.wav` at −1 dB with the 0.75 s hum hold (hum gain +2.72 / +2.80 dB; residual 1.2e-7);
+  - nine titled chapters.
+- **The v3.3 films and their hum-gap files were deleted** after both v3.4 films passed.
+- **The cold open's temp-audio pointer:** `lock/coldopen.json`, `pixel/coldopen/data.ts` and the v3.3 records now name `mix-v34[-el]/coldopen-mix.wav`, which is byte-identical (md5 adf243dd… / 6e2b6c50…), as the lead asked.
+
+### Y.1 The AAC encoder: a real fault, found and fixed
+
+- **The first v3.4 Kokoro build measured +0.38 dBTP.** I traced it to one sample at −1.0 in Act Two, inside a 6.7 ms burst in the right channel. The source mix there peaks at −5.2 dBFS.
+- **So I added a check to `qa.py`:** every chapter's decoded audio against its source, sample for sample. A burst is a run more than 0.2 of full scale off the source.
+- **The bundled ffmpeg's native `aac` encoder writes these bursts:**
+  - Kokoro: Act Two at 8:02.1 (6.7 ms, off by 0.94) and 8:41.7 (3.4 ms, 0.46); Act Four at 20:03.9 (4.8 ms, 0.62); single samples in the intro and Act Three.
+  - EL: Act One at 1:35.0 (2.2 ms) and 5:35.2 (3.6 ms); Act Four at 11:46.7 (2.6 ms) and 18:40.2 (2.3 ms).
+  - The same encoder on Act Two's mix alone gives a 4.3 ms burst at another place. **libfdk_aac on the same input stays within 0.063, with none.**
+  - The records are in `assembly/{kokoro,el}-v34-qa-nativeaac.json`.
+- **The films are now encoded with `libfdk_aac`,** still AAC-LC 256 kb/s at 48 kHz (`assemble.py`, `AAC`).
+  - Measured: **0 bursts in every chapter of both films.** The worst difference from the source is 0.108 (Kokoro) and 0.136 (EL), which is coding noise.
+  - The EL segment pictures were re-muxed with it too.
+- **The earlier rounds' films (v3–v3.3) were all encoded with the native encoder,** so they likely carried such bursts too. They're deleted; the v3.4 films are the first measured clean.
+
+### Y.2 Chapter times
+
+| # | Chapter | Kokoro start · length | EL start · length |
+|---|---|---|---|
+| 1 | Cold open | 0:00.00 · 26.67 | 0:00.00 · 24.29 |
+| 2 | Intro | 0:26.67 · 30.00 | 0:24.29 · 30.00 |
+| 3 | ep1.0_research_preview.md | 0:56.67 · 2.00 | 0:54.29 · 2.00 |
+| 4 | Act One · research preview | 0:58.67 · 5:37.54 | 0:56.29 · 5:43.33 |
+| 5 | Act Two · the regulate-me tour | 6:36.21 · 3:01.21 | 6:39.62 · 2:50.17 |
+| 6 | Act Three · verified: human | 9:37.42 · 2:05.29 | 9:29.79 · 2:03.92 |
+| 7 | Act Four · five days, told twice | 11:42.71 · 8:27.79 | 11:33.71 · 8:39.88 |
+| 8 | Tag · december (with the 0.75 s hum hold) | 20:10.50 · 34.00 | 20:13.58 · 34.00 |
+| 9 | Outro · credits | 20:44.50 · 10.13 | 20:47.58 · 10.13 |
+
+### Y.3 The EL pictures for v3.4
+
+All six are on `show/reel/ep01-v34-el/` (93f0431) with `audio/ep01/v3-el/ep01-v34/`, under `assembly/el-v34/`.
+
+- **Frames:** cold open 583, Act One 8,240, Act Two 4,084, Act Three 2,974, Act Four 12,477, tag 798.
+- **The locks:** re-run with the final mixes; every check passes. Act Four has 43 on-camera mouths, as Kokoro.
+- **Tasya's TV cut (v33-a4-0002):** v3.4 has no EL cut-mouths file of its own. The take's audio and words are identical to v3.3's, sample for sample, so `tools/el_cutmouths_carry.py` carries v3.3's mouth track into `assembly/el-v34/act4-cut-mouths.json`, and `el_lock.sh` lays it.
+- **Splices:**
+  - Act Three: 5 GLYPH frames.
+  - Act Four: 28 GLYPH frames and the hourglass (S7.13, 264 f, `--s713 11171 --back-at 170`). Both host checks hold.
+  - **The tag: no splice** (the duck is cut), 0 browser frames.
+- **Renders:** 0 stand-ins, 0 failed layouts.
+- **The voLine fix:** at S1.02 the new V.O. types through to "…more compute." before the cut.
+- **Flash per picture:** cold open 1, Act One 2, Act Two 1, Act Three 0, Act Four 1, tag 0; red 0. All pass.
+- **Looked at, EL beside Kokoro:** S1.02 at k60, 150 and 175; S7.13's shatter; the tag's 32.01 and 32.03. They match, except that the EL S1.02 runs 12 frames longer, on its longer V.O.
+
+### Y.4 QA (both films)
+
+| Check | Kokoro v3.4 | EL v3.4 |
+|---|---|---|
+| **Full decode** | **0 error lines**, 30,111 frames | **0 error lines**, 30,185 frames |
+| **A/V lag per chapter** | **0 samples in all nine** (0.9997–1.0) | **0 in all nine** |
+| **Codec fidelity** (decoded vs source) | **0 bursts**; worst difference 0.108 | **0 bursts**; worst 0.136 |
+| **Integrated loudness** | **−16.08 LUFS** | **−16.07 LUFS** |
+| **True peak** | **−1.06 dBTP** (the tag) | **−1.26 dBTP** |
+| Chapters (LUFS-I) | cold open −16.0 · intro −17.0 · card −36.5 · acts −16.0 · tag −17.3 · outro −17.2 | −16.0 · −17.0 · −36.3 · −16.0 · −17.2 · −17.2 |
+| Digital zero / holes | **none / none** | **none / none** |
+| **Flashes** | **max 2 in 1 s** (the cold open's freeze, 0:14.5); red 0. **Pass** | **max 3** (the freeze, 0:12.4, at the limit, as every EL round); red 0. **Pass** |
+| Chapters · edge frames | nine, matching to the millisecond · at most 0.67 of 255 (the hum-gap still) | the same |
+
+**Seams:**
+
+| Join | Kokoro at · step | EL at · step | |
+|---|---|---|---|
+| cold open → intro | 0:26.67 · −11.3 dB | 0:24.29 · −11.3 | designed |
+| intro → card | 0:56.67 · +0.4 | 0:54.29 · +0.5 | |
+| **card → Act One** | 0:58.67 · **+21.0** | 0:56.29 · **+21.1** | the designed downbeat |
+| Act One → Two | 6:36.21 · +0.3 | 6:39.62 · +0.9 | |
+| Act Two → Three | 9:37.42 · +1.8 | 9:29.79 · +0.7 | |
+| Act Three → Four | 11:42.71 · +0.5 | 11:33.71 · +1.4 | |
+| Act Four → tag | 20:10.50 · −0.7 | 20:13.58 · −0.5 | |
+| tag → hum | 20:43.75 · −0.7 | 20:46.83 · +0.2 | continuous |
+| **hum → outro** | 20:44.50 · **+12.8** | 20:47.58 · **+12.7** | the first hit, 6 dB down |
+
+Every sample jump is under 0.01.
+
+## X. v3.3 (2026-09-28): the record (superseded by §Y; its films were deleted)
 
 **The films:**
 

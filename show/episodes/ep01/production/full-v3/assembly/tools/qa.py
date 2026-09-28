@@ -132,8 +132,18 @@ def audio_qa(film, asm):
             v = momentary(x[i:i + 3 * SR], meter)
             if v is not None and np.isfinite(v):
                 st.append(v)
+        # the codec's fidelity: the decoded chapter against its source, sample for sample (the sync above is 0 when it holds);
+        # a burst = a run of samples more than 0.2 of full scale off the source (an encoder glitch, not coding noise)
+        m = min(len(x), len(src))
+        dif = np.abs(x[:m].astype(np.float32) - src[:m].astype(np.float32)).max(axis=1)
+        badi = np.nonzero(dif > 0.2)[0]
+        bursts = []
+        if len(badi) and lag == 0:
+            for g in np.split(badi, np.nonzero(np.diff(badi) > 480)[0] + 1):
+                bursts.append(dict(at=tc(c["start_frame"] + g[0] / 2000), ms=round((g[-1] - g[0] + 1) / SR * 1000, 1), max=round(float(dif[g].max()), 3)))
         chap.append(dict(id=c["id"], start=tc(c["start_frame"]), seconds=c["seconds"], lufs_i=lufs_i(x, meter), true_peak_dbtp=true_peak(x),
-                         max_short_term_lufs=max(st) if st else None, sync_lag_samples=lag, sync_corr=round(corr, 4) if corr else None))
+                         max_short_term_lufs=max(st) if st else None, sync_lag_samples=lag, sync_corr=round(corr, 4) if corr else None,
+                         codec_max_diff=round(float(dif.max()), 4) if lag == 0 else None, codec_bursts=bursts if lag == 0 else None))
     out["chapters"] = chap
     # seams
     seams = []

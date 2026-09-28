@@ -1,0 +1,81 @@
+{
+ "about": "el_takes.py: EL takes with the Kokoro takes' camera fields and a mouth track (mouths.py's mouth_cues)",
+ "segments": {
+  "coldopen": {
+   "rows": 3,
+   "with_kokoro_row": 3,
+   "mouths": 3,
+   "vo": 0,
+   "ph_sources": {
+    "misaki": 32,
+    "letters": 1
+   },
+   "letter_guesses": [
+    "back—and"
+   ],
+   "no_kokoro_row": []
+  },
+  "act1": {
+   "rows": 68,
+   "with_kokoro_row": 68,
+   "mouths": 63,
+   "vo": 5,
+   "ph_sources": {
+    "misaki": 445,
+    "kokoro-take": 5
+   },
+   "letter_guesses": [],
+   "no_kokoro_row": []
+  },
+  "act2": {
+   "rows": 38,
+   "with_kokoro_row": 38,
+   "mouths": 37,
+   "vo": 1,
+   "ph_sources": {
+    "misaki": 271,
+    "letters": 1,
+    "kokoro-take": 1
+   },
+   "letter_guesses": [
+    "Gtp-4"
+   ],
+   "no_kokoro_row": []
+  },
+  "act3": {
+   "rows": 21,
+   "with_kokoro_row": 21,
+   "mouths": 18,
+   "vo": 3,
+   "ph_sources": {
+    "misaki": 111,
+    "kokoro-take": 3
+   },
+   "letter_guesses": [],
+   "no_kokoro_row": []
+  },
+  "act4": {
+   "rows": 98,
+   "with_kokoro_row": 98,
+   "mouths": 93,
+   "vo": 5,
+   "ph_sources": {
+    "misaki": 688,
+    "kokoro-take": 27
+   },
+   "letter_guesses": [],
+   "no_kokoro_row": []
+  },
+  "tag": {
+   "rows": 3,
+   "with_kokoro_row": 3,
+   "mouths": 2,
+   "vo": 1,
+   "ph_sources": {
+    "misaki": 4
+   },
+   "letter_guesses": [],
+   "no_kokoro_row": []
+  }
+ }
+}

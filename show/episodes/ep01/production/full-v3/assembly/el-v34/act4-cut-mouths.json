@@ -1,0 +1,251 @@
+[
+ {
+  "id": "v33-a4-0002",
+  "kind": "dialogue",
+  "scene": "S7.02b",
+  "speaker": "TASYA",
+  "speaker_slug": "tasya",
+  "text": "We are below them, above them, around them.",
+  "spoken_as": "We are below them above them around them",
+  "tag": "",
+  "delivery": "warm, expansive; one finished read; the floor, ceiling and walls step to slate on below / above / around",
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": "tv",
+  "file": "audio/ep01/v3-el/ep01-v34/act4/wav/v33-a4-0002__tasya-A.wav",
+  "file_device": "audio/ep01/v3-el/ep01-v34/act4/wav-device/v33-a4-0002__tasya-A.tv.wav",
+  "mp3": null,
+  "duration_s": 4.136,
+  "frames_24": 99,
+  "voiced_span_s": 3.5,
+  "pace": {
+   "audible_in_s": 0.35,
+   "audible_out_s": 3.85,
+   "measured": {
+    "span_s": 3.5,
+    "wpm": 137.1,
+    "syllables": 11,
+    "articulation_sps": 3.72,
+    "pauses_s": [
+     0.28,
+     0.26
+    ]
+   },
+   "longest_internal_gap_s": 0.28,
+   "words": 8,
+   "wpm": 137.1,
+   "speed": 0.9,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "We",
+    "t0": 0.35,
+    "t1": 0.501
+   },
+   {
+    "w": "are",
+    "t0": 0.547,
+    "t1": 0.663
+   },
+   {
+    "w": "below",
+    "t0": 0.733,
+    "t1": 1.046
+   },
+   {
+    "w": "them",
+    "t0": 1.128,
+    "t1": 1.36
+   },
+   {
+    "w": "above",
+    "t0": 1.685,
+    "t1": 2.207
+   },
+   {
+    "w": "them",
+    "t0": 2.254,
+    "t1": 2.532
+   },
+   {
+    "w": "around",
+    "t0": 2.869,
+    "t1": 3.45
+   },
+   {
+    "w": "them",
+    "t0": 3.531,
+    "t1": 3.786
+   }
+  ],
+  "qa": {
+   "asr": "We are below them, above them, around them.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -2.8,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 165.4,
+   "f0_range_st": 15.5,
+   "speech_head_s": 0.35,
+   "speech_tail_s": 0.286,
+   "raw_tail_cut": false,
+   "align_median_s": 0.144
+  },
+  "voice": "ElevenLabs library voice 'Tyler Kurk - Smooth, Pleasant and Clear' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.9",
+  "voiceId": "raMcNf2S8wCmuaBcyI6E",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "tasya",
+   "voice_id": "raMcNf2S8wCmuaBcyI6E",
+   "voice_name": "Tyler Kurk - Smooth, Pleasant and Clear",
+   "source": "shared Voice Library (high-quality instant voice of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 0.9
+   },
+   "seed": 4259357962,
+   "chars_sent": 0,
+   "request_key": "bbf82959ffa6596d",
+   "derived_from": null,
+   "reused_from": null,
+   "cut_from": "v3-a4-0003"
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/v33/act4/wav/v33-a4-0002.wav",
+   "mode": "on-mic",
+   "lufs_i": -16.0,
+   "duration_s": 4.455,
+   "audible_in_s": 0.33,
+   "audible_out_s": 4.185,
+   "wpm": 155.8,
+   "median_f0_hz": 152.5,
+   "f0_range_st": 12.8,
+   "delivery": "warm, expansive; one finished read; the floor, ceiling and walls step to slate on below / above / around",
+   "voice": "am_eric (Kokoro-82M stock) · b-eric-warm · speed 0.850",
+   "device": "tv",
+   "timeline_in": 0.33,
+   "timeline_dur": 3.855
+  },
+  "cut_from": "v3-a4-0003 words 10-17 (audio/ep01/v3-el/ep01-v32/act4/wav/v3-a4-0003__tasya-A.wav, 4.321-8.190 s), 12 ms fades, room-tone handles to 0.35 s (the v34 lock's CUT, applied to the EL take)",
+  "mouth": [
+   {
+    "t": 0.0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.345,
+    "shape": "O"
+   },
+   {
+    "t": 0.429,
+    "shape": "E"
+   },
+   {
+    "t": 0.554,
+    "shape": "A"
+   },
+   {
+    "t": 0.637,
+    "shape": "E"
+   },
+   {
+    "t": 0.72,
+    "shape": "M"
+   },
+   {
+    "t": 0.804,
+    "shape": "E"
+   },
+   {
+    "t": 0.929,
+    "shape": "O"
+   },
+   {
+    "t": 1.179,
+    "shape": "A"
+   },
+   {
+    "t": 1.304,
+    "shape": "M"
+   },
+   {
+    "t": 1.387,
+    "shape": "rest"
+   },
+   {
+    "t": 1.679,
+    "shape": "E"
+   },
+   {
+    "t": 1.887,
+    "shape": "M"
+   },
+   {
+    "t": 1.97,
+    "shape": "A"
+   },
+   {
+    "t": 2.137,
+    "shape": "E"
+   },
+   {
+    "t": 2.304,
+    "shape": "A"
+   },
+   {
+    "t": 2.47,
+    "shape": "M"
+   },
+   {
+    "t": 2.554,
+    "shape": "rest"
+   },
+   {
+    "t": 2.887,
+    "shape": "E"
+   },
+   {
+    "t": 3.095,
+    "shape": "A"
+   },
+   {
+    "t": 3.304,
+    "shape": "E"
+   },
+   {
+    "t": 3.595,
+    "shape": "A"
+   },
+   {
+    "t": 3.72,
+    "shape": "M"
+   },
+   {
+    "t": 3.804,
+    "shape": "rest"
+   },
+   {
+    "t": 3.826,
+    "shape": "rest"
+   }
+  ],
+  "mouth_from": "v3-a4-0003 words 10-17, shifted -4.238 s (cut_mouths.py) (carried from ep01-v33 by el_cutmouths_carry.py: same audio, same words)"
+ }
+]
