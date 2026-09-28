@@ -1,7 +1,15 @@
 #!/usr/bin/env python3
 """Ep1 v3, track A3 (pass v3-sound): the final mix of each segment, and the episode's loudness report.
 
-  audio/.venv-casting/bin/python audio/reel/ep01-v3/mix_episode.py --all [--variant el]
+  audio/.venv-casting/bin/python audio/reel/ep01-v3/mix_episode.py --all [--variant el] [--lock v3]
+      v3.1 (show/reel/ep01-v31/, EL show/reel/ep01-v31-el/) is the default lock: its mixes go to
+      out/ep01/full-v3/mix-v31/ (EL mix-v31-el/), its QA to audio/reel/ep01-v3/mix-qa/v31/. --lock v3 writes the v3
+      paths below. A score render is used only if its cue sheet names this lock's timeline and its length is
+      within a frame (the v3 and v3.1 renders share their paths); otherwise the segment mixes with no score and says so.
+  v3.1 adds: THE SET PIECES (SETPIECES: the odometer, the avalanche, the hourglass shatter) lifted, score and SFX
+      only, until their peak is LIFT_LU (2.5) over the segment's talk; the score's fade-in at each act's head
+      (SCORE_HEAD_FADE); score rides for a featured sound (SCORE_RIDE: the lap in S1.01b); the one silence from the
+      Remove click; the demo film's voice at full range and Ttemme's line "through his stream" (DEVICE 'stream').
   audio/.venv-casting/bin/python audio/reel/ep01-v3/mix_episode.py act3 tag          (some segments)
       Re-runs itself through ops/heavy.sh (--no-heavy to skip that). Rebuilds the room/SFX stems first when any of
       their inputs changed (stems.py's fingerprint: the timelines, the beat plans, the scores' claims), so one command
@@ -63,8 +71,16 @@ S = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(S)
 SR, FPS = S.SR, S.FPS
 SEGS = S.SEGS
-OUT = {'kokoro': 'out/ep01/full-v3/mix', 'el': 'out/ep01/full-v3/mix-el'}
-QA_DIR = 'audio/reel/ep01-v3/mix-qa'
+OUTS = {'v3': {'kokoro': 'out/ep01/full-v3/mix', 'el': 'out/ep01/full-v3/mix-el'},
+        'v31': {'kokoro': 'out/ep01/full-v3/mix-v31', 'el': 'out/ep01/full-v3/mix-v31-el'}}
+QA_DIRS = {'v3': 'audio/reel/ep01-v3/mix-qa', 'v31': 'audio/reel/ep01-v3/mix-qa/v31'}
+OUT, QA_DIR = OUTS[S.DEFAULT_LOCK], QA_DIRS[S.DEFAULT_LOCK]
+
+
+def set_lock(name):
+    global OUT, QA_DIR
+    S.set_lock(name)
+    OUT, QA_DIR = OUTS[name], QA_DIRS[name]
 TARGET, CEIL, TP_MAX = -16.0, -1.5, -1.0
 GUARD_LU = 1.5
 ROOM_DIP = {}                           # (the cold open's extra 8 dB for its hall and banquet is baked into its stem)
@@ -77,11 +93,15 @@ DUCK_BY_MOOD = [                        # the beat's `music (v3): ...` heading, 
     ("ELGOOG'S CODE RED", 8), ("THE LANDLORD'S DEAL", 8), ('THE JOB', 8), ('THE DUEL', 9), ('THE PAUSE LETTER', 10),
     ('THE WHITE HOUSE', 8), ('THE BRIDGE', 10), ('THE SENATE', 9), ('THE TOUR', 8), ('THE ROOFTOP', 9),
     ('THE DARK ROOM', 7), ('ACT-OUT', 9), ('NOON, LAS VEGAS', 10), ('THAT NIGHT', 9), ("THE BOARD'S SIDE", 9),
-    ('2 AM WITH GERG', 7), ('THE AVALANCHE', 8), ('THE RETURN', 8), ('CODA', 9), ('TAG', 7), ('COLD OPEN', 9),
+    ('2 AM', 7), ('THE AVALANCHE', 8), ('THE RETURN', 8), ('CODA', 9), ('TAG', 7), ('COLD OPEN', 9),
+    ('SYDNEY', 8), ('ACT THREE', 7), ('THE CLOCK', 9),                                     # v3.1's headings
 ]
 SMALL = {'call', 'monitor', 'laptop'}
 DESIGNED = {                            # holes that are story beats (the one silence, act-out blacks, the white)
-    'act4': [('S1.09', 'S1.11', 'THE ONE SILENCE: the Cancel click -> the buzz (room tone only)')],
+    'act4': [('v31-S1.08d', 'S1.11', 'THE ONE SILENCE: the Remove click -> the buzz (room tone only)'),
+             ('S1.09', 'S1.11', 'THE ONE SILENCE: the Cancel click -> the buzz (room tone only)'),
+             ('S7.13', 'S7.13', "Ttemme's stream: the held beat, near silence (the sand stands)")],
+    'tag': [('v31-32.01d', 'v31-32.01d', "the demo's stills: the room coming back faintly (runway.md §7)")],
     'act1': [('12.07', '12.07', 'the act-out black (the bullpen cuts with the picture)')],
     'act2': [('14.06', '14.06', 'the black: the clone\'s voice finds its mouth'), ('17.13', '17.13', "the black on the bell's last partial")],
     'act3': [('23.04', '23.04', 'the act-out black: THE CLOCK\'s dead stop, the crane pre-lap coming up')],
@@ -235,6 +255,7 @@ def _chain(hp_hz, hp_o, lp_hz, lp_o, pk_hz, pk_db, q):
 
 
 DEVICE = {
+    'stream': _chain(150, 2, 7000, 2, 3000, 2.0, 0.9),    # his stream's mic and encode (S7.13's insert)
     'call': _chain(300, 4, 3400, 4, 1700, 3.0, 1.0),       # a video call's codec and a laptop speaker
     'phone': _chain(500, 4, 3400, 4, 2000, 2.0, 1.0),      # a phone held at arm's length (sc 8's POV)
     'laptop': _chain(280, 4, 5500, 2, 2200, 2.5, 1.0),
@@ -336,6 +357,11 @@ def dialogue(g, variant, qa):
                     gain = ref - own
                     info['el_matched'] += 1
             dev = l.get('tag') if l.get('tag') in SMALL else ('phone' if b.get('room') == 'phone' else None)
+            on_ = s0 + l['t']
+            if b['id'] == 'v31-32.01d' and dev and 26 / FPS <= l['t'] <= 151 / FPS:
+                dev = None                         # the demo film has opened up to full range (runway.md §7, i22-26)
+            if b['id'] == 'S7.13' and (g.starts[i][1] - s0) > 10.5 and 128 / FPS <= l['t'] < 252 / FPS:
+                dev = 'stream'                     # Ttemme talks to his chat: "through his stream" (runway.md §11.6)
             if dev:
                 pre = lufs(np.stack([x, x], 1) * 0.7071)
                 y = signal.sosfilt(DEVICE[dev], x)
@@ -378,8 +404,14 @@ def premix(name, g, variant, use_score=True):
     qa['rooms'] = {'stem': os.path.relpath(os.path.join(sd, f'{name}-room.{ext}'), ROOT), 'dip_under_speech_db': dip}
     qa['sfx'] = {'stem': os.path.relpath(os.path.join(sd, f'{name}-sfx.{ext}'), ROOT), 'ducked': False}
     mus = None
-    wav, cues_p = S.score_files(name, variant)
+    why = []
+    wav, cues_p = S.score_files(name, variant, why)
     sq = {'file': os.path.relpath(wav, ROOT) if wav else None, 'cues': os.path.relpath(cues_p, ROOT) if cues_p else None}
+    if why:
+        sq['not_this_lock'] = why
+    if wav and abs(sf.info(wav).frames - N) > SR // FPS + 1:             # more than a frame out: not this cut
+        sq['not_this_lock'] = why + [f'{os.path.relpath(wav, ROOT)} is {sf.info(wav).frames / SR:.3f} s, the segment {N / SR:.3f} s']
+        wav = None
     if wav and use_score:
         m, sr = sf.read(wav, dtype='float32', always_2d=True)
         if sr != SR:
@@ -456,14 +488,19 @@ def premix(name, g, variant, use_score=True):
     else:
         sq['missing'] = True
     qa['score'] = sq
-    # the one silence: the score gated to zero from the Cancel click to the buzz
-    if name == 'act4' and g.has('S1.09') and g.has('S1.11'):
-        c = [s_['at'] for s_ in g.beats[g.BI['S1.09']].get('sounds', []) if 'click' in s_['name']]
+    # the act breaks: the score enters on the act's first frame over a black; fade it in (the lead, v3.1)
+    if mus is not None and SCORE_HEAD_FADE.get(name):
+        k = int(SCORE_HEAD_FADE[name] * SR)
+        mus[:k] *= (np.sin(np.linspace(0, np.pi / 2, k)) ** 2).astype('float32')[:, None]
+        sq['head_fade_s'] = SCORE_HEAD_FADE[name]
+    # the one silence: the score gated to zero from the Remove (v3.1) / Cancel (v3) click to the buzz
+    ck = S.silence_click(g)
+    if name == 'act4' and ck and g.has('S1.11'):
         z = [s_['at'] for s_ in g.beats[g.BI['S1.11']].get('sounds', []) if s_['name'] in ('BUZZ', 'phone_buzz_desk')]
         loc = lambda bid, d: g.starts[g.BI[bid]][0] + d          # the segment's own clock
-        ta, tb = loc('S1.09', c[-1] if c else 2.4), loc('S1.11', z[0] if z else 0.3)
+        ta, tb = loc(ck[0], ck[1]), loc('S1.11', z[0] if z else 0.3)
         ia, ib = int(round(ta * SR)), int(round(tb * SR))
-        sil = {'click': round(ta, 3), 'buzz': round(tb, 3), 'seconds': round(tb - ta, 3)}
+        sil = {'click_beat': ck[0], 'click': round(ta, 3), 'buzz': round(tb, 3), 'seconds': round(tb - ta, 3)}
         if mus is not None:
             seg_ = mus[ia:ib]
             sil['score_peak_before_gate_dbfs'] = round(20 * np.log10(float(np.abs(seg_).max()) + 1e-12), 1)
@@ -471,6 +508,17 @@ def premix(name, g, variant, use_score=True):
             mus[ia - k:ia] *= np.linspace(1, 0, k, dtype='float32')[:, None]
             mus[ia:ib] = 0.0
         qa['silence'] = sil
+    # score rides (the score makes room for a featured sound)
+    if mus is not None:
+        for bid, d0, d1, gdb_, why_ in SCORE_RIDE.get(name, []):
+            if g.has(bid):
+                a_ = g.starts[g.BI[bid]][0] + d0
+                b_ = g.starts[g.BI[bid]][1] if d1 == 'end' else g.starts[g.BI[bid]][0] + d1
+                tt = np.arange(N) / SR
+                mus *= db(np.interp(tt, [a_ - 0.6, a_, b_, b_ + 0.6], [0, gdb_, gdb_, 0])).astype('float32')[:, None]
+                sq.setdefault('rides', []).append({'beat': bid, 'from': round(a_, 2), 'to': round(b_, 2), 'db': gdb_, 'why': why_})
+    # the set pieces rise: +2-3 LU over the talk (mood-analysis §4 #3; the lead, v3.1)
+    mus, fx = setpieces(name, g, dlg, room, fx, mus, speech, qa)
     qa['checks'] = sound_checks(name, g, variant, fx, room, mus, speech)
     body = dlg + room + fx
     mix = body + (mus if mus is not None else 0.0)
@@ -500,6 +548,15 @@ def sound_checks(name, g, variant, fx, room, mus, spans):
                 W.append(("Gerg's keys, S5.09-back (typing hard)", loc('S5.09-back'), ks, KEYS))
                 W.append(('after "His keys stop." (the first second of his look)', ks + 0.05, ks + 1.0, KEYS))
             W.append(('the practice laps under S1.01 (after the crane)', loc('S1.01', 2.6), end('S1.01'), LAPS))
+        if name == 'act4' and g.has('v31-S1.01b'):
+            W.append(('the practice lap the Orb follows (S1.01b)', loc('v31-S1.01b'), end('v31-S1.01b'), LAPS))
+        if name == 'act4' and g.has('S7.13') and end('S7.13') - loc('S7.13') > 10.5:
+            W.append(('the hourglass shatter (S7.13 k173-180)', loc('S7.13', 173 / FPS), loc('S7.13', 180 / FPS), (500, 9000)))
+        if name == 'tag' and g.has('v31-32.01d'):
+            W.append(("the demo film's bed, opened up (i26-136)", loc('v31-32.01d', 26 / FPS), loc('v31-32.01d', 136 / FPS), (200, 12000)))
+            W.append(('the stills (i151-198): the room faint', loc('v31-32.01d', 152 / FPS), loc('v31-32.01d', 198 / FPS), (60, 12000)))
+        if name == 'act1' and g.has('v31-10.03'):
+            W.append(("Sydney's egg timer (10.03-10.04)", loc('v31-10.03', 1.2), end('v31-10.04'), (2000, 7000)))
         if name == 'act1':
             W.append(("the Build's pre-lap (the last 0.6 s of 9.13)", loc('11.01', -0.6), loc('11.01'), CHIP))
             W.append(('the pen leading 12.04', loc('12.04', -0.5), loc('12.04'), PEN))
@@ -532,6 +589,104 @@ def sound_checks(name, g, variant, fx, room, mus, spans):
 
 SEAM_S = 2.0
 PREV = {'act1': 'card', 'act2': 'act1', 'act3': 'act2', 'act4': 'act3', 'tag': 'act4'}   # back to back on the episode clock
+
+
+SCORE_HEAD_FADE = {'act1': 1.0, 'act2': 1.2, 'act3': 1.2, 'act4': 1.2}   # s: the score's fade-in at an act's head
+# score rides: the score makes room for a featured sound (beat, from, to or 'end', dB)
+SCORE_RIDE = {'act4': [('v31-S1.01b', 0.0, 'end', -4.0, 'the practice lap the Orb follows: the score makes room for it')]}
+LIFT_LU = 2.5                                             # the set pieces' peak over the talk (mood-analysis §4 #3)
+LIFT_MAX = {'st': 6.0, 'mom': 9.0}                      # dB: a short hit (the shatter) may take more
+SETPIECES = {   # (what, (beat, s), (beat, s or 'end' or ('sound', name)), measure): 'st' = 3 s short-term, 'mom' = 400 ms
+    'act1': [('the odometer', ('5.12', 0.0), ('6.06', 'end'), 'st')],
+    'act4': [('the avalanche', ('S6.01', 0.0), ('S6.06', ('sound', 'freeze_hit_F')), 'st'),
+             ('the hourglass shatter', ('S7.13', ('sound', 'hourglass_shatter')), ('S7.13', ('sound+', 'hourglass_shatter', 0.5)), 'mom')],
+}
+
+
+def loudness_curve(x, win):
+    """loudness every 100 ms over win-second windows (LUFS), with the window centres"""
+    y = kweight(x) ** 2
+    e = y.sum(axis=1)
+    c = np.concatenate([[0.0], np.cumsum(e)])
+    n, h = int(win * SR), int(0.1 * SR)
+    if len(e) < n:
+        return np.array([]), np.array([])
+    idx = np.arange(0, len(e) - n + 1, h)
+    return (idx + n / 2) / SR, -0.691 + 10 * np.log10((c[idx + n] - c[idx]) / n + 1e-20)
+
+
+def setpieces(name, g, dlg, room, fx, mus, speech, qa):
+    """lift the score and the SFX in each set piece until its peak loudness is LIFT_LU over the segment's talk (the
+    median 3 s loudness where lines cover most of the window); the dialogue is not lifted"""
+    if name not in SETPIECES:
+        return mus, fx
+    N = len(fx)
+    mix0 = dlg + room + fx + (mus if mus is not None else 0.0)
+    tc, st_ = loudness_curve(mix0, 3.0)
+    cov = np.zeros(N, bool)
+    for a, b in speech:
+        cov[max(0, int(a * SR)):int(b * SR)] = True
+    cc = np.concatenate([[0], np.cumsum(cov)])
+    n3 = int(3.0 * SR)
+    frac = [(cc[min(N, int((t + 1.5) * SR))] - cc[max(0, int((t - 1.5) * SR))]) / n3 for t in tc]
+    talk = [v for v, f in zip(st_, frac) if f >= 0.6]
+    if len(talk) < 5:
+        return mus, fx
+    talk_ref = float(np.median(talk))
+    out = []
+
+    def when(spec):
+        bid, v = spec
+        if not g.has(bid):
+            return None
+        s0, s1 = g.starts[g.BI[bid]]
+        if v == 'end':
+            return s1
+        if isinstance(v, tuple):
+            at = next((sd['at'] for sd in g.beats[g.BI[bid]].get('sounds', []) if sd['name'] == v[1]), None)
+            return None if at is None else s0 + at + (v[2] if v[0] == 'sound+' else 0.0)
+        return s0 + v
+    for what, sa, sb, meas in SETPIECES[name]:
+        a, b = when(sa), when(sb)
+        if a is None or b is None or b <= a:
+            continue
+        if meas == 'mom':
+            a, b = a - 0.05, b
+        rec = {'what': what, 'from': round(a, 2), 'to': round(b, 2), 'talk_lufs': round(talk_ref, 2), 'measure': meas}
+        total = 0.0
+        for it in range(3):
+            m_ = dlg + room + fx + (mus if mus is not None else 0.0)
+            seg0, seg1 = max(0, int((a - 1.6) * SR)), min(N, int((b + 1.6) * SR))
+            tcw, lw = loudness_curve(m_[seg0:seg1], 3.0 if meas == 'st' else 0.4)
+            tcw = tcw + seg0 / SR
+            sel = (tcw >= a) & (tcw <= b)
+            if not sel.any():
+                break
+            peak = float(lw[sel].max())
+            if it == 0:
+                rec['peak_before_lufs'] = round(peak, 2)
+            need = talk_ref + LIFT_LU - peak
+            if need < 0.3 or total >= LIFT_MAX[meas]:
+                break
+            step = min(need, LIFT_MAX[meas] - total)
+            total += step
+            ramp = 0.1 if meas == 'mom' else 0.6
+            tt = np.arange(N) / SR
+            gcurve = np.interp(tt, [a - ramp, a, b, b + ramp], [0, 1, 1, 0]).astype('float32')
+            gl = (1 + (db(step) - 1) * gcurve).astype('float32')[:, None]
+            fx = fx * gl
+            if mus is not None:
+                mus = mus * gl
+        rec['lift_db'] = round(total, 2)
+        m_ = dlg + room + fx + (mus if mus is not None else 0.0)
+        seg0, seg1 = max(0, int((a - 1.6) * SR)), min(N, int((b + 1.6) * SR))
+        tcw, lw = loudness_curve(m_[seg0:seg1], 3.0 if meas == 'st' else 0.4)
+        sel = ((tcw + seg0 / SR) >= a) & ((tcw + seg0 / SR) <= b)
+        rec['peak_after_lufs'] = round(float(lw[sel].max()), 2) if sel.any() else None
+        rec['over_talk_lu'] = round(rec['peak_after_lufs'] - talk_ref, 2) if rec['peak_after_lufs'] is not None else None
+        out.append(rec)
+    qa['setpieces'] = out
+    return mus, fx
 
 
 def master(mix, gain_db, head_from=None):
@@ -621,7 +776,8 @@ def run(names, variant, use_score=True, report_only=False):
     os.makedirs(outd, exist_ok=True)
     os.makedirs(qad, exist_ok=True)
     if variant == 'el' and not any(segs[s].variant_used == 'el' for s in SEGS):
-        print('no ElevenLabs-timed timelines yet (show/reel/ep01-v3-el/ep01-v3-el-<seg>.json): nothing to mix')
+        print(f"no ElevenLabs-timed timelines for the {S.LOCK} lock yet ({S.VARIANTS['el']['tl'].format(seg='<seg>')}): "
+              f"nothing to mix")
         return None
     hints = S.score_hints(variant, segs)
     if not S.stems_fresh(variant, hints):
@@ -633,7 +789,7 @@ def run(names, variant, use_score=True, report_only=False):
     for s in order:
         g = segs[s]
         if variant == 'el' and s != 'card' and g.variant_used != 'el':
-            skipped[s] = 'no ElevenLabs-timed timeline yet (show/reel/ep01-v3-el/ep01-v3-el-%s.json)' % s
+            skipped[s] = 'no ElevenLabs-timed timeline yet (%s)' % S.VARIANTS['el']['tl'].format(seg=s)
             print(f'  {s}: skipped ({skipped[s]})')
             continue
         t0 = time.time()
@@ -769,7 +925,10 @@ def main(argv):
     ap.add_argument('--no-score', action='store_true', help='mix without the score (a check of the rooms and SFX)')
     ap.add_argument('--rebuild-stems', action='store_true')
     ap.add_argument('--no-heavy', action='store_true', help="don't re-run through ops/heavy.sh")
+    ap.add_argument('--lock', default=S.DEFAULT_LOCK, choices=sorted(S.LOCKS),
+                    help='v31 (default: show/reel/ep01-v31/) or v3 (show/reel/ep01-v3/)')
     a = ap.parse_args(argv)
+    set_lock(a.lock)
     if not a.no_heavy and os.environ.get('MRMAS_V3SOUND_INNER') != '1':
         os.chdir(ROOT)
         os.execvp('bash', ['bash', os.path.join(ROOT, 'ops/heavy.sh'), 'env', 'MRMAS_V3SOUND_INNER=1', sys.executable,
@@ -777,7 +936,7 @@ def main(argv):
     names = (SEGS + ['card']) if a.all or not a.segs else [s for s in a.segs if s in SEGS + ['card']]
     if a.rebuild_stems:
         S.build(a.variant)
-    print(f'mix ({a.variant}): {" ".join(names)}')
+    print(f'mix ({a.lock}, {a.variant}): {" ".join(names)}')
     run(names, a.variant, use_score=not a.no_score)
 
 

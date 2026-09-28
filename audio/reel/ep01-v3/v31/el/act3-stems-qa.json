@@ -1,0 +1,299 @@
+{
+ "segment": "act3",
+ "variant": "el",
+ "timeline": "show/reel/ep01-v31-el/ep01-v31-el-act3.json",
+ "timeline_variant": "el",
+ "seconds": 143.167,
+ "frames": 3436,
+ "rooms": [
+  {
+   "room": "dark",
+   "from": -0.75,
+   "to": 140.917,
+   "first": "v31-18.00",
+   "last": "23.03",
+   "lead": 0.75,
+   "trail": 0.25,
+   "lift_db": 1.6
+  },
+  {
+   "room": "black: room tone -54.0 LUFS",
+   "from": 140.667,
+   "to": 143.167,
+   "first": "23.04"
+  }
+ ],
+ "sfx": [
+  [
+   "18.01",
+   "synth:slot_whir",
+   9.216,
+   -16
+  ],
+  [
+   "18.01",
+   "landing_thunk",
+   10.466,
+   -20
+  ],
+  [
+   "18.03",
+   "paper_flutter",
+   18.008,
+   -24
+  ],
+  [
+   "18.03",
+   "orb_servo",
+   18.258,
+   -16
+  ],
+  [
+   "18.03",
+   "orb_servo",
+   18.658,
+   -16
+  ],
+  [
+   "18.03",
+   "orb_servo",
+   19.058,
+   -16
+  ],
+  [
+   "18.03",
+   "orb_servo",
+   19.658,
+   -22
+  ],
+  [
+   "18.04",
+   "orb_scan_sweep",
+   22.875,
+   -16
+  ],
+  [
+   "18.04g",
+   "glyph_blink",
+   23.625,
+   -18
+  ],
+  [
+   "18.05",
+   "dialog_ok_click--chip",
+   24.375,
+   -16
+  ],
+  [
+   "18.06",
+   "orb_servo",
+   26.508,
+   -24
+  ],
+  [
+   "18.06",
+   "synth:chime",
+   31.648,
+   -16
+  ],
+  [
+   "v31-19.03",
+   "orb_servo",
+   39.998,
+   -28
+  ],
+  [
+   "v31-19.03",
+   "orb_servo",
+   41.098,
+   -28
+  ],
+  [
+   "v31-19.03",
+   "orb_servo",
+   42.198,
+   -28
+  ],
+  [
+   "20.01",
+   "synth:keys",
+   50.792,
+   -22,
+   "sound J-cut: leads the cut by 0.5 s"
+  ],
+  [
+   "20.03",
+   "post_click",
+   56.292,
+   -16
+  ],
+  [
+   "20.03",
+   "odometer_ratchet",
+   56.592,
+   -24
+  ],
+  [
+   "20.03",
+   "synth:ring",
+   56.992,
+   -18
+  ],
+  [
+   "20.04",
+   "key_tap_space",
+   59.44,
+   -18
+  ],
+  [
+   "20.04",
+   "synth:call_keys",
+   59.69,
+   -30
+  ],
+  [
+   "20.05",
+   "dialog_ok_click",
+   68.783,
+   -14
+  ],
+  [
+   "20.05",
+   "keyboard_roll",
+   69.033,
+   -22
+  ],
+  [
+   "21.02",
+   "tower_pop",
+   102.942,
+   -16
+  ],
+  [
+   "21.03",
+   "post_click--chip",
+   107.435,
+   -20
+  ],
+  [
+   "21.04",
+   "orb_servo",
+   111.087,
+   -26
+  ],
+  [
+   "21.04",
+   "orb_servo",
+   111.487,
+   -26
+  ],
+  [
+   "21.04",
+   "orb_servo",
+   111.887,
+   -26
+  ],
+  [
+   "21.05",
+   "paper_whip",
+   113.367,
+   -18
+  ],
+  [
+   "21.05",
+   "synth:claps",
+   113.967,
+   -24
+  ],
+  [
+   "22.01",
+   "synth:applause",
+   116.475,
+   -22
+  ],
+  [
+   "22.01",
+   "odometer_ratchet",
+   117.275,
+   -18
+  ],
+  [
+   "22.01",
+   "landing_thunk",
+   118.025,
+   -18
+  ],
+  [
+   "22.02",
+   "post_click--chip",
+   124.408,
+   -20
+  ],
+  [
+   "22.02",
+   "key_tap_soft_01",
+   129.398,
+   -14
+  ],
+  [
+   "23.02",
+   "post_click--chip",
+   135.817,
+   -22
+  ]
+ ],
+ "sfx_missing": [],
+ "sfx_dropped": [
+  {
+   "beat": "21.02",
+   "name": "tower_pop",
+   "at": 8.72,
+   "why": "no deepfake copy left on screen for it (the lead, v3.1)"
+  }
+ ],
+ "added": [
+  {
+   "what": "Gerg's keys down the line (the call's band), loud in 20.06, on past the last line to the cut",
+   "at": 64.38,
+   "to": 90.18,
+   "peak_dbfs": "-20 (20.04) / -22 (20.05) / -12 (20.06; -16 under the V.O.)",
+   "why": "script-v3-notes \u00a77 For sound: \"Gerg's keys loud in 20.06\"; 20.06 sound cue \"Gerg's keys keep going after the last line\""
+  },
+  {
+   "what": "pre-lap under the black: the crane truck's diesel grind, then glass tings",
+   "at": 141.07,
+   "why": "script 23.04: \"Under the black, the next scene's sound pre-laps: a crane truck's diesel grind, then a dozen small glass tings.\""
+  },
+  {
+   "what": "the monitor down to a murmur, and a laugh from her audience",
+   "at": 35.68,
+   "peak_dbfs": -30,
+   "why": "plan v31-19.02 sounds: \"the monitor down to a murmur and a laugh from her audience\""
+  }
+ ],
+ "score_hints": {
+  "score": "audio/ost/tracks/e01-v3-act3/render/music-el.wav",
+  "cues": "audio/ost/tracks/e01-v3-act3/cues-el.json",
+  "drop": [],
+  "why": {},
+  "grid": null
+ },
+ "room_stem": {
+  "lufs": -38.21,
+  "peak_dbfs": -27.48,
+  "p10_50ms_dbfs": -39.8
+ },
+ "sfx_stem": {
+  "lufs": -28.18,
+  "peak_dbfs": -12.01,
+  "p10_50ms_dbfs": -240.0
+ },
+ "room_under_-55dBFS_0.3s": [],
+ "room_levels": [
+  {
+   "room": "dark@act3:v31-18.00",
+   "p5_50ms_dbfs": -41.6,
+   "lift_db": 1.6
+  }
+ ]
+}

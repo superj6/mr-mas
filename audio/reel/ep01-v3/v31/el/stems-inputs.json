@@ -1,0 +1,79 @@
+{
+ "fingerprint": "fa8421752fd7aeaf2a9f9bba4aed6da7d36c7bd0",
+ "variant": "el",
+ "timelines": {
+  "coldopen": "show/reel/ep01-v31-el/ep01-v31-el-coldopen.json",
+  "act1": "show/reel/ep01-v31-el/ep01-v31-el-act1.json",
+  "act2": "show/reel/ep01-v31-el/ep01-v31-el-act2.json",
+  "act3": "show/reel/ep01-v31-el/ep01-v31-el-act3.json",
+  "act4": "show/reel/ep01-v31-el/ep01-v31-el-act4.json",
+  "tag": "show/reel/ep01-v31-el/ep01-v31-el-tag.json"
+ },
+ "hints": {
+  "coldopen": {
+   "score": "audio/ost/tracks/e01-v3-coldopen/render/music-el.wav",
+   "cues": "audio/ost/tracks/e01-v3-coldopen/cues-el.json",
+   "drop": [],
+   "why": {},
+   "grid": null
+  },
+  "act1": {
+   "score": "audio/ost/tracks/e01-v3-act1/render/music-el.wav",
+   "cues": "audio/ost/tracks/e01-v3-act1/cues-el.json",
+   "drop": [
+    "siren"
+   ],
+   "why": {
+    "siren": "157.38 s:  code_red  comic panic, the siren as a joke"
+   },
+   "grid": null,
+   "grid_lobby": [
+    96.0,
+    259.577,
+    11.98
+   ],
+   "grid_duel": [
+    95.25,
+    287.557,
+    3.5
+   ]
+  },
+  "act2": {
+   "score": "audio/ost/tracks/e01-v3-act2/render/music-el.wav",
+   "cues": "audio/ost/tracks/e01-v3-act2/cues-el.json",
+   "drop": [
+    "knee-stabs"
+   ],
+   "why": {
+    "knee-stabs": "147.92 s: the knee stab on stamp 1 (C F Bb Eb over Ab)"
+   },
+   "grid": null
+  },
+  "act3": {
+   "score": "audio/ost/tracks/e01-v3-act3/render/music-el.wav",
+   "cues": "audio/ost/tracks/e01-v3-act3/cues-el.json",
+   "drop": [],
+   "why": {},
+   "grid": null
+  },
+  "act4": {
+   "score": "audio/ost/tracks/e01-v3-act4/render/music-el.wav",
+   "cues": "audio/ost/tracks/e01-v3-act4/cues-el.json",
+   "drop": [],
+   "why": {},
+   "grid": null,
+   "build_stop": 337.944
+  },
+  "tag": {
+   "score": "audio/ost/tracks/e01-v3-tag/render/music-el.wav",
+   "cues": "audio/ost/tracks/e01-v3-tag/cues-el.json",
+   "drop": [
+    "button-chord"
+   ],
+   "why": {
+    "button-chord": "38.09 s: THE BUTTON: F3 C4 G4 C5, no third (the vault's F hum is its root)"
+   },
+   "grid": null
+  }
+ }
+}

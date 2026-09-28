@@ -1,0 +1,383 @@
+{
+ "segment": "act4",
+ "variant": "el",
+ "seconds": 529.208,
+ "frames": 12701,
+ "samples": 25402000,
+ "timeline": "show/reel/ep01-v31-el/ep01-v31-el-act4.json",
+ "dialogue": {
+  "lines": 105,
+  "device": {
+   "call": 2,
+   "laptop": 1,
+   "monitor": 7,
+   "stream": 1
+  },
+  "el_matched": 105,
+  "missing": []
+ },
+ "rooms": {
+  "stem": "audio/reel/ep01-v3/v31/el/act4-room.flac",
+  "dip_under_speech_db": 2.0
+ },
+ "sfx": {
+  "stem": "audio/reel/ep01-v3/v31/el/act4-sfx.flac",
+  "ducked": false
+ },
+ "score": {
+  "file": "audio/ost/tracks/e01-v3-act4/render/music-el.wav",
+  "cues": "audio/ost/tracks/e01-v3-act4/cues-el.json",
+  "length_s": 529.208,
+  "length_vs_segment_s": 0.0,
+  "lufs_as_delivered": -20.24,
+  "lufs_after_gain": -20.24,
+  "duck": {
+   "by_mood_db": [
+    [
+     "2 AM",
+     7
+    ],
+    [
+     "THE AVALANCHE",
+     8
+    ],
+    [
+     "THE RETURN",
+     8
+    ],
+    [
+     "CODA",
+     9
+    ],
+    [
+     "THAT NIGHT",
+     9
+    ],
+    [
+     "THE BOARD'S SIDE",
+     9
+    ],
+    [
+     "THE BOARD'S SIDE, 11:52",
+     9
+    ],
+    [
+     "NOON, LAS VEGAS",
+     10
+    ]
+   ],
+   "cue_sheet_overrides": [],
+   "posts_dip_db": -3.0,
+   "envelope": "pre 0.25 s, joined across gaps < 2.5 s, 0.2 s in, 0.6 s out; depth smoothed 1.5 s"
+  },
+  "designed_silences": [
+   [
+    27.233,
+    38.485,
+    "D6: the Cancel click -> the phone's buzz (every bus at zero in the mix), then no score under \"super.\" (the suite's air holds it) -> the carve"
+   ],
+   [
+    319.203,
+    323.61,
+    "the scroll stops on ALYI -> \"He did both.\" (no score: the chime, \"Alyi signed it.\" and \"alyi voted.\" play in the room)"
+   ],
+   [
+    465.219,
+    473.075,
+    "the dead stop on \"of what?\" -> the stamp (Mada's pause, \"Good question.\", \"good question.\" and the long hold play in the room)"
+   ],
+   [
+    484.085,
+    485.542,
+    "the hourglass shatters: the sand holds its shape (k173-207) and the music holds its breath with it (runway.md \u00a711.6)"
+   ],
+   [
+    382.917,
+    387.055,
+    "the dead stop on MADA's label -> the Monday bullpen (the dark room's air, then the bullpen's, hold it)"
+   ]
+  ],
+  "head_fade_s": 1.2,
+  "rides": [
+   {
+    "beat": "v31-S1.01b",
+    "from": 6.21,
+    "to": 9.42,
+    "db": -4.0,
+    "why": "the practice lap the Orb follows: the score makes room for it"
+   }
+  ]
+ },
+ "silence": {
+  "click_beat": "v31-S1.08d",
+  "click": 27.233,
+  "buzz": 32.342,
+  "seconds": 5.108,
+  "score_peak_before_gate_dbfs": -240.0,
+  "mix_in_window_dbfs_max_50ms": -47.2,
+  "mix_in_window_lufs": -48.9
+ },
+ "setpieces": [
+  {
+   "what": "the avalanche",
+   "from": 369.04,
+   "to": 382.93,
+   "talk_lufs": -16.72,
+   "measure": "st",
+   "peak_before_lufs": -14.96,
+   "lift_db": 0.74,
+   "peak_after_lufs": -14.22,
+   "over_talk_lu": 2.5
+  },
+  {
+   "what": "the hourglass shatter",
+   "from": 484.03,
+   "to": 484.58,
+   "talk_lufs": -16.72,
+   "measure": "mom",
+   "peak_before_lufs": -20.86,
+   "lift_db": 6.64,
+   "peak_after_lufs": -14.44,
+   "over_talk_lu": 2.28
+  }
+ ],
+ "checks": [
+  {
+   "what": "Gerg's keys at 2 AM, S5.09 (the tile opens)",
+   "from": 285.59,
+   "to": 297.33,
+   "band_hz": [
+    1000,
+    5000
+   ],
+   "unspoken_s": 3.22,
+   "sfx_rms": -43.4,
+   "room_rms": -58.0,
+   "score_rms": -41.8,
+   "bed_rms": -41.7,
+   "sfx_minus_bed_db": -1.7
+  },
+  {
+   "what": "Gerg's keys, S5.09-back (typing hard)",
+   "from": 333.71,
+   "to": 337.94,
+   "band_hz": [
+    1000,
+    5000
+   ],
+   "unspoken_s": 1.02,
+   "sfx_rms": -38.9,
+   "room_rms": -58.1,
+   "score_rms": -39.9,
+   "bed_rms": -39.9,
+   "sfx_minus_bed_db": 1.0
+  },
+  {
+   "what": "after \"His keys stop.\" (the first second of his look)",
+   "from": 337.99,
+   "to": 338.94,
+   "band_hz": [
+    1000,
+    5000
+   ],
+   "unspoken_s": 0.95,
+   "sfx_rms": -240.0,
+   "room_rms": -58.2,
+   "score_rms": -40.6,
+   "bed_rms": -40.6,
+   "sfx_minus_bed_db": -199.4
+  },
+  {
+   "what": "the practice laps under S1.01 (after the crane)",
+   "from": 2.6,
+   "to": 6.21,
+   "band_hz": [
+    300,
+    2000
+   ],
+   "unspoken_s": 3.61,
+   "sfx_rms": -32.4,
+   "room_rms": -46.3,
+   "score_rms": -26.8,
+   "bed_rms": -26.8,
+   "sfx_minus_bed_db": -5.6
+  },
+  {
+   "what": "the practice lap the Orb follows (S1.01b)",
+   "from": 6.21,
+   "to": 9.42,
+   "band_hz": [
+    300,
+    2000
+   ],
+   "unspoken_s": 3.21,
+   "sfx_rms": -29.4,
+   "room_rms": -46.0,
+   "score_rms": -27.5,
+   "bed_rms": -27.4,
+   "sfx_minus_bed_db": -2.0
+  },
+  {
+   "what": "the hourglass shatter (S7.13 k173-180)",
+   "from": 484.08,
+   "to": 484.38,
+   "band_hz": [
+    500,
+    9000
+   ],
+   "unspoken_s": 0.29,
+   "sfx_rms": -20.6,
+   "room_rms": -51.7,
+   "score_rms": -44.9,
+   "bed_rms": -44.1,
+   "sfx_minus_bed_db": 23.5
+  }
+ ],
+ "measured": {
+  "lufs_i": -16.0,
+  "true_peak_dbtp": -1.45,
+  "sample_peak_dbfs": -1.5,
+  "lra_lu": 7.0,
+  "gain_db": 1.09,
+  "limiter_ceiling_dbfs": -1.5,
+  "limiter_active_s": 0.524,
+  "dialogue_lufs": -15.09,
+  "score_lufs_after_duck": -22.55,
+  "score_rms_under_speech_dbfs": -30.3,
+  "score_rms_between_speech_dbfs": -21.8,
+  "score_runs": {
+   "count": 13,
+   "shortest_s": 1.65,
+   "runs": [
+    [
+     0.3,
+     20.8
+    ],
+    [
+     21.6,
+     1.65
+    ],
+    [
+     24.1,
+     3.15
+    ],
+    [
+     38.5,
+     8.65
+    ],
+    [
+     47.65,
+     228.95
+    ],
+    [
+     277.65,
+     11.95
+    ],
+    [
+     290.2,
+     4.2
+    ],
+    [
+     294.8,
+     24.45
+    ],
+    [
+     323.85,
+     59.1
+    ],
+    [
+     387.05,
+     78.2
+    ],
+    [
+     473.1,
+     11.0
+    ],
+    [
+     485.5,
+     9.0
+    ],
+    [
+     497.95,
+     31.25
+    ]
+   ]
+  },
+  "rooms_lufs": -37.26,
+  "sfx_lufs": -29.26,
+  "holes_under_-42dBFS_0.3s": [
+   {
+    "at": 27.25,
+    "s": 5.05,
+    "what": "designed: THE ONE SILENCE: the Remove click -> the buzz (room tone only)"
+   },
+   {
+    "at": 484.7,
+    "s": 0.8,
+    "what": "designed: Ttemme's stream: the held beat, near silence (the sand stands)"
+   }
+  ],
+  "holes_mono_downmix": [
+   {
+    "at": 27.25,
+    "s": 5.05,
+    "what": "designed: THE ONE SILENCE: the Remove click -> the buzz (room tone only)"
+   },
+   {
+    "at": 465.35,
+    "s": 0.85,
+    "what": "UNMARKED (in beat S7.07-cont)"
+   },
+   {
+    "at": 484.65,
+    "s": 0.85,
+    "what": "designed: Ttemme's stream: the held beat, near silence (the sand stands)"
+   }
+  ],
+  "holes_without_score": [
+   {
+    "at": 27.25,
+    "s": 5.05,
+    "what": "designed: THE ONE SILENCE: the Remove click -> the buzz (room tone only)"
+   },
+   {
+    "at": 484.7,
+    "s": 0.9,
+    "what": "designed: Ttemme's stream: the held beat, near silence (the sand stands)"
+   },
+   {
+    "at": 486.05,
+    "s": 0.85,
+    "what": "designed: Ttemme's stream: the held beat, near silence (the sand stands)"
+   }
+  ],
+  "unmarked_holes": 0,
+  "unmarked_holes_without_score": 0,
+  "jumps_over_15dB": {
+   "count": 52,
+   "rising": 43,
+   "rising_at_a_word": 36,
+   "rising_at_an_sfx": 0,
+   "rising_other": [
+    24.15,
+    38.5,
+    256.55,
+    290.2,
+    365.35,
+    485.5,
+    514.2
+   ],
+   "falling": 9
+  }
+ },
+ "file": "out/ep01/full-v3/mix-v31-el/act4-mix.wav",
+ "guard_db": null,
+ "seam_head": {
+  "from_gain_db": 2.19,
+  "to_gain_db": 1.09,
+  "ramp_s": 2.0,
+  "after": "act3"
+ },
+ "built": "2026-09-27 19:33:40",
+ "heard": "nothing here has been listened to; every number is measured"
+}

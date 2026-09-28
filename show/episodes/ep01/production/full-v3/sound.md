@@ -1,9 +1,163 @@
 # Ep1 v3: rooms, SFX and the final mix (`v3-sound`, 2026-09-27)
 
-> **Status: MIXED, both variants, all six segments and the card, with every score render in place** (Kokoro: all six; ElevenLabs: all six). Tracks A2 (rooms and SFX stems) and A3 (the mix) of [PLAN.md](PLAN.md), under the showrunner's "just do a full episode attempt with your best judgement".
+> **Status (v3.1): the v3.1 lock is MIXED.** Kokoro: all six segments and the card, on composer X's and composer Y's v3.1 renders. ElevenLabs: see §0.6. Tracks A2 (rooms and SFX stems) and A3 (the mix) of [PLAN.md](PLAN.md), under the showrunner's "just do a full episode attempt with your best judgement".
 >
 > **Nothing here was heard.** Every number below is measured from the files. I also looked at envelope plots of the stems and mixes around the moments listed in §5. Whether a room sounds like its room, whether the keys read as Gerg, and whether any cut plays all need an ear.
 > Nothing was committed.
+>
+> §0 is the v3.1 round. §1–§8 are the v3 round: the method, which still holds, and the v3 lock's numbers.
+
+## 0. v3.1: the final lock
+
+### 0.1 Re-run
+
+```sh
+audio/.venv-casting/bin/python audio/reel/ep01-v3/mix_episode.py --all                  # v3.1, Kokoro
+audio/.venv-casting/bin/python audio/reel/ep01-v3/mix_episode.py --all --variant el     # v3.1, ElevenLabs
+audio/.venv-casting/bin/python audio/reel/ep01-v3/mix_episode.py --all --lock v3        # the v3 lock, still works
+```
+
+**v3.1 is the default lock.** `--lock v3` keeps the v3 lock working. v3.1's outputs don't touch v3's:
+
+| What | v3.1 | v3 |
+|---|---|---|
+| Timelines, Kokoro | `show/reel/ep01-v31/ep01-v31-<seg>.json` | `show/reel/ep01-v3/` |
+| Timelines, EL | `show/reel/ep01-v31-el/ep01-v31-el-<seg>.json` | `show/reel/ep01-v3-el/` |
+| Stems | `audio/reel/ep01-v3/v31/` (WAV), `audio/reel/ep01-v3/v31/el/` (FLAC) | `audio/reel/ep01-v3/`, `…/el/` |
+| **Mixes** | **`out/ep01/full-v3/mix-v31/<seg>-mix.wav`**, `out/ep01/full-v3/mix-v31-el/` | `out/ep01/full-v3/mix/`, `mix-el/` |
+| QA and the loudness report | `audio/reel/ep01-v3/mix-qa/v31/<variant>/` | `audio/reel/ep01-v3/mix-qa/<variant>/` |
+
+**A score render is used only if it belongs to the lock.** The v3 and v3.1 renders share their paths (`audio/ost/tracks/e01-v3-<seg>/render/music.wav`, `music-el.wav`). So the mix reads the timeline the render's cue sheet names and checks that the length is within a frame.
+- A render for the other lock is refused and reported (`score.not_this_lock` in the QA).
+- **The Kokoro v3 renders have been replaced by v3.1 ones.** A `--lock v3` re-run now mixes with no score, and says so. **The v3 mixes already made (`out/ep01/full-v3/mix/`) were left as they are.**
+- Checked in scratch: the v3 path builds and mixes, and it refused the v3.1 renders.
+
+### 0.2 What changed in the stems
+
+**The cold open (640 frames)** has no 1993 flashback, so it has no PC fan either.
+- The rewind speeds up from the slip (k37) and brightens, with a tape whirr riding its speed.
+- The collapse (k100–105) darkens it in three steps. It cuts dead on the cursor frame (k106), where the cold-open score lands its last swell and goes to zero.
+- Only the black's faint tone sits under the last two frames.
+
+**Act One:**
+- **Sydney's egg timer ticks "in its tempo".** Its tempo is measured from the score's render (96 bpm), and it ticks from the clip (10.03) to the ding (10.04). It restarts ("reset to 5") under the lid's close, and carries the match cut two bars into 11.01, fading. Peak −23.
+- **The Build's chip line** still leads 10.04 → 11.01, at the score's measured 95 bpm, and ends a 16th before the cut. The v3.1 score now opens 11.01 on the ATEM sting and boots the chip only at the split, so nothing doubles.
+- 12.04's pen J-cut is dropped: EMIT's THUD (v31-12.03) now sits between Nole and the desk, and its own pen comes in under its tail.
+- **The laptop's close moved from 9.13's tail onto the lid in v31-10.04** (the lead's note). Its loudest sample lands 16 frames before 10.04's end, where the shot pass shuts the lid ("half down, held 4 frames, then shut, held 16"). The egg timer ticks under it, then the Build's chip line leads the cut.
+
+**Act Two:** 16.01's first stamp stays on the picture with the score's first stab. The plan's 15.16 J-cut would flam against it.
+
+**Act Three:**
+- The act opens on the rack's fans under the black (v31-18.00, 1.0 s).
+- The hands runner's first item (v31-19.02) gets the monitor's murmur and a small audience laugh, through the monitor.
+- **21.02's second deepfake pop is dropped:** one copy on screen now (the lead's note). The rule keeps one pop per deepfake line, so v3's two copies keep both.
+- 20.01's keys lead by 0.5 s (v3.1's plan).
+
+**Act Four:**
+
+| Item | What was done |
+|---|---|
+| **The one silence** | Starts on the **Remove click** (v31-S1.08d +1.9 s) and runs to the buzz: 5.07 s |
+| **The laps, audible but distant** | Hotter (peak −19, and −17 for the car the Orb follows in v31-S1.01b), with the distance in the sound: the top off, the Strip's walls answering late. The followed car goes behind a grandstand (10 dB down and duller) and comes back. |
+| The JOIN ping (S1.02) | the board's join chime through the laptop, peak −24 |
+| **The phones in a row** (S4.09) | four `phone_buzz_step` buzzes in a row, then one now and then, still buzzing |
+| **The outgoing ring** (S5.09) | a ringback through the monitor instead of an incoming ring: "It rings out." |
+| **2 AM** | v3.1 moved "gerg never waits to be asked." onto his look, and S5.09-back holds "where his keys stop". The keys stop on **the act4 score's own Build stop**, read from its cue sheet (332.99 s), after "Just in case." |
+| **S7.13, Ttemme's stream** (runway.md §11.6; k = the beat's frames) | • k128–252: the boardroom goes out, and his mic's thin, compressed room comes in.<br>• A crush-to-clean sweep at k140, and another back at k238.<br>• Glass ticks at k155, 161 and 168.<br>• **The shatter, raised to −10 dBFS.**<br>• Shards at k174.<br>• Near silence for the held beat (k179–207).<br>• The sand slumping, pouring and settling (k208–229).<br>• The boardroom back at k252.<br>His line takes a light "through his stream" chain. |
+
+**The tag: ELGOOG's demo film** (runway.md §7; i = the insert's frames, tag frame = i + 62):
+- **Its own bright product-film bed:** E♭ major 9, with no A natural and no F bass. It's small from the monitor at first, then opens to full range at i22–26.
+- A shimmer rises (i34–47), then the swell to the fill and a glow as the duck becomes real (i88).
+- **The stutter** (i137–147): the bed is chopped in step, with a click on each dropped-frame hold. **It cuts out dead at i151.** Then come slide-change clicks on the three stills (i151, 159, 167).
+- **The room ducks −10 dB under it, then comes back in four steps** (i199–208), with the LEDs from i202. A chip blip at i213.
+- "What the quack!" plays full range (the film has opened up), with no monitor chain.
+
+**Every act-out black** carries a faint room tone (−54 LUFS) and is never digital zero. That includes the 160 ms at Act Three's 23.04 that the mood analysis found.
+
+**Left as it is: S7.06's order.** The caption's joke is "click, then freeze", but the lock puts `freeze_hit_F` at 0.25 s and the dry click at 2.8 s. The final Act Four picture draws its freeze on that hit (k6) and Terb's squeeze on the click (k67) (shots-act4.md). Moving the hit after the click would desync the drawn freeze, so the stems keep the lock's order.
+
+### 0.3 What changed in the mix
+
+**The set pieces rise +2–3 LU over the talk** (the mood analysis §4 #3):
+- The score and the SFX (not the dialogue) are lifted in each window until its peak loudness is 2.5 LU over the segment's talk: the median 3 s loudness where lines cover most of the window. The lift caps at 6 dB (9 dB for a short hit).
+- The odometer and the avalanche are measured on 3 s short-term loudness; the shatter on 400 ms momentary.
+
+**The act breaks:**
+- Each act's score fades in over 1.0–1.2 s at its head (Act One after the card, Act Two, Act Three, Act Four).
+- The room leads under the black, as before.
+- All five seams now step less than 1 dB. v3 had +20.3 and +21.1 dB at Acts Two and Three; the v3.1 score's first frame at Act One would have been +16.
+
+**A score ride:** −4 dB under v31-S1.01b, so the practice lap the Orb follows has room.
+
+**The v3.1 mood headings** (`music (v3.1): …`) are read for the duck depth: SYDNEY 8, ACT THREE 7, THE CLOCK 9, 2 AM 7.
+
+### 0.4 Measured, Kokoro v3.1
+
+| Segment | s | LUFS-I | True peak | LRA | Dialogue | Gain | Score under / between speech |
+|---|---|---|---|---|---|---|---|
+| cold open | 26.67 | −16.0 | −5.0 | 11.0 | −14.6 | +1.4 | — / −25.5 |
+| Act One | 337.46 | −16.0 | −1.5 | 5.5 | −15.1 | +1.3 | −30.1 / −21.1 |
+| Act Two | 201.25 | −16.0 | −1.5 | 6.0 | −15.4 | +0.8 | −30.7 / −21.8 |
+| Act Three | 145.13 | −16.0 | −1.4 | 5.2 | −15.1 | +2.1 | −28.3 / −20.9 |
+| Act Four | 517.75 | −16.0 | −1.5 | 7.0 | −15.2 | +1.0 | −30.4 / −21.8 |
+| tag | 41.33 | −16.5 | −1.6 | 13.3 | −13.6 | +3.3, guard −0.5 | −32.0 / −23.1 |
+| card | 2.0 | −36.2 | −23.2 | — | — | Act One's | — |
+| **Episode** (story + card) | **1271.6** | **−16.02** | | 6.8 | spread **1.8 LU** | | |
+
+**Unmarked holes: 0 in every segment, with the score and without it.** The marked ones are:
+- the one silence (5.0 s);
+- Act Three's black (0.65 s, room tone under it now);
+- S7.13's held beat;
+- the demo's stills.
+
+**The seams** (last 200 ms against the next chapter's first 200 ms; sample jumps all under 0.006):
+
+| Seam | Step |
+|---|---|
+| card → Act One | +0.4 dB |
+| Act One → Act Two | +0.3 dB |
+| Act Two → Act Three | +0.8 dB |
+| Act Three → Act Four | +0.4 dB |
+| Act Four → tag | +0.6 dB |
+
+**The set pieces** (peak over the talk):
+
+| Set piece | Before | After | Lift |
+|---|---|---|---|
+| the odometer | +1.9 LU | **+2.5** | 0.6 dB |
+| the avalanche | +1.7 LU | **+2.5** | 0.85 dB |
+| the shatter (400 ms) | −4.0 LU | **+2.3** | 6.5 dB |
+
+**The one silence:** 5.07 s at −49.0 LUFS, loudest 50 ms window −47.2 dBFS. The score was already digital zero there.
+
+**Named moments** (the SFX against the bed, in the sound's own band, where nobody speaks):
+
+| Moment | dB |
+|---|---|
+| the lap the Orb follows | −2.1 |
+| the far lap | −5.8 |
+| the egg timer | −3.0 |
+| the Build's pre-lap | −3.7 |
+| the pen | +7.2 |
+| 20.06's keys | +2.0 |
+| S5.09-back's keys | +0.7 |
+| the first second of his look | no keys |
+| the shatter | +21.6 |
+| the demo's bed, opened up | +6.2 over the ducked room and score |
+
+### 0.5 For an ear (v3.1)
+
+1. **The laps:** audible and distant, or now a foreground car?
+2. **The egg timer** in the music box's tempo, and across the match cut into the Build's pre-lap. One clock, or two?
+3. **The demo film:** does the stutter read as the film breaking (not the player buffering), and does the room's return in four steps land "those are stills."?
+4. **S7.13:** the shatter at +2.3 LU. Big enough for the gag, and does the held beat's near silence feel like the gag's timing?
+5. **The lifted set pieces:** a lift, or just louder?
+6. **The act breaks' 1.0–1.2 s fade-ins:** does each still arrive, or does it now creep in?
+7. **The cold open's cut on the cursor frame:** does the intro's first beat take over cleanly?
+
+### 0.6 ElevenLabs v3.1
+
+(filled in below once its run completes)
 
 **The files:**
 

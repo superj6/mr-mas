@@ -1,0 +1,115 @@
+{
+ "segment": "tag",
+ "variant": "el",
+ "seconds": 41.333,
+ "frames": 992,
+ "samples": 1984000,
+ "timeline": "show/reel/ep01-v31-el/ep01-v31-el-tag.json",
+ "dialogue": {
+  "lines": 5,
+  "device": {},
+  "el_matched": 5,
+  "missing": []
+ },
+ "rooms": {
+  "stem": "audio/reel/ep01-v3/v31/el/tag-room.flac",
+  "dip_under_speech_db": 2.0
+ },
+ "sfx": {
+  "stem": "audio/reel/ep01-v3/v31/el/tag-sfx.flac",
+  "ducked": false
+ },
+ "score": {
+  "file": null,
+  "cues": null,
+  "missing": true
+ },
+ "checks": [
+  {
+   "what": "the demo film's bed, opened up (i26-136)",
+   "from": 3.67,
+   "to": 8.25,
+   "band_hz": [
+    200,
+    12000
+   ],
+   "unspoken_s": 3.7,
+   "sfx_rms": -25.5,
+   "room_rms": -55.6,
+   "score_rms": null,
+   "bed_rms": -55.6,
+   "sfx_minus_bed_db": 30.1
+  },
+  {
+   "what": "the stills (i151-198): the room faint",
+   "from": 8.92,
+   "to": 10.83,
+   "band_hz": [
+    60,
+    12000
+   ],
+   "unspoken_s": 0.74,
+   "sfx_rms": -50.4,
+   "room_rms": -50.4,
+   "score_rms": null,
+   "bed_rms": -50.4,
+   "sfx_minus_bed_db": 0.0
+  }
+ ],
+ "measured": {
+  "lufs_i": -16.18,
+  "true_peak_dbtp": -1.26,
+  "sample_peak_dbfs": -1.5,
+  "lra_lu": 19.8,
+  "gain_db": 3.22,
+  "limiter_ceiling_dbfs": -1.5,
+  "limiter_active_s": 0.089,
+  "dialogue_lufs": -13.53,
+  "rooms_lufs": -35.81,
+  "sfx_lufs": -21.12,
+  "holes_under_-42dBFS_0.3s": [
+   {
+    "at": 8.9,
+    "s": 0.3,
+    "what": "designed: the demo's stills: the room coming back faintly (runway.md \u00a77)"
+   }
+  ],
+  "holes_mono_downmix": [
+   {
+    "at": 8.9,
+    "s": 0.3,
+    "what": "designed: the demo's stills: the room coming back faintly (runway.md \u00a77)"
+   }
+  ],
+  "holes_without_score": [
+   {
+    "at": 8.9,
+    "s": 0.3,
+    "what": "designed: the demo's stills: the room coming back faintly (runway.md \u00a77)"
+   }
+  ],
+  "unmarked_holes": 0,
+  "unmarked_holes_without_score": 0,
+  "jumps_over_15dB": {
+   "count": 13,
+   "rising": 9,
+   "rising_at_a_word": 5,
+   "rising_at_an_sfx": 2,
+   "rising_other": [
+    8.55,
+    8.7
+   ],
+   "falling": 4
+  }
+ },
+ "file": "out/ep01/full-v3/mix-v31-el/tag-mix.wav",
+ "guard_db": -0.23,
+ "seam_head": {
+  "from_gain_db": 1.09,
+  "to_gain_db": 3.22,
+  "ramp_s": 2.0,
+  "after": "act4"
+ },
+ "built": "2026-09-27 19:33:41",
+ "heard": "nothing here has been listened to; every number is measured"
+}

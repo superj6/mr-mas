@@ -1,0 +1,166 @@
+{
+ "variant": "kokoro",
+ "target_lufs": -16.0,
+ "true_peak_max_dbtp": -1.0,
+ "dialogue_reference_lufs": -15.07,
+ "dialogue_reference_from": "this run",
+ "guard_lu": 1.5,
+ "segments": {
+  "coldopen": {
+   "file": "out/ep01/full-v3/mix-v31/coldopen-mix.wav",
+   "seconds": 26.667,
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -4.98,
+   "lra_lu": 11.0,
+   "dialogue_lufs": -14.55,
+   "gain_db": 1.41,
+   "guard_db": null,
+   "score": "audio/ost/tracks/e01-v3-coldopen/render/music.wav",
+   "unmarked_holes": 0,
+   "unmarked_holes_without_score": 0,
+   "built": "2026-09-28 01:45:51"
+  },
+  "act1": {
+   "file": "out/ep01/full-v3/mix-v31/act1-mix.wav",
+   "seconds": 337.458,
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -1.47,
+   "lra_lu": 5.5,
+   "dialogue_lufs": -15.08,
+   "gain_db": 1.26,
+   "guard_db": null,
+   "score": "audio/ost/tracks/e01-v3-act1/render/music.wav",
+   "unmarked_holes": 0,
+   "unmarked_holes_without_score": 0,
+   "built": "2026-09-28 01:45:58"
+  },
+  "act2": {
+   "file": "out/ep01/full-v3/mix-v31/act2-mix.wav",
+   "seconds": 201.25,
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -1.48,
+   "lra_lu": 6.0,
+   "dialogue_lufs": -15.37,
+   "gain_db": 0.84,
+   "guard_db": null,
+   "score": "audio/ost/tracks/e01-v3-act2/render/music.wav",
+   "unmarked_holes": 0,
+   "unmarked_holes_without_score": 0,
+   "built": "2026-09-28 01:46:02"
+  },
+  "act3": {
+   "file": "out/ep01/full-v3/mix-v31/act3-mix.wav",
+   "seconds": 145.125,
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -1.44,
+   "lra_lu": 5.2,
+   "dialogue_lufs": -15.06,
+   "gain_db": 2.1,
+   "guard_db": null,
+   "score": "audio/ost/tracks/e01-v3-act3/render/music.wav",
+   "unmarked_holes": 0,
+   "unmarked_holes_without_score": 0,
+   "built": "2026-09-28 01:46:05"
+  },
+  "act4": {
+   "file": "out/ep01/full-v3/mix-v31/act4-mix.wav",
+   "seconds": 517.75,
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -1.49,
+   "lra_lu": 7.0,
+   "dialogue_lufs": -15.14,
+   "gain_db": 1.05,
+   "guard_db": null,
+   "score": "audio/ost/tracks/e01-v3-act4/render/music.wav",
+   "unmarked_holes": 0,
+   "unmarked_holes_without_score": 0,
+   "built": "2026-09-28 01:46:16"
+  },
+  "tag": {
+   "file": "out/ep01/full-v3/mix-v31/tag-mix.wav",
+   "seconds": 41.333,
+   "lufs_i": -16.49,
+   "true_peak_dbtp": -1.64,
+   "lra_lu": 13.3,
+   "dialogue_lufs": -13.57,
+   "gain_db": 3.33,
+   "guard_db": -0.47,
+   "score": "audio/ost/tracks/e01-v3-tag/render/music.wav",
+   "unmarked_holes": 0,
+   "unmarked_holes_without_score": 0,
+   "built": "2026-09-28 01:46:17"
+  },
+  "card": {
+   "file": "out/ep01/full-v3/mix-v31/card-mix.wav",
+   "seconds": 2.0,
+   "lufs_i": -36.21,
+   "true_peak_dbtp": -23.21,
+   "lra_lu": null,
+   "dialogue_lufs": null,
+   "gain_db": 1.26,
+   "guard_db": null,
+   "score": "none (card)",
+   "unmarked_holes": 0,
+   "unmarked_holes_without_score": 0,
+   "built": "2026-09-28 01:46:17"
+  }
+ },
+ "episode": {
+  "segments": [
+   "coldopen",
+   "card",
+   "act1",
+   "act2",
+   "act3",
+   "act4",
+   "tag"
+  ],
+  "seconds": 1271.58,
+  "lufs_i": -16.02,
+  "lra_lu": 6.8,
+  "note": "the story segments (and the card) back to back; the intro and the outro play their own masters between"
+ },
+ "seams": [
+  {
+   "seam": "card -> act1",
+   "last_200ms_dbfs": -34.5,
+   "first_200ms_dbfs": -34.1,
+   "step_db": 0.4,
+   "sample_jump": 0.0
+  },
+  {
+   "seam": "act1 -> act2",
+   "last_200ms_dbfs": -38.1,
+   "first_200ms_dbfs": -37.7,
+   "step_db": 0.3,
+   "sample_jump": 0.0006
+  },
+  {
+   "seam": "act2 -> act3",
+   "last_200ms_dbfs": -38.3,
+   "first_200ms_dbfs": -37.4,
+   "step_db": 0.8,
+   "sample_jump": 0.0002
+  },
+  {
+   "seam": "act3 -> act4",
+   "last_200ms_dbfs": -31.6,
+   "first_200ms_dbfs": -31.2,
+   "step_db": 0.4,
+   "sample_jump": 0.0051
+  },
+  {
+   "seam": "act4 -> tag",
+   "last_200ms_dbfs": -26.2,
+   "first_200ms_dbfs": -25.6,
+   "step_db": 0.6,
+   "sample_jump": 0.0016
+  }
+ ],
+ "spread": {
+  "lufs_i_lu": 0.49,
+  "dialogue_lu": 1.8
+ },
+ "updated": "2026-09-28 01:46:35",
+ "heard": "nothing here has been listened to; every number is measured"
+}

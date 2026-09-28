@@ -1,0 +1,130 @@
+{
+ "segment": "coldopen",
+ "variant": "el",
+ "seconds": 24.292,
+ "frames": 583,
+ "samples": 1166000,
+ "timeline": "show/reel/ep01-v31-el/ep01-v31-el-coldopen.json",
+ "dialogue": {
+  "lines": 3,
+  "device": {},
+  "el_matched": 3,
+  "missing": []
+ },
+ "rooms": {
+  "stem": "audio/reel/ep01-v3/v31/el/coldopen-room.flac",
+  "dip_under_speech_db": 2.0
+ },
+ "sfx": {
+  "stem": "audio/reel/ep01-v3/v31/el/coldopen-sfx.flac",
+  "ducked": false
+ },
+ "score": {
+  "file": "audio/ost/tracks/e01-v3-coldopen/render/music-el.wav",
+  "cues": "audio/ost/tracks/e01-v3-coldopen/cues-el.json",
+  "length_s": 24.292,
+  "length_vs_segment_s": 0.0,
+  "gain_db": 6.0,
+  "gain_why": "the lead's ruling (2026-09-27): onto the -20 LUFS underscore reference",
+  "lufs_as_delivered": -26.01,
+  "lufs_after_gain": -20.01,
+  "duck": {
+   "by_mood_db": [
+    [
+     "COLD OPEN",
+     9
+    ]
+   ],
+   "cue_sheet_overrides": [],
+   "posts_dip_db": -3.0,
+   "envelope": "pre 0.25 s, joined across gaps < 2.5 s, 0.2 s in, 0.6 s out; depth smoothed 1.5 s"
+  },
+  "designed_silences": [
+   [
+    0.0,
+    17.792,
+    "no score under the hall (sc 1-2): the room, the freeze's F4 (a timeline sound)"
+   ],
+   [
+    24.208,
+    24.292,
+    "the cursor frames: digital zero, so the intro's first beat takes over clean"
+   ]
+  ]
+ },
+ "checks": [],
+ "measured": {
+  "lufs_i": -16.0,
+  "true_peak_dbtp": -3.42,
+  "sample_peak_dbfs": -3.46,
+  "lra_lu": 11.9,
+  "gain_db": 1.48,
+  "limiter_ceiling_dbfs": -1.5,
+  "limiter_active_s": 0.0,
+  "dialogue_lufs": -14.52,
+  "score_lufs_after_duck": -18.52,
+  "score_rms_under_speech_dbfs": -240.0,
+  "score_rms_between_speech_dbfs": -25.4,
+  "score_runs": {
+   "count": 1,
+   "shortest_s": 6.5,
+   "runs": [
+    [
+     17.75,
+     6.5
+    ]
+   ]
+  },
+  "rooms_lufs": -31.49,
+  "sfx_lufs": -25.72,
+  "holes_under_-42dBFS_0.3s": [],
+  "holes_mono_downmix": [
+   {
+    "at": 0.0,
+    "s": 0.3,
+    "what": "UNMARKED (in beat 1.00)"
+   },
+   {
+    "at": 2.4,
+    "s": 0.3,
+    "what": "UNMARKED (in beat 1.01)"
+   },
+   {
+    "at": 3.95,
+    "s": 0.65,
+    "what": "UNMARKED (in beat 1.01)"
+   },
+   {
+    "at": 8.5,
+    "s": 0.3,
+    "what": "UNMARKED (in beat 1.03)"
+   },
+   {
+    "at": 16.05,
+    "s": 0.6,
+    "what": "UNMARKED (in beat 2.03)"
+   },
+   {
+    "at": 17.1,
+    "s": 0.7,
+    "what": "UNMARKED (in beat 2.03)"
+   }
+  ],
+  "holes_without_score": [],
+  "unmarked_holes": 0,
+  "unmarked_holes_without_score": 0,
+  "jumps_over_15dB": {
+   "count": 12,
+   "rising": 10,
+   "rising_at_a_word": 10,
+   "rising_at_an_sfx": 0,
+   "rising_other": [],
+   "falling": 2
+  }
+ },
+ "file": "out/ep01/full-v3/mix-v31-el/coldopen-mix.wav",
+ "guard_db": null,
+ "seam_head": null,
+ "built": "2026-09-27 19:33:07",
+ "heard": "nothing here has been listened to; every number is measured"
+}
