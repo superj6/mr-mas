@@ -22,6 +22,16 @@
 // half written." is an insert of his hand resting on the folded page in his hoodie pocket (PLEASE / REG, his ask from
 // Act One's desk), his lips out of frame; 14.01 is the class photo alone, holding to the black (the clip is cut, and so
 // are 14.03 and 14.05).
+// v3.5 (script draft 8.4, show/reel/ep01-v35/ep01-v35-act2.json; the final version): Nedib's card has its stat again
+// (DEEPFAKES OF ME: SEEN 0, paid in Act Three); 14.01 the Senate reminder slides over his feed and he draws the folded
+// page up out of his pocket (PLEASE REG—), then rests his hand on it; the Senate opens on that page under the same hand
+// at the witness table and tilts up to the hearing (v35-27.00); THE CLONE is gone (rooms/senate `noClone`): the chairman
+// alone, the sheet into his hand, Mas's own "i get paid enough for health insurance." in the wide; 15.14 ends on his
+// hand setting the wallet down; MAR 2019 (v35-28.*, art/v35.ts) comes in on the intro's render front from that hand to
+// the same hand setting a marker on the whiteboard's tray, and goes out on it from the check under the door to a
+// senator's blank pad; the tour (v35-29.*) is his passport's stamps, his page to hands under desk flags, the London
+// lectern, NOTERB's post and his; the guest book's page becomes the one-sentence letter on many desks (17.01), the names
+// scroll, and every signer's hand holds an order (17.10).
 // Rules kept: native 480 x 270, the master palette, whole-pixel moves, held drawings; Mas frame left; arrivals open wide
 // on the room with its people; marks land on the stick's sound spots and the takes' words; mouths only where the framing
 // shows one (the `face` table); no side badges, no pointer text: plates are names only, and the four gag cards
@@ -43,11 +53,11 @@ import * as SN from '../../../../shared/pixel/rooms/senate';
 import * as SP from '../../../../shared/pixel/kits/senate-props';
 import {lahtBust, LAHT_BUST_DEFAULT} from '../../../../shared/pixel/cast/lahtnemulb';
 import {sucramBust, SUCRAM_BUST_DEFAULT} from '../../../../shared/pixel/cast/sucram';
-import * as TP from '../../../../shared/pixel/kits/tour-poster';
 import * as RT from '../../../../shared/pixel/rooms/rooftop';
 import * as RG from '../../../../shared/pixel/kits/register';
 import {radnusBust2, RADNUS2_DEFAULT, RADNUS2_COLLAR, drawExtinguisherSmall} from './art/radnus-bust';
 import {drawHalfWrittenECU} from './art/half-written';
+import * as V35 from './art/v35';
 import {spoken, blink, stepOf, heldLerp, marioM, nesnejM, roomM, freeze2, maskOf, lighten, drawGagCard, namePlate, FREEZE_BRIGHT, FREEZE_SKY, sweep} from './kit2';
 import type {GagCard} from './kit2';
 import {LOCK} from './data';
@@ -56,14 +66,12 @@ const L = layouts();
 const talk = (v: Viseme, rest: Viseme = 'rest'): Viseme => (v === 'rest' ? rest : v);
 /** a silent room-scale mouth (rehearsing under his breath): held drawings, never on a take */
 const silentRoom = (kk: number): 'open' | 'smile' => (['open', 'smile', 'open', 'open', 'smile', 'smile', 'open', 'smile'] as const)[(kk >> 2) % 8];
-/** a silent viseme track (the clone reading a card to itself) */
-const silentLip = (kk: number): Viseme => (['E', 'rest', 'A', 'E', 'rest', 'O', 'rest', 'rest'] as const)[(kk >> 2) % 8];
 const cache = new Map<string, (x: number, y: number) => boolean>();
 const keepOf = (key: string, draw: (b: Buf) => void) => { let m = cache.get(key); if (!m) { m = maskOf(draw); cache.set(key, m); } return m; };
 
 // ------------------------------------------------------------------ the gag cards (text blocks in each shot's empty corner)
 const CARD_SIRRAH: GagCard = {x: 14, y: 12, name: 'SIRRAH', lines: ['THE EXPLAINER'], stat: ['DAY JOB: VICE PRESIDENT'], accent: PAL.U5};
-const CARD_NEDIB: GagCard = {x: 14, y: 12, name: 'EOJ NEDIB', lines: ['THE PRESIDENT'], stat: [], accent: PAL.W7}; // v3.4: the stat row is cut (one deepfake: the Senate's)
+const CARD_NEDIB: GagCard = {x: 14, y: 12, name: 'EOJ NEDIB', lines: ['THE PRESIDENT'], stat: ['DEEPFAKES OF ME: SEEN 0'], accent: PAL.W7}; // v3.5: the stat is back (Act Three's deepfake pays it: SEEN 1)
 const CARD_SUCRAM: GagCard = {x: 470, y: 12, name: 'SUCRAM', lines: ['CALLED IT.', '(BEFORE LAUNCH.)'], stat: ['STAMPS: ALL', 'PARTIALLY: SOME'], accent: PAL.R3, align: 'right'};
 const CARD_NESNEJ: GagCard = {x: 470, y: 12, name: 'NESNEJ', lines: ['SELLS SHOVELS.', 'FUNDS DIGGERS.'], stat: ['POCKETS: 1'], accent: PAL.W6, align: 'right'};
 
@@ -257,42 +265,34 @@ L.add('13.14', {
 
 // =================================================================== sc 14 · THE BRIDGE
 L.add('14.01', {
-  st: 'v3.4 (the bay\'s clip is cut; draft 8.3): rooms/bay-bridge drawBridgeOTS {noClip}: his feed is his own CLASS PHOTO #1 post only, its hearts climbing, held to the black (other people\'s items greyed under it); formerly {feed, hearts, scrub, tagBig, anchorDesk}: v3.3 (P6): the clip is drawn unmistakably as a generic news anchor at a desk (the set\'s lit panels, the glossy desk, her copy), its lower third a blank bar: not the senator, nobody real; the MATCH CUT: over Mas\'s shoulder at the dark bullpen window, his phone where the print was, his own CLASS PHOTO #1 post on it, the hearts climbing; his thumb scrolls to the next item, the anchor clip (her mouth a beat late) under the ALTERED AUDIO tag drawn to read; v3.2, HIS MOVE: his thumb drags the clip back and plays it again (late again) (the V.O. is cut); the skyline and the one lit window beyond',
-  marks: {scroll: ['txt', 'CLASS PHOTO #1', 'until', 0]},
+  st: 'v3.5 (sc 26): rooms/bay-bridge drawBridgeOTS {noClip}: over his shoulder at the dark bullpen window (the MATCH CUT from the print), his phone with his own CLASS PHOTO #1 post, its hearts climbing; the reminder slides down over it in three held steps (art/v35 phoneReminder: the cold open\'s generic calendar card, SENATE JUDICIARY / MAY 16 · TESTIFY, no seal); then act2/art/half-written drawHalfWrittenECU {lift, dash} [ECU]: 13.13\'s insert again, his hand on his hoodie pocket, and he draws the folded page up out of it (PLEASE, REG and the dash where he stopped), holds it to read, and lets it back down; his hand rests on it (the match into the witness table)',
+  marks: {rem: ['txt', 'SENATE JUDICIARY', 'at', 0], page: ['txt', 'PLEASE REG', 'at', 0]},
   draw: (fb, k, sh, f) => {
-    const sc = mk(sh, 'scroll', 43), len = sh.e - sh.s;
-    const feed = k < sc ? 0 : heldLerp(k, sc, sc + 14, 0, 100, 2) / 100;
-    const hearts = 406 + Math.min(k, sc) * 19;
-    const drag0 = sc + 52, drag1 = drag0 + 10; // it plays, he drags it back (two drawings), it plays again
-    const progress = k < drag0 ? 0.3 + clamp((k - sc) / 150, 0, 1) * 0.6 : k < drag1 ? 0.12 : 0.12 + clamp((k - drag1) / 150, 0, 1) * 0.6;
-    const m = (((k + 6) >> 2) % 3 === 0 ? 0 : 1) as 0 | 1;
-    BB.drawBridgeOTS(fb, f, {f, mouth: k < sc + 16 || (k >= drag0 && k < drag1 + 6) ? 0 : m, progress, feed, hearts, scrub: k >= drag0 - 6 && k < drag1 + 4 ? 1 : 0, tagBig: true, anchorDesk: true, noClip: true});
-    void len;
+    const rem = mk(sh, 'rem', 38), page = mk(sh, 'page', 81), cut = page - 6;
+    if (k < cut) {
+      BB.drawBridgeOTS(fb, f, {f, mouth: 0, feed: 0, hearts: 406 + Math.min(k, rem) * 7 + Math.max(0, k - rem) * 2, noClip: true});
+      V35.phoneReminder(fb, BB.BRIDGE_PHONE.x, BB.BRIDGE_PHONE.y, BB.BRIDGE_PHONE.w, k - rem);
+      return;
+    }
+    // the ECU: the page up out of the pocket in held steps, held to read, let back down; his hand resting on it
+    const kk = k - cut, len = sh.e - sh.s - cut;
+    const down = len - 18;
+    const lift = kk < 4 ? 0 : kk < 6 ? 10 : kk < 8 ? 18 : kk < down ? 24 : kk < down + 2 ? 14 : kk < down + 4 ? 4 : 0;
+    drawHalfWrittenECU(fb, f, {lift, dash: true, press: kk >= down + 4 ? 1 : 0});
   },
 });
-L.add('14.06', {st: 'BLACK: the too-smooth voice runs on over black into the hearing (the match cut on the voice)', draw: (fb) => { rect(0, 0, 480, RH, fb.ink(PAL.N0)); return {noVo: true}; }});
 
 // =================================================================== sc 15 · THE SENATE
-L.add('15.01', {
-  st: 'rooms/senate drawSenateMCU: THE CLONE (cast/lahtnemulb, clone: the 1-px highlight, the gloss) at his microphone, its red light on, over the dais\' drapes; the carried voice finds his mouth; the clone never blinks',
-  face: {CLONE: 'lip'},
-  draw: (fb, k, sh, f) => { SN.drawSenateMCU(fb, f, {bust: lahtBust({...LAHT_BUST_DEFAULT, clone: true, arm: 'mic', mouth: mouth(sh, k, 'CLONE'), lid: 0}), third: 'R', bg: 'dais', mic: true, lit: true}); },
-});
-L.add('15.02', {
-  st: 'rooms/senate drawSenateWide: the hearing room (the dais, the gallery, the witness table with MAS and SUCRAM); v3.1: the matte chairman takes the red light from the clone\'s mic and tells the room the truth about the voice it just heard ("That voice was not mine. The words were not mine.", room-scale mouth); the clone still; the name plate LAHTNEMULB · CHAIRMAN (v3.2: a name and one relation word)',
-  face: {LAHTNEMULB: 'room'},
-  marks: {line: ['on', 'v31-a2-0003', 0], plate: ['txt', 'LAHTNEMULB', 'at', 0]},
+// v3.5: the hearing opens on the page under his hand, then the room (the clone and its voice are cut: 15.01-15.03)
+L.add('v35-27.00', {
+  st: 'v3.5 (sc 27, the MATCH from 14.01): act2/art/half-written drawHalfWrittenECU {surface: baize} [HIGH]: the same folded page under the same resting hand, now on the witness table\'s green baize (the gavel\'s knock lands on the cut); then a quick tilt up (three held steps, the rows smeared) to rooms/senate drawSenateWide {noClone}: the hearing room, the dais with the chairman at its centre, the gallery, SUCRAM beside Mas already typing, live-threading',
   draw: (fb, k, sh, f) => {
-    const line = mk(sh, 'line', 31);
-    SN.drawSenateWide(fb, f, {chair: {arm: 'card', mouth: roomMouth(sh, k, 'LAHTNEMULB')}, clone: {arm: 'down'}, lit: k < line - 10 ? 'clone' : 'chair'});
-    namePlate(fb, k - mk(sh, 'plate', 7), 'LAHTNEMULB · CHAIRMAN', 318, 168, PAL.G6); // v3.2: the plate carries one relation word
-  },
-});
-L.add('15.03', {
-  st: 'rooms/senate drawDais2S: THE CLONE (glossy, the better chair) gives the chairman a look; he takes the microphone back (the red light with it)',
-  draw: (fb, k, sh, f) => {
-    const take = 26;
-    SN.drawDais2S(fb, f, {clone: {arm: k < take ? 'mic' : 'down', look: 1, brow: k >= 8 && k < take + 10 ? -1 : 0}, chair: {arm: k < take ? 'card' : 'mic', lid: blink(k, 1), look: k < take ? 0 : -1}, lit: k < take ? 'clone' : 'chair'});
+    const t0 = 34;
+    if (k < t0) { drawHalfWrittenECU(fb, f, {surface: 'baize'}); return; }
+    SN.drawSenateWide(fb, f, {noClone: true, chair: {arm: 'card'}, sucram: {arm: 'phone', mouth: 'rest'}});
+    // the tilt: the room comes down into frame in two held steps, the rows above it one even smear (the flash check)
+    const dy = k < t0 + 1 ? 40 : k < t0 + 2 ? 12 : 0;
+    if (dy) { shiftRoom(fb, 0, dy); for (let y = 0; y < dy; y++) for (let x = 0; x < 480; x++) fb.set(x, y, fb.get(x, dy)); }
   },
 });
 const masKeepWit = () => keepOf('wit-mas', (b) => putBustCut(b, masPortrait({...MAS_PORTRAIT_DEFAULT, light: 'warm'}), SN.WIT2S.mas, SN.WIT2S.y, SN.WIT2S.table, true));
@@ -319,13 +319,12 @@ L.add('15.06', {
   },
 });
 L.add('15.07', {
-  st: 'rooms/senate drawSenateOTS: from behind Mas (the back of his head) onto the dais; on "jobs" the chairman reaches for his next card and the clone takes it out of his hand (3 held steps) and reads it for him, silently; nobody remarks on it',
+  st: 'rooms/senate drawSenateOTS {noClone} (v3.5: the clone is cut): from behind Mas (the back of his head) onto the dais, the chairman alone with his cards; on "jobs" he reaches for his next card (two held drawings) and settles with it',
   marks: {jobs: ['w', 'e1-a2-15-07', 'jobs', 0]},
   draw: (fb, k, sh, f) => {
     const j = mk(sh, 'jobs', 120);
-    const take = stepOf(k, [j, j + 4, j + 8]) as 0 | 1 | 2 | 3;
     const lid = Math.max(blink(k, 1), blink(k + 45, 1)) as 0 | 1 | 2;
-    SN.drawSenateOTS(fb, f, {take, chair: {lid, look: take >= 2 ? 1 : k % 70 < 40 ? -1 : 0}, clone: {mouth: k >= j + 12 ? silentLip(k - j - 12) : 'rest', lid: 0}});
+    SN.drawSenateOTS(fb, f, {noClone: true, chair: {lid, look: k >= j && k < j + 14 ? 1 : k % 70 < 40 ? -1 : 0, arm: k >= j && k < j + 10 ? 'take' : 'card'}});
   },
 });
 L.add('15.10', {
@@ -334,7 +333,7 @@ L.add('15.10', {
   marks: {line: ['on', 'e1-a2-15-15', 0]},
   draw: (fb, k, sh, f) => {
     const line = mk(sh, 'line', 9);
-    SN.drawSenateWide(fb, f, {lean: k >= 4, lit: k >= line - 6 ? 'senB' : null, senMouth: roomMouth(sh, k, 'SENATOR') === 'open' ? 'senB' : null, chair: {arm: 'card'}});
+    SN.drawSenateWide(fb, f, {noClone: true, lean: k >= 4, lit: k >= line - 6 ? 'senB' : null, senMouth: roomMouth(sh, k, 'SENATOR') === 'open' ? 'senB' : null, chair: {arm: 'card'}});
   },
 });
 L.add('15.11', {
@@ -357,19 +356,24 @@ L.add('15.12', {
   },
 });
 L.add('15.13', {
-  st: 'rooms/senate drawSenateWide: Mas holds the open wallet up to the dais and says nothing; the gallery gasps (one held drawing); the clone leans to its lit mic and reads the card (room-scale mouth)',
-  face: {CLONE: 'room'},
-  marks: {gasp: ['snd', 'synth:gasp', 1, 0], line: ['on', 'e1-a2-15-13', 0]},
+  st: 'rooms/senate drawSenateWide {noClone} (v3.5): Mas holds the open wallet up to the dais and says it himself, "i get paid enough for health insurance." (room-scale mouth, his own mic lit); the gallery gasps after it (one held drawing, all at once)',
+  face: {MAS: 'room'},
+  marks: {gasp: ['snd', 'synth:gasp', 1, 0], line: ['on', 'v35-a2-0001', 0]},
   draw: (fb, k, sh, f) => {
-    const g = mk(sh, 'gasp', 10), line = mk(sh, 'line', 40);
-    SN.drawSenateWide(fb, f, {mas: {wallet: true}, gasp: k >= g && k < g + 36, clone: {arm: k >= line - 12 ? 'lean' : 'down', mouth: roomMouth(sh, k, 'CLONE')}, lit: k >= line - 8 ? 'clone' : null, chair: {arm: 'card'}});
+    const g = mk(sh, 'gasp', 79);
+    const mm = mouth(sh, k, 'MAS');
+    SN.drawSenateWide(fb, f, {noClone: true, mas: {wallet: true, mouth: mm !== 'rest' && mm !== 'M' && mm !== 'smile' ? 'open' : 'rest'}, gasp: k >= g, chair: {arm: 'card'}});
   },
 });
 L.add('15.14', {
-  st: 'rooms/senate drawWitness2S: SUCRAM stamps furiously on the three stamps and on through his line (slam / raise held drawings), the moth dodging over the pad; then still, he looks at Mas as Mas says, quietly, to the dais, "…i have no equity in nopeai.", and goes back to his phone; the moth lands and lifts; the senator O.S.',
+  st: 'v3.5: after the held beat, art/v35 drawWalletSet [INSERT]: his hand sets the wallet down on the table (the 2019 match); before it: rooms/senate drawWitness2S: SUCRAM stamps furiously on the three stamps and on through his line (slam / raise held drawings), the moth dodging over the pad; then still, he looks at Mas as Mas says, quietly, to the dais, "…i have no equity in nopeai.", and goes back to his phone; the moth lands and lifts; the senator O.S.',
   face: {SUCRAM: 'lip', MAS: 'lip'},
   marks: {s1: ['snd', 'rubber_stamp_C', 1, 0], s2: ['snd', 'rubber_stamp_C', 2, 0], s3: ['snd', 'rubber_stamp_C', 3, 0], sEnd: ['end', 'e1-a2-15-14', 0], mas: ['on', 'v3-a2-0001', 0], masEnd: ['end', 'v3-a2-0001', 0]},
   draw: (fb, k, sh, f) => {
+    // v3.5 (the out): a held beat after his line, then the insert of his hand setting the wallet down on the baize
+    // (art/v35 drawWalletSet, three held steps), the object the 2019 match takes (the same hand, the same place)
+    const set0 = mk(sh, 'masEnd', 120) + 12;
+    if (k >= set0) { const kk = k - set0; V35.drawWalletSet(fb, f, {drop: kk < 2 ? 26 : kk < 4 ? 12 : kk < 6 ? 4 : 0}); return; }
     const s3 = mk(sh, 's3', 19), sEnd = mk(sh, 'sEnd', 54), masOn = mk(sh, 'mas', 65);
     const slams = [mk(sh, 's1', 2), mk(sh, 's2', 10), s3];
     for (let t = s3 + 8; t < sEnd; t += 8) slams.push(t);
@@ -383,12 +387,12 @@ L.add('15.14', {
   },
 });
 L.add('15.15', {
-  st: 'v3.2, HIS MOVE (the proposal): rooms/senate drawSenateOTS (15.07\'s setup: from behind Mas onto the dais, the chairman and the clone listening, the chairman blinking) for "i would form a new agency…" (his own testimony, the record); on "licenses" the cut to kits/senate-props drawSheetHigh [HIGH]: his hand slides PLEASE REGULATE ME, signed, toward the dais in held steps as he goes on; Sucram\'s stamp comes down mid-slide (CALLED IT. (BEFORE LAUNCH.)) and the sheet leaves frame right. (The stick\'s slide and stamp sounds sit before the cut: for the sound pass)',
+  st: 'v3.2, HIS MOVE (the proposal): rooms/senate drawSenateOTS {noClone} (15.07\'s setup: from behind Mas onto the dais, the chairman listening, blinking) for "i would form a new agency…" (his own testimony, the record); on "licenses" the cut to kits/senate-props drawSheetHigh [HIGH]: his hand slides PLEASE REGULATE ME, signed, toward the dais in held steps as he goes on; Sucram\'s stamp comes down mid-slide (CALLED IT. (BEFORE LAUNCH.)) and the sheet leaves frame right. (The stick\'s slide and stamp sounds sit before the cut: for the sound pass)',
   marks: {cut: ['w', 'v32-a2-0001', 'licenses', 0]},
   draw: (fb, k, sh, f) => {
     const c = mk(sh, 'cut', 68);
     // the OTS drifts in on him by whole pixels (1 px / 10 f) while he proposes it; the chairman and the clone blink
-    if (k < c) { SN.drawSenateOTS(fb, f, {take: 0, chair: {lid: blink(k, 1), look: 0}, clone: {lid: blink(k + 40, 3)}}); shiftRoom(fb, -Math.min(6, Math.floor(k / 10))); return; }
+    if (k < c) { SN.drawSenateOTS(fb, f, {noClone: true, take: 0, chair: {lid: blink(k, 1), look: 0}}); shiftRoom(fb, -Math.min(6, Math.floor(k / 10))); return; }
     const kk = k - c;
     // the slide spread over the rest of his sentence: the sheet leaves frame as the line ends (no empty table under him)
     const slide = (kk < 10 ? 0 : kk < 24 ? 1 : kk < 64 ? 2 : kk < 94 ? 3 : 4) as 0 | 1 | 2 | 3 | 4;
@@ -396,43 +400,173 @@ L.add('15.15', {
   },
 });
 L.add('15.16', {
-  st: 'rooms/senate drawSenateDais: a match on action, the sheet arrives from frame left into the clone\'s hand; the senators lean in, delighted: every one of them wants to sign it (they turn it over on the paper curl)',
+  st: 'rooms/senate drawSenateDais {noClone} (v3.5): a match on action, the sheet arrives from frame left into the CHAIRMAN\'s waiting hand; the senators lean in, delighted, and on the paper curl he holds it up and nods',
   marks: {curl: ['snd', 'paper_curl', 1, 0]},
-  draw: (fb, k, sh, f) => { const c = mk(sh, 'curl', 24); SN.drawSenateDais(fb, f, {sheet: k < 6 ? 1 : k < c ? 2 : 3, lean: k >= 10 && k < c, chair: {arm: 'card', nod: k >= c ? (((k >> 3) & 1) as 0 | 1) : 0}}); },
+  draw: (fb, k, sh, f) => { const c = mk(sh, 'curl', 24); SN.drawSenateDais(fb, f, {noClone: true, sheet: k < 6 ? 1 : k < c ? 2 : 3, lean: k >= 10 && k < c, chair: {arm: k >= c ? 'up' : 'card', nod: k >= c ? (((k >> 3) & 1) as 0 | 1) : 0}}); },
 });
-// =================================================================== sc 16 · THE TOUR (one held poster)
-L.add('16.01', {
-  st: 'kits/tour-poster drawTourPoster: ONE held poster (16.05 merged); the strip slaps across on the paper whip, EU CANCELLED; v3.2, HIS MOVES: his thumb on his phone in the corner posts "…no plans to leave" (the post pops), UN-CANCELLED, and his own hand comes in with a rubber stamp and stamps ADDED DUE TO POPULAR DEMAND (in, stamp, out, on the stamp); passing cars\' lights sweep the brick twice, one each way (a one-step band, the hold\'s life); the one-pixel smile holds',
-  marks: {strip: ['snd', 'paper_whip', 1, 0], c1: ['snd', 'rubber_stamp_C', 2, 0], post: ['snd', 'post_click', 1, 0], un: ['snd', 'rubber_stamp_C', 3, 0], add: ['snd', 'rubber_stamp_C', 4, 0]},
+// =================================================================== sc 28 · MAR 2019, the company with a ceiling (a memory)
+/** the writing point of his marker on the 2S's board for each piece of the diagram (frame coords) */
+const B2 = V35.BOARD2S, DG = V35.DIAGRAM;
+const LOWB = {x0: B2.x0 + DG.low.x, y0: B2.y0 + DG.low.y, x1: B2.x0 + DG.low.x + DG.low.w, y1: B2.y0 + DG.low.y + DG.low.h};
+const TOPB = {x: B2.x0 + DG.top.x, y: B2.y0 + DG.top.y, w: DG.top.w, h: DG.top.h};
+L.add('v35-28.01', {
+  st: 'v3.5 (sc 28, the MATCH in): the intro\'s render front (art/v35 frontSweep: shared transitions renderFront, 12 f, left to right, the white-hot core in the cyan glow) re-draws the witness table\'s insert (his hand resting on the wallet on the baize) as 2019 in the T3 cut-paper tier: the same hand, the same place in frame, resting on a marker it has just set on the whiteboard\'s tray (art/v35 drawTrayMarker); the brick under the board in the daylight; then his hand lifts off (two held steps) and leaves the marker on the tray',
   draw: (fb, k, sh, f) => {
-    const since = (m: string, d: number) => (k >= mk(sh, m, d) ? k - mk(sh, m, d) : null);
-    const post = since('post', 101);
-    const pc = mk(sh, 'post', 63), ad = mk(sh, 'add', 92);
-    // v3.2, HIS MOVES: his thumb on his phone in the frame's corner posts the walk-back; his own hand stamps the last slot
-    const phone = k >= pc - 14 && k < pc + 20 ? ((k >= pc - 2 && k < pc + 4 ? 1 : 0) as 0 | 1) : null;
-    const hand = k >= ad - 8 && k < ad ? 'in' : k >= ad && k < ad + 4 ? 'stamp' : k >= ad + 4 && k < ad + 12 ? 'out' : null;
-    TP.drawTourPoster(fb, f, {strip: k >= mk(sh, 'strip', 13), cancelled: since('c1', 28), post: post !== null && k < mk(sh, 'un', 123) + 16 ? post : null, un: since('un', 123), added: since('add', 147), phone, hand});
-    // the headlight: a soft band of one palette step crossing the wall and the poster, left to right, in 4-px steps
-    const len = sh.e - sh.s;
-    sweep(fb, k, Math.round(len * 0.2), Math.round(len * 0.52), -60, 540);
-    sweep(fb, k, Math.round(len * 0.78), len, 540, -40, 30);
+    if (k < 12) { V35.frontSweep(fb, k, (t) => V35.drawWalletSet(t, f, {drop: 0}), (t) => V35.drawTrayMarker(t, f, {hy: 116}), 'right'); return; }
+    V35.drawTrayMarker(fb, f, {hy: k < 30 ? 116 : k < 33 ? 104 : k < 36 ? 86 : null});
+  },
+});
+L.add('v35-28.02', {
+  st: 'v3.5 (sc 28): art/v35 office2019 [W]: NopeAI\'s first office by day, March 2019 (Act One\'s JUN 2018 room a year on, cut paper): GERG (the tug pose, the laptop in his arm) holds up the cloud bill and it unrolls to the floor and along it in held steps on his line; MAS at the whiteboard\'s end (NONPROFIT · THE BOARD on it), ALYI and MADA at the table, THE QUIET VOTE\'s tall chair turned away; on Mas\'s line the cut to art/v35 board2S [2S]: the whiteboard large and legible, MAS (medium, facing it) writing with his arm to the marker\'s point, ALYI at the table in the right foreground (lip-sync): the lower box, side by side, the arrow down, CAPPED PROFIT; Alyi asks; 100x in the red marker; Alyi asks; on "the board." he underlines the top box twice',
+  face: {GERG: 'room', MAS: 'lip', ALYI: 'lip'},
+  marks: {gerg: ['on', 'v35-a2-0002', 0], gergEnd: ['end', 'v35-a2-0002', 0], mas1: ['on', 'v35-a2-0003', 0], mas1End: ['end', 'v35-a2-0003', 0], x100: ['on', 'v35-a2-0005', 0], board: ['on', 'v35-a2-0007', 0]},
+  draw: (fb, k, sh, f) => {
+    const m1 = mk(sh, 'mas1', 96), cut = m1 - 6;
+    const open = (who: string) => { const v = mouth(sh, k, who); return v !== 'rest' && v !== 'M' && v !== 'smile' ? 'open' as const : 'rest' as const; };
+    if (k < cut) {
+      const g0 = mk(sh, 'gerg', 9), g1 = mk(sh, 'gergEnd', 86);
+      V35.office2019(fb, {f, bill: heldLerp(k, g0, g1, 0, 100, 4) / 100, gergMouth: open('GERG')});
+      return;
+    }
+    const m1e = mk(sh, 'mas1End', 148), x1 = mk(sh, 'x100', 202), bd = mk(sh, 'board', 297);
+    // the diagram on his lines: the lower box's four sides and the arrow, then CAPPED PROFIT; 100x; the underlines
+    const s0 = m1 + 4, sides = [s0, s0 + 6, s0 + 12, s0 + 18, s0 + 24], c0 = s0 + 28;
+    const box2At = (q: number) => stepOf(q, sides);
+    const cappedAt = (q: number) => (q < c0 ? 0 : Math.min(13, 1 + Math.floor((q - c0) / 2)));
+    const x100At = (q: number) => stepOf(q, [x1 + 3, x1 + 6, x1 + 9, x1 + 12]);
+    const tapAt = (q: number) => stepOf(q, [bd + 2, bd + 8]);
+    // where his marker is (a pure function of the frame): along each side as it's drawn, along the words, at 100x,
+    // under the top box; his arm down in between
+    const penAt = (q: number): [number, number] | null => {
+      const n = box2At(q);
+      if (q >= s0 - 4 && q < c0) return n <= 0 ? [LOWB.x0, LOWB.y0] : n === 1 ? [LOWB.x0, LOWB.y1] : n === 2 ? [LOWB.x1, LOWB.y1] : n === 3 ? [LOWB.x1, LOWB.y0] : n === 4 ? [LOWB.x0, LOWB.y0] : [TOPB.x + (TOPB.w >> 1), LOWB.y0 - 4];
+      if (q >= c0 && q < Math.max(c0 + 28, m1e + 6)) return [LOWB.x0 + 30 + cappedAt(q) * 7, LOWB.y0 + 12];
+      if (q >= x1 - 2 && q < x1 + 22) return [B2.x0 + DG.x100.x + x100At(q) * 11, B2.y0 + DG.x100.y + 14];
+      if (q >= bd - 4 && q < bd + 20) return [TOPB.x + 20 + tapAt(q) * 40, TOPB.y + TOPB.h + 6];
+      return null;
+    };
+    // he steps along the board so the marker stays an arm's length away: 8 px per held step (on 2s), from the cut
+    // (he starts toward the board's first corner as his line starts, 12 px a step; back to the board's edge when his
+    // marker is down, so the words he wrote are clear of him)
+    // (at the cut he's at the board, as in the wide; 12 px a step; back to its edge when his marker is down, so the words
+    // he wrote are clear of him)
+    const masAt = (q: number) => {
+      let x = 96;
+      for (let r = cut; r <= q; r += 2) {
+        const p = penAt(r) ?? penAt(r + 10);
+        const d = p ? p[0] - (x + 64) : 0;
+        // out of reach: step in; on top of it: step back; his marker down: back to the board's edge
+        const w = clamp(!p ? 6 : d > 140 ? p[0] - 174 : d < -30 ? p[0] - 124 : x, 6, 190);
+        x = Math.abs(w - x) <= 12 ? w : x + Math.sign(w - x) * 12;
+      }
+      return x;
+    };
+    const masX = masAt(k), pen0 = penAt(k);
+    // the arm only when the marker is within reach of where he stands now
+    const pen = pen0 && pen0[0] - (masX + 64) <= 150 ? pen0 : null;
+    V35.board2S(fb, {f, box2: box2At(k), capped: cappedAt(k), x100: x100At(k), tap: tapAt(k), pen, masX, mas: {mouth: mouth(sh, k, 'MAS'), look: 1, lid: 0}, alyi: {mouth: mouth(sh, k, 'ALYI'), eyes: 'open', t: f}});
+  },
+});
+L.add('v35-28.03', {
+  st: 'v3.5 (sc 28): art/v35 mada2S [2S]: the board\'s lower box across the frame\'s left half (CAPPED PROFIT, 100x), MADA at the table (medium, arms folded, lip-sync) and THE QUIET VOTE\'s tall chair beside him, its back to us, turned away; "And you?": Mas\'s hand (his sleeve in from the frame\'s left edge) draws a stick figure in the box on "nothing." and writes CEO · EQUITY: 0 under its arm; Mada\'s spinner turns over the answer, stops, and "Good answer."',
+  face: {MADA: 'lip'},
+  marks: {ask: ['on', 'v35-a2-0008', 0], ans: ['on', 'v35-a2-0009', 0], ansEnd: ['end', 'v35-a2-0009', 0], good: ['on', 'v35-a2-0010', 0]},
+  draw: (fb, k, sh, f) => {
+    const ans = mk(sh, 'ans', 42), ansEnd = mk(sh, 'ansEnd', 61), good = mk(sh, 'good', 72);
+    const s0 = ans - 10;
+    const stick = stepOf(k, [s0, s0 + 3, s0 + 6, s0 + 9, s0 + 12]);
+    const e0 = ans + 2, equity = k < e0 ? 0 : Math.min(15, 1 + Math.floor((k - e0) * 0.75));
+    // the board is drawn at (-40, -44): the lower box at x 18..166, y 10..80; the figure at (48, 32); the words at (62, 46)
+    let pen: [number, number] | null = null;
+    if (k >= s0 - 4 && k < e0) pen = [48 + (stick >= 3 ? 7 : 0), 36 + stick * 5];
+    else if (k >= e0 && k < e0 + 26) pen = [62 + Math.min(15, equity) * 5, 58];
+    const spin = k >= ansEnd + 1 && k < good + 12 ? f : null;
+    V35.mada2S(fb, {f, box2: 5, capped: 13, x100: 4, stick, equity, pen, mada: {mouth: mouth(sh, k, 'MADA'), lid: blink(k, 4)}, spin, stopped: k >= good - 3});
+  },
+});
+L.add('v35-28.04', {
+  st: 'v3.5 (sc 28): art/v35 drawCheckDoor [INSERT]: the office door\'s foot, the daylight in the gap under it; the landlord\'s first check slides in under the door toward us in three held steps and lies there, legible: MACROSOFT · $1,000,000,000 · JUL 2019 (a smaller cousin of Act One\'s)',
+  // (the flash check: the last few pixels of the slide only, so the bright check doesn't step across the frame's blocks)
+  draw: (fb, k, sh, f) => { V35.drawCheckDoor(fb, f, {slide: k < 2 ? 12 : k < 4 ? 5 : k < 6 ? 1 : 0}); },
+});
+L.add('v35-28.05', {
+  st: 'v3.5 (the MATCH out): the render front sweeps back, right to left, from the check under the door to art/v35 drawDaisPad [INSERT]: a senator\'s hand (suit cuff, pen) hovering over a blank legal pad on the dais, nothing to write (hands only); then rooms/senate drawSenateDais {noClone}: the dais sits back, held (the senator who asked still lit); the chairman lifts his gavel (art/v35 drawGavel); then art/v35 drawGavelECU [INSERT]: the gavel close, coming down on its block on the knock that ends the hearing (the passport\'s stamp takes the same stroke)',
+  marks: {knock: ['snd', 'landing_thunk', 1, 0]},
+  draw: (fb, k, sh, f) => {
+    if (k < 12) { V35.frontSweep(fb, k, (t) => V35.drawCheckDoor(t, f, {slide: 0}), (t) => V35.drawDaisPad(t, f, {k}), 'left'); return; }
+    if (k < 26) { V35.drawDaisPad(fb, f, {k}); return; }
+    // the dais sits back, held (the senator who asked still lit, nothing to write); the chairman lifts his gavel; then
+    // the gavel close as it comes down on the knock (the passport's stamp takes the same stroke)
+    const kn = mk(sh, 'knock', 45), ecu = kn - 7;
+    if (k < ecu) { SN.drawSenateDais(fb, f, {noClone: true, lit: 'senB', chair: {arm: 'card'}}); V35.drawGavel(fb, k >= ecu - 5 ? 'up' : 'down'); return; }
+    V35.drawGavelECU(fb, f, {pos: k < kn - 2 ? 'up' : k < kn ? 'mid' : 'down'});
   },
 });
 
+// =================================================================== sc 29 · taking it to the world (the tour)
+const STAMP_MARKS = ['st1', 'st2', 'st3', 'st4', 'st5', 'st6', 'st7'];
+L.add('v35-29.01', {
+  st: 'v3.5 (sc 29): art/v35 drawPassport [INSERT]: his passport open on its visa pages on a hotel desk, a slow push in; the rubber stamp comes down on each thunk (its shadow, the block, lifting) and leaves its city legible, one a beat: RIO DE JANEIRO · LAGOS · MADRID · WARSAW · PARIS · LONDON · MUNICH (the last one alone, the page still); after MADRID and after PARIS, art/v35 drawFlagHands cutaways: his page (PLEASE REGULATE ME, signed) slides across a table to two hands under a desk flag (Spain\'s red and gold; France\'s three bands; no emblem, no faces)',
+  marks: Object.fromEntries(STAMP_MARKS.map((m, i) => [m, ['snd', 'rubber_stamp_C', i + 1, 0]])) as Record<string, ['snd', string, number, number]>,
+  draw: (fb, k, sh, f) => {
+    const at = STAMP_MARKS.map((m, i) => mk(sh, m, 7 + i * 12));
+    const cuts: Array<[number, 'es' | 'fr', number]> = [[at[2] + 3, 'es', PAL.N4], [at[4] + 3, 'fr', PAL.N3]];
+    for (const [c0, flag, cuff] of cuts) if (k >= c0 && k < c0 + 8) { V35.drawFlagHands(fb, f, {k: k - c0, flag, cuff}); return; }
+    const landed = at.filter((a) => k >= a + 1).length;
+    const i = at.findIndex((a) => k >= a - 2 && k <= a + 1);
+    const coming = i < 0 ? null : {i, phase: (k < at[i] - 1 ? 0 : k <= at[i] ? 1 : 2) as 0 | 1 | 2};
+    V35.drawPassport(fb, f, {landed, coming, push: Math.min(6, Math.floor(k / 16))});
+  },
+});
+L.add('v35-29.02', {
+  st: 'v3.5 (sc 29): art/v35 drawLectern [M]: a lectern in a generic hall in London (wood panelling, two tall windows\' grey light, sconces; no crest), the audience\'s heads dark along the foot; MAS behind it (the warm portrait, 3/4 to the hall), pleasant, lip-synced: "if we can comply, we will, and if we can\'t, we\'ll cease operating."; his eyes move across the room; the one-pixel smile on "cease operating" and after',
+  face: {MAS: 'lip'},
+  marks: {cease: ['w', 'v35-a2-0011', 'cease', 0], end: ['end', 'v35-a2-0011', 0]},
+  draw: (fb, k, sh, f) => {
+    const cz = mk(sh, 'cease', 80);
+    const mm = mouth(sh, k, 'MAS');
+    const mo = mm === 'rest' && k >= cz - 2 ? 'smile' : mm;
+    V35.drawLectern(fb, f, {mas: {mouth: mo as 'rest', look: ((k >> 5) % 3 === 1 ? 0 : -1) as -1 | 0, lid: 0}});
+  },
+});
+L.add('v35-29.03', {
+  st: 'v3.5 (sc 29): art/v35 drawPhonePost [POV]: his phone face-up on the hotel desk (a lamp\'s warm pool), a post from NOTERB in its own UI (kits/post-any: a name and a plain initial avatar, no face), popping up in three held steps: "There is no point in attempting blackmail…", MAY 25',
+  draw: (fb, k, sh, f) => { V35.drawPhonePost(fb, f, {post: {kind: 'any', spec: {poster: V35.NOTERB, text: 'There is no point in attempting blackmail…', ts: 'MAY 25'}}, k: k - 1}); },
+});
+const NO_PLANS = '…and of course have no plans to leave.';
+L.add('v35-29.04', {
+  st: 'v3.5 (sc 29): art/v35 drawPhonePost [INSERT]: the same phone, his words in the compose box, his thumb on Post, and his post goes up in its own UI (kits/post-card, Mas Manalt @mas), MAY 26; the read floor (lock-v35 §8.3): the on-screen post is trimmed with the print ellipsis to its last clause, "…and of course have no plans to leave." (the record\'s words, 38 characters, which read in the shot\'s 2.8 s)',
+  draw: (fb, k, sh, f) => {
+    const thumb = (k < 1 ? 1 : k < 3 ? 2 : k < 8 ? 1 : 0) as 0 | 1 | 2;
+    V35.drawPhonePost(fb, f, {post: {kind: 'mas', spec: {who: 'mas', text: NO_PLANS}}, k: k - 2, thumb, compose: NO_PLANS});
+  },
+});
+L.add('v35-29.05', {
+  st: 'v3.5 (sc 29, the MATCH out): art/v35 drawGuestBook [INSERT]: a guest book under a flag\'s gold fringe (no city); his pen signs it, stroke by stroke; in the last frames the page\'s ruled lines and the others\' signatures give way (ordered dither) to the one-sentence letter, his hand, pen and signature holding their place',
+  draw: (fb, k, sh, f) => {
+    const len = sh.e - sh.s;
+    V35.drawGuestBook(fb, f, {sig: Math.min(1, Math.floor(k / 2) * 2 / 20), toLetter: k < len - 8 ? 0 : (k - (len - 8) + 1) / 8});
+  },
+});
 // =================================================================== sc 17 · THE ROOFTOP
 const QUOTE = '"Mitigating the risk of extinction from AI should be a global priority…"';
 L.add('17.01', {
-  st: 'rooms/rooftop drawRooftopWide + drawQuoteBox: the table under the sky, the statement typing across the top and held to read; the signers step up and sign in swaps on the pen sounds (SIMED with his chess piece, NOTNIH, both unplated), MAS in one stroke (pen_run), MARIO who keeps the pen',
-  marks: {a: ['snd', 'pen_scribble_short', 1, 0], b: ['snd', 'pen_scribble_short', 2, 0], m: ['snd', 'pen_run', 1, 0], r: ['snd', 'pen_scribble_short', 3, 0]},
+  st: 'v3.5 (sc 30): art/v35 drawLetterDesk [INSERT]: the one-sentence letter on many desks (the MATCH from the guest book: his signature in its place, his hand leaving), the statement typing across the top (rooms/rooftop drawQuoteBox) and held to read; the signatories\' list lands (MAS MANALT · MARIO · SIMED · NOTNIH · OIGNEB, the statement\'s own style) and scrolls; the desks swap with the signers: SIMED\'s pale maple and his chess knight, a navy sleeve signing on the first scribble; NOTNIH\'s desk dark but for the one pool of light from above, a dark sleeve signing on the second; + HUNDREDS MORE at the list\'s foot; then rooms/rooftop drawRooftopWide: the last table, on the rooftop under the sky, MAS signing in one stroke (pen_run), MARIO writing, the quote held over the sky',
+  marks: {a: ['snd', 'pen_scribble_short', 1, 0], b: ['snd', 'pen_scribble_short', 2, 0], m: ['snd', 'pen_run', 1, 0], r: ['snd', 'pen_scribble_short', 3, 0], names: ['txt', 'MAS MANALT', 'at', 0], more: ['txt', '+ HUNDREDS', 'at', 0]},
   draw: (fb, k, sh, f) => {
-    const a = mk(sh, 'a', 43) - 6, b = mk(sh, 'b', 70) - 6, m = mk(sh, 'm', 103), r = mk(sh, 'r', 122);
-    const signers: RT.RoofSigner[] = [];
-    if (k < a) signers.push({v: 0, at: 'queue0'}, {v: 1, at: 'queue1'});
-    else if (k < b) signers.push({v: 0, at: 'sign'}, {v: 1, at: 'queue0'});
-    else if (k < m - 4) { if (k < b + 16) signers.push({v: 0, at: 'leave'}); signers.push({v: 1, at: 'sign'}); }
-    else if (k < m + 12) signers.push({v: 1, at: 'leave'});
-    RT.drawRooftopWide(fb, f, {signers, mas: k >= m - 4 && k < m + 10 ? 'reach' : 'stand', mario: k >= r - 4 ? 'write' : 'stand'});
-    RT.drawQuoteBox(fb, QUOTE, Math.max(0, (k - 7) * 2));
+    const a = mk(sh, 'a', 43), b = mk(sh, 'b', 70), m = mk(sh, 'm', 103), r = mk(sh, 'r', 122), nm = mk(sh, 'names', 37), more = mk(sh, 'more', 81);
+    const roof = m - 11;
+    if (k < roof) {
+      const desk: V35.LetterDesk = k < a - 12 ? 'his' : k < b - 12 ? 'simed' : 'notnih';
+      const d0 = desk === 'simed' ? a - 12 : b - 12;
+      const kk = k - d0;
+      const hand = (desk === 'his' ? (k < 4 ? 2 : k < 8 ? 3 : 0) : kk < 5 ? 1 : kk < 20 ? 2 : kk < 26 ? 3 : 0) as 0 | 1 | 2 | 3;
+      V35.drawLetterDesk(fb, f, {desk, names: k >= nm, scroll: k < nm + 16 ? 0 : heldLerp(k, nm + 16, roof, 0, 8, 4), more: k >= more, hand, sigs: stepOf(k, [a, b]), masSig: true});
+      RT.drawQuoteBox(fb, QUOTE, Math.max(0, (k - 7) * 2));
+      return;
+    }
+    RT.drawRooftopWide(fb, f, {signers: [], mas: k >= m - 4 && k < m + 10 ? 'reach' : 'stand', mario: k >= r - 4 ? 'write' : 'stand'});
+    RT.drawQuoteBox(fb, QUOTE);
   },
 });
 L.add('17.02', {
@@ -484,10 +618,11 @@ L.add('17.07', {
   },
 });
 L.add('17.10', {
-  st: 'kits/register drawPurchaseOrder {mario} [ECU] (v3.3, P7: unambiguously MARIO\'s hand: his ink-blue fleece sleeve out of frame, his footnote still wet on the order, his appendix scroll\'s end at the frame\'s edge, Mas\'s hand half out beside it, empty; held half a second longer): the signing pen in Mario\'s hand is now a purchase order; its two rows print in on the lock\'s text times (AI CHIPS · QTY: MORE), a glint crossing the paper\'s header',
+  st: 'v3.5: art/v35 drawOtherOrders: two more signers\' hands at the frame\'s edges, each holding its own order (a navy suit cuff, a tweed cuff); kits/register drawPurchaseOrder {mario} [ECU] (v3.3, P7: unambiguously MARIO\'s hand: his ink-blue fleece sleeve out of frame, his footnote still wet on the order, his appendix scroll\'s end at the frame\'s edge, Mas\'s hand half out beside it, empty; held half a second longer): the signing pen in Mario\'s hand is now a purchase order; its two rows print in on the lock\'s text times (AI CHIPS · QTY: MORE), a glint crossing the paper\'s header',
   marks: {rows: ['txt', 'AI CHIPS', 'at', 0]},
   draw: (fb, k, sh, f) => {
     RG.drawPurchaseOrder(fb, f, {k, mario: true});
+    V35.drawOtherOrders(fb, f); // v3.5: every signer's pen is an order: two more hands, each with its own
     const r = mk(sh, 'rows', 13);
     if (k < r) rect(150 + 48, 18 + 40, 190 - 58, 54, fb.ink(PAL.P2));
     else if (k < r + 4) rect(150 + 48, 18 + 66, 190 - 58, 28, fb.ink(PAL.P2));
@@ -517,5 +652,5 @@ export const SEGMENT = defineSegment({
   lock: LOCK,
   layouts: L.all,
   options: {badge: false, vo: 'typed', voLowercase: true, subs: 'off', standin: 'stick'},
-  review: {title: 'MR. MAS · EP1 · ACT TWO', subtitle: 'PIXEL v3.4 · LOCK act2 (THE v3.4 STICK LOCK)', durNote: 'AS THE STICK LOCK', soundLabel: 'SOUND · TEMP TRACK = THE v3.4 STICK MIX'},
+  review: {title: 'MR. MAS · EP1 · ACT TWO', subtitle: 'PIXEL v3.5 · LOCK act2 (THE v3.5 BASE LOCK)', durNote: 'AS THE STICK LOCK', soundLabel: 'SOUND · TEMP TRACK = THE v3.5 STICK MIX'},
 });

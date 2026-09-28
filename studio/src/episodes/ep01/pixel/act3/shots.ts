@@ -25,6 +25,12 @@
 // everyone else." is cut; the deepfake beats are cut (21.02 keeps the order's one line, one NEDIB; 21.03 and 21.04 go);
 // he signs and the room on the monitor applauds, and the applause carries into the switch-off; 22.01's new V.O. "a year
 // ago, forty users and a nice thread." under the hall's applause, on his look out at the hall (the MCU), then his line.
+// v3.5 (script draft 8.4, show/reel/ep01-v35/ep01-v35-act3.json; the final version; SHOWRUNNER-NOTES 00000 "keep the
+// president's deepfake"): the deepfake is restored from v3.3 (git f57bddb; 21.03 merges into 21.02 again): one cut-paper
+// copy pops up and finishes the sentence, the real one turns, "When the hell did I say that?", SEEN 1; 21.04 "which one's
+// real?" and the Orb's iris settles on the one with the pen (its two servos) and its toast; the copy claps, and keeps
+// clapping into the switch-off; DevDay's thought now waits until the date and the counter have been read (the push to his
+// MCU comes just before it).
 // Continuity kept here: the Orb settles into the faded outline on the wall at "you can stay." (18.06) and watches from
 // there as the iris flicks to the monitor (19.01); from the hands runner on (19.03) it sits at his shoulder, Act Four's
 // spot, watching with him, and the outline is empty. The big-monitor two-shot (19.03, 20.04, 20.06, 20.08, 21.04, 22.01's
@@ -240,29 +246,46 @@ L.add('v31-20.08', {
 
 // =================================================================== sc 21 · the order, on the monitor
 L.add('21.02', {
-  st: 'kits/eo-signing eoPainter + kits/monitor-v32 withTabs [POV] (v3.3, P10: his tab strip, DECODING INTENTIONS still open beside the live order): NEDIB, pen raised, over an order off both ends of a very big desk, the order\'s one line (lip-sync); v3.4 (draft 8.3, one deepfake: the Senate\'s): the cut-paper copy, its pops, his turn to it and the stat row are un-drawn; 21.03 and 21.04 are cut',
-  face: {NEDIB: 'lip'},
+  st: 'kits/eo-signing eoPainter + kits/monitor-v32 withTabs [POV] (his tab strip, DECODING INTENTIONS still open beside the live order): NEDIB, pen raised, over an order off both ends of a very big desk (lip-sync); v3.5 (restored from v3.3): ONE cut-paper copy pops up behind the desk on the pop (3 held steps) and finishes his sentence, "And then the computers regulate themselves." (lip-sync); 21.03 merged: the real one turns to look at it, "When the hell did I say that?", and his stat chip updates on the chip click: DEEPFAKES OF ME: SEEN 1 (his card\'s stat from Act Two)',
+  face: {NEDIB: 'lip', DEEPFAKE: 'lip'},
+  marks: {p1: ['snd', 'tower_pop', 1, 0], turn: ['beat', '21.03', 0], stat: ['snd', 'post_click--chip', 1, 0]},
   draw: (fb, k, sh, f) => {
-    MON.drawMonitorPOV(fb, f, tabsOrder(eoPainter({copies: 0, pen: 'raised', mouth: talk(mouth(sh, k, 'NEDIB'), 'smile'), stat: null, egg: false})));
+    const p1 = mk(sh, 'p1', 187), turn = mk(sh, 'turn', 254), stat = mk(sh, 'stat', 323);
+    const copies = (k >= p1 ? 1 : 0) as 0 | 1;
+    MON.drawMonitorPOV(fb, f, tabsOrder(eoPainter({copies, pop: copies ? Math.floor((k - p1) / 3) : undefined, pen: 'raised', mouth: talk(mouth(sh, k, 'NEDIB'), 'smile'), copyMouth: talk(mouth(sh, k, 'DEEPFAKE'), 'smile'), turn: k >= turn, stat: k >= stat ? 1 : null, egg: false})));
+  },
+});
+L.add('21.04', {
+  st: 'v3.5 (restored from v3.3): rooms/darkroom-v31 drawDark2SSCR [2S·SCR] (the monitor large, the two NEDIBs readable: eoPainter\'s short layout) with a slow whole-pixel drift in (1 px / 12 f toward the monitor): Mas glances back at the Orb, "which one\'s real?" (lip-sync), and back to the screen; the iris flicks to the copy, then to the real one with the pen, on its two servos, and settles; its toast pops over him: verified: human (the callback to 18.05; the Orb\'s "for when it gets harder to tell.")',
+  face: {MAS: 'lip'},
+  marks: {ask: ['on', 'e1-a3-21-06', 0], o1: ['snd', 'orb_servo', 1, 0], o2: ['snd', 'orb_servo', 2, 0]},
+  draw: (fb, k, sh, f) => {
+    const ask = mk(sh, 'ask', 19), o1 = mk(sh, 'o1', 56), o2 = mk(sh, 'o2', 65);
+    const o = stepOf(k, [o1, o2]);
+    const looks: Array<[number, number]> = [k >= ask + 12 ? SCR.face : SCR.monitor, [0.8, 0.12], [0.95, -0.05]];
+    const glance = k >= ask - 4 && k < ask + 30;
+    const toastK = k - (o2 + 6);
+    drawDark2SSCR(fb, f, {screen: tabsOrder(eoPainter({copies: 1, pen: 'raised', stat: 1})), orb: {mode: 'look', look: looks[o]}, mas: {look: glance ? -1 : 1, mouth: spoken(sh, k, 'MAS')},
+      toasts: toastK >= 0 ? [{s: 'verified: human', k: toastK, x: DARK_SCR.screen.x + EO_SHORT.realX + 30, y: DARK_SCR.screen.y + 15}] : []});
+    shiftRoom(fb, -Math.min(8, Math.floor(k / 12)));
   },
 });
 L.add('21.05', {
-  st: 'kits/eo-signing eoPainter {applause} [POV]: NEDIB signs, in ink (the signature\'s strokes on 3s from the paper whip); v3.4: on the claps the room on the monitor applauds (the press pool\'s heads along the screen\'s foot, hands up in two drawings on 4s), and keeps applauding; no copy, no stat',
+  st: 'kits/eo-signing eoPainter [POV]: the real NEDIB signs, in ink (the signature\'s strokes on 3s from the paper whip); v3.5 (restored from v3.3): the copy claps on the claps, and keeps clapping (one copy, SEEN 1)',
   marks: {whip: ['snd', 'paper_whip', 1, 0], claps: ['snd', 'synth:claps', 1, 0]},
   draw: (fb, k, sh, f) => {
     const w = mk(sh, 'whip', 4);
-    const cl = mk(sh, 'claps', 19);
-    MON.drawMonitorPOV(fb, f, tabsOrder(eoPainter({copies: 0, pen: 'sign', signK: clamp(Math.floor((k - w) / 3), 0, 5), stat: null, egg: false, applause: k >= cl ? k - cl : null})));
+    MON.drawMonitorPOV(fb, f, tabsOrder(eoPainter({copies: 1, pen: 'sign', signK: clamp(Math.floor((k - w) / 3), 0, 5), clap: k >= mk(sh, 'claps', 19), stat: 1, egg: false})));
   },
 });
 
 L.add('v32-21.06', {
-  st: 'v3.2, HIS MOVE (the switch): rooms/darkroom-v31 drawDark2SSCR {hand: \'switch\', off}: v3.4: the order\'s room still applauding on the big monitor (no copy); Mas leans over and reaches to the switch on the bezel\'s near corner; on the click the glass goes black in one step, its LED out; the clapping doesn\'t stop (it grows into the hall\'s applause, the next cut); the Orb looks from the black glass to him',
+  st: 'v3.2, HIS MOVE (the switch): rooms/darkroom-v31 drawDark2SSCR {hand: \'switch\', off}: v3.5 (restored from v3.3): the copy still clapping on the big monitor; Mas leans over and reaches to the switch on the bezel\'s near corner; on the click the glass goes black in one step, its LED out; the clapping doesn\'t stop (it grows into the hall\'s applause, the next cut); the Orb looks from the black glass to him',
   marks: {click: ['snd', 'key_tap_space', 1, 0]},
   draw: (fb, k, sh, f) => {
     const c = mk(sh, 'click', 21);
     const off = k >= c;
-    drawDark2SSCR(fb, f, {screen: tabsOrder(eoPainter({copies: 0, pen: 'sign', signK: 5, stat: null, egg: false, applause: k + 40})), hand: k >= c - 12 && k < c + 10 ? 'switch' : null, off,
+    drawDark2SSCR(fb, f, {screen: tabsOrder(eoPainter({copies: 1, pen: 'sign', signK: 5, clap: true, stat: 1, egg: false})), hand: k >= c - 12 && k < c + 10 ? 'switch' : null, off,
       orb: {mode: 'look', look: k < c + 6 ? SCR.monitor : SCR.face}, mas: {look: 1}});
   },
 });
@@ -284,7 +307,9 @@ L.add('22.01', {
     const applEnd = mk(sh, 'appl', 24) + 82;
     const r = mk(sh, 'rat', 43), land = mk(sh, 'land', 104), back = mk(sh, 'back', 201) + 4, t0 = mk(sh, 'tasya', 207);
     const voEnd = mk(sh, 'voEnd', 116), line = mk(sh, 'line', 130);
-    const push = r + 21; // the figure has settled (the third step) and read for 5 f
+    // v3.5: the thought waits until the date and the counter have been read (the counter lands at 4.37 s); the push to
+    // his MCU comes 6 f before the V.O., after the landing
+    const push = Math.max(r + 21, land + 4, mk(sh, 'vo', 115) - 6);
     const mm = mouth(sh, k, 'MAS');
     if (k >= push && k < back) {
       // his look out at the hall: the V.O. (lips still: spoken), the smile after it, then his line
@@ -362,5 +387,5 @@ export const SEGMENT = defineSegment({
   lock: LOCK,
   layouts: L.all,
   options: {badge: false, vo: 'typed', voLowercase: true, subs: 'off', standin: 'stick'},
-  review: {title: 'MR. MAS · EP1 · ACT THREE', subtitle: 'PIXEL v3.4 · LOCK act3 (THE v3.4 STICK LOCK)', durNote: 'AS THE STICK LOCK', soundLabel: 'SOUND · TEMP TRACK = THE v3.4 STICK MIX'},
+  review: {title: 'MR. MAS · EP1 · ACT THREE', subtitle: 'PIXEL v3.5 · LOCK act3 (THE v3.5 BASE LOCK)', durNote: 'AS THE STICK LOCK', soundLabel: 'SOUND · TEMP TRACK = THE v3.5 STICK MIX'},
 });

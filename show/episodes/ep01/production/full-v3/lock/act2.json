@@ -4,13 +4,14 @@
   "episode": "ep01",
   "seg": "act2",
   "label": "ACT TWO",
-  "timeline": "show/reel/ep01-v34/ep01-v34-act2.json",
+  "timeline": "show/reel/ep01-v35/ep01-v35-act2.json",
   "takes": [
    "audio/ep01/act2/dialogue/lines-fast-v2.json",
    "audio/ep01/v3/act2/lines-v3.json",
    "audio/ep01/v31/act2/lines-v31.json",
    "audio/ep01/v32/act2/lines-v32.json",
-   "audio/ep01/v34/act2/lines-v34.json"
+   "audio/ep01/v34/act2/lines-v34.json",
+   "audio/ep01/v35/act2/lines-v35.json"
   ],
   "plan": null,
   "plan_py": null,
@@ -30,35 +31,33 @@
   "note": "Nothing here was watched or heard. The numbers are measured from the files; whether the picture reads needs a person."
  },
  "summary": {
-  "shots": 36,
-  "beats": 43,
-  "frames": 4349,
-  "seconds": 181.208,
-  "length": "3:01.21",
+  "shots": 42,
+  "beats": 49,
+  "frames": 5074,
+  "seconds": 211.417,
+  "length": "3:31.42",
   "episode_in": "00:00:00",
-  "episode_out": "03:01:05",
+  "episode_out": "03:31:10",
   "verdicts": {
-   "-": 36
+   "-": 42
   },
   "mean_s": 5.034,
-  "median_s": 4.292,
+  "median_s": 4.208,
   "min_s": 0.75,
   "max_s": 14.667,
-  "lines": 38,
+  "lines": 46,
   "posts": 0,
   "vo": 1,
-  "lines_with_mouth": 32,
+  "lines_with_mouth": 40,
   "mouths_from_words": 0,
   "on_camera_mouths": [],
-  "lines_crossing_a_cut": [
-   "e1-a2-15-01 (14.06 -> 15.01)"
-  ],
+  "lines_crossing_a_cut": [],
   "prelaps": [],
   "reviewer_slates": [],
   "mix": {
-   "path": "out/ep01/full-v3/picture/act2-v34-stick-mix.wav",
+   "path": "out/ep01/full-v3/picture/act2-v35-stick-mix.wav",
    "offset_frames": 0,
-   "frames": 4349.0
+   "frames": 5074.0
   },
   "refs": {}
  },
@@ -66,22 +65,22 @@
   {
    "check": "shot frames = their beats' frames",
    "ok": true,
-   "detail": "36 shots from 43 beats"
+   "detail": "42 shots from 49 beats"
   },
   {
    "check": "shots tile the segment with no gap",
    "ok": true,
-   "detail": "0 -> 4349"
+   "detail": "0 -> 5074"
   },
   {
    "check": "the lock vs the stick reel's own line frames",
    "ok": true,
-   "detail": "same frame: 3; 1 f earlier (the onset falls inside the frame): 35; other: 0"
+   "detail": "same frame: 4; 1 f earlier (the onset falls inside the frame): 42; other: 0"
   },
   {
    "check": "every line has a take",
    "ok": true,
-   "detail": "38 of 38 placed; no take: []"
+   "detail": "46 of 46 placed; no take: []"
   },
   {
    "check": "every line's speech lies inside its take file",
@@ -91,7 +90,7 @@
   {
    "check": "mouth tracks carried over",
    "ok": true,
-   "detail": "32 lines with a mouth track; lost: []"
+   "detail": "40 lines with a mouth track; lost: []"
   },
   {
    "check": "every on-camera mouth has a track",
@@ -101,7 +100,7 @@
   {
    "check": "the mix = its offset + the segment",
    "ok": true,
-   "detail": "mix 4349.00 f vs 0 + 4349"
+   "detail": "mix 5074.00 f vs 0 + 5074"
   }
  ],
  "sequences": [
@@ -127,7 +126,7 @@
    ],
    "chapter": "Thu May 4, 2023 · day",
    "title": "The White House: a meeting room",
-   "cue": "music (v3.4): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9) · style: 2-TONE freeze, 1 beat · then the card rides the live room for the rest of its bar · style: the episode's one lens look (pupils centred, 1 beat); everywhere else his pupils sit 1 px toward the speaker · style: the flash is a white step (<= 80 %), and its freeze is the card's",
+   "cue": "music (v3.5): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9) · style: 2-TONE freeze, 1 beat · then the card rides the live room for the rest of its bar · style: the episode's one lens look (pupils centred, 1 beat); everywhere else his pupils sit 1 px toward the speaker · style: the flash is a white step (<= 80 %), and its freeze is the card's",
    "frames": 1601,
    "tc_in": "00:00:00",
    "tc_out": "01:06:17"
@@ -138,29 +137,26 @@
    "place": "NopeAI bullpen, the window → the bay",
    "time": "Fri May 12, 2023 · night",
    "s": 1601,
-   "e": 1729,
+   "e": 1745,
    "shots": [
-    "14.01",
-    "14.06"
+    "14.01"
    ],
    "chapter": "Fri May 12, 2023 · night",
    "title": "NopeAI bullpen, the window → the bay",
-   "cue": "music (v3.4): THE BRIDGE · a hush · no score: the phone's small speaker, then water on pilings · sound: NO SCORE · the bullpen through glass, the phone's small speaker (the anchor's too-smooth murmur, no words: a made formant voice in the Act Two stem), then water on pilings",
-   "frames": 128,
+   "cue": "music (v3.5): THE BRIDGE · a hush · no score: the phone's small speaker, then water on pilings · sound: NO SCORE · the bullpen through glass, the phone's small speaker (the reminder's slide), then the gavel's knock under the last half second (the Senate, J 0.5 s)",
+   "frames": 144,
    "tc_in": "01:06:17",
-   "tc_out": "01:12:01"
+   "tc_out": "01:12:17"
   },
   {
    "id": "15",
    "side": "",
    "place": "Senate Judiciary: the hearing room",
    "time": "Tue May 16, 2023 · day",
-   "s": 1729,
-   "e": 3343,
+   "s": 1745,
+   "e": 3170,
    "shots": [
-    "15.01",
-    "15.02",
-    "15.03",
+    "v35-27.00",
     "15.04",
     "15.06",
     "15.07",
@@ -174,35 +170,60 @@
    ],
    "chapter": "Tue May 16, 2023 · day",
    "title": "Senate Judiciary: the hearing room",
-   "cue": "music (v3.4): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged · style (proposed, style-range pass): THE CLONE alone through a too-clean upscale filter (AA edges, soft sheen); the chairman stays BASE; never toward photoreal · default: a 1-px highlight · style: 2-TONE freeze, 1 beat · then the card rides the live room for the rest of its bar",
-   "frames": 1614,
-   "tc_in": "01:12:01",
-   "tc_out": "02:19:07"
+   "cue": "music (v3.5): procedural comedy, MM-20, in on the gavel · music (v3.5): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged · style: 2-TONE freeze, 1 beat · then the card rides the live room for the rest of its bar",
+   "frames": 1425,
+   "tc_in": "01:12:17",
+   "tc_out": "02:12:02"
+  },
+  {
+   "id": "15A",
+   "side": "",
+   "place": "NopeAI's first office, by day (a memory)",
+   "time": "Mar 2019",
+   "s": 3170,
+   "e": 3790,
+   "shots": [
+    "v35-28.01",
+    "v35-28.02",
+    "v35-28.03",
+    "v35-28.04",
+    "v35-28.05"
+   ],
+   "chapter": "Mar 2019",
+   "title": "NopeAI's first office, by day (a memory)",
+   "cue": "music (v3.5): MAR 2019 · admiration with a flicker of unease: the Build and low strings (new cue); an old office fan · music (v3.5): MM-20's last phrase; out on the gavel",
+   "frames": 620,
+   "tc_in": "02:12:02",
+   "tc_out": "02:37:22"
   },
   {
    "id": "16",
    "side": "",
-   "place": "The regulate-me tour: one poster",
-   "time": "May 24 - 26, 2023",
-   "s": 3343,
-   "e": 3463,
+   "place": "the regulate-me tour: the stamps, the lectern, the posts",
+   "time": "May 18 - 26, 2023",
+   "s": 3790,
+   "e": 4176,
    "shots": [
-    "16.01"
+    "v35-29.01",
+    "v35-29.02",
+    "v35-29.03",
+    "v35-29.04",
+    "v35-29.05"
    ],
-   "chapter": "May 24 - 26, 2023",
-   "title": "The regulate-me tour: one poster",
-   "cue": "music (v3.4): THE TOUR · THE RUN (MM-03), a knee stab on each stamp",
-   "frames": 120,
-   "tc_in": "02:19:07",
-   "tc_out": "02:24:07"
+   "chapter": "May 18 - 26, 2023",
+   "title": "the regulate-me tour: the stamps, the lectern, the posts",
+   "cue": "music (v3.5): THE RUN (MM-03), in on the first stamp; a knee stab on every stamp; thins under the lectern and the posts · music (v3.5): THE RUN (MM-03), in on the first stamp; a knee stab on every stamp; thins under the lectern and the posts; rings out into the statement's held pad",
+   "frames": 386,
+   "tc_in": "02:37:22",
+   "tc_out": "02:54:00"
   },
   {
    "id": "17",
    "side": "",
    "place": "A rooftop signing table",
    "time": "Tue May 30, 2023 · day",
-   "s": 3463,
-   "e": 4349,
+   "s": 4176,
+   "e": 5074,
    "shots": [
     "17.01",
     "17.02",
@@ -216,10 +237,10 @@
    ],
    "chapter": "Tue May 30, 2023 · day",
    "title": "A rooftop signing table",
-   "cue": "music (v3.4): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out) · style: 2-TONE freeze, 1 beat · then the card rides the live room for the rest of its bar · style: [LEDGER] flash-print, 6 frames · then the figure holds in the register window (BASE)",
-   "frames": 886,
-   "tc_in": "02:24:07",
-   "tc_out": "03:01:05"
+   "cue": "music (v3.5): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out) · style: 2-TONE freeze, 1 beat · then the card rides the live room for the rest of its bar · style: [LEDGER] flash-print, 6 frames · then the figure holds in the register window (BASE)",
+   "frames": 898,
+   "tc_in": "02:54:00",
+   "tc_out": "03:31:10"
   }
  ],
  "shots": [
@@ -263,7 +284,7 @@
     "tasya"
    ],
    "cues": [
-    "music (v3.4): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
+    "music (v3.5): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
    ],
    "sounds": [],
    "spots": [],
@@ -391,10 +412,10 @@
     "sirrah"
    ],
    "cues": [
-    "music (v3.4): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
-    "music (v3.4): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
+    "music (v3.5): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
+    "music (v3.5): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
     "style: 2-TONE freeze, 1 beat · then the card rides the live room for the rest of its bar",
-    "music (v3.4): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
+    "music (v3.5): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
    ],
    "sounds": [
     "freeze_hit_F @39"
@@ -958,7 +979,7 @@
     "radnus"
    ],
    "cues": [
-    "music (v3.4): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
+    "music (v3.5): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
    ],
    "sounds": [
     "paper_flutter @238"
@@ -1193,7 +1214,7 @@
     "tasya"
    ],
    "cues": [
-    "music (v3.4): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
+    "music (v3.5): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
    ],
    "sounds": [
     "landing_thunk @1",
@@ -1330,7 +1351,7 @@
     "tasya"
    ],
    "cues": [
-    "music (v3.4): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
+    "music (v3.5): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
     "style: the episode's one lens look (pupils centred, 1 beat); everywhere else his pupils sit 1 px toward the speaker"
    ],
    "sounds": [],
@@ -1593,7 +1614,7 @@
     "tasya"
    ],
    "cues": [
-    "music (v3.4): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
+    "music (v3.5): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
    ],
    "sounds": [],
    "spots": [],
@@ -2221,7 +2242,7 @@
     "radnus"
    ],
    "cues": [
-    "music (v3.4): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
+    "music (v3.5): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
    ],
    "sounds": [],
    "spots": [],
@@ -2360,7 +2381,7 @@
     "radnus"
    ],
    "cues": [
-    "music (v3.4): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
+    "music (v3.5): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
    ],
    "sounds": [
     "flame_whoomph @4"
@@ -2415,6 +2436,11 @@
    "onscreen": [
     {
      "text": "EOJ NEDIB / THE PRESIDENT",
+     "s": 103,
+     "e": 118
+    },
+    {
+     "text": "DEEPFAKES OF ME: SEEN 0",
      "s": 103,
      "e": 118
     }
@@ -2563,8 +2589,8 @@
     "tasya"
    ],
    "cues": [
-    "music (v3.4): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
-    "music (v3.4): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
+    "music (v3.5): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
+    "music (v3.5): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
     "style: the flash is a white step (<= 80 %), and its freeze is the card's",
     "style: 2-TONE freeze, 1 beat · then the card rides the live room for the rest of its bar"
    ],
@@ -2658,6 +2684,13 @@
      "s": 103,
      "e": 118,
      "must": true
+    },
+    {
+     "kind": "plate",
+     "text": "DEEPFAKES OF ME: SEEN 0",
+     "s": 103,
+     "e": 118,
+     "must": true
     }
    ],
    "tc_in": "00:48:17",
@@ -2675,6 +2708,11 @@
    "onscreen": [
     {
      "text": "EOJ NEDIB / THE PRESIDENT",
+     "s": 0,
+     "e": 45
+    },
+    {
+     "text": "DEEPFAKES OF ME: SEEN 0",
      "s": 0,
      "e": 45
     }
@@ -2832,7 +2870,7 @@
     "nedib"
    ],
    "cues": [
-    "music (v3.4): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
+    "music (v3.5): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
    ],
    "sounds": [],
    "spots": [],
@@ -2869,6 +2907,13 @@
     {
      "kind": "label",
      "text": "EOJ NEDIB / THE PRESIDENT",
+     "s": 0,
+     "e": 45,
+     "must": true
+    },
+    {
+     "kind": "label",
+     "text": "DEEPFAKES OF ME: SEEN 0",
      "s": 0,
      "e": 45,
      "must": true
@@ -2987,7 +3032,7 @@
    "does": "The print in his hand: CLASS PHOTO #1. \"it's a good photo.\" HOLD. MATCH CUT: the print in his hand becomes his phone in the same place in frame.",
    "chars": [],
    "cues": [
-    "music (v3.4): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
+    "music (v3.5): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
    ],
    "sounds": [
     "camera_shutter @0"
@@ -3036,12 +3081,22 @@
     "14.01"
    ],
    "s": 1601,
-   "e": 1697,
+   "e": 1745,
    "onscreen": [
     {
      "text": "CLASS PHOTO #1 · ♥",
      "s": 4,
-     "e": 96
+     "e": 144
+    },
+    {
+     "text": "SENATE JUDICIARY · MAY 16 · TESTIFY",
+     "s": 38,
+     "e": 144
+    },
+    {
+     "text": "PLEASE REG—",
+     "s": 81,
+     "e": 144
     }
    ],
    "lines": [],
@@ -3055,11 +3110,11 @@
    "frame": "OTS · over Mas's shoulder at the dark window",
    "cls": "OTS",
    "move": "hold",
-   "does": "The match cut: the print in his hand becomes his phone at the dark bullpen window, his glass on the sill. His feed opens on CLASS PHOTO #1, hearts under it: his face, everywhere. Beyond the glass, the cold open's skyline, the one lit window. The phone's glow on his face; then black, and a smooth voice over it (14.06).",
+   "does": "The match cut: the print in his hand becomes his phone at the dark bullpen window, his glass on the sill. His feed opens on CLASS PHOTO #1, hearts under it. A reminder slides over it, a generic calendar card: SENATE JUDICIARY · MAY 16 · TESTIFY. He takes the folded sheet from his pocket, PLEASE REG—, looks at it, and puts it back. Beyond the glass, the cold open's skyline, the one lit window.",
    "chars": [],
    "cues": [
-    "music (v3.4): THE BRIDGE · a hush · no score: the phone's small speaker, then water on pilings",
-    "sound: NO SCORE · the bullpen through glass, the phone's small speaker (the anchor's too-smooth murmur, no words: a made formant voice in the Act Two stem), then water on pilings"
+    "music (v3.5): THE BRIDGE · a hush · no score: the phone's small speaker, then water on pilings",
+    "sound: NO SCORE · the bullpen through glass, the phone's small speaker (the reminder's slide), then the gavel's knock under the last half second (the Senate, J 0.5 s)"
    ],
    "sounds": [],
    "spots": [],
@@ -3070,7 +3125,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "The match cut: the print in his hand becomes his phone at the dark bullpen window, his glass on the sill. His feed opens on CLASS PHOTO #1, hearts under it: his face, everywhere. Beyond the glass, the cold open's skyline, the one lit window. The phone's glow on his face; then black, and a smooth voice over it (14.06).",
+   "caption": "The match cut: the print in his hand becomes his phone at the dark bullpen window, his glass on the sill. His feed opens on CLASS PHOTO #1, hearts under it. A reminder slides over it, a generic calendar card: SENATE JUDICIARY · MAY 16 · TESTIFY. He takes the folded sheet from his pocket, PLEASE REG—, looks at it, and puts it back. Beyond the glass, the cold open's skyline, the one lit window.",
    "cast": [],
    "speak": [],
    "beat_starts": {
@@ -3088,803 +3143,43 @@
      "kind": "label",
      "text": "CLASS PHOTO #1 · ♥",
      "s": 4,
-     "e": 96,
+     "e": 144,
+     "must": true
+    },
+    {
+     "kind": "label",
+     "text": "SENATE JUDICIARY · MAY 16 · TESTIFY",
+     "s": 38,
+     "e": 144,
+     "must": true
+    },
+    {
+     "kind": "label",
+     "text": "PLEASE REG—",
+     "s": 81,
+     "e": 144,
      "must": true
     }
    ],
    "tc_in": "01:06:17",
-   "tc_out": "01:10:17",
-   "frames": 96
+   "tc_out": "01:12:17",
+   "frames": 144
   },
   {
-   "id": "14.06",
-   "setup": "14.06",
+   "id": "v35-27.00",
+   "setup": "v35-27.00",
    "beats": [
-    "14.06"
+    "v35-27.00"
    ],
-   "s": 1697,
-   "e": 1729,
-   "onscreen": [],
-   "lines": [
-    {
-     "id": "e1-a2-15-01",
-     "kind": "dialogue",
-     "mode": "on-mic",
-     "who": "CLONE",
-     "text": "Too often we have seen what happens when technology outpaces regulation…",
-     "s": 8,
-     "e": 118,
-     "fs": -4,
-     "fe": 129,
-     "os": false,
-     "via": null,
-     "face": null,
-     "lip": false,
-     "carry": false,
-     "cut": false,
-     "mouth": [
-      [
-       0,
-       "E"
-      ],
-      [
-       2,
-       "O"
-      ],
-      [
-       10,
-       "E"
-      ],
-      [
-       20,
-       "A"
-      ],
-      [
-       23,
-       "E"
-      ],
-      [
-       25,
-       "A"
-      ],
-      [
-       29,
-       "E"
-      ],
-      [
-       31,
-       "O"
-      ],
-      [
-       33,
-       "A"
-      ],
-      [
-       40,
-       "M"
-      ],
-      [
-       42,
-       "E"
-      ],
-      [
-       52,
-       "A"
-      ],
-      [
-       54,
-       "E"
-      ],
-      [
-       56,
-       "A"
-      ],
-      [
-       59,
-       "E"
-      ],
-      [
-       62,
-       "A"
-      ],
-      [
-       65,
-       "E"
-      ],
-      [
-       74,
-       "A"
-      ],
-      [
-       78,
-       "M"
-      ],
-      [
-       80,
-       "A"
-      ],
-      [
-       84,
-       "E"
-      ],
-      [
-       92,
-       "A"
-      ],
-      [
-       94,
-       "E"
-      ],
-      [
-       101,
-       "A"
-      ],
-      [
-       105,
-       "E"
-      ],
-      [
-       110,
-       "rest"
-      ]
-     ],
-     "words": [
-      [
-       "Too",
-       0,
-       6
-      ],
-      [
-       "often",
-       6,
-       17
-      ],
-      [
-       "we",
-       17,
-       20
-      ],
-      [
-       "have",
-       20,
-       23
-      ],
-      [
-       "seen",
-       23,
-       30
-      ],
-      [
-       "what",
-       30,
-       34
-      ],
-      [
-       "happens",
-       34,
-       49
-      ],
-      [
-       "when",
-       50,
-       55
-      ],
-      [
-       "technology",
-       55,
-       73
-      ],
-      [
-       "outpaces",
-       73,
-       90
-      ],
-      [
-       "regulation",
-       90,
-       110
-      ]
-     ],
-     "tag": "O.S.",
-     "pre": false
-    }
-   ],
-   "seq": "14",
-   "verdict": "",
-   "v4": null,
-   "side": "MAS",
-   "side_label": "",
-   "badge": null,
-   "whip": null,
-   "frame": "BLACK · the match cut on the voice",
-   "cls": "GFX",
-   "move": "cut",
-   "does": "The too-smooth voice runs on over black and becomes the hearing's first words.",
-   "chars": [],
-   "cues": [
-    "music (v3.4): THE BRIDGE · a hush · no score: the phone's small speaker, then water on pilings"
-   ],
-   "sounds": [],
-   "spots": [],
-   "v4_frames": null,
-   "kind": "scene",
-   "set": "void",
-   "room": "black",
-   "style": "BASE",
-   "fx": [],
-   "slate": false,
-   "caption": "The too-smooth voice runs on over black and becomes the hearing's first words.",
-   "cast": [],
-   "speak": [],
-   "beat_starts": {
-    "14.06": 0
-   },
-   "names": [],
-   "fg": null,
-   "marks": {},
-   "mark_src": {},
-   "texts": [],
-   "tc_in": "01:10:17",
-   "tc_out": "01:12:01",
-   "frames": 32
-  },
-  {
-   "id": "15.01",
-   "setup": "15.01",
-   "beats": [
-    "15.01"
-   ],
-   "s": 1729,
-   "e": 1825,
+   "s": 1745,
+   "e": 1836,
    "onscreen": [
     {
      "text": "RAIL: MAY 16, 2023 · SENATE JUDICIARY",
-     "s": 7,
-     "e": 96
+     "s": 4,
+     "e": 91
     }
    ],
-   "lines": [
-    {
-     "id": "e1-a2-15-01",
-     "kind": "dialogue",
-     "mode": "on-mic",
-     "who": "CLONE",
-     "text": "Too often we have seen what happens when technology outpaces regulation…",
-     "s": -24,
-     "e": 86,
-     "fs": -36,
-     "fe": 97,
-     "os": false,
-     "via": null,
-     "face": null,
-     "lip": false,
-     "carry": true,
-     "cut": false,
-     "mouth": [
-      [
-       0,
-       "E"
-      ],
-      [
-       2,
-       "O"
-      ],
-      [
-       10,
-       "E"
-      ],
-      [
-       20,
-       "A"
-      ],
-      [
-       23,
-       "E"
-      ],
-      [
-       25,
-       "A"
-      ],
-      [
-       29,
-       "E"
-      ],
-      [
-       31,
-       "O"
-      ],
-      [
-       33,
-       "A"
-      ],
-      [
-       40,
-       "M"
-      ],
-      [
-       42,
-       "E"
-      ],
-      [
-       52,
-       "A"
-      ],
-      [
-       54,
-       "E"
-      ],
-      [
-       56,
-       "A"
-      ],
-      [
-       59,
-       "E"
-      ],
-      [
-       62,
-       "A"
-      ],
-      [
-       65,
-       "E"
-      ],
-      [
-       74,
-       "A"
-      ],
-      [
-       78,
-       "M"
-      ],
-      [
-       80,
-       "A"
-      ],
-      [
-       84,
-       "E"
-      ],
-      [
-       92,
-       "A"
-      ],
-      [
-       94,
-       "E"
-      ],
-      [
-       101,
-       "A"
-      ],
-      [
-       105,
-       "E"
-      ],
-      [
-       110,
-       "rest"
-      ]
-     ],
-     "words": [
-      [
-       "Too",
-       0,
-       6
-      ],
-      [
-       "often",
-       6,
-       17
-      ],
-      [
-       "we",
-       17,
-       20
-      ],
-      [
-       "have",
-       20,
-       23
-      ],
-      [
-       "seen",
-       23,
-       30
-      ],
-      [
-       "what",
-       30,
-       34
-      ],
-      [
-       "happens",
-       34,
-       49
-      ],
-      [
-       "when",
-       50,
-       55
-      ],
-      [
-       "technology",
-       55,
-       73
-      ],
-      [
-       "outpaces",
-       73,
-       90
-      ],
-      [
-       "regulation",
-       90,
-       110
-      ]
-     ],
-     "tag": "O.S.",
-     "pre": false
-    }
-   ],
-   "seq": "15",
-   "verdict": "",
-   "v4": null,
-   "side": "MAS",
-   "side_label": "",
-   "badge": null,
-   "whip": null,
-   "frame": "MCU · the voice finds a mouth",
-   "cls": "MCU",
-   "move": "cut",
-   "does": "A man at the microphone, glossy, a 1-px highlight on his hair, reading with perfect cadence.",
-   "chars": [
-    "clone"
-   ],
-   "cues": [
-    "music (v3.4): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged",
-    "style (proposed, style-range pass): THE CLONE alone through a too-clean upscale filter (AA edges, soft sheen); the chairman stays BASE; never toward photoreal · default: a 1-px highlight"
-   ],
-   "sounds": [],
-   "spots": [],
-   "v4_frames": null,
-   "kind": "scene",
-   "set": "senate",
-   "room": "senate",
-   "style": "BASE",
-   "fx": [],
-   "slate": false,
-   "caption": "A man at the microphone, glossy, a 1-px highlight on his hair, reading with perfect cadence.",
-   "cast": [
-    {
-     "id": "clone",
-     "pose": "stand",
-     "face": "calm",
-     "x": 0.5,
-     "from": null,
-     "until": null
-    }
-   ],
-   "speak": [],
-   "beat_starts": {
-    "15.01": 0
-   },
-   "names": [],
-   "fg": null,
-   "marks": {},
-   "mark_src": {},
-   "texts": [],
-   "tc_in": "01:12:01",
-   "tc_out": "01:16:01",
-   "frames": 96
-  },
-  {
-   "id": "15.02",
-   "setup": "15.02",
-   "beats": [
-    "15.02"
-   ],
-   "s": 1825,
-   "e": 1949,
-   "onscreen": [
-    {
-     "text": "LAHTNEMULB · CHAIRMAN",
-     "s": 7,
-     "e": 124
-    }
-   ],
-   "lines": [
-    {
-     "id": "v31-a2-0003",
-     "kind": "dialogue",
-     "mode": "on-mic",
-     "who": "LAHTNEMULB",
-     "text": "That voice was not mine. The words were not mine.",
-     "s": 31,
-     "e": 113,
-     "fs": 19,
-     "fe": 124,
-     "os": false,
-     "via": null,
-     "face": null,
-     "lip": false,
-     "carry": false,
-     "cut": false,
-     "mouth": [
-      [
-       0,
-       "E"
-      ],
-      [
-       2,
-       "A"
-      ],
-      [
-       5,
-       "E"
-      ],
-      [
-       9,
-       "O"
-      ],
-      [
-       13,
-       "E"
-      ],
-      [
-       16,
-       "A"
-      ],
-      [
-       18,
-       "E"
-      ],
-      [
-       21,
-       "A"
-      ],
-      [
-       24,
-       "E"
-      ],
-      [
-       26,
-       "M"
-      ],
-      [
-       28,
-       "A"
-      ],
-      [
-       35,
-       "E"
-      ],
-      [
-       37,
-       "rest"
-      ],
-      [
-       48,
-       "E"
-      ],
-      [
-       50,
-       "O"
-      ],
-      [
-       55,
-       "E"
-      ],
-      [
-       59,
-       "O"
-      ],
-      [
-       61,
-       "E"
-      ],
-      [
-       64,
-       "A"
-      ],
-      [
-       67,
-       "E"
-      ],
-      [
-       69,
-       "M"
-      ],
-      [
-       72,
-       "A"
-      ],
-      [
-       78,
-       "E"
-      ],
-      [
-       81,
-       "rest"
-      ]
-     ],
-     "words": [
-      [
-       "That",
-       0,
-       7
-      ],
-      [
-       "voice",
-       7,
-       14
-      ],
-      [
-       "was",
-       14,
-       19
-      ],
-      [
-       "not",
-       19,
-       25
-      ],
-      [
-       "mine",
-       25,
-       37
-      ],
-      [
-       "The",
-       46,
-       50
-      ],
-      [
-       "words",
-       50,
-       59
-      ],
-      [
-       "were",
-       59,
-       62
-      ],
-      [
-       "not",
-       62,
-       68
-      ],
-      [
-       "mine",
-       68,
-       81
-      ]
-     ],
-     "tag": "",
-     "pre": false
-    }
-   ],
-   "seq": "15",
-   "verdict": "",
-   "v4": null,
-   "side": "MAS",
-   "side_label": "",
-   "badge": null,
-   "whip": null,
-   "frame": "WIDE · the hearing room",
-   "cls": "W",
-   "move": "cut",
-   "does": "The hearing room. The matte chairman, identical to the clone, tells the room the truth about the voice it just heard.",
-   "chars": [
-    "clone",
-    "gallery",
-    "lahtnemulb",
-    "mas",
-    "senator",
-    "sucram"
-   ],
-   "cues": [
-    "music (v3.4): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
-   ],
-   "sounds": [],
-   "spots": [],
-   "v4_frames": null,
-   "kind": "scene",
-   "set": "senate",
-   "room": "senate",
-   "style": "BASE",
-   "fx": [],
-   "slate": false,
-   "caption": "The hearing room. The matte chairman, identical to the clone, tells the room the truth about the voice it just heard.",
-   "cast": [
-    {
-     "id": "gallery",
-     "pose": "stand",
-     "face": "calm",
-     "x": 0.04,
-     "from": null,
-     "until": null
-    },
-    {
-     "id": "mas",
-     "pose": "sit",
-     "face": "calm",
-     "x": 0.14,
-     "from": null,
-     "until": null
-    },
-    {
-     "id": "sucram",
-     "pose": "sit",
-     "face": "calm",
-     "x": 0.27,
-     "from": null,
-     "until": null
-    },
-    {
-     "id": "lahtnemulb",
-     "pose": "sit",
-     "face": "calm",
-     "x": 0.66,
-     "from": null,
-     "until": null
-    },
-    {
-     "id": "clone",
-     "pose": "stand",
-     "face": "calm",
-     "x": 0.79,
-     "from": null,
-     "until": null
-    },
-    {
-     "id": "senator",
-     "pose": "sit",
-     "face": "calm",
-     "x": 0.93,
-     "from": null,
-     "until": null
-    }
-   ],
-   "speak": [],
-   "beat_starts": {
-    "15.02": 0
-   },
-   "names": [
-    {
-     "id": "lahtnemulb",
-     "k": 7
-    },
-    {
-     "id": "clone",
-     "k": 7
-    }
-   ],
-   "fg": null,
-   "marks": {},
-   "mark_src": {},
-   "texts": [
-    {
-     "kind": "plate",
-     "text": "LAHTNEMULB · CHAIRMAN",
-     "s": 7,
-     "e": 124,
-     "must": true
-    }
-   ],
-   "tc_in": "01:16:01",
-   "tc_out": "01:21:05",
-   "frames": 124
-  },
-  {
-   "id": "15.03",
-   "setup": "15.03",
-   "beats": [
-    "15.03"
-   ],
-   "s": 1949,
-   "e": 2009,
-   "onscreen": [],
    "lines": [],
    "seq": "15",
    "verdict": "",
@@ -3893,19 +3188,29 @@
    "side_label": "",
    "badge": null,
    "whip": null,
-   "frame": "TWO-SHOT · the chairman + THE CLONE",
-   "cls": "M",
-   "move": "hold",
-   "does": "The clone gives him a look, disowned. The chairman takes the microphone back; they sit, the clone at his left hand. The clone keeps the better chair.",
+   "frame": "HIGH → WIDE · the witness table, then the hearing room",
+   "cls": "W",
+   "move": "cut",
+   "does": "MATCH on the gavel's knock: the folded sheet, the same one, now under his hand at the witness table. The camera lifts to the hearing room: the dais, the tiled gallery, the chairman at the centre; beside Mas, SUCRAM already typing, live-threading.",
    "chars": [
-    "clone",
-    "lahtnemulb"
+    "gallery",
+    "lahtnemulb",
+    "mas",
+    "sucram"
    ],
    "cues": [
-    "music (v3.4): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
+    "music (v3.5): procedural comedy, MM-20, in on the gavel"
    ],
-   "sounds": [],
-   "spots": [],
+   "sounds": [
+    "landing_thunk @0"
+   ],
+   "spots": [
+    {
+     "name": "landing_thunk",
+     "k": 0,
+     "dur": null
+    }
+   ],
    "v4_frames": null,
    "kind": "scene",
    "set": "senate",
@@ -3913,37 +3218,53 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "The clone gives him a look, disowned. The chairman takes the microphone back; they sit, the clone at his left hand. The clone keeps the better chair.",
+   "caption": "MATCH on the gavel's knock: the folded sheet, the same one, now under his hand at the witness table. The camera lifts to the hearing room: the dais, the tiled gallery, the chairman at the centre; beside Mas, SUCRAM already typing, live-threading.",
    "cast": [
     {
-     "id": "lahtnemulb",
+     "id": "mas",
      "pose": "stand",
      "face": "calm",
-     "x": 0.38,
+     "x": null,
      "from": null,
      "until": null
     },
     {
-     "id": "clone",
+     "id": "sucram",
      "pose": "stand",
      "face": "calm",
-     "x": 0.62,
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "lahtnemulb",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "gallery",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
      "from": null,
      "until": null
     }
    ],
    "speak": [],
    "beat_starts": {
-    "15.03": 0
+    "v35-27.00": 0
    },
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "01:21:05",
-   "tc_out": "01:23:17",
-   "frames": 60
+   "tc_in": "01:12:17",
+   "tc_out": "01:16:12",
+   "frames": 91
   },
   {
    "id": "15.04",
@@ -3952,18 +3273,18 @@
     "15.04",
     "15.05"
    ],
-   "s": 2009,
-   "e": 2194,
+   "s": 1836,
+   "e": 2016,
    "onscreen": [
     {
      "text": "SUCRAM / CALLED IT. (BEFORE LAUNCH.)",
      "s": 0,
-     "e": 185
+     "e": 180
     },
     {
      "text": "STAMPS: ALL · PARTIALLY: SOME",
      "s": 0,
-     "e": 185
+     "e": 180
     },
     {
      "text": "SUCRAM / CALLED IT. (BEFORE LAUNCH.)",
@@ -4214,10 +3535,10 @@
      "mode": "on-mic",
      "who": "SUCRAM",
      "text": "Most of them.",
-     "s": 154,
-     "e": 174,
-     "fs": 142,
-     "fe": 184,
+     "s": 149,
+     "e": 169,
+     "fs": 137,
+     "fe": 179,
      "os": false,
      "via": null,
      "face": null,
@@ -4261,7 +3582,7 @@
      "words": [
       [
        "Most",
-       -1,
+       0,
        5
       ],
       [
@@ -4295,9 +3616,9 @@
     "sucram"
    ],
    "cues": [
-    "music (v3.4): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged",
+    "music (v3.5): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged",
     "style: 2-TONE freeze, 1 beat · then the card rides the live room for the rest of its bar",
-    "music (v3.4): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
+    "music (v3.5): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
    ],
    "sounds": [
     "freeze_hit_C @0",
@@ -4362,14 +3683,14 @@
      "kind": "plate",
      "text": "SUCRAM / CALLED IT. (BEFORE LAUNCH.)",
      "s": 0,
-     "e": 185,
+     "e": 180,
      "must": true
     },
     {
      "kind": "plate",
      "text": "STAMPS: ALL · PARTIALLY: SOME",
      "s": 0,
-     "e": 185,
+     "e": 180,
      "must": true
     },
     {
@@ -4387,9 +3708,9 @@
      "must": true
     }
    ],
-   "tc_in": "01:23:17",
-   "tc_out": "01:31:10",
-   "frames": 185
+   "tc_in": "01:16:12",
+   "tc_out": "01:24:00",
+   "frames": 180
   },
   {
    "id": "15.06",
@@ -4397,9 +3718,15 @@
    "beats": [
     "15.06"
    ],
-   "s": 2194,
-   "e": 2353,
-   "onscreen": [],
+   "s": 2016,
+   "e": 2175,
+   "onscreen": [
+    {
+     "text": "LAHTNEMULB · CHAIRMAN",
+     "s": 4,
+     "e": 159
+    }
+   ],
    "lines": [
     {
      "id": "e1-a2-15-06",
@@ -4675,12 +4002,12 @@
    "frame": "MCU · the chairman, reading from a card",
    "cls": "MCU",
    "move": "cut",
-   "does": "He reads it from a card.",
+   "does": "LAHTNEMULB, reading from a card, alone at the dais's centre (no clone at his left hand).",
    "chars": [
     "lahtnemulb"
    ],
    "cues": [
-    "music (v3.4): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
+    "music (v3.5): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
    ],
    "sounds": [],
    "spots": [],
@@ -4691,7 +4018,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "He reads it from a card.",
+   "caption": "LAHTNEMULB, reading from a card, alone at the dais's centre (no clone at his left hand).",
    "cast": [
     {
      "id": "lahtnemulb",
@@ -4706,13 +4033,26 @@
    "beat_starts": {
     "15.06": 0
    },
-   "names": [],
+   "names": [
+    {
+     "id": "lahtnemulb",
+     "k": 4
+    }
+   ],
    "fg": null,
    "marks": {},
    "mark_src": {},
-   "texts": [],
-   "tc_in": "01:31:10",
-   "tc_out": "01:38:01",
+   "texts": [
+    {
+     "kind": "plate",
+     "text": "LAHTNEMULB · CHAIRMAN",
+     "s": 4,
+     "e": 159,
+     "must": true
+    }
+   ],
+   "tc_in": "01:24:00",
+   "tc_out": "01:30:15",
    "frames": 159
   },
   {
@@ -4721,8 +4061,8 @@
    "beats": [
     "15.07"
    ],
-   "s": 2353,
-   "e": 2500,
+   "s": 2175,
+   "e": 2322,
    "onscreen": [],
    "lines": [
     {
@@ -4965,13 +4305,12 @@
    "frame": "OTS · from behind Mas onto the dais (held)",
    "cls": "OTS",
    "move": "hold",
-   "does": "On Mas's last word the chairman reaches for his next card; the clone takes it out of his hand and reads it for him. Nobody remarks on it.",
+   "does": "From behind Mas onto the dais: the chairman with his cards. \"gtp-4 and other systems like it are good at doing tasks, not jobs.\" On the line's last word the chairman reaches for his next card. (The clone's card-taking business is cut.)",
    "chars": [
-    "clone",
     "lahtnemulb"
    ],
    "cues": [
-    "music (v3.4): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
+    "music (v3.5): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
    ],
    "sounds": [],
    "spots": [],
@@ -4982,21 +4321,13 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "On Mas's last word the chairman reaches for his next card; the clone takes it out of his hand and reads it for him. Nobody remarks on it.",
+   "caption": "From behind Mas onto the dais: the chairman with his cards. \"gtp-4 and other systems like it are good at doing tasks, not jobs.\" On the line's last word the chairman reaches for his next card. (The clone's card-taking business is cut.)",
    "cast": [
     {
      "id": "lahtnemulb",
      "pose": "sit",
      "face": "calm",
      "x": 0.6,
-     "from": null,
-     "until": null
-    },
-    {
-     "id": "clone",
-     "pose": "sit",
-     "face": "calm",
-     "x": 0.76,
      "from": null,
      "until": null
     }
@@ -5013,8 +4344,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "01:38:01",
-   "tc_out": "01:44:04",
+   "tc_in": "01:30:15",
+   "tc_out": "01:36:18",
    "frames": 147
   },
   {
@@ -5023,8 +4354,8 @@
    "beats": [
     "15.10"
    ],
-   "s": 2500,
-   "e": 2580,
+   "s": 2322,
+   "e": 2402,
    "onscreen": [],
    "lines": [
     {
@@ -5107,13 +4438,12 @@
    "move": "cut",
    "does": "The dais leans in. One microphone's red light comes on, and Mas's eyeline goes to it. \"Is there anything you'd like this committee to do?\"",
    "chars": [
-    "clone",
     "lahtnemulb",
     "mas",
     "sucram"
    ],
    "cues": [
-    "music (v3.4): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
+    "music (v3.5): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
    ],
    "sounds": [],
    "spots": [],
@@ -5149,14 +4479,6 @@
      "x": 0.66,
      "from": null,
      "until": null
-    },
-    {
-     "id": "clone",
-     "pose": "sit",
-     "face": "calm",
-     "x": 0.79,
-     "from": null,
-     "until": null
     }
    ],
    "speak": [],
@@ -5168,8 +4490,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "01:44:04",
-   "tc_out": "01:47:12",
+   "tc_in": "01:36:18",
+   "tc_out": "01:40:02",
    "frames": 80
   },
   {
@@ -5178,8 +4500,8 @@
    "beats": [
     "15.15"
    ],
-   "s": 2580,
-   "e": 2767,
+   "s": 2402,
+   "e": 2589,
    "onscreen": [
     {
      "text": "PLEASE REGULATE ME",
@@ -5446,7 +4768,7 @@
    "does": "His answer begins over his shoulder; on \"licenses\" the cut to the table from above: his hand slides a single sheet toward the dais, off the table's right-hand edge, the sheet from his desk in March, finished: PLEASE REGULATE ME, his signature already on it. Sucram is faster: he stamps it mid-slide, CALLED IT. (BEFORE LAUNCH.)",
    "chars": [],
    "cues": [
-    "music (v3.4): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
+    "music (v3.5): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
    ],
    "sounds": [
     "folder_slide @8",
@@ -5497,8 +4819,8 @@
      "must": true
     }
    ],
-   "tc_in": "01:47:12",
-   "tc_out": "01:55:07",
+   "tc_in": "01:40:02",
+   "tc_out": "01:47:21",
    "frames": 187
   },
   {
@@ -5507,8 +4829,8 @@
    "beats": [
     "15.16"
    ],
-   "s": 2767,
-   "e": 2834,
+   "s": 2589,
+   "e": 2656,
    "onscreen": [],
    "lines": [],
    "seq": "15",
@@ -5521,14 +4843,13 @@
    "frame": "WIDE · the dais (a match on action)",
    "cls": "W",
    "move": "cut",
-   "does": "Match on action: the sheet comes in from frame left into the clone's waiting hand. The senators lean in at once, delighted: every one of them wants to sign it.",
+   "does": "The dais (a match on action): the sheet comes in from frame left into the chairman's waiting hand. The senators lean in at once, delighted.",
    "chars": [
-    "clone",
     "lahtnemulb",
     "senator"
    ],
    "cues": [
-    "music (v3.4): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
+    "music (v3.5): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
    ],
    "sounds": [
     "paper_curl @24"
@@ -5547,21 +4868,13 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "Match on action: the sheet comes in from frame left into the clone's waiting hand. The senators lean in at once, delighted: every one of them wants to sign it.",
+   "caption": "The dais (a match on action): the sheet comes in from frame left into the chairman's waiting hand. The senators lean in at once, delighted.",
    "cast": [
     {
      "id": "lahtnemulb",
      "pose": "lean",
      "face": "calm",
      "x": 0.4,
-     "from": null,
-     "until": null
-    },
-    {
-     "id": "clone",
-     "pose": "arms-up",
-     "face": "calm",
-     "x": 0.55,
      "from": null,
      "until": null
     },
@@ -5583,8 +4896,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "01:55:07",
-   "tc_out": "01:58:02",
+   "tc_in": "01:47:21",
+   "tc_out": "01:50:16",
    "frames": 67
   },
   {
@@ -5593,8 +4906,8 @@
    "beats": [
     "15.11"
    ],
-   "s": 2834,
-   "e": 3035,
+   "s": 2656,
+   "e": 2845,
    "onscreen": [],
    "lines": [
     {
@@ -5655,10 +4968,10 @@
      "mode": "on-mic",
      "who": "MAS",
      "text": "i love my current job.",
-     "s": 58,
-     "e": 98,
-     "fs": 46,
-     "fe": 112,
+     "s": 55,
+     "e": 94,
+     "fs": 42,
+     "fe": 108,
      "os": false,
      "via": null,
      "face": null,
@@ -5671,75 +4984,75 @@
        "rest"
       ],
       [
-       2,
+       1,
        "A"
       ],
       [
-       5,
+       4,
        "E"
       ],
       [
-       7,
+       6,
        "A"
       ],
       [
-       11,
+       10,
        "E"
       ],
       [
-       13,
+       12,
        "M"
       ],
       [
-       15,
+       14,
        "A"
       ],
       [
-       18,
+       17,
        "O"
       ],
       [
-       20,
+       19,
        "E"
       ],
       [
-       29,
+       28,
        "A"
       ],
       [
-       36,
+       35,
        "M"
       ],
       [
-       39,
+       38,
        "rest"
       ]
      ],
      "words": [
       [
        "I",
-       2,
+       1,
        5
       ],
       [
        "love",
        5,
-       13
+       12
       ],
       [
        "my",
-       13,
+       12,
        17
       ],
       [
        "current",
        17,
-       26
+       25
       ],
       [
        "job",
-       26,
-       39
+       25,
+       38
       ]
      ],
      "tag": "",
@@ -5751,10 +5064,10 @@
      "mode": "on-mic",
      "who": "SENATOR",
      "text": "You love it. Do you make a lot of money doing it?",
-     "s": 111,
-     "e": 194,
-     "fs": 99,
-     "fe": 205,
+     "s": 99,
+     "e": 182,
+     "fs": 87,
+     "fe": 193,
      "os": true,
      "via": null,
      "face": null,
@@ -5844,15 +5157,15 @@
     "sucram"
    ],
    "cues": [
-    "music (v3.4): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
+    "music (v3.5): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
    ],
    "sounds": [
-    "typing_soft @99"
+    "typing_soft @95"
    ],
    "spots": [
     {
      "name": "typing_soft",
-     "k": 99,
+     "k": 95,
      "dur": null
     }
    ],
@@ -5891,9 +5204,9 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "01:58:02",
-   "tc_out": "02:06:11",
-   "frames": 201
+   "tc_in": "01:50:16",
+   "tc_out": "01:58:13",
+   "frames": 189
   },
   {
    "id": "15.12",
@@ -5901,8 +5214,8 @@
    "beats": [
     "15.12"
    ],
-   "s": 3035,
-   "e": 3107,
+   "s": 2845,
+   "e": 2917,
    "onscreen": [
     {
      "text": "HEALTH INSURANCE",
@@ -5924,7 +5237,7 @@
    "does": "He opens his wallet: one card. A tiny moth flies out in three drawings and lands on Sucram's stamp pad.",
    "chars": [],
    "cues": [
-    "music (v3.4): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
+    "music (v3.5): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
    ],
    "sounds": [
     "cloth_rustle @1",
@@ -5968,8 +5281,8 @@
      "must": true
     }
    ],
-   "tc_in": "02:06:11",
-   "tc_out": "02:09:11",
+   "tc_in": "01:58:13",
+   "tc_out": "02:01:13",
    "frames": 72
   },
   {
@@ -5978,20 +5291,20 @@
    "beats": [
     "15.13"
    ],
-   "s": 3107,
-   "e": 3191,
+   "s": 2917,
+   "e": 3019,
    "onscreen": [],
    "lines": [
     {
-     "id": "e1-a2-15-13",
+     "id": "v35-a2-0001",
      "kind": "dialogue",
      "mode": "on-mic",
-     "who": "CLONE",
-     "text": "Health insurance.",
-     "s": 40,
-     "e": 70,
-     "fs": 28,
-     "fe": 84,
+     "who": "MAS",
+     "text": "i get paid enough for health insurance.",
+     "s": 24,
+     "e": 78,
+     "fs": 11,
+     "fe": 93,
      "os": false,
      "via": null,
      "face": null,
@@ -6008,32 +5321,81 @@
        "A"
       ],
       [
-       6,
+       11,
+       "M"
+      ],
+      [
+       13,
+       "A"
+      ],
+      [
+       17,
        "E"
       ],
       [
-       16,
+       22,
+       "A"
+      ],
+      [
+       26,
        "O"
       ],
       [
-       20,
+       29,
+       "A"
+      ],
+      [
+       33,
        "E"
       ],
       [
-       30,
+       42,
+       "O"
+      ],
+      [
+       45,
+       "E"
+      ],
+      [
+       53,
        "rest"
       ]
      ],
      "words": [
       [
-       "Health",
+       "i",
        1,
-       9
+       6
+      ],
+      [
+       "get",
+       6,
+       11
+      ],
+      [
+       "paid",
+       11,
+       19
+      ],
+      [
+       "enough",
+       19,
+       26
+      ],
+      [
+       "for",
+       26,
+       29
+      ],
+      [
+       "health",
+       29,
+       36
       ],
       [
        "insurance",
-       9,
-       30
+       36,
+       53
       ]
      ],
      "tag": "",
@@ -6050,24 +5412,23 @@
    "frame": "WIDE · the wallet held up to the dais",
    "cls": "W",
    "move": "hold",
-   "does": "Mas holds the open wallet up to the dais and says nothing. The gallery gasps: one held drawing. The clone leans to its mic.",
+   "does": "Mas holds the open wallet up toward the dais, the one card showing: \"i get paid enough for health insurance.\" The gallery gasps: one held drawing, all at once.",
    "chars": [
-    "clone",
     "gallery",
     "lahtnemulb",
     "mas",
     "sucram"
    ],
    "cues": [
-    "music (v3.4): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
+    "music (v3.5): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
    ],
    "sounds": [
-    "synth:gasp @10"
+    "synth:gasp @79"
    ],
    "spots": [
     {
      "name": "synth:gasp",
-     "k": 10,
+     "k": 79,
      "dur": null
     }
    ],
@@ -6078,7 +5439,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "Mas holds the open wallet up to the dais and says nothing. The gallery gasps: one held drawing. The clone leans to its mic.",
+   "caption": "Mas holds the open wallet up toward the dais, the one card showing: \"i get paid enough for health insurance.\" The gallery gasps: one held drawing, all at once.",
    "cast": [
     {
      "id": "gallery",
@@ -6111,14 +5472,6 @@
      "x": 0.66,
      "from": null,
      "until": null
-    },
-    {
-     "id": "clone",
-     "pose": "sit",
-     "face": "calm",
-     "x": 0.79,
-     "from": null,
-     "until": null
     }
    ],
    "speak": [],
@@ -6130,9 +5483,9 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "02:09:11",
-   "tc_out": "02:12:23",
-   "frames": 84
+   "tc_in": "02:01:13",
+   "tc_out": "02:05:19",
+   "frames": 102
   },
   {
    "id": "15.14",
@@ -6140,8 +5493,8 @@
    "beats": [
     "15.14"
    ],
-   "s": 3191,
-   "e": 3343,
+   "s": 3019,
+   "e": 3170,
    "onscreen": [],
    "lines": [
     {
@@ -6339,13 +5692,13 @@
    "frame": "TWO-SHOT · MAS + SUCRAM",
    "cls": "M",
    "move": "hold",
-   "does": "MAS and SUCRAM. \"That proves nothing. Partially.\" / \"…i have no equity in nopeai.\" MM-20 back on a new phrase; a held beat on the two of them; the tour's stamp thunks in under it.",
+   "does": "MAS and SUCRAM. \"That proves nothing. Partially.\" / \"i have no equity in nopeai.\" A held beat. His hand sets the wallet down on the table.",
    "chars": [
     "mas",
     "sucram"
    ],
    "cues": [
-    "music (v3.4): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
+    "music (v3.5): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
    ],
    "sounds": [
     "rubber_stamp_C @2",
@@ -6376,7 +5729,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "MAS and SUCRAM. \"That proves nothing. Partially.\" / \"…i have no equity in nopeai.\" MM-20 back on a new phrase; a held beat on the two of them; the tour's stamp thunks in under it.",
+   "caption": "MAS and SUCRAM. \"That proves nothing. Partially.\" / \"i have no equity in nopeai.\" A held beat. His hand sets the wallet down on the table.",
    "cast": [
     {
      "id": "mas",
@@ -6404,58 +5757,1167 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "02:12:23",
-   "tc_out": "02:19:07",
-   "frames": 152
+   "tc_in": "02:05:19",
+   "tc_out": "02:12:02",
+   "frames": 151
   },
   {
-   "id": "16.01",
-   "setup": "16.01",
+   "id": "v35-28.01",
+   "setup": "v35-28.01",
    "beats": [
-    "16.01"
+    "v35-28.01"
    ],
-   "s": 3343,
-   "e": 3463,
+   "s": 3170,
+   "e": 3225,
    "onscreen": [
     {
-     "text": "MAS MANALT: THE REGULATE-ME TOUR",
-     "s": 0,
-     "e": 120
+     "text": "RAIL: MAR 2019",
+     "s": 4,
+     "e": 55
+    }
+   ],
+   "lines": [],
+   "seq": "15A",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "INSERT → MATCH · the hand, the marker",
+   "cls": "ECU",
+   "move": "cut",
+   "does": "MATCH: in 2019 the same hand sets a marker on a whiteboard's tray. The glowing line re-draws NopeAI's first office around it, by day.",
+   "chars": [
+    "mas"
+   ],
+   "cues": [
+    "music (v3.5): MAR 2019 · admiration with a flicker of unease: the Build and low strings (new cue); an old office fan"
+   ],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "flashback",
+   "set": "office",
+   "room": "office",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "MATCH: in 2019 the same hand sets a marker on a whiteboard's tray. The glowing line re-draws NopeAI's first office around it, by day.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "v35-28.01": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "02:12:02",
+   "tc_out": "02:14:09",
+   "frames": 55
+  },
+  {
+   "id": "v35-28.02",
+   "setup": "v35-28.02",
+   "beats": [
+    "v35-28.02"
+   ],
+   "s": 3225,
+   "e": 3556,
+   "onscreen": [
+    {
+     "text": "NONPROFIT · THE BOARD",
+     "s": 4,
+     "e": 331
     },
     {
-     "text": "RAIL: MAY 24, 2023 · LONDON",
-     "s": 3,
-     "e": 30
+     "text": "CAPPED PROFIT",
+     "s": 100,
+     "e": 331
     },
     {
-     "text": "\"…cease operating…\" — MAS MANALT, ON THE EU'S AI RULES",
-     "s": 8,
-     "e": 120
+     "text": "100x",
+     "s": 205,
+     "e": 331
+    }
+   ],
+   "lines": [
+    {
+     "id": "v35-a2-0002",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "GERG",
+     "text": "The next one costs billions. Nobody donates billions.",
+     "s": 9,
+     "e": 86,
+     "fs": -3,
+     "fe": 102,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "E"
+      ],
+      [
+       2,
+       "A"
+      ],
+      [
+       4,
+       "E"
+      ],
+      [
+       7,
+       "A"
+      ],
+      [
+       9,
+       "E"
+      ],
+      [
+       11,
+       "O"
+      ],
+      [
+       15,
+       "E"
+      ],
+      [
+       19,
+       "M"
+      ],
+      [
+       21,
+       "A"
+      ],
+      [
+       23,
+       "E"
+      ],
+      [
+       32,
+       "rest"
+      ],
+      [
+       42,
+       "O"
+      ],
+      [
+       45,
+       "A"
+      ],
+      [
+       47,
+       "E"
+      ],
+      [
+       51,
+       "O"
+      ],
+      [
+       54,
+       "E"
+      ],
+      [
+       56,
+       "A"
+      ],
+      [
+       59,
+       "E"
+      ],
+      [
+       61,
+       "M"
+      ],
+      [
+       63,
+       "A"
+      ],
+      [
+       66,
+       "E"
+      ],
+      [
+       76,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "The",
+       -1,
+       0
+      ],
+      [
+       "next",
+       0,
+       6
+      ],
+      [
+       "one",
+       6,
+       10
+      ],
+      [
+       "costs",
+       10,
+       18
+      ],
+      [
+       "billions",
+       18,
+       32
+      ],
+      [
+       "Nobody",
+       40,
+       50
+      ],
+      [
+       "donates",
+       50,
+       61
+      ],
+      [
+       "billions",
+       61,
+       76
+      ]
+     ],
+     "tag": "",
+     "pre": false
     },
     {
-     "text": "EU: CANCELLED",
-     "s": 18,
-     "e": 120
+     "id": "v35-a2-0003",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "MAS",
+     "text": "so they don't donate. they invest.",
+     "s": 96,
+     "e": 148,
+     "fs": 82,
+     "fe": 164,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "rest"
+      ],
+      [
+       1,
+       "O"
+      ],
+      [
+       4,
+       "A"
+      ],
+      [
+       7,
+       "O"
+      ],
+      [
+       10,
+       "E"
+      ],
+      [
+       13,
+       "O"
+      ],
+      [
+       18,
+       "A"
+      ],
+      [
+       22,
+       "E"
+      ],
+      [
+       24,
+       "rest"
+      ],
+      [
+       32,
+       "A"
+      ],
+      [
+       35,
+       "E"
+      ],
+      [
+       43,
+       "A"
+      ],
+      [
+       48,
+       "E"
+      ],
+      [
+       52,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "so",
+       0,
+       3
+      ],
+      [
+       "they",
+       3,
+       6
+      ],
+      [
+       "don't",
+       6,
+       12
+      ],
+      [
+       "donate",
+       12,
+       24
+      ],
+      [
+       "they",
+       30,
+       35
+      ],
+      [
+       "invest",
+       35,
+       52
+      ]
+     ],
+     "tag": "",
+     "pre": false
     },
     {
-     "text": "RAIL: MAY 26, 2023",
-     "s": 61,
-     "e": 77
+     "id": "v35-a2-0004",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "ALYI",
+     "text": "Capped at what?",
+     "s": 167,
+     "e": 192,
+     "fs": 154,
+     "fe": 204,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "rest"
+      ],
+      [
+       2,
+       "A"
+      ],
+      [
+       6,
+       "M"
+      ],
+      [
+       8,
+       "E"
+      ],
+      [
+       10,
+       "A"
+      ],
+      [
+       12,
+       "E"
+      ],
+      [
+       14,
+       "O"
+      ],
+      [
+       16,
+       "A"
+      ],
+      [
+       21,
+       "E"
+      ],
+      [
+       24,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "Capped",
+       1,
+       10
+      ],
+      [
+       "at",
+       10,
+       14
+      ],
+      [
+       "what",
+       14,
+       24
+      ]
+     ],
+     "tag": "",
+     "pre": false
     },
     {
-     "text": "@masa · \"…no plans to leave\"",
-     "s": 63,
-     "e": 90
+     "id": "v35-a2-0005",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "MAS",
+     "text": "a hundred times.",
+     "s": 202,
+     "e": 233,
+     "fs": 188,
+     "fe": 247,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "A"
+      ],
+      [
+       5,
+       "E"
+      ],
+      [
+       16,
+       "A"
+      ],
+      [
+       24,
+       "M"
+      ],
+      [
+       27,
+       "E"
+      ],
+      [
+       30,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "a",
+       1,
+       2
+      ],
+      [
+       "hundred",
+       2,
+       13
+      ],
+      [
+       "times",
+       13,
+       30
+      ]
+     ],
+     "tag": "",
+     "pre": false
     },
     {
-     "text": "UN-CANCELLED",
-     "s": 77,
-     "e": 120
+     "id": "v35-a2-0006",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "ALYI",
+     "text": "And who's in charge?",
+     "s": 251,
+     "e": 287,
+     "fs": 239,
+     "fe": 300,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "rest"
+      ],
+      [
+       1,
+       "A"
+      ],
+      [
+       3,
+       "E"
+      ],
+      [
+       5,
+       "O"
+      ],
+      [
+       12,
+       "E"
+      ],
+      [
+       23,
+       "A"
+      ],
+      [
+       30,
+       "E"
+      ],
+      [
+       36,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "And",
+       0,
+       5
+      ],
+      [
+       "who's",
+       5,
+       14
+      ],
+      [
+       "in",
+       14,
+       19
+      ],
+      [
+       "charge",
+       19,
+       36
+      ]
+     ],
+     "tag": "",
+     "pre": false
     },
     {
-     "text": "ADDED DUE TO POPULAR DEMAND",
-     "s": 92,
-     "e": 120
+     "id": "v35-a2-0007",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "MAS",
+     "text": "the board.",
+     "s": 297,
+     "e": 317,
+     "fs": 285,
+     "fe": 332,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "rest"
+      ],
+      [
+       1,
+       "E"
+      ],
+      [
+       4,
+       "M"
+      ],
+      [
+       7,
+       "O"
+      ],
+      [
+       14,
+       "E"
+      ],
+      [
+       20,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "the",
+       1,
+       4
+      ],
+      [
+       "board",
+       4,
+       20
+      ]
+     ],
+     "tag": "",
+     "pre": false
+    }
+   ],
+   "seq": "15A",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "W → 2S · the whiteboard (held)",
+   "cls": "M",
+   "move": "hold",
+   "does": "GERG holds a cloud bill that unrolls to the floor: \"The next one costs billions. Nobody donates billions.\" MAS draws a box under NONPROFIT · THE BOARD: \"so they don't donate. they invest.\" He writes CAPPED PROFIT. ALYI: \"Capped at what?\" MAS writes 100x: \"a hundred times.\" ALYI: \"And who's in charge?\" MAS taps the top box: \"the board.\"",
+   "chars": [
+    "alyi",
+    "gerg",
+    "mas"
+   ],
+   "cues": [
+    "music (v3.5): MAR 2019 · admiration with a flicker of unease: the Build and low strings (new cue); an old office fan"
+   ],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "flashback",
+   "set": "office",
+   "room": "office",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "GERG holds a cloud bill that unrolls to the floor: \"The next one costs billions. Nobody donates billions.\" MAS draws a box under NONPROFIT · THE BOARD: \"so they don't donate. they invest.\" He writes CAPPED PROFIT. ALYI: \"Capped at what?\" MAS writes 100x: \"a hundred times.\" ALYI: \"And who's in charge?\" MAS taps the top box: \"the board.\"",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "gerg",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "alyi",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "v35-28.02": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "label",
+     "text": "NONPROFIT · THE BOARD",
+     "s": 4,
+     "e": 331,
+     "must": true
+    },
+    {
+     "kind": "label",
+     "text": "CAPPED PROFIT",
+     "s": 100,
+     "e": 331,
+     "must": true
+    },
+    {
+     "kind": "label",
+     "text": "100x",
+     "s": 205,
+     "e": 331,
+     "must": true
+    }
+   ],
+   "tc_in": "02:14:09",
+   "tc_out": "02:28:04",
+   "frames": 331
+  },
+  {
+   "id": "v35-28.03",
+   "setup": "v35-28.03",
+   "beats": [
+    "v35-28.03"
+   ],
+   "s": 3556,
+   "e": 3663,
+   "onscreen": [
+    {
+     "text": "CEO · EQUITY: 0",
+     "s": 42,
+     "e": 107
+    }
+   ],
+   "lines": [
+    {
+     "id": "v35-a2-0008",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "MADA",
+     "text": "And you?",
+     "s": 14,
+     "e": 32,
+     "fs": 2,
+     "fe": 43,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "A"
+      ],
+      [
+       4,
+       "E"
+      ],
+      [
+       11,
+       "O"
+      ],
+      [
+       18,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "And",
+       0,
+       7
+      ],
+      [
+       "you",
+       7,
+       18
+      ]
+     ],
+     "tag": "",
+     "pre": false
+    },
+    {
+     "id": "v35-a2-0009",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "MAS",
+     "text": "nothing.",
+     "s": 42,
+     "e": 61,
+     "fs": 30,
+     "fe": 76,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "rest"
+      ],
+      [
+       3,
+       "E"
+      ],
+      [
+       4,
+       "A"
+      ],
+      [
+       10,
+       "E"
+      ],
+      [
+       18,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "nothing",
+       2,
+       18
+      ]
+     ],
+     "tag": "",
+     "pre": false
+    },
+    {
+     "id": "v35-a2-0010",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "MADA",
+     "text": "Good answer.",
+     "s": 72,
+     "e": 92,
+     "fs": 60,
+     "fe": 104,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "rest"
+      ],
+      [
+       1,
+       "O"
+      ],
+      [
+       4,
+       "E"
+      ],
+      [
+       6,
+       "A"
+      ],
+      [
+       10,
+       "E"
+      ],
+      [
+       20,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "Good",
+       0,
+       5
+      ],
+      [
+       "answer",
+       5,
+       20
+      ]
+     ],
+     "tag": "",
+     "pre": false
+    }
+   ],
+   "seq": "15A",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "2S · Mada at the table; the Quiet Vote's chair turned away",
+   "cls": "M",
+   "move": "hold",
+   "does": "MADA, arms folded at the table, a spinner over his head: \"And you?\" MAS draws a stick figure in the lower box, CEO · EQUITY: 0: \"nothing.\" MADA: \"Good answer.\" Beside him, a chair turned away: THE QUIET VOTE.",
+   "chars": [
+    "mada",
+    "mas",
+    "quiet-vote"
+   ],
+   "cues": [
+    "music (v3.5): MAR 2019 · admiration with a flicker of unease: the Build and low strings (new cue); an old office fan"
+   ],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "flashback",
+   "set": "office",
+   "room": "office",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "MADA, arms folded at the table, a spinner over his head: \"And you?\" MAS draws a stick figure in the lower box, CEO · EQUITY: 0: \"nothing.\" MADA: \"Good answer.\" Beside him, a chair turned away: THE QUIET VOTE.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "mada",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "quiet-vote",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "v35-28.03": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "label",
+     "text": "CEO · EQUITY: 0",
+     "s": 42,
+     "e": 107,
+     "must": true
+    }
+   ],
+   "tc_in": "02:28:04",
+   "tc_out": "02:32:15",
+   "frames": 107
+  },
+  {
+   "id": "v35-28.04",
+   "setup": "v35-28.04",
+   "beats": [
+    "v35-28.04"
+   ],
+   "s": 3663,
+   "e": 3730,
+   "onscreen": [
+    {
+     "text": "MACROSOFT · $1,000,000,000",
+     "s": 4,
+     "e": 67
+    },
+    {
+     "text": "JUL 2019",
+     "s": 4,
+     "e": 67
+    }
+   ],
+   "lines": [],
+   "seq": "15A",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "INSERT · under the door",
+   "cls": "ECU",
+   "move": "cut",
+   "does": "Under the office door slides a check: MACROSOFT · $1,000,000,000 · JUL 2019.",
+   "chars": [],
+   "cues": [
+    "music (v3.5): MAR 2019 · admiration with a flicker of unease: the Build and low strings (new cue); an old office fan"
+   ],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "flashback",
+   "set": "office",
+   "room": "office",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Under the office door slides a check: MACROSOFT · $1,000,000,000 · JUL 2019.",
+   "cast": [],
+   "speak": [],
+   "beat_starts": {
+    "v35-28.04": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "label",
+     "text": "MACROSOFT · $1,000,000,000",
+     "s": 4,
+     "e": 67,
+     "must": true
+    },
+    {
+     "kind": "label",
+     "text": "JUL 2019",
+     "s": 4,
+     "e": 67,
+     "must": true
+    }
+   ],
+   "tc_in": "02:32:15",
+   "tc_out": "02:35:10",
+   "frames": 67
+  },
+  {
+   "id": "v35-28.05",
+   "setup": "v35-28.05",
+   "beats": [
+    "v35-28.05"
+   ],
+   "s": 3730,
+   "e": 3790,
+   "onscreen": [],
+   "lines": [],
+   "seq": "15A",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "WIDE · the dais, nothing to write",
+   "cls": "W",
+   "move": "cut",
+   "does": "The glowing line sweeps back: the hearing. The dais leans back; a senator's pen hovers over a blank pad, nothing to write (hands only). The chairman's gavel ends the hearing; its knock is a passport stamp.",
+   "chars": [
+    "gallery",
+    "lahtnemulb"
+   ],
+   "cues": [
+    "music (v3.5): MM-20's last phrase; out on the gavel"
+   ],
+   "sounds": [
+    "landing_thunk @45"
+   ],
+   "spots": [
+    {
+     "name": "landing_thunk",
+     "k": 45,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "senate",
+   "room": "senate",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "The glowing line sweeps back: the hearing. The dais leans back; a senator's pen hovers over a blank pad, nothing to write (hands only). The chairman's gavel ends the hearing; its knock is a passport stamp.",
+   "cast": [
+    {
+     "id": "lahtnemulb",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "gallery",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "v35-28.05": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "02:35:10",
+   "tc_out": "02:37:22",
+   "frames": 60
+  },
+  {
+   "id": "v35-29.01",
+   "setup": "v35-29.01",
+   "beats": [
+    "v35-29.01"
+   ],
+   "s": 3790,
+   "e": 3886,
+   "onscreen": [
+    {
+     "text": "RIO DE JANEIRO",
+     "s": 7,
+     "e": 96
+    },
+    {
+     "text": "LAGOS",
+     "s": 19,
+     "e": 96
+    },
+    {
+     "text": "MADRID",
+     "s": 31,
+     "e": 96
+    },
+    {
+     "text": "WARSAW",
+     "s": 43,
+     "e": 96
+    },
+    {
+     "text": "PARIS",
+     "s": 55,
+     "e": 96
+    },
+    {
+     "text": "LONDON",
+     "s": 67,
+     "e": 96
+    },
+    {
+     "text": "MUNICH",
+     "s": 79,
+     "e": 96
     }
    ],
    "lines": [],
@@ -6466,90 +6928,83 @@
    "side_label": "",
    "badge": null,
    "whip": null,
-   "frame": "GFX · the tour poster (held: ITEMS 1-4, the stamps pile up)",
-   "cls": "GS",
-   "move": "hold",
-   "does": "MATCH on the thunk: the tour poster, MAS MANALT: THE REGULATE-ME TOUR, its cities. LONDON's strip: \"…cease operating…\" and EU gets CANCELLED. His thumb comes into the corner of frame on his phone and posts \"…no plans to leave\" [H]; UN-CANCELLED lands over the stamp. The last date slot: his own hand stamps it, ADDED DUE TO POPULAR DEMAND. The frame holds on his one-pixel smile to the bar's end.",
-   "chars": [],
+   "frame": "INSERT · his passport, the stamps; hands under flags",
+   "cls": "ECU",
+   "move": "cut",
+   "does": "His passport; the stamps land one a beat: RIO DE JANEIRO · LAGOS · MADRID · WARSAW · PARIS · LONDON · MUNICH. Between them, copies of his page slide across tables to hands under flags (no faces).",
+   "chars": [
+    "mas"
+   ],
    "cues": [
-    "music (v3.4): THE TOUR · THE RUN (MM-03), a knee stab on each stamp"
+    "music (v3.5): THE RUN (MM-03), in on the first stamp; a knee stab on every stamp; thins under the lectern and the posts"
    ],
    "sounds": [
-    "rubber_stamp_C @0",
-    "synth:stab @0",
-    "paper_whip @8",
-    "rubber_stamp_C @18",
-    "synth:stab @18",
-    "post_click @63",
-    "rubber_stamp_C @77",
-    "synth:stab @77",
-    "rubber_stamp_C @92",
-    "synth:stab @92"
+    "rubber_stamp_C @7",
+    "rubber_stamp_C @19",
+    "rubber_stamp_C @31",
+    "rubber_stamp_C @43",
+    "rubber_stamp_C @55",
+    "rubber_stamp_C @67",
+    "rubber_stamp_C @79"
    ],
    "spots": [
     {
      "name": "rubber_stamp_C",
-     "k": 0,
-     "dur": null
-    },
-    {
-     "name": "synth:stab",
-     "k": 0,
-     "dur": null
-    },
-    {
-     "name": "paper_whip",
-     "k": 8,
+     "k": 7,
      "dur": null
     },
     {
      "name": "rubber_stamp_C",
-     "k": 18,
-     "dur": null
-    },
-    {
-     "name": "synth:stab",
-     "k": 18,
-     "dur": null
-    },
-    {
-     "name": "post_click",
-     "k": 63,
+     "k": 19,
      "dur": null
     },
     {
      "name": "rubber_stamp_C",
-     "k": 77,
-     "dur": null
-    },
-    {
-     "name": "synth:stab",
-     "k": 77,
+     "k": 31,
      "dur": null
     },
     {
      "name": "rubber_stamp_C",
-     "k": 92,
+     "k": 43,
      "dur": null
     },
     {
-     "name": "synth:stab",
-     "k": 92,
+     "name": "rubber_stamp_C",
+     "k": 55,
+     "dur": null
+    },
+    {
+     "name": "rubber_stamp_C",
+     "k": 67,
+     "dur": null
+    },
+    {
+     "name": "rubber_stamp_C",
+     "k": 79,
      "dur": null
     }
    ],
    "v4_frames": null,
    "kind": "montage",
-   "set": "street",
+   "set": "void",
    "room": "none",
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "MATCH on the thunk: the tour poster, MAS MANALT: THE REGULATE-ME TOUR, its cities. LONDON's strip: \"…cease operating…\" and EU gets CANCELLED. His thumb comes into the corner of frame on his phone and posts \"…no plans to leave\" [H]; UN-CANCELLED lands over the stamp. The last date slot: his own hand stamps it, ADDED DUE TO POPULAR DEMAND. The frame holds on his one-pixel smile to the bar's end.",
-   "cast": [],
+   "caption": "His passport; the stamps land one a beat: RIO DE JANEIRO · LAGOS · MADRID · WARSAW · PARIS · LONDON · MUNICH. Between them, copies of his page slide across tables to hands under flags (no faces).",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
    "speak": [],
    "beat_starts": {
-    "16.01": 0
+    "v35-29.01": 0
    },
    "names": [],
    "fg": null,
@@ -6558,50 +7013,551 @@
    "texts": [
     {
      "kind": "label",
-     "text": "MAS MANALT: THE REGULATE-ME TOUR",
-     "s": 0,
-     "e": 120,
+     "text": "RIO DE JANEIRO",
+     "s": 7,
+     "e": 96,
      "must": true
     },
     {
      "kind": "label",
-     "text": "\"…cease operating…\" — MAS MANALT, ON THE EU'S AI RULES",
-     "s": 8,
-     "e": 120,
+     "text": "LAGOS",
+     "s": 19,
+     "e": 96,
      "must": true
     },
     {
      "kind": "label",
-     "text": "EU: CANCELLED",
-     "s": 18,
-     "e": 120,
+     "text": "MADRID",
+     "s": 31,
+     "e": 96,
      "must": true
     },
     {
      "kind": "label",
-     "text": "@masa · \"…no plans to leave\"",
-     "s": 63,
-     "e": 90,
+     "text": "WARSAW",
+     "s": 43,
+     "e": 96,
      "must": true
     },
     {
      "kind": "label",
-     "text": "UN-CANCELLED",
-     "s": 77,
-     "e": 120,
+     "text": "PARIS",
+     "s": 55,
+     "e": 96,
      "must": true
     },
     {
      "kind": "label",
-     "text": "ADDED DUE TO POPULAR DEMAND",
-     "s": 92,
-     "e": 120,
+     "text": "LONDON",
+     "s": 67,
+     "e": 96,
+     "must": true
+    },
+    {
+     "kind": "label",
+     "text": "MUNICH",
+     "s": 79,
+     "e": 96,
      "must": true
     }
    ],
-   "tc_in": "02:19:07",
-   "tc_out": "02:24:07",
-   "frames": 120
+   "tc_in": "02:37:22",
+   "tc_out": "02:41:22",
+   "frames": 96
+  },
+  {
+   "id": "v35-29.02",
+   "setup": "v35-29.02",
+   "beats": [
+    "v35-29.02"
+   ],
+   "s": 3886,
+   "e": 4004,
+   "onscreen": [
+    {
+     "text": "RAIL: MAY 24, 2023 · LONDON",
+     "s": 4,
+     "e": 118
+    }
+   ],
+   "lines": [
+    {
+     "id": "v35-a2-0011",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "MAS",
+     "text": "if we can comply, we will, and if we can't, we'll cease operating.",
+     "s": 9,
+     "e": 109,
+     "fs": -5,
+     "fe": 122,
+     "os": false,
+     "via": "pa",
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "E"
+      ],
+      [
+       3,
+       "O"
+      ],
+      [
+       5,
+       "E"
+      ],
+      [
+       7,
+       "A"
+      ],
+      [
+       9,
+       "E"
+      ],
+      [
+       15,
+       "M"
+      ],
+      [
+       18,
+       "E"
+      ],
+      [
+       20,
+       "A"
+      ],
+      [
+       26,
+       "O"
+      ],
+      [
+       28,
+       "E"
+      ],
+      [
+       31,
+       "O"
+      ],
+      [
+       35,
+       "A"
+      ],
+      [
+       39,
+       "E"
+      ],
+      [
+       46,
+       "rest"
+      ],
+      [
+       49,
+       "A"
+      ],
+      [
+       51,
+       "E"
+      ],
+      [
+       55,
+       "O"
+      ],
+      [
+       57,
+       "E"
+      ],
+      [
+       60,
+       "A"
+      ],
+      [
+       64,
+       "E"
+      ],
+      [
+       69,
+       "O"
+      ],
+      [
+       71,
+       "E"
+      ],
+      [
+       75,
+       "A"
+      ],
+      [
+       79,
+       "E"
+      ],
+      [
+       81,
+       "A"
+      ],
+      [
+       84,
+       "M"
+      ],
+      [
+       86,
+       "E"
+      ],
+      [
+       90,
+       "A"
+      ],
+      [
+       93,
+       "E"
+      ],
+      [
+       99,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "if",
+       0,
+       3
+      ],
+      [
+       "we",
+       3,
+       7
+      ],
+      [
+       "can",
+       7,
+       11
+      ],
+      [
+       "comply",
+       11,
+       25
+      ],
+      [
+       "we",
+       26,
+       31
+      ],
+      [
+       "will",
+       31,
+       47
+      ],
+      [
+       "and",
+       49,
+       52
+      ],
+      [
+       "if",
+       52,
+       55
+      ],
+      [
+       "we",
+       55,
+       59
+      ],
+      [
+       "can't",
+       59,
+       68
+      ],
+      [
+       "we'll",
+       69,
+       73
+      ],
+      [
+       "cease",
+       73,
+       82
+      ],
+      [
+       "operating",
+       82,
+       99
+      ]
+     ],
+     "tag": "pa",
+     "pre": false
+    }
+   ],
+   "seq": "16",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "M · a lectern in a London hall",
+   "cls": "M",
+   "move": "hold",
+   "does": "A lectern in a university hall. MAS, pleasant: \"if we can comply, we will, and if we can't, we'll cease operating.\"",
+   "chars": [
+    "mas"
+   ],
+   "cues": [
+    "music (v3.5): THE RUN (MM-03), in on the first stamp; a knee stab on every stamp; thins under the lectern and the posts"
+   ],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "stage",
+   "room": "none",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "A lectern in a university hall. MAS, pleasant: \"if we can comply, we will, and if we can't, we'll cease operating.\"",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "v35-29.02": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "02:41:22",
+   "tc_out": "02:46:20",
+   "frames": 118
+  },
+  {
+   "id": "v35-29.03",
+   "setup": "v35-29.03",
+   "beats": [
+    "v35-29.03"
+   ],
+   "s": 4004,
+   "e": 4071,
+   "onscreen": [
+    {
+     "text": "NOTERB",
+     "s": 4,
+     "e": 67
+    },
+    {
+     "text": "There is no point in attempting blackmail…",
+     "s": 4,
+     "e": 67
+    }
+   ],
+   "lines": [],
+   "seq": "16",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "POV · his phone: NOTERB's post",
+   "cls": "SC",
+   "move": "cut",
+   "does": "On his phone, a post in its own UI from NOTERB, a Brussels commissioner: \"There is no point in attempting blackmail…\"",
+   "chars": [],
+   "cues": [
+    "music (v3.5): THE RUN (MM-03), in on the first stamp; a knee stab on every stamp; thins under the lectern and the posts"
+   ],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "montage",
+   "set": "screen",
+   "room": "phone",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "On his phone, a post in its own UI from NOTERB, a Brussels commissioner: \"There is no point in attempting blackmail…\"",
+   "cast": [],
+   "speak": [],
+   "beat_starts": {
+    "v35-29.03": 0
+   },
+   "names": [
+    {
+     "id": "noterb",
+     "k": 4
+    }
+   ],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "plate",
+     "text": "NOTERB",
+     "s": 4,
+     "e": 67,
+     "must": true
+    },
+    {
+     "kind": "plate",
+     "text": "There is no point in attempting blackmail…",
+     "s": 4,
+     "e": 67,
+     "must": true
+    }
+   ],
+   "tc_in": "02:46:20",
+   "tc_out": "02:49:15",
+   "frames": 67
+  },
+  {
+   "id": "v35-29.04",
+   "setup": "v35-29.04",
+   "beats": [
+    "v35-29.04"
+   ],
+   "s": 4071,
+   "e": 4143,
+   "onscreen": [
+    {
+     "text": "RAIL: MAY 26, 2023",
+     "s": 4,
+     "e": 72
+    },
+    {
+     "text": "…we are excited to continue to operate here and of course have no plans to leave.",
+     "s": 4,
+     "e": 72
+    }
+   ],
+   "lines": [],
+   "seq": "16",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "INSERT · his thumb, his post",
+   "cls": "ECU",
+   "move": "cut",
+   "does": "His thumb; his post goes up in its own UI: \"…we are excited to continue to operate here and of course have no plans to leave.\" His one-pixel smile.",
+   "chars": [
+    "mas"
+   ],
+   "cues": [
+    "music (v3.5): THE RUN (MM-03), in on the first stamp; a knee stab on every stamp; thins under the lectern and the posts"
+   ],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "montage",
+   "set": "screen",
+   "room": "phone",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "His thumb; his post goes up in its own UI: \"…we are excited to continue to operate here and of course have no plans to leave.\" His one-pixel smile.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "v35-29.04": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "label",
+     "text": "…we are excited to continue to operate here and of course have no plans to leave.",
+     "s": 4,
+     "e": 72,
+     "must": true
+    }
+   ],
+   "tc_in": "02:49:15",
+   "tc_out": "02:52:15",
+   "frames": 72
+  },
+  {
+   "id": "v35-29.05",
+   "setup": "v35-29.05",
+   "beats": [
+    "v35-29.05"
+   ],
+   "s": 4143,
+   "e": 4176,
+   "onscreen": [],
+   "lines": [],
+   "seq": "16",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "INSERT → MATCH · his pen, a guest book",
+   "cls": "ECU",
+   "move": "cut",
+   "does": "His pen signs a guest book under a flag; the pen, the hand and the signature hold their place as the page becomes a one-sentence letter on many desks.",
+   "chars": [
+    "mas"
+   ],
+   "cues": [
+    "music (v3.5): THE RUN (MM-03), in on the first stamp; a knee stab on every stamp; thins under the lectern and the posts; rings out into the statement's held pad"
+   ],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "montage",
+   "set": "void",
+   "room": "none",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "His pen signs a guest book under a flag; the pen, the hand and the signature hold their place as the page becomes a one-sentence letter on many desks.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "v35-29.05": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "02:52:15",
+   "tc_out": "02:54:00",
+   "frames": 33
   },
   {
    "id": "17.01",
@@ -6609,8 +7565,8 @@
    "beats": [
     "17.01"
    ],
-   "s": 3463,
-   "e": 3607,
+   "s": 4176,
+   "e": 4332,
    "onscreen": [
     {
      "text": "RAIL: MAY 30, 2023",
@@ -6620,7 +7576,17 @@
     {
      "text": "\"Mitigating the risk of extinction from AI should be a global priority…\"",
      "s": 7,
-     "e": 144
+     "e": 156
+    },
+    {
+     "text": "MAS MANALT · MARIO · SIMED · NOTNIH · OIGNEB",
+     "s": 37,
+     "e": 156
+    },
+    {
+     "text": "+ HUNDREDS MORE",
+     "s": 81,
+     "e": 156
     }
    ],
    "lines": [],
@@ -6631,10 +7597,10 @@
    "side_label": "",
    "badge": null,
    "whip": null,
-   "frame": "WIDE · the table under the sky (phrase 1)",
-   "cls": "W",
-   "move": "cut",
-   "does": "One sheet on a long table; the statement types across the top. Signers in swaps: one moves a chess piece no one can see; one in Godfather light; Mas in one stroke; Mario, who keeps the pen.",
+   "frame": "MONTAGE → WIDE · many desks, then the rooftop signing table",
+   "cls": "M",
+   "move": "hold",
+   "does": "The one sentence types across the top, held to read: \"Mitigating the risk of extinction from AI should be a global priority…\" Pens on many desks sign it in quick swaps, and the names scroll up the sheet: MAS MANALT · MARIO · SIMED · NOTNIH · OIGNEB · + HUNDREDS MORE. The last table is a long table on a rooftop under a perfect blue sky, where MAS and MARIO sign side by side.",
    "chars": [
     "mario",
     "mas",
@@ -6642,7 +7608,7 @@
     "simed"
    ],
    "cues": [
-    "music (v3.4): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
+    "music (v3.5): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
    ],
    "sounds": [
     "pen_scribble_short @43",
@@ -6685,7 +7651,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "One sheet on a long table; the statement types across the top. Signers in swaps: one moves a chess piece no one can see; one in Godfather light; Mas in one stroke; Mario, who keeps the pen.",
+   "caption": "The one sentence types across the top, held to read: \"Mitigating the risk of extinction from AI should be a global priority…\" Pens on many desks sign it in quick swaps, and the names scroll up the sheet: MAS MANALT · MARIO · SIMED · NOTNIH · OIGNEB · + HUNDREDS MORE. The last table is a long table on a rooftop under a perfect blue sky, where MAS and MARIO sign side by side.",
    "cast": [
     {
      "id": "simed",
@@ -6733,13 +7699,27 @@
      "kind": "label",
      "text": "\"Mitigating the risk of extinction from AI should be a global priority…\"",
      "s": 7,
-     "e": 144,
+     "e": 156,
+     "must": true
+    },
+    {
+     "kind": "label",
+     "text": "MAS MANALT · MARIO · SIMED · NOTNIH · OIGNEB",
+     "s": 37,
+     "e": 156,
+     "must": true
+    },
+    {
+     "kind": "label",
+     "text": "+ HUNDREDS MORE",
+     "s": 81,
+     "e": 156,
      "must": true
     }
    ],
-   "tc_in": "02:24:07",
-   "tc_out": "02:30:07",
-   "frames": 144
+   "tc_in": "02:54:00",
+   "tc_out": "03:00:12",
+   "frames": 156
   },
   {
    "id": "17.02",
@@ -6747,8 +7727,8 @@
    "beats": [
     "17.02"
    ],
-   "s": 3607,
-   "e": 3856,
+   "s": 4332,
+   "e": 4581,
    "onscreen": [],
    "lines": [
     {
@@ -7176,7 +8156,7 @@
     "mas"
    ],
    "cues": [
-    "music (v3.4): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
+    "music (v3.5): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
    ],
    "sounds": [
     "pen_scribble_short @4",
@@ -7235,8 +8215,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "02:30:07",
-   "tc_out": "02:40:16",
+   "tc_in": "03:00:12",
+   "tc_out": "03:10:21",
    "frames": 249
   },
   {
@@ -7246,8 +8226,8 @@
     "17.03",
     "17.04"
    ],
-   "s": 3856,
-   "e": 3905,
+   "s": 4581,
+   "e": 4630,
    "onscreen": [
     {
      "text": "NESNEJ / SELLS SHOVELS. FUNDS DIGGERS.",
@@ -7278,8 +8258,8 @@
     "nesnej"
    ],
    "cues": [
-    "music (v3.4): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)",
-    "music (v3.4): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)",
+    "music (v3.5): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)",
+    "music (v3.5): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)",
     "style: 2-TONE freeze, 1 beat · then the card rides the live room for the rest of its bar"
    ],
    "sounds": [
@@ -7364,8 +8344,8 @@
      "must": true
     }
    ],
-   "tc_in": "02:40:16",
-   "tc_out": "02:42:17",
+   "tc_in": "03:10:21",
+   "tc_out": "03:12:22",
    "frames": 49
   },
   {
@@ -7374,8 +8354,8 @@
    "beats": [
     "17.05"
    ],
-   "s": 3905,
-   "e": 3993,
+   "s": 4630,
+   "e": 4718,
    "onscreen": [
     {
      "text": "NESNEJ / SELLS SHOVELS. FUNDS DIGGERS.",
@@ -7530,7 +8510,7 @@
     "mas"
    ],
    "cues": [
-    "music (v3.4): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
+    "music (v3.5): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
    ],
    "sounds": [],
    "spots": [],
@@ -7584,8 +8564,8 @@
      "must": true
     }
    ],
-   "tc_in": "02:42:17",
-   "tc_out": "02:46:09",
+   "tc_in": "03:12:22",
+   "tc_out": "03:16:14",
    "frames": 88
   },
   {
@@ -7594,8 +8574,8 @@
    "beats": [
     "17.06"
    ],
-   "s": 3993,
-   "e": 4066,
+   "s": 4718,
+   "e": 4791,
    "onscreen": [],
    "lines": [
     {
@@ -7741,7 +8721,7 @@
     "nesnej"
    ],
    "cues": [
-    "music (v3.4): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
+    "music (v3.5): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
    ],
    "sounds": [],
    "spots": [],
@@ -7775,8 +8755,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "02:46:09",
-   "tc_out": "02:49:10",
+   "tc_in": "03:16:14",
+   "tc_out": "03:19:15",
    "frames": 73
   },
   {
@@ -7787,8 +8767,8 @@
     "17.08",
     "17.09"
    ],
-   "s": 4066,
-   "e": 4153,
+   "s": 4791,
+   "e": 4878,
    "onscreen": [
     {
      "text": "INVIDIA · $1,000,000,000,000 (INTRADAY)",
@@ -7817,10 +8797,10 @@
     "nesnej"
    ],
    "cues": [
-    "music (v3.4): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)",
-    "music (v3.4): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)",
+    "music (v3.5): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)",
+    "music (v3.5): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)",
     "style: [LEDGER] flash-print, 6 frames · then the figure holds in the register window (BASE)",
-    "music (v3.4): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
+    "music (v3.5): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
    ],
    "sounds": [
     "ka_ching @14",
@@ -7882,8 +8862,8 @@
      "must": true
     }
    ],
-   "tc_in": "02:49:10",
-   "tc_out": "02:53:01",
+   "tc_in": "03:19:15",
+   "tc_out": "03:23:06",
    "frames": 87
   },
   {
@@ -7892,8 +8872,8 @@
    "beats": [
     "17.10"
    ],
-   "s": 4153,
-   "e": 4225,
+   "s": 4878,
+   "e": 4950,
    "onscreen": [
     {
      "text": "PURCHASE ORDER",
@@ -7917,10 +8897,10 @@
    "frame": "INSERT · the pen in Mario's hand",
    "cls": "ECU",
    "move": "cut",
-   "does": "The signing pen in Mario's hand is now, somehow, a purchase order: for AI chips, quantity \"more\".",
+   "does": "Every signer's pen at the table is now, somehow, a purchase order: PURCHASE ORDER · AI CHIPS · QTY: MORE on each, Mario's in the foreground (his fleece cuff, the footnote still wet under it). Mas's hand stays half out beside them, empty.",
    "chars": [],
    "cues": [
-    "music (v3.4): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
+    "music (v3.5): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
    ],
    "sounds": [
     "paper_curl @4"
@@ -7939,7 +8919,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "The signing pen in Mario's hand is now, somehow, a purchase order: for AI chips, quantity \"more\".",
+   "caption": "Every signer's pen at the table is now, somehow, a purchase order: PURCHASE ORDER · AI CHIPS · QTY: MORE on each, Mario's in the foreground (his fleece cuff, the footnote still wet under it). Mas's hand stays half out beside them, empty.",
    "cast": [],
    "speak": [],
    "beat_starts": {
@@ -7965,8 +8945,8 @@
      "must": true
     }
    ],
-   "tc_in": "02:53:01",
-   "tc_out": "02:56:01",
+   "tc_in": "03:23:06",
+   "tc_out": "03:26:06",
    "frames": 72
   },
   {
@@ -7975,8 +8955,8 @@
    "beats": [
     "17.11"
    ],
-   "s": 4225,
-   "e": 4331,
+   "s": 4950,
+   "e": 5056,
    "onscreen": [],
    "lines": [],
    "seq": "17",
@@ -7996,7 +8976,7 @@
     "nesnej"
    ],
    "cues": [
-    "music (v3.4): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
+    "music (v3.5): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
    ],
    "sounds": [],
    "spots": [],
@@ -8043,8 +9023,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "02:56:01",
-   "tc_out": "03:00:11",
+   "tc_in": "03:26:06",
+   "tc_out": "03:30:16",
    "frames": 106
   },
   {
@@ -8053,8 +9033,8 @@
    "beats": [
     "17.13"
    ],
-   "s": 4331,
-   "e": 4349,
+   "s": 5056,
+   "e": 5074,
    "onscreen": [],
    "lines": [],
    "seq": "17",
@@ -8070,7 +9050,7 @@
    "does": "CUT TO BLACK. (The recommended 11-minute split point.)",
    "chars": [],
    "cues": [
-    "music (v3.4): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
+    "music (v3.5): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
    ],
    "sounds": [],
    "spots": [],
@@ -8092,8 +9072,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "03:00:11",
-   "tc_out": "03:01:05",
+   "tc_in": "03:30:16",
+   "tc_out": "03:31:10",
    "frames": 18
   }
  ],
@@ -9944,373 +10924,6 @@
    "pre": false
   },
   {
-   "id": "e1-a2-15-01",
-   "shot": "14.06",
-   "beat": "14.06",
-   "kind": "dialogue",
-   "mode": "on-mic",
-   "who": "CLONE",
-   "text": "Too often we have seen what happens when technology outpaces regulation…",
-   "tag": "O.S.",
-   "on_s": 71.0583,
-   "end_s": 75.6083,
-   "file_s": 70.5483,
-   "abs_in": 1705,
-   "abs_out": 1815,
-   "file_in": 1693,
-   "file_out": 1826,
-   "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-01.wav",
-   "stick_t": 0.35,
-   "stick_in": 0.51,
-   "cut": false,
-   "on_camera": "on",
-   "take_lip_sync": true,
-   "os": false,
-   "via": null,
-   "words": [
-    [
-     "Too",
-     0,
-     6
-    ],
-    [
-     "often",
-     6,
-     17
-    ],
-    [
-     "we",
-     17,
-     20
-    ],
-    [
-     "have",
-     20,
-     23
-    ],
-    [
-     "seen",
-     23,
-     30
-    ],
-    [
-     "what",
-     30,
-     34
-    ],
-    [
-     "happens",
-     34,
-     49
-    ],
-    [
-     "when",
-     50,
-     55
-    ],
-    [
-     "technology",
-     55,
-     73
-    ],
-    [
-     "outpaces",
-     73,
-     90
-    ],
-    [
-     "regulation",
-     90,
-     110
-    ]
-   ],
-   "mouth": [
-    [
-     0,
-     "E"
-    ],
-    [
-     2,
-     "O"
-    ],
-    [
-     10,
-     "E"
-    ],
-    [
-     20,
-     "A"
-    ],
-    [
-     23,
-     "E"
-    ],
-    [
-     25,
-     "A"
-    ],
-    [
-     29,
-     "E"
-    ],
-    [
-     31,
-     "O"
-    ],
-    [
-     33,
-     "A"
-    ],
-    [
-     40,
-     "M"
-    ],
-    [
-     42,
-     "E"
-    ],
-    [
-     52,
-     "A"
-    ],
-    [
-     54,
-     "E"
-    ],
-    [
-     56,
-     "A"
-    ],
-    [
-     59,
-     "E"
-    ],
-    [
-     62,
-     "A"
-    ],
-    [
-     65,
-     "E"
-    ],
-    [
-     74,
-     "A"
-    ],
-    [
-     78,
-     "M"
-    ],
-    [
-     80,
-     "A"
-    ],
-    [
-     84,
-     "E"
-    ],
-    [
-     92,
-     "A"
-    ],
-    [
-     94,
-     "E"
-    ],
-    [
-     101,
-     "A"
-    ],
-    [
-     105,
-     "E"
-    ],
-    [
-     110,
-     "rest"
-    ]
-   ],
-   "mouth_src": "take",
-   "pre": false
-  },
-  {
-   "id": "v31-a2-0003",
-   "shot": "15.02",
-   "beat": "15.02",
-   "kind": "dialogue",
-   "mode": "on-mic",
-   "who": "LAHTNEMULB",
-   "text": "That voice was not mine. The words were not mine.",
-   "tag": "",
-   "on_s": 77.3417,
-   "end_s": 80.7117,
-   "file_s": 76.8417,
-   "abs_in": 1856,
-   "abs_out": 1938,
-   "file_in": 1844,
-   "file_out": 1949,
-   "file": "audio/ep01/v31/act2/wav/v31-a2-0003.wav",
-   "stick_t": 1.3,
-   "stick_in": 0.5,
-   "cut": false,
-   "on_camera": "on",
-   "take_lip_sync": true,
-   "os": false,
-   "via": null,
-   "words": [
-    [
-     "That",
-     0,
-     7
-    ],
-    [
-     "voice",
-     7,
-     14
-    ],
-    [
-     "was",
-     14,
-     19
-    ],
-    [
-     "not",
-     19,
-     25
-    ],
-    [
-     "mine",
-     25,
-     37
-    ],
-    [
-     "The",
-     46,
-     50
-    ],
-    [
-     "words",
-     50,
-     59
-    ],
-    [
-     "were",
-     59,
-     62
-    ],
-    [
-     "not",
-     62,
-     68
-    ],
-    [
-     "mine",
-     68,
-     81
-    ]
-   ],
-   "mouth": [
-    [
-     0,
-     "E"
-    ],
-    [
-     2,
-     "A"
-    ],
-    [
-     5,
-     "E"
-    ],
-    [
-     9,
-     "O"
-    ],
-    [
-     13,
-     "E"
-    ],
-    [
-     16,
-     "A"
-    ],
-    [
-     18,
-     "E"
-    ],
-    [
-     21,
-     "A"
-    ],
-    [
-     24,
-     "E"
-    ],
-    [
-     26,
-     "M"
-    ],
-    [
-     28,
-     "A"
-    ],
-    [
-     35,
-     "E"
-    ],
-    [
-     37,
-     "rest"
-    ],
-    [
-     48,
-     "E"
-    ],
-    [
-     50,
-     "O"
-    ],
-    [
-     55,
-     "E"
-    ],
-    [
-     59,
-     "O"
-    ],
-    [
-     61,
-     "E"
-    ],
-    [
-     64,
-     "A"
-    ],
-    [
-     67,
-     "E"
-    ],
-    [
-     69,
-     "M"
-    ],
-    [
-     72,
-     "A"
-    ],
-    [
-     78,
-     "E"
-    ],
-    [
-     81,
-     "rest"
-    ]
-   ],
-   "mouth_src": "take",
-   "pre": false
-  },
-  {
    "id": "e1-a2-15-03",
    "shot": "15.04",
    "beat": "15.05",
@@ -10319,13 +10932,13 @@
    "who": "SUCRAM",
    "text": "Don't mind me. It's a thread. One of forty-seven.",
    "tag": "",
-   "on_s": 84.7833,
-   "end_s": 87.8833,
-   "file_s": 84.2833,
-   "abs_in": 2034,
-   "abs_out": 2110,
-   "file_in": 2022,
-   "file_out": 2121,
+   "on_s": 77.575,
+   "end_s": 80.675,
+   "file_s": 77.075,
+   "abs_in": 1861,
+   "abs_out": 1937,
+   "file_in": 1849,
+   "file_out": 1948,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-03.wav",
    "stick_t": 0.45,
    "stick_in": 0.5,
@@ -10479,13 +11092,13 @@
    "who": "MAS",
    "text": "which one am i?",
    "tag": "",
-   "on_s": 88.3833,
-   "end_s": 89.6933,
-   "file_s": 87.8233,
-   "abs_in": 2121,
-   "abs_out": 2153,
-   "file_in": 2107,
-   "file_out": 2168,
+   "on_s": 81.175,
+   "end_s": 82.485,
+   "file_s": 80.615,
+   "abs_in": 1948,
+   "abs_out": 1980,
+   "file_in": 1934,
+   "file_out": 1995,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-04.wav",
    "stick_t": 4.05,
    "stick_in": 0.56,
@@ -10566,15 +11179,15 @@
    "who": "SUCRAM",
    "text": "Most of them.",
    "tag": "",
-   "on_s": 90.1433,
-   "end_s": 90.9233,
-   "file_s": 89.6433,
-   "abs_in": 2163,
-   "abs_out": 2183,
-   "file_in": 2151,
-   "file_out": 2193,
+   "on_s": 82.735,
+   "end_s": 83.515,
+   "file_s": 82.235,
+   "abs_in": 1985,
+   "abs_out": 2005,
+   "file_in": 1973,
+   "file_out": 2015,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-05.wav",
-   "stick_t": 5.81,
+   "stick_t": 5.61,
    "stick_in": 0.5,
    "cut": false,
    "on_camera": "on",
@@ -10584,7 +11197,7 @@
    "words": [
     [
      "Most",
-     -1,
+     0,
      5
     ],
     [
@@ -10644,13 +11257,13 @@
    "who": "LAHTNEMULB",
    "text": "You may have had in mind the effect on jobs, which is really my biggest nightmare in the long term.",
    "tag": "",
-   "on_s": 91.8167,
-   "end_s": 97.7467,
-   "file_s": 91.3167,
-   "abs_in": 2203,
-   "abs_out": 2346,
-   "file_in": 2191,
-   "file_out": 2357,
+   "on_s": 84.4,
+   "end_s": 90.33,
+   "file_s": 83.9,
+   "abs_in": 2025,
+   "abs_out": 2168,
+   "file_in": 2013,
+   "file_out": 2179,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-06.wav",
    "stick_t": 0.4,
    "stick_in": 0.5,
@@ -10915,13 +11528,13 @@
    "who": "MAS",
    "text": "gtp-4 and other systems like it are good at doing tasks, not jobs.",
    "tag": "",
-   "on_s": 98.4467,
-   "end_s": 103.7067,
-   "file_s": 97.9367,
-   "abs_in": 2362,
-   "abs_out": 2489,
-   "file_in": 2350,
-   "file_out": 2503,
+   "on_s": 91.03,
+   "end_s": 96.29,
+   "file_s": 90.52,
+   "abs_in": 2184,
+   "abs_out": 2311,
+   "file_in": 2172,
+   "file_out": 2325,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-07.wav",
    "stick_t": 0.405,
    "stick_in": 0.51,
@@ -11152,13 +11765,13 @@
    "who": "SENATOR",
    "text": "Is there anything you'd like this committee to do?",
    "tag": "O.S.",
-   "on_s": 104.5667,
-   "end_s": 107.3267,
-   "file_s": 104.0567,
-   "abs_in": 2509,
-   "abs_out": 2576,
-   "file_in": 2497,
-   "file_out": 2587,
+   "on_s": 97.15,
+   "end_s": 99.91,
+   "file_s": 96.64,
+   "abs_in": 2331,
+   "abs_out": 2398,
+   "file_in": 2319,
+   "file_out": 2409,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-15.wav",
    "stick_t": 0.4,
    "stick_in": 0.51,
@@ -11227,13 +11840,13 @@
    "who": "MAS",
    "text": "i would form a new agency that licenses any effort above a certain scale of capabilities…",
    "tag": "",
-   "on_s": 107.8,
-   "end_s": 114.47,
-   "file_s": 107.21,
-   "abs_in": 2587,
-   "abs_out": 2748,
-   "file_in": 2573,
-   "file_out": 2761,
+   "on_s": 100.3833,
+   "end_s": 107.0533,
+   "file_s": 99.7933,
+   "abs_in": 2409,
+   "abs_out": 2570,
+   "file_in": 2395,
+   "file_out": 2583,
    "file": "audio/ep01/v32/act2/wav/v32-a2-0001.wav",
    "stick_t": 0.3,
    "stick_in": 0.59,
@@ -11474,13 +12087,13 @@
    "who": "SENATOR",
    "text": "Would you come and run it?",
    "tag": "O.S.",
-   "on_s": 118.3833,
-   "end_s": 119.9383,
-   "file_s": 118.0533,
-   "abs_in": 2841,
-   "abs_out": 2879,
-   "file_in": 2833,
-   "file_out": 3027,
+   "on_s": 110.9667,
+   "end_s": 112.5217,
+   "file_s": 110.6367,
+   "abs_in": 2663,
+   "abs_out": 2701,
+   "file_in": 2655,
+   "file_out": 2849,
    "file": "audio/ep01/v32/act2/wav/v32-a2-0002.wav",
    "stick_t": 0.3,
    "stick_in": 0.33,
@@ -11534,15 +12147,15 @@
    "who": "MAS",
    "text": "i love my current job.",
    "tag": "",
-   "on_s": 120.5383,
-   "end_s": 122.1283,
-   "file_s": 120.0183,
-   "abs_in": 2892,
-   "abs_out": 2932,
-   "file_in": 2880,
-   "file_out": 2946,
+   "on_s": 112.9717,
+   "end_s": 114.5617,
+   "file_s": 112.4517,
+   "abs_in": 2711,
+   "abs_out": 2750,
+   "file_in": 2698,
+   "file_out": 2764,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-11.wav",
-   "stick_t": 2.455,
+   "stick_t": 2.305,
    "stick_in": 0.52,
    "cut": false,
    "on_camera": "on",
@@ -11552,28 +12165,28 @@
    "words": [
     [
      "I",
-     2,
+     1,
      5
     ],
     [
      "love",
      5,
-     13
+     12
     ],
     [
      "my",
-     13,
+     12,
      17
     ],
     [
      "current",
      17,
-     26
+     25
     ],
     [
      "job",
-     26,
-     39
+     25,
+     38
     ]
    ],
    "mouth": [
@@ -11582,47 +12195,47 @@
      "rest"
     ],
     [
-     2,
+     1,
      "A"
     ],
     [
-     5,
+     4,
      "E"
     ],
     [
-     7,
+     6,
      "A"
     ],
     [
-     11,
+     10,
      "E"
     ],
     [
-     13,
+     12,
      "M"
     ],
     [
-     15,
+     14,
      "A"
     ],
     [
-     18,
+     17,
      "O"
     ],
     [
-     20,
+     19,
      "E"
     ],
     [
-     29,
+     28,
      "A"
     ],
     [
-     36,
+     35,
      "M"
     ],
     [
-     39,
+     38,
      "rest"
     ]
    ],
@@ -11638,15 +12251,15 @@
    "who": "SENATOR",
    "text": "You love it. Do you make a lot of money doing it?",
    "tag": "O.S.",
-   "on_s": 122.7283,
-   "end_s": 126.1483,
-   "file_s": 122.2283,
-   "abs_in": 2945,
-   "abs_out": 3028,
-   "file_in": 2933,
-   "file_out": 3039,
+   "on_s": 114.8117,
+   "end_s": 118.2317,
+   "file_s": 114.3117,
+   "abs_in": 2755,
+   "abs_out": 2838,
+   "file_in": 2743,
+   "file_out": 2849,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-12.wav",
-   "stick_t": 4.645,
+   "stick_t": 4.145,
    "stick_in": 0.5,
    "cut": false,
    "on_camera": "os",
@@ -11720,24 +12333,24 @@
    "pre": false
   },
   {
-   "id": "e1-a2-15-13",
+   "id": "v35-a2-0001",
    "shot": "15.13",
    "beat": "15.13",
    "kind": "dialogue",
    "mode": "on-mic",
-   "who": "CLONE",
-   "text": "Health insurance.",
+   "who": "MAS",
+   "text": "i get paid enough for health insurance.",
    "tag": "",
-   "on_s": 131.1583,
-   "end_s": 132.3583,
-   "file_s": 130.6483,
-   "abs_in": 3147,
-   "abs_out": 3177,
-   "file_in": 3135,
-   "file_out": 3191,
-   "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-13.wav",
-   "stick_t": 1.7,
-   "stick_in": 0.51,
+   "on_s": 122.5417,
+   "end_s": 124.7617,
+   "file_s": 122.0217,
+   "abs_in": 2941,
+   "abs_out": 2995,
+   "file_in": 2928,
+   "file_out": 3010,
+   "file": "audio/ep01/v35/act2/wav/v35-a2-0001.wav",
+   "stick_t": 1.0,
+   "stick_in": 0.52,
    "cut": false,
    "on_camera": "on",
    "take_lip_sync": true,
@@ -11745,14 +12358,39 @@
    "via": null,
    "words": [
     [
-     "Health",
+     "i",
      1,
-     9
+     6
+    ],
+    [
+     "get",
+     6,
+     11
+    ],
+    [
+     "paid",
+     11,
+     19
+    ],
+    [
+     "enough",
+     19,
+     26
+    ],
+    [
+     "for",
+     26,
+     29
+    ],
+    [
+     "health",
+     29,
+     36
     ],
     [
      "insurance",
-     9,
-     30
+     36,
+     53
     ]
    ],
    "mouth": [
@@ -11765,19 +12403,43 @@
      "A"
     ],
     [
-     6,
+     11,
+     "M"
+    ],
+    [
+     13,
+     "A"
+    ],
+    [
+     17,
      "E"
     ],
     [
-     16,
+     22,
+     "A"
+    ],
+    [
+     26,
      "O"
     ],
     [
-     20,
+     29,
+     "A"
+    ],
+    [
+     33,
      "E"
     ],
     [
-     30,
+     42,
+     "O"
+    ],
+    [
+     45,
+     "E"
+    ],
+    [
+     53,
      "rest"
     ]
    ],
@@ -11793,13 +12455,13 @@
    "who": "SUCRAM",
    "text": "That proves nothing. Partially.",
    "tag": "",
-   "on_s": 133.4083,
-   "end_s": 135.1983,
-   "file_s": 132.9083,
-   "abs_in": 3201,
-   "abs_out": 3245,
-   "file_in": 3189,
-   "file_out": 3257,
+   "on_s": 126.2417,
+   "end_s": 128.0317,
+   "file_s": 125.7417,
+   "abs_in": 3029,
+   "abs_out": 3073,
+   "file_in": 3017,
+   "file_out": 3085,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-14.wav",
    "stick_t": 0.45,
    "stick_in": 0.5,
@@ -11888,13 +12550,13 @@
    "who": "MAS",
    "text": "i have no equity in nopeai.",
    "tag": "",
-   "on_s": 135.6983,
-   "end_s": 137.9483,
-   "file_s": 135.1983,
-   "abs_in": 3256,
-   "abs_out": 3311,
-   "file_in": 3244,
-   "file_out": 3324,
+   "on_s": 128.5317,
+   "end_s": 130.7817,
+   "file_s": 128.0317,
+   "abs_in": 3084,
+   "abs_out": 3139,
+   "file_in": 3072,
+   "file_out": 3152,
    "file": "audio/ep01/v3/act2/wav/v3-a2-0001.wav",
    "stick_t": 2.74,
    "stick_in": 0.5,
@@ -11985,6 +12647,980 @@
    "pre": false
   },
   {
+   "id": "v35-a2-0002",
+   "shot": "v35-28.02",
+   "beat": "v35-28.02",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "GERG",
+   "text": "The next one costs billions. Nobody donates billions.",
+   "tag": "",
+   "on_s": 134.775,
+   "end_s": 137.925,
+   "file_s": 134.265,
+   "abs_in": 3234,
+   "abs_out": 3311,
+   "file_in": 3222,
+   "file_out": 3327,
+   "file": "audio/ep01/v35/act2/wav/v35-a2-0002.wav",
+   "stick_t": 0.4,
+   "stick_in": 0.51,
+   "cut": false,
+   "on_camera": "on",
+   "take_lip_sync": true,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "The",
+     -1,
+     0
+    ],
+    [
+     "next",
+     0,
+     6
+    ],
+    [
+     "one",
+     6,
+     10
+    ],
+    [
+     "costs",
+     10,
+     18
+    ],
+    [
+     "billions",
+     18,
+     32
+    ],
+    [
+     "Nobody",
+     40,
+     50
+    ],
+    [
+     "donates",
+     50,
+     61
+    ],
+    [
+     "billions",
+     61,
+     76
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "E"
+    ],
+    [
+     2,
+     "A"
+    ],
+    [
+     4,
+     "E"
+    ],
+    [
+     7,
+     "A"
+    ],
+    [
+     9,
+     "E"
+    ],
+    [
+     11,
+     "O"
+    ],
+    [
+     15,
+     "E"
+    ],
+    [
+     19,
+     "M"
+    ],
+    [
+     21,
+     "A"
+    ],
+    [
+     23,
+     "E"
+    ],
+    [
+     32,
+     "rest"
+    ],
+    [
+     42,
+     "O"
+    ],
+    [
+     45,
+     "A"
+    ],
+    [
+     47,
+     "E"
+    ],
+    [
+     51,
+     "O"
+    ],
+    [
+     54,
+     "E"
+    ],
+    [
+     56,
+     "A"
+    ],
+    [
+     59,
+     "E"
+    ],
+    [
+     61,
+     "M"
+    ],
+    [
+     63,
+     "A"
+    ],
+    [
+     66,
+     "E"
+    ],
+    [
+     76,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  },
+  {
+   "id": "v35-a2-0003",
+   "shot": "v35-28.02",
+   "beat": "v35-28.02",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "MAS",
+   "text": "so they don't donate. they invest.",
+   "tag": "",
+   "on_s": 138.375,
+   "end_s": 140.535,
+   "file_s": 137.815,
+   "abs_in": 3321,
+   "abs_out": 3373,
+   "file_in": 3307,
+   "file_out": 3389,
+   "file": "audio/ep01/v35/act2/wav/v35-a2-0003.wav",
+   "stick_t": 4.0,
+   "stick_in": 0.56,
+   "cut": false,
+   "on_camera": "on",
+   "take_lip_sync": true,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "so",
+     0,
+     3
+    ],
+    [
+     "they",
+     3,
+     6
+    ],
+    [
+     "don't",
+     6,
+     12
+    ],
+    [
+     "donate",
+     12,
+     24
+    ],
+    [
+     "they",
+     30,
+     35
+    ],
+    [
+     "invest",
+     35,
+     52
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "rest"
+    ],
+    [
+     1,
+     "O"
+    ],
+    [
+     4,
+     "A"
+    ],
+    [
+     7,
+     "O"
+    ],
+    [
+     10,
+     "E"
+    ],
+    [
+     13,
+     "O"
+    ],
+    [
+     18,
+     "A"
+    ],
+    [
+     22,
+     "E"
+    ],
+    [
+     24,
+     "rest"
+    ],
+    [
+     32,
+     "A"
+    ],
+    [
+     35,
+     "E"
+    ],
+    [
+     43,
+     "A"
+    ],
+    [
+     48,
+     "E"
+    ],
+    [
+     52,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  },
+  {
+   "id": "v35-a2-0004",
+   "shot": "v35-28.02",
+   "beat": "v35-28.02",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "ALYI",
+   "text": "Capped at what?",
+   "tag": "",
+   "on_s": 141.335,
+   "end_s": 142.375,
+   "file_s": 140.815,
+   "abs_in": 3392,
+   "abs_out": 3417,
+   "file_in": 3379,
+   "file_out": 3429,
+   "file": "audio/ep01/v35/act2/wav/v35-a2-0004.wav",
+   "stick_t": 6.96,
+   "stick_in": 0.52,
+   "cut": false,
+   "on_camera": "on",
+   "take_lip_sync": true,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "Capped",
+     1,
+     10
+    ],
+    [
+     "at",
+     10,
+     14
+    ],
+    [
+     "what",
+     14,
+     24
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "rest"
+    ],
+    [
+     2,
+     "A"
+    ],
+    [
+     6,
+     "M"
+    ],
+    [
+     8,
+     "E"
+    ],
+    [
+     10,
+     "A"
+    ],
+    [
+     12,
+     "E"
+    ],
+    [
+     14,
+     "O"
+    ],
+    [
+     16,
+     "A"
+    ],
+    [
+     21,
+     "E"
+    ],
+    [
+     24,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  },
+  {
+   "id": "v35-a2-0005",
+   "shot": "v35-28.02",
+   "beat": "v35-28.02",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "MAS",
+   "text": "a hundred times.",
+   "tag": "",
+   "on_s": 142.825,
+   "end_s": 144.045,
+   "file_s": 142.245,
+   "abs_in": 3427,
+   "abs_out": 3458,
+   "file_in": 3413,
+   "file_out": 3472,
+   "file": "audio/ep01/v35/act2/wav/v35-a2-0005.wav",
+   "stick_t": 8.45,
+   "stick_in": 0.58,
+   "cut": false,
+   "on_camera": "on",
+   "take_lip_sync": true,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "a",
+     1,
+     2
+    ],
+    [
+     "hundred",
+     2,
+     13
+    ],
+    [
+     "times",
+     13,
+     30
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "A"
+    ],
+    [
+     5,
+     "E"
+    ],
+    [
+     16,
+     "A"
+    ],
+    [
+     24,
+     "M"
+    ],
+    [
+     27,
+     "E"
+    ],
+    [
+     30,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  },
+  {
+   "id": "v35-a2-0006",
+   "shot": "v35-28.02",
+   "beat": "v35-28.02",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "ALYI",
+   "text": "And who's in charge?",
+   "tag": "",
+   "on_s": 144.845,
+   "end_s": 146.325,
+   "file_s": 144.335,
+   "abs_in": 3476,
+   "abs_out": 3512,
+   "file_in": 3464,
+   "file_out": 3525,
+   "file": "audio/ep01/v35/act2/wav/v35-a2-0006.wav",
+   "stick_t": 10.47,
+   "stick_in": 0.51,
+   "cut": false,
+   "on_camera": "on",
+   "take_lip_sync": true,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "And",
+     0,
+     5
+    ],
+    [
+     "who's",
+     5,
+     14
+    ],
+    [
+     "in",
+     14,
+     19
+    ],
+    [
+     "charge",
+     19,
+     36
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "rest"
+    ],
+    [
+     1,
+     "A"
+    ],
+    [
+     3,
+     "E"
+    ],
+    [
+     5,
+     "O"
+    ],
+    [
+     12,
+     "E"
+    ],
+    [
+     23,
+     "A"
+    ],
+    [
+     30,
+     "E"
+    ],
+    [
+     36,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  },
+  {
+   "id": "v35-a2-0007",
+   "shot": "v35-28.02",
+   "beat": "v35-28.02",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "MAS",
+   "text": "the board.",
+   "tag": "",
+   "on_s": 146.775,
+   "end_s": 147.575,
+   "file_s": 146.255,
+   "abs_in": 3522,
+   "abs_out": 3542,
+   "file_in": 3510,
+   "file_out": 3557,
+   "file": "audio/ep01/v35/act2/wav/v35-a2-0007.wav",
+   "stick_t": 12.4,
+   "stick_in": 0.52,
+   "cut": false,
+   "on_camera": "on",
+   "take_lip_sync": true,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "the",
+     1,
+     4
+    ],
+    [
+     "board",
+     4,
+     20
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "rest"
+    ],
+    [
+     1,
+     "E"
+    ],
+    [
+     4,
+     "M"
+    ],
+    [
+     7,
+     "O"
+    ],
+    [
+     14,
+     "E"
+    ],
+    [
+     20,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  },
+  {
+   "id": "v35-a2-0008",
+   "shot": "v35-28.03",
+   "beat": "v35-28.03",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "MADA",
+   "text": "And you?",
+   "tag": "",
+   "on_s": 148.7667,
+   "end_s": 149.4867,
+   "file_s": 148.2667,
+   "abs_in": 3570,
+   "abs_out": 3588,
+   "file_in": 3558,
+   "file_out": 3599,
+   "file": "audio/ep01/v35/act2/wav/v35-a2-0008.wav",
+   "stick_t": 0.6,
+   "stick_in": 0.5,
+   "cut": false,
+   "on_camera": "on",
+   "take_lip_sync": true,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "And",
+     0,
+     7
+    ],
+    [
+     "you",
+     7,
+     18
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "A"
+    ],
+    [
+     4,
+     "E"
+    ],
+    [
+     11,
+     "O"
+    ],
+    [
+     18,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  },
+  {
+   "id": "v35-a2-0009",
+   "shot": "v35-28.03",
+   "beat": "v35-28.03",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "MAS",
+   "text": "nothing.",
+   "tag": "",
+   "on_s": 149.9367,
+   "end_s": 150.6767,
+   "file_s": 149.4167,
+   "abs_in": 3598,
+   "abs_out": 3617,
+   "file_in": 3586,
+   "file_out": 3632,
+   "file": "audio/ep01/v35/act2/wav/v35-a2-0009.wav",
+   "stick_t": 1.77,
+   "stick_in": 0.52,
+   "cut": false,
+   "on_camera": "on",
+   "take_lip_sync": true,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "nothing",
+     2,
+     18
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "rest"
+    ],
+    [
+     3,
+     "E"
+    ],
+    [
+     4,
+     "A"
+    ],
+    [
+     10,
+     "E"
+    ],
+    [
+     18,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  },
+  {
+   "id": "v35-a2-0010",
+   "shot": "v35-28.03",
+   "beat": "v35-28.03",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "MADA",
+   "text": "Good answer.",
+   "tag": "",
+   "on_s": 151.1767,
+   "end_s": 151.9967,
+   "file_s": 150.6767,
+   "abs_in": 3628,
+   "abs_out": 3648,
+   "file_in": 3616,
+   "file_out": 3660,
+   "file": "audio/ep01/v35/act2/wav/v35-a2-0010.wav",
+   "stick_t": 3.01,
+   "stick_in": 0.5,
+   "cut": false,
+   "on_camera": "on",
+   "take_lip_sync": true,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "Good",
+     0,
+     5
+    ],
+    [
+     "answer",
+     5,
+     20
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "rest"
+    ],
+    [
+     1,
+     "O"
+    ],
+    [
+     4,
+     "E"
+    ],
+    [
+     6,
+     "A"
+    ],
+    [
+     10,
+     "E"
+    ],
+    [
+     20,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  },
+  {
+   "id": "v35-a2-0011",
+   "shot": "v35-29.02",
+   "beat": "v35-29.02",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "MAS",
+   "text": "if we can comply, we will, and if we can't, we'll cease operating.",
+   "tag": "pa",
+   "on_s": 162.3167,
+   "end_s": 166.4267,
+   "file_s": 161.7467,
+   "abs_in": 3895,
+   "abs_out": 3995,
+   "file_in": 3881,
+   "file_out": 4008,
+   "file": "audio/ep01/v35/act2/wav/v35-a2-0011.wav",
+   "stick_t": 0.4,
+   "stick_in": 0.57,
+   "cut": false,
+   "on_camera": "on",
+   "take_lip_sync": true,
+   "os": false,
+   "via": "pa",
+   "words": [
+    [
+     "if",
+     0,
+     3
+    ],
+    [
+     "we",
+     3,
+     7
+    ],
+    [
+     "can",
+     7,
+     11
+    ],
+    [
+     "comply",
+     11,
+     25
+    ],
+    [
+     "we",
+     26,
+     31
+    ],
+    [
+     "will",
+     31,
+     47
+    ],
+    [
+     "and",
+     49,
+     52
+    ],
+    [
+     "if",
+     52,
+     55
+    ],
+    [
+     "we",
+     55,
+     59
+    ],
+    [
+     "can't",
+     59,
+     68
+    ],
+    [
+     "we'll",
+     69,
+     73
+    ],
+    [
+     "cease",
+     73,
+     82
+    ],
+    [
+     "operating",
+     82,
+     99
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "E"
+    ],
+    [
+     3,
+     "O"
+    ],
+    [
+     5,
+     "E"
+    ],
+    [
+     7,
+     "A"
+    ],
+    [
+     9,
+     "E"
+    ],
+    [
+     15,
+     "M"
+    ],
+    [
+     18,
+     "E"
+    ],
+    [
+     20,
+     "A"
+    ],
+    [
+     26,
+     "O"
+    ],
+    [
+     28,
+     "E"
+    ],
+    [
+     31,
+     "O"
+    ],
+    [
+     35,
+     "A"
+    ],
+    [
+     39,
+     "E"
+    ],
+    [
+     46,
+     "rest"
+    ],
+    [
+     49,
+     "A"
+    ],
+    [
+     51,
+     "E"
+    ],
+    [
+     55,
+     "O"
+    ],
+    [
+     57,
+     "E"
+    ],
+    [
+     60,
+     "A"
+    ],
+    [
+     64,
+     "E"
+    ],
+    [
+     69,
+     "O"
+    ],
+    [
+     71,
+     "E"
+    ],
+    [
+     75,
+     "A"
+    ],
+    [
+     79,
+     "E"
+    ],
+    [
+     81,
+     "A"
+    ],
+    [
+     84,
+     "M"
+    ],
+    [
+     86,
+     "E"
+    ],
+    [
+     90,
+     "A"
+    ],
+    [
+     93,
+     "E"
+    ],
+    [
+     99,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  },
+  {
    "id": "e1-a2-17-01",
    "shot": "17.02",
    "beat": "17.02",
@@ -11993,13 +13629,13 @@
    "who": "MARIO",
    "text": "It's one sentence. It doesn't say what it costs.",
    "tag": "",
-   "on_s": 150.7917,
-   "end_s": 153.4117,
-   "file_s": 150.2917,
-   "abs_in": 3619,
-   "abs_out": 3682,
-   "file_in": 3607,
-   "file_out": 3695,
+   "on_s": 181.0,
+   "end_s": 183.62,
+   "file_s": 180.5,
+   "abs_in": 4344,
+   "abs_out": 4407,
+   "file_in": 4332,
+   "file_out": 4420,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-17-01.wav",
    "stick_t": 0.5,
    "stick_in": 0.5,
@@ -12137,13 +13773,13 @@
    "who": "MARIO",
    "text": "So I'm adding a footnote. A short one.",
    "tag": "",
-   "on_s": 154.3117,
-   "end_s": 156.6717,
-   "file_s": 153.8117,
-   "abs_in": 3703,
-   "abs_out": 3761,
-   "file_in": 3691,
-   "file_out": 3772,
+   "on_s": 184.52,
+   "end_s": 186.88,
+   "file_s": 184.02,
+   "abs_in": 4428,
+   "abs_out": 4486,
+   "file_in": 4416,
+   "file_out": 4497,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-17-02.wav",
    "stick_t": 4.02,
    "stick_in": 0.5,
@@ -12284,13 +13920,13 @@
    "who": "MAS",
    "text": "we'll read it.",
    "tag": "",
-   "on_s": 157.2717,
-   "end_s": 158.2017,
-   "file_s": 156.6817,
-   "abs_in": 3774,
-   "abs_out": 3797,
-   "file_in": 3760,
-   "file_out": 3812,
+   "on_s": 187.48,
+   "end_s": 188.41,
+   "file_s": 186.89,
+   "abs_in": 4499,
+   "abs_out": 4522,
+   "file_in": 4485,
+   "file_out": 4537,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-17-03.wav",
    "stick_t": 6.98,
    "stick_in": 0.59,
@@ -12354,13 +13990,13 @@
    "who": "MARIO",
    "text": "It has an appendix.",
    "tag": "",
-   "on_s": 158.7017,
-   "end_s": 159.9817,
-   "file_s": 158.2017,
-   "abs_in": 3808,
-   "abs_out": 3840,
-   "file_in": 3796,
-   "file_out": 3851,
+   "on_s": 188.91,
+   "end_s": 190.19,
+   "file_s": 188.41,
+   "abs_in": 4533,
+   "abs_out": 4565,
+   "file_in": 4521,
+   "file_out": 4576,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-17-04.wav",
    "stick_t": 8.41,
    "stick_in": 0.5,
@@ -12433,13 +14069,13 @@
    "who": "MARIO",
    "text": "Can we help you? This is the extinction table.",
    "tag": "",
-   "on_s": 163.4583,
-   "end_s": 166.0783,
-   "file_s": 162.9583,
-   "abs_in": 3923,
-   "abs_out": 3986,
-   "file_in": 3911,
-   "file_out": 3998,
+   "on_s": 193.6667,
+   "end_s": 196.2867,
+   "file_s": 193.1667,
+   "abs_in": 4648,
+   "abs_out": 4711,
+   "file_in": 4636,
+   "file_out": 4723,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-17-05.wav",
    "stick_t": 0.75,
    "stick_in": 0.5,
@@ -12565,13 +14201,13 @@
    "who": "NESNEJ",
    "text": "The more you buy, the more you save.",
    "tag": "",
-   "on_s": 166.678,
-   "end_s": 168.828,
-   "file_s": 166.178,
-   "abs_in": 4000,
-   "abs_out": 4052,
-   "file_in": 3988,
-   "file_out": 4068,
+   "on_s": 196.8863,
+   "end_s": 199.0363,
+   "file_s": 196.3863,
+   "abs_in": 4725,
+   "abs_out": 4777,
+   "file_in": 4713,
+   "file_out": 4793,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-17-06.wav",
    "stick_t": 0.303,
    "stick_in": 0.5,
@@ -12703,29 +14339,36 @@
   },
   {
    "text": "MAY 16, 2023 · SENATE JUDICIARY",
-   "s": 1736,
-   "e": 1825,
-   "shot": "15.01",
+   "s": 1749,
+   "e": 1836,
+   "shot": "v35-27.00",
    "floor_f": 44
   },
   {
+   "text": "MAR 2019",
+   "s": 3174,
+   "e": 3225,
+   "shot": "v35-28.01",
+   "floor_f": 16
+  },
+  {
    "text": "MAY 24, 2023 · LONDON",
-   "s": 3346,
-   "e": 3373,
-   "shot": "16.01",
+   "s": 3890,
+   "e": 4004,
+   "shot": "v35-29.02",
    "floor_f": 32
   },
   {
    "text": "MAY 26, 2023",
-   "s": 3404,
-   "e": 3420,
-   "shot": "16.01",
+   "s": 4075,
+   "e": 4143,
+   "shot": "v35-29.04",
    "floor_f": 21
   },
   {
    "text": "MAY 30, 2023",
-   "s": 3466,
-   "e": 3506,
+   "s": 4179,
+   "e": 4219,
    "shot": "17.01",
    "floor_f": 21
   }
@@ -12937,33 +14580,9 @@
    "os": false
   },
   {
-   "s": 1705,
-   "e": 1815,
-   "hold_to": 1827,
-   "who": "CLONE",
-   "shown": "GLOSSY MAN AT THE MIC",
-   "text": "Too often we have seen what happens when technology outpaces regulation…",
-   "kind": "dialogue",
-   "mode": "on-mic",
-   "id": "e1-a2-15-01",
-   "os": false
-  },
-  {
-   "s": 1856,
-   "e": 1938,
-   "hold_to": 1950,
-   "who": "LAHTNEMULB",
-   "shown": "LAHTNEMULB",
-   "text": "That voice was not mine. The words were not mine.",
-   "kind": "dialogue",
-   "mode": "on-mic",
-   "id": "v31-a2-0003",
-   "os": false
-  },
-  {
-   "s": 2034,
-   "e": 2110,
-   "hold_to": 2121,
+   "s": 1861,
+   "e": 1937,
+   "hold_to": 1948,
    "who": "SUCRAM",
    "shown": "SUCRAM",
    "text": "Don't mind me. It's a thread. One of forty-seven.",
@@ -12973,9 +14592,9 @@
    "os": false
   },
   {
-   "s": 2121,
-   "e": 2153,
-   "hold_to": 2163,
+   "s": 1948,
+   "e": 1980,
+   "hold_to": 1985,
    "who": "MAS",
    "shown": "MAS",
    "text": "which one am i?",
@@ -12985,9 +14604,9 @@
    "os": false
   },
   {
-   "s": 2163,
-   "e": 2183,
-   "hold_to": 2195,
+   "s": 1985,
+   "e": 2005,
+   "hold_to": 2017,
    "who": "SUCRAM",
    "shown": "SUCRAM",
    "text": "Most of them.",
@@ -12997,9 +14616,9 @@
    "os": false
   },
   {
-   "s": 2203,
-   "e": 2346,
-   "hold_to": 2358,
+   "s": 2025,
+   "e": 2168,
+   "hold_to": 2180,
    "who": "LAHTNEMULB",
    "shown": "LAHTNEMULB",
    "text": "You may have had in mind the effect on jobs, which is really my biggest nightmare in the long term.",
@@ -13009,9 +14628,9 @@
    "os": false
   },
   {
-   "s": 2362,
-   "e": 2489,
-   "hold_to": 2501,
+   "s": 2184,
+   "e": 2311,
+   "hold_to": 2323,
    "who": "MAS",
    "shown": "MAS",
    "text": "gtp-4 and other systems like it are good at doing tasks, not jobs.",
@@ -13021,9 +14640,9 @@
    "os": false
   },
   {
-   "s": 2509,
-   "e": 2576,
-   "hold_to": 2587,
+   "s": 2331,
+   "e": 2398,
+   "hold_to": 2409,
    "who": "SENATOR",
    "shown": "A SENATOR",
    "text": "Is there anything you'd like this committee to do?",
@@ -13033,9 +14652,9 @@
    "os": true
   },
   {
-   "s": 2587,
-   "e": 2748,
-   "hold_to": 2760,
+   "s": 2409,
+   "e": 2570,
+   "hold_to": 2582,
    "who": "MAS",
    "shown": "MAS",
    "text": "i would form a new agency that licenses any effort above a certain scale of capabilities…",
@@ -13045,9 +14664,9 @@
    "os": false
   },
   {
-   "s": 2841,
-   "e": 2879,
-   "hold_to": 2891,
+   "s": 2663,
+   "e": 2701,
+   "hold_to": 2711,
    "who": "SENATOR",
    "shown": "A SENATOR",
    "text": "Would you come and run it?",
@@ -13057,9 +14676,9 @@
    "os": true
   },
   {
-   "s": 2892,
-   "e": 2932,
-   "hold_to": 2944,
+   "s": 2711,
+   "e": 2750,
+   "hold_to": 2755,
    "who": "MAS",
    "shown": "MAS",
    "text": "i love my current job.",
@@ -13069,9 +14688,9 @@
    "os": false
   },
   {
-   "s": 2945,
-   "e": 3028,
-   "hold_to": 3040,
+   "s": 2755,
+   "e": 2838,
+   "hold_to": 2850,
    "who": "SENATOR",
    "shown": "A SENATOR",
    "text": "You love it. Do you make a lot of money doing it?",
@@ -13081,21 +14700,21 @@
    "os": true
   },
   {
-   "s": 3147,
-   "e": 3177,
-   "hold_to": 3189,
-   "who": "CLONE",
-   "shown": "LAHTNEMULB (THE CLONE)",
-   "text": "Health insurance.",
+   "s": 2941,
+   "e": 2995,
+   "hold_to": 3007,
+   "who": "MAS",
+   "shown": "MAS",
+   "text": "i get paid enough for health insurance.",
    "kind": "dialogue",
    "mode": "on-mic",
-   "id": "e1-a2-15-13",
+   "id": "v35-a2-0001",
    "os": false
   },
   {
-   "s": 3201,
-   "e": 3245,
-   "hold_to": 3256,
+   "s": 3029,
+   "e": 3073,
+   "hold_to": 3084,
    "who": "SUCRAM",
    "shown": "SUCRAM",
    "text": "That proves nothing. Partially.",
@@ -13105,9 +14724,9 @@
    "os": false
   },
   {
-   "s": 3256,
-   "e": 3311,
-   "hold_to": 3323,
+   "s": 3084,
+   "e": 3139,
+   "hold_to": 3151,
    "who": "MAS",
    "shown": "MAS",
    "text": "i have no equity in nopeai.",
@@ -13117,9 +14736,129 @@
    "os": false
   },
   {
-   "s": 3619,
-   "e": 3682,
-   "hold_to": 3694,
+   "s": 3234,
+   "e": 3311,
+   "hold_to": 3321,
+   "who": "GERG",
+   "shown": "MAN WITH THE CLOUD BILL",
+   "text": "The next one costs billions. Nobody donates billions.",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "v35-a2-0002",
+   "os": false
+  },
+  {
+   "s": 3321,
+   "e": 3373,
+   "hold_to": 3385,
+   "who": "MAS",
+   "shown": "MAS",
+   "text": "so they don't donate. they invest.",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "v35-a2-0003",
+   "os": false
+  },
+  {
+   "s": 3392,
+   "e": 3417,
+   "hold_to": 3427,
+   "who": "ALYI",
+   "shown": "MAN AT THE WHITEBOARD",
+   "text": "Capped at what?",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "v35-a2-0004",
+   "os": false
+  },
+  {
+   "s": 3427,
+   "e": 3458,
+   "hold_to": 3470,
+   "who": "MAS",
+   "shown": "MAS",
+   "text": "a hundred times.",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "v35-a2-0005",
+   "os": false
+  },
+  {
+   "s": 3476,
+   "e": 3512,
+   "hold_to": 3522,
+   "who": "ALYI",
+   "shown": "MAN AT THE WHITEBOARD",
+   "text": "And who's in charge?",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "v35-a2-0006",
+   "os": false
+  },
+  {
+   "s": 3522,
+   "e": 3542,
+   "hold_to": 3554,
+   "who": "MAS",
+   "shown": "MAS",
+   "text": "the board.",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "v35-a2-0007",
+   "os": false
+  },
+  {
+   "s": 3570,
+   "e": 3588,
+   "hold_to": 3598,
+   "who": "MADA",
+   "shown": "MAN WITH THE SPINNER",
+   "text": "And you?",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "v35-a2-0008",
+   "os": false
+  },
+  {
+   "s": 3598,
+   "e": 3617,
+   "hold_to": 3628,
+   "who": "MAS",
+   "shown": "MAS",
+   "text": "nothing.",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "v35-a2-0009",
+   "os": false
+  },
+  {
+   "s": 3628,
+   "e": 3648,
+   "hold_to": 3660,
+   "who": "MADA",
+   "shown": "MAN WITH THE SPINNER",
+   "text": "Good answer.",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "v35-a2-0010",
+   "os": false
+  },
+  {
+   "s": 3895,
+   "e": 3995,
+   "hold_to": 4007,
+   "who": "MAS",
+   "shown": "MAS",
+   "text": "if we can comply, we will, and if we can't, we'll cease operating.",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "v35-a2-0011",
+   "os": false
+  },
+  {
+   "s": 4344,
+   "e": 4407,
+   "hold_to": 4419,
    "who": "MARIO",
    "shown": "MARIO",
    "text": "It's one sentence. It doesn't say what it costs.",
@@ -13129,9 +14868,9 @@
    "os": false
   },
   {
-   "s": 3703,
-   "e": 3761,
-   "hold_to": 3773,
+   "s": 4428,
+   "e": 4486,
+   "hold_to": 4498,
    "who": "MARIO",
    "shown": "MARIO",
    "text": "So I'm adding a footnote. A short one.",
@@ -13141,9 +14880,9 @@
    "os": false
   },
   {
-   "s": 3774,
-   "e": 3797,
-   "hold_to": 3808,
+   "s": 4499,
+   "e": 4522,
+   "hold_to": 4533,
    "who": "MAS",
    "shown": "MAS",
    "text": "we'll read it.",
@@ -13153,9 +14892,9 @@
    "os": false
   },
   {
-   "s": 3808,
-   "e": 3840,
-   "hold_to": 3852,
+   "s": 4533,
+   "e": 4565,
+   "hold_to": 4577,
    "who": "MARIO",
    "shown": "MARIO",
    "text": "It has an appendix.",
@@ -13165,9 +14904,9 @@
    "os": false
   },
   {
-   "s": 3923,
-   "e": 3986,
-   "hold_to": 3998,
+   "s": 4648,
+   "e": 4711,
+   "hold_to": 4723,
    "who": "MARIO",
    "shown": "MARIO",
    "text": "Can we help you? This is the extinction table.",
@@ -13177,9 +14916,9 @@
    "os": false
   },
   {
-   "s": 4000,
-   "e": 4052,
-   "hold_to": 4064,
+   "s": 4725,
+   "e": 4777,
+   "hold_to": 4789,
    "who": "NESNEJ",
    "shown": "NESNEJ",
    "text": "The more you buy, the more you save.",
@@ -13193,15 +14932,13 @@
  "v4_ids": {},
  "base_marks_scaled": [],
  "decisions": [
-  "12 beat lengths are not whole frames (13.01, 13.02, 13.06, 13.11, 13.13, 13.14...): beats start on the rounded running total, as the stick reel draws them",
+  "21 beat lengths are not whole frames (13.01, 13.02, 13.06, 13.11, 13.13, 13.14...): beats start on the rounded running total, as the stick reel draws them",
   "13.11: plate 'EOJ NEDIB / THE PRESIDENT' is up 15 f, under its read floor 36 f (the stick's timing; kept)",
-  "16.01: label '@masa · \"…no plans to leave\"' is up 27 f, under its read floor 40 f (the stick's timing; kept)",
-  "16.01: label 'ADDED DUE TO POPULAR DEMAND' is up 28 f, under its read floor 39 f (the stick's timing; kept)",
+  "13.11: plate 'DEEPFAKES OF ME: SEEN 0' is up 15 f, under its read floor 34 f (the stick's timing; kept)",
+  "v35-29.04: label '…we are excited to continue to o' is up 68 f, under its read floor 104 f (the stick's timing; kept)",
   "17.03: plate 'NESNEJ / SELLS SHOVELS. FUNDS DI' is up 15 f, under its read floor 52 f (the stick's timing; kept)",
   "17.03: plate 'POCKETS: 1' is up 15 f, under its read floor 18 f (the stick's timing; kept)",
-  "rail 'MAY 24, 2023 · LONDON' is up 27 f, under its read floor 32 f (the stick's; kept)",
-  "rail 'MAY 26, 2023' is up 16 f, under its read floor 21 f (the stick's; kept)",
-  "13 takes are not in the timeline: ['e1-a2-13-01', 'e1-a2-13-15', 'e1-a2-13-16', 'e1-a2-13-17', 'e1-a2-15-02', 'e1-a2-15-08', 'e1-a2-15-09', 'e1-a2-15-10']..."
+  "16 takes are not in the timeline: ['e1-a2-13-01', 'e1-a2-13-15', 'e1-a2-13-16', 'e1-a2-13-17', 'e1-a2-15-01', 'e1-a2-15-02', 'e1-a2-15-08', 'e1-a2-15-09']..."
  ],
  "problems": []
 }

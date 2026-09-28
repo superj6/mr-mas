@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **What this is** | The record of Act Two's pixel layouts on the stick lock: every shot, what it's built from, what's new, the checks, how to re-render it, and what's weakest. **Now on the v3.4 lock: [§11](#11-v34-the-v34-lock-script-draft-83-showrunner-notes-000-the-planner-hinted) is current**; §10 is the v3.3 round, §9 the v3.2 round, §8 the v3.1 round and §1–§7 the v3 pass, kept for the record. |
+| **What this is** | The record of Act Two's pixel layouts on the stick lock: every shot, what it's built from, what's new, the checks, how to re-render it, and what's weakest. **Now on the v3.5 lock (the final version): [§12](#12-v35-the-v35-base-lock-script-draft-84-the-final-version) is current**; §11 is the v3.4 round; §10 is the v3.3 round, §9 the v3.2 round, §8 the v3.1 round and §1–§7 the v3 pass, kept for the record. |
 | **Who, when** | The `v3-shots-act2-act3` pass (track P2 of [PLAN.md](PLAN.md)), 2026-09-27; the v3.2 and v3.3 rounds 2026-09-28. Nothing was committed: the lead commits. |
 | **The files** | Layouts: `studio/src/episodes/ep01/pixel/act2/shots.ts`. Helpers shared with Act Three: `act2/kit2.ts`. New art: `act2/art/radnus-bust.ts`. The lock: `act2/data.ts` and [lock/act2.json](lock/act2.json). |
 | **The picture** | **v3.3:** `out/ep01/full-v3/picture/act2.mp4` (1920 × 1080, 24 fps, H.264 + AAC, **3:10.54, 4,573 frames**, 14.7 MB), muxed with the v3.3 temp track (`act2-v33-stick-mix.wav`); see §10.4. It replaced v3.2's (3:13.04, 4,633 frames). Before that, the v3.1 render was `out/ep01/full-v3/picture/act2.mp4` (1920 × 1080, 24 fps, H.264 + AAC, **3:21.25, 4,830 frames**, 15.3 MB; rendered in 33 s on 2 workers), muxed with the v3.1 stick mix as temp audio (`out/ep01/full-v3/picture/act2-v31-stick-mix.wav`). (The v3 render it replaced ran 3:24.75, 4,914 frames, on `act2-stick-mix.wav`.) Beside it: `act2.srt`, `act2.mp4.render.json` and the contact sheet `act2-sheet.png` (one still per shot, each shot's middle frame). |
@@ -441,3 +441,80 @@ The temp track is the reel mixer on `out/reel-work/ep01-v34-stick/plan.json` (7.
 **The picture:** `out/ep01/full-v3/picture/act2.mp4`, **4,349 frames (3:01.21)**, 1920 × 1080, 13.8 MB, 34 s on 2 workers. It's muxed with the v3.4 temp track. Beside it: `act2.srt`, `act2.mp4.render.json` and `act2-sheet.png`.
 
 **For a person:** does 13.13's page read as his half-written ask, a payoff of Act One's PLEASE / REG, without spelling it out? The word is legible, and the line carries it.
+
+## 12. v3.5: the v3.5 base lock (script draft 8.4, the final version)
+
+**The brief** (the lead, 2026-09-28; [proposal-v35.md](proposal-v35.md) sc 25–30A, [script-v35-notes.md](script-v35-notes.md) §3, §5, §6, [lock-v35.md](lock-v35.md) §8, [PLAN.md](PLAN.md) §8): re-lock on `show/reel/ep01-v35/ep01-v35-act2.json` (5,074 frames). Nedib's card sets up `DEEPFAKES OF ME: SEEN 0`; the Senate without the clone, opening on a wide, Mas's own "i get paid enough for health insurance."; MAR 2019 (new, entered from his wallet hand on the intro's render front and left on the check, back to the hearing); the tour as his leverage game; the statement's signatures; every signer's pen an order. Render the Kokoro picture through `ops/heavy.sh`, run the flash check, and confirm it builds and checks on the EL-timed lock (`show/reel/ep01-v35-el/`).
+
+### 12.1 The lock and the temp track
+
+The temp track is the reel's own mixer on the v3.5 render plan (`studio/out/reel-work/ep01-v35-stick/plan.json`, through `ops/heavy.sh`, 9.5 s; −16.67 LUFS, 0 missing). Act Two's chapter is sliced sample-exact from plan frame 12,274 (the 72-frame slate included) for 5,074 frames into `out/ep01/full-v3/picture/act2-v35-stick-mix.wav`; the full mix was deleted. The script: `scratchpad/p-act23/mix35.sh` (it also cuts Act Three: frame 17,348 for 3,339).
+
+```sh
+python3 studio/src/episodes/ep01/pixel/tools/lock.py --seg act2 --timeline show/reel/ep01-v35/ep01-v35-act2.json \
+    --takes audio/ep01/act2/dialogue/lines-fast-v2.json --takes audio/ep01/v3/act2/lines-v3.json \
+    --takes audio/ep01/v31/act2/lines-v31.json --takes audio/ep01/v32/act2/lines-v32.json \
+    --takes audio/ep01/v34/act2/lines-v34.json --takes audio/ep01/v35/act2/lines-v35.json \
+    --mix out/ep01/full-v3/picture/act2-v35-stick-mix.wav --mix-offset 0
+```
+
+- **Result:** 42 shots from 49 beats, **5,074 frames (3:31.42)**. 46 lines, one of them V.O. ("mine's half written."), every one with a take; every check `ok`.
+- **The lock's read-floor notes:** Nedib's card (15 f in 13.11, rides on into 13.13, as before), Nesnej's card (as before), and v35-29.04's post (68 f against 104 f): handled in the picture (§12.3).
+
+### 12.2 What changed, shot by shot (Kokoro frames; EL frames in §12.4)
+
+| Shot | Frames | v3.5 |
+|---|---|---|
+| 13.11, 13.13 | 1169–1459 | Nedib's gag card has its stat row again: `DEEPFAKES OF ME: SEEN 0` (Act Three pays it: SEEN 1). |
+| 14.01 | 1601–1745 | Over his shoulder at the window, his CLASS PHOTO #1 post, the hearts climbing; the reminder slides down over it in three held steps (`art/v35 phoneReminder`: the cold open's generic calendar card, `SENATE JUDICIARY` / `MAY 16 · TESTIFY`, no seal). Then 13.13's pocket insert again: he draws the folded page up out of the pocket (`PLEASE`, `REG` and the pen's dash where he stopped), holds it to read, lets it back down, and his hand rests on it. |
+| v35-27.00 (new) | 1745–1836 | **The match:** the same page under the same resting hand at the same place in frame, now on the witness table's baize (`half-written {surface: baize}`); the gavel's knock lands on the cut. At 34 f a three-step tilt up (rows smeared) to the hearing room's wide, no clone, Sucram already typing. |
+| 15.07, 15.10, 15.15 | | `rooms/senate {noClone}` (new, opt-in): the chairman alone; in 15.07 he reaches for his next card on "jobs" himself. |
+| 15.16 | 2589–2656 | The sheet arrives in the **chairman's** hand; on the paper curl he holds it up and nods. |
+| 15.13 | 2917–3019 | The wide: Mas holds the wallet up and says his own line (room-scale mouth); the gallery gasps after it. |
+| 15.14 | 3019–3170 | After a held beat, `art/v35 drawWalletSet` [INSERT]: his hand sets the wallet down on the baize in three held steps and rests on it (the object for the 2019 match). |
+| v35-28.01 (new) | 3170–3225 | **In, on the intro's render front** (shared `transitions.renderFront`, 12 f left to right, the white-hot core in the cyan glow, as dev/meras draws it): the wallet insert re-drawn as MAR 2019 in the T3 cut-paper tier, the same hand at the same place resting on a marker it has just set on the whiteboard's tray. The hand lifts off in two steps and leaves. `RAIL: MAR 2019` from the band. |
+| v35-28.02 (new) | 3225–3556 | `office2019` [W]: NopeAI's first office by day, Act One's JUN 2018 room a year on (the same warehouse windows at back left, the same two INVIDIA racks, the whiteboard on wheels where the monitor wall stood; cut paper: flat shapes, a one-rung shadow down-right, three-tone figures with a cut edge, paper grain). Gerg's cloud bill unrolls from his hand to the floor and along it in held steps on his line; Mas at the board, Alyi and Mada at the table, the Quiet Vote's tall chair turned away. On Mas's line, `board2S` [2S]: the whiteboard large and legible, Mas (medium) writing with his arm to the marker's point, stepping along the board so it stays in reach and back to its edge when his marker is down (so each word he wrote is clear of him); Alyi at the table in the right foreground, lip-synced. The lower box side by side, the arrow down, `CAPPED PROFIT`; `100x` in the red marker; on "the board." two underlines under `NONPROFIT · THE BOARD`. |
+| v35-28.03 (new) | 3556–3663 | `mada2S` [2S]: the board's lower box across the left half; Mada (medium, lip-sync) at the table, the Quiet Vote's office chair beside him, its back to us; Mas's sleeve from the frame's left edge draws the stick figure on "nothing." and writes `CEO · EQUITY: 0`; Mada's spinner turns over the answer and stops on "Good answer." |
+| v35-28.04 (new) | 3663–3730 | `drawCheckDoor` [INSERT]: the landlord's first check slides in under the office door in three held steps: `MACROSOFT`, `$1,000,000,000` (display size), `JUL 2019`. |
+| v35-28.05 (new) | 3730–3790 | **Out:** the render front sweeps back, right to left, from the check to a senator's hand and pen over a blank legal pad (hands only); the dais sits back, held (the senator who asked still lit); the chairman lifts his gavel; `drawGavelECU` [INSERT] the gavel comes down on its block on the knock (the passport's stamp takes the same stroke). |
+| v35-29.01 (new) | 3790–3886 | `drawPassport` [INSERT]: his passport's visa pages, a slow push in; the rubber stamp comes down on each thunk (shadow, block, lift) and leaves its city: RIO DE JANEIRO · LAGOS · MADRID · WARSAW · PARIS · LONDON · MUNICH. After MADRID and after PARIS, `drawFlagHands` (8 f each): his page slides across a table to a hand under a desk flag (Spain's red and gold, France's three bands; no emblem, no face). |
+| v35-29.02 (new) | 3886–4004 | `drawLectern` [M]: a lectern in a generic London hall (panelling, two tall windows, sconces, no crest), the audience's heads dark along the foot; Mas lip-synced, the one-pixel smile from "cease" on. |
+| v35-29.03 (new) | 4004–4071 | `drawPhonePost` [POV]: his phone on a hotel desk, NOTERB's post in its own UI (kits/post-any, an initial avatar, no face), drawn at the UI's size and shown 2x: "There is no point in attempting blackmail…", MAY 25. |
+| v35-29.04 (new) | 4071–4143 | The same phone: his words in the compose box, his thumb on Post, and his post goes up (kits/post-card, Mas Manalt). |
+| v35-29.05 (new) | 4143–4176 | `drawGuestBook` [INSERT]: a guest book under a flag's draped, fringed corner (generic, no city); his pen signs; in the last 8 f the page gives way (ordered dither) to the one-sentence letter, his hand, pen and signature holding their place. |
+| 17.01 | 4176–4332 | `drawLetterDesk` [INSERT]: the letter on many desks: his signature in place (the match), his hand leaving; the statement types across the top (`drawQuoteBox`) and holds; the signatories' list lands (MAS MANALT · MARIO · SIMED · NOTNIH · OIGNEB, a grey affiliation under each) and scrolls slowly; the desks swap with the signers: SIMED's pale maple and a chess knight, a navy sleeve signing on the first scribble; NOTNIH's desk dark but for one pool of light from above, a dark sleeve on the second; `+ HUNDREDS MORE` at the list's foot. Then the rooftop wide: Mas signs in one stroke (pen_run), Mario writes, the quote held over the sky. |
+| 17.10 | 4878–4950 | `drawOtherOrders`: two more signers' hands at the frame's edges, each with its own order, round Mario's; Mas's hand stays empty. |
+| cut | | 14.06, 15.01–15.03 (the clone), 16.01 (the tour poster) |
+| unchanged (retimed by the lock only) | | the rest |
+
+**The new art** is additive: `act2/art/v35.ts` (new; the T3 cut-paper recipe restated from Act One's `act1/art/v35.ts` so the two passes don't share a file in flight), `act2/art/half-written.ts` (opt-in `lift`, `dash`, `surface: 'baize'`; `drawRestingHand` and `penWord` exported; 13.13 draws exactly as before), `rooms/senate.ts` (opt-in `noClone` on the wide, the dais and the OTS; nothing changes when it's off).
+
+### 12.3 The read-floor items (lock-v35 §8.3)
+
+- **"no plans to leave"** (v35-29.04, 2.8 s against 4.3 s): the on-screen post is trimmed with the print ellipsis to its last clause, **"…and of course have no plans to leave."** (the record's own words, 38 characters, ≈2.2 s at the floor), at 2x on the phone. The rail carries MAY 26.
+- **NOTERB's post** (v35-29.03): the name without a handle and the quote at 2x, whole from 0.2 s: 2.6 s against its ≈2.4 s floor.
+- **MUNICH** (the last stamp, 0.7 s): it lands alone in the page's lower right with nothing else moving (the push is done), in the same large type as the others, and the gavel-to-stamp rhythm has taught the eye where the next one lands. 0.7 s is over the text floor for six letters (0.55 s); the name-card floor (1.2 s) isn't met, by the lock's timing.
+
+### 12.4 Checks (v3.5)
+
+| Check | Result |
+|---|---|
+| `check` | 42 layouts for 42 shots, 0 stand-ins, 0 notes, 0 problems; 5,074 frames. The cut shots' layouts (14.06, 15.01–15.03, 16.01) are removed. |
+| `tsc` (a scratch tsconfig over `act2/shots.ts` and `act3/shots.ts` and everything they import) | prints nothing |
+| **The EL lock** | `show/reel/ep01-v35-el/ep01-v35-el-act2.json`, locked into scratch (lock.py `--out-json/--out-ts`, the Kokoro takes then the EL `lines-A.json` over them, so the EL files' lengths pass the take-bounds check), built with the assembly's `build_el.mjs` (`ELDIR=` scratch) and checked: **42 layouts, 4,848 frames, 0 stand-ins, 0 problems**; its contact sheet drew every shot with no layout throwing. The EL takes carry no mouth tracks yet (the assembly's `el_takes.py --lock v35` makes them), so that test build's mouths flap. |
+| **Flash check** (`coldopen/tools/flashcheck.py`) | **Worst: 1 flash in any second (frame 149, Sirrah's freeze, as before); red 0. Passes.** The first render measured 3 (at the limit): the check stepping 44 px at a time across the frame's blocks under the door (3663) and the Senate's smeared tilt (1779–1781). The check now slides only its last 12 px, and the tilt is two held steps over one even smear. Largest mean-luminance step: 0.462 at 3790 (the gavel close to the passport). |
+| Looked at | about 80 native stills (every new shot at its beats; 28.02's board at each stroke and each step of his; the matches' two sides) and the contact sheet |
+
+**The picture:** `out/ep01/full-v3/picture/act2.mp4`, **5,074 frames (3:31.42)**, 1920 × 1080, 24 fps, H.264 + AAC, 17 MB, 35 s of rendering on 2 workers, muxed with the v3.5 temp track (`act2-v35-stick-mix.wav`). Beside it: `act2.srt`, `act2.mp4.render.json`, `act2-sheet.png`. No GLYPH frames.
+
+**To re-run** (from `studio/`, `S` your scratch folder): `node src/episodes/ep01/pixel/tools/build.mjs act2 $S/r-act2.cjs && node $S/r-act2.cjs check`, then `SEGDIR=$S X264_THREADS=1 bash ../ops/heavy.sh node $S/r-act2.cjs picture --jobs 2` and `node $S/r-act2.cjs contact ../out/ep01/full-v3/picture/act2-sheet.png native`. The EL test: the lock.py command above with `--timeline show/reel/ep01-v35-el/ep01-v35-el-act2.json`, `--takes audio/ep01/v3-el/ep01-v35/act2/lines-A.json` added last, no `--mix`, and `--out-json $S/el/lock-act2.json --out-ts $S/el/data-act2.ts`; then `ELDIR=$S/el node show/episodes/ep01/production/full-v3/assembly/tools/build_el.mjs act2 $S/el/r-act2-el.cjs` and its `check`.
+
+### 12.5 Weakest (to my eye, from stills; nothing watched in motion or heard)
+
+1. **28.02's writing arm** is a cut-paper tube from his shoulder, and Mas (a medium figure run down to the frame's foot) slides along the board in 12-px held steps with no legs in frame. It reads as him working the board, but it's the least drawn thing in the act.
+2. **The 2019 wide** (28.02's head, 3.8 s): the figures are room-scale in a big room; Gerg's bill reads as a white strip unrolling, and Alyi, Mada and the Quiet Vote's chair are small at the table. The 2S carries the scene.
+3. **MUNICH** holds 0.7 s (the lock's timing): legible, but under the name-card floor.
+4. **v35-29.04's trim** ("…and of course have no plans to leave.") is my call for the read floor; the lead may prefer the full sentence with a longer hold. His one-pixel smile (the lock's note) isn't drawn: the shot is an insert of the phone.
+5. **28.05:** the brief says "back to the senator's held face"; the lock's picture note says hands and pads only. The out goes check → blank pad (the match) → the dais held (the senator who asked still lit, room scale) → the gavel close. No close-up of a senator's face.
+6. **The hands** (the pen hands, the flag cutaways' receiving hand, the order hands in 17.10) are simple drawings; the flag cutaways are 8 frames each.
+7. **14.01's lift** is modest (24 px): it shows the dash after REG and reads as him checking the page, less as taking it out.

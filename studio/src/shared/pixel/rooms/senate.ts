@@ -18,6 +18,10 @@
 //   drawSenateOTS(b, f, st)       [OTS] (15.07) from behind Mas onto the dais: the chairman with his cards, the clone at
 //                                 his hand; `take` the clone takes the next card out of his hand (3 held steps)
 //   drawSenateMCU(b, f, st)       [MCU] (15.01, 15.06, 15.18) a bust in a third over the dais' drapes or the gallery
+//   v3.5 (script draft 8.4: the clone is cut; the `v3-shots-act2-act3` pass; opt-in `noClone`, nothing changes when it is
+//                                off): the dais without THE CLONE, his seat a plain senator's (`drawSenateWide`,
+//                                `drawSenateDais`: the sheet then arrives in the CHAIRMAN's hand); `drawSenateOTS` the
+//                                chairman alone behind the bench, a step nearer the frame's centre
 // Cast used: LAHTNEMULB + THE CLONE (cast/lahtnemulb.ts), SUCRAM (cast/sucram.ts), the senators and the gallery
 // (cast/civic-extras.ts), MAS (cast/mas-stand.ts room, cast/mas.ts portrait).
 import {Buf, rect, line, hash, bayer, clamp} from '../px';
@@ -83,11 +87,14 @@ const paintWall = (soft: number): Buf => {
 };
 
 // ------------------------------------------------------------------ the dais
-interface DaisSt { seats?: typeof SENATE.daisSeats; lit?: DaisSeat | null; lean?: boolean; chair?: {arm?: LahtRoomArm; mouth?: 'rest' | 'open'; nod?: 0 | 1}; clone?: {arm?: LahtRoomArm; mouth?: 'rest' | 'open'}; sheet?: 0 | 1 | 2 | 3; senMouth?: DaisSeat | null; }
+interface DaisSt { seats?: typeof SENATE.daisSeats; lit?: DaisSeat | null; lean?: boolean; chair?: {arm?: LahtRoomArm; mouth?: 'rest' | 'open'; nod?: 0 | 1}; clone?: {arm?: LahtRoomArm; mouth?: 'rest' | 'open'}; sheet?: 0 | 1 | 2 | 3; senMouth?: DaisSeat | null;
+  /** v3.5 (opt-in): no clone: his seat is a plain senator's, and the sheet goes to the chairman */
+  noClone?: boolean; }
 const drawDaisAt = (b: Buf, dx: number, f: number, st: DaisSt) => {
   const {top, front} = SENATE.dais;
   const x0 = SENATE.dais.x0 + dx;
-  const SEATS = st.seats ?? SENATE.daisSeats;
+  const SEATS0 = st.seats ?? SENATE.daisSeats;
+  const SEATS = st.noClone ? SEATS0.map((s) => (s.id === 'clone' ? {id: 'senD', x: s.x, v: 1 as const} : s)) : SEATS0;
   // the chair backs behind the seats (the clone's is taller, brass-studded: the better chair)
   for (const s of SEATS) {
     const x = s.x + dx, better = s.id === 'clone';
@@ -108,7 +115,7 @@ const drawDaisAt = (b: Buf, dx: number, f: number, st: DaisSt) => {
     else drawSenator(b, x, SENATE.daisFoot, s.v ?? 0, pose, {flip: true, mouth: st.senMouth === s.id ? 'open' : 'rest', clip});
   }
   // the sheet: arriving into the clone's hand, then held up (its back toward the witnesses)
-  const cloneX = (SEATS.find((q) => q.id === 'clone') ?? SEATS[1]).x + dx;
+  const cloneX = (SEATS.find((q) => q.id === (st.noClone ? 'chair' : 'clone')) ?? SEATS[1]).x + dx;
   if (st.sheet === 1) { rect(cloneX - 40, top - 16, 12, 15, b.ink(PAL.P2)); rect(cloneX - 40, top - 16, 12, 1, b.ink(PAL.W9)); }
   if (st.sheet === 2) { rect(cloneX - 24, top - 22, 12, 15, b.ink(PAL.P2)); rect(cloneX - 24, top - 22, 1, 15, b.ink(PAL.W9)); }
   if (st.sheet === 3) { rect(cloneX - 26, top - 44, 22, 18, b.ink(PAL.P1)); rect(cloneX - 26, top - 44, 22, 1, b.ink(PAL.P2)); for (let i = 2; i < 20; i++) if (i % 3) b.set(cloneX - 26 + i, top - 38, PAL.R2); for (let i = 4; i < 18; i++) if (i % 3) b.set(cloneX - 26 + i, top - 33, PAL.R2); }
@@ -229,7 +236,9 @@ export const drawDais2S = (b: Buf, f: number, st: Dais2SState = {}) => {
   drawMic(b, DAIS2S.clone + 10, DAIS2S.bench + 6, {scale: 'bust', dir: -1, lit: st.lit === 'clone'});
   drawMic(b, DAIS2S.chair + 10, DAIS2S.bench + 6, {scale: 'bust', dir: -1, lit: st.lit === 'chair'});
 };
-export interface SenateOTSState { chair?: Partial<LahtBustState>; clone?: Partial<LahtBustState>; take?: 0 | 1 | 2 | 3; }
+export interface SenateOTSState { chair?: Partial<LahtBustState>; clone?: Partial<LahtBustState>; take?: 0 | 1 | 2 | 3;
+  /** v3.5 (opt-in): no clone; the chairman alone behind the bench, a step nearer the centre */
+  noClone?: boolean; }
 export const drawSenateOTS = (b: Buf, f: number, st: SenateOTSState = {}) => {
   const w = paintWall(1);
   for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) b.set(x, y, w.get(262 + (x % 218), y));
@@ -237,11 +246,12 @@ export const drawSenateOTS = (b: Buf, f: number, st: SenateOTSState = {}) => {
   const take = st.take ?? 0;
   const chairArm = take >= 2 ? 'down' : 'card';
   const cloneArm = take >= 1 ? 'take' : 'down';
-  putBust(b, lahtBust({...LAHT_BUST_DEFAULT, clone: true, arm: cloneArm, ...st.clone}), 214, 40, 158);
-  putBust(b, lahtBust({...LAHT_BUST_DEFAULT, clone: false, arm: chairArm, ...st.chair}), 344, 44, 158);
+  const cx = st.noClone ? 300 : 344;
+  if (!st.noClone) putBust(b, lahtBust({...LAHT_BUST_DEFAULT, clone: true, arm: cloneArm, ...st.clone}), 214, 40, 158);
+  putBust(b, lahtBust({...LAHT_BUST_DEFAULT, clone: false, arm: st.noClone ? 'card' : chairArm, ...st.chair}), cx, 44, 158);
   for (let y = 158; y < RH; y++) for (let x = 150; x < 480; x++) { const py = y - 158; b.set(x, y, py < 2 ? PAL.D4 : py === 8 ? PAL.W6 : x % 50 === 0 ? PAL.D4 : PAL.D3); }
-  drawMic(b, 230, 164, {scale: 'bust', dir: -1});
-  drawMic(b, 360, 164, {scale: 'bust', dir: -1});
+  if (!st.noClone) drawMic(b, 230, 164, {scale: 'bust', dir: -1});
+  drawMic(b, cx + 16, 164, {scale: 'bust', dir: -1});
   // MAS in the foreground: the back of his head (brown hair in strands, the cowlick's tuft), the hood bunched at his
   // neck, the hoodie's shoulder; dark, with a 1-px rim from the dais' light on the right-hand edges
   const inHead = (x: number, y: number) => Math.hypot((x - 72) / 38, (y - 108) / 44) < 1;

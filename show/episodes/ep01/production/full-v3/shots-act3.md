@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **What this is** | The record of Act Three's pixel layouts on the stick lock: every shot, what it's built from, what's new, the checks, how to re-render it, and what's weakest. **Now on the v3.4 lock: [§11](#11-v34-the-v34-lock-script-draft-83-showrunner-notes-000) is current**; §10 is the v3.3 round, §9 the v3.2 round, §8 the v3.1 round and §1–§7 the v3 pass, kept for the record. |
+| **What this is** | The record of Act Three's pixel layouts on the stick lock: every shot, what it's built from, what's new, the checks, how to re-render it, and what's weakest. **Now on the v3.5 lock (the final version): [§12](#12-v35-the-v35-base-lock-script-draft-84-the-final-version) is current**; §11 is the v3.4 round; §10 is the v3.3 round, §9 the v3.2 round, §8 the v3.1 round and §1–§7 the v3 pass, kept for the record. |
 | **Who, when** | The `v3-shots-act2-act3` pass (track P2 of [PLAN.md](PLAN.md)), 2026-09-27; the v3.2 and v3.3 rounds 2026-09-28. Nothing was committed: the lead commits. |
 | **The files** | Layouts: `studio/src/episodes/ep01/pixel/act3/shots.ts`. It uses the helpers in `act2/kit2.ts`. The lock: `act3/data.ts` and [lock/act3.json](lock/act3.json). |
 | **The picture** | **v3.3:** `out/ep01/full-v3/picture/act3.mp4` (1920 × 1080, 24 fps, H.264 + AAC, **2:13.42, 3,202 frames**, 10.7 MB), muxed with the v3.3 temp track (`act3-v33-stick-mix.wav`); see §10.4. It replaced v3.2's (2:22.42, 3,418 frames). Before that, the v3.1 render was `out/ep01/full-v3/picture/act3.mp4` (1920 × 1080, 24 fps, H.264 + AAC, **2:25.13, 3,483 frames**, 11.9 MB; rendered in 31 s on 2 workers), muxed with the v3.1 stick mix as temp audio (`out/ep01/full-v3/picture/act3-v31-stick-mix.wav`). (The v3 render it replaced ran 2:08.04, 3,073 frames.) Beside it: `act3.srt`, `act3.mp4.render.json` and the contact sheet `act3-sheet.png`. The 5 GLYPH frames are the Remotion host's, spliced in. |
@@ -414,3 +414,49 @@ The temp track is sliced from reel frame 13,930 into `out/ep01/full-v3/picture/a
 | **Flash check** | **Worst: 0 flashes in any second; red 0. Passes.** |
 
 **The picture:** `out/ep01/full-v3/picture/act3.mp4`, **3,007 frames (2:05.29)**, 9.7 MB, 25 s on 2 workers. The 5 GLYPH frames are spliced in. It's muxed with the v3.4 temp track, with its .srt and contact sheet.
+
+## 12. v3.5: the v3.5 base lock (script draft 8.4, the final version)
+
+**The brief:** as Act Two's (shots-act2.md §12). For Act Three: the Orb as in v3.4; **the president's deepfake restored** from the v3.3 lock (21.03 and 21.04; SHOWRUNNER-NOTES 00000, "keep the president's deepfake"); the DevDay thought after the counter and the date have been read; the rest as in v3.4.
+
+### 12.1 The lock
+
+The temp track is sliced from the same v3.5 mix as Act Two's (shots-act2.md §12.1): plan frame 17,348 for 3,339 frames into `out/ep01/full-v3/picture/act3-v35-stick-mix.wav`. The restored takes (e1-a3-21-02, -04, -06) are in `lines-fast-v2.json`.
+
+```sh
+python3 studio/src/episodes/ep01/pixel/tools/lock.py --seg act3 --timeline show/reel/ep01-v35/ep01-v35-act3.json \
+    --takes audio/ep01/act3/dialogue/lines-fast-v2.json --takes audio/ep01/v3/act3/lines-v3.json \
+    --takes audio/ep01/v31/act3/lines-v31.json --takes audio/ep01/v32/act3/lines-v32.json \
+    --takes audio/ep01/v34/act3/lines-v34.json \
+    --mix out/ep01/full-v3/picture/act3-v35-stick-mix.wav --mix-offset 0
+```
+
+- **Result:** 27 shots from 30 beats (21.03 merges into 21.02 again, as in v3.3), **3,339 frames (2:19.12)**. 24 lines, three of them V.O., every one with a take; every check `ok`.
+- **The lock's note, kept:** v34-vo-06 shares the screen with the DevDay rail (the rail has been up 3.7 s by then; the lock's timing).
+
+### 12.2 What changed
+
+| Shot | Frames (Kokoro · EL) | v3.5 |
+|---|---|---|
+| 21.02 (+21.03) | 1800–2160 · 1774–2072 | **Restored from v3.3** (git f57bddb): one cut-paper copy pops up behind the desk on the pop (three held steps) and finishes the sentence, "And then the computers regulate themselves." (lip-sync); the real NEDIB turns to it, "When the hell did I say that?", and his stat chip updates on the chip click: `DEEPFAKES OF ME: SEEN 1` (Act Two's card set up SEEN 0). His tab strip keeps DECODING INTENTIONS. |
+| 21.04 (restored) | 2160–2265 · 2072–2174 | The big-monitor two-shot, a slow drift in: Mas glances back at the Orb, "which one's real?", and back; the iris flicks to the copy, then to the one with the pen, on the lock's **two** servos (the third is cut), and its toast pops over the real one: `verified: human`. |
+| 21.05, v32-21.06 | 2265–2368 · 2174–2277 | The real one signs in ink; **the copy claps, and keeps clapping** (v3.4's press-pool applause is dropped again), into the switch-off and the hall's applause. |
+| 22.01 | 2368–2784 · 2277–2711 | The push to his MCU waits for the counter's landing (4.37 s) and comes 6 f before the V.O. (4.8 s), so the date and `100,000,000 / WEEK` are read in the wide first. |
+| unchanged (retimed by the lock only) | | the rest |
+
+### 12.3 Checks (v3.5)
+
+| Check | Result |
+|---|---|
+| `check` | 27 layouts for 27 shots, 0 stand-ins, 0 problems; 3,339 frames. The one note is the lock's (the V.O. with the DevDay rail). |
+| `tsc` | prints nothing (with Act Two's) |
+| **The EL lock** | `ep01-v35-el-act3.json`, locked and built as for Act Two: **27 layouts, 3,274 frames, 0 stand-ins, 0 problems**; its contact sheet drew every shot. |
+| **GLYPH** | frames 419–423 (18.04g), from a fresh Remotion bundle through `ops/heavy.sh`: the plain frames either side are identical Node against Remotion, nothing outside the room area differs, 0 missing; the 5 are spliced into the picture |
+| **Flash check** | **Worst: 0 flashes in any second; red 0. Passes.** Largest mean-luminance step 0.403 at frame 173 (as before). |
+| Looked at | about 15 native stills (the pop, the turn and SEEN 1, the question and the toast, the clapping, the switch, DevDay's wide and MCU) and the contact sheet |
+
+**The picture:** `out/ep01/full-v3/picture/act3.mp4`, **3,339 frames (2:19.12)**, 1920 × 1080, 11 MB, 32 s on 2 workers, the 5 GLYPH frames spliced, muxed with `act3-v35-stick-mix.wav`. Beside it: `act3.srt`, `act3.mp4.render.json`, `act3-sheet.png`.
+
+**To re-run** (from `studio/`): build and check as Act Two's (`act3`); then `bash ../ops/heavy.sh node $S/r-act3.cjs bundle $S/bundle`, `BUNDLE=$S/bundle bash ../ops/heavy.sh node $S/r-act3.cjs glyphs $S/glyph 2`, and `GLYPH_DIR=$S/glyph SEGDIR=$S X264_THREADS=1 bash ../ops/heavy.sh node $S/r-act3.cjs picture --jobs 2`.
+
+**Weakest:** 21.04's toast comes after the iris settles (about 3 s in), not at 0.2 s as the lock's stale text time says: the payoff lands on the choice. The DevDay MCU now starts at 4.5 s, so the wide carries the rail and the counter for about 3.4 s.
