@@ -24,7 +24,7 @@
 //                                 the invite in the cold open's calendar UI (kits/phone-invite.ts's card, re-laid for
 //                                 its words): `Board · Tue 10:00 PM`, Accept / Decline, three circles: a spinner, a fire
 //                                 helmet, a blank. k = the cold open's wake + slide steps; `thumb` 'tap' (no hover:
-//                                 it comes straight down; kits/inserts-hands.ts tapHandCaps), `accepted`
+//                                 it comes straight down: his thumb from above at the ECU's scale, its nail), `accepted`
 //   drawSundayOTS(b, f, st)       S4.09, the reversal on screen: v5's drawBoardScreenOTS (the lobby feed at 1:1 in the
 //                                 glass, Alyi's reflection) with v3.1's two additions: the ticker across the feed's foot
 //                                 (`INVESTORS PUSH TO BRING MANALT BACK`, crawling) and the table's edge in the
@@ -42,6 +42,8 @@
 //   drawCallOutTile(b, x, y, k)   the same ring as v5's corner tile (64 x 38), outgoing: `Calling…` under GERG
 //   drawDrySqueeze(b, x, y, st)   S7.06: Terb's squeeze with the pin in (cast/terb.ts, the spray arm, no spray drawn);
 //                                 k 1 = the dry click's one-frame kick (he jumps a pixel; nothing comes out)
+//   drawTerbWriting(b, x, y, k)   S7.07-cont: Terb writing "Gerg comes back too." onto the sheet (cast/terb-sheet, reading),
+//                                 the pen and the new line growing (k 0..4)
 //   letterHeaderStrip(b, x, y, w) S6.01: the letter's header strip, `STAFF LETTER · TO THE BOARD`, for the first
 //                                 employee tile of the avalanche (the caller's paint callback draws it on tile 0)
 import {Buf, rect, line, ellipse, hash, bayer} from '../px';
@@ -54,11 +56,10 @@ import {BPX, bpSheet, bpChair, bpText, bpComposite} from './blueprint';
 import {guestBadge} from './props';
 import {drawPointer} from './callgrid';
 import {isMini, Painter} from './mas-monitor';
-import {tapHandCaps} from './inserts-hands';
-import {drawSleeve, contactShadow} from './inserts-mas';
 import {alyiReflection} from '../cast/alyi-speak';
-import {drawTerbRoom, TERB_ROOM_DEFAULT} from '../cast/terb';
-import {drawMadaTile, MADA_BUST_DEFAULT} from '../cast/mada';
+import {drawTerbRoom, TERB_ROOM_DEFAULT, TERB_W, TERB_FOOT} from '../cast/terb';
+import {drawTerbSheetRoom, TERB_SHEET_DEFAULT} from '../cast/terb-sheet';
+import {drawMadaTile, MADA_BUST_DEFAULT, drawSpinner} from '../cast/mada';
 import {drawFootnotes} from '../cast/neleh';
 import {drawBoardScreenOTS, BSCREEN} from '../rooms/board-screen';
 import {drawNelehShoulderR, NELEH_OTS_DEFAULT, NelehOtsState} from '../cast/neleh-ots';
@@ -82,7 +83,7 @@ export const removeButton = (x = REMOVE_DLG.x, y = REMOVE_DLG.y): [number, numbe
   [x + Math.round((REMOVE_DLG.w - REMOVE_BTN.w) / 2), y + REMOVE_DLG.h - REMOVE_BTN.h - 16, REMOVE_BTN.w, REMOVE_BTN.h];
 /** the arrow's held positions onto the button (tip, frame coords, for the dialog at its default place): it enters low
  *  right and steps in, the last one on the button's word */
-export const REMOVE_PATH: Array<[number, number]> = [[404, 188], [352, 176], [308, 164], [270, 150]];
+export const REMOVE_PATH: Array<[number, number]> = [[424, 168], [376, 156], [322, 144], [262, 132]];
 export const REMOVE_STEPS = REMOVE_PATH.length - 1;
 /** the collaborator tag (v5's cursorTagBig, the name alone: episodes' texts.ts cursorTagV3, re-drawn here): '' = empty */
 export const cursorTag = (b: Buf, x: number, y: number, name: string, col: number) => {
@@ -174,11 +175,14 @@ const earlyCall = (b: Buf, x: number, y: number, w: number, h: number, f: number
   rect(x, y, w, 11, b.ink(PAL.N2)); rect(x, y + 11, w, 1, b.ink(PAL.N0));
   pt(b, 'board sync', x + 5, y + 2, PAL.G5);
   pt(b, clock, x + w - pw(clock) - 5, y + 2, PAL.P2);
-  const gap = 3, tw = Math.floor((w - gap * 3) / 2), th = Math.floor((h - 12 - gap * 3) / 2);
+  // MADA's tile the left column's full height (room over his head for the spinner), the three waiting stacked right
+  const gap = 3, tw = Math.floor((w - gap * 3) / 2), full = h - 12 - gap * 2, th3 = Math.floor((full - gap * 2) / 3);
   for (let i = 0; i < 4; i++) {
-    const tx = x + gap + (i % 2) * (tw + gap), ty = y + 12 + gap + Math.floor(i / 2) * (th + gap);
+    const tx = x + gap + (i === 0 ? 0 : tw + gap), ty = y + 12 + gap + (i === 0 ? 0 : (i - 1) * (th3 + gap));
+    const th = i === 0 ? full : th3;
     if (i === 0) {
-      drawMadaTile(b, tx, ty, tw, th, MADA_BUST_DEFAULT, {spin: f});
+      drawMadaTile(b, tx, ty, tw, th, MADA_BUST_DEFAULT, {spin: null});
+      drawSpinner(b, tx + (tw >> 1) + 1, ty + 10, f, {size: 'md'}); // his spinner, turning, over his head
       rect(tx, ty + th - 9, pw('MADA') + 6, 9, b.ink(PAL.N0)); pt(b, 'MADA', tx + 3, ty + th - 8, PAL.P1);
       continue;
     }
@@ -232,12 +236,36 @@ const penHand = (b: Buf, nx: number, ny: number, lift: number, sleeveTo: [number
   }
   for (const [i, j] of [[-6, -4], [-3, -6], [0, -7], [3, -7]]) b.set(hx + i, hy + j, PAL.S3); // the knuckles
 };
+/** the paper close: at this scale only her pen's tip and the ends of her fingers are in frame, from the lower right
+ *  (a hand here would be a third of the frame): the barrel, its lit edge, the nib's steel; two fingertips on it */
+const penClose = (b: Buf, nx: number, ny: number) => {
+  const ux = 0.55, uy = 0.84; // down and to the right, off the frame's foot
+  for (let t = 0; t < 260; t += 0.5) for (let s = -6; s <= 6; s += 0.5) {
+    const w = Math.min(6, 1 + t * 0.35); // the cone to the nib
+    if (Math.abs(s) > w) continue;
+    const X = Math.round(nx + ux * t - uy * s), Y = Math.round(ny + uy * t + ux * s);
+    if (X < 0 || Y < 0 || X >= 480 || Y >= RH) continue;
+    b.set(X, Y, t < 10 ? (s < 0 ? PAL.G6 : PAL.G4) : Math.abs(s) > w - 1 ? PAL.N0 : s < -2 ? PAL.N4 : PAL.N2);
+  }
+  b.set(nx, ny, PAL.P2);
+  // her index fingertip on top of the barrel and the thumb's tip below it (skin in the daylight, the nails)
+  for (const [cx, cy, rx, ry] of [[Math.round(nx + ux * 34 - 10), Math.round(ny + uy * 34), 22, 14], [Math.round(nx + ux * 56 + 22), Math.round(ny + uy * 56), 20, 13]] as Array<[number, number, number, number]>) {
+    for (let j = -ry; j <= ry; j++) for (let i = -rx; i <= rx; i++) {
+      const d = Math.hypot(i / rx, j / ry);
+      if (d > 1) continue;
+      const X = cx + i, Y = cy + j;
+      if (Y >= RH) continue;
+      b.set(X, Y, d > 0.9 ? PAL.S1 : i + j < -rx * 0.6 ? PAL.S5 : j > ry * 0.4 ? PAL.S3 : PAL.S4);
+    }
+    for (let j = -4; j <= 4; j++) for (let i = -6; i <= 2; i++) if (Math.hypot(i / 6, j / 4) <= 1) b.set(cx - rx + 8 + i, cy - 2 + j, i < -3 ? PAL.P1 : PAL.S5); // the nail
+  }
+};
 export const drawNelehDeskHigh = (b: Buf, f: number, st: NelehHighState = {}) => {
   const clock = st.clock ?? '11:52';
   if (st.framing === 'paper') {
     b.c.set(planFirstFrame().c.subarray(0, 480 * RH));
     // her pen resting beside her own plate (NELEH, the 7th): the hand in from the lower right
-    penHand(b, PLAN_CX[6] + 16, PLAN_FOOT + 10, st.pen ? 2 : 0, [520, 262]);
+    penClose(b, PLAN_CX[6] + 6, PLAN_FOOT + 20 - (st.pen ? 2 : 0)); // under her own plate, clear of MADA's
     return;
   }
   // her desk from above: pale oak, the blind's daylight from the window at the left in slats across it
@@ -263,16 +291,16 @@ export const drawNelehDeskHigh = (b: Buf, f: number, st: NelehHighState = {}) =>
   rect(270, 156, 18, 32, b.ink(PAL.D1)); rect(268, 154, 18, 32, b.ink(PAL.N1)); rect(268, 154, 18, 1, b.ink(PAL.G4));
   ellipse(452, 176, 20, 16, b.ink(PAL.D1)); ellipse(450, 174, 18, 14, b.ink(PAL.G2)); ellipse(450, 174, 7, 5, b.ink(PAL.G4));
   // NELEH leaning over it from the frame's foot: the footnotes' back half, her shoulders, her arm, her crown, the front half
-  const hcx = 372, hcy = 190;
+  const hcx = 380, hcy = 176;
   const orbit = {cx: hcx, cy: hcy - 4, rx: 34, ry: 9, tilt: -6, size: 'sm' as const};
   drawFootnotes(b, orbit, f, 'back', {style: 'slips'});
-  for (let y = 172; y < RH; y++) for (let x = 290; x < 470; x++) {
-    const d = Math.hypot((x - hcx) / 76, (y - 216) / 38);
+  for (let y = 150; y < RH; y++) for (let x = 290; x < 480; x++) {
+    const d = Math.hypot((x - hcx) / 80, (y - (hcy + 30)) / 40);
     if (d > 1) continue;
     b.set(x, y, d > 0.95 ? PAL.N0 : x < hcx - 40 ? PAL.N4 : x > hcx + 44 ? PAL.N1 : PAL.N2);
   }
-  const pitch = Math.floor((pw2 - 24) / 8), nx = px + 12 + 6 * pitch, ny = py + 62 + 5;
-  penHand(b, nx, ny, st.pen ? 2 : 0, [hcx - 46, 196]);
+  const pitch = Math.floor((pw2 - 24) / 8), nx = px + 12 + 6 * pitch - 6, ny = py + 62 + 30;
+  penHand(b, nx, ny, st.pen ? 2 : 0, [hcx - 50, hcy + 22]);
   for (let y = hcy - 26; y < RH; y++) for (let x = hcx - 26; x <= hcx + 26; x++) {
     const d = Math.hypot((x - hcx) / 25, (y - hcy) / 24);
     if (d > 1) continue;
@@ -365,33 +393,57 @@ export const drawTuesdayInvite = (b: Buf, f: number, st: TuesdayInviteState = {}
   const tmp = new Buf(480, RH, 0x1000000);
   const acceptAt = tuesdayCard(tmp, sx + Math.round((sw - 150) / 2), sy + 14 + slide, !!st.press, acc, f);
   for (let y = sy; y < RH; y++) for (let x = sx; x < sx + sw; x++) { const v = tmp.c[y * 480 + x]; if (v !== 0x1000000) b.set(x, y, v); }
-  if (st.thumb === 'tap') {
-    // his thumb straight down on Accept (no hover): the tap hand in the day's light, the sleeve off the frame's foot
-    const H = tapHandCaps({s: 13, thumb: 'tap', light: 'lobby'});
-    const ox = Math.round(acceptAt[0] - H.anchors.thumbPad[0]), oy = Math.round(acceptAt[1] - H.anchors.thumbPad[1]);
-    drawSleeve(b, [ox + H.anchors.wrist[0], oy + H.anchors.wrist[1] - 4], [ox + H.anchors.wrist[0] + 30, RH + 20], 64, 72, 'lobby', -1, 0.6);
-    contactShadow(b, H.img, ox, oy, 2, 2, 2);
-    blitImg(b, H.img, ox, oy);
+  if (st.thumb === 'tap') thumbTap(b, acceptAt[0], acceptAt[1]);
+};
+/** his thumb, straight down on the button (the ECU's scale: a phone ~7 cm wide is 180 px, so the thumb is ~50 px
+ *  across): the back of the thumb and its nail from above, in from the lower right, the rest of the hand off frame;
+ *  its shadow on the screen beside it. (tx, ty) = the pad's point on the button */
+const thumbTap = (b: Buf, tx: number, ty: number) => {
+  const ux = 0.5, uy = 0.866, r = 21, L = 170;
+  const ax = tx + ux * r * 0.7, ay = ty + uy * r * 0.7; // the tip's round end's centre
+  // the shadow first, a little right and below (the light from the windows at the upper left)
+  for (let y = Math.floor(ty - 4); y < RH; y++) for (let x = Math.floor(tx - 30); x < 480; x++) {
+    const px = x - ax - 6, py = y - ay - 3, t = Math.max(0, Math.min(L, px * ux + py * uy)), d = Math.hypot(px - ux * t, py - uy * t);
+    if (d < r + 2) b.set(x, y, stepColor(b.get(x, y), -2));
+  }
+  for (let y = Math.floor(ty - r); y < RH; y++) for (let x = Math.floor(tx - r - 4); x < 480; x++) {
+    const px = x - ax, py = y - ay, t = px * ux + py * uy;
+    const tc = Math.max(0, Math.min(L, t)), qx = px - ux * tc, qy = py - uy * tc, d = Math.hypot(qx, qy);
+    if (d > r) continue;
+    const side = qx * uy - qy * ux; // across the thumb: negative = the upper-left (lit) side
+    let c: number = d > r - 1.2 ? PAL.S1 : side < -r * 0.45 ? PAL.S5 : side > r * 0.55 ? PAL.S2 : side > r * 0.2 ? PAL.S3 : PAL.S4;
+    // the knuckle's creases, two short arcs across the back
+    if (Math.abs(t - r * 3.1) < 0.7 && Math.abs(side) < r * 0.6) c = PAL.S2;
+    if (Math.abs(t - r * 3.5) < 0.7 && Math.abs(side) < r * 0.4) c = PAL.S2;
+    // the nail near the tip
+    const nt = t - r * 0.2, nd = Math.hypot(nt / (r * 0.95), side / (r * 0.62));
+    if (nd <= 1) c = nd > 0.86 ? PAL.S2 : side < -r * 0.2 && nt < r * 0.2 ? PAL.P2 : nt > r * 0.55 ? PAL.S5 : PAL.P1;
+    b.set(x, y, c);
   }
 };
 
 // ================================================================== Sunday: the ticker, the phones in a row (S4.09)
 export const PHONES_ROW = ['STAFF', 'STAFF', 'INVESTORS', 'INVESTORS'];
-export const PHONE_ROW = {w: 76, h: 17, gap: 8};
-/** the phones set in a row on the table, face up, seen from Neleh's standing height (foreshortened slabs), their
- *  screens lit with the caller; `buzz` = the frame: one at a time buzzes (a 1 px shake, the tick marks), in turn */
+export const PHONE_ROW = {w: 76, h: 22, gap: 8};
+/** the phones set in a row on the table, face up, seen from Neleh's standing height (foreshortened slabs: the rounded
+ *  body, the bezel, the speaker slot), each screen lit with its caller and the call's two round buttons (answer,
+ *  decline); `buzz` = the frame: one at a time buzzes (a 1 px shake, the tick marks), in turn */
 export const drawPhonesRow = (b: Buf, x0: number, y: number, st: {labels?: string[]; buzz?: number | null} = {}) => {
   const labels = st.labels ?? PHONES_ROW;
   const {w, h, gap} = PHONE_ROW;
   const who = st.buzz === null || st.buzz === undefined ? -1 : Math.floor(st.buzz / 8) % labels.length;
   labels.forEach((l, i) => {
     const on = i === who, dx = on ? (Math.floor(st.buzz ?? 0) % 2 ? 1 : -1) : 0;
-    const x = x0 + i * (w + gap) + dx, inv = l.startsWith('INV');
-    rect(x + 2, y + h, w, 2, b.ink(PAL.N0)); // its shadow on the table
-    rect(x, y, w, h, b.ink(PAL.N0)); rect(x + 1, y + 1, w - 2, h - 2, b.ink(PAL.G1)); rect(x + 1, y, w - 2, 1, b.ink(PAL.G4));
-    rect(x + 3, y + 2, w - 6, h - 4, b.ink(inv ? PAL.W2 : PAL.C1));
-    pt(b, l, x + Math.round((w - pw(l)) / 2), y + 4, inv ? PAL.W7 : PAL.C7);
-    if (on) for (const s of [-1, 1]) { const ex = s < 0 ? x - 3 : x + w + 2; b.set(ex, y + 4, PAL.G5); b.set(ex + s, y + 8, PAL.G5); b.set(ex, y + 12, PAL.G5); }
+    const x = x0 + i * (w + gap) + dx;
+    rect(x + 2, y + h, w - 2, 2, b.ink(PAL.N0)); // its shadow on the table
+    rect(x + 1, y, w - 2, h, b.ink(PAL.N0)); rect(x, y + 1, w, h - 2, b.ink(PAL.N0)); // the body, its rounded corners
+    rect(x + 2, y + 1, w - 4, 1, b.ink(PAL.G3)); // the lit far edge
+    rect(x + 3, y + 3, w - 6, h - 6, b.ink(PAL.N2)); // the screen
+    for (let j = 0; j < h - 6; j++) for (let q = 0; q < w - 6; q++) if (bayer(x + q, y + j) < 0.25 - j * 0.02) b.set(x + 3 + q, y + 3 + j, PAL.N3);
+    rect(x + (w >> 1) - 5, y + 1, 10, 1, b.ink(PAL.G1)); // the speaker slot
+    pt(b, l, x + Math.round((w - pw(l)) / 2), y + 4, PAL.P2);
+    ellipse(x + 14, y + h - 6, 2, 2, b.ink(PAL.L3)); ellipse(x + w - 15, y + h - 6, 2, 2, b.ink(PAL.R3)); // answer · decline
+    if (on) for (const sd of [-1, 1]) { const ex = sd < 0 ? x - 3 : x + w + 2; b.set(ex, y + 5, PAL.G5); b.set(ex + sd, y + 10, PAL.G5); b.set(ex, y + 15, PAL.G5); }
   });
 };
 export const TICKER_SUNDAY = 'INVESTORS PUSH TO BRING MANALT BACK';
@@ -418,9 +470,11 @@ export interface SundayOTSState {
 export const drawSundayOTS = (b: Buf, f: number, st: SundayOTSState = {}) => {
   drawBoardScreenOTS(b, f, {feed: st.feed ?? null, alyi: st.alyi === null ? null : {mouth: st.alyi?.mouth ?? 'rest'}, neleh: null});
   const F = BSCREEN.ots.feed;
-  if (st.ticker !== null) drawTicker(b, F.x, F.y + F.h - 26, F.w, TICKER_SUNDAY, st.ticker ?? 999);
+  // the ticker: the broadcaster's strip across the screen under the CCTV tile (wider than the tile, so the line fits)
+  const Gl = BSCREEN.ots.glass;
+  if (st.ticker !== null) drawTicker(b, Gl.x + 4, F.y + F.h - 28, Gl.w - 8, TICKER_SUNDAY, st.ticker ?? 999);
   // the table's near edge across the frame's foot, in front of the screen's bezel; the phones in a row on it
-  const ty = 180;
+  const ty = 176;
   for (let y = ty; y < RH; y++) for (let x = 0; x < 480; x++) b.set(x, y, y === ty ? PAL.D3 : bayer(x, y) < 0.2 - (y - ty) * 0.006 ? PAL.D2 : PAL.D1);
   drawPhonesRow(b, 22, ty + 3, {buzz: st.buzz ?? null});
   drawNelehShoulderR(b, 494, RH, {...NELEH_OTS_DEFAULT, light: 'screen', ...st.neleh}, f);
@@ -431,12 +485,12 @@ export const drawAlyiGlass = (b: Buf, f: number, st: {mouth?: Viseme; eyes?: 'op
   // the glass at night: the dark, the Valley's lights far below in the lower third, a mullion off to the left
   for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) {
     let c: number = bayer(x, y) < 0.12 - y * 0.0004 ? PAL.N2 : PAL.N1;
-    if (y > 138 && hash(x >> 1, y >> 1, 81) < 0.035 + (y - 138) * 0.0006) c = hash(x >> 1, y >> 1, 82) < 0.55 ? PAL.W4 : PAL.C3;
+    if (y > 156 && hash(x >> 1, y >> 1, 81) < 0.035 + (y - 156) * 0.0008) c = hash(x >> 1, y >> 1, 82) < 0.55 ? PAL.W4 : PAL.C3; // below his chin: his face sits on dark glass
     b.set(x, y, c);
   }
   // the phones' lit screens reflected beside him (the table behind the camera): four soft slabs, no letters
   [[330, 150], [362, 154], [396, 158], [432, 162]].forEach(([x, y], i) => {
-    const col = i === 2 || i === 3 ? PAL.W2 : PAL.C2;
+    const col = PAL.C2;
     for (let j = 0; j < 7; j++) for (let q = 0; q < 26; q++) if (((q + j) & 1) === 0 || (j > 1 && j < 5 && q > 2 && q < 23)) b.set(x + q, y + j, col);
     rect(x + 5, y + 3, 16, 1, b.ink(stepColor(col, 2)));
   });
@@ -452,6 +506,15 @@ export const drawAlyiGlass = (b: Buf, f: number, st: {mouth?: Viseme; eyes?: 'op
 
 // ================================================================== he calls Gerg (S5.09)
 export interface CallOutState { phase?: 'app' | 'click' | 'ring'; /** frames into the ring */ k?: number; }
+/** the call app's handset glyphs (never a dash in a circle: that reads as "remove"): 'call' tilted, 'end' level */
+const HANDSET: Record<'call' | 'end', string[]> = {
+  call: ['##.....', '###....', '.##....', '..##...', '...##..', '....###', '.....##'],
+  end: ['.#######.', '##.....##', '##.....##'],
+};
+const handset = (b: Buf, cx: number, cy: number, kind: 'call' | 'end', col: number) => {
+  const g = HANDSET[kind], w = g[0].length, h = g.length;
+  g.forEach((r, j) => { for (let i = 0; i < w; i++) if (r[i] === '#') b.set(cx - (w >> 1) + i, cy - (h >> 1) + j, col); });
+};
 export const callOutPainter = (st: CallOutState = {}): Painter => (scr, f) => {
   const W = scr.w, H = scr.h, mini = isMini(scr), phase = st.phase ?? 'ring';
   for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) scr.set(x, y, x % 8 === 0 && y % 8 === 0 ? PAL.N2 : PAL.N0);
@@ -476,7 +539,7 @@ export const callOutPainter = (st: CallOutState = {}): Painter => (scr, f) => {
       ellipse(30, y + 11, 11, 11, scr.ink(r.col)); ellipse(30, y + 11, 9, 9, scr.ink(stepColor(r.col, -1)));
       if (i === 0) bigText(scr, 'G', 26, y + 5, PAL.L3);
       pt(scr, r.name, 50, y + 3, r.ink); pt(scr, r.sub, 50, y + 14, PAL.G4);
-      if (i === 0) { ellipse(W - 30, y + 11, 8, 8, scr.ink(lit ? PAL.L3 : PAL.L2)); rect(W - 34, y + 10, 8, 2, scr.ink(PAL.N0)); }
+      if (i === 0) { ellipse(W - 30, y + 11, 8, 8, scr.ink(lit ? PAL.L3 : PAL.L2)); handset(scr, W - 30, y + 11, 'call', PAL.N0); }
     });
     return;
   }
@@ -489,7 +552,7 @@ export const callOutPainter = (st: CallOutState = {}): Painter => (scr, f) => {
   pt(scr, 'GERG', cx - (pw('GERG') >> 1), cy + r + 10, PAL.P2);
   const c = 'Calling…';
   pt(scr, c, cx - (pw(c) >> 1), cy + r + 22, PAL.G5);
-  ellipse(cx, H - 20, 10, 8, scr.ink(PAL.R2)); rect(cx - 5, H - 21, 10, 2, scr.ink(PAL.P2));
+  ellipse(cx, H - 20, 10, 8, scr.ink(PAL.R2)); handset(scr, cx, H - 20, 'end', PAL.P2);
 };
 /** v5's corner tile (64 x 38 at x, y), outgoing: GERG and `Calling…`, the ring's pulse on 6s */
 export const drawCallOutTile = (b: Buf, x: number, y: number, k: number) => {
@@ -502,6 +565,20 @@ export const drawCallOutTile = (b: Buf, x: number, y: number, k: number) => {
 export const drawDrySqueeze = (b: Buf, footX: number, footY: number, st: {k?: number; flip?: boolean; light?: 'room' | 'fire'} = {}) => {
   const kick = (st.k ?? 0) === 1 ? 1 : 0; // the dry click: he jumps a pixel, nothing comes out
   drawTerbRoom(b, footX, footY - kick, {...TERB_ROOM_DEFAULT, arm: 'spray', pin: true, light: st.light ?? 'fire'}, {flip: st.flip});
+};
+
+/** S7.07-cont: Terb writing Mas's one term onto the sheet, not looking up (cast/terb-sheet's 'sheet' arm, reading): a pen
+ *  in his near hand over the sheet (7 x 8 at room scale) and the new line's ink growing across its foot, `k` 0..4
+ *  whole-pixel steps; the extinguisher stays in the far hand (the pin is out by now) */
+export const drawTerbWriting = (b: Buf, footX: number, footY: number, k: number, o: {flip?: boolean; mouth?: 'rest' | 'open'} = {}) => {
+  drawTerbSheetRoom(b, footX, footY, {...TERB_SHEET_DEFAULT, arm: 'sheet', read: true, pin: false, mouth: o.mouth ?? 'rest', light: 'fire'}, {flip: o.flip});
+  // the sheet's local origin (terb-sheet: the stamp at 31, 26), mirrored when flipped
+  const X = (lx: number) => (o.flip ? footX + (TERB_W - 1 - TERB_FOOT[0]) - lx : footX - TERB_FOOT[0] + lx), Y = (ly: number) => footY - TERB_FOOT[1] + ly;
+  const n = Math.max(0, Math.min(4, Math.floor(k)));
+  for (let i = 0; i < n; i++) b.set(X(32 + i), Y(32), PAL.N1); // the new line, written
+  const px = 32 + n, py = 32;
+  b.set(X(px), Y(py), PAL.N0); b.set(X(px + 1), Y(py - 1), PAL.N0); b.set(X(px + 2), Y(py - 2), PAL.N2); // the pen, its nib on the line
+  b.set(X(px + 2), Y(py - 1), PAL.S4); b.set(X(px + 3), Y(py - 1), PAL.S3); // his fingers on it
 };
 
 // ================================================================== the letter's header strip on the avalanche's first tile (S6.01)

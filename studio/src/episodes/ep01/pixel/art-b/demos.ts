@@ -31,13 +31,25 @@ import {nesnejBust, NESNEJ_BUST_DEFAULT, drawNesnejRoom} from '../../../../share
 import * as A3 from '../../../../shared/pixel/rooms/darkroom-act3';
 import * as MON from '../../../../shared/pixel/kits/mas-monitor';
 import {tidderPainter, TIDDER_POST, TIDDER_EDIT} from '../../../../shared/pixel/kits/tidder';
-import {eoPainter} from '../../../../shared/pixel/kits/eo-signing';
+import {eoPainter, EO_SHORT} from '../../../../shared/pixel/kits/eo-signing';
 import {lighthousePainter, devdayPainter, coldOpenPainter} from '../../../../shared/pixel/kits/monitor-items';
 import {drawPhoneHigh, phoneMini, ORB_CIRCLE_LOOKS} from '../../../../shared/pixel/kits/phone-high';
 import {drawToast, drawScanFan} from '../../../../shared/pixel/kits/orb-toast';
 import {drawEmitCover} from '../../../../shared/pixel/kits/emit-cover';
 import {drawFrontPageHigh} from '../../../../shared/pixel/kits/grey-lady';
 import {DPLATE_LOOK} from '../../../../shared/pixel/rooms/darkroom-plate';
+// v3.1 (script draft 7)
+import {kramBust, KRAM_BUST_DEFAULT} from '../../../../shared/pixel/cast/kram';
+import {lobbyPainter, sirrahPainter, runnerPainter, paperPainter, withGergTile, screenWake} from '../../../../shared/pixel/kits/monitor-v31';
+import {drawDark2SSCR, DARK_SCR} from '../../../../shared/pixel/rooms/darkroom-v31';
+import * as A4 from '../../../../shared/pixel/kits/act4-v31';
+import {faceKey} from '../../../../shared/pixel/kits/face-light';
+import {faceLightImg, lumaOf} from '../../../../shared/pixel/kits/face-light-img';
+import {drawLobbyFeed, FEED_W, FEED_H} from '../../../../shared/pixel/kits/lobby-feed';
+import {nelehPortrait, NELEH_PORTRAIT_DEFAULT} from '../../../../shared/pixel/cast/neleh';
+import {madaPortrait, MADA_PORTRAIT_DEFAULT} from '../../../../shared/pixel/cast/mada';
+import {drawGergMediumTile, GERG_MEDIUM_DEFAULT} from '../../../../shared/pixel/cast/gerg-medium';
+import {employeeFace} from '../../../../shared/pixel/kits/callgrid';
 
 export interface AssetDemo {
   id: string;
@@ -190,4 +202,97 @@ D({id: 'ROOM-DARK-A3', state: 'thud', module: a3M + ' drawDarkA3', note: '33.01 
 D({id: 'PROP-GREY-LADY', state: 'front-page', module: M + 'kits/grey-lady.ts drawFrontPageHigh', note: '33.02 [HIGH] a plain serif masthead, the columns, the clerk\'s stamp, held to read', draw: (fb) => { drawFrontPageHigh(fb, 0, {}); }});
 D({id: 'ROOM-DARK-A3', state: 'profile-glass', module: a3M + ' drawProfileGlass', note: '33.04 [MCU·PF] Mas, his glass at his hand in frame, its water line flat: "noted."', draw: (fb) => { A3.drawProfileGlass(fb, 0, {mas: {mouth: 'rest'}}); }});
 D({id: 'KIT-ORB-TOAST', state: 'toasts-fan', module: M + 'kits/orb-toast.ts', note: 'the Orb\'s toasts (verdict · working · note) and a scan fan on the sheet\'s backdrop', draw: (fb) => { bench(fb, PAL.N1, PAL.N0); drawScanFan(fb, 470, 20, 160, 10, {len: 400}); drawToast(fb, 20, 20, 'verified: human', 3); drawToast(fb, 20, 44, 're-scanning…', 3, {kind: 'working', f: 4}); drawToast(fb, 20, 68, 'catching up: 7 weeks', 3, {kind: 'note'}); drawToast(fb, 20, 96, 'verified: human', 0); label(fb, 'k 0 (2 px high, then settles)', 130, 98); }});
+
+// =================================================================== v3.1 (script draft 7, script-v31-notes.md §4) · ACT TWO
+D({id: 'PROP-CLASS-PHOTO', state: 'v31-match', module: whM + ' drawClassPhoto {match}', note: 'v31 13.14 -> 14.01 the match cut: the print held where the phone will be (CLASS_PHOTO_MATCH), the hand at the left edge', draw: (fb) => { WH.drawClassPhoto(fb, 0, {match: true}); }});
+D({id: 'ROOM-BRIDGE', state: 'v31-feed-post', module: bbM + ' drawBridgeOTS {feed, hearts}', note: 'v31 14.01 the phone lands on his own CLASS PHOTO #1 post, the hearts climbing (feed 0)', draw: (fb) => { BB.drawBridgeOTS(fb, 0, {f: 0, mouth: 0, feed: 0, hearts: 212}); }});
+D({id: 'ROOM-BRIDGE', state: 'v31-feed-scroll', module: bbM + ' drawBridgeOTS {feed}', note: 'v31 14.01 the scroll down to the clip (feed 0.5: whole-px held steps)', draw: (fb) => { BB.drawBridgeOTS(fb, 0, {f: 0, mouth: 0, feed: 0.5, hearts: 1204}); }});
+D({id: 'ROOM-WH', state: 'v31-wide-radnus-talks', module: whM + ' drawWHWide {mouths}', note: 'v31 13.01 Radnus\'s mouth moving silently in the wide (open drawing; alternate with the rest)', draw: (fb) => { WH.drawWHWide(fb, 0, {sirrah: {on: 'A'}, mouths: {radnus: 'open'}}); }});
+D({id: 'ROOM-SENATE', state: 'v31-wide-chair-talks', module: snM + ' drawSenateWide {chair.mouth}', note: 'v31 15.02 the chairman speaking his new line (room-scale mouth open / rest)', draw: (fb) => { SN.drawSenateWide(fb, 0, {chair: {arm: 'card', mouth: 'open'}}); }});
+D({id: 'PROP-GLASS-SIDE', state: 'run-0', module: rtM + ' drawGlassSide', note: 'v31 17.12 [ECU] his glass side-on at table height: the sheet beyond, the sky; the crack stopped in the sky', draw: (fb) => { RT.drawGlassSide(fb, 0, {run: 0}); }});
+D({id: 'PROP-GLASS-SIDE', state: 'run-3', module: rtM + ' drawGlassSide', note: 'v31 17.12 the refracted crack runs on in the water, across his small reflection (3 held steps)', draw: (fb) => { RT.drawGlassSide(fb, 0, {run: 3}); }});
+
+// =================================================================== v3.1 · ACT THREE
+const m31 = M + 'kits/monitor-v31.ts';
+const d31 = M + 'rooms/darkroom-v31.ts drawDark2SSCR';
+D({id: 'ROOM-DARK-A3', state: 'v31-lobby-small', module: a3M + ' drawDarkA3 + ' + m31 + ' lobbyPainter (mini)', note: 'v31 18.00 [2S] the home room, the monitor lit: the slate lobby small on it', draw: (fb) => { A3.drawDarkA3(fb, 0, {orb: null, mas: {arm: 'rest', look: -1}, plate: {screen: lobbyPainter({key: 1, kram: 1, caption: true, chip: true})}}); }});
+D({id: 'UI-LOBBY-V31', state: 'key-hang', module: m31 + ' lobbyPainter', note: 'v31 18.00b [POV] MACROSOFT WELCOMES ATEM · JUL 18: Tasya hangs a 13th key, in Atem blue; KRAM steps in', draw: (fb) => { MON.drawMonitorPOV(fb, 0, lobbyPainter({key: 1, kram: 1, caption: true, chip: true})); }});
+D({id: 'UI-LOBBY-V31', state: 'key-on', module: m31 + ' lobbyPainter', note: 'v31 18.00b the key on the ring (13 now); KRAM beside her, mute, OPEN SOURCE across his chest', draw: (fb) => { MON.drawMonitorPOV(fb, 0, lobbyPainter({key: 2, kram: 2, caption: true, chip: true})); }});
+D({id: 'CAST-KRAM', state: 'bust', module: M + 'cast/kram.ts', note: 'v31 KRAM (new cast; guardrails §6: his family never): the curly crop, the hoodie, OPEN SOURCE hand-painted, dry', draw: (fb) => { bench(fb, PAL.N3, PAL.N2); bustAt(fb, kramBust({...KRAM_BUST_DEFAULT}), 40); bustAt(fb, kramBust({...KRAM_BUST_DEFAULT, light: 'room', lid: 1}), 200); bustAt(fb, kramBust({...KRAM_BUST_DEFAULT, light: 'room', look: 1}), 340); label(fb, 'SLATE · ROOM · ROOM, LOOK (NEVER FLIPPED: THE WORDS)', 10, 190); }});
+D({id: 'UI-SIRRAH-V31', state: 'chyron', module: m31 + ' sirrahPainter', note: 'v31 19.02 [POV] SIRRAH at a lectern, the waist-high A and I blocks, the news chyron (JUL 12)', draw: (fb) => { MON.drawMonitorPOV(fb, 0, sirrahPainter({typed: 999, mouth: 'E'})); }});
+D({id: 'ROOM-DARK-2SSCR', state: 'runner-two', module: d31 + ' + ' + m31 + ' runnerPainter', note: 'v31 19.03 [2S·SCR] one held frame: the letters beat; Mas two fingers up; the Orb whirrs (counting)', draw: (fb) => { drawDark2SSCR(fb, 0, {screen: sirrahPainter({typed: 999}), hand: 'two', orb: {mode: 'whirr'}}); }});
+D({id: 'ROOM-DARK-2SSCR', state: 'runner-pinky', module: d31 + ' + ' + m31 + ' runnerPainter', note: 'v31 19.03 PINKY PROMISE, seven pinky-prints, one beige; Mas\'s pinky up; the Orb rotates', draw: (fb) => { drawDark2SSCR(fb, 6, {screen: runnerPainter({item: 'pinky', unroll: 1}), hand: 'pinky', orb: {mode: 'rotate'}}); }});
+D({id: 'ROOM-DARK-2SSCR', state: 'runner-forum-up', module: d31 + ' + ' + m31 + ' runnerPainter', note: 'v31 19.03 the forum, hands up in one drawing, NOLE\'s highest; Mas\'s hand up; the Orb rises one pixel', draw: (fb) => { drawDark2SSCR(fb, 0, {screen: runnerPainter({item: 'forum', hands: 1}), hand: 'up', orb: {mode: 'rise'}}); }});
+D({id: 'ROOM-DARK-2SSCR', state: 'runner-lower', module: d31, note: 'v31 19.03 "i\'ve had mine up since may.": the hand coming down; the forum\'s hands down', draw: (fb) => { drawDark2SSCR(fb, 0, {screen: runnerPainter({item: 'forum', hands: 0}), hand: 'lower', orb: {mode: 'look'}}); }});
+D({id: 'UI-RUNNER', state: 'pinky-pov', module: m31 + ' runnerPainter', note: 'v31 19.03 the pinky scroll at POV scale (legibility check: JUL 21)', draw: (fb) => { MON.drawMonitorPOV(fb, 0, runnerPainter({item: 'pinky', unroll: 1})); }});
+D({id: 'UI-RUNNER', state: 'forum-pov', module: m31 + ' runnerPainter', note: 'v31 19.03 the forum at POV scale: REMUHCS, BILLS: 0, NOLE\'s hand with its phone (SEP 13)', draw: (fb) => { MON.drawMonitorPOV(fb, 0, runnerPainter({item: 'forum', hands: 1})); }});
+D({id: 'UI-GERG-TILE', state: 'call', module: m31 + ' withGergTile', note: 'v31 20.04 / 20.06 Gerg\'s video tile in the monitor\'s corner (2 AM\'s tile) over the posted thread', draw: (fb) => { MON.drawMonitorPOV(fb, 0, withGergTile(tidderPainter({phase: 'posted', count: 1204}), {mouth: 'E'})); }});
+D({id: 'UI-PAPER', state: 'title', module: m31 + ' paperPainter', note: 'v31 20.07 [POV] DECODING INTENTIONS, the NELEH byline, the glowing page, the footnotes orbiting', draw: (fb) => { MON.drawMonitorPOV(fb, 4, paperPainter({page: 'title', thumb: 0})); }});
+D({id: 'UI-PAPER', state: 'p29', module: m31 + ' paperPainter', note: 'v31 20.07 p. 29: "research preview", in its quotes; the scrollbar\'s thumb shrinking', draw: (fb) => { MON.drawMonitorPOV(fb, 0, paperPainter({page: 'p29', thumb: 1})); }});
+D({id: 'UI-PAPER', state: 'p30', module: m31 + ' paperPainter', note: 'v31 20.07 p. 30: the two small logos and the held sentence', draw: (fb) => { MON.drawMonitorPOV(fb, 0, paperPainter({page: 'p30', thumb: 2})); }});
+D({id: 'ROOM-DARK-2SSCR', state: 'paper-gerg', module: d31 + ' + ' + m31, note: 'v31 20.07 [2S·SCR] the paper big on the monitor, Gerg\'s tile in its corner; the Orb reads with him', draw: (fb) => { drawDark2SSCR(fb, 0, {screen: withGergTile(paperPainter({page: 'p29', thumb: 1}), {}), orb: {mode: 'look', look: [0.9, -0.1]}}); }});
+D({id: 'UI-EO', state: 'v31-one-copy', module: M + 'kits/eo-signing.ts eoPainter {copies: 1, stat: 1}', note: 'v31 21.02-21.03 one copy of Nedib, not two; the stat SEEN 1', draw: (fb) => { MON.drawMonitorPOV(fb, 0, eoPainter({copies: 1, pen: 'raised', turn: true, mouth: 'A', stat: 1, egg: true})); }});
+D({id: 'ROOM-DARK-2SSCR', state: 'eo-toast', module: d31 + ' + kits/eo-signing.ts + kits/orb-toast.ts', note: 'v31 21.04 [2S·SCR] the Orb\'s toast over the real Nedib (the one with the pen): verified: human', draw: (fb) => { drawDark2SSCR(fb, 0, {screen: eoPainter({copies: 1, pen: 'raised'}), orb: {mode: 'look', look: [0.95, -0.05]}, toasts: [{s: 'verified: human', k: 3, x: DARK_SCR.screen.x + EO_SHORT.realX + 30, y: DARK_SCR.screen.y + 3}]}); }});
+D({id: 'UI-DEVDAY', state: 'v31-sydney', module: M + 'kits/monitor-items.ts devdayPainter {sydney}', note: 'v31 22.01 the Sydney bubble on its chain, tiny, behind Tasya on stage', draw: (fb) => { MON.drawMonitorPOV(fb, 0, devdayPainter({rise: 3, tasya: 0.6, sydney: true})); }});
+D({id: 'UI-PHONE-HIGH', state: 'v31-reminder-hover', module: M + 'kits/phone-high.ts {hover}', note: 'v31 23.02 the hover names on the four circles as the Orb\'s iris steps along them (NELEH)', draw: (fb) => { drawPhoneHigh(fb, 0, {screen: 'reminder', orb: ORB_CIRCLE_LOOKS[1], hover: 1}); }});
+D({id: 'UI-PHONE-HIGH', state: 'v31-reminder-hover-qv', module: M + 'kits/phone-high.ts {hover}', note: 'v31 23.02 ... and THE QUIET VOTE on the black square', draw: (fb) => { drawPhoneHigh(fb, 0, {screen: 'reminder', orb: ORB_CIRCLE_LOOKS[3], hover: 3}); }});
+
+// =================================================================== v3.1 · TAG
+D({id: 'ROOM-DARK-A3', state: 'v31-wake-1', module: a3M + ' drawDarkA3 + ' + m31 + ' screenWake', note: 'v31 32.01 the monitor lighting on its own: step 1 of 3 (then the Runway insert: the v31-runway pass\'s)', draw: (fb) => { A3.drawDarkA3(fb, 0, {orb: {at: 'shoulder', look: DPLATE_LOOK.grid}, outline: true, mas: {}, plate: {tally: 3, screen: screenWake(1)}}); }});
+D({id: 'ROOM-DARK-A3', state: 'v31-wake-3', module: a3M + ' drawDarkA3 + ' + m31 + ' screenWake', note: 'v31 32.01 lit (step 3): the demo film\'s frame waits (the Runway pass pushes in from here)', draw: (fb) => { A3.drawDarkA3(fb, 0, {orb: {at: 'shoulder', look: DPLATE_LOOK.grid}, outline: true, mas: {}, plate: {tally: 3, screen: screenWake(3)}}); }});
+
+// =================================================================== v3.1 · ACT FOUR (for the Act Four shot pass)
+const a4M = M + 'kits/act4-v31.ts';
+D({id: 'UI-REMOVE', state: 'open', module: a4M + ' drawRemoveDialog', note: 'v31-S1.08d HARD CUT, bright: the field and the dialog\'s first held outline step (k 1)', draw: (fb) => { A4.drawRemoveDialog(fb, 0, {k: 1}); }});
+D({id: 'UI-REMOVE', state: 'read', module: a4M + ' drawRemoveDialog', note: 'v31-S1.08d held 1.5 s to read: Remove MAS MANALT from the meeting? · [ Remove ]; the ALYI arrow enters', draw: (fb) => { A4.drawRemoveDialog(fb, 0, {pointer: 0}); }});
+D({id: 'UI-REMOVE', state: 'on-button', module: a4M + ' drawRemoveDialog', note: 'v31-S1.08d the arrow on Remove (a held position a beat)', draw: (fb) => { A4.drawRemoveDialog(fb, 0, {pointer: A4.REMOVE_STEPS}); }});
+D({id: 'UI-REMOVE', state: 'click', module: a4M + ' drawRemoveDialog', note: 'v31-S1.08d the click on the downbeat (D6: the drop-out)', draw: (fb) => { A4.drawRemoveDialog(fb, 0, {pointer: A4.REMOVE_STEPS, click: true}); }});
+D({id: 'UI-REMOVE', state: 'lobby-grey-3', module: a4M + ' drawRemoveDialog {field: screen, grey, tag: \'\'}', note: 'S8.03 the re-rhyme over the lobby: Remove greyed (step 3), the empty-tagged arrow clicks, the button doesn\'t go down', draw: (fb) => { bench(fb, PAL.N2, PAL.N1); A4.drawRemoveDialog(fb, 0, {field: 'screen', grey: 3, pointer: A4.REMOVE_STEPS, tag: '', click: true, shake: [2, 0]}); }, standin: 'the lobby behind it (the shot pass lays it over rooms-a\'s lobby at night, as v5 S8.03)'});
+D({id: 'UI-REMOVE', state: 'lobby-grey-steps', module: a4M + ' drawRemoveDialog {grey}', note: 'S8.03 the greying, one dither step a beat: 1 (ring gone) · 2 (50% frame) · 3 (the word knocked out)', draw: (fb) => {
+  bench(fb, PAL.N2, PAL.N1);
+  const t = new Buf(480, 203, PAL.N1);
+  ([1, 2, 3] as const).forEach((g, i) => { t.c.fill(PAL.N1); A4.drawRemoveDialog(t, 0, {field: 'screen', grey: g}); const [bx, by, bw, bh] = A4.removeButton(); for (let y = -6; y < bh + 6; y++) for (let x = -6; x < bw + 6; x++) fb.set(20 + i * 150 + x + 6, 60 + y, t.get(bx + x, by + y)); });
+  label(fb, 'GREY 1 · GREY 2 · GREY 3', 20, 110); }});
+D({id: 'ROOM-NELEH-HIGH', state: 'desk', module: a4M + ' drawNelehDeskHigh', note: 'v31-S3.00p [HIGH] 11:52: the call open, MADA joined early (spinner), three waiting; THE PLAN unfolded; NELEH leaning over it', draw: (fb) => { A4.drawNelehDeskHigh(fb, 6, {}); }});
+D({id: 'ROOM-NELEH-HIGH', state: 'paper', module: a4M + ' drawNelehDeskHigh {framing: paper}', note: 'v31-S3.00p the push lands on the paper: S1.03\'s first sheet frame at 1:1 (GERG / CHAIR), her pen by NELEH', draw: (fb) => { A4.drawNelehDeskHigh(fb, 0, {framing: 'paper'}); }});
+D({id: 'UI-TUESDAY-INVITE', state: 'slide', module: a4M + ' drawTuesdayInvite', note: 'v31-S7.03b [ECU] his phone lights beside the GUEST lanyard and the MACROSOFT badge; the invite slides down', draw: (fb) => { A4.drawTuesdayInvite(fb, 0, {k: 3}); }});
+D({id: 'UI-TUESDAY-INVITE', state: 'invite', module: a4M + ' drawTuesdayInvite', note: 'v31-S7.03b Board · Tue 10:00 PM · Accept / Decline · a spinner, a fire helmet, a blank', draw: (fb) => { A4.drawTuesdayInvite(fb, 3, {k: 9}); }});
+D({id: 'UI-TUESDAY-INVITE', state: 'tap', module: a4M + ' drawTuesdayInvite {thumb: tap}', note: 'v31-S7.03b his thumb taps Accept, no hover (the fires\' crackle J-cuts under it)', draw: (fb) => { A4.drawTuesdayInvite(fb, 3, {k: 9, thumb: 'tap', press: true}); }});
+D({id: 'UI-TUESDAY-INVITE', state: 'accepted', module: a4M + ' drawTuesdayInvite {accepted}', note: 'v31-S7.03b accepted: the card steps to the calendar\'s pale blue', draw: (fb) => { A4.drawTuesdayInvite(fb, 3, {k: 9, accepted: true}); }});
+const sundayFeed = (() => { const b = new Buf(FEED_W, FEED_H, PAL.N0); drawLobbyFeed(b, {f: 10, phase: 'stand', k: 20}); return b; })();
+D({id: 'ROOM-BOARD-SCREEN-V31', state: 'sunday', module: a4M + ' drawSundayOTS (+ rooms/board-screen, kits/lobby-feed)', note: 'S4.09 [OTS] the reversal on screen: the phones in a row, STAFF · STAFF · INVESTORS · INVESTORS; the ticker under the CCTV', draw: (fb) => { A4.drawSundayOTS(fb, 10, {feed: sundayFeed, buzz: 17, ticker: 999}); }});
+D({id: 'ROOM-BOARD-SCREEN-V31', state: 'ticker-crawl', module: a4M + ' drawSundayOTS {ticker}', note: 'S4.09 the ticker crawling in (2 px a frame), the first phone buzzing', draw: (fb) => { A4.drawSundayOTS(fb, 10, {feed: sundayFeed, buzz: 1, ticker: 60, alyi: {mouth: 'E'}}); }});
+D({id: 'ROOM-ALYI-GLASS', state: 'mcu', module: a4M + ' drawAlyiGlass', note: 'S4.02 [MCU·glass] the cutaway: ALYI\'s reflection in the dark window, not turning, the phones\' screens beside him', draw: (fb) => { A4.drawAlyiGlass(fb, 0, {mouth: 'E'}); }});
+D({id: 'UI-CALL-OUT', state: 'app', module: a4M + ' callOutPainter + kits/mas-monitor drawMonitorOTS', note: 'S5.09 [OTS] he opens the call app: GERG on top, board sync · ended under him', draw: (fb) => { MON.drawMonitorOTS(fb, 0, A4.callOutPainter({phase: 'click'})); }});
+D({id: 'UI-CALL-OUT', state: 'ring', module: a4M + ' callOutPainter', note: 'S5.09 it rings out: Calling…, the pulses stepping out on 6s (then v5\'s tile opens)', draw: (fb) => { MON.drawMonitorOTS(fb, 0, A4.callOutPainter({phase: 'ring', k: 6})); }});
+D({id: 'UI-CALL-OUT', state: 'corner-tile', module: a4M + ' drawCallOutTile', note: 'S5.09 the same as v5\'s corner tile, outgoing (for the letter-behind layout): lit and between pulses', draw: (fb) => { bench(fb, PAL.N1, PAL.N0); A4.drawCallOutTile(fb, 60, 60, 0); A4.drawCallOutTile(fb, 200, 60, 6); label(fb, 'RING ON · RING OFF (6s)', 60, 120); }});
+D({id: 'CAST-TERB', state: 'dry-squeeze', module: a4M + ' drawDrySqueeze (cast/terb.ts)', note: 'S7.06 the squeeze with the pin in: click, nothing (k 1 = the kick); the pin that Mas pulls', draw: (fb) => { bench(fb, PAL.R1, PAL.N1); A4.drawDrySqueeze(fb, 120, 150, {}); A4.drawDrySqueeze(fb, 260, 150, {k: 1}); A4.drawDrySqueeze(fb, 400, 150, {flip: true}); label(fb, 'SQUEEZE · CLICK (KICK) · FLIPPED', 10, 170); }});
+D({id: 'CAST-TERB', state: 'writing', module: a4M + ' drawTerbWriting (cast/terb-sheet.ts)', note: 'S7.07-cont "Gerg comes back too.": Terb writes it onto the sheet, not looking up (the line grows k 0..4)', draw: (fb) => { bench(fb, PAL.R1, PAL.N1); A4.drawTerbWriting(fb, 140, 150, 1); A4.drawTerbWriting(fb, 240, 150, 4); A4.drawTerbWriting(fb, 360, 150, 3, {flip: true}); label(fb, 'K 1 · K 4 · FLIPPED', 10, 170); }});
+D({id: 'KIT-LETTER-HEADER', state: 'tile-0', module: a4M + ' letterHeaderStrip (+ kits/callgrid employeeFace)', note: 'S6.01 the avalanche\'s first employee tile carries the letter\'s header strip', draw: (fb) => { bench(fb, PAL.N1, PAL.N0); employeeFace(fb, 60, 40, 150, 84, 3); A4.letterHeaderStrip(fb, 60, 40, 150); employeeFace(fb, 240, 40, 72, 42, 5); A4.letterHeaderStrip(fb, 240, 40, 72); label(fb, 'TILE 150 · TILE 72 (THE SHORT FORM)', 60, 140); }});
+
+// =================================================================== v3.1 · THE FACE LIGHT (mood §4 #4)
+const flM = M + 'kits/face-light-img.ts';
+D({id: 'KIT-FACE-LIGHT', state: '18.05', module: a3M + ' drawScanMCU {faceLight: 1}', note: 'v31 18.05 [MCU] the toast: left as before, right one step up on the face only (the room unchanged)', draw: (fb) => {
+  const a = new Buf(480, 270, PAL.N0), c = new Buf(480, 270, PAL.N0);
+  A3.drawScanMCU(a, 0, {mas: {mouth: 'E'}, toast: {s: 'verified: human', k: 3}});
+  A3.drawScanMCU(c, 0, {mas: {mouth: 'E'}, toast: {s: 'verified: human', k: 3}, faceLight: 1});
+  for (let y = 0; y < 203; y++) for (let x = 0; x < 240; x++) { fb.set(x, y, a.get(x + 60, y)); fb.set(240 + x, y, c.get(x + 60, y)); }
+  rect(239, 0, 2, 203, fb.ink(PAL.N0)); label(fb, 'BEFORE', 6, 192); label(fb, 'FACE LIGHT 1', 246, 192); }});
+D({id: 'KIT-FACE-LIGHT', state: '22.03', module: a3M + ' drawDarkA3 {faceLight: 1}', note: 'v31 22.03 [2S] Mas and the Orb, the phone between them: one step on his face (keyed from the monitor)', draw: (fb) => { A3.drawDarkA3(fb, 0, {orb: {at: 'shoulder', look: DPLATE_LOOK.phone}, outline: true, mas: {arm: 'phone', head: 'down', mouth: 'E'}, plate: {phone: 'up', phoneScreen: phoneMini('prompt'), screen: devdayPainter({rise: 3, tasya: 1})}, faceLight: 1}); }});
+D({id: 'KIT-FACE-LIGHT', state: 'act4-portraits', module: flM + ' faceLightImg', note: 'Act Four (S5.07b S5.05 S7.08 · S4.07 S3.04b · S4.15): each portrait before / after one step (key from the arrow side)', draw: (fb) => {
+  bench(fb, PAL.N1, PAL.N0);
+  const mas = masPortrait({...MAS_PORTRAIT_DEFAULT}), nel = nelehPortrait({...NELEH_PORTRAIT_DEFAULT}), mad = madaPortrait({...MADA_PORTRAIT_DEFAULT});
+  // each portrait's head (its middle 72 columns), before and after, side by side
+  const head = (im: Img, x: number) => { const t = new Buf(im.w, im.h, PAL.N0); blitImg(t, im, 0, 0); for (let y = 0; y < 150 && y < im.h; y++) for (let i = 0; i < 72; i++) { const c = im.c[y * im.w + 20 + i]; if (c >= 0) fb.set(x + i, 26 + y, c); } void t; };
+  head(mas, 6); head(faceLightImg(mas, 1, {key: [-1, -0.2]}), 82);
+  head(nel, 166); head(faceLightImg(nel, 1, {key: [-1, -0.4]}), 242);
+  head(mad, 326); head(faceLightImg(mad, 1, {key: [-1, -0.3]}), 402);
+  label(fb, 'MAS -> 1', 40, 8); label(fb, 'NELEH -> 1', 196, 8); label(fb, 'MADA -> 1', 360, 8); }});
+D({id: 'KIT-FACE-LIGHT', state: 'S5.09b-tile', module: M + 'kits/face-light.ts faceKey (art-a\'s)', note: 'S5.09b Gerg\'s look up in his tile: art-a\'s faceKey over the tile\'s face (drawn straight into the buffer)', draw: (fb) => {
+  bench(fb, PAL.N1, PAL.N0);
+  drawGergMediumTile(fb, 20, 20, 210, 150, {...GERG_MEDIUM_DEFAULT, head: 'up', lid: 0});
+  drawGergMediumTile(fb, 250, 20, 210, 150, {...GERG_MEDIUM_DEFAULT, head: 'up', lid: 0});
+  faceKey(fb, 250 + 60, 20, 250 + 150, 20 + 110, 1, -1);
+  label(fb, 'BEFORE', 20, 176); label(fb, 'FACEKEY 1 (THE FACE\'S RECT)', 250, 176); }});
+void lumaOf;
 void blitImg; void drawBigFlame; void drawTasyaStage; void drawToast;

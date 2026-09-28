@@ -1128,5 +1128,555 @@
   "standin": "",
   "native": "native/KIT-ORB-TOAST--toasts-fan.png",
   "full": "full/KIT-ORB-TOAST--toasts-fan.png"
+ },
+ {
+  "key": "PROP-CLASS-PHOTO@v31-match",
+  "id": "PROP-CLASS-PHOTO",
+  "state": "v31-match",
+  "module": "shared/pixel/rooms/whitehouse.ts drawClassPhoto {match}",
+  "note": "v31 13.14 -> 14.01 the match cut: the print held where the phone will be (CLASS_PHOTO_MATCH), the hand at the left edge",
+  "standin": "",
+  "native": "native/PROP-CLASS-PHOTO--v31-match.png",
+  "full": "full/PROP-CLASS-PHOTO--v31-match.png"
+ },
+ {
+  "key": "ROOM-BRIDGE@v31-feed-post",
+  "id": "ROOM-BRIDGE",
+  "state": "v31-feed-post",
+  "module": "shared/pixel/rooms/bay-bridge.ts drawBridgeOTS {feed, hearts}",
+  "note": "v31 14.01 the phone lands on his own CLASS PHOTO #1 post, the hearts climbing (feed 0)",
+  "standin": "",
+  "native": "native/ROOM-BRIDGE--v31-feed-post.png",
+  "full": "full/ROOM-BRIDGE--v31-feed-post.png"
+ },
+ {
+  "key": "ROOM-BRIDGE@v31-feed-scroll",
+  "id": "ROOM-BRIDGE",
+  "state": "v31-feed-scroll",
+  "module": "shared/pixel/rooms/bay-bridge.ts drawBridgeOTS {feed}",
+  "note": "v31 14.01 the scroll down to the clip (feed 0.5: whole-px held steps)",
+  "standin": "",
+  "native": "native/ROOM-BRIDGE--v31-feed-scroll.png",
+  "full": "full/ROOM-BRIDGE--v31-feed-scroll.png"
+ },
+ {
+  "key": "ROOM-WH@v31-wide-radnus-talks",
+  "id": "ROOM-WH",
+  "state": "v31-wide-radnus-talks",
+  "module": "shared/pixel/rooms/whitehouse.ts drawWHWide {mouths}",
+  "note": "v31 13.01 Radnus's mouth moving silently in the wide (open drawing; alternate with the rest)",
+  "standin": "",
+  "native": "native/ROOM-WH--v31-wide-radnus-talks.png",
+  "full": "full/ROOM-WH--v31-wide-radnus-talks.png"
+ },
+ {
+  "key": "ROOM-SENATE@v31-wide-chair-talks",
+  "id": "ROOM-SENATE",
+  "state": "v31-wide-chair-talks",
+  "module": "shared/pixel/rooms/senate.ts drawSenateWide {chair.mouth}",
+  "note": "v31 15.02 the chairman speaking his new line (room-scale mouth open / rest)",
+  "standin": "",
+  "native": "native/ROOM-SENATE--v31-wide-chair-talks.png",
+  "full": "full/ROOM-SENATE--v31-wide-chair-talks.png"
+ },
+ {
+  "key": "PROP-GLASS-SIDE@run-0",
+  "id": "PROP-GLASS-SIDE",
+  "state": "run-0",
+  "module": "shared/pixel/rooms/rooftop.ts drawGlassSide",
+  "note": "v31 17.12 [ECU] his glass side-on at table height: the sheet beyond, the sky; the crack stopped in the sky",
+  "standin": "",
+  "native": "native/PROP-GLASS-SIDE--run-0.png",
+  "full": "full/PROP-GLASS-SIDE--run-0.png"
+ },
+ {
+  "key": "PROP-GLASS-SIDE@run-3",
+  "id": "PROP-GLASS-SIDE",
+  "state": "run-3",
+  "module": "shared/pixel/rooms/rooftop.ts drawGlassSide",
+  "note": "v31 17.12 the refracted crack runs on in the water, across his small reflection (3 held steps)",
+  "standin": "",
+  "native": "native/PROP-GLASS-SIDE--run-3.png",
+  "full": "full/PROP-GLASS-SIDE--run-3.png"
+ },
+ {
+  "key": "ROOM-DARK-A3@v31-lobby-small",
+  "id": "ROOM-DARK-A3",
+  "state": "v31-lobby-small",
+  "module": "shared/pixel/rooms/darkroom-act3.ts drawDarkA3 + shared/pixel/kits/monitor-v31.ts lobbyPainter (mini)",
+  "note": "v31 18.00 [2S] the home room, the monitor lit: the slate lobby small on it",
+  "standin": "",
+  "native": "native/ROOM-DARK-A3--v31-lobby-small.png",
+  "full": "full/ROOM-DARK-A3--v31-lobby-small.png"
+ },
+ {
+  "key": "UI-LOBBY-V31@key-hang",
+  "id": "UI-LOBBY-V31",
+  "state": "key-hang",
+  "module": "shared/pixel/kits/monitor-v31.ts lobbyPainter",
+  "note": "v31 18.00b [POV] MACROSOFT WELCOMES ATEM · JUL 18: Tasya hangs a 13th key, in Atem blue; KRAM steps in",
+  "standin": "",
+  "native": "native/UI-LOBBY-V31--key-hang.png",
+  "full": "full/UI-LOBBY-V31--key-hang.png"
+ },
+ {
+  "key": "UI-LOBBY-V31@key-on",
+  "id": "UI-LOBBY-V31",
+  "state": "key-on",
+  "module": "shared/pixel/kits/monitor-v31.ts lobbyPainter",
+  "note": "v31 18.00b the key on the ring (13 now); KRAM beside her, mute, OPEN SOURCE across his chest",
+  "standin": "",
+  "native": "native/UI-LOBBY-V31--key-on.png",
+  "full": "full/UI-LOBBY-V31--key-on.png"
+ },
+ {
+  "key": "CAST-KRAM@bust",
+  "id": "CAST-KRAM",
+  "state": "bust",
+  "module": "shared/pixel/cast/kram.ts",
+  "note": "v31 KRAM (new cast; guardrails §6: his family never): the curly crop, the hoodie, OPEN SOURCE hand-painted, dry",
+  "standin": "",
+  "native": "native/CAST-KRAM--bust.png",
+  "full": "full/CAST-KRAM--bust.png"
+ },
+ {
+  "key": "UI-SIRRAH-V31@chyron",
+  "id": "UI-SIRRAH-V31",
+  "state": "chyron",
+  "module": "shared/pixel/kits/monitor-v31.ts sirrahPainter",
+  "note": "v31 19.02 [POV] SIRRAH at a lectern, the waist-high A and I blocks, the news chyron (JUL 12)",
+  "standin": "",
+  "native": "native/UI-SIRRAH-V31--chyron.png",
+  "full": "full/UI-SIRRAH-V31--chyron.png"
+ },
+ {
+  "key": "ROOM-DARK-2SSCR@runner-two",
+  "id": "ROOM-DARK-2SSCR",
+  "state": "runner-two",
+  "module": "shared/pixel/rooms/darkroom-v31.ts drawDark2SSCR + shared/pixel/kits/monitor-v31.ts runnerPainter",
+  "note": "v31 19.03 [2S·SCR] one held frame: the letters beat; Mas two fingers up; the Orb whirrs (counting)",
+  "standin": "",
+  "native": "native/ROOM-DARK-2SSCR--runner-two.png",
+  "full": "full/ROOM-DARK-2SSCR--runner-two.png"
+ },
+ {
+  "key": "ROOM-DARK-2SSCR@runner-pinky",
+  "id": "ROOM-DARK-2SSCR",
+  "state": "runner-pinky",
+  "module": "shared/pixel/rooms/darkroom-v31.ts drawDark2SSCR + shared/pixel/kits/monitor-v31.ts runnerPainter",
+  "note": "v31 19.03 PINKY PROMISE, seven pinky-prints, one beige; Mas's pinky up; the Orb rotates",
+  "standin": "",
+  "native": "native/ROOM-DARK-2SSCR--runner-pinky.png",
+  "full": "full/ROOM-DARK-2SSCR--runner-pinky.png"
+ },
+ {
+  "key": "ROOM-DARK-2SSCR@runner-forum-up",
+  "id": "ROOM-DARK-2SSCR",
+  "state": "runner-forum-up",
+  "module": "shared/pixel/rooms/darkroom-v31.ts drawDark2SSCR + shared/pixel/kits/monitor-v31.ts runnerPainter",
+  "note": "v31 19.03 the forum, hands up in one drawing, NOLE's highest; Mas's hand up; the Orb rises one pixel",
+  "standin": "",
+  "native": "native/ROOM-DARK-2SSCR--runner-forum-up.png",
+  "full": "full/ROOM-DARK-2SSCR--runner-forum-up.png"
+ },
+ {
+  "key": "ROOM-DARK-2SSCR@runner-lower",
+  "id": "ROOM-DARK-2SSCR",
+  "state": "runner-lower",
+  "module": "shared/pixel/rooms/darkroom-v31.ts drawDark2SSCR",
+  "note": "v31 19.03 \"i've had mine up since may.\": the hand coming down; the forum's hands down",
+  "standin": "",
+  "native": "native/ROOM-DARK-2SSCR--runner-lower.png",
+  "full": "full/ROOM-DARK-2SSCR--runner-lower.png"
+ },
+ {
+  "key": "UI-RUNNER@pinky-pov",
+  "id": "UI-RUNNER",
+  "state": "pinky-pov",
+  "module": "shared/pixel/kits/monitor-v31.ts runnerPainter",
+  "note": "v31 19.03 the pinky scroll at POV scale (legibility check: JUL 21)",
+  "standin": "",
+  "native": "native/UI-RUNNER--pinky-pov.png",
+  "full": "full/UI-RUNNER--pinky-pov.png"
+ },
+ {
+  "key": "UI-RUNNER@forum-pov",
+  "id": "UI-RUNNER",
+  "state": "forum-pov",
+  "module": "shared/pixel/kits/monitor-v31.ts runnerPainter",
+  "note": "v31 19.03 the forum at POV scale: REMUHCS, BILLS: 0, NOLE's hand with its phone (SEP 13)",
+  "standin": "",
+  "native": "native/UI-RUNNER--forum-pov.png",
+  "full": "full/UI-RUNNER--forum-pov.png"
+ },
+ {
+  "key": "UI-GERG-TILE@call",
+  "id": "UI-GERG-TILE",
+  "state": "call",
+  "module": "shared/pixel/kits/monitor-v31.ts withGergTile",
+  "note": "v31 20.04 / 20.06 Gerg's video tile in the monitor's corner (2 AM's tile) over the posted thread",
+  "standin": "",
+  "native": "native/UI-GERG-TILE--call.png",
+  "full": "full/UI-GERG-TILE--call.png"
+ },
+ {
+  "key": "UI-PAPER@title",
+  "id": "UI-PAPER",
+  "state": "title",
+  "module": "shared/pixel/kits/monitor-v31.ts paperPainter",
+  "note": "v31 20.07 [POV] DECODING INTENTIONS, the NELEH byline, the glowing page, the footnotes orbiting",
+  "standin": "",
+  "native": "native/UI-PAPER--title.png",
+  "full": "full/UI-PAPER--title.png"
+ },
+ {
+  "key": "UI-PAPER@p29",
+  "id": "UI-PAPER",
+  "state": "p29",
+  "module": "shared/pixel/kits/monitor-v31.ts paperPainter",
+  "note": "v31 20.07 p. 29: \"research preview\", in its quotes; the scrollbar's thumb shrinking",
+  "standin": "",
+  "native": "native/UI-PAPER--p29.png",
+  "full": "full/UI-PAPER--p29.png"
+ },
+ {
+  "key": "UI-PAPER@p30",
+  "id": "UI-PAPER",
+  "state": "p30",
+  "module": "shared/pixel/kits/monitor-v31.ts paperPainter",
+  "note": "v31 20.07 p. 30: the two small logos and the held sentence",
+  "standin": "",
+  "native": "native/UI-PAPER--p30.png",
+  "full": "full/UI-PAPER--p30.png"
+ },
+ {
+  "key": "ROOM-DARK-2SSCR@paper-gerg",
+  "id": "ROOM-DARK-2SSCR",
+  "state": "paper-gerg",
+  "module": "shared/pixel/rooms/darkroom-v31.ts drawDark2SSCR + shared/pixel/kits/monitor-v31.ts",
+  "note": "v31 20.07 [2S·SCR] the paper big on the monitor, Gerg's tile in its corner; the Orb reads with him",
+  "standin": "",
+  "native": "native/ROOM-DARK-2SSCR--paper-gerg.png",
+  "full": "full/ROOM-DARK-2SSCR--paper-gerg.png"
+ },
+ {
+  "key": "UI-EO@v31-one-copy",
+  "id": "UI-EO",
+  "state": "v31-one-copy",
+  "module": "shared/pixel/kits/eo-signing.ts eoPainter {copies: 1, stat: 1}",
+  "note": "v31 21.02-21.03 one copy of Nedib, not two; the stat SEEN 1",
+  "standin": "",
+  "native": "native/UI-EO--v31-one-copy.png",
+  "full": "full/UI-EO--v31-one-copy.png"
+ },
+ {
+  "key": "ROOM-DARK-2SSCR@eo-toast",
+  "id": "ROOM-DARK-2SSCR",
+  "state": "eo-toast",
+  "module": "shared/pixel/rooms/darkroom-v31.ts drawDark2SSCR + kits/eo-signing.ts + kits/orb-toast.ts",
+  "note": "v31 21.04 [2S·SCR] the Orb's toast over the real Nedib (the one with the pen): verified: human",
+  "standin": "",
+  "native": "native/ROOM-DARK-2SSCR--eo-toast.png",
+  "full": "full/ROOM-DARK-2SSCR--eo-toast.png"
+ },
+ {
+  "key": "UI-DEVDAY@v31-sydney",
+  "id": "UI-DEVDAY",
+  "state": "v31-sydney",
+  "module": "shared/pixel/kits/monitor-items.ts devdayPainter {sydney}",
+  "note": "v31 22.01 the Sydney bubble on its chain, tiny, behind Tasya on stage",
+  "standin": "",
+  "native": "native/UI-DEVDAY--v31-sydney.png",
+  "full": "full/UI-DEVDAY--v31-sydney.png"
+ },
+ {
+  "key": "UI-PHONE-HIGH@v31-reminder-hover",
+  "id": "UI-PHONE-HIGH",
+  "state": "v31-reminder-hover",
+  "module": "shared/pixel/kits/phone-high.ts {hover}",
+  "note": "v31 23.02 the hover names on the four circles as the Orb's iris steps along them (NELEH)",
+  "standin": "",
+  "native": "native/UI-PHONE-HIGH--v31-reminder-hover.png",
+  "full": "full/UI-PHONE-HIGH--v31-reminder-hover.png"
+ },
+ {
+  "key": "UI-PHONE-HIGH@v31-reminder-hover-qv",
+  "id": "UI-PHONE-HIGH",
+  "state": "v31-reminder-hover-qv",
+  "module": "shared/pixel/kits/phone-high.ts {hover}",
+  "note": "v31 23.02 ... and THE QUIET VOTE on the black square",
+  "standin": "",
+  "native": "native/UI-PHONE-HIGH--v31-reminder-hover-qv.png",
+  "full": "full/UI-PHONE-HIGH--v31-reminder-hover-qv.png"
+ },
+ {
+  "key": "ROOM-DARK-A3@v31-wake-1",
+  "id": "ROOM-DARK-A3",
+  "state": "v31-wake-1",
+  "module": "shared/pixel/rooms/darkroom-act3.ts drawDarkA3 + shared/pixel/kits/monitor-v31.ts screenWake",
+  "note": "v31 32.01 the monitor lighting on its own: step 1 of 3 (then the Runway insert: the v31-runway pass's)",
+  "standin": "",
+  "native": "native/ROOM-DARK-A3--v31-wake-1.png",
+  "full": "full/ROOM-DARK-A3--v31-wake-1.png"
+ },
+ {
+  "key": "ROOM-DARK-A3@v31-wake-3",
+  "id": "ROOM-DARK-A3",
+  "state": "v31-wake-3",
+  "module": "shared/pixel/rooms/darkroom-act3.ts drawDarkA3 + shared/pixel/kits/monitor-v31.ts screenWake",
+  "note": "v31 32.01 lit (step 3): the demo film's frame waits (the Runway pass pushes in from here)",
+  "standin": "",
+  "native": "native/ROOM-DARK-A3--v31-wake-3.png",
+  "full": "full/ROOM-DARK-A3--v31-wake-3.png"
+ },
+ {
+  "key": "UI-REMOVE@open",
+  "id": "UI-REMOVE",
+  "state": "open",
+  "module": "shared/pixel/kits/act4-v31.ts drawRemoveDialog",
+  "note": "v31-S1.08d HARD CUT, bright: the field and the dialog's first held outline step (k 1)",
+  "standin": "",
+  "native": "native/UI-REMOVE--open.png",
+  "full": "full/UI-REMOVE--open.png"
+ },
+ {
+  "key": "UI-REMOVE@read",
+  "id": "UI-REMOVE",
+  "state": "read",
+  "module": "shared/pixel/kits/act4-v31.ts drawRemoveDialog",
+  "note": "v31-S1.08d held 1.5 s to read: Remove MAS MANALT from the meeting? · [ Remove ]; the ALYI arrow enters",
+  "standin": "",
+  "native": "native/UI-REMOVE--read.png",
+  "full": "full/UI-REMOVE--read.png"
+ },
+ {
+  "key": "UI-REMOVE@on-button",
+  "id": "UI-REMOVE",
+  "state": "on-button",
+  "module": "shared/pixel/kits/act4-v31.ts drawRemoveDialog",
+  "note": "v31-S1.08d the arrow on Remove (a held position a beat)",
+  "standin": "",
+  "native": "native/UI-REMOVE--on-button.png",
+  "full": "full/UI-REMOVE--on-button.png"
+ },
+ {
+  "key": "UI-REMOVE@click",
+  "id": "UI-REMOVE",
+  "state": "click",
+  "module": "shared/pixel/kits/act4-v31.ts drawRemoveDialog",
+  "note": "v31-S1.08d the click on the downbeat (D6: the drop-out)",
+  "standin": "",
+  "native": "native/UI-REMOVE--click.png",
+  "full": "full/UI-REMOVE--click.png"
+ },
+ {
+  "key": "UI-REMOVE@lobby-grey-3",
+  "id": "UI-REMOVE",
+  "state": "lobby-grey-3",
+  "module": "shared/pixel/kits/act4-v31.ts drawRemoveDialog {field: screen, grey, tag: ''}",
+  "note": "S8.03 the re-rhyme over the lobby: Remove greyed (step 3), the empty-tagged arrow clicks, the button doesn't go down",
+  "standin": "the lobby behind it (the shot pass lays it over rooms-a's lobby at night, as v5 S8.03)",
+  "native": "native/UI-REMOVE--lobby-grey-3.png",
+  "full": "full/UI-REMOVE--lobby-grey-3.png"
+ },
+ {
+  "key": "UI-REMOVE@lobby-grey-steps",
+  "id": "UI-REMOVE",
+  "state": "lobby-grey-steps",
+  "module": "shared/pixel/kits/act4-v31.ts drawRemoveDialog {grey}",
+  "note": "S8.03 the greying, one dither step a beat: 1 (ring gone) · 2 (50% frame) · 3 (the word knocked out)",
+  "standin": "",
+  "native": "native/UI-REMOVE--lobby-grey-steps.png",
+  "full": "full/UI-REMOVE--lobby-grey-steps.png"
+ },
+ {
+  "key": "ROOM-NELEH-HIGH@desk",
+  "id": "ROOM-NELEH-HIGH",
+  "state": "desk",
+  "module": "shared/pixel/kits/act4-v31.ts drawNelehDeskHigh",
+  "note": "v31-S3.00p [HIGH] 11:52: the call open, MADA joined early (spinner), three waiting; THE PLAN unfolded; NELEH leaning over it",
+  "standin": "",
+  "native": "native/ROOM-NELEH-HIGH--desk.png",
+  "full": "full/ROOM-NELEH-HIGH--desk.png"
+ },
+ {
+  "key": "ROOM-NELEH-HIGH@paper",
+  "id": "ROOM-NELEH-HIGH",
+  "state": "paper",
+  "module": "shared/pixel/kits/act4-v31.ts drawNelehDeskHigh {framing: paper}",
+  "note": "v31-S3.00p the push lands on the paper: S1.03's first sheet frame at 1:1 (GERG / CHAIR), her pen by NELEH",
+  "standin": "",
+  "native": "native/ROOM-NELEH-HIGH--paper.png",
+  "full": "full/ROOM-NELEH-HIGH--paper.png"
+ },
+ {
+  "key": "UI-TUESDAY-INVITE@slide",
+  "id": "UI-TUESDAY-INVITE",
+  "state": "slide",
+  "module": "shared/pixel/kits/act4-v31.ts drawTuesdayInvite",
+  "note": "v31-S7.03b [ECU] his phone lights beside the GUEST lanyard and the MACROSOFT badge; the invite slides down",
+  "standin": "",
+  "native": "native/UI-TUESDAY-INVITE--slide.png",
+  "full": "full/UI-TUESDAY-INVITE--slide.png"
+ },
+ {
+  "key": "UI-TUESDAY-INVITE@invite",
+  "id": "UI-TUESDAY-INVITE",
+  "state": "invite",
+  "module": "shared/pixel/kits/act4-v31.ts drawTuesdayInvite",
+  "note": "v31-S7.03b Board · Tue 10:00 PM · Accept / Decline · a spinner, a fire helmet, a blank",
+  "standin": "",
+  "native": "native/UI-TUESDAY-INVITE--invite.png",
+  "full": "full/UI-TUESDAY-INVITE--invite.png"
+ },
+ {
+  "key": "UI-TUESDAY-INVITE@tap",
+  "id": "UI-TUESDAY-INVITE",
+  "state": "tap",
+  "module": "shared/pixel/kits/act4-v31.ts drawTuesdayInvite {thumb: tap}",
+  "note": "v31-S7.03b his thumb taps Accept, no hover (the fires' crackle J-cuts under it)",
+  "standin": "",
+  "native": "native/UI-TUESDAY-INVITE--tap.png",
+  "full": "full/UI-TUESDAY-INVITE--tap.png"
+ },
+ {
+  "key": "UI-TUESDAY-INVITE@accepted",
+  "id": "UI-TUESDAY-INVITE",
+  "state": "accepted",
+  "module": "shared/pixel/kits/act4-v31.ts drawTuesdayInvite {accepted}",
+  "note": "v31-S7.03b accepted: the card steps to the calendar's pale blue",
+  "standin": "",
+  "native": "native/UI-TUESDAY-INVITE--accepted.png",
+  "full": "full/UI-TUESDAY-INVITE--accepted.png"
+ },
+ {
+  "key": "ROOM-BOARD-SCREEN-V31@sunday",
+  "id": "ROOM-BOARD-SCREEN-V31",
+  "state": "sunday",
+  "module": "shared/pixel/kits/act4-v31.ts drawSundayOTS (+ rooms/board-screen, kits/lobby-feed)",
+  "note": "S4.09 [OTS] the reversal on screen: the phones in a row, STAFF · STAFF · INVESTORS · INVESTORS; the ticker under the CCTV",
+  "standin": "",
+  "native": "native/ROOM-BOARD-SCREEN-V31--sunday.png",
+  "full": "full/ROOM-BOARD-SCREEN-V31--sunday.png"
+ },
+ {
+  "key": "ROOM-BOARD-SCREEN-V31@ticker-crawl",
+  "id": "ROOM-BOARD-SCREEN-V31",
+  "state": "ticker-crawl",
+  "module": "shared/pixel/kits/act4-v31.ts drawSundayOTS {ticker}",
+  "note": "S4.09 the ticker crawling in (2 px a frame), the first phone buzzing",
+  "standin": "",
+  "native": "native/ROOM-BOARD-SCREEN-V31--ticker-crawl.png",
+  "full": "full/ROOM-BOARD-SCREEN-V31--ticker-crawl.png"
+ },
+ {
+  "key": "ROOM-ALYI-GLASS@mcu",
+  "id": "ROOM-ALYI-GLASS",
+  "state": "mcu",
+  "module": "shared/pixel/kits/act4-v31.ts drawAlyiGlass",
+  "note": "S4.02 [MCU·glass] the cutaway: ALYI's reflection in the dark window, not turning, the phones' screens beside him",
+  "standin": "",
+  "native": "native/ROOM-ALYI-GLASS--mcu.png",
+  "full": "full/ROOM-ALYI-GLASS--mcu.png"
+ },
+ {
+  "key": "UI-CALL-OUT@app",
+  "id": "UI-CALL-OUT",
+  "state": "app",
+  "module": "shared/pixel/kits/act4-v31.ts callOutPainter + kits/mas-monitor drawMonitorOTS",
+  "note": "S5.09 [OTS] he opens the call app: GERG on top, board sync · ended under him",
+  "standin": "",
+  "native": "native/UI-CALL-OUT--app.png",
+  "full": "full/UI-CALL-OUT--app.png"
+ },
+ {
+  "key": "UI-CALL-OUT@ring",
+  "id": "UI-CALL-OUT",
+  "state": "ring",
+  "module": "shared/pixel/kits/act4-v31.ts callOutPainter",
+  "note": "S5.09 it rings out: Calling…, the pulses stepping out on 6s (then v5's tile opens)",
+  "standin": "",
+  "native": "native/UI-CALL-OUT--ring.png",
+  "full": "full/UI-CALL-OUT--ring.png"
+ },
+ {
+  "key": "UI-CALL-OUT@corner-tile",
+  "id": "UI-CALL-OUT",
+  "state": "corner-tile",
+  "module": "shared/pixel/kits/act4-v31.ts drawCallOutTile",
+  "note": "S5.09 the same as v5's corner tile, outgoing (for the letter-behind layout): lit and between pulses",
+  "standin": "",
+  "native": "native/UI-CALL-OUT--corner-tile.png",
+  "full": "full/UI-CALL-OUT--corner-tile.png"
+ },
+ {
+  "key": "CAST-TERB@dry-squeeze",
+  "id": "CAST-TERB",
+  "state": "dry-squeeze",
+  "module": "shared/pixel/kits/act4-v31.ts drawDrySqueeze (cast/terb.ts)",
+  "note": "S7.06 the squeeze with the pin in: click, nothing (k 1 = the kick); the pin that Mas pulls",
+  "standin": "",
+  "native": "native/CAST-TERB--dry-squeeze.png",
+  "full": "full/CAST-TERB--dry-squeeze.png"
+ },
+ {
+  "key": "CAST-TERB@writing",
+  "id": "CAST-TERB",
+  "state": "writing",
+  "module": "shared/pixel/kits/act4-v31.ts drawTerbWriting (cast/terb-sheet.ts)",
+  "note": "S7.07-cont \"Gerg comes back too.\": Terb writes it onto the sheet, not looking up (the line grows k 0..4)",
+  "standin": "",
+  "native": "native/CAST-TERB--writing.png",
+  "full": "full/CAST-TERB--writing.png"
+ },
+ {
+  "key": "KIT-LETTER-HEADER@tile-0",
+  "id": "KIT-LETTER-HEADER",
+  "state": "tile-0",
+  "module": "shared/pixel/kits/act4-v31.ts letterHeaderStrip (+ kits/callgrid employeeFace)",
+  "note": "S6.01 the avalanche's first employee tile carries the letter's header strip",
+  "standin": "",
+  "native": "native/KIT-LETTER-HEADER--tile-0.png",
+  "full": "full/KIT-LETTER-HEADER--tile-0.png"
+ },
+ {
+  "key": "KIT-FACE-LIGHT@18.05",
+  "id": "KIT-FACE-LIGHT",
+  "state": "18.05",
+  "module": "shared/pixel/rooms/darkroom-act3.ts drawScanMCU {faceLight: 1}",
+  "note": "v31 18.05 [MCU] the toast: left as before, right one step up on the face only (the room unchanged)",
+  "standin": "",
+  "native": "native/KIT-FACE-LIGHT--18.05.png",
+  "full": "full/KIT-FACE-LIGHT--18.05.png"
+ },
+ {
+  "key": "KIT-FACE-LIGHT@22.03",
+  "id": "KIT-FACE-LIGHT",
+  "state": "22.03",
+  "module": "shared/pixel/rooms/darkroom-act3.ts drawDarkA3 {faceLight: 1}",
+  "note": "v31 22.03 [2S] Mas and the Orb, the phone between them: one step on his face (keyed from the monitor)",
+  "standin": "",
+  "native": "native/KIT-FACE-LIGHT--22.03.png",
+  "full": "full/KIT-FACE-LIGHT--22.03.png"
+ },
+ {
+  "key": "KIT-FACE-LIGHT@act4-portraits",
+  "id": "KIT-FACE-LIGHT",
+  "state": "act4-portraits",
+  "module": "shared/pixel/kits/face-light-img.ts faceLightImg",
+  "note": "Act Four (S5.07b S5.05 S7.08 · S4.07 S3.04b · S4.15): each portrait before / after one step (key from the arrow side)",
+  "standin": "",
+  "native": "native/KIT-FACE-LIGHT--act4-portraits.png",
+  "full": "full/KIT-FACE-LIGHT--act4-portraits.png"
+ },
+ {
+  "key": "KIT-FACE-LIGHT@S5.09b-tile",
+  "id": "KIT-FACE-LIGHT",
+  "state": "S5.09b-tile",
+  "module": "shared/pixel/kits/face-light.ts faceKey (art-a's)",
+  "note": "S5.09b Gerg's look up in his tile: art-a's faceKey over the tile's face (drawn straight into the buffer)",
+  "standin": "",
+  "native": "native/KIT-FACE-LIGHT--S5.09b-tile.png",
+  "full": "full/KIT-FACE-LIGHT--S5.09b-tile.png"
  }
 ]

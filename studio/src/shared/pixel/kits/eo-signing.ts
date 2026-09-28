@@ -60,6 +60,8 @@ const desk = (scr: Buf, y0: number, mini: boolean, signK: number) => {
   return {py};
 };
 export const EO_POV_FACES = {real: [178, 60] as [number, number], copyL: [74, 58] as [number, number], copyR: [300, 44] as [number, number]};
+/** the short layout's placement (screen coords): the busts' top, the real NEDIB's x (the toast goes over his head) */
+export const EO_SHORT = {y: -20, realX: 96};
 export const eoPainter = (st: EOState): Painter => (scr, f) => {
   const mini = isMini(scr);
   const W = scr.w, H = scr.h;
@@ -83,7 +85,10 @@ export const eoPainter = (st: EOState): Painter => (scr, f) => {
     return;
   }
   // the POV: the copies behind (pop in 3 held steps from behind the desk / up past the window's sill), NEDIB centre
-  const deskY = Math.round(H * 0.72);
+  // v3.1 (21.04's 2S·SCR: the two-shot's big monitor, 216 x 120): a short screen raises the busts so their faces clear
+  // the desk (EO_SHORT); the POV layout is unchanged
+  const short = H < 150;
+  const deskY = Math.round(H * (short ? 0.8 : 0.72));
   const rise = (k: number) => [40, 24, 10, 0][Math.min(3, Math.max(0, k))];
   if (st.copies >= 2) {
     const k = st.copies === 2 ? (st.pop ?? 3) : 3;
@@ -95,10 +100,10 @@ export const eoPainter = (st: EOState): Painter => (scr, f) => {
   if (st.copies >= 1) {
     const k = st.copies === 1 ? (st.pop ?? 3) : 3;
     const im = nedibBust({...NEDIB_BUST_DEFAULT, copy: 1, arm: clapArm, mouth: st.copies === 1 ? (st.copyMouth ?? 'smile') : 'smile'});
-    putBustCut(scr, im, 20, 24 + rise(k), deskY);
+    putBustCut(scr, im, short ? -14 : 20, (short ? EO_SHORT.y : 24) + rise(k), deskY);
   }
   const real = nedibBust({...NEDIB_BUST_DEFAULT, arm: st.pen === 'sign' ? 'sign' : 'baton', mouth: st.mouth ?? 'smile', look: st.turn ? -1 : 0, brow: st.turn ? -1 : 0});
-  putBustCut(scr, real, 124, 22, deskY);
+  putBustCut(scr, real, short ? EO_SHORT.realX : 124, short ? EO_SHORT.y : 22, deskY);
   desk(scr, deskY, false, st.pen === 'sign' ? (st.signK ?? 5) : 0);
   // his hand and pen on the order when he signs (from the sleeve at the bust's lower left)
   if (st.pen === 'sign') {

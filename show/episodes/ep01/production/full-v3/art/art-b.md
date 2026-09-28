@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **What this is** | The record of the pixel assets built for Acts Two, Three and the tag (sc 13–23, 32–33) for the full-episode pixel preview. For each asset it gives the id, the module, the entry points a shot layout calls, the states, and what is still a stand-in. |
-| **Who, when** | The `v3-art-b` pass (track P1b of [PLAN.md](../PLAN.md)), 2026-09-27. Nothing was committed: the lead commits. |
+| **Who, when** | The `v3-art-b` pass (track P1b of [PLAN.md](../PLAN.md)), 2026-09-27; the v3.1 round (script draft 7) the same day, **§6**. Nothing was committed by this pass: the lead commits (commit 38c5d18 took in some of this pass's v3.1 files as they stood mid-round; the later edits are uncommitted). |
 | **Built against** | [script.md](../../../script.md) (Acts Two, Three and the tag); the v2 stick timelines `show/reel/ep01-full/ep01-{act2,act3,tag}-v2.json`; the cuts C7–C12 in [stick/v3-plan.md §3](../../stick/v3-plan.md); the v3 beat plans `beat-plan/{act2,act3,tag}.json` (read about 11:40, after they landed); and the P1b list in [script-v3-notes.md §7](../script-v3-notes.md). |
-| **Where it is** | **Code:** new additive modules in `studio/src/shared/pixel/{rooms,cast,kits}/` (the table below). The stills registry is `studio/src/episodes/ep01/pixel/art-b/demos.ts`, with its sheet tool at `tools/sheet.ts`. **Stills:** `out/ep01/full-v3/assets/art-b/`, holding `sheet-native.png` (113 stills at 1x, 4 across), `native/` (480×270), `full/` (1920×1080, 4× nearest) and `index.json`. |
-| **Measured** | 113 stills render. `sheet.cjs strays` prints `ok` for all 113 (the master palette, plus the engine's LEDGER set for the flash-print). `tsc` over the registry and every module it imports (61 shared files) prints nothing. `git status` shows only new files from this pass: no existing file was edited, Act Four's included. |
-| **Needs a person** | I looked at every still at 1x and 2x, and cropped the doubtful ones at 3–4×. I fixed what didn't read to me (§4). That is one reader's judgment, not a blind read. Nothing has been seen in motion: every held-step timing is on paper. No v3 shot layout exists yet, so each still shows its asset in a demo framing (the beat it serves is in its note). |
+| **Where it is** | **Code:** new additive modules in `studio/src/shared/pixel/{rooms,cast,kits}/` (the tables below; v3.1's in §6). The stills registry is `studio/src/episodes/ep01/pixel/art-b/demos.ts`, with its sheet tool at `tools/sheet.ts`. **Stills:** `out/ep01/full-v3/assets/art-b/`, holding `sheet-native.png` (168 stills at 1x, 4 across: the 113 of v3, then v3.1's 55), `native/` (480×270), `full/` (1920×1080, 4× nearest) and `index.json`. |
+| **Measured** | 168 stills render. `sheet.cjs strays` prints `ok` for all 168 (the master palette, plus the engine's LEDGER set for the flash-print and its ONEBIT ink and paper for v3.1's Remove dialog). `tsc` over the registry and every module it imports (95 shared files) prints nothing. v3.1 edited only this pass's own files, each change an opt-in state or a fix to its own drawing (§6.4); no other track's file was edited, Act Four's included. |
+| **Needs a person** | I looked at every still at 1x and 2x, and cropped the doubtful ones at 3–6× (v3.1's too). I fixed what didn't read to me (§4, §6.4). That is one reader's judgment, not a blind read. Nothing has been seen in motion: every held-step timing is on paper. Each still shows its asset in a demo framing (the beat it serves is in its note); the shot passes own the shots. |
 
 ---
 
@@ -39,6 +39,7 @@
   - the hands runner, New Delhi, the lightning egg, the scroll pour and the glass paperweight;
   - the tag's drawer, the duck and the glass prompt.
 - **Not taken:** the Act Four items in script-v3-notes §7 (S1.01–S7.07b). They're edits to Act Four's own modules and are left for the Act Four shot pass (§5).
+- **v3.1 (§6):** the draft 7 items for Acts Two and Three, the tag and Act Four, 55 stills: the match cut and the feed, the glass side-on, KRAM and the Atem lobby, the hands runner's two-shot with the monitor large, Neleh's paper, one deepfake, the hover names; the Remove dialog (the hard cut and S8.03's grey), Neleh's desk at 11:52 and the paper, Tuesday's invite, Sunday's phones and ticker, Alyi in the glass, the call out to Gerg, Terb's dry squeeze and his writing, the letter's header tile; and the face lights (one step, face only).
 
 ---
 
@@ -184,7 +185,72 @@ I made two passes over the sheet. The fixes from the first pass:
 - **The Act Four items in script-v3-notes §7:** S1.01 race-weekend dressing, the S1.02 / S1.06 JOIN icons, the S1.04 key ring text, the S1.09 `ALYI` tag, S4.02's falling phone, S4.08's split without meter text, S7.07b's nameplate. They're opt-in states of Act Four's modules and are left to the Act Four shot pass.
 - **The GLYPH tokens** in the scan cone. The engine draws them; this pass returns the cone's Mask.
 
-## 6. Run (from `studio/`)
+---
+
+## 6. v3.1: script draft 7 ([script-v31-notes.md §4](../script-v31-notes.md))
+
+The lead's brief for this round: Act Two's, Act Three's, the tag's and Act Four's new art as additive modules, the registry and the sheet, the face lights from [mood-analysis.md §4 #4](../mood-analysis.md). 55 new stills (`v31-*` states, and the new ids below).
+
+### 6.1 The new and changed assets
+
+| Id | Module | Entry points | States (beat) | Stand-in / open |
+|---|---|---|---|---|
+| **PROP-CLASS-PHOTO** | `rooms/whitehouse.ts drawClassPhoto` | `{match}`, `CLASS_PHOTO_MATCH` | the print centred where the phone will be, his fingers round its left edge as they will be round the phone's (13.14 → 14.01) | — |
+| **ROOM-BRIDGE** | `rooms/bay-bridge.ts drawBridgeOTS` | `{feed, hearts}`, `classPhotoPost(b, x, y, w, hearts, f)`, `holdFingers(b, ex, y0, n, pal)` | the feed lands on his own `CLASS PHOTO #1` post (the print drawn small at its own layout: the frames, the door with NEDIB, Sirrah, the four chairs), the hearts climbing, then the scroll to the clip (`feed` 0 → 1, whole px) (14.01) | — |
+| **ROOM-WH**, **ROOM-SENATE** | `drawWHWide {mouths}`, `drawSenateWide {chair.mouth}` | existing options | Radnus's mouth moving silently in the wide (13.01); the chairman speaking his new line (15.02) | room-scale mouths: open / rest, 1–2 px |
+| **PROP-GLASS-SIDE** | `rooms/rooftop.ts drawGlassSide` | `(b, f, {run})` | his glass side-on at table height, the sheet beyond, the sky and its crack stopped at x 250; through the water the crack runs on in jags and bends down across his small reflection (`run` 0..3) (17.12, replacing the view from above) | — |
+| **PROP-SKY-CRACK** | `rooms/rooftop.ts drawCrack` | unchanged API | jagged and white now (runs of 3–9 px with 2–5 px jumps, a white core, a dark hairline, splinters) (17.11) | — |
+| **KIT-NEWSCLIP** | `cast/civic-extras.ts drawAnchor` | unchanged | the anchor's hair dark brown and the blazer navy: plainly generic (the newcomer read "an orange-haired man"); RUMPT's window carries only his props (14.01, 14.03) | — |
+| **CAST-KRAM** (new) | `cast/kram.ts` | `kramBust(state)`, `KRAM_BUST_DEFAULT` | the Atem founder, mute: the short curly crop, a grey hoodie with `OPEN` / `SOURCE` hand-painted across the chest, dry; light `slate` (the lobby) / `room`. **Never flipped** (the words would mirror) (18.00b) | guardrails §6: his family never |
+| **UI-LOBBY-V31** | `kits/monitor-v31.ts lobbyPainter` | `({key, kram, caption, chip, f})` | the landlord's lobby in slate blue, `MACROSOFT WELCOMES ATEM`, `JUL 18`; TASYA's ring: 12 keys → the 13th going on, Atem blue → hung; KRAM stepping in (18.00, 18.00b); the plate's mini version for the home room's two-shot | Tasya's speaking portrait is drawn straight onto the lobby (its own tile background left out) with `drawTasyaKeyRing` |
+| **UI-SIRRAH-V31** | `kits/monitor-v31.ts sirrahPainter` | `({typed, mouth})`, `SIRRAH_CHYRON` | SIRRAH at a lectern, the A and I blocks waist-high, the chyron typing on, `JUL 12` (v31-19.02); a short layout for screens under 150 px tall | never flipped (her sticky note is lettered) |
+| **ROOM-DARK-2SSCR** (new) | `rooms/darkroom-v31.ts drawDark2SSCR` | `(b, f, {screen, mas, hand, orb, plate, toasts})`, `DARK_SCR` | the home room with the monitor **large** (216 × 120 at 1:1, standing on the desk) for the one held frame of the hands runner: Mas's hand `two` · `pinky` · `up` · `lower`; the Orb `whirr` · `rotate` · `rise` · `look` (v31-19.03); the paper with Gerg's tile (20.07); the EO with the Orb's toast over the real NEDIB (21.04) | legibility at 2S·SCR is the shot pass's call (the notes say so) |
+| **UI-RUNNER** | `kits/monitor-v31.ts runnerPainter` | `({item, hands, unroll})` | `pinky`: NEDIB's hands at the scroll's rolled ends, `PINKY PROMISE`, `SIGNED: 7 AI COMPANIES`, seven pinky-prints (ink ridges on paper), NopeAI's in beige, `JUL 21`. `forum`: rows of one tiled figure, hands down → all up in one drawing, NOLE's the highest, filming on his phone (labelled at POV), `REMUHCS · ASKED THE ROOM: …`, `BILLS: 0`, `SEP 13` | NOLE at the forum is his own tile-size drawing (black tee, swept hair), not art-a's 96 px sprite |
+| **UI-PAPER** | `kits/monitor-v31.ts paperPainter` | `({page, thumb})`, `PAPER_P30` | `title` (`DECODING INTENTIONS`, `NELEH`, the glowing page, its footnotes orbiting); `p29` (`research preview` in the paper's quotes, wrapping on the narrow page); `p30` (two small logos, the held sentence); the scrollbar's thumb shrinking (v31-20.07) | — |
+| **UI-GERG-TILE** | `kits/monitor-v31.ts withGergTile` | `(painter, {mouth, typing})` | any painter with 2 AM's Gerg tile in the corner, ringed when he talks (20.04, 20.06) | — |
+| **UI-EO** | `kits/eo-signing.ts eoPainter` | `{copies: 1, stat: 1}`, `EO_SHORT` | one copy, not two; `DEEPFAKES OF ME: SEEN 1` (21.02–21.03); a short layout for the two-shot's big monitor (the busts raised so the faces clear the desk) | the POV layout is unchanged |
+| **UI-DEVDAY** | `kits/monitor-items.ts devdayPainter` | `{sydney}` | the Sydney bubble on its chain, tiny, behind Tasya on stage (22.01) | art-a owns Sydney's own drawing; this is the tiny echo |
+| **UI-PHONE-HIGH** | `kits/phone-high.ts` | `{hover: 0..3}`, `ATTENDEE_NAMES` | the hover name under each circle as the Orb's iris steps along: `ALYI` `NELEH` `MADA` `THE QUIET VOTE` (23.02) | — |
+| **PROP-COINWORLD** | `rooms/darkroom-act3.ts drawLabelECU` | unchanged | the sender's context: `PROOF YOU'RE HUMAN` under COINWORLD on the lid too (18.02) | — |
+| **KIT-MONITOR-WAKE** | `kits/monitor-v31.ts screenWake` | `(k 0..3)` | the tag's monitor lighting on its own (32.01). The Runway insert's framing is `drawDarkA3` + `drawMonitorPOV`, unchanged | the insert is the `v31-runway` pass's |
+| **UI-REMOVE** (new) | `kits/act4-v31.ts drawRemoveDialog` | `(b, f, {k, pointer, tag, click, grey, field, at, shake})`, `REMOVE_PATH`, `removeButton`, `cursorTag` | v31-S1.08d: the frame goes bright (the ONEBIT cream), the dialog opens in two held outline steps, `Remove MAS MANALT` / `from the meeting?`, ONE button `Remove` with the default ring; the noon arrow with its `ALYI` tag steps on (4 held positions), clicks. S8.03: `field: 'screen'` over the lobby, `grey` 1 → 3 a step a beat, the empty tag, the click that doesn't press, the shake | the S8.03 still shows it over a plain backdrop; the shot pass lays it over v5's lobby |
+| **ROOM-NELEH-HIGH** (new) | `kits/act4-v31.ts drawNelehDeskHigh` | `(b, f, {clock, framing, pen})`, `planFirstFrame()` | `desk`: her desk from above at `11:52`, the call open (MADA's tile early, his spinner; three slots `waiting…`), THE PLAN's print unfolded, NELEH leaning over it from the frame's foot (her crown, the centre part, her footnote slips), her pen on the print. `paper`: the push's landing, S1.03's first sheet frame at 1:1 (nine chairs, `GERG / CHAIR`, no stamp yet) with her pen's tip by `NELEH` (v31-S3.00p) | the card (`NELEH / READ THE CHARTER. LITERALLY.`) is the card system's |
+| **UI-TUESDAY-INVITE** (new) | `kits/act4-v31.ts drawTuesdayInvite` | `(b, f, {k, thumb, press, accepted})`, `TUESDAY`, `macrosoftInsert` | his end desk (S7.01's wood), the `GUEST` lanyard and the `MACROSOFT` badge at the same card size, the phone lighting, the invite sliding down in the cold open's calendar UI: `Board · Tue 10:00 PM`, Accept / Decline, a spinner, a fire helmet, a blank; his thumb straight down on Accept (no hover); accepted (v31-S7.03b) | — |
+| **ROOM-BOARD-SCREEN-V31** (new) | `kits/act4-v31.ts drawSundayOTS` | `(b, f, {feed, alyi, neleh, ticker, buzz})`, `drawPhonesRow`, `drawTicker`, `PHONES_ROW`, `TICKER_SUNDAY` | v5's wall-screen OTS with the phones set in a row on the table's edge, face up, `STAFF · STAFF · INVESTORS · INVESTORS`, buzzing in turn; the ticker across the screen under the CCTV tile, `INVESTORS PUSH TO BRING MANALT BACK`, crawling in at 2 px a frame (S4.09) | his post in the feed's corner is v5's (`drawPost 'notify'`) |
+| **ROOM-ALYI-GLASS** (new) | `kits/act4-v31.ts drawAlyiGlass` | `(b, f, {mouth, eyes})` | the cutaway: ALYI's reflection in the boardroom's dark window, lip-synced, not turning, the Valley's lights below his chin, the phones' lit screens reflected beside him as glow slabs (S4.02 [MCU·glass]) | the reflected caller IDs carry no letters: they would read backwards |
+| **UI-CALL-OUT** (new) | `kits/act4-v31.ts callOutPainter`, `drawCallOutTile` | `({phase: 'app' \| 'click' \| 'ring', k})`, `(b, x, y, k)` | he opens the call app (`GERG · mobile` on top, `board sync · ended · Fri 12:00` under him), clicks, it rings out (`Calling…`, the pulses on 6s); the same as v5's corner tile, outgoing (S5.09) | the answer is v5's tile opening |
+| **CAST-TERB** (compositions) | `kits/act4-v31.ts drawDrySqueeze`, `drawTerbWriting` | `(b, x, y, {k, flip})`, `(b, x, y, k, {flip})` | the squeeze with the pin in, k 1 the dry click's 1 px kick (S7.06); writing Mas's term onto the sheet, not looking up, the line growing k 0..4 (S7.07-cont) | cast/terb.ts and cast/terb-sheet.ts drawn as they are |
+| **KIT-LETTER-HEADER** (new) | `kits/act4-v31.ts letterHeaderStrip` | `(b, x, y, w)` | `STAFF LETTER · TO THE BOARD` on the avalanche's first tile (`STAFF LETTER` on a small tile) (S6.01) | the avalanche is the shot pass's |
+| **KIT-FACE-LIGHT** (new) | `kits/face-light-img.ts` | `faceLightImg(img, k, {key, top})`, `lumaOf`, `FACE_LIGHTS` | one step up on a rendered figure's face only (S, K, X rungs in its head region; outlines, eyes, hair, clothes untouched), keyed to one side. Opt-in on my own compositions: `drawScanMCU({faceLight: 1})` (18.05), `drawDarkA3({faceLight: 1})` (22.03, via art-a's `faceKey`) | §6.2 |
+
+### 6.2 The face lights
+
+- **What:** every close-up the draft 7 notes mark (18.05, 22.03; Act Four's S5.07b, S5.05, S4.07, S5.09b, S4.15, S7.08, S3.04b, S3.07) asks for one step. `FACE_LIGHTS` lists each with its key side and the entry point that suits its drawing: `faceLightImg` on a portrait before it is placed, or art-a's `kits/face-light.ts faceKey` over a rect for a face drawn straight into the buffer (Gerg's tile).
+- **Measured, on my stills (not on the film):** 18.05's MCU, frame mean 5.70% → 5.80%, the face's box 22.7% → 25.4%. 22.03's two-shot, frame 8.95% → 9.02%, the face's box 18.4% → 22.4%. The frame barely moves, the face does: that's the brief ("the night palette and the room stay as they are"). The mood analysis's 4–5% figures are the edited film's; re-measuring them is the conform's job.
+- **The collision:** art-a created `kits/face-light.ts` at the same time as I did, and theirs is the file on disk (committed in 38c5d18). I moved mine to `kits/face-light-img.ts` (the figure-level pass, the table, the measure) and use their `faceKey` for rects. Nothing of theirs was changed.
+
+### 6.3 Not mine, or not built
+
+- **Rezeile's op-ed (v31-12.03)** is Act One: art-a's.
+- **S1.01b's window two-shot over the circuit** is the Act Four shot pass's (`episodes/ep01/pixel/act4/art/race.ts` exists).
+- **The Act Four shot pass's, as states of v5's modules:** S1.03 `GERG / CHAIR` and her figure stepping out of her chair outline (the PLAN GFX); S1.05's pull-back out of the linework (a transition: its landing is `drawNelehDeskHigh` framing `paper`, its origin the desk); S1.07's name labels, the Wi-Fi icon's drop and the frozen tiles; S3.01's reflected hand and notice; S3.05's `…i quit.` (already in v5's `POST_FACTS5`); S4.10's 2-TONE card; S5.06's "judgement". The cuts to un-draw (S2.03, S7.07b, S8.09b) are theirs to drop.
+- **The RADNUS bust:** the Act Two shot pass's `episodes/ep01/pixel/act2/art/radnus-bust.ts` supersedes my stand-in where it's used.
+
+### 6.4 What the v3.1 review changed
+
+- **Kram's words:** a 1 px drop per letter made the P and C read lowercase ("OREN"); the jacket's open-front lines crossed the words. Now one baseline, the letters spaced by hand, the lines left out.
+- **Lettered busts are never flipped:** Kram in the lobby and Sirrah at the lectern now face their scene in the busts' own 3/4 view.
+- **The lobby:** Tasya's portrait carried its own tile background into the lobby (a picture-in-picture box). Now drawn straight onto the slate; the 13th key moved off his face and made pale Atem blue with a paper glint.
+- **The two-shot's monitor** hung below the desk's back edge (the desk covered its foot and the chyron's second line). It now stands on the desk and is drawn after it. Mas's raised hand was a tiny hand on a stick; now a 10 × 12 hand with 2 px fingers on a forearm from the elbow on the desk.
+- **Short screens (under 150 px tall):** Sirrah's face sat behind the lectern and the EO's NEDIBs showed only their scalps; both painters now raise their busts there.
+- **The runner:** the pinky-prints were dots (then black beans); now ink ridges on paper. The forum's raised hands were 2 px specks; now a sleeve and a hand per figure, and NOLE's phone labelled.
+- **The feed's thumbnail** was a wall with four squares; now the photo's own layout drawn small. The fingers round the phone and the print were stacked squares; now rounded pads (`holdFingers`, shared, so the match cut matches).
+- **The glass side-on:** his reflection was a user-icon silhouette; now his face (hair, cowlick, two dots, the smile) on a half-there hoodie. The crack now bends down across it, still in jags.
+- **The Remove arrow** stopped under the button; its path now ends on the word. **The Tuesday thumb** was the desk hand at ECU size (a spread hand slapping the phone); now a thumb from above at the ECU's scale, its nail on Accept. **The call app's buttons** were dashes in circles (they read "remove"); now handsets. **The phones in a row** read as four UI buttons; now phones (body, bezel, slot, the answer and decline dots). **The ticker** was cut at the tile's edge; it now runs across the screen under the tile. **The hover tooltip** covered the date; it now sits under the circle. **The paper close's hand** was drawn at desk scale; at the paper's scale only the pen's tip and a fingertip fit.
+
+**Still weakest, to my eye:** Terb's dry squeeze (the spray arm is the rig's own, small at room scale; the click lives in the sound); the forum's tiled rows (the joke is the tiling, but it reads as wallpaper at 1x); the 22.03 face light (one rung on a 20 px face is subtle); Neleh from above (a head's crown and a long reach).
+
+## 7. Run (from `studio/`)
 
 ```bash
 S=<scratch dir>        # your own subfolder of the session scratchpad

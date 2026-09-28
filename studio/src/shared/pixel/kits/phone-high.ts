@@ -124,10 +124,11 @@ export const drawPhoneHigh = (b: Buf, f: number, st: PhoneHighState) => {
   drawScreen(b, st.screen, f, st.thumb === 'tap');
   if (st.screen === 'reminder' && st.hover !== null && st.hover !== undefined) {
     // the hover tooltip over the circle: its name in small caps on a dark chip with a pointer notch
-    const S = PHONE29.screen, cx = S.x0 + 6 + 7 + st.hover * 16, cy = S.y0 + 60;
+    const S = PHONE29.screen, cx = S.x0 + 6 + 7 + st.hover * 16, cy = S.y0 + 60 + 7; // the circle's centre (attendeeCircles: r 6)
     const name = ATTENDEE_NAMES[st.hover], w = tinyWidth(name) + 6;
-    const x = Math.max(S.x0 + 1, Math.min(S.x1 - w, cx - (w >> 1))), y = cy - 12;
-    rect(x - 1, y - 1, w + 2, 10, b.ink(PAL.N0)); rect(x, y, w, 8, b.ink(PAL.G1)); b.set(cx, y + 8, PAL.G1); b.set(cx, y + 9, PAL.N0);
+    // under the circles (clear of the title and the date above them), its notch pointing up at the circle
+    const x = Math.max(S.x0 + 1, Math.min(S.x1 - w, cx - (w >> 1))), y = cy + 10;
+    rect(x - 1, y - 1, w + 2, 10, b.ink(PAL.N0)); rect(x, y, w, 8, b.ink(PAL.G1)); b.set(cx, y - 1, PAL.G1); b.set(cx, y - 2, PAL.N0);
     tiny(b, name, x + 3, y + 2, PAL.P2);
   }
   // his hand: the thumb over the strip (hover), or down on `super` (tap)

@@ -124,47 +124,87 @@ const b3 = (b: Buf, x: number, y: number, c: number) => b.set(x, y, c);
 
 // ------------------------------------------------------------------ the hands runner (v31-19.03)
 export interface RunnerState { item: 'pinky' | 'forum'; hands?: 0 | 1; unroll?: number; }
-const pinky = (b: Buf, x: number, y: number, beige: boolean) => {
-  const P = ['.kk.', 'kvvk', 'kvvk', 'kvvk', '.kk.'];
-  P.forEach((r, j) => { for (let i = 0; i < r.length; i++) { const c = r[i] === 'k' ? (beige ? PAL.W5 : PAL.N3) : r[i] === 'v' ? (beige ? PAL.P1 : PAL.N5) : -1; if (c >= 0) b.set(x + i, y + j, c); } });
+/** a pinky-print (an oval, its ridges in arcs) with a signer's scribble under it; `beige` = NopeAI's (the button's
+ *  colour); `sm` for the small screens */
+const pinky = (b: Buf, x: number, y: number, beige: boolean, sm: boolean) => {
+  const rx = sm ? 3 : 5, ry = sm ? 4 : 7, cx = x + rx, cy = y + ry;
+  // ink on paper: the ridges in the ink's colour, the paper between them; NopeAI's print in its beige ink
+  const ridge = beige ? PAL.W4 : PAL.N2, soft = beige ? PAL.W6 : PAL.G4;
+  for (let j = -ry; j <= ry; j++) for (let i = -rx; i <= rx; i++) {
+    const d = Math.hypot(i / rx, j / ry);
+    if (d > 1) continue;
+    const ring = Math.floor(d * (sm ? 3 : 5) + 0.5);
+    if (ring % 2 === 0 || d > 0.88) b.set(cx + i, cy + j, d > 0.88 && ring % 2 ? soft : ridge);
+  }
+  const sy = cy + ry + (sm ? 2 : 3);
+  for (let i = -rx - 1; i <= rx + 1; i++) b.set(cx + i, sy + (Math.floor((i + 9) / 2) % 2), PAL.N4); // the scribble
+};
+/** NEDIB's hand gripping a scroll's roll (his navy sleeve, the white cuff, the fingers over the roll); side -1 = left */
+const rollHand = (b: Buf, x: number, y: number, side: -1 | 1, sm: boolean) => {
+  const hw = sm ? 8 : 14, hh = sm ? 7 : 12;
+  for (let j = 0; j < hh; j++) for (let i = 0; i < hw; i++) {
+    const knuckle = j < 3 && (i % (sm ? 3 : 4)) === (sm ? 2 : 3);
+    b.set(x + i, y + j, j === 0 || i === 0 || i === hw - 1 ? PAL.S1 : knuckle ? PAL.S2 : j < hh / 2 ? PAL.S4 : PAL.S3);
+  }
+  const cx = side < 0 ? x - (sm ? 6 : 10) : x + hw - 2;
+  rect(cx, y + hh - (sm ? 3 : 5), sm ? 8 : 12, sm ? 3 : 5, b.ink(PAL.P2)); // the cuff
+  rect(side < 0 ? cx - (sm ? 14 : 30) : cx + (sm ? 6 : 10), y + hh - (sm ? 4 : 7), sm ? 16 : 32, sm ? 5 : 9, b.ink(PAL.N2)); // the sleeve going off
+};
+/** the forum's NOLE: the tiled drawing's size, but his own (black tee, the swept dark hair), his arm up past everyone's
+ *  with his phone in it, filming */
+const noleTile = (b: Buf, x: number, y: number, up: boolean, H: number, label: boolean) => {
+  const rows = ['.....hhhhhh.......', '....hHHHHHHh......', '...hHH33444o......', '...hH33e4e4o......', '....o334444o......', '....o334mm4o......', '.....o33344o......', '......o334o.......', '..kkkkkkkkkkkk....', '.kKKKKKKKKKKKKk...', 'kKKKKKKKKKKKKKKk..', 'kKKKKKKKKKKKKKKk..'];
+  const pal: Record<string, number> = {h: PAL.N0, H: PAL.N1, '3': PAL.S2, '4': PAL.S4, e: PAL.N0, m: PAL.S2, o: PAL.S0, k: PAL.N0, K: PAL.G0};
+  rows.forEach((r, j) => { for (let i = 0; i < r.length; i++) { const c = pal[r[i]]; if (c !== undefined) b.set(x + i, y + j, c); } });
+  if (!up) return;
+  const top = Math.max(6, y - Math.round(H * 0.3));
+  rect(x + 13, top + 8, 3, y + 9 - (top + 8), b.ink(PAL.S3)); rect(x + 13, top + 8, 1, y + 9 - (top + 8), b.ink(PAL.S4)); // the bare arm (a tee)
+  rect(x + 11, top, 7, 11, b.ink(PAL.N0)); rect(x + 12, top + 1, 5, 8, b.ink(PAL.C5)); b.set(x + 13, top + 2, PAL.C8); // the phone, filming
+  rect(x + 11, top + 9, 7, 3, b.ink(PAL.S4));
+  if (label) { const t = 'NOLE'; rect(x + 20, top + 1, pw(t) + 6, 10, b.ink(PAL.N0)); pt(b, t, x + 23, top + 2, PAL.P2); }
 };
 export const runnerPainter = (st: RunnerState): Painter => (scr, f) => {
-  const W = scr.w, H = scr.h;
+  const W = scr.w, H = scr.h, sm = W < 300;
   if (st.item === 'pinky') {
-    // a desk seen from the front, NEDIB's hands (cuffs, the pen aside) unrolling the scroll across it
-    for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) scr.set(x, y, y < H * 0.45 ? (bayer(x, y) < 0.2 ? PAL.P0 : PAL.P1) : (x + y) % 17 === 0 ? PAL.D2 : PAL.D3);
+    // a desk seen from the front, NEDIB's hands at the two rolled ends of the scroll, unrolling it across the desk
+    for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) scr.set(x, y, y < H * 0.3 ? (bayer(x, y) < 0.2 ? PAL.P0 : PAL.P1) : (x + y) % 17 === 0 ? PAL.D2 : PAL.D3);
+    rect(0, Math.round(H * 0.3), W, 1, scr.ink(PAL.D4));
     const u = Math.max(0.2, Math.min(1, st.unroll ?? 1));
-    const sw = Math.round((W - 30) * u), sx = 15, sy = Math.round(H * 0.4), sh = Math.round(H * 0.42);
+    const sx = sm ? 22 : 40, sw = Math.round((W - sx * 2) * u), sy = Math.round(H * 0.22), sh = Math.round(H * 0.62);
+    rect(sx + 3, sy + 3, sw, sh, scr.ink(PAL.D1));
     rect(sx, sy, sw, sh, scr.ink(PAL.P2)); rect(sx, sy, sw, 1, scr.ink(PAL.W9)); rect(sx, sy + sh - 1, sw, 1, scr.ink(PAL.P0));
-    rect(sx + sw - 3, sy - 2, 6, sh + 4, scr.ink(PAL.P1)); rect(sx + sw - 3, sy - 2, 1, sh + 4, scr.ink(PAL.W9)); // the roll
-    const t1 = 'PINKY PROMISE';
-    if (W >= 200) bigText(scr, t1, sx + 8, sy + 5, PAL.N2); else text(scr, t1, sx + 4, sy + 3, PAL.N2);
-    const t2 = 'SIGNED: 7 AI COMPANIES';
-    pt(scr, t2, sx + 8, sy + (W >= 200 ? 22 : 12), PAL.N4);
+    for (const rxx of [sx - 4, sx + sw - 3]) { rect(rxx, sy - 3, 7, sh + 6, scr.ink(PAL.P1)); rect(rxx + 1, sy - 3, 1, sh + 6, scr.ink(PAL.W9)); rect(rxx + 6, sy - 3, 1, sh + 6, scr.ink(PAL.P0)); } // the rolls
+    const t1 = 'PINKY PROMISE', t2 = 'SIGNED: 7 AI COMPANIES';
+    const mid = sx + (sw >> 1);
+    if (sm) { text(scr, t1, mid - (textWidth(t1) >> 1), sy + 5, PAL.N1); pt(scr, t2, mid - (pw(t2) >> 1), sy + 15, PAL.N4); }
+    else { bigText(scr, t1, mid - (bigTextWidth(t1) >> 1), sy + 10, PAL.N1); pt(scr, t2, mid - (pw(t2) >> 1), sy + 30, PAL.N4); }
     // the seven pinky-prints in a row, one in NopeAI beige (the button's colour)
-    const n = Math.min(7, Math.floor((sw - 16) / 14));
-    for (let i = 0; i < n; i++) pinky(scr, sx + 10 + i * 14, sy + sh - 12, i === 3);
-    // his hands at the two ends of the paper (cuffs, the fountain pen resting)
-    for (const hx of [sx - 6, sx + sw - 6]) { rect(hx, sy + 6, 14, 10, scr.ink(PAL.S4)); rect(hx, sy + 6, 14, 1, scr.ink(PAL.S5)); rect(hx - 4, sy + 14, 20, 10, scr.ink(PAL.N2)); rect(hx - 4, sy + 14, 20, 2, scr.ink(PAL.P2)); }
+    const pitch = sm ? 18 : 34, n = Math.min(7, Math.max(0, Math.floor((sw - 10) / pitch)));
+    const px0 = mid - Math.round(((n - 1) * pitch) / 2) - (sm ? 3 : 5);
+    for (let i = 0; i < n; i++) pinky(scr, px0 + i * pitch, sy + (sm ? 30 : 52), i === 3, sm);
+    rollHand(scr, sx - (sm ? 10 : 16), sy + (sh >> 1) - 6, -1, sm); rollHand(scr, sx + sw - 2, sy + (sh >> 1) - 6, 1, sm);
     chip(scr, 'JUL 21');
     return;
   }
-  // the forum: a room of tiled seated figures, every one the same drawing; hands down, then all up in one drawing
-  for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) scr.set(x, y, bayer(x, y) < 0.2 ? PAL.D2 : PAL.D1);
+  // the forum: rows of seated figures, every one the same drawing; hands down, then all up in one drawing, and NOLE's
+  // the highest, filming on his phone
+  for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) scr.set(x, y, y < 14 ? PAL.D2 : bayer(x, y) < 0.2 ? PAL.D2 : PAL.D1);
   const up = st.hands === 1;
   const tile = galleryTile({gasp: false});
-  const rows = Math.max(3, Math.floor((H - 30) / 14));
-  for (let r = 0; r < rows; r++) for (let x = -8 + (r % 2) * 9; x < W; x += GALLERY_TILE.w) {
-    const y = 16 + r * 14;
-    blitImg(scr, tile, x, y);
-    if (up) { rect(x + 14, y + 2, 2, 8, scr.ink(PAL.N3)); rect(x + 13, y - 1, 4, 4, scr.ink(PAL.S4)); } // the same raised hand, tiled
-  }
-  // NOLE's hand, the highest of all, holding his phone (up only)
-  if (up) { const nx = Math.round(W * 0.7); rect(nx, 2, 3, 20, scr.ink(PAL.N1)); rect(nx - 1, 0, 5, 5, scr.ink(PAL.S4)); rect(nx - 2, -2 + 1, 7, 4, scr.ink(PAL.N0)); rect(nx - 1, 0, 5, 2, scr.ink(PAL.C5)); }
-  // the plate over the room, the egg under the hands
   const plate = 'REMUHCS · ASKED THE ROOM: SHOULD GOVERNMENT REGULATE AI?';
   const lines = pwrap(plate, W - 16);
   const ph = 4 + lines.length * 10;
+  const pitchY = sm ? 18 : 22, rows = Math.max(2, Math.floor((H - ph - 22) / pitchY) + 1);
+  const noleRow = rows - 2, noleX = Math.round(W * 0.64);
+  for (let r = 0; r < rows; r++) {
+    const y = 20 + r * pitchY;
+    for (let x = -8 + (r % 2) * 9; x < W; x += GALLERY_TILE.w) {
+      const isNole = r === noleRow && Math.abs(x - noleX) < GALLERY_TILE.w / 2;
+      if (isNole) { noleTile(scr, x, y, up, H, !sm); continue; }
+      blitImg(scr, tile, x, y);
+      if (up) { rect(x + 13, y - 3, 2, 13, scr.ink(PAL.N3)); rect(x + 13, y - 3, 1, 13, scr.ink(PAL.N5)); rect(x + 12, y - 7, 4, 4, scr.ink(PAL.S4)); scr.set(x + 12, y - 7, PAL.S5); } // the same raised hand, tiled
+    }
+  }
   rect(0, H - ph, W, ph, scr.ink(PAL.N0)); rect(0, H - ph, W, 1, scr.ink(PAL.W5));
   lines.forEach((l, i) => pt(scr, l, 6, H - ph + 3 + i * 10, PAL.P2));
   if (up) { const e = 'BILLS: 0'; rect(W - pw(e) - 10, H - ph - 13, pw(e) + 6, 11, scr.ink(PAL.N0)); pt(scr, e, W - pw(e) - 7, H - ph - 11, PAL.G5); }
@@ -213,9 +253,9 @@ export const paperPainter = (st: PaperState): Painter => (scr, f) => {
     for (let k = 0; k < 6; k++) greek(py + 12 + k * 8);
     // the line with the two words in the paper's own quotation marks, legible
     const q = 'described the release as a "research preview"';
-    rect(px + 10, py + 62, pw(q) + 6, 11, scr.ink(PAL.W8));
-    pt(scr, q, px + 13, py + 64, PAL.N1);
-    for (let k = 0; k < 8; k++) greek(py + 82 + k * 8, pw2 - 24 - (k === 7 ? 70 : 0));
+    const ql = pw(q) + 6 <= pw2 - 20 ? [q] : pwrap(q, pw2 - 26); // the two-shot's page is narrower: the line wraps
+    ql.forEach((l, i) => { rect(px + 10, py + 62 + i * 11, pw(l) + 6, 11, scr.ink(PAL.W8)); pt(scr, l, px + 13, py + 64 + i * 11, PAL.N1); });
+    for (let k = 0; k < 8; k++) greek(py + 71 + ql.length * 11 + k * 8, pw2 - 24 - (k === 7 ? 70 : 0));
     return;
   }
   // p. 30: the two small logos side by side (NopeAI's round button, the lighthouse), then the held sentence

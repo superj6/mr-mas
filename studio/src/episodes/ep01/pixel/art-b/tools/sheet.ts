@@ -16,12 +16,14 @@ import * as zlib from 'zlib';
 import {Buf, rect} from '../../../../../shared/pixel/px';
 import {PAL, PAL_INDEX} from '../../../../../shared/pixel/palette';
 import {text} from '../../../../../shared/pixel/font';
+import {pt} from '../../../../../shared/pixel/kits/uitype';
 import {DEMOS} from '../demos';
 import {BP} from '../../../../../shared/pixel/kits/blueprint';
 import {PALETTES} from '../../../../../shared/pixel/palettes';
 // THE PLAN's blueprint has its own sanctioned output palette (kits/blueprint.ts BP), and the LEDGER flash-print is the
-// engine's LEDGER palette set (palettes.ts): neither is a stray
-const BP_OK = new Set<number>([...Object.values(BP), ...PALETTES.LEDGER.colors]);
+// engine's LEDGER palette set (palettes.ts), and v3.1's Remove dialog is drawn in the ONEBIT set's ink and paper (the 1993
+// dialog's look, cast/kit INK / PAPER): none is a stray
+const BP_OK = new Set<number>([...Object.values(BP), ...PALETTES.LEDGER.colors, ...PALETTES.ONEBIT.colors]);
 
 const CRC = (() => { const t = new Uint32Array(256); for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0; } return t; })();
 const crc32 = (buf, s, e) => { let c = 0xffffffff; for (let i = s; i < e; i++) c = CRC[(c ^ buf[i]) & 255] ^ (c >>> 8); return (c ^ 0xffffffff) >>> 0; };
@@ -45,10 +47,10 @@ const frameOf = (d) => {
   d.draw(fb);
   rect(0, 203, 480, 67, fb.ink(PAL.N0));
   rect(0, 203, 480, 1, fb.ink(PAL.N3));
-  text(fb, keyOf(d).slice(0, 78), 8, 210, PAL.P1);
-  text(fb, d.module.slice(0, 78), 8, 222, PAL.N6);
-  if (d.note) text(fb, d.note.slice(0, 78), 8, 234, PAL.N6);
-  if (d.standin) text(fb, `STAND-IN: ${d.standin}`.slice(0, 78), 8, 246, PAL.U4);
+  pt(fb, keyOf(d).slice(0, 78), 8, 210, PAL.P1);
+  pt(fb, d.module.slice(0, 78), 8, 222, PAL.N6);
+  if (d.note) pt(fb, d.note.slice(0, 84), 8, 234, PAL.N6);
+  if (d.standin) pt(fb, `STAND-IN: ${d.standin}`.slice(0, 84), 8, 246, PAL.U4);
   return fb;
 };
 const find = (key) => { const d = DEMOS.find((x) => keyOf(x) === key) ?? DEMOS.find((x) => x.id === key); if (!d) throw new Error('no demo ' + key); return d; };
