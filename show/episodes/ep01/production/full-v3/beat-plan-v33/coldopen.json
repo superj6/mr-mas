@@ -1,0 +1,136 @@
+{
+ "segment": "coldopen",
+ "source": "show/reel/ep01-v32/ep01-v32-coldopen.json",
+ "_about": "v33 beat plan (script draft 8.2, the polish round, PLAN §6), in the PLAN §2 format with the v3.1/v3.2 plans' additive fields, written as deltas on the v3.2 LOCK's beat and line ids (show/reel/ep01-v32/ep01-v32-<seg>.json). Every v3.2 beat appears once (keep, cut, merge); est_s is a planning length, never a measurement. Kept lines are keep true/false; kept V.O. carries \"vo\": true; restored V.O. carries \"restored\": true with its take path; new lines carry v33-<seg>-NNNN ids; \"at\" retimes a kept line; moved lines carry moved_from / moves_to. Fix codes are PLAN §6's items (V1-V3, S1-S5, P1-P19). The v3.2 spine (agency-v32) is unchanged. The script is show/episodes/ep01/script.md (draft 8.2); the notes are ../script-v33-notes.md; the spec is _spec_v33.py.",
+ "story_s": {
+  "source": 26.67,
+  "estimate": 26.67
+ },
+ "beats": [
+  {
+   "id": "1.00",
+   "action": "keep",
+   "est_s": 0.5,
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 0.5,
+   "src_frame": "BLACK",
+   "lines": []
+  },
+  {
+   "id": "1.01",
+   "action": "keep",
+   "est_s": 4.25,
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 4.25,
+   "src_frame": "WIDE · the one wide: stage, banquet, the lit window",
+   "lines": [
+    {
+     "id": "e1-co-1-01",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "1.02",
+   "action": "keep",
+   "est_s": 5.583,
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 5.583,
+   "src_frame": "SINGLE · MCU Mas, answering; the window soft behind him",
+   "lines": [
+    {
+     "id": "e1-co-1-02",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "1.03",
+   "action": "keep",
+   "est_s": 1.542,
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 1.542,
+   "src_frame": "INSERT · the shared table from above: plink",
+   "lines": []
+  },
+  {
+   "id": "1.04",
+   "action": "keep",
+   "est_s": 2.667,
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 2.667,
+   "src_frame": "SINGLE · MCU Mas, the sentence lands",
+   "lines": []
+  },
+  {
+   "id": "2.01",
+   "action": "keep",
+   "est_s": 0.625,
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 0.625,
+   "src_frame": "WIDE · the freeze",
+   "lines": []
+  },
+  {
+   "id": "2.02",
+   "action": "keep",
+   "est_s": 2.5,
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 2.5,
+   "src_frame": "INSERT · the phone: the invite",
+   "lines": []
+  },
+  {
+   "id": "2.03",
+   "action": "keep",
+   "est_s": 2.5,
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 2.5,
+   "src_frame": "SINGLE · MCU Mas: he reads it, looks up",
+   "lines": [
+    {
+     "id": "e1-co-2-01",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "3.01",
+   "action": "keep",
+   "est_s": 2.0,
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 2.0,
+   "src_frame": "TWO-SHOT · Mas and the Orb: the iris steps",
+   "lines": []
+  },
+  {
+   "id": "3.02",
+   "action": "keep",
+   "est_s": 4.5,
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 4.5,
+   "src_frame": "WIDE · the room scrubs back, too far: the collapse",
+   "lines": []
+  }
+ ]
+}

@@ -1,0 +1,411 @@
+[
+ {
+  "id": "v33-a4-0001",
+  "scene": "7",
+  "speaker": "TILED EMPLOYEE",
+  "speaker_slug": "tiled-employee",
+  "text": "Everyone's packed. Whatever happens to this place, Mas, don't worry about us.",
+  "spoken_as": "Everyone's packed.{0.3} Whatever happens to this place, [Mas](/mˈɑs/), don't worry about us.",
+  "delivery": "plain and warm, box in her arms, to Mas at his desk; a statement, not a plea",
+  "tag": "[INVENTED] the staff's reported threat to follow him (facts #51, L3); it says nothing about who organized anything",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": null,
+  "shot": "S7.02",
+  "shot_id": "S7.02",
+  "cue": null,
+  "lip_sync": true,
+  "status": "fast",
+  "device": null,
+  "room": null,
+  "est_s": null,
+  "file": "audio/ep01/v33/act4/wav/v33-a4-0001.wav",
+  "mp3": null,
+  "duration_s": 5.39,
+  "frames_24": 130,
+  "voiced_span_s": 4.12,
+  "pace": {
+   "words": 12,
+   "wpm": 174.8,
+   "speed": 1.0,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 1.0,
+    "speed_band": [
+     0.95,
+     1.05
+    ],
+    "articulation_guide_sps": [
+     4.2,
+     5.0
+    ],
+    "turn_wpm_guide": [
+     150,
+     170
+    ],
+    "intent": "plain and warm, box in her arms, to Mas at his desk; a statement, not a plea"
+   },
+   "measured": {
+    "wpm": 174.8,
+    "articulation_sps": 4.94,
+    "syllables": 19,
+    "span_s": 4.12,
+    "pauses_s": [
+     0.27,
+     0.08
+    ]
+   },
+   "longest_internal_gap_s": 0.27,
+   "audible_in_s": 0.5,
+   "audible_out_s": 4.62
+  },
+  "placement": {
+   "gap_before_s": null,
+   "follows": "picture"
+  },
+  "take": "s1",
+  "takes_tried": 1,
+  "pick_reason": "fast: one take (seed 1, plan speed)",
+  "voice": "af_nova (Kokoro-82M stock) · a-nova-plain · speed 1.000",
+  "voiceId": "af_nova",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 100 Hz",
+   "pitch -1.5 st",
+   "peak +1 dB @3000 Hz Q0.9",
+   "comp 2.0:1 @-22 dB (8/110 ms)",
+   "Kokoro speed 1.000 (the plan speed; tiled-employee band 0.95-1.05); one whole read; no time-stretch, no carrier, no splice",
+   "pause after 'packed': Kokoro 0.10 s -> 0.30 s (intended 0.30; +0.20 s of room tone at the quietest 5 ms)",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale (fastrec default; --breaths adds them)",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.5,
+    "f": 12,
+    "shape": "A"
+   },
+   {
+    "t": 0.583,
+    "f": 14,
+    "shape": "E"
+   },
+   {
+    "t": 0.75,
+    "f": 18,
+    "shape": "O"
+   },
+   {
+    "t": 0.833,
+    "f": 20,
+    "shape": "E"
+   },
+   {
+    "t": 1.0,
+    "f": 24,
+    "shape": "M"
+   },
+   {
+    "t": 1.083,
+    "f": 26,
+    "shape": "A"
+   },
+   {
+    "t": 1.292,
+    "f": 31,
+    "shape": "E"
+   },
+   {
+    "t": 1.458,
+    "f": 35,
+    "shape": "rest"
+   },
+   {
+    "t": 1.708,
+    "f": 41,
+    "shape": "O"
+   },
+   {
+    "t": 1.792,
+    "f": 43,
+    "shape": "E"
+   },
+   {
+    "t": 1.875,
+    "f": 45,
+    "shape": "A"
+   },
+   {
+    "t": 1.958,
+    "f": 47,
+    "shape": "E"
+   },
+   {
+    "t": 2.125,
+    "f": 51,
+    "shape": "A"
+   },
+   {
+    "t": 2.25,
+    "f": 54,
+    "shape": "M"
+   },
+   {
+    "t": 2.333,
+    "f": 56,
+    "shape": "E"
+   },
+   {
+    "t": 2.792,
+    "f": 67,
+    "shape": "M"
+   },
+   {
+    "t": 2.917,
+    "f": 70,
+    "shape": "A"
+   },
+   {
+    "t": 3.042,
+    "f": 73,
+    "shape": "E"
+   },
+   {
+    "t": 3.125,
+    "f": 75,
+    "shape": "M"
+   },
+   {
+    "t": 3.25,
+    "f": 78,
+    "shape": "A"
+   },
+   {
+    "t": 3.417,
+    "f": 82,
+    "shape": "E"
+   },
+   {
+    "t": 3.5,
+    "f": 84,
+    "shape": "rest"
+   },
+   {
+    "t": 3.625,
+    "f": 87,
+    "shape": "O"
+   },
+   {
+    "t": 3.708,
+    "f": 89,
+    "shape": "E"
+   },
+   {
+    "t": 3.792,
+    "f": 91,
+    "shape": "O"
+   },
+   {
+    "t": 3.917,
+    "f": 94,
+    "shape": "E"
+   },
+   {
+    "t": 4.125,
+    "f": 99,
+    "shape": "M"
+   },
+   {
+    "t": 4.208,
+    "f": 101,
+    "shape": "A"
+   },
+   {
+    "t": 4.542,
+    "f": 109,
+    "shape": "E"
+   },
+   {
+    "t": 4.625,
+    "f": 111,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "Everyone's",
+    "t0": 0.475,
+    "t1": 0.988,
+    "f0": 11,
+    "f1": 24,
+    "ph": "ˈɛvɹiwənz"
+   },
+   {
+    "w": "packed",
+    "t0": 0.988,
+    "t1": 1.475,
+    "f0": 24,
+    "f1": 35,
+    "ph": "pˈækt"
+   },
+   {
+    "w": "Whatever",
+    "t0": 1.745,
+    "t1": 2.12,
+    "f0": 42,
+    "f1": 51,
+    "ph": "wəTˈɛvəɹ"
+   },
+   {
+    "w": "happens",
+    "t0": 2.12,
+    "t1": 2.52,
+    "f0": 51,
+    "f1": 60,
+    "ph": "hˈæpənz"
+   },
+   {
+    "w": "to",
+    "t0": 2.52,
+    "t1": 2.608,
+    "f0": 60,
+    "f1": 63,
+    "ph": "tə"
+   },
+   {
+    "w": "this",
+    "t0": 2.608,
+    "t1": 2.795,
+    "f0": 63,
+    "f1": 67,
+    "ph": "ðɪs"
+   },
+   {
+    "w": "place",
+    "t0": 2.795,
+    "t1": 3.095,
+    "f0": 67,
+    "f1": 74,
+    "ph": "plˈAs"
+   },
+   {
+    "w": "Mas",
+    "t0": 3.145,
+    "t1": 3.495,
+    "f0": 75,
+    "f1": 84,
+    "ph": "mˈɑs"
+   },
+   {
+    "w": "don't",
+    "t0": 3.57,
+    "t1": 3.795,
+    "f0": 86,
+    "f1": 91,
+    "ph": "dˈOnt"
+   },
+   {
+    "w": "worry",
+    "t0": 3.795,
+    "t1": 4.032,
+    "f0": 91,
+    "f1": 97,
+    "ph": "wˈɜɹi"
+   },
+   {
+    "w": "about",
+    "t0": 4.032,
+    "t1": 4.308,
+    "f0": 97,
+    "f1": 103,
+    "ph": "əbˈWt"
+   },
+   {
+    "w": "us",
+    "t0": 4.308,
+    "t1": 4.64,
+    "f0": 103,
+    "f1": 111,
+    "ph": "ˌʌs"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -3.28,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.5,
+   "median_f0_hz": 144.4,
+   "f0_range_st": 12.7,
+   "f0_method": "YIN (fast)",
+   "final_move_st": null,
+   "asr": "Everyone's packed. Whatever happens to this place, Moss, don't worry about us.",
+   "cer": 0.033,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.258,
+   "align_median_s": null,
+   "utmos_dry": null,
+   "utmos_plain_read": null,
+   "utmos_vs_plain": null,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": null,
+   "speech_head_s": 0.5,
+   "speech_tail_s": 0.37,
+   "rise_ms": 5.0,
+   "decay_ms": 240.0,
+   "decay_to_60_s": 0.4
+  },
+  "fast": {
+   "key": "44958e6bede750f5",
+   "tool": "fastrec 1.2 (2026-09-26)",
+   "shard": 0,
+   "wall_s": 4.83,
+   "takes": 1,
+   "settings": {
+    "asr": true,
+    "asr_beam": 1,
+    "asr_batch_s": 24.0,
+    "asr_align": false,
+    "utmos": false,
+    "prosody": false,
+    "breaths": false,
+    "threads": 3
+   },
+   "asr": {
+    "packed_with": 0,
+    "share_s": 2.08,
+    "rechecked_alone": false
+   }
+  },
+  "breaths": [],
+  "opened_pauses": [
+   {
+    "after_word": 2,
+    "word": "packed",
+    "tts_s": 0.105,
+    "target_s": 0.3,
+    "point_s": 1.095,
+    "joined_speech": false,
+    "dip_db": -63.8,
+    "breath": false,
+    "crossfade_ms": [
+     8,
+     8
+    ],
+    "final_s": 0.3,
+    "opened_s": 0.195
+   }
+  ],
+  "alt_takes": []
+ }
+]
