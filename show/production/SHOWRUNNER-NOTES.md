@@ -24,6 +24,11 @@
      - **Corrected:** "no i want only biden to have deepfake, not senate".
        - Only the president's deepfake stays (Act Three, "which one's real?"), paying off the Orb's "for when it gets harder to tell.".
        - The Senate's cloned voice is cut, including "That voice was not mine." and the clone's "Health insurance.".
+   - **Alyi's reversal (same day):** "it's also ont clear why alyi changed his mind"
+     - Show the cause, which is on the record: the company he built emptying into Macrosoft, and the staff letter with his own name on it.
+     - Close it with his own public words, including "I love everything we've built together… reunite the company.".
+     - A wordless Sunday-night beat of Alyi, the packed boxes and Act One's window line.
+     - Nothing about his vote's reasons, and no family.
    - **The tour and Nesnej (same day):** "the worst transition is to the tour and jensen. it comes out of nowhere and is not clear what it is"
      - The redesign: the tour as his move, caused by the Senate (stamps, the EU leverage flip).
      - The one-sentence statement shown as the leaders signing.
