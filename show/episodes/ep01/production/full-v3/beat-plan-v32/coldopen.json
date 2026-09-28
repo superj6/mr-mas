@@ -1,0 +1,136 @@
+{
+ "segment": "coldopen",
+ "source": "show/reel/ep01-v31/ep01-v31-coldopen.json",
+ "_about": "v32-agency beat plan (PLAN §2 format, plus the v3.1 plans' additive fields), written against the v3.1 LOCK's beat and line ids (show/reel/ep01-v31/ep01-v31-<seg>.json). Every v3.1 beat appears once (keep, cut, merge, or keep with \"moved\"), plus the new beats, listed in their v3.2 order. est_s is a planning length (the lock's measured lengths, line timings on file, word counts), never a measurement. Kept lines are keep true/false; kept V.O. carries \"vo\": true; new lines carry v32-<seg>-NNNN ids with who/text/after/gap_s/delivery/take; \"at\" on a kept line retimes it (start+S | after:<line id>+S); moved lines carry moved_from / moves_to. There are no new V.O. lines: the inner voice is pruned from 28 lines to 12 (SHOWRUNNER-NOTES note 0), all on existing takes. Fix codes: A0 = note 0 (the lead drives the plot); A1-A4 = the brief's direction for Acts One to Four; P = the V.O. prune (a thought that could be an action becomes the action; forced or writerly lines go); N1 = the newcomer's \"I couldn't tell what Mas wants\"; R = runtime. The v3.1 rules stand: subtitles without quotation marks or print ellipses on spoken real lines; every call grid names its speaking tile; no band prompt. The script is show/episodes/ep01/script.md (draft 8); the notes are ../script-v32-notes.md; the agency map is ../agency-v32.md; the builder is _build_v32.py.",
+ "story_s": {
+  "source": 26.67,
+  "estimate": 26.67
+ },
+ "beats": [
+  {
+   "id": "1.00",
+   "action": "keep",
+   "est_s": 0.5,
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 0.5,
+   "src_frame": "BLACK",
+   "lines": []
+  },
+  {
+   "id": "1.01",
+   "action": "keep",
+   "est_s": 4.25,
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 4.25,
+   "src_frame": "WIDE · the one wide: stage, banquet, the lit window",
+   "lines": [
+    {
+     "id": "e1-co-1-01",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "1.02",
+   "action": "keep",
+   "est_s": 5.583,
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 5.583,
+   "src_frame": "SINGLE · MCU Mas, answering; the window soft behind him",
+   "lines": [
+    {
+     "id": "e1-co-1-02",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "1.03",
+   "action": "keep",
+   "est_s": 1.542,
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 1.542,
+   "src_frame": "INSERT · the shared table from above: plink",
+   "lines": []
+  },
+  {
+   "id": "1.04",
+   "action": "keep",
+   "est_s": 2.667,
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 2.667,
+   "src_frame": "SINGLE · MCU Mas, the sentence lands",
+   "lines": []
+  },
+  {
+   "id": "2.01",
+   "action": "keep",
+   "est_s": 0.625,
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 0.625,
+   "src_frame": "WIDE · the freeze",
+   "lines": []
+  },
+  {
+   "id": "2.02",
+   "action": "keep",
+   "est_s": 2.5,
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 2.5,
+   "src_frame": "INSERT · the phone: the invite",
+   "lines": []
+  },
+  {
+   "id": "2.03",
+   "action": "keep",
+   "est_s": 2.5,
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 2.5,
+   "src_frame": "SINGLE · MCU Mas: he reads it, looks up",
+   "lines": [
+    {
+     "id": "e1-co-2-01",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "3.01",
+   "action": "keep",
+   "est_s": 2.0,
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 2.0,
+   "src_frame": "TWO-SHOT · Mas and the Orb: the iris steps",
+   "lines": []
+  },
+  {
+   "id": "3.02",
+   "action": "keep",
+   "est_s": 4.5,
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 4.5,
+   "src_frame": "WIDE · the room scrubs back, too far: the collapse",
+   "lines": []
+  }
+ ]
+}
