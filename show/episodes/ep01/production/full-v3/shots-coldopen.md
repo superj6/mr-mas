@@ -1,10 +1,17 @@
 # Ep1 v3: the cold open's pixel shots (`v3-shots-coldopen-tag`, 2026-09-27)
 
-> **Status: final on the v3.2 lock (the v3.2 and v3.1 sections below); re-cut, re-locked and re-rendered (§0), 2026-09-27.** This is track P2 of [PLAN.md](PLAN.md) for the `coldopen` segment. The tag's record is [shots-tag.md](shots-tag.md).
+> **Status: on the v3.3 lock, unchanged since v3.2 (the v3.3, v3.2 and v3.1 sections below); re-cut, re-locked and re-rendered (§0), 2026-09-27.** This is track P2 of [PLAN.md](PLAN.md) for the `coldopen` segment. The tag's record is [shots-tag.md](shots-tag.md).
 >
 > **Nothing here was watched or heard.** I looked at the contact sheet, at native stills of every shot (at 2x, with crops at 4x of the mouths and the iris steps), at frames decoded from the rendered MP4s, and at the last 3 s against the intro's frame 0. The flash and join numbers are measured. Whether the cuts play needs a person.
 >
 > Nothing was committed.
+
+## v3.3 (the polish round, 2026-09-28)
+
+- **The check:** `show/reel/ep01-v33/ep01-v33-coldopen.json` matches v3.2 in every beat: lengths, lines, words, text, sounds, fx, cast, frames and captions.
+- **What I did:** re-locked on v3.3, with the mix pointed at `out/ep01/full-v3/mix-v32/coldopen-mix.wav` (640 f). The v3.1 mix it used before is gone. Against the v3.2 lock, only the shots' `cues` changed (review margin only).
+- **Not re-rendered:** `picture/coldopen.mp4` (640 frames) stands.
+- **The EL lock:** `ep01-v33-el-coldopen.json` was locked into scratch on the assembly's `el-v32/coldopen-takes.json`, then built with `build_el.mjs` (`ELDIR` = scratch) and checked: 583 frames, 10 layouts, 0 stand-ins, 0 problems. 3.02's collapse and cursor marks resolve there too.
 
 ## v3.2 (the final lock, 2026-09-28)
 

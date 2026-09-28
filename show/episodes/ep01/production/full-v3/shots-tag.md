@@ -1,12 +1,40 @@
 # Ep1 v3: the tag's pixel shots (`v3-shots-coldopen-tag`, 2026-09-27)
 
-> **Status: v3.2, final: re-locked on the final v3.2 lock (the v3.2 section below), the Runway demo spliced (the v3.1 section). The sections after those are the v3 record.** This is track P2 of [PLAN.md](PLAN.md) for the `tag` segment. The cold open's record is [shots-coldopen.md](shots-coldopen.md), which also holds the shared tools.
+> **Status: v3.3: re-locked on the v3.3 lock (the v3.3 section below; P19, the cover beat +1 s), the Runway demo spliced (the v3.1 section). The sections after those are the v3 record.** This is track P2 of [PLAN.md](PLAN.md) for the `tag` segment. The cold open's record is [shots-coldopen.md](shots-coldopen.md), which also holds the shared tools.
 >
 > **The tag ends on its own last frame:** black on the vault's hum (33.05). The Orb outro follows as a separate chapter and isn't in this render.
 >
 > **Nothing here was watched or heard.** I looked at the contact sheet, at native stills of every shot at 2x, and at three frames decoded from the MP4. The flash numbers are measured.
 >
 > Nothing was committed.
+
+## v3.3: the polish round (2026-09-28)
+
+**The change:** only P19. The cover beat (32.03, CEO OF THE YEAR) holds 1 s longer: 3.8 s → 4.8 s, +24 frames. mood-analysis-v32 §4 #5 found the tag busy at 25.7 cuts a minute. Against v3.2, every other beat, line, text, sound, frame and caption is identical; everything after 32.03 moves by +24 frames.
+
+**The lock:**
+- The timeline is `show/reel/ep01-v33/ep01-v33-tag.json` (a756708), on the same takes (`tag/takes-mouth.json`).
+- There's no v3.3 stick reel (disk), so the temp track is the reel's own mixer run on the lock pass's render plan (`studio/out/reel-work/ep01-v33-stick/plan.json`), sliced at reel frame 29327 for 1016 frames into `out/ep01/full-v3/picture/tag-v33-stick-mix.wav`. The full mix was then deleted. The episode frame in is 29255.
+- **1016 frames (42.33 s).** 32.03 runs 385–500 (115 f).
+- **The Runway demo is unchanged:** 32.01 is 62 frames, and v31-32.01d is 233 frames from frame 62; its i0–216 are spliced at 62–278.
+
+**The layouts:** unchanged. 32.03's eyes go to the cover 10 frames after "it looks calmer than me." (k 69) and now hold on that look for 46 frames.
+
+**The render:**
+- The PNGs were rebuilt: `insert.py … --png`, then `splice.ts`, with no host layer on any frame. Then the render, all as one `ops/heavy.sh` job.
+- `out/ep01/full-v3/picture/tag.mp4`: **1016 frames, 42.33 s** (video and audio both 42.333 s). **217 browser frames spliced, 0 missing**, no stand-ins. `tag.srt` and `tag-sheet.png` sit beside it.
+
+**Measured:**
+- **The insert against `elgoog-demo-final.mp4`:** worst frame MAD 1.23 of 255.
+- **Joins:** 61 → 62, 278 → 279 and 294 → 295 look the same as in v3.2. 32.03 was checked at its start, on the look and at its last frame, and 1015 is black.
+- **Flashes:** **0 in any second**, red 0. The transitions are 72, 265–271, 295, 800–804 and 986, the late ones moved by 24. The largest mean-luminance step is 0.32 at 902 (the page → 33.04).
+- **The subtitles:** the same four lines. "that was close." is at 25.50 s and "noted." at 38.08 s.
+- **The EL lock:** `show/reel/ep01-v33-el/ep01-v33-el-tag.json` was locked into scratch, on the assembly's `el-v32/tag-takes.json`, then built with `build_el.mjs` (`ELDIR` = scratch) and checked.
+  - 1016 frames, 11 layouts, 0 stand-ins, 0 problems, 217 browser frames.
+  - The demo sits at 62–295 there too, and 32.03 runs 385–504 (119 f).
+  - The EL tag's splice PNGs are the same frames at the same positions.
+
+**Disk:** I deleted my stale temp slices (`tag-stick-mix.wav` for v3.2 and `coldopen-stick-mix.wav` for v3), and the splice PNGs.
 
 ## v3.2: the final lock (2026-09-28)
 
