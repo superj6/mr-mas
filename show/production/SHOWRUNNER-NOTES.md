@@ -4,6 +4,12 @@
 
 ## Current notes, newest first
 
+0. **Mas needs agency, not narration (2026-09-28):** "also in the previous version, it felt like a bunch of altman inner thoughts felt forced. i think an issue that made viewer have less connection with mas is that it is not really showing him take any action, just existing through the moments. if he is the main character he should be showing agency"
+   - **The lead drives the plot.** In every act Mas decides something and acts on it on screen, and the next scene follows from his move. Events don't just happen to him.
+   - **Actions come from the public record or from invented small stakes,** never from invented motives at contested moments. He calls, asks, pushes, signs, walks in, posts and sets terms. He does **not** orchestrate the staff revolt.
+   - **The inner voice is pruned to its strongest lines,** about 10–14 in Ep1. A thought that could be an action becomes the action.
+   - This supersedes the density in mas-inner-voice §7 (15–25 lines).
+
 1. **Let us into Mas's head (2026-09-27):** "also don't make mas's unsound narration forced/corny. it is hard to tell attach to mas as there is little that tells about his thoughts throughout, everything still feels distance"
    - **Measured on the Ep1 stick v2:** Mas has 242 of 1,788 words (14%) and only **3 lines of inner voice in 22 minutes** ("nobody noticed.", "i made it for everyone else.", "i don't keep score."). He's written as a still, unreadable centre, so the audience watches him from outside, like everyone else in the story does.
    - **What it means:** the audience should know what he's thinking, often, so they attach to him. His inner voice is the one place his tells show. The gap between what he says aloud ("super.") and what he thinks is where the drama and the comedy live.
