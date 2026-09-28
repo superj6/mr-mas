@@ -3,22 +3,33 @@
 
 Brief (v3-score-a): "launch night: the sample's warm Build; the odometer: an exhilarating swing, then the heat;
 Elgoog's code red: comic panic, pizzicato, the siren as a joke; the lobby deal: a charming caper swing, not dark
-LEVERAGE; the duel: rivalry; the pause letter: one chill."  Mood map: v3-plan s6.  Launch night, the odometer and
-the heat are the v3 sample's cue A (audio/reel/ep01-v3-sample/music/track.py, cue_a), re-fitted: every hard-coded
-sample second there is a timeline reference here (beats, lines, sounds, gaps), so it follows this lock, and the
-ElevenLabs-timed one with --el.
+LEVERAGE; the duel: rivalry; the pause letter: one chill."  Mood map: v3-plan s6.  Every sync point is a timeline
+reference (beats, lines, sounds, gaps), so it follows this lock, and the ElevenLabs-timed one with --el.
+
+ROUND 3 (2026-09-27).  The showrunner, on the v3 film: "i liked the initial ost that was presented ... i thought the
+beginning of most recent act1 was slightly corny sounding, but overall it was fine. we want to make sure we're
+keeping a unique sound, not toning down to overly generic".  So the round-1 score stands (a round-2 "restrained"
+pass was withdrawn), and only LAUNCH NIGHT's opening changes: the A-flat Rhodes / brushes / upright trio becomes the
+show's own voice, and the odometer's swing becomes a straight driving figure (not cartoonish); the lift and the heat
+turn are kept.
 
   s (Kokoro lock)  cue         what plays
-  0 - 108.3        a_launch    LAUNCH NIGHT: the late-night trio in A-flat major (Rhodes, felt, brushes, upright);
-                               GERG'S BUILD in A-flat on the chip, in compile passes placed in the gaps and under
-                               Gerg's own lines (never in a V.O., one of Mas's lines, or on the heels of a line);
-                               the felt under every V.O.; Db-minor(add9) shades "what if it wakes up?"; Eb13sus
-                               hangs from "Your button." through the click; felt alone for Alyi and Mas (the Door's
-                               head in the gaps, ending on its #4); the trio back for the chatbot, the Build + pizz
-  108.3 - 131.8    a_launch    THE ODOMETER: SET-PIECE SWING in A-flat major on the cut frames (ride, walk, the chip
-                               Build as lead, violins in octaves, brass accents): the lift, the odometer grows, the
-                               CLUNK drops it a major third (E), C on the post (thin), the push into the MILLION on
-                               the swung and-of-4 (the ratchet owns the downbeat), one band hit on the cut to Rima
+  0 - 108.3        a_launch    LAUNCH NIGHT, warm and curious in the show's voice: the felt on each chord (the modal
+                               home, two bars a chord: Fm9, Dbmaj9#11, Bbm9, Eb13sus4), a soft straight pulse on the
+                               root (the chip's triangle: the rack LEDs' eighths) and a sub on each change; GERG'S
+                               BUILD (the bible's F-minor cell) on the chip in compile passes in the gaps and under
+                               Gerg's own lines; the felt carries every V.O. (the pulse rests); the Ache's colour
+                               shades "what if it wakes up?"; Eb13sus hangs from "Your button." through the click,
+                               and after the click THE KNEE'S FLAT LINE on the chip (F F F F, register and duty
+                               varied): nothing happens yet; felt alone for Alyi and Mas (the Door's head in the
+                               gaps, ending on its #4); the same bed for the chatbot
+  108.3 - 131.8    a_launch    THE ODOMETER, a driving figure (straight): the triangle pulse in eighths (sixteenths
+                               from the clunk) with a sub on the ones, the chip Build as the lead on the cut frames,
+                               THE KNEE'S KINK (G Ab C, left hanging) as the odometer grows, a felt ostinato,
+                               spiccato sixteenths from the clunk, the violins in octaves, brass accents; the
+                               sample's mediant descent (Ab -> E -> C -> Ab: the landlord's cycle backwards); the
+                               CLUNK drops it a major third; one brass hit on the post; the push into the MILLION on
+                               the and-of-4 (the ratchet owns the downbeat); one hit on the cut to Rima
   131.8 - 149.6    a_launch    THE HEAT, THE BILL: the held chord voice-leads into THE ACHE over F on the tile (the
                                palette steps spell F minor); the F/C pedal only under the bill; it lets go on the tear
   148.5 - 184.9    code_red    ELGOOG'S CODE RED, on his phone's small speaker (era.futz 'phone'): the siren's whine
@@ -46,7 +57,12 @@ ElevenLabs-timed one with --el.
   320.5 - 322.5    threat      THREAT, once, on the pen's lift (low brass + sub on F, F-C-Gb, no third); its tail
                                rings into the black
 
-Levels (engine underscore masters, per cue): a_launch -20 (the swing +0.75 dB), code_red -22 after the phone,
+  (v3.1)           sydney      PLANNED, built when the lock has sc 10: uncanny and clingy (a glass-and-celesta music
+                               box in D-flat lydian, its chip echo a sixteenth late; the Ache under her real line)
+  (v3.1)           atem        PLANNED, built when the lock has the ATEM crate: a cool, brief sting (F-C low, the
+                               chip's open fifth, the Ache on glass; under 2 s)
+
+Levels (engine underscore masters, per cue): a_launch -20 (the odometer +0.75 dB), code_red -22 after the phone,
 lobby -20, floor -22, lobby2 -21, duel -20, pause -21, threat laid at -14 LUFS-M.  Dry of dialogue.
 
   OST_WORKERS=2 bash ops/heavy.sh audio/.venv-theme/bin/python audio/ost/tracks/e01-v3-act1/track.py --render [cue ...] [--el]
@@ -75,12 +91,12 @@ def dup(T, src, name, **kw):
 
 # ================================================================== A · LAUNCH NIGHT -> THE ODOMETER -> THE HEAT
 BUILD_AB = ['Ab4', 'Ab4', 'Bb4', 'C5', 'Eb5', 'C5', 'Bb4', 'Ab4', 'Ab4', 'Ab4', 'Bb4', 'C5', 'Eb5', 'G5', 'Eb5', 'C5']
+BUILD_F = ['F4', 'F4', 'G4', 'Ab4', 'C5', 'Ab4', 'G4', 'F4', 'F4', 'F4', 'G4', 'Ab4', 'C5', 'Eb5', 'C5', 'Ab4']
 ACC4 = (1.0, 0.72, 0.84, 0.72)
-CH = {  # chord -> (Rhodes, felt, bass root, bass fifth): the v3 sample's table.  No F-bass carries an A natural.
+CH = {  # chord -> (upper voicing, felt, bass root, bass fifth): the v3 sample's table (the odometer's harmony).
     'Abmaj9':    (['C4', 'Eb4', 'G4', 'Bb4'], ['Eb3', 'G3', 'C4'], 'Ab2', 'Eb2'),
     'Abmaj9/C':  (['Eb4', 'G4', 'Bb4', 'C5'], ['C3', 'G3', 'Eb4'], 'C3', 'G2'),
     'Dbmaj9#11': (['F3', 'Ab3', 'C4', 'Eb4'], ['Db3', 'Ab3', 'C4', 'F4'], 'Db3', 'Ab2'),
-    'Dbm(add9)': (['E3', 'Ab3', 'Db4', 'Eb4'], ['Db3', 'Ab3', 'E4'], 'Db3', 'Ab2'),
     'Bbm9':      (['Ab3', 'C4', 'Db4', 'F4'], ['Db3', 'Ab3', 'C4'], 'Bb2', 'F2'),
     'Cm7':       (['Bb3', 'Eb4', 'G4'], ['C3', 'G3', 'Eb4'], 'C3', 'G2'),
     'Eb13sus4':  (['Db4', 'F4', 'Ab4', 'C5'], ['Eb3', 'Ab3', 'Db4', 'F4'], 'Eb2', 'Bb2'),
@@ -89,9 +105,23 @@ CH = {  # chord -> (Rhodes, felt, bass root, bass fifth): the v3 sample's table.
     'B13sus4':   (['A3', 'Db4', 'E4', 'Ab4'], ['B2', 'A3', 'E4'], 'B2', 'Gb2'),
     'C69':       (['E3', 'A3', 'D4', 'G4'], ['C3', 'G3', 'D4'], 'C3', 'G2'),
 }
-LOOP_A1 = ['Abmaj9', 'Dbmaj9#11', 'Bbm9', 'Eb13sus4', 'Abmaj9', 'Dbmaj9#11', 'Cm7', 'Eb13sus4',
-           'Abmaj9', 'Dbmaj9#11', 'Bbm9', 'Eb13sus4', 'Abmaj9/C', 'Dbmaj9#11', 'Bbm9', 'Eb13sus4']
-LOOP_A3 = ['Dbmaj9#11', 'Cm7', 'Bbm9', 'Eb13sus4']
+# ROUND 3 (2026-09-27, the showrunner: "the beginning of most recent act1 was slightly corny sounding"): launch night
+# leaves the A-flat Rhodes / brushes / upright trio for the show's own voice: the felt, the chip Build (the bible's
+# F-minor cell), a soft straight pulse (the chip's triangle, the rack LEDs' eighths) and a sub on the chord changes,
+# in the modal home, two bars a chord; the knee's flat line on the click (nothing happens), its kink as the curve lifts.
+LN = {   # launch night: (felt voicing, pulse root, sub)
+    'Fm9':       (['Ab3', 'C4', 'G4'], 'F3', 'F1'),
+    'Dbmaj9#11': (['Ab3', 'C4', 'Eb4', 'G4'], 'Db3', 'Db1'),
+    'Bbm9':      (['Db4', 'F4', 'C5'], 'Bb2', 'Bb1'),
+    'Eb13sus4':  (['Eb3', 'Ab3', 'Db4', 'F4'], 'Eb3', 'Eb1'),
+    'Fache':     (['C4', 'Db4', 'G4'], 'F3', 'F1'),      # "And what if it wakes up?": the Ache's colour, once
+}
+LOOP_LN = ['Fm9', 'Fm9', 'Dbmaj9#11', 'Dbmaj9#11', 'Bbm9', 'Bbm9', 'Eb13sus4', 'Eb13sus4']
+LOOP_CH = ['Dbmaj9#11', 'Dbmaj9#11', 'Bbm9', 'Bbm9', 'Fm9', 'Fm9', 'Eb13sus4', 'Eb13sus4']
+# the odometer, straight (round 3): per-bar bass for the driving pulse, and the felt ostinato's chord tones
+ODO_OST = {'Eb13sus4': ['Db5', 'Ab4', 'F4', 'Ab4'], 'Ab69': ['Eb5', 'C5', 'Ab4', 'C5'],
+           'Dbmaj9#11': ['F5', 'C5', 'Ab4', 'C5'], 'E69': ['E5', 'B4', 'Gb4', 'B4'], 'B13sus4': ['E5', 'B4', 'Gb4', 'B4'],
+           'C69': ['G5', 'D5', 'C5', 'D5']}
 
 
 def cell(shift=0):
@@ -103,28 +133,24 @@ def tracks_a():
     T = palette()
     T['felt'].gain_db, T['felt'].sends = -2.0, {'room': -12, 'hall': -18}
     T['felt_mech'].gain_db = -14.0
-    T['rhodes'].gain_db, T['rhodes'].sends = -7.0, {'room': -12, 'plate': -14}
     T['lead'].gain_db, T['lead'].sends = -6.0, {'room': -14, 'snes': -16}
     T['lead'].eq = [('hp', 220), ('lp', 5200)]
-    for k in ('ubass', 'cb_pizz'):
-        T[k].eq = list(T[k].eq) + [V.PIZZ_NOTCH]
-    T['ubass'].gain_db = -1.0
-    T['cb_pizz'].gain_db = -7.0
-    T['swish'].gain_db, T['swish'].eq = 2.0, [('lp', 6500)]
-    T['brush'].gain_db = 8.0
-    T['jazz'].gain_db = 3.0
+    T['tri'].gain_db, T['tri'].eq = -4.0, [('lp', 900), ('hp', 45)]    # the pulse: the chip's triangle bass
+    T['sub'].gain_db = -10.0
+    T['timp'].gain_db = -6.0
     for k in ('vln1', 'vln2'):
         T[k].gain_db, T[k].sends = -4.0, {'hall': -10, 'room': -16}
-    for k in ('vla', 'vc'):
+    for k in ('vla', 'vc', 'cb'):
         T[k].gain_db, T[k].sends = -2.0, {'hall': -10, 'room': -16}
     for k in ('tpt', 'tbn'):
         T[k].gain_db = -9.0
     T['glasspad'].gain_db = -12.0
-    T['xylo'].gain_db = -14.0
     # the heat's F2 cello pedal on its own track, notched at the cello's ~111 Hz body resonance (an A2 that the
     # engine's F-major check traced to the strings on the first render: nothing written, a resonance)
     T['vc'].eq = list(T['vc'].eq) + [V.PIZZ_NOTCH]            # (the Ab2 of the turn rings it too: render 2)
+    T['cb'].eq = list(T['cb'].eq) + [V.PIZZ_NOTCH]
     dup(T, 'vc', 'vc_f')
+    dup(T, 'vc', 'vc_s', gain_db=-5.0)                         # the odometer's spiccato pulse
     return T
 
 
@@ -160,7 +186,7 @@ def cue_a(tl):
     # (the ElevenLabs one: 4.875 s) the clunk, the post and the million stay on their bars
     # (bar numbers count from a bar 1 just before the act's first frame, so a longer launch night gets more bars)
     n_pre = math.ceil((clunk + 1.0) / BAR)
-    c = V.Cue('a_launch', tl, anchor=clunk, anchor_bar=n_pre + 1, bars=n_pre + 20, swing=1.0)
+    c = V.Cue('a_launch', tl, anchor=clunk, anchor_bar=n_pre + 1, bars=n_pre + 20, swing=0.0)
     T = tracks_a()
     bar, bt, sw = c.bar, c.bt, c.sw
     rb = lambda t: int(round(c.bar_of(t)))                                 # noqa: E731
@@ -215,43 +241,56 @@ def cue_a(tl):
         t2 = max(l['end'] for l in hit_) + 0.06
         return t2 if t2 < latest else None
 
-    def harm_a1(b):
-        name = LOOP_A1[(b - 2) % len(LOOP_A1)]
-        wake = [l for l in tl.lines_in(tl.B('5.05'), tl.E('5.05')) if l['who'] == 'alyi']
-        if wake and rb(wake[0]['end']) - 1 <= b <= rb(wake[0]['end']) - 1 and bar(b) <= wake[0]['end'] <= bar(b) + BAR:
-            return 'Dbm(add9)'
+    wake = [l for l in tl.lines_in(tl.B('5.05'), tl.E('5.05')) if l['who'] == 'alyi']
+    b_wake = rb(wake[0]['on']) if wake else None
+
+    def harm_ln(b):
+        if b_wake is not None and b == b_wake and b < b_click - 1:
+            return 'Fache'
         if b >= b_click - 1:
             return 'Eb13sus4'
-        return name
+        return LOOP_LN[(b - 2) % len(LOOP_LN)]
 
-    def trio(b0, b1, harm):
+    def glow(b0, b1, harm):
+        """launch night's bed: the felt at each chord change (or under the V.O., which it carries), a soft straight
+        pulse on the root (the chip triangle; the rack LEDs' eighths) and a sub on the change; nothing starts
+        inside one of Mas's lines, and the pulse rests under the V.O."""
+        prev = None
         for b in range(b0, b1):
             name = harm(b)
-            rh, fe, root, fifth = CH[name]
-            t = bar(b)
+            fe, root, sub = LN[name]
+            t = max(0.02, bar(b))
             vo = vo_bar(b)
+            change = name != prev
+            prev = name
             if vo:
-                fch(fe, max(0.02, t), 2.4, 0.16)
-            else:
-                tt = clear_of_mas(max(0.02, t), t + Q * 2)
+                fch(fe, t, 2.4, 0.15)
+            elif change:
+                tt = clear_of_mas(t, t + Q * 2)
                 if tt is not None:
-                    c.ch('rhodes', rh, tt, 2.25 - (tt - t), 0.27 if tl.talking(tt, tt + 1.0) else 0.31, roll=0.008)
-            tb = clear_of_mas(max(0.02, t), t + Q, vo=False)
-            if tb is not None:
-                c.n('ubass', root, tb, (Q * 3.8 if vo else Q * 1.85) - (tb - t), 0.44)
-            if not vo:
-                t3 = bt(b, 3)
-                if not mas_room(t3):
-                    c.n('ubass', fifth, t3, Q * 1.85, 0.38)
-            taps = ''.join('o' if (k in (2, 6) and not vo and not mas_room(bt(b, 1 + k / 2))
-                                   and not tl.talking(bt(b, 1 + k / 2), pad=0.05, kinds={'vo'})) else '.'
-                           for k in range(8))
-            Drums(c.a, 'brushes').play(f'sweep: ~~~~~~~~\ntap: {taps}', bars=(b, b + 1), vel=0.5)
+                    fch(fe, tt, min(4.8, 2 * BAR - (tt - t)), 0.15, roll=0.02)
+                    if b > 2:
+                        c.n('sub', sub, tt, 1.2, 0.34, True, punch=0.0, click=0.0, decay=0.9)
+            for k in range(8):
+                tp = bar(b) + k * Q / 2
+                if tp < 0.4 or vo or tl.talking(tp, tp + 0.05, pad=0.05, kinds={'vo', 'mas'}):
+                    continue
+                busy = tl.talking(tp, tp + 0.05, pad=0.05)
+                c.n('tri', root, tp, Q / 2 * 0.7, (0.3 if k % 4 == 0 else 0.24) * (0.8 if busy else 1.0), True,
+                    att=0.004, dec=0.1, sus=0.5, rel=0.04)
 
-    # ---- A1: the trio from the first frame (the Rhodes blooms on the button), the Build in compile passes
-    c.ch('rhodes', CH['Abmaj9'][0], 0.02, 1.9, 0.22, roll=0.03)
-    c.mark(0.02, 'A1: the Rhodes blooms (A-flat maj9) on the button', hit=False)
-    trio(2, b_click, harm_a1)
+    def build_f(t0, count, vel, felt_double=True):
+        for i in range(count):
+            t = t0 + i * S16
+            c.n('lead', BUILD_F[i % 16], t, S16 * 0.62, vel * ACC4[i % 4], True, duty=0.25, att=0.002, dec=0.09,
+                sus=0.45, rel=0.035)
+            if felt_double and i == 0:
+                c.n('felt', nm(BUILD_F[0]) - 12, t, 0.5, 0.18)
+
+    # ---- A1: from the first frame (the felt on the button), the Build in compile passes
+    fch(LN['Fm9'][0], 0.03, max(0.8, bar(2) - 0.05), 0.14, roll=0.03)
+    c.mark(0.03, 'A1: the felt on the button (Fm9); the Build compiles', hit=False)
+    glow(2, b_click, harm_ln)
     vo1 = tl.lines_in(0.0, tl.E('5.02'), kinds={'vo'})
     first_end = (vo1[0]['on'] - 0.2) if vo1 else 4.0
     passes = []
@@ -263,15 +302,22 @@ def cue_a(tl):
             not tl.talking(bar(b_click) - 16 * S16, bar(b_click), kinds={'vo', 'mas', 'real'}):
         passes.append((bar(b_click) - 16 * S16, 16, 0.3))     # a 16-note pass ends on the click's bar
     for t0, cnt, v in passes:
-        build16(t0, cnt, v)
+        build_f(t0, cnt, v)
         c.mark(t0, f'the Build: compile pass ({cnt})')
-    c.section('A1 launch night: the trio + the Build in A-flat major', 0.0, bar(b_click))
-    # ---- the click: Eb13sus held, nothing moves
-    c.ch('rhodes', CH['Eb13sus4'][0], bar(b_click), 2.45, 0.21, roll=0.006)
-    fch(CH['Eb13sus4'][1], bar(b_click), 2.45, 0.14, roll=0.01)
-    c.n('ubass', 'Eb2', bar(b_click), 2.2, 0.28)
-    c.mark(bar(b_click), 'the click: Eb13sus held (the dominant hangs; nothing happens)')
-    c.section('the click: one held chord', bar(b_click), bar(b_two))
+    c.section('A1 launch night: the felt, a soft pulse, the Build (F minor, the chip)', 0.0, bar(b_click))
+    # ---- the click: Eb13sus held; THE KNEE'S FLAT LINE on the chip (F F F F, register and duty varied): nothing
+    # happens yet
+    fch(LN['Eb13sus4'][0], bar(b_click), 2.45, 0.14, roll=0.01)
+    c.n('sub', 'Eb1', bar(b_click), 1.4, 0.3, True, punch=0.0, click=0.0, decay=1.0)
+    click = tl.snd('5.08', 'dialog_ok_click', default=bar(b_click) + 1.0)
+    fl0 = c.next_beat(click + 0.2)
+    for k, (p, duty, v) in enumerate((('F4', 0.5, 0.26), ('F5', 0.25, 0.22), ('F4', 0.125, 0.24), ('F3', 0.25, 0.2))):
+        tt = fl0 + k * Q
+        if tt < tl.E('5.08') + 0.4 and not tl.talking(tt, tt + 0.3, kinds={'mas', 'vo', 'real'}):
+            c.n('lead', p, tt, Q * (0.5 if k < 3 else 0.9), v, True, duty=duty, att=0.003, dec=0.15, sus=0.3,
+                rel=0.06)
+    c.mark(fl0, 'the click: the knee\'s flat line on the chip (F F F F): nothing happens yet')
+    c.section('the click: one held chord, the flat line', bar(b_click), bar(b_two))
     # ---- A2: felt only; Alyi and Mas; the Door's head in the gaps (Ab -> Db | C -> G: it ends on the #4)
     t = bar(b_two)
     ls = [l for l in tl.lines_in(tl.B('5.09'), tl.E('5.09')) if l['kind'] != 'vo']
@@ -293,118 +339,112 @@ def cue_a(tl):
             c.n('felt', p, tt, dd, vv)
             c.mark(tt, lab)
         fch(['Db3', 'Ab3', 'C4', 'F4'], t5, m2['end'] + 0.1 - t5, 0.15, roll=0.016, span_end=m2['end'] + 0.1)
-        fch(CH['Eb13sus4'][1], m2['end'] + 0.1, max(1.2, bar(b_chat) - m2['end'] - 0.05), 0.16, roll=0.014)
+        fch(LN['Eb13sus4'][0], m2['end'] + 0.1, max(1.2, bar(b_chat) - m2['end'] - 0.05), 0.16, roll=0.014)
     else:
         fch(['Db3', 'Ab3', 'C4', 'Eb4'], t, bar(b_chat) - t, 0.16)
     c.mark(bar(b_two), 'A2: felt only, Dbmaj9(#11) (the deceptive IV after the click)')
     c.section('A2 the two-hander: felt only (the Door in the gaps)', bar(b_two), bar(b_chat))
-    # ---- A3: the chatbot: the trio back; the Build lighter, doubled by violin pizz
-    trio(b_chat, b_lift, lambda b: 'Eb13sus4' if b == b_lift - 1 else LOOP_A3[(b - b_chat) % 4])
-    for t0, cnt, v in place_passes(c, bar(b_chat), bar(b_lift) - 0.2, vel=0.28, spacing=4.5):
-        build16(t0, cnt, v, pizz=True)
-        c.mark(t0, f'the Build (+ pizz): compile pass ({cnt})')
-    c.section('A3 the chatbot flatters: the trio + the Build with pizz', bar(b_chat), bar(b_lift))
+    # ---- A3: the chatbot: the same bed, the Build soft in the gaps
+    glow(b_chat, b_lift, lambda b: 'Eb13sus4' if b == b_lift - 1 else LOOP_CH[(b - b_chat) % 8])
+    for t0, cnt, v in place_passes(c, bar(b_chat), bar(b_lift) - 0.2, vel=0.27, spacing=4.5):
+        build_f(t0, cnt, v)
+        c.mark(t0, f'the Build: compile pass ({cnt})')
+    c.section('A3 the chatbot flatters: the felt, the pulse, the Build', bar(b_chat), bar(b_lift))
 
-    # ---- A4: SET-PIECE SWING in A-flat major
-    def walk(b, ps, vel=0.62, beats=(1, 2, 3, 4)):
-        for k, p in zip(beats, ps):
-            if p is None:
-                continue
-            t = bt(b, k)
-            c.n('ubass', p, t, Q * 0.92, vel * (1.0 if k in (1, 3) else 0.93))
-            c.n('cb_pizz', p, t, Q * 0.92, vel * 0.7)
+    # ---- A4: THE ODOMETER, a driving figure (round 3: straight, no ride or walking bass): the chip Build as the
+    # lead on the cut frames, the triangle pulse in eighths with a sub on the ones, a felt ostinato from the growth,
+    # spiccato sixteenths from the clunk, the violins in octaves, brass accents; the sample's mediant descent kept
+    ODO_ROOT = {b_lift: ('Eb13sus4', 'Eb2'), b_grow: ('Ab69', 'Ab2'), b_grow + 1: ('Dbmaj9#11', 'Db3'),
+                b_clunk: ('E69', 'E2'), b_clunk + 1: ('B13sus4', 'B2'), b_post: ('C69', 'C3'),
+                b_post + 1: ('C69', 'C3'), b_mill: ('Ab69', 'Ab2')}
 
-    def comp_ch(name, t, d, v):
-        c.ch('rhodes', CH[name][0], t, d, v, roll=0.006)
+    def drive(b, vel, step=Q / 2, ost=True, spic=False, from_beat=1.0):
+        name, root = ODO_ROOT.get(b, ('Ab69', 'Ab2'))
+        t0, t1 = bt(b, from_beat), min(bar(b + 1), hit)
+        V.pulse(c, 'tri', lambda t: root, t0, t1, step, vel, att=0.003, dec=0.08, sus=0.6, rel=0.03,
+                accent=lambda i: 1.15 if i % int(round(Q / step * 2)) == 0 else 0.92)
+        if from_beat == 1.0:
+            c.n('sub', nm(root) - 12 if nm(root) >= nm('C2') else root, bar(b), 0.6, 0.4, True, punch=1.0, click=0.0,
+                decay=0.5)
+        if ost:
+            pat = ODO_OST[name]
+            for j in range(8):
+                tt = bar(b) + j * Q / 2
+                if tt >= t1 - 0.01 or tt < t0 - 1e-6:
+                    continue
+                c.n('felt', pat[j % 4], tt, Q * 0.45, 0.2 if j % 4 == 0 else 0.15)
+        if spic:
+            V.pulse(c, 'vc_s', lambda t: nm(root) + (12 if nm(root) < nm('G2') else 0), t0, t1, S16, 0.28,
+                    art='spic')
 
-    def charleston(b, name, v=0.38, second=None):
-        comp_ch(name, bt(b, 1), Q * 1.3, v)
-        comp_ch(second or name, sw(b, 2.5), Q * 0.45, v * 0.86)
-
-    swing_ride(c.a, (b_lift, b_mill + 1), vel=0.34, hat=True, feathered_kick=0.16)
-    walk(b_lift, ['Eb2', 'F2', 'G2', 'A2'], 0.55)
-    charleston(b_lift, 'Eb13sus4', 0.3)
+    drive(b_lift, 0.3, ost=False)
     build16(bar(b_lift), 4, 0.36, felt_double=False, duty=0.25)
     build16(bt(b_lift, 3), 8, 0.4, idx0=4, felt_double=False, duty=0.25)
-    for bb in (4.0, 4.5):
-        c.n('jazz', 38, sw(b_lift, bb), 0.12, 0.28 if bb == 4.0 else 0.36)
-    c.mark(bar(b_lift), 'A4 THE LIFT: the counter ticks (ride, walk, the Build 4 + 8)')
+    c.mark(bar(b_lift), 'A4 THE LIFT: the counter ticks (the pulse, the Build 4 + 8)')
     VL = []
-    # phrase 1: the odometer grows; Dbmaj9; the CLUNK drops it a major third; B13sus
-    c.n('jazz', 36, bar(b_grow), 0.2, 0.42)
-    walk(b_grow, ['Ab2', 'C3', 'Eb3', 'D3'])
-    charleston(b_grow, 'Ab69', 0.34)
-    build16(bar(b_grow), 4, 0.42, felt_double=False, duty=0.25)
+    # phrase 1: the odometer grows (the knee's KINK on the chip, G A-flat C, left hanging: the curve lifts)
+    drive(b_grow, 0.34)
+    for k, p in enumerate(('G4', 'Ab4', 'C5')):
+        c.n('lead', p, bt(b_grow, 1 + k), Q * 0.8, 0.4, True, duty=0.25, att=0.002, dec=0.12, sus=0.4, rel=0.06)
     vo6 = tl.lines_in(bar(b_grow), bar(b_grow + 1), kinds={'vo'})
     if vo6:
         fch(['Eb3', 'Ab3', 'C4', 'F4'], vo6[0]['on'] - 0.3, 1.9, 0.16, roll=0.012)
-    c.mark(bar(b_grow), 'phrase 1: the odometer grows (Ab6/9)')
-    walk(b_grow + 1, ['Db3', 'C3', 'Ab2', 'F2'])
-    charleston(b_grow + 1, 'Dbmaj9#11', 0.34)
+    c.mark(bar(b_grow), 'phrase 1: the odometer grows: the knee\'s kink (G Ab C), left hanging')
+    drive(b_grow + 1, 0.36)
     build16(bar(b_grow + 1), 12, 0.44, felt_double=False, duty=0.25)
     VL += [('Ab4', bt(b_grow + 1, 1), Q), ('Bb4', bt(b_grow + 1, 2), Q), ('C5', bt(b_grow + 1, 3), Q),
            ('Eb5', bt(b_grow + 1, 4), Q)]
-    c.n('jazz', 36, clunk, 0.2, 0.55)
-    walk(b_clunk, ['E2', 'Gb2', 'Ab2', 'A2'], 0.66)
-    charleston(b_clunk, 'E69', 0.34)
+    c.n('timp', 'E2', clunk, 1.0, 0.44)
+    c.n('sub', 'E1', clunk, 0.9, 0.55, True, punch=2.0, click=0.0, decay=0.8)
+    drive(b_clunk, 0.4, step=S16, spic=True)
     build16(bar(b_clunk), 16, 0.44, shift=-4, felt_double=False, duty=0.25)
     VL += [('B4', bt(b_clunk, 1), 2 * Q), ('Ab4', bt(b_clunk, 3), 2 * Q)]
-    c.mark(clunk, 'THE CLUNK: through the desk, the harmony drops a major third (E6/9)')
-    walk(b_clunk + 1, ['B2', 'Ab2', 'B2', 'Db3'])
-    charleston(b_clunk + 1, 'E69', 0.33, second='E69')
-    comp_ch('B13sus4', bt(b_clunk + 1, 3), Q * 1.6, 0.3)
+    c.mark(clunk, 'THE CLUNK: through the desk, the harmony drops a major third (E); the spiccato joins')
+    drive(b_clunk + 1, 0.42, step=S16, spic=True)
     build16(bar(b_clunk + 1), 12, 0.42, shift=-4, felt_double=False, duty=0.25)
     VL += [('Gb4', bt(b_clunk + 1, 1), 2 * Q), ('Db5', bt(b_clunk + 1, 3), Q), ('B4', bt(b_clunk + 1, 4), Q)]
-    # phrase 2: the post (C6/9, one brass hit, thin: bass and brushes), the build to the million, the MILLION
+    # phrase 2: the post (C, one brass hit, then thin: the pulse alone), the build to the million, the MILLION
     post = bar(b_post)
     V.stab(c, 'tpt', ['E5', 'A4'], post, vel=0.62, length=0.2)
     V.stab(c, 'tbn', ['D4', 'G3'], post, vel=0.6, length=0.22)
-    c.n('jazz', 36, post, 0.2, 0.45)
-    walk(b_post, ['C3', 'G2'], 0.5, beats=(1, 3))
-    comp_ch('C69', post, Q * 3.6, 0.27)
+    drive(b_post, 0.28, ost=False)
     VL += [('C5', bt(b_post, 1), 4 * Q)]
-    c.mark(post, 'the post: C6/9, one brass hit, then thin (bass, ride, one chord)')
-    walk(b_post + 1, ['C3', 'D3', 'Eb3', 'G2'])
-    charleston(b_post + 1, 'C69', 0.33)
-    comp_ch('Eb13sus4', bt(b_post + 1, 3), Q * 0.9, 0.3)
+    c.mark(post, 'the post: C, one brass hit, then thin (the pulse and the held violins)')
+    drive(b_post + 1, 0.44, step=S16, spic=True)
     build16(bar(b_post + 1), 12, 0.46, shift=-8, felt_double=False, duty=0.25)
     VL += [('D5', bt(b_post + 1, 1), 2 * Q), ('Eb5', bt(b_post + 1, 3), 1.6 * Q)]
-    push = sw(b_mill - 1, 4.5)
+    push = bt(b_mill - 1, 4.5)
     c.n('lead', 'Eb5', bt(b_mill - 1, 4), S16 * 1.6, 0.44, True, duty=0.25, att=0.002, dec=0.12, sus=0.3, rel=0.05)
     c.n('lead', 'Ab5', push, 0.55, 0.46, True, duty=0.25, att=0.002, dec=0.2, sus=0.35, rel=0.12)
     V.stab(c, 'tpt', ['F5', 'C5'], push, vel=0.66, length=0.24)
     V.stab(c, 'tbn', ['Eb4', 'Bb3'], push, vel=0.62, length=0.26)
-    c.n('jazz', 38, push, 0.12, 0.4)
-    c.n('jazz', 36, push, 0.2, 0.42)
-    c.n('ubass', 'Ab2', push, (bt(b_mill, 2) - push) * 0.95, 0.66)
-    c.n('cb_pizz', 'Ab2', push, 0.5, 0.46)
-    comp_ch('Ab69', push, Q * 1.4, 0.34)
+    c.n('sub', 'Ab1', push, 0.8, 0.5, True, punch=1.5, click=0.0, decay=0.7)
+    c.n('timp', 'Ab2', push, 1.0, 0.4)
     VL += [('Ab5', push, bt(b_mill, 3) - push)]
-    c.mark(push, 'the push into the MILLION (swung and-of-4): brass + the tag "shipped" (Eb5 -> Ab5)')
+    c.mark(push, 'the push into the MILLION (the and-of-4): brass + the tag "shipped" (Eb5 -> Ab5)')
     c.mark(bar(b_mill), 'THE MILLION: no attack on the downbeat (the odometer ratchet owns it)', hit=False)
-    walk(b_mill, [None, 'C3', 'Eb3', 'D3'])
-    comp_ch('Ab69', sw(b_mill, 2.5), Q * 0.5, 0.3)
-    VL += [('G5', bt(b_mill, 3), Q), ('Eb5', bt(b_mill, 4), Q)]
+    drive(b_mill, 0.34, from_beat=2.0)
     # one band hit on the cut to Rima, then a held Abmaj9 under the two short lines
+    V.clip_before(c, hit, insts={'tri', 'felt', 'vc_s', 'lead'}, rel=0.05)
+    V.drop_window(c, hit, hit + 60, insts={'tri', 'vc_s', 'lead'})
+    c.a.notes = [nt for nt in c.a.notes if not (nt.inst == 'felt' and hit - 0.01 < c.clk.x(nt.start) < heat - 0.1
+                                               and nt.dur < 0.5)]
     V.stab(c, 'tpt', ['F5', 'Bb4'], hit, vel=0.66, length=0.3)
     V.stab(c, 'tbn', ['Eb4', 'C4', 'Ab3'], hit, vel=0.62, length=0.32)
-    c.n('jazz', 36, hit, 0.2, 0.5)
-    c.n('jazz', 49, hit, 2.5, 0.26)
-    c.n('ubass', 'Ab2', hit, 2.4, 0.6)
-    c.n('cb_pizz', 'Ab2', hit, 1.0, 0.45)
-    comp_ch('Ab69', hit, 3.2, 0.3)
+    c.n('sub', 'Ab1', hit, 1.2, 0.5, True, punch=1.0, click=0.0, decay=1.0)
+    c.n('timp', 'Ab2', hit, 1.4, 0.44)
+    c.ch('felt', ['Ab2', 'Eb3', 'C4'], hit, 2.4, 0.22, roll=0.01)
     c.n('lead', 'Ab5', hit, 0.3, 0.36, True, duty=0.25, att=0.002, dec=0.15, sus=0.2, rel=0.08)
     c.mark(hit, 'the band hit on the cut to Rima; then the held chord (thin under "Low-key." / "Basement.")')
-    V.clip_before(c, hit, insts={'jazz'}, rel=0.05)          # the ride stops on the hit (the crash rings)
-    c.a.notes = [nt for nt in c.a.notes if not (nt.inst == 'jazz' and c.clk.x(nt.start) > hit + 0.01)]
     for p, t0, d in VL:
         c.n('vln1', p, t0, d * 0.98, 0.4, art='sus', att=0.06, rel=0.25)
         c.n('vln2', nm(p) - 12, t0, d * 0.98, 0.36, art='sus', att=0.06, rel=0.25)
     for nt in c.a.notes:                                     # thin under "someone noticed."
         tt = c.clk.x(nt.start)
-        if vo6 and vo6[0]['on'] - 0.25 <= tt < vo6[0]['end'] and nt.inst in ('jazz', 'rhodes', 'ubass', 'cb_pizz'):
+        if vo6 and vo6[0]['on'] - 0.25 <= tt < vo6[0]['end'] and nt.inst in ('tri', 'felt', 'sub'):
             nt.vel *= 0.7
-    c.section('A4 the counter: SET-PIECE SWING in A-flat major (lift, phrase 1, phrase 2)', bar(b_lift), hit)
+    c.section('A4 the counter: a driving figure (the pulse, the chip Build, the violins, brass accents)', bar(b_lift),
+              hit)
     # ---- A5: the held chord, THE TURN into the Ache, the heat, the bill; out on the tear
     c.rebow('vc', 'Ab2', hit + 0.05, heat + 0.25, 0.2, first_att=0.5, last_rel=0.7, art='sus', lp=1300)
     c.rebow('vla', 'C3', hit + 0.05, tear + 0.6, 0.17, first_att=0.5, last_rel=1.6, art='sus', lp=1500)
@@ -422,13 +462,15 @@ def cue_a(tl):
              (hit + 2.0, 0.0), (tear + 4.0, 0.0)]
     end = tear + 2.6
     meta = dict(
-        id='a_launch', title='Launch Night / The Odometer / The Heat (Ep1 v3, Act One sc 5-7)', mm='(to picture)',
-        usage='BI', family='P01 colours in A-flat major (the trio + the Build) -> P11 SET-PIECE SWING in major -> the Ache',
-        tone='warm, giddy, late-night garage band; then exhilarating; then the first dark bar',
+        id='a_launch', title='Launch Night / The Odometer / The Heat (Ep1 v3 r3, Act One sc 5-7)', mm='(to picture)',
+        usage='BI', family='P01 colours (felt, a soft chip pulse, the Build) -> P11 energy, straight (a driving figure) '
+                           '-> the Ache',
+        tone='warm and curious in the show\'s voice; then a drive that builds; then the first dark bar',
         scenes=['Ep1 v3 Act One sc 5-7'],
-        motifs=["Gerg's Build in A-flat major (compile passes)", "Alyi's Door head on the felt (Ab Db | C G)",
+        motifs=["Gerg's Build (F minor on launch night; A-flat in the odometer)", 'the knee\'s flat line (the click) '
+                'and its kink (the growth)', "Alyi's Door head on the felt (Ab Db | C G)",
                 'the Build\'s tag "shipped" (Eb5 -> Ab5)', 'the Ache (G4 + Db5 over F)'],
-        motif_ids=[], key='A-flat major / D-flat lydian; E and C (chromatic mediants) in the swing; F + the Ache',
+        motif_ids=[], key='F minor modal (Fm9, Dbmaj9#11, Bbm9, Eb13sus4); the odometer Ab -> E -> C -> Ab; F + the Ache',
         composer='v3-score-a (composer X), from the v3 sample\'s cue A, 2026-09-27',
         underscore_lufs=-20.0, album_lufs=-16.0,
         room_sfx=[dict(t0=c.clk(0.0), t1=c.clk(end), sfx='server_hum (the bullpen, up through the floor)')],
@@ -436,9 +478,9 @@ def cue_a(tl):
         + [dict(t=round(c.clk(t), 3), sfx='odometer_ratchet: 1,000,000') for t in tl.snd_any('odometer_ratchet')]
         + [dict(t=round(c.clk(t), 3), sfx='dialog_ok_click: the launch button') for t in
            tl.snd_any('dialog_ok_click', tl.B('5.08'), tl.E('5.08'))],
-        audition=['0-68 s: the trio and the Build under the talk: warm and awake, never busy; any Nintendo feel is a '
-                  'fail', 'the two-hander (5.09): the felt alone and the Door in the gaps: tender, not sad-piano',
-                  'the counter (5.12-6.06): the swing in major: exhilarating, not "upbeat corporate"',
+        audition=['0-68 s: the felt, the soft pulse and the Build under the talk: warm and curious in the show\'s '
+                  'voice, never lounge; any Nintendo feel is a fail', 'the click: the knee\'s flat line: nothing happens', 'the two-hander (5.09): the felt alone and the Door in the gaps: tender, not sad-piano',
+                  'the counter (5.12-6.06): a drive that builds, straight: exciting, not cartoonish',
                   'the turn (6.09): the Ache should land because everything before was warm'],
         clock_notes=notes_off)
     sc = c.finish(T, meta, length_end=end, macro=macro, end_fade=(tear + 1.2, end - 0.02))
@@ -1072,6 +1114,96 @@ def cue_threat(tl):
     return c, sc
 
 
+# ================================================================== PLANNED FOR v3.1: SYDNEY and THE ATEM LEAK
+# The v3.1 script brings back Sydney (sc 10) and the Atem weights leak (sc 11's crate).  These cues are built only
+# when the lock has their beats (any beat id 10.*; the beat whose on-screen text names ATEM), so the same track.py
+# refits to the v3.1 lock with no edits.  Both are in the show's sound.
+def sydney_beats(tl):
+    return [b for b in tl.beats if b['id'].startswith('10.')]
+
+
+def cue_sydney(tl):
+    """SYDNEY, uncanny and clingy: a sweet glass-and-celesta music box in D-flat lydian (no third) whose chip echo
+    follows it a sixteenth late, a pixel too close (THE COPY's device, lent to another machine); dry under her real
+    line (the glass pad alone, turning to the Ache over F); it lets her go with one last late echo as she leaves"""
+    bs = sydney_beats(tl)
+    if not bs:
+        return None
+    t0, t1 = bs[0]['t0'], bs[-1]['t1']
+    c = V.Cue('sydney', tl, anchor=t0, anchor_bar=1, bars=int((t1 - t0) / BAR) + 4, swing=0.0)
+    T = palette()
+    T['glasspad'].gain_db = -10.0
+    T['celesta'].gain_db, T['celesta'].sends = -8.0, {'hall': -8}
+    T['lead'].gain_db, T['lead'].eq = -12.0, [('lp', 4200)]
+    T['pad'].gain_db = -12.0
+    V.pad(c, ['Db3', 'Ab3', 'C4', 'G4'], t0 + 0.1, t1 - t0 - 0.2, 0.4, kind='glass', attack=1.5, release=1.0,
+          bright=0.6)
+    fig = ['Ab5', 'F5', 'Db5', 'F5', 'G5', 'F5', 'C5', 'F5']
+    t = c.next8(t0 + 0.4)
+    i = 0
+    while t < t1 - 0.8:
+        if not tl.talking(t, t + 0.05, pad=0.08, kinds={'real', 'vo', 'mas'}):
+            busy = tl.talking(t, t + 0.05, pad=0.08)
+            p = fig[i % 8]
+            c.n('celesta', p, t, Q * 0.45, 0.3 if busy else 0.36, True)
+            c.n('lead', p, t + S16, Q * 0.3, 0.16, True, duty=0.125, att=0.002, dec=0.1, sus=0.2, rel=0.05)  # clingy
+        t += Q / 2
+        i += 1
+    for l in tl.lines_in(t0, t1, kinds={'real'}):
+        c.ch('glasspad', ['G4', 'Db5'], l['on'] - 0.2, l['end'] - l['on'] + 0.4, 0.18, roll=0.0, rel=0.8)
+        c.mark(l['on'], f'her real line: the glass pad turns to the Ache ({l["id"]})', hit=False)
+    c.n('lead', 'F5', t1 - 0.6 + S16, 0.4, 0.14, True, duty=0.125, att=0.002, dec=0.2, sus=0.2, rel=0.2)
+    c.mark(t0 + 0.4, 'SYDNEY: the music box and its late chip echo (clingy)')
+    c.section('Sydney: uncanny and clingy', t0, t1)
+    meta = dict(id='sydney', title='Sydney (Ep1 v3.1, Act One sc 10)', mm='(to picture)', usage='BI',
+                family='P05 GLYPH colours, sweetened', tone='uncanny and clingy', scenes=['Ep1 v3.1 sc 10'],
+                motifs=['a music-box figure with its chip echo a sixteenth late'], motif_ids=[],
+                key='D-flat lydian (no third); the Ache over F under her real line',
+                composer='v3-score-a (composer X), 2026-09-27', underscore_lufs=-22.0, album_lufs=-16.0,
+                audition=['uncanny and clingy: sweet on the surface, the echo too close'])
+    sc = c.finish(T, meta, length_end=t1 + 0.3, end_fade=(t1 - 0.9, t1 + 0.25))
+    return c, sc
+
+
+def atem_beat(tl):
+    for b in tl.beats:
+        if any('ATEM' in o['text'] for o in tl.onscreen if o['beat'] == b['id']) and b['id'].startswith('11.'):
+            return b
+    return None
+
+
+def cue_atem(tl):
+    """THE ATEM LEAK, a cool, brief sting (P08 DREAD, under 2 s): on the crate's tip, a low felt/grand fifth F1 + C2
+    with a sub, the chip's open fifth F5 + C6 (no third), and the Ache on glass for one bar; then gone"""
+    b = atem_beat(tl)
+    if b is None:
+        return None
+    hit = min([s['t'] for s in tl.sounds if s['beat'] == b['id'] and s['name'] in ('synth:crate',)] or [b['t0'] + 0.4])
+    c = V.Cue('atem', tl, anchor=hit - BAR, anchor_bar=1, bars=4, swing=0.0)
+    T = palette()
+    T['grand'].gain_db, T['grand'].eq = -2.0, [('lp', 2500)]
+    T['sub'].gain_db = -8.0
+    T['lead'].gain_db = -8.0
+    T['glasspad'].gain_db = -8.0
+    c.ch('grand', ['F1', 'C2', 'F2'], hit, 1.6, 0.44, roll=0.004)
+    c.n('sub', 'F1', hit, 0.9, 0.5, True, punch=2.0, click=0.0, decay=0.8)
+    for k, p in enumerate(('F5', 'C6')):
+        c.n('lead', p, hit + 0.01, 0.5, 0.3, True, duty=0.25 if k else 0.5, att=0.002, dec=0.2, sus=0.2, rel=0.2)
+    c.ch('glasspad', ['G4', 'Db5'], hit + 0.05, 1.8, 0.2, roll=0.0, rel=0.6)
+    c.mark(hit, 'THE ATEM LEAK: a cool sting on the crate (F-C, the chip\'s fifth, the Ache)')
+    c.section('the Atem leak: the sting', hit, hit + 2.0)
+    meta = dict(id='atem', title='The Atem Leak (Ep1 v3.1, Act One sc 11)', mm='MM-14', usage='BI',
+                family='P08 OUTS KIT: DREAD (brief)', tone='cool, brief', scenes=['Ep1 v3.1 sc 11 (the crate)'],
+                motifs=[], motif_ids=[], key='F and C, no third; the Ache',
+                composer='v3-score-a (composer X), 2026-09-27', underscore_lufs=-19.0, album_lufs=-16.0,
+                audition=['a cool, brief sting: not a joke, not a scare'])
+    sc = c.finish(T, meta, length_end=hit + 2.2, end_fade=(hit + 1.6, hit + 2.15))
+    return c, sc
+
+
+CUES_V31 = {'sydney': cue_sydney, 'atem': cue_atem}      # built only when the lock has their beats
+
+
 CUES = {'a': cue_a, 'code_red': cue_code_red, 'lobby': cue_lobby, 'floor': cue_floor, 'lobby2': cue_lobby2,
         'duel': cue_duel, 'pause': cue_pause, 'threat': cue_threat}
 
@@ -1109,6 +1241,15 @@ def lay(tl, built, work):
         dict(name='pause', wav=wav('pause'), T0=T0('pause'), a0=push - 0.05, a1=refl, fin=0.05, fout=0.3),
         dict(name='threat', wav=wav('threat'), T0=T0('threat'), a0=lift - 0.01, a1=tl.length, fin=0.005, fout=0.3),
     ]
+    if 'sydney' in built:                                     # v3.1: laid in its beats' window
+        cs = built['sydney'][0]
+        bs = sydney_beats(tl)
+        layers.append(dict(name='sydney', wav=wav('sydney'), T0=T0('sydney'), a0=bs[0]['t0'], a1=bs[-1]['t1'] + 0.25,
+                           fin=0.4, fout=0.5))
+    if 'atem' in built:
+        ca = built['atem'][0]
+        h = [t for t, lab, hh in ca.marks if lab.startswith('THE ATEM')][0]
+        layers.append(dict(name='atem', wav=wav('atem'), T0=T0('atem'), a0=h - 0.02, a1=h + 2.2, fin=0.005, fout=0.4))
     stops = [(lock, lob_in), (pop, fl_in), (refl, lift - 0.01)]
     designed = [(lock, lob_in, 'the phone locks (a diegetic stop) -> the lobby\'s pickup under the revolving door'),
                 (pop, fl_in, 'the collar\'s pop: the swing stops dead; the lobby\'s room under "That collar suits you." '
@@ -1124,6 +1265,7 @@ def main():
     tl = V.TL(path)
     work = os.path.join(HERE, 'render', '_work', tag.lstrip('-'))   # render/_work/ (Kokoro), render/_work/el/ (git-ignored)
     built = {k: fn(tl) for k, fn in CUES.items()}
+    built.update({k: r for k, r in ((k, fn(tl)) for k, fn in CUES_V31.items()) if r is not None})
     if args.dry:
         for k, (c, sc) in built.items():
             print(k, V.note_qa(sc), f'file T0 {c.T0:.3f}', sc.meta.get('clock_notes', ''))

@@ -4,98 +4,271 @@
  "segment": "coldopen",
  "file": "audio/ost/tracks/e01-v3-coldopen/render/music.wav",
  "timeline": "show/reel/ep01-v3/ep01-v3-coldopen.json",
- "length_s": 30.666666666666668,
- "frames": 736,
- "samples": 1472000,
+ "length_s": 26.666666666666668,
+ "frames": 640,
+ "samples": 1280000,
  "sample_rate": 48000,
  "channels": 2,
  "clock": "the segment's own clock: 0 = its first frame (timeEpisode, head 0)",
- "level": "v2's: MM-06 at -26 LUFS over its first 12 s (the v2 bed's relation to the hall); dry of dialogue",
+ "level": "the rewind laid at -26 LUFS-I (its window), rising into the cut; dry of dialogue",
  "cues": [
   {
-   "cue": "MM-06 Beeper, 1993 (underscore master, movement I)",
+   "cue": "rewind",
    "start": 20.167,
-   "end": 30.667,
-   "what": "the Orb's rewind and the 1993 dialog; in 0.3 s under the F4's decay; a 3 ms cut on the smash to the main titles",
-   "render": "audio/ost/tracks/mm06-beeper-1993-sample-chip-2008/render/mm06-beeper-1993-sample-chip-2008-underscore.wav",
-   "file_in_s": 0.0,
-   "gain_db": -3.45,
+   "end": 26.583,
+   "what": "an accelerating reverse texture from the Freeze's F4 (reversed grains, F4 -> C5 -> F5) and the 1-bit chip, following the year counter; digital zero on the last two frames",
+   "render": "audio/ost/tracks/e01-v3-coldopen/render/_work/rewind.wav",
+   "source_sample": "audio/sfx/wav/piano_fired_F4.wav",
    "level": {
-    "lufs_i": -26.12,
-    "st_p95": -25.55,
-    "st_max": -25.38,
-    "true_peak_dbtp": -20.53
+    "lufs_i": -26.0,
+    "st_p95": -25.62,
+    "st_max": -25.11,
+    "true_peak_dbtp": -13.4
    },
-   "engine_qa": {
-    "knee_whole": 0,
-    "f_major_ok": true,
-    "note": "MM-06's own cue sheet (unchanged file)"
+   "beats": 40,
+   "sync": [
+    {
+     "t": 20.517,
+     "what": "a reversed F4 swell lands (+0 st) + the chip"
+    },
+    {
+     "t": 21.137,
+     "what": "a reversed F4 swell lands (+0 st) + the chip"
+    },
+    {
+     "t": 21.757,
+     "what": "a reversed F4 swell lands (+0 st) + the chip"
+    },
+    {
+     "t": 22.667,
+     "what": "a reversed F4 swell lands (+0 st) + the chip"
+    },
+    {
+     "t": 23.717,
+     "what": "a reversed F4 swell lands (+0 st) + the chip"
+    },
+    {
+     "t": 24.053,
+     "what": "a reversed F4 swell lands (+1 st) + the chip"
+    },
+    {
+     "t": 24.322,
+     "what": "a reversed F4 swell lands (+2 st) + the chip"
+    },
+    {
+     "t": 24.537,
+     "what": "a reversed F4 swell lands (+3 st) + the chip"
+    },
+    {
+     "t": 24.709,
+     "what": "a reversed F4 swell lands (+4 st) + the chip"
+    },
+    {
+     "t": 24.846,
+     "what": "a reversed F4 swell lands (+5 st) + the chip"
+    },
+    {
+     "t": 24.956,
+     "what": "a reversed F4 swell lands (+5 st) + the chip"
+    },
+    {
+     "t": 25.044,
+     "what": "a reversed F4 swell lands (+5 st) + the chip"
+    },
+    {
+     "t": 25.115,
+     "what": "a reversed F4 swell lands (+6 st) + the chip"
+    },
+    {
+     "t": 25.171,
+     "what": "a reversed F4 swell lands (+6 st) + the chip"
+    },
+    {
+     "t": 25.226,
+     "what": "a reversed F4 swell lands (+6 st) + the chip"
+    },
+    {
+     "t": 25.281,
+     "what": "a reversed F4 swell lands (+6 st) + the chip"
+    },
+    {
+     "t": 25.336,
+     "what": "a reversed F4 swell lands (+7 st) + the chip"
+    },
+    {
+     "t": 25.391,
+     "what": "a reversed F4 swell lands (+7 st) + the chip"
+    },
+    {
+     "t": 25.446,
+     "what": "a reversed F4 swell lands (+7 st) + the chip"
+    },
+    {
+     "t": 25.501,
+     "what": "a reversed F4 swell lands (+7 st) + the chip"
+    },
+    {
+     "t": 25.556,
+     "what": "a reversed F4 swell lands (+8 st) + the chip"
+    },
+    {
+     "t": 25.611,
+     "what": "a reversed F4 swell lands (+8 st) + the chip"
+    },
+    {
+     "t": 25.666,
+     "what": "a reversed F4 swell lands (+8 st) + the chip"
+    },
+    {
+     "t": 25.721,
+     "what": "a reversed F4 swell lands (+8 st) + the chip"
+    },
+    {
+     "t": 25.776,
+     "what": "a reversed F4 swell lands (+8 st) + the chip"
+    },
+    {
+     "t": 25.831,
+     "what": "a reversed F4 swell lands (+9 st) + the chip"
+    },
+    {
+     "t": 25.886,
+     "what": "a reversed F4 swell lands (+9 st) + the chip"
+    },
+    {
+     "t": 25.941,
+     "what": "a reversed F4 swell lands (+9 st) + the chip"
+    },
+    {
+     "t": 25.996,
+     "what": "a reversed F4 swell lands (+9 st) + the chip"
+    },
+    {
+     "t": 26.051,
+     "what": "a reversed F4 swell lands (+10 st) + the chip"
+    },
+    {
+     "t": 26.106,
+     "what": "a reversed F4 swell lands (+10 st) + the chip"
+    },
+    {
+     "t": 26.161,
+     "what": "a reversed F4 swell lands (+10 st) + the chip"
+    },
+    {
+     "t": 26.216,
+     "what": "a reversed F4 swell lands (+10 st) + the chip"
+    },
+    {
+     "t": 26.271,
+     "what": "a reversed F4 swell lands (+11 st) + the chip"
+    },
+    {
+     "t": 26.326,
+     "what": "a reversed F4 swell lands (+11 st) + the chip"
+    },
+    {
+     "t": 26.381,
+     "what": "a reversed F4 swell lands (+11 st) + the chip"
+    },
+    {
+     "t": 26.436,
+     "what": "a reversed F4 swell lands (+11 st) + the chip"
+    },
+    {
+     "t": 26.491,
+     "what": "a reversed F4 swell lands (+12 st) + the chip"
+    },
+    {
+     "t": 26.546,
+     "what": "a reversed F4 swell lands (+12 st) + the chip"
+    },
+    {
+     "t": 26.583,
+     "what": "a reversed F4 swell lands (+12 st)"
+    }
+   ],
+   "events": {
+    "t_a": 20.167,
+    "catch": 22.667,
+    "slip": 23.717,
+    "too_far": 25.167,
+    "last_frame": 26.583
+   },
+   "note_qa": {
+    "pitches": "F and C only (the Freeze's F4 repitched 0, +7, +12; chip F/C): no third, no knee",
+    "written_third_ok": true,
+    "knee_whole": 0
    }
-  }
- ],
- "sync": [
-  {
-   "t": 14.542,
-   "what": "the freeze: piano_fired_F4 (MM-14 \"Freeze F4\"), a timeline sound: the sound stem lays it, this stem enters under its decay"
-  },
-  {
-   "t": 20.167,
-   "what": "MM-06 in (0.3 s fade) on 3.01, the Orb's iris"
   }
  ],
  "silences_designed": [
   {
    "t0": 0.0,
-   "t1": 20.166666666666668,
+   "t1": 20.167,
    "why": "no score under the hall (sc 1-2): the room, the freeze's F4 (a timeline sound)"
+  },
+  {
+   "t0": 26.583,
+   "t1": 26.667,
+   "why": "the cursor frames: digital zero, so the intro's first beat takes over clean"
   }
  ],
  "measured": {
-  "length_s": 30.6667,
-  "samples": 1472000,
-  "frames": 736,
+  "length_s": 26.6667,
+  "samples": 1280000,
+  "frames": 640,
   "exact": true,
   "whole": {
-   "lufs_i": -26.2,
-   "st_p95": -25.71,
-   "st_max": -25.69,
-   "true_peak_dbtp": -20.53
+   "lufs_i": -26.06,
+   "st_p95": -25.05,
+   "st_max": -24.39,
+   "true_peak_dbtp": -13.4
   },
   "cues": {
-   "mm06": {
-    "lufs_i": -26.12,
-    "st_p95": -25.55,
-    "st_max": -25.38,
-    "true_peak_dbtp": -20.53
+   "rewind": {
+    "lufs_i": -26.0,
+    "st_p95": -25.62,
+    "st_max": -25.11,
+    "true_peak_dbtp": -13.4
    }
   },
   "rows": [
    {
-    "section": "3.01 the Orb's iris steps (MM-06 fades in)",
+    "section": "3.01 the Orb's iris steps: slow reversed swells",
     "start": 20.17,
     "end": 22.17,
-    "lufs_i": -25.49,
+    "lufs_i": -37.5,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -21.4
+    "true_peak_dbtp": -28.88
    },
    {
-    "section": "3.02 the room scrubs back (the rewind)",
+    "section": "3.02 the catch on 2022: one long drag",
     "start": 22.17,
-    "end": 25.17,
-    "lufs_i": -26.33,
+    "end": 23.72,
+    "lufs_i": -38.14,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -20.53
+    "true_peak_dbtp": -26.81
    },
    {
-    "section": "4.01-4.02 1993: the dialog, the toast; the smash cuts it",
+    "section": "3.02 the slip -> \"too far\": the grains accelerate and climb",
+    "start": 23.72,
+    "end": 25.17,
+    "lufs_i": -27.92,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -15.03
+   },
+   {
+    "section": "3.02 \"too far\" -> the collapse: into the cut",
     "start": 25.17,
-    "end": 30.67,
-    "lufs_i": -26.17,
-    "st_p95": -25.53,
-    "st_max": -25.38,
-    "true_peak_dbtp": -20.9
+    "end": 26.58,
+    "lufs_i": -22.3,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -13.4
    }
   ],
   "digital_silence": [
@@ -113,45 +286,32 @@
     "t0": 0.0,
     "t1": 20.15,
     "inside_marked": true
-   },
-   {
-    "t0": 21.95,
-    "t1": 22.35,
-    "inside_marked": false
-   },
-   {
-    "t0": 22.85,
-    "t1": 23.25,
-    "inside_marked": false
-   },
-   {
-    "t0": 25.45,
-    "t1": 25.75,
-    "inside_marked": false
    }
   ],
   "music_runs": [
    {
     "t0": 20.15,
-    "t1": 30.65,
-    "dur": 10.5
+    "t1": 26.6,
+    "dur": 6.45
    }
   ],
   "fragments_under_2s": [],
-  "undesigned_fragments": []
+  "undesigned_fragments": [],
+  "last_half_second_momentary_max": -23.16,
+  "intro_first_half_second_momentary_max_at_-3dB": -30.4
  },
  "laid": [
   {
-   "name": "mm06",
-   "file": "audio/ost/tracks/mm06-beeper-1993-sample-chip-2008/render/mm06-beeper-1993-sample-chip-2008-underscore.wav",
-   "laid_at_s": 20.1667,
+   "name": "rewind",
+   "file": "audio/ost/tracks/e01-v3-coldopen/render/_work/rewind.wav",
+   "laid_at_s": 0.0,
    "window": [
     20.167,
-    30.667
+    26.583
    ],
-   "fade_in_s": 0.3,
+   "fade_in_s": 0.02,
    "fade_out_s": 0.003,
-   "gain_db": -3.45,
+   "gain_db": -19.31,
    "post": null
   }
  ],

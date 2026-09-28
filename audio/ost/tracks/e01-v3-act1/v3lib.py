@@ -360,6 +360,30 @@ def stab(c, inst, pitches, t, vel=0.7, length=0.2, **x):
     return art.stab(c.a, inst, pitches, c.clk(t), vel=vel, length=length, spread_ms=2.0, offset=0.006, **x)
 
 
+def pad(c, pitches, t, d, vel=0.55, kind='warm', attack=1.5, release=1.8, bright=0.7, inst='pad', **x):
+    """a soft analog-style synth pad (engine synth.pad: polyBLEP saws through a slow low-pass) at segment time t"""
+    ps = [nm(p) for p in pitches]
+    return c.n(inst, ps[0], t, d, vel, True, pitches=ps, kind=kind, attack=attack, release=release, bright=bright,
+               **x)
+
+
+def pulse(c, inst, pitch_of, t0, t1, step, vel, stop_at=None, accent=None, **x):
+    """a straight pulse (locked, no swing) from t0 to t1 on the grid step; pitch_of(t) -> pitch; vel(t) -> velocity;
+    accent(i) -> factor"""
+    t = c.bar1 + math.ceil((t0 - c.bar1) / step - 1e-6) * step
+    i, out = 0, []
+    while t < t1 - 1e-4:
+        if stop_at is not None and t >= stop_at - 0.005:
+            break
+        p = pitch_of(t)
+        v = vel(t) if callable(vel) else vel
+        if p is not None and v > 0:
+            out.append(c.n(inst, p, t, step * 0.8, v * (accent(i) if accent else 1.0), True, **x))
+        t += step
+        i += 1
+    return out
+
+
 def drop_window(c, t0, t1, insts=None, keep=()):
     """remove notes starting in [t0, t1) (segment s): a freeze's held beat, a stop"""
     c.a.notes = [nt for nt in c.a.notes

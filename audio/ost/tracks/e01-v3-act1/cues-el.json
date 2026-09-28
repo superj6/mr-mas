@@ -16,15 +16,15 @@
    "cue": "a_launch",
    "start": 0.0,
    "end": 163.392,
-   "what": "warm, giddy, late-night garage band; then exhilarating; then the first dark bar",
-   "family": "P01 colours in A-flat major (the trio + the Build) -> P11 SET-PIECE SWING in major -> the Ache",
+   "what": "warm and curious in the show's voice; then a drive that builds; then the first dark bar",
+   "family": "P01 colours (felt, a soft chip pulse, the Build) -> P11 energy, straight (a driving figure) -> the Ache",
    "render": "audio/ost/tracks/e01-v3-act1/render/_work/el/a_launch-underscore.wav",
    "laid_at_s": -1.75,
    "post": null,
    "level": {
-    "lufs_i": -20.05,
-    "st_p95": -16.9,
-    "st_max": -15.51,
+    "lufs_i": -20.04,
+    "st_p95": -16.23,
+    "st_max": -14.98,
     "true_peak_dbtp": -3.15
    },
    "target_lufs": -20.0,
@@ -44,37 +44,33 @@
       "q": 0.7
      },
      "measured": {
-      "lufs": -20.02,
-      "lra": 7.19,
+      "lufs": -20.01,
+      "lra": 8.21,
       "true_peak_db": -3.15,
       "peak_db": -3.16,
-      "rms_db": -22.32,
-      "crest_db": 19.16,
+      "rms_db": -22.61,
+      "crest_db": 19.46,
       "seconds": 165.1417
      }
     },
     "f_major_ok": true,
     "f_major_ok_written": true,
-    "f_major_worst": 0.023,
+    "f_major_worst": 0.07,
     "knee_whole": 0,
     "knee_completion": 0,
     "hit_check": {
-     "within_10ms": 20,
+     "within_10ms": 25,
      "of": 26,
      "worst_ms": 59.0
     },
     "warnings": [
-     "marker at 3.5938 s: no clear onset within 10 ms ({'t': 3.5938, 'offset_ms': np.float64(-31.1), 'strength': 1.92})",
-     "marker at 14.2188 s: no clear onset within 10 ms ({'t': 14.2188, 'offset_ms': np.float64(-56.1), 'strength': 1.56})",
-     "marker at 35.9375 s: no clear onset within 10 ms ({'t': 35.9375, 'offset_ms': np.float64(-12.2), 'strength': 1.6})",
-     "marker at 79.2188 s: no clear onset within 10 ms ({'t': 79.2188, 'offset_ms': np.float64(-10.8), 'strength': 2.02})",
-     "marker at 117.0312 s: no clear onset within 10 ms ({'t': 117.0312, 'offset_ms': np.float64(-12.5), 'strength': 1.96})",
-     "marker at 146.5417 s: no clear onset within 10 ms ({'t': 146.5417, 'offset_ms': np.float64(-59.0), 'strength': 1.51})",
-     "underscore short-term p95 -16.82 LUFS > -17 (underscore) (s6.5): the loudest moments sit high above the bed"
+     "marker at 146.5417 s: no clear onset within 10 ms ({'t': 146.5417, 'offset_ms': np.float64(-59.0), 'strength': 1.52})",
+     "sub under server_hum (the bullpen, up through the floor) 1.75-165.142 s: < 60 Hz reads -11.3 dB of the total (limit -18.0; from {'bass': 99})",
+     "underscore short-term p95 -16.15 LUFS > -17 (underscore) (s6.5): the loudest moments sit high above the bed"
     ]
    },
    "note_qa": {
-    "notes": 871,
+    "notes": 825,
     "written_third_ok": true,
     "written_third_events": [],
     "grazes": 0,
@@ -86,8 +82,8 @@
    ],
    "sync": [
     {
-     "t": 0.02,
-     "what": "A1: the Rhodes blooms (A-flat maj9) on the button",
+     "t": 0.03,
+     "what": "A1: the felt on the button (Fm9); the Build compiles",
      "hit": false
     },
     {
@@ -131,8 +127,8 @@
      "hit": true
     },
     {
-     "t": 78.25,
-     "what": "the click: Eb13sus held (the dominant hangs; nothing happens)",
+     "t": 79.5,
+     "what": "the click: the knee's flat line on the chip (F F F F): nothing happens yet",
      "hit": true
     },
     {
@@ -162,52 +158,52 @@
     },
     {
      "t": 95.75,
-     "what": "the Build (+ pizz): compile pass (4)",
+     "what": "the Build: compile pass (4)",
      "hit": true
     },
     {
      "t": 100.281,
-     "what": "the Build (+ pizz): compile pass (12)",
+     "what": "the Build: compile pass (12)",
      "hit": true
     },
     {
      "t": 106.219,
-     "what": "the Build (+ pizz): compile pass (8)",
+     "what": "the Build: compile pass (8)",
      "hit": true
     },
     {
      "t": 110.75,
-     "what": "the Build (+ pizz): compile pass (8)",
+     "what": "the Build: compile pass (8)",
      "hit": true
     },
     {
      "t": 115.281,
-     "what": "the Build (+ pizz): compile pass (8)",
+     "what": "the Build: compile pass (8)",
      "hit": true
     },
     {
      "t": 120.75,
-     "what": "A4 THE LIFT: the counter ticks (ride, walk, the Build 4 + 8)",
+     "what": "A4 THE LIFT: the counter ticks (the pulse, the Build 4 + 8)",
      "hit": true
     },
     {
      "t": 123.25,
-     "what": "phrase 1: the odometer grows (Ab6/9)",
+     "what": "phrase 1: the odometer grows: the knee's kink (G Ab C), left hanging",
      "hit": true
     },
     {
      "t": 128.25,
-     "what": "THE CLUNK: through the desk, the harmony drops a major third (E6/9)",
+     "what": "THE CLUNK: through the desk, the harmony drops a major third (E); the spiccato joins",
      "hit": true
     },
     {
      "t": 133.25,
-     "what": "the post: C6/9, one brass hit, then thin (bass, ride, one chord)",
+     "what": "the post: C, one brass hit, then thin (the pulse and the held violins)",
      "hit": true
     },
     {
-     "t": 138.042,
-     "what": "the push into the MILLION (swung and-of-4): brass + the tag \"shipped\" (Eb5 -> Ab5)",
+     "t": 137.938,
+     "what": "the push into the MILLION (the and-of-4): brass + the tag \"shipped\" (Eb5 -> Ab5)",
      "hit": true
     },
     {
@@ -895,15 +891,15 @@
   "exact": true,
   "whole": {
    "lufs_i": -20.45,
-   "st_p95": -17.77,
-   "st_max": -15.51,
+   "st_p95": -17.5,
+   "st_max": -14.98,
    "true_peak_dbtp": -3.15
   },
   "cues": {
    "a_launch": {
-    "lufs_i": -20.05,
-    "st_p95": -16.9,
-    "st_max": -15.51,
+    "lufs_i": -20.04,
+    "st_p95": -16.23,
+    "st_max": -14.98,
     "true_peak_dbtp": -3.15
    },
    "code_red": {
@@ -951,57 +947,57 @@
   },
   "rows": [
    {
-    "section": "a_launch: A1 launch night: the trio + the Build in A-flat major",
+    "section": "a_launch: A1 launch night: the felt, a soft pulse, the Build (F minor, the chip)",
     "start": 0.0,
     "end": 78.25,
-    "lufs_i": -20.89,
-    "st_p95": -18.98,
-    "st_max": -17.59,
-    "true_peak_dbtp": -3.15
+    "lufs_i": -20.87,
+    "st_p95": -19.82,
+    "st_max": -18.69,
+    "true_peak_dbtp": -4.19
    },
    {
-    "section": "a_launch: the click: one held chord",
+    "section": "a_launch: the click: one held chord, the flat line",
     "start": 78.25,
     "end": 80.75,
-    "lufs_i": -21.86,
+    "lufs_i": -24.55,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -3.76
+    "true_peak_dbtp": -6.32
    },
    {
     "section": "a_launch: A2 the two-hander: felt only (the Door in the gaps)",
     "start": 80.75,
     "end": 95.75,
-    "lufs_i": -21.77,
-    "st_p95": -21.18,
-    "st_max": -20.95,
-    "true_peak_dbtp": -4.28
+    "lufs_i": -23.01,
+    "st_p95": -22.43,
+    "st_max": -22.2,
+    "true_peak_dbtp": -5.53
    },
    {
-    "section": "a_launch: A3 the chatbot flatters: the trio + the Build with pizz",
+    "section": "a_launch: A3 the chatbot flatters: the felt, the pulse, the Build",
     "start": 95.75,
     "end": 120.75,
-    "lufs_i": -20.52,
-    "st_p95": -18.28,
-    "st_max": -17.59,
-    "true_peak_dbtp": -3.52
+    "lufs_i": -20.81,
+    "st_p95": -19.66,
+    "st_max": -19.35,
+    "true_peak_dbtp": -3.96
    },
    {
-    "section": "a_launch: A4 the counter: SET-PIECE SWING in A-flat major (lift, phrase 1, phrase 2)",
+    "section": "a_launch: A4 the counter: a driving figure (the pulse, the chip Build, the violins, brass accents)",
     "start": 120.75,
     "end": 140.54,
-    "lufs_i": -17.11,
-    "st_p95": -15.67,
-    "st_max": -15.56,
-    "true_peak_dbtp": -3.15
+    "lufs_i": -16.59,
+    "st_p95": -15.35,
+    "st_max": -14.93,
+    "true_peak_dbtp": -3.22
    },
    {
     "section": "a_launch: A5 the held chord, then THE TURN: the Ache, the F pedal (the heat, the bill)",
     "start": 140.54,
     "end": 163.29,
-    "lufs_i": -21.36,
-    "st_p95": -19.98,
-    "st_max": -19.05,
+    "lufs_i": -22.15,
+    "st_p95": -21.08,
+    "st_max": -18.56,
     "true_peak_dbtp": -3.15
    },
    {
