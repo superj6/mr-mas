@@ -1,0 +1,45 @@
+{
+ "tool": "studio/src/dev/genvideo/runway/gen.py",
+ "provider": "Runway API (api.dev.runwayml.com)",
+ "api_version": "2024-11-06",
+ "endpoint": "/v1/text_to_video",
+ "kind": "t2v",
+ "model": "veo3.1_fast",
+ "prompt": "A clean, high-end product film on a white seamless tabletop under soft studio light. It opens on a simple graphite pencil line drawing of a rubber duck on a sheet of white paper; the pencil lines draw themselves, stroke by stroke, with no hand and no pencil in view. The sketch then smoothly fills with colour and volume and becomes a real, glossy yellow rubber duck toy with an orange beak, sitting on the white surface. The duck slowly turns on an unseen turntable, soft highlights sliding across its vinyl, a faint reflection on the table below it. Macro lens, shallow depth of field, locked-off camera with a very slow push in, the duck centred in frame, calm and minimal, neutral warm-grey background.",
+ "negative_prompt": "hand, hands, fingers, arm, person, people, face, human, pencil held, pen, stylus, text, letters, words, numbers, logo, watermark, signature, caption, subtitles, brand name, label",
+ "seed": 1206,
+ "ratio": "1280:720",
+ "duration_s": 6,
+ "audio": false,
+ "content_moderation": null,
+ "inputs": {},
+ "request_body_elided": {
+  "model": "veo3.1_fast",
+  "promptText": "A clean, high-end product film on a white seamless tabletop under soft studio light. It opens on a simple graphite pencil line drawing of a rubber duck on a sheet of white paper; the pencil lines draw themselves, stroke by stroke, with no hand and no pencil in view. The sketch then smoothly fills with colour and volume and becomes a real, glossy yellow rubber duck toy with an orange beak, sitting on the white surface. The duck slowly turns on an unseen turntable, soft highlights sliding across its vinyl, a faint reflection on the table below it. Macro lens, shallow depth of field, locked-off camera with a very slow push in, the duck centred in frame, calm and minimal, neutral warm-grey background.",
+  "ratio": "1280:720",
+  "duration": 6,
+  "seed": 1206,
+  "audio": false,
+  "negativePrompt": "hand, hands, fingers, arm, person, people, face, human, pencil held, pen, stylus, text, letters, words, numbers, logo, watermark, signature, caption, subtitles, brand name, label"
+ },
+ "credits_before": 500,
+ "estimate_credits": 60.0,
+ "submitted_at": "2026-09-27T23:37:26+00:00",
+ "purpose": "Ep1 tag: ELGOOG's duck demo film, variation 1 (text-to-video, sketch to duck to turn)",
+ "terms_note": "Not re-verified this pass: per GENAI-UPGRADE-PLAN \u00a75.1 (2026-09-25), Runway claims no ownership of outputs, and Veo outputs carry Google's invisible SynthID watermark. No visible watermark was seen in any frame of this clip. Disclose in the end credits (GENAI \u00a76).",
+ "task_id": "6cb24ca7-e4eb-47fd-aa71-7f5ec95f23cc",
+ "status": "SUCCEEDED",
+ "task_created_at": "2026-09-27T23:37:26.913Z",
+ "outputs": [
+  {
+   "file": "v1-veo31fast-t2v-s1206.mp4",
+   "sha256": "8632102784477211da50045f545b2437ff0c88b682b397bb8ce560937a3d1d02",
+   "bytes": 1044723
+  }
+ ],
+ "finished_at": "2026-09-27T23:38:17+00:00",
+ "wall_s": 51.0,
+ "credits_after": 440,
+ "credits_spent": 60,
+ "review": "REJECTED: a human hand holding a pencil, and a second hand holding the paper, in f000-f048 (the text prompt asked for no hand; the negative prompt listed hands). Its second half (f076-f143, a duck on a glossy table) was clean, but the clip is not used anywhere. The download was deleted; this record is kept."
+}

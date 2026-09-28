@@ -1,0 +1,60 @@
+{
+ "tool": "studio/src/dev/genvideo/runway/gen.py",
+ "provider": "Runway API (api.dev.runwayml.com)",
+ "api_version": "2024-11-06",
+ "endpoint": "/v1/image_to_video",
+ "kind": "i2v",
+ "model": "veo3.1_fast",
+ "prompt": "The pencil line drawing of a duck on the white page comes to life: its outline fills with glossy yellow colour and real volume, and it becomes a real rubber duck toy with an orange beak, standing on a clean white tabletop as the paper dissolves into the white table. Soft studio softbox light, gentle highlights sliding over the glossy vinyl, a faint reflection on the table below. Then the duck slowly turns on an unseen turntable toward the camera. Locked-off camera with a very slow push in, macro lens, shallow depth of field, a calm, premium product film. Nothing else enters the frame.",
+ "negative_prompt": "hand, hands, fingers, arm, person, people, face, human, pencil held, pen, stylus, text, letters, words, numbers, logo, watermark, signature, caption, subtitles, brand name, label",
+ "seed": 1206,
+ "ratio": "1280:720",
+ "duration_s": 6,
+ "audio": false,
+ "content_moderation": null,
+ "inputs": {
+  "first": {
+   "path": "/tmp/claude-1000/-home-jgon-project-art-mrmas/a5e7723c-6ab4-4824-a1ed-8e367fdb82e5/scratchpad/runway/sketch.png",
+   "sha256": "608bdd128c6beb15fb442c762d8de03091631e1c7ef20ca6e8452bfd50a8dcc6"
+  }
+ },
+ "request_body_elided": {
+  "model": "veo3.1_fast",
+  "promptText": "The pencil line drawing of a duck on the white page comes to life: its outline fills with glossy yellow colour and real volume, and it becomes a real rubber duck toy with an orange beak, standing on a clean white tabletop as the paper dissolves into the white table. Soft studio softbox light, gentle highlights sliding over the glossy vinyl, a faint reflection on the table below. Then the duck slowly turns on an unseen turntable toward the camera. Locked-off camera with a very slow push in, macro lens, shallow depth of field, a calm, premium product film. Nothing else enters the frame.",
+  "ratio": "1280:720",
+  "duration": 6,
+  "seed": 1206,
+  "audio": false,
+  "negativePrompt": "hand, hands, fingers, arm, person, people, face, human, pencil held, pen, stylus, text, letters, words, numbers, logo, watermark, signature, caption, subtitles, brand name, label",
+  "promptImage": [
+   {
+    "uri": "data:image/png;base64,iVBORw0K\u2026",
+    "position": "first"
+   }
+  ]
+ },
+ "credits_before": 440,
+ "estimate_credits": 60.0,
+ "submitted_at": "2026-09-27T23:40:12+00:00",
+ "purpose": "Ep1 tag: ELGOOG's duck demo film, variation 2 (image-to-video from our own pencil sketch of the E1-P2 duck)",
+ "terms_note": "Not re-verified this pass: per GENAI-UPGRADE-PLAN \u00a75.1 (2026-09-25), Runway claims no ownership of outputs, and Veo outputs carry Google's invisible SynthID watermark. No visible watermark was seen in any frame of this clip. Disclose in the end credits (GENAI \u00a76).",
+ "task_id": "39ddacdb-9a8d-4148-9294-b44dec22ada4",
+ "status": "SUCCEEDED",
+ "task_created_at": "2026-09-27T23:40:13.297Z",
+ "outputs": [
+  {
+   "file": "v2-veo31fast-i2v-sketch-s1206.mp4",
+   "sha256": "7232568e487925a2360193b4a07c06ee8dcf5359c329b05676c38507d2d360f4",
+   "bytes": 1086028
+  }
+ ],
+ "finished_at": "2026-09-27T23:41:37+00:00",
+ "wall_s": 85.3,
+ "credits_after": 380,
+ "credits_spent": 60,
+ "archived_inputs": {
+  "first": "out/ep01/full-v3/runway/inputs/v2-first-sketch.png"
+ },
+ "review": "KEPT. No person, hand, face, text or logo in any of its 144 frames (checked on contact sheets of every 6th frame and the morph at every 3rd). Its morph (f019-f047: yellow paint fills the outline, then the page tears open) is not used; its turn f062-f140 is the film's turn, stutter and stills. The duck faces right (the sketch faced left).",
+ "used_frames": "f062-f095 (dissolve + smooth turn), f096 f100 f105 f111 f118 (stutter), f124 f132 f140 (stills); f048 is v3's last keyframe"
+}

@@ -1,0 +1,47 @@
+{
+ "tool": "studio/src/dev/genvideo/runway/gen.py",
+ "provider": "Runway API (api.dev.runwayml.com)",
+ "api_version": "2024-11-06",
+ "endpoint": "/v1/text_to_image",
+ "kind": "t2i",
+ "model": "gen4_image",
+ "prompt": "A real photograph taken by a streaming webcam on a desk at night: an antique tabletop hourglass stands alone on a dark walnut desk, seen from slightly above. Turned dark walnut end caps, four slim turned wooden posts, clear glass bulbs. Almost all of the orange-amber sand has run into the lower bulb; a thin last thread of grains falls through the neck. The room is dark; a cyan LED strip behind the desk throws a cool rim light along the glass, and a soft warm key light comes from the front left. Slight webcam softness and sensor noise, shallow depth of field, the hourglass centred with empty desk around it. Nothing else on the desk.",
+ "negative_prompt": null,
+ "seed": 1121,
+ "ratio": "1280:720",
+ "duration_s": null,
+ "audio": null,
+ "content_moderation": {
+  "publicFigureThreshold": "auto"
+ },
+ "inputs": {},
+ "request_body_elided": {
+  "model": "gen4_image",
+  "promptText": "A real photograph taken by a streaming webcam on a desk at night: an antique tabletop hourglass stands alone on a dark walnut desk, seen from slightly above. Turned dark walnut end caps, four slim turned wooden posts, clear glass bulbs. Almost all of the orange-amber sand has run into the lower bulb; a thin last thread of grains falls through the neck. The room is dark; a cyan LED strip behind the desk throws a cool rim light along the glass, and a soft warm key light comes from the front left. Slight webcam softness and sensor noise, shallow depth of field, the hourglass centred with empty desk around it. Nothing else on the desk.",
+  "ratio": "1280:720",
+  "seed": 1121,
+  "contentModeration": {
+   "publicFigureThreshold": "auto"
+  }
+ },
+ "credits_before": 340,
+ "estimate_credits": 5,
+ "submitted_at": "2026-09-28T00:39:27+00:00",
+ "purpose": "Ep1 Act Four S7.13: the first frame for Ttemme's stream-cam hourglass (image, objects only)",
+ "terms_note": "Not re-verified this pass: per GENAI-UPGRADE-PLAN \u00a75.1 (2026-09-25), Runway claims no ownership of outputs; Veo outputs carry Google's invisible SynthID watermark. No visible watermark was seen in any frame. Disclose in the end credits (GENAI \u00a76).",
+ "task_id": "3b6df261-41d2-49b6-bf64-2169bfdf4b29",
+ "status": "SUCCEEDED",
+ "task_created_at": "2026-09-28T00:39:27.932Z",
+ "outputs": [
+  {
+   "file": "h0-gen4image-still-s1121.png",
+   "sha256": "d681efff14066b3d0876663d9c97456bfd92b50c14548ff7d721f2a153c13391",
+   "bytes": 831697
+  }
+ ],
+ "finished_at": "2026-09-28T00:39:53+00:00",
+ "wall_s": 26.2,
+ "credits_after": 335,
+ "credits_spent": 5,
+ "review": "NOT USED: clean, but the upper bulb still full and the camera at desk level; h1 was taken instead. The download was deleted; this record is kept."
+}

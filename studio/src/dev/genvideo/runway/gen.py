@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""MR. MAS: a small Runway API client (text-to-video, image-to-video) with provenance.
+"""MR. MAS: a small Runway API client (text-to-video, image-to-video, text-to-image) with provenance.
 
 Built by the `v31-runway` pass (2026-09-27) for Ep1's tag insert (ELGOOG's duck demo), per
 show/production/GENAI-UPGRADE-PLAN.md §6 ("gen.py: a Runway client first ... It writes provenance.json").
@@ -17,6 +17,7 @@ Usage (Python 3.10+ with `requests`; the project's audio/.venv-casting has it):
   gen.py balance
   gen.py t2v --model veo3.1_fast --prompt "..." --duration 6 --ratio 1280:720 --seed 7 --out DIR [--negative "..."]
   gen.py i2v --model veo3.1_fast --prompt "..." --first img.png [--last img.png] --duration 6 --out DIR
+  gen.py t2i --model gen4_image --prompt "... @ref ..." [--ref ref=img.png] --ratio 1280:720 --seed 7 --out DIR
   gen.py task TASK_ID                                   # re-poll a task (and download it with --out)
   gen.py estimate --model veo3.1_fast --duration 6      # the price table below, no call
 Add --dry-run to print the request body (images elided) without sending it.
@@ -47,11 +48,13 @@ PRICE = {
     "veo3.1": 20, "veo3.1+audio": 40,
     "veo3.1_fast": 10, "veo3.1_fast+audio": 15,
 }
+# Credits per image (the same page).
+IMAGE_PRICE = {"gen4_image@720p": 5, "gen4_image@1080p": 8, "gen4_image_turbo": 2, "muse_image": 1}
 # Which models take which switches (from the OpenAPI spec embedded in docs.dev.runwayml.com/api, 2026-09-27).
-MODERATION_MODELS = {"gen4.5", "gen4_turbo"}
+MODERATION_MODELS = {"gen4.5", "gen4_turbo", "gen4_image", "gen4_image_turbo"}
 AUDIO_MODELS = {"veo3.1", "veo3.1_fast", "wan3", "wan3_prime", "seedance2", "seedance2_fast", "seedance2_mini", "seedance2_5"}
 NEGATIVE_MODELS = {"veo3.1", "veo3.1_fast"}
-SEED_MODELS = {"gen4.5", "gen4_turbo", "veo3.1", "veo3.1_fast", "seedance2", "seedance2_fast", "seedance2_mini", "seedance2_5", "h3_max"}
+SEED_MODELS = {"gen4.5", "gen4_turbo", "gen4_image", "gen4_image_turbo", "veo3.1", "veo3.1_fast", "seedance2", "seedance2_fast", "seedance2_mini", "seedance2_5", "h3_max"}
 
 
 # ------------------------------------------------------------------ the key (never printed)
@@ -132,6 +135,9 @@ def price_key(model: str, ratio: str | None, audio: bool) -> str:
 
 
 def estimate(model: str, duration: float, ratio: str | None = None, audio: bool = False) -> float | None:
+    if model.startswith("gen4_image") or model == "muse_image":
+        h = int(ratio.split(":")[1]) if ratio and ":" in ratio else 720
+        return IMAGE_PRICE.get(f"{model}@{'1080p' if h > 720 else '720p'}", IMAGE_PRICE.get(model))
     p = PRICE.get(price_key(model, ratio, audio))
     return None if p is None else p * duration
 
@@ -143,7 +149,7 @@ def build(kind: str, a) -> tuple[str, dict, dict]:
     inputs: dict = {}
     if a.ratio:
         body["ratio"] = a.ratio
-    if a.duration is not None:
+    if getattr(a, "duration", None) is not None:
         body["duration"] = int(a.duration)
     if a.seed is not None and a.model in SEED_MODELS:
         body["seed"] = int(a.seed)
@@ -153,7 +159,17 @@ def build(kind: str, a) -> tuple[str, dict, dict]:
         body["negativePrompt"] = a.negative
     if a.model in MODERATION_MODELS:
         body["contentModeration"] = {"publicFigureThreshold": "auto"}  # never lowered (GENAI §1.6)
-    if kind == "i2v":
+    if kind == "t2i":
+        refs = []
+        for spec in a.ref or []:
+            tag, _, path = spec.partition("=")
+            pp = Path(path).resolve()
+            inputs[f"ref:{tag}"] = {"path": str(pp.relative_to(ROOT)) if pp.is_relative_to(ROOT) else str(pp), "sha256": sha256(pp)}
+            refs.append({"uri": data_uri(pp), "tag": tag})
+        if refs or a.model == "gen4_image_turbo":
+            body["referenceImages"] = refs
+        endpoint = "/v1/text_to_image"
+    elif kind == "i2v":
         imgs = []
         for pos, p in (("first", a.first), ("last", a.last)):
             if p:
@@ -174,6 +190,8 @@ def build(kind: str, a) -> tuple[str, dict, dict]:
 
 def elide(body: dict) -> dict:
     b = json.loads(json.dumps(body))
+    for r in b.get("referenceImages") or []:
+        r["uri"] = r["uri"][:30] + "…"
     pi = b.get("promptImage")
     if isinstance(pi, str):
         b["promptImage"] = pi[:30] + "…"
@@ -211,7 +229,7 @@ def download(url: str, dest: Path) -> None:
 
 def run(kind: str, a) -> dict:
     endpoint, body, inputs = build(kind, a)
-    est = estimate(a.model, a.duration or 0, a.ratio, False)
+    est = estimate(a.model, getattr(a, "duration", None) or 0, a.ratio, False)
     if a.dry_run:
         print(json.dumps({"endpoint": endpoint, "body": elide(body), "estimate_credits": est}, indent=1))
         return {}
@@ -250,7 +268,7 @@ def run(kind: str, a) -> dict:
             urls = task.get("output") or []
             files = []
             for i, u in enumerate(urls):
-                ext = Path(u.split("?")[0]).suffix or ".mp4"
+                ext = Path(u.split("?")[0]).suffix or (".png" if kind == "t2i" else ".mp4")
                 dest = out / (f"{name}{ext}" if i == 0 else f"{name}-{i}{ext}")
                 download(u, dest)
                 files.append({"file": dest.name, "sha256": sha256(dest), "bytes": dest.stat().st_size})
@@ -278,13 +296,16 @@ def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
     sub.add_parser("balance")
-    for kind in ("t2v", "i2v"):
+    for kind in ("t2v", "i2v", "t2i"):
         p = sub.add_parser(kind)
         p.add_argument("--model", required=True)
         p.add_argument("--prompt", required=True)
         p.add_argument("--negative")
         p.add_argument("--ratio", default="1280:720")
-        p.add_argument("--duration", type=float, default=5)
+        if kind != "t2i":
+            p.add_argument("--duration", type=float, default=5)
+        else:
+            p.add_argument("--ref", action="append", help="tag=path: a reference image, named @tag in the prompt")
         p.add_argument("--seed", type=int)
         p.add_argument("--out", required=True)
         p.add_argument("--name")

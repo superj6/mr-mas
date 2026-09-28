@@ -1,0 +1,58 @@
+{
+ "tool": "studio/src/dev/genvideo/runway/gen.py",
+ "provider": "Runway API (api.dev.runwayml.com)",
+ "api_version": "2024-11-06",
+ "endpoint": "/v1/text_to_image",
+ "kind": "t2i",
+ "model": "gen4_image",
+ "prompt": "@glass photographed from the same camera a moment after its glass shattered: the same walnut hourglass frame, its two end caps and four turned posts, stands on the dark desk with no glass left in it at all. Small clear glass shards lie scattered across the desk around it. The orange sand lies in a soft low heap on the wooden base, where the lower bulb was. Same framing, same cyan LED strip and warm key light, same webcam softness. Nothing else on the desk.",
+ "negative_prompt": null,
+ "seed": 1121,
+ "ratio": "1280:720",
+ "duration_s": null,
+ "audio": null,
+ "content_moderation": {
+  "publicFigureThreshold": "auto"
+ },
+ "inputs": {
+  "ref:glass": {
+   "path": "/tmp/claude-1000/-home-jgon-project-art-mrmas/a5e7723c-6ab4-4824-a1ed-8e367fdb82e5/scratchpad/runway2/hg-first.png",
+   "sha256": "cceb931a1d0e7acf5689fcc6ded982e8ff0aacb7c23f1c724cae69aafb7d53ac"
+  }
+ },
+ "request_body_elided": {
+  "model": "gen4_image",
+  "promptText": "@glass photographed from the same camera a moment after its glass shattered: the same walnut hourglass frame, its two end caps and four turned posts, stands on the dark desk with no glass left in it at all. Small clear glass shards lie scattered across the desk around it. The orange sand lies in a soft low heap on the wooden base, where the lower bulb was. Same framing, same cyan LED strip and warm key light, same webcam softness. Nothing else on the desk.",
+  "ratio": "1280:720",
+  "seed": 1121,
+  "contentModeration": {
+   "publicFigureThreshold": "auto"
+  },
+  "referenceImages": [
+   {
+    "uri": "data:image/png;base64,iVBORw0K\u2026",
+    "tag": "glass"
+   }
+  ]
+ },
+ "credits_before": 270,
+ "estimate_credits": 5,
+ "submitted_at": "2026-09-28T00:47:04+00:00",
+ "purpose": "Ep1 Act Four S7.13: the last keyframe for take 2 (the aftermath: frame empty, shards, the sand heaped), referenced on our first frame",
+ "terms_note": "Not re-verified this pass: per GENAI-UPGRADE-PLAN \u00a75.1 (2026-09-25), Runway claims no ownership of outputs; Veo outputs carry Google's invisible SynthID watermark. No visible watermark was seen in any frame. Disclose in the end credits (GENAI \u00a76).",
+ "task_id": "5124b7cf-7e84-497f-a5d0-f64e5b1cef1b",
+ "status": "SUCCEEDED",
+ "task_created_at": "2026-09-28T00:47:05.695Z",
+ "outputs": [
+  {
+   "file": "h3-gen4image-aftermath-s1121.png",
+   "sha256": "ed66cd9861764e9408c2c2a0886801552385a0e5665e37eeeb8be5146a2cc746",
+   "bytes": 835748
+  }
+ ],
+ "finished_at": "2026-09-28T00:47:39+00:00",
+ "wall_s": 35.2,
+ "credits_after": 265,
+ "credits_spent": 5,
+ "review": "NOT USED: the model kept the glass bulbs whole (only added shards) and moved the camera; the last keyframe was built in code instead (hg_after.py). The download was deleted; this record is kept."
+}

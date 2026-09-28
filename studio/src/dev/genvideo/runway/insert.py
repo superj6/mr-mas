@@ -213,6 +213,9 @@ def grade(img: np.ndarray, polish: bool) -> np.ndarray:
 
 def build_film(clips: Path, use_chip: bool, scratch: Path) -> tuple[list[np.ndarray], list[dict]]:
     plan = film_plan()
+    if not use_chip:
+        for q in plan:
+            q["chip"] = False
     v2, v3 = load_clip(clips / V2), load_clip(clips / V3)
     order_npy = clips / "sketch-v2f048-order.npy"
     if not order_npy.exists():

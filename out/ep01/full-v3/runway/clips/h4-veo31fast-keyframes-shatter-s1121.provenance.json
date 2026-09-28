@@ -1,0 +1,69 @@
+{
+ "tool": "studio/src/dev/genvideo/runway/gen.py",
+ "provider": "Runway API (api.dev.runwayml.com)",
+ "api_version": "2024-11-06",
+ "endpoint": "/v1/image_to_video",
+ "kind": "i2v",
+ "model": "veo3.1_fast",
+ "prompt": "Locked-off streaming-webcam view of an antique hourglass on a dark walnut desk at night; the upper bulb is empty, all the sand is in the lower bulb. For a moment nothing moves. Then both glass bulbs crack and shatter at once, the shards flying out and scattering across the desk, and the glass is gone for good. For one still beat the orange sand keeps the exact shape of the lower bulb, standing on the base like a sand sculpture with no glass around it. Then it slumps and pours down into a low heap on the wooden base. The wooden frame and its posts stay standing and never move. The camera never moves; the cyan light and the warm key stay unchanged; slight webcam softness and sensor noise. Nothing else enters the frame.",
+ "negative_prompt": "hand, hands, fingers, arm, person, people, face, human, text, letters, words, numbers, logo, watermark, caption, subtitles, fire, smoke, explosion",
+ "seed": 1121,
+ "ratio": "1280:720",
+ "duration_s": 6,
+ "audio": false,
+ "content_moderation": null,
+ "inputs": {
+  "first": {
+   "path": "/tmp/claude-1000/-home-jgon-project-art-mrmas/a5e7723c-6ab4-4824-a1ed-8e367fdb82e5/scratchpad/runway2/hg-first.png",
+   "sha256": "cceb931a1d0e7acf5689fcc6ded982e8ff0aacb7c23f1c724cae69aafb7d53ac"
+  },
+  "last": {
+   "path": "/tmp/claude-1000/-home-jgon-project-art-mrmas/a5e7723c-6ab4-4824-a1ed-8e367fdb82e5/scratchpad/runway2/hg-last.png",
+   "sha256": "4116b47a034357980bbbc4ee6b84f5caa475749bf5b95e4d917563961dce602d"
+  }
+ },
+ "request_body_elided": {
+  "model": "veo3.1_fast",
+  "promptText": "Locked-off streaming-webcam view of an antique hourglass on a dark walnut desk at night; the upper bulb is empty, all the sand is in the lower bulb. For a moment nothing moves. Then both glass bulbs crack and shatter at once, the shards flying out and scattering across the desk, and the glass is gone for good. For one still beat the orange sand keeps the exact shape of the lower bulb, standing on the base like a sand sculpture with no glass around it. Then it slumps and pours down into a low heap on the wooden base. The wooden frame and its posts stay standing and never move. The camera never moves; the cyan light and the warm key stay unchanged; slight webcam softness and sensor noise. Nothing else enters the frame.",
+  "ratio": "1280:720",
+  "duration": 6,
+  "seed": 1121,
+  "audio": false,
+  "negativePrompt": "hand, hands, fingers, arm, person, people, face, human, text, letters, words, numbers, logo, watermark, caption, subtitles, fire, smoke, explosion",
+  "promptImage": [
+   {
+    "uri": "data:image/png;base64,iVBORw0K\u2026",
+    "position": "first"
+   },
+   {
+    "uri": "data:image/png;base64,iVBORw0K\u2026",
+    "position": "last"
+   }
+  ]
+ },
+ "credits_before": 265,
+ "estimate_credits": 60.0,
+ "submitted_at": "2026-09-28T00:50:56+00:00",
+ "purpose": "Ep1 Act Four S7.13: Ttemme's stream-cam hourglass shatters (take 2 of 2: first + last keyframes, both ours)",
+ "terms_note": "Not re-verified this pass: per GENAI-UPGRADE-PLAN \u00a75.1 (2026-09-25), Runway claims no ownership of outputs; Veo outputs carry Google's invisible SynthID watermark. No visible watermark was seen in any frame. Disclose in the end credits (GENAI \u00a76).",
+ "task_id": "92684cb2-acc7-41c5-a367-9f024cc3683e",
+ "status": "SUCCEEDED",
+ "task_created_at": "2026-09-28T00:50:58.176Z",
+ "outputs": [
+  {
+   "file": "h4-veo31fast-keyframes-shatter-s1121.mp4",
+   "sha256": "f3369b85901fdd0374c9abf13cf9043b8e6f34001eb6a3c5676d88bc94a98cda",
+   "bytes": 1361322
+  }
+ ],
+ "finished_at": "2026-09-28T00:52:05+00:00",
+ "wall_s": 68.5,
+ "credits_after": 205,
+ "credits_spent": 60,
+ "archived_inputs": {
+  "first": "out/ep01/full-v3/runway/inputs/s713-first-keyframe.png",
+  "last": "out/ep01/full-v3/runway/inputs/s713-last-keyframe.png"
+ },
+ "review": "KEPT: the S7.13 insert. Clean: no person, hand, face, text or logo in 144 frames. The glass cracks (f028-f045), bursts (f046-f052, the bulbs fly off), the sand stands on its own (f052-f080), slumps (f086-f100) and heaps (f106). f025-f045 are repaired in hourglass.py (the model refilled the upper bulb; f024's pixels replace it, the cracks kept). Used f001-f124.",
+ "used_frames": "f001-f124 (f046 on S7.13 k173, the lock's shatter mark)"
+}

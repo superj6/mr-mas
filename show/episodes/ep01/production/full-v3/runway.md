@@ -1,10 +1,16 @@
-# Ep1 v3.1: the Runway insert, ELGOOG's duck demo (`v31-runway`, 2026-09-27)
+# Ep1 v3.1: the Runway inserts, ELGOOG's duck demo and Ttemme's hourglass (`v31-runway`, 2026-09-27)
 
-> **Status: built and rendered. The pick is (a), the push-in.** This is PLAN §5 item 6: the tag's ELGOOG demo film, the pilot's one near-photoreal image. It's a staged demo, exposed inside the shot. It's still an insert: the tag shot pass splices it (§6). This pass didn't touch `tag/shots.ts` or any timeline.
+> **Status: both inserts are built and rendered.** This is PLAN §5 item 6. This pass didn't touch any `shots.ts` or timeline: the tag and Act Four shot passes splice the inserts (§6 and §11.5).
+> - **The duck (the tag):** ELGOOG's demo film, the pilot's one near-photoreal image. It's a staged demo, exposed inside the shot.
+>   - **The lead's ruling:** (a), the push-in, rendered with `--no-chip`. The "● LIVE" chip was invented, and the stutter carries the joke without it.
+>   - **The final** is `out/ep01/full-v3/runway/elgoog-demo-final.mp4`.
+> - **The hourglass (Act Four S7.13, a second insert, lead's ruling, up to 150 credits):** Ttemme's own broadcast. His stream-cam hourglass shatters, and the sand stands on its own for a beat, then falls. It plays inside our coded pixel stream frame. See §11.
 >
 > **Authorized by the showrunner (2026-09-27):** "is there anywhere here you wanted to try using runway?" and "you can also attempt the runway transition variations, try your best to get a fully finalized version". The budget was 500 credits: at most 350 for this, and 150 kept in reserve.
 >
-> **Spent: 160 credits, on three generations. The balance is 340.** The hourglass shatter (§5.6 "if credits remain") wasn't attempted, and 190 of this insert's 350 are unspent.
+> **Spent: 295 credits of the 500. The balance is 205, above the 150 reserve.**
+> - The duck: 160, on three video generations.
+> - The hourglass: 135, on two video takes (120) and three stills (15).
 >
 > **Nothing here was watched or heard.** I looked at contact sheets and full-size stills of the clips, at every transition and at frames decoded from the encoded MP4s. The motion numbers, the flash check and the luminance figures are measured.
 >
@@ -16,14 +22,18 @@
 
 | What | Where |
 |---|---|
-| **The pick: (a), the push-in.** 233 frames, 9.71 s | `out/ep01/full-v3/runway/elgoog-demo-a.mp4` |
+| **THE FINAL DUCK INSERT: (a), the push-in, no chip.** 233 frames, 9.71 s. The tag pass splices this one | `out/ep01/full-v3/runway/elgoog-demo-final.mp4` (every frame's source: `elgoog-demo-final-timing.json`) |
+| (a) with the chip, as first reviewed. 233 frames, 9.71 s | `out/ep01/full-v3/runway/elgoog-demo-a.mp4` |
 | (b), the hard cut. 215 frames, 8.96 s | `out/ep01/full-v3/runway/elgoog-demo-b.mp4` |
 | (c), the inset. 215 frames, 8.96 s | `out/ep01/full-v3/runway/elgoog-demo-c.mp4` |
 | **Side by side:** the three, time-aligned on the film's first frame, with a legend | `out/ep01/full-v3/runway/elgoog-demo-compare.mp4` |
 | Contact sheet: one row per variant, each frame labelled with its insert frame, film frame and mode | `out/ep01/full-v3/runway/elgoog-demo-sheet.png` |
 | Every frame's source, per variant and for the film | `out/ep01/full-v3/runway/elgoog-demo-timing.json` |
-| **The generated clips kept, each with its `provenance.json`** | `out/ep01/full-v3/runway/clips/` (`v2-…`, `v3-…`) |
-| The rejected clip's record (the clip itself was deleted) | `out/ep01/full-v3/runway/clips/rejected/v1-…provenance.json` |
+| **The generated clips kept, each with its `provenance.json`** | `out/ep01/full-v3/runway/clips/` (`v2-…` and `v3-…` for the duck, `h4-…` for the hourglass, and `h1-…`'s record) |
+| The records of the rejected and unused generations (the downloads were deleted) | `out/ep01/full-v3/runway/clips/rejected/` (`v1`, `h0`, `h2`, `h3`) |
+| **The hourglass insert:** k128–263 of S7.13. 136 frames, 5.67 s | `out/ep01/full-v3/runway/hourglass-s713.mp4` |
+| **The hourglass in context:** the whole new S7.13, k0–263. Its k0–127 is the Act Four pipeline's own frames | `out/ep01/full-v3/runway/hourglass-s713-in-context.mp4` (11.00 s) and `hourglass-s713-sheet.png` |
+| Every hourglass frame's source | `out/ep01/full-v3/runway/hourglass-s713-timing.json` |
 | The conditioning images sent to Runway, as sent (hashes in the provenance files) | `out/ep01/full-v3/runway/inputs/` |
 | The held still at the show's three monitor sizes, snapped to the palette, for the tag's later shots | `out/ep01/full-v3/runway/painter/held-still-{2s-96x60,ots-258x138,pov-380x186}.png` |
 | **The Runway client** | `studio/src/dev/genvideo/runway/gen.py` |
@@ -31,6 +41,7 @@
 | The pixel room, drawn by the show's own kits | `studio/src/dev/genvideo/runway/pxframes.ts` |
 | The compositor: the film edit, the grade, the wordmark, the three transitions, the comparison | `studio/src/dev/genvideo/runway/insert.py` |
 | Contact-sheet helper | `studio/src/dev/genvideo/runway/sheet.py` |
+| The hourglass: its keyframe edits (code), the stream frame (pixel), the compositor | `studio/src/dev/genvideo/runway/hg_still.py`, `hg_after.py`, `streamframes.ts`, `hourglass.py` |
 
 All the MP4s are 1920×1080, 24 fps, H.264 yuv420p and silent, the same as the tag's own `picture/tag.mp4` (untagged BT.601, the pipeline's default).
 
@@ -94,10 +105,11 @@ It's built once in `insert.py`. The edit, the grade and everything except v2 and
 | F137–150 | **The stutter:** held 2, 2, 3, 3 and 4 frames on v2 f096, f100, f105, f111 and f118. It drops more frames with each hold | v2 |
 | F151–198 | **The stills, like a slideshow:** v2 f124 (8 f), f132 (8 f), then **f140 held 32 f (1.33 s)** | v2 |
 
-**The polish, and how it drops away.** On F0–150 the grade is the studio-demo sheen: a soft highlight bloom, the lens vignette and a touch of contrast. A generic "● LIVE" chip sits top left over the smooth film (F34–136).
-- At the first dropped frame (F137) the chip is gone.
+**The polish, and how it drops away.** On F0–150 the grade is the studio-demo sheen: a soft highlight bloom, the lens vignette and a touch of contrast.
+- At the first dropped frame (F137), the smooth motion breaks.
 - At the stills (F151) the sheen, the bloom and the vignette go: the stills are flatter and a little less saturated.
 - No caption says what happened.
+- **The final has no chip** (the lead's ruling). The first review cut had a generic "● LIVE" chip top left over F34–136, gone at the first dropped frame. It survives only in the review cuts `elgoog-demo-a/b/c.mp4`.
 
 **Levels:** exposure is ×0.94, with a soft knee to a hard cap at 194/255, ten levels under 80% white (GENAI §1.10).
 - Measured on (a), the film's maximum display luma is 0.799.
@@ -164,7 +176,7 @@ It's built once in `insert.py`. The edit, the grade and everything except v2 and
 
 ---
 
-## 5. The pick: (a), the push-in
+## 5. The pick: (a), the push-in (the lead chose it, without the chip)
 
 1. **It's the only one that makes the whole "pixel → native → pixel" arc visible** (PLAN §5.6).
    - We enter through his screen: the push, in the show's own whole-pixel steps.
@@ -174,7 +186,7 @@ It's built once in `insert.py`. The edit, the grade and everything except v2 and
    - The full-frame seconds are his screen, reached by pushing into it and left by pulling out of it: the Act Four POV convention.
    - (b)'s hard cut from the two-shot, where the monitor is 60 px wide at the frame's edge, is the weakest signpost of the three. A cold viewer could read it as the show itself changing medium.
 3. **The exposure plays full frame, where it reads.**
-   - The polish is at its biggest when it breaks: the chip goes and the stutter grows.
+   - The polish is at its biggest when it breaks: the smooth turn drops frames and the stutter grows.
    - In (c) the stutter happens in a 1032-px inset, and the drops are 1–3 levels on a small picture.
 4. **It's the gentlest on the eye.**
    - The luminance rises over the push (i10–26) instead of in one frame. (b)'s cut is a 0.357 mean-luminance step, still passing.
@@ -191,6 +203,7 @@ It's built once in `insert.py`. The edit, the grade and everything except v2 and
 **Where:**
 - **At 32.01, after Mas looks up.** In 32.01 he looks up at k50.
 - **Recommended:** cut 32.01 at k62, twelve frames on his eyeline, and cut to the insert's i0, the `[OTS]` on his monitor. His look motivates the cut.
+- **The file is `elgoog-demo-final.mp4`:** its frame i is tag segment frame 62 + i (i0–232 → frames 62–294).
 - **The insert's two-shot (i217–232) replaces 32.01's tail.** There, the Orb's iris goes to the rack 6 frames before the whir. Redraw those 16 frames in `tag/shots.ts` with the plate's `screen` set to `painter/held-still-2s-96x60.png`, and with the Orb's look stepping to `DPLATE_LOOK.tray` 6 frames before 32.02's whir, as 32.01 does now.
 - **Net for the tag:** +233 − 46 = **+187 frames (+7.79 s)**, from 33.88 s to about 41.7 s. The simplest alternative is the whole insert after 32.01's last frame (108), for +233 frames (+9.71 s).
 - The lock (`show/reel/ep01-v3/ep01-v3-tag.json` → `tag/data.ts`) needs one new shot, `32.01b · ELGOOG DEMO`, and every later shot moves by the insert's length.
@@ -202,11 +215,11 @@ It's built once in `insert.py`. The edit, the grade and everything except v2 and
   ```sh
   S=<scratch>
   bash ops/heavy.sh audio/.venv-casting/bin/python studio/src/dev/genvideo/runway/insert.py \
-      --scratch $S/rw --out $S/rw-out --variants a --png $S/glyph --png-offset 62
+      --scratch $S/rw --out $S/rw-out --variants a --no-chip --png $S/glyph --png-offset 62
   GLYPH_DIR=$S/glyph ... node $S/r-tag.cjs picture ...
   ```
 
-  That's 233 PNGs, about 60 MB. Delete them after the render.
+  That's 233 PNGs, about 60 MB, identical in picture to `elgoog-demo-final.mp4` before its encode. Delete them after the render.
 - The insert's band is the bare band: 32.01's, with no rail. If `DEC 6, 2023` should type here instead of at 32.02, the PNGs need that rail laid over rows 812–1080. The insert's band is constant, so a band-only overlay from the pipeline's `band()` is enough.
 
 **Continuity (optional):** the tag's later two-shots (32.04's scan and 33.01's thud) can keep the frozen duck on his monitor. Pass `painter/held-still-2s-96x60.png` as the plate's `screen` instead of `screenDim`. That's a quiet callback: the Orb re-scans the cover while the staged duck is still up behind him.
@@ -230,11 +243,11 @@ Frames are (a)'s insert frames. The monitor is the source: the film's sound belo
 | i34–47 | The lines drawn by nothing: a faint tonal shimmer rising. No pencil-on-paper scratch, which implies a hand |
 | i48–102 | The morph: a slow swell to the fill (about i80–95) and a soft glow or bloom tone as the duck becomes real |
 | i107–136 | The turn under the steady sheen |
-| **i137, 139, 141, 144, 147** | **The stutter clicks:** a small digital click on each dropped-frame hold, with the sheen chopped in step, a buffering stutter of the bed rather than a musical beat. The chip is gone from i137 |
+| **i137, 139, 141, 144, 147** | **The stutter clicks:** a small digital click on each dropped-frame hold, with the sheen chopped in step, a buffering stutter of the bed rather than a musical beat |
 | **i151, 159, 167** | **The stills:** the sheen cuts out dead at i151, and there's a drier, harder slide-change click on each still |
 | i167–198 | Nothing but the room coming back faintly: the V.O. window |
 | i199, 202, 205, 208 | **The room returns** in four steps with the pull-back: fans, LED ticks, MM-12's felt line |
-| i213 | A tiny chip blip as the monitor's still snaps back to the grid |
+| i213 | A tiny blip (the show's own chip sound) as the monitor's still snaps back to the grid |
 | i217–232 | The two-shot: the room full. Hand off to 32.02's whir |
 
 - **For (b):** the sheen hits on the hard cut at i14, and the stutter and stills cues are the same. The grid's return at i159 and i169 gets a small bit-crush step on the dying sheen. The room is back at i199.
@@ -260,19 +273,17 @@ bash ops/heavy.sh audio/.venv-casting/bin/python studio/src/dev/genvideo/runway/
 audio/.venv-casting/bin/python studio/src/episodes/ep01/pixel/coldopen/tools/flashcheck.py out/ep01/full-v3/runway/elgoog-demo-a.mp4
 ```
 
-`--no-chip` renders without the LIVE chip (§9, point 5).
+`--no-chip` renders without the LIVE chip; the final is `--variants a --no-chip` (§9, point 5).
 
 ---
 
 ## 9. What's weakest
 
-1. **Nobody has watched it in motion.** Whether the stutter reads as the film breaking, and not as the player buffering, is a viewer's call. Measured, each hold jumps up to 5× the smooth step, and the chip's exit and the flat stills give it an in-film cause. It could still read as "lag" for its first half-second.
+1. **Nobody has watched it in motion.** Whether the stutter reads as the film breaking, and not as the player buffering, is a viewer's call. Measured, each hold jumps up to 5× the smooth step, and the flat stills give it an in-film cause. Without the chip, nothing in the frame labels it; it could read as "lag" for its first half-second.
 2. **v2's turn is slow at first** (F107–136 is mostly the early, profile part of the turn), so the smooth seconds show a gentle rotation, not a showy spin.
 3. **The morph's middle** (F70–95, v3 f022–f047) is a soft yellow glow and a double image as the fill arrives. It's clean, but it's the most "AI" looking passage in the film.
 4. **The pixel versions of the white card** dither between warm paper and cool grey in the palette. That's the palette's honest limit on a pale field. It shows on the monitor (i0–21) and at (a)'s palette dissolve step (i22–23).
-5. **The "● LIVE" chip is invented.**
-   - The real demo was a pre-recorded "hands-on" video, not labelled live. The chip dramatizes its implied real-time claim, and its disappearance is the whole exposure without a caption.
-   - The facts owner may prefer no chip: use `--no-chip`. Without it, the exposure is the stutter and the polish dropping.
+5. **The "● LIVE" chip: resolved.** It was invented (the real demo was a pre-recorded "hands-on" video, not labelled live), so the lead cut it. The final's exposure is the stutter and the polish dropping.
 6. **The wordmark echoes a four-colour scheme on white in a geometric sans.**
    - That's the parody, in the show's established ELGOOG "skewed primaries": rotated order, muted, off-brand hues, and Jost, not any real mark's type.
    - The guardrails owner should look at it once.
@@ -284,7 +295,153 @@ audio/.venv-casting/bin/python studio/src/episodes/ep01/pixel/coldopen/tools/fla
 
 ## 10. Keys and disk
 
-- **Keys:** the key never left `gen.py`'s Authorization header. I scanned every file this pass wrote (the tools, `out/ep01/full-v3/runway/`, this file and the scratch folder) for the key's value, and found no match.
-- **Disk:**
-  - kept: the two chosen clips (1.7 MB), the finals (about 8 MB) and the inputs (1.7 MB)
-  - deleted: v1's download, the working renders and the frame caches
+- **Keys:** the key never left `gen.py`'s Authorization header. After both inserts, I scanned every file this pass wrote for the key's value and found no match: the tools, `out/ep01/full-v3/runway/`, this file and both scratch folders.
+- **Disk:** `out/ep01/full-v3/runway/` is about 23 MB.
+  - **Kept:**
+    - the three chosen clips (v2, v3, h4: 3.1 MB)
+    - the finals and review cuts
+    - the inputs (4 MB)
+    - the provenance of all eight generations
+  - **Deleted:** the downloads of v1, h0, h2 and h3, the working renders, the frame caches and both scratch folders.
+
+---
+
+## 11. The second insert: Ttemme's hourglass (Act Four S7.13)
+
+**The lead's brief (2026-09-27, the same authorization):**
+- Act Four's hourglass at the return (S7.13: "the hourglass shatters, only the glass… the sand holds the shape for one beat, then falls").
+- To pass the style-range owner test, it's **Ttemme's own broadcast**, not the show's flourish. He ran a streaming site, and S7.13 already shows his `LIVE · CHAT`.
+- Objects only. It's wrapped in our coded stream UI, and it ends back in pixel.
+- His post's text stays as the lock has it.
+- At most 150 credits and 2 video takes. Stop and report if the first take shows a person, a hand or text.
+
+**Result:** 135 credits: two video takes (60 each) and three stills (5 each). Take 2 is kept. Neither take showed a person, a hand, a face or text, so the stop rule never triggered.
+
+### 11.1 Files
+
+| What | Where |
+|---|---|
+| **The insert:** S7.13 k128–263, 136 frames, 5.67 s, 1920×1080, 24 fps, silent | `out/ep01/full-v3/runway/hourglass-s713.mp4` |
+| **In context:** the whole new S7.13, k0–263, 264 frames, 11.00 s. k0–127 is the Act Four pipeline's own frames (`r-act4.cjs native`), untouched | `out/ep01/full-v3/runway/hourglass-s713-in-context.mp4`, `hourglass-s713-sheet.png` |
+| Every frame's source (pane mode, take frame) and the marks | `out/ep01/full-v3/runway/hourglass-s713-timing.json` |
+| **The take kept**, with its provenance | `out/ep01/full-v3/runway/clips/h4-veo31fast-keyframes-shatter-s1121.mp4` (+ `.provenance.json`) |
+| The still used for the first keyframe (its record) | `clips/h1-gen4image-still-s1121.provenance.json` |
+| The unused and rejected generations' records (the downloads were deleted) | `clips/rejected/h0-…`, `h2-…` (take 1), `h3-…` |
+| **The two keyframes sent, as sent**, and the model still the first one was made from | `inputs/s713-first-keyframe.png`, `inputs/s713-last-keyframe.png`, `inputs/s713-h1-model-still.png` |
+| The tools | `studio/src/dev/genvideo/runway/hg_still.py` (runs the model still's sand out), `hg_after.py` (builds the aftermath keyframe), `streamframes.ts` (the pixel stream frame), `hourglass.py` (the compositor), and `gen.py` (now with `t2i` for stills) |
+
+### 11.2 The generations, in order
+
+| # | What | Model | Credits (balance) | Verdict |
+|---|---|---|---|---|
+| h0 | A still of his hourglass on the desk (the first keyframe's source) | gen4_image 720p, seed 1121 | 5 (340 → 335) | Unused. Clean, but the upper bulb was still full and the camera was at desk level |
+| **h1** | The same, asked to show the sand run out and a higher angle | gen4_image 720p, seed 1121 | 5 (335 → 330) | **Used as the source.** Clean, but the model still left sand on top. `hg_still.py` (code) runs it out: each sand row of the upper bulb takes one of the bulb's empty rows above it, squeezed to that row's glass width, the glass glints kept; the grain thread is painted out. Result: `inputs/s713-first-keyframe.png` |
+| h2 | **Take 1:** image-to-video from the first keyframe | veo3.1_fast, 6 s, seed 1121 | 60 (330 → 270) | **Rejected.** Clean (no person, hand or text), but the model refilled the upper bulb (f025), burst the top (f038–f046), then **re-formed the glass whole** and poured the sand from an intact hourglass. The sand never held its shape |
+| h3 | An aftermath still for a last keyframe, referenced on the first | gen4_image 720p, `@glass` reference | 5 (270 → 265) | Unused. The model kept the bulbs whole (it only added shards) and moved the camera. The last keyframe was built in code instead: **`hg_after.py`** removes the bulbs from our first keyframe (a measured profile), fills in what was behind them (the wall and the LED strip from the same rows, lighting-matched), draws the back post solid, heaps the sand on the base, restores the front posts, and scatters **take 1's own shards** on the desk (its f070, same locked camera). Result: `inputs/s713-last-keyframe.png` |
+| **h4** | **Take 2:** first and last keyframes, both ours | veo3.1_fast, 6 s, seed 1121 | 60 (265 → 205) | **KEPT.** Clean. The glass cracks (f028–f045), bursts (f046–f052, the bulbs fly off), **the sand stands on its own with no glass (f052–f080)**, slumps (f086–f100) and heaps (f106), landing on our aftermath |
+
+**The prompts, verbatim.** Only physics, material, light and camera. No person, site, brand or style.
+- **h0:** "A real photograph taken by a streaming webcam on a desk at night: an antique tabletop hourglass stands alone on a dark walnut desk, seen from slightly above. Turned dark walnut end caps, four slim turned wooden posts, clear glass bulbs. Almost all of the orange-amber sand has run into the lower bulb; a thin last thread of grains falls through the neck. The room is dark; a cyan LED strip behind the desk throws a cool rim light along the glass, and a soft warm key light comes from the front left. Slight webcam softness and sensor noise, shallow depth of field, the hourglass centred with empty desk around it. Nothing else on the desk."
+- **h1:** "A real photograph from a streaming webcam clipped above a dark walnut desk at night, looking down at about 35 degrees: an antique tabletop hourglass stands alone in the middle of the desk. Turned dark walnut end caps, four slim turned wooden posts, clear glass bulbs. The upper bulb is completely empty: all of the orange-amber sand has run out and lies heaped in the lower bulb. The room is dark; a cyan LED strip along the far edge of the desk throws a cool rim light on the glass, and a soft warm key light comes from the front left. Slight webcam softness and sensor noise, the hourglass centred with empty desk around it. Nothing else on the desk."
+- **h2 (take 1):** "Locked-off streaming-webcam view of an antique hourglass on a dark walnut desk at night; all its sand has run out into the lower bulb. For a moment nothing moves. Then the glass of both bulbs suddenly cracks and shatters outward into small glittering shards that fly out and fall onto the desk, but the orange sand keeps the exact shape of the lower bulb, standing on its own for a moment with no glass around it, before it collapses and pours down over the wooden base into a soft heap. The wooden frame and its posts stay standing. The cyan light and the warm key stay unchanged; slight webcam softness and sensor noise. Nothing else enters the frame."
+- **h3:** "@glass photographed from the same camera a moment after its glass shattered: the same walnut hourglass frame, its two end caps and four turned posts, stands on the dark desk with no glass left in it at all. Small clear glass shards lie scattered across the desk around it. The orange sand lies in a soft low heap on the wooden base, where the lower bulb was. Same framing, same cyan LED strip and warm key light, same webcam softness. Nothing else on the desk."
+- **h4 (take 2):** "Locked-off streaming-webcam view of an antique hourglass on a dark walnut desk at night; the upper bulb is empty, all the sand is in the lower bulb. For a moment nothing moves. Then both glass bulbs crack and shatter at once, the shards flying out and scattering across the desk, and the glass is gone for good. For one still beat the orange sand keeps the exact shape of the lower bulb, standing on the base like a sand sculpture with no glass around it. Then it slumps and pours down into a low heap on the wooden base. The wooden frame and its posts stay standing and never move. The camera never moves; the cyan light and the warm key stay unchanged; slight webcam softness and sensor noise. Nothing else enters the frame."
+- **The negative prompt for both takes:** "hand, hands, fingers, arm, person, people, face, human, text, letters, words, numbers, logo, watermark, caption, subtitles, fire, smoke, explosion"
+
+**The one repair in the take:** in f025–f045 the model refilled the upper bulb again for about 0.9 s before the burst. The camera is locked, so `hourglass.py` gives those frames' upper bulb f024's pixels everywhere except the new crack lines (bright, colourless, changed), and paints out the grain thread under the neck. On the frames, the bulb stays empty while the cracks spread.
+
+### 11.3 The beat (frames are S7.13's own k, from its first frame)
+
+**The stream frame** (`streamframes.ts`, native 480×270, the show's palette and type):
+- the player pane at native (8, 11), 328×184, which is 1312×736 on screen
+- `● LIVE  TTEMME` under it
+- the `LIVE · CHAT` column at right, in the chat-panel kit's look: the N1 panel, the N3 header, the red dot, every handle a coloured dash, no usernames
+- a thin generic top bar with three dots. It has no mark and no colours of any real site.
+
+| k | Shows |
+|---|---|
+| 0–127 | **Unchanged:** the lock's S7.13 as the Act Four pass draws it, the pixel overhead, the chat corner and **his post, k21–127, as the lock has it** |
+| **128** | **Cut to his stream**, on the post clearing. The pane is his cam in pixel: the take snapped to the palette on the native grid. The chat scrolls `F`, `F F` |
+| 134–166 | His line, "Chat, we're so back." (O.S., the lock's take), plays over the stream |
+| 140–143 | **The grid dissolves:** the native grid in true colour (k140–141), then 2-px blocks (k142–143) |
+| 144–237 | **His cam, real** (take f017–f110): the calm, the cracks spreading (from about k155) |
+| **167** | The chat turns: every new message is "we're so back" (`WE'RE SO BACK`, `so back`, `WE ARE SO BACK`), scrolling four times as fast |
+| **173** | **THE SHATTER** (take f046), on the lock's own mark and SFX spot. The bulbs burst and fly off |
+| 179–207 | **The sand holds its shape, standing on the base with no glass:** "one beat", about 1.2 s |
+| 208–227 | It slumps and pours |
+| 228–237 | The heap, settling |
+| 238–241 | The grid returns (2-px blocks, then the native grid in true colour) |
+| 242–251 | The pane in pixel again (f115–f124) |
+| **252–263** | **Back to the show's pixel:** S7.13's own last frame (lock k194, the Act Four pipeline's pixel aftermath: the frame empty, the heap on the base, the shards), held 12 frames |
+| 264 | S8.01 |
+
+**Measured** (the encoded MP4s):
+- The flash check (limit 3) passes on the insert and the in-context cut: **0 flashes**, 0 red, and no frame-level transitions at all.
+- The largest mean-luminance step is 0.035.
+- The real part is graded as a webcam, not a product film: no bloom and no vignette, exposure ×0.95 and the same soft knee to 194/255, clamped after resizing. The brightest decoded pane pixel is 0.829 luma, on isolated chroma edges from the 4:2:0 encode.
+- The pane's mean luma is 0.24 in pixel and real alike, so the dissolve doesn't jump.
+- A rebuild from the archived clip is bit-identical, with the largest mean frame difference 0.0.
+
+### 11.4 Why this passes the owner test
+
+- **Every near-photoreal frame is his broadcast:** inside his stream's player, with his name under it and his chat beside it. It's machine-adjacent media inside a bezel, not the show changing medium. That keeps the bezel rule (style-range §1.4).
+- **The pixel arc is complete.** We cut from the show's pixel overhead into his stream, the stream's picture resolves to real, it breaks, it returns to the grid, and we're back on the show's own pixel aftermath.
+- **The chat carries the story:** F while the time runs out, "we're so back" when he says it, and the glass going on the flood.
+
+### 11.5 Splice notes for the Act Four pass
+
+**On the current lock** (`act4/data.ts`, from `show/reel/ep01-v3/ep01-v3-act4.json`):
+- S7.13 is segment frames **11326–11520** (195 f).
+- Its marks: `grain 7`, `post 21–127`, the line a5-30-18 at k134–166 (held to k178), `shatter 173`, `fall 183`, and SFX `hourglass_shatter @173`.
+- S8.01 starts at 11521.
+
+**All positions are relative to S7.13's first frame** (k), so they hold if the v3.1 revision moves the beat.
+1. **Lengthen S7.13 from 195 to 264 frames** (8.125 → 11.00 s, +69 f, +2.875 s). S8.01 then starts at S7.13 + 264. Act Four grows from 12,571 to 12,640 frames.
+2. **k0–127 stay the Act Four layout.** **k128–263 are the insert**: `hourglass-s713.mp4` frame j = S7.13 k(128 + j).
+3. **The marks:**
+   - `shatter` stays at k173.
+   - `fall` becomes the slump at k208. The sand stands k179–207 and is heaped by k233.
+   - New marks: `stream` k128, `real` k144–237, `pixel` k242, `room` k252.
+4. **The render:**
+   - Declare k128–263 as browser frames in the Act Four spec (`act4/shots.ts`'s `defineSegment`, which declares none today; `act4-v5` shows the pattern for its J1: `browser: {frames: (f) => …}`). The Node picture render needs only the PNGs. The Remotion review host would need them too, or an `act4/browser.tsx`.
+   - Write the PNGs numbered by segment frame:
+
+     ```sh
+     bash ops/heavy.sh audio/.venv-casting/bin/python studio/src/dev/genvideo/runway/hourglass.py \
+         --scratch $S/hg --out $S/hg-out --png $S/glyph --s713 <S7.13's first frame on the lock in use>
+     GLYPH_DIR=$S/glyph ... node $S/r-act4.cjs picture ...
+     ```
+
+     That's 136 PNGs, about 35 MB. Delete them after the render.
+   - Or splice the MP4 at assembly.
+5. **If the revision moves marks inside S7.13:**
+   - `--shift N` moves the whole insert, and its shatter, N frames later. Use it if the post's end and the shatter move together.
+   - `--back-at K` sets when the chat turns (his line's end + 1).
+   - `--s713` must name the lock's S7.13 start, because the insert's last 12 frames are that lock's own pixel aftermath (its k194).
+6. **The band:** the insert carries the Act Four frame's own bare band, constant through S7.13. No rail or V.O. types there.
+7. **Continuity:** the room's chat corner in the last 12 frames is the lock's drawing, which still says `F`. If the Act Four pass wants the flood to carry over, its S7.13 last frame can show "so back" rows.
+
+### 11.6 Sound notes (the insert is silent)
+
+| k | Cue |
+|---|---|
+| 128 | The cut into his stream: the room drops to the stream's own sound, his mic's room tone (thin, a little compressed). MM-11 carries under it, ducked |
+| 134–166 | His line, as recorded (O.S.). It could take a light "through his stream" colour, since he's talking to his chat |
+| 140–143 | A short bit-crush-to-clean sweep on the stream audio as the grid dissolves |
+| ~155, 161, 168 | Small glass ticks as the cracks spread |
+| **173** | **The lock's `hourglass_shatter`**, now over real glass. It can be larger than the −18 dB spot, within the act's mix |
+| 174–178 | Shards landing and skittering on the desk |
+| **179–207** | **The held beat: near silence.** The sand stands. Let the music hold its breath here too; it's the gag's timing |
+| 208–227 | The sand slumps: a soft pouring hiss, then a settle |
+| 238–251 | The stream audio crushes back as the grid returns |
+| 252 | The cut back to the boardroom: its room tone and MM-11 at full, handing to S8.01's brass stab on the sign |
+
+- The chat stays silent: no notification pings. The flood reads on screen.
+
+### 11.7 What's weakest
+
+1. **Nobody has watched it in motion.** In particular: does the 1.2 s stand of sand read as "the sand holds the shape", or as a model glitch? It is a tall cone rather than the exact bulb.
+2. **The bulbs leave as two whole round bubbles**, not a spray of shards (f050–f075). The shards on the desk come later, from the keyframe.
+3. **The repaired frames (k152–172)** keep a faint seam where the old sand surface was, visible at 1:1 in the zoomed stills. It's small at pane size.
+4. **The site chrome is deliberately generic.** It's dark, with no mark, and doesn't echo any real streaming site's colours or layout beyond a player and a chat.
+5. **SYNTH again:** as with the duck, a near-raw clip inside a bezel is the showrunner's call on picture.

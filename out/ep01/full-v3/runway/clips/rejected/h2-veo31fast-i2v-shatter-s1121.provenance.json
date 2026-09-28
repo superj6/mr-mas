@@ -1,0 +1,56 @@
+{
+ "tool": "studio/src/dev/genvideo/runway/gen.py",
+ "provider": "Runway API (api.dev.runwayml.com)",
+ "api_version": "2024-11-06",
+ "endpoint": "/v1/image_to_video",
+ "kind": "i2v",
+ "model": "veo3.1_fast",
+ "prompt": "Locked-off streaming-webcam view of an antique hourglass on a dark walnut desk at night; all its sand has run out into the lower bulb. For a moment nothing moves. Then the glass of both bulbs suddenly cracks and shatters outward into small glittering shards that fly out and fall onto the desk, but the orange sand keeps the exact shape of the lower bulb, standing on its own for a moment with no glass around it, before it collapses and pours down over the wooden base into a soft heap. The wooden frame and its posts stay standing. The cyan light and the warm key stay unchanged; slight webcam softness and sensor noise. Nothing else enters the frame.",
+ "negative_prompt": "hand, hands, fingers, arm, person, people, face, human, text, letters, words, numbers, logo, watermark, caption, subtitles, fire, smoke, explosion",
+ "seed": 1121,
+ "ratio": "1280:720",
+ "duration_s": 6,
+ "audio": false,
+ "content_moderation": null,
+ "inputs": {
+  "first": {
+   "path": "/tmp/claude-1000/-home-jgon-project-art-mrmas/a5e7723c-6ab4-4824-a1ed-8e367fdb82e5/scratchpad/runway2/hg-first.png",
+   "sha256": "cceb931a1d0e7acf5689fcc6ded982e8ff0aacb7c23f1c724cae69aafb7d53ac"
+  }
+ },
+ "request_body_elided": {
+  "model": "veo3.1_fast",
+  "promptText": "Locked-off streaming-webcam view of an antique hourglass on a dark walnut desk at night; all its sand has run out into the lower bulb. For a moment nothing moves. Then the glass of both bulbs suddenly cracks and shatters outward into small glittering shards that fly out and fall onto the desk, but the orange sand keeps the exact shape of the lower bulb, standing on its own for a moment with no glass around it, before it collapses and pours down over the wooden base into a soft heap. The wooden frame and its posts stay standing. The cyan light and the warm key stay unchanged; slight webcam softness and sensor noise. Nothing else enters the frame.",
+  "ratio": "1280:720",
+  "duration": 6,
+  "seed": 1121,
+  "audio": false,
+  "negativePrompt": "hand, hands, fingers, arm, person, people, face, human, text, letters, words, numbers, logo, watermark, caption, subtitles, fire, smoke, explosion",
+  "promptImage": [
+   {
+    "uri": "data:image/png;base64,iVBORw0K\u2026",
+    "position": "first"
+   }
+  ]
+ },
+ "credits_before": 330,
+ "estimate_credits": 60.0,
+ "submitted_at": "2026-09-28T00:44:48+00:00",
+ "purpose": "Ep1 Act Four S7.13: Ttemme's stream-cam hourglass shatters (take 1 of at most 2)",
+ "terms_note": "Not re-verified this pass: per GENAI-UPGRADE-PLAN \u00a75.1 (2026-09-25), Runway claims no ownership of outputs; Veo outputs carry Google's invisible SynthID watermark. No visible watermark was seen in any frame. Disclose in the end credits (GENAI \u00a76).",
+ "task_id": "43694fde-5c37-4b5b-94df-2a5037bc92c8",
+ "status": "SUCCEEDED",
+ "task_created_at": "2026-09-28T00:44:49.737Z",
+ "outputs": [
+  {
+   "file": "h2-veo31fast-i2v-shatter-s1121.mp4",
+   "sha256": "3e3ddfc9f9aa26a3ec64f7be34c6d7a3c6f701e5a58b1ce6ae5e170fa599d6ed",
+   "bytes": 2271608
+  }
+ ],
+ "finished_at": "2026-09-28T00:45:40+00:00",
+ "wall_s": 52.0,
+ "credits_after": 270,
+ "credits_spent": 60,
+ "review": "REJECTED (take 1 of 2): clean (no person, hand or text), but the model refilled the upper bulb, and after the burst (f038-f046) the glass re-formed whole and the sand poured from the intact hourglass; the sand never held its shape. Its f070 lent the shards on the desk to the take-2 last keyframe (hg_after.py). The download was deleted; this record is kept."
+}
