@@ -18,8 +18,8 @@ first frame (marked designed_hit in cues.json, audit-v31 #13); his post over the
 the violins climb into the cut); THE LANDLORD'S CALL (v32-7.03: the F pedal and the glass shimmer hold under it,
 Tasya's Rhodes gives one soft chord on "pen", the siren's whine J-cuts in after the hang-up); the floor holds across
 "weeks on" and the swing's new phrase enters on the key ring's jangle (v32-9.10k); weeks on's last chord crossfades
-into Sydney (audit-v31 #14: no stale silence, no dip); HIS CLICK ships GTP-4 (11.04: the Build's whole bar on the
-downbeat before "Addendum."); the lobby's entry on its first played note.  README.md has the table.
+into Sydney (audit-v31 #14: no stale silence, no dip); HIS CLICK ships GTP-4 (11.04: the Build's whole pass from
+the picture's click, the beat's frame 108); the lobby's entry on its first played note.  README.md has the table.
 
   s (Kokoro lock)  cue         what plays
   0 - 108.3        a_launch    LAUNCH NIGHT, warm and curious in the show's voice: the felt on each chord (the modal
@@ -1074,6 +1074,9 @@ def tracks_duel():
     return T
 
 
+CLICK_1104_FRAME = 108          # v3.2: the picture's click in 11.04 (frame 108 of the beat, both locks; the pixel pass)
+
+
 def cue_duel(tl):
     end = tl.B('12.01')
     four = tl.has('11.06')                                   # the v3 lock's four phrases; v3.1 has two (11.03-11.04)
@@ -1094,19 +1097,14 @@ def cue_duel(tl):
         post_b = turn
         shutter = end - BAR / 2
     b_end = int(round(c.bar_of(end)))
-    # v3.2 (11.04): GTP-4 goes out on HIS click, launch night's button: "5.08's click, on the downbeat before
-    # 'Addendum.'" (the sound pass lays the click; the stick has none).  The score gives that downbeat the Build's
-    # whole bar on the chip: the launch-night click that did nothing, answered
+    # v3.2 (11.04): GTP-4 goes out on HIS click, launch night's button.  The picture clicks on 11.04's frame 108
+    # (the pixel pass; the sound pass lays the click there, the stick has none), on both locks.  The score starts the
+    # Build's whole pass on the chip on that click: the launch-night click that did nothing, answered
     click = None
     cap4 = (tl.beats[tl.bi['11.04']]['b'].get('caption') or '').lower() if tl.has('11.04') else ''
     if not four and 'click' in cap4:
         cl = tl.snd_any('dialog_ok_click', tl.B('11.04'), tl.E('11.04'))
-        click = cl[0] if cl else None
-        if click is None:
-            add_l = [l for l in tl.lines_in(tl.B('11.04'), end) if l['who'] == 'mario']
-            on = add_l[-1]['on'] if add_l else turn
-            click = c.bar(int(math.floor(c.bar_of(on - 0.25) + 1e-6)))
-    b_click = int(round(c.bar_of(click))) if click is not None else None
+        click = cl[0] if cl else tl.B('11.04') + CLICK_1104_FRAME / V.FPS
 
     def chord(b):
         return DUEL_LOOP[(b - 1) % len(DUEL_LOOP)]
@@ -1154,17 +1152,6 @@ def cue_duel(tl):
         if t0 >= turn - 0.05:
             break
         vo_ = tl.talking(t0, t0 + BAR, kinds={'vo'})
-        if b == b_click:                                        # v3.2: his click ships it: the Build's whole bar
-            for i in range(16):
-                tt = t0 + i * S16
-                c.n('lead', nm(BUILD_BB[i % 16]), tt, S16 * 0.62, 0.36 * ACC4[i % 4], True, duty=0.25, att=0.002,
-                    dec=0.09, sus=0.45, rel=0.035)
-                if i % 4 == 0:
-                    c.n('woodclick', 76, tt, 0.05, 0.38)
-            c.n('felt', 'Bb3', t0, 0.8, 0.2)
-            c.mark(t0, 'HIS CLICK ships GTP-4 (5.08\'s click, the sound pass\'s, on this downbeat): the Build\'s whole '
-                   'bar on the chip')
-            continue
         if (b - b0) % 2 == 0:
             if vo_:
                 continue
@@ -1183,7 +1170,7 @@ def cue_duel(tl):
             L = V.line_len(text)
             V.phrase(c, 'svln', t0, text, 0.36 if not tl.talking(t0, t0 + L) else 0.26, art='sus', att=0.05,
                      rel=0.3, stop_at=min(t0 + BAR * 2 - 0.02, post_b - 0.02 if t0 < post_b else turn - 0.02,
-                                          (click - 0.02) if (click is not None and t0 < click) else 1e9))
+                                          1e9))
             c.mark(t0, f'the Addendum\'s bar (Mario, right pane), its tail {add_n + 1}')
             add_n += 1
     # the felt under the V.O. ("mario used to sit where gerg sits.")
@@ -1206,6 +1193,22 @@ def cue_duel(tl):
         if tt + i * S16 * 2 >= end - 0.05:
             break
         c.n('lead', p, tt + i * S16 * 2, S16 * 1.2, 0.34, True, duty=0.25, att=0.002, dec=0.1, sus=0.4, rel=0.04)
+    if click is not None:
+        # HIS CLICK: the first note on the picture's click itself; the rest of the Build's pass on the grid's 16ths
+        # (the click falls between them), up to the chip's copy of Mario's tail
+        g16 = c.next16(click + 0.03)
+        ts = [click] + [g16 + k * S16 for k in range(15)]
+        for i, tt in enumerate(ts):
+            if tt >= shutter - 0.05:
+                break
+            j = 0 if i == 0 else int(round((tt - c.bar1) / S16)) % 4    # accents follow the grid's beats
+            c.n('lead', nm(BUILD_BB[i % 16]), tt, S16 * 0.62, 0.36 * ACC4[j], True, duty=0.25, att=0.002,
+                dec=0.09, sus=0.45, rel=0.035)
+            if j == 0:
+                c.n('woodclick', 76, tt, 0.05, 0.38)
+        c.n('felt', 'Bb3', click, 0.8, 0.2)
+        c.mark(click, 'HIS CLICK ships GTP-4 (the picture\'s click, 11.04 frame 108; the sound pass lays it): the '
+               'Build\'s whole pass on the chip, from the click')
     c.mark(turn, 'THE TURN: the Addendum crosses the split')
     c.mark(tt, 'the website: the chip plays Mario\'s tail (his side ships it)' if click is not None else
            'the photograph: the chip plays Mario\'s tail (Gerg ships it)')
@@ -1230,8 +1233,9 @@ def cue_duel(tl):
         motifs=['Gerg\'s Build in B-flat minor (chip)', 'the Addendum (gains a tail each time)', 'the Lighthouse cell'],
         motif_ids=[], key='B-flat minor; Gbmaj7, Ebm9, F7sus (no third over F)',
         composer='v3-score-a (composer X), 2026-09-27', underscore_lufs=-20.0, album_lufs=-16.0,
-        sfx_slots=([dict(t=round(c.clk(click), 3), sfx='dialog_ok_click (5.08\'s): his click ships GTP-4, on this '
-                         'downbeat (for the sound pass; the stick has no click here)')] if click is not None else []),
+        sfx_slots=([dict(t=round(c.clk(click), 3), sfx='dialog_ok_click (5.08\'s): his click ships GTP-4, the '
+                         'picture\'s click on 11.04 frame 108 (for the sound pass; the stick has no click here)')]
+                   if click is not None else []),
         audition=['the trade: rivalry, never Nintendo (the chip in the left pane only)',
                   'the Addendum gaining its tail each time: funny by structure, not by sound',
                   'the turn: the chip copying Mario\'s tail on the photograph'])

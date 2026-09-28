@@ -1,0 +1,182 @@
+{
+ "segment": "tag",
+ "variant": "kokoro",
+ "seconds": 41.333,
+ "frames": 992,
+ "samples": 1984000,
+ "timeline": "show/reel/ep01-v32/ep01-v32-tag.json",
+ "dialogue": {
+  "lines": 4,
+  "device": {},
+  "el_matched": 0,
+  "missing": []
+ },
+ "rooms": {
+  "stem": "audio/reel/ep01-v3/v32/tag-room.wav",
+  "dip_under_speech_db": 2.0
+ },
+ "sfx": {
+  "stem": "audio/reel/ep01-v3/v32/tag-sfx.wav",
+  "ducked": false
+ },
+ "score": {
+  "file": "audio/ost/tracks/e01-v3-tag/render/music.wav",
+  "cues": "audio/ost/tracks/e01-v3-tag/cues.json",
+  "length_s": 41.333,
+  "length_vs_segment_s": 0.0,
+  "act4_ringout": {
+   "file": "audio/ost/tracks/e01-v3-act4/render/music-ringout.wav",
+   "seconds": 4.2,
+   "crossfade": "full from 0 s, out (equal power) over 2.5 s from the tag score's entry at 0.60 s",
+   "why": "the act4 score's hand-off and the lead's note: the vault pedal's release at the tag's head, crossfading under the tag's own score, so the seam doesn't cut it"
+  },
+  "lufs_as_delivered": -21.58,
+  "lufs_after_gain": -21.6,
+  "duck": {
+   "by_mood_db": [
+    [
+     "",
+     9.0
+    ]
+   ],
+   "cue_sheet_overrides": [],
+   "posts_dip_db": -3.0,
+   "envelope": "pre 0.25 s, joined across gaps < 2.5 s, 0.2 s in, 0.6 s out; depth smoothed 1.5 s"
+  },
+  "designed_silences": [
+   [
+    30.583,
+    38.093,
+    "the thud -> the button: no score (the front page, \"noted.\")"
+   ],
+   [
+    0.0,
+    0.6,
+    "the tag's head: the vault hum (a timeline sound) until the felt takes its F"
+   ],
+   [
+    8.875,
+    10.875,
+    "the stills: the demo's sheen cut dead (i151); nothing but the room until MM-12 returns with the pull-back (i199)"
+   ]
+  ]
+ },
+ "checks": [
+  {
+   "what": "the demo film's bed, opened up (i26-136)",
+   "from": 3.67,
+   "to": 8.25,
+   "band_hz": [
+    200,
+    12000
+   ],
+   "unspoken_s": 3.56,
+   "sfx_rms": -240.0,
+   "room_rms": -55.5,
+   "score_rms": -31.7,
+   "bed_rms": -31.7,
+   "sfx_minus_bed_db": -208.3
+  },
+  {
+   "what": "the stills (i151-198): the room faint",
+   "from": 8.92,
+   "to": 10.83,
+   "band_hz": [
+    60,
+    12000
+   ],
+   "unspoken_s": 1.92,
+   "sfx_rms": -240.0,
+   "room_rms": -48.4,
+   "score_rms": -146.4,
+   "bed_rms": -48.4,
+   "sfx_minus_bed_db": -191.6
+  }
+ ],
+ "measured": {
+  "lufs_i": -17.15,
+  "true_peak_dbtp": -1.72,
+  "sample_peak_dbfs": -1.72,
+  "lra_lu": 13.9,
+  "gain_db": 3.38,
+  "limiter_ceiling_dbfs": -1.5,
+  "limiter_active_s": 0.0,
+  "dialogue_lufs": -13.26,
+  "score_lufs_after_duck": -19.15,
+  "score_rms_under_speech_dbfs": -33.8,
+  "score_rms_between_speech_dbfs": -23.1,
+  "score_runs": {
+   "count": 4,
+   "shortest_s": 3.0,
+   "runs": [
+    [
+     0.0,
+     8.9
+    ],
+    [
+     10.85,
+     5.5
+    ],
+    [
+     16.65,
+     13.95
+    ],
+    [
+     38.05,
+     3.0
+    ]
+   ]
+  },
+  "rooms_lufs": -35.64,
+  "sfx_lufs": -30.72,
+  "holes_under_-42dBFS_0.3s": [
+   {
+    "at": 8.9,
+    "s": 1.95,
+    "what": "designed: the demo's stills: the room coming back faintly (runway.md \u00a77)"
+   }
+  ],
+  "holes_mono_downmix": [
+   {
+    "at": 8.9,
+    "s": 1.95,
+    "what": "designed: the demo's stills: the room coming back faintly (runway.md \u00a77)"
+   }
+  ],
+  "holes_without_score": [
+   {
+    "at": 3.6,
+    "s": 3.55,
+    "what": "designed: the demo's stills: the room coming back faintly (runway.md \u00a77)"
+   },
+   {
+    "at": 8.15,
+    "s": 2.85,
+    "what": "designed: the demo's stills: the room coming back faintly (runway.md \u00a77)"
+   }
+  ],
+  "unmarked_holes": 0,
+  "unmarked_holes_without_score": 0,
+  "jumps_over_15dB": {
+   "count": 5,
+   "rising": 4,
+   "rising_at_a_word": 1,
+   "rising_at_an_sfx": 1,
+   "rising_other": [
+    10.85,
+    27.45
+   ],
+   "falling": 1
+  }
+ },
+ "file": "out/ep01/full-v3/mix-v32/tag-mix.wav",
+ "guard_db": -1.12,
+ "seam_head": {
+  "from_gain_db": 1.18,
+  "to_gain_db": 3.38,
+  "ramp_s": 2.0,
+  "after": "act4"
+ },
+ "built": "2026-09-28 05:13:41",
+ "heard": "nothing here has been listened to; every number is measured"
+}

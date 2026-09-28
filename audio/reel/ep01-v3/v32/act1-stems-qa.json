@@ -1,0 +1,781 @@
+{
+ "segment": "act1",
+ "variant": "kokoro",
+ "timeline": "show/reel/ep01-v32/ep01-v32-act1.json",
+ "timeline_variant": "kokoro",
+ "seconds": 329.75,
+ "frames": 7914,
+ "rooms": [
+  {
+   "room": "bullpen-a1",
+   "from": -0.6,
+   "to": 117.9,
+   "first": "5.01",
+   "last": "6.02",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 0.0
+  },
+  {
+   "room": "basement",
+   "from": 116.9,
+   "to": 122.483,
+   "first": "6.06",
+   "last": "6.06",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 0.0
+  },
+  {
+   "room": "bullpen-a1",
+   "from": 121.483,
+   "to": 126.108,
+   "first": "6.08",
+   "last": "6.08",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 0.0
+  },
+  {
+   "room": "basement",
+   "from": 125.108,
+   "to": 133.608,
+   "first": "6.09",
+   "last": "6.09",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 0.0
+  },
+  {
+   "room": "bullpen-a1",
+   "from": 132.608,
+   "to": 157.358,
+   "first": "7.01",
+   "last": "8.01",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 0.0
+  },
+  {
+   "room": "phone",
+   "from": 156.358,
+   "to": 186.317,
+   "first": "8.02",
+   "last": "8.05",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 0.4
+  },
+  {
+   "room": "bullpen-a1",
+   "from": 185.317,
+   "to": 188.817,
+   "first": "8.06",
+   "last": "8.06",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 0.0
+  },
+  {
+   "room": "lobby-a1",
+   "from": 187.617,
+   "to": 279.025,
+   "first": "9.01",
+   "last": "v31-10.04",
+   "lead": 0.8,
+   "trail": 0.4,
+   "lift_db": 0.0
+  },
+  {
+   "room": "bullpen-a1",
+   "from": 277.825,
+   "to": 287.817,
+   "first": "11.01",
+   "last": "11.01",
+   "lead": 0.8,
+   "trail": 0.4,
+   "lift_db": 0.0
+  },
+  {
+   "room": "split-a1",
+   "from": 286.817,
+   "to": 305.525,
+   "first": "11.03",
+   "last": "11.04",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 0.0
+  },
+  {
+   "room": "bullpen-a1",
+   "from": 304.525,
+   "to": 309.817,
+   "first": "12.01",
+   "last": "12.01",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 0.0
+  },
+  {
+   "room": "dark-desk",
+   "from": 308.817,
+   "to": 317.275,
+   "first": "12.02",
+   "last": "12.02",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 2.9
+  },
+  {
+   "room": "bullpen-a1",
+   "from": 316.275,
+   "to": 328.8,
+   "first": "v31-12.03",
+   "last": "12.06",
+   "lead": 0.6,
+   "trail": 0.05,
+   "lift_db": 0.0
+  },
+  {
+   "room": "black: room tone -54.0 LUFS",
+   "from": 328.75,
+   "to": 329.75,
+   "first": "12.07"
+  }
+ ],
+ "sfx": [
+  [
+   "5.03",
+   "synth:keys",
+   9.55,
+   -32
+  ],
+  [
+   "5.03",
+   "synth:keys",
+   13.54,
+   -34
+  ],
+  [
+   "5.04",
+   "synth:keys",
+   26.762,
+   -34
+  ],
+  [
+   "5.04",
+   "synth:keys",
+   47.722,
+   -34
+  ],
+  [
+   "5.07",
+   "key_tap_space",
+   57.908,
+   -16
+  ],
+  [
+   "5.07",
+   "marker_write_q",
+   61.01,
+   -20
+  ],
+  [
+   "5.08",
+   "dialog_ok_click",
+   67.583,
+   -12
+  ],
+  [
+   "5.09",
+   "synth:keys",
+   69.075,
+   -36
+  ],
+  [
+   "5.09",
+   "synth:steps_far",
+   79.045,
+   -30
+  ],
+  [
+   "5.10",
+   "synth:keys",
+   84.083,
+   -38
+  ],
+  [
+   "5.10",
+   "ui_toast_pop",
+   89.593,
+   -26
+  ],
+  [
+   "5.10",
+   "synth:keys",
+   93.843,
+   -28
+  ],
+  [
+   "5.11",
+   "synth:keys",
+   100.19,
+   -34
+  ],
+  [
+   "5.12",
+   "counter_roll",
+   106.917,
+   -24
+  ],
+  [
+   "5.12",
+   "counter_roll",
+   107.667,
+   -26
+  ],
+  [
+   "5.12",
+   "counter_roll",
+   108.217,
+   -26
+  ],
+  [
+   "6.01",
+   "synth:ratchet",
+   109.15,
+   -26
+  ],
+  [
+   "6.02",
+   "letter_clunk",
+   114.0,
+   -12
+  ],
+  [
+   "6.02",
+   "synth:ratchet",
+   114.28,
+   -30
+  ],
+  [
+   "6.06",
+   "odometer_ratchet",
+   117.129,
+   -16
+  ],
+  [
+   "6.06",
+   "post_click",
+   118.5,
+   -22
+  ],
+  [
+   "6.09",
+   "tower_pop",
+   126.008,
+   -18
+  ],
+  [
+   "6.09",
+   "synth:ratchet_fast",
+   126.708,
+   -32
+  ],
+  [
+   "6.09",
+   "palette_step_F",
+   126.908,
+   -18
+  ],
+  [
+   "6.09",
+   "palette_step_Ab",
+   129.408,
+   -18
+  ],
+  [
+   "6.09",
+   "palette_step_C",
+   131.908,
+   -18
+  ],
+  [
+   "7.02",
+   "steam_hiss",
+   140.908,
+   -20
+  ],
+  [
+   "v32-7.03",
+   "RING_PHONE",
+   145.758,
+   -30
+  ],
+  [
+   "v32-7.03",
+   "handset_hangup",
+   153.758,
+   -26
+  ],
+  [
+   "8.01",
+   "key_tap_soft_02",
+   155.758,
+   -24
+  ],
+  [
+   "8.02",
+   "tile_shove",
+   157.008,
+   -22
+  ],
+  [
+   "8.04",
+   "synth:steps_phone",
+   164.208,
+   -30
+  ],
+  [
+   "8.05",
+   "cloth_rustle",
+   183.85,
+   -30
+  ],
+  [
+   "8.06",
+   "dialog_ok_click--chip",
+   186.817,
+   -20
+  ],
+  [
+   "8.06",
+   "revolving_door",
+   187.367,
+   -28
+  ],
+  [
+   "9.01",
+   "revolving_door",
+   188.417,
+   -26
+  ],
+  [
+   "9.01",
+   "synth:steps_stone",
+   188.654,
+   -30
+  ],
+  [
+   "9.01",
+   "desk_phone_ring",
+   189.364,
+   -38
+  ],
+  [
+   "9.01",
+   "glass_nudge",
+   190.647,
+   -16
+  ],
+  [
+   "9.01",
+   "glass_strain_2",
+   190.706,
+   -20
+  ],
+  [
+   "9.04",
+   "freeze_hit_F",
+   193.917,
+   -14
+  ],
+  [
+   "9.04",
+   "camera_shutter",
+   193.963,
+   -18
+  ],
+  [
+   "9.04",
+   "pen_tick_1",
+   197.274,
+   -24
+  ],
+  [
+   "9.04",
+   "cloth_rustle",
+   197.413,
+   -26
+  ],
+  [
+   "9.06",
+   "glass_strain_3",
+   201.588,
+   -22
+  ],
+  [
+   "9.06",
+   "revolving_door",
+   201.688,
+   -28
+  ],
+  [
+   "9.07",
+   "folder_slide",
+   205.133,
+   -20
+  ],
+  [
+   "9.07",
+   "footstep_hard_2",
+   206.883,
+   -24
+  ],
+  [
+   "9.08",
+   "collar_pop_F5",
+   207.833,
+   -12
+  ],
+  [
+   "9.09",
+   "key_ring_jangle_3",
+   210.317,
+   -28
+  ],
+  [
+   "9.09",
+   "key_ring_jangle_1",
+   229.037,
+   -22
+  ],
+  [
+   "9.09",
+   "synth:steps_stone",
+   229.087,
+   -32
+  ],
+  [
+   "9.09",
+   "key_ring_jangle_2",
+   229.662,
+   -24
+  ],
+  [
+   "v32-9.10k",
+   "key_ring_jangle_2",
+   230.525,
+   -24
+  ],
+  [
+   "9.10",
+   "synth:steps_stone",
+   232.91,
+   -34
+  ],
+  [
+   "9.10",
+   "synth:murmur",
+   233.71,
+   -36
+  ],
+  [
+   "9.11",
+   "synth:tapdance",
+   241.858,
+   -26
+  ],
+  [
+   "9.12",
+   "synth:murmur",
+   244.125,
+   -38
+  ],
+  [
+   "9.12",
+   "orb_servo",
+   244.375,
+   -26
+  ],
+  [
+   "9.12",
+   "orb_servo",
+   244.875,
+   -26
+  ],
+  [
+   "9.12",
+   "orb_servo",
+   245.375,
+   -26
+  ],
+  [
+   "9.12",
+   "rubber_stamp_C--chip",
+   247.025,
+   -20
+  ],
+  [
+   "9.13",
+   "folder_close",
+   277.808,
+   -22,
+   "moved onto v31-10.04 (end -0.667 s, its peak on that frame)"
+  ],
+  [
+   "v31-10.01",
+   "revolving_door",
+   252.017,
+   -30
+  ],
+  [
+   "v31-10.01",
+   "ui_toast_pop",
+   252.517,
+   -22
+  ],
+  [
+   "v31-10.03",
+   "pen_tick_1",
+   273.15,
+   -24
+  ],
+  [
+   "v31-10.04",
+   "bell_ding_F6",
+   275.925,
+   -22
+  ],
+  [
+   "11.03",
+   "camera_shutter",
+   291.617,
+   -24
+  ],
+  [
+   "11.04",
+   "synth:cheer",
+   301.381,
+   -28
+  ],
+  [
+   "12.01",
+   "ui_toast_pop",
+   304.725,
+   -30,
+   "sound J-cut: leads the cut by 0.4 s"
+  ],
+  [
+   "12.01",
+   "paper_whip",
+   307.325,
+   -24
+  ],
+  [
+   "12.02",
+   "pen_scribble_short",
+   309.717,
+   -22
+  ],
+  [
+   "12.02",
+   "synth:crackle",
+   310.217,
+   -30
+  ],
+  [
+   "12.02",
+   "synth:crackle",
+   310.217,
+   -32
+  ],
+  [
+   "v31-12.03",
+   "synth:thud",
+   316.875,
+   -8
+  ],
+  [
+   "v31-12.03",
+   "synth:pen",
+   320.075,
+   -30
+  ],
+  [
+   "12.04",
+   "glass_nudge",
+   321.28,
+   -22
+  ],
+  [
+   "12.04",
+   "synth:pen",
+   321.4,
+   -24
+  ],
+  [
+   "12.05",
+   "synth:pen",
+   323.75,
+   -26
+  ],
+  [
+   "12.05",
+   "paper_curl",
+   324.95,
+   -32
+  ],
+  [
+   "12.06",
+   "synth:pen",
+   326.25,
+   -26
+  ],
+  [
+   "12.06",
+   "pen_tick_3",
+   327.75,
+   -22
+  ]
+ ],
+ "sfx_missing": [],
+ "sfx_dropped": [
+  {
+   "layer": "siren",
+   "claimed_by_score": "siren",
+   "evidence": "153.81 s:  code_red  comic panic, the siren as a joke"
+  }
+ ],
+ "added": [
+  {
+   "what": "the click that ships GTP-4: launch night's click (5.08's), 6 frames before the cheer",
+   "at": 301.131,
+   "peak_dbfs": -12.0
+  },
+  {
+   "what": "the Build's chip line (F4 F4 G4 Ab4, left pane) leading the match cut, ending a 16th before it",
+   "at": 278.0,
+   "peak_dbfs": -24,
+   "bpm": 95.25,
+   "bpm_from": "the score (measured)",
+   "claimable": "build-prelap",
+   "why": "script-v3-notes \u00a77 For sound; plan 9.13 jcut \"the Build's chip arpeggio (sc 11's left pane) under the laptop's close\" 0.8 s"
+  },
+  {
+   "what": "Sydney's egg timer ticking (in the lobby cue's tempo), the ding, the reset, across the match cut",
+   "at": 273.4,
+   "to": 283.03,
+   "peak_dbfs": -23.0,
+   "bpm": 96.0,
+   "bpm_from": "the score (measured)",
+   "ticks": 15,
+   "why": "v3.1 mood: \"the egg timer ticks in its tempo and carries the match cut into the duel (as v2)\"; plan v31-10.04 jcut \"the egg timer's tick (reset to 5) under the lid's close\"; script-v31-notes \u00a74 For sound"
+  },
+  {
+   "what": "he answers: the tap on the glass",
+   "at": 146.66,
+   "peak_dbfs": -30,
+   "why": "v3.2 plan v32-7.03: \"a ring, the lift, the hang-up\" (the ring is filtered; the hang-up is the timeline's)"
+  }
+ ],
+ "score_hints": {
+  "score": "audio/ost/tracks/e01-v3-act1/render/music.wav",
+  "cues": "audio/ost/tracks/e01-v3-act1/cues.json",
+  "drop": [
+   "siren"
+  ],
+  "why": {
+   "siren": "153.81 s:  code_red  comic panic, the siren as a joke"
+  },
+  "grid": null,
+  "grid_lobby": [
+   96.0,
+   253.786,
+   10.92
+  ],
+  "grid_duel": [
+   95.25,
+   278.886,
+   3.46
+  ]
+ },
+ "room_stem": {
+  "lufs": -36.61,
+  "peak_dbfs": -23.39,
+  "p10_50ms_dbfs": -39.2
+ },
+ "sfx_stem": {
+  "lufs": -35.88,
+  "peak_dbfs": -8.0,
+  "p10_50ms_dbfs": -240.0
+ },
+ "room_under_-55dBFS_0.3s": [],
+ "room_levels": [
+  {
+   "room": "bullpen-a1@act1:5.01",
+   "p5_50ms_dbfs": -39.7,
+   "lift_db": 0.0
+  },
+  {
+   "room": "basement@act1:6.06",
+   "p5_50ms_dbfs": -37.1,
+   "lift_db": 0.0
+  },
+  {
+   "room": "bullpen-a1@act1:6.08",
+   "p5_50ms_dbfs": -39.3,
+   "lift_db": 0.0
+  },
+  {
+   "room": "basement@act1:6.09",
+   "p5_50ms_dbfs": -37.0,
+   "lift_db": 0.0
+  },
+  {
+   "room": "bullpen-a1@act1:7.01",
+   "p5_50ms_dbfs": -39.8,
+   "lift_db": 0.0
+  },
+  {
+   "room": "phone@act1:8.02",
+   "p5_50ms_dbfs": -40.4,
+   "lift_db": 0.4
+  },
+  {
+   "room": "bullpen-a1@act1:8.06",
+   "p5_50ms_dbfs": -39.3,
+   "lift_db": 0.0
+  },
+  {
+   "room": "lobby-a1@act1:9.01",
+   "p5_50ms_dbfs": -39.0,
+   "lift_db": 0.0
+  },
+  {
+   "room": "bullpen-a1@act1:11.01",
+   "p5_50ms_dbfs": -39.2,
+   "lift_db": 0.0
+  },
+  {
+   "room": "split-a1@act1:11.03",
+   "p5_50ms_dbfs": -39.0,
+   "lift_db": 0.0
+  },
+  {
+   "room": "bullpen-a1@act1:12.01",
+   "p5_50ms_dbfs": -39.1,
+   "lift_db": 0.0
+  },
+  {
+   "room": "dark-desk@act1:12.02",
+   "p5_50ms_dbfs": -42.9,
+   "lift_db": 2.9
+  },
+  {
+   "room": "bullpen-a1@act1:v31-12.03",
+   "p5_50ms_dbfs": -38.8,
+   "lift_db": 0.0
+  }
+ ]
+}

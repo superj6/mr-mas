@@ -1,11 +1,136 @@
 # Ep1 v3: rooms, SFX and the final mix (`v3-sound`, 2026-09-27)
 
-> **Status (v3.1): the v3.1 lock is MIXED.** Kokoro: all six segments and the card, on composer X's and composer Y's v3.1 renders. ElevenLabs: see §0.6. Tracks A2 (rooms and SFX stems) and A3 (the mix) of [PLAN.md](PLAN.md), under the showrunner's "just do a full episode attempt with your best judgement".
+> **Status (v3.2): the v3.2 lock is MIXED, both variants, on the final v3.2 renders (§V).** The v3.1 lock is mixed, both variants (§0). Tracks A2 (rooms and SFX stems) and A3 (the mix) of [PLAN.md](PLAN.md), under the showrunner's "just do a full episode attempt with your best judgement".
 >
 > **Nothing here was heard.** Every number below is measured from the files. I also looked at envelope plots of the stems and mixes around the moments listed in §5. Whether a room sounds like its room, whether the keys read as Gerg, and whether any cut plays all need an ear.
 > Nothing was committed.
 >
-> §0 is the v3.1 round. §1–§8 are the v3 round: the method, which still holds, and the v3 lock's numbers.
+> §V is the v3.2 round, §0 the v3.1 round. §1–§8 are the v3 round: the method, which still holds, and the v3 lock's numbers.
+
+## V. v3.2: the final lock
+
+### V.1 Re-run
+
+```sh
+audio/.venv-casting/bin/python audio/reel/ep01-v3/mix_episode.py --all                  # v3.2, Kokoro (the default lock)
+audio/.venv-casting/bin/python audio/reel/ep01-v3/mix_episode.py --all --variant el     # v3.2, ElevenLabs
+audio/.venv-casting/bin/python audio/reel/ep01-v3/mix_episode.py --all --lock v31       # v3.1 still works
+```
+
+| What | v3.2 |
+|---|---|
+| Timelines | `show/reel/ep01-v32/ep01-v32-<seg>.json`, EL `show/reel/ep01-v32-el/ep01-v32-el-<seg>.json` |
+| Stems | `audio/reel/ep01-v3/v32/` (WAV), `audio/reel/ep01-v3/v32/el/` (FLAC), including `tag-tail` (the hum past the tag's end) |
+| **Mixes** | **`out/ep01/full-v3/mix-v32/<seg>-mix.wav`**, `out/ep01/full-v3/mix-v32-el/`, each with **`outro-mix.wav`** (§V.3) |
+| QA and the loudness report | `audio/reel/ep01-v3/mix-qa/v32/<variant>/` |
+
+The lengths are the pictures' frames: cold open 640, Act One 7,914, Act Two 4,633, Act Three 3,418, Act Four 12,203, tag 992.
+
+As in v3.1, a score render counts only if its cue sheet names this lock's timeline and its length is within a frame. Until the v3.2 renders land, the v3.1 renders at the same paths are refused, and a mix run then says `score: not this lock`.
+
+### V.2 What changed in the stems
+
+**The lead's items:**
+- **11.04, the click that ships GTP-4:** launch night's click (5.08's `dialog_ok_click`, −12 dBFS). Its peak lands 6 frames before the cheer, frame 108, where the picture clicks. It's anchored to the cheer, so EL follows its own timing.
+- **The laptop's close** stays on 10.04's lid (16 frames before the end), moved from the timeline's 9.13.
+- **15.15, onto the picture:** the cut to the HIGH is on "licenses" (k68). The slide now starts on the sheet's first step (the word +10 frames, k78), and the stamp's peak lands on the stamp (the word +42 frames, k110). They're anchored to the word, so EL follows its own timing.
+- **21.02** keeps one deepfake pop (as v3.1).
+- **The tour's stamp J-cut** (v3.2 moved it to 15.14, lead 0.5 s): **not applied.** The act2 score ends its Senate chord (senate_b, to 147.125 s) and lands its first knee stab exactly on 16.01's cut. The first stamp stays there with them; 0.5 s early it would flam against both. To have the J-cut, composer X would move the chord's end and the first stab 0.5 s earlier, and the stem follows with one entry.
+- **11.04's click vs the score:** act1's sheet marks "HIS CLICK ships GTP-4" at 11.04 +1.0 s (297.625 s; EL 303.04), the downbeat before "Addendum." as the script's §5 has it. The final picture clicks at frame 108 (+4.5 s, 301.125 s), 6 frames before the cheer. The click follows the picture, so the score's chip bar comes about 3.5 s before it. **For the lead / composer X:** move the score's slot to the picture's frame, or accept the gap.
+
+**The new beats:**
+
+| Beat | Sound |
+|---|---|
+| **v32-7.03, his call** | • One ring through the phone's small speaker.<br>• The tap as he answers (the cut to his ear, 6 frames before "Mas.").<br>• The hang-up (the timeline's).<br>• If the score doesn't take it, the siren leads 8.01 by 0.8 s from the call's end.<br>Tasya's two lines take the phone chain. |
+| **v32-S1.13, his post** | • His thumb on the glass up to the send pop.<br>• The suite steps down −2, −4, −7 dB with the picture's three palette steps to night.<br>• The dark room's drone leads S2.01 by 0.6 s under the last step. |
+| **v32-21.06, the switch** | • The monitor's click-off (k21).<br>• The clapping grows through the black glass into a hall: low-passed at first, opening, −18 dB up to −26 dBFS peak, into 22.01's applause. |
+| **22.01, DevDay live** | • **A new room, the DevDay hall:** a big crowd settling, with the hall's reflections. It leads the cut by 1.0 s.<br>• His stage line takes a PA chain with the hall answering (`stage`). |
+| **v32-22.04, the sign-ups** | • The timeline's whirr, post and blink.<br>• **The rack's fans up a step** with each LED step: +2.5 dB at k23, +5 dB at k47, back down over 1.5 s after the beat.<br>• A grey-out tick as SIGN UP greys (k87). |
+| **v32-S5.00, the lobby by day** | • **The NopeAI lobby by day** (room tone, far steps), leading 0.8 s under S4.08's dial tone with the revolving door's sweep.<br>• The lanyard slid across the stone, then its clip (k31).<br>• The timeline's shutter and post.<br>• **The CCTV hum comes in from his look up** (it leads S4.09 by 2.6 s) as the lobby fades out under the picture's step into the camera's grade. |
+| **S5.11, the badge** | • A plastic card skidding across the wooden floor (it replaces the paper `folder_slide`).<br>• The timeline's tick on the chair leg and the set-down. |
+
+20.02 (the LEDs stopping) is cut from the v3.2 story, so the LEDs simply run on.
+
+**The tag's demo film is the score's now.** Composer X's v3.2 tag carries the film's own track: its bed, the stutter's clicks, the stills' slide-change clicks, and the chip blip at i213. So the stem drops its own versions whenever the sheet claims them (`demo-film`, `demo-blip`), and keeps only the room's duck and its four-step return.
+
+The v3.1 tag mixes (`mix-v31/`, `mix-v31-el/`) were made before this claim existed, so they play both versions of the demo film at once. A `--lock v31` re-run of the tag would fix them.
+
+### V.3 What changed in the mix
+
+- **Designed hits keep their attack.** An act's head fade becomes 40 ms when the cue sheet marks a `designed_hit` in the first 1.2 s (the fix for audit #13). Composer X marks Act One's head downbeat at 0.0 s ("A1 THE DOWNBEAT … HARD CUT on the downbeat, out of the card"). Otherwise the 1.0–1.2 s fade stays.
+- **The tag → outro seam** (audit-v31 #4). The tag's picture is fixed, so the hum is held under the outro instead: the stems build 2 s past the tag's last frame (`tag-tail`). The mix writes **`outro-mix.wav`**, a copy of the outro's audio (`out/ep01/outro/outro-b-v3.wav`), with:
+  - the tag's hum held 2 s under its start, crossfading out;
+  - a 150 ms fade-in;
+  - **its first hit 6 dB down.**
+
+  **For the assembler:** play `outro-mix.wav` in place of the outro's own audio, at the manifest's −1 dB as before. The hum is laid pre-compensated for that −1 dB, and nothing else needs changing.
+- **Kept from v3.1:**
+  - the set pieces lifted to +2.5 LU over the talk;
+  - the act-break fades;
+  - room tone under every black;
+  - the laps' ride;
+  - the one silence from the Remove click.
+
+### V.4 Measured (both variants, on the final v3.2 renders)
+
+| Segment | Kokoro s · LUFS-I · TP | EL s · LUFS-I · TP | Unmarked holes |
+|---|---|---|---|
+| cold open | 26.67 · −16.0 · −5.0 | 24.29 · −16.0 · −3.4 | 0 · 0 |
+| Act One | 329.75 · −16.0 · −1.5 | 334.96 · −16.0 · −1.5 | 0 · 0 |
+| Act Two | 193.04 · −16.0 · −1.5 | 183.25 · −16.0 · −1.6 | 0 · 0 |
+| Act Three | 142.42 · −16.0 · −1.4 | 138.75 · −16.0 · −1.5 | 0 · 0 |
+| Act Four | 508.46 · −16.0 · −1.5 | 521.63 · −16.0 · −1.5 | 0 · 0 |
+| tag | 41.33 · **−17.2** (guard −1.1) · −1.7 | 41.33 · **−17.2** (guard −1.2) · −1.2 | 0 · 0 |
+| **Episode** (story + card) | **1243.7 s · −16.03** · LRA 7.2 · dialogue spread 1.9 LU | **1246.2 s · −16.03** · LRA 7.8 · spread 2.0 LU | |
+
+The holes are also 0 unmarked without the score.
+
+**Seams:**
+
+| Seam | Kokoro | EL | What it is |
+|---|---|---|---|
+| card → Act One | **+18.6 dB** | **+20.6 dB** | **the designed downbeat, restored** (audit #13) |
+| Act One → Two | −0.5 | +0.6 | |
+| Act Two → Three | +0.7 | −0.1 | |
+| Act Three → Four | −0.1 | +0.3 | |
+| Act Four → tag | +0.3 | +1.2 | |
+| **tag → outro**, with `outro-mix.wav` at the manifest's −1 dB | **+11.9 dB** over 400 ms | +10.7 | was +20.0 in the v3.1 film |
+
+**The tag → outro seam.** The tag's black (33.05) is only 1.25 s, so the audit's "2 s of hum alone" can't happen inside the tag. **For the assembler, if it's wanted:** hold 0.75 s of black before the outro, and play `tag-tail`'s hum under it. The hum is ready in the stems.
+
+**Set pieces** (peak over the talk, Kokoro / EL):
+
+| Set piece | Kokoro | EL |
+|---|---|---|
+| the odometer | +2.3 LU (no lift needed) | +2.5 |
+| the avalanche | +2.5 | +2.5 |
+| the shatter | +2.3 | +2.4 |
+
+**The one silence:** 5.07 s at −48.8 LUFS.
+
+**The V.O.** (the lead asked for it to sit with the dialogue). The composer's "V.O. windows" (−30.1 under "i don't keep score.", −20.9 under the count) measure **the score under the V.O.** against the bible's −24 ±2. They don't measure the voice.
+- Every V.O. take is −18.0 LUFS, 2 dB under the spoken takes (−16), by the take pass's design.
+- Measured in the finished mixes, the V.O. lines sit together, 1.7 LU (Kokoro) and 2.1 LU (EL) under the spoken median.
+- "i don't keep score." reads −16.2 and the count −16.5 (Kokoro), in line with Act Four's other V.O. (−16.1 to −16.5).
+- In the mix the score under them is ducked by the mood's depth (9 and 7 dB), so neither covers the voice.
+- **To put the V.O. level with the spoken lines:** set `VO_GAIN_DB = 2.0` in mix_episode.py and re-run.
+
+**Named moments:**
+
+| Moment | dB against the bed, in band |
+|---|---|
+| the lap the Orb follows | −2.1 |
+| the far lap | −5.8 |
+| the egg timer | −3.2 |
+| the Build's pre-lap | −3.2 |
+| the pen | +7.8 |
+| 20.06's keys | +0.4 |
+| S5.09-back's keys | +4.0 |
+| the first second of his look | no keys |
+| the shatter | +22.3 |
+
+The demo film's checks now read no SFX there, because the score carries the film's own track.
 
 ## 0. v3.1: the final lock
 
@@ -157,7 +282,12 @@ audio/.venv-casting/bin/python audio/reel/ep01-v3/mix_episode.py --all --lock v3
 
 ### 0.6 ElevenLabs v3.1
 
-(filled in below once its run completes)
+Mixed on all six v3.1 EL renders (`out/ep01/full-v3/mix-v31-el/`):
+- every segment −16.0 LUFS, and the tag −16.6 after the guard;
+- episode −16.03 LUFS, dialogue spread 1.81 LU;
+- 0 unmarked holes.
+
+The run's lowest available memory was 18 GB.
 
 **The files:**
 

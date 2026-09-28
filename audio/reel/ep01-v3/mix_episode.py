@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 """Ep1 v3, track A3 (pass v3-sound): the final mix of each segment, and the episode's loudness report.
 
-  audio/.venv-casting/bin/python audio/reel/ep01-v3/mix_episode.py --all [--variant el] [--lock v3]
-      v3.1 (show/reel/ep01-v31/, EL show/reel/ep01-v31-el/) is the default lock: its mixes go to
-      out/ep01/full-v3/mix-v31/ (EL mix-v31-el/), its QA to audio/reel/ep01-v3/mix-qa/v31/. --lock v3 writes the v3
-      paths below. A score render is used only if its cue sheet names this lock's timeline and its length is
+  audio/.venv-casting/bin/python audio/reel/ep01-v3/mix_episode.py --all [--variant el] [--lock v32|v31|v3]
+      v3.2 (show/reel/ep01-v32/, EL show/reel/ep01-v32-el/) is the default lock: its mixes go to
+      out/ep01/full-v3/mix-v32/ (EL mix-v32-el/), its QA to audio/reel/ep01-v3/mix-qa/v32/; --lock v31 to mix-v31[-el]/
+      and mix-qa/v31/; --lock v3 to the v3 paths below. v3.2 adds: a designed hit at an act's head (cues.json
+      designed_hit) keeps its attack (a 40 ms fade, not the act-head fade); outro-mix.wav, the outro's audio with the
+      tag's hum held 2 s under it, a 150 ms fade-in and its first hit -6 dB (play it in place of the outro's own audio,
+      at the manifest's gain); the phone and stage (PA in a hall) chains. A score render is used only if its cue sheet names this lock's timeline and its length is
       within a frame (the v3 and v3.1 renders share their paths); otherwise the segment mixes with no score and says so.
   v3.1 adds: THE SET PIECES (SETPIECES: the odometer, the avalanche, the hourglass shatter) lifted, score and SFX
       only, until their peak is LIFT_LU (2.5) over the segment's talk; the score's fade-in at each act's head
@@ -72,8 +75,9 @@ _spec.loader.exec_module(S)
 SR, FPS = S.SR, S.FPS
 SEGS = S.SEGS
 OUTS = {'v3': {'kokoro': 'out/ep01/full-v3/mix', 'el': 'out/ep01/full-v3/mix-el'},
-        'v31': {'kokoro': 'out/ep01/full-v3/mix-v31', 'el': 'out/ep01/full-v3/mix-v31-el'}}
-QA_DIRS = {'v3': 'audio/reel/ep01-v3/mix-qa', 'v31': 'audio/reel/ep01-v3/mix-qa/v31'}
+        'v31': {'kokoro': 'out/ep01/full-v3/mix-v31', 'el': 'out/ep01/full-v3/mix-v31-el'},
+        'v32': {'kokoro': 'out/ep01/full-v3/mix-v32', 'el': 'out/ep01/full-v3/mix-v32-el'}}
+QA_DIRS = {'v3': 'audio/reel/ep01-v3/mix-qa', 'v31': 'audio/reel/ep01-v3/mix-qa/v31', 'v32': 'audio/reel/ep01-v3/mix-qa/v32'}
 OUT, QA_DIR = OUTS[S.DEFAULT_LOCK], QA_DIRS[S.DEFAULT_LOCK]
 
 
@@ -96,7 +100,8 @@ DUCK_BY_MOOD = [                        # the beat's `music (v3): ...` heading, 
     ('2 AM', 7), ('THE AVALANCHE', 8), ('THE RETURN', 8), ('CODA', 9), ('TAG', 7), ('COLD OPEN', 9),
     ('SYDNEY', 8), ('ACT THREE', 7), ('THE CLOCK', 9),                                     # v3.1's headings
 ]
-SMALL = {'call', 'monitor', 'laptop'}
+SMALL = {'call', 'monitor', 'laptop', 'phone', 'stage'}     # line tags that take a DEVICE chain
+VO_GAIN_DB = 2.0   # the V.O. takes are -18 LUFS (2 under the spoken -16, the take pass's design); +2 puts them level
 DESIGNED = {                            # holes that are story beats (the one silence, act-out blacks, the white)
     'act4': [('v31-S1.08d', 'S1.11', 'THE ONE SILENCE: the Remove click -> the buzz (room tone only)'),
              ('S1.09', 'S1.11', 'THE ONE SILENCE: the Cancel click -> the buzz (room tone only)'),
@@ -256,6 +261,7 @@ def _chain(hp_hz, hp_o, lp_hz, lp_o, pk_hz, pk_db, q):
 
 DEVICE = {
     'stream': _chain(150, 2, 7000, 2, 3000, 2.0, 0.9),    # his stream's mic and encode (S7.13's insert)
+    'stage': _chain(110, 2, 9000, 2, 2800, 2.5, 0.8),     # v3.2 22.01: DevDay's PA in a hall (reflections added below)
     'call': _chain(300, 4, 3400, 4, 1700, 3.0, 1.0),       # a video call's codec and a laptop speaker
     'phone': _chain(500, 4, 3400, 4, 2000, 2.0, 1.0),      # a phone held at arm's length (sc 8's POV)
     'laptop': _chain(280, 4, 5500, 2, 2200, 2.5, 1.0),
@@ -365,6 +371,12 @@ def dialogue(g, variant, qa):
             if dev:
                 pre = lufs(np.stack([x, x], 1) * 0.7071)
                 y = signal.sosfilt(DEVICE[dev], x)
+                if dev == 'stage':                 # the hall answering the PA
+                    rv = np.zeros_like(y)
+                    for d_, g_ in ((0.037, -9), (0.083, -12), (0.141, -15), (0.23, -19)):
+                        k_ = int(d_ * SR)
+                        rv[k_:] += y[:-k_] * db(g_)
+                    y = y + signal.sosfilt(signal.butter(2, 4500, 'low', fs=SR, output='sos'), rv)
                 post = lufs(np.stack([y, y], 1) * 0.7071)
                 x = y * db(pre - post - 1.0) if pre > -90 and post > -90 else y
                 info['device'][dev] = info['device'].get(dev, 0) + 1
@@ -374,6 +386,8 @@ def dialogue(g, variant, qa):
                 x = x[:k].copy()
                 f = min(len(x), int(0.015 * SR))
                 x[len(x) - f:] *= np.linspace(1, 0, f)
+            if l.get('tag') == 'V.O.' and VO_GAIN_DB:
+                gain += VO_GAIN_DB
             y = (np.stack([x, x], 1) * 0.7071 * db(gain)).astype('float32')
             S.add(bus, y, on - l.get('in', 0))
             speech.append((on, on + l['dur']))
@@ -490,9 +504,13 @@ def premix(name, g, variant, use_score=True):
     qa['score'] = sq
     # the act breaks: the score enters on the act's first frame over a black; fade it in (the lead, v3.1)
     if mus is not None and SCORE_HEAD_FADE.get(name):
-        k = int(SCORE_HEAD_FADE[name] * SR)
+        hits = designed_hits(cues, SCORE_HEAD_FADE[name] + 0.25)
+        fd = 0.04 if hits else SCORE_HEAD_FADE[name]          # a designed hit on the act's head keeps its attack
+        k = int(fd * SR)
         mus[:k] *= (np.sin(np.linspace(0, np.pi / 2, k)) ** 2).astype('float32')[:, None]
-        sq['head_fade_s'] = SCORE_HEAD_FADE[name]
+        sq['head_fade_s'] = fd
+        if hits:
+            sq['head_fade_why'] = f'designed hit at the head (cues.json designed_hit): {hits[0]}'
     # the one silence: the score gated to zero from the Remove (v3.1) / Cancel (v3) click to the buzz
     ck = S.silence_click(g)
     if name == 'act4' and ck and g.has('S1.11'):
@@ -601,6 +619,33 @@ SETPIECES = {   # (what, (beat, s), (beat, s or 'end' or ('sound', name)), measu
     'act4': [('the avalanche', ('S6.01', 0.0), ('S6.06', ('sound', 'freeze_hit_F')), 'st'),
              ('the hourglass shatter', ('S7.13', ('sound', 'hourglass_shatter')), ('S7.13', ('sound+', 'hourglass_shatter', 0.5)), 'mom')],
 }
+
+
+def designed_hits(cues, within):
+    """[(t, text)] of every entry the cue sheet marks designed_hit (any schema), at or before `within` seconds"""
+    out = []
+
+    def take(o):
+        t = next((o[k] for k in ('t', 'at', 'start', 't0') if isinstance(o.get(k), (int, float))), None)
+        if t is not None and t <= within:
+            out.append((round(float(t), 3), str(o.get('what') or o.get('why') or '')[:80]))
+
+    def walk(o):
+        if isinstance(o, dict):
+            dh = o.get('designed_hit')
+            if isinstance(dh, list):           # a list of hits (composer X's v3.2 sheets)
+                for e in dh:
+                    if isinstance(e, dict):
+                        take(e)
+            elif dh:                           # a flag on the entry itself
+                take(o)
+            for v in o.values():
+                walk(v)
+        elif isinstance(o, list):
+            for v in o:
+                walk(v)
+    walk(cues or {})
+    return sorted(out)
 
 
 def loudness_curve(x, win):
@@ -769,6 +814,63 @@ def measure(name, g, P, gain, out, lim_s, tp, ceil):
     return qa
 
 
+def outro_mix(variant, tag_gain, outd, tag_wav):
+    """THE TAG -> OUTRO SEAM (audit-v31 #4; the lead, v3.2): a copy of the outro's audio for the assembler, with the
+    tag's hum held 2 s under its start and crossfaded out, a 150 ms fade-in, and its first hit 6 dB down. The manifest
+    plays the outro at its own gain; the hum is laid pre-compensated for that gain, so it continues at the tag's level."""
+    tl = S.VARIANTS[variant]['tl']
+    mdir = os.path.join(ROOT, os.path.dirname(tl))
+    mf = next((os.path.join(mdir, f) for f in sorted(os.listdir(mdir)) if f.endswith('.manifest.json')), None)
+    if not mf:
+        return None
+    ch = next((c for c in json.load(open(mf)).get('chapters', []) if c.get('id') == 'outro'), None)
+    src = ((ch or {}).get('audio') or {}).get('src')
+    og = float(((ch or {}).get('audio') or {}).get('gain', 0.0))
+    if not src or not os.path.exists(os.path.join(ROOT, src)):
+        return None
+    o, sr = sf.read(os.path.join(ROOT, src), dtype='float64', always_2d=True)
+    if sr != SR:
+        o = signal.resample_poly(o, SR, sr, axis=0)
+    if o.shape[1] == 1:
+        o = np.repeat(o, 2, axis=1)
+    n = len(o)
+    t = np.arange(n) / SR
+    w = win_db(o[: 2 * SR], 0.01)
+    hit = float(np.argmax(w >= w.max() - 6.0) * 0.01)
+    g = np.interp(t, [0, hit + 0.35, hit + 0.85, t[-1]], [-6.0, -6.0, 0.0, 0.0])
+    o = o * db(g)[:, None]
+    k = int(0.15 * SR)
+    o[:k] *= (np.sin(np.linspace(0, np.pi / 2, k)) ** 2)[:, None]
+    ext = S.VARIANTS[variant]['ext']
+    tp = os.path.join(ROOT, S.VARIANTS[variant]['out'], f'tag-tail.{ext}')
+    hum_s = 0.0
+    if os.path.exists(tp):
+        h, _ = sf.read(tp, dtype='float64', always_2d=True)
+        h = h[: 2 * SR] * db(tag_gain - og)                    # at the tag's level once the manifest applies og
+        m = len(h)
+        th = np.arange(m) / SR
+        h *= np.interp(th, [0, 0.9, 2.0], [1.0, 1.0, 0.0])[:, None] ** 0.5
+        o[:m] += h
+        hum_s = round(m / SR, 2)
+    pk = float(np.abs(o).max())
+    if pk > db(-1.0):
+        o *= db(-1.0) / pk
+    out = os.path.join(outd, 'outro-mix.wav')
+    sf.write(out, o.astype('float32'), SR, subtype='PCM_24')
+    # the seam as the assembly will play it: the tag's last 200 / 400 ms against the outro copy's first, at og
+    tg, _ = sf.read(tag_wav, dtype='float64', always_2d=True)
+    oo = o * db(og)
+    rms = lambda x: float(20 * np.log10(np.sqrt(np.mean(x ** 2)) + 1e-12))
+    seam = {'tag_last_200ms_dbfs': round(rms(tg[-int(0.2 * SR):]), 1), 'outro_first_200ms_dbfs': round(rms(oo[: int(0.2 * SR)]), 1),
+            'step_200ms_db': round(rms(oo[: int(0.2 * SR)]) - rms(tg[-int(0.2 * SR):]), 1),
+            'step_400ms_db': round(rms(oo[: int(0.4 * SR)]) - rms(tg[-int(0.4 * SR):]), 1),
+            'outro_0.4-1.0s_dbfs': round(rms(oo[int(0.4 * SR): SR]), 1)}
+    return {'file': out, 'source': src, 'manifest': os.path.relpath(mf, ROOT), 'manifest_gain_db': og,
+            'hum_s': hum_s, 'first_hit_s': round(hit, 2), 'first_hit_db': -6.0, 'fade_in_s': 0.15, 'seam': seam,
+            'for_the_assembler': f'play this file in place of {src}, at the manifest\'s {og:+.0f} dB as before; its first '
+                                 f'hit is already -6 dB and the tag\'s hum is in it (no further change)'}
+
+
 def run(names, variant, use_score=True, report_only=False):
     segs = S.load_segs(variant)
     outd = os.path.join(ROOT, OUT[variant])
@@ -868,6 +970,12 @@ def run(names, variant, use_score=True, report_only=False):
               f"{m.get('dialogue_lufs')}, gain {m['gain_db']:+.2f} dB{' (guard %+.2f)' % guard[s] if s in guard else ''}; score "
               f"{'MISSING' if sc.get('missing') else ('-' if not sc else sc.get('file'))}; holes {len(m['holes_under_-42dBFS_0.3s'])} "
               f"({m['unmarked_holes']} unmarked; without score {m['unmarked_holes_without_score']} unmarked)")
+    if 'tag' in results:
+        oq = outro_mix(variant, gains['tag'], outd, os.path.join(outd, 'tag-mix.wav'))
+        if oq:
+            json.dump(oq, open(os.path.join(qad, 'outro-mix-qa.json'), 'w'), indent=1, default=float)
+            print(f"  outro: {os.path.relpath(oq['file'], ROOT)}: the tag's hum held {oq['hum_s']} s under it, its first hit "
+                  f"{oq['first_hit_db']} dB at {oq['first_hit_s']} s; the seam steps {oq['seam']['step_400ms_db']} dB (400 ms)")
     # the episode report (merged with the last one for segments not run this time)
     rep = json.load(open(rep_p)) if os.path.exists(rep_p) else {}
     segs_rep = rep.get('segments', {})

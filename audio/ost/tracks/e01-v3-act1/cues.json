@@ -648,9 +648,9 @@
    "post": null,
    "level": {
     "lufs_i": -19.82,
-    "st_p95": -17.06,
-    "st_max": -16.61,
-    "true_peak_dbtp": -5.19
+    "st_p95": -17.42,
+    "st_max": -17.14,
+    "true_peak_dbtp": -4.99
    },
    "target_lufs": -20.0,
    "engine_qa": {
@@ -670,11 +670,11 @@
      },
      "measured": {
       "lufs": -20.0,
-      "lra": 9.6,
-      "true_peak_db": -5.39,
-      "peak_db": -5.4,
-      "rms_db": -22.58,
-      "crest_db": 17.19,
+      "lra": 9.39,
+      "true_peak_db": -4.99,
+      "peak_db": -5.0,
+      "rms_db": -22.62,
+      "crest_db": 17.62,
       "seconds": 30.2
      }
     },
@@ -684,17 +684,17 @@
     "knee_whole": 0,
     "knee_completion": 0,
     "hit_check": {
-     "within_10ms": 6,
-     "of": 8,
-     "worst_ms": 22.7
+     "within_10ms": 7,
+     "of": 9,
+     "worst_ms": 20.0
     },
     "warnings": [
      "marker at 17.5 s: no clear onset within 10 ms ({'t': 17.5, 'offset_ms': np.float64(20.0), 'strength': 1.53})",
-     "marker at 22.5 s: no clear onset within 10 ms ({'t': 22.5, 'offset_ms': np.float64(22.7), 'strength': 1.87})"
+     "marker at 22.5 s: no clear onset within 10 ms ({'t': 22.5, 'offset_ms': np.float64(17.3), 'strength': 1.67})"
     ]
    },
    "note_qa": {
-    "notes": 207,
+    "notes": 222,
     "written_third_ok": true,
     "written_third_events": [],
     "grazes": 0,
@@ -730,7 +730,12 @@
     },
     {
      "t": 297.625,
-     "what": "HIS CLICK ships GTP-4 (5.08's click, the sound pass's, on this downbeat): the Build's whole bar on the chip",
+     "what": "the Build's bar (Gerg, left pane): 8",
+     "hit": true
+    },
+    {
+     "t": 301.125,
+     "what": "HIS CLICK ships GTP-4 (the picture's click, 11.04 frame 108; the sound pass lays it): the Build's whole pass on the chip, from the click",
      "hit": true
     },
     {
@@ -739,7 +744,7 @@
      "hit": true
     },
     {
-     "t": 304.031,
+     "t": 303.406,
      "what": "the website: the chip plays Mario's tail (his side ships it)",
      "hit": true
     },
@@ -973,7 +978,7 @@
    "laid_at_s": 276.125,
    "post": null,
    "level": {
-    "lufs_i": -19.15,
+    "lufs_i": -19.18,
     "st_p95": null,
     "st_max": null,
     "true_peak_dbtp": -5.19
@@ -1066,7 +1071,7 @@
   "exact": true,
   "whole": {
    "lufs_i": -20.52,
-   "st_p95": -17.87,
+   "st_p95": -17.88,
    "st_max": -14.58,
    "true_peak_dbtp": -3.15
   },
@@ -1103,9 +1108,9 @@
    },
    "duel": {
     "lufs_i": -19.82,
-    "st_p95": -17.06,
-    "st_max": -16.61,
-    "true_peak_dbtp": -5.19
+    "st_p95": -17.42,
+    "st_max": -17.14,
+    "true_peak_dbtp": -4.99
    },
    "pause": {
     "lufs_i": -21.01,
@@ -1126,7 +1131,7 @@
     "true_peak_dbtp": -9.23
    },
    "atem": {
-    "lufs_i": -19.15,
+    "lufs_i": -19.18,
     "st_p95": null,
     "st_max": null,
     "true_peak_dbtp": -5.19
@@ -1317,28 +1322,28 @@
     "section": "duel: the laptop opens (the match cut): the boot, the pulse",
     "start": 278.62,
     "end": 287.42,
-    "lufs_i": -22.95,
-    "st_p95": -21.45,
-    "st_max": -20.05,
+    "lufs_i": -23.05,
+    "st_p95": -21.5,
+    "st_max": -20.08,
     "true_peak_dbtp": -5.19
    },
    {
     "section": "duel: the split: the Build against the Addendum, trading bars over the Lighthouse",
     "start": 287.42,
     "end": 300.12,
-    "lufs_i": -18.57,
-    "st_p95": -16.64,
-    "st_max": -16.64,
-    "true_peak_dbtp": -5.39
+    "lufs_i": -19.14,
+    "st_p95": -17.56,
+    "st_max": -17.46,
+    "true_peak_dbtp": -5.7
    },
    {
     "section": "duel: the turn: the Addendum crosses; the chip copies its tail; the held chord",
     "start": 300.12,
     "end": 306.52,
-    "lufs_i": -19.35,
-    "st_p95": -19.03,
-    "st_max": -18.97,
-    "true_peak_dbtp": -7.7
+    "lufs_i": -18.16,
+    "st_p95": -17.15,
+    "st_max": -17.14,
+    "true_peak_dbtp": -4.99
    },
    {
     "section": "pause: MM-17 low: the C/G-flat pedal, the low tritone, the Launch stack in the gaps",
@@ -1371,7 +1376,7 @@
     "section": "atem: the Atem leak: the sting",
     "start": 278.62,
     "end": 280.62,
-    "lufs_i": -18.85,
+    "lufs_i": -18.88,
     "st_p95": null,
     "st_max": null,
     "true_peak_dbtp": -5.19

@@ -1,0 +1,151 @@
+{
+ "segment": "act3",
+ "variant": "el",
+ "seconds": 138.75,
+ "frames": 3330,
+ "samples": 6660000,
+ "timeline": "show/reel/ep01-v32-el/ep01-v32-el-act3.json",
+ "dialogue": {
+  "lines": 23,
+  "device": {
+   "monitor": 6,
+   "call": 5,
+   "stage": 1
+  },
+  "el_matched": 23,
+  "missing": []
+ },
+ "rooms": {
+  "stem": "audio/reel/ep01-v3/v32/el/act3-room.flac",
+  "dip_under_speech_db": 2.0
+ },
+ "sfx": {
+  "stem": "audio/reel/ep01-v3/v32/el/act3-sfx.flac",
+  "ducked": false
+ },
+ "score": {
+  "file": "audio/ost/tracks/e01-v3-act3/render/music-el.wav",
+  "cues": "audio/ost/tracks/e01-v3-act3/cues-el.json",
+  "length_s": 138.75,
+  "length_vs_segment_s": 0.0,
+  "lufs_as_delivered": -20.02,
+  "lufs_after_gain": -20.02,
+  "duck": {
+   "by_mood_db": [
+    [
+     "",
+     9.0
+    ]
+   ],
+   "cue_sheet_overrides": [],
+   "posts_dip_db": -3.0,
+   "envelope": "pre 0.25 s, joined across gaps < 2.5 s, 0.2 s in, 0.6 s out; depth smoothed 1.5 s"
+  },
+  "designed_silences": [
+   [
+    104.4,
+    115.192,
+    "DevDay, live (v3.2): no score under the stage; the hall's applause, the stage's own sound and his line play it dry; the felt comes back at home"
+   ],
+   [
+    136.25,
+    138.75,
+    "THE CLOCK's dead stop on bar 4's downbeat -> the act's last frame (black; the SFX pre-lap of the crane and the tings carries it)"
+   ]
+  ],
+  "head_fade_s": 1.2
+ },
+ "checks": [
+  {
+   "what": "Gerg's keys down the line, 20.06 (loud)",
+   "from": 63.92,
+   "to": 76.33,
+   "band_hz": [
+    1000,
+    5000
+   ],
+   "unspoken_s": 4.31,
+   "sfx_rms": -39.7,
+   "room_rms": -57.0,
+   "score_rms": -42.8,
+   "bed_rms": -42.6,
+   "sfx_minus_bed_db": 2.9
+  }
+ ],
+ "measured": {
+  "lufs_i": -16.02,
+  "true_peak_dbtp": -1.45,
+  "sample_peak_dbfs": -1.5,
+  "lra_lu": 6.6,
+  "gain_db": 2.4,
+  "limiter_ceiling_dbfs": -1.5,
+  "limiter_active_s": 1.675,
+  "dialogue_lufs": -14.46,
+  "score_lufs_after_duck": -18.41,
+  "score_rms_under_speech_dbfs": -31.2,
+  "score_rms_between_speech_dbfs": -20.5,
+  "score_runs": {
+   "count": 2,
+   "shortest_s": 21.15,
+   "runs": [
+    [
+     0.05,
+     104.35
+    ],
+    [
+     115.15,
+     21.15
+    ]
+   ]
+  },
+  "rooms_lufs": -36.11,
+  "sfx_lufs": -25.81,
+  "holes_under_-42dBFS_0.3s": [
+   {
+    "at": 136.4,
+    "s": 0.6,
+    "what": "designed: the act-out black: THE CLOCK's dead stop, the crane pre-lap coming up"
+   }
+  ],
+  "holes_mono_downmix": [
+   {
+    "at": 136.4,
+    "s": 0.6,
+    "what": "designed: the act-out black: THE CLOCK's dead stop, the crane pre-lap coming up"
+   }
+  ],
+  "holes_without_score": [
+   {
+    "at": 136.4,
+    "s": 0.6,
+    "what": "designed: the act-out black: THE CLOCK's dead stop, the crane pre-lap coming up"
+   }
+  ],
+  "unmarked_holes": 0,
+  "unmarked_holes_without_score": 0,
+  "jumps_over_15dB": {
+   "count": 26,
+   "rising": 22,
+   "rising_at_a_word": 13,
+   "rising_at_an_sfx": 4,
+   "rising_other": [
+    22.15,
+    42.3,
+    44.1,
+    56.25,
+    121.2
+   ],
+   "falling": 4
+  }
+ },
+ "file": "out/ep01/full-v3/mix-v32-el/act3-mix.wav",
+ "guard_db": null,
+ "seam_head": {
+  "from_gain_db": 0.81,
+  "to_gain_db": 2.4,
+  "ramp_s": 2.0,
+  "after": "act2"
+ },
+ "built": "2026-09-28 05:19:43",
+ "heard": "nothing here has been listened to; every number is measured"
+}

@@ -1,0 +1,83 @@
+{
+ "fingerprint": "67a55f26190ae536b74303e70d0b76c85d15f550",
+ "variant": "el",
+ "timelines": {
+  "coldopen": "show/reel/ep01-v32-el/ep01-v32-el-coldopen.json",
+  "act1": "show/reel/ep01-v32-el/ep01-v32-el-act1.json",
+  "act2": "show/reel/ep01-v32-el/ep01-v32-el-act2.json",
+  "act3": "show/reel/ep01-v32-el/ep01-v32-el-act3.json",
+  "act4": "show/reel/ep01-v32-el/ep01-v32-el-act4.json",
+  "tag": "show/reel/ep01-v32-el/ep01-v32-el-tag.json"
+ },
+ "hints": {
+  "coldopen": {
+   "score": "audio/ost/tracks/e01-v3-coldopen/render/music-el.wav",
+   "cues": "audio/ost/tracks/e01-v3-coldopen/cues-el.json",
+   "drop": [],
+   "why": {},
+   "grid": null
+  },
+  "act1": {
+   "score": "audio/ost/tracks/e01-v3-act1/render/music-el.wav",
+   "cues": "audio/ost/tracks/e01-v3-act1/cues-el.json",
+   "drop": [
+    "siren"
+   ],
+   "why": {
+    "siren": "162.84 s:  code_red  comic panic, the siren as a joke"
+   },
+   "grid": null,
+   "grid_lobby": [
+    96.0,
+    260.879,
+    10.98
+   ],
+   "grid_duel": [
+    95.25,
+    284.934,
+    3.9
+   ]
+  },
+  "act2": {
+   "score": "audio/ost/tracks/e01-v3-act2/render/music-el.wav",
+   "cues": "audio/ost/tracks/e01-v3-act2/cues-el.json",
+   "drop": [
+    "knee-stabs"
+   ],
+   "why": {
+    "knee-stabs": "137.62 s: the knee stab on stamp 1 (C F Bb Eb over Ab)"
+   },
+   "grid": null
+  },
+  "act3": {
+   "score": "audio/ost/tracks/e01-v3-act3/render/music-el.wav",
+   "cues": "audio/ost/tracks/e01-v3-act3/cues-el.json",
+   "drop": [],
+   "why": {},
+   "grid": null
+  },
+  "act4": {
+   "score": "audio/ost/tracks/e01-v3-act4/render/music-el.wav",
+   "cues": "audio/ost/tracks/e01-v3-act4/cues-el.json",
+   "drop": [],
+   "why": {},
+   "grid": null,
+   "build_stop": 334.527
+  },
+  "tag": {
+   "score": "audio/ost/tracks/e01-v3-tag/render/music-el.wav",
+   "cues": "audio/ost/tracks/e01-v3-tag/cues-el.json",
+   "drop": [
+    "button-chord",
+    "demo-film",
+    "demo-blip"
+   ],
+   "why": {
+    "button-chord": "38.09 s: THE BUTTON: F3 C4 G4 C5, no third (the vault's F hum is its root)",
+    "demo-film": "3.50 s: the demo opens up: MM-12 ducks to the room (the film plays its own bed)",
+    "demo-blip": "11.46 s: a tiny chip blip as the monitor's still snaps back to the grid (i213)"
+   },
+   "grid": null
+  }
+ }
+}

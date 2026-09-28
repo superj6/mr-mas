@@ -1,0 +1,146 @@
+{
+ "segment": "coldopen",
+ "variant": "el",
+ "timeline": "show/reel/ep01-v32-el/ep01-v32-el-coldopen.json",
+ "timeline_variant": "el",
+ "seconds": 24.292,
+ "frames": 583,
+ "rooms": [
+  {
+   "room": "hall: room_tone -38 + a polite crowd -41 (coldopen_bed.py)",
+   "from": 0.0,
+   "to": 12.417,
+   "lead": "under the 0.5 s black"
+  },
+  {
+   "room": "banquet applause across the street, -29 LUFS, +6 dB swell after 'forward', cut on the freeze",
+   "from": 0.5,
+   "to": 12.417
+  },
+  {
+   "room": "the freeze hum (room tone 120-700 Hz, -39 LUFS), stepping 0/-4/-9/-16 dB with the rewind",
+   "from": 12.417,
+   "to": 24.292
+  },
+  {
+   "room": "the rewind (the hall + banquet reversed, speed on the counter)",
+   "from": 19.792,
+   "to": 24.292
+  }
+ ],
+ "sfx": [
+  [
+   "1.03",
+   "synth:plink",
+   8.308,
+   -14.0,
+   "-10.0 dB (the lock's duck on the v2 stem)"
+  ],
+  [
+   "1.03",
+   "synth:slosh",
+   8.358,
+   -30.0,
+   "-10.0 dB (the lock's duck on the v2 stem)"
+  ],
+  [
+   "2.01",
+   "piano_fired_F4",
+   12.417,
+   -14.0,
+   ""
+  ],
+  [
+   "2.02",
+   "synth:buzz",
+   13.092,
+   -20.0,
+   ""
+  ],
+  [
+   "2.03",
+   "key_tap_soft_03",
+   16.815,
+   -36.0,
+   "-10.0 dB (the lock's duck on the v2 stem)"
+  ],
+  [
+   "3.01",
+   "orb_servo",
+   17.842,
+   -22.0,
+   ""
+  ],
+  [
+   "3.01",
+   "orb_servo",
+   18.142,
+   -24.0,
+   ""
+  ],
+  [
+   "3.01",
+   "orb_servo",
+   18.442,
+   -22.0,
+   ""
+  ],
+  [
+   "3.01",
+   "glyph_blink",
+   18.742,
+   -26.0,
+   ""
+  ],
+  [
+   "3.02",
+   "orb_servo",
+   20.292,
+   -24.0,
+   ""
+  ],
+  [
+   "3.02",
+   "orb_servo",
+   21.342,
+   -27.0,
+   ""
+  ],
+  [
+   "3.02",
+   "glyph_blink",
+   22.792,
+   -26.0,
+   ""
+  ]
+ ],
+ "sfx_missing": [],
+ "sfx_dropped": [],
+ "added": [
+  {
+   "what": "the rewind's end: the scrub brightening as it speeds from the slip, a tape whirr riding its speed, the collapse darkening it in three steps, cut dead on the last frame",
+   "at": 19.79,
+   "to": 24.29,
+   "why": "shots-coldopen \u00a70: the 640-frame cut ends on the rewind collapsing into the intro"
+  }
+ ],
+ "score_hints": {
+  "score": "audio/ost/tracks/e01-v3-coldopen/render/music-el.wav",
+  "cues": "audio/ost/tracks/e01-v3-coldopen/cues-el.json",
+  "drop": [],
+  "why": {},
+  "grid": null
+ },
+ "room_stem": {
+  "lufs": -32.62,
+  "peak_dbfs": -13.23,
+  "p10_50ms_dbfs": -41.0
+ },
+ "sfx_stem": {
+  "lufs": -27.2,
+  "peak_dbfs": -14.0,
+  "p10_50ms_dbfs": -240.0
+ },
+ "room_under_-55dBFS_0.3s": [],
+ "room_levels": []
+}
