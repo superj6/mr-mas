@@ -1071,7 +1071,7 @@ def main(argv):
     ap.add_argument('--rebuild-stems', action='store_true')
     ap.add_argument('--no-heavy', action='store_true', help="don't re-run through ops/heavy.sh")
     ap.add_argument('--lock', default=S.DEFAULT_LOCK, choices=sorted(S.LOCKS),
-                    help='v31 (default: show/reel/ep01-v31/) or v3 (show/reel/ep01-v3/)')
+                    help='v33 (default: show/reel/ep01-v33/), v32, v31 or v3')
     a = ap.parse_args(argv)
     set_lock(a.lock)
     if not a.no_heavy and os.environ.get('MRMAS_V3SOUND_INNER') != '1':

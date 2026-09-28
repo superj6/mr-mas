@@ -1,0 +1,180 @@
+{
+ "segment": "tag",
+ "variant": "kokoro",
+ "timeline": "show/reel/ep01-v33/ep01-v33-tag.json",
+ "timeline_variant": "kokoro",
+ "seconds": 42.333,
+ "frames": 1016,
+ "rooms": [
+  {
+   "room": "dark",
+   "from": -0.6,
+   "to": 42.333,
+   "first": "32.01",
+   "last": "33.05",
+   "lead": 0.6,
+   "trail": 0.0,
+   "lift_db": 1.1
+  }
+ ],
+ "sfx": [
+  [
+   "32.02",
+   "tape_start",
+   12.292,
+   -24
+  ],
+  [
+   "32.04",
+   "orb_scan_sweep",
+   21.133,
+   -21
+  ],
+  [
+   "32.04",
+   "glyph_blink",
+   21.833,
+   -27
+  ],
+  [
+   "32.04",
+   "orb_scan_sweep",
+   22.033,
+   -24
+  ],
+  [
+   "32.04",
+   "glyph_blink",
+   23.683,
+   -27
+  ],
+  [
+   "32.07",
+   "key_tap_soft_03",
+   27.995,
+   -24
+  ],
+  [
+   "32.07",
+   "key_tap_soft_05",
+   29.107,
+   -26
+  ],
+  [
+   "33.01",
+   "synth:thud",
+   31.583,
+   -8
+  ],
+  [
+   "33.02",
+   "paper_curl",
+   33.601,
+   -30
+  ],
+  [
+   "33.02",
+   "paper_curl",
+   35.928,
+   -35
+  ],
+  [
+   "33.04",
+   "vault_hum_F",
+   39.093,
+   -31
+  ]
+ ],
+ "sfx_missing": [],
+ "sfx_dropped": [
+  {
+   "beat": "33.04",
+   "name": "synth:button_chord",
+   "claimed_by_score": "button-chord",
+   "evidence": "39.09 s: THE BUTTON: F3 C4 G4 C5, no third (the vault's F hum is its root)"
+  },
+  {
+   "layer": "demo-film (its bed, the stutter and stills clicks)",
+   "claimed_by_score": "demo-film",
+   "evidence": "3.50 s: the demo opens up: MM-12 ducks to the room (the film plays its own bed)"
+  },
+  {
+   "layer": "demo-blip (i213)",
+   "claimed_by_score": "demo-blip",
+   "evidence": "11.46 s: a tiny chip blip as the monitor's still snaps back to the grid (i213)"
+  }
+ ],
+ "added": [
+  {
+   "what": "the vault's F hum, L-cut from Act Four",
+   "to": 1.5,
+   "why": "plan S8.10 lcut 1.5 s"
+  },
+  {
+   "what": "ELGOOG's demo film: its own bright bed (small, then open), the swell, the stutter (clicks at i137-147), the cut on the stills (clicks i151, 159, 167), the room ducking -10 dB and returning in four steps (i199-208; the LEDs from i202), a chip blip at i213",
+   "at": 2.58,
+   "to": 11.46,
+   "lufs": -24,
+   "why": "runway.md \u00a77 (the insert is silent); plan v31-32.01d; the lead: \"the Elgoog demo's stutter clicks and the room returning\""
+  }
+ ],
+ "score_hints": {
+  "score": "audio/ost/tracks/e01-v3-tag/render/music.wav",
+  "cues": "audio/ost/tracks/e01-v3-tag/cues.json",
+  "drop": [
+   "button-chord",
+   "demo-film",
+   "demo-blip"
+  ],
+  "why": {
+   "button-chord": "39.09 s: THE BUTTON: F3 C4 G4 C5, no third (the vault's F hum is its root)",
+   "demo-film": "3.50 s: the demo opens up: MM-12 ducks to the room (the film plays its own bed)",
+   "demo-blip": "11.46 s: a tiny chip blip as the monitor's still snaps back to the grid (i213)"
+  },
+  "grid": null
+ },
+ "room_stem": {
+  "lufs": -38.9,
+  "peak_dbfs": -23.96,
+  "p10_50ms_dbfs": -48.5
+ },
+ "sfx_stem": {
+  "lufs": -34.1,
+  "peak_dbfs": -8.0,
+  "p10_50ms_dbfs": -240.0
+ },
+ "room_under_-55dBFS_0.3s": [],
+ "click_scan": {
+  "room": {
+   "boundaries": [],
+   "cutoffs": []
+  },
+  "sfx": {
+   "boundaries": [],
+   "cutoffs": [
+    {
+     "at": 24.025,
+     "ratio": 11.3,
+     "from_dbfs": -42.9,
+     "to_dbfs": -57.5,
+     "kind": "in-sample",
+     "inside": "glyph_blink"
+    }
+   ]
+  },
+  "rule": "second difference > 10.0x the local 99th percentile (see click_scan)"
+ },
+ "room_levels": [
+  {
+   "room": "dark@tag:32.01",
+   "p5_50ms_dbfs": -41.1,
+   "lift_db": 1.1
+  }
+ ],
+ "tail": {
+  "file": "tag-tail.wav",
+  "seconds": 2.0,
+  "lufs": -37.11,
+  "what": "the sound past the tag's last frame (the vault's hum), for the outro's first 2 s"
+ }
+}

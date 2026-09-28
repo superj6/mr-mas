@@ -1,0 +1,83 @@
+{
+ "fingerprint": "7f81a59879cc5ff05f4aac89c39c18e4fb9cf501",
+ "variant": "kokoro",
+ "timelines": {
+  "coldopen": "show/reel/ep01-v33/ep01-v33-coldopen.json",
+  "act1": "show/reel/ep01-v33/ep01-v33-act1.json",
+  "act2": "show/reel/ep01-v33/ep01-v33-act2.json",
+  "act3": "show/reel/ep01-v33/ep01-v33-act3.json",
+  "act4": "show/reel/ep01-v33/ep01-v33-act4.json",
+  "tag": "show/reel/ep01-v33/ep01-v33-tag.json"
+ },
+ "hints": {
+  "coldopen": {
+   "score": "audio/ost/tracks/e01-v3-coldopen/render/music.wav",
+   "cues": "audio/ost/tracks/e01-v3-coldopen/cues.json",
+   "drop": [],
+   "why": {},
+   "grid": null
+  },
+  "act1": {
+   "score": "audio/ost/tracks/e01-v3-act1/render/music.wav",
+   "cues": "audio/ost/tracks/e01-v3-act1/cues.json",
+   "drop": [
+    "siren"
+   ],
+   "why": {
+    "siren": "153.81 s:  code_red  comic panic, the siren as a joke"
+   },
+   "grid": null,
+   "grid_lobby": [
+    96.0,
+    255.087,
+    11.23
+   ],
+   "grid_duel": [
+    95.25,
+    279.719,
+    3.45
+   ]
+  },
+  "act2": {
+   "score": "audio/ost/tracks/e01-v3-act2/render/music.wav",
+   "cues": "audio/ost/tracks/e01-v3-act2/cues.json",
+   "drop": [
+    "knee-stabs"
+   ],
+   "why": {
+    "knee-stabs": "148.62 s: the knee stab on stamp 1 (C F Bb Eb over Ab)"
+   },
+   "grid": null
+  },
+  "act3": {
+   "score": "audio/ost/tracks/e01-v3-act3/render/music.wav",
+   "cues": "audio/ost/tracks/e01-v3-act3/cues.json",
+   "drop": [],
+   "why": {},
+   "grid": null
+  },
+  "act4": {
+   "score": "audio/ost/tracks/e01-v3-act4/render/music.wav",
+   "cues": "audio/ost/tracks/e01-v3-act4/cues.json",
+   "drop": [],
+   "why": {},
+   "grid": null,
+   "build_stop": 328.533
+  },
+  "tag": {
+   "score": "audio/ost/tracks/e01-v3-tag/render/music.wav",
+   "cues": "audio/ost/tracks/e01-v3-tag/cues.json",
+   "drop": [
+    "button-chord",
+    "demo-film",
+    "demo-blip"
+   ],
+   "why": {
+    "button-chord": "39.09 s: THE BUTTON: F3 C4 G4 C5, no third (the vault's F hum is its root)",
+    "demo-film": "3.50 s: the demo opens up: MM-12 ducks to the room (the film plays its own bed)",
+    "demo-blip": "11.46 s: a tiny chip blip as the monitor's still snaps back to the grid (i213)"
+   },
+   "grid": null
+  }
+ }
+}

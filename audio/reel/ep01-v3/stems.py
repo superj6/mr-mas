@@ -118,7 +118,7 @@ LOCKS = {
         'kokoro': dict(tl='show/reel/ep01-v33/ep01-v33-{seg}.json', out='audio/reel/ep01-v3/v33', ext='wav'),
         'el': dict(tl='show/reel/ep01-v33-el/ep01-v33-el-{seg}.json', out='audio/reel/ep01-v3/v33/el', ext='flac')}),
 }
-DEFAULT_LOCK = 'v32'                  # --lock v33 once show/reel/ep01-v33/ exists
+DEFAULT_LOCK = 'v33'                  # the v3.3 lock (show/reel/ep01-v33/); --lock v32 / v31 / v3 still work
 LOCK = DEFAULT_LOCK
 VARIANTS = LOCKS[LOCK]['variants']
 BP_DIR = os.path.join(ROOT, LOCKS[LOCK]['bp'])
@@ -216,9 +216,13 @@ def tail_safe(x):
     return x
 
 
+LAID_BUS = {}     # v3.3: id(bus) -> [(start, end)] of everything add_fx laid on it (block clock), for the click scan
+
+
 def add_fx(bus, x, t):
     """lay an SFX with its tail made safe (tail_safe)"""
     add(bus, tail_safe(x), t)
+    LAID_BUS.setdefault(id(bus), []).append((float(t), float(t) + len(x) / SR))
 
 
 def sos(kind, f, order=2):
@@ -637,6 +641,9 @@ LEAD_AT = {('act1', '5.01'): 0.6, ('act1', '9.01'): 0.8, ('act1', '11.01'): 0.8,
            ('act3', 'v31-18.00'): 1.0, ('act4', 'v31-S3.00p'): 0.6,
            # v3.2: the lobby by day under S4.08's dial tone; the hall growing through the black glass into 22.01
            ('act4', 'v32-S5.00'): 0.8, ('act3', '22.01'): 1.0}
+# per lock (v3.3 17.13's plan J-cut: "the rack's fans and LED ticks under the black (Act Three's arrival)", lead_s 0.6;
+# the glass (17.12) is cut, so the black is Act Two's last beat and Act Three's room comes in 0.6 s before the act)
+LEAD_AT_LOCK = {'v33': {('act3', 'v31-18.00'): 0.6}}
 # a lead that depends on the beat before (v3.2: S4.09 after v32-S5.00, whose picture steps into the CCTV's grade from
 # his look up at k126, so the CCTV hum comes in there: the L-cut "carried into S4.09")
 LEAD_AFTER = {('act4', 'S4.09', 'v32-S5.00'): 2.6}
@@ -668,7 +675,12 @@ MOVE_WORD = {('act2', '15.15', 'folder_slide'): ('licenses', 10 / FPS, 'onset'),
              ('act2', '15.15', 'rubber_stamp_C'): ('licenses', 42 / FPS, 'peak')}
 # sounds the timeline doesn't have: (sound, anchor, peak dBFS, why). anchor: ('sound', name, offset s)
 ADD_SOUND = {('act1', '11.04'): [('dialog_ok_click', ('sound', 'synth:cheer', -6 / FPS), -12.0,
-                                  "the click that ships GTP-4: launch night's click (5.08's), 6 frames before the cheer")]}
+                                  "the click that ships GTP-4: launch night's click (5.08's), 6 frames before the cheer")],
+             # v3.3 (script-v33-notes §6, shots-act1 §13): Tasya's hand settles the collar; on the stick's
+             # key_ring_jangle_3 the ring swings against it (the picture's clink at k21, one frame before the jangle's
+             # 0.9 s): the gold clasp's small clink, under the ring's
+             ('act1', '9.09'): [('CLASP', ('sound', 'key_ring_jangle_3', 21 / FPS - 0.9), -31.0,
+                                 "the collar's clasp: the key ring swings against it as her hand settles it (k21)")]}
 SOUND_GAIN = {('act4', 'S7.13', 'hourglass_shatter'): -10.0}
 # a sound that ends relative to its beat's end: (s after the beat's end, fade s). v3.3 (X1): S4.08's dial tone is a loop
 # file that ended hot 1.7 s into the lobby walk-in; it now hands over just after the cut, under the lobby's lead
@@ -874,6 +886,14 @@ def make_sound(seg, name, dur, align, r, beat_id):
     if name == 'RING_PHONE':              # one ring of a phone on the desk, through its own small speaker
         x = load('call_ring').astype('float64')
         return bp(x[: int(1.1 * SR)], 500, 3400, 4), 0.0
+    if name == 'CLASP':                   # a small gold clasp touched by a steel key: two bright inharmonic partials, a
+        n = int(0.16 * SR)                # 1.5 ms tick, gone in about 120 ms (soft; under the ring's own jangle)
+        tt = np.arange(n) / SR
+        y = sum(a_ * np.sin(2 * np.pi * f_ * tt + r.uniform(0, 6.28)) * np.exp(-tt / d_)
+                for f_, a_, d_ in ((3310, 1.0, 0.030), (5170, 0.55, 0.018), (7940, 0.3, 0.010)))
+        y = y * np.minimum(1, tt / 0.0008) + bp(r.standard_normal(n), 3000, 9000) * np.exp(-tt / 0.0015) * 0.5
+        y[-int(0.02 * SR):] *= np.linspace(1, 0, int(0.02 * SR))
+        return st(y), 0.0
     if name == 'BADGE_SLIDE':             # a plastic card skidding across a wooden floor, slowing
         n = int(0.75 * SR)
         tt = np.arange(n) / SR
@@ -1366,7 +1386,7 @@ def build_block(segs, hints, qa):
             continue
         prev = runs[j - 1] if j > 0 else None
         nxt = runs[j + 1] if j + 1 < len(runs) else None
-        lead = LEAD_AT.get(first, LEAD) if prev is not None else 0.0
+        lead = {**LEAD_AT, **LEAD_AT_LOCK.get(LOCK, {})}.get(first, LEAD) if prev is not None else 0.0
         if prev is not None and (first[0], first[1], prev[4][1]) in LEAD_AFTER:
             lead = LEAD_AFTER[(first[0], first[1], prev[4][1])]
         if prev is not None and prev[0] is None:                   # after a black: never before the black starts
@@ -2067,6 +2087,40 @@ def click_scan(x, boundaries):
     return out
 
 
+def classify_sfx_flags(q, named, spans):
+    """v3.3: tell the SFX stem's flags apart. A cut-off inside a laid sound's body (not in its last 6 ms, where a
+    truncation would show) is 'in-sample': the source's own decay, e.g. a UI click falling 20 dB in 5 ms, or the egg
+    timer's 3 ms tick. A boundary flag within -5..+30 ms of a laid sound's start is that sound's attack ('laid onset':
+    a freeze hit on the cut). Named sounds (the timeline's) are named; the added layers by their QA note."""
+    def note_for(t):
+        best = None
+        for a in q.get('added', []):
+            a0 = a.get('at')
+            if not isinstance(a0, (int, float)):
+                continue
+            a1 = a.get('to') if isinstance(a.get('to'), (int, float)) else a0 + (a.get('len_s') or 4.0)
+            if a0 - 1.0 <= t <= a1 + 1.0:
+                best = a['what']
+        return best or 'an added layer'
+    for f_ in q['click_scan']['sfx']['cutoffs']:
+        t = f_['at']
+        body = [nm for a_, e_, nm in named if a_ <= t < e_ - 0.006]
+        anyb = [1 for a_, e_ in spans if a_ <= t < e_ - 0.006]
+        f_['kind'] = 'in-sample' if (body or anyb) else 'truncation'
+        if f_['kind'] == 'in-sample':
+            f_['inside'] = body[-1] if body else note_for(t)
+    for f_ in q['click_scan']['sfx']['boundaries']:
+        if f_['kind'] == 'onset':
+            continue
+        t = f_['at']
+        st_ = [nm for a_, e_, nm in named if a_ - 0.005 <= t <= a_ + 0.03]
+        anys = [1 for a_, e_ in spans if a_ - 0.005 <= t <= a_ + 0.03]
+        if st_ or anys:
+            f_['laid_onset'] = st_[-1] if st_ else note_for(t)
+        elif f_['kind'] == 'cut-off' and any(a_ <= t < e_ - 0.006 for a_, e_ in spans):
+            f_['in_sample'] = True
+
+
 def measure_stem(x):
     w = win_db(x)
     return {'lufs': round(lufs(x), 2), 'peak_dbfs': round(20 * np.log10(float(np.abs(x).max()) + 1e-12), 2),
@@ -2096,6 +2150,7 @@ def build(variant='kokoro', only=None, quiet=False):
               'score_hints': hints.get(s)} for s in SEGS + ['card']}
     JANGLE.clear()
     LAID.clear()
+    LAID_BUS.clear()
     room_b, fx_b = build_block(segs, hints, qa)
     room_c, fx_c = build_coldopen(segs['coldopen'], hints, qa['coldopen'])
     lifts = qa.pop('_room_levels')
@@ -2123,20 +2178,19 @@ def build(variant='kokoro', only=None, quiet=False):
         bnd = [st_ for st_, _ in segs[s].starts[1:]] if segs[s].starts else []
         q['click_scan'] = {'room': click_scan(rm, bnd), 'sfx': click_scan(fx, bnd),
                            'rule': f'second difference > {CLICK_RATIO}x the local 99th percentile (see click_scan)'}
-        for f_ in q['click_scan']['sfx']['cutoffs']:
-            body = [nm for a_, e_, nm in LAID.get(s, []) if a_ <= f_['at'] <= e_ - 0.02]
-            f_['kind'] = 'in-sample' if body else 'truncation'
-            if body:
-                f_['inside'] = body[-1]      # the source file's own decay (e.g. a UI click falling 20 dB in 5 ms); not a cut
+        spans = [(a_ - (0.0 if s == 'coldopen' else segs[s].off), e_ - (0.0 if s == 'coldopen' else segs[s].off))
+                 for a_, e_ in LAID_BUS.get(id(fx_c if s == 'coldopen' else fx_b), [])]
+        classify_sfx_flags(q, LAID.get(s, []), spans)
         q['room_levels'] = [l for l in lifts if l['room'].split('@')[1].startswith(s + ':')] if s != 'coldopen' else []
         json.dump(q, open(os.path.join(d, f'{s}-stems-qa.json'), 'w'), indent=1)
         out[s] = q
         cs = q['click_scan']
-        flags = [f"{k_}:{f_['kind']}@{f_['at']}({f_['ratio']}x)" for k_ in ('room', 'sfx') for f_ in cs[k_]['boundaries'] if f_['kind'] != 'onset'] + \
+        flags = [f"{k_}:{f_['kind']}@{f_['at']}({f_['ratio']}x)" for k_ in ('room', 'sfx') for f_ in cs[k_]['boundaries']
+                 if f_['kind'] != 'onset' and not f_.get('laid_onset') and not f_.get('in_sample')] + \
                 [f"{k_}:cut-off@{f_['at']}({f_['ratio']}x)" for k_ in ('room', 'sfx') for f_ in cs[k_]['cutoffs'] if f_.get('kind') != 'in-sample']
         if not quiet:
             print(f"    clicks (not onsets): {flags or 'none'}; onsets at cuts: "
-                  f"{sum(1 for k_ in ('room', 'sfx') for f_ in cs[k_]['boundaries'] if f_['kind'] == 'onset')}; in-sample decays: "
+                  f"{sum(1 for k_ in ('room', 'sfx') for f_ in cs[k_]['boundaries'] if f_['kind'] == 'onset' or f_.get('laid_onset'))}; in-sample decays: "
                   f"{[(f_['at'], f_['inside']) for f_ in cs['sfx']['cutoffs'] if f_.get('kind') == 'in-sample'] or 'none'}")
         if not quiet:
             print(f"  {os.path.relpath(os.path.join(d, s + '-room.' + ext), ROOT)} + -sfx.{ext}: {segs[s].total:.2f} s; room "

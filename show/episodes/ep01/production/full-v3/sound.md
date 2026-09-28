@@ -1,15 +1,90 @@
 # Ep1 v3: rooms, SFX and the final mix (`v3-sound`, 2026-09-27)
 
-> **Status (v3.3): the tools carry the v3.3 polish fixes (§W); the v3.3 lock is not mixed yet.** The v3.2 lock is MIXED, both variants, on the final v3.2 renders (§V). The v3.1 lock is mixed, both variants (§0). Tracks A2 (rooms and SFX stems) and A3 (the mix) of [PLAN.md](PLAN.md), under the showrunner's "just do a full episode attempt with your best judgement".
+> **Status (v3.3): the v3.3 lock is MIXED, both variants, on the final v3.3 scores (§W).** The v3.2 lock was mixed, both variants (§V; its mix folders were deleted after v3.3 passed QA, for disk; `--lock v32` rebuilds them). The v3.1 lock is mixed, both variants (§0). Tracks A2 (rooms and SFX stems) and A3 (the mix) of [PLAN.md](PLAN.md), under the showrunner's "just do a full episode attempt with your best judgement".
 >
 > **Nothing here was heard.** Every number below is measured from the files. I also looked at envelope plots of the stems and mixes around the moments listed in §5. Whether a room sounds like its room, whether the keys read as Gerg, and whether any cut plays all need an ear.
 > Nothing was committed.
 >
 > §W is the v3.3 polish round's tool changes, §V the v3.2 round, §0 the v3.1 round. §1–§8 are the v3 round: the method, which still holds, and the v3 lock's numbers.
 
-## W. v3.3 polish: the tool changes (PLAN.md §6, the X items)
+## W. v3.3: the polish round (PLAN.md §6, the X items) and the mix
 
-Made before the v3.3 lock exists and checked on the v3.2 lock, in scratch (Act Four and the cold open rebuilt, then deleted). Nothing is mixed yet. When `show/reel/ep01-v33/` (and `-el`) and both composers' v3.3 refits land, the run is `mix_episode.py --all --lock v33` (and `--variant el`), at −16 LUFS with `VO_GAIN_DB` 2.0. The `v33` lock entries are in both tools already; the default stays `v32` until the lock exists.
+### W.1 Re-run
+
+```sh
+audio/.venv-casting/bin/python audio/reel/ep01-v3/mix_episode.py --all                  # v3.3, Kokoro (the default lock now)
+audio/.venv-casting/bin/python audio/reel/ep01-v3/mix_episode.py --all --variant el     # v3.3, ElevenLabs
+audio/.venv-casting/bin/python audio/reel/ep01-v3/mix_episode.py --all --lock v32       # v3.2 (and v31, v3) still work
+```
+
+| What | v3.3 |
+|---|---|
+| Timelines | `show/reel/ep01-v33/ep01-v33-<seg>.json`, EL `show/reel/ep01-v33-el/ep01-v33-el-<seg>.json` |
+| Stems | `audio/reel/ep01-v3/v33/` (WAV), `audio/reel/ep01-v3/v33/el/` (FLAC), with `tag-tail` |
+| **Mixes** | **`out/ep01/full-v3/mix-v33/<seg>-mix.wav`**, `out/ep01/full-v3/mix-v33-el/`, each with `outro-mix.wav` |
+| QA and the loudness report | `audio/reel/ep01-v3/mix-qa/v33/<variant>/` |
+
+The lengths are the pictures' frames:
+
+| | Cold open | Act One | Act Two | Act Three | Act Four | Tag |
+|---|---|---|---|---|---|---|
+| Kokoro | 640 | 7,934 | 4,573 | 3,202 | 12,138 | 1,016 |
+| EL | 583 | 8,059 | 4,340 | 3,114 | 12,398 | 1,016 |
+
+Every v3.3 score render names its v3.3 timeline and is used. The Kokoro mix was run twice on the final tools, and the WAVs are bit-identical (md5).
+
+### W.2 Measured (both variants)
+
+| | Kokoro | EL |
+|---|---|---|
+| Cold open · Act One · Act Two · Act Three · Act Four (LUFS-I) | −16.0 · −16.0 · −16.0 · −16.01 · −16.01 | −16.0 · −16.0 · −16.0 · −16.02 · −16.01 |
+| Tag | −17.47 (the dialogue guard, as in v3.2) | −17.55 |
+| Episode (the story plus the card) | −16.03 LUFS | −16.05 LUFS |
+| Highest true peak | −1.05 dBTP (the tag) | −1.44 dBTP |
+| Dialogue spread | 1.97 LU | 1.95 LU |
+| Unmarked holes | 0 | 0 (1 without the score: 0.35 s at S2.01's head, which the night's fifth covers) |
+| Missing lines, missing SFX | 0, 0 | 0, 0 |
+| **X6**, the avalanche (S6.01 to S6.06's freeze hit) | −15.89 → −14.23 (+1.66 LU, 1.84 dB); set piece +2.49 LU over the talk | −15.95 → −14.27 (+1.67 LU); +2.49 LU |
+| The shatter · the odometer | +2.27 · +2.43 LU | +2.36 · +2.33 LU |
+| The outro | the hum held 2.0 s, first hit −6 dB; seam step 11.7 dB (400 ms) | 11.4 dB |
+
+**X3, the night's re-entry** (composer Y's `designed_hit`: the fifth at Act Four 41.017 s, 0.400 s before the cut into S2.01; EL 42.308 s):
+
+| | v3.2 mix | v3.3 score as rendered | **v3.3 mix** (Kokoro / EL) |
+|---|---|---|---|
+| The fifth's first 400 ms | −15.0 LUFS | −18.2 | **−17.1 / −17.3** |
+| The 400 ms before it | −39.3 | −74.7 | −38.6 / −39.0 (the room after the post) |
+| Largest 400 ms rise | +24.3 dB, on the cut | — | **+21.5 / +21.7 dB**, 0.4 s before the cut |
+| Step at the cut (0.5 s either side) | — | −9.0 dB | −8.9 / −8.6 dB |
+
+The mix adds 1.1 dB over Y's stem: the master gain plus the night room. The step at the cut matches Y's −9.1 dB. No mix-side ride was added.
+
+**The click scan** (the second difference over 10× the local 99th percentile, at every beat boundary, on the room, SFX, score and mix stems; then a whole-stem cut-off sweep):
+- **Room stems: one flag in both variants.** It's Kokoro Act Four 98.435 s, 10.1×: the office clock's own tick (−47 dBFS), 23 ms before S3.01 → S3.02. Both beats are in the office, so it's not a room change. **No room change steps**, and there are no room cut-offs.
+- **SFX stems: no truncations.** Every non-onset boundary flag is a laid sound's attack on its cut:
+  - `freeze_hit_F`: Act One 9.04, and Act Two 13.03 and 17.04;
+  - `collar_pop_F5` (9.08);
+  - `synth:thud` (v31-12.03);
+  - `post_click` (Act Three 20.03).
+
+  Every cut-off is the sound's own decay inside its body: the UI clicks, the phone steps, the egg timer's 3 ms ticks, `neon_ignite` and `glyph_blink`.
+- **Score, three flags, all designed:**
+  - Act Two 15.10 (30×): the Senate cue's pizzicato on the cut, masked in the mix;
+  - Act Three 23.01 (18×): THE CLOCK's "step on F", bar 1;
+  - the tag 8.88 s (31×): the demo film "cuts out dead" on the first still.
+- **The mix: the same moments and nothing else.**
+  - The thud, the shutter (Act Two 13.12), the post click and THE CLOCK's step.
+  - The whole-stem sweep finds only the `dialog_ok_click--chip` decay (Act One 186.9 s) and the tag's 8.88 s cut-out.
+- The EL scan has the same kinds of flags at its own times. The office tick, the Senate pizzicato and THE CLOCK's step don't cross 10× there. Act Two 13.03's freeze hit does cross it in the EL mix (17×).
+
+**Sound spots (the Act One picture pass):**
+- **11.04's click:** `ADD_SOUND` lays 5.08's `dialog_ok_click` with its peak at frame 108.1, 6 frames before the cheer at 114.1.
+- **9.13's `folder_close`:** `MOVE_SOUND` moves it to v31-10.04, with its peak on frame 56 (16 frames before the match).
+- **The collar's clasp at 9.09 (new):** `CLASP`, a synthesized soft clink, peaks at −31 dBFS on k21, one frame before the stick's `key_ring_jangle_3` (−28).
+- **S7.02b's TV line** is the take's own `tv` chain (fastrec's, both variants). The mix adds no second chain.
+- **The Act Two → Three seam:** with the glass (17.12) cut, Act Three's rack room leads 0.6 s under 17.13's black, as the plan's J-cut says (`LEAD_AT_LOCK`).
+
+### W.3 The tool changes (made before the lock, checked on v3.2)
 
 | Item | Measured cause | Fix (stems.py / mix_episode.py) |
 |---|---|---|
@@ -19,7 +94,7 @@ Made before the v3.3 lock exists and checked on the v3.2 lock, in scratch (Act F
 | **X3's mix side**, film 12:45.29 | — | Waits on composer Y's refit. Once it lands, I will measure the night cue's re-entry in the mix. |
 | **The click scan** (before the mixes) | — | `click_scan()` runs on every room and SFX stem. At each beat boundary it flags a second difference over 10× the local 99th percentile, as an onset, a cut-off or a step. It then sweeps the whole stem for cut-offs (a 12 dB drop in 5 ms from above −50 dBFS, at 10× local). SFX cut-offs are split into `truncation` (at a sample's laid end) and `in-sample` (the source file's own decay). Results go in `<seg>-stems-qa.json` → `click_scan`. |
 
-The scan on v3.2, after the fixes:
+The scan on v3.2, after the fixes (in scratch, then deleted):
 - **Act Four:** room clean (no boundary flags, no cut-offs). SFX: no non-onset boundary flags, and no truncations. Four `in-sample` decays are over 10×, all the sample's own envelope:
   - 16.245 and 193.02: `dialog_ok_click`, a UI click whose file falls 20 dB in 5 ms at 75 ms;
   - 198.235: `post_click`, which falls 15.5 dB at 75 ms;

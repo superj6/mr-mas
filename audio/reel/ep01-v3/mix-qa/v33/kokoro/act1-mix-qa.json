@@ -1,0 +1,196 @@
+{
+ "segment": "act1",
+ "variant": "kokoro",
+ "seconds": 330.583,
+ "frames": 7934,
+ "samples": 15868000,
+ "timeline": "show/reel/ep01-v33/ep01-v33-act1.json",
+ "dialogue": {
+  "lines": 68,
+  "device": {
+   "phone": 8
+  },
+  "el_matched": 0,
+  "missing": []
+ },
+ "rooms": {
+  "stem": "audio/reel/ep01-v3/v33/act1-room.wav",
+  "dip_under_speech_db": 2.0
+ },
+ "sfx": {
+  "stem": "audio/reel/ep01-v3/v33/act1-sfx.wav",
+  "ducked": false
+ },
+ "score": {
+  "file": "audio/ost/tracks/e01-v3-act1/render/music.wav",
+  "cues": "audio/ost/tracks/e01-v3-act1/cues.json",
+  "length_s": 330.583,
+  "length_vs_segment_s": 0.0,
+  "lufs_as_delivered": -20.53,
+  "lufs_after_gain": -20.53,
+  "duck": {
+   "by_mood_db": [
+    [
+     "",
+     9.0
+    ]
+   ],
+   "cue_sheet_overrides": [],
+   "posts_dip_db": -3.0,
+   "envelope": "pre 0.25 s, joined across gaps < 2.5 s, 0.2 s in, 0.6 s out; depth smoothed 1.5 s"
+  },
+  "designed_silences": [
+   [
+    186.858,
+    187.2,
+    "the phone locks (a diegetic stop) -> the lobby's pickup under the revolving door"
+   ],
+   [
+    207.875,
+    215.538,
+    "the collar's pop: the swing stops dead; the lobby's room under \"That collar suits you.\" / \"it does.\" / \"and the rent?\""
+   ],
+   [
+    317.667,
+    328.583,
+    "EMIT's THUD stops the pause letter: no score through the page, his desk and the reflection, until the THREAT on the pen's lift"
+   ]
+  ],
+  "head_fade_s": 0.04,
+  "head_fade_why": "designed hit at the head (cues.json designed_hit): (0.0, 'A1 THE DOWNBEAT (a designed hit, on the first frame): the felt on the button (Fm')"
+ },
+ "setpieces": [
+  {
+   "what": "the odometer",
+   "from": 107.46,
+   "to": 122.12,
+   "talk_lufs": -16.66,
+   "measure": "st",
+   "peak_before_lufs": -14.23,
+   "lift_db": 0.0,
+   "peak_after_lufs": -14.23,
+   "over_talk_lu": 2.43
+  }
+ ],
+ "checks": [
+  {
+   "what": "Sydney's egg timer (10.03-10.04)",
+   "from": 274.24,
+   "to": 279.46,
+   "band_hz": [
+    2000,
+    7000
+   ],
+   "unspoken_s": 3.62,
+   "sfx_rms": -47.8,
+   "room_rms": -60.3,
+   "score_rms": -44.7,
+   "bed_rms": -44.6,
+   "sfx_minus_bed_db": -3.2
+  },
+  {
+   "what": "the Build's pre-lap (the last 0.6 s of 9.13)",
+   "from": 278.86,
+   "to": 279.46,
+   "band_hz": [
+    300,
+    3000
+   ],
+   "unspoken_s": 0.6,
+   "sfx_rms": -39.2,
+   "room_rms": -42.3,
+   "score_rms": -37.6,
+   "bed_rms": -36.3,
+   "sfx_minus_bed_db": -2.9
+  },
+  {
+   "what": "the pen leading 12.04",
+   "from": 321.58,
+   "to": 322.08,
+   "band_hz": [
+    3000,
+    9000
+   ],
+   "unspoken_s": 0.5,
+   "sfx_rms": -49.5,
+   "room_rms": -56.9,
+   "score_rms": -240.0,
+   "bed_rms": -56.9,
+   "sfx_minus_bed_db": 7.4
+  }
+ ],
+ "measured": {
+  "lufs_i": -16.0,
+  "true_peak_dbtp": -1.46,
+  "sample_peak_dbfs": -1.5,
+  "lra_lu": 5.9,
+  "gain_db": 1.25,
+  "limiter_ceiling_dbfs": -1.5,
+  "limiter_active_s": 0.187,
+  "dialogue_lufs": -14.87,
+  "score_lufs_after_duck": -21.68,
+  "score_rms_under_speech_dbfs": -31.9,
+  "score_rms_between_speech_dbfs": -21.1,
+  "score_runs": {
+   "count": 5,
+   "shortest_s": 1.85,
+   "runs": [
+    [
+     0.0,
+     33.9
+    ],
+    [
+     35.0,
+     151.9
+    ],
+    [
+     187.25,
+     20.65
+    ],
+    [
+     215.65,
+     102.05
+    ],
+    [
+     328.55,
+     1.85
+    ]
+   ]
+  },
+  "rooms_lufs": -36.59,
+  "sfx_lufs": -34.64,
+  "holes_under_-42dBFS_0.3s": [],
+  "holes_mono_downmix": [],
+  "holes_without_score": [
+   {
+    "at": 329.6,
+    "s": 0.35,
+    "what": "designed: the act-out black (the bullpen cuts with the picture)"
+   }
+  ],
+  "unmarked_holes": 0,
+  "unmarked_holes_without_score": 0,
+  "jumps_over_15dB": {
+   "count": 64,
+   "rising": 54,
+   "rising_at_a_word": 50,
+   "rising_at_an_sfx": 1,
+   "rising_other": [
+    5.05,
+    187.25,
+    279.45
+   ],
+   "falling": 10
+  }
+ },
+ "file": "out/ep01/full-v3/mix-v33/act1-mix.wav",
+ "guard_db": null,
+ "seam_head": {
+  "from_gain_db": 1.25,
+  "to_gain_db": 1.25,
+  "ramp_s": 2.0,
+  "after": "card"
+ },
+ "built": "2026-09-28 08:40:17",
+ "heard": "nothing here has been listened to; every number is measured"
+}

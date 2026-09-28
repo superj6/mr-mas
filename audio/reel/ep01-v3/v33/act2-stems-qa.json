@@ -1,0 +1,500 @@
+{
+ "segment": "act2",
+ "variant": "kokoro",
+ "timeline": "show/reel/ep01-v33/ep01-v33-act2.json",
+ "timeline_variant": "kokoro",
+ "seconds": 190.542,
+ "frames": 4573,
+ "rooms": [
+  {
+   "room": "whitehouse",
+   "from": -1.0,
+   "to": 70.25,
+   "first": "13.01",
+   "last": "13.14",
+   "lead": 1.0,
+   "trail": 1.0,
+   "lift_db": 3.4
+  },
+  {
+   "room": "bullpen-night",
+   "from": 68.65,
+   "to": 75.65,
+   "first": "14.01",
+   "last": "14.01",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 4.6
+  },
+  {
+   "room": "bay",
+   "from": 74.65,
+   "to": 80.283,
+   "first": "14.03",
+   "last": "14.05",
+   "lead": 0.6,
+   "trail": 0.2,
+   "lift_db": 3.3
+  },
+  {
+   "room": "black: room tone -54.0 LUFS",
+   "from": 80.083,
+   "to": 81.417,
+   "first": "14.06"
+  },
+  {
+   "room": "senate",
+   "from": 80.417,
+   "to": 149.025,
+   "first": "15.01",
+   "last": "15.14",
+   "lead": 1.0,
+   "trail": 0.4,
+   "lift_db": 1.3
+  },
+  {
+   "room": "street",
+   "from": 148.025,
+   "to": 154.025,
+   "first": "16.01",
+   "last": "16.01",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 6.0
+  },
+  {
+   "room": "rooftop",
+   "from": 153.025,
+   "to": 189.992,
+   "first": "17.01",
+   "last": "17.11",
+   "lead": 0.6,
+   "trail": 0.2,
+   "lift_db": 2.5
+  },
+  {
+   "room": "black: room tone -54.0 LUFS",
+   "from": 189.792,
+   "to": 190.542,
+   "first": "17.13"
+  }
+ ],
+ "sfx": [
+  [
+   "13.03",
+   "freeze_hit_F",
+   8.417,
+   -20
+  ],
+  [
+   "13.05",
+   "paper_flutter",
+   20.878,
+   -26
+  ],
+  [
+   "13.06",
+   "landing_thunk",
+   22.027,
+   -30
+  ],
+  [
+   "13.06",
+   "landing_thunk",
+   22.215,
+   -30
+  ],
+  [
+   "13.06",
+   "landing_thunk",
+   22.404,
+   -30
+  ],
+  [
+   "13.10",
+   "flame_whoomph",
+   50.408,
+   -26
+  ],
+  [
+   "13.12",
+   "camera_shutter",
+   56.75,
+   -14
+  ],
+  [
+   "13.12",
+   "freeze_hit_F",
+   56.77,
+   -22
+  ],
+  [
+   "13.14",
+   "camera_shutter",
+   63.333,
+   -30
+  ],
+  [
+   "14.03",
+   "post_click",
+   77.088,
+   -18
+  ],
+  [
+   "14.05",
+   "synth:plink",
+   78.667,
+   -14
+  ],
+  [
+   "14.05",
+   "key_tap_soft_01",
+   79.567,
+   -34
+  ],
+  [
+   "15.04",
+   "freeze_hit_C",
+   93.083,
+   -22
+  ],
+  [
+   "15.05",
+   "typing_soft",
+   93.908,
+   -30
+  ],
+  [
+   "15.15",
+   "folder_slide",
+   120.142,
+   -28,
+   "moved onto the picture: \"licenses\" +0.417 s (onset)"
+  ],
+  [
+   "15.15",
+   "rubber_stamp_C",
+   121.471,
+   -16,
+   "moved onto the picture: \"licenses\" +1.750 s (peak)"
+  ],
+  [
+   "15.16",
+   "paper_curl",
+   125.625,
+   -30
+  ],
+  [
+   "15.11",
+   "typing_soft",
+   131.562,
+   -26
+  ],
+  [
+   "15.12",
+   "cloth_rustle",
+   135.883,
+   -30
+  ],
+  [
+   "15.12",
+   "synth:moth",
+   136.933,
+   -30
+  ],
+  [
+   "15.13",
+   "synth:gasp",
+   139.283,
+   -17
+  ],
+  [
+   "15.14",
+   "rubber_stamp_C",
+   142.433,
+   -20
+  ],
+  [
+   "15.14",
+   "rubber_stamp_C",
+   142.783,
+   -20
+  ],
+  [
+   "15.14",
+   "rubber_stamp_C",
+   143.133,
+   -20
+  ],
+  [
+   "16.01",
+   "rubber_stamp_C",
+   148.625,
+   -18
+  ],
+  [
+   "16.01",
+   "paper_whip",
+   148.975,
+   -22
+  ],
+  [
+   "16.01",
+   "rubber_stamp_C",
+   149.375,
+   -18
+  ],
+  [
+   "16.01",
+   "post_click",
+   151.275,
+   -18
+  ],
+  [
+   "16.01",
+   "rubber_stamp_C",
+   151.85,
+   -18
+  ],
+  [
+   "16.01",
+   "rubber_stamp_C",
+   152.462,
+   -16
+  ],
+  [
+   "17.01",
+   "pen_scribble_short",
+   155.425,
+   -30
+  ],
+  [
+   "17.01",
+   "pen_scribble_short",
+   156.565,
+   -30
+  ],
+  [
+   "17.01",
+   "pen_run",
+   157.945,
+   -30
+  ],
+  [
+   "17.01",
+   "pen_scribble_short",
+   158.725,
+   -30
+  ],
+  [
+   "17.01",
+   "pen_tick_1",
+   159.265,
+   -32
+  ],
+  [
+   "17.02",
+   "pen_scribble_short",
+   159.825,
+   -34
+  ],
+  [
+   "17.02",
+   "pen_scribble_short",
+   164.225,
+   -34
+  ],
+  [
+   "17.02",
+   "pen_scribble_short",
+   168.525,
+   -34
+  ],
+  [
+   "17.03",
+   "synth:roll",
+   170.0,
+   -24
+  ],
+  [
+   "17.04",
+   "freeze_hit_F",
+   171.417,
+   -22
+  ],
+  [
+   "17.07",
+   "ka_ching",
+   179.35,
+   -12
+  ],
+  [
+   "17.07",
+   "synth:bell",
+   179.37,
+   -18
+  ],
+  [
+   "17.10",
+   "paper_curl",
+   182.575,
+   -32
+  ]
+ ],
+ "sfx_missing": [],
+ "sfx_dropped": [
+  {
+   "beat": "16.01",
+   "name": "synth:stab",
+   "claimed_by_score": "knee-stabs",
+   "evidence": "148.62 s: the knee stab on stamp 1 (C F Bb Eb over Ab)"
+  },
+  {
+   "beat": "16.01",
+   "name": "synth:stab",
+   "claimed_by_score": "knee-stabs",
+   "evidence": "148.62 s: the knee stab on stamp 1 (C F Bb Eb over Ab)"
+  },
+  {
+   "beat": "16.01",
+   "name": "synth:stab",
+   "claimed_by_score": "knee-stabs",
+   "evidence": "148.62 s: the knee stab on stamp 1 (C F Bb Eb over Ab)"
+  },
+  {
+   "beat": "16.01",
+   "name": "synth:stab",
+   "claimed_by_score": "knee-stabs",
+   "evidence": "148.62 s: the knee stab on stamp 1 (C F Bb Eb over Ab)"
+  }
+ ],
+ "added": [
+  {
+   "what": "the anchor's too-smooth murmur (no words) through the phone",
+   "at": 69.25,
+   "to": 80.43,
+   "lufs": -34,
+   "why": "14.01 sound cue: \"the anchor's too-smooth murmur, no words: a made formant voice\"; stops for the clone's first word"
+  }
+ ],
+ "score_hints": {
+  "score": "audio/ost/tracks/e01-v3-act2/render/music.wav",
+  "cues": "audio/ost/tracks/e01-v3-act2/cues.json",
+  "drop": [
+   "knee-stabs"
+  ],
+  "why": {
+   "knee-stabs": "148.62 s: the knee stab on stamp 1 (C F Bb Eb over Ab)"
+  },
+  "grid": null
+ },
+ "decisions": [
+  "15.14 -> 16.01: the score plays the knee stabs (the first on the cut) and ends its Senate chord there, so the first stamp stays on the picture with them instead of leading by 0.5 s (it would flam); the street room leads the cut by 0.6 s"
+ ],
+ "room_stem": {
+  "lufs": -37.41,
+  "peak_dbfs": -22.54,
+  "p10_50ms_dbfs": -39.9
+ },
+ "sfx_stem": {
+  "lufs": -33.09,
+  "peak_dbfs": -12.0,
+  "p10_50ms_dbfs": -240.0
+ },
+ "room_under_-55dBFS_0.3s": [],
+ "click_scan": {
+  "room": {
+   "boundaries": [],
+   "cutoffs": []
+  },
+  "sfx": {
+   "boundaries": [
+    {
+     "at": 8.422,
+     "boundary": 8.417,
+     "ratio": 19.5,
+     "kind": "step",
+     "before_dbfs": -32.6,
+     "after_dbfs": -26.5,
+     "laid_onset": "freeze_hit_F"
+    },
+    {
+     "at": 56.751,
+     "boundary": 56.75,
+     "ratio": 48.1,
+     "kind": "onset",
+     "before_dbfs": -42.5,
+     "after_dbfs": -25.5
+    },
+    {
+     "at": 63.334,
+     "boundary": 63.333,
+     "ratio": 146.1,
+     "kind": "onset",
+     "before_dbfs": -58.5,
+     "after_dbfs": -41.5
+    },
+    {
+     "at": 93.085,
+     "boundary": 93.083,
+     "ratio": 42.2,
+     "kind": "onset",
+     "before_dbfs": -39.0,
+     "after_dbfs": -27.6
+    },
+    {
+     "at": 171.422,
+     "boundary": 171.417,
+     "ratio": 10.4,
+     "kind": "step",
+     "before_dbfs": -34.6,
+     "after_dbfs": -28.5,
+     "laid_onset": "freeze_hit_F"
+    }
+   ],
+   "cutoffs": [
+    {
+     "at": 151.35,
+     "ratio": 27.7,
+     "from_dbfs": -39.0,
+     "to_dbfs": -54.5,
+     "kind": "in-sample",
+     "inside": "post_click"
+    }
+   ]
+  },
+  "rule": "second difference > 10.0x the local 99th percentile (see click_scan)"
+ },
+ "room_levels": [
+  {
+   "room": "whitehouse@act2:13.01",
+   "p5_50ms_dbfs": -43.4,
+   "lift_db": 3.4
+  },
+  {
+   "room": "bullpen-night@act2:14.01",
+   "p5_50ms_dbfs": -44.6,
+   "lift_db": 4.6
+  },
+  {
+   "room": "bay@act2:14.03",
+   "p5_50ms_dbfs": -43.3,
+   "lift_db": 3.3
+  },
+  {
+   "room": "senate@act2:15.01",
+   "p5_50ms_dbfs": -41.3,
+   "lift_db": 1.3
+  },
+  {
+   "room": "street@act2:16.01",
+   "p5_50ms_dbfs": -48.1,
+   "lift_db": 6.0
+  },
+  {
+   "room": "rooftop@act2:17.01",
+   "p5_50ms_dbfs": -42.5,
+   "lift_db": 2.5
+  }
+ ]
+}
