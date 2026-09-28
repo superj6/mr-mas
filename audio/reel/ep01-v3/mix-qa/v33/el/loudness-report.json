@@ -3,7 +3,7 @@
  "target_lufs": -16.0,
  "true_peak_max_dbtp": -1.0,
  "dialogue_reference_lufs": -14.67,
- "dialogue_reference_from": "this run",
+ "dialogue_reference_from": "the last full run",
  "guard_lu": 1.5,
  "segments": {
   "coldopen": {
@@ -74,7 +74,7 @@
    "score": "audio/ost/tracks/e01-v3-act4/render/music-el.wav",
    "unmarked_holes": 0,
    "unmarked_holes_without_score": 1,
-   "built": "2026-09-28 08:34:58"
+   "built": "2026-09-28 09:27:07"
   },
   "tag": {
    "file": "out/ep01/full-v3/mix-v33-el/tag-mix.wav",
@@ -147,7 +147,7 @@
    "last_200ms_dbfs": -30.5,
    "first_200ms_dbfs": -30.0,
    "step_db": 0.5,
-   "sample_jump": 0.004
+   "sample_jump": 0.0041
   },
   {
    "seam": "act4 -> tag",
@@ -161,6 +161,6 @@
   "lufs_i_lu": 1.55,
   "dialogue_lu": 1.95
  },
- "updated": "2026-09-28 08:35:41",
+ "updated": "2026-09-28 09:27:51",
  "heard": "nothing here has been listened to; every number is measured"
 }

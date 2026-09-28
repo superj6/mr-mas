@@ -234,7 +234,7 @@
   "lra_lu": 7.4,
   "gain_db": 1.06,
   "limiter_ceiling_dbfs": -1.5,
-  "limiter_active_s": 1.094,
+  "limiter_active_s": 1.09,
   "dialogue_lufs": -15.04,
   "score_lufs_after_duck": -21.66,
   "score_rms_under_speech_dbfs": -31.3,
@@ -367,13 +367,12 @@
   "unmarked_holes": 0,
   "unmarked_holes_without_score": 1,
   "jumps_over_15dB": {
-   "count": 57,
-   "rising": 50,
+   "count": 56,
+   "rising": 49,
    "rising_at_a_word": 41,
    "rising_at_an_sfx": 1,
    "rising_other": [
     24.15,
-    42.3,
     117.85,
     200.05,
     287.45,
@@ -392,6 +391,6 @@
   "ramp_s": 2.0,
   "after": "act3"
  },
- "built": "2026-09-28 08:34:58",
+ "built": "2026-09-28 09:27:07",
  "heard": "nothing here has been listened to; every number is measured"
 }

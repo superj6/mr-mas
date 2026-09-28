@@ -50,14 +50,28 @@ Every v3.3 score render names its v3.3 timeline and is used. The Kokoro mix was 
 
 **X3, the night's re-entry** (composer Y's `designed_hit`: the fifth at Act Four 41.017 s, 0.400 s before the cut into S2.01; EL 42.308 s):
 
-| | v3.2 mix | v3.3 score as rendered | **v3.3 mix** (Kokoro / EL) |
-|---|---|---|---|
-| The fifth's first 400 ms | −15.0 LUFS | −18.2 | **−17.1 / −17.3** |
-| The 400 ms before it | −39.3 | −74.7 | −38.6 / −39.0 (the room after the post) |
-| Largest 400 ms rise | +24.3 dB, on the cut | — | **+21.5 / +21.7 dB**, 0.4 s before the cut |
-| Step at the cut (0.5 s either side) | — | −9.0 dB | −8.9 / −8.6 dB |
+Composer Y re-rendered Act Four on both locks (3ce2bd7): the fifth now swells in over 200 ms and sits −6.5 dB. Only Act Four was re-mixed, on both variants. Every other mix and stem is bit-identical (md5).
 
-The mix adds 1.1 dB over Y's stem: the master gain plus the night room. The step at the cut matches Y's −9.1 dB. No mix-side ride was added.
+"Over the room" is measured against the 400 ms before the fifth: the room after the post, −38.6 / −39.0 LUFS. Levels are K-weighted.
+
+| | v3.2 mix | v3.3, first render (mix) | **v3.3, Y's re-render (mix)**, Kokoro / EL | Y's stem as rendered |
+|---|---|---|---|---|
+| First 100 ms over the room | — | — | **+10.9 / +11.2 dB** | −29.0 LUFS |
+| First 400 ms over the room | +24.3 dB, on the cut | +21.5 / +21.7 dB | **+16.2 / +16.5 dB** (−22.4 / −22.5 LUFS) | −23.7 LUFS |
+| Loudest 100 ms (the swell's top, about 0.1–0.3 s in) | — | — | +18.5 / +18.7 dB | −21.4 LUFS |
+| Step at the cut (0.5 s either side) | — | −8.9 / −8.6 dB | −6.4 / −6.0 dB | −6.5 dB |
+
+- **Act Four:** −16.01 LUFS on both, with the same gain as before (+1.05 / +1.06 dB) and 0 unmarked holes.
+- **The re-entry:** no longer counted as an unexplained jump.
+- **X6:** +1.66 / +1.67 LU, with the set pieces at +2.49 LU.
+- **The act3 → act4 and act4 → tag seams:** unchanged.
+- **The tag:** not re-mixed. Y's change is the night cue only (`cue_night.py`, and `NIGHT_ENTRY_DB` / `NIGHT_SWELL_S` in `a4common.py`). The vault's ring-out comes from the last cue.
+- **The episode report:** updated, −16.03 / −16.05 LUFS.
+- **The click scan** at Act Four's boundaries, after the re-mix, matches the earlier run:
+  - the score and mix have no flags;
+  - the room has the office tick at 98.435 s (Kokoro only), 10.1×;
+  - the SFX stem has no truncations.
+- No mix-side ride was added.
 
 **The click scan** (the second difference over 10× the local 99th percentile, at every beat boundary, on the room, SFX, score and mix stems; then a whole-stem cut-off sweep):
 - **Room stems: one flag in both variants.** It's Kokoro Act Four 98.435 s, 10.1×: the office clock's own tick (−47 dBFS), 23 ms before S3.01 → S3.02. Both beats are in the office, so it's not a room change. **No room change steps**, and there are no room cut-offs.
