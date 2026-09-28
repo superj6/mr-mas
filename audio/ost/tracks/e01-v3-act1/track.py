@@ -123,6 +123,7 @@ LN = {   # launch night: (felt voicing, pulse root, sub)
     'Bbm9':      (['Db4', 'F4', 'C5'], 'Bb2', 'Bb1'),
     'Eb13sus4':  (['Eb3', 'Ab3', 'Db4', 'F4'], 'Eb3', 'Eb1'),
     'Fache':     (['C4', 'Db4', 'G4'], 'F3', 'F1'),      # "And what if it wakes up?": the Ache's colour, once
+    'Abwarm':    (['Ab2', 'Eb3', 'C4', 'G4'], 'Ab2', 'Ab1'),   # v3.3 M1: "it likes me.": the one warm arrival
 }
 LOOP_LN = ['Fm9', 'Fm9', 'Dbmaj9#11', 'Dbmaj9#11', 'Bbm9', 'Bbm9', 'Eb13sus4', 'Eb13sus4']
 LOOP_CH = ['Dbmaj9#11', 'Dbmaj9#11', 'Bbm9', 'Bbm9', 'Fm9', 'Fm9', 'Eb13sus4', 'Eb13sus4']
@@ -400,10 +401,47 @@ def cue_a(tl):
     c.mark(bar(b_two), 'A2: felt only, Dbmaj9(#11) (the deceptive IV after the click)')
     c.section('A2 the two-hander: felt only (the Door in the gaps)', bar(b_two), bar(b_chat))
     # ---- A3: the chatbot: the same bed, the Build soft in the gaps
-    glow(b_chat, b_lift, lambda b: 'Eb13sus4' if b == b_lift - 1 else LOOP_CH[(b - b_chat) % 8])
+    # v3.3 M1 (mood-analysis-v32 s3.2, s4 #1): LAUNCH NIGHT'S ONE WARM ACCENT, the payoff to the click.  The chat
+    # flatters him; on "it likes me." the felt arrives on A-flat major (Abmaj7, its root at last), and right after his
+    # line the Build plays one pass in its A-flat major (the colour it has at Gerg's call and at 2 AM; the odometer
+    # takes it up), under Gerg's "It likes everyone...".  One arrival, then the dominant again under the V.O. and into
+    # the counter.  No trio, no Rhodes, no new bed: the same felt, pulse and chip
+    warm = None
+    likes = [l for l in tl.lines_in(tl.B('5.11'), tl.E('5.11'), kinds={'mas'})] if tl.has('5.11') else []
+    if likes:
+        lk = likes[0]
+        b_w = int(math.floor(c.bar_of(lk['on'] + 0.05) + 1e-6))
+        if b_chat <= b_w < b_lift - 1:
+            t_p = c.next16(lk['end'] + 0.12)
+            stop_ = min([l['on'] - 0.15 for l in tl.lines_in(t_p, bar(b_lift), kinds={'vo', 'mas', 'real'})] +
+                        [bar(b_lift) - 0.2])
+            cnt = max([k for k in (16, 12, 8) if t_p + k * S16 <= stop_] or [0])
+            if cnt:
+                warm = (b_w, t_p, cnt)
+
+    def harm_chat(b):
+        if warm is not None and warm[0] <= b < min(warm[0] + 2, b_lift - 1):
+            return 'Abwarm'
+        return 'Eb13sus4' if b == b_lift - 1 else LOOP_CH[(b - b_chat) % 8]
+    glow(b_chat, b_lift, harm_chat)
     for t0, cnt, v in place_passes(c, bar(b_chat), bar(b_lift) - 0.2, vel=0.27, spacing=4.5):
+        if warm is not None and t0 < warm[1] + warm[2] * S16 + 0.5 and t0 + cnt * S16 > bar(warm[0]) - 1.0:
+            continue                                    # the warm pass has this stretch
         build_f(t0, cnt, v)
         c.mark(t0, f'the Build: compile pass ({cnt})')
+    if warm is not None:
+        b_w, t_p, cnt = warm
+        for i in range(cnt):
+            t = t_p + i * S16
+            c.n('lead', cell()[i % 16], t, S16 * 0.66, 0.31 * ACC4[i % 4], True, duty=0.5, att=0.002, dec=0.1,
+                sus=0.5, rel=0.05)
+        c.n('felt', 'Ab3', t_p, 0.6, 0.18)
+        c.mark(bar(b_w), 'M1: the felt arrives on A-flat major (Abmaj7) with "it likes me." (the one warm arrival)',
+               hit=False)
+        c.mark(t_p, f'M1 THE WARM ACCENT: the Build\'s pass in its A-flat major ({cnt}), after "it likes me." '
+               '(the payoff to the click)')
+        c.section('M1 the warm accent: A-flat major, the Build\'s pass (the payoff to the click)', bar(b_w),
+                  min(bar(b_w + 2), bar(b_lift - 1)))
     c.section('A3 the chatbot flatters: the felt, the pulse, the Build', bar(b_chat), bar(b_lift))
 
     # ---- A4: THE ODOMETER, a driving figure (round 3: straight, no ride or walking bass): the chip Build as the

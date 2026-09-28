@@ -2,6 +2,14 @@
 
 **Composer X (`v3-score-a`), 2026-09-27.** Track A1 of [PLAN.md](../../../../show/episodes/ep01/production/full-v3/PLAN.md), on the mood map of [v3-plan §6](../../../../show/episodes/ep01/production/stick/v3-plan.md). **Nothing here has been listened to.** Every number below is measured, and the "for an ear" list says what only a person can judge.
 
+## v3.3 M1 (2026-09-28): launch night's one warm accent (in the cue definitions; the v3.3 refit follows its lock)
+
+**The choice: the Build's pass in its A♭ major, not the Rhodes chord.** On "it likes me." (5.11), the felt arrives on A♭ major: Abmaj7, with its root, and the pulse and sub on A♭. That's for his line's bar and the next. Right after his line, the Build plays one 16-note pass in its A♭-major form. That's the colour it has at Gerg's call and at 2 AM, and the one the odometer takes up. It goes under Gerg's "It likes everyone…", on a rounder chip duty (50 %). Then the harmony returns to the E♭ dominant under the V.O. and into the counter.
+- **Why the Build, not the Rhodes:** the Rhodes is Tasya's colour (her chord on "pen", the lobby) and the corny trio's instrument. The Build is the show's own sound and Gerg's work paying off. So the warmth lands as the click's payoff, the product answering, without importing a new colour.
+- **What it isn't:** no trio, no new bed, no swing. It's one arrival of about 5 s on the same felt, pulse and chip, and nothing starts inside his line.
+- **Where it lives:** it's built from beat 5.11 and his line, so it carries into the v3.3 refit.
+- **Measured** (v3.2 locks, rendered): the accent's bars −19.95 LUFS (Kokoro) and −19.6 (EL), against the chat's −19.9. It's a colour change, not a level jump. On both locks: F-major OK, knee 0, written A♮ over F 0, the pass's onset within 10 ms of its mark, no unmarked cut step.
+
 ## v3.2 (current, 2026-09-28): refit to the final lock, and the v3.1 audit's fixes
 
 **The locks:** `show/reel/ep01-v32/ep01-v32-act1.json` (the default) and `show/reel/ep01-v32-el/ep01-v32-el-act1.json` (`--el`). **`render/music.wav`: 329.750 s (7,914 frames); `render/music-el.wav`: 334.958 s (8,039 frames); both exact.** The direction is unchanged: the first-round score, launch night in the show's own voice, the straight odometer, and the Sydney and Atem cues. Script draft 8.1's beats, and what the score does with them:

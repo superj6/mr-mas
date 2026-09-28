@@ -22,9 +22,9 @@
    "laid_at_s": -1.0,
    "post": null,
    "level": {
-    "lufs_i": -20.02,
-    "st_p95": -17.08,
-    "st_max": -14.58,
+    "lufs_i": -20.01,
+    "st_p95": -17.07,
+    "st_max": -14.57,
     "true_peak_dbtp": -3.15
    },
    "target_lufs": -20.0,
@@ -44,12 +44,12 @@
       "q": 0.7
      },
      "measured": {
-      "lufs": -20.01,
+      "lufs": -20.0,
       "lra": 8.34,
       "true_peak_db": -3.15,
       "peak_db": -3.16,
-      "rms_db": -23.05,
-      "crest_db": 19.9,
+      "rms_db": -23.04,
+      "crest_db": 19.89,
       "seconds": 155.5083
      }
     },
@@ -59,8 +59,8 @@
     "knee_whole": 0,
     "knee_completion": 0,
     "hit_check": {
-     "within_10ms": 27,
-     "of": 31,
+     "within_10ms": 26,
+     "of": 30,
      "worst_ms": 59.5
     },
     "warnings": [
@@ -72,7 +72,7 @@
     ]
    },
    "note_qa": {
-    "notes": 628,
+    "notes": 635,
     "written_third_ok": true,
     "written_third_events": [],
     "grazes": 0,
@@ -192,13 +192,13 @@
      "hit": true
     },
     {
-     "t": 98.219,
-     "what": "the Build: compile pass (4)",
-     "hit": true
+     "t": 99.0,
+     "what": "M1: the felt arrives on A-flat major (Abmaj7) with \"it likes me.\" (the one warm arrival)",
+     "hit": false
     },
     {
-     "t": 102.75,
-     "what": "the Build: compile pass (4)",
+     "t": 100.25,
+     "what": "M1 THE WARM ACCENT: the Build's pass in its A-flat major (16), after \"it likes me.\" (the payoff to the click)",
      "hit": true
     },
     {
@@ -1070,16 +1070,16 @@
   "frames": 7914,
   "exact": true,
   "whole": {
-   "lufs_i": -20.52,
-   "st_p95": -17.88,
-   "st_max": -14.58,
+   "lufs_i": -20.51,
+   "st_p95": -17.87,
+   "st_max": -14.57,
    "true_peak_dbtp": -3.15
   },
   "cues": {
    "a_launch": {
-    "lufs_i": -20.02,
-    "st_p95": -17.08,
-    "st_max": -14.58,
+    "lufs_i": -20.01,
+    "st_p95": -17.07,
+    "st_max": -14.57,
     "true_peak_dbtp": -3.15
    },
    "code_red": {
@@ -1142,73 +1142,82 @@
     "section": "a_launch: A1 launch night: the felt, a soft pulse, the Build (F minor, the chip)",
     "start": 0.0,
     "end": 66.5,
-    "lufs_i": -21.42,
-    "st_p95": -20.76,
-    "st_max": -18.57,
-    "true_peak_dbtp": -4.46
+    "lufs_i": -21.4,
+    "st_p95": -20.75,
+    "st_max": -18.56,
+    "true_peak_dbtp": -4.45
    },
    {
     "section": "a_launch: the click: one held chord, the flat line",
     "start": 66.5,
     "end": 69.0,
-    "lufs_i": -23.69,
+    "lufs_i": -23.68,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -6.62
+    "true_peak_dbtp": -6.6
    },
    {
     "section": "a_launch: A2 the two-hander: felt only (the Door in the gaps)",
     "start": 69.0,
     "end": 84.0,
-    "lufs_i": -21.89,
-    "st_p95": -21.4,
-    "st_max": -21.32,
-    "true_peak_dbtp": -3.84
+    "lufs_i": -21.88,
+    "st_p95": -21.39,
+    "st_max": -21.3,
+    "true_peak_dbtp": -3.83
+   },
+   {
+    "section": "a_launch: M1 the warm accent: A-flat major, the Build's pass (the payoff to the click)",
+    "start": 99.0,
+    "end": 104.0,
+    "lufs_i": -19.95,
+    "st_p95": -18.82,
+    "st_max": -18.59,
+    "true_peak_dbtp": -5.95
    },
    {
     "section": "a_launch: A3 the chatbot flatters: the felt, the pulse, the Build",
     "start": 84.0,
     "end": 106.5,
-    "lufs_i": -19.9,
+    "lufs_i": -19.94,
     "st_p95": -18.77,
-    "st_max": -18.6,
+    "st_max": -18.59,
     "true_peak_dbtp": -3.15
    },
    {
     "section": "a_launch: A4 the counter: a driving figure (the pulse, the chip Build, the violins, brass accents)",
     "start": 106.5,
     "end": 122.08,
-    "lufs_i": -16.77,
-    "st_p95": -14.62,
-    "st_max": -14.58,
-    "true_peak_dbtp": -3.17
+    "lufs_i": -16.76,
+    "st_p95": -14.6,
+    "st_max": -14.57,
+    "true_peak_dbtp": -3.15
    },
    {
     "section": "a_launch: A5 the held chord, then THE TURN: the Ache, the F pedal (the heat, the bill)",
     "start": 122.08,
     "end": 145.46,
-    "lufs_i": -21.24,
-    "st_p95": -19.76,
-    "st_max": -18.45,
-    "true_peak_dbtp": -3.35
+    "lufs_i": -21.23,
+    "st_p95": -19.74,
+    "st_max": -18.43,
+    "true_peak_dbtp": -3.33
    },
    {
     "section": "a_launch: THE CALL (v3.2): the F pedal and the shimmer hold; Tasya's Rhodes on \"pen\"",
     "start": 145.46,
     "end": 153.81,
-    "lufs_i": -23.21,
-    "st_p95": -22.76,
-    "st_max": -22.66,
-    "true_peak_dbtp": -9.28
+    "lufs_i": -23.2,
+    "st_p95": -22.74,
+    "st_max": -22.65,
+    "true_peak_dbtp": -9.27
    },
    {
     "section": "code_red: the whine (J-cut: after the call's hang-up)",
     "start": 153.81,
     "end": 154.46,
-    "lufs_i": -32.55,
+    "lufs_i": -32.54,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -18.61
+    "true_peak_dbtp": -18.6
    },
    {
     "section": "code_red: the alert: the panic ostinato (pizz 16ths)",
