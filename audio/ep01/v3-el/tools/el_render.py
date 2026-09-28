@@ -36,6 +36,10 @@ Examples (from the repo root; the ASR check runs on CPU, so wrap long runs in op
   $PY audio/ep01/v3-el/tools/retime.py --timeline show/reel/ep01-v3/ep01-v3-act1.json \
         --lines audio/ep01/v3-el/act1/lines-A.json --out audio/ep01/v3-el/act1/ep01-v3-act1-el-A.json
 
+A role cast on Kokoro in the EL film (cast-el.json roles.<role>.engine 'kokoro', from engine_from_lock on; v3.5: MARIO)
+sends nothing: its row in the lines JSON is a copy of the Kokoro take's own row, marked 'engine': 'kokoro' (kokoro_row),
+and el_lock.py keeps the Kokoro lock's take and timing for it. The lock comes from --lock or the --lines path.
+
 The key is read from .env inside ellib; it is never printed, logged or written. No voice is cloned or designed here.
 """
 from __future__ import annotations
@@ -141,6 +145,17 @@ class Cast:
         slug = re.sub(r"[^a-z0-9]+", "-", w.lower()).strip("-")
         return slug if slug in self.roles else None
 
+    def engine(self, role, lock=None):
+        """'kokoro' when the role keeps its Kokoro takes inside the EL film (cast-el.json roles.<role>.engine) on this lock:
+        from roles.<role>.engine_from_lock on (e.g. v35), or on every lock if that is absent or no lock is known"""
+        r = self.roles.get(role) or {}
+        base = self.roles.get(r.get("derived_from")) or r
+        eng = r.get("engine") or base.get("engine") or "elevenlabs"
+        frm = r.get("engine_from_lock") or base.get("engine_from_lock")
+        if eng == "kokoro" and frm and lock and lock_n(lock) < lock_n(frm):
+            return "elevenlabs"
+        return eng
+
     def voice(self, role, cand, strict=False):
         """-> (candidate dict with settings resolved, the role dict). Derived roles borrow their base's candidate."""
         r = self.roles[role]
@@ -179,6 +194,20 @@ class Cast:
             pieces.append(piece)
             pairs.append((w, piece))
         return " ".join(pieces), pairs
+
+
+def lock_n(lock):
+    """a lock's order: v3 -> 30, v31 -> 31 ... v35 -> 35"""
+    m = re.fullmatch(r"v3(\d?)", str(lock))
+    return 30 + int(m.group(1) or 0) if m else 0
+
+
+def lock_of(a):
+    """the lock these lines belong to (for the engine override): --lock, else the lines path (show/reel/ep01-vNN/...)"""
+    if getattr(a, "lock", None):
+        return a.lock
+    m = re.search(r"ep01-(v3\d?)(?:[-/]|$)", str(getattr(a, "lines", "")))
+    return m.group(1) if m else None
 
 
 def sentence_case(t, names=()):
@@ -464,7 +493,9 @@ def kokoro_ref(row):
                         + glob.glob(os.path.join(REPO, "audio/ep01/v31/*/lines*.json"))
                         + glob.glob(os.path.join(REPO, "audio/ep01/v32/*/lines*.json"))
                         + glob.glob(os.path.join(REPO, "audio/ep01/v32/*/wav/*.restage.json"))
-                        + glob.glob(os.path.join(REPO, "audio/ep01/v33/*/lines*.json"))):
+                        + glob.glob(os.path.join(REPO, "audio/ep01/v33/*/lines*.json"))
+                        + glob.glob(os.path.join(REPO, "audio/ep01/v34/*/lines*.json"))
+                        + glob.glob(os.path.join(REPO, "audio/ep01/v35/*/lines*.json"))):
             try:
                 d = jload(p)
             except Exception:  # noqa: BLE001
@@ -475,6 +506,7 @@ def kokoro_ref(row):
                 continue
             for r in d:
                 if isinstance(r, dict) and r.get("file"):
+                    _KOKROW[r["file"]] = r
                     _KOK[r["file"]] = dict(file=r["file"], mode=r.get("mode"), lufs_i=(r.get("qa") or {}).get("lufs_i"),
                                            duration_s=r.get("duration_s"), audible_in_s=(r.get("pace") or {}).get("audible_in_s"),
                                            audible_out_s=(r.get("pace") or {}).get("audible_out_s"),
@@ -482,6 +514,29 @@ def kokoro_ref(row):
                                            f0_range_st=(r.get("qa") or {}).get("f0_range_st"), delivery=r.get("delivery"),
                                            voice=r.get("voice"), device=r.get("device"))
     return dict(_KOK.get(row.get("ref_audio") or "", {}))
+
+
+_KOKROW = {}
+
+
+def kokoro_row(row, role):
+    """a role cast on Kokoro (Cast.engine): the lines row that plays the Kokoro lock's own take. No API call.
+    A copy of the Kokoro take's row (its file, words with phonemes, pace, QA and mouth track), under this line's id,
+    marked 'engine': 'kokoro'. el_lock.py keeps the Kokoro lock's own audio, in, dur and words for it."""
+    ref = kokoro_ref(row)                                 # fills _KOKROW
+    src = _KOKROW.get(row.get("ref_audio") or "")
+    if src:
+        out = json.loads(json.dumps(src))
+    else:                                                 # the lock names a take no lines JSON lists: the lock's fields
+        i0, d0 = row.get("ref_in") or 0.0, row.get("ref_dur") or 0.0
+        out = {"file": row.get("ref_audio"), "words": [], "pace": {"audible_in_s": i0, "audible_out_s": round(i0 + d0, 3)},
+               "qa": {}, "voice": "Kokoro (the lock's take)", "kokoro_row": "no lines JSON lists this file: the lock's own fields"}
+    vo = row["tag"] == "V.O."
+    out.update(id=row["id"], speaker_slug=role, text=row["text"], tag=row["tag"], scene=row.get("beat"),
+               kind=out.get("kind") or ("vo" if vo else "dialogue"), engine="kokoro", el=None, status="kokoro (cast)",
+               take="kokoro", file_device=out.get("file_device"),
+               kokoro_ref=dict(ref, timeline_in=row.get("ref_in"), timeline_dur=row.get("ref_dur")))
+    return out
 
 
 class BudgetStop(Exception):
@@ -539,6 +594,8 @@ def pitch_pass(lines, rows, cast, s, out, man, a, log):
     byrow = {r["id"]: r for r in rows}
     groups = {}
     for ln in lines:
+        if ln.get("engine") == "kokoro":
+            continue                                             # the Kokoro lock's own take: never re-sent
         groups.setdefault((ln["speaker_slug"], ln["kind"]), []).append(ln)
     out_lines = {ln["id"]: ln for ln in lines}
     for (role, kind), lns in groups.items():
@@ -616,12 +673,14 @@ def cmd_plan(a):
     rows = read_rows(a.lines)
     miss = sorted({r["who"] for r in rows if not cast.role_of(r["who"])})
     tot, left, per_role = {}, {}, {}
+    lock = lock_of(a)
+    kok = [r["id"] for r in rows if cast.role_of(r["who"]) and cast.engine(cast.role_of(r["who"]), lock) == "kokoro"]
     for s in a.sets:
         cm = cand_map(a, cast, s)
         n = m = 0
         for r in rows:
             role = cast.role_of(r["who"])
-            if not role:
+            if not role or r["id"] in kok:
                 continue
             c, _ = cast.voice(role, cm.get(role, s), strict=a.strict)
             if c is None:
@@ -637,7 +696,12 @@ def cmd_plan(a):
         left[s] = m
     for r in rows:
         role = cast.role_of(r["who"])
+        if r["id"] in kok:
+            print(f"{r['id']:14s} {str(role):16s} {r['tag']:8s} [kokoro, cast: the lock's own take] {r['text']}")
+            continue
         print(f"{r['id']:14s} {str(role):16s} {r['tag']:8s} {text_to_send(r, cast, role) if role else r['text']}")
+    if kok:
+        print(f"lock {lock}: {len(kok)} rows keep their Kokoro takes (cast-el.json engine), nothing sent: {', '.join(kok)}")
     print(f"rows {len(rows)}; speakers with no role: {miss or 'none'}; chars per set (before cache): {tot}; "
           f"still to send (not cached or reusable): {left}")
     if a.by_role:
@@ -671,7 +735,8 @@ def cmd_render(a):
     man = load_manifest(out)
     a.budget_left = a.max_chars
     a._retake = set(x for x in (a.retake or "").split(",") if x)
-    log(f"== render {rel(a.lines)} -> {rel(out)} sets {a.sets} at {time.strftime('%Y-%m-%d %H:%M:%S')} (max chars {a.max_chars})")
+    lock = lock_of(a)
+    log(f"== render {rel(a.lines)} -> {rel(out)} sets {a.sets} at {time.strftime('%Y-%m-%d %H:%M:%S')} (max chars {a.max_chars}; lock {lock})")
     spent = 0
     per_set = {}
     try:
@@ -682,6 +747,11 @@ def cmd_render(a):
                 role = cast.role_of(r["who"])
                 if not role:
                     log(f"  NO ROLE for speaker {r['who']!r} ({r['id']}); skipped")
+                    continue
+                if cast.engine(role, lock) == "kokoro":           # cast on Kokoro in the EL film: nothing is sent
+                    k = kokoro_row(r, role)
+                    lines.append(k)
+                    log(f"  kokoro {r['id']}__{role}: the lock's own take {k.get('file')}")
                     continue
                 c, rdef = cast.voice(role, cm.get(role, s), strict=a.strict)
                 if c is None:
@@ -759,6 +829,8 @@ def main(argv=None):
         p.add_argument("--strict", action="store_true", help="a role without this set's candidate is skipped (auditions)")
         p.add_argument("--cand", default="", help="per-role candidate over the set, e.g. mas-manalt=B,rima-tamuri=B")
         p.add_argument("--reuse", nargs="*", default=[], help="other render dirs whose takes are reused when voice, model, settings and text as sent match (no characters sent)")
+        p.add_argument("--lock", default=None, help="the lock these lines belong to, for cast-el.json's engine override "
+                       "(default: from --lines, show/reel/ep01-vNN/...); e.g. v35: MARIO keeps his Kokoro takes")
         if name == "render":
             p.add_argument("--out", required=True)
             p.add_argument("--only", default="")

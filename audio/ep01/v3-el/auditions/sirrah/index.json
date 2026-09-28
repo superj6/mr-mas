@@ -1,0 +1,934 @@
+{
+ "role": "sirrah",
+ "candidates": [
+  {
+   "key": "pamela",
+   "voice_id": "5WdslVl9OFNf1eZigGfk",
+   "name": "Pamela - Calm, Grounded and Natural",
+   "source": "shared Voice Library (professional)",
+   "library": {
+    "use_case": "conversational",
+    "descriptive": "calm",
+    "description": "A calm, grounded female voice with natural warmth and quiet authority. Reflective tone with measured pacing and clear articulation. Expressive but restrained — balanced between intellect and empathy. Ideal for thoughtful narration, podcast storytelling, and cinematic voiceover where clarity and composure are essential."
+   },
+   "preview": {
+    "f0": 180.0,
+    "p_en": 0.992
+   },
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "takes": [
+    {
+     "line": "e1-a2-13-02",
+     "text": "Any questions, before we take the picture?",
+     "sent": "Any questions, before we take the picture?",
+     "file": "audio/ep01/v3-el/auditions/sirrah/pamela/e1-a2-13-02.wav",
+     "seed": 1498507567,
+     "key": "77552fc7a7cdd870",
+     "chars": 42,
+     "cost_header": "18",
+     "voiced_s": 2.45,
+     "wpm": 171.4,
+     "sps": 4.49,
+     "pauses": [],
+     "f0": 212.2,
+     "f0_range": 7.1,
+     "tail_cut": true,
+     "asr": "Any questions before we take the picture?",
+     "recall": 1.0,
+     "p_en": 0.9904
+    },
+    {
+     "line": "e1-a2-13-04",
+     "text": "Is it just the one?",
+     "sent": "Is it just the one?",
+     "file": "audio/ep01/v3-el/auditions/sirrah/pamela/e1-a2-13-04.wav",
+     "seed": 3336414840,
+     "key": "4fa3296d78543cf8",
+     "chars": 19,
+     "cost_header": "8",
+     "voiced_s": 1.55,
+     "wpm": 193.5,
+     "sps": 3.23,
+     "pauses": [],
+     "f0": 198.3,
+     "f0_range": 11.5,
+     "tail_cut": false,
+     "asr": "Is it just the one?",
+     "recall": 1.0,
+     "p_en": 0.9865
+    }
+   ],
+   "chars_sent": 61,
+   "score": 3.06,
+   "penalties": {
+    "lane": 0.27,
+    "separation": 0.79,
+    "accent": 0.0,
+    "artifacts": 2.0
+   }
+  },
+  {
+   "key": "ida-freeist",
+   "voice_id": "uod6Nn3FGhzBRM6gqPSU",
+   "name": "Ida Freeist - Warm & Professional",
+   "source": "shared Voice Library (professional)",
+   "library": {
+    "use_case": "informative_educational",
+    "descriptive": "calm",
+    "description": "Ida Freeist offers a voice that is both deeply reassuring and professionally precise. Her tone is naturally grounded and soothing, making her the perfect choice for narration that requires a 'human touch'—such as healthcare explainers, educational series, and wellness content. With a steady, deliberate pace and a sincere delivery, she turns complex information into an inviting and clear listening experience."
+   },
+   "preview": {
+    "f0": 174.1,
+    "p_en": 0.9964
+   },
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "takes": [
+    {
+     "line": "e1-a2-13-02",
+     "text": "Any questions, before we take the picture?",
+     "sent": "Any questions, before we take the picture?",
+     "file": "audio/ep01/v3-el/auditions/sirrah/ida-freeist/e1-a2-13-02.wav",
+     "seed": 1437097996,
+     "key": "131698e16a0756ac",
+     "chars": 42,
+     "cost_header": "18",
+     "voiced_s": 2.25,
+     "wpm": 186.7,
+     "sps": 5.19,
+     "pauses": [
+      0.13
+     ],
+     "f0": 172.9,
+     "f0_range": 14.9,
+     "tail_cut": false,
+     "asr": "Any questions before we take the picture?",
+     "recall": 1.0,
+     "p_en": 0.9968
+    },
+    {
+     "line": "e1-a2-13-04",
+     "text": "Is it just the one?",
+     "sent": "Is it just the one?",
+     "file": "audio/ep01/v3-el/auditions/sirrah/ida-freeist/e1-a2-13-04.wav",
+     "seed": 2338274256,
+     "key": "6fb9a14fc28ba728",
+     "chars": 19,
+     "cost_header": "8",
+     "voiced_s": 1.27,
+     "wpm": 236.2,
+     "sps": 4.5,
+     "pauses": [
+      0.06,
+      0.16
+     ],
+     "f0": 152.4,
+     "f0_range": 9.3,
+     "tail_cut": false,
+     "asr": "Is it just the one?",
+     "recall": 1.0,
+     "p_en": 0.9917
+    }
+   ],
+   "chars_sent": 61,
+   "score": 0.0,
+   "penalties": {
+    "lane": 0.0,
+    "separation": 0.0,
+    "accent": 0.0,
+    "artifacts": 0.0
+   }
+  },
+  {
+   "key": "amie",
+   "voice_id": "d2TIsnZlkvBAy2oXD9Dp",
+   "name": "Amie - Pro",
+   "source": "shared Voice Library (professional)",
+   "library": {
+    "use_case": "narrative_story",
+    "descriptive": "confident",
+    "description": "Professional, clear, warm, and confident female voice with a calm delivery and natural conversational tone. Well suited for training videos, presentations, educational content, corporate narration, and professional communications. Articulate, polished, and easy to understand."
+   },
+   "preview": {
+    "f0": 173.4,
+    "p_en": 0.9914
+   },
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "takes": [
+    {
+     "line": "e1-a2-13-02",
+     "text": "Any questions, before we take the picture?",
+     "sent": "Any questions, before we take the picture?",
+     "file": "audio/ep01/v3-el/auditions/sirrah/amie/e1-a2-13-02.wav",
+     "seed": 1609369743,
+     "key": "52a68fa8047f21b3",
+     "chars": 42,
+     "cost_header": "18",
+     "voiced_s": 1.92,
+     "wpm": 218.8,
+     "sps": 5.73,
+     "pauses": [],
+     "f0": 208.4,
+     "f0_range": 8.4,
+     "tail_cut": false,
+     "asr": "Any questions before we take the picture?",
+     "recall": 1.0,
+     "p_en": 0.9295
+    },
+    {
+     "line": "e1-a2-13-04",
+     "text": "Is it just the one?",
+     "sent": "Is it just the one?",
+     "file": "audio/ep01/v3-el/auditions/sirrah/amie/e1-a2-13-04.wav",
+     "seed": 1293491013,
+     "key": "2a50c4228aa0e622",
+     "chars": 19,
+     "cost_header": "8",
+     "voiced_s": 1.19,
+     "wpm": 252.1,
+     "sps": 4.2,
+     "pauses": [],
+     "f0": 220.7,
+     "f0_range": 6.2,
+     "tail_cut": false,
+     "asr": "Is it just the one?",
+     "recall": 1.0,
+     "p_en": 0.9946
+    }
+   ],
+   "chars_sent": 61,
+   "score": 3.35,
+   "penalties": {
+    "lane": 0.79,
+    "separation": 0.27,
+    "accent": 2.29,
+    "artifacts": 0.0
+   }
+  },
+  {
+   "key": "miss-la",
+   "voice_id": "Jx35Jvky2ob4xi16g1ha",
+   "name": "Miss La - Confident and Engaging",
+   "source": "shared Voice Library (high_quality)",
+   "library": {
+    "use_case": "informative_educational",
+    "descriptive": "confident",
+    "description": "A warm, confident, and engaging female voice with a smooth mid-range tone and natural clarity. Ideal for business narration, coaching, tutorials, and conversational content. The delivery is authentic and friendly, with the ability to shift easily between motivational energy and calm professionalism."
+   },
+   "preview": {
+    "f0": 172.2,
+    "p_en": 0.999
+   },
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "takes": [
+    {
+     "line": "e1-a2-13-02",
+     "text": "Any questions, before we take the picture?",
+     "sent": "Any questions, before we take the picture?",
+     "file": "audio/ep01/v3-el/auditions/sirrah/miss-la/e1-a2-13-02.wav",
+     "seed": 783007906,
+     "key": "2255990e731907c2",
+     "chars": 42,
+     "cost_header": "18",
+     "voiced_s": 1.89,
+     "wpm": 222.2,
+     "sps": 5.82,
+     "pauses": [],
+     "f0": 200.2,
+     "f0_range": 6.3,
+     "tail_cut": false,
+     "asr": "Any questions before we take the picture?",
+     "recall": 1.0,
+     "p_en": 0.9951
+    },
+    {
+     "line": "e1-a2-13-04",
+     "text": "Is it just the one?",
+     "sent": "Is it just the one?",
+     "file": "audio/ep01/v3-el/auditions/sirrah/miss-la/e1-a2-13-04.wav",
+     "seed": 1014912130,
+     "key": "ee852bd19e4142df",
+     "chars": 19,
+     "cost_header": "8",
+     "voiced_s": 1.59,
+     "wpm": 188.7,
+     "sps": 3.42,
+     "pauses": [
+      0.13
+     ],
+     "f0": 175.2,
+     "f0_range": 3.7,
+     "tail_cut": false,
+     "asr": "Is it just the one?",
+     "recall": 1.0,
+     "p_en": 0.9961
+    }
+   ],
+   "chars_sent": 61,
+   "score": 0.42,
+   "penalties": {
+    "lane": 0.0,
+    "separation": 0.42,
+    "accent": 0.0,
+    "artifacts": 0.0
+   }
+  }
+ ],
+ "current": {
+  "key": "marie (current)",
+  "voice_id": "wsL2AB1kHVzgox3WvQP2",
+  "name": "Marie - Professional & Warm",
+  "takes": [
+   {
+    "line": "e1-a2-13-02",
+    "text": "Any questions, before we take the picture?",
+    "file": "audio/ep01/v3-el/ep01-v34/act2/wav/e1-a2-13-02__sirrah-A.wav",
+    "voiced_s": 2.67,
+    "wpm": 157.3,
+    "sps": 4.12,
+    "pauses": [],
+    "f0": 229.6,
+    "f0_range": 11.0,
+    "tail_cut": false,
+    "asr": "Any questions before we take the picture?",
+    "recall": 1.0,
+    "p_en": 0.9953,
+    "speed": 0.95
+   },
+   {
+    "line": "e1-a2-13-04",
+    "text": "Is it just the one?",
+    "file": "audio/ep01/v3-el/ep01-v34/act2/wav/e1-a2-13-04__sirrah-A.wav",
+    "voiced_s": 1.39,
+    "wpm": 215.8,
+    "sps": 4.07,
+    "pauses": [
+     0.16
+    ],
+    "f0": 222.4,
+    "f0_range": 9.8,
+    "tail_cut": false,
+    "asr": "Is it just the one?",
+    "recall": 1.0,
+    "p_en": 0.9971,
+    "speed": 0.95
+   }
+  ],
+  "score": 1.69,
+  "penalties": {
+   "lane": 1.69,
+   "separation": 0.0,
+   "accent": 0.0,
+   "artifacts": 0.0
+  },
+  "settings": {
+   "stability": 0.6,
+   "similarity_boost": 0.75,
+   "style": 0.0,
+   "use_speaker_boost": true,
+   "speed": 0.95
+  }
+ },
+ "ranking": [
+  {
+   "rank": 1,
+   "key": "ida-freeist",
+   "score": 0.0,
+   "takes": 4,
+   "f0": 174.5,
+   "wpm_line1": 166.0,
+   "at_speed": 0.85,
+   "pace_penalty": 1.1,
+   "penalties": {
+    "lane": 0.0,
+    "separation": 0.0,
+    "accent": 0.0,
+    "artifacts": 0.0
+   }
+  },
+  {
+   "rank": 2,
+   "key": "miss-la",
+   "score": 0.42,
+   "takes": 2,
+   "f0": 187.7,
+   "wpm_line1": 222.2,
+   "at_speed": 1.0,
+   "pace_penalty": 6.72,
+   "penalties": {
+    "lane": 0.0,
+    "separation": 0.42,
+    "accent": 0.0,
+    "artifacts": 0.0
+   }
+  },
+  {
+   "rank": 3,
+   "key": "marie (current)",
+   "score": 1.69,
+   "takes": 2,
+   "f0": 226.0,
+   "wpm_line1": 157.3,
+   "at_speed": 0.95,
+   "pace_penalty": 0.23,
+   "penalties": {
+    "lane": 1.69,
+    "separation": 0.0,
+    "accent": 0.0,
+    "artifacts": 0.0
+   }
+  },
+  {
+   "rank": 4,
+   "key": "pamela",
+   "score": 3.06,
+   "takes": 4,
+   "f0": 208.2,
+   "wpm_line1": 144.3,
+   "at_speed": 0.9,
+   "pace_penalty": 0.0,
+   "penalties": {
+    "lane": 0.27,
+    "separation": 0.79,
+    "accent": 0.0,
+    "artifacts": 2.0
+   }
+  },
+  {
+   "rank": 5,
+   "key": "amie",
+   "score": 3.35,
+   "takes": 2,
+   "f0": 214.6,
+   "wpm_line1": 218.8,
+   "at_speed": 1.0,
+   "pace_penalty": 6.38,
+   "penalties": {
+    "lane": 0.79,
+    "separation": 0.27,
+    "accent": 2.29,
+    "artifacts": 0.0
+   }
+  }
+ ],
+ "ranking_rule": "per voice over all its takes, lower is better: the lane 170-205 Hz (semitones outside), at least 1.5 st from the photographer (the scene's other woman, 184-217 Hz), p(en) under 0.985 (1 point per 0.01), 2 per clipped tail or ASR recall under 0.9 per pair of takes. Pace is not in the score (the speed setting sets it): 'Any questions…' against 140-155 wpm (1 point per 10 wpm outside) is reported for the round the film would use, at its speed",
+ "episode_takes": [
+  {
+   "key": "ida-freeist-ep",
+   "round": "episode",
+   "voice_id": "uod6Nn3FGhzBRM6gqPSU",
+   "name": "Ida Freeist - Warm & Professional",
+   "cand": "B",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 0.85
+   },
+   "lines_json": "audio/ep01/v3-el/auditions/sirrah/round2/lines-AsirrahB.json",
+   "note": "el_render.py with the episode's seeds (seed_of(line id, voice)) at the fitted speed: the takes the v3.5 render gets from the cache for free if this voice is cast",
+   "takes": [
+    {
+     "line": "e1-a2-13-02",
+     "text": "Any questions, before we take the picture?",
+     "sent": "Any questions, before we take the picture?",
+     "file": "audio/ep01/v3-el/auditions/sirrah/round2/wav/e1-a2-13-02__sirrah-B.wav",
+     "seed": 36862211,
+     "key": "a310201c329ce0d2",
+     "chars": 42,
+     "speed": 0.85,
+     "voiced_s": 2.53,
+     "wpm": 166.0,
+     "sps": 4.53,
+     "pauses": [
+      0.1,
+      0.06
+     ],
+     "f0": 192.3,
+     "f0_range": 11.9,
+     "tail_cut": false,
+     "asr": "Any questions before we take the picture?",
+     "recall": 1.0,
+     "p_en": 0.9957
+    },
+    {
+     "line": "e1-a2-13-04",
+     "text": "Is it just the one?",
+     "sent": "Is it just the one?",
+     "file": "audio/ep01/v3-el/auditions/sirrah/round2/wav/e1-a2-13-04__sirrah-B.wav",
+     "seed": 2606341581,
+     "key": "72e654aacd387168",
+     "chars": 19,
+     "speed": 0.85,
+     "voiced_s": 1.29,
+     "wpm": 232.6,
+     "sps": 3.88,
+     "pauses": [
+      0.08
+     ],
+     "f0": 176.1,
+     "f0_range": 9.7,
+     "tail_cut": false,
+     "asr": "Is it just the one?",
+     "recall": 1.0,
+     "p_en": 0.9747
+    }
+   ],
+   "score": 0.0,
+   "penalties": {
+    "lane": 0.0,
+    "separation": 0.0,
+    "accent": 0.0,
+    "artifacts": 0.0
+   }
+  },
+  {
+   "key": "pamela-ep",
+   "round": "episode",
+   "voice_id": "5WdslVl9OFNf1eZigGfk",
+   "name": "Pamela - Calm, Grounded and Natural",
+   "cand": "C",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 0.9
+   },
+   "lines_json": "audio/ep01/v3-el/auditions/sirrah/round2/lines-AsirrahC.json",
+   "note": "el_render.py with the episode's seeds (seed_of(line id, voice)) at the fitted speed: the takes the v3.5 render gets from the cache for free if this voice is cast",
+   "takes": [
+    {
+     "line": "e1-a2-13-02",
+     "text": "Any questions, before we take the picture?",
+     "sent": "Any questions, before we take the picture?",
+     "file": "audio/ep01/v3-el/auditions/sirrah/round2/wav/e1-a2-13-02__sirrah-C.wav",
+     "seed": 1879073558,
+     "key": "cb091733e3c289ef",
+     "chars": 42,
+     "speed": 0.9,
+     "voiced_s": 2.91,
+     "wpm": 144.3,
+     "sps": 3.78,
+     "pauses": [],
+     "f0": 204.2,
+     "f0_range": 9.4,
+     "tail_cut": false,
+     "asr": "Any questions before we take the picture?",
+     "recall": 1.0,
+     "p_en": 0.985
+    },
+    {
+     "line": "e1-a2-13-04",
+     "text": "Is it just the one?",
+     "sent": "Is it just the one?",
+     "file": "audio/ep01/v3-el/auditions/sirrah/round2/wav/e1-a2-13-04__sirrah-C.wav",
+     "seed": 1048099991,
+     "key": "30edd8d26c6739d6",
+     "chars": 19,
+     "speed": 0.9,
+     "voiced_s": 1.53,
+     "wpm": 196.1,
+     "sps": 3.27,
+     "pauses": [],
+     "f0": 220.7,
+     "f0_range": 7.9,
+     "tail_cut": true,
+     "asr": "Is it just the one?",
+     "recall": 1.0,
+     "p_en": 0.9806
+    }
+   ],
+   "score": 3.06,
+   "penalties": {
+    "lane": 0.27,
+    "separation": 0.79,
+    "accent": 0.0,
+    "artifacts": 2.0
+   }
+  }
+ ],
+ "scene": {
+  "about": "every voice against the scene's other voices: the v3.4 EL lock's sc 13 lines (MARIO as his Kokoro takes, as the\n    final film plays him). Semitones between median F0s; spectral centroid and 2-5 kHz presence (0-8 kHz, active\n    frames); the distance between mean MFCCs (c1-c19, 0-8 kHz): larger = more distinct timbre.",
+  "timeline": "show/reel/ep01-v34-el/ep01-v34-el-act2.json",
+  "beats": "13.*",
+  "neighbours": {
+   "mario (kokoro)": {
+    "f0_geo": 120.3,
+    "centroid_hz": 807,
+    "presence_db": -11.26,
+    "files": [
+     "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-03.wav",
+     "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-05.wav"
+    ]
+   },
+   "photographer": {
+    "f0_geo": 199.8,
+    "centroid_hz": 979,
+    "presence_db": -9.48,
+    "files": [
+     "audio/ep01/v3-el/ep01-v34/act2/wav/e1-a2-13-06__photographer-A.wav",
+     "audio/ep01/v3-el/ep01-v34/act2/wav/e1-a2-13-07__photographer-A.wav"
+    ]
+   },
+   "tasya": {
+    "f0_geo": 138.3,
+    "centroid_hz": 693,
+    "presence_db": -12.21,
+    "files": [
+     "audio/ep01/v3-el/ep01-v34/act2/wav/e1-a2-13-08__tasya-A.wav"
+    ]
+   },
+   "radnus": {
+    "f0_geo": 131.6,
+    "centroid_hz": 506,
+    "presence_db": -17.65,
+    "files": [
+     "audio/ep01/v3-el/ep01-v34/act2/wav/e1-a2-13-09__radnus-A.wav",
+     "audio/ep01/v3-el/ep01-v34/act2/wav/e1-a2-13-11__radnus-A.wav",
+     "audio/ep01/v3-el/ep01-v34/act2/wav/e1-a2-13-13__radnus-A.wav"
+    ]
+   },
+   "mas": {
+    "f0_geo": 126.3,
+    "centroid_hz": 610,
+    "presence_db": -13.18,
+    "files": [
+     "audio/ep01/v3-el/ep01-v34/act2/wav/e1-a2-13-10__mas-manalt-C.wav",
+     "audio/ep01/v3-el/ep01-v34/act2/wav/e1-a2-13-12__mas-manalt-C.wav",
+     "audio/ep01/v3-el/ep01-v34/act2/wav/e1-a2-13-18__mas-manalt-C.wav"
+    ]
+   },
+   "nedib": {
+    "f0_geo": 130.5,
+    "centroid_hz": 661,
+    "presence_db": -12.69,
+    "files": [
+     "audio/ep01/v3-el/ep01-v34/act2/wav/e1-a2-13-14__nedib-A.wav",
+     "audio/ep01/v3-el/ep01-v34/act2/wav/v31-a2-0001__nedib-A.wav",
+     "audio/ep01/v3-el/ep01-v34/act2/wav/v31-a2-0002__nedib-A.wav"
+    ]
+   }
+  },
+  "voices": {
+   "pamela (all takes)": {
+    "f0_geo": 208.7,
+    "centroid_hz": 396,
+    "presence_db": -16.36,
+    "takes": 4,
+    "vs": {
+     "mario (kokoro)": {
+      "st": 9.54,
+      "mfcc_dist": 50.0
+     },
+     "photographer": {
+      "st": 0.75,
+      "mfcc_dist": 89.0
+     },
+     "tasya": {
+      "st": 7.12,
+      "mfcc_dist": 52.1
+     },
+     "radnus": {
+      "st": 7.98,
+      "mfcc_dist": 51.1
+     },
+     "mas": {
+      "st": 8.69,
+      "mfcc_dist": 53.8
+     },
+     "nedib": {
+      "st": 8.12,
+      "mfcc_dist": 46.8
+     }
+    }
+   },
+   "pamela-ep (episode takes)": {
+    "f0_geo": 212.3,
+    "centroid_hz": 405,
+    "presence_db": -15.36,
+    "takes": 2,
+    "vs": {
+     "mario (kokoro)": {
+      "st": 9.83,
+      "mfcc_dist": 57.3
+     },
+     "photographer": {
+      "st": 1.05,
+      "mfcc_dist": 98.6
+     },
+     "tasya": {
+      "st": 7.42,
+      "mfcc_dist": 59.2
+     },
+     "radnus": {
+      "st": 8.27,
+      "mfcc_dist": 58.8
+     },
+     "mas": {
+      "st": 8.99,
+      "mfcc_dist": 59.8
+     },
+     "nedib": {
+      "st": 8.42,
+      "mfcc_dist": 55.0
+     }
+    }
+   },
+   "ida-freeist (all takes)": {
+    "f0_geo": 172.8,
+    "centroid_hz": 457,
+    "presence_db": -18.2,
+    "takes": 4,
+    "vs": {
+     "mario (kokoro)": {
+      "st": 6.28,
+      "mfcc_dist": 55.3
+     },
+     "photographer": {
+      "st": -2.51,
+      "mfcc_dist": 93.5
+     },
+     "tasya": {
+      "st": 3.86,
+      "mfcc_dist": 63.0
+     },
+     "radnus": {
+      "st": 4.71,
+      "mfcc_dist": 55.6
+     },
+     "mas": {
+      "st": 5.43,
+      "mfcc_dist": 49.4
+     },
+     "nedib": {
+      "st": 4.86,
+      "mfcc_dist": 68.1
+     }
+    }
+   },
+   "ida-freeist-ep (episode takes)": {
+    "f0_geo": 184.0,
+    "centroid_hz": 423,
+    "presence_db": -18.17,
+    "takes": 2,
+    "vs": {
+     "mario (kokoro)": {
+      "st": 7.36,
+      "mfcc_dist": 56.6
+     },
+     "photographer": {
+      "st": -1.42,
+      "mfcc_dist": 91.0
+     },
+     "tasya": {
+      "st": 4.94,
+      "mfcc_dist": 63.6
+     },
+     "radnus": {
+      "st": 5.8,
+      "mfcc_dist": 55.3
+     },
+     "mas": {
+      "st": 6.51,
+      "mfcc_dist": 51.4
+     },
+     "nedib": {
+      "st": 5.94,
+      "mfcc_dist": 69.6
+     }
+    }
+   },
+   "amie (all takes)": {
+    "f0_geo": 214.5,
+    "centroid_hz": 830,
+    "presence_db": -11.81,
+    "takes": 2,
+    "vs": {
+     "mario (kokoro)": {
+      "st": 10.01,
+      "mfcc_dist": 73.0
+     },
+     "photographer": {
+      "st": 1.23,
+      "mfcc_dist": 85.5
+     },
+     "tasya": {
+      "st": 7.6,
+      "mfcc_dist": 80.4
+     },
+     "radnus": {
+      "st": 8.45,
+      "mfcc_dist": 78.3
+     },
+     "mas": {
+      "st": 9.16,
+      "mfcc_dist": 60.9
+     },
+     "nedib": {
+      "st": 8.59,
+      "mfcc_dist": 84.7
+     }
+    }
+   },
+   "miss-la (all takes)": {
+    "f0_geo": 187.3,
+    "centroid_hz": 639,
+    "presence_db": -13.41,
+    "takes": 2,
+    "vs": {
+     "mario (kokoro)": {
+      "st": 7.67,
+      "mfcc_dist": 39.8
+     },
+     "photographer": {
+      "st": -1.12,
+      "mfcc_dist": 66.3
+     },
+     "tasya": {
+      "st": 5.25,
+      "mfcc_dist": 41.3
+     },
+     "radnus": {
+      "st": 6.1,
+      "mfcc_dist": 32.2
+     },
+     "mas": {
+      "st": 6.82,
+      "mfcc_dist": 41.8
+     },
+     "nedib": {
+      "st": 6.25,
+      "mfcc_dist": 42.9
+     }
+    }
+   },
+   "marie (current) (all takes)": {
+    "f0_geo": 226.0,
+    "centroid_hz": 692,
+    "presence_db": -11.05,
+    "takes": 2,
+    "vs": {
+     "mario (kokoro)": {
+      "st": 10.92,
+      "mfcc_dist": 41.9
+     },
+     "photographer": {
+      "st": 2.13,
+      "mfcc_dist": 87.1
+     },
+     "tasya": {
+      "st": 8.5,
+      "mfcc_dist": 45.2
+     },
+     "radnus": {
+      "st": 9.35,
+      "mfcc_dist": 40.3
+     },
+     "mas": {
+      "st": 10.07,
+      "mfcc_dist": 33.3
+     },
+     "nedib": {
+      "st": 9.5,
+      "mfcc_dist": 48.2
+     }
+    }
+   }
+  }
+ },
+ "listening_file": {
+  "file": "out/ep01/full-v3/voices/sirrah-recast.mp3",
+  "seconds": 86.0,
+  "order": [
+   {
+    "slate": "The current voice: Marie.",
+    "what": "current",
+    "key": "marie (current)",
+    "name": "Marie - Professional & Warm",
+    "voice_id": "wsL2AB1kHVzgox3WvQP2",
+    "starts_s": 9.57,
+    "speed": 0.95
+   },
+   {
+    "slate": "Candidate one: Ida Freeist.",
+    "what": "candidate 1",
+    "key": "ida-freeist",
+    "name": "Ida Freeist - Warm & Professional",
+    "voice_id": "uod6Nn3FGhzBRM6gqPSU",
+    "starts_s": 19.93,
+    "speed": 1.0
+   },
+   {
+    "slate": "Candidate two: Miss La.",
+    "what": "candidate 2",
+    "key": "miss-la",
+    "name": "Miss La - Confident and Engaging",
+    "voice_id": "Jx35Jvky2ob4xi16g1ha",
+    "starts_s": 30.48,
+    "speed": 1.0
+   },
+   {
+    "slate": "Candidate three: Pamela.",
+    "what": "candidate 3",
+    "key": "pamela",
+    "name": "Pamela - Calm, Grounded and Natural",
+    "voice_id": "5WdslVl9OFNf1eZigGfk",
+    "starts_s": 40.35,
+    "speed": 1.0
+   },
+   {
+    "slate": "Candidate four: Amie.",
+    "what": "candidate 4",
+    "key": "amie",
+    "name": "Amie - Pro",
+    "voice_id": "d2TIsnZlkvBAy2oXD9Dp",
+    "starts_s": 50.76,
+    "speed": 1.0
+   },
+   {
+    "slate": "Round two, at the episode's pace. Ida Freeist, speed 0.85.",
+    "what": "round 2 (0.85)",
+    "key": "ida-freeist-ep",
+    "name": "Ida Freeist - Warm & Professional",
+    "voice_id": "uod6Nn3FGhzBRM6gqPSU",
+    "starts_s": 60.78,
+    "speed": 0.85
+   },
+   {
+    "slate": "Pamela, speed 0.9.",
+    "what": "round 2 (0.9)",
+    "key": "pamela-ep",
+    "name": "Pamela - Calm, Grounded and Natural",
+    "voice_id": "5WdslVl9OFNf1eZigGfk",
+    "starts_s": 74.99,
+    "speed": 0.9
+   }
+  ],
+  "slate": "Kokoro af_heart, -20 LUFS; the takes as dressed (-16 LUFS)"
+ }
+}

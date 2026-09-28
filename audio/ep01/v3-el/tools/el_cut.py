@@ -93,6 +93,8 @@ def main():
     for cid, (src, i0, i1) in table.items():
         seg, line = tl[cid]
         r = src_rows[src]
+        if r.get("engine") == "kokoro":
+            continue        # cast on Kokoro (cast-el.json engine): el_lock.py keeps the Kokoro lock's own cut take
         W = r["words"]
         want = [norm(w) for w in R.normalise_text(line["text"]).split()]
         got = [norm(w["w"]) for w in W[i0:i1 + 1]]

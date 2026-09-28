@@ -1,0 +1,491 @@
+{
+ "takes": {
+  "e1-a2-13-02__sirrah-B": {
+   "take": "e1-a2-13-02__sirrah-B",
+   "key": "a310201c329ce0d2",
+   "base_key": "a310201c329ce0d2",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep01/v3-el/auditions/sirrah/round2/wav/e1-a2-13-02__sirrah-B.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.672,
+   "offset_s": 0.35,
+   "sent": "Any questions, before we take the picture?",
+   "seed": 36862211,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 0.85
+   },
+   "voice_id": "uod6Nn3FGhzBRM6gqPSU",
+   "voice_name": "Ida Freeist - Warm & Professional",
+   "cand": "B",
+   "role": "sirrah",
+   "measured": {
+    "audible_in_s": 0.4,
+    "audible_out_s": 2.93,
+    "span_s": 2.53,
+    "words": 7,
+    "wpm": 166.0,
+    "syllables": 11,
+    "articulation_sps": 4.53,
+    "pauses_s": [
+     0.1,
+     0.06
+    ],
+    "longest_internal_gap_s": 0.1,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.742,
+    "tail_to_60_s": 0.002,
+    "median_f0_hz": 192.3,
+    "f0_range_st": 11.9
+   },
+   "words": [
+    {
+     "w": "Any",
+     "t0": 0.38,
+     "t1": 0.617
+    },
+    {
+     "w": "questions",
+     "t0": 0.675,
+     "t1": 1.348
+    },
+    {
+     "w": "before",
+     "t0": 1.465,
+     "t1": 1.824
+    },
+    {
+     "w": "we",
+     "t0": 1.848,
+     "t1": 1.941
+    },
+    {
+     "w": "take",
+     "t0": 1.999,
+     "t1": 2.219
+    },
+    {
+     "w": "the",
+     "t0": 2.266,
+     "t1": 2.335
+    },
+    {
+     "w": "picture",
+     "t0": 2.393,
+     "t1": 2.927
+    }
+   ],
+   "qa": {
+    "asr": "Any questions before we take the picture?",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -1.56,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 192.3,
+    "f0_range_st": 11.9,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.742,
+    "raw_tail_cut": false,
+    "align_median_s": 0.088
+   },
+   "raw": {
+    "raw_first_sound_s": 0.05,
+    "raw_len_s": 2.972,
+    "raw_tail_cut": false
+   },
+   "kokoro": {
+    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-02.wav",
+    "mode": "on-mic",
+    "lufs_i": -16.0,
+    "duration_s": 3.285,
+    "audible_in_s": 0.51,
+    "audible_out_s": 2.8,
+    "wpm": 183.4,
+    "median_f0_hz": 201.7,
+    "f0_range_st": 13.4,
+    "delivery": "O.S.; the teacher, to the row",
+    "voice": "af_sarah (Kokoro-82M stock) · a-sarah-crisp · speed 0.950",
+    "device": null
+   }
+  },
+  "e1-a2-13-04__sirrah-B": {
+   "take": "e1-a2-13-04__sirrah-B",
+   "key": "72e654aacd387168",
+   "base_key": "72e654aacd387168",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep01/v3-el/auditions/sirrah/round2/wav/e1-a2-13-04__sirrah-B.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.418,
+   "offset_s": 0.35,
+   "sent": "Is it just the one?",
+   "seed": 2606341581,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 0.85
+   },
+   "voice_id": "uod6Nn3FGhzBRM6gqPSU",
+   "voice_name": "Ida Freeist - Warm & Professional",
+   "cand": "B",
+   "role": "sirrah",
+   "measured": {
+    "audible_in_s": 0.41,
+    "audible_out_s": 1.7,
+    "span_s": 1.29,
+    "words": 5,
+    "wpm": 232.6,
+    "syllables": 5,
+    "articulation_sps": 3.88,
+    "pauses_s": [
+     0.08
+    ],
+    "longest_internal_gap_s": 0.08,
+    "speech_head_s": 0.41,
+    "speech_tail_s": 0.718,
+    "tail_to_60_s": 0.008,
+    "median_f0_hz": 176.1,
+    "f0_range_st": 9.7
+   },
+   "words": [
+    {
+     "w": "Is",
+     "t0": 0.39,
+     "t1": 0.559
+    },
+    {
+     "w": "it",
+     "t0": 0.629,
+     "t1": 0.733
+    },
+    {
+     "w": "just",
+     "t0": 0.791,
+     "t1": 1.07
+    },
+    {
+     "w": "the",
+     "t0": 1.139,
+     "t1": 1.256
+    },
+    {
+     "w": "one",
+     "t0": 1.348,
+     "t1": 1.685
+    }
+   ],
+   "qa": {
+    "asr": "Is it just the one?",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.26,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.47,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 176.1,
+    "f0_range_st": 9.7,
+    "speech_head_s": 0.41,
+    "speech_tail_s": 0.718,
+    "raw_tail_cut": false,
+    "align_median_s": 0.088
+   },
+   "raw": {
+    "raw_first_sound_s": 0.06,
+    "raw_len_s": 1.718,
+    "raw_tail_cut": false
+   },
+   "kokoro": {
+    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-04.wav",
+    "mode": "on-mic",
+    "lufs_i": -16.0,
+    "duration_s": 2.095,
+    "audible_in_s": 0.5,
+    "audible_out_s": 1.61,
+    "wpm": 270.3,
+    "median_f0_hz": 197.7,
+    "f0_range_st": 14.0,
+    "delivery": "O.S.",
+    "voice": "af_sarah (Kokoro-82M stock) · a-sarah-crisp · speed 0.930",
+    "device": null
+   }
+  },
+  "e1-a2-13-02__sirrah-C": {
+   "take": "e1-a2-13-02__sirrah-C",
+   "key": "cb091733e3c289ef",
+   "base_key": "cb091733e3c289ef",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep01/v3-el/auditions/sirrah/round2/wav/e1-a2-13-02__sirrah-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.626,
+   "offset_s": 0.35,
+   "sent": "Any questions, before we take the picture?",
+   "seed": 1879073558,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 0.9
+   },
+   "voice_id": "5WdslVl9OFNf1eZigGfk",
+   "voice_name": "Pamela - Calm, Grounded and Natural",
+   "cand": "C",
+   "role": "sirrah",
+   "measured": {
+    "audible_in_s": 0.35,
+    "audible_out_s": 3.26,
+    "span_s": 2.91,
+    "words": 7,
+    "wpm": 144.3,
+    "syllables": 11,
+    "articulation_sps": 3.78,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.366,
+    "tail_to_60_s": 0.006,
+    "median_f0_hz": 204.2,
+    "f0_range_st": 9.4
+   },
+   "words": [
+    {
+     "w": "Any",
+     "t0": 0.35,
+     "t1": 0.64
+    },
+    {
+     "w": "questions",
+     "t0": 0.722,
+     "t1": 1.488
+    },
+    {
+     "w": "before",
+     "t0": 1.569,
+     "t1": 1.952
+    },
+    {
+     "w": "we",
+     "t0": 1.987,
+     "t1": 2.068
+    },
+    {
+     "w": "take",
+     "t0": 2.115,
+     "t1": 2.324
+    },
+    {
+     "w": "the",
+     "t0": 2.347,
+     "t1": 2.417
+    },
+    {
+     "w": "picture",
+     "t0": 2.451,
+     "t1": 2.927
+    }
+   ],
+   "qa": {
+    "asr": "Any questions before we take the picture?",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.46,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 204.2,
+    "f0_range_st": 9.4,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.366,
+    "raw_tail_cut": false,
+    "align_median_s": 0.087
+   },
+   "raw": {
+    "raw_first_sound_s": 0.0,
+    "raw_len_s": 2.926,
+    "raw_tail_cut": false
+   },
+   "kokoro": {
+    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-02.wav",
+    "mode": "on-mic",
+    "lufs_i": -16.0,
+    "duration_s": 3.285,
+    "audible_in_s": 0.51,
+    "audible_out_s": 2.8,
+    "wpm": 183.4,
+    "median_f0_hz": 201.7,
+    "f0_range_st": 13.4,
+    "delivery": "O.S.; the teacher, to the row",
+    "voice": "af_sarah (Kokoro-82M stock) · a-sarah-crisp · speed 0.950",
+    "device": null
+   }
+  },
+  "e1-a2-13-04__sirrah-C": {
+   "take": "e1-a2-13-04__sirrah-C",
+   "key": "30edd8d26c6739d6",
+   "base_key": "30edd8d26c6739d6",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep01/v3-el/auditions/sirrah/round2/wav/e1-a2-13-04__sirrah-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.233,
+   "offset_s": 0.35,
+   "sent": "Is it just the one?",
+   "seed": 1048099991,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 0.9
+   },
+   "voice_id": "5WdslVl9OFNf1eZigGfk",
+   "voice_name": "Pamela - Calm, Grounded and Natural",
+   "cand": "C",
+   "role": "sirrah",
+   "measured": {
+    "audible_in_s": 0.35,
+    "audible_out_s": 1.88,
+    "span_s": 1.53,
+    "words": 5,
+    "wpm": 196.1,
+    "syllables": 5,
+    "articulation_sps": 3.27,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.353,
+    "tail_to_60_s": 0.003,
+    "median_f0_hz": 220.7,
+    "f0_range_st": 7.9
+   },
+   "words": [
+    {
+     "w": "Is",
+     "t0": 0.35,
+     "t1": 0.536
+    },
+    {
+     "w": "it",
+     "t0": 0.605,
+     "t1": 0.675
+    },
+    {
+     "w": "just",
+     "t0": 0.745,
+     "t1": 0.965
+    },
+    {
+     "w": "the",
+     "t0": 1.012,
+     "t1": 1.081
+    },
+    {
+     "w": "one",
+     "t0": 1.186,
+     "t1": 1.534
+    }
+   ],
+   "qa": {
+    "asr": "Is it just the one?",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -4.26,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 220.7,
+    "f0_range_st": 7.9,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.353,
+    "raw_tail_cut": true,
+    "align_median_s": 0.066
+   },
+   "raw": {
+    "raw_first_sound_s": 0.0,
+    "raw_len_s": 1.533,
+    "raw_tail_cut": true
+   },
+   "kokoro": {
+    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-04.wav",
+    "mode": "on-mic",
+    "lufs_i": -16.0,
+    "duration_s": 2.095,
+    "audible_in_s": 0.5,
+    "audible_out_s": 1.61,
+    "wpm": 270.3,
+    "median_f0_hz": 197.7,
+    "f0_range_st": 14.0,
+    "delivery": "O.S.",
+    "voice": "af_sarah (Kokoro-82M stock) · a-sarah-crisp · speed 0.930",
+    "device": null
+   }
+  }
+ },
+ "calls": [
+  {
+   "take": "e1-a2-13-02__sirrah-B",
+   "key": "a310201c329ce0d2",
+   "chars": 42,
+   "cost_header": "18",
+   "request_id": "ZYez3Qz7Xw0F29V9sd54",
+   "at": "13:51:04"
+  },
+  {
+   "take": "e1-a2-13-04__sirrah-B",
+   "key": "72e654aacd387168",
+   "chars": 19,
+   "cost_header": "8",
+   "request_id": "1bJ39tZ7uf5RyWKvMZCe",
+   "at": "13:51:08"
+  },
+  {
+   "take": "e1-a2-13-02__sirrah-C",
+   "key": "cb091733e3c289ef",
+   "chars": 42,
+   "cost_header": "18",
+   "request_id": "twi2O5nHFGz7e9csc9yM",
+   "at": "13:51:12"
+  },
+  {
+   "take": "e1-a2-13-04__sirrah-C",
+   "key": "30edd8d26c6739d6",
+   "chars": 19,
+   "cost_header": "8",
+   "request_id": "X0JOhWZTCKmJhWIWw3dQ",
+   "at": "13:51:16"
+  },
+  {
+   "take": "e1-a2-13-04__sirrah-C",
+   "key": "1f356ddecdec2ade",
+   "chars": 19,
+   "cost_header": "8",
+   "request_id": "9CJTuZzvUT2iB7zYOiIy",
+   "at": "13:51:19"
+  }
+ ]
+}

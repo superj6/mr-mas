@@ -1062,7 +1062,16 @@
       "note": "the library preview MP3 (its own text), pYIN; a screen only"
      }
     }
-   ]
+   ],
+   "engine": "kokoro",
+   "engine_from_lock": "v35",
+   "kokoro": {
+    "voice": "am_liam (Kokoro-82M stock) · a-liam-earnest",
+    "cast": "audio/voices/cast.json",
+    "takes": "the Kokoro lock's own take for each line (its audio, in, dur and words), as the Kokoro film plays it: fast-v1/fast-v2 (acts one and two), act4 v5, and v3.5's new 'Point two...' from audio/ep01/v35/",
+    "format": "48 kHz / 24-bit mono, -16 LUFS integrated, -1.5 dBTP, dry, 0.35 s room-tone handles (-62 dBFS): the EL takes' format"
+   },
+   "engine_note": "The showrunner, 2026-09-28: \"i actually liked dario's kokoro voice more. let's just keep that while the rest are elevenlabs\" (proposal-v35 Voices, choice 11A). From the v3.5 lock on (engine_from_lock), el_render.py sends nothing for this role: it writes a pass-through row per line (a copy of the Kokoro take's row, 'engine': 'kokoro'). el_lock.py keeps the Kokoro lock's own take and timing for it, so only its start moves, with the EL lines before it in the beat. The v3.4 and earlier EL locks keep candidate A (Caleb) and rebuild unchanged. The mix: voices-el.md §AB."
   },
   "ttemme": {
    "name": "TTEMME",
@@ -1446,9 +1455,340 @@
       "f0_range_st": 9.5,
       "wpm": 140.7,
       "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     },
+     "recast": "v3.5: replaced in set A by candidate B (set_cand). The showrunner: \"harris's voice is not very good\". Measured on her episode takes: 226 Hz, above the 170-205 lane, 2.1 st over the Photographer; kept on file as candidate A."
+    },
+    {
+     "cand": "B",
+     "voice_id": "uod6Nn3FGhzBRM6gqPSU",
+     "voice_name": "Ida Freeist - Warm & Professional",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "female",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "calm",
+      "use_case": "informative_educational"
+     },
+     "library_description": "Ida Freeist offers a voice that is both deeply reassuring and professionally precise. Her tone is naturally grounded and soothing, making her the perfect choice for narration that requires a 'human touch'—such as healthcare explainers, educational series, and wellness content. With a steady, deliberate pace and a sincere delivery, she turns complex information into an inviting and clear listening experience.",
+     "public_owner_id": "a7ec31483602aa6c38ab2b3efa2ae0542bffeb90f8ba06c6f72712a2b3a0aea2",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.1,
+      "use_speaker_boost": true,
+      "speed": 0.85
+     },
+     "why": "v3.5 recast (2026-09-28; the showrunner: \"harris's voice is not very good. the rest are fine\"), picked by measurement and fit against the White House photo scene (tools/el_audition.py; auditions/sirrah/index.json, voices-el.md §AA). Over her four takes (the audition at speed 1.0 and the episode takes at 0.85) the median is 174.5 Hz: inside the 170-205 lane and 2.5 st under the Photographer, the scene's other woman (her episode takes 1.4 st). Marie sat 2.1 st over the Photographer at 226 Hz, above the lane. Of every voice measured, hers is the most distinct timbre from the Photographer (mean-MFCC distance 91-94; Miss La 66, Marie 87). She is warmer and darker than Marie (2-5 kHz presence -18.2 dB against -11.0). All four takes are verbatim on ASR with clean tails, and p(en) runs 0.975-0.997 (mean 0.990). Speed 0.85, from the audition's 1.0 (which read 'Any questions...' at 187 wpm): 166 wpm and 4.53 syll/s, between Marie's 157 and the Kokoro lock's 183. The library describes her as 'reassuring and professionally precise ... a steady, deliberate pace'. Chosen for fit to the brief, never for resembling anyone.",
+     "measured_audition": {
+      "rank": 1,
+      "score": 0.0,
+      "penalties": {
+       "lane": 0.0,
+       "separation": 0.0,
+       "accent": 0.0,
+       "artifacts": 0.0
+      },
+      "median_f0_hz_4_takes": 174.5,
+      "takes": [
+       {
+        "line": "e1-a2-13-02",
+        "speed": null,
+        "voiced_s": 2.25,
+        "wpm": 186.7,
+        "sps": 5.19,
+        "f0": 172.9,
+        "f0_range": 14.9,
+        "tail_cut": false,
+        "recall": 1.0,
+        "p_en": 0.9968,
+        "asr": "Any questions before we take the picture?"
+       },
+       {
+        "line": "e1-a2-13-04",
+        "speed": null,
+        "voiced_s": 1.27,
+        "wpm": 236.2,
+        "sps": 4.5,
+        "f0": 152.4,
+        "f0_range": 9.3,
+        "tail_cut": false,
+        "recall": 1.0,
+        "p_en": 0.9917,
+        "asr": "Is it just the one?"
+       },
+       {
+        "line": "e1-a2-13-02",
+        "speed": 0.85,
+        "voiced_s": 2.53,
+        "wpm": 166.0,
+        "sps": 4.53,
+        "f0": 192.3,
+        "f0_range": 11.9,
+        "tail_cut": false,
+        "recall": 1.0,
+        "p_en": 0.9957,
+        "asr": "Any questions before we take the picture?"
+       },
+       {
+        "line": "e1-a2-13-04",
+        "speed": 0.85,
+        "voiced_s": 1.29,
+        "wpm": 232.6,
+        "sps": 3.88,
+        "f0": 176.1,
+        "f0_range": 9.7,
+        "tail_cut": false,
+        "recall": 1.0,
+        "p_en": 0.9747,
+        "asr": "Is it just the one?"
+       }
+      ],
+      "scene_episode_takes": {
+       "f0_geo": 184.0,
+       "centroid_hz": 423,
+       "presence_db": -18.17,
+       "takes": 2,
+       "vs": {
+        "mario (kokoro)": {
+         "st": 7.36,
+         "mfcc_dist": 56.6
+        },
+        "photographer": {
+         "st": -1.42,
+         "mfcc_dist": 91.0
+        },
+        "tasya": {
+         "st": 4.94,
+         "mfcc_dist": 63.6
+        },
+        "radnus": {
+         "st": 5.8,
+         "mfcc_dist": 55.3
+        },
+        "mas": {
+         "st": 6.51,
+         "mfcc_dist": 51.4
+        },
+        "nedib": {
+         "st": 5.94,
+         "mfcc_dist": 69.6
+        }
+       }
+      },
+      "scene_all_takes": {
+       "f0_geo": 172.8,
+       "centroid_hz": 457,
+       "presence_db": -18.2,
+       "takes": 4,
+       "vs": {
+        "mario (kokoro)": {
+         "st": 6.28,
+         "mfcc_dist": 55.3
+        },
+        "photographer": {
+         "st": -2.51,
+         "mfcc_dist": 93.5
+        },
+        "tasya": {
+         "st": 3.86,
+         "mfcc_dist": 63.0
+        },
+        "radnus": {
+         "st": 4.71,
+         "mfcc_dist": 55.6
+        },
+        "mas": {
+         "st": 5.43,
+         "mfcc_dist": 49.4
+        },
+        "nedib": {
+         "st": 4.86,
+         "mfcc_dist": 68.1
+        }
+       }
+      }
+     },
+     "audition": {
+      "file": "out/ep01/full-v3/voices/sirrah-recast.mp3",
+      "candidate_one_at_s": 19.93,
+      "episode_takes_at_s": 60.78,
+      "episode_takes": "audio/ep01/v3-el/auditions/sirrah/round2/lines-AsirrahB.json (el_render.py, the episode's own seeds: the v3.5 render gets them from the cache, nothing sent)"
+     }
+    },
+    {
+     "cand": "C",
+     "voice_id": "5WdslVl9OFNf1eZigGfk",
+     "voice_name": "Pamela - Calm, Grounded and Natural",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "female",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "calm",
+      "use_case": "conversational"
+     },
+     "library_description": "A calm, grounded female voice with natural warmth and quiet authority. Reflective tone with measured pacing and clear articulation. Expressive but restrained — balanced between intellect and empathy. Ideal for thoughtful narration, podcast storytelling, and cinematic voiceover where clarity and composure are essential.",
+     "public_owner_id": "3e0d3ed3290f6de1039bf061151fa8bf8db116e7428928c79ec73c6025f78484",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.1,
+      "use_speaker_boost": true,
+      "speed": 0.9
+     },
+     "why": "v3.5 audition runner-up, on file for a swap (set_cand sirrah=C; her episode takes are cached, so a swap sends nothing). The library describes her as 'calm, grounded ... quiet authority, measured pacing'. At speed 0.9 her 'Any questions...' is 144 wpm, inside the 140-155 band. But over four takes her median is 208 Hz, above the lane and 0.8 st from the Photographer (1.1 st on the episode takes). Two of her four takes clipped a tail, and the one retake of 'Is it just the one?' dropped a word (recall 0.8), so take 1 is kept.",
+     "measured_audition": {
+      "rank": 4,
+      "score": 3.06,
+      "penalties": {
+       "lane": 0.27,
+       "separation": 0.79,
+       "accent": 0.0,
+       "artifacts": 2.0
+      },
+      "median_f0_hz_4_takes": 208.2,
+      "takes": [
+       {
+        "line": "e1-a2-13-02",
+        "speed": null,
+        "voiced_s": 2.45,
+        "wpm": 171.4,
+        "sps": 4.49,
+        "f0": 212.2,
+        "f0_range": 7.1,
+        "tail_cut": true,
+        "recall": 1.0,
+        "p_en": 0.9904,
+        "asr": "Any questions before we take the picture?"
+       },
+       {
+        "line": "e1-a2-13-04",
+        "speed": null,
+        "voiced_s": 1.55,
+        "wpm": 193.5,
+        "sps": 3.23,
+        "f0": 198.3,
+        "f0_range": 11.5,
+        "tail_cut": false,
+        "recall": 1.0,
+        "p_en": 0.9865,
+        "asr": "Is it just the one?"
+       },
+       {
+        "line": "e1-a2-13-02",
+        "speed": 0.9,
+        "voiced_s": 2.91,
+        "wpm": 144.3,
+        "sps": 3.78,
+        "f0": 204.2,
+        "f0_range": 9.4,
+        "tail_cut": false,
+        "recall": 1.0,
+        "p_en": 0.985,
+        "asr": "Any questions before we take the picture?"
+       },
+       {
+        "line": "e1-a2-13-04",
+        "speed": 0.9,
+        "voiced_s": 1.53,
+        "wpm": 196.1,
+        "sps": 3.27,
+        "f0": 220.7,
+        "f0_range": 7.9,
+        "tail_cut": true,
+        "recall": 1.0,
+        "p_en": 0.9806,
+        "asr": "Is it just the one?"
+       }
+      ],
+      "scene_episode_takes": {
+       "f0_geo": 212.3,
+       "centroid_hz": 405,
+       "presence_db": -15.36,
+       "takes": 2,
+       "vs": {
+        "mario (kokoro)": {
+         "st": 9.83,
+         "mfcc_dist": 57.3
+        },
+        "photographer": {
+         "st": 1.05,
+         "mfcc_dist": 98.6
+        },
+        "tasya": {
+         "st": 7.42,
+         "mfcc_dist": 59.2
+        },
+        "radnus": {
+         "st": 8.27,
+         "mfcc_dist": 58.8
+        },
+        "mas": {
+         "st": 8.99,
+         "mfcc_dist": 59.8
+        },
+        "nedib": {
+         "st": 8.42,
+         "mfcc_dist": 55.0
+        }
+       }
+      },
+      "scene_all_takes": {
+       "f0_geo": 208.7,
+       "centroid_hz": 396,
+       "presence_db": -16.36,
+       "takes": 4,
+       "vs": {
+        "mario (kokoro)": {
+         "st": 9.54,
+         "mfcc_dist": 50.0
+        },
+        "photographer": {
+         "st": 0.75,
+         "mfcc_dist": 89.0
+        },
+        "tasya": {
+         "st": 7.12,
+         "mfcc_dist": 52.1
+        },
+        "radnus": {
+         "st": 7.98,
+         "mfcc_dist": 51.1
+        },
+        "mas": {
+         "st": 8.69,
+         "mfcc_dist": 53.8
+        },
+        "nedib": {
+         "st": 8.12,
+         "mfcc_dist": 46.8
+        }
+       }
+      }
+     },
+     "audition": {
+      "file": "out/ep01/full-v3/voices/sirrah-recast.mp3",
+      "candidate_three_at_s": 40.35,
+      "episode_takes_at_s": 74.99,
+      "episode_takes": "audio/ep01/v3-el/auditions/sirrah/round2/lines-AsirrahC.json"
      }
     }
-   ]
+   ],
+   "recast_v35": {
+    "pick": "B",
+    "listening_file": "out/ep01/full-v3/voices/sirrah-recast.mp3",
+    "index": "audio/ep01/v3-el/auditions/sirrah/index.json",
+    "also_auditioned": {
+     "Miss La - Confident and Engaging (Jx35Jvky2ob4xi16g1ha)": "rank 2 (score 0.42). In lane at 188 Hz but 1.1 st from the Photographer, with the least distinct timbre from her (MFCC 66). 222 wpm at speed 1.0: the band would need about 0.7. Not added as a candidate.",
+     "Amie - Pro (d2TIsnZlkvBAy2oXD9Dp)": "rank 5 (score 3.35). p(en) 0.93 on 'Any questions...' (the accent screen), 215 Hz, 219 wpm at speed 1.0. Not added as a candidate."
+    },
+    "guardrails": "Library voices only, called by voice_id; nothing cloned or designed. The screen dropped any voice whose name or description names or evokes a real person, anything political (politic, president, senator, campaign, vice, government, speech, impression, celebrity, parody, sound-alike), and every accent, age or register flag. No laugh, accent or mannerism was asked for; the lines were sent as written. (guardrails.md §6)"
+   }
   },
   "nole": {
    "name": "NOLE",
@@ -2001,10 +2341,11 @@
  "say_full_note": "Lines cut off by the world (the timeline's 'cut', text ending in a dash) are read whole, as the Kokoro takes were (their spoken_as in audio/ep01/act4/dialogue/lines-v5.json); the lock's 'dur' marks the cut-off and the mixer plays the whole file.",
  "set_cand": {
   "A": {
-   "mas-manalt": "C"
+   "mas-manalt": "C",
+   "sirrah": "B"
   }
  },
- "set_cand_note": "Per-set overrides of the candidate letter. Set A (the episode set) uses candidate C for Mas since the phase-3 recast: the showrunner heard A (Giovanni) as accented ('strangely russian'). Giovanni stays on file as candidate A.",
+ "set_cand_note": "Per-set overrides of the candidate letter. Set A (the episode set) uses candidate C for Mas since the phase-3 recast: the showrunner heard A (Giovanni) as accented ('strangely russian'). Giovanni stays on file as candidate A. v3.5 (2026-09-28): set A uses candidate B for Sirrah (Ida Freeist), recast after the showrunner's note (\"harris's voice is not very good\"); Marie stays on file as candidate A, Pamela as C (roles.sirrah.recast_v35, voices-el.md §AA).",
  "respell_voices": {
   "g6fJBFvZZp41FerGMMx7": {
    "words": {
@@ -2037,5 +2378,6 @@
    }
   }
  },
- "line_settings_note": "Per-line settings over the role's (and its V.O.) settings, keyed by line id and voice id, for a read one line needs. Keys starting with '_' are notes."
+ "line_settings_note": "Per-line settings over the role's (and its V.O.) settings, keyed by line id and voice id, for a read one line needs. Keys starting with '_' are notes.",
+ "engine_note": "roles.<role>.engine: 'elevenlabs' (the default, absent) or 'kokoro' (the role keeps its Kokoro takes inside the EL film), from roles.<role>.engine_from_lock on (a lock name such as v35; absent = every lock). el_render.py infers the lock from --lines (show/reel/ep01-vNN/...) or takes --lock."
 }

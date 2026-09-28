@@ -24,6 +24,10 @@ aftermaths are unchanged. Per beat, in the lock's line order:
 Beats without lines are unchanged, frame for frame. The picture, captions and cues are the lock's.
 A take the lock printed through the call chain (Kokoro mode "call") plays its EL device copy (file_device); every
 other take plays dry, as in the lock.
+A role cast on Kokoro in the EL film (cast-el.json roles.<role>.engine 'kokoro' from engine_from_lock on; v3.5: MARIO, the
+showrunner's call) keeps the Kokoro lock's own take: its audio, in, dur and words are the lock's, its length is unchanged,
+and only its start moves (with the EL lines before it in the beat, the lock's gap kept). el_render.py writes such a line's
+row as 'engine': 'kokoro' (no API call); a Kokoro-cast line with no row at all is treated the same way.
 """
 from __future__ import annotations
 
@@ -45,6 +49,28 @@ LOCK = "v3"            # --lock v31: the v3.1 lock (show/reel/ep01-v31/ -> show/
 FIXED = set()          # --fixed: beats whose length is reserved (the v3.1 Runway frames): they keep their length and
                        #          every line keeps its start (anchored to the picture); the takes are swapped in place
 FLAGS = []
+KOKORO_USED = []       # the lines that kept their Kokoro take (for the report and the manifest's notes)
+CAST = "audio/ep01/v3-el/cast-el.json"
+KOKORO_ROLES = set()   # roles that keep their Kokoro takes on this lock (cast-el.json engine; set in main)
+
+
+def lock_n(lock):
+    """a lock's order: v3 -> 30, v31 -> 31 ... v35 -> 35 (el_render.lock_n)"""
+    m = re.fullmatch(r"v3(\d?)", str(lock))
+    return 30 + int(m.group(1) or 0) if m else 0
+
+
+def kokoro_roles(lock):
+    """the roles cast on Kokoro for this lock: the same rule as el_render.Cast.engine"""
+    d = jload(CAST)
+    out = set()
+    for k, r in d["roles"].items():
+        base = d["roles"].get(r.get("derived_from")) or r
+        eng = r.get("engine") or base.get("engine")
+        frm = r.get("engine_from_lock") or base.get("engine_from_lock")
+        if eng == "kokoro" and not (frm and lock_n(lock) < lock_n(frm)):
+            out.add(k)
+    return out
 
 
 def P():
@@ -119,10 +145,12 @@ def build_seg(seg, cand):
         old_len = b.get("reelDur", 0)
         t_old += old_len
         ls = [l for l in b.get("lines", []) or [] if l.get("text")]      # 'cut' = cut off by the world: played
+        kok_ids = {l["id"] for l in ls if (L.get(l["id"]) or {}).get("engine") == "kokoro"
+                   or (l["id"] not in L and l.get("who") in KOKORO_ROLES)}      # cast on Kokoro: the lock's own take
         for l in ls:
-            if l["id"] not in L:
+            if l["id"] not in L and l["id"] not in kok_ids:
                 missing.append(l["id"])
-        ls = [l for l in ls if l["id"] in L]
+        ls = [l for l in ls if l["id"] in L or l["id"] in kok_ids]
         ls.sort(key=lambda l: l["t"])
         if not ls:
             t_new += old_len
@@ -133,9 +161,26 @@ def build_seg(seg, cand):
         old_last_end = max(l["t"] + l["dur"] for l in ls)
         changes = []
         for l in ls:
-            r = L[l["id"]]
             old_t, old_dur = l["t"], l["dur"]
             new_t = old_t if (prev_old_end is None or fixed) else prev_new_end + (old_t - prev_old_end)
+            if l["id"] in kok_ids:
+                # the Kokoro lock's own take: the same audio, in, dur and words; only its start moves
+                r = L.get(l["id"]) or {}
+                kw = l.get("words") or []
+                knots.append((old_t, new_t))
+                knots += word_knots(old_t, kw, new_t, kw)
+                knots.append((old_t + old_dur, new_t + old_dur))
+                prev_old_end, prev_new_end = old_t + old_dur, new_t + old_dur
+                kok = {"audio": l.get("audio"), "in": l.get("in"), "t": old_t, "dur": old_dur}
+                l.update(t=round(new_t, 3))
+                l["voice"] = r.get("voice") or "Kokoro (the Kokoro lock's take)"
+                l["engine"] = "kokoro"
+                l["el"] = None
+                l["kokoro"] = kok
+                changes.append([l["id"], 0.0])
+                KOKORO_USED.append(l["id"])
+                continue
+            r = L[l["id"]]
             a_in, a_out = r["pace"]["audible_in_s"], r["pace"]["audible_out_s"]
             new_dur = round(a_out - a_in, 3)
             ew = [[w["w"], round(w["t0"] - a_in, 3), round(w["t1"] - a_in, 3)] for w in r["words"]]
@@ -196,7 +241,8 @@ def build_seg(seg, cand):
         report.append(dict(beat=b["id"], old_s=round(old_len, 3), new_s=round(b["reelDur"], 3), delta_s=round(b["reelDur"] - old_len, 3),
                            lines=changes))
     out["variant"] = (T.get("variant", "") + " · ElevenLabs set A takes (eleven_multilingual_v2, library voices), "
-                      "EL-timed: the lock's gaps kept, beats changed only by the takes' lengths")
+                      "EL-timed: the lock's gaps kept, beats changed only by the takes' lengths"
+                      + (f" · Kokoro in the EL cast: {', '.join(sorted(KOKORO_ROLES))} (the lock's own takes)" if KOKORO_ROLES else ""))
     out["_source"] = dict(T.get("_source") or {}, kokoro_lock=f"{SRC}/{P()[0]}{seg}.json",
                           takes_files=[f"{TAKES}/{seg}/lines-{cand}.json"], el_builder="audio/ep01/v3-el/tools/el_lock.py",
                           el_notes="show/episodes/ep01/production/full-v3/voices-el.md", seconds=round(t_new, 3))
@@ -204,11 +250,12 @@ def build_seg(seg, cand):
     out["_el_retimed"] = dict(rule="gaps between lines, before the first and after the last kept; J-cut leads kept; "
                                    "beats change only by the takes' lengths; timed items follow the words",
                               seconds_kokoro=round(t_old, 3), seconds_el=round(t_new, 3), delta_s=round(t_new - t_old, 3),
-                              beats_changed=sum(1 for r in report if abs(r["delta_s"]) > 1e-6), missing_takes=missing)
+                              beats_changed=sum(1 for r in report if abs(r["delta_s"]) > 1e-6), missing_takes=missing,
+                              kokoro_cast=[i for r in report for i, _ in r["lines"] if i in set(KOKORO_USED)])
     jdump(out, f"{DST}/{P()[1]}-{seg}.json")
     return dict(segment=seg, seconds_kokoro=round(t_old, 3), seconds_el=round(t_new, 3), delta_s=round(t_new - t_old, 3),
                 lines=sum(len(r["lines"]) for r in report), beats_changed=sum(1 for r in report if abs(r["delta_s"]) > 1e-6),
-                missing_takes=missing, beats=report)
+                missing_takes=missing, kokoro_cast=out["_el_retimed"]["kokoro_cast"], beats=report)
 
 
 def build_manifest(beds):
@@ -227,6 +274,11 @@ def build_manifest(beds):
                    "to the new beat times. Notes: show/episodes/ep01/production/full-v3/voices-el.md. Nothing here "
                    "was watched or heard.")
     tot = 0.0
+    if KOKORO_ROLES:
+        m["variant"] += f" · {', '.join(sorted(r.upper() for r in KOKORO_ROLES))} on Kokoro (the lock's own takes)"
+        m["_about"] += (f" Cast on Kokoro in this film (cast-el.json engine, the showrunner's call): "
+                        f"{', '.join(sorted(KOKORO_ROLES))}; those lines play the Kokoro lock's own takes, their lengths "
+                        "unchanged (voices-el.md §AB).")
     for c in m["chapters"]:
         if str(c.get("from", "")).startswith(P()[0]) and c["id"] in SEGS:
             c["from"] = f"{P()[1]}-{c['id']}"
@@ -271,22 +323,24 @@ def main():
     ap.add_argument("--set", default="A")
     ap.add_argument("--beds", default=None, help="a JSON file {chapter: {src, label, ...}} for the manifest's beds")
     ap.add_argument("--tag", default="", help="a variant tag (see above)")
-    ap.add_argument("--lock", default="v3", choices=["v3", "v31", "v32", "v33", "v34"], help="the Kokoro lock: v3 (show/reel/ep01-v3/), v31 ... v34")
+    ap.add_argument("--lock", default="v3", choices=["v3", "v31", "v32", "v33", "v34", "v35"], help="the Kokoro lock: v3 (show/reel/ep01-v3/), v31 ... v35")
     ap.add_argument("--fixed", nargs="*", default=None, help="beats with a reserved length (v31 default: S7.13 v31-32.01d)")
     a = ap.parse_args()
-    global DST, TAG, SRC, TAKES, LOCK, FIXED
+    global DST, TAG, SRC, TAKES, LOCK, FIXED, KOKORO_ROLES
     TAG, LOCK = a.tag, a.lock
+    KOKORO_ROLES = kokoro_roles(LOCK)
     SRC = f"show/reel/ep01-{LOCK}"
     DST = f"show/reel/ep01-{LOCK}-el{TAG}"
     TAKES = "audio/ep01/v3-el/ep01" if LOCK == "v3" else f"audio/ep01/v3-el/ep01-{LOCK}"
-    FIXED = set(a.fixed if a.fixed is not None else (["S7.13", "v31-32.01d"] if LOCK in ("v31", "v32", "v33", "v34") else []))
+    FIXED = set(a.fixed if a.fixed is not None else (["S7.13", "v31-32.01d"] if LOCK in ("v31", "v32", "v33", "v34", "v35") else []))
     segs = a.segs or SEGS
     rep = {"set": a.set, "segments": []}
     for s in segs:
         r = build_seg(s, a.set)
         rep["segments"].append(r)
         print(f"{s:9s} kokoro {r['seconds_kokoro']:8.2f} s  el {r['seconds_el']:8.2f} s  {r['delta_s']:+7.2f} s  "
-              f"lines {r['lines']}  beats changed {r['beats_changed']}  missing {r['missing_takes'] or '-'}")
+              f"lines {r['lines']}  beats changed {r['beats_changed']}  missing {r['missing_takes'] or '-'}"
+              + (f"  kokoro-cast {len(r['kokoro_cast'])}" if r["kokoro_cast"] else ""))
     if not a.segs:
         tk = sum(r["seconds_kokoro"] for r in rep["segments"])
         te = sum(r["seconds_el"] for r in rep["segments"])

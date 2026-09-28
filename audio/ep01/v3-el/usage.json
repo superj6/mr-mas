@@ -476,11 +476,57 @@
     "credits_billed": 197
    },
    "used_by_subscription": 197
+  },
+  "phase 9: v3.5 Sirrah audition": {
+   "_about": "Phase 9 (2026-09-28): v3.5 (PLAN.md §8, proposal-v35 Voices): SIRRAH recast auditions (3-4 library voices, her two lines); the MARIO Kokoro cast change planned.",
+   "subscription_before": {
+    "tier": "creator",
+    "character_count": 14429,
+    "character_limit": 131000,
+    "next_character_count_reset_unix": 1793049484,
+    "voice_limit": 30,
+    "voice_slots_used": 2,
+    "professional_voice_limit": 1,
+    "can_extend_character_limit": false,
+    "status": "active",
+    "checked_at": "2026-09-28T13:34:36"
+   },
+   "subscription_after": {
+    "tier": "creator",
+    "character_count": 14593,
+    "character_limit": 131000,
+    "next_character_count_reset_unix": 1793049484,
+    "voice_limit": 30,
+    "voice_slots_used": 2,
+    "professional_voice_limit": 1,
+    "can_extend_character_limit": false,
+    "status": "active",
+    "checked_at": "2026-09-28T14:04:43"
+   },
+   "runs": {
+    "round 1: tools/el_audition.py render, 4 voices x 2 lines at speed 1.0 (audio/ep01/v3-el/auditions/sirrah/<voice>/)": {
+     "calls": 8,
+     "chars_sent": 244,
+     "credits_billed": 104
+    },
+    "round 2: el_render.py, Ida (B, speed 0.85) and Pamela (C, speed 0.9), the episode's seeds, 1 automatic retake (audio/ep01/v3-el/auditions/sirrah/round2)": {
+     "calls": 5,
+     "chars_sent": 141,
+     "credits_billed": 60
+    }
+   },
+   "total": {
+    "calls": 13,
+    "chars_sent": 385,
+    "credits_billed": 164
+   },
+   "used_by_subscription": 164,
+   "note": "credits billed = the calls' character-cost headers (26 per voice per round: 18 + 8), and they match the subscription's own count (14,429 -> 14,593). The MARIO change sends nothing (his Kokoro takes). The screen, previews, reference and tests were free (the listing and the public preview CDN; local measurement; a test render at --max-chars 0)."
   }
  },
  "all_phases_total": {
-  "chars_sent": 26231,
-  "credits_billed": 14429,
-  "subscription_character_count": 14429
+  "chars_sent": 26616,
+  "credits_billed": 14593,
+  "subscription_character_count": 14593
  }
 }

@@ -124,6 +124,10 @@ def main(segs):
             if kind == "vo":
                 x["mouth"] = []
                 rep["vo"] += 1
+            elif r.get("engine") == "kokoro" and r.get("mouth") is not None:
+                # cast on Kokoro in the EL film (cast-el.json engine; v3.5: MARIO): the Kokoro take's own row, words
+                # and mouth track, as the Kokoro picture lock has them
+                rep["kokoro_cast"] = rep.get("kokoro_cast", 0) + 1
             else:
                 words = []
                 for w in r.get("words") or []:

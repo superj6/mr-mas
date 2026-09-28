@@ -1,0 +1,269 @@
+[
+ {
+  "id": "e1-a2-13-02",
+  "kind": "dialogue",
+  "scene": "13.05",
+  "speaker": "SIRRAH",
+  "speaker_slug": "sirrah",
+  "text": "Any questions, before we take the picture?",
+  "spoken_as": "Any questions, before we take the picture?",
+  "tag": "O.S.",
+  "delivery": "O.S.; the teacher, to the row",
+  "on_camera": "os",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/auditions/sirrah/round2/wav/e1-a2-13-02__sirrah-B.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 3.672,
+  "frames_24": 88,
+  "voiced_span_s": 2.53,
+  "pace": {
+   "audible_in_s": 0.4,
+   "audible_out_s": 2.93,
+   "measured": {
+    "span_s": 2.53,
+    "wpm": 166.0,
+    "syllables": 11,
+    "articulation_sps": 4.53,
+    "pauses_s": [
+     0.1,
+     0.06
+    ]
+   },
+   "longest_internal_gap_s": 0.1,
+   "words": 7,
+   "wpm": 166.0,
+   "speed": 0.85,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Any",
+    "t0": 0.38,
+    "t1": 0.617
+   },
+   {
+    "w": "questions",
+    "t0": 0.675,
+    "t1": 1.348
+   },
+   {
+    "w": "before",
+    "t0": 1.465,
+    "t1": 1.824
+   },
+   {
+    "w": "we",
+    "t0": 1.848,
+    "t1": 1.941
+   },
+   {
+    "w": "take",
+    "t0": 1.999,
+    "t1": 2.219
+   },
+   {
+    "w": "the",
+    "t0": 2.266,
+    "t1": 2.335
+   },
+   {
+    "w": "picture",
+    "t0": 2.393,
+    "t1": 2.927
+   }
+  ],
+  "qa": {
+   "asr": "Any questions before we take the picture?",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -1.56,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 192.3,
+   "f0_range_st": 11.9,
+   "speech_head_s": 0.4,
+   "speech_tail_s": 0.742,
+   "raw_tail_cut": false,
+   "align_median_s": 0.088
+  },
+  "voice": "ElevenLabs library voice 'Ida Freeist - Warm & Professional' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.85",
+  "voiceId": "uod6Nn3FGhzBRM6gqPSU",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "B",
+   "role": "sirrah",
+   "voice_id": "uod6Nn3FGhzBRM6gqPSU",
+   "voice_name": "Ida Freeist - Warm & Professional",
+   "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 0.85
+   },
+   "seed": 36862211,
+   "chars_sent": 42,
+   "request_key": "a310201c329ce0d2",
+   "derived_from": null,
+   "reused_from": null
+  },
+  "status": "el",
+  "take": "el-B",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-02.wav",
+   "mode": "on-mic",
+   "lufs_i": -16.0,
+   "duration_s": 3.285,
+   "audible_in_s": 0.51,
+   "audible_out_s": 2.8,
+   "wpm": 183.4,
+   "median_f0_hz": 201.7,
+   "f0_range_st": 13.4,
+   "delivery": "O.S.; the teacher, to the row",
+   "voice": "af_sarah (Kokoro-82M stock) · a-sarah-crisp · speed 0.950",
+   "device": null,
+   "timeline_in": 0.51,
+   "timeline_dur": 2.29
+  }
+ },
+ {
+  "id": "e1-a2-13-04",
+  "kind": "dialogue",
+  "scene": "13.05",
+  "speaker": "SIRRAH",
+  "speaker_slug": "sirrah",
+  "text": "Is it just the one?",
+  "spoken_as": "Is it just the one?",
+  "tag": "O.S.",
+  "delivery": "O.S.",
+  "on_camera": "os",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/auditions/sirrah/round2/wav/e1-a2-13-04__sirrah-B.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 2.418,
+  "frames_24": 58,
+  "voiced_span_s": 1.29,
+  "pace": {
+   "audible_in_s": 0.41,
+   "audible_out_s": 1.7,
+   "measured": {
+    "span_s": 1.29,
+    "wpm": 232.6,
+    "syllables": 5,
+    "articulation_sps": 3.88,
+    "pauses_s": [
+     0.08
+    ]
+   },
+   "longest_internal_gap_s": 0.08,
+   "words": 5,
+   "wpm": 232.6,
+   "speed": 0.85,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Is",
+    "t0": 0.39,
+    "t1": 0.559
+   },
+   {
+    "w": "it",
+    "t0": 0.629,
+    "t1": 0.733
+   },
+   {
+    "w": "just",
+    "t0": 0.791,
+    "t1": 1.07
+   },
+   {
+    "w": "the",
+    "t0": 1.139,
+    "t1": 1.256
+   },
+   {
+    "w": "one",
+    "t0": 1.348,
+    "t1": 1.685
+   }
+  ],
+  "qa": {
+   "asr": "Is it just the one?",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -16.26,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -2.47,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 176.1,
+   "f0_range_st": 9.7,
+   "speech_head_s": 0.41,
+   "speech_tail_s": 0.718,
+   "raw_tail_cut": false,
+   "align_median_s": 0.088
+  },
+  "voice": "ElevenLabs library voice 'Ida Freeist - Warm & Professional' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand B · eleven_multilingual_v2 · speed 0.85",
+  "voiceId": "uod6Nn3FGhzBRM6gqPSU",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "B",
+   "role": "sirrah",
+   "voice_id": "uod6Nn3FGhzBRM6gqPSU",
+   "voice_name": "Ida Freeist - Warm & Professional",
+   "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 0.85
+   },
+   "seed": 2606341581,
+   "chars_sent": 19,
+   "request_key": "72e654aacd387168",
+   "derived_from": null,
+   "reused_from": null
+  },
+  "status": "el",
+  "take": "el-B",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-04.wav",
+   "mode": "on-mic",
+   "lufs_i": -16.0,
+   "duration_s": 2.095,
+   "audible_in_s": 0.5,
+   "audible_out_s": 1.61,
+   "wpm": 270.3,
+   "median_f0_hz": 197.7,
+   "f0_range_st": 14.0,
+   "delivery": "O.S.",
+   "voice": "af_sarah (Kokoro-82M stock) · a-sarah-crisp · speed 0.930",
+   "device": null,
+   "timeline_in": 0.5,
+   "timeline_dur": 1.11
+  }
+ }
+]

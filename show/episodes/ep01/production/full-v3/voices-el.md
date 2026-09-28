@@ -1,6 +1,8 @@
 # Ep1 v3: the ElevenLabs voice pass (`v3-voices-el`, track A4, 2026-09-27)
 
-> **Status: PHASE 8 DONE: THE v3.4 LOCK IN ELEVENLABS.** Every line of the final v3.4 lock (commit 4309e86) has an EL take, with Mas as Jeremy. There is an EL-timed copy of it (`show/reel/ep01-v34-el/`, key `ep01-v34-el-stick`) with beds, and its intro plays the EL intro master (§Z, directly below). No reel was made. The intro line is §Y, v3.3 §X, v3.2 §W, v3.1 §V, the Mas recast §R, phase 2 (the v3 lock) §P1–§P9, and phase 1 (the casting and the sample) §1–§8. Where phase 2 describes Mas, it describes Giovanni.
+> **Status: PHASE 9 DONE: THE v3.5 VOICES.** Sirrah is recast as Ida Freeist (§AA, directly below). MARIO keeps his Kokoro takes in the EL film from the v3.5 lock on: the cast override is in and tested, and the mix notes are written (§AB). No v3.5 lock is built yet: the lock builder makes it after the writer finishes.
+>
+> **Phase 8 (v3.4):** every line of the final v3.4 lock (commit 4309e86) has an EL take, with Mas as Jeremy. There is an EL-timed copy of it (`show/reel/ep01-v34-el/`, key `ep01-v34-el-stick`) with beds, and its intro plays the EL intro master (§Z). No reel was made. The intro line is §Y, v3.3 §X, v3.2 §W, v3.1 §V, the Mas recast §R, phase 2 (the v3 lock) §P1–§P9, and phase 1 (the casting and the sample) §1–§8. Where phase 2 describes Mas, it describes Giovanni.
 >
 > **Nobody has listened to any of this.** Every statement below is a measurement: duration, pace, pitch, silence at the head and tail, loudness, and what a speech recogniser heard. Whether a voice is natural, funny, or right for the character is still a call for an ear.
 >
@@ -21,6 +23,214 @@
 - **Characters:** 10,054 sent and **5,522 billed**, against the 25,000 budget. The subscription went from 0 to 5,522 of 131,000.
 - **Model:** `eleven_multilingual_v2` for everyone. I tested `eleven_v3` and didn't use it (§6).
 - **Decisions for you:** listed in §8.
+
+---
+
+## AA. Phase 9: Sirrah recast (2026-09-28)
+
+**The note:** the showrunner: "also harris's voice is not very good. the rest are fine" (proposal-v35 "Voices"; PLAN.md §8, choice 11A). Her EL voice was the library's "Marie - Professional & Warm". She has two lines in the class photo (sc 25; the lock's 13.05): "Any questions, before we take the picture?" and "Is it just the one?".
+
+**In short:**
+- **The pick: Ida Freeist - Warm & Professional** (`uod6Nn3FGhzBRM6gqPSU`), from the shared Voice Library (a professional voice of its owner, called by voice_id).
+  - She is candidate B, at speed 0.85 (stability 0.55, similarity 0.75, style 0.1, speaker boost).
+  - Set A uses her (`set_cand`). Marie stays on file as candidate A, and Pamela as C.
+- **Characters:** 385 sent and **164 billed**, in 13 calls. The subscription went from 14,429 to 14,593 of 131,000.
+- **The listening file:** `out/ep01/full-v3/voices/sirrah-recast.mp3` (1:26). It plays Marie, then the four candidates in rank order at speed 1.0, then the top two at the episode's pace.
+- **The v3.5 render will send nothing for her.**
+  - Her episode takes were rendered with `el_render.py` and the episode's own seeds, so the v3.5 render finds them in the cache.
+  - A test render of Act Two with `--lock v35` sent 0 characters.
+- **Nobody has listened.** She is picked by measurement and by fit against the scene's other voices.
+
+### AA1. The screen (`tools/el_audition.py screen`)
+
+- **The pool:** 698 female, American, middle-aged voices in the shared library (the free listing). 360 passed the filters.
+- **The filters:**
+  - `cast_el.py`'s red flags: a real person, a celebrity, an impression, an accent, an age or health register, or a price.
+  - For this role, anything political as well: politic, president, senator, campaign, vice, government, congress, election, speech, impression, celebrity, famous, "like", sound-alike, parody.
+- **The ranking:** by the brief's words.
+  - For: warm, confident, measured, calm, clear, poised, articulate, composed, steady, grounded.
+  - Against: narration, audiobook, sultry, breathy, news, announcer, hype, bubbly, young, character.
+- **The previews:** the top 30 were measured for pitch and p(en).
+- **The four auditioned:**
+  - Each has a preview inside the 170–205 Hz lane, at least 1.5 st from the Photographer (the scene's other woman: 184 and 217 Hz on her takes).
+  - Each has the description nearest the brief: "the Explainer: patient, precise … crisp alto to mezzo", and warm, measured, confident.
+- **Guardrails §6:** no laugh, accent or mannerism was asked for, the lines were sent as written, and no voice was chosen for resembling anyone.
+
+| Voice | Library | Preview F0 | The library's words |
+|---|---|---|---|
+| Ida Freeist - Warm & Professional | professional · calm | 174 Hz | "reassuring and professionally precise … a steady, deliberate pace" |
+| Pamela - Calm, Grounded and Natural | professional · calm | 180 Hz | "calm, grounded … quiet authority … measured pacing" |
+| Amie - Pro | professional · confident | 173 Hz | "professional, clear, warm, and confident … calm delivery" |
+| Miss La - Confident and Engaging | high quality · confident | 172 Hz | "warm, confident … smooth mid-range tone" |
+
+### AA2. The reads
+
+- **Round 1** (`el_audition.py render`): each voice read both lines at speed 1.0, dressed as the episode's takes (−16 LUFS, dry).
+- **Round 2** (`el_render.py`): the top two after round 1 were read again at a speed fitted to the pace band, with the episode's own seeds: Ida at 0.85 and Pamela at 0.9. These are the takes the film would play.
+- **Marie's** episode takes are the reference.
+
+| Voice | Speed | "Any questions…" | "Is it just the one?" | Tails | ASR | p(en) |
+|---|---|---|---|---|---|---|
+| Marie (current) | 0.95 | 2.67 s · 157 wpm · 230 Hz | 1.39 s · 222 Hz | clean | verbatim | 0.995 / 0.997 |
+| Ida, round 1 | 1.0 | 2.25 s · 187 wpm · 173 Hz | 1.27 s · 152 Hz | clean | verbatim | 0.997 / 0.992 |
+| **Ida, round 2** | **0.85** | **2.53 s · 166 wpm · 192 Hz** | **1.29 s · 176 Hz** | **clean** | **verbatim** | **0.996 / 0.975** |
+| Pamela, round 1 | 1.0 | 2.45 s · 171 wpm · 212 Hz | 1.55 s · 198 Hz | line 1 clipped | verbatim | 0.990 / 0.987 |
+| Pamela, round 2 | 0.9 | 2.91 s · 144 wpm · 204 Hz | 1.53 s · 221 Hz | line 2 clipped (its retake lost a word; take 1 kept) | verbatim | 0.985 / 0.981 |
+| Miss La | 1.0 | 1.89 s · 222 wpm · 200 Hz | 1.59 s · 175 Hz | clean | verbatim | 0.995 / 0.996 |
+| Amie | 1.0 | 1.92 s · 219 wpm · 208 Hz | 1.19 s · 221 Hz | clean | verbatim | **0.930** / 0.995 |
+
+### AA3. The pick (`el_audition.py scene`, `pick`)
+
+- **How voices are ranked:** per voice, over all its takes.
+  - The score counts the lane (170–205 Hz), separation (at least 1.5 st from the Photographer), accent (p(en) under 0.985), and clipped tails or ASR recall under 0.9 (per pair of takes).
+  - Pace is reported beside the score, not in it: the speed setting sets it.
+- **How the scene was measured** (`scene`), against the scene's other voices:
+  - the class photo's lines in the v3.4 EL lock: the Photographer, Tasya, Radnus, Mas and Nedib, with MARIO as his Kokoro takes;
+  - for each pair: semitones apart, the 2–5 kHz presence, and the distance between mean MFCCs (timbre: larger means more distinct).
+
+| Rank | Voice | Score | Median F0 (takes) | From the Photographer | Timbre from the Photographer | 2–5 kHz presence | "Any questions…" at the film's speed |
+|---|---|---|---|---|---|---|---|
+| **1** | **Ida Freeist** | **0.00** | **174.5 Hz (4)** | **−2.5 st** (episode takes −1.4) | **93.5** (episode takes 91.0) | −18.2 dB | 166 wpm at 0.85 |
+| 2 | Miss La | 0.42 | 187.7 Hz (2) | −1.1 st | 66.3 | −13.4 dB | 222 wpm at 1.0 (the band needs about 0.7) |
+| 3 | Marie (current) | 1.69 | 226.0 Hz (2) | +2.1 st | 87.1 | −11.0 dB | 157 wpm at 0.95 |
+| 4 | Pamela | 3.06 | 208.2 Hz (4) | +0.8 st (episode takes +1.1) | 89.0 (98.6) | −16.4 dB | 144 wpm at 0.9 |
+| 5 | Amie | 3.35 | 214.6 Hz (2) | +1.2 st | 85.5 | −11.8 dB | 219 wpm at 1.0 |
+
+**Why Ida:**
+- **She is the only voice with no penalty.**
+  - She is in the lane. Marie sat 1.7 st above it.
+  - She is the one voice clearly apart from the Photographer, in pitch (2.5 st under) and in timbre (the largest distance measured).
+  - All four of her takes are clean and verbatim, with p(en) 0.975–0.997 (mean 0.990).
+- **She sits well apart from the men she alternates with:** 7.4 st over MARIO's Kokoro takes on her episode takes, and 4.9–6.5 st over Tasya, Radnus, Mas and Nedib.
+- **She is a real change from Marie:** 4.6 st lower over her four takes (3.6 on the episode takes), and 7 dB less 2–5 kHz presence (warmer and darker).
+  - Their mean-MFCC timbre is close (31), so the change is pitch and brightness, not the spectral envelope.
+- **At speed 0.85 her "Any questions…" runs 166 wpm and 4.53 syllables a second.**
+  - That is 11 wpm over the 140–155 band, between Marie's 157 and the Kokoro lock's 183.
+
+**Why not the others:**
+- **Pamela** is inside the band at 0.9, but she sits on the Photographer's pitch (+0.8 st) and above the lane. She clipped a tail on two of four takes.
+- **Miss La** has the least distinct timbre from the Photographer, and she reads too fast for any setting short of about 0.7.
+- **Amie** failed the accent screen on "Any questions…" (p(en) 0.930).
+
+**For an ear:**
+- **Her pitch moves with the seed:** 152–192 Hz across four takes. The episode takes are the higher pair.
+- **The pace:** if "Any questions…" should sit inside the band, a speed-0.8 read is one render (about 26 credits).
+- **A soft exhale after "one?":** about −43 dB re her peak, for 0.28 s. It is under the −40 dB line the house uses for the end of speech.
+
+### AA4. Files, and how to swap
+
+- **The audition:**
+  - `audio/ep01/v3-el/auditions/sirrah/index.json`: every take's measures, the scene table, the ranking and the listening file's order.
+  - Round 1 takes: `audio/ep01/v3-el/auditions/sirrah/<voice>/`. Round 2 takes: `audio/ep01/v3-el/auditions/sirrah/round2/` (`lines-AsirrahB.json`, `lines-AsirrahC.json`, the manifest). The WAVs are git-ignored.
+  - The screen: `audio/ep01/v3-el/cache/audition-sirrah/`.
+- **The listening file:** `out/ep01/full-v3/voices/sirrah-recast.mp3`, with a Kokoro slate before each voice.
+
+  | At | Voice |
+  |---|---|
+  | 0:10 | Marie |
+  | 0:20 | Ida |
+  | 0:31 | Miss La |
+  | 0:40 | Pamela |
+  | 0:51 | Amie |
+  | 1:01 | Ida at 0.85 |
+  | 1:15 | Pamela at 0.9 |
+
+- **The cast:** `cast-el.json` `roles.sirrah`.
+  - Candidates A (Marie), B (Ida, with `why`, `measured_audition` and `audition`) and C (Pamela).
+  - `recast_v35` holds the two voices not added, and the guardrails.
+  - `set_cand.A.sirrah = "B"`.
+- **To swap:**
+  - `set_cand.A.sirrah = "C"` (Pamela) or `"A"` (Marie) is free: both sets of takes are cached.
+  - Miss La or Amie would need a candidate entry and a speed fit first (about 26 credits each).
+  - The v3.5 render's hit on Ida's cached takes needs the same line ids (e1-a2-13-02, e1-a2-13-04) and the same text.
+- **To redo:** `HF_HUB_OFFLINE=1 bash ops/heavy.sh audio/.venv-casting/bin/python audio/ep01/v3-el/tools/el_audition.py <screen | render IDS | reference | ingest LINES | scene | pick | file>`. Round 2 is `el_render.py render --lines show/reel/ep01-v34/ep01-v34-act2.json --only e1-a2-13-02,e1-a2-13-04 --cand sirrah=B --label AsirrahB --out audio/ep01/v3-el/auditions/sirrah/round2 --target-lufs -16 --retry-bad 1`.
+
+---
+
+## AB. Phase 9: MARIO on Kokoro in the EL film (2026-09-28)
+
+**The note:** the showrunner: "also i actually liked dario's kokoro voice more. let's just keep that while the rest are elevenlabs" (proposal-v35 "Voices"; choice 11A: one film, the ElevenLabs cast with Kokoro MARIO).
+
+### AB1. The override (`cast-el.json`)
+
+- **`roles.mario.engine = "kokoro"`, `engine_from_lock = "v35"`,** with his Kokoro voice (am_liam · a-liam-earnest) and a note. The top-level `engine_note` defines the field.
+- **What it applies to:** the v3.5 lock and anything later.
+  - The v3.4 and earlier EL locks still resolve him to candidate A (Caleb), so they rebuild unchanged.
+- **His takes:** the Kokoro lock's own, one per line.
+  - The fast-v1 and fast-v2 takes (Acts One and Two), and Act Four v5 (a5-27-31, read whole and cut by the lock).
+  - v3.5's new "Point two…", once the writer's take is in `audio/ep01/v35/`.
+  - They are already in the EL takes' format: 48 kHz / 24-bit mono, −16 LUFS, −1.5 dBTP, dry, with 0.35 s handles of the same −62 dBFS room tone.
+
+### AB2. What the tools do
+
+- **`el_render.py`**
+  - **The lock:** it comes from `--lock`, or from the `--lines` path (`show/reel/ep01-v35/...` gives v35).
+  - **A Kokoro-cast line sends nothing.** Its row in `lines-A.json` is a copy of his Kokoro take's own row: the file, the words with phonemes, the pace, the QA and the mouth track, marked `engine: kokoro` with `el: null`.
+  - **Where the row comes from:** the take is found by its file among the Kokoro lines JSONs. `v34/` and `v35/` were added to that search, so "Point two…" is found once its lines JSON exists.
+  - `plan` lists these rows at 0 characters, and the pitch pass never retakes them.
+- **`el_lock.py`**
+  - `--lock v35` is accepted.
+  - **A Kokoro row keeps the lock's own take:** the same `audio`, `in`, `dur` and words, so its length is unchanged. The same goes for a Kokoro-cast line with no row at all.
+  - **Only its start moves:** with the EL lines before it in the beat, keeping the lock's gap. Everything timed on his words moves with it.
+  - The segment report lists `kokoro_cast`, and the manifest's `variant` and `_about` say who is on Kokoro.
+- **`el_takes.py` (assembly):** a Kokoro row keeps the Kokoro take's own mouth track and words, as the Kokoro picture lock has them.
+- **`el_cut.py`:** no MARIO line is cut. If a later lock cuts one, it is the Kokoro lock's cut take, and `el_lock` keeps it. `el_cut` skips any cut whose source row is on Kokoro.
+- **The mix:** already right on level-matching. The EL rule levels each take to its Kokoro counterpart, and his counterpart is himself: 0 dB. (§AB3)
+- **The test** (scratch only; nothing in `show/reel/` or `audio/ep01/v3-el/ep01-v34/` was written): the v3.4 Act Two lines, rendered with `--lock v35`.
+  - **The render:** 0 characters sent, and 38 rows (6 of them MARIO on Kokoro, and Sirrah's two from Ida's cached takes).
+  - **The lock** (`el_lock.build_seg` on the v3.4 Kokoro lock):
+    - MARIO's six lines keep the lock's audio, `in` and `dur`. In 13.05 they start 0.24 and 0.42 s later, after Ida's longer reads.
+    - Act Two comes out −10.6 s against Kokoro (the v3.4 EL lock: −11.0 s). His Kokoro reads are slower than Caleb's.
+    - Nothing is missing.
+  - **`el_takes`:** the six Kokoro mouth tracks are kept as they are.
+
+### AB3. The mix (for the v3.5 mix pass)
+
+**How it was measured:** his nine Kokoro takes against the EL men in his own scenes (sc 11, 13, 17 and S4.08: Mas, Radnus, Tasya, Nedib, Nesnej, Alyi and Ttemme; 18 takes) and against every EL man's on-mic dialogue in the episode (114 takes).
+- **The spectrum:** the long-term average over active frames, in dB relative to each group's 500 Hz–2 kHz level.
+
+| Band | 60–120 | 120–250 | 250–500 | 500–1k | 1–2k | 2–3.15k | 3.15–5k | 5–7k | 7–9k | 9–11k | 11–12.5k | 12.5–16k |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| MARIO (Kokoro) − EL men, his scenes | +1.0 | +1.7 | −2.3 | −1.3 | +2.1 | +2.1 | +0.5 | +3.6 | +2.5 | −8.4 | −27.3 | −22.7 |
+| MARIO (Kokoro) − EL men, the episode | −1.6 | +1.2 | −2.2 | −1.1 | +1.6 | +2.2 | −0.9 | +0.5 | −0.5 | −12.0 | −30.7 | −25.4 |
+
+- **Level: −0.5 dB on his lines.**
+  - Both engines are −16.0 LUFS integrated.
+  - His speech sits +0.5 dB at the median 400 ms loudness (−15.7 against −16.2).
+  - It is denser: 10th to 95th percentile 8.7 dB (EL men 10.8), crest 11.5 dB (12.4). That is fastrec's 2.5:1 compressor.
+- **Room: nothing to add.**
+  - Every take is dry over the same −62 dBFS room-tone bed (the handles measure −61.9 and −62.1 dBFS).
+  - `mix_episode.py` puts no reverb on dialogue: one room stem sits under everyone.
+  - The device chains (call, monitor, laptop, phone, stage) follow the line's tag or the beat's room, whatever the engine. None of his nine lines uses one.
+- **EQ: undo fastrec's own shaping, lightly.** The two consistent differences are fastrec's chain:
+  - **+1.5 dB peak at 350 Hz, Q 1.0.** He is 1–2 dB thin at 250 Hz–1 kHz: fastrec's −1 dB at 250 Hz.
+  - **−1.5 dB peak at 2.2 kHz, Q 0.9.** He is about 2 dB forward at 1–3 kHz: fastrec's +1.5 dB at 3 kHz.
+  - **Leave 5–9 kHz alone.** It is level with the episode's men, and 2.5–3.6 dB over his scene partners: check by ear.
+- **The top can't be matched by EQ.**
+  - Kokoro renders at 24 kHz, so he has no content above about 10.5 kHz.
+  - A shelf would only lift 7–10 kHz, which already matches.
+  - The air he lacks is small: the EL men's 11–16 kHz sits 18–25 dB under their mids, under the room stem and the score.
+  - If the ear hears him duller or closer than the people he's talking to, the fix is a light exciter on his lines (10–16 kHz synthesised at about −24 dB re his mids), not EQ.
+- **Where it goes:** `mix_episode.dialogue()`. When `variant == 'el'` and `l.get('engine') == 'kokoro'`, apply the two peaks and −0.5 dB before any device chain. The lock marks each such line `engine: kokoro`.
+- **Scene 25 by ear** (the class photo, sc 13 in the lock):
+  - **Pitch separation improves.** On his Kokoro takes MARIO is 120 Hz: 1.6 st under Radnus and 1.4 st under Nedib. Caleb sat 0.2 and 0.0 st from them.
+  - **Timbre separation shrinks.** The mean-MFCC distance is 49 to Radnus and 37 to Nedib (Caleb 67 and 57). Caleb's thin, bright voice was the more distinct timbre.
+  - **His nearest voice is now Mas:** 0.8 st apart, distance 34. The two don't trade lines in that scene.
+  - The Kokoro/EL texture difference isn't in these numbers. Listen for whether he stands apart without jumping out.
+
+### AB4. Building the v3.5 EL lock (for the lock builder)
+
+1. **`render_v35.sh`, as `render_v34.sh`:**
+   - `--lines show/reel/ep01-v35/ep01-v35-$s.json` and `--out audio/ep01/v3-el/ep01-v35/$s`.
+   - `--reuse` adds `audio/ep01/v3-el/ep01-v34/$s` and `audio/ep01/v3-el/auditions/sirrah/round2`.
+   - `--skip` takes the lock's cut ids.
+   - The lock is read from the path, so MARIO passes through, and "Point two…" costs nothing.
+2. **`el_cut.py --lock v35`, `el_bed.py`, `stems.py` and `mix_episode.py` need their v35 entries**, as each got v34's. `el_cut` needs `v35` in its two lock tests and `ep01-v35` in `OLDS`.
+3. **Then:**
+   - `el_lock.py --lock v35`;
+   - the beds and manifest as §Z1;
+   - `el_takes.py --lock v35`;
+   - the mix with §AB3's EQ.
 
 ---
 
