@@ -112,9 +112,9 @@
    "key": "night",
    "id": "e01-v3-a4-s2-night",
    "laid": {
-    "T0": 40.9167,
+    "T0": 40.5167,
     "window": [
-     41.4067,
+     41.0067,
      50.625
     ],
     "fade": [
@@ -125,9 +125,14 @@
    },
    "marks": [
     [
-     41.4167,
-     "the carve: the felt open fifth (the re-entry after D6)",
+     41.0167,
+     "the re-entry after D6: the felt open fifth, 0.4 s before the carve's cut, under the post's last palette step to night (3 dB down: a return, not a jolt)",
      true
+    ],
+    [
+     41.4167,
+     "the carve (the cut to the dark room): the fifth already sounding",
+     false
     ],
     [
      42.6667,
@@ -173,7 +178,7 @@
    "sections": [
     [
      "S2 26A: the carve and the V.O.",
-     41.4167,
+     41.0167,
      45.28
     ],
     [
@@ -1179,7 +1184,7 @@
  "silences": [
   {
    "t0": 25.9,
-   "t1": 41.402,
+   "t1": 41.002,
    "what": "D6: the Remove click -> the phone's buzz (every bus at zero in the mix), then no score under \"super.\" (the suite's air holds it), nor under his 1:46 PM post and the fall to night (v32-S1.13: the suite's air, then the drone) -> the carve"
   },
   {
@@ -1211,6 +1216,13 @@
    "t0": 370.167,
    "t1": 374.305,
    "what": "the dead stop on MADA's label -> the Monday bullpen (the dark room's air, then the bullpen's, hold it)"
+  }
+ ],
+ "designed_hit": [
+  {
+   "t": 41.017,
+   "cue": "e01-v3-a4-s2-night",
+   "what": "the re-entry after D6: the felt open fifth, 0.4 s before the carve's cut, under the post's last palette step to night (3 dB down: a return, not a jolt)"
   }
  ],
  "rests": [
@@ -1266,13 +1278,13 @@
    },
    "e01-v3-a4-s2-night": {
     "window": [
-     41.407,
+     41.007,
      50.625
     ],
-    "lufs_i": -22.38,
-    "st_p95": -21.9,
-    "st_max": -20.69,
-    "true_peak_dbtp": -5.14
+    "lufs_i": -22.1,
+    "st_p95": -21.13,
+    "st_max": -21.06,
+    "true_peak_dbtp": -6.2
    },
    "e01-v31-a4-plan": {
     "window": [
@@ -1349,32 +1361,32 @@
    {
     "section": "S2 26A: the carve and the V.O.",
     "cue": "e01-v3-a4-s2-night",
-    "start": 41.417,
+    "start": 41.017,
     "end": 45.28,
-    "lufs_i": -20.85,
-    "st_p95": -20.8,
-    "st_max": -20.69,
-    "true_peak_dbtp": -5.14
+    "lufs_i": -21.84,
+    "st_p95": -21.63,
+    "st_max": -21.48,
+    "true_peak_dbtp": -6.2
    },
    {
     "section": "S2 the count and TPOOL: the pedal",
     "cue": "e01-v3-a4-s2-night",
     "start": 45.28,
     "end": 47.042,
-    "lufs_i": -33.84,
+    "lufs_i": -31.04,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -21.26
+    "true_peak_dbtp": -18.25
    },
    {
     "section": "S2 mark 3, the settle, the Rewind",
     "cue": "e01-v3-a4-s2-night",
     "start": 47.042,
     "end": 50.625,
-    "lufs_i": -23.24,
-    "st_p95": -22.81,
-    "st_max": -22.73,
-    "true_peak_dbtp": -9.14
+    "lufs_i": -21.83,
+    "st_p95": -21.24,
+    "st_max": -21.15,
+    "true_peak_dbtp": -8.03
    },
    {
     "section": "PLAN Neleh's desk, 11:52: the clockwork, the pad",
@@ -1631,10 +1643,10 @@
     "cue": "e01-v3-a4-s5-two-am",
     "start": 309.393,
     "end": 313.535,
-    "lufs_i": -54.27,
-    "st_p95": null,
-    "st_max": null,
-    "true_peak_dbtp": -15.27
+    "lufs_i": -45.34,
+    "st_p95": -54.1,
+    "st_max": -54.1,
+    "true_peak_dbtp": -16.03
    },
    {
     "section": "S5 \"He did both.\": the pedal alone",
@@ -1771,9 +1783,9 @@
     "cue": "e01-v3-a4-s7s8-return",
     "start": 447.345,
     "end": 455.408,
-    "lufs_i": -45.07,
-    "st_p95": -53.82,
-    "st_max": -53.82,
+    "lufs_i": -45.11,
+    "st_p95": -53.86,
+    "st_max": -53.86,
     "true_peak_dbtp": -11.37
    },
    {
@@ -1850,7 +1862,7 @@
   "digital_silence": [
    {
     "t0": 25.9,
-    "t1": 41.4,
+    "t1": 41.0,
     "marked": true
    },
    {
@@ -1888,7 +1900,7 @@
   "marked_silences": [
    {
     "t0": 25.9,
-    "t1": 41.402,
+    "t1": 41.002,
     "what": "D6: the Remove click -> the phone's buzz (every bus at zero in the mix), then no score under \"super.\" (the suite's air holds it), nor under his 1:46 PM post and the fall to night (v32-S1.13: the suite's air, then the drone) -> the carve",
     "digital_zero": true,
     "peak_dbfs": null
@@ -1939,7 +1951,7 @@
   "holes": [
    {
     "t0": 25.9,
-    "t1": 41.4,
+    "t1": 41.0,
     "designed": true,
     "what": null
    },
@@ -1980,7 +1992,7 @@
     "what": null
    },
    {
-    "t0": 476.9,
+    "t0": 476.85,
     "t1": 480.4,
     "designed": true,
     "what": "the lobby: the CU \"silent like the first\" and \"okay.\" on the neon's F"
@@ -1992,7 +2004,7 @@
     25.9
    ],
    [
-    41.4,
+    41.0,
     50.65
    ],
    [
@@ -2025,7 +2037,7 @@
    ],
    [
     467.85,
-    476.9
+    476.85
    ],
    [
     480.4,
@@ -2096,12 +2108,12 @@
      },
      "measured": {
       "lufs": -22.0,
-      "lra": 12.29,
-      "true_peak_db": -5.14,
-      "peak_db": -5.14,
-      "rms_db": -25.93,
-      "crest_db": 20.78,
-      "seconds": 10.0083
+      "lra": 11.38,
+      "true_peak_db": -6.2,
+      "peak_db": -6.21,
+      "rms_db": -25.77,
+      "crest_db": 19.57,
+      "seconds": 10.4083
      }
     },
     "f_major_written_ok": true,
@@ -2109,15 +2121,15 @@
     "f_major_fails": [],
     "knee_completion": 0,
     "knee_whole": 0,
-    "st_p95": -20.72,
-    "band_2_6k_db": -39.2,
+    "st_p95": -21.14,
+    "band_2_6k_db": -37.1,
     "balance": {
-     "piano": 93,
-     "orch": 4,
+     "piano": 88,
+     "orch": 7,
      "bigband": 0,
-     "chip": 3
+     "chip": 5
     },
-    "chip_share": 3,
+    "chip_share": 5,
     "warnings": []
    },
    "e01-v31-a4-plan": {

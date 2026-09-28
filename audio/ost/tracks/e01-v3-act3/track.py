@@ -30,7 +30,8 @@ is too much..."); the LEDs no longer stop at the post; he switches the monitor o
   23.56               one felt note (Db3 + Ab3): "i made it for everyone else." sits   18.06 the V.O.; "you can
                       inside it; nothing under "you can stay."                         stay."; the chime (SFX, F)
   28.67 / 29.29       the settle C4 -> F4 over the open fifth: it fits                  the Orb in the outline
-  30.4-35.8           Abmaj9 and a solo violin Eb4 -> Db4 held over the iris and        19.01 the iris; v31-19.02
+  30.4-35.8           Abmaj9 and a solo violin Eb4 -> Db4 held over the iris (a DESIGNED  19.01 the iris; v31-19.02
+                      HIT on the cut: cues.json designed_hit, v3.3 X5) and
                       Sirrah's two letters; Dbmaj9 under the runner                     SIRRAH's two letters
   35.68 / 36.78 /     THE HANDS RUNNER: his three gestures on the felt (F F, F G, C F)  v31-19.03 the hands
   37.88               and THE COPY a beat late on the chip, cut off on each whirr       runner (the Orb copies)
@@ -309,6 +310,10 @@ def build(c):
     # his gestures on the felt, THE COPY (OST-BIBLE s2.5, Ep1: the hands runner) a beat late on the chip, each copy
     # breaking off on the Orb's whirr; the record lines (Remuhcs, Nole) held; the V.O. on the felt alone
     fch('Abmaj9', E['mon'] + 0.08, E['runner'] - E['mon'], 0.12, span_end=E['runner'] - 0.05)
+    hits = [(E['mon'] + 0.08, "the iris flicks to the monitor (19.01): A-flat maj9 and the solo violin's E-flat4 on the "
+                              "cut, out of the settle's decay: the turn from his room to the screen (v3.3 polish X5, "
+                              "audit-v32: a +12 dB step on the cut; designed)")]
+    cue.mark(E['mon'] + 0.08, 'B: DESIGNED HIT: the iris flicks to the monitor: Abmaj9 + the solo violin (the screen)')
     for p, t0, t1 in [('Eb4', E['mon'] + 0.3, E['sirrah'] + 0.3), ('Db4', E['sirrah'] + 0.3, E['runner'] + 0.2)]:
         cue.n('svla', p, t0, t1 - t0, 0.26, art='sus', att=0.5, rel=0.6)      # the lonely colour, held
     fch('Dbmaj9h', E['runner'] + 0.05, E['remuhcs']['on'] - E['runner'] - 0.1, 0.12,
@@ -584,6 +589,7 @@ def build(c):
                meta=meta, **cue.score_args())
     window = [0.0, c.LEN, 0.0, 0.003]
     extra = dict(marks=[(round(t, 4), lab, h) for t, lab, h in cue.marks],
+                 designed_hit=[(round(t, 4), w) for t, w in hits],
                  sections=[(lab, round(a, 4), round(b_, 4)) for lab, a, b_ in cue.sections],
                  silences=[(hall, tph, "DevDay, live (v3.2): no score under the stage; the hall's applause, the "
                                        "stage's own sound and his line play it dry; the felt comes back at home"),
@@ -623,6 +629,7 @@ def assemble(c, variant):
                file=os.path.relpath(P['wav'], REPO), clock=c.describe(), sample_rate=48000, channels=2,
                bit_depth=24, level='underscore, dry of dialogue (the mixer ducks it)',
                cues=[dict(id=CUE_ID, laid=info[CUE_ID], marks=lj['marks'], sections=lj['sections'])],
+               designed_hit=[dict(t=t, cue=CUE_ID, what=w) for t, w in lj.get('designed_hit', [])],
                silences=[dict(t0=round(a, 3), t1=round(b, 3), what=w) for a, b, w in sil],
                measured=res, source=os.path.relpath(os.path.join(HERE, 'track.py'), REPO),
                heard='nothing here has been listened to; every number is measured')

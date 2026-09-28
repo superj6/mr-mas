@@ -25,6 +25,7 @@ OST = os.path.abspath(os.path.join(HERE, '..', '..'))
 if OST not in sys.path:
     sys.path.insert(0, OST)
 SR = 48000
+STOP_FADE = int(0.005 * SR)                                # every designed stop and rest: a 5 ms fade to digital zero
 
 
 def render(cues, work, workers=None, keep_album=False):
@@ -80,13 +81,21 @@ def lay(names, work, N, out_wav, zero=()):
         if j1 < N or fout > 0.003:
             k = min(max(int(fout * SR), int(0.003 * SR)), j1 - j0)
             gate[j1 - k:j1] *= _fade(k, 'out')
-        for r0, r1 in lj.get('rests', []):                 # designed rests inside the window: digital zero
-            gate[int(round(r0 * SR)):int(round(r1 * SR))] = 0.0
+        for r0, r1 in lj.get('rests', []):                 # designed rests inside the window: digital zero, entered
+            i0, i1 = int(round(r0 * SR)), int(round(r1 * SR))    # and left through a STOP_FADE ramp (v3.3 polish X2:
+            k = min(STOP_FADE, max(1, (i1 - i0) // 4))         # the ALYI rest had cut -13 dBFS to zero in one sample)
+            gate[i0:i0 + k] *= _fade(k, 'out')
+            gate[i0 + k:i1 - k] = 0.0
+            gate[i1 - k:i1] *= _fade(k, 'in')
         mix += seg * gate[None]
         info[name] = dict(T0=round(lj['T0'], 4), window=[round(a0, 4), round(a1, 4)], fade=[fin, fout],
                           rests=lj.get('rests', []))
     for z0, z1, *_ in zero:                                # the marked silences: digital zero (the designed stops;
-        mix[:, max(0, int(round((z0 + 0.003) * SR))):int(round((z1 - 0.02) * SR))] = 0.0   # the mix mutes them anyway)
+        i0 = max(0, int(round(z0 * SR)))                   # the mix mutes them anyway), entered through a STOP_FADE
+        i1 = int(round((z1 - 0.02) * SR))                  # ramp, so no stop is a one-sample drop (v3.3 polish X2)
+        if i1 - i0 > STOP_FADE:
+            mix[:, i0:i0 + STOP_FADE] *= _fade(STOP_FADE, 'out')[None]
+            mix[:, i0 + STOP_FADE:i1] = 0.0
     y = np.clip(mix, -1.0, 1.0).T.astype(np.float32)
     sf.write(out_wav, y, SR, subtype='PCM_24')
     return mix, info

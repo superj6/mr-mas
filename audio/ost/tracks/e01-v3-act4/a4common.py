@@ -31,6 +31,10 @@ from engine.core import Note, nm   # noqa: E402,F401
 FPS = 24
 BEAT_F = 15.0
 CLK = None
+# v3.3 polish X3 (audit-v32 #6): the night cue's felt fifth re-enters 0.4 s before the carve's cut, under the post's
+# last palette step to night, and 3 dB down, so it lands as a return, not a jolt (v3.2: +24.4 dB in 400 ms on the cut)
+NIGHT_PRELAP_S = 0.4
+NIGHT_ENTRY_DB = -3.0
 
 
 def bind(clock):

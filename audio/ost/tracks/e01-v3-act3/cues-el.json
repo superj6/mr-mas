@@ -88,6 +88,11 @@
      true
     ],
     [
+     30.08,
+     "B: DESIGNED HIT: the iris flicks to the monitor: Abmaj9 + the solo violin (the screen)",
+     true
+    ],
+    [
      35.215,
      "B: his gesture 1 on the felt (F F); THE COPY a beat late, breaking off",
      true
@@ -307,6 +312,13 @@
    ]
   }
  ],
+ "designed_hit": [
+  {
+   "t": 30.08,
+   "cue": "e01-v3-act3",
+   "what": "the iris flicks to the monitor (19.01): A-flat maj9 and the solo violin's E-flat4 on the cut, out of the settle's decay: the turn from his room to the screen (v3.3 polish X5, audit-v32: a +12 dB step on the cut; designed)"
+  }
+ ],
  "silences": [
   {
    "t0": 104.4,
@@ -460,10 +472,10 @@
     "cue": "e01-v3-act3",
     "start": 136.25,
     "end": 138.75,
-    "lufs_i": -45.12,
+    "lufs_i": -45.28,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -13.71
+    "true_peak_dbtp": -13.8
    }
   ],
   "digital_silence": [

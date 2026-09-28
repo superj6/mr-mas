@@ -160,6 +160,8 @@ def assemble(c, variant):
                                                      if kk in ('dropped_under_words', 'label_on_swing')})
               for k in ORDER],
         silences=[dict(t0=round(a, 3), t1=round(b, 3), what=w) for a, b, w in sil],
+        designed_hit=[dict(t=round(m[0], 3), cue=lays[k]['name'], what=m[1]) for k in ORDER for m in lays[k]['marks']
+                      if m[1].startswith('the re-entry after D6')],
         rests=[dict(t0=round(a, 3), t1=round(b, 3), what=w) for a, b, w in rests],
         measured=res, source=os.path.relpath(os.path.join(HERE, 'track.py'), REPO),
         heard='nothing here has been listened to; every number is measured')

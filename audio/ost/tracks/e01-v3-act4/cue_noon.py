@@ -236,7 +236,7 @@ def build():
     extra = dict(marks=[(round(t, 4), lab, h) for t, lab, h in cue.log],
                  sections=[(lab, round(a0 / FPS, 4), round(a1 / FPS, 4)) for lab, a0, a1 in
                            [(l, cue.fr(a), cue.fr(b)) for l, a, b in cue.sections]],
-                 silences=[(M['CLICK'] / FPS, M['CARVE'] / FPS - 0.015,
+                 silences=[(M['CLICK'] / FPS, M['CARVE'] / FPS - NIGHT_PRELAP_S - 0.015,     # (to the night's re-entry)
                             'D6: the Remove click -> the phone\'s buzz (every bus at zero in the mix), then no score '
                             'under "super." (the suite\'s air holds it)' +
                             (', nor under his 1:46 PM post and the fall to night (v32-S1.13: the suite\'s air, then '

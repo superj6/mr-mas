@@ -43,6 +43,10 @@
   - The blog post is read silently now; the blank's F holds under it.
   - "gerg never waits to be asked." is cut: the pad alone holds Gerg's look.
 
+**v3.3 polish (PLAN §6 X2, X3; audit-v32 #5, #6).** Two measured fixes, in the cue code so they carry into the v3.3 refit:
+- **X2, the stop on ALYI** (film 17:13.27): the 2 AM rest went from −13 dBFS to digital zero in one sample, so it would tick. The lay now takes every designed rest and every marked silence to zero through a 5 ms fade (`v3lay.py`, shared with Act Three), like the other dead stops. On the stem, the largest sample step there is now −39.4 dBFS (was −17.2) and the second difference 0.002 (was 0.144, 474× local; now 7×).
+- **X3, the night's re-entry** (film 12:45.29): the felt fifth now starts 0.4 s before the cut, under the post's last palette step to night. It's ridden 3 dB down until the nudge, so it lands as a return, not a jolt. Its velocity is 0.33 → 0.28, and the felt is notched at 442 and 218 Hz: the softer layer's sympathetic ring read as an A over the fifth. The one silence now ends at the re-entry. On the stem, the step at the cut is now −9.1 dB (the fifth is already decaying; it was an entry from digital zero on the cut). Its first 400 ms read −18.3 LUFS (v3.2: −16.2). `cues.json` lists it under `designed_hit`.
+
 **The material.** The cues are Act Four v5's score (`../e01-act4-v5/`, read and imported read-only, never edited) and the v3 sample's 2 AM cue (`audio/reel/ep01-v3-sample/music/`, read-only). Both are copied here and re-spotted to the v3 lock, with v3's changes:
 - the cuts C13–C16;
 - the new V.O. (the suite, JOIN, 2 AM);
@@ -107,8 +111,8 @@ The times are the Kokoro v3.2 lock's (segment seconds). The ElevenLabs lock move
 |---|---|---|---|---|---|
 | 0–16.2 | **Vegas, noon: the suite's ordinary life** (S1.01–S1.02) | P01 · **the Water Line bar** (MM-07 sc 24) | an F3/C4 sul-tasto pedal bows in as air (0.04); the felt bar, swung (7.96), its **nudge G4 on his glass nudge** (9.83) with the chip square on that note only; the C4 hangs on D♭maj7 (10.46): the settle never comes | "gerg's not on it. alyi set it up. probably just the budget." sits inside the felt | the pedal holds to the JOIN click |
 | 16.2–25.9 | **The call; the Remove dialog** (S1.07, v31-S1.08d) | **P03 LEVERAGE** (MM-08), low (−3 dB) | LEVERAGE's first eighth on the JOIN click (16.17); **thinned to its pedal** under Alyi's sentence (18.82: a soft downbeat and a grand cluster); his calm, one felt F4 (23.32); **the bright hard cut**: the 1-bit F F F on the dialog, the cluster up a semitone (24.17); **Step Four on Alyi's pointer** (24.02 · 24.65 · 25.27) | "Mas. The board has decided…" | **DEAD STOP on the Remove click (25.90): D6**, every stem and tail to digital zero |
-| 25.9–41.4 | his tile falls; the buzz; **"super."**; **his 1:46 PM post**; the fall to night (S1.09–S1.12, v32-S1.13) | — | — | — | **no score** (marked, digital zero): the suite's air holds "super." and his post, then the dark room's drone (SFX) the fall to night |
-| 41.4–50.6 | **That night: the third mark** (S2) | P01 (MM-08 26A) | the felt's open fifth on the carve: the re-entry (41.42); the nudge G4 before "i don't keep score." (42.67); an F3/C4 pedal under the count (45.28); the felt back on mark 3 (47.04); the settle C4 → F4 (48.12 / 48.75); **THE REWIND** (E4, B♭3: 49.38 / 50.00) | the V.O. (the G4 alone) | the whip lands on Neleh's desk |
+| 25.9–41.0 | his tile falls; the buzz; **"super."**; **his 1:46 PM post**; the fall to night (S1.09–S1.12, v32-S1.13) | — | — | — | **no score** (marked, digital zero): the suite's air holds "super." and his post, then the dark room's drone (SFX) the fall to night, to the night's re-entry |
+| 41.0–50.6 | **That night: the third mark** (S2) | P01 (MM-08 26A) | **the re-entry**: the felt's open fifth 0.4 s before the carve's cut, under the post's last palette step, 3 dB down (41.02; a designed hit); the nudge G4 before "i don't keep score." (42.67); an F3/C4 pedal under the count (45.28); the felt back on mark 3 (47.04); the settle C4 → F4 (48.12 / 48.75); **THE REWIND** (E4, B♭3: 49.38 / 50.00) | the V.O. (the G4 alone) | the whip lands on Neleh's desk |
 | 50.6–79.3 | **THE PLAN at Neleh's desk, 11:52** (v31-S3.00p, S1.03–S1.05) | Neleh's clockwork · **P14 BLUEPRINT** (MM-07): the chip music box, straight, 0 ms | her office clock first (SFX; a designed rest); **her clockwork on her card** (51.14) and a sul-tasto pad; the waltz walks the three chairs off on its F F F (56.96 · 57.58 · 58.21), then the empty chairs; the 4/4 returns (60.71); **one Blueprint note per label** (the four 60.71 · NONPROFIT 62.27 · "controls" 62.90 · "company" 63.52 · THE COMPANY 66.33 · VOTES: 0 71.33 · CEO 71.96); one held chord for "Good question." (74.46); the moth's flutter (75.67); the harp draws the path, tick 1 on "1. NOON" (77.27); **the stuck G–A♭ loop** on the fold (78.52); **the tape-stop** (78.81) reaches zero **on the 11:59 tick** (79.29) | "Once more, before the others join." (the pad); Neleh's reading (the box alone, the roots, a pencil tick) | PROCEDURE's first chord on the same frame |
 | 79.3–109.0 | **The board's side, 11:59** (S3.00a–S3.03) | **P02 PROCEDURE, lighter** (MM-09) | B♭m(add9) and harp harmonics on the tick; the pedal (cello B♭2 + viola F3, an octave up) from the connect (79.50), the whisper stepping down in Alyi's gaps; Neleh's clockwork under the wait (79.60); the clockwork creeping back under the tinny "super." (95.53); **Step Four on her pen's run, in eighths** (98.66 · 98.97 · 99.28); the blank's F (99.60) under the silent post; a tick under "Any objections?" (105.83); **the Post click on a tick** (108.96) | the firing (the pedal only); the post, read silently (the F alone) | — |
 | 109.0–146.5 | **Rima; the all-hands; the evening** (S3.04–S3.05) | P02, lighter | one soft pizz figure after her join chime (109.45); the pedal alone under the all-hands (123.17); the spiccato pulse returns with Gerg's keycaps (136.91) | every line; the record dry | — |
@@ -142,7 +146,7 @@ Measured on `render/music.wav` (the Kokoro v3.2 lock) and on each cue's engine c
 | Cue | Window (s) | Target | LUFS-I (window) | ST p95 | Engine: rule 12 · spectral F-major · knee | Balance p·o·b·c |
 |---|---|---|---|---|---|---|
 | S1 noon (the suite → LEVERAGE → the Remove dialog → D6) | 0.00–25.90 | -20 | −20.02 | −17.72 | OK · OK · 0 | 44·35·0·22 |
-| S2 that night | 41.41–50.62 | -22 | −22.38 | −21.90 | OK · OK · 0 | 93·4·0·3 |
+| S2 that night | 41.01–50.62 | -22 | −22.10 | −21.13 | OK · OK · 0 | 88·7·0·5 |
 | THE PLAN (Neleh's desk, 11:52 → the 11:59 tick) | 50.62–79.29 | -20 | −19.98 | −18.06 | OK · OK · 0 | 0·60·0·40 |
 | S3–S4 the board's side (lighter; the lobby, his side, inside it) | 79.29–261.40 | -21 | −20.93 | −17.68 | OK · OK · 0 | 5·73·22·0 |
 | 2 AM (the badge under the door) | 258.33–356.00 | -20 | −19.91 | −18.07 | OK · OK · 0 | 70·26·0·4 |
@@ -151,7 +155,7 @@ Measured on `render/music.wav` (the Kokoro v3.2 lock) and on each cue's engine c
 
 - **Silence:**
   - The 7 marked silences are all digital zero in the stem:
-    - 25.90 → 41.40: D6, the Remove click → the carve (the buzz, "super.", his post, the fall to night);
+    - 25.90 → 41.00: D6, the Remove click → the carve (the buzz, "super.", his post, the fall to night);
     - 195.46 → 199.22: the lobby by day, his side → his look up;
     - 309.39 → 313.54: the scroll stops on ALYI → "He did both.";
     - 370.17 → 374.31: Mada's label → the violin;
@@ -163,10 +167,10 @@ Measured on `render/music.wav` (the Kokoro v3.2 lock) and on each cue's engine c
   - **No music run is shorter than 2 s.**
 - **Rule 12** (a written A-natural over an F bass, every note boundary): 0 in all seven cues. **The knee:** 0 completions by pitch class, 0 whole.
 - **The spectral F-major check** passes in all seven cues.
-- **The V.O. windows** (LUFS, the bible's −24 ±2): "i don't keep score." −30.1, quieter than the window (the cue is almost all felt; v5 read −27.8); 2 AM −20.9, −25.5 (the count a little over: the V.O. sits inside the felt's pulse, as in v3.1 and the first round).
-- **Sub under the room drone** (the dark room): −33.6 dB, −34.5 dB (limit −18); nothing below C3 in the night and 2 AM cues.
-- **2–6 kHz band:** −16.5 dB (the avalanche) to −39.2 dB (the night); the limit is −15.
-- **Cut steps** (the v3.1 audit's method: the stem's level 0.5 s either side of every cut): all nine steps of 12 dB or more sit on a cue mark, a marked silence or a designed rest (the D6 click, the carve, Neleh's desk, the first ring, the reversal's first pizz, the Orb's look, Gerg's ring, the avalanche, the bonk).
+- **The V.O. windows** (LUFS, the bible's −24 ±2): "i don't keep score." −30.3, quieter than the window (the cue is almost all felt; v5 read −27.8); 2 AM −20.9, −25.5 (the count a little over: the V.O. sits inside the felt's pulse, as in v3.1 and the first round).
+- **Sub under the room drone** (the dark room): −32.3 dB, −34.5 dB (limit −18); nothing below C3 in the night and 2 AM cues.
+- **2–6 kHz band:** −16.5 dB (the avalanche) to −37.1 dB (the night); the limit is −15.
+- **Cut steps** (the v3.1 audit's method: the stem's level 0.5 s either side of every cut): all eight steps of 12 dB or more sit on a cue mark, a marked silence or a designed rest (the D6 click, Neleh's desk, the first ring, the reversal's first pizz, the Orb's look, Gerg's ring, the avalanche, the bonk). The carve's cut is no longer one: the night's fifth is already sounding (−9.1 dB at the cut).
 - **Onsets:** every sync point is written on its frame. The ones read outside ±10 ms are soft bowed or sustained entries, the GM Rhodes, and v5's muted horns (as in v5).
 - **Hot spots to hear** (sections louder than −17.5 LUFS-I or with ST p95 over −17, apart from the featured avalanche):
   - PLAN the path (76.6–78.5 s, −16.8 LUFS-I);
@@ -182,9 +186,9 @@ Measured on `render/music.wav` (the Kokoro v3.2 lock) and on each cue's engine c
 |---|---|---|---|
 | S1 the suite: the pedal, the felt Water Line bar, the V.O. | 0.0–16.2 | −21.0 | −17.6 |
 | S1 LEVERAGE (low): the connect, Alyi's sentence (thinned), the dialog | 16.2–25.9 | −18.6 | −18.4 |
-| S2 26A: the carve and the V.O. | 41.4–45.3 | −20.9 | −20.8 |
-| S2 the count and TPOOL: the pedal | 45.3–47.0 | −33.8 | — |
-| S2 mark 3, the settle, the Rewind | 47.0–50.6 | −23.2 | −22.8 |
+| S2 26A: the carve and the V.O. | 41.0–45.3 | −21.8 | −21.6 |
+| S2 the count and TPOOL: the pedal | 45.3–47.0 | −31.0 | — |
+| S2 mark 3, the settle, the Rewind | 47.0–50.6 | −21.8 | −21.2 |
 | PLAN Neleh's desk, 11:52: the clockwork, the pad | 50.6–55.2 | −23.3 | −23.1 |
 | PLAN WORD + the waltz (3/4) | 55.2–60.7 | −18.7 | −18.1 |
 | PLAN the labels (4/4 Blueprint, thinned under the reading) | 60.7–74.5 | −20.6 | −19.7 |
@@ -210,7 +214,7 @@ Measured on `render/music.wav` (the Kokoro v3.2 lock) and on each cue's engine c
 | S5 the Orb exchange: one held chord | 268.7–274.0 | −21.3 | −20.3 |
 | S5 Gerg's call: the Build in A-flat major (chip + felt) | 274.0–288.8 | −18.7 | −17.2 |
 | S5 the letter: the pedal and the pulse | 288.8–309.4 | −20.4 | −19.2 |
-| S5 the rest: ALYI -> "He did both." | 309.4–313.5 | −54.3 | — |
+| S5 the rest: ALYI -> "He did both." | 309.4–313.5 | −45.3 | −54.1 |
 | S5 "He did both.": the pedal alone | 313.5–317.6 | −22.6 | −22.3 |
 | S5 the check: the felt returns | 317.6–323.5 | −17.4 | −20.7 |
 | S5 the Build returns; the look (the held note) | 323.5–334.9 | −20.4 | −17.6 |
@@ -224,7 +228,7 @@ Measured on `render/music.wav` (the Kokoro v3.2 lock) and on each cue's engine c
 | S7 b Tasya's floor (pre-lap -> below/above/around -> bloom -> home) | 391.0–411.0 | −18.4 | −17.4 |
 | S7 c1 LEVERAGE (fade-in -> the bang) | 411.0–422.5 | −19.1 | −18.3 |
 | S7 c1 thinned to the F pedal | 422.5–447.3 | −19.4 | −18.2 |
-| S7 STOP: "of what?" -> the stamp (the room) | 447.3–455.4 | −45.1 | −53.8 |
+| S7 STOP: "of what?" -> the stamp (the room) | 447.3–455.4 | −45.1 | −53.9 |
 | S7 c2 the C pedal (the posts, his stream); the turn | 455.4–466.4 | −19.9 | −19.3 |
 | S7 d the held beat (the sand stands), then the Build into the sign | 466.4–471.1 | −17.9 | −17.7 |
 | S8 e VICTORY LAP, one size too big + one chip note | 471.1–474.4 | −14.4 | — |
@@ -238,8 +242,8 @@ Measured on `render/music.wav` (the Kokoro v3.2 lock) and on each cue's engine c
 - **Loudness:** −20.22 LUFS-I, −3.15 dBTP; ST p95 −17.42.
 - **Silence:** the 7 marked silences are digital zero. There is no unmarked digital silence, no undesigned hole and no fragment.
 - **Checks:** rule 12 and the knee pass in every cue; the spectral F-major check passes in every cue but THE PLAN (the same tape-stop window).
-- **The V.O. windows:** −29.1; 2 AM −21.6, −22.2.
-- **Cut steps:** all nine steps of 12 dB or more sit on a cue mark, a marked silence or a designed rest.
+- **The V.O. windows:** −29.3; 2 AM −21.6, −22.2.
+- **Cut steps:** all eight steps of 12 dB or more sit on a cue mark, a marked silence or a designed rest; the carve's cut reads −9.1 dB.
 - **The avalanche:** Mada's label lands before the swung "and" (`label_on_swing: false`), and the stop follows it.
 
 
