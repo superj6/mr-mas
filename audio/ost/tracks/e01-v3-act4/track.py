@@ -7,28 +7,35 @@ full band (the avalanche), a triumph one size too big (Monday and the return), s
 handing off to the tag.  Act Four v5's score (tracks/e01-act4-v5/, read-only) and the v3 sample's cues (audio/reel/
 ep01-v3-sample/music/, read-only) are the material, copied here and re-spotted to the v3 lock.
 
+  v3.1 (the final lock, show/reel/ep01-v31/; script draft 7): his side opens on the shock and THE PLAN moves to the
+  board's side.  Seven cues:
   cue (module)            segment s (kokoro)   what
-  S1  cue_noon.py         0 -> 47.69           the suite (air, the felt Water Line bar), THE PLAN's waltz and labels,
-                                               the stuck loop under his one wrong read, the TAPE-STOP onto JOIN,
-                                               LEVERAGE low, DEAD STOP on the Cancel click (D6)
-      -                   47.69 -> 57.63       no score: D6 to the buzz, then "super." in the suite's air
-  S2  cue_night.py        57.63 -> 71.04       the felt's open fifth on the carve (the re-entry), the nudge before
-                                               "i don't keep score.", the pedal under TPOOL, the settle, THE REWIND
-  S3-4 cue_board.py       71.04 -> ~278.1      PROCEDURE, lighter: the clockwork between lines, the pedal and the tick
-                                               under talk; Step Four; the hearts; the Door in the glass; the sincere
-                                               beat; the Lighthouse and the Addendum cut by "no."; the hourglass;
-                                               Tasya's floor; the hang on "Step four?", its C ringing into the dark room
-  S5  cue_two_am.py       275.08 -> 374.08     the Water Line warm, the count, the Build with Gerg, the walking pulse
-                                               under the letter, out on ALYI / back on "He did both.", the Build cut
-                                               on his look, Tasya's floor and two Rhodes chords, the open A-flat 6/9
-  S6  cue_avalanche.py    374.08 -> 388.25     SET-PIECE SWING, the one full band, DEAD STOP on Mada's label
-  S7-8 cue_return.py      390.21 -> 523.79     the violin, the floor, LEVERAGE to a dead stop on "of what?", the
-                                               stamp's pedal and the Build's restart, VICTORY LAP one size too big,
-                                               the flat line and the bonk, "okay." and the felt onto the vault's F
+  S1  cue_noon.py         0 -> 25.90           the suite's ordinary life (a sul-tasto pedal, his felt Water Line bar
+                                               with the nudge on his glass), LEVERAGE low from the JOIN click, thinned
+                                               to its pedal under Alyi's sentence, back up for the bright Remove dialog
+                                               (Step Four on the pointer), DEAD STOP on the Remove click (D6)
+      -                   25.90 -> 37.21       no score: D6 to the buzz, then "super." in the suite's air
+  S2  cue_night.py        37.21 -> 46.42       the felt's open fifth on the carve, the nudge before "i don't keep
+                                               score.", the pedal under the Orb's count, the settle, THE REWIND
+  PLAN cue_plan.py        46.42 -> 75.08       Neleh's desk at 11:52: her clockwork on her card, the Blueprint pad
+                                               under her pointer, the waltz's walk-offs, the labels, the zeros, the
+                                               path, the stuck loop and the tape-stop into the 11:59 tick
+  S3-4 cue_board.py       75.08 -> ~266        PROCEDURE, lighter (the first round's), from the 11:59 tick through the
+                                               Sunday reversal to "Step four, Mada?" and the held C into the dark room
+  S5  cue_two_am.py       263.54 -> 362.67     2 AM (the first round's): the Water Line warm, the count, the Build with
+                                               Gerg (it stops dead on his look), the letter, Tasya's floor, the open 6/9
+  S6  cue_avalanche.py    362.67 -> 376.84     SET-PIECE SWING, the one full band, its peak about 2 dB down, DEAD STOP
+                                               on Mada's label
+  S7-8 cue_return.py      378.79 -> 517.75     the violin, the floor, Tuesday's invite (one felt F4 on his Accept),
+                                               LEVERAGE (the pin's click keeps its beat) to a dead stop on "of what?",
+                                               the stamp's pedal, the hourglass: THE TURN on the chat's "we're so
+                                               back", the shatter's held beat, the Build compiling into the sign's
+                                               VICTORY LAP, the flat line and the bonk, "okay." onto the vault's F
 
 TIMING IS PARAMETRIC: every sync point is read from the timeline (beat starts, line spans, words, sounds, texts).
-    --variant kokoro   show/reel/ep01-v3/ep01-v3-act4.json        -> render/music.wav, cues.json      (default)
-    --variant el       show/reel/ep01-v3-el/ep01-v3-el-act4.json  -> render/music-el.wav, cues-el.json
+    --variant kokoro   show/reel/ep01-v31/ep01-v31-act4.json        -> render/music.wav, cues.json      (default)
+    --variant el       show/reel/ep01-v31-el/ep01-v31-el-act4.json  -> render/music-el.wav, cues-el.json
+    (MRMAS_V3_LOCK=v3 points at the first v3 lock, show/reel/ep01-v3/; this v3.1 score needs v3.1's beats)
     --timeline PATH    any timeline with the same ids              -> render/music-custom.wav
 The act ends on the vault's pedal; its natural release (the ~4 s past the act's last frame) is written beside the
 stem as render/music[-el]-ringout.wav, for the mix to lay at the tag's first frame if the tag's own cue doesn't carry it.
@@ -58,7 +65,7 @@ import a4common  # noqa: E402
 
 SEG = 'act4'
 REPO = v3clock.REPO
-ORDER = ['noon', 'night', 'board', 'two_am', 'avalanche', 'return']
+ORDER = ['noon', 'night', 'plan', 'board', 'two_am', 'avalanche', 'return']
 MODULES = {k: f'cue_{k}' for k in ORDER}
 
 
@@ -122,6 +129,8 @@ def assemble(c, variant):
         sil = [s_ for s_ in sil if s_ is not av[0]] + [(av[0][0], first_ret, av[0][2])]
     mix, info = v3lay.lay(names, P['work'], c.N, P['wav'], zero=sil)
     rests = [(0.0, 0.6, "the act's first frames: the suite's pedal bows in from nothing (the SFX pre-lap carries)"),
+             (c.B('v31-S3.00p') - 0.1, c.B('v31-S3.00p') + 0.6,
+              "Neleh's desk at 11:52: her office clock first (SFX), then her clockwork"),
              (c.snd('S4.07', 'DTMF', 0) - 0.3, c.snd('S4.08', 'RING', 0) + 0.2,
               "the board's designed rest for the four dial tones (the sincere beat's release)"),
              (c.snd('S8.03', 'alert_bonk'), c.Lend('a5-30-19') + 0.1,

@@ -27,9 +27,10 @@ def build():
     NUDGE = CARVE + 30
     PED0 = Lend(VO) + 8
     MARK1 = A('S2.02', 14)
-    MARK3 = A('S2.04', 13)
+    # v3.1: S2.03 (TPOOL) and S2.04 are cut; the Orb's light counts all three marks in S2.02 (mark 3 at + 36 f)
+    MARK3 = A('S2.04', 13) if CLK.has('S2.04') else A('S2.02', 36)
     SETTLE = A('S2.05')
-    WHIP = A('S3.00a')
+    WHIP = A(CLK.ORDER[CLK.ORDER.index('S2.05') + 1])      # the whip: Neleh's desk at 11:52 (v31-S3.00p)
     assert abs(SETTLE + 60 - WHIP) < 0.6 and NUDGE < Lon(VO), (SETTLE, WHIP, NUDGE)
     cue = FCue(ID, CARVE, WHIP, pre=12)
     s = cue.s
@@ -75,7 +76,7 @@ def build():
         vo_windows=[(s(Lon(VO)), s(Lend(VO)), '"i don\'t keep score." (the felt G4 alone)')],
         room_sfx=[dict(t0=s(CARVE), t1=end, sfx='room_drone (the dark room)')],
         sfx_slots=[dict(t=round(s(MARK1), 3), sfx='the Orb counts (the score holds; it does not count)'),
-                   dict(t=round(s(A('S2.03')), 3), sfx='render_front_sweep (F4 -> F6): the TPOOL render'),
+                   dict(t=round(s(SND('S2.02', 'render_front_sweep')), 3), sfx='render_front_sweep (the count)'),
                    dict(t=round(s(SND('S2.05', 'reverse_swell_1beat')), 3), sfx='reverse_swell_1beat (the SFX own it)')],
         audition=[f'{s(CARVE):.2f} s: the re-entry after D6: the felt fifth on the stroke, not a sting',
                   f'{s(NUDGE):.2f}-{s(Lend(VO)):.2f} s: the G4 under "i don\'t keep score.": still, not sad',

@@ -9,7 +9,7 @@
 # Caps to use inside heavy jobs: Remotion --concurrency=4, fastrec --workers 2, OST_WORKERS=2.
 set -euo pipefail
 SLOTS=${MRMAS_HEAVY_SLOTS:-2}
-MIN_AVAIL_GB=${MRMAS_MIN_AVAIL_GB:-8}
+MIN_AVAIL_GB=${MRMAS_MIN_AVAIL_GB:-10}
 MAX_SWAP_GB=${MRMAS_MAX_SWAP_GB:-7}
 MAX_LOAD=${MRMAS_MAX_LOAD:-16}
 WAIT=${MRMAS_HEAVY_WAIT:-3600}
@@ -41,4 +41,11 @@ until ok; do
   echo "[heavy] machine busy; re-checking in 30 s" >&2; sleep 30
 done
 echo "[heavy] running: $*" >&2
-nice -n 15 ionice -c3 "$@"
+# Each job runs in its own memory-capped systemd scope (2026-09-28). On 2026-09-27 at 19:51 systemd-oomd killed the
+# whole terminal scope (Claude Code and every agent) at 23.9 GB peak, because heavy jobs lived in the terminal's cgroup.
+# In its own scope, a runaway job hits its own MemoryMax (or oomd picks it) instead of taking the session down.
+MEM_MAX=${MRMAS_HEAVY_MEM_MAX:-8G}
+if [ -z "${MRMAS_HEAVY_NO_SCOPE:-}" ] && command -v systemd-run >/dev/null 2>&1 && systemd-run --user --scope --quiet true 2>/dev/null; then
+  exec nice -n 15 ionice -c3 systemd-run --user --scope --quiet -p MemoryMax="$MEM_MAX" -p MemorySwapMax=1G -- "$@"
+fi
+exec nice -n 15 ionice -c3 "$@"

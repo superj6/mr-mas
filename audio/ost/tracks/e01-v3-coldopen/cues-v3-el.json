@@ -2,11 +2,11 @@
  "schema": "mrmas-reel-music/1",
  "id": "e01-v3-coldopen-el",
  "segment": "coldopen",
- "file": "audio/ost/tracks/e01-v3-coldopen/render/music-el.wav",
- "timeline": "show/reel/ep01-v31-el/ep01-v31-el-coldopen.json",
- "length_s": 24.291666666666668,
- "frames": 583,
- "samples": 1166000,
+ "file": "audio/ost/tracks/e01-v3-coldopen/render/music-v3-el.wav",
+ "timeline": "show/reel/ep01-v3-el/ep01-v3-el-coldopen.json",
+ "length_s": 26.041666666666668,
+ "frames": 625,
+ "samples": 1250000,
  "sample_rate": 48000,
  "channels": 2,
  "clock": "the segment's own clock: 0 = its first frame (timeEpisode, head 0)",
@@ -14,8 +14,8 @@
  "cues": [
   {
    "cue": "rewind",
-   "start": 17.792,
-   "end": 24.208,
+   "start": 19.542,
+   "end": 25.958,
    "what": "an accelerating reverse texture from the Freeze's F4 (reversed grains, F4 -> C5 -> F5) and the 1-bit chip, following the year counter; digital zero on the last two frames",
    "render": "audio/ost/tracks/e01-v3-coldopen/render/_work/el/rewind.wav",
    "source_sample": "audio/sfx/wav/piano_fired_F4.wav",
@@ -28,172 +28,172 @@
    "beats": 40,
    "sync": [
     {
-     "t": 18.142,
+     "t": 19.892,
      "what": "a reversed F4 swell lands (+0 st) + the chip"
     },
     {
-     "t": 18.762,
+     "t": 20.512,
      "what": "a reversed F4 swell lands (+0 st) + the chip"
     },
     {
-     "t": 19.382,
+     "t": 21.132,
      "what": "a reversed F4 swell lands (+0 st) + the chip"
     },
     {
-     "t": 20.292,
+     "t": 22.042,
      "what": "a reversed F4 swell lands (+0 st) + the chip"
     },
     {
-     "t": 21.342,
+     "t": 23.092,
      "what": "a reversed F4 swell lands (+0 st) + the chip"
     },
     {
-     "t": 21.678,
+     "t": 23.428,
      "what": "a reversed F4 swell lands (+1 st) + the chip"
     },
     {
-     "t": 21.947,
+     "t": 23.697,
      "what": "a reversed F4 swell lands (+2 st) + the chip"
     },
     {
-     "t": 22.162,
+     "t": 23.912,
      "what": "a reversed F4 swell lands (+3 st) + the chip"
     },
     {
-     "t": 22.334,
+     "t": 24.084,
      "what": "a reversed F4 swell lands (+4 st) + the chip"
     },
     {
-     "t": 22.471,
+     "t": 24.221,
      "what": "a reversed F4 swell lands (+5 st) + the chip"
     },
     {
-     "t": 22.581,
+     "t": 24.331,
      "what": "a reversed F4 swell lands (+5 st) + the chip"
     },
     {
-     "t": 22.669,
+     "t": 24.419,
      "what": "a reversed F4 swell lands (+5 st) + the chip"
     },
     {
-     "t": 22.74,
+     "t": 24.49,
      "what": "a reversed F4 swell lands (+6 st) + the chip"
     },
     {
-     "t": 22.796,
+     "t": 24.546,
      "what": "a reversed F4 swell lands (+6 st) + the chip"
     },
     {
-     "t": 22.851,
+     "t": 24.601,
      "what": "a reversed F4 swell lands (+6 st) + the chip"
     },
     {
-     "t": 22.906,
+     "t": 24.656,
      "what": "a reversed F4 swell lands (+6 st) + the chip"
     },
     {
-     "t": 22.961,
+     "t": 24.711,
      "what": "a reversed F4 swell lands (+7 st) + the chip"
     },
     {
-     "t": 23.016,
+     "t": 24.766,
      "what": "a reversed F4 swell lands (+7 st) + the chip"
     },
     {
-     "t": 23.071,
+     "t": 24.821,
      "what": "a reversed F4 swell lands (+7 st) + the chip"
     },
     {
-     "t": 23.126,
+     "t": 24.876,
      "what": "a reversed F4 swell lands (+7 st) + the chip"
     },
     {
-     "t": 23.181,
+     "t": 24.931,
      "what": "a reversed F4 swell lands (+8 st) + the chip"
     },
     {
-     "t": 23.236,
+     "t": 24.986,
      "what": "a reversed F4 swell lands (+8 st) + the chip"
     },
     {
-     "t": 23.291,
+     "t": 25.041,
      "what": "a reversed F4 swell lands (+8 st) + the chip"
     },
     {
-     "t": 23.346,
+     "t": 25.096,
      "what": "a reversed F4 swell lands (+8 st) + the chip"
     },
     {
-     "t": 23.401,
+     "t": 25.151,
      "what": "a reversed F4 swell lands (+8 st) + the chip"
     },
     {
-     "t": 23.456,
+     "t": 25.206,
      "what": "a reversed F4 swell lands (+9 st) + the chip"
     },
     {
-     "t": 23.511,
+     "t": 25.261,
      "what": "a reversed F4 swell lands (+9 st) + the chip"
     },
     {
-     "t": 23.566,
+     "t": 25.316,
      "what": "a reversed F4 swell lands (+9 st) + the chip"
     },
     {
-     "t": 23.621,
+     "t": 25.371,
      "what": "a reversed F4 swell lands (+9 st) + the chip"
     },
     {
-     "t": 23.676,
+     "t": 25.426,
      "what": "a reversed F4 swell lands (+10 st) + the chip"
     },
     {
-     "t": 23.731,
+     "t": 25.481,
      "what": "a reversed F4 swell lands (+10 st) + the chip"
     },
     {
-     "t": 23.786,
+     "t": 25.536,
      "what": "a reversed F4 swell lands (+10 st) + the chip"
     },
     {
-     "t": 23.841,
+     "t": 25.591,
      "what": "a reversed F4 swell lands (+10 st) + the chip"
     },
     {
-     "t": 23.896,
+     "t": 25.646,
      "what": "a reversed F4 swell lands (+11 st) + the chip"
     },
     {
-     "t": 23.951,
+     "t": 25.701,
      "what": "a reversed F4 swell lands (+11 st) + the chip"
     },
     {
-     "t": 24.006,
+     "t": 25.756,
      "what": "a reversed F4 swell lands (+11 st) + the chip"
     },
     {
-     "t": 24.061,
+     "t": 25.811,
      "what": "a reversed F4 swell lands (+11 st) + the chip"
     },
     {
-     "t": 24.116,
+     "t": 25.866,
      "what": "a reversed F4 swell lands (+12 st) + the chip"
     },
     {
-     "t": 24.171,
+     "t": 25.921,
      "what": "a reversed F4 swell lands (+12 st) + the chip"
     },
     {
-     "t": 24.208,
+     "t": 25.958,
      "what": "a reversed F4 swell lands (+12 st)"
     }
    ],
    "events": {
-    "t_a": 17.792,
-    "catch": 20.292,
-    "slip": 21.342,
-    "too_far": 22.792,
-    "last_frame": 24.208
+    "t_a": 19.542,
+    "catch": 22.042,
+    "slip": 23.092,
+    "too_far": 24.542,
+    "last_frame": 25.958
    },
    "note_qa": {
     "pitches": "F and C only (the Freeze's F4 repitched 0, +7, +12; chip F/C): no third, no knee",
@@ -205,24 +205,24 @@
  "silences_designed": [
   {
    "t0": 0.0,
-   "t1": 17.792,
+   "t1": 19.542,
    "why": "no score under the hall (sc 1-2): the room, the freeze's F4 (a timeline sound)"
   },
   {
-   "t0": 24.208,
-   "t1": 24.292,
+   "t0": 25.958,
+   "t1": 26.042,
    "why": "the cursor frames: digital zero, so the intro's first beat takes over clean"
   }
  ],
  "measured": {
-  "length_s": 24.2917,
-  "samples": 1166000,
-  "frames": 583,
+  "length_s": 26.0417,
+  "samples": 1250000,
+  "frames": 625,
   "exact": true,
   "whole": {
-   "lufs_i": -26.01,
-   "st_p95": -25.37,
-   "st_max": -24.66,
+   "lufs_i": -26.07,
+   "st_p95": -24.82,
+   "st_max": -24.22,
    "true_peak_dbtp": -13.4
   },
   "cues": {
@@ -236,8 +236,8 @@
   "rows": [
    {
     "section": "3.01 the Orb's iris steps: slow reversed swells",
-    "start": 17.79,
-    "end": 19.79,
+    "start": 19.54,
+    "end": 21.54,
     "lufs_i": -37.5,
     "st_p95": null,
     "st_max": null,
@@ -245,8 +245,8 @@
    },
    {
     "section": "3.02 the catch on 2022: one long drag",
-    "start": 19.79,
-    "end": 21.34,
+    "start": 21.54,
+    "end": 23.09,
     "lufs_i": -38.14,
     "st_p95": null,
     "st_max": null,
@@ -254,8 +254,8 @@
    },
    {
     "section": "3.02 the slip -> \"too far\": the grains accelerate and climb",
-    "start": 21.34,
-    "end": 22.79,
+    "start": 23.09,
+    "end": 24.54,
     "lufs_i": -27.92,
     "st_p95": null,
     "st_max": null,
@@ -263,8 +263,8 @@
    },
    {
     "section": "3.02 \"too far\" -> the collapse: into the cut",
-    "start": 22.79,
-    "end": 24.21,
+    "start": 24.54,
+    "end": 25.96,
     "lufs_i": -22.3,
     "st_p95": null,
     "st_max": null,
@@ -274,8 +274,8 @@
   "digital_silence": [
    {
     "t0": 0.0,
-    "t1": 17.792,
-    "dur": 17.792,
+    "t1": 19.542,
+    "dur": 19.542,
     "marked": true,
     "why": "no score under the hall (sc 1-2): the room, the freeze's F4 (a timeline sound)"
    }
@@ -284,14 +284,14 @@
   "holes_below_-60": [
    {
     "t0": 0.0,
-    "t1": 17.75,
+    "t1": 19.5,
     "inside_marked": true
    }
   ],
   "music_runs": [
    {
-    "t0": 17.75,
-    "t1": 24.25,
+    "t0": 19.5,
+    "t1": 26.0,
     "dur": 6.5
    }
   ],
@@ -306,8 +306,8 @@
    "file": "audio/ost/tracks/e01-v3-coldopen/render/_work/el/rewind.wav",
    "laid_at_s": 0.0,
    "window": [
-    17.792,
-    24.208
+    19.542,
+    25.958
    ],
    "fade_in_s": 0.02,
    "fade_out_s": 0.003,
@@ -316,5 +316,6 @@
   }
  ],
  "source": "audio/ost/tracks/e01-v3-coldopen/track.py",
- "heard": "nothing here has been listened to; every number is measured"
+ "heard": "nothing here has been listened to; every number is measured",
+ "superseded": "the v3 ElevenLabs lock (show/reel/ep01-v3-el/); v3.1 is final: re-render with --el when show/reel/ep01-v31-el/ exists"
 }

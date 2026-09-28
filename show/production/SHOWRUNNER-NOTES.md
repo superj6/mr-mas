@@ -97,6 +97,7 @@
 ## Production handoffs and hygiene (from the lead, not showrunner notes)
 
 - **DON'T COOK THE LAPTOP (showrunner, 2026-09-27): "try not to cook/freeze my laptop, i think that is what killed the session last".** This machine is a laptop (14 threads, 30 GB RAM, 8 GB swap), and another project's processes already use about 3 cores.
+   - **2026-09-28:** an out-of-memory kill at 19:51 on 2026-09-27 took down the session. Every heavy job now runs in its own memory-capped scope through `ops/heavy.sh` (see ops/README). Run at most 3 agents at once, and put every audio render and mix through heavy.sh.
   - **Run every heavy command through `ops/heavy.sh`:** Remotion renders and stills of more than a few frames, Kokoro/fastrec recording, OST engine builds, Blender, and long ffmpeg encodes. It lets at most two heavy jobs run at once machine-wide (the showrunner freed the other project's cores on 2026-09-27), waits for memory, swap and load headroom, and runs at low priority. Example: `ops/heavy.sh npx remotion render ... --concurrency=4`.
   - **Caps inside heavy jobs:** Remotion `--concurrency=4` at most, fastrec `--workers 2`, `OST_WORKERS=2`.
   - **Waiting:** a heavy job can wait a long time for the lock, so start it with the Bash tool's background mode (or `nohup ... &`) and poll its log. Never hold a foreground command for more than a few minutes.

@@ -98,7 +98,8 @@ def build():
     for k, p in enumerate(['Ab3', 'Eb3', 'Bb3', 'Db4', 'Eb3', 'Db3', 'Ab3', 'C4']):
         cue.n('felt_lh', p, tick0 + k * Q, Q * 0.9, 0.55 * (0.19, 0.17, 0.18, 0.16, 0.18, 0.17, 0.16, 0.15)[k])
     fch(['Db4', 'F4', 'Bb4'], cue.bar(4), 2.4, 0.1)                 # (render 4: the V.O. window read -18.2 LUFS)
-    fch(['C4', 'Eb4', 'F4'], cue.bar(5), 2.3, 0.1)
+    fch(['C4', 'Eb4', 'F4'], cue.bar(5), max(2.3, c.B('S5.04') - cue.bar(5) + 0.3), 0.1,
+        span_end=c.B('S5.04') + 0.02)                                 # held to the Orb's look (no gap before it)
     cue.mark(tick0, "S5 the count: the felt ticks with the hearts (quarters, varied pitches)")
     cue.section('S5 the count (the felt\'s pulse under the V.O.)', tick0, c.B('S5.04'))
 
@@ -175,23 +176,31 @@ def build():
 
     # ---------------------------------------------------------------- the Build returns; the look (the held note)
     back = c.B('S5.09-back')
-    v22, v23 = L['v3-vo-22'], L['v3-vo-23']
+    v23 = L['v3-vo-23']
     what, again = L['a5-29-16'], L['a5-29-17']
     look = c.B('S5.09b')
-    fch(['Ab3', 'C4', 'Eb4'], back + 0.03, v22['end'] - back + 0.3, 0.16, span_end=v22['end'] + 0.1)
-    tt, k1 = build16(cue, v22['end'] + 0.04, 4, 0.33, stop_at=what['on'] - 0.06, felt_every=4, felt_vel=0.15)
-    cue.mark(tt, f'S5 the Build returns with his keys ({k1}), after "he\'s typing like it\'s launch night."')
+    v22 = L.get('v3-vo-22')                            # (v3.1 cuts "he's typing like it's launch night.")
+    if v22 and back <= v22['on'] < what['on']:
+        fch(['Ab3', 'C4', 'Eb4'], back + 0.03, v22['end'] - back + 0.3, 0.16, span_end=v22['end'] + 0.1)
+        t_ret = v22['end'] + 0.04
+    else:
+        fch(['Ab3', 'C4', 'Eb4'], back + 0.03, what['on'] - back + 0.8, 0.16, span_end=what['end'] + 0.05)
+        t_ret = back + 0.02
+    tt, k1 = build16(cue, t_ret, 4, 0.33, stop_at=what['on'] - 0.06, felt_every=4, felt_vel=0.15)
+    cue.mark(tt, f'S5 the Build returns with his keys ({k1})')
     fch(['Eb3', 'G3', 'C4'], what['end'] + 0.07, 2.2, 0.19)
-    tt, k2 = build16(cue, again['on'] - 0.01, 8, 0.33, stop_at=v23['on'] - 0.08, felt_every=4, felt_vel=0.15)
+    tt, k2 = build16(cue, again['on'] - 0.01, 8, 0.33, stop_at=again['end'] + 0.3, felt_every=4, felt_vel=0.15)
     cue.mark(tt, f'S5 the Build: {k2} under "The company. Again. Just in case."')
-    fch(['Db3', 'Ab3', 'C4', 'F4'], v23['on'] - 0.5, 3.3, 0.19)
-    rebow(cue.a, 'vc', 'Ab3', cue.s(v23['on'] - 0.6), cue.s(c.B('S5.11') + 5.9), 0.13, seg=5.0, xf=1.0,
+    # the held note: a soft Ab3/Eb4 pad from the end of his line, through the look, into the door
+    pad0 = again['end'] + 0.1
+    rebow(cue.a, 'vc', 'Ab3', cue.s(pad0), cue.s(c.B('S5.11') + 5.9), 0.13, seg=5.0, xf=1.0,
           first_att=1.5, last_rel=0.8, art='sus', lp=1300)
-    rebow(cue.a, 'vla', 'Eb4', cue.s(v23['on'] - 0.5), cue.s(c.B('S5.11') + 5.9), 0.12, seg=5.0, xf=1.0,
+    rebow(cue.a, 'vla', 'Eb4', cue.s(pad0 + 0.1), cue.s(c.B('S5.11') + 5.9), 0.12, seg=5.0, xf=1.0,
           first_att=1.5, last_rel=0.8, art='sus', lp=1500)
-    tt, k3 = build16(cue, v23['end'] + 0.08, 12, 0.34, stop_at=look, felt_every=4, felt_vel=0.15)
-    cue.mark(tt, f'S5 the Build: a 12-note pass, cut DEAD on his look up after {k3}')
+    tt, k3 = build16(cue, again['end'] + 0.25, 12, 0.34, stop_at=look, felt_every=4, felt_vel=0.15)
+    cue.mark(tt, f'S5 the Build: a pass cut DEAD on his look up after {k3}')
     cue.mark(look, 'S5 HIS LOOK UP: the Build stops dead; the pad (Ab3/Eb4) holds (a ring-out)', hit=False)
+    fch(['Db3', 'Ab3', 'C4', 'F4'], v23['on'] - 0.5, v23['end'] - v23['on'] + 0.9, 0.19)   # "gerg never waits..."
     cue.section('S5 the Build returns; the V.O.; the look (the held note)', back, c.B('S5.11'))
 
     # ---------------------------------------------------------------- the door: Tasya's floor; two Rhodes chords
@@ -247,7 +256,7 @@ def build():
         underscore_lufs=-20.0, album_lufs=-16.0,
         room_sfx=[dict(t0=cue.s(home), t1=cue.s(end), sfx='room_drone (the dark room)')],
         silence_windows=[(cue.s(rest[0]) + 0.05, cue.s(rest[1]) - 0.05, 'no score: ALYI -> "He did both."', -70.0)],
-        vo_windows=[(cue.s(l['on']), cue.s(l['end']), l['text']) for l in (L['v3-vo-20'], v21, v22, v23)],
+        vo_windows=[(cue.s(l['on']), cue.s(l['end']), l['text']) for l in (L['v3-vo-20'], v21, v22, v23) if l],
         sfx_slots=[dict(t=round(cue.s(c.snd('S5.03', f'key_tap_soft_0{k}')), 3), sfx=f'heart {k}') for k in range(1, 6)]
         + [dict(t=round(cue.s(c.snd('S5.09', 'RING')), 3), sfx='RING'),
            dict(t=round(cue.s(c.snd('S5.06', 'bell_ding_F6')), 3), sfx="the Orb's chime (F6), in the rest"),

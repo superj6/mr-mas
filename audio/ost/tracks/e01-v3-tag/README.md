@@ -2,6 +2,18 @@
 
 **Composer X (`v3-score-a`), 2026-09-27.** Track A1 of [PLAN.md](../../../../show/episodes/ep01/production/full-v3/PLAN.md). Mood map: *quiet, wry* (the Water Line). **Nothing here has been listened to.** Every number is measured.
 
+## v3.1 (current, 2026-09-27): the Elgoog demo insert
+
+**The lock:** `show/reel/ep01-v31/ep01-v31-tag.json` (the default). **`render/music.wav`: 41.333 s, 1,984,000 samples (992 frames), exact.** The tag now opens on **ELGOOG's product film** (the Runway insert, 233 frames from tag frame 62; `show/episodes/ep01/production/full-v3/runway.md` §4a, §7):
+- **`demo_film`, the film's own sound** (diegetic, its own layer; `DEMO=0` drops it): a clean, glossy corporate-demo bed in the show's palette, no melody. An E♭ glass pad with no third (E♭ B♭ F C) is the sheen; a shimmer rises as the lines draw themselves (i34); a swell into the fill and a soft glow chord as the duck becomes real (~i95); the chip's clock plays at a whisper through the turn. It is **small on the monitor's speaker until the grid dissolves** (i22–26), then full range.
+- **The stutter** (i137–150): the bed is chopped in step with the held frames, a buffering stutter with tiny digital clicks, not a beat. **The first still (i151): the sheen cuts out dead**, with drier slide-change clicks on i151, 159 and 167. Then there's nothing but the room and the V.O. ("those are stills.").
+- **MM-12** keeps its shape: the felt's open fifth takes the vault's F and **ducks to the room as the demo opens up**. **The Water Line returns with the room on the pull-back (i199)**, with a tiny chip blip as the monitor's still snaps back to the grid (i213). Then the V.O., the verdict two beats late, "that was close.", the back wall cut by the THUD, and the button with no third.
+- **Measured:** MM-12 −21.6 LUFS-I; the demo bed −24.2 over its window (a monitor's film, before the mix's own balance). Its 2–6 kHz band reads −13.8 dB against the −15 underscore guide: it's the diegetic film, bright by design, and its voice ("What the quack!") is part of it. Digital silence only at the head (0–0.6 s) and the THUD → the button; no holes. Written A♮ over F 0, F-major OK, knee 0.
+- **For the sound pass:** the stutter's clicks and the slide-change clicks are in this layer, as part of the film's own track. If the sound stem makes its own, run with `DEMO=0`, or tell me and I'll take the clicks out.
+
+**The EL variant:** `render/music-el.wav` from `show/reel/ep01-v31-el/` (`--el`); the v3-EL render is kept as `render/music-v3-el.wav` / `cues-v3-el.json`, superseded.
+
+
 | File | What |
 |---|---|
 | `render/music.wav` | The Kokoro lock's stem: **33.875 s, 1,626,000 samples (813 frames × 2000), exact.** 48 kHz / 24-bit stereo, git-ignored. |

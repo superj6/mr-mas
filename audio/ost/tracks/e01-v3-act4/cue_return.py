@@ -42,12 +42,14 @@ Q = 0.625
 
 def events(c):
     B, txt, snd, Lon, Lend, W = c.B, c.txt, c.snd, c.Lon, c.Lend, c.W
+    HELLO = 'v31-a4-0014' if 'v31-a4-0014' in c.LINES else 'a5-30-07'     # v3.1: "Down here." (was "Hello.")
     E = dict(
         s7=B('S7.01'), post=txt('S7.01', 'POST: ALYI'), post_end=txt('S7.01', 'POST: ALYI', end=True),
         heart1=snd('S7.01', 'key_tap_soft_02'), iou=txt('S7.01', 'IOU'),
         wide=B('S7.02'), q_on=Lon('v3-a4-0002'), tasya=B('S7.02b'), rec_on=Lon('v3-a4-0003'),
         rec_end=Lend('v3-a4-0003'), below=W('v3-a4-0003', 'below'), above=W('v3-a4-0003', 'above'),
-        around=W('v3-a4-0003', 'around'), s703=B('S7.03'), hello=Lon('a5-30-07'), hello_end=Lend('a5-30-07'),
+        around=W('v3-a4-0003', 'around'), s703=B('S7.03'),
+        hello=Lon(HELLO), hello_end=Lend(HELLO),
         s705=B('S7.05'), rail21=txt('S7.05', 'RAIL'), bang=B('S7.06'), freeze=snd('S7.06', 'freeze_hit_F'),
         which=Lon('a5-30-08'), ah=Lon('a5-30-09'), calm=B('S7.07'), read_on=Lon('v3-a4-0004'),
         read_end=Lend('v3-a4-0004'), staying_end=Lend('a5-30-11'), stays_on=Lon('a5-30-12'),
@@ -60,7 +62,12 @@ def events(c):
         okay=Lon('a5-30-19'), okay_end=Lend('a5-30-19'), vault=B('S8.06'), s807=B('S8.07'),
         s808=B('S8.08'), memo=Lon('a5-31-04'), memo_end=Lend('a5-31-04'), s810=B('S8.10'), end=c.LEN)
     E['grain'] = E['s713'] + 7 / FPS                         # v5's pixel mark (S7.13 + 7 f), kept
-    E['dialog'] = txt('S8.03', 'UI:')
+    E['dialog'] = txt('S8.03', 'Remove') if c.has('v31-S7.03b') else txt('S8.03', 'UI:')   # v3.1: the Remove dialog
+    E['invite'] = snd('v31-S7.03b', 'key_tap_soft_02') if c.has('v31-S7.03b') else None   # v3.1: Tuesday's invite
+    E['pin'] = snd('S7.06', 'extinguisher_pin') if any(x['name'] == 'extinguisher_pin' for x in c.SOUNDS) else None
+    K = lambda k: E['s713'] + k / FPS                       # noqa: E731  S7.13's own frames (runway.md §11.3)
+    E['stream'], E['turn'], E['slump'], E['room'] = K(128), K(167), K(208), K(252)
+    E['s713_len'] = c.BE('S7.13') - E['s713']
     E['grey1'] = E['s803'] + 15 / FPS                        # v5's pixel marks (S8.03 + 15 / + 30 f), kept
     E['grey2'] = E['s803'] + 30 / FPS
     return E
@@ -136,6 +143,10 @@ def build():
             (ar, 'b: "around": E maj9', False)]
     cue.mark(bloom, 'b: the bloom (the Rhodes on the beats)')
     cue.mark(home, 'b: home (A-flat maj9) under the rail')
+    if E['invite'] is not None:                              # v3.1: Tuesday's invite; he taps Accept, no hover
+        a.n('felt', 'F4', s(E['invite'] + 0.02), 1.6, 0.26)
+        a.n('felt_mech', 60, s(E['invite'] + 0.02), 0.1, 0.3)
+        cue.mark(E['invite'] + 0.02, "b': Tuesday's invite: one felt F4 on his Accept (his move, over the floor)")
 
     # ================================================================== c1 · LEVERAGE -> the dead stop on "of what?"
     bang, e8 = E['bang'], Q / 2
@@ -150,7 +161,7 @@ def build():
         t = bang + j * e8
         if t >= thin - 0.02:
             break
-        if abs(t - E['freeze']) < 0.08:
+        if abs(t - E['freeze']) < 0.08 or (E['pin'] is not None and abs(t - E['pin']) < 0.08):
             continue
         i, bar = j % 8, j // 8
         p = cells[bar % 4][i]
@@ -192,10 +203,13 @@ def build():
 
     # ================================================================== c2 · the stamp's C; the Build restarts
     st, sand = E['stamp'], E['shatter']
-    rebow(a, 'cb', 'C2', s(st), s(sand), 0.44, seg=5.0, xf=1.0, first_att=0.35, last_rel=0.25, art='sus', lp=1800)
-    rebow(a, 'vc', 'C3', s(st), s(sand), 0.38, seg=5.0, xf=1.0, first_att=0.5, last_rel=0.25, art='sus', lp=2200)
-    rebow(a, 'vla', 'G3', s(st) + 1.0, s(sand), 0.2, seg=5.0, xf=1.0, first_att=1.2, last_rel=0.25, art='sus', lp=1800)
-    log.append((st, "c2: the stamp's C: the low C pedal bows in", False))
+    long_s713 = E['s713_len'] > 10.0                          # v3.1: S7.13 is the 264-frame hourglass insert
+    c_end = E['turn'] + 0.05 if long_s713 else sand
+    rebow(a, 'cb', 'C2', s(st), s(c_end), 0.44, seg=5.0, xf=1.0, first_att=0.35, last_rel=0.25, art='sus', lp=1800)
+    rebow(a, 'vc', 'C3', s(st), s(c_end), 0.38, seg=5.0, xf=1.0, first_att=0.5, last_rel=0.25, art='sus', lp=2200)
+    rebow(a, 'vla', 'G3', s(st) + 1.0, s(c_end), 0.2, seg=5.0, xf=1.0, first_att=1.2, last_rel=0.25, art='sus',
+          lp=1800)
+    log.append((st, "c2: the stamp's C: the low C pedal bows in (it carries into his stream, ducked)", False))
     gp = E['gerg_post'] + 0.05
     for n_, dt in ((4, 0.0), (8, 4 * S16 + 2 * Q)):
         tt = gp + dt
@@ -207,14 +221,38 @@ def build():
     cue.mark(gp, "c2: GERG'S BUILD restarts on his post (soft, A-flat; F4-C5 under the keycaps)")
     art.pizz(a, 'vln1', 'C5', s(E['grain']), vel=0.3, lock=True)
     cue.mark(E['grain'], "c2: one pizz grain on the last grain (before Ttemme's post)")
-    log.append((sand, "the pedal rests on the sand's held beat (the shatter)", False))
-
-    # ================================================================== d · the pickup into the sign
     sg = E['sign']
+    if long_s713:
+        # THE TURN (v3.1, runway.md §11.3): the chat floods "we're so back" (k167): the pedal steps from C up to
+        # E-flat, the dominant of the sign's A-flat, and the Build's first four notes come in with the flood ...
+        tr, sl, rm = E['turn'], E['slump'], E['room']
+        for inst, p, v in (('cb', 'Eb2', 0.42), ('vc', 'Eb3', 0.38), ('vla', 'Bb3', 0.26)):
+            a.n(inst, p, s(tr), sand - tr + 0.02, v, lock=True, art='sus', att=0.04, rel=0.02, lp=2000)
+        mm11.build_cell(a, g, s(tr), 4, vel=0.46)
+        cue.mark(tr, 'c2: THE TURN: the chat floods "we\'re so back": the pedal up to E-flat; the Build comes in')
+        # ... the shatter takes everything: the sand holds its shape and the music holds its breath (k173-207)
+        cue.mute(sand, sl)
+        log.append((sand, 'the shatter: a dead stop; the sand stands, the music holds its breath (k173-207)', False))
+        # the slump: the E-flat pedal bows back in, the Build compiles through the pour and the grid's return,
+        # the timpani rolls up to the boardroom (k252, "at full") and on into the sign's stab
+        span = sg - sl
+        for inst, p, v in (('cb', 'Eb2', 0.34), ('vc', 'Eb3', 0.32), ('vla', 'Bb3', 0.22), ('vln2', 'G4', 0.2)):
+            a.n(inst, p, s(sl), span + 0.03, v, lock=True, art='sus', att=0.6, rel=0.05, lp=2400,
+                env=[(0.0, 0.35), (span * 0.55, 0.6), (span, 1.0)])
+        n16 = int((sg - sl) / S16 + 1e-6)
+        mm11.build_cell(a, g, s(sl), n16, vel=0.42)
+        for k in range(int((sg - rm) / (Q / 4))):
+            a.n('timp', 'Eb3', s(rm + k * Q / 4), 0.2, min(0.62, 0.3 + 0.03 * k), lock=True)
+        a.n('cb_pizz', 'Eb3', s(sg - Q), Q, 0.5, lock=True)
+        cue.mark(sl, 'c2: the slump: the E-flat pedal back, the Build compiling through the pour (it restarts)')
+        cue.mark(rm, 'c2: back in the boardroom (k252): the timpani rolls into the sign')
+    else:
+        log.append((sand, "the pedal rests on the sand's held beat (the shatter)", False))
+        pick = sg - Q
+        mm11.build_cell(a, g, s(pick), 4, vel=0.52)
+        a.n('cb_pizz', 'Eb3', s(pick), Q, 0.5, lock=True)
+        cue.mark(pick, "d: the Build's four-note pickup into the sign")
     pick = sg - Q
-    mm11.build_cell(a, g, s(pick), 4, vel=0.52)
-    a.n('cb_pizz', 'Eb3', s(pick), Q, 0.5, lock=True)
-    cue.mark(pick, "d: the Build's four-note pickup into the sign")
 
     # ================================================================== e · VICTORY LAP, one size too big
     art.stab(a, 'tpt', ['G5', 'Eb5'], s(sg), vel=0.78, length=0.22)
@@ -272,8 +310,8 @@ def build():
                         ("S7 b Tasya's floor (pre-lap -> below/above/around -> bloom -> home)", pad0, c1),
                         ('S7 c1 LEVERAGE (fade-in -> the bang)', c1, thin), ('S7 c1 thinned to the F pedal', thin, stop),
                         ('S7 STOP: "of what?" -> the stamp (the room)', stop, st),
-                        ("S7 c2 the C pedal (the posts); the Build restarts", st, sand),
-                        ("S7 d the sand's rest + the pickup", sand, sg),
+                        ("S7 c2 the C pedal (the posts, his stream); the turn", st, sand),
+                        ("S7 d the held beat (the sand stands), then the Build into the sign", sand, sg),
                         ('S8 e VICTORY LAP, one size too big + one chip note', sg, E['dialog']),
                         ('S8 e the flat line', E['dialog'], E['bonk']),
                         ('S8 designed rest: the lobby CU, "okay."', E['bonk'], cc),
@@ -296,7 +334,8 @@ def build():
         composer='Ep1 v3 score, Act Four (v3-score-b, 2026-09-27), from Act Four v5 S7-S8',
         underscore_lufs=-20.0, album_lufs=-16.0,
         no_third_windows=[(s(stl) + 0.05, s(stl) + 2.0)],
-        silence_windows=[(s(stop) + 0.005, s(st) - 0.02, 'STOP: "of what?" -> the stamp (the room plays)', -90.0)],
+        silence_windows=[(s(stop) + 0.005, s(st) - 0.02, 'STOP: "of what?" -> the stamp (the room plays)', -90.0)]
+        + ([(s(sand) + 0.005, s(E['slump']) - 0.02, 'the held beat: the sand stands', -90.0)] if long_s713 else []),
         room_sfx=[dict(t0=s(vt), t1=s(end), sfx="server_hum (the Q* vault's F)")],
         sfx_slots=[dict(t=round(s(E['bang']), 3), sfx='landing_thunk (the door bang)'),
                    dict(t=round(s(E['freeze']), 3), sfx='freeze_hit_F (TERB / THE NEW CHAIR)'),
@@ -322,6 +361,8 @@ def build():
     extra = dict(marks=[(round(t, 4), lab, h) for t, lab, h in log],
                  sections=[(lab, round(cue.act(a0), 4), round(cue.act(a1), 4)) for lab, a0, a1 in cue.sections],
                  silences=[(stop, st, 'the dead stop on "of what?" -> the stamp (Mada\'s pause, "Good question.", '
-                                      '"good question." and the long hold play in the room)')],
+                                      '"good question." and the long hold play in the room)')]
+                 + ([(sand, E['slump'], "the hourglass shatters: the sand holds its shape (k173-207) and the music "
+                                        "holds its breath with it (runway.md §11.6)")] if long_s713 else []),
                  ringout=True)
     return sc, cue.T0, window, extra

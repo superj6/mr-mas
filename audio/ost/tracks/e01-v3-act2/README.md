@@ -2,6 +2,21 @@
 
 **Composer X (`v3-score-a`), 2026-09-27.** Track A1 of [PLAN.md](../../../../show/episodes/ep01/production/full-v3/PLAN.md), on the mood map of [v3-plan §6](../../../../show/episodes/ep01/production/stick/v3-plan.md) ("pomp and comedy"). **Nothing here has been listened to.** Every number is measured.
 
+## v3.1 (current, 2026-09-27): refit to the final lock
+
+**The lock:** `show/reel/ep01-v31/ep01-v31-act2.json` (the default). **`render/music.wav`: 201.250 s, 9,660,000 samples (4,830 frames), exact.** The round-1 score, refitted:
+- **The bay's new match cut:** the print in his hand becomes his phone at the bay's window (13.14 → 14.01). The Fountain Pen's last B♭ now **bridges the cut**, ringing about 1.1 s into the bridge and gone well before its first line; the bridge itself is still no score (designed).
+- **The Senate:** 15.17 (the back of the sheet) and 15.18 (the stare) are cut, so the F7sus(♭9) hang goes under the dais (15.16), and the tour's first stamp cuts it at 16.01. The wallet's stop and the re-entry after "…i have no equity in nopeai." are as before.
+- **The tour poster** is 5.0 s now (four stamps in it); one knee stab per stamp, as before.
+- **The real lines** come from `v3lib.real_ids()` (the v3.1 lock drops their quotation marks), so the court's pedal-only windows are unchanged.
+
+**Measured (Kokoro v3.1):** the whole stem −20.0 LUFS-I, −3.15 dBTP; the White House −20.0, the Senate −21.0 / −21.0, the run and the rooftop −19.0 (the RUN −16.4, featured), the Upsell −19.0 (phrase 3 −16.6, featured). Digital silence only in the three marked windows (the bridge, the wallet, the act-out's bell). Written A♮ over F 0, F-major OK, knee 0.
+
+**The print's F-major fix (v3.1):** the EL render first failed the sieved F-major check at the leap (≈ 67.1 s, strings ≈ 217/226 Hz, sieved 0.29 to 0.34, where the ringing F9sus4 overlapped the B♭ chord's D). Two changes fixed it: a 221 Hz notch on viola and cello (−10 dB, Q 4), and the F9sus4 now lets go before the B♭ arrives (no 0.25 s overlap, 0.08 s release). Both locks now pass (worst sieved 0.19).
+
+**The EL variant:** `render/music-el.wav` from `show/reel/ep01-v31-el/` (`--el`); the v3-EL render is kept as `render/music-v3-el.wav` / `cues-v3-el.json`, superseded.
+
+
 | File | What |
 |---|---|
 | `render/music.wav` | The Kokoro lock's stem: **204.750 s, 9,828,000 samples (4,914 frames × 2000), exact.** 48 kHz / 24-bit stereo, git-ignored. |

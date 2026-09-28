@@ -2,6 +2,27 @@
 
 **Composer X (`v3-score-a`), 2026-09-27.** Track A1 of [PLAN.md](../../../../show/episodes/ep01/production/full-v3/PLAN.md), on the mood map of [v3-plan §6](../../../../show/episodes/ep01/production/stick/v3-plan.md). **Nothing here has been listened to.** Every number below is measured, and the "for an ear" list says what only a person can judge.
 
+## v3.1 (current, 2026-09-27): refit to the final lock
+
+**The lock:** `show/reel/ep01-v31/ep01-v31-act1.json` (the default now; the v3 lock plays with `--timeline show/reel/ep01-v3/ep01-v3-act1.json`). **`render/music.wav`: 337.458 s, 16,198,000 samples (8,099 frames), exact.** The same round-3 direction: the first-round score as the base, launch night in the show's own voice, the straight odometer. What the new lock changed, and what the score does:
+
+| Where | v3.1 | The score |
+|---|---|---|
+| Launch night (5.01–5.11) | the board seed ("Did anyone tell the rest of the board?" / "It's a research preview.") in 5.07 | no new cue; kept light (the Build's passes and the felt stay clear of the lines). **The pulse and the sub now join at the chat (5.10):** for the first minute only the Build and the felt (the v3.1 music line, M §4 #2), in the show's voice (no trio) |
+| The odometer | **6.04 (the post) is cut** (O1): the clunk to the million is 3.5 s | the clunk's bar, then the last second: B13sus with the spiccato, a tremolo swell, the Build climbing, **a one-beat break**, the push on the and-of-4 of the million's own grid; the million's downbeat is the ratchet's, and the pulse comes back on beat 2 |
+| The bill → code red | the steam holds 1 s longer | the siren's whine J-cuts in 0.45 s after the hiss ends |
+| **Sydney** (v31-10.01–10.04, new) | the lobby, after the laptop closes | **`sydney`**: uncanny and clingy, a glass-and-celesta music box (D♭ lydian, no third) whose chip echo follows a sixteenth late; the glass pad alone, turning to the Ache, under her real line; one last late echo on her reset "Hi!". −22.0 LUFS-I |
+| **The Atem leak** (11.01, restored) | on the match cut into the bullpen | **`atem`**: a cool, brief sting on the cut (a low F–C on the piano with a sub, the chip's open fifth, the Ache on glass), −19.0; the duel's chip boot waits until Gerg's and Mas's lines are done |
+| The duel | two phrases (11.05 and 11.06 cut) | the letter's downbeat on a bar line; trading bars through 11.04; the turn in its last two bars (the Addendum's longest tail, the chip copying it) |
+| The pause letter | EMIT's page (v31-12.03) and its THUD | **the v3.1 music line:** "a chill, played straight: a cold pedal and Nole's stack, nothing walking; the THUD stops it". A low C/G♭ pedal, a slow low-piano tritone, the Launch stack in the gaps; **a dead stop on the THUD** (3 ms), then no score through the page, his desk and the reflection (designed) until the THREAT on the pen's lift |
+
+**Real lines:** the v3.1 lock prints spoken lines without their quotation marks, so `v3lib.real_ids()` takes the record from the v3 lock and the v2 timelines, which quote them (19 ids). Sydney's "You have not been a good user…" and Tasya's "…we made them dance…" play dry.
+
+**Measured (Kokoro v3.1):** the whole stem −20.6 LUFS-I, −3.15 dBTP. Launch night −21.4, the odometer −16.9 (featured), the heat −21.2; code red −22.0, the lobby −20.0, the floor −22.0, weeks on −21.0, Sydney −22.0, the Atem sting −19.0, the duel −19.9, the pause −21.0, THREAT −14.6 LUFS-M. Digital silence only in the four marked stops (the lock, the pop, the laptop's close into Sydney, the THUD → the THREAT); no hole below −60 dBFS outside them; no fragments. Written A♮ over F 0, F-major OK, knee 0, in every cue (the duel's low strings now carry the same ~110 Hz notch as the heat's cello).
+
+**The EL variant:** `render/music-el.wav` from `show/reel/ep01-v31-el/ep01-v31-el-act1.json` (`--el`). The earlier v3-EL render is kept as `render/music-v3-el.wav` / `cues-v3-el.json`, superseded.
+
+
 **Round 3 (2026-09-27, current).** The showrunner, on the v3 film: "i liked the initial ost that was presented ... i thought the beginning of most recent act1 was slightly corny sounding, but overall it was fine. we want to make sure we're keeping a unique sound, not toning down to overly generic". So this is the round-1 score, which the lead committed at `851243f`, with **one change: launch night's opening and the odometer**. The A♭ Rhodes, brushes and upright jazz trio is now the show's own voice: the felt, a soft chip pulse and sub, Gerg's Build in its F-minor home, and the knee's flat line and kink. The odometer's swing is now a straight driving figure. A round-2 "restrained" re-score (felt and pads everywhere) was withdrawn before delivery; its source is kept only in the session scratchpad.
 
 | File | What |

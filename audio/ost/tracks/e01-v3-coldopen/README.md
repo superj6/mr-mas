@@ -2,6 +2,11 @@
 
 **Composer X (`v3-score-a`), 2026-09-27; round 2.** Track A1 of [PLAN.md](../../../../show/episodes/ep01/production/full-v3/PLAN.md). **Nothing here has been listened to.** Every number is measured.
 
+## v3.1 (current, 2026-09-27)
+
+The v3.1 cold open is the same 640-frame cut. `track.py` now reads `show/reel/ep01-v31/ep01-v31-coldopen.json` by default; `render/music.wav` is unchanged (26.667 s, exact). The EL v3.1 cold open (`--el`, `show/reel/ep01-v31-el/`) is 24.292 s (583 frames), exact, with the rewind re-fitted to its years. The v3-EL render is kept as `render/music-v3-el.wav` / `cues-v3-el.json`, superseded.
+
+
 **What changed (round 2).** The showrunner: "i think the cold open to intro is not very good transition." The shot pass cut sc 4 (the 1993 dialog), so the cold open now ends on the rewind: the years count back, "rewinding… too far", and the frame smears and collapses to the intro's first frame, a cyan cursor on black. The lead's brief: drop the 1993 beeper (MM-06) and **let the rewind carry the end**, with an accelerating reverse texture built from the Freeze's F4 and the chip, rising into the cut and **landing on silence exactly at the last frame**, so the intro's first beat takes over clean.
 
 | File | What |

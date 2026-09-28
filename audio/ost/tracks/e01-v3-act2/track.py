@@ -93,6 +93,8 @@ def tracks_wh():
     T = palette()
     for k in ('vln1', 'vln2', 'vla', 'vc', 'cb'):
         T[k].sends = {'hall': -10, 'chamber': -13}
+    for k in ('vla', 'vc'):                              # the ~220 Hz body resonance (an A3) under the print's F9sus4 bass
+        T[k].eq = list(T[k].eq) + [('peq', 221.0, -10.0, 4.0)]   # (the EL v3.1 render's F-major trace)
     T['vln1'].pan, T['vln2'].pan, T['vla'].pan, T['vc'].pan, T['cb'].pan = -0.35, -0.15, 0.15, 0.3, 0.45
     dup(T, 'vla', 'vla_d', gain_db=-2.0)          # the dotted processional figure (thinned under talk)
     dup(T, 'vln2', 'vln2_d', gain_db=-2.0)
@@ -109,11 +111,23 @@ def tracks_wh():
     return T
 
 
+def wh_ring_end(tl):
+    """where the White House's last B-flat is gone: the end of 13.14, or (v3.1, where the print MATCH CUTs to his phone
+    at the bay's window) about a second across the cut, a sound bridge, clear of the bridge's first line"""
+    end = tl.E('13.14')
+    caps = ' '.join((tl.beats[tl.bi[b]]['b'].get('caption') or '') for b in ('13.14', '14.01') if tl.has(b))
+    if 'MATCH CUT' not in caps or not tl.has('14.01'):
+        return end
+    first = [l['on'] for l in tl.lines_in(end, tl.E('14.01'))]
+    return min(end + 1.1, (min(first) - 0.8) if first else end + 1.1)
+
+
 def cue_wh(tl):
     c = V.Cue('wh_pomp', tl, anchor=0.0, anchor_bar=1, bars=34, swing=0.0)
     T = tracks_wh()
     door = tl.B('13.11')
     end = tl.E('13.14')
+    ring_end = wh_ring_end(tl)                          # v3.1: the print MATCH CUTs to his phone; the B-flat bridges it
     freezes = [tl.B(b) for b in ('13.03', '13.12') if tl.has(b)]
     nb = int((door - c.bar1) / BAR) + 1                 # bars up to the door
 
@@ -202,10 +216,11 @@ def cue_wh(tl):
     fin = w0 + 4 * st
     pads.append((fin, 'Bb'))
     for i, (t, name) in enumerate(pads):
-        t1 = pads[i + 1][0] if i + 1 < len(pads) else end - 0.3
+        t1 = pads[i + 1][0] if i + 1 < len(pads) else ring_end - 0.3
         for inst, p in zip(('vc', 'vla', 'vln2', 'vln1'), PAD[name]):
-            c.n(inst, p, t, t1 - t + (0.25 if i + 1 < len(pads) else 0.0), 0.24 if inst != 'vln1' else 0.2,
-                art='sus', att=0.35 if i else 0.12, rel=0.6 if i + 1 < len(pads) else 1.6)
+            fbass = name == 'F9sus4'                        # the F bass lets go before the B-flat chord (and its D)
+            c.n(inst, p, t, t1 - t + (0.25 if (i + 1 < len(pads) and not fbass) else 0.0), 0.24 if inst != 'vln1' else 0.2,
+                art='sus', att=0.35 if i else 0.12, rel=(0.08 if fbass else 0.6) if i + 1 < len(pads) else 1.6)
         if name in ('Bb',) or i == 0:
             for k, p in enumerate(PAD[name]):
                 c.n('harp', p, t + 0.035 * k, 2.0, 0.46)
@@ -219,10 +234,10 @@ def cue_wh(tl):
     tt = w0 + 3 * st
     for k, p in enumerate(['C5', 'Bb4', 'A4']):
         c.n('tpt', p, tt + (k + 1) * st / 4.0, st / 4.0 * 0.95, 0.3, art='straight', rel=0.08)
-    c.n('tpt', 'Bb4', fin, end - fin - 0.4, 0.3, art='straight', rel=1.0)
+    c.n('tpt', 'Bb4', fin, ring_end - fin - 0.4, 0.3, art='straight', rel=1.0)
     c.n('tri', 'Bb2', fin, 0.9, 0.4, att=0.004, dec=0.4, sus=0.0, rel=0.1)
     c.mark(w0, 'the Fountain Pen\'s leap and pen-stroke turn: it signs the print')
-    c.mark(fin, 'the final B-flat, held under "it\'s a good photo."; rung out by the bridge', hit=False)
+    c.mark(fin, 'the final B-flat, held under "it\'s a good photo."; it bridges the match cut (v3.1)', hit=False)
     for f in freezes:
         if f >= door:
             V.drop_window(c, f, f + Q, insts={'harp', 'tpt'})
@@ -248,7 +263,8 @@ def cue_wh(tl):
                   'the door (13.11): the flat line on the straight mute under his V.O.: the president arriving, '
                   'Mas not turning',
                   'the print (13.14): the leap and the turn sign the photo; the B-flat rings out into the bridge'])
-    sc = c.finish(T, meta, length_end=end, end_fade=(end - 1.8, end - 0.02))
+    sc = c.finish(T, meta, length_end=ring_end,
+                  end_fade=((end - 1.8, end - 0.02) if ring_end <= end else (end - 0.4, ring_end - 0.02)))
     return c, sc
 
 
@@ -379,10 +395,11 @@ def cue_senate_a(tl):
 def cue_senate_b(tl):
     mas_eq = [l for l in tl.lines if l['beat'] == '15.14' and l['who'] == 'mas']
     t_re = (mas_eq[-1]['end'] + 0.3) if mas_eq else tl.B('15.14') + 5.0
-    end = tl.E('15.18')
+    end = tl.B('16.01')                                     # the tour's first stamp cuts it (v3 and v3.1)
     c = V.Cue('senate_b', tl, anchor=t_re, anchor_bar=1, bars=10, swing=0.0)
     T = tracks_sen()
-    back = tl.B('15.17') if tl.has('15.17') else end - 4.0
+    # the back of the sheet (15.17) and the stare (15.18) are cut in v3.1: the hang goes under the dais (15.16)
+    back = tl.B('15.17') if tl.has('15.17') else (tl.B('15.16') if tl.has('15.16') else end - 3.0)
     stamp = tl.snd('15.15', 'rubber_stamp_C', default=tl.B('15.15') + 1.4)
     senate_groove(c, t_re, back, 0, asides=False)
     real_pedals(c, t_re, back, 0, t_re)
@@ -399,10 +416,10 @@ def cue_senate_b(tl):
                        ('vla', 'Bb3', 0.15)):
         c.n(inst, p, back, end - back + 0.3, v, art='sus', att=0.3, rel=0.2, lp=2400)
     c.n('tpt', 'Gb4', back + 0.05, 1.2, 0.26, art='straight', rel=0.3)
-    c.mark(back, 'the back of the sheet: F7sus(b9) hangs under the stare; the tour\'s stamp cuts it', hit=False)
+    c.mark(back, 'F7sus(b9) hangs (under the back of the sheet; v3.1: under the dais); the tour\'s stamp cuts it', hit=False)
     V.thin(c, SEN_THIN, t0=t_re, t1=back)
     c.section('back on a new phrase after "...no equity"; the ask; the stamp', t_re, back)
-    c.section('the back of the sheet, the stare: F7sus(b9) held', back, end)
+    c.section('F7sus(b9) held (the back of the sheet; v3.1: the dais), cut by the tour\'s stamp', back, end)
     meta = dict(
         id='senate_b', title='The Senate, after the wallet (Ep1 v3, Act Two sc 15)', mm='MM-20 (family)', usage='BI',
         family='P02 PROCEDURE (the court), lighter', tone='the ask, the stamp, a suspension left hanging',
@@ -755,7 +772,7 @@ def lay(tl, built, work):
     crack = tl.B('17.11')
     up = built['upsell'][0]
     layers = [
-        dict(name='wh_pomp', wav=wav('wh'), T0=T0('wh'), a0=0.0, a1=tl.E('13.14'), fin=0.0, fout=0.3),
+        dict(name='wh_pomp', wav=wav('wh'), T0=T0('wh'), a0=0.0, a1=wh_ring_end(tl), fin=0.0, fout=0.3),
         dict(name='senate_a', wav=wav('senate_a'), T0=T0('senate_a'), a0=tl.B('15.01'), a1=stop_wallet, fin=0.4,
              fout=0.003),
         dict(name='senate_b', wav=wav('senate_b'), T0=T0('senate_b'), a0=t_re - 0.02, a1=tl.B('16.01'), fin=0.05,
@@ -766,7 +783,7 @@ def lay(tl, built, work):
              fout=0.003),
     ]
     stops = [(stop_wallet, t_re - 0.03), (crack, tl.length)]
-    designed = [(tl.E('13.14'), tl.B('15.01'), 'THE BRIDGE: no score (sc 14: the phone, the water, the plink)'),
+    designed = [(wh_ring_end(tl), tl.B('15.01'), 'THE BRIDGE: no score (sc 14: the phone, the water, the plink)'),
                 (stop_wallet, t_re, 'the wallet: the Senate\'s one stop (the room\'s air under it)'),
                 (crack, tl.length, 'the act-out: the register\'s bell alone (a timeline sound), decaying')]
     return layers, stops, designed

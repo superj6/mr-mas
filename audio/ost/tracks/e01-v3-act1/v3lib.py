@@ -45,11 +45,36 @@ S16 = Q / 4
 
 # ================================================================== which timeline
 def kokoro_path(seg):
-    return os.path.join(REPO, 'show', 'reel', 'ep01-v3', f'ep01-v3-{seg}.json')
+    """the default: the v3.1 lock (final, 2026-09-27); the v3 lock is show/reel/ep01-v3/ (pass it with --timeline)"""
+    return os.path.join(REPO, 'show', 'reel', 'ep01-v31', f'ep01-v31-{seg}.json')
 
 
 def el_path(seg):
-    return os.path.join(REPO, 'show', 'reel', 'ep01-v3-el', f'ep01-v3-el-{seg}.json')
+    return os.path.join(REPO, 'show', 'reel', 'ep01-v31-el', f'ep01-v31-el-{seg}.json')
+
+
+_REAL = None
+
+
+def real_ids():
+    """line ids of the REAL (sourced) lines: the v3.1 lock prints spoken lines without their quotation marks, so the
+    record comes from the earlier locks, which quote them (the v3 lock, the v2 timelines)"""
+    global _REAL
+    if _REAL is None:
+        import glob
+        _REAL = set()
+        for p in glob.glob(os.path.join(REPO, 'show', 'reel', 'ep01-v3', '*.json')) + \
+                glob.glob(os.path.join(REPO, 'show', 'reel', 'ep01-full', '*-v2.json')) + \
+                glob.glob(os.path.join(REPO, 'show', 'reel', 'ep01-act4-v5.json')):
+            try:
+                d = json.load(open(p))
+            except Exception:           # noqa: BLE001
+                continue
+            for b in d.get('beats', []):
+                for l in b.get('lines', []) or []:
+                    if is_real(l.get('text')):
+                        _REAL.add(l['id'])
+    return _REAL
 
 
 def cli(seg, argv=None):
@@ -67,6 +92,10 @@ def cli(seg, argv=None):
         tag = ''
     elif os.path.abspath(path) == os.path.abspath(el_path(seg)):
         tag = '-el'
+    elif '/ep01-v3/' in os.path.abspath(path):
+        tag = '-v3'
+    elif '/ep01-v3-el/' in os.path.abspath(path):
+        tag = '-v3-el'
     else:
         tag = '-alt'
     if not os.path.exists(path):
@@ -104,8 +133,8 @@ class TL:
                 on = t0 + l['t']
                 who = l.get('who', '')
                 tag = l.get('tag') or ''
-                kind = 'vo' if tag == 'V.O.' else ('real' if is_real(l.get('text')) else
-                                                    ('mas' if who == 'mas' else 'talk'))
+                real = is_real(l.get('text')) or l['id'] in real_ids()
+                kind = 'vo' if tag == 'V.O.' else ('real' if real else ('mas' if who == 'mas' else 'talk'))
                 self.lines.append(dict(id=l['id'], who=who, tag=tag, kind=kind, on=on, end=on + l['dur'],
                                        text=l.get('text', ''), beat=b['id'],
                                        words=[(w[0], on + w[1], on + w[2]) for w in l.get('words', []) or []]))

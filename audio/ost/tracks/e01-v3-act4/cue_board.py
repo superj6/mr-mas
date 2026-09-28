@@ -31,9 +31,12 @@ into the dark room, where it becomes the major seventh of his D-flat chord).
   e         the Lighthouse on the first ring (thinned to half notes      S4.08 the split: the offer; the eleven pages;
             under the talk); the Addendum on "some", cut by "no."; the    "In plain English: no."; the dial tone
             pedal holds under the dial tone
-  f         the clockwork on the lobby camera; the straight-mute accent  S4.09 the CCTV; S4.10 the spotlight, S4.10b
-            (F4 -> Bb4) on the spotlight; the folder's held chord; the    Ttemme, the sealed folder; S4.11 the hourglass
-            hourglass grains, one a beat, falling
+  f         v3.1, THE SUNDAY REVERSAL: one dry cello pizz per phone in   S4.09 Sunday: the phones in a row (STAFF STAFF
+            the row (B-flat B-flat F F), her clockwork only in the gaps  INVESTORS INVESTORS); "The staff want him
+            between her lines (the procedure, no closer), the pedal;     back..."; the lobby camera; S4.10 the
+            the straight-mute accent (F4 -> Bb4) on the spotlight; the    spotlight, S4.10b Ttemme, the sealed folder;
+            folder's held chord; the hourglass grains, one a beat         S4.11 the hourglass
+            (the first v3 lock: the clockwork on the lobby camera)
   g         TASYA'S FLOOR: Abmaj9 on the slate, Cmaj9 as the door opens,  S4.12 the slate door; S4.13 Tasya; the
             the Rhodes on the beats as he appears (the jangle owns the     statement [V] (one sentence); S4.13e the sign
             offbeats), Emaj9 on the statement, home on the sign
@@ -167,11 +170,11 @@ def build():
         kw = dict(art='sus', lp=TASTO) if inst in ('vla', 'vln2', 'vc') else {}
         a.n(inst, p, s(WHIP), s(CONNECT + 6) - s(WHIP), v, lock=True, rel=0.45, **kw)
     a.ch('harm', ['Bb3', 'F4'], s(WHIP), 1.2, 0.3, lock=True)
-    clock16(s(WHIP + 7.5), 8, 'F5', 0.26)
-    clock16(s(WHIP + 37.5), 4, 'G5', 0.23)
-    if CONNECT - WHIP > 70:
-        clock16(s(WHIP + 52.5), 4, 'F5', 0.21)
-    cue.mark(WHIP, 'a: the whip: Bbm(add9) + the harp-harmonic dyad (the board\'s side lands)')
+    # v3.1: THE PLAN has the 11:52 wait now; S3.00a's own wait is 0.3 s, so the clockwork plays only where no one talks
+    for off, n_, first, v_ in ((7.5, 8, 'F5', 0.26), (37.5, 4, 'G5', 0.23), (52.5, 4, 'F5', 0.21)):
+        if not any(talk(WHIP + off + k * 3.75) for k in range(n_)) and WHIP + off < CONNECT + 2:
+            clock16(s(WHIP + off), n_, first, v_)
+    cue.mark(WHIP, "a: 11:59: Bbm(add9) + the harp-harmonic dyad (PROCEDURE takes over from THE PLAN)")
     cue.mark(WHIP + 7.5, "a: Neleh's clockwork under the wait (11:59)")
     pedal(CONNECT, LIST + 2, 0.18, first_att=0.3)
     steps = [(CONNECT, 'Db4')]
@@ -269,7 +272,7 @@ def build():
     ea, fl = E_.a, E_.f
     lh = ['F4', 'Bb4', 'Db5']
     k, fr = 0, RING
-    first_line = Lon('a5-27-30')
+    first_line = Lon('a5-27-30') if 'a5-27-30' in CLK.LINES else Lon('v31-a4-0017')
     while fr < M['CLICK8'] - 4:
         p = lh[k % 3]
         if not talk(fr):
@@ -305,10 +308,26 @@ def build():
     # ======================================================================= f · Sunday
     SPOT, FOLDER0, FLIP, SLATE = M['SPOT'], M['FOLDER0'], M['FLIP'], M['SLATE']
     pedal(LOBBY + 10, SLATE + 4, 0.16, first_att=1.2)
-    clock16(s(LOBBY + 8), 8, 'F5', 0.19)
-    clock16(s(LOBBY + 38), 8, 'G5', 0.17)
-    tick([f for f in range(int(LOBBY + 83), int(SPOT) - 10, 15)], 0.2)
-    cue.mark(LOBBY + 8, 'f: the clockwork resumes on the lobby camera, thin')
+    if 'v31-a4-0004' in CLK.LINES:
+        # v3.1: THE SUNDAY REVERSAL.  The phones picked up and set in a row, face up (STAFF · STAFF · INVESTORS ·
+        # INVESTORS), then Neleh: "The staff want him back. The investors want him back." / "...and we're no closer."
+        # The four phones get one dry cello pizz each, in pairs (the d section's buzz cells' roots); her clockwork
+        # then plays only in the gaps between the lines (the procedure going on, getting no closer); the pedal holds.
+        for k, p in enumerate(('Bb2', 'Bb2', 'F3', 'F3')):
+            fr = LOBBY + 3 + 7.5 * k
+            if not talk(fr):
+                a.n('vc', p, s(fr), '1/8', 0.24 * (1.1 if k % 2 == 0 else 0.9), lock=True, art='pizz')
+        cue.mark(LOBBY + 3, 'f: SUNDAY, THE REVERSAL: the four phones in a row, one dry pizz each (STAFF STAFF '
+                            'INVESTORS INVESTORS)')
+        got = gap_clockwork(Lend('v31-a4-0004'), SPOT - 4, vel=0.18)
+        if got:
+            cue.mark(got[0][0], "f: her clockwork in the gaps only (the procedure, no closer)")
+        tick([f for f in range(int(LOBBY + 83), int(SPOT) - 10, 15)], 0.2)
+    else:
+        clock16(s(LOBBY + 8), 8, 'F5', 0.19)
+        clock16(s(LOBBY + 38), 8, 'G5', 0.17)
+        tick([f for f in range(int(LOBBY + 83), int(SPOT) - 10, 15)], 0.2)
+        cue.mark(LOBBY + 8, 'f: the clockwork resumes on the lobby camera, thin')
     a.n('cb', 'Bb1', s(SPOT), 0.2, 0.3, lock=True, art='pizz')
     a.seq('tpt', [('F4', s(SPOT), s(SPOT + 7.5) - s(SPOT), 0.23), ('Bb4', s(SPOT + 7.5), 0.94, 0.22)],
           lock=True, art='straight', rel=0.3)
@@ -384,7 +403,8 @@ def build():
                         ('c the all-hands and the evening', HANDS, M['S4']), ('d NOV 18 hearts', M['S4'], ROOM),
                         ('d the boardroom: the phones, the glass', ROOM, M['SINCERE']),
                         ('d the sincere beat', M['SINCERE'], M['TONE1']), ('rest: the dial tones', M['TONE1'], RING),
-                        ('e the rival lab (the split)', RING, LOBBY), ('f Sunday: the lobby camera', LOBBY, SPOT),
+                        ('e the rival lab (the split)', RING, LOBBY), ('f Sunday: the reversal (the phones), the lobby camera' if 'v31-a4-0004' in CLK.LINES else
+                         'f Sunday: the lobby camera', LOBBY, SPOT),
                         ('f Ttemme, the folder, the hourglass', SPOT, SLATE),
                         ("g the door: Tasya's floor", SLATE, BOARD), ('h Step four? (the hang)', BOARD, HOME),
                         ('the held C into the dark room', HOME, HOME + 40)]:
