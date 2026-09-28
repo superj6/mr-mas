@@ -114,8 +114,11 @@ LOCKS = {
     'v32': dict(bp='show/episodes/ep01/production/full-v3/beat-plan-v32', variants={
         'kokoro': dict(tl='show/reel/ep01-v32/ep01-v32-{seg}.json', out='audio/reel/ep01-v3/v32', ext='wav'),
         'el': dict(tl='show/reel/ep01-v32-el/ep01-v32-el-{seg}.json', out='audio/reel/ep01-v3/v32/el', ext='flac')}),
+    'v33': dict(bp='show/episodes/ep01/production/full-v3/beat-plan-v33', variants={
+        'kokoro': dict(tl='show/reel/ep01-v33/ep01-v33-{seg}.json', out='audio/reel/ep01-v3/v33', ext='wav'),
+        'el': dict(tl='show/reel/ep01-v33-el/ep01-v33-el-{seg}.json', out='audio/reel/ep01-v3/v33/el', ext='flac')}),
 }
-DEFAULT_LOCK = 'v32'
+DEFAULT_LOCK = 'v32'                  # --lock v33 once show/reel/ep01-v33/ exists
 LOCK = DEFAULT_LOCK
 VARIANTS = LOCKS[LOCK]['variants']
 BP_DIR = os.path.join(ROOT, LOCKS[LOCK]['bp'])
@@ -193,6 +196,29 @@ def add(bus, x, t):
         x, i = x[-i:], 0
     j = min(len(bus), i + len(x))
     bus[i:j] += x[: j - i]
+
+
+TAIL_FADE_S, TAIL_LIMIT_DB = 0.02, -60.0
+
+
+def tail_safe(x):
+    """no SFX ends above -60 dBFS without a fade (v3.3, X1): if the last 2 ms peak above TAIL_LIMIT_DB, fade the last
+    20 ms out (cos), so a loop or a truncated sample never stops on a step"""
+    x = np.asarray(x)
+    if len(x) < 8:
+        return x
+    k2 = min(len(x), int(0.002 * SR))
+    if float(np.abs(x[-k2:]).max()) > 10 ** (TAIL_LIMIT_DB / 20):
+        x = np.array(x, dtype='float32', copy=True)
+        k = min(len(x), int(TAIL_FADE_S * SR))
+        g = np.cos(np.linspace(0, np.pi / 2, k)).astype('float32')
+        x[len(x) - k:] *= g[:, None] if x.ndim == 2 else g
+    return x
+
+
+def add_fx(bus, x, t):
+    """lay an SFX with its tail made safe (tail_safe)"""
+    add(bus, tail_safe(x), t)
 
 
 def sos(kind, f, order=2):
@@ -643,7 +669,10 @@ MOVE_WORD = {('act2', '15.15', 'folder_slide'): ('licenses', 10 / FPS, 'onset'),
 # sounds the timeline doesn't have: (sound, anchor, peak dBFS, why). anchor: ('sound', name, offset s)
 ADD_SOUND = {('act1', '11.04'): [('dialog_ok_click', ('sound', 'synth:cheer', -6 / FPS), -12.0,
                                   "the click that ships GTP-4: launch night's click (5.08's), 6 frames before the cheer")]}
-SOUND_GAIN = {('act4', 'S7.13', 'hourglass_shatter'): -10.0}  # runway.md §11.6: "larger than the -18 dB spot"; now real glass
+SOUND_GAIN = {('act4', 'S7.13', 'hourglass_shatter'): -10.0}
+# a sound that ends relative to its beat's end: (s after the beat's end, fade s). v3.3 (X1): S4.08's dial tone is a loop
+# file that ended hot 1.7 s into the lobby walk-in; it now hands over just after the cut, under the lobby's lead
+SOUND_UNTIL = {('act4', 'S4.08', 'DIALTONE'): (0.25, 0.35)}  # runway.md §11.6: "larger than the -18 dB spot"; now real glass
 SOUND_SUB = {('act4', 'S5.09', 'RING'): 'RINGBACK',
              ('act1', 'v32-7.03', 'call_ring'): 'RING_PHONE',   # v3.2: "one ring through a phone filter"
              ('act4', 'S5.11', 'folder_slide'): 'BADGE_SLIDE'}  # v3.2: the badge's slide on the floor           # v3.1: "he ... clicks GERG. It rings out." (an outgoing ring)
@@ -757,14 +786,15 @@ def leds(x, t0, ctx):
     n = len(x)
     m = int(0.012 * SR)
     tt = np.arange(m) / SR
-    tick = st(np.sin(2 * np.pi * 3300 * tt) * np.exp(-tt / 0.002)).astype('float32') * np.float32(db(LED_PEAK))
+    tick = st(np.sin(2 * np.pi * 3300 * tt) * np.exp(-tt / 0.002) * np.minimum(1, tt / 0.001)).astype('float32') * np.float32(db(LED_PEAK))
     k0 = int(np.ceil((t0 - g0) / step))
     k = k0
     while True:
         t = g0 + k * step
         if t >= t0 + n / SR - 0.02:
             break
-        if not any(a <= t < b for a, b in ctx.get('led_off', [])):
+        near_cut = any(abs(t - c) < 0.04 for c in ctx.get('run_edges', []))   # v3.3 (X4): no tick on a room change
+        if not near_cut and not any(a <= t < b for a, b in ctx.get('led_off', [])):
             add(x, tick * (1.0 if k % 2 == 0 else 0.7), t - t0)
         k += 1
 
@@ -827,6 +857,8 @@ def dtmf(r, dur=0.9):
 
 
 JANGLE = {}
+LAID = {}     # v3.3: seg -> [(start, end, name)] of every script SFX laid, so the click scan can tell a sample's own
+              # envelope (a click's fast decay, inside its body) from a truncation (at its laid end)
 
 
 def make_sound(seg, name, dur, align, r, beat_id):
@@ -862,7 +894,7 @@ def make_sound(seg, name, dur, align, r, beat_id):
                 continue
         raise KeyError(name)
     x = load(name).astype('float64')
-    if dur:
+    if dur:                               # truncated by its dur: a 50 ms tail fade (the rule's minimum is 20 ms)
         x = x[: int(dur * SR)].copy()
         k = min(len(x), int(0.05 * SR))
         x[len(x) - k:] *= np.cos(np.linspace(0, np.pi / 2, k))[:, None] ** 2
@@ -1079,7 +1111,7 @@ def v31_layers(segs, hints, qa, room, fx, note):
             t += bd
         for j, t in enumerate(times):
             gdb = 0.0 if t < cut + 4 * bd else -6.0 * (t - (cut + 4 * bd)) / (4 * bd)
-            add(fx, tk * (1.0 if j % 2 == 0 else 0.72) * db(gdb), t)
+            add_fx(fx, tk * (1.0 if j % 2 == 0 else 0.72) * db(gdb), t)
         note('act1', "Sydney's egg timer ticking (in the lobby cue's tempo), the ding, the reset, across the match cut",
              at=round(t_clip + 0.25 - G1.off, 2), to=round(times[-1] - G1.off, 2) if times else None, peak_dbfs=EGG_PEAK,
              bpm=round(bl, 2), bpm_from='the score (measured)' if gl else 'the default', ticks=len(times),
@@ -1090,15 +1122,15 @@ def v31_layers(segs, hints, qa, room, fx, note):
         r = reseed('runner-laugh')
         a = G3.s('v31-19.02')
         m = to_peak(mon(np.asarray(A3.synth('murmur', 3.2), 'float64')), -34)
-        add(fx, pfade(m, 0.2, 0.4), a + 0.1)
+        add_fx(fx, pfade(m, 0.2, 0.4), a + 0.1)
         lg = to_peak(mon(laugh(r)), -30)
-        add(fx, pfade(lg, 0.02, 0.3), a + 1.7)
+        add_fx(fx, pfade(lg, 0.02, 0.3), a + 1.7)
         note('act3', 'the monitor down to a murmur, and a laugh from her audience', at=round(a + 0.1 - G3.off, 2), peak_dbfs=-30,
              why='plan v31-19.02 sounds: "the monitor down to a murmur and a laugh from her audience"')
     # ACT FOUR: the laptop pings with the invite (S1.02)
     if G4.has('S1.02') and G4.has('S1.07'):
         x = to_peak(bp(load('call_join_chime').astype('float64'), 300, 5000), -24)
-        add(fx, x, G4.s('S1.02', 0.5))
+        add_fx(fx, x, G4.s('S1.02', 0.5))
         note('act4', 'the JOIN ping (the laptop, the invite)', at=round(G4.s('S1.02', 0.5) - G4.off, 2), peak_dbfs=-24,
              why='S1.02 caption: "The laptop pings: BOARD · VIDEO CALL · JOIN"; script-v31-notes §4 For sound')
     # ACT FOUR: the phones on the boardroom table, set in a row and still buzzing (S4.09)
@@ -1111,7 +1143,7 @@ def v31_layers(segs, hints, qa, room, fx, note):
             pts.append((t, int(r.integers(1, 5)), -33))
             t += r.uniform(2.2, 3.8)
         for d, k, pk in pts:
-            add(fx, to_peak(load(f'phone_buzz_step_{k}').astype('float64'), pk), a + d)
+            add_fx(fx, to_peak(load(f'phone_buzz_step_{k}').astype('float64'), pk), a + d)
         note('act4', 'the phones in a row on the table, still buzzing', at=0.25, n=len(pts),
              why='S4.09 caption: "the phones, picked up and set in a row, face up, still buzzing"; script-v31-notes §4 For sound')
     # ACT FOUR S7.13: Ttemme's stream (the Runway insert, k = the beat's frames): runway.md §11.6
@@ -1127,11 +1159,11 @@ def v31_layers(segs, hints, qa, room, fx, note):
         sr_ = np.tanh(4 * loop('room_tone', ib - ia, -30, lambda y: bp(y, 250, 5000), 'bp250-5k', rng=r)) / 4
         sr_ = sr_ * np.float32(db(-45 - lufs(sr_[: 5 * SR])))
         add(room, pfade(sr_, 0.015, 0.015), a)
-        add(fx, to_peak(crush_sweep(r, 4 / FPS + 0.05), -34), k(140))           # the grid dissolves
+        add_fx(fx, to_peak(crush_sweep(r, 4 / FPS + 0.05), -34), k(140))           # the grid dissolves
         for f, pk in ((155, -36), (161, -34), (168, -32)):                        # the cracks spreading
             m = int(0.2 * SR)
             tt = np.arange(m) / SR
-            add(fx, to_peak(st(np.sin(2 * np.pi * r.uniform(3200, 5200) * tt) * np.exp(-tt / 0.03)), pk), k(f))
+            add_fx(fx, to_peak(st(np.sin(2 * np.pi * r.uniform(3200, 5200) * tt) * np.exp(-tt / 0.03)), pk), k(f))
         sh = np.zeros((int(0.8 * SR), 2))                                          # the shards land and skitter
         for j in range(9):
             nm = f'glass_shiver_{j % 4 + 1}' if j < 3 else None
@@ -1142,11 +1174,11 @@ def v31_layers(segs, hints, qa, room, fx, note):
                 tt = np.arange(m) / SR
                 g = st(bp(r.standard_normal(m), 2500, 9000) * np.exp(-tt / 0.01) * r.uniform(0.3, 0.8))
             add(sh, g, r.uniform(0.02, 0.2) + 0.03 * j)
-        add(fx, to_peak(sh, -26), k(174))
-        add(fx, to_peak(load('sand_fall').astype('float64'), -30), k(208))        # the sand slumps, pours, settles
-        add(fx, pfade(to_peak(load('sand_trickle').astype('float64'), -34), 0.1, 0.6), k(214))
-        add(fx, to_peak(load('sand_last_grain').astype('float64'), -38), k(229))
-        add(fx, to_peak(crush_sweep(r, 14 / FPS, up=True), -34), k(238))        # the stream crushes back
+        add_fx(fx, to_peak(sh, -26), k(174))
+        add_fx(fx, to_peak(load('sand_fall').astype('float64'), -30), k(208))        # the sand slumps, pours, settles
+        add_fx(fx, pfade(to_peak(load('sand_trickle').astype('float64'), -34), 0.1, 0.6), k(214))
+        add_fx(fx, to_peak(load('sand_last_grain').astype('float64'), -38), k(229))
+        add_fx(fx, to_peak(crush_sweep(r, 14 / FPS, up=True), -34), k(238))        # the stream crushes back
         note('act4', "Ttemme's stream (S7.13 insert): the boardroom out k128-252, his mic's thin room; the crush sweeps "
                      "(k140, k238), glass ticks (k155-168), the shatter (the timeline's, -10 dBFS), the shards (k174), "
                      "near silence (k179-207), the sand (k208-229); the boardroom back at k252",
@@ -1191,15 +1223,15 @@ def v31_layers(segs, hints, qa, room, fx, note):
             x[a0:a1] = 0.0
             x[a0:a0 + keep] = frag * np.linspace(1, 0.3, keep)[:, None]
             if 'demo-film' not in tdrops:
-                add(fx, to_peak(click(r), -26), i_(f))
+                add_fx(fx, to_peak(click(r), -26), i_(f))
         x[-int(0.003 * SR):] *= np.linspace(1, 0, int(0.003 * SR))[:, None]      # i151: it cuts out dead
         film = 'demo-film' not in tdrops
         if film:
-            add(fx, x, D)
+            add_fx(fx, x, D)
             for f in (151, 159, 167):                                              # the stills: slide-change clicks
-                add(fx, to_peak(click(r, hard=True), -22), i_(f))
+                add_fx(fx, to_peak(click(r, hard=True), -22), i_(f))
         if 'demo-blip' not in tdrops:
-            add(fx, to_peak(st(chip_note(1046.5, 0.06)), -30), i_(213))           # the grid snaps back: a chip blip
+            add_fx(fx, to_peak(st(chip_note(1046.5, 0.06)), -30), i_(213))           # the grid snaps back: a chip blip
         # the dark room ducks under the demo, then comes back in four steps with the pull-back
         a, b = i_(0), i_(210)
         ia, ib = int(round(a * SR)), int(round(b * SR))
@@ -1225,7 +1257,7 @@ def v32_layers(segs, hints, qa, room, fx, note):
         except KeyError:
             on = G1.s('v32-7.03', 1.5)
         x = to_peak(load('key_tap_soft_02').astype('float64'), -30)
-        add(fx, x, on - 0.3)
+        add_fx(fx, x, on - 0.3)
         note('act1', 'he answers: the tap on the glass', at=round(on - 0.3 - G1.off, 2), peak_dbfs=-30,
              why='v3.2 plan v32-7.03: "a ring, the lift, the hang-up" (the ring is filtered; the hang-up is the timeline\'s)')
     # ACT THREE v32-21.06: the monitor's click-off, and the clapping growing through the black glass into DevDay's hall
@@ -1235,7 +1267,7 @@ def v32_layers(segs, hints, qa, room, fx, note):
         m = int(0.06 * SR)
         tt = np.arange(m) / SR
         off_ = st(bp(r.standard_normal(m), 2000, 8000) * np.exp(-tt / 0.004) * 0.6 + np.sin(2 * np.pi * 80 * tt) * np.exp(-tt / 0.02))
-        add(fx, to_peak(off_, -30), clk + 0.01)
+        add_fx(fx, to_peak(off_, -30), clk + 0.01)
         a, b = clk + 0.05, G3.s('22.01', 1.4)
         n = int((b - a) * SR)
         cr = st(np.asarray(A3.crowd((b - a) + 0.2, 110, 600, 3600), 'float64')[:n])
@@ -1243,7 +1275,7 @@ def v32_layers(segs, hints, qa, room, fx, note):
         lo = lp(cr, 900)
         cr = lo * (1 - u[:, None]) + cr * u[:, None]                         # the glass opening into the hall
         cr = cr * db(-18 * (1 - u) ** 1.5)[:, None]
-        add(fx, pfade(to_peak(cr, -26), 0.3, 0.6), a)
+        add_fx(fx, pfade(to_peak(cr, -26), 0.3, 0.6), a)
         note('act3', "the monitor's click-off, then the clapping growing through the black glass into the hall",
              at=round(clk - G3.off, 2), to=round(b - G3.off, 2), peak_dbfs=-26,
              why='v3.2 plan v32-21.06: "the monitor\'s click-off; the clapping growing through the black glass into a hall"')
@@ -1255,7 +1287,7 @@ def v32_layers(segs, hints, qa, room, fx, note):
         tt = np.arange(ib - ia) / SR
         g_ = np.interp(tt, [0, 23 / FPS, 23 / FPS + 0.3, 47 / FPS, 47 / FPS + 0.3, e - a, e - a + 1.5], [0, 0, 2.5, 2.5, 5.0, 5.0, 0])
         room[ia:ib] *= db(g_).astype('float32')[:, None]
-        add(fx, to_peak(load('ui_mute_blip').astype('float64'), -30), a + 87 / FPS)
+        add_fx(fx, to_peak(load('ui_mute_blip').astype('float64'), -30), a + 87 / FPS)
         note('act3', "the rack's fans up a step with each LED step (+2.5, +5 dB), and SIGN UP's grey-out tick",
              at=round(a - G3.off, 2), why='v3.2 plan v32-22.04: "the rack\'s fans up a step; ... the button\'s grey-out tick"')
     # ACT FOUR v32-S1.13: his thumb on the glass up to the post; the suite falls to night in three held steps
@@ -1264,7 +1296,7 @@ def v32_layers(segs, hints, qa, room, fx, note):
         a = G4.s('v32-S1.13', 0.75)
         pc = next((sd['at'] for sd in G4.beats[G4.BI['v32-S1.13']].get('sounds', []) if sd['name'] == 'post_click'), 3.6)
         x = np.asarray(A1.synth('taps', pc - 0.95), 'float64')
-        add(fx, pfade(to_peak(x, -32), 0.02, 0.1), a)
+        add_fx(fx, pfade(to_peak(x, -32), 0.02, 0.1), a)
         e = G4.e('v32-S1.13')
         ia, ib = int((e - 23 / FPS) * SR), int((e + 0.6) * SR)
         tt = G4.off * 0 + (np.arange(ib - ia) / SR) + (e - 23 / FPS)
@@ -1277,15 +1309,15 @@ def v32_layers(segs, hints, qa, room, fx, note):
     if G4.has('v32-S5.00'):
         r = reseed('s500')
         a = G4.s('v32-S5.00')
-        add(fx, to_peak(lp(load('revolving_door').astype('float64'), 3500), -30), a - 0.8)
+        add_fx(fx, to_peak(lp(load('revolving_door').astype('float64'), 3500), -30), a - 0.8)
         n = int(0.55 * SR)
         tt = np.arange(n) / SR
         sl = st(bp(r.standard_normal(n), 700, 4500) * (0.6 + 0.4 * np.sin(2 * np.pi * 22 * tt)) * np.sin(np.pi * tt / tt[-1]))
-        add(fx, to_peak(sl, -32), a + 0.05)
+        add_fx(fx, to_peak(sl, -32), a + 0.05)
         m = int(0.03 * SR)
         tm = np.arange(m) / SR
         clip = st(bp(r.standard_normal(m), 2500, 9000) * np.exp(-tm / 0.004) + np.sin(2 * np.pi * 2100 * tm) * np.exp(-tm / 0.006) * 0.5)
-        add(fx, to_peak(clip, -28), a + 31 / FPS)
+        add_fx(fx, to_peak(clip, -28), a + 31 / FPS)
         note('act4', "the lobby by day: the revolving door's sweep under the dial tone; the lanyard across the stone; its clip",
              at=round(a - 0.8 - G4.off, 2), why='v3.2 plan v32-S5.00: jcut "the lobby\'s room by day (the revolving door\'s sweep)"; "the lanyard\'s clip"')
 
@@ -1352,6 +1384,7 @@ def build_block(segs, hints, qa):
         a0, e0 = max(0.0, a - lead), min(NB / SR, e + trail)
         n = int(round((e0 - a0) * SR))
         c = dict(ctx)
+        c['run_edges'] = [a, e]
         if key == 'dark':
             sname = first[0]
             # the score's grid if its sheet gives one; else 96 bpm, phased (v2's rule) so Act Three's 23.01 (THE CLOCK's
@@ -1390,7 +1423,7 @@ def build_block(segs, hints, qa):
                 u = np.minimum(1, u * 2.5)
                 x = x * (1 - u[:, None]) + lp(x, 700) * u[:, None] * db(-10)
             x = to_peak(distant(x), pk)
-            add(fx, x, G4.s('S1.01', d))           # an event, so the SFX stem: the mix can measure it
+            add_fx(fx, x, G4.s('S1.01', d))           # an event, so the SFX stem: the mix can measure it
             note('act4', 'practice lap, far off' + (' (the car the Orb follows; lost behind a grandstand)' if hide else ''),
                  at=round(G4.s('S1.01', d) - G4.off, 2), peak_dbfs=pk, len_s=round(dur, 2),
                  why='script SOUND: "Far off, race-weekend practice laps."; v3.1 S1.01b; the lead: audible but distant')
@@ -1457,6 +1490,7 @@ def build_block(segs, hints, qa):
                     opl_left -= 1
                 if sd['name'] == 'DTMF' and tuned:
                     sd = dict(sd, name=tuned.pop(0))
+                sd = dict(sd, orig=sd['name'])
                 if (sname, b['id'], sd['name']) in SOUND_SUB:
                     sd = dict(sd, name=SOUND_SUB[(sname, b['id'], sd['name'])])
                 if (sname, b['id'], sd['name']) in SOUND_GAIN:
@@ -1483,6 +1517,15 @@ def build_block(segs, hints, qa):
                     at = min(at, 0.0) - nxt_own[b['id']][1]
                     why = f'sound J-cut from the beat before: leads the cut by {nxt_own[b["id"]][1]} s'
                 t = g.off + g.starts[i][0] + at - off
+                su = SOUND_UNTIL.get((sname, b['id'], sd.get('orig', sd['name'])))
+                if su:
+                    end_t = g.off + g.starts[i][1] + su[0]
+                    keep = max(int(0.05 * SR), int((end_t - t) * SR))
+                    if keep < len(x):
+                        x = x[:keep].copy()
+                        kf = min(len(x), int(su[1] * SR))
+                        x[len(x) - kf:] *= np.cos(np.linspace(0, np.pi / 2, kf))[:, None]
+                        why = f'ends {su[0]} s after the beat, over {su[1]} s'
                 mv = MOVE_SOUND.get((sname, b['id'], sd['name']))
                 if mv and g.has(mv[0]):
                     j = g.BI[mv[0]]
@@ -1497,7 +1540,8 @@ def build_block(segs, hints, qa):
                         pk_ = float(np.argmax(np.abs(x).max(axis=1))) / SR if mw[2] == 'peak' else 0.0
                         t = g.off + wt + mw[1] - pk_
                         why = f'moved onto the picture: "{mw[0]}" {mw[1]:+.3f} s ({mw[2]})'
-                add(fx, x, t)
+                add_fx(fx, x, t)
+                LAID.setdefault(sname, []).append((t - g.off, t - g.off + len(x) / SR, sd['name']))
                 qa[sname]['sfx'].append([b['id'], sd['name'], round(t - g.off, 3), sd['gain']] + ([why] if why else []))
             for nm, anc, pk, why in ADD_SOUND.get((sname, b['id']), []):
                 base = None
@@ -1510,7 +1554,7 @@ def build_block(segs, hints, qa):
                 x, off = make_sound(sname, nm, None, None, r, b['id'])
                 x = to_peak(np.asarray(x, dtype='float64'), pk)
                 pk_ = float(np.argmax(np.abs(x).max(axis=1))) / SR
-                add(fx, x, g.off + base - pk_)
+                add_fx(fx, x, g.off + base - pk_)
                 note(sname, why, at=round(base, 3), peak_dbfs=pk)
 
     # ---------------------------------------------------------------- the added layers
@@ -1521,7 +1565,7 @@ def build_block(segs, hints, qa):
             wq = next((w for w in l.get('words', []) if w[0].lower().startswith('quarter')), None)
             t = on + (wq[1] if wq else max(0.0, l['dur'] - 0.5))
             x = to_peak(A1.synth('pen', 0.3), -30)
-            add(fx, x, t)
+            add_fx(fx, x, t)
             note('act1', 'a first pen stroke under Nole\'s "quarter"', at=round(t - G1.off, 2), peak_dbfs=-30,
                  why='plan 12.04 jcut: "the pen\'s scratch, under Nole\'s last word" (the full scratch leads the cut by 0.5 s)')
         except KeyError:
@@ -1541,7 +1585,7 @@ def build_block(segs, hints, qa):
             add(x, np.stack([c, c * 0.55], 1) * (1.0 if k == 0 else 0.85), k * step)
         x = to_peak(x, -24)
         t0 = cut - 4 * step
-        add(fx, x, t0)
+        add_fx(fx, x, t0)
         note('act1', "the Build's chip line (F4 F4 G4 Ab4, left pane) leading the match cut, ending a 16th before it",
              at=round(t0 - G1.off, 2), peak_dbfs=-24, bpm=bpm_b, bpm_from='the score (measured)' if gd else 'the default',
              claimable='build-prelap',
@@ -1563,7 +1607,7 @@ def build_block(segs, hints, qa):
         x = to_peak(A1.phone(x[:n]), -24)
         x *= gain_curve(n, a, [(a, -14), (G1.s('8.01'), -8), (G1.s('8.02'), -4), (G1.s('8.02', 1.5), 0), (G1.s('8.03'), -5),
                                (G1.s('8.06'), -6), (t_lock, -8)])
-        add(fx, pfade(x, 0.8, 0.05), a)
+        add_fx(fx, pfade(x, 0.8, 0.05), a)
         note('act1', "Elgoog's siren through his phone (500-3400 Hz)", at=round(a - G1.off, 2), to=round(t_lock - G1.off, 2),
              peak_dbfs=-24, claimable='siren',
              why='mood 7.01 "then the siren through his phone"; 8.x "the siren as a joke (on the phone\'s small speaker)"; Nirb: "We heard the siren."')
@@ -1581,7 +1625,7 @@ def build_block(segs, hints, qa):
         x = np.asarray(A2.murmur(on - a + 0.1), 'float64')
         x = x * db(-34 - lufs(x))
         x = x[: int((on - a) * SR)]
-        add(fx, pfade(x, 0.2, 0.06), a)
+        add_fx(fx, pfade(x, 0.2, 0.06), a)
         note('act2', "the anchor's too-smooth murmur (no words) through the phone", at=round(a - G2.off, 2),
              to=round(on - G2.off, 2), lufs=-34,
              why='14.01 sound cue: "the anchor\'s too-smooth murmur, no words: a made formant voice"; stops for the clone\'s first word')
@@ -1602,7 +1646,7 @@ def build_block(segs, hints, qa):
         pts += [(b, -12)]
         pts.sort()
         x = x * gain_curve(len(x), a, pts)
-        add(fx, pfade(x, 0.3, 0.35), a)
+        add_fx(fx, pfade(x, 0.3, 0.35), a)
         note('act3', "Gerg's keys down the line (the call's band), loud in 20.06, on past the last line to the cut",
              at=round(a - G3.off, 2), to=round(b - G3.off, 2), peak_dbfs='-20 (20.04) / -22 (20.05) / -12 (20.06; -16 under the V.O.)',
              why='script-v3-notes §7 For sound: "Gerg\'s keys loud in 20.06"; 20.06 sound cue "Gerg\'s keys keep going after the last line"')
@@ -1613,10 +1657,10 @@ def build_block(segs, hints, qa):
         r = reseed('crane')
         grind = np.asarray(A3.synth('crane', 2.2), 'float64')             # the diesel grind, fading up under the black
         grind = to_peak(lp(grind, 1200), -30)
-        add(fx, pfade(grind, 1.0, 0.8), cut - 2.1)
+        add_fx(fx, pfade(grind, 1.0, 0.8), cut - 2.1)
         crane = lp(load('crane_truck_pass').astype('float64'), 1800)      # the pass, its loudest point at S1.01 +0.5
         crane = to_peak(crane, -27)
-        add(fx, pfade(crane, 0.6, 0.8), cut + 0.5 - 1.67)
+        add_fx(fx, pfade(crane, 0.6, 0.8), cut + 0.5 - 1.67)
         tings = np.zeros((int(2.2 * SR), 2))
         for k in range(12):
             nm = f'glass_shiver_{k % 4 + 1}' if k < 4 else None
@@ -1628,7 +1672,7 @@ def build_block(segs, hints, qa):
                 s = st(np.sin(2 * np.pi * r.uniform(2800, 5200) * tt) * np.exp(-tt / 0.07) * r.uniform(0.3, 0.8))
             add(tings, s, r.uniform(0.0, 1.5))
         tings = to_peak(tings, -30)
-        add(fx, tings, cut - 0.5)
+        add_fx(fx, tings, cut - 0.5)
         note('act3', 'pre-lap under the black: the crane truck\'s diesel grind, then glass tings', at=round(cut - 2.1 - G3.off, 2),
              why='script 23.04: "Under the black, the next scene\'s sound pre-laps: a crane truck\'s diesel grind, then a dozen small glass tings."')
         note('act4', "the crane truck passes (its loudest at +0.5 s) and the suite's glasses shiver, from the pre-lap",
@@ -1638,13 +1682,13 @@ def build_block(segs, hints, qa):
     if G4.has('S3.00a'):
         rb = to_peak(bp(load('speakerphone_ringback').astype('float64'), 300, 3400), -32)
         for d in (-0.6, 1.5):
-            add(fx, rb * (1.0 if d < 0 else 0.7), G4.s('S3.00a', d))
+            add_fx(fx, rb * (1.0 if d < 0 else 0.7), G4.s('S3.00a', d))
         note('act4', "the call's waiting tone (twice), leading S3.00a", at=round(G4.s('S3.00a', -0.6) - G4.off, 2), peak_dbfs=-32,
              why='plan S3.00a jcut: "Neleh\'s office: the clock-tick and the call\'s waiting tone, under the whip\'s tail" 0.6 s')
     # ACT FOUR: the all-hands crowd's hush, leading S3.06
     if G4.has('S3.06'):
         h = to_peak(load('crowd_hush').astype('float64'), -26)
-        add(fx, pfade(h, 0.1, 0.4), G4.s('S3.06', -0.8))
+        add_fx(fx, pfade(h, 0.1, 0.4), G4.s('S3.06', -0.8))
         note('act4', "the all-hands crowd's hush, leading S3.06 (the room then stays hushed, -8 dB)",
              at=round(G4.s('S3.06', -0.8) - G4.off, 2), peak_dbfs=-26, why='plan S3.04b jcut: "the all-hands crowd\'s hush" 0.8 s')
 
@@ -1712,23 +1756,23 @@ def build_block(segs, hints, qa):
                 x = x * gain_curve(len(x), a, sorted(pts))
                 k = int(0.012 * SR)       # the stop is dead: 12 ms, no ring
                 x[len(x) - k:] *= np.linspace(1, 0, k)[:, None]
-                add(fx, pfade(x, 0.05, 0.0), a)
+                add_fx(fx, pfade(x, 0.05, 0.0), a)
             else:
-                add(fx, pfade(x, 0.08, 0.25), a)
+                add_fx(fx, pfade(x, 0.08, 0.25), a)
             note('act4', "Gerg's keys through the monitor", at=round(a - G4.off, 2), to=round(b - G4.off, 2), peak_dbfs=pk,
                  why=why + ' (script-v3-notes §7 For sound; sc 29 SOUND "Gerg\'s keys and room through the monitor\'s small speaker")')
         qa['act4']['keys_stop'] = {'at': round(stop - G4.off, 3), 'beat_end': round(G4.e('S5.09-back') - G4.off, 3),
                                    'rule': stop_why}
         if G4.has('S5.09b'):                                  # "then types again, and on the first key we cut"
             k1 = to_peak(mon(load('key_tap_soft_02').astype('float64')), -18)
-            add(fx, k1, G4.e('S5.09b', -0.09))
+            add_fx(fx, k1, G4.e('S5.09b', -0.09))
             note('act4', 'one key on the cut out of S5.09b', at=round(G4.e('S5.09b', -0.09) - G4.off, 2), peak_dbfs=-18,
                  why='script S5.09b: "Gerg holds the look a beat longer, then types again, and on the first key we cut."')
         if G4.has('S5.11'):
             a, b = G4.s('S5.11', 0.05), G4.s('S5.11', 1.8)
             x = mon(typing(r, b - a, 'typing_soft', burst=(0.3, 0.8), gap=(0.2, 0.6)))
             x = x / (np.abs(x).max() + 1e-9) * db(-28)
-            add(fx, pfade(x, 0.05, 0.5), a)
+            add_fx(fx, pfade(x, 0.05, 0.5), a)
             note('act4', "Gerg's keys, faint, on the small tile until the door", at=round(a - G4.off, 2), to=round(b - G4.off, 2),
                  peak_dbfs=-28, why='script S5.11: "Gerg\'s tile small and typing on the monitor"')
 
@@ -1783,7 +1827,7 @@ def build_coldopen(g, hints, qa):
     mur = np.asarray(CO.murmur(N), 'float64')
     hall = hall + mur * db(-41 - lufs(mur[: 20 * SR]))
     nf = int(t_freeze * SR)
-    hall_cut = A1.fade(hall[:nf], 0.45, 0.008)
+    hall_cut = A1.fade(hall[:nf], 0.45, 0.010)
     bus_hall = np.zeros((N, 2))
     bus_hall[:nf] += hall_cut
     # the freeze's hum: the HVAC band-passed 120-700 Hz at -39 LUFS, stepping down with the rewind
@@ -1798,7 +1842,7 @@ def build_coldopen(g, hints, qa):
     if not g.has('4.01'):                      # v3.1's cut: the hum goes with the rewind on the cursor frame (k106)
         kc_ = int(round((t_rw0 + 106 / FPS) * SR))
         if kc_ < N:
-            f3 = int(0.003 * SR)
+            f3 = int(0.010 * SR)
             hg[kc_ - f3:kc_] *= np.linspace(1, 0, f3)
             hg[kc_:] = 0.0
     bus_hall += hum * hg[:, None]
@@ -1809,7 +1853,7 @@ def build_coldopen(g, hints, qa):
     ap = ap * db(-29 - lufs(ap))
     ta = a1 + np.arange(ap_n) / SR
     swell = 1 + (db(6) - 1) * np.clip((ta - (t_forward + 0.1)) / 1.2, 0, 1)
-    ap = A1.fade(ap * swell[:, None], 0.25, 0.008)
+    ap = A1.fade(ap * swell[:, None], 0.25, 0.010)
     bus_ban = np.zeros((N, 2))
     add(bus_ban, ap, a1)
     # the rewind: the hall and banquet before the freeze, reversed like tape, its speed following the Orb's counter
@@ -1860,7 +1904,7 @@ def build_coldopen(g, hints, qa):
         out += st(wh * (np.max(np.abs(out)) + 1e-9) / (np.max(np.abs(wh)) + 1e-9) * db(-6))
         # cut dead on the cursor frame (k106), where the cold-open score lands its last swell and then goes to zero
         # for the last two frames (its README); only the black's faint tone is under the cursor on black
-        k3 = int(0.003 * SR)
+        k3 = int(0.010 * SR)
         kc = min(n_rw, int(round(kf(106) * SR)))
         out[:int(0.03 * SR)] *= np.linspace(0, 1, int(0.03 * SR))[:, None]
         out[kc - k3:kc] *= np.linspace(1, 0, k3)[:, None]
@@ -1896,7 +1940,7 @@ def build_coldopen(g, hints, qa):
                      'from': round(t_freeze, 3), 'to': round(t_rw1, 3)},
                     {'room': 'the rewind (the hall + banquet reversed, speed on the counter)', 'from': round(t_rw0, 3), 'to': round(t_rw1, 3)},
                     ] + ([{'room': "a 1993 PC's fan", 'from': round(a, 3), 'to': round(g.total, 3)}] if old_end else [])
-    kend = int((0.1 if old_end else 0.003) * SR)                  # v3.1: cut dead with the picture into the intro
+    kend = int((0.1 if old_end else 0.010) * SR)                  # v3.1: cut dead with the picture into the intro
     room[-kend:] *= np.linspace(1, 0, kend, dtype='float32')[:, None]
     # SFX, with the lock's -10 dB under speech (its v2 stem was ducked whole by the mixer)
     u = duck_u(g.speech(), N, 0.0)
@@ -1916,7 +1960,8 @@ def build_coldopen(g, hints, qa):
             t = g.starts[i][0] + sd['at'] - off
             dk = -10.0 * u(t)
             x = to_peak(x, sd['gain'] + dk)
-            add(fx, x, t)
+            add_fx(fx, x, t)
+            LAID.setdefault('coldopen', []).append((t, t + len(x) / SR, sd['name']))
             qa['sfx'].append([b['id'], sd['name'], round(t, 3), round(sd['gain'] + dk, 1),
                               f'{dk:.1f} dB (the lock\'s duck on the v2 stem)' if dk < -0.05 else ''])
     fx[-int(0.05 * SR):] *= np.linspace(1, 0, int(0.05 * SR), dtype='float32')[:, None]
@@ -1966,6 +2011,62 @@ def stems_fresh(variant, hints=None):
     return all(os.path.exists(os.path.join(d, f'{s}-{k}.{ext}')) for s in SEGS + ['card'] for k in ('room', 'sfx'))
 
 
+CLICK_RATIO = 10.0
+
+
+def _d2(x):
+    return np.abs(np.diff(np.asarray(x, dtype='float32'), 2, axis=0)).max(axis=1)
+
+
+def click_scan(x, boundaries):
+    """v3.3 (X7): the second-difference click scan. At every beat boundary: the largest |x[n+1] - 2x[n] + x[n-1]| within
+    +-25 ms against the 99th percentile of the local +-0.6 s (the +-0.1 s around the cut left out); anything over
+    CLICK_RATIO is listed, as an onset (a sound starting, 10 dB up), a cut-off (10 dB down) or a step. Then the whole
+    stem is swept for cut-offs anywhere: a 5 ms level falling 12 dB or more from above -50 dBFS where the second
+    difference is over CLICK_RATIO x local (X1 was not on a boundary)."""
+    n = len(x)
+    out = {'boundaries': [], 'cutoffs': []}
+    rms = lambda a, b: float(20 * np.log10(np.sqrt(np.mean(np.asarray(x[max(0, a):max(a + 1, min(n, b))], 'float64') ** 2)) + 1e-12))
+    for tb in boundaries:
+        c = int(round(tb * SR))
+        if c < int(0.7 * SR) or c > n - int(0.7 * SR):
+            continue
+        w = int(0.025 * SR)
+        seg = _d2(x[c - int(0.6 * SR):c + int(0.6 * SR)])
+        m0 = int(0.6 * SR)
+        near = seg[m0 - w:m0 + w]
+        loc = np.concatenate([seg[:m0 - int(0.1 * SR)], seg[m0 + int(0.1 * SR):]])
+        pk = float(near.max()) if len(near) else 0.0
+        if pk < 3e-4:                                    # nothing there (under about -70 dBFS of change)
+            continue
+        ratio = pk / (float(np.percentile(loc, 99)) + 1e-7)
+        if ratio > CLICK_RATIO:
+            i = c - w + int(np.argmax(near))                 # the sample index in x
+            lb, la = rms(i - int(0.01 * SR), i), rms(i + 1, i + int(0.01 * SR))
+            kind = 'onset' if la - lb >= 10 else ('cut-off' if lb - la >= 10 else 'step')
+            out['boundaries'].append({'at': round(i / SR, 3), 'boundary': round(tb, 3), 'ratio': round(ratio, 1), 'kind': kind,
+                                      'before_dbfs': round(lb, 1), 'after_dbfs': round(la, 1)})
+    k = int(0.005 * SR)
+    m = n // k
+    if m > 4:
+        e = 20 * np.log10(np.sqrt(np.mean(np.asarray(x[:m * k], 'float64').reshape(m, k, -1) ** 2, axis=1)).max(axis=1) + 1e-12)
+        cand = np.where((e[:-1] > -50) & (e[:-1] - e[1:] >= 12))[0]
+        for j in cand:
+            c = (j + 1) * k
+            a0, a1 = max(0, c - int(0.5 * SR)), min(n, c + int(0.5 * SR))
+            seg = _d2(x[a0:a1])
+            ci = c - a0
+            near = seg[max(0, ci - k):ci + k]
+            loc = np.concatenate([seg[:max(0, ci - int(0.05 * SR))], seg[ci + int(0.05 * SR):]])
+            if len(near) == 0 or len(loc) < 100:
+                continue
+            ratio = float(near.max()) / (float(np.percentile(loc, 99)) + 1e-7)
+            if ratio > CLICK_RATIO:
+                out['cutoffs'].append({'at': round(c / SR, 3), 'ratio': round(ratio, 1), 'from_dbfs': round(float(e[j]), 1),
+                                       'to_dbfs': round(float(e[j + 1]), 1)})
+    return out
+
+
 def measure_stem(x):
     w = win_db(x)
     return {'lufs': round(lufs(x), 2), 'peak_dbfs': round(20 * np.log10(float(np.abs(x).max()) + 1e-12), 2),
@@ -1994,6 +2095,7 @@ def build(variant='kokoro', only=None, quiet=False):
               'rooms': [], 'sfx': [], 'sfx_missing': [], 'sfx_dropped': [], 'added': [],
               'score_hints': hints.get(s)} for s in SEGS + ['card']}
     JANGLE.clear()
+    LAID.clear()
     room_b, fx_b = build_block(segs, hints, qa)
     room_c, fx_c = build_coldopen(segs['coldopen'], hints, qa['coldopen'])
     lifts = qa.pop('_room_levels')
@@ -2018,9 +2120,24 @@ def build(variant='kokoro', only=None, quiet=False):
         q['room_stem'] = measure_stem(rm)
         q['sfx_stem'] = measure_stem(fx)
         q['room_under_-55dBFS_0.3s'] = quiet_spans(rm)
+        bnd = [st_ for st_, _ in segs[s].starts[1:]] if segs[s].starts else []
+        q['click_scan'] = {'room': click_scan(rm, bnd), 'sfx': click_scan(fx, bnd),
+                           'rule': f'second difference > {CLICK_RATIO}x the local 99th percentile (see click_scan)'}
+        for f_ in q['click_scan']['sfx']['cutoffs']:
+            body = [nm for a_, e_, nm in LAID.get(s, []) if a_ <= f_['at'] <= e_ - 0.02]
+            f_['kind'] = 'in-sample' if body else 'truncation'
+            if body:
+                f_['inside'] = body[-1]      # the source file's own decay (e.g. a UI click falling 20 dB in 5 ms); not a cut
         q['room_levels'] = [l for l in lifts if l['room'].split('@')[1].startswith(s + ':')] if s != 'coldopen' else []
         json.dump(q, open(os.path.join(d, f'{s}-stems-qa.json'), 'w'), indent=1)
         out[s] = q
+        cs = q['click_scan']
+        flags = [f"{k_}:{f_['kind']}@{f_['at']}({f_['ratio']}x)" for k_ in ('room', 'sfx') for f_ in cs[k_]['boundaries'] if f_['kind'] != 'onset'] + \
+                [f"{k_}:cut-off@{f_['at']}({f_['ratio']}x)" for k_ in ('room', 'sfx') for f_ in cs[k_]['cutoffs'] if f_.get('kind') != 'in-sample']
+        if not quiet:
+            print(f"    clicks (not onsets): {flags or 'none'}; onsets at cuts: "
+                  f"{sum(1 for k_ in ('room', 'sfx') for f_ in cs[k_]['boundaries'] if f_['kind'] == 'onset')}; in-sample decays: "
+                  f"{[(f_['at'], f_['inside']) for f_ in cs['sfx']['cutoffs'] if f_.get('kind') == 'in-sample'] or 'none'}")
         if not quiet:
             print(f"  {os.path.relpath(os.path.join(d, s + '-room.' + ext), ROOT)} + -sfx.{ext}: {segs[s].total:.2f} s; room "
                   f"{q['room_stem']['lufs']} LUFS; sfx {len(q['sfx'])} + {len(q['added'])} added; dropped "

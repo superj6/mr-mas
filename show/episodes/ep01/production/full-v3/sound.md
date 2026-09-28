@@ -1,11 +1,30 @@
 # Ep1 v3: rooms, SFX and the final mix (`v3-sound`, 2026-09-27)
 
-> **Status (v3.2): the v3.2 lock is MIXED, both variants, on the final v3.2 renders (§V).** The v3.1 lock is mixed, both variants (§0). Tracks A2 (rooms and SFX stems) and A3 (the mix) of [PLAN.md](PLAN.md), under the showrunner's "just do a full episode attempt with your best judgement".
+> **Status (v3.3): the tools carry the v3.3 polish fixes (§W); the v3.3 lock is not mixed yet.** The v3.2 lock is MIXED, both variants, on the final v3.2 renders (§V). The v3.1 lock is mixed, both variants (§0). Tracks A2 (rooms and SFX stems) and A3 (the mix) of [PLAN.md](PLAN.md), under the showrunner's "just do a full episode attempt with your best judgement".
 >
 > **Nothing here was heard.** Every number below is measured from the files. I also looked at envelope plots of the stems and mixes around the moments listed in §5. Whether a room sounds like its room, whether the keys read as Gerg, and whether any cut plays all need an ear.
 > Nothing was committed.
 >
-> §V is the v3.2 round, §0 the v3.1 round. §1–§8 are the v3 round: the method, which still holds, and the v3 lock's numbers.
+> §W is the v3.3 polish round's tool changes, §V the v3.2 round, §0 the v3.1 round. §1–§8 are the v3 round: the method, which still holds, and the v3 lock's numbers.
+
+## W. v3.3 polish: the tool changes (PLAN.md §6, the X items)
+
+Made before the v3.3 lock exists and checked on the v3.2 lock, in scratch (Act Four and the cold open rebuilt, then deleted). Nothing is mixed yet. When `show/reel/ep01-v33/` (and `-el`) and both composers' v3.3 refits land, the run is `mix_episode.py --all --lock v33` (and `--variant el`), at −16 LUFS with `VO_GAIN_DB` 2.0. The `v33` lock entries are in both tools already; the default stays `v32` until the lock exists.
+
+| Item | Measured cause | Fix (stems.py / mix_episode.py) |
+|---|---|---|
+| **X1**, film 15:19.52 | Not `cloth_rustle`: that file ends at −92 dBFS. The cut is S4.08's `DIALTONE` (`dial_tone_speaker.wav`, a loop that ends at −11 dBFS), laid at 193.14 s in Act Four and cut off by its `dur` at 195.65 s. | **General:** every SFX passes through `tail_safe()`. If the last 2 ms of what is laid is above −60 dBFS, it gets a 20 ms cosine tail fade. **Here:** `SOUND_UNTIL` ends the dial tone on its own 0.35 s fade. |
+| **X4**, film 12:54.50 | The rooms already crossfaded. The step was an LED tick laid exactly on the whip's cut (50.625 s = 162 × 0.3125) with an instant sine onset. | The ticks get a 1 ms attack, and none is laid within 40 ms of a room run's edge. **General:** every hard room cut's minimum fade is now 10 ms (the hall cut, the applause, the cursor cut, the end fade, the hum gate). |
+| **X6**, film 18:00–18:14 | The avalanche's mean short-term loudness was −15.87 LUFS. | Adds `GAIN_ROWS` to the mix: S6.01 through S6.06's `freeze_hit_F`, +1.75 LU on music plus SFX (0.6 s ramp in, 0.3 s out, capped at 4 dB). On v3.2 it measured −15.87 → −14.20 (+1.67 LU, gain 1.84 dB). This is on top of the set piece's peak lift; the score's −2 dB ride is kept. |
+| **X3's mix side**, film 12:45.29 | — | Waits on composer Y's refit. Once it lands, I will measure the night cue's re-entry in the mix. |
+| **The click scan** (before the mixes) | — | `click_scan()` runs on every room and SFX stem. At each beat boundary it flags a second difference over 10× the local 99th percentile, as an onset, a cut-off or a step. It then sweeps the whole stem for cut-offs (a 12 dB drop in 5 ms from above −50 dBFS, at 10× local). SFX cut-offs are split into `truncation` (at a sample's laid end) and `in-sample` (the source file's own decay). Results go in `<seg>-stems-qa.json` → `click_scan`. |
+
+The scan on v3.2, after the fixes:
+- **Act Four:** room clean (no boundary flags, no cut-offs). SFX: no non-onset boundary flags, and no truncations. Four `in-sample` decays are over 10×, all the sample's own envelope:
+  - 16.245 and 193.02: `dialog_ok_click`, a UI click whose file falls 20 dB in 5 ms at 75 ms;
+  - 198.235: `post_click`, which falls 15.5 dB at 75 ms;
+  - 471.02: `neon_ignite`, whose transient falls 31 dB at 5 ms.
+- **The cold open:** clean.
 
 ## V. v3.2: the final lock
 

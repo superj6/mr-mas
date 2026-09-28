@@ -76,8 +76,10 @@ SR, FPS = S.SR, S.FPS
 SEGS = S.SEGS
 OUTS = {'v3': {'kokoro': 'out/ep01/full-v3/mix', 'el': 'out/ep01/full-v3/mix-el'},
         'v31': {'kokoro': 'out/ep01/full-v3/mix-v31', 'el': 'out/ep01/full-v3/mix-v31-el'},
-        'v32': {'kokoro': 'out/ep01/full-v3/mix-v32', 'el': 'out/ep01/full-v3/mix-v32-el'}}
-QA_DIRS = {'v3': 'audio/reel/ep01-v3/mix-qa', 'v31': 'audio/reel/ep01-v3/mix-qa/v31', 'v32': 'audio/reel/ep01-v3/mix-qa/v32'}
+        'v32': {'kokoro': 'out/ep01/full-v3/mix-v32', 'el': 'out/ep01/full-v3/mix-v32-el'},
+        'v33': {'kokoro': 'out/ep01/full-v3/mix-v33', 'el': 'out/ep01/full-v3/mix-v33-el'}}
+QA_DIRS = {'v3': 'audio/reel/ep01-v3/mix-qa', 'v31': 'audio/reel/ep01-v3/mix-qa/v31', 'v32': 'audio/reel/ep01-v3/mix-qa/v32',
+           'v33': 'audio/reel/ep01-v3/mix-qa/v33'}
 OUT, QA_DIR = OUTS[S.DEFAULT_LOCK], QA_DIRS[S.DEFAULT_LOCK]
 
 
@@ -614,6 +616,10 @@ SCORE_HEAD_FADE = {'act1': 1.0, 'act2': 1.2, 'act3': 1.2, 'act4': 1.2}   # s: th
 SCORE_RIDE = {'act4': [('v31-S1.01b', 0.0, 'end', -4.0, 'the practice lap the Orb follows: the score makes room for it')]}
 LIFT_LU = 2.5                                             # the set pieces' peak over the talk (mood-analysis §4 #3)
 LIFT_MAX = {'st': 6.0, 'mom': 9.0}                      # dB: a short hit (the shatter) may take more
+# gain rows (v3.3): (what, (beat, s), (beat, s or ('sound', name)), LU): after the set-piece lift, the window's mean
+# short-term loudness is raised by LU, score and SFX only. X6: the avalanche +1.5-2 LU over its 14 s (mood-analysis-v32
+# §4 #3); the score's own -2 dB ride stays
+GAIN_ROWS = {'act4': [('the avalanche (X6)', ('S6.01', 0.0), ('S6.06', ('sound', 'freeze_hit_F')), 1.75)]}
 SETPIECES = {   # (what, (beat, s), (beat, s or 'end' or ('sound', name)), measure): 'st' = 3 s short-term, 'mom' = 400 ms
     'act1': [('the odometer', ('5.12', 0.0), ('6.06', 'end'), 'st')],
     'act4': [('the avalanche', ('S6.01', 0.0), ('S6.06', ('sound', 'freeze_hit_F')), 'st'),
@@ -663,7 +669,7 @@ def loudness_curve(x, win):
 def setpieces(name, g, dlg, room, fx, mus, speech, qa):
     """lift the score and the SFX in each set piece until its peak loudness is LIFT_LU over the segment's talk (the
     median 3 s loudness where lines cover most of the window); the dialogue is not lifted"""
-    if name not in SETPIECES:
+    if name not in SETPIECES and name not in GAIN_ROWS:
         return mus, fx
     N = len(fx)
     mix0 = dlg + room + fx + (mus if mus is not None else 0.0)
@@ -691,7 +697,7 @@ def setpieces(name, g, dlg, room, fx, mus, speech, qa):
             at = next((sd['at'] for sd in g.beats[g.BI[bid]].get('sounds', []) if sd['name'] == v[1]), None)
             return None if at is None else s0 + at + (v[2] if v[0] == 'sound+' else 0.0)
         return s0 + v
-    for what, sa, sb, meas in SETPIECES[name]:
+    for what, sa, sb, meas in SETPIECES.get(name, []):
         a, b = when(sa), when(sb)
         if a is None or b is None or b <= a:
             continue
@@ -731,6 +737,37 @@ def setpieces(name, g, dlg, room, fx, mus, speech, qa):
         rec['over_talk_lu'] = round(rec['peak_after_lufs'] - talk_ref, 2) if rec['peak_after_lufs'] is not None else None
         out.append(rec)
     qa['setpieces'] = out
+    rows = []
+    for what, sa, sb, lu in GAIN_ROWS.get(name, []):
+        a, b = when(sa), when(sb)
+        if a is None or b is None or b <= a:
+            continue
+
+        def mean_st(m_):
+            tcw, lw = loudness_curve(m_[max(0, int(a * SR)):min(N, int(b * SR))], 3.0)
+            return float(-0.691 + 10 * np.log10(np.mean(10 ** ((lw + 0.691) / 10)))) if len(lw) else None
+        l0 = mean_st(dlg + room + fx + (mus if mus is not None else 0.0))
+        if l0 is None:
+            continue
+        total = 0.0
+        for it in range(4):
+            cur = mean_st(dlg + room + fx + (mus if mus is not None else 0.0))
+            need = l0 + lu - cur
+            if abs(need) < 0.1 or total >= 4.0:
+                break
+            step = min(need * 1.05, 4.0 - total)
+            total += step
+            tt = np.arange(N) / SR
+            gcurve = np.interp(tt, [a - 0.6, a, b, b + 0.3], [0, 1, 1, 0]).astype('float32')
+            gl = (1 + (db(step) - 1) * gcurve).astype('float32')[:, None]
+            fx = fx * gl
+            if mus is not None:
+                mus = mus * gl
+        after = mean_st(dlg + room + fx + (mus if mus is not None else 0.0))
+        rows.append({'what': what, 'from': round(a, 2), 'to': round(b, 2), 'target_lu': lu, 'mean_before_lufs': round(l0, 2),
+                     'mean_after_lufs': round(after, 2), 'lift_lu': round(after - l0, 2), 'gain_db': round(total, 2)})
+    if rows:
+        qa['gain_rows'] = rows
     return mus, fx
 
 
