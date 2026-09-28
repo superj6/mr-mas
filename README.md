@@ -136,4 +136,4 @@ Videos (`*.mp4` and similar), dependencies, the third-party sample libraries and
 
   The full list with terms is in `audio/samples/LICENSES.md`.
 - Satire and parody of public figures' public conduct. There are no real logos, no photoreal likenesses and no cloned voices.
-- License: *to be decided by the owner.*
+- **License:** the code is [MIT](LICENSE), and the show's creative content (scripts, bible, art, music and episodes) is [CC BY-SA 4.0](LICENSE-CONTENT.md). Build on it, make the next episodes, credit it and keep it open. Third-party samples, fonts and voices keep their own terms (see [LICENSE-CONTENT.md](LICENSE-CONTENT.md)).
