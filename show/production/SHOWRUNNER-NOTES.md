@@ -19,6 +19,9 @@
      - ATOD bots play themselves ("180 years" a day). Alyi's awe, and Mas's practicality.
      - A lone `text? (side project)` monitor that only Mas glances at.
      - It enters on a counter match: DevDay's 100M a week matched to the bots' 180 years.
+   - **Length (same day):** "why are you trimming elsewhere in the act? if anything we need more in act 1 and less post firing. it is ok to make a bit longer tho"
+     - Act One may grow. New material is paid for in Act Four: the board's side, the Sunday middle, the coda.
+     - The episode may run about 22–23 min; runtime is an outcome, not a target.
    - **Also (same day):** "there is also not any showing of what chatgpt can do upon release, how people are using it, what mas feels about it"
      - Ep1 adds **the first week, the world meets it**, a Social Network "Facemash night" montage of real kinds of use: the essay, the bug fix, the sonnet, the apology, a confident wrong fact under Rima's banner, the coders' site banning its answers, the at-capacity page.
      - **Mas alone at 3 AM:** he reads one small human chat twice, and one hinted thought. The only moment he's quietly moved, before the planner takes over.
