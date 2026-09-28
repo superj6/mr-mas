@@ -46,10 +46,6 @@
      8
     ],
     [
-     "CODA",
-     9
-    ],
-    [
      "THAT NIGHT",
      9
     ],
@@ -59,6 +55,10 @@
     ],
     [
      "THE BOARD'S SIDE, 11:52",
+     9
+    ],
+    [
+     "CODA",
      9
     ],
     [
@@ -114,7 +114,7 @@
   "buzz": 32.342,
   "seconds": 5.108,
   "score_peak_before_gate_dbfs": -240.0,
-  "mix_in_window_dbfs_max_50ms": -47.2,
+  "mix_in_window_dbfs_max_50ms": -47.1,
   "mix_in_window_lufs": -48.9
  },
  "setpieces": [
@@ -238,15 +238,15 @@
   "true_peak_dbtp": -1.45,
   "sample_peak_dbfs": -1.5,
   "lra_lu": 7.0,
-  "gain_db": 1.09,
+  "gain_db": 1.1,
   "limiter_ceiling_dbfs": -1.5,
-  "limiter_active_s": 0.524,
-  "dialogue_lufs": -15.09,
+  "limiter_active_s": 0.527,
+  "dialogue_lufs": -15.08,
   "score_lufs_after_duck": -22.55,
   "score_rms_under_speech_dbfs": -30.3,
   "score_rms_between_speech_dbfs": -21.8,
   "score_runs": {
-   "count": 13,
+   "count": 12,
    "shortest_s": 1.65,
    "runs": [
     [
@@ -267,11 +267,7 @@
     ],
     [
      47.65,
-     228.95
-    ],
-    [
-     277.65,
-     11.95
+     241.95
     ],
     [
      290.2,
@@ -303,8 +299,8 @@
     ]
    ]
   },
-  "rooms_lufs": -37.26,
-  "sfx_lufs": -29.26,
+  "rooms_lufs": -37.25,
+  "sfx_lufs": -29.25,
   "holes_under_-42dBFS_0.3s": [
    {
     "at": 27.25,
@@ -354,7 +350,7 @@
   "unmarked_holes": 0,
   "unmarked_holes_without_score": 0,
   "jumps_over_15dB": {
-   "count": 52,
+   "count": 51,
    "rising": 43,
    "rising_at_a_word": 36,
    "rising_at_an_sfx": 0,
@@ -367,17 +363,17 @@
     485.5,
     514.2
    ],
-   "falling": 9
+   "falling": 8
   }
  },
  "file": "out/ep01/full-v3/mix-v31-el/act4-mix.wav",
  "guard_db": null,
  "seam_head": {
-  "from_gain_db": 2.19,
-  "to_gain_db": 1.09,
+  "from_gain_db": 2.22,
+  "to_gain_db": 1.1,
   "ramp_s": 2.0,
   "after": "act3"
  },
- "built": "2026-09-27 19:33:40",
+ "built": "2026-09-28 01:51:24",
  "heard": "nothing here has been listened to; every number is measured"
 }

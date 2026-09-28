@@ -27,8 +27,8 @@
   "cues": "audio/ost/tracks/e01-v3-act3/cues-el.json",
   "length_s": 143.167,
   "length_vs_segment_s": 0.0,
-  "lufs_as_delivered": -20.04,
-  "lufs_after_gain": -20.04,
+  "lufs_as_delivered": -20.02,
+  "lufs_after_gain": -20.02,
   "duck": {
    "by_mood_db": [
     [
@@ -65,9 +65,9 @@
    "unspoken_s": 4.89,
    "sfx_rms": -40.4,
    "room_rms": -57.3,
-   "score_rms": -42.9,
-   "bed_rms": -42.7,
-   "sfx_minus_bed_db": 2.3
+   "score_rms": -42.7,
+   "bed_rms": -42.6,
+   "sfx_minus_bed_db": 2.2
   },
   {
    "what": "the LEDs out, 20.02 (the quiet beat): the room in the ticks' band",
@@ -80,9 +80,9 @@
    "unspoken_s": 1.58,
    "sfx_rms": -240.0,
    "room_rms": -71.2,
-   "score_rms": -58.4,
-   "bed_rms": -58.2,
-   "sfx_minus_bed_db": -181.8
+   "score_rms": -54.4,
+   "bed_rms": -54.3,
+   "sfx_minus_bed_db": -185.7
   },
   {
    "what": "the LEDs on, 20.01 (for comparison)",
@@ -95,9 +95,9 @@
    "unspoken_s": 3.42,
    "sfx_rms": -65.4,
    "room_rms": -65.5,
-   "score_rms": -61.6,
-   "bed_rms": -60.1,
-   "sfx_minus_bed_db": -5.3
+   "score_rms": -58.7,
+   "bed_rms": -57.9,
+   "sfx_minus_bed_db": -7.5
   }
  ],
  "measured": {
@@ -105,28 +105,20 @@
   "true_peak_dbtp": -1.41,
   "sample_peak_dbfs": -1.5,
   "lra_lu": 5.3,
-  "gain_db": 2.19,
+  "gain_db": 2.22,
   "limiter_ceiling_dbfs": -1.5,
-  "limiter_active_s": 1.348,
-  "dialogue_lufs": -14.97,
-  "score_lufs_after_duck": -19.25,
-  "score_rms_under_speech_dbfs": -28.7,
-  "score_rms_between_speech_dbfs": -20.9,
+  "limiter_active_s": 1.421,
+  "dialogue_lufs": -14.94,
+  "score_lufs_after_duck": -19.2,
+  "score_rms_under_speech_dbfs": -28.6,
+  "score_rms_between_speech_dbfs": -20.6,
   "score_runs": {
-   "count": 4,
-   "shortest_s": 11.1,
+   "count": 2,
+   "shortest_s": 59.45,
    "runs": [
     [
      0.05,
-     11.1
-    ],
-    [
-     12.7,
-     39.5
-    ],
-    [
-     53.1,
-     27.8
+     80.85
     ],
     [
      81.25,
@@ -134,8 +126,8 @@
     ]
    ]
   },
-  "rooms_lufs": -37.05,
-  "sfx_lufs": -26.03,
+  "rooms_lufs": -37.02,
+  "sfx_lufs": -25.96,
   "holes_under_-42dBFS_0.3s": [
    {
     "at": 140.8,
@@ -162,12 +154,11 @@
   "jumps_over_15dB": {
    "count": 22,
    "rising": 18,
-   "rising_at_a_word": 9,
+   "rising_at_a_word": 10,
    "rising_at_an_sfx": 3,
    "rising_other": [
-    12.75,
     48.25,
-    53.15,
+    51.6,
     58.15,
     63.3,
     124.6
@@ -178,11 +169,11 @@
  "file": "out/ep01/full-v3/mix-v31-el/act3-mix.wav",
  "guard_db": null,
  "seam_head": {
-  "from_gain_db": 0.44,
-  "to_gain_db": 2.19,
+  "from_gain_db": 0.92,
+  "to_gain_db": 2.22,
   "ramp_s": 2.0,
   "after": "act2"
  },
- "built": "2026-09-27 19:33:20",
+ "built": "2026-09-28 01:51:08",
  "heard": "nothing here has been listened to; every number is measured"
 }
