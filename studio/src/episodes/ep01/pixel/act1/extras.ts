@@ -14,6 +14,12 @@
 //   deal2S(fb, f, st)                    9.06 / 9.09: drawDeal2S with the pan, Tasya's x and Gerg's spot as parameters
 //   passerBy(fb, f, x, y, bg)            9.10: an employee crossing the check (Gerg's walk, recoloured), behind the cast
 //   guestCard(fb, x, y)                  8.05: the GUEST card on a lanyard, legible
+//   callMcu(fb, f, st)                   v32-7.03 (the lead's ruling on art-a §8): rooms/launch-call's MCU re-composed
+//                                        with the phone at NORMAL size, its screen facing him: at his ear, lowered in a
+//                                        held step, low (the call over), and lit red (its light on his face, not ours)
+//   handOnPhone(fb, step)                7.02: his hand coming down onto the phone at the HIGH's top edge (held steps)
+//   paneButton(fb, press, dx, dy, lit)   11.04: 5.08's finger approach (fingerECU) cropped into the split's left pane,
+//                                        the same crop duel-split's `button` state makes
 //   bottomShade(fb, y0, n)               a lighting note: the frame's foot a rung or two darker (the V.O. rows on shadow)
 import {Buf, rect, line, bayer, hash, clamp} from '../../../../shared/pixel/px';
 import {PAL, stepColor, lightness, familyOf} from '../../../../shared/pixel/palette';
@@ -32,7 +38,9 @@ import {drawDealWide} from '../../../../shared/pixel/rooms/lobby-deal';
 import type {DealWideState} from '../../../../shared/pixel/rooms/lobby-deal';
 import {drawMasMedium, MAS_MEDIUM_DEFAULT} from '../../../../shared/pixel/cast/mas-medium';
 import type {MasMediumState} from '../../../../shared/pixel/cast/mas-medium';
-import {drawCollarsMedium} from '../../../../shared/pixel/cast/mas-collars';
+import {drawCollarsMedium, drawCollarsPortrait} from '../../../../shared/pixel/cast/mas-collars';
+import {BUTTON_ECU} from '../../../../shared/pixel/kits/launch-button';
+import {DUEL} from '../../../../shared/pixel/rooms/duel-split';
 import {drawTasyaMedium} from '../../../../shared/pixel/cast/tasya-medium';
 import type {TasyaMediumState} from '../../../../shared/pixel/cast/tasya-medium';
 import {drawGergStand, GERG_STAND_DEFAULT, gergWalkAt} from '../../../../shared/pixel/cast/gerg-stand';
@@ -171,6 +179,8 @@ export interface Deal2SPanState {
   /** Gerg behind them at the door, tugging the check (the art's drawDeal2S staging at [238, 172]; `at` moves him) */
   gerg?: boolean | {at: [number, number]; flip?: boolean};
   collars?: number;
+  /** frames since the newest collar's hop (mas-collars `pop`: 1 px proud for 2 frames), or undefined */
+  collarPop?: number;
   tv?: TvState;
 }
 /** drawDeal2S with the pan as a parameter (the art's own is 110) and Tasya's x free; the v3.1 collars (mas-collars
@@ -180,7 +190,7 @@ export const deal2S = (fb: Buf, f: number, st: Deal2SPanState) => {
   softLobbyPan(fb, f, {check: st.check, tv: st.tv, gerg: g ? {body: 'tug', at: g.at, flip: g.flip} : null}, st.pan);
   const mx = 6, my = 96;
   drawMasMedium(fb, mx, my, {...MAS_MEDIUM_DEFAULT, light: 'warm', head: '34', look: 1, arm: 'down', ...st.mas}, {flip: true});
-  drawCollarsMedium(fb, mx, my, st.collars ?? 3, {flip: true, style: 'v31'});
+  drawCollarsMedium(fb, mx, my, st.collars ?? 3, {flip: true, style: 'v31', pop: st.collarPop});
   if (st.tasya) drawTasyaMedium(fb, st.tasyaX ?? 380, 96, {arm: 'clasp', ...st.tasya});
 };
 
@@ -273,4 +283,126 @@ export const grains = (fb: Buf, f: number, x0: number, x1: number, y0: number, y
     const span = y1 - y0, y = y0 + ((Math.floor(hash(i, 2, seed) * span) + k * 2) % span);
     fb.set(x, y, col);
   }
+};
+
+// ------------------------------------------------------------------ v32-7.03: the call, the phone at normal size
+const skinC = (c: number) => { const fm = familyOf(c); return !!fm && fm[0] === 'S' && lightness(c) > 0.3; };
+export interface CallMcuState {
+  /** 'ear' at his ear (its back to us, the screen to him) · 'mid' the held step down · 'low' at his chest, the call over,
+   *  the screen still turned to him · 'red' the same, lit red: its light on his chin and the phone's rim */
+  phone: 'ear' | 'mid' | 'low' | 'red';
+  mas?: Partial<MasPortraitState>;
+  glow?: number;
+  collars?: number;
+}
+/** rooms/launch-call.ts drawLaunchCallMcu's frame (7.01's fallaway behind him, his portrait at (96, 34), the open tile's
+ *  red from below as a clean rim, the tile's band at the frame's foot) with the phone a real phone's size for his head
+ *  (12 x 40 at his ear, about half his head's height), held the way people hold one: its back to us, his fingers round
+ *  it. The screen faces him; its light is read on him */
+export const callMcu = (fb: Buf, f: number, st: CallMcuState) => {
+  launchBackM(fb, 300, {soft: 2, alyi: 'gone', underlines: 3});
+  for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) fb.set(x, y, stepColor(fb.get(x, y), -2));
+  const s: MasPortraitState = {...MAS_PORTRAIT_DEFAULT, light: 'warm', lid: 0, look: 0, ...st.mas};
+  const x = 96, y = 34;
+  putBust(fb, masPortrait(s), x, y);
+  drawCollarsPortrait(fb, x, y, st.collars ?? 2, {head: s.head ?? '34', light: 'warm', style: 'v31'});
+  const glow = st.glow ?? 2;
+  if (glow) {
+    const hits: Array<[number, number]> = [];
+    for (let yy = y + 60; yy < y + 86; yy++) for (let xx = x + 10; xx < x + 100; xx++) if (skinC(fb.get(xx, yy)) && !skinC(fb.get(xx, yy + 1))) hits.push([xx, yy]);
+    for (const [xx, yy] of hits) { fb.set(xx, yy, glow >= 2 ? PAL.W5 : PAL.S5); if (glow >= 2 && skinC(fb.get(xx, yy - 1))) fb.set(xx, yy - 1, PAL.S5); }
+    for (let yy = RH - 10; yy < RH; yy++) for (let xx = 0; xx < 480; xx++) if (bayer(xx, yy) < (yy - RH + 10) / 12) fb.set(xx, yy, yy > RH - 4 ? PAL.R2 : PAL.R1);
+  }
+  const ph = st.phone;
+  // the forearm: the hoodie sleeve from the hand down to the frame's bottom right (its lit edge the tile's red)
+  const [hx, hy] = ph === 'ear' ? [x + 80, y + 84] : ph === 'mid' ? [x + 76, y + 122] : [x + 62, y + 134];
+  for (let yy = hy; yy < RH; yy++) {
+    const t = (yy - hy) / Math.max(1, RH - hy), cx = Math.round(hx + 6 + t * 34), hw = 8 + Math.round(t * 8);
+    for (let xx = cx - hw; xx <= cx + hw; xx++) fb.set(xx, yy, xx <= cx - hw + 1 ? (glow ? PAL.W3 : PAL.G3) : xx > cx + hw - 3 ? PAL.G0 : PAL.G2);
+  }
+  // the phone's back: a dark rounded slab, one lit rim, the camera's lens near the top
+  const slab = (x0: number, y0: number, w: number, h: number, lean: number, rim: number) => {
+    for (let j = 0; j < h; j++) {
+      const off = Math.round(lean * j), X0 = x0 + off;
+      for (let i = 0; i < w; i++) {
+        const corner = (j === 0 || j === h - 1) && (i === 0 || i === w - 1);
+        if (corner) continue;
+        fb.set(X0 + i, y0 + j, i === 0 ? rim : i === w - 1 || j === h - 1 ? PAL.N0 : j === 0 ? PAL.G3 : PAL.G1);
+      }
+    }
+  };
+  // his fingers round the back (four tips on the far edge) and the heel of his hand under the phone
+  const fingers = (fx: number, fy: number, n: number, gap: number) => {
+    for (let k = 0; k < n; k++) for (let j = 0; j < 4; j++) for (let i = 0; i < 4; i++) if (Math.hypot(i - 1.5, j - 1.5) < 2) fb.set(fx + i, fy + k * gap + j, i === 0 ? PAL.S2 : j === 0 ? PAL.S5 : PAL.S4);
+  };
+  const palm = (px: number, py: number, w: number, h: number) => {
+    for (let j = 0; j < h; j++) for (let i = 0; i < w; i++) if (Math.hypot((i - w / 2) / (w / 2), (j - h / 2) / (h / 2)) < 1) fb.set(px + i, py + j, j < 2 ? PAL.S5 : i > w - 3 ? PAL.S2 : PAL.S4);
+  };
+  if (ph === 'ear') {
+    // at the ear: the slab leans from behind the ear (top) toward his mouth (bottom), 12 px across, 40 tall
+    palm(x + 70, y + 74, 16, 12);
+    slab(x + 76, y + 40, 12, 40, -0.2, glow ? PAL.W3 : PAL.G3);
+    rect(x + 82, y + 44, 3, 3, fb.ink(PAL.N0)); fb.set(x + 83, y + 45, PAL.G4);
+    fingers(x + 83, y + 56, 4, 5);
+    // his screen's light on the cheek against it: a clean 2 px rim, a rung up (no dither on skin)
+    for (let yy = y + 44; yy < y + 78; yy++) { const x1 = x + 76 + Math.round(-0.2 * (yy - y - 40)); for (let xx = x1 - 2; xx < x1; xx++) { const c = fb.get(xx, yy); if (skinC(c)) fb.set(xx, yy, stepColor(c, 1)); } }
+  } else if (ph === 'mid') {
+    // the held step down: level with his chin, still upright
+    palm(x + 66, y + 112, 16, 12);
+    slab(x + 70, y + 84, 12, 36, -0.1, glow ? PAL.W3 : PAL.G3);
+    fingers(x + 78, y + 96, 4, 5);
+  } else {
+    // at his chest, tipped back toward him: its screen's upper edge shows (foreshortened, 20 x 5), the back below it
+    const red = ph === 'red';
+    palm(x + 50, y + 128, 24, 10);
+    slab(x + 52, y + 116, 20, 14, 0, red ? PAL.R3 : glow ? PAL.W3 : PAL.G3);
+    const sx0 = x + 53, sy0 = y + 117;
+    for (let j = 0; j < 5; j++) for (let i = 0; i < 18; i++) fb.set(sx0 + i, sy0 + j, red ? (j === 0 ? PAL.R3 : PAL.R2) : j === 0 ? PAL.N3 : PAL.N2);
+    if (red) {
+      // the alert on its screen: the siren dome's white glint, stepping on 6s (a slow blink, not a flash)
+      const on = Math.floor(f / 6) % 2 === 0;
+      rect(sx0 + 7, sy0 + 1, 4, 2, fb.ink(on ? PAL.W8 : PAL.W6));
+      // the alert's red on him: the undersides of his face, and a soft spill up the hoodie, in whole rungs
+      const hits: Array<[number, number]> = [];
+      for (let yy = y + 56; yy < y + 100; yy++) for (let xx = x + 20; xx < x + 90; xx++) if (skinC(fb.get(xx, yy)) && !skinC(fb.get(xx, yy + 1))) hits.push([xx, yy]);
+      for (const [xx, yy] of hits) fb.set(xx, yy, PAL.R3);
+      for (let yy = y + 90; yy < y + 117; yy++) for (let xx = x + 30; xx < x + 96; xx++) { const d = Math.hypot((xx - x - 62) / 34, (yy - y - 117) / 27); if (d < 1 && !skinC(fb.get(xx, yy)) && bayer(xx, yy) < (1 - d) * 0.7) fb.set(xx, yy, d < 0.5 ? PAL.R2 : PAL.R1); }
+    }
+    fingers(x + 72, y + 120, 2, 4);
+  }
+};
+
+// ------------------------------------------------------------------ 7.02: his hand finds the phone
+/** the HIGH (drill.ts HIGH.phone at (360, 14), 26 x 14 at the frame's top edge): his hand comes down over the desk's
+ *  edge onto it in held steps (0 out of frame · 1 · 2 · 3 resting on it), the back of the hand from above, his sleeve */
+export const handOnPhone = (fb: Buf, step: number) => {
+  if (step <= 0) return;
+  const dy = [0, -12, -6, 0][Math.min(3, step)];
+  const hx = 358, hy = 6 + dy; // the back of the hand's top-left; the fingertips reach the phone's far half
+  // the sleeve: from the frame's top edge down to the wrist (the dark hoodie, lit on its left edge)
+  for (let y = 0; y < hy + 3; y++) for (let x = hx + 8; x < hx + 26; x++) fb.set(x, y, x === hx + 8 ? PAL.G4 : x > hx + 23 ? PAL.G0 : PAL.G1);
+  // the back of the hand (seen from above), knuckles, then four fingers pointing down the frame onto the phone
+  for (let j = 0; j < 10; j++) for (let i = 0; i < 20; i++) {
+    if (Math.hypot((i - 9.5) / 10, (j - 5) / 5.5) >= 1) continue;
+    const Y = hy + 2 + j; if (Y < 0) continue;
+    fb.set(hx + 6 + i, Y, j < 2 ? PAL.S5 : i < 2 ? PAL.S2 : PAL.S4);
+  }
+  for (let k = 0; k < 4; k++) for (let j = 0; j < 7; j++) for (let i = 0; i < 3; i++) {
+    const X = hx + 8 + k * 4 + i, Y = hy + 10 + j + (k === 0 || k === 3 ? -1 : 0); if (Y < 0) continue;
+    fb.set(X, Y, i === 0 ? PAL.S2 : j === 6 ? PAL.S3 : PAL.S4);
+  }
+  // the thumb along the phone's near edge
+  for (let j = 0; j < 8; j++) { const Y = hy + 6 + j; if (Y >= 0) { fb.set(hx + 3, Y, PAL.S2); fb.set(hx + 4, Y, PAL.S4); fb.set(hx + 5, Y, PAL.S4); } }
+  // the phone wakes under his fingers: its screen a dim lit rung (he's about to call)
+  if (step >= 3) for (let y = 15; y < 27; y++) for (let x = 361; x < 385; x++) { const c = fb.get(x, y); if (c === PAL.N1) fb.set(x, y, bayer(x, y) < 0.5 ? PAL.C2 : PAL.C1); }
+};
+
+// ------------------------------------------------------------------ 11.04: his finger in the left pane
+/** the split's LEFT pane (x 0..DUEL.paneW) as duel-split's `button` crop of the ECU, from fingerECU so his finger can
+ *  come in in 5.08's held steps; the pane's own divider is left to drawDuelSplit */
+export const paneButton = (fb: Buf, press: 0 | 1 | 2, dx: number, dy: number, lit: boolean) => {
+  const E = new Buf(480, 270, PAL.N0);
+  fingerECU(E, press, dx, dy, lit);
+  const x0 = Math.max(0, Math.min(480 - DUEL.paneW, BUTTON_ECU[0] - (DUEL.paneW >> 1) + 20));
+  for (let y = 0; y < RH; y++) for (let x = 0; x < DUEL.paneW; x++) fb.c[y * fb.w + x] = E.c[y * 480 + x0 + x];
 };

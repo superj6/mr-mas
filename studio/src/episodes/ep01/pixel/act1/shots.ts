@@ -1,6 +1,7 @@
-// MR. MAS — Ep1 pixel v3.1, ACT ONE: one layout per shot of the v3.1 lock (sc 5–12, 49 shots, 5:37.5; the timeline
-// show/reel/ep01-v31/ep01-v31-act1.json, script draft 7). The `v3-shots-act1` pass, 2026-09-27 (its v3 round, then the
-// v3.1 round). Built on the art-a modules (show/episodes/ep01/production/full-v3/art/art-a.md, §7 for v3.1); the few
+// MR. MAS — Ep1 pixel v3.2, ACT ONE: one layout per shot of the v3.2 lock (sc 5–12, 51 shots, 5:29.8; the timeline
+// show/reel/ep01-v32/ep01-v32-act1.json, script draft 8.1). The `v3-shots-act1` pass, 2026-09-27/28 (its v3 round, the
+// v3.1 round, then v3.2: Mas's moves read on screen: the button press, the million post, the call, the click that
+// ships GTP-4). Built on the art-a modules (show/episodes/ep01/production/full-v3/art/art-a.md, §7 for v3.1); the few
 // pieces those modules fix inside a packaged setup (a camera x, a lifted prop, a speaking mouth in a composite) are
 // re-composed from their exported parts in ./extras.ts. No existing drawing is edited.
 //
@@ -27,7 +28,7 @@ import {drawLaunchWide, drawLaunch2S, drawLaunchGlass, drawLaunchMcuRima, drawLa
 import {drawButtonECU, BUTTON_ECU} from '../../../../shared/pixel/kits/launch-button';
 import {drawChatECU} from '../../../../shared/pixel/kits/chat-window';
 import type {ChatLine} from '../../../../shared/pixel/kits/chat-window';
-import {drawHoleHigh, drawWedgedWheel, drawGpuTear, HIGH} from '../../../../shared/pixel/rooms/drill';
+import {drawHoleHigh, drawGpuTear, HIGH} from '../../../../shared/pixel/rooms/drill';
 import {drawAlertInsert, drawPhoneLockOTS} from '../../../../shared/pixel/kits/phone-alert';
 import {drawElgoogLobby} from '../../../../shared/pixel/rooms/elgoog-lobby';
 import type {ElgoogState} from '../../../../shared/pixel/rooms/elgoog-lobby';
@@ -41,6 +42,10 @@ import {drawLetterOTS, drawLetterPage, drawClipboard} from '../../../../shared/p
 import {drawNoleDesk} from '../../../../shared/pixel/rooms/nole-desk';
 import {drawPleaseHigh, drawPleaseECU} from '../../../../shared/pixel/kits/please-sheet';
 import {drawEmitDrop} from '../../../../shared/pixel/kits/emit-oped';
+import {drawCallScreenECU} from '../../../../shared/pixel/rooms/launch-call';
+import {drawMillionPost} from '../../../../shared/pixel/kits/act1-v32';
+import {drawKeyRingECU} from '../../../../shared/pixel/kits/key-ring-insert';
+import {drawFoundersCutIn} from '../../../../shared/pixel/rooms/elgoog-cutin';
 import {drawGergLaptopPOV} from '../../../../shared/pixel/kits/gerg-laptop';
 import {drawSydneyTvExit, drawSydneyWide, drawSydney2SMas, drawSydney2STasya, drawSydneyGerg2S, SYD_WIDE} from '../../../../shared/pixel/rooms/lobby-sydney';
 import type {SydneyFace} from '../../../../shared/pixel/cast/sydney';
@@ -49,7 +54,7 @@ import {masWalkAt} from '../../../../shared/pixel/cast/mas-stand';
 import {gergTypeAt} from '../../../../shared/pixel/cast/gerg';
 import {
   blinkLid, cursorPath, ease2, sleepLed, fingerECU, otsRima, glassCount, deal2S, passerBy, guestCard, bottomShade, grains,
-  castMask, chatCard, twelfthKey,
+  castMask, chatCard, twelfthKey, callMcu, handOnPhone, paneButton,
 } from './extras';
 import {LOCK} from './data';
 
@@ -99,25 +104,25 @@ L.add('5.01', {
   draw: (fb, k, sh, f) => { drawButtonECU(fb, f, {}); sleepLed(fb, f); },
 });
 L.add('5.02', {
-  st: 'ROOM-BULLPEN-LAUNCH drawLaunchWide {warm: 1, life} (the arrival, held, launch night warmed a step by its practicals: the hall\'s tungsten, his desk lamp, a far lamp left on; a far screensaver, a car\'s light on the bridge, and a passer-by crossing the hall\'s lit far end as we arrive · Gerg typing in his green, Rima at LOW-KEY twice-underlined, Alyi in the glass, Mas at the end desk breathing); Gerg glances up as Mas names him, Rima steps back from her board as he names her; the cursor drifts in and parks on the button, in the scene (drawCursor); the letterbox stays dark',
+  st: 'ROOM-BULLPEN-LAUNCH drawLaunchWide {warm: 1, life} (the arrival, held, launch night warmed a step by its practicals: the hall\'s tungsten, his desk lamp, a far lamp left on; a far screensaver, a car\'s light on the bridge, and a passer-by crossing the hall\'s lit far end as we arrive · Gerg typing in his green, Rima at LOW-KEY twice-underlined, Alyi in the glass, Mas at the end desk breathing); no voice over the wide: room tone, Rima steps back from her board, the cursor drifts in and parks on the button, in the scene (drawCursor), then Gerg\'s "Okay, the build\'s green." at room scale; the letterbox stays dark',
   face: {GERG: 'room'},
-  marks: {cursor: ['f', 43], rima: ['w', 'v3-vo-01', 'rima', 0], gerg: ['w', 'v3-vo-01', 'gerg', 0], pass: ['f', 0]},
+  marks: {cursor: ['f', 43], rima: ['f', 84], pass: ['f', 0]},
   draw: (fb, k, sh, f) => {
-    const g = mk(sh, 'gerg', 29), r = mk(sh, 'rima', 72), c = mk(sh, 'cursor', 43), p0 = mk(sh, 'pass', 0);
-    // the passer-by crosses the hall's far end in 36 frames (whole pixels, held on 2s), done before the names
+    const r = mk(sh, 'rima', 84), c = mk(sh, 'cursor', 43), p0 = mk(sh, 'pass', 0);
+    // the passer-by crosses the hall's far end in 36 frames (whole pixels, held on 2s), as we arrive
     const pk = k - (k % 2) - p0, passer = pk >= 0 && pk <= 36 ? pk / 36 : null;
     drawLaunchWide(fb, f, {
       warm: 1, life: {passer, flicker: true, car: true},
       underlines: 2, alyi: 'there', laptop: 'dark',
       rima: {body: k < r + 4 ? 'write' : 'stand', head: 'back'},
       mas: {head: 'turn', breathe: breathe(f)},
-      gerg: {mouth: openRest(sh, k, 'GERG'), look: k >= g && k < g + 16 ? 1 : 0},
+      gerg: {mouth: openRest(sh, k, 'GERG'), look: 0},
     });
     if (k >= c) { const [x, y] = cursorPath(k, c, c + 27, [262, 92], [131, 135]); drawCursor(fb, x, y); }
   },
 });
 L.add('5.03', {
-  st: 'ROOM-BULLPEN-LAUNCH drawLaunch2S {warm: 1} (desk to desk: Mas fg left, two collars (v31), his desk lamp\'s key on his face; Gerg typing in his green, lip-synced, not looking up; behind him Rima at the board, her back to us (cast/rima-board lower: she speaks from the board without turning round); the button and the parked cursor); Mas\'s eyes go to Rima\'s board on her line and his prediction; plate GERG MOCKBRAN by Gerg',
+  st: 'ROOM-BULLPEN-LAUNCH drawLaunch2S {warm: 1} (desk to desk: Mas fg left, two collars (v31), his desk lamp\'s key on his face; Gerg typing in his green, lip-synced, not looking up; behind him Rima at the board, her back to us (cast/rima-board lower: she speaks from the board without turning round); the button and the parked cursor); Mas\'s eyes go to Rima\'s board on her line and his prediction; the plate GERG MOCKBRAN · CO-FOUNDER by Gerg',
   face: {GERG: 'lip'},
   marks: {rimaOn: ['on', 'e1-a1-5-02', 0], voEnd: ['end', 'v3-vo-02', 10]},
   draw: (fb, k, sh, f) => {
@@ -131,7 +136,7 @@ L.add('5.03', {
   },
 });
 L.add('5.04', {
-  st: 'extras.otsRima {warm: 1} = ROOM-BULLPEN-LAUNCH launchBackM (warm, camX 470, held steady) + rima-speak portrait (lip-synced; blinks; the desk lamp\'s key on her face, face only; she smooths her lapel before her question, lifts her brow waiting on him, firms on "a fortune", half-lids at Gerg\'s "v2 problem") + his desk\'s edge + otsShoulder (its rim in the lamp\'s tungsten) + the button and cursor lifted clear of the V.O. line; Alyi small and soft in the glass; plate RIMA TAMURI',
+  st: 'extras.otsRima {warm: 1} = ROOM-BULLPEN-LAUNCH launchBackM (warm, camX 470, held steady) + rima-speak portrait (lip-synced; blinks; the desk lamp\'s key on her face, face only; she smooths her lapel before her question, lifts her brow waiting on him, firms on "a fortune", half-lids at Gerg\'s "v2 problem") + his desk\'s edge + otsShoulder (its rim in the lamp\'s tungsten) + the button and cursor lifted clear of the V.O. line; Alyi small and soft in the glass; the plate RIMA TAMURI · CTO',
   face: {RIMA: 'lip'},
   marks: {ask: ['on', 'e1-a1-5-06', 0], askEnd: ['end', 'e1-a1-5-06', 0], answered: ['end', 'e1-a1-5-07', 6], fortune: ['w', 'e1-a1-5-08', 'fortune', -6], v2: ['on', 'e1-a1-5-09', 4]},
   draw: (fb, k, sh, f) => {
@@ -149,7 +154,7 @@ L.add('5.04', {
   },
 });
 L.add('5.05', {
-  st: 'ROOM-BULLPEN-LAUNCH drawLaunchGlass {faceLight: 2, warm: 1} (the close glass: Alyi\'s reflection in its doorway, lip-synced, a face light two steps up (face only: one barely shows on the glass), the desk lamp reflected low; the cut on the turn); plate ALYI beside him',
+  st: 'ROOM-BULLPEN-LAUNCH drawLaunchGlass {faceLight: 2, warm: 1} (the close glass: Alyi\'s reflection in its doorway, lip-synced, a face light two steps up (face only: one barely shows on the glass), the desk lamp reflected low; the cut on the turn); the plate ALYI · CO-FOUNDER beside him',
   face: {ALYI: 'lip'},
   draw: (fb, k, sh, f) => {
     drawLaunchGlass(fb, f, {alyi: {mouth: mouth(sh, k, 'ALYI'), eyes: 'open', t: f}, faceLight: 2, warm: 1});
@@ -166,9 +171,9 @@ L.add('5.06', {
   },
 });
 L.add('v3-5.06b', {
-  st: 'ROOM-BULLPEN-LAUNCH drawLaunchGlass {faceLight: 2, warm: 1} (the 5.05 setup held on Alyi in the glass, still watching the button, his face lit two steps: a slow blink twice) under Mas\'s V.O.',
+  st: 'ROOM-BULLPEN-LAUNCH drawLaunchGlass {faceLight: 2, warm: 1} (the 5.05 setup held two beats on Alyi in the glass, still watching the button, his face lit two steps: one slow blink; his question unanswered)',
   draw: (fb, k, sh, f) => {
-    const shut = (k >= 44 && k < 52) || (k >= 122 && k < 130);
+    const shut = k >= 26 && k < 34;
     drawLaunchGlass(fb, f, {alyi: {eyes: shut ? 'closed' : 'open', t: f}, faceLight: 2, warm: 1});
   },
 });
@@ -293,13 +298,14 @@ L.add('6.02', {
   },
 });
 L.add('6.06', {
-  st: 'SET-DRILL drawWedgedWheel (far down, wedged in the bedrock: the last wheel settles in held steps on the ratchet, then holds legible, 1,000,000) + grit trickling round it',
-  marks: {r: ['snd', 'odometer_ratchet', 1, 0]},
+  st: 'INSERT-MILLION-POST drawMillionPost (far down, wedged in the bedrock: the last wheel settles in held steps on the ratchet, then holds legible, 1,000,000; on the post\'s click HIS post pops over it in post-card\'s own UI and held steps, his avatar and name: "CHATGTP launched on wednesday. today it crossed 1 million users!" · DEC 4 · 11:35 PM, held to read) + grit trickling round the wheel, clear of the card',
+  marks: {r: ['snd', 'odometer_ratchet', 1, 0], post: ['snd', 'post_click', 1, 0]},
   draw: (fb, k, sh, f) => {
-    const r = mk(sh, 'r', 3);
+    const r = mk(sh, 'r', 3), p = mk(sh, 'post', 24);
     const settle = k < r ? 0 : k < r + 5 ? 1 : k < r + 9 ? 2 : 3;
-    drawWedgedWheel(fb, f, {settle});
-    grains(fb, f, 120, 360, 20, 60, 6, 71, PAL.D2);
+    // the card opens in post-card's three held steps (2 frames each), then holds
+    drawMillionPost(fb, f, {settle, k: k < p ? null : Math.min(3, Math.floor((k - p) / 2))});
+    grains(fb, f, 260, 360, 84, 120, 5, 71, PAL.D2);
   },
 });
 L.add('6.08', {
@@ -327,16 +333,33 @@ L.add('7.01', {
   },
 });
 L.add('7.02', {
-  st: 'SET-DRILL: drawHoleHigh (the tear falls down the shaft) → drawGpuTear (it lands on a red-hot GPU: the splash, tssss, three held puffs) → drawHoleHigh again, his phone lit red at the top edge (the siren\'s J-cut); three setups inside the stick\'s one beat',
-  marks: {hiss: ['snd', 'steam_hiss', 1, 0], phone: ['txt', '( ! )', 'at', 0]},
+  st: 'SET-DRILL: drawHoleHigh (the tear falls down the shaft) → drawGpuTear (it lands on a red-hot GPU: the splash, tssss, three held puffs) → drawHoleHigh again, the last steam rising, and under it his hand comes down over the desk\'s edge onto his phone at the top edge (extras.handOnPhone, held steps): the call he\'s about to make (the phone stays dark: its red is the call\'s end now); three setups inside the stick\'s one beat',
+  marks: {hiss: ['snd', 'steam_hiss', 1, 0], phone: ['txt', '( ! )', 'at', 0], hand: ['txt', '( ! )', 'at', 14]},
   draw: (fb, k, sh, f) => {
-    const land = mk(sh, 'hiss', 10), ph = mk(sh, 'phone', 48);
+    const land = mk(sh, 'hiss', 10), ph = mk(sh, 'phone', 48), hd = mk(sh, 'hand', 62);
     if (k < land) { drawHoleHigh(fb, f, {tile: 'gone', glow: 3, racks: 2, dollar: true, tear: k / land, phone: 'dark'}); return; }
     if (k < ph) { drawGpuTear(fb, f, {k: k - land}); return; }
-    drawHoleHigh(fb, f, {tile: 'gone', glow: 3, racks: 2, dollar: true, tear: null, phone: 'red'});
+    drawHoleHigh(fb, f, {tile: 'gone', glow: 3, racks: 2, dollar: true, tear: null, phone: 'dark'});
+    handOnPhone(fb, k < hd ? 0 : k < hd + 4 ? 1 : k < hd + 8 ? 2 : 3);
     // the last of the steam rising out of the shaft (held on 3s)
     const B = HIGH.bottom, rise = Math.floor((k - ph) / 3);
     for (let i = 0; i < 6; i++) { const x = B.x0 + 14 + ((i * 7) % 26), y = B.y0 + 10 - rise * 2 - i * 3; if (y > HIGH.hole.y0) { fb.set(x, y, PAL.G5); fb.set(x + 1, y, PAL.G4); } }
+  },
+});
+
+// ---- v32-7.03 · THE CALL (draft 8.1; the lead's ruling on art-a §8: open on the ECU of the phone ringing on the desk,
+// the contact large; then Mas with the phone at his ear, its screen to him, at normal size)
+L.add('v32-7.03', {
+  st: 'SET-CALL drawCallScreenECU (his phone on the desk, ringing on the ring: TASYA · MACROSOFT over the key-ring avatar, large, the tile\'s red on the desk; the world carries the name, no pipeline plate) → extras.callMcu (later that night at his end desk, 7.01\'s fallaway behind him, the tile\'s red from below as a clean rim: the phone at his ear, its back to us, a real phone\'s size; "Mas." through the filter; his full ask lip-synced, "it\'s the bill. we\'re going to need more servers."; "I\'ll bring a pen." and the one-pixel smile; he lowers the phone in a held step; on the hang-up it lights red before it reaches the desk, its red on his chin, and his eyes drop to it)',
+  face: {MAS: 'lip'},
+  marks: {ring: ['snd', 'call_ring', 1, 0], hello: ['on', 'v32-a1-0002', -6], pen: ['end', 'v32-a1-0004', 0], hang: ['snd', 'handset_hangup', 1, 0]},
+  draw: (fb, k, sh, f) => {
+    const ring = mk(sh, 'ring', 7), cut = mk(sh, 'hello', 30), pen = mk(sh, 'pen', 173), hang = mk(sh, 'hang', 199);
+    if (k < cut) { drawCallScreenECU(fb, k < ring ? 0 : f, {state: 'ringing'}); return; }
+    const down = pen + 6;
+    const phone = k < down ? 'ear' : k < down + 6 ? 'mid' : k < hang + 2 ? 'low' : 'red';
+    const m = saying(sh, k, 'MAS') ? mouth(sh, k, 'MAS') : k >= pen && k < hang + 2 ? 'smile' : 'rest';
+    callMcu(fb, f, {phone, mas: {mouth: m, lid: phone === 'red' ? 1 : 0, look: 0}});
   },
 });
 
@@ -374,7 +397,7 @@ L.add('8.03', {
   },
 });
 L.add('8.04', {
-  st: 'ROOM-ELGOOG (the siren turning) + CAST-FOUNDERS: NIRB and EGAP climb out of the crypt one held step at a time, backlit, shading their eyes, out onto the lobby (EGAP\'s RETIRED 2019 mug); Radnus holds up his phone for "Search is fine", folds his hands for "It is ours. We published it.", pats his sleeve; NIRB reaches for "badges" · room-scale mouth for Radnus, silhouettes carry theirs by gesture · the gag plate THE FOUNDERS · SUMMONED. once they are up',
+  st: 'ROOM-ELGOOG (the siren turning) + CAST-FOUNDERS: NIRB and EGAP climb out of the crypt one held step at a time, backlit, shading their eyes, out onto the lobby (EGAP\'s RETIRED 2019 mug); Radnus holds up his phone for "Search is fine", folds his hands for "It is ours. We published it.", pats his sleeve; NIRB reaches for "badges" · room-scale mouth for Radnus, silhouettes carry theirs by gesture · the gag plate THE FOUNDERS · SUMMONED. once they are up · the one cut-in (draft 8.1) for EGAP\'s "Someone else built that?": ROOM-ELGOOG drawFoundersCutIn, NIRB and EGAP at 3x peering at Radnus\'s phone held in from frame left, the two-dot bubble on it (the siren\'s sweep left to the wide: with it the cut-in measured 2 flashes a second); back to the wide for Radnus\'s answer',
   face: {RADNUS: 'room'},
   marks: {nirb: ['f', 14], egap: ['f', 24], search: ['on', 'v31-a1-0004', -4], searchEnd: ['end', 'v31-a1-0004', 6], ours: ['on', 'e1-a1-8-05', -4], badges: ['on', 'e1-a1-8-06', -6], nirbTalk: ['on', 'e1-a1-8-02', -2], egapTalk: ['on', 'e1-a1-8-04', -2], egapEnd: ['end', 'e1-a1-8-04', 0], up: ['f', 50], nirbEnd: ['end', 'e1-a1-8-02', 0]},
   draw: (fb, k, sh, f) => {
@@ -384,8 +407,10 @@ L.add('8.04', {
     const stepping = (k0: number, st: number) => st >= 1 && st <= 3 && ((k - k0) % 12) < 5 && (k - k0) < 42;
     // he holds his phone up for "Search is fine…", pats the sleeve out after EGAP's question, folds his hands for "It is
     // ours. We published it."
-    const arm = k < srch ? 'ext' : k < srchE ? 'phone' : k >= eE - 2 && k < eE + 6 ? 'pat' : k >= ours && k < ours + 70 ? 'fold' : 'ext';
+    const arm = k < srch ? 'ext' : k < srchE ? 'phone' : k >= eE + 4 && k < eE + 10 ? 'pat' : k >= ours && k < ours + 70 ? 'fold' : 'ext';
     const fire = arm === 'pat' ? 3 : radnusFlameAt(f);
+    // the cut-in on the founders for EGAP's question (in 2 frames before it, out 4 after it, before the pat)
+    if (k >= eT && k < eE + 4) { drawFoundersCutIn(fb, f, {nirb: 'down', egap: k < eT + 40 ? 'reach' : 'mug', turning: false, chrome: true}); return; }
     drawElgoogLobby(fb, f, {
       slab: 3, lift: 3, turning: true, chrome: true,
       radnus: {arm: arm as 'ext' | 'phone' | 'fold' | 'pat', fire: fire as 0 | 1 | 2 | 3, mouth: roomMouth(sh, k, 'RADNUS') === 'open' ? 'open' : 'smile'},
@@ -470,7 +495,7 @@ L.add('9.01', {
   },
 });
 L.add('9.04', {
-  st: 'ROOM-LOBBY-DEAL drawDealWide + dealFreeze (THE FULL FREEZE: the lobby printed navy and cream, Mas alone in colour keeps moving: he walks to the jammed check and pockets its pen on the tick) + shared/pixel/ui nameCard: TASYA / THE LANDLORD with its stat RUNS MACROSOFT (the scene\'s gag card) · the frame\'s foot a rung darker under the V.O.',
+  st: 'ROOM-LOBBY-DEAL drawDealWide + dealFreeze (THE FULL FREEZE: the lobby printed navy and cream, Mas alone in colour keeps moving: he walks to the jammed check and pockets its pen on the tick) + shared/pixel/ui nameCard: TASYA / THE LANDLORD with its stat RUNS MACROSOFT (the scene\'s gag card); the pen is the one Tasya said he\'d bring',
   marks: {pen: ['snd', 'pen_tick_1', 1, 0], card: ['txt', 'TASYA', 'at', 0]},
   draw: (fb, k, sh, f) => {
     const pen = mk(sh, 'pen', 80), card = mk(sh, 'card', 2);
@@ -482,9 +507,6 @@ L.add('9.04', {
     const live = new Mask(480, 270);
     underCast(fb, f, {check: 'jammed', pen: false, mas: {at: [mx, 190], flip: k >= turn, legs: walking ? masWalkAt(f) : 'stand', arm, collars: 2, collarStyle: CS}, tasya: {at: DEAL.tasya, keys: 11}, live}, (b) => { if (k < pen) edgePen(b); });
     dealFreeze(fb, live);
-    // the frame's foot in the print's navy under the V.O. line (the sunlit floor prints cream there)
-    const ink = fb.get(476, 150);
-    for (let y = 180; y < RH; y++) for (let x = 0; x < 300; x++) { if (y < 186 && bayer(x, y) > (y - 180) / 6) continue; if (!live.a[y * 480 + x]) fb.set(x, y, ink); }
     const kk = k - card;
     if (kk >= 0) {
       const x = 330, y = 14;
@@ -533,25 +555,34 @@ L.add('9.08', {
   },
 });
 L.add('9.09', {
-  st: 'extras.deal2S = ROOM-LOBBY-DEAL\'s 2S re-composed (pan 110, held steady): Mas (three collars, v31, lip-synced) standing on the check, Tasya warm and unhurried (lip-synced, blinking; the ring comes up on "our servers", 11 keys; he walks out of frame right on "Everyone is welcome", the jangles going with him); Mas looks down at what he is standing on before "and the rent?"',
+  st: 'extras.deal2S = ROOM-LOBBY-DEAL\'s 2S re-composed (pan 110, held steady): Mas (three collars, v31, lip-synced) standing on the check, Tasya warm and unhurried (lip-synced, blinking; on "That collar suits you." the ring clinks and the new gold collar hops a pixel, the landlord\'s; the ring comes up again on "our servers", 11 keys; he walks out of frame right on "Everyone is welcome", the jangles going with him); Mas looks down at what he is standing on before "and the rent?"',
   face: {TASYA: 'lip', MAS: 'lip'},
-  marks: {itdoes: ['end', 'v3-vo-09', 4], rent: ['on', 'e1-a1-9-05', -3], servers: ['w', 'v31-a1-0005', 'servers', -8], lights: ['w', 'v31-a1-0005', 'lights', -4], lot: ['on', 'e1-a1-9-07', 0], leave: ['on', 'e1-a1-9-08', -6]},
+  marks: {clink: ['snd', 'key_ring_jangle_3', 1, 0], itdoes: ['end', 'e1-a1-9-04', 12], rent: ['on', 'e1-a1-9-05', -3], servers: ['w', 'v31-a1-0005', 'servers', -8], lights: ['w', 'v31-a1-0005', 'lights', -4], lot: ['on', 'e1-a1-9-07', 0], leave: ['on', 'e1-a1-9-08', -6]},
   draw: (fb, k, sh, f) => {
-    const itd = mk(sh, 'itdoes', 89), rent = mk(sh, 'rent', 120), srv = mk(sh, 'servers', 250), lts = mk(sh, 'lights', 290), leave = mk(sh, 'leave', 396);
+    const cl = mk(sh, 'clink', 21), itd = mk(sh, 'itdoes', 66), rent = mk(sh, 'rent', 91), srv = mk(sh, 'servers', 220), lts = mk(sh, 'lights', 260), leave = mk(sh, 'leave', 368);
     const tx = k < leave ? 380 : 380 + (Math.floor((k - leave) / 2) + 1) * 10;
-    const tArm = k >= srv && k < lts ? 'ring' : 'clasp';
+    const clinking = k >= cl - 4 && k < cl + 12;
+    const tArm = (k >= srv && k < lts) || clinking ? 'ring' : 'clasp';
     const tMouth = lipOn(sh, k, 'TASYA') ? mouth(sh, k, 'TASYA') : 'smile';
     const masDown = k >= itd && k < rent;
     deal2S(fb, f, {
-      pan: 110, check: 'floor', collars: 3,
+      pan: 110, check: 'floor', collars: 3, collarPop: k >= cl && k < cl + 4 ? k - cl : undefined,
       mas: {mouth: say(sh, k, 'MAS'), head: masDown ? 'down' : '34', lid: masDown ? 1 : 0, look: k >= mk(sh, 'lot', 355) - 30 && k < mk(sh, 'lot', 355) ? 0 : 1},
-      tasya: tx < 480 ? {mouth: tMouth, lid: blinkLid(k, 6, 103), brow: 'warm', arm: tArm, keys: 11, jangle: (tArm === 'ring' ? Math.floor(f / 5) % 2 : 0) as 0 | 1} : null,
+      tasya: tx < 480 ? {mouth: tMouth, lid: blinkLid(k, 6, 103), brow: 'warm', arm: tArm, keys: 11, jangle: (clinking ? (k >= cl && k < cl + 3 ? 1 : 0) : tArm === 'ring' ? Math.floor(f / 5) % 2 : 0) as 0 | 1} : null,
       tasyaX: tx,
     });
   },
 });
+L.add('v32-9.10k', {
+  st: 'KIT-KEY-RING drawKeyRingECU (weeks on: the ring at Tasya\'s belt, large for the first time: eleven keys in brass, steel and copper spread round the arc, and a new twelfth in NopeAI beige hanging at the front, its bow stamped NOPEAI; it jangles on the jangle as he turns toward the TV; the rail FEB 7, 2023 in the band, clear of it)',
+  marks: {j: ['snd', 'key_ring_jangle_2', 1, 0]},
+  draw: (fb, k, sh, f) => {
+    const j = mk(sh, 'j', 9);
+    drawKeyRingECU(fb, f, {keys: 12, jangle: (k >= j && k < j + 3) || (k >= j + 6 && k < j + 9) ? 1 : 0});
+  },
+});
 L.add('9.10', {
-  st: 'ROOM-LOBBY-DEAL drawDealWide (weeks on, the time jump held: the check scuffed grey on the floor, Gerg sitting on its edge with his laptop, Mas at the desk, Tasya where he stood with a twelfth key in NopeAI beige that catches the light; the TV comes on with GNIB (UI-TV drawTvPicture)) + extras.passerBy (an employee crossing the check without looking down) · Gerg and Tasya at room scale from their takes',
+  st: 'ROOM-LOBBY-DEAL drawDealWide (weeks on, the time jump held: the check scuffed grey on the floor, Gerg sitting on its edge with his laptop, Mas at the desk, Tasya where he stood with a twelfth key in NopeAI beige that catches the light; the TV comes on with GNIB, Sydney in its box; Gerg looks up from his laptop to it for his line and stays on Tasya, a listener reacting, through "…we made them dance…") + extras.passerBy (an employee crossing the check without looking down) · Gerg and Tasya at room scale from their takes',
   face: {GERG: 'room', TASYA: 'room'},
   marks: {tv: ['txt', 'TV: MACROSOFT', 'at', 0], walk: ['snd', 'synth:steps_stone', 1, -16]},
   draw: (fb, k, sh, f) => {
@@ -634,13 +665,13 @@ L.add('v31-10.02', {
   },
 });
 L.add('v31-10.03', {
-  st: 'SET-SYDNEY drawSydney2STasya (held: Tasya frame right, twelve keys, the smile unbroken; his near hand clips the landlord\'s egg timer to Sydney\'s chain on the tick (clip 1 → 2), its face 5; "House rules, Sydney. Five questions, then a fresh start." lip-synced, blinking; Sydney keeps her 😊)',
+  st: 'SET-SYDNEY drawSydney2STasya (held: Tasya frame right, twelve keys, the smile unbroken; his near hand clips the landlord\'s egg timer to Sydney\'s chain on the tick (clip 1 → 2), its own face reading 5 QUESTIONS; "House rules, Sydney." lip-synced, blinking; Sydney keeps her 😊)',
   face: {TASYA: 'lip'},
   marks: {clip: ['snd', 'pen_tick_1', 1, 0]},
   draw: (fb, k, sh, f) => {
     const c = mk(sh, 'clip', 21);
     const clip = (k < 4 ? 0 : k < c ? 1 : 2) as 0 | 1 | 2;
-    drawSydney2STasya(fb, f, {clip, n: 5, sydney: {face: 'smile'}, tasya: {mouth: lipOn(sh, k, 'TASYA') ? mouth(sh, k, 'TASYA') : 'smile', lid: blinkLid(k, 7, 89), brow: 'warm'}});
+    drawSydney2STasya(fb, f, {clip, n: 5, timerFace: 'questions', sydney: {face: 'smile'}, tasya: {mouth: lipOn(sh, k, 'TASYA') ? mouth(sh, k, 'TASYA') : 'smile', lid: blinkLid(k, 7, 89), brow: 'warm'}});
   },
 });
 L.add('v31-10.04', {
@@ -685,7 +716,7 @@ L.add('11.01', {
 /** the split's foot a rung down (both panes): the V.O. rows on shadow (the left pane is a day room) */
 const splitFoot = (fb: Buf) => bottomShade(fb, 180, 1);
 L.add('11.03', {
-  st: 'SPLIT-DUEL drawDuelSplit phrase 1: the right pane held clean for Mas\'s V.O. (CLOD unlit, waiting; Mario writing, no scroll yet; the left pane quiet, Gerg typing) · then LEFT the demo (Gerg holding up the napkin and photographing it on the shutter; the photo on the demo screen) · RIGHT Mario dictating his memo as the scroll grows · plates CLOD 1 · SAME DAY and MARIO in the right pane',
+  st: 'SPLIT-DUEL drawDuelSplit phrase 1: the right pane held clean for Mas\'s V.O. (CLOD unlit, waiting; Mario writing, no scroll yet; the left pane quiet, Gerg typing) · then LEFT the demo (Gerg holding up the napkin and photographing it on the shutter; the photo on the demo screen) · RIGHT Mario dictating his memo as the scroll grows · plates CLOD 1 · SAME DAY and MARIO · EX-NOPEAI in the right pane (the relation the cut V.O. carried)',
   marks: {memo: ['on', 'e1-a1-11-01', 0], memoEnd: ['end', 'e1-a1-11-01', 0], snap: ['snd', 'camera_shutter', 1, 0]},
   draw: (fb, k, sh, f) => {
     const m0 = mk(sh, 'memo', 141), m1 = mk(sh, 'memoEnd', 300), snap = mk(sh, 'snap', 206);
@@ -699,36 +730,44 @@ L.add('11.03', {
     splitFoot(fb);
     plate(fb, sh, k, 'CLOD', 250, 14, PAL.W5);
     const mt = textOf(sh, 'label', 'MARIO');
-    if (mt && k >= mt.s && k < mt.e) drawPlate(fb, {...mt, kind: 'plate'}, k - mt.s, 404, 90, ACCENT.MARIO ?? PAL.F6);
+    if (mt && k >= mt.s && k < mt.e) drawPlate(fb, {...mt, kind: 'plate'}, k - mt.s, 388, 90, ACCENT.MARIO ?? PAL.F6);
   },
 });
 L.add('11.04', {
-  st: 'SPLIT-DUEL drawDuelSplit phrase 2 {left.caption: false}: RIGHT the launch light slams on and CLOD bows ("You\'re absolutely right!"), then rises; Mario looks up at the split line (the same day), "Addendum.", writes · LEFT, silent, the napkin swaps into a working website in two drawings with no caption, and the bullpen cheers in two held drawings on the cheer · HOLD on Mario writing',
+  st: 'SPLIT-DUEL drawDuelSplit phrase 2 {left.caption: false}: RIGHT the launch light slams on and CLOD bows ("You\'re absolutely right!"), then rises; Mario looks up at the split line (the same day), "Addendum.", writes · LEFT, GTP-4 goes out on HIS click: the pane cuts in to 5.08\'s insert (extras.paneButton: the beige button, research preview; his finger comes in with no hover in 5.08\'s held steps; touch, the click, the LED), and on the click the pane is back in the bullpen with the napkin swapped into a working website, no caption, the room cheering in two held drawings on the cheer · HOLD on Mario writing',
   marks: {clod: ['on', 'e1-a1-11-02', -2], clodEnd: ['end', 'e1-a1-11-02', 0], add: ['on', 'e1-a1-11-03', 0], cheer: ['snd', 'synth:cheer', 1, 0]},
   draw: (fb, k, sh, f) => {
-    const c0 = mk(sh, 'clod', 6), c1 = mk(sh, 'clodEnd', 41), add = mk(sh, 'add', 76), ch = mk(sh, 'cheer', 114), site = ch - 10;
+    const c0 = mk(sh, 'clod', 6), c1 = mk(sh, 'clodEnd', 41), add = mk(sh, 'add', 76), ch = mk(sh, 'cheer', 114), site = ch - 4;
     const mario = k < c1 + 10 ? 'write' : k < add ? 'lookup' : k < add + 22 ? 'dictate' : 'write';
     const cheer = k >= ch && k < ch + 38 ? ((Math.floor((k - ch) / 6) % 2) + 1) as 1 | 2 : 0;
+    // his click (no stick spot: it falls 6 frames before the cheer, 2 before the website): the insert from a beat
+    // before his finger arrives, in 5.08's held steps, then back to the room on the click's 4th frame
+    const clk = site - 2, a0 = clk - 16, in0 = a0 - 8, out = clk + 4;
     drawDuelSplit(fb, f, {
-      left: {gerg: k < site ? 'glance' : 'type', screen: k < site ? 'napkin' : k < site + 6 ? 'site1' : 'site2', cheer, caption: false},
+      left: {gerg: k < out ? 'glance' : 'type', screen: k < out ? 'napkin' : k < out + 6 ? 'site1' : 'site2', cheer, caption: false},
       right: {light: k >= c0 ? 1 : 0, clod: k >= c0 && k < c1 + 4 ? {pose: 'bow', smile: true} : {}, mario, scroll: 50 + Math.floor(Math.max(0, k - add) / 10), f},
     });
+    if (k >= in0 && k < out) {
+      const steps: Array<[number, number, number]> = [[in0, -400, -300], [a0, -96, -64], [a0 + 4, -48, -32], [a0 + 8, -14, -9], [a0 + 12, 0, 0]];
+      const st = steps.filter(([s0]) => k >= s0).pop()!;
+      paneButton(fb, (k >= clk ? 2 : k >= clk - 3 ? 1 : 0) as 0 | 1 | 2, st[1], st[2], k >= clk);
+    }
     splitFoot(fb);
   },
 });
 
 // ================================================================== SC 12 · THE PAUSE LETTER (the act-out)
 L.add('12.01', {
-  st: 'UI-PAUSE-LETTER drawLetterOTS (over his shoulder at night: his monitor lights with PAUSE GIANT AI EXPERIMENTS on the toast; the push to full-bleed in held steps) → the whip on the paper\'s sound → drawClipboard gliding through the dark toward frame right (its clip\'s fine print PAUSES RECEIVED: 0 legible), into 12.02\'s glide',
+  st: 'UI-PAUSE-LETTER drawLetterOTS {months} (over his shoulder at night: his monitor lights with PAUSE GIANT AI EXPERIMENTS on the toast, and under it the letter\'s own line 6 MONTHS; the push to full-bleed in held steps) → the whip on the paper\'s sound → drawClipboard gliding through the dark toward frame right (its clip\'s fine print PAUSES RECEIVED: 0 legible, 6 MONTHS on it too) under Nole\'s pre-lap, into 12.02\'s glide',
   marks: {toast: ['snd', 'ui_toast_pop', 1, 0], whip: ['snd', 'paper_whip', 1, 0]},
   draw: (fb, k, sh, f) => {
     const t = mk(sh, 'toast', 9), w = mk(sh, 'whip', 52);
     const push = k < w - 14 ? 0 : k < w - 10 ? 1 : k < w - 6 ? 2 : 3;
-    if (k < w) { drawLetterOTS(fb, f, {k: k - t, push}); return; }
+    if (k < w) { drawLetterOTS(fb, f, {k: k - t, push, months: true}); return; }
     if (k < w + 3) { // the whip: the full-bleed page slides off to the right in three held frames, the dark behind it
       for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) fb.set(x, y, PAL.N0);
       const dx = [150, 300, 420][k - w];
-      drawLetterPage(fb, dx, 0, 480, RH);
+      drawLetterPage(fb, dx, 0, 480, RH, {months: true});
       for (let y = 0; y < RH; y++) for (let x = dx - 24; x < dx; x++) if (x >= 0 && bayer(x, y) < (x - dx + 24) / 24) fb.set(x, y, PAL.P0);
       return;
     }
@@ -736,15 +775,15 @@ L.add('12.01', {
     const kk = k - (w + 3), gx = 150 + Math.floor(kk / 3) * 5, gy = 58 + Math.floor(kk / 6);
     // a faint lamp pool far off to the right: where it is going
     for (let y = 60; y < RH; y++) for (let x = 330; x < 480; x++) { const d = Math.hypot((x - 470) / 150, (y - 150) / 80); if (d < 1 && bayer(x, y) < (1 - d) * 0.35) fb.set(x, y, PAL.D1); }
-    drawClipboard(fb, gx, gy, {});
+    drawClipboard(fb, gx, gy, {months: true});
   },
 });
 L.add('12.02', {
-  st: 'ROOM-NOLE-DESK drawNoleDesk (a standing desk in the dark, his lamp: the clipboard glides in from the left in held steps and lands; he signs with his left hand (the flourish on the scribble) and solders a GPU under the desk with his right (sparks on the crackles); OIGNEB holds up PAUSE, higher for his line) · Nole and Oigneb at room scale from their takes · plates NOLE · BUILDING HIS OWN (riding the sparks) and OIGNEB',
+  st: 'ROOM-NOLE-DESK drawNoleDesk (a standing desk in the dark, his lamp: the clipboard glides in from the left in held steps and lands at desk size under Nole\'s pre-lap; he signs with his left hand (the flourish on the scribble) and solders a GPU under the desk with his right (sparks on the crackles); OIGNEB holds up PAUSE, higher for "You signed it. Now put the iron down.") · Nole and Oigneb at room scale from their takes · plates NOLE · EARLY FUNDER · BUILDING HIS OWN (riding the sparks) and OIGNEB',
   face: {NOLE: 'room', OIGNEB: 'room'},
-  marks: {sign: ['snd', 'pen_scribble_short', 1, 0], c1: ['snd', 'synth:crackle', 1, 0], c2: ['snd', 'synth:crackle', 2, 0], og: ['on', 'e1-a1-12-02', -2], ogEnd: ['end', 'e1-a1-12-02', 12]},
+  marks: {sign: ['snd', 'pen_scribble_short', 1, 0], c1: ['snd', 'synth:crackle', 1, 0], c2: ['snd', 'synth:crackle', 2, 0], og: ['on', 'v32-a1-0007', -2], ogEnd: ['end', 'v32-a1-0007', 12]},
   draw: (fb, k, sh, f) => {
-    const sg = mk(sh, 'sign', 7), c1 = mk(sh, 'c1', 19), c2 = mk(sh, 'c2', 86), og = mk(sh, 'og', 97), ogE = mk(sh, 'ogEnd', 223);
+    const sg = mk(sh, 'sign', 7), c1 = mk(sh, 'c1', 19), c2 = mk(sh, 'c2', 86), og = mk(sh, 'og', 67), ogE = mk(sh, 'ogEnd', 142);
     const clip = k < 2 ? 1 : k < 4 ? 2 : k < 6 ? 3 : 4;
     const sparks = k >= c1 && k < c1 + 34 ? k - c1 : k >= c2 && k < c2 + 24 ? k - c2 : null;
     drawNoleDesk(fb, f, {
@@ -752,7 +791,8 @@ L.add('12.02', {
       nole: {mouth: room3Mouth(sh, k, 'NOLE')},
       oigneb: {sign: k >= og && k < ogE ? 'high' : 'chest', mouth: roomMouth(sh, k, 'OIGNEB') === 'open' ? 'open' : 'rest', blink: blinkLid(k, 8, 91) === 2},
     });
-    plate(fb, sh, k, 'NOLE', 262, 152, PAL.R3);
+    // his plate above him, in the dark (the relation words make it wide: at his feet it would run over Oigneb)
+    plate(fb, sh, k, 'NOLE', 132, 40, PAL.R3);
     plate(fb, sh, k, 'OIGNEB', 356, 58, PAL.N7);
   },
 });
@@ -798,4 +838,4 @@ L.add('12.07', {
 });
 
 void LAUNCH; void stepColor; void ease2; void rect;
-export const SEGMENT = defineSegment({seg: 'act1', lock: LOCK, layouts: L.all, review: {subtitle: 'PIXEL v3.1 · LOCK ACT1 (v3.1 STICK TIMING) · v3-shots-act1'}});
+export const SEGMENT = defineSegment({seg: 'act1', lock: LOCK, layouts: L.all, review: {subtitle: 'PIXEL v3.2 · LOCK ACT1 (v3.2 STICK TIMING) · v3-shots-act1'}});
