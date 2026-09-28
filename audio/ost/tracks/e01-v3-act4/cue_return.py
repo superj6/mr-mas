@@ -6,7 +6,9 @@ lock's ids, with v3's calls (v3-plan §6: "triumph, one size too big"):
      decays under the hearts and the exchange (no stop).
   b  Tasya's floor pre-laps under the decay (the bare A-flat fifth), then a chord on each of "below", "above",
      "around" (A-flat, C, E maj9, silent attacks), the Rhodes bloom, home to A-flat maj9 under the rail.  (v3: the
-     pre-lap sits under Tasya's own "Everyone's packed..." (v3-a4-0002), not under Mas's cut question.)
+     pre-lap sits under Tasya's own "Everyone's packed..." (v3-a4-0002), not under Mas's cut question.  v3.3: the line
+     is the employee's (v33-a4-0001), Tasya's is a TV clip (v33-a4-0002), and "Down here." is cut, so the floor goes
+     home under his look down at the slate floor, S7.03.)
   c1 LEVERAGE fades in under Mada among the fires, the door bang inside it, thinned to its F pedal under Terb's
      reading and the terms, and a DEAD STOP on "of what?" (Mada's pause, "Good question.", "good question." and the
      long hold play in the room).
@@ -42,14 +44,17 @@ Q = 0.625
 
 def events(c):
     B, txt, snd, Lon, Lend, W = c.B, c.txt, c.snd, c.Lon, c.Lend, c.W
-    HELLO = 'v31-a4-0014' if 'v31-a4-0014' in c.LINES else 'a5-30-07'     # v3.1: "Down here." (was "Hello.")
+    HELLO = 'v31-a4-0014' if 'v31-a4-0014' in c.LINES else ('a5-30-07' if 'a5-30-07' in c.LINES else None)
+    Q_ = 'v33-a4-0001' if 'v33-a4-0001' in c.LINES else 'v3-a4-0002'      # v3.3: the employee's line
+    REC = 'v33-a4-0002' if 'v33-a4-0002' in c.LINES else 'v3-a4-0003'      # v3.3: Tasya's TV clip
     E = dict(
         s7=B('S7.01'), post=txt('S7.01', 'POST: ALYI'), post_end=txt('S7.01', 'POST: ALYI', end=True),
         heart1=snd('S7.01', 'key_tap_soft_02'), iou=txt('S7.01', 'IOU'),
-        wide=B('S7.02'), q_on=Lon('v3-a4-0002'), tasya=B('S7.02b'), rec_on=Lon('v3-a4-0003'),
-        rec_end=Lend('v3-a4-0003'), below=W('v3-a4-0003', 'below'), above=W('v3-a4-0003', 'above'),
-        around=W('v3-a4-0003', 'around'), s703=B('S7.03'),
-        hello=Lon(HELLO), hello_end=Lend(HELLO),
+        wide=B('S7.02'), q_on=Lon(Q_), tasya=B('S7.02b'), rec_on=Lon(REC),
+        rec_end=Lend(REC), below=W(REC, 'below'), above=W(REC, 'above'),
+        around=W(REC, 'around'), s703=B('S7.03'),
+        # v3.3: "Down here." is cut; his look down at the slate floor holds (S7.03): the floor goes home under it
+        hello=Lon(HELLO) if HELLO else B('S7.03'), hello_end=Lend(HELLO) if HELLO else B('S7.03') + 0.05,
         s705=B('S7.05'), rail21=txt('S7.05', 'RAIL'), bang=B('S7.06'), freeze=snd('S7.06', 'freeze_hit_F'),
         which=Lon('a5-30-08'), ah=Lon('a5-30-09'), calm=B('S7.07'), read_on=Lon('v3-a4-0004'),
         read_end=Lend('v3-a4-0004'), staying_end=Lend('a5-30-11'), stays_on=Lon('a5-30-12'),
@@ -85,7 +90,8 @@ def build():
     from senza import prewarm   # noqa: E402
     T = mm11.tracks()
     T['vla'].eq = list(T['vla'].eq) + [('peq', 111.3, -10.0, 8.0)]
-    T['vc_lev'].eq = list(T['vc_lev'].eq) + [('peq', 112.0, -8.0, 10.0)]
+    T['vc_lev'].eq = list(T['vc_lev'].eq) + [('peq', 112.0, -8.0, 10.0), ('peq', 107.5, -8.0, 10.0)]   # (v3.3 EL: the
+    # pizz body's ~108 Hz read as an A under LEVERAGE's F pedal, class 'resonance', A/F 0.083 against 0.08)
     T['vln1'].eq = list(T['vln1'].eq) + [('peq', 440.0, -8.0, 5.0)]    # the violin pizz body (~430-450 Hz)
     T['hn'].gain_db = T['hn'].gain_db - 3.0
     prewarm(['Ab3', 'Db4', 'C4', 'G3'], vels=(0.5,))
@@ -142,7 +148,8 @@ def build():
             (bl, 'b: "below": A-flat maj9 (silent attack)', False), (ab, 'b: "above": C maj9', False),
             (ar, 'b: "around": E maj9', False)]
     cue.mark(bloom, 'b: the bloom (the Rhodes on the beats)')
-    cue.mark(home, 'b: home (A-flat maj9) under the rail')
+    cue.mark(home, 'b: home (A-flat maj9) under the rail' if E['hello'] != E['s703'] else
+             'b: home (A-flat maj9) under his look down at the slate floor')
     if E['invite'] is not None:                              # v3.1: Tuesday's invite; he taps Accept, no hover
         a.n('felt', 'F4', s(E['invite'] + 0.02), 1.6, 0.26)
         a.n('felt_mech', 60, s(E['invite'] + 0.02), 0.1, 0.3)

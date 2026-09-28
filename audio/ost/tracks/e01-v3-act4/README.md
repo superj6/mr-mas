@@ -1,6 +1,6 @@
 # E01 v3 · Act Four · the Blip, told twice (score)
 
-**What this is (pass `v3-score-b`, track A1 of [PLAN.md](../../../../show/episodes/ep01/production/full-v3/PLAN.md); v3.2 refit 2026-09-28).** Seven cues, rendered by the OST engine and laid on Act Four's own clock (0 = the segment's first frame) on the **final v3.2 lock** (`show/reel/ep01-v32/`, script draft 8.1; record in `lock-v32.md`) into one stem: `render/music.wav`, 48 kHz / 24-bit stereo, exactly the segment's length. It sits at underscore level (the avalanche at featured level) and is dry of dialogue; the mixer ducks it. **Nothing here has been listened to.** Every number below is measured.
+**What this is (pass `v3-score-b`, track A1 of [PLAN.md](../../../../show/episodes/ep01/production/full-v3/PLAN.md); v3.3 refit 2026-09-28).** Seven cues, rendered by the OST engine and laid on Act Four's own clock (0 = the segment's first frame) on the **final v3.3 lock** (`show/reel/ep01-v33/` a756708, EL `ep01-v33-el/` a170aaa; record in `lock-v33.md`, notes `script-v33-notes.md`) into one stem: `render/music.wav`, 48 kHz / 24-bit stereo, exactly the segment's length. It sits at underscore level (the avalanche at featured level) and is dry of dialogue; the mixer ducks it. **Nothing here has been listened to.** Every number below is measured.
 
 **The first round, restored.** The lead relayed the showrunner: "i liked the initial ost that was presented… we want to make sure we're keeping a unique sound, not toning down to overly generic". So this is the first-round score (commit 7d7a99f), restored after a restrained revision was withdrawn, with one change: **the avalanche's peak is about 2 dB down**. The last two phrases are ridden −2 dB and the cue's target goes −16 → −17, because the engine normalises each cue to its target. Phrases 3–4 read −16.9 / −16.8 LUFS, against −14.9 / −15.1 before. The rest is kept:
 - the Build stops dead on Gerg's look at 2 AM;
@@ -42,6 +42,16 @@
   - **Her pen runs down the list faster** (S3.02 is 1.6 s): Step Four goes in eighths, one step on each item.
   - The blog post is read silently now; the blank's F holds under it.
   - "gerg never waits to be asked." is cut: the pad alone holds Gerg's look.
+
+**v3.3 (the refit; lock-v33.md, script-v33-notes.md).** The act is about 3.6 s shorter. The score is the same, re-spotted, with these changes:
+- **S4.10b: "Okay." is cut.** Ttemme turns the page over toward us, and its back is blank. The folder's held chord leaves its F alone at that moment (the pixel pass's frame, S4.10b + 326 f): Step Four's blank, the list's "4. ____", once more.
+- **S7.02–S7.03:**
+  - the employee's new line (v33-a4-0001) carries the floor's pre-lap;
+  - Tasya's line is a TV clip (v33-a4-0002), and its three words keep their chords (below, above, around);
+  - the Rhodes bloom sits in the clip's 1.35 s hold;
+  - with "Down here." cut, the floor goes home under his look down at the slate floor (S7.03).
+- **Unchanged beats:** S4.02's push-in and its phones on "That is the company telling us." (their pizz follow the buzzes, as before), and the S7.13 hourglass (264 frames).
+- **Kept:** X2's 5 ms rest fades, X3's early re-entry, the lobby, the badge, the shock opening and the avalanche at −2 dB.
 
 **v3.3 polish (PLAN §6 X2, X3; audit-v32 #5, #6).** Two measured fixes, in the cue code so they carry into the v3.3 refit:
 - **X2, the stop on ALYI** (film 17:13.27): the 2 AM rest went from −13 dBFS to digital zero in one sample, so it would tick. The lay now takes every designed rest and every marked silence to zero through a 5 ms fade (`v3lay.py`, shared with Act Three), like the other dead stops. On the stem, the largest sample step there is now −39.4 dBFS (was −17.2) and the second difference 0.002 (was 0.144, 474× local; now 7×).
@@ -94,7 +104,7 @@ audio/.venv-theme/bin/python audio/ost/tracks/e01-v3-act4/track.py --assemble [-
 - the line spans and word times;
 - the sounds and the on-screen texts.
 
-The default reads `show/reel/ep01-v32/ep01-v32-act4.json`, and `--variant el` reads `show/reel/ep01-v32-el/ep01-v32-el-act4.json`. `--timeline PATH` reads any timeline with the same ids. `MRMAS_V3_LOCK=v31` points the clock at the v3.1 lock (`show/reel/ep01-v31/`). The cues check for v3.2's new beats, so it still builds (dry-built; not rendered). The v3.1 renders are at commit 14c7ec1, the first round at 7d7a99f.
+The default reads `show/reel/ep01-v33/ep01-v33-act4.json`, and `--variant el` reads `show/reel/ep01-v33-el/ep01-v33-el-act4.json`. `--timeline PATH` reads any timeline with the same ids. `MRMAS_V3_LOCK=v32` (or `v31`) points the clock at an earlier lock. The cues check for the new and cut beats, so those still build (dry-built; not rendered). The v3.1 renders are at commit 14c7ec1, the first round at 7d7a99f.
 
 A few marks aren't in the timeline:
 - **v5's pixel-lock offsets from their beat:** the glass nudge, the moth, the fold's curl, mark 3, the hourglass flip, the slate door and Cancel's greying. These beats have no lines, and the ElevenLabs builder leaves such beats frame for frame, so the offsets hold.
@@ -105,7 +115,7 @@ Where a re-timed lock moves Mada's label, the avalanche's stop follows the label
 
 ## The cue sheet
 
-The times are the Kokoro v3.2 lock's (segment seconds). The ElevenLabs lock moves them with its beats and lines.
+The times are the Kokoro v3.3 lock's (segment seconds). The ElevenLabs lock moves them with its beats and lines.
 
 | s | Sequence (picture) | Palette · motif | Hits (story sounds and turns) | Thins under | Stops · transitions |
 |---|---|---|---|---|---|
@@ -120,27 +130,27 @@ The times are the Kokoro v3.2 lock's (segment seconds). The ElevenLabs lock move
 | 175.4–194.0 | **The split: Mario** (S4.08) | P02 · **the Lighthouse** · **the Addendum** | the Lighthouse on the first ring (175.37), thinned under the talk; the Addendum on "some thoughts" (186.33); **"no." cuts its tail** (192.26) and nothing lands after it | the offer; the eleven pages | the B♭ pedal holds under the dial tone and leaves on the cut to the lobby |
 | 194.0–202.0 | **The lobby by day, his side** (v32-S5.00: the GUEST lanyard, the selfie, his post, his look up at their camera) | — · **one felt note** | **no score** under the lanyard, the shutter and his post (the lobby's room; marked, digital zero); **ONE FELT NOTE, the nudge's G4, on his look up** (199.24), ringing as the picture steps out into their camera's frame | — (no lines) | the CCTV hum L-cuts into S4.09 |
 | 202.0–213.3 | **Sunday: the reversal** (S4.09: the phones in a row, the ticker, the lobby camera) | P02 | **one dry cello pizz per phone** (B♭ B♭ F F: STAFF STAFF INVESTORS INVESTORS, 202.08); the pedal; her clockwork only in the gaps (212.22); a soft tick | "…we're no closer.", the badge lines (the pedal and the tick) | — |
-| 213.3–234.1 | **Ttemme, the folder, the hourglass** (S4.10–S4.11) | P02 · **the hourglass** | the straight-mute accent F4 → B♭4 and the pulse on the spotlight (213.29); a held chord under the sealed folder's long beat (229.19); **one pizz grain a beat, falling**, from the flip (232.21) | the offer (a tick) | — |
-| 234.1–253.0 | **Tasya's door** (S4.12–S4.13e) | **Tasya's floor** (the landlord's mediants) + his Rhodes | A♭maj9 on the slate (silent attack, 234.12), Cmaj9 as the door opens (235.54), the Rhodes on the beats as he appears (237.04; the jangle owns the offbeats), **Emaj9 on the statement [V]** (241.77: a colour, not a swell), home to A♭maj9 and one Rhodes chord on the sign (250.08) | "You'll want to hear our statement." (the floor settles); the statement (the held chord) | — |
-| 253.0–258.3 | **"Step four, Mada?"** (S4.14–S4.15) | P02 · **Mada's spinner** | the clockwork winds down (253.04) and **hangs on one held C over the blank's F** (253.88); the spinner under his silence (255.96) | "Step four, Mada?" | **the door back:** the F leaves before the dark room's drone J-cuts in; the C rings on into S5.02 and becomes the major seventh of his D-flat chord |
-| 258.3–288.8 | **2 AM: the home shot (the glass, the GUEST lanyard), the hearts, the Orb, Gerg rings** (S5.02–S5.09) | **P01 warm** (D♭ lydian / A♭) · **the Water Line** · **the Build** | the felt alone in the dark (258.40); the Water Line, warm (259.03); the felt's count, quarters on the hearts' tempo on varied pitches (263.41); one held chord for the Orb's look (268.76); A♭maj9 on the ring (274.06); **the Build (chip + felt) in compile passes** (277.31 · 281.69 · 284.19 · 286.69) | "four hundred and six…" (inside the count); "the badge was a joke." / "mostly." (one chord); Mas's lines (nothing starts) | — |
-| 288.8–323.5 | **The letter; ALYI; "He did both."; the check** (S5.06–S5.08) | P01 · a sul-tasto D♭3/A♭3 pedal + **a soft walking pulse** | the pedal and the walk from the letter (291.53); **out on the scroll's stop at ALYI** (309.39); **back on "He did both."** (313.54: the pedal alone); the felt returns softly with the check (317.93) | the quoted lines: only the pedal and the walk | the rest (309.39 → 313.54) is marked, digital zero |
-| 323.5–334.9 | **The Build returns; the look** (S5.09-back–S5.09b) | the Build | the Build with his keys (323.56); 8 under "The company. Again. Just in case." (325.44); a soft A♭3/E♭4 pad; **a pass cut dead on his look up** (327.78 → 328.83), the pad holding | "So. Do I tell everyone to pack?" / "keep building." (the pad) | — |
-| 334.9–350.5 | **The door; the badge** (S5.11) | **Tasya's floor** + his Rhodes | the floor's silent steps A♭ → C → E → A♭ (334.89 · 337.81 · 339.35 · 341.67); **one soft Rhodes chord on the door** (334.90), **a second on "desk"** (341.67); the floor holds as **the MACROSOFT badge slides under the door** (347.27); **he sets it down unworn: the floor's third leaves** (349.77) | Tasya's lines, pre-lapped through the door (the floor) | — |
-| 350.5–356.0 | **"leave it open."** (S5.12) | P01 | nothing under the line; then the felt takes the landlord's chord back **without its third** (E♭3 A♭3 B♭3) and settles C4 → F4 over it (352.33) | "leave it open." | it rings out to the avalanche's first frame |
-| 356.0–370.2 | **The avalanche** (S6) | **P11 SET-PIECE SWING** (MM-10 b): **the one full band**, featured, its peak ~2 dB down | MM-10's own bars at exactly 96 BPM: the compile (356.00), the Build at 16 (358.50) and the brass kick, Step Four's G-flat (361.00), **Alyi resists one beat** (362.25), Neleh's window (364.22), the board's bowed F pedal (365.06) ending silently on THE QUIET VOTE (366.88), the Water Line augmented (366.00), **the full band on C7(♯9♭13)** (368.50) | Neleh's "Has anyone read the char—" (a window with no lead) | **DEAD STOP on MADA's label** (370.17; the swung "and" of beat 3, bar 6); marked silence to the violin |
-| 372.1–411.0 | **Monday: Alyi's regret; the landlord becomes the room; Tuesday's invite** (S7.01–v31-S7.03b) | **STRAIGHT** → **Tasya's floor** | **the Door on the senza-vibrato solo violin, under the post only** (374.31); on the first heart its G3 holds and decays (379.46); the floor pre-laps under it (391.01); a chord on each of **"below", "above", "around"** (400.51 · 401.78 · 403.00); the Rhodes bloom (404.15); home to A♭maj9 under the rail (407.44); **one felt F4 on his Accept** (409.86) | the exchange (the decay); Tasya's lines (the floor, silent attacks) | — |
-| 411.0–447.3 | **Tuesday night: the fires, Terb, the terms** (S7.05–S7.08) | **P03 LEVERAGE** | LEVERAGE fades in under Mada (411.58); the door bang inside it (412.83); the pin's click gets its eighth to itself; thinned to its F pedal under Terb's reading and the terms (422.46) | Terb's reading [V]; the terms | **DEAD STOP on "of what?"** (447.35 → the stamp): Mada's pause, both "good question"s and the long hold play in the room (marked, digital zero) |
-| 455.4–471.1 | **The stamp; Gerg's post; Ttemme's hourglass** (S7.09–S7.13, 264 frames) | the stamp's **C pedal** · **the Build** | a low C pedal bows in on the stamp (455.41); **Gerg's Build restarts on his post** (456.06, soft, A-flat, F4–C5 under the keycaps); one pizz grain on the last grain (459.50); the pedal under his stream; **THE TURN on "we're so back"** (466.17: the pedal up to E♭, the Build comes in); **the shatter** (466.42): a dead stop, the sand stands; **the slump** (467.88): the E♭ pedal swells back and the Build compiles through the pour; the timpani rolls from the boardroom (469.71) | the posts (the pedal alone) | **the held beat** (466.42 → 467.88) is marked digital zero |
-| 471.1–476.6 | **The lobby sign; the old dialog** (S8.01–S8.03) | **P09 VICTORY LAP**, one size too big | **the brass stab on the sign** (471.12) and a bar and a half of A-flat major: strings tutti, horns, a timpani roll, the Build at full, the top line E♭5 → A♭5 → C6 on violins and chip (472.05); **one chip note hangs** (473.62: the undercut); the 1993 flat line F5 · F4 · F5 under the Remove dialog (474.41); the bonk (the SFX's E3) | — | **no score from the bonk to "okay."** (marked, digital zero): the CU "silent like the first" on the lobby's neon F |
-| 480.4–508.5 | **"okay."; the vault; the memo; the chair** (S8.05–S8.10) | P01 → **P05 (diegetic)**: **the vault's F** | the felt C4 → F4 over an open fifth after "okay." (480.44 / 480.86); **the vault's F**: a glass pedal F3/C4 matched to the hum's fan tones (482.21); **the Ache** (G4 + D♭5, pure beating tones) for the vault's own shot, cut with the picture (482.51–485.00) | Gerg and Mas; **the memo [V]** (the pedal alone) | **the act ends on the pedal**; its release is `render/music-ringout.wav` (4.2 s) |
+| 213.3–234.8 | **Ttemme, the folder, the hourglass** (S4.10–S4.11) | P02 · **the hourglass** | the straight-mute accent F4 → B♭4 and the pulse on the spotlight (213.29); a held chord under the sealed folder's long beat (229.19), **leaving its F alone when the page's back turns out blank** (231.17: Step Four's blank again); **one pizz grain a beat, falling**, from the flip (232.96) | the offer (a tick) | — |
+| 234.8–253.8 | **Tasya's door** (S4.12–S4.13e) | **Tasya's floor** (the landlord's mediants) + his Rhodes | A♭maj9 on the slate (silent attack, 234.88), Cmaj9 as the door opens (236.29), the Rhodes on the beats as he appears (237.79; the jangle owns the offbeats), **Emaj9 on the statement [V]** (242.52: a colour, not a swell), home to A♭maj9 and one Rhodes chord on the sign (250.83) | "You'll want to hear our statement." (the floor settles); the statement (the held chord) | — |
+| 253.8–259.0 | **"Step four, Mada?"** (S4.14–S4.15) | P02 · **Mada's spinner** | the clockwork winds down (253.79) and **hangs on one held C over the blank's F** (254.62); the spinner under his silence (256.71) | "Step four, Mada?" | **the door back:** the F leaves before the dark room's drone J-cuts in; the C rings on into S5.02 and becomes the major seventh of his D-flat chord |
+| 259.0–289.6 | **2 AM: the home shot (the glass, the GUEST lanyard), the hearts, the Orb, Gerg rings** (S5.02–S5.09) | **P01 warm** (D♭ lydian / A♭) · **the Water Line** · **the Build** | the felt alone in the dark (259.15); the Water Line, warm (259.78); the felt's count, quarters on the hearts' tempo on varied pitches (264.16); one held chord for the Orb's look (269.51); A♭maj9 on the ring (274.81); **the Build (chip + felt) in compile passes** (278.06 · 282.44 · 284.94 · 287.44) | "four hundred and six…" (inside the count); "the badge was a joke." / "mostly." (one chord); Mas's lines (nothing starts) | — |
+| 289.6–324.2 | **The letter; ALYI; "He did both."; the check** (S5.06–S5.08) | P01 · a sul-tasto D♭3/A♭3 pedal + **a soft walking pulse** | the pedal and the walk from the letter (292.28); **out on the scroll's stop at ALYI** (310.14); **back on "He did both."** (314.29: the pedal alone); the felt returns softly with the check (318.68) | the quoted lines: only the pedal and the walk | the rest (310.14 → 314.29) is marked, digital zero |
+| 324.2–335.6 | **The Build returns; the look** (S5.09-back–S5.09b) | the Build | the Build with his keys (324.31); 8 under "The company. Again. Just in case." (326.19); a soft A♭3/E♭4 pad; **a pass cut dead on his look up** (328.53 → 329.58), the pad holding | "So. Do I tell everyone to pack?" / "keep building." (the pad) | — |
+| 335.6–351.2 | **The door; the badge** (S5.11) | **Tasya's floor** + his Rhodes | the floor's silent steps A♭ → C → E → A♭ (335.64 · 338.56 · 340.10 · 342.42); **one soft Rhodes chord on the door** (335.65), **a second on "desk"** (342.42); the floor holds as **the MACROSOFT badge slides under the door** (348.02); **he sets it down unworn: the floor's third leaves** (350.52) | Tasya's lines, pre-lapped through the door (the floor) | — |
+| 351.2–356.8 | **"leave it open."** (S5.12) | P01 | nothing under the line; then the felt takes the landlord's chord back **without its third** (E♭3 A♭3 B♭3) and settles C4 → F4 over it (353.08) | "leave it open." | it rings out to the avalanche's first frame |
+| 356.8–370.9 | **The avalanche** (S6) | **P11 SET-PIECE SWING** (MM-10 b): **the one full band**, featured, its peak ~2 dB down | MM-10's own bars at exactly 96 BPM: the compile (356.75), the Build at 16 (359.25) and the brass kick, Step Four's G-flat (361.75), **Alyi resists one beat** (363.00), Neleh's window (364.97), the board's bowed F pedal (365.81) ending silently on THE QUIET VOTE (367.62), the Water Line augmented (366.75), **the full band on C7(♯9♭13)** (369.25) | Neleh's "Has anyone read the char—" (a window with no lead) | **DEAD STOP on MADA's label** (370.92; the swung "and" of beat 3, bar 6); marked silence to the violin |
+| 372.9–408.3 | **Monday: Alyi's regret; the landlord becomes the room; Tuesday's invite** (S7.01–v31-S7.03b) | **STRAIGHT** → **Tasya's floor** | **the Door on the senza-vibrato solo violin, under the post only** (375.06); on the first heart its G3 holds and decays (380.21); the floor pre-laps under it (391.76); a chord on each of **"below", "above", "around"** (398.29 · 399.55 · 400.78); the Rhodes bloom (402.02); the TV clip's 1.35 s hold; home to A♭maj9 under his look down at the slate floor (403.48); **one felt F4 on his Accept** (407.11) | the exchange (the decay); the employee's line and Tasya's TV clip (the floor, silent attacks) | — |
+| 408.3–444.6 | **Tuesday night: the fires, Terb, the terms** (S7.05–S7.08) | **P03 LEVERAGE** | LEVERAGE fades in under Mada (408.88); the door bang inside it (410.12); the pin's click gets its eighth to itself; thinned to its F pedal under Terb's reading and the terms (419.75) | Terb's reading [V]; the terms | **DEAD STOP on "of what?"** (444.64 → the stamp): Mada's pause, both "good question"s and the long hold play in the room (marked, digital zero) |
+| 452.6–468.4 | **The stamp; Gerg's post; Ttemme's hourglass** (S7.09–S7.13, 264 frames) | the stamp's **C pedal** · **the Build** | a low C pedal bows in on the stamp (452.66); **Gerg's Build restarts on his post** (453.31, soft, A-flat, F4–C5 under the keycaps); one pizz grain on the last grain (456.75); the pedal under his stream; **THE TURN on "we're so back"** (463.42: the pedal up to E♭, the Build comes in); **the shatter** (463.67): a dead stop, the sand stands; **the slump** (465.12): the E♭ pedal swells back and the Build compiles through the pour; the timpani rolls from the boardroom (466.96) | the posts (the pedal alone) | **the held beat** (463.67 → 465.12) is marked digital zero |
+| 468.4–473.9 | **The lobby sign; the old dialog** (S8.01–S8.03) | **P09 VICTORY LAP**, one size too big | **the brass stab on the sign** (468.37) and a bar and a half of A-flat major: strings tutti, horns, a timpani roll, the Build at full, the top line E♭5 → A♭5 → C6 on violins and chip (469.30); **one chip note hangs** (470.87: the undercut); the 1993 flat line F5 · F4 · F5 under the Remove dialog (471.66); the bonk (the SFX's E3) | — | **no score from the bonk to "okay."** (marked, digital zero): the CU "silent like the first" on the lobby's neon F |
+| 477.6–505.8 | **"okay."; the vault; the memo; the chair** (S8.05–S8.10) | P01 → **P05 (diegetic)**: **the vault's F** | the felt C4 → F4 over an open fifth after "okay." (477.69 / 478.11); **the vault's F**: a glass pedal F3/C4 matched to the hum's fan tones (479.46); **the Ache** (G4 + D♭5, pure beating tones) for the vault's own shot, cut with the picture (479.76–482.25) | Gerg and Mas; **the memo [V]** (the pedal alone) | **the act ends on the pedal**; its release is `render/music-ringout.wav` (4.2 s) |
 
 ## Measured
 
 Measured on `render/music.wav` (the Kokoro v3.2 lock) and on each cue's engine cue sheet. **Nothing was heard.**
 
-- **Length:** 24,406,000 samples, 508.4583 s: the segment's 12,203 frames exactly. 48 kHz, 24-bit, stereo.
-- **Loudness, the whole act:** **−20.21 LUFS-I**, −3.15 dBTP; short-term p95 −17.37, median −20.98, max −14.04 (the VICTORY LAP).
+- **Length:** 24,276,000 samples, 505.7500 s: the segment's 12,138 frames exactly. 48 kHz, 24-bit, stereo.
+- **Loudness, the whole act:** **−20.22 LUFS-I**, −3.15 dBTP; short-term p95 −17.41, median −21.06, max −13.96 (the VICTORY LAP).
 - **Per cue** (each cue's master is normalised by the engine to its target; the window is its span on the act clock):
 
 | Cue | Window (s) | Target | LUFS-I (window) | ST p95 | Engine: rule 12 · spectral F-major · knee | Balance p·o·b·c |
@@ -148,20 +158,20 @@ Measured on `render/music.wav` (the Kokoro v3.2 lock) and on each cue's engine c
 | S1 noon (the suite → LEVERAGE → the Remove dialog → D6) | 0.00–25.90 | -20 | −20.02 | −17.72 | OK · OK · 0 | 44·35·0·22 |
 | S2 that night | 41.01–50.62 | -22 | −22.10 | −21.13 | OK · OK · 0 | 88·7·0·5 |
 | THE PLAN (Neleh's desk, 11:52 → the 11:59 tick) | 50.62–79.29 | -20 | −19.98 | −18.06 | OK · OK · 0 | 0·60·0·40 |
-| S3–S4 the board's side (lighter; the lobby, his side, inside it) | 79.29–261.40 | -21 | −20.93 | −17.68 | OK · OK · 0 | 5·73·22·0 |
-| 2 AM (the badge under the door) | 258.33–356.00 | -20 | −19.91 | −18.07 | OK · OK · 0 | 70·26·0·4 |
-| S6 the avalanche (featured; the peak ~2 dB down) | 356.00–370.17 | -17 | −16.91 | −15.16 | OK · OK · 0 | 18·42·18·22 |
-| S7–S8 the return, the hourglass, the coda | 372.12–508.46 | -20 | −19.98 | −17.64 | OK · OK · 0 | 5·84·2·9 |
+| S3–S4 the board's side (lighter; the lobby, his side, inside it) | 79.29–262.15 | -21 | −20.94 | −17.76 | OK · OK · 0 | 5·72·23·0 |
+| 2 AM (the badge under the door) | 259.08–356.75 | -20 | −19.92 | −18.07 | OK · OK · 0 | 70·26·0·4 |
+| S6 the avalanche (featured; the peak ~2 dB down) | 356.75–370.92 | -17 | −16.91 | −15.16 | OK · OK · 0 | 18·42·18·22 |
+| S7–S8 the return, the hourglass, the coda | 372.88–505.75 | -20 | −19.99 | −17.55 | OK · OK · 0 | 4·85·2·10 |
 
 - **Silence:**
   - The 7 marked silences are all digital zero in the stem:
     - 25.90 → 41.00: D6, the Remove click → the carve (the buzz, "super.", his post, the fall to night);
     - 195.46 → 199.22: the lobby by day, his side → his look up;
-    - 309.39 → 313.54: the scroll stops on ALYI → "He did both.";
-    - 370.17 → 374.31: Mada's label → the violin;
-    - 447.35 → 455.41: "of what?" → the stamp;
-    - 466.42 → 467.88: the hourglass's held beat (k173 → k208);
-    - 476.86 → 480.42: after the bonk → "okay." (the lobby CU);
+    - 310.14 → 314.29: the scroll stops on ALYI → "He did both.";
+    - 370.92 → 375.06: Mada's label → the violin;
+    - 444.64 → 452.66: "of what?" → the stamp;
+    - 463.67 → 465.12: the hourglass's held beat (k173 → k208);
+    - 474.11 → 477.67: after the bonk → "okay." (the lobby CU);
   - There is no other digital silence.
   - Every hole of 0.3 s or more under −60 dBFS is one of those, or a designed rest (the act's first frames, Neleh's desk at 11:52, the four dial tones).
   - **No music run is shorter than 2 s.**
@@ -170,14 +180,13 @@ Measured on `render/music.wav` (the Kokoro v3.2 lock) and on each cue's engine c
 - **The V.O. windows** (LUFS, the bible's −24 ±2): "i don't keep score." −30.3, quieter than the window (the cue is almost all felt; v5 read −27.8); 2 AM −20.9, −25.5 (the count a little over: the V.O. sits inside the felt's pulse, as in v3.1 and the first round).
 - **Sub under the room drone** (the dark room): −32.3 dB, −34.5 dB (limit −18); nothing below C3 in the night and 2 AM cues.
 - **2–6 kHz band:** −16.5 dB (the avalanche) to −37.1 dB (the night); the limit is −15.
-- **Cut steps** (the v3.1 audit's method: the stem's level 0.5 s either side of every cut): all eight steps of 12 dB or more sit on a cue mark, a marked silence or a designed rest (the D6 click, Neleh's desk, the first ring, the reversal's first pizz, the Orb's look, Gerg's ring, the avalanche, the bonk). The carve's cut is no longer one: the night's fifth is already sounding (−9.1 dB at the cut).
+- **Cut steps** (the v3.1 audit's method: the stem's level 0.5 s either side of every cut): all eight steps of 12 dB or more sit on a cue mark, a marked silence or a designed rest: the D6 click, Neleh's desk, the first ring, the reversal's first pizz, the Orb's look, Gerg's ring, the avalanche and the bonk. **X3:** the night's fifth starts 0.405 s before the carve's cut; the stem steps −9.1 dB at the cut (the fifth already decaying), and its first 400 ms read −18.3 LUFS (v3.2 before X3: −16.2, entering from digital zero on the cut). **X2:** the ALYI stop's largest sample step is −39.4 dBFS (v3.2 before X2: −17.2).
 - **Onsets:** every sync point is written on its frame. The ones read outside ±10 ms are soft bowed or sustained entries, the GM Rhodes, and v5's muted horns (as in v5).
 - **Hot spots to hear** (sections louder than −17.5 LUFS-I or with ST p95 over −17, apart from the featured avalanche):
   - PLAN the path (76.6–78.5 s, −16.8 LUFS-I);
-  - h Step four? (the hang) (253.0–258.3 s, −17.8 LUFS-I, ST p95 −16.8);
-  - the held C into the dark room (258.3–260.0 s, −16.9 LUFS-I);
-  - S5 the check: the felt returns (317.6–323.5 s, −17.4 LUFS-I, ST p95 −20.7);
-  - S8 e VICTORY LAP, one size too big + one chip note (471.1–474.4 s, −14.4 LUFS-I).
+  - the held C into the dark room (259.1–260.8 s, −17.1 LUFS-I);
+  - S5 the check: the felt returns (318.4–324.2 s, −17.4 LUFS-I, ST p95 −20.7);
+  - S8 e VICTORY LAP, one size too big + one chip note (468.4–471.7 s, −14.3 LUFS-I).
 - **Render variance:** the sampler picks its samples per note, so a held note can land 2–3 dB apart between renders.
 
 **Every section:**
@@ -195,69 +204,70 @@ Measured on `render/music.wav` (the Kokoro v3.2 lock) and on each cue's engine c
 | PLAN "Good question.": the held chord | 74.5–76.6 | −22.1 | — |
 | PLAN the path | 76.6–78.5 | −16.8 | — |
 | PLAN the fold: stuck, the tape-stop into 11:59 | 78.5–79.3 | −17.6 | — |
-| a NOON: the call, the list, the post | 79.3–109.0 | −19.8 | −17.1 |
-| b Rima | 109.0–123.2 | −23.0 | −20.7 |
-| c the all-hands and the evening | 123.2–146.5 | −22.7 | −20.6 |
-| d NOV 18 hearts | 146.5–151.2 | −19.1 | −18.5 |
-| d the boardroom: the phones, the glass | 151.2–170.2 | −22.4 | −20.6 |
-| d the sincere beat | 170.2–173.6 | −17.7 | — |
-| rest: the dial tones | 173.6–175.4 | −27.9 | — |
-| e the rival lab (the split) | 175.4–194.0 | −22.4 | −20.4 |
-| the lobby, his side: no score; one felt note on his look up | 194.0–202.0 | −20.9 | −24.0 |
-| f Sunday: the reversal (the phones), the lobby camera | 202.0–213.3 | −22.6 | −22.1 |
-| f Ttemme, the folder, the hourglass | 213.3–234.1 | −21.0 | −19.0 |
-| g the door: Tasya's floor | 234.1–253.0 | −20.0 | −18.0 |
-| h Step four? (the hang) | 253.0–258.3 | −17.8 | −16.8 |
-| the held C into the dark room | 258.3–260.0 | −16.9 | — |
-| S5 the dark room at 2 AM: the felt, the Water Line warm | 258.3–263.4 | −18.7 | −18.2 |
-| S5 the count (the felt's pulse under the V.O.) | 263.4–268.7 | −21.2 | −20.4 |
-| S5 the Orb exchange: one held chord | 268.7–274.0 | −21.3 | −20.3 |
-| S5 Gerg's call: the Build in A-flat major (chip + felt) | 274.0–288.8 | −18.7 | −17.2 |
-| S5 the letter: the pedal and the pulse | 288.8–309.4 | −20.4 | −19.2 |
-| S5 the rest: ALYI -> "He did both." | 309.4–313.5 | −45.3 | −54.1 |
-| S5 "He did both.": the pedal alone | 313.5–317.6 | −22.6 | −22.3 |
-| S5 the check: the felt returns | 317.6–323.5 | −17.4 | −20.7 |
-| S5 the Build returns; the look (the held note) | 323.5–334.9 | −20.4 | −17.6 |
-| S5 the door: Tasya's floor (Ab -> C -> E -> Ab), two Rhodes chords; the badge (the third leaves) | 334.9–350.5 | −20.4 | −19.4 |
-| S5 "leave it open.": warm, open (no third), the ring-out to the first tile | 350.5–356.0 | −18.7 | −18.1 |
-| S6 phrase 1: the compile (A1, A4) | 356.0–361.0 | −17.4 | −16.6 |
-| S6 phrase 2: Step Four, Alyi, Neleh (A6-A7) | 361.0–366.0 | −16.9 | −15.9 |
-| S6 phrase 3: the Water Line, the quiet vote (A9) | 366.0–368.5 | −16.9 | — |
-| S6 phrase 4: the full band (A13) -> the stop | 368.5–370.2 | −16.8 | — |
-| S7 a the STRAIGHT violin, then its decay | 372.1–391.0 | −21.6 | −19.0 |
-| S7 b Tasya's floor (pre-lap -> below/above/around -> bloom -> home) | 391.0–411.0 | −18.4 | −17.4 |
-| S7 c1 LEVERAGE (fade-in -> the bang) | 411.0–422.5 | −19.1 | −18.3 |
-| S7 c1 thinned to the F pedal | 422.5–447.3 | −19.4 | −18.2 |
-| S7 STOP: "of what?" -> the stamp (the room) | 447.3–455.4 | −45.1 | −53.9 |
-| S7 c2 the C pedal (the posts, his stream); the turn | 455.4–466.4 | −19.9 | −19.3 |
-| S7 d the held beat (the sand stands), then the Build into the sign | 466.4–471.1 | −17.9 | −17.7 |
-| S8 e VICTORY LAP, one size too big + one chip note | 471.1–474.4 | −14.4 | — |
-| S8 e the flat line | 474.4–476.6 | −24.1 | — |
-| S8 designed rest: the lobby CU, "okay." | 476.6–480.4 | −46.4 | −52.5 |
-| S8 the felt settle | 480.4–482.2 | −18.8 | — |
-| S8 f the vault's F (the coda) | 482.2–508.5 | −27.1 | −26.7 |
+| a NOON: the call, the list, the post | 79.3–109.0 | −19.7 | −17.0 |
+| b Rima | 109.0–123.2 | −22.9 | −20.6 |
+| c the all-hands and the evening | 123.2–146.5 | −22.6 | −20.5 |
+| d NOV 18 hearts | 146.5–151.2 | −19.0 | −18.4 |
+| d the boardroom: the phones, the glass | 151.2–170.2 | −22.3 | −20.5 |
+| d the sincere beat | 170.2–173.6 | −17.6 | — |
+| rest: the dial tones | 173.6–175.4 | −27.8 | — |
+| e the rival lab (the split) | 175.4–194.0 | −22.2 | −20.3 |
+| the lobby, his side: no score; one felt note on his look up | 194.0–202.0 | −20.8 | −23.9 |
+| f Sunday: the reversal (the phones), the lobby camera | 202.0–213.3 | −22.5 | −21.9 |
+| f Ttemme, the folder, the hourglass | 213.3–234.9 | −21.5 | −19.6 |
+| g the door: Tasya's floor | 234.9–253.8 | −20.0 | −17.9 |
+| h Step four? (the hang) | 253.8–259.1 | −18.2 | −17.5 |
+| the held C into the dark room | 259.1–260.8 | −17.1 | — |
+| S5 the dark room at 2 AM: the felt, the Water Line warm | 259.1–264.2 | −18.8 | −18.4 |
+| S5 the count (the felt's pulse under the V.O.) | 264.2–269.5 | −21.2 | −20.4 |
+| S5 the Orb exchange: one held chord | 269.5–274.7 | −21.3 | −20.3 |
+| S5 Gerg's call: the Build in A-flat major (chip + felt) | 274.7–289.6 | −18.7 | −17.2 |
+| S5 the letter: the pedal and the pulse | 289.6–310.1 | −20.4 | −19.2 |
+| S5 the rest: ALYI -> "He did both." | 310.1–314.3 | −45.3 | −54.1 |
+| S5 "He did both.": the pedal alone | 314.3–318.4 | −22.6 | −22.3 |
+| S5 the check: the felt returns | 318.4–324.2 | −17.4 | −20.7 |
+| S5 the Build returns; the look (the held note) | 324.2–335.6 | −20.4 | −17.6 |
+| S5 the door: Tasya's floor (Ab -> C -> E -> Ab), two Rhodes chords; the badge (the third leaves) | 335.6–351.2 | −20.4 | −19.4 |
+| S5 "leave it open.": warm, open (no third), the ring-out to the first tile | 351.2–356.8 | −18.7 | −18.1 |
+| S6 phrase 1: the compile (A1, A4) | 356.8–361.8 | −17.4 | −16.6 |
+| S6 phrase 2: Step Four, Alyi, Neleh (A6-A7) | 361.8–366.8 | −16.9 | −15.9 |
+| S6 phrase 3: the Water Line, the quiet vote (A9) | 366.8–369.2 | −16.9 | — |
+| S6 phrase 4: the full band (A13) -> the stop | 369.2–370.9 | −16.8 | — |
+| S7 a the STRAIGHT violin, then its decay | 372.9–391.8 | −21.2 | −18.6 |
+| S7 b Tasya's floor (pre-lap -> below/above/around -> bloom -> home) | 391.8–408.2 | −18.4 | −17.5 |
+| S7 c1 LEVERAGE (fade-in -> the bang) | 408.2–419.8 | −19.0 | −18.3 |
+| S7 c1 thinned to the F pedal | 419.8–444.6 | −19.5 | −18.1 |
+| S7 STOP: "of what?" -> the stamp (the room) | 444.6–452.7 | −51.8 | — |
+| S7 c2 the C pedal (the posts, his stream); the turn | 452.7–463.7 | −19.9 | −19.2 |
+| S7 d the held beat (the sand stands), then the Build into the sign | 463.7–468.4 | −17.5 | −17.3 |
+| S8 e VICTORY LAP, one size too big + one chip note | 468.4–471.7 | −14.3 | — |
+| S8 e the flat line | 471.7–473.9 | −23.8 | — |
+| S8 designed rest: the lobby CU, "okay." | 473.9–477.7 | −46.0 | −52.1 |
+| S8 the felt settle | 477.7–479.5 | −20.8 | — |
+| S8 f the vault's F (the coda) | 479.5–505.8 | −26.7 | −26.2 |
 
-**The ElevenLabs-timed variant** (`render/music-el.wav`, `cues-el.json`, from `show/reel/ep01-v32-el/ep01-v32-el-act4.json` as it stood at 03:45 on 2026-09-28; re-run the one command if that lock changes):
-- **Length:** 25,038,000 samples, 521.6250 s: its 12,519 frames exactly.
-- **Loudness:** −20.22 LUFS-I, −3.15 dBTP; ST p95 −17.42.
+**The ElevenLabs-timed variant** (`render/music-el.wav`, `cues-el.json`, from `show/reel/ep01-v33-el/ep01-v33-el-act4.json` as it stood at 07:11 on 2026-09-28; re-run the one command if that lock changes):
+- **Length:** 24,796,000 samples, 516.5833 s: its 12,398 frames exactly.
+- **Loudness:** −20.23 LUFS-I, −3.15 dBTP; ST p95 −17.36.
 - **Silence:** the 7 marked silences are digital zero. There is no unmarked digital silence, no undesigned hole and no fragment.
 - **Checks:** rule 12 and the knee pass in every cue; the spectral F-major check passes in every cue but THE PLAN (the same tape-stop window).
-- **The V.O. windows:** −29.3; 2 AM −21.6, −22.2.
-- **Cut steps:** all eight steps of 12 dB or more sit on a cue mark, a marked silence or a designed rest; the carve's cut reads −9.1 dB.
+- **The V.O. windows:** −29.3; 2 AM −21.7, −23.1.
+- **Cut steps:** all eight steps of 12 dB or more sit on a cue mark, a marked silence or a designed rest (S4.13e, the sign's Rhodes chord, in place of the D6 click). X3: the fifth starts 0.405 s before the cut, −9.1 dB step at the cut, first 400 ms −18.3 LUFS. X2: largest sample step −43.1 dBFS.
 - **The avalanche:** Mada's label lands before the swung "and" (`label_on_swing: false`), and the stop follows it.
 
 
 ## What a human must hear
 
 1. **0–26 s.** The suite's pedal and the felt bar with its nudge on his glass nudge: air and one gesture, not a drone effect. Then LEVERAGE thinned under Alyi's sentence, and the bright dialog.
-2. **25.9–41.4 s.** The click takes everything. Nothing plays under "super.", his post or the fall to night. Does 15 s of no score hold (the suite's air, then the drone), with the felt's fifth on the carve as the re-entry?
+2. **25.9–41.4 s.** The click takes everything. Nothing plays under "super.", his post or the fall to night. Does 15 s of no score hold (the suite's air, then the drone)? The felt's fifth comes back 0.4 s before the carve's cut (41.0): a return, not a jolt?
 3. **50.6–79.3 s, THE PLAN at her desk.** The clockwork on her card, the waltz and the labels, then the stuck loop and the tape-stop reaching zero on the 11:59 tick. The plan failing, not a playback fault?
-4. **79–258 s, the board's side, lighter.** Do the clockwork between lines and the pedal an octave up read as dry comedy, and dignified, never a nag?
+4. **79–259 s, the board's side, lighter.** Do the clockwork between lines and the pedal an octave up read as dry comedy, and dignified, never a nag?
    - **98.7–99.6 s:** Step Four in eighths on her pen's run: quick, not hurried.
    - **After "no.":** only the dial tone on the pedal, which leaves on the cut to the lobby.
    - **194–202 s, the lobby:** no score, then one felt G4 on his look up at their camera. His one move inside their side, not a sting?
    - **202 s:** the four phones as four pizz: a joke about procedure, not a cartoon?
-5. **253–262 s.** The hang on "Step four, Mada?", with its C carried into the dark room. Does the room's first felt chord make the C its major seventh?
+   - **231 s:** the folder's chord leaving its F alone as the page's back turns out blank: the list's blank step, not a sting?
+5. **253.8–262 s.** The hang on "Step four, Mada?", with its C carried into the dark room. Does the room's first felt chord make the C its major seventh?
 6. **2 AM.**
    - The walking pulse under the letter: a walk, never a heartbeat.
    - Out on ALYI and back on "He did both.": designed, not a hole?
@@ -265,10 +275,10 @@ Measured on `render/music.wav` (the Kokoro v3.2 lock) and on each cue's engine c
    - Two Rhodes chords at the door.
    - **The badge:** the floor's third leaving as he sets it down. Felt, not heard as an event?
    - The open A-flat 6/9 ringing into the first tile.
-7. **356–370 s.** The avalanche out of the ring-out with no pickup, and the dead stop on the label: the laugh, never a glitch.
-8. **455–471 s, the hourglass.** THE TURN on "we're so back", the held beat as the sand stands, then the Build through the pour. The show's voice, not a trailer?
-9. **471–474 s.** VICTORY LAP one size too big for a lobby sign, then the old dialog undercutting it. A laugh from scale, not a fanfare gag?
-10. **482 s to the end.** The Ache on the vault's own shot: dread, not a sting. The pedal under the memo, and the hand-off into the tag.
+7. **357–371 s.** The avalanche out of the ring-out with no pickup, and the dead stop on the label: the laugh, never a glitch.
+8. **452.6–468.4 s, the hourglass.** THE TURN on "we're so back", the held beat as the sand stands, then the Build through the pour. The show's voice, not a trailer?
+9. **468.4–471.7 s.** VICTORY LAP one size too big for a lobby sign, then the old dialog undercutting it. A laugh from scale, not a fanfare gag?
+10. **479.8 s to the end.** The Ache on the vault's own shot: dread, not a sting. The pedal under the memo, and the hand-off into the tag.
 
 ## Where this departs from the brief, the script or v5, and why
 
@@ -290,7 +300,7 @@ Measured on `render/music.wav` (the Kokoro v3.2 lock) and on each cue's engine c
    - There's a walking pulse under the letter.
    - The music comes back on "He did both.", not at the check.
    - Tasya's Rhodes gives two chords (the door, "desk") instead of playing on the beats.
-7. **The Build restarts on Gerg's post** at 456.06. OST-BIBLE §2.6 says the post restarts it; v5 kept it for the pickup only.
+7. **The Build restarts on Gerg's post** at 453.31. OST-BIBLE §2.6 says the post restarts it; v5 kept it for the pickup only.
 8. **VICTORY LAP is bigger than v5's single stab.** It's a bar and a half of A-flat major on strings, horns, a timpani roll and a chip-doubled top line, for a lobby sign, then undercut by the old dialog. That's the plan's "one size too big". The script's "a brass stab on the sign" is its downbeat. It's ridden −3.5 dB to the OUTS/stab level.
 9. **The Ache sits on the vault's own shot**, because v3 has no Q\* rail. P05 makes the vault's F the score's root.
 10. **The act ends on the pedal, not a fade.** The script's L-cut carries the vault's F into the tag. Its natural release past the act's last frame is `render/music-ringout.wav`, for the mix to lay at the tag's first frame if the tag's own cue doesn't carry the pedal.

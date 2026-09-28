@@ -40,7 +40,9 @@ into the dark room, where it becomes the major seventh of his D-flat chord).
             the row (B-flat B-flat F F), her clockwork only in the gaps  INVESTORS INVESTORS); "The staff want him
             between her lines (the procedure, no closer), the pedal;     back..."; the lobby camera; S4.10 the
             the straight-mute accent (F4 -> Bb4) on the spotlight; the    spotlight, S4.10b Ttemme, the sealed folder;
-            folder's held chord; the hourglass grains, one a beat         S4.11 the hourglass
+            folder's held chord (v3.3: it leaves its F alone when the     S4.11 the hourglass
+            page's back turns out blank: Step Four's blank again); the
+            hourglass grains, one a beat
             (the first v3 lock: the clockwork on the lobby camera)
   g         TASYA'S FLOOR: Abmaj9 on the slate, Cmaj9 as the door opens,  S4.12 the slate door; S4.13 Tasya; the
             the Rhodes on the beats as he appears (the jangle owns the     statement [V] (one sentence); S4.13e the sign
@@ -84,7 +86,7 @@ def syncmap():
         CLICK8=SND('S4.08', 'dialog_ok_click'), DIALTONE=SND('S4.08', 'DIALTONE'), LOBBY=A('S4.09'),
         HIS=A('v32-S5.00') if CLK.has('v32-S5.00') else None,                # v3.2: the lobby, his side of it
         LOOK=(SND('v32-S5.00', 'post_click') + 26) if CLK.has('v32-S5.00') else None,   # his look up (pixel: post + 26 f)
-        SPOT=A('S4.10'), FOLDER0=Lend('a5-27-41'), OKAY=Lon('a5-27-42'), FLIP=A('S4.11', 2),
+        SPOT=A('S4.10'), FOLDER0=Lend('a5-27-41'), OKAY=Lon('a5-27-42') if 'a5-27-42' in CLK.LINES else None, FLIP=A('S4.11', 2),
         SLATE=A('S4.12', 2), OPEN=A('S4.12', 36), TASYA=A('S4.13'), GOOD=Lon('a5-27-44'),
         STMT=Lon('v3-a4-0001'), SIGN=A('S4.13e'), BOARD=A('S4.14'), MADA=A('S4.15'), HOME=A('S5.02'))
     M['BURY'] = M['S4'] + 28
@@ -363,9 +365,17 @@ def build():
     tick([f for f in range(int(SPOT + 120), int(FOLDER0) + 1, 15)], 0.2)
     cue.mark(SPOT, 'f: the spotlight: the straight-mute accent (F4 -> Bb4); the pulse')
     Lf = s(FLIP - 2) - s(FOLDER0 + 5)
+    # v3.3: "Okay." is cut; he turns the page over toward us and its back is blank: the chord leaves its F alone, the
+    # list's blank fourth step again (the pixel pass: the sheet faces us, BLANK, at S4.10b + 326 f, drawBlankPage)
+    PAGE = A('S4.10b', 326) if M['OKAY'] is None else None
+    if PAGE is not None and not (FOLDER0 + 5 < PAGE < FLIP - 12):
+        PAGE = None
     for inst, p, v in (('vla', 'F3', 0.16), ('vln2', 'C4', 0.14), ('vln1', 'Db4', 0.12)):
-        a.n(inst, p, s(FOLDER0 + 5), Lf, v, lock=True, art='sus', lp=TASTO, env=mm09.sw_env(Lf, 0.9, 0.7))
+        L_ = Lf if (inst == 'vla' or PAGE is None) else s(PAGE) - s(FOLDER0 + 5)
+        a.n(inst, p, s(FOLDER0 + 5), L_, v, lock=True, art='sus', lp=TASTO, env=mm09.sw_env(L_, 0.9, 0.7))
     cue.mark(FOLDER0 + 5, "f: it holds under the folder's long beat", hit=False)
+    if PAGE is not None:
+        cue.mark(PAGE, "f: the page's back is blank: the chord leaves the F alone (Step Four's blank)", hit=False)
     for i, (inst, p) in enumerate([('vln1', 'F5'), ('vln2', 'Db5'), ('vla', 'C5'), ('vln1', 'Bb4'), ('vln2', 'Ab4'),
                                    ('vla', 'Gb4')]):
         if FLIP + 2 + 15 * i < SLATE - 4:

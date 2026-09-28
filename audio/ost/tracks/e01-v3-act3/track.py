@@ -103,11 +103,11 @@ REPO = v3clock.REPO
 # ================================================================== the sync map (every position from the timeline)
 def events(c):
     E = dict(
-        home=0.0, key=c.B('v31-18.00b'), slot=c.snd('18.01', 'synth:slot_whir'), thunk=c.snd('18.01', 'landing_thunk'),
+        home=0.0, key=c.B('v31-18.00b') if c.has('v31-18.00b') else None, slot=c.snd('18.01', 'synth:slot_whir'), thunk=c.snd('18.01', 'landing_thunk'),
         label=c.B('18.02'), lid=c.B('18.03'), scan=c.snd('18.04', 'orb_scan_sweep'),
         glyph=c.snd('18.04g', 'glyph_blink'), toast=c.snd('18.05', 'dialog_ok_click--chip'),
         drift=c.B('18.06'), chime=c.snd('18.06', 'synth:chime'),
-        mon=c.B('19.01'), sirrah=c.B('v31-19.02'), runner=c.B('v31-19.03'),
+        mon=c.B('19.01'), sirrah=c.B('v31-19.02') if c.has('v31-19.02') else None, runner=c.B('v31-19.03'),
         rservo=[c.snd('v31-19.03', 'orb_servo', k) for k in range(3)], paper=c.B('v31-20.07'),
         paper2=c.B('v31-20.08'),
         type=c.B('20.01'), post=c.B('20.03'), ring=c.snd('20.03', 'synth:ring'),
@@ -240,9 +240,16 @@ def build(c):
     cue.mark(cue.bar(b), 'A: THE WATER LINE, warm (F F F G F | C F over Dbmaj9(#11), Bbm9); the chip on the nudge')
     # v3.1: the thirteenth key (the Atem payoff): the cut to the monitor, where Tasya hangs it on his ring, gets his
     # colour, one Rhodes chord (his DevDay chord, the upper four of D-flat lydian), on the Water Line's nearest quarter
-    tk = max(E['key'], min((cue.bar(b) + k * Q for k in range(8)), key=lambda t: abs(t - E['key'])))
-    cue.ch('rhodes', ['C4', 'Eb4', 'G4', 'Bb4'], tk, min(1.9, E['tasya_mon']['on'] - tk - 0.1), 0.22, roll=0.008)
-    cue.mark(tk, "A: TASYA'S RHODES, his chord, on the cut to the monitor: the thirteenth key (Atem blue)")
+    if E['key'] is not None:                              # v3.1-v3.2: the cut to the monitor
+        tk = max(E['key'], min((cue.bar(b) + k * Q for k in range(8)), key=lambda t: abs(t - E['key'])))
+        dk = min(1.9, E['tasya_mon']['on'] - tk - 0.1)
+        cue.mark(tk, "A: TASYA'S RHODES, his chord, on the cut to the monitor: the thirteenth key (Atem blue)")
+    else:                                                 # v3.3: the monitor plays in the home room from the first
+        tm = E['tasya_mon']                               # frame; his chord answers his line on the Water Line's
+        tk = min(cue.bar(b) + k * Q for k in range(12) if cue.bar(b) + k * Q >= tm['end'] + 0.05)   # next quarter
+        dk = 1.9
+        cue.mark(tk, "A: TASYA'S RHODES, his chord, after \"Everyone is welcome.\" on the monitor: the thirteenth key")
+    cue.ch('rhodes', ['C4', 'Eb4', 'G4', 'Bb4'], tk, dk, 0.22, roll=0.008)
     def clear_vo(t, lead=0.3):
         """a chord wanted at t: if a V.O. is sounding there, strike it just before the V.O. (the V.O. sits inside the
         felt; no attack mid-V.O.) (v3.1 EL render: an attack inside "thirteen." read -16.6 LUFS)"""
@@ -314,20 +321,30 @@ def build(c):
                               "cut, out of the settle's decay: the turn from his room to the screen (v3.3 polish X5, "
                               "audit-v32: a +12 dB step on the cut; designed)")]
     cue.mark(E['mon'] + 0.08, 'B: DESIGNED HIT: the iris flicks to the monitor: Abmaj9 + the solo violin (the screen)')
-    for p, t0, t1 in [('Eb4', E['mon'] + 0.3, E['sirrah'] + 0.3), ('Db4', E['sirrah'] + 0.3, E['runner'] + 0.2)]:
+    sv_ = [('Eb4', E['mon'] + 0.3, E['sirrah'] + 0.3), ('Db4', E['sirrah'] + 0.3, E['runner'] + 0.2)] \
+        if E['sirrah'] is not None else [('Eb4', E['mon'] + 0.3, E['runner']), ('Db4', E['runner'], E['runner'] + 1.1)]
+    for p, t0, t1 in sv_:                                                   # (v3.3: Sirrah's clip is cut)
         cue.n('svla', p, t0, t1 - t0, 0.26, art='sus', att=0.5, rel=0.6)      # the lonely colour, held
     fch('Dbmaj9h', E['runner'] + 0.05, E['remuhcs']['on'] - E['runner'] - 0.1, 0.12,
         span_end=E['remuhcs']['on'] - 0.1)
     frags = [('F4', 'F4'), ('F4', 'G4'), ('C4', 'F4')]                   # his line, in three gestures
-    for k, (p1, p2) in enumerate(frags):
-        sv = E['rservo'][k]
-        t1_ = sv - 0.95
+    gest = [(E['rservo'][k], p) for k, p in enumerate(frags)]
+    if E['sirrah'] is None:
+        # v3.3 (the forum only; his two fingers are cut): ONE gesture, his own hand going up before anyone's (the
+        # pixel pass: the second whirr - 8 f, the Orb turning to it); his F -> G on the felt, THE COPY a beat late on
+        # the chip, broken off before Remuhcs asks the room (the record plays dry)
+        up = E['rservo'][1] - 8 / 24
+        gest = [(min(up + 0.95, E['remuhcs']['on'] - 0.1), ('F4', 'G4'))]
+    for k, (sv, (p1, p2)) in enumerate(gest):
+        t1_ = sv - 0.95 if E['sirrah'] is not None else E['rservo'][1] - 8 / 24
         assert not blocked(t1_, sv, vo=True), ('the runner gesture sits in a line', t1_)
         cue.n('felt', p1, t1_, 0.3, 0.17)
         cue.n('felt', p2, t1_ + 0.3125, 0.4, 0.16)
         cue.n('lead', p1, t1_ + Q, min(0.28, sv - (t1_ + Q) - 0.01), 0.12, lock=True, duty=0.5, att=0.003,
               dec=0.12, sus=0.3, rel=0.02)                                 # the copy: a beat late, cut on the whirr
-        cue.mark(t1_, f'B: his gesture {k + 1} on the felt ({p1[:-1]} {p2[:-1]}); THE COPY a beat late, breaking off')
+        cue.mark(t1_, f'B: his gesture {k + 1} on the felt ({p1[:-1]} {p2[:-1]}); THE COPY a beat late, breaking off'
+                 if len(gest) > 1 else f'B: his hand goes up, before anyone\'s: {p1[:-1]} {p2[:-1]} on the felt; THE '
+                                       'COPY a beat late on the chip, breaking off')
     rl, nl = E['remuhcs'], E['nole']
     th = nl['end'] + 0.15                                  # v3.2: he lowers his hand himself (no V.O.)
     fch('Bbm9h', rl['on'] - 0.25, th - rl['on'] + 0.1, 0.11, span_end=th - 0.05)
@@ -395,7 +412,8 @@ def build(c):
     # ---------------------------------------------------------------- C' · Neleh's paper: the quote, her question
     # (v3.2: no V.O.; the page is read in the felt's E-flat minor, then her question as it holds)
     fch(['Eb3', 'Gb3', 'Bb3', 'Db4'], E['paper'] + 0.1, E['order'] - E['paper'], 0.16, span_end=E['order'] - 0.05)
-    rebow(cue.a, 'vla', 'Bb3', cue.s(E['paper'] + 0.2), cue.s(E['order'] + 0.3), 0.135, seg=5.0, xf=1.0,  # (0.12/0.11: -26.8)
+    pe_ = E['order'] + 0.3 if E['order'] - E['paper2'] < 1.8 else E['paper2'] + 0.4    # v3.3: his held face on page
+    rebow(cue.a, 'vla', 'Bb3', cue.s(E['paper'] + 0.2), cue.s(pe_), 0.135, seg=5.0, xf=1.0,  # 30 gets the harmonic alone
           first_att=1.0, last_rel=0.6, art='sus', lp=1300)
     tq_ = E['paper2'] - 1.3
     cue.n('svla', 'C6', tq_, E['paper2'] - tq_ + 0.05, 0.16, art='sus', att=0.6, rel=0.2, lp=3800)
@@ -410,6 +428,11 @@ def build(c):
     rebow(cue.a, 'vla', 'Db4', cue.s(E['order']), cue.s(E['ask'] + 0.2), 0.12, seg=5.0, xf=1.0, first_att=1.2,
           last_rel=0.7, art='sus', lp=1300)
     fch('Gbmaj9', E['order'] + 0.05, 3.0, 0.13)
+    cue.mark(E['order'] + 0.05, 'D: DESIGNED HIT: the order on the monitor: Gbmaj9(#11) over the G-flat/D-flat pedal, '
+                                'out of his held face (page 30: the harmonic alone)')
+    hits.append((E['order'] + 0.05, "the order on the monitor (21.02): G-flat maj9(#11) on the cut, out of 20.08's held "
+                                    "face, which v3.3 scores with Neleh's harmonic alone (a +12 dB step on the EL cut; "
+                                    "designed)"))
     gaps = []
     ls = c.lines(E['order'], E['ask'])
     for l1, l2 in zip(ls, ls[1:]):
@@ -473,17 +496,21 @@ def build(c):
     cue.mark(tph, 'E: home: Dbmaj9(#11), the felt alone: "thrilled is too much..." sits inside it')
     assert hall + 2.0 < tph
     # after "super.": the Water Line's flat line and the nudge; the settle never comes: the surge cuts in
+    # (v3.3: the flat line is the next three quarters after "super.", across the bar line if it must be, and the
+    # nudge on the third's swung "and", before the surge's cut; the G hangs into the surge)
     bw = cue.bar_of(E['super_']['end'] + 0.12)
-    beats = [bt for bt in (2, 3, 4) if cue.bt(bw, bt) > E['super_']['end'] + 0.12]
-    assert len(beats) >= 2 and cue.bar(bw + 1) <= E['surge'] + 0.02, (beats, cue.bar(bw + 1), E['surge'])
-    b0 = beats[0]
-    te = cue.bar(bw + 1)
-    fch('Dbmaj9', cue.bt(bw, b0), te - cue.bt(bw, b0) - 0.02, 0.12, span_end=te + 0.6)
-    for bt in beats:
-        cue.n('felt', 'F4', cue.bt(bw, bt), Q * 0.92, 0.17)
-    cue.n('felt', 'G4', cue.sw(bw, 4.5), te - cue.sw(bw, 4.5) + 0.5, 0.18)
-    cue.n('lead', 'G4', cue.sw(bw, 4.5), 0.18, 0.1, duty=0.5, att=0.004, dec=0.25, sus=0.35, rel=0.08)
-    cue.mark(cue.bt(bw, b0), 'E: the flat line F F F, then the nudge G4 ... the settle never comes')
+    qs = [(bb, bt) for bb in (bw, bw + 1) for bt in (1, 2, 3, 4) if cue.bt(bb, bt) > E['super_']['end'] + 0.12][:3]
+    gb, gt = qs[-1]
+    tg = cue.sw(gb, gt + 0.5)
+    assert len(qs) == 3 and tg < E['surge'] - 0.05, (qs, tg, E['surge'])
+    t0f = cue.bt(*qs[0])
+    te = E['surge']
+    fch('Dbmaj9', t0f, te - t0f - 0.02, 0.12, span_end=te + 0.6)
+    for bb, bt in qs:
+        cue.n('felt', 'F4', cue.bt(bb, bt), Q * 0.92, 0.17)
+    cue.n('felt', 'G4', tg, te - tg + 0.5, 0.18)
+    cue.n('lead', 'G4', tg, 0.18, 0.1, duty=0.5, att=0.004, dec=0.25, sus=0.35, rel=0.08)
+    cue.mark(t0f, 'E: the flat line F F F, then the nudge G4 ... the settle never comes')
     cue.section('E home: the phone; "super."', E['phone'], E['surge'])
 
     # ---------------------------------------------------------------- E' · the surge (v3.2): the sign-ups paused
@@ -591,7 +618,7 @@ def build(c):
     extra = dict(marks=[(round(t, 4), lab, h) for t, lab, h in cue.marks],
                  designed_hit=[(round(t, 4), w) for t, w in hits],
                  sections=[(lab, round(a, 4), round(b_, 4)) for lab, a, b_ in cue.sections],
-                 silences=[(hall, tph, "DevDay, live (v3.2): no score under the stage; the hall's applause, the "
+                 silences=[(hall, tph, "DevDay, live: no score under the stage; the hall's applause, the "
                                        "stage's own sound and his line play it dry; the felt comes back at home"),
                            (stop, c.LEN, "THE CLOCK's dead stop on bar 4's downbeat -> the act's last frame "
                                         '(black; the SFX pre-lap of the crane and the tings carries it)')])
