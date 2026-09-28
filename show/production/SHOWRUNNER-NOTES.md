@@ -1,9 +1,31 @@
 # Showrunner notes: live file (read this first)
 
-**Every agent working on MR. MAS reads this file at the start of its task.** It collects the showrunner's latest notes. It may be updated while a pass is running, and a newer note here takes precedence over an older brief. Last updated: 2026-09-27.
+**Every agent working on MR. MAS reads this file at the start of its task.** It collects the showrunner's latest notes. It may be updated while a pass is running, and a newer note here takes precedence over an older brief. Last updated: 2026-09-28.
 
 ## Current notes, newest first
 
+000. **Mas plans and directs; the board is the one thing he didn't plan (2026-09-28, on the v3.3 films):**
+   - "one main issue i still have is mas's dialogue is too much just predicting what someone is going to say next, rather than useful nrration/insight into what he's thinking/planning"
+   - "the goal should be to have mas look like he is mostly planning and directing things as he intends, with the exception he was not expecting the board [firing]. this should be thinking about higher level goals, not just immediately what people do right away"
+   - **What it means:**
+     - The inner voice is mostly **his plan**: the higher-level goals behind each move (ship first; compute through a landlord until he can own it; be in the room where the rules are written; the platform; proof of personhood). It is not a guess at what someone says next, and not a read of the next five seconds.
+     - He looks like he's **directing events as he intends**, right up to the Friday call. **The firing is the one thing he didn't see coming.** The voice goes quiet at the blow, then it plans the comeback.
+   - **This supersedes:**
+     - calibration §9's "no plan or reason in V.O." and mas-inner-voice §3's order (reads and predictions first)
+     - predictions are now rare (at most one an episode)
+     - plans and goals come first
+   - **Still firm:**
+     - no V.O. at the Senate testimony
+     - no motive about the firing's reasons (Neleh's paper stays a held face)
+     - he never orchestrates the staff letter; no line implies he's rallying or counting on it
+     - the sealed memo stays out
+     - no puns, no aphorisms, no winks, no narrating the picture
+     - silence at the blow
+   - **Also:**
+     - "i also liked the previous clarification [that mario] used to be at [nopeai]" (v3.1's "mario used to sit where gerg sits. he left to build a careful one."). Bring it back.
+     - Deepfakes: "why does the senate have a deepfake along with biden". Keep one.
+     - The tag's duck: make it land (option 1).
+     - "in the intro mas's voice is not replaced": the EL film's intro still plays the Kokoro Mas.
 00. **Nuance, and the spine (2026-09-28):** "more generally, do a pass and make sure no previous advice was taken too extreme. it feels like we're close to what we want to see, but we keep swinging around what is the correct nuance. however mas's lack of agency is very apparent in [v3.1] and makes it feel like watching a random sequence of events then about mr mas's rise to power"
    - **Apply each note proportionately.** A note usually names a symptom in one place. Fix that, then check the scope before any broad change. The balanced target for every dimension we've swung on is in [calibration](../bible/calibration.md) (being written); it governs over any single older note.
    - **The episode is Mas's rise to power**, a spine of cause and effect driven by his moves. It isn't a chronicle of events: every scene is his step, or a reaction to one.

@@ -254,3 +254,50 @@ out/ep01/full-v3/                         the films and mixes (git-ignored)
   - Act Two's act-out gets Mas's close-up beat.
   - Kram's plate is dropped.
 - **Left alone:** tag → outro at +12.7 dB, which reads as an ending; the Coinworld "CO-FOUNDER", which is lore for later episodes.
+
+## 7. v3.4: Mas the planner (from 2026-09-28, on the v3.3 films)
+
+**Showrunner:** see SHOWRUNNER-NOTES note 000. "have mas look like he is mostly planning and directing things as he intends, with the exception he was not expecting the board [firing]. this should be thinking about higher level goals, not just immediately what people do right away"
+
+**A. The inner voice becomes his plan** (writer, draft 8.3):
+- Every V.O. line states the higher-level goal behind the move on screen, or the plan it serves. Predictions and next-five-seconds reads go.
+- He directs events up to the Friday call. The firing blindsides him (silence), then the voice plans the comeback.
+- **Candidates** (the writer refines them, keeping the voice rules: lowercase, plain, no aphorisms, puns or winks):
+  - **The launch:** "she's right. it will break. better it breaks in public, and first." (replaces the "i don't know which part yet" ending). "she'll go for three." is cut.
+  - **The bill → the call:** "mostly the bill. we'll need more servers than we can buy. for now, we rent."
+  - **The collar:** "it does. until we can build our own."
+  - **CLOD's same-day launch:** restore v3.1's "mario used to sit where gerg sits. he left to build a careful one." (the showrunner asked for it), optionally with a plan edge.
+  - **Regulation** (Act One's out or the White House; an invented beat, never the hearing): "they're going to write rules anyway. i'd like to be in the room when they do." This replaces "he's not wrong.".
+  - **The Orb:** "my other company. when nobody can tell people from machines, this can." (replaces "i made it for everyone else."; explains CO-FOUNDER).
+  - **DevDay:** "a hundred million a week. next, they build on us."
+  - **The Friday call:** "gerg's not on it. probably the budget. good. i'll ask for more compute." (the irony: he's planning right into it).
+  - **The walk-in:** "if i'm in the building, they decide with me in it."
+  - **Before the Gerg call:** "gerg walked out for me. whatever happens next, he comes with me." (replaces "gerg. he'll say he's compiling."; pays off in "gerg comes back too.").
+  - **Leave it open:** "macrosoft stays open. the board should know i have somewhere to go."
+  - **The accept:** "this time, i'd like to know who's on the board."
+  - **Keep:** "i know. i still read it twice." · "thrilled is too much. enthusiastic is a lot." · the count · "it looks calmer than me." (optionally "i don't keep score.").
+  - **Target:** about 14–17 lines, across every act, silent from the call's first tile to "super.".
+- **Up to 3 of Mas's spoken lines** may become directions (for example "ship it."), and only where the scene already has him deciding.
+- **Still firm:**
+  - no V.O. at the Senate testimony
+  - none on the firing's reasons (Neleh's paper stays a held face)
+  - no line that implies he rallies, counts on or organizes the staff letter
+- **Bible:** update mas-inner-voice §3/§4/§7 and calibration §5/§9 to the planner voice.
+
+**B. The deepfakes: keep one.**
+- Keep the Senate's cloned voice (his own hearing's opener, "That voice was not mine.").
+- Cut the May 12 altered anchor clip, and the Biden executive-order beat with its deepfake joke. The writer may keep the order's one line only if it serves the regulation plan.
+
+**C. The duck, made to land** (tag):
+- The film's first card names it: ELGOOG · INIMEG (their answer).
+- A large LIVE chip.
+- On the stutter, freeze, and the film's own fine print slides in: "for the purposes of this demo, latency has been reduced and INIMEG outputs have been shortened for brevity." (the real video's description, with the parody name).
+- Mas's held look at the frozen duck, about 2 s, with no V.O.
+- The Runway frames stay; overlays are allowed.
+
+**D. The intro's Mas for the EL film:** re-read "near the singularity; unclear which side." with Jeremy, fitted to the intro's clip frames (f24–57 and f72–91), and remix the intro master for the EL film. The Kokoro film keeps am_michael, which is the episode's Kokoro Mas.
+
+**Order:**
+1. The writer (A, B and C's lines).
+2. In parallel: the EL intro (D) and the tag's duck prototype.
+3. Takes (Kokoro and EL), then the v3.4 locks, then the picture passes, the score refit, the mix, assembly, and a focused check.
