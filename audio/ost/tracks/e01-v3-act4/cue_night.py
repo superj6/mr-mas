@@ -2,7 +2,7 @@
 
 Act Four v5's S2 score (tracks/e01-act4-v5/s1-s4_s2_third_mark.py, MM-08 26A), copied and re-spotted: the felt's open
 fifth on the carve is the music's re-entry after D6 (v3.3 polish X3: 0.4 s before the cut, under the post's last
-palette step to night, 3 dB down); the nudge G4 sounds before "i don't keep score." so the V.O. sits
+palette step to night, 6.5 dB down, swelling in over 200 ms); the nudge G4 sounds before "i don't keep score." so the V.O. sits
 inside it; a violas-and-celli F/C pedal an octave above the room drone under the count and the TPOOL flash (no Mas
 motif on it); the felt back on mark 3; the settle C4 -> F4; THE REWIND (E4, B-flat3 on the 16-bit sample-chip piano,
 a retrograde); cut on the whip, where the board's side lands on the same frame.  Nothing below C3.
@@ -61,7 +61,7 @@ def build():
     end = s(WHIP)
     cue.mutes.append((end, end + 3.0))
     for fr, lab, hit in [(IN, 'the re-entry after D6: the felt open fifth, 0.4 s before the carve\'s cut, under the '
-                              'post\'s last palette step to night (3 dB down: a return, not a jolt)', True),
+                              'post\'s last palette step to night (6.5 dB down, a 200 ms swell: a return, not a hit)', True),
                          (CARVE, 'the carve (the cut to the dark room): the fifth already sounding', False),
                          (NUDGE, 'the nudge G4, sounding before the V.O.', True),
                          (PED0, 'the F/C pedal (the count, TPOOL: no motif)', False),
@@ -90,7 +90,10 @@ def build():
         audition=[f'{s(IN):.2f} s: the re-entry after D6, 0.4 s before the cut: a return, not a jolt or a sting',
                   f'{s(NUDGE):.2f}-{s(Lend(VO)):.2f} s: the G4 under "i don\'t keep score.": still, not sad',
                   f'{s(SETTLE):.2f}-{end:.2f} s: the settle and the Rewind, cut on the whip into pass one'])
-    macro = [(0.0, NIGHT_ENTRY_DB), (s(NUDGE) - 0.35, NIGHT_ENTRY_DB), (s(NUDGE) - 0.05, 0.0)]   # the fifth 3 dB down
+    # the fifth 6.5 dB down, swelling in over 200 ms from its onset (a fader ride on every stem: the felt's attack
+    # arrives under it), then up to the cue's level before the nudge
+    macro = [(0.0, -60.0), (s(IN) - 0.002, -60.0), (s(IN) + NIGHT_SWELL_S, NIGHT_ENTRY_DB),
+             (s(NUDGE) - 0.35, NIGHT_ENTRY_DB), (s(NUDGE) - 0.05, 0.0)]
     sc = Score(ID, cue.g, T, cue.notes, markers=cue.markers, sections=cue.sections, mutes=cue.mutes, macro=macro,
                length_s=end + 0.3, tail_s=0.0, meta=meta)
     window = [IN / FPS - 0.01, WHIP / FPS, 0.0, 0.003]

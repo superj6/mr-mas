@@ -126,7 +126,7 @@
    "marks": [
     [
      42.3083,
-     "the re-entry after D6: the felt open fifth, 0.4 s before the carve's cut, under the post's last palette step to night (3 dB down: a return, not a jolt)",
+     "the re-entry after D6: the felt open fifth, 0.4 s before the carve's cut, under the post's last palette step to night (6.5 dB down, a 200 ms swell: a return, not a hit)",
      true
     ],
     [
@@ -1227,7 +1227,7 @@
   {
    "t": 42.308,
    "cue": "e01-v3-a4-s2-night",
-   "what": "the re-entry after D6: the felt open fifth, 0.4 s before the carve's cut, under the post's last palette step to night (3 dB down: a return, not a jolt)"
+   "what": "the re-entry after D6: the felt open fifth, 0.4 s before the carve's cut, under the post's last palette step to night (6.5 dB down, a 200 ms swell: a return, not a hit)"
   }
  ],
  "rests": [
@@ -1266,7 +1266,7 @@
    "true_peak_dbtp": -3.15,
    "st": {
     "p95": -17.36,
-    "median": -21.11,
+    "median": -21.09,
     "max": -13.99
    }
   },
@@ -1286,10 +1286,10 @@
      42.298,
      51.333
     ],
-    "lufs_i": -22.15,
-    "st_p95": -21.21,
-    "st_max": -21.11,
-    "true_peak_dbtp": -6.24
+    "lufs_i": -21.8,
+    "st_p95": -20.84,
+    "st_max": -20.74,
+    "true_peak_dbtp": -5.87
    },
    "e01-v31-a4-plan": {
     "window": [
@@ -1368,30 +1368,30 @@
     "cue": "e01-v3-a4-s2-night",
     "start": 42.308,
     "end": 45.992,
-    "lufs_i": -21.27,
-    "st_p95": -21.6,
-    "st_max": -21.53,
-    "true_peak_dbtp": -6.24
+    "lufs_i": -21.15,
+    "st_p95": -22.33,
+    "st_max": -22.31,
+    "true_peak_dbtp": -5.87
    },
    {
     "section": "S2 the count and TPOOL: the pedal",
     "cue": "e01-v3-a4-s2-night",
     "start": 45.992,
     "end": 47.75,
-    "lufs_i": -31.03,
+    "lufs_i": -30.66,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -16.93
+    "true_peak_dbtp": -16.56
    },
    {
     "section": "S2 mark 3, the settle, the Rewind",
     "cue": "e01-v3-a4-s2-night",
     "start": 47.75,
     "end": 51.333,
-    "lufs_i": -21.9,
-    "st_p95": -21.3,
-    "st_max": -21.22,
-    "true_peak_dbtp": -6.5
+    "lufs_i": -21.53,
+    "st_p95": -20.94,
+    "st_max": -20.85,
+    "true_peak_dbtp": -6.13
    },
    {
     "section": "PLAN Neleh's desk, 11:52: the clockwork, the pad",
@@ -1867,7 +1867,7 @@
   "digital_silence": [
    {
     "t0": 27.24,
-    "t1": 42.29,
+    "t1": 42.3,
     "marked": true
    },
    {
@@ -2114,10 +2114,10 @@
      "measured": {
       "lufs": -22.0,
       "lra": 5.73,
-      "true_peak_db": -6.24,
-      "peak_db": -6.25,
-      "rms_db": -25.58,
-      "crest_db": 19.33,
+      "true_peak_db": -5.87,
+      "peak_db": -5.88,
+      "rms_db": -25.73,
+      "crest_db": 19.85,
       "seconds": 9.825
      }
     },
@@ -2126,8 +2126,8 @@
     "f_major_fails": [],
     "knee_completion": 0,
     "knee_whole": 0,
-    "st_p95": -21.21,
-    "band_2_6k_db": -37.3,
+    "st_p95": -20.84,
+    "band_2_6k_db": -36.9,
     "balance": {
      "piano": 88,
      "orch": 7,
@@ -2135,7 +2135,9 @@
      "chip": 5
     },
     "chip_share": 5,
-    "warnings": []
+    "warnings": [
+     "marker at 0.5 s: no clear onset within 10 ms ({'t': 0.5, 'offset_ms': np.float64(28.0), 'strength': 1.92})"
+    ]
    },
    "e01-v31-a4-plan": {
     "underscore": {

@@ -34,7 +34,8 @@ CLK = None
 # v3.3 polish X3 (audit-v32 #6): the night cue's felt fifth re-enters 0.4 s before the carve's cut, under the post's
 # last palette step to night, and 3 dB down, so it lands as a return, not a jolt (v3.2: +24.4 dB in 400 ms on the cut)
 NIGHT_PRELAP_S = 0.4
-NIGHT_ENTRY_DB = -3.0
+NIGHT_ENTRY_DB = -6.5          # (audit-v33 §2: the onset still rose +23.5 dB in 100 ms: another -3.5 dB, and a swell)
+NIGHT_SWELL_S = 0.2            # the fifth swells in over 200 ms from its onset, so it arrives as a return, not a hit
 
 
 def bind(clock):
