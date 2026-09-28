@@ -1,12 +1,11 @@
-// MR. MAS — Ep1 v3.2 pixel picture: THE TAG ("december", sc 32–33), one layout per shot of lock `tag` (the
-// v3-shots-coldopen-tag pass, 2026-09-27/28). The lock is ./data.ts (tools/lock.py on the FINAL v3.2 lock,
-// show/reel/ep01-v32/ep01-v32-tag.json, with ./takes-mouth.json: the fastrec takes plus mouth tracks for "that was close."
+// MR. MAS — Ep1 v3.4 pixel picture: THE TAG ("december", sc 32–33), one layout per shot of lock `tag` (the
+// v3-shots-coldopen-tag pass, 2026-09-27/28). The lock is ./data.ts (tools/lock.py on the FINAL v3.4 lock,
+// show/reel/ep01-v34/ep01-v34-tag.json, with ./takes-mouth.json: the fastrec takes plus mouth tracks for "that was close."
 // and "noted.", from coldopen/tools/mouths.py).
-// v3.1: 32.01 is 62 frames and its monitor wakes on its own (kits/monitor-v31 screenWake, then the demo's first card);
-// v31-32.01d is the Runway insert, ELGOOG's demo film (out/ep01/full-v3/runway/elgoog-demo-final.mp4, runway.md §6):
-// its i0–216 are BROWSER frames, spliced whole from PNGs (tag/tools/splice.ts writes them from insert.py's, with any host
-// layer baked in: in v3.2 there is none, since "those are stills." is cut); its i217–232 are drawn here (the two-shot with
-// the held still on his monitor). v3.2 (the final lock, show/reel/ep01-v32/ep01-v32-tag.json): only that V.O. changed.
+// v3.4: the showrunner cut ELGOOG's demo ("the duck should just be cut"): no Runway insert, no browser frames, no duck
+// on his monitor; the monitor is the plain dim screen throughout (kits/mas-monitor screenDim). v3.1–v3.3's insert layout,
+// its splice tool (tag/tools/splice.ts), the held still (tag/heldstill.ts) and the demo's card painter are in git
+// history; the Runway clip stays on disk (out/ep01/full-v3/runway/elgoog-demo-final.mp4) for later episodes.
 // The art is v3-art-b's dark room for the tag (rooms/darkroom-act3.ts, kits/emit-cover, kits/orb-toast, kits/grey-lady;
 // show/episodes/ep01/production/full-v3/art/art-b.md §1.6) and this segment's small additive drawings in ./art.ts. The
 // tag ends on its own last frame, black on the vault's hum; the Orb outro (a separate chapter) follows it.
@@ -19,56 +18,32 @@ import {Buf, rect} from '../../../../shared/pixel/px';
 import {PAL} from '../../../../shared/pixel/palette';
 import {DPLATE, DPLATE_LOOK} from '../../../../shared/pixel/rooms/darkroom-plate';
 import {drawDarkA3, drawSlotECU, drawCoverMCU, drawBackWall, drawProfileGlass} from '../../../../shared/pixel/rooms/darkroom-act3';
-import {drawMonitorOTS, drawMonitorPOV} from '../../../../shared/pixel/kits/mas-monitor';
-import {screenWake} from '../../../../shared/pixel/kits/monitor-v31';
-import {heldStillPainter} from './heldstill';
+import {screenDim} from '../../../../shared/pixel/kits/mas-monitor';
 import {drawFrontPageHigh} from '../../../../shared/pixel/kits/grey-lady';
-import {drawCoverProfile, drawWallOrb, eraseProfileHand, cardField} from './art';
+import {drawCoverProfile, drawWallOrb, eraseProfileHand} from './art';
 import {drawMasStand, MAS_STAND_DEFAULT, masWalkAt} from '../../../../shared/pixel/cast/mas-stand';
 import {DARKROOM} from '../../../../shared/pixel/rooms/darkroom';
 import {LOCK} from './data';
 
 const L = layouts();
-/** after the demo the frozen duck stays up on his monitor (runway.md §6's continuity: the Orb re-scans the cover while
- *  the staged duck is still up behind him) */
-const PLATE_HELD = {tally: 3 as const, screen: heldStillPainter};
-/** the Runway insert: its shot, and the frames spliced from PNGs (i0–216; i217–232 are this file's two-shot) */
-const DEMO = LOCK.shots.find((s) => s.id === 'v31-32.01d')!;
-export const DEMO_SPLICE = {from: DEMO.s, to: DEMO.s + 217};
+const PLATE = {tally: 3 as const, screen: screenDim};
 
 // ------------------------------------------------------------------ 32. the delivery
 L.add('32.01', {
-  st: 'rooms/darkroom-act3 drawDarkA3 (the dark room\'s two-shot, the tag\'s): Mas at the desk, his thumb on the third mark in the wood; the monitor lights on its own (kits/monitor-v31 screenWake 1-2-3 in held steps, then tag/art cardField: the demo film\'s bright first card); the Orb\'s iris goes to it first, and at k50 Mas looks up at it (runway.md §6: the cut to the insert is on his eyeline, 12 f later); the rail types in the band',
+  st: 'rooms/darkroom-act3 drawDarkA3 (the dark room\'s two-shot, the tag\'s arrival): Mas at the desk with the three marks in the wood (his thumb on the third, head down), then his eyes up; the Orb at his shoulder, its iris on the marks, on him, then to the rack 6 f before it whirs; the faded outline on the wall, the monitor dim and silent (kits/mas-monitor screenDim), the rack\'s LEDs',
   draw: (fb, k, sh, f) => {
-    const wake = 14, up = 50;
-    const scr = k < wake ? screenWake(0) : k < wake + 3 ? screenWake(1) : k < wake + 6 ? screenWake(2) : k < wake + 12 ? screenWake(3) : cardField;
+    const len = sh.e - sh.s, orbFace = 40, up = 50, orbRack = len - 6;
     drawDarkA3(fb, f, {
-      orb: {at: 'shoulder', look: k < wake + 2 ? DPLATE_LOOK.mark3 : DPLATE_LOOK.grid},
+      orb: {at: 'shoulder', look: k < orbFace ? DPLATE_LOOK.mark3 : k < orbRack ? DPLATE_LOOK.face : DPLATE_LOOK.tray},
       outline: true,
       mas: k < up ? {head: 'down', arm: 'tally', look: -1} : {head: '34', arm: 'rest', look: -1},
-      plate: {tally: 3, screen: scr},
-    });
-  },
-});
-
-L.add('v31-32.01d', {
-  st: 'the RUNWAY INSERT, ELGOOG\'s demo film (runway.md §3-§6: (a) the push-in, no chip; out/ep01/full-v3/runway/elgoog-demo-final.mp4): i0-216 are browser frames, spliced whole from insert.py\'s PNGs through tag/tools/splice.ts (the host\'s layer baked in; none in v3.2); here those frames draw only a pixel fallback (the monitor kit\'s [OTS] / [POV] with the demo\'s card or its held still). i217-232: the two-shot, drawDarkA3 with the held still on his monitor (tag/heldstill), Mas looking at it, the Orb\'s iris on it, then to the rack 6 f before 32.02\'s whir',
-  draw: (fb, k, sh, f) => {
-    const len = sh.e - sh.s;
-    if (k < 22) { drawMonitorOTS(fb, f, cardField, {plate: {tally: 3}, key: 'tag-ots'}); return; }
-    if (k < 199) { drawMonitorPOV(fb, f, heldStillPainter); return; }
-    if (k < 217) { drawMonitorOTS(fb, f, heldStillPainter, {plate: {tally: 3}, key: 'tag-ots'}); return; }
-    drawDarkA3(fb, f, {
-      orb: {at: 'shoulder', look: k < len - 6 ? DPLATE_LOOK.grid : DPLATE_LOOK.tray},
-      outline: true,
-      mas: {head: '34', arm: 'rest', look: -1},
-      plate: PLATE_HELD,
+      plate: PLATE,
     });
   },
 });
 
 L.add('32.02', {
-  st: 'rooms/darkroom-act3 drawSlotECU + kits/emit-cover (ecu): the rack\'s slot whirs and lets EMIT\'s year-end issue down in three held steps, headline first, masthead last; held to read (the LEDs keep blinking); the rail is the host\'s',
+  st: 'rooms/darkroom-act3 drawSlotECU + kits/emit-cover (ecu): the rack\'s slot whirs and lets EMIT\'s year-end issue down in three held steps, headline first, masthead last; held to read (the LEDs keep blinking); the rail `DEC 6, 2023` types in the band (v3.4: it moved here with the demo cut)',
   marks: {whir: ['snd', 'tape_start', 1, 0]},
   draw: (fb, k, sh, f) => {
     const j = k - mk(sh, 'whir', 0);
@@ -98,7 +73,7 @@ L.add('32.04', {
     if (k >= sw2 && k < v2) toasts.push({s: 're-scanning…', k: k - sw2, kind: 'working', x: 182, y: 104});
     if (k >= v2) toasts.push({s: 'verified: human', k: k - v2, x: 182, y: 104});
     const lookOrb = k >= sw2 && k < v2 ? [-0.62, 0.4] as [number, number] : DPLATE_LOOK.face;
-    drawDarkA3(fb, f, {orb: {at: 'shoulder', look: lookOrb, scanning: scan !== null}, outline: true, mas: {look: 1}, plate: PLATE_HELD, cover: true, scan, toasts});
+    drawDarkA3(fb, f, {orb: {at: 'shoulder', look: lookOrb, scanning: scan !== null}, outline: true, mas: {look: 1}, plate: PLATE, cover: true, scan, toasts});
   },
 });
 
@@ -136,7 +111,7 @@ L.add('33.01', {
       orb: {at: orbAt, look: t < 6 ? DPLATE_LOOK.face : [-0.1, 0.8]},
       outline: true,
       mas: t < 14 ? {head: '34', look: -1} : {head: 'down', look: -1},
-      plate: PLATE_HELD,
+      plate: PLATE,
       paper,
     });
     if (t >= 0 && t < 5) shiftRoom(fb, [2, -2, 1, -1, 1][t], t < 2 ? 1 : 0);
@@ -165,5 +140,4 @@ L.add('33.05', {
 });
 
 void on2; void Buf;
-export const SEGMENT = defineSegment({seg: 'tag', lock: LOCK, layouts: L.all,
-  browser: {frames: (f) => f >= DEMO_SPLICE.from && f < DEMO_SPLICE.to, note: 'the Runway insert (ELGOOG\'s demo), i0-216: PNGs from tag/tools/splice.ts (GLYPH_DIR/pic/NNNNN.png)'}});
+export const SEGMENT = defineSegment({seg: 'tag', lock: LOCK, layouts: L.all});

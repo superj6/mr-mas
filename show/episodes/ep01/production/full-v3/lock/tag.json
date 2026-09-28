@@ -4,7 +4,7 @@
   "episode": "ep01",
   "seg": "tag",
   "label": "TAG",
-  "timeline": "show/reel/ep01-v33/ep01-v33-tag.json",
+  "timeline": "show/reel/ep01-v34/ep01-v34-tag.json",
   "takes": [
    "studio/src/episodes/ep01/pixel/tag/takes-mouth.json"
   ],
@@ -13,8 +13,8 @@
   "base_lock": null,
   "generator": "studio/src/episodes/ep01/pixel/tools/lock.py",
   "fps": 24,
-  "ep_in": "20:18:23",
-  "ep_in_frames": 29255,
+  "ep_in": "20:10:12",
+  "ep_in_frames": 29052,
   "rules": [
    "the picture is cut to the stick timeline: its beats are the shots, its lines are the lines, nothing re-timed",
    "a continuation beat that follows its own shot directly merges into it",
@@ -26,33 +26,33 @@
   "note": "Nothing here was watched or heard. The numbers are measured from the files; whether the picture reads needs a person."
  },
  "summary": {
-  "shots": 11,
-  "beats": 11,
-  "frames": 1016,
-  "seconds": 42.333,
-  "length": "0:42.33",
-  "episode_in": "20:18:23",
-  "episode_out": "21:01:07",
+  "shots": 10,
+  "beats": 10,
+  "frames": 798,
+  "seconds": 33.25,
+  "length": "0:33.25",
+  "episode_in": "20:10:12",
+  "episode_out": "20:43:18",
   "verdicts": {
-   "-": 11
+   "-": 10
   },
-  "mean_s": 3.848,
+  "mean_s": 3.325,
   "median_s": 3.5,
   "min_s": 1.25,
-  "max_s": 9.708,
-  "lines": 4,
+  "max_s": 4.792,
+  "lines": 3,
   "posts": 0,
   "vo": 1,
-  "lines_with_mouth": 3,
+  "lines_with_mouth": 2,
   "mouths_from_words": 0,
   "on_camera_mouths": [],
   "lines_crossing_a_cut": [],
   "prelaps": [],
   "reviewer_slates": [],
   "mix": {
-   "path": "out/ep01/full-v3/picture/tag-v33-stick-mix.wav",
+   "path": "out/ep01/full-v3/picture/tag-v34-stick-mix.wav",
    "offset_frames": 0,
-   "frames": 1016.0
+   "frames": 798.0
   },
   "refs": {}
  },
@@ -60,22 +60,22 @@
   {
    "check": "shot frames = their beats' frames",
    "ok": true,
-   "detail": "11 shots from 11 beats"
+   "detail": "10 shots from 10 beats"
   },
   {
    "check": "shots tile the segment with no gap",
    "ok": true,
-   "detail": "0 -> 1016"
+   "detail": "0 -> 798"
   },
   {
    "check": "the lock vs the stick reel's own line frames",
    "ok": true,
-   "detail": "same frame: 1; 1 f earlier (the onset falls inside the frame): 3; other: 0"
+   "detail": "same frame: 2; 1 f earlier (the onset falls inside the frame): 1; other: 0"
   },
   {
    "check": "every line has a take",
    "ok": true,
-   "detail": "4 of 4 placed; no take: []"
+   "detail": "3 of 3 placed; no take: []"
   },
   {
    "check": "every line's speech lies inside its take file",
@@ -85,7 +85,7 @@
   {
    "check": "mouth tracks carried over",
    "ok": true,
-   "detail": "3 lines with a mouth track; lost: []"
+   "detail": "2 lines with a mouth track; lost: []"
   },
   {
    "check": "every on-camera mouth has a track",
@@ -95,7 +95,7 @@
   {
    "check": "the mix = its offset + the segment",
    "ok": true,
-   "detail": "mix 1016.00 f vs 0 + 1016"
+   "detail": "mix 798.00 f vs 0 + 798"
   }
  ],
  "sequences": [
@@ -105,10 +105,9 @@
    "place": "Mas's dark room",
    "time": "December 2023 · night",
    "s": 0,
-   "e": 1016,
+   "e": 798,
    "shots": [
     "32.01",
-    "v31-32.01d",
     "32.02",
     "32.03",
     "32.04",
@@ -121,10 +120,10 @@
    ],
    "chapter": "December 2023 · night",
    "title": "Mas's dark room",
-   "cue": "music (v3.3): TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills · sound: the dark room bed (rack fans, LED ticks), in from the bullpen's · monitor eggs: zero read load by design; the duck's caption is still timed for a read · style (v3.1): NATIVE (near-photoreal, objects only) inside the monitor, stepping back to BASE pixels on the bezel · the first toast is his, the second the cover's (the reel stacks them; the picture puts each over its face) · the framed GUEST lanyard answers Act Four's \"the badge was a joke.\" / \"mostly.\" · style: the lit-UI band lights on the thud frame (the episode's 2nd and last); the band does not shake · the cursor is already parked on the glass · no rail: the stamp is the record · the room tone holds; no music; the page settles twice (paper_curl) · the bracketed line is a reel stand-in for the drawn newspaper, not in-world text · the lit-UI band (\"Look at glass of water\") stays up over this insert in the picture; the reel leaves it off here so it does not read as newsprint · the Q* vault's F hum carries in under it and becomes its root (heard, not seen) · the hum rings on under black, into the outro",
-   "frames": 1016,
-   "tc_in": "20:18:23",
-   "tc_out": "21:01:07"
+   "cue": "music (v3.4): TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills · sound: the dark room bed (rack fans, LED ticks), in from the bullpen's · monitor eggs: zero read load by design; the duck's caption is still timed for a read · the first toast is his, the second the cover's (the reel stacks them; the picture puts each over its face) · the framed GUEST lanyard answers Act Four's \"the badge was a joke.\" / \"mostly.\" · style: the lit-UI band lights on the thud frame (the episode's 2nd and last); the band does not shake · the cursor is already parked on the glass · no rail: the stamp is the record · the room tone holds; no music; the page settles twice (paper_curl) · the bracketed line is a reel stand-in for the drawn newspaper, not in-world text · the lit-UI band (\"Look at glass of water\") stays up over this insert in the picture; the reel leaves it off here so it does not read as newsprint · the Q* vault's F hum carries in under it and becomes its root (heard, not seen) · the hum rings on under black, into the outro",
+   "frames": 798,
+   "tc_in": "20:10:12",
+   "tc_out": "20:43:18"
   }
  ],
  "shots": [
@@ -135,14 +134,8 @@
     "32.01"
    ],
    "s": 0,
-   "e": 62,
-   "onscreen": [
-    {
-     "text": "RAIL: DEC 6, 2023",
-     "s": 4,
-     "e": 62
-    }
-   ],
+   "e": 77,
+   "onscreen": [],
    "lines": [],
    "seq": "TAG",
    "verdict": "",
@@ -154,13 +147,13 @@
    "frame": "TWO-SHOT · the desk, three marks in the wood",
    "cls": "M",
    "move": "hold",
-   "does": "Mas and the Orb at the desk, three marks in the wood now. On the monitor behind them a video starts on its own: a bright colour field.",
+   "does": "Mas and the Orb at the desk, three marks in the wood now. The monitor behind them is dark.",
    "chars": [
     "mas",
     "orb"
    ],
    "cues": [
-    "music (v3.3): TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+    "music (v3.4): TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
     "sound: the dark room bed (rack fans, LED ticks), in from the bullpen's",
     "monitor eggs: zero read load by design; the duck's caption is still timed for a read"
    ],
@@ -173,7 +166,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "Mas and the Orb at the desk, three marks in the wood now. On the monitor behind them a video starts on its own: a bright colour field.",
+   "caption": "Mas and the Orb at the desk, three marks in the wood now. The monitor behind them is dark.",
    "cast": [
     {
      "id": "mas",
@@ -201,152 +194,9 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "20:18:23",
-   "tc_out": "20:21:13",
-   "frames": 62
-  },
-  {
-   "id": "v31-32.01d",
-   "setup": "v31-32.01d",
-   "beats": [
-    "v31-32.01d"
-   ],
-   "s": 62,
-   "e": 295,
-   "onscreen": [
-    {
-     "text": "ELGOOG",
-     "s": 4,
-     "e": 233
-    },
-    {
-     "text": "LIVE",
-     "s": 4,
-     "e": 233
-    }
-   ],
-   "lines": [
-    {
-     "id": "v31-tg-0001",
-     "kind": "dialogue",
-     "mode": "on-mic",
-     "who": "ELGOOG-DEMO",
-     "text": "What the quack!",
-     "s": 110,
-     "e": 135,
-     "fs": 98,
-     "fe": 153,
-     "os": false,
-     "via": null,
-     "face": null,
-     "lip": false,
-     "carry": false,
-     "cut": false,
-     "mouth": [
-      [
-       0,
-       "O"
-      ],
-      [
-       2,
-       "A"
-      ],
-      [
-       4,
-       "E"
-      ],
-      [
-       10,
-       "O"
-      ],
-      [
-       14,
-       "A"
-      ],
-      [
-       21,
-       "E"
-      ],
-      [
-       24,
-       "rest"
-      ]
-     ],
-     "words": [
-      [
-       "What",
-       0,
-       5
-      ],
-      [
-       "the",
-       5,
-       8
-      ],
-      [
-       "quack",
-       8,
-       24
-      ]
-     ],
-     "tag": "monitor",
-     "pre": false
-    }
-   ],
-   "seq": "TAG",
-   "verdict": "",
-   "v4": null,
-   "side": "MAS",
-   "side_label": "",
-   "badge": null,
-   "whip": null,
-   "frame": "POV → NATIVE · ELGOOG's demo film (the Runway insert)",
-   "cls": "SC",
-   "move": "cut",
-   "does": "Push into the monitor, and the picture goes native: ELGOOG's product film. The wordmark on a colour field; a line drawing of a duck drawn by nothing, filling into a real toy duck on a turntable; the film's own LIVE chip. On the smooth turn, the demo's own voice. Then it stutters: held frames, the LIVE chip drops, and it is stills. Its last still steps back into pixels on the monitor's bezel.",
-   "chars": [],
-   "cues": [
-    "music (v3.3): TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
-    "style (v3.1): NATIVE (near-photoreal, objects only) inside the monitor, stepping back to BASE pixels on the bezel"
-   ],
-   "sounds": [],
-   "spots": [],
-   "v4_frames": null,
-   "kind": "scene",
-   "set": "screen",
-   "room": "darkroom",
-   "style": "BASE",
-   "fx": [],
-   "slate": false,
-   "caption": "Push into the monitor, and the picture goes native: ELGOOG's product film. The wordmark on a colour field; a line drawing of a duck drawn by nothing, filling into a real toy duck on a turntable; the film's own LIVE chip. On the smooth turn, the demo's own voice. Then it stutters: held frames, the LIVE chip drops, and it is stills. Its last still steps back into pixels on the monitor's bezel.",
-   "cast": [],
-   "speak": [],
-   "beat_starts": {
-    "v31-32.01d": 0
-   },
-   "names": [],
-   "fg": null,
-   "marks": {},
-   "mark_src": {},
-   "texts": [
-    {
-     "kind": "label",
-     "text": "ELGOOG",
-     "s": 4,
-     "e": 233,
-     "must": true
-    },
-    {
-     "kind": "label",
-     "text": "LIVE",
-     "s": 4,
-     "e": 233,
-     "must": true
-    }
-   ],
-   "tc_in": "20:21:13",
-   "tc_out": "20:31:06",
-   "frames": 233
+   "tc_in": "20:10:12",
+   "tc_out": "20:13:17",
+   "frames": 77
   },
   {
    "id": "32.02",
@@ -354,8 +204,8 @@
    "beats": [
     "32.02"
    ],
-   "s": 295,
-   "e": 385,
+   "s": 77,
+   "e": 167,
    "onscreen": [
     {
      "text": "EMIT · YEAR-END ISSUE",
@@ -365,6 +215,11 @@
     {
      "text": "CEO OF THE YEAR",
      "s": 28,
+     "e": 90
+    },
+    {
+     "text": "RAIL: DEC 6, 2023",
+     "s": 4,
      "e": 90
     }
    ],
@@ -382,7 +237,7 @@
    "does": "DELIVERY. The rack slot whirs and ejects a magazine: on the cover, Mas, calm, lit like a keynote.",
    "chars": [],
    "cues": [
-    "music (v3.3): TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills"
+    "music (v3.4): TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills"
    ],
    "sounds": [
     "tape_start @0"
@@ -427,8 +282,8 @@
      "must": true
     }
    ],
-   "tc_in": "20:31:06",
-   "tc_out": "20:35:00",
+   "tc_in": "20:13:17",
+   "tc_out": "20:17:11",
    "frames": 90
   },
   {
@@ -437,8 +292,8 @@
    "beats": [
     "32.03"
    ],
-   "s": 385,
-   "e": 500,
+   "s": 167,
+   "e": 282,
    "onscreen": [
     {
      "text": "CEO OF THE YEAR",
@@ -510,7 +365,7 @@
     "mas"
    ],
    "cues": [
-    "music (v3.3): TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills"
+    "music (v3.4): TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills"
    ],
    "sounds": [],
    "spots": [],
@@ -549,8 +404,8 @@
      "must": true
     }
    ],
-   "tc_in": "20:35:00",
-   "tc_out": "20:39:19",
+   "tc_in": "20:17:11",
+   "tc_out": "20:22:06",
    "frames": 115
   },
   {
@@ -559,8 +414,8 @@
    "beats": [
     "32.04"
    ],
-   "s": 500,
-   "e": 596,
+   "s": 282,
+   "e": 378,
    "onscreen": [
     {
      "text": "CEO OF THE YEAR",
@@ -600,7 +455,7 @@
     "orb"
    ],
    "cues": [
-    "music (v3.3): TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+    "music (v3.4): TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
     "the first toast is his, the second the cover's (the reel stacks them; the picture puts each over its face)"
    ],
    "sounds": [
@@ -695,8 +550,8 @@
      "must": true
     }
    ],
-   "tc_in": "20:39:19",
-   "tc_out": "20:43:19",
+   "tc_in": "20:22:06",
+   "tc_out": "20:26:06",
    "frames": 96
   },
   {
@@ -705,8 +560,8 @@
    "beats": [
     "32.05"
    ],
-   "s": 596,
-   "e": 662,
+   "s": 378,
+   "e": 444,
    "onscreen": [
     {
      "text": "CEO OF THE YEAR",
@@ -801,7 +656,7 @@
     "mas"
    ],
    "cues": [
-    "music (v3.3): TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills"
+    "music (v3.4): TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills"
    ],
    "sounds": [],
    "spots": [],
@@ -840,8 +695,8 @@
      "must": true
     }
    ],
-   "tc_in": "20:43:19",
-   "tc_out": "20:46:13",
+   "tc_in": "20:26:06",
+   "tc_out": "20:29:00",
    "frames": 66
   },
   {
@@ -850,8 +705,8 @@
    "beats": [
     "32.07"
    ],
-   "s": 662,
-   "e": 746,
+   "s": 444,
+   "e": 528,
    "onscreen": [
     {
      "text": "CEO OF THE YEAR",
@@ -881,7 +736,7 @@
     "orb"
    ],
    "cues": [
-    "music (v3.3): TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+    "music (v3.4): TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
     "the framed GUEST lanyard answers Act Four's \"the badge was a joke.\" / \"mostly.\""
    ],
    "sounds": [
@@ -950,8 +805,8 @@
      "must": true
     }
    ],
-   "tc_in": "20:46:13",
-   "tc_out": "20:50:01",
+   "tc_in": "20:29:00",
+   "tc_out": "20:32:12",
    "frames": 84
   },
   {
@@ -960,8 +815,8 @@
    "beats": [
     "33.01"
    ],
-   "s": 746,
-   "e": 800,
+   "s": 528,
+   "e": 582,
    "onscreen": [],
    "lines": [],
    "seq": "TAG",
@@ -980,7 +835,7 @@
     "orb"
    ],
    "cues": [
-    "music (v3.3): TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+    "music (v3.4): TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
     "style: the lit-UI band lights on the thud frame (the episode's 2nd and last); the band does not shake",
     "the cursor is already parked on the glass"
    ],
@@ -1031,8 +886,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "20:50:01",
-   "tc_out": "20:52:07",
+   "tc_in": "20:32:12",
+   "tc_out": "20:34:18",
    "frames": 54
   },
   {
@@ -1041,8 +896,8 @@
    "beats": [
     "33.02"
    ],
-   "s": 800,
-   "e": 902,
+   "s": 582,
+   "e": 684,
    "onscreen": [
     {
      "text": "THE GREY LADY",
@@ -1069,7 +924,7 @@
    "does": "A plain serif masthead, never blackletter. The only text under it: a clerk's stamp, held to read.",
    "chars": [],
    "cues": [
-    "music (v3.3): TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+    "music (v3.4): TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
     "no rail: the stamp is the record",
     "the room tone holds; no music; the page settles twice (paper_curl)",
     "the bracketed line is a reel stand-in for the drawn newspaper, not in-world text",
@@ -1124,8 +979,8 @@
      "must": true
     }
    ],
-   "tc_in": "20:52:07",
-   "tc_out": "20:56:13",
+   "tc_in": "20:34:18",
+   "tc_out": "20:39:00",
    "frames": 102
   },
   {
@@ -1134,8 +989,8 @@
    "beats": [
     "33.04"
    ],
-   "s": 902,
-   "e": 986,
+   "s": 684,
+   "e": 768,
    "onscreen": [],
    "lines": [
     {
@@ -1202,7 +1057,7 @@
     "mas"
    ],
    "cues": [
-    "music (v3.3): TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+    "music (v3.4): TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
     "the Q* vault's F hum carries in under it and becomes its root (heard, not seen)"
    ],
    "sounds": [
@@ -1248,8 +1103,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "20:56:13",
-   "tc_out": "21:00:01",
+   "tc_in": "20:39:00",
+   "tc_out": "20:42:12",
    "frames": 84
   },
   {
@@ -1258,8 +1113,8 @@
    "beats": [
     "33.05"
    ],
-   "s": 986,
-   "e": 1016,
+   "s": 768,
+   "e": 798,
    "onscreen": [],
    "lines": [],
    "seq": "TAG",
@@ -1275,7 +1130,7 @@
    "does": "CUT TO BLACK on the hum. The hook to Ep2 is a sound only.",
    "chars": [],
    "cues": [
-    "music (v3.3): TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+    "music (v3.4): TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
     "the hum rings on under black, into the outro"
    ],
    "sounds": [],
@@ -1298,86 +1153,12 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "21:00:01",
-   "tc_out": "21:01:07",
+   "tc_in": "20:42:12",
+   "tc_out": "20:43:18",
    "frames": 30
   }
  ],
  "lines": [
-  {
-   "id": "v31-tg-0001",
-   "shot": "v31-32.01d",
-   "beat": "v31-32.01d",
-   "kind": "dialogue",
-   "mode": "on-mic",
-   "who": "ELGOOG-DEMO",
-   "text": "What the quack!",
-   "tag": "monitor",
-   "on_s": 7.1833,
-   "end_s": 8.2033,
-   "file_s": 6.6833,
-   "abs_in": 172,
-   "abs_out": 197,
-   "file_in": 160,
-   "file_out": 215,
-   "file": "audio/ep01/v31/tag/wav/v31-tg-0001.wav",
-   "stick_t": 4.6,
-   "stick_in": 0.5,
-   "cut": false,
-   "on_camera": "monitor",
-   "take_lip_sync": true,
-   "os": false,
-   "via": null,
-   "words": [
-    [
-     "What",
-     0,
-     5
-    ],
-    [
-     "the",
-     5,
-     8
-    ],
-    [
-     "quack",
-     8,
-     24
-    ]
-   ],
-   "mouth": [
-    [
-     0,
-     "O"
-    ],
-    [
-     2,
-     "A"
-    ],
-    [
-     4,
-     "E"
-    ],
-    [
-     10,
-     "O"
-    ],
-    [
-     14,
-     "A"
-    ],
-    [
-     21,
-     "E"
-    ],
-    [
-     24,
-     "rest"
-    ]
-   ],
-   "mouth_src": "take",
-   "pre": false
-  },
   {
    "id": "v3-vo-24",
    "shot": "32.03",
@@ -1387,13 +1168,13 @@
    "who": "MAS",
    "text": "it looks calmer than me.",
    "tag": "V.O.",
-   "on_s": 17.0417,
-   "end_s": 18.4617,
-   "file_s": 16.4617,
-   "abs_in": 409,
-   "abs_out": 444,
-   "file_in": 395,
-   "file_out": 461,
+   "on_s": 7.9583,
+   "end_s": 9.3783,
+   "file_s": 7.3783,
+   "abs_in": 191,
+   "abs_out": 226,
+   "file_in": 177,
+   "file_out": 243,
    "file": "audio/ep01/v3/tag/wav/v3-vo-24.wav",
    "stick_t": 1.0,
    "stick_in": 0.58,
@@ -1442,13 +1223,13 @@
    "who": "MAS",
    "text": "that was close.",
    "tag": "",
-   "on_s": 25.5333,
-   "end_s": 26.5933,
-   "file_s": 25.0133,
-   "abs_in": 612,
-   "abs_out": 639,
-   "file_in": 600,
-   "file_out": 654,
+   "on_s": 16.45,
+   "end_s": 17.51,
+   "file_s": 15.93,
+   "abs_in": 394,
+   "abs_out": 421,
+   "file_in": 382,
+   "file_out": 436,
    "file": "audio/ep01/v31/tag/wav/v31-tg-0002.wav",
    "stick_t": 0.7,
    "stick_in": 0.52,
@@ -1520,13 +1301,13 @@
    "who": "MAS",
    "text": "noted.",
    "tag": "",
-   "on_s": 38.0833,
-   "end_s": 38.7933,
-   "file_s": 37.5833,
-   "abs_in": 914,
-   "abs_out": 932,
-   "file_in": 902,
-   "file_out": 946,
+   "on_s": 29.0,
+   "end_s": 29.71,
+   "file_s": 28.5,
+   "abs_in": 696,
+   "abs_out": 714,
+   "file_in": 684,
+   "file_out": 728,
    "file": "audio/ep01/tag/dialogue/fast-v1/wav/e1-tg-33-01.wav",
    "stick_t": 0.5,
    "stick_in": 0.5,
@@ -1572,30 +1353,18 @@
  "rails": [
   {
    "text": "DEC 6, 2023",
-   "s": 4,
-   "e": 62,
-   "shot": "32.01",
+   "s": 81,
+   "e": 167,
+   "shot": "32.02",
    "floor_f": 20
   }
  ],
  "sound_marks": [],
  "subs": [
   {
-   "s": 172,
-   "e": 197,
-   "hold_to": 209,
-   "who": "ELGOOG-DEMO",
-   "shown": "ELGOOG'S DEMO",
-   "text": "What the quack!",
-   "kind": "dialogue",
-   "mode": "on-mic",
-   "id": "v31-tg-0001",
-   "os": false
-  },
-  {
-   "s": 409,
-   "e": 444,
-   "hold_to": 456,
+   "s": 191,
+   "e": 226,
+   "hold_to": 238,
    "who": "MAS",
    "shown": "MAN AT THE DESK",
    "text": "it looks calmer than me.",
@@ -1605,9 +1374,9 @@
    "os": false
   },
   {
-   "s": 612,
-   "e": 639,
-   "hold_to": 651,
+   "s": 394,
+   "e": 421,
+   "hold_to": 433,
    "who": "MAS",
    "shown": "MAN AT THE DESK",
    "text": "that was close.",
@@ -1617,9 +1386,9 @@
    "os": false
   },
   {
-   "s": 914,
-   "e": 932,
-   "hold_to": 944,
+   "s": 696,
+   "e": 714,
+   "hold_to": 726,
    "who": "MAS",
    "shown": "MAN AT THE DESK",
    "text": "noted.",
@@ -1633,9 +1402,9 @@
  "v4_ids": {},
  "base_marks_scaled": [],
  "decisions": [
-  "2 beat lengths are not whole frames (32.03, 32.05): beats start on the rounded running total, as the stick reel draws them",
+  "3 beat lengths are not whole frames (32.01, 32.03, 32.05): beats start on the rounded running total, as the stick reel draws them",
   "33.02: label 'COMPLAINT · THE GREY LADY v. MAC' is up 87 f, under its read floor 102 f (the stick's timing; kept)",
-  "2 takes are not in the timeline: ['e1-tg-32-01', 'v31-vo-07']"
+  "3 takes are not in the timeline: ['e1-tg-32-01', 'v31-vo-07', 'v31-tg-0001']"
  ],
  "problems": []
 }

@@ -1,10 +1,22 @@
 # Ep1 v3: the cold open's pixel shots (`v3-shots-coldopen-tag`, 2026-09-27)
 
-> **Status: on the v3.3 lock, unchanged since v3.2 (the v3.3, v3.2 and v3.1 sections below); re-cut, re-locked and re-rendered (§0), 2026-09-27.** This is track P2 of [PLAN.md](PLAN.md) for the `coldopen` segment. The tag's record is [shots-tag.md](shots-tag.md).
+> **Status: on the v3.4 lock, unchanged since v3.2 (the v3.4, v3.3, v3.2 and v3.1 sections below); re-cut, re-locked and re-rendered (§0), 2026-09-27.** This is track P2 of [PLAN.md](PLAN.md) for the `coldopen` segment. The tag's record is [shots-tag.md](shots-tag.md).
 >
 > **Nothing here was watched or heard.** I looked at the contact sheet, at native stills of every shot (at 2x, with crops at 4x of the mouths and the iris steps), at frames decoded from the rendered MP4s, and at the last 3 s against the intro's frame 0. The flash and join numbers are measured. Whether the cuts play needs a person.
 >
 > Nothing was committed.
+
+## v3.4 (2026-09-28)
+
+- **The check:**
+  - **Kokoro:** `show/reel/ep01-v34/ep01-v34-coldopen.json` matches v3.3 in every beat. 640 frames.
+  - **EL:** `ep01-v34-el-coldopen.json` matches v3.3 in timing. Only its takes' folder moved (v33 → v34, the same take files). 583 frames.
+- **What I did:**
+  - Re-locked on v3.4, with the mix pointed at `out/ep01/full-v3/mix-v33/coldopen-mix.wav` (640 f).
+  - Against the v3.3 lock, only the shots' `cues` changed.
+  - The cold open has no V.O., so the shared `voLine` fix doesn't touch it.
+- **Not re-rendered:** `picture/coldopen.mp4` (640 frames) stands.
+- **The EL lock:** locked into scratch on `el-v33/coldopen-takes.json` and built with `build_el.mjs`: 583 frames, 10 layouts, 0 stand-ins, 0 problems.
 
 ## v3.3 (the polish round, 2026-09-28)
 

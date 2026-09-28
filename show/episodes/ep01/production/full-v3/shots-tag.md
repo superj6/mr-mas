@@ -1,12 +1,51 @@
 # Ep1 v3: the tag's pixel shots (`v3-shots-coldopen-tag`, 2026-09-27)
 
-> **Status: v3.3: re-locked on the v3.3 lock (the v3.3 section below; P19, the cover beat +1 s), the Runway demo spliced (the v3.1 section). The sections after those are the v3 record.** This is track P2 of [PLAN.md](PLAN.md) for the `tag` segment. The cold open's record is [shots-coldopen.md](shots-coldopen.md), which also holds the shared tools.
+> **Status: v3.4: re-locked on the v3.4 lock with the duck cut (the v3.4 section below); the Runway demo of v3.1–v3.3 is out of the tag. The sections after those are the v3 record.** This is track P2 of [PLAN.md](PLAN.md) for the `tag` segment. The cold open's record is [shots-coldopen.md](shots-coldopen.md), which also holds the shared tools.
 >
 > **The tag ends on its own last frame:** black on the vault's hum (33.05). The Orb outro follows as a separate chapter and isn't in this render.
 >
 > **Nothing here was watched or heard.** I looked at the contact sheet, at native stills of every shot at 2x, and at three frames decoded from the MP4. The flash numbers are measured.
 >
 > Nothing was committed.
+
+## v3.4: the duck is cut (2026-09-28)
+
+**The ruling** (the showrunner): "the duck should just be cut." The tag loses ELGOOG's demo entirely:
+- 32.01's monitor film;
+- the Runway insert v31-32.01d;
+- the frozen duck on his monitor in 32.04 and 33.01.
+
+**The v3.4 lock** (`show/reel/ep01-v34/ep01-v34-tag.json`, 4309e86): **798 frames, 33.25 s**, 10 shots.
+- **32.01, 0–77:** the room's arrival. Its caption now says the monitor is dark.
+- **32.02, 77–167:** the rail `DEC 6, 2023` moved here, typed in the band from frame 81.
+- **The rest is as in v3.3:** 32.03 167–282, 32.04 282–378, 32.05 378–444, 32.07 444–528, 33.01 528–582, 33.02 582–684, 33.04 684–768, 33.05 768–798.
+- **The takes are unchanged** (`tag/takes-mouth.json`). The lock notes three takes the timeline no longer uses: e1-tg-32-01, v31-vo-07 and v31-tg-0001.
+- **The temp track:** the reel's mixer on the v3.4 render plan (`studio/out/reel-work/ep01-v34-stick/plan.json`), sliced at reel frame 29124 for 798 frames into `out/ep01/full-v3/picture/tag-v34-stick-mix.wav`. The full mix and my v3.3 slice were deleted. The episode frame in is 29052.
+
+**The layouts:**
+- **Removed:** the insert's layout, the segment's browser-frame declaration, and the held duck on the monitor.
+- **The monitor is `screenDim` throughout:** 32.01, 32.04 and 33.01. That's the tag's v3 monitor: dim and silent, nothing to read.
+- **32.01 is a plain arrival again,** v3's layout on the new length:
+  - Mas's thumb on the third mark, head down, then eyes up at k50;
+  - the Orb's iris on the marks, then on him from k40, then to the rack 6 frames before 32.02's whir.
+- **32.02's layout is unchanged.** The host types the rail.
+
+**The code removed** (it stays in git history):
+- `tag/heldstill.ts`, the held-still painter;
+- `tag/tools/splice.ts`, the splice tool;
+- `tag/art.ts`'s `cardField`, the demo's card.
+
+The Runway clip (`out/ep01/full-v3/runway/elgoog-demo-final.mp4`) stays on disk for later episodes.
+
+**The shared V.O. fix** (frame.ts `voLine`: the typing finishes before the voice) applies to 32.03's "it looks calmer than me.". It's typed faster now, and fully up before the line ends.
+
+**Measured:**
+- **The render:** `out/ep01/full-v3/picture/tag.mp4`, **798 frames, 33.25 s**, video and audio both 33.250 s. 0 browser frames, 0 stand-ins, 0 failed layouts. `tag.srt` and `tag-sheet.png` sit beside it.
+- **Checks:** `check` has 10 layouts for 10 shots and 0 problems. `tsc` (scoped) is clean.
+- **Flashes:** **0 in any second**, red 0. The transitions are the page (582–586) and the black (766). The largest mean-luminance step is 0.32 at 684 (the page → 33.04).
+- **The subtitles:** *it looks calmer than me.* 7.96 s, "that was close." 16.42 s, "noted." 29.00 s.
+- **The EL lock:** `ep01-v34-el-tag.json` was locked into scratch on the assembly's `el-v33/tag-takes.json`, then built with `build_el.mjs` (`ELDIR` = scratch): 798 frames, 10 layouts, 0 stand-ins, 0 browser frames, 0 problems.
+- **Looked at:** the decoded frames 0, 45, 76 → 77 (the arrival's end → the slot), 120, 166 → 167, 200 (the V.O. typing), 300, 444, 540 and 797 (black).
 
 ## v3.3: the polish round (2026-09-28)
 
