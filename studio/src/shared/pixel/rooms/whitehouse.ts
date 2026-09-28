@@ -44,6 +44,8 @@ import {radnusBust, RADNUS_BUST_DEFAULT, RadnusBustState, RADNUS_COLLAR} from '.
 import {radnus as radnusRoomA, RADNUS_FOOT} from '../cast/radnus';
 import {fire} from '../kits/props';
 import {ROOM_FOOT, putBustCut} from '../cast/civic-kit';
+import {pt} from '../kits/uitype';
+import {holdFingers} from './bay-bridge';
 
 const RH = 203;
 // ------------------------------------------------------------------ geometry
@@ -528,14 +530,17 @@ export const CLASS_PHOTO_STATE: WHWideState = {
   door: 3, nedib: {t: 0.45, mouth: 'open', arm: 'baton'}, tripods: 0, blocks: 'IA', sirrah: {on: 'I', mouth: 'smile'},
   look: {mas: 'lens', radnus: 'door', mario: 'door', tasya: 'door'}, finger: 2, flame: 1,
 };
-export const drawClassPhoto = (b: Buf, f: number, st: {caption?: boolean; hand?: boolean} = {}) => {
+/** v3.1 (the match cut 13.14 -> 14.01): with `match`, the print is centred where the phone will be in 14.01
+ *  (rooms/bay-bridge BRIDGE_PHONE's centre) and his hand holds its left edge as it will hold the phone's */
+export const CLASS_PHOTO_MATCH = {cx: 235, cy: 112};
+export const drawClassPhoto = (b: Buf, f: number, st: {caption?: boolean; hand?: boolean; match?: boolean} = {}) => {
   // the desk under it: the meeting table close, a step dark (the print is the lit thing)
   for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) b.set(x, y, hash(x >> 5, y >> 1, 4) < 0.5 ? PAL.D2 : PAL.D3);
   // the print: the wide's own pixels (the flash frame), cropped round the row and the door, with a print grade
   const src = new Buf(480, 270, PAL.N0);
   drawWHWide(src, 0, CLASS_PHOTO_STATE);
   const cx0 = 24, cy0 = 44, cw = 332, ch = 124; // the crop (the head of the table to Tasya, the door above)
-  const X = 70, Y = 24, B = 6;
+  const X = st.match ? CLASS_PHOTO_MATCH.cx - (cw >> 1) : 70, Y = st.match ? CLASS_PHOTO_MATCH.cy - (ch >> 1) : 24, B = 6;
   rect(X - B + 3, Y - B + 3, cw + 2 * B, ch + 2 * B + 10, b.ink(PAL.N0)); // its shadow
   rect(X - B, Y - B, cw + 2 * B, ch + 2 * B + 10, b.ink(PAL.P2));
   rect(X - B, Y - B, cw + 2 * B, 1, b.ink(PAL.W9));
@@ -547,9 +552,14 @@ export const drawClassPhoto = (b: Buf, f: number, st: {caption?: boolean; hand?:
   }
   // the print's slight sheen (a diagonal band) and the border's handwriting space
   for (let j = 0; j < ch; j++) for (let i = 0; i < cw; i++) { const d = i - j * 1.2 - 120; if (d > 0 && d < 3 && bayer(i, j) < 0.5) b.set(X + i, Y + j, stepColor(b.get(X + i, Y + j), 1)); }
-  if (st.caption) text(b, 'CLASS PHOTO #1', X + 4, Y + ch + 3, PAL.N4);
+  if (st.caption) pt(b, 'CLASS PHOTO #1', X + 4, Y + ch + 3, PAL.N4);
   // Mas's hand holding its right edge: the thumb over the border, the fingers behind (hand-pixelled)
-  if (st.hand !== false) {
+  if (st.hand !== false && st.match) {
+    // the left edge held as the phone will be (rooms/bay-bridge holdFingers, the same pads at the same place): four
+    // fingers round the border, lit by the room (warm), the hoodie's cuff below them
+    for (let y = Y + 70 + 4 * 15; y < RH; y++) for (let x = X - B - 30; x < X - B + 4; x++) b.set(x, y, x < X - B - 22 ? PAL.G3 : x > X - B ? PAL.G1 : PAL.G2);
+    holdFingers(b, X - B + 3, Y + 70, 4, [PAL.S1, PAL.S3, PAL.S4, PAL.S5]);
+  } else if (st.hand !== false) {
     const hx = X + cw + B - 12, hy = Y + 60;
     for (let j = 0; j < 60; j++) for (let i = 0; i < 40; i++) { const inH = Math.hypot((i - 22) / 20, (j - 28) / 30) < 1 && i > 6; if (inH) b.set(hx + i, hy + j, i < 12 ? PAL.S5 : i < 26 ? PAL.S4 : PAL.S3); }
     for (let j = 0; j < 14; j++) for (let i = 0; i < 22; i++) if (Math.hypot((i - 11) / 11, (j - 7) / 7) < 1) b.set(hx - 6 + i, hy + 10 + j, i < 8 ? PAL.S5 : PAL.S4); // the thumb on the border

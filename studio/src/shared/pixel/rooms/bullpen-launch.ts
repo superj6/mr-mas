@@ -35,16 +35,19 @@ import {blitImg, Img} from '../figure';
 import {masDeskBack, masDeskFront, MAS_DESK_DEFAULT, MasDeskPose, masPortrait, MAS_PORTRAIT_DEFAULT, MasPortraitState} from '../cast/mas';
 import {drawGergTable, GERG_DEFAULT, GergPose, gergTypeAt, gergKeycaps, drawKeycaps} from '../cast/gerg';
 import {gergMedium, GERG_MEDIUM_DEFAULT, GergMediumState} from '../cast/gerg-medium';
-import {drawMasMedium, MasMediumState, MAS_MEDIUM_DEFAULT, MAS_M_DESK} from '../cast/mas-medium';
+import {drawMasMedium, MasMediumState, MAS_MEDIUM_DEFAULT, MAS_M_DESK, MAS_MW} from '../cast/mas-medium';
 import {rimaBust, RimaBustState, rimaSpeakPortrait, RIMA_PORTRAIT_DEFAULT, RimaPortraitState} from '../cast/rima-speak';
-import {alyiReflection, ALYI_SPEAK_DEFAULT, AlyiSpeakState, alyiStand, ALYI_STAND_DEFAULT} from '../cast/alyi-speak';
+import {alyiReflection, alyiSpeakPortrait, ALYI_SPEAK_DEFAULT, AlyiSpeakState, alyiStand, ALYI_STAND_DEFAULT} from '../cast/alyi-speak';
 import {drawRimaStand, RimaStandPose, RIMA_STAND_DEFAULT} from '../cast/rima-stand';
+import {drawRimaBoard, RimaBoardPose, RIMA_BOARD_LINE0} from '../cast/rima-board';
 import {drawGergPose} from '../cast/gerg-poses';
 import {drawCollarsPortrait, drawCollarsMedium} from '../cast/mas-collars';
 import {drawBeigeButton} from '../kits/launch-button';
 import {drawChatWindow, ChatWindowState} from '../kits/chat-window';
 import {drawOdometer, odometerSize} from '../kits/odometer';
 import {tiny, tinyWidth} from './kit-b';
+import {faceKey, warmRim, toWarmLamp} from '../kits/face-light';
+export {faceKey, warmRim, toWarmLamp};
 
 const RH = 203;
 const TRANS = 0x1000000;
@@ -87,6 +90,9 @@ const WHITE = M('bl.white', ['N2', 'N3', 'N4', 'N5', 'N6', 'N7', 'G5', 'G6'], ['
 const STEEL = M('bl.steel', ['N0', 'N1', 'N2', 'G1', 'G2', 'G3', 'G4', 'G5'], ['N0', 'N1', 'C0', 'C1', 'C3', 'C5', 'C6', 'C7'], ['N0', 'W0', 'W1', 'W3', 'W5', 'W6', 'W7', 'W8']);
 const DARK = M('bl.dark', ['N0', 'N0', 'N1', 'N1', 'N2', 'N3', 'G1', 'G2'], ['N0', 'N0', 'N1', 'C0', 'C0', 'C1', 'C2', 'C3'], ['N0', 'N0', 'W0', 'W0', 'W1', 'W2', 'W3', 'W4']);
 const GLASS = M('bl.glass', ['N0', 'N1', 'N1', 'N2', 'N3', 'N4', 'N5', 'N6'], ['N0', 'N1', 'C0', 'C0', 'C1', 'C2', 'C3', 'C4'], ['N0', 'N1', 'W0', 'W1', 'W2', 'W3', 'W4', 'W5']);
+// v3.1 warm variant only: the back wall's warm rungs bridge through the dusk plums (U) before the tungsten, so a lamp's
+// low wash on a navy wall reads as warm light, not as red smudges (the W ramp's darkest rungs are reddish)
+const WALLW = M('bl.wallw', ['N0', 'N1', 'N2', 'N3', 'N4', 'N5', 'G2', 'G3'], ['N0', 'N1', 'N2', 'C0', 'C1', 'C2', 'C3', 'C4'], ['N0', 'N1', 'N2', 'U0', 'U1', 'U2', 'W3', 'W4']);
 const CHAIR = M('bl.chair', ['N0', 'N0', 'N1', 'N1', 'N2', 'N3', 'N4', 'G2'], ['N0', 'N0', 'N1', 'C0', 'C1', 'C2', 'C3', 'C4'], ['N0', 'N0', 'W0', 'W1', 'W2', 'W3', 'W4', 'W5']);
 
 // ------------------------------------------------------------------ the bay at night through a window (emissive)
@@ -172,10 +178,19 @@ export interface LaunchWideState {
   /** sc 6: the desk-sized odometer on his desk, spinning ('desk'), dropping through it in two held drawings ('drop1',
    *  'drop2': the top broken, the machine behind the desk's front), and gone ('gone': the jagged hole in the top) */
   odo?: {stage: 'desk' | 'drop1' | 'drop2' | 'gone'; value?: number};
+  /** v3.1 (opt-in; mood §4 #10, the lead's round): the room warmed one ramp step by its practicals: the hall's
+   *  tungsten reaching further, Mas's desk lamp (its pool on his desk and on him), a lamp left on at the far row */
+  warm?: 0 | 1;
+  /** v3.1 background life (opt-in): someone crossing the hall's far end (passer: 0..1 of the crossing, or null), a far
+   *  monitor's screensaver and its flicker (flicker), a car's light crossing the bridge in the window (car) */
+  life?: {passer?: number | null; flicker?: boolean; car?: boolean};
 }
-let wideBase: {buf: Buf; front: Buf} | null = null;
-const paintWide = () => {
-  if (wideBase) return wideBase;
+const wideBases: Record<number, {buf: Buf; front: Buf}> = {};
+/** where the v3.1 practicals are (the wide): Mas's desk lamp (its head over the desk's left end) and a lamp left on at
+ *  the far row (someone else's late night) */
+export const LAUNCH_LAMPS = {mas: {base: [30, 135] as [number, number], head: [40, 111] as [number, number]}, far: [236, 106] as [number, number]};
+const paintWide = (warm = 0) => {
+  if (wideBases[warm]) return wideBases[warm];
   const mb = new MatBuf(480, RH), fm = new MatBuf(480, RH);
   const P = (mat: string, lvl = 0) => mb.mat(mat, lvl), S = (d: number) => mb.shade(d);
   const {ceilY, floorY} = G;
@@ -262,13 +277,24 @@ const paintWide = () => {
     warm: (x: number, y: number) => {
       // the hall's tungsten: a lick on its jambs and a spill across the carpet, widening toward camera
       let L = 0;
+      // v3.1 (warm 1): the spill reaches further into the room (a wider, longer fan)
+      const wide = warm ? 1.45 : 1;
       if (y >= floorY) {
         const tt = (y - floorY) / (RH - floorY);
-        const l = G.hall.x0 - 2 - tt * 16, r = G.hall.x1 + 2 + tt * 52;
-        if (x >= l && x <= r) { const u = (x - l) / (r - l); L = (0.6 - tt * 0.3) * (1 - Math.pow(Math.abs(u - 0.45) * 2, 2) * 0.7); }
-      } else if (x > G.hall.x0 - 14 && x < G.hall.x1 + 16 && y > G.hall.y0 - 10) {
-        const dd = Math.min(Math.abs(x - G.hall.x0), Math.abs(x - G.hall.x1)) / 14;
+        const l = G.hall.x0 - 2 - tt * 16 * wide, r = G.hall.x1 + 2 + tt * 52 * wide;
+        if (x >= l && x <= r) { const u = (x - l) / (r - l); L = (0.6 - tt * 0.3) * (1 - Math.pow(Math.abs(u - 0.45) * 2, 2) * 0.7) * (warm ? 1.25 : 1); }
+      } else if (x > G.hall.x0 - 14 * wide && x < G.hall.x1 + 16 * wide && y > G.hall.y0 - 10) {
+        const dd = Math.min(Math.abs(x - G.hall.x0), Math.abs(x - G.hall.x1)) / (14 * wide);
         L = Math.max(0, 0.7 - dd * 0.6);
+      }
+      if (warm) {
+        // Mas's desk lamp: a pool on his desk top and the wall behind the desk's left end; the far row's lamp
+        const [hx, hy] = LAUNCH_LAMPS.mas.head;
+        const dm = Math.hypot((x - hx - 18) / 74, (y - hy - 24) / (y > hy + 20 ? 18 : 40));
+        if (dm < 1) L = Math.max(L, (1 - dm) * 0.8);
+        const [fx, fy] = LAUNCH_LAMPS.far;
+        const df = Math.hypot((x - fx) / 34, (y - fy) / 16);
+        if (df < 1) L = Math.max(L, (1 - df) * 0.6);
       }
       return L;
     },
@@ -306,8 +332,22 @@ const paintWide = () => {
   for (let i = 0; i < nw; i++) if (buf.get(G.neon.x + i, G.neon.y) === PAL.C6 && buf.get(G.neon.x + i, G.neon.y + 1) === PAL.C6) buf.set(G.neon.x + i, G.neon.y, PAL.C8);
   // the glass's sheen (two streaks)
   for (let y = gl.y0; y < floorY - 14; y++) for (let x = gl.x0 + 1; x < 480; x++) { const u = x - gl.x0 + (y - gl.y0) * 0.5; if ((u > 14 && u < 16) || (u > 20 && u < 21)) buf.set(x, y, stepColor(buf.get(x, y), 1)); }
-  wideBase = {buf, front};
-  return wideBase;
+  if (warm) {
+    // the practicals themselves (emissive): Mas's desk lamp (an anglepoise on the desk's left end, its shade tipped
+    // over the desk, the bulb's hot rim), and the far row's small lamp
+    const [bx, by] = LAUNCH_LAMPS.mas.base, [hx, hy] = LAUNCH_LAMPS.mas.head;
+    const lampTo = (bb: Buf) => {
+      rect(bx - 4, by - 1, 9, 2, bb.ink(PAL.N1)); rect(bx - 3, by - 2, 7, 1, bb.ink(PAL.G2));
+      line(bx, by - 2, bx + 2, by - 14, bb.ink(PAL.G1)); line(bx + 2, by - 14, hx - 2, hy + 1, bb.ink(PAL.G1)); line(bx + 1, by - 2, bx + 3, by - 14, bb.ink(PAL.G2));
+      for (let j = 0; j < 7; j++) for (let i = -3 - j; i <= 4 + Math.floor(j / 2); i++) bb.set(hx + i + j, hy + j, j === 6 ? PAL.W7 : i < -1 - j ? PAL.G2 : PAL.G1);
+      rect(hx + 2, hy + 6, 7, 1, bb.ink(PAL.W8)); bb.set(hx + 5, hy + 7, PAL.W9);
+    };
+    lampTo(front);
+    const [fx, fy] = LAUNCH_LAMPS.far;
+    rect(fx - 1, fy + 3, 3, 3, buf.ink(PAL.G1)); for (let i = -3; i <= 3; i++) buf.set(fx + i, fy + 2, Math.abs(i) < 3 ? PAL.W6 : PAL.W4); for (let i = -2; i <= 2; i++) buf.set(fx + i, fy + 1, PAL.W5);
+  }
+  wideBases[warm] = {buf, front};
+  return wideBases[warm];
 };
 
 /** Gerg's green laptop glow: the cyan-lit rungs of his sprite (the Woodrose drawing's screen light) walk to green, and
@@ -324,12 +364,14 @@ const greenPool = (b: Buf, cx: number, cy: number, rx: number, ry: number, k = 0
 };
 
 export const drawLaunchWide = (b: Buf, f: number, st: LaunchWideState = {}) => {
-  const base = paintWide();
+  const warm = st.warm ?? 0;
+  const base = paintWide(warm);
   for (let y = 0; y < RH; y++) b.c.set(base.buf.c.subarray(y * 480, (y + 1) * 480), y * b.w);
   const bd = G.board;
   boardInk(b, bd.x0, bd.y0, bd.x1 - bd.x0, 1, st.underlines ?? 2, st.wet ?? 1);
   // the lamp that's out: if flickering, a rare held on-frame
   if (st.flicker && hash(Math.floor(f / 4), 0, 77) < 0.08) for (let x = 260; x <= 300; x++) b.set(x, G.ceilY - 6, PAL.G4);
+  if (st.life) wideLife(b, f, st.life);
   // Alyi's reflection in the conference glass (his doorway is out of frame right): a lightness modulation of the glass
   if (st.alyi === 'there') {
     const img = alyiStand({...ALYI_STAND_DEFAULT, light: 'door', arms: 'down'});
@@ -360,10 +402,12 @@ export const drawLaunchWide = (b: Buf, f: number, st: LaunchWideState = {}) => {
   }
   // Mas at his end desk, turned 3/4 to frame right (the desk sprite, flipped: it's drawn facing camera-left)
   const mp: MasDeskPose = {...MAS_DESK_DEFAULT, head: 'turn', light: 'orb', ...st.mas};
-  blitImg(b, masDeskBack(mp), G.masAt[0], G.masAt[1], {flip: true});
+  // v3.1 warm: his desk lamp is on his near side, so the sprite's cool rungs take the lamp's warm ones
+  const mmap = warm ? toWarmLamp : undefined;
+  blitImg(b, masDeskBack(mp), G.masAt[0], G.masAt[1], {flip: true, map: mmap});
   // his desk, in front of him, and what's on it
   for (let i = 0; i < base.front.c.length; i++) { const v = base.front.c[i]; if (v !== TRANS) b.c[i] = v; }
-  blitImg(b, masDeskFront(mp), G.masAt[0], G.masAt[1], {flip: true});
+  blitImg(b, masDeskFront(mp), G.masAt[0], G.masAt[1], {flip: true, map: mmap});
   const [lx, ly] = G.masLaptop;
   if ((st.laptop ?? 'dark') === 'dark') {
     // closed and dark: a thin slab, lid down, a sheen line
@@ -405,6 +449,38 @@ export const drawLaunchWide = (b: Buf, f: number, st: LaunchWideState = {}) => {
   if (st.tile === 'hole') { rect(t.x, t.y, t.w, t.h, b.ink(PAL.N0)); rect(t.x + 4, t.y + 3, t.w - 8, t.h - 5, b.ink(PAL.R0)); rect(t.x, t.y, t.w, 1, b.ink(PAL.N1)); }
 };
 
+// ------------------------------------------------------------------ v3.1: the warm practicals' map, background life
+/** the wide's background life: a passer-by crossing the corridor's lit far end (a backlit silhouette, two walk drawings
+ *  on 4s), a far-row monitor's screensaver (a dim screen, a bar stepping down it) that flickers now and then, a car's
+ *  light crossing the bridge in the bay window */
+const wideLife = (b: Buf, f: number, life: NonNullable<LaunchWideState['life']>) => {
+  const h = G.hall;
+  if (typeof life.passer === 'number' && life.passer >= 0 && life.passer <= 1) {
+    const fx0 = h.x0 + 10, fx1 = h.x1 - 8, fy1 = G.floorY - 24;
+    const px = Math.round(h.x0 - 4 + life.passer * (h.x1 - h.x0 + 8)), step = Math.floor(f / 4) % 2;
+    const inHall = (x: number, y: number) => x >= h.x0 && x < h.x1 && y >= h.y0 && y < G.floorY;
+    // 26 px tall at the corridor's middle distance: head, shoulders, a bag strap, two legs
+    const fig: Array<[number, number, number, number]> = [[-1, -26, 3, 3], [-2, -23, 5, 9], [-2, -14, 2, 8 - step], [1, -14, 2, 8 - (1 - step)]];
+    for (const [dx, dy, w, hh] of fig) for (let j = 0; j < hh; j++) for (let i = 0; i < w; i++) { const X = px + dx + i, Y = fy1 + 6 + dy + j; if (inHall(X, Y)) b.set(X, Y, (j === 0 && dy <= -23) ? PAL.W3 : PAL.W0); }
+    void fx0; void fx1;
+  }
+  if (life.flicker) {
+    // the far row's second monitor (x 186, y 98, 16 x 12) left on: a dim screensaver, a bright bar stepping down it,
+    // and on rare held frames the whole screen flickering a rung up
+    const mx = 186, my = 98;
+    const flick = hash(Math.floor(f / 3), 5, 78) < 0.05;
+    for (let j = 1; j < 11; j++) for (let i = 1; i < 15; i++) b.set(mx + i, my + j, flick ? PAL.C3 : bayer(i, j) < 0.3 ? PAL.C1 : PAL.C0);
+    const bar = my + 1 + (Math.floor(f / 8) % 10);
+    for (let i = 1; i < 15; i++) b.set(mx + i, bar, PAL.C4);
+  }
+  if (life.car) {
+    // a car's light on the bridge (the window's view: the deck under the chain), one pixel every 4 frames, repeating
+    const w = G.win, hz = w.y0 + Math.round((w.y1 - w.y0) * 0.56);
+    const cx = w.x0 + 44 + (Math.floor(f / 4) % 48);
+    if (cx < w.x1) { b.set(cx, hz - 4, PAL.W8); b.set(cx - 1, hz - 4, PAL.W5); }
+  }
+};
+
 // ------------------------------------------------------------------ the MEDIUM-scale back wall (a 960 px panorama)
 /** where things are on the medium panorama (world x), for the medium setups and their figures */
 export const LAUNCH_M = {
@@ -419,13 +495,13 @@ export const LAUNCH_M = {
   alyi: [846, 48] as [number, number],
 };
 const GM = LAUNCH_M;
-let backM: Buf | null = null;
-const paintBackM = () => {
-  if (backM) return backM;
+const backMs: Record<number, Buf> = {};
+const paintBackM = (warm = 0) => {
+  if (backMs[warm]) return backMs[warm];
   const mb = new MatBuf(GM.W, RH);
   const P = (mat: string, lvl = 0) => mb.mat(mat, lvl), S = (d: number) => mb.shade(d);
   rect(0, 0, GM.W, 14, P(CEIL, 0)); rect(0, 12, GM.W, 3, P(TRIM, 0.4));
-  rect(0, 15, GM.W, GM.floorY - 15, P(WALL, 0));
+  rect(0, 15, GM.W, GM.floorY - 15, P(warm ? WALLW : WALL, 0));
   for (let y = 15; y < GM.floorY - 6; y++) for (let x = 0; x < GM.W; x++) if (hash(x, y, 8) < 0.003) S(-0.5)(x, y);
   rect(0, GM.floorY - 7, GM.W, 7, P(TRIM, -0.4)); rect(0, GM.floorY - 7, GM.W, 1, S(0.8));
   rect(0, GM.floorY, GM.W, RH - GM.floorY, P(CARPET, 0));
@@ -452,9 +528,18 @@ const paintBackM = () => {
     amb: (x: number, y: number) => { let a = 2.4; const d = Math.hypot((x - 340) / 380, (y - 60) / 240); if (d < 1) a += (1 - d) * 1.4; if (y >= GM.floorY) a -= 0.6; return a; },
     cyan: (x: number, y: number) => { const d = Math.hypot((x - 640) / 110, (y - 50) / 70); return d < 1 ? (1 - d) * 0.5 : 0; },
     warm: (x: number, y: number) => {
-      if (y >= GM.floorY) { const u = (x - (h.x0 - 10)) / (h.x1 - h.x0 + 70); return u > 0 && u < 1 ? 0.55 * (1 - Math.pow(Math.abs(u - 0.4) * 2, 2) * 0.7) : 0; }
-      if (x > h.x0 - 28 && x < h.x1 + 30 && y > h.y0 - 20) { const dd = Math.min(Math.abs(x - h.x0), Math.abs(x - h.x1)) / 28; return Math.max(0, 0.7 - dd * 0.6); }
-      return 0;
+      let L = 0;
+      if (y >= GM.floorY) { const u = (x - (h.x0 - 10)) / (h.x1 - h.x0 + 70 + (warm ? 60 : 0)); L = u > 0 && u < 1 ? 0.55 * (1 - Math.pow(Math.abs(u - 0.4) * 2, 2) * 0.7) : 0; }
+      else if (x > h.x0 - 28 && x < h.x1 + 30 + (warm ? 30 : 0) && y > h.y0 - 20) { const dd = Math.min(Math.abs(x - h.x0), Math.abs(x - h.x1)) / (warm ? 40 : 28); L = Math.max(0, 0.7 - dd * 0.6); }
+      if (warm) {
+        // v3.1: Mas's desk lamp (he sits in front of this stretch of wall, x ~330-470): its pool up the wall behind him
+        // and on the carpet; a softer spill onto the board's left edge
+        const d = Math.hypot((x - 420) / 240, (y - 96) / 100);
+        if (d < 1 && y < GM.floorY) L = Math.max(L, (1 - d) * 0.58);
+        const d2 = Math.hypot((x - 580) / 90, (y - 110) / 60);
+        if (d2 < 1) L = Math.max(L, (1 - d2) * 0.3);
+      }
+      return L;
     },
     dither: 0.65,
   };
@@ -482,8 +567,14 @@ const paintBackM = () => {
   for (let y = GM.neon.y; y < GM.neon.y + 16; y++) for (let x = GM.neon.x; x < GM.neon.x + nw; x++) if (buf.get(x, y) === PAL.C6 && buf.get(x, y + 1) === PAL.C6 && buf.get(x, y - 1) !== PAL.C6) buf.set(x, y, PAL.C8);
   // the glass's sheen
   for (let y = gl.y0; y < GM.floorY - 26; y++) for (let x = gl.x0 + 3; x < GM.W; x++) { const u = (x - gl.x0) % 60 + (y - gl.y0) * 0.5; if ((u > 26 && u < 30) || (u > 38 && u < 40)) buf.set(x, y, stepColor(buf.get(x, y), 1)); }
-  backM = buf;
-  return backM;
+  if (warm) {
+    // the lamp's reflection in the conference glass (a warm smear low in the panes, reversed) and the hall's brighter
+    // lick on its near jamb
+    // a lamp seen far off in the glass: a small hot point, a sparse halo (never a glow blob: it read as fire)
+    for (let y = 128; y < 142; y++) for (let x = 830; x < 846; x++) { const d = Math.hypot(x - 838, y - 135); if (d < 1.2) buf.set(x, y, PAL.W7); else if (d < 6 && bayer(x, y) < (1 - d / 6) * 0.35) buf.set(x, y, stepColor(buf.get(x, y), 1)); }
+  }
+  backMs[warm] = buf;
+  return backMs[warm];
 };
 export interface LaunchMState {
   underlines?: number;
@@ -493,11 +584,45 @@ export interface LaunchMState {
   alyi?: 'there' | 'gone' | 'reading' | 'phone' | (Partial<AlyiSpeakState> & {soft?: boolean});
   /** blur the panorama by stepping it toward its mids (a soft background behind a close figure), 0..2 */
   soft?: number;
+  /** v3.1 (opt-in): the room warmed one step by its practicals (the desk lamp's pool on the wall behind Mas, the hall
+   *  reaching further, the lamp's reflection in the glass) */
+  warm?: 0 | 1;
+  /** v3.1 (opt-in, mood §4 #4): a face light on Alyi's reflection, face only, in ramp steps (1 or 2) */
+  faceLight?: number;
+  /** v3.1: what the phone in his reflected hand shows ('phone' state): the pause letter (draft 6) · EMIT's page
+   *  (draft 7, 12.05) */
+  phonePage?: 'letter' | 'emit';
 }
+/** which pixels of Alyi's reflection are his face (skin in the source portrait), mirrored as the reflection is */
+const ALYI_FACE = new Map<string, Uint8Array>();
+export const alyiFaceMask = (s: AlyiSpeakState): Uint8Array => {
+  const key = `${s.mouth}|${s.eyes}|${s.t % 1000}`;
+  let m = ALYI_FACE.get(key);
+  if (m) return m;
+  const src = alyiSpeakPortrait({mouth: s.mouth, eyes: s.eyes, t: s.t});
+  m = new Uint8Array(src.w * src.h);
+  for (let y = 0; y < src.h; y++) for (let x = 0; x < src.w; x++) { const v = src.c[y * src.w + (src.w - 1 - x)]; if (v < 0) continue; const fm = familyOf(v); if (fm && (fm[0] === 'S' || fm[0] === 'K' || fm[0] === 'X') && y < 100) m[y * src.w + x] = 1; }
+  if (ALYI_FACE.size > 400) ALYI_FACE.clear();
+  ALYI_FACE.set(key, m);
+  return m;
+};
+/** the phone in his reflected hand: its page (the pause letter, or EMIT's: the teal band, the gold line, headline bars) */
+const phonePage = (b: Buf, px: number, py: number, w: number, h: number, page: 'letter' | 'emit', clip: (X: number) => boolean) => {
+  for (let j = 0; j < h; j++) for (let i = 0; i < w; i++) {
+    const X = px + i, Y = py + j;
+    if (!clip(X)) continue;
+    const edge = i === 0 || i === w - 1 || j === 0 || j === h - 1;
+    let c: number;
+    if (edge) c = PAL.N0;
+    else if (page === 'emit') c = j < 5 ? PAL.C2 : j === 5 ? PAL.W7 : (j >= 7 && j <= 13 && j % 2 === 1 && i > 1 && i < w - 3) ? PAL.N2 : (j > 15 && j % 3 === 0 && i > 1 && i < w - 2) ? PAL.G5 : PAL.P2;
+    else c = j < (h >= 26 ? 7 : 6) ? PAL.G3 : j % 3 === 0 && i > 2 && i < w - 3 ? PAL.G6 : PAL.P1;
+    b.set(X, Y, c);
+  }
+};
 /** Paint the medium panorama's window x camX..camX+479 into rows 0..202 of b, with the board's ink and the glass's
  *  reflection. */
 export const launchBackM = (b: Buf, camX: number, st: LaunchMState = {}) => {
-  const src = paintBackM();
+  const src = paintBackM(st.warm ?? 0);
   const cx = clamp(Math.round(camX), 0, GM.W - 480);
   for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) b.c[y * b.w + x] = src.c[y * GM.W + cx + x];
   const bd = GM.board;
@@ -506,7 +631,9 @@ export const launchBackM = (b: Buf, camX: number, st: LaunchMState = {}) => {
   // the panes; 'reading' holds a page up in the reflection, his eyes down on it
   if (st.alyi && st.alyi !== 'gone') {
     const s: AlyiSpeakState = {...ALYI_SPEAK_DEFAULT, ...(typeof st.alyi === 'object' ? st.alyi : {})};
-    const img = alyiReflection({...s, eyes: st.alyi === 'reading' || st.alyi === 'phone' ? 'closed' : s.eyes});
+    const es: AlyiSpeakState = {...s, eyes: st.alyi === 'reading' || st.alyi === 'phone' ? 'closed' : s.eyes};
+    const img = alyiReflection(es);
+    const fl = st.faceLight ?? 0, fm = fl ? alyiFaceMask(es) : null;
     const [ax, ay] = GM.alyi;
     for (let j = 0; j < img.h; j++) for (let i = 0; i < img.w; i++) {
       const c = img.c[j * img.w + i];
@@ -515,13 +642,13 @@ export const launchBackM = (b: Buf, camX: number, st: LaunchMState = {}) => {
       if (X < 0 || X >= 480 || Y >= GM.floorY - 26 || X + cx < GM.glass.x0 + 3) continue;
       const L = lightness(c);
       const k = typeof st.alyi === 'object' && st.alyi.soft ? 1 : 2;
-      b.set(X, Y, stepColor(b.get(X, Y), L > 0.3 ? k : L > 0.16 ? 1 : 0));
+      b.set(X, Y, stepColor(b.get(X, Y), (L > 0.3 ? k : L > 0.16 ? 1 : 0) + (fm && fm[j * img.w + i] ? fl : 0)));
     }
     if (st.alyi === 'phone') {
       // draft 6 (12.05): he reads the pause letter on his phone, reflected: a lit slab at his chest, the page's white
-      // with its dark header band; its glow a rung up on his chin in the glass
+      // with its dark header band; its glow a rung up on his chin in the glass. Draft 7: EMIT's page (st.phonePage)
       const px = ax - cx + 46, py = ay + 84;
-      for (let j = 0; j < 22; j++) for (let i = 0; i < 13; i++) { const X = px + i, Y = py + j; if (X >= 0 && X < 480 && X + cx >= GM.glass.x0 + 3) b.set(X, Y, i === 0 || i === 12 || j === 0 || j === 21 ? PAL.N0 : j < 6 ? PAL.G3 : j % 3 === 0 && i > 2 && i < 10 ? PAL.G6 : PAL.P1); }
+      phonePage(b, px, py, 13, 22, st.phonePage ?? 'letter', (X) => X >= 0 && X < 480 && X + cx >= GM.glass.x0 + 3);
       for (let i = 40; i < 64; i++) { const X = ax - cx + i, Y = ay + 80; if (X >= 0 && X < 480) b.set(X, Y, stepColor(b.get(X, Y), 1)); }
     }
     if (st.alyi === 'reading') {
@@ -568,15 +695,34 @@ export const otsShoulder = (b: Buf, x: number, y: number, rim: number, o: {flip?
 export interface Launch2SState extends LaunchMState {
   mas?: Partial<MasMediumState>;
   gerg?: Partial<GergMediumState>;
+  /** v3.1 (opt-in, 5.07: the board seed): Rima at the whiteboard behind Gerg, her back to us, at the panorama's scale:
+   *  the third underline (st.wet draws it), capping the marker; null / unset = not in the frame (v3) */
+  rima?: RimaBoardPose | null;
   /** the cursor parked on the button (the fuse) until the click */
   cursor?: boolean;
   laptop?: 'dark' | 'chat';
   collars?: number;
+  /** v3.1: the collars' drawing (mas-collars.ts 'v31': taller points, the third in gold) */
+  collarStyle?: 'v31';
 }
 /** [2S] Mas (frame left, his dark laptop and the button in the foreground) and Gerg across the aisle (frame right, his
  *  laptop's green under his chin); behind Gerg the edge of Rima's whiteboard. */
 export const drawLaunch2S = (b: Buf, f: number, st: Launch2SState = {}) => {
   launchBackM(b, 330, {...st, soft: st.soft ?? 1});
+  if (st.rima) {
+    // Rima at the board behind Gerg (panorama scale), the marker's tip on the third underline while she draws it; a
+    // rung soft (she is behind the two of them)
+    // she stays put (anchored where the third underline starts); her arm draws it (reach follows st.wet)
+    const uw = textWidth('LOW-KEY') + 3, lx = LAUNCH_M.board.x0 - 330 + 10 + textWidth('LAUNCH: ');
+    const tipY = LAUNCH_M.board.y0 + 21 + 6;
+    const rx = lx - 1 - RIMA_BOARD_LINE0[0], ry = tipY - RIMA_BOARD_LINE0[1];
+    const pose: RimaBoardPose = st.rima.body === 'underline' ? {reach: Math.min(1, (uw * (st.wet ?? 1)) / 42), ...st.rima} : st.rima;
+    drawRimaBoard(b, rx, ry, pose, {map: (c) => stepColor(c, -1)});
+  }
+  if (st.warm) {
+    // v3.1: Mas's desk lamp at the frame's left edge: its warm spill on the wall behind and the desk top
+    for (let y = 60; y < 176; y++) for (let x = 0; x < 150; x++) { const d = Math.hypot((x - 10) / 140, (y - 150) / 90); if (d < 1 && bayer(x, y) < (1 - d) * 0.5) b.set(x, y, stepColor(b.get(x, y), 1)); }
+  }
   // Gerg behind his desk across the aisle: his laptop's lid back toward us, its green on his chin and chest
   const g = gergMedium({...GERG_MEDIUM_DEFAULT, type: gergTypeAt(f), ...st.gerg});
   const gx = 300, gy = 66;
@@ -591,11 +737,27 @@ export const drawLaunch2S = (b: Buf, f: number, st: Launch2SState = {}) => {
   drawMasMedium(b, mx, my, ms, {flip: true, desk: (bb) => {
     for (let y = my + MAS_M_DESK; y < RH; y++) for (let x = 0; x < 250; x++) bb.set(x, y, y === my + MAS_M_DESK ? PAL.G4 : y < my + MAS_M_DESK + 3 ? PAL.G3 : y < my + MAS_M_DESK + 5 ? PAL.G2 : bayer(x, y) < 0.3 ? PAL.N2 : PAL.N1);
   }});
-  drawCollarsMedium(b, mx, my, st.collars ?? 2, {flip: true, light: ms.light === 'monitor' ? 'monitor' : 'warm'});
+  drawCollarsMedium(b, mx, my, st.collars ?? 2, {flip: true, light: ms.light === 'monitor' ? 'monitor' : 'warm', style: st.collarStyle});
   const dy = my + MAS_M_DESK;
+  if (st.warm) {
+    // the lamp's pool on his desk top and a key on his face from his left (face only, one rung; the rim one more)
+    faceKey(b, mx, my, mx + MAS_MW, my + 44, 1, -1);
+    for (let y = dy; y < RH; y++) for (let x = 0; x < 200; x++) { const d = Math.hypot((x - 30) / 170, (y - dy) / 40); if (d < 1 && bayer(x, y) < (1 - d) * 0.8) b.set(x, y, familyOf(b.get(x, y))?.[0] === 'G' ? stepColor(b.get(x, y), 1) : b.get(x, y)); }
+    deskLampM(b, 2, dy - 30);
+    // Gerg's green on his face a rung up (his screen's spill: the one light he works by)
+    faceKey(b, 300, 66, 384, 112, 1, 1);
+  }
   if ((st.laptop ?? 'dark') === 'dark') { poly([10, dy + 14, 90, dy + 14, 96, dy + 22, 4, dy + 22], b.ink(PAL.G1)); rect(10, dy + 14, 80, 1, b.ink(PAL.G3)); }
   drawBeigeButton(b, 150, dy + 14, {scale: 'medium'});
   if (st.cursor) drawCursor(b, 168, dy + 16);
+};
+/** Mas's desk lamp at medium scale (an anglepoise's shade tipped over the desk, its bulb's hot rim), top-left (x, y) */
+export const deskLampM = (b: Buf, x: number, y: number) => {
+  line(x + 2, y + 30, x + 6, y + 12, b.ink(PAL.G1)); line(x + 3, y + 30, x + 7, y + 12, b.ink(PAL.G2));
+  line(x + 6, y + 12, x + 16, y + 4, b.ink(PAL.G1));
+  for (let j = 0; j < 10; j++) for (let i = -2; i <= 6 + j; i++) b.set(x + 14 + i, y + 2 + j, j === 9 ? PAL.W7 : i < 0 ? PAL.G2 : PAL.G1);
+  rect(x + 15, y + 11, 12, 1, b.ink(PAL.W8)); b.set(x + 20, y + 12, PAL.W9); b.set(x + 21, y + 12, PAL.W8);
+  rect(x - 2, y + 30, 12, 3, b.ink(PAL.N1)); rect(x - 1, y + 30, 10, 1, b.ink(PAL.G2));
 };
 
 export interface LaunchOTSRimaState extends LaunchMState {
@@ -607,7 +769,9 @@ export const drawLaunchOTSRima = (b: Buf, f: number, st: LaunchOTSRimaState = {}
   launchBackM(b, 470, {...st, alyi: st.alyi ?? {soft: true}, soft: st.soft ?? 1});
   const img = rimaSpeakPortrait({...RIMA_PORTRAIT_DEFAULT, ...st.rima});
   putBust(b, img, 232, 44, {flip: true});
-  otsShoulder(b, -44, 64, PAL.C4, {flip: true});
+  // v3.1 warm: she stands at his desk, in his desk lamp's light: a key on her face from frame left (face only)
+  if (st.warm) faceKey(b, 232, 44, 344, 128, 1, -1);
+  otsShoulder(b, -44, 64, st.warm ? PAL.W4 : PAL.C4, {flip: true});
   drawBeigeButton(b, 150, 188, {scale: 'medium'});
   if (st.cursor) drawCursor(b, 168, 190);
 };
@@ -640,6 +804,9 @@ export interface LaunchGlassState extends LaunchMState {
   mas?: boolean | 'bent';
   /** sc 5.09: Rima at the board with her back to them, capping the marker (room scale, nearer) */
   rima?: Partial<RimaStandPose> | null;
+  /** v3.1 (opt-in, 5.09's shot note): 'glass' racks focus to the reflection on Alyi's first word: his face lit
+   *  (faceLight 2 unless set), Rima softened out of focus. Unset = v3's frame */
+  rack?: 'glass';
 }
 /** [MCU·glass] alone: the close glass with Alyi's reflection in its doorway, centred. With st.mas / st.rima: sc 5.09's
  *  frame (the panorama: Mas soft in the fg at frame left, Rima at the board, the glass beyond) */
@@ -651,19 +818,25 @@ export const drawLaunchGlass = (b: Buf, f: number, st: LaunchGlassState = {}) =>
     const alyi = st.alyi ?? 'there';
     if (alyi === 'gone') return;
     const s: AlyiSpeakState = {...ALYI_SPEAK_DEFAULT, ...(typeof alyi === 'object' ? alyi : {})};
-    const img = alyiReflection({...s, eyes: alyi === 'reading' || alyi === 'phone' ? 'closed' : s.eyes});
+    const es: AlyiSpeakState = {...s, eyes: alyi === 'reading' || alyi === 'phone' ? 'closed' : s.eyes};
+    const img = alyiReflection(es);
+    const fl = st.faceLight ?? 0, fm = fl ? alyiFaceMask(es) : null;
     const ax = 184, ay = 22;
+    if (st.warm) {
+      // v3.1: the desk lamp behind the camera, reflected low in the glass beside him (a warm smear)
+      for (let y = 116; y < 136; y++) for (let x = 350; x < 370; x++) { const d = Math.hypot(x - 360, y - 126); if (d < 1.5) b.set(x, y, d < 0.8 ? PAL.W8 : PAL.W6); else if (d < 8 && bayer(x, y) < (1 - d / 8) * 0.35) b.set(x, y, stepColor(b.get(x, y), 1)); }
+    }
     for (let j = 0; j < img.h + 50; j++) for (let i = 0; i < img.w; i++) {
       const c = img.c[Math.min(j, img.h - 1) * img.w + i];
       if (c < 0) continue;
       const X = ax + i, Y = ay + j;
       if (Y >= 150) continue;
       const L = lightness(c);
-      b.set(X, Y, stepColor(b.get(X, Y), j >= img.h ? 0 : L > 0.3 ? 3 : L > 0.16 ? 2 : L > 0.08 ? 1 : 0));
+      b.set(X, Y, stepColor(b.get(X, Y), (j >= img.h ? 0 : L > 0.3 ? 3 : L > 0.16 ? 2 : L > 0.08 ? 1 : 0) + (fm && j < img.h && fm[j * img.w + i] ? fl : 0)));
     }
     if (alyi === 'phone') {
       const px = ax + 48, py = ay + 88;
-      for (let j = 0; j < 26; j++) for (let i = 0; i < 15; i++) b.set(px + i, py + j, i === 0 || i === 14 || j === 0 || j === 25 ? PAL.N0 : j < 7 ? PAL.G3 : j % 3 === 0 && i > 2 && i < 12 ? PAL.G6 : PAL.P1);
+      phonePage(b, px, py, 15, 26, st.phonePage ?? 'letter', () => true);
       for (let i = 38; i < 70; i++) b.set(ax + i, ay + 84, stepColor(b.get(ax + i, ay + 84), 1));
     }
     if (alyi === 'reading') {
@@ -672,8 +845,18 @@ export const drawLaunchGlass = (b: Buf, f: number, st: LaunchGlassState = {}) =>
     }
     return;
   }
-  launchBackM(b, 460, {...st, alyi: st.alyi ?? 'there'});
-  if (st.rima) drawRimaStand(b, 250, 176, {...RIMA_STAND_DEFAULT, body: 'cap', head: 'back', light: 'board', ...st.rima});
+  const rack = st.rack === 'glass';
+  launchBackM(b, 460, {...st, alyi: st.alyi ?? 'there', faceLight: st.faceLight ?? (rack ? 2 : 0)});
+  if (st.rima) {
+    const rp: RimaStandPose = {...RIMA_STAND_DEFAULT, body: 'cap', head: 'back', light: 'board', ...st.rima};
+    if (!rack) drawRimaStand(b, 250, 176, rp);
+    else {
+      // racked off her: out of focus, a rung down on the dither (never a blur of her shape: whole pixels)
+      const t = new Buf(480, RH, TRANS);
+      drawRimaStand(t, 250, 176, rp);
+      for (let i = 0; i < 480 * RH; i++) { const v = t.c[i]; if (v === TRANS) continue; const x = i % 480, y = (i / 480) | 0; b.c[y * b.w + x] = bayer(x, y) < 0.5 ? stepColor(v, -1) : stepColor(v, lightness(v) > 0.35 ? -1 : 0); }
+    }
+  }
   if (st.mas === 'bent') {
     // sc 12.05: bent over the sheet in the foreground, soft (two rungs toward the dark), his eyes down on it; the desk's
     // edge and the sheet's corner under his chin
@@ -692,17 +875,37 @@ export interface LaunchMcuRimaState extends LaunchMState { rima?: Partial<RimaPo
 export const drawLaunchMcuRima = (b: Buf, f: number, st: LaunchMcuRimaState = {}) => {
   launchBackM(b, 500, {...st, soft: 2});
   putBust(b, rimaSpeakPortrait({...RIMA_PORTRAIT_DEFAULT, ...st.rima}), 262, 34, {flip: true});
+  if (st.warm) faceKey(b, 262, 34, 374, 118, 1, -1);
 };
 
-export interface LaunchMcuMasState { mas?: Partial<MasPortraitState>; collars?: number; chat?: boolean }
+export interface LaunchMcuMasState {
+  mas?: Partial<MasPortraitState>; collars?: number; chat?: boolean;
+  /** v3.1 */
+  collarStyle?: 'v31';
+  /** v3.1: the desk lamp's warm rim on his left (the chat still lights him from below); implies cleanUnder */
+  warm?: 0 | 1;
+  /** v3.1: the chat's under-light as a clean rim, no dither on skin (v3 dithered his chin: kept as the default for the
+   *  v3 renders; every v3.1 layout should set this or warm) */
+  cleanUnder?: boolean;
+}
 /** [MCU] Mas, frame left, lit from below by the chat that has just flattered him; the bullpen soft behind (the bay) */
 export const drawLaunchMcuMas = (b: Buf, f: number, st: LaunchMcuMasState = {}) => {
-  launchBackM(b, 330, {soft: 2, alyi: 'gone'});
+  launchBackM(b, 330, {soft: 2, alyi: 'gone', warm: st.warm});
   const s: MasPortraitState = {...MAS_PORTRAIT_DEFAULT, light: 'monitor', look: 1, ...st.mas};
   const x = 96, y = 34;
   putBust(b, masPortrait(s), x, y);
-  drawCollarsPortrait(b, x, y, st.collars ?? 2, {head: s.head ?? '34', light: 'monitor'});
-  if (st.chat !== false) {
+  // v3.1 warm: the desk lamp on his left: a warm rim down that side of his face (the chat still lights him from below)
+  if (st.warm) warmRim(b, x, y, x + 112, y + 96, -1, 3);
+  drawCollarsPortrait(b, x, y, st.collars ?? 2, {head: s.head ?? '34', light: 'monitor', style: st.collarStyle});
+  if (st.chat !== false && (st.warm || st.cleanUnder)) {
+    // v3.1: the chat's light from below as a clean rim on the undersides (chin, jaw, the nose's underside): no dither
+    // on skin (v3's dithered version below is kept for the v3 renders)
+    const sk = (c: number) => { const fm = familyOf(c); return !!fm && (fm[0] === 'K' || fm[0] === 'X' || fm[0] === 'S'); };
+    const hits: Array<[number, number]> = [];
+    for (let yy = y + 56; yy < y + 100; yy++) for (let xx = x + 20; xx < x + 90; xx++) if (sk(b.get(xx, yy)) && !sk(b.get(xx, yy + 1))) hits.push([xx, yy]);
+    for (const [xx, yy] of hits) b.set(xx, yy, stepColor(b.get(xx, yy), 2));
+    for (let xx = 56; xx < 276; xx++) { b.set(xx, RH - 2, PAL.C6); b.set(xx, RH - 1, PAL.C7); if (bayer(xx, 0) < 0.5) b.set(xx, RH - 3, PAL.C4); }
+  } else if (st.chat !== false) {
     // the chat's light from below: his jaw and chin a rung up, the screen's glow along the frame's bottom edge
     for (let yy = y + 60; yy < y + 100; yy++) for (let xx = x + 20; xx < x + 90; xx++) {
       const c = b.get(xx, yy), fam = familyOf(c);
@@ -715,6 +918,8 @@ export const drawLaunchMcuMas = (b: Buf, f: number, st: LaunchMcuMasState = {}) 
 
 // ------------------------------------------------------------------ [OTS] over his shoulder onto his laptop (the chat's one setup)
 export interface LaunchOTSLaptopState {
+  /** v3.1: the room warmed behind the laptop (the panorama's warm variant) */
+  warm?: 0 | 1;
   chat?: ChatWindowState;
   /** Rima leaning in at his far side, arms folded (her portrait, cut by the laptop's lid and the frame) */
   rima?: boolean | Partial<RimaPortraitState>;
@@ -730,7 +935,7 @@ const typingHand = (b: Buf, x: number, y: number, k: number, flip = false) => {
 };
 export const drawLaunchOTSLaptop = (b: Buf, f: number, st: LaunchOTSLaptopState = {}) => {
   // behind the laptop: the bullpen soft (the board side), dim
-  launchBackM(b, 520, {soft: 2, alyi: 'gone', underlines: 3});
+  launchBackM(b, 520, {soft: 2, alyi: 'gone', underlines: 3, warm: st.warm});
   // Rima behind the laptop's right side, leaning in, arms folded (her portrait, flipped to face the screen)
   if (st.rima) {
     const rs = typeof st.rima === 'object' ? st.rima : {};
@@ -758,6 +963,10 @@ export interface LaunchMcuPFState {
   /** the hole's red light on his face from below (0..2) */
   glow?: number;
   collars?: number;
+  /** v3.1 */
+  collarStyle?: 'v31';
+  /** v3.1 (7.01's shot note): the tear catches the light: its bright pixel the hottest white (one pixel) */
+  tearCatch?: boolean;
 }
 /** the portrait's near eye (the '34' head): the tear wells at its lower lid and slides down the cheek */
 export const MAS_TEAR_PATH: Array<[number, number]> = [[42, 53], [42, 54], [41, 55], [41, 56], [41, 57], [40, 58], [40, 59], [40, 60], [39, 61], [39, 62], [39, 63], [38, 64], [38, 65], [38, 66]];
@@ -768,7 +977,7 @@ export const drawLaunchMcuPF = (b: Buf, f: number, st: LaunchMcuPFState = {}) =>
   const s: MasPortraitState = {...MAS_PORTRAIT_DEFAULT, light: 'warm', lid: 1, look: 0, ...st.mas};
   const x = 96, y = 34;
   putBust(b, masPortrait(s), x, y);
-  drawCollarsPortrait(b, x, y, st.collars ?? 2, {head: s.head ?? '34', light: 'warm'});
+  drawCollarsPortrait(b, x, y, st.collars ?? 2, {head: s.head ?? '34', light: 'warm', style: st.collarStyle});
   // the hole's red from below: a clean rim on the undersides of his face (the chin, the jaw line, the nose's underside):
   // any lit skin pixel with shadow or background right under it takes the warm rung. No dither on skin.
   const glow = st.glow ?? 2;
@@ -783,6 +992,6 @@ export const drawLaunchMcuPF = (b: Buf, f: number, st: LaunchMcuPFState = {}) =>
     const [tx, ty] = MAS_TEAR_PATH[i];
     // the bead: one pixel wide, two tall (bright under, its glint over), and its wet track behind it, a rung up
     for (let k = 0; k < i; k++) { const [px, py] = MAS_TEAR_PATH[k]; b.set(x + px, y + py, stepColor(b.get(x + px, y + py), 1)); }
-    b.set(x + tx, y + ty - 1, PAL.C9); b.set(x + tx, y + ty, PAL.C7);
+    b.set(x + tx, y + ty - 1, st.tearCatch ? PAL.W9 : PAL.C9); b.set(x + tx, y + ty, st.tearCatch ? PAL.C8 : PAL.C7);
   }
 };

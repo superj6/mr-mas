@@ -8,7 +8,8 @@
 // slate ramp read as a green face). No accent humour, ever (guardrails §6).
 //   tasyaMedium / drawTasyaMedium(b, x, y, st, {flip})   84 x 110, authored 3/4 facing screen-LEFT (toward Mas)
 //   st.arm: clasp (hands together at the waist, pleased) · after (the near hand open, out to the side: "after you") ·
-//           ring (the near hand up with the key ring) · down
+//           ring (the near hand up with the key ring) · down · clip (v3.1: the near hand out at chest height, clipping
+//           the egg timer onto Sydney's chain; TASYA_M_CLIP is where its fingers are)
 //   st.keys: the ring at his belt: how many keys (one per tenant: 11, then 12 after the deal), st.beige: the newest key
 //           in NopeAI beige (the button's colour); st.jangle 0 | 1
 //   drawKeyRing(b, cx, cy, n, {beige, jangle, scale})     the ring alone: 'room' (for his room sprite's belt, 12 px) or
@@ -22,11 +23,13 @@ import {tasyaSpeakFig, TASYA_SPEAK_RIG, TASYA_ROOM_DEFAULT} from './tasya-speak'
 import type {Viseme} from './talk';
 
 export const TASYA_MW = 84, TASYA_MH = 110;
-export type TasyaMArm = 'clasp' | 'after' | 'ring' | 'down';
+export type TasyaMArm = 'clasp' | 'after' | 'ring' | 'down' | 'clip';
 export interface TasyaMediumState { mouth: Viseme; lid: 0 | 1 | 2; brow: 'level' | 'warm'; arm: TasyaMArm; keys: number; beige: boolean; jangle: 0 | 1 }
 export const TASYA_MEDIUM_DEFAULT: TasyaMediumState = {mouth: 'smile', lid: 0, brow: 'level', arm: 'clasp', keys: 11, beige: false, jangle: 0};
 /** the belt ring's centre (local, unflipped) */
 export const TASYA_M_RING: [number, number] = [66, 100];
+/** the 'clip' hand's fingertips (local, unflipped) */
+export const TASYA_M_CLIP: [number, number] = [2, 59];
 
 const K = 0.5, OX = 14, OY = -6;
 const fig = (s: TasyaMediumState): FigureDef => {
@@ -43,6 +46,8 @@ const fig = (s: TasyaMediumState): FigureDef => {
     after: {near: [[24, 54], [12, 72], [2, 84]], far: [[66, 56], [70, 80], [66, 100]], hands: [[0, 84], [64, 100]]},
     ring: {near: [[24, 54], [16, 72], [22, 60]], far: [[66, 56], [70, 80], [66, 100]], hands: [[22, 58], [64, 100]]},
     down: {near: [[24, 54], [20, 78], [20, 100]], far: [[66, 56], [70, 80], [66, 100]], hands: [[20, 100], [66, 100]]},
+    // v3.1 (sc 10.03): the near hand out and up at chest height, clipping the egg timer onto Sydney's chain
+    clip: {near: [[24, 54], [12, 66], [3, 60]], far: [[66, 56], [70, 76], [50, 90]], hands: [[3, 60], [50, 90]]},
   };
   const A = ARMS[s.arm];
   parts.unshift(sl('armF', A.far, 11, 9));

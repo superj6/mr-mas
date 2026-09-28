@@ -8,8 +8,13 @@
 //   drawPleaseHigh(b, f, st)   [HIGH] st.n letters written (0..6), st.part 0..1 of the letter being drawn, st.shake
 //   drawPleaseECU(b, f, st)    [ECU] st.lift 0 (the pen on the last stroke) · 1 lifting · 2 lifted clear
 //   PLEASE_INK                 the ink colour
+// v3.1 opt-ins (draft 7; the v3 defaults are unchanged): drawPleaseHigh st.desk 'v31' (EMIT and the printed letter
+// beside the sheet), st.waterStill; drawPleaseECU st.reg / st.regPart (the sheet reads PLEASE / REG, the pen lifting
+// mid-word). Glyphs R and G added (hand-set, as the others).
 import {Buf, rect, line, ellipse, bayer, hash} from '../px';
 import {PAL, stepColor} from '../palette';
+import {drawLetterPage} from './pause-letter';
+import {drawEmitSpread} from './emit-oped';
 
 export const PLEASE_INK = PAL.I0;
 const RH = 203;
@@ -20,13 +25,16 @@ const GLYPH: Record<string, string[]> = {
   E: ['.#######.', '.#.......', '.#.......', '.#.......', '.#.......', '.######..', '.#.......', '.#.......', '.#.......', '.#.......', '.#.......', '.#.......', '.########'],
   A: ['....#....', '...#.#...', '...#.#...', '..#...#..', '..#...#..', '..#...#..', '.#.....#.', '.#######.', '.#.....#.', '#.......#', '#.......#', '#.......#', '#.......#'],
   S: ['..#####..', '.#.....#.', '#........', '#........', '.#.......', '..###....', '.....##..', '.......#.', '........#', '........#', '#......#.', '.#....#..', '..####...'],
+  // v3.1 (12.06, draft 7: the line below begins REG and the pen lifts mid-word)
+  R: ['.######..', '.#.....#.', '.#......#', '.#......#', '.#.....#.', '.######..', '.#...#...', '.#....#..', '.#....#..', '.#.....#.', '.#.....#.', '.#......#', '##......#'],
+  G: ['...####..', '..#....#.', '.#.......', '#........', '#........', '#........', '#....###.', '#.......#', '#.......#', '.#......#', '.#.....#.', '..#...#..', '...###...'],
 };
 const WORD = 'PLEASE';
 /** stroke order for a partial letter: draw the glyph's ink pixels in reading order down its rows, the first `part` */
-const drawWord = (b: Buf, x: number, y: number, n: number, part: number, k = 1, jitter = true) => {
+const drawWord = (b: Buf, x: number, y: number, n: number, part: number, k = 1, jitter = true, word = WORD) => {
   let cx = x;
-  for (let i = 0; i < Math.min(WORD.length, n + (part > 0 ? 1 : 0)); i++) {
-    const g = GLYPH[WORD[i]];
+  for (let i = 0; i < Math.min(word.length, n + (part > 0 ? 1 : 0)); i++) {
+    const g = GLYPH[word[i]];
     const pts: Array<[number, number]> = [];
     g.forEach((row, j) => [...row].forEach((c, ii) => { if (c === '#') pts.push([ii, j]); }));
     const upto = i < n ? pts.length : Math.round(pts.length * part);
@@ -36,7 +44,7 @@ const drawWord = (b: Buf, x: number, y: number, n: number, part: number, k = 1, 
   }
   return cx;
 };
-const wordW = (k = 1) => WORD.split('').reduce((w, ch) => w + (GLYPH[ch][0].length + 2) * k, -2 * k);
+const wordW = (k = 1, word = WORD) => word.split('').reduce((w, ch) => w + (GLYPH[ch][0].length + 2) * k, -2 * k);
 
 /** the MACROSOFT pen (slate barrel, a chrome clip and tip), from its tip at (tx, ty) back up-right along the grip */
 const pen = (b: Buf, tx: number, ty: number, len = 46) => {
@@ -104,13 +112,27 @@ const hands = (b: Buf, tx: number, ty: number, flatX: number, flatY: number) => 
   for (let k = 0; k < 4; k++) { const fx = flatX + 3 + k * 7; for (let j = 0; j < 12; j++) for (let i = 0; i < 5; i++) if (Math.hypot((i - 2) / 2.6, (j - 6) / 6.5) < 1) b.set(fx + i, flatY - 13 + j + (k === 0 ? 4 : k === 3 ? 2 : 0), i === 0 ? PAL.S3 : j < 3 ? PAL.S5 : PAL.S4); }
 };
 
-export interface PleaseHighState { n?: number; part?: number; shake?: [number, number] }
+export interface PleaseHighState {
+  n?: number; part?: number; shake?: [number, number];
+  /** v3.1 (opt-in, 12.04 in draft 7): the magazine (EMIT, open at the op-ed) and the printed pause letter under it lie
+   *  beside the sheet on the desk's right, where the laptop's corner was: he writes between the two asks */
+  desk?: 'v31';
+  /** v3.1: his glass's water line stays put while the desk shakes (v31-12.03's thud carried into the cut) */
+  waterStill?: boolean;
+}
 export const drawPleaseHigh = (b: Buf, f: number, st: PleaseHighState = {}) => {
   const [sx, sy] = st.shake ?? [0, 0];
   // his desk at night from above: the grey laminate, the lamp's cool pool; the laptop's corner, his glass, the button
   for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) { const d = Math.hypot((x - 260) / 280, (y - 60) / 200); b.set(x, y, bayer(x, y) < (1 - Math.min(1, d)) * 0.7 ? PAL.G3 : bayer(x, y) < 0.3 ? PAL.G1 : PAL.G2); }
-  rect(380 + sx, 0, 100, 44, b.ink(PAL.N1)); rect(380 + sx, 44, 100, 2, b.ink(PAL.G3)); rect(384 + sx, 4, 92, 36, b.ink(PAL.N0));
-  ellipse(60 + sx, 40 + sy, 13, 13, b.ink(PAL.G5)); ellipse(60 + sx, 40 + sy, 11, 11, b.ink(PAL.C5)); for (let i = -7; i <= 7; i++) b.set(60 + sx + i, 36 + sy, PAL.C8);
+  if (st.desk === 'v31') {
+    // out of the lamp's pool (a rung down), so PLEASE and his hand keep the eye
+    const t = new Buf(480, RH, PAL.G2);
+    drawLetterPage(t, 352, 6, 150, 124, {print: true});
+    drawEmitSpread(t, 372, 58);
+    for (let y = 0; y < RH; y++) for (let x = 350; x < 480; x++) { const c = t.get(x, y); if (c !== PAL.G2) b.set(x + sx, y + sy, stepColor(c, -1)); }
+  } else { rect(380 + sx, 0, 100, 44, b.ink(PAL.N1)); rect(380 + sx, 44, 100, 2, b.ink(PAL.G3)); rect(384 + sx, 4, 92, 36, b.ink(PAL.N0)); }
+  const wy0 = st.waterStill ? 36 : 36 + sy, wx0 = st.waterStill ? 60 : 60 + sx;
+  ellipse(60 + sx, 40 + sy, 13, 13, b.ink(PAL.G5)); ellipse(60 + sx, 40 + sy, 11, 11, b.ink(PAL.C5)); for (let i = -7; i <= 7; i++) b.set(wx0 + i, wy0, PAL.C8);
   rect(22 + sx, 90 + sy, 26, 14, b.ink(PAL.P0)); rect(22 + sx, 90 + sy, 26, 1, b.ink(PAL.P2)); ellipse(32 + sx, 96 + sy, 3, 3, b.ink(PAL.P2));
   // the sheet, a little askew from square (a hand-placed page), its shadow
   const px = 120 + sx, py = 26 + sy, pw0 = 220, ph = 170;
@@ -125,17 +147,31 @@ export const drawPleaseHigh = (b: Buf, f: number, st: PleaseHighState = {}) => {
   hands(b, tipX + 4, tipY - 10, px + 8, py + 110);
 };
 
-export interface PleaseEcuState { lift?: 0 | 1 | 2 }
+export interface PleaseEcuState {
+  lift?: 0 | 1 | 2;
+  /** v3.1 (opt-in, 12.06 in draft 7): the second line, REG: letters written (0..3) and the part of the one being
+   *  drawn; the layout moves PLEASE up to make room, and the pen works (and lifts) on REG, not on PLEASE's last E */
+  reg?: number;
+  regPart?: number;
+}
 /** [ECU] the sheet: PLEASE and blank paper under it (the rest arrives by May); the pen finishes and lifts */
 export const drawPleaseECU = (b: Buf, f: number, st: PleaseEcuState = {}) => {
   for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) b.set(x, y, bayer(x, y) < 0.04 ? PAL.P1 : PAL.P2);
   // the lamp's cool fall-off at the page's bottom
   for (let y = 150; y < RH; y++) for (let x = 0; x < 480; x++) if (bayer(x, y) < (y - 150) / 90) b.set(x, y, PAL.P1);
   const k = 5;
-  const x = Math.round((480 - wordW(k)) / 2), y = 30;
+  const two = st.reg !== undefined;
+  const x = Math.round((480 - wordW(k)) / 2), y = two ? 12 : 30;
   drawWord(b, x, y, 6, 0, k, false);
   const lift = st.lift ?? 0;
-  const tipX = x + wordW(k) - 6 * k + 2 * k, tipY = y + 12 * k + (lift === 0 ? 0 : lift === 1 ? -8 : -26);
+  let tipX = x + wordW(k) - 6 * k + 2 * k, tipY = y + 12 * k + (lift === 0 ? 0 : lift === 1 ? -8 : -26);
+  if (two) {
+    // REG on the line below, from PLEASE's left margin, a hand's slant (a pixel lower per letter): the pen on its
+    // last stroke, then lifting mid-word
+    const ry = y + 13 * k + 14, n = st.reg ?? 3, part = st.regPart ?? 0;
+    const end = drawWord(b, x + 4, ry, n, part, k, false, 'REG');
+    tipX = Math.min(end, x + 4 + wordW(k, 'REG')) - 2 * k; tipY = ry + 12 * k + (lift === 0 ? 0 : lift === 1 ? -8 : -26);
+  }
   // the pen's shadow on the paper, then the pen (the tip off the paper once it lifts)
   for (let t = 0; t < 120; t++) { const X = tipX + 6 + Math.round(t * 0.72), Y = tipY + 10 + (lift ? 8 : 0) - Math.round(t * 0.7); if (Y > 0 && bayer(X, Y) < 0.6) for (let w = 0; w < 5; w++) b.set(X + w, Y, stepColor(b.get(X + w, Y), -1)); }
   for (let t = 0; t < 120; t++) { const X = tipX + Math.round(t * 0.72), Y = tipY - Math.round(t * 0.7); const c = t < 5 ? PAL.G6 : t < 12 ? PAL.G4 : PAL.N5; for (let w = 0; w < 4; w++) b.set(X + w, Y, w === 0 ? PAL.N6 : w === 3 ? PAL.N3 : c); }

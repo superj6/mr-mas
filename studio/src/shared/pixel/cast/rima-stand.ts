@@ -192,6 +192,8 @@ const rig = (light: RimaLight): LightRig => ({
   keyGain: light === 'sil' ? () => 0 : (_x, y) => (y < 48 ? 1 : Math.max(0.25, 1 - (y - 48) / 32)),
 });
 export const rimaStand = memo((p: RimaStandPose) => renderFigure(fig(p), rig(p.light)));
+/** her light rig (v3.1: shared with cast/rima-board.ts, her medium back view at the whiteboard) */
+export const rimaStandRig = (light: RimaLight): LightRig => rig(light);
 export const drawRimaStand = (b: Buf, footX: number, footY: number, p: RimaStandPose, o: {flip?: boolean; map?: (c: number) => number; mask?: Uint8Array; clip?: (x: number, y: number) => boolean} = {}) => {
   const fx = o.flip ? RIMA_STAND_W - 1 - RIMA_STAND_FOOT[0] : RIMA_STAND_FOOT[0];
   blitImg(b, rimaStand(p), footX - fx, footY - RIMA_STAND_FOOT[1], {flip: o.flip, map: o.map, mask: o.mask, clip: o.clip});

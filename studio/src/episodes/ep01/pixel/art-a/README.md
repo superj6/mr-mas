@@ -15,6 +15,10 @@ The v3-art-a pass (2026-09-27) wrote this folder. It registers every state of ev
 | `demos/act1-lobby.ts` | sc 9: the landlord's deal, the TV, the check, Tasya at medium scale, Gerg's poses |
 | `demos/act1-duel.ts` | sc 11: the split, the demo-stage arrival (the match cut), CLOD |
 | `demos/act1-pause.ts` | sc 12: the pause letter, Nole's desk, OIGNEB, PLEASE, the 12.05 glass |
+| `demos/v31-sydney.ts` | v3.1 (script draft 7): sc 10, Sydney in the lobby (restored), the TV's v3.1 states |
+| `demos/v31-laptop.ts` | v3.1: Gerg's laptop screen over his shoulder (the chat face, the Atem thread, the match), the duel's v3.1 frames |
+| `demos/v31-pause.ts` | v3.1: EMIT lands on his desk; PLEASE / REG |
+| `demos/v31-launch.ts` | v3.1: launch night warmed (practicals, face lights, background life), the board seed, 5.09's rack, 12.05's phone, the tear's catch light, the v31 collars |
 | `tools/sheet.ts` | the sheet tool (a copy of Act Four's `art-v5` tool, pointed at this registry) |
 
 The drawing code itself lives in `studio/src/shared/pixel/{rooms,cast,kits}/`. This folder only calls it.
@@ -44,7 +48,8 @@ node $SC/sheet-a.cjs group $SC/x.png UI-TV 1                                    
 ## Measured, and what needs a person
 
 **Measured:**
-- 109 stills render.
+- 159 stills render: v3's 109, then the v3.1 round's 50.
+- The 109 v3 stills re-render pixel-identical in the picture area, because every v3.1 change is an opt-in state or a new module.
 - `strays` reports all ok.
 - `tsc` prints nothing for these files or the new shared modules.
 - Every file here and every shared module the pass wrote is new, so no existing drawing changed.

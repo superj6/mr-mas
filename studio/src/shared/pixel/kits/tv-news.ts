@@ -12,6 +12,8 @@
 //   drawTvScreen(b, f, st)             [SCR] the TV filling the frame: its bezel, the broadcast
 //   tvLedger(b, st)                    the LEDGER flash-print over the [SCR] (6 frames at most: money), then off
 //   TV_TEXT                            the broadcast's words (the ticker's lines as draft 6 prints them)
+// v3.1 opt-ins (draft 7; the v3 defaults are unchanged): st.bubble 'sydney' | 'gone' (sc 10: the bubble in GNIB's box
+// is Sydney, then the box is empty), st.bubbleFace, st.date (9.12: `FEB 8 · ` leads the ticker)
 import {Buf, rect, line, ellipse, bayer, hash} from '../px';
 import {PAL, stepColor} from '../palette';
 import {text, textWidth, bigText, bigTextWidth} from '../font';
@@ -20,6 +22,7 @@ import {pt, pw} from './uitype';
 import {tiny, tinyWidth} from '../rooms/kit-b';
 import {drawRadnus, RADNUS_DEFAULT} from '../cast/radnus';
 import {drawChatBubble} from '../cast/chatgtp';
+import {drawSydney, SydneyFace, SYDNEY_COL} from '../cast/sydney';
 
 export const TV_TEXT = {
   gnib: 'MACROSOFT UNVEILS THE NEW GNIB',
@@ -30,13 +33,22 @@ export const TV_TEXT = {
   figure: 'ELGOOG ~ -$100B (~7.7%, ONE DAY)',
 };
 export type TvShow = 'gnib' | 'tap' | 'telescope' | 'off';
-export interface TvState { show: TvShow; f?: number; k?: number; ticker?: number; figure?: boolean }
+export interface TvState {
+  show: TvShow; f?: number; k?: number; ticker?: number; figure?: boolean;
+  /** v3.1 (opt-in; default ChatGTP's colours, v3): the bubble inside GNIB's search box: 'sydney' (ChatGTP's face in
+   *  GNIB's colours, sc 10: the one that slips out) · 'gone' (the box empty, after she left) */
+  bubble?: 'chatgtp' | 'sydney' | 'gone';
+  /** Sydney's face in the box (9.13: she blinks, "as if she heard") */
+  bubbleFace?: SydneyFace;
+  /** v3.1 (draft 7, 9.12): the ticker carries its own date, `FEB 8 · …` */
+  date?: string;
+}
 
 const studio = (b: Buf, x: number, y: number, w: number, h: number) => {
   for (let j = 0; j < h; j++) for (let i = 0; i < w; i++) { const t = j / h + (bayer(x + i, y + j) - 0.5) * 0.2; b.set(x + i, y + j, t < 0.5 ? PAL.N4 : t < 0.8 ? PAL.N3 : PAL.N2); }
 };
 /** GNIB's search box with the chat bubble inside it (a search product with a chat in it: the whole joke of the frame) */
-const gnibFrame = (b: Buf, x: number, y: number, w: number, h: number, small: boolean) => {
+const gnibFrame = (b: Buf, x: number, y: number, w: number, h: number, small: boolean, st: TvState = {show: 'gnib'}) => {
   studio(b, x, y, w, h);
   const bw = Math.round(w * 0.7), bh = small ? 10 : Math.round(h * 0.34);
   const bx = x + Math.round((w - bw) / 2), by = y + Math.round(h * (small ? 0.18 : 0.2));
@@ -44,7 +56,12 @@ const gnibFrame = (b: Buf, x: number, y: number, w: number, h: number, small: bo
   // the GNIB wordmark over it: the parody name in slate, off-brand
   if (!small) bigText(b, 'GNIB', x + Math.round((w - bigTextWidth('GNIB')) / 2), by - 22, PAL.N7);
   // the chat bubble living inside the search box, and a magnifier glyph at the box's end
-  if (small) { rect(bx + 2, by + 2, 8, 5, b.ink(PAL.C6)); b.set(bx + 4, by + 3, PAL.N0); b.set(bx + 7, by + 3, PAL.N0); }
+  const bub = st.bubble ?? 'chatgtp';
+  if (bub === 'gone') { /* the box empty: she left */ }
+  else if (small) {
+    rect(bx + 2, by + 2, 8, 5, b.ink(bub === 'sydney' ? SYDNEY_COL.body : PAL.C6));
+    if (st.bubbleFace !== 'blink') { b.set(bx + 4, by + 3, PAL.N0); b.set(bx + 7, by + 3, PAL.N0); } else { b.set(bx + 3, by + 4, PAL.N0); b.set(bx + 4, by + 4, PAL.N0); b.set(bx + 7, by + 4, PAL.N0); b.set(bx + 8, by + 4, PAL.N0); }
+  } else if (bub === 'sydney') drawSydney(b, bx + 8, by + 6, {size: 'screen', face: st.bubbleFace ?? 'dots', chain: false, stamp: true, f: st.f});
   else drawChatBubble(b, bx + 8, by + 6, {size: 'screen', state: 'talk', f: 4});
   const mx = bx + bw - (small ? 7 : 18), my = by + (small ? 2 : Math.round(bh / 2) - 5);
   ellipse(mx + 3, my + 3, small ? 2 : 4, small ? 2 : 4, b.ink(PAL.G4)); ellipse(mx + 3, my + 3, small ? 1 : 2.4, small ? 1 : 2.4, b.ink(PAL.P2)); line(mx + 5, my + 5, mx + (small ? 6 : 9), my + (small ? 6 : 9), b.ink(PAL.G4));
@@ -86,7 +103,7 @@ export const drawTvPicture = (b: Buf, x: number, y: number, w: number, h: number
   if (st.show === 'off') { rect(x, y, w, h, b.ink(PAL.N0)); return; }
   const capH = small ? 12 : 20;
   const ph = h - capH;
-  if (st.show === 'gnib') gnibFrame(b, x, y, w, ph, small);
+  if (st.show === 'gnib') gnibFrame(b, x, y, w, ph, small, st);
   else if (st.show === 'tap') tapFrame(b, x, y, w, ph, f, small);
   else telescopeFrame(b, x, y, w, ph, f, st.k ?? 2, small);
   // the caption band (the TV's own) and, for the demo, the ticker under it
@@ -95,14 +112,14 @@ export const drawTvPicture = (b: Buf, x: number, y: number, w: number, h: number
   if (small) {
     if (st.show === 'gnib') { tiny(b, 'MACROSOFT UNVEILS', x + 1, y + ph + 1, PAL.P2); tiny(b, 'THE NEW GNIB', x + 1, y + ph + 7, PAL.P2); }
     else if (st.show === 'tap') { tiny(b, 'ACROSS TOWN,', x + 1, y + ph + 1, PAL.P2); tiny(b, 'AT ELGOOG', x + 1, y + ph + 7, PAL.P2); }
-    else { const s = st.figure ? 'ELGOOG -$100B' : "ELGOOG'S DRAB DEMO"; tiny(b, s.replace("'", ''), x + 1, y + ph + 1, st.figure ? PAL.R3 : PAL.P2); tiny(b, 'TELESCOPE FACT', x + 1, y + ph + 7, PAL.P2); }
+    else { const s = st.figure ? 'ELGOOG -$100B' : st.date ? `${st.date} DRAB DEMO` : "ELGOOG'S DRAB DEMO"; tiny(b, s.replace("'", ''), x + 1, y + ph + 1, st.figure ? PAL.R3 : PAL.P2); tiny(b, 'TELESCOPE FACT', x + 1, y + ph + 7, PAL.P2); }
     return;
   }
   const cap = st.show === 'gnib' ? TV_TEXT.gnib : st.show === 'tap' ? TV_TEXT.across : '';
   if (cap) pt(b, cap, x + 8, y + ph + 7, PAL.P2);
   if (st.show === 'telescope') {
     // the ticker crawls in from the right (whole pixels), then the figure replaces it and holds
-    const s = st.figure ? TV_TEXT.figure : TV_TEXT.ticker;
+    const s = st.figure ? TV_TEXT.figure : st.date ? `${st.date} · ${TV_TEXT.ticker}` : TV_TEXT.ticker;
     const tw = pw(s), t = st.ticker ?? 1;
     const tx = st.figure ? x + 8 : Math.round(x + w - (w - 8 + 0) * Math.min(1, t)) ;
     const tmp = new Buf(w, capH, PAL.N0);

@@ -90,7 +90,7 @@ const drawBanner = (b: Buf, x: number, y: number) => {
 /** the demo monitor on its rolling stand; its screen: blank chat · the napkin photo · the site (half / working) ·
  *  the memo photo · the memo site; its own caption under the picture (NAPKIN → WEBSITE, MEMO → WEBSITE) */
 export type DemoScreen = 'blank' | 'napkin' | 'site1' | 'site2' | 'memo' | 'memo1' | 'memo2';
-const drawDemoScreen = (b: Buf, x: number, y: number, s: DemoScreen) => {
+const drawDemoScreen = (b: Buf, x: number, y: number, s: DemoScreen, caption = true) => {
   const w = 64, h = 44;
   rect(x - 3, y - 3, w + 6, h + 6 + 9, b.ink(PAL.N0)); rect(x - 2, y - 2, w + 4, h + 4 + 9, b.ink(PAL.G1)); rect(x - 2, y - 2, w + 4, 1, b.ink(PAL.G3));
   rect(x + w / 2 - 1, y + h + 12, 3, 196 - (y + h + 12), b.ink(PAL.G1)); rect(x + w / 2 - 12, 196, 25, 2, b.ink(PAL.G2));
@@ -118,7 +118,7 @@ const drawDemoScreen = (b: Buf, x: number, y: number, s: DemoScreen) => {
   else site(2, true);
   for (let i = 0; i < 6; i++) b.set(x + w - 8 + i, y + 1 + i, stepColor(b.get(x + w - 8 + i, y + 1 + i), 1));
   // the caption band under the picture: X → WEBSITE once the site is up (the demo's own UI)
-  const cap = s === 'site1' || s === 'site2' ? 'NAPKIN' : s === 'memo1' || s === 'memo2' ? 'MEMO' : '';
+  const cap = !caption ? '' : s === 'site1' || s === 'site2' ? 'NAPKIN' : s === 'memo1' || s === 'memo2' ? 'MEMO' : '';
   rect(x, y + h + 1, w, 8, b.ink(PAL.N0));
   if (cap) {
     const tw = tinyWidth(cap) + 7 + tinyWidth('WEBSITE');
@@ -169,6 +169,8 @@ export interface DuelLeftState {
   masPhone?: boolean;
   /** everyone's phones out, reading his post */
   phones?: boolean;
+  /** v3.1 (opt-in false; draft 7's 11.04): the demo screen's X → WEBSITE caption. Default true (v3) */
+  caption?: boolean;
 }
 const ROOM = (() => { let cache: {buf: Buf; anchors: Record<string, [number, number]>} | null = null; return () => {
   if (cache) return cache;
@@ -195,7 +197,7 @@ const demoRoom = (b: Buf, f: number, st: DuelLeftState) => {
   const [mx, my] = R.anchors.masDesk;
   drawMasDesk(b, mx, my, {...MAS_DESK_DEFAULT, head: st.masPhone ? 'screen' : 'turn', light: 'monitor'}, undefined, MAS_DAY);
   if (st.masPhone) masPhoneUp(b, mx, my);
-  drawDemoScreen(b, DUEL.sxL - 1, 58, st.screen ?? 'blank');
+  drawDemoScreen(b, DUEL.sxL - 1, 58, st.screen ?? 'blank', st.caption ?? true);
   drawTripodCam(b, DUEL.sxL + 26, 202);
 };
 export const drawDuelLeft = (b: Buf, f: number, st: DuelLeftState = {}) => {

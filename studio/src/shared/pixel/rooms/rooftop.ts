@@ -77,11 +77,14 @@ const paintSky = (horizonY = ROOF.horizon): Buf => {
 };
 /** the crack across the sky: a hairline that runs L -> R in whole-pixel steps, dark with a bright lip; t 0..1 */
 export const crackPath = (): Array<[number, number]> => {
+  // v3.1 (17.11 shot note: "jagged and white, never a chart line"): runs of 3-9 px, each turning by 2-5 px, so the line
+  // zigzags like a crack in glass
   const pts: Array<[number, number]> = [];
-  let y = 38;
+  let y = 38, run = 0, dy = 0;
   for (let x = 0; x < 480; x++) {
-    if (hash(x >> 3, 5, 71) < 0.35) y += hash(x, 7, 71) < 0.5 ? -1 : 1;
-    y = clamp(y, 28, 52);
+    if (run <= 0) { run = 3 + Math.floor(hash(x, 5, 71) * 7); dy = (hash(x, 7, 71) < 0.5 ? -1 : 1) * (hash(x, 9, 71) < 0.5 ? 1 : 0); if (hash(x, 11, 71) < 0.35) y += (hash(x, 13, 71) < 0.5 ? -1 : 1) * (2 + Math.floor(hash(x, 15, 71) * 3)); }
+    run--; y += dy * (run % 2);
+    y = clamp(y, 24, 56);
     pts.push([x, y]);
   }
   return pts;
@@ -89,12 +92,17 @@ export const crackPath = (): Array<[number, number]> => {
 const CRACK = crackPath();
 export const drawCrack = (b: Buf, t: number, o: {dy?: number; x0?: number; x1?: number; clip?: (x: number, y: number) => boolean} = {}) => {
   const n = Math.round(clamp(t, 0, 1) * 480);
+  const put = (X: number, Y: number, c: number) => { if (!o.clip || o.clip(X, Y)) b.set(X, Y, c); };
   for (let i = 0; i < n; i++) {
     const [x, y] = CRACK[i];
     const X = x, Y = y + (o.dy ?? 0);
-    if (o.clip && !o.clip(X, Y)) continue;
-    b.set(X, Y, PAL.N0); b.set(X, Y - 1, PAL.W9);
-    if (hash(x, 3, 72) < 0.08) b.set(X, Y + 1, PAL.N1); // a hair-thin branch
+    const [, yp] = CRACK[Math.max(0, i - 1)];
+    // the white core (the gap in the sky), filled vertically where the line jumps, a dark hairline under it
+    for (let yy = Math.min(Y, yp + (o.dy ?? 0)); yy <= Math.max(Y, yp + (o.dy ?? 0)); yy++) put(X, yy, PAL.W9);
+    put(X, Y + 1, PAL.N3);
+    // short white splinters off the turns
+    if (hash(x, 3, 72) < 0.06) { put(X + 1, Y - 1, PAL.W9); put(X + 2, Y - 2, PAL.P2); }
+    if (hash(x, 5, 72) < 0.04) { put(X + 1, Y + 2, PAL.P2); put(X + 2, Y + 3, PAL.G6); }
   }
 };
 
@@ -220,6 +228,62 @@ export const drawRooftopOTS = (b: Buf, f: number, st: RooftopOTSState = {}) => {
   for (let y = 100; y < RH; y++) for (let x = 0; x < 200; x++) { const d = Math.hypot((x - 30) / 170, (y - 240) / 130); if (d <= 1) b.set(x, y, d > 0.96 ? F[3] : x > 120 ? F[2] : F[1]); }
   for (let y = 40; y < 120; y++) for (let x = 0; x < 90; x++) { const d = Math.hypot((x - 20) / 70, (y - 112) / 66); if (d > 1) continue; const curl = (Math.floor((x + y) / 5) + Math.floor((x - y) / 5)) % 2 === 0; b.set(x, y, d > 0.95 ? PAL.B2 : curl ? PAL.B1 : PAL.B0); }
   drawIndexUp(b, 122, st.finger === 1 ? 70 : 50, F);
+};
+
+// ------------------------------------------------------------------ the glass, side-on at table height (17.12, v3.1)
+/**
+ * v3.1's new ECU (it replaces the view from above): his glass on the white cloth at table height, the statement's sheet
+ * lying beyond it, the sky behind with the crack. Seen through the glass the sky is shifted (the water bends it) and in
+ * the water the crack keeps going after the sky's has stopped (`run` 0..3 whole-pixel steps) until it runs across the
+ * small reflection of the man looking down into the glass. The water line one flat row: it doesn't move.
+ */
+export const drawGlassSide = (b: Buf, f: number, st: {run: 0 | 1 | 2 | 3}) => {
+  const sky = paintSky(150);
+  // the sky and the city far below at this height (the horizon behind the table), the cloth's edge at 150
+  for (let y = 0; y < 150; y++) for (let x = 0; x < 480; x++) b.set(x, y, sky.get(x, y));
+  const stopX = 250;
+  drawCrack(b, stopX / 480);
+  for (let y = 150; y < RH; y++) for (let x = 0; x < 480; x++) b.set(x, y, y === 150 ? PAL.W9 : bayer(x, y) < 0.12 ? PAL.P1 : PAL.P2);
+  // the sheet lying flat beyond the glass: a pale sliver in perspective, its signatures a ruled grey
+  for (let y = 150; y < 157; y++) for (let x = 300 - (y - 150) * 3; x < 440 + (y - 150) * 2; x++) b.set(x, y, y === 150 ? PAL.P1 : (x + y) % 9 === 0 ? PAL.G5 : PAL.W9);
+  // the glass: a tall tumbler on the cloth, its walls, the water's body; what's behind it shifted 6 px (refraction)
+  const gx0 = 176, gx1 = 304, gy0 = 30, gy1 = 176, wy = 70;
+  const src = b.clone();
+  for (let y = gy0; y < gy1; y++) for (let x = gx0; x < gx1; x++) {
+    const u = (x - gx0) / (gx1 - gx0);
+    const edge = u < 0.03 || u > 0.97;
+    if (edge) { b.set(x, y, u < 0.5 ? PAL.C7 : PAL.C3); continue; }
+    const water = y > wy;
+    let c = src.get(Math.round(gx0 + (x - gx0) * (water ? 0.8 : 0.95) + (water ? 16 : 3)), water ? Math.max(0, 150 - (y - wy) * 0.9) | 0 : y); // the view through it, bent
+    if (water) c = bayer(x, y) < 0.35 ? PAL.C5 : c === PAL.W9 || c === PAL.P2 ? PAL.C8 : c; // the water's tint
+    if (u > 0.08 && u < 0.14) c = PAL.C8; // the lit wall's streak
+    if (u > 0.86 && u < 0.9) c = PAL.C4;
+    b.set(x, y, c);
+  }
+  rect(gx0 + 4, wy, gx1 - gx0 - 8, 1, b.ink(PAL.C9)); // the water line: one flat row
+  rect(gx0, gy0, gx1 - gx0, 2, b.ink(PAL.C6)); rect(gx0, gy1 - 6, gx1 - gx0, 6, b.ink(PAL.C4)); rect(gx0, gy1 - 1, gx1 - gx0, 1, b.ink(PAL.C2));
+  for (let x = gx0 + 6; x < gx1 + 10; x++) b.set(x, gy1, PAL.G6); // its shadow on the cloth
+  // his small reflection on the glass's curve, low in the water: the hoodie's shoulders (half there: a reflection),
+  // his hair and its cowlick, his face cool in the sky's light, the two dot eyes and the one-pixel smile
+  const mx = 262, my = 128;
+  for (let y = my - 12; y < my + 24; y++) for (let x = mx - 18; x < mx + 18; x++) {
+    const hd = Math.hypot((x - mx) / 7, (y - my) / 9) < 1, sh = Math.hypot((x - mx) / 17, (y - my - 16) / 8) < 1 || (Math.abs(x - mx) < 3 && y > my + 6 && y < my + 11);
+    if (hd) b.set(x, y, y < my - 3 || (y < my && Math.abs(x - mx) > 4) ? (x > mx + 3 ? PAL.B0 : PAL.B1) : x > mx + 3 ? PAL.K2 : PAL.K3);
+    else if (sh && ((x + y) & 1) === 0) b.set(x, y, x > mx + 6 ? PAL.G1 : PAL.G2);
+  }
+  b.set(mx - 1, my - 10, PAL.B1); b.set(mx - 2, my - 11, PAL.B1); // the cowlick
+  b.set(mx - 3, my + 1, PAL.N0); b.set(mx + 2, my + 1, PAL.N0); // the eyes
+  rect(mx - 2, my + 5, 4, 1, b.ink(PAL.X1)); b.set(mx + 2, my + 4, PAL.X1); // the one-pixel smile
+  // the crack in the water: the sky's line seen through the glass, and then its extra steps toward his reflection
+  const steps = [gx0 + 60, gx0 + 72, gx0 + 80, mx + 2];
+  let y = wy + 22;
+  for (let x = gx0 + 6; x < steps[st.run]; x++) {
+    if (hash(x >> 2, 21, 73) < 0.45) y += hash(x, 23, 73) < 0.5 ? -2 : 2;
+    y = clamp(y, wy + 10, my - 1);
+    if (x > mx - 34 && hash(x, 29, 73) < 0.55) y = Math.min(my + 2, y + 3); // it bends down across his face, still in jags
+    b.set(x, y, PAL.W9); b.set(x, y + 1, PAL.N3);
+  }
+  void f;
 };
 
 // ------------------------------------------------------------------ the glass (17.12)

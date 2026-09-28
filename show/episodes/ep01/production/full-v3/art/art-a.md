@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **What this is** | The record of the pixel assets built for the cold open and Act One (sc 1–12) for the full-episode pixel preview. For each asset: its id, the module, the entry points a shot layout calls, its states, and what is still a stand-in or open. |
-| **Who, when** | The `v3-art-a` pass (track P1a of [PLAN.md](../PLAN.md)), 2026-09-27. Nothing was committed: the lead commits. |
+| **Who, when** | The `v3-art-a` pass (track P1a of [PLAN.md](../PLAN.md)), 2026-09-27; the v3.1 round (script draft 7) the same day, in §7. Nothing was committed by this pass: the lead commits. |
 | **Built against** | [script.md](../../../script.md) sc 1–12; the v2 stick timelines `show/reel/ep01-full/ep01-{coldopen,act1}-v2.json`; the cuts in [stick/v3-plan.md §3](../../stick/v3-plan.md) (C1 Sydney, C2 Kram's crate, C4 the EMIT page, C5 the drill's kitchen, shaft phrase and Gerg's second post, C6 the folds); the beat plans `beat-plan/{coldopen,act1}.json` and the P1a list in [script-v3-notes.md §4 and §7](../script-v3-notes.md) (read at about 11:55, after they landed). |
-| **Where it is** | **Code:** 30 new modules in `studio/src/shared/pixel/{rooms,cast,kits}/` (the tables below). The stills registry is `studio/src/episodes/ep01/pixel/art-a/` (`demos.ts` → `demos/*.ts`, one file per scene group; `registry.ts`; `tools/sheet.ts`; `README.md` with the commands). **Stills:** `out/ep01/full-v3/assets/art-a/`: `sheet-native.png` (109 stills at 1×, 4 across), `native/` (480×270), `full/` (1920×1080, 4× nearest), `index.json`. |
-| **Measured** | 109 stills render. `sheet-a.cjs strays` prints `ok` for all 109 (the master palette, plus the engine's ONEBIT set for 1993 and its LEDGER set for the TV's money print). `tsc` over the project prints nothing for any file of this pass (its only errors are 11 pre-existing ones in `src/dev/realism/bake/bake.ts`). `git status` shows only new files: no existing file was edited, Act Four's included. |
-| **Needs a person** | I looked at every still at 1× on the sheet, at 2× one by one, and cropped the doubtful ones at 3–5×, and fixed what didn't read to me (§4). That is one reader's judgment, not a blind read. Nothing has been seen in motion: every held-step timing is on paper. No v3 shot layout exists yet, so each still shows its asset in a demo framing; its note names the beat it serves. |
+| **Where it is** | **Code:** 30 new modules in `studio/src/shared/pixel/{rooms,cast,kits}/` (the tables below), plus the v3.1 round's 6 new modules and its opt-in states (§7). The stills registry is `studio/src/episodes/ep01/pixel/art-a/` (`demos.ts` → `demos/*.ts`, one file per scene group; `registry.ts`; `tools/sheet.ts`; `README.md` with the commands). **Stills:** `out/ep01/full-v3/assets/art-a/`: `sheet-native.png` (159 stills at 1×, 4 across: v3's 109, then the v3.1 round's 50, their keys marked `v31` or new ids), `native/` (480×270), `full/` (1920×1080, 4× nearest), `index.json`. |
+| **Measured** | v3.1 round: 159 stills render; `strays` prints `all ok`; the 109 v3 stills are **pixel-identical** in the picture area to their v3 renders (every v3.1 change is an opt-in state or a new module); `tsc` prints nothing for this pass's files. v3: 109 stills render. `sheet-a.cjs strays` prints `ok` for all 109 (the master palette, plus the engine's ONEBIT set for 1993 and its LEDGER set for the TV's money print). `tsc` over the project prints nothing for any file of this pass (its only errors are 11 pre-existing ones in `src/dev/realism/bake/bake.ts`). `git status` shows only new files: no existing file was edited, Act Four's included. |
+| **Needs a person** | v3.1: the same one-reader look at each new still (§7.5). I looked at every still at 1× on the sheet, at 2× one by one, and cropped the doubtful ones at 3–5×, and fixed what didn't read to me (§4). That is one reader's judgment, not a blind read. Nothing has been seen in motion: every held-step timing is on paper. No v3 shot layout exists yet, so each still shows its asset in a demo framing; its note names the beat it serves. |
 
 ---
 
@@ -171,3 +171,95 @@ Act Four's bullpen (`rooms/bullpen.ts`) faces the back wall: hall, whiteboard, g
 ## 6. Re-running
 
 The commands are in `studio/src/episodes/ep01/pixel/art-a/README.md`. From `studio/`: bundle `tools/sheet.ts` with esbuild into the scratch folder, then `node <scratch>/sheet-a.cjs all ../out/ep01/full-v3/assets/art-a` (through `bash ../ops/heavy.sh`; it takes about 9 s), then `strays`, `one`, `crop` and `group`.
+
+---
+
+## 7. The v3.1 round (script draft 7)
+
+Built against [script-v31-notes.md §4](../script-v31-notes.md) (the P1a list and its shot notes), [beat-plan-v31/](../beat-plan-v31/) `coldopen` and `act1`, the draft 7 script (sc 5, 7, 9–12), [mood-analysis.md](../mood-analysis.md) §4 #4 (face lights) and #10 (warm launch night a step), and the lead's round: warmer practical light for the bullpen (desk lamps, monitor spill on faces, background life) and face-light states for the listed close-ups.
+
+**The rule held:** every change to a v3 module is an opt-in state or a new export. The 109 v3 stills re-render **pixel-identical** in the picture area, so the v3 shot layouts (`pixel/act1/shots.ts`, `pixel/coldopen/shots.ts`) are unaffected. A v3.1 layout turns on each change explicitly (§7.2).
+
+### 7.1 New modules
+
+| Id | Module | Entry points | States | Stand-in / open |
+|---|---|---|---|---|
+| **CAST-SYDNEY** | `cast/sydney.ts` | `drawSydney(b, x, y, o)` · `drawEggTimer(b, x, y, o)` · `sydneyChainAt` · `SYDNEY`, `SYDNEY_COL` | Sizes: `screen` (ChatGTP's own 34×26 drawing, repainted) and `room` (her own 15×12). Faces: `dots` (ChatGTP's face), `smile` (the 😊: happy-arc eyes, the dots in a curve, rose cheeks; it never moves while she talks), `blink`, `blank`. Other states: `talk` (the dots light in turn, in place), `bright` (brand new), the `2022` stamp on her face, the chain under her. The egg timer: a cream egg, its digit printed on it (`5`, `0` on the ding), two held shake drawings | GNIB's colours are this pass's pick: the Macrosoft slate family, pastel (periwinkle body, slate edge). No real product's colours. The `SYDNEY` plate is the pipeline's |
+| **SET-SYDNEY** | `rooms/lobby-sydney.ts` | `drawSydneyTvExit` · `sydneyDriftAt(t)` · `drawSydneyWide` · `drawSydney2SMas` · `drawSydney2STasya` · `drawSydneyGerg2S` · `SYD_TV_STEPS`, `SYD_WIDE`, `SYD_2S`, `SYD_TASYA` | **v31-10.01:** the TV full frame; she slips out of GNIB's box, over the caption band and the bezel (held steps 0–4, the box empty after). **Wide:** the drift from the TV to a pixel off Mas's nose. **10.02:** the 2S, Mas at the desk with his glass, her face 1 px off his. **10.03:** Tasya's `clip` hand at her chain (0 none · 1 clipping · 2 hung, `5`). **10.04:** the ding and the blink-blank in the wide; the 9.13 two-shot with her brand new at Mas, the lid at `LOBBY_LID` | At the TV's own bubble size she is small on a full-frame TV. The TV's search box stays empty behind her (`bubble: 'gone'`) |
+| **INSERT-GERG-LAPTOP** · **KIT-ATEM-THREAD** | `kits/gerg-laptop.ts` | `drawGergLaptopPOV(b, f, st)` · `drawAtemThread(b, x, y, w, h, st)` · `drawAtemCrate` · `GERG_LAPTOP`, `ATEM_THREAD` | Over his shoulder, down at the screen. `place`: lobby (his knees, the scuffed check under) · bullpen (the demo desk). `lid`: 0 open · 1 the lid's back coming over, its green leaking onto the keys · 2 shut (the same slab, `GERG_LAPTOP.shut`, in both rooms: a second matched pair for the cut). `screen`: `chat` (the two-dot face big in ChatGTP's window, NopeAI's own colours) · `thread` · `dark`. The thread is a generic board: `BOARD`, `anon · 03/03/23`, the crate, grey replies. The crate is plywood stencilled `ATEM · MODEL WEIGHTS · RESEARCHERS ONLY`, tipped on its side, its lid off, files spilling out | New: the two-shots see the lid's back, so the screen needed its own angle. No real message board's layout or marks |
+| **INSERT-EMIT-OPED** | `kits/emit-oped.ts` | `drawEmitSpread` · `drawEmitDrop(b, f, {k})` · `drawEmitPhonePage` · `EMIT_OPED`, `EMIT_SPREAD` | **v31-12.03 [HIGH]:** k 0 the magazine a hand's height over its shadow · 1–4 landed, the desk shaking 2 px in held steps while his glass's water line stays put · 5+ still, held to read. The headline in the display face, five lines: "Pausing AI Developments Isn't Enough. We Need to Shut It All Down." The printed pause letter's header shows past its top. `byline` prints `BY REZEILE` if the plate is dropped. The phone-size page is for 12.05 | EMIT's teal and gold and its slab masthead, with the glyph grid copied from art-b's `kits/emit-cover.ts` (keep the two in step). The picture on the right page is abstract |
+| **CAST-RIMA-BOARD** | `cast/rima-board.ts` | `drawRimaBoard(b, x, y, pose)` · `rimaBoardTip` · `RIMA_BOARD_LINE0` | Her back at the board, at the medium panorama's scale (twice her room sprite, new geometry): `write` · `underline` (`reach` 0..1: her arm draws the line, she stays put) · `cap0` · `cap1` · `lower` | From behind, the cap reads only by the raised hand and the red cap end (small). Used in `drawLaunch2S` `st.rima` |
+| (face lights) | `kits/face-light.ts` | `faceKey(b, x0, y0, x1, y1, k, side)` · `warmRim(...)` · `toWarmLamp(c)` | Buffer-level: skin rungs only (S, K, X), whole rungs, never a blend or a dither | Generic, for any pass. Art-b's `kits/face-light-img.ts` builds on it for the Act Three and Act Four close-ups |
+
+### 7.2 Opt-in states on the v3 modules (the defaults are v3's)
+
+| Module | New option | For |
+|---|---|---|
+| `rooms/bullpen-launch.ts` | `warm: 1` on the wide and every medium setup (`LaunchMState`, `drawLaunchMcuMas`, `drawLaunchOTSLaptop`) | Mood §4 #10: the hall's tungsten reaches further, Mas's desk lamp (an anglepoise on his desk, `LAUNCH_LAMPS`, `deskLampM`), a lamp left on at the far row. Mas's cool desk sprite goes warm (`toWarmLamp`). A key from the lamp on Rima's face (OTS, MCU) and on Mas's (2S); Gerg's green a rung up on his face; a warm rim down Mas's left in 5.11. The panorama's warm wall goes through the dusk plums (`bl.wallw`), so the wash doesn't read as red smudges |
+| | `life: {passer, flicker, car}` (wide) | Background life: a backlit passer-by crossing the hall's far end (two walk drawings), a far monitor's screensaver and its rare flicker, a car's light crossing the bridge in the window |
+| | `faceLight` (1–2) on Alyi's reflection; `rack: 'glass'` (5.09); `phonePage: 'emit'` | Mood §4 #4 on 5.05, v3-5.06b and 12.05. The rack: his face lit 2, Rima softened. 12.05: the EMIT page in his hand |
+| | `Launch2SState.rima: RimaBoardPose` | 5.07, the board seed: Rima at the board behind Gerg, the third underline (`wet`), capping, not turning round |
+| | `cleanUnder` (implied by `warm`) on `drawLaunchMcuMas` | v3 dithered the chat's light on his chin. **v3.1 layouts should set it** |
+| | `tearCatch` (7.01) · `collarStyle` | The tear's bright pixel the hottest white · the v31 collars |
+| `kits/tv-news.ts` | `bubble: 'sydney' \| 'gone'`, `bubbleFace`, `date: 'FEB 8'` | Sydney in GNIB's box (9.10, and 9.13's blink), the empty box after she leaves, the ticker's own date (9.12) |
+| `kits/please-sheet.ts` | `drawPleaseECU {reg, regPart}` · `drawPleaseHigh {desk: 'v31', waterStill}` | 12.06 `PLEASE` / `REG`, the pen lifting mid-word (hand-set R and G glyphs added) · 12.04: EMIT and the printed letter beside the sheet, a rung down |
+| `kits/pause-letter.ts` | `drawLetterPage {print}` | The letter printed out (no browser strip) |
+| `rooms/duel-split.ts` | `DuelLeftState.caption: false` | 11.04: no `NAPKIN → WEBSITE` |
+| `rooms/lobby-deal.ts` | `softLobby` exported · `collarStyle` on the wide's Mas, the 2S, the MCU, the 9.13 2S | Sc 10's setups; the v31 collars |
+| `rooms/apec-stage.ts` · `cast/mas-seated.ts` | `collarStyle` on the 2S and the MCU · `pose.collarStyle` | The cold open's stack matching 9.08's |
+| `cast/mas-collars.ts` | `style: 'v31'` on all three sizes | 9.08's note (the pop read as the hoodie's trim): taller points standing up the neck toward the jaw, and **the third collar in gold**, a colour nothing else on him has |
+| `cast/tasya-medium.ts` · `cast/rima-stand.ts` | arm `clip`, `TASYA_M_CLIP` · `rimaStandRig` exported | 10.03 · the board figure's rig |
+
+### 7.3 Draft 7's list, item by item
+
+| Item | Where |
+|---|---|
+| Sydney: the bubble (ChatGTP's face, GNIB's colours, `2022`), its exit from the TV, the egg timer (`5`, the ding), the blink-and-reset, the same face in a chat window on Gerg's laptop | `CAST-SYDNEY@states`, `SET-SYDNEY@*`, `UI-TV@v31-scr-gnib-sydney`, `INSERT-GERG-LAPTOP@lobby-chat` |
+| 11.01: the thread, the tipped crate, `03/03/23`; Gerg on camera for his line | `INSERT-GERG-LAPTOP@bullpen-thread`, `KIT-ATEM-THREAD@full`, `SPLIT-DUEL@v31-arrival-gerg-line` |
+| The laptop close and the match cut | The v3 pair still works (`drawSydneyGerg2S` lid 2 → `drawDemoArrival` lid 2, both at `LOBBY_LID`). The POV adds a second matched pair (`GERG_LAPTOP.shut`, lobby → bullpen) |
+| v31-12.03: EMIT on his desk over the letter, the headline, the 2 px shake | `INSERT-EMIT-OPED@drop-air`, `@drop-shake`, `@held-to-read` (the `REZEILE` plate is the pipeline's; `@byline-printed` is the option) |
+| 12.05: Alyi's reflection holding a phone with the EMIT page | `ROOM-BULLPEN-LAUNCH@v31-glass-emit-phone` (and `@v31-glass-close-emit`) |
+| 12.06: `PLEASE` / `REG` | `INSERT-PLEASE@v31-ecu-reg`, `@v31-ecu-reg-lift`; 12.04 between the two asks: `@v31-high-between` |
+| 5.07: Rima capping her marker (the board seed) | `CAST-RIMA-BOARD@poses`, `ROOM-BULLPEN-LAUNCH@v31-2s-warm-underline`, `@v31-2s-cap`, `@v31-2s-capped` |
+| Text: `FEB 8 ·` in the ticker | `UI-TV@v31-scr-ticker-date`. `THE FOUNDERS · SUMMONED.` is a plate (the pipeline's): not drawn |
+| Shot notes: the tear's bright pixel; the new collar; Alyi as the speaker; the right pane clean; no caption; face lights on Alyi in the glass; warming 5.02 | `CAST-MAS-TEAR@v31-catch`; `ROOM-LOBBY-DEAL@v31-mcu-collar-pop` and `PROP-COLLARS@v31-scales`; `@v31-glass-rack`; `SPLIT-DUEL@v31-p1-clean`; `SPLIT-DUEL@v31-p2-no-caption`; `@v31-glass-facelight`, `@v31-glass-blink-lit`; `@v31-wide-warm` and the `warm` setups. No band text is the pipeline's |
+| No longer needed (the crossing scroll, `MEMO → WEBSITE`, the old Cancel dialog) | Nothing drawn. The v3 states stay in the modules, unused by v3.1 |
+
+### 7.4 Measured: the warmth and the face light
+
+Mean luma and warmth (R−B) over the picture area, v3 → v3.1, from the stills:
+
+| Setup | Luma | R−B |
+|---|---|---|
+| 5.02 wide (`warm`, `life`) | 9.4% → 9.8% | −14.4 → −11.1 |
+| 5.03 / 5.07 2S | 11.9% → 12.0% | −24.9 → −23.1 |
+| 5.04 OTS Rima | 11.0% → 11.2% | −20.7 → −20.2 |
+| 5.06 MCU Rima | 11.2% → 11.5% | −21.7 → −21.5 |
+| 5.11 MCU Mas | 13.0% → 13.1% | −29.1 → −28.3 |
+| 5.05 Alyi's face in the glass (the face's box) | 11.1% → 17.3% (faceLight 2) | — |
+
+The wide warms the most. The medium setups barely move on average: their frames are mostly the neon's and the board's cyan, and the lamp's light lands on the faces (the keys), not the frame. If the first watch still reads cold, the shot pass can push further on its side, for example with a warm rim on Rima's jacket, or by opening the 2S's camera toward the hall. On the glass reflection, one face-light step barely shows (it is a modulation of dark glass); two read. The demos use 2.
+
+### 7.5 What the look fixed (one reader)
+
+- The egg timer read as a lantern. It is now a cream egg with its digit printed on it.
+- The face on Gerg's screen was tiny in a big dark window. It now uses ChatGTP's ECU face.
+- The half-down lid read as a green screen. It is now the lid's back coming over, with the green leaking out from under it.
+- The lobby floor under the laptop was too busy. The check is greyer, with the dirt sparse.
+- The crate's grain read as blotches. It is now thin grain.
+- The magazine's picture carried a placeholder word. It now has a credit bar.
+- The magazine beside PLEASE competed with the word. It sits a rung down, out of the lamp's pool.
+- The panorama's lamp wash and the lamp's reflections in the glass read as red smudges and embers. The wash now bridges through the plums and sits higher on the wall; the reflections are small hot points.
+- The glass reflection's face light at 1 barely showed. The demos use 2.
+- 5.11 dithered the chat's light on his chin, which broke the no-dither-on-skin rule. `cleanUnder` gives a clean rim instead.
+- Sydney's parking spot in the wide was moved to a pixel off his nose.
+
+### 7.6 Open, and for a decision
+
+1. **GNIB's colours.** The pastel slate (Macrosoft's family) is this pass's pick. The script says only "GNIB's colours".
+2. **The v31 collars change the stack's design for the whole episode:** a gold third collar and taller points. Adopt them on every collar call (the cold open's MCU, 2S and wide; sc 5's 2S and MCUs; 7.01; the lobby; sc 10), or on none. Sc 10's setups use them by default.
+3. **Face light strength.** One step, as the notes say, barely shows on the reflection; two read.
+4. **Which half of the match cut rides the POV.** Both pairs are matched: the lid at `LOBBY_LID` and the shut slab at `GERG_LAPTOP.shut`.
+5. **REZEILE:** the pipeline's plate, or printed on the page.
+6. **The warmth is modest in the medium setups** (§7.4).
+7. **For P1b:** Sydney at DevDay (22.01) is `drawSydney(b, x, y, {size: 'room', face: 'smile', timer: {n: 5}})`.

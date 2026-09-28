@@ -7,5 +7,10 @@ import './demos/act1-elgoog';
 import './demos/act1-lobby';
 import './demos/act1-duel';
 import './demos/act1-pause';
+// v3.1 round (script draft 7): the new beats and opt-in states
+import './demos/v31-sydney';
+import './demos/v31-laptop';
+import './demos/v31-pause';
+import './demos/v31-launch';
 export {DEMOS} from './registry';
 export type {AssetDemo} from './registry';

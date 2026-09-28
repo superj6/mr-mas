@@ -54,7 +54,7 @@ export const lighthousePainter = (st: LighthouseItemState = {}): Painter => (scr
 };
 
 // ------------------------------------------------------------------ DevDay (22.01)
-export interface DevDayState { rise: 0 | 1 | 2 | 3; clunk?: boolean; tasya: number | null; laugh?: boolean; mouth?: 'rest' | 'open'; }
+export interface DevDayState { rise: 0 | 1 | 2 | 3; clunk?: boolean; tasya: number | null; laugh?: boolean; mouth?: 'rest' | 'open'; /** v3.1: the Sydney bubble on its chain, tiny, riding behind Tasya */ sydney?: boolean; }
 export const devdayPainter = (st: DevDayState): Painter => (scr, f) => {
   const mini = isMini(scr);
   const W = mini ? 480 : scr.w, H = mini ? 203 : scr.h;
@@ -78,6 +78,14 @@ export const devdayPainter = (st: DevDayState): Painter => (scr, f) => {
   }
   // MAS at the centre mark (the room sprite), turning to Tasya; TASYA walking on from the right, arms open
   drawMasStand(room, Math.round(W * 0.2), floorY, {...MAS_STAND_DEFAULT, mouth: st.mouth ?? 'rest', light: 'monitor'});
+  if (st.tasya !== null && st.sydney) {
+    // the Sydney bubble on its chain (sc 10's egg-timer chain), tiny, hanging behind his shoulder: a cream bubble, two
+    // dot eyes, a dotted mouth, the chain up out of frame
+    const tx = Math.round(W * 0.97 - (W * 0.2) * Math.min(1, st.tasya)) + 14, ty = floorY - 70;
+    for (let y = 0; y < ty; y += 2) room.set(tx + 4, y, PAL.G4);
+    rect(tx, ty, 10, 7, room.ink(PAL.P2)); rect(tx, ty, 10, 1, room.ink(PAL.C6)); room.set(tx + 1, ty + 7, PAL.P2);
+    room.set(tx + 3, ty + 2, PAL.N0); room.set(tx + 6, ty + 2, PAL.N0); room.set(tx + 3, ty + 5, PAL.G4); room.set(tx + 5, ty + 5, PAL.G4); room.set(tx + 7, ty + 5, PAL.G4);
+  }
   if (st.tasya !== null) drawTasyaStage(room, Math.round(W * 0.97 - (W * 0.2) * Math.min(1, st.tasya)), floorY, {f, walk: st.tasya < 1, laugh: st.laugh ?? true, flip: true});
   // the crowd's heads along the bottom: dark rounded bumps, a few phones lit
   for (let x = -4; x < W; x += 11) { const hx = x + Math.round(hash(x, 1, 91) * 4), hy = H - 10 + Math.round(hash(x, 2, 91) * 3); for (let j = 0; j < 14; j++) for (let i = 0; i < 10; i++) if (Math.hypot((i - 5) / 5, (j - 6) / 7) < 1 || j > 8) room.set(hx + i, hy + j, PAL.N0); if (hash(x, 3, 91) < 0.15) rect(hx + 3, hy - 4, 3, 4, room.ink(PAL.C6)); }

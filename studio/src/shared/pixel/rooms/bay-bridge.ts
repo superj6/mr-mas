@@ -22,6 +22,7 @@ import {Buf, rect, line, ellipse, hash, bayer, clamp} from '../px';
 import {PAL, stepColor} from '../palette';
 import {text, textWidth} from '../font';
 import {tiny} from './kit-b';
+import {pt} from '../kits/uitype';
 import {drawAnchor, drawRumptWindow} from '../cast/civic-extras';
 
 const RH = 203;
@@ -107,8 +108,72 @@ const drawSkyline = (b: Buf, f: number, o: {k: 0 | 1; x0: number; x1: number; y0
   return {lit: [lx + (lw >> 1), ly + (lw >> 1)] as [number, number], water: H};
 };
 
+/** v3.1: fingers round an object's edge (a phone's, a print's), each its own rounded pad with a lit top, a crease under
+ *  it and the tip over the edge: `ex` = the edge's x, the fingers to its left, `y0` the first's top, `pal` [outline,
+ *  shadow, mid, light] */
+export const holdFingers = (b: Buf, ex: number, y0: number, n: number, pal: [number, number, number, number], pitch = 15) => {
+  for (let k = 0; k < n; k++) {
+    const cy = y0 + k * pitch + 6, cx = ex - 3 - (k === n - 1 ? 1 : 0);
+    for (let j = -7; j <= 7; j++) for (let i = -10; i <= 7; i++) {
+      const d = Math.hypot(i / 9.5, j / 6.8);
+      if (d > 1) continue;
+      const c = d > 0.86 ? pal[0] : j < -3 ? pal[3] : j > 3 ? pal[1] : pal[2];
+      b.set(cx + i, cy + j, c);
+    }
+    b.set(cx + 5, cy - 3, pal[3]); b.set(cx + 6, cy - 2, pal[3]); // the nail's glint at the tip
+  }
+};
+/** his own post of the class photo in the feed (a generic app's card): his avatar, `mas`, the print as a thumbnail
+ *  (the photo's own layout drawn small: the cream wall and its gold frames, the white door with NEDIB in it, SIRRAH
+ *  plum at the head, the four red chairs and their heads, the table), `CLASS PHOTO #1`, the hearts climbing */
+export const classPhotoPost = (b: Buf, x: number, y: number, w: number, hearts: number, f: number) => {
+  rect(x, y, w, 96, b.ink(PAL.N2)); rect(x, y, w, 1, b.ink(PAL.N4));
+  rect(x + 3, y + 3, 7, 7, b.ink(PAL.C3)); rect(x + 5, y + 5, 3, 3, b.ink(PAL.S3));
+  text(b, 'mas', x + 13, y + 3, PAL.C6);
+  const tx = x + 3, ty = y + 14, tw = w - 6, th = 50;
+  const U = (u: number) => Math.round(tx + u * tw), V = (v: number) => Math.round(ty + v * th);
+  for (let j = 0; j < th; j++) for (let i = 0; i < tw; i++) {
+    const v = j / th;
+    const c = v < 0.5 ? (bayer(tx + i, ty + j) < 0.15 ? PAL.P0 : PAL.P1) : v < 0.64 ? PAL.D2 : v < 0.8 ? PAL.N3 : v < 0.83 ? PAL.D4 : PAL.D3;
+    b.set(tx + i, ty + j, c);
+  }
+  // the gold frames (two left of the door, one right), the white door with NEDIB mid-stride in it
+  for (const u of [0.1, 0.3, 0.84]) { rect(U(u), V(0.08), 11, 12, b.ink(PAL.W5)); rect(U(u) + 1, V(0.08) + 1, 9, 10, b.ink(PAL.D1)); }
+  rect(U(0.53), 0 + ty, 15, V(0.64) - ty, b.ink(PAL.P2));
+  rect(U(0.53) + 5, V(0.12), 5, 3, b.ink(PAL.P2)); rect(U(0.53) + 5, V(0.12), 5, 1, b.ink(PAL.G5)); // his white hair
+  rect(U(0.53) + 5, V(0.12) + 3, 5, 3, b.ink(PAL.S3)); rect(U(0.53) + 4, V(0.12) + 6, 7, 16, b.ink(PAL.N1)); rect(U(0.53) + 4, V(0.12) + 22, 2, 6, b.ink(PAL.N1)); rect(U(0.53) + 9, V(0.12) + 22, 2, 6, b.ink(PAL.N0));
+  // SIRRAH at the head of the table, plum, her pointer; the blocks
+  rect(U(0.04), V(0.36), 5, 4, b.ink(PAL.S2)); rect(U(0.04) - 1, V(0.34), 7, 2, b.ink(PAL.B1)); rect(U(0.04) - 1, V(0.44), 7, 14, b.ink(PAL.U3));
+  for (let i = 0; i < 9; i++) b.set(U(0.04) + 6 + i, V(0.5) + (i >> 1), PAL.W6);
+  rect(U(0.14), V(0.66), 5, 5, b.ink(PAL.C5)); rect(U(0.19), V(0.66), 5, 5, b.ink(PAL.R3));
+  // the four chairs and their heads: three turned to the door (their hair, their far cheeks), Mas's to the lens
+  [0.3, 0.46, 0.7, 0.86].forEach((u, i) => {
+    const cx = U(u);
+    rect(cx - 5, V(0.42), 11, 12, b.ink(PAL.R2)); rect(cx - 5, V(0.42), 11, 1, b.ink(PAL.R3));
+    const hair = [PAL.B2, PAL.N2, PAL.B3, PAL.B1][i];
+    rect(cx - 2, V(0.4), 5, 5, b.ink(i === 0 ? PAL.S3 : hair)); rect(cx - 2, V(0.4) - 1, 5, 2, b.ink(hair));
+    if (i === 0) { b.set(cx - 1, V(0.4) + 2, PAL.N0); b.set(cx + 1, V(0.4) + 2, PAL.N0); } // the two dots: he looks at us
+    else b.set(cx + (i === 3 ? -2 : 2), V(0.4) + 3, PAL.S3);
+    rect(cx - 3, V(0.4) + 5, 7, 5, b.ink(i === 0 ? PAL.N4 : i === 1 ? PAL.N5 : PAL.G3));
+  });
+  rect(tx, ty, tw, 1, b.ink(PAL.W9));
+  pt(b, 'CLASS PHOTO #1', x + 3, y + 68, PAL.P2);
+  // the heart row: the count climbing (held), a red heart
+  const H = ['.##.##.', '#######', '#######', '.#####.', '..###..', '...#...'];
+  H.forEach((r, j) => { for (let i = 0; i < 7; i++) if (r[i] === '#') b.set(x + 4 + i, y + 82 + j, PAL.R2); });
+  text(b, String(Math.round(hearts)), x + 14, y + 81, PAL.P1);
+  void f;
+};
+
 // ------------------------------------------------------------------ 14.01 the OTS at the bullpen window
-export interface BridgeOTSState { f: number; mouth: 0 | 1; progress?: number; }
+export interface BridgeOTSState {
+  f: number; mouth: 0 | 1; progress?: number;
+  /** v3.1 (the 13.14 -> 14.01 match cut): the phone's feed scrolled from his own CLASS PHOTO #1 post (0, at the top of
+   *  the screen) down to the altered clip (1: the v3 layout); whole-pixel steps in between. Undefined = 1. */
+  feed?: number;
+  /** the CLASS PHOTO #1 post's heart count (it climbs while he holds it) */
+  hearts?: number;
+}
 export const BRIDGE_PHONE = {x: 176, y: 22, w: 118, h: 200};
 export const drawBridgeOTS = (b: Buf, f: number, st: BridgeOTSState) => {
   // the window's glass fills the frame: the skyline beyond (k 0, the window view); the dark bullpen's faint reflection
@@ -138,11 +203,17 @@ export const drawBridgeOTS = (b: Buf, f: number, st: BridgeOTSState) => {
   rect(P.x - 1, P.y - 1, P.w + 2, P.h + 2, b.ink(PAL.G1)); rect(P.x - 1, P.y - 1, P.w + 2, 1, b.ink(PAL.G3));
   rect(P.x, P.y, P.w, P.h, b.ink(PAL.N1));
   rect(P.x + 4, P.y + 4, 22, 3, b.ink(PAL.G3)); // the app's header bar
-  drawNewsClip(b, P.x + 3, P.y + 12, P.w - 6, 82, {f, mouth: st.mouth, progress: st.progress});
-  alteredTag(b, P.x + 5, P.y + 100);
-  for (let k = 0; k < 4; k++) { rect(P.x + 4, P.y + 120 + k * 14, P.w - 8, 10, b.ink(PAL.N2)); rect(P.x + 6, P.y + 122 + k * 14, 6, 6, b.ink(PAL.G3)); for (let i = 0; i < 44 + k * 9; i++) if (i % 6 !== 5) b.set(P.x + 16 + i, P.y + 125 + k * 14, PAL.G3); }
+  // the feed, drawn tall and scrolled: his CLASS PHOTO #1 post (the print, small, and its hearts), then the clip
+  const feedH = 104, scroll = Math.round(feedH * clamp(st.feed ?? 1, 0, 1));
+  const tall = new Buf(P.w, 340, PAL.N1);
+  classPhotoPost(tall, 3, 12, P.w - 6, st.hearts ?? 406, st.f);
+  drawNewsClip(tall, 3, 12 + feedH, P.w - 6, 82, {f, mouth: st.mouth, progress: st.progress});
+  alteredTag(tall, 5, 12 + feedH + 88);
+  for (let k = 0; k < 4; k++) { rect(4, 12 + feedH + 108 + k * 14, P.w - 8, 10, tall.ink(PAL.N2)); rect(6, 12 + feedH + 110 + k * 14, 6, 6, tall.ink(PAL.G3)); for (let i = 0; i < 44 + k * 9; i++) if (i % 6 !== 5) tall.set(16 + i, 12 + feedH + 113 + k * 14, PAL.G3); }
+  for (let y = 10; y < P.h; y++) for (let x = 0; x < P.w; x++) b.set(P.x + x, P.y + y, tall.get(x, y + scroll));
+  rect(P.x + 4, P.y + 4, 22, 3, b.ink(PAL.G3));
   // his fingers round the phone's left edge (lit by its screen), the thumb's heel at the foot
-  for (const [hx, hy] of [[P.x - 9, P.y + 112], [P.x - 9, P.y + 128], [P.x - 8, P.y + 144], [P.x - 7, P.y + 158]] as Array<[number, number]>) { rect(hx, hy, 12, 14, b.ink(PAL.S2)); rect(hx + 1, hy + 1, 10, 12, b.ink(PAL.X2)); rect(hx + 9, hy + 2, 2, 10, b.ink(PAL.K3)); }
+  holdFingers(b, P.x + 2, P.y + 112, 4, [PAL.S0, PAL.X1, PAL.X2, PAL.K3]);
   for (let j = 0; j < 60; j++) for (let i = 0; i < 44; i++) if (Math.hypot((i - 22) / 22, (j - 30) / 30) < 1) b.set(P.x + P.w - 30 + i, P.y + P.h - 18 + j, i < 14 ? PAL.K2 : PAL.X1);
 };
 

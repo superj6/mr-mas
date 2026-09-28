@@ -178,7 +178,8 @@ export const drawAnchor = (b: Buf, x: number, y: number, st: {mouth: 0 | 1; px?:
   ];
   if (st.mouth) { rows[10] = '......hHH444mMMm444HHh........'; rows[11] = '......hHHH444MM4444HHh........'; }
   if (st.blink) rows[6] = '......hH44444444444HHh........';
-  const pal: Record<string, number> = {h: PAL.W4, H: PAL.W6, '4': PAL.S5, '3': PAL.S4, e: PAL.N1, m: PAL.R1, M: PAL.N0, B: PAL.C3, b: PAL.C2, w: PAL.P2};
+  // v3.1: plain dark-brown hair and a slate blazer (the v3 gold hair read as 'an orange-haired man' to the newcomer)
+  const pal: Record<string, number> = {h: PAL.B1, H: PAL.B3, '4': PAL.S5, '3': PAL.S4, e: PAL.N1, m: PAL.R1, M: PAL.N0, B: PAL.N6, b: PAL.N5, w: PAL.P2};
   const s = st.px ?? 1;
   rows.forEach((r, j) => { for (let i = 0; i < r.length; i++) { const c = pal[r[i]]; if (c !== undefined) rect(x + i * s, y + j * s, s, s, b.ink(c)); } });
   // the desk's edge, a glossy news desk

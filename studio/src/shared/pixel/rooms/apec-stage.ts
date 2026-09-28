@@ -403,6 +403,8 @@ export interface Apec2SState {
   ovation?: 0 | 1;
   litWin?: boolean;
   collars?: 0 | 1 | 2 | 3;
+  /** v3.1: 'v31' collars (mas-collars.ts) */
+  collarStyle?: 'v31';
 }
 /** sc 3's three iris drawings: on the phone (down-right, off frame), halfway, on Mas */
 export const APEC_2S_LOOKS: Array<[number, number]> = [[0.55, 0.75], [0.05, 0.45], [-0.75, 0.2]];
@@ -424,7 +426,7 @@ export const drawApec2S = (b: Buf, f: number, st: Apec2SState = {}) => {
   }
   const ms: MasMediumState = {...MAS_MEDIUM_DEFAULT, light: 'warm', head: '34', look: 1, arm: 'down', ...st.mas};
   drawMasMedium(b, mx, my, ms, {flip: true});
-  drawCollarsMedium(b, mx, my, st.collars ?? 3, {flip: true});
+  drawCollarsMedium(b, mx, my, st.collars ?? 3, {flip: true, style: st.collarStyle});
   // the Orb, nearer the lens than he is, at his shoulder (frame right of him, up): its full iris
   drawOrb(b, 236, 96 + [0, 0, -1, -1, 0, 0, 1, 1][Math.floor(f / 8) % 8], 11, {look: st.orbLook ?? APEC_2S_LOOKS[2], aperture: 0.7, monitor: 1});
 };
@@ -439,6 +441,8 @@ export interface ApecMcuState {
   /** sc 2: the phone's light on his jaw from below frame: none · invite (white) · accepted (pale blue) */
   phoneLight?: 'none' | 'invite' | 'accepted';
   collars?: 0 | 1 | 2 | 3;
+  /** v3.1: 'v31' collars (mas-collars.ts) */
+  collarStyle?: 'v31';
 }
 /** the MCU's backdrop: the window's view, soft (one rung toward haze), wide across the frame behind him */
 const drawMcuBack = (b: Buf, st: ApecMcuState) => {
@@ -470,7 +474,7 @@ export const drawApecMCU = (b: Buf, f: number, st: ApecMcuState = {}) => {
     if (c < 0) continue;
     for (let y = Y + img.h; y < RH; y++) b.set(X + x, y, c);
   }
-  drawCollarsPortrait(b, X, Y, st.collars ?? 3, {head: 'front'});
+  drawCollarsPortrait(b, X, Y, st.collars ?? 3, {head: 'front', style: st.collarStyle});
   // sc 2: the phone lighting his jaw from below frame: a clean rim on the undersides of his chin and jaw (no dither on
   // skin), white while the invite shows, the calendar's pale blue once accepted
   if (st.phoneLight && st.phoneLight !== 'none') {

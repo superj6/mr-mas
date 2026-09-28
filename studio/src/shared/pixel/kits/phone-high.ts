@@ -15,6 +15,7 @@ import {PAL, stepColor} from '../palette';
 import {blitImg} from '../figure';
 import {MatBuf, resolve} from '../light';
 import {pt, pw} from './uitype';
+import {tiny, tinyWidth} from '../rooms/kit-b';
 import {PHONE29, drawSleeve, contactShadow} from './inserts-mas';
 import {tapHandCaps} from './inserts-hands';
 import {drawOrb} from '../cast/orb-medium';
@@ -111,7 +112,9 @@ const drawScreen = (b: Buf, kind: PhoneScreen, f: number, press: boolean) => {
 };
 /** the strip's first chip centre (`super`), and where the hovering thumb waits above it */
 export const STRIP_SUPER: [number, number] = [PHONE29.screen.x1 - 10, PHONE29.screen.y0 + 90];
-export interface PhoneHighState { screen: PhoneScreen; thumb?: 'none' | 'hover' | 'tap'; orb?: [number, number] | null; }
+/** v3.1 (23.02): the four circles' names on hover, as the Orb's iris steps along them */
+export const ATTENDEE_NAMES = ['ALYI', 'NELEH', 'MADA', 'THE QUIET VOTE'];
+export interface PhoneHighState { screen: PhoneScreen; thumb?: 'none' | 'hover' | 'tap'; orb?: [number, number] | null; hover?: 0 | 1 | 2 | 3 | null; }
 export const drawPhoneHigh = (b: Buf, f: number, st: PhoneHighState) => {
   const d = desk();
   b.c.set(d.c.subarray(0, 480 * RH));
@@ -119,6 +122,14 @@ export const drawPhoneHigh = (b: Buf, f: number, st: PhoneHighState) => {
   for (const [x, y, c, k] of [[14, 4, PAL.C4, 0], [20, 7, PAL.R3, 1], [26, 4, PAL.L2, 2]] as Array<[number, number, number, number]>) { const on = (Math.floor((f * 2) / 15) + k) % 3 !== 0; b.set(x, y, on ? c : stepColor(c, -2)); }
   phoneBody(b);
   drawScreen(b, st.screen, f, st.thumb === 'tap');
+  if (st.screen === 'reminder' && st.hover !== null && st.hover !== undefined) {
+    // the hover tooltip over the circle: its name in small caps on a dark chip with a pointer notch
+    const S = PHONE29.screen, cx = S.x0 + 6 + 7 + st.hover * 16, cy = S.y0 + 60;
+    const name = ATTENDEE_NAMES[st.hover], w = tinyWidth(name) + 6;
+    const x = Math.max(S.x0 + 1, Math.min(S.x1 - w, cx - (w >> 1))), y = cy - 12;
+    rect(x - 1, y - 1, w + 2, 10, b.ink(PAL.N0)); rect(x, y, w, 8, b.ink(PAL.G1)); b.set(cx, y + 8, PAL.G1); b.set(cx, y + 9, PAL.N0);
+    tiny(b, name, x + 3, y + 2, PAL.P2);
+  }
   // his hand: the thumb over the strip (hover), or down on `super` (tap)
   if (st.thumb && st.thumb !== 'none') {
     const H = tapHandCaps({s: 9.5, thumb: st.thumb === 'tap' ? 'tap' : 'up', light: 'dark'});

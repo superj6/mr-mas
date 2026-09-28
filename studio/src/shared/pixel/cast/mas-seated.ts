@@ -33,6 +33,8 @@ export interface MasSeatedPose {
   blink: boolean;
   collars: 0 | 1 | 2 | 3;
   light: MasSeatedLight;
+  /** v3.1 (opt-in): the third collar in gold (cast/mas-collars.ts 'v31'), so the stack matches the v3.1 MCUs */
+  collarStyle?: 'v31';
 }
 export const MAS_SEATED_DEFAULT: MasSeatedPose = {arm: 'lap', head: 'host', mouth: 'rest', blink: false, collars: 3, light: 'stage'};
 
@@ -97,7 +99,7 @@ const fig = (p: MasSeatedPose): FigureDef => {
   if (p.mouth === 'smile') rows[12] = '..o122mmmm4m4o..';
   const hand = (x: number, y: number): Stamp => ({x: Math.round(x) - 1, y: Math.round(y) - 1, rows: ['.34.', '3445', '2344', '.22.'], pal: {'2': ['skin', 2], '3': ['skin', 3], '4': ['skin', 4], '5': ['skin', 5]}});
   const stamps: Stamp[] = [];
-  if (p.collars) stamps.push({x: 11 + 1, y: 15 + down, rows: COLLAR_ROWS[p.collars], pal: {r: ['coral', 2], R: ['coral', 4], g: ['polo', 2], G: ['polo', 3], c: ['cream', 3], C: ['cream', 2]}});
+  if (p.collars) stamps.push({x: 11 + 1, y: 15 + down, rows: COLLAR_ROWS[p.collars], pal: {r: ['coral', 2], R: ['coral', 4], g: ['polo', 2], G: ['polo', 3], c: [p.collarStyle === 'v31' ? 'gold' : 'cream', 3], C: [p.collarStyle === 'v31' ? 'gold' : 'cream', 2]}});
   stamps.push({x: 11, y: down, rows, pal: {
     o: ['skin', 0], '1': ['skin', 1], '2': ['skin', 2], '3': ['skin', 3], '4': ['skin', 4], '5': ['skin', 5],
     h: ['hair', 1], H: ['hair', 2], I: ['hair', 3], J: ['hair', 4], b: ['hair', 1], e: ['dark', 0], m: ['skin', 1], M: ['dark', 0],
@@ -126,6 +128,7 @@ const SLIT: Record<string, number[]> = {
   coral: [PAL.R0, PAL.R1, PAL.R2, PAL.R3, PAL.W6, PAL.W8],
   polo: [PAL.L0, PAL.L0, PAL.L1, PAL.L2, PAL.L3, PAL.L3],
   cream: [PAL.P0, PAL.P0, PAL.P1, PAL.P2, PAL.P2, PAL.P2],
+  gold: [PAL.W3, PAL.W4, PAL.W5, PAL.W6, PAL.W7, PAL.W7],
   glass: [PAL.G3, PAL.G4, PAL.G5, PAL.G6, PAL.P1, PAL.P2],
   water: [PAL.C3, PAL.C4, PAL.C5, PAL.C6, PAL.C7, PAL.C8],
   screen: [PAL.N0, PAL.C3, PAL.C5, PAL.C6, PAL.C7, PAL.C8],
@@ -141,7 +144,7 @@ const rig = (light: MasSeatedLight): LightRig => ({
       : {skin: PAL.K1, hair: PAL.C2, hood: PAL.C2, jeans: PAL.N4, shoe: PAL.G3},
   ramps: light === 'monitor' ? SMON : light === 'sil' ? SSIL : SLIT,
   groupBands: {torso: {key: 4, shadow: 3}, armN: {key: 2, shadow: 2}, armF: {key: 1, shadow: 2}, legN: {key: 2, shadow: 2}, legF: {key: 1, shadow: 2}},
-  noEdge: ['coral', 'polo', 'cream', 'glass', 'water', 'screen'],
+  noEdge: ['coral', 'polo', 'cream', 'gold', 'glass', 'water', 'screen'],
   keyGain: light === 'sil' ? () => 0 : (_x, y) => (y < 44 ? 1 : Math.max(0.3, 1 - (y - 44) / 30)),
 });
 export const masSeated = memo((p: MasSeatedPose) => renderFigure(fig(p), rig(p.light)));

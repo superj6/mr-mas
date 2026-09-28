@@ -38,6 +38,10 @@ import {drawMasStand, MAS_STAND_DEFAULT} from '../cast/mas-stand';
 import {putBustCut} from '../cast/civic-kit';
 import {drawToast, drawScanFan, ToastKind} from '../kits/orb-toast';
 import {drawEmitCover} from '../kits/emit-cover';
+import {faceKey} from '../kits/face-light';
+import {faceLightImg} from '../kits/face-light-img';
+/** the medium Mas's face in his tile (cast/mas-medium at DPLATE.mas): the rect the face light works inside */
+export const FACE_AT_MEDIUM = {x0: 22, y0: 2, x1: 62, y1: 44};
 import {drawPaperPlate} from '../kits/grey-lady';
 import {guestBadge} from '../kits/props';
 import type {Painter} from '../kits/mas-monitor';
@@ -124,6 +128,8 @@ export const drawLabelECU = (b: Buf, f: number, st: {hand?: 0 | 1 | 2} = {}) => 
   // the cyan circle mark and the maker's name, big, on the lid
   for (let j = -18; j <= 18; j++) for (let i = -18; i <= 18; i++) { const d = Math.hypot(i, j); if (d <= 18 && d >= 12) b.set(80 + i, 70 + j, d > 16 ? PAL.C3 : PAL.C5); }
   pt(b, 'COINWORLD', 58, 96, PAL.N3);
+  // v3.1 (the sender context): the maker's line under its name, as the box prints it
+  tiny(b, "PROOF YOU'RE HUMAN", 80 - (tinyWidth("PROOF YOU'RE HUMAN") >> 1), 108, PAL.G3);
   // the shipping label: a white sticker with its edge, two lines, a barcode
   const X = 150, Y = 44, W = 300, H = 104;
   rect(X + 3, Y + 3, W, H, b.ink(PAL.P0));
@@ -194,6 +200,9 @@ export interface DarkA3State {
   /** the scan fan from the Orb's lens: dir / half in degrees */
   scan?: {dir: number; half: number} | null;
   toasts?: Array<{s: string; k: number; kind?: ToastKind; x: number; y: number; anchor?: 'left' | 'right'}>;
+  /** v3.1 (mood §4 #4, opt-in): the face light, n ramp steps up on his face only (22.03: one step, keyed from the
+   *  monitor's side); undefined = as before */
+  faceLight?: number;
 }
 export const orbCentre = (at: NonNullable<DarkA3State['orb']>['at'], rise = 3): [number, number] => at === 'home' ? [ORB_HOME.x, ORB_HOME.y] : at === 'shoulder' ? DPLATE.orb : at === 'box' ? boxOrbAt(rise) : at;
 export const drawDarkA3 = (b: Buf, f: number, st: DarkA3State = {}): Mask | null => {
@@ -220,6 +229,7 @@ export const drawDarkA3 = (b: Buf, f: number, st: DarkA3State = {}): Mask | null
   if (st.mas !== null) {
     const [mx, my] = DPLATE.mas;
     MM.drawMasMedium(b, mx, my, {...MM.MAS_MEDIUM_DEFAULT, ...st.mas}, {desk});
+    if (st.faceLight) { const F = FACE_AT_MEDIUM; faceKey(b, mx + F.x0, my + F.y0, mx + F.x1, my + F.y1, st.faceLight, -1); }
   } else desk(b);
   // the Orb rising out of the box is in front of the desk's far edge: redraw its part above the box's rim
   if (st.orb && st.orb.at === 'box' && st.box) {
@@ -238,14 +248,15 @@ export const drawDarkA3 = (b: Buf, f: number, st: DarkA3State = {}): Mask | null
 };
 
 // ------------------------------------------------------------------ the scan, in close (18.04 / 18.05)
-export interface ScanMCUState { mas?: Partial<MasPortraitState>; fan?: {dir: number; half: number} | null; toast?: {s: string; k: number} | null; }
+export interface ScanMCUState { mas?: Partial<MasPortraitState>; fan?: {dir: number; half: number} | null; toast?: {s: string; k: number} | null; /** v3.1 opt-in: the face light (18.05: one step, keyed from the Orb's side) */ faceLight?: number; }
 export const drawScanMCU = (b: Buf, f: number, st: ScanMCUState = {}): Mask | null => {
   // the room soft behind him (the plate, three rungs down), his portrait left third, the fan from the right edge
   const bg = new Buf(480, 270, PAL.N0);
   drawDarkPlate(bg, f, {tally: 2}); drawDarkPlateDesk(bg, f, {tally: 2});
   for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) b.set(x, y, stepColor(bg.get(x, y), -3));
   vignette(b, 1, 0.6, 0.7, RH, RH);
-  putBustCut(b, masPortrait({...MAS_PORTRAIT_DEFAULT, ...st.mas}), 100, 22, RH);
+  const im = masPortrait({...MAS_PORTRAIT_DEFAULT, ...st.mas});
+  putBustCut(b, st.faceLight ? faceLightImg(im, st.faceLight, {key: [1, -0.2]}) : im, 100, 22, RH);
   let m: Mask | null = null;
   if (st.fan) m = drawScanFan(b, 478, 58, st.fan.dir, st.fan.half, {len: 520, strength: 2});
   if (st.toast) drawToast(b, 300, 40, st.toast.s, st.toast.k, {f});

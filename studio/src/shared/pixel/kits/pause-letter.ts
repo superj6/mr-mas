@@ -21,9 +21,11 @@ export const LETTER = {header: ['PAUSE GIANT AI', 'EXPERIMENTS'], kind: 'an open
 const RH = 203;
 /** the page: white, the header in two lines of the display face, one body line, then signature rows (a name in tiny
  *  caps and a scribble), the three names the scene needs among many unnamed ones */
-export const drawLetterPage = (b: Buf, x: number, y: number, w: number, h: number, st: {scroll?: number} = {}) => {
+export const drawLetterPage = (b: Buf, x: number, y: number, w: number, h: number, st: {scroll?: number; print?: boolean} = {}) => {
   rect(x, y, w, h, b.ink(PAL.P2));
-  rect(x, y, w, 9, b.ink(PAL.G5)); for (let i = 0; i < 3; i++) rect(x + 4 + i * 5, y + 3, 3, 3, b.ink(PAL.G6));
+  // v3.1 (opt-in, st.print: the page printed out, v31-12.03's desk): no browser strip, a thin shadow edge
+  if (st.print) { rect(x + w - 1, y, 1, h, b.ink(PAL.P1)); rect(x, y + h - 1, w, 1, b.ink(PAL.P1)); }
+  else { rect(x, y, w, 9, b.ink(PAL.G5)); for (let i = 0; i < 3; i++) rect(x + 4 + i * 5, y + 3, 3, 3, b.ink(PAL.G6)); }
   const big = w >= 200;
   let yy = y + 16 - (st.scroll ?? 0);
   if (big) {

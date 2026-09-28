@@ -58,7 +58,7 @@ export interface DealWideState {
   check?: 'jammed' | 'floor' | 'scuffed' | null;
   /** the pen clipped to it (until he pockets it in the freeze) */
   pen?: boolean;
-  mas?: (Partial<MasStandPose> & {at?: [number, number]; flip?: boolean; collars?: number}) | null;
+  mas?: (Partial<MasStandPose> & {at?: [number, number]; flip?: boolean; collars?: number; collarStyle?: 'v31'}) | null;
   tasya?: (Partial<TasyaRoomPose> & {at?: [number, number]; keys?: number; beige?: boolean; jangle?: 0 | 1}) | null;
   /** Gerg: at the door tugging the check's corner · walking · sitting on the check (open / shut) */
   gerg?: (Partial<GergPoseState> & {at?: [number, number]; walk?: boolean; flip?: boolean}) | null;
@@ -106,7 +106,7 @@ export const drawDealWide = (b: Buf, f: number, st: DealWideState = {}) => {
     cast.push([my, () => {
       const tmp = new Buf(480, RH, TRANS);
       drawMasStand(tmp, mx, my, {...MAS_STAND_DEFAULT, ...m}, {flip: m.flip});
-      drawCollarsStand(tmp, mx, my, m.collars ?? 2, {flip: m.flip});
+      drawCollarsStand(tmp, mx, my, m.collars ?? 2, {flip: m.flip, style: m.collarStyle});
       for (let i = 0; i < 480 * RH; i++) { const v = tmp.c[i]; if (v === TRANS) continue; b.c[i] = v; if (liveA) liveA[i] = 255; }
     }]);
   }
@@ -119,7 +119,7 @@ export const dealFreeze = (b: Buf, live: Mask) => applyPalette(b, DEAL_FREEZE, {
 // ------------------------------------------------------------------ the medium setups
 /** the lobby behind a medium setup: the wide (with the check) stepped soft and a rung darker, so the figures sit in
  *  front of it (the Act Four MCU grammar: a medium figure over the room plate reads as nearer the lens) */
-const softLobby = (b: Buf, f: number, st: DealWideState, pan = 0) => {
+export const softLobby = (b: Buf, f: number, st: DealWideState, pan = 0) => {
   const W = new Buf(480, 270, PAL.N0);
   drawDealWide(W, f, {...st, mas: null, tasya: null, gerg: st.gerg ?? null});
   // the pan (the camera turned toward the door, so it lands between the two of them): the plate shifts right by
@@ -136,6 +136,8 @@ export interface Deal2SState {
   mas?: Partial<MasMediumState>;
   tasya?: Partial<TasyaMediumState>;
   collars?: number;
+  /** v3.1: the collars' drawing (mas-collars.ts 'v31') */
+  collarStyle?: 'v31';
   /** Gerg behind them at the door, tugging the check's corner (room scale: he's further back) */
   gerg?: boolean;
   tv?: TvState;
@@ -145,12 +147,12 @@ export const drawDeal2S = (b: Buf, f: number, st: Deal2SState = {}) => {
   // Mas at frame left, turned to Tasya (flipped), chest-up (the frame's bottom cuts his waist)
   const mx = 6, my = 96;
   drawMasMedium(b, mx, my, {...MAS_MEDIUM_DEFAULT, light: 'warm', head: '34', look: 1, arm: 'down', ...st.mas}, {flip: true});
-  drawCollarsMedium(b, mx, my, st.collars ?? 2, {flip: true});
+  drawCollarsMedium(b, mx, my, st.collars ?? 2, {flip: true, style: st.collarStyle});
   // Tasya at frame right, turned to Mas (he's authored facing left), his ring at his belt
   drawTasyaMedium(b, 380, 96, {arm: 'clasp', ...st.tasya});
 };
 
-export interface DealMcuState { mas?: Partial<MasPortraitState>; collars?: number; collarPop?: number; check?: DealWideState['check'] }
+export interface DealMcuState { mas?: Partial<MasPortraitState>; collars?: number; collarPop?: number; check?: DealWideState['check']; /** v3.1: 'v31' collars (the pop reads as a new collar: taller, gold) */ collarStyle?: 'v31' }
 /** [MCU] Mas in the lobby: the pop (SFX), a third collar surfaces, one drawing, a 1 px hop (collarPop 0-1) */
 export const drawDealMcuMas = (b: Buf, f: number, st: DealMcuState = {}) => {
   softLobby(b, f, {check: st.check ?? 'floor'});
@@ -158,7 +160,7 @@ export const drawDealMcuMas = (b: Buf, f: number, st: DealMcuState = {}) => {
   const s: MasPortraitState = {...MAS_PORTRAIT_DEFAULT, light: 'warm', look: 1, ...st.mas};
   const x = 100, y = 34;
   putBust(b, masPortrait(s), x, y);
-  drawCollarsPortrait(b, x, y, st.collars ?? 3, {head: s.head ?? '34', light: 'warm', pop: st.collarPop});
+  drawCollarsPortrait(b, x, y, st.collars ?? 3, {head: s.head ?? '34', light: 'warm', pop: st.collarPop, style: st.collarStyle});
 };
 
 // ------------------------------------------------------------------ 9.13: Gerg closes his laptop (the match cut's first half)
@@ -172,6 +174,7 @@ export interface DealGerg2SState {
   mas?: Partial<MasMediumState>;
   tv?: TvState;
   collars?: number;
+  collarStyle?: 'v31';
 }
 /** draw his laptop's lid (its back toward us, the screen's green on its edge while it's open) at the match position */
 export const drawMatchLid = (b: Buf, lid: 0 | 1 | 2) => {
@@ -190,7 +193,7 @@ export const drawDealGerg2S = (b: Buf, f: number, st: DealGerg2SState = {}) => {
   drawMasMedium(b, mx, my, {...MAS_MEDIUM_DEFAULT, light: 'warm', head: '34', look: 1, arm: 'rest', ...st.mas}, {flip: true, desk: (bb) => {
     for (let y = my + MAS_M_DESK; y < RH; y++) for (let x = 0; x < 190; x++) bb.set(x, y, y === my + MAS_M_DESK ? PAL.G5 : y < my + MAS_M_DESK + 3 ? PAL.G4 : bayer(x, y) < 0.3 ? PAL.N3 : PAL.N2);
   }});
-  drawCollarsMedium(b, mx, my, st.collars ?? 3, {flip: true});
+  drawCollarsMedium(b, mx, my, st.collars ?? 3, {flip: true, style: st.collarStyle});
   // his glass on the desk by his hand: the one flat water line
   const gx = 138, gy = my + MAS_M_DESK - 14;
   for (let j = 0; j < 14; j++) { b.set(gx, gy + j, PAL.G6); b.set(gx + 6, gy + j, PAL.G4); for (let i = 1; i < 6; i++) b.set(gx + i, gy + j, j > 4 ? (i === 1 ? PAL.C7 : PAL.C6) : PAL.G5); }

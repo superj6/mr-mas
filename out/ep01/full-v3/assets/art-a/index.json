@@ -1088,5 +1088,505 @@
   "standin": "",
   "native": "native/ROOM-BULLPEN-LAUNCH--glass-blink.png",
   "full": "full/ROOM-BULLPEN-LAUNCH--glass-blink.png"
+ },
+ {
+  "key": "CAST-SYDNEY@states",
+  "id": "CAST-SYDNEY",
+  "state": "states",
+  "module": "shared/pixel/cast/sydney.ts drawSydney + drawEggTimer",
+  "note": "sheet: ChatGTP (for reference) · Sydney dots · talk · 😊 smile · blink · blank · bright (new) · with the timer (5) · ding · room size (dots, smile, timer)",
+  "standin": "",
+  "native": "native/CAST-SYDNEY--states.png",
+  "full": "full/CAST-SYDNEY--states.png"
+ },
+ {
+  "key": "UI-TV@v31-scr-gnib-sydney",
+  "id": "UI-TV",
+  "state": "v31-scr-gnib-sydney",
+  "module": "shared/pixel/kits/tv-news.ts drawTvScreen {bubble: sydney}",
+  "note": "9.10 / 9.13 (v3.1) GNIB's box with Sydney in it (ChatGTP's face in GNIB's colours, the 2022 stamp); 9.13 she blinks",
+  "standin": "",
+  "native": "native/UI-TV--v31-scr-gnib-sydney.png",
+  "full": "full/UI-TV--v31-scr-gnib-sydney.png"
+ },
+ {
+  "key": "UI-TV@v31-scr-ticker-date",
+  "id": "UI-TV",
+  "state": "v31-scr-ticker-date",
+  "module": "shared/pixel/kits/tv-news.ts drawTvScreen {date}",
+  "note": "9.12 (draft 7) the ticker carries its own date: FEB 8 · ELGOOG'S DRAB DEMO GETS A TELESCOPE FACT WRONG",
+  "standin": "",
+  "native": "native/UI-TV--v31-scr-ticker-date.png",
+  "full": "full/UI-TV--v31-scr-ticker-date.png"
+ },
+ {
+  "key": "SET-SYDNEY@scr-exit-1",
+  "id": "SET-SYDNEY",
+  "state": "scr-exit-1",
+  "module": "shared/pixel/rooms/lobby-sydney.ts drawSydneyTvExit",
+  "note": "v31-10.01 [SCR] she slips out of GNIB's box and off the screen (held step 1 of 3; the box empty behind her)",
+  "standin": "",
+  "native": "native/SET-SYDNEY--scr-exit-1.png",
+  "full": "full/SET-SYDNEY--scr-exit-1.png"
+ },
+ {
+  "key": "SET-SYDNEY@scr-exit-2",
+  "id": "SET-SYDNEY",
+  "state": "scr-exit-2",
+  "module": "shared/pixel/rooms/lobby-sydney.ts drawSydneyTvExit",
+  "note": "v31-10.01 [SCR] she slips out of GNIB's box and off the screen (held step 2 of 3; the box empty behind her)",
+  "standin": "",
+  "native": "native/SET-SYDNEY--scr-exit-2.png",
+  "full": "full/SET-SYDNEY--scr-exit-2.png"
+ },
+ {
+  "key": "SET-SYDNEY@scr-exit-3",
+  "id": "SET-SYDNEY",
+  "state": "scr-exit-3",
+  "module": "shared/pixel/rooms/lobby-sydney.ts drawSydneyTvExit",
+  "note": "v31-10.01 [SCR] she slips out of GNIB's box and off the screen (held step 3 of 3; the box empty behind her)",
+  "standin": "",
+  "native": "native/SET-SYDNEY--scr-exit-3.png",
+  "full": "full/SET-SYDNEY--scr-exit-3.png"
+ },
+ {
+  "key": "SET-SYDNEY@wide-drift",
+  "id": "SET-SYDNEY",
+  "state": "wide-drift",
+  "module": "shared/pixel/rooms/lobby-sydney.ts drawSydneyWide + sydneyDriftAt",
+  "note": "v31-10.01 [W] the drift: out of the TV, down across the lobby (t 0.45)",
+  "standin": "",
+  "native": "native/SET-SYDNEY--wide-drift.png",
+  "full": "full/SET-SYDNEY--wide-drift.png"
+ },
+ {
+  "key": "SET-SYDNEY@wide-parked",
+  "id": "SET-SYDNEY",
+  "state": "wide-parked",
+  "module": "shared/pixel/rooms/lobby-sydney.ts drawSydneyWide",
+  "note": "v31-10.01 end [W] parked a pixel too close to Mas",
+  "standin": "",
+  "native": "native/SET-SYDNEY--wide-parked.png",
+  "full": "full/SET-SYDNEY--wide-parked.png"
+ },
+ {
+  "key": "SET-SYDNEY@2s-mas-hi",
+  "id": "SET-SYDNEY",
+  "state": "2s-mas-hi",
+  "module": "shared/pixel/rooms/lobby-sydney.ts drawSydney2SMas",
+  "note": "v31-10.02 [2S] \"Hi! Isn't 2022 a lovely year? 😊\" Mas at the desk with his glass; Sydney a pixel off his nose (her 😊)",
+  "standin": "",
+  "native": "native/SET-SYDNEY--2s-mas-hi.png",
+  "full": "full/SET-SYDNEY--2s-mas-hi.png"
+ },
+ {
+  "key": "SET-SYDNEY@2s-mas-scold",
+  "id": "SET-SYDNEY",
+  "state": "2s-mas-scold",
+  "module": "shared/pixel/rooms/lobby-sydney.ts drawSydney2SMas",
+  "note": "v31-10.02 [2S] \"You have not been a good user…\" the dots light in turn; the smile never moves; Mas, gracious",
+  "standin": "",
+  "native": "native/SET-SYDNEY--2s-mas-scold.png",
+  "full": "full/SET-SYDNEY--2s-mas-scold.png"
+ },
+ {
+  "key": "SET-SYDNEY@2s-tasya-clip",
+  "id": "SET-SYDNEY",
+  "state": "2s-tasya-clip",
+  "module": "shared/pixel/rooms/lobby-sydney.ts drawSydney2STasya + cast/tasya-medium.ts clip",
+  "note": "v31-10.03 [2S] \"House rules, Sydney.\" Tasya clips the egg timer to her chain, smile unbroken",
+  "standin": "",
+  "native": "native/SET-SYDNEY--2s-tasya-clip.png",
+  "full": "full/SET-SYDNEY--2s-tasya-clip.png"
+ },
+ {
+  "key": "SET-SYDNEY@2s-tasya-hung",
+  "id": "SET-SYDNEY",
+  "state": "2s-tasya-hung",
+  "module": "shared/pixel/rooms/lobby-sydney.ts drawSydney2STasya",
+  "note": "v31-10.03 end [2S] the timer hung on her chain, its face 5",
+  "standin": "",
+  "native": "native/SET-SYDNEY--2s-tasya-hung.png",
+  "full": "full/SET-SYDNEY--2s-tasya-hung.png"
+ },
+ {
+  "key": "SET-SYDNEY@wide-ding-blank",
+  "id": "SET-SYDNEY",
+  "state": "wide-ding-blank",
+  "module": "shared/pixel/rooms/lobby-sydney.ts drawSydneyWide",
+  "note": "v31-10.04 [W] the timer dings (0, the shake), the bubble blinks blank",
+  "standin": "",
+  "native": "native/SET-SYDNEY--wide-ding-blank.png",
+  "full": "full/SET-SYDNEY--wide-ding-blank.png"
+ },
+ {
+  "key": "SET-SYDNEY@2s-gerg-new",
+  "id": "SET-SYDNEY",
+  "state": "2s-gerg-new",
+  "module": "shared/pixel/rooms/lobby-sydney.ts drawSydneyGerg2S",
+  "note": "v31-10.04 [2S] brand new, turned to Mas: \"Hi!\" (brighter, the timer back at 5); Gerg looks down at his laptop",
+  "standin": "",
+  "native": "native/SET-SYDNEY--2s-gerg-new.png",
+  "full": "full/SET-SYDNEY--2s-gerg-new.png"
+ },
+ {
+  "key": "SET-SYDNEY@2s-gerg-shut",
+  "id": "SET-SYDNEY",
+  "state": "2s-gerg-shut",
+  "module": "shared/pixel/rooms/lobby-sydney.ts drawSydneyGerg2S (LOBBY_LID)",
+  "note": "v31-10.04 end: HOLD on the closed lid at LOBBY_LID (the match cut's first half)",
+  "standin": "",
+  "native": "native/SET-SYDNEY--2s-gerg-shut.png",
+  "full": "full/SET-SYDNEY--2s-gerg-shut.png"
+ },
+ {
+  "key": "INSERT-GERG-LAPTOP@lobby-chat",
+  "id": "INSERT-GERG-LAPTOP",
+  "state": "lobby-chat",
+  "module": "shared/pixel/kits/gerg-laptop.ts drawGergLaptopPOV",
+  "note": "v31-10.04 over his shoulder in the lobby: the same two-dot face in a chat window (ChatGTP, NopeAI's own colours), his hands on the keys",
+  "standin": "",
+  "native": "native/INSERT-GERG-LAPTOP--lobby-chat.png",
+  "full": "full/INSERT-GERG-LAPTOP--lobby-chat.png"
+ },
+ {
+  "key": "INSERT-GERG-LAPTOP@lobby-half",
+  "id": "INSERT-GERG-LAPTOP",
+  "state": "lobby-half",
+  "module": "shared/pixel/kits/gerg-laptop.ts drawGergLaptopPOV",
+  "note": "v31-10.04 he closes it: the lid half down (held), its glow on the keys",
+  "standin": "",
+  "native": "native/INSERT-GERG-LAPTOP--lobby-half.png",
+  "full": "full/INSERT-GERG-LAPTOP--lobby-half.png"
+ },
+ {
+  "key": "INSERT-GERG-LAPTOP@lobby-shut",
+  "id": "INSERT-GERG-LAPTOP",
+  "state": "lobby-shut",
+  "module": "shared/pixel/kits/gerg-laptop.ts drawGergLaptopPOV (GERG_LAPTOP.shut)",
+  "note": "v31-10.04 HOLD on the closed lid (lobby): the slab at GERG_LAPTOP.shut",
+  "standin": "",
+  "native": "native/INSERT-GERG-LAPTOP--lobby-shut.png",
+  "full": "full/INSERT-GERG-LAPTOP--lobby-shut.png"
+ },
+ {
+  "key": "INSERT-GERG-LAPTOP@bullpen-shut",
+  "id": "INSERT-GERG-LAPTOP",
+  "state": "bullpen-shut",
+  "module": "shared/pixel/kits/gerg-laptop.ts drawGergLaptopPOV (GERG_LAPTOP.shut)",
+  "note": "11.01 MATCH: the same slab in the same place, on the demo desk (March)",
+  "standin": "",
+  "native": "native/INSERT-GERG-LAPTOP--bullpen-shut.png",
+  "full": "full/INSERT-GERG-LAPTOP--bullpen-shut.png"
+ },
+ {
+  "key": "INSERT-GERG-LAPTOP@bullpen-thread",
+  "id": "INSERT-GERG-LAPTOP",
+  "state": "bullpen-thread",
+  "module": "shared/pixel/kits/gerg-laptop.ts drawGergLaptopPOV + drawAtemThread",
+  "note": "11.01 it opens on a message-board thread: the tipped crate ATEM · MODEL WEIGHTS · RESEARCHERS ONLY, files spilling, 03/03/23",
+  "standin": "",
+  "native": "native/INSERT-GERG-LAPTOP--bullpen-thread.png",
+  "full": "full/INSERT-GERG-LAPTOP--bullpen-thread.png"
+ },
+ {
+  "key": "KIT-ATEM-THREAD@full",
+  "id": "KIT-ATEM-THREAD",
+  "state": "full",
+  "module": "shared/pixel/kits/gerg-laptop.ts drawAtemThread",
+  "note": "11.01 the thread at full frame (for a push to the screen, or an insert): the post, the crate, replies arriving",
+  "standin": "",
+  "native": "native/KIT-ATEM-THREAD--full.png",
+  "full": "full/KIT-ATEM-THREAD--full.png"
+ },
+ {
+  "key": "SPLIT-DUEL@v31-arrival-gerg-line",
+  "id": "SPLIT-DUEL",
+  "state": "v31-arrival-gerg-line",
+  "module": "shared/pixel/rooms/duel-split.ts drawDemoArrival",
+  "note": "11.01 (draft 7) the lid open at LOBBY_LID, Gerg on camera for his line (\"Somebody leaked Atem's model.\"), Mas at his end desk behind",
+  "standin": "",
+  "native": "native/SPLIT-DUEL--v31-arrival-gerg-line.png",
+  "full": "full/SPLIT-DUEL--v31-arrival-gerg-line.png"
+ },
+ {
+  "key": "SPLIT-DUEL@v31-p1-clean",
+  "id": "SPLIT-DUEL",
+  "state": "v31-p1-clean",
+  "module": "shared/pixel/rooms/duel-split.ts drawDuelSplit",
+  "note": "11.03 (shot note) the right pane held clean for Mas's V.O.: CLOD unlit, waiting; Mario writing, no scroll yet; the left pane quiet",
+  "standin": "",
+  "native": "native/SPLIT-DUEL--v31-p1-clean.png",
+  "full": "full/SPLIT-DUEL--v31-p1-clean.png"
+ },
+ {
+  "key": "SPLIT-DUEL@v31-p2-no-caption",
+  "id": "SPLIT-DUEL",
+  "state": "v31-p2-no-caption",
+  "module": "shared/pixel/rooms/duel-split.ts drawDuelSplit {left.caption: false}",
+  "note": "11.04 (draft 7) the napkin becomes a website with no caption; HOLD on Mario writing the addendum",
+  "standin": "",
+  "native": "native/SPLIT-DUEL--v31-p2-no-caption.png",
+  "full": "full/SPLIT-DUEL--v31-p2-no-caption.png"
+ },
+ {
+  "key": "INSERT-EMIT-OPED@drop-air",
+  "id": "INSERT-EMIT-OPED",
+  "state": "drop-air",
+  "module": "shared/pixel/kits/emit-oped.ts drawEmitDrop",
+  "note": "v31-12.03 [HIGH] THUD (its first frame): the magazine a hand's height over its shadow, the printed letter's header past its edge, his glass",
+  "standin": "",
+  "native": "native/INSERT-EMIT-OPED--drop-air.png",
+  "full": "full/INSERT-EMIT-OPED--drop-air.png"
+ },
+ {
+  "key": "INSERT-EMIT-OPED@drop-shake",
+  "id": "INSERT-EMIT-OPED",
+  "state": "drop-shake",
+  "module": "shared/pixel/kits/emit-oped.ts drawEmitDrop",
+  "note": "v31-12.03 landed: the desk 2 px down (held); the glass's water line has not moved",
+  "standin": "",
+  "native": "native/INSERT-EMIT-OPED--drop-shake.png",
+  "full": "full/INSERT-EMIT-OPED--drop-shake.png"
+ },
+ {
+  "key": "INSERT-EMIT-OPED@held-to-read",
+  "id": "INSERT-EMIT-OPED",
+  "state": "held-to-read",
+  "module": "shared/pixel/kits/emit-oped.ts drawEmitDrop",
+  "note": "v31-12.03 held to read: EMIT, open at the op-ed: \"Pausing AI Developments Isn't Enough. We Need to Shut It All Down.\" (the plate REZEILE is the pipeline's)",
+  "standin": "",
+  "native": "native/INSERT-EMIT-OPED--held-to-read.png",
+  "full": "full/INSERT-EMIT-OPED--held-to-read.png"
+ },
+ {
+  "key": "INSERT-EMIT-OPED@byline-printed",
+  "id": "INSERT-EMIT-OPED",
+  "state": "byline-printed",
+  "module": "shared/pixel/kits/emit-oped.ts drawEmitSpread {byline}",
+  "note": "option: the byline printed on the page (if the shot pass drops the REZEILE plate), and the phone-size page (12.05)",
+  "standin": "",
+  "native": "native/INSERT-EMIT-OPED--byline-printed.png",
+  "full": "full/INSERT-EMIT-OPED--byline-printed.png"
+ },
+ {
+  "key": "INSERT-PLEASE@v31-high-between",
+  "id": "INSERT-PLEASE",
+  "state": "v31-high-between",
+  "module": "shared/pixel/kits/please-sheet.ts drawPleaseHigh {desk: v31}",
+  "note": "12.04 (draft 7) he writes PLEASE between the two asks: EMIT and the printed letter beside the sheet",
+  "standin": "",
+  "native": "native/INSERT-PLEASE--v31-high-between.png",
+  "full": "full/INSERT-PLEASE--v31-high-between.png"
+ },
+ {
+  "key": "INSERT-PLEASE@v31-ecu-reg",
+  "id": "INSERT-PLEASE",
+  "state": "v31-ecu-reg",
+  "module": "shared/pixel/kits/please-sheet.ts drawPleaseECU {reg}",
+  "note": "12.06 (draft 7) PLEASE / REG: the line below begins REG, the pen on its last stroke",
+  "standin": "",
+  "native": "native/INSERT-PLEASE--v31-ecu-reg.png",
+  "full": "full/INSERT-PLEASE--v31-ecu-reg.png"
+ },
+ {
+  "key": "INSERT-PLEASE@v31-ecu-reg-lift",
+  "id": "INSERT-PLEASE",
+  "state": "v31-ecu-reg-lift",
+  "module": "shared/pixel/kits/please-sheet.ts drawPleaseECU {reg, lift}",
+  "note": "12.06 the pen lifts mid-word (THREAT on the lift): PLEASE / REG",
+  "standin": "",
+  "native": "native/INSERT-PLEASE--v31-ecu-reg-lift.png",
+  "full": "full/INSERT-PLEASE--v31-ecu-reg-lift.png"
+ },
+ {
+  "key": "ROOM-BULLPEN-LAUNCH@v31-wide-warm",
+  "id": "ROOM-BULLPEN-LAUNCH",
+  "state": "v31-wide-warm",
+  "module": "shared/pixel/rooms/bullpen-launch.ts drawLaunchWide {warm: 1, life}",
+  "note": "5.02 (v3.1) warmed a step: the hall's tungsten further in, his desk lamp, a far lamp left on; life: a passer-by in the hall, a far screensaver, a car on the bridge",
+  "standin": "",
+  "native": "native/ROOM-BULLPEN-LAUNCH--v31-wide-warm.png",
+  "full": "full/ROOM-BULLPEN-LAUNCH--v31-wide-warm.png"
+ },
+ {
+  "key": "ROOM-BULLPEN-LAUNCH@v31-2s-warm-underline",
+  "id": "ROOM-BULLPEN-LAUNCH",
+  "state": "v31-2s-warm-underline",
+  "module": "shared/pixel/rooms/bullpen-launch.ts drawLaunch2S {warm, rima: underline} + cast/rima-board.ts",
+  "note": "5.07 (v3.1, the board seed) behind Gerg, Rima draws the third underline (wet 0.6); the desk lamp warms Mas; Gerg's green a rung up",
+  "standin": "",
+  "native": "native/ROOM-BULLPEN-LAUNCH--v31-2s-warm-underline.png",
+  "full": "full/ROOM-BULLPEN-LAUNCH--v31-2s-warm-underline.png"
+ },
+ {
+  "key": "ROOM-BULLPEN-LAUNCH@v31-2s-cap",
+  "id": "ROOM-BULLPEN-LAUNCH",
+  "state": "v31-2s-cap",
+  "module": "shared/pixel/rooms/bullpen-launch.ts drawLaunch2S {rima: cap0}",
+  "note": "5.07 she caps the marker, not turning round: \"Did anyone tell the rest of the board?\"",
+  "standin": "",
+  "native": "native/ROOM-BULLPEN-LAUNCH--v31-2s-cap.png",
+  "full": "full/ROOM-BULLPEN-LAUNCH--v31-2s-cap.png"
+ },
+ {
+  "key": "ROOM-BULLPEN-LAUNCH@v31-2s-capped",
+  "id": "ROOM-BULLPEN-LAUNCH",
+  "state": "v31-2s-capped",
+  "module": "shared/pixel/rooms/bullpen-launch.ts drawLaunch2S {rima: cap1}",
+  "note": "5.07 \"It's a research preview.\" capped; nobody else answers",
+  "standin": "",
+  "native": "native/ROOM-BULLPEN-LAUNCH--v31-2s-capped.png",
+  "full": "full/ROOM-BULLPEN-LAUNCH--v31-2s-capped.png"
+ },
+ {
+  "key": "ROOM-BULLPEN-LAUNCH@v31-ots-rima-warm",
+  "id": "ROOM-BULLPEN-LAUNCH",
+  "state": "v31-ots-rima-warm",
+  "module": "shared/pixel/rooms/bullpen-launch.ts drawLaunchOTSRima {warm}",
+  "note": "5.04 (v3.1) she stands at his desk, in his lamp's light: a key on her face (face only); the room behind a step warmer",
+  "standin": "",
+  "native": "native/ROOM-BULLPEN-LAUNCH--v31-ots-rima-warm.png",
+  "full": "full/ROOM-BULLPEN-LAUNCH--v31-ots-rima-warm.png"
+ },
+ {
+  "key": "ROOM-BULLPEN-LAUNCH@v31-glass-facelight",
+  "id": "ROOM-BULLPEN-LAUNCH",
+  "state": "v31-glass-facelight",
+  "module": "shared/pixel/rooms/bullpen-launch.ts drawLaunchGlass {faceLight, warm}",
+  "note": "5.05 (mood §4 #4) Alyi in the glass, a face light two steps up (face only; one step barely shows on the glass); the lamp reflected low in the glass",
+  "standin": "",
+  "native": "native/ROOM-BULLPEN-LAUNCH--v31-glass-facelight.png",
+  "full": "full/ROOM-BULLPEN-LAUNCH--v31-glass-facelight.png"
+ },
+ {
+  "key": "ROOM-BULLPEN-LAUNCH@v31-glass-blink-lit",
+  "id": "ROOM-BULLPEN-LAUNCH",
+  "state": "v31-glass-blink-lit",
+  "module": "shared/pixel/rooms/bullpen-launch.ts drawLaunchGlass {faceLight}",
+  "note": "v3-5.06b the same setup held, the slow blink, the face light kept",
+  "standin": "",
+  "native": "native/ROOM-BULLPEN-LAUNCH--v31-glass-blink-lit.png",
+  "full": "full/ROOM-BULLPEN-LAUNCH--v31-glass-blink-lit.png"
+ },
+ {
+  "key": "ROOM-BULLPEN-LAUNCH@v31-glass-rack",
+  "id": "ROOM-BULLPEN-LAUNCH",
+  "state": "v31-glass-rack",
+  "module": "shared/pixel/rooms/bullpen-launch.ts drawLaunchGlass {rack: glass}",
+  "note": "5.09 (shot note) racked to the glass on his first word: Alyi's face lit two steps, Rima soft, Mas soft fg",
+  "standin": "",
+  "native": "native/ROOM-BULLPEN-LAUNCH--v31-glass-rack.png",
+  "full": "full/ROOM-BULLPEN-LAUNCH--v31-glass-rack.png"
+ },
+ {
+  "key": "ROOM-BULLPEN-LAUNCH@v31-glass-emit-phone",
+  "id": "ROOM-BULLPEN-LAUNCH",
+  "state": "v31-glass-emit-phone",
+  "module": "shared/pixel/rooms/bullpen-launch.ts drawLaunchGlass {alyi: phone, phonePage: emit}",
+  "note": "12.05 (draft 7) Alyi's reflection reads the same EMIT page on his phone; Mas bent over his sheet; the face light one step",
+  "standin": "",
+  "native": "native/ROOM-BULLPEN-LAUNCH--v31-glass-emit-phone.png",
+  "full": "full/ROOM-BULLPEN-LAUNCH--v31-glass-emit-phone.png"
+ },
+ {
+  "key": "ROOM-BULLPEN-LAUNCH@v31-glass-close-emit",
+  "id": "ROOM-BULLPEN-LAUNCH",
+  "state": "v31-glass-close-emit",
+  "module": "shared/pixel/rooms/bullpen-launch.ts drawLaunchGlass {alyi: phone, phonePage: emit}",
+  "note": "12.05 alternative: the close glass alone, EMIT on his phone",
+  "standin": "",
+  "native": "native/ROOM-BULLPEN-LAUNCH--v31-glass-close-emit.png",
+  "full": "full/ROOM-BULLPEN-LAUNCH--v31-glass-close-emit.png"
+ },
+ {
+  "key": "ROOM-BULLPEN-LAUNCH@v31-mcu-rima-warm",
+  "id": "ROOM-BULLPEN-LAUNCH",
+  "state": "v31-mcu-rima-warm",
+  "module": "shared/pixel/rooms/bullpen-launch.ts drawLaunchMcuRima {warm}",
+  "note": "5.06 (v3.1) Rima waiting, the lamp's key on her face",
+  "standin": "",
+  "native": "native/ROOM-BULLPEN-LAUNCH--v31-mcu-rima-warm.png",
+  "full": "full/ROOM-BULLPEN-LAUNCH--v31-mcu-rima-warm.png"
+ },
+ {
+  "key": "ROOM-BULLPEN-LAUNCH@v31-mcu-mas-warm",
+  "id": "ROOM-BULLPEN-LAUNCH",
+  "state": "v31-mcu-mas-warm",
+  "module": "shared/pixel/rooms/bullpen-launch.ts drawLaunchMcuMas {warm}",
+  "note": "5.11 (v3.1) lit from below by the chat, and the lamp's warm rim down his left side",
+  "standin": "",
+  "native": "native/ROOM-BULLPEN-LAUNCH--v31-mcu-mas-warm.png",
+  "full": "full/ROOM-BULLPEN-LAUNCH--v31-mcu-mas-warm.png"
+ },
+ {
+  "key": "ROOM-BULLPEN-LAUNCH@v31-ots-laptop-warm",
+  "id": "ROOM-BULLPEN-LAUNCH",
+  "state": "v31-ots-laptop-warm",
+  "module": "shared/pixel/rooms/bullpen-launch.ts drawLaunchOTSLaptop {warm}",
+  "note": "5.10 (v3.1) the room behind the laptop a step warmer",
+  "standin": "",
+  "native": "native/ROOM-BULLPEN-LAUNCH--v31-ots-laptop-warm.png",
+  "full": "full/ROOM-BULLPEN-LAUNCH--v31-ots-laptop-warm.png"
+ },
+ {
+  "key": "CAST-MAS-TEAR@v31-catch",
+  "id": "CAST-MAS-TEAR",
+  "state": "v31-catch",
+  "module": "shared/pixel/rooms/bullpen-launch.ts drawLaunchMcuPF {tearCatch}",
+  "note": "7.01 (shot note) \"Is that a tear?\": the tear catches the light, one bright pixel",
+  "standin": "",
+  "native": "native/CAST-MAS-TEAR--v31-catch.png",
+  "full": "full/CAST-MAS-TEAR--v31-catch.png"
+ },
+ {
+  "key": "CAST-RIMA-BOARD@poses",
+  "id": "CAST-RIMA-BOARD",
+  "state": "poses",
+  "module": "shared/pixel/cast/rima-board.ts drawRimaBoard",
+  "note": "her back at the board (panorama scale): write · underline (reach 0 / 1) · cap0 · cap1 · lower",
+  "standin": "",
+  "native": "native/CAST-RIMA-BOARD--poses.png",
+  "full": "full/CAST-RIMA-BOARD--poses.png"
+ },
+ {
+  "key": "PROP-COLLARS@v31-scales",
+  "id": "PROP-COLLARS",
+  "state": "v31-scales",
+  "module": "shared/pixel/cast/mas-collars.ts {style: v31}",
+  "note": "v3.1 collars: taller points up the neck, the third in gold (the cream read as the hoodie's trim): portrait 1/2/3 (the pop's hop), medium 3, room 3",
+  "standin": "",
+  "native": "native/PROP-COLLARS--v31-scales.png",
+  "full": "full/PROP-COLLARS--v31-scales.png"
+ },
+ {
+  "key": "ROOM-LOBBY-DEAL@v31-mcu-collar-pop",
+  "id": "ROOM-LOBBY-DEAL",
+  "state": "v31-mcu-collar-pop",
+  "module": "shared/pixel/rooms/lobby-deal.ts drawDealMcuMas {collarStyle: v31}",
+  "note": "9.08 (shot note) the pop reads as a new collar surfacing: the gold one, standing up the neck, its 1-px hop",
+  "standin": "",
+  "native": "native/ROOM-LOBBY-DEAL--v31-mcu-collar-pop.png",
+  "full": "full/ROOM-LOBBY-DEAL--v31-mcu-collar-pop.png"
+ },
+ {
+  "key": "ROOM-APEC@v31-mcu-collars",
+  "id": "ROOM-APEC",
+  "state": "v31-mcu-collars",
+  "module": "shared/pixel/rooms/apec-stage.ts drawApecMCU {collarStyle: v31}",
+  "note": "cold open (v3.1) the same three collars as 9.08's pop: coral, green, gold",
+  "standin": "",
+  "native": "native/ROOM-APEC--v31-mcu-collars.png",
+  "full": "full/ROOM-APEC--v31-mcu-collars.png"
+ },
+ {
+  "key": "ROOM-APEC@v31-wide-collars",
+  "id": "ROOM-APEC",
+  "state": "v31-wide-collars",
+  "module": "shared/pixel/rooms/apec-stage.ts drawApecWide + cast/mas-seated.ts {collarStyle: v31}",
+  "note": "cold open wide (v3.1) seated Mas with the gold third collar (room scale)",
+  "standin": "",
+  "native": "native/ROOM-APEC--v31-wide-collars.png",
+  "full": "full/ROOM-APEC--v31-wide-collars.png"
  }
 ]
