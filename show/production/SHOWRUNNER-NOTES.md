@@ -24,7 +24,13 @@
    - **Also:**
      - "i also liked the previous clarification [that mario] used to be at [nopeai]" (v3.1's "mario used to sit where gerg sits. he left to build a careful one."). Bring it back.
      - Deepfakes: "why does the senate have a deepfake along with biden". Keep one.
-     - The tag's duck: make it land (option 1).
+     - The tag's duck: **cut** ("actually i changed my mind, the duck should just be cut").
+   - **The mastermind (same day):** "we should be adding some amount of mas explaining/hinting at how he had been hoping to get to this point, how he'd been behind the scenes making it lead up to this. we want mas to look like the mastermind who has higher foresite and planning than other usually. in later episodes dario and a few other main leaders should also show similar scheming, the key people should look like they know and have some ability to move things more than it seems"
+     - **Mas:**
+       - His V.O. hints at a long game, where each move sets up the next.
+       - On his return he lets us see he'd built a position nobody could run the company without. He couldn't stop the vote, but his foresight is why he's back.
+       - He's a mastermind **by foresight and arrangement**, never by a claimed secret act at a contested moment. No line says he organized the staff letter.
+     - **Season:** Mario and the other key leaders (Tasya, Nole and others) scheme too, and seem to move things more than it appears. They should read as players, not bystanders to the news.
      - "in the intro mas's voice is not replaced": the EL film's intro still plays the Kokoro Mas.
 00. **Nuance, and the spine (2026-09-28):** "more generally, do a pass and make sure no previous advice was taken too extreme. it feels like we're close to what we want to see, but we keep swinging around what is the correct nuance. however mas's lack of agency is very apparent in [v3.1] and makes it feel like watching a random sequence of events then about mr mas's rise to power"
    - **Apply each note proportionately.** A note usually names a symptom in one place. Fix that, then check the scope before any broad change. The balanced target for every dimension we've swung on is in [calibration](../bible/calibration.md) (being written); it governs over any single older note.

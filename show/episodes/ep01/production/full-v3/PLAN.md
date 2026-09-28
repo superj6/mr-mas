@@ -288,6 +288,15 @@ out/ep01/full-v3/                         the films and mixes (git-ignored)
 - Keep the Senate's cloned voice (his own hearing's opener, "That voice was not mine.").
 - Cut the May 12 altered anchor clip, and the Biden executive-order beat with its deepfake joke. The writer may keep the order's one line only if it serves the regulation plan.
 
+**C′. Superseded (showrunner, same day): the duck is cut.** The tag goes from the room to the cover, the lawsuit, then "noted.". Section C below is kept only as the record.
+
+**A′. The mastermind layer (showrunner, same day):**
+- On top of the planner voice, his V.O. hints at the long game: he'd been arranging things behind the scenes to get here, with more foresight than anyone in the room.
+- The payoff comes on his return, where he'd made himself the piece everything depends on. Candidate: "they could fire me. they couldn't run it without me. that part i planned."
+- **The firing is still the one thing he didn't foresee.**
+- He's a mastermind by foresight, never by a claimed secret act at a contested moment.
+- **Later episodes:** Mario, Tasya, Nole and the other key leaders scheme too (a season note goes in the bible).
+
 **C. The duck, made to land** (tag):
 - The film's first card names it: ELGOOG · INIMEG (their answer).
 - A large LIVE chip.
