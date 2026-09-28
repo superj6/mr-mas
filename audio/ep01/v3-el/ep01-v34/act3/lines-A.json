@@ -1,0 +1,277 @@
+[
+ {
+  "id": "v34-vo-05",
+  "kind": "vo",
+  "scene": "18",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "my other company. for when it gets harder to tell.",
+  "spoken_as": "My other company. For when it gets harder to tell.",
+  "tag": "V.O.",
+  "delivery": "reading his own label; plain",
+  "on_camera": "vo",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/ep01-v34/act3/wav/v34-vo-05__mas-manalt-C.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 4.76,
+  "frames_24": 114,
+  "voiced_span_s": 3.86,
+  "pace": {
+   "audible_in_s": 0.42,
+   "audible_out_s": 4.28,
+   "measured": {
+    "span_s": 3.86,
+    "wpm": 155.4,
+    "syllables": 14,
+    "articulation_sps": 4.42,
+    "pauses_s": [
+     0.69
+    ]
+   },
+   "longest_internal_gap_s": 0.69,
+   "words": 10,
+   "wpm": 155.4,
+   "speed": 0.85,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "My",
+    "t0": 0.4,
+    "t1": 0.571
+   },
+   {
+    "w": "other",
+    "t0": 0.663,
+    "t1": 0.907
+   },
+   {
+    "w": "company",
+    "t0": 0.989,
+    "t1": 1.592
+   },
+   {
+    "w": "for",
+    "t0": 2.335,
+    "t1": 2.521
+   },
+   {
+    "w": "when",
+    "t0": 2.568,
+    "t1": 2.73
+   },
+   {
+    "w": "it",
+    "t0": 2.776,
+    "t1": 2.846
+   },
+   {
+    "w": "gets",
+    "t0": 2.893,
+    "t1": 3.125
+   },
+   {
+    "w": "harder",
+    "t0": 3.183,
+    "t1": 3.531
+   },
+   {
+    "w": "to",
+    "t0": 3.601,
+    "t1": 3.67
+   },
+   {
+    "w": "tell",
+    "t0": 3.752,
+    "t1": 4.17
+   }
+  ],
+  "qa": {
+   "asr": "My other company, for when it gets harder to tell.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -2.78,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 107.3,
+   "f0_range_st": 11.0,
+   "speech_head_s": 0.42,
+   "speech_tail_s": 0.48,
+   "raw_tail_cut": false,
+   "align_median_s": 0.103
+  },
+  "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.85",
+  "voiceId": "EwzF7Z2UMSib9JaKx0Kg",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "C",
+   "role": "mas-manalt",
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "source": "shared Voice Library (high_quality), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.85
+   },
+   "seed": 3903003906,
+   "chars_sent": 50,
+   "request_key": "148ebcc4fad78eb8",
+   "derived_from": null,
+   "reused_from": null
+  },
+  "status": "el",
+  "take": "el-C",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "timeline_in": 0.57,
+   "timeline_dur": 4.66
+  }
+ },
+ {
+  "id": "v34-vo-06",
+  "kind": "vo",
+  "scene": "22",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "a year ago, forty users and a nice thread.",
+  "spoken_as": "A year ago, forty users and a nice thread.",
+  "tag": "V.O.",
+  "delivery": "on his own stage under the applause; quiet, remembering Gerg's forecast exactly",
+  "on_camera": "vo",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/ep01-v34/act3/wav/v34-vo-06__mas-manalt-C.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 4.415,
+  "frames_24": 106,
+  "voiced_span_s": 3.37,
+  "pace": {
+   "audible_in_s": 0.39,
+   "audible_out_s": 3.76,
+   "measured": {
+    "span_s": 3.37,
+    "wpm": 160.2,
+    "syllables": 12,
+    "articulation_sps": 3.56,
+    "pauses_s": []
+   },
+   "longest_internal_gap_s": 0.0,
+   "words": 9,
+   "wpm": 160.2,
+   "speed": 0.85,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "A",
+    "t0": 0.37,
+    "t1": 0.466
+   },
+   {
+    "w": "year",
+    "t0": 0.559,
+    "t1": 0.791
+   },
+   {
+    "w": "ago",
+    "t0": 0.861,
+    "t1": 1.151
+   },
+   {
+    "w": "forty",
+    "t0": 1.314,
+    "t1": 1.697
+   },
+   {
+    "w": "users",
+    "t0": 1.836,
+    "t1": 2.428
+   },
+   {
+    "w": "and",
+    "t0": 2.498,
+    "t1": 2.649
+   },
+   {
+    "w": "a",
+    "t0": 2.718,
+    "t1": 2.742
+   },
+   {
+    "w": "nice",
+    "t0": 2.811,
+    "t1": 3.102
+   },
+   {
+    "w": "thread",
+    "t0": 3.148,
+    "t1": 3.659
+   }
+  ],
+  "qa": {
+   "asr": "A year ago, 40 users and a nice thread.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -4.32,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 113.6,
+   "f0_range_st": 13.0,
+   "speech_head_s": 0.39,
+   "speech_tail_s": 0.655,
+   "raw_tail_cut": false,
+   "align_median_s": 0.121
+  },
+  "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.85",
+  "voiceId": "EwzF7Z2UMSib9JaKx0Kg",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "C",
+   "role": "mas-manalt",
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "source": "shared Voice Library (high_quality), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.85
+   },
+   "seed": 2078674339,
+   "chars_sent": 42,
+   "request_key": "fff99c624666c2ce",
+   "derived_from": null,
+   "reused_from": null
+  },
+  "status": "el",
+  "take": "el-C",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "timeline_in": 0.5,
+   "timeline_dur": 4.185
+  }
+ }
+]

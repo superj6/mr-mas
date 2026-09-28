@@ -416,11 +416,71 @@
     "credits_billed": 104
    },
    "used_by_subscription": 104
+  },
+  "phase 8: the v3.4 V.O.": {
+   "_about": "Phase 8 (2026-09-28): draft 8.3 (v3.4): Mas's 8 new V.O. lines with Jeremy (v34-vo-01, 02, 04, 05, 06, 07, 09, 11); v3-vo-10 reused; then the EL-timed v3.4 lock.",
+   "subscription_before": {
+    "tier": "creator",
+    "character_count": 14232,
+    "character_limit": 131000,
+    "next_character_count_reset_unix": 1793049484,
+    "voice_limit": 30,
+    "voice_slots_used": 2,
+    "professional_voice_limit": 1,
+    "can_extend_character_limit": false,
+    "status": "active",
+    "checked_at": "2026-09-28T10:55:52"
+   },
+   "subscription_after": {
+    "tier": "creator",
+    "character_count": 14429,
+    "character_limit": 131000,
+    "next_character_count_reset_unix": 1793049484,
+    "voice_limit": 30,
+    "voice_slots_used": 2,
+    "professional_voice_limit": 1,
+    "can_extend_character_limit": false,
+    "status": "active",
+    "checked_at": "2026-09-28T11:00:08"
+   },
+   "runs": {
+    "audio/ep01/v3-el/ep01-v34/act1": {
+     "calls": 2,
+     "chars_sent": 116,
+     "credits_billed": 51
+    },
+    "audio/ep01/v3-el/ep01-v34/act2": {
+     "calls": 1,
+     "chars_sent": 20,
+     "credits_billed": 9
+    },
+    "audio/ep01/v3-el/ep01-v34/act3": {
+     "calls": 2,
+     "chars_sent": 92,
+     "credits_billed": 40
+    },
+    "audio/ep01/v3-el/ep01-v34/act4": {
+     "calls": 3,
+     "chars_sent": 151,
+     "credits_billed": 66
+    },
+    "v34-vo-07 retake (brisk, quietly pleased: speed 1.0, style 0.1; rendered in scratch, installed from the cache)": {
+     "calls": 1,
+     "chars_sent": 71,
+     "credits_billed": 31
+    }
+   },
+   "total": {
+    "calls": 9,
+    "chars_sent": 450,
+    "credits_billed": 197
+   },
+   "used_by_subscription": 197
   }
  },
  "all_phases_total": {
-  "chars_sent": 25781,
-  "credits_billed": 14232,
-  "subscription_character_count": 14232
+  "chars_sent": 26231,
+  "credits_billed": 14429,
+  "subscription_character_count": 14429
  }
 }

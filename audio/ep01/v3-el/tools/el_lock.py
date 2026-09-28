@@ -271,7 +271,7 @@ def main():
     ap.add_argument("--set", default="A")
     ap.add_argument("--beds", default=None, help="a JSON file {chapter: {src, label, ...}} for the manifest's beds")
     ap.add_argument("--tag", default="", help="a variant tag (see above)")
-    ap.add_argument("--lock", default="v3", choices=["v3", "v31", "v32", "v33"], help="the Kokoro lock: v3 (show/reel/ep01-v3/), v31, v32 or v33")
+    ap.add_argument("--lock", default="v3", choices=["v3", "v31", "v32", "v33", "v34"], help="the Kokoro lock: v3 (show/reel/ep01-v3/), v31 ... v34")
     ap.add_argument("--fixed", nargs="*", default=None, help="beats with a reserved length (v31 default: S7.13 v31-32.01d)")
     a = ap.parse_args()
     global DST, TAG, SRC, TAKES, LOCK, FIXED
@@ -279,7 +279,7 @@ def main():
     SRC = f"show/reel/ep01-{LOCK}"
     DST = f"show/reel/ep01-{LOCK}-el{TAG}"
     TAKES = "audio/ep01/v3-el/ep01" if LOCK == "v3" else f"audio/ep01/v3-el/ep01-{LOCK}"
-    FIXED = set(a.fixed if a.fixed is not None else (["S7.13", "v31-32.01d"] if LOCK in ("v31", "v32", "v33") else []))
+    FIXED = set(a.fixed if a.fixed is not None else (["S7.13", "v31-32.01d"] if LOCK in ("v31", "v32", "v33", "v34") else []))
     segs = a.segs or SEGS
     rep = {"set": a.set, "segments": []}
     for s in segs:

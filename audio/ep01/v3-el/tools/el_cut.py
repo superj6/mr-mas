@@ -36,7 +36,8 @@ SEGS = ["coldopen", "act1", "act2", "act3", "act4", "tag"]
 LOCK = sys.argv[sys.argv.index("--lock") + 1] if "--lock" in sys.argv else "v31"      # v31 or v32
 OUT = os.path.join(REPO, f"audio/ep01/v3-el/ep01-{LOCK}")
 OLDS = [os.path.join(REPO, "audio/ep01/v3-el/ep01"), os.path.join(REPO, "audio/ep01/v3-el/ep01-v31"),
-        os.path.join(REPO, "audio/ep01/v3-el/ep01-v32"), os.path.join(REPO, "audio/ep01/v3-el/ep01-v33")]   # the newest wins
+        os.path.join(REPO, "audio/ep01/v3-el/ep01-v32"), os.path.join(REPO, "audio/ep01/v3-el/ep01-v33"),
+        os.path.join(REPO, "audio/ep01/v3-el/ep01-v34")]   # the newest wins
 # the lock's table (audio/ep01/v31/takes.py CUT): id -> (source line, first word index, last word index)
 CUT = {
     "v31-a1-0007": ("e1-a1-10-06", 0, 0),     # Hi!
@@ -77,10 +78,10 @@ def main():
             for l in b["lines"]:
                 tl[l["id"]] = (s, l)
     table = {k: v for k, v in CUT.items() if k in tl}
-    if LOCK in ("v32", "v33"):
+    if LOCK in ("v32", "v33", "v34"):
         table.update({k: v for k, v in CUT_V32.items() if k in tl})
-    if LOCK == "v33":
-        table.update(CUT_V33)
+    if LOCK in ("v33", "v34"):
+        table.update({k: v for k, v in CUT_V33.items() if k in tl})
     src_rows = {}
     for base in OLDS[: OLDS.index(OUT) + 1]:                  # the newest render (up to this lock's) wins
         for s in SEGS:

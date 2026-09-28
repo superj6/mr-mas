@@ -1,0 +1,96 @@
+{
+ "takes": {
+  "v34-vo-04__mas-manalt-C": {
+   "take": "v34-vo-04__mas-manalt-C",
+   "key": "1b49073485b935ab",
+   "base_key": "1b49073485b935ab",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -18 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep01/v3-el/ep01-v34/act2/wav/v34-vo-04__mas-manalt-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.265,
+   "offset_s": 0.35,
+   "sent": "Mine's half written.",
+   "seed": 97247953,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.85
+   },
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "cand": "C",
+   "role": "mas-manalt",
+   "measured": {
+    "audible_in_s": 0.37,
+    "audible_out_s": 1.78,
+    "span_s": 1.41,
+    "words": 3,
+    "wpm": 127.7,
+    "syllables": 5,
+    "articulation_sps": 3.55,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.485,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 122.0,
+    "f0_range_st": 10.5
+   },
+   "words": [
+    {
+     "w": "Mine's",
+     "t0": 0.35,
+     "t1": 0.838
+    },
+    {
+     "w": "half",
+     "t0": 0.907,
+     "t1": 1.163
+    },
+    {
+     "w": "written",
+     "t0": 1.232,
+     "t1": 1.685
+    }
+   ],
+   "qa": {
+    "asr": "Mine's half -written.",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -18.0,
+    "target_lufs": -18.0,
+    "true_peak_dbtp": -2.38,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 122.0,
+    "f0_range_st": 10.5,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.485,
+    "raw_tail_cut": false,
+    "align_median_s": 0.172
+   },
+   "raw": {
+    "raw_first_sound_s": 0.025,
+    "raw_len_s": 1.765,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  }
+ },
+ "calls": [
+  {
+   "take": "v34-vo-04__mas-manalt-C",
+   "key": "1b49073485b935ab",
+   "chars": 20,
+   "cost_header": "9",
+   "request_id": "5n55WiEXpBKBVcxup0fK",
+   "at": "10:56:02"
+  }
+ ]
+}

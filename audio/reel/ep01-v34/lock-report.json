@@ -1,0 +1,369 @@
+{
+ "coldopen": {
+  "timeline": "show/reel/ep01-v34/ep01-v34-coldopen.json",
+  "source": "show/reel/ep01-v33/ep01-v33-coldopen.json",
+  "trims": [],
+  "source_story_s": 26.667,
+  "estimate_s": 26.67,
+  "seconds": 26.667,
+  "beats": 10,
+  "lines": 3,
+  "vo": 0,
+  "jcuts": [],
+  "lcuts": [
+   "e1-co-1-02 (1.02)"
+  ],
+  "edits": [],
+  "deviations": [],
+  "safety_net": []
+ },
+ "act1": {
+  "timeline": "show/reel/ep01-v34/ep01-v34-act1.json",
+  "source": "show/reel/ep01-v33/ep01-v33-act1.json",
+  "trims": [],
+  "source_story_s": 330.579,
+  "estimate_s": 337.84,
+  "seconds": 337.549,
+  "beats": 52,
+  "lines": 68,
+  "vo": 5,
+  "jcuts": [
+   "v32-a1-0001 (5.03, -0.50)",
+   "v31-a1-0003 (7.01, -0.60)",
+   "e1-a1-12-01 (12.02, -0.50)"
+  ],
+  "lcuts": [],
+  "edits": [
+   {
+    "beat": "5.03",
+    "what": "line v3-vo-02 dropped (\"she'll go for three.\")"
+   },
+   {
+    "beat": "5.03",
+    "what": "line e1-a1-5-03 retimed: gap after e1-a1-5-02 0.30 -> 0.50 s"
+   },
+   {
+    "beat": "5.03",
+    "what": "caption:  / she'll go for three. (V.O.) ->  (the line the plan changed)"
+   },
+   {
+    "beat": "5.04",
+    "what": "line v3-vo-03 dropped (\"she's right. it will break. i don't know which par\")"
+   },
+   {
+    "beat": "5.04",
+    "what": "line e1-a1-5-07 retimed: re-placed at after:v34-vo-01+0.8"
+   },
+   {
+    "beat": "5.04",
+    "what": "new line v34-vo-01 (mas, 3.85 s) after e1-a1-5-06 +0.5 replacing v3-vo-03"
+   },
+   {
+    "beat": "7.01",
+    "what": "line v3-vo-07 dropped (\"mostly the bill.\")"
+   },
+   {
+    "beat": "7.01",
+    "what": "new line v34-vo-02 (mas, 4.45 s) after e1-a1-7-02 +0.4 replacing v3-vo-07"
+   },
+   {
+    "beat": "11.03",
+    "what": "line e1-a1-11-01 retimed: re-placed at after:v3-vo-10+0.5"
+   },
+   {
+    "beat": "11.03",
+    "what": "restored v3-vo-10: voiced 4.59 s (the plan's take_dur_s 5.885 is the file)"
+   },
+   {
+    "beat": "11.03",
+    "what": "new line v3-vo-10 (mas, 4.59 s) at start+0.8"
+   },
+   {
+    "beat": "11.03",
+    "what": "kept at the source's times (the lighthouse's CLOD chip stays at the split's opening, as in v3.1's 11.03 with this V.O.): CLOD 1 · SAME DAY 5.39->1.00, name clod 5.39->1.00"
+   },
+   {
+    "beat": "11.03",
+    "what": "names[]: mario 5.24 -> 0.84 s (his voice names them before the plate)"
+   },
+   {
+    "beat": "11.03",
+    "what": "names[]: gerg 6.62 -> 2.23 s (his voice names them before the plate)"
+   },
+   {
+    "beat": "12.02",
+    "what": "names[]: nole 0.00 -> -0.50 s (the J-cut line leads its plate)"
+   }
+  ],
+  "deviations": [],
+  "safety_net": []
+ },
+ "act2": {
+  "timeline": "show/reel/ep01-v34/ep01-v34-act2.json",
+  "source": "show/reel/ep01-v33/ep01-v33-act2.json",
+  "trims": [],
+  "source_story_s": 190.559,
+  "estimate_s": 181.19,
+  "seconds": 181.189,
+  "beats": 43,
+  "lines": 38,
+  "vo": 1,
+  "jcuts": [],
+  "lcuts": [
+   "e1-a2-15-01 (14.06)"
+  ],
+  "edits": [
+   {
+    "beat": "13.02",
+    "what": "line e1-a2-13-01 dropped (\"What can be, unburdened by what has been… trained.\")"
+   },
+   {
+    "beat": "13.02",
+    "what": "no line left: the plan's 1.6 s (head 0.45 + the old tail would be 0.66 s)"
+   },
+   {
+    "beat": "13.02",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "13.09",
+    "what": "line v3-vo-12 dropped (\"he's not wrong.\")"
+   },
+   {
+    "beat": "13.09",
+    "what": "line e1-a2-13-12 retimed: gap after e1-a2-13-11 0.90 -> 0.90 s"
+   },
+   {
+    "beat": "13.13",
+    "what": "line v31-a2-0002 retimed: re-placed at after:v34-vo-04+0.5"
+   },
+   {
+    "beat": "13.13",
+    "what": "new line v34-vo-04 (mas, 1.30 s) after v31-a2-0001 +0.4"
+   },
+   {
+    "beat": "14.01",
+    "what": "6.00 -> 4.00 s, timed items scaled ×0.67"
+   },
+   {
+    "beat": "14.01",
+    "what": "kept at the source's times (the feed opens on the photo (the plan's caption)): CLASS PHOTO #1 · ♥ 0.13->0.20"
+   },
+   {
+    "beat": "14.01",
+    "what": "\"CLASS PHOTO #1 · ♥\" up to the beat's end (was until 1.2): the clip is cut; the photo is the feed until the black"
+   },
+   {
+    "beat": "14.01",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "14.03",
+    "what": "cut (): 2.40 s"
+   },
+   {
+    "beat": "14.05",
+    "what": "cut (): 2.42 s"
+   }
+  ],
+  "deviations": [
+   {
+    "beat": "13.13",
+    "what": "\"DEEPFAKES OF ME: SEEN 0\" dropped: B: Nedib's card loses the stat (the plan drops it at 13.12); the card rides on into 13.13, so it goes there too"
+   }
+  ],
+  "safety_net": []
+ },
+ "act3": {
+  "timeline": "show/reel/ep01-v34/ep01-v34-act3.json",
+  "source": "show/reel/ep01-v33/ep01-v33-act3.json",
+  "trims": [],
+  "source_story_s": 133.399,
+  "estimate_s": 125.32,
+  "seconds": 125.304,
+  "beats": 28,
+  "lines": 21,
+  "vo": 3,
+  "jcuts": [],
+  "lcuts": [],
+  "edits": [
+   {
+    "beat": "18.02",
+    "what": "new line v34-vo-05 (mas, 3.38 s) at start+0.4"
+   },
+   {
+    "beat": "18.06",
+    "what": "line e1-a3-18-04 dropped (\"i made it for everyone else.\")"
+   },
+   {
+    "beat": "18.06",
+    "what": "line e1-a3-18-03 retimed: head 0.80 -> 2.20 s (start+2.2)"
+   },
+   {
+    "beat": "21.02",
+    "what": "sound tower_pop at 7.8 dropped: the cut-paper copy (the deepfake Nedib) is un-drawn, and its pops with it"
+   },
+   {
+    "beat": "21.02",
+    "what": "sound tower_pop at 10.49 dropped: the cut-paper copy (the deepfake Nedib) is un-drawn, and its pops with it"
+   },
+   {
+    "beat": "21.02",
+    "what": "line e1-a3-21-02 dropped (\"And then the computers regulate themselves.\")"
+   },
+   {
+    "beat": "21.02",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "21.03",
+    "what": "cut (): 4.38 s"
+   },
+   {
+    "beat": "21.04",
+    "what": "cut (): 4.40 s"
+   },
+   {
+    "beat": "21.05",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "v32-21.06",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "22.01",
+    "what": "line v32-a3-0001 retimed: re-placed at after:v34-vo-06+0.6"
+   },
+   {
+    "beat": "22.01",
+    "what": "new line v34-vo-06 (mas, 3.02 s) at start+1.8"
+   },
+   {
+    "beat": "22.01",
+    "what": "e1-a3-22-01 keeps its 1.20 s gap after v32-a3-0001 (re-placed in front of it)"
+   },
+   {
+    "beat": "22.01",
+    "what": "kept at the source's times (the V.O. plays \"on his own stage under the applause for a hundred million a week\" (the plan): the rail, the counter and the applause stay at the stage's opening): RAIL: NOV 6, 2023 · DEVDAY 4.54->1.12, 100,000,000 / WEEK 5.34->1.92, synth:applause 4.44->1.02, odometer_ratchet 5.24->1.82, landing_thunk 7.79->4.37"
+   }
+  ],
+  "deviations": [],
+  "safety_net": []
+ },
+ "act4": {
+  "timeline": "show/reel/ep01-v34/ep01-v34-act4.json",
+  "source": "show/reel/ep01-v33/ep01-v33-act4.json",
+  "trims": [],
+  "source_story_s": 505.742,
+  "estimate_s": 509.25,
+  "seconds": 507.792,
+  "beats": 80,
+  "lines": 98,
+  "vo": 5,
+  "jcuts": [
+   "a5-27-18 (S3.06, -0.60)",
+   "a5-29-20 (S5.11, -0.80)",
+   "a5-31-04 (S8.08, -1.00)"
+  ],
+  "lcuts": [
+   "v3-a4-0001 (S4.13)",
+   "v3-a4-0004 (S7.07)",
+   "a5-31-04 (S8.08)"
+  ],
+  "edits": [
+   {
+    "beat": "S1.02",
+    "what": "line v3-vo-18 dropped (\"gerg's not on it. alyi set it up. probably just th\")"
+   },
+   {
+    "beat": "S1.02",
+    "what": "new line v34-vo-07 (mas, 5.03 s) at start+1.2 replacing v3-vo-18"
+   },
+   {
+    "beat": "S1.02",
+    "what": "names[]: alyi at 3.023 dropped (v3-vo-18 said \"alyi set it up\"; v34-vo-07 does not)"
+   },
+   {
+    "beat": "S4.02",
+    "what": "line a5-27-28 dropped (\"That is the company telling us.\")"
+   },
+   {
+    "beat": "S4.02",
+    "what": "lines dropped, the plan keeps 17.4 s for the picture (computed 15.06 s)"
+   },
+   {
+    "beat": "S4.02",
+    "what": "caption: CUT to Alyi's reflection in the dark window for his line, so it is his. -> Then the whole row of phones lights up at once. (the line the plan changed)"
+   },
+   {
+    "beat": "S4.02",
+    "what": "sound phone_buzz_step_1 at 15.80 s (the plan's sound note, as a stick SFX)"
+   },
+   {
+    "beat": "S5.09",
+    "what": "line v3-vo-21 dropped (\"gerg. he'll say he's compiling.\")"
+   },
+   {
+    "beat": "S5.09",
+    "what": "line a5-29-03 retimed: re-placed at after:v34-vo-09+0.5"
+   },
+   {
+    "beat": "S5.09",
+    "what": "new line v34-vo-09 (mas, 1.43 s) at start+0.3"
+   },
+   {
+    "beat": "S5.09",
+    "what": "a5-29-04 keeps its 0.40 s gap after a5-29-03 (re-placed in front of it)"
+   },
+   {
+    "beat": "S8.04",
+    "what": "new line v34-vo-11 (mas, 4.64 s) at start+0.4"
+   },
+   {
+    "beat": "S7.13",
+    "what": "exactly 264 frames (the Runway insert)"
+   }
+  ],
+  "deviations": [
+   {
+    "beat": "S4.02",
+    "what": "the coordinator's delta: Alyi's \"That is the company telling us.\" is cut; the phones light up at 15.8 s (where his line began) and hold 1.6 s, and S4.07's \"Then we'll write step four ourselves.\" follows: est_s 18.9 -> 17.400"
+   }
+  ],
+  "safety_net": []
+ },
+ "tag": {
+  "timeline": "show/reel/ep01-v34/ep01-v34-tag.json",
+  "source": "show/reel/ep01-v33/ep01-v33-tag.json",
+  "trims": [],
+  "source_story_s": 42.335,
+  "estimate_s": 33.24,
+  "seconds": 33.243,
+  "beats": 10,
+  "lines": 3,
+  "vo": 1,
+  "jcuts": [],
+  "lcuts": [],
+  "edits": [
+   {
+    "beat": "32.01",
+    "what": "+0.62 s at the tail"
+   },
+   {
+    "beat": "32.01",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "v31-32.01d",
+    "what": "cut (): 9.71 s"
+   },
+   {
+    "beat": "32.02",
+    "what": "on-screen add: \"RAIL: DEC 6, 2023\""
+   }
+  ],
+  "deviations": [],
+  "safety_net": []
+ }
+}

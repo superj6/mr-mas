@@ -1,0 +1,318 @@
+{
+ "segment": "act2",
+ "layers": [
+  {
+   "room": "whitehouse",
+   "from": 0.0,
+   "to": 67.71,
+   "lead": 0.0,
+   "trail": 1.0
+  },
+  {
+   "room": "bullpen-night",
+   "from": 66.11,
+   "to": 71.11,
+   "lead": 0.6,
+   "trail": 0.4
+  },
+  {
+   "room": "senate",
+   "from": 71.44,
+   "to": 139.69,
+   "lead": 0.6,
+   "trail": 0.4
+  },
+  {
+   "room": "rooftop",
+   "from": 143.69,
+   "to": 180.86,
+   "lead": 0.6,
+   "trail": 0.4
+  },
+  {
+   "room (next chapter, leading)": "dark",
+   "from": 180.61,
+   "lead": 0.6
+  },
+  {
+   "pad": "THE WHITE HOUSE",
+   "chords": [
+    "Abmaj9",
+    "Eb9sus4"
+   ],
+   "lufs": -32,
+   "duck_db": 10,
+   "from": 0.0,
+   "to": 66.71
+  },
+  {
+   "music": "none (THE BRIDGE: no score)",
+   "from": 66.71,
+   "to": 72.04
+  },
+  {
+   "pad": "THE SENATE",
+   "chords": [
+    "Bbm9",
+    "Eb9sus4"
+   ],
+   "lufs": -32,
+   "duck_db": 10,
+   "from": 72.04,
+   "to": 139.29
+  },
+  {
+   "pad": "THE TOUR",
+   "chords": [
+    "Fm11",
+    "Dbmaj9#11"
+   ],
+   "lufs": -30,
+   "duck_db": 10,
+   "from": 139.29,
+   "to": 144.29
+  },
+  {
+   "pad": "THE ROOFTOP",
+   "chords": [
+    "Dbmaj9#11",
+    "Gm7b5"
+   ],
+   "lufs": -32,
+   "duck_db": 10,
+   "from": 144.29,
+   "to": 180.46
+  }
+ ],
+ "sfx": [
+  [
+   "13.03",
+   "freeze_hit_F",
+   6.208
+  ],
+  [
+   "13.05",
+   "paper_flutter",
+   18.67
+  ],
+  [
+   "13.06",
+   "landing_thunk",
+   19.819
+  ],
+  [
+   "13.06",
+   "landing_thunk",
+   20.007
+  ],
+  [
+   "13.06",
+   "landing_thunk",
+   20.196
+  ],
+  [
+   "13.10",
+   "flame_whoomph",
+   46.658
+  ],
+  [
+   "13.12",
+   "camera_shutter",
+   53.0
+  ],
+  [
+   "13.12",
+   "freeze_hit_F",
+   53.02
+  ],
+  [
+   "13.14",
+   "camera_shutter",
+   60.792
+  ],
+  [
+   "15.04",
+   "freeze_hit_C",
+   83.708
+  ],
+  [
+   "15.05",
+   "typing_soft",
+   84.533
+  ],
+  [
+   "15.15",
+   "folder_slide",
+   107.85
+  ],
+  [
+   "15.15",
+   "rubber_stamp_C",
+   109.2
+  ],
+  [
+   "15.16",
+   "paper_curl",
+   116.292
+  ],
+  [
+   "15.11",
+   "typing_soft",
+   122.228
+  ],
+  [
+   "15.12",
+   "cloth_rustle",
+   126.508
+  ],
+  [
+   "15.12",
+   "synth:moth",
+   127.558
+  ],
+  [
+   "15.13",
+   "synth:gasp",
+   129.908
+  ],
+  [
+   "15.14",
+   "rubber_stamp_C",
+   133.058
+  ],
+  [
+   "15.14",
+   "rubber_stamp_C",
+   133.408
+  ],
+  [
+   "15.14",
+   "rubber_stamp_C",
+   133.758
+  ],
+  [
+   "16.01",
+   "rubber_stamp_C",
+   139.292
+  ],
+  [
+   "16.01",
+   "synth:stab",
+   139.292
+  ],
+  [
+   "16.01",
+   "paper_whip",
+   139.642
+  ],
+  [
+   "16.01",
+   "rubber_stamp_C",
+   140.042
+  ],
+  [
+   "16.01",
+   "synth:stab",
+   140.042
+  ],
+  [
+   "16.01",
+   "post_click",
+   141.942
+  ],
+  [
+   "16.01",
+   "rubber_stamp_C",
+   142.517
+  ],
+  [
+   "16.01",
+   "synth:stab",
+   142.517
+  ],
+  [
+   "16.01",
+   "rubber_stamp_C",
+   143.129
+  ],
+  [
+   "16.01",
+   "synth:stab",
+   143.129
+  ],
+  [
+   "17.01",
+   "pen_scribble_short",
+   146.092
+  ],
+  [
+   "17.01",
+   "pen_scribble_short",
+   147.232
+  ],
+  [
+   "17.01",
+   "pen_run",
+   148.612
+  ],
+  [
+   "17.01",
+   "pen_scribble_short",
+   149.392
+  ],
+  [
+   "17.01",
+   "pen_tick_1",
+   149.932
+  ],
+  [
+   "17.02",
+   "pen_scribble_short",
+   150.492
+  ],
+  [
+   "17.02",
+   "pen_scribble_short",
+   154.892
+  ],
+  [
+   "17.02",
+   "pen_scribble_short",
+   159.192
+  ],
+  [
+   "17.03",
+   "synth:roll",
+   160.667
+  ],
+  [
+   "17.04",
+   "freeze_hit_F",
+   162.083
+  ],
+  [
+   "17.07",
+   "ka_ching",
+   170.017
+  ],
+  [
+   "17.07",
+   "synth:bell",
+   170.037
+  ],
+  [
+   "17.10",
+   "paper_curl",
+   173.242
+  ]
+ ],
+ "sfx_missing": [],
+ "decisions": [
+  "13.01: \"the meeting room's mantel clock and the tripods' clicks, under the act break's black\" = its room, leading the cut by 1.0 s",
+  "17.01: \"rooftop wind under the poster's last stamp\" = its room, leading the cut by 0.6 s"
+ ],
+ "seconds": 181.308,
+ "chapter_seconds": 181.208,
+ "lufs": -29.45,
+ "peak_dbfs": -3.36
+}

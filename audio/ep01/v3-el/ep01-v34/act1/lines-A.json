@@ -1,0 +1,293 @@
+[
+ {
+  "id": "v34-vo-01",
+  "kind": "vo",
+  "scene": "5",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "she's right. it will break. it goes out tonight anyway.",
+  "spoken_as": "She's right. It will break. It goes out tonight anyway.",
+  "tag": "V.O.",
+  "delivery": "level, certain, to himself: the decision, not a speech",
+  "on_camera": "vo",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/ep01-v34/act1/wav/v34-vo-01__mas-manalt-C.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 5.39,
+  "frames_24": 129,
+  "voiced_span_s": 4.53,
+  "pace": {
+   "audible_in_s": 0.37,
+   "audible_out_s": 4.9,
+   "measured": {
+    "span_s": 4.53,
+    "wpm": 132.5,
+    "syllables": 13,
+    "articulation_sps": 3.56,
+    "pauses_s": [
+     0.06,
+     0.25,
+     0.09,
+     0.63
+    ]
+   },
+   "longest_internal_gap_s": 0.63,
+   "words": 10,
+   "wpm": 132.5,
+   "speed": 0.85,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "She's",
+    "t0": 0.35,
+    "t1": 0.71
+   },
+   {
+    "w": "right",
+    "t0": 0.803,
+    "t1": 1.209
+   },
+   {
+    "w": "it",
+    "t0": 1.557,
+    "t1": 1.72
+   },
+   {
+    "w": "will",
+    "t0": 1.766,
+    "t1": 1.952
+   },
+   {
+    "w": "break",
+    "t0": 2.01,
+    "t1": 2.44
+   },
+   {
+    "w": "it",
+    "t0": 3.136,
+    "t1": 3.299
+   },
+   {
+    "w": "goes",
+    "t0": 3.357,
+    "t1": 3.601
+   },
+   {
+    "w": "out",
+    "t0": 3.659,
+    "t1": 3.845
+   },
+   {
+    "w": "tonight",
+    "t0": 3.891,
+    "t1": 4.274
+   },
+   {
+    "w": "anyway",
+    "t0": 4.332,
+    "t1": 4.89
+   }
+  ],
+  "qa": {
+   "asr": "She's right. It will break. It goes out tonight anyway.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -3.05,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 119.3,
+   "f0_range_st": 6.7,
+   "speech_head_s": 0.37,
+   "speech_tail_s": 0.49,
+   "raw_tail_cut": false,
+   "align_median_s": 0.083
+  },
+  "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.85",
+  "voiceId": "EwzF7Z2UMSib9JaKx0Kg",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "C",
+   "role": "mas-manalt",
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "source": "shared Voice Library (high_quality), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.85
+   },
+   "seed": 2773566299,
+   "chars_sent": 55,
+   "request_key": "7953622c0bc49822",
+   "derived_from": null,
+   "reused_from": null
+  },
+  "status": "el",
+  "take": "el-C",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "timeline_in": 0.52,
+   "timeline_dur": 5.095
+  }
+ },
+ {
+  "id": "v34-vo-02",
+  "kind": "vo",
+  "scene": "7",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "mostly the bill. we can't buy that many servers. someone can.",
+  "spoken_as": "Mostly the bill. We can't buy that many servers. Someone can.",
+  "tag": "V.O.",
+  "delivery": "the gap, then the arithmetic; \"someone can.\" lighter, already reaching for the phone",
+  "on_camera": "vo",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/ep01-v34/act1/wav/v34-vo-02__mas-manalt-C.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 6.22,
+  "frames_24": 149,
+  "voiced_span_s": 5.35,
+  "pace": {
+   "audible_in_s": 0.39,
+   "audible_out_s": 5.74,
+   "measured": {
+    "span_s": 5.35,
+    "wpm": 123.4,
+    "syllables": 15,
+    "articulation_sps": 3.39,
+    "pauses_s": [
+     0.66,
+     0.26
+    ]
+   },
+   "longest_internal_gap_s": 0.66,
+   "words": 11,
+   "wpm": 123.4,
+   "speed": 0.85,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Mostly",
+    "t0": 0.37,
+    "t1": 0.907
+   },
+   {
+    "w": "the",
+    "t0": 0.977,
+    "t1": 1.047
+   },
+   {
+    "w": "bill",
+    "t0": 1.116,
+    "t1": 1.488
+   },
+   {
+    "w": "we",
+    "t0": 2.231,
+    "t1": 2.393
+   },
+   {
+    "w": "can't",
+    "t0": 2.463,
+    "t1": 2.753
+   },
+   {
+    "w": "buy",
+    "t0": 2.811,
+    "t1": 3.009
+   },
+   {
+    "w": "that",
+    "t0": 3.09,
+    "t1": 3.264
+   },
+   {
+    "w": "many",
+    "t0": 3.334,
+    "t1": 3.566
+   },
+   {
+    "w": "servers",
+    "t0": 3.647,
+    "t1": 4.286
+   },
+   {
+    "w": "someone",
+    "t0": 4.634,
+    "t1": 5.133
+   },
+   {
+    "w": "can",
+    "t0": 5.203,
+    "t1": 5.691
+   }
+  ],
+  "qa": {
+   "asr": "Mostly the bill. We can't buy that many servers. Someone can.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -3.17,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 107.1,
+   "f0_range_st": 14.0,
+   "speech_head_s": 0.39,
+   "speech_tail_s": 0.48,
+   "raw_tail_cut": false,
+   "align_median_s": 0.09
+  },
+  "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.85",
+  "voiceId": "EwzF7Z2UMSib9JaKx0Kg",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "C",
+   "role": "mas-manalt",
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "source": "shared Voice Library (high_quality), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.85
+   },
+   "seed": 3148909125,
+   "chars_sent": 61,
+   "request_key": "5d5c94227ddddf20",
+   "derived_from": null,
+   "reused_from": null
+  },
+  "status": "el",
+  "take": "el-C",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "timeline_in": 0.6,
+   "timeline_dur": 5.74
+  }
+ }
+]

@@ -24,6 +24,44 @@
 
 ---
 
+## Z. Phase 8: the v3.4 V.O. (2026-09-28)
+
+**The brief:** draft 8.3 (`script-v34-notes.md`, commit 3703f20).
+- Mas's eight new V.O. lines, in Jeremy's voice, read as before: close, dry, unhurried, slower than he talks. They are hints, not declarations: plain and unemphatic. The last one is a count.
+- v3-vo-10 is reused.
+- Then the EL-timed v3.4 lock, once the Kokoro lock is final.
+
+**In short:**
+- **Characters:** 450 sent and **197 billed**, including the v34-vo-07 retake. The subscription went from 14,232 to 14,429 of 131,000.
+- **The takes:** set A (Mas = Jeremy, candidate C), V.O. settings (stability 0.65, speed 0.85), −18 LUFS, dry. They are in `audio/ep01/v3-el/ep01-v34/<seg>/`, with each ID matched from `audio/ep01/v34/<seg>/lines-v34.json`.
+- **Clean first takes:** no retake was needed. ASR recall is 1.0 on all eight, with no clipped tails.
+- **"Gerg" passes the name check** on all three lines that have it (+3.2 to +4.1 over Kirk, Greg and Jerg).
+- **v3-vo-10** is Jeremy's existing take ("Mario used to sit where Gurg sits…", from phase 3); it is reused at no cost.
+
+| Id | Line | Voiced (Kokoro) | wpm (Kokoro) | F0 | ASR |
+|---|---|---|---|---|---|
+| v34-vo-01 | she's right. it will break. it goes out tonight anyway. | 4.53 s (3.85) | 132 (156) | 119 Hz | She's right. It will break. It goes out tonight anyway. |
+| v34-vo-02 | mostly the bill. we can't buy that many servers. someone can. | 5.35 s (4.45) | 123 (148) | 107 Hz | Mostly the bill. We can't buy that many servers. Someone can. |
+| v34-vo-04 | mine's half written. | 1.41 s (1.30) | 128 (138) | 122 Hz | Mine's half -written. |
+| v34-vo-05 | my other company. for when it gets harder to tell. | 3.86 s (3.38) | 155 (178) | 107 Hz | My other company, for when it gets harder to tell. |
+| v34-vo-06 | a year ago, forty users and a nice thread. | 3.37 s (3.02) | 160 (179) | 114 Hz | A year ago, 40 users and a nice thread. |
+| v34-vo-07 | gerg's not on it. probably the budget. good. i'll ask for more compute. | 6.83 s (5.03) | 114 (167) | 102 Hz | Gerg's not on it. Probably the budget. Good. I'll ask for more compute. |
+| v34-vo-09 | gerg walked out for me. | 1.67 s (1.43) | 180 (210) | 109 Hz | Gerg walked out for me. |
+| v34-vo-11 | they had four votes. i had the landlord. the money. gerg. | 5.23 s (4.64) | 126 (142) | 110 Hz | They had four votes. I had the landlord, the money, Gerg. |
+
+- **The four longer lines run 114–133 wpm,** in the 110–140 V.O. band and slower than the Kokoro reads (142–167). The short ones measure higher, as short lines do.
+- **The two counts read as counts.**
+  - v34-vo-11 ("They had four votes. I had the landlord. The money. Gerg.") has even pauses (0.41, 0.28, 0.51 s) and a narrow 6.3 st range, and the ASR hears the list ("the landlord, the money, Gerg").
+  - **v34-vo-07 was retaken** at the lead's request: brisk and quietly pleased, his last confident thought before the blow, a man already planning the meeting. The row above is the first take.
+    - The retake uses a per-line read (`line_settings` in `cast-el.json`): speed 1.0, stability 0.6, style 0.1, in place of the V.O. settings' 0.85 / 0.65 / 0.
+    - **Take 2 is picked by measurement and fit.** It is 5.71 s voiced (take 1 6.83, Kokoro 5.03) at 137 wpm, still inside the 110–140 V.O. band (take 1 114).
+    - Its articulation is 4.08 syllables a second, exactly the Kokoro read's rate (take 1 3.37). Its pauses are shorter (0.39–0.58 s, take 1 0.47–0.67).
+    - It is as quiet: the same 97 Hz median with a narrower range (9.1 st, take 1 10.2). ASR verbatim, no clipped tail, −18 LUFS.
+    - Take 1 stays in the cache: dropping `line_settings` brings it back for free.
+- **The EL-timed v3.4 lock** waits for the Kokoro lock. `tools/render_v34.sh`, then `el_lock.py --lock v34`, `el_bed.py --lock v34` and the manifest, as §X.
+
+---
+
 ## Y. Phase 7: the intro line (2026-09-28)
 
 **The note:** the showrunner, "in the intro mas's voice is not replaced" (PLAN.md §7 D). The EL films' 30 s intro still played the Kokoro Mas (am_michael) for "near the singularity; unclear which side.".

@@ -1,0 +1,199 @@
+{
+ "plan_total_s": 1256.875,
+ "chapters": [
+  {
+   "id": "title",
+   "from": "0:00.00",
+   "seconds": 3.0
+  },
+  {
+   "id": "coldopen",
+   "from": "0:03.00",
+   "seconds": 26.667
+  },
+  {
+   "id": "intro",
+   "from": "0:29.67",
+   "seconds": 30.0
+  },
+  {
+   "id": "card",
+   "from": "0:59.67",
+   "seconds": 2.0
+  },
+  {
+   "id": "act1",
+   "from": "1:01.67",
+   "seconds": 337.542
+  },
+  {
+   "id": "act2",
+   "from": "6:39.21",
+   "seconds": 181.208
+  },
+  {
+   "id": "act3",
+   "from": "9:40.42",
+   "seconds": 125.292
+  },
+  {
+   "id": "act4",
+   "from": "11:45.71",
+   "seconds": 507.792
+  },
+  {
+   "id": "tag",
+   "from": "20:13.50",
+   "seconds": 33.25
+  },
+  {
+   "id": "outro",
+   "from": "20:46.75",
+   "seconds": 10.125
+  }
+ ],
+ "segments": {
+  "coldopen": {
+   "v34_s": 26.667,
+   "v33_s_src": 26.667,
+   "estimate_s": 26.67,
+   "vs_estimate_s": -0.0,
+   "vs_v33_s": 0.0
+  },
+  "act1": {
+   "v34_s": 337.542,
+   "v33_s_src": 330.583,
+   "estimate_s": 337.84,
+   "vs_estimate_s": -0.3,
+   "vs_v33_s": 6.96
+  },
+  "act2": {
+   "v34_s": 181.208,
+   "v33_s_src": 190.542,
+   "estimate_s": 181.19,
+   "vs_estimate_s": 0.02,
+   "vs_v33_s": -9.33
+  },
+  "act3": {
+   "v34_s": 125.292,
+   "v33_s_src": 133.417,
+   "estimate_s": 125.32,
+   "vs_estimate_s": -0.03,
+   "vs_v33_s": -8.12
+  },
+  "act4": {
+   "v34_s": 507.792,
+   "v33_s_src": 505.75,
+   "estimate_s": 509.25,
+   "vs_estimate_s": -1.46,
+   "vs_v33_s": 2.04
+  },
+  "tag": {
+   "v34_s": 33.25,
+   "v33_s_src": 42.333,
+   "estimate_s": 33.24,
+   "vs_estimate_s": 0.01,
+   "vs_v33_s": -9.08
+  }
+ },
+ "story_v34_s": 1211.751,
+ "story_v33_s": 1229.292,
+ "pacing": {
+  "v33": {
+   "shots": 228,
+   "minutes": 20.49,
+   "asl_s": 5.39,
+   "median_shot_s": 3.98,
+   "stays": 48,
+   "median_stay_s": 15.2,
+   "stays_under_10": 17,
+   "stays_10_30": 17,
+   "stays_30_60": 9,
+   "stays_60_plus": 5,
+   "talk_stays": 30,
+   "entry_air_median_s": 3.8,
+   "entry_air_2s_or_less": 14,
+   "exit_air_median_s": 3.7,
+   "exit_air_1p5s_or_less": 6,
+   "lines": 235,
+   "jcut_lines": 6,
+   "lcut_lines": 5
+  },
+  "v34": {
+   "shots": 223,
+   "minutes": 20.2,
+   "asl_s": 5.43,
+   "median_shot_s": 4.0,
+   "stays": 48,
+   "median_stay_s": 15.2,
+   "stays_under_10": 17,
+   "stays_10_30": 17,
+   "stays_30_60": 9,
+   "stays_60_plus": 5,
+   "talk_stays": 31,
+   "entry_air_median_s": 3.7,
+   "entry_air_2s_or_less": 15,
+   "exit_air_median_s": 3.2,
+   "exit_air_1p5s_or_less": 6,
+   "lines": 231,
+   "jcut_lines": 6,
+   "lcut_lines": 5
+  },
+  "v33_spoken_only": {
+   "shots": 228,
+   "minutes": 20.49,
+   "asl_s": 5.39,
+   "median_shot_s": 3.98,
+   "stays": 48,
+   "median_stay_s": 15.2,
+   "stays_under_10": 17,
+   "stays_10_30": 17,
+   "stays_30_60": 9,
+   "stays_60_plus": 5,
+   "talk_stays": 29,
+   "entry_air_median_s": 5.1,
+   "entry_air_2s_or_less": 12,
+   "exit_air_median_s": 3.4,
+   "exit_air_1p5s_or_less": 6,
+   "lines": 222,
+   "jcut_lines": 6,
+   "lcut_lines": 5
+  },
+  "v34_spoken_only": {
+   "shots": 223,
+   "minutes": 20.2,
+   "asl_s": 5.43,
+   "median_shot_s": 4.0,
+   "stays": 48,
+   "median_stay_s": 15.2,
+   "stays_under_10": 17,
+   "stays_10_30": 17,
+   "stays_30_60": 9,
+   "stays_60_plus": 5,
+   "talk_stays": 30,
+   "entry_air_median_s": 5.2,
+   "entry_air_2s_or_less": 12,
+   "exit_air_median_s": 3.3,
+   "exit_air_1p5s_or_less": 6,
+   "lines": 216,
+   "jcut_lines": 6,
+   "lcut_lines": 5
+  }
+ },
+ "speech": {
+  "v33": {
+   "words": 1704,
+   "mas_words": 350,
+   "mas_share": 0.205,
+   "vo_lines": 13,
+   "vo_words": 82
+  },
+  "v34": {
+   "words": 1712,
+   "mas_words": 389,
+   "mas_share": 0.227,
+   "vo_lines": 15,
+   "vo_words": 124
+  }
+ }
+}

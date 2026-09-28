@@ -2026,5 +2026,16 @@
    "note": "The phase-2 fixes fitted to this voice (respell_note, say_lines_note): they apply only when this voice speaks."
   }
  },
- "respell_voices_note": "respell_voices: {voice_id: {words, lines, say}}, fixes that belong to one voice (a new voice starts from the house respellings and gets its own name check). The phase-2 Mas fixes moved here from respell_roles, respell_lines and say_lines on 2026-09-27, when Mas was recast."
+ "respell_voices_note": "respell_voices: {voice_id: {words, lines, say}}, fixes that belong to one voice (a new voice starts from the house respellings and gets its own name check). The phase-2 Mas fixes moved here from respell_roles, respell_lines and say_lines on 2026-09-27, when Mas was recast.",
+ "line_settings": {
+  "v34-vo-07": {
+   "EwzF7Z2UMSib9JaKx0Kg": {
+    "speed": 1.0,
+    "stability": 0.6,
+    "style": 0.1,
+    "_why": "the lead, 2026-09-28: one quicker retake, brisk and quietly pleased (his last confident thought before the blow: a man already planning the meeting). The V.O. settings (speed 0.85, stability 0.65, style 0) gave 114 wpm."
+   }
+  }
+ },
+ "line_settings_note": "Per-line settings over the role's (and its V.O.) settings, keyed by line id and voice id, for a read one line needs. Keys starting with '_' are notes."
 }

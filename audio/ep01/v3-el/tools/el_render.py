@@ -340,6 +340,9 @@ def render_take(row, role, c, rdef, cast, out, man, args, log, bump=0):
     settings = dict(c["settings"])
     if vo and c.get("vo_settings"):
         settings = dict(settings, **c["vo_settings"])
+    ls = ((cast.d.get("line_settings") or {}).get(row["id"]) or {}).get(c["voice_id"])
+    if ls:
+        settings = dict(settings, **{k: v for k, v in ls.items() if not k.startswith("_")})   # one line's own read
     model = c.get("model") or cast.d["model_default"]
     fmt = cast.d.get("output_format", "mp3_44100_192")
     sent, pairs = text_to_send(row, cast, role, pairs=True, voice_id=c["voice_id"])
@@ -595,6 +598,9 @@ def to_send_cost(r, cast, role, c, a):
     settings = dict(c["settings"])
     if vo and c.get("vo_settings"):
         settings = dict(settings, **c["vo_settings"])
+    ls = ((cast.d.get("line_settings") or {}).get(r["id"]) or {}).get(c["voice_id"])
+    if ls:
+        settings = dict(settings, **{k: v for k, v in ls.items() if not k.startswith("_")})
     model = c.get("model") or cast.d["model_default"]
     fmt = cast.d.get("output_format", "mp3_44100_192")
     sent = text_to_send(r, cast, role, voice_id=c["voice_id"])
