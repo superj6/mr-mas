@@ -164,21 +164,17 @@ BUILD_AB = ['Ab4', 'Ab4', 'Bb4', 'C5', 'Eb5', 'C5', 'Bb4', 'Ab4', 'Ab4', 'Ab4', 
 ACC4 = (1.0, 0.72, 0.84, 0.72)
 
 
-# the bible's own Build (OST-BIBLE s2.6), F minor: the home colour (v3 correction, 2026-09-27: no happy major keys)
-BUILD_F = ['F4', 'F4', 'G4', 'Ab4', 'C5', 'Ab4', 'G4', 'F4', 'F4', 'F4', 'G4', 'Ab4', 'C5', 'Eb5', 'C5', 'Ab4']
-
-
-def build_cell(shift=0, cell=None):
-    return [nm(p) + shift for p in (cell or BUILD_AB)]
+def build_cell(shift=0):
+    return [nm(p) + shift for p in BUILD_AB]
 
 
 def build16(cue, t0, count, vel, stop_at=None, felt_every=4, shift=0, duty=0.5, inst='lead', felt_vel=0.16,
-            felt_inst='felt', cell=None):
+            felt_inst='felt'):
     """a compile pass of `count` straight 16ths from t0 (segment s, snapped up to the grid's next sixteenth); the felt
     doubles every `felt_every`-th note an octave down (Mas is with him; 0 = never).  Stops before stop_at."""
     k0 = math.ceil((t0 - cue.T0) / S16 - 1e-6)
     t0 = cue.T0 + k0 * S16
-    ps = build_cell(shift, cell)
+    ps = build_cell(shift)
     placed = []
     for i in range(count):
         t = t0 + i * S16
