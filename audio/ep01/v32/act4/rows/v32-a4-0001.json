@@ -1,0 +1,348 @@
+{
+ "id": "v32-a4-0001",
+ "scene": "3",
+ "speaker": "NELEH",
+ "speaker_slug": "neleh",
+ "text": "Step three. Rima, the staff will come to you now.",
+ "spoken_as": "Step three.{0.3} Rima, the staff will come to you now.",
+ "delivery": "efficient, a little kind: she wants Rima ready, and on the post",
+ "tag": "[INVENTED] procedure only; no reason",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "S3.04",
+ "shot_id": "S3.04",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": "call",
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v32/act4/wav/v32-a4-0001.wav",
+ "mp3": null,
+ "duration_s": 3.655,
+ "frames_24": 88,
+ "voiced_span_s": 2.67,
+ "pace": {
+  "words": 10,
+  "wpm": 224.7,
+  "speed": 0.96,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.96,
+   "speed_band": [
+    0.92,
+    1.0
+   ],
+   "articulation_guide_sps": [
+    4.2,
+    4.8
+   ],
+   "turn_wpm_guide": [
+    150,
+    170
+   ],
+   "intent": "efficient, a little kind: she wants Rima ready, and on the post"
+  },
+  "measured": {
+   "wpm": 224.7,
+   "articulation_sps": 4.66,
+   "syllables": 11,
+   "span_s": 2.67,
+   "pauses_s": [
+    0.31
+   ]
+  },
+  "longest_internal_gap_s": 0.31,
+  "audible_in_s": 0.5,
+  "audible_out_s": 3.17
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "af_aoede (Kokoro-82M stock) · c-aoede-precise · speed 0.960",
+ "voiceId": "af_aoede",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch -2 st",
+  "peak -1.5 dB @300 Hz Q1.0",
+  "peak +1.5 dB @4500 Hz Q0.9",
+  "comp 2.5:1 @-22 dB (6/100 ms)",
+  "then the call chain: HPF 200 Hz; LPF 7000 Hz; peak +1.5 dB @1800 Hz Q1.0; comp 2.5:1 @-22 dB (5/90 ms); -16 LUFS",
+  "Kokoro speed 0.960 (the plan speed; neleh band 0.92-1.00); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'three': Kokoro 0.00 s -> 0.32 s (intended 0.30; +0.30 s of room tone at the quietest 5 ms; Kokoro ran the words together here (dip -31.7 dB): ear check)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "E"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "A"
+  },
+  {
+   "t": 0.708,
+   "f": 17,
+   "shape": "M"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "E"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "A"
+  },
+  {
+   "t": 1.042,
+   "f": 25,
+   "shape": "rest"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "E"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "A"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "M"
+  },
+  {
+   "t": 1.667,
+   "f": 40,
+   "shape": "E"
+  },
+  {
+   "t": 2.0,
+   "f": 48,
+   "shape": "A"
+  },
+  {
+   "t": 2.208,
+   "f": 53,
+   "shape": "O"
+  },
+  {
+   "t": 2.292,
+   "f": 55,
+   "shape": "E"
+  },
+  {
+   "t": 2.375,
+   "f": 57,
+   "shape": "A"
+  },
+  {
+   "t": 2.5,
+   "f": 60,
+   "shape": "M"
+  },
+  {
+   "t": 2.583,
+   "f": 62,
+   "shape": "E"
+  },
+  {
+   "t": 2.708,
+   "f": 65,
+   "shape": "O"
+  },
+  {
+   "t": 2.792,
+   "f": 67,
+   "shape": "E"
+  },
+  {
+   "t": 2.917,
+   "f": 70,
+   "shape": "A"
+  },
+  {
+   "t": 3.208,
+   "f": 77,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Step",
+   "t0": 0.48,
+   "t1": 0.75,
+   "f0": 12,
+   "f1": 18,
+   "ph": "stˈɛp"
+  },
+  {
+   "w": "three",
+   "t0": 0.755,
+   "t1": 1.055,
+   "f0": 18,
+   "f1": 25,
+   "ph": "θɹˈi"
+  },
+  {
+   "w": "Rima",
+   "t0": 1.43,
+   "t1": 1.755,
+   "f0": 34,
+   "f1": 42,
+   "ph": "ɹˈimə"
+  },
+  {
+   "w": "the",
+   "t0": 1.792,
+   "t1": 1.88,
+   "f0": 43,
+   "f1": 45,
+   "ph": "ðə"
+  },
+  {
+   "w": "staff",
+   "t0": 1.88,
+   "t1": 2.218,
+   "f0": 45,
+   "f1": 53,
+   "ph": "stˈæf"
+  },
+  {
+   "w": "will",
+   "t0": 2.218,
+   "t1": 2.33,
+   "f0": 53,
+   "f1": 56,
+   "ph": "wɪl"
+  },
+  {
+   "w": "come",
+   "t0": 2.33,
+   "t1": 2.58,
+   "f0": 56,
+   "f1": 62,
+   "ph": "kˈʌm"
+  },
+  {
+   "w": "to",
+   "t0": 2.58,
+   "t1": 2.68,
+   "f0": 62,
+   "f1": 64,
+   "ph": "tə"
+  },
+  {
+   "w": "you",
+   "t0": 2.68,
+   "t1": 2.805,
+   "f0": 64,
+   "f1": 67,
+   "ph": "ju"
+  },
+  {
+   "w": "now",
+   "t0": 2.805,
+   "t1": 3.19,
+   "f0": 67,
+   "f1": 77,
+   "ph": "nˈW"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.27,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 157.6,
+  "f0_range_st": 9.5,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Step 3, Rima, the staff will come to you now.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.426,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.445,
+  "rise_ms": 95.0,
+  "decay_ms": 45.0,
+  "decay_to_60_s": 0.035
+ },
+ "clean": {
+  "file": "audio/ep01/v32/act4/clean/v32-a4-0001.wav",
+  "note": "the dry read (no call chain), -16 LUFS"
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 2,
+   "word": "three",
+   "tts_s": 0.0,
+   "target_s": 0.3,
+   "point_s": 0.665,
+   "joined_speech": true,
+   "dip_db": -31.7,
+   "breath": false,
+   "crossfade_ms": [
+    60,
+    25
+   ],
+   "final_s": 0.32,
+   "opened_s": 0.3
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "674d379b8390c87a",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 3.55,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 1.69,
+   "rechecked_alone": false
+  }
+ }
+}

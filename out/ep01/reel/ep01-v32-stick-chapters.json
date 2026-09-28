@@ -1,0 +1,145 @@
+{
+ "reel": "out/ep01/reel/ep01-v32-stick.mp4",
+ "manifest": "show/reel/ep01-v32/ep01-v32.manifest.json",
+ "fps": 24,
+ "chapters": [
+  {
+   "id": "title",
+   "label": "TITLE",
+   "kind": "title",
+   "start": 0,
+   "end": 3,
+   "episodeStart": 0,
+   "source": "manifest",
+   "sound": "silence (the reel slate)"
+  },
+  {
+   "id": "coldopen",
+   "label": "COLD OPEN",
+   "kind": "reel",
+   "start": 3,
+   "end": 29.667,
+   "episodeStart": 3,
+   "source": "ep01-v32-coldopen",
+   "sound": "3 recorded take(s) over the temp bed"
+  },
+  {
+   "id": "intro",
+   "label": "INTRO",
+   "kind": "video",
+   "start": 29.667,
+   "end": 59.667,
+   "episodeStart": 29.667,
+   "source": "out/intro/intro-ep1-V1-1080p-flashfix.mp4",
+   "sound": "its own sound at -3 dB; hard cut in, 0.3 s tail out"
+  },
+  {
+   "id": "card",
+   "label": "CARD",
+   "kind": "reel",
+   "start": 59.667,
+   "end": 61.667,
+   "episodeStart": 59.667,
+   "source": "ep01-full-part1",
+   "sound": "the temp bed (no recorded takes yet)"
+  },
+  {
+   "id": "act1",
+   "label": "ACT ONE",
+   "kind": "reel",
+   "start": 61.667,
+   "end": 391.417,
+   "episodeStart": 61.667,
+   "source": "ep01-v32-act1",
+   "sound": "67 recorded take(s) over the temp bed"
+  },
+  {
+   "id": "act2",
+   "label": "ACT TWO",
+   "kind": "reel",
+   "start": 391.417,
+   "end": 584.458,
+   "episodeStart": 391.417,
+   "source": "ep01-v32-act2",
+   "sound": "38 recorded take(s) over the temp bed"
+  },
+  {
+   "id": "act3",
+   "label": "ACT THREE",
+   "kind": "reel",
+   "start": 584.458,
+   "end": 726.875,
+   "episodeStart": 584.458,
+   "source": "ep01-v32-act3",
+   "sound": "23 recorded take(s) over the temp bed"
+  },
+  {
+   "id": "act4",
+   "label": "ACT FOUR",
+   "kind": "reel",
+   "start": 726.875,
+   "end": 1235.333,
+   "episodeStart": 726.875,
+   "source": "ep01-v32-act4",
+   "sound": "100 recorded take(s) over the temp bed"
+  },
+  {
+   "id": "tag",
+   "label": "TAG",
+   "kind": "reel",
+   "start": 1235.333,
+   "end": 1276.667,
+   "episodeStart": 1235.333,
+   "source": "ep01-v32-tag",
+   "sound": "4 recorded take(s) over the temp bed"
+  },
+  {
+   "id": "outro",
+   "label": "OUTRO",
+   "kind": "video",
+   "start": 1276.667,
+   "end": 1286.792,
+   "episodeStart": 1276.667,
+   "source": "out/ep01/outro/outro-b-v3.mp4",
+   "sound": "its own sound at -1 dB; hard cut in, hard cut out"
+  }
+ ],
+ "beds": [
+  {
+   "label": "coldopen stick bed (v3.2)",
+   "from": 3,
+   "to": 59.666666666666664
+  },
+  {
+   "label": "card stick bed (v3.2)",
+   "from": 59.666666666666664,
+   "to": 61.666666666666664
+  },
+  {
+   "label": "act1 stick bed (v3.2)",
+   "from": 61.666666666666664,
+   "to": 391.4166666666667
+  },
+  {
+   "label": "act2 stick bed (v3.2)",
+   "from": 391.4166666666667,
+   "to": 584.4583333333334
+  },
+  {
+   "label": "act3 stick bed (v3.2)",
+   "from": 584.4583333333334,
+   "to": 726.875
+  },
+  {
+   "label": "act4 stick bed (v3.2)",
+   "from": 726.875,
+   "to": 1235.3333333333333
+  },
+  {
+   "label": "tag stick bed (v3.2)",
+   "from": 1235.3333333333333,
+   "to": 1286.7916666666667
+  }
+ ],
+ "warnings": []
+}

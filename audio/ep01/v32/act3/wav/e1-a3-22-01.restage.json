@@ -1,0 +1,243 @@
+{
+ "id": "e1-a3-22-01",
+ "scene": "22",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "so, how's the partnership going?",
+ "spoken_as": "so, how's the partnership going?",
+ "delivery": "on the monitor, on stage, turning to him; keynote-polite",
+ "tag": "[INVENTED · the question the real line answered on stage (mid §2: he was asked how Macrosoft thinks about the partnership, and laughed); the wording is ours. Dialogue pass 5: it was \"so. how's the partnership?\"; the full stop gave a false start before the question (the naturalness read). The facts owner confirms the on-stage question before lock; if it can't be confirmed, cut this line and the answer plays as before]",
+ "mode": "call",
+ "voiced_in_cut": true,
+ "on_camera": "monitor",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "POV",
+ "shot_id": "POV",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": "pa",
+ "room": null,
+ "est_s": 2.7,
+ "file": "audio/ep01/v32/act3/wav/e1-a3-22-01.stage.wav",
+ "mp3": null,
+ "duration_s": 3.01,
+ "frames_24": 73,
+ "voiced_span_s": 1.8,
+ "pace": {
+  "words": 5,
+  "wpm": 166.7,
+  "speed": 0.915,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.915,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.6,
+    4.2
+   ],
+   "turn_wpm_guide": [
+    135,
+    155
+   ],
+   "intent": "on the monitor, on stage, turning to him; keynote-polite"
+  },
+  "measured": {
+   "wpm": 166.7,
+   "articulation_sps": 4.44,
+   "syllables": 8,
+   "span_s": 1.8,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.5,
+  "audible_out_s": 2.3
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.915",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch 0",
+  "low shelf +2 dB @160 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak +1 dB @3200 Hz Q0.8",
+  "high shelf -1.5 dB @8000 Hz",
+  "comp 2.0:1 @-24 dB (10/120 ms)",
+  "then the monitor chain: HPF 200 Hz; LPF 7000 Hz; peak +1.5 dB @1800 Hz Q1.0; comp 2.5:1 @-22 dB (5/90 ms); -16 LUFS",
+  "Kokoro speed 0.915 (the centre of the band; mas-manalt band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "O"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "A"
+  },
+  {
+   "t": 1.0,
+   "f": 24,
+   "shape": "E"
+  },
+  {
+   "t": 1.125,
+   "f": 27,
+   "shape": "M"
+  },
+  {
+   "t": 1.208,
+   "f": 29,
+   "shape": "A"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "E"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "M"
+  },
+  {
+   "t": 1.833,
+   "f": 44,
+   "shape": "O"
+  },
+  {
+   "t": 2.042,
+   "f": 49,
+   "shape": "E"
+  },
+  {
+   "t": 2.333,
+   "f": 56,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "so",
+   "t0": 0.56,
+   "t1": 0.735,
+   "f0": 13,
+   "f1": 18,
+   "ph": "sˌO"
+  },
+  {
+   "w": "how's",
+   "t0": 0.785,
+   "t1": 1.072,
+   "f0": 19,
+   "f1": 26,
+   "ph": "hˌWz"
+  },
+  {
+   "w": "the",
+   "t0": 1.072,
+   "t1": 1.16,
+   "f0": 26,
+   "f1": 28,
+   "ph": "ðə"
+  },
+  {
+   "w": "partnership",
+   "t0": 1.16,
+   "t1": 1.785,
+   "f0": 28,
+   "f1": 43,
+   "ph": "pˈɑɹtnəɹʃˌɪp"
+  },
+  {
+   "w": "going",
+   "t0": 1.785,
+   "t1": 2.32,
+   "f0": 43,
+   "f1": 56,
+   "ph": "ɡˈOɪŋ"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.41,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 121.3,
+  "f0_range_st": 10.9,
+  "f0_method": "pYIN (a4lib.analyse)",
+  "final_move_st": -6.7,
+  "asr": "So how's the partnership going?",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.26,
+  "align_median_s": 0.045,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.38,
+  "rise_ms": 40.0,
+  "decay_ms": 185.0,
+  "decay_to_60_s": 0.335,
+  "q_lift_st": -4.38
+ },
+ "speaker_label": "MAS",
+ "clean": {
+  "file": "audio/ep01/act3/dialogue/fast-v2/clean/e1-a3-22-01.wav",
+  "note": "the dry read (no monitor chain), -16 LUFS"
+ },
+ "fast": {
+  "key": "a38fb9ddc39400c1",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 14.14,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": true,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 3,
+   "share_s": 2.89,
+   "rechecked_alone": false
+  }
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "restaged": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-22-01.wav (monitor chain) -> the dry read audio/ep01/act3/dialogue/fast-v2/clean/e1-a3-22-01.wav through fastrec's pa chain, -16 LUFS"
+}

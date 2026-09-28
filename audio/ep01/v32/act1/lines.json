@@ -1,0 +1,1335 @@
+[
+ {
+  "id": "v32-a1-0002",
+  "scene": "v32-7",
+  "speaker": "TASYA",
+  "speaker_slug": "tasya",
+  "text": "Mas.",
+  "spoken_as": "[Mas](/mˈɑs/).",
+  "delivery": "warm, unhurried, as if he'd been expecting the call; one filtered ring before it",
+  "tag": "[INVENTED]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": null,
+  "shot": "v32-7.03",
+  "shot_id": "v32-7.03",
+  "cue": null,
+  "lip_sync": true,
+  "status": "fast",
+  "device": "call",
+  "room": null,
+  "est_s": null,
+  "file": "audio/ep01/v32/act1/wav/v32-a1-0002.wav",
+  "mp3": null,
+  "duration_s": 1.65,
+  "frames_24": 40,
+  "voiced_span_s": 0.61,
+  "pace": {
+   "words": 1,
+   "wpm": 98.4,
+   "speed": 0.86,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 0.86,
+    "speed_band": [
+     0.88,
+     0.96
+    ],
+    "articulation_guide_sps": [
+     3.8,
+     4.4
+    ],
+    "turn_wpm_guide": [
+     125,
+     145
+    ],
+    "intent": "warm, unhurried, as if he'd been expecting the call; one filtered ring before it"
+   },
+   "measured": {
+    "wpm": 98.4,
+    "articulation_sps": 1.64,
+    "syllables": 1,
+    "span_s": 0.61,
+    "pauses_s": []
+   },
+   "longest_internal_gap_s": 0.0,
+   "audible_in_s": 0.51,
+   "audible_out_s": 1.12
+  },
+  "placement": {
+   "gap_before_s": null,
+   "follows": "picture"
+  },
+  "take": "s1",
+  "takes_tried": 1,
+  "pick_reason": "fast: one take (seed 1, plan speed)",
+  "voice": "am_eric (Kokoro-82M stock) · b-eric-warm · speed 0.860",
+  "voiceId": "am_eric",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 70 Hz",
+   "pitch -1.5 st",
+   "low shelf +2 dB @180 Hz",
+   "peak -1.5 dB @350 Hz Q1.0",
+   "high shelf +1.5 dB @6000 Hz",
+   "comp 2.0:1 @-24 dB (12/150 ms)",
+   "then the call chain: HPF 200 Hz; LPF 7000 Hz; peak +1.5 dB @1800 Hz Q1.0; comp 2.5:1 @-22 dB (5/90 ms); -16 LUFS",
+   "Kokoro speed 0.860 (the plan speed; tasya band 0.88-0.96); one whole read; no time-stretch, no carrier, no splice",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale (fastrec default; --breaths adds them)",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.625,
+    "f": 15,
+    "shape": "M"
+   },
+   {
+    "t": 0.75,
+    "f": 18,
+    "shape": "A"
+   },
+   {
+    "t": 1.042,
+    "f": 25,
+    "shape": "E"
+   },
+   {
+    "t": 1.125,
+    "f": 27,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "Mas",
+    "t0": 0.61,
+    "t1": 1.135,
+    "f0": 15,
+    "f1": 27,
+    "ph": "mˈɑs"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -3.04,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.5,
+   "median_f0_hz": 146.7,
+   "f0_range_st": 9.2,
+   "f0_method": "YIN (fast)",
+   "final_move_st": null,
+   "asr": "Moz.",
+   "cer": 0.667,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.435,
+   "align_median_s": 0.11,
+   "utmos_dry": null,
+   "utmos_plain_read": null,
+   "utmos_vs_plain": null,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": null,
+   "speech_head_s": 0.51,
+   "speech_tail_s": 0.45,
+   "rise_ms": 30.0,
+   "decay_ms": 125.0,
+   "decay_to_60_s": 0.085
+  },
+  "clean": {
+   "file": "audio/ep01/v32/act1/clean/v32-a1-0002.wav",
+   "note": "the dry read (no call chain), -16 LUFS"
+  },
+  "fast": {
+   "key": "4d270dcd4d93806f",
+   "tool": "fastrec 1.2 (2026-09-26)",
+   "shard": 1,
+   "wall_s": 2.06,
+   "takes": 1,
+   "settings": {
+    "asr": true,
+    "asr_beam": 1,
+    "asr_batch_s": 24.0,
+    "asr_align": false,
+    "utmos": false,
+    "prosody": false,
+    "breaths": false,
+    "threads": 3
+   },
+   "asr": {
+    "packed_with": 2,
+    "share_s": 0.59,
+    "rechecked_alone": false
+   }
+  },
+  "breaths": [],
+  "opened_pauses": [],
+  "alt_takes": []
+ },
+ {
+  "id": "v32-a1-0003",
+  "scene": "v32-7",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "it's the bill. we're going to need more servers.",
+  "spoken_as": "it's the bill.{0.35} we're going to need more servers.",
+  "delivery": "plain, a full ask (calibration §9: full sentences when he asks); the first three words the same as to Rima",
+  "tag": "[INVENTED]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": null,
+  "shot": "v32-7.03",
+  "shot_id": "v32-7.03",
+  "cue": null,
+  "lip_sync": true,
+  "status": "fast",
+  "device": null,
+  "room": null,
+  "est_s": null,
+  "file": "audio/ep01/v32/act1/wav/v32-a1-0003.wav",
+  "mp3": null,
+  "duration_s": 3.95,
+  "frames_24": 95,
+  "voiced_span_s": 2.79,
+  "pace": {
+   "words": 9,
+   "wpm": 193.5,
+   "speed": 0.9,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 0.9,
+    "speed_band": [
+     0.88,
+     0.95
+    ],
+    "articulation_guide_sps": [
+     3.6,
+     4.2
+    ],
+    "turn_wpm_guide": [
+     135,
+     155
+    ],
+    "intent": "plain, a full ask (calibration §9: full sentences when he asks); the first three words the same as to Rima"
+   },
+   "measured": {
+    "wpm": 193.5,
+    "articulation_sps": 4.3,
+    "syllables": 11,
+    "span_s": 2.79,
+    "pauses_s": [
+     0.06,
+     0.23
+    ]
+   },
+   "longest_internal_gap_s": 0.23,
+   "audible_in_s": 0.52,
+   "audible_out_s": 3.31
+  },
+  "placement": {
+   "gap_before_s": null,
+   "follows": "picture"
+  },
+  "take": "s1",
+  "takes_tried": 1,
+  "pick_reason": "fast: one take (seed 1, plan speed)",
+  "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.900",
+  "voiceId": "am_michael",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 70 Hz",
+   "pitch 0",
+   "low shelf +2 dB @160 Hz",
+   "peak -2 dB @320 Hz Q1.0",
+   "peak +1 dB @3200 Hz Q0.8",
+   "high shelf -1.5 dB @8000 Hz",
+   "comp 2.0:1 @-24 dB (10/120 ms)",
+   "Kokoro speed 0.900 (the plan speed; mas-manalt band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+   "pause after 'bill': Kokoro 0.23 s -> 0.36 s (intended 0.35; +0.12 s of room tone at the quietest 5 ms)",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale (fastrec default; --breaths adds them)",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.583,
+    "f": 14,
+    "shape": "E"
+   },
+   {
+    "t": 0.917,
+    "f": 22,
+    "shape": "M"
+   },
+   {
+    "t": 1.0,
+    "f": 24,
+    "shape": "A"
+   },
+   {
+    "t": 1.25,
+    "f": 30,
+    "shape": "E"
+   },
+   {
+    "t": 1.417,
+    "f": 34,
+    "shape": "rest"
+   },
+   {
+    "t": 1.667,
+    "f": 40,
+    "shape": "E"
+   },
+   {
+    "t": 1.792,
+    "f": 43,
+    "shape": "O"
+   },
+   {
+    "t": 1.875,
+    "f": 45,
+    "shape": "E"
+   },
+   {
+    "t": 2.167,
+    "f": 52,
+    "shape": "A"
+   },
+   {
+    "t": 2.292,
+    "f": 55,
+    "shape": "E"
+   },
+   {
+    "t": 2.375,
+    "f": 57,
+    "shape": "M"
+   },
+   {
+    "t": 2.458,
+    "f": 59,
+    "shape": "O"
+   },
+   {
+    "t": 2.542,
+    "f": 61,
+    "shape": "E"
+   },
+   {
+    "t": 2.667,
+    "f": 64,
+    "shape": "O"
+   },
+   {
+    "t": 2.833,
+    "f": 68,
+    "shape": "E"
+   },
+   {
+    "t": 3.333,
+    "f": 80,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "it's",
+    "t0": 0.59,
+    "t1": 0.765,
+    "f0": 14,
+    "f1": 18,
+    "ph": "ɪts"
+   },
+   {
+    "w": "the",
+    "t0": 0.765,
+    "t1": 0.902,
+    "f0": 18,
+    "f1": 22,
+    "ph": "ðə"
+   },
+   {
+    "w": "bill",
+    "t0": 0.902,
+    "t1": 1.415,
+    "f0": 22,
+    "f1": 34,
+    "ph": "bˈɪl"
+   },
+   {
+    "w": "we're",
+    "t0": 1.64,
+    "t1": 1.765,
+    "f0": 39,
+    "f1": 42,
+    "ph": "wɪɹ"
+   },
+   {
+    "w": "going",
+    "t0": 1.765,
+    "t1": 1.99,
+    "f0": 42,
+    "f1": 48,
+    "ph": "ɡˈOɪŋ"
+   },
+   {
+    "w": "to",
+    "t0": 1.99,
+    "t1": 2.09,
+    "f0": 48,
+    "f1": 50,
+    "ph": "tə"
+   },
+   {
+    "w": "need",
+    "t0": 2.09,
+    "t1": 2.365,
+    "f0": 50,
+    "f1": 57,
+    "ph": "nˈid"
+   },
+   {
+    "w": "more",
+    "t0": 2.365,
+    "t1": 2.615,
+    "f0": 57,
+    "f1": 63,
+    "ph": "mˈɔɹ"
+   },
+   {
+    "w": "servers",
+    "t0": 2.615,
+    "t1": 3.33,
+    "f0": 63,
+    "f1": 80,
+    "ph": "sˈɜɹvəɹz"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -3.73,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.52,
+   "median_f0_hz": 118.6,
+   "f0_range_st": 10.5,
+   "f0_method": "YIN (fast)",
+   "final_move_st": null,
+   "asr": "It's the bill. We're going to need more servers.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.186,
+   "align_median_s": 0.035,
+   "utmos_dry": null,
+   "utmos_plain_read": null,
+   "utmos_vs_plain": null,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": null,
+   "speech_head_s": 0.52,
+   "speech_tail_s": 0.37,
+   "rise_ms": 100.0,
+   "decay_ms": 45.0,
+   "decay_to_60_s": 0.275
+  },
+  "fast": {
+   "key": "3ac725aa9aa95a43",
+   "tool": "fastrec 1.2 (2026-09-26)",
+   "shard": 0,
+   "wall_s": 3.28,
+   "takes": 1,
+   "settings": {
+    "asr": true,
+    "asr_beam": 1,
+    "asr_batch_s": 24.0,
+    "asr_align": false,
+    "utmos": false,
+    "prosody": false,
+    "breaths": false,
+    "threads": 3
+   },
+   "asr": {
+    "packed_with": 1,
+    "share_s": 1.14,
+    "rechecked_alone": false
+   }
+  },
+  "breaths": [],
+  "opened_pauses": [
+   {
+    "after_word": 3,
+    "word": "bill",
+    "tts_s": 0.225,
+    "target_s": 0.35,
+    "point_s": 1.06,
+    "joined_speech": false,
+    "dip_db": -56.2,
+    "breath": false,
+    "crossfade_ms": [
+     8,
+     8
+    ],
+    "final_s": 0.36,
+    "opened_s": 0.125
+   }
+  ],
+  "alt_takes": []
+ },
+ {
+  "id": "v32-a1-0004",
+  "scene": "v32-7",
+  "speaker": "TASYA",
+  "speaker_slug": "tasya",
+  "text": "I'll bring a pen.",
+  "spoken_as": "I'll bring a pen.",
+  "delivery": "delighted, a host accepting an invitation",
+  "tag": "[INVENTED] the pen clipped to the check (9.04), the one Mas pockets and writes PLEASE with (12.04)",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": null,
+  "shot": "v32-7.03",
+  "shot_id": "v32-7.03",
+  "cue": null,
+  "lip_sync": true,
+  "status": "fast",
+  "device": "call",
+  "room": null,
+  "est_s": null,
+  "file": "audio/ep01/v32/act1/wav/v32-a1-0004.wav",
+  "mp3": null,
+  "duration_s": 2.325,
+  "frames_24": 56,
+  "voiced_span_s": 1.17,
+  "pace": {
+   "words": 4,
+   "wpm": 205.1,
+   "speed": 0.86,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 0.86,
+    "speed_band": [
+     0.88,
+     0.96
+    ],
+    "articulation_guide_sps": [
+     3.8,
+     4.4
+    ],
+    "turn_wpm_guide": [
+     125,
+     145
+    ],
+    "intent": "delighted, a host accepting an invitation"
+   },
+   "measured": {
+    "wpm": 205.1,
+    "articulation_sps": 3.42,
+    "syllables": 4,
+    "span_s": 1.17,
+    "pauses_s": []
+   },
+   "longest_internal_gap_s": 0.0,
+   "audible_in_s": 0.52,
+   "audible_out_s": 1.69
+  },
+  "placement": {
+   "gap_before_s": null,
+   "follows": "picture"
+  },
+  "take": "s1",
+  "takes_tried": 1,
+  "pick_reason": "fast: one take (seed 1, plan speed)",
+  "voice": "am_eric (Kokoro-82M stock) · b-eric-warm · speed 0.860",
+  "voiceId": "am_eric",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 70 Hz",
+   "pitch -1.5 st",
+   "low shelf +2 dB @180 Hz",
+   "peak -1.5 dB @350 Hz Q1.0",
+   "high shelf +1.5 dB @6000 Hz",
+   "comp 2.0:1 @-24 dB (12/150 ms)",
+   "then the call chain: HPF 200 Hz; LPF 7000 Hz; peak +1.5 dB @1800 Hz Q1.0; comp 2.5:1 @-22 dB (5/90 ms); -16 LUFS",
+   "Kokoro speed 0.860 (the plan speed; tasya band 0.88-0.96); one whole read; no time-stretch, no carrier, no splice",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale (fastrec default; --breaths adds them)",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.542,
+    "f": 13,
+    "shape": "A"
+   },
+   {
+    "t": 0.708,
+    "f": 17,
+    "shape": "M"
+   },
+   {
+    "t": 0.833,
+    "f": 20,
+    "shape": "A"
+   },
+   {
+    "t": 1.083,
+    "f": 26,
+    "shape": "M"
+   },
+   {
+    "t": 1.208,
+    "f": 29,
+    "shape": "A"
+   },
+   {
+    "t": 1.542,
+    "f": 37,
+    "shape": "E"
+   },
+   {
+    "t": 1.708,
+    "f": 41,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "I'll",
+    "t0": 0.56,
+    "t1": 0.76,
+    "f0": 13,
+    "f1": 18,
+    "ph": "ˌIl"
+   },
+   {
+    "w": "bring",
+    "t0": 0.76,
+    "t1": 0.998,
+    "f0": 18,
+    "f1": 24,
+    "ph": "bɹˈɪŋ"
+   },
+   {
+    "w": "a",
+    "t0": 0.998,
+    "t1": 1.085,
+    "f0": 24,
+    "f1": 26,
+    "ph": "ɐ"
+   },
+   {
+    "w": "pen",
+    "t0": 1.085,
+    "t1": 1.71,
+    "f0": 26,
+    "f1": 41,
+    "ph": "pˈɛn"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -2.09,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.51,
+   "median_f0_hz": 155.7,
+   "f0_range_st": 13.1,
+   "f0_method": "YIN (fast)",
+   "final_move_st": null,
+   "asr": "I'll bring a pen.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.435,
+   "align_median_s": 0.047,
+   "utmos_dry": null,
+   "utmos_plain_read": null,
+   "utmos_vs_plain": null,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": null,
+   "speech_head_s": 0.52,
+   "speech_tail_s": 0.45,
+   "rise_ms": 35.0,
+   "decay_ms": 95.0,
+   "decay_to_60_s": 0.19
+  },
+  "clean": {
+   "file": "audio/ep01/v32/act1/clean/v32-a1-0004.wav",
+   "note": "the dry read (no call chain), -16 LUFS"
+  },
+  "fast": {
+   "key": "b875fe10730d72e7",
+   "tool": "fastrec 1.2 (2026-09-26)",
+   "shard": 1,
+   "wall_s": 1.85,
+   "takes": 1,
+   "settings": {
+    "asr": true,
+    "asr_beam": 1,
+    "asr_batch_s": 24.0,
+    "asr_align": false,
+    "utmos": false,
+    "prosody": false,
+    "breaths": false,
+    "threads": 3
+   },
+   "asr": {
+    "packed_with": 2,
+    "share_s": 0.72,
+    "rechecked_alone": false
+   }
+  },
+  "breaths": [],
+  "opened_pauses": [],
+  "alt_takes": []
+ },
+ {
+  "id": "v32-a1-0005",
+  "scene": "9",
+  "speaker": "GERG MOCKBRAN",
+  "speaker_slug": "gerg-mockbran",
+  "text": "Elgoog's going to hear about this from a search box.",
+  "spoken_as": "Elgoog's going to hear about this from a search box.",
+  "delivery": "delighted, eyes on the TV: his work, beating the rival in its own game",
+  "tag": "[INVENTED] the new GNIB ran on the lab's model (facts #8)",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": null,
+  "shot": "9.10",
+  "shot_id": "9.10",
+  "cue": null,
+  "lip_sync": true,
+  "status": "fast",
+  "device": null,
+  "room": null,
+  "est_s": null,
+  "file": "audio/ep01/v32/act1/wav/v32-a1-0005.wav",
+  "mp3": null,
+  "duration_s": 3.33,
+  "frames_24": 80,
+  "voiced_span_s": 2.18,
+  "pace": {
+   "words": 10,
+   "wpm": 275.2,
+   "speed": 1.02,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 1.02,
+    "speed_band": [
+     1.02,
+     1.1
+    ],
+    "articulation_guide_sps": [
+     5.0,
+     5.8
+    ],
+    "turn_wpm_guide": [
+     175,
+     200
+    ],
+    "intent": "delighted, eyes on the TV: his work, beating the rival in its own game"
+   },
+   "measured": {
+    "wpm": 275.2,
+    "articulation_sps": 5.96,
+    "syllables": 13,
+    "span_s": 2.18,
+    "pauses_s": []
+   },
+   "longest_internal_gap_s": 0.0,
+   "audible_in_s": 0.5,
+   "audible_out_s": 2.68
+  },
+  "placement": {
+   "gap_before_s": null,
+   "follows": "picture"
+  },
+  "take": "s1",
+  "takes_tried": 1,
+  "pick_reason": "fast: one take (seed 1, plan speed)",
+  "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.020",
+  "voiceId": "am_puck",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 90 Hz",
+   "pitch +1.5 st",
+   "peak -2 dB @250 Hz Q1.0",
+   "peak +2 dB @4000 Hz Q0.9",
+   "comp 3.0:1 @-22 dB (4/80 ms)",
+   "Kokoro speed 1.020 (the plan speed; gerg-mockbran band 1.02-1.10); one whole read; no time-stretch, no carrier, no splice",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale (fastrec default; --breaths adds them)",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.5,
+    "f": 12,
+    "shape": "A"
+   },
+   {
+    "t": 0.583,
+    "f": 14,
+    "shape": "E"
+   },
+   {
+    "t": 0.667,
+    "f": 16,
+    "shape": "O"
+   },
+   {
+    "t": 0.792,
+    "f": 19,
+    "shape": "E"
+   },
+   {
+    "t": 0.917,
+    "f": 22,
+    "shape": "O"
+   },
+   {
+    "t": 1.0,
+    "f": 24,
+    "shape": "E"
+   },
+   {
+    "t": 1.167,
+    "f": 28,
+    "shape": "A"
+   },
+   {
+    "t": 1.25,
+    "f": 30,
+    "shape": "E"
+   },
+   {
+    "t": 1.375,
+    "f": 33,
+    "shape": "A"
+   },
+   {
+    "t": 1.458,
+    "f": 35,
+    "shape": "E"
+   },
+   {
+    "t": 1.708,
+    "f": 41,
+    "shape": "A"
+   },
+   {
+    "t": 1.875,
+    "f": 45,
+    "shape": "E"
+   },
+   {
+    "t": 1.958,
+    "f": 47,
+    "shape": "O"
+   },
+   {
+    "t": 2.083,
+    "f": 50,
+    "shape": "E"
+   },
+   {
+    "t": 2.208,
+    "f": 53,
+    "shape": "M"
+   },
+   {
+    "t": 2.292,
+    "f": 55,
+    "shape": "A"
+   },
+   {
+    "t": 2.5,
+    "f": 60,
+    "shape": "E"
+   },
+   {
+    "t": 2.708,
+    "f": 65,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "Elgoog's",
+    "t0": 0.47,
+    "t1": 0.883,
+    "f0": 11,
+    "f1": 21,
+    "ph": "ˈɛlɡuɡz"
+   },
+   {
+    "w": "going",
+    "t0": 0.883,
+    "t1": 1.057,
+    "f0": 21,
+    "f1": 25,
+    "ph": "ɡˈOɪŋ"
+   },
+   {
+    "w": "to",
+    "t0": 1.057,
+    "t1": 1.132,
+    "f0": 25,
+    "f1": 27,
+    "ph": "tə"
+   },
+   {
+    "w": "hear",
+    "t0": 1.132,
+    "t1": 1.258,
+    "f0": 27,
+    "f1": 30,
+    "ph": "hˈɪɹ"
+   },
+   {
+    "w": "about",
+    "t0": 1.258,
+    "t1": 1.495,
+    "f0": 30,
+    "f1": 36,
+    "ph": "əbˈWt"
+   },
+   {
+    "w": "this",
+    "t0": 1.495,
+    "t1": 1.695,
+    "f0": 36,
+    "f1": 41,
+    "ph": "ðɪs"
+   },
+   {
+    "w": "from",
+    "t0": 1.695,
+    "t1": 1.832,
+    "f0": 41,
+    "f1": 44,
+    "ph": "fɹʌm"
+   },
+   {
+    "w": "a",
+    "t0": 1.832,
+    "t1": 1.895,
+    "f0": 44,
+    "f1": 45,
+    "ph": "ɐ"
+   },
+   {
+    "w": "search",
+    "t0": 1.895,
+    "t1": 2.195,
+    "f0": 45,
+    "f1": 53,
+    "ph": "sˈɜɹʧ"
+   },
+   {
+    "w": "box",
+    "t0": 2.195,
+    "t1": 2.7,
+    "f0": 53,
+    "f1": 65,
+    "ph": "bˈɑks"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -3.61,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.5,
+   "median_f0_hz": 128.1,
+   "f0_range_st": 11.0,
+   "f0_method": "YIN (fast)",
+   "final_move_st": null,
+   "asr": "Elgou is going to hear about this from a search box.",
+   "cer": 0.049,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.435,
+   "align_median_s": 0.115,
+   "utmos_dry": null,
+   "utmos_plain_read": null,
+   "utmos_vs_plain": null,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": null,
+   "speech_head_s": 0.5,
+   "speech_tail_s": 0.45,
+   "rise_ms": 20.0,
+   "decay_ms": 235.0,
+   "decay_to_60_s": 0.2
+  },
+  "fast": {
+   "key": "752d9510504af087",
+   "tool": "fastrec 1.2 (2026-09-26)",
+   "shard": 1,
+   "wall_s": 2.55,
+   "takes": 1,
+   "settings": {
+    "asr": true,
+    "asr_beam": 1,
+    "asr_batch_s": 24.0,
+    "asr_align": false,
+    "utmos": false,
+    "prosody": false,
+    "breaths": false,
+    "threads": 3
+   },
+   "asr": {
+    "packed_with": 2,
+    "share_s": 0.93,
+    "rechecked_alone": false
+   }
+  },
+  "breaths": [],
+  "opened_pauses": [],
+  "alt_takes": []
+ },
+ {
+  "id": "v32-a1-0007",
+  "scene": "12",
+  "speaker": "OIGNEB",
+  "speaker_slug": "oigneb",
+  "text": "You signed it. Now put the iron down.",
+  "spoken_as": "You signed it.{0.3} Now put the iron down.",
+  "delivery": "gentle, precise, the PAUSE sign held higher; he wants the soldering iron put down",
+  "tag": "[INVENTED] the letter's ask (six months) is on the clipboard",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": null,
+  "shot": "12.02",
+  "shot_id": "12.02",
+  "cue": null,
+  "lip_sync": true,
+  "status": "fast",
+  "device": null,
+  "room": null,
+  "est_s": null,
+  "file": "audio/ep01/v32/act1/wav/v32-a1-0007.wav",
+  "mp3": null,
+  "duration_s": 3.905,
+  "frames_24": 94,
+  "voiced_span_s": 2.52,
+  "pace": {
+   "words": 8,
+   "wpm": 190.5,
+   "speed": 0.87,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 0.87,
+    "speed_band": [
+     0.85,
+     0.93
+    ],
+    "articulation_guide_sps": [
+     4.0,
+     4.6
+    ],
+    "turn_wpm_guide": [
+     140,
+     155
+    ],
+    "intent": "gentle, precise, the PAUSE sign held higher; he wants the soldering iron put down"
+   },
+   "measured": {
+    "wpm": 190.5,
+    "articulation_sps": 4.11,
+    "syllables": 9,
+    "span_s": 2.52,
+    "pauses_s": [
+     0.33
+    ]
+   },
+   "longest_internal_gap_s": 0.33,
+   "audible_in_s": 0.51,
+   "audible_out_s": 3.03
+  },
+  "placement": {
+   "gap_before_s": null,
+   "follows": "picture"
+  },
+  "take": "s1",
+  "takes_tried": 1,
+  "pick_reason": "fast: one take (seed 1, plan speed)",
+  "voice": "am_eric*0.50+am_onyx*0.50 (Kokoro-82M stock) · c-eric-onyx-gentle · speed 0.870",
+  "voiceId": "am_eric*0.50+am_onyx*0.50",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 70 Hz",
+   "pitch +0.5 st",
+   "low shelf +1.5 dB @180 Hz",
+   "peak -1.5 dB @350 Hz Q1.0",
+   "peak +0.5 dB @3000 Hz Q0.9",
+   "high shelf -1 dB @7000 Hz",
+   "comp 2.0:1 @-24 dB (10/140 ms)",
+   "Kokoro speed 0.870 (the plan speed; oigneb band 0.85-0.93); one whole read; no time-stretch, no carrier, no splice",
+   "pause after 'it': Kokoro 0.00 s -> 0.33 s (intended 0.30; +0.30 s of room tone at the quietest 5 ms; Kokoro ran the words together here (dip -39.1 dB): ear check)",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale (fastrec default; --breaths adds them)",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.5,
+    "f": 12,
+    "shape": "E"
+   },
+   {
+    "t": 0.583,
+    "f": 14,
+    "shape": "O"
+   },
+   {
+    "t": 0.667,
+    "f": 16,
+    "shape": "E"
+   },
+   {
+    "t": 0.75,
+    "f": 18,
+    "shape": "A"
+   },
+   {
+    "t": 0.958,
+    "f": 23,
+    "shape": "E"
+   },
+   {
+    "t": 1.208,
+    "f": 29,
+    "shape": "rest"
+   },
+   {
+    "t": 1.583,
+    "f": 38,
+    "shape": "E"
+   },
+   {
+    "t": 1.667,
+    "f": 40,
+    "shape": "A"
+   },
+   {
+    "t": 1.792,
+    "f": 43,
+    "shape": "M"
+   },
+   {
+    "t": 1.875,
+    "f": 45,
+    "shape": "O"
+   },
+   {
+    "t": 1.958,
+    "f": 47,
+    "shape": "E"
+   },
+   {
+    "t": 2.125,
+    "f": 51,
+    "shape": "A"
+   },
+   {
+    "t": 2.292,
+    "f": 55,
+    "shape": "E"
+   },
+   {
+    "t": 2.625,
+    "f": 63,
+    "shape": "A"
+   },
+   {
+    "t": 2.917,
+    "f": 70,
+    "shape": "E"
+   },
+   {
+    "t": 3.042,
+    "f": 73,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "You",
+    "t0": 0.52,
+    "t1": 0.67,
+    "f0": 12,
+    "f1": 16,
+    "ph": "jˌu"
+   },
+   {
+    "w": "signed",
+    "t0": 0.67,
+    "t1": 1.095,
+    "f0": 16,
+    "f1": 26,
+    "ph": "sˈInd"
+   },
+   {
+    "w": "it",
+    "t0": 1.095,
+    "t1": 1.22,
+    "f0": 26,
+    "f1": 29,
+    "ph": "ɪt"
+   },
+   {
+    "w": "Now",
+    "t0": 1.595,
+    "t1": 1.82,
+    "f0": 38,
+    "f1": 44,
+    "ph": "nˈW"
+   },
+   {
+    "w": "put",
+    "t0": 1.82,
+    "t1": 1.982,
+    "f0": 44,
+    "f1": 48,
+    "ph": "pˌʊt"
+   },
+   {
+    "w": "the",
+    "t0": 1.982,
+    "t1": 2.132,
+    "f0": 48,
+    "f1": 51,
+    "ph": "ði"
+   },
+   {
+    "w": "iron",
+    "t0": 2.132,
+    "t1": 2.52,
+    "f0": 51,
+    "f1": 60,
+    "ph": "ˈIəɹn"
+   },
+   {
+    "w": "down",
+    "t0": 2.52,
+    "t1": 3.05,
+    "f0": 60,
+    "f1": 73,
+    "ph": "dˌWn"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -2.62,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.51,
+   "median_f0_hz": 118.5,
+   "f0_range_st": 13.5,
+   "f0_method": "YIN (fast)",
+   "final_move_st": null,
+   "asr": "You signed it. Now put the iron down.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.186,
+   "align_median_s": 0.042,
+   "utmos_dry": null,
+   "utmos_plain_read": null,
+   "utmos_vs_plain": null,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": null,
+   "speech_head_s": 0.51,
+   "speech_tail_s": 0.45,
+   "rise_ms": 25.0,
+   "decay_ms": 215.0,
+   "decay_to_60_s": 0.43
+  },
+  "fast": {
+   "key": "909231c02e124ddd",
+   "tool": "fastrec 1.2 (2026-09-26)",
+   "shard": 0,
+   "wall_s": 2.7,
+   "takes": 1,
+   "settings": {
+    "asr": true,
+    "asr_beam": 1,
+    "asr_batch_s": 24.0,
+    "asr_align": false,
+    "utmos": false,
+    "prosody": false,
+    "breaths": false,
+    "threads": 3
+   },
+   "asr": {
+    "packed_with": 1,
+    "share_s": 1.13,
+    "rechecked_alone": false
+   }
+  },
+  "breaths": [],
+  "opened_pauses": [
+   {
+    "after_word": 3,
+    "word": "it",
+    "tts_s": 0.0,
+    "target_s": 0.3,
+    "point_s": 0.77,
+    "joined_speech": true,
+    "dip_db": -39.1,
+    "breath": false,
+    "crossfade_ms": [
+     60,
+     25
+    ],
+    "final_s": 0.325,
+    "opened_s": 0.3
+   }
+  ],
+  "alt_takes": []
+ }
+]

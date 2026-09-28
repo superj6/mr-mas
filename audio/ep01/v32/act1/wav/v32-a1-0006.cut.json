@@ -1,0 +1,180 @@
+{
+ "id": "v32-a1-0006",
+ "scene": "10",
+ "speaker": "TASYA",
+ "speaker_slug": "tasya",
+ "text": "House rules Sydney",
+ "spoken_as": "House rules, Sydney.{0.4} Five questions, then a fresh start.",
+ "delivery": "warmly, to her and for Mas, without breaking his smile",
+ "tag": "[INVENTED] the Feb 17, 2023 cap of five turns a session (facts #9 [V])",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "v31-10.03",
+ "shot_id": "v31-10.03",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v32/act1/wav/v32-a1-0006.wav",
+ "duration_s": 1.875,
+ "frames_24": 113,
+ "voiced_span_s": 3.46,
+ "pace": {
+  "words": 9,
+  "wpm": 156.1,
+  "speed": 0.86,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.86,
+   "speed_band": [
+    0.88,
+    0.96
+   ],
+   "articulation_guide_sps": [
+    3.8,
+    4.4
+   ],
+   "turn_wpm_guide": [
+    125,
+    145
+   ],
+   "intent": "warmly, to her and for Mas, without breaking his smile"
+  },
+  "measured": {
+   "wpm": 156.1,
+   "articulation_sps": 3.63,
+   "syllables": 11,
+   "span_s": 3.46,
+   "pauses_s": [
+    0.43
+   ]
+  },
+  "longest_internal_gap_s": 0.43,
+  "audible_in_s": 0.33,
+  "audible_out_s": 1.605
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_eric (Kokoro-82M stock) · b-eric-warm · speed 0.860",
+ "voiceId": "am_eric",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch -1.5 st",
+  "low shelf +2 dB @180 Hz",
+  "peak -1.5 dB @350 Hz Q1.0",
+  "high shelf +1.5 dB @6000 Hz",
+  "comp 2.0:1 @-24 dB (12/150 ms)",
+  "Kokoro speed 0.860 (the plan speed; tasya band 0.88-0.96); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'Sydney': Kokoro 0.00 s -> 0.43 s (intended 0.40; +0.40 s of room tone at the quietest 5 ms; Kokoro ran the words together here (dip -36.0 dB): ear check)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "words": [
+  {
+   "w": "House",
+   "t0": 0.35,
+   "t1": 0.663,
+   "f0": 12,
+   "f1": 20,
+   "ph": "hˈWs"
+  },
+  {
+   "w": "rules",
+   "t0": 0.663,
+   "t1": 1.075,
+   "f0": 20,
+   "f1": 30,
+   "ph": "ɹˈulz"
+  },
+  {
+   "w": "Sydney",
+   "t0": 1.125,
+   "t1": 1.525,
+   "f0": 31,
+   "f1": 41,
+   "ph": "sˈɪdni"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -1.93,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 149.2,
+  "f0_range_st": 12.0,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "House rules, Sydney. Five questions, then a fresh start.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.204,
+  "align_median_s": 0.058,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 55.0,
+  "decay_ms": 185.0,
+  "decay_to_60_s": 0.29
+ },
+ "fast": {
+  "key": "4ec364870e57ff3d",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 3.17,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 3,
+   "share_s": 0.83,
+   "rechecked_alone": false
+  }
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 3,
+   "word": "Sydney",
+   "tts_s": 0.0,
+   "target_s": 0.4,
+   "point_s": 1.34,
+   "joined_speech": true,
+   "dip_db": -36.0,
+   "breath": false,
+   "crossfade_ms": [
+    60,
+    25
+   ],
+   "final_s": 0.43,
+   "opened_s": 0.4
+  }
+ ],
+ "cut_from": "v31-a1-0006 words 0-2 (audio/ep01/v31/act1/wav/v31-a1-0006.wav, 0.165-1.927 s), 12 ms fades, room-tone handles to 0.35 s"
+}

@@ -1,0 +1,309 @@
+{
+ "id": "v32-a1-0007",
+ "scene": "12",
+ "speaker": "OIGNEB",
+ "speaker_slug": "oigneb",
+ "text": "You signed it. Now put the iron down.",
+ "spoken_as": "You signed it.{0.3} Now put the iron down.",
+ "delivery": "gentle, precise, the PAUSE sign held higher; he wants the soldering iron put down",
+ "tag": "[INVENTED] the letter's ask (six months) is on the clipboard",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "12.02",
+ "shot_id": "12.02",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v32/act1/wav/v32-a1-0007.wav",
+ "mp3": null,
+ "duration_s": 3.905,
+ "frames_24": 94,
+ "voiced_span_s": 2.52,
+ "pace": {
+  "words": 8,
+  "wpm": 190.5,
+  "speed": 0.87,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.87,
+   "speed_band": [
+    0.85,
+    0.93
+   ],
+   "articulation_guide_sps": [
+    4.0,
+    4.6
+   ],
+   "turn_wpm_guide": [
+    140,
+    155
+   ],
+   "intent": "gentle, precise, the PAUSE sign held higher; he wants the soldering iron put down"
+  },
+  "measured": {
+   "wpm": 190.5,
+   "articulation_sps": 4.11,
+   "syllables": 9,
+   "span_s": 2.52,
+   "pauses_s": [
+    0.33
+   ]
+  },
+  "longest_internal_gap_s": 0.33,
+  "audible_in_s": 0.51,
+  "audible_out_s": 3.03
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_eric*0.50+am_onyx*0.50 (Kokoro-82M stock) · c-eric-onyx-gentle · speed 0.870",
+ "voiceId": "am_eric*0.50+am_onyx*0.50",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch +0.5 st",
+  "low shelf +1.5 dB @180 Hz",
+  "peak -1.5 dB @350 Hz Q1.0",
+  "peak +0.5 dB @3000 Hz Q0.9",
+  "high shelf -1 dB @7000 Hz",
+  "comp 2.0:1 @-24 dB (10/140 ms)",
+  "Kokoro speed 0.870 (the plan speed; oigneb band 0.85-0.93); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'it': Kokoro 0.00 s -> 0.33 s (intended 0.30; +0.30 s of room tone at the quietest 5 ms; Kokoro ran the words together here (dip -39.1 dB): ear check)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "E"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "O"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "E"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "A"
+  },
+  {
+   "t": 0.958,
+   "f": 23,
+   "shape": "E"
+  },
+  {
+   "t": 1.208,
+   "f": 29,
+   "shape": "rest"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "E"
+  },
+  {
+   "t": 1.667,
+   "f": 40,
+   "shape": "A"
+  },
+  {
+   "t": 1.792,
+   "f": 43,
+   "shape": "M"
+  },
+  {
+   "t": 1.875,
+   "f": 45,
+   "shape": "O"
+  },
+  {
+   "t": 1.958,
+   "f": 47,
+   "shape": "E"
+  },
+  {
+   "t": 2.125,
+   "f": 51,
+   "shape": "A"
+  },
+  {
+   "t": 2.292,
+   "f": 55,
+   "shape": "E"
+  },
+  {
+   "t": 2.625,
+   "f": 63,
+   "shape": "A"
+  },
+  {
+   "t": 2.917,
+   "f": 70,
+   "shape": "E"
+  },
+  {
+   "t": 3.042,
+   "f": 73,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "You",
+   "t0": 0.52,
+   "t1": 0.67,
+   "f0": 12,
+   "f1": 16,
+   "ph": "jˌu"
+  },
+  {
+   "w": "signed",
+   "t0": 0.67,
+   "t1": 1.095,
+   "f0": 16,
+   "f1": 26,
+   "ph": "sˈInd"
+  },
+  {
+   "w": "it",
+   "t0": 1.095,
+   "t1": 1.22,
+   "f0": 26,
+   "f1": 29,
+   "ph": "ɪt"
+  },
+  {
+   "w": "Now",
+   "t0": 1.595,
+   "t1": 1.82,
+   "f0": 38,
+   "f1": 44,
+   "ph": "nˈW"
+  },
+  {
+   "w": "put",
+   "t0": 1.82,
+   "t1": 1.982,
+   "f0": 44,
+   "f1": 48,
+   "ph": "pˌʊt"
+  },
+  {
+   "w": "the",
+   "t0": 1.982,
+   "t1": 2.132,
+   "f0": 48,
+   "f1": 51,
+   "ph": "ði"
+  },
+  {
+   "w": "iron",
+   "t0": 2.132,
+   "t1": 2.52,
+   "f0": 51,
+   "f1": 60,
+   "ph": "ˈIəɹn"
+  },
+  {
+   "w": "down",
+   "t0": 2.52,
+   "t1": 3.05,
+   "f0": 60,
+   "f1": 73,
+   "ph": "dˌWn"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -2.62,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.51,
+  "median_f0_hz": 118.5,
+  "f0_range_st": 13.5,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "You signed it. Now put the iron down.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.186,
+  "align_median_s": 0.042,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.45,
+  "rise_ms": 25.0,
+  "decay_ms": 215.0,
+  "decay_to_60_s": 0.43
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 3,
+   "word": "it",
+   "tts_s": 0.0,
+   "target_s": 0.3,
+   "point_s": 0.77,
+   "joined_speech": true,
+   "dip_db": -39.1,
+   "breath": false,
+   "crossfade_ms": [
+    60,
+    25
+   ],
+   "final_s": 0.325,
+   "opened_s": 0.3
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "909231c02e124ddd",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 2.7,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 1,
+   "share_s": 1.13,
+   "rechecked_alone": false
+  }
+ }
+}

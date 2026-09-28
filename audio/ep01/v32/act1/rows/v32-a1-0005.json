@@ -1,0 +1,313 @@
+{
+ "id": "v32-a1-0005",
+ "scene": "9",
+ "speaker": "GERG MOCKBRAN",
+ "speaker_slug": "gerg-mockbran",
+ "text": "Elgoog's going to hear about this from a search box.",
+ "spoken_as": "Elgoog's going to hear about this from a search box.",
+ "delivery": "delighted, eyes on the TV: his work, beating the rival in its own game",
+ "tag": "[INVENTED] the new GNIB ran on the lab's model (facts #8)",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "9.10",
+ "shot_id": "9.10",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v32/act1/wav/v32-a1-0005.wav",
+ "mp3": null,
+ "duration_s": 3.33,
+ "frames_24": 80,
+ "voiced_span_s": 2.18,
+ "pace": {
+  "words": 10,
+  "wpm": 275.2,
+  "speed": 1.02,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.02,
+   "speed_band": [
+    1.02,
+    1.1
+   ],
+   "articulation_guide_sps": [
+    5.0,
+    5.8
+   ],
+   "turn_wpm_guide": [
+    175,
+    200
+   ],
+   "intent": "delighted, eyes on the TV: his work, beating the rival in its own game"
+  },
+  "measured": {
+   "wpm": 275.2,
+   "articulation_sps": 5.96,
+   "syllables": 13,
+   "span_s": 2.18,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.5,
+  "audible_out_s": 2.68
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.020",
+ "voiceId": "am_puck",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch +1.5 st",
+  "peak -2 dB @250 Hz Q1.0",
+  "peak +2 dB @4000 Hz Q0.9",
+  "comp 3.0:1 @-22 dB (4/80 ms)",
+  "Kokoro speed 1.020 (the plan speed; gerg-mockbran band 1.02-1.10); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "A"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "E"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "O"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "E"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "O"
+  },
+  {
+   "t": 1.0,
+   "f": 24,
+   "shape": "E"
+  },
+  {
+   "t": 1.167,
+   "f": 28,
+   "shape": "A"
+  },
+  {
+   "t": 1.25,
+   "f": 30,
+   "shape": "E"
+  },
+  {
+   "t": 1.375,
+   "f": 33,
+   "shape": "A"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "E"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "A"
+  },
+  {
+   "t": 1.875,
+   "f": 45,
+   "shape": "E"
+  },
+  {
+   "t": 1.958,
+   "f": 47,
+   "shape": "O"
+  },
+  {
+   "t": 2.083,
+   "f": 50,
+   "shape": "E"
+  },
+  {
+   "t": 2.208,
+   "f": 53,
+   "shape": "M"
+  },
+  {
+   "t": 2.292,
+   "f": 55,
+   "shape": "A"
+  },
+  {
+   "t": 2.5,
+   "f": 60,
+   "shape": "E"
+  },
+  {
+   "t": 2.708,
+   "f": 65,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Elgoog's",
+   "t0": 0.47,
+   "t1": 0.883,
+   "f0": 11,
+   "f1": 21,
+   "ph": "ˈɛlɡuɡz"
+  },
+  {
+   "w": "going",
+   "t0": 0.883,
+   "t1": 1.057,
+   "f0": 21,
+   "f1": 25,
+   "ph": "ɡˈOɪŋ"
+  },
+  {
+   "w": "to",
+   "t0": 1.057,
+   "t1": 1.132,
+   "f0": 25,
+   "f1": 27,
+   "ph": "tə"
+  },
+  {
+   "w": "hear",
+   "t0": 1.132,
+   "t1": 1.258,
+   "f0": 27,
+   "f1": 30,
+   "ph": "hˈɪɹ"
+  },
+  {
+   "w": "about",
+   "t0": 1.258,
+   "t1": 1.495,
+   "f0": 30,
+   "f1": 36,
+   "ph": "əbˈWt"
+  },
+  {
+   "w": "this",
+   "t0": 1.495,
+   "t1": 1.695,
+   "f0": 36,
+   "f1": 41,
+   "ph": "ðɪs"
+  },
+  {
+   "w": "from",
+   "t0": 1.695,
+   "t1": 1.832,
+   "f0": 41,
+   "f1": 44,
+   "ph": "fɹʌm"
+  },
+  {
+   "w": "a",
+   "t0": 1.832,
+   "t1": 1.895,
+   "f0": 44,
+   "f1": 45,
+   "ph": "ɐ"
+  },
+  {
+   "w": "search",
+   "t0": 1.895,
+   "t1": 2.195,
+   "f0": 45,
+   "f1": 53,
+   "ph": "sˈɜɹʧ"
+  },
+  {
+   "w": "box",
+   "t0": 2.195,
+   "t1": 2.7,
+   "f0": 53,
+   "f1": 65,
+   "ph": "bˈɑks"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.61,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 128.1,
+  "f0_range_st": 11.0,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Elgou is going to hear about this from a search box.",
+  "cer": 0.049,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.435,
+  "align_median_s": 0.115,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 20.0,
+  "decay_ms": 235.0,
+  "decay_to_60_s": 0.2
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "752d9510504af087",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 2.55,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 2,
+   "share_s": 0.93,
+   "rechecked_alone": false
+  }
+ }
+}

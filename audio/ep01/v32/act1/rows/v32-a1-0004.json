@@ -1,0 +1,216 @@
+{
+ "id": "v32-a1-0004",
+ "scene": "v32-7",
+ "speaker": "TASYA",
+ "speaker_slug": "tasya",
+ "text": "I'll bring a pen.",
+ "spoken_as": "I'll bring a pen.",
+ "delivery": "delighted, a host accepting an invitation",
+ "tag": "[INVENTED] the pen clipped to the check (9.04), the one Mas pockets and writes PLEASE with (12.04)",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "v32-7.03",
+ "shot_id": "v32-7.03",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": "call",
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v32/act1/wav/v32-a1-0004.wav",
+ "mp3": null,
+ "duration_s": 2.325,
+ "frames_24": 56,
+ "voiced_span_s": 1.17,
+ "pace": {
+  "words": 4,
+  "wpm": 205.1,
+  "speed": 0.86,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.86,
+   "speed_band": [
+    0.88,
+    0.96
+   ],
+   "articulation_guide_sps": [
+    3.8,
+    4.4
+   ],
+   "turn_wpm_guide": [
+    125,
+    145
+   ],
+   "intent": "delighted, a host accepting an invitation"
+  },
+  "measured": {
+   "wpm": 205.1,
+   "articulation_sps": 3.42,
+   "syllables": 4,
+   "span_s": 1.17,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.52,
+  "audible_out_s": 1.69
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_eric (Kokoro-82M stock) · b-eric-warm · speed 0.860",
+ "voiceId": "am_eric",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch -1.5 st",
+  "low shelf +2 dB @180 Hz",
+  "peak -1.5 dB @350 Hz Q1.0",
+  "high shelf +1.5 dB @6000 Hz",
+  "comp 2.0:1 @-24 dB (12/150 ms)",
+  "then the call chain: HPF 200 Hz; LPF 7000 Hz; peak +1.5 dB @1800 Hz Q1.0; comp 2.5:1 @-22 dB (5/90 ms); -16 LUFS",
+  "Kokoro speed 0.860 (the plan speed; tasya band 0.88-0.96); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "A"
+  },
+  {
+   "t": 0.708,
+   "f": 17,
+   "shape": "M"
+  },
+  {
+   "t": 0.833,
+   "f": 20,
+   "shape": "A"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "M"
+  },
+  {
+   "t": 1.208,
+   "f": 29,
+   "shape": "A"
+  },
+  {
+   "t": 1.542,
+   "f": 37,
+   "shape": "E"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "I'll",
+   "t0": 0.56,
+   "t1": 0.76,
+   "f0": 13,
+   "f1": 18,
+   "ph": "ˌIl"
+  },
+  {
+   "w": "bring",
+   "t0": 0.76,
+   "t1": 0.998,
+   "f0": 18,
+   "f1": 24,
+   "ph": "bɹˈɪŋ"
+  },
+  {
+   "w": "a",
+   "t0": 0.998,
+   "t1": 1.085,
+   "f0": 24,
+   "f1": 26,
+   "ph": "ɐ"
+  },
+  {
+   "w": "pen",
+   "t0": 1.085,
+   "t1": 1.71,
+   "f0": 26,
+   "f1": 41,
+   "ph": "pˈɛn"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -2.09,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.51,
+  "median_f0_hz": 155.7,
+  "f0_range_st": 13.1,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "I'll bring a pen.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.435,
+  "align_median_s": 0.047,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.52,
+  "speech_tail_s": 0.45,
+  "rise_ms": 35.0,
+  "decay_ms": 95.0,
+  "decay_to_60_s": 0.19
+ },
+ "clean": {
+  "file": "audio/ep01/v32/act1/clean/v32-a1-0004.wav",
+  "note": "the dry read (no call chain), -16 LUFS"
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "b875fe10730d72e7",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 1.85,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 2,
+   "share_s": 0.72,
+   "rechecked_alone": false
+  }
+ }
+}

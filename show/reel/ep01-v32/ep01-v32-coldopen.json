@@ -1,0 +1,720 @@
+{
+ "episode": 1,
+ "title": "ep1.0_research_preview.md",
+ "part": "COLD OPEN · sc 1-3",
+ "variant": "stick-figure dialogue reel v3.2 LOCK · v2/v5/v3/v3.1 takes + the v3.2 takes · temp bed",
+ "logline": "The v3.2 stick lock of coldopen: the v3.2 beat plan applied to ep01-v31-coldopen.json (script draft 8.1).",
+ "dateSpan": "Nov 16, 2023",
+ "runtimeMin": 0.44,
+ "dialogueReel": true,
+ "cast": {
+  "mas": {
+   "role": "MAN IN THE ARMCHAIR"
+  },
+  "orb": {
+   "name": "THE ORB",
+   "known": true
+  },
+  "host": {
+   "name": "PANEL HOST",
+   "role": "PANEL HOST",
+   "known": true
+  }
+ },
+ "_source": {
+  "plan": "show/episodes/ep01/production/full-v3/beat-plan-v32/coldopen.json",
+  "timeline": "show/reel/ep01-v31/ep01-v31-coldopen.json",
+  "takes": null,
+  "takes_files": [
+   "audio/ep01/coldopen/dialogue/lines-fast-v1.json",
+   "audio/ep01/v3/coldopen/lines-v3.json",
+   "audio/ep01/v31/coldopen/lines-v31.json"
+  ],
+  "builder": "audio/reel/ep01-v32/build_timeline.py",
+  "bed": "audio/reel/ep01-v32/bed.py -> audio/reel/ep01-v32/coldopen-bed.wav",
+  "notes": "show/episodes/ep01/production/full-v3/lock-v32.md",
+  "seconds": 26.667
+ },
+ "beats": [
+  {
+   "id": "1.00",
+   "act": "COLD OPEN",
+   "kind": "card",
+   "set": "void",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "BLACK",
+   "side": "",
+   "room": "apec-stage",
+   "chars": [],
+   "caption": "Black. The hall is heard first: HVAC, a polite crowd, cutlery.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 0.5,
+   "fx": [],
+   "cues": [
+    "music (v3.2): COLD OPEN · poised, curious · unchanged",
+    "sound: the hall's bed (HVAC, a polite crowd) under black before the first frame"
+   ],
+   "seq": {
+    "id": "COLD OPEN",
+    "place": "APEC CEO Summit, San Francisco · main stage",
+    "time": "Thu Nov 16, 2023 · day",
+    "side": ""
+   },
+   "sounds": []
+  },
+  {
+   "id": "1.01",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the one wide: stage, banquet, the lit window",
+   "side": "",
+   "room": "apec-stage",
+   "chars": [
+    {
+     "id": "mas",
+     "x": 0.3,
+     "pose": "sit"
+    },
+    {
+     "id": "orb",
+     "x": 0.37
+    }
+   ],
+   "caption": "Mas in the armchair, the Orb at his shoulder; at frame right only the host's hand and a card. Behind: the banquet's ovation, and far off one lit window.",
+   "lines": [
+    {
+     "id": "e1-co-1-01",
+     "who": "host",
+     "text": "Last one, Mas. What's the best part of the job?",
+     "t": 1.0,
+     "dur": 2.9,
+     "audio": "audio/ep01/coldopen/dialogue/fast-v1/wav/e1-co-1-01.wav",
+     "in": 0.51,
+     "words": [
+      [
+       "Last",
+       0.005,
+       0.268
+      ],
+      [
+       "one",
+       0.268,
+       0.38
+      ],
+      [
+       "Mas",
+       0.43,
+       0.905
+      ],
+      [
+       "What's",
+       1.475,
+       1.688
+      ],
+      [
+       "the",
+       1.688,
+       1.775
+      ],
+      [
+       "best",
+       1.775,
+       2.05
+      ],
+      [
+       "part",
+       2.05,
+       2.262
+      ],
+      [
+       "of",
+       2.262,
+       2.338
+      ],
+      [
+       "the",
+       2.338,
+       2.425
+      ],
+      [
+       "job",
+       2.425,
+       2.92
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "RAIL: NOV 16, 2023 · SAN FRANCISCO",
+     "at": 0.25,
+     "until": null
+    }
+   ],
+   "reelDur": 4.25,
+   "fx": [],
+   "names": [
+    {
+     "id": "mas",
+     "at": 1.905
+    }
+   ],
+   "cues": [
+    "music (v3.2): COLD OPEN · poised, curious · unchanged",
+    "sound: the hall (HVAC, a polite crowd), the banquet louder; no music",
+    "the host: a hand and a PA voice, never a face (unnamed, never gendered)",
+    "the lit window is OGAL-A-RAM's: no label, no face, a phone's glow"
+   ]
+  },
+  {
+   "id": "1.02",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "SINGLE · MCU Mas, answering; the window soft behind him",
+   "side": "",
+   "room": "apec-stage",
+   "chars": [
+    {
+     "id": "mas",
+     "x": 0.36,
+     "pose": "sit",
+     "face": "calm"
+    }
+   ],
+   "caption": "Mas answers, unhurried. As he starts, a white dot, a HAILSTONE, leaves the lit window and arcs toward us over the bay. We see it; he doesn't.",
+   "lines": [
+    {
+     "id": "e1-co-1-02",
+     "who": "mas",
+     "text": "i've gotten to be in the room when we sort of push the veil of ignorance back—and the frontier of discovery forward…",
+     "t": 0.3,
+     "dur": 8.26,
+     "audio": "audio/ep01/coldopen/dialogue/fast-v1/wav/e1-co-1-02.wav",
+     "in": 0.53,
+     "words": [
+      [
+       "I've",
+       0.04,
+       0.24
+      ],
+      [
+       "gotten",
+       0.24,
+       0.64
+      ],
+      [
+       "to",
+       0.64,
+       0.765
+      ],
+      [
+       "be",
+       0.765,
+       1.027
+      ],
+      [
+       "in",
+       1.027,
+       1.165
+      ],
+      [
+       "the",
+       1.165,
+       1.315
+      ],
+      [
+       "room",
+       1.315,
+       1.86
+      ],
+      [
+       "when",
+       2.285,
+       2.435
+      ],
+      [
+       "we",
+       2.435,
+       2.61
+      ],
+      [
+       "sort",
+       2.61,
+       2.873
+      ],
+      [
+       "of",
+       2.873,
+       2.998
+      ],
+      [
+       "push",
+       2.998,
+       3.31
+      ],
+      [
+       "the",
+       3.31,
+       3.46
+      ],
+      [
+       "veil",
+       3.46,
+       3.935
+      ],
+      [
+       "of",
+       3.935,
+       4.11
+      ],
+      [
+       "ignorance",
+       4.11,
+       4.748
+      ],
+      [
+       "back",
+       4.748,
+       5.28
+      ],
+      [
+       "and",
+       5.722,
+       5.848
+      ],
+      [
+       "the",
+       5.848,
+       5.96
+      ],
+      [
+       "frontier",
+       5.96,
+       6.685
+      ],
+      [
+       "of",
+       6.685,
+       6.835
+      ],
+      [
+       "discovery",
+       6.835,
+       7.547
+      ],
+      [
+       "forward",
+       7.547,
+       8.28
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 5.583333,
+   "fx": [],
+   "cues": [
+    "music (v3.2): COLD OPEN · poised, curious · unchanged",
+    "one sentence, one read: the take plays on across the next two cuts",
+    "the hailstone crosses behind him; no pan splits the sentence"
+   ]
+  },
+  {
+   "id": "1.03",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "INSERT · the shared table from above: plink",
+   "side": "",
+   "room": "apec-stage",
+   "chars": [],
+   "caption": "Plink: the hailstone lands in his glass and bobs, glyph noise, no letters. The host's glass sloshes; his doesn't. His phone lies beside it, face-up and dark.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "MAS MANALT · CEO, NOPEAI",
+     "at": 0.0,
+     "until": null
+    }
+   ],
+   "reelDur": 1.541667,
+   "fx": [],
+   "cues": [
+    "music (v3.2): COLD OPEN · poised, curious · unchanged",
+    "cut in on the dash: the plink lands in the read's own phrase break",
+    "the tent card reads for the whole insert",
+    "the phone is planted here, dark: the freeze lights it"
+   ],
+   "sounds": [
+    {
+     "name": "synth:plink",
+     "at": 0.1,
+     "gain": -4
+    },
+    {
+     "name": "synth:slosh",
+     "at": 0.15,
+     "gain": -20
+    }
+   ]
+  },
+  {
+   "id": "1.04",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "SINGLE · MCU Mas, the sentence lands",
+   "side": "",
+   "room": "apec-stage",
+   "chars": [
+    {
+     "id": "mas",
+     "x": 0.36,
+     "pose": "sit",
+     "face": "calm"
+    }
+   ],
+   "caption": "Back on his face for \"discovery forward.\" Far behind him the lit window's phone clicks off; the banquet's applause swells.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 2.666667,
+   "fx": [],
+   "cues": [
+    "music (v3.2): COLD OPEN · poised, curious · unchanged",
+    "the same MCU setup as 1.02",
+    "the swell rises into the freeze and is cut by it, mid-rise"
+   ],
+   "shotId": "1.02",
+   "sounds": []
+  },
+  {
+   "id": "2.01",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "stage",
+   "style": "2-TONE",
+   "shot": "wide",
+   "frame": "WIDE · the freeze",
+   "side": "",
+   "room": "apec-stage",
+   "chars": [
+    {
+     "id": "mas",
+     "x": 0.3,
+     "pose": "sit"
+    },
+    {
+     "id": "orb",
+     "x": 0.37
+    }
+   ],
+   "caption": "Everything freezes into navy and cream, mid-slosh, mid-ovation. Two things stay in colour: Mas, and his phone on the table.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 0.625,
+   "fx": [
+    "flash"
+   ],
+   "seq": {
+    "sub": "the freeze",
+    "place": "APEC CEO Summit · main stage",
+    "time": "continuous",
+    "side": ""
+   },
+   "cues": [
+    "music (v3.2): COLD OPEN · poised, curious · unchanged",
+    "style: 2-TONE FREEZE, a full-room pass; Mas never freezes",
+    "sound: the hall drops to a low filtered hum, never silence"
+   ],
+   "sounds": [
+    {
+     "name": "piano_fired_F4",
+     "at": 0.0,
+     "gain": -14
+    }
+   ]
+  },
+  {
+   "id": "2.02",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "screen",
+   "style": "2-TONE",
+   "shot": "insert",
+   "frame": "INSERT · the phone: the invite",
+   "side": "",
+   "room": "apec-stage",
+   "chars": [],
+   "caption": "The phone lights: an invite in a generic calendar UI. Four attendee circles, no names: a doorway, a glowing page, a spinner, a black square.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "Board sync · Fri 12:00",
+     "at": 0.15,
+     "until": null
+    },
+    {
+     "text": "UI: Accept",
+     "at": 0.45,
+     "until": null
+    },
+    {
+     "text": "UI: Decline",
+     "at": 0.45,
+     "until": null
+    }
+   ],
+   "reelDur": 2.5,
+   "fx": [],
+   "cues": [
+    "music (v3.2): COLD OPEN · poised, curious · unchanged",
+    "held a bar to read; the buzz is the one close sound",
+    "egg: none of the four circles is GERG's green laptop glow"
+   ],
+   "sounds": [
+    {
+     "name": "synth:buzz",
+     "at": 0.05,
+     "gain": -20
+    }
+   ]
+  },
+  {
+   "id": "2.03",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "stage",
+   "style": "2-TONE",
+   "shot": "close",
+   "frame": "SINGLE · MCU Mas: he reads it, looks up",
+   "side": "",
+   "room": "apec-stage",
+   "chars": [
+    {
+     "id": "mas",
+     "x": 0.36,
+     "pose": "sit",
+     "face": "calm"
+    }
+   ],
+   "caption": "He reads it and looks back up. On \"noted.\" his thumb taps Accept below frame, eyes up. The light on his jaw goes pale blue. He sips.",
+   "lines": [
+    {
+     "id": "e1-co-2-01",
+     "who": "mas",
+     "text": "noted.",
+     "t": 1.1,
+     "dur": 0.71,
+     "audio": "audio/ep01/coldopen/dialogue/fast-v1/wav/e1-co-2-01.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "Noted",
+       0.09,
+       0.73
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 2.5,
+   "fx": [],
+   "cues": [
+    "music (v3.2): COLD OPEN · poised, curious · unchanged",
+    "the hold is his; the tap plays inside it (no insert of the thumb)",
+    "jaw light white -> pale blue at 1.35 s: the only sign he accepted",
+    "the clock (Friday, noon) states no outcome"
+   ],
+   "sounds": [
+    {
+     "name": "key_tap_soft_03",
+     "at": 1.35,
+     "gain": -26
+    }
+   ]
+  },
+  {
+   "id": "3.01",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "TWO-SHOT · Mas and the Orb: the iris steps",
+   "side": "",
+   "room": "apec-stage",
+   "chars": [
+    {
+     "id": "mas",
+     "x": 0.3,
+     "pose": "sit"
+    },
+    {
+     "id": "orb",
+     "x": 0.55
+    }
+   ],
+   "caption": "The Orb's iris steps from the phone to Mas in three drawings. A toast pops beside it, a year under it starting to count back: 2023.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "rewinding…",
+     "at": 0.95,
+     "until": null
+    },
+    {
+     "text": "2023",
+     "at": 0.95,
+     "until": null
+    }
+   ],
+   "reelDur": 2.0,
+   "fx": [],
+   "seq": {
+    "sub": "rewinding",
+    "place": "APEC CEO Summit · main stage",
+    "time": "continuous",
+    "side": ""
+   },
+   "cues": [
+    "music (v3.2): COLD OPEN · poised, curious · unchanged",
+    "the Orb, his witness, carries \"how did he get here?\" across the cut"
+   ],
+   "sounds": [
+    {
+     "name": "orb_servo",
+     "at": 0.05,
+     "gain": -22
+    },
+    {
+     "name": "orb_servo",
+     "at": 0.35,
+     "gain": -24
+    },
+    {
+     "name": "orb_servo",
+     "at": 0.65,
+     "gain": -22
+    },
+    {
+     "name": "glyph_blink",
+     "at": 0.95,
+     "gain": -26
+    }
+   ]
+  },
+  {
+   "id": "3.02",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the room scrubs back, too far: the collapse",
+   "side": "",
+   "room": "apec-stage",
+   "chars": [
+    {
+     "id": "mas",
+     "x": 0.3,
+     "pose": "sit"
+    },
+    {
+     "id": "orb",
+     "x": 0.37
+    }
+   ],
+   "caption": "The room scrubs back: the ovation sits, the water climbs home, the hailstone flies back. The year catches on 2022 for a second, then slips past, faster; the toast turns to \"rewinding… too far\" as the wheels spin on toward the nineties. The frame smears and collapses into a cyan cursor on black: the intro's first frame.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "rewinding…",
+     "at": 0.0,
+     "until": 3.0
+    },
+    {
+     "text": "2023",
+     "at": 0.0,
+     "until": 0.5
+    },
+    {
+     "text": "2022",
+     "at": 0.5,
+     "until": 1.55
+    },
+    {
+     "text": "2019",
+     "at": 1.55,
+     "until": 1.95
+    },
+    {
+     "text": "2015",
+     "at": 1.95,
+     "until": 2.32
+    },
+    {
+     "text": "2008",
+     "at": 2.32,
+     "until": 2.67
+    },
+    {
+     "text": "2001",
+     "at": 2.67,
+     "until": 3.0
+    },
+    {
+     "text": "rewinding… too far",
+     "at": 3.0,
+     "until": 4.17
+    }
+   ],
+   "reelDur": 4.5,
+   "fx": [
+    "rewind",
+    "smear",
+    "collapse"
+   ],
+   "cues": [
+    "music (v3.2): COLD OPEN · poised, curious · unchanged",
+    "the counter aims at 2022 (Act One) and overshoots: \"too far\" lands here; the intro's own 1993 (five seconds on) shows where",
+    "style: BASE, washed up its light ramps in held steps as it scrubs (not to paper: no 1993 frame here); the smear from 3.92 s, the collapse in three held steps from 4.17 s, onto the intro's cursor (native x 83-114, y 39-118) on black for the last 2 frames",
+    "sound: the hall runs backward: a groan on the catch, then a lurch; the rewind whirr accelerates from the slip into the collapse and cuts with the picture; the intro's first beat takes over (no 1993 chip notes here now)"
+   ],
+   "sounds": [
+    {
+     "name": "orb_servo",
+     "at": 0.5,
+     "gain": -24
+    },
+    {
+     "name": "orb_servo",
+     "at": 1.55,
+     "gain": -27
+    },
+    {
+     "name": "glyph_blink",
+     "at": 3.0,
+     "gain": -26
+    }
+   ]
+  }
+ ]
+}

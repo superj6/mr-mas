@@ -1,0 +1,318 @@
+{
+ "id": "v32-a1-0003",
+ "scene": "v32-7",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "it's the bill. we're going to need more servers.",
+ "spoken_as": "it's the bill.{0.35} we're going to need more servers.",
+ "delivery": "plain, a full ask (calibration §9: full sentences when he asks); the first three words the same as to Rima",
+ "tag": "[INVENTED]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "v32-7.03",
+ "shot_id": "v32-7.03",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v32/act1/wav/v32-a1-0003.wav",
+ "mp3": null,
+ "duration_s": 3.95,
+ "frames_24": 95,
+ "voiced_span_s": 2.79,
+ "pace": {
+  "words": 9,
+  "wpm": 193.5,
+  "speed": 0.9,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.9,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.6,
+    4.2
+   ],
+   "turn_wpm_guide": [
+    135,
+    155
+   ],
+   "intent": "plain, a full ask (calibration §9: full sentences when he asks); the first three words the same as to Rima"
+  },
+  "measured": {
+   "wpm": 193.5,
+   "articulation_sps": 4.3,
+   "syllables": 11,
+   "span_s": 2.79,
+   "pauses_s": [
+    0.06,
+    0.23
+   ]
+  },
+  "longest_internal_gap_s": 0.23,
+  "audible_in_s": 0.52,
+  "audible_out_s": 3.31
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.900",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch 0",
+  "low shelf +2 dB @160 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak +1 dB @3200 Hz Q0.8",
+  "high shelf -1.5 dB @8000 Hz",
+  "comp 2.0:1 @-24 dB (10/120 ms)",
+  "Kokoro speed 0.900 (the plan speed; mas-manalt band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'bill': Kokoro 0.23 s -> 0.36 s (intended 0.35; +0.12 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "E"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "M"
+  },
+  {
+   "t": 1.0,
+   "f": 24,
+   "shape": "A"
+  },
+  {
+   "t": 1.25,
+   "f": 30,
+   "shape": "E"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "rest"
+  },
+  {
+   "t": 1.667,
+   "f": 40,
+   "shape": "E"
+  },
+  {
+   "t": 1.792,
+   "f": 43,
+   "shape": "O"
+  },
+  {
+   "t": 1.875,
+   "f": 45,
+   "shape": "E"
+  },
+  {
+   "t": 2.167,
+   "f": 52,
+   "shape": "A"
+  },
+  {
+   "t": 2.292,
+   "f": 55,
+   "shape": "E"
+  },
+  {
+   "t": 2.375,
+   "f": 57,
+   "shape": "M"
+  },
+  {
+   "t": 2.458,
+   "f": 59,
+   "shape": "O"
+  },
+  {
+   "t": 2.542,
+   "f": 61,
+   "shape": "E"
+  },
+  {
+   "t": 2.667,
+   "f": 64,
+   "shape": "O"
+  },
+  {
+   "t": 2.833,
+   "f": 68,
+   "shape": "E"
+  },
+  {
+   "t": 3.333,
+   "f": 80,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "it's",
+   "t0": 0.59,
+   "t1": 0.765,
+   "f0": 14,
+   "f1": 18,
+   "ph": "ɪts"
+  },
+  {
+   "w": "the",
+   "t0": 0.765,
+   "t1": 0.902,
+   "f0": 18,
+   "f1": 22,
+   "ph": "ðə"
+  },
+  {
+   "w": "bill",
+   "t0": 0.902,
+   "t1": 1.415,
+   "f0": 22,
+   "f1": 34,
+   "ph": "bˈɪl"
+  },
+  {
+   "w": "we're",
+   "t0": 1.64,
+   "t1": 1.765,
+   "f0": 39,
+   "f1": 42,
+   "ph": "wɪɹ"
+  },
+  {
+   "w": "going",
+   "t0": 1.765,
+   "t1": 1.99,
+   "f0": 42,
+   "f1": 48,
+   "ph": "ɡˈOɪŋ"
+  },
+  {
+   "w": "to",
+   "t0": 1.99,
+   "t1": 2.09,
+   "f0": 48,
+   "f1": 50,
+   "ph": "tə"
+  },
+  {
+   "w": "need",
+   "t0": 2.09,
+   "t1": 2.365,
+   "f0": 50,
+   "f1": 57,
+   "ph": "nˈid"
+  },
+  {
+   "w": "more",
+   "t0": 2.365,
+   "t1": 2.615,
+   "f0": 57,
+   "f1": 63,
+   "ph": "mˈɔɹ"
+  },
+  {
+   "w": "servers",
+   "t0": 2.615,
+   "t1": 3.33,
+   "f0": 63,
+   "f1": 80,
+   "ph": "sˈɜɹvəɹz"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.73,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.52,
+  "median_f0_hz": 118.6,
+  "f0_range_st": 10.5,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "It's the bill. We're going to need more servers.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.186,
+  "align_median_s": 0.035,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.52,
+  "speech_tail_s": 0.37,
+  "rise_ms": 100.0,
+  "decay_ms": 45.0,
+  "decay_to_60_s": 0.275
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 3,
+   "word": "bill",
+   "tts_s": 0.225,
+   "target_s": 0.35,
+   "point_s": 1.06,
+   "joined_speech": false,
+   "dip_db": -56.2,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.36,
+   "opened_s": 0.125
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "3ac725aa9aa95a43",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 3.28,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 1,
+   "share_s": 1.14,
+   "rechecked_alone": false
+  }
+ }
+}
