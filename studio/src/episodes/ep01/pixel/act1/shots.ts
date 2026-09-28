@@ -3,7 +3,7 @@
 // v3.1 round, then v3.2: Mas's moves read on screen: the button press, the million post, the call, the click that
 // ships GTP-4; then the v3.3 polish on show/reel/ep01-v33/ep01-v33-act1.json, 7,934 frames, 5:30.6: his face not answering
 // in 5.07, the post as a preview under his thumb in 6.06, the tear's glint at his eye in 7.01, the landlord's hand
-// settling the new collar in 9.09 with "it does." restored, the two-part plates). Built on the art-a modules (show/episodes/ep01/production/full-v3/art/art-a.md, §7 for v3.1); the few
+// settling the new collar in 9.09 with "it does." restored, the two-part plates; then v3.4 on the v3.4 lock, 8,101 frames, 5:37.5: the planner's V.O. in 5.04 and 7.01 with a settle and a look, Mario's line back in 11.03). Built on the art-a modules (show/episodes/ep01/production/full-v3/art/art-a.md, §7 for v3.1); the few
 // pieces those modules fix inside a packaged setup (a camera x, a lifted prop, a speaking mouth in a composite) are
 // re-composed from their exported parts in ./extras.ts. No existing drawing is edited.
 //
@@ -20,7 +20,7 @@
 // night's bullpen setups warmed a step (`warm: 1`); face lights on Alyi's reflection two steps (5.05, v3-5.06b, 5.09's
 // rack, 12.05); the v3.1 collars (the gold third, taller points) on every collar call; the match cut on Gerg's laptop
 // seen over his shoulder in both rooms, the lids matched; cleanUnder on 5.11.
-import {defineSegment, layouts, mk, mouth, roomMouth, room3Mouth, lipOn, talking, drawPlate, RH, ACCENT, shiftRoom, whipSmear, pt} from '../kit';
+import {defineSegment, layouts, mk, mouth, roomMouth, room3Mouth, lipOn, talking, drawPlate, RH, ACCENT, shiftRoom, whipSmear, pt, pw, pwrap} from '../kit';
 import type {PxShot, LayoutOut} from '../kit';
 import {Buf, rect, bayer} from '../../../../shared/pixel/px';
 import {PAL, stepColor} from '../../../../shared/pixel/palette';
@@ -97,6 +97,24 @@ const openRest = (sh: PxShot, k: number, who: string): 'open' | 'rest' => room2(
 /** the collars' drawing everywhere in v3.1 (mas-collars 'v31': the gold third, taller points; one design across the
  *  episode, so the pop at 9.08 adds a collar and changes nothing else) */
 const CS = 'v31' as const;
+/** v3.4: the host's typed V.O. line (frame.ts voLine: lowercase, x 12, baseline 191, C6 on an N0 shadow, wrapped upward
+ *  past 456 px, held 15 frames after its last sound), with one change: it types at 0.5 characters a frame OR faster, so
+ *  it has finished typing when the voice finishes. The planner's lines are long (55–66 characters over 93–111 frames),
+ *  and at a flat 0.5 the host clears them before their last characters appear. The layout returns {noVo: true} */
+const VO_W = 456;
+const voTyped = (fb: Buf, sh: PxShot, k: number): LayoutOut => {
+  for (const l of sh.lines) {
+    if (l.kind !== 'vo' || k < l.s || k >= l.e + 15) continue;
+    const text = l.text.toLowerCase();
+    const rate = Math.max(0.5, text.length / Math.max(1, l.e - l.s));
+    const n = clamp(Math.floor((k - l.s) * rate), 0, text.length);
+    if (pw(text) <= VO_W) { pt(fb, text.slice(0, n), 12, 191, PAL.C6, {shadow: PAL.N0}); continue; }
+    const rows = pwrap(text, VO_W);
+    let left = n;
+    rows.forEach((r, i) => { pt(fb, r.slice(0, Math.max(0, left)), 12, 191 - (rows.length - 1 - i) * 11, PAL.C6, {shadow: PAL.N0}); left -= r.length + 1; });
+  }
+  return {noVo: true};
+};
 /** his breath at the desk (the desk sprite's breathe drawing, a slow held loop) */
 const breathe = (f: number) => (Math.floor(f / 36) % 2) as 0 | 1;
 
@@ -124,9 +142,9 @@ L.add('5.02', {
   },
 });
 L.add('5.03', {
-  st: 'ROOM-BULLPEN-LAUNCH drawLaunch2S {warm: 1} (desk to desk: Mas fg left, two collars (v31), his desk lamp\'s key on his face; Gerg typing in his green, lip-synced, not looking up; behind him Rima at the board, her back to us (cast/rima-board lower: she speaks from the board without turning round); the button and the parked cursor); Mas\'s eyes go to Rima\'s board on her line and his prediction; the plate GERG MOCKBRAN · CO-FOUNDER by Gerg',
+  st: 'ROOM-BULLPEN-LAUNCH drawLaunch2S {warm: 1} (desk to desk: Mas fg left, two collars (v31), his desk lamp\'s key on his face; Gerg typing in his green, lip-synced, not looking up; behind him Rima at the board, her back to us (cast/rima-board lower: she speaks from the board without turning round); the button and the parked cursor); Mas\'s eyes go to Rima\'s board on her line (v3.4: "she\'ll go for three." is cut, so they come back 10 frames after it); the plate GERG MOCKBRAN · CO-FOUNDER by Gerg',
   face: {GERG: 'lip'},
-  marks: {rimaOn: ['on', 'e1-a1-5-02', 0], voEnd: ['end', 'v3-vo-02', 10]},
+  marks: {rimaOn: ['on', 'e1-a1-5-02', 0], voEnd: ['end', 'e1-a1-5-02', 10]},
   draw: (fb, k, sh, f) => {
     const lid = blinkLid(k, 3, 113);
     drawLaunch2S(fb, f, {
@@ -138,21 +156,25 @@ L.add('5.03', {
   },
 });
 L.add('5.04', {
-  st: 'extras.otsRima {warm: 1} = ROOM-BULLPEN-LAUNCH launchBackM (warm, camX 470, held steady) + rima-speak portrait (lip-synced; blinks; the desk lamp\'s key on her face, face only; she smooths her lapel before her question, lifts her brow waiting on him, firms on "a fortune", half-lids at Gerg\'s "v2 problem") + his desk\'s edge + otsShoulder (its rim in the lamp\'s tungsten) + the button and cursor lifted clear of the V.O. line; Alyi small and soft in the glass; the plate RIMA TAMURI · CTO',
+  st: 'extras.otsRima {warm: 1} = ROOM-BULLPEN-LAUNCH launchBackM (warm, camX 470, held steady) + rima-speak portrait (lip-synced; blinks; the desk lamp\'s key on her face, face only; she smooths her lapel before her question, lifts her brow waiting on him, firms on "a fortune", half-lids at Gerg\'s "v2 problem") + his desk\'s edge + (v3.4) on the V.O.\'s "it goes out tonight anyway." his head dips toward the button in the foreground silhouette, the settle before "it\'s a preview.", lips still (a silhouette) + otsShoulder (its rim in the lamp\'s tungsten) + the button and cursor lifted clear of the V.O. line; Alyi small and soft in the glass; the plate RIMA TAMURI · CTO',
   face: {RIMA: 'lip'},
-  marks: {ask: ['on', 'e1-a1-5-06', 0], askEnd: ['end', 'e1-a1-5-06', 0], answered: ['end', 'e1-a1-5-07', 6], fortune: ['w', 'e1-a1-5-08', 'fortune', -6], v2: ['on', 'e1-a1-5-09', 4]},
+  marks: {ask: ['on', 'e1-a1-5-06', 0], askEnd: ['end', 'e1-a1-5-06', 0], answered: ['end', 'e1-a1-5-07', 6], fortune: ['w', 'e1-a1-5-08', 'fortune', -6], v2: ['on', 'e1-a1-5-09', 4], decide: ['w', 'v34-vo-01', 'goes', 0]},
   draw: (fb, k, sh, f) => {
-    const ask = mk(sh, 'ask', 232), askEnd = mk(sh, 'askEnd', 366), ans = mk(sh, 'answered', 507), fortune = mk(sh, 'fortune', 630), v2 = mk(sh, 'v2', 665);
+    const ask = mk(sh, 'ask', 232), askEnd = mk(sh, 'askEnd', 366), ans = mk(sh, 'answered', 524), fortune = mk(sh, 'fortune', 647), v2 = mk(sh, 'v2', 681), dc = mk(sh, 'decide', 430);
+    // v3.4: the settle. On the V.O.'s "goes" (the decision) his head dips 3 px toward the desk and the button in three
+    // held steps, and stays down through "it's a preview."; it comes back up as Rima answers
+    const headDy = k >= dc && k < ans + 6 ? (k < dc + 2 ? 1 : k < dc + 4 ? 2 : 3) : k >= ans + 6 && k < ans + 8 ? 1 : 0;
     const brow = k >= askEnd - 14 && k < ans ? 'lift' : k >= fortune && k < v2 ? 'firm' : 'level';
     const hand = k >= ask - 6 && k < ask ? 'smooth0' : k >= ask && k < ask + 6 ? 'smooth1' : 'none';
     const bl = blinkLid(k, 5, 131);
     const lid = k >= v2 ? (bl === 2 ? 2 : 1) : bl;
     otsRima(fb, f, {
-      camX: 470, cursor: true, warm: 1,
+      camX: 470, cursor: true, warm: 1, headDy,
       rima: {mouth: mouth(sh, k, 'RIMA'), lid, brow, hand},
       alyi: {soft: true, eyes: blinkLid(k, 9, 157) === 2 ? 'closed' : 'open', mouth: 'rest', t: f},
     });
     plate(fb, sh, k, 'RIMA', 122, 150, 'RIMA');
+    return voTyped(fb, sh, k);
   },
 });
 L.add('5.05', {
@@ -326,19 +348,23 @@ L.add('6.08', {
 
 // ================================================================== SC 7 · THE BILL
 L.add('7.01', {
-  st: 'CAST-MAS-TEAR drawLaunchMcuPF (looking down the hole, the bullpen stepped down behind him, the hole\'s red rim under his jaw rising a step as Rima speaks; the tear wells at his lower lid and holds at his eye, catching the light as Rima asks, its one bright pixel the hottest white (v3.3, P3), then slides down his cheek a pixel every 4 f toward the jaw); "it\'s the bill." lip-synced with his eyes up toward her, then down again for "mostly the bill."',
+  st: 'CAST-MAS-TEAR drawLaunchMcuPF (looking down the hole, the bullpen stepped down behind him, the hole\'s red rim under his jaw rising a step as Rima speaks; the tear wells at his lower lid and holds at his eye, catching the light as Rima asks, its one bright pixel the hottest white (v3.3, P3), then slides down his cheek a pixel every 4 f toward the jaw); v3.4: the V.O. is "mostly the bill. we can\'t buy that many servers. someone can." (lips still) and on "someone can." his eyes go to his phone on the desk, into the call; "it\'s the bill." lip-synced with his eyes up toward her, then down again for "mostly the bill."',
   face: {MAS: 'lip'},
-  marks: {bill: ['on', 'e1-a1-7-02', -4], billEnd: ['end', 'e1-a1-7-02', 4], tear: ['w', 'v31-a1-0003', 'tear', 0]},
+  marks: {bill: ['on', 'e1-a1-7-02', -4], billEnd: ['end', 'e1-a1-7-02', 4], tear: ['w', 'v31-a1-0003', 'tear', 0], someone: ['w', 'v34-vo-02', 'someone', 0]},
   draw: (fb, k, sh, f) => {
-    const b0 = mk(sh, 'bill', 67), b1 = mk(sh, 'billEnd', 98), catchK = mk(sh, 'tear', 40);
+    const b0 = mk(sh, 'bill', 67), b1 = mk(sh, 'billEnd', 98), catchK = mk(sh, 'tear', 40), so = mk(sh, 'someone', 180);
+    // v3.4: on the V.O.'s "someone can." his eyes go down to his phone on the desk (camera-left, lids half) and stay:
+    // the thought that becomes the call (v32-7.03)
+    const toPhone = k >= so;
     const up = k >= b0 && k < b1;
     // v3.3 (P3): the tear wells at his lower lid and holds there, AT HIS EYE, glinting as Rima asks "Is that a tear?"
     // (the catch-light from 12 frames before her word "tear"), then slides a pixel every 4 f toward his jaw as he answers
     const well = Math.max(0, b0 - 56);
     const tear = k < well ? null : k < catchK ? 0 : k - catchK;
-    drawLaunchMcuPF(fb, f, {tear, tearCatch: k >= catchK - 12, collarStyle: CS, glow: k < 30 ? 1 : 2, mas: {mouth: say(sh, k, 'MAS'), lid: up ? 0 : 1, look: up ? 1 : 0}});
+    drawLaunchMcuPF(fb, f, {tear, tearCatch: k >= catchK - 12, collarStyle: CS, glow: k < 30 ? 1 : 2, mas: {mouth: say(sh, k, 'MAS'), lid: up ? 0 : 1, look: up ? 1 : toPhone ? -1 : 0}});
     // the glint made readable on her word: a three-armed catch-light round the bright pixel, 4 frames
     if (tear !== null && k >= catchK - 2 && k < catchK + 2) tearGlint(fb, MAS_TEAR_PATH[0][0], MAS_TEAR_PATH[0][1]);
+    return voTyped(fb, sh, k);
   },
 });
 L.add('7.02', {
@@ -732,7 +758,7 @@ L.add('11.01', {
 /** the split's foot a rung down (both panes): the V.O. rows on shadow (the left pane is a day room) */
 const splitFoot = (fb: Buf) => bottomShade(fb, 180, 1);
 L.add('11.03', {
-  st: 'SPLIT-DUEL drawDuelSplit phrase 1: the right pane held clean for Mas\'s V.O. (CLOD unlit, waiting; Mario writing, no scroll yet; the left pane quiet, Gerg typing) · then LEFT the demo (Gerg holding up the napkin and photographing it on the shutter; the photo on the demo screen) · RIGHT Mario dictating his memo as the scroll grows · plates CLOD 1 · SAME DAY and MARIO · EX-NOPEAI in the right pane (the relation the cut V.O. carried)',
+  st: 'SPLIT-DUEL drawDuelSplit phrase 1: the right pane held clean for Mas\'s V.O. (CLOD unlit, waiting; Mario writing, no scroll yet; the left pane quiet, Gerg typing) · then LEFT the demo (Gerg holding up the napkin and photographing it on the shutter; the photo on the demo screen) · RIGHT Mario dictating his memo as the scroll grows · plates CLOD 1 · SAME DAY and MARIO in the right pane (v3.4: the restored V.O. carries the relation, so the plate is his name again, at v3.1\'s spot)',
   marks: {memo: ['on', 'e1-a1-11-01', 0], memoEnd: ['end', 'e1-a1-11-01', 0], snap: ['snd', 'camera_shutter', 1, 0]},
   draw: (fb, k, sh, f) => {
     const m0 = mk(sh, 'memo', 141), m1 = mk(sh, 'memoEnd', 300), snap = mk(sh, 'snap', 206);
@@ -746,7 +772,8 @@ L.add('11.03', {
     splitFoot(fb);
     plate(fb, sh, k, 'CLOD', 250, 14, PAL.W5);
     const mt = textOf(sh, 'label', 'MARIO');
-    if (mt && k >= mt.s && k < mt.e) drawPlate(fb, {...mt, kind: 'plate'}, k - mt.s, 388, 90, ACCENT.MARIO ?? PAL.F6);
+    if (mt && k >= mt.s && k < mt.e) drawPlate(fb, {...mt, kind: 'plate'}, k - mt.s, 404, 90, ACCENT.MARIO ?? PAL.F6);
+    return voTyped(fb, sh, k);
   },
 });
 L.add('11.04', {
@@ -854,4 +881,4 @@ L.add('12.07', {
 });
 
 void LAUNCH; void stepColor; void ease2; void rect;
-export const SEGMENT = defineSegment({seg: 'act1', lock: LOCK, layouts: L.all, review: {subtitle: 'PIXEL v3.3 · LOCK ACT1 (v3.3 STICK TIMING) · v3-shots-act1'}});
+export const SEGMENT = defineSegment({seg: 'act1', lock: LOCK, layouts: L.all, review: {subtitle: 'PIXEL v3.4 · LOCK ACT1 (v3.4 STICK TIMING) · v3-shots-act1'}});

@@ -107,6 +107,9 @@ export interface OtsRimaState {
   /** v3.1: launch night warmed a step (the back wall's warm variant, his desk lamp's key on her face, the shoulder's
    *  rim in the lamp's tungsten): drawLaunchOTSRima's own warm branch */
   warm?: 0 | 1;
+  /** v3.4 (5.04, the decision): his head in the foreground silhouette dips this many whole pixels toward his desk and
+   *  the button (the shoulders stay): the settle before "it's a preview." */
+  headDy?: number;
 }
 /** drawLaunchOTSRima's setup, re-composed: the back wall at camX, Rima's portrait at his desk, HIS DESK's near edge
  *  across the frame's foot (she stopped at it: the V.O. rows sit on its shadow), the button and the parked cursor on it
@@ -117,7 +120,18 @@ export const otsRima = (fb: Buf, f: number, st: OtsRimaState) => {
   if (st.warm) faceKey(fb, 232, 44, 344, 128, 1, -1);
   const top = 178;
   for (let y = top; y < RH; y++) for (let x = 0; x < 480; x++) fb.set(x, y, y === top ? PAL.G3 : y < top + 3 ? PAL.G2 : bayer(x, y) < 0.3 ? PAL.N2 : PAL.N1);
-  otsShoulder(fb, -44, 64, st.warm ? PAL.W4 : PAL.C4, {flip: true});
+  if (!st.headDy) otsShoulder(fb, -44, 64, st.warm ? PAL.W4 : PAL.C4, {flip: true});
+  else {
+    // the silhouette drawn apart, its head (above the collar line, y 146) moved down whole pixels over the shoulders
+    const sil = new Buf(480, 270, 0x1000000);
+    otsShoulder(sil, -44, 64, st.warm ? PAL.W4 : PAL.C4, {flip: true});
+    const split = 146;
+    for (let y = RH - 1; y >= 0; y--) for (let x = 0; x < 200; x++) {
+      const v = sil.c[y * 480 + x]; if (v === 0x1000000) continue;
+      const Y = y < split ? y + st.headDy : y;
+      if (Y < RH) fb.set(x, Y, v);
+    }
+  }
   drawBeigeButton(fb, 364, top + 4, {scale: 'medium'});
   if (st.cursor) drawCursor(fb, 382, top + 6);
   void f;

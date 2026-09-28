@@ -146,7 +146,10 @@ const voLine = (seg: Seg, b: Buf, sh: PxShot, k: number) => {
   for (const l of sh.lines) {
     if (l.kind !== 'vo' || k < l.s || k >= l.e + 15) continue;
     const text = seg.opts.voLowercase ? l.text.toLowerCase() : l.text;
-    const n = clamp(Math.floor((k - l.s) * 0.5), 0, text.length);
+    // typed at his reading pace (0.5 glyphs a frame), faster when the line is long, so it always finishes 4 frames
+    // before the voice does (v3.4: long lines used to clear before their last glyphs appeared)
+    const rate = Math.max(0.5, text.length / Math.max(1, l.e - l.s - 4));
+    const n = clamp(Math.floor((k - l.s) * rate), 0, text.length);
     if (pw(text) <= VO_W) { pt(b, text.slice(0, n), 12, 191, PAL.C6, {shadow: PAL.N0}); continue; }
     // wider than the frame (§5.3 asks for <= 45 glyphs; render.ts check lists these): wrapped, the last line on the
     // baseline, earlier lines above it, typed through in order

@@ -1,0 +1,319 @@
+{
+ "segment": "act2",
+ "layers": [
+  {
+   "room": "whitehouse",
+   "from": 0.0,
+   "to": 63.04,
+   "lead": 0.0,
+   "trail": 1.0
+  },
+  {
+   "room": "bullpen-night",
+   "from": 61.44,
+   "to": 66.44,
+   "lead": 0.6,
+   "trail": 0.4
+  },
+  {
+   "room": "senate",
+   "from": 66.53,
+   "to": 128.9,
+   "lead": 0.6,
+   "trail": 0.4
+  },
+  {
+   "room": "rooftop",
+   "from": 132.9,
+   "to": 169.82,
+   "lead": 0.6,
+   "trail": 0.4
+  },
+  {
+   "room (next chapter, leading)": "dark",
+   "from": 169.57,
+   "lead": 0.6
+  },
+  {
+   "pad": "THE WHITE HOUSE",
+   "chords": [
+    "Abmaj9",
+    "Eb9sus4"
+   ],
+   "lufs": -32,
+   "duck_db": 10,
+   "from": 0.0,
+   "to": 62.04
+  },
+  {
+   "music": "none (THE BRIDGE: no score)",
+   "from": 62.04,
+   "to": 67.12
+  },
+  {
+   "pad": "THE SENATE",
+   "chords": [
+    "Bbm9",
+    "Eb9sus4"
+   ],
+   "lufs": -32,
+   "duck_db": 10,
+   "from": 67.12,
+   "to": 128.5
+  },
+  {
+   "pad": "THE TOUR",
+   "chords": [
+    "Fm11",
+    "Dbmaj9#11"
+   ],
+   "lufs": -30,
+   "duck_db": 10,
+   "from": 128.5,
+   "to": 133.5
+  },
+  {
+   "pad": "THE ROOFTOP",
+   "chords": [
+    "Dbmaj9#11",
+    "Gm7b5"
+   ],
+   "lufs": -32,
+   "duck_db": 10,
+   "from": 133.5,
+   "to": 169.42
+  }
+ ],
+ "sfx": [
+  [
+   "13.03",
+   "freeze_hit_F",
+   6.208
+  ],
+  [
+   "13.05",
+   "paper_flutter",
+   19.0
+  ],
+  [
+   "13.06",
+   "landing_thunk",
+   20.162
+  ],
+  [
+   "13.06",
+   "landing_thunk",
+   20.35
+  ],
+  [
+   "13.06",
+   "landing_thunk",
+   20.539
+  ],
+  [
+   "13.10",
+   "flame_whoomph",
+   43.153
+  ],
+  [
+   "13.12",
+   "camera_shutter",
+   49.167
+  ],
+  [
+   "13.12",
+   "freeze_hit_F",
+   49.187
+  ],
+  [
+   "13.14",
+   "camera_shutter",
+   56.417
+  ],
+  [
+   "15.04",
+   "freeze_hit_C",
+   78.292
+  ],
+  [
+   "15.05",
+   "typing_soft",
+   79.127
+  ],
+  [
+   "15.15",
+   "folder_slide",
+   100.388
+  ],
+  [
+   "15.15",
+   "rubber_stamp_C",
+   101.381
+  ],
+  [
+   "15.16",
+   "paper_curl",
+   107.833
+  ],
+  [
+   "15.11",
+   "typing_soft",
+   113.135
+  ],
+  [
+   "15.12",
+   "cloth_rustle",
+   116.675
+  ],
+  [
+   "15.12",
+   "synth:moth",
+   117.725
+  ],
+  [
+   "15.13",
+   "synth:gasp",
+   120.075
+  ],
+  [
+   "15.14",
+   "rubber_stamp_C",
+   122.943
+  ],
+  [
+   "15.14",
+   "rubber_stamp_C",
+   123.283
+  ],
+  [
+   "15.14",
+   "rubber_stamp_C",
+   123.673
+  ],
+  [
+   "16.01",
+   "rubber_stamp_C",
+   128.5
+  ],
+  [
+   "16.01",
+   "synth:stab",
+   128.5
+  ],
+  [
+   "16.01",
+   "paper_whip",
+   128.85
+  ],
+  [
+   "16.01",
+   "rubber_stamp_C",
+   129.25
+  ],
+  [
+   "16.01",
+   "synth:stab",
+   129.25
+  ],
+  [
+   "16.01",
+   "post_click",
+   131.15
+  ],
+  [
+   "16.01",
+   "rubber_stamp_C",
+   131.725
+  ],
+  [
+   "16.01",
+   "synth:stab",
+   131.725
+  ],
+  [
+   "16.01",
+   "rubber_stamp_C",
+   132.337
+  ],
+  [
+   "16.01",
+   "synth:stab",
+   132.337
+  ],
+  [
+   "17.01",
+   "pen_scribble_short",
+   135.3
+  ],
+  [
+   "17.01",
+   "pen_scribble_short",
+   136.44
+  ],
+  [
+   "17.01",
+   "pen_run",
+   137.82
+  ],
+  [
+   "17.01",
+   "pen_scribble_short",
+   138.6
+  ],
+  [
+   "17.01",
+   "pen_tick_1",
+   139.14
+  ],
+  [
+   "17.02",
+   "pen_scribble_short",
+   139.72
+  ],
+  [
+   "17.02",
+   "pen_scribble_short",
+   144.207
+  ],
+  [
+   "17.02",
+   "pen_scribble_short",
+   148.026
+  ],
+  [
+   "17.03",
+   "synth:roll",
+   149.458
+  ],
+  [
+   "17.04",
+   "freeze_hit_F",
+   150.875
+  ],
+  [
+   "17.07",
+   "ka_ching",
+   158.975
+  ],
+  [
+   "17.07",
+   "synth:bell",
+   158.995
+  ],
+  [
+   "17.10",
+   "paper_curl",
+   162.2
+  ]
+ ],
+ "sfx_missing": [],
+ "decisions": [
+  "13.01: \"the meeting room's mantel clock and the tripods' clicks, under the act break's black\" = its room, leading the cut by 1.0 s",
+  "17.01: \"rooftop wind under the poster's last stamp\" = its room, leading the cut by 0.6 s"
+ ],
+ "seconds": 170.267,
+ "chapter_seconds": 170.167,
+ "lufs": -29.44,
+ "peak_dbfs": -3.57,
+ "built_by": "audio/ep01/v3-el/tools/el_bed.py"
+}

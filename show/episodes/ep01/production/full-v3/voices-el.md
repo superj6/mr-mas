@@ -1,6 +1,6 @@
 # Ep1 v3: the ElevenLabs voice pass (`v3-voices-el`, track A4, 2026-09-27)
 
-> **Status: PHASE 7 DONE: THE INTRO LINE IN ELEVENLABS.** The EL films' 30 s intro now has Mas's line in his EL voice (Jeremy), fitted to the Kokoro frames, in `audio/intro-mix/intro-ep1-mix-V1-chipchamber-el.wav` (§Y, directly below). Every line of the v3.3 lock (commit a756708) has an EL take, and there is an EL-timed copy of it (`show/reel/ep01-v33-el/`, key `ep01-v33-el-stick`, §X). v3.2 is §W, v3.1 §V, the Mas recast §R, phase 2 (the v3 lock) §P1–§P9, and phase 1 (the casting and the sample) §1–§8. Where phase 2 describes Mas, it describes Giovanni.
+> **Status: PHASE 8 DONE: THE v3.4 LOCK IN ELEVENLABS.** Every line of the final v3.4 lock (commit 4309e86) has an EL take, with Mas as Jeremy. There is an EL-timed copy of it (`show/reel/ep01-v34-el/`, key `ep01-v34-el-stick`) with beds, and its intro plays the EL intro master (§Z, directly below). No reel was made. The intro line is §Y, v3.3 §X, v3.2 §W, v3.1 §V, the Mas recast §R, phase 2 (the v3 lock) §P1–§P9, and phase 1 (the casting and the sample) §1–§8. Where phase 2 describes Mas, it describes Giovanni.
 >
 > **Nobody has listened to any of this.** Every statement below is a measurement: duration, pace, pitch, silence at the head and tail, loudness, and what a speech recogniser heard. Whether a voice is natural, funny, or right for the character is still a call for an ear.
 >
@@ -58,7 +58,32 @@
     - Its articulation is 4.08 syllables a second, exactly the Kokoro read's rate (take 1 3.37). Its pauses are shorter (0.39–0.58 s, take 1 0.47–0.67).
     - It is as quiet: the same 97 Hz median with a narrower range (9.1 st, take 1 10.2). ASR verbatim, no clipped tail, −18 LUFS.
     - Take 1 stays in the cache: dropping `line_settings` brings it back for free.
-- **The EL-timed v3.4 lock** waits for the Kokoro lock. `tools/render_v34.sh`, then `el_lock.py --lock v34`, `el_bed.py --lock v34` and the manifest, as §X.
+### Z1. The EL-timed v3.4 lock
+
+- **The build:** from the final Kokoro v3.4 lock (commit 4309e86), with `tools/render_v34.sh`, then `el_lock.py --lock v34`, `el_bed.py --lock v34` and the manifest, as §X.
+- **Nothing was sent.**
+  - All 231 lines have EL takes: the eight new V.O., with take 2 of v34-vo-07, and every other line as its earlier EL take sent it (checked line by line).
+  - The twelve lines the locks cut from other takes are cut again from the EL takes.
+  - v3-vo-10 plays Jeremy's existing take.
+- **The files:**
+  - the timelines and manifest: `show/reel/ep01-v34-el/ep01-v34-el-<seg>.json`, `ep01-v34-el.manifest.json` (key `ep01-v34-el-stick`);
+  - the beds: `audio/reel/ep01-v34-el/`, all sounds resolved; the card is the lock's own.
+- **The manifest's intro plays `audio/intro-mix/intro-ep1-mix-V1-chipchamber-el.wav` at −3 dB** (§Y). `--plan` validates: 30,239 frames (21:00.0 with the slate, intro, card and outro), all 231 takes, 7 beds, no warnings.
+- **J-cuts:** all six leads are kept (5.03 −0.5, 7.01 −0.6, 12.02 −0.5, S3.06 −0.6, S5.11 −0.8, S8.08 −1.0 s).
+- **The Runway frames:** S7.13 stays 264 frames.
+- **What didn't apply:** the tag's Runway reserve. Draft 8.3 cut the duck, so v31-32.01d is gone; 32.01 is the plan's 77 frames and has no line, so it is the lock's unchanged.
+
+| Segment | Kokoro v3.4 (frames) | **EL-timed** | Frames | Change |
+|---|---|---|---|---|
+| Cold open | 0:26.7 (640) | **0:24.3** | **583** | −2.4 s |
+| Act One | 5:37.5 (8,101) | **5:43.3** | **8,240** | +5.8 s |
+| Act Two | 3:01.2 (4,349) | **2:50.2** | **4,084** | −11.0 s |
+| Act Three | 2:05.3 (3,007) | **2:03.9** | **2,974** | −1.4 s |
+| Act Four | 8:27.8 (12,187) | **8:39.9** | **12,477** | +12.1 s |
+| Tag | 0:33.3 (798) | **0:33.3** | **798** | 0.0 s |
+| **Story** | **20:11.8 (29,082)** | **20:14.8** | **29,156** | **+3.1 s** |
+
+- **The new V.O.'s share of the change:** EL against Kokoro, +0.68 (01), +0.90 (02), +0.11 (04), +0.48 (05), +0.35 (06), +0.68 (07, take 2), +0.24 (09) and +0.59 s (11); v3-vo-10 is +0.68. Act Two's −11.0 s is mostly the faster supporting voices, as in every EL lock (§P3).
 
 ---
 
