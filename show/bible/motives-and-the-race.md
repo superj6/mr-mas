@@ -37,10 +37,16 @@ Motives are planted in Ep1 and paid off over the season. Every major player gets
 ## 3. Mas in Ep1
 
 1. **The stated motive, in his real words.** This is already in the film: "i love my current job." and "i have no equity in nopeai." (the Senate). Neleh's "And the CEO? What does he own?" / "Good question." makes it the season's question: if not money, what?
-2. **A glimpse of the real motive: 1993** (F1.1, part 1 of 4, about 5–6 s).
-   - On launch night, as his finger goes to the button, cut to the eight-year-old at the beige computer, lit by a screen we can't see, finger on a key. Then back to the button.
-   - No words. It says he has wanted this since he was a kid, without saying so.
-   - It plants the season's mystery. The screen turns round in Ep12: `HOW DO I WIN?`.
+2. **What they started it for: THE WOODROSE, 2015** (about 10 s; the showrunner: "i don't want flashback to 1993. i was thinking more like earlier in the founding of openai they state they're after agi or something").
+   - **The trigger:** on launch night, Alyi's "Six years and eleven months. From the day we started to that click." cuts to the founding dinner, in the intro's cut-paper amber and teal.
+   - **They say what they're after,** each in their own terms, close to the public record:
+     - The goal is AGI, for everyone, run as a nonprofit (the 2015 announcement and the Charter).
+     - NOLE: a counterweight to Elgoog, his stated reason.
+     - ALYI: he's the one they're taking from Elgoog ("Not everyone.").
+     - GERG: he'll quit his job Monday.
+   - **Mas frames the race:** "how far behind are we?" While the others talk, he folds Gerg's napkin (`AGI · FOR EVERYONE · NONPROFIT`) into his pocket. The one who ends up holding the plan. No V.O.
+   - **This plants three things:** the prize (AGI), each founder's first want, and a season payoff. The napkin comes out again when the nonprofit turns into something else (Ep5–6, THE TRANSFORMER). THE WOODROSE's later parts (Ep6 for Nole, Ep12 in Mas's chair) keep deepening the same dinner.
+   - **Cut:** the 1993 glimpse. 1993 stays in the intro only; the season's `HOW DO I WIN?` reveal is unaffected.
 3. **Where his skill comes from: TPOOL** (F1.2, about 8–10 s, rebuilt so it can be read).
    - After the firing, at the tally marks ("i don't keep score."): 2008, TPOOL, two popped collars, a closed door, staff silhouettes. He walks out still CEO. Back to the two marks.
    - This makes the firing not the first time. On his return, "they had four votes. i had the landlord. the money. gerg." reads as the lesson he learned there: make yourself the piece everything depends on.

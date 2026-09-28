@@ -57,7 +57,7 @@ Every specific reason is contested. The guardrails keep the show from asserting 
 |---|---|---|
 | The stated motive: "i love my current job." · "i have no equity in nopeai." | EXPLAINED | It becomes the question every episode complicates. |
 | "And the CEO? What does he own?" / "Good question." | HINTED: if not money, what? | The 1993 thread (Ep4, Ep7, Ep12) |
-| **1993** (the kid at the screen) | only in the intro; **GAP** in the story | Proposed as a 5 s glimpse at the launch button; then Ep4, Ep7, and Ep12 (`HOW DO I WIN?` → `define "win."`) |
+| **THE WOODROSE, 2015** (the founding: what they're after) | only in the intro; **GAP** in the story | Proposed as about 10 s on launch night, from Alyi's "From the day we started": the goal (AGI, for everyone, a nonprofit), Nole's counterweight to Elgoog, Alyi leaving Elgoog, Gerg quitting Monday. Mas asks "how far behind are we?" and pockets the napkin, which pays off Ep5–6 (THE TRANSFORMER). THE WOODROSE deepens Ep6 and Ep12. (Showrunner: no 1993 flashback.) |
 | **TPOOL** (fired, or nearly, before) | **cut in v3.1; GAP.** The two faint tally marks mean nothing to a newcomer | Proposed as a readable 9 s flashback at "i don't keep score.". Then Ep3 (TPOOL's $43.4M sale), Ep11 (the disputed YC exit) and Ep12 (the tally at ∞) |
 | The planner voice (ship first; rent until he can own; "mine's half written."; "for when it gets harder to tell."; "a year ago, forty users…") | HINTED: the long game | Each episode shows one move of it: GATESTAR (own compute), the Orb (identity), the rules |
 | The return: "they had four votes. i had the landlord. the money. gerg." | PAID IN EP1 | Set up by the Tasya deal, the investors' ticker and Gerg quitting. With TPOOL restored, it also reads as a lesson he learned. |
@@ -108,7 +108,7 @@ Every specific reason is contested. The guardrails keep the show from asserting 
 ## 6. Gaps, ranked
 
 1. **The firing's why feels unanswered rather than withheld.** Add the board desk's two props in Ep1, and **restore Neleh's podcast in Ep2** as the answer to Rima's launch-night question.
-2. **Mas's why:** the 1993 glimpse at the launch button (Ep1).
+2. **The founding's why:** THE WOODROSE on launch night (Ep1, about 10 s). This is the race's prize and each founder's first want, with Mas holding the napkin.
 3. **Mas's history of surviving:** TPOOL, rebuilt so it can be read (Ep1, about 9 s), so the two faint marks mean something.
 4. **Mario's and Nole's why:** one line and one visual (Ep1).
 5. **What winning means:** watch it in the next newcomer read, and add one conflict line only if it still reads thin.
