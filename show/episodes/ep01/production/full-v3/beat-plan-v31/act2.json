@@ -1,0 +1,860 @@
+{
+ "segment": "act2",
+ "source": "show/reel/ep01-v3/ep01-v3-act2.json",
+ "_about": "v31-script beat plan (PLAN §2 format), written against the v3 lock's beat and line ids. Every v3 beat appears once (keep, cut, merge, or keep with \"moved\"), plus the new beats; beats are listed in their v3.1 order. est_s is a planning length from word counts and the takes on file, never a measurement. Kept lines are keep true/false; new and changed lines carry v31-<seg>-NNNN ids; new V.O. carries v31-vo-NN ids; kept v3 V.O. stays in lines with \"vo\": true; restored v2 lines keep their v2 ids with \"restored\": true and the take path. vo.at = \"start+S\" | \"after:<line id>+S\". Subtitles: spoken real lines show without quotation marks or print ellipses (N 0:05); posts and printed matter keep theirs. Every call grid lights and names its speaking tile (B5). The lit-UI band prompt in the bottom letterbox never appears (B8); rails and the V.O. line keep their places. The script is show/episodes/ep01/script.md (draft 7); the notes are ../script-v31-notes.md; the builder is _build_v31.py (edit its spec and re-run, don't hand-edit).",
+ "story_s": {
+  "source": 204.74,
+  "estimate": 199.63
+ },
+ "beats": [
+  {
+   "id": "13.01",
+   "action": "keep",
+   "est_s": 7.8,
+   "music": "THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
+   "vo": [
+    {
+     "id": "v31-vo-01",
+     "who": "mas",
+     "text": "four companies, one table. radnus has been mouthing the same sentence since we sat down.",
+     "kind": "read",
+     "delivery": "amused, quiet, as the room settles; the second sentence a shade slower",
+     "take": "new",
+     "replaces": "v3-vo-11 (U1)",
+     "cluster": "the White House",
+     "at": "start+1.0"
+    }
+   ],
+   "shot_note": "Radnus's lips move silently from the first frame: he is mouthing his sentence",
+   "fix": [
+    "U1",
+    "N 6:27"
+   ],
+   "why": "The rehearsal is now visible on Radnus, so the viewer ties it to him, not to Sirrah.",
+   "src_s": 7.52,
+   "src_frame": "WIDE · the meeting room",
+   "lines": [
+    {
+     "id": "v3-vo-11",
+     "keep": false,
+     "who": "mas",
+     "text": "four companies, one table. radnus has been rehearsing something since the lobby.",
+     "why": "U1: \"since the lobby\" pointed at the wrong lobbies"
+    }
+   ]
+  },
+  {
+   "id": "13.02",
+   "action": "keep",
+   "est_s": 3.83,
+   "music": "THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
+   "why": "unchanged (guardrails §2a rule 5: the invented line for both sides)",
+   "src_s": 3.833,
+   "src_frame": "MCU · SIRRAH at the blocks",
+   "lines": [
+    {
+     "id": "e1-a2-13-01",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "13.03",
+   "action": "keep",
+   "est_s": 0.62,
+   "music": "THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
+   "why": "unchanged",
+   "src_s": 0.625,
+   "src_frame": "MCU · 2-TONE freeze + card",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "13.04",
+   "action": "keep",
+   "est_s": 1.92,
+   "music": "THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
+   "why": "unchanged",
+   "src_s": 1.917,
+   "src_frame": "MCU · the card rides",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "13.05",
+   "action": "keep",
+   "est_s": 11.0,
+   "music": "THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
+   "why": "unchanged (Mario's sub-concerns are protected)",
+   "src_s": 11.0,
+   "src_frame": "TWO-SHOT · RADNUS + MARIO (held; SIRRAH O.S.)",
+   "lines": [
+    {
+     "id": "e1-a2-13-02",
+     "keep": true
+    },
+    {
+     "id": "e1-a2-13-03",
+     "keep": true
+    },
+    {
+     "id": "e1-a2-13-04",
+     "keep": true
+    },
+    {
+     "id": "e1-a2-13-05",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "13.06",
+   "action": "keep",
+   "est_s": 3.3,
+   "music": "THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
+   "fix": [
+    "R15"
+   ],
+   "why": "The photographer's three tripods pop in faster; his line starts at 0.6 s (−1.2 s).",
+   "src_s": 4.542,
+   "src_frame": "WIDE · the photographer and three tripods",
+   "lines": [
+    {
+     "id": "e1-a2-13-06",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "13.07",
+   "action": "keep",
+   "est_s": 3.75,
+   "music": "THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
+   "why": "unchanged",
+   "src_s": 3.75,
+   "src_frame": "MCU · a pan along the row, R→L (no cut, no zoom)",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "13.08",
+   "action": "keep",
+   "est_s": 5.0,
+   "music": "THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
+   "why": "unchanged",
+   "src_s": 5.0,
+   "src_frame": "WIDE · the photographer's wide",
+   "lines": [
+    {
+     "id": "e1-a2-13-07",
+     "keep": true
+    },
+    {
+     "id": "e1-a2-13-08",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "13.09",
+   "action": "keep",
+   "est_s": 16.19,
+   "music": "THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
+   "why": "unchanged",
+   "src_s": 16.187,
+   "src_frame": "TWO-SHOT · MAS + RADNUS (held)",
+   "lines": [
+    {
+     "id": "e1-a2-13-09",
+     "keep": true
+    },
+    {
+     "id": "e1-a2-13-10",
+     "keep": true
+    },
+    {
+     "id": "e1-a2-13-11",
+     "keep": true
+    },
+    {
+     "id": "v3-vo-12",
+     "keep": true,
+     "vo": true
+    },
+    {
+     "id": "e1-a2-13-12",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "13.10",
+   "action": "keep",
+   "est_s": 2.25,
+   "music": "THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
+   "why": "unchanged",
+   "src_s": 2.25,
+   "src_frame": "INSERT · the flame on Radnus's collar",
+   "lines": [
+    {
+     "id": "e1-a2-13-13",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "13.11",
+   "action": "keep",
+   "est_s": 5.68,
+   "music": "THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
+   "why": "unchanged",
+   "src_s": 5.683,
+   "src_frame": "WIDE · the door behind the row",
+   "lines": [
+    {
+     "id": "v3-vo-13",
+     "keep": true,
+     "vo": true
+    },
+    {
+     "id": "e1-a2-13-14",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "13.12",
+   "action": "keep",
+   "est_s": 0.62,
+   "music": "THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
+   "why": "unchanged",
+   "src_s": 0.625,
+   "src_frame": "WIDE · FLASH: all three cameras fire",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "13.13",
+   "action": "keep",
+   "est_s": 5.5,
+   "music": "THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
+   "caption": "\"Put it in writing.\" In the foreground Mario pulls the whole scroll out of his pocket. Nedib looks at it, approving: \"Longer.\"",
+   "fix": [
+    "U2"
+   ],
+   "why": "The scroll is the trigger; \"Longer.\" answers it.",
+   "src_s": 5.235,
+   "src_frame": "OTS · from behind Mario's raised finger onto NEDIB (held)",
+   "lines": [
+    {
+     "id": "e1-a2-13-15",
+     "keep": false,
+     "who": "nedib",
+     "text": "Whatever you promise in here today, put it in writing. Longer.",
+     "why": "U2: \"Longer.\" had no trigger"
+    },
+    {
+     "id": "v31-a2-0001",
+     "new": true,
+     "who": "nedib",
+     "text": "Whatever you promise in here today, put it in writing.",
+     "after": "start+0.5",
+     "gap_s": 0.4,
+     "delivery": "to the row, the pen out like a baton",
+     "tag": "",
+     "take": "cut from e1-a2-13-15 (its first sentence)"
+    },
+    {
+     "id": "v31-a2-0002",
+     "new": true,
+     "who": "nedib",
+     "text": "Longer.",
+     "after": "v31-a2-0001",
+     "gap_s": 1.0,
+     "delivery": "looking at the scroll Mario has just pulled out, approving",
+     "tag": "",
+     "take": "cut from e1-a2-13-15 (its last word)"
+    }
+   ]
+  },
+  {
+   "id": "13.14",
+   "action": "keep",
+   "est_s": 5.9,
+   "music": "THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
+   "caption": "The print in his hand: CLASS PHOTO #1. \"it's a good photo.\" HOLD. MATCH CUT: the print in his hand becomes his phone in the same place in frame.",
+   "lcut": [
+    {
+     "sound": "the room's air under the match cut",
+     "over_s": 1.0
+    }
+   ],
+   "fix": [
+    "C #5"
+   ],
+   "why": "The bay bridge gets a reason: the photo he is holding is the first thing on his feed that night.",
+   "src_s": 5.9,
+   "src_frame": "INSERT · the print (meter G13)",
+   "lines": [
+    {
+     "id": "e1-a2-13-18",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "14.01",
+   "action": "keep",
+   "est_s": 6.0,
+   "music": "THE BRIDGE · a hush · no score: the phone's small speaker, then water on pilings",
+   "vo": [
+    {
+     "id": "v31-vo-02",
+     "who": "mas",
+     "text": "her mouth is a beat late. the voice isn't hers.",
+     "kind": "read",
+     "delivery": "a professional's eye, plain and exact, no alarm; the second sentence lower",
+     "take": "new",
+     "pays_off": "15.02: the chairman, \"That voice was not mine. The words were not mine.\"",
+     "cluster": "the bay (M §4 #5)",
+     "at": "start+2.6"
+    }
+   ],
+   "onscreen": {
+    "add": [
+     "CLASS PHOTO #1 · ♥ (his feed's first item, 0.2-1.8 s, then scrolled away)"
+    ]
+   },
+   "caption": "MATCH CUT: his phone, in his hand, at the dark bullpen window (MAY 12). His feed opens on CLASS PHOTO #1, hearts under it; his thumb scrolls to the next item: a news clip whose anchor's mouth lands a beat after a too-smooth voice, the app's grey tag under it, ⚠ ALTERED AUDIO. Beyond the glass, the skyline, one lit window.",
+   "shot_note": "the anchor is plainly generic (an invented woman, no network): nothing in the frame may read as a real politician; the reposting silhouette (14.03) carries only RUMPT's props, navy suit and over-long red tie (guardrails §6, no hair)",
+   "fix": [
+    "C #5",
+    "M §4 #5",
+    "N 7:41"
+   ],
+   "why": "Whose phone, whose room, what the clip is: his, his, a fake voice. His one read orients the whole bridge and sets up the chairman's line.",
+   "src_s": 2.583,
+   "src_frame": "OTS · over Mas's shoulder at the dark window",
+   "lines": []
+  },
+  {
+   "id": "14.02",
+   "action": "cut",
+   "why": "C #5 / R4: the first push goes; the match cut and his read carry the arrival.",
+   "fix": [
+    "R4"
+   ],
+   "src_s": 1.25,
+   "src_frame": "WIDE · the bay (push 1 of 3)",
+   "est_s": 0.0
+  },
+  {
+   "id": "14.03",
+   "action": "keep",
+   "est_s": 1.92,
+   "music": "THE BRIDGE · a hush · no score: the phone's small speaker, then water on pilings",
+   "why": "unchanged (the political balance pair, guardrails §2a rule 3)",
+   "src_s": 1.917,
+   "src_frame": "WIDE · the building, its lit window (push 2 of 3)",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "14.04",
+   "action": "keep",
+   "est_s": 1.5,
+   "music": "THE BRIDGE · a hush · no score: the phone's small speaker, then water on pilings",
+   "why": "unchanged",
+   "src_s": 1.5,
+   "src_frame": "INSERT · a thumb on a repost arrow (push 3 of 3)",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "14.05",
+   "action": "keep",
+   "est_s": 2.42,
+   "music": "THE BRIDGE · a hush · no score: the phone's small speaker, then water on pilings",
+   "why": "unchanged",
+   "src_s": 2.417,
+   "src_frame": "WIDE · the lit window, the bay",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "14.06",
+   "action": "keep",
+   "est_s": 1.33,
+   "music": "THE BRIDGE · a hush · no score: the phone's small speaker, then water on pilings",
+   "why": "unchanged",
+   "src_s": 1.333,
+   "src_frame": "BLACK · the match cut on the voice",
+   "lines": [
+    {
+     "id": "e1-a2-15-01",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "15.01",
+   "action": "keep",
+   "est_s": 4.0,
+   "music": "THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged",
+   "why": "unchanged",
+   "src_s": 4.0,
+   "src_frame": "MCU · the voice finds a mouth",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "15.02",
+   "action": "keep",
+   "est_s": 5.0,
+   "music": "THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged",
+   "caption": "The hearing room. The matte chairman, identical to the clone, tells the room the truth about the voice it just heard.",
+   "fix": [
+    "N 7:41",
+    "N §3 #5"
+   ],
+   "why": "One fake-voice idea, stated by the record: the senator's opening was a cloned voice. It rhymes with Mas's read at the window.",
+   "src_s": 4.0,
+   "src_frame": "WIDE · the hearing room",
+   "lines": [
+    {
+     "id": "e1-a2-15-02",
+     "keep": false,
+     "who": "lahtnemulb",
+     "text": "Couldn't have said it better myself.",
+     "why": "N 7:41: the invented joke stacked a second fake on the first"
+    },
+    {
+     "id": "v31-a2-0003",
+     "new": true,
+     "who": "lahtnemulb",
+     "text": "That voice was not mine. The words were not mine.",
+     "after": "start+1.3",
+     "gap_s": 0.4,
+     "delivery": "the matte chairman, plainly, to the room: every sentence finished",
+     "tag": "",
+     "take": "new",
+     "note": "[P · MAY 16, 2023 · \"…that voice was not mine, the words were not mine…\" (blumenthal.senate.gov); the read makes the comma a full stop]"
+    }
+   ]
+  },
+  {
+   "id": "15.03",
+   "action": "keep",
+   "est_s": 2.5,
+   "music": "THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged",
+   "caption": "The clone gives him a look, disowned. The chairman takes the microphone back; they sit, the clone at his left hand. The clone keeps the better chair.",
+   "why": "unchanged picture; the look now answers the disowning",
+   "src_s": 2.5,
+   "src_frame": "TWO-SHOT · the chairman + THE CLONE",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "15.04",
+   "action": "keep",
+   "est_s": 0.62,
+   "music": "THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged",
+   "why": "unchanged",
+   "src_s": 0.625,
+   "src_frame": "TWO-SHOT · MAS + SUCRAM · 2-TONE freeze + card",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "15.05",
+   "action": "keep",
+   "est_s": 7.08,
+   "music": "THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged",
+   "why": "unchanged",
+   "src_s": 7.083,
+   "src_frame": "TWO-SHOT · MAS + SUCRAM (held)",
+   "lines": [
+    {
+     "id": "e1-a2-15-03",
+     "keep": true
+    },
+    {
+     "id": "e1-a2-15-04",
+     "keep": true
+    },
+    {
+     "id": "e1-a2-15-05",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "15.06",
+   "action": "keep",
+   "est_s": 6.62,
+   "music": "THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged",
+   "why": "unchanged",
+   "src_s": 6.625,
+   "src_frame": "MCU · the chairman, reading from a card",
+   "lines": [
+    {
+     "id": "e1-a2-15-06",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "15.07",
+   "action": "keep",
+   "est_s": 6.12,
+   "music": "THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged",
+   "why": "unchanged",
+   "src_s": 6.122,
+   "src_frame": "OTS · from behind Mas onto the dais (held)",
+   "lines": [
+    {
+     "id": "e1-a2-15-07",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "15.10",
+   "action": "keep",
+   "est_s": 7.4,
+   "music": "THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged",
+   "why": "unchanged line; the air before the red light trimmed (−0.6 s). The Senate asks him to run the agency: he is asked, and declines.",
+   "src_s": 8.0,
+   "src_frame": "WIDE · the dais leans in; a red light",
+   "lines": [
+    {
+     "id": "e1-a2-15-10",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "15.11",
+   "action": "keep",
+   "est_s": 6.25,
+   "music": "THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged",
+   "why": "unchanged",
+   "src_s": 6.25,
+   "src_frame": "TWO-SHOT · MAS + SUCRAM (held through the next question)",
+   "lines": [
+    {
+     "id": "e1-a2-15-11",
+     "keep": true
+    },
+    {
+     "id": "e1-a2-15-12",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "15.12",
+   "action": "keep",
+   "est_s": 3.0,
+   "music": "THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged",
+   "why": "unchanged",
+   "src_s": 3.0,
+   "src_frame": "INSERT · the wallet",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "15.13",
+   "action": "keep",
+   "est_s": 3.5,
+   "music": "THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged",
+   "why": "unchanged",
+   "src_s": 3.5,
+   "src_frame": "WIDE · the wallet held up to the dais",
+   "lines": [
+    {
+     "id": "e1-a2-15-13",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "15.14",
+   "action": "keep",
+   "est_s": 9.0,
+   "music": "THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged",
+   "why": "unchanged",
+   "src_s": 9.0,
+   "src_frame": "TWO-SHOT · MAS + SUCRAM",
+   "lines": [
+    {
+     "id": "e1-a2-15-14",
+     "keep": true
+    },
+    {
+     "id": "v3-a2-0001",
+     "keep": true
+    },
+    {
+     "id": "e1-a2-15-15",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "15.15",
+   "action": "keep",
+   "est_s": 3.29,
+   "music": "THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged",
+   "why": "unchanged: the finished sheet, PLEASE REGULATE ME, pays the Act One out",
+   "src_s": 3.292,
+   "src_frame": "HIGH · the witness table from above",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "15.16",
+   "action": "keep",
+   "est_s": 2.79,
+   "music": "THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged",
+   "jcut": [
+    {
+     "sound": "the tour's first stamp's thunk, under the senators' delight",
+     "lead_s": 0.5
+    }
+   ],
+   "fix": [
+    "R9"
+   ],
+   "why": "The senators love his ask; the tour stamps in under them.",
+   "src_s": 2.792,
+   "src_frame": "WIDE · the dais (a match on action)",
+   "lines": []
+  },
+  {
+   "id": "15.17",
+   "action": "cut",
+   "why": "R9: the back-stamp CALLED IT. (BEFORE SUCRAM.) went past the newcomer (N 8:53).",
+   "fix": [
+    "R9",
+    "N 8:53"
+   ],
+   "src_s": 1.917,
+   "src_frame": "INSERT · the back of the sheet",
+   "est_s": 0.0
+  },
+  {
+   "id": "15.18",
+   "action": "cut",
+   "why": "R9: with the back-stamp, Sucram's stare goes; it also shortens the 23 s wordless run.",
+   "fix": [
+    "R9"
+   ],
+   "src_s": 2.05,
+   "src_frame": "MCU · SUCRAM stares",
+   "est_s": 0.0
+  },
+  {
+   "id": "16.01",
+   "action": "keep",
+   "est_s": 5.0,
+   "music": "THE TOUR · THE RUN (MM-03), a knee stab on each stamp",
+   "fix": [
+    "R14",
+    "N 9:03"
+   ],
+   "why": "The poster held to read once, not twice (−2.5 s).",
+   "src_s": 8.0,
+   "src_frame": "GFX · the tour poster (held: ITEMS 1-4, the stamps pile up)",
+   "lines": []
+  },
+  {
+   "id": "17.01",
+   "action": "keep",
+   "est_s": 6.0,
+   "music": "THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)",
+   "why": "unchanged",
+   "src_s": 6.0,
+   "src_frame": "WIDE · the table under the sky (phrase 1)",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "17.02",
+   "action": "keep",
+   "est_s": 10.38,
+   "music": "THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)",
+   "why": "unchanged",
+   "src_s": 10.375,
+   "src_frame": "TWO-SHOT · MAS + MARIO at the sheet (held)",
+   "lines": [
+    {
+     "id": "e1-a2-17-01",
+     "keep": true
+    },
+    {
+     "id": "e1-a2-17-02",
+     "keep": true
+    },
+    {
+     "id": "e1-a2-17-03",
+     "keep": true
+    },
+    {
+     "id": "e1-a2-17-04",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "17.03",
+   "action": "keep",
+   "est_s": 1.42,
+   "music": "THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)",
+   "why": "unchanged",
+   "src_s": 1.417,
+   "src_frame": "WIDE · a cash register rolls in (phrase 2)",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "17.04",
+   "action": "keep",
+   "est_s": 0.62,
+   "music": "THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)",
+   "why": "unchanged",
+   "src_s": 0.625,
+   "src_frame": "WIDE · 2-TONE freeze + card",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "17.05",
+   "action": "keep",
+   "est_s": 3.67,
+   "music": "THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)",
+   "why": "unchanged",
+   "src_s": 3.667,
+   "src_frame": "TWO-SHOT · MAS + MARIO turn to him",
+   "lines": [
+    {
+     "id": "e1-a2-17-05",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "17.06",
+   "action": "keep",
+   "est_s": 3.04,
+   "music": "THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)",
+   "why": "unchanged",
+   "src_s": 3.042,
+   "src_frame": "OTS · from behind Mario onto NESNEJ at the register",
+   "lines": [
+    {
+     "id": "e1-a2-17-06",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "17.07",
+   "action": "keep",
+   "est_s": 0.92,
+   "music": "THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)",
+   "why": "unchanged",
+   "src_s": 0.917,
+   "src_frame": "INSERT · one key (phrase 3)",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "17.08",
+   "action": "keep",
+   "est_s": 0.5,
+   "music": "THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)",
+   "why": "unchanged",
+   "src_s": 0.5,
+   "src_frame": "LEDGER · flash-print",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "17.09",
+   "action": "keep",
+   "est_s": 2.21,
+   "music": "THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)",
+   "why": "unchanged",
+   "src_s": 2.208,
+   "src_frame": "INSERT · the register's window",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "17.10",
+   "action": "keep",
+   "est_s": 2.5,
+   "music": "THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)",
+   "why": "unchanged",
+   "src_s": 2.5,
+   "src_frame": "INSERT · the pen in Mario's hand",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "17.11",
+   "action": "keep",
+   "est_s": 4.42,
+   "music": "THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)",
+   "shot_note": "the crack is a jagged white hairline, like cracked glass, never a chart line (N 9:46)",
+   "why": "unchanged",
+   "src_s": 4.417,
+   "src_frame": "WIDE · the crack in the sky (phrase 4)",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "17.12",
+   "action": "keep",
+   "est_s": 4.5,
+   "music": "THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)",
+   "shot_note": "his glass side-on at table height on the rooftop table, the sheet beside it, the sky behind (never from above: it read as a teal bucket); the reflected crack reaches the small reflection of his face (N 9:46)",
+   "fix": [
+    "N §3 #6"
+   ],
+   "why": "unchanged beat; the picture must read as his glass on the table",
+   "src_s": 4.5,
+   "src_frame": "INSERT · Mas's glass (the act-out)",
+   "lines": []
+  },
+  {
+   "id": "17.13",
+   "action": "keep",
+   "est_s": 0.75,
+   "music": "THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)",
+   "why": "unchanged",
+   "src_s": 0.75,
+   "src_frame": "BLACK · on the bell's last partial",
+   "lines": [],
+   "fix": []
+  }
+ ]
+}

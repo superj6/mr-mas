@@ -1,0 +1,229 @@
+{
+ "segment": "tag",
+ "source": "show/reel/ep01-v3/ep01-v3-tag.json",
+ "_about": "v31-script beat plan (PLAN §2 format), written against the v3 lock's beat and line ids. Every v3 beat appears once (keep, cut, merge, or keep with \"moved\"), plus the new beats; beats are listed in their v3.1 order. est_s is a planning length from word counts and the takes on file, never a measurement. Kept lines are keep true/false; new and changed lines carry v31-<seg>-NNNN ids; new V.O. carries v31-vo-NN ids; kept v3 V.O. stays in lines with \"vo\": true; restored v2 lines keep their v2 ids with \"restored\": true and the take path. vo.at = \"start+S\" | \"after:<line id>+S\". Subtitles: spoken real lines show without quotation marks or print ellipses (N 0:05); posts and printed matter keep theirs. Every call grid lights and names its speaking tile (B5). The lit-UI band prompt in the bottom letterbox never appears (B8); rails and the V.O. line keep their places. The script is show/episodes/ep01/script.md (draft 7); the notes are ../script-v31-notes.md; the builder is _build_v31.py (edit its spec and re-run, don't hand-edit).",
+ "story_s": {
+  "source": 33.88,
+  "estimate": 40.7
+ },
+ "beats": [
+  {
+   "id": "32.01",
+   "action": "keep",
+   "est_s": 3.2,
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "onscreen": {
+    "add": [
+     "RAIL: DEC 6, 2023"
+    ]
+   },
+   "caption": "Mas and the Orb at the desk, three marks in the wood now. On the monitor behind them a video starts on its own: a bright colour field.",
+   "fix": [
+    "B9",
+    "C §6"
+   ],
+   "why": "The rail moves here (the demo and the cover are both DEC 6); the monitor motivates the insert.",
+   "src_s": 4.5,
+   "src_frame": "TWO-SHOT · the desk, three marks in the wood",
+   "lines": []
+  },
+  {
+   "id": "v31-32.01d",
+   "action": "new",
+   "after": "32.01",
+   "est_s": 8.6,
+   "frame": "POV → NATIVE · ELGOOG's demo film (the Runway insert)",
+   "set": "screen",
+   "room": "darkroom",
+   "chars": [],
+   "style": "NATIVE (near-photoreal, objects only) inside the monitor, stepping back to BASE pixels on the bezel",
+   "caption": "Push into the monitor, and the picture goes native: ELGOOG's product film. The wordmark on a colour field; a line drawing of a duck drawn by nothing, filling into a real toy duck on a turntable; the film's own LIVE chip. On the smooth turn, the demo's own voice. Then it stutters: held frames, the LIVE chip drops, and it is stills. Its last still steps back into pixels on the monitor's bezel.",
+   "lines": [
+    {
+     "id": "v31-tg-0001",
+     "new": true,
+     "who": "elgoog-demo",
+     "text": "What the quack!",
+     "after": "start+4.6",
+     "gap_s": 0.4,
+     "delivery": "the demo's own product voice, bright and surprised; a stock voice cast for the film, never a clone of anyone",
+     "tag": "monitor",
+     "take": "new",
+     "note": "[V · DEC 6, 2023 · the demo video's own line (facts §B \"(demo)\"); played as the film's sound, not a character's]"
+    }
+   ],
+   "vo": [
+    {
+     "id": "v31-vo-07",
+     "who": "mas",
+     "text": "those are stills.",
+     "kind": "read",
+     "delivery": "a demo-maker's recognition, flat, almost admiring; the only line over the insert",
+     "take": "new",
+     "cluster": "the tag",
+     "at": "start+7.0"
+    }
+   ],
+   "onscreen": {
+    "add": [
+     "ELGOOG (the film's own wordmark, parody colours)",
+     "LIVE (the film's own chip, off at the stutter)"
+    ],
+    "drop": []
+   },
+   "sounds": "the film's own bright bed under the turn; the audio stutters with the picture, then silence on the stills",
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "art": "studio/src/dev/genvideo/runway/insert.py (the v31-runway pass): the film, the transitions, elgoog-demo-timing.json",
+   "fix": [
+    "B9"
+   ],
+   "why": "The rival's launch, the same week as his cover: a slick demo that turns out to be stills (the record: Google said it prompted the model with still frames and text). No caption; one flat read from a man who makes demos."
+  },
+  {
+   "id": "32.02",
+   "action": "keep",
+   "est_s": 3.75,
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "onscreen": {
+    "drop": [
+     "RAIL: DEC 6, 2023"
+    ]
+   },
+   "why": "The rail moved to 32.01.",
+   "src_s": 3.75,
+   "src_frame": "INSERT · the rack slot: the delivery (a magazine)",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "32.03",
+   "action": "keep",
+   "est_s": 3.8,
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "why": "unchanged",
+   "src_s": 3.8,
+   "src_frame": "MEDIUM CLOSE · Mas and the cover, side by side",
+   "lines": [
+    {
+     "id": "v3-vo-24",
+     "keep": true,
+     "vo": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "32.04",
+   "action": "keep",
+   "est_s": 4.0,
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "why": "unchanged",
+   "src_s": 4.0,
+   "src_frame": "TWO-SHOT · the Orb's scan, twice",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "32.05",
+   "action": "keep",
+   "est_s": 2.6,
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "fix": [
+    "U8"
+   ],
+   "why": "The Orb's slower verdict, named.",
+   "src_s": 2.333,
+   "src_frame": "SINGLE · profile: Mas, to the cover",
+   "lines": [
+    {
+     "id": "e1-tg-32-01",
+     "keep": false,
+     "who": "mas",
+     "text": "close.",
+     "why": "U8: \"close.\" was ambiguous"
+    },
+    {
+     "id": "v31-tg-0002",
+     "new": true,
+     "who": "mas",
+     "text": "that was close.",
+     "after": "start+0.7",
+     "gap_s": 0.4,
+     "delivery": "to the cover, not the Orb; grading it",
+     "tag": "",
+     "take": "new"
+    }
+   ]
+  },
+  {
+   "id": "32.07",
+   "action": "keep",
+   "est_s": 3.5,
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "why": "The pinning and the framed lanyard, a little quicker (−0.75 s).",
+   "src_s": 4.25,
+   "src_frame": "WIDE · the back wall",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "33.01",
+   "action": "keep",
+   "est_s": 2.25,
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "caption": "THUD. A newspaper drops flat onto the desk from above. The room shakes 2 px; the phone, the keys and the Orb hop. (No band text.)",
+   "fix": [
+    "B8"
+   ],
+   "why": "The lit-UI band's text goes, as at launch night.",
+   "src_s": 2.25,
+   "src_frame": "WIDE · the thud",
+   "lines": []
+  },
+  {
+   "id": "33.02",
+   "action": "keep",
+   "est_s": 4.25,
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "onscreen": {
+    "drop": [
+     "[ a newspaper, front page up ]"
+    ]
+   },
+   "fix": [
+    "B8"
+   ],
+   "why": "The reel's stand-in label goes with the band; the drawn page carries itself.",
+   "src_s": 4.25,
+   "src_frame": "HIGH · the front page",
+   "lines": []
+  },
+  {
+   "id": "33.04",
+   "action": "keep",
+   "est_s": 3.5,
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "why": "unchanged",
+   "src_s": 3.5,
+   "src_frame": "SINGLE · profile: Mas, the button",
+   "lines": [
+    {
+     "id": "e1-tg-33-01",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "33.05",
+   "action": "keep",
+   "est_s": 1.25,
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "why": "unchanged",
+   "src_s": 1.25,
+   "src_frame": "BLACK · on the hum",
+   "lines": [],
+   "fix": []
+  }
+ ]
+}

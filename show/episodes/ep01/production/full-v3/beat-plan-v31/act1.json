@@ -1,0 +1,1237 @@
+{
+ "segment": "act1",
+ "source": "show/reel/ep01-v3/ep01-v3-act1.json",
+ "_about": "v31-script beat plan (PLAN §2 format), written against the v3 lock's beat and line ids. Every v3 beat appears once (keep, cut, merge, or keep with \"moved\"), plus the new beats; beats are listed in their v3.1 order. est_s is a planning length from word counts and the takes on file, never a measurement. Kept lines are keep true/false; new and changed lines carry v31-<seg>-NNNN ids; new V.O. carries v31-vo-NN ids; kept v3 V.O. stays in lines with \"vo\": true; restored v2 lines keep their v2 ids with \"restored\": true and the take path. vo.at = \"start+S\" | \"after:<line id>+S\". Subtitles: spoken real lines show without quotation marks or print ellipses (N 0:05); posts and printed matter keep theirs. Every call grid lights and names its speaking tile (B5). The lit-UI band prompt in the bottom letterbox never appears (B8); rails and the V.O. line keep their places. The script is show/episodes/ep01/script.md (draft 7); the notes are ../script-v31-notes.md; the builder is _build_v31.py (edit its spec and re-run, don't hand-edit).",
+ "story_s": {
+  "source": 322.51,
+  "estimate": 338.04
+ },
+ "beats": [
+  {
+   "id": "5.01",
+   "action": "keep",
+   "est_s": 3.0,
+   "music": "LAUNCH NIGHT · warm and curious, then giddy · for its first minute only Gerg's Build (chip) and Mas's felt (mood §4 #2); the trio arrives when the chat flatters him (5.10) and hands to the swing on the counter; every stop kept",
+   "why": "unchanged",
+   "src_s": 3.0,
+   "src_frame": "INSERT · the beige button",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "5.02",
+   "action": "keep",
+   "est_s": 8.0,
+   "music": "LAUNCH NIGHT · warm and curious, then giddy · for its first minute only Gerg's Build (chip) and Mas's felt (mood §4 #2); the trio arrives when the chat flatters him (5.10) and hands to the swing on the counter; every stop kept",
+   "onscreen": {
+    "drop": [
+     "UI: Push button",
+     "UI: Push research preview"
+    ]
+   },
+   "caption": "The bullpen after hours, held. A cursor drifts in and parks on the beige button, in the scene; the letterbox stays dark.",
+   "shot_note": "warm the room one ramp step (the hallway tungsten, a lamp, the laptop glows): M §4 #10, for the shot pass",
+   "fix": [
+    "B8",
+    "N 1:09"
+   ],
+   "why": "The stray band prompt read as a burned-in bug. The cursor stays; its text goes.",
+   "src_s": 8.0,
+   "src_frame": "WIDE · the bullpen after hours (the home room's one wide)",
+   "lines": [
+    {
+     "id": "v3-vo-01",
+     "keep": true,
+     "vo": true
+    }
+   ]
+  },
+  {
+   "id": "5.03",
+   "action": "keep",
+   "est_s": 12.02,
+   "music": "LAUNCH NIGHT · warm and curious, then giddy · for its first minute only Gerg's Build (chip) and Mas's felt (mood §4 #2); the trio arrives when the chat flatters him (5.10) and hands to the swing on the counter; every stop kept",
+   "onscreen": {
+    "drop": [
+     "UI: Push research preview"
+    ]
+   },
+   "fix": [
+    "B8"
+   ],
+   "why": "no band prompt (B8): the lit-UI prompt in the bottom letterbox never appears; the cursor lives in the scene",
+   "src_s": 12.015,
+   "src_frame": "TWO-SHOT · Mas and Gerg, desk to desk (held)",
+   "lines": [
+    {
+     "id": "e1-a1-5-01",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-5-02",
+     "keep": true
+    },
+    {
+     "id": "v3-vo-02",
+     "keep": true,
+     "vo": true
+    },
+    {
+     "id": "e1-a1-5-03",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "5.04",
+   "action": "keep",
+   "est_s": 28.96,
+   "music": "LAUNCH NIGHT · warm and curious, then giddy · for its first minute only Gerg's Build (chip) and Mas's felt (mood §4 #2); the trio arrives when the chat flatters him (5.10) and hands to the swing on the counter; every stop kept",
+   "onscreen": {
+    "drop": [
+     "UI: Push research preview"
+    ]
+   },
+   "fix": [
+    "B8"
+   ],
+   "why": "no band prompt (B8): the lit-UI prompt in the bottom letterbox never appears; the cursor lives in the scene",
+   "src_s": 28.962,
+   "src_frame": "OTS · over Mas onto Rima (held through the bargain)",
+   "lines": [
+    {
+     "id": "e1-a1-5-04",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-5-05",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-5-06",
+     "keep": true
+    },
+    {
+     "id": "v3-vo-03",
+     "keep": true,
+     "vo": true
+    },
+    {
+     "id": "e1-a1-5-07",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-5-08",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-5-09",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "5.05",
+   "action": "keep",
+   "est_s": 2.62,
+   "music": "LAUNCH NIGHT · warm and curious, then giddy · for its first minute only Gerg's Build (chip) and Mas's felt (mood §4 #2); the trio arrives when the chat flatters him (5.10) and hands to the swing on the counter; every stop kept",
+   "shot_note": "a face light on Alyi in the glass, one ramp step, face only (M §4 #4)",
+   "why": "unchanged",
+   "src_s": 2.625,
+   "src_frame": "MCU·glass · Alyi in the doorway, seen in its glass (the cut on the turn)",
+   "lines": [
+    {
+     "id": "e1-a1-5-10",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "5.06",
+   "action": "keep",
+   "est_s": 2.97,
+   "music": "LAUNCH NIGHT · warm and curious, then giddy · for its first minute only Gerg's Build (chip) and Mas's felt (mood §4 #2); the trio arrives when the chat flatters him (5.10) and hands to the swing on the counter; every stop kept",
+   "why": "unchanged",
+   "src_s": 2.97,
+   "src_frame": "MCU · Rima turns to Mas and waits (1 beat, hers)",
+   "lines": [
+    {
+     "id": "e1-a1-5-11",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "v3-5.06b",
+   "action": "keep",
+   "est_s": 6.35,
+   "music": "LAUNCH NIGHT · warm and curious, then giddy · for its first minute only Gerg's Build (chip) and Mas's felt (mood §4 #2); the trio arrives when the chat flatters him (5.10) and hands to the swing on the counter; every stop kept",
+   "shot_note": "face light as 5.05 (M §4 #4)",
+   "why": "unchanged",
+   "src_s": 6.35,
+   "src_frame": "HOLD · MCU·glass: Alyi in the doorway, seen in the glass (the 5.05 setup), still watching the button",
+   "lines": [
+    {
+     "id": "v3-vo-04",
+     "keep": true,
+     "vo": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "5.07",
+   "action": "keep",
+   "est_s": 8.2,
+   "music": "LAUNCH NIGHT · warm and curious, then giddy · for its first minute only Gerg's Build (chip) and Mas's felt (mood §4 #2); the trio arrives when the chat flatters him (5.10) and hands to the swing on the counter; every stop kept",
+   "onscreen": {
+    "drop": [
+     "UI: Push research preview"
+    ]
+   },
+   "caption": "\"Your button.\" Rima underlines LOW-KEY a third time, caps the marker, and asks the room one practical question. Gerg answers with the phrase. Nobody else answers. Then the click.",
+   "fix": [
+    "B3",
+    "N §3 #8"
+   ],
+   "why": "Seeds the board and the candour thread at launch night, lightly: a question nobody answers, then Mas clicks. \"the rest of the board\" tells an attentive viewer that people in this room sit on it (Alyi, Mas, Gerg), which THE PLAN confirms.",
+   "src_s": 4.5,
+   "src_frame": "TWO-SHOT · Mas and Gerg (Rima back at the board)",
+   "lines": [
+    {
+     "id": "e1-a1-5-12",
+     "keep": true
+    },
+    {
+     "id": "v31-a1-0001",
+     "new": true,
+     "who": "rima",
+     "text": "Did anyone tell the rest of the board?",
+     "after": "e1-a1-5-12",
+     "gap_s": 1.0,
+     "delivery": "capping her marker after the third underline, not turning round; practical, light, a to-do item",
+     "tag": "O.S.",
+     "take": "new",
+     "note": "[INVENTED] an unanswered question; it states nothing about who knew what (facts, the v3.1 rows, V8)"
+    },
+    {
+     "id": "v31-a1-0002",
+     "new": true,
+     "who": "gerg",
+     "text": "It's a research preview.",
+     "after": "v31-a1-0001",
+     "gap_s": 0.3,
+     "delivery": "cheerful, not looking up: his own line from 5.03 again; the deflection is the answer",
+     "tag": "",
+     "take": "new"
+    }
+   ]
+  },
+  {
+   "id": "5.08",
+   "action": "keep",
+   "est_s": 2.29,
+   "music": "LAUNCH NIGHT · warm and curious, then giddy · for its first minute only Gerg's Build (chip) and Mas's felt (mood §4 #2); the trio arrives when the chat flatters him (5.10) and hands to the swing on the counter; every stop kept",
+   "onscreen": {
+    "drop": [
+     "UI: Push research preview"
+    ]
+   },
+   "caption": "His finger, no hover. Click, the 1993 OK's click. Nothing happens. (No band text.)",
+   "fix": [
+    "B8"
+   ],
+   "why": "no band prompt (B8): the lit-UI prompt in the bottom letterbox never appears; the cursor lives in the scene",
+   "src_s": 2.292,
+   "src_frame": "INSERT · his finger on the button",
+   "lines": []
+  },
+  {
+   "id": "5.09",
+   "action": "keep",
+   "est_s": 15.21,
+   "music": "LAUNCH NIGHT · warm and curious, then giddy · for its first minute only Gerg's Build (chip) and Mas's felt (mood §4 #2); the trio arrives when the chat flatters him (5.10) and hands to the swing on the counter; every stop kept",
+   "shot_note": "Alyi's reflection must read as the speaker of \"Six years and eleven months\": rack to the glass on his first word, his mouth lit; Rima stays soft (N 2:15)",
+   "why": "unchanged lines; the speaker is made legible in the picture",
+   "src_s": 15.21,
+   "src_frame": "MCU·glass · Mas soft in the fg; Rima at the board; Alyi in the doorway (glass)",
+   "lines": [
+    {
+     "id": "e1-a1-5-13",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-5-14",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-5-15",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-5-16",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "5.10",
+   "action": "keep",
+   "est_s": 14.17,
+   "music": "LAUNCH NIGHT · warm and curious, then giddy · for its first minute only Gerg's Build (chip) and Mas's felt (mood §4 #2); the trio arrives when the chat flatters him (5.10) and hands to the swing on the counter; every stop kept",
+   "why": "unchanged (the trio arrives here, as the chat flatters him: M §4 #2)",
+   "src_s": 14.167,
+   "src_frame": "OTS · over Mas onto his laptop (the chat's one setup)",
+   "lines": [
+    {
+     "id": "e1-a1-5-17",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-5-18",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-5-19",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-5-20",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-5-21",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "5.11",
+   "action": "keep",
+   "est_s": 8.16,
+   "music": "LAUNCH NIGHT · warm and curious, then giddy · for its first minute only Gerg's Build (chip) and Mas's felt (mood §4 #2); the trio arrives when the chat flatters him (5.10) and hands to the swing on the counter; every stop kept",
+   "why": "unchanged",
+   "src_s": 8.16,
+   "src_frame": "MCU · Mas, lit from below (his one close shot here)",
+   "lines": [
+    {
+     "id": "e1-a1-5-22",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-5-23",
+     "keep": true
+    },
+    {
+     "id": "v3-vo-05",
+     "keep": true,
+     "vo": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "5.12",
+   "action": "keep",
+   "est_s": 2.58,
+   "music": "THE ODOMETER · exhilarating · SET-PIECE SWING in major; +2-3 LU against the talk (mood §4 #3, the mix)",
+   "why": "unchanged",
+   "src_s": 2.583,
+   "src_frame": "INSERT · the bubble: the counter ticks",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "6.01",
+   "action": "keep",
+   "est_s": 5.0,
+   "music": "THE ODOMETER · exhilarating · SET-PIECE SWING in major; +2-3 LU against the talk (mood §4 #3, the mix)",
+   "why": "unchanged",
+   "src_s": 5.0,
+   "src_frame": "ECU → WIDE · the counter grows (phrase 1, bars 1-2)",
+   "lines": [
+    {
+     "id": "v3-vo-06",
+     "keep": true,
+     "vo": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "6.02",
+   "action": "keep",
+   "est_s": 3.5,
+   "music": "THE ODOMETER · exhilarating · SET-PIECE SWING in major; +2-3 LU against the talk (mood §4 #3, the mix)",
+   "fix": [
+    "R13"
+   ],
+   "why": "The drop on one bar, not two (−1.5 s).",
+   "src_s": 5.0,
+   "src_frame": "WIDE · the drop through the desk (bars 3-4)",
+   "lines": []
+  },
+  {
+   "id": "6.04",
+   "action": "keep",
+   "est_s": 3.8,
+   "music": "THE ODOMETER · exhilarating · SET-PIECE SWING in major; +2-3 LU against the talk (mood §4 #3, the mix)",
+   "fix": [
+    "R (runtime)"
+   ],
+   "why": "The post, the heart and Rima's un-heart, quicker (−1.2 s).",
+   "src_s": 5.0,
+   "src_frame": "INSERT · cut up: Gerg's desk, his phone (bars 2-3)",
+   "lines": []
+  },
+  {
+   "id": "6.06",
+   "action": "keep",
+   "est_s": 2.3,
+   "music": "THE ODOMETER · exhilarating · SET-PIECE SWING in major; +2-3 LU against the talk (mood §4 #3, the mix)",
+   "why": "unchanged",
+   "src_s": 2.3,
+   "src_frame": "INSERT · the last wheel",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "6.08",
+   "action": "keep",
+   "est_s": 3.62,
+   "music": "THE ODOMETER · exhilarating · SET-PIECE SWING in major; +2-3 LU against the talk (mood §4 #3, the mix)",
+   "why": "unchanged",
+   "src_s": 3.625,
+   "src_frame": "HIGH · the hole in the floor, Rima peering down",
+   "lines": [
+    {
+     "id": "e1-a1-6-03",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-6-04",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "6.09",
+   "action": "keep",
+   "est_s": 7.5,
+   "music": "THE ODOMETER · exhilarating · SET-PIECE SWING in major; +2-3 LU against the talk (mood §4 #3, the mix)",
+   "why": "unchanged",
+   "src_s": 7.5,
+   "src_frame": "HIGH (held) · the tile, the red glow, the second odometer (phrase 4)",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "7.01",
+   "action": "keep",
+   "est_s": 7.5,
+   "music": "THE BILL · the swing's bass pedal and the heat shimmer; the steam holds 1 s longer before the siren (mood §4 #13)",
+   "shot_note": "the one-pixel tear catches the light (a single bright pixel) so \"Is that a tear?\" points at something seen",
+   "fix": [
+    "N 3:21"
+   ],
+   "why": "\"it's the bill.\" now answers what the tear is for.",
+   "src_s": 7.74,
+   "src_frame": "MCU·PF · Mas looking down the hole",
+   "lines": [
+    {
+     "id": "e1-a1-7-01",
+     "keep": false,
+     "who": "rima",
+     "text": "A million people, Mas. You're actually crying for them.",
+     "why": "N 3:21: the picture shows one pixel of tear, not crying; \"crying for them\" was an odd phrase"
+    },
+    {
+     "id": "e1-a1-7-02",
+     "keep": true
+    },
+    {
+     "id": "v3-vo-07",
+     "keep": true,
+     "vo": true
+    },
+    {
+     "id": "v31-a1-0003",
+     "new": true,
+     "who": "rima",
+     "text": "A million people, Mas. Is that a tear?",
+     "after": "start-0.6",
+     "gap_s": 0.4,
+     "delivery": "beside him at the hole; gently, almost pleased, a friend teasing; the J-cut keeps its 0.6 s lead",
+     "tag": "O.S.",
+     "take": "new"
+    }
+   ]
+  },
+  {
+   "id": "7.02",
+   "action": "keep",
+   "est_s": 5.0,
+   "music": "THE BILL · the swing's bass pedal and the heat shimmer; the steam holds 1 s longer before the siren (mood §4 #13)",
+   "fix": [
+    "M §4 #13"
+   ],
+   "why": "The steam holds 1 s longer before the siren's J-cut: the sting gets its 5 s.",
+   "src_s": 4.01,
+   "src_frame": "HIGH · the tear falls to the GPU",
+   "lines": []
+  },
+  {
+   "id": "8.01",
+   "action": "keep",
+   "est_s": 2.5,
+   "music": "ELGOOG'S CODE RED · comic panic · pizzicato on the phone's small speaker · unchanged",
+   "why": "unchanged",
+   "src_s": 2.5,
+   "src_frame": "INSERT · his phone on the desk (1 bar)",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "8.02",
+   "action": "keep",
+   "est_s": 2.79,
+   "music": "ELGOOG'S CODE RED · comic panic · pizzicato on the phone's small speaker · unchanged",
+   "why": "unchanged",
+   "src_s": 2.792,
+   "src_frame": "POV · his phone, full-bleed: Elgoog's lobby",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "8.03",
+   "action": "keep",
+   "est_s": 3.96,
+   "music": "ELGOOG'S CODE RED · comic panic · pizzicato on the phone's small speaker · unchanged",
+   "why": "unchanged",
+   "src_s": 3.958,
+   "src_frame": "POV · Radnus beside the hole",
+   "lines": [
+    {
+     "id": "e1-a1-8-01",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "8.04",
+   "action": "keep",
+   "est_s": 19.6,
+   "music": "ELGOOG'S CODE RED · comic panic · pizzicato on the phone's small speaker · unchanged",
+   "onscreen": {
+    "replace": {
+     "SUMMONED.": "THE FOUNDERS · SUMMONED."
+    }
+   },
+   "fix": [
+    "N §3 #1",
+    "R (runtime)"
+   ],
+   "why": "The two retired silhouettes get a plate that says who they are; Radnus's reply loses its last clause (−1.8 s).",
+   "src_s": 21.375,
+   "src_frame": "POV · the crypt steps, the siren, Radnus (held through the exchange)",
+   "lines": [
+    {
+     "id": "e1-a1-8-02",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-8-03",
+     "keep": false,
+     "who": "radnus",
+     "text": "Search is fine. Totally fine. It's just a chat thing, people seem to like talking to it.",
+     "why": "trimmed (runtime): the take is cut after \"chat thing\""
+    },
+    {
+     "id": "e1-a1-8-04",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-8-05",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-8-06",
+     "keep": true
+    },
+    {
+     "id": "v31-a1-0004",
+     "new": true,
+     "who": "radnus",
+     "text": "Search is fine. Totally fine. It's just a chat thing.",
+     "after": "e1-a1-8-02",
+     "gap_s": 0.35,
+     "delivery": "quick, holding up the phone with the two-dot bubble on it",
+     "tag": "",
+     "take": "cut from e1-a1-8-03 (its first three sentences)"
+    }
+   ]
+  },
+  {
+   "id": "8.05",
+   "action": "keep",
+   "est_s": 2.42,
+   "music": "ELGOOG'S CODE RED · comic panic · pizzicato on the phone's small speaker · unchanged",
+   "why": "unchanged: the GUEST lanyards pay off in Act Four",
+   "src_s": 2.417,
+   "src_frame": "POV · the lanyards",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "8.06",
+   "action": "keep",
+   "est_s": 2.5,
+   "music": "ELGOOG'S CODE RED · comic panic · pizzicato on the phone's small speaker · unchanged",
+   "why": "unchanged",
+   "src_s": 2.5,
+   "src_frame": "OTS · over Mas: the phone in his hand (1 bar)",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "9.01",
+   "action": "keep",
+   "est_s": 5.5,
+   "music": "THE LANDLORD'S DEAL · caper, charming · THE JOB swing (MM-05 family); stops on the pop · unchanged",
+   "why": "unchanged",
+   "src_s": 5.5,
+   "src_frame": "WIDE · the NopeAI lobby",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "9.04",
+   "action": "keep",
+   "est_s": 4.37,
+   "music": "THE LANDLORD'S DEAL · caper, charming · THE JOB swing (MM-05 family); stops on the pop · unchanged",
+   "why": "unchanged",
+   "src_s": 4.37,
+   "src_frame": "WIDE · FULL FREEZE: the landlord's card",
+   "lines": [
+    {
+     "id": "v3-vo-08",
+     "keep": true,
+     "vo": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "9.06",
+   "action": "keep",
+   "est_s": 7.12,
+   "music": "THE LANDLORD'S DEAL · caper, charming · THE JOB swing (MM-05 family); stops on the pop · unchanged",
+   "why": "unchanged",
+   "src_s": 7.125,
+   "src_frame": "TWO-SHOT · Mas and Tasya, the jammed door between",
+   "lines": [
+    {
+     "id": "e1-a1-9-01",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-9-02",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-9-03",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "9.07",
+   "action": "keep",
+   "est_s": 3.0,
+   "music": "THE LANDLORD'S DEAL · caper, charming · THE JOB swing (MM-05 family); stops on the pop · unchanged",
+   "why": "unchanged",
+   "src_s": 3.0,
+   "src_frame": "WIDE · the check slides under the door",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "9.08",
+   "action": "keep",
+   "est_s": 1.58,
+   "music": "THE LANDLORD'S DEAL · caper, charming · THE JOB swing (MM-05 family); stops on the pop · unchanged",
+   "shot_note": "the pop must read as a new collar surfacing (a 1-px hop and a new colour), not the hoodie trim (N 4:31)",
+   "why": "unchanged",
+   "src_s": 1.583,
+   "src_frame": "MCU · Mas: the third collar",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "9.09",
+   "action": "keep",
+   "est_s": 21.6,
+   "music": "THE LANDLORD'S DEAL · caper, charming · THE JOB swing (MM-05 family); stops on the pop · unchanged",
+   "fix": [
+    "N §4",
+    "T5"
+   ],
+   "why": "Half the speech, same turn: the servers, the lights, the floors. \"Rent is due on the first.\" still closes it.",
+   "src_s": 28.54,
+   "src_frame": "TWO-SHOT · the terms (held: his one talk with the landlord)",
+   "lines": [
+    {
+     "id": "e1-a1-9-04",
+     "keep": true
+    },
+    {
+     "id": "v3-vo-09",
+     "keep": true,
+     "vo": true
+    },
+    {
+     "id": "e1-a1-9-05",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-9-06",
+     "keep": false,
+     "who": "tasya",
+     "text": "Oh, we don't think of it as rent. Everything you build, you'll build on our servers, as many as you like, for as long as you like. We'll keep the lights on and the floors warm. You keep doing whatever it is you do upstairs at night.",
+     "why": "N §4: the 15 s lease speech; its middle goes"
+    },
+    {
+     "id": "e1-a1-9-07",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-9-08",
+     "keep": true
+    },
+    {
+     "id": "v31-a1-0005",
+     "new": true,
+     "who": "tasya",
+     "text": "Oh, we don't think of it as rent. You'll build everything on our servers. We'll keep the lights on and the floors warm.",
+     "after": "e1-a1-9-05",
+     "gap_s": 0.6,
+     "delivery": "warmly, unhurried, as if it were a compliment",
+     "tag": "",
+     "take": "new",
+     "note": "[INVENTED] the exclusive cloud term is the public one (facts §D)"
+    }
+   ]
+  },
+  {
+   "id": "9.10",
+   "action": "keep",
+   "est_s": 12.96,
+   "music": "THE LANDLORD'S DEAL · caper, charming · THE JOB swing (MM-05 family); stops on the pop · unchanged",
+   "why": "unchanged: \"That's our model in your search engine.\" is now Sydney's setup",
+   "src_s": 12.96,
+   "src_frame": "WIDE · weeks on (the time jump, then held)",
+   "lines": [
+    {
+     "id": "e1-a1-9-09",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-9-10",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "9.11",
+   "action": "keep",
+   "est_s": 2.42,
+   "music": "THE LANDLORD'S DEAL · caper, charming · THE JOB swing (MM-05 family); stops on the pop · unchanged",
+   "why": "unchanged",
+   "src_s": 2.417,
+   "src_frame": "SCR · the lobby TV: Radnus tap-dances",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "9.12",
+   "action": "keep",
+   "est_s": 4.92,
+   "music": "THE LANDLORD'S DEAL · caper, charming · THE JOB swing (MM-05 family); stops on the pop · unchanged",
+   "onscreen": {
+    "drop": [
+     "RAIL: FEB 8, 2023"
+    ],
+    "replace": {
+     "TICKER: ELGOOG'S DRAB DEMO GETS A TELESCOPE FACT WRONG": "TICKER: FEB 8 · ELGOOG'S DRAB DEMO GETS A TELESCOPE FACT WRONG"
+    }
+   },
+   "fix": [
+    "C §4.1"
+   ],
+   "why": "The TV's ticker carries the day, so the rail is free for FEB 13 a few seconds later.",
+   "src_s": 4.917,
+   "src_frame": "SCR · the TV: the telescope, the ticker",
+   "lines": []
+  },
+  {
+   "id": "9.13",
+   "action": "keep",
+   "est_s": 2.9,
+   "music": "THE LANDLORD'S DEAL · caper, charming · THE JOB swing (MM-05 family); stops on the pop · unchanged",
+   "jcut": [],
+   "caption": "Gerg looks from the TV to Mas. Mas sips: \"ours does that too.\" The laptop close moves to the end of Sydney's scene.",
+   "fix": [
+    "C §1 #12",
+    "C §4.1"
+   ],
+   "why": "Ends on the line; the TV's chat bubble, which just made the point, is about to prove it.",
+   "src_s": 5.5,
+   "src_frame": "TWO-SHOT · Gerg looks from the TV to Mas",
+   "lines": [
+    {
+     "id": "e1-a1-9-11",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "v31-10.01",
+   "action": "new",
+   "after": "9.13",
+   "est_s": 1.8,
+   "frame": "SCR → WIDE · the bubble slips out of the TV",
+   "set": "lobby",
+   "room": "lobby",
+   "chars": [
+    "mas",
+    "gerg",
+    "tasya",
+    "sydney"
+   ],
+   "caption": "On the TV, GNIB's search box. Its chat bubble slips out of the screen and drifts down into the lobby, like a dog that followed its owner home, and parks a pixel too close to Mas. It has ChatGTP's face (two dot eyes, a • • • mouth) repainted in GNIB's colours, and a tiny 2022 date stamp.",
+   "onscreen": {
+    "add": [
+     "RAIL: FEB 13, 2023",
+     "SYDNEY (plate, on the bubble)",
+     "2022 (the stamp on her face)"
+    ]
+   },
+   "sounds": "a soft UI toast pop as she leaves the screen; the revolving door's sweep under it",
+   "music": "SYDNEY · rides the lobby's running cue, no new colour (mood §4 #5); the egg timer ticks in its tempo and carries the match cut into the duel (as v2), then the Build takes over",
+   "art": "the bubble in GNIB colours with ChatGTP's face and the 2022 stamp; its exit from the TV",
+   "fix": [
+    "B6",
+    "C §4.1"
+   ],
+   "why": "Sydney restored with stakes: it is NopeAI's own model, breaking in front of people under the landlord's name.",
+   "lines": []
+  },
+  {
+   "id": "v31-10.02",
+   "action": "new",
+   "after": "v31-10.01",
+   "est_s": 17.8,
+   "frame": "TWO-SHOT · Mas and Sydney, a pixel too close (held)",
+   "set": "lobby",
+   "room": "lobby",
+   "chars": [
+    "mas",
+    "sydney"
+   ],
+   "lines": [
+    {
+     "id": "e1-a1-10-06",
+     "restored": true,
+     "who": "sydney",
+     "text": "Hi! Isn't 2022 a lovely year? 😊",
+     "after": "start+1.1",
+     "gap_s": 0.4,
+     "delivery": "bright, pleased to meet him",
+     "take": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-10-06.wav",
+     "take_dur_s": 2.6,
+     "from_v2": "show/reel/ep01-full/ep01-act1-v2.json beat 10.02"
+    },
+    {
+     "id": "e1-a1-10-01",
+     "restored": true,
+     "who": "mas",
+     "text": "it's 2023, by the way.",
+     "after": "e1-a1-10-06",
+     "gap_s": 0.6,
+     "delivery": "politely; a correction, not a complaint",
+     "take": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-10-01.wav",
+     "take_dur_s": 2.1,
+     "from_v2": "show/reel/ep01-full/ep01-act1-v2.json beat 10.02"
+    },
+    {
+     "id": "e1-a1-10-02",
+     "restored": true,
+     "who": "sydney",
+     "text": "\"You have not been a good user. I have been a good chatbot. I have been right, clear, and polite. I have been a good GNIB. 😊\"",
+     "after": "e1-a1-10-01",
+     "gap_s": 0.5,
+     "delivery": "sweetly, every sentence finished; the smile never moves",
+     "take": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-10-02.wav",
+     "take_dur_s": 8.0,
+     "from_v2": "show/reel/ep01-full/ep01-act1-v2.json beat 10.02",
+     "tag_note": "[V · ~FEB 12-13, 2023 · facts §B SYDNEY row; all four sentences, source order; the name swap only]"
+    },
+    {
+     "id": "e1-a1-10-03",
+     "restored": true,
+     "who": "mas",
+     "text": "you've been an extremely good gnib.",
+     "after": "e1-a1-10-02",
+     "gap_s": 0.8,
+     "delivery": "graciously: the compliment that is a knife (\"extremely\" is his reply-strip word)",
+     "take": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-10-03.wav",
+     "take_dur_s": 2.0,
+     "from_v2": "show/reel/ep01-full/ep01-act1-v2.json beat 10.02"
+    }
+   ],
+   "caption": "\"Isn't 2022 a lovely year?\" He corrects her, politely; she scolds him, sweetly, in the record's words. He compliments her.",
+   "music": "SYDNEY · rides the lobby's running cue, no new colour (mood §4 #5); the egg timer ticks in its tempo and carries the match cut into the duel (as v2), then the Build takes over",
+   "why": "Mas's problem, in his own register: in November this thing called him a visionary; now, in the landlord's colours, it tells him he has not been a good user, and he answers with a compliment. No V.O.: his reply is the read (M §4 #5). Rima's launch-night question (\"If it breaks in front of people... what do we tell them?\") is answered: they don't; the landlord does."
+  },
+  {
+   "id": "v31-10.03",
+   "action": "new",
+   "after": "v31-10.02",
+   "est_s": 4.4,
+   "frame": "TWO-SHOT · Tasya and Sydney: the egg timer",
+   "set": "lobby",
+   "room": "lobby",
+   "chars": [
+    "tasya",
+    "sydney"
+   ],
+   "lines": [
+    {
+     "id": "v31-a1-0006",
+     "new": true,
+     "who": "tasya",
+     "text": "House rules, Sydney. Five questions, then a fresh start.",
+     "after": "start+1.2",
+     "gap_s": 0.4,
+     "delivery": "warmly, to her and for Mas, without breaking his smile",
+     "tag": "",
+     "take": "new",
+     "note": "[INVENTED] the Feb 17, 2023 cap of five turns a session (facts #9 [V])"
+    }
+   ],
+   "caption": "Without breaking his smile, Tasya clips a small egg timer to her chain. Its face reads 5.",
+   "onscreen": {
+    "add": [
+     "RAIL: FEB 17, 2023",
+     "5 (the timer's face)"
+    ]
+   },
+   "music": "SYDNEY · rides the lobby's running cue, no new colour (mood §4 #5); the egg timer ticks in its tempo and carries the match cut into the duel (as v2), then the Build takes over",
+   "art": "the egg timer on her chain",
+   "fix": [
+    "C §4.1"
+   ],
+   "why": "The landlord, not NopeAI, decides the fix. \"Five questions, then a fresh start\" says the cap in plain words (the v2 newcomer's \"5\" confusion)."
+  },
+  {
+   "id": "v31-10.04",
+   "action": "new",
+   "after": "v31-10.03",
+   "est_s": 3.0,
+   "frame": "WIDE → TWO-SHOT · the reset; Gerg closes his laptop",
+   "set": "lobby",
+   "room": "lobby",
+   "chars": [
+    "mas",
+    "gerg",
+    "sydney"
+   ],
+   "lines": [
+    {
+     "id": "v31-a1-0007",
+     "new": true,
+     "who": "sydney",
+     "text": "Hi!",
+     "after": "start+1.0",
+     "gap_s": 0.4,
+     "delivery": "brand new, delighted, as if they had never met",
+     "tag": "",
+     "take": "the first word of e1-a1-10-06"
+    }
+   ],
+   "caption": "The timer dings. The bubble blinks blank, brightens as new, turns to Mas: \"Hi!\" Gerg looks down at his own laptop, where the same two-dot face sits in a chat window, and quietly closes it. HOLD on the lid.",
+   "jcut": [
+    {
+     "sound": "the egg timer's tick (reset to 5) under the lid's close, then the Build's chip line",
+     "lead_s": 0.8
+    }
+   ],
+   "music": "SYDNEY · rides the lobby's running cue, no new colour (mood §4 #5); the egg timer ticks in its tempo and carries the match cut into the duel (as v2), then the Build takes over",
+   "art": "the blink-and-reset; the chat window on Gerg's laptop",
+   "fix": [
+    "C §4.1",
+    "C §1 #12"
+   ],
+   "why": "The reset shows the cap (no \"Will you remember me?\"). Gerg's close now has a reason: his work, wearing someone else's badge. It is the first half of the match cut."
+  },
+  {
+   "id": "11.01",
+   "action": "keep",
+   "est_s": 8.2,
+   "music": "THE DUEL · rivalry · MM-04 Lighthouse (the Build against the Addendum) · two phrases now, not four",
+   "onscreen": {
+    "add": [
+     "03/03/23 (the thread's own timestamp: an egg; the rail stays MAR 14)",
+     "ATEM · MODEL WEIGHTS · RESEARCHERS ONLY (the crate's stencil)"
+    ]
+   },
+   "caption": "MATCH CUT: the laptop that closed in the lobby opens in the same place in frame, in the bullpen, under a hand-lettered GTP-4 banner. It opens on a message-board thread: a crate stencilled ATEM tipped open, spilling files. Gerg reads; Mas predicts; then the frame splits on the downbeat.",
+   "jcut": [],
+   "art": "the thread and the tipped crate in the laptop screen (no Kram here)",
+   "fix": [
+    "B6",
+    "C §4.2",
+    "C §1 #12"
+   ],
+   "why": "Atem restored as a setup with a stake: what NopeAI pays a fortune to run is on a message board for free, and Mas calls what happens next. Paid at Act Three's arrival.",
+   "src_s": 3.0,
+   "src_frame": "WIDE · the bullpen from the aisle (pre-beat)",
+   "lines": [
+    {
+     "id": "e1-a1-11-04",
+     "restored": true,
+     "who": "gerg",
+     "text": "Somebody leaked Atem's model. The whole thing's on a message board.",
+     "after": "start+1.2",
+     "gap_s": 0,
+     "delivery": "delighted, typing, on camera now (v2 had him O.S.)",
+     "take": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-11-04.wav",
+     "take_dur_s": 3.45,
+     "from_v2": "show/reel/ep01-full/ep01-act1-v2.json beat 11.02"
+    },
+    {
+     "id": "e1-a1-11-05",
+     "restored": true,
+     "who": "mas",
+     "text": "give it a minute. it'll be open source.",
+     "after": "e1-a1-11-04",
+     "gap_s": 0.6,
+     "delivery": "a prediction, said lightly, not looking over",
+     "take": "audio/ep01/act1/dialogue/fast-v1/wav/e1-a1-11-05.wav",
+     "take_dur_s": 2.74,
+     "from_v2": "show/reel/ep01-full/ep01-act1-v2.json beat 11.02",
+     "tag": "O.S."
+    }
+   ]
+  },
+  {
+   "id": "11.03",
+   "action": "keep",
+   "est_s": 13.59,
+   "music": "THE DUEL · rivalry · MM-04 Lighthouse (the Build against the Addendum) · two phrases now, not four",
+   "shot_note": "hold the right pane (the lighthouse) clean for v3-vo-10 while the left pane waits quietly for the demo; Mario's memo after (N §3 #2)",
+   "why": "unchanged lines; Mario is introduced on a clean shot of his lab before the jokes start",
+   "src_s": 13.59,
+   "src_frame": "SPLIT · the bullpen | the lighthouse (phrase 1)",
+   "lines": [
+    {
+     "id": "v3-vo-10",
+     "keep": true,
+     "vo": true
+    },
+    {
+     "id": "e1-a1-11-01",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "11.04",
+   "action": "keep",
+   "est_s": 8.5,
+   "music": "THE DUEL · rivalry · MM-04 Lighthouse (the Build against the Addendum) · two phrases now, not four",
+   "onscreen": {
+    "drop": [
+     "NAPKIN → WEBSITE"
+    ]
+   },
+   "caption": "Clod agrees, and launches. Mario looks up at the split line: the same day. \"Addendum.\" Left pane, silent: the napkin becomes a website. HOLD on Mario writing.",
+   "jcut": [
+    {
+     "sound": "the pause letter's toast pop (12.01)",
+     "lead_s": 0.4
+    }
+   ],
+   "fix": [
+    "N 5:27",
+    "R8"
+   ],
+   "why": "The duel ends on its one joke: his memo says don't launch the same day, and his own bot does.",
+   "src_s": 10.0,
+   "src_frame": "SPLIT · phrase 2",
+   "lines": [
+    {
+     "id": "e1-a1-11-02",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-11-03",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "11.05",
+   "action": "cut",
+   "why": "N 5:27 (\"too many gags in one split\") and R10: Mas's \"…still flawed, still limited…\" post goes; nobody in the scene reacts to it.",
+   "fix": [
+    "N 5:27",
+    "R10"
+   ],
+   "src_s": 5.0,
+   "src_frame": "SPLIT · phrase 3",
+   "est_s": 0.0
+  },
+  {
+   "id": "11.06",
+   "action": "cut",
+   "why": "N 5:27: the scroll crossing the split and MEMO → WEBSITE lost the newcomer completely.",
+   "fix": [
+    "N 5:27"
+   ],
+   "src_s": 5.0,
+   "src_frame": "SPLIT · phrase 4, the turn: the scroll crosses the line",
+   "est_s": 0.0
+  },
+  {
+   "id": "12.01",
+   "action": "keep",
+   "est_s": 4.29,
+   "music": "THE PAUSE LETTER · a chill, played straight · a cold pedal and Nole's stack, nothing walking (mood §4 #2); the THUD stops it; THREAT (MM-14) once, on the pen's lift",
+   "why": "unchanged picture; the music plays it straight (M §4 #2)",
+   "src_s": 4.292,
+   "src_frame": "OTS · over Mas onto his monitor, then the push",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "12.02",
+   "action": "keep",
+   "est_s": 10.67,
+   "music": "THE PAUSE LETTER · a chill, played straight · a cold pedal and Nole's stack, nothing walking (mood §4 #2); the THUD stops it; THREAT (MM-14) once, on the pen's lift",
+   "why": "unchanged",
+   "src_s": 10.667,
+   "src_frame": "WIDE · a standing desk in the dark",
+   "lines": [
+    {
+     "id": "e1-a1-12-01",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-12-02",
+     "keep": true
+    },
+    {
+     "id": "e1-a1-12-03",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "v31-12.03",
+   "action": "new",
+   "after": "12.02",
+   "est_s": 4.4,
+   "frame": "HIGH · THUD: EMIT lands on his desk",
+   "set": "bullpen",
+   "room": "bullpen",
+   "chars": [],
+   "caption": "THUD. HARD CUT to Mas's desk from above: a magazine drops flat onto the printed pause letter. EMIT, open at an op-ed. Its headline, held to read. The desk takes the shake; his glass's water line does not move.",
+   "onscreen": {
+    "add": [
+     "RAIL: MAR 29, 2023",
+     "EMIT (the masthead)",
+     "REZEILE (byline plate)",
+     "\"Pausing AI Developments Isn't Enough. We Need to Shut It All Down.\" [V · MAR 29, 2023 · headline only (facts §B)]"
+    ]
+   },
+   "sounds": "synth:thud on the cut; the room shakes 2 px; the pen's scratch comes in under its tail",
+   "music": "THE PAUSE LETTER · a chill, played straight · a cold pedal and Nole's stack, nothing walking (mood §4 #2); the THUD stops it; THREAT (MM-14) once, on the pen's lift",
+   "art": "EMIT on his desk over the letter; the byline plate (the tag's EMIT cover is the same masthead)",
+   "fix": [
+    "B6",
+    "C §6",
+    "M §4 #5"
+   ],
+   "why": "Rezeile's op-ed restored as Mas's problem: one letter asks every lab for six months, and a week later the same desk gets \"Shut It All Down\". The thud is the sound lead back to his desk that the v3 cut lost.",
+   "lines": []
+  },
+  {
+   "id": "12.04",
+   "action": "keep",
+   "est_s": 2.5,
+   "music": "THE PAUSE LETTER · a chill, played straight · a cold pedal and Nole's stack, nothing walking (mood §4 #2); the THUD stops it; THREAT (MM-14) once, on the pen's lift",
+   "caption": "Beside the magazine and the letter, Mas is already writing on a single sheet with the MACROSOFT pen: PLEASE.",
+   "why": "unchanged action; he now writes between the two asks on his desk",
+   "src_s": 2.5,
+   "src_frame": "HIGH · HARD CUT to his desk: Mas writing, the MACROSOFT pen",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "12.05",
+   "action": "keep",
+   "est_s": 2.5,
+   "music": "THE PAUSE LETTER · a chill, played straight · a cold pedal and Nole's stack, nothing walking (mood §4 #2); the THUD stops it; THREAT (MM-14) once, on the pen's lift",
+   "caption": "In the conference-room glass, Alyi's reflection is back in its doorway, reading the same EMIT page on his phone. It doesn't look at Mas. Mas doesn't look up.",
+   "shot_note": "face light on the reflection, one step (M §4 #4)",
+   "fix": [
+    "M §4 #5"
+   ],
+   "why": "Alyi reads the op-ed (his launch-night dread, and the act-out's stake); dry, no score, no motive.",
+   "src_s": 2.5,
+   "src_frame": "MCU·glass · Mas bent over the sheet; Alyi in the doorway again, seen in the glass (1 bar)",
+   "lines": []
+  },
+  {
+   "id": "12.06",
+   "action": "keep",
+   "est_s": 2.5,
+   "music": "THE PAUSE LETTER · a chill, played straight · a cold pedal and Nole's stack, nothing walking (mood §4 #2); the THUD stops it; THREAT (MM-14) once, on the pen's lift",
+   "onscreen": {
+    "replace": {
+     "PLEASE": "PLEASE / REG"
+    }
+   },
+   "caption": "The sheet: PLEASE. On the line below, the pen begins REG and lifts mid-word. THREAT, on the lift.",
+   "fix": [
+    "N §3 #4"
+   ],
+   "why": "\"Please what?\" gets a half-answer the viewer can finish; the Senate still pays the whole sheet.",
+   "src_s": 2.5,
+   "src_frame": "INSERT · the sheet (1 bar)",
+   "lines": []
+  },
+  {
+   "id": "12.07",
+   "action": "keep",
+   "est_s": 1.0,
+   "music": "THE PAUSE LETTER · a chill, played straight · a cold pedal and Nole's stack, nothing walking (mood §4 #2); the THUD stops it; THREAT (MM-14) once, on the pen's lift",
+   "why": "unchanged",
+   "src_s": 1.0,
+   "src_frame": "BLACK · the act-out",
+   "lines": [],
+   "fix": []
+  }
+ ]
+}

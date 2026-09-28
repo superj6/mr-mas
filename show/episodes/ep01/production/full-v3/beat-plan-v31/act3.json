@@ -1,0 +1,758 @@
+{
+ "segment": "act3",
+ "source": "show/reel/ep01-v3/ep01-v3-act3.json",
+ "_about": "v31-script beat plan (PLAN §2 format), written against the v3 lock's beat and line ids. Every v3 beat appears once (keep, cut, merge, or keep with \"moved\"), plus the new beats; beats are listed in their v3.1 order. est_s is a planning length from word counts and the takes on file, never a measurement. Kept lines are keep true/false; new and changed lines carry v31-<seg>-NNNN ids; new V.O. carries v31-vo-NN ids; kept v3 V.O. stays in lines with \"vo\": true; restored v2 lines keep their v2 ids with \"restored\": true and the take path. vo.at = \"start+S\" | \"after:<line id>+S\". Subtitles: spoken real lines show without quotation marks or print ellipses (N 0:05); posts and printed matter keep theirs. Every call grid lights and names its speaking tile (B5). The lit-UI band prompt in the bottom letterbox never appears (B8); rails and the V.O. line keep their places. The script is show/episodes/ep01/script.md (draft 7); the notes are ../script-v31-notes.md; the builder is _build_v31.py (edit its spec and re-run, don't hand-edit).",
+ "story_s": {
+  "source": 128.04,
+  "estimate": 140.82
+ },
+ "beats": [
+  {
+   "id": "v31-18.00",
+   "action": "new",
+   "after": "(the act's start: before 18.01)",
+   "est_s": 3.2,
+   "frame": "TWO-SHOT · the home room, opened close; the monitor lit",
+   "set": "darkroom",
+   "room": "dark",
+   "chars": [
+    "mas"
+   ],
+   "caption": "From behind the rack: the desk, the blinking LEDs, the cyan key, the glass, the faded sphere outline on the wall. The monitor is lit, its sound low: the landlord's lobby in slate blue.",
+   "jcut": [
+    {
+     "sound": "the rack's fans and LED ticks under the act break's black (M §4 #9)",
+     "lead_s": 1.0
+    }
+   ],
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "why": "The act arrives on the room and the device it uses all act (the monitor).",
+   "lines": []
+  },
+  {
+   "id": "v31-18.00b",
+   "action": "new",
+   "after": "v31-18.00",
+   "est_s": 5.4,
+   "frame": "POV · the monitor: the landlord's thirteenth key",
+   "set": "screen",
+   "room": "dark",
+   "chars": [
+    "tasya",
+    "kram"
+   ],
+   "lines": [
+    {
+     "id": "v31-a3-0001",
+     "new": true,
+     "who": "tasya",
+     "text": "Everyone is welcome.",
+     "after": "start+2.4",
+     "gap_s": 0.4,
+     "delivery": "warmly, to the lobby, the same words he said to Mas",
+     "tag": "monitor",
+     "take": "cut from e1-a1-9-08 (its first sentence)",
+     "note": "[INVENTED · his sc 9 line] on a real event: Macrosoft named preferred partner for Atem's open model, JUL 18, 2023 (facts, the v3.1 rows)"
+    }
+   ],
+   "vo": [
+    {
+     "id": "v31-vo-03",
+     "who": "mas",
+     "text": "thirteen.",
+     "kind": "count",
+     "delivery": "the key count again (eleven, twelve), level; he is one of thirteen now",
+     "take": "new",
+     "pays_off": "v3-vo-08 (\"eleven keys. he's here for the twelfth.\") and the Act One prediction \"it'll be open source.\"",
+     "cluster": "the dark room",
+     "at": "after:v31-a3-0001+0.6"
+    }
+   ],
+   "caption": "On the monitor: TASYA hangs a thirteenth key, Atem blue, on his ring, as KRAM steps into the lobby in a hoodie printed OPEN SOURCE, the paint dry now. The monitor's own caption and date chip.",
+   "onscreen": {
+    "add": [
+     "MACROSOFT WELCOMES ATEM (the monitor's own caption) [H · JUL 18, 2023]",
+     "JUL 18 (the monitor's date chip; the rail stays out)",
+     "KRAM (plate)",
+     "OPEN SOURCE (his hoodie)"
+    ]
+   },
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "art": "the slate lobby on the monitor; the thirteenth key in Atem blue; KRAM in a dry OPEN SOURCE hoodie (mute)",
+   "fix": [
+    "B6",
+    "C §4.2"
+   ],
+   "why": "The Atem payoff: \"it'll be open source.\" comes true, and the landlord who welcomed NopeAI welcomes the free rival too. His count makes it his: eleven, twelve, thirteen. It gives Act Four's door (\"Everyone is welcome.\" / \"everyone.\") its weight."
+  },
+  {
+   "id": "18.01",
+   "action": "keep",
+   "est_s": 3.4,
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "caption": "Back on the room. The rack's drive slot whirs and slides out a box like a tray: COINWORLD.",
+   "why": "The arrival moved to v31-18.00; the beat keeps the delivery and its rail.",
+   "src_s": 6.0,
+   "src_frame": "TWO-SHOT · the home room, opened close",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "18.02",
+   "action": "keep",
+   "est_s": 4.2,
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "vo": [
+    {
+     "id": "v31-vo-04",
+     "who": "mas",
+     "text": "my other company. it tells people from machines.",
+     "kind": "read",
+     "delivery": "plain, a little proud; orientation, never an explanation (N: who sent the box, why it matters)",
+     "take": "new",
+     "cluster": "the dark room",
+     "at": "start+0.4"
+    }
+   ],
+   "fix": [
+    "N §3 #7",
+    "B5"
+   ],
+   "why": "Who sent it and why it matters, in one plain line; the label already says CO-FOUNDER.",
+   "src_s": 3.208,
+   "src_frame": "INSERT · ECU the shipping label",
+   "lines": []
+  },
+  {
+   "id": "18.03",
+   "action": "keep",
+   "est_s": 4.92,
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "why": "unchanged",
+   "src_s": 4.917,
+   "src_frame": "TWO-SHOT · the Orb rises (three held steps)",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "18.04",
+   "action": "keep",
+   "est_s": 0.75,
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "why": "unchanged",
+   "src_s": 0.75,
+   "src_frame": "SINGLE · MCU Mas, the scan",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "18.04g",
+   "action": "keep",
+   "est_s": 0.5,
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "why": "unchanged",
+   "src_s": 0.5,
+   "src_frame": "SINGLE · MCU Mas, the scan",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "18.05",
+   "action": "keep",
+   "est_s": 2.25,
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "shot_note": "face light, one step (M §4 #4)",
+   "why": "unchanged",
+   "src_s": 2.25,
+   "src_frame": "SINGLE · MCU Mas, the toast",
+   "lines": [
+    {
+     "id": "e1-a3-18-01",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "18.06",
+   "action": "keep",
+   "est_s": 7.7,
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "why": "unchanged: \"i made it for everyone else.\" now lands on the line before it",
+   "src_s": 7.7,
+   "src_frame": "TWO-SHOT · the Orb drifts to his shoulder (held)",
+   "lines": [
+    {
+     "id": "e1-a3-18-04",
+     "keep": true,
+     "vo": true
+    },
+    {
+     "id": "e1-a3-18-03",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "19.01",
+   "action": "keep",
+   "est_s": 1.8,
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "caption": "The Orb's iris flicks from Mas to the monitor. (No toast.)",
+   "why": "The run enters on the iris flick (C §6), in the lighthouse item's slot.",
+   "src_s": 2.0,
+   "src_frame": "TWO-SHOT · the Orb's iris flicks to the monitor",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "19.11",
+   "action": "cut",
+   "why": "R1 / C #4: the Sep 25 lighthouse item was the worst out-of-nowhere stay; its slot goes to the hands runner (C §6).",
+   "fix": [
+    "R1",
+    "C #4"
+   ],
+   "src_s": 2.5,
+   "src_frame": "POV · ITEM 5, MISANTHROPIC's lighthouse",
+   "est_s": 0.0
+  },
+  {
+   "id": "19.12",
+   "action": "cut",
+   "why": "R1: with the lighthouse item.",
+   "fix": [
+    "R1"
+   ],
+   "src_s": 2.5,
+   "src_frame": "OTS · from behind the Orb",
+   "est_s": 0.0
+  },
+  {
+   "id": "19.13",
+   "action": "cut",
+   "why": "R1: with the lighthouse item (the Nozama roast goes; the camp matrix note is in the notes §9).",
+   "fix": [
+    "R1"
+   ],
+   "src_s": 2.5,
+   "src_frame": "POV · the second phone",
+   "est_s": 0.0
+  },
+  {
+   "id": "v31-19.02",
+   "action": "new",
+   "after": "19.01",
+   "est_s": 3.6,
+   "frame": "POV · the monitor: SIRRAH's two letters",
+   "set": "screen",
+   "room": "dark",
+   "chars": [
+    "sirrah"
+   ],
+   "caption": "On the monitor, chip JUL 12: SIRRAH at a lectern, the A and I blocks waist-high now; the news chyron types under her.",
+   "onscreen": {
+    "add": [
+     "JUL 12 (the monitor's date chip)",
+     "[A] [I]",
+     "VP SIRRAH: \"AI is kind of a fancy thing. First of all, it's two letters.\" [H · JUL 12, 2023 · printed, never voiced]"
+    ]
+   },
+   "sounds": "the monitor down to a murmur and a laugh from her audience",
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "art": "Sirrah's lectern and the waist-high blocks on the monitor",
+   "fix": [
+    "B6"
+   ],
+   "why": "The hands runner, item 1, held to read.",
+   "lines": []
+  },
+  {
+   "id": "v31-19.03",
+   "action": "new",
+   "after": "v31-19.02",
+   "est_s": 9.6,
+   "frame": "2S·SCR · the hands runner: one held room frame",
+   "set": "darkroom",
+   "room": "dark",
+   "chars": [
+    "mas",
+    "orb",
+    "nedib",
+    "remuhcs",
+    "nole"
+   ],
+   "lines": [
+    {
+     "id": "e1-a3-19-01",
+     "restored": true,
+     "who": "remuhcs",
+     "text": "\"Every single person raised their hand.\"",
+     "after": "start+4.3",
+     "gap_s": 0.4,
+     "delivery": "from the monitor, pleased with the room",
+     "take": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-19-01.wav",
+     "take_dur_s": 2.17,
+     "from_v2": "show/reel/ep01-full/ep01-act3-v2.json beat 19.09b",
+     "tag": "monitor"
+    },
+    {
+     "id": "e1-a3-19-02",
+     "restored": true,
+     "who": "nole",
+     "text": "\"It's important for us to have a referee.\"",
+     "after": "e1-a3-19-01",
+     "gap_s": 0.5,
+     "delivery": "from the monitor, his hand highest",
+     "take": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-19-02.wav",
+     "take_dur_s": 2.25,
+     "from_v2": "show/reel/ep01-full/ep01-act3-v2.json beat 19.10",
+     "tag": "monitor"
+    }
+   ],
+   "vo": [
+    {
+     "id": "v31-vo-05",
+     "who": "mas",
+     "text": "i've had mine up since may.",
+     "kind": "gap",
+     "delivery": "dry, very small vanity, to nobody; then he lowers his hand",
+     "take": "new",
+     "cluster": "the dark room (the hands runner, B6)",
+     "at": "after:e1-a3-19-02+0.8"
+    }
+   ],
+   "caption": "One held frame: Mas and the Orb at the desk, the monitor large at frame right. Mas holds up two fingers to the Orb; the Orb, which has no fingers, whirrs. The monitor changes (chip JUL 21): NEDIB unrolls a PINKY PROMISE scroll, seven pinky-prints, one in NopeAI beige; Mas raises his pinky; the Orb rotates. The monitor changes (chip SEP 13): a room of tiled figures under REMUHCS's question; on his line every hand goes up at once; NOLE's is highest; BILLS: 0 in the corner. At the desk, Mas's hand is already up. The Orb rises one pixel. Then he lowers his hand.",
+   "onscreen": {
+    "add": [
+     "JUL 21 · PINKY PROMISE · SIGNED: 7 AI COMPANIES [P]",
+     "SEP 13 · REMUHCS · ASKED THE ROOM: SHOULD GOVERNMENT REGULATE AI? [V]",
+     "BILLS: 0 (egg, zero read load)"
+    ]
+   },
+   "sounds": "orb_servo on each copy; the monitor's own audio for the two real lines",
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "art": "the pinky-promise scroll and the tiled forum on the monitor at 2S·SCR scale; Mas's two fingers, pinky and raised hand",
+   "fix": [
+    "B6",
+    "M §4 #5",
+    "C §6"
+   ],
+   "why": "Everyone in power asks to be regulated, in the record's words, while he watches: one held room frame (M §4 #5), his face and hands as the reaction the v2 run lacked. His one line is his stake, not a caption: he asked in May."
+  },
+  {
+   "id": "20.01",
+   "action": "keep",
+   "est_s": 3.42,
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "jcut": [
+    {
+     "sound": "his keys, under the runner's last beat",
+     "lead_s": 0.5
+    }
+   ],
+   "why": "unchanged",
+   "src_s": 3.417,
+   "src_frame": "OTS · over Mas's shoulder onto the monitor (TIDDER)",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "20.02",
+   "action": "keep",
+   "est_s": 1.58,
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "why": "unchanged",
+   "src_s": 1.583,
+   "src_frame": "TWO-SHOT · the LEDs stop",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "20.03",
+   "action": "keep",
+   "est_s": 2.58,
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "why": "unchanged",
+   "src_s": 2.583,
+   "src_frame": "POV · he posts: the reply counter",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "20.04",
+   "action": "keep",
+   "est_s": 10.25,
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "onscreen": {
+    "replace": {
+     "UI: GERG · speaker": "GERG (a video tile in the monitor's corner, typing, the green glow)"
+    }
+   },
+   "caption": "Gerg's video tile rings up in the monitor's corner; Mas takes it without looking away from the counter.",
+   "fix": [
+    "N 10:34"
+   ],
+   "why": "\"Where is Gerg?\" On the call, on screen, the same device as 2 AM.",
+   "src_s": 10.25,
+   "src_frame": "TWO-SHOT · the call (held; one cut, to the edit)",
+   "lines": [
+    {
+     "id": "e1-a3-20-02",
+     "keep": true
+    },
+    {
+     "id": "e1-a3-20-03",
+     "keep": true
+    },
+    {
+     "id": "e1-a3-20-04",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "20.05",
+   "action": "keep",
+   "est_s": 3.08,
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "why": "unchanged",
+   "src_s": 3.083,
+   "src_frame": "POV · the edit (the call's one cut)",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "20.06",
+   "action": "keep",
+   "est_s": 17.0,
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "onscreen": {
+    "replace": {
+     "UI: GERG · speaker": "GERG (video tile)"
+    }
+   },
+   "fix": [
+    "T3",
+    "N 10:34"
+   ],
+   "why": "A shorter static hold; the night-owl half of the call stays whole.",
+   "src_s": 20.01,
+   "src_frame": "TWO-SHOT · the call, continued",
+   "lines": [
+    {
+     "id": "e1-a3-20-05",
+     "keep": false,
+     "who": "gerg",
+     "text": "Okay. That's patched. Rima's going to wake up to forty emails about it.",
+     "why": "T3: \"Rima's going to wake up to forty emails about it.\" goes (runtime; N 10:34 static hold)"
+    },
+    {
+     "id": "e1-a3-20-06",
+     "keep": true
+    },
+    {
+     "id": "e1-a3-20-07",
+     "keep": true
+    },
+    {
+     "id": "e1-a3-20-08",
+     "keep": true
+    },
+    {
+     "id": "e1-a3-20-09",
+     "keep": true
+    },
+    {
+     "id": "v3-vo-15",
+     "keep": true,
+     "vo": true
+    },
+    {
+     "id": "v31-a3-0002",
+     "new": true,
+     "who": "gerg",
+     "text": "Okay. That's patched.",
+     "after": "start+0.7",
+     "gap_s": 0.4,
+     "delivery": "cheerful, typing",
+     "tag": "call",
+     "take": "cut from e1-a3-20-05 (its first two sentences)"
+    }
+   ]
+  },
+  {
+   "id": "v31-20.07",
+   "action": "new",
+   "after": "20.06",
+   "est_s": 5.0,
+   "frame": "POV · the monitor: Neleh's paper",
+   "set": "screen",
+   "room": "dark",
+   "chars": [],
+   "caption": "A paper's title page on the monitor, a small glowing page icon beside it and footnote numbers orbiting. It scrolls to page 29, where the words research preview sit in the paper's own quotation marks, then to the next paragraph: two small logos side by side, NopeAI's and the lighthouse, and a sentence held to read. The scrollbar's thumb shrinks to a sliver as the endnotes load.",
+   "vo": [
+    {
+     "id": "v31-vo-06",
+     "who": "mas",
+     "text": "neleh's on our board. she quoted us.",
+     "kind": "read",
+     "delivery": "level, a little too level; names her and places her (B3); no opinion of the paper",
+     "take": "new",
+     "cluster": "the dark room",
+     "at": "start+0.8"
+    }
+   ],
+   "onscreen": {
+    "add": [
+     "RAIL: OCT 2023",
+     "DECODING INTENTIONS (the title) [V · CSET issue brief, Oct 2023]",
+     "NELEH (byline plate; her co-authors unnamed)",
+     "\"research preview\" (p. 29, in the paper's own quotes)",
+     "\"…exactly the kind of frantic corner-cutting that the release of CHATGTP appeared to spur.\" [P · the paper, p. 30; name swap only]"
+    ]
+   },
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "art": "the paper on the monitor (title page, p. 29-30, the two logos); her icon is the call's glowing page",
+   "fix": [
+    "B3",
+    "N §3 #8"
+   ],
+   "why": "Neleh appears before Act Four as a real beat he reads: her paper, on the record, compares his launch unfavourably with the careful rival's. His line places her on his board and states only a fact. No feeling about her real act is voiced (mas-inner-voice §6); the reported tension over the paper stays out (facts #36).",
+   "lines": []
+  },
+  {
+   "id": "v31-20.08",
+   "action": "new",
+   "after": "v31-20.07",
+   "est_s": 1.2,
+   "frame": "TWO-SHOT · Mas and the Orb, the paper soft on the monitor",
+   "set": "darkroom",
+   "room": "dark",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "caption": "He reads on. The Orb reads him. Nobody says anything.",
+   "lcut": [
+    {
+     "sound": "the room's air into the order's desk",
+     "over_s": 0.6
+    }
+   ],
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "why": "The hold is the reaction; the order (OCT 30) follows.",
+   "lines": []
+  },
+  {
+   "id": "21.02",
+   "action": "keep",
+   "est_s": 10.6,
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "caption": "The signing desk on the monitor: NEDIB, pen raised, over an order that runs off both ends of a very big desk. One cut-paper copy pops up. (No bezel egg: Neleh's paper has its own beat now.)",
+   "fix": [
+    "R5"
+   ],
+   "why": "One copy is enough to make the joke; −2.9 s.",
+   "src_s": 13.458,
+   "src_frame": "POV · the signing desk (held on the monitor)",
+   "lines": [
+    {
+     "id": "e1-a3-21-01",
+     "keep": true
+    },
+    {
+     "id": "e1-a3-21-02",
+     "keep": true
+    },
+    {
+     "id": "e1-a3-21-03",
+     "keep": false,
+     "who": "deepfake-2",
+     "text": "And no paperwork, folks. None at all.",
+     "why": "T2 / R5: the second deepfake goes"
+    }
+   ]
+  },
+  {
+   "id": "21.03",
+   "action": "keep",
+   "est_s": 4.38,
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "onscreen": {
+    "replace": {
+     "DEEPFAKES OF ME: SEEN 2": "DEEPFAKES OF ME: SEEN 1"
+    }
+   },
+   "caption": "The real NEDIB turns to look at it, pen raised. His stat row updates: SEEN 1 (one copy now).",
+   "why": "The count follows the one copy left.",
+   "src_s": 4.375,
+   "src_frame": "POV · the signing desk: the real one turns",
+   "lines": [
+    {
+     "id": "e1-a3-21-04",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "21.04",
+   "action": "keep",
+   "est_s": 4.4,
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "onscreen": {
+    "add": [
+     "verified: human (the Orb's toast, over the real NEDIB)"
+    ],
+    "replace": {
+     "DEEPFAKES OF ME: SEEN 2": "DEEPFAKES OF ME: SEEN 1"
+    }
+   },
+   "caption": "\"which one's real?\" The Orb's iris flicks across the two NEDIBs and settles on the one with the pen; its toast pops over him: verified: human.",
+   "fix": [
+    "U3",
+    "R3"
+   ],
+   "why": "The witness answers; the toast calls back 18.05.",
+   "src_s": 5.458,
+   "src_frame": "2S·SCR · Mas, the Orb, three NEDIBs on the monitor (slow drift in)",
+   "lines": [
+    {
+     "id": "e1-a3-21-06",
+     "keep": true
+    },
+    {
+     "id": "e1-a3-21-07",
+     "keep": false,
+     "who": "mas",
+     "text": "the one with the pen.",
+     "why": "U3: a question he answered himself"
+    }
+   ]
+  },
+  {
+   "id": "21.05",
+   "action": "keep",
+   "est_s": 2.3,
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "why": "unchanged",
+   "src_s": 2.3,
+   "src_frame": "POV · the real NEDIB signs",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "22.01",
+   "action": "keep",
+   "est_s": 9.1,
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "caption": "Open for 1 s on the two-shot: Mas at his desk, the keynote on the monitor behind the Orb. Then the POV: DevDay on the monitor, the odometer climbs through the stage, TASYA walks on laughing. Behind him, the Sydney bubble bobs on its egg-timer chain, silent.",
+   "fix": [
+    "C #13",
+    "C §4.1 payoff b"
+   ],
+   "why": "He is at home watching himself; the bubble is a zero-cost Sydney echo.",
+   "src_s": 8.083,
+   "src_frame": "POV · DevDay on the monitor",
+   "lines": [
+    {
+     "id": "e1-a3-22-01",
+     "keep": true
+    },
+    {
+     "id": "e1-a3-22-02",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "22.02",
+   "action": "keep",
+   "est_s": 5.31,
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "why": "unchanged",
+   "src_s": 5.31,
+   "src_frame": "HIGH · the desk from above: his phone",
+   "lines": [
+    {
+     "id": "v3-vo-16",
+     "keep": true,
+     "vo": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "22.03",
+   "action": "keep",
+   "est_s": 3.3,
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "shot_note": "face light, one step (M §4 #4)",
+   "why": "unchanged",
+   "src_s": 3.3,
+   "src_frame": "TWO-SHOT · Mas and the Orb, the phone between them",
+   "lines": [
+    {
+     "id": "e1-a3-22-03",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "23.01",
+   "action": "keep",
+   "est_s": 2.5,
+   "music": "THE CLOCK · MM-14's step figure, bar 1 to the dead stop on bar 4",
+   "why": "unchanged",
+   "src_s": 2.5,
+   "src_frame": "POV · bar 1: the cold open's frame on the monitor",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "23.02",
+   "action": "keep",
+   "est_s": 2.5,
+   "music": "THE CLOCK · MM-14's step figure, bar 1 to the dead stop on bar 4",
+   "onscreen": {
+    "add": [
+     "ALYI · NELEH · MADA · THE QUIET VOTE (the calendar's own hover names, one per circle as the iris steps)"
+    ]
+   },
+   "caption": "The invite, now a reminder. As the Orb's iris steps along the four circles, each shows its name, the calendar's own tooltip: ALYI, NELEH, MADA, THE QUIET VOTE. It stops on the black square.",
+   "fix": [
+    "B3",
+    "N §3 #8"
+   ],
+   "why": "The board is named before Act Four, by the invite itself; \"gerg's not on it.\" will pay it.",
+   "src_s": 2.5,
+   "src_frame": "HIGH · bar 2: the reminder",
+   "lines": []
+  },
+  {
+   "id": "23.03",
+   "action": "keep",
+   "est_s": 2.5,
+   "music": "THE CLOCK · MM-14's step figure, bar 1 to the dead stop on bar 4",
+   "why": "unchanged",
+   "src_s": 2.5,
+   "src_frame": "TWO-SHOT · bar 3: the rail rolls to Friday",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "23.04",
+   "action": "keep",
+   "est_s": 2.5,
+   "music": "THE CLOCK · MM-14's step figure, bar 1 to the dead stop on bar 4",
+   "why": "unchanged",
+   "src_s": 2.5,
+   "src_frame": "BLACK · bar 4 (ACT-OUT 2)",
+   "lines": [],
+   "fix": []
+  }
+ ]
+}

@@ -1,0 +1,136 @@
+{
+ "segment": "coldopen",
+ "source": "show/reel/ep01-v3/ep01-v3-coldopen.json",
+ "_about": "v31-script beat plan (PLAN §2 format), written against the v3 lock's beat and line ids. Every v3 beat appears once (keep, cut, merge, or keep with \"moved\"), plus the new beats; beats are listed in their v3.1 order. est_s is a planning length from word counts and the takes on file, never a measurement. Kept lines are keep true/false; new and changed lines carry v31-<seg>-NNNN ids; new V.O. carries v31-vo-NN ids; kept v3 V.O. stays in lines with \"vo\": true; restored v2 lines keep their v2 ids with \"restored\": true and the take path. vo.at = \"start+S\" | \"after:<line id>+S\". Subtitles: spoken real lines show without quotation marks or print ellipses (N 0:05); posts and printed matter keep theirs. Every call grid lights and names its speaking tile (B5). The lit-UI band prompt in the bottom letterbox never appears (B8); rails and the V.O. line keep their places. The script is show/episodes/ep01/script.md (draft 7); the notes are ../script-v31-notes.md; the builder is _build_v31.py (edit its spec and re-run, don't hand-edit).",
+ "story_s": {
+  "source": 26.67,
+  "estimate": 26.66
+ },
+ "beats": [
+  {
+   "id": "1.00",
+   "action": "keep",
+   "est_s": 0.5,
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "why": "unchanged",
+   "src_s": 0.5,
+   "src_frame": "BLACK",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "1.01",
+   "action": "keep",
+   "est_s": 4.25,
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "why": "unchanged. Subtitle rule for the whole episode (N 0:05): spoken real lines display without quotation marks or print ellipses; posts and printed matter keep their own typography.",
+   "src_s": 4.25,
+   "src_frame": "WIDE · the one wide: stage, banquet, the lit window",
+   "lines": [
+    {
+     "id": "e1-co-1-01",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "1.02",
+   "action": "keep",
+   "est_s": 5.58,
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "why": "unchanged",
+   "src_s": 5.583,
+   "src_frame": "SINGLE · MCU Mas, answering; the window soft behind him",
+   "lines": [
+    {
+     "id": "e1-co-1-02",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "1.03",
+   "action": "keep",
+   "est_s": 1.54,
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "why": "unchanged",
+   "src_s": 1.542,
+   "src_frame": "INSERT · the shared table from above: plink",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "1.04",
+   "action": "keep",
+   "est_s": 2.67,
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "why": "unchanged",
+   "src_s": 2.667,
+   "src_frame": "SINGLE · MCU Mas, the sentence lands",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "2.01",
+   "action": "keep",
+   "est_s": 0.62,
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "why": "unchanged",
+   "src_s": 0.625,
+   "src_frame": "WIDE · the freeze",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "2.02",
+   "action": "keep",
+   "est_s": 2.5,
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "why": "unchanged",
+   "src_s": 2.5,
+   "src_frame": "INSERT · the phone: the invite",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "2.03",
+   "action": "keep",
+   "est_s": 2.5,
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "why": "unchanged",
+   "src_s": 2.5,
+   "src_frame": "SINGLE · MCU Mas: he reads it, looks up",
+   "lines": [
+    {
+     "id": "e1-co-2-01",
+     "keep": true
+    }
+   ],
+   "fix": []
+  },
+  {
+   "id": "3.01",
+   "action": "keep",
+   "est_s": 2.0,
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "why": "unchanged",
+   "src_s": 2.0,
+   "src_frame": "TWO-SHOT · Mas and the Orb: the iris steps",
+   "lines": [],
+   "fix": []
+  },
+  {
+   "id": "3.02",
+   "action": "keep",
+   "est_s": 4.5,
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "why": "unchanged",
+   "src_s": 4.5,
+   "src_frame": "WIDE · the room scrubs back, too far: the collapse",
+   "lines": [],
+   "fix": []
+  }
+ ]
+}

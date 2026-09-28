@@ -354,4 +354,4 @@ The three-lens read of 5.2 (newcomer, insider, feel), applied scene by scene; th
 
 ## From Ep1 v3 (2026-09-27)
 
-- **Sydney moves to Ep2.** Ep1 v3 cut sc 10 (the Feb 2023 Bing/"Sydney" beat, cut C1). Ep2 picks up her scene and her real line, in all four sentences and in source order, as restored in Ep1's Act One fix passes (see show/reel/ep01-full/ep01-act1-v2.json, beats 10.xx). Its callback to the `😊` needs its setup here now.
+- **~~Sydney moves to Ep2.~~ Reversed 2026-09-27:** Ep1 v3.1 restores Sydney (showrunner: "i want to bring back the syney and atem references"). Ep2 keeps only callbacks. Was: Ep1 v3 cut sc 10 (the Feb 2023 Bing/"Sydney" beat, cut C1). Ep2 picks up her scene and her real line, in all four sentences and in source order, as restored in Ep1's Act One fix passes (see show/reel/ep01-full/ep01-act1-v2.json, beats 10.xx). Its callback to the `😊` needs its setup here now.
