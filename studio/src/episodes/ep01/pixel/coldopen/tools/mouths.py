@@ -31,8 +31,10 @@ SEGS = {
     "coldopen": {"takes": ["audio/ep01/coldopen/dialogue/lines-fast-v1.json"],
                  "faced": ["e1-co-1-02", "e1-co-2-01"],
                  "out": "studio/src/episodes/ep01/pixel/coldopen/takes-mouth.json"},
-    "tag": {"takes": ["audio/ep01/tag/dialogue/lines-fast-v1.json", "audio/ep01/v3/tag/lines-v3.json"],
-            "faced": ["e1-tg-32-01", "e1-tg-33-01"],
+    # v3.1 (the final lock): "close." became v31-tg-0002 "that was close."; the demo's voice (v31-tg-0001) plays from the
+    # monitor, and v31-vo-07 is Mas's V.O.: neither shows a mouth
+    "tag": {"takes": ["audio/ep01/tag/dialogue/lines-fast-v1.json", "audio/ep01/v3/tag/lines-v3.json", "audio/ep01/v31/tag/lines-v31.json"],
+            "faced": ["e1-tg-32-01", "e1-tg-33-01", "v31-tg-0002"],
             "out": "studio/src/episodes/ep01/pixel/tag/takes-mouth.json"},
 }
 

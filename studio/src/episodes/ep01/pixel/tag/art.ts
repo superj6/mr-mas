@@ -7,6 +7,9 @@
 //                                fingertips drawing (not exported there), re-set here
 //   drawWallOrb(b, f, look)      32.07: the Orb beside him at the back wall in the wide (drawBackWall draws it at the
 //                                desk), bobbing, its iris on the cover
+//   cardField                    v3.1, 32.01: a monitor painter, the demo film's opening card before its wordmark (the bright
+//                                warm field the Runway insert's first frame shows on his monitor), so the cut into the
+//                                insert (its [OTS] on the same field) matches
 import {Buf, rect} from '../../../../shared/pixel/px';
 import {PAL, stepColor} from '../../../../shared/pixel/palette';
 import {drawDarkPlate, drawDarkPlateDesk} from '../../../../shared/pixel/rooms/darkroom-plate';
@@ -14,6 +17,7 @@ import {masPortrait, MAS_PORTRAIT_DEFAULT, MasPortraitState} from '../../../../s
 import {putBustCut} from '../../../../shared/pixel/cast/civic-kit';
 import {drawEmitCover} from '../../../../shared/pixel/kits/emit-cover';
 import {drawOrb, orbBob} from '../../../../shared/pixel/cast/orb-medium';
+import {bayer} from '../../../../shared/pixel/px';
 
 const RH = 203;
 
@@ -63,4 +67,13 @@ export const eraseProfileHand = (b: Buf, f: number) => {
 export const WALL_ORB: [number, number] = [178, 92];
 export const drawWallOrb = (b: Buf, f: number, look: [number, number], dx = 0) => {
   drawOrb(b, WALL_ORB[0] + dx, WALL_ORB[1] + orbBob(f), 6, {look, aperture: 0.5, monitor: -1});
+};
+
+/** v3.1 32.01: the demo film's first card on his monitor: a warm off-white field with a soft cool falloff (the insert's
+ *  i0 shows the same field in the [OTS]); held, no wordmark yet */
+export const cardField = (scr: Buf) => {
+  for (let y = 0; y < scr.h; y++) for (let x = 0; x < scr.w; x++) {
+    const d = Math.hypot((x - scr.w / 2) / (scr.w * 0.6), (y - scr.h / 2) / (scr.h * 0.6));
+    scr.set(x, y, bayer(x, y) < 0.18 + d * 0.3 ? PAL.G6 : PAL.P1);
+  }
 };

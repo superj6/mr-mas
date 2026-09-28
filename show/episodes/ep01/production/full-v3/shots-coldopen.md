@@ -1,10 +1,18 @@
 # Ep1 v3: the cold open's pixel shots (`v3-shots-coldopen-tag`, 2026-09-27)
 
-> **Status: re-cut, re-locked and re-rendered (§0), 2026-09-27.** This is track P2 of [PLAN.md](PLAN.md) for the `coldopen` segment. The tag's record is [shots-tag.md](shots-tag.md).
+> **Status: final on the v3.1 lock (the v3.1 section below); re-cut, re-locked and re-rendered (§0), 2026-09-27.** This is track P2 of [PLAN.md](PLAN.md) for the `coldopen` segment. The tag's record is [shots-tag.md](shots-tag.md).
 >
 > **Nothing here was watched or heard.** I looked at the contact sheet, at native stills of every shot (at 2x, with crops at 4x of the mouths and the iris steps), at frames decoded from the rendered MP4s, and at the last 3 s against the intro's frame 0. The flash and join numbers are measured. Whether the cuts play needs a person.
 >
 > Nothing was committed.
+
+## v3.1 (the final lock, 2026-09-27)
+
+- **The check:** the cold open's v3.1 timeline (`show/reel/ep01-v31/ep01-v31-coldopen.json`) has the same timing as the 640-frame v3 one in every beat: lengths, lines, words, onscreen items, sounds, fx and cast. The only changes are the music cue strings, and 1.02's line text without its quotation marks (spoken lines lose them in v3.1).
+- **What I re-ran:**
+  - I re-locked on the v3.1 timeline. Only the lines' text changed in the lock, which affects the `.srt`.
+  - I re-rendered, now muxed with the sound pass's v3.1 mix, `out/ep01/full-v3/mix-v31/coldopen-mix.wav` (640 f).
+- **Identical picture:** the new `picture/coldopen.mp4`'s H.264 stream is identical to the v3 640-frame render (md5 `1948fa16…`), and sampled frames are identical.
 
 ## 0. The re-cut: the cold open ends on the rewind (the lead's ruling, 2026-09-27)
 

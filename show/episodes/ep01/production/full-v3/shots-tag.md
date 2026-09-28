@@ -1,12 +1,86 @@
 # Ep1 v3: the tag's pixel shots (`v3-shots-coldopen-tag`, 2026-09-27)
 
-> **Status: built, checked and rendered.** This is track P2 of [PLAN.md](PLAN.md) for the `tag` segment. The cold open's record is [shots-coldopen.md](shots-coldopen.md), which also holds the shared tools.
+> **Status: v3.1, final: re-locked on the final v3.1 lock with the Runway demo spliced (see the v3.1 section below). The sections after it are the v3 record.** This is track P2 of [PLAN.md](PLAN.md) for the `tag` segment. The cold open's record is [shots-coldopen.md](shots-coldopen.md), which also holds the shared tools.
 >
 > **The tag ends on its own last frame:** black on the vault's hum (33.05). The Orb outro follows as a separate chapter and isn't in this render.
 >
 > **Nothing here was watched or heard.** I looked at the contact sheet, at native stills of every shot at 2x, and at three frames decoded from the MP4. The flash numbers are measured.
 >
 > Nothing was committed.
+
+## v3.1: the final lock, and the Runway demo spliced (2026-09-27)
+
+**The brief** (the lead, under the showrunner's "fully finalized version"):
+- Re-lock on the final v3.1 lock (`show/reel/ep01-v31/ep01-v31-tag.json`) and update the layouts for its new beats.
+- Splice ELGOOG's Runway demo (`out/ep01/full-v3/runway/elgoog-demo-final.mp4`, runway.md §6) at tag frame 62.
+
+**The picture:** `out/ep01/full-v3/picture/tag.mp4`, **992 frames, 41.33 s** (v3: 813, 33.88 s). Its temp audio is the v3.1 stick reel's tag chapter (`out/ep01/reel/ep01-v31-stick.mp4`, 1263.25 s + 41.33 s), cut to `out/ep01/full-v3/picture/tag-stick-mix.wav`. The episode frame in is 30246.
+
+**What changed in the lock** (11 shots, 5 lines):
+
+| Shot | Frames | v3.1 |
+|---|---|---|
+| 32.01 | 0–62 | 62 f (was 108). The rail `DEC 6, 2023` is here now, typed in the band. **The monitor lights on its own:** `kits/monitor-v31` `screenWake` 1, 2, 3 in held steps from k14, then from k26 `tag/art cardField`, the demo's bright first card, the same field as the insert's i0. The Orb's iris goes to it at k16. **Mas looks up at k50**, and the cut to the insert is 12 frames later, on his eyeline |
+| **v31-32.01d** (new) | 62–295 | **The Runway insert**, 233 f; details below. "What the quack!" (the demo's voice, from the monitor) at i110; Mas's V.O. "those are stills." at i168 |
+| 32.02 | 295–385 | unchanged (the rail moved to 32.01) |
+| 32.03 | 385–476 | unchanged |
+| 32.04 | 476–572 | unchanged, but **the frozen duck stays up on his monitor** (`tag/heldstill`, runway.md §6's continuity): the Orb re-scans the cover in front of the staged duck |
+| 32.05 | 572–638 | **"that was close."** (v31-tg-0002, 66 f), replacing "close." Its mouth track is added by `coldopen/tools/mouths.py tag`, which now reads `audio/ep01/v31/tag/lines-v31.json` too |
+| 32.07 | 638–722 | 84 f (was 102): the taps at k9 and k36; the walk back at k54–76 |
+| 33.01–33.05 | 722–992 | unchanged; 33.01's monitor holds the duck too |
+
+**The splice:**
+- **Frames:** insert frame i is tag frame 62 + i.
+  - **i0–216** (tag 62–278) are **browser frames**, declared on the segment (`browser.frames`: `DEMO_SPLICE`, 62–279). The renderer takes them whole from `GLYPH_DIR/pic/NNNNN.png`.
+  - **i217–232** (tag 279–294), the insert's closing two-shot, are drawn by the layout: `drawDarkA3` with the held still on his monitor, Mas looking at it, the Orb's iris on it, then stepping to the rack (`DPLATE_LOOK.tray`) 6 frames before 32.02's whir (runway.md §6). It's the insert's own composition (`pxframes.ts`), drawn on the pipeline's clock.
+- **The PNGs:**
+  1. `insert.py --variants a --no-chip --png DIR --png-offset 62`, with `--out` pointed at scratch so the runway pass's files are untouched. The 233 PNGs match the final MP4 to within 1.2–2.8 of 255 (mean absolute difference, the MP4's encode).
+  2. Then **`tag/tools/splice.ts`** lays the host's layer over them. The Node renderer splices a browser frame as it is, so the V.O. line has to be in the PNG.
+     - It renders each splice frame with the insert's layout swapped for a key colour, which leaves only the band and the V.O. line.
+     - It lays that over the PNG at 4x, and gives the V.O. glyphs a 1-px N0 outline so they read on the pale still (runway.md §6).
+     - Result: 41 frames carry "those are stills." (tag 232–272) and 176 are unchanged. The band was already identical in all 217.
+- **The layout's own drawing for i0–216** is a pixel fallback, for stills, contact sheets and the Remotion host, which has no `tag/browser.tsx`: the monitor kit's `[OTS]` with the card, then `[POV]` and `[OTS]` with the held still. **The contact sheet shows that fallback for the insert, not the film.**
+- **New files:**
+  - `tag/heldstill.ts`: the runway pass's `painter/held-still-2s-96x60.png`, transcribed to data so the layouts stay pure;
+  - `tag/tools/splice.ts`;
+  - `tag/art.ts` `cardField`.
+
+**Measured:**
+- **Joins,** decoded from the MP4 and looked at:
+  - 61 → 62: the two-shot with the lit card and Mas looking up → the insert's `[OTS]` on the same field;
+  - 278 → 279: the insert's `[OTS]` on the held still → the layout's two-shot, which matches the insert's own i217 frame;
+  - 294 → 295: the Orb on the rack → 32.02's slot.
+- **Flashes:** **0 in any second**, red 0.
+  - The transitions: the push brightening (72), the pull-back darkening (265–271), the cut to the slot (295), the page (776–780) and the black (960).
+  - The largest mean-luminance step is 0.32 at 878 (the page → 33.04), as in v3.
+- **The render:** 992 frames in 15 s, **217 browser frames spliced, 0 missing**, no stand-ins, no failed layouts. Video and audio are both 41.333 s.
+- **Checks:** `check` has 0 stand-ins and 0 problems. `tsc` (scoped) is clean.
+
+**Re-running the splice** (heavy; the PNGs are about 90 MB and were deleted from scratch after the render):
+
+```sh
+bash ops/heavy.sh audio/.venv-casting/bin/python studio/src/dev/genvideo/runway/insert.py --scratch $S/rw --out $S/rw-out \
+    --variants a --no-chip --png $S/glyph --png-offset 62
+cd studio
+node src/episodes/ep01/pixel/tools/build.mjs tag $S/r-tag.cjs && node $S/r-tag.cjs check
+node src/episodes/ep01/pixel/tools/build.mjs --entry src/episodes/ep01/pixel/tag/tools/splice.ts $S/splice.cjs
+bash ../ops/heavy.sh node $S/splice.cjs $S/glyph $S/glyph-tag
+GLYPH_DIR=$S/glyph-tag SEGDIR=$S/seg X264_THREADS=1 bash ../ops/heavy.sh node $S/r-tag.cjs picture --jobs 2
+```
+
+- **The lock:** `lock.py --seg tag --timeline show/reel/ep01-v31/ep01-v31-tag.json --takes studio/src/episodes/ep01/pixel/tag/takes-mouth.json --mix out/ep01/full-v3/picture/tag-stick-mix.wav --mix-offset 0 --ep-in 30246`.
+- **Always pass `--out` to insert.py:** its default is the runway pass's folder.
+
+**For other passes:**
+- **The sound pass:** the final v3.1 tag mix needs to be 992 frames. The demo's cues are runway.md §7 (i-frames = tag frame − 62).
+- **The EL tag:** it needs the same splice on its own lock; I didn't make it. The EL v3.1 timeline (`show/reel/ep01-v31-el/ep01-v31-el-tag.json`) also has 32.01 at 62 f and the insert at 233 f, with the demo's line and the V.O. at the same times (4.6 s and 7.0 s). So the same PNGs splice at the same frames. Run `splice.ts` on a bundle built on the EL lock (the assembly pass's `build_el.mjs` redirect) so the V.O. is baked in on the EL clock.
+
+**What's weakest (v3.1):**
+- The V.O. "those are stills." is pixel type over near-photoreal footage for 31 frames. The outline makes it legible, but it's a mix of media inside one frame.
+- The review render and the Remotion host show the pixel fallback for the insert, not the film, because there's no `tag/browser.tsx`.
+- 32.01's card field is a bright rectangle in the dark two-shot for 36 frames.
+
+---
 
 **The files:**
 
