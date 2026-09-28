@@ -80,3 +80,53 @@ Proposed:
 - Ep4 is at about 80 s against a 150 s cap, so the staircase (12 s) and the manners beat (8 s) fit.
 - Ep3 is at about 95 s, so the transformer micro (5 s) fits.
 - Ep1 goes from about 0 to about 19 s (THE WOODROSE and TPOOL), inside its ≤20 s budget.
+
+## 4. The milestones layer: key AI steps, each tied to a player
+
+> **Showrunner:** "we should make sure we have key ai development steps, particularly related to the story's main players. stuff like alphago, atari rl, dota, rubik's cube, etc."
+
+**Rules:**
+- Every milestone is owned by a player: whose lab did it, who was in the room, and who it scared.
+- Each enters on a present-day trigger and says what it means for the race. It's never a history lesson.
+- Most are 2–6 s micros inside that episode's flashback budget.
+- **Each is drawn in its own medium:** Breakout in 8-bit, a Go board, Dota's top-down arena, the robot hand as a Blender render (one of the show's rare style leaps), a folding protein ribbon, and text for the GTPs. This is the intro's "the world renders at the fidelity of its era" idea, applied to the machines themselves.
+
+| When | Milestone | Whose | Episode · trigger | Form |
+|---|---|---|---|---|
+| 2006 | CUDA: gaming chips become math chips | NESNEJ | Ep4 · THE WHALE's pebble (−$589B): why everyone needed his chips | inside F4.2, 3 s |
+| 2012 | AlexNet on two gaming cards; the auction ELGOOG wins | ALYI (and UDIAB's paddle) | Ep5 · the talent war | planned (F5.2) |
+| Dec 2013 → Feb 2015 | **The Atari agent: Breakout, tunnelling behind the wall** | SIMED / MINDDEEP; bought by ELGOOG (Jan 2014) | **Ep1 · THE WOODROSE:** "how far behind are we?" plays on a phone at the table (inside the 10 s) | 8-bit, 2 s |
+| Jan 2014 | ELGOOG buys MINDDEEP | SIMED, RADNUS, NOLE (an early investor) | Ep6 · Nole's version of THE WOODROSE | planned (background) |
+| Mar 2016 | **AlphaGo beats the champion (MOVE 37)**; Alyi is on the paper's author list | SIMED · ALYI · NOLE's fear | **Ep2 · the Email Séance:** Nole's 2016 email about MINDDEEP rises as a ghost, and a stone clicks down. Ep9 keeps its MOVE 37 callback. | the board only, 4 s |
+| 2016 | Gym and Universe: NopeAI teaches agents on games | GERG | Ep4 · the staircase (below) | 2 s |
+| Jun 2017 | **Human preferences: a stick-figure robot learns a backflip from people's 👍** | MARIO co-authored it | **Ep4 · the sycophancy button:** the thing that makes chatbots flatter was his | 4 s, a stick figure |
+| Jun 2017 | The transformer paper ("attention is all you need") | RADNUS's lab | Ep3 · "It is ours. We published it." (Ep1) | 5 s (moved earlier) |
+| Aug 2017 | **Dota: the bot beats the champion one-on-one**; Nole: "Vastly more risk than North Korea." | GERG, MAS · NOLE | Ep8 · the trial's prologue | planned (F8.1) |
+| Dec 2017 | **AlphaZero teaches itself chess in hours, from nothing** | SIMED | **Ep11 · RSI:** the first time a machine taught itself | 4 s |
+| Jan 2017 / Jul 2019 | Libratus and Pluribus beat the pros at poker | MAON (later NopeAI's reasoning lead) | **Ep3 · strawberry:** thinking time, where o1's reasoning came from. Ep10 keeps the Vegas callback. | 3 s (moved earlier) |
+| Apr 2019 | **OpenAI Five beats the world champions** (after losing at The International in 2018) | GERG, MAS | **Ep5 · draft night:** Dota's hero draft rhymes with Kram's stadium draft of researchers | top-down arena, 5 s |
+| Oct 2019 | **The robot hand solves a Rubik's cube**; robotics is shelved by 2021 | NopeAI (the path not taken) | **Ep4 · the staircase:** games → the hand → text; they tried everything, and scale on text won | Blender render (the style leap), 5 s |
+| 2018–2020 | GTP-1 → GTP-2 (the box) → GTP-3 (the waitlist) | MARIO (GTP-2/3, the scaling laws), ALYI, MAS | Ep4 · the staircase; Ep7 · the box | 12 s + planned |
+| 2020 | **AlphaFold solves protein folding** (CASP14) | SIMED | **Ep3 · Oct 2024:** his Nobel ("KNIGHTED. NOBELED. UNIMPRESSED.") | a folding ribbon, 4 s |
+| 2021 | Codex: the pair-programmer in Macrosoft's editor | TASYA (the landlord's first product on the tenant) | Ep4 or Ep6 | 6 s |
+| 2021–22 | The first image models (DALL-E and its successor) | NopeAI | Ep6 · CAMEO CITY (Aros 2) | 3 s |
+| Jan 2022 | Teaching it manners (people rate answers) | NopeAI · MARIO's 2017 paper grown up | Ep4 · the sycophancy button | 8 s (with the backflip) |
+| 2016 → 2023 | Macrosoft's Tay (2016, rogue in a day) → Sydney (2023) | TASYA | **Ep6 or Ep2:** the landlord's bots keep going off-script (Ep1's "House rules, Sydney.") | 3 s |
+| 2017 → 2022 → 2023 | Jerdna: NopeAI founding member → ALSET's Autopilot → back | JERDNA · NOLE | Ep8 · he defects mid-stride ("HAS WORKED FOR EVERYONE IN THIS ROOM") | 3 s |
+| Ep12 | **The family album:** the machine replays its ancestors (Breakout, the Go stone, the Dota draft, the cube, the GTP staircase) before it vetoes the firing | THE MODEL | Ep12 | montage, 6 s |
+
+**Budget:**
+- Ep1: +2 s, inside THE WOODROSE.
+- Ep2: +4 s.
+- Ep3: +12 s (the transformer, poker, AlphaFold).
+- Ep4: +30 s (the staircase with Gym, the hand and the GTPs; the backflip and the manners; CUDA).
+- Ep5: +5 s.
+- Ep11: +4 s.
+- Ep12: +6 s.
+
+Every episode stays under its 150 s cap. Ep4 is the heaviest (about 110 s), so the Codex micro goes to Ep6.
+
+**Guardrails:**
+- Milestones are drawn as machines, boards and games.
+- Real people appear only as the show's parody cast, and **no real player's face** (the Dota champions, the Go champion) is ever drawn.
+- Lab attributions follow the papers' public author lists.
