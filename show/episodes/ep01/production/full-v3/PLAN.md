@@ -152,3 +152,11 @@ out/ep01/full-v3/                         the films and mixes (git-ignored)
 **Done 2026-09-27 (lead): the intro's flash.** Frames 222 and 224 now hold 221 and 223 (the whip smear on 2s). Flashcheck on the patched intro: at most 1 flash in any second, pass (it was 4 at frame 221).
 - The patched picture is `out/intro/intro-ep1-V1-1080p-flashfix.mp4` (git-ignored). Rebuild it with `python3 show/episodes/ep01/production/full-v3/assembly/tools/intro_flashfix.py out/intro/intro-ep1-V1-1080p-flashfix.mp4`.
 - **The v3.1 assembly uses it in place of the original intro picture.** The intro's audio is unchanged.
+
+**Added 2026-09-28 (showrunner):**
+- "it is not really showing him take any action… if he is the main character he should be showing agency". This becomes **v3.2**, an agency pass: `v32-agency`, draft 8, beat-plan-v32. See SHOWRUNNER-NOTES note 0.
+- "please do another final audit to make sure nothing feels too forced, too out of the blue (that is not intentional), and that sound transitions are happening properly". **The final audit** (brief: scratchpad final-audit-brief.md, output `audit-<tag>.md`) covers:
+  - forced moments
+  - unintended out-of-the-blue beats, and Mas's agency
+  - sound transitions measured at every cut, every chapter seam and the designed silence
+- **It runs on the v3.1 film** (its findings feed v3.2) **and again on the v3.2 film as the last gate** before the Drive swap.
