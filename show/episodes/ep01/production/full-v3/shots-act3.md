@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **What this is** | The record of Act Three's pixel layouts on the v3 stick lock: every shot, what it's built from, what's new, the checks, how to re-render it, and what's weakest. |
+| **What this is** | The record of Act Three's pixel layouts on the stick lock: every shot, what it's built from, what's new, the checks, how to re-render it, and what's weakest. **Now on the v3.1 lock: [§8](#8-v31-the-v31-lock-script-draft-7) is current**; §1–§7 are the v3 pass, kept for the record. |
 | **Who, when** | The `v3-shots-act2-act3` pass (track P2 of [PLAN.md](PLAN.md)), 2026-09-27. Nothing was committed: the lead commits. |
 | **The files** | Layouts: `studio/src/episodes/ep01/pixel/act3/shots.ts`. It uses the helpers in `act2/kit2.ts`. The lock: `act3/data.ts` and [lock/act3.json](lock/act3.json). |
-| **The picture** | `out/ep01/full-v3/picture/act3.mp4` (1920 × 1080, 24 fps, H.264 + AAC, 2:08.04, 3,073 frames, 10.2 MB; rendered in 29 s on 2 workers), muxed with the stick mix as temp audio (`out/ep01/full-v3/picture/act3-stick-mix.wav`). Beside it: `act3.srt`, `act3.mp4.render.json` and the contact sheet `act3-sheet.png`. The 5 GLYPH frames are the Remotion host's, spliced in. |
+| **The picture** | **v3.1:** `out/ep01/full-v3/picture/act3.mp4` (1920 × 1080, 24 fps, H.264 + AAC, **2:25.13, 3,483 frames**, 11.9 MB; rendered in 31 s on 2 workers), muxed with the v3.1 stick mix as temp audio (`out/ep01/full-v3/picture/act3-v31-stick-mix.wav`). (The v3 render it replaced ran 2:08.04, 3,073 frames.) Beside it: `act3.srt`, `act3.mp4.render.json` and the contact sheet `act3-sheet.png`. The 5 GLYPH frames are the Remotion host's, spliced in. |
 | **Measured** | 25 of 25 shots have a layout; 0 stand-ins; `check` passes; `tsc` prints nothing; the flash check passes (§4); the GLYPH check passes (the plain frames around them are identical Node against Remotion, and nothing outside the room area differs). |
 | **Needs a person** | Nothing has been watched in motion or heard. I looked at the contact sheet and at about 45 sampled native frames (the arrival, every V.O. frame, every POV, the scan and its GLYPH frame, the call), and at one GLYPH frame from the Remotion host. |
 
@@ -112,3 +112,95 @@ GLYPH_DIR=$S/glyph-act3 SEGDIR=$S X264_THREADS=1 bash ../ops/heavy.sh node $S/r-
 3. **"He sips" (19.12) isn't drawn.** The portrait has no glass or hand, and a new drawing for a 2.5 s shot didn't seem worth the risk of looking bad; he just watches.
 4. **The GLYPH beat** (the cone, then five frames of tokens, then the cone gone) is judged from stills and one Remotion PNG. Whether five frames reads as "his face is tokens" or as a glitch needs a person.
 5. **22.03's Orb move** from the wall to his shoulder happens off screen (between DevDay and the keynote prompt). It fits Act Four's staging, but a viewer may notice the outline is empty again.
+
+---
+
+## 8. v3.1: the v3.1 lock (script draft 7)
+
+### 8.1 The lock
+
+```sh
+# the temp track: Act Three's chapter of the v3.1 stick reel (600.375 s -> 745.5 s), 3,483 frames (the method in shots-act2.md §8.1)
+python3 studio/src/episodes/ep01/pixel/tools/lock.py --seg act3 --timeline show/reel/ep01-v31/ep01-v31-act3.json \
+    --takes audio/ep01/act3/dialogue/lines-fast-v2.json --takes audio/ep01/v3/act3/lines-v3.json \
+    --takes audio/ep01/v31/act3/lines-v31.json --mix out/ep01/full-v3/picture/act3-v31-stick-mix.wav --mix-offset 0
+```
+
+- **Result:** 28 shots from 31 beats, 3,483 frames (2:25.13). 27 lines, every one with a take. Every check is `ok`.
+- **The lock's notes, kept:** v31-vo-06 shares the screen with the rail `OCT 2023` (the timeline's timing).
+- **A leftover sound:** the timeline keeps the second `tower_pop` at 21.02 + 10.49 s, but the picture has one copy now. That's for the sound pass.
+
+### 8.2 What changed, shot by shot
+
+| Shot | v3.1 |
+|---|---|
+| **v31-18.00** (new) | **The act's arrival**, an 8-frame fade up: the home room two-shot (Act Four's dark plate, the outline empty) with the monitor lit, the landlord's slate lobby small on it (`lobbyPainter`'s mini). |
+| **v31-18.00b** (new) | POV, `lobbyPainter`: `MACROSOFT WELCOMES ATEM` · `JUL 18`. TASYA hangs the thirteenth key, Atem blue, in held steps. KRAM (new cast, mute) steps in. "Everyone is welcome." is **lip-synced**: the take's visemes are laid over the painter's own portrait, only the pixels that differ. "thirteen." (V.O.) comes once the key is hung. **The POV sits 10 px high**, so the must-read chyron clears the V.O. rows. |
+| 18.01 | 3.4 s, the arrival gone: the whir pre-laps the cut, and the box is already sliding at frame 0; the lobby still on the monitor. |
+| 18.02 | The new V.O. ("my other company. it tells people from machines.") runs over the label. The box's near edge falls into shadow at the frame's foot (the cream only; his fingertips stay lit), so the V.O. types on dark. |
+| 18.04 (18.05) | **The face light:** `drawScanMCU {faceLight: 1}` on the toast phase (`faceLightImg`, keyed from the Orb's side). |
+| 19.01 | 1.8 s: the iris flicks to the monitor, where Sirrah's lectern is small. |
+| 19.11–19.13 | cut (the lighthouse item) |
+| **v31-19.02** (new) | POV, `sirrahPainter`: JUL 12. Sirrah talks with a silent mouth; the chyron types on and holds. |
+| **v31-19.03** (new) | **The hands runner, one held frame:** art-b's `drawDark2SSCR`, the monitor large at frame right. The steps: |
+| | • the letters carry on; Mas's two fingers go up, and the Orb whirrs on the first servo; |
+| | • JUL 21, the PINKY PROMISE unrolls in held steps; his pinky goes up, and the Orb rotates on the third servo; |
+| | • SEP 13, the forum; his hand is already up before every hand goes up on "raised", NOLE's the highest, and the Orb rises one pixel; |
+| | • "i've had mine up since may." (V.O.), the Orb looks at him, and he lowers his hand. |
+| 20.02 | The Orb is at his shoulder now (§8.3). |
+| 20.04, 20.06 | **The big-monitor two-shot**, so the call is on screen: the TIDDER thread with its counter climbing, and **GERG's video tile** in its corner (`withGergTile`, lip-synced, typing, ringed when he talks). The Orb's long look at Mas after "i'm editing it.". His head drops for "go to sleep, gerg.". The V.O. hold (mouth shut). Gerg's first line is now "Okay. That's patched.". |
+| 20.05 | The edit POV keeps Gerg's tile in the corner (the call is on). |
+| **v31-20.07** (new) | POV, `paperPainter`: the title page, then p. 29 ("research preview"), then p. 30 (the two logos, the held sentence), the scrollbar's thumb shrinking; "neleh's on our board. she quoted us." (V.O.). |
+| **v31-20.08** (new) | The big-monitor two-shot, the paper on it: the Orb turns from the page to him. |
+| 21.02 (+21.03) | **One copy**, lip-synced; no bezel egg; the stat `SEEN 1` on the chip. |
+| 21.04 | **The big-monitor two-shot** (the two NEDIBs readable: `eoPainter`'s short layout), with a slow whole-pixel drift toward the monitor. The iris goes from the copy to the real one on the servos; **the toast `verified: human` pops over the real NEDIB** after the third servo. "the one with the pen." is cut. |
+| 21.05 | One copy, `SEEN 1`, no egg. |
+| 22.01 | **Opens for 1 s on the two-shot** (the keynote on the big monitor), then the POV. The Sydney bubble rides behind Tasya on stage. The marks follow the sounds, which moved +1 s. |
+| 22.03 | **The face light:** `drawDarkA3 {faceLight: 1}` (art-a's `faceKey`). The Sydney bubble is on the small monitor too. |
+| 23.02 | The hover names: ALYI, NELEH, MADA, THE QUIET VOTE, each as the iris reaches its circle. |
+
+### 8.3 Continuity: where the Orb is
+
+- **Why it moves:** art-b's big-monitor two-shot seats the Orb at his far shoulder.
+- **The layouts' rule:**
+  - it settles into the outline at "you can stay." (18.06) and watches from there as the iris flicks to the monitor (19.01);
+  - from the hands runner (19.03) on, it sits at his shoulder, watching with him, and the outline is empty;
+  - that holds in every plate shot too (20.02, 22.03, 23.03), which matches Act Four.
+- **Geography:** the big-monitor frames are the room from the monitor's other side, with Mas still in the left third.
+
+### 8.4 Face lights, `cleanUnder`, and the v3 fixes
+
+- **Face lights:** on 18.05 (the mood analysis's list) and 22.03 (the draft 7 notes). Both are art-b's opt-ins.
+- **`cleanUnder`:** it exists only on art-a's `drawLaunchMcuMas` (Act One). The only dither on a face in Act Three is the scan cone's, by design, so there was nothing to set.
+- **The v3 fixes, kept:**
+  - Mas's mouth stays shut on every V.O. (`kit2.spoken`).
+  - The scan cone is aimed onto his face.
+  - The GLYPH beat is five frames.
+
+### 8.5 Checks (v3.1)
+
+| Check | Result |
+|---|---|
+| `node r-act3.cjs check` | 28 layouts, 0 stand-ins, 0 problems; 5 GLYPH frames (551–555); the track is 3,483 frames |
+| `glyphs` (Remotion against Node) | the plain frames either side identical; nothing outside the room area differs |
+| `tsc` | prints nothing |
+| **Flash check** | **Worst: 2 transitions (1 flash) in any second; red: 0. Passes.** |
+| Longest still runs | 21.02's end, 36 f (the turned NEDIB held after the chip); 20.02, 34 f (the LEDs stop, deliberate); the black card |
+| Looked at | the contact sheet and about 40 sampled frames: every new beat, the V.O. frames (18.00b, 18.02, 19.03, 20.06, 20.07), the runner's four stages, the call's tile, the toast in 21.04, both sides of 22.01's cut, 22.03, 23.02's names |
+
+**Render** (from `studio/`):
+
+```sh
+node src/episodes/ep01/pixel/tools/build.mjs act3 $S/r-act3.cjs
+node $S/r-act3.cjs check
+bash ../ops/heavy.sh node $S/r-act3.cjs bundle $S/bundle
+BUNDLE=$S/bundle bash ../ops/heavy.sh node $S/r-act3.cjs glyphs $S/glyph-act3 2
+GLYPH_DIR=$S/glyph-act3 SEGDIR=$S X264_THREADS=1 bash ../ops/heavy.sh node $S/r-act3.cjs picture --jobs 2
+```
+
+### 8.6 Weakest in v3.1 (to my eye, from stills)
+
+1. **Two geographies in one scene.** The plate (monitor left) and the big-monitor two-shot (monitor right) alternate in sc 19–22: 20.02 is the plate, 20.04 the big monitor, and so on. Each cut is across a POV, but a viewer may feel the room flip.
+2. **The runner's forum at two-shot scale:** the raised hands are small ticks. The joke is the tiling, and the stick's own caption says legibility at this scale is a call.
+3. **Tasya's lip-sync on the lobby clip** is a pixel patch over the painter's portrait. It depends on the painter keeping its placement (12 % of the screen, y 10).
+4. **21.02's last 1.5 s** holds on the turned NEDIB with only the chip changing.

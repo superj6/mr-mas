@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **What this is** | The record of Act Two's pixel layouts on the v3 stick lock: every shot, what it's built from, what's new, the checks, how to re-render it, and what's weakest. |
+| **What this is** | The record of Act Two's pixel layouts on the stick lock: every shot, what it's built from, what's new, the checks, how to re-render it, and what's weakest. **Now on the v3.1 lock: [§8](#8-v31-the-v31-lock-script-draft-7) is current**; §1–§7 are the v3 pass, kept for the record. |
 | **Who, when** | The `v3-shots-act2-act3` pass (track P2 of [PLAN.md](PLAN.md)), 2026-09-27. Nothing was committed: the lead commits. |
 | **The files** | Layouts: `studio/src/episodes/ep01/pixel/act2/shots.ts`. Helpers shared with Act Three: `act2/kit2.ts`. New art: `act2/art/radnus-bust.ts`. The lock: `act2/data.ts` and [lock/act2.json](lock/act2.json). |
-| **The picture** | `out/ep01/full-v3/picture/act2.mp4` (1920 × 1080, 24 fps, H.264 + AAC, 3:24.75, 4,914 frames, 15.8 MB; rendered in 35 s on 2 workers), muxed with the stick mix as temp audio (`out/ep01/full-v3/picture/act2-stick-mix.wav`). Beside it: `act2.srt`, `act2.mp4.render.json` and the contact sheet `act2-sheet.png` (one still per shot, each shot's middle frame). |
+| **The picture** | **v3.1:** `out/ep01/full-v3/picture/act2.mp4` (1920 × 1080, 24 fps, H.264 + AAC, **3:21.25, 4,830 frames**, 15.3 MB; rendered in 33 s on 2 workers), muxed with the v3.1 stick mix as temp audio (`out/ep01/full-v3/picture/act2-v31-stick-mix.wav`). (The v3 render it replaced ran 3:24.75, 4,914 frames, on `act2-stick-mix.wav`.) Beside it: `act2.srt`, `act2.mp4.render.json` and the contact sheet `act2-sheet.png` (one still per shot, each shot's middle frame). |
 | **Measured** | 43 of 43 shots have a layout; 0 stand-ins; `check` passes; `tsc` over both segments prints nothing; the flash check passes (§4). |
 | **Needs a person** | Nothing here has been watched in motion or heard. I looked at the contact sheet and at about 90 sampled native frames (every arrival, every V.O. frame, the dialogue shots, every freeze and card), and fixed what didn't read to me (§5). That's one reader's look at stills. |
 
@@ -169,3 +169,75 @@ Act Two returns no GLYPH layers, so it needs no Remotion bundle.
 4. **The 17.04 freeze on the rooftop:** even re-curved, the open sky is the half screen, so the frame reads as a print more than as the rooftop.
 5. **Two must-reads share the screen** in 13.01 (the V.O. and the rail). That's the lock's timing, left for the lead.
 6. **The class photo's sheen and drift are 1-px moves.** Whether they read as a hand or as nothing needs a person to watch.
+
+---
+
+## 8. v3.1: the v3.1 lock (script draft 7)
+
+**The brief** (the lead, 2026-09-27; the showrunner wants a fully finalized version):
+- re-lock on `show/reel/ep01-v31/ep01-v31-act2.json`;
+- update every new, changed and moved beat;
+- use art-b's v3.1 art ([art/art-b.md §6](art/art-b.md));
+- face lights where the mood analysis asks;
+- `cleanUnder` on MCUs that dither skin;
+- keep the v3 fixes;
+- re-render;
+- the flash check.
+
+### 8.1 The lock
+
+```sh
+# the temp track: Act Two's chapter of the v3.1 stick reel (out/ep01/reel/ep01-v31-stick.mp4, 399.125 s -> 600.375 s),
+# decoded with the bundled ffmpeg, trimmed to 4,830 frames x 2,000 samples, 48 kHz 24-bit
+python3 studio/src/episodes/ep01/pixel/tools/lock.py --seg act2 --timeline show/reel/ep01-v31/ep01-v31-act2.json \
+    --takes audio/ep01/act2/dialogue/lines-fast-v2.json --takes audio/ep01/v3/act2/lines-v3.json \
+    --takes audio/ep01/v31/act2/lines-v31.json --mix out/ep01/full-v3/picture/act2-v31-stick-mix.wav --mix-offset 0
+```
+
+- **Result:** 40 shots from 47 beats, 4,830 frames (3:21.25). 41 lines, every one with a take. Every check is `ok`.
+- **The lock's notes, kept:** the V.O. shares the screen with a rail in 13.01 (the rail now clears at 2.6 s, as the timeline has it) and in 14.01 (`MAY 12, 2023` under "her mouth is a beat late."). Both are the timeline's timing.
+
+### 8.2 What changed, shot by shot
+
+| Shot | v3.1 |
+|---|---|
+| 13.01 | **Radnus mouths his sentence silently from the first frame:** three-second phrases with a breath between. The new V.O. (v31-vo-01, "mouthing the same sentence since we sat down") names it. |
+| 13.06 | 3.3 s: the tripods pop in faster, and the photographer's line starts at 0.6 s. The layout reads the three thunks, so nothing else changed. |
+| 13.13 | "Longer." is split off (v31-a2-0001 / -0002). The scroll comes out word by word; the whole scroll is out after "…put it in writing."; NEDIB looks down at it, approving, brow up, and then says "Longer." |
+| 13.14 | **The match cut.** The print is at the art's `CLASS_PHOTO_MATCH` geometry (centred where the phone will be), held at its left edge by the same finger pads as the phone (`holdFingers`). It's still this cut's own flash frame, now **without the tripods and the photographer in it** (they took the photo; the v3 print wrongly showed them). It settles 12 frames before the cut, and the v3 dip is gone: a hard cut. |
+| 14.01 | 6.6 s. `drawBridgeOTS {feed, hearts}`: his own CLASS PHOTO #1 post, the hearts climbing. On the label's end his thumb scrolls to the clip in whole-pixel held steps; then the clip, her mouth late, under his V.O. (v31-vo-02). |
+| 14.02 | cut |
+| 15.02 | The chairman's real line ("That voice was not mine. The words were not mine.", room-scale mouth). The red light moves from the clone's mic to his; the v3 nodding along is gone. |
+| 15.17, 15.18 | cut |
+| 16.01 | 5 s. The two headlight sweeps are re-timed as fractions of the shot. |
+| 17.11 | The crack is jagged and white now (art-b's `drawCrack`; the layout is unchanged). |
+| 17.12 | `drawGlassSide`: the glass side-on at table height; the refracted crack runs on in three held steps and bends across his reflection. |
+| unchanged (retimed by the lock only) | 13.02, 13.05, 13.07–13.11, 14.03–14.06, 15.01, 15.03–15.16, 17.01–17.10, 17.13 |
+
+### 8.3 Face lights, `cleanUnder`, and the v3 fixes
+
+- **Face lights:** the mood analysis (§4 #4) and the draft 7 notes list none in Act Two.
+- **`cleanUnder`:** it exists only on art-a's `drawLaunchMcuMas` (Act One). None of Act Two's MCUs dithers skin, so there was nothing to set.
+- **The v3 fixes, kept:**
+  - Mas's mouth stays shut on every V.O. (`kit2.spoken`).
+  - The gag cards sit in empty corners.
+  - The freezes keep Mas in colour.
+  - The new RADNUS bust is used.
+
+### 8.4 Checks (v3.1)
+
+| Check | Result |
+|---|---|
+| `node r-act2.cjs check` | 40 layouts, 0 stand-ins, 0 problems; the track is 4,830 frames |
+| `tsc` (both segments and everything they import) | prints nothing |
+| **Flash check** (every native frame, the §4 method) | **Worst: 3 transitions (1 flash) in any second; red: 0. Passes.** |
+| Longest still runs | 17.12 46 f (the still water, deliberate), 15.07 40 f, 17.11 34 f, 13.07 30 f (the lens look), 15.14 30 f. Every talk hold has something moving. |
+| Looked at | the contact sheet (`act2-sheet.png`) and about 20 sampled frames: 13.01, 13.13, both sides of the match cut, the feed, the scroll and the V.O. in 14.01, 15.02, 16.01, 17.12 |
+
+**Render** (from `studio/`): `node src/episodes/ep01/pixel/tools/build.mjs act2 $S/r-act2.cjs`, then `node $S/r-act2.cjs check`, then `SEGDIR=$S X264_THREADS=1 bash ../ops/heavy.sh node $S/r-act2.cjs picture --jobs 2`.
+
+### 8.5 Weakest in v3.1 (to my eye, from stills)
+
+1. **The match cut is a match of centres, not of hands.** The print's left edge (and the fingers on it) sits about 100 px left of the phone's, because the print is 332 px wide and the phone 118. That's the art's geometry, followed as it is. Whether the cut reads as "the print became the phone" needs a person to watch it.
+2. **13.13's look down at the scroll** is a 1-px iris move plus a brow. It may not read at 1×.
+3. The v3 list (§7) still stands: the small White House wides, the collar insert, the rooftop freeze.

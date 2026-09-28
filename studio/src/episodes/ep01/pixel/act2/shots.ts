@@ -3,6 +3,9 @@
 // pass's sets, cast and kits (show/episodes/ep01/production/full-v3/art/art-b.md) and art-a's RADNUS room sprite; the
 // one new drawing is RADNUS at bust size (./art/radnus-bust.ts, additive: it takes the stand-in's place in THIS
 // segment's two-shots and pan). The record: show/episodes/ep01/production/full-v3/shots-act2.md.
+// v3.1 (script draft 7, the v3.1 lock show/reel/ep01-v31/ep01-v31-act2.json): 13.13 splits "Longer.", 13.14 -> 14.01 is a
+// match cut (the print in his hand becomes his phone in the same place in frame), the feed scrolls from his own post to
+// the clip under his V.O., 14.02 / 15.17 / 15.18 are cut, 15.02 is the chairman's real line, 17.12 is the glass side-on.
 // Rules kept: native 480 x 270, the master palette, whole-pixel moves, held drawings; Mas frame left; arrivals open wide
 // on the room with its people; marks land on the stick's sound spots and the takes' words; mouths only where the framing
 // shows one (the `face` table); no side badges, no pointer text: plates are names only, and the four gag cards
@@ -49,12 +52,13 @@ const CARD_NESNEJ: GagCard = {x: 470, y: 12, name: 'NESNEJ', lines: ['SELLS SHOV
 
 // =================================================================== sc 13 · THE WHITE HOUSE
 L.add('13.01', {
-  st: 'ARRIVAL · rooms/whitehouse drawWHWide: the row (MAS · RADNUS (art-a cast/radnus) · MARIO · TASYA) facing SIRRAH at the head, her pointer between the A block and the class; Radnus\'s small collar flame; Mario\'s finger half up on "table"; Radnus rehearsing under his breath (a silent room-scale mouth) from "radnus" in the V.O.',
+  st: 'ARRIVAL · rooms/whitehouse drawWHWide: the row (MAS · RADNUS (art-a cast/radnus) · MARIO · TASYA) facing SIRRAH at the head, her pointer between the A block and the class; Radnus\'s small collar flame; Mario\'s finger half up on "table"; v3.1: Radnus mouths his sentence silently from the first frame (a room-scale mouth in phrases with breaths), the V.O. naming it',
   enter: {kind: 'dip', frames: 8},
-  marks: {finger: ['w', 'v3-vo-11', 'table', 0], rehearse: ['w', 'v3-vo-11', 'radnus', 0]},
+  marks: {finger: ['w', 'v31-vo-01', 'table', 0]},
   draw: (fb, k, sh, f) => {
-    const reh = mk(sh, 'rehearse', 90);
-    const rm = k >= reh + 4 && k < reh + 64 ? silentRoom(k - reh - 4) : 'smile';
+    // mouthing the same sentence since they sat down: three-second phrases, a breath between them
+    const ph = k % 72;
+    const rm = ph < 52 ? silentRoom(ph) : 'smile';
     const on = (k % 56) < 36 ? 'A' : 'row';
     WH.drawWHWide(fb, f, {sirrah: {on, mouth: 'smile'}, finger: k >= mk(sh, 'finger', 40) ? 1 : 0, flame: 1, mouths: {radnus: rm}});
   },
@@ -183,58 +187,63 @@ L.add('13.11', {
       look: {radnus: k >= 22 ? 'door' : 'head', mario: k >= 30 ? 'door' : 'head', tasya: k >= 44 ? 'door' : 'head', mas: k >= end + 1 ? 'lens' : 'head'}});
   },
 });
-const SCROLL_WORDS: Array<[string, number]> = [['promise', 1], ['today', 2], ['writing', 3], ['Longer', 4]];
+const SCROLL_MARKS = ['s1', 's2', 's3', 's4'];
 L.add('13.13', {
-  st: 'rooms/whitehouse drawWHOTS: from behind Mario\'s raised index finger onto NEDIB (art-b nedib bust, lip-sync, the pen as a baton); the finger goes all the way up on "writing" and his other hand pulls the scroll out of his pocket in held steps, the whole scroll out on "Longer." The NEDIB gag card rides on from the flash',
+  st: 'rooms/whitehouse drawWHOTS: from behind Mario\'s raised index finger onto NEDIB (art-b nedib bust, lip-sync, the pen as a baton): "Whatever you promise in here today, put it in writing."; the finger goes all the way up on "writing" and his other hand pulls the scroll out of his pocket in held steps; v3.1: the whole scroll is out after the sentence, NEDIB looks down at it, approving (brow up), and says "Longer." The NEDIB gag card rides on from the flash',
   face: {NEDIB: 'lip'},
-  marks: {s1: ['w', 'e1-a2-13-15', 'promise', 0], s2: ['w', 'e1-a2-13-15', 'today', 0], s3: ['w', 'e1-a2-13-15', 'writing', 0], s4: ['w', 'e1-a2-13-15', 'Longer', 0]},
+  marks: {s1: ['w', 'v31-a2-0001', 'promise', 0], s2: ['w', 'v31-a2-0001', 'today', 0], s3: ['w', 'v31-a2-0001', 'writing', 0], s4: ['end', 'v31-a2-0001', 4], longer: ['on', 'v31-a2-0002', 0]},
   draw: (fb, k, sh, f) => {
-    const sc = stepOf(k, SCROLL_WORDS.map(([, n]) => mk(sh, `s${n}`, 999))) as 0 | 1 | 2 | 3 | 4;
-    WH.drawWHOTS(fb, f, {nedib: {mouth: talk(mouth(sh, k, 'NEDIB'), 'smile'), arm: 'baton', lid: blink(k, 4)}, finger: sc >= 3 ? 2 : 1, scroll: sc});
+    const sc = stepOf(k, SCROLL_MARKS.map((n) => mk(sh, n, 999))) as 0 | 1 | 2 | 3 | 4;
+    const s4 = mk(sh, 's4', 90), lg = mk(sh, 'longer', 109);
+    const eyes = k >= s4 + 2 && k < lg + 24; // he looks down at the scroll (camera-right, where Mario holds it)
+    WH.drawWHOTS(fb, f, {nedib: {mouth: talk(mouth(sh, k, 'NEDIB'), 'smile'), arm: 'baton', lid: eyes ? 1 : blink(k, 4), look: eyes ? 1 : 0, brow: k >= s4 + 8 && k < lg + 24 ? 1 : 0}, finger: sc >= 3 ? 2 : 1, scroll: sc});
     if (k < 45) drawGagCard(fb, k + 15, CARD_NEDIB);
   },
 });
 /** CLASS PHOTO #1 (the art's drawClassPhoto, re-laid here to print THIS cut's flash frame, PHOTO_STATE, and to slide in) */
 let PHOTO_SRC: Buf | null = null;
 const printPhoto = (b: Buf, dx: number, dev: number, dy = 0, sheen = 120) => {
-  if (!PHOTO_SRC) { PHOTO_SRC = new Buf(480, 270, PAL.N0); WH.drawWHWide(PHOTO_SRC, 0, {...PHOTO_STATE, flash: 0}); }
+  // the print is the flash frame as the cameras saw it: the tripods and the photographer are behind the lens, not in it
+  if (!PHOTO_SRC) { PHOTO_SRC = new Buf(480, 270, PAL.N0); WH.drawWHWide(PHOTO_SRC, 0, {...PHOTO_STATE, tripods: 0, photographer: 'none', flash: 0}); }
   const src = PHOTO_SRC;
   for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) b.set(x, y, hash(x >> 5, y >> 1, 4) < 0.5 ? PAL.D2 : PAL.D3);
   const cx0 = 24, cy0 = 44, cw = 332, ch = 124;
-  const X = 70 + dx, Y = 24 + dy, B = 6;
+  // v3.1: centred where the phone will be in 14.01 (the art's CLASS_PHOTO_MATCH), held at its left edge as the phone is
+  const X = WH.CLASS_PHOTO_MATCH.cx - (cw >> 1) + dx, Y = WH.CLASS_PHOTO_MATCH.cy - (ch >> 1) + dy, B = 6;
   rect(X - B + 3, Y - B + 3, cw + 2 * B, ch + 2 * B + 10, b.ink(PAL.N0));
   rect(X - B, Y - B, cw + 2 * B, ch + 2 * B + 10, b.ink(PAL.P2));
   rect(X - B, Y - B, cw + 2 * B, 1, b.ink(PAL.W9));
   for (let j = 0; j < ch; j++) for (let i = 0; i < cw; i++) b.set(X + i, Y + j, stepColor(src.get(cx0 + i, cy0 + j), (j < 60 ? 0 : 1) + dev));
   for (let j = 0; j < ch; j++) for (let i = 0; i < cw; i++) { const d = i - j * 1.2 - sheen; if (d > 0 && d < 3 && bayer(i, j) < 0.5) b.set(X + i, Y + j, stepColor(b.get(X + i, Y + j), 1)); }
   text(b, 'CLASS PHOTO #1', X + 4, Y + ch + 3, PAL.N4);
-  // Mas's hand holding its right edge: the thumb over the border, the fingers behind (as the art draws it)
-  const hx = X + cw + B - 12, hy = Y + 60;
-  for (let j = 0; j < 60; j++) for (let i = 0; i < 40; i++) { const inH = Math.hypot((i - 22) / 20, (j - 28) / 30) < 1 && i > 6; if (inH) b.set(hx + i, hy + j, i < 12 ? PAL.S5 : i < 26 ? PAL.S4 : PAL.S3); }
-  for (let j = 0; j < 14; j++) for (let i = 0; i < 22; i++) if (Math.hypot((i - 11) / 11, (j - 7) / 7) < 1) b.set(hx - 6 + i, hy + 10 + j, i < 8 ? PAL.S5 : PAL.S4);
-  for (let i = -2; i <= 12; i++) b.set(hx + i, hy + 11, PAL.S6);
-  for (let j = 40; j < RH - hy; j++) for (let i = 8; i < 44; i++) b.set(hx + i, hy + j, i < 14 ? PAL.G3 : PAL.G2);
+  // his hand at its left edge, as the art's match print draws it (bay-bridge holdFingers: the same pads at the same
+  // place as round the phone in 14.01), the hoodie's cuff below
+  for (let y = Y + 70 + 4 * 15; y < RH; y++) for (let x = X - B - 30; x < X - B + 4; x++) b.set(x, y, x < X - B - 22 ? PAL.G3 : x > X - B ? PAL.G1 : PAL.G2);
+  BB.holdFingers(b, X - B + 3, Y + 70, 4, [PAL.S1, PAL.S3, PAL.S4, PAL.S5]);
 };
 L.add('13.14', {
-  st: 'CLASS PHOTO #1 [ECU]: the art\'s class-photo print (rooms/whitehouse drawClassPhoto\'s layout) re-laid to print THIS cut\'s flash frame (three twisted to the door, NEDIB in it, the blocks I A, Mas at the lens); it slides in in 3 held steps and develops from white in 3; "it\'s a good photo." (O.S.); the hold, the print drifting a pixel in his hand and its sheen sliding; its white decays into the night (a 12-frame step-down into the bridge)',
-  exit: {kind: 'dip', frames: 12},
-  draw: (fb, k) => {
+  st: 'CLASS PHOTO #1 [ECU]: the art\'s class-photo print (rooms/whitehouse drawClassPhoto {match}: centred where the phone will be, his fingers round its left edge) re-laid to print THIS cut\'s flash frame (three twisted to the door, NEDIB in it, the blocks I A, Mas at the lens; no tripods: they took it); it slides in in 3 held steps and develops from white in 3; "it\'s a good photo." (O.S.); the hold, the print drifting a pixel and its sheen sliding, back in place for the last 12 frames; v3.1: a hard MATCH CUT into 14.01 (the print becomes his phone)',
+  draw: (fb, k, sh) => {
     const dx = k < 2 ? 150 : k < 4 ? 70 : k < 6 ? 20 : 0;
     const dev = k < 5 ? 3 : k < 9 ? 2 : k < 14 ? 1 : 0;
     // held in his hand: a 1-px drift of the print every 28 frames, and its sheen sliding as it tilts (1 px / 6 f)
-    printPhoto(fb, dx, dev, k >= 20 && ((k - 20) / 28) % 2 >= 1 ? 1 : 0, 100 + Math.floor(k / 6));
+    const dy = k >= 20 && k < sh.e - sh.s - 12 && ((k - 20) / 28) % 2 >= 1 ? 1 : 0; // settled at the cut, so the match lines up
+    printPhoto(fb, dx, dev, dy, 100 + Math.floor(k / 6));
   },
 });
 
 // =================================================================== sc 14 · THE BRIDGE
 L.add('14.01', {
-  st: 'rooms/bay-bridge drawBridgeOTS: over Mas\'s shoulder at the dark bullpen window, the anchor clip on his phone (her mouth run a beat late on its own clock), the ALTERED AUDIO tag, the progress bar running; the skyline and the one lit window beyond',
+  st: 'rooms/bay-bridge drawBridgeOTS {feed, hearts}: v3.1, the MATCH CUT: over Mas\'s shoulder at the dark bullpen window, his phone where the print was, his own CLASS PHOTO #1 post on it, the hearts climbing; his thumb scrolls (whole-pixel held steps) to the next item, the anchor clip (her mouth a beat late on its own clock), the ALTERED AUDIO tag, the progress bar running, under his V.O.; the skyline and the one lit window beyond',
+  marks: {scroll: ['txt', 'CLASS PHOTO #1', 'until', 0]},
   draw: (fb, k, sh, f) => {
+    const sc = mk(sh, 'scroll', 43);
+    const feed = k < sc ? 0 : heldLerp(k, sc, sc + 14, 0, 100, 2) / 100;
+    const hearts = 406 + Math.min(k, sc) * 19;
     const m = (((k + 6) >> 2) % 3 === 0 ? 0 : 1) as 0 | 1;
-    BB.drawBridgeOTS(fb, f, {f, mouth: k < 6 ? 0 : m, progress: 0.35 + (k / 62) * 0.2});
+    BB.drawBridgeOTS(fb, f, {f, mouth: k < sc + 16 ? 0 : m, progress: 0.3 + clamp((k - sc) / 158, 0, 1) * 0.4, feed, hearts});
   },
 });
-L.add('14.02', {st: 'rooms/bay-bridge drawBayWide: push 1 of 3, the bay, the lit skyline, the one dark tower and its lit window', draw: (fb, k, sh, f) => { BB.drawBayWide(fb, f, {}); }});
 L.add('14.03', {st: 'rooms/bay-bridge drawLitWindow: push 2 of 3, the lit window close, RUMPT\'s silhouette (props and pose only) with the same clip on its phone, nodding on the audio\'s beat (8 f)', draw: (fb, k, sh, f) => { BB.drawLitWindow(fb, f, {nod: ((k >> 3) & 1) as 0 | 1}); }});
 L.add('14.04', {
   st: 'rooms/bay-bridge drawRepostECU: push 3 of 3, a thumb over the repost arrow under the same tag, the press, the click (post_click), REPOSTED',
@@ -258,12 +267,12 @@ L.add('15.01', {
   draw: (fb, k, sh, f) => { SN.drawSenateMCU(fb, f, {bust: lahtBust({...LAHT_BUST_DEFAULT, clone: true, arm: 'mic', mouth: mouth(sh, k, 'CLONE'), lid: 0}), third: 'R', bg: 'dais', mic: true, lit: true}); },
 });
 L.add('15.02', {
-  st: 'rooms/senate drawSenateWide: the hearing room (the dais, the gallery, the witness table with MAS and SUCRAM); the matte chairman nodding along, moved, then speaking (room-scale mouth); the red light moves from the clone\'s mic to his; the name plate LAHTNEMULB (a name only)',
+  st: 'rooms/senate drawSenateWide: the hearing room (the dais, the gallery, the witness table with MAS and SUCRAM); v3.1: the matte chairman takes the red light from the clone\'s mic and tells the room the truth about the voice it just heard ("That voice was not mine. The words were not mine.", room-scale mouth); the clone still; the name plate LAHTNEMULB (a name only)',
   face: {LAHTNEMULB: 'room'},
-  marks: {line: ['on', 'e1-a2-15-02', 0], plate: ['txt', 'LAHTNEMULB', 'at', 0]},
+  marks: {line: ['on', 'v31-a2-0003', 0], plate: ['txt', 'LAHTNEMULB', 'at', 0]},
   draw: (fb, k, sh, f) => {
-    const line = mk(sh, 'line', 36);
-    SN.drawSenateWide(fb, f, {chair: {arm: 'card', mouth: roomMouth(sh, k, 'LAHTNEMULB'), nod: k < line - 4 ? (((k >> 3) & 1) as 0 | 1) : 0}, clone: {arm: 'down'}, lit: k < line - 6 ? 'clone' : 'chair'});
+    const line = mk(sh, 'line', 31);
+    SN.drawSenateWide(fb, f, {chair: {arm: 'card', mouth: roomMouth(sh, k, 'LAHTNEMULB')}, clone: {arm: 'down'}, lit: k < line - 10 ? 'clone' : 'chair'});
     namePlate(fb, k - mk(sh, 'plate', 7), 'LAHTNEMULB', 340, 168, PAL.G6);
   },
 });
@@ -374,12 +383,6 @@ L.add('15.16', {
   marks: {curl: ['snd', 'paper_curl', 1, 0]},
   draw: (fb, k, sh, f) => { const c = mk(sh, 'curl', 24); SN.drawSenateDais(fb, f, {sheet: k < 6 ? 1 : k < c ? 2 : 3, lean: k >= 10 && k < c, chair: {arm: 'card', nod: k >= c ? (((k >> 3) & 1) as 0 | 1) : 0}}); },
 });
-L.add('15.17', {st: 'kits/senate-props drawSheetBack [ECU]: the back, already stamped in the same red: CALLED IT. (BEFORE SUCRAM.)', draw: (fb, k, sh, f) => { SP.drawSheetBack(fb, f, {k: Math.max(0, k - 2)}); }});
-L.add('15.18', {
-  st: 'rooms/senate drawSenateMCU: SUCRAM stares at it over the soft gallery (no blink); his brow knits once, the stare hardening; the tour\'s first stamp J-cuts under it',
-  draw: (fb, k, sh, f) => { SN.drawSenateMCU(fb, f, {bust: sucramBust({...SUCRAM_BUST_DEFAULT, arm: 'down', lid: 0, brow: k < 26 ? 1 : -1, mouth: 'rest'}), third: 'L', flip: true, bg: 'gallery'}); },
-});
-
 // =================================================================== sc 16 · THE TOUR (one held poster)
 L.add('16.01', {
   st: 'kits/tour-poster drawTourPoster: ONE held poster (16.05 merged); the strip slaps across on the paper whip, EU CANCELLED, his post pops over it, UN-CANCELLED, ADDED DUE TO POPULAR DEMAND, each on its stamp; passing cars\' lights sweep the brick twice, one each way (a one-step band, the hold\'s life); the one-pixel smile holds',
@@ -389,8 +392,9 @@ L.add('16.01', {
     const post = since('post', 101);
     TP.drawTourPoster(fb, f, {strip: k >= mk(sh, 'strip', 13), cancelled: since('c1', 28), post: post !== null && k < mk(sh, 'un', 123) + 16 ? post : null, un: since('un', 123), added: since('add', 147)});
     // the headlight: a soft band of one palette step crossing the wall and the poster, left to right, in 4-px steps
-    sweep(fb, k, 44, 104, -60, 540);
-    sweep(fb, k, 152, 192, 540, -40, 30);
+    const len = sh.e - sh.s;
+    sweep(fb, k, Math.round(len * 0.2), Math.round(len * 0.52), -60, 540);
+    sweep(fb, k, Math.round(len * 0.78), len, 540, -40, 30);
   },
 });
 
@@ -477,8 +481,8 @@ L.add('17.11', {
   },
 });
 L.add('17.12', {
-  st: 'rooms/rooftop drawGlassCrack [ECU] (the act-out): the crack in the water, the water not moving; the reflected crack keeps going after the sky\'s has stopped, one whole-pixel step, then another, until it runs across his small reflection; held while the bell decays',
-  draw: (fb, k, sh, f) => { RT.drawGlassCrack(fb, f, {run: stepOf(k, [22, 42, 62]) as 0 | 1 | 2 | 3}); },
+  st: 'rooms/rooftop drawGlassSide [ECU] (v3.1: his glass side-on at table height, the sheet beyond, the sky with its crack stopped): the act-out; through the water the crack runs on in jags, one whole-pixel step, then another, bending down across his small reflection; the water doesn\'t move; held while the bell decays',
+  draw: (fb, k, sh, f) => { RT.drawGlassSide(fb, f, {run: stepOf(k, [22, 42, 62]) as 0 | 1 | 2 | 3}); },
 });
 L.add('17.13', {st: 'BLACK on the bell\'s last partial (the act-out)', draw: (fb) => { rect(0, 0, 480, RH, fb.ink(PAL.N0)); return {noVo: true}; }});
 
@@ -487,5 +491,5 @@ export const SEGMENT = defineSegment({
   lock: LOCK,
   layouts: L.all,
   options: {badge: false, vo: 'typed', voLowercase: true, subs: 'off', standin: 'stick'},
-  review: {title: 'MR. MAS · EP1 · ACT TWO', subtitle: 'PIXEL v3 · LOCK act2 (THE v3 STICK LOCK)', durNote: 'AS THE STICK LOCK', soundLabel: 'SOUND · TEMP TRACK = THE v3 STICK MIX'},
+  review: {title: 'MR. MAS · EP1 · ACT TWO', subtitle: 'PIXEL v3.1 · LOCK act2 (THE v3.1 STICK LOCK)', durNote: 'AS THE STICK LOCK', soundLabel: 'SOUND · TEMP TRACK = THE v3.1 STICK MIX'},
 });
