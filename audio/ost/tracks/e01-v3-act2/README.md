@@ -2,7 +2,33 @@
 
 **Composer X (`v3-score-a`), 2026-09-27.** Track A1 of [PLAN.md](../../../../show/episodes/ep01/production/full-v3/PLAN.md), on the mood map of [v3-plan §6](../../../../show/episodes/ep01/production/stick/v3-plan.md) ("pomp and comedy"). **Nothing here has been listened to.** Every number is measured.
 
-## v3.1 (current, 2026-09-27): refit to the final lock
+## v3.2 (current, 2026-09-28): refit to the final lock
+
+**The locks:** `show/reel/ep01-v32/ep01-v32-act2.json` (the default) and `show/reel/ep01-v32-el/` (`--el`). **`render/music.wav`: 193.042 s (4,633 frames); `render/music-el.wav`: 183.250 s (4,398 frames); both exact.** The round-1 score stands.
+- **The White House:** the V.O.s are cut (13.01, 13.09, 13.11), and Mas is already in the seat nearest the teacher. The pomp still runs from the first frame, with no new cue. The print's last B♭ still bridges the match cut (1.1 s), and the bridge is still no score.
+- **The Senate, in draft 8.1's order.**
+  - **Before the wallet:** the committee asks for his ask (15.10). **His ask (15.15, a real line, "…i would form a new agency…")** plays on MM-20's low-string pedal alone. Sucram's CALLED IT stamp is the SFX's.
+  - **The straight mute's one rising line** (PLEASE REGULATE ME) now goes to the senators' delight (15.16), in the gap before "Would you come and run it?". Then the two-feel continues through 15.11, with "i love my current job." on the pedal.
+  - **The wallet** (15.12) stops it, as before. No score through the gasp, "Health insurance.", Sucram and "…no equity" (designed, 11.8 s).
+- **`senate_b` (15.14):** "MM-20 back on a new phrase; a held beat on the two of them; the tour's stamp thunks in under it." After "…i have no equity in nopeai." the pizz F and the bassoon come back on a downbeat, with the F7sus(♭9) held on the two of them (1.0 s), cut by the tour's stamp at 16.01. **If the sound pass J-cuts that stamp into 15.14** (notes §5), the hang should end on it; that's one number in `lay()`.
+- **The tour poster (16.01, his own hand on the last stamp):** unchanged. There's one knee stab per stamp, and his is the last and biggest.
+- **Real lines** now include the v3.1/v3.2 takes tagged `[P]`/`[V]`: the chairman's "That voice was not mine…" and his ask. Each gets the pedal only.
+
+**Measured.**
+- **Kokoro:** −20.05 LUFS-I, −3.15 dBTP.
+  - the White House −20.0;
+  - the Senate −21.05 / −21.0;
+  - the run and the rooftop −19.0 (the RUN −16.4, featured);
+  - the Upsell −19.0 (phrase 3 −16.6, featured).
+- **EL:** −20.0 overall, with the same per-cue levels to ±0.1.
+- **Silence:** digital silence only in the three marked windows (the bridge, the wallet, the act-out's bell). There are no holes and no fragments.
+- **QA checks:** written A♮ over F 0, F-major OK, knee 0, on both locks.
+- **The cut check:**
+  - Every score step of 12 dB or more on a cut is a designed stop or sits within 0.8 s of a mark.
+  - 15.10's −12.9 dB is the pedal letting go after his real line, now marked.
+
+
+## v3.1 (superseded by v3.2, 2026-09-27): refit to the v3.1 lock
 
 **The lock:** `show/reel/ep01-v31/ep01-v31-act2.json` (the default). **`render/music.wav`: 201.250 s, 9,660,000 samples (4,830 frames), exact.** The round-1 score, refitted:
 - **The bay's new match cut:** the print in his hand becomes his phone at the bay's window (13.14 → 14.01). The Fountain Pen's last B♭ now **bridges the cut**, ringing about 1.1 s into the bridge and gone well before its first line; the bridge itself is still no score (designed).

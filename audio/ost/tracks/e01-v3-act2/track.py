@@ -5,6 +5,11 @@ Brief (v3-score-a): "the White House: pomp (MM-19 family); the Senate: a lighter
 RUN; the rooftop: Nesnej's upsell (THE JOB), ending on KA-CHING and the bell."  Mood map (v3-plan s6): pomp and
 comedy.  Every sync point is read from the timeline (default the Kokoro lock; --el for the ElevenLabs-timed one).
 
+V3.2 (2026-09-28, the final lock, script draft 8.1; the times below are the v3 lock's): the ask comes before the
+wallet (15.10 -> 15.15 -> 15.16 -> 15.11): his ask plays on the low-string pedal (a real line), the straight mute's
+rising line goes to the senators' delight (15.16); senate_b is MM-20's re-entry after "...no equity", the F7sus(b9)
+held on the two of them and cut by the tour's stamp.  README.md has the details.
+
   s (Kokoro lock)  cue          what plays
   0 - 74.1         wh           THE WHITE HOUSE: a light chamber pomp in B-flat (MM-19 family, P13): a straight
                                 processional (dotted strings, pizz march bass, harp, soft timpani and snare taps)
@@ -301,7 +306,7 @@ def tracks_sen():
     return T
 
 
-def senate_groove(c, t_from, t_to, first_chord=0, asides=True, freeze=None):
+def senate_groove(c, t_from, t_to, first_chord=0, asides=True, freeze=None, reserve=()):
     """the two-feel: pizz root on 1 (with the bassoon, dry), the fifth on 3, a pickup on the and-of-4; brushes;
     a viola pad; straight-mute asides in the gaps (one per gap, never on a line)"""
     tl = c.tl
@@ -335,6 +340,8 @@ def senate_groove(c, t_from, t_to, first_chord=0, asides=True, freeze=None):
             text = SEN[name]['asides'][n % 3]
             if t + V.line_len(text) > g1 or (freeze and freeze - 0.1 < t < freeze + Q):
                 continue
+            if any(t < r1 and t + V.line_len(text) > r0 for r0, r1 in reserve):
+                continue
             V.phrase(c, 'tpt', t, text, 0.32, art='straight', rel=0.1)
             c.mark(t, 'a straight-mute aside (a gap)')
             n += 1
@@ -349,6 +356,7 @@ def real_pedals(c, t_from, t_to, first_chord, bar_first):
         c.rebow('vc_ped', v['ped'][1], a0, a1, 0.2, first_att=0.35, last_rel=0.6, art='sus', lp=1200)
         c.rebow('cb_ped', v['ped'][0], a0, a1, 0.16, first_att=0.35, last_rel=0.6, art='sus', lp=900)
         c.mark(a0, f'a low-string pedal only under the real line ({l["id"]})', hit=False)
+        c.mark(a1, f'the pedal lets go after the real line ({l["id"]}); the groove, if any, goes on', hit=False)
 
 
 SEN_THIN = {'real': dict(drop={'vc_p', 'cb_p', 'bsn', 'tpt', 'vla', 'jazz', 'brush', 'swish'}),
@@ -363,13 +371,27 @@ def cue_senate_a(tl):
     c = V.Cue('senate_a', tl, anchor=groove0, anchor_bar=3, bars=30, swing=0.0)
     T = tracks_sen()
     freeze = tl.B('15.04') if tl.has('15.04') else None
+    # v3.2: the ask comes before the wallet (15.10 -> 15.15 -> 15.16 -> 15.11): the pedal only under his real line
+    # (MM-20 thins to its low strings, as under every real line); the straight mute's one rising line goes to the
+    # senators' delight (15.16), in the gap after his line
+    ask = None
+    if ask_before_wallet(tl):
+        sheet_end = max([l['end'] for l in tl.lines_in(tl.B('15.15'), tl.E('15.15'))] + [tl.B('15.15')])
+        nxt = [l['on'] for l in tl.lines_in(sheet_end + 0.05, stop)]
+        a0 = c.next8(max(sheet_end + 0.3, tl.B('15.16') if tl.has('15.16') else sheet_end + 0.3))
+        a1 = (min(nxt) - 0.25) if nxt else stop - 0.3
+        if a1 - a0 > 1.3:
+            ask = (a0, a1)
     # the court's F under the clone's real line (the voice finds a mouth): a bowed pedal
     c.rebow('vc_ped', 'C3', start, groove0 + 0.3, 0.18, first_att=0.6, last_rel=0.5, art='sus', lp=1200)
     c.rebow('cb_ped', 'F1', start, groove0 + 0.3, 0.16, first_att=0.6, last_rel=0.5, art='sus', lp=900)
     c.mark(start, 'the court\'s F: a bowed pedal under the clone\'s real line', hit=False)
-    senate_groove(c, groove0, stop, 0, freeze=freeze)
+    senate_groove(c, groove0, stop, 0, freeze=freeze, reserve=[ask] if ask else [])
     real_pedals(c, groove0, stop, 0, groove0)
     V.thin(c, SEN_THIN, t0=groove0 - 0.01)
+    if ask:
+        V.phrase(c, 'tpt', ask[0], 'Ab4/8 Db5/8 Eb5/8 Ab5/4.', 0.36, art='straight', rel=0.14, stop_at=ask[1])
+        c.mark(ask[0], 'PLEASE REGULATE ME, handed over: the straight mute\'s one rising line as the senators lean in')
     if freeze is not None:
         V.drop_window(c, freeze, freeze + Q, keep=('vc_ped', 'cb_ped', 'vla'))
         c.n('vla', 'C4', freeze - 0.02, Q + 0.2, 0.18, art='sus', att=0.02, rel=0.3)
@@ -377,13 +399,16 @@ def cue_senate_a(tl):
     V.clip_before(c, stop, rel=0.05)
     c.mark(stop, 'THE WALLET: the music stops (3 ms; the room\'s air under it)', hit=False)
     c.section('the court\'s F under the real line', start, groove0)
-    c.section('a lighter Under Oath: the pizz two-feel, brushes, the mute\'s asides', groove0, stop)
+    c.section('a lighter Under Oath: the pizz two-feel, brushes, the mute\'s asides' + (' (v3.2: the ask, his real '
+              'line on the pedal; the senators\' delight on the mute)' if ask else ''), groove0, stop)
     meta = dict(
         id='senate_a', title='The Senate, to the wallet (Ep1 v3, Act Two sc 15)', mm='MM-20 (family)', usage='BI',
         family='P02 PROCEDURE (the court), lighter', tone='procedural comedy: deadpan pizzicato, brushes, a muted aside',
         scenes=['Ep1 v3 Act Two sc 15 (15.01-15.11)'], motifs=[], motif_ids=[],
         key='D-flat major over the court\'s F (F phrygian colour); no A anywhere',
         composer='v3-score-a (composer X), 2026-09-27', underscore_lufs=-21.0, album_lufs=-16.0,
+        sfx_slots=([dict(t=round(c.clk(t), 3), sfx='rubber_stamp_C (Sucram, mid-slide: CALLED IT)') for t in
+                    tl.snd_any('rubber_stamp_C', tl.B('15.15'), tl.E('15.15'))] if ask_before_wallet(tl) else []),
         silence_windows=[(c.clk(stop) + 0.005, c.clk(stop) + 0.5, 'the wallet: the stop', -90.0)],
         audition=['the two-feel under the hearing: light and deadpan, never Law & Order or a Perry Mason swell',
                   'the pedal under each real line: dry enough (no motion on the record)',
@@ -392,43 +417,82 @@ def cue_senate_a(tl):
     return c, sc
 
 
-def cue_senate_b(tl):
+def ask_before_wallet(tl):
+    """v3.2 (draft 8.1): the committee asks for his ask (15.10), he gives it (15.15), the senators want to sign (15.16),
+    and only then "Would you come and run it?" and the wallet; in v3 and v3.1 the ask came after the wallet"""
+    return tl.has('15.15') and tl.has('15.12') and tl.B('15.15') < tl.B('15.12')
+
+
+def senate_b_in(tl):
+    """MM-20's re-entry: 0.3 s after his last word in 15.14 ("...i have no equity in nopeai.")"""
     mas_eq = [l for l in tl.lines if l['beat'] == '15.14' and l['who'] == 'mas']
-    t_re = (mas_eq[-1]['end'] + 0.3) if mas_eq else tl.B('15.14') + 5.0
-    end = tl.B('16.01')                                     # the tour's first stamp cuts it (v3 and v3.1)
-    c = V.Cue('senate_b', tl, anchor=t_re, anchor_bar=1, bars=10, swing=0.0)
+    return (mas_eq[-1]['end'] + 0.3) if mas_eq else tl.B('15.14') + 5.0
+
+
+def cue_senate_b(tl):
+    t_re = senate_b_in(tl)
+    end = tl.B('16.01')                                     # the tour's first stamp cuts it (v3, v3.1, v3.2)
+    v32 = ask_before_wallet(tl)
+    # (v3.2: about a second of score, so the file starts two bars early, silent: the engine's meters need 3 s)
+    c = V.Cue('senate_b', tl, anchor=t_re, anchor_bar=3 if v32 else 1, bars=10, swing=0.0)
     T = tracks_sen()
-    # the back of the sheet (15.17) and the stare (15.18) are cut in v3.1: the hang goes under the dais (15.16)
-    back = tl.B('15.17') if tl.has('15.17') else (tl.B('15.16') if tl.has('15.16') else end - 3.0)
-    stamp = tl.snd('15.15', 'rubber_stamp_C', default=tl.B('15.15') + 1.4)
-    senate_groove(c, t_re, back, 0, asides=False)
-    real_pedals(c, t_re, back, 0, t_re)
-    # the ask: one rising line on the straight mute before Sucram's stamp
-    sheet = tl.B('15.15')
-    ask0 = c.next8(max(sheet, max([l['end'] for l in tl.lines_in(t_re, sheet + 0.5)] + [sheet]) + 0.1))
-    if stamp - ask0 > 1.0:
-        V.phrase(c, 'tpt', ask0, 'Ab4/8 Db5/8 Eb5/8 Ab5/4.', 0.36, art='straight', rel=0.14, stop_at=stamp - 0.08)
-        c.mark(ask0, 'PLEASE REGULATE ME: the straight mute\'s one rising line, before the stamp')
-    # the back of the sheet: the harmony hangs (F7sus-flat9) under his stare; the tour's stamp cuts it
+    stamp = None
+    if v32:
+        # v3.2 (15.14): "MM-20 back on a new phrase; a held beat on the two of them; the tour's stamp thunks in
+        # under it": after "...no equity" the groove comes back on a downbeat (a bar of it when there is room), then
+        # the F7sus(b9) hangs until the tour's stamp
+        back = t_re + BAR if end - t_re >= BAR + 0.8 else t_re
+        if back > t_re:
+            senate_groove(c, t_re, back, 0, asides=False)
+            real_pedals(c, t_re, back, 0, t_re)
+    else:
+        # the back of the sheet (15.17) and the stare (15.18) are cut in v3.1: the hang goes under the dais (15.16)
+        back = tl.B('15.17') if tl.has('15.17') else (tl.B('15.16') if tl.has('15.16') else end - 3.0)
+        stamp = tl.snd('15.15', 'rubber_stamp_C', default=tl.B('15.15') + 1.4)
+        senate_groove(c, t_re, back, 0, asides=False)
+        real_pedals(c, t_re, back, 0, t_re)
+        # the ask: one rising line on the straight mute before Sucram's stamp
+        sheet = tl.B('15.15')
+        ask0 = c.next8(max(sheet, max([l['end'] for l in tl.lines_in(t_re, sheet + 0.5)] + [sheet]) + 0.1))
+        if stamp - ask0 > 1.0:
+            V.phrase(c, 'tpt', ask0, 'Ab4/8 Db5/8 Eb5/8 Ab5/4.', 0.36, art='straight', rel=0.14, stop_at=stamp - 0.08)
+            c.mark(ask0, 'PLEASE REGULATE ME: the straight mute\'s one rising line, before the stamp')
+    # the hang (F7sus-flat9) under the stare / the two of them; the tour's stamp cuts it
     V.clip_before(c, back, rel=0.4)
     V.drop_window(c, back, end + 1.0)
+    if v32:                        # the new phrase's downbeat: the pizz F and the bassoon, dry
+        c.n('vc_p', 'F2', back, 0.5, 0.5, art='pizz')
+        c.n('cb_p', 'F1', back, 0.5, 0.42, art='pizz')
+        c.n('bsn', 'F2', back, 0.22, 0.36)
     for inst, p, v in (('vc_ped', 'C3', 0.2), ('cb_ped', 'F1', 0.16), ('vla', 'Gb4', 0.16), ('vla', 'Eb4', 0.15),
                        ('vla', 'Bb3', 0.15)):
-        c.n(inst, p, back, end - back + 0.3, v, art='sus', att=0.3, rel=0.2, lp=2400)
-    c.n('tpt', 'Gb4', back + 0.05, 1.2, 0.26, art='straight', rel=0.3)
-    c.mark(back, 'F7sus(b9) hangs (under the back of the sheet; v3.1: under the dais); the tour\'s stamp cuts it', hit=False)
+        c.n(inst, p, back, end - back + 0.3, v, art='sus', att=0.3 if not v32 else 0.12, rel=0.2, lp=2400)
+    c.n('tpt', 'Gb4', back + 0.05, min(1.2, end - back), 0.26, art='straight', rel=0.3)
+    if v32:
+        c.mark(back, 'MM-20 back on a new phrase after "...no equity": F7sus(b9) held on the two of them; the tour\'s '
+               'stamp cuts it')
+    else:
+        c.mark(back, 'F7sus(b9) hangs (under the back of the sheet; v3.1: under the dais); the tour\'s stamp cuts it',
+               hit=False)
     V.thin(c, SEN_THIN, t0=t_re, t1=back)
-    c.section('back on a new phrase after "...no equity"; the ask; the stamp', t_re, back)
-    c.section('F7sus(b9) held (the back of the sheet; v3.1: the dais), cut by the tour\'s stamp', back, end)
+    if v32:
+        if back > t_re:
+            c.section('back on a new phrase after "...no equity"', t_re, back)
+        c.section('F7sus(b9) held on the two of them, cut by the tour\'s stamp (v3.2)', back, end)
+    else:
+        c.section('back on a new phrase after "...no equity"; the ask; the stamp', t_re, back)
+        c.section('F7sus(b9) held (the back of the sheet; v3.1: the dais), cut by the tour\'s stamp', back, end)
     meta = dict(
         id='senate_b', title='The Senate, after the wallet (Ep1 v3, Act Two sc 15)', mm='MM-20 (family)', usage='BI',
-        family='P02 PROCEDURE (the court), lighter', tone='the ask, the stamp, a suspension left hanging',
-        scenes=['Ep1 v3 Act Two sc 15 (15.14-15.18)'], motifs=[], motif_ids=[],
+        family='P02 PROCEDURE (the court), lighter',
+        tone=('the re-entry after his last word, a suspension held, the tour\'s stamp' if v32 else
+              'the ask, the stamp, a suspension left hanging'),
+        scenes=['Ep1 v3 Act Two sc 15 (' + ('15.14' if v32 else '15.14-15.18') + ')'], motifs=[], motif_ids=[],
         key='D-flat major over the court\'s F; F7sus(b9) left hanging',
-        composer='v3-score-a (composer X), 2026-09-27', underscore_lufs=-21.0, album_lufs=-16.0,
-        sfx_slots=[dict(t=round(c.clk(stamp), 3), sfx='rubber_stamp_C (Sucram, mid-slide)')],
+        composer='v3-score-a (composer X), 2026-09-28', underscore_lufs=-21.0, album_lufs=-16.0,
+        sfx_slots=[dict(t=round(c.clk(stamp), 3), sfx='rubber_stamp_C (Sucram, mid-slide)')] if stamp else [],
         audition=['the re-entry after "...no equity": a new phrase, not a restart glitch',
-                  'the F7sus(b9) under Sucram\'s stare, cut by the tour\'s stamp: a hang, not a mistake'])
+                  'the F7sus(b9) held, cut by the tour\'s stamp: a hang, not a mistake'])
     sc = c.finish(T, meta, length_end=end)
     return c, sc
 
@@ -765,8 +829,7 @@ def lay(tl, built, work):
     wav = lambda k: os.path.join(work, f'{built[k][1].name}-underscore.wav')   # noqa: E731
     T0 = lambda k: built[k][0].T0                                              # noqa: E731
     stop_wallet = tl.B('15.12')
-    c_b = built['senate_b'][0]
-    t_re = c_b.bar1
+    t_re = senate_b_in(tl)
     run_end = tl.E('16.01')
     reg = tl.B('17.03')
     crack = tl.B('17.11')

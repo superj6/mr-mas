@@ -3,7 +3,7 @@
  "id": "e01-v3-tag",
  "segment": "tag",
  "file": "audio/ost/tracks/e01-v3-tag/render/music.wav",
- "timeline": "show/reel/ep01-v31/ep01-v31-tag.json",
+ "timeline": "show/reel/ep01-v32/ep01-v32-tag.json",
  "length_s": 41.333333333333336,
  "frames": 992,
  "samples": 1984000,
@@ -57,11 +57,12 @@
     "knee_completion": 0,
     "hit_check": {
      "within_10ms": 4,
-     "of": 6,
+     "of": 7,
      "worst_ms": 37.7
     },
     "warnings": [
      "marker at 10.8583 s: no clear onset within 10 ms ({'t': 10.8583, 'offset_ms': np.float64(37.7), 'strength': 2.55})",
+     "marker at 19.2833 s: no clear onset within 10 ms ({'t': 19.2833, 'offset_ms': np.float64(18.0), 'strength': 1.99})",
      "marker at 26.8583 s: no clear onset within 10 ms ({'t': 26.8583, 'offset_ms': np.float64(-10.3), 'strength': 3.66})"
     ]
    },
@@ -98,6 +99,11 @@
      "t": 16.692,
      "what": "one held Bbm9 under the V.O. (nothing moves)",
      "hit": false
+    },
+    {
+     "t": 19.883,
+     "what": "the cut to the scan two-shot: the felt re-voices to an open F (a designed change on the cut)",
+     "hit": true
     },
     {
      "t": 20.953,
@@ -230,7 +236,7 @@
   {
    "t0": 8.875,
    "t1": 10.875,
-   "why": "the stills: the demo's sheen cut dead (i151); nothing but the room and the V.O. until MM-12 returns with the pull-back (i199)"
+   "why": "the stills: the demo's sheen cut dead (i151); nothing but the room until MM-12 returns with the pull-back (i199)"
   }
  ],
  "measured": {

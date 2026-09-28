@@ -13,6 +13,14 @@ pass was withdrawn), and only LAUNCH NIGHT's opening changes: the A-flat Rhodes 
 show's own voice, and the odometer's swing becomes a straight driving figure (not cartoonish); the lift and the heat
 turn are kept.
 
+V3.2 (2026-09-28, the final lock, script draft 8.1; the times below are the v3 lock's): the act's downbeat on the
+first frame (marked designed_hit in cues.json, audit-v31 #13); his post over the million (no band attack on its pop;
+the violins climb into the cut); THE LANDLORD'S CALL (v32-7.03: the F pedal and the glass shimmer hold under it,
+Tasya's Rhodes gives one soft chord on "pen", the siren's whine J-cuts in after the hang-up); the floor holds across
+"weeks on" and the swing's new phrase enters on the key ring's jangle (v32-9.10k); weeks on's last chord crossfades
+into Sydney (audit-v31 #14: no stale silence, no dip); HIS CLICK ships GTP-4 (11.04: the Build's whole bar on the
+downbeat before "Addendum."); the lobby's entry on its first played note.  README.md has the table.
+
   s (Kokoro lock)  cue         what plays
   0 - 108.3        a_launch    LAUNCH NIGHT, warm and curious in the show's voice: the felt on each chord (the modal
                                home, two bars a chord: Fm9, Dbmaj9#11, Bbm9, Eb13sus4), a soft straight pulse on the
@@ -145,6 +153,7 @@ def tracks_a():
     for k in ('tpt', 'tbn'):
         T[k].gain_db = -9.0
     T['glasspad'].gain_db = -12.0
+    T['rhodes'].gain_db, T['rhodes'].sends = -6.0, {'room': -12, 'plate': -12}   # v3.2: Tasya's one chord on the call
     # the heat's F2 cello pedal on its own track, notched at the cello's ~111 Hz body resonance (an A2 that the
     # engine's F-major check traced to the strings on the first render: nothing written, a resonance)
     T['vc'].eq = list(T['vc'].eq) + [V.PIZZ_NOTCH]            # (the Ab2 of the turn rings it too: render 2)
@@ -178,6 +187,16 @@ def place_passes(c, t0, t1, vel=0.29, allow=('gerg',), spacing=4.2, first=None):
     return out
 
 
+def whine_t(tl):
+    """code red's J-cut: v3.2 (the landlord's call, v32-7.03) the siren whines through his phone's small speaker as he
+    lowers it, just after the hang-up tick; v3.1 under the last puff of steam (7.02), which holds 1 s longer"""
+    if tl.has('v32-7.03'):
+        hang = tl.snd('v32-7.03', 'handset_hangup', default=tl.E('v32-7.03') - 0.7)
+        return min(hang + 0.05, tl.B('8.01') - 0.3)
+    steam = tl.snd('7.02', 'steam_hiss', default=tl.B('7.02') + 0.45)
+    return min(steam + 2.05, tl.B('8.01') - 0.6)
+
+
 def cue_a(tl):
     GROWS = tl.B('6.01')
     clunk = tl.snd('6.02', 'letter_clunk', default=tl.B('6.02'))
@@ -203,7 +222,8 @@ def cue_a(tl):
     heat = tl.B('6.09')
     tear = tl.B('7.02')
     steam = tl.snd('7.02', 'steam_hiss', default=tear + 0.45)
-    whine = min(steam + 2.05, tl.B('8.01') - 0.6)            # code red's J-cut (cue_code_red's t_in)
+    whine = whine_t(tl)                                      # code red's J-cut (cue_code_red's t_in)
+    call = tl.B('v32-7.03') if tl.has('v32-7.03') else None  # v3.2: the landlord's call, between the tear and the alert
     notes_off = []
     for lab, t, b in [('the odometer grows (6.01)', GROWS, b_grow)] + ([('post', tl.B('6.04'), b_post),
                                                                          ('million', tl.B('6.06'), b_mill)]
@@ -247,6 +267,9 @@ def cue_a(tl):
 
     wake = [l for l in tl.lines_in(tl.B('5.05'), tl.E('5.05')) if l['who'] == 'alyi']
     b_wake = rb(wake[0]['on']) if wake else None
+    if b_wake is not None and b_wake < b_click - 1:
+        c.mark(bar(b_wake), 'the Ache\'s colour, once, under "And what if it wakes up?" (the Build gives way on the '
+               'cut to her)', hit=False)
 
     def harm_ln(b):
         if b_wake is not None and b == b_wake and b < b_click - 1:
@@ -268,7 +291,7 @@ def cue_a(tl):
         for b in range(b0, b1):
             name = harm(b)
             fe, root, sub = LN[name]
-            t = max(0.02, bar(b))
+            t = bar(b) if bar(b) >= 0.6 else 0.0             # (a bar at the head: its chord is the act's downbeat)
             vo = vo_bar(b)
             change = name != prev
             prev = name
@@ -297,17 +320,31 @@ def cue_a(tl):
                 c.n('tri', root, tp, Q / 2 * 0.7, (0.3 if k % 4 == 0 else 0.24) * (0.8 if busy else 1.0), True,
                     att=0.004, dec=0.1, sus=0.5, rel=0.04)
 
+    def double_dur(t, d=0.5):
+        """the Build's felt double lets go before the next pedalled chord catches it (v3.2, the EL lock's F-major
+        trace: a caught F3 rang on as the bass under the next chord, with the chip's A-flat pulses over it)"""
+        tc = c.clk(t)
+        nxt = [a for a, _ in c.ped.get('felt', []) if a > tc]
+        return max(0.08, min(d, (min(nxt) - tc - 0.06) if nxt else d))
+
     def build_f(t0, count, vel, felt_double=True):
         for i in range(count):
             t = t0 + i * S16
             c.n('lead', BUILD_F[i % 16], t, S16 * 0.62, vel * ACC4[i % 4], True, duty=0.25, att=0.002, dec=0.09,
                 sus=0.45, rel=0.035)
             if felt_double and i == 0:
-                c.n('felt', nm(BUILD_F[0]) - 12, t, 0.5, 0.18)
+                c.n('felt', nm(BUILD_F[0]) - 12, t, double_dur(t), 0.18)
 
     # ---- A1: from the first frame (the felt on the button), the Build in compile passes
-    fch(LN['Fm9'][0], 0.03, max(0.8, bar(2) - 0.05), 0.14, roll=0.03)
-    c.mark(0.03, 'A1: the felt on the button (Fm9); the Build compiles', hit=False)
+    # the act's downbeat (5.01: "HARD CUT on the downbeat, out of the card"): the felt's Fm9 with its low F on the
+    # first frame, tight; cues.json marks it `designed_hit`, so the mix's act-head fade leaves it (audit-v31 #13)
+    # (the low F under the first chord only; on a lock whose bar 2 falls at the head, the glow's first chord is the
+    # downbeat's, struck once)
+    c.n('felt', 'F2', 0.0, 1.1, 0.17, rel=0.35)
+    if bar(2) >= 0.6:
+        fch(LN['Fm9'][0], 0.0, bar(2) - 0.05, 0.15, roll=0.008)
+    c.mark(0.0, 'A1 THE DOWNBEAT (a designed hit, on the first frame): the felt on the button (Fm9 over its low F); '
+           'the Build compiles')
     glow(2, b_click, harm_ln)
     vo1 = tl.lines_in(0.0, tl.E('5.02'), kinds={'vo'})
     first_end = (vo1[0]['on'] - 0.2) if vo1 else 4.0
@@ -451,6 +488,8 @@ def cue_a(tl):
         m = tl.B('6.06')
         tb0 = bar(b_clunk + 1)
         brk = m - Q
+        # the clunk bar's violin line stops at the break (its B13sus notes would sound over the million's A-flat)
+        VL = [(p, t0, min(d, brk - t0)) for p, t0, d in VL if t0 < brk - 0.05]
         name, root = ('B13sus4', 'B2')
         V.pulse(c, 'tri', lambda t: root, tb0, brk, S16, 0.44, att=0.003, dec=0.08, sus=0.6, rel=0.03)
         V.pulse(c, 'vc_s', lambda t: 'B2', tb0, brk, S16, 0.3, art='spic')
@@ -487,6 +526,14 @@ def cue_a(tl):
             j += 1
         c.n('sub', 'Ab1', m + Q, 0.6, 0.4, True, punch=1.0, click=0.0, decay=0.5)
         VL += [('G5', m + 2 * Q, Q), ('Eb5', m + 3 * Q, Q)]
+        pc = tl.snd_any('post_click', tl.B('6.06'), tl.E('6.06'))
+        post_t = pc[0] if pc else None
+        if post_t is not None and hit - m > 3.2:
+            # v3.2 (6.06): HIS POST pops over the million (its send pop on F, the SFX's): no band attack on it; the
+            # drive runs on and the violins climb F5 -> Ab5 into the cut to Rima
+            VL += [('F5', m + 4 * Q, 2 * Q), ('Ab5', m + 6 * Q, max(Q, hit - m - 6 * Q))]
+            c.mark(post_t, 'his post pops over the million (the SFX\'s pop on F); the drive runs on, the violins '
+                   'climb to the cut', hit=False)
     # one band hit on the cut to Rima, then a held Abmaj9 under the two short lines
     V.clip_before(c, hit, insts={'tri', 'felt', 'vc_s', 'lead'}, rel=0.05)
     V.drop_window(c, hit, hit + 60, insts={'tri', 'vc_s', 'lead'})
@@ -515,12 +562,31 @@ def cue_a(tl):
     c.rebow('vln2', 'G4', hit + 0.05, ache_end, 0.16, first_att=0.5, last_rel=1.2, art='sus', lp=3000)
     c.n('vln1', 'Eb5', hit + 0.05, heat - hit + 0.1, 0.16, art='sus', att=0.5, rel=0.4, lp=3200)
     c.n('vln1', 'Db5', heat, ache_end - heat, 0.17, art='sus', att=0.55, rel=1.2, lp=3200)
-    c.rebow('vc_f', 'F2', heat, tear + 0.6, 0.22, first_att=0.9, last_rel=1.6, art='sus', lp=1100)
+    ped_end = (whine + 0.6) if call is not None else (tear + 0.6)    # v3.2: the pedal holds under the call
+    c.rebow('vc_f', 'F2', heat, ped_end, 0.22, first_att=0.9, last_rel=1.6 if call is None else 0.6, art='sus',
+            lp=1100)
     c.ch('glasspad', ['G4', 'Db5'], heat + 0.4, ache_end - heat - 0.4, 0.2, roll=0.0, rel=1.0)
-    c.ch('glasspad', ['G4', 'Db5'], tear + 0.05, max(3.0, whine - tear + 0.6), 0.14, roll=0.0, rel=0.9)
     c.mark(heat, 'THE TURN: Abmaj9 -> the Ache over F (vc Ab2 -> F2, vln Eb5 -> Db5; C and G held)')
-    c.mark(tear, 'the tear: the pedal lets go, the Ache rings once more; the siren takes over', hit=False)
-    c.section('A5 the held chord, then THE TURN: the Ache, the F pedal (the heat, the bill)', hit, tear + 2.5)
+    if call is None:
+        c.ch('glasspad', ['G4', 'Db5'], tear + 0.05, max(3.0, whine - tear + 0.6), 0.14, roll=0.0, rel=0.9)
+        c.mark(tear, 'the tear: the pedal lets go, the Ache rings once more; the siren takes over', hit=False)
+        c.section('A5 the held chord, then THE TURN: the Ache, the F pedal (the heat, the bill)', hit, tear + 2.5)
+    else:
+        # v3.2 THE CALL (v32-7.03): "the swing's bass pedal and the shimmer hold under the call; Tasya's Rhodes gives
+        # one soft chord on 'pen' (his colour arriving before he does); the siren takes over".  The F pedal holds;
+        # the Ache's glass rings on from the tear and, on "pen", its D-flat falls to C under his Rhodes chord (the
+        # landlord's floor colour over F: G Bb C Eb, no third); the siren's whine takes over after the hang-up
+        tas = [l for l in tl.lines_in(call, tl.E('v32-7.03')) if l['who'] == 'tasya']
+        t_pen = (tas[-1]['end'] - 0.28) if tas else call + 6.8
+        c.ch('glasspad', ['G4', 'Db5'], tear + 0.05, t_pen - tear + 0.35, 0.14, roll=0.0, rel=0.9)
+        c.ch('glasspad', ['G4', 'C5'], t_pen, max(1.0, whine - t_pen + 0.5), 0.12, roll=0.0, rel=0.8)
+        c.ch('rhodes', ['G3', 'Bb3', 'C4', 'Eb4'], t_pen, max(1.2, whine - t_pen + 0.2), 0.2, roll=0.012)
+        c.mark(tear, 'the tear: the Ache rings once more; the F pedal holds on into the call', hit=False)
+        c.mark(call, 'THE CALL (v3.2): the F pedal and the shimmer hold under it', hit=False)
+        c.mark(t_pen, 'the call: Tasya\'s Rhodes, one soft chord on "pen" (his colour before he arrives); '
+               'the glass D-flat falls to C')
+        c.section('A5 the held chord, then THE TURN: the Ache, the F pedal (the heat, the bill)', hit, call)
+        c.section('THE CALL (v3.2): the F pedal and the shimmer hold; Tasya\'s Rhodes on "pen"', call, whine)
     macro = [(bar(1), 0.0), (bar(b_lift) - 0.4, 0.0), (bar(b_lift) - 0.05, -1.0), (hit + 0.4, -1.0),
              (hit + 2.0, 0.0), (tear + 4.0, 0.0)]
     end = max(tear + 2.6, whine + 0.7)
@@ -540,7 +606,11 @@ def cue_a(tl):
         sfx_slots=[dict(t=round(c.clk(clunk), 3), sfx='letter_clunk: through the desk (the hero sound)')]
         + [dict(t=round(c.clk(t), 3), sfx='odometer_ratchet: 1,000,000') for t in tl.snd_any('odometer_ratchet')]
         + [dict(t=round(c.clk(t), 3), sfx='dialog_ok_click: the launch button') for t in
-           tl.snd_any('dialog_ok_click', tl.B('5.08'), tl.E('5.08'))],
+           tl.snd_any('dialog_ok_click', tl.B('5.08'), tl.E('5.08'))]
+        + [dict(t=round(c.clk(t), 3), sfx='post_click: his post over the million (on F)') for t in
+           tl.snd_any('post_click', tl.B('6.06'), tl.E('6.06'))]
+        + ([dict(t=round(c.clk(t), 3), sfx=f'{n} (the call)') for n in ('call_ring', 'handset_hangup')
+            for t in tl.snd_any(n, call, tl.E('v32-7.03'))] if call is not None else []),
         audition=['0-68 s: the felt, the soft pulse and the Build under the talk: warm and curious in the show\'s '
                   'voice, never lounge; any Nintendo feel is a fail', 'the click: the knee\'s flat line: nothing happens', 'the two-hander (5.09): the felt alone and the Door in the gaps: tender, not sad-piano',
                   'the counter (5.12-6.06): a drive that builds, straight: exciting, not cartoonish',
@@ -580,8 +650,7 @@ def siren(c, inst, t0, dur, lo, vel, swoops=2, up=5.0, att=0.15):
 
 
 def cue_code_red(tl):
-    steam = tl.snd('7.02', 'steam_hiss', default=tl.B('7.02') + 0.45)
-    t_in = min(steam + 2.05, tl.B('8.01') - 0.6)             # after the steam (v3.1: it holds 1 s longer), J-cut
+    t_in = whine_t(tl)                                       # the J-cut: after the hang-up (v3.2) / the steam (v3.1)
     lock = tl.snd('8.06', 'dialog_ok_click--chip', default=tl.B('8.06') + 0.9)
     c = V.Cue('code_red', tl, anchor=tl.B('8.01'), anchor_bar=3, bars=20, swing=0.0)
     T = tracks_cr()
@@ -591,7 +660,9 @@ def cue_code_red(tl):
     lany = tl.B('8.05')
     # the whine alone (J-cut): high strings, one swoop, into the alert
     siren(c, 'siren1', t_in, tl.B('8.01') - t_in + 0.4, 'C5', 0.3, swoops=1, up=6.0, att=0.4)
-    c.mark(t_in, 'the siren\'s whine J-cuts in under the last puff (on his phone)', hit=False)
+    c.mark(t_in, 'the siren\'s whine J-cuts in ' + ('as he lowers the phone, after the hang-up (v3.2)'
+                                                    if tl.has('v32-7.03') else 'under the last puff') +
+           ' (on his phone)', hit=False)
     # the panic ostinato: straight pizz 16ths from the alert (C minor, varied pitches), pizz bass on 8ths
     fig = ['C5', 'Eb5', 'D5', 'C5', 'G4', 'Ab4', 'G4', 'F#4', 'G4', 'C5', 'Bb4', 'Ab4', 'G4', 'Eb4', 'F4', 'F#4']
     bass8 = ['C2', 'G2', 'C2', 'G2', 'Ab1', 'Eb2', 'G1', 'D2']
@@ -656,7 +727,8 @@ def cue_code_red(tl):
                                                                                     'tuba': 0.7, 'timp': 0.6}),
                'real': dict(drop={'xylo', 'woodclick', 'hn_s', 'siren1', 'siren2', 'pz2', 'pzv'}),
                'mas': dict(drop={'xylo', 'woodclick'})}, t0=tl.B('8.01'))
-    c.section('the whine (J-cut under the last puff)', t_in, tl.B('8.01'))
+    c.section('the whine (J-cut: ' + ('after the call\'s hang-up)' if tl.has('v32-7.03') else 'under the last puff)'),
+              t_in, tl.B('8.01'))
     c.section('the alert: the panic ostinato (pizz 16ths)', tl.B('8.01'), tower)
     c.section('the tower rises: the siren as a joke, the whole orchestra', tower, radnus)
     c.section('Radnus, serene; the crypt; the founders (thin under every line)', radnus, lany)
@@ -740,12 +812,14 @@ def cue_lobby(tl):
     jam = tl.snd('9.01', 'glass_strain_2', default=c.sw(2, 4.5))
     freeze = tl.B('9.04')
     # the pickup under the revolving door (bar 1, beats 3-4), then the walk
+    first = c.sw(1, 4.5)
     for p, beat in (('C2', 3), ('Eb2', 4)):
         t = c.bt(1, beat)
         if t > door - 0.3:
             c.n('ubass', p, t, Q * 0.9, 0.5)
+            first = min(first, t)
     c.n('ubass', 'E2', c.sw(1, 4.5), Q * 0.3, 0.45)
-    c.mark(c.bt(1, 3), 'the bass walks in under the revolving door', hit=False)
+    c.mark(first, 'the bass walks in under the revolving door', hit=False)
     for b in range(2, 10):
         name = LOB_BARS[b]
         nxt = LOB_BARS.get(b + 1, 'Fm11')
@@ -810,7 +884,9 @@ def cue_lobby(tl):
                'real': dict(drop={'vibes', 'tpt', 'lead', 'bsax', 'tbn'}, soften={'rhodes': 0.7})},
            t0=tl.B('9.01'), t1=pop)
     c.section('the pickup under the revolving door; the check jams', c.bt(1, 3), c.bar(3))
-    c.section('THE JOB\'s head; the freeze (the felt under the V.O.)', c.bar(3), tl.B('9.06'))
+    c.section('THE JOB\'s head; the freeze' + (' (the felt under the V.O.)' if tl.lines_in(freeze, tl.B('9.06'),
+                                                                                  kinds={'vo'}) else ''),
+              c.bar(3), tl.B('9.06'))
     c.section('the partnership (thin under the talk; fills in the gaps)', tl.B('9.06'), t_tag)
     c.section('the check slides under the door; the push; the pop', t_tag, pop)
     meta = dict(
@@ -830,11 +906,21 @@ def cue_lobby(tl):
 
 
 # ================================================================== FLOOR (the terms: Tasya's floor)
+def ring_jangle(tl):
+    """v3.2: the key ring, large, weeks on (v32-9.10k): its jangle (None on the older locks)"""
+    if not tl.has('v32-9.10k'):
+        return None
+    return tl.snd('v32-9.10k', 'key_ring_jangle_2', default=tl.B('v32-9.10k') + 0.4)
+
+
 def cue_floor(tl):
     terms = [l for l in tl.lines_in(tl.B('9.09'), tl.E('9.09')) if l['who'] == 'tasya' and l['end'] - l['on'] > 6.0]
     lt = terms[0] if terms else [l for l in tl.lines_in(tl.B('9.09'), tl.E('9.09')) if l['who'] == 'tasya'][-1]
     t_in = lt['on'] - 0.2
     jangle = tl.snd('9.09', 'key_ring_jangle_1', default=tl.E('9.09') - 1.0)
+    jk = ring_jangle(tl)
+    if jk is not None:           # v3.2: the floor holds across "weeks on" and lets go on the ring's jangle (v32-9.10k)
+        jangle = jk
     c = V.Cue('floor', tl, anchor=t_in, anchor_bar=1, bars=12, swing=0.0)
     T = palette()
     for k in ('vln1', 'vln2', 'vla', 'vc'):
@@ -858,7 +944,8 @@ def cue_floor(tl):
         if not tl.talking(t0, t0 + 0.3, pad=0.05, kinds={'mas'}):
             c.ch('rhodes', RH[name], t0 + 0.02, 1.4, 0.24, roll=0.008)
         c.mark(t0, f'Tasya\'s floor: {name} (silent attack; one Rhodes chord on her sentence break)', hit=False)
-    c.mark(jangle, 'the key ring\'s jangle: the floor lets go', hit=False)
+    c.mark(jangle, 'the key ring\'s jangle: the floor lets go' + (' (v3.2: the ring, large, weeks on; the swing comes '
+           'in on it)' if jk is not None else ''), hit=False)
     c.section('THE TERMS: Tasya\'s floor (Ab -> C -> E -> Ab), on her sentence breaks', t_in, jangle)
     meta = dict(
         id='floor', title='The Terms: Tasya\'s floor (Ep1 v3, Act One sc 9.09)', mm='(to picture)', usage='BI',
@@ -875,7 +962,11 @@ def cue_floor(tl):
 def cue_lobby2(tl):
     import numpy as _np
     jangle = tl.snd('9.09', 'key_ring_jangle_1', default=tl.E('9.09') - 1.0)
-    one = jangle - Q * 2.0 / 3.0                  # beat 1: the jangles fall on the swung ands
+    jk = ring_jangle(tl)
+    if jk is not None:           # v3.2 (v32-9.10k): "the caper's new phrase comes in on the jangle": the walk's beat 3
+        one = jk - 2 * Q
+    else:
+        one = jangle - Q * 2.0 / 3.0              # beat 1: the jangles fall on the swung ands
     c = V.Cue('lobby2', tl, anchor=one, anchor_bar=1, bars=14, swing=1.0)
     T = tracks_lob()
     rng = _np.random.default_rng(910)
@@ -912,19 +1003,35 @@ def cue_lobby2(tl):
             V.phrase(c, 'vibes', t, text, 0.36, swing=1.0, rel=0.5)
             c.mark(t, 'a vibes fragment (a gap)')
             fi += 1
-    # the last chord at the two-shot: held under "ours does that too.", gone before the laptop closes
+    # the last chord at the two-shot: held under "ours does that too."; v3.2 (audit-v31 #14): it rings through the cut
+    # and crossfades into Sydney over 0.4 s (Fm9 -> her D-flat lydian: A-flat, C and G stay); before v3.1 it was gone
+    # before the laptop closed
+    sy = sydney_beats(tl)
+    x_out = sy[0]['t0'] if sy else None
+    ch_end = (x_out + 0.45) if x_out is not None else close - 0.3
     fin = c.next_beat(last)
-    c.ch('rhodes', ['Ab3', 'C4', 'Eb4', 'G4'], fin, close - fin - 0.3, 0.2, roll=0.01)
-    c.ch('vibes', ['C5', 'G5'], fin, close - fin - 0.2, 0.26, roll=0.02)
-    c.n('ubass', 'F2', fin, close - fin - 0.4, 0.36)
-    c.mark(fin, 'the last chord (Fm9, no motion), held under his line; out before the laptop closes', hit=False)
+    c.ch('rhodes', ['Ab3', 'C4', 'Eb4', 'G4'], fin, ch_end - fin, 0.2, roll=0.01)
+    c.ch('vibes', ['C5', 'G5'], fin, ch_end - fin + 0.1, 0.26, roll=0.02)
+    c.n('ubass', 'F2', fin, ch_end - fin - 0.1, 0.36)
+    if x_out is not None:        # bowed vibes (C5 G5) sustain the chord to the cut, into Sydney's glass
+        for p_ in ('C5', 'G5'):
+            c.n('vibes', p_, fin + Q, ch_end - fin - Q, 0.16, art='bowed')
+        # a soft re-strike after his line (when there is room), so the chord is still there at the cut
+        mas_l = [l for l in tl.lines_in(last, x_out) if l['who'] == 'mas']
+        rs = (mas_l[-1]['end'] + 0.08) if mas_l else x_out - 0.6
+        if rs < x_out - 0.05:
+            c.ch('rhodes', ['Ab3', 'C4', 'G4'], rs, x_out + 0.45 - rs, 0.14, roll=0.015)
+    c.mark(fin, 'the last chord (Fm9, no motion), held under his line; ' + ('it crossfades into Sydney on the cut '
+           '(0.4 s)' if x_out is not None else 'out before the laptop closes'), hit=False)
     V.thin(c, {'talk': dict(drop={'lead'}, soften={'vibes': 0.75, 'rhodes': 0.85}),
                'mas': dict(drop={'vibes', 'lead'}, soften={'rhodes': 0.8}),
                'real': dict(drop={'vibes', 'lead', 'tpt'}, soften={'rhodes': 0.6, 'brush': 0.6, 'swish': 0.7})},
            t0=c.bar(1), t1=last - 0.05)
     c.section('weeks on: the swing back on a new phrase from the jangle', c.bt(1, 3), tv)
     c.section('the TV and the telescope: one held chord, then the walk', tv, last)
-    c.section('"ours does that too.": the last chord, out before the laptop closes', last, close)
+    c.section('"ours does that too.": the last chord, ' + ('into Sydney (a crossfade)' if x_out is not None else
+                                                           'out before the laptop closes'), last,
+              x_out if x_out is not None else close)
     meta = dict(
         id='lobby2', title='Weeks On (Ep1 v3, Act One sc 9.10-9.13)', mm='MM-05 (family)', usage='BI',
         family='P06 THE JOB, light', tone='the deal is done; the landlord where he stood',
@@ -933,7 +1040,10 @@ def cue_lobby2(tl):
         album_lufs=-16.0,
         audition=['the swing back from the jangle: on a new phrase, the jangles on the swung ands',
                   'the last chord out before Gerg closes his laptop (his button is in the room)'])
-    sc = c.finish(T, meta, length_end=close + 0.1, end_fade=(close - 0.9, close - 0.05))
+    if x_out is not None:        # (the lay-in's crossfade: this rings 0.5 s past the cut, fading over its last 0.4 s)
+        sc = c.finish(T, meta, length_end=x_out + 0.55, end_fade=(x_out + 0.1, x_out + 0.52))
+    else:
+        sc = c.finish(T, meta, length_end=close + 0.1, end_fade=(close - 0.9, close - 0.05))
     return c, sc
 
 
@@ -984,6 +1094,19 @@ def cue_duel(tl):
         post_b = turn
         shutter = end - BAR / 2
     b_end = int(round(c.bar_of(end)))
+    # v3.2 (11.04): GTP-4 goes out on HIS click, launch night's button: "5.08's click, on the downbeat before
+    # 'Addendum.'" (the sound pass lays the click; the stick has none).  The score gives that downbeat the Build's
+    # whole bar on the chip: the launch-night click that did nothing, answered
+    click = None
+    cap4 = (tl.beats[tl.bi['11.04']]['b'].get('caption') or '').lower() if tl.has('11.04') else ''
+    if not four and 'click' in cap4:
+        cl = tl.snd_any('dialog_ok_click', tl.B('11.04'), tl.E('11.04'))
+        click = cl[0] if cl else None
+        if click is None:
+            add_l = [l for l in tl.lines_in(tl.B('11.04'), end) if l['who'] == 'mario']
+            on = add_l[-1]['on'] if add_l else turn
+            click = c.bar(int(math.floor(c.bar_of(on - 0.25) + 1e-6)))
+    b_click = int(round(c.bar_of(click))) if click is not None else None
 
     def chord(b):
         return DUEL_LOOP[(b - 1) % len(DUEL_LOOP)]
@@ -1031,6 +1154,17 @@ def cue_duel(tl):
         if t0 >= turn - 0.05:
             break
         vo_ = tl.talking(t0, t0 + BAR, kinds={'vo'})
+        if b == b_click:                                        # v3.2: his click ships it: the Build's whole bar
+            for i in range(16):
+                tt = t0 + i * S16
+                c.n('lead', nm(BUILD_BB[i % 16]), tt, S16 * 0.62, 0.36 * ACC4[i % 4], True, duty=0.25, att=0.002,
+                    dec=0.09, sus=0.45, rel=0.035)
+                if i % 4 == 0:
+                    c.n('woodclick', 76, tt, 0.05, 0.38)
+            c.n('felt', 'Bb3', t0, 0.8, 0.2)
+            c.mark(t0, 'HIS CLICK ships GTP-4 (5.08\'s click, the sound pass\'s, on this downbeat): the Build\'s whole '
+                   'bar on the chip')
+            continue
         if (b - b0) % 2 == 0:
             if vo_:
                 continue
@@ -1048,7 +1182,8 @@ def cue_duel(tl):
             text = ADD + ' ' + TAILS[min(add_n, len(TAILS) - 1)]
             L = V.line_len(text)
             V.phrase(c, 'svln', t0, text, 0.36 if not tl.talking(t0, t0 + L) else 0.26, art='sus', att=0.05,
-                     rel=0.3, stop_at=min(t0 + BAR * 2 - 0.02, post_b - 0.02 if t0 < post_b else turn - 0.02))
+                     rel=0.3, stop_at=min(t0 + BAR * 2 - 0.02, post_b - 0.02 if t0 < post_b else turn - 0.02,
+                                          (click - 0.02) if (click is not None and t0 < click) else 1e9))
             c.mark(t0, f'the Addendum\'s bar (Mario, right pane), its tail {add_n + 1}')
             add_n += 1
     # the felt under the V.O. ("mario used to sit where gerg sits.")
@@ -1072,7 +1207,8 @@ def cue_duel(tl):
             break
         c.n('lead', p, tt + i * S16 * 2, S16 * 1.2, 0.34, True, duty=0.25, att=0.002, dec=0.1, sus=0.4, rel=0.04)
     c.mark(turn, 'THE TURN: the Addendum crosses the split')
-    c.mark(tt, 'the photograph: the chip plays Mario\'s tail (Gerg ships it)')
+    c.mark(tt, 'the website: the chip plays Mario\'s tail (his side ships it)' if click is not None else
+           'the photograph: the chip plays Mario\'s tail (Gerg ships it)')
     # the end: a held Bbm(add9) on 12.01's downbeat, ringing into the letter
     push_ = tl.snd('12.01', 'paper_whip', default=end + 2.0)
     for inst, p in (('vc', 'Bb2'), ('vla', 'F3'), ('svln', 'C5'), ('harp', 'Bb3'), ('marimba', 'Db5')):
@@ -1094,6 +1230,8 @@ def cue_duel(tl):
         motifs=['Gerg\'s Build in B-flat minor (chip)', 'the Addendum (gains a tail each time)', 'the Lighthouse cell'],
         motif_ids=[], key='B-flat minor; Gbmaj7, Ebm9, F7sus (no third over F)',
         composer='v3-score-a (composer X), 2026-09-27', underscore_lufs=-20.0, album_lufs=-16.0,
+        sfx_slots=([dict(t=round(c.clk(click), 3), sfx='dialog_ok_click (5.08\'s): his click ships GTP-4, on this '
+                         'downbeat (for the sound pass; the stick has no click here)')] if click is not None else []),
         audition=['the trade: rivalry, never Nintendo (the chip in the left pane only)',
                   'the Addendum gaining its tail each time: funny by structure, not by sound',
                   'the turn: the chip copying Mario\'s tail on the photograph'])
@@ -1214,6 +1352,13 @@ def sydney_beats(tl):
     return [b for b in tl.beats if b['id'].startswith('10.') or b['id'].startswith('v31-10.')]
 
 
+def sydney_in(tl):
+    """where Sydney's glass comes in: 0.2 s before her first frame, but never inside his line ("ours does that too.")"""
+    t0 = sydney_beats(tl)[0]['t0']
+    mas = [l['end'] for l in tl.lines_in(t0 - 3.0, t0) if l['who'] == 'mas']
+    return max(t0 - 0.2, (max(mas) + 0.02) if mas else t0 - 0.2)
+
+
 def cue_sydney(tl):
     """SYDNEY, uncanny and clingy: a sweet glass-and-celesta music box in D-flat lydian (no third) whose chip echo
     follows it a sixteenth late, a pixel too close (THE COPY's device, lent to another machine); dry under her real
@@ -1222,14 +1367,16 @@ def cue_sydney(tl):
     if not bs:
         return None
     t0, t1 = bs[0]['t0'], bs[-1]['t1']
-    c = V.Cue('sydney', tl, anchor=t0, anchor_bar=1, bars=int((t1 - t0) / BAR) + 4, swing=0.0)
+    # (bar 2 is her first frame: the file starts a bar early, so her glass can lead the cut by a breath)
+    c = V.Cue('sydney', tl, anchor=t0, anchor_bar=2, bars=int((t1 - t0) / BAR) + 5, swing=0.0)
     T = palette()
     T['glasspad'].gain_db = -10.0
     T['celesta'].gain_db, T['celesta'].sends = -8.0, {'hall': -8}
     T['lead'].gain_db, T['lead'].eq = -12.0, [('lp', 4200)]
     T['pad'].gain_db = -12.0
-    V.pad(c, ['Db3', 'Ab3', 'C4', 'G4'], t0 + 0.1, t1 - t0 - 0.2, 0.4, kind='glass', attack=1.5, release=1.0,
-          bright=0.6)
+    p0 = sydney_in(tl)            # v3.2: the glass leads the cut by up to 0.2 s, under lobby2's last chord
+    V.pad(c, ['Db3', 'Ab3', 'C4', 'G4'], p0, t1 - p0 - 0.1, 0.4, kind='glass', attack=0.3, release=1.0,
+          bright=0.6)             # (audit-v31 #14: the crossfade, no dip on the cut)
     fig = ['Ab5', 'F5', 'Db5', 'F5', 'G5', 'F5', 'C5', 'F5']
     t = c.next8(t0 + 0.4)
     i = 0
@@ -1324,14 +1471,16 @@ def lay(tl, built, work):
     tear = tl.B('7.02')
     phone = lambda x: futz(x, 'phone')                                          # noqa: E731
     sy_in = sydney_beats(tl)[0]['t0'] if 'sydney' in built else None
-    lob_in = lob.bt(1, 3) - 0.05
+    lob_in = [t for t, lab, h in lob.marks if lab.startswith('the bass walks in')][0] - 0.05   # its first note
     layers = [
         dict(name='a_launch', wav=wav('a'), T0=T0('a'), a0=0.0, a1=max(tear + 2.6, t_cr + 0.7), fin=0.0, fout=0.9),
         dict(name='code_red', wav=wav('code_red'), T0=T0('code_red'), a0=t_cr, a1=lock, fin=0.4, fout=0.003,
              post=phone, post_name="era.futz('phone'): his phone's small speaker", level=-22.0),
         dict(name='lobby', wav=wav('lobby'), T0=T0('lobby'), a0=lob_in, a1=pop, fin=0.05, fout=0.003),
         dict(name='floor', wav=wav('floor'), T0=T0('floor'), a0=fl_in, a1=jangle + 1.1, fin=0.8, fout=0.6),
-        dict(name='lobby2', wav=wav('lobby2'), T0=T0('lobby2'), a0=l2_in, a1=close + 0.05, fin=0.05, fout=0.5),
+        dict(name='lobby2', wav=wav('lobby2'), T0=T0('lobby2'), a0=l2_in,
+             a1=(sy_in + 0.55) if sy_in is not None else close + 0.05, fin=0.05,
+             fout=0.04 if sy_in is not None else 0.5),      # v3.2: it crossfades into Sydney (audit-v31 #14)
         dict(name='duel', wav=wav('duel'), T0=T0('duel'), a0=duel_in, a1=push + 0.5, fin=0.0, fout=1.0),
         dict(name='pause', wav=wav('pause'), T0=T0('pause'), a0=push - 0.05, a1=pause_end, fin=0.05,
              fout=0.003 if thud is not None else 0.3),
@@ -1339,21 +1488,21 @@ def lay(tl, built, work):
     ]
     if 'sydney' in built:                                     # v3.1: laid in its beats' window
         bs = sydney_beats(tl)
-        layers.append(dict(name='sydney', wav=wav('sydney'), T0=T0('sydney'), a0=sy_in, a1=bs[-1]['t1'],
-                           fin=0.3, fout=0.35))
+        layers.append(dict(name='sydney', wav=wav('sydney'), T0=T0('sydney'), a0=sydney_in(tl) - 0.02,
+                           a1=bs[-1]['t1'], fin=0.02, fout=0.35))
     if 'atem' in built:
         ca = built['atem'][0]
         h = [t for t, lab, hh in ca.marks if lab.startswith('THE ATEM')][0]
         layers.append(dict(name='atem', wav=wav('atem'), T0=T0('atem'), a0=h - 0.02, a1=h + 2.2, fin=0.005, fout=0.4))
     stops = [(lock, lob_in), (pop, fl_in), (pause_end, lift - 0.01)]
+    room = ' / '.join(f'"{l["text"]}"' for l in tl.lines_in(pop, fl_in + 0.2))
     designed = [(lock, lob_in, 'the phone locks (a diegetic stop) -> the lobby\'s pickup under the revolving door'),
-                (pop, fl_in, 'the collar\'s pop: the swing stops dead; the lobby\'s room under "That collar suits you." '
-                             '/ "it does." / "and the rent?"'),
-                (close, sy_in if 'sydney' in built else duel_in,
-                 'Gerg closes his laptop: his button, in the room' + ('' if 'sydney' in built else ' (then the match cut)')),
+                (pop, fl_in, 'the collar\'s pop: the swing stops dead; the lobby\'s room under ' + room),
                 (pause_end, lift, ('EMIT\'s THUD stops the pause letter: no score through the page, his desk and the '
                                    'reflection, until the THREAT on the pen\'s lift') if thud is not None else
                  'no score on the reflection (Alyi in the glass; the pen\'s scratch only)')]
+    if 'sydney' not in built:    # (v3: the laptop closed at the lobby's end; v3.2 crossfades lobby2 into Sydney)
+        designed.insert(2, (close, duel_in, 'Gerg closes his laptop: his button, in the room (then the match cut)'))
     stings = [(lift, tl.length, 'THREAT (the act-out sting)')]
     return layers, stops, designed, stings
 
@@ -1398,6 +1547,10 @@ def main():
         level='underscore (per-cue engine masters; code red laid at -22 LUFS-I after the phone futz; THREAT a sting), '
               'dry of dialogue; the mixer ducks it', cues=cues,
         silences_designed=[dict(t0=round(a, 3), t1=round(b, 3), why=w) for a, b, w in designed],
+        designed_hit=[dict(t=round(t, 3), cue='a_launch', what=lab, exempt='the mix\'s act-head score fade: this '
+                           'downbeat is the design (5.01: HARD CUT on the downbeat, out of the card); fade it in 30-50 '
+                           'ms at most (audit-v31 #13)')
+                      for t, lab, h in built['a'][0].marks if lab.startswith('A1 THE DOWNBEAT')],
         measured=res, laid=laid, source=os.path.relpath(__file__, V.REPO),
         heard='nothing here has been listened to; every number is measured')
     V.write_json(os.path.join(HERE, f'cues{tag}.json'), doc)

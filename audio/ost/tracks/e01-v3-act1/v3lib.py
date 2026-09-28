@@ -45,20 +45,22 @@ S16 = Q / 4
 
 # ================================================================== which timeline
 def kokoro_path(seg):
-    """the default: the v3.1 lock (final, 2026-09-27); the v3 lock is show/reel/ep01-v3/ (pass it with --timeline)"""
-    return os.path.join(REPO, 'show', 'reel', 'ep01-v31', f'ep01-v31-{seg}.json')
+    """the default: the v3.2 lock (final, 2026-09-28); the v3.1 and v3 locks are show/reel/ep01-v31/ and ep01-v3/
+    (pass them with --timeline)"""
+    return os.path.join(REPO, 'show', 'reel', 'ep01-v32', f'ep01-v32-{seg}.json')
 
 
 def el_path(seg):
-    return os.path.join(REPO, 'show', 'reel', 'ep01-v31-el', f'ep01-v31-el-{seg}.json')
+    return os.path.join(REPO, 'show', 'reel', 'ep01-v32-el', f'ep01-v32-el-{seg}.json')
 
 
 _REAL = None
 
 
 def real_ids():
-    """line ids of the REAL (sourced) lines: the v3.1 lock prints spoken lines without their quotation marks, so the
-    record comes from the earlier locks, which quote them (the v3 lock, the v2 timelines)"""
+    """line ids of the REAL (sourced) lines: the v3.1 and v3.2 locks print spoken lines without their quotation
+    marks, so the record comes from the earlier locks, which quote them (the v3 lock, the v2 timelines), and (v3.2)
+    from the v3/v3.1/v3.2 takes files, whose source tag says [P ...] (public record) or [V ...] (verbatim)"""
     global _REAL
     if _REAL is None:
         import glob
@@ -74,6 +76,14 @@ def real_ids():
                 for l in b.get('lines', []) or []:
                     if is_real(l.get('text')):
                         _REAL.add(l['id'])
+        for p in glob.glob(os.path.join(REPO, 'audio', 'ep01', 'v3*', '*', 'lines-v3*.json')):
+            try:
+                d = json.load(open(p))
+            except Exception:           # noqa: BLE001
+                continue
+            for l in (d['lines'] if isinstance(d, dict) else d):
+                if (l.get('tag') or '').startswith(('[P', '[V', '[K')):
+                    _REAL.add(l['id'])
     return _REAL
 
 
@@ -81,7 +91,7 @@ def cli(seg, argv=None):
     """--el (the ElevenLabs-timed lock), --timeline PATH, or env V3_TIMELINE; default the Kokoro lock.
     Returns (args, timeline path, variant tag: '' for the Kokoro lock, '-el' for the EL one, '-alt' otherwise)"""
     ap = argparse.ArgumentParser()
-    ap.add_argument('--el', action='store_true', help='the ElevenLabs-timed timeline (show/reel/ep01-v3-el/)')
+    ap.add_argument('--el', action='store_true', help='the ElevenLabs-timed timeline (show/reel/ep01-v32-el/)')
     ap.add_argument('--timeline', default=None, help='any timeline JSON of this segment')
     ap.add_argument('--dry', action='store_true', help='build the scores, note-level QA, no audio')
     ap.add_argument('--render', nargs='*', help='render these cues (all if none named), then assemble')
@@ -92,6 +102,10 @@ def cli(seg, argv=None):
         tag = ''
     elif os.path.abspath(path) == os.path.abspath(el_path(seg)):
         tag = '-el'
+    elif '/ep01-v31/' in os.path.abspath(path):
+        tag = '-v31'
+    elif '/ep01-v31-el/' in os.path.abspath(path):
+        tag = '-v31-el'
     elif '/ep01-v3/' in os.path.abspath(path):
         tag = '-v3'
     elif '/ep01-v3-el/' in os.path.abspath(path):

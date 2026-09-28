@@ -7,7 +7,7 @@ scenes; it thins under the cover's real line and stops once, on the THUD."  Sc 3
 the downbeat (MM-12's button), held on his face. Under it ... the Q* vault's F hum carries in and becomes the
 chord's root."  (MM-12 isn't built; this is its Ep1 to-picture cut, in P01 DARK ROOM.)
 
-  s (v3.1 lock)     what plays                                                     (every time is read from the lock)
+  s (v3.2 lock)     what plays                                                     (every time is read from the lock)
   0.6               the felt's open fifth F3 + C4, ppp: it takes the F over from Act Four's vault hum, which the
                     sound bed carries into the tag
   2.58 (i0)         v3.1: ELGOOG'S PRODUCT FILM (the Runway insert, 233 frames from tag frame 62) plays ITS OWN
@@ -18,12 +18,14 @@ chord's root."  (MM-12 isn't built; this is its Ep1 to-picture cut, in P01 DARK 
                     MM-12's fifth ducks to the room as it opens up
   8.29 (i137)       the stutter: the bed chopped in step with the held frames (a buffering stutter, tiny clicks)
   8.88 (i151)       the first still: the sheen cut dead; drier slide-change clicks on i151, 159, 167; then nothing
-                    but the room and the V.O. ("those are stills.")
+                    but the room (v3.2: the V.O. "those are stills." is cut; the stutter carries the joke)
   10.88 (i199)      the room returns with the pull-back: MM-12's felt line, THE WATER LINE, plain (F F F G-sw F |
                     C F) over rootless Fm(add9) and Dbmaj7, the chip square on the nudge only; a tiny chip blip as
                     the monitor's still snaps back to the grid (i213); the rack slot's delivery sits inside it
   32.03             one held Bbm9 (felt) under "it looks calmer than me." (the V.O. sits inside it; nothing moves)
-  after the V.O.    a C7sus colour (no third), then the felt holds an open F under the Orb's two scans
+  after the V.O.    a C7sus colour (no third), then the felt re-voices to an open F on the cut to the Orb's scan
+                    two-shot (32.04), held under its two scans (a designed chord change on the cut: audit-v31
+                    21:20.1, confirmed and marked)
   32.04's toasts    THE VERDICT (OST-BIBLE s2.4, Ep1): F5 just after the first toast's blink, and the C6 two beats
                     late, just after the second (never on the blink itself): soft vibes + celesta, let ring
   "that was close." the felt's F held through it; nothing starts under his line; the back wall's chord pre-laps
@@ -131,8 +133,10 @@ def build(tl):
     close0 = [l for l in tl.lines if l['kind'] == 'mas' and l['beat'] == '32.05']
     if close0:
         wall0 = max(wall0, close0[0]['end'] + 0.3)
-    # held through "close." to the back wall (no attack under his line, and no hole after it)
+    # held through "close." to the back wall (no attack under his line, and no hole after it).  The re-voicing lands
+    # on the cut to the scan two-shot: a designed chord change on the cut (audit-v31 C.2, 21:20.1: confirmed, marked)
     c.pch('felt', ['F3', 'C4', 'G4'], scan + 0.05, max(4.6, wall0 - scan + 0.35), 0.09, roll=0.03)
+    c.mark(scan + 0.05, 'the cut to the scan two-shot: the felt re-voices to an open F (a designed change on the cut)')
     c.section('the V.O., then the Orb\'s scans (felt held)', t_vo, scan + 4.0)
     # THE VERDICT: F5 after the first toast's blink, C6 two beats late, after the second
     blinks = sorted(tl.snd_any('glyph_blink', scan, tl.E('32.04')))
@@ -315,8 +319,10 @@ def main():
                            a0=demo_t(tl, 0), a1=demo_t(tl, 168), fin=0.1, fout=0.003,
                            post=demo_post(tl, cd.T0), post_name='the monitor speaker to i22; the stutter\'s chops; '
                            'dead on the first still (DEMO=0 drops the layer)', level=-24.0))
+        vo_st = [l for l in tl.lines_in(demo_t(tl, 151), demo_t(tl, 199), kinds={'vo'})]
         designed.append((demo_t(tl, 151), demo_t(tl, 199), 'the stills: the demo\'s sheen cut dead (i151); nothing '
-                         'but the room and the V.O. until MM-12 returns with the pull-back (i199)'))
+                         'but the room' + (' and the V.O.' if vo_st else '') + ' until MM-12 returns with the '
+                         'pull-back (i199)'))
     mix, laid = V.assemble(tl, layers, out, stops=[(thud, t_btn - 0.01)], designed=designed)
     rows = [(lab, a0, a1) for lab, a0, a1 in c.sections]
     if dm:

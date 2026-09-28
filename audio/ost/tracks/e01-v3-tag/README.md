@@ -2,7 +2,15 @@
 
 **Composer X (`v3-score-a`), 2026-09-27.** Track A1 of [PLAN.md](../../../../show/episodes/ep01/production/full-v3/PLAN.md). Mood map: *quiet, wry* (the Water Line). **Nothing here has been listened to.** Every number is measured.
 
-## v3.1 (current, 2026-09-27): the Elgoog demo insert
+## v3.2 (current, 2026-09-28)
+
+**The locks:** `show/reel/ep01-v32/ep01-v32-tag.json` (the default) and `show/reel/ep01-v32-el/` (`--el`). Both are 41.333 s (992 frames), exact, with the demo's frames unchanged.
+- **The V.O. "those are stills." is cut** (the stutter carries the joke). The stills now play on the room alone, from the dead cut at i151 to MM-12's return with the pull-back at i199 (a designed silence).
+- **The audit's 21:20.1 accent** (+12 dB on the cut to the scan two-shot, 32.04) is **designed, and now marked:** on the cut, the felt re-voices from the C7sus colour to an open F, held under the Orb's two scans. The verdict's F5 follows the first toast's blink.
+- **Measured:** MM-12 −21.6 LUFS-I; the demo bed −24.2; the same checks as v3.1 (F-major OK, knee 0, no unmarked silence, no fragments).
+
+
+## v3.1 (superseded by v3.2, 2026-09-27): the Elgoog demo insert
 
 **The lock:** `show/reel/ep01-v31/ep01-v31-tag.json` (the default). **`render/music.wav`: 41.333 s, 1,984,000 samples (992 frames), exact.** The tag now opens on **ELGOOG's product film** (the Runway insert, 233 frames from tag frame 62; `show/episodes/ep01/production/full-v3/runway.md` §4a, §7):
 - **`demo_film`, the film's own sound** (diegetic, its own layer; `DEMO=0` drops it): a clean, glossy corporate-demo bed in the show's palette, no melody. An E♭ glass pad with no third (E♭ B♭ F C) is the sheen; a shimmer rises as the lines draw themselves (i34); a swell into the fill and a soft glow chord as the duck becomes real (~i95); the chip's clock plays at a whisper through the turn. It is **small on the monitor's speaker until the grid dissolves** (i22–26), then full range.

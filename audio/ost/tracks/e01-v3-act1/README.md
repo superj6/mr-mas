@@ -2,7 +2,40 @@
 
 **Composer X (`v3-score-a`), 2026-09-27.** Track A1 of [PLAN.md](../../../../show/episodes/ep01/production/full-v3/PLAN.md), on the mood map of [v3-plan §6](../../../../show/episodes/ep01/production/stick/v3-plan.md). **Nothing here has been listened to.** Every number below is measured, and the "for an ear" list says what only a person can judge.
 
-## v3.1 (current, 2026-09-27): refit to the final lock
+## v3.2 (current, 2026-09-28): refit to the final lock, and the v3.1 audit's fixes
+
+**The locks:** `show/reel/ep01-v32/ep01-v32-act1.json` (the default) and `show/reel/ep01-v32-el/ep01-v32-el-act1.json` (`--el`). **`render/music.wav`: 329.750 s (7,914 frames); `render/music-el.wav`: 334.958 s (8,039 frames); both exact.** The direction is unchanged: the first-round score, launch night in the show's own voice, the straight odometer, and the Sydney and Atem cues. Script draft 8.1's beats, and what the score does with them:
+
+| Where | v3.2 | The score |
+|---|---|---|
+| **The act's downbeat** (5.01) | "HARD CUT on the downbeat, out of the card" | The felt's Fm9 over a low F, on the first frame. **`cues.json` marks it `designed_hit`** (t = 0.0), so the mix can exempt it from the act-head score fade (audit #13: fade it in over 30–50 ms at most). The sound pass owns the fade; this only marks the hit. |
+| Launch night | The V.O.s are cut (5.02, v3-5.06b; the reflection is 2.5 s) | Parametric: the felt, the Build's passes, and (from the chat) the pulse. **The audit's 1:56.3 accent** was the felt re-striking under the cut V.O. 0.13 s after the cut into Alyi's reflection. It went with the V.O. The Build's felt double now lets go before the next pedalled chord can catch it: a caught F3 had rung on as the bass under the next chord (the EL render's F-major trace). |
+| **His post over the million** (6.06, 4.6 s) | Its send pop is on F, on the wheel's last click | The band doesn't attack the pop; the SFX owns it. The drive runs on, and the violins climb F5 → A♭5 into the cut to Rima. The clunk bar's violin line now stops at the one-beat break; before, it had carried a B♮ over the million's A♭. |
+| **The landlord's call** (v32-7.03, new) | "Mas." / "it's the bill. we're going to need more servers." / "I'll bring a pen." | The heat's F pedal and the glass shimmer hold under the call (the Ache's glass rings on from the tear). **On "pen", Tasya's Rhodes plays one soft chord** (G B♭ C E♭ over the F, no third), and the glass's D♭ falls to C. **The siren's whine J-cuts in just after the hang-up tick** (0.65 s before the alert); code red is otherwise unchanged. |
+| The lobby | The freeze's V.O. is cut | The bass comes in on its first played pickup, so the lock → lobby stop is 0.34 s. With the shorter lock, the pickup had fallen before the lock. |
+| **The key ring, weeks on** (v32-9.10k, new) | "The caper's new phrase comes in on the jangle" | Tasya's floor holds across the time cut and lets go on the ring's jangle; the swing's new phrase enters on that jangle (the walk's beat 3). |
+| **Into Sydney** (audit #14; v3.1 film 5:08.6) | A −16 dB dip on the cut | The stale laptop-close silence is gone. Weeks on's last chord (Fm9: the Rhodes plus bowed vibes) rings 0.55 s past the cut, and Sydney's glass (D♭ lydian, which keeps the A♭, C and G) leads the cut (by 0.07 s on the Kokoro lock, 0.11 s on EL; at most 0.2 s, never inside "ours does that too."). **Measured (400 ms windows, score only):** −27.4, −27.7, −28.8, −25.9 dB across the cut (Kokoro), and −27.3 to −27.9 (EL). No dip. |
+| **His click ships GTP-4** (11.04) | "5.08's click, on the downbeat before 'Addendum.'" | That downbeat (the bar line at 297.6 s; EL 303.0 s) gets **the Build's whole bar on the chip**: launch night's click that did nothing, answered. The Addendum stops short of it, and the turn follows as before. The click itself is the sound pass's; the stick has none, and `cues.json` lists its slot. |
+| The pause letter | Nole's J-cut ("Great sign."), Oigneb's new line | Parametric. The THUD stops it, then no score until the THREAT (designed). |
+
+**Real lines** now also come from the v3/v3.1/v3.2 takes files, from their source tag (`[P …]` public record, `[V …]` verbatim), because the new locks print no quotation marks. That's 22 ids (v3.1 had 19). For example, his Senate ask plays on the pedal alone.
+
+**Measured.**
+- **Kokoro v3.2:** the whole stem −20.5 LUFS-I, −3.15 dBTP.
+  - launch night, the odometer and the call −20.0;
+  - code red −22.0 (after the phone futz);
+  - the lobby −20.0, the floor −21.7, weeks on −21.0;
+  - Sydney −22.0, the Atem sting −19.2;
+  - the duel −19.8, the pause −21.0;
+  - THREAT −14.6 LUFS-M.
+- **EL:** −20.5 overall, with the same per-cue levels to ±0.1.
+- **Silence and holes:** digital silence only in the three marked stops (the lock, the pop, the THUD → the THREAT). There are no holes and no fragments.
+- **QA checks:** written A♮ over F 0, F-major OK, knee 0, in every cue on both locks.
+- **The cut check** (the audit's method: the render's level 0.5 s either side of every cut): every step of 12 dB or more sits on a designed stop or within 0.8 s of a cue mark.
+  - 5.05's −12.7 dB is the Build's pass ending on the cut to Alyi, with the Ache's colour under her question. It's marked as designed.
+
+
+## v3.1 (superseded by v3.2, 2026-09-27): refit to the v3.1 lock
 
 **The lock:** `show/reel/ep01-v31/ep01-v31-act1.json` (the default now; the v3 lock plays with `--timeline show/reel/ep01-v3/ep01-v3-act1.json`). **`render/music.wav`: 337.458 s, 16,198,000 samples (8,099 frames), exact.** The same round-3 direction: the first-round score as the base, launch night in the show's own voice, the straight odometer. What the new lock changed, and what the score does:
 
