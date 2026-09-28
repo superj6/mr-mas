@@ -1,0 +1,93 @@
+{
+ "variant": "kokoro",
+ "target_lufs": -16.0,
+ "true_peak_max_dbtp": -1.0,
+ "dialogue_reference_lufs": -14.73,
+ "dialogue_reference_from": "this run",
+ "guard_lu": 1.5,
+ "segments": {
+  "coldopen": {
+   "file": "out/ep01/full-v3/mix-v34/coldopen-mix.wav",
+   "seconds": 26.667,
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -4.98,
+   "lra_lu": 11.0,
+   "dialogue_lufs": -14.55,
+   "gain_db": 1.41,
+   "guard_db": null,
+   "score": "audio/ost/tracks/e01-v3-coldopen/render/music.wav",
+   "unmarked_holes": 0,
+   "unmarked_holes_without_score": 0,
+   "built": "2026-09-28 11:50:29"
+  },
+  "act1": {
+   "file": "out/ep01/full-v3/mix-v34/act1-mix.wav",
+   "seconds": 337.542,
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -1.46,
+   "lra_lu": 6.0,
+   "dialogue_lufs": -14.91,
+   "gain_db": 1.19,
+   "guard_db": null,
+   "score": "audio/ost/tracks/e01-v3-act1/render/music.wav",
+   "unmarked_holes": 0,
+   "unmarked_holes_without_score": 0,
+   "built": "2026-09-28 11:50:46"
+  },
+  "act2": {
+   "file": "out/ep01/full-v3/mix-v34/act2-mix.wav",
+   "seconds": 181.208,
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -1.62,
+   "lra_lu": 5.3,
+   "dialogue_lufs": -15.12,
+   "gain_db": 0.9,
+   "guard_db": null,
+   "score": "audio/ost/tracks/e01-v3-act2/render/music.wav",
+   "unmarked_holes": 0,
+   "unmarked_holes_without_score": 0,
+   "built": "2026-09-28 11:50:50"
+  },
+  "tag": {
+   "file": "out/ep01/full-v3/mix-v34/tag-mix.wav",
+   "seconds": 33.25,
+   "lufs_i": -17.22,
+   "true_peak_dbtp": -1.06,
+   "lra_lu": 19.4,
+   "dialogue_lufs": -13.23,
+   "gain_db": 2.76,
+   "guard_db": -1.2,
+   "score": "audio/ost/tracks/e01-v3-tag/render/music.wav",
+   "unmarked_holes": 0,
+   "unmarked_holes_without_score": 0,
+   "built": "2026-09-28 11:50:51"
+  }
+ },
+ "episode": {
+  "segments": [
+   "coldopen",
+   "act1",
+   "act2",
+   "tag"
+  ],
+  "seconds": 578.67,
+  "lufs_i": -16.04,
+  "lra_lu": 6.4,
+  "note": "the story segments (and the card) back to back; the intro and the outro play their own masters between"
+ },
+ "seams": [
+  {
+   "seam": "act1 -> act2",
+   "last_200ms_dbfs": -38.1,
+   "first_200ms_dbfs": -37.9,
+   "step_db": 0.3,
+   "sample_jump": 0.0006
+  }
+ ],
+ "spread": {
+  "lufs_i_lu": 1.22,
+  "dialogue_lu": 1.89
+ },
+ "updated": "2026-09-28 11:50:57",
+ "heard": "nothing here has been listened to; every number is measured"
+}

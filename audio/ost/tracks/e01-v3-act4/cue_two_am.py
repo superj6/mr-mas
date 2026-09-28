@@ -118,7 +118,7 @@ def build():
 
     # ---------------------------------------------------------------- Gerg's call: A-flat, the Build (chip + felt)
     ring = c.B('S5.09') + 0.1
-    v21 = L['v3-vo-21']
+    v21 = L['v34-vo-09'] if 'v34-vo-09' in L else L['v3-vo-21']     # v3.4: "gerg walked out for me."
     fch(['Eb3', 'G3', 'C4', 'Bb4'], ring, max(2.4, v21['end'] - ring + 0.4), 0.15, span_end=v21['end'] + 0.3)
     if v21['end'] - ring > 2.6:                      # a long V.O. (the EL lock: 3.3 s): one soft inner move inside it
         ws = v21['words']
@@ -133,11 +133,18 @@ def build():
     b0, b1 = cue.next_bar(ring + 1.0), cue.next_bar(letter - 0.2)
     harm = [['Db3', 'Ab3', 'C4', 'F4'], ['Ab3', 'C4', 'Db4', 'F4'], ['Eb3', 'G3', 'C4'], ['Db3', 'Ab3', 'C4', 'F4'],
             ['Ab3', 'C4', 'Db4', 'F4'], ['Eb3', 'Ab3', 'Db4', 'F4']]
+    ch_ = []
     for i, bb in enumerate(range(b0, b1)):
         t = c.after_lines(cue.bar(bb), cue.bar(bb) + 1.5, pred=lambda l: l['who'] == 'mas' and not l['vo'])
         if t is None or c.in_vo(t, t + 0.3):
             continue
-        fch(harm[i % len(harm)], t, BAR - (t - cue.bar(bb)) - 0.05, 0.18)
+        ch_.append((t, i, bb))
+    for k, (t, i, bb) in enumerate(ch_):
+        d = BAR - (t - cue.bar(bb)) - 0.05
+        nx = ch_[k + 1][0] if k + 1 < len(ch_) else None
+        if nx is not None and nx - t > d + 0.3 and nx - t < 2 * BAR:    # (v3.4: a chord moved off Mas's line
+            d = nx - t - 0.02                                              # left a 0.35 s hole: hold to the next)
+        fch(harm[i % len(harm)], t, d, 0.18)
     cue.mark(ring, 'S5 Gerg rings: Abmaj9 (felt)')
     cue.section("S5 Gerg's call: the Build in A-flat major (chip + felt)", c.B('S5.09'), letter)
 

@@ -6,8 +6,10 @@ literal Remove dialog as a bright hard cut, and the one silence.  THE PLAN has m
 (cue_plan.py), so the waltz no longer plays here.  From Act Four v5's S1 (tracks/e01-act4-v5/s1-s4_s1_noon.py) and the
 first-round v3 score:
   * the suite: a sul-tasto F3/C4 pedal as air from the first frame to JOIN; his felt Water Line bar with its nudge G4
-    (and the chip square) on his glass nudge (S1.02 + 10 f); its C4 hangs on D-flat maj7, and the settle never
-    comes; "gerg's not on it. alyi set it up. probably just the budget." sits inside the pedal;
+    (and the chip square) on his glass nudge (S1.02 + 10 f); its C4 hangs on D-flat maj7; the V.O. sits inside the
+    pedal; v3.4: he plans the meeting with his pointer ("gerg's not on it. probably the budget. good. i'll ask for
+    more compute."), and after it the settle comes, confident and light (C4 -> F4, the chip on the F), just before
+    he clicks JOIN, so the blow's silence lands harder;
   * LEVERAGE (low, MM-08) from the JOIN click, one take: pizz eighths on the F pedal, the muted-808 thud (uneven),
     the chip tick, the low grand clusters; THINNED TO ITS PEDAL under Alyi's sentence (the loudest thing in the
     call); his calm, one felt F4, after it; back up on the dialog's hard cut: the cluster up a semitone, the 1-bit
@@ -82,7 +84,7 @@ def tracks(cue, M, mm07, mm08):
     T['vc'].eq = list(T['vc'].eq) + [('peq', 222.7, -10.0, 8.0), ('peq', 111.3, -8.0, 8.0)]
     T['bdrum_muted'].eq = list(T['bdrum_muted'].eq) + [('peq', 111.3, -12.0, 6.0)]
     T['grand'].eq = list(T['grand'].eq) + [('peq', 111.3, -8.0, 8.0)]
-    T['cb'].eq = list(T['cb'].eq) + [('peq', 110.0, -10.0, 8.0)]
+    T['cb'].eq = list(T['cb'].eq) + [('peq', 110.0, -10.0, 8.0), ('peq', 221.5, -8.0, 8.0)]   # (v3.4 EL: its ~222 Hz body)
     T['sp_vc'] = replace(T['vc'], name='sp_vc')      # the suite's air (the v3 sample's)
     T['sp_vla'] = replace(T['vla'], name='sp_vla')
     return T
@@ -106,12 +108,38 @@ def suite(cue, T, M):
     place_motif(a, 's_lead', 'WATER_LINE', (1, 1), part='nudge_double', vel=0.2, swing=1.0, duty=0.5,
                 att=0.004, dec=0.25, sus=0.35, rel=0.12)
     t1, t2 = cue.s(FELT_BAR), cue.s(FELT_BAR + 60)
-    T['s_felt'].pedal = [(-1.0, False), (t1 - 0.05, True), (t2 + 0.01, False), (t2 + 0.05, True),
-                         (cue.s(M['JOIN'] - 2), False)]
     sec.commit()
     cue.mark(FELT_BAR, 'S1.01 the Water Line bar (felt, swung): the V.O. sits inside it')
     cue.mark(NUDGE, 'the nudge G4 on his glass nudge (+ the chip square, the nudge only)')
-    cue.mark(FELT_BAR + 60, 'the C4 hangs on Dbmaj7: the settle never comes', hit=False)
+    vo = C.CLK.LINES.get('v34-vo-07')
+    if vo is None:                                         # (v3.1-v3.3: the C4 hangs; the settle never comes)
+        T['s_felt'].pedal = [(-1.0, False), (t1 - 0.05, True), (t2 + 0.01, False), (t2 + 0.05, True),
+                             (cue.s(M['JOIN'] - 2), False)]
+        cue.mark(FELT_BAR + 60, 'the C4 hangs on Dbmaj7: the settle never comes', hit=False)
+        return
+    # v3.4: he plans the meeting with his pointer ("gerg's not on it. probably the budget. good. i'll ask for more
+    # compute."), then clicks JOIN.  Confident and light, so the blow's silence lands harder: the C4 that hung on
+    # D-flat maj7 is answered after his V.O., the Water Line's settle C4 -> F4 over the open fifth, the chip square
+    # doubling the F (lightly): it fits, he thinks.  The F lands just before the click and rings into LEVERAGE.
+    jn = M['JOIN'] / FPS
+    tf = vo['end'] + 0.08 + 0.625
+    if tf > jn - 0.05:
+        tf = jn - 0.08
+    tc = max(vo['end'] + 0.05, tf - 0.625)
+    a2 = cue.a
+    a2.n('s_felt', 'C4', cue.s(tc * FPS), tf - tc - 0.02, 0.34)
+    a2.n('s_felt_mech', 60, cue.s(tc * FPS), 0.1, 0.3)
+    a2.n('s_felt', 'F4', cue.s(tf * FPS), 1.2, 0.36)
+    a2.ch('s_felt', ['F3', 'C4'], cue.s(tf * FPS), 1.2, 0.24, roll=0.01)
+    a2.n('s_lead', 'F4', cue.s(tf * FPS), 0.2, 0.14, duty=0.5, att=0.004, dec=0.25, sus=0.35, rel=0.1)
+    T['s_felt'].pedal = [(-1.0, False), (t1 - 0.05, True), (t2 + 0.01, False), (t2 + 0.05, True),
+                         (cue.s(tc * FPS) - 0.03, False), (cue.s(tc * FPS) + 0.02, True),
+                         (cue.s(tf * FPS) - 0.03, False), (cue.s(tf * FPS) + 0.02, True),
+                         (cue.s(tf * FPS) + 1.1, False)]
+    cue.mark(FELT_BAR + 60, 'the C4 hangs on Dbmaj7 under his plan (the V.O.)', hit=False)
+    cue.mark(tc * FPS, 'v3.4: after "i\'ll ask for more compute.": the settle C4 -> F4 over the open fifth, the chip on '
+                       'the F: confident, light (it fits, he thinks)')
+    cue.mark(tf * FPS, 'the F4 lands just before he clicks JOIN')
 
 
 def leverage(cue, T, M):

@@ -291,6 +291,20 @@ def build():
     cue.mark(E['dialog'], 'e: the 1993 flat line F5 . F4 . F5 (tenuto, uneven)')
     log.append((E['bonk'], "e: the bonk (SFX, E3: the wrong note); a designed rest on the lobby's neon F (the CU)", False))
 
+    # ================================================================== v3.4: the return's count (S8.04)
+    # "they had four votes. i had the landlord. the money. gerg." with the drawings stepping in on each: the dry
+    # mastermind beat.  The score answers it quietly, the knee's first four notes (F F F F, the flat line: the knee
+    # never goes on), one felt F4 after each item, in the V.O.'s own pauses, pp; nothing else sounds
+    cnt = c.LINES.get('v34-vo-11')
+    cf = []
+    if cnt is not None:
+        for w_ in ('votes', 'landlord', 'money', 'gerg'):
+            cf.append(c.W('v34-vo-11', w_, end=True) + 0.06)
+        for k, t_ in enumerate(cf):
+            a.n('felt', 'F4', s(t_), (cf[k + 1] - t_ + 0.05) if k < 3 else max(0.6, E['okay'] - 0.15 - t_), 0.2 - 0.01 * k)
+            a.n('felt_mech', 60, s(t_), 0.1, 0.22)
+        log.append((cf[0], "S8.04 THE COUNT: the knee's first four notes, F F F F, one felt F4 after each item "
+                           '(four votes, the landlord, the money, gerg), pp in his pauses: the knee never goes on', True))
     # ================================================================== the felt after "okay.", then the vault's F
     cc = E['okay_end'] + 1 / 24
     stl = cc + 10 / 24
@@ -299,8 +313,9 @@ def build():
     a.n('felt', 'F4', s(stl), 2.4, 0.35)
     a.ch('felt', ['F3', 'C4'], s(stl), 2.4, 0.25, roll=0.012)
     a.n('felt_mech', 60, s(stl), 0.1, 0.32)
-    T['felt'].pedal = [(0.0, False), (s(cc) - 0.02, True), (s(stl) - 0.03, False), (s(stl) + 0.02, True),
-                       (s(E['vault']) + 2.5, False)]
+    T['felt'].pedal = ([(0.0, False)] + ([(s(cf[0]) - 0.02, True), (s(E['okay']) - 0.15, False)] if cf else [])
+                       + [(s(cc) - 0.02, True), (s(stl) - 0.03, False), (s(stl) + 0.02, True),
+                          (s(E['vault']) + 2.5, False)])
     cue.mark(cc, 'after "okay.": the felt C4 (his felt, last)')
     cue.mark(stl, 'the felt F4 + the open fifth (the settle)')
     vt, end = E['vault'], E['end']
@@ -321,7 +336,9 @@ def build():
                         ("S7 d the held beat (the sand stands), then the Build into the sign", sand, sg),
                         ('S8 e VICTORY LAP, one size too big + one chip note', sg, E['dialog']),
                         ('S8 e the flat line', E['dialog'], E['bonk']),
-                        ('S8 designed rest: the lobby CU, "okay."', E['bonk'], cc),
+                        *([('S8 designed rest: the lobby CU', E['bonk'], cf[0] - 0.05),
+                           ("S8.04 the count: F F F F (the knee's first four) under his V.O.; \"okay.\"", cf[0] - 0.05, cc)]
+                          if cf else [('S8 designed rest: the lobby CU, "okay."', E['bonk'], cc)]),
                         ('S8 the felt settle', cc, vt), ("S8 f the vault's F (the coda)", vt, end)]:
         cue.section(lab, a0, a1)
     meta = dict(
@@ -341,6 +358,7 @@ def build():
         composer='Ep1 v3 score, Act Four (v3-score-b, 2026-09-27), from Act Four v5 S7-S8',
         underscore_lufs=-20.0, album_lufs=-16.0,
         no_third_windows=[(s(stl) + 0.05, s(stl) + 2.0)],
+        vo_windows=[(s(cnt['on']), s(cnt['end']), cnt['text'] + ' (the felt F4s in its pauses)')] if cnt else [],
         silence_windows=[(s(stop) + 0.005, s(st) - 0.02, 'STOP: "of what?" -> the stamp (the room plays)', -90.0)]
         + ([(s(sand) + 0.005, s(E['slump']) - 0.02, 'the held beat: the sand stands', -90.0)] if long_s713 else []),
         room_sfx=[dict(t0=s(vt), t1=s(end), sfx="server_hum (the Q* vault's F)")],
@@ -371,7 +389,8 @@ def build():
                                       '"good question." and the long hold play in the room)')]
                  + ([(sand, E['slump'], "the hourglass shatters: the sand holds its shape (k173-207) and the music "
                                         "holds its breath with it (runway.md §11.6)")] if long_s713 else [])
-                 + [(E['bonk'] + 0.25, cc - 0.02, 'the lobby CU "silent like the first" and "okay.": no score after '
+                 + [(E['bonk'] + 0.25, (cf[0] if cf else cc) - 0.02,
+                     'the lobby CU "silent like the first"' + (' (v3.4: to the count)' if cf else ' and "okay."') + ': no score after '
                                                   "the bonk (the neon's F); the flat line's tail is cut under the "
                                                   'bonk (v3.2 EL: it hovered at -60 dBFS and read as a 50 ms '
                                                   'fragment)')],

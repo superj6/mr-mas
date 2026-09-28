@@ -117,8 +117,11 @@ LOCKS = {
     'v33': dict(bp='show/episodes/ep01/production/full-v3/beat-plan-v33', variants={
         'kokoro': dict(tl='show/reel/ep01-v33/ep01-v33-{seg}.json', out='audio/reel/ep01-v3/v33', ext='wav'),
         'el': dict(tl='show/reel/ep01-v33-el/ep01-v33-el-{seg}.json', out='audio/reel/ep01-v3/v33/el', ext='flac')}),
+    'v34': dict(bp='show/episodes/ep01/production/full-v3/beat-plan-v34', variants={
+        'kokoro': dict(tl='show/reel/ep01-v34/ep01-v34-{seg}.json', out='audio/reel/ep01-v3/v34', ext='wav'),
+        'el': dict(tl='show/reel/ep01-v34-el/ep01-v34-el-{seg}.json', out='audio/reel/ep01-v3/v34/el', ext='flac')}),
 }
-DEFAULT_LOCK = 'v33'                  # the v3.3 lock (show/reel/ep01-v33/); --lock v32 / v31 / v3 still work
+DEFAULT_LOCK = 'v34'                  # the v3.4 lock (show/reel/ep01-v34/); --lock v33 / v32 / v31 / v3 still work
 LOCK = DEFAULT_LOCK
 VARIANTS = LOCKS[LOCK]['variants']
 BP_DIR = os.path.join(ROOT, LOCKS[LOCK]['bp'])
@@ -643,7 +646,7 @@ LEAD_AT = {('act1', '5.01'): 0.6, ('act1', '9.01'): 0.8, ('act1', '11.01'): 0.8,
            ('act4', 'v32-S5.00'): 0.8, ('act3', '22.01'): 1.0}
 # per lock (v3.3 17.13's plan J-cut: "the rack's fans and LED ticks under the black (Act Three's arrival)", lead_s 0.6;
 # the glass (17.12) is cut, so the black is Act Two's last beat and Act Three's room comes in 0.6 s before the act)
-LEAD_AT_LOCK = {'v33': {('act3', 'v31-18.00'): 0.6}}
+LEAD_AT_LOCK = {'v33': {('act3', 'v31-18.00'): 0.6}, 'v34': {('act3', 'v31-18.00'): 0.6}}
 # a lead that depends on the beat before (v3.2: S4.09 after v32-S5.00, whose picture steps into the CCTV's grade from
 # his look up at k126, so the CCTV hum comes in there: the L-cut "carried into S4.09")
 LEAD_AFTER = {('act4', 'S4.09', 'v32-S5.00'): 2.6}

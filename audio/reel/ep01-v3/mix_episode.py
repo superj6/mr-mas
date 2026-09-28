@@ -77,9 +77,10 @@ SEGS = S.SEGS
 OUTS = {'v3': {'kokoro': 'out/ep01/full-v3/mix', 'el': 'out/ep01/full-v3/mix-el'},
         'v31': {'kokoro': 'out/ep01/full-v3/mix-v31', 'el': 'out/ep01/full-v3/mix-v31-el'},
         'v32': {'kokoro': 'out/ep01/full-v3/mix-v32', 'el': 'out/ep01/full-v3/mix-v32-el'},
-        'v33': {'kokoro': 'out/ep01/full-v3/mix-v33', 'el': 'out/ep01/full-v3/mix-v33-el'}}
+        'v33': {'kokoro': 'out/ep01/full-v3/mix-v33', 'el': 'out/ep01/full-v3/mix-v33-el'},
+        'v34': {'kokoro': 'out/ep01/full-v3/mix-v34', 'el': 'out/ep01/full-v3/mix-v34-el'}}
 QA_DIRS = {'v3': 'audio/reel/ep01-v3/mix-qa', 'v31': 'audio/reel/ep01-v3/mix-qa/v31', 'v32': 'audio/reel/ep01-v3/mix-qa/v32',
-           'v33': 'audio/reel/ep01-v3/mix-qa/v33'}
+           'v33': 'audio/reel/ep01-v3/mix-qa/v33', 'v34': 'audio/reel/ep01-v3/mix-qa/v34'}
 OUT, QA_DIR = OUTS[S.DEFAULT_LOCK], QA_DIRS[S.DEFAULT_LOCK]
 
 
@@ -1071,7 +1072,7 @@ def main(argv):
     ap.add_argument('--rebuild-stems', action='store_true')
     ap.add_argument('--no-heavy', action='store_true', help="don't re-run through ops/heavy.sh")
     ap.add_argument('--lock', default=S.DEFAULT_LOCK, choices=sorted(S.LOCKS),
-                    help='v33 (default: show/reel/ep01-v33/), v32, v31 or v3')
+                    help='v34 (default: show/reel/ep01-v34/), v33, v32, v31 or v3')
     a = ap.parse_args(argv)
     set_lock(a.lock)
     if not a.no_heavy and os.environ.get('MRMAS_V3SOUND_INNER') != '1':

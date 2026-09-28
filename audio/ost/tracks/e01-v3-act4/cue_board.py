@@ -91,9 +91,11 @@ def syncmap():
         STMT=Lon('v3-a4-0001'), SIGN=A('S4.13e'), BOARD=A('S4.14'), MADA=A('S4.15'), HOME=A('S5.02'))
     M['BURY'] = M['S4'] + 28
     M['BLUE'] = M['S4'] + 103
-    M['ALYI_ON'], M['ALYI_END'] = Lon('a5-27-28'), Lend('a5-27-28')
+    ALYI = 'a5-27-28' in CLK.LINES                        # v3.4 cuts his line: the phones light at once instead
+    M['ALYI_ON'], M['ALYI_END'] = (Lon('a5-27-28'), Lend('a5-27-28')) if ALYI else (None, None)
+    M['LIGHTS'] = None if ALYI else SND('S4.02', 'phone_buzz_step_1')
     M['NELEH2_END'] = Lend('a5-27-23')
-    M['FLICKER'] = M['ALYI_END'] + 10
+    M['FLICKER'] = M['ALYI_END'] + 10 if ALYI else None
     assert M['WHIP'] < M['CONNECT'] < M['LIST'] < M['POSTCLICK'] < M['HANDS'] < M['S4'] < M['SPLIT'] < M['LOBBY']
     assert M['SLATE'] < M['OPEN'] < M['TASYA'] < M['STMT'] < M['SIGN'] < M['BOARD'] < M['MADA'] < M['HOME']
     return M
@@ -258,17 +260,33 @@ def build():
     cue.mark(BUZZ, 'd: the phones buzz: the pizz locks to it')
     cue.mark(BUZZ2 - 1, 'd: the second buzz')
     cue.mark(CLACK - 1, "d: the clack: the tick's last, clean beat", hit=False)
-    dh = M['NELEH2_END'] + 3
-    a.n('door', 'Ab4', s(dh), 0.6, 0.4, lock=True, art='nv')
-    a.n('door', 'Db5', s(dh + 15), s(M['ALYI_ON'] + 10) - s(dh + 15), 0.4, lock=True, art='nv', rel=0.6)
-    r0, r1 = M['NELEH2_END'] + 12, M['FLICKER']
-    Lc = s(r1) - s(r0)
-    for inst, v in (('choir', 0.24), ('reed', 0.18)):
-        for p in chord_of('GPU_CHOIR'):
-            a.n(inst, p, s(r0), Lc + 0.05, v, lock=True)
-        T[inst].cc = cc_ramp(s(r0), 0.7, s(r1) - 0.9, 0.9)
-    cue.mark(dh, 'd: THE DOOR (Ab4 -> Db5) through the door: Alyi in the glass')
-    cue.mark(r0, 'd: the GPU choir, ppp, under "That is the company telling us." (to the flicker)', hit=False)
+    if M['ALYI_ON'] is not None:
+        dh = M['NELEH2_END'] + 3
+        a.n('door', 'Ab4', s(dh), 0.6, 0.4, lock=True, art='nv')
+        a.n('door', 'Db5', s(dh + 15), s(M['ALYI_ON'] + 10) - s(dh + 15), 0.4, lock=True, art='nv', rel=0.6)
+        r0, r1 = M['NELEH2_END'] + 12, M['FLICKER']
+        Lc = s(r1) - s(r0)
+        for inst, v in (('choir', 0.24), ('reed', 0.18)):
+            for p in chord_of('GPU_CHOIR'):
+                a.n(inst, p, s(r0), Lc + 0.05, v, lock=True)
+            T[inst].cc = cc_ramp(s(r0), 0.7, s(r1) - 0.9, 0.9)
+        cue.mark(dh, 'd: THE DOOR (Ab4 -> Db5) through the door: Alyi in the glass')
+        cue.mark(r0, 'd: the GPU choir, ppp, under "That is the company telling us." (to the flicker)', hit=False)
+    else:
+        # v3.4: Alyi's line is cut; after the clack the whole row of phones lights at once (1.6 s).  One small
+        # designed accent: a soft pizz chord on the light (the phones' own pizz, their B-flat minor), and the GPU
+        # choir, ppp, lifting through the 1.6 s and out (the company telling them, now without a word)
+        LI = M['LIGHTS']
+        for p, v in (('Bb2', 0.3), ('F3', 0.27), ('Db4', 0.25)):
+            a.n('vc' if p != 'Db4' else 'vla', p, s(LI), 0.3, v, lock=True, art='pizz')
+        r0, r1 = LI - 2, LI + 38.4
+        Lc = s(r1) - s(r0)
+        for inst, v in (('choir', 0.2), ('reed', 0.15)):
+            for p in chord_of('GPU_CHOIR'):
+                a.n(inst, p, s(r0), Lc + 0.05, v, lock=True)
+            T[inst].cc = cc_ramp(s(r0), 0.5, s(r1) - 0.6, 0.6)
+        cue.mark(LI, "d: DESIGNED HIT: the phones all light at once: one pizz chord and the GPU choir's lift, ppp "
+                     '(1.6 s: the company telling them)')
     SB = cue.sec(M['SINCERE'], bars=3)
     SB.a.seq('svla', [('F4', (1, 1), '1b', 0.5), ('Eb4', (1, 2), '1b', 0.48)], lock=True, art='sus')
     SB.a.n('svla', 'Db4', (1, 3), SB.f(M['TONE1'] - 6) - SB.g.at((1, 3)), 0.46, lock=True, art='sus', rel=0.55)
@@ -439,7 +457,8 @@ def build():
     cue.notes[:] = keep
     for lab, a0, a1 in [('a NOON: the call, the list, the post', WHIP, POSTCLICK), ('b Rima', POSTCLICK, HANDS),
                         ('c the all-hands and the evening', HANDS, M['S4']), ('d NOV 18 hearts', M['S4'], ROOM),
-                        ('d the boardroom: the phones, the glass', ROOM, M['SINCERE']),
+                        ('d the boardroom: the phones, the glass' if M['ALYI_ON'] is not None else
+                         'd the boardroom: the phones; they all light at once', ROOM, M['SINCERE']),
                         ('d the sincere beat', M['SINCERE'], M['TONE1']), ('rest: the dial tones', M['TONE1'], RING),
                         ('e the rival lab (the split)', RING, SPLIT_END)] + (
                        [('the lobby, his side: no score; one felt note on his look up', HIS, LOBBY)]

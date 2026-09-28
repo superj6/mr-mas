@@ -1,0 +1,203 @@
+{
+ "segment": "act1",
+ "variant": "el",
+ "seconds": 343.333,
+ "frames": 8240,
+ "samples": 16480000,
+ "timeline": "show/reel/ep01-v34-el/ep01-v34-el-act1.json",
+ "dialogue": {
+  "lines": 68,
+  "device": {
+   "phone": 8
+  },
+  "el_matched": 68,
+  "missing": []
+ },
+ "rooms": {
+  "stem": "audio/reel/ep01-v3/v34/el/act1-room.flac",
+  "dip_under_speech_db": 2.0
+ },
+ "sfx": {
+  "stem": "audio/reel/ep01-v3/v34/el/act1-sfx.flac",
+  "ducked": false
+ },
+ "score": {
+  "file": "audio/ost/tracks/e01-v3-act1/render/music-el.wav",
+  "cues": "audio/ost/tracks/e01-v3-act1/cues-el.json",
+  "length_s": 343.333,
+  "length_vs_segment_s": 0.0,
+  "lufs_as_delivered": -20.49,
+  "lufs_after_gain": -20.49,
+  "duck": {
+   "by_mood_db": [
+    [
+     "",
+     9.0
+    ]
+   ],
+   "cue_sheet_overrides": [],
+   "posts_dip_db": -3.0,
+   "envelope": "pre 0.25 s, joined across gaps < 2.5 s, 0.2 s in, 0.6 s out; depth smoothed 1.5 s"
+  },
+  "designed_silences": [
+   [
+    194.817,
+    195.408,
+    "the phone locks (a diegetic stop) -> the lobby's pickup under the revolving door"
+   ],
+   [
+    216.708,
+    224.532,
+    "the collar's pop: the swing stops dead; the lobby's room under \"That collar suits you.\" / \"it does.\" / \"and the rent?\""
+   ],
+   [
+    330.417,
+    341.333,
+    "EMIT's THUD stops the pause letter: no score through the page, his desk and the reflection, until the THREAT on the pen's lift"
+   ]
+  ],
+  "head_fade_s": 0.04,
+  "head_fade_why": "designed hit at the head (cues.json designed_hit): (0.0, 'A1 THE DOWNBEAT (a designed hit, on the first frame): the felt on the button (Fm')"
+ },
+ "setpieces": [
+  {
+   "what": "the odometer",
+   "from": 114.04,
+   "to": 128.75,
+   "talk_lufs": -16.85,
+   "measure": "st",
+   "peak_before_lufs": -14.35,
+   "lift_db": 0.0,
+   "peak_after_lufs": -14.35,
+   "over_talk_lu": 2.5
+  }
+ ],
+ "checks": [
+  {
+   "what": "Sydney's egg timer (10.03-10.04)",
+   "from": 282.45,
+   "to": 287.88,
+   "band_hz": [
+    2000,
+    7000
+   ],
+   "unspoken_s": 3.6,
+   "sfx_rms": -47.8,
+   "room_rms": -60.3,
+   "score_rms": -44.9,
+   "bed_rms": -44.8,
+   "sfx_minus_bed_db": -3.0
+  },
+  {
+   "what": "the Build's pre-lap (the last 0.6 s of 9.13)",
+   "from": 287.27,
+   "to": 287.88,
+   "band_hz": [
+    300,
+    3000
+   ],
+   "unspoken_s": 0.6,
+   "sfx_rms": -39.2,
+   "room_rms": -42.3,
+   "score_rms": -36.7,
+   "bed_rms": -35.5,
+   "sfx_minus_bed_db": -3.7
+  },
+  {
+   "what": "the pen leading 12.04",
+   "from": 334.33,
+   "to": 334.83,
+   "band_hz": [
+    3000,
+    9000
+   ],
+   "unspoken_s": 0.5,
+   "sfx_rms": -49.5,
+   "room_rms": -56.5,
+   "score_rms": -240.0,
+   "bed_rms": -56.5,
+   "sfx_minus_bed_db": 7.0
+  }
+ ],
+ "measured": {
+  "lufs_i": -16.0,
+  "true_peak_dbtp": -1.47,
+  "sample_peak_dbfs": -1.5,
+  "lra_lu": 6.2,
+  "gain_db": 1.24,
+  "limiter_ceiling_dbfs": -1.5,
+  "limiter_active_s": 0.134,
+  "dialogue_lufs": -14.87,
+  "score_lufs_after_duck": -21.85,
+  "score_rms_under_speech_dbfs": -31.9,
+  "score_rms_between_speech_dbfs": -21.1,
+  "score_runs": {
+   "count": 6,
+   "shortest_s": 1.85,
+   "runs": [
+    [
+     0.0,
+     13.1
+    ],
+    [
+     13.7,
+     19.3
+    ],
+    [
+     34.1,
+     160.75
+    ],
+    [
+     195.45,
+     21.3
+    ],
+    [
+     224.65,
+     105.8
+    ],
+    [
+     341.3,
+     1.85
+    ]
+   ]
+  },
+  "rooms_lufs": -36.59,
+  "sfx_lufs": -34.78,
+  "holes_under_-42dBFS_0.3s": [],
+  "holes_mono_downmix": [],
+  "holes_without_score": [
+   {
+    "at": 342.35,
+    "s": 0.35,
+    "what": "designed: the act-out black (the bullpen cuts with the picture)"
+   }
+  ],
+  "unmarked_holes": 0,
+  "unmarked_holes_without_score": 0,
+  "jumps_over_15dB": {
+   "count": 92,
+   "rising": 74,
+   "rising_at_a_word": 67,
+   "rising_at_an_sfx": 1,
+   "rising_other": [
+    35.3,
+    48.35,
+    66.1,
+    97.9,
+    114.1,
+    287.85
+   ],
+   "falling": 18
+  }
+ },
+ "file": "out/ep01/full-v3/mix-v34-el/act1-mix.wav",
+ "guard_db": null,
+ "seam_head": {
+  "from_gain_db": 1.24,
+  "to_gain_db": 1.24,
+  "ramp_s": 2.0,
+  "after": "card"
+ },
+ "built": "2026-09-28 11:53:00",
+ "heard": "nothing here has been listened to; every number is measured"
+}

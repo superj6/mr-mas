@@ -8,13 +8,17 @@ step figure) only at the act-out, one step a beat, to a dead stop on bar 4's dow
 (D-flat lydian, A-flat major) are authorised for Ep1 v3.  Nothing below C3 anywhere (the dark room's drone, F1 + C2).
 
 TIMING IS PARAMETRIC.  Every position below is read from the timeline (beat starts, line spans, words, sounds):
-    --variant kokoro   show/reel/ep01-v32/ep01-v32-act3.json          (default)  -> render/music.wav, cues.json
-    --variant el       show/reel/ep01-v32-el/ep01-v32-el-act3.json               -> render/music-el.wav, cues-el.json
-    (MRMAS_V3_LOCK=v31 points at the v3.1 lock; this v3.2 score needs v3.2's beats, so it builds on v3.2 only)
+    --variant kokoro   show/reel/ep01-v34/ep01-v34-act3.json          (default)  -> render/music.wav, cues.json
+    --variant el       show/reel/ep01-v34-el/ep01-v34-el-act3.json               -> render/music-el.wav, cues-el.json
+    (MRMAS_V3_LOCK=v33 or v32 points at an earlier lock; v31 and v3 no longer build)
     --timeline PATH    any timeline with the same beat and line ids              -> render/music-custom.wav
 The grid (96 BPM, a bar = 2.5 s) is anchored so that THE CLOCK's bar 1 is 23.01's first frame.
 
-v3.2 (the final lock; script draft 8.1): the V.O. is down to two lines here ("i made it for everyone else.", "thrilled
+v3.4 (the final lock, show/reel/ep01-v34/; script-v34-notes.md): the Orb's V.O. on the label (18.02: the D-flat maj9
+struck before it, the Water Line's B-flat minor held to it), no V.O. at 18.06, the deepfakes cut (21.03-21.04: the
+order's G-flat maj9 runs into the pen; one verdict), his DevDay V.O. over the unscored hall (22.01).  The times in
+the map below are v3.2's; cues.json carries every v3.4 mark.
+v3.2 (script draft 8.1): the V.O. is down to two lines here ("i made it for everyone else.", "thrilled
 is too much..."); the LEDs no longer stop at the post; he switches the monitor off; DevDay is live on stage; the surge.
   segment s (kokoro)  what plays                                                      picture
   0.03                the felt alone in the dark: a D-flat lydian bloom                v31-18.00 the home room
@@ -112,7 +116,8 @@ def events(c):
         paper2=c.B('v31-20.08'),
         type=c.B('20.01'), post=c.B('20.03'), ring=c.snd('20.03', 'synth:ring'),
         call=c.B('20.04'), edit=c.B('20.05'), back=c.B('20.06'), order=c.B('21.02'),
-        ask=c.B('21.04'), servo=[c.snd('21.04', 'orb_servo', k) for k in range(3)],
+        ask=c.B('21.04') if c.has('21.04') else None,                         # (v3.4 cuts 21.03-21.04)
+        servo=[c.snd('21.04', 'orb_servo', k) for k in range(3)] if c.has('21.04') else None,
         sign=c.B('21.05'), whip=c.snd('21.05', 'paper_whip'), claps=c.snd('21.05', 'synth:claps'),
         off=c.B('v32-21.06'), switch=c.snd('v32-21.06', 'key_tap_space'),          # v3.2: he switches it off
         devday=c.B('22.01'), phone=c.B('22.02'),
@@ -121,8 +126,9 @@ def events(c):
         pause=c.snd('v32-22.04', 'post_click'),
         clock=c.B('23.01'), stop=c.B('23.04'), end=c.LEN)
     L = c.LINES
-    E.update(thanks=L['e1-a3-18-01'], vo14=L['e1-a3-18-04'], stay=L['e1-a3-18-03'],
-             real21=L['e1-a3-21-04'], q21=L['e1-a3-21-06'], partner=L['e1-a3-22-01'], stage=L['v32-a3-0001'],
+    E.update(thanks=L['e1-a3-18-01'], vo14=L.get('e1-a3-18-04'), stay=L['e1-a3-18-03'],
+             vo05=L.get('v34-vo-05'),                                          # v3.4: the Orb's V.O. on the label
+             partner=L['e1-a3-22-01'], stage=L['v32-a3-0001'],
              tasya_mon=L['v31-a3-0001'], remuhcs=L['e1-a3-19-01'], nole=L['e1-a3-19-02'],
              compiles=L['e1-a3-20-09'], tasya=L['e1-a3-22-02'], vo16=L['v3-vo-16'], super_=L['e1-a3-22-03'])
     assert E['surge'] < E['clock'] and E['devday'] < E['phone'] < E['surge']
@@ -231,12 +237,18 @@ def build(c):
         return ns
 
     # ---------------------------------------------------------------- A · the home room; the Orb
-    b = cue.next_bar(E['home'] + 0.3)                     # the first bar line after the first frame
+    b = cue.next_bar(E['home'] + 0.8)                     # the first bar line after the bloom has sounded (v3.4: 0.8 s)
     fch('Dbly', E['home'] + 0.03, cue.bar(b) - E['home'] + 0.2, 0.12, roll=0.03, span_end=cue.bar(b) - 0.02)
     cue.mark(E['home'] + 0.03, 'A: the felt alone in the dark (D-flat lydian), from the first frame')
     water_line(b, vel=0.17)
     fch('Dbmaj9', cue.bar(b), 2.4, 0.13)
-    fch('Bbm9', cue.bar(b + 1), 2.4, 0.12)
+    v5 = E['vo05']
+    skipA = v5 is not None and cue.bar(b + 2) >= v5['on'] - 1.5   # (v3.4: the label's V.O. comes before the 3rd bar)
+    if skipA:                                             # the Water Line's B-flat minor holds to the label's chord
+        tL = v5['on'] - 0.4
+        fch('Bbm9', cue.bar(b + 1), max(2.4, tL - cue.bar(b + 1) + 0.1), 0.12, span_end=tL - 0.03)
+    else:
+        fch('Bbm9', cue.bar(b + 1), 2.4, 0.12)
     cue.mark(cue.bar(b), 'A: THE WATER LINE, warm (F F F G F | C F over Dbmaj9(#11), Bbm9); the chip on the nudge')
     # v3.1: the thirteenth key (the Atem payoff): the cut to the monitor, where Tasya hangs it on his ring, gets his
     # colour, one Rhodes chord (his DevDay chord, the upper four of D-flat lydian), on the Water Line's nearest quarter
@@ -255,17 +267,27 @@ def build(c):
         felt; no attack mid-V.O.) (v3.1 EL render: an attack inside "thirteen." read -16.6 LUFS)"""
         hit = c.lines(t - 0.05, t + 0.1, lambda l: l['vo'])
         return (hit[0]['on'] - lead) if hit else t
-    fch('Abmaj9', clear_vo(cue.bar(b + 2)), 2.4, 0.12)
+    tA = clear_vo(cue.bar(b + 2))
+    if not skipA:
+        fch('Abmaj9', tA, 2.4, 0.12)
     t3 = clear_vo(cue.bar(b + 3))
     bo = cue.next_bar(E['lid'])                           # the Orb rises; the lens finds him (v3.1: from the lid)
     t4 = cue.bar(cue.next_bar(E['label'] + 0.3))          # v3.2: the label reads in the felt alone (no V.O.)
     if t4 >= cue.bar(bo) - 0.5:
         t4 = E['label'] + 0.2
-    fch('Eb13sus', t3, t4 - t3 + 0.1, 0.12, span_end=t4 - 0.03)
-    rebow(cue.a, 'vla', 'Ab3', cue.s(t3), cue.s(t4 + 0.3), 0.1, seg=5.0, xf=1.0, first_att=1.0, last_rel=0.8,
-          art='sus', lp=1300)                                # the tray and the label: a soft pad under them
-    fch('Dbmaj9h', t4, cue.bar(bo) - t4 + 0.2, 0.13, span_end=cue.bar(bo) - 0.03)
-    cue.mark(t4, 'A: the label (PROOF YOU\'RE HUMAN · CO-FOUNDER): Dbmaj9 held, the felt alone')
+    if v5 is not None:                                    # v3.4: "my other company. for when it gets harder to
+        t4 = v5['on'] - 0.4                               # tell." : the chord is struck before the V.O., which sits
+    if t3 < t4 - 1.0:                                     # the dominant hangs as he reaches (when there's room)
+        fch('Eb13sus', t3, t4 - t3 + 0.1, 0.12, span_end=t4 - 0.03)
+        rebow(cue.a, 'vla', 'Ab3', cue.s(t3), cue.s(t4 + 0.3), 0.1, seg=5.0, xf=1.0, first_att=1.0, last_rel=0.8,
+              art='sus', lp=1300)                            # the tray and the label: a soft pad under them
+    if v5 is None:
+        fch('Dbmaj9h', t4, cue.bar(bo) - t4 + 0.2, 0.13, span_end=cue.bar(bo) - 0.03)
+        cue.mark(t4, 'A: the label (PROOF YOU\'RE HUMAN · CO-FOUNDER): Dbmaj9 held, the felt alone')
+    else:                                                 # inside it (v3.1's window: the felt at -24 LUFS)
+        fch('Dbmaj9h', t4, max(v5['end'] + 0.3, cue.bar(bo)) - t4, 0.145, span_end=max(v5['end'] + 0.3, cue.bar(bo)) - 0.03)
+        vo_lift(v5, ['Eb3', 'Ab3', 'Db4'], v=0.11)
+        cue.mark(t4, 'A: the label and the V.O. ("my other company. for when it gets harder to tell."): Dbmaj9, the felt')
     fch('Gbmaj9', cue.bar(bo), 3.4, 0.12)
     cue.n('vibes', 'Bb4', cue.bar(bo), 3.2, 0.2, art='bowed')
     cue.n('vibes', 'F5', cue.bar(bo) + 0.02, 3.2, 0.17, art='bowed')
@@ -293,10 +315,12 @@ def build(c):
     no_third = [(cue.s(tv) + 0.05, cue.s(tv) + 1.5)]
     # "i made it for everyone else.": one felt note, and nothing moves; nothing under "you can stay."
     v14 = E['vo14']
-    t1 = max(E['drift'] + 0.1, v14['on'] - 0.45)
+    t1 = max(E['drift'] + 0.1, v14['on'] - 0.45) if v14 else E['drift'] + 0.1
     fch(['Db3', 'Ab3'], t1, E['chime'] - t1 + 0.3, VO_VEL, roll=0.02, span_end=E['chime'] + 0.2)
-    vo_lift(v14, ['F3', 'Ab3', 'C4'])
-    cue.mark(t1, 'A: one felt note (Db3 + Ab3): the V.O. sits inside it; nothing under "you can stay."')
+    if v14:
+        vo_lift(v14, ['F3', 'Ab3', 'C4'])
+    cue.mark(t1, 'A: one felt note (Db3 + Ab3)' + (': the V.O. sits inside it' if v14 else ' as the Orb drifts to '
+             'his shoulder (v3.4: no V.O.)') + '; nothing under "you can stay."')
     # the settle after the chime (the Orb fits the outline): C4 -> F4 over the open fifth
     bs = cue.bar_of(E['chime'] + 0.05)
     ts = next(cue.bt(bs + k // 4, 1 + k % 4) for k in range(1, 12)
@@ -423,9 +447,10 @@ def build(c):
     cue.section("C' Neleh's paper: the quote, her question", E['paper'], E['order'])
 
     # ---------------------------------------------------------------- D · the order (the monitor), the Orb picks
-    rebow(cue.a, 'vc', 'Gb3', cue.s(E['order'] - 0.2), cue.s(E['ask'] + 0.2), 0.13, seg=5.0, xf=1.0,
+    d_end = E['ask'] if E['ask'] is not None else E['sign']   # v3.4: the order's one line runs into the signing
+    rebow(cue.a, 'vc', 'Gb3', cue.s(E['order'] - 0.2), cue.s(d_end + 0.2), 0.13, seg=5.0, xf=1.0,
           first_att=1.0, last_rel=0.7, art='sus', lp=1100)
-    rebow(cue.a, 'vla', 'Db4', cue.s(E['order']), cue.s(E['ask'] + 0.2), 0.12, seg=5.0, xf=1.0, first_att=1.2,
+    rebow(cue.a, 'vla', 'Db4', cue.s(E['order']), cue.s(d_end + 0.2), 0.12, seg=5.0, xf=1.0, first_att=1.2,
           last_rel=0.7, art='sus', lp=1300)
     fch('Gbmaj9', E['order'] + 0.05, 3.0, 0.13)
     cue.mark(E['order'] + 0.05, 'D: DESIGNED HIT: the order on the monitor: Gbmaj9(#11) over the G-flat/D-flat pedal, '
@@ -434,28 +459,29 @@ def build(c):
                                     "face, which v3.3 scores with Neleh's harmonic alone (a +12 dB step on the EL cut; "
                                     "designed)"))
     gaps = []
-    ls = c.lines(E['order'], E['ask'])
+    ls = c.lines(E['order'], d_end)
     for l1, l2 in zip(ls, ls[1:]):
         if l2['on'] - l1['end'] > 0.3:
             gaps.append(l1['end'] + 0.06)
     for t, name in zip(gaps[:2], ['Ebm9', 'Ab13sus']):
         fch(name, t, 3.0, 0.12)
         cue.mark(t, f'D: {name} in the gap (held under the monitor)', hit=False)
-    # "which one's real?": D-flat major9 for his question (designed; the v3.1 audit read it as an unmarked +15 dB
-    # step on the cut at film 11:48.1): now marked, softer (0.13 -> 0.10, a slower roll) and pre-lapped 0.25 s so
-    # the level step no longer sits on the cut
-    tq = E['ask'] - 0.25
-    fch('Dbmaj9h', tq, E['servo'][2] - tq, 0.10, roll=0.05, span_end=E['servo'][2] - 0.05)
-    cue.mark(tq, 'D: Dbmaj9 for "which one\'s real?" (pre-lapped 0.25 s, soft: his question to his witness)',
-             hit=False)
-    tv2 = E['servo'][2] + 0.02
-    assert tv2 + 0.3 < E['sign']
-    fch('F5', tv2, 2.2, 0.13, roll=0.008)
-    for inst, v in (('vibes', 0.38), ('celesta', 0.18)):
-        cue.n(inst, 'F5', tv2, 0.9, v, lock=True)
-        cue.n(inst, 'C6', tv2 + 0.3, 1.8, v * 0.95, lock=True)
-    cue.mark(tv2, 'D: THE VERDICT again: the Orb picks the one with the pen (F5 -> C6)')
-    no_third.append((cue.s(tv2) + 0.05, cue.s(tv2) + 1.0))
+    if E['ask'] is not None:                              # (v3.4 cuts the deepfakes: no question, no second verdict)
+        # "which one's real?": D-flat major9 for his question (designed; the v3.1 audit read it as an unmarked +15 dB
+        # step on the cut at film 11:48.1): now marked, softer (0.13 -> 0.10, a slower roll) and pre-lapped 0.25 s so
+        # the level step no longer sits on the cut
+        tq = E['ask'] - 0.25
+        fch('Dbmaj9h', tq, E['servo'][2] - tq, 0.10, roll=0.05, span_end=E['servo'][2] - 0.05)
+        cue.mark(tq, 'D: Dbmaj9 for "which one\'s real?" (pre-lapped 0.25 s, soft: his question to his witness)',
+                 hit=False)
+        tv2 = E['servo'][2] + 0.02
+        assert tv2 + 0.3 < E['sign']
+        fch('F5', tv2, 2.2, 0.13, roll=0.008)
+        for inst, v in (('vibes', 0.38), ('celesta', 0.18)):
+            cue.n(inst, 'F5', tv2, 0.9, v, lock=True)
+            cue.n(inst, 'C6', tv2 + 0.3, 1.8, v * 0.95, lock=True)
+        cue.mark(tv2, 'D: THE VERDICT again: the Orb picks the one with the pen (F5 -> C6)')
+        no_third.append((cue.s(tv2) + 0.05, cue.s(tv2) + 1.0))
     # NEDIB'S FOUNTAIN PEN (bar 2: C D F Bb in quarters) as the real one signs, pp, on the quartet
     # the monitor's quartet plays until he switches it off (v3.2: the glass goes black on the click)
     tp = E['whip'] + 0.03
@@ -588,7 +614,7 @@ def build(c):
         underscore_lufs=-20.0, album_lufs=-16.0,
         no_third_windows=no_third,
         vo_windows=[(cue.s(l['on']), cue.s(l['end']), l['text'])
-                    for l in (E['vo14'], E['vo16'])],
+                    for l in (E['vo14'], E['vo05'], E['vo16']) if l],
         room_sfx=[dict(t0=cue.s(0.0), t1=cue.s(stop), sfx='room_drone (the dark room)')],
         sfx_slots=[dict(t=round(cue.s(E['thunk']), 3), sfx='landing_thunk: the tray'),
                    dict(t=round(cue.s(E['glyph']), 3), sfx='glyph_blink (the SFX own G6-F7)'),

@@ -1,0 +1,93 @@
+{
+ "variant": "el",
+ "target_lufs": -16.0,
+ "true_peak_max_dbtp": -1.0,
+ "dialogue_reference_lufs": -14.69,
+ "dialogue_reference_from": "this run",
+ "guard_lu": 1.5,
+ "segments": {
+  "coldopen": {
+   "file": "out/ep01/full-v3/mix-v34-el/coldopen-mix.wav",
+   "seconds": 24.292,
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -3.41,
+   "lra_lu": 11.9,
+   "dialogue_lufs": -14.52,
+   "gain_db": 1.48,
+   "guard_db": null,
+   "score": "audio/ost/tracks/e01-v3-coldopen/render/music-el.wav",
+   "unmarked_holes": 0,
+   "unmarked_holes_without_score": 0,
+   "built": "2026-09-28 11:52:42"
+  },
+  "act1": {
+   "file": "out/ep01/full-v3/mix-v34-el/act1-mix.wav",
+   "seconds": 343.333,
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -1.47,
+   "lra_lu": 6.2,
+   "dialogue_lufs": -14.87,
+   "gain_db": 1.24,
+   "guard_db": null,
+   "score": "audio/ost/tracks/e01-v3-act1/render/music-el.wav",
+   "unmarked_holes": 0,
+   "unmarked_holes_without_score": 0,
+   "built": "2026-09-28 11:53:00"
+  },
+  "act2": {
+   "file": "out/ep01/full-v3/mix-v34-el/act2-mix.wav",
+   "seconds": 170.167,
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -1.5,
+   "lra_lu": 5.6,
+   "dialogue_lufs": -15.04,
+   "gain_db": 0.97,
+   "guard_db": null,
+   "score": "audio/ost/tracks/e01-v3-act2/render/music-el.wav",
+   "unmarked_holes": 0,
+   "unmarked_holes_without_score": 0,
+   "built": "2026-09-28 11:53:04"
+  },
+  "tag": {
+   "file": "out/ep01/full-v3/mix-v34-el/tag-mix.wav",
+   "seconds": 33.25,
+   "lufs_i": -17.06,
+   "true_peak_dbtp": -1.4,
+   "lra_lu": 19.0,
+   "dialogue_lufs": -13.19,
+   "gain_db": 2.8,
+   "guard_db": -0.95,
+   "score": "audio/ost/tracks/e01-v3-tag/render/music-el.wav",
+   "unmarked_holes": 0,
+   "unmarked_holes_without_score": 0,
+   "built": "2026-09-28 11:53:05"
+  }
+ },
+ "episode": {
+  "segments": [
+   "coldopen",
+   "act1",
+   "act2",
+   "tag"
+  ],
+  "seconds": 571.04,
+  "lufs_i": -16.03,
+  "lra_lu": 6.8,
+  "note": "the story segments (and the card) back to back; the intro and the outro play their own masters between"
+ },
+ "seams": [
+  {
+   "seam": "act1 -> act2",
+   "last_200ms_dbfs": -38.3,
+   "first_200ms_dbfs": -37.4,
+   "step_db": 0.9,
+   "sample_jump": 0.0006
+  }
+ ],
+ "spread": {
+  "lufs_i_lu": 1.06,
+  "dialogue_lu": 1.85
+ },
+ "updated": "2026-09-28 11:53:10",
+ "heard": "nothing here has been listened to; every number is measured"
+}

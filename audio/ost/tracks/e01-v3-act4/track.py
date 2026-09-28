@@ -7,7 +7,11 @@ full band (the avalanche), a triumph one size too big (Monday and the return), s
 handing off to the tag.  Act Four v5's score (tracks/e01-act4-v5/, read-only) and the v3 sample's cues (audio/reel/
 ep01-v3-sample/music/, read-only) are the material, copied here and re-spotted to the v3 lock.
 
-  v3.2 (the final lock, show/reel/ep01-v32/; script draft 8.1): v3.1's shock opening unchanged; his 1:46 PM post
+  v3.4 (the final lock, show/reel/ep01-v34/; script-v34-notes.md): his plan before JOIN, confident and light (the
+  settle C4 -> F4 lands just before the click); the phones all lighting at once in S4.02 (a pizz chord and the GPU
+  choir's lift; Alyi's line and the Door are cut); "gerg walked out for me." at 2 AM; the return's count in S8.04
+  (the knee's first four notes, F F F F, in his pauses).  The times in the map below are v3.2's; cues.json has v3.4's.
+  v3.2 (show/reel/ep01-v32/; script draft 8.1): v3.1's shock opening unchanged; his 1:46 PM post
   after the blow (no score), the lobby told twice inside the board's side, the badge under the door.  Seven cues:
   cue (module)            segment s (kokoro)   what
   S1  cue_noon.py         0 -> 25.90           the suite's ordinary life (a sul-tasto pedal, his felt Water Line bar
@@ -39,8 +43,8 @@ ep01-v3-sample/music/, read-only) are the material, copied here and re-spotted t
                                                VICTORY LAP, the flat line and the bonk, "okay." onto the vault's F
 
 TIMING IS PARAMETRIC: every sync point is read from the timeline (beat starts, line spans, words, sounds, texts).
-    --variant kokoro   show/reel/ep01-v32/ep01-v32-act4.json        -> render/music.wav, cues.json      (default)
-    --variant el       show/reel/ep01-v32-el/ep01-v32-el-act4.json  -> render/music-el.wav, cues-el.json
+    --variant kokoro   show/reel/ep01-v34/ep01-v34-act4.json        -> render/music.wav, cues.json      (default)
+    --variant el       show/reel/ep01-v34-el/ep01-v34-el-act4.json  -> render/music-el.wav, cues-el.json
     (MRMAS_V3_LOCK=v31 points at the v3.1 lock, show/reel/ep01-v31/; the cues check for v3.2's new beats)
     --timeline PATH    any timeline with the same ids              -> render/music-custom.wav
 The act ends on the vault's pedal; its natural release (the ~4 s past the act's last frame) is written beside the
@@ -139,8 +143,12 @@ def assemble(c, variant):
               "Neleh's desk at 11:52: her office clock first (SFX), then her clockwork"),
              (c.snd('S4.07', 'DTMF', 0) - 0.3, c.snd('S4.08', 'RING', 0) + 0.2,
               "the board's designed rest for the four dial tones (the sincere beat's release)"),
-             (c.snd('S8.03', 'alert_bonk'), c.Lend('a5-30-19') + 0.1,
-              'the lobby: the CU "silent like the first" and "okay." on the neon\'s F')]
+             *([(c.snd('S8.03', 'alert_bonk'), c.W('v34-vo-11', 'votes', end=True) + 0.06,
+                 'the lobby: the CU "silent like the first" on the neon\'s F (to the count, v3.4)'),
+                (c.Lon('a5-30-19') - 0.2, c.Lend('a5-30-19') + 0.1, 'the last F\'s release and "okay."')]
+               if 'v34-vo-11' in c.LINES else
+               [(c.snd('S8.03', 'alert_bonk'), c.Lend('a5-30-19') + 0.1,
+                 'the lobby: the CU "silent like the first" and "okay." on the neon\'s F')])]
     if c.has('v32-S5.00'):                               # v3.2: the lobby by day, his side: no score to his look up
         rests.append((c.B('v32-S5.00') + 0.3, c.snd('v32-S5.00', 'post_click') + 26 / 24 - 0.05,
                       "the lobby by day, his side (v3.2): no score, the lobby's room; one felt note on his look up"))
@@ -161,7 +169,7 @@ def assemble(c, variant):
               for k in ORDER],
         silences=[dict(t0=round(a, 3), t1=round(b, 3), what=w) for a, b, w in sil],
         designed_hit=[dict(t=round(m[0], 3), cue=lays[k]['name'], what=m[1]) for k in ORDER for m in lays[k]['marks']
-                      if m[1].startswith('the re-entry after D6')],
+                      if m[1].startswith('the re-entry after D6') or 'DESIGNED HIT' in m[1]],
         rests=[dict(t0=round(a, 3), t1=round(b, 3), what=w) for a, b, w in rests],
         measured=res, source=os.path.relpath(os.path.join(HERE, 'track.py'), REPO),
         heard='nothing here has been listened to; every number is measured')
