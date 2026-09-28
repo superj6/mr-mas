@@ -170,3 +170,76 @@ out/ep01/full-v3/                         the films and mixes (git-ignored)
 - **Three music accents with no cue mark,** at film 1:56.3, 11:48.1 and 21:20.1: the composers confirm or remove them.
 - **4 pre-laps:** lines leading in at place changes (the script marks them as J-cuts; the lock builds them).
 - The cold open → intro seam gets an ear.
+
+## 6. v3.3: the polish round (from 2026-09-28 06:30)
+
+**Inputs:** [audit-v32](audit-v32.md) §0 · [mood-analysis-v32](mood-analysis-v32.md) §4 · [read-v32-newcomer](read-v32-newcomer.md) §2c, §4 and its top 8.
+**The rule:** a polish, not a rewrite. Calibration applies line by line: fix the spot and don't move the whole. The v3.2 spine (agency-v32) stays exactly as it is. **Timecodes are on the v3.2 film clock;** lock times run about 1–3 s later.
+**Where it lands:** script draft 8.2 (`script-v33-notes.md`), `beat-plan-v33/`, the lock `show/reel/ep01-v33/` (+ `-el`), then the films `out/ep01/full-v3/ep01-v33.mp4` and `ep01-v33-el.mp4`.
+
+**X: sound defects.** These are measured, and every one must be fixed.
+
+| # | Where | Fix | Owner |
+|---|---|---|---|
+| X1 | 15:19.52 | The `cloth_rustle` (lanyard) SFX is cut off mid-sample. Let it finish, or fade it over 20 ms. | stems |
+| X2 | 17:13.27 | A designed score stop with no fade, which ticks. Give it a 3–8 ms fade, like the other dead stops. | composer Y |
+| X3 | 12:45.29 | The night cue re-enters +24 dB within 400 ms. Start the felt fifth 0.3–0.5 s early, under the post's last palette step, and/or lay it −3 dB. | composer Y (mix confirms) |
+| X4 | 12:54.50 | The room steps at the whip. Add a 10 ms crossfade. | stems |
+| X5 | 10:11.88 | A +12 dB score step with no cue mark. Confirm it as designed (mark it) or smooth it. | composer Y |
+| X6 | 18:00–18:14 | The avalanche: +1.5–2 LU short-term, as a mix gain row. The score stays as it is. | mix |
+| X7 | every changed cut | Room tone in every black, rooms leading cuts by 0.6 s, no new click (second-difference scan of the stems). | stems + assembly |
+
+**V: the inner voice's placement.** The count goes from 11 to 13, inside calibration's 10–14. Both takes exist.
+- **V1. Restore "it does."** after "That collar suits you." (4:31.9), but only if P4 makes the collar arrive at that moment.
+- **V2. Restore "he's not wrong."** before "how's the dancing?" (the White House, Act Two). It's an invented beat and a thought-then-speech gap, which is calibration §5's preferred kind. It ends the Act Two drought.
+- **V3. No voice at Neleh's paper** (11:02). This is mas-inner-voice §5: another person's real act that bears on him gets the held face and the room, not a thought. P10 carries the beat.
+- **No new lines are written.** The writer may swap one candidate for a better one of the same kind, but not add a third.
+
+**S: story and lines.** These are small, and each one is a single spot.
+- **S1. The Tidder trigger** (10:29). Cut the VP clip and the pinky promise (10:16–10:23): they are TV with no stake. Keep the forum's raised hands (Mas raising his own at home). Then, on his monitor, the Tidder thread that carries the rumour, then his reply typed into it. The record: he commented on a rumour and called it a meme.
+- **S2. Why Rima is replaced** (15:45–15:58). Give Neleh one plain, reported reason before "We'd like a different one." (the writer checks the facts file; no invented motive). Cut Ttemme's "Okay.": he reads the page, turns it over, and the back is blank. The running gag holds.
+- **S3. "Down here." is cut** (18:53).
+- **S4. "Everyone's packed. Whatever happens to this place, Mas, don't worry about us."** moves from Tasya to the EMPLOYEE who asked "Is this a coup?", in the bullpen among the boxes, where we can see them. This needs a new take from the existing employee voice.
+- **S5. Tasya's "…below them, above them, around them."** becomes an interview clip on the bullpen TV (a podcast mic in frame, on the small-speaker chain) while the staff pack. It's no longer recited face to face (audit #10).
+
+**P: picture.** Each item is a spot. Prefer a change inside the shot to a new cut: mood §3.6 shows Act Three and the tag drifting too busy.
+- **P1. Rima's "Did anyone tell the rest of the board?"** (2:03). Mas's face, not answering, under Gerg's "It's a research preview." Reuse his existing MCU. About +1 s.
+- **P2. The million post** (2:58.5). Let the odometer land, then show only his thumb and the post's first line. Cut the 1 s hold on the digits.
+- **P3. "Is that a tear?"** (3:14). Draw one tear glint at his eye in that shot.
+- **P4. The collar.** The Macrosoft collar must *arrive* at "That collar suits you." Check that no Act One shot before 4:31 has it on him (the cold open is Nov 2023, so it stays there). Show it clasping on, or Tasya's hand settling it.
+- **P5. The Atem monitor beat** (9:44.7). Fold it into the background of the Coinworld arrival (18.00/18.01): the monitor plays softly behind. Keep the key ring legible and Tasya's "Everyone is welcome.", with a two-part plate at most. About −3 to −5 s.
+- **P6. The altered-audio clip** (7:39). The faked face should be the senator himself (the white-haired senator of the hearing), since it's his voice that was faked.
+- **P7. The chip order** (9:27, `AI CHIPS · QTY: MORE`). Make the hand unambiguous. The writer decides whose, against the record.
+- **P8. The act-out glass** (9:33–9:41). Cut 17.12. Act Two ends on the chip-maker's line climbing off the top of the frame (the intro's curve, an image the film already owns), with sound leading into Act Three's black. About −4.5 s.
+- **P9. S1's picture.** The Tidder thread on his monitor, then his reply.
+- **P10. Neleh's paper** (11:02). Hold about 2 s on his face reading page 30: the held face, the room, no voice. Keep the paper's tab in his tab strip after that. The Friday reminder (23.02) pops up over his own NOTIFY ME page with that tab visible (audit #9).
+- **P11. The sign-ups post** (11:50). Keep NOTIFY ME, and collapse the post once it's up.
+- **P12. The static boardroom wide** (14:35, 18.9 s). Push in slowly during Neleh's second speech, reaching her MCU by "what happens on Monday". On Alyi's "That is the company telling us.", the row of phones lights up in frame. No held frame should run more than 8 s unchanged.
+- **P13. The walk-in's date appears twice** (15:18). Drop the rail and keep the plate.
+- **P14. Three-part plates** trimmed to two parts: `RADNUS · RUNS ELGOOG` and `NOLE · BUILDING HIS OWN`.
+- **P15. S2's picture:** Ttemme's page turn and its blank back.
+- **P16. The count** (16:30, "four hundred and six. four hundred and seven. four hundred and six."). The heart/repost counter on his screen should visibly tick 406 → 407 → 406 in sync with the voice.
+- **P17. S4/S5's picture:** the employee speaking among the boxes (visibly the one talking), and Tasya's podcast clip on the bullpen TV.
+- **P18. Face light** (mood #2). A key or rim light one or two ramp steps up, *on the face only*, on the non-joke close-ups: "alyi voted.", Gerg's look, Neleh's real face, Mada, "good question.", Alyi in the glass, the toast. The room isn't touched.
+- **P19. The tag's density** (mood #5). Hold the cover beat about 1 s longer (32.03).
+
+**M: score.**
+- **M1. Launch night's one warm accent** (2:23–2:47, mood #1). Either the Build pass in its A♭ major, or one Rhodes chord on "it likes me.". It's an accent, not the trio and not a new bed. Owner: composer X.
+- **M2.** X2, X3 and X5 above. Refit both locks to v3.3's lengths, and keep the show's own sound. Nothing else is re-scored.
+
+**Left alone, on purpose:**
+- Alyi's glass ghosts (his motif: doorways and reflections).
+- The IOU sign and the Q\* safe (plants for later episodes).
+- The two faint tally marks.
+- The intro's names.
+- "gerg. he'll say he's compiling." (two readers disagree, so the line stays: calibration).
+- The cold open's first line.
+- The duck (the tag reads as Elgoog catching up, which is right).
+- "Merger".
+
+**Order:**
+1. The script, beat plans and takes, then the v3.3 lock (Kokoro and EL).
+2. In parallel, capped at three agents: the pixel segments; the composers' fixes (X2, X3, X5, M1), which don't wait for the lock, then the refit; the stems fixes (X1, X4), which don't wait for the lock.
+3. Renders go one at a time through ops/heavy.sh. Then stems, the mix, assembly and QA.
+4. A measured sound check at every changed cut and the four defects, plus the flash check.
+5. Commit and push after each step. No Drive.
