@@ -123,7 +123,8 @@
   "deepfake2": "deepfake-nedib-2",
   "tiled": "tiled-employee",
   "ELGOOG'S DEMO": "elgoog-demo",
-  "elgoog-demo": "elgoog-demo"
+  "elgoog-demo": "elgoog-demo",
+  "AUHSOJ": "auhsoj"
  },
  "roles": {
   "mas-manalt": {
@@ -2328,12 +2329,275 @@
      "why": "v3.1 (2026-09-27): a neutral stock-presenter voice no cast member uses (premade; 'warm, bright, and professional, characterized by a Standard American accent'), as the Kokoro lock gave the demo a stock voice of its own (bf_isabella). Style 0.2 for the surprise; the monitor chain is the mix's."
     }
    ]
+  },
+  "auhsoj": {
+   "name": "AUHSOJ",
+   "brief": "an investor on a call tile in the war room (sc 41), overheard mid-sentence under Mas's V.O.: brisk, quick, clipped, American; urgent but controlled; one fragment. Never the real person's voice.",
+   "lane_hz": [
+    165,
+    215
+   ],
+   "pace_wpm": "180-240 (the fragment)",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "q7bTgwLsHXBGhc1u5pDy",
+     "voice_name": "Rick - Professional & Friendly",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "confident",
+      "use_case": "conversational"
+     },
+     "library_description": "Conversational male voice.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.45,
+      "similarity_boost": 0.75,
+      "style": 0.1,
+      "use_speaker_boost": true,
+      "speed": 1.05
+     },
+     "measured_preview": {
+      "median_f0_hz": 158.5,
+      "f0_range_st": 11.8,
+      "p_en": 0.9981,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "line": "v35-a4-0007",
+      "voiced_s": 1.1,
+      "wpm": 218.2,
+      "sps": 5.45,
+      "pauses_s": [],
+      "median_f0_hz": 192.9,
+      "f0_range_st": 10.3,
+      "final_st": 4.26,
+      "p_en": 0.9985,
+      "tail_cut": false,
+      "asr": "The tender's in trouble.",
+      "speed": 1.05,
+      "st_from_the_count": 10.38,
+      "st_from_tasya_then_we_should_talk": 6.3,
+      "timbre_from_the_count": 81.3,
+      "timbre_from_tasya": 56.3,
+      "take": "audio/ep01/v3-el/auditions/auhsoj/round2/wav/v35-a4-0007__auhsoj-B.wav",
+      "rank": 1
+     },
+     "why": "Picked by measurement (voices-el.md §AC; nobody has listened). Four of the five auditioned voices had no penalty (separation, accent, clean take); the brief broke the tie. His fragment is the only one that is both brisk and unfinished: 218 wpm with no pause inside it, and a final that rises 4.3 st (the others: Ryan +1.6, Blacklogic +2.7, Darren -1.8, falling like a finished statement, with a 0.17 s hitch). At 193 Hz he sits 10.4 st over Mas's count (the V.O. that starts under him) and 6.3 st over Tasya's 'Then we should talk.' (whose last word he overlaps), the widest pitch gaps measured, with p(en) 0.9985 and the only verbatim ASR. The library calls him 'Rick - Professional & Friendly', a middle-aged American conversational voice."
+    },
+    {
+     "cand": "B",
+     "voice_id": "AENbDSfaaTrHNSXAheTB",
+     "voice_name": "Ryan - Crisp, Direct and Reliable",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "confident",
+      "use_case": "informative_educational"
+     },
+     "library_description": "Middle-aged ale voice. Good for Podcast and explainer.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.45,
+      "similarity_boost": 0.75,
+      "style": 0.1,
+      "use_speaker_boost": true,
+      "speed": 1.05
+     },
+     "measured_preview": {
+      "median_f0_hz": 155.8,
+      "f0_range_st": 9.9,
+      "p_en": 0.9976,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "line": "v35-a4-0007",
+      "voiced_s": 1.13,
+      "wpm": 212.4,
+      "sps": 5.31,
+      "pauses_s": [],
+      "median_f0_hz": 181.5,
+      "f0_range_st": 8.1,
+      "final_st": 1.63,
+      "p_en": 0.9955,
+      "tail_cut": false,
+      "asr": "The tenders in trouble",
+      "speed": 1.05,
+      "st_from_the_count": 9.23,
+      "st_from_tasya_then_we_should_talk": 5.15,
+      "timbre_from_the_count": 89.2,
+      "timbre_from_tasya": 48.4,
+      "take": "audio/ep01/v3-el/auditions/auhsoj/round2/wav/v35-a4-0007__auhsoj-A.wav",
+      "rank": 2
+     }
+    },
+    {
+     "cand": "C",
+     "voice_id": "d2ZHRJrmlIbTz4cF7FuP",
+     "voice_name": "Blacklogic - Confident, Clear",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "confident",
+      "use_case": "conversational"
+     },
+     "library_description": "Natural-sounding male voice.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.45,
+      "similarity_boost": 0.75,
+      "style": 0.1,
+      "use_speaker_boost": true,
+      "speed": 1.05
+     },
+     "measured_preview": {
+      "median_f0_hz": 170.4,
+      "f0_range_st": 9.8,
+      "p_en": 0.9992,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "line": "v35-a4-0007",
+      "voiced_s": 1.0,
+      "wpm": 240.0,
+      "sps": 6.0,
+      "pauses_s": [],
+      "median_f0_hz": 152.8,
+      "f0_range_st": 12.5,
+      "final_st": 2.67,
+      "p_en": 0.9914,
+      "tail_cut": false,
+      "asr": "The tenders in trouble",
+      "speed": 1.05,
+      "st_from_the_count": 7.79,
+      "st_from_tasya_then_we_should_talk": 3.71,
+      "timbre_from_the_count": 68.1,
+      "timbre_from_tasya": 46.6,
+      "take": "audio/ep01/v3-el/auditions/auhsoj/round2/wav/v35-a4-0007__auhsoj-C.wav",
+      "rank": 3
+     }
+    },
+    {
+     "cand": "D",
+     "voice_id": "74s0ZNaUEOKhDHSxgJZq",
+     "voice_name": "Darren - Direct, Clear Corporate Worker",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "confident",
+      "use_case": "conversational"
+     },
+     "library_description": "A young corporate American male voice. Good for casual conversations.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.45,
+      "similarity_boost": 0.75,
+      "style": 0.1,
+      "use_speaker_boost": true,
+      "speed": 1.05
+     },
+     "measured_preview": {
+      "median_f0_hz": 85.5,
+      "f0_range_st": 9.5,
+      "p_en": 0.9981,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "line": "v35-a4-0007",
+      "voiced_s": 1.31,
+      "wpm": 183.2,
+      "sps": 5.26,
+      "pauses_s": [
+       0.17
+      ],
+      "median_f0_hz": 90.5,
+      "f0_range_st": 6.0,
+      "final_st": -1.75,
+      "p_en": 0.9958,
+      "tail_cut": false,
+      "asr": "The tenders in trouble",
+      "speed": 1.05,
+      "st_from_the_count": -2.7,
+      "st_from_tasya_then_we_should_talk": -6.78,
+      "timbre_from_the_count": 82.4,
+      "timbre_from_tasya": 60.6,
+      "take": "audio/ep01/v3-el/auditions/auhsoj/round2/wav/v35-a4-0007__auhsoj-E.wav",
+      "rank": 4
+     }
+    },
+    {
+     "cand": "E",
+     "voice_id": "xu4h8WWpwjjEFUl9OBNd",
+     "voice_name": "Chato Irias",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "calm",
+      "use_case": "conversational"
+     },
+     "library_description": "Friendly customer success specialist. Energetic, confident, and persuasive without sounding pushy. Natural conversational pacing with clear pronunciation. Warm, engaging, and professional tone that builds trust quickly.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.45,
+      "similarity_boost": 0.75,
+      "style": 0.1,
+      "use_speaker_boost": true,
+      "speed": 1.05
+     },
+     "measured_preview": {
+      "median_f0_hz": 93.5,
+      "f0_range_st": 11.7,
+      "p_en": 0.9998,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "line": "v35-a4-0007",
+      "voiced_s": 1.41,
+      "wpm": 170.2,
+      "sps": 4.26,
+      "pauses_s": [],
+      "median_f0_hz": 81.6,
+      "f0_range_st": 13.1,
+      "final_st": -3.95,
+      "p_en": 0.9943,
+      "tail_cut": true,
+      "asr": "The tenders in trouble",
+      "speed": 1.05,
+      "st_from_the_count": -3.34,
+      "st_from_tasya_then_we_should_talk": -7.42,
+      "timbre_from_the_count": 36.6,
+      "timbre_from_tasya": 62.0,
+      "take": "audio/ep01/v3-el/auditions/auhsoj/round2/wav/v35-a4-0007__auhsoj-D.wav",
+      "rank": 5
+     }
+    }
+   ],
+   "cast_v35": "phase 10 (2026-09-28): cast by measurement (tools/el_audition.py --role auhsoj; voices-el.md §AC). The screen: 2335 male American young and middle-aged shared-library voices (the free listing), 1416 past the red flags (cast_el.py) and a ban on the real person's names and anything political or impression-like; the top 90 by the brief's words had their previews measured for pitch and p(en); five were read (one fragment each, the episode's seed, speed 1.05), on both sides of the window the two overlapped voices leave. Candidate letters here are the ranking's (A = the pick); the audition takes in auditions/auhsoj/round2/ keep their audition letters (measured_audition.take). Guardrails §6: no voice was chosen for resembling anyone, nothing was imitated, the line was sent as written (say_lines only drops the print dashes).",
+   "lane_note": "his take's 193 Hz with about 2 st either side, kept at least 2 st over Tasya's overlapped line (135 Hz) and far over Mas's count (106 Hz); the pitch pass reads it"
   }
  },
  "respell_lines": {},
  "respell_roles": {},
- "say_lines": {},
- "say_lines_note": "Per-line readings: the same words with other punctuation, sent instead of the line (the lines JSON keeps the script's text). e1-a2-15-04: Mas's 'which one am i?' came back as a sharp rise on both takes (median F0 226 and 257 Hz, pYIN 107 -> 289 Hz), against his brief's level or falling finals; sent as a statement.",
+ "say_lines": {
+  "v35-a4-0007": "the tender's in trouble,"
+ },
+ "say_lines_note": "Per-line readings: the same words with other punctuation, sent instead of the line (the lines JSON keeps the script's text). e1-a2-15-04: Mas's 'which one am i?' came back as a sharp rise on both takes (median F0 226 and 257 Hz, pYIN 107 -> 289 Hz), against his brief's level or falling finals; sent as a statement. v35-a4-0007 (AUHSOJ, v3.5): the fragment '—the tender's in trouble—' is overheard mid-sentence on a call tile, under Mas's V.O.; it is sent as the writer's Kokoro read was ('the tender's in trouble,': no dashes, and a comma so it doesn't land as a finished sentence).",
  "say_full": {
   "a5-27-31": "Neleh, hi. Wow. I've actually written up some thoughts on exactly this. Eleven pages, on the conditions under which we might, hypothetically, consider it.",
   "a5-29-24": "Has anyone read the charter?"
@@ -2375,6 +2639,14 @@
     "stability": 0.6,
     "style": 0.1,
     "_why": "the lead, 2026-09-28: one quicker retake, brisk and quietly pleased (his last confident thought before the blow: a man already planning the meeting). The V.O. settings (speed 0.85, stability 0.65, style 0) gave 114 wpm."
+   }
+  },
+  "v35-vo-04": {
+   "EwzF7Z2UMSib9JaKx0Kg": {
+    "speed": 1.15,
+    "stability": 0.55,
+    "style": 0.0,
+    "_why": "the lead, 2026-09-28: the war room's count is his rattled moment, 'faster than he ever thinks'. The V.O. settings (speed 0.85, stability 0.65, style 0) read it at 72 wpm over 6.71 s voiced (Kokoro 3.42 s); this read is 4.90 s, 98 wpm, 4.5 syll/s (voices-el.md §AC3). The slow take stays in the cache: dropping this entry brings it back for free."
    }
   }
  },

@@ -1,6 +1,8 @@
 # Ep1 v3: the ElevenLabs voice pass (`v3-voices-el`, track A4, 2026-09-27)
 
-> **Status: PHASE 9 DONE: THE v3.5 VOICES.** Sirrah is recast as Ida Freeist (§AA, directly below). MARIO keeps his Kokoro takes in the EL film from the v3.5 lock on: the cast override is in and tested, and the mix notes are written (§AB). No v3.5 lock is built yet: the lock builder makes it after the writer finishes.
+> **Status: PHASE 10 DONE: THE v3.5 TAKES AND THE EL-TIMED v3.5 LOCK.** Every new or changed v3.5 line has an EL take (MARIO's stay Kokoro), AUHSOJ is cast (Rick), Terb's line is cut from his EL take, and the EL-timed copy of the v3.5 lock is built with its beds and manifest (`show/reel/ep01-v35-el/`, key `ep01-v35-el-stick`): §AC, directly below. No reel was made.
+>
+> **Phase 9 (the v3.5 voices):** Sirrah is recast as Ida Freeist (§AA). MARIO keeps his Kokoro takes in the EL film from the v3.5 lock on (§AB).
 >
 > **Phase 8 (v3.4):** every line of the final v3.4 lock (commit 4309e86) has an EL take, with Mas as Jeremy. There is an EL-timed copy of it (`show/reel/ep01-v34-el/`, key `ep01-v34-el-stick`) with beds, and its intro plays the EL intro master (§Z). No reel was made. The intro line is §Y, v3.3 §X, v3.2 §W, v3.1 §V, the Mas recast §R, phase 2 (the v3 lock) §P1–§P9, and phase 1 (the casting and the sample) §1–§8. Where phase 2 describes Mas, it describes Giovanni.
 >
@@ -23,6 +25,141 @@
 - **Characters:** 10,054 sent and **5,522 billed**, against the 25,000 budget. The subscription went from 0 to 5,522 of 131,000.
 - **Model:** `eleven_multilingual_v2` for everyone. I tested `eleven_v3` and didn't use it (§6).
 - **Decisions for you:** listed in §8.
+
+---
+
+## AC. Phase 10: the v3.5 takes and the EL-timed v3.5 lock (2026-09-28)
+
+**The brief:** the EL takes for every new or changed line of script draft 8.4 (`script-v35-notes.md` §8), except MARIO's, with each role's EL voice and Mas's V.O. at the V.O. settings; a library voice for AUHSOJ, cast by measurement (male, brisk, American; never the real person); Terb's line cut from his EL take; then the EL-timed v3.5 lock with its beds and manifest (the showrunner: "go for it").
+
+**In short:**
+- **32 new reads** (Mas 15, Alyi 6, Tasya 3, Gerg 3, Mada 2, Rima, Oigneb, AUHSOJ), with 7 retakes the renderer made on its own. **Free:** "still a preview." at the window (v35-a1-0010) plays launch night's own EL take (e1-a1-5-11's, the same read, as the Kokoro lock does); Terb's cut; Sirrah's two lines (Ida, cached); the four restored lines (their earlier EL takes); MARIO (Kokoro).
+- **AUHSOJ is Rick - Professional & Friendly** (`q7bTgwLsHXBGhc1u5pDy`, a shared-library professional voice), speed 1.05 (§AC2).
+- **Characters: 1,448 sent and 638 billed** in 44 calls, including AUHSOJ's five audition reads and the quicker read of the count. The subscription went from 14,593 to **15,231** of 131,000.
+- **The EL-timed v3.5 story runs 22:26.8** (32,323 frames) against the Kokoro lock's 22:23.5 (32,245; +3.3 s). The render plan validates: 33,406 frames (23:11.9 with the slate), all 256 takes, 7 beds, no warnings (§AC4).
+- **The war room's count plays a quicker read** (speed 1.15; the lead's call, 2026-09-28): the V.O. settings read it at twice the Kokoro length (§AC3).
+
+### AC1. The takes
+
+`audio/ep01/v3-el/ep01-v35/<seg>/lines-A.json` + `wav/` and `wav-device/`, by `tools/render_v35.sh` (`NEW=1` renders the writer's takes, `audio/ep01/v35/<seg>/lines-v35.json`, before the lock exists; without it, every line of the lock). Set A, dialogue −16 / V.O. −18 LUFS, `eleven_multilingual_v2`, dry, with the call copy (`.call.wav`) for the call tiles and the stage copy for the lectern (v35-a2-0011). Every line sent as written, with the house respellings.
+
+| Id | Who | Voiced s (Kokoro) | wpm | syll/s | F0 Hz | ASR |
+|---|---|---|---|---|---|---|
+| v35-vo-01 | Mas V.O. | 3.31 (2.61) | 127 | 3.2 | 111 | They've stopped testing it, they're using it. |
+| v35-vo-02 | Mas V.O. | 1.93 (1.82) | 218 | 4.2 | 101 | Someone gets to be in the room. |
+| v35-a1-0001 | Alyi | 3.40 (3.38) | 124 | 3.0 | 87 | Nobody taught it that. It played itself. |
+| v35-a1-0002 | Mas | 2.76 (3.10) | 174 | 4.1 | 127 | A hundred and eighty years since this morning. |
+| v35-a1-0003 | Alyi | 2.36 (3.06) | 203 | 4.7 | 90 | Make it bigger and it could learn anything. |
+| v35-a1-0004 | Mas | 0.83 (1.11) | 217 | 4.8 | 125 | How much bigger? |
+| v35-a1-0005 | Alyi | 4.72 (4.07) | 114 | 2.9 | 87 | Games now. Robots, maybe. After that, I don't know. |
+| v35-a1-0006 | Mas (O.S.) | 1.46 (1.80) | 206 | 4.8 | 115 | than a lot more computers. |
+| v35-a1-0007 | Alyi | 4.76 (4.41) | 139 | 4.0 | 86 | Something that can learn anything, Moss. What else would you build? |
+| v35-a1-0008 | Tasya | 2.73 (2.20) | 176 | 4.2 | 109 | And we'd like it in everything we make. |
+| v35-a1-0009 | Rima | 1.22 (0.88) | 148 | 3.6 | 184 | Still a preview? |
+| v35-a1-0010 | Mas | 1.06 (1.17) | 170 | 3.8 | 120 | Still a preview. (e1-a1-5-11's take) |
+| v35-a1-0012 | Oigneb | 2.12 (2.57) | 226 | 4.8 | 118 | You signed it now put the stamp down |
+| v35-a2-0001 | Mas | 2.19 (2.22) | 192 | 4.6 | 116 | I get paid enough for health insurance. |
+| v35-a2-0002 | Gerg | 2.48 (3.15) | 194 | 5.2 | 186 | The next one costs billions. Nobody donates billions. |
+| v35-a2-0003 | Mas | 2.60 (2.16) | 139 | 3.8 | 115 | So they don't donate, they invest. |
+| v35-a2-0004 | Alyi | 1.04 (1.04) | 173 | 2.9 | 78 | capped at what? |
+| v35-a2-0005 | Mas | 1.24 (1.22) | 145 | 2.4 | 116 | A hundred times. |
+| v35-a2-0006 | Alyi | 1.32 (1.48) | 182 | 3.0 | 93 | And who's in charge? |
+| v35-a2-0007 | Mas | 0.96 (0.80) | 125 | 2.4 | 102 | The board |
+| v35-a2-0008 | Mada | 0.61 (0.72) | 197 | 3.3 | 112 | And you? |
+| v35-a2-0009 | Mas | 0.56 (0.74) | 107 | 3.6 | 103 | Nothing. |
+| v35-a2-0010 | Mada | 0.67 (0.82) | 179 | 4.5 | 93 | Good answer. |
+| v35-a2-0011 | Mas (stage) | 4.96 (4.11) | 157 | 4.1 | 115 | If we can comply, we will, and if we can't, we'll cease operating. |
+| v35-vo-03 | Mas V.O. | 2.77 (2.11) | 130 | 3.5 | 108 | The budget. I said the budget. |
+| v35-vo-04 | Mas V.O. (speed 1.15) | **4.90 (3.42)** | **98** | 4.5 | 111 | Gerg, toss you the money, the money, the money. |
+| v35-a4-0001 | Gerg (call) | 2.52 (2.86) | 238 | 5.1 | 132 | They took my chair, told me after, so I quit. |
+| v35-a4-0002 | Mas | 1.15 (1.22) | 209 | 3.5 | 127 | You didn't have to. |
+| v35-a4-0003 | Gerg (call) | 1.00 (0.74) | 180 | 3.0 | 115 | Yeah, I did. |
+| v35-a4-0004 | Tasya (call) | 4.97 (3.80) | 169 | 4.0 | 169 | We found out a minute before the rest of the world. Moss, one minute. |
+| v35-a4-0005 | Mas | 1.10 (1.33) | 273 | 4.6 | 116 | I got a few more. |
+| v35-a4-0006 | Tasya (call) | 1.48 (1.22) | 162 | 2.7 | 135 | Then we should talk. |
+| v35-a4-0007 | AUHSOJ (call) | 1.10 (1.26) | 218 | 5.5 | 193 | The tender's in trouble. |
+| v35-a4-0008 | Terb (cut) | 10.68 (8.27) | 163 | 3.8 | 97 | We have reached an agreement … the other Ural, and MATA. |
+
+- **Levels and tails:** every take at −16.0 LUFS (V.O. −18.0; "The board" −15.2, as short lines measure), true peak at or under −1.5 dBTP, ASR recall 1.0 except "than a lot more computers" (0.8: then/than). One clipped tail (§AC3).
+- **The renderer's retakes (new seeds; the better-measured take kept):** Alyi's v35-a1-0001 for a tail (take 1 kept); the pitch pass on Tasya's v35-a1-0008 (109 Hz; take 1 kept, the retake read 244), v35-a4-0004 (207 → 169 Hz) and v35-a4-0006 (323 → 135 Hz), Gerg's v35-a2-0002 (186 Hz; take 1 kept) and v35-a4-0001 (184 → 132 Hz), and Mada's "Good answer." (173 → 93 Hz).
+- **Names:** "Gerg" in the count passes the forced-choice check (+3.6 over Kirk / Greg / Jerg; Kokoro +5.6); "Manalt" in Terb's cut +6.2. The recogniser writes "Tasya" as "toss you" and "Mas" as "Moss": the lexicon's TAHS-yuh and /mɑs/, as it hears the Kokoro takes.
+- **Terb's cut (v35-a4-0008), free:** his v3.4 EL take (v3-a4-0004) has the lock's words in order, so it is cut from "We" (word 8) to the end, at the middle of the 0.51 s gap after "once" (−40 dB re peak there), with 12 ms fades and room-tone handles (`el_cut.py`, CUT_V35). 10.88 s file, 10.68 s voiced (Kokoro's cut 8.27 s: his EL read has always been slower). The ASR reads it back as the source did ("Manault", "the other Ural", "MATA").
+- **Every other line of the lock** plays exactly the take the v3.4 EL lock played (checked by request key, line by line), except the intended changes: Sirrah's two lines (Ida) and MARIO's ten (Kokoro).
+
+### AC2. AUHSOJ (`tools/el_audition.py --role auhsoj`)
+
+**The brief:** an investor on a call tile, overheard mid-sentence: "—the tender's in trouble—". His fragment starts 0.3 s under Tasya's "Then we should talk." and Mas's count starts 0.56 s under him, so he has to stand apart from both. Never the real person's voice.
+
+- **The screen (free):** 2,335 male American young and middle-aged voices in the shared library; 1,416 passed `cast_el.py`'s red flags (a real person, a celebrity, an impression, an accent, a register, a price) and a ban on the real person's names and anything political. The top 90 by the brief's words (brisk, quick, crisp, direct, confident, conversational, business…; against narration, deep, calm, soothing, announcer…) had their previews measured for pitch and p(en).
+- **The five read** (the episode's seed, speed 1.05, stability 0.45, style 0.1): previews at least 2 st from both overlapped takes (the count 106.5 Hz, Tasya's 134.5 Hz), p(en) ≥ 0.985, the description nearest the brief, on both sides of the window, so the takes decide. Voices described by ethnicity or in a DJ, preaching, sports or coaching register were passed over. The line is sent as the writer's read was: "the tender's in trouble," (`say_lines`: the print dashes dropped, a comma so it doesn't land).
+- **The ranking** (per voice; the scene measured as the film plays it: the call copies of the tiles, the V.O. dry):
+
+| Rank | Voice | F0 | From the count | From Tasya | Timbre from the count / Tasya | wpm | Final | p(en) |
+|---|---|---|---|---|---|---|---|---|
+| **1** | **Rick - Professional & Friendly** | **193 Hz** | **+10.4 st** | **+6.3 st** | **81 / 56** | **218** | **+4.3 st** | **0.999** |
+| 2 | Ryan - Crisp, Direct and Reliable | 182 Hz | +9.2 | +5.2 | 89 / 48 | 212 | +1.6 | 0.996 |
+| 3 | Blacklogic - Confident, Clear | 153 Hz | +7.8 | +3.7 | 68 / 47 | 240 | +2.7 | 0.991 |
+| 4 | Darren - Direct, Clear Corporate Worker | 91 Hz | −2.7 | −6.8 | 82 / 61 | 183 (a 0.17 s hitch) | −1.8 | 0.996 |
+| 5 | Chato Irias | 82 Hz | −3.3 | −7.4 | 37 / 62 | 170 | −4.0 | 0.994 (clipped tail) |
+
+- **Why Rick:** the four without a penalty tie on the score (separation, accent, clean take; recall is read blind to apostrophes, since the recogniser writes "tender's" as "tenders" for four of them). The brief breaks the tie: his is the one read that is both brisk (218 wpm, no pause inside) and unfinished (the final rises 4.3 st; Darren's falls like a finished statement). He has the widest pitch gaps from both voices he overlaps, the highest p(en), and the only verbatim ASR. On timbre alone Darren would lead (61 against 56 from Tasya), but he sits 2.7 st under the count on top of him.
+- **In the cast:** `roles.auhsoj`, candidates A–E in rank order (A = Rick; the audition takes keep their audition letters in `auditions/auhsoj/round2/`, named in each candidate's `measured_audition.take`), lane 165–215 Hz, label `AUHSOJ`. Swapping to B–E is free (`set_cand.A.auhsoj`; all five takes are cached).
+- **The listening file:** `out/ep01/full-v3/voices/auhsoj-cast.mp3` (0:52): a Kokoro slate, then each voice in rank order, dry and then on the call chain (Rick 0:07, Ryan 0:16, Blacklogic 0:25, Darren 0:34, Chato 0:43).
+- **Guardrails §6:** no voice was chosen for resembling anyone, no mannerism was asked for, and the line was sent as written.
+
+### AC3. For an ear first
+
+1. **The war room's count (v35-vo-04): the quicker read is in the lock.** At the V.O. settings (speed 0.85, stability 0.65) it was 6.71 s voiced, 72 wpm, with 0.29–0.82 s between the words, against Kokoro's 3.42 s and the direction's "faster than he ever thinks"; it stretched beat 41.04 from 4.02 to 7.15 s.
+   - **The lead's call (2026-09-28): the quicker read**, "it's his rattled moment, and the slow read contradicts that". A per-line read (`line_settings`, as v34-vo-07's): speed 1.15, stability 0.55, style 0. 4.90 s voiced, 98 wpm, 4.5 syll/s, 0.49–0.64 s pauses, 111 Hz, "Gerg" +3.9, −18 LUFS. Rendered in `audio/ep01/v3-el/auditions/count-alt/` and taken from the cache (nothing sent at the switch). Beat 41.04 is now 5.34 s.
+   - **The slow take stays in the cache:** dropping the `line_settings` entry brings it back for free.
+   - **Faster still** would need commas between the words (`say_lines`), which the full stops' tiles argue against: one more render (about 21 credits).
+2. **Tasya's "minute" (v35-a4-0004):** 4.97 s voiced against Kokoro's 3.80 (4.0 syll/s against 5.1: slower, as the Kokoro flag wanted), but 169 Hz after its pitch retake, over his 130–150 Hz lane (take 1 was 207). The recogniser punctuates "…the rest of the world. Moss, one minute.": listen for whether "Mas" leans into "One minute." "minute" is heard as the word.
+3. **Tasya A's pitch still wanders:** "And we'd like it in everything we make." at 109 Hz (the retake read 244).
+4. **Gerg's "The next one costs billions." at 186 Hz** (his lane 125–160; the retake read lower but lost words), 5.2 syll/s: cheerful, or pushed.
+5. **Mada's "Good answer." at 93 Hz**, under his 115–130 lane (take 1 was 173 Hz).
+6. **Alyi's "Nobody taught it that. It played itself."** ends while still sounding on both seeds (the house's tail check); the dressing's decay covers it. Listen to the last word.
+7. **The two short questions in 2019** (v35-a2-0004, -0006) run 2.9 and 3.0 syll/s, as slow as Kokoro's: "quick, careful" is the direction.
+8. **AUHSOJ** is picked on measurement only: listen for whether he reads as an investor mid-sentence under the count.
+
+### AC4. The EL-timed v3.5 lock
+
+- **The build:** from the Kokoro v3.5 lock (`show/reel/ep01-v35/`, lock-v35.md), with `tools/render_v35.sh` (every line: **nothing was sent**; the lock's thirteen cut lines are cut again from the EL takes by `el_cut.py --lock v35`), then `el_lock.py --lock v35 --fixed S7.13`, `el_bed.py --lock v35` and the manifest.
+- **The files:** the timelines and manifest in `show/reel/ep01-v35-el/` (key `ep01-v35-el-stick`); the beds in `audio/reel/ep01-v35-el/` (all sounds resolved, 0 missing; the card is the lock's own; the cold open is the lock's bed spliced per beat).
+- **The manifest's intro plays `audio/intro-mix/intro-ep1-mix-V1-chipchamber-el.wav` at −3 dB** (§Y). `episode.mjs --plan`: 33,406 frames (23:11.9 with the slate; 23:08.9 without), all 256 takes and 7 beds, no warnings.
+- **MARIO's ten lines play his Kokoro takes** (e1-a1-11-01/-03, v35-a1-0011, e1-a2-13-03/-05, e1-a2-17-01/-02/-04/-05, a5-27-31): lengths unchanged, starts moved with the EL lines before them.
+- **The placements hold:** all seven J-cuts (5.03 −0.5, 7.01 −0.6, 12.02 −0.5, 41.03 −0.3, 41.04 −0.3, S5.11 −0.8, S8.08 −1.0 s); launch night's overlap (Gerg 0.25 s over Rima); the war room's (AUHSOJ 0.3 s under Tasya, the count 0.56 s under AUHSOJ). S7.13 is 264 frames. No overlaps or overruns were flagged.
+
+| Segment | Kokoro v3.5 (frames) | **EL-timed** | Frames | Change |
+|---|---|---|---|---|
+| Cold open | 0:26.7 (640) | **0:24.3** | **583** | −2.4 s |
+| Act One | 7:29.7 (10,794) | **7:36.1** | **10,947** | +6.4 s |
+| Act Two | 3:31.4 (5,074) | **3:22.0** | **4,848** | −9.4 s |
+| Act Three | 2:19.1 (3,339) | **2:16.4** | **3,274** | −2.7 s |
+| Act Four | 8:03.3 (11,600) | **8:14.7** | **11,873** | +11.4 s |
+| Tag | 0:33.2 (798) | **0:33.2** | **798** | 0.0 s |
+| **Story** | **22:23.5 (32,245)** | **22:26.8** | **32,323** | **+3.3 s** |
+
+- **The new lines' share:** +6.1 s over their Kokoro takes, most of it Terb's cut (+2.4), the count (+1.5) and Tasya's minute (+1.2). The biggest beat changes: 5.04 +4.9 (launch night's Rima and V.O.), S4.13 +3.0, S7.07 +2.4, 8.04 −3.2 and 13.09 −2.8 (the faster supporting voices, as in every EL lock).
+- **What didn't apply:** the tag's Runway reserve (v31-32.01d is not in the v3.5 lock, so only S7.13 is reserved); `el_takes.py --lock v35` and the mix (§AB3's EQ, `stems.py`, `mix_episode.py`) belong to the assembly and mix passes and were not run.
+
+### AC5. Files, and how to redo it
+
+- **Tools changed:** `render_v35.sh` (new); `el_cut.py` (v35: CUT_V35, the v35 lock tests and OLDS entry, and a pre-lock mode that reads the writer's takes); `el_audition.py` (a new role: `--role auhsoj`, gender and ages in the screen, the scene from takes as the film plays them, the overlap ranking, apostrophe-blind recall, the final contour, the listening file).
+- **Cast:** `cast-el.json` `roles.auhsoj`, `labels.AUHSOJ`, `say_lines.v35-a4-0007`.
+- **Usage:** `usage.json` "phase 10: the v3.5 takes".
+- **To redo** (from the repo root; everything is cached now):
+
+```sh
+PY=audio/.venv-casting/bin/python
+bash ops/heavy.sh bash audio/ep01/v3-el/tools/render_v35.sh                  # the takes + el_cut (NEW=1: the writer's takes only)
+$PY audio/ep01/v3-el/tools/el_lock.py --lock v35 --fixed S7.13
+bash ops/heavy.sh $PY audio/ep01/v3-el/tools/el_bed.py --lock v35
+$PY audio/ep01/v3-el/tools/el_lock.py --lock v35 --fixed S7.13 --beds audio/reel/ep01-v35-el/beds.json
+cd studio && bash ../ops/heavy.sh node src/reel/tools/episode.mjs ../show/reel/ep01-v35-el/ep01-v35-el.manifest.json --plan
+# AUHSOJ: el_audition.py --role auhsoj screen | ingest LINES | scene | pick | file (HF_HUB_OFFLINE=1, in ops/heavy.sh)
+```
+
+- **The count:** its quicker read is `cast-el.json` `line_settings.v35-vo-04` (speed 1.15, stability 0.55, style 0). To go back to the V.O.-settings take, drop that entry, then run the commands above with `SEGS=act4` on the render and `act4` on the bed (free).
 
 ---
 

@@ -522,6 +522,67 @@
    },
    "used_by_subscription": 164,
    "note": "credits billed = the calls' character-cost headers (26 per voice per round: 18 + 8), and they match the subscription's own count (14,429 -> 14,593). The MARIO change sends nothing (his Kokoro takes). The screen, previews, reference and tests were free (the listing and the public preview CDN; local measurement; a test render at --max-chars 0)."
+  },
+  "phase 10: the v3.5 takes": {
+   "budget_chars": 3000,
+   "_about": "Phase 10 (2026-09-28): the EL takes for every new or changed v3.5 line except MARIO's (Kokoro), AUHSOJ's casting, Terb's cut (free). Budget 3,000 characters.",
+   "subscription_before": {
+    "tier": "creator",
+    "character_count": 14593,
+    "character_limit": 131000,
+    "next_character_count_reset_unix": 1793049484,
+    "voice_limit": 30,
+    "voice_slots_used": 2,
+    "professional_voice_limit": 1,
+    "can_extend_character_limit": false,
+    "status": "active",
+    "checked_at": "2026-09-28T14:45:04"
+   },
+   "subscription_after": {
+    "tier": "creator",
+    "character_count": 15231,
+    "character_limit": 131000,
+    "next_character_count_reset_unix": 1793049484,
+    "voice_limit": 30,
+    "voice_slots_used": 2,
+    "professional_voice_limit": 1,
+    "can_extend_character_limit": false,
+    "status": "active",
+    "checked_at": "2026-09-28T15:53:15"
+   },
+   "runs": {
+    "audio/ep01/v3-el/ep01-v35/act1": {
+     "calls": 14,
+     "chars_sent": 540,
+     "credits_billed": 238
+    },
+    "audio/ep01/v3-el/ep01-v35/act2": {
+     "calls": 13,
+     "chars_sent": 346,
+     "credits_billed": 152
+    },
+    "audio/ep01/v3-el/ep01-v35/act4": {
+     "calls": 11,
+     "chars_sent": 394,
+     "credits_billed": 172
+    },
+    "audio/ep01/v3-el/auditions/auhsoj/round2": {
+     "calls": 5,
+     "chars_sent": 120,
+     "credits_billed": 55
+    },
+    "audio/ep01/v3-el/auditions/count-alt": {
+     "calls": 1,
+     "chars_sent": 48,
+     "credits_billed": 21
+    }
+   },
+   "total": {
+    "calls": 44,
+    "chars_sent": 1448,
+    "credits_billed": 638
+   },
+   "used_by_subscription": 638
   }
  },
  "all_phases_total": {

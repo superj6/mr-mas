@@ -1,0 +1,360 @@
+{
+ "segment": "act2",
+ "layers": [
+  {
+   "room": "whitehouse",
+   "from": 0.0,
+   "to": 63.12,
+   "lead": 0.0,
+   "trail": 1.0
+  },
+  {
+   "room": "bullpen-night",
+   "from": 61.52,
+   "to": 68.53,
+   "lead": 0.6,
+   "trail": 0.4
+  },
+  {
+   "room": "senate",
+   "from": 67.53,
+   "to": 122.82,
+   "lead": 0.6,
+   "trail": 0.4
+  },
+  {
+   "room": "office",
+   "from": 121.62,
+   "to": 145.48,
+   "lead": 0.8,
+   "trail": 0.4
+  },
+  {
+   "room": "senate",
+   "from": 144.48,
+   "to": 147.98,
+   "lead": 0.6,
+   "trail": 0.4
+  },
+  {
+   "room": "phone",
+   "from": 156.73,
+   "to": 163.57,
+   "lead": 0.6,
+   "trail": 0.4
+  },
+  {
+   "room": "rooftop",
+   "from": 163.94,
+   "to": 201.65,
+   "lead": 0.6,
+   "trail": 0.4
+  },
+  {
+   "room (next chapter, leading)": "dark",
+   "from": 201.4,
+   "lead": 0.6
+  },
+  {
+   "pad": "THE WHITE HOUSE",
+   "chords": [
+    "Abmaj9",
+    "Eb9sus4"
+   ],
+   "lufs": -32,
+   "duck_db": 10,
+   "from": 0.0,
+   "to": 62.12
+  },
+  {
+   "music": "none (THE BRIDGE: no score)",
+   "from": 62.12,
+   "to": 68.12
+  },
+  {
+   "pad": "THE SENATE",
+   "chords": [
+    "Bbm9",
+    "Eb9sus4"
+   ],
+   "lufs": -32,
+   "duck_db": 10,
+   "from": 68.12,
+   "to": 122.42
+  },
+  {
+   "pad": "MAR 2019",
+   "chords": [
+    "Bbm9",
+    "Abmaj9"
+   ],
+   "lufs": -32,
+   "duck_db": 10,
+   "from": 122.42,
+   "to": 145.08
+  },
+  {
+   "pad": "THE SENATE",
+   "chords": [
+    "Bbm9",
+    "Eb9sus4"
+   ],
+   "lufs": -32,
+   "duck_db": 10,
+   "from": 145.08,
+   "to": 147.58
+  },
+  {
+   "pad": "THE TOUR",
+   "chords": [
+    "Fm11",
+    "Dbmaj9#11"
+   ],
+   "lufs": -30,
+   "duck_db": 10,
+   "from": 147.58,
+   "to": 164.54
+  },
+  {
+   "pad": "THE ROOFTOP",
+   "chords": [
+    "Dbmaj9#11",
+    "Gm7b5"
+   ],
+   "lufs": -32,
+   "duck_db": 10,
+   "from": 164.54,
+   "to": 201.25
+  }
+ ],
+ "sfx": [
+  [
+   "13.03",
+   "freeze_hit_F",
+   6.208
+  ],
+  [
+   "13.05",
+   "paper_flutter",
+   19.09
+  ],
+  [
+   "13.06",
+   "landing_thunk",
+   20.246
+  ],
+  [
+   "13.06",
+   "landing_thunk",
+   20.434
+  ],
+  [
+   "13.06",
+   "landing_thunk",
+   20.623
+  ],
+  [
+   "13.10",
+   "flame_whoomph",
+   43.237
+  ],
+  [
+   "13.12",
+   "camera_shutter",
+   49.292
+  ],
+  [
+   "13.12",
+   "freeze_hit_F",
+   49.312
+  ],
+  [
+   "13.14",
+   "camera_shutter",
+   56.542
+  ],
+  [
+   "v35-27.00",
+   "landing_thunk",
+   67.625
+  ],
+  [
+   "15.04",
+   "freeze_hit_C",
+   71.917
+  ],
+  [
+   "15.05",
+   "typing_soft",
+   72.752
+  ],
+  [
+   "15.15",
+   "folder_slide",
+   93.805
+  ],
+  [
+   "15.15",
+   "rubber_stamp_C",
+   94.798
+  ],
+  [
+   "15.16",
+   "paper_curl",
+   101.25
+  ],
+  [
+   "15.11",
+   "typing_soft",
+   106.402
+  ],
+  [
+   "15.12",
+   "cloth_rustle",
+   109.592
+  ],
+  [
+   "15.12",
+   "synth:moth",
+   110.642
+  ],
+  [
+   "15.13",
+   "synth:gasp",
+   115.832
+  ],
+  [
+   "15.14",
+   "rubber_stamp_C",
+   116.86
+  ],
+  [
+   "15.14",
+   "rubber_stamp_C",
+   117.2
+  ],
+  [
+   "15.14",
+   "rubber_stamp_C",
+   117.59
+  ],
+  [
+   "v35-28.05",
+   "landing_thunk",
+   146.983
+  ],
+  [
+   "v35-29.01",
+   "rubber_stamp_C",
+   147.683
+  ],
+  [
+   "v35-29.01",
+   "rubber_stamp_C",
+   148.383
+  ],
+  [
+   "v35-29.01",
+   "rubber_stamp_C",
+   148.883
+  ],
+  [
+   "v35-29.01",
+   "rubber_stamp_C",
+   149.383
+  ],
+  [
+   "v35-29.01",
+   "rubber_stamp_C",
+   149.883
+  ],
+  [
+   "v35-29.01",
+   "rubber_stamp_C",
+   150.383
+  ],
+  [
+   "v35-29.01",
+   "rubber_stamp_C",
+   150.883
+  ],
+  [
+   "17.01",
+   "pen_scribble_short",
+   166.342
+  ],
+  [
+   "17.01",
+   "pen_scribble_short",
+   167.482
+  ],
+  [
+   "17.01",
+   "pen_run",
+   168.862
+  ],
+  [
+   "17.01",
+   "pen_scribble_short",
+   169.642
+  ],
+  [
+   "17.01",
+   "pen_tick_1",
+   170.182
+  ],
+  [
+   "17.02",
+   "pen_scribble_short",
+   171.242
+  ],
+  [
+   "17.02",
+   "pen_scribble_short",
+   175.642
+  ],
+  [
+   "17.02",
+   "pen_scribble_short",
+   179.852
+  ],
+  [
+   "17.03",
+   "synth:roll",
+   181.333
+  ],
+  [
+   "17.04",
+   "freeze_hit_F",
+   182.75
+  ],
+  [
+   "17.07",
+   "ka_ching",
+   190.808
+  ],
+  [
+   "17.07",
+   "synth:bell",
+   190.828
+  ],
+  [
+   "17.10",
+   "paper_curl",
+   194.033
+  ]
+ ],
+ "sfx_missing": [],
+ "decisions": [
+  "13.01: \"the meeting room's mantel clock and the tripods' clicks, under the act break's black\" = its room, leading the cut by 1.0 s",
+  "14.01: \"a gavel's knock, under the last half second (the next scene's)\" = the next beat's (v35-27.00) landing_thunk, moved 0.5 s earlier, under this cut",
+  "15.14: \"a marker's squeak and an old office fan, under \"equity\" (2019)\" leads the next cut (v35-28.01) by 0.8 s",
+  "v35-28.05: \"the gavel's knock becomes a passport stamp (29.01)\" = the next beat's (v35-29.01) rubber_stamp_C, moved 0.2 s earlier, under this cut",
+  "17.01: \"rooftop wind under the poster's last stamp\" = its room, leading the cut by 0.6 s"
+ ],
+ "seconds": 202.1,
+ "chapter_seconds": 202.0,
+ "lufs": -29.4,
+ "peak_dbfs": -3.97,
+ "built_by": "audio/ep01/v3-el/tools/el_bed.py"
+}

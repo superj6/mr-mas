@@ -1,0 +1,124 @@
+[
+ {
+  "id": "v35-a4-0007",
+  "kind": "dialogue",
+  "scene": "41",
+  "speaker": "AUHSOJ",
+  "speaker_slug": "auhsoj",
+  "text": "—the tender's in trouble—",
+  "spoken_as": "the tender's in trouble,",
+  "tag": "",
+  "delivery": "overlapping, quick, an investor mid-sentence; a fragment",
+  "on_camera": "on",
+  "mode": "call",
+  "device": "call",
+  "file": "audio/ep01/v3-el/auditions/auhsoj/round2/wav/v35-a4-0007__auhsoj-A.wav",
+  "file_device": "audio/ep01/v3-el/auditions/auhsoj/round2/wav-device/v35-a4-0007__auhsoj-A.call.wav",
+  "mp3": null,
+  "duration_s": 2.07,
+  "frames_24": 50,
+  "voiced_span_s": 1.13,
+  "pace": {
+   "audible_in_s": 0.45,
+   "audible_out_s": 1.58,
+   "measured": {
+    "span_s": 1.13,
+    "wpm": 212.4,
+    "syllables": 6,
+    "articulation_sps": 5.31,
+    "pauses_s": []
+   },
+   "longest_internal_gap_s": 0.0,
+   "words": 4,
+   "wpm": 212.4,
+   "speed": 1.05,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "the",
+    "t0": 0.43,
+    "t1": 0.524
+   },
+   {
+    "w": "tender's",
+    "t0": 0.582,
+    "t1": 0.965
+   },
+   {
+    "w": "in",
+    "t0": 1.023,
+    "t1": 1.093
+   },
+   {
+    "w": "trouble",
+    "t0": 1.151,
+    "t1": 1.581
+   }
+  ],
+  "qa": {
+   "asr": "The tenders in trouble",
+   "cer": 0.043,
+   "word_recall_nonames": 0.75,
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -3.02,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 181.5,
+   "f0_range_st": 8.1,
+   "speech_head_s": 0.45,
+   "speech_tail_s": 0.49,
+   "raw_tail_cut": false,
+   "align_median_s": 0.103
+  },
+  "voice": "ElevenLabs library voice 'Ryan - Crisp, Direct and Reliable' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.05",
+  "voiceId": "AENbDSfaaTrHNSXAheTB",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "auhsoj",
+   "voice_id": "AENbDSfaaTrHNSXAheTB",
+   "voice_name": "Ryan - Crisp, Direct and Reliable",
+   "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.45,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 1.05
+   },
+   "seed": 815131279,
+   "chars_sent": 24,
+   "request_key": "f25edb6811447e9d",
+   "derived_from": null,
+   "reused_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)",
+   "file_device: the same take through a copy of house.call_filter() (HPF 200, LPF 7k, +1.5 dB @1.8k, 2.5:1), as the Kokoro take printed it"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/v35/act4/wav/v35-a4-0007.wav",
+   "mode": "on-mic",
+   "lufs_i": -16.0,
+   "duration_s": 2.42,
+   "audible_in_s": 0.5,
+   "audible_out_s": 1.76,
+   "wpm": 190.5,
+   "median_f0_hz": 172.3,
+   "f0_range_st": 11.6,
+   "delivery": "overlapping, quick, an investor mid-sentence; a fragment",
+   "voice": "af_river (Kokoro-82M stock) · d-river-brisk-low · speed 1.100",
+   "device": "call",
+   "timeline_in": 0.5,
+   "timeline_dur": 2.42
+  }
+ }
+]

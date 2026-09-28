@@ -1,0 +1,250 @@
+{
+ "segment": "act3",
+ "layers": [
+  {
+   "room": "dark",
+   "from": 0.0,
+   "to": 136.42,
+   "lead": 0.0,
+   "trail": 0.0
+  },
+  {
+   "room (next chapter, leading)": "suite",
+   "from": 135.82,
+   "lead": 0.6
+  },
+  {
+   "pad": "ACT THREE",
+   "chords": [
+    "Fm9",
+    "Dbmaj9#11"
+   ],
+   "lufs": -34,
+   "duck_db": 10,
+   "from": 0.0,
+   "to": 126.42
+  },
+  {
+   "pad": "THE CLOCK",
+   "chords": [
+    "Fm9"
+   ],
+   "lufs": -32,
+   "duck_db": 10,
+   "from": 126.42,
+   "to": 133.92
+  }
+ ],
+ "sfx": [
+  [
+   "18.01",
+   "synth:slot_whir",
+   3.508
+  ],
+  [
+   "18.01",
+   "landing_thunk",
+   4.758
+  ],
+  [
+   "18.03",
+   "paper_flutter",
+   12.133
+  ],
+  [
+   "18.03",
+   "orb_servo",
+   12.383
+  ],
+  [
+   "18.03",
+   "orb_servo",
+   12.783
+  ],
+  [
+   "18.03",
+   "orb_servo",
+   13.183
+  ],
+  [
+   "18.03",
+   "orb_servo",
+   13.783
+  ],
+  [
+   "18.04",
+   "orb_scan_sweep",
+   17.0
+  ],
+  [
+   "18.04g",
+   "glyph_blink",
+   17.75
+  ],
+  [
+   "18.05",
+   "dialog_ok_click--chip",
+   18.5
+  ],
+  [
+   "18.06",
+   "orb_servo",
+   20.675
+  ],
+  [
+   "18.06",
+   "synth:chime",
+   23.885
+  ],
+  [
+   "v31-19.03",
+   "orb_servo",
+   28.123
+  ],
+  [
+   "v31-19.03",
+   "orb_servo",
+   28.623
+  ],
+  [
+   "v31-19.03",
+   "orb_servo",
+   29.758
+  ],
+  [
+   "20.01",
+   "synth:keys",
+   36.358
+  ],
+  [
+   "20.03",
+   "post_click",
+   39.292
+  ],
+  [
+   "20.03",
+   "odometer_ratchet",
+   39.592
+  ],
+  [
+   "20.03",
+   "synth:ring",
+   39.992
+  ],
+  [
+   "20.04",
+   "key_tap_space",
+   42.44
+  ],
+  [
+   "20.04",
+   "synth:call_keys",
+   42.69
+  ],
+  [
+   "20.05",
+   "dialog_ok_click",
+   51.742
+  ],
+  [
+   "20.05",
+   "keyboard_roll",
+   51.992
+  ],
+  [
+   "21.02",
+   "tower_pop",
+   80.359
+  ],
+  [
+   "21.03",
+   "post_click--chip",
+   84.852
+  ],
+  [
+   "21.04",
+   "orb_servo",
+   88.503
+  ],
+  [
+   "21.04",
+   "orb_servo",
+   88.903
+  ],
+  [
+   "21.05",
+   "paper_whip",
+   90.783
+  ],
+  [
+   "21.05",
+   "synth:claps",
+   91.383
+  ],
+  [
+   "v32-21.06",
+   "synth:claps",
+   92.875
+  ],
+  [
+   "v32-21.06",
+   "key_tap_space",
+   93.775
+  ],
+  [
+   "22.01",
+   "synth:applause",
+   95.892
+  ],
+  [
+   "22.01",
+   "odometer_ratchet",
+   96.692
+  ],
+  [
+   "22.01",
+   "landing_thunk",
+   99.245
+  ],
+  [
+   "22.02",
+   "post_click--chip",
+   113.158
+  ],
+  [
+   "22.02",
+   "key_tap_soft_01",
+   118.148
+  ],
+  [
+   "v32-22.04",
+   "synth:ratchet_fast",
+   122.187
+  ],
+  [
+   "v32-22.04",
+   "post_click",
+   124.617
+  ],
+  [
+   "v32-22.04",
+   "glyph_blink",
+   125.427
+  ],
+  [
+   "23.02",
+   "post_click--chip",
+   129.067
+  ]
+ ],
+ "sfx_missing": [],
+ "decisions": [
+  "18.01: \"the rack's fans and LED ticks under the act break's black\" = its room, leading the cut by 1.0 s",
+  "20.01: \"his keyboard, under the rent meter's first tick\" = its room, leading the cut by 0.4 s"
+ ],
+ "seconds": 136.517,
+ "chapter_seconds": 136.417,
+ "lufs": -28.87,
+ "peak_dbfs": -3.39,
+ "built_by": "audio/ep01/v3-el/tools/el_bed.py"
+}

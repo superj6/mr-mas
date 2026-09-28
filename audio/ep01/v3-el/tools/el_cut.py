@@ -8,8 +8,11 @@ boundaries, so that the same performance is heard (Alyi's sentence told twice, S
 way: at the middle of the pause (or at most 0.35 s from the word), 12 ms fades, room-tone handles out to 0.35 s from the
 take's own head, then the house level per take (-16 LUFS; V.O. -18). A take with a device copy (the call chain) is cut at the same times.
 
-  audio/.venv-casting/bin/python audio/ep01/v3-el/tools/el_cut.py [--lock v31|v32]
+  audio/.venv-casting/bin/python audio/ep01/v3-el/tools/el_cut.py [--lock v31|v32|v33|v34|v35]
       v32: the v3.1 cuts still in the v3.2 lock, plus the v3.2 lock's own three (CUT_V32)
+      v35: the earlier cuts still in the lock, plus Terb's v35-a4-0008 (CUT_V35). Before the lock's timelines exist, the
+           cut lines are read from the writer's takes (audio/ep01/v35/<seg>/lines-v35.json), so the cut can be made
+           first; a run after the lock exists re-reads the lock
       reads  show/reel/ep01-v31/ep01-v31-<seg>.json (which segment each cut line is in, its text, its Kokoro take)
              the source EL takes: audio/ep01/v3-el/ep01-v31/<seg>/lines-A.json, else audio/ep01/v3-el/ep01/<seg>/lines-A.json
       writes audio/ep01/v3-el/ep01-v31/<seg>/wav/<id>__<role>-<cand>.wav, and adds the rows to that segment's lines-A.json
@@ -33,11 +36,11 @@ import el_render as R  # noqa: E402
 
 REPO = ellib.REPO
 SEGS = ["coldopen", "act1", "act2", "act3", "act4", "tag"]
-LOCK = sys.argv[sys.argv.index("--lock") + 1] if "--lock" in sys.argv else "v31"      # v31 or v32
+LOCK = sys.argv[sys.argv.index("--lock") + 1] if "--lock" in sys.argv else "v31"      # v31 ... v35
 OUT = os.path.join(REPO, f"audio/ep01/v3-el/ep01-{LOCK}")
 OLDS = [os.path.join(REPO, "audio/ep01/v3-el/ep01"), os.path.join(REPO, "audio/ep01/v3-el/ep01-v31"),
         os.path.join(REPO, "audio/ep01/v3-el/ep01-v32"), os.path.join(REPO, "audio/ep01/v3-el/ep01-v33"),
-        os.path.join(REPO, "audio/ep01/v3-el/ep01-v34")]   # the newest wins
+        os.path.join(REPO, "audio/ep01/v3-el/ep01-v34"), os.path.join(REPO, "audio/ep01/v3-el/ep01-v35")]   # the newest wins
 # the lock's table (audio/ep01/v31/takes.py CUT): id -> (source line, first word index, last word index)
 CUT = {
     "v31-a1-0007": ("e1-a1-10-06", 0, 0),     # Hi!
@@ -59,6 +62,11 @@ CUT_V32 = {
 CUT_V33 = {
     "v33-a4-0002": ("v3-a4-0003", 10, 17),    # We are below them, above them, around them.
 }
+# the v3.5 lock's own (audio/ep01/v35/takes.py, the spec's CUT): Terb's return announcement without its lead-in ("Before
+# this goes out, I'm reading it once."), from "We" to the end (choice 12A)
+CUT_V35 = {
+    "v35-a4-0008": ("v3-a4-0004", 8, 36),     # We have reached an agreement in principle ... and Mada.
+}
 HANDLE, FADE = 0.35, 0.012
 
 
@@ -71,17 +79,37 @@ def norm(w):
     return re.sub(r"[^a-z0-9']", "", w.lower())
 
 
+def lock_order(seg):
+    """the line order of a segment: the lock's timeline, else (before the lock exists) the writer's takes"""
+    p = os.path.join(REPO, f"show/reel/ep01-{LOCK}/ep01-{LOCK}-{seg}.json")
+    if os.path.exists(p):
+        return [l["id"] for b in jload(p)["beats"] for l in b["lines"]]
+    q = os.path.join(REPO, f"audio/ep01/{LOCK}/{seg}/lines-{LOCK}.json")
+    return [r["id"] for r in jload(q)] if os.path.exists(q) else []
+
+
 def main():
     where, tl = {}, {}
+    pre_lock = not os.path.exists(os.path.join(REPO, f"show/reel/ep01-{LOCK}/ep01-{LOCK}-act4.json"))
     for s in SEGS:
+        if pre_lock:
+            q = os.path.join(REPO, f"audio/ep01/{LOCK}/{s}/lines-{LOCK}.json")
+            for r in (jload(q) if os.path.exists(q) else []):
+                if r.get("cut_from"):
+                    tl[r["id"]] = (s, dict(id=r["id"], text=r["text"], audio=r.get("file"), **{"in": None, "dur": None}))
+            continue
         for b in jload(os.path.join(REPO, f"show/reel/ep01-{LOCK}/ep01-{LOCK}-{s}.json"))["beats"]:
             for l in b["lines"]:
                 tl[l["id"]] = (s, l)
+    if pre_lock:
+        print(f"the {LOCK} lock's timelines don't exist yet: the cut lines come from the writer's takes ({sorted(tl)})")
     table = {k: v for k, v in CUT.items() if k in tl}
-    if LOCK in ("v32", "v33", "v34"):
+    if LOCK in ("v32", "v33", "v34", "v35"):
         table.update({k: v for k, v in CUT_V32.items() if k in tl})
-    if LOCK in ("v33", "v34"):
+    if LOCK in ("v33", "v34", "v35"):
         table.update({k: v for k, v in CUT_V33.items() if k in tl})
+    if LOCK == "v35":
+        table.update({k: v for k, v in CUT_V35.items() if k in tl})
     src_rows = {}
     for base in OLDS[: OLDS.index(OUT) + 1]:                  # the newest render (up to this lock's) wins
         for s in SEGS:
@@ -167,7 +195,7 @@ def main():
     for seg, rows in added.items():
         p = os.path.join(OUT, seg, "lines-A.json")
         L = [x for x in jload(p) if x["id"] not in {r["id"] for r in rows}]
-        order = [l["id"] for b in jload(os.path.join(REPO, f"show/reel/ep01-{LOCK}/ep01-{LOCK}-{seg}.json"))["beats"] for l in b["lines"]]
+        order = lock_order(seg)
         L += rows
         L.sort(key=lambda x: order.index(x["id"]) if x["id"] in order else 10 ** 6)
         ellib.jdump(L, p)

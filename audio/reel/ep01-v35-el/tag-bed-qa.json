@@ -1,0 +1,96 @@
+{
+ "segment": "tag",
+ "layers": [
+  {
+   "room": "darkroom",
+   "from": 0.0,
+   "to": 33.25,
+   "lead": 0.0,
+   "trail": 0.0
+  },
+  {
+   "L-cut from Act Four": "the vault's F pedal, into the tag",
+   "over_s": 1.5
+  },
+  {
+   "pad": "TAG",
+   "chords": [
+    "F9sus4",
+    "Dbmaj9#11"
+   ],
+   "lufs": -34,
+   "duck_db": 10,
+   "from": 0.0,
+   "to": 22.5
+  }
+ ],
+ "sfx": [
+  [
+   "32.02",
+   "tape_start",
+   3.208
+  ],
+  [
+   "32.04",
+   "orb_scan_sweep",
+   12.217
+  ],
+  [
+   "32.04",
+   "glyph_blink",
+   12.917
+  ],
+  [
+   "32.04",
+   "orb_scan_sweep",
+   13.117
+  ],
+  [
+   "32.04",
+   "glyph_blink",
+   14.767
+  ],
+  [
+   "32.07",
+   "key_tap_soft_03",
+   18.912
+  ],
+  [
+   "32.07",
+   "key_tap_soft_05",
+   20.024
+  ],
+  [
+   "33.01",
+   "synth:thud",
+   22.5
+  ],
+  [
+   "33.02",
+   "paper_curl",
+   24.518
+  ],
+  [
+   "33.02",
+   "paper_curl",
+   26.845
+  ],
+  [
+   "33.04",
+   "synth:button_chord",
+   30.01
+  ],
+  [
+   "33.04",
+   "vault_hum_F",
+   30.01
+  ]
+ ],
+ "sfx_missing": [],
+ "decisions": [],
+ "seconds": 33.35,
+ "chapter_seconds": 33.25,
+ "lufs": -32.05,
+ "peak_dbfs": -8.13,
+ "built_by": "audio/ep01/v3-el/tools/el_bed.py"
+}

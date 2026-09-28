@@ -1,0 +1,821 @@
+{
+ "role": "auhsoj",
+ "candidates": [],
+ "screen": {
+  "pool": 2335,
+  "passed": 1416,
+  "previews_measured": 90,
+  "file": "audio/ep01/v3-el/cache/audition-auhsoj/screen.json",
+  "shortlist_rule": "previews at least 2 st from both takes the fragment overlaps (Mas's count, v35-vo-04, 106.5 Hz; Tasya's 'Then we should talk.', v35-a4-0006, 134.5 Hz), p(en) >= 0.985, middle-aged where possible, a description near the brief (crisp, direct, confident, conversational), no ethnicity, broadcast, DJ, preaching, sports or coaching register; both sides of the window (above Tasya, below Mas) so the takes decide"
+ },
+ "note": "a new role: no current voice and no round 1; each candidate read the episode line once with el_render.py and the episode's seed (round2/), so the pick's take is the film's take",
+ "episode_takes": [
+  {
+   "key": "ryan-ep",
+   "round": "episode",
+   "voice_id": "AENbDSfaaTrHNSXAheTB",
+   "name": "Ryan - Crisp, Direct and Reliable",
+   "cand": "A",
+   "settings": {
+    "stability": 0.45,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 1.05
+   },
+   "lines_json": "audio/ep01/v3-el/auditions/auhsoj/round2/lines-AauhsojA.json",
+   "note": "el_render.py with the episode's seeds (seed_of(line id, voice)) at the fitted speed: the takes the v3.5 render gets from the cache for free if this voice is cast",
+   "takes": [
+    {
+     "line": "v35-a4-0007",
+     "text": "—the tender's in trouble—",
+     "sent": "the tender's in trouble,",
+     "file": "audio/ep01/v3-el/auditions/auhsoj/round2/wav/v35-a4-0007__auhsoj-A.wav",
+     "file_device": "audio/ep01/v3-el/auditions/auhsoj/round2/wav-device/v35-a4-0007__auhsoj-A.call.wav",
+     "seed": 815131279,
+     "key": "f25edb6811447e9d",
+     "chars": 24,
+     "speed": 1.05,
+     "voiced_s": 1.13,
+     "wpm": 212.4,
+     "sps": 5.31,
+     "pauses": [],
+     "f0": 181.5,
+     "f0_range": 8.1,
+     "tail_cut": false,
+     "asr": "The tenders in trouble",
+     "recall": 0.75,
+     "p_en": 0.9955,
+     "recall_noapos": 1.0,
+     "final_st": 1.63
+    }
+   ],
+   "score": 0.0,
+   "penalties": {
+    "separation": 0.0,
+    "accent": 0.0,
+    "artifacts": 0.0
+   },
+   "brief_points": 0.0
+  },
+  {
+   "key": "rick-ep",
+   "round": "episode",
+   "voice_id": "q7bTgwLsHXBGhc1u5pDy",
+   "name": "Rick - Professional & Friendly",
+   "cand": "B",
+   "settings": {
+    "stability": 0.45,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 1.05
+   },
+   "lines_json": "audio/ep01/v3-el/auditions/auhsoj/round2/lines-AauhsojB.json",
+   "note": "el_render.py with the episode's seeds (seed_of(line id, voice)) at the fitted speed: the takes the v3.5 render gets from the cache for free if this voice is cast",
+   "takes": [
+    {
+     "line": "v35-a4-0007",
+     "text": "—the tender's in trouble—",
+     "sent": "the tender's in trouble,",
+     "file": "audio/ep01/v3-el/auditions/auhsoj/round2/wav/v35-a4-0007__auhsoj-B.wav",
+     "file_device": "audio/ep01/v3-el/auditions/auhsoj/round2/wav-device/v35-a4-0007__auhsoj-B.call.wav",
+     "seed": 2753734092,
+     "key": "b6c582b744b0d205",
+     "chars": 24,
+     "speed": 1.05,
+     "voiced_s": 1.1,
+     "wpm": 218.2,
+     "sps": 5.45,
+     "pauses": [],
+     "f0": 192.9,
+     "f0_range": 10.3,
+     "tail_cut": false,
+     "asr": "The tender's in trouble.",
+     "recall": 1.0,
+     "p_en": 0.9985,
+     "recall_noapos": 1.0,
+     "final_st": 4.26
+    }
+   ],
+   "score": 0.0,
+   "penalties": {
+    "separation": 0.0,
+    "accent": 0.0,
+    "artifacts": 0.0
+   },
+   "brief_points": 0.0
+  },
+  {
+   "key": "blacklogic-ep",
+   "round": "episode",
+   "voice_id": "d2ZHRJrmlIbTz4cF7FuP",
+   "name": "Blacklogic - Confident, Clear",
+   "cand": "C",
+   "settings": {
+    "stability": 0.45,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 1.05
+   },
+   "lines_json": "audio/ep01/v3-el/auditions/auhsoj/round2/lines-AauhsojC.json",
+   "note": "el_render.py with the episode's seeds (seed_of(line id, voice)) at the fitted speed: the takes the v3.5 render gets from the cache for free if this voice is cast",
+   "takes": [
+    {
+     "line": "v35-a4-0007",
+     "text": "—the tender's in trouble—",
+     "sent": "the tender's in trouble,",
+     "file": "audio/ep01/v3-el/auditions/auhsoj/round2/wav/v35-a4-0007__auhsoj-C.wav",
+     "file_device": "audio/ep01/v3-el/auditions/auhsoj/round2/wav-device/v35-a4-0007__auhsoj-C.call.wav",
+     "seed": 3460640816,
+     "key": "02be5652ae74d273",
+     "chars": 24,
+     "speed": 1.05,
+     "voiced_s": 1.0,
+     "wpm": 240.0,
+     "sps": 6.0,
+     "pauses": [],
+     "f0": 152.8,
+     "f0_range": 12.5,
+     "tail_cut": false,
+     "asr": "The tenders in trouble",
+     "recall": 0.75,
+     "p_en": 0.9914,
+     "recall_noapos": 1.0,
+     "final_st": 2.67
+    }
+   ],
+   "score": 0.0,
+   "penalties": {
+    "separation": 0.0,
+    "accent": 0.0,
+    "artifacts": 0.0
+   },
+   "brief_points": 0.0
+  },
+  {
+   "key": "chato irias-ep",
+   "round": "episode",
+   "voice_id": "xu4h8WWpwjjEFUl9OBNd",
+   "name": "Chato Irias",
+   "cand": "D",
+   "settings": {
+    "stability": 0.45,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 1.05
+   },
+   "lines_json": "audio/ep01/v3-el/auditions/auhsoj/round2/lines-AauhsojD.json",
+   "note": "el_render.py with the episode's seeds (seed_of(line id, voice)) at the fitted speed: the takes the v3.5 render gets from the cache for free if this voice is cast",
+   "takes": [
+    {
+     "line": "v35-a4-0007",
+     "text": "—the tender's in trouble—",
+     "sent": "the tender's in trouble,",
+     "file": "audio/ep01/v3-el/auditions/auhsoj/round2/wav/v35-a4-0007__auhsoj-D.wav",
+     "file_device": "audio/ep01/v3-el/auditions/auhsoj/round2/wav-device/v35-a4-0007__auhsoj-D.call.wav",
+     "seed": 2488100022,
+     "key": "2869ba778e5fced9",
+     "chars": 24,
+     "speed": 1.05,
+     "voiced_s": 1.41,
+     "wpm": 170.2,
+     "sps": 4.26,
+     "pauses": [],
+     "f0": 81.6,
+     "f0_range": 13.1,
+     "tail_cut": true,
+     "asr": "The tenders in trouble",
+     "recall": 0.75,
+     "p_en": 0.9943,
+     "recall_noapos": 1.0,
+     "final_st": -3.95
+    }
+   ],
+   "score": 4.0,
+   "penalties": {
+    "separation": 0.0,
+    "accent": 0.0,
+    "artifacts": 4.0
+   },
+   "brief_points": 1.98
+  },
+  {
+   "key": "darren-ep",
+   "round": "episode",
+   "voice_id": "74s0ZNaUEOKhDHSxgJZq",
+   "name": "Darren - Direct, Clear Corporate Worker",
+   "cand": "E",
+   "settings": {
+    "stability": 0.45,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 1.05
+   },
+   "lines_json": "audio/ep01/v3-el/auditions/auhsoj/round2/lines-AauhsojE.json",
+   "note": "el_render.py with the episode's seeds (seed_of(line id, voice)) at the fitted speed: the takes the v3.5 render gets from the cache for free if this voice is cast",
+   "takes": [
+    {
+     "line": "v35-a4-0007",
+     "text": "—the tender's in trouble—",
+     "sent": "the tender's in trouble,",
+     "file": "audio/ep01/v3-el/auditions/auhsoj/round2/wav/v35-a4-0007__auhsoj-E.wav",
+     "file_device": "audio/ep01/v3-el/auditions/auhsoj/round2/wav-device/v35-a4-0007__auhsoj-E.call.wav",
+     "seed": 310562512,
+     "key": "1db896103b4a9651",
+     "chars": 24,
+     "speed": 1.05,
+     "voiced_s": 1.31,
+     "wpm": 183.2,
+     "sps": 5.26,
+     "pauses": [
+      0.17
+     ],
+     "f0": 90.5,
+     "f0_range": 6.0,
+     "tail_cut": false,
+     "asr": "The tenders in trouble",
+     "recall": 0.75,
+     "p_en": 0.9958,
+     "recall_noapos": 1.0,
+     "final_st": -1.75
+    }
+   ],
+   "score": 0.0,
+   "penalties": {
+    "separation": 0.0,
+    "accent": 0.0,
+    "artifacts": 0.0
+   },
+   "brief_points": 2.0
+  }
+ ],
+ "scene": {
+  "about": "every voice against the scene's other voices: the v3.4 EL lock's sc 13 lines (MARIO as his Kokoro takes, as the\n    final film plays him). Semitones between median F0s; spectral centroid and 2-5 kHz presence (0-8 kHz, active\n    frames); the distance between mean MFCCs (c1-c19, 0-8 kHz): larger = more distinct timbre.",
+  "timeline": null,
+  "beats": "*",
+  "takes": {
+   "mas V.O. (the count)": [
+    "audio/ep01/v3-el/ep01-v35/act4/lines-A.json",
+    [
+     "v35-vo-04"
+    ]
+   ],
+   "tasya (then we should talk)": [
+    "audio/ep01/v3-el/ep01-v35/act4/lines-A.json",
+    [
+     "v35-a4-0006"
+    ]
+   ],
+   "mas V.O. (the budget)": [
+    "audio/ep01/v3-el/ep01-v35/act4/lines-A.json",
+    [
+     "v35-vo-03"
+    ]
+   ],
+   "tasya (a minute)": [
+    "audio/ep01/v3-el/ep01-v35/act4/lines-A.json",
+    [
+     "v35-a4-0004"
+    ]
+   ],
+   "gerg": [
+    "audio/ep01/v3-el/ep01-v35/act4/lines-A.json",
+    [
+     "v35-a4-0001",
+     "v35-a4-0003"
+    ]
+   ],
+   "mas": [
+    "audio/ep01/v3-el/ep01-v35/act4/lines-A.json",
+    [
+     "v35-a4-0002",
+     "v35-a4-0005"
+    ]
+   ]
+  },
+  "film_device": true,
+  "neighbours": {
+   "mas V.O. (the count)": {
+    "f0_geo": 106.5,
+    "centroid_hz": 359,
+    "presence_db": -20.06,
+    "files": [
+     "audio/ep01/v3-el/ep01-v35/act4/wav/v35-vo-04__mas-manalt-C.wav"
+    ]
+   },
+   "tasya (then we should talk)": {
+    "f0_geo": 134.8,
+    "centroid_hz": 1142,
+    "presence_db": -7.44,
+    "files": [
+     "audio/ep01/v3-el/ep01-v35/act4/wav-device/v35-a4-0006__tasya-A.call.wav"
+    ]
+   },
+   "mas V.O. (the budget)": {
+    "f0_geo": 107.5,
+    "centroid_hz": 688,
+    "presence_db": -11.38,
+    "files": [
+     "audio/ep01/v3-el/ep01-v35/act4/wav/v35-vo-03__mas-manalt-C.wav"
+    ]
+   },
+   "tasya (a minute)": {
+    "f0_geo": 174.3,
+    "centroid_hz": 718,
+    "presence_db": -13.12,
+    "files": [
+     "audio/ep01/v3-el/ep01-v35/act4/wav-device/v35-a4-0004__tasya-A.call.wav"
+    ]
+   },
+   "gerg": {
+    "f0_geo": 130.5,
+    "centroid_hz": 953,
+    "presence_db": -8.52,
+    "files": [
+     "audio/ep01/v3-el/ep01-v35/act4/wav-device/v35-a4-0001__gerg-mockbran-A.call.wav",
+     "audio/ep01/v3-el/ep01-v35/act4/wav-device/v35-a4-0003__gerg-mockbran-A.call.wav"
+    ]
+   },
+   "mas": {
+    "f0_geo": 121.3,
+    "centroid_hz": 420,
+    "presence_db": -15.3,
+    "files": [
+     "audio/ep01/v3-el/ep01-v35/act4/wav/v35-a4-0002__mas-manalt-C.wav",
+     "audio/ep01/v3-el/ep01-v35/act4/wav/v35-a4-0005__mas-manalt-C.wav"
+    ]
+   }
+  },
+  "voices": {
+   "ryan (all takes)": {
+    "f0_geo": 181.5,
+    "centroid_hz": 1026,
+    "presence_db": -7.54,
+    "takes": 1,
+    "vs": {
+     "mas V.O. (the count)": {
+      "st": 9.23,
+      "mfcc_dist": 89.2
+     },
+     "tasya (then we should talk)": {
+      "st": 5.15,
+      "mfcc_dist": 48.4
+     },
+     "mas V.O. (the budget)": {
+      "st": 9.07,
+      "mfcc_dist": 71.0
+     },
+     "tasya (a minute)": {
+      "st": 0.7,
+      "mfcc_dist": 67.6
+     },
+     "gerg": {
+      "st": 5.7,
+      "mfcc_dist": 52.8
+     },
+     "mas": {
+      "st": 6.98,
+      "mfcc_dist": 68.4
+     }
+    }
+   },
+   "ryan-ep (episode takes)": {
+    "f0_geo": 181.5,
+    "centroid_hz": 1026,
+    "presence_db": -7.54,
+    "takes": 1,
+    "vs": {
+     "mas V.O. (the count)": {
+      "st": 9.23,
+      "mfcc_dist": 89.2
+     },
+     "tasya (then we should talk)": {
+      "st": 5.15,
+      "mfcc_dist": 48.4
+     },
+     "mas V.O. (the budget)": {
+      "st": 9.07,
+      "mfcc_dist": 71.0
+     },
+     "tasya (a minute)": {
+      "st": 0.7,
+      "mfcc_dist": 67.6
+     },
+     "gerg": {
+      "st": 5.7,
+      "mfcc_dist": 52.8
+     },
+     "mas": {
+      "st": 6.98,
+      "mfcc_dist": 68.4
+     }
+    }
+   },
+   "rick (all takes)": {
+    "f0_geo": 194.0,
+    "centroid_hz": 1004,
+    "presence_db": -10.75,
+    "takes": 1,
+    "vs": {
+     "mas V.O. (the count)": {
+      "st": 10.38,
+      "mfcc_dist": 81.3
+     },
+     "tasya (then we should talk)": {
+      "st": 6.3,
+      "mfcc_dist": 56.3
+     },
+     "mas V.O. (the budget)": {
+      "st": 10.22,
+      "mfcc_dist": 65.4
+     },
+     "tasya (a minute)": {
+      "st": 1.85,
+      "mfcc_dist": 65.1
+     },
+     "gerg": {
+      "st": 6.86,
+      "mfcc_dist": 46.5
+     },
+     "mas": {
+      "st": 8.13,
+      "mfcc_dist": 65.2
+     }
+    }
+   },
+   "rick-ep (episode takes)": {
+    "f0_geo": 194.0,
+    "centroid_hz": 1004,
+    "presence_db": -10.75,
+    "takes": 1,
+    "vs": {
+     "mas V.O. (the count)": {
+      "st": 10.38,
+      "mfcc_dist": 81.3
+     },
+     "tasya (then we should talk)": {
+      "st": 6.3,
+      "mfcc_dist": 56.3
+     },
+     "mas V.O. (the budget)": {
+      "st": 10.22,
+      "mfcc_dist": 65.4
+     },
+     "tasya (a minute)": {
+      "st": 1.85,
+      "mfcc_dist": 65.1
+     },
+     "gerg": {
+      "st": 6.86,
+      "mfcc_dist": 46.5
+     },
+     "mas": {
+      "st": 8.13,
+      "mfcc_dist": 65.2
+     }
+    }
+   },
+   "blacklogic (all takes)": {
+    "f0_geo": 167.0,
+    "centroid_hz": 858,
+    "presence_db": -11.48,
+    "takes": 1,
+    "vs": {
+     "mas V.O. (the count)": {
+      "st": 7.79,
+      "mfcc_dist": 68.1
+     },
+     "tasya (then we should talk)": {
+      "st": 3.71,
+      "mfcc_dist": 46.6
+     },
+     "mas V.O. (the budget)": {
+      "st": 7.63,
+      "mfcc_dist": 58.9
+     },
+     "tasya (a minute)": {
+      "st": -0.74,
+      "mfcc_dist": 48.3
+     },
+     "gerg": {
+      "st": 4.26,
+      "mfcc_dist": 34.1
+     },
+     "mas": {
+      "st": 5.54,
+      "mfcc_dist": 46.0
+     }
+    }
+   },
+   "blacklogic-ep (episode takes)": {
+    "f0_geo": 167.0,
+    "centroid_hz": 858,
+    "presence_db": -11.48,
+    "takes": 1,
+    "vs": {
+     "mas V.O. (the count)": {
+      "st": 7.79,
+      "mfcc_dist": 68.1
+     },
+     "tasya (then we should talk)": {
+      "st": 3.71,
+      "mfcc_dist": 46.6
+     },
+     "mas V.O. (the budget)": {
+      "st": 7.63,
+      "mfcc_dist": 58.9
+     },
+     "tasya (a minute)": {
+      "st": -0.74,
+      "mfcc_dist": 48.3
+     },
+     "gerg": {
+      "st": 4.26,
+      "mfcc_dist": 34.1
+     },
+     "mas": {
+      "st": 5.54,
+      "mfcc_dist": 46.0
+     }
+    }
+   },
+   "chato irias (all takes)": {
+    "f0_geo": 87.8,
+    "centroid_hz": 1086,
+    "presence_db": -10.91,
+    "takes": 1,
+    "vs": {
+     "mas V.O. (the count)": {
+      "st": -3.34,
+      "mfcc_dist": 36.6
+     },
+     "tasya (then we should talk)": {
+      "st": -7.42,
+      "mfcc_dist": 62.0
+     },
+     "mas V.O. (the budget)": {
+      "st": -3.5,
+      "mfcc_dist": 46.0
+     },
+     "tasya (a minute)": {
+      "st": -11.87,
+      "mfcc_dist": 55.8
+     },
+     "gerg": {
+      "st": -6.87,
+      "mfcc_dist": 47.8
+     },
+     "mas": {
+      "st": -5.59,
+      "mfcc_dist": 30.2
+     }
+    }
+   },
+   "chato irias-ep (episode takes)": {
+    "f0_geo": 87.8,
+    "centroid_hz": 1086,
+    "presence_db": -10.91,
+    "takes": 1,
+    "vs": {
+     "mas V.O. (the count)": {
+      "st": -3.34,
+      "mfcc_dist": 36.6
+     },
+     "tasya (then we should talk)": {
+      "st": -7.42,
+      "mfcc_dist": 62.0
+     },
+     "mas V.O. (the budget)": {
+      "st": -3.5,
+      "mfcc_dist": 46.0
+     },
+     "tasya (a minute)": {
+      "st": -11.87,
+      "mfcc_dist": 55.8
+     },
+     "gerg": {
+      "st": -6.87,
+      "mfcc_dist": 47.8
+     },
+     "mas": {
+      "st": -5.59,
+      "mfcc_dist": 30.2
+     }
+    }
+   },
+   "darren (all takes)": {
+    "f0_geo": 91.1,
+    "centroid_hz": 821,
+    "presence_db": -12.31,
+    "takes": 1,
+    "vs": {
+     "mas V.O. (the count)": {
+      "st": -2.7,
+      "mfcc_dist": 82.4
+     },
+     "tasya (then we should talk)": {
+      "st": -6.78,
+      "mfcc_dist": 60.6
+     },
+     "mas V.O. (the budget)": {
+      "st": -2.87,
+      "mfcc_dist": 81.1
+     },
+     "tasya (a minute)": {
+      "st": -11.23,
+      "mfcc_dist": 53.5
+     },
+     "gerg": {
+      "st": -6.23,
+      "mfcc_dist": 47.9
+     },
+     "mas": {
+      "st": -4.95,
+      "mfcc_dist": 60.5
+     }
+    }
+   },
+   "darren-ep (episode takes)": {
+    "f0_geo": 91.1,
+    "centroid_hz": 821,
+    "presence_db": -12.31,
+    "takes": 1,
+    "vs": {
+     "mas V.O. (the count)": {
+      "st": -2.7,
+      "mfcc_dist": 82.4
+     },
+     "tasya (then we should talk)": {
+      "st": -6.78,
+      "mfcc_dist": 60.6
+     },
+     "mas V.O. (the budget)": {
+      "st": -2.87,
+      "mfcc_dist": 81.1
+     },
+     "tasya (a minute)": {
+      "st": -11.23,
+      "mfcc_dist": 53.5
+     },
+     "gerg": {
+      "st": -6.23,
+      "mfcc_dist": 47.9
+     },
+     "mas": {
+      "st": -4.95,
+      "mfcc_dist": 60.5
+     }
+    }
+   }
+  }
+ },
+ "ranking": [
+  {
+   "rank": 1,
+   "key": "rick",
+   "score": 0.0,
+   "takes": 1,
+   "f0": 192.9,
+   "wpm_line1": 218.2,
+   "at_speed": 1.05,
+   "pace_penalty": 0.0,
+   "penalties": {
+    "separation": 0.0,
+    "accent": 0.0,
+    "artifacts": 0.0
+   },
+   "final_st": [
+    4.26
+   ]
+  },
+  {
+   "rank": 2,
+   "key": "ryan",
+   "score": 0.0,
+   "takes": 1,
+   "f0": 181.5,
+   "wpm_line1": 212.4,
+   "at_speed": 1.05,
+   "pace_penalty": 0.0,
+   "penalties": {
+    "separation": 0.0,
+    "accent": 0.0,
+    "artifacts": 0.0
+   },
+   "final_st": [
+    1.63
+   ]
+  },
+  {
+   "rank": 3,
+   "key": "blacklogic",
+   "score": 0.0,
+   "takes": 1,
+   "f0": 152.8,
+   "wpm_line1": 240.0,
+   "at_speed": 1.05,
+   "pace_penalty": 0.0,
+   "penalties": {
+    "separation": 0.0,
+    "accent": 0.0,
+    "artifacts": 0.0
+   },
+   "final_st": [
+    2.67
+   ]
+  },
+  {
+   "rank": 4,
+   "key": "darren",
+   "score": 0.0,
+   "takes": 1,
+   "f0": 90.5,
+   "wpm_line1": 183.2,
+   "at_speed": 1.05,
+   "pace_penalty": 0.0,
+   "penalties": {
+    "separation": 0.0,
+    "accent": 0.0,
+    "artifacts": 0.0
+   },
+   "final_st": [
+    -1.75
+   ]
+  },
+  {
+   "rank": 5,
+   "key": "chato irias",
+   "score": 4.0,
+   "takes": 1,
+   "f0": 81.6,
+   "wpm_line1": 170.2,
+   "at_speed": 1.05,
+   "pace_penalty": 0.98,
+   "penalties": {
+    "separation": 0.0,
+    "accent": 0.0,
+    "artifacts": 4.0
+   },
+   "final_st": [
+    -3.95
+   ]
+  }
+ ],
+ "ranking_rule": "per voice over its takes, lower is better: at least 2 st from each voice the fragment overlaps (mas V.O. (the count) 106 Hz, tasya (then we should talk) 135 Hz; 1 point per semitone short), p(en) under 0.985 (1 point per 0.01), 4 per clipped tail or ASR recall under 0.9 per take (recall read blind to apostrophes). Ties are broken by the brief, then by timbre: brisk (the fragment against 180-240 wpm, 1 point per 10 wpm outside, and 1 for a pause of 0.15 s or more inside it) and a fragment (1 if its final falls 1 st or more under the take's median: a finished statement); then the larger of the smaller mean-MFCC distances to the overlapped voices",
+ "listening_file": {
+  "file": "out/ep01/full-v3/voices/auhsoj-cast.mp3",
+  "seconds": 52.2,
+  "order": [
+   {
+    "slate": "Candidate one: Rick.",
+    "what": "candidate 1 (1.05)",
+    "key": "rick-ep",
+    "name": "Rick - Professional & Friendly",
+    "voice_id": "q7bTgwLsHXBGhc1u5pDy",
+    "starts_s": 6.6,
+    "speed": 1.05
+   },
+   {
+    "slate": "Candidate two: Ryan.",
+    "what": "candidate 2 (1.05)",
+    "key": "ryan-ep",
+    "name": "Ryan - Crisp, Direct and Reliable",
+    "voice_id": "AENbDSfaaTrHNSXAheTB",
+    "starts_s": 15.51,
+    "speed": 1.05
+   },
+   {
+    "slate": "Candidate three: Blacklogic.",
+    "what": "candidate 3 (1.05)",
+    "key": "blacklogic-ep",
+    "name": "Blacklogic - Confident, Clear",
+    "voice_id": "d2ZHRJrmlIbTz4cF7FuP",
+    "starts_s": 24.53,
+    "speed": 1.05
+   },
+   {
+    "slate": "Candidate four: Darren.",
+    "what": "candidate 4 (1.05)",
+    "key": "darren-ep",
+    "name": "Darren - Direct, Clear Corporate Worker",
+    "voice_id": "74s0ZNaUEOKhDHSxgJZq",
+    "starts_s": 33.54,
+    "speed": 1.05
+   },
+   {
+    "slate": "Candidate five: Chato Irias.",
+    "what": "candidate 5 (1.05)",
+    "key": "chato irias-ep",
+    "name": "Chato Irias",
+    "voice_id": "xu4h8WWpwjjEFUl9OBNd",
+    "starts_s": 42.5,
+    "speed": 1.05
+   }
+  ],
+  "slate": "Kokoro af_heart, -20 LUFS; the takes as dressed (-16 LUFS)"
+ }
+}

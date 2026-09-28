@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""el_audition.py - audition a supporting role's recast in ElevenLabs (track A4, v3-voices-el; v3.5: SIRRAH).
+"""el_audition.py - audition a supporting role's recast in ElevenLabs (track A4, v3-voices-el; v3.5: SIRRAH), or cast a new
+one (v3.5: AUHSOJ, who had no voice).
 
 The showrunner: "harris's voice is not very good. the rest are fine." SIRRAH's current voice is the library's
 'Marie - Professional & Warm'. This auditions 3-4 other library voices on her two lines and picks by measurement and fit
@@ -21,6 +22,11 @@ chosen for resembling anyone; no laugh or accent is asked for (guardrails §6).
   file    (.venv-casting)  a listening file: a Kokoro slate before each voice's lines, in rank order, then round 2
 
 Outputs: audio/ep01/v3-el/auditions/<role>/ (index.json, the takes); the listening file in out/ep01/full-v3/voices/.
+
+A new role (AUHSOJ) has no current voice: `reference` is skipped, round 1 is skipped too (el_render.py renders each
+candidate's episode take straight away, with the episode's seed: one render per voice, and the pick's take is the film's),
+and `scene` measures against the takes of the scene he overlaps as the film plays them (the call copies of the call
+tiles, Mas's V.O. dry), from their lines JSON, since the scene has no EL lock yet.
 """
 from __future__ import annotations
 
@@ -59,6 +65,40 @@ ROLE = dict(
         ban=["politic", "president", "senator", "campaign", "vice", "government", "congress", "election", "speech",
              "impression", "celebrity", "famous", "like ", "sound-alike", "soundalike", "parody"],
     ),
+    # v3.5: AUHSOJ, an investor on a call tile in the war room (sc 41), one overlapping fragment. No voice yet: cast here.
+    # Brief: male, brisk, American; a man mid-sentence on a call. Never the real person's voice: nothing is chosen for
+    # resembling anyone, and the screen drops the real person's names and anything political or impression-like.
+    auhsoj=dict(
+        lines=[("v35-a4-0007", "—the tender's in trouble—")],
+        gender="male", ages=("middle_aged", "young"), new_role=True,
+        lane=None,                               # no lane a priori: the voices he overlaps decide (overlap, below)
+        pace=(180.0, 240.0),                     # brisk: the four words at 180-240 wpm (the Kokoro read: 190)
+        settings=dict(stability=0.45, similarity_boost=0.75, style=0.1, use_speaker_boost=True, speed=1.05),
+        lines_json="audio/ep01/v35/act4/lines-v35.json",
+        # the scene as the film plays it: the war room's other voices (call tiles through their call copies; Mas's V.O. dry)
+        # (the two takes he overlaps are scored: Tasya's "Then we should talk." under his first word, and the count, which
+        # starts under his fragment; the scene's other takes are reported beside them)
+        scene_takes={"mas V.O. (the count)": ("audio/ep01/v3-el/ep01-v35/act4/lines-A.json", ["v35-vo-04"]),
+                     "tasya (then we should talk)": ("audio/ep01/v3-el/ep01-v35/act4/lines-A.json", ["v35-a4-0006"]),
+                     "mas V.O. (the budget)": ("audio/ep01/v3-el/ep01-v35/act4/lines-A.json", ["v35-vo-03"]),
+                     "tasya (a minute)": ("audio/ep01/v3-el/ep01-v35/act4/lines-A.json", ["v35-a4-0004"]),
+                     "gerg": ("audio/ep01/v3-el/ep01-v35/act4/lines-A.json", ["v35-a4-0001", "v35-a4-0003"]),
+                     "mas": ("audio/ep01/v3-el/ep01-v35/act4/lines-A.json", ["v35-a4-0002", "v35-a4-0005"])},
+        film_device=True,
+        file_intro="Auhsoj, cast. His one fragment per voice, in ranked order: dry, then on the call.",
+        # the two voices his fragment overlaps (it starts 0.3 s under Tasya's last word; the V.O. starts under it):
+        # at least 2 st from each; Gerg and Mas's spoken lines are reported, not scored
+        overlap={"mas V.O. (the count)": 2.0, "tasya (then we should talk)": 2.0},
+        kw_plus=["brisk", "quick", "fast", "crisp", "confident", "direct", "clear", "sharp", "punchy", "dynamic",
+                 "conversational", "business", "professional", "natural", "snappy", "efficient", "articulate", "engaging",
+                 "energetic", "upbeat", "modern", "smart"],
+        kw_minus=["narrat", "audiobook", "deep", "bass", "soothing", "calm", "slow", "whisper", "asmr", "trailer",
+                  "announcer", "commercial", "hype", "character", "cartoon", "villain", "old ", "elderly", "teen", "sultry",
+                  "meditat", "gravel", "raspy", "relax", "gentle", "soft", "sleep", "story"],
+        ban=["politic", "president", "senator", "campaign", "government", "congress", "election", "impression",
+             "celebrity", "famous", "like ", "sound-alike", "soundalike", "parody", "josh", "kushner", "thrive",
+             "billionaire", "royal", "prince"],
+    ),
 )
 TAKES = lambda role: os.path.join(REPO, f"audio/ep01/v3-el/auditions/{role}")
 CACHE = lambda role: os.path.join(REPO, f"audio/ep01/v3-el/cache/audition-{role}")
@@ -78,15 +118,18 @@ def cmd_screen(a):
     spec = ROLE[a.role]
     cast = json.load(open(os.path.join(REPO, "audio/ep01/v3-el/cast-el.json")))
     used = {c["voice_id"] for r in cast["roles"].values() for c in r.get("candidates", [])}
-    pool, page = [], 0
-    while True:
-        r = ellib.get("/v1/shared-voices", page_size=100, page=page, language="en", accent="american", gender="female",
-                      age="middle_aged")
-        vs = r.get("voices", [])
-        pool += vs
-        if not r.get("has_more") or not vs or page > 12:
-            break
-        page += 1
+    pool, seen = [], set()
+    for age in spec.get("ages", ("middle_aged",)):
+        page = 0
+        while True:
+            r = ellib.get("/v1/shared-voices", page_size=100, page=page, language="en", accent="american",
+                          gender=spec.get("gender", "female"), age=age)
+            vs = r.get("voices", [])
+            pool += [v for v in vs if v["voice_id"] not in seen]
+            seen.update(v["voice_id"] for v in vs)
+            if not r.get("has_more") or not vs or page > 12:
+                break
+            page += 1
     cand = []
     for v in pool:
         txt = (v.get("name", "") + " " + (v.get("description") or "") + " " + (v.get("descriptive") or "")).lower()
@@ -102,7 +145,8 @@ def cmd_screen(a):
     pdir = os.path.join(CACHE(a.role), "previews")
     os.makedirs(pdir, exist_ok=True)
     rows = []
-    print(f"screen: {len(pool)} female American middle-aged library voices; {len(cand)} pass; measuring {len(pick)} previews")
+    print(f"screen: {len(pool)} {spec.get('gender', 'female')} American {'/'.join(spec.get('ages', ('middle_aged',)))} "
+          f"library voices; {len(cand)} pass; measuring {len(pick)} previews")
     for v in pick:
         p = os.path.join(pdir, v["voice_id"] + ".mp3")
         if not os.path.exists(p):
@@ -115,8 +159,9 @@ def cmd_screen(a):
         f0, rng = M.f0_of(y)
         ac = M.accent(y)
         rows.append(dict(voice_id=v["voice_id"], name=v["name"], category=v.get("category"), use_case=v.get("use_case"),
-                         descriptive=v.get("descriptive"), description=v.get("description"), f0=f0, f0_range=rng,
-                         p_en=ac["p_en"], top_other=ac["top_other"]))
+                         descriptive=v.get("descriptive"), age=v.get("age"), description=v.get("description"), f0=f0,
+                         f0_range=rng, p_en=ac["p_en"], top_other=ac["top_other"],
+                         usage_1y=v.get("usage_character_count_1y"), kw_score=next(round(k, 2) for k, _, w in cand if w is v)))
         print(f"  {v['name'][:46]:46s} {v['voice_id']} f0 {str(f0):6s} p_en {ac['p_en']:.4f} | {(v.get('description') or '')[:70]}")
     jdump(dict(n_pool=len(pool), n_pass=len(cand), rows=rows), os.path.join(CACHE(a.role), "screen.json"))
 
@@ -211,19 +256,54 @@ def cmd_reference(a):
     print("current:", [(t["line"], t["f0"], t["voiced_s"], t["p_en"]) for t in takes])
 
 
+def recall_noapos(x):
+    """ASR word recall with apostrophes dropped on both sides (homophones such as tender's / tenders); names excepted"""
+    if not x.get("asr"):
+        return x["recall"]
+    names = set(json.load(open(os.path.join(REPO, "audio/ep01/v3-el/cast-el.json"))).get("names", []))
+    return E.word_recall(x["text"].replace("'", ""), x["asr"].replace("'", ""), {n.replace("'", "") for n in names})
+
+
+def final_contour(path):
+    """the line's last 0.25 s of voiced, loud speech against the take's median, in semitones: a finished statement
+    falls (about -2 st or lower); a fragment cut off mid-sentence stays level or rises"""
+    import librosa
+    from scipy.signal import resample_poly
+    import mas_recast as M
+    y = M.load_audio(os.path.join(REPO, path))
+    y16 = resample_poly(y.astype(np.float64), 1, 3)
+    f0 = librosa.yin(y16, fmin=55, fmax=420, sr=16000, frame_length=1024, hop_length=160)
+    rms = librosa.feature.rms(y=y16, frame_length=1024, hop_length=160)[0][: len(f0)]
+    f0 = f0[: len(rms)]
+    loud = 20 * np.log10(rms / (rms.max() + 1e-12) + 1e-12) > -28
+    idx = np.where(loud)[0]
+    if len(idx) < 10:
+        return None
+    med = np.median(f0[idx])
+    ok = idx[np.abs(12 * np.log2(f0[idx] / med)) <= 9]
+    tail = ok[ok >= ok[-1] - 25]                       # the last 0.25 s of loud voiced frames (10 ms hop)
+    return round(float(12 * np.log2(np.median(f0[tail]) / med)), 2)
+
+
 def score(t, spec, pace_take=None):
     """the penalties of one voice over all its takes (audition and episode rounds). Pace is kept out of the sum: it is
     the speed setting's, and is reported with the speed that read it (pace_take: the round the film would use)."""
     f0 = float(np.median([x["f0"] for x in t if x["f0"]]))
     lane = spec["lane"]
     pen = {}
-    pen["lane"] = 0.0 if lane[0] <= f0 <= lane[1] else abs(12 * math.log2(f0 / (lane[0] if f0 < lane[0] else lane[1])))
-    # the photographer (the scene's other woman): at least 1.5 st away from her median
-    ph = math.sqrt(spec["neighbours"]["photographer"][0] * spec["neighbours"]["photographer"][1])
-    pen["separation"] = max(0.0, 1.5 - abs(12 * math.log2(f0 / ph)))
+    if lane:
+        pen["lane"] = 0.0 if lane[0] <= f0 <= lane[1] else abs(12 * math.log2(f0 / (lane[0] if f0 < lane[0] else lane[1])))
+    if spec.get("overlap"):
+        # the voices this role overlaps (the scene's measured takes, as the film plays them): at least N st from each
+        pen["separation"] = sum(max(0.0, need - abs(12 * math.log2(f0 / spec["_nb_f0"][n]))) for n, need in spec["overlap"].items())
+    else:
+        # the photographer (the scene's other woman): at least 1.5 st away from her median
+        ph = math.sqrt(spec["neighbours"]["photographer"][0] * spec["neighbours"]["photographer"][1])
+        pen["separation"] = max(0.0, 1.5 - abs(12 * math.log2(f0 / ph)))
     pen["accent"] = max(0.0, (0.985 - float(np.mean([x["p_en"] for x in t]))) * 100)
-    # 2 per clipped tail or ASR recall under 0.9, per pair of takes (a voice heard in two rounds isn't counted twice)
-    pen["artifacts"] = 4.0 * (sum(1 for x in t if x["tail_cut"]) + sum(1 for x in t if x["recall"] < 0.9)) / len(t)
+    # 2 per clipped tail or ASR recall under 0.9, per pair of takes (a voice heard in two rounds isn't counted twice).
+    # Recall is read blind to apostrophes: "tender's" written "tenders" is the recogniser's spelling, not a lost word
+    pen["artifacts"] = 4.0 * (sum(1 for x in t if x["tail_cut"]) + sum(1 for x in t if recall_noapos(x) < 0.9)) / len(t)
     pt = pace_take or next(x for x in t if x["line"] == spec["lines"][0][0])
     w = pt["wpm"]
     pace = 0.0 if spec["pace"][0] <= w <= spec["pace"][1] else min(abs(w - spec["pace"][0]), abs(w - spec["pace"][1])) / 10
@@ -231,9 +311,11 @@ def score(t, spec, pace_take=None):
 
 
 def cmd_pick(a):
-    spec = ROLE[a.role]
+    spec = dict(ROLE[a.role])
     ix_p = os.path.join(TAKES(a.role), "index.json")
     ix = json.load(open(ix_p))
+    if spec.get("overlap"):
+        spec["_nb_f0"] = {n: v["f0_geo"] for n, v in ix["scene"]["neighbours"].items()}
     ents = ix["candidates"] + ix.get("episode_takes", []) + ([ix["current"]] if ix.get("current") else [])
     by = {}
     for c in ents:
@@ -249,18 +331,44 @@ def cmd_pick(a):
         key = cs[0]["key"].replace("-ep", "")
         for c in cs:
             c["score"], c["penalties"] = sc, pen
-        rows.append((sc, key, f0, w, speed, pace, pen, len(t)))
-    rows.sort(key=lambda r: (r[0], r[5]))
+        tb = 0.0
+        if spec.get("overlap"):
+            for c in cs:
+                for x in c["takes"]:
+                    x["recall_noapos"] = recall_noapos(x)
+                    x["final_st"] = final_contour(x["file"])
+            # the tie-break: first the brief's two measurable qualities, then the nearest timbre among the overlapped
+            # voices. Brisk: the pace penalty, plus 1 for a pause of 0.15 s or more inside the fragment. A fragment: 1 if
+            # the final falls 1 st or more (it lands as a finished statement)
+            brief = pace + sum(1 for x in t if any(p >= 0.15 for p in (x.get("pauses") or []))) \
+                + sum(1 for x in t if x.get("final_st") is not None and x["final_st"] <= -1.0)
+            vs = (ix["scene"]["voices"].get(f"{key} (all takes)") or {}).get("vs") or {}
+            tb = (brief, -min((vs[n]["mfcc_dist"] for n in spec["overlap"] if n in vs), default=0.0))
+            for c in cs:
+                c["brief_points"] = brief
+        rows.append((sc, key, f0, w, speed, pace, pen, len(t), tb))
+    rows.sort(key=lambda r: (r[0], r[8], r[5]) if spec.get("overlap") else (r[0], r[5]))
+    fin = {k: [x.get("final_st") for c in by[vid] for x in c["takes"]] for vid in by for k in [by[vid][0]["key"].replace("-ep", "")]}
+    rows = [r[:8] for r in rows]
     ix["ranking"] = [dict(rank=i + 1, key=k, score=sc, takes=n, f0=f0, wpm_line1=w, at_speed=sp, pace_penalty=pc,
-                          penalties=pen) for i, (sc, k, f0, w, sp, pc, pen, n) in enumerate(rows)]
+                          penalties=pen, **({"final_st": fin.get(k)} if spec.get("overlap") else {}))
+                     for i, (sc, k, f0, w, sp, pc, pen, n) in enumerate(rows)]
     ix["ranking_rule"] = ("per voice over all its takes, lower is better: the lane 170-205 Hz (semitones outside), at least "
                           "1.5 st from the photographer (the scene's other woman, 184-217 Hz), p(en) under 0.985 (1 point per "
                           "0.01), 2 per clipped tail or ASR recall under 0.9 per pair of takes. Pace is not in the score (the speed "
                           "setting sets it): 'Any questions…' against 140-155 wpm (1 point per 10 wpm outside) is reported for "
-                          "the round the film would use, at its speed")
+                          "the round the film would use, at its speed") if not spec.get("overlap") else (
+        "per voice over its takes, lower is better: at least 2 st from each voice the fragment overlaps (" +
+        ", ".join(f"{n} {v:.0f} Hz" for n, v in spec["_nb_f0"].items() if n in spec["overlap"]) +
+        "; 1 point per semitone short), p(en) under 0.985 (1 point per 0.01), 4 per clipped tail or ASR recall under 0.9 "
+        "per take (recall read blind to apostrophes). Ties are broken by the brief, then by timbre: brisk (the fragment "
+        f"against {spec['pace'][0]:.0f}-{spec['pace'][1]:.0f} wpm, 1 point per 10 wpm outside, and 1 for a pause of 0.15 s "
+        "or more inside it) and a fragment (1 if its final falls 1 st or more under the take's median: a finished "
+        "statement); then the larger of the smaller mean-MFCC distances to the overlapped voices")
     jdump(ix, ix_p)
     for sc, k, f0, w, sp, pc, pen, n in rows:
-        print(f"{k:18s} score {sc:5.2f} ({n} takes) f0 {f0:6.1f} | line 1 {w:6.1f} wpm at speed {sp} (pace {pc:4.2f}) | {pen}")
+        print(f"{k:18s} score {sc:5.2f} ({n} takes) f0 {f0:6.1f} | line 1 {w:6.1f} wpm at speed {sp} (pace {pc:4.2f}) | {pen}"
+              + (f" | final {fin.get(k)} st" if spec.get("overlap") else ""))
 
 
 def cmd_ingest(a):
@@ -275,7 +383,8 @@ def cmd_ingest(a):
     for r in rows:
         y = M.load_audio(os.path.join(REPO, r["file"]))
         m, q = r["pace"]["measured"], r["qa"]
-        takes.append(dict(line=r["id"], text=r["text"], sent=r["spoken_as"], file=r["file"], seed=r["el"]["seed"],
+        takes.append(dict(line=r["id"], text=r["text"], sent=r["spoken_as"], file=r["file"], file_device=r.get("file_device"),
+                          seed=r["el"]["seed"],
                           key=r["el"]["request_key"], chars=r["el"]["chars_sent"], speed=r["pace"]["speed"],
                           voiced_s=m["span_s"], wpm=r["pace"]["wpm"], sps=m["articulation_sps"], pauses=m["pauses_s"],
                           f0=q["median_f0_hz"], f0_range=q["f0_range_st"], tail_cut=q["raw_tail_cut"], asr=q["asr"],
@@ -320,20 +429,27 @@ def cmd_scene(a):
         f0s = [f["f0"] for f in fs if f["f0"]]
         return dict(f0=float(np.exp(np.mean(np.log(f0s)))), cen=float(np.mean([f["cen"] for f in fs])),
                     pres=float(np.mean([f["pres"] for f in fs])), mfcc=np.mean([f["mfcc"] for f in fs], axis=0))
-    T = json.load(open(os.path.join(REPO, spec["scene_timeline"])))
     nb = {}
-    for b in T["beats"]:
-        if not b["id"].startswith(spec["scene_prefix"]):
-            continue
-        for l in b.get("lines") or []:
-            if l["who"] == a.role or l.get("tag") == "V.O.":
+    if spec.get("scene_takes"):                  # a scene with no EL lock yet: its takes, as the film plays them
+        for k, (lj, ids) in spec["scene_takes"].items():
+            rows = {r["id"]: r for r in json.load(open(os.path.join(REPO, lj)))}
+            nb[k] = [(rows[i].get("file_device") if spec.get("film_device") and rows[i].get("file_device") else rows[i]["file"])
+                     for i in ids if i in rows]
+    else:
+        T = json.load(open(os.path.join(REPO, spec["scene_timeline"])))
+        for b in T["beats"]:
+            if not b["id"].startswith(spec["scene_prefix"]):
                 continue
-            if l["who"] in spec.get("kokoro_roles", ()):
-                nb.setdefault(l["who"] + " (kokoro)", []).append(l["kokoro"]["audio"])
-            else:
-                nb.setdefault(l["who"], []).append(l["audio"])
+            for l in b.get("lines") or []:
+                if l["who"] == a.role or l.get("tag") == "V.O.":
+                    continue
+                if l["who"] in spec.get("kokoro_roles", ()):
+                    nb.setdefault(l["who"] + " (kokoro)", []).append(l["kokoro"]["audio"])
+                else:
+                    nb.setdefault(l["who"], []).append(l["audio"])
     N = {k: agg([feats(p) for p in ps]) for k, ps in nb.items()}
-    ents = ix["candidates"] + ix.get("episode_takes", []) + [ix["current"]]
+    ents = ix["candidates"] + ix.get("episode_takes", []) + ([ix["current"]] if ix.get("current") else [])
+    fpath = lambda x: (x.get("file_device") or x["file"]) if spec.get("film_device") else x["file"]
     by = {}
     for c in ents:
         by.setdefault(c["voice_id"], []).append(c)
@@ -343,12 +459,13 @@ def cmd_scene(a):
         key = cs[0]["key"].replace("-ep", "")
         for label, group in ((key + " (all takes)", [x for c in cs for x in c["takes"]]),
                              *[(c["key"] + " (episode takes)", c["takes"]) for c in cs if c.get("round") == "episode"]):
-            g = agg([feats(x["file"]) for x in group])
+            g = agg([feats(fpath(x)) for x in group])
             out["voices"][label] = dict(
                 f0_geo=round(g["f0"], 1), centroid_hz=round(g["cen"]), presence_db=round(g["pres"], 2), takes=len(group),
                 vs={n: dict(st=round(12 * math.log2(g["f0"] / v["f0"]), 2), mfcc_dist=round(float(np.linalg.norm(g["mfcc"] - v["mfcc"])), 1))
                     for n, v in N.items()})
-    ix["scene"] = dict(about=cmd_scene.__doc__.strip(), timeline=spec["scene_timeline"], beats=spec["scene_prefix"] + "*", **out)
+    ix["scene"] = dict(about=cmd_scene.__doc__.strip(), timeline=spec.get("scene_timeline"), beats=spec.get("scene_prefix", "") + "*",
+                       takes=spec.get("scene_takes"), film_device=bool(spec.get("film_device")), **out)
     jdump(ix, ix_p)
     print("neighbours:", {k: (v["f0_geo"], v["centroid_hz"], v["presence_db"]) for k, v in out["neighbours"].items()})
     for k, v in out["voices"].items():
@@ -376,22 +493,28 @@ def cmd_file(a):
     cands = sorted(ix["candidates"], key=lambda c: rank.index(c["key"]) if c["key"] in rank else 99)
     eps = sorted(ix.get("episode_takes", []), key=lambda c: rank.index(c["key"].replace("-ep", "")) if c["key"].replace("-ep", "") in rank else 99)
     words = ["one", "two", "three", "four", "five", "six"]
-    order = [(f"The current voice: {first(ix['current'])}.", "current", ix["current"])]
+    order = [(f"The current voice: {first(ix['current'])}.", "current", ix["current"])] if ix.get("current") else []
     order += [(f"Candidate {words[n]}: {first(c)}.", f"candidate {n + 1}", c) for n, c in enumerate(cands)]
-    order += [((f"Round two, at the episode's pace. {first(c)}, speed {c['settings']['speed']:g}." if n == 0 else
-                f"{first(c)}, speed {c['settings']['speed']:g}."), f"round 2 ({c['settings']['speed']:g})", c) for n, c in enumerate(eps)]
-    parts, idx = [slate("Sirrah, recast. Her two lines per voice: the current voice, four candidates in ranked order, "
-                        "then the top two at the episode's pace."), gap(1.0)], []
+    if ROLE[a.role].get("new_role"):             # a new role: its candidates' episode takes, in rank order, as the film plays them
+        order += [(f"Candidate {words[n]}: {first(c)}.", f"candidate {n + 1} ({c['settings']['speed']:g})", c) for n, c in enumerate(eps)]
+    else:
+        order += [((f"Round two, at the episode's pace. {first(c)}, speed {c['settings']['speed']:g}." if n == 0 else
+                    f"{first(c)}, speed {c['settings']['speed']:g}."), f"round 2 ({c['settings']['speed']:g})", c) for n, c in enumerate(eps)]
+    intro = ROLE[a.role].get("file_intro") or ("Sirrah, recast. Her two lines per voice: the current voice, four candidates "
+                                               "in ranked order, then the top two at the episode's pace.")
+    parts, idx = [slate(intro), gap(1.0)], []
     for say, label, c in order:
         t = sum(len(p) for p in parts) / E.SR
         parts += [slate(say), gap(0.7)]
         for x in c["takes"]:
             parts += [M.load_audio(os.path.join(REPO, x["file"])), gap(0.6)]
+            if ROLE[a.role].get("film_device") and x.get("file_device"):     # then as the film plays it (the call chain)
+                parts += [M.load_audio(os.path.join(REPO, x["file_device"])), gap(0.6)]
         parts.append(gap(0.8))
         idx.append(dict(slate=say, what=label, key=c["key"], name=c["name"], voice_id=c["voice_id"], starts_s=round(t, 2),
                         speed=(c.get("settings") or {}).get("speed", (c["takes"][0].get("speed")))))
     y = np.concatenate(parts)
-    out = os.path.join(REPO, f"out/ep01/full-v3/voices/{a.role}-recast.mp3")
+    out = os.path.join(REPO, f"out/ep01/full-v3/voices/{a.role}-{'cast' if ROLE[a.role].get('new_role') else 'recast'}.mp3")
     os.makedirs(os.path.dirname(out), exist_ok=True)
     sf.write(out, y, E.SR, format="MP3")
     ix["listening_file"] = dict(file=os.path.relpath(out, REPO), seconds=round(len(y) / E.SR, 1), order=idx,

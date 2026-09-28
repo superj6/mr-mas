@@ -1,0 +1,31 @@
+{
+ "segment": "coldopen",
+ "layers": [
+  {
+   "music+rooms+sfx": "audio/reel/ep01-v35/coldopen-bed.wav (the lock's cold-open bed), spliced per beat",
+   "crossfade_s": 0.06
+  }
+ ],
+ "decisions": [
+  "source clock: the current Kokoro cold open",
+  "1.01: the stem from 0.500 s laid at 0.500 s for 3.792 s (the bed's beat 4.250 s, now 3.792 s)",
+  "1.02: the stem from 4.750 s laid at 4.292 s for 3.917 s (the bed's beat 5.583 s, now 3.917 s)",
+  "1.03: the stem from 10.333 s laid at 8.208 s for 1.542 s (the bed's beat 1.542 s, now 1.542 s)",
+  "1.04: the stem from 11.875 s laid at 9.750 s for 2.667 s (the bed's beat 2.667 s, now 2.667 s)",
+  "2.01: the stem from 14.542 s laid at 12.417 s for 0.625 s (the bed's beat 0.625 s, now 0.625 s)",
+  "2.02: the stem from 15.167 s laid at 13.042 s for 2.500 s (the bed's beat 2.500 s, now 2.500 s)",
+  "2.03: the stem from 17.667 s laid at 15.542 s for 2.250 s (the bed's beat 2.500 s, now 2.250 s)",
+  "3.01: the stem from 20.167 s laid at 17.792 s for 2.000 s (the bed's beat 2.000 s, now 2.000 s)",
+  "3.02: the stem from 22.167 s laid at 19.792 s for 4.500 s (the bed's beat 4.500 s, now 4.500 s)"
+ ],
+ "sfx": [
+  [
+   "(in the v2 stem)"
+  ]
+ ],
+ "seconds": 24.392,
+ "chapter_seconds": 24.292,
+ "lufs": -25.75,
+ "peak_dbfs": -3.73,
+ "built_by": "audio/ep01/v3-el/tools/el_bed.py"
+}
