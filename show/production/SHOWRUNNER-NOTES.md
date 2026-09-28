@@ -21,7 +21,9 @@
      - It enters on a counter match: DevDay's 100M a week matched to the bots' 180 years.
    - **Keep the president's deepfake (same day):** "i also liked the deepfake with the president. don't remove that."
      - Earlier I read "why does the senate have a deepfake along with biden" as "cut one". It was a question.
-     - Both stay, as a thread with the Orb: the senator's self-fake (May) → "for when it gets harder to tell." (Jul) → "which one's real?" (Oct).
+     - **Corrected:** "no i want only biden to have deepfake, not senate".
+       - Only the president's deepfake stays (Act Three, "which one's real?"), paying off the Orb's "for when it gets harder to tell.".
+       - The Senate's cloned voice is cut, including "That voice was not mine." and the clone's "Health insurance.".
    - **The tour and Nesnej (same day):** "the worst transition is to the tour and jensen. it comes out of nowhere and is not clear what it is"
      - The redesign: the tour as his move, caused by the Senate (stamps, the EU leverage flip).
      - The one-sentence statement shown as the leaders signing.
