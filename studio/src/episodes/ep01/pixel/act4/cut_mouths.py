@@ -8,6 +8,8 @@
        v3-a4-0003 (whose mouth is the assembly's el_takes.py track, assembly/el-v32/act4-takes.json)
        -> audio/ep01/v3-el/ep01-v33/act4/lines-A-cut-mouths.json (beside the EL takes, for the assembly's EL lock:
        pass it after the EL takes; the EL lines-A.json itself is not touched)
+  v3.5 (audio/ep01/v35/act4/lines-v35.json): v35-a4-0008 from v3-a4-0004 (Terb's read, its lead-in cut)
+       -> takes-v35-cut-mouths.json
 The cut is the same performance, so its mouth track is the source take's, moved onto the cut file's clock: the shift is
 the cut's first word (the timeline's `in` + its first word) against the source take's word that the cut starts on (the
 take's own "<id> words A-B" note). Each output holds the cut takes' entries from their takes file, whole, with `mouth`
@@ -24,6 +26,8 @@ JOBS = [  # (the cut takes' file, the timeline that places them (None: the cut t
     ("audio/ep01/v31/act4/lines-v31.json", "show/reel/ep01-v31/ep01-v31-act4.json", KOKORO, os.path.join(HERE, "takes-v31-cut-mouths.json"), None),
     ("audio/ep01/v33/act4/lines-v33.json", "show/reel/ep01-v33/ep01-v33-act4.json", KOKORO, os.path.join(HERE, "takes-v33-cut-mouths.json"), None),
     ("audio/ep01/v3-el/ep01-v33/act4/lines-A.json", None, EL, P("audio/ep01/v3-el/ep01-v33/act4/lines-A-cut-mouths.json"), {"v33-a4-0002"}),
+    # v3.5: Terb's read without its lead-in (S7.07), cut from v3-a4-0004 words 8-36 at the sentence boundary
+    ("audio/ep01/v35/act4/lines-v35.json", None, KOKORO, os.path.join(HERE, "takes-v35-cut-mouths.json"), {"v35-a4-0008"}),
 ]
 for takes, timeline, sources, dest, only in JOBS:
     src = {x["id"]: x for f in sources for x in json.load(open(P(f)))}

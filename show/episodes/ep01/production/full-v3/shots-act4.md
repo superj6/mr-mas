@@ -1,8 +1,109 @@
-# Ep1 v3.4: Act Four's shots (`v3-shots-act4`, 2026-09-27 / 28)
+# Ep1 v3.5: Act Four's shots (`v3-shots-act4`, 2026-09-27 / 28; `p-act4`, the v3.5 round, 2026-09-28)
 
-> **Status: v3.4 built, checked and rendered. Nothing committed.** Track P2 of [PLAN.md](PLAN.md) for the `act4` segment ("five days, told twice", **8:27.79**), on the **v3.4 Kokoro lock** (`show/reel/ep01-v34/ep01-v34-act4.json`, commit 4309e86; [lock-v34.md](lock-v34.md)). **§V34 below is the current state.** It changes four beats, so §V33, §V32 and §V31 still describe everything V34 doesn't mention. §1–§8 are the v3 round's record. `pixel/act4/data.ts` is now the v3.4 lock.
+> **Status: v3.5 built, checked and rendered. Nothing committed.** Track P2 of [PLAN.md](PLAN.md) (§8, step 4) for the `act4` segment ("five days, told twice", **8:03.33**), on the **v3.5 base lock, Kokoro timing** (`show/reel/ep01-v35/ep01-v35-act4.json`, commit 816ca71; [lock-v35.md](lock-v35.md)). **§V35 below is the current state.** It adds 11 shots and changes 17 (and S7.07's marks); §V34, §V33, §V32 and §V31 still describe everything V35 doesn't mention. §1–§8 are the v3 round's record. `pixel/act4/data.ts` is now the v3.5 lock.
 >
 > **Nothing here has been watched or heard.** Stills, crops and frames decoded from the render were looked at. The render's and the checks' numbers are measured.
+
+## V35. The v3.5 round (the final version: script draft 8.4, [proposal-v35.md](proposal-v35.md) sc 38–56 with the lead's choices, [lock-v35.md](lock-v35.md); the `p-act4` pass, 2026-09-28)
+
+### V35.1 The lock and the temp track
+
+- **The lock:** `tools/lock.py --seg act4 --plan pixel/act4/plan.json` on the v3.5 base lock (`show/reel/ep01-v35/ep01-v35-act4.json`, commit 816ca71) gives **83 shots from 84 beats, 11,600 f (8:03.33)**, episode frame 20615 (14:18:23). There are 99 lines (5 of them the inner voice, all face null) and 6 posts. Every check passes. D6 is 5.12 s. **S7.13 is frames 10426–10689 (264 f)**; the Runway splice is k128–263 (`hourglass.py --s713 10426`).
+- **The plan (`plan.json`):**
+  - the v3.5 timeline; the takes add `audio/ep01/v35/act4/lines-v35.json` and `takes-v35-cut-mouths.json`; `ep_in` 20615; the mix below;
+  - re-anchored: S1.03 `nine` / `three` on the names' text (`a5-25-01` is cut); S7.07 `spray` at f2 and `sprayEnd` on the cut read's first word (Terb's lead-in is gone, so the spray comes before the read);
+  - v5 marks on cut lines and sounds (S4.07's `pull` and DTMF tones, S4.08 `ringB`, S4.02 `lit`) point past their shot's end, where no layout reads them; S4.07's face is none (no line);
+  - `post_ids`: S4.01 (cut) and S4.09 (no post) point at an id that exists; Alyi alone (v35-49A.01) carries RIMA's post, `v35-49A-P1`.
+- **`cut_mouths.py`** has a fourth job: **v35-a4-0008** (Terb's read without its lead-in) gets `v3-a4-0004`'s track, words 8–36, shifted −2.605 s (59 shapes). The earlier outputs are byte-identical.
+- **The temp track:** the reel's mixer on the v3.5 render plan (`studio/out/reel-work/ep01-v35-stick/plan.json`: 256 takes over the 7 beds, −16.67 LUFS, 11.5 s wall), Act Four's chapter (plan frames 20687–32287) cut sample-exact to `out/ep01/full-v3/picture/act4-v35-stick-mix.wav`: 23,200,000 samples = 11,600 f. The full-episode WAV was deleted.
+
+### V35.2 The changed and new shots
+
+| Shot | f (s) | What it draws now |
+|---|---|---|
+| **v32-S1.13** | 880–1071 (8.0) | **The goodbye post, typed twice.** His thumb types "i loved my time at nopeai." (from the lock's key tap), stops, and deletes it: three backspace presses, then it runs, the caret solid, eating the line back, the thumb held down. He types it again and goes on to the salute; the post goes up on `post_click`, 1:46 PM. **Before the card fades, the phone lights:** GERG, then TASYA · MACROSOFT drop in over the post (the last 0.6 s). The room stays afternoon: the night now falls in the war room. |
+| **v35-41.01** | 1072–1141 (2.9) | **The war room opens:** his phone face up on the suite desk from above (`art/v35 drawDeskPhone`), the calls stacking tile over tile on the lock's times: GERG · TASYA · MACROSOFT · AUHSOJ · THE FIRST CHECK · FOUNDER MODE · NOR, then a grey briefcase, LAWYER (no name). Each call grows the pool of the screen's light on the walnut a step (monotonic: it never steps back down). His glass (clear, its water one ring of light), the hotel notepad and the MACROSOFT check's pen beside it. V.O. "the budget. i said the budget." on shadow. |
+| **v35-41.02** | 1142–1288 (6.1) | **[2S] Gerg's call** (`drawSuiteCall2S`): v31-S1.01b's framing (the suite soft, MAS's bust at the left third, turned right, warm), his laptop on the right with GERG's tile: still, looking into the lens, no keycaps, his laptop's green taken out of his light. Both lip-synced; Mas's face otherwise doesn't move. |
+| **v35-41.03** | 1289–1450 (6.75) | **Tasya's call, cut on its turns:** his tile opened big on the call app's field (`drawCallField` + `tasyaCallTile`: Macrosoft slate behind him, a warm lamp, the smile that never moves) for "We found out a minute…"; the 2S for "i got a few more."; his tile for "Then we should talk." The jangle is heard only. |
+| **v35-41.04** | 1451–1546 (4.0) | **The money's calls, camera off** (`drawVoiceTiles`): generic avatar tiles (an initial on a disc) cascading over each other, a new one on each third (cut on the pulse), the older a rung down: AUHSOJ speaking (the ring, a level from his line), FOUNDER MODE lit and silent, NOR ringing. V.O. the count on shadow. |
+| **v35-41.05** | 1547–1609 (2.6) | **9:32 PM:** his phone in his hand again (`suitePhone35`), the suite now night (the kit's night grade, the Strip on in the glass); the post in its own UI with the lock's words; "full value of my shares" underlines itself at +1 s (the clause the joke rests on); under it three missed calls drop in (the phone never stops). |
+| **v35-41.06** | 1610–1647 (1.6) | **The notepad** (`drawNotepad`): a generic hotel crest; NEW COMPANY · MACROSOFT · BACK hand-lettered in the pen's ink, a pixel off their lines, BACK finished as we arrive, none underlined; the pen laid down; the phone lights at the frame's right edge (its lit edge and a rung on the wood). |
+| **v35-42.01** | 1648–1719 (3.0) | **The flight home** (`drawPlaneTray`): the oval window, the tray with his glass and a paper cup, the notepad on his knee: TERMS (underlined), 1. GERG written by 1.0 s, then a second line we can't read (a scrawl on 2s); the bump at 1.6 s jolts the frame in held steps, the cup's coffee tilts and slops, his water line stays one flat row. |
+| **S2.02** | 1819–1866 (2.0) | v5's marks ECU with the eye-light stepping onto **mark 1** on the sweep and stopping there; a **VHS tracking wipe** grows over the last 10 frames (`vhsTrack`: rows torn in bands, a rolling bar of mid-grey noise, never white). |
+| **v35-43.01** | 1867–1950 (3.5) | **TPOOL at 240p** (`drawTpool`: drawn at 240 × 102 and doubled; the intro's 2008 palette, dev/meras ERA08; the camcorder's drift on twos under the screen-fixed dither; scanlines, the head-switch). A glass wall with a frosted band and the TPOOL decal on its door; behind it, **silhouettes only**: the staff push one sheet across the table to the board, in held steps; TO THE BOARD its only words. The tracking clears over the first 8 frames. |
+| **v35-43.02** | 1951–2010 (2.5) | The same framing (a tracking jump on the cut): the sheet passed again, quicker; the door opens (two held steps) and a young silhouette walks out past it and off right, two popped collars at his neck, a nameplate under his arm, CEO. The tracking takes the frame over the last 10 frames. |
+| **S2.05** | 2011–2082 (3.0) | **+0.5 s head:** v5's marks ECU with the eye-light stepping from mark 2 onto mark 3 and his thumb; then v5 S2.05 as it was (the iris, the toast on the lock's time, the whip). |
+| **v31-S3.00p** | 2083–2216 (5.6) | Her desk from above with her card (up 1.3 s); **then a cut in to her two printed pages** (`drawNelehProps`): his Dec 4 post ("CHATGTP launched on wednesday. today it crossed 1 million users!") and her paper, page 30, "…frantic corner-cutting…" highlighted; her hands square them, then square them again although they're already square (1 px knocks: nerves). Back to the desk for "Once more, before the others join."; the push into the paper. |
+| S1.03 | 2217–2440 (9.3) | Her walk to the sheet's edge now ends before "Mas" (the cut line took her old cue); the three walk off on the names. |
+| **v35-45.01** | 3163–3191 (1.2) | **Alyi's held face:** a cut in to his tile on her laptop (the call field, his tile big, lit in his doorway), no blink, no mouth; the face light one step. |
+| S3.03 | 3192–3323 (5.5) | **The blog post whole from the first frame** (no typing), so all 5.5 s are reading (lock-v35 §8.3); her lips move, silent, until she goes for Post. |
+| S3.06 | 3633–3727 (4.0) | **The staff's beat:** for the second before her line her hand is down and nothing moves; it goes up 2 frames before "Is this a coup?". |
+| S4.02 | 4120–4335 (9.0) | Saturday's wide, held (the push and the lit row are gone with the second speech); phone A walks the whole speech to the edge and goes over on the clack; the rail NOV 18 moved here. |
+| S4.10b | 5193–5529 (14.05) | **S4.10 merged at its head:** the spotlight swings off Rima's wall tile onto Ttemme (3 held steps), her name bar steps back to CTO, his CHAT: LIVE panel; his 2-tone card over the frozen room for 1.2 s while Neleh's line starts under it; then the 2S as v3.3 built it (the blank page). |
+| S4.13 | 5578–5727 (6.25) | **S4.12 merged at its head:** the two-shot, the wall stepping to slate on the first thunk, the door appearing on the next two and opening on the key tap, TASYA in it with his key ring (no sign); then Tasya's MCU 3 frames before "Good evening." (v5's). |
+| **S4.07** | 5934–6005 (3.0) | **Neleh's look at the blank line, moved after the statement:** her real face at the right third, gaze down, lips still, one blink, the face light one step; the slate door open behind the table; in the soft foreground the blueprint's last lines, 3. INTERIM CEO ✓ and 4. with a blank line. |
+| **v35-49A.01** | 6006–6125 (5.0) | **Alyi alone** (`drawAlyiAlone`). [WIDE] the walkout bullpen with no crowd (a packed box on every desk) graded to night, its windows the city at night, the users line on the near pane going up off its top; ALYI alone at the windows, in person, backlit, his phone lit at his chest, a heart lifting off it now and then. [MCU] from k50: at the glass, lit from below by the phone, the users line rising off the top of the pane; the hearts landing on his phone; his hand rises to the glass beside the line in three held steps and stops short of it, its faint reflection on the line's other side; his eyes go to it. Wordless. |
+| S5.03 | 6126–6185 (2.5) | The hearts, no voice: the app's count now climbs as a blur from his first heart (a new, larger number rolling up every 2 frames). |
+| S6.01, S6.03, S6.06 | 8263–8479 | **The quicker exit:** v4's avalanche clock ran on v4's lengths (S6.01 108 f, S6.03 46, S6.06 138), so on the shorter shots S6.01's grid never filled. These three run their stretch of that clock at their own length (S6.06's marks scaled with it, so the label still lands on `freeze_hit_F`). S6.02 and S6.04 (lip-sync) are unchanged. NELEH left the call is up for all of S6.06 (2.9 s), stacked over the others. |
+| S7.01 | 8479–8961 (20.1) | **Alyi's post whole and held:** it pops 8 frames sooner and holds to the first heart; 2.5 s in, "reunite the company" underlines itself; when the hearts rise the post folds to a notification at the top of the frame (its last sentence) and stays up over "You sent three." — about 11 s in all (lock-v35 §8.3). |
+| S7.07 | 9595–9799 (8.55) | Terb's read without its lead-in: the spray comes before it (f2 to its first word), the cut read lip-synced (the new mouth track). |
+
+**Cut with their beats:** S4.10, S4.13e, S4.15 (and their layouts). **Kept:** the shock opening (the code for S1.01–S1.12 is untouched); the S7.13 hourglass (264 f); S7.02 / S7.02b; the return's count (S8.04); every other v3.4 layout, on the lock's new lengths.
+
+**The notes, where they read on screen:**
+- **The scramble (The Social Network's grammar):** his face never moves in the war room; the energy is in the phone and the cutting (41.01's stack, 41.03's cuts on the turns, 41.04's cascade on the pulse), and the night falls between 41.04 and 41.05.
+- **TPOOL as silhouettes only:** no face, no name but the decal, no reason; the sheet's only words; the young figure is black but for his collars and the CEO plate.
+- **The read floor (lock-v35 §8.3), Act Four's three:** the blog post (whole from frame 0: 5.5 s), Alyi's post (≈ 11 s up in two forms), NELEH left the call (2.9 s, in S6.06).
+
+### V35.3 Files
+
+- **`pixel/act4/shots.ts`:** the v3.5 layouts (the header lists them). **`pixel/act4/art/v35.ts` (new):** every new drawing (its header lists them).
+- **`pixel/act4/plan.json`**, **`pixel/act4/cut_mouths.py`** (+ `takes-v35-cut-mouths.json`).
+- **Generated:** `pixel/act4/data.ts`, `full-v3/lock/act4.json`.
+- **Imports that are new to this segment** (nothing in them edited): `dev/meras/palettes` (ERA08), `cast/alyi-v5 drawAlyiTileFit`, `cast/tasya-speak drawTasyaRoom`, `rooms/bullpen-launch drawBayNight`, `kits/blueprint`.
+
+### V35.4 Checks and render (measured)
+
+- **The lock:** every check passes (above). **`r.cjs check`:** exit 0, 83 shots, 83 layouts (61 `V`, 22 `P`), **0 stand-ins**, 0 problems, 164 browser frames (28 GLYPH + 136 hourglass).
+- **The inner voice:** all 5 V.O. lines are face null, and the guard still wraps every layout (lips still; the V.O. types through the shared voLine).
+- **Native `flash.ts`** (the pre-render check, on every changed range): at most 1 flash in any 1 s, 0 red. It caught two flickers first, both fixed before the render: TPOOL's camcorder drift moved scene-space dithers under the 2008 palette (4 in 1 s at v35-43.02; now flat fills, the drift under the palette's screen-fixed dither, as the intro's era2008 does), and the plane's jolt moved the wall's dither (now flat).
+- **The render** (one heavy job, `heavy-run35.sh`: build, check, the avalanche's native flash, bundle, `glyphs --opt hourglass=false`, `hourglass.py --png … --s713 10426`, `picture --jobs 2` in **134 s wall**, the sheet, tsc):
+  - **`out/ep01/full-v3/picture/act4.mp4`:** H.264 1920 × 1080, **11,600 frames, 483.33 s (8:03.33)**, with the v3.5 stick mix as AAC temp audio (483.33 s). `act4.srt` and **`act4-sheet.png`** (83 shots, stand-ins: none) beside it.
+  - Browser frames spliced: 164 (0 missing, 0 off-room mismatches), 0 failed layouts.
+- **flashcheck.py on the MP4, in four chunks (`fc35.sh`): at most 1 flash in any 1 s** (the selfie's white step, frames 4812 / 4816), **0 red. Pass.** The largest single-frame mean-luminance step is the hard cut (0.573, frame 582).
+- **tsc:** the same 20 errors as before (bake.ts 11, runway pxframes 5, streamframes 4), none in act4.
+- **Decoded from the MP4:** frames 960, 1100, 1500, 1930, 2150, 5950, 6100, 8900 and 10600 (the Runway insert in place).
+- **The EL lock** (`show/reel/ep01-v35-el/ep01-v35-el-act4.json` as it stood at 15:57, md5 b93a4449…), tested in scratch only:
+  - the assembly's `el_takes.py` run for act4 into scratch (99 rows, 93 mouth tracks, 5 V.O., no letter guesses);
+  - `lock.py` with `--plan pixel/act4/plan.json` and the EL `--ep-in` (20420): **83 shots, 11,873 f (8:14.71), every check passing**; S7.13 is 264 f (EL frames 10675–10938);
+  - `build_el.mjs act4` + `check`: exit 0, 83 layouts, **0 stand-ins, 0 problems**;
+  - EL frames of v32-S1.13, v35-41.02, v35-41.03, v35-43.02, S4.13 (the head and the MCU), v35-49A.01 and S7.01 render with the marks on the EL words and sounds.
+  - **For the assembly:** re-run `el_takes.py --lock v35 act4` once the EL takes settle (they were still being written); v35-a4-0008's EL take gets its mouth from el_takes like any other take (it is its own EL cut, so no cut-mouths file is needed). On the EL timing S4.13d's `names` / `look` marks fall before the shot (Tasya says "Mas Manalt" before the cut), so its reaction lands on its first frame.
+
+### V35.5 What I looked at, and what's weakest
+
+**Looked at:** native stills of every new and changed shot at several points (the deleting at 6 frames with a crop, the war room's stack, both 2S setups, the cascade, the post, the notepad, the plane, the wipe and TPOOL with a 4x crop of the young silhouette, the props with her hands, Alyi's held face, S4.02, S4.10b's head and freeze, S4.13's head and cut, S4.07, Alyi alone wide and MCU, S5.03, the avalanche on its new clock, S7.01's post and notification, S7.06, S7.07); two contact sheets; the EL frames above; the decoded MP4 frames.
+
+**Weakest:**
+1. **Alyi alone's users line is mine, not Act One's.** Sc 18's window line is being drawn by the Act One pass at the same time. Mine is a white-cyan marker line, flat then up and off the top, with a small USERS; if theirs differs (colour, shape, lettering), 49A should copy theirs. The wide's windows are the Act Four bullpen's (the city at night), not the launch bullpen's bay window.
+2. **TPOOL is flat.** Flat fills under the 2008 palette (forced by the flash check) read cleaner and more "web" than camcorder: the texture is the scanlines, the drift and the tracking. The young figure's collars are two small peach points (ERA08 maps the coral and green close); the CEO plate reads. **"The door becomes his dark room's door" is not drawn:** the dark room has no door until Tasya's slate door at 2 AM, so 43.02 goes out on the tracking to the desk and the eye-light on mark 3 (the beat plan's out).
+3. **The war room's faces are small or absent by design.** Gerg's tile is his medium rig at tile scale (about 30 px of face); AUHSOJ, FOUNDER MODE and NOR are initials on discs (no likenesses). The energy is in the phone and the cuts, as the note asks; whether 6 s of the 2S holds is for someone watching.
+4. **The rail retypes at the match into S5.03.** 49A's rail and S5.03's are two lock items with the same words, so the band types it again at the cut (0.5 s). The lock owner can extend 49A's rail and drop S5.03's to make it ride through.
+5. **Hands are simple.** Neleh's (from above) and Alyi's (raised to the glass) are new, single drawings; they read in stills as hands, not as the insert kit's lit hands.
+6. **S7.01's notification over the exchange** keeps "reunite the company" up for ~4 s more at the top of the frame; it may compete with the hearts for a newcomer's eye.
+7. **The avalanche runs about twice as fast** in S6.01 and S6.06 (v4's clock compressed to the new lengths); S6.02 and S6.04 keep v4's clock (lip-sync), so there are small jumps in the fill across those cuts.
+
+### V35.6 How to re-run
+
+From the repo root, then `studio/` (`S` = `/tmp/claude-1000/-home-jgon-project-art-mrmas/94315be4-2a32-4292-9b72-b25066268365/scratchpad/p-act4`; the scripts may not outlive the session: each is a few lines, reproduced from v34's `heavy-run34b.sh`, `mix34.sh` and `fc33.sh` with the new frame numbers):
+
+```sh
+python3 studio/src/episodes/ep01/pixel/act4/cut_mouths.py
+python3 studio/src/episodes/ep01/pixel/tools/lock.py --seg act4 --plan studio/src/episodes/ep01/pixel/act4/plan.json
+bash ops/heavy.sh bash $S/mix35.sh        # the mixer on out/reel-work/ep01-v35-stick/plan.json; Act Four = plan frames 20687-32287 (samples 41374000-64574000)
+bash ops/heavy.sh bash $S/heavy-run35.sh  # build, check, native flash (S6), bundle, glyphs (hourglass=false), hourglass.py --png --s713 10426, picture, sheet, tsc
+bash ops/heavy.sh bash $S/fc35.sh         # flashcheck.py on the MP4 in four chunks (0, 2976, 5976, 8976)
+```
 
 ## V34. The v3.4 round (script draft 8.3; SHOWRUNNER-NOTES 000: "Mas plans and directs", the mastermind by specifics, never on the nose)
 
