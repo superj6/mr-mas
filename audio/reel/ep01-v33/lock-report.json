@@ -1,0 +1,352 @@
+{
+ "coldopen": {
+  "timeline": "show/reel/ep01-v33/ep01-v33-coldopen.json",
+  "source": "show/reel/ep01-v32/ep01-v32-coldopen.json",
+  "trims": [],
+  "source_story_s": 26.667,
+  "estimate_s": 26.67,
+  "seconds": 26.667,
+  "beats": 10,
+  "lines": 3,
+  "vo": 0,
+  "jcuts": [],
+  "lcuts": [
+   "e1-co-1-02 (1.02)"
+  ],
+  "edits": [],
+  "deviations": [],
+  "safety_net": []
+ },
+ "act1": {
+  "timeline": "show/reel/ep01-v33/ep01-v33-act1.json",
+  "source": "show/reel/ep01-v32/ep01-v32-act1.json",
+  "trims": [],
+  "source_story_s": 329.759,
+  "estimate_s": 330.6,
+  "seconds": 330.579,
+  "beats": 52,
+  "lines": 68,
+  "vo": 5,
+  "jcuts": [
+   "v32-a1-0001 (5.03, -0.50)",
+   "v31-a1-0003 (7.01, -0.60)",
+   "e1-a1-12-01 (12.02, -0.50)"
+  ],
+  "lcuts": [],
+  "edits": [
+   {
+    "beat": "5.07",
+    "what": "+1.03 s at the tail"
+   },
+   {
+    "beat": "6.06",
+    "what": "4.60 -> 3.60 s, timed items scaled ×0.78"
+   },
+   {
+    "beat": "6.06",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "9.09",
+    "what": "line e1-a1-9-05 retimed: re-placed at after:v3-vo-09+1.2"
+   },
+   {
+    "beat": "9.09",
+    "what": "restored v3-vo-09: voiced 0.79 s (the plan's take_dur_s 1.985 is the file)"
+   },
+   {
+    "beat": "9.09",
+    "what": "new line v3-vo-09 (mas, 0.79 s) after e1-a1-9-04 +0.5"
+   },
+   {
+    "beat": "9.09",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "12.02",
+    "what": "names[]: nole 0.00 -> -0.50 s (the J-cut line leads its plate)"
+   }
+  ],
+  "deviations": [],
+  "safety_net": []
+ },
+ "act2": {
+  "timeline": "show/reel/ep01-v33/ep01-v33-act2.json",
+  "source": "show/reel/ep01-v32/ep01-v32-act2.json",
+  "trims": [],
+  "source_story_s": 193.039,
+  "estimate_s": 190.57,
+  "seconds": 190.559,
+  "beats": 45,
+  "lines": 39,
+  "vo": 1,
+  "jcuts": [],
+  "lcuts": [
+   "e1-a2-15-01 (14.06)"
+  ],
+  "edits": [
+   {
+    "beat": "13.09",
+    "what": "line e1-a2-13-12 retimed: re-placed at after:v3-vo-12+0.9"
+   },
+   {
+    "beat": "13.09",
+    "what": "restored v3-vo-12: voiced 1.12 s (the plan's take_dur_s 2.385 is the file)"
+   },
+   {
+    "beat": "13.09",
+    "what": "new line v3-vo-12 (mas, 1.12 s) after e1-a2-13-11 +0.4"
+   },
+   {
+    "beat": "17.10",
+    "what": "+0.50 s at the tail"
+   },
+   {
+    "beat": "17.11",
+    "what": "frame from the plan"
+   },
+   {
+    "beat": "17.11",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "17.12",
+    "what": "cut (): 4.50 s"
+   }
+  ],
+  "deviations": [],
+  "safety_net": []
+ },
+ "act3": {
+  "timeline": "show/reel/ep01-v33/ep01-v33-act3.json",
+  "source": "show/reel/ep01-v32/ep01-v32-act3.json",
+  "trims": [],
+  "source_story_s": 142.416,
+  "estimate_s": 133.4,
+  "seconds": 133.399,
+  "beats": 30,
+  "lines": 23,
+  "vo": 2,
+  "jcuts": [],
+  "lcuts": [],
+  "edits": [
+   {
+    "beat": "v31-18.00",
+    "what": "on-screen add: \"MACROSOFT WELCOMES ATEM\""
+   },
+   {
+    "beat": "v31-18.00",
+    "what": "on-screen add: \"KRAM · RUNS ATEM\""
+   },
+   {
+    "beat": "v31-18.00",
+    "what": "on-screen add: \"OPEN SOURCE\""
+   },
+   {
+    "beat": "v31-18.00",
+    "what": "v31-18.00b merged in (): 0 sound(s), 1 line(s) of which 1 moved"
+   },
+   {
+    "beat": "v31-18.00",
+    "what": "line v31-a3-0001 moved in from v31-18.00b at start+1.4, with 0 sound(s)"
+   },
+   {
+    "beat": "v31-18.00",
+    "what": "names[]: kram at 0.2 s, from the merged v31-18.00b (its plate)"
+   },
+   {
+    "beat": "v31-18.00",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "18.01",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "v31-19.02",
+    "what": "cut (): 3.60 s"
+   },
+   {
+    "beat": "v31-19.03",
+    "what": "line e1-a3-19-01 retimed: head 4.30 -> 1.60 s (start+1.6)"
+   },
+   {
+    "beat": "v31-19.03",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "20.01",
+    "what": "on-screen add: \"TIDDER · t/singularity · \"is it already here? anyone actually know?\"\""
+   },
+   {
+    "beat": "20.01",
+    "what": "+0.98 s at the tail"
+   },
+   {
+    "beat": "20.01",
+    "what": "TIDDER · reply, Agi has been achieved internally, synth:keys +0.98 s: the thread's title is read first, then his reply is typed (the plan's +1.0 s goes before the reply)"
+   },
+   {
+    "beat": "20.01",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "v31-20.08",
+    "what": "+1.20 s at the tail"
+   },
+   {
+    "beat": "v31-20.08",
+    "what": "frame from the plan"
+   },
+   {
+    "beat": "v31-20.08",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "v32-22.04",
+    "what": "5.00 -> 4.50 s, timed items scaled ×0.90"
+   },
+   {
+    "beat": "23.02",
+    "what": "frame from the plan"
+   },
+   {
+    "beat": "23.02",
+    "what": "caption from the plan"
+   }
+  ],
+  "deviations": [],
+  "safety_net": []
+ },
+ "act4": {
+  "timeline": "show/reel/ep01-v33/ep01-v33-act4.json",
+  "source": "show/reel/ep01-v32/ep01-v32-act4.json",
+  "trims": [],
+  "source_story_s": 508.467,
+  "estimate_s": 504.84,
+  "seconds": 505.742,
+  "beats": 80,
+  "lines": 98,
+  "vo": 4,
+  "jcuts": [
+   "a5-27-18 (S3.06, -0.60)",
+   "a5-29-20 (S5.11, -0.80)",
+   "a5-31-04 (S8.08, -1.00)"
+  ],
+  "lcuts": [
+   "v3-a4-0001 (S4.13)",
+   "v3-a4-0004 (S7.07)",
+   "a5-31-04 (S8.08)"
+  ],
+  "edits": [
+   {
+    "beat": "S4.10",
+    "what": "on-screen add: \"RIMA TAMURI · CTO\""
+   },
+   {
+    "beat": "S4.10b",
+    "what": "line a5-27-42 dropped (\"Okay.\")"
+   },
+   {
+    "beat": "S4.10b",
+    "what": "lines dropped, the plan keeps 15.2 s for the picture (computed 11.69 s)"
+   },
+   {
+    "beat": "S4.10b",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S7.02",
+    "what": "line v3-a4-0002 dropped (\"Everyone's packed. Whatever happens to this place,\")"
+   },
+   {
+    "beat": "S7.02",
+    "what": "new line v33-a4-0001 (employee, 4.12 s) at start+1.4 replacing v3-a4-0002"
+   },
+   {
+    "beat": "S7.02",
+    "what": "every line replaced: the beat keeps the plan's 5.94 s (computed 5.82 s)"
+   },
+   {
+    "beat": "S7.02",
+    "what": "chars: the EMPLOYEE in Tasya's place among the boxes: she speaks the line (S4, P17)"
+   },
+   {
+    "beat": "S7.02",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S7.02b",
+    "what": "line v3-a4-0003 dropped (\"we have all the IP rights and all the capability… \")"
+   },
+   {
+    "beat": "S7.02b",
+    "what": "new line v33-a4-0002 (tasya, 3.85 s) at start+0.5 replacing v3-a4-0003"
+   },
+   {
+    "beat": "S7.02b",
+    "what": "chars: Tasya is on the wall TV, not on the floor; the staff keep packing (S5, P17)"
+   },
+   {
+    "beat": "S7.02b",
+    "what": "frame from the plan"
+   },
+   {
+    "beat": "S7.02b",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S7.03",
+    "what": "line v31-a4-0014 dropped (\"Down here.\")"
+   },
+   {
+    "beat": "S7.03",
+    "what": "no line left: the plan's 2.2 s (head 1.10 + the old tail would be 2.01 s)"
+   },
+   {
+    "beat": "S7.03",
+    "what": "caption: From under him, warmly: \"Down here.\" -> The look holds; the invite follows. (the line the plan changed)"
+   },
+   {
+    "beat": "S7.13",
+    "what": "exactly 264 frames (the Runway insert)"
+   }
+  ],
+  "deviations": [
+   {
+    "beat": "S4.09",
+    "what": "\"POST: MAS: “”\" dropped: the v3.2 lock left the CCTV post's empty shell when its text moved to v32-S5.00 (a substring drop); the empty item goes"
+   }
+  ],
+  "safety_net": []
+ },
+ "tag": {
+  "timeline": "show/reel/ep01-v33/ep01-v33-tag.json",
+  "source": "show/reel/ep01-v32/ep01-v32-tag.json",
+  "trims": [],
+  "source_story_s": 41.335,
+  "estimate_s": 42.33,
+  "seconds": 42.335,
+  "beats": 11,
+  "lines": 4,
+  "vo": 1,
+  "jcuts": [],
+  "lcuts": [],
+  "edits": [
+   {
+    "beat": "32.03",
+    "what": "+1.00 s at the tail"
+   },
+   {
+    "beat": "32.01",
+    "what": "exactly 62 frames (the Runway insert)"
+   },
+   {
+    "beat": "v31-32.01d",
+    "what": "exactly 233 frames (the Runway insert)"
+   }
+  ],
+  "deviations": [],
+  "safety_net": []
+ }
+}
