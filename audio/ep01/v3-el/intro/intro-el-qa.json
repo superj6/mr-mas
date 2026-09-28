@@ -1,0 +1,137 @@
+{
+ "reads": {
+  "p1": "w2",
+  "p2": "p2e"
+ },
+ "side_levelled": {
+  "level_hz": 116.5,
+  "vowel_onset_s": 0.575,
+  "raw_side_thirds_hz": [
+   113.2,
+   133.7,
+   124.7
+  ],
+  "out_side_thirds_hz": [
+   115.5,
+   117.1,
+   115.8
+  ],
+  "splice_s": 0.559,
+  "method": "build_vo.py's: WORLD, 92 % toward the phrase median, -0.25 st settle, /s/ unvoiced, 15 ms crossfade in the /s/"
+ },
+ "ratios_out_over_in": {
+  "p1": [
+   1.107,
+   1.121,
+   1.0
+  ],
+  "p2": [
+   0.776,
+   0.874,
+   0.739
+  ]
+ },
+ "targets_f": {
+  "p1": {
+   "near": 24.1,
+   "the": 30.93,
+   "singularity": 34.67,
+   "p1_end": 57.566
+  },
+  "p2": {
+   "unclear": 72.07,
+   "which": 80.99000000000001,
+   "side": 84.64,
+   "p2_end": 91.5
+  }
+ },
+ "verify_corrections_s": {
+  "p1": {
+   "near": -0.0075,
+   "the": 0.0025,
+   "singularity": -0.005,
+   "p1_end": -0.005
+  },
+  "p2": {
+   "unclear": 0.005,
+   "which": 0.005,
+   "side": 0.0075,
+   "p2_end": 0.0625
+  }
+ },
+ "onsets_frames": {
+  "near": {
+   "el": 23.92,
+   "kokoro": 24.1,
+   "diff_frames": -0.18
+  },
+  "the": {
+   "el": 30.99,
+   "kokoro": 31.33,
+   "diff_frames": -0.34
+  },
+  "singularity": {
+   "el": 34.55,
+   "kokoro": 35.07,
+   "diff_frames": -0.52
+  },
+  "unclear": {
+   "el": 72.19,
+   "kokoro": 72.07,
+   "diff_frames": 0.12
+  },
+  "which": {
+   "el": 81.11,
+   "kokoro": 80.59,
+   "diff_frames": 0.52
+  },
+  "side": {
+   "el": 84.82,
+   "kokoro": 84.24,
+   "diff_frames": 0.58
+  }
+ },
+ "ends": {
+  "clip1_end_f": 57.44,
+  "voice_end_f": 93.0
+ },
+ "loudness": {
+  "el": {
+   "name": "el",
+   "lufs_I": -15.39,
+   "short_term_max": -16.0,
+   "short_term_max_at_f": 60.0,
+   "momentary_max": -12.76,
+   "momentary_max_at_f": 42.0,
+   "true_peak_dbtp": -2.2,
+   "sample_peak_dbfs": -2.22
+  },
+  "kokoro": {
+   "name": "kokoro",
+   "lufs_I": -15.39,
+   "short_term_max": -16.0,
+   "short_term_max_at_f": 60.0,
+   "momentary_max": -12.96,
+   "momentary_max_at_f": 31.2,
+   "true_peak_dbtp": -2.79,
+   "sample_peak_dbfs": -2.81
+  },
+  "line_lufs_i_f24_92": {
+   "el": -14.95,
+   "kokoro": -14.96
+  }
+ },
+ "pause_f58_71_voice_dbfs": -56.5,
+ "deess_max_gr_db": 0.87,
+ "audible_span_frames": {
+  "el": [
+   23.76,
+   94.68
+  ],
+  "kokoro": [
+   24.12,
+   94.92
+  ]
+ },
+ "chain": "build_vo.py's, verbatim: WORLD breath layer -24 dB, HPF 90, +1.5 dB shelf @170, -2 dB @3.2k, -1.5 dB @6.5k, -2.5 dB shelf @8k, 2:1 comp, tanh (5 dB, 22 %), split-band de-esser 4.8-10k, dark-room IR 14 % wet, -66 dBFS dark-room tone f22-95; short-term max -16.0 LUFS"
+}

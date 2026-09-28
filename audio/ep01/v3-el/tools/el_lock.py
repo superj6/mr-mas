@@ -234,6 +234,15 @@ def build_manifest(beds):
     for bd in m.get("beds", []):
         if bd.get("chapter") in beds:
             bd.update(beds[bd["chapter"]])
+    # the intro: Mas's line in his EL voice (el_intro.py; PLAN.md §7 D), the same V1 master with only the VO swapped
+    el_intro = "audio/intro-mix/intro-ep1-mix-V1-chipchamber-el.wav"
+    for c in m["chapters"]:
+        au = c.get("audio") or {}
+        if c.get("id") == "intro" and os.path.exists(os.path.join(REPO, el_intro)) and \
+                str(au.get("src", "")).endswith("intro-ep1-mix-V1-chipchamber.wav"):
+            au["src"] = el_intro                                # the gain (-3 dB) and tail stay the Kokoro film's
+            c["note"] = (c.get("note", "") + " EL film: Mas's intro line in his EL voice (Jeremy), the same V1 mix with "
+                         "only the VO swapped (audio/ep01/v3-el/intro/, voices-el.md §Y).").strip()
     for seg in SEGS:
         tot += jload(f"{DST}/{P()[1]}-{seg}.json")["_source"]["seconds"]
     other = 0.0

@@ -376,11 +376,51 @@
     "credits_billed": 43
    },
    "used_by_subscription": 43
+  },
+  "phase 7: the intro line": {
+   "_about": "Phase 7 (2026-09-28): the intro's 'near the singularity; unclear which side.' in Jeremy's voice (PLAN.md §7 D), fitted to the Kokoro frames; the V1 intro master rebuilt with only the VO swapped.",
+   "subscription_before": {
+    "tier": "creator",
+    "character_count": 14128,
+    "character_limit": 131000,
+    "next_character_count_reset_unix": 1793049484,
+    "voice_limit": 30,
+    "voice_slots_used": 2,
+    "professional_voice_limit": 1,
+    "can_extend_character_limit": false,
+    "status": "active",
+    "checked_at": "2026-09-28T10:30:29"
+   },
+   "subscription_after": {
+    "tier": "creator",
+    "character_count": 14232,
+    "character_limit": 131000,
+    "next_character_count_reset_unix": 1793049484,
+    "voice_limit": 30,
+    "voice_slots_used": 2,
+    "professional_voice_limit": 1,
+    "can_extend_character_limit": false,
+    "status": "active",
+    "checked_at": "2026-09-28T10:44:49"
+   },
+   "runs": {
+    "the intro reads (audio/ep01/v3-el/intro/takes/: 3 whole-line reads, 6 phrase-2 reads)": {
+     "calls": 9,
+     "chars_sent": 241,
+     "credits_billed": 104
+    }
+   },
+   "total": {
+    "calls": 9,
+    "chars_sent": 241,
+    "credits_billed": 104
+   },
+   "used_by_subscription": 104
   }
  },
  "all_phases_total": {
-  "chars_sent": 22926,
-  "credits_billed": 12693,
-  "subscription_character_count": 12693
+  "chars_sent": 25781,
+  "credits_billed": 14232,
+  "subscription_character_count": 14232
  }
 }

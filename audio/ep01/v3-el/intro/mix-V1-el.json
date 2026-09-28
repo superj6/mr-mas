@@ -1,0 +1,57 @@
+{
+ "built_by": "audio/ep01/v3-el/tools/el_intro.py mix (audio/intro-mix/scripts/mix_intro.py build('V1'), imported; only the vo input swapped)",
+ "reproduction_residual_dbfs": -138.5,
+ "master": "audio/intro-mix/intro-ep1-mix-V1-chipchamber-el.wav",
+ "vo": "audio/ep01/v3-el/intro/intro-vox_vo-el.wav",
+ "difference_outside_f23_96_dbfs": -59.0,
+ "method": "the delivered V1 master + (EL VO - Kokoro VO), each through mix_intro's VO fader (-4 dB) and centring, times the delivered build's gain curve (master gain + limiter). The limiter is idle over the line (f20-100: 0.00 dB), so this equals the full rebuild at the delivered master gain; everything outside f23-96 is the delivered master sample for sample.",
+ "full_rebuild_crosscheck": {
+  "master_gain_db": 1.4,
+  "peak_difference_dbfs": -56.5,
+  "note": "build('V1') re-iterates the master gain with the new VO: 1.40 dB against 1.41"
+ },
+ "stems_sum_residual_dbfs": -138.5,
+ "vo_centre_lr_diff_lu_el": -0.6,
+ "kokoro": {
+  "master_gain_db": 1.41,
+  "lufs_i": -14.0,
+  "dbtp": -1.3
+ },
+ "el": {
+  "master_gain_db": 1.41,
+  "lufs_i": -13.989,
+  "dbtp": -1.3,
+  "line_f24_92_lufs": -18.13,
+  "line_f24_92_lufs_kokoro": -18.16
+ },
+ "checks_el": {
+  "momentary_max": {
+   "vo_line": -15.2,
+   "drop_f120": -14.2,
+   "gerg_f240": -12.2,
+   "alyi_f300": -11.1,
+   "mario_f360": -11.5,
+   "nole_f420": -10.1,
+   "title_f630": -9.5
+  },
+  "vo_over_music_lu": 12.1,
+  "shout_A_vs_music_lu": -2.4,
+  "klaxon_sfx_vs_music_lu": -2.0,
+  "mario_blips_vs_music_lu": -8.1,
+  "nole_blips_vs_music_lu": -7.5,
+  "gerg_blips_vs_music_lu": -6.1,
+  "bookend_music_lufs": {
+   "before": -12.2,
+   "after": -18.7
+  },
+  "ding_over_music_lu": 12.1,
+  "harmon_vs_rest_of_score_lu": {
+   "f540-565": -0.9,
+   "f570-585": -4.2,
+   "f585-600": -4.1,
+   "f600-630": -27.4
+  },
+  "rip_brass_vs_rest_lu": -2.6,
+  "rip_brass_vs_sfx_lu": 3.9
+ }
+}

@@ -1,0 +1,74 @@
+{
+ "clock": "24 fps, f0 = 0.000 s; frames are floats (in_f/out_f) and the frame that contains the event (in_frame/out_frame)",
+ "source": "audio/ep01/v3-el/intro/intro-vox_vo-el.wav (Jeremy, ElevenLabs eleven_multilingual_v2; fitted to the Kokoro onsets)",
+ "clips": [
+  {
+   "clip": 1,
+   "text": "near the singularity;",
+   "start_frame": 24,
+   "end_frame": 57
+  },
+  {
+   "clip": 2,
+   "text": "unclear which side.",
+   "start_frame": 72,
+   "end_frame": 93
+  }
+ ],
+ "words": [
+  {
+   "word": "near",
+   "in_s": 0.997,
+   "out_s": 1.291,
+   "in_f": 23.92,
+   "out_f": 30.99,
+   "in_frame": 23,
+   "out_frame": 30
+  },
+  {
+   "word": "the",
+   "in_s": 1.291,
+   "out_s": 1.439,
+   "in_f": 30.99,
+   "out_f": 34.55,
+   "in_frame": 30,
+   "out_frame": 34
+  },
+  {
+   "word": "singularity",
+   "in_s": 1.439,
+   "out_s": 2.393,
+   "in_f": 34.55,
+   "out_f": 57.44,
+   "in_frame": 34,
+   "out_frame": 57
+  },
+  {
+   "word": "unclear",
+   "in_s": 3.008,
+   "out_s": 3.38,
+   "in_f": 72.19,
+   "out_f": 81.11,
+   "in_frame": 72,
+   "out_frame": 81
+  },
+  {
+   "word": "which",
+   "in_s": 3.38,
+   "out_s": 3.534,
+   "in_f": 81.11,
+   "out_f": 84.82,
+   "in_frame": 81,
+   "out_frame": 84
+  },
+  {
+   "word": "side",
+   "in_s": 3.534,
+   "out_s": 3.875,
+   "in_f": 84.82,
+   "out_f": 93.0,
+   "in_frame": 84,
+   "out_frame": 93
+  }
+ ]
+}

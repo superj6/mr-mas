@@ -1,6 +1,6 @@
 # Ep1 v3: the ElevenLabs voice pass (`v3-voices-el`, track A4, 2026-09-27)
 
-> **Status: PHASE 6 DONE: THE v3.3 LOCK IN ELEVENLABS.** Every line of the final v3.3 lock (commit a756708) has an EL take, with Mas as Jeremy. There is an EL-timed copy of it (`show/reel/ep01-v33-el/`, key `ep01-v33-el-stick`) with beds, ready to render. No reel was made. That's §X, directly below. v3.2 is §W, v3.1 §V, the Mas recast §R, phase 2 (the v3 lock) §P1–§P9, and phase 1 (the casting and the sample) §1–§8. Where phase 2 describes Mas, it describes Giovanni.
+> **Status: PHASE 7 DONE: THE INTRO LINE IN ELEVENLABS.** The EL films' 30 s intro now has Mas's line in his EL voice (Jeremy), fitted to the Kokoro frames, in `audio/intro-mix/intro-ep1-mix-V1-chipchamber-el.wav` (§Y, directly below). Every line of the v3.3 lock (commit a756708) has an EL take, and there is an EL-timed copy of it (`show/reel/ep01-v33-el/`, key `ep01-v33-el-stick`, §X). v3.2 is §W, v3.1 §V, the Mas recast §R, phase 2 (the v3 lock) §P1–§P9, and phase 1 (the casting and the sample) §1–§8. Where phase 2 describes Mas, it describes Giovanni.
 >
 > **Nobody has listened to any of this.** Every statement below is a measurement: duration, pace, pitch, silence at the head and tail, loudness, and what a speech recogniser heard. Whether a voice is natural, funny, or right for the character is still a call for an ear.
 >
@@ -21,6 +21,101 @@
 - **Characters:** 10,054 sent and **5,522 billed**, against the 25,000 budget. The subscription went from 0 to 5,522 of 131,000.
 - **Model:** `eleven_multilingual_v2` for everyone. I tested `eleven_v3` and didn't use it (§6).
 - **Decisions for you:** listed in §8.
+
+---
+
+## Y. Phase 7: the intro line (2026-09-28)
+
+**The note:** the showrunner, "in the intro mas's voice is not replaced" (PLAN.md §7 D). The EL films' 30 s intro still played the Kokoro Mas (am_michael) for "near the singularity; unclear which side.".
+
+**In short:**
+- **The line is recorded with Jeremy** (`EwzF7Z2UMSib9JaKx0Kg`, eleven_multilingual_v2): 9 reads, **104 credits** (241 characters). The subscription went from 14,128 to 14,232 of 131,000.
+- **It is fitted to the intro's frames.** Every word onset is within 0.6 frame of Kokoro's, clip 1 ends in f57, the pause f58–71 is room tone only, and the voice ends at f92.0 (Kokoro f92.8, measured the same way).
+- **It has the intro VO's own treatment and level:** −16.0 LUFS short-term max, as Kokoro's.
+- **It is mixed into the V1 master with only the VO swapped:** `audio/intro-mix/intro-ep1-mix-V1-chipchamber-el.wav`, beside the untouched Kokoro master.
+
+### Y1. The reads, and the pick
+
+- **The reads** are in `audio/ep01/v3-el/intro/takes/`, with `reads-analysis.json`. The settings are stability 0.65, similarity 0.75, style 0 and speaker boost: Mas's V.O. steadiness for the soft, close read. The reads were:
+  - three whole-line reads at speed 0.95: w1, w2, w3;
+  - four phrase-2 reads: p2a and p2b at 1.15, p2c and p2d at 1.2;
+  - two phrase-2 reads written "Unclear which side..." at 1.2 (p2e, p2f), for a hanging final.
+- **Why two phrase-2 reads per speed, and why separate phrases:** the Kokoro timing is very tight on phrase 2. "unclear which side" gets 0.79 s (f72.07–91.10), while every whole read ran 1.4–1.6 s there, which would need 0.5–0.6× compression. So, as the intro-vox build did with its two Kokoro renders, clip 1 and clip 2 come from separate reads. The pause between them is fixed by the picture and is room tone only, so the join isn't heard.
+- **Phrase 1: w2.** It has the gentlest fit (1.11, 1.12, 1.00) and the narrowest pitch range (7.6 st).
+- **Phrase 2: p2e**, levelled. The intro's "side" hangs: no final fall, no creak, and no rise.
+  - Measured with pYIN, p2c, p2d and p2f all go into creak on "side" (70–77 Hz, about 9 st under the phrase), though the ASR hears them as statements.
+  - The whole reads and p2e end with a 2–3 st rise instead, which the ASR punctuates as a question.
+  - p2e is the creak-free read with the least compression (0.78, 0.87, 0.74). Its "side" is levelled by the intro-vox build's own method: WORLD, 92 % of the way to the phrase's median with a −0.25 st settle, the /s/ unvoiced, and a 15 ms crossfade inside the /s/. Raw 113 → 134 → 125 Hz becomes 116 → 117 → 116 Hz.
+  - Measured on the stem, "side" sits −0.1 st against the phrase with no creak (Kokoro's: −0.7 st, no creak).
+  - The ASR still writes "…which side?" for the EL stem; it writes no punctuation for Kokoro's. For an ear.
+
+### Y2. The fit (`tools/el_intro.py build --p1 w2 --p2 p2e --level-side`)
+
+**How it works:**
+- Each clip is one variable-rate Rubber Band pass (pedalboard's `time_stretch` with a per-sample stretch array), piecewise-constant between the word anchors.
+- The anchors: "near" and "unclear" at their acoustic onsets, as the Kokoro timings are; the others from the EL alignment.
+- The targets are Kokoro's onsets, each kept within 0.4 frame by the least stretch. Clip 1 ends by f57.9, and the voice ends by f91.5.
+- The onsets are then verified on the output, by cross-correlating the source's envelope (warped by the map) with the output's (±0.08 s).
+
+| Word | Kokoro (frame) | **EL** | Difference (frames) |
+|---|---|---|---|
+| near | 24.10 | 23.92 | −0.18 |
+| the | 31.33 | 30.99 | −0.34 |
+| singularity | 35.07 | 34.55 | −0.52 |
+| unclear | 72.07 | 72.19 | +0.12 |
+| which | 80.59 | 81.11 | +0.52 |
+| side | 84.24 | 84.82 | +0.58 |
+
+- **The stretch** (out/in): clip 1 1.11 / 1.12 / 1.00; clip 2 0.78 / 0.87 / 0.74.
+- **The edges:** clip 1 ends at f57.44. The pause f58–71 is room tone only: the voice's room tail is under −60 dBFS by f60 (−63.9 dBFS in f60), as Kokoro's is.
+- **The voice end:** the last 5 ms within 30 dB of the peak is f92.0 (Kokoro f92.8); within 40 dB, f93.0 (Kokoro f93.6). The −60 dBFS span is f23.8–94.7 (Kokoro f24.1–94.9).
+- **The picture is unchanged.** The typing and the dot keep their frames. The EL word timings are in `audio/ep01/v3-el/intro/vo_word_timings-el.json`.
+
+### Y3. The treatment and the level
+
+- **The chain is `build_vo.py`'s, verbatim**, through the intro-vox helpers (`ivlib`, imported read-only):
+  - a WORLD breath layer at −24 dB;
+  - HPF 90 Hz, a +1.5 dB shelf at 170 Hz, −2 dB at 3.2 kHz, −1.5 dB at 6.5 kHz, a −2.5 dB shelf at 8 kHz;
+  - 2:1 compression and a light tanh;
+  - the split-band de-esser (at most 0.78 dB here);
+  - the 0.30 s dark-room IR at 14 % wet;
+  - the −66 dBFS dark-room tone under f22–95.
+- **The stem:** `audio/ep01/v3-el/intro/intro-vox_vo-el.wav`, 30.000 s, 48 kHz / 24-bit stereo, dropped at f0.
+
+| | **EL** | Kokoro (`intro-vox_vo.wav`) |
+|---|---|---|
+| Short-term (3 s) max | **−16.0 LUFS** | −16.0 |
+| Integrated, the whole stem | −15.39 | −15.39 |
+| Integrated over the line (f24–92) | −14.95 | −14.96 |
+| Momentary max | −12.76 | −12.96 |
+| True peak | −2.2 dBTP | −2.8 |
+
+### Y4. The intro master for the EL films
+
+- **The file:** `audio/intro-mix/intro-ep1-mix-V1-chipchamber-el.wav`, beside the Kokoro master, which is untouched (and so is `mix_build.json`).
+- **The same mix, with only the VO swapped** (`tools/el_intro.py mix`, running `audio/intro-mix/scripts/mix_intro.py`'s own `build('V1')`, imported):
+  - **First, a reproduction check:** rebuilding V1 from its own inputs gives the delivered master to −138.5 dBFS, so the procedure is exact.
+  - **Then the master:** the delivered master plus (the EL VO − the Kokoro VO), each through the mix's VO fader (−4 dB) and its L/R centring, times the delivered build's own gain curve (master gain +1.41 dB and the limiter).
+  - The limiter is idle over the line (0.00 dB of reduction over f20–100), so this is the full rebuild at the delivered master gain.
+  - **Every sample outside the VO stem's extent (f22–105) is the delivered master's** (to −138.5 dBFS, the 24-bit rounding).
+  - A straight re-run of `build('V1')` with the EL VO re-iterates the master gain to 1.40 dB instead of 1.41, a 0.01 dB change over the whole programme, so it isn't used.
+- **Measured:** −13.99 LUFS-I and −1.3 dBTP (the Kokoro master: −14.00, −1.3). The line over f24–92 is −18.13 LUFS, against the Kokoro master's −18.16.
+- **The D/M/E stems** are in `audio/ep01/v3-el/intro/stems-V1-el/`; they sum to the master at −138.5 dBFS. The QA is in `audio/ep01/v3-el/intro/mix-V1-el.json`.
+
+### Y5. Where it lives, for the assembly
+
+- **The pointer:** `audio/ep01/v3-el/intro/intro-el.json` has the paths, md5s, gain and fit.
+  - **The EL film's intro chapter plays `audio/intro-mix/intro-ep1-mix-V1-chipchamber-el.wav` at −3 dB**, exactly where the Kokoro film plays `intro-ep1-mix-V1-chipchamber.wav`.
+  - The picture stays `out/intro/intro-ep1-V1-1080p-flashfix.mp4`.
+- **`show/reel/ep01-v33-el/ep01-v33-el.manifest.json`** now plays the -el master at −3 dB. `el_lock.py` sets this on every EL manifest it builds.
+- **The assembly's own `assembly/el-v33-assembly.json`** (the assembly pass's file, not edited here) still names the Kokoro master. Its intro entry's `audio` should become the -el path for the next EL film.
+
+```sh
+audio/.venv-casting/bin/python audio/ep01/v3-el/tools/el_intro.py render     # the reads (cached)
+audio/.venv-casting/bin/python audio/ep01/v3-el/tools/el_intro.py analyze    # anchors, fits, WAV copies of the reads
+bash ops/heavy.sh audio/.venv-vocals/bin/python audio/ep01/v3-el/tools/el_intro.py build --p1 w2 --p2 p2e --level-side
+bash ops/heavy.sh audio/.venv-mix/bin/python audio/ep01/v3-el/tools/el_intro.py mix
+```
 
 ---
 
