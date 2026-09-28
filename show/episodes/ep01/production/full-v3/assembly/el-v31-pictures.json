@@ -1,0 +1,139 @@
+{
+ "about": "the v3.1 EL pictures (out/ep01/full-v3/picture-el/): flash_seg.py on each render, and each render record",
+ "flash": [
+  {
+   "file": "out/ep01/full-v3/picture-el/coldopen.mp4",
+   "frames": 583,
+   "max_flashes_in_1s": 1,
+   "at_frame": 298,
+   "red": 0,
+   "transitions": 10,
+   "largest_mean_luminance_step": [
+    0.206,
+    298
+   ],
+   "limit": 3,
+   "pass": true
+  },
+  {
+   "file": "out/ep01/full-v3/picture-el/act1.mp4",
+   "frames": 8290,
+   "max_flashes_in_1s": 1,
+   "at_frame": 7676,
+   "red": 0,
+   "transitions": 14,
+   "largest_mean_luminance_step": [
+    0.531,
+    8266
+   ],
+   "limit": 3,
+   "pass": true
+  },
+  {
+   "file": "out/ep01/full-v3/picture-el/act2.mp4",
+   "frames": 4645,
+   "max_flashes_in_1s": 1,
+   "at_frame": 339,
+   "red": 0,
+   "transitions": 17,
+   "largest_mean_luminance_step": [
+    0.285,
+    4353
+   ],
+   "limit": 3,
+   "pass": true
+  },
+  {
+   "file": "out/ep01/full-v3/picture-el/act3.mp4",
+   "frames": 3436,
+   "max_flashes_in_1s": 0,
+   "at_frame": -1,
+   "red": 0,
+   "transitions": 6,
+   "largest_mean_luminance_step": [
+    0.403,
+    306
+   ],
+   "limit": 3,
+   "pass": true
+  },
+  {
+   "file": "out/ep01/full-v3/picture-el/act4.mp4",
+   "frames": 12701,
+   "max_flashes_in_1s": 0,
+   "at_frame": -1,
+   "red": 0,
+   "transitions": 15,
+   "largest_mean_luminance_step": [
+    0.567,
+    608
+   ],
+   "limit": 3,
+   "pass": true
+  },
+  {
+   "file": "out/ep01/full-v3/picture-el/tag.mp4",
+   "frames": 992,
+   "max_flashes_in_1s": 0,
+   "at_frame": -1,
+   "red": 0,
+   "transitions": 8,
+   "largest_mean_luminance_step": [
+    0.319,
+    878
+   ],
+   "limit": 3,
+   "pass": true
+  }
+ ],
+ "renders": {
+  "coldopen": {
+   "frames": 583,
+   "standins": [],
+   "layout_problems": [],
+   "browser_frames_spliced": 0,
+   "stand_in_marks": 0,
+   "render_s": 6
+  },
+  "act1": {
+   "frames": 8290,
+   "standins": [],
+   "layout_problems": [],
+   "browser_frames_spliced": 0,
+   "stand_in_marks": 0,
+   "render_s": 98
+  },
+  "act2": {
+   "frames": 4645,
+   "standins": [],
+   "layout_problems": [],
+   "browser_frames_spliced": 0,
+   "stand_in_marks": 0,
+   "render_s": 23
+  },
+  "act3": {
+   "frames": 3436,
+   "standins": [],
+   "layout_problems": [],
+   "browser_frames_spliced": 5,
+   "stand_in_marks": 0,
+   "render_s": 25
+  },
+  "act4": {
+   "frames": 12701,
+   "standins": [],
+   "layout_problems": [],
+   "browser_frames_spliced": 164,
+   "stand_in_marks": 0,
+   "render_s": 130
+  },
+  "tag": {
+   "frames": 992,
+   "standins": [],
+   "layout_problems": [],
+   "browser_frames_spliced": 217,
+   "stand_in_marks": 0,
+   "render_s": 12
+  }
+ }
+}

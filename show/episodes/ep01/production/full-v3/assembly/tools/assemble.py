@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """assemble.py - Ep1 v3, the v3-assemble pass (PLAN.md track F): the full episode film, one per voice variant.
 
-  audio/.venv-casting/bin/python show/episodes/ep01/production/full-v3/assembly/tools/assemble.py kokoro|el [--dry]
+  audio/.venv-casting/bin/python show/episodes/ep01/production/full-v3/assembly/tools/assemble.py kokoro|el|kokoro-v31|el-v31 [--dry]
   (run it through ops/heavy.sh: the encode is heavy)
 
 The order is the v3 manifest's: cold open -> intro -> the filename card -> Acts One to Four -> tag -> the Orb outro.
@@ -18,7 +18,7 @@ The order is the v3 manifest's: cold open -> intro -> the filename card -> Acts 
            (its own first 0.3 s, time-reversed, equal-power fade-in), so the room is there when the ring-out ends.
            AAC-LC 256 kb/s, 48 kHz.
   CHAPTERS the nine chapters, titled, from an ffconcat chapter list (the bundled ffmpeg has no ffmetadata demuxer).
-Writes out/ep01/full-v3/ep01-v3[-el].mp4 and assembly/<variant>-assembly.json (every input, its length and md5 of
+Writes out/ep01/full-v3/<VARIANTS[v].film>.mp4 (ep01-v3, ep01-v3-el, ep01-v31, ep01-v31-el) and assembly/<variant>-assembly.json (every input, its length and md5 of
 its head, the seams, the chapter table). The episode WAV is a scratch intermediate and is deleted after the mux.
 """
 from __future__ import annotations
@@ -46,6 +46,20 @@ X264 = ["-c:v", "libx264", "-preset", "medium", "-crf", "18", "-tune", "animatio
 TITLES = {"coldopen": "Cold open", "intro": "Intro", "card": "ep1.0_research_preview.md", "act1": "Act One · research preview",
           "act2": "Act Two · the regulate-me tour", "act3": "Act Three · verified: human", "act4": "Act Four · the blip, told twice",
           "tag": "Tag · december", "outro": "Outro · credits"}
+# the variants: the manifest (chapter order, the intro and outro and their gains), the story pictures, the final mixes,
+# the film's name, the locks the transcript reads, and chapter titles that differ from TITLES
+VARIANTS = {
+    "kokoro": dict(man="show/reel/ep01-v3/ep01-v3.manifest.json", pic="picture", mix="mix", film="ep01-v3", label="v3",
+                   locks="show/episodes/ep01/production/full-v3/lock/{seg}.json", transcript="transcript.txt", titles={}),
+    "el": dict(man="show/reel/ep01-v3-el/ep01-v3-el.manifest.json", pic="picture-el", mix="mix-el", film="ep01-v3-el", label="v3, ElevenLabs voices",
+               locks="show/episodes/ep01/production/full-v3/assembly/el/lock-{seg}.json", transcript="transcript-el.txt", titles={}),
+    "kokoro-v31": dict(man="show/reel/ep01-v31/ep01-v31.manifest.json", pic="picture", mix="mix-v31", film="ep01-v31", label="v3.1",
+                       locks="show/episodes/ep01/production/full-v3/lock/{seg}.json", transcript="transcript-v31.txt",
+                       titles={"act4": "Act Four · five days, told twice"}),
+    "el-v31": dict(man="show/reel/ep01-v31-el/ep01-v31-el.manifest.json", pic="picture-el", mix="mix-v31-el", film="ep01-v31-el",
+                   label="v3.1, ElevenLabs voices", locks="show/episodes/ep01/production/full-v3/assembly/el-v31/lock-{seg}.json",
+                   transcript="transcript-v31-el.txt", titles={"act4": "Act Four · five days, told twice"}),
+}
 
 
 def probe_frames(path):
@@ -64,10 +78,11 @@ def head_md5(path, n=1 << 20):
 
 
 def chapters(variant):
-    man = json.load(open(f"{ROOT}/show/reel/ep01-v3{'-el' if variant == 'el' else ''}/ep01-v3{'-el' if variant == 'el' else ''}.manifest.json"))
+    V = VARIANTS[variant]
+    man = json.load(open(f"{ROOT}/{V['man']}"))
     byid = {c["id"]: c for c in man["chapters"]}
-    pic = f"{ROOT}/out/ep01/full-v3/{'picture-el' if variant == 'el' else 'picture'}"
-    mix = f"{ROOT}/out/ep01/full-v3/{'mix-el' if variant == 'el' else 'mix'}"
+    pic = f"{ROOT}/out/ep01/full-v3/{V['pic']}"
+    mix = f"{ROOT}/out/ep01/full-v3/{V['mix']}"
     out = []
     for cid in ["coldopen", "intro", "card", "act1", "act2", "act3", "act4", "tag", "outro"]:
         c = byid[cid]
@@ -100,7 +115,7 @@ def main(variant, dry=False):
             raise SystemExit(f"{c['id']}: the audio is {len(a)} samples, the picture {nf} frames = {want} samples: refusing to pad or trim")
         a = a * 10 ** (c["gain_db"] / 20)
         tracks.append(a)
-        rep["chapters"].append(dict(id=c["id"], title=TITLES[c["id"]], video=os.path.relpath(c["video"], ROOT), audio=os.path.relpath(c["audio"], ROOT),
+        rep["chapters"].append(dict(id=c["id"], title=VARIANTS[variant]["titles"].get(c["id"], TITLES[c["id"]]), video=os.path.relpath(c["video"], ROOT), audio=os.path.relpath(c["audio"], ROOT),
                                     gain_db=c["gain_db"], frames=nf, start_frame=f_at, start_s=round(f_at / FPS, 4), seconds=round(nf / FPS, 4),
                                     video_head_md5=head_md5(c["video"]), audio_head_md5=head_md5(c["audio"]),
                                     audio_mtime=time.strftime("%H:%M:%S", time.localtime(os.path.getmtime(c["audio"])))))
@@ -140,8 +155,9 @@ def main(variant, dry=False):
         cur = cur + 1 if z else 0
         best = max(best, cur)
     rep["longest_digital_zero_run_ms"] = round(best / SR * 1000, 2)
-    out = f"{ROOT}/out/ep01/full-v3/ep01-v3{'-el' if variant == 'el' else ''}.mp4"
+    out = f"{ROOT}/out/ep01/full-v3/{VARIANTS[variant]['film']}.mp4"
     rep["film"] = os.path.relpath(out, ROOT)
+    rep["locks"], rep["transcript"], rep["label"] = VARIANTS[variant]["locks"], VARIANTS[variant]["transcript"], VARIANTS[variant]["label"]
     json.dump(rep, open(f"{ASM}/{variant}-assembly.json", "w"), indent=1, ensure_ascii=False)
     print(json.dumps({k: rep[k] for k in ("total_frames", "total_s", "sample_peak_dbfs", "longest_digital_zero_run_ms")}), flush=True)
     for s in rep["seams"]:
@@ -168,7 +184,7 @@ def main(variant, dry=False):
     for i, c in enumerate(rep["chapters"]):
         meta += [f"-metadata:c:{i}", f"title={c['title']}"]
     cmd += ["-filter_complex", fc, "-map", "[v]", "-map", f"{len(CH)}:a", "-map_chapters", str(len(CH)), *meta,
-            "-map_metadata", "-1", "-metadata", f"title=MR. MAS · ep1.0_research_preview.md (v3{', ElevenLabs voices' if variant == 'el' else ''})",
+            "-map_metadata", "-1", "-metadata", f"title=MR. MAS · ep1.0_research_preview.md ({VARIANTS[variant]['label']})",
             "-r", "24", *X264, "-force_key_frames", keys,
             "-c:a", "aac", "-b:a", "256k", "-ar", "48000", "-ac", "2", "-movflags", "+faststart", out + ".part.mp4"]
     try:

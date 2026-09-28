@@ -9,7 +9,7 @@ import * as fs from 'fs';
 
 const REPO = '/home/jgon/project/art/mrmas';
 const PIXEL = `${REPO}/studio/src/episodes/ep01/pixel`;
-const EL = `${REPO}/show/episodes/ep01/production/full-v3/assembly/el`;
+const EL = path.resolve(process.env.ELDIR ?? `${REPO}/show/episodes/ep01/production/full-v3/assembly/el`);   // ELDIR: assembly/el-v31 for v3.1
 const req = createRequire(`${REPO}/studio/package.json`);
 const {bundle} = req('@remotion/bundler');
 const webpack = req('webpack');

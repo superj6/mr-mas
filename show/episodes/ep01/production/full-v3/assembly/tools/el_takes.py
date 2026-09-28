@@ -12,8 +12,10 @@ for each segment this writes a COPY of the EL rows (the audio and the EL files a
     spans with their phonemes, gated by the WAV's 10 ms envelope. The EL words have no phonemes, so each word gets
     misaki's G2P (the Kokoro front end); a word misaki doesn't know (the parody names) takes the phonemes the Kokoro
     takes gave the same word, and failing that a letter-by-letter guess (logged).
-  audio/.venv-casting/bin/python show/episodes/ep01/production/full-v3/assembly/tools/el_takes.py [seg ...]
+  audio/.venv-casting/bin/python show/episodes/ep01/production/full-v3/assembly/tools/el_takes.py [--lock v31] [seg ...]
   -> show/episodes/ep01/production/full-v3/assembly/el/<seg>-takes.json (+ el-takes-report.json)
+  --lock v31: the v3.1 EL takes (audio/ep01/v3-el/ep01-v31/) -> assembly/el-v31/. The Kokoro takes are always the ones
+  the current Kokoro locks (full-v3/lock/<seg>.json) name.
 """
 from __future__ import annotations
 
@@ -28,6 +30,7 @@ import soundfile as sf
 
 ROOT = "/home/jgon/project/art/mrmas"
 OUT = f"{ROOT}/show/episodes/ep01/production/full-v3/assembly/el"
+EL_TAKES = f"{ROOT}/audio/ep01/v3-el/ep01"
 SEGS = ["coldopen", "act1", "act2", "act3", "act4", "tag"]
 FROM_KOKORO = ("kind", "mode", "on_camera", "lip_sync", "device", "speaker", "speaker_slug", "tag", "side", "pov", "shot", "shot_id")
 
@@ -102,7 +105,7 @@ def main(segs):
     report = {"about": "el_takes.py: EL takes with the Kokoro takes' camera fields and a mouth track (mouths.py's mouth_cues)", "segments": {}}
     os.makedirs(OUT, exist_ok=True)
     for seg in segs:
-        rows = json.load(open(f"{ROOT}/audio/ep01/v3-el/ep01/{seg}/lines-A.json"))
+        rows = json.load(open(f"{EL_TAKES}/{seg}/lines-A.json"))
         K = kokoro.get(seg, {})
         out, rep = [], {"rows": len(rows), "with_kokoro_row": 0, "mouths": 0, "vo": 0, "ph_sources": {}, "letter_guesses": [], "no_kokoro_row": []}
         for r in rows:
@@ -148,4 +151,10 @@ def main(segs):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1:] or SEGS)
+    args = sys.argv[1:]
+    if args[:1] == ["--lock"]:
+        v = args[1]
+        OUT = f"{ROOT}/show/episodes/ep01/production/full-v3/assembly/el-{v}"
+        EL_TAKES = f"{ROOT}/audio/ep01/v3-el/ep01-{v}"
+        args = args[2:]
+    main(args or SEGS)

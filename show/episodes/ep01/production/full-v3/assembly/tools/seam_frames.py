@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """seam_frames.py - the v3-assemble pass: each chapter's first and last frame in the film against the same frame of its source
 picture (mean abs difference, 0-255, at 480 x 270), and against the neighbouring source frame, so a one-frame shift would show.
-  audio/.venv-casting/bin/python show/episodes/ep01/production/full-v3/assembly/tools/seam_frames.py  -> assembly/seam-frames.json"""
+  audio/.venv-casting/bin/python show/episodes/ep01/production/full-v3/assembly/tools/seam_frames.py [variant ...]  -> assembly/seam-frames[-<variants>].json"""
 import json, subprocess, os, numpy as np, sys
 ROOT="/home/jgon/project/art/mrmas"; FFD=f"{ROOT}/studio/node_modules/@remotion/compositor-linux-x64-gnu"; ENV={**os.environ,"LD_LIBRARY_PATH":FFD}
 def frame(path, idx, W=480, H=270):
@@ -13,7 +13,7 @@ def frame(path, idx, W=480, H=270):
     assert len(a) == idx - t0*24 + 1, (path, idx, len(a))
     return a[-1].astype(float)
 out={}
-for v in ["kokoro","el"]:
+for v in (sys.argv[1:] or ["kokoro","el"]):
     a=json.load(open(f"{ROOT}/show/episodes/ep01/production/full-v3/assembly/{v}-assembly.json"))
     film=f"{ROOT}/{a['film']}"; rows=[]
     for c in a["chapters"]:
@@ -25,4 +25,4 @@ for v in ["kokoro","el"]:
             rows.append(dict(ch=c["id"],which=lab,mad=round(float(np.abs(fa-fb).mean()),2),mad_vs_neighbour=round(float(np.abs(fa-fn).mean()),2)))
     out[v]=rows
     for r in rows: print(v, r)
-json.dump(out,open(f"{ROOT}/show/episodes/ep01/production/full-v3/assembly/seam-frames.json","w"),indent=1)
+json.dump(out,open(f"{ROOT}/show/episodes/ep01/production/full-v3/assembly/seam-frames{'-' + '-'.join(sys.argv[1:]) if sys.argv[1:] else ''}.json","w"),indent=1)
