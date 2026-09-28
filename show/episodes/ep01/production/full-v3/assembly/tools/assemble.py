@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """assemble.py - Ep1 v3, the v3-assemble pass (PLAN.md track F): the full episode film, one per voice variant.
 
-  audio/.venv-casting/bin/python show/episodes/ep01/production/full-v3/assembly/tools/assemble.py kokoro|el|kokoro-v31|el-v31 [--dry]
+  audio/.venv-casting/bin/python show/episodes/ep01/production/full-v3/assembly/tools/assemble.py kokoro|el|kokoro-v31|el-v31|kokoro-v32|el-v32 [--dry]
   (run it through ops/heavy.sh: the encode is heavy)
 
 The order is the v3 manifest's: cold open -> intro -> the filename card -> Acts One to Four -> tag -> the Orb outro.
@@ -59,6 +59,16 @@ VARIANTS = {
     "el-v31": dict(man="show/reel/ep01-v31-el/ep01-v31-el.manifest.json", pic="picture-el", mix="mix-v31-el", film="ep01-v31-el",
                    label="v3.1, ElevenLabs voices", locks="show/episodes/ep01/production/full-v3/assembly/el-v31/lock-{seg}.json",
                    transcript="transcript-v31-el.txt", titles={"act4": "Act Four · five days, told twice"}),
+    # v3.2: the outro plays the sound pass's outro-mix.wav (the outro's own audio with the tag's hum held under its head
+    # and its first hit down; laid for the manifest's -1 dB) in place of outro-b-v3.wav (sound.md V.3)
+    "kokoro-v32": dict(man="show/reel/ep01-v32/ep01-v32.manifest.json", pic="picture", mix="mix-v32", film="ep01-v32", label="v3.2",
+                       locks="show/episodes/ep01/production/full-v3/lock/{seg}.json", transcript="transcript-v32.txt",
+                       titles={"act4": "Act Four · five days, told twice"}, outro_audio="outro-mix.wav",
+                       hum_gap=dict(frames=18, tail="audio/reel/ep01-v3/v32/tag-tail.wav", out="out/ep01/full-v3/assembly-v32")),
+    "el-v32": dict(man="show/reel/ep01-v32-el/ep01-v32-el.manifest.json", pic="picture-el", mix="mix-v32-el", film="ep01-v32-el",
+                   label="v3.2, ElevenLabs voices", locks="show/episodes/ep01/production/full-v3/assembly/el-v32/lock-{seg}.json",
+                   transcript="transcript-v32-el.txt", titles={"act4": "Act Four · five days, told twice"}, outro_audio="outro-mix.wav",
+                   hum_gap=dict(frames=18, tail="audio/reel/ep01-v3/v32/el/tag-tail.flac", out="out/ep01/full-v3/assembly-v32-el")),
 }
 
 
@@ -87,12 +97,75 @@ def chapters(variant):
     for cid in ["coldopen", "intro", "card", "act1", "act2", "act3", "act4", "tag", "outro"]:
         c = byid[cid]
         if c.get("kind") == "video":
-            out.append(dict(id=cid, video=f"{ROOT}/{c['src']}", audio=f"{ROOT}/{c['audio']['src']}", gain_db=float(c["audio"].get("gain", 0)), own=True))
+            au = f"{mix}/{V['outro_audio']}" if cid == "outro" and V.get("outro_audio") else f"{ROOT}/{c['audio']['src']}"
+            out.append(dict(id=cid, video=f"{ROOT}/{c['src']}", audio=au, gain_db=float(c["audio"].get("gain", 0)), own=True))
         elif cid == "card":
             out.append(dict(id=cid, video=f"{ROOT}/out/ep01/full-v3/picture/card.mp4", audio=f"{mix}/card-mix.wav", gain_db=0.0, own=False))
         else:
             out.append(dict(id=cid, video=f"{pic}/{cid}.mp4", audio=f"{mix}/{cid}-mix.wav", gain_db=0.0, own=False))
     return out
+
+
+def hum_gap(variant, CH):
+    """v3.2's tag -> outro seam (sound.md §V): 2 s of the vault's hum alone before the outro. The tag's own black (33.05)
+    is 1.25 s, so HG frames of black (the tag's last frame, held) are added after it, with the hum stem `tag-tail` under
+    them at the tag's level, and the outro's audio is re-laid so the hum under its head CONTINUES the stem (tag-tail from
+    HG frames in) instead of restarting it. The sound pass's outro-mix.wav = the outro master with its first hit -6 dB and a
+    150 ms fade-in (O), plus tag-tail[0:2 s] x the tag's gain x a hold-then-fade envelope (hold 0.9 s, out by 2.0 s). O is
+    re-made here with mix_episode.py's own formula and checked against outro-mix.wav (the residual must be < 1e-5, or this
+    stops); the hum's gain is fitted from the difference. The new outro audio is O + tag-tail[HG:2 s] under the same
+    envelope in hum time (so the hum still ends 2.0 s after the tag's last frame). Writes <out>/tag-hum.wav (the gap's
+    audio, at 0 dB), <out>/outro.wav (for the manifest's gain) and <out>/tag-last.png (the gap's picture)."""
+    V = VARIANTS[variant]
+    G = V["hum_gap"]
+    n_gap = G["frames"] * SPF
+    outd = f"{ROOT}/{G['out']}"
+    os.makedirs(outd, exist_ok=True)
+    tag = next(c for c in CH if c["id"] == "tag")
+    outro = next(c for c in CH if c["id"] == "outro")
+    man = json.load(open(f"{ROOT}/{V['man']}"))
+    src = f"{ROOT}/" + next(c for c in man["chapters"] if c["id"] == "outro")["audio"]["src"]
+    om, _ = sf.read(outro["audio"], dtype="float64", always_2d=True)
+    o, _ = sf.read(src, dtype="float64", always_2d=True)
+    tail, _ = sf.read(f"{ROOT}/{G['tail']}", dtype="float64", always_2d=True)
+    # O, as mix_episode.outro_mix makes it
+    w = o[: 2 * SR]
+    hop = int(0.01 * SR)
+    env10 = 20 * np.log10(np.sqrt(np.mean(np.square(w[: len(w) // hop * hop].reshape(-1, hop, 2)), axis=(1, 2))) + 1e-12)
+    hit = float(np.argmax(env10 >= env10.max() - 6.0) * 0.01)
+    t = np.arange(len(o)) / SR
+    O = o * 10 ** (np.interp(t, [0, hit + 0.35, hit + 0.85, t[-1]], [-6.0, -6.0, 0.0, 0.0]) / 20)[:, None]
+    k = int(0.15 * SR)
+    O[:k] *= (np.sin(np.linspace(0, np.pi / 2, k)) ** 2)[:, None]
+    m = min(len(tail), 2 * SR)
+    hum_env = lambda th: np.interp(th, [0, 0.9, 2.0], [1.0, 1.0, 0.0])[:, None] ** 0.5  # noqa: E731
+    H = tail[:m] * hum_env(np.arange(m) / SR)
+    D = om - O
+    sc = float((D[:m] * H).sum() / (H * H).sum())
+    res = D.copy()
+    res[:m] -= sc * H
+    resid = float(np.abs(res).max())
+    if resid > 1e-5:
+        raise SystemExit(f"hum_gap: outro-mix.wav isn't the outro + the hum as mix_episode.py lays them (residual {resid:.2e}); not re-laying it")
+    og = outro["gain_db"]
+    gap = tail[:n_gap] * sc * 10 ** (og / 20)                                 # the hum at the tag's level (0 dB in the film)
+    new = O.copy()
+    rest = tail[n_gap:m]
+    new[: len(rest)] += sc * rest * hum_env(np.arange(n_gap, m) / SR)
+    if np.abs(new).max() > 10 ** (-1.0 / 20):
+        new *= 10 ** (-1.0 / 20) / np.abs(new).max()
+    sf.write(f"{outd}/tag-hum.wav", gap, SR, subtype="PCM_24")
+    sf.write(f"{outd}/outro.wav", new, SR, subtype="PCM_24")
+    png = f"{outd}/tag-last.png"
+    # the tag's last frame (its black, 33.05): decode the last half second, keep the last frame written
+    subprocess.run([FF, "-v", "error", "-y", "-sseof", "-0.5", "-i", tag["video"], "-update", "1", png], check=True, env=ENV)
+    tg, _ = sf.read(tag["audio"], dtype="float64", always_2d=True)
+    info = dict(frames=G["frames"], seconds=round(G["frames"] / FPS, 4), tail=G["tail"], hum_gain_db_fitted=round(20 * np.log10(sc) + og, 2),
+                outro_mix_residual=resid, first_hit_s=hit, tag_last200_dbfs=round(rms_db(tg[-int(0.2 * SR):]), 1),
+                gap_first200_dbfs=round(rms_db(gap[: int(0.2 * SR)]), 1), gap_last200_dbfs=round(rms_db(gap[-int(0.2 * SR):]), 1),
+                tag_to_gap_sample_jump=round(float(np.abs(gap[0] - tg[-1]).max()), 5),
+                hum_alone_s=round(1.25 + G["frames"] / FPS, 2), files=[os.path.relpath(f"{outd}/{x}", ROOT) for x in ("tag-hum.wav", "outro.wav", "tag-last.png")])
+    return dict(id="tag-hum", video=png, still=G["frames"], audio=f"{outd}/tag-hum.wav", gain_db=0.0, own=False, chapter=False), f"{outd}/outro.wav", info
 
 
 def rms_db(x):
@@ -103,11 +176,19 @@ def main(variant, dry=False):
     t0 = time.time()
     CH = chapters(variant)
     rep = {"variant": variant, "built": time.strftime("%Y-%m-%d %H:%M:%S"), "chapters": [], "seams": []}
+    if VARIANTS[variant].get("hum_gap"):
+        gap, outro_wav, info = hum_gap(variant, CH)
+        CH.insert([c["id"] for c in CH].index("outro"), gap)
+        next(c for c in CH if c["id"] == "outro")["audio"] = outro_wav
+        rep["hum_gap"] = info
     tracks = []
     f_at = 0
     for c in CH:
-        nf, s = probe_frames(c["video"])
-        assert (s["width"], s["height"], s["r_frame_rate"]) == (1920, 1080, "24/1"), (c["id"], s)
+        if c.get("still"):
+            nf = c["still"]
+        else:
+            nf, s = probe_frames(c["video"])
+            assert (s["width"], s["height"], s["r_frame_rate"]) == (1920, 1080, "24/1"), (c["id"], s)
         a, sr = sf.read(c["audio"], dtype="float64", always_2d=True)
         assert sr == SR and a.shape[1] == 2, (c["id"], sr, a.shape)
         want = nf * SPF
@@ -115,7 +196,7 @@ def main(variant, dry=False):
             raise SystemExit(f"{c['id']}: the audio is {len(a)} samples, the picture {nf} frames = {want} samples: refusing to pad or trim")
         a = a * 10 ** (c["gain_db"] / 20)
         tracks.append(a)
-        rep["chapters"].append(dict(id=c["id"], title=VARIANTS[variant]["titles"].get(c["id"], TITLES[c["id"]]), video=os.path.relpath(c["video"], ROOT), audio=os.path.relpath(c["audio"], ROOT),
+        rep["chapters"].append(dict(id=c["id"], title=VARIANTS[variant]["titles"].get(c["id"], TITLES.get(c["id"])), chapter=c.get("chapter", True), video=os.path.relpath(c["video"], ROOT), audio=os.path.relpath(c["audio"], ROOT),
                                     gain_db=c["gain_db"], frames=nf, start_frame=f_at, start_s=round(f_at / FPS, 4), seconds=round(nf / FPS, 4),
                                     video_head_md5=head_md5(c["video"]), audio_head_md5=head_md5(c["audio"]),
                                     audio_mtime=time.strftime("%H:%M:%S", time.localtime(os.path.getmtime(c["audio"])))))
@@ -171,17 +252,19 @@ def main(variant, dry=False):
     lst = f"{SCR}/episode-{variant}.ffconcat"
     with open(lst, "w") as f:
         f.write("ffconcat version 1.0\n")
-        for i, c in enumerate(rep["chapters"]):
-            f.write(f"chapter {i} {c['start_frame'] / FPS:.6f} {(c['start_frame'] + c['frames']) / FPS:.6f}\n")
+        titled = [c for c in rep["chapters"] if c["chapter"]]
+        for i, c in enumerate(titled):
+            end = titled[i + 1]["start_frame"] if i + 1 < len(titled) else total_f     # an untitled piece (the hum gap) joins the chapter before it
+            f.write(f"chapter {i} {c['start_frame'] / FPS:.6f} {end / FPS:.6f}\n")
         f.write(f"file '{wav}'\n")
     cmd = [FF, "-hide_banner", "-y", "-v", "error", "-stats"]
     for c in CH:
-        cmd += ["-i", c["video"]]
+        cmd += (["-loop", "1", "-framerate", "24", "-t", f"{c['still'] / FPS:.6f}", "-i", c["video"]] if c.get("still") else ["-i", c["video"]])
     cmd += ["-f", "concat", "-safe", "0", "-i", lst]
-    fc = "".join(f"[{i}:v]format=yuv420p[v{i}];" for i in range(len(CH))) + "".join(f"[v{i}]" for i in range(len(CH))) + f"concat=n={len(CH)}:v=1:a=0[v]"
+    fc = "".join(f"[{i}:v]{'trim=end_frame=%d,' % c['still'] if c.get('still') else ''}format=yuv420p[v{i}];" for i, c in enumerate(CH)) + "".join(f"[v{i}]" for i in range(len(CH))) + f"concat=n={len(CH)}:v=1:a=0[v]"
     keys = ",".join(f"{c['start_frame'] / FPS:.6f}" for c in rep["chapters"])
     meta = []
-    for i, c in enumerate(rep["chapters"]):
+    for i, c in enumerate([c for c in rep["chapters"] if c["chapter"]]):
         meta += [f"-metadata:c:{i}", f"title={c['title']}"]
     cmd += ["-filter_complex", fc, "-map", "[v]", "-map", f"{len(CH)}:a", "-map_chapters", str(len(CH)), *meta,
             "-map_metadata", "-1", "-metadata", f"title=MR. MAS · ep1.0_research_preview.md ({VARIANTS[variant]['label']})",

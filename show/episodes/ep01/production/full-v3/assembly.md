@@ -1,10 +1,149 @@
-# Ep1 v3 and v3.1: the full episode films (`v3-assemble`, track F, 2026-09-27 and 28)
+# Ep1 v3, v3.1 and v3.2: the full episode films (`v3-assemble`, track F, 2026-09-27 and 28)
 
-> **Status: v3.1 BUILT AND MEASURED, both films (2026-09-28). The v3.1 section below is the current state; everything after it is the v3 round's record.** Track F of [PLAN.md](PLAN.md) (§5, the finalizing round), under the showrunner's "i want you to just do a full episode attempt with your best judgement" and "try your best to get a fully finalized version".
+> **Status: v3.2 BUILT AND MEASURED, both films (2026-09-28, the agency pass; SHOWRUNNER-NOTES 00 and 0). §W below is the current state.** §V is the v3.1 round's record, and everything after it the v3 round's. Track F of [PLAN.md](PLAN.md), under the showrunner's "i want you to just do a full episode attempt with your best judgement" and "try your best to get a fully finalized version".
 >
-> **Nothing here was watched or heard.** Every number below is measured from the files. I looked at stills only (listed in §V.3). Whether any cut, seam or line plays needs a person. Nothing was committed.
+> **Nothing here was watched or heard.** Every number below is measured from the files. I looked at stills only (§W.3). Whether any cut, seam or line plays needs a person. Nothing was committed.
 
-## V. v3.1 (2026-09-28): the final films
+## W. v3.2 (2026-09-28): the final films
+
+**The films:**
+
+| | Kokoro voices (primary) | ElevenLabs voices (set A) |
+|---|---|---|
+| **File** | `out/ep01/full-v3/ep01-v32.mp4` | `out/ep01/full-v3/ep01-v32-el.mp4` |
+| **Length** | **21:24.54** (30,829 frames) | **21:27.08** (30,890 frames) |
+| Size | 127.2 MB (video 532 kb/s) | 126.8 MB (video 526 kb/s) |
+| Contact sheet (every 10 s) | `out/ep01/full-v3/ep01-v32-sheet.png` (129 frames) | `out/ep01/full-v3/ep01-v32-el-sheet.png` (129) |
+| Transcript (episode timecodes, 235 lines) | [assembly/transcript-v32.txt](assembly/transcript-v32.txt) | [assembly/transcript-v32-el.txt](assembly/transcript-v32-el.txt) |
+| Records | `assembly/kokoro-v32-assembly.json`, `-qa.json` | `assembly/el-v32-assembly.json`, `-qa.json`, `el-v32-pictures.json` |
+
+- **Both films:**
+  - 1920 × 1080, 24 fps, H.264 High (CRF 18, `-tune animation`), AAC 256 kb/s at 48 kHz;
+  - nine titled chapters (Act Four: "five days, told twice");
+  - the flash-fixed intro.
+- **The sound** is the final v3.2 mixes as they are (`mix-v32/`, 05:30–05:31, and `mix-v32-el/`, 05:35–05:36), plus the intro's own master at −3 dB.
+- **The outro** plays the sound pass's `outro-mix.wav` at the manifest's −1 dB, not `outro-b-v3.wav` (sound.md §V). It's the full outro length, 10.125 s.
+- **The v3.1 films** (`ep01-v31.mp4`, `ep01-v31-el.mp4`) were **deleted** after both v3.2 films passed QA, as the lead asked. Their contact sheets are still on disk.
+
+### W.1 The tag → outro seam: 2 s of hum alone
+
+The sound pass's option (sound.md §V: "hold 0.75 s of black before the outro, and play `tag-tail`'s hum under it"), done in `assemble.py` (`hum_gap`):
+
+1. **Picture:** 18 frames (0.75 s) of the tag's own last frame (the black of 33.05), held, between the tag and the outro. It's part of the **Tag** chapter; the Outro chapter starts after it.
+   - The film's tag-last frame and the held frames differ by 1/255 at most: the same black.
+2. **Sound under it:** the stem `audio/reel/ep01-v3/v32/tag-tail.wav` (EL: `el/tag-tail.flac`), its first 0.75 s, at the tag's level.
+   - It continues the tag mix: the last 200 ms of the tag and the first 200 ms of the hum are −36.0 / −35.9 dBFS in Kokoro, and −35.2 / −35.9 in EL. The sample jump is 0.0007.
+3. **The outro's audio is re-laid so the hum continues, not restarts.** `outro-mix.wav` is the outro master (first hit −6 dB, 150 ms fade-in) plus the stem's first 2 s under a hold-then-fade envelope.
+   - `assemble.py` re-makes the master part with `mix_episode.py`'s own formula and subtracts it: the residual is 1.2e-7, so it matches exactly.
+   - It fits the hum's gain: +2.77 dB (EL +2.81), the tag's.
+   - It lays the stem from 0.75 s on under the outro's head, with the same envelope in hum time, so the hum still ends 2.0 s after the tag's last frame.
+   - The join into the outro is continuous (sample jump 0.0001).
+   - The re-laid files are `out/ep01/full-v3/assembly-v32[-el]/{tag-hum.wav, outro.wav, tag-last.png}`.
+4. **The result:** from the tag's black at 21:12.4 / 21:15.0, **2.0 s of the vault's hum alone**, measured at about −36 dBFS, then the outro's first hit.
+   - The outro still comes in **+12.7 dB** over the hum (momentary −34.5 → −21.2 LUFS), where v3.1 stepped +20.5.
+   - The first hit is 6 dB down, and the full level comes 0.85 s later.
+
+### W.2 The EL pictures for v3.2
+
+The same method as v3.1 (§V.2), on `show/reel/ep01-v32-el/` and `audio/ep01/v3-el/ep01-v32/`, all under `assembly/el-v32/`. No shots pass's file was touched.
+
+- **The takes:** `el_takes.py --lock v32`, 235 rows. The 224 non-V.O. rows each have a mouth track.
+- **The locks:** `LOCK=v32 el_lock.sh`. It now computes the `--ep-in` values from the EL timelines.
+  - **Frames:** cold open 583, Act One 8,039, Act Two 4,398, Act Three 3,330, Act Four 12,519, tag 992. Each equals its final EL mix.
+  - Every check passes. Act Four was re-locked once its EL mix existed; before that, its plan's temp track failed the length check.
+  - Act Four has 44 on-camera mouths, and the one silence is 5.12 s.
+- **The Runway splices:**
+  - **S7.13:** 264 frames, the hourglass at k128–263 (EL frames 11453–11588). Built with `hourglass_el.py --s713 11325 --back-at 170`, 136 PNGs.
+  - **The tag's demo:** 233 frames from tag frame 62 (the splice at 62–278).
+    - It's built with `insert.py`, then the tag pass's current `tag/tools/splice.ts` on the EL lock.
+    - The splice laid **no host layer on any frame** (`with_host_layer 0`, no V.O.), as v3.2 cut "those are stills.".
+- **GLYPH frames:** Act Three 5, Act Four 28. Remotion's plain frames are identical to Node's, and nothing outside the room area differs.
+- **Renders:** 0 stand-ins, 0 failed layouts, 0 stand-in marks. Browser frames spliced: Act Three 5, Act Four 164, tag 217. Each file is muxed with its final EL mix.
+- **Flashes, per picture:** cold open 1, Act One 2, Act Two 1, Acts Three and Four 0, tag 0; red 0. All pass.
+- **Looked at:** EL beside Kokoro at the same shot frame.
+  - Act Four: S1.02, S1.07, the Remove dialog before and on the click, and S7.13 k130, 173, 245 and 262.
+  - The tag: 32.01 k61, the insert at i0, 180 and 216, the layout at i217, and 32.02 k0.
+  - EL and Kokoro match at every one. The chat turns 3 frames later in EL's hourglass, on the EL line's end. The demo's stills carry no V.O. in either film.
+
+### W.3 QA (measured, both films)
+
+| Check | Kokoro v3.2 | EL v3.2 |
+|---|---|---|
+| **Full decode** | **0 error lines**, 30,829 frames | **0 error lines**, 30,890 frames |
+| **A/V per chapter** (8 s cross-correlation with each source) | **lag 0 samples** in all nine chapters | **0** in all nine |
+| A/V, the hum gap | the correlation peaks at 1,100 samples. That's a false reading on a steady 87 Hz tone (1,100 samples is two periods of it); the join samples are continuous by construction (§W.1) | the same |
+| **Chapter edge frames** against their sources (mean abs diff /255) | 0.00–0.13 on the story chapters; the intro 0.01–0.24; the hum gap 0.67, the PNG still through the encode; a one-frame shift would read 0.7–38.5 | the same |
+| **Integrated loudness** | **−16.09 LUFS** | **−16.10 LUFS** |
+| **True peak** | **−1.10 dBTP**, in the tag (the AAC's overshoot on the mix's −1.44) | **−1.35 dBTP** |
+| Chapters (LUFS-I) | cold open −16.1 · intro −17.1 · card −36.0 · the four acts −16.0 · tag −17.5 · outro −17.2 | −16.0 · −17.1 · −36.4 · −16.0 · −17.5 · −17.2 |
+| **Digital zero** over 5 ms / holes under −60 dBFS for 0.3 s | **none / none** | **none / none** |
+| **The one silence** (Remove click → buzz) | 12:29.8–12:34.8 (5.08 s), room tone at about −50 dBFS in every 250 ms, **0 zero samples** | 12:20.5–12:25.6 (5.12 s), the same |
+| **Flashes, whole film** | **max 2 in 1 s** (the cold open's freeze, 0:14.5); red 0. **Pass** | **max 3** (the same freeze, 0:12.4, at the limit, as v3.1: the re-encode's noise on a designed flash that reads 1 in the picture alone); red 0. **Pass** |
+| Flashes per chapter | cold open 2, intro 1, Acts One, Two and Four 1, the rest 0 | cold open 3, Act Two 2 (7:30.0), intro, Acts One and Four 1, the rest 0 |
+| Chapters | nine, titled; the tag's includes the hum gap; they match the assembly to the millisecond | the same |
+
+**Seams** (the decoded film; 200 ms RMS, momentary loudness over 400 ms):
+
+| Join | Kokoro at | Step (dB) | Momentary (LUFS) | EL at | Step | What it is |
+|---|---|---|---|---|---|---|
+| cold open → intro | 0:26.67 | −11.3 | −15.8 → −30.4 | 0:24.29 | −11.3 | the rewind's whirr cut on the collapse into the intro's first bar (designed) |
+| intro → card | 0:56.67 | +0.5 | −28.8 → −36.8 | 0:54.29 | +0.5 | the ring-out into the card's room (led under) |
+| **card → Act One** | 0:58.67 | **+18.6** | −33.1 → −14.2 | 0:56.29 | **+20.7** | **the designed downbeat** (sound.md §V: composer X's hard cut on the downbeat, out of the card) |
+| Act One → Two | 6:28.42 | −0.4 | −35.9 → −32.7 | 6:31.25 | +0.6 | |
+| Act Two → Three | 9:41.46 | +0.7 | −38.0 → −34.0 | 9:34.50 | −0.1 | |
+| Act Three → Four | 12:03.88 | −0.1 | −31.3 → −30.8 | 11:53.25 | +0.3 | |
+| Act Four → tag | 20:32.33 | +0.4 | −25.6 → −24.5 | 20:34.88 | +1.2 | |
+| tag → hum gap | 21:13.67 | +0.1 | −34.6 → −34.7 | 21:16.21 | −0.7 | the hum, continuous |
+| **hum → outro** | 21:14.42 | **+12.7** | −34.5 → −21.2 | 21:16.96 | **+12.7** | the outro's first hit, 6 dB down (§W.1) |
+
+### W.4 Watch these first
+
+Timecodes are Kokoro / EL.
+
+1. **The end:** the tag's black and the hum at 21:12.4 / 21:15.0 → the outro at 21:14.4 / 21:17.0. Do 2 s of hum alone, then the first hit at −6 dB, land as an ending?
+2. **The card → Act One downbeat** at 0:58.7 / 0:56.3, +18.6 / +20.7 dB. It's designed; is it a jolt?
+3. **Act Four's shock:**
+   - the Remove dialog at 12:27.9 / 12:18.6;
+   - the silence, 12:29.8–12:34.8 / 12:20.5–12:25.6.
+4. **The Runway inserts:**
+   - the hourglass, 19:48.4–19:54.1 / 19:50.5–19:56.1;
+   - the Elgoog demo, 20:34.9–20:44.6 / 20:37.5–20:47.2, now with no V.O. over its stills.
+5. **The cold open into the intro:** 0:26.7 / 0:24.3.
+6. **The inner voice** (now at dialogue level; all lines are in the transcripts):
+
+   | Line | Shot | Kokoro | EL | Text |
+   |---|---|---|---|---|
+   | v3-vo-03 | 5.04 | 1:35.04 | 1:36.29 | she's right. it will break. i don't know which part yet. |
+   | v3-vo-05 | 5.11 | 2:42.46 | 2:47.58 | i know. i still read it twice. |
+   | e1-a3-18-04 | 18.06 | 10:05.46 | 9:58.21 | i made it for everyone else. |
+   | v3-vo-18 | S1.02 | 12:14.46 | 12:03.83 | gerg's not on it. alyi set it up. probably just the budget. |
+   | a5-26a-01 | S2.01 | 12:46.88 | 12:37.54 | i don't keep score. |
+   | v3-vo-20 | S5.03 | 16:27.29 | 16:20.83 | four hundred and six… |
+   | v3-vo-24 | 32.03 | 20:49.38 | 20:51.92 | it looks calmer than me. |
+
+7. **The cold open's freeze flash,** 0:14.5 / 0:12.4. It's the film's only flash reading over 1, and it passes.
+
+### W.5 What's left
+
+1. **The two designed steps** (card → Act One, and the outro's first hit) are for an ear.
+2. **The EL cold open's flash reads 3, at the limit** (§W.3). It's re-encode noise on a designed flash; it passes.
+3. **The EL mouths** are built, not voice-timed, as in v3 and v3.1.
+
+### W.6 How to rebuild v3.2
+
+As §V.6, with `v32` in place of `v31`:
+
+```sh
+$PY $A/tools/el_takes.py --lock v32 && LOCK=v32 bash $A/tools/el_lock.sh           # re-run act4 once mix-v32-el/act4-mix.wav exists
+export ELDIR=$PWD/$A/el-v32   # then build_el / bundle_el / glyphs / hourglass_el.py --s713 11325 --back-at 170 / insert.py + splice.ts / picture, as §V.6
+bash ops/heavy.sh $PY $A/tools/assemble.py kokoro-v32 && bash ops/heavy.sh $PY $A/tools/assemble.py el-v32    # incl. the hum gap (§W.1)
+bash ops/heavy.sh $PY $A/tools/qa.py kokoro-v32 && bash ops/heavy.sh $PY $A/tools/qa.py el-v32
+bash ops/heavy.sh $PY $A/tools/seam_frames.py kokoro-v32 el-v32
+```
+
+- `qa.py` now reads the audio as float32 and measures the true peak in 30 s blocks. The whole-film 4× oversample had been killed at the 8 GB scope (exit 137).
+
+## V. v3.1 (2026-09-28): the record (superseded by §W; its films were deleted)
 
 **The films:**
 

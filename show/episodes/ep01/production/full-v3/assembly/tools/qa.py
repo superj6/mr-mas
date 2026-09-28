@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """qa.py - Ep1 v3, the v3-assemble pass: the measurements of a finished episode film (nothing here is heard or watched).
 
-  audio/.venv-casting/bin/python show/episodes/ep01/production/full-v3/assembly/tools/qa.py kokoro|el|kokoro-v31|el-v31
+  audio/.venv-casting/bin/python show/episodes/ep01/production/full-v3/assembly/tools/qa.py kokoro|el|kokoro-v31|el-v31|kokoro-v32|el-v32
   (through ops/heavy.sh: it decodes the whole film twice)
 
   1. DECODE      the whole film through the bundled ffmpeg (-v error): every error line is counted; frames decoded
@@ -77,9 +77,13 @@ def lufs_i(x, meter):
         return None
 
 
-def true_peak(x):
-    y = signal.resample_poly(x, 4, 1, axis=0)
-    return round(float(20 * np.log10(np.abs(y).max() + 1e-12)), 2)
+def true_peak(x, block=30 * SR, pad=256):
+    """4x-oversampled peak, in 30 s blocks (with a little overlap) so a whole film fits the 8 GB heavy scope"""
+    best = 0.0
+    for a in range(0, len(x), block):
+        seg = x[max(0, a - pad): a + block + pad]
+        best = max(best, float(np.abs(signal.resample_poly(seg, 4, 1, axis=0)).max()))
+    return round(float(20 * np.log10(best + 1e-12)), 2)
 
 
 def momentary(x, meter):
@@ -97,7 +101,7 @@ def audio_qa(film, asm):
     import pyloudnorm
     wav = f"{SCR}/qa-audio.wav"
     subprocess.run([FF, "-v", "error", "-y", "-i", film, "-map", "0:a", "-c:a", "pcm_s24le", wav], check=True, env=ENV)
-    a, sr = sf.read(wav, dtype="float64", always_2d=True)
+    a, sr = sf.read(wav, dtype="float32", always_2d=True)
     os.remove(wav)
     assert sr == SR
     meter = pyloudnorm.Meter(SR)
@@ -242,6 +246,8 @@ def transcript(variant, asm, out_txt):
             rows.append((f0, c["title"], "", "ep1.0_research_preview.md  [typed on black, 2 s]"))
         elif c["id"] == "outro":
             rows.append((f0, c["title"], "", "[the Orb's scan; credits: art · script · music · voices · edit: opus 5.5 / prompt: jgon]"))
+        elif c["id"] not in ("coldopen", "act1", "act2", "act3", "act4", "tag"):
+            rows.append((f0, rows[-1][1] if rows else "", "", "[the vault's hum under black, %.2f s]" % c["seconds"]) if c["id"] == "tag-hum" else (f0, c["id"], "", ""))
         else:
             L = json.load(open(lock(c["id"])))
             lines = L["lines"].values() if isinstance(L["lines"], dict) else L["lines"]
@@ -278,7 +284,9 @@ def main(variant):
     q["streams"] = j["streams"]
     q["format"] = j["format"]
     q["chapters"] = [dict(id=i, start=round(float(c["start_time"]), 3), end=round(float(c["end_time"]), 3), title=c.get("tags", {}).get("title")) for i, c in enumerate(j.get("chapters", []))]
-    q["chapters_match_assembly"] = all(abs(c["start"] - a["start_s"]) < 0.002 and abs(c["end"] - a["start_s"] - a["seconds"]) < 0.002 for c, a in zip(q["chapters"], asm["chapters"])) and len(q["chapters"]) == len(asm["chapters"])
+    titled = [a for a in asm["chapters"] if a.get("chapter", True)]          # an untitled piece (v3.2's hum gap) joins the chapter before it
+    ends = [t["start_s"] for t in titled[1:]] + [asm["total_s"]]
+    q["chapters_match_assembly"] = len(q["chapters"]) == len(titled) and all(abs(c["start"] - a["start_s"]) < 0.002 and abs(c["end"] - e) < 0.002 for c, a, e in zip(q["chapters"], titled, ends))
     q["audio"] = audio_qa(film, asm)
     print("audio", json.dumps({k: q["audio"][k] for k in ("seconds", "length_diff_ms", "integrated_lufs", "true_peak_dbtp")}), flush=True)
     q["flash"], q["sheet"] = picture_qa(film, asm, film[:-4] + "-sheet.png")

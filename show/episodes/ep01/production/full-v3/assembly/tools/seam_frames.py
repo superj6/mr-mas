@@ -5,6 +5,9 @@ picture (mean abs difference, 0-255, at 480 x 270), and against the neighbouring
 import json, subprocess, os, numpy as np, sys
 ROOT="/home/jgon/project/art/mrmas"; FFD=f"{ROOT}/studio/node_modules/@remotion/compositor-linux-x64-gnu"; ENV={**os.environ,"LD_LIBRARY_PATH":FFD}
 def frame(path, idx, W=480, H=270):
+    if path.endswith(".png"):                      # a held still (v3.2's hum gap): every frame is the image
+        r = subprocess.run([f"{FFD}/ffmpeg","-v","error","-i",path,"-vf",f"scale={W}:{H}:flags=area","-f","image2pipe","-c:v","rawvideo","-pix_fmt","rgb24","-"],capture_output=True,env=ENV,check=True).stdout
+        return np.frombuffer(r,np.uint8).reshape(H,W,3).astype(float)
     # the idx-th frame, decoded from the start of its GOP (accurate seek)
     # decode from the nearest earlier second and take the right frame by count (robust to edit lists)
     t0 = max(0, idx // 24 - 2)
