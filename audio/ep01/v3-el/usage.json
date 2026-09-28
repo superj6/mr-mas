@@ -219,6 +219,67 @@
    "used_by_subscription": 2849,
    "voice_slots_used_after": 2,
    "note": "Two designed voices were saved to the account (voice_slots_used 0 -> 2): mrmas-mas-design-2027-2, -2027-1."
+  },
+  "phase 4: the v3.1 lock": {
+   "budget_chars": 8000,
+   "_about": "Phase 4 (2026-09-27): every v3.1 line without an EL take (new reads, restored v2 lines, the demo voice), set A with Mas = Jeremy; the lock's 8 cut lines cut from EL takes; the EL-timed v3.1 variant and its reel. Budget 8,000 characters.",
+   "subscription_before": {
+    "tier": "creator",
+    "character_count": 12693,
+    "character_limit": 131000,
+    "next_character_count_reset_unix": 1793049484,
+    "voice_limit": 30,
+    "voice_slots_used": 2,
+    "professional_voice_limit": 1,
+    "can_extend_character_limit": false,
+    "status": "active",
+    "checked_at": "2026-09-27T18:50:00"
+   },
+   "subscription_after": {
+    "tier": "creator",
+    "character_count": 13894,
+    "character_limit": 131000,
+    "next_character_count_reset_unix": 1793049484,
+    "voice_limit": 30,
+    "voice_slots_used": 2,
+    "professional_voice_limit": 1,
+    "can_extend_character_limit": false,
+    "status": "active",
+    "checked_at": "2026-09-27T19:15:56"
+   },
+   "runs": {
+    "audio/ep01/v3-el/ep01-v31/act1": {
+     "calls": 17,
+     "chars_sent": 831,
+     "credits_billed": 455
+    },
+    "audio/ep01/v3-el/ep01-v31/act2": {
+     "calls": 3,
+     "chars_sent": 184,
+     "credits_billed": 101
+    },
+    "audio/ep01/v3-el/ep01-v31/act3": {
+     "calls": 6,
+     "chars_sent": 202,
+     "credits_billed": 111
+    },
+    "audio/ep01/v3-el/ep01-v31/act4": {
+     "calls": 23,
+     "chars_sent": 910,
+     "credits_billed": 501
+    },
+    "audio/ep01/v3-el/ep01-v31/tag": {
+     "calls": 4,
+     "chars_sent": 62,
+     "credits_billed": 33
+    }
+   },
+   "total": {
+    "calls": 53,
+    "chars_sent": 2189,
+    "credits_billed": 1201
+   },
+   "used_by_subscription": 1201
   }
  },
  "all_phases_total": {

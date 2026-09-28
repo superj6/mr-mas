@@ -1,6 +1,6 @@
 # Ep1 v3: the ElevenLabs voice pass (`v3-voices-el`, track A4, 2026-09-27)
 
-> **Status: PHASE 3 DONE: MAS IS RECAST.** The showrunner listened and heard Mas A (Giovanni) as accented ("strangely russian"). Mas is now **Jeremy** (candidate C), picked by measurement, and all 75 of his lines are re-rendered. The EL-timed lock and its reel are rebuilt. The audition file, `out/ep01/full-v3/voices/mas-recast.mp3`, is there for the showrunner to overrule the pick. The recast is §R, directly below. Phase 2 (the whole episode in set A) is §P1–§P9, and phase 1 (the casting and the sample) is §1–§8. Where phase 2 describes Mas, it describes Giovanni.
+> **Status: PHASE 4 DONE: THE v3.1 LOCK IN ELEVENLABS.** Every line of the final v3.1 lock (commit 3861671) has an EL take, with Mas as Jeremy. There is an EL-timed copy of the v3.1 lock (`show/reel/ep01-v31-el/`, key `ep01-v31-el-stick`) and its stick reel, `out/ep01/reel/ep01-v31-el-stick.mp4`. That's §V, directly below. The Mas recast is §R, phase 2 (the v3 lock in set A) is §P1–§P9, and phase 1 (the casting and the sample) is §1–§8. Where phase 2 describes Mas, it describes Giovanni.
 >
 > **Nobody has listened to any of this.** Every statement below is a measurement: duration, pace, pitch, silence at the head and tail, loudness, and what a speech recogniser heard. Whether a voice is natural, funny, or right for the character is still a call for an ear.
 >
@@ -21,6 +21,119 @@
 - **Characters:** 10,054 sent and **5,522 billed**, against the 25,000 budget. The subscription went from 0 to 5,522 of 131,000.
 - **Model:** `eleven_multilingual_v2` for everyone. I tested `eleven_v3` and didn't use it (§6).
 - **Decisions for you:** listed in §8.
+
+---
+
+## V. Phase 4: the v3.1 lock (2026-09-27)
+
+**The brief:**
+- Render every v3.1 line that has no EL take yet, with the current cast and Mas as Jeremy.
+- Give ELGOOG'S DEMO a neutral library voice that no cast member uses.
+- Build the EL-timed v3.1 variant the same way as before: every gap and J-cut lead kept, and the Runway frames' beats (S7.13 and the tag's demo beat) at their fixed lengths.
+- Make its manifest, with a distinct key, and a stick reel.
+- The budget is 8,000 characters.
+
+**In short:**
+- **All 251 lines** of the six v3.1 timelines have EL takes.
+- **Only 53 calls were needed** (2,189 characters sent, **1,201 billed**). Everything else was reused from phases 1–3 or cut.
+- **The subscription** went from 12,693 to 13,894 of 131,000.
+- **The EL-timed v3.1 story runs 21:17.0 against the Kokoro lock's 21:09.6 (+7.4 s).**
+
+### V1. The takes
+
+`audio/ep01/v3-el/ep01-v31/<seg>/lines-A.json` + `wav/` (and `wav-device/`), in the fastrec format as before.
+
+**Where each take comes from:**
+- **Rendered (53 calls):**
+  - the 29 new v3.1 reads;
+  - the 8 restored v2 lines, including Sydney's three, the Atem line, Nole's referee, and Mas's three (in Jeremy's voice);
+  - the lines whose performance changed in the lock;
+  - the renderer's own retakes.
+- **Reused:** a line whose voice, settings and text as sent are unchanged uses its earlier EL take. The take chosen for that same line comes first, retakes included, then the line's own first take.
+- **Two deliberate shares:**
+  - v31-a4-0012 ("and the rent?") is Act One's take, as the lock rules.
+  - Mada's second "Good question." shares his first, as in phase 2: his canned sameness.
+- **The eight lines the lock cuts from an existing take** are cut from the EL take of the same source line (`tools/el_cut.py`: the lock's own table and method), and nothing is sent. That keeps the lock's "same performance" rule:
+  - Alyi's sentence is told twice;
+  - Sydney's reset "Hi!";
+  - the landlord's "Everyone is welcome." on the monitor;
+  - Nedib's two halves.
+
+  Each cut is at the house level (−16 LUFS), with the device copy cut the same way where the source had one.
+- **Subtitle-only changes keep their take,** as the Kokoro lock kept its takes ("the take stands"). v3.1 dropped the quote marks around the staff letter's and the statements' quoted fragments, but kept the elision ("they're …unable"), and spelled the letter's "judgement".
+  - A mid-line elision mark before a word is now print, not a pause.
+  - "judgement" is sent as "judgment".
+  - So a5-29-06, -07, -09 and e1-a1-9-10 play their v3 EL takes.
+  - Only a5-27-07 (the removal post, which lost its leading "…") is a new read of the same words.
+- **ELGOOG'S DEMO ("What the quack!"):** **Bella - Professional, Bright, Warm**, an ElevenLabs premade voice ("Standard American accent"), used by no cast member. Stability 0.45, style 0.2 for the surprise, speed 1.0. It is heard as "What the quack?" at 249 Hz. The monitor chain is the mix's.
+
+**Measured on the new takes:**
+- **The levels are as before.**
+- **One pronunciation is watched:** "Gerg comes back too.", +3.0 for Mas and +2.2 for Terb.
+- **For an ear:**
+  - **Rima A's "We'll say we will."** (v31-a4-0003) came back in a creaky register on all four seeds (74–84 Hz, against her 170). pYIN agrees: 61–80 Hz.
+  - Tasya's "Due on the first." is heard as "Do on", as Kokoro's was.
+  - Mas's "neleh's on our board" is heard as "Nel is"; Mario's "Nell-eh" as "Nelier".
+  - Tasya A's pitch still wanders: "House rules, Sydney…" is at 113 Hz.
+
+### V2. The EL-timed v3.1 lock
+
+- **The files:** `show/reel/ep01-v31-el/ep01-v31-el-<seg>.json` and `ep01-v31-el.manifest.json` (key `ep01-v31-el-stick`; the studio shows `reel-ep01-v31-el`).
+- **The build:** `tools/el_lock.py --lock v31`, with the same rules as §P3.
+- **Fixed beats** (`--fixed`, the v3.1 default):
+  - S7.13 stays 264 frames, and v31-32.01d stays 233. 32.01 has no line, so it keeps its 62 frames and the demo still splices at tag frame 62.
+  - In a fixed beat, every line keeps its start, because they're anchored to the Runway frames: "Chat, we're so back." at k134, "What the quack!" at i110, "those are stills." at i168. Its sounds and captions don't move either.
+  - The takes fit: Ttemme's line is 1.42 s (Kokoro 1.31), the demo's 0.88 s (1.02) and Mas's 1.18 s (1.16). No overlaps or overruns were flagged.
+
+| Segment | Kokoro v3.1 lock | **EL-timed** | Change | Beats changed |
+|---|---|---|---|---|
+| Cold open | 0:26.7 | **0:24.3** | −2.4 s | 3 |
+| Act One | 5:37.5 | **5:45.4** | **+8.0 s** | 27 |
+| Act Two | 3:21.3 | **3:13.5** | −7.7 s | 23 |
+| Act Three | 2:25.1 | **2:23.2** | −2.0 s | 14 |
+| Act Four | 8:37.7 | **8:49.2** | **+11.5 s** | 46 |
+| Tag | 0:41.3 | **0:41.3** | 0.0 s | 2 (+0.16 and −0.16) |
+| **Story** | **21:09.6** | **21:17.0** | **+7.4 s** | 115 |
+
+**The beds:** `tools/el_bed.py --lock v31`, the v3.1 lock's own `bed.py` pointed at these timelines, into `audio/reel/ep01-v31-el/`.
+- Act One to the tag are rebuilt, with all their sounds resolved and none missing. The card is the lock's own bed.
+- The cold open splices the v3.1 lock's own cold-open bed, which matches the current Kokoro cold open, per beat to the EL times.
+
+### V3. The reel
+
+`out/ep01/reel/ep01-v31-el-stick.mp4`: 1280×720, 24 fps, H.264 + AAC. It runs **22:02.1**: the 3 s title slate, then the 21:59.1 episode, against the Kokoro v3.1 stick's 21:54.7 (+7.4 s). 109.1 MB, 477 s of wall.
+
+**What was checked:**
+- **Frames:** 31,730, the plan's count. The Runway beats render at exactly S7.13 = 264 frames, 32.01 = 62 and v31-32.01d = 233 (the renderer's own cumulative rounding).
+- **Sound:** all 251 takes and 7 beds placed, with 0 missing and no warnings.
+- **Loudness:** −16.7 LUFS with a −2.3 dBFS peak. The only digital silence of 0.5 s or more is the title slate.
+
+| Chapter | Starts | Length | Mix, LUFS (Kokoro v3.1) | Peak, dBFS |
+|---|---|---|---|---|
+| cold open | 0:03.0 | 24.3 | −18.5 (−18.2) | −4.7 |
+| intro (flash-fixed) | 0:27.3 | 30.0 | −17.1 (−16.9) | −4.3 |
+| card | 0:57.3 | 2.0 | −37.9 (−37.9) | −27.1 |
+| Act One | 0:59.3 | 5:45.4 | −16.8 (−16.7) | −3.4 |
+| Act Two | 6:44.7 | 3:13.5 | −16.6 (−16.4) | −4.0 |
+| Act Three | 9:58.2 | 2:23.2 | −17.4 (−17.2) | −4.1 |
+| Act Four | 12:21.4 | 8:49.2 | −16.4 (−16.3) | −2.3 |
+| tag | 21:10.6 | 0:41.3 | −21.7 (−21.7) | −4.7 |
+| outro | 21:52.0 | 0:10.1 | −17.1 (−17.0) | −4.1 |
+
+### V4. How to rebuild
+
+```sh
+PY=audio/.venv-casting/bin/python
+# 1. the takes: el_render.py per segment (set A, dialogue -16 / V.O. -18, --reuse of every earlier EL render, --skip of the
+#    lock's 8 cut ids), then el_cut.py (it must follow every render of the v3.1 segments). SEGS="act4" limits it;
+#    EXTRA="--retake <id>" adds a listening note's retake.
+bash ops/heavy.sh bash audio/ep01/v3-el/tools/render_v31.sh
+# 2. the lock, the beds, the manifest, the reel
+$PY audio/ep01/v3-el/tools/el_lock.py --lock v31
+bash ops/heavy.sh $PY audio/ep01/v3-el/tools/el_bed.py --lock v31
+$PY audio/ep01/v3-el/tools/el_lock.py --lock v31 --beds audio/reel/ep01-v31-el/beds.json
+cd studio && bash ../ops/heavy.sh node src/reel/tools/episode.mjs ../show/reel/ep01-v31-el/ep01-v31-el.manifest.json --jobs 2 --conc 4
+```
 
 ---
 

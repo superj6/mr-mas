@@ -41,6 +41,15 @@ SRC = "show/reel/ep01-v3"
 DST = "show/reel/ep01-v3-el"
 TAG = ""
 TAKES = "audio/ep01/v3-el/ep01"
+LOCK = "v3"            # --lock v31: the v3.1 lock (show/reel/ep01-v31/ -> show/reel/ep01-v31-el/)
+FIXED = set()          # --fixed: beats whose length is reserved (the v3.1 Runway frames): they keep their length and
+                       #          every line keeps its start (anchored to the picture); the takes are swapped in place
+FLAGS = []
+
+
+def P():
+    """the file-name prefixes of the source lock and of the EL copy"""
+    return f"ep01-{LOCK}-", f"ep01-{LOCK}-el{TAG}"
 FPS = 24
 
 
@@ -101,7 +110,7 @@ class Clock:
 
 
 def build_seg(seg, cand):
-    T = jload(f"{SRC}/ep01-v3-{seg}.json")
+    T = jload(f"{SRC}/{P()[0]}{seg}.json")
     L = {r["id"]: r for r in jload(f"{TAKES}/{seg}/lines-{cand}.json")}
     out = copy.deepcopy(T)
     report, missing = [], []
@@ -118,6 +127,7 @@ def build_seg(seg, cand):
         if not ls:
             t_new += old_len
             continue
+        fixed = b["id"] in FIXED
         knots = []
         prev_old_end = prev_new_end = None
         old_last_end = max(l["t"] + l["dur"] for l in ls)
@@ -125,7 +135,7 @@ def build_seg(seg, cand):
         for l in ls:
             r = L[l["id"]]
             old_t, old_dur = l["t"], l["dur"]
-            new_t = old_t if prev_old_end is None else prev_new_end + (old_t - prev_old_end)
+            new_t = old_t if (prev_old_end is None or fixed) else prev_new_end + (old_t - prev_old_end)
             a_in, a_out = r["pace"]["audible_in_s"], r["pace"]["audible_out_s"]
             new_dur = round(a_out - a_in, 3)
             ew = [[w["w"], round(w["t0"] - a_in, 3), round(w["t1"] - a_in, 3)] for w in r["words"]]
@@ -153,6 +163,14 @@ def build_seg(seg, cand):
             changes.append([l["id"], round(new_dur - old_dur, 3)])
         if ls[0]["kokoro"]["t"] < 0:
             knots.append((0.0, 0.0))                          # a J-cut line runs over the cut: the cut itself stays put
+        if fixed:                                             # a reserved length: nothing moves; check the takes fit
+            knots = []
+            ends = [(l["t"] + l["dur"], l) for l in ls]
+            for (e_, l), nxt in zip(ends, ls[1:] + [None]):
+                if nxt is not None and e_ > nxt["t"] + 1e-6:
+                    FLAGS.append(f"{seg} {b['id']} (fixed): {l['id']} now ends {e_ - nxt['t']:.2f} s into {nxt['id']}")
+                if nxt is None and e_ > old_len + 1e-6 and l["kokoro"]["t"] + l["kokoro"]["dur"] <= old_len + 1e-6:
+                    FLAGS.append(f"{seg} {b['id']} (fixed): {l['id']} now runs {e_ - old_len:.2f} s past the beat's end")
         clk = Clock(knots)
         new_last_end = clk(old_last_end)
         end_delta = round(new_last_end - old_last_end, 3)
@@ -178,7 +196,7 @@ def build_seg(seg, cand):
                            lines=changes))
     out["variant"] = (T.get("variant", "") + " · ElevenLabs set A takes (eleven_multilingual_v2, library voices), "
                       "EL-timed: the lock's gaps kept, beats changed only by the takes' lengths")
-    out["_source"] = dict(T.get("_source") or {}, kokoro_lock=f"{SRC}/ep01-v3-{seg}.json",
+    out["_source"] = dict(T.get("_source") or {}, kokoro_lock=f"{SRC}/{P()[0]}{seg}.json",
                           takes_files=[f"{TAKES}/{seg}/lines-{cand}.json"], el_builder="audio/ep01/v3-el/tools/el_lock.py",
                           el_notes="show/episodes/ep01/production/full-v3/voices-el.md", seconds=round(t_new, 3))
     out["runtimeMin"] = round(t_new / 60, 2)
@@ -186,16 +204,16 @@ def build_seg(seg, cand):
                                    "beats change only by the takes' lengths; timed items follow the words",
                               seconds_kokoro=round(t_old, 3), seconds_el=round(t_new, 3), delta_s=round(t_new - t_old, 3),
                               beats_changed=sum(1 for r in report if abs(r["delta_s"]) > 1e-6), missing_takes=missing)
-    jdump(out, f"{DST}/ep01-v3-el{TAG}-{seg}.json")
+    jdump(out, f"{DST}/{P()[1]}-{seg}.json")
     return dict(segment=seg, seconds_kokoro=round(t_old, 3), seconds_el=round(t_new, 3), delta_s=round(t_new - t_old, 3),
                 lines=sum(len(r["lines"]) for r in report), beats_changed=sum(1 for r in report if abs(r["delta_s"]) > 1e-6),
                 missing_takes=missing, beats=report)
 
 
 def build_manifest(beds):
-    M = jload(f"{SRC}/ep01-v3.manifest.json")
+    M = jload(f"{SRC}/ep01-{LOCK}.manifest.json")
     m = copy.deepcopy(M)
-    m["key"] = f"ep01-v3-el{TAG}-stick"
+    m["key"] = f"{P()[1]}-stick"
     m["variant"] = ("full-episode stick reel v3 LOCK, ElevenLabs-timed · the lock's picture and gaps · every line in "
                     "ElevenLabs set A (library voices, eleven_multilingual_v2) · temp rooms, SFX and pads · for the voice A/B")
     m["_about"] = ("The ElevenLabs-timed variant of the Ep1 v3 stick lock (pass v3-voices-el, phase 2, 2026-09-27). The same "
@@ -209,21 +227,31 @@ def build_manifest(beds):
                    "was watched or heard.")
     tot = 0.0
     for c in m["chapters"]:
-        if str(c.get("from", "")).startswith("ep01-v3-") and c["id"] in SEGS:
-            c["from"] = f"ep01-v3-el{TAG}-{c['id']}"
+        if str(c.get("from", "")).startswith(P()[0]) and c["id"] in SEGS:
+            c["from"] = f"{P()[1]}-{c['id']}"
             c["sub"] = c.get("sub", "") + " · EL set A"
     for bd in m.get("beds", []):
         if bd.get("chapter") in beds:
             bd.update(beds[bd["chapter"]])
     for seg in SEGS:
-        tot += jload(f"{DST}/ep01-v3-el{TAG}-{seg}.json")["_source"]["seconds"]
+        tot += jload(f"{DST}/{P()[1]}-{seg}.json")["_source"]["seconds"]
     other = 0.0
     for c in m["chapters"]:
         if c.get("kind") == "video":
             other += float(c.get("dur") or 0)
     other += 2.0                                              # the card
     m["runtimeMin"] = round((tot + other) / 60, 2)
-    jdump(m, f"{DST}/ep01-v3-el{TAG}.manifest.json")
+    if LOCK != "v3":
+        m["_about"] = (m["_about"].replace("show/reel/ep01-v3/ep01-v3.manifest.json (key ep01-v3-stick)",
+                                           f"show/reel/ep01-{LOCK}/ep01-{LOCK}.manifest.json (key ep01-{LOCK}-stick)")
+                       .replace("show/reel/ep01-v3-el/ep01-v3-el-<seg>.json", f"{DST}/{P()[1]}-<seg>.json")
+                       .replace("audio/ep01/v3-el/ep01/<seg>/", f"{TAKES}/<seg>/")
+                       .replace("audio/reel/ep01-v3/bed.py", f"audio/reel/ep01-{LOCK}/bed.py")
+                       .replace("audio/reel/ep01-v3-el/<seg>-bed.wav", f"audio/reel/ep01-{LOCK}-el/<seg>-bed.wav"))
+        if FIXED:
+            m["_about"] += f" Reserved lengths (the Runway frames): {', '.join(sorted(FIXED))} keep their length and line starts."
+        m["variant"] = m["variant"].replace("v3 LOCK", f"{LOCK} LOCK")
+    jdump(m, f"{DST}/{P()[1]}.manifest.json")
     return m
 
 
@@ -233,10 +261,15 @@ def main():
     ap.add_argument("--set", default="A")
     ap.add_argument("--beds", default=None, help="a JSON file {chapter: {src, label, ...}} for the manifest's beds")
     ap.add_argument("--tag", default="", help="a variant tag (see above)")
+    ap.add_argument("--lock", default="v3", choices=["v3", "v31"], help="the Kokoro lock: v3 (show/reel/ep01-v3/) or v31")
+    ap.add_argument("--fixed", nargs="*", default=None, help="beats with a reserved length (v31 default: S7.13 v31-32.01d)")
     a = ap.parse_args()
-    global DST, TAG
-    TAG = a.tag
-    DST = f"show/reel/ep01-v3-el{TAG}"
+    global DST, TAG, SRC, TAKES, LOCK, FIXED
+    TAG, LOCK = a.tag, a.lock
+    SRC = f"show/reel/ep01-{LOCK}"
+    DST = f"show/reel/ep01-{LOCK}-el{TAG}"
+    TAKES = "audio/ep01/v3-el/ep01" if LOCK == "v3" else f"audio/ep01/v3-el/ep01-{LOCK}"
+    FIXED = set(a.fixed if a.fixed is not None else (["S7.13", "v31-32.01d"] if LOCK == "v31" else []))
     segs = a.segs or SEGS
     rep = {"set": a.set, "segments": []}
     for s in segs:
@@ -252,6 +285,10 @@ def main():
         beds = jload(os.path.relpath(a.beds, REPO)) if a.beds else {}
         m = build_manifest(beds)
         rep["manifest"] = dict(key=m["key"], runtimeMin=m["runtimeMin"])
+        rep["fixed_beats"] = sorted(FIXED)
+        rep["flags"] = FLAGS
+        for f in FLAGS:
+            print("FLAG", f)
         jdump(rep, f"{TAKES}/el-lock-report{TAG}.json")
 
 

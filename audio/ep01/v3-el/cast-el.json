@@ -20,9 +20,10 @@
   "Nole": "Knoll",
   "Macrosoft": "Mack-roh-soft",
   "Manalt": "Man-alt",
-  "GTP-4": "G-T-P four"
+  "GTP-4": "G-T-P four",
+  "judgement": "judgment"
  },
- "respell_note": "names as the house lexicon (cast.json 'lexicon', naming.md §9) says them, respelled for the voice: Mas /mɑs/ -> 'Moss', Gerg /ɡɜɹɡ/ -> 'Gurg', Alyi /ˈælji/ -> 'Al-yee'. Only the text sent changes; lines JSON keep the script's text. Phase 2 (2026-09-27), chosen by a forced-choice ASR check (tools/pron_check.py; voices-el.md §9): Macrosoft -> 'Mack-roh-soft' (margin over 'Microsoft' +1.05; the plain spelling -7.71, 'Macro-soft' -5.88, Kokoro's IPA take -4.41, a 'Microsoft' control -16.34); Manalt -> 'Man-alt' (naming.md 'MAN-alt'; +1.13 over 'Menalt' etc., plain -1.78); GTP-4 -> 'G-T-P four' (the swap is the joke, as CHATGTP). respell_lines: a per-line fix, only where that take needed it: a5-29-01 'badge' -> 'badj' (+3.05 over 'batch'; the sample take -0.03, a new seed -0.40, a 'batch' control -6.05). respell_roles: where one voice needs its own spelling. mas-manalt (Giovanni): 'Gerg' -> 'Guhrg' (his 'Gurg' devoices to 'Kirk': 'Go to sleep, Gurg.' scored Kirk 13.8 over the name; 'Guhrg' puts the name 9.0 over Kirk and the plain ASR writes 'Gurg'; 'Ghurg', 'Gurrg' and 'Gerg' were still heard as Kirk); 'Noted' -> 'Noded' (the American flap; 'Noted.' was heard as 'Note it.' on three seeds, -0.37/-1.66/-1.31; 'Noded.' +1.89, heard 'Noted.'). v3-vo-23 (V.O., 'gerg never waits to be asked.'): 'Guhrg' was still heard as Kirk on three seeds (-6.19, -11.19, -5.52) and with a comma (-1.22); a soft lead-in '...Guhrg' +1.87 (the plain ASR writes 'Gorog': for an ear). v3-vo-21: a new seed (retake, bump 307), heard 'Gourg'.",
+ "respell_note": "names as the house lexicon (cast.json 'lexicon', naming.md §9) says them, respelled for the voice: Mas /mɑs/ -> 'Moss', Gerg /ɡɜɹɡ/ -> 'Gurg', Alyi /ˈælji/ -> 'Al-yee'. Only the text sent changes; lines JSON keep the script's text. Phase 2 (2026-09-27), chosen by a forced-choice ASR check (tools/pron_check.py; voices-el.md §9): Macrosoft -> 'Mack-roh-soft' (margin over 'Microsoft' +1.05; the plain spelling -7.71, 'Macro-soft' -5.88, Kokoro's IPA take -4.41, a 'Microsoft' control -16.34); Manalt -> 'Man-alt' (naming.md 'MAN-alt'; +1.13 over 'Menalt' etc., plain -1.78); GTP-4 -> 'G-T-P four' (the swap is the joke, as CHATGTP). respell_lines: a per-line fix, only where that take needed it: a5-29-01 'badge' -> 'badj' (+3.05 over 'batch'; the sample take -0.03, a new seed -0.40, a 'batch' control -6.05). respell_roles: where one voice needs its own spelling. mas-manalt (Giovanni): 'Gerg' -> 'Guhrg' (his 'Gurg' devoices to 'Kirk': 'Go to sleep, Gurg.' scored Kirk 13.8 over the name; 'Guhrg' puts the name 9.0 over Kirk and the plain ASR writes 'Gurg'; 'Ghurg', 'Gurrg' and 'Gerg' were still heard as Kirk); 'Noted' -> 'Noded' (the American flap; 'Noted.' was heard as 'Note it.' on three seeds, -0.37/-1.66/-1.31; 'Noded.' +1.89, heard 'Noted.'). v3-vo-23 (V.O., 'gerg never waits to be asked.'): 'Guhrg' was still heard as Kirk on three seeds (-6.19, -11.19, -5.52) and with a comma (-1.22); a soft lead-in '...Guhrg' +1.87 (the plain ASR writes 'Gorog': for an ear). v3-vo-21: a new seed (retake, bump 307), heard 'Gourg'. v3.1: 'judgement' -> 'judgment' (the v3.1 page's spelling of the staff letter; the same word and the lock's take stands, so the EL take does too).",
  "names": [
   "mas",
   "manalt",
@@ -120,7 +121,9 @@
   "deepfake": "deepfake-nedib",
   "deepfake-2": "deepfake-nedib-2",
   "deepfake2": "deepfake-nedib-2",
-  "tiled": "tiled-employee"
+  "tiled": "tiled-employee",
+  "ELGOOG'S DEMO": "elgoog-demo",
+  "elgoog-demo": "elgoog-demo"
  },
  "roles": {
   "mas-manalt": {
@@ -1952,6 +1955,39 @@
    "process": "gloss",
    "pitch_st": 0.7,
    "why": "The same as DEEPFAKE NEDIB, raised 0.7 st so the two fakes are told apart."
+  },
+  "elgoog-demo": {
+   "name": "ELGOOG'S DEMO",
+   "brief": "ELGOOG's product film's own voice (the tag's Runway insert): bright, surprised, a stock presenter; never a clone or a sound-alike of anyone, and no real product's voice.",
+   "lane_hz": [
+    160,
+    260
+   ],
+   "pace_wpm": "exclamation",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "hpp4J3VqNfWAUOO0d1Us",
+     "voice_name": "Bella - Professional, Bright, Warm",
+     "source": "ElevenLabs premade voice, used by voice_id",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.45,
+      "similarity_boost": 0.75,
+      "style": 0.2,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "labels": {
+      "accent": "american",
+      "gender": "female",
+      "age": "middle_aged",
+      "descriptive": "professional",
+      "use_case": "informative_educational"
+     },
+     "why": "v3.1 (2026-09-27): a neutral stock-presenter voice no cast member uses (premade; 'warm, bright, and professional, characterized by a Standard American accent'), as the Kokoro lock gave the demo a stock voice of its own (bf_isabella). Style 0.2 for the surprise; the monitor chain is the mix's."
+    }
+   ]
   }
  },
  "respell_lines": {},

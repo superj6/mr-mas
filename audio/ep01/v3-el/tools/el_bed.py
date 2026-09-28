@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """el_bed.py - the stick beds for the ElevenLabs-timed lock (track A4, pass v3-voices-el, phase 2).
 
-  audio/.venv-casting/bin/python audio/ep01/v3-el/tools/el_bed.py [--tag T] [seg ...]      (T: el_lock.py's variant tag)
+  audio/.venv-casting/bin/python audio/ep01/v3-el/tools/el_bed.py [--lock v3|v31] [--tag T] [seg ...]   (T: el_lock.py's variant tag)
+      --lock v31: the v3.1 lock's bed builder (audio/reel/ep01-v31/bed.py) on show/reel/ep01-v31-el/ -> audio/reel/ep01-v31-el/
       reads  show/reel/ep01-v3-el/ep01-v3-el-<seg>.json (el_lock.py), and the lock pass's bed builder and cold-open bed
       writes audio/reel/ep01-v3-el/<seg>-bed.wav (+ -bed-qa.json) and audio/reel/ep01-v3-el/beds.json (for el_lock.py --beds)
 
@@ -30,20 +31,21 @@ import soundfile as sf
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.abspath(os.path.join(HERE, "../../../.."))
-LOCK_BEDS = os.path.join(REPO, "audio/reel/ep01-v3")
-OUT = os.path.join(REPO, "audio/reel/ep01-v3-el")
+LOCK = sys.argv[sys.argv.index("--lock") + 1] if "--lock" in sys.argv else "v3"      # v3 or v31
+LOCK_BEDS = os.path.join(REPO, f"audio/reel/ep01-{LOCK}")
+OUT = os.path.join(REPO, f"audio/reel/ep01-{LOCK}-el")
 SR = 48000
 XF = 0.06
 
-spec = importlib.util.spec_from_file_location("v3bed", os.path.join(LOCK_BEDS, "bed.py"))
+spec = importlib.util.spec_from_file_location(f"{LOCK}bed", os.path.join(LOCK_BEDS, "bed.py"))
 B = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(B)
 TAG = ""
-B.seg_timeline = lambda seg: json.load(open(os.path.join(REPO, f"show/reel/ep01-v3-el{TAG}/ep01-v3-el{TAG}-{seg}.json")))
+B.seg_timeline = lambda seg: json.load(open(os.path.join(REPO, f"show/reel/ep01-{LOCK}-el{TAG}/ep01-{LOCK}-el{TAG}-{seg}.json")))
 
 
 def kokoro_timeline(seg):
-    return json.load(open(os.path.join(REPO, f"show/reel/ep01-v3/ep01-v3-{seg}.json")))
+    return json.load(open(os.path.join(REPO, f"show/reel/ep01-{LOCK}/ep01-{LOCK}-{seg}.json")))
 
 
 def write(seg, bus, qa, total):
@@ -73,7 +75,7 @@ def bed_source_timeline():
     cur = kokoro_timeline("coldopen")
     if abs(B.clock(cur["beats"])[1] - want) < 0.01:
         return cur, "the current Kokoro cold open"
-    path = "show/reel/ep01-v3/ep01-v3-coldopen.json"
+    path = f"show/reel/ep01-{LOCK}/ep01-{LOCK}-coldopen.json"
     for h in subprocess.run(["git", "log", "--format=%H", "--", path], cwd=REPO, capture_output=True, text=True).stdout.split():
         t = json.loads(subprocess.run(["git", "show", f"{h}:{path}"], cwd=REPO, capture_output=True, text=True).stdout)
         if abs(B.clock(t["beats"])[1] - want) < 0.01:
@@ -137,7 +139,7 @@ def coldopen():
                                    f"(the bed's beat {kb - ka:.3f} s, now {L:.3f} s)"
                                    + (f"; the next source beat ({nxt_src}) was cut, so it fades over 0.4 s and holds "
                                       f"{L - take:.3f} s of room tone (-50 LUFS)" if take < L else ""))
-    qa["layers"].append({"music+rooms+sfx": "audio/reel/ep01-v3/coldopen-bed.wav (the lock's bed: the v2 stem), spliced per beat",
+    qa["layers"].append({"music+rooms+sfx": f"audio/reel/ep01-{LOCK}/coldopen-bed.wav (the lock's cold-open bed), spliced per beat",
                          "crossfade_s": XF})
     qa["sfx"] = [["(in the v2 stem)"]]
     return write("coldopen", out, qa, etot)
@@ -149,7 +151,10 @@ def main(argv):
         i = argv.index("--tag")
         TAG = argv[i + 1]
         argv = argv[:i] + argv[i + 2:]
-        OUT = os.path.join(REPO, f"audio/reel/ep01-v3-el{TAG}")
+        OUT = os.path.join(REPO, f"audio/reel/ep01-{LOCK}-el{TAG}")
+    if "--lock" in argv:
+        i = argv.index("--lock")
+        argv = argv[:i] + argv[i + 2:]
     segs = [a for a in argv if a in B.ORDER] or B.ORDER
     beds = {}
     p = os.path.join(OUT, "beds.json")
@@ -158,13 +163,13 @@ def main(argv):
     os.makedirs(OUT, exist_ok=True)
     for seg in segs:
         if seg == "card":
-            src = "audio/reel/ep01-v3/card-bed.wav"
+            src = f"audio/reel/ep01-{LOCK}/card-bed.wav"
             beds["card"] = {"src": src, "label": "the lock's card bed, unchanged (room tone + the bullpen leading the cut)"}
             print(f"card: the lock's own {src}")
             continue
         if seg == "coldopen":
             rel = coldopen()
-            beds["coldopen"] = {"src": rel, "label": "the lock's cold-open bed (the v2 stem), spliced per beat to the EL beat times"}
+            beds["coldopen"] = {"src": rel, "label": f"the {LOCK} lock's cold-open bed, spliced per beat to the EL beat times"}
             continue
         bus, qa, total = B.build(seg)
         rel = write(seg, bus, qa, total)

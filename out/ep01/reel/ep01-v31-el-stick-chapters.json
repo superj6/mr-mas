@@ -1,0 +1,145 @@
+{
+ "reel": "out/ep01/reel/ep01-v31-el-stick.mp4",
+ "manifest": "show/reel/ep01-v31-el/ep01-v31-el.manifest.json",
+ "fps": 24,
+ "chapters": [
+  {
+   "id": "title",
+   "label": "TITLE",
+   "kind": "title",
+   "start": 0,
+   "end": 3,
+   "episodeStart": 0,
+   "source": "manifest",
+   "sound": "silence (the reel slate)"
+  },
+  {
+   "id": "coldopen",
+   "label": "COLD OPEN",
+   "kind": "reel",
+   "start": 3,
+   "end": 27.292,
+   "episodeStart": 3,
+   "source": "ep01-v31-el-coldopen",
+   "sound": "3 recorded take(s) over the temp bed"
+  },
+  {
+   "id": "intro",
+   "label": "INTRO",
+   "kind": "video",
+   "start": 27.292,
+   "end": 57.292,
+   "episodeStart": 27.292,
+   "source": "out/intro/intro-ep1-V1-1080p-flashfix.mp4",
+   "sound": "its own sound at -3 dB; hard cut in, 0.3 s tail out"
+  },
+  {
+   "id": "card",
+   "label": "CARD",
+   "kind": "reel",
+   "start": 57.292,
+   "end": 59.292,
+   "episodeStart": 57.292,
+   "source": "ep01-full-part1",
+   "sound": "the temp bed (no recorded takes yet)"
+  },
+  {
+   "id": "act1",
+   "label": "ACT ONE",
+   "kind": "reel",
+   "start": 59.292,
+   "end": 404.708,
+   "episodeStart": 59.292,
+   "source": "ep01-v31-el-act1",
+   "sound": "70 recorded take(s) over the temp bed"
+  },
+  {
+   "id": "act2",
+   "label": "ACT TWO",
+   "kind": "reel",
+   "start": 404.708,
+   "end": 598.25,
+   "episodeStart": 404.708,
+   "source": "ep01-v31-el-act2",
+   "sound": "41 recorded take(s) over the temp bed"
+  },
+  {
+   "id": "act3",
+   "label": "ACT THREE",
+   "kind": "reel",
+   "start": 598.25,
+   "end": 741.417,
+   "episodeStart": 598.25,
+   "source": "ep01-v31-el-act3",
+   "sound": "27 recorded take(s) over the temp bed"
+  },
+  {
+   "id": "act4",
+   "label": "ACT FOUR",
+   "kind": "reel",
+   "start": 741.417,
+   "end": 1270.625,
+   "episodeStart": 741.417,
+   "source": "ep01-v31-el-act4",
+   "sound": "105 recorded take(s) over the temp bed"
+  },
+  {
+   "id": "tag",
+   "label": "TAG",
+   "kind": "reel",
+   "start": 1270.625,
+   "end": 1311.958,
+   "episodeStart": 1270.625,
+   "source": "ep01-v31-el-tag",
+   "sound": "5 recorded take(s) over the temp bed"
+  },
+  {
+   "id": "outro",
+   "label": "OUTRO",
+   "kind": "video",
+   "start": 1311.958,
+   "end": 1322.083,
+   "episodeStart": 1311.958,
+   "source": "out/ep01/outro/outro-b-v3.mp4",
+   "sound": "its own sound at -1 dB; hard cut in, hard cut out"
+  }
+ ],
+ "beds": [
+  {
+   "label": "the v31 lock's cold-open bed, spliced per beat to the EL beat times",
+   "from": 3,
+   "to": 57.291666666666664
+  },
+  {
+   "label": "the lock's card bed, unchanged (room tone + the bullpen leading the cut)",
+   "from": 57.291666666666664,
+   "to": 59.291666666666664
+  },
+  {
+   "label": "act1 stick bed rebuilt on the EL timeline by the lock's bed.py (rooms leading the cuts, the beats' sounds, a quiet temp pad per mood run)",
+   "from": 59.291666666666664,
+   "to": 404.7083333333333
+  },
+  {
+   "label": "act2 stick bed rebuilt on the EL timeline by the lock's bed.py (rooms leading the cuts, the beats' sounds, a quiet temp pad per mood run)",
+   "from": 404.7083333333333,
+   "to": 598.25
+  },
+  {
+   "label": "act3 stick bed rebuilt on the EL timeline by the lock's bed.py (rooms leading the cuts, the beats' sounds, a quiet temp pad per mood run)",
+   "from": 598.25,
+   "to": 741.4166666666666
+  },
+  {
+   "label": "act4 stick bed rebuilt on the EL timeline by the lock's bed.py (rooms leading the cuts, the beats' sounds, a quiet temp pad per mood run)",
+   "from": 741.4166666666666,
+   "to": 1270.625
+  },
+  {
+   "label": "tag stick bed rebuilt on the EL timeline by the lock's bed.py (rooms leading the cuts, the beats' sounds, a quiet temp pad per mood run)",
+   "from": 1270.625,
+   "to": 1322.0833333333333
+  }
+ ],
+ "warnings": []
+}

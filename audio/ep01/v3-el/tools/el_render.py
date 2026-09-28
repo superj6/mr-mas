@@ -204,6 +204,8 @@ def normalise_text(t):
     t = re.sub(r'"\s*…\s*', '"', t)                    # a quoted fragment's leading ellipsis is print, not speech
     t = re.sub(r'\s*…\s*"', '"', t)
     t = t.replace('"', "")                               # he reads the letter aloud; the quote marks are print
+    t = re.sub(r"(?<=\s)…(?=\w)", "", t)                 # an elision opening a quoted fragment mid-line ("they're …unable")
+                                                         # is print too (v3.1 dropped the quote marks, kept the elision)
     t = t.replace("…", "... ").replace("...  ", "... ")
     t = re.sub(r"\s+", " ", t).strip()
     t = re.sub(r"(\.\.\.)$", "", t).strip()                 # a trailing print ellipsis (a quote cut short) ends the thought
@@ -299,7 +301,7 @@ def save_manifest(out, m):
 _REUSE = None
 
 
-def reuse_lookup(args, cast, voice_id, model, settings, sent):
+def reuse_lookup(args, cast, voice_id, model, settings, sent, row_id=None):
     """a take already rendered elsewhere (--reuse DIR: another render's manifest, e.g. the sample) with the same voice,
     model, settings and text as sent -> {key, seed, from}. Its cached MP3 is used as is: no characters are sent."""
     global _REUSE
@@ -316,9 +318,11 @@ def reuse_lookup(args, cast, voice_id, model, settings, sent):
                 if not t.get("key") or not os.path.exists(os.path.join(cdir, t["key"] + ".mp3")):
                     continue
                 k = (t["voice_id"], t["model"], json.dumps(t["settings"], sort_keys=True), t["sent"])
-                _REUSE.setdefault(k, dict(key=t["key"], seed=t["seed"], bump=t.get("bump") or 0,
-                                          frm=f"{rel(os.path.dirname(mp))}:{t['take']}"))
-    return _REUSE.get((voice_id, model, json.dumps(settings, sort_keys=True), sent))
+                _REUSE.setdefault(k, []).append(dict(key=t["key"], seed=t["seed"], bump=t.get("bump") or 0,
+                                                     frm=f"{rel(os.path.dirname(mp))}:{t['take']}", line=t["take"].split("__")[0]))
+    got = _REUSE.get((voice_id, model, json.dumps(settings, sort_keys=True), sent)) or []
+    own = [g for g in got if g["line"] == row_id]                 # the same line's own take first (a repeated line, such
+    return (own or got or [None])[0]                              # as "Super." or "Noted.", keeps its own read)
 
 
 def target_of(args, cast, vo=False):
@@ -359,7 +363,12 @@ def render_take(row, role, c, rdef, cast, out, man, args, log, bump=0):
         cache_mp3 = os.path.join(cdir, key + ".mp3")
         cache_js = os.path.join(cdir, key + ".json")
     elif bump == 0 and not (prev and prev.get("base_key") == base_key):
-        ru = reuse_lookup(args, cast, c["voice_id"], model, settings, sent)
+        # the take chosen for this same line in a --reuse render (retakes included) first, then the line's own cached
+        # first take, then another line's identical take
+        ru = reuse_lookup(args, cast, c["voice_id"], model, settings, sent, row["id"])
+        own_cached = os.path.exists(cache_mp3) and os.path.exists(cache_js)
+        if ru and not (ru["line"] == row["id"] or not own_cached):
+            ru = None
         if ru:
             key, seed, reused = ru["key"], ru["seed"], ru["frm"]
             cache_mp3 = os.path.join(cdir, key + ".mp3")
@@ -441,7 +450,8 @@ def kokoro_ref(row):
         _KOK = {}
         for p in sorted(glob.glob(os.path.join(REPO, "audio/ep01/*/dialogue/lines*.json"))
                         + glob.glob(os.path.join(REPO, "audio/ep01/v3-sample/*/lines.json"))
-                        + glob.glob(os.path.join(REPO, "audio/ep01/v3/*/lines*.json"))):
+                        + glob.glob(os.path.join(REPO, "audio/ep01/v3/*/lines*.json"))
+                        + glob.glob(os.path.join(REPO, "audio/ep01/v31/*/lines*.json"))):
             try:
                 d = jload(p)
             except Exception:  # noqa: BLE001
@@ -576,7 +586,7 @@ def to_send_cost(r, cast, role, c, a):
     sent = text_to_send(r, cast, role, voice_id=c["voice_id"])
     key = request_key(c["voice_id"], model, settings, sent, seed_of(r["id"], c["voice_id"]), fmt)
     cdir = os.path.join(REPO, cast.d.get("cache_dir", "audio/ep01/v3-el/cache"))
-    if os.path.exists(os.path.join(cdir, key + ".mp3")) or reuse_lookup(a, cast, c["voice_id"], model, settings, sent):
+    if os.path.exists(os.path.join(cdir, key + ".mp3")) or reuse_lookup(a, cast, c["voice_id"], model, settings, sent, r["id"]):
         return 0, len(sent)
     return len(sent), len(sent)
 
@@ -622,6 +632,9 @@ def cmd_render(a):
     if a.only:
         keep = set(a.only.split(","))
         rows = [r for r in rows if r["id"] in keep]
+    if a.skip:
+        drop = set(a.skip.split(","))
+        rows = [r for r in rows if r["id"] not in drop]    # e.g. lines cut from another take (el_cut.py adds them)
     if a.who:
         keep = set(a.who.split(","))
         rows = [r for r in rows if cast.role_of(r["who"]) in keep]
@@ -729,6 +742,7 @@ def main(argv=None):
         if name == "render":
             p.add_argument("--out", required=True)
             p.add_argument("--only", default="")
+            p.add_argument("--skip", default="", help="comma-separated line ids not to render (their takes come from el_cut.py)")
             p.add_argument("--who", default="", help="comma-separated role slugs")
             p.add_argument("--max-chars", type=int, default=None, help="stop before sending more than this many characters")
             p.add_argument("--retry-bad", type=int, default=0, help="re-send a take once (new seed) if ASR recall < 0.8 or the tail is cut")
