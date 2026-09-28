@@ -223,6 +223,9 @@ export interface BridgeOTSState {
   tagBig?: boolean;
   /** v3.3 (P6): the clip drawn as a news anchor at a desk, its lower third blank */
   anchorDesk?: boolean;
+  /** v3.4 (script draft 8.3: the bay's clip is cut; the `v3-shots-act2-act3` pass): no clip in the feed, only his post and
+   *  other people's items, greyed, under it */
+  noClip?: boolean;
 }
 export const BRIDGE_PHONE = {x: 176, y: 22, w: 118, h: 200};
 export const drawBridgeOTS = (b: Buf, f: number, st: BridgeOTSState) => {
@@ -257,9 +260,12 @@ export const drawBridgeOTS = (b: Buf, f: number, st: BridgeOTSState) => {
   const feedH = 104, scroll = Math.round(feedH * clamp(st.feed ?? 1, 0, 1));
   const tall = new Buf(P.w, 340, PAL.N1);
   classPhotoPost(tall, 3, 12, P.w - 6, st.hearts ?? 406, st.f);
-  drawNewsClip(tall, 3, 12 + feedH, P.w - 6, 82, {f, mouth: st.mouth, progress: st.progress, desk: st.anchorDesk});
-  const tagH = st.tagBig ? alteredTagBig(tall, 4, 12 + feedH + 87, P.w - 8) - 11 : (alteredTag(tall, 5, 12 + feedH + 88), 0);
-  for (let k = 0; k < 4; k++) { const ry = 12 + feedH + 108 + tagH + k * 14; rect(4, ry, P.w - 8, 10, tall.ink(PAL.N2)); rect(6, ry + 2, 6, 6, tall.ink(PAL.G3)); for (let i = 0; i < 44 + k * 9; i++) if (i % 6 !== 5) tall.set(16 + i, ry + 5, PAL.G3); }
+  if (st.noClip) {
+    // the feed under his post: other people's items, greyed (an avatar, two text lines, a thumbnail block)
+    for (let k = 0; k < 5; k++) { const ry = 12 + feedH + 4 + k * 30; rect(4, ry, P.w - 8, 26, tall.ink(PAL.N2)); rect(7, ry + 3, 7, 7, tall.ink(PAL.G3)); for (let i = 0; i < 50 + (k % 3) * 12; i++) if (i % 7 !== 6) tall.set(18 + i, ry + 5, PAL.G3); for (let i = 0; i < 36 + (k % 2) * 20; i++) if (i % 6 !== 5) tall.set(18 + i, ry + 11, PAL.G2); rect(P.w - 30, ry + 4, 22, 18, tall.ink(PAL.N3)); }
+  } else drawNewsClip(tall, 3, 12 + feedH, P.w - 6, 82, {f, mouth: st.mouth, progress: st.progress, desk: st.anchorDesk});
+  const tagH = st.noClip ? 0 : st.tagBig ? alteredTagBig(tall, 4, 12 + feedH + 87, P.w - 8) - 11 : (alteredTag(tall, 5, 12 + feedH + 88), 0);
+  if (!st.noClip) for (let k = 0; k < 4; k++) { const ry = 12 + feedH + 108 + tagH + k * 14; rect(4, ry, P.w - 8, 10, tall.ink(PAL.N2)); rect(6, ry + 2, 6, 6, tall.ink(PAL.G3)); for (let i = 0; i < 44 + k * 9; i++) if (i % 6 !== 5) tall.set(16 + i, ry + 5, PAL.G3); }
   for (let y = 10; y < P.h; y++) for (let x = 0; x < P.w; x++) b.set(P.x + x, P.y + y, tall.get(x, y + scroll));
   rect(P.x + 4, P.y + 4, 22, 3, b.ink(PAL.G3));
   // his fingers round the phone's left edge (lit by its screen), the thumb's heel at the foot

@@ -12,6 +12,9 @@
 //                  the copies · st.clap: the copies' two clapping drawings on 4s · st.mouth / st.copyMouth
 //     st.stat      the corner chip `DEEPFAKES OF ME: SEEN n` (null = none) · st.egg: Neleh's paper in the corner
 //   EO_POV_FACES   where the three heads sit on the POV screen (the Orb's look reads off the mini's own table)
+//   v3.4 (script draft 8.3; the `v3-shots-act2-act3` pass; opt-in): st.applause k: the room applauding the signing, a row of
+//                  the press pool's dark heads along the screen's foot, their hands up clapping (two drawings on 4s,
+//                  alternate heads on alternate beats), a few phones lit
 import {Buf, rect, line, hash, bayer} from '../px';
 import {PAL, stepColor} from '../palette';
 import {blitImg} from '../figure';
@@ -32,6 +35,8 @@ export interface EOState {
   copyMouth?: Viseme;
   stat?: number | null;
   egg?: boolean;
+  /** v3.4: frames of the room's applause (null / undefined: none) */
+  applause?: number | null;
 }
 /** the office behind the desk: cream wall, gold drapes both sides, a tall window centre-right with daylight */
 const office = (scr: Buf, mini: boolean) => {
@@ -118,5 +123,16 @@ export const eoPainter = (st: EOState): Painter => (scr, f) => {
     pt(scr, s, 14, H - 17, PAL.P2);
   }
   if (st.egg) eggCorner(scr, f, 'tr');
+  if (st.applause !== null && st.applause !== undefined) {
+    // the press pool's heads along the foot (in front of the desk), hands up clapping on alternate 4-frame beats
+    const hh = Math.max(8, Math.round(H * 0.1)), step = Math.max(10, Math.round(W / 26));
+    for (let i = 0, x = -4; x < W; i++, x += step) {
+      const hx = x + Math.round(hash(i, 3, 17) * 3), hy = H - hh + Math.round(hash(i, 5, 17) * 2);
+      for (let j = 0; j < hh + 2; j++) for (let q = 0; q < step - 2; q++) if (Math.hypot((q - (step - 2) / 2) / ((step - 2) / 2), (j - hh * 0.45) / (hh * 0.5)) < 1 || j > hh * 0.7) scr.set(hx + q, hy + j, PAL.N0);
+      const up = ((i + (st.applause >> 2)) & 1) === 0;
+      if (i % 2 === 0) { const ax = hx + Math.round(step / 2) - 3, ay = hy - (up ? 5 : 3); rect(ax, ay, 2, 3, scr.ink(PAL.S2)); rect(ax + (up ? 3 : 4), ay, 2, 3, scr.ink(PAL.S2)); }
+      if (hash(i, 7, 17) < 0.12) rect(hx + 2, hy - 3, 2, 3, scr.ink(PAL.C6));
+    }
+  }
   void hash; void stepColor; void blitImg;
 };

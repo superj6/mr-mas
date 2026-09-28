@@ -4,12 +4,13 @@
   "episode": "ep01",
   "seg": "act2",
   "label": "ACT TWO",
-  "timeline": "show/reel/ep01-v33/ep01-v33-act2.json",
+  "timeline": "show/reel/ep01-v34/ep01-v34-act2.json",
   "takes": [
    "audio/ep01/act2/dialogue/lines-fast-v2.json",
    "audio/ep01/v3/act2/lines-v3.json",
    "audio/ep01/v31/act2/lines-v31.json",
-   "audio/ep01/v32/act2/lines-v32.json"
+   "audio/ep01/v32/act2/lines-v32.json",
+   "audio/ep01/v34/act2/lines-v34.json"
   ],
   "plan": null,
   "plan_py": null,
@@ -29,24 +30,24 @@
   "note": "Nothing here was watched or heard. The numbers are measured from the files; whether the picture reads needs a person."
  },
  "summary": {
-  "shots": 38,
-  "beats": 45,
-  "frames": 4573,
-  "seconds": 190.542,
-  "length": "3:10.54",
+  "shots": 36,
+  "beats": 43,
+  "frames": 4349,
+  "seconds": 181.208,
+  "length": "3:01.21",
   "episode_in": "00:00:00",
-  "episode_out": "03:10:13",
+  "episode_out": "03:01:05",
   "verdicts": {
-   "-": 38
+   "-": 36
   },
-  "mean_s": 5.014,
-  "median_s": 4.5,
+  "mean_s": 5.034,
+  "median_s": 4.292,
   "min_s": 0.75,
-  "max_s": 16.167,
-  "lines": 39,
+  "max_s": 14.667,
+  "lines": 38,
   "posts": 0,
   "vo": 1,
-  "lines_with_mouth": 33,
+  "lines_with_mouth": 32,
   "mouths_from_words": 0,
   "on_camera_mouths": [],
   "lines_crossing_a_cut": [
@@ -55,9 +56,9 @@
   "prelaps": [],
   "reviewer_slates": [],
   "mix": {
-   "path": "out/ep01/full-v3/picture/act2-v33-stick-mix.wav",
+   "path": "out/ep01/full-v3/picture/act2-v34-stick-mix.wav",
    "offset_frames": 0,
-   "frames": 4573.0
+   "frames": 4349.0
   },
   "refs": {}
  },
@@ -65,22 +66,22 @@
   {
    "check": "shot frames = their beats' frames",
    "ok": true,
-   "detail": "38 shots from 45 beats"
+   "detail": "36 shots from 43 beats"
   },
   {
    "check": "shots tile the segment with no gap",
    "ok": true,
-   "detail": "0 -> 4573"
+   "detail": "0 -> 4349"
   },
   {
    "check": "the lock vs the stick reel's own line frames",
    "ok": true,
-   "detail": "same frame: 3; 1 f earlier (the onset falls inside the frame): 36; other: 0"
+   "detail": "same frame: 3; 1 f earlier (the onset falls inside the frame): 35; other: 0"
   },
   {
    "check": "every line has a take",
    "ok": true,
-   "detail": "39 of 39 placed; no take: []"
+   "detail": "38 of 38 placed; no take: []"
   },
   {
    "check": "every line's speech lies inside its take file",
@@ -90,7 +91,7 @@
   {
    "check": "mouth tracks carried over",
    "ok": true,
-   "detail": "33 lines with a mouth track; lost: []"
+   "detail": "32 lines with a mouth track; lost: []"
   },
   {
    "check": "every on-camera mouth has a track",
@@ -100,7 +101,7 @@
   {
    "check": "the mix = its offset + the segment",
    "ok": true,
-   "detail": "mix 4573.00 f vs 0 + 4573"
+   "detail": "mix 4349.00 f vs 0 + 4349"
   }
  ],
  "sequences": [
@@ -110,7 +111,7 @@
    "place": "The White House: a meeting room",
    "time": "Thu May 4, 2023 · day",
    "s": 0,
-   "e": 1662,
+   "e": 1601,
    "shots": [
     "13.01",
     "13.02",
@@ -126,38 +127,36 @@
    ],
    "chapter": "Thu May 4, 2023 · day",
    "title": "The White House: a meeting room",
-   "cue": "music (v3.3): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9) · style: 2-TONE freeze, 1 beat · then the card rides the live room for the rest of its bar · style: the episode's one lens look (pupils centred, 1 beat); everywhere else his pupils sit 1 px toward the speaker · style: the flash is a white step (<= 80 %), and its freeze is the card's",
-   "frames": 1662,
+   "cue": "music (v3.4): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9) · style: 2-TONE freeze, 1 beat · then the card rides the live room for the rest of its bar · style: the episode's one lens look (pupils centred, 1 beat); everywhere else his pupils sit 1 px toward the speaker · style: the flash is a white step (<= 80 %), and its freeze is the card's",
+   "frames": 1601,
    "tc_in": "00:00:00",
-   "tc_out": "01:09:06"
+   "tc_out": "01:06:17"
   },
   {
    "id": "14",
    "side": "",
    "place": "NopeAI bullpen, the window → the bay",
    "time": "Fri May 12, 2023 · night",
-   "s": 1662,
-   "e": 1954,
+   "s": 1601,
+   "e": 1729,
    "shots": [
     "14.01",
-    "14.03",
-    "14.05",
     "14.06"
    ],
    "chapter": "Fri May 12, 2023 · night",
    "title": "NopeAI bullpen, the window → the bay",
-   "cue": "music (v3.3): THE BRIDGE · a hush · no score: the phone's small speaker, then water on pilings · sound: NO SCORE · the bullpen through glass, the phone's small speaker (the anchor's too-smooth murmur, no words: a made formant voice in the Act Two stem), then water on pilings",
-   "frames": 292,
-   "tc_in": "01:09:06",
-   "tc_out": "01:21:10"
+   "cue": "music (v3.4): THE BRIDGE · a hush · no score: the phone's small speaker, then water on pilings · sound: NO SCORE · the bullpen through glass, the phone's small speaker (the anchor's too-smooth murmur, no words: a made formant voice in the Act Two stem), then water on pilings",
+   "frames": 128,
+   "tc_in": "01:06:17",
+   "tc_out": "01:12:01"
   },
   {
    "id": "15",
    "side": "",
    "place": "Senate Judiciary: the hearing room",
    "time": "Tue May 16, 2023 · day",
-   "s": 1954,
-   "e": 3567,
+   "s": 1729,
+   "e": 3343,
    "shots": [
     "15.01",
     "15.02",
@@ -175,35 +174,35 @@
    ],
    "chapter": "Tue May 16, 2023 · day",
    "title": "Senate Judiciary: the hearing room",
-   "cue": "music (v3.3): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged · style (proposed, style-range pass): THE CLONE alone through a too-clean upscale filter (AA edges, soft sheen); the chairman stays BASE; never toward photoreal · default: a 1-px highlight · style: 2-TONE freeze, 1 beat · then the card rides the live room for the rest of its bar",
-   "frames": 1613,
-   "tc_in": "01:21:10",
-   "tc_out": "02:28:15"
+   "cue": "music (v3.4): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged · style (proposed, style-range pass): THE CLONE alone through a too-clean upscale filter (AA edges, soft sheen); the chairman stays BASE; never toward photoreal · default: a 1-px highlight · style: 2-TONE freeze, 1 beat · then the card rides the live room for the rest of its bar",
+   "frames": 1614,
+   "tc_in": "01:12:01",
+   "tc_out": "02:19:07"
   },
   {
    "id": "16",
    "side": "",
    "place": "The regulate-me tour: one poster",
    "time": "May 24 - 26, 2023",
-   "s": 3567,
-   "e": 3687,
+   "s": 3343,
+   "e": 3463,
    "shots": [
     "16.01"
    ],
    "chapter": "May 24 - 26, 2023",
    "title": "The regulate-me tour: one poster",
-   "cue": "music (v3.3): THE TOUR · THE RUN (MM-03), a knee stab on each stamp",
+   "cue": "music (v3.4): THE TOUR · THE RUN (MM-03), a knee stab on each stamp",
    "frames": 120,
-   "tc_in": "02:28:15",
-   "tc_out": "02:33:15"
+   "tc_in": "02:19:07",
+   "tc_out": "02:24:07"
   },
   {
    "id": "17",
    "side": "",
    "place": "A rooftop signing table",
    "time": "Tue May 30, 2023 · day",
-   "s": 3687,
-   "e": 4573,
+   "s": 3463,
+   "e": 4349,
    "shots": [
     "17.01",
     "17.02",
@@ -217,10 +216,10 @@
    ],
    "chapter": "Tue May 30, 2023 · day",
    "title": "A rooftop signing table",
-   "cue": "music (v3.3): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out) · style: 2-TONE freeze, 1 beat · then the card rides the live room for the rest of its bar · style: [LEDGER] flash-print, 6 frames · then the figure holds in the register window (BASE)",
+   "cue": "music (v3.4): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out) · style: 2-TONE freeze, 1 beat · then the card rides the live room for the rest of its bar · style: [LEDGER] flash-print, 6 frames · then the figure holds in the register window (BASE)",
    "frames": 886,
-   "tc_in": "02:33:15",
-   "tc_out": "03:10:13"
+   "tc_in": "02:24:07",
+   "tc_out": "03:01:05"
   }
  ],
  "shots": [
@@ -264,7 +263,7 @@
     "tasya"
    ],
    "cues": [
-    "music (v3.3): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
+    "music (v3.4): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
    ],
    "sounds": [],
    "spots": [],
@@ -353,179 +352,30 @@
     "13.04"
    ],
    "s": 110,
-   "e": 263,
+   "e": 210,
    "onscreen": [
     {
      "text": "SIRRAH / THE EXPLAINER",
-     "s": 92,
-     "e": 153
+     "s": 39,
+     "e": 100
     },
     {
      "text": "DAY JOB: VICE PRESIDENT",
-     "s": 92,
-     "e": 153
+     "s": 39,
+     "e": 100
     },
     {
      "text": "SIRRAH / THE EXPLAINER",
-     "s": 107,
-     "e": 153
+     "s": 54,
+     "e": 100
     },
     {
      "text": "DAY JOB: VICE PRESIDENT",
-     "s": 107,
-     "e": 153
+     "s": 54,
+     "e": 100
     }
    ],
-   "lines": [
-    {
-     "id": "e1-a2-13-01",
-     "kind": "dialogue",
-     "mode": "on-mic",
-     "who": "SIRRAH",
-     "text": "What can be, unburdened by what has been… trained.",
-     "s": 10,
-     "e": 87,
-     "fs": -2,
-     "fe": 98,
-     "os": false,
-     "via": null,
-     "face": null,
-     "lip": false,
-     "carry": false,
-     "cut": false,
-     "mouth": [
-      [
-       0,
-       "A"
-      ],
-      [
-       2,
-       "E"
-      ],
-      [
-       4,
-       "A"
-      ],
-      [
-       7,
-       "M"
-      ],
-      [
-       10,
-       "A"
-      ],
-      [
-       15,
-       "E"
-      ],
-      [
-       17,
-       "rest"
-      ],
-      [
-       20,
-       "A"
-      ],
-      [
-       22,
-       "E"
-      ],
-      [
-       25,
-       "O"
-      ],
-      [
-       27,
-       "E"
-      ],
-      [
-       33,
-       "M"
-      ],
-      [
-       36,
-       "A"
-      ],
-      [
-       46,
-       "M"
-      ],
-      [
-       48,
-       "E"
-      ],
-      [
-       51,
-       "rest"
-      ],
-      [
-       64,
-       "E"
-      ],
-      [
-       68,
-       "A"
-      ],
-      [
-       73,
-       "E"
-      ],
-      [
-       77,
-       "rest"
-      ]
-     ],
-     "words": [
-      [
-       "What",
-       0,
-       3
-      ],
-      [
-       "can",
-       3,
-       7
-      ],
-      [
-       "be",
-       7,
-       17
-      ],
-      [
-       "unburdened",
-       20,
-       34
-      ],
-      [
-       "by",
-       34,
-       39
-      ],
-      [
-       "what",
-       39,
-       42
-      ],
-      [
-       "has",
-       42,
-       46
-      ],
-      [
-       "been",
-       46,
-       51
-      ],
-      [
-       "trained",
-       64,
-       77
-      ]
-     ],
-     "tag": "",
-     "pre": false
-    }
-   ],
+   "lines": [],
    "seq": "13",
    "verdict": "",
    "v4": null,
@@ -536,23 +386,23 @@
    "frame": "MCU · SIRRAH at the blocks",
    "cls": "MCU",
    "move": "cut",
-   "does": "The pointer lands on each block in turn. / The pointer lands on I: the world freezes for 1 beat under her card. / The room moves again; the card rides to the end of its bar.",
+   "does": "SIRRAH, the pointer landing on each block, A, then I; the card follows. / The pointer lands on I: the world freezes for 1 beat under her card. / The room moves again; the card rides to the end of its bar.",
    "chars": [
     "sirrah"
    ],
    "cues": [
-    "music (v3.3): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
-    "music (v3.3): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
+    "music (v3.4): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
+    "music (v3.4): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
     "style: 2-TONE freeze, 1 beat · then the card rides the live room for the rest of its bar",
-    "music (v3.3): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
+    "music (v3.4): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
    ],
    "sounds": [
-    "freeze_hit_F @92"
+    "freeze_hit_F @39"
    ],
    "spots": [
     {
      "name": "freeze_hit_F",
-     "k": 92,
+     "k": 39,
      "dur": null
     }
    ],
@@ -565,7 +415,7 @@
     "freeze"
    ],
    "slate": false,
-   "caption": "The pointer lands on each block in turn. / The pointer lands on I: the world freezes for 1 beat under her card. / The room moves again; the card rides to the end of its bar.",
+   "caption": "SIRRAH, the pointer landing on each block, A, then I; the card follows. / The pointer lands on I: the world freezes for 1 beat under her card. / The room moves again; the card rides to the end of its bar.",
    "cast": [
     {
      "id": "sirrah",
@@ -579,13 +429,13 @@
    "speak": [],
    "beat_starts": {
     "13.02": 0,
-    "13.03": 92,
-    "13.04": 107
+    "13.03": 39,
+    "13.04": 54
    },
    "names": [
     {
      "id": "sirrah",
-     "k": 92
+     "k": 39
     }
    ],
    "fg": null,
@@ -595,35 +445,35 @@
     {
      "kind": "plate",
      "text": "SIRRAH / THE EXPLAINER",
-     "s": 92,
-     "e": 153,
+     "s": 39,
+     "e": 100,
      "must": true
     },
     {
      "kind": "plate",
      "text": "DAY JOB: VICE PRESIDENT",
-     "s": 92,
-     "e": 153,
+     "s": 39,
+     "e": 100,
      "must": true
     },
     {
      "kind": "label",
      "text": "SIRRAH / THE EXPLAINER",
-     "s": 107,
-     "e": 153,
+     "s": 54,
+     "e": 100,
      "must": true
     },
     {
      "kind": "label",
      "text": "DAY JOB: VICE PRESIDENT",
-     "s": 107,
-     "e": 153,
+     "s": 54,
+     "e": 100,
      "must": true
     }
    ],
    "tc_in": "00:04:14",
-   "tc_out": "00:10:23",
-   "frames": 153
+   "tc_out": "00:08:18",
+   "frames": 100
   },
   {
    "id": "13.05",
@@ -631,8 +481,8 @@
    "beats": [
     "13.05"
    ],
-   "s": 263,
-   "e": 527,
+   "s": 210,
+   "e": 474,
    "onscreen": [],
    "lines": [
     {
@@ -1108,7 +958,7 @@
     "radnus"
    ],
    "cues": [
-    "music (v3.3): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
+    "music (v3.4): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
    ],
    "sounds": [
     "paper_flutter @238"
@@ -1155,8 +1005,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "00:10:23",
-   "tc_out": "00:21:23",
+   "tc_in": "00:08:18",
+   "tc_out": "00:19:18",
    "frames": 264
   },
   {
@@ -1165,23 +1015,23 @@
    "beats": [
     "13.06"
    ],
-   "s": 527,
-   "e": 607,
+   "s": 474,
+   "e": 553,
    "onscreen": [
     {
      "text": "1",
      "s": 1,
-     "e": 80
+     "e": 79
     },
     {
      "text": "2",
      "s": 6,
-     "e": 80
+     "e": 79
     },
     {
      "text": "3",
      "s": 10,
-     "e": 80
+     "e": 79
     }
    ],
    "lines": [
@@ -1343,7 +1193,7 @@
     "tasya"
    ],
    "cues": [
-    "music (v3.3): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
+    "music (v3.4): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
    ],
    "sounds": [
     "landing_thunk @1",
@@ -1430,27 +1280,27 @@
      "kind": "label",
      "text": "1",
      "s": 1,
-     "e": 80,
+     "e": 79,
      "must": true
     },
     {
      "kind": "label",
      "text": "2",
      "s": 6,
-     "e": 80,
+     "e": 79,
      "must": true
     },
     {
      "kind": "label",
      "text": "3",
      "s": 10,
-     "e": 80,
+     "e": 79,
      "must": true
     }
    ],
-   "tc_in": "00:21:23",
-   "tc_out": "00:25:07",
-   "frames": 80
+   "tc_in": "00:19:18",
+   "tc_out": "00:23:01",
+   "frames": 79
   },
   {
    "id": "13.07",
@@ -1458,8 +1308,8 @@
    "beats": [
     "13.07"
    ],
-   "s": 607,
-   "e": 697,
+   "s": 553,
+   "e": 643,
    "onscreen": [],
    "lines": [],
    "seq": "13",
@@ -1480,7 +1330,7 @@
     "tasya"
    ],
    "cues": [
-    "music (v3.3): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
+    "music (v3.4): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
     "style: the episode's one lens look (pupils centred, 1 beat); everywhere else his pupils sit 1 px toward the speaker"
    ],
    "sounds": [],
@@ -1536,8 +1386,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "00:25:07",
-   "tc_out": "00:29:01",
+   "tc_in": "00:23:01",
+   "tc_out": "00:26:19",
    "frames": 90
   },
   {
@@ -1546,8 +1396,8 @@
    "beats": [
     "13.08"
    ],
-   "s": 697,
-   "e": 817,
+   "s": 643,
+   "e": 763,
    "onscreen": [],
    "lines": [
     {
@@ -1743,7 +1593,7 @@
     "tasya"
    ],
    "cues": [
-    "music (v3.3): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
+    "music (v3.4): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
    ],
    "sounds": [],
    "spots": [],
@@ -1806,8 +1656,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "00:29:01",
-   "tc_out": "00:34:01",
+   "tc_in": "00:26:19",
+   "tc_out": "00:31:19",
    "frames": 120
   },
   {
@@ -1816,8 +1666,8 @@
    "beats": [
     "13.09"
    ],
-   "s": 817,
-   "e": 1205,
+   "s": 763,
+   "e": 1115,
    "onscreen": [],
    "lines": [
     {
@@ -2297,52 +2147,15 @@
      "pre": false
     },
     {
-     "id": "v3-vo-12",
-     "kind": "vo",
-     "mode": "on-mic",
-     "who": "MAS",
-     "text": "he's not wrong.",
-     "s": 299,
-     "e": 327,
-     "fs": 285,
-     "fe": 343,
-     "os": false,
-     "via": null,
-     "face": null,
-     "lip": false,
-     "carry": false,
-     "cut": false,
-     "mouth": [],
-     "words": [
-      [
-       "he's",
-       1,
-       6
-      ],
-      [
-       "not",
-       6,
-       13
-      ],
-      [
-       "wrong",
-       13,
-       27
-      ]
-     ],
-     "tag": "V.O.",
-     "pre": false
-    },
-    {
      "id": "e1-a2-13-12",
      "kind": "dialogue",
      "mode": "on-mic",
      "who": "MAS",
      "text": "how's the dancing?",
-     "s": 347,
-     "e": 378,
-     "fs": 334,
-     "fe": 395,
+     "s": 311,
+     "e": 342,
+     "fs": 297,
+     "fe": 358,
      "os": false,
      "via": null,
      "face": null,
@@ -2352,33 +2165,29 @@
      "mouth": [
       [
        0,
-       "rest"
-      ],
-      [
-       1,
        "A"
       ],
       [
-       8,
+       7,
        "E"
       ],
       [
-       15,
+       14,
        "A"
       ],
       [
-       20,
+       19,
        "E"
       ],
       [
-       31,
+       30,
        "rest"
       ]
      ],
      "words": [
       [
        "How's",
-       1,
+       0,
        9
       ],
       [
@@ -2412,7 +2221,7 @@
     "radnus"
    ],
    "cues": [
-    "music (v3.3): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
+    "music (v3.4): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
    ],
    "sounds": [],
    "spots": [],
@@ -2451,9 +2260,9 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "00:34:01",
-   "tc_out": "00:50:05",
-   "frames": 388
+   "tc_in": "00:31:19",
+   "tc_out": "00:46:11",
+   "frames": 352
   },
   {
    "id": "13.10",
@@ -2461,8 +2270,8 @@
    "beats": [
     "13.10"
    ],
-   "s": 1205,
-   "e": 1259,
+   "s": 1115,
+   "e": 1169,
    "onscreen": [],
    "lines": [
     {
@@ -2551,7 +2360,7 @@
     "radnus"
    ],
    "cues": [
-    "music (v3.3): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
+    "music (v3.4): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
    ],
    "sounds": [
     "flame_whoomph @4"
@@ -2590,8 +2399,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "00:50:05",
-   "tc_out": "00:52:11",
+   "tc_in": "00:46:11",
+   "tc_out": "00:48:17",
    "frames": 54
   },
   {
@@ -2601,16 +2410,11 @@
     "13.11",
     "13.12"
    ],
-   "s": 1259,
-   "e": 1377,
+   "s": 1169,
+   "e": 1287,
    "onscreen": [
     {
      "text": "EOJ NEDIB / THE PRESIDENT",
-     "s": 103,
-     "e": 118
-    },
-    {
-     "text": "DEEPFAKES OF ME: SEEN 0",
      "s": 103,
      "e": 118
     }
@@ -2759,8 +2563,8 @@
     "tasya"
    ],
    "cues": [
-    "music (v3.3): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
-    "music (v3.3): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
+    "music (v3.4): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
+    "music (v3.4): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)",
     "style: the flash is a white step (<= 80 %), and its freeze is the card's",
     "style: 2-TONE freeze, 1 beat · then the card rides the live room for the rest of its bar"
    ],
@@ -2854,17 +2658,10 @@
      "s": 103,
      "e": 118,
      "must": true
-    },
-    {
-     "kind": "plate",
-     "text": "DEEPFAKES OF ME: SEEN 0",
-     "s": 103,
-     "e": 118,
-     "must": true
     }
    ],
-   "tc_in": "00:52:11",
-   "tc_out": "00:57:09",
+   "tc_in": "00:48:17",
+   "tc_out": "00:53:15",
    "frames": 118
   },
   {
@@ -2873,16 +2670,11 @@
    "beats": [
     "13.13"
    ],
-   "s": 1377,
-   "e": 1520,
+   "s": 1287,
+   "e": 1459,
    "onscreen": [
     {
      "text": "EOJ NEDIB / THE PRESIDENT",
-     "s": 0,
-     "e": 45
-    },
-    {
-     "text": "DEEPFAKES OF ME: SEEN 0",
      "s": 0,
      "e": 45
     }
@@ -2961,15 +2753,52 @@
      "pre": false
     },
     {
+     "id": "v34-vo-04",
+     "kind": "vo",
+     "mode": "on-mic",
+     "who": "MAS",
+     "text": "mine's half written.",
+     "s": 95,
+     "e": 127,
+     "fs": 82,
+     "fe": 143,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [],
+     "words": [
+      [
+       "mine's",
+       1,
+       10
+      ],
+      [
+       "half",
+       10,
+       18
+      ],
+      [
+       "written",
+       18,
+       31
+      ]
+     ],
+     "tag": "V.O.",
+     "pre": false
+    },
+    {
      "id": "v31-a2-0002",
      "kind": "dialogue",
      "mode": "on-mic",
      "who": "NEDIB",
      "text": "Longer.",
-     "s": 109,
-     "e": 129,
-     "fs": 101,
-     "fe": 226,
+     "s": 138,
+     "e": 158,
+     "fs": 130,
+     "fe": 255,
      "os": false,
      "via": null,
      "face": null,
@@ -2980,8 +2809,8 @@
      "words": [
       [
        "Longer",
-       1,
-       18
+       0,
+       17
       ]
      ],
      "tag": "",
@@ -3003,7 +2832,7 @@
     "nedib"
    ],
    "cues": [
-    "music (v3.3): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
+    "music (v3.4): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
    ],
    "sounds": [],
    "spots": [],
@@ -3043,18 +2872,11 @@
      "s": 0,
      "e": 45,
      "must": true
-    },
-    {
-     "kind": "label",
-     "text": "DEEPFAKES OF ME: SEEN 0",
-     "s": 0,
-     "e": 45,
-     "must": true
     }
    ],
-   "tc_in": "00:57:09",
-   "tc_out": "01:03:08",
-   "frames": 143
+   "tc_in": "00:53:15",
+   "tc_out": "01:00:19",
+   "frames": 172
   },
   {
    "id": "13.14",
@@ -3062,8 +2884,8 @@
    "beats": [
     "13.14"
    ],
-   "s": 1520,
-   "e": 1662,
+   "s": 1459,
+   "e": 1601,
    "onscreen": [
     {
      "text": "CLASS PHOTO #1",
@@ -3165,7 +2987,7 @@
    "does": "The print in his hand: CLASS PHOTO #1. \"it's a good photo.\" HOLD. MATCH CUT: the print in his hand becomes his phone in the same place in frame.",
    "chars": [],
    "cues": [
-    "music (v3.3): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
+    "music (v3.4): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9)"
    ],
    "sounds": [
     "camera_shutter @0"
@@ -3203,8 +3025,8 @@
      "must": true
     }
    ],
-   "tc_in": "01:03:08",
-   "tc_out": "01:09:06",
+   "tc_in": "01:00:19",
+   "tc_out": "01:06:17",
    "frames": 142
   },
   {
@@ -3213,23 +3035,13 @@
    "beats": [
     "14.01"
    ],
-   "s": 1662,
-   "e": 1806,
+   "s": 1601,
+   "e": 1697,
    "onscreen": [
-    {
-     "text": "RAIL: MAY 12, 2023",
-     "s": 6,
-     "e": 144
-    },
-    {
-     "text": "NEWS CLIP · ⚠ ALTERED AUDIO",
-     "s": 14,
-     "e": 144
-    },
     {
      "text": "CLASS PHOTO #1 · ♥",
      "s": 4,
-     "e": 43
+     "e": 96
     }
    ],
    "lines": [],
@@ -3243,10 +3055,10 @@
    "frame": "OTS · over Mas's shoulder at the dark window",
    "cls": "OTS",
    "move": "hold",
-   "does": "Over Mas's shoulder at the dark bullpen window, his phone where the print was (the match cut). His feed opens on CLASS PHOTO #1, hearts under it, and scrolls to a clip of an invented anchor whose mouth lands a beat after the words, under the app's own tag ⚠ ALTERED AUDIO, held large enough to read. His thumb drags the clip back and plays it again: late again. Beyond the glass, the dark building, its one lit window.",
+   "does": "The match cut: the print in his hand becomes his phone at the dark bullpen window, his glass on the sill. His feed opens on CLASS PHOTO #1, hearts under it: his face, everywhere. Beyond the glass, the cold open's skyline, the one lit window. The phone's glow on his face; then black, and a smooth voice over it (14.06).",
    "chars": [],
    "cues": [
-    "music (v3.3): THE BRIDGE · a hush · no score: the phone's small speaker, then water on pilings",
+    "music (v3.4): THE BRIDGE · a hush · no score: the phone's small speaker, then water on pilings",
     "sound: NO SCORE · the bullpen through glass, the phone's small speaker (the anchor's too-smooth murmur, no words: a made formant voice in the Act Two stem), then water on pilings"
    ],
    "sounds": [],
@@ -3258,7 +3070,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "Over Mas's shoulder at the dark bullpen window, his phone where the print was (the match cut). His feed opens on CLASS PHOTO #1, hearts under it, and scrolls to a clip of an invented anchor whose mouth lands a beat after the words, under the app's own tag ⚠ ALTERED AUDIO, held large enough to read. His thumb drags the clip back and plays it again: late again. Beyond the glass, the dark building, its one lit window.",
+   "caption": "The match cut: the print in his hand becomes his phone at the dark bullpen window, his glass on the sill. His feed opens on CLASS PHOTO #1, hearts under it: his face, everywhere. Beyond the glass, the cold open's skyline, the one lit window. The phone's glow on his face; then black, and a smooth voice over it (14.06).",
    "cast": [],
    "speak": [],
    "beat_starts": {
@@ -3274,178 +3086,15 @@
    "texts": [
     {
      "kind": "label",
-     "text": "NEWS CLIP · ⚠ ALTERED AUDIO",
-     "s": 14,
-     "e": 144,
-     "must": true
-    },
-    {
-     "kind": "label",
      "text": "CLASS PHOTO #1 · ♥",
      "s": 4,
-     "e": 43,
+     "e": 96,
      "must": true
     }
    ],
-   "tc_in": "01:09:06",
-   "tc_out": "01:15:06",
-   "frames": 144
-  },
-  {
-   "id": "14.03",
-   "setup": "14.03",
-   "beats": [
-    "14.03"
-   ],
-   "s": 1806,
-   "e": 1864,
-   "onscreen": [
-    {
-     "text": "NEWS CLIP · ⚠ ALTERED AUDIO",
-     "s": 5,
-     "e": 58
-    }
-   ],
-   "lines": [],
-   "seq": "14",
-   "verdict": "",
-   "v4": null,
-   "side": "MAS",
-   "side_label": "",
-   "badge": null,
-   "whip": null,
-   "frame": "WIDE · the building, its lit window (push 2 of 3)",
-   "cls": "W",
-   "move": "cut",
-   "does": "The building, its lit window: a silhouette with a phone (no face); the same clip plays on its screen; the silhouette nods on the audio's beat. In the same shot, its thumb presses the repost arrow under the ⚠ ALTERED AUDIO tag: click, ✓ REPOSTED.",
-   "chars": [
-    "silhouette"
-   ],
-   "cues": [
-    "music (v3.3): THE BRIDGE · a hush · no score: the phone's small speaker, then water on pilings"
-   ],
-   "sounds": [
-    "post_click @44"
-   ],
-   "spots": [
-    {
-     "name": "post_click",
-     "k": 44,
-     "dur": null
-    }
-   ],
-   "v4_frames": null,
-   "kind": "scene",
-   "set": "skyline",
-   "room": "bay",
-   "style": "BASE",
-   "fx": [],
-   "slate": false,
-   "caption": "The building, its lit window: a silhouette with a phone (no face); the same clip plays on its screen; the silhouette nods on the audio's beat. In the same shot, its thumb presses the repost arrow under the ⚠ ALTERED AUDIO tag: click, ✓ REPOSTED.",
-   "cast": [
-    {
-     "id": "silhouette",
-     "pose": "phone",
-     "face": "calm",
-     "x": 0.5,
-     "from": null,
-     "until": null
-    }
-   ],
-   "speak": [],
-   "beat_starts": {
-    "14.03": 0
-   },
-   "names": [],
-   "fg": null,
-   "marks": {},
-   "mark_src": {},
-   "texts": [
-    {
-     "kind": "label",
-     "text": "NEWS CLIP · ⚠ ALTERED AUDIO",
-     "s": 5,
-     "e": 58,
-     "must": true
-    }
-   ],
-   "tc_in": "01:15:06",
-   "tc_out": "01:17:16",
-   "frames": 58
-  },
-  {
-   "id": "14.05",
-   "setup": "14.05",
-   "beats": [
-    "14.05"
-   ],
-   "s": 1864,
-   "e": 1922,
-   "onscreen": [],
-   "lines": [],
-   "seq": "14",
-   "verdict": "",
-   "v4": null,
-   "side": "MAS",
-   "side_label": "",
-   "badge": null,
-   "whip": null,
-   "frame": "WIDE · the lit window, the bay",
-   "cls": "W",
-   "move": "cut",
-   "does": "A single hailstone drops from the lit window into the bay. Plink (the cold open's). The phone's glow clicks off. The silhouette doesn't move.",
-   "chars": [
-    "silhouette"
-   ],
-   "cues": [
-    "music (v3.3): THE BRIDGE · a hush · no score: the phone's small speaker, then water on pilings"
-   ],
-   "sounds": [
-    "synth:plink @24",
-    "key_tap_soft_01 @45"
-   ],
-   "spots": [
-    {
-     "name": "synth:plink",
-     "k": 24,
-     "dur": null
-    },
-    {
-     "name": "key_tap_soft_01",
-     "k": 45,
-     "dur": null
-    }
-   ],
-   "v4_frames": null,
-   "kind": "scene",
-   "set": "skyline",
-   "room": "bay",
-   "style": "BASE",
-   "fx": [],
-   "slate": false,
-   "caption": "A single hailstone drops from the lit window into the bay. Plink (the cold open's). The phone's glow clicks off. The silhouette doesn't move.",
-   "cast": [
-    {
-     "id": "silhouette",
-     "pose": "phone",
-     "face": "calm",
-     "x": 0.5,
-     "from": null,
-     "until": null
-    }
-   ],
-   "speak": [],
-   "beat_starts": {
-    "14.05": 0
-   },
-   "names": [],
-   "fg": null,
-   "marks": {},
-   "mark_src": {},
-   "texts": [],
-   "tc_in": "01:17:16",
-   "tc_out": "01:20:02",
-   "frames": 58
+   "tc_in": "01:06:17",
+   "tc_out": "01:10:17",
+   "frames": 96
   },
   {
    "id": "14.06",
@@ -3453,8 +3102,8 @@
    "beats": [
     "14.06"
    ],
-   "s": 1922,
-   "e": 1954,
+   "s": 1697,
+   "e": 1729,
    "onscreen": [],
    "lines": [
     {
@@ -3653,7 +3302,7 @@
    "does": "The too-smooth voice runs on over black and becomes the hearing's first words.",
    "chars": [],
    "cues": [
-    "music (v3.3): THE BRIDGE · a hush · no score: the phone's small speaker, then water on pilings"
+    "music (v3.4): THE BRIDGE · a hush · no score: the phone's small speaker, then water on pilings"
    ],
    "sounds": [],
    "spots": [],
@@ -3675,8 +3324,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "01:20:02",
-   "tc_out": "01:21:10",
+   "tc_in": "01:10:17",
+   "tc_out": "01:12:01",
    "frames": 32
   },
   {
@@ -3685,8 +3334,8 @@
    "beats": [
     "15.01"
    ],
-   "s": 1954,
-   "e": 2050,
+   "s": 1729,
+   "e": 1825,
    "onscreen": [
     {
      "text": "RAIL: MAY 16, 2023 · SENATE JUDICIARY",
@@ -3893,7 +3542,7 @@
     "clone"
    ],
    "cues": [
-    "music (v3.3): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged",
+    "music (v3.4): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged",
     "style (proposed, style-range pass): THE CLONE alone through a too-clean upscale filter (AA edges, soft sheen); the chairman stays BASE; never toward photoreal · default: a 1-px highlight"
    ],
    "sounds": [],
@@ -3925,8 +3574,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "01:21:10",
-   "tc_out": "01:25:10",
+   "tc_in": "01:12:01",
+   "tc_out": "01:16:01",
    "frames": 96
   },
   {
@@ -3935,8 +3584,8 @@
    "beats": [
     "15.02"
    ],
-   "s": 2050,
-   "e": 2174,
+   "s": 1825,
+   "e": 1949,
    "onscreen": [
     {
      "text": "LAHTNEMULB · CHAIRMAN",
@@ -4135,7 +3784,7 @@
     "sucram"
    ],
    "cues": [
-    "music (v3.3): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
+    "music (v3.4): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
    ],
    "sounds": [],
    "spots": [],
@@ -4223,8 +3872,8 @@
      "must": true
     }
    ],
-   "tc_in": "01:25:10",
-   "tc_out": "01:30:14",
+   "tc_in": "01:16:01",
+   "tc_out": "01:21:05",
    "frames": 124
   },
   {
@@ -4233,8 +3882,8 @@
    "beats": [
     "15.03"
    ],
-   "s": 2174,
-   "e": 2234,
+   "s": 1949,
+   "e": 2009,
    "onscreen": [],
    "lines": [],
    "seq": "15",
@@ -4253,7 +3902,7 @@
     "lahtnemulb"
    ],
    "cues": [
-    "music (v3.3): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
+    "music (v3.4): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
    ],
    "sounds": [],
    "spots": [],
@@ -4292,8 +3941,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "01:30:14",
-   "tc_out": "01:33:02",
+   "tc_in": "01:21:05",
+   "tc_out": "01:23:17",
    "frames": 60
   },
   {
@@ -4303,8 +3952,8 @@
     "15.04",
     "15.05"
    ],
-   "s": 2234,
-   "e": 2419,
+   "s": 2009,
+   "e": 2194,
    "onscreen": [
     {
      "text": "SUCRAM / CALLED IT. (BEFORE LAUNCH.)",
@@ -4646,9 +4295,9 @@
     "sucram"
    ],
    "cues": [
-    "music (v3.3): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged",
+    "music (v3.4): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged",
     "style: 2-TONE freeze, 1 beat · then the card rides the live room for the rest of its bar",
-    "music (v3.3): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
+    "music (v3.4): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
    ],
    "sounds": [
     "freeze_hit_C @0",
@@ -4738,8 +4387,8 @@
      "must": true
     }
    ],
-   "tc_in": "01:33:02",
-   "tc_out": "01:40:19",
+   "tc_in": "01:23:17",
+   "tc_out": "01:31:10",
    "frames": 185
   },
   {
@@ -4748,8 +4397,8 @@
    "beats": [
     "15.06"
    ],
-   "s": 2419,
-   "e": 2578,
+   "s": 2194,
+   "e": 2353,
    "onscreen": [],
    "lines": [
     {
@@ -5031,7 +4680,7 @@
     "lahtnemulb"
    ],
    "cues": [
-    "music (v3.3): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
+    "music (v3.4): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
    ],
    "sounds": [],
    "spots": [],
@@ -5062,8 +4711,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "01:40:19",
-   "tc_out": "01:47:10",
+   "tc_in": "01:31:10",
+   "tc_out": "01:38:01",
    "frames": 159
   },
   {
@@ -5072,8 +4721,8 @@
    "beats": [
     "15.07"
    ],
-   "s": 2578,
-   "e": 2725,
+   "s": 2353,
+   "e": 2500,
    "onscreen": [],
    "lines": [
     {
@@ -5322,7 +4971,7 @@
     "lahtnemulb"
    ],
    "cues": [
-    "music (v3.3): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
+    "music (v3.4): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
    ],
    "sounds": [],
    "spots": [],
@@ -5364,8 +5013,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "01:47:10",
-   "tc_out": "01:53:13",
+   "tc_in": "01:38:01",
+   "tc_out": "01:44:04",
    "frames": 147
   },
   {
@@ -5374,8 +5023,8 @@
    "beats": [
     "15.10"
    ],
-   "s": 2725,
-   "e": 2805,
+   "s": 2500,
+   "e": 2580,
    "onscreen": [],
    "lines": [
     {
@@ -5464,7 +5113,7 @@
     "sucram"
    ],
    "cues": [
-    "music (v3.3): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
+    "music (v3.4): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
    ],
    "sounds": [],
    "spots": [],
@@ -5519,8 +5168,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "01:53:13",
-   "tc_out": "01:56:21",
+   "tc_in": "01:44:04",
+   "tc_out": "01:47:12",
    "frames": 80
   },
   {
@@ -5529,18 +5178,18 @@
    "beats": [
     "15.15"
    ],
-   "s": 2805,
-   "e": 2991,
+   "s": 2580,
+   "e": 2767,
    "onscreen": [
     {
      "text": "PLEASE REGULATE ME",
      "s": 6,
-     "e": 186
+     "e": 187
     },
     {
      "text": "CALLED IT. (BEFORE LAUNCH.)",
      "s": 40,
-     "e": 186
+     "e": 187
     }
    ],
    "lines": [
@@ -5797,7 +5446,7 @@
    "does": "His answer begins over his shoulder; on \"licenses\" the cut to the table from above: his hand slides a single sheet toward the dais, off the table's right-hand edge, the sheet from his desk in March, finished: PLEASE REGULATE ME, his signature already on it. Sucram is faster: he stamps it mid-slide, CALLED IT. (BEFORE LAUNCH.)",
    "chars": [],
    "cues": [
-    "music (v3.3): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
+    "music (v3.4): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
    ],
    "sounds": [
     "folder_slide @8",
@@ -5837,20 +5486,20 @@
      "kind": "label",
      "text": "PLEASE REGULATE ME",
      "s": 6,
-     "e": 186,
+     "e": 187,
      "must": true
     },
     {
      "kind": "label",
      "text": "CALLED IT. (BEFORE LAUNCH.)",
      "s": 40,
-     "e": 186,
+     "e": 187,
      "must": true
     }
    ],
-   "tc_in": "01:56:21",
-   "tc_out": "02:04:15",
-   "frames": 186
+   "tc_in": "01:47:12",
+   "tc_out": "01:55:07",
+   "frames": 187
   },
   {
    "id": "15.16",
@@ -5858,8 +5507,8 @@
    "beats": [
     "15.16"
    ],
-   "s": 2991,
-   "e": 3058,
+   "s": 2767,
+   "e": 2834,
    "onscreen": [],
    "lines": [],
    "seq": "15",
@@ -5879,7 +5528,7 @@
     "senator"
    ],
    "cues": [
-    "music (v3.3): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
+    "music (v3.4): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
    ],
    "sounds": [
     "paper_curl @24"
@@ -5934,8 +5583,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "02:04:15",
-   "tc_out": "02:07:10",
+   "tc_in": "01:55:07",
+   "tc_out": "01:58:02",
    "frames": 67
   },
   {
@@ -5944,8 +5593,8 @@
    "beats": [
     "15.11"
    ],
-   "s": 3058,
-   "e": 3260,
+   "s": 2834,
+   "e": 3035,
    "onscreen": [],
    "lines": [
     {
@@ -6195,7 +5844,7 @@
     "sucram"
    ],
    "cues": [
-    "music (v3.3): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
+    "music (v3.4): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
    ],
    "sounds": [
     "typing_soft @99"
@@ -6242,9 +5891,9 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "02:07:10",
-   "tc_out": "02:15:20",
-   "frames": 202
+   "tc_in": "01:58:02",
+   "tc_out": "02:06:11",
+   "frames": 201
   },
   {
    "id": "15.12",
@@ -6252,8 +5901,8 @@
    "beats": [
     "15.12"
    ],
-   "s": 3260,
-   "e": 3332,
+   "s": 3035,
+   "e": 3107,
    "onscreen": [
     {
      "text": "HEALTH INSURANCE",
@@ -6275,7 +5924,7 @@
    "does": "He opens his wallet: one card. A tiny moth flies out in three drawings and lands on Sucram's stamp pad.",
    "chars": [],
    "cues": [
-    "music (v3.3): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
+    "music (v3.4): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
    ],
    "sounds": [
     "cloth_rustle @1",
@@ -6319,8 +5968,8 @@
      "must": true
     }
    ],
-   "tc_in": "02:15:20",
-   "tc_out": "02:18:20",
+   "tc_in": "02:06:11",
+   "tc_out": "02:09:11",
    "frames": 72
   },
   {
@@ -6329,8 +5978,8 @@
    "beats": [
     "15.13"
    ],
-   "s": 3332,
-   "e": 3416,
+   "s": 3107,
+   "e": 3191,
    "onscreen": [],
    "lines": [
     {
@@ -6410,7 +6059,7 @@
     "sucram"
    ],
    "cues": [
-    "music (v3.3): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
+    "music (v3.4): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
    ],
    "sounds": [
     "synth:gasp @10"
@@ -6481,8 +6130,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "02:18:20",
-   "tc_out": "02:22:08",
+   "tc_in": "02:09:11",
+   "tc_out": "02:12:23",
    "frames": 84
   },
   {
@@ -6491,8 +6140,8 @@
    "beats": [
     "15.14"
    ],
-   "s": 3416,
-   "e": 3567,
+   "s": 3191,
+   "e": 3343,
    "onscreen": [],
    "lines": [
     {
@@ -6696,7 +6345,7 @@
     "sucram"
    ],
    "cues": [
-    "music (v3.3): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
+    "music (v3.4): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged"
    ],
    "sounds": [
     "rubber_stamp_C @2",
@@ -6755,9 +6404,9 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "02:22:08",
-   "tc_out": "02:28:15",
-   "frames": 151
+   "tc_in": "02:12:23",
+   "tc_out": "02:19:07",
+   "frames": 152
   },
   {
    "id": "16.01",
@@ -6765,8 +6414,8 @@
    "beats": [
     "16.01"
    ],
-   "s": 3567,
-   "e": 3687,
+   "s": 3343,
+   "e": 3463,
    "onscreen": [
     {
      "text": "MAS MANALT: THE REGULATE-ME TOUR",
@@ -6823,7 +6472,7 @@
    "does": "MATCH on the thunk: the tour poster, MAS MANALT: THE REGULATE-ME TOUR, its cities. LONDON's strip: \"…cease operating…\" and EU gets CANCELLED. His thumb comes into the corner of frame on his phone and posts \"…no plans to leave\" [H]; UN-CANCELLED lands over the stamp. The last date slot: his own hand stamps it, ADDED DUE TO POPULAR DEMAND. The frame holds on his one-pixel smile to the bar's end.",
    "chars": [],
    "cues": [
-    "music (v3.3): THE TOUR · THE RUN (MM-03), a knee stab on each stamp"
+    "music (v3.4): THE TOUR · THE RUN (MM-03), a knee stab on each stamp"
    ],
    "sounds": [
     "rubber_stamp_C @0",
@@ -6950,8 +6599,8 @@
      "must": true
     }
    ],
-   "tc_in": "02:28:15",
-   "tc_out": "02:33:15",
+   "tc_in": "02:19:07",
+   "tc_out": "02:24:07",
    "frames": 120
   },
   {
@@ -6960,8 +6609,8 @@
    "beats": [
     "17.01"
    ],
-   "s": 3687,
-   "e": 3831,
+   "s": 3463,
+   "e": 3607,
    "onscreen": [
     {
      "text": "RAIL: MAY 30, 2023",
@@ -6993,7 +6642,7 @@
     "simed"
    ],
    "cues": [
-    "music (v3.3): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
+    "music (v3.4): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
    ],
    "sounds": [
     "pen_scribble_short @43",
@@ -7088,8 +6737,8 @@
      "must": true
     }
    ],
-   "tc_in": "02:33:15",
-   "tc_out": "02:39:15",
+   "tc_in": "02:24:07",
+   "tc_out": "02:30:07",
    "frames": 144
   },
   {
@@ -7098,8 +6747,8 @@
    "beats": [
     "17.02"
    ],
-   "s": 3831,
-   "e": 4080,
+   "s": 3607,
+   "e": 3856,
    "onscreen": [],
    "lines": [
     {
@@ -7527,7 +7176,7 @@
     "mas"
    ],
    "cues": [
-    "music (v3.3): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
+    "music (v3.4): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
    ],
    "sounds": [
     "pen_scribble_short @4",
@@ -7586,8 +7235,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "02:39:15",
-   "tc_out": "02:50:00",
+   "tc_in": "02:30:07",
+   "tc_out": "02:40:16",
    "frames": 249
   },
   {
@@ -7597,8 +7246,8 @@
     "17.03",
     "17.04"
    ],
-   "s": 4080,
-   "e": 4129,
+   "s": 3856,
+   "e": 3905,
    "onscreen": [
     {
      "text": "NESNEJ / SELLS SHOVELS. FUNDS DIGGERS.",
@@ -7629,8 +7278,8 @@
     "nesnej"
    ],
    "cues": [
-    "music (v3.3): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)",
-    "music (v3.3): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)",
+    "music (v3.4): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)",
+    "music (v3.4): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)",
     "style: 2-TONE freeze, 1 beat · then the card rides the live room for the rest of its bar"
    ],
    "sounds": [
@@ -7715,8 +7364,8 @@
      "must": true
     }
    ],
-   "tc_in": "02:50:00",
-   "tc_out": "02:52:01",
+   "tc_in": "02:40:16",
+   "tc_out": "02:42:17",
    "frames": 49
   },
   {
@@ -7725,8 +7374,8 @@
    "beats": [
     "17.05"
    ],
-   "s": 4129,
-   "e": 4217,
+   "s": 3905,
+   "e": 3993,
    "onscreen": [
     {
      "text": "NESNEJ / SELLS SHOVELS. FUNDS DIGGERS.",
@@ -7881,7 +7530,7 @@
     "mas"
    ],
    "cues": [
-    "music (v3.3): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
+    "music (v3.4): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
    ],
    "sounds": [],
    "spots": [],
@@ -7935,8 +7584,8 @@
      "must": true
     }
    ],
-   "tc_in": "02:52:01",
-   "tc_out": "02:55:17",
+   "tc_in": "02:42:17",
+   "tc_out": "02:46:09",
    "frames": 88
   },
   {
@@ -7945,8 +7594,8 @@
    "beats": [
     "17.06"
    ],
-   "s": 4217,
-   "e": 4290,
+   "s": 3993,
+   "e": 4066,
    "onscreen": [],
    "lines": [
     {
@@ -8092,7 +7741,7 @@
     "nesnej"
    ],
    "cues": [
-    "music (v3.3): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
+    "music (v3.4): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
    ],
    "sounds": [],
    "spots": [],
@@ -8126,8 +7775,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "02:55:17",
-   "tc_out": "02:58:18",
+   "tc_in": "02:46:09",
+   "tc_out": "02:49:10",
    "frames": 73
   },
   {
@@ -8138,8 +7787,8 @@
     "17.08",
     "17.09"
    ],
-   "s": 4290,
-   "e": 4377,
+   "s": 4066,
+   "e": 4153,
    "onscreen": [
     {
      "text": "INVIDIA · $1,000,000,000,000 (INTRADAY)",
@@ -8168,10 +7817,10 @@
     "nesnej"
    ],
    "cues": [
-    "music (v3.3): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)",
-    "music (v3.3): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)",
+    "music (v3.4): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)",
+    "music (v3.4): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)",
     "style: [LEDGER] flash-print, 6 frames · then the figure holds in the register window (BASE)",
-    "music (v3.3): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
+    "music (v3.4): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
    ],
    "sounds": [
     "ka_ching @14",
@@ -8233,8 +7882,8 @@
      "must": true
     }
    ],
-   "tc_in": "02:58:18",
-   "tc_out": "03:02:09",
+   "tc_in": "02:49:10",
+   "tc_out": "02:53:01",
    "frames": 87
   },
   {
@@ -8243,8 +7892,8 @@
    "beats": [
     "17.10"
    ],
-   "s": 4377,
-   "e": 4449,
+   "s": 4153,
+   "e": 4225,
    "onscreen": [
     {
      "text": "PURCHASE ORDER",
@@ -8271,7 +7920,7 @@
    "does": "The signing pen in Mario's hand is now, somehow, a purchase order: for AI chips, quantity \"more\".",
    "chars": [],
    "cues": [
-    "music (v3.3): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
+    "music (v3.4): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
    ],
    "sounds": [
     "paper_curl @4"
@@ -8316,8 +7965,8 @@
      "must": true
     }
    ],
-   "tc_in": "03:02:09",
-   "tc_out": "03:05:09",
+   "tc_in": "02:53:01",
+   "tc_out": "02:56:01",
    "frames": 72
   },
   {
@@ -8326,8 +7975,8 @@
    "beats": [
     "17.11"
    ],
-   "s": 4449,
-   "e": 4555,
+   "s": 4225,
+   "e": 4331,
    "onscreen": [],
    "lines": [],
    "seq": "17",
@@ -8347,7 +7996,7 @@
     "nesnej"
    ],
    "cues": [
-    "music (v3.3): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
+    "music (v3.4): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
    ],
    "sounds": [],
    "spots": [],
@@ -8394,8 +8043,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "03:05:09",
-   "tc_out": "03:09:19",
+   "tc_in": "02:56:01",
+   "tc_out": "03:00:11",
    "frames": 106
   },
   {
@@ -8404,8 +8053,8 @@
    "beats": [
     "17.13"
    ],
-   "s": 4555,
-   "e": 4573,
+   "s": 4331,
+   "e": 4349,
    "onscreen": [],
    "lines": [],
    "seq": "17",
@@ -8421,7 +8070,7 @@
    "does": "CUT TO BLACK. (The recommended 11-minute split point.)",
    "chars": [],
    "cues": [
-    "music (v3.3): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
+    "music (v3.4): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)"
    ],
    "sounds": [],
    "spots": [],
@@ -8443,168 +8092,12 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "03:09:19",
-   "tc_out": "03:10:13",
+   "tc_in": "03:00:11",
+   "tc_out": "03:01:05",
    "frames": 18
   }
  ],
  "lines": [
-  {
-   "id": "e1-a2-13-01",
-   "shot": "13.02",
-   "beat": "13.02",
-   "kind": "dialogue",
-   "mode": "on-mic",
-   "who": "SIRRAH",
-   "text": "What can be, unburdened by what has been… trained.",
-   "tag": "",
-   "on_s": 5.0333,
-   "end_s": 8.2033,
-   "file_s": 4.5233,
-   "abs_in": 120,
-   "abs_out": 197,
-   "file_in": 108,
-   "file_out": 208,
-   "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-01.wav",
-   "stick_t": 0.45,
-   "stick_in": 0.51,
-   "cut": false,
-   "on_camera": "on",
-   "take_lip_sync": true,
-   "os": false,
-   "via": null,
-   "words": [
-    [
-     "What",
-     0,
-     3
-    ],
-    [
-     "can",
-     3,
-     7
-    ],
-    [
-     "be",
-     7,
-     17
-    ],
-    [
-     "unburdened",
-     20,
-     34
-    ],
-    [
-     "by",
-     34,
-     39
-    ],
-    [
-     "what",
-     39,
-     42
-    ],
-    [
-     "has",
-     42,
-     46
-    ],
-    [
-     "been",
-     46,
-     51
-    ],
-    [
-     "trained",
-     64,
-     77
-    ]
-   ],
-   "mouth": [
-    [
-     0,
-     "A"
-    ],
-    [
-     2,
-     "E"
-    ],
-    [
-     4,
-     "A"
-    ],
-    [
-     7,
-     "M"
-    ],
-    [
-     10,
-     "A"
-    ],
-    [
-     15,
-     "E"
-    ],
-    [
-     17,
-     "rest"
-    ],
-    [
-     20,
-     "A"
-    ],
-    [
-     22,
-     "E"
-    ],
-    [
-     25,
-     "O"
-    ],
-    [
-     27,
-     "E"
-    ],
-    [
-     33,
-     "M"
-    ],
-    [
-     36,
-     "A"
-    ],
-    [
-     46,
-     "M"
-    ],
-    [
-     48,
-     "E"
-    ],
-    [
-     51,
-     "rest"
-    ],
-    [
-     64,
-     "E"
-    ],
-    [
-     68,
-     "A"
-    ],
-    [
-     73,
-     "E"
-    ],
-    [
-     77,
-     "rest"
-    ]
-   ],
-   "mouth_src": "take",
-   "pre": false
-  },
   {
    "id": "e1-a2-13-02",
    "shot": "13.05",
@@ -8614,13 +8107,13 @@
    "who": "SIRRAH",
    "text": "Any questions, before we take the picture?",
    "tag": "O.S.",
-   "on_s": 11.3083,
-   "end_s": 13.5983,
-   "file_s": 10.7983,
-   "abs_in": 271,
-   "abs_out": 327,
-   "file_in": 259,
-   "file_out": 338,
+   "on_s": 9.1,
+   "end_s": 11.39,
+   "file_s": 8.59,
+   "abs_in": 218,
+   "abs_out": 274,
+   "file_in": 206,
+   "file_out": 285,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-02.wav",
    "stick_t": 0.35,
    "stick_in": 0.51,
@@ -8744,13 +8237,13 @@
    "who": "MARIO",
    "text": "I have one concern.",
    "tag": "",
-   "on_s": 13.9483,
-   "end_s": 15.3783,
-   "file_s": 13.4483,
-   "abs_in": 334,
-   "abs_out": 370,
-   "file_in": 322,
-   "file_out": 381,
+   "on_s": 11.74,
+   "end_s": 13.17,
+   "file_s": 11.24,
+   "abs_in": 281,
+   "abs_out": 317,
+   "file_in": 269,
+   "file_out": 328,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-03.wav",
    "stick_t": 2.99,
    "stick_in": 0.5,
@@ -8823,13 +8316,13 @@
    "who": "SIRRAH",
    "text": "Is it just the one?",
    "tag": "O.S.",
-   "on_s": 15.6783,
-   "end_s": 16.7883,
-   "file_s": 15.1783,
-   "abs_in": 376,
-   "abs_out": 403,
-   "file_in": 364,
-   "file_out": 415,
+   "on_s": 13.47,
+   "end_s": 14.58,
+   "file_s": 12.97,
+   "abs_in": 323,
+   "abs_out": 350,
+   "file_in": 311,
+   "file_out": 362,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-04.wav",
    "stick_t": 4.72,
    "stick_in": 0.5,
@@ -8907,13 +8400,13 @@
    "who": "MARIO",
    "text": "It has sub-concerns. I've grouped them by how worried we should be.",
    "tag": "",
-   "on_s": 17.1383,
-   "end_s": 20.6283,
-   "file_s": 16.6383,
-   "abs_in": 411,
-   "abs_out": 496,
-   "file_in": 399,
-   "file_out": 507,
+   "on_s": 14.93,
+   "end_s": 18.42,
+   "file_s": 14.43,
+   "abs_in": 358,
+   "abs_out": 443,
+   "file_in": 346,
+   "file_out": 454,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-05.wav",
    "stick_t": 6.18,
    "stick_in": 0.5,
@@ -9102,13 +8595,13 @@
    "who": "PHOTOGRAPHER",
    "text": "Big smiles, please. Eyes on camera one.",
    "tag": "",
-   "on_s": 22.5583,
-   "end_s": 24.9083,
-   "file_s": 22.0583,
-   "abs_in": 541,
-   "abs_out": 598,
-   "file_in": 529,
-   "file_out": 614,
+   "on_s": 20.35,
+   "end_s": 22.7,
+   "file_s": 19.85,
+   "abs_in": 488,
+   "abs_out": 545,
+   "file_in": 476,
+   "file_out": 561,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-06.wav",
    "stick_t": 0.6,
    "stick_in": 0.5,
@@ -9248,13 +8741,13 @@
    "who": "PHOTOGRAPHER",
    "text": "Camera one. Anyone.",
    "tag": "",
-   "on_s": 29.8417,
-   "end_s": 31.6217,
-   "file_s": 29.3417,
-   "abs_in": 716,
-   "abs_out": 759,
-   "file_in": 704,
-   "file_out": 775,
+   "on_s": 27.5917,
+   "end_s": 29.3717,
+   "file_s": 27.0917,
+   "abs_in": 662,
+   "abs_out": 705,
+   "file_in": 650,
+   "file_out": 721,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-07.wav",
    "stick_t": 0.8,
    "stick_in": 0.5,
@@ -9346,13 +8839,13 @@
    "who": "TASYA",
    "text": "We own camera two.",
    "tag": "",
-   "on_s": 32.1217,
-   "end_s": 33.4417,
-   "file_s": 31.6217,
-   "abs_in": 770,
-   "abs_out": 803,
-   "file_in": 758,
-   "file_out": 818,
+   "on_s": 29.8717,
+   "end_s": 31.1917,
+   "file_s": 29.3717,
+   "abs_in": 716,
+   "abs_out": 749,
+   "file_in": 704,
+   "file_out": 764,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-08.wav",
    "stick_t": 3.08,
    "stick_in": 0.5,
@@ -9437,13 +8930,13 @@
    "who": "RADNUS",
    "text": "Congratulations on your launch, Mas. Really. Everyone's using it.",
    "tag": "",
-   "on_s": 34.6417,
-   "end_s": 38.6617,
-   "file_s": 34.1317,
-   "abs_in": 831,
-   "abs_out": 928,
-   "file_in": 819,
-   "file_out": 940,
+   "on_s": 32.3917,
+   "end_s": 36.4117,
+   "file_s": 31.8817,
+   "abs_in": 777,
+   "abs_out": 874,
+   "file_in": 765,
+   "file_out": 886,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-09.wav",
    "stick_t": 0.6,
    "stick_in": 0.51,
@@ -9613,13 +9106,13 @@
    "who": "MAS",
    "text": "thank you.",
    "tag": "",
-   "on_s": 39.1117,
-   "end_s": 39.9617,
-   "file_s": 38.6017,
-   "abs_in": 938,
-   "abs_out": 960,
-   "file_in": 926,
-   "file_out": 973,
+   "on_s": 36.8617,
+   "end_s": 37.7117,
+   "file_s": 36.3517,
+   "abs_in": 884,
+   "abs_out": 906,
+   "file_in": 872,
+   "file_out": 919,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-10.wav",
    "stick_t": 5.07,
    "stick_in": 0.51,
@@ -9678,13 +9171,13 @@
    "who": "RADNUS",
    "text": "They ask it the things they used to ask us. And it tells them what a great question it was.",
    "tag": "",
-   "on_s": 40.5617,
-   "end_s": 46.1117,
-   "file_s": 40.0617,
-   "abs_in": 973,
-   "abs_out": 1107,
-   "file_in": 961,
-   "file_out": 1122,
+   "on_s": 38.3117,
+   "end_s": 43.8617,
+   "file_s": 37.8117,
+   "abs_in": 919,
+   "abs_out": 1053,
+   "file_in": 907,
+   "file_out": 1068,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-11.wav",
    "stick_t": 6.52,
    "stick_in": 0.5,
@@ -9929,51 +9422,6 @@
    "pre": false
   },
   {
-   "id": "v3-vo-12",
-   "shot": "13.09",
-   "beat": "13.09",
-   "kind": "vo",
-   "mode": "on-mic",
-   "who": "MAS",
-   "text": "he's not wrong.",
-   "tag": "V.O.",
-   "on_s": 46.5117,
-   "end_s": 47.6317,
-   "file_s": 45.9517,
-   "abs_in": 1116,
-   "abs_out": 1144,
-   "file_in": 1102,
-   "file_out": 1160,
-   "file": "audio/ep01/v3/act2/wav/v3-vo-12.wav",
-   "stick_t": 12.47,
-   "stick_in": 0.56,
-   "cut": false,
-   "on_camera": "vo",
-   "take_lip_sync": false,
-   "os": false,
-   "via": null,
-   "words": [
-    [
-     "he's",
-     1,
-     6
-    ],
-    [
-     "not",
-     6,
-     13
-    ],
-    [
-     "wrong",
-     13,
-     27
-    ]
-   ],
-   "mouth": [],
-   "mouth_src": "none",
-   "pre": false
-  },
-  {
    "id": "e1-a2-13-12",
    "shot": "13.09",
    "beat": "13.09",
@@ -9982,15 +9430,15 @@
    "who": "MAS",
    "text": "how's the dancing?",
    "tag": "",
-   "on_s": 48.5317,
-   "end_s": 49.7917,
-   "file_s": 47.9617,
-   "abs_in": 1164,
-   "abs_out": 1195,
-   "file_in": 1151,
-   "file_out": 1212,
+   "on_s": 44.7617,
+   "end_s": 46.0217,
+   "file_s": 44.1917,
+   "abs_in": 1074,
+   "abs_out": 1105,
+   "file_in": 1060,
+   "file_out": 1121,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-12.wav",
-   "stick_t": 14.49,
+   "stick_t": 12.97,
    "stick_in": 0.57,
    "cut": false,
    "on_camera": "on",
@@ -10000,7 +9448,7 @@
    "words": [
     [
      "How's",
-     1,
+     0,
      9
     ],
     [
@@ -10017,26 +9465,22 @@
    "mouth": [
     [
      0,
-     "rest"
-    ],
-    [
-     1,
      "A"
     ],
     [
-     8,
+     7,
      "E"
     ],
     [
-     15,
+     14,
      "A"
     ],
     [
-     20,
+     19,
      "E"
     ],
     [
-     31,
+     30,
      "rest"
     ]
    ],
@@ -10052,13 +9496,13 @@
    "who": "RADNUS",
    "text": "We're being thoughtful.",
    "tag": "O.S.",
-   "on_s": 50.7583,
-   "end_s": 51.9883,
-   "file_s": 50.2583,
-   "abs_in": 1218,
-   "abs_out": 1248,
-   "file_in": 1206,
-   "file_out": 1261,
+   "on_s": 47.0083,
+   "end_s": 48.2383,
+   "file_s": 46.5083,
+   "abs_in": 1128,
+   "abs_out": 1158,
+   "file_in": 1116,
+   "file_out": 1171,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-13.wav",
    "stick_t": 0.55,
    "stick_in": 0.5,
@@ -10130,13 +9574,13 @@
    "who": "NEDIB",
    "text": "Folks, I just want to say one thing.",
    "tag": "",
-   "on_s": 54.4583,
-   "end_s": 56.5483,
-   "file_s": 53.9483,
-   "abs_in": 1307,
-   "abs_out": 1358,
-   "file_in": 1294,
-   "file_out": 1373,
+   "on_s": 50.7083,
+   "end_s": 52.7983,
+   "file_s": 50.1983,
+   "abs_in": 1217,
+   "abs_out": 1268,
+   "file_in": 1204,
+   "file_out": 1283,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-14.wav",
    "stick_t": 2.0,
    "stick_in": 0.51,
@@ -10261,13 +9705,13 @@
    "who": "NEDIB",
    "text": "Whatever you promise in here today, put it in writing.",
    "tag": "",
-   "on_s": 57.875,
-   "end_s": 60.945,
-   "file_s": 57.545,
-   "abs_in": 1389,
-   "abs_out": 1463,
-   "file_in": 1381,
-   "file_out": 1506,
+   "on_s": 54.125,
+   "end_s": 57.195,
+   "file_s": 53.795,
+   "abs_in": 1299,
+   "abs_out": 1373,
+   "file_in": 1291,
+   "file_out": 1416,
    "file": "audio/ep01/v31/act2/wav/v31-a2-0001.wav",
    "stick_t": 0.5,
    "stick_in": 0.33,
@@ -10333,6 +9777,51 @@
    "pre": false
   },
   {
+   "id": "v34-vo-04",
+   "shot": "13.13",
+   "beat": "13.13",
+   "kind": "vo",
+   "mode": "on-mic",
+   "who": "MAS",
+   "text": "mine's half written.",
+   "tag": "V.O.",
+   "on_s": 57.595,
+   "end_s": 58.895,
+   "file_s": 57.065,
+   "abs_in": 1382,
+   "abs_out": 1414,
+   "file_in": 1369,
+   "file_out": 1430,
+   "file": "audio/ep01/v34/act2/wav/v34-vo-04.wav",
+   "stick_t": 3.97,
+   "stick_in": 0.53,
+   "cut": false,
+   "on_camera": "vo",
+   "take_lip_sync": false,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "mine's",
+     1,
+     10
+    ],
+    [
+     "half",
+     10,
+     18
+    ],
+    [
+     "written",
+     18,
+     31
+    ]
+   ],
+   "mouth": [],
+   "mouth_src": "none",
+   "pre": false
+  },
+  {
    "id": "v31-a2-0002",
    "shot": "13.13",
    "beat": "13.13",
@@ -10341,15 +9830,15 @@
    "who": "NEDIB",
    "text": "Longer.",
    "tag": "",
-   "on_s": 61.945,
-   "end_s": 62.75,
-   "file_s": 61.615,
-   "abs_in": 1486,
-   "abs_out": 1506,
-   "file_in": 1478,
-   "file_out": 1603,
+   "on_s": 59.395,
+   "end_s": 60.2,
+   "file_s": 59.065,
+   "abs_in": 1425,
+   "abs_out": 1445,
+   "file_in": 1417,
+   "file_out": 1542,
    "file": "audio/ep01/v31/act2/wav/v31-a2-0002.wav",
-   "stick_t": 4.57,
+   "stick_t": 5.77,
    "stick_in": 0.33,
    "cut": false,
    "on_camera": "on",
@@ -10359,8 +9848,8 @@
    "words": [
     [
      "Longer",
-     1,
-     18
+     0,
+     17
     ]
    ],
    "mouth": [],
@@ -10376,13 +9865,13 @@
    "who": "MAS",
    "text": "it's a good photo.",
    "tag": "O.S.",
-   "on_s": 65.0333,
-   "end_s": 66.3633,
-   "file_s": 64.5133,
-   "abs_in": 1560,
-   "abs_out": 1593,
-   "file_in": 1548,
-   "file_out": 1609,
+   "on_s": 62.4917,
+   "end_s": 63.8217,
+   "file_s": 61.9717,
+   "abs_in": 1499,
+   "abs_out": 1532,
+   "file_in": 1487,
+   "file_out": 1548,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-18.wav",
    "stick_t": 1.7,
    "stick_in": 0.52,
@@ -10463,13 +9952,13 @@
    "who": "CLONE",
    "text": "Too often we have seen what happens when technology outpaces regulation…",
    "tag": "O.S.",
-   "on_s": 80.4333,
-   "end_s": 84.9833,
-   "file_s": 79.9233,
-   "abs_in": 1930,
-   "abs_out": 2040,
-   "file_in": 1918,
-   "file_out": 2051,
+   "on_s": 71.0583,
+   "end_s": 75.6083,
+   "file_s": 70.5483,
+   "abs_in": 1705,
+   "abs_out": 1815,
+   "file_in": 1693,
+   "file_out": 1826,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-01.wav",
    "stick_t": 0.35,
    "stick_in": 0.51,
@@ -10653,13 +10142,13 @@
    "who": "LAHTNEMULB",
    "text": "That voice was not mine. The words were not mine.",
    "tag": "",
-   "on_s": 86.7167,
-   "end_s": 90.0867,
-   "file_s": 86.2167,
-   "abs_in": 2081,
-   "abs_out": 2163,
-   "file_in": 2069,
-   "file_out": 2174,
+   "on_s": 77.3417,
+   "end_s": 80.7117,
+   "file_s": 76.8417,
+   "abs_in": 1856,
+   "abs_out": 1938,
+   "file_in": 1844,
+   "file_out": 1949,
    "file": "audio/ep01/v31/act2/wav/v31-a2-0003.wav",
    "stick_t": 1.3,
    "stick_in": 0.5,
@@ -10830,13 +10319,13 @@
    "who": "SUCRAM",
    "text": "Don't mind me. It's a thread. One of forty-seven.",
    "tag": "",
-   "on_s": 94.1583,
-   "end_s": 97.2583,
-   "file_s": 93.6583,
-   "abs_in": 2259,
-   "abs_out": 2335,
-   "file_in": 2247,
-   "file_out": 2346,
+   "on_s": 84.7833,
+   "end_s": 87.8833,
+   "file_s": 84.2833,
+   "abs_in": 2034,
+   "abs_out": 2110,
+   "file_in": 2022,
+   "file_out": 2121,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-03.wav",
    "stick_t": 0.45,
    "stick_in": 0.5,
@@ -10990,13 +10479,13 @@
    "who": "MAS",
    "text": "which one am i?",
    "tag": "",
-   "on_s": 97.7583,
-   "end_s": 99.0683,
-   "file_s": 97.1983,
-   "abs_in": 2346,
-   "abs_out": 2378,
-   "file_in": 2332,
-   "file_out": 2393,
+   "on_s": 88.3833,
+   "end_s": 89.6933,
+   "file_s": 87.8233,
+   "abs_in": 2121,
+   "abs_out": 2153,
+   "file_in": 2107,
+   "file_out": 2168,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-04.wav",
    "stick_t": 4.05,
    "stick_in": 0.56,
@@ -11077,13 +10566,13 @@
    "who": "SUCRAM",
    "text": "Most of them.",
    "tag": "",
-   "on_s": 99.5183,
-   "end_s": 100.2983,
-   "file_s": 99.0183,
-   "abs_in": 2388,
-   "abs_out": 2408,
-   "file_in": 2376,
-   "file_out": 2418,
+   "on_s": 90.1433,
+   "end_s": 90.9233,
+   "file_s": 89.6433,
+   "abs_in": 2163,
+   "abs_out": 2183,
+   "file_in": 2151,
+   "file_out": 2193,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-05.wav",
    "stick_t": 5.81,
    "stick_in": 0.5,
@@ -11155,13 +10644,13 @@
    "who": "LAHTNEMULB",
    "text": "You may have had in mind the effect on jobs, which is really my biggest nightmare in the long term.",
    "tag": "",
-   "on_s": 101.1917,
-   "end_s": 107.1217,
-   "file_s": 100.6917,
-   "abs_in": 2428,
-   "abs_out": 2571,
-   "file_in": 2416,
-   "file_out": 2582,
+   "on_s": 91.8167,
+   "end_s": 97.7467,
+   "file_s": 91.3167,
+   "abs_in": 2203,
+   "abs_out": 2346,
+   "file_in": 2191,
+   "file_out": 2357,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-06.wav",
    "stick_t": 0.4,
    "stick_in": 0.5,
@@ -11426,13 +10915,13 @@
    "who": "MAS",
    "text": "gtp-4 and other systems like it are good at doing tasks, not jobs.",
    "tag": "",
-   "on_s": 107.8217,
-   "end_s": 113.0817,
-   "file_s": 107.3117,
-   "abs_in": 2587,
-   "abs_out": 2714,
-   "file_in": 2575,
-   "file_out": 2728,
+   "on_s": 98.4467,
+   "end_s": 103.7067,
+   "file_s": 97.9367,
+   "abs_in": 2362,
+   "abs_out": 2489,
+   "file_in": 2350,
+   "file_out": 2503,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-07.wav",
    "stick_t": 0.405,
    "stick_in": 0.51,
@@ -11663,13 +11152,13 @@
    "who": "SENATOR",
    "text": "Is there anything you'd like this committee to do?",
    "tag": "O.S.",
-   "on_s": 113.9417,
-   "end_s": 116.7017,
-   "file_s": 113.4317,
-   "abs_in": 2734,
-   "abs_out": 2801,
-   "file_in": 2722,
-   "file_out": 2812,
+   "on_s": 104.5667,
+   "end_s": 107.3267,
+   "file_s": 104.0567,
+   "abs_in": 2509,
+   "abs_out": 2576,
+   "file_in": 2497,
+   "file_out": 2587,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-15.wav",
    "stick_t": 0.4,
    "stick_in": 0.51,
@@ -11738,13 +11227,13 @@
    "who": "MAS",
    "text": "i would form a new agency that licenses any effort above a certain scale of capabilities…",
    "tag": "",
-   "on_s": 117.175,
-   "end_s": 123.845,
-   "file_s": 116.585,
-   "abs_in": 2812,
-   "abs_out": 2973,
-   "file_in": 2798,
-   "file_out": 2986,
+   "on_s": 107.8,
+   "end_s": 114.47,
+   "file_s": 107.21,
+   "abs_in": 2587,
+   "abs_out": 2748,
+   "file_in": 2573,
+   "file_out": 2761,
    "file": "audio/ep01/v32/act2/wav/v32-a2-0001.wav",
    "stick_t": 0.3,
    "stick_in": 0.59,
@@ -11985,13 +11474,13 @@
    "who": "SENATOR",
    "text": "Would you come and run it?",
    "tag": "O.S.",
-   "on_s": 127.7167,
-   "end_s": 129.2717,
-   "file_s": 127.3867,
-   "abs_in": 3065,
-   "abs_out": 3103,
-   "file_in": 3057,
-   "file_out": 3251,
+   "on_s": 118.3833,
+   "end_s": 119.9383,
+   "file_s": 118.0533,
+   "abs_in": 2841,
+   "abs_out": 2879,
+   "file_in": 2833,
+   "file_out": 3027,
    "file": "audio/ep01/v32/act2/wav/v32-a2-0002.wav",
    "stick_t": 0.3,
    "stick_in": 0.33,
@@ -12045,13 +11534,13 @@
    "who": "MAS",
    "text": "i love my current job.",
    "tag": "",
-   "on_s": 129.8717,
-   "end_s": 131.4617,
-   "file_s": 129.3517,
-   "abs_in": 3116,
-   "abs_out": 3156,
-   "file_in": 3104,
-   "file_out": 3170,
+   "on_s": 120.5383,
+   "end_s": 122.1283,
+   "file_s": 120.0183,
+   "abs_in": 2892,
+   "abs_out": 2932,
+   "file_in": 2880,
+   "file_out": 2946,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-11.wav",
    "stick_t": 2.455,
    "stick_in": 0.52,
@@ -12149,13 +11638,13 @@
    "who": "SENATOR",
    "text": "You love it. Do you make a lot of money doing it?",
    "tag": "O.S.",
-   "on_s": 132.0617,
-   "end_s": 135.4817,
-   "file_s": 131.5617,
-   "abs_in": 3169,
-   "abs_out": 3252,
-   "file_in": 3157,
-   "file_out": 3263,
+   "on_s": 122.7283,
+   "end_s": 126.1483,
+   "file_s": 122.2283,
+   "abs_in": 2945,
+   "abs_out": 3028,
+   "file_in": 2933,
+   "file_out": 3039,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-12.wav",
    "stick_t": 4.645,
    "stick_in": 0.5,
@@ -12239,13 +11728,13 @@
    "who": "CLONE",
    "text": "Health insurance.",
    "tag": "",
-   "on_s": 140.5333,
-   "end_s": 141.7333,
-   "file_s": 140.0233,
-   "abs_in": 3372,
-   "abs_out": 3402,
-   "file_in": 3360,
-   "file_out": 3416,
+   "on_s": 131.1583,
+   "end_s": 132.3583,
+   "file_s": 130.6483,
+   "abs_in": 3147,
+   "abs_out": 3177,
+   "file_in": 3135,
+   "file_out": 3191,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-13.wav",
    "stick_t": 1.7,
    "stick_in": 0.51,
@@ -12304,13 +11793,13 @@
    "who": "SUCRAM",
    "text": "That proves nothing. Partially.",
    "tag": "",
-   "on_s": 142.7833,
-   "end_s": 144.5733,
-   "file_s": 142.2833,
-   "abs_in": 3426,
-   "abs_out": 3470,
-   "file_in": 3414,
-   "file_out": 3482,
+   "on_s": 133.4083,
+   "end_s": 135.1983,
+   "file_s": 132.9083,
+   "abs_in": 3201,
+   "abs_out": 3245,
+   "file_in": 3189,
+   "file_out": 3257,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-15-14.wav",
    "stick_t": 0.45,
    "stick_in": 0.5,
@@ -12399,13 +11888,13 @@
    "who": "MAS",
    "text": "i have no equity in nopeai.",
    "tag": "",
-   "on_s": 145.0733,
-   "end_s": 147.3233,
-   "file_s": 144.5733,
-   "abs_in": 3481,
-   "abs_out": 3536,
-   "file_in": 3469,
-   "file_out": 3549,
+   "on_s": 135.6983,
+   "end_s": 137.9483,
+   "file_s": 135.1983,
+   "abs_in": 3256,
+   "abs_out": 3311,
+   "file_in": 3244,
+   "file_out": 3324,
    "file": "audio/ep01/v3/act2/wav/v3-a2-0001.wav",
    "stick_t": 2.74,
    "stick_in": 0.5,
@@ -12504,13 +11993,13 @@
    "who": "MARIO",
    "text": "It's one sentence. It doesn't say what it costs.",
    "tag": "",
-   "on_s": 160.125,
-   "end_s": 162.745,
-   "file_s": 159.625,
-   "abs_in": 3843,
-   "abs_out": 3906,
-   "file_in": 3831,
-   "file_out": 3919,
+   "on_s": 150.7917,
+   "end_s": 153.4117,
+   "file_s": 150.2917,
+   "abs_in": 3619,
+   "abs_out": 3682,
+   "file_in": 3607,
+   "file_out": 3695,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-17-01.wav",
    "stick_t": 0.5,
    "stick_in": 0.5,
@@ -12648,13 +12137,13 @@
    "who": "MARIO",
    "text": "So I'm adding a footnote. A short one.",
    "tag": "",
-   "on_s": 163.645,
-   "end_s": 166.005,
-   "file_s": 163.145,
-   "abs_in": 3927,
-   "abs_out": 3985,
-   "file_in": 3915,
-   "file_out": 3996,
+   "on_s": 154.3117,
+   "end_s": 156.6717,
+   "file_s": 153.8117,
+   "abs_in": 3703,
+   "abs_out": 3761,
+   "file_in": 3691,
+   "file_out": 3772,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-17-02.wav",
    "stick_t": 4.02,
    "stick_in": 0.5,
@@ -12795,13 +12284,13 @@
    "who": "MAS",
    "text": "we'll read it.",
    "tag": "",
-   "on_s": 166.605,
-   "end_s": 167.535,
-   "file_s": 166.015,
-   "abs_in": 3998,
-   "abs_out": 4021,
-   "file_in": 3984,
-   "file_out": 4036,
+   "on_s": 157.2717,
+   "end_s": 158.2017,
+   "file_s": 156.6817,
+   "abs_in": 3774,
+   "abs_out": 3797,
+   "file_in": 3760,
+   "file_out": 3812,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-17-03.wav",
    "stick_t": 6.98,
    "stick_in": 0.59,
@@ -12865,13 +12354,13 @@
    "who": "MARIO",
    "text": "It has an appendix.",
    "tag": "",
-   "on_s": 168.035,
-   "end_s": 169.315,
-   "file_s": 167.535,
-   "abs_in": 4032,
-   "abs_out": 4064,
-   "file_in": 4020,
-   "file_out": 4075,
+   "on_s": 158.7017,
+   "end_s": 159.9817,
+   "file_s": 158.2017,
+   "abs_in": 3808,
+   "abs_out": 3840,
+   "file_in": 3796,
+   "file_out": 3851,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-17-04.wav",
    "stick_t": 8.41,
    "stick_in": 0.5,
@@ -12944,13 +12433,13 @@
    "who": "MARIO",
    "text": "Can we help you? This is the extinction table.",
    "tag": "",
-   "on_s": 172.7917,
-   "end_s": 175.4117,
-   "file_s": 172.2917,
-   "abs_in": 4147,
-   "abs_out": 4210,
-   "file_in": 4135,
-   "file_out": 4222,
+   "on_s": 163.4583,
+   "end_s": 166.0783,
+   "file_s": 162.9583,
+   "abs_in": 3923,
+   "abs_out": 3986,
+   "file_in": 3911,
+   "file_out": 3998,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-17-05.wav",
    "stick_t": 0.75,
    "stick_in": 0.5,
@@ -13076,13 +12565,13 @@
    "who": "NESNEJ",
    "text": "The more you buy, the more you save.",
    "tag": "",
-   "on_s": 176.0113,
-   "end_s": 178.1613,
-   "file_s": 175.5113,
-   "abs_in": 4224,
-   "abs_out": 4276,
-   "file_in": 4212,
-   "file_out": 4292,
+   "on_s": 166.678,
+   "end_s": 168.828,
+   "file_s": 166.178,
+   "abs_in": 4000,
+   "abs_out": 4052,
+   "file_in": 3988,
+   "file_out": 4068,
    "file": "audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-17-06.wav",
    "stick_t": 0.303,
    "stick_in": 0.5,
@@ -13213,37 +12702,30 @@
    "floor_f": 41
   },
   {
-   "text": "MAY 12, 2023",
-   "s": 1668,
-   "e": 1806,
-   "shot": "14.01",
-   "floor_f": 21
-  },
-  {
    "text": "MAY 16, 2023 · SENATE JUDICIARY",
-   "s": 1961,
-   "e": 2050,
+   "s": 1736,
+   "e": 1825,
    "shot": "15.01",
    "floor_f": 44
   },
   {
    "text": "MAY 24, 2023 · LONDON",
-   "s": 3570,
-   "e": 3597,
+   "s": 3346,
+   "e": 3373,
    "shot": "16.01",
    "floor_f": 32
   },
   {
    "text": "MAY 26, 2023",
-   "s": 3628,
-   "e": 3644,
+   "s": 3404,
+   "e": 3420,
    "shot": "16.01",
    "floor_f": 21
   },
   {
    "text": "MAY 30, 2023",
-   "s": 3690,
-   "e": 3730,
+   "s": 3466,
+   "e": 3506,
    "shot": "17.01",
    "floor_f": 21
   }
@@ -13251,21 +12733,9 @@
  "sound_marks": [],
  "subs": [
   {
-   "s": 120,
-   "e": 197,
-   "hold_to": 209,
-   "who": "SIRRAH",
-   "shown": "WOMAN WITH THE POINTER",
-   "text": "What can be, unburdened by what has been… trained.",
-   "kind": "dialogue",
-   "mode": "on-mic",
-   "id": "e1-a2-13-01",
-   "os": false
-  },
-  {
-   "s": 271,
-   "e": 327,
-   "hold_to": 334,
+   "s": 218,
+   "e": 274,
+   "hold_to": 281,
    "who": "SIRRAH",
    "shown": "SIRRAH",
    "text": "Any questions, before we take the picture?",
@@ -13275,9 +12745,9 @@
    "os": false
   },
   {
-   "s": 334,
-   "e": 370,
-   "hold_to": 376,
+   "s": 281,
+   "e": 317,
+   "hold_to": 323,
    "who": "MARIO",
    "shown": "MARIO",
    "text": "I have one concern.",
@@ -13287,9 +12757,9 @@
    "os": false
   },
   {
-   "s": 376,
-   "e": 403,
-   "hold_to": 411,
+   "s": 323,
+   "e": 350,
+   "hold_to": 358,
    "who": "SIRRAH",
    "shown": "SIRRAH",
    "text": "Is it just the one?",
@@ -13299,9 +12769,9 @@
    "os": false
   },
   {
-   "s": 411,
-   "e": 496,
-   "hold_to": 508,
+   "s": 358,
+   "e": 443,
+   "hold_to": 455,
    "who": "MARIO",
    "shown": "MARIO",
    "text": "It has sub-concerns. I've grouped them by how worried we should be.",
@@ -13311,9 +12781,9 @@
    "os": false
   },
   {
-   "s": 541,
-   "e": 598,
-   "hold_to": 610,
+   "s": 488,
+   "e": 545,
+   "hold_to": 557,
    "who": "PHOTOGRAPHER",
    "shown": "PHOTOGRAPHER",
    "text": "Big smiles, please. Eyes on camera one.",
@@ -13323,9 +12793,9 @@
    "os": false
   },
   {
-   "s": 716,
-   "e": 759,
-   "hold_to": 770,
+   "s": 662,
+   "e": 705,
+   "hold_to": 716,
    "who": "PHOTOGRAPHER",
    "shown": "PHOTOGRAPHER",
    "text": "Camera one. Anyone.",
@@ -13335,9 +12805,9 @@
    "os": false
   },
   {
-   "s": 770,
-   "e": 803,
-   "hold_to": 815,
+   "s": 716,
+   "e": 749,
+   "hold_to": 761,
    "who": "TASYA",
    "shown": "TASYA",
    "text": "We own camera two.",
@@ -13347,9 +12817,9 @@
    "os": false
   },
   {
-   "s": 831,
-   "e": 928,
-   "hold_to": 938,
+   "s": 777,
+   "e": 874,
+   "hold_to": 884,
    "who": "RADNUS",
    "shown": "RADNUS",
    "text": "Congratulations on your launch, Mas. Really. Everyone's using it.",
@@ -13359,9 +12829,9 @@
    "os": false
   },
   {
-   "s": 938,
-   "e": 960,
-   "hold_to": 972,
+   "s": 884,
+   "e": 906,
+   "hold_to": 918,
    "who": "MAS",
    "shown": "MAS",
    "text": "thank you.",
@@ -13371,9 +12841,9 @@
    "os": false
   },
   {
-   "s": 973,
-   "e": 1107,
-   "hold_to": 1116,
+   "s": 919,
+   "e": 1053,
+   "hold_to": 1065,
    "who": "RADNUS",
    "shown": "RADNUS",
    "text": "They ask it the things they used to ask us. And it tells them what a great question it was.",
@@ -13383,21 +12853,9 @@
    "os": false
   },
   {
-   "s": 1116,
-   "e": 1144,
-   "hold_to": 1156,
-   "who": "MAS",
-   "shown": "MAS",
-   "text": "he's not wrong.",
-   "kind": "vo",
-   "mode": "on-mic",
-   "id": "v3-vo-12",
-   "os": false
-  },
-  {
-   "s": 1164,
-   "e": 1195,
-   "hold_to": 1207,
+   "s": 1074,
+   "e": 1105,
+   "hold_to": 1117,
    "who": "MAS",
    "shown": "MAS",
    "text": "how's the dancing?",
@@ -13407,9 +12865,9 @@
    "os": false
   },
   {
-   "s": 1218,
-   "e": 1248,
-   "hold_to": 1260,
+   "s": 1128,
+   "e": 1158,
+   "hold_to": 1170,
    "who": "RADNUS",
    "shown": "RADNUS",
    "text": "We're being thoughtful.",
@@ -13419,9 +12877,9 @@
    "os": false
   },
   {
-   "s": 1307,
-   "e": 1358,
-   "hold_to": 1370,
+   "s": 1217,
+   "e": 1268,
+   "hold_to": 1280,
    "who": "NEDIB",
    "shown": "MAN AT THE DOOR",
    "text": "Folks, I just want to say one thing.",
@@ -13431,9 +12889,9 @@
    "os": false
   },
   {
-   "s": 1389,
-   "e": 1463,
-   "hold_to": 1475,
+   "s": 1299,
+   "e": 1373,
+   "hold_to": 1382,
    "who": "NEDIB",
    "shown": "NEDIB",
    "text": "Whatever you promise in here today, put it in writing.",
@@ -13443,9 +12901,21 @@
    "os": false
   },
   {
-   "s": 1486,
-   "e": 1506,
-   "hold_to": 1518,
+   "s": 1382,
+   "e": 1414,
+   "hold_to": 1425,
+   "who": "MAS",
+   "shown": "MAS",
+   "text": "mine's half written.",
+   "kind": "vo",
+   "mode": "on-mic",
+   "id": "v34-vo-04",
+   "os": false
+  },
+  {
+   "s": 1425,
+   "e": 1445,
+   "hold_to": 1457,
    "who": "NEDIB",
    "shown": "NEDIB",
    "text": "Longer.",
@@ -13455,9 +12925,9 @@
    "os": false
   },
   {
-   "s": 1560,
-   "e": 1593,
-   "hold_to": 1605,
+   "s": 1499,
+   "e": 1532,
+   "hold_to": 1544,
    "who": "MAS",
    "shown": "MAS",
    "text": "it's a good photo.",
@@ -13467,9 +12937,9 @@
    "os": false
   },
   {
-   "s": 1930,
-   "e": 2040,
-   "hold_to": 2052,
+   "s": 1705,
+   "e": 1815,
+   "hold_to": 1827,
    "who": "CLONE",
    "shown": "GLOSSY MAN AT THE MIC",
    "text": "Too often we have seen what happens when technology outpaces regulation…",
@@ -13479,9 +12949,9 @@
    "os": false
   },
   {
-   "s": 2081,
-   "e": 2163,
-   "hold_to": 2175,
+   "s": 1856,
+   "e": 1938,
+   "hold_to": 1950,
    "who": "LAHTNEMULB",
    "shown": "LAHTNEMULB",
    "text": "That voice was not mine. The words were not mine.",
@@ -13491,9 +12961,9 @@
    "os": false
   },
   {
-   "s": 2259,
-   "e": 2335,
-   "hold_to": 2346,
+   "s": 2034,
+   "e": 2110,
+   "hold_to": 2121,
    "who": "SUCRAM",
    "shown": "SUCRAM",
    "text": "Don't mind me. It's a thread. One of forty-seven.",
@@ -13503,9 +12973,9 @@
    "os": false
   },
   {
-   "s": 2346,
-   "e": 2378,
-   "hold_to": 2388,
+   "s": 2121,
+   "e": 2153,
+   "hold_to": 2163,
    "who": "MAS",
    "shown": "MAS",
    "text": "which one am i?",
@@ -13515,9 +12985,9 @@
    "os": false
   },
   {
-   "s": 2388,
-   "e": 2408,
-   "hold_to": 2420,
+   "s": 2163,
+   "e": 2183,
+   "hold_to": 2195,
    "who": "SUCRAM",
    "shown": "SUCRAM",
    "text": "Most of them.",
@@ -13527,9 +12997,9 @@
    "os": false
   },
   {
-   "s": 2428,
-   "e": 2571,
-   "hold_to": 2583,
+   "s": 2203,
+   "e": 2346,
+   "hold_to": 2358,
    "who": "LAHTNEMULB",
    "shown": "LAHTNEMULB",
    "text": "You may have had in mind the effect on jobs, which is really my biggest nightmare in the long term.",
@@ -13539,9 +13009,9 @@
    "os": false
   },
   {
-   "s": 2587,
-   "e": 2714,
-   "hold_to": 2726,
+   "s": 2362,
+   "e": 2489,
+   "hold_to": 2501,
    "who": "MAS",
    "shown": "MAS",
    "text": "gtp-4 and other systems like it are good at doing tasks, not jobs.",
@@ -13551,9 +13021,9 @@
    "os": false
   },
   {
-   "s": 2734,
-   "e": 2801,
-   "hold_to": 2812,
+   "s": 2509,
+   "e": 2576,
+   "hold_to": 2587,
    "who": "SENATOR",
    "shown": "A SENATOR",
    "text": "Is there anything you'd like this committee to do?",
@@ -13563,9 +13033,9 @@
    "os": true
   },
   {
-   "s": 2812,
-   "e": 2973,
-   "hold_to": 2985,
+   "s": 2587,
+   "e": 2748,
+   "hold_to": 2760,
    "who": "MAS",
    "shown": "MAS",
    "text": "i would form a new agency that licenses any effort above a certain scale of capabilities…",
@@ -13575,9 +13045,9 @@
    "os": false
   },
   {
-   "s": 3065,
-   "e": 3103,
-   "hold_to": 3115,
+   "s": 2841,
+   "e": 2879,
+   "hold_to": 2891,
    "who": "SENATOR",
    "shown": "A SENATOR",
    "text": "Would you come and run it?",
@@ -13587,9 +13057,9 @@
    "os": true
   },
   {
-   "s": 3116,
-   "e": 3156,
-   "hold_to": 3168,
+   "s": 2892,
+   "e": 2932,
+   "hold_to": 2944,
    "who": "MAS",
    "shown": "MAS",
    "text": "i love my current job.",
@@ -13599,9 +13069,9 @@
    "os": false
   },
   {
-   "s": 3169,
-   "e": 3252,
-   "hold_to": 3264,
+   "s": 2945,
+   "e": 3028,
+   "hold_to": 3040,
    "who": "SENATOR",
    "shown": "A SENATOR",
    "text": "You love it. Do you make a lot of money doing it?",
@@ -13611,9 +13081,9 @@
    "os": true
   },
   {
-   "s": 3372,
-   "e": 3402,
-   "hold_to": 3414,
+   "s": 3147,
+   "e": 3177,
+   "hold_to": 3189,
    "who": "CLONE",
    "shown": "LAHTNEMULB (THE CLONE)",
    "text": "Health insurance.",
@@ -13623,9 +13093,9 @@
    "os": false
   },
   {
-   "s": 3426,
-   "e": 3470,
-   "hold_to": 3481,
+   "s": 3201,
+   "e": 3245,
+   "hold_to": 3256,
    "who": "SUCRAM",
    "shown": "SUCRAM",
    "text": "That proves nothing. Partially.",
@@ -13635,9 +13105,9 @@
    "os": false
   },
   {
-   "s": 3481,
-   "e": 3536,
-   "hold_to": 3548,
+   "s": 3256,
+   "e": 3311,
+   "hold_to": 3323,
    "who": "MAS",
    "shown": "MAS",
    "text": "i have no equity in nopeai.",
@@ -13647,9 +13117,9 @@
    "os": false
   },
   {
-   "s": 3843,
-   "e": 3906,
-   "hold_to": 3918,
+   "s": 3619,
+   "e": 3682,
+   "hold_to": 3694,
    "who": "MARIO",
    "shown": "MARIO",
    "text": "It's one sentence. It doesn't say what it costs.",
@@ -13659,9 +13129,9 @@
    "os": false
   },
   {
-   "s": 3927,
-   "e": 3985,
-   "hold_to": 3997,
+   "s": 3703,
+   "e": 3761,
+   "hold_to": 3773,
    "who": "MARIO",
    "shown": "MARIO",
    "text": "So I'm adding a footnote. A short one.",
@@ -13671,9 +13141,9 @@
    "os": false
   },
   {
-   "s": 3998,
-   "e": 4021,
-   "hold_to": 4032,
+   "s": 3774,
+   "e": 3797,
+   "hold_to": 3808,
    "who": "MAS",
    "shown": "MAS",
    "text": "we'll read it.",
@@ -13683,9 +13153,9 @@
    "os": false
   },
   {
-   "s": 4032,
-   "e": 4064,
-   "hold_to": 4076,
+   "s": 3808,
+   "e": 3840,
+   "hold_to": 3852,
    "who": "MARIO",
    "shown": "MARIO",
    "text": "It has an appendix.",
@@ -13695,9 +13165,9 @@
    "os": false
   },
   {
-   "s": 4147,
-   "e": 4210,
-   "hold_to": 4222,
+   "s": 3923,
+   "e": 3986,
+   "hold_to": 3998,
    "who": "MARIO",
    "shown": "MARIO",
    "text": "Can we help you? This is the extinction table.",
@@ -13707,9 +13177,9 @@
    "os": false
   },
   {
-   "s": 4224,
-   "e": 4276,
-   "hold_to": 4288,
+   "s": 4000,
+   "e": 4052,
+   "hold_to": 4064,
    "who": "NESNEJ",
    "shown": "NESNEJ",
    "text": "The more you buy, the more you save.",
@@ -13723,16 +13193,15 @@
  "v4_ids": {},
  "base_marks_scaled": [],
  "decisions": [
-  "13 beat lengths are not whole frames (13.01, 13.06, 13.09, 13.11, 13.13, 13.14...): beats start on the rounded running total, as the stick reel draws them",
+  "12 beat lengths are not whole frames (13.01, 13.02, 13.06, 13.11, 13.13, 13.14...): beats start on the rounded running total, as the stick reel draws them",
   "13.11: plate 'EOJ NEDIB / THE PRESIDENT' is up 15 f, under its read floor 36 f (the stick's timing; kept)",
-  "13.11: plate 'DEEPFAKES OF ME: SEEN 0' is up 15 f, under its read floor 34 f (the stick's timing; kept)",
   "16.01: label '@masa · \"…no plans to leave\"' is up 27 f, under its read floor 40 f (the stick's timing; kept)",
   "16.01: label 'ADDED DUE TO POPULAR DEMAND' is up 28 f, under its read floor 39 f (the stick's timing; kept)",
   "17.03: plate 'NESNEJ / SELLS SHOVELS. FUNDS DI' is up 15 f, under its read floor 52 f (the stick's timing; kept)",
   "17.03: plate 'POCKETS: 1' is up 15 f, under its read floor 18 f (the stick's timing; kept)",
   "rail 'MAY 24, 2023 · LONDON' is up 27 f, under its read floor 32 f (the stick's; kept)",
   "rail 'MAY 26, 2023' is up 16 f, under its read floor 21 f (the stick's; kept)",
-  "11 takes are not in the timeline: ['e1-a2-13-15', 'e1-a2-13-16', 'e1-a2-13-17', 'e1-a2-15-02', 'e1-a2-15-08', 'e1-a2-15-09', 'e1-a2-15-10', 'v3-vo-11']..."
+  "13 takes are not in the timeline: ['e1-a2-13-01', 'e1-a2-13-15', 'e1-a2-13-16', 'e1-a2-13-17', 'e1-a2-15-02', 'e1-a2-15-08', 'e1-a2-15-09', 'e1-a2-15-10']..."
  ],
  "problems": []
 }

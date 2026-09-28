@@ -20,6 +20,11 @@
 // stay (his hand up at home, lowered, then his keys); 20.01 opens on the Tidder thread's title before his reply; he holds
 // on page 30 (an MCU, the room, no voice), and the paper's tab stays in his tab strip from the order on; the sign-ups post
 // collapses once it's up, NOTIFY ME stays; the Friday reminder pops up over his own NOTIFY ME page beside that tab.
+// v3.4 (script draft 8.3, show/reel/ep01-v34/ep01-v34-act3.json; SHOWRUNNER-NOTES 000): 18.02's new V.O. "my other
+// company. for when it gets harder to tell." over the label (its foot in shadow for the typed line); "i made it for
+// everyone else." is cut; the deepfake beats are cut (21.02 keeps the order's one line, one NEDIB; 21.03 and 21.04 go);
+// he signs and the room on the monitor applauds, and the applause carries into the switch-off; 22.01's new V.O. "a year
+// ago, forty users and a nice thread." under the hall's applause, on his look out at the hall (the MCU), then his line.
 // Continuity kept here: the Orb settles into the faded outline on the wall at "you can stay." (18.06) and watches from
 // there as the iris flicks to the monitor (19.01); from the hands runner on (19.03) it sits at his shoulder, Act Four's
 // spot, watching with him, and the outline is empty. The big-monitor two-shot (19.03, 20.04, 20.06, 20.08, 21.04, 22.01's
@@ -29,6 +34,7 @@
 import {defineSegment, layouts, mk, mouth, roomMouth, RH, shiftRoom} from '../kit';
 import type {Viseme} from '../../../../shared/pixel/cast/talk';
 import {Buf, rect, clamp, bayer} from '../../../../shared/pixel/px';
+import {familyOf, stepColor} from '../../../../shared/pixel/palette';
 import {PAL} from '../../../../shared/pixel/palette';
 import {glyphLayer} from '../../../../shared/pixel/glyph';
 import * as A3 from '../../../../shared/pixel/rooms/darkroom-act3';
@@ -98,9 +104,15 @@ L.add('18.01', {
   },
 });
 L.add('18.02', {
-  st: 'rooms/darkroom-act3 drawLabelECU [ECU]: the box\'s label, legible (FROM: COINWORLD · PROOF YOU\'RE HUMAN / SHIP TO: MAS MANALT, CO-FOUNDER); his fingertips come to the lid in two held steps; the rack\'s LEDs blink beyond it (v3.2: the V.O. is cut, so the label plays in full, no dark strip)',
+  st: 'rooms/darkroom-act3 drawLabelECU [ECU]: the box\'s label, legible (FROM: COINWORLD · PROOF YOU\'RE HUMAN / SHIP TO: MAS MANALT, CO-FOUNDER); his fingertips come to the lid in two held steps; the rack\'s LEDs blink beyond it; v3.4: under "my other company. for when it gets harder to tell." (V.O.) the box\'s near edge falls into shadow at the frame\'s foot, so the typed line reads on dark (as in v3.1)',
   draw: (fb, k, sh, f) => {
     A3.drawLabelECU(fb, f, {hand: k < 22 ? 0 : k < 46 ? 1 : 2});
+    // v3.4 (the V.O. is back): the box's near edge (a lit line) and its front face in shadow below it, so the typed line
+    // reads on dark (the box's cream only: his fingertips stay in the monitor's light)
+    for (let x = 0; x < 480; x++) fb.set(x, 174, PAL.W9);
+    for (let y = 175; y < RH; y++) for (let x = 0; x < 480; x++) { const fm = familyOf(fb.get(x, y)); if (!fm || fm[0] !== 'P') continue; fb.set(x, y, y < 178 ? PAL.D2 : bayer(x, y) < 0.25 ? PAL.D1 : PAL.N1); }
+    // and his fingertips' ends down there in the same shadow, two rungs, so the typed line reads over them too
+    for (let y = 184; y < RH; y++) for (let x = 0; x < 200; x++) { const fm = familyOf(fb.get(x, y)); if (fm && fm[0] !== 'N' && fm[0] !== 'D') fb.set(x, y, stepColor(fb.get(x, y), -2)); }
     // the rack's three LEDs beyond the box's edge keep their straight-eighths blink (the room's clock)
     const on = (Math.floor((f + 3) / 6) % 2) === 0;
     fb.set(40, 8, on ? PAL.C4 : PAL.N1); fb.set(52, 12, !on ? PAL.R3 : PAL.N1); fb.set(64, 8, on ? PAL.L2 : PAL.N1);
@@ -136,13 +148,15 @@ L.add('18.04', {
   },
 });
 L.add('18.06', {
-  st: 'rooms/darkroom-act3 drawDarkA3: the Orb drifts from the box to the faded outline on the wall in whole-pixel held steps (2 f) and settles exactly into it (the outline now filled); "i made it for everyone else." (V.O.); "you can stay." (lip-sync); its aperture opens once on the chime; the hold on the two of them',
+  st: 'rooms/darkroom-act3 drawDarkA3: the Orb drifts from the box to the faded outline on the wall in whole-pixel held steps (2 f) and settles exactly into it (the outline now filled); v3.4: "i made it for everyone else." is cut; across "you can stay." (lip-sync) it settles as the line ends; its aperture opens once on the chime; the hold on the two of them',
   face: {MAS: 'lip'},
   marks: {chime: ['snd', 'synth:chime', 1, 0], stay: ['on', 'e1-a3-18-03', 0]},
   draw: (fb, k, sh, f) => {
-    const c = mk(sh, 'chime', 133);
-    const home = k >= 76;
-    const at: [number, number] = [heldLerp(k, 24, 76, BOX_X[0], A3.ORB_HOME.x), heldLerp(k, 24, 76, BOX_X[1], A3.ORB_HOME.y)];
+    const c = mk(sh, 'chime', 84), stay = mk(sh, 'stay', 52);
+    // v3.4 (the V.O. before it is cut): it drifts across "you can stay." and settles into the outline as the line ends
+    const d0 = Math.max(8, stay - 28), d1 = stay + 24;
+    const home = k >= d1;
+    const at: [number, number] = [heldLerp(k, d0, d1, BOX_X[0], A3.ORB_HOME.x), heldLerp(k, d0, d1, BOX_X[1], A3.ORB_HOME.y)];
     const mm = spoken(sh, k, 'MAS');
     A3.drawDarkA3(fb, f, {box: {pos: 4, open: true, rise: 3}, orb: {at: home ? 'home' : at, look: home ? HOME.face : [-0.9, 0.1], aperture: k >= c && k < c + 10 ? 0.75 : 0.5},
       outline: home ? 'filled' : true, mas: {arm: 'rest', look: 1, mouth: mm}});
@@ -226,46 +240,29 @@ L.add('v31-20.08', {
 
 // =================================================================== sc 21 · the order, on the monitor
 L.add('21.02', {
-  st: 'kits/eo-signing eoPainter + kits/monitor-v32 withTabs [POV] (v3.3, P10: his tab strip, DECODING INTENTIONS still open beside the live order): NEDIB, pen raised, over an order off both ends of a very big desk (lip-sync); v3.1: ONE cut-paper copy pops up behind the desk on the pop (3 held steps) and speaks (lip-sync); no bezel egg (Neleh\'s paper had its own beat); 21.03 merged: the real one turns to look at it, "When the hell did I say that?", and the stat row updates on the chip: SEEN 1',
-  face: {NEDIB: 'lip', DEEPFAKE: 'lip'},
-  marks: {p1: ['snd', 'tower_pop', 1, 0], turn: ['beat', '21.03', 0], stat: ['snd', 'post_click--chip', 1, 0]},
+  st: 'kits/eo-signing eoPainter + kits/monitor-v32 withTabs [POV] (v3.3, P10: his tab strip, DECODING INTENTIONS still open beside the live order): NEDIB, pen raised, over an order off both ends of a very big desk, the order\'s one line (lip-sync); v3.4 (draft 8.3, one deepfake: the Senate\'s): the cut-paper copy, its pops, his turn to it and the stat row are un-drawn; 21.03 and 21.04 are cut',
+  face: {NEDIB: 'lip'},
   draw: (fb, k, sh, f) => {
-    const p1 = mk(sh, 'p1', 187), turn = mk(sh, 'turn', 254), stat = mk(sh, 'stat', 323);
-    const copies = (k >= p1 ? 1 : 0) as 0 | 1;
-    MON.drawMonitorPOV(fb, f, tabsOrder(eoPainter({copies, pop: copies ? Math.floor((k - p1) / 3) : undefined, pen: 'raised', mouth: talk(mouth(sh, k, 'NEDIB'), 'smile'), copyMouth: talk(mouth(sh, k, 'DEEPFAKE'), 'smile'), turn: k >= turn, stat: k >= stat ? 1 : null, egg: false})));
-  },
-});
-L.add('21.04', {
-  st: 'rooms/darkroom-v31 drawDark2SSCR [2S·SCR] (v3.1: the monitor large, the two NEDIBs readable: eoPainter\'s short layout) with a slow whole-pixel drift in (1 px / 12 f toward the monitor): Mas glances back at the Orb, "which one\'s real?" (lip-sync), and back to the screen; the iris flicks from the copy to the real one on the servos and settles; its toast pops over him: verified: human (the callback to 18.05)',
-  face: {MAS: 'lip'},
-  marks: {ask: ['on', 'e1-a3-21-06', 0], o1: ['snd', 'orb_servo', 1, 0], o2: ['snd', 'orb_servo', 2, 0], o3: ['snd', 'orb_servo', 3, 0]},
-  draw: (fb, k, sh, f) => {
-    const ask = mk(sh, 'ask', 19), o3 = mk(sh, 'o3', 74);
-    const o = stepOf(k, [mk(sh, 'o1', 55), mk(sh, 'o2', 65), o3]);
-    const looks: Array<[number, number]> = [k >= ask + 12 ? SCR.face : SCR.monitor, [0.8, 0.12], [0.95, -0.05], [0.95, -0.05]];
-    const glance = k >= ask - 4 && k < ask + 30;
-    const toastK = k - (o3 + 4);
-    drawDark2SSCR(fb, f, {screen: tabsOrder(eoPainter({copies: 1, pen: 'raised', stat: 1})), orb: {mode: 'look', look: looks[o]}, mas: {look: glance ? -1 : 1, mouth: spoken(sh, k, 'MAS')},
-      toasts: toastK >= 0 ? [{s: 'verified: human', k: toastK, x: DARK_SCR.screen.x + EO_SHORT.realX + 30, y: DARK_SCR.screen.y + 15}] : []}); // v3.3: under the tab strip
-    shiftRoom(fb, -Math.min(8, Math.floor(k / 12)));
+    MON.drawMonitorPOV(fb, f, tabsOrder(eoPainter({copies: 0, pen: 'raised', mouth: talk(mouth(sh, k, 'NEDIB'), 'smile'), stat: null, egg: false})));
   },
 });
 L.add('21.05', {
-  st: 'kits/eo-signing eoPainter [POV]: the real NEDIB signs, in ink (the signature\'s strokes on 3s from the paper whip); the copy claps on the claps, and keeps clapping (v3.1: one copy, SEEN 1)',
+  st: 'kits/eo-signing eoPainter {applause} [POV]: NEDIB signs, in ink (the signature\'s strokes on 3s from the paper whip); v3.4: on the claps the room on the monitor applauds (the press pool\'s heads along the screen\'s foot, hands up in two drawings on 4s), and keeps applauding; no copy, no stat',
   marks: {whip: ['snd', 'paper_whip', 1, 0], claps: ['snd', 'synth:claps', 1, 0]},
   draw: (fb, k, sh, f) => {
     const w = mk(sh, 'whip', 4);
-    MON.drawMonitorPOV(fb, f, tabsOrder(eoPainter({copies: 1, pen: 'sign', signK: clamp(Math.floor((k - w) / 3), 0, 5), clap: k >= mk(sh, 'claps', 19), stat: 1, egg: false})));
+    const cl = mk(sh, 'claps', 19);
+    MON.drawMonitorPOV(fb, f, tabsOrder(eoPainter({copies: 0, pen: 'sign', signK: clamp(Math.floor((k - w) / 3), 0, 5), stat: null, egg: false, applause: k >= cl ? k - cl : null})));
   },
 });
 
 L.add('v32-21.06', {
-  st: 'v3.2, HIS MOVE (the switch): rooms/darkroom-v31 drawDark2SSCR {hand: \'switch\', off}: the deepfake still clapping on the big monitor; Mas leans over and reaches to the switch on the bezel\'s near corner; on the click the glass goes black in one step, its LED out; the clapping doesn\'t stop (it grows into the hall\'s applause, the next cut); the Orb looks from the black glass to him',
+  st: 'v3.2, HIS MOVE (the switch): rooms/darkroom-v31 drawDark2SSCR {hand: \'switch\', off}: v3.4: the order\'s room still applauding on the big monitor (no copy); Mas leans over and reaches to the switch on the bezel\'s near corner; on the click the glass goes black in one step, its LED out; the clapping doesn\'t stop (it grows into the hall\'s applause, the next cut); the Orb looks from the black glass to him',
   marks: {click: ['snd', 'key_tap_space', 1, 0]},
   draw: (fb, k, sh, f) => {
     const c = mk(sh, 'click', 21);
     const off = k >= c;
-    drawDark2SSCR(fb, f, {screen: tabsOrder(eoPainter({copies: 1, pen: 'sign', signK: 5, clap: true, stat: 1, egg: false})), hand: k >= c - 12 && k < c + 10 ? 'switch' : null, off,
+    drawDark2SSCR(fb, f, {screen: tabsOrder(eoPainter({copies: 0, pen: 'sign', signK: 5, stat: null, egg: false, applause: k + 40})), hand: k >= c - 12 && k < c + 10 ? 'switch' : null, off,
       orb: {mode: 'look', look: k < c + 6 ? SCR.monitor : SCR.face}, mas: {look: 1}});
   },
 });
@@ -280,14 +277,22 @@ const clapCrowd = (fb: Buf, k: number) => {
   }
 };
 L.add('22.01', {
-  st: 'v3.2, HIS MOVE (DevDay live; the home two-shot and the bezel are gone): kits/monitor-v32 drawDevDayFull [W]: the stage full frame, the applause carried over the cut; the launch-night odometer clunks up through the stage floor in three held steps on the ratchet to 100,000,000 / WEEK; Mas at the centre mark (room-scale mouth) begins "and today,"; the push: drawDevDayMCU [MCU], his face against the backdrop, lip-synced, "…you can build your own chatgtp."; back on the [W] as TASYA walks on from the right, laughing, arms open, the Sydney bubble on its chain behind him (he stops clear of the must-read figure); "so, how\'s the partnership going?" (room-scale), "We love you guys." (his laugh drawing on the take\'s syllables)',
+  st: 'v3.2, HIS MOVE (DevDay live): kits/monitor-v32 drawDevDayFull [W]: the stage full frame, the applause carried over the cut, the crowd clapping in held steps; the launch-night odometer clunks up through the stage floor in three held steps on the ratchet to 100,000,000 / WEEK; v3.4 (v34-vo-06): the push to drawDevDayMCU [MCU] as the figure settles: his look out at the hall under "a year ago, forty users and a nice thread." (V.O., lips still), the one-pixel smile after it; then, in the same MCU, lip-synced, "and today, you can build your own chatgtp."; back on the [W] as TASYA walks on from the right, laughing, arms open, the Sydney bubble on its chain behind him (he stops clear of the must-read figure); "so, how\'s the partnership going?" (room-scale), "We love you guys." (his laugh drawing on the take\'s syllables)',
   face: {MAS: 'lip', TASYA: 'room'},
-  marks: {appl: ['snd', 'synth:applause', 1, 0], rat: ['snd', 'odometer_ratchet', 1, 0], land: ['snd', 'landing_thunk', 1, 0], push: ['w', 'v32-a3-0001', 'you', -3], back: ['end', 'v32-a3-0001', 0], tasya: ['on', 'e1-a3-22-01', -21]},
+  marks: {appl: ['snd', 'synth:applause', 1, 0], rat: ['snd', 'odometer_ratchet', 1, 0], land: ['snd', 'landing_thunk', 1, 0], vo: ['on', 'v34-vo-06', 0], voEnd: ['end', 'v34-vo-06', 0], line: ['on', 'v32-a3-0001', 0], back: ['end', 'v32-a3-0001', 0], tasya: ['on', 'e1-a3-22-01', -21]},
   draw: (fb, k, sh, f) => {
     const applEnd = mk(sh, 'appl', 24) + 82;
-    const r = mk(sh, 'rat', 43), land = mk(sh, 'land', 104), push = mk(sh, 'push', 64), back = mk(sh, 'back', 120) + 4, t0 = mk(sh, 'tasya', 125);
+    const r = mk(sh, 'rat', 43), land = mk(sh, 'land', 104), back = mk(sh, 'back', 201) + 4, t0 = mk(sh, 'tasya', 207);
+    const voEnd = mk(sh, 'voEnd', 116), line = mk(sh, 'line', 130);
+    const push = r + 21; // the figure has settled (the third step) and read for 5 f
     const mm = mouth(sh, k, 'MAS');
-    if (k >= push && k < back) { M32.drawDevDayMCU(fb, f, {mas: {mouth: mm === 'smile' ? 'rest' : mm, look: 0}}); return; }
+    if (k >= push && k < back) {
+      // his look out at the hall: the V.O. (lips still: spoken), the smile after it, then his line
+      const sm = spoken(sh, k, 'MAS');
+      const mo = k >= voEnd + 4 && k < line - 2 ? 'smile' : sm === 'smile' ? 'rest' : sm;
+      M32.drawDevDayMCU(fb, f, {mas: {mouth: mo, look: 0}});
+      return;
+    }
     const rise = stepOf(k, [r, r + 8, r + 16]) as 0 | 1 | 2 | 3;
     M32.drawDevDayFull(fb, f, {rise, clunk: (k >= r + 16 && k < r + 19) || (k >= land && k < land + 3), tasya: k < t0 ? null : clamp((k - t0) / 60, 0, 1) * 0.4, sydney: true,
       laugh: k < t0 + 60 || roomMouth(sh, k, 'TASYA') === 'open', mouth: mm !== 'rest' && mm !== 'M' && mm !== 'smile' ? 'open' : 'rest'});
@@ -357,5 +362,5 @@ export const SEGMENT = defineSegment({
   lock: LOCK,
   layouts: L.all,
   options: {badge: false, vo: 'typed', voLowercase: true, subs: 'off', standin: 'stick'},
-  review: {title: 'MR. MAS · EP1 · ACT THREE', subtitle: 'PIXEL v3.3 · LOCK act3 (THE v3.3 STICK LOCK)', durNote: 'AS THE STICK LOCK', soundLabel: 'SOUND · TEMP TRACK = THE v3.3 STICK MIX'},
+  review: {title: 'MR. MAS · EP1 · ACT THREE', subtitle: 'PIXEL v3.4 · LOCK act3 (THE v3.4 STICK LOCK)', durNote: 'AS THE STICK LOCK', soundLabel: 'SOUND · TEMP TRACK = THE v3.4 STICK MIX'},
 });

@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **What this is** | The record of Act Three's pixel layouts on the stick lock: every shot, what it's built from, what's new, the checks, how to re-render it, and what's weakest. **Now on the v3.3 lock: [§10](#10-v33-the-v33-lock-script-draft-82-a-polish) is current**; §9 is the v3.2 round, §8 the v3.1 round and §1–§7 the v3 pass, kept for the record. |
+| **What this is** | The record of Act Three's pixel layouts on the stick lock: every shot, what it's built from, what's new, the checks, how to re-render it, and what's weakest. **Now on the v3.4 lock: [§11](#11-v34-the-v34-lock-script-draft-83-showrunner-notes-000) is current**; §10 is the v3.3 round, §9 the v3.2 round, §8 the v3.1 round and §1–§7 the v3 pass, kept for the record. |
 | **Who, when** | The `v3-shots-act2-act3` pass (track P2 of [PLAN.md](PLAN.md)), 2026-09-27; the v3.2 and v3.3 rounds 2026-09-28. Nothing was committed: the lead commits. |
 | **The files** | Layouts: `studio/src/episodes/ep01/pixel/act3/shots.ts`. It uses the helpers in `act2/kit2.ts`. The lock: `act3/data.ts` and [lock/act3.json](lock/act3.json). |
 | **The picture** | **v3.3:** `out/ep01/full-v3/picture/act3.mp4` (1920 × 1080, 24 fps, H.264 + AAC, **2:13.42, 3,202 frames**, 10.7 MB), muxed with the v3.3 temp track (`act3-v33-stick-mix.wav`); see §10.4. It replaced v3.2's (2:22.42, 3,418 frames). Before that, the v3.1 render was `out/ep01/full-v3/picture/act3.mp4` (1920 × 1080, 24 fps, H.264 + AAC, **2:25.13, 3,483 frames**, 11.9 MB; rendered in 31 s on 2 workers), muxed with the v3.1 stick mix as temp audio (`out/ep01/full-v3/picture/act3-v31-stick-mix.wav`). (The v3 render it replaced ran 2:08.04, 3,073 frames.) Beside it: `act3.srt`, `act3.mp4.render.json` and the contact sheet `act3-sheet.png`. The 5 GLYPH frames are the Remotion host's, spliced in. |
@@ -379,3 +379,38 @@ Act Three has no three-part plate: `KRAM · RUNS ATEM` and `NELEH · NOPEAI BOAR
   - **GLYPH:** 386–390; the plain frames are identical.
   - **Flash:** `flashcheck.py` finds 0 flashes in any second, red 0; it passes.
   - **The picture:** `out/ep01/full-v3/picture/act3.mp4`, 3,202 frames (2:13.42), 10.6 MB, 24 s on 2 workers, with its .srt and contact sheet re-written.
+
+## 11. v3.4: the v3.4 lock (script draft 8.3; SHOWRUNNER-NOTES 000)
+
+**The brief:** as Act Two's (shots-act2.md §11).
+
+### 11.1 The lock
+
+The temp track is sliced from reel frame 13,930 into `out/ep01/full-v3/picture/act3-v34-stick-mix.wav`. The takes add `audio/ep01/v34/act3/lines-v34.json`.
+
+- **Result:** 26 shots from 28 beats, **3,007 frames (2:05.29)**. 21 lines, three of them V.O., every one with a take. Every check is `ok`.
+
+### 11.2 What changed
+
+| Shot | v3.4 |
+|---|---|
+| 18.02 | **The new V.O., "my other company. for when it gets harder to tell."** (v34-vo-05), plays over the label. The box's near edge falls into shadow at the frame's foot, as in v3.1, and his fingertips' ends go with it, so the typed line reads on dark. |
+| 18.06 | "i made it for everyone else." is cut. The Orb's drift is now keyed to "you can stay.": it drifts across the line and settles into the outline as the line ends. |
+| 21.02 | The order keeps its one line, with one NEDIB (lip-synced). The cut-paper copy, its pops, his turn to it and the stat row are un-drawn. The paper's tab stays in the strip. |
+| 21.03, 21.04 | cut (the deepfake beats) |
+| 21.05 | He signs, and the room on the monitor applauds. This is `eoPainter {applause}` (new, opt-in): a row of the press pool's heads along the screen's foot, hands up in two drawings on 4s. There is no copy. |
+| v32-21.06 | the order's room still applauding on the big monitor when he switches it off |
+| 22.01 | **The new V.O., "a year ago, forty users and a nice thread."** (v34-vo-06), plays under the applause.<br>- **The wide:** the applause, the crowd clapping and the odometer's three steps.<br>- **The MCU:** it starts as the figure settles and holds his look out at the hall under the V.O., with his lips still. After the line, the one-pixel smile. Then, in the same MCU, his stage line, lip-synced.<br>- **The wide again:** Tasya walks on.<br>This is one fewer cut than a separate push for his line would need. |
+| unchanged (retimed by the lock only) | the rest |
+
+### 11.3 Checks
+
+| Check | Result |
+|---|---|
+| `check` | 26 layouts for 26 shots, 0 stand-ins, 0 problems; 3,007 frames. **The one note:** v34-vo-06 shares the screen with the rail `NOV 6, 2023 · DEVDAY`. That's the lock's timing (pov-and-framing §5.2), for the lead. |
+| `tsc` | prints nothing |
+| **The EL lock** | `ep01-v34-el-act3.json`, built as for Act Two: 26 layouts, **2,974 frames**, 0 stand-ins, 0 problems |
+| **GLYPH** | frames 419–423; the plain frames are identical Node against Remotion |
+| **Flash check** | **Worst: 0 flashes in any second; red 0. Passes.** |
+
+**The picture:** `out/ep01/full-v3/picture/act3.mp4`, **3,007 frames (2:05.29)**, 9.7 MB, 25 s on 2 workers. The 5 GLYPH frames are spliced in. It's muxed with the v3.4 temp track, with its .srt and contact sheet.

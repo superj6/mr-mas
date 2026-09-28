@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **What this is** | The record of Act Two's pixel layouts on the stick lock: every shot, what it's built from, what's new, the checks, how to re-render it, and what's weakest. **Now on the v3.3 lock: [§10](#10-v33-the-v33-lock-script-draft-82-a-polish) is current**; §9 is the v3.2 round, §8 the v3.1 round and §1–§7 the v3 pass, kept for the record. |
+| **What this is** | The record of Act Two's pixel layouts on the stick lock: every shot, what it's built from, what's new, the checks, how to re-render it, and what's weakest. **Now on the v3.4 lock: [§11](#11-v34-the-v34-lock-script-draft-83-showrunner-notes-000-the-planner-hinted) is current**; §10 is the v3.3 round, §9 the v3.2 round, §8 the v3.1 round and §1–§7 the v3 pass, kept for the record. |
 | **Who, when** | The `v3-shots-act2-act3` pass (track P2 of [PLAN.md](PLAN.md)), 2026-09-27; the v3.2 and v3.3 rounds 2026-09-28. Nothing was committed: the lead commits. |
 | **The files** | Layouts: `studio/src/episodes/ep01/pixel/act2/shots.ts`. Helpers shared with Act Three: `act2/kit2.ts`. New art: `act2/art/radnus-bust.ts`. The lock: `act2/data.ts` and [lock/act2.json](lock/act2.json). |
 | **The picture** | **v3.3:** `out/ep01/full-v3/picture/act2.mp4` (1920 × 1080, 24 fps, H.264 + AAC, **3:10.54, 4,573 frames**, 14.7 MB), muxed with the v3.3 temp track (`act2-v33-stick-mix.wav`); see §10.4. It replaced v3.2's (3:13.04, 4,633 frames). Before that, the v3.1 render was `out/ep01/full-v3/picture/act2.mp4` (1920 × 1080, 24 fps, H.264 + AAC, **3:21.25, 4,830 frames**, 15.3 MB; rendered in 33 s on 2 workers), muxed with the v3.1 stick mix as temp audio (`out/ep01/full-v3/picture/act2-v31-stick-mix.wav`). (The v3 render it replaced ran 3:24.75, 4,914 frames, on `act2-stick-mix.wav`.) Beside it: `act2.srt`, `act2.mp4.render.json` and the contact sheet `act2-sheet.png` (one still per shot, each shot's middle frame). |
@@ -405,3 +405,39 @@ Act Two has no three-part plate. `LAHTNEMULB · CHAIRMAN` is its one first-appea
   - **Flash:** `flashcheck.py` finds at worst 1 flash in any second, red 0; it passes.
   - **The picture:** `out/ep01/full-v3/picture/act2.mp4`, 4,573 frames (3:10.54), 14.7 MB, 28 s on 2 workers, with its .srt and contact sheet re-written.
 - **For a person:** whether the cut-in reads as his beat (him looking after the price) or as a reaction insert.
+
+## 11. v3.4: the v3.4 lock (script draft 8.3; SHOWRUNNER-NOTES 000, the planner, hinted)
+
+**The brief** (the coordinator, 2026-09-28): re-lock on `show/reel/ep01-v34/ep01-v34-act2.json` (commit 4309e86) and update the shots for its changes. Don't draw V.O. text: the shared `frame.ts voLine` fix types it fast enough to finish with the voice. Render through `ops/heavy.sh`, run the flash check, and build on the EL lock (`show/reel/ep01-v34-el/`).
+
+### 11.1 The lock
+
+The temp track is the reel mixer on `out/reel-work/ep01-v34-stick/plan.json` (7.8 s; −16.65 LUFS, 0 missing). Act Two's chapter was sliced from reel frame 9,581 into `out/ep01/full-v3/picture/act2-v34-stick-mix.wav`. The lock adds `--takes audio/ep01/v34/act2/lines-v34.json` to the v3.3 command (§10.1).
+
+- **Result:** 36 shots from 43 beats, **4,349 frames (3:01.21)**. 38 lines, one of them V.O. ("mine's half written."). Every check is `ok`.
+
+### 11.2 What changed
+
+| Shot | v3.4 |
+|---|---|
+| 13.02 | Sirrah's line is cut. Her mouth rests at its smile (the shot's `face` is gone), and the pointer lands on A, then on I at the freeze. |
+| 13.09 | "he's not wrong." is cut. His eyes still leave Radnus for a beat after the courtesy and come back for the knife. |
+| 13.11 / 13.13 | Nedib's card keeps his name and the shutter; its `DEEPFAKES OF ME` stat row is gone. |
+| 13.13 | **The new V.O., "mine's half written."** (v34-vo-04, answering "put it in writing"), comes with a new insert, `act2/art/half-written.ts drawHalfWrittenECU` [ECU]:<br>- **The page:** a folded sheet tucked in his hoodie's front pocket, its top panel showing PLEASE and, under it, REG. These are Act One's own pen glyphs, redrawn at 2×; the fold hides the rest.<br>- **The hand:** his hand rests on it, relaxed, four fingers across the pocket's hem. His thumb presses it a pixel further in on the line's last word.<br>- **No face,** so his lips are out of frame.<br>- **Timing:** 4 f before the V.O. until 3 f before "Longer.", then back on the OTS. |
+| 13.14 | For the flash check (§11.3), the print slides in over 5 short held steps (60, 40, 24, 12 and 4 px, then settled) instead of 3 long ones. |
+| 14.01 | The May 12 clip is cut. `drawBridgeOTS {noClip}`, new: his feed is his own CLASS PHOTO #1 post, its hearts climbing, with other people's items greyed under it. It holds to the black (14.06's voice). |
+| 14.03, 14.05 | cut (the repost and the hailstone) |
+| unchanged (retimed by the lock only) | the rest |
+
+### 11.3 Checks
+
+| Check | Result |
+|---|---|
+| `check` | 36 layouts for 36 shots, 0 stand-ins, 0 notes, 0 problems; 4,349 frames |
+| `tsc` | prints nothing |
+| **The EL lock** | `ep01-v34-el-act2.json`, locked into scratch and built with the assembly's `build_el.mjs` redirect: 36 layouts, **4,084 frames**, 0 stand-ins, 0 problems |
+| **Flash check** (`flashcheck.py`) | **Worst: 1 flash in any second; red 0. Passes.** The first render measured 3 flashes (at the limit), at 13.14's slide-in: the bright print jumped 80 px at a time across the dark table. The shorter steps fixed it. |
+
+**The picture:** `out/ep01/full-v3/picture/act2.mp4`, **4,349 frames (3:01.21)**, 1920 × 1080, 13.8 MB, 34 s on 2 workers. It's muxed with the v3.4 temp track. Beside it: `act2.srt`, `act2.mp4.render.json` and `act2-sheet.png`.
+
+**For a person:** does 13.13's page read as his half-written ask, a payoff of Act One's PLEASE / REG, without spelling it out? The word is legible, and the line carries it.
