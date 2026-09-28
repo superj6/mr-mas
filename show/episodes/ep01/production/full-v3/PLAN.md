@@ -148,3 +148,7 @@ out/ep01/full-v3/                         the films and mixes (git-ignored)
 **Added 2026-09-27 (showrunner):** "these are types of things to be looking out for. while you're fixing the new final variant i want you to do analysis on various moods viewer will feel throughout from the different visual, story, an sound aspects amd make sure it is desireable".
 - **The mood analysis** (`mood-analysis.md` and `out/ep01/full-v3/mood-curve.png`) runs alongside the fixes. Its ranked fixes feed the script revision, the score and the shot passes.
 - **It runs again on the final v3.1 film** as part of the final checks, together with the newcomer read.
+
+**Done 2026-09-27 (lead): the intro's flash.** Frames 222 and 224 now hold 221 and 223 (the whip smear on 2s). Flashcheck on the patched intro: at most 1 flash in any second, pass (it was 4 at frame 221).
+- The patched picture is `out/intro/intro-ep1-V1-1080p-flashfix.mp4` (git-ignored). Rebuild it with `python3 show/episodes/ep01/production/full-v3/assembly/tools/intro_flashfix.py out/intro/intro-ep1-V1-1080p-flashfix.mp4`.
+- **The v3.1 assembly uses it in place of the original intro picture.** The intro's audio is unchanged.
