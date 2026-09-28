@@ -1,0 +1,393 @@
+{
+ "id": "v35-a4-0008",
+ "scene": "S7",
+ "speaker": "TERB",
+ "speaker_slug": "terb",
+ "text": "We have reached an agreement in principle for Mas Manalt to return to NopeAI as CEO with a new initial board of Terb (Chair), the Other Yrral, and Mada.",
+ "spoken_as": "Before this goes out, I'm reading it once.{0.50} We have reached an agreement in principle for [Mas](/mˈɑs/) Manalt to return to NopeAI as CEO with a new initial board of Terb, Chair, the Other [Yrral](/jˈɜɹəl/), and Mada.",
+ "delivery": "brisk, reading from the sheet; \"(Chair)\" read as a word about himself without looking up; \"the Other Yrral\" deadpan (YUR-rul)",
+ "tag": "[INVENTED lead-in + V · NOV 21, 2023 · the return announcement's first sentence, whole. Replaces a5-30-10 without \"so nobody's surprised\" (the insider read)]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "S7.07",
+ "shot_id": "S7.07",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v35/act4/wav/v35-a4-0008.wav",
+ "duration_s": 8.865,
+ "frames_24": 284,
+ "voiced_span_s": 10.6,
+ "pace": {
+  "words": 37,
+  "wpm": 209.4,
+  "speed": 1.02,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.02,
+   "speed_band": [
+    0.98,
+    1.06
+   ],
+   "articulation_guide_sps": [
+    4.4,
+    5.0
+   ],
+   "turn_wpm_guide": [
+    165,
+    185
+   ],
+   "intent": "brisk, reading from the sheet; \"(Chair)\" read as a word about himself without looking up; \"the Other Yrral\" deadpan (YUR-rul)"
+  },
+  "measured": {
+   "wpm": 209.4,
+   "articulation_sps": 5.66,
+   "syllables": 54,
+   "span_s": 10.6,
+   "pauses_s": [
+    0.1,
+    0.52,
+    0.06,
+    0.19,
+    0.25,
+    0.08
+   ]
+  },
+  "longest_internal_gap_s": 0.52,
+  "audible_in_s": 0.33,
+  "audible_out_s": 8.595
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_echo (Kokoro-82M stock) · b-echo-brisk · speed 1.020",
+ "voiceId": "am_echo",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 80 Hz",
+  "pitch 0",
+  "peak +1.5 dB @150 Hz Q0.9",
+  "peak -1.5 dB @500 Hz Q1.0",
+  "peak +2 dB @2000 Hz Q0.9",
+  "comp 3.0:1 @-21 dB (3/70 ms)",
+  "Kokoro speed 1.020 (the plan speed; terb band 0.98-1.06); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'once': Kokoro 0.28 s -> 0.51 s (intended 0.50; +0.22 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "words": [
+  {
+   "w": "We",
+   "t0": 0.35,
+   "t1": 0.463,
+   "f0": 71,
+   "f1": 74,
+   "ph": "wˌi"
+  },
+  {
+   "w": "have",
+   "t0": 0.463,
+   "t1": 0.575,
+   "f0": 74,
+   "f1": 76,
+   "ph": "hæv"
+  },
+  {
+   "w": "reached",
+   "t0": 0.575,
+   "t1": 0.837,
+   "f0": 76,
+   "f1": 83,
+   "ph": "ɹˈiʧt"
+  },
+  {
+   "w": "an",
+   "t0": 0.837,
+   "t1": 0.925,
+   "f0": 83,
+   "f1": 85,
+   "ph": "ɐn"
+  },
+  {
+   "w": "agreement",
+   "t0": 0.925,
+   "t1": 1.35,
+   "f0": 85,
+   "f1": 95,
+   "ph": "əɡɹˈimᵊnt"
+  },
+  {
+   "w": "in",
+   "t0": 1.35,
+   "t1": 1.5,
+   "f0": 95,
+   "f1": 99,
+   "ph": "ɪn"
+  },
+  {
+   "w": "principle",
+   "t0": 1.5,
+   "t1": 1.975,
+   "f0": 99,
+   "f1": 110,
+   "ph": "pɹˈɪnsəpᵊl"
+  },
+  {
+   "w": "for",
+   "t0": 1.975,
+   "t1": 2.1,
+   "f0": 110,
+   "f1": 113,
+   "ph": "fɔɹ"
+  },
+  {
+   "w": "Mas",
+   "t0": 2.1,
+   "t1": 2.35,
+   "f0": 113,
+   "f1": 119,
+   "ph": "mˈɑs"
+  },
+  {
+   "w": "Manalt",
+   "t0": 2.35,
+   "t1": 2.775,
+   "f0": 119,
+   "f1": 129,
+   "ph": "mˈænɔlt"
+  },
+  {
+   "w": "to",
+   "t0": 2.775,
+   "t1": 2.875,
+   "f0": 129,
+   "f1": 132,
+   "ph": "tə"
+  },
+  {
+   "w": "return",
+   "t0": 2.875,
+   "t1": 3.225,
+   "f0": 132,
+   "f1": 140,
+   "ph": "ɹətˈɜɹn"
+  },
+  {
+   "w": "to",
+   "t0": 3.225,
+   "t1": 3.325,
+   "f0": 140,
+   "f1": 142,
+   "ph": "tə"
+  },
+  {
+   "w": "NopeAI",
+   "t0": 3.325,
+   "t1": 4.013,
+   "f0": 142,
+   "f1": 159,
+   "ph": "nˌOpˈAˌI"
+  },
+  {
+   "w": "as",
+   "t0": 4.013,
+   "t1": 4.175,
+   "f0": 159,
+   "f1": 163,
+   "ph": "æz"
+  },
+  {
+   "w": "CEO",
+   "t0": 4.175,
+   "t1": 4.775,
+   "f0": 163,
+   "f1": 177,
+   "ph": "sˌiˌiˈO"
+  },
+  {
+   "w": "with",
+   "t0": 4.775,
+   "t1": 4.913,
+   "f0": 177,
+   "f1": 180,
+   "ph": "wɪð"
+  },
+  {
+   "w": "a",
+   "t0": 4.913,
+   "t1": 5.013,
+   "f0": 180,
+   "f1": 183,
+   "ph": "ɐ"
+  },
+  {
+   "w": "new",
+   "t0": 5.013,
+   "t1": 5.25,
+   "f0": 183,
+   "f1": 189,
+   "ph": "nˈu"
+  },
+  {
+   "w": "initial",
+   "t0": 5.25,
+   "t1": 5.65,
+   "f0": 189,
+   "f1": 198,
+   "ph": "ɪnˈɪʃᵊl"
+  },
+  {
+   "w": "board",
+   "t0": 5.65,
+   "t1": 5.887,
+   "f0": 198,
+   "f1": 204,
+   "ph": "bˈɔɹd"
+  },
+  {
+   "w": "of",
+   "t0": 5.887,
+   "t1": 6.0,
+   "f0": 204,
+   "f1": 207,
+   "ph": "ʌv"
+  },
+  {
+   "w": "Terb",
+   "t0": 6.0,
+   "t1": 6.395,
+   "f0": 207,
+   "f1": 216,
+   "ph": "tˈɜɹb"
+  },
+  {
+   "w": "Chair",
+   "t0": 6.537,
+   "t1": 6.955,
+   "f0": 219,
+   "f1": 229,
+   "ph": "ʧˈɛɹ"
+  },
+  {
+   "w": "the",
+   "t0": 7.1,
+   "t1": 7.225,
+   "f0": 233,
+   "f1": 236,
+   "ph": "ði"
+  },
+  {
+   "w": "Other",
+   "t0": 7.225,
+   "t1": 7.5,
+   "f0": 236,
+   "f1": 243,
+   "ph": "ˈʌðəɹ"
+  },
+  {
+   "w": "Yrral",
+   "t0": 7.5,
+   "t1": 7.9,
+   "f0": 243,
+   "f1": 252,
+   "ph": "jˈɜɹəl"
+  },
+  {
+   "w": "and",
+   "t0": 7.975,
+   "t1": 8.1,
+   "f0": 254,
+   "f1": 257,
+   "ph": "ænd"
+  },
+  {
+   "w": "Mada",
+   "t0": 8.1,
+   "t1": 8.515,
+   "f0": 257,
+   "f1": 267,
+   "ph": "mˈɑdə"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.58,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 103.8,
+  "f0_range_st": 13.1,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Before this goes out, I'm reading it once. We have reached an agreement in principle for Mossmannault to return to No Pei as CEO with a new initial board of Terb, Chair, the other Ural and Mata.",
+  "cer": 0.053,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.376,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.4,
+  "rise_ms": 15.0,
+  "decay_ms": 175.0,
+  "decay_to_60_s": 0.315
+ },
+ "fast": {
+  "key": "10672e44c65e4af9",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 12.68,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 3.11,
+   "rechecked_alone": false
+  }
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 8,
+   "word": "once",
+   "tts_s": 0.28,
+   "target_s": 0.5,
+   "point_s": 2.255,
+   "joined_speech": false,
+   "dip_db": -68.4,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.51,
+   "opened_s": 0.22
+  }
+ ],
+ "cut_from": "v3-a4-0004 words 8-36 (audio/ep01/v3/act4/wav/v3-a4-0004.wav, 2.742-11.200 s), 12 ms fades, room-tone handles to 0.35 s; no device chain (dry, as the source), -16 LUFS"
+}

@@ -1,0 +1,197 @@
+{
+ "segment": "tag",
+ "source": "show/reel/ep01-v34/ep01-v34-tag.json",
+ "_about": "v35 beat plan (script draft 8.4: the final version, proposal-v35.md with PLAN §8's choices 1A-12A), in the PLAN §2 format with the v3.1-v3.4 plans' fields, written as deltas on the v3.4 LOCK (show/reel/ep01-v34/ep01-v34-<seg>.json). Every v3.4 beat appears once (keep, cut, merge), in the v3.5 order; new beats are action \"new\" with their frame, set, room and chars (a restored v3.3 beat also names its source in restore_from). est_s is a planning length (new lines' lengths are the recorded v3.5 takes' audible lengths; restored and reused lines use their own takes), never a measurement. Line flags: keep / new (v35-* ids; takes in audio/ep01/v35/) / restored (an earlier take, with take and take_file) / reuse_of (a new id on an existing take file) / cut_from (a new id cut from an existing take). Placement: \"after\" + gap_s (a line id, or start+S) for new lines; a kept line's \"at\" is start+S, after:<id>+S, or overlap:<id>-S (it starts S before that line ends). New per-beat fields for the art, shot and score passes: scene (proposal-v35's number), mode (proposal-v35's modes), pace and tempo (the pace table: quick = others 0.15-0.35 s, Mas 0.4-0.5 s; normal 0.4-0.6 s; weighted = longer, only on turns; tempo.gaps are the gap before each named line), camera (the frame), picture (notes for the art pass), style (the tier), flashback (when, tier, in, out), style_leap (choice 9A's macro) and style_leap_optional (CLOD's claymation insert, if the Blender test reads; timing identical either way). onscreen also takes retime {text: at}. sounds_drop lists sounds a transition moves away. Fix codes are in _spec_v35.py. The script is show/episodes/ep01/script.md (draft 8.4); the notes are ../script-v35-notes.md.",
+ "story_s": {
+  "source": 33.24,
+  "estimate": 33.24
+ },
+ "beats": [
+  {
+   "id": "32.01",
+   "action": "keep",
+   "scene": 57,
+   "mode": "CONVERSATION",
+   "pace": "normal",
+   "est_s": 3.2,
+   "frame": "TWO-SHOT · the desk, three marks in the wood",
+   "camera": "TWO-SHOT · the desk, three marks in the wood",
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 3.2,
+   "src_frame": "TWO-SHOT · the desk, three marks in the wood",
+   "lines": []
+  },
+  {
+   "id": "32.02",
+   "action": "keep",
+   "scene": 57,
+   "mode": "CONVERSATION",
+   "pace": "normal",
+   "est_s": 3.75,
+   "frame": "INSERT · the rack slot: the delivery (a magazine)",
+   "camera": "INSERT · the rack slot: the delivery (a magazine)",
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 3.75,
+   "src_frame": "INSERT · the rack slot: the delivery (a magazine)",
+   "lines": []
+  },
+  {
+   "id": "32.03",
+   "action": "keep",
+   "scene": 57,
+   "mode": "CONVERSATION",
+   "pace": "normal",
+   "est_s": 4.8,
+   "frame": "MEDIUM CLOSE · Mas and the cover, side by side",
+   "camera": "MEDIUM CLOSE · Mas and the cover, side by side",
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 4.8,
+   "src_frame": "MEDIUM CLOSE · Mas and the cover, side by side",
+   "lines": [
+    {
+     "id": "v3-vo-24",
+     "keep": true,
+     "vo": true
+    }
+   ]
+  },
+  {
+   "id": "32.04",
+   "action": "keep",
+   "scene": 57,
+   "mode": "CONVERSATION",
+   "pace": "normal",
+   "est_s": 4.0,
+   "frame": "TWO-SHOT · the Orb's scan, twice",
+   "camera": "TWO-SHOT · the Orb's scan, twice",
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 4.0,
+   "src_frame": "TWO-SHOT · the Orb's scan, twice",
+   "lines": []
+  },
+  {
+   "id": "32.05",
+   "action": "keep",
+   "scene": 57,
+   "mode": "CONVERSATION",
+   "pace": "normal",
+   "est_s": 2.743,
+   "frame": "SINGLE · profile: Mas, to the cover",
+   "camera": "SINGLE · profile: Mas, to the cover",
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 2.743,
+   "src_frame": "SINGLE · profile: Mas, to the cover",
+   "lines": [
+    {
+     "id": "v31-tg-0002",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "32.07",
+   "action": "keep",
+   "scene": 57,
+   "mode": "CONVERSATION",
+   "pace": "normal",
+   "est_s": 3.5,
+   "frame": "WIDE · the back wall",
+   "camera": "WIDE · the back wall",
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 3.5,
+   "src_frame": "WIDE · the back wall",
+   "lines": []
+  },
+  {
+   "id": "33.01",
+   "action": "keep",
+   "scene": 58,
+   "mode": "INSERT",
+   "pace": "normal",
+   "est_s": 2.25,
+   "frame": "WIDE · the thud",
+   "camera": "WIDE · the thud",
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 2.25,
+   "src_frame": "WIDE · the thud",
+   "lines": []
+  },
+  {
+   "id": "33.02",
+   "action": "keep",
+   "scene": 58,
+   "mode": "INSERT",
+   "pace": "normal",
+   "est_s": 4.25,
+   "frame": "HIGH · the front page",
+   "camera": "HIGH · the front page",
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 4.25,
+   "src_frame": "HIGH · the front page",
+   "lines": []
+  },
+  {
+   "id": "33.04",
+   "action": "keep",
+   "scene": 58,
+   "mode": "INSERT",
+   "pace": "normal",
+   "est_s": 3.5,
+   "frame": "SINGLE · profile: Mas, the button",
+   "camera": "SINGLE · profile: Mas, the button",
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 3.5,
+   "src_frame": "SINGLE · profile: Mas, the button",
+   "lines": [
+    {
+     "id": "e1-tg-33-01",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "33.05",
+   "action": "keep",
+   "scene": 58,
+   "mode": "INSERT",
+   "pace": "normal",
+   "est_s": 1.25,
+   "frame": "BLACK · on the hum",
+   "camera": "BLACK · on the hum",
+   "music": "TAG · quiet, wry · MM-12 december; it ducks to the room for the demo film, which plays its own sound (a bright product-film bed and its voice) until the stutter, then silence on the stills",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 1.25,
+   "src_frame": "BLACK · on the hum",
+   "lines": []
+  }
+ ]
+}

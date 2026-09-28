@@ -1,0 +1,186 @@
+{
+ "id": "v35-a2-0007",
+ "scene": "28",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "the board.",
+ "spoken_as": "the board.",
+ "delivery": "tapping the top box; simple; no irony (we supply it)",
+ "tag": "[P·arch · \"the company is controlled by OpenAI Nonprofit's board\" (Mar 11, 2019)]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "v35-28.02",
+ "shot_id": "v35-28.02",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v35/act2/wav/v35-a2-0007.wav",
+ "mp3": null,
+ "duration_s": 1.955,
+ "frames_24": 47,
+ "voiced_span_s": 0.8,
+ "pace": {
+  "words": 2,
+  "wpm": 150.0,
+  "speed": 0.92,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.92,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.6,
+    4.2
+   ],
+   "turn_wpm_guide": [
+    135,
+    155
+   ],
+   "intent": "tapping the top box; simple; no irony (we supply it)"
+  },
+  "measured": {
+   "wpm": 150.0,
+   "articulation_sps": 2.5,
+   "syllables": 2,
+   "span_s": 0.8,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.52,
+  "audible_out_s": 1.32
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.920",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch 0",
+  "low shelf +2 dB @160 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak +1 dB @3200 Hz Q0.8",
+  "high shelf -1.5 dB @8000 Hz",
+  "comp 2.0:1 @-24 dB (10/120 ms)",
+  "Kokoro speed 0.920 (the plan speed; mas-manalt band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "E"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "M"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "O"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "E"
+  },
+  {
+   "t": 1.333,
+   "f": 32,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "the",
+   "t0": 0.545,
+   "t1": 0.682,
+   "f0": 13,
+   "f1": 16,
+   "ph": "ðə"
+  },
+  {
+   "w": "board",
+   "t0": 0.682,
+   "t1": 1.34,
+   "f0": 16,
+   "f1": 32,
+   "ph": "bˈɔɹd"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -2.09,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.52,
+  "median_f0_hz": 113.1,
+  "f0_range_st": 9.1,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "The board.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.219,
+  "align_median_s": 0.121,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.52,
+  "speech_tail_s": 0.425,
+  "rise_ms": 30.0,
+  "decay_ms": 105.0,
+  "decay_to_60_s": 0.215
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "997c65215388e009",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 1.49,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 4,
+   "share_s": 0.44,
+   "rechecked_alone": false
+  }
+ }
+}

@@ -1,0 +1,751 @@
+{
+ "segment": "act3",
+ "source": "show/reel/ep01-v34/ep01-v34-act3.json",
+ "_about": "v35 beat plan (script draft 8.4: the final version, proposal-v35.md with PLAN §8's choices 1A-12A), in the PLAN §2 format with the v3.1-v3.4 plans' fields, written as deltas on the v3.4 LOCK (show/reel/ep01-v34/ep01-v34-<seg>.json). Every v3.4 beat appears once (keep, cut, merge), in the v3.5 order; new beats are action \"new\" with their frame, set, room and chars (a restored v3.3 beat also names its source in restore_from). est_s is a planning length (new lines' lengths are the recorded v3.5 takes' audible lengths; restored and reused lines use their own takes), never a measurement. Line flags: keep / new (v35-* ids; takes in audio/ep01/v35/) / restored (an earlier take, with take and take_file) / reuse_of (a new id on an existing take file) / cut_from (a new id cut from an existing take). Placement: \"after\" + gap_s (a line id, or start+S) for new lines; a kept line's \"at\" is start+S, after:<id>+S, or overlap:<id>-S (it starts S before that line ends). New per-beat fields for the art, shot and score passes: scene (proposal-v35's number), mode (proposal-v35's modes), pace and tempo (the pace table: quick = others 0.15-0.35 s, Mas 0.4-0.5 s; normal 0.4-0.6 s; weighted = longer, only on turns; tempo.gaps are the gap before each named line), camera (the frame), picture (notes for the art pass), style (the tier), flashback (when, tier, in, out), style_leap (choice 9A's macro) and style_leap_optional (CLOD's claymation insert, if the Blender test reads; timing identical either way). onscreen also takes retime {text: at}. sounds_drop lists sounds a transition moves away. Fix codes are in _spec_v35.py. The script is show/episodes/ep01/script.md (draft 8.4); the notes are ../script-v35-notes.md.",
+ "story_s": {
+  "source": 125.3,
+  "estimate": 139.12
+ },
+ "beats": [
+  {
+   "id": "v31-18.00",
+   "action": "keep",
+   "scene": 31,
+   "mode": "CONVERSATION + DOCUMENT",
+   "pace": "normal",
+   "est_s": 3.8,
+   "frame": "TWO-SHOT · the home room, opened close; the monitor lit",
+   "camera": "TWO-SHOT · the home room, opened close; the monitor lit",
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 3.8,
+   "src_frame": "TWO-SHOT · the home room, opened close; the monitor lit",
+   "lines": [
+    {
+     "id": "v31-a3-0001",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "18.01",
+   "action": "keep",
+   "scene": 31,
+   "mode": "CONVERSATION + DOCUMENT",
+   "pace": "normal",
+   "est_s": 3.4,
+   "frame": "TWO-SHOT · the home room, opened close",
+   "camera": "TWO-SHOT · the home room, opened close",
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 3.4,
+   "src_frame": "TWO-SHOT · the home room, opened close",
+   "lines": []
+  },
+  {
+   "id": "18.02",
+   "action": "keep",
+   "scene": 31,
+   "mode": "CONVERSATION + DOCUMENT",
+   "pace": "normal",
+   "est_s": 4.58,
+   "frame": "INSERT · ECU the shipping label",
+   "camera": "INSERT · ECU the shipping label",
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 4.58,
+   "src_frame": "INSERT · ECU the shipping label",
+   "lines": [
+    {
+     "id": "v34-vo-05",
+     "keep": true,
+     "vo": true
+    }
+   ]
+  },
+  {
+   "id": "18.03",
+   "action": "keep",
+   "scene": 31,
+   "mode": "CONVERSATION + DOCUMENT",
+   "pace": "normal",
+   "est_s": 4.917,
+   "frame": "TWO-SHOT · the Orb rises (three held steps)",
+   "camera": "TWO-SHOT · the Orb rises (three held steps)",
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 4.917,
+   "src_frame": "TWO-SHOT · the Orb rises (three held steps)",
+   "lines": []
+  },
+  {
+   "id": "18.04",
+   "action": "keep",
+   "scene": 31,
+   "mode": "CONVERSATION + DOCUMENT",
+   "pace": "normal",
+   "est_s": 0.75,
+   "frame": "SINGLE · MCU Mas, the scan",
+   "camera": "SINGLE · MCU Mas, the scan",
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 0.75,
+   "src_frame": "SINGLE · MCU Mas, the scan",
+   "lines": []
+  },
+  {
+   "id": "18.04g",
+   "action": "keep",
+   "scene": 31,
+   "mode": "CONVERSATION + DOCUMENT",
+   "pace": "normal",
+   "est_s": 0.5,
+   "frame": "SINGLE · MCU Mas, the scan",
+   "camera": "SINGLE · MCU Mas, the scan",
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 0.5,
+   "src_frame": "SINGLE · MCU Mas, the scan",
+   "lines": []
+  },
+  {
+   "id": "18.05",
+   "action": "keep",
+   "scene": 31,
+   "mode": "CONVERSATION + DOCUMENT",
+   "pace": "normal",
+   "est_s": 2.25,
+   "frame": "SINGLE · MCU Mas, the toast",
+   "camera": "SINGLE · MCU Mas, the toast",
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 2.25,
+   "src_frame": "SINGLE · MCU Mas, the toast",
+   "lines": [
+    {
+     "id": "e1-a3-18-01",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "18.06",
+   "action": "keep",
+   "scene": 31,
+   "mode": "CONVERSATION + DOCUMENT",
+   "pace": "normal",
+   "est_s": 5.67,
+   "frame": "TWO-SHOT · the Orb drifts to his shoulder (held)",
+   "camera": "TWO-SHOT · the Orb drifts to his shoulder (held)",
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 5.67,
+   "src_frame": "TWO-SHOT · the Orb drifts to his shoulder (held)",
+   "lines": [
+    {
+     "id": "e1-a3-18-03",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "19.01",
+   "action": "keep",
+   "scene": 32,
+   "mode": "INSERT",
+   "pace": "normal",
+   "est_s": 1.8,
+   "frame": "TWO-SHOT · the Orb's iris flicks to the monitor",
+   "camera": "TWO-SHOT · the Orb's iris flicks to the monitor",
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 1.8,
+   "src_frame": "TWO-SHOT · the Orb's iris flicks to the monitor",
+   "lines": []
+  },
+  {
+   "id": "v31-19.03",
+   "action": "keep",
+   "scene": 32,
+   "mode": "INSERT",
+   "pace": "normal",
+   "est_s": 7.7,
+   "frame": "2S·SCR · the hands runner: one held room frame",
+   "camera": "2S·SCR · the hands runner: one held room frame",
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 7.7,
+   "src_frame": "2S·SCR · the hands runner: one held room frame",
+   "lines": [
+    {
+     "id": "e1-a3-19-01",
+     "keep": true
+    },
+    {
+     "id": "e1-a3-19-02",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "20.01",
+   "action": "keep",
+   "scene": 33,
+   "mode": "CONVERSATION (a call)",
+   "pace": "quick",
+   "est_s": 4.4,
+   "frame": "OTS · over Mas's shoulder onto the monitor (TIDDER)",
+   "camera": "OTS · over Mas's shoulder onto the monitor (TIDDER)",
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 4.4,
+   "src_frame": "OTS · over Mas's shoulder onto the monitor (TIDDER)",
+   "lines": []
+  },
+  {
+   "id": "20.03",
+   "action": "keep",
+   "scene": 33,
+   "mode": "CONVERSATION (a call)",
+   "pace": "quick",
+   "est_s": 2.583,
+   "frame": "POV · he posts: the reply counter",
+   "camera": "POV · he posts: the reply counter",
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 2.583,
+   "src_frame": "POV · he posts: the reply counter",
+   "lines": []
+  },
+  {
+   "id": "20.04",
+   "action": "keep",
+   "scene": 33,
+   "mode": "CONVERSATION (a call)",
+   "pace": "quick",
+   "est_s": 10.25,
+   "frame": "TWO-SHOT · the call (held; one cut, to the edit)",
+   "camera": "TWO-SHOT · the call (held; one cut, to the edit)",
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 10.25,
+   "src_frame": "TWO-SHOT · the call (held; one cut, to the edit)",
+   "lines": [
+    {
+     "id": "e1-a3-20-02",
+     "keep": true
+    },
+    {
+     "id": "e1-a3-20-03",
+     "keep": true
+    },
+    {
+     "id": "e1-a3-20-04",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "20.05",
+   "action": "keep",
+   "scene": 33,
+   "mode": "CONVERSATION (a call)",
+   "pace": "quick",
+   "est_s": 3.083,
+   "frame": "POV · the edit (the call's one cut)",
+   "camera": "POV · the edit (the call's one cut)",
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 3.083,
+   "src_frame": "POV · the edit (the call's one cut)",
+   "lines": []
+  },
+  {
+   "id": "20.06",
+   "action": "keep",
+   "scene": 33,
+   "mode": "CONVERSATION (a call)",
+   "pace": "quick",
+   "est_s": 11.93,
+   "frame": "TWO-SHOT · the call, continued",
+   "camera": "TWO-SHOT · the call, continued",
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "tempo": {
+    "pace": "quick",
+    "gaps": {
+     "e1-a3-20-06": 0.45,
+     "e1-a3-20-08": 0.45
+    },
+    "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+   },
+   "picture": "see caption",
+   "fix": [
+    "PACE"
+   ],
+   "why": "",
+   "src_s": 12.48,
+   "src_frame": "TWO-SHOT · the call, continued",
+   "lines": [
+    {
+     "id": "v31-a3-0002",
+     "keep": true
+    },
+    {
+     "id": "e1-a3-20-06",
+     "keep": true,
+     "at": "after:v31-a3-0002+0.45"
+    },
+    {
+     "id": "e1-a3-20-07",
+     "keep": true
+    },
+    {
+     "id": "e1-a3-20-08",
+     "keep": true,
+     "at": "after:e1-a3-20-07+0.45"
+    },
+    {
+     "id": "e1-a3-20-09",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "v31-20.07",
+   "action": "keep",
+   "scene": 34,
+   "mode": "DOCUMENT",
+   "pace": "normal",
+   "est_s": 5.0,
+   "frame": "POV · the monitor: Neleh's paper",
+   "camera": "POV · the monitor: Neleh's paper",
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 5.0,
+   "src_frame": "POV · the monitor: Neleh's paper",
+   "lines": []
+  },
+  {
+   "id": "v31-20.08",
+   "action": "keep",
+   "scene": 34,
+   "mode": "DOCUMENT",
+   "pace": "normal",
+   "est_s": 2.4,
+   "frame": "MCU · Mas reading page 30, the monitor's light on his face",
+   "camera": "MCU · Mas reading page 30, the monitor's light on his face",
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 2.4,
+   "src_frame": "MCU · Mas reading page 30, the monitor's light on his face",
+   "lines": []
+  },
+  {
+   "id": "21.02",
+   "action": "keep",
+   "scene": 35,
+   "mode": "QUICK-CUT (on the monitor)",
+   "pace": "normal",
+   "est_s": 10.6,
+   "frame": "POV · the signing desk (held on the monitor)",
+   "camera": "POV · the signing desk (held on the monitor)",
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "caption": "The signing desk on the monitor: NEDIB, pen raised, over an order that runs off both ends of a very big desk. \"Here's the deal, folks…\" One cut-paper copy of him pops up beside him (scissor edges, glossier, tie a shade wrong) and finishes his sentence: \"And then the computers regulate themselves.\"",
+   "sounds": [
+    {
+     "name": "tower_pop",
+     "at": "before:e1-a3-21-02-0.3",
+     "gain": -16
+    }
+   ],
+   "picture": "The signing desk on the monitor: NEDIB, pen raised, over an order that runs off both ends of a very big desk. \"Here's the deal, folks…\" One cut-paper copy of him pops up beside him (scissor edges, glossier, tie a shade wrong) and finishes his sentence: \"And then the computers regulate themselves.\"",
+   "fix": [
+    "REST"
+   ],
+   "why": "The president's deepfake, restored as in v3.3: one copy (the second copy stays un-drawn).",
+   "src_s": 8.008,
+   "src_frame": "POV · the signing desk (held on the monitor)",
+   "lines": [
+    {
+     "id": "e1-a3-21-01",
+     "keep": true
+    },
+    {
+     "id": "e1-a3-21-02",
+     "restored": true,
+     "who": "deepfake",
+     "text": "And then the computers regulate themselves.",
+     "after": "e1-a3-21-01",
+     "gap_s": 0.35,
+     "take": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-21-02.wav",
+     "take_file": "audio/ep01/act3/dialogue/lines-fast-v2.json",
+     "len_s": 2.24,
+     "tag": "monitor",
+     "note": "[INVENTED · the fake's line; restored from v3.3 (SN 00000: \"i also liked the deepfake with the president. don't remove that.\")]",
+     "take_dur_s": 3.405
+    }
+   ]
+  },
+  {
+   "id": "21.03",
+   "action": "new",
+   "after": "21.02",
+   "scene": 35,
+   "mode": "QUICK-CUT (on the monitor)",
+   "pace": "normal",
+   "est_s": 4.38,
+   "frame": "POV · the signing desk: the real one turns",
+   "camera": "POV · the signing desk: the real one turns",
+   "set": "whitehouse",
+   "room": "dark",
+   "chars": [
+    "nedib",
+    "deepfake"
+   ],
+   "lines": [
+    {
+     "id": "e1-a3-21-04",
+     "restored": true,
+     "who": "nedib",
+     "text": "When the hell did I say that?",
+     "after": "start+0.54",
+     "gap_s": 0.0,
+     "take": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-21-04.wav",
+     "take_file": "audio/ep01/act3/dialogue/lines-fast-v2.json",
+     "len_s": 2.1,
+     "tag": "monitor",
+     "note": "[P · Oct 30, 2023 · about a deepfake of himself (facts #38, §B)]",
+     "take_dur_s": 3.16
+    }
+   ],
+   "caption": "The real NEDIB turns to look at the copy, pen raised: \"When the hell did I say that?\" His stat row updates: DEEPFAKES OF ME: SEEN 1.",
+   "picture": "One copy only (the second copy stays un-drawn, as in v3.4's cut). The stat updates on the card from sc 25.",
+   "onscreen": {
+    "add": [
+     "RAIL: OCT 30, 2023",
+     "DEEPFAKES OF ME: SEEN 1"
+    ]
+   },
+   "music": "ACT THREE · the Water Line; the monitor's items play their own audio inside it",
+   "sounds": [
+    {
+     "name": "post_click--chip",
+     "at": 2.892,
+     "gain": -20
+    }
+   ],
+   "restore_from": "show/reel/ep01-v33/ep01-v33-act3.json#21.03",
+   "fix": [
+    "REST"
+   ],
+   "why": "His own real words are the joke, and they're in his favour (the balance: script-v35-notes §6)."
+  },
+  {
+   "id": "21.04",
+   "action": "new",
+   "after": "21.03",
+   "scene": 35,
+   "mode": "QUICK-CUT (on the monitor)",
+   "pace": "normal",
+   "est_s": 4.4,
+   "frame": "2S·SCR · Mas, the Orb, the two NEDIBs on the monitor (slow drift in)",
+   "camera": "2S·SCR · Mas, the Orb, the two NEDIBs on the monitor (slow drift in)",
+   "set": "screen",
+   "room": "dark",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "lines": [
+    {
+     "id": "e1-a3-21-06",
+     "restored": true,
+     "who": "mas",
+     "text": "which one's real?",
+     "after": "start+0.8",
+     "gap_s": 0.0,
+     "take": "audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-21-06.wav",
+     "take_file": "audio/ep01/act3/dialogue/lines-fast-v2.json",
+     "len_s": 1.17,
+     "tag": "",
+     "note": "[INVENTED]",
+     "take_dur_s": 2.425
+    }
+   ],
+   "caption": "\"which one's real?\" The Orb's iris flicks across the two NEDIBs and settles on the one with the pen; its toast pops over him: verified: human.",
+   "picture": "It pays the Orb's \"for when it gets harder to tell.\" (sc 31).",
+   "onscreen": {
+    "add": [
+     "DEEPFAKES OF ME: SEEN 1",
+     "verified: human"
+    ]
+   },
+   "music": "ACT THREE · the Water Line",
+   "sounds": [
+    {
+     "name": "orb_servo",
+     "at": 2.32,
+     "gain": -26
+    },
+    {
+     "name": "orb_servo",
+     "at": 2.72,
+     "gain": -26
+    }
+   ],
+   "restore_from": "show/reel/ep01-v33/ep01-v33-act3.json#21.04",
+   "fix": [
+    "REST",
+    "KEEP"
+   ],
+   "why": "\"which one's real?\" and the Orb's verdict (the ledger's keep list)."
+  },
+  {
+   "id": "21.05",
+   "action": "keep",
+   "scene": 35,
+   "mode": "QUICK-CUT (on the monitor)",
+   "pace": "normal",
+   "est_s": 2.3,
+   "frame": "POV · the real NEDIB signs",
+   "camera": "POV · the real NEDIB signs",
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "caption": "The real NEDIB signs, in ink. The copy claps, and keeps clapping.",
+   "picture": "The real NEDIB signs, in ink. The copy claps, and keeps clapping.",
+   "fix": [
+    "REST"
+   ],
+   "why": "",
+   "src_s": 2.3,
+   "src_frame": "POV · the real NEDIB signs",
+   "lines": []
+  },
+  {
+   "id": "v32-21.06",
+   "action": "keep",
+   "scene": 35,
+   "mode": "QUICK-CUT (on the monitor)",
+   "pace": "normal",
+   "est_s": 2.0,
+   "frame": "2S·SCR · Mas and the Orb, the monitor at frame right",
+   "camera": "2S·SCR · Mas and the Orb, the monitor at frame right",
+   "music": "ACT THREE · the Water Line holds its note under the switch; the hall's applause takes the cut",
+   "caption": "The copy is still clapping on the monitor. Mas reaches over and switches the monitor off. The glass goes black, and the clapping doesn't stop: it grows, and it's a hall's applause.",
+   "picture": "The copy is still clapping on the monitor. Mas reaches over and switches the monitor off. The glass goes black, and the clapping doesn't stop: it grows, and it's a hall's applause.",
+   "fix": [
+    "REST"
+   ],
+   "why": "",
+   "src_s": 2.0,
+   "src_frame": "2S·SCR · Mas and the Orb, the monitor at frame right",
+   "lines": []
+  },
+  {
+   "id": "22.01",
+   "action": "keep",
+   "scene": 36,
+   "mode": "CONVERSATION → DOCUMENT",
+   "pace": "normal",
+   "est_s": 17.32,
+   "frame": "WIDE → MCU · DevDay, live: the stage, the hall's applause (no monitor, no bezel)",
+   "camera": "WIDE → MCU · DevDay, live: the stage, the hall's applause (no monitor, no bezel)",
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "tempo": {
+    "pace": "normal",
+    "gaps": {},
+    "rule": "0.4-0.6 s",
+    "note": "the V.O. waits one beat after the date and the counter have been read (the counter lands at 4.37 s)"
+   },
+   "picture": "see caption",
+   "fix": [
+    "C2",
+    "TR"
+   ],
+   "why": "\"a year ago, forty users and a nice thread.\" now comes one beat after the rail and the counter are read (the proposal's timing change), so the number lands first.",
+   "src_s": 14.323,
+   "src_frame": "WIDE → MCU · DevDay, live: the stage, the hall's applause (no monitor, no bezel)",
+   "lines": [
+    {
+     "id": "v34-vo-06",
+     "keep": true,
+     "vo": true,
+     "at": "start+4.8"
+    },
+    {
+     "id": "v32-a3-0001",
+     "keep": true
+    },
+    {
+     "id": "e1-a3-22-01",
+     "keep": true
+    },
+    {
+     "id": "e1-a3-22-02",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "22.02",
+   "action": "keep",
+   "scene": 36,
+   "mode": "CONVERSATION → DOCUMENT",
+   "pace": "normal",
+   "est_s": 5.31,
+   "frame": "HIGH · the desk from above: his phone",
+   "camera": "HIGH · the desk from above: his phone",
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 5.31,
+   "src_frame": "HIGH · the desk from above: his phone",
+   "lines": [
+    {
+     "id": "v3-vo-16",
+     "keep": true,
+     "vo": true
+    }
+   ]
+  },
+  {
+   "id": "22.03",
+   "action": "keep",
+   "scene": 36,
+   "mode": "CONVERSATION → DOCUMENT",
+   "pace": "normal",
+   "est_s": 3.3,
+   "frame": "TWO-SHOT · Mas and the Orb, the phone between them",
+   "camera": "TWO-SHOT · Mas and the Orb, the phone between them",
+   "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 3.3,
+   "src_frame": "TWO-SHOT · Mas and the Orb, the phone between them",
+   "lines": [
+    {
+     "id": "e1-a3-22-03",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "v32-22.04",
+   "action": "keep",
+   "scene": 36,
+   "mode": "CONVERSATION → DOCUMENT",
+   "pace": "normal",
+   "est_s": 4.5,
+   "frame": "OTS · over Mas onto the monitor: the sign-up page; the rack beside him",
+   "camera": "OTS · over Mas onto the monitor: the sign-up page; the rack beside him",
+   "music": "ACT THREE · the Water Line thins to its pedal under the counter's chip notes; THE CLOCK's first step is the next bar (23.01)",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 4.5,
+   "src_frame": "OTS · over Mas onto the monitor: the sign-up page; the rack beside him",
+   "lines": []
+  },
+  {
+   "id": "23.01",
+   "action": "keep",
+   "scene": 37,
+   "mode": "INSERT",
+   "pace": "normal",
+   "est_s": 2.5,
+   "frame": "POV · bar 1: the cold open's frame on the monitor",
+   "camera": "POV · bar 1: the cold open's frame on the monitor",
+   "music": "THE CLOCK · MM-14's step figure, bar 1 to the dead stop on bar 4",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 2.5,
+   "src_frame": "POV · bar 1: the cold open's frame on the monitor",
+   "lines": []
+  },
+  {
+   "id": "23.02",
+   "action": "keep",
+   "scene": 37,
+   "mode": "INSERT",
+   "pace": "normal",
+   "est_s": 2.5,
+   "frame": "SCR · his monitor: his own NOTIFY ME page, the paper's tab in the strip, and the reminder over them",
+   "camera": "SCR · his monitor: his own NOTIFY ME page, the paper's tab in the strip, and the reminder over them",
+   "music": "THE CLOCK · MM-14's step figure, bar 1 to the dead stop on bar 4",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 2.5,
+   "src_frame": "SCR · his monitor: his own NOTIFY ME page, the paper's tab in the strip, and the reminder over them",
+   "lines": []
+  },
+  {
+   "id": "23.03",
+   "action": "keep",
+   "scene": 37,
+   "mode": "INSERT",
+   "pace": "normal",
+   "est_s": 2.5,
+   "frame": "TWO-SHOT · bar 3: the rail rolls to Friday",
+   "camera": "TWO-SHOT · bar 3: the rail rolls to Friday",
+   "music": "THE CLOCK · MM-14's step figure, bar 1 to the dead stop on bar 4",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 2.5,
+   "src_frame": "TWO-SHOT · bar 3: the rail rolls to Friday",
+   "lines": []
+  },
+  {
+   "id": "23.04",
+   "action": "keep",
+   "scene": 37,
+   "mode": "INSERT",
+   "pace": "normal",
+   "est_s": 2.5,
+   "frame": "BLACK · bar 4 (ACT-OUT 2)",
+   "camera": "BLACK · bar 4 (ACT-OUT 2)",
+   "music": "THE CLOCK · MM-14's step figure, bar 1 to the dead stop on bar 4",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 2.5,
+   "src_frame": "BLACK · bar 4 (ACT-OUT 2)",
+   "lines": []
+  }
+ ]
+}

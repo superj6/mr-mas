@@ -1,0 +1,2719 @@
+{
+ "segment": "act4",
+ "source": "show/reel/ep01-v34/ep01-v34-act4.json",
+ "_about": "v35 beat plan (script draft 8.4: the final version, proposal-v35.md with PLAN §8's choices 1A-12A), in the PLAN §2 format with the v3.1-v3.4 plans' fields, written as deltas on the v3.4 LOCK (show/reel/ep01-v34/ep01-v34-<seg>.json). Every v3.4 beat appears once (keep, cut, merge), in the v3.5 order; new beats are action \"new\" with their frame, set, room and chars (a restored v3.3 beat also names its source in restore_from). est_s is a planning length (new lines' lengths are the recorded v3.5 takes' audible lengths; restored and reused lines use their own takes), never a measurement. Line flags: keep / new (v35-* ids; takes in audio/ep01/v35/) / restored (an earlier take, with take and take_file) / reuse_of (a new id on an existing take file) / cut_from (a new id cut from an existing take). Placement: \"after\" + gap_s (a line id, or start+S) for new lines; a kept line's \"at\" is start+S, after:<id>+S, or overlap:<id>-S (it starts S before that line ends). New per-beat fields for the art, shot and score passes: scene (proposal-v35's number), mode (proposal-v35's modes), pace and tempo (the pace table: quick = others 0.15-0.35 s, Mas 0.4-0.5 s; normal 0.4-0.6 s; weighted = longer, only on turns; tempo.gaps are the gap before each named line), camera (the frame), picture (notes for the art pass), style (the tier), flashback (when, tier, in, out), style_leap (choice 9A's macro) and style_leap_optional (CLOD's claymation insert, if the Blender test reads; timing identical either way). onscreen also takes retime {text: at}. sounds_drop lists sounds a transition moves away. Fix codes are in _spec_v35.py. The script is show/episodes/ep01/script.md (draft 8.4); the notes are ../script-v35-notes.md.",
+ "story_s": {
+  "source": 507.79,
+  "estimate": 482.32
+ },
+ "beats": [
+  {
+   "id": "S1.01",
+   "action": "keep",
+   "scene": 38,
+   "mode": "INSERT",
+   "pace": "normal",
+   "est_s": 6.2,
+   "frame": "WIDE · establishing",
+   "camera": "WIDE · establishing",
+   "music": "NOON, LAS VEGAS · suspense · a felt bar (MM-07 felt) under the suite's ordinary life; LEVERAGE low from the JOIN click, thinned to its pedal under Alyi's sentence, back up for the dialog; D6 drop-out on the Remove click (mood §4 #1b; the waltz no longer plays on his side)",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 6.2,
+   "src_frame": "WIDE · establishing",
+   "lines": []
+  },
+  {
+   "id": "v31-S1.01b",
+   "action": "keep",
+   "scene": 38,
+   "mode": "INSERT",
+   "pace": "normal",
+   "est_s": 3.2,
+   "frame": "TWO-SHOT · Mas and the Orb at the window: a practice lap",
+   "camera": "TWO-SHOT · Mas and the Orb at the window: a practice lap",
+   "music": "NOON, LAS VEGAS · suspense · a felt bar (MM-07 felt) under the suite's ordinary life; LEVERAGE low from the JOIN click, thinned to its pedal under Alyi's sentence, back up for the dialog; D6 drop-out on the Remove click (mood §4 #1b; the waltz no longer plays on his side)",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 3.2,
+   "src_frame": "TWO-SHOT · Mas and the Orb at the window: a practice lap",
+   "lines": []
+  },
+  {
+   "id": "S1.02",
+   "action": "keep",
+   "scene": 38,
+   "mode": "INSERT",
+   "pace": "normal",
+   "est_s": 7.27,
+   "frame": "INSERT · hand, glass, laptop",
+   "camera": "INSERT · hand, glass, laptop",
+   "music": "NOON, LAS VEGAS · suspense · a felt bar (MM-07 felt) under the suite's ordinary life; LEVERAGE low from the JOIN click, thinned to its pedal under Alyi's sentence, back up for the dialog; D6 drop-out on the Remove click (mood §4 #1b; the waltz no longer plays on his side)",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 7.27,
+   "src_frame": "INSERT · hand, glass, laptop",
+   "lines": [
+    {
+     "id": "v34-vo-07",
+     "keep": true,
+     "vo": true
+    }
+   ]
+  },
+  {
+   "id": "S1.07",
+   "action": "keep",
+   "scene": 39,
+   "mode": "CONVERSATION (a call)",
+   "pace": "weighted",
+   "est_s": 7.58,
+   "frame": "POV · the call grid (his laptop)",
+   "camera": "POV · the call grid (his laptop)",
+   "music": "NOON, LAS VEGAS · suspense · a felt bar (MM-07 felt) under the suite's ordinary life; LEVERAGE low from the JOIN click, thinned to its pedal under Alyi's sentence, back up for the dialog; D6 drop-out on the Remove click (mood §4 #1b; the waltz no longer plays on his side)",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 7.58,
+   "src_frame": "POV · the call grid (his laptop)",
+   "lines": [
+    {
+     "id": "v31-a4-0001",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "v31-S1.08d",
+   "action": "keep",
+   "scene": 39,
+   "mode": "CONVERSATION (a call)",
+   "pace": "weighted",
+   "est_s": 2.4,
+   "frame": "GFX · HARD CUT: the host's dialog, full frame, bright",
+   "camera": "GFX · HARD CUT: the host's dialog, full frame, bright",
+   "music": "NOON, LAS VEGAS · suspense · a felt bar (MM-07 felt) under the suite's ordinary life; LEVERAGE low from the JOIN click, thinned to its pedal under Alyi's sentence, back up for the dialog; D6 drop-out on the Remove click (mood §4 #1b; the waltz no longer plays on his side)",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 2.4,
+   "src_frame": "GFX · HARD CUT: the host's dialog, full frame, bright",
+   "lines": []
+  },
+  {
+   "id": "S1.09",
+   "action": "keep",
+   "scene": 39,
+   "mode": "CONVERSATION (a call)",
+   "pace": "weighted",
+   "est_s": 3.3,
+   "frame": "POV · the call grid",
+   "camera": "POV · the call grid",
+   "music": "NOON, LAS VEGAS · suspense · a felt bar (MM-07 felt) under the suite's ordinary life; LEVERAGE low from the JOIN click, thinned to its pedal under Alyi's sentence, back up for the dialog; D6 drop-out on the Remove click (mood §4 #1b; the waltz no longer plays on his side)",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 3.3,
+   "src_frame": "POV · the call grid",
+   "lines": []
+  },
+  {
+   "id": "S1.10",
+   "action": "keep",
+   "scene": 39,
+   "mode": "CONVERSATION (a call)",
+   "pace": "weighted",
+   "est_s": 1.0,
+   "frame": "SINGLE · CU Mas, still",
+   "camera": "SINGLE · CU Mas, still",
+   "music": "NOON, LAS VEGAS · suspense · a felt bar (MM-07 felt) under the suite's ordinary life; LEVERAGE low from the JOIN click, thinned to its pedal under Alyi's sentence, back up for the dialog; D6 drop-out on the Remove click (mood §4 #1b; the waltz no longer plays on his side)",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 1.0,
+   "src_frame": "SINGLE · CU Mas, still",
+   "lines": []
+  },
+  {
+   "id": "S1.11",
+   "action": "keep",
+   "scene": 39,
+   "mode": "CONVERSATION (a call)",
+   "pace": "weighted",
+   "est_s": 1.917,
+   "frame": "INSERT · his phone",
+   "camera": "INSERT · his phone",
+   "music": "NOON, LAS VEGAS · suspense · a felt bar (MM-07 felt) under the suite's ordinary life; LEVERAGE low from the JOIN click, thinned to its pedal under Alyi's sentence, back up for the dialog; D6 drop-out on the Remove click (mood §4 #1b; the waltz no longer plays on his side)",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 1.917,
+   "src_frame": "INSERT · his phone",
+   "lines": []
+  },
+  {
+   "id": "S1.12",
+   "action": "keep",
+   "scene": 39,
+   "mode": "CONVERSATION (a call)",
+   "pace": "weighted",
+   "est_s": 3.8,
+   "frame": "OTS · over Mas onto the laptop",
+   "camera": "OTS · over Mas onto the laptop",
+   "music": "NOON, LAS VEGAS · suspense · a felt bar (MM-07 felt) under the suite's ordinary life; LEVERAGE low from the JOIN click, thinned to its pedal under Alyi's sentence, back up for the dialog; D6 drop-out on the Remove click (mood §4 #1b; the waltz no longer plays on his side)",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 3.8,
+   "src_frame": "OTS · over Mas onto the laptop",
+   "lines": [
+    {
+     "id": "a5-26-01",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "v32-S1.13",
+   "action": "keep",
+   "scene": 40,
+   "mode": "DOCUMENT",
+   "pace": "normal",
+   "est_s": 8.0,
+   "frame": "ECU · his phone in his hand, the suite's afternoon light",
+   "camera": "ECU · his phone in his hand, the suite's afternoon light",
+   "music": "none: the suite's air; the drone comes up under the fall to night",
+   "caption": "His phone in his hand, the suite's afternoon light on it. His thumb types the first sentence, unhurried: i loved my time at nopeai. It stops. He deletes it, letter by letter. Then he types it again, the same, and goes on. The post goes up in its own UI, its card's time 1:46 PM. Before the card fades, the phone lights, and doesn't stop.",
+   "picture": "The one crack: the deleting, letter by letter (a 1-px cursor eating the line). No face; the thumb only.",
+   "onscreen": {
+    "add": [
+     "i loved my time at nopeai.",
+     "1:46 PM"
+    ]
+   },
+   "jcut": [
+    {
+     "sound": "the war room's driving pulse starts under the lighting phone",
+     "lead_s": 0.6
+    }
+   ],
+   "fix": [
+    "NEW",
+    "TR"
+   ],
+   "why": "Sc 40: typed twice. It costs him something; nothing on his face says so.",
+   "src_s": 5.0,
+   "src_frame": "ECU · his phone in his hand, the suite's afternoon light",
+   "lines": []
+  },
+  {
+   "id": "v35-41.01",
+   "action": "new",
+   "after": "v32-S1.13",
+   "scene": 41,
+   "mode": "QUICK-CUT (calls)",
+   "pace": "quick",
+   "est_s": 2.91,
+   "frame": "ECU · his phone on the suite desk, lighting and not stopping",
+   "camera": "ECU · his phone on the suite desk, lighting and not stopping",
+   "set": "call",
+   "room": "suite",
+   "chars": [
+    "mas"
+   ],
+   "lines": [
+    {
+     "id": "v35-vo-03",
+     "new": true,
+     "who": "mas",
+     "vo": true,
+     "tag": "V.O.",
+     "text": "the budget. i said the budget.",
+     "delivery": "the phone won't stop; flat, a man replaying his own wrong read; not self-pity",
+     "kind": "the wrong read, paid (the one he got wrong at the JOIN)",
+     "take": "new (V.O.: am_michael · a-michael-close · vo-close, audio/ep01/v35)",
+     "note": "[INVENTED · V.O. · draft 8.4]",
+     "after": "start+0.5",
+     "gap_s": 0.0,
+     "len_s": 2.11
+    }
+   ],
+   "caption": "His phone on the suite desk: calls and messages stacking, tile over tile: GERG · TASYA · MACROSOFT · AUHSOJ · THE FIRST CHECK · FOUNDER MODE · NOR · a grey LAWYER icon.",
+   "picture": "Tiles only (names and generic avatars; the lawyer never named). The pulse; each new tile a step of light on the desk, never on his face.",
+   "onscreen": {
+    "add": [
+     "GERG",
+     "TASYA · MACROSOFT",
+     "AUHSOJ",
+     "THE FIRST CHECK",
+     "FOUNDER MODE",
+     "NOR"
+    ]
+   },
+   "music": "THE WAR ROOM · a driving pulse under the calls (new cue); his calm on top; no score under his lines",
+   "fix": [
+    "NEW",
+    "C10"
+   ],
+   "why": "Sc 41: he's surprised, and working every line he has (The Social Network's grammar)."
+  },
+  {
+   "id": "v35-41.02",
+   "action": "new",
+   "after": "v35-41.01",
+   "scene": 41,
+   "mode": "QUICK-CUT (calls)",
+   "pace": "quick",
+   "est_s": 6.12,
+   "frame": "2S (tile) · Mas at the desk, Gerg's call tile",
+   "camera": "2S (tile) · Mas at the desk, Gerg's call tile",
+   "set": "call",
+   "room": "suite",
+   "chars": [
+    "mas",
+    "gerg"
+   ],
+   "lines": [
+    {
+     "id": "v35-a4-0001",
+     "new": true,
+     "who": "gerg",
+     "text": "They took my chair. Told me after. So I quit.",
+     "delivery": "flat, the cheer gone; not angry, finished",
+     "tag": "call",
+     "note": "[INVENTED · he quit at 4:09 PM PT: \"…but based on today's news, i quit.\" (facts L5, [P]); removed as chair and told after the call (L7, [V])]",
+     "take": "new (the GERG voice, ref a5-29-18, call chain; audio/ep01/v35)",
+     "after": "start+0.3",
+     "gap_s": 0.0,
+     "len_s": 2.86
+    },
+    {
+     "id": "v35-a4-0002",
+     "new": true,
+     "who": "mas",
+     "text": "you didn't have to.",
+     "delivery": "quiet; his face doesn't move",
+     "tag": "",
+     "note": "[INVENTED]",
+     "take": "new (the MAS voice, ref e1-a1-10-01; audio/ep01/v35)",
+     "after": "v35-a4-0001",
+     "gap_s": 0.45,
+     "len_s": 1.22
+    },
+    {
+     "id": "v35-a4-0003",
+     "new": true,
+     "who": "gerg",
+     "text": "Yeah. I did.",
+     "delivery": "simple, final; not a joke",
+     "tag": "call",
+     "note": "[INVENTED]",
+     "take": "new (the GERG voice, ref a5-29-18, call chain; audio/ep01/v35)",
+     "after": "v35-a4-0002",
+     "gap_s": 0.25,
+     "len_s": 0.74
+    }
+   ],
+   "caption": "GERG's tile, flat: \"They took my chair. Told me after. So I quit.\" MAS: \"you didn't have to.\" GERG: \"Yeah. I did.\"",
+   "picture": "Gerg's tile: no green glow, no keys (the first time his hands are still). Mas's face doesn't move.",
+   "music": "THE WAR ROOM · a driving pulse under the calls (new cue); his calm on top; no score under his lines",
+   "tempo": {
+    "pace": "quick",
+    "gaps": {
+     "v35-a4-0002": 0.45,
+     "v35-a4-0003": 0.25
+    },
+    "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+   },
+   "fix": [
+    "NEW"
+   ],
+   "why": "Sympathy for Gerg's hurt; his loyalty, shown."
+  },
+  {
+   "id": "v35-41.03",
+   "action": "new",
+   "after": "v35-41.02",
+   "scene": 41,
+   "mode": "QUICK-CUT (calls)",
+   "pace": "quick",
+   "est_s": 6.75,
+   "frame": "2S (tile) · Tasya's call tile",
+   "camera": "2S (tile) · Tasya's call tile",
+   "set": "call",
+   "room": "suite",
+   "chars": [
+    "mas",
+    "tasya"
+   ],
+   "lines": [
+    {
+     "id": "v35-a4-0004",
+     "new": true,
+     "who": "tasya",
+     "text": "We found out a minute before the rest of the world, Mas. One minute.",
+     "delivery": "warm on top, cold under it; the smile stays",
+     "tag": "call",
+     "note": "[INVENTED · the reported minute (Axios, Nov 17, 2023, [H])]",
+     "take": "new (the TASYA voice, ref v32-a1-0002, call chain; audio/ep01/v35)",
+     "after": "start-0.3",
+     "gap_s": 0.0,
+     "len_s": 3.8
+    },
+    {
+     "id": "v35-a4-0005",
+     "new": true,
+     "who": "mas",
+     "text": "i got a few more.",
+     "delivery": "dry, level; true",
+     "tag": "",
+     "note": "[INVENTED · true to the public account: he was told on the noon call, and the post followed]",
+     "take": "new (the MAS voice, ref e1-a1-10-01; audio/ep01/v35)",
+     "after": "v35-a4-0004",
+     "gap_s": 0.45,
+     "len_s": 1.33
+    },
+    {
+     "id": "v35-a4-0006",
+     "new": true,
+     "who": "tasya",
+     "text": "Then we should talk.",
+     "delivery": "warmly; the offer arriving before it's an offer",
+     "tag": "call",
+     "note": "[INVENTED]",
+     "take": "new (the TASYA voice, ref v32-a1-0002, call chain; audio/ep01/v35)",
+     "after": "v35-a4-0005",
+     "gap_s": 0.25,
+     "len_s": 1.22
+    }
+   ],
+   "caption": "TASYA's tile, warm on top: \"We found out a minute before the rest of the world, Mas. One minute.\" MAS: \"i got a few more.\" TASYA: \"Then we should talk.\"",
+   "picture": "Tasya's smile never moves; the key ring jangles once, off frame. Her tile rings in under Gerg's last word (J-cut 0.3 s): the calls overlap.",
+   "music": "THE WAR ROOM · a driving pulse under the calls (new cue); his calm on top; no score under his lines",
+   "tempo": {
+    "pace": "quick",
+    "gaps": {
+     "v35-a4-0005": 0.45,
+     "v35-a4-0006": 0.25
+    },
+    "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+   },
+   "fix": [
+    "NEW"
+   ],
+   "why": "Tasya's anger, which becomes Sunday's offer."
+  },
+  {
+   "id": "v35-41.04",
+   "action": "new",
+   "after": "v35-41.03",
+   "scene": 41,
+   "mode": "QUICK-CUT (calls)",
+   "pace": "quick",
+   "est_s": 4.02,
+   "frame": "QUICK-CUT · the tiles overlap",
+   "camera": "QUICK-CUT · the tiles overlap",
+   "set": "call",
+   "room": "suite",
+   "chars": [
+    "mas"
+   ],
+   "lines": [
+    {
+     "id": "v35-a4-0007",
+     "new": true,
+     "who": "auhsoj",
+     "text": "—the tender's in trouble—",
+     "delivery": "overlapping, quick, an investor mid-sentence; a fragment",
+     "tag": "call",
+     "note": "[INVENTED · facts #53: Thrive's ~$86B tender in jeopardy [V] · AUHSOJ has no voice in the registry: a stock preset (the photographer's) doubles on the call chain for the Kokoro timing; the ElevenLabs pass casts him (never the real person's voice)]",
+     "take": "new (the AUHSOJ voice, ref e1-a2-13-06, call chain; audio/ep01/v35)",
+     "after": "start-0.3",
+     "gap_s": 0.0,
+     "len_s": 1.26
+    },
+    {
+     "id": "v35-vo-04",
+     "new": true,
+     "who": "mas",
+     "vo": true,
+     "tag": "V.O.",
+     "text": "gerg. tasya. the money. the money. the money.",
+     "delivery": "faster than he ever thinks: the tiles stacking; each 'the money.' a new tile, not louder",
+     "kind": "the rattled count (it replaces the cut 406/407 count; said calmly at the return)",
+     "take": "new (V.O.: am_michael · a-michael-close · vo-close, audio/ep01/v35)",
+     "note": "[INVENTED · V.O. · draft 8.4]",
+     "after": "start+0.4",
+     "gap_s": 0.0,
+     "len_s": 3.42,
+     "overlap": true
+    }
+   ],
+   "caption": "The tiles overlap: AUHSOJ, mid-sentence, \"—the tender's in trouble—\"; FOUNDER MODE's tile lit and silent; NOR's ringing. Over them, faster than he ever thinks.",
+   "picture": "Three tiles in 3 s, cut on the pulse; FOUNDER MODE is a silent tile in the pay-back set (his fragment is cut).",
+   "music": "THE WAR ROOM · a driving pulse under the calls (new cue); his calm on top; no score under his lines",
+   "tempo": {
+    "pace": "quick",
+    "gaps": {},
+    "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
+    "note": "overlaps: AUHSOJ's fragment under the V.O.'s first word"
+   },
+   "fix": [
+    "NEW",
+    "C10"
+   ],
+   "why": "The money's calls; the rattled count (said calmly at the return)."
+  },
+  {
+   "id": "v35-41.05",
+   "action": "new",
+   "after": "v35-41.04",
+   "scene": 41,
+   "mode": "QUICK-CUT (calls)",
+   "pace": "quick",
+   "est_s": 2.6,
+   "frame": "POV · his post, 9:32 PM; the window now night",
+   "camera": "POV · his post, 9:32 PM; the window now night",
+   "set": "screen",
+   "room": "suite",
+   "chars": [
+    "mas"
+   ],
+   "lines": [],
+   "caption": "His post goes up, its card's time 9:32 PM: \"if i start going off, the nopeai board should go after me for the full value of my shares\". The suite's window behind the phone is night.",
+   "picture": "[V·ID · facts §B: a joke; he has no equity]",
+   "onscreen": {
+    "add": [
+     "9:32 PM",
+     "if i start going off, the nopeai board should go after me for the full value of my shares"
+    ]
+   },
+   "music": "THE WAR ROOM · a driving pulse under the calls (new cue); his calm on top; no score under his lines",
+   "fix": [
+    "NEW"
+   ],
+   "why": "A joke, in public, on the night he was fired."
+  },
+  {
+   "id": "v35-41.06",
+   "action": "new",
+   "after": "v35-41.05",
+   "scene": 41,
+   "mode": "QUICK-CUT (calls)",
+   "pace": "quick",
+   "est_s": 1.6,
+   "frame": "INSERT · the hotel notepad",
+   "camera": "INSERT · the hotel notepad",
+   "set": "void",
+   "room": "suite",
+   "chars": [
+    "mas"
+   ],
+   "lines": [],
+   "caption": "The hotel notepad, his pen: NEW COMPANY · MACROSOFT · BACK. The phone lights again at the frame's edge.",
+   "picture": "Three words, stacked; the pen is the MACROSOFT check's pen. [the weekend's reported options, [H]/[P]]",
+   "onscreen": {
+    "add": [
+     "NEW COMPANY",
+     "MACROSOFT",
+     "BACK"
+    ]
+   },
+   "music": "THE WAR ROOM · a driving pulse under the calls (new cue); his calm on top; no score under his lines; out into the hum",
+   "lcut": [
+    {
+     "sound": "the phone's ring becomes a plane's hum",
+     "over_s": 0.5
+    }
+   ],
+   "fix": [
+    "NEW",
+    "TR"
+   ],
+   "why": "His three options. Nothing about the staff, the letter, the firing's reasons or family."
+  },
+  {
+   "id": "v35-42.01",
+   "action": "new",
+   "after": "v35-41.06",
+   "scene": 42,
+   "mode": "INSERT",
+   "pace": "normal",
+   "est_s": 3.0,
+   "frame": "INSERT · a small plane's tray, daylight",
+   "camera": "INSERT · a small plane's tray, daylight",
+   "set": "void",
+   "room": "none",
+   "chars": [
+    "mas"
+   ],
+   "lines": [],
+   "caption": "A small plane in daylight. The notepad on his knee: under TERMS, 1. GERG, and his pen keeps writing a second line we can't read. His glass on the tray doesn't ripple in the bump.",
+   "picture": "The pen is the same pen (it carves at S2.01). The glass's flat line in turbulence.",
+   "onscreen": {
+    "add": [
+     "RAIL: NOV 18",
+     "TERMS",
+     "1. GERG"
+    ]
+   },
+   "music": "the pulse drops out; the plane's hum; one felt note (relief)",
+   "lcut": [
+    {
+     "sound": "the plane's hum becomes the dark room's drone",
+     "over_s": 0.6
+    }
+   ],
+   "fix": [
+    "NEW",
+    "C10",
+    "TR"
+   ],
+   "why": "Sc 42: he's chosen; the planner is back. Paid at \"gerg comes back too.\" [his conditions were reported that weekend, [H]]"
+  },
+  {
+   "id": "S2.01",
+   "action": "keep",
+   "scene": 43,
+   "mode": "INSERT → FLASHBACK",
+   "pace": "normal",
+   "est_s": 4.125,
+   "frame": "INSERT · the desk, the carve",
+   "camera": "INSERT · the desk, the carve",
+   "music": "THAT NIGHT · after the silence · DARK ROOM, one felt line; out through the rewind",
+   "caption": "Home. The desk under the cyan key, close: the two faint marks. The pen he wrote TERMS with on the plane (the MACROSOFT check's pen) carves a third mark beside them, one stroke a beat. \"i don't keep score.\"",
+   "onscreen": {
+    "replace": {
+     "RAIL: NOV 17 · NIGHT": "RAIL: NOV 18 · NIGHT"
+    }
+   },
+   "jcut": [
+    {
+     "sound": "the plane's hum becomes the dark room's drone",
+     "lead_s": 0.6
+    }
+   ],
+   "picture": "Home. The desk under the cyan key, close: the two faint marks. The pen he wrote TERMS with on the plane (the MACROSOFT check's pen) carves a third mark beside them, one stroke a beat. \"i don't keep score.\"",
+   "fix": [
+    "TR"
+   ],
+   "why": "The carve now follows the flight home (Nov 18).",
+   "src_s": 4.125,
+   "src_frame": "INSERT · the desk, the carve",
+   "lines": [
+    {
+     "id": "a5-26a-01",
+     "keep": true,
+     "vo": true
+    }
+   ]
+  },
+  {
+   "id": "S2.02",
+   "action": "keep",
+   "scene": 43,
+   "mode": "INSERT → FLASHBACK",
+   "pace": "normal",
+   "est_s": 2.0,
+   "frame": "INSERT · the three marks, from above",
+   "camera": "INSERT · the three marks, from above",
+   "music": "THAT NIGHT · after the silence · DARK ROOM, one felt line; out through the rewind",
+   "caption": "The three marks from above, his thumb on mark 3. The Orb's cyan eye-light is a spot on the wood; it steps onto mark 1.",
+   "picture": "The eye-light stops on mark 1; a VHS tracking wipe starts from it into TPOOL.",
+   "fix": [
+    "C5",
+    "TR"
+   ],
+   "why": "The marks take us back: the first mark opens TPOOL.",
+   "src_s": 2.6,
+   "src_frame": "INSERT · the three marks, from above",
+   "lines": []
+  },
+  {
+   "id": "v35-43.01",
+   "action": "new",
+   "after": "S2.02",
+   "scene": 43,
+   "mode": "INSERT → FLASHBACK",
+   "pace": "normal",
+   "est_s": 3.5,
+   "frame": "WIDE · TPOOL's office, 240p: the first sheet",
+   "camera": "WIDE · TPOOL's office, 240p: the first sheet",
+   "set": "office",
+   "room": "office",
+   "chars": [
+    "staff"
+   ],
+   "lines": [],
+   "caption": "A small office under a TPOOL decal on the glass. Staff silhouettes pass a single sheet across a table to board silhouettes. The sheet's only words: TO THE BOARD.",
+   "picture": "240p, tracking lines, silhouettes; the sheet's words legible, nothing else.",
+   "onscreen": {
+    "add": [
+     "TPOOL",
+     "TO THE BOARD"
+    ]
+   },
+   "music": "TPOOL · lo-fi: the dark room's felt line detuned through a VHS wobble; no drums",
+   "style": "T2a · 240p lo-fi",
+   "flashback": {
+    "when": "2005–08 (no card)",
+    "memory": 3,
+    "of": 3,
+    "tier": "T2a · 240p lo-fi (flashback-map §0.1: the TPOOL era), silhouettes only",
+    "in": "the Orb's eye-light on mark 1 (S2.02), a VHS tracking wipe",
+    "out": "back to the desk: the eye-light on mark 3 (S2.05)",
+    "guardrail": "silhouettes only; no reason shown; sourced to the WSJ (Dec 2023) via facts L21, never to a 2024 podcast"
+   },
+   "fix": [
+    "C5",
+    "FACT"
+   ],
+   "why": "Choice 5A (two shots, about 6 s: a 3.5 s TPOOL was unreadable before). [H · facts L21: senior staff twice asked the board to fire him]"
+  },
+  {
+   "id": "v35-43.02",
+   "action": "new",
+   "after": "v35-43.01",
+   "scene": 43,
+   "mode": "INSERT → FLASHBACK",
+   "pace": "normal",
+   "est_s": 2.5,
+   "frame": "WIDE · the same, again: he walks out",
+   "camera": "WIDE · the same, again: he walks out",
+   "set": "office",
+   "room": "office",
+   "chars": [
+    "mas",
+    "staff"
+   ],
+   "lines": [],
+   "caption": "The same table: the sheet passed again. Then a young silhouette in two popped collars walks out past it, a nameplate under his arm: CEO. Still in charge.",
+   "picture": "The same framing as 43.01 (a repeat, one tracking-line jump between them). The nameplate legible.",
+   "onscreen": {
+    "add": [
+     "CEO"
+    ]
+   },
+   "music": "TPOOL · lo-fi: the dark room's felt line detuned through a VHS wobble; no drums",
+   "style": "T2a · 240p lo-fi",
+   "flashback": {
+    "when": "2005–08 (no card)",
+    "memory": 3,
+    "of": 3,
+    "tier": "T2a · 240p lo-fi (flashback-map §0.1: the TPOOL era), silhouettes only",
+    "in": "the Orb's eye-light on mark 1 (S2.02), a VHS tracking wipe",
+    "out": "back to the desk: the eye-light on mark 3 (S2.05)",
+    "guardrail": "silhouettes only; no reason shown; sourced to the WSJ (Dec 2023) via facts L21, never to a 2024 podcast"
+   },
+   "fix": [
+    "C5"
+   ],
+   "why": "It's happened before, and he survived. The return's count is a lesson learned here."
+  },
+  {
+   "id": "S2.05",
+   "action": "keep",
+   "scene": 43,
+   "mode": "INSERT → FLASHBACK",
+   "pace": "normal",
+   "est_s": 3.0,
+   "frame": "SINGLE · the Orb's iris",
+   "camera": "SINGLE · the Orb's iris",
+   "music": "THAT NIGHT · after the silence · DARK ROOM, one felt line; out through the rewind",
+   "caption": "Back on the desk: the eye-light steps onto mark 3 and his thumb. THE ORB's iris, full frame, lifts from his thumb to his face. Toast: rewinding…, and a WHIP, right to left, onto a desk earlier that Friday.",
+   "picture": "Back on the desk: the eye-light steps onto mark 3 and his thumb. THE ORB's iris, full frame, lifts from his thumb to his face. Toast: rewinding…, and a WHIP, right to left, onto a desk earlier that Friday.",
+   "fix": [
+    "C5",
+    "TR"
+   ],
+   "why": "The Orb counts the marks, then rewinds to the board's side.",
+   "src_s": 2.5,
+   "src_frame": "SINGLE · the Orb's iris",
+   "lines": []
+  },
+  {
+   "id": "v31-S3.00p",
+   "action": "keep",
+   "scene": 44,
+   "mode": "CONVERSATION + DOCUMENT",
+   "pace": "normal",
+   "est_s": 5.6,
+   "frame": "HIGH → OTS · Neleh's desk, 11:52: Mada has joined early",
+   "camera": "HIGH → OTS · Neleh's desk, 11:52: Mada has joined early",
+   "music": "THE BOARD'S SIDE, 11:52 · Neleh's office clock first, then the waltz (BLUEPRINT, MM-07) under her pointer at underscore (about −20 LUFS), building; it hands to PROCEDURE on the call clock's 11:59 tick (mood §4 #6)",
+   "caption": "The whip lands on her desk from above: her laptop's call open at 11:52, Mada's tile joined early. Beside the laptop, THE PLAN's blueprint, and two printed pages she squares twice before noon: his million post (Dec 4, 2022) and her own paper, page 30. NELEH leans over the blueprint. \"Once more, before the others join.\"",
+   "picture": "The two props legible for a beat each: the post card (his, Dec 4, [P]) and page 30 (her paper, [P]). She squares them twice: nervous. A feeling of why, never an answer.",
+   "onscreen": {
+    "add": [
+     "CHATGTP launched on wednesday. today it crossed 1 million users!",
+     "…frantic corner-cutting…"
+    ]
+   },
+   "fix": [
+    "NEW"
+   ],
+   "why": "Sc 44: the desk's props (SN 0000's \"why he was fired\", felt as a question; Ep2's podcast is the answer).",
+   "src_s": 4.6,
+   "src_frame": "HIGH → OTS · Neleh's desk, 11:52: Mada has joined early",
+   "lines": [
+    {
+     "id": "v31-a4-0002",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "S1.03",
+   "action": "keep",
+   "scene": 44,
+   "mode": "CONVERSATION + DOCUMENT",
+   "pace": "normal",
+   "est_s": 9.3,
+   "frame": "GFX · THE SHEET",
+   "camera": "GFX · THE SHEET",
+   "music": "THE BOARD'S SIDE, 11:52 · Neleh's office clock first, then the waltz (BLUEPRINT, MM-07) under her pointer at underscore (about −20 LUFS), building; it hands to PROCEDURE on the call clock's 11:59 tick (mood §4 #6)",
+   "caption": "THE SHEET: HOW TO FIRE A CEO over nine chair outlines. Three outlines stand up on small legs and walk off the grid on the waltz (DIRE, NOVIHS, DRUH), with no line. \"Leave out Mas and Gerg, and the four of us are a majority.\" \"This board controls the company. Not the other way round.\"",
+   "picture": "THE SHEET: HOW TO FIRE A CEO over nine chair outlines. Three outlines stand up on small legs and walk off the grid on the waltz (DIRE, NOVIHS, DRUH), with no line. \"Leave out Mas and Gerg, and the four of us are a majority.\" \"This board controls the company. Not the other way round.\"",
+   "fix": [
+    "NEW"
+   ],
+   "why": "\"Three of us stepped down this year.\" is cut; the picture says it.",
+   "src_s": 11.75,
+   "src_frame": "GFX · THE SHEET",
+   "lines": [
+    {
+     "id": "a5-25-01",
+     "keep": false,
+     "who": "neleh",
+     "text": "Three of us stepped down this year.",
+     "why": "the proposal's sc 44: the blueprint's three outlines walking off carry it"
+    },
+    {
+     "id": "a5-25-02",
+     "keep": true,
+     "at": "start+1.4"
+    },
+    {
+     "id": "a5-25-03",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "S1.04",
+   "action": "keep",
+   "scene": 44,
+   "mode": "CONVERSATION + DOCUMENT",
+   "pace": "normal",
+   "est_s": 9.5,
+   "frame": "GFX · detail: THE ZEROS",
+   "camera": "GFX · detail: THE ZEROS",
+   "music": "THE BOARD'S SIDE, 11:52 · Neleh's office clock first, then the waltz (BLUEPRINT, MM-07) under her pointer at underscore (about −20 LUFS), building; it hands to PROCEDURE on the call clock's 11:59 tick (mood §4 #6)",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 9.5,
+   "src_frame": "GFX · detail: THE ZEROS",
+   "lines": [
+    {
+     "id": "a5-25-04",
+     "keep": true
+    },
+    {
+     "id": "a5-25-05",
+     "keep": true
+    },
+    {
+     "id": "a5-25-06",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "S1.05",
+   "action": "keep",
+   "scene": 44,
+   "mode": "CONVERSATION + DOCUMENT",
+   "pace": "normal",
+   "est_s": 2.8,
+   "frame": "GFX · the path and the break",
+   "camera": "GFX · the path and the break",
+   "music": "THE BOARD'S SIDE, 11:52 · Neleh's office clock first, then the waltz (BLUEPRINT, MM-07) under her pointer at underscore (about −20 LUFS), building; it hands to PROCEDURE on the call clock's 11:59 tick (mood §4 #6)",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 2.8,
+   "src_frame": "GFX · the path and the break",
+   "lines": []
+  },
+  {
+   "id": "S3.00a",
+   "action": "keep",
+   "scene": 45,
+   "mode": "CONVERSATION",
+   "pace": "weighted",
+   "est_s": 14.2,
+   "frame": "OTS · over Neleh onto her laptop (held, slow push)",
+   "camera": "OTS · over Neleh onto her laptop (held, slow push)",
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
+   "tempo": {
+    "pace": "weighted",
+    "gaps": {},
+    "rule": "longer, only on turns",
+    "note": "the join's pre-roll 1.0 s tighter (the 11:59 wait); every line and the held beat after \"Do you have any questions?\" stay"
+   },
+   "picture": "see caption",
+   "fix": [
+    "C12"
+   ],
+   "why": "12A: the replay of noon, tighter at its head only; Alyi's sentence stays whole (heard once per side).",
+   "src_s": 15.2,
+   "src_frame": "OTS · over Neleh onto her laptop (held, slow push)",
+   "lines": [
+    {
+     "id": "a5-27-01",
+     "keep": true
+    },
+    {
+     "id": "a5-27-02",
+     "keep": true
+    },
+    {
+     "id": "a5-27-03",
+     "keep": true
+    },
+    {
+     "id": "a5-27-04",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "S3.01",
+   "action": "keep",
+   "scene": 45,
+   "mode": "CONVERSATION",
+   "pace": "weighted",
+   "est_s": 2.6,
+   "frame": "SCREEN · her laptop, full frame",
+   "camera": "SCREEN · her laptop, full frame",
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
+   "caption": "The same Remove, from their side: in Alyi's tile his reflection's hand moves, once, a click. Mas's tile goes; the four close the gap; a small lit chip stays, MAS MANALT · audio, and tinny, out of it: \"super.\"",
+   "onscreen": {
+    "drop": [
+     "ALYI removed MAS MANALT from the meeting."
+    ]
+   },
+   "picture": "The same Remove, from their side: in Alyi's tile his reflection's hand moves, once, a click. Mas's tile goes; the four close the gap; a small lit chip stays, MAS MANALT · audio, and tinny, out of it: \"super.\"",
+   "fix": [
+    "C12"
+   ],
+   "why": "12A: the removal notice goes; \"super.\" through their laptop stays (the told-twice payoff).",
+   "src_s": 4.0,
+   "src_frame": "SCREEN · her laptop, full frame",
+   "lines": [
+    {
+     "id": "a5-27-05",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "v35-45.01",
+   "action": "new",
+   "after": "S3.01",
+   "scene": 45,
+   "mode": "CONVERSATION",
+   "pace": "weighted",
+   "est_s": 1.2,
+   "frame": "SCR · Alyi's tile: his face holds",
+   "camera": "SCR · Alyi's tile: his face holds",
+   "set": "call",
+   "room": "office",
+   "chars": [
+    "alyi"
+   ],
+   "lines": [],
+   "caption": "In Alyi's doorway tile, after the click: his reflection's face holds a beat, and nothing on it moves.",
+   "picture": "Face light, one step. No line.",
+   "music": "the procedure's pedal only",
+   "fix": [
+    "NEW"
+   ],
+   "why": "Sc 45 (new): a first twinge for Alyi, filled at 49A and 53."
+  },
+  {
+   "id": "S3.02",
+   "action": "cut",
+   "scene": 45,
+   "mode": "CONVERSATION",
+   "pace": "weighted",
+   "est_s": 0.0,
+   "frame": "OVERHEAD · her desk",
+   "camera": "OVERHEAD · her desk",
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
+   "picture": "see caption",
+   "fix": [
+    "C12"
+   ],
+   "why": "12A: the overhead of her desk and its tick go; step 4's blank is on the table on Saturday (S4.02) and in her look (S4.07, moved).",
+   "src_s": 1.6,
+   "src_frame": "OVERHEAD · her desk",
+   "lines": []
+  },
+  {
+   "id": "S3.03",
+   "action": "keep",
+   "scene": 45,
+   "mode": "CONVERSATION",
+   "pace": "weighted",
+   "est_s": 5.5,
+   "frame": "SCREEN · the blog, in its own UI",
+   "camera": "SCREEN · the blog, in its own UI",
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
+   "caption": "Her laptop: the NopeAI blog in its own UI, the post whole on the page, held to read its two sentences: \"…he was not consistently candid in his communications with the board… The board no longer has confidence in his ability to continue leading NopeAI.\" She clicks Post, on a tick.",
+   "picture": "Her laptop: the NopeAI blog in its own UI, the post whole on the page, held to read its two sentences: \"…he was not consistently candid in his communications with the board… The board no longer has confidence in his ability to continue leading NopeAI.\" She clicks Post, on a tick.",
+   "fix": [
+    "C12"
+   ],
+   "why": "12A: a shorter hold (5.5 s reads both sentences).",
+   "src_s": 9.0,
+   "src_frame": "SCREEN · the blog, in its own UI",
+   "lines": [
+    {
+     "id": "a5-27-08",
+     "keep": false,
+     "who": "neleh",
+     "text": "Any objections?",
+     "why": "12A: \"Any objections?\" goes"
+    }
+   ]
+  },
+  {
+   "id": "S3.04",
+   "action": "keep",
+   "scene": 46,
+   "mode": "CONVERSATION",
+   "pace": "quick",
+   "est_s": 9.88,
+   "frame": "OTS · over Neleh onto the grid (held)",
+   "camera": "OTS · over Neleh onto the grid (held)",
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
+   "tempo": {
+    "pace": "quick",
+    "gaps": {
+     "a5-27-13": 0.25,
+     "a5-27-14": 0.25,
+     "a5-27-15": 0.25
+    },
+    "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+   },
+   "picture": "see caption",
+   "fix": [
+    "PACE"
+   ],
+   "why": "",
+   "src_s": 10.83,
+   "src_frame": "OTS · over Neleh onto the grid (held)",
+   "lines": [
+    {
+     "id": "v32-a4-0001",
+     "keep": true
+    },
+    {
+     "id": "a5-27-13",
+     "keep": true,
+     "at": "after:v32-a4-0001+0.25"
+    },
+    {
+     "id": "a5-27-14",
+     "keep": true,
+     "at": "after:a5-27-13+0.25"
+    },
+    {
+     "id": "a5-27-15",
+     "keep": true,
+     "at": "after:a5-27-14+0.25"
+    }
+   ]
+  },
+  {
+   "id": "S3.04b",
+   "action": "keep",
+   "scene": 46,
+   "mode": "CONVERSATION",
+   "pace": "quick",
+   "est_s": 3.01,
+   "frame": "SINGLE · MCU Neleh, one brow up",
+   "camera": "SINGLE · MCU Neleh, one brow up",
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
+   "jcut": [
+    {
+     "sound": "the all-hands crowd's hush (no line: the line waits a beat, S3.06)",
+     "lead_s": 0.6
+    }
+   ],
+   "tempo": {
+    "pace": "quick",
+    "gaps": {
+     "v31-a4-0003": 0.25
+    },
+    "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+   },
+   "picture": "see caption",
+   "fix": [
+    "PACE",
+    "TR"
+   ],
+   "why": "",
+   "src_s": 3.263,
+   "src_frame": "SINGLE · MCU Neleh, one brow up",
+   "lines": [
+    {
+     "id": "a5-27-16",
+     "keep": true
+    },
+    {
+     "id": "v31-a4-0003",
+     "keep": true,
+     "at": "after:a5-27-16+0.25"
+    }
+   ]
+  },
+  {
+   "id": "S3.06",
+   "action": "keep",
+   "scene": 46,
+   "mode": "CONVERSATION",
+   "pace": "quick",
+   "est_s": 3.96,
+   "frame": "WIDE · the all-hands, from the back",
+   "camera": "WIDE · the all-hands, from the back",
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
+   "caption": "The all-hands, from the back of the crowd: over the tiled heads, ALYI in the doorway. One beat of silence: the staff's shock, held on their backs and one turned face. Then one tiled employee on her feet: \"Is this a coup? Because it looks like one.\"",
+   "picture": "The staff's beat: one second, nobody moves, the hush. Then her hand goes up with the line.",
+   "fix": [
+    "NEW",
+    "TR"
+   ],
+   "why": "Sc 46: the staff's shock, one beat of silence, before the question.",
+   "src_s": 2.358,
+   "src_frame": "WIDE · the all-hands, from the back",
+   "lines": [
+    {
+     "id": "a5-27-18",
+     "keep": true,
+     "at": "start+1.0"
+    }
+   ]
+  },
+  {
+   "id": "S3.07",
+   "action": "keep",
+   "scene": 46,
+   "mode": "CONVERSATION",
+   "pace": "quick",
+   "est_s": 10.84,
+   "frame": "SINGLE · MCU Alyi in the doorway (held)",
+   "camera": "SINGLE · MCU Alyi in the doorway (held)",
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 10.84,
+   "src_frame": "SINGLE · MCU Alyi in the doorway (held)",
+   "lines": [
+    {
+     "id": "a5-27-19",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "S3.05",
+   "action": "keep",
+   "scene": 46,
+   "mode": "CONVERSATION",
+   "pace": "quick",
+   "est_s": 5.5,
+   "frame": "SCREEN · her laptop, evening",
+   "camera": "SCREEN · her laptop, evening",
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
+   "caption": "Her laptop, evening: Gerg's post arrives as the call's own notification, …i quit., and keycaps rain across the grid. Alyi, in his tile, looking at his own doorway: \"Gerg has never waited to be asked.\"",
+   "picture": "Her laptop, evening: Gerg's post arrives as the call's own notification, …i quit., and keycaps rain across the grid. Alyi, in his tile, looking at his own doorway: \"Gerg has never waited to be asked.\"",
+   "fix": [
+    "C6",
+    "KEEP"
+   ],
+   "why": "Choice 6A: Alyi's line stays (the ledger's keep list), alone.",
+   "src_s": 10.1,
+   "src_frame": "SCREEN · her laptop, evening",
+   "lines": [
+    {
+     "id": "a5-27-20",
+     "keep": false,
+     "who": "neleh",
+     "text": "Nobody asked him to go. He'd have kept his job, just not the chair.",
+     "why": "C6: \"Nobody asked him to go…\" is cut; the war room already tells it"
+    },
+    {
+     "id": "a5-27-21",
+     "keep": true,
+     "at": "start+2.2"
+    }
+   ]
+  },
+  {
+   "id": "S4.01",
+   "action": "cut",
+   "scene": 47,
+   "mode": "CONVERSATION",
+   "pace": "quick",
+   "est_s": 0.0,
+   "frame": "SCREEN · the boardroom's wall screen",
+   "camera": "SCREEN · the boardroom's wall screen",
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
+   "picture": "see caption",
+   "fix": [
+    "C12"
+   ],
+   "why": "12A: the eulogy post card and the wall screen go.",
+   "src_s": 4.792,
+   "src_frame": "SCREEN · the boardroom's wall screen",
+   "lines": []
+  },
+  {
+   "id": "S4.02",
+   "action": "keep",
+   "scene": 47,
+   "mode": "CONVERSATION",
+   "pace": "quick",
+   "est_s": 9.0,
+   "frame": "WIDE · the boardroom at night (held)",
+   "camera": "WIDE · the boardroom at night (held)",
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
+   "caption": "The boardroom at night, the blueprint on the table: steps 1–3 ticked, step 4 a blank line. Four phones buzz and step toward the edge: STAFF · STAFF · INVESTORS · STAFF. NELEH, with a marker: \"They're all asking whether it was allowed. It was. The charter, footnote three. I've read it four times tonight.\" The first phone goes over the edge: clack. Nobody picks it up.",
+   "picture": "Step 4's blank line visible on the table (it's the one Neleh looks at after Tasya's statement). The push to her MCU is dropped with the second speech.",
+   "onscreen": {
+    "add": [
+     "RAIL: NOV 18"
+    ]
+   },
+   "fix": [
+    "C12"
+   ],
+   "why": "12A: footnote three stays (the keep list); the rail moves here from the cut S4.01.",
+   "src_s": 17.4,
+   "src_frame": "WIDE · the boardroom at night (held)",
+   "lines": [
+    {
+     "id": "a5-27-22",
+     "keep": true
+    },
+    {
+     "id": "a5-27-23",
+     "keep": false,
+     "who": "neleh",
+     "text": "What they actually want to know is what happens on Monday. I'd like to be able to tell them something.",
+     "why": "12A: \"What they actually want to know…\" goes"
+    }
+   ]
+  },
+  {
+   "id": "S4.08",
+   "action": "keep",
+   "scene": 47,
+   "mode": "CONVERSATION",
+   "pace": "quick",
+   "est_s": 17.44,
+   "frame": "SPLIT · both calls, one held shot",
+   "camera": "SPLIT · both calls, one held shot",
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
+   "caption": "The meanwhile split: LEFT, the speakerphone, NELEH and MADA leaning in, four dial tones pre-lapped under the cut; RIGHT, the lighthouse, MARIO picks up the phone with a small throne on it. \"Mario, it's Neleh…\" / \"Eleven pages…\" / ADELINA: \"In plain English: no.\" Click. The dial tone, briefly.",
+   "tempo": {
+    "pace": "quick",
+    "gaps": {
+     "a5-27-31": 0.25
+    },
+    "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
+    "note": "Adelina's overlap stays"
+   },
+   "picture": "The meanwhile split: LEFT, the speakerphone, NELEH and MADA leaning in, four dial tones pre-lapped under the cut; RIGHT, the lighthouse, MARIO picks up the phone with a small throne on it. \"Mario, it's Neleh…\" / \"Eleven pages…\" / ADELINA: \"In plain English: no.\" Click. The dial tone, briefly.",
+   "fix": [
+    "PACE",
+    "C12"
+   ],
+   "why": "",
+   "src_s": 18.792,
+   "src_frame": "SPLIT · both calls, one held shot",
+   "lines": [
+    {
+     "id": "v31-a4-0017",
+     "keep": true
+    },
+    {
+     "id": "a5-27-31",
+     "keep": true,
+     "at": "after:v31-a4-0017+0.25"
+    },
+    {
+     "id": "a5-27-32",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "v32-S5.00",
+   "action": "keep",
+   "scene": 48,
+   "mode": "INSERT + DOCUMENT",
+   "pace": "normal",
+   "est_s": 8.0,
+   "frame": "MCU → CCTV · at his shoulder in the lobby by day, then out into their camera's frame",
+   "camera": "MCU → CCTV · at his shoulder in the lobby by day, then out into their camera's frame",
+   "music": "none: the lobby's room; one felt note on his look up; PROCEDURE resumes under S4.09",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 8.0,
+   "src_frame": "MCU → CCTV · at his shoulder in the lobby by day, then out into their camera's frame",
+   "lines": []
+  },
+  {
+   "id": "S4.09",
+   "action": "keep",
+   "scene": 49,
+   "mode": "CONVERSATION",
+   "pace": "quick",
+   "est_s": 10.24,
+   "frame": "OTS · over Neleh onto the lobby camera",
+   "camera": "OTS · over Neleh onto the lobby camera",
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
+   "tempo": {
+    "pace": "quick",
+    "gaps": {
+     "a5-27-36": 0.25,
+     "a5-27-37": 0.25
+    },
+    "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
+    "note": "head 1.2 → 0.8 s (12A: shorter holds)"
+   },
+   "picture": "see caption",
+   "fix": [
+    "PACE",
+    "C12"
+   ],
+   "why": "",
+   "src_s": 11.337,
+   "src_frame": "OTS · over Neleh onto the lobby camera",
+   "lines": [
+    {
+     "id": "v31-a4-0005",
+     "keep": true,
+     "at": "start+0.8"
+    },
+    {
+     "id": "a5-27-36",
+     "keep": true,
+     "at": "after:v31-a4-0005+0.25"
+    },
+    {
+     "id": "a5-27-37",
+     "keep": true,
+     "at": "after:a5-27-36+0.25"
+    }
+   ]
+  },
+  {
+   "id": "S4.10",
+   "action": "cut",
+   "scene": 49,
+   "mode": "CONVERSATION",
+   "pace": "quick",
+   "est_s": 0.0,
+   "frame": "WIDE · the boardroom, now night",
+   "camera": "WIDE · the boardroom, now night",
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
+   "picture": "see caption",
+   "fix": [
+    "C12"
+   ],
+   "why": "12A: \"the boardroom, now night\" goes; Ttemme's card and CHAT: LIVE plate move to S4.10b's head.",
+   "src_s": 4.3,
+   "src_frame": "WIDE · the boardroom, now night",
+   "lines": []
+  },
+  {
+   "id": "S4.10b",
+   "action": "keep",
+   "scene": 49,
+   "mode": "CONVERSATION",
+   "pace": "quick",
+   "est_s": 14.05,
+   "frame": "TWO-SHOT · Neleh and Ttemme across the table (held)",
+   "camera": "TWO-SHOT · Neleh and Ttemme across the table (held)",
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
+   "caption": "The spotlight swings off Rima's tile on the wall (its label steps back to RIMA TAMURI · CTO) onto TTEMME in the CEO chair, hoodie and headset, his stream's CHAT: LIVE panel at his elbow; the card rides the landing. \"Ttemme, we'd like you to serve as interim CEO.\" / \"You already have an interim CEO.\" / \"We'd like a different one.\" / \"Fine. But before I say yes, I need to know why you fired him.\" The sealed folder; he turns the page toward us: its back is blank (the business 1.0 s tighter).",
+   "onscreen": {
+    "add": [
+     "TTEMME / INTERIM CEO, TAKE TWO · CHAT: LIVE",
+     "RIMA TAMURI · CTO"
+    ]
+   },
+   "tempo": {
+    "pace": "quick",
+    "gaps": {
+     "a5-27-39": 0.25,
+     "a5-27-40": 0.25,
+     "a5-27-41": 0.25
+    },
+    "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+   },
+   "picture": "The spotlight swings off Rima's tile on the wall (its label steps back to RIMA TAMURI · CTO) onto TTEMME in the CEO chair, hoodie and headset, his stream's CHAT: LIVE panel at his elbow; the card rides the landing. \"Ttemme, we'd like you to serve as interim CEO.\" / \"You already have an interim CEO.\" / \"We'd like a different one.\" / \"Fine. But before I say yes, I need to know why you fired him.\" The sealed folder; he turns the page toward us: its back is blank (the business 1.0 s tighter).",
+   "fix": [
+    "C12",
+    "KEEP",
+    "PACE"
+   ],
+   "why": "12A: Ttemme, \"We'd like a different one.\" and the blank page stay; his card and CHAT: LIVE plate move here from the cut S4.10.",
+   "src_s": 15.2,
+   "src_frame": "TWO-SHOT · Neleh and Ttemme across the table (held)",
+   "lines": [
+    {
+     "id": "a5-27-38",
+     "keep": true,
+     "at": "start+0.8"
+    },
+    {
+     "id": "a5-27-39",
+     "keep": true,
+     "at": "after:a5-27-38+0.25"
+    },
+    {
+     "id": "a5-27-40",
+     "keep": true,
+     "at": "after:a5-27-39+0.25"
+    },
+    {
+     "id": "a5-27-41",
+     "keep": true,
+     "at": "after:a5-27-40+0.25"
+    }
+   ]
+  },
+  {
+   "id": "S4.11",
+   "action": "keep",
+   "scene": 49,
+   "mode": "CONVERSATION",
+   "pace": "quick",
+   "est_s": 1.995,
+   "frame": "LOW · desk level, the hourglass",
+   "camera": "LOW · desk level, the hourglass",
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
+   "caption": "Desk level: Ttemme sets the hourglass down and flips it; the sand starts, one pixel a beat. His chat panel beside it, LIVE, quiet.",
+   "onscreen": {
+    "drop": [
+     "LIVE · CHAT:  F  F  F  F"
+    ]
+   },
+   "picture": "Desk level: Ttemme sets the hourglass down and flips it; the sand starts, one pixel a beat. His chat panel beside it, LIVE, quiet.",
+   "fix": [
+    "C12",
+    "KEEP"
+   ],
+   "why": "12A: the hourglass turning stays (Tuesday's fixed-length hourglass needs it); the F F F F chat goes.",
+   "src_s": 1.995,
+   "src_frame": "LOW · desk level, the hourglass",
+   "lines": []
+  },
+  {
+   "id": "S4.12",
+   "action": "merge",
+   "scene": 49,
+   "mode": "CONVERSATION",
+   "pace": "quick",
+   "est_s": 0.0,
+   "frame": "TWO-SHOT · Neleh and Mada",
+   "camera": "TWO-SHOT · Neleh and Mada",
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
+   "into": "S4.13",
+   "picture": "see caption",
+   "fix": [
+    "C12"
+   ],
+   "why": "12A: its reaction hold goes; the slate step, the new door and the rail NOV 19 · ~11:53 PM PT open S4.13.",
+   "src_s": 2.917,
+   "src_frame": "TWO-SHOT · Neleh and Mada",
+   "lines": []
+  },
+  {
+   "id": "S4.13",
+   "action": "keep",
+   "scene": 49,
+   "mode": "CONVERSATION",
+   "pace": "quick",
+   "est_s": 6.25,
+   "frame": "SINGLE · MCU Tasya in the new doorway",
+   "camera": "SINGLE · MCU Tasya in the new doorway",
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
+   "caption": "The boardroom wall steps one palette step to MACROSOFT slate; a door appears in it and opens (rail NOV 19 · ~11:53 PM PT). TASYA in the new doorway, key ring jangling: \"Good evening. You'll want to hear our statement.\" He reads from his phone; the line crosses the cut.",
+   "onscreen": {
+    "add": [
+     "RAIL: NOV 19 · ~11:53 PM PT"
+    ]
+   },
+   "picture": "The boardroom wall steps one palette step to MACROSOFT slate; a door appears in it and opens (rail NOV 19 · ~11:53 PM PT). TASYA in the new doorway, key ring jangling: \"Good evening. You'll want to hear our statement.\" He reads from his phone; the line crosses the cut.",
+   "fix": [
+    "C12"
+   ],
+   "why": "",
+   "src_s": 5.7,
+   "src_frame": "SINGLE · MCU Tasya in the new doorway",
+   "lines": [
+    {
+     "id": "a5-27-44",
+     "keep": true,
+     "at": "start+2.4"
+    },
+    {
+     "id": "v3-a4-0001",
+     "keep": true,
+     "at": "after:a5-27-44+0.35"
+    }
+   ]
+  },
+  {
+   "id": "S4.13d",
+   "action": "keep",
+   "scene": 49,
+   "mode": "CONVERSATION",
+   "pace": "quick",
+   "est_s": 8.6,
+   "frame": "TWO-SHOT · Neleh and Alyi's reflection",
+   "camera": "TWO-SHOT · Neleh and Alyi's reflection",
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
+   "caption": "On \"Mas Manalt and Gerg Mockbran\": NELEH and ALYI's reflection in the wall screen's glass, the slate door beyond. Neleh's pen stops. The statement ends; no hold after it.",
+   "picture": "On \"Mas Manalt and Gerg Mockbran\": NELEH and ALYI's reflection in the wall screen's glass, the slate door beyond. Neleh's pen stops. The statement ends; no hold after it.",
+   "fix": [
+    "C12"
+   ],
+   "why": "12A: shorter reaction holds; the statement's tail (it ran into S4.13e) ends here.",
+   "src_s": 7.417,
+   "src_frame": "TWO-SHOT · Neleh and Alyi's reflection",
+   "lines": []
+  },
+  {
+   "id": "S4.13e",
+   "action": "cut",
+   "scene": 49,
+   "mode": "CONVERSATION",
+   "pace": "quick",
+   "est_s": 0.0,
+   "frame": "SINGLE · MCU Tasya lifts the sign",
+   "camera": "SINGLE · MCU Tasya lifts the sign",
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
+   "picture": "see caption",
+   "fix": [
+    "C12"
+   ],
+   "why": "12A: Tasya's sign goes (the S5.11 door keeps its own).",
+   "src_s": 3.0,
+   "src_frame": "SINGLE · MCU Tasya lifts the sign",
+   "lines": []
+  },
+  {
+   "id": "S4.14",
+   "action": "cut",
+   "scene": 49,
+   "mode": "CONVERSATION",
+   "pace": "quick",
+   "est_s": 0.0,
+   "frame": "OVERHEAD · the blueprint",
+   "camera": "OVERHEAD · the blueprint",
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
+   "picture": "see caption",
+   "fix": [
+    "C12"
+   ],
+   "why": "12A: \"Step four, Mada?\" goes; Neleh's look (S4.07, moved) replaces it.",
+   "src_s": 2.788,
+   "src_frame": "OVERHEAD · the blueprint",
+   "lines": [
+    {
+     "id": "v31-a4-0006",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "S4.15",
+   "action": "cut",
+   "scene": 49,
+   "mode": "CONVERSATION",
+   "pace": "quick",
+   "est_s": 0.0,
+   "frame": "SINGLE · MCU Mada",
+   "camera": "SINGLE · MCU Mada",
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
+   "picture": "see caption",
+   "fix": [
+    "C12"
+   ],
+   "why": "12A: Mada's held note goes; the bridge is Alyi alone (sc 49A).",
+   "src_s": 2.5,
+   "src_frame": "SINGLE · MCU Mada",
+   "lines": []
+  },
+  {
+   "id": "S4.07",
+   "action": "keep",
+   "scene": 49,
+   "mode": "CONVERSATION",
+   "pace": "quick",
+   "est_s": 3.0,
+   "moved": {
+    "from": "after S4.02 (v3.4)",
+    "to": "after S4.13d",
+    "why": "after S4.13d: Neleh's look at the blank line, after Tasya's statement (12A amended)"
+   },
+   "frame": "SINGLE · MCU Neleh (her real face)",
+   "camera": "SINGLE · MCU Neleh (her real face)",
+   "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
+   "caption": "NELEH, the boardroom stepping down behind her, the slate door still open behind the table. She looks at the blank line of step 4. It isn't a joke: her real face. (Face light, one step.)",
+   "picture": "Moved here: after Tasya's statement, where step four being blank hurts most. No speakerphone, no dial.",
+   "fix": [
+    "C12",
+    "KEEP"
+   ],
+   "why": "Neleh's look at the blank line (the keep list), moved to after the statement; it replaces \"Step four, Mada?\" and bridges to Alyi alone.",
+   "src_s": 5.0,
+   "src_frame": "SINGLE · MCU Neleh (her real face)",
+   "lines": [
+    {
+     "id": "a5-27-29",
+     "keep": false,
+     "who": "neleh",
+     "text": "Then we'll write step four ourselves.",
+     "why": "12A: \"Then we'll write step four ourselves.\" goes; her look stays"
+    }
+   ]
+  },
+  {
+   "id": "v35-49A.01",
+   "action": "new",
+   "after": "S4.07",
+   "scene": "49A",
+   "mode": "INSERT (wordless)",
+   "pace": "normal",
+   "est_s": 5.0,
+   "frame": "WIDE → MCU · Alyi alone in the bullpen at night",
+   "camera": "WIDE → MCU · Alyi alone in the bullpen at night",
+   "set": "bullpen",
+   "room": "bullpen-night",
+   "chars": [
+    "alyi"
+   ],
+   "lines": [],
+   "caption": "The bullpen at night, full of packed boxes. ALYI alone, his phone in his hand: hearts keep landing on RIMA's post, \"NopeAI is nothing without its people\". On the window, Act One's users line, off the top of the glass. He puts a hand near it, not on it.",
+   "picture": "In person (not a reflection). The boxes are the staff's (for the landlord's building). The line on the glass is sc 18's. No family; nothing about his vote.",
+   "onscreen": {
+    "add": [
+     "RAIL: NOV 20, 2023 · ~2:06 AM PT",
+     "RIMA: “NopeAI is nothing without its people”"
+    ]
+   },
+   "music": "no score; the bullpen's night air; the hearts' soft ticks",
+   "lcut": [
+    {
+     "sound": "the hearts' soft ticks carry across to Mas's phone",
+     "over_s": 0.4
+    }
+   ],
+   "fix": [
+    "NEW",
+    "C10",
+    "TR"
+   ],
+   "why": "Sc 49A: the company he built is emptying, and he did it. The cause, shown; his own words come at sc 53. [P · Nov 20, 2023, 2:06 AM PT (facts L11)]"
+  },
+  {
+   "id": "S5.03",
+   "action": "keep",
+   "scene": 50,
+   "mode": "CONVERSATION (a call) + DOCUMENT",
+   "pace": "quick",
+   "est_s": 2.5,
+   "moved": {
+    "from": "after S5.02 (v3.4)",
+    "to": "after v35-49A.01",
+    "why": "before S5.02: the hearts first, so the match from Alyi's phone lands on Mas's phone"
+   },
+   "frame": "INSERT · his phone and thumb",
+   "camera": "INSERT · his phone and thumb",
+   "music": "2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door",
+   "caption": "MATCH, from Alyi's phone: the same hearts, now on Mas's phone, face-up by his glass. RIMA's post, \"NopeAI is nothing without its people\", and the same words from other avatars, climbing. His thumb taps a heart on the downbeat. Tick. No voice.",
+   "picture": "The heart counter climbs (a blur, no figure called out). The rail rides the match.",
+   "onscreen": {
+    "add": [
+     "RAIL: NOV 20, 2023 · ~2:06 AM PT"
+    ]
+   },
+   "fix": [
+    "C12",
+    "TR"
+   ],
+   "why": "The hearts stay (2.5 s, no voice); the count goes.",
+   "src_s": 5.85,
+   "src_frame": "INSERT · his phone and thumb",
+   "lines": [
+    {
+     "id": "v3-vo-20",
+     "keep": false,
+     "who": "mas",
+     "text": "four hundred and six. four hundred and seven. four hundred and six.",
+     "vo": true,
+     "why": "12A: the 2 AM count is cut; the war room's count carries the device"
+    }
+   ]
+  },
+  {
+   "id": "S5.02",
+   "action": "keep",
+   "scene": 50,
+   "mode": "CONVERSATION (a call) + DOCUMENT",
+   "pace": "quick",
+   "est_s": 3.0,
+   "frame": "INSERT · the home shot: glass and lanyard",
+   "camera": "INSERT · the home shot: glass and lanyard",
+   "music": "2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door",
+   "caption": "The home shot: the glass on the dark-room desk, its water line one flat row of pixels, the GUEST lanyard laid square beside it, the phone still lighting with hearts.",
+   "onscreen": {
+    "drop": [
+     "RAIL: NOV 20, 2023 · ~2:06 AM PT"
+    ]
+   },
+   "picture": "The home shot: the glass on the dark-room desk, its water line one flat row of pixels, the GUEST lanyard laid square beside it, the phone still lighting with hearts.",
+   "fix": [
+    "TR"
+   ],
+   "why": "Moved after the hearts, so the match from Alyi's phone lands on Mas's phone.",
+   "src_s": 4.5,
+   "src_frame": "INSERT · the home shot: glass and lanyard",
+   "lines": []
+  },
+  {
+   "id": "S5.04",
+   "action": "keep",
+   "scene": 50,
+   "mode": "CONVERSATION (a call) + DOCUMENT",
+   "pace": "quick",
+   "est_s": 2.958,
+   "frame": "TWO-SHOT · Mas and the Orb",
+   "camera": "TWO-SHOT · Mas and the Orb",
+   "music": "2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 2.958,
+   "src_frame": "TWO-SHOT · Mas and the Orb",
+   "lines": [
+    {
+     "id": "a5-29-01",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "S5.05",
+   "action": "keep",
+   "scene": 50,
+   "mode": "CONVERSATION (a call) + DOCUMENT",
+   "pace": "quick",
+   "est_s": 2.292,
+   "frame": "SINGLE · MCU Mas",
+   "camera": "SINGLE · MCU Mas",
+   "music": "2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 2.292,
+   "src_frame": "SINGLE · MCU Mas",
+   "lines": [
+    {
+     "id": "a5-29-02",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "S5.09",
+   "action": "keep",
+   "scene": 50,
+   "mode": "CONVERSATION (a call) + DOCUMENT",
+   "pace": "quick",
+   "est_s": 12.33,
+   "frame": "OTS · over Mas onto the monitor, Gerg's tile big",
+   "camera": "OTS · over Mas onto the monitor, Gerg's tile big",
+   "music": "2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door",
+   "tempo": {
+    "pace": "quick",
+    "gaps": {
+     "v31-a4-0007": 0.25,
+     "v31-a4-0008": 0.45
+    },
+    "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
+    "note": "\"His keys stop, for half a beat\" (0.81 s) stays"
+   },
+   "picture": "see caption",
+   "fix": [
+    "C12",
+    "PACE"
+   ],
+   "why": "",
+   "src_s": 14.063,
+   "src_frame": "OTS · over Mas onto the monitor, Gerg's tile big",
+   "lines": [
+    {
+     "id": "v34-vo-09",
+     "keep": false,
+     "who": "mas",
+     "text": "gerg walked out for me.",
+     "vo": true,
+     "why": "12A: \"gerg walked out for me.\" is cut (the war room shows it)"
+    },
+    {
+     "id": "a5-29-03",
+     "keep": true,
+     "at": "start+0.8"
+    },
+    {
+     "id": "a5-29-04",
+     "keep": true
+    },
+    {
+     "id": "v31-a4-0007",
+     "keep": true,
+     "at": "after:a5-29-04+0.25"
+    },
+    {
+     "id": "v31-a4-0008",
+     "keep": true,
+     "at": "after:v31-a4-0007+0.45"
+    },
+    {
+     "id": "v31-a4-0009",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "S5.06",
+   "action": "keep",
+   "scene": 50,
+   "mode": "CONVERSATION (a call) + DOCUMENT",
+   "pace": "quick",
+   "est_s": 22.49,
+   "frame": "POV · his monitor: the letter, one page, a slow scroll",
+   "camera": "POV · his monitor: the letter, one page, a slow scroll",
+   "music": "2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door",
+   "tempo": {
+    "pace": "quick",
+    "gaps": {
+     "a5-29-10": 0.45,
+     "a5-29-11": 0.25
+    },
+    "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
+    "note": "the scroll to Alyi's name (1.6 s) stays"
+   },
+   "picture": "see caption",
+   "fix": [
+    "PACE"
+   ],
+   "why": "",
+   "src_s": 22.792,
+   "src_frame": "POV · his monitor: the letter, one page, a slow scroll",
+   "lines": [
+    {
+     "id": "a5-29-06",
+     "keep": true
+    },
+    {
+     "id": "a5-29-07",
+     "keep": true
+    },
+    {
+     "id": "a5-29-08",
+     "keep": true
+    },
+    {
+     "id": "a5-29-09",
+     "keep": true
+    },
+    {
+     "id": "a5-29-10",
+     "keep": true,
+     "at": "after:a5-29-09+0.45"
+    },
+    {
+     "id": "a5-29-11",
+     "keep": true,
+     "at": "after:a5-29-10+0.25"
+    },
+    {
+     "id": "a5-29-12",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "S5.07b",
+   "action": "keep",
+   "scene": 50,
+   "mode": "CONVERSATION (a call) + DOCUMENT",
+   "pace": "quick",
+   "est_s": 6.0,
+   "frame": "SINGLE · MCU Mas, the monitor's light",
+   "camera": "SINGLE · MCU Mas, the monitor's light",
+   "music": "2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 6.0,
+   "src_frame": "SINGLE · MCU Mas, the monitor's light",
+   "lines": [
+    {
+     "id": "a5-29-13",
+     "keep": true
+    },
+    {
+     "id": "a5-29-14",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "S5.08",
+   "action": "keep",
+   "scene": 50,
+   "mode": "CONVERSATION (a call) + DOCUMENT",
+   "pace": "quick",
+   "est_s": 5.83,
+   "frame": "INSERT · the check",
+   "camera": "INSERT · the check",
+   "music": "2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 5.83,
+   "src_frame": "INSERT · the check",
+   "lines": [
+    {
+     "id": "v31-a4-0010",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "S5.09-back",
+   "action": "keep",
+   "scene": 50,
+   "mode": "CONVERSATION (a call) + DOCUMENT",
+   "pace": "quick",
+   "est_s": 5.25,
+   "frame": "OTS · back over Mas onto the monitor",
+   "camera": "OTS · back over Mas onto the monitor",
+   "music": "2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door",
+   "tempo": {
+    "pace": "quick",
+    "gaps": {
+     "a5-29-17": 0.25
+    },
+    "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+   },
+   "picture": "see caption",
+   "fix": [
+    "PACE"
+   ],
+   "why": "",
+   "src_s": 5.4,
+   "src_frame": "OTS · back over Mas onto the monitor",
+   "lines": [
+    {
+     "id": "a5-29-16",
+     "keep": true
+    },
+    {
+     "id": "a5-29-17",
+     "keep": true,
+     "at": "after:a5-29-16+0.25"
+    }
+   ]
+  },
+  {
+   "id": "S5.09b",
+   "action": "keep",
+   "scene": 50,
+   "mode": "CONVERSATION (a call) + DOCUMENT",
+   "pace": "quick",
+   "est_s": 6.043,
+   "frame": "POV · cut-in: Gerg's tile fills the monitor",
+   "camera": "POV · cut-in: Gerg's tile fills the monitor",
+   "music": "2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 6.043,
+   "src_frame": "POV · cut-in: Gerg's tile fills the monitor",
+   "lines": [
+    {
+     "id": "a5-29-18",
+     "keep": true
+    },
+    {
+     "id": "v31-a4-0011",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "S5.11",
+   "action": "keep",
+   "scene": 51,
+   "mode": "CONVERSATION",
+   "pace": "quick",
+   "est_s": 14.85,
+   "frame": "TWO-SHOT · the back wall; the slate door rises",
+   "camera": "TWO-SHOT · the back wall; the slate door rises",
+   "music": "2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door",
+   "tempo": {
+    "pace": "quick",
+    "gaps": {
+     "a5-29-21": 0.45,
+     "a5-29-22": 0.25,
+     "v31-a4-0013": 0.25
+    },
+    "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
+    "note": "the door's crack on \"desk\" (1.2 s) stays"
+   },
+   "picture": "see caption",
+   "fix": [
+    "PACE"
+   ],
+   "why": "",
+   "src_s": 15.6,
+   "src_frame": "TWO-SHOT · the back wall; the slate door rises",
+   "lines": [
+    {
+     "id": "a5-29-20",
+     "keep": true
+    },
+    {
+     "id": "a5-29-21",
+     "keep": true,
+     "at": "after:a5-29-20+0.45"
+    },
+    {
+     "id": "a5-29-22",
+     "keep": true,
+     "at": "after:a5-29-21+0.25"
+    },
+    {
+     "id": "v31-a4-0012",
+     "keep": true
+    },
+    {
+     "id": "v31-a4-0013",
+     "keep": true,
+     "at": "after:v31-a4-0012+0.25"
+    }
+   ]
+  },
+  {
+   "id": "S5.12",
+   "action": "keep",
+   "scene": 51,
+   "mode": "CONVERSATION",
+   "pace": "quick",
+   "est_s": 5.5,
+   "frame": "SINGLE · MCU Mas, the door soft behind",
+   "camera": "SINGLE · MCU Mas, the door soft behind",
+   "music": "2 AM · warm, loyal, funny · the Build and felt piano in major over the dark room's pedal; ring-out on Gerg's look; Tasya's Rhodes on the door",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 5.5,
+   "src_frame": "SINGLE · MCU Mas, the door soft behind",
+   "lines": [
+    {
+     "id": "a5-29-23",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "S6.01",
+   "action": "keep",
+   "scene": 52,
+   "mode": "QUICK-CUT (tiles leaving)",
+   "pace": "normal",
+   "est_s": 2.3,
+   "frame": "POV · the board grid (locked)",
+   "camera": "POV · the board grid (locked)",
+   "music": "THE AVALANCHE · the one full band · SET-PIECE SWING, dead stop on Mada's label; +2-3 LU (mood §4 #3, the mix)",
+   "picture": "see caption",
+   "fix": [
+    "C12"
+   ],
+   "why": "The quicker board exit (the lead's extra): the grid fills in 2.3 s.",
+   "src_s": 4.5,
+   "src_frame": "POV · the board grid (locked)",
+   "lines": []
+  },
+  {
+   "id": "S6.02",
+   "action": "keep",
+   "scene": 52,
+   "mode": "QUICK-CUT (tiles leaving)",
+   "pace": "normal",
+   "est_s": 1.0,
+   "frame": "SINGLE · MCU Mas watching",
+   "camera": "SINGLE · MCU Mas watching",
+   "music": "THE AVALANCHE · the one full band · SET-PIECE SWING, dead stop on Mada's label; +2-3 LU (mood §4 #3, the mix)",
+   "picture": "see caption",
+   "fix": [
+    "C12"
+   ],
+   "why": "",
+   "src_s": 1.5,
+   "src_frame": "SINGLE · MCU Mas watching",
+   "lines": []
+  },
+  {
+   "id": "S6.03",
+   "action": "keep",
+   "scene": 52,
+   "mode": "QUICK-CUT (tiles leaving)",
+   "pace": "normal",
+   "est_s": 1.2,
+   "frame": "POV · Alyi's tile, half frame",
+   "camera": "POV · Alyi's tile, half frame",
+   "music": "THE AVALANCHE · the one full band · SET-PIECE SWING, dead stop on Mada's label; +2-3 LU (mood §4 #3, the mix)",
+   "picture": "see caption",
+   "fix": [
+    "C12"
+   ],
+   "why": "",
+   "src_s": 1.917,
+   "src_frame": "POV · Alyi's tile, half frame",
+   "lines": []
+  },
+  {
+   "id": "S6.04",
+   "action": "keep",
+   "scene": 52,
+   "mode": "QUICK-CUT (tiles leaving)",
+   "pace": "normal",
+   "est_s": 1.6,
+   "frame": "POV · Neleh's tile, half frame",
+   "camera": "POV · Neleh's tile, half frame",
+   "music": "THE AVALANCHE · the one full band · SET-PIECE SWING, dead stop on Mada's label; +2-3 LU (mood §4 #3, the mix)",
+   "picture": "see caption",
+   "fix": [
+    "C12"
+   ],
+   "why": "",
+   "src_s": 1.958,
+   "src_frame": "POV · Neleh's tile, half frame",
+   "lines": [
+    {
+     "id": "a5-29-24",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "S6.06",
+   "action": "keep",
+   "scene": 52,
+   "mode": "QUICK-CUT (tiles leaving)",
+   "pace": "normal",
+   "est_s": 2.9,
+   "frame": "POV · the last gap: Mada",
+   "camera": "POV · the last gap: Mada",
+   "music": "THE AVALANCHE · the one full band · SET-PIECE SWING, dead stop on Mada's label; +2-3 LU (mood §4 #3, the mix)",
+   "caption": "THE QUIET VOTE's black tile is pushed out without a sound. In the last gap, MADA's tile, wedged in; every tile presses; he doesn't move. His label flips, and the band stops dead on it: MADA · LAST FIRER STANDING. A short hold on the dark room's air.",
+   "picture": "THE QUIET VOTE's black tile is pushed out without a sound. In the last gap, MADA's tile, wedged in; every tile presses; he doesn't move. His label flips, and the band stops dead on it: MADA · LAST FIRER STANDING. A short hold on the dark room's air.",
+   "fix": [
+    "C12"
+   ],
+   "why": "The board leaves the call in about 9 s.",
+   "src_s": 6.25,
+   "src_frame": "POV · the last gap: Mada",
+   "lines": []
+  },
+  {
+   "id": "S7.01",
+   "action": "keep",
+   "scene": 53,
+   "mode": "DOCUMENT → CONVERSATION",
+   "pace": "normal",
+   "est_s": 20.1,
+   "frame": "BOX · the two boxes (the act's one box, held)",
+   "camera": "BOX · the two boxes (the act's one box, held)",
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged",
+   "caption": "The act's one box: MAS, left, at his end desk, the GUEST lanyard and the MACROSOFT badge side by side before him; ALYI, right, in the gap of the conference-room door, his phone in his hand. His post pops up in full and holds to read: \"I deeply regret my participation in the board's actions. I never intended to harm NopeAI. I love everything we've built together and I will do everything I can to reunite the company.\" Three red hearts rise out of Mas's window. \"You sent three.\" / \"one for each day.\" / \"It has been four days.\" / \"i'm not counting today.\"",
+   "picture": "The post in full, held about 1.5 s longer; its last clause (\"reunite the company\") the one a newcomer needs.",
+   "onscreen": {
+    "replace": {
+     "POST: ALYI: “I deeply regret my participation in the board's actions. I never intended to harm NopeAI…”": "POST: ALYI: “I deeply regret my participation in the board's actions. I never intended to harm NopeAI. I love everything we've built together and I will do everything I can to reunite the company.”"
+    }
+   },
+   "fix": [
+    "NEW",
+    "FACT"
+   ],
+   "why": "Sc 53: his own words, in full (facts L10, [P], re-read raw).",
+   "src_s": 18.6,
+   "src_frame": "BOX · the two boxes (the act's one box, held)",
+   "lines": [
+    {
+     "id": "a5-30-01",
+     "keep": true
+    },
+    {
+     "id": "a5-30-02",
+     "keep": true
+    },
+    {
+     "id": "a5-30-03",
+     "keep": true
+    },
+    {
+     "id": "a5-30-04",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "S7.02",
+   "action": "keep",
+   "scene": 53,
+   "mode": "DOCUMENT → CONVERSATION",
+   "pace": "normal",
+   "est_s": 5.94,
+   "frame": "WIDE · the bullpen, packed boxes (held)",
+   "camera": "WIDE · the bullpen, packed boxes (held)",
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 5.94,
+   "src_frame": "WIDE · the bullpen, packed boxes (held)",
+   "lines": [
+    {
+     "id": "v33-a4-0001",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "S7.02b",
+   "action": "keep",
+   "scene": 53,
+   "mode": "DOCUMENT → CONVERSATION",
+   "pace": "normal",
+   "est_s": 5.705,
+   "frame": "WIDE · the bullpen with its wall TV in frame: Tasya's interview clip at a podcast mic",
+   "camera": "WIDE · the bullpen with its wall TV in frame: Tasya's interview clip at a podcast mic",
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 5.705,
+   "src_frame": "WIDE · the bullpen with its wall TV in frame: Tasya's interview clip at a podcast mic",
+   "lines": [
+    {
+     "id": "v33-a4-0002",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "S7.03",
+   "action": "keep",
+   "scene": 54,
+   "mode": "CONVERSATION",
+   "pace": "quick",
+   "est_s": 2.2,
+   "frame": "SINGLE · MCU Mas looking down",
+   "camera": "SINGLE · MCU Mas looking down",
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 2.2,
+   "src_frame": "SINGLE · MCU Mas looking down",
+   "lines": []
+  },
+  {
+   "id": "v31-S7.03b",
+   "action": "keep",
+   "scene": 54,
+   "mode": "CONVERSATION",
+   "pace": "quick",
+   "est_s": 2.6,
+   "frame": "ECU · his phone by the two badges: Tuesday's invite",
+   "camera": "ECU · his phone by the two badges: Tuesday's invite",
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 2.6,
+   "src_frame": "ECU · his phone by the two badges: Tuesday's invite",
+   "lines": []
+  },
+  {
+   "id": "S7.05",
+   "action": "keep",
+   "scene": 54,
+   "mode": "CONVERSATION",
+   "pace": "quick",
+   "est_s": 2.208,
+   "frame": "MEDIUM · Mada among the fires",
+   "camera": "MEDIUM · Mada among the fires",
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 2.208,
+   "src_frame": "MEDIUM · Mada among the fires",
+   "lines": []
+  },
+  {
+   "id": "S7.06",
+   "action": "keep",
+   "scene": 54,
+   "mode": "CONVERSATION",
+   "pace": "quick",
+   "est_s": 3.4,
+   "frame": "WIDE · the boardroom (freeze card)",
+   "camera": "WIDE · the boardroom (freeze card)",
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged",
+   "picture": "see caption",
+   "fix": [
+    "C12"
+   ],
+   "why": "Only the freeze card is shorter (TERB / THE NEW CHAIR).",
+   "src_s": 4.2,
+   "src_frame": "WIDE · the boardroom (freeze card)",
+   "lines": []
+  },
+  {
+   "id": "S7.06-cont",
+   "action": "keep",
+   "scene": 54,
+   "mode": "CONVERSATION",
+   "pace": "quick",
+   "est_s": 4.32,
+   "frame": "WIDE · the boardroom (held)",
+   "camera": "WIDE · the boardroom (held)",
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged",
+   "tempo": {
+    "pace": "quick",
+    "gaps": {
+     "a5-30-09": 1.0
+    },
+    "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
+    "note": "the look-around is a beat, 1.6 → 1.0 s"
+   },
+   "picture": "see caption",
+   "fix": [
+    "C12"
+   ],
+   "why": "The fire exchange is tighter.",
+   "src_s": 4.917,
+   "src_frame": "WIDE · the boardroom (held)",
+   "lines": [
+    {
+     "id": "a5-30-08",
+     "keep": true
+    },
+    {
+     "id": "a5-30-09",
+     "keep": true,
+     "at": "after:a5-30-08+1.0"
+    }
+   ]
+  },
+  {
+   "id": "S7.07",
+   "action": "keep",
+   "scene": 54,
+   "mode": "CONVERSATION",
+   "pace": "quick",
+   "est_s": 8.55,
+   "frame": "TWO-SHOT · the calm-off, Terb in depth (held)",
+   "camera": "TWO-SHOT · the calm-off, Terb in depth (held)",
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged",
+   "picture": "see caption",
+   "fix": [
+    "C12"
+   ],
+   "why": "Terb reads the agreement without his lead-in.",
+   "src_s": 10.875,
+   "src_frame": "TWO-SHOT · the calm-off, Terb in depth (held)",
+   "lines": [
+    {
+     "id": "v3-a4-0004",
+     "keep": false,
+     "who": "terb",
+     "text": "Before this goes out, I'm reading it once. We have reached an agreement in principle for Mas Manalt to return to NopeAI as CEO with a new initial board of Terb (Chair), the Other Yrral, and Mada.",
+     "why": "12A: its first sentence is cut; the rest is the same recording"
+    },
+    {
+     "id": "v35-a4-0008",
+     "new": true,
+     "who": "terb",
+     "text": "We have reached an agreement in principle for Mas Manalt to return to NopeAI as CEO with a new initial board of Terb (Chair), the Other Yrral, and Mada.",
+     "take": "cut from v3-a4-0004 (from the word \"We\" to the end, at the sentence boundary; audio/ep01/v35)",
+     "note": "[V · NOV 21, 2023 · the return announcement's first sentence, whole (facts L15, [P]); the lead-in \"Before this goes out, I'm reading it once.\" is cut (choice 12A)]",
+     "after": "start+0.8",
+     "gap_s": 0.0,
+     "len_s": 8.27,
+     "delivery": "brisk, reading from the sheet; the same read, from its second sentence",
+     "cut_from": "v3-a4-0004"
+    }
+   ]
+  },
+  {
+   "id": "S7.07-cont",
+   "action": "keep",
+   "scene": 54,
+   "mode": "CONVERSATION",
+   "pace": "quick",
+   "est_s": 17.11,
+   "frame": "TWO-SHOT · the calm-off (held)",
+   "camera": "TWO-SHOT · the calm-off (held)",
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged",
+   "tempo": {
+    "pace": "quick",
+    "gaps": {
+     "a5-30-13": 0.45,
+     "v31-a4-0016": 0.25,
+     "a5-30-15": 0.45
+    },
+    "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
+    "note": "Mada's non-answer after \"you're staying?\" (0.9 s) and the dead stop before \"Good question.\" (1.6 s) stay"
+   },
+   "picture": "see caption",
+   "fix": [
+    "PACE",
+    "KEEP"
+   ],
+   "why": "",
+   "src_s": 17.358,
+   "src_frame": "TWO-SHOT · the calm-off (held)",
+   "lines": [
+    {
+     "id": "a5-30-11",
+     "keep": true
+    },
+    {
+     "id": "a5-30-12",
+     "keep": true
+    },
+    {
+     "id": "a5-30-13",
+     "keep": true,
+     "at": "after:a5-30-12+0.45"
+    },
+    {
+     "id": "v31-a4-0015",
+     "keep": true
+    },
+    {
+     "id": "v31-a4-0016",
+     "keep": true,
+     "at": "after:v31-a4-0015+0.25"
+    },
+    {
+     "id": "a5-30-14",
+     "keep": true
+    },
+    {
+     "id": "a5-30-15",
+     "keep": true,
+     "at": "after:a5-30-14+0.45"
+    },
+    {
+     "id": "a5-30-16",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "S7.08",
+   "action": "keep",
+   "scene": 54,
+   "mode": "CONVERSATION",
+   "pace": "quick",
+   "est_s": 3.0,
+   "frame": "SINGLE · MCU Mas",
+   "camera": "SINGLE · MCU Mas",
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 3.0,
+   "src_frame": "SINGLE · MCU Mas",
+   "lines": [
+    {
+     "id": "a5-30-17",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "S7.09",
+   "action": "keep",
+   "scene": 54,
+   "mode": "CONVERSATION",
+   "pace": "quick",
+   "est_s": 6.0,
+   "frame": "TWO-SHOT · the calm-off, the long hold",
+   "camera": "TWO-SHOT · the calm-off, the long hold",
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 6.0,
+   "src_frame": "TWO-SHOT · the calm-off, the long hold",
+   "lines": []
+  },
+  {
+   "id": "S7.13",
+   "action": "keep",
+   "scene": 54,
+   "mode": "CONVERSATION",
+   "pace": "quick",
+   "est_s": 11.0,
+   "frame": "OVERHEAD · the hourglass, his chat panel",
+   "camera": "OVERHEAD · the hourglass, his chat panel",
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 11.0,
+   "src_frame": "OVERHEAD · the hourglass, his chat panel",
+   "lines": [
+    {
+     "id": "a5-30-18",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "S8.01",
+   "action": "keep",
+   "scene": 55,
+   "mode": "INSERT",
+   "pace": "weighted",
+   "est_s": 4.0,
+   "frame": "LOW · the lobby sign",
+   "camera": "LOW · the lobby sign",
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 4.0,
+   "src_frame": "LOW · the lobby sign",
+   "lines": []
+  },
+  {
+   "id": "S8.03",
+   "action": "keep",
+   "scene": 55,
+   "mode": "INSERT",
+   "pace": "weighted",
+   "est_s": 3.0,
+   "frame": "OTS · over Mas onto the last dialog",
+   "camera": "OTS · over Mas onto the last dialog",
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 3.0,
+   "src_frame": "OTS · over Mas onto the last dialog",
+   "lines": []
+  },
+  {
+   "id": "S8.04",
+   "action": "keep",
+   "scene": 55,
+   "mode": "INSERT",
+   "pace": "weighted",
+   "est_s": 5.84,
+   "frame": "SINGLE · CU Mas",
+   "camera": "SINGLE · CU Mas",
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 5.84,
+   "src_frame": "SINGLE · CU Mas",
+   "lines": [
+    {
+     "id": "v34-vo-11",
+     "keep": true,
+     "vo": true
+    }
+   ]
+  },
+  {
+   "id": "S8.05",
+   "action": "keep",
+   "scene": 55,
+   "mode": "INSERT",
+   "pace": "weighted",
+   "est_s": 3.26,
+   "frame": "INSERT · the glass on the stone",
+   "camera": "INSERT · the glass on the stone",
+   "music": "THE RETURN · triumph, one size too big · VICTORY LAP / THE RETURN (MM-11) · unchanged",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 3.26,
+   "src_frame": "INSERT · the glass on the stone",
+   "lines": [
+    {
+     "id": "a5-30-19",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "S8.06",
+   "action": "keep",
+   "scene": 56,
+   "mode": "CONVERSATION + DOCUMENT",
+   "pace": "normal",
+   "est_s": 2.2,
+   "frame": "INSERT · the Q* vault",
+   "camera": "INSERT · the Q* vault",
+   "music": "CODA · the vault's F hum as the pedal; no motif under the memo",
+   "picture": "see caption",
+   "fix": [
+    "C12"
+   ],
+   "why": "A tighter vault shot.",
+   "src_s": 2.792,
+   "src_frame": "INSERT · the Q* vault",
+   "lines": []
+  },
+  {
+   "id": "S8.07",
+   "action": "keep",
+   "scene": 56,
+   "mode": "CONVERSATION + DOCUMENT",
+   "pace": "normal",
+   "est_s": 6.51,
+   "frame": "TWO-SHOT · Mas and Gerg, the vault between",
+   "camera": "TWO-SHOT · Mas and Gerg, the vault between",
+   "music": "CODA · the vault's F hum as the pedal; no motif under the memo",
+   "tempo": {
+    "pace": "quick",
+    "gaps": {
+     "a5-31-03": 0.25
+    },
+    "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
+    "note": "the rack to the vault and Gerg's exit, 4.1 → 1.9 s"
+   },
+   "picture": "see caption",
+   "fix": [
+    "C12",
+    "PACE"
+   ],
+   "why": "A tighter \"Is it ready?\" exchange.",
+   "src_s": 9.0,
+   "src_frame": "TWO-SHOT · Mas and Gerg, the vault between",
+   "lines": [
+    {
+     "id": "a5-31-01",
+     "keep": true
+    },
+    {
+     "id": "a5-31-02",
+     "keep": true
+    },
+    {
+     "id": "a5-31-03",
+     "keep": true,
+     "at": "after:a5-31-02+0.25"
+    }
+   ]
+  },
+  {
+   "id": "S8.08",
+   "action": "keep",
+   "scene": 56,
+   "mode": "CONVERSATION + DOCUMENT",
+   "pace": "normal",
+   "est_s": 5.775,
+   "frame": "WIDE · the bullpen, the memo (slow drift)",
+   "camera": "WIDE · the bullpen, the memo (slow drift)",
+   "music": "CODA · the vault's F hum as the pedal; no motif under the memo",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 5.775,
+   "src_frame": "WIDE · the bullpen, the memo (slow drift)",
+   "lines": [
+    {
+     "id": "a5-31-04",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "S8.09",
+   "action": "keep",
+   "scene": 56,
+   "mode": "CONVERSATION + DOCUMENT",
+   "pace": "normal",
+   "est_s": 3.5,
+   "frame": "INSERT · the nameplate",
+   "camera": "INSERT · the nameplate",
+   "music": "CODA · the vault's F hum as the pedal; no motif under the memo",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 3.5,
+   "src_frame": "INSERT · the nameplate",
+   "lines": []
+  },
+  {
+   "id": "S8.10",
+   "action": "keep",
+   "scene": 56,
+   "mode": "CONVERSATION + DOCUMENT",
+   "pace": "normal",
+   "est_s": 3.8,
+   "frame": "WIDE · the observer chair (the act's last image)",
+   "camera": "WIDE · the observer chair (the act's last image)",
+   "music": "CODA · the vault's F hum as the pedal; no motif under the memo",
+   "picture": "see caption",
+   "fix": [
+    "C12",
+    "KEEP"
+   ],
+   "why": "The observer chair stays (the act's last payoff), its hold shorter.",
+   "src_s": 5.2,
+   "src_frame": "WIDE · the observer chair (the act's last image)",
+   "lines": []
+  }
+ ]
+}

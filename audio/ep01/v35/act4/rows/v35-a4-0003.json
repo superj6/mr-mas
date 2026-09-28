@@ -1,0 +1,207 @@
+{
+ "id": "v35-a4-0003",
+ "scene": "41",
+ "speaker": "GERG MOCKBRAN",
+ "speaker_slug": "gerg-mockbran",
+ "text": "Yeah. I did.",
+ "spoken_as": "Yeah. I did.",
+ "delivery": "simple, final; not a joke",
+ "tag": "[INVENTED]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "monitor",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "v35-41.02",
+ "shot_id": "v35-41.02",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": "call",
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v35/act4/wav/v35-a4-0003.wav",
+ "mp3": null,
+ "duration_s": 1.8,
+ "frames_24": 44,
+ "voiced_span_s": 0.74,
+ "pace": {
+  "words": 3,
+  "wpm": 243.2,
+  "speed": 1.0,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.0,
+   "speed_band": [
+    1.02,
+    1.1
+   ],
+   "articulation_guide_sps": [
+    5.0,
+    5.8
+   ],
+   "turn_wpm_guide": [
+    175,
+    200
+   ],
+   "intent": "simple, final; not a joke"
+  },
+  "measured": {
+   "wpm": 243.2,
+   "articulation_sps": 5.41,
+   "syllables": 4,
+   "span_s": 0.74,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.5,
+  "audible_out_s": 1.24
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.000",
+ "voiceId": "am_puck",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch +1.5 st",
+  "peak -2 dB @250 Hz Q1.0",
+  "peak +2 dB @4000 Hz Q0.9",
+  "comp 3.0:1 @-22 dB (4/80 ms)",
+  "then the call chain: HPF 200 Hz; LPF 7000 Hz; peak +1.5 dB @1800 Hz Q1.0; comp 2.5:1 @-22 dB (5/90 ms); -16 LUFS",
+  "Kokoro speed 1.000 (the plan speed; gerg-mockbran band 1.02-1.10); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "A"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "E"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "A"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "E"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "A"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "E"
+  },
+  {
+   "t": 1.25,
+   "f": 30,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Yeah",
+   "t0": 0.47,
+   "t1": 0.635,
+   "f0": 11,
+   "f1": 15,
+   "ph": "jˈɛə"
+  },
+  {
+   "w": "I",
+   "t0": 0.672,
+   "t1": 0.81,
+   "f0": 16,
+   "f1": 19,
+   "ph": "ˌI"
+  },
+  {
+   "w": "did",
+   "t0": 0.81,
+   "t1": 1.26,
+   "f0": 19,
+   "f1": 30,
+   "ph": "dˈɪd"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.13,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 148.5,
+  "f0_range_st": 7.6,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Yeah, I did.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.38,
+  "align_median_s": 0.047,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 20.0,
+  "decay_ms": 175.0,
+  "decay_to_60_s": 0.11
+ },
+ "clean": {
+  "file": "audio/ep01/v35/act4/clean/v35-a4-0003.wav",
+  "note": "the dry read (no call chain), -16 LUFS"
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "af5615f64ce6ee99",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 1.72,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 1,
+   "share_s": 0.83,
+   "rechecked_alone": false
+  }
+ }
+}

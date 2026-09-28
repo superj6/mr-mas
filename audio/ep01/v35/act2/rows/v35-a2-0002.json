@@ -1,0 +1,337 @@
+{
+ "id": "v35-a2-0002",
+ "scene": "28",
+ "speaker": "GERG MOCKBRAN",
+ "speaker_slug": "gerg-mockbran",
+ "text": "The next one costs billions. Nobody donates billions.",
+ "spoken_as": "The next one costs billions.{0.35} Nobody donates billions.",
+ "delivery": "holding a cloud bill that unrolls to the floor; cheerful, stating the physics",
+ "tag": "[INVENTED · the Mar 11, 2019 post: \"We'll need to invest billions of dollars in upcoming years into large-scale cloud compute…\" ([P·arch])]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "v35-28.02",
+ "shot_id": "v35-28.02",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v35/act2/wav/v35-a2-0002.wav",
+ "mp3": null,
+ "duration_s": 4.345,
+ "frames_24": 105,
+ "voiced_span_s": 3.15,
+ "pace": {
+  "words": 8,
+  "wpm": 152.4,
+  "speed": 1.02,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.02,
+   "speed_band": [
+    1.02,
+    1.1
+   ],
+   "articulation_guide_sps": [
+    5.0,
+    5.8
+   ],
+   "turn_wpm_guide": [
+    175,
+    200
+   ],
+   "intent": "holding a cloud bill that unrolls to the floor; cheerful, stating the physics"
+  },
+  "measured": {
+   "wpm": 152.4,
+   "articulation_sps": 4.63,
+   "syllables": 13,
+   "span_s": 3.15,
+   "pauses_s": [
+    0.34
+   ]
+  },
+  "longest_internal_gap_s": 0.34,
+  "audible_in_s": 0.51,
+  "audible_out_s": 3.66
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.020",
+ "voiceId": "am_puck",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch +1.5 st",
+  "peak -2 dB @250 Hz Q1.0",
+  "peak +2 dB @4000 Hz Q0.9",
+  "comp 3.0:1 @-22 dB (4/80 ms)",
+  "Kokoro speed 1.020 (the plan speed; gerg-mockbran band 1.02-1.10); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'billions': Kokoro 0.12 s -> 0.35 s (intended 0.35; +0.23 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "E"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "A"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "E"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "A"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "E"
+  },
+  {
+   "t": 0.958,
+   "f": 23,
+   "shape": "O"
+  },
+  {
+   "t": 1.125,
+   "f": 27,
+   "shape": "E"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "M"
+  },
+  {
+   "t": 1.375,
+   "f": 33,
+   "shape": "A"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "E"
+  },
+  {
+   "t": 1.833,
+   "f": 44,
+   "shape": "rest"
+  },
+  {
+   "t": 2.25,
+   "f": 54,
+   "shape": "O"
+  },
+  {
+   "t": 2.375,
+   "f": 57,
+   "shape": "A"
+  },
+  {
+   "t": 2.458,
+   "f": 59,
+   "shape": "E"
+  },
+  {
+   "t": 2.625,
+   "f": 63,
+   "shape": "O"
+  },
+  {
+   "t": 2.75,
+   "f": 66,
+   "shape": "E"
+  },
+  {
+   "t": 2.833,
+   "f": 68,
+   "shape": "A"
+  },
+  {
+   "t": 2.958,
+   "f": 71,
+   "shape": "E"
+  },
+  {
+   "t": 3.042,
+   "f": 73,
+   "shape": "M"
+  },
+  {
+   "t": 3.125,
+   "f": 75,
+   "shape": "A"
+  },
+  {
+   "t": 3.25,
+   "f": 78,
+   "shape": "E"
+  },
+  {
+   "t": 3.667,
+   "f": 88,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "The",
+   "t0": 0.47,
+   "t1": 0.525,
+   "f0": 11,
+   "f1": 13,
+   "ph": "ðə"
+  },
+  {
+   "w": "next",
+   "t0": 0.525,
+   "t1": 0.763,
+   "f0": 13,
+   "f1": 18,
+   "ph": "nˈɛkst"
+  },
+  {
+   "w": "one",
+   "t0": 0.763,
+   "t1": 0.925,
+   "f0": 18,
+   "f1": 22,
+   "ph": "wˈʌn"
+  },
+  {
+   "w": "costs",
+   "t0": 0.925,
+   "t1": 1.275,
+   "f0": 22,
+   "f1": 31,
+   "ph": "kˈɔsts"
+  },
+  {
+   "w": "billions",
+   "t0": 1.275,
+   "t1": 1.85,
+   "f0": 31,
+   "f1": 44,
+   "ph": "bˈɪljənz"
+  },
+  {
+   "w": "Nobody",
+   "t0": 2.188,
+   "t1": 2.575,
+   "f0": 52,
+   "f1": 62,
+   "ph": "nˈObˌɑdi"
+  },
+  {
+   "w": "donates",
+   "t0": 2.575,
+   "t1": 3.05,
+   "f0": 62,
+   "f1": 73,
+   "ph": "dˈOnˌAts"
+  },
+  {
+   "w": "billions",
+   "t0": 3.05,
+   "t1": 3.68,
+   "f0": 73,
+   "f1": 88,
+   "ph": "bˈɪljənz"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -1.61,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.51,
+  "median_f0_hz": 126.4,
+  "f0_range_st": 13.9,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "The next one costs billions. Nobody donates billions.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.185,
+  "align_median_s": 0.065,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.45,
+  "rise_ms": 15.0,
+  "decay_ms": 330.0,
+  "decay_to_60_s": 0.235
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 5,
+   "word": "billions",
+   "tts_s": 0.125,
+   "target_s": 0.35,
+   "point_s": 1.455,
+   "joined_speech": false,
+   "dip_db": -64.8,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.35,
+   "opened_s": 0.225
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "5b94637ff4d9462a",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 2.82,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 5,
+   "share_s": 0.62,
+   "rechecked_alone": false
+  }
+ }
+}

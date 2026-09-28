@@ -1,0 +1,278 @@
+{
+ "id": "v35-a2-0003",
+ "scene": "28",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "so they don't donate. they invest.",
+ "spoken_as": "so they don't donate.{0.35} they invest.",
+ "delivery": "drawing the box as he says it; easy, a man who has already solved it",
+ "tag": "[INVENTED]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "v35-28.02",
+ "shot_id": "v35-28.02",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v35/act2/wav/v35-a2-0003.wav",
+ "mp3": null,
+ "duration_s": 3.39,
+ "frames_24": 82,
+ "voiced_span_s": 2.16,
+ "pace": {
+  "words": 6,
+  "wpm": 166.7,
+  "speed": 0.92,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.92,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.6,
+    4.2
+   ],
+   "turn_wpm_guide": [
+    135,
+    155
+   ],
+   "intent": "drawing the box as he says it; easy, a man who has already solved it"
+  },
+  "measured": {
+   "wpm": 166.7,
+   "articulation_sps": 4.4,
+   "syllables": 8,
+   "span_s": 2.16,
+   "pauses_s": [
+    0.34
+   ]
+  },
+  "longest_internal_gap_s": 0.34,
+  "audible_in_s": 0.56,
+  "audible_out_s": 2.72
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.920",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch 0",
+  "low shelf +2 dB @160 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak +1 dB @3200 Hz Q0.8",
+  "high shelf -1.5 dB @8000 Hz",
+  "comp 2.0:1 @-24 dB (10/120 ms)",
+  "Kokoro speed 0.920 (the plan speed; mas-manalt band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'donate': Kokoro 0.19 s -> 0.35 s (intended 0.35; +0.16 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.625,
+   "f": 15,
+   "shape": "O"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "A"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "O"
+  },
+  {
+   "t": 1.0,
+   "f": 24,
+   "shape": "E"
+  },
+  {
+   "t": 1.125,
+   "f": 27,
+   "shape": "O"
+  },
+  {
+   "t": 1.333,
+   "f": 32,
+   "shape": "A"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "E"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "rest"
+  },
+  {
+   "t": 1.917,
+   "f": 46,
+   "shape": "A"
+  },
+  {
+   "t": 2.042,
+   "f": 49,
+   "shape": "E"
+  },
+  {
+   "t": 2.375,
+   "f": 57,
+   "shape": "A"
+  },
+  {
+   "t": 2.583,
+   "f": 62,
+   "shape": "E"
+  },
+  {
+   "t": 2.75,
+   "f": 66,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "so",
+   "t0": 0.59,
+   "t1": 0.702,
+   "f0": 14,
+   "f1": 17,
+   "ph": "sˌO"
+  },
+  {
+   "w": "they",
+   "t0": 0.702,
+   "t1": 0.84,
+   "f0": 17,
+   "f1": 20,
+   "ph": "ðA"
+  },
+  {
+   "w": "don't",
+   "t0": 0.84,
+   "t1": 1.065,
+   "f0": 20,
+   "f1": 26,
+   "ph": "dˈOnt"
+  },
+  {
+   "w": "donate",
+   "t0": 1.065,
+   "t1": 1.57,
+   "f0": 26,
+   "f1": 38,
+   "ph": "dˈOnˌAt"
+  },
+  {
+   "w": "they",
+   "t0": 1.85,
+   "t1": 2.025,
+   "f0": 44,
+   "f1": 49,
+   "ph": "ðA"
+  },
+  {
+   "w": "invest",
+   "t0": 2.025,
+   "t1": 2.74,
+   "f0": 49,
+   "f1": 66,
+   "ph": "ɪnvˈɛst"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.83,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.56,
+  "median_f0_hz": 117.9,
+  "f0_range_st": 11.2,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "So they don't donate, they invest.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.219,
+  "align_median_s": 0.045,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.56,
+  "speech_tail_s": 0.38,
+  "rise_ms": 35.0,
+  "decay_ms": 110.0,
+  "decay_to_60_s": 0.29
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 4,
+   "word": "donate",
+   "tts_s": 0.19,
+   "target_s": 0.35,
+   "point_s": 1.18,
+   "joined_speech": false,
+   "dip_db": -60.5,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.355,
+   "opened_s": 0.16
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "e3b1bd194f52db5f",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 3.07,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 4,
+   "share_s": 0.64,
+   "rechecked_alone": false
+  }
+ }
+}

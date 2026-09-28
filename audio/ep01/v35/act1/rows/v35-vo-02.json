@@ -1,0 +1,195 @@
+{
+ "id": "v35-vo-02",
+ "scene": "19",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "someone gets to be in the room.",
+ "spoken_as": "someone gets to be in the room.",
+ "delivery": "his face in the page's light, the post finished; plain, private; no weight on any word",
+ "tag": "[INVENTED · VO · draft 8.4 · his want, hinted (choice 2A); a rewatcher hears the cold open]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "vo",
+ "kind": "vo",
+ "side": "none",
+ "pov": null,
+ "shot": "v35-19.03",
+ "shot_id": "v35-19.03",
+ "cue": null,
+ "lip_sync": false,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v35/act1/wav/v35-vo-02.wav",
+ "mp3": null,
+ "duration_s": 3.01,
+ "frames_24": 73,
+ "voiced_span_s": 1.82,
+ "pace": {
+  "words": 7,
+  "wpm": 230.8,
+  "speed": 0.85,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.85,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.4,
+    4.0
+   ],
+   "turn_wpm_guide": [
+    120,
+    140
+   ],
+   "intent": "his face in the page's light, the post finished; plain, private; no weight on any word"
+  },
+  "measured": {
+   "wpm": 230.8,
+   "articulation_sps": 4.4,
+   "syllables": 8,
+   "span_s": 1.82,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.5,
+  "audible_out_s": 2.32
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.850",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 60 Hz",
+  "pitch 0",
+  "low shelf +2.5 dB @150 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak -1 dB @3200 Hz Q0.8",
+  "high shelf -2.5 dB @7500 Hz",
+  "comp 2.5:1 @-26 dB (15/160 ms)",
+  "Kokoro speed 0.850 (the plan speed; mas-manalt-vo band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [],
+ "words": [
+  {
+   "w": "someone",
+   "t0": 0.575,
+   "t1": 0.975,
+   "f0": 14,
+   "f1": 23,
+   "ph": "sˈʌmwˌʌn"
+  },
+  {
+   "w": "gets",
+   "t0": 0.975,
+   "t1": 1.225,
+   "f0": 23,
+   "f1": 29,
+   "ph": "ɡɛts"
+  },
+  {
+   "w": "to",
+   "t0": 1.225,
+   "t1": 1.35,
+   "f0": 29,
+   "f1": 32,
+   "ph": "tə"
+  },
+  {
+   "w": "be",
+   "t0": 1.35,
+   "t1": 1.55,
+   "f0": 32,
+   "f1": 37,
+   "ph": "bi"
+  },
+  {
+   "w": "in",
+   "t0": 1.55,
+   "t1": 1.662,
+   "f0": 37,
+   "f1": 40,
+   "ph": "ɪn"
+  },
+  {
+   "w": "the",
+   "t0": 1.662,
+   "t1": 1.787,
+   "f0": 40,
+   "f1": 43,
+   "ph": "ðə"
+  },
+  {
+   "w": "room",
+   "t0": 1.787,
+   "t1": 2.34,
+   "f0": 43,
+   "f1": 56,
+   "ph": "ɹˈum"
+  }
+ ],
+ "qa": {
+  "lufs_i": -18.0,
+  "target_lufs": -18.0,
+  "true_peak_dbtp": -4.87,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 120.1,
+  "f0_range_st": 11.6,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Someone gets to be in the room.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.371,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.37,
+  "rise_ms": 45.0,
+  "decay_ms": 210.0,
+  "decay_to_60_s": 0.325
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "95f265a27f89a347",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 3.39,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 1.72,
+   "rechecked_alone": false
+  }
+ }
+}

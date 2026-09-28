@@ -4,14 +4,13 @@
 >
 > **Source:** the [flashback map](flashback-map.md) (per episode, with devices and lengths), re-sorted by the real chronology.
 > - **NEW** = proposed here to fill a gap.
-> - **MOVED** = changed by the v3.5 notes, which put THE WOODROSE part 1 in Ep1.
+> - **MOVED** = changed by the v3.5 notes. *(Updated 2026-09-28 for the final Ep1 v3.5, proposal-v35 and PLAN §8: THE WOODROSE is saved for Ep3 onward, and Ep1 carries three memories instead: JUN 2018, MAR 2019 and TPOOL.)*
 
 ## 1. NopeAI before CHATGTP, in order
 
 | When | What happened (parody names on screen) | Episode | Status |
 |---|---|---|---|
-| Jul 2015 | THE WOODROSE dinner: they say they're after AGI; Mas asks "how far behind are we?" | **Ep1** | MOVED (v3.5), part 1 of 6 |
-| Jul 2015 | THE WOODROSE again: who was at the table (Gerg), who they wanted (Alyi), who paid (Nole), who knew the curve (Mario), what Mas saw | Ep3 · 5 · 6 · 10 · 12 | planned |
+| Jul 2015 | THE WOODROSE, five parts: who was at the table (Gerg, with the Breakout agent), who they wanted (Alyi), who paid (Nole), who knew the curve (Mario), what Mas saw and wanted, from his chair (he asks "how far behind are we?") | Ep3 · 5 · 6 · 10 · 12 | planned (Ep1 v3.5 saved it for later: "i would prefere having more to explore at the dinner later") |
 | May 2015 | Gerg leaves EPIRTS: "We should keep in touch." | Ep3 | planned |
 | Dec 11, 2015 | The founding: $1B pledged, about $133M received | Ep6 | planned (inside Nole's version) |
 | 2015–16 | Alyi's recruiting tug-of-war, and his $1.9M | Ep5 | planned |
@@ -22,10 +21,10 @@
 | Dec 2017 | "The Merge": "We will be the first species ever to design our own descendants." | Ep11 | planned |
 | Feb 20, 2018 | Nole's goodbye all-hands ("didn't entirely buy the story") | Ep2 | planned |
 | Apr 9, 2018 | The Charter's assist clause, typed at 2am | Ep11 | planned |
-| **Jun 2018** | **GTP-1: the first one, which nobody noticed** | — | **GAP** (see §3) |
+| **Jun 2018** | **The night the machine taught itself:** ATOD's bots play themselves, 180 years a day; Alyi's awe, Mas's "then a lot more computers."; and GTP-1 as a side project finishing a sentence badly in the corner, which nobody but Mas looks at | **Ep1** (sc 13, about 34 s) | **built** (v3.5): Ep1's memory 1 of 3 |
 | Feb 14, 2019 | GTP-2 locked in the TOO DANGEROUS Valentine's box; it leaks by Nov | Ep7 | planned |
 | Mar 2019 | The YC exit, `(DISPUTED)`: two versions | Ep11 | planned |
-| Mar 11, 2019 | Capped profit at 100x; CEO with no equity | Ep6 | planned |
+| Mar 11, 2019 | Capped profit at 100x under the nonprofit's board; CEO with no equity; the landlord's first billion slides under the door (Jul 2019) | **Ep1** (sc 28, about 26 s) · Ep6 deepens it (the cap comes off, in Nole's version) | **built** (v3.5): Ep1's memory 2 of 3 |
 | Jul 22, 2019 | Macrosoft's $1B and the AGI clause (the landlord's first key) | Ep8 | planned |
 | Jan 2020 | The scaling laws, written inside NopeAI (the recipe book) | Ep7 | planned |
 | **May–Sep 2020** | **GTP-3, the API waitlist, Macrosoft's exclusive licence** | — | **GAP** |
@@ -44,7 +43,7 @@
 | 1993 | NESNEJ founds INVIDIA at a diner with $40k; "thirty days from going out of business" in 1997 | Ep4 |
 | 2003–05 | Mas at DROFNATS: poker and the tells | Ep4 |
 | 2005 | YC is conceived; the first batch (TPOOL, TIDDER) | Ep5 |
-| 2005–08 | TPOOL: staff twice try to remove him `(REPORTED)` | **Ep1** (v3.5, rebuilt), Ep12 montage |
+| 2005–08 | TPOOL: staff twice ask the board to fire him (WSJ, Dec 2023) | **Ep1** (sc 43, two shots, 6 s: memory 3 of 3), Ep12 montage |
 | 2006–08 | The TSOOB ad; the WWDC walk-on in two collars | Ep2 |
 | 2008–09 | LUAP's cannibals essay; "What would Sama do?" | Ep4 |
 | Nov 2010 → Jan 2014 | MINDDEEP founded, then bought by ELGOOG | Ep5, Ep6 (background) |
@@ -79,7 +78,7 @@ Proposed:
 **Budget check:**
 - Ep4 is at about 80 s against a 150 s cap, so the staircase (12 s) and the manners beat (8 s) fit.
 - Ep3 is at about 95 s, so the transformer micro (5 s) fits.
-- Ep1 goes from about 0 to about 19 s (THE WOODROSE and TPOOL), inside its ≤20 s budget.
+- **Ep1 (v3.5, built): about 66 s across three memories** (JUN 2018 about 34 s, MAR 2019 about 26 s, TPOOL 6 s). The old ≤20 s budget is superseded by the agreed flow (the showrunner: "it is ok to make a bit longer tho"; Act One grew, Act Four shrank).
 
 ## 4. The milestones layer: key AI steps, each tied to a player
 
@@ -95,16 +94,17 @@ Proposed:
 |---|---|---|---|---|
 | 2006 | CUDA: gaming chips become math chips | NESNEJ | Ep4 · THE WHALE's pebble (−$589B): why everyone needed his chips | inside F4.2, 3 s |
 | 2012 | AlexNet on two gaming cards; the auction ELGOOG wins | ALYI (and UDIAB's paddle) | Ep5 · the talent war | planned (F5.2) |
-| Dec 2013 → Feb 2015 | **The Atari agent: Breakout, tunnelling behind the wall** | SIMED / MINDDEEP; bought by ELGOOG (Jan 2014) | **Ep1 · THE WOODROSE:** "how far behind are we?" plays on a phone at the table (inside the 10 s) | 8-bit, 2 s |
+| Dec 2013 → Feb 2015 | **The Atari agent: Breakout, tunnelling behind the wall** | SIMED / MINDDEEP; bought by ELGOOG (Jan 2014) | **Ep3 · THE WOODROSE part 1** (moved from Ep1 with the dinner, v3.5): it plays on a phone at the table while they ask how far off human-level AI is | 8-bit, 2 s |
 | Jan 2014 | ELGOOG buys MINDDEEP | SIMED, RADNUS, NOLE (an early investor) | Ep6 · Nole's version of THE WOODROSE | planned (background) |
 | Mar 2016 | **AlphaGo beats the champion (MOVE 37)**; Alyi is on the paper's author list | SIMED · ALYI · NOLE's fear | **Ep2 · the Email Séance:** Nole's 2016 email about MINDDEEP rises as a ghost, and a stone clicks down. Ep9 keeps its MOVE 37 callback. | the board only, 4 s |
 | 2016 | Gym and Universe: NopeAI teaches agents on games | GERG | Ep4 · the staircase (below) | 2 s |
 | Jun 2017 | **Human preferences: a stick-figure robot learns a backflip from people's 👍** | MARIO co-authored it | **Ep4 · the sycophancy button:** the thing that makes chatbots flatter was his | 4 s, a stick figure |
 | Jun 2017 | The transformer paper ("attention is all you need") | RADNUS's lab | Ep3 · "It is ours. We published it." (Ep1) | 5 s (moved earlier) |
-| Aug 2017 | **Dota: the bot beats the champion one-on-one**; Nole: "Vastly more risk than North Korea." | GERG, MAS · NOLE | Ep8 · the trial's prologue | planned (F8.1) |
+| **Jun 2018** | **ATOD self-play: five bots play themselves, 180 years a day, on 256 GPUs**; and the text side project (GTP-1, Jun 11) at a lone desk | ALYI's awe, MAS's compute; the side project's researcher never drawn | **Ep1 · 3 AM** (sc 12–13): the users counter becomes `PLAYED AGAINST ITSELF TODAY: 180 YEARS`, and the room re-draws as 2018 | the arena top-down in its own game medium, inside a T3 room; about 34 s (the whole memory) |
+| Aug 2017 | **Dota: the bot beats the champion one-on-one**; Nole: "Vastly more risk than North Korea." | GERG, MAS · NOLE | Ep8 · the trial's prologue (ATOD's 2017 origin) | planned (F8.1) |
 | Dec 2017 | **AlphaZero teaches itself chess in hours, from nothing** | SIMED | **Ep11 · RSI:** the first time a machine taught itself | 4 s |
 | Jan 2017 / Jul 2019 | Libratus and Pluribus beat the pros at poker | MAON (later NopeAI's reasoning lead) | **Ep3 · strawberry:** thinking time, where o1's reasoning came from. Ep10 keeps the Vegas callback. | 3 s (moved earlier) |
-| Apr 2019 | **OpenAI Five beats the world champions** (after losing at The International in 2018) | GERG, MAS | **Ep5 · draft night:** Dota's hero draft rhymes with Kram's stadium draft of researchers | top-down arena, 5 s |
+| Apr 2019 | **OpenAI Five beats the world champions** (after losing at The International in 2018) | GERG, MAS | **Ep5 · draft night:** Dota's hero draft rhymes with Kram's stadium draft of researchers; it pays Ep1's 2018 night (the bots that taught themselves win) | top-down arena, 5 s |
 | Oct 2019 | **The robot hand solves a Rubik's cube**; robotics is shelved by 2021 | NopeAI (the path not taken) | **Ep4 · the staircase:** games → the hand → text; they tried everything, and scale on text won | Blender render (the style leap), 5 s |
 | 2018–2020 | GTP-1 → GTP-2 (the box) → GTP-3 (the waitlist) | MARIO (GTP-2/3, the scaling laws), ALYI, MAS | Ep4 · the staircase; Ep7 · the box | 12 s + planned |
 | 2020 | **AlphaFold solves protein folding** (CASP14) | SIMED | **Ep3 · Oct 2024:** his Nobel ("KNIGHTED. NOBELED. UNIMPRESSED.") | a folding ribbon, 4 s |
@@ -115,10 +115,12 @@ Proposed:
 | 2017 → 2022 → 2023 | Jerdna: NopeAI founding member → ALSET's Autopilot → back | JERDNA · NOLE | Ep8 · he defects mid-stride ("HAS WORKED FOR EVERYONE IN THIS ROOM") | 3 s |
 | Ep12 | **The family album:** the machine replays its ancestors (Breakout, the Go stone, the Dota draft, the cube, the GTP staircase) before it vetoes the firing | THE MODEL | Ep12 | montage, 6 s |
 
+**ATOD's thread (v3.5):** **Ep1** (Jun 2018: self-play, the believer and the organizer) → **Ep5** (Apr 2019: it beats the champions) → **Ep8** (Aug 2017: the one-on-one, the control fight's prologue, told last on purpose, like Nole's grievance).
+
 **Budget:**
-- Ep1: +2 s, inside THE WOODROSE.
+- Ep1: the 2018 night is the milestone (inside its 34 s memory); Breakout moves to Ep3 with THE WOODROSE.
 - Ep2: +4 s.
-- Ep3: +12 s (the transformer, poker, AlphaFold).
+- Ep3: +14 s (Breakout inside the dinner, the transformer, poker, AlphaFold).
 - Ep4: +30 s (the staircase with Gym, the hand and the GTPs; the backflip and the manners; CUDA).
 - Ep5: +5 s.
 - Ep11: +4 s.

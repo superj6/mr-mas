@@ -1,6 +1,8 @@
 # Mas's inner voice
 
-> **Updated 2026-09-28 (SHOWRUNNER-NOTES 000): the voice is his plan.** §3 (what he thinks about), §4 (rules) and §7 (how much) are rewritten for it; the rest stands. Ep1's list is [script-v34-notes §2](../episodes/ep01/production/full-v3/script-v34-notes.md).
+> **Updated 2026-09-28 (SHOWRUNNER-NOTES 000): the voice is his plan.** §3 (what he thinks about), §4 (rules) and §7 (how much) are rewritten for it; the rest stands. Ep1's list is [script-v35-notes §4](../episodes/ep01/production/full-v3/script-v35-notes.md) (17 lines, v3.5).
+>
+> **Updated 2026-09-28 (Ep1 v3.5):** §2's silent addressee is re-thought (`HOW DO I WIN?` is retired, PLAN §8 choice 8A; the Ep12 outline's revision log), and §3's rattled-count example is the war room's count (the 2 AM "four hundred and six…" count is cut).
 >
 > **Status: WORKING GUIDE, 2026-09-27** (the lead, answering SHOWRUNNER-NOTES 1). It's being tried in the Ep1 stick v3 sample first ([v3-plan §8](../episodes/ep01/production/stick/v3-plan.md)), and holds unless the showrunner's look at that sample changes it.
 >
@@ -40,10 +42,10 @@
 - **Himself, in the moment, present tense.**
   - He doesn't know what's coming, so the voice can't leak the firing.
   - It goes quiet when the blow lands, and we're surprised with him.
-- **A silent addressee: the 1993 kid.**
-  - The voice is his running answer to the question on that screen (`HOW DO I WIN?`, seen in Ep12).
-  - It never says "you" or "kid" and never mentions 1993. It's a reason for the voice to exist, and a loneliness under it.
-  - The season pays it off: in Ep12 we see the question he's been answering all along.
+- **A silent addressee: the man at the 2015 table** (re-thought 2026-09-28, Ep1 v3.5; it was the 1993 kid and `HOW DO I WIN?`, now retired).
+  - At THE WOODROSE the others said what it was for; he asked how far behind they were. The voice is his running answer to that question: why it counts (users, hours, votes, hearts, days) and why it plans.
+  - It never says "you" and never mentions 2015. It's a reason for the voice to exist, and a loneliness under it.
+  - The season pays it off: in Ep12, from his chair at the 2015 table, we see who it was talking to, and he types the question again (`define "we."`; the Ep12 outline).
 - **Not the viewer.** He performs for everyone already. Speaking to us would be one more performance.
 - **Not the Orb.** The Orb is the witness who can catch him (the one true word aloud, "mostly."). It stays that.
 
@@ -54,6 +56,7 @@ The showrunner: "have mas look like he is mostly planning and directing things a
 1. **His plan, as a small practical thought.** The goal behind the move on screen, never stated as a goal: the kind of thought a person actually has (a number, a name, a condition), which reads as ordinary the first time and as foresight on a rewatch. (The showrunner, 2026-09-28: "don't make anything too on the nose.")
    - *"mostly the bill. we can't buy that many servers. someone can."*, and he calls the landlord.
    - *"mine's half written."*, when the president wants promises in writing; at the Senate he finishes it.
+   - *"someone gets to be in the room."*, as he finishes his vision post (Ep1 v3.5): the want, hinted; a rewatcher hears the cold open.
    - Ep1's goals, never named in the voice: ship first; compute through a landlord; be in the room where the rules are written; the platform; proof of personhood; after the blow, the comeback.
 2. **The foresight, paid off, not announced.** Plants that the return pays; at the payoff the voice can be a count, a single dry word, or nothing.
    - *"a year ago, forty users and a nice thread."* (Gerg's launch-night forecast, remembered exactly)
@@ -65,8 +68,10 @@ The showrunner: "have mas look like he is mostly planning and directing things a
 5. **Warmth and reads of people:** rare, one plain line where it orients (*"mario used to sit where gerg sits. he left to build a careful one."*).
 6. **Predictions of the next five seconds:** at most one an episode. They made him a commentator on other people, not a man with a plan.
 
-**Rhythm carries what he won't say.** He never says he feels anything. When he's rattled, a count speeds up, restarts or corrects itself:
-- *"four hundred and six. four hundred and seven. four hundred and six."*
+**Rhythm carries what he won't say.** He never says he feels anything. When he's rattled, a count speeds up, restarts or repeats itself:
+- *"gerg. tasya. the money. the money. the money."* (Ep1, the war room, the evening he's fired; read faster than he ever thinks, each "the money." a new call, not louder). The return says the same count calmly: *"they had four votes. i had the landlord. the money. gerg."*
+- *(Retired with Ep1 v3.5: "four hundred and six. four hundred and seven. four hundred and six.", the 2 AM count, cut by PLAN §8 choice 12A; newcomers read it as a riddle, and the war room now carries the device.)*
+- **Once, he's moved,** and the voice doesn't name it: *"they've stopped testing it. they're using it."* (Ep1, 3 AM, after reading a stranger's post twice).
 
 ## 4. Rules
 

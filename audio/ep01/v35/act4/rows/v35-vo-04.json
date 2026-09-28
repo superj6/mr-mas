@@ -1,0 +1,277 @@
+{
+ "id": "v35-vo-04",
+ "scene": "41",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "gerg. tasya. the money. the money. the money.",
+ "spoken_as": "[gerg](/ɡˈɜɹɡ/).{0.3} [tasya](/tˈɑsjə/).{0.3} the money.{0.25} the money.{0.25} the money.",
+ "delivery": "faster than he ever thinks: the tiles stacking; each 'the money.' a new tile, not louder",
+ "tag": "[INVENTED · VO · draft 8.4 · the rattled count (it replaces the cut 406/407 count; said calmly at the return)]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "vo",
+ "kind": "vo",
+ "side": "none",
+ "pov": null,
+ "shot": "v35-41.04",
+ "shot_id": "v35-41.04",
+ "cue": null,
+ "lip_sync": false,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v35/act4/wav/v35-vo-04.wav",
+ "mp3": null,
+ "duration_s": 4.72,
+ "frames_24": 114,
+ "voiced_span_s": 3.42,
+ "pace": {
+  "words": 8,
+  "wpm": 140.4,
+  "speed": 0.93,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.93,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.4,
+    4.0
+   ],
+   "turn_wpm_guide": [
+    120,
+    140
+   ],
+   "intent": "faster than he ever thinks: the tiles stacking; each 'the money.' a new tile, not louder"
+  },
+  "measured": {
+   "wpm": 140.4,
+   "articulation_sps": 5.6,
+   "syllables": 13,
+   "span_s": 3.42,
+   "pauses_s": [
+    0.29,
+    0.31,
+    0.24,
+    0.26
+   ]
+  },
+  "longest_internal_gap_s": 0.31,
+  "audible_in_s": 0.58,
+  "audible_out_s": 4.0
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.930",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 60 Hz",
+  "pitch 0",
+  "low shelf +2.5 dB @150 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak -1 dB @3200 Hz Q0.8",
+  "high shelf -2.5 dB @7500 Hz",
+  "comp 2.5:1 @-26 dB (15/160 ms)",
+  "Kokoro speed 0.930 (the plan speed; mas-manalt-vo band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'gerg': Kokoro 0.06 s -> 0.30 s (intended 0.30; +0.24 s of room tone at the quietest 5 ms)",
+  "pause after 'tasya': Kokoro 0.00 s -> 0.32 s (intended 0.30; +0.30 s of room tone at the quietest 5 ms; Kokoro ran the words together here (dip -25.8 dB): ear check)",
+  "pause after 'money': Kokoro 0.11 s -> 0.26 s (intended 0.25; +0.14 s of room tone at the quietest 5 ms)",
+  "pause after 'money': Kokoro 0.00 s -> 0.27 s (intended 0.25; +0.25 s of room tone at the quietest 5 ms; Kokoro ran the words together here (dip -19.0 dB): ear check)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [],
+ "words": [
+  {
+   "w": "gerg",
+   "t0": 0.615,
+   "t1": 0.94,
+   "f0": 15,
+   "f1": 23,
+   "ph": "ɡˈɜɹɡ"
+  },
+  {
+   "w": "tasya",
+   "t0": 1.23,
+   "t1": 1.615,
+   "f0": 30,
+   "f1": 39,
+   "ph": "tˈɑsjə"
+  },
+  {
+   "w": "the",
+   "t0": 2.03,
+   "t1": 2.13,
+   "f0": 49,
+   "f1": 51,
+   "ph": "ðə"
+  },
+  {
+   "w": "money",
+   "t0": 2.13,
+   "t1": 2.505,
+   "f0": 51,
+   "f1": 60,
+   "ph": "mˈʌni"
+  },
+  {
+   "w": "the",
+   "t0": 2.72,
+   "t1": 2.845,
+   "f0": 65,
+   "f1": 68,
+   "ph": "ðə"
+  },
+  {
+   "w": "money",
+   "t0": 2.845,
+   "t1": 3.17,
+   "f0": 68,
+   "f1": 76,
+   "ph": "mˈʌni"
+  },
+  {
+   "w": "the",
+   "t0": 3.458,
+   "t1": 3.57,
+   "f0": 83,
+   "f1": 86,
+   "ph": "ðə"
+  },
+  {
+   "w": "money",
+   "t0": 3.57,
+   "t1": 4.02,
+   "f0": 86,
+   "f1": 96,
+   "ph": "mˈʌni"
+  }
+ ],
+ "qa": {
+  "lufs_i": -18.0,
+  "target_lufs": -18.0,
+  "true_peak_dbtp": -3.86,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.58,
+  "median_f0_hz": 111.1,
+  "f0_range_st": 9.0,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Gerg, toss you the money, the money, the money.",
+  "cer": 0.121,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.38,
+  "align_median_s": 0.36,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.58,
+  "speech_tail_s": 0.375,
+  "rise_ms": 75.0,
+  "decay_ms": 160.0,
+  "decay_to_60_s": 0.34
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 1,
+   "word": "gerg",
+   "tts_s": 0.06,
+   "target_s": 0.3,
+   "point_s": 0.56,
+   "joined_speech": false,
+   "dip_db": -60.0,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.305,
+   "opened_s": 0.24
+  },
+  {
+   "after_word": 2,
+   "word": "tasya",
+   "tts_s": 0.0,
+   "target_s": 0.3,
+   "point_s": 1.145,
+   "joined_speech": true,
+   "dip_db": -25.8,
+   "breath": false,
+   "crossfade_ms": [
+    60,
+    25
+   ],
+   "final_s": 0.315,
+   "opened_s": 0.3
+  },
+  {
+   "after_word": 4,
+   "word": "money",
+   "tts_s": 0.11,
+   "target_s": 0.25,
+   "point_s": 2.105,
+   "joined_speech": false,
+   "dip_db": -58.6,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.255,
+   "opened_s": 0.14
+  },
+  {
+   "after_word": 6,
+   "word": "money",
+   "tts_s": 0.0,
+   "target_s": 0.25,
+   "point_s": 2.765,
+   "joined_speech": true,
+   "dip_db": -19.0,
+   "breath": false,
+   "crossfade_ms": [
+    60,
+    25
+   ],
+   "final_s": 0.265,
+   "opened_s": 0.25
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "19d7709b45435129",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 3.91,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 1,
+   "share_s": 1.63,
+   "rechecked_alone": false
+  }
+ }
+}

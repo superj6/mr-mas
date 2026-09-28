@@ -41,6 +41,7 @@ Per [SEASON-NOTES note 10](../../reel/SEASON-NOTES.md#10-eps-2-and-3-run-on-the-
 - The flyers, the point-and-click search (the greyed `come back`, tapped first), BUKAJ's humming chair, EKIEL's "shiny products", the `SUPERALIGNMENT` plate unscrewed by a maintenance hand in an orange cuff, the `IOU: 20% COMPUTE` into Mas's pocket.
 - The exit NDA noses under Alyi's office door and unrolls across the Bay Bridge; Mas's apology pops up one trim per honk; THE FORECASTER, with ~$2M at stake, hands back the pen unsigned.
 - EKIEL joins the rival lab the same day NopeAI puts Mas on its own safety committee ("Who checks the safety work?" / "present.").
+- **NELEH's podcast, restored (Ep1 v3.5, 2026-09-28).** The same day, on the boardroom TV in the split's left pane, a podcast player plays her, her words in its transcript view: "When CHATGTP came out November 2022, the board was not informed in advance about that. We learned about CHATGTP on RETTIWT." [V as said · Ep1 facts V8; the name swaps only]. The new board's reply the same day follows as a card [K · confirm before lock]. It's the answer Ep1 withheld on purpose: it pays Rima's launch-night "Did anyone tell the rest of the board?" and the two pages on Neleh's desk before noon (Ep1 sc 44), in her own attributed words and nobody else's. Mas watches; no voice-over. The Mar 8 review keeps both halves together (sc 4's coda), and the sealed memo stays out.
 - Jun 19: Alyi's lab is a white room with one door. His reflection faces Mas once. The IOU comes back unchanged, and Mas pockets it.
 
 ### C-plot: FEAR (the faceless candidate) and the rule-writers
@@ -84,7 +85,7 @@ Links assume `characters/<kebab-case-name>.md`. Cameo-only names are unlinked; s
 | **Rivals and landlords** | [MARIO](../../characters/mario.md) · [ADELINA](../../characters/adelina.md) · [TASYA](../../characters/tasya.md) · [THE HUMANIST](../../characters/the-humanist.md) · [MIT KOOC](../../characters/mit-kooc.md) · RADNUS · THE SLEEVE (flashback, a sleeve) |
 | **Governments** | REMUHCS (+ the roadmap trio, unnamed; on the lobby TV) · ISOLEP (a hand) · [RENEIW](../../characters/reneiw.md) (his bill, as a hydra) · THE TRUSTBUSTER (an envelope, a photo) |
 | **Culture / money chorus** | TRAWETS · XEL · YRREP · RUHTRA (a thumbnail) |
-| **Eggs only** | [NELEH](../../characters/neleh.md) and THE QUIET VOTE (an op-ed byline) |
+| **Board, on screens** | [NELEH](../../characters/neleh.md) (the podcast inset, sc 18: her own words in a player's transcript; restored by Ep1 v3.5) · THE QUIET VOTE (an op-ed byline egg) |
 
 **Out of Ep2 in draft 4:** NEYEL (the RULEBOOK is a notification; her first plate moves to Ep6), DIRE (his twin and his checkbook), THE PACKAGE DEAL, POPE SICNARF, THE OTHER MAS (a sticker; Ep3's fuel pump carries it).
 
@@ -146,9 +147,12 @@ See [bible/guardrails.md](../../bible/guardrails.md).
 - **Posts are pop-ups in their own UI, never speeches.**
 
 ## Where this sits in the season
-- **Pays off from Ep1:** the DAYS SINCE sign (reset Nov 21, 2023) and its box of spare `0` plates; the maintenance hand's four-screw rhythm; the IOU on Alyi's door; SYDNEY's `😊`, back on CHATGTP's new face; the 1993 Cancel's greyed bonk, now on `come back`, the door and `VOICE 5`; REMUHCS, now with a lectern instead of raised hands; the third collar (Ep1's, no new pop).
+- **Pays off from Ep1:** Rima's launch-night "Did anyone tell the rest of the board?" and Neleh's desk before noon (the podcast, sc 18; Ep1 v3.5); the DAYS SINCE sign (reset Nov 21, 2023) and its box of spare `0` plates; the maintenance hand's four-screw rhythm; the IOU on Alyi's door; SYDNEY's `😊`, back on CHATGTP's new face; the 1993 Cancel's greyed bonk, now on `come back`, the door and `VOICE 5`; REMUHCS, now with a lectern instead of raised hands; the third collar (Ep1's, no new pop).
 - **Sets up:** WHERE'S ALYI? (one door, forever); DOT (Ep4, Ep5); THE SIDEWALK (Ep5's #Keep4o); THE QUESTION (`is it safe?`); the IOU (Ep11's O11.1); RUMPT's FEAR phase and the podium's taut string (Ep3 turns it; Ep4 is LOVE); RENEIW's California hydra (Ep3's veto; the finale's CALIFORNIA cord); THE FORECASTER's dates (Eps 5, 7, 10–12); HARAS's calculator tape (Ep6's backstop); THE HUMANIST (Ep5+); the RULEBOOK's unpressed `SNOOZE` (Ep6's tease, Ep8's press); the bridge (Ep3's essay); the refiled federal suit (Ep8's trial, `NOLE v. MANALT`).
 - Timeline context: [timeline/master-timeline.md](../../timeline/master-timeline.md) · [timeline/flashback-map.md](../../timeline/flashback-map.md)
+
+## Revision log (Ep1 v3.5, 2026-09-28)
+- **Neleh's podcast is restored** (proposal-v35's "The season, briefly"; the lead's go-ahead, PLAN §8): at the lanyard split (May 28, 2024), in her own words in a podcast player's transcript view, then the new board's reply the same day `[K · confirm]`. Ep1 now withholds the firing's why by design and plants the question twice (launch night; Neleh's desk), so Ep2 answers it once, attributed, dated, and with the reply beside it. Guardrails: her words only, as said; none of her other 2024 claims; the Mar 8 review's two halves stay together; the memo stays out. The inset is about 8 s in sc 18's left pane (the script's §9 "restore first" list already priced it). Beat #19 carries the detail; the script's sc 18 follows at Ep2's next pass.
 
 ## Revision log (season revision, 2026-09-25)
 

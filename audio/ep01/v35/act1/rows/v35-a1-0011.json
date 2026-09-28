@@ -1,0 +1,443 @@
+{
+ "id": "v35-a1-0011",
+ "scene": "21",
+ "speaker": "MARIO",
+ "speaker_slug": "mario",
+ "text": "Point two: if someone's going to build it, it should be someone who's scared of it.",
+ "spoken_as": "Point two:{0.4} if someone's going to build it, it should be someone who's scared of it.",
+ "delivery": "still dictating to CLOD, finger up; sincere, the reason he builds at all; the same memo voice",
+ "tag": "[INVENTED · close to Misanthropic's public thesis (Mar 8, 2023, [V]) · choice 3A · MARIO's Kokoro take is final (choice 11A)]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "11.03",
+ "shot_id": "11.03",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v35/act1/wav/v35-a1-0011.wav",
+ "mp3": null,
+ "duration_s": 4.95,
+ "frames_24": 119,
+ "voiced_span_s": 3.95,
+ "pace": {
+  "words": 16,
+  "wpm": 243.0,
+  "speed": 0.95,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.95,
+   "speed_band": [
+    1.0,
+    1.08
+   ],
+   "articulation_guide_sps": [
+    4.6,
+    5.4
+   ],
+   "turn_wpm_guide": [
+    160,
+    185
+   ],
+   "intent": "still dictating to CLOD, finger up; sincere, the reason he builds at all; the same memo voice"
+  },
+  "measured": {
+   "wpm": 243.0,
+   "articulation_sps": 5.35,
+   "syllables": 19,
+   "span_s": 3.95,
+   "pauses_s": [
+    0.4
+   ]
+  },
+  "longest_internal_gap_s": 0.4,
+  "audible_in_s": 0.5,
+  "audible_out_s": 4.45
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_liam (Kokoro-82M stock) · a-liam-earnest · speed 0.950",
+ "voiceId": "am_liam",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 80 Hz",
+  "pitch 0",
+  "peak -1 dB @250 Hz Q1.0",
+  "low shelf +1 dB @200 Hz",
+  "peak +1.5 dB @3000 Hz Q0.9",
+  "high shelf -1 dB @7000 Hz",
+  "comp 2.5:1 @-22 dB (6/100 ms)",
+  "Kokoro speed 0.950 (the plan speed; mario band 1.00-1.08); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'two': Kokoro 0.01 s -> 0.41 s (intended 0.40; +0.40 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.458,
+   "f": 11,
+   "shape": "M"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "O"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "E"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "O"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "rest"
+  },
+  {
+   "t": 1.542,
+   "f": 37,
+   "shape": "E"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "A"
+  },
+  {
+   "t": 1.792,
+   "f": 43,
+   "shape": "O"
+  },
+  {
+   "t": 1.875,
+   "f": 45,
+   "shape": "A"
+  },
+  {
+   "t": 1.958,
+   "f": 47,
+   "shape": "E"
+  },
+  {
+   "t": 2.042,
+   "f": 49,
+   "shape": "O"
+  },
+  {
+   "t": 2.125,
+   "f": 51,
+   "shape": "E"
+  },
+  {
+   "t": 2.292,
+   "f": 55,
+   "shape": "M"
+  },
+  {
+   "t": 2.417,
+   "f": 58,
+   "shape": "A"
+  },
+  {
+   "t": 2.5,
+   "f": 60,
+   "shape": "E"
+  },
+  {
+   "t": 2.75,
+   "f": 66,
+   "shape": "rest"
+  },
+  {
+   "t": 2.875,
+   "f": 69,
+   "shape": "E"
+  },
+  {
+   "t": 2.958,
+   "f": 71,
+   "shape": "O"
+  },
+  {
+   "t": 3.083,
+   "f": 74,
+   "shape": "M"
+  },
+  {
+   "t": 3.167,
+   "f": 76,
+   "shape": "E"
+  },
+  {
+   "t": 3.25,
+   "f": 78,
+   "shape": "A"
+  },
+  {
+   "t": 3.333,
+   "f": 80,
+   "shape": "M"
+  },
+  {
+   "t": 3.458,
+   "f": 83,
+   "shape": "A"
+  },
+  {
+   "t": 3.583,
+   "f": 86,
+   "shape": "O"
+  },
+  {
+   "t": 3.75,
+   "f": 90,
+   "shape": "E"
+  },
+  {
+   "t": 3.875,
+   "f": 93,
+   "shape": "A"
+  },
+  {
+   "t": 4.0,
+   "f": 96,
+   "shape": "E"
+  },
+  {
+   "t": 4.125,
+   "f": 99,
+   "shape": "A"
+  },
+  {
+   "t": 4.208,
+   "f": 101,
+   "shape": "E"
+  },
+  {
+   "t": 4.458,
+   "f": 107,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Point",
+   "t0": 0.47,
+   "t1": 0.778,
+   "f0": 11,
+   "f1": 19,
+   "ph": "pˈYnt"
+  },
+  {
+   "w": "two",
+   "t0": 0.778,
+   "t1": 1.09,
+   "f0": 19,
+   "f1": 26,
+   "ph": "tˈu"
+  },
+  {
+   "w": "if",
+   "t0": 1.56,
+   "t1": 1.71,
+   "f0": 37,
+   "f1": 41,
+   "ph": "ɪf"
+  },
+  {
+   "w": "someone's",
+   "t0": 1.71,
+   "t1": 2.01,
+   "f0": 41,
+   "f1": 48,
+   "ph": "sˈʌmwˌʌnz"
+  },
+  {
+   "w": "going",
+   "t0": 2.01,
+   "t1": 2.222,
+   "f0": 48,
+   "f1": 53,
+   "ph": "ɡˈOɪŋ"
+  },
+  {
+   "w": "to",
+   "t0": 2.222,
+   "t1": 2.31,
+   "f0": 53,
+   "f1": 55,
+   "ph": "tə"
+  },
+  {
+   "w": "build",
+   "t0": 2.31,
+   "t1": 2.585,
+   "f0": 55,
+   "f1": 62,
+   "ph": "bˈɪld"
+  },
+  {
+   "w": "it",
+   "t0": 2.585,
+   "t1": 2.76,
+   "f0": 62,
+   "f1": 66,
+   "ph": "ɪt"
+  },
+  {
+   "w": "it",
+   "t0": 2.835,
+   "t1": 2.935,
+   "f0": 68,
+   "f1": 70,
+   "ph": "ɪt"
+  },
+  {
+   "w": "should",
+   "t0": 2.935,
+   "t1": 3.072,
+   "f0": 70,
+   "f1": 74,
+   "ph": "ʃˌʊd"
+  },
+  {
+   "w": "be",
+   "t0": 3.072,
+   "t1": 3.222,
+   "f0": 74,
+   "f1": 77,
+   "ph": "bi"
+  },
+  {
+   "w": "someone",
+   "t0": 3.222,
+   "t1": 3.585,
+   "f0": 77,
+   "f1": 86,
+   "ph": "sˈʌmwˌʌn"
+  },
+  {
+   "w": "who's",
+   "t0": 3.585,
+   "t1": 3.798,
+   "f0": 86,
+   "f1": 91,
+   "ph": "hˌuz"
+  },
+  {
+   "w": "scared",
+   "t0": 3.798,
+   "t1": 4.122,
+   "f0": 91,
+   "f1": 99,
+   "ph": "skˈɛɹd"
+  },
+  {
+   "w": "of",
+   "t0": 4.122,
+   "t1": 4.235,
+   "f0": 99,
+   "f1": 102,
+   "ph": "ʌv"
+  },
+  {
+   "w": "it",
+   "t0": 4.235,
+   "t1": 4.47,
+   "f0": 102,
+   "f1": 107,
+   "ph": "ɪt"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.92,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 114.5,
+  "f0_range_st": 12.6,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Point two, if someone's going to build it, it should be someone who's scared of it.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.259,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.44,
+  "rise_ms": 55.0,
+  "decay_ms": 135.0,
+  "decay_to_60_s": 0.065
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 2,
+   "word": "two",
+   "tts_s": 0.005,
+   "target_s": 0.4,
+   "point_s": 0.695,
+   "joined_speech": false,
+   "dip_db": -41.8,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.405,
+   "opened_s": 0.395
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "c2ac5f1ffabf9455",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 5.74,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 3.41,
+   "rechecked_alone": true
+  }
+ }
+}

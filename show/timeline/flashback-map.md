@@ -7,7 +7,7 @@ This file says which backstory lands in which episode, and why there. The user's
 - **Per-episode detail** lives in each episode's `flashbacks.md` ([ep01](../episodes/ep01/flashbacks.md) … [ep12](../episodes/ep12/flashbacks.md)). This file is the season-level source they must agree with.
 - **Quotes:** verified lines appear in quotation marks with their tag in the [master timeline](master-timeline.md). The few invented lines here (all in Ep11–12) are marked `[INVENTED]` right after them. Anything dramatized on screen is labeled `RECONSTRUCTED`.
 
-**Contents:** [Rules](#0-rules-of-the-map) · [Device language](#01-device-language-by-era) · [1. Backstory chapters](#1-backstory-chapter-list) · [2. Per-episode map](#2-per-episode-map-ep1ep12) · [3. Multi-part flashbacks](#3-multi-part-flashbacks-and-their-escalating-reveals) · [4. Coverage check](#4-coverage-check) · [5. Intro tease → payoff](#5-intro-tease--payoff) · [6. Flashback cast](#6-flashback-cast-and-registry-updates) · [7. Critic corrections applied](#7-critic-corrections-applied) · [8. Open items](#8-open-items)
+**Contents:** [Rules](#0-rules-of-the-map) · [Device language](#01-device-language-by-era) · [1. Backstory chapters](#1-backstory-chapter-list) · [2. Per-episode map](#2-per-episode-map-ep1ep12) · [2a. One full motive flashback per episode](#2a-one-full-motive-flashback-per-episode-the-season-plan-2026-09-28) · [3. Multi-part flashbacks](#3-multi-part-flashbacks-and-their-escalating-reveals) · [4. Coverage check](#4-coverage-check) · [5. Intro tease → payoff](#5-intro-tease--payoff) · [6. Flashback cast](#6-flashback-cast-and-registry-updates) · [7. Critic corrections applied](#7-critic-corrections-applied) · [8. Open items](#8-open-items)
 
 ---
 
@@ -15,7 +15,7 @@ This file says which backstory lands in which episode, and why there. The user's
 1. **1–3 flashbacks per episode.** Micro-inserts (≤5s, marked `·m`) don't count toward the cap, but they do count toward the time budget.
 2. **Enter on a trigger, exit on a consequence.** Every flashback enters on a present-day trigger and exits on the present-day consequence it explains. The exit lands on a matching object (napkin to napkin, box to box, receipt to check).
 3. **Budgets:**
-   - Ep1: **≤20s** of flashback in total.
+   - Ep1: **about 66 s** across three memories (v3.5, 2026-09-28; it was ≤20 s).
    - Ep2–11: **60–150s** each.
    - Ep12: ≤150s.
    - No single flashback runs over 60s, except the Ep8 Rashomon (≤90s, including its 10s Exhibit A).
@@ -126,14 +126,15 @@ Every usable chapter, with its verified basis and the slot it lands in. Quotes a
 The columns are: **WHEN** (the on-screen card) · **POV** (the rim) · **WHAT WE SEE** · **WHY HERE** (the present-day beat it motivates) · **TRANSITION** (in → out, with the matching exit object) · **TIER** · **LEN** (target seconds).
 
 ### Ep1 · `ep1.0_research_preview.md` · Nov 2022 – Dec 2023 · [flashbacks](../episodes/ep01/flashbacks.md)
-*Minimal and teasing. **Budget ≤20s; about 10s used.** We learn only that this has happened before.*
+*Rebuilt 2026-09-28 for the final Ep1 v3.5 (proposal-v35, PLAN §8; script draft 8.4, [script-v35-notes](../episodes/ep01/production/full-v3/script-v35-notes.md)). **Three memories, about 66 s** (the old ≤20 s budget is superseded: Act One grew at the showrunner's ask and Act Four shrank). Each enters on a present-day trigger through the intro's glowing line (or, for TPOOL, the tally marks) and exits on a matched object. No inner voice in any memory. THE WOODROSE is saved for Ep3–12 (the showrunner: "i would prefere having more to explore at the dinner later and use another partial progress more").*
 
 | ID | WHEN | POV | WHAT WE SEE | WHY HERE | TRANSITION | TIER | LEN |
 |---|---|---|---|---|---|---|---|
-| F1.1 | `1993` · the screen, **part 1 of 4** | Mas, age 8 (cyan) | A kid lit by the back of a beige, logo-free computer, the screen facing away. A 1-bit dialog shows OK and a greyed-out Cancel. A juice box that doesn't ripple | The APEC cold open's rewind (Nov 16), out of the frozen room where the `Board sync · Fri 12:00` invite arrives (no chyron states the firing). It sets up the **Cancel button** the board finally clicks at the Blip (Nov 17) | **In:** the cyan curve rewinds to its first pixel; `downgrading… HDR → 1-bit`. **Out:** the Orb's toast `rewinding… too far`; the 1-bit OK button match-cuts to the beige *low-key research preview* button (Nov 30, 2022). The greyed Cancel pays off at the Blip's video call (Nov 17) | T1 | 4 |
-| F1.2 | `2005–08 · TPOOL · (REPORTED)` | none (silhouettes) | A silent 240p cutaway: a boardroom door, two shadows, a whispered "twice." Back in the dark room, Mas carves tally marks 1 and 2 beside a fresh 3 | Noon, Nov 17, 2023: the moment Mas's Meet tile drops. The details are held for Ep12's montage. Only the fact of repetition is shown | **In:** a VHS tracking wipe triggered by the tile going grey. **Out:** tally mark 3 on the desk | T2a | 6 |
+| F1.1 | `JUN 2018` · **the night the machine taught itself** (sc 13) | Mas and Alyi | NopeAI's first office at night: a wall of monitors, ATOD's bots playing themselves (180 years a day, [P·arch]), racks with INVIDIA's logo. Alyi's awe ("Nobody taught it that."), Mas's practicality ("then a lot more computers."), "What else would you build?" unanswered. In a corner, a text side project finishing a sentence badly (GTP-1, Jun 2018); only Mas looks | 3 AM in Dec 2022: a stranger's post says it helped, and he remembers why they started. Why they want AGI; who each of them is (the believer, the organizer); the partnership the vote breaks | **In:** his screen's users counter becomes `PLAYED AGAINST ITSELF TODAY: 180 YEARS` in the same place and size; the glowing line re-draws the room. **Out:** he walks out with his glass into the Jan 2023 lobby (a revolving door's jam) | T3 (the arena in its own top-down game medium) | ≈ 34 |
+| F1.2 | `MAR 2019` · **the company with a ceiling** (sc 28) | Mas | The same office by day: Gerg's cloud bill ("Nobody donates billions."); Mas draws CAPPED PROFIT under NONPROFIT · THE BOARD, 100x, "the board.", `CEO · EQUITY: 0`, "nothing." / Mada: "Good answer."; the Quiet Vote's chair turned away; MACROSOFT's $1B slides under the door (Jul 2019) | The Senate, May 16, 2023: "i have no equity in nopeai." and the senator's disbelief. Why he owns nothing, and that he put the board on top himself (paid at the blueprint, Act Four) | **In:** his hand sets the wallet on the table; in 2019 the same hand sets a marker on the tray (a marker's squeak, an old office fan). **Out:** the check under the door; the glowing line sweeps back to a senator's blank pad; the gavel becomes a passport stamp | T3 | ≈ 26 |
+| F1.3 | TPOOL, 2005–08 (no card) · **twice before** (sc 43), two shots | none (silhouettes) | 240p: under a `TPOOL` decal, staff silhouettes pass a sheet `TO THE BOARD` to board silhouettes; again; then a young silhouette in two collars walks out with a `CEO` nameplate, still in charge. Never the reason | The night of Nov 18, 2023, at the carve ("i don't keep score."). It has happened before, and he survived; the return's count is the lesson | **In:** the Orb's eye-light on tally mark 1, a VHS tracking wipe. **Out:** the eye-light on mark 3 and his thumb, then the rewind to the board's side | T2a | 6 |
 
-*Not flashbacks (in-window, present-day):* the board musical-chairs beat (DIRE, NOVIHS, DRUH leave in 2023, CR B6); ODNOMIAR's painted cut line (Dec 2, 2023).
+*Retired:* the old F1.1, `1993` (cut from the cold open in v3.1; `HOW DO I WIN?` is retired by choice 8A, and 1993 stays only as the intro's imagery). *Not flashbacks (in-window, present-day):* the board's musical chairs (DIRE, NOVIHS, DRUH walk off the blueprint); the president's deepfake (Act Three).
 
 ### Ep2 · `ep1.1_her.wav` · Jan – Aug 2024 · [flashbacks](../episodes/ep02/flashbacks.md)
 *Budget 60–150s; about 80s used.*
@@ -252,6 +253,27 @@ The columns are: **WHEN** (the on-screen card) · **POV** (the rim) · **WHAT WE
 
 ---
 
+## 2a. One full motive flashback per episode (the season plan, 2026-09-28)
+
+From proposal-v35's "The season, briefly", agreed with the final Ep1 (PLAN §8). **From Ep2, each episode gets one full motive flashback (45–90 s) for its featured player**, what that player hopes to achieve, with Mas in the forefront of the season (SHOWRUNNER-NOTES 0000); micros only for texture, inside each episode's budget. The per-episode rows in §2 follow this table at each episode's next pass; where a row below differs from §2, this table is the plan.
+
+| Ep | Player | The full motive flashback |
+|---|---|---|
+| 1 | Mas and Alyi; Mas | JUN 2018 (why they want AGI) and MAR 2019 (why he owns nothing), plus TPOOL's 6 s (above) |
+| 2 | Alyi | the 2022 bonfire ("Feel the AGI!"; F2.2) |
+| 3 | Gerg | THE WOODROSE part 1, with the Breakout agent (F3.1) |
+| 4 | Nesnej | 1993, the diner ($40k; "thirty days from going out of business") (F4.2) |
+| 5 | Alyi | THE WOODROSE part 2 (who they wanted) (F5.2) |
+| 6 | Nole | THE WOODROSE part 3, `HIS VERSION` (the 100x cap comes off: Ep1's 2019 night, deepened) (F6.1) |
+| 7 | Mario | where the recipe book was written (F7.1) |
+| 8 | Nole, Gerg and Alyi | the 2017 control fight, with ATOD's 2017 one-on-one as its prologue (F8.1) |
+| 9 | Mas | the 2016 Oakland pilot |
+| 10 | Mario | THE WOODROSE part 4 (who knew the curve) (F10.2) |
+| 11 | Luap and Gerg | THE DIFF |
+| 12 | Mas | THE WOODROSE part 5, from his chair: what he wanted at that table (F12.1; the reveal of his why) |
+
+**ATOD's thread:** Ep1 (Jun 2018, self-play) → Ep5 (Apr 2019, it beats the champions) → Ep8 (Aug 2017, the one-on-one, told last on purpose). The milestones layer is in [season-flashbacks-overview §4](season-flashbacks-overview.md).
+
 ## 3. Multi-part flashbacks and their escalating reveals
 Each part adds exactly one new piece of information. No part repeats a reveal.
 
@@ -264,16 +286,21 @@ Each part adds exactly one new piece of information. No part repeats a reveal.
 | 4 | 10 (F10.2) | Mario | *Who knew the curve?* | He had already drawn the curve, and priced it (`Addendum:` and a price tag) | The napkin curve; Mas's telescope |
 | 5 | 12 (F12.1) | The model, from **Mas's chair** | *What did Mas see?* | He read everyone; nobody read him | Every prop above, plus the tells from Ep4 |
 
+- **Ep1 v3.5 (2026-09-28):** the five parts stay in Ep3–12; none plays in Ep1. Part 5 now carries the reveal of his why (what he wanted at that table: he asks "how far behind are we?" while looking at the room), and the finale's last exchange is that question typed again, answered `define "we."` (the Ep12 outline).
 - **Constant across parts:** Mario's card reads `MARIO (UDIAB) · JOINS 2016`. Mas's crystal glass never ripples. Mas never freezes.
 - **Intro:** bars 4.4–8 tease the dinner every week, and never explain it.
 
-### 3.2 The 1993 screen, four parts
-| Part | Ep | Card | What escalates | Intro bar 3 state |
-|---|---|---|---|---|
-| 1 | 1 (F1.1) | `1993` | We see only the back of the screen; Cancel is greyed out | Screen at 0° (Ep1–3) |
-| 2 | 4 (F4.2) | `MEANWHILE · 17 DAYS BEFORE HE TURNED 8` | The *other* 1993: INVIDIA is born that same spring | Rotates to 10° (Ep4–6) |
-| 3 | 7 (F7·m2) | `1993` | The CAPS LOCK light is on, so the kid typed in capitals | 35°, with an unreadable glow of capitals (Ep7–11) |
-| 4 | 12 (F12.2) | `1993` | `HOW DO I WIN?` The adult asks it again; `define "win."` | Fully turned in the Ep12 intro |
+### 3.2 The 1993 screen (retired as a question, 2026-09-28)
+**`HOW DO I WIN?` is retired** (PLAN §8 choice 8A; the showrunner: "i don't want flashback to 1993"). 1993 stays as the intro's imagery: the kid, and a screen that never turns. The thread's parts:
+
+| Part | Ep | Card | Status |
+|---|---|---|---|
+| 1 | 1 (the old F1.1) | `1993` | Cut from the cold open in v3.1; retired |
+| 2 | 4 (F4.2) | `MEANWHILE · 17 DAYS BEFORE HE TURNED 8` | **Kept:** it's Nesnej's 1993 (the diner), Ep4's full motive flashback, and it never needed the kid's question |
+| 3 | 7 (F7·m2) | `1993` | **Recommended cut** at Ep7's next pass: the CAPS LOCK light set up the question's capitals, and nothing pays it now |
+| 4 | 12 (F12.2) | `1993` | **Cut:** its 20 s go to F12.1 (THE WOODROSE from his chair); `define "win."` becomes `define "we."` |
+
+The intro's bar 3 keeps the screen at 0° all season.
 
 ### 3.3 The firing tally
 | Ep | Marks | Source |
@@ -326,7 +353,7 @@ The three are deliberately clustered here because Ep9 is the episode where "pace
 ### 4.1 Every chapter is used once, or repeated on purpose
 | Chapter | Used in | Once / repeated | Note |
 |---|---|---|---|
-| M1 (1993) | 1, 4, 7, 12 | **Deliberate 4-part** | §3.2 |
+| M1 (1993) | intro only (4 is Nesnej's) | **Retired as a thread** (v3.5) | §3.2 |
 | M2 (2002 assembly) | — | **HELD** | Cut by default (CR D40). Replaced by M2b |
 | M2b (Oakland 2016) | 9 | Once | New |
 | M3 (poker) | 4 | Once, echoed in 12 | F12.1 reuses the tell bars as payoff, not as a new flashback |
@@ -364,7 +391,7 @@ The three are deliberately clustered here because Ep9 is the episode where "pace
 ### 4.2 Budget and era spread per episode
 | Ep | Flashbacks (+micros) | ≈ seconds | Budget | Eras shown | Characters with backstory |
 |---|---|---|---|---|---|
-| 1 | 2 | 10 | ≤20 ✓ | 1993; 2005–08 | Mas |
+| 1 | 3 | 66 | about 66 (v3.5) ✓ | 2018; 2019; 2005–08 | Mas, Alyi, Gerg, Mada |
 | 2 | 3 | 80 | 60–150 ✓ | 2006–08; 2022; 2018 | Mas, Alyi, Nole (+DIRE tag) |
 | 3 | 3 | 95 | ✓ | 2015; 2012; 2020–21 | Gerg, Mas, Mario/Adelina |
 | 4 | 3 | 80 | ✓ | 2003–05; 1993/1997; 2008–09 | Mas, Nesnej, Luap |
@@ -375,12 +402,12 @@ The three are deliberately clustered here because Ep9 is the episode where "pace
 | 9 | 3 (+1) | 63 | ✓ | 2014; 2016 ×3 | Mas, Simed |
 | 10 | 2 (+1) | 65 | ✓ | 2015–16 + 2023; 2015; 2017–19 | Mas, Alyi, Mario, Maon |
 | 11 | 3 (+1) | 68 | ✓ | 2017; 2018; 2019; (2017) | Mas, Gerg, Luap |
-| 12 | 3 | 71 | ≤150 ✓ | 2015; 1993; montage | The model (Mas's chair), Mas |
+| 12 | 2 | 71 | ≤150 ✓ | 2015 (F12.1 absorbs F12.2's 20 s); montage | The model (Mas's chair), Mas |
 
 ### 4.3 Is anything front-loaded?
 **No. Here's the evidence.**
-1. **Ep1 carries 10 seconds** and reveals only that the firings have happened before.
-2. **The two biggest reveals are in the finale:** what Mas saw at THE WOODROSE, and `HOW DO I WIN?`
+1. **Ep1 carries about 66 seconds** (v3.5): why they want AGI (2018), why he owns nothing (2019) and that the firings have happened before (TPOOL). THE WOODROSE and every player's deeper motive wait for Ep2–12.
+2. **The biggest reveal is in the finale:** what Mas saw and wanted at THE WOODROSE, from his chair, and the machine's answer to his question, `define "we."` (`HOW DO I WIN?` is retired).
 3. **Each character's backstory is spread across the season** rather than clustered:
    - Nole: 2, 6, 8
    - Mario: 3, 7, 10
@@ -420,7 +447,7 @@ The intro teases and never explains. The episode-by-episode slot states live in 
 
 | Intro beat | What it shows | Paid off in |
 |---|---|---|
-| Bar 3 | The 1993 kid with the screen turned away (card `1993`) | Ep1, 4, 7, 12 (rotation per §3.2) |
+| Bar 3 | The 1993 kid with the screen turned away (card `1993`) | Imagery only since v3.5: the screen never turns (§3.2); Ep4's other 1993 is Nesnej's |
 | Bar 4.1 | 2008: two collars beside THE SLEEVE | Ep2 (F2.1) |
 | Bar 4.2 | 2014: the throne and the ramen crown | Ep4 (the cannibals, F4.3), Ep5 (the crown, F5.1) |
 | Bars 4.4–8 | THE WOODROSE | Ep3, 5, 6, 10, 12 |

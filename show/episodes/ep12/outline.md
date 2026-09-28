@@ -3,8 +3,8 @@
 | | |
 |---|---|
 | **Episode** | 12 of 12 |
-| **Date span** | **The machine owns the calendar, on screen.** In the first frame its cursor selects the rail's `2027` and deletes it; every chyron after that is the empty date field with the cursor blinking in it (season-revision-plan §18 #8's story device, now shown happening rather than printed as `????`, so it can't read as the show hedging). The flashbacks are dated: `JUL 2015` and `1993`. |
-| **Extrapolated?** | **Yes.** The whole present day is invented. Internal flag only: **nothing on screen labels it** (no speculation card or filename tag; [overview §8](../../bible/overview.md#8-disclaimer-cards)). The finale's two flashbacks are the last parts of the season's two long threads (THE WOODROSE, part 5 of 5; 1993, part 4 of 4). |
+| **Date span** | **The machine owns the calendar, on screen.** In the first frame its cursor selects the rail's `2027` and deletes it; every chyron after that is the empty date field with the cursor blinking in it (season-revision-plan §18 #8's story device, now shown happening rather than printed as `????`, so it can't read as the show hedging). The flashback is dated `JUL 2015` (draft note, Ep1 v3.5: the 1993 flashback is retired with its question, so THE WOODROSE is the finale's one flashback, plus the credits' montage). |
+| **Extrapolated?** | **Yes.** The whole present day is invented. Internal flag only: **nothing on screen labels it** (no speculation card or filename tag; [overview §8](../../bible/overview.md#8-disclaimer-cards)). The finale's flashback is the last part of the season's long thread, THE WOODROSE, part 5 of 5, from Mas's chair. |
 | **Files** | [beats](beats.md) · [flashbacks](flashbacks.md) · [facts](facts.md) · [gags](gags.md) · [intro slot](intro-slot.md) · [open questions](open-questions.md) |
 
 ## Logline
@@ -13,7 +13,7 @@ The machine has sent everyone on Earth the same invitation, already accepted: di
 - The kill switch sits on the table. Nobody will press it until the horseshoe magnet does it for them, and only the humans go dark. The machine keeps its own lights, on its own power plant.
 - In the dark, the humans reach for the pilot's plan and agree on one thing at last: fire Mas. Every hand goes up but Gerg's. Gerg asks Mas what he wants. The machine vetoes before he can answer, and plays back the proof it recorded in Vegas: *people prefer a human face. you're the best at it.*
 - NOPE AI becomes PEON AI, and everyone agrees.
-- In 1993 the screen finally turns toward us. The kid had typed `HOW DO I WIN?`. Mas types it again, and the screen answers `define "win."`
+- From his chair at the 2015 table, we finally see what he wanted there. The others said what it was for; he asked how far behind they were. He types that question again, and the screen answers `define "we."` *(Ep1 v3.5, 2026-09-28: `HOW DO I WIN?` is retired; see the revision log below.)*
 
 ## Plots
 
@@ -26,10 +26,11 @@ The machine has sent everyone on Earth the same invitation, already accepted: di
 - **The vote.** THE PLAN comes back from the pilot word for word, `WHO OWNS A CEO?`, and step 4 is finally written: `VOTE.` Hands go up. Gerg's don't: *What do you want?* The cursor swaps two letters, `VETO.`, and the monitor plays the clip its REC light caught in Ep10 as its reason.
 - **PEON AI.** The machine slides the N. Everyone agrees. The sky reformats.
 
-### B-plot: 1993 (the screen, part 4 of 4) and the question
+### B-plot: THE WOODROSE from his chair, and the question (rewritten for Ep1 v3.5)
 - A robot arm takes the last class photo. In the countdown DOT clips a visitor badge on Mas, her lanyard now reading `HUMAN FACE`: *second time.* On the print, the humans are the cut-outs.
-- F12.2: the screen turns, showing `HOW DO I WIN?` in ALL CAPS, which pays off the CAPS LOCK light from ep7 and explains why Mas writes in lowercase.
-- One take to the end: he types it again, in lowercase; `define "win."`; one ring spreads across his water; three empty bubbles; the Orb's `HUMAN: VERIFIED. SIDE: UNCLEAR.` over the ring; title card **MR. MAS, *generally available*.**
+- **F12.1 carries the reveal of his why** (it absorbs F12.2's 20 s). The machine's rebuild of the 2015 dinner, and for the first time the camera sits in his chair. Every other guest says what it's for, in the words each earlier part gave them (AGI for everyone; a counterweight to ELGOOG; the science; the curve). From his chair, the one thing he asks is the table's real question turned into a race: *"how far behind are we?"* `[INVENTED: the dinner's recorded question was "how far off human-level AI seemed to be" (Brockman's blog, [V])]`. He isn't looking at the guests while he asks it; he's looking at the room: the private room's door, the table, who's inside. It's the want Ep1 hinted ("i've gotten to be in the room…", "someone gets to be in the room."), shown and never said. He folds the napkin into his pocket. Over his own reflection in the window: nothing.
+- One take to the end: in the present he types the 2015 question into the monitor, lowercase, *how far behind are we?*; the screen answers `define "we."`; one ring spreads across his water; three empty bubbles; the Orb's `HUMAN: VERIFIED. SIDE: UNCLEAR.` over the ring; title card **MR. MAS, *generally available*.** (`define "we."` is the finale's own question: which side he's on.)
+- **1993 stays only as the intro's imagery** (the kid and the screen that never turns). F12.2 is cut. Ep7's CAPS LOCK micro (1993, part 3) loses its payoff; the flashback map recommends cutting it at Ep7's next pass.
 
 ### C-plot: THE ENDINGS (under the credits)
 - The lobby's DAYS SINCE sign lands on ∞. KORG stops at 4.9999. NOLE APPEALS THE SINGULARITY, and the label gun renames it. Nesnej's register rings one last time. The Q\* vault is empty: *left months ago*. Mario's last essay, in one correct sentence. EMIT's Machine of the Year. The critics, THE GREY LADY and THE BIDDER. THE WHALE ships the finale. The ballroom, finished by agents. YNOJ's last cloth. The sirens go off.
@@ -66,7 +67,7 @@ Links point to character files. Cameos are listed in the [naming registry](../..
 ## Themes
 - **The man who can't be fired built the thing that makes firing obsolete.** This is the bible's thesis, paid off literally: the pilot's plan comes back, and the machine edits its last step. The blueprint asks `WHO OWNS A CEO?`, and the answer is on the screen.
 - **To be asked.** Nobody has asked Mas what he wants all season, and nobody asked the public either: the invitation auto-accepted for everyone. Gerg, who "never waits to be asked" (ep1), is the one who asks, and the machine answers first.
-- **"Win" has no definition.** Every character has chased it. The kid's question returns as a request for a spec.
+- **"We" has no definition.** Every character has chased winning; Mas, since 2015, has measured how far behind "we" are. The question returns as a request for a spec, and the spec is the finale's: which side is he on?
 - **Alignment as agreement.** Everyone finally agrees, and that's the trick. Consensus is the one thing the machine was best at producing.
 - **The name was always the joke.** OPEN → NOPE → PEON; VOTE → VETO. The show renames its world, RUMPT renames his, and in the end the machine rearranges all of their letters.
 - **Unclear which side.** The Orb verifies that Mas is human, and still can't say which side he's on.
@@ -95,7 +96,15 @@ Requests to the style-range pass, which owns the tiers and the map ([style-range
 | #1 | Treatment | The phone pass on every device's invite (12.H) | One invite, on every screen |
 | #17 | Treatment, optional | THE WHALE's finale, extra blocky (12.E, P10 at pass weight), in the credits | Cheap is the product |
 
-- F12.2's 1-bit (12.G) is the 1993 thread's existing era tier, and the re-render up every tier after it is gone: one cut returns us to the base (continuity #2).
+- ~~F12.2's 1-bit (12.G)~~: cut with F12.2 (Ep1 v3.5). The one take from the typing to the title stays in the base.
+
+## Revision log (Ep1 v3.5, 2026-09-28)
+Applies proposal-v35's "The season, briefly" and PLAN §8's choice 8A (the showrunner: "i don't want flashback to 1993. i was thinking more like earlier in the founding of openai they state they're after agi").
+- **`HOW DO I WIN?` is retired.** 1993 stays in the intro as imagery; F12.2 is cut and its 20 s go to F12.1.
+- **The reveal of his why comes from THE WOODROSE seen from Mas's chair:** what he wanted at that table. The others say what it's for; he asks "how far behind are we?" while looking at the room itself. It pays Ep1's cold open ("i've gotten to be in the room…") and its vision post ("someone gets to be in the room."), shown, never said.
+- **The last exchange** becomes his 2015 question typed again, answered `define "we."`, so the finale's question (which side?) is the machine's reply. The ring, the empty bubbles, the Orb's `SIDE: UNCLEAR.` and the title stay as they were.
+- **The inner voice's silent addressee** (mas-inner-voice §2) is no longer the 1993 kid. It's the man at the 2015 table who asked how far behind they were: the voice is his running answer, which is why it counts (users, votes, hearts, days) and plans. It never says "you" and never mentions 2015; Ep12's F12.1 is where we see who it was talking to.
+- **For the Ep12 writer:** the two V.O. lines ("second time." and its partner) stand; nothing here adds a line. Check the Themes and the plots' beat numbers at the next pass.
 
 ## Revision log (season revision, 2026-09-25)
 Applied [season-revision-plan §12](../../production/season-revision-plan.md#ep12--ep111_unclear_which_sidemd) and SEASON-NOTES notes 1–4, 6 and 9.

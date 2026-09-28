@@ -1,0 +1,196 @@
+{
+ "segment": "coldopen",
+ "source": "show/reel/ep01-v34/ep01-v34-coldopen.json",
+ "_about": "v35 beat plan (script draft 8.4: the final version, proposal-v35.md with PLAN §8's choices 1A-12A), in the PLAN §2 format with the v3.1-v3.4 plans' fields, written as deltas on the v3.4 LOCK (show/reel/ep01-v34/ep01-v34-<seg>.json). Every v3.4 beat appears once (keep, cut, merge), in the v3.5 order; new beats are action \"new\" with their frame, set, room and chars (a restored v3.3 beat also names its source in restore_from). est_s is a planning length (new lines' lengths are the recorded v3.5 takes' audible lengths; restored and reused lines use their own takes), never a measurement. Line flags: keep / new (v35-* ids; takes in audio/ep01/v35/) / restored (an earlier take, with take and take_file) / reuse_of (a new id on an existing take file) / cut_from (a new id cut from an existing take). Placement: \"after\" + gap_s (a line id, or start+S) for new lines; a kept line's \"at\" is start+S, after:<id>+S, or overlap:<id>-S (it starts S before that line ends). New per-beat fields for the art, shot and score passes: scene (proposal-v35's number), mode (proposal-v35's modes), pace and tempo (the pace table: quick = others 0.15-0.35 s, Mas 0.4-0.5 s; normal 0.4-0.6 s; weighted = longer, only on turns; tempo.gaps are the gap before each named line), camera (the frame), picture (notes for the art pass), style (the tier), flashback (when, tier, in, out), style_leap (choice 9A's macro) and style_leap_optional (CLOD's claymation insert, if the Blender test reads; timing identical either way). onscreen also takes retime {text: at}. sounds_drop lists sounds a transition moves away. Fix codes are in _spec_v35.py. The script is show/episodes/ep01/script.md (draft 8.4); the notes are ../script-v35-notes.md.",
+ "story_s": {
+  "source": 26.67,
+  "estimate": 26.67
+ },
+ "beats": [
+  {
+   "id": "1.00",
+   "action": "keep",
+   "scene": 1,
+   "mode": "CONVERSATION",
+   "pace": "normal",
+   "est_s": 0.5,
+   "frame": "BLACK",
+   "camera": "BLACK",
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 0.5,
+   "src_frame": "BLACK",
+   "lines": []
+  },
+  {
+   "id": "1.01",
+   "action": "keep",
+   "scene": 1,
+   "mode": "CONVERSATION",
+   "pace": "normal",
+   "est_s": 4.25,
+   "frame": "WIDE · the one wide: stage, banquet, the lit window",
+   "camera": "WIDE · the one wide: stage, banquet, the lit window",
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 4.25,
+   "src_frame": "WIDE · the one wide: stage, banquet, the lit window",
+   "lines": [
+    {
+     "id": "e1-co-1-01",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "1.02",
+   "action": "keep",
+   "scene": 1,
+   "mode": "CONVERSATION",
+   "pace": "normal",
+   "est_s": 5.583,
+   "frame": "SINGLE · MCU Mas, answering; the window soft behind him",
+   "camera": "SINGLE · MCU Mas, answering; the window soft behind him",
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 5.583,
+   "src_frame": "SINGLE · MCU Mas, answering; the window soft behind him",
+   "lines": [
+    {
+     "id": "e1-co-1-02",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "1.03",
+   "action": "keep",
+   "scene": 1,
+   "mode": "CONVERSATION",
+   "pace": "normal",
+   "est_s": 1.542,
+   "frame": "INSERT · the shared table from above: plink",
+   "camera": "INSERT · the shared table from above: plink",
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 1.542,
+   "src_frame": "INSERT · the shared table from above: plink",
+   "lines": []
+  },
+  {
+   "id": "1.04",
+   "action": "keep",
+   "scene": 1,
+   "mode": "CONVERSATION",
+   "pace": "normal",
+   "est_s": 2.667,
+   "frame": "SINGLE · MCU Mas, the sentence lands",
+   "camera": "SINGLE · MCU Mas, the sentence lands",
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 2.667,
+   "src_frame": "SINGLE · MCU Mas, the sentence lands",
+   "lines": []
+  },
+  {
+   "id": "2.01",
+   "action": "keep",
+   "scene": 2,
+   "mode": "INSERT",
+   "pace": "normal",
+   "est_s": 0.625,
+   "frame": "WIDE · the freeze",
+   "camera": "WIDE · the freeze",
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 0.625,
+   "src_frame": "WIDE · the freeze",
+   "lines": []
+  },
+  {
+   "id": "2.02",
+   "action": "keep",
+   "scene": 2,
+   "mode": "INSERT",
+   "pace": "normal",
+   "est_s": 2.5,
+   "frame": "INSERT · the phone: the invite",
+   "camera": "INSERT · the phone: the invite",
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 2.5,
+   "src_frame": "INSERT · the phone: the invite",
+   "lines": []
+  },
+  {
+   "id": "2.03",
+   "action": "keep",
+   "scene": 2,
+   "mode": "INSERT",
+   "pace": "normal",
+   "est_s": 2.5,
+   "frame": "SINGLE · MCU Mas: he reads it, looks up",
+   "camera": "SINGLE · MCU Mas: he reads it, looks up",
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 2.5,
+   "src_frame": "SINGLE · MCU Mas: he reads it, looks up",
+   "lines": [
+    {
+     "id": "e1-co-2-01",
+     "keep": true
+    }
+   ]
+  },
+  {
+   "id": "3.01",
+   "action": "keep",
+   "scene": 3,
+   "mode": "QUICK-CUT",
+   "pace": "normal",
+   "est_s": 2.0,
+   "frame": "TWO-SHOT · Mas and the Orb: the iris steps",
+   "camera": "TWO-SHOT · Mas and the Orb: the iris steps",
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 2.0,
+   "src_frame": "TWO-SHOT · Mas and the Orb: the iris steps",
+   "lines": []
+  },
+  {
+   "id": "3.02",
+   "action": "keep",
+   "scene": 3,
+   "mode": "QUICK-CUT",
+   "pace": "normal",
+   "est_s": 4.5,
+   "frame": "WIDE · the room scrubs back, too far: the collapse",
+   "camera": "WIDE · the room scrubs back, too far: the collapse",
+   "music": "COLD OPEN · poised, curious · unchanged",
+   "picture": "unchanged (v3.4)",
+   "fix": [],
+   "why": "unchanged",
+   "src_s": 4.5,
+   "src_frame": "WIDE · the room scrubs back, too far: the collapse",
+   "lines": []
+  }
+ ]
+}

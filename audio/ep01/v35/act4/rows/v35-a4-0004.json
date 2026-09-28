@@ -1,0 +1,426 @@
+{
+ "id": "v35-a4-0004",
+ "scene": "41",
+ "speaker": "TASYA",
+ "speaker_slug": "tasya",
+ "text": "We found out a minute before the rest of the world, Mas. One minute.",
+ "spoken_as": "We found out a minute before the rest of the world, [Mas](/mˈɑs/).{0.45} One minute.",
+ "delivery": "warm on top, cold under it; the smile stays",
+ "tag": "[INVENTED · the reported minute (Axios, Nov 17, 2023, [H])]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "monitor",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "v35-41.03",
+ "shot_id": "v35-41.03",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": "call",
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v35/act4/wav/v35-a4-0004.wav",
+ "mp3": null,
+ "duration_s": 5.025,
+ "frames_24": 121,
+ "voiced_span_s": 3.8,
+ "pace": {
+  "words": 14,
+  "wpm": 221.1,
+  "speed": 0.85,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.85,
+   "speed_band": [
+    0.88,
+    0.96
+   ],
+   "articulation_guide_sps": [
+    3.8,
+    4.4
+   ],
+   "turn_wpm_guide": [
+    125,
+    145
+   ],
+   "intent": "warm on top, cold under it; the smile stays"
+  },
+  "measured": {
+   "wpm": 221.1,
+   "articulation_sps": 5.07,
+   "syllables": 17,
+   "span_s": 3.8,
+   "pauses_s": [
+    0.45
+   ]
+  },
+  "longest_internal_gap_s": 0.45,
+  "audible_in_s": 0.51,
+  "audible_out_s": 4.31
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_eric (Kokoro-82M stock) · b-eric-warm · speed 0.850",
+ "voiceId": "am_eric",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch -1.5 st",
+  "low shelf +2 dB @180 Hz",
+  "peak -1.5 dB @350 Hz Q1.0",
+  "high shelf +1.5 dB @6000 Hz",
+  "comp 2.0:1 @-24 dB (12/150 ms)",
+  "then the call chain: HPF 200 Hz; LPF 7000 Hz; peak +1.5 dB @1800 Hz Q1.0; comp 2.5:1 @-22 dB (5/90 ms); -16 LUFS",
+  "Kokoro speed 0.850 (the plan speed; tasya band 0.88-0.96); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'Mas': Kokoro 0.13 s -> 0.45 s (intended 0.45; +0.32 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "O"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "E"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "A"
+  },
+  {
+   "t": 0.833,
+   "f": 20,
+   "shape": "E"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "A"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "M"
+  },
+  {
+   "t": 1.167,
+   "f": 28,
+   "shape": "A"
+  },
+  {
+   "t": 1.25,
+   "f": 30,
+   "shape": "E"
+  },
+  {
+   "t": 1.375,
+   "f": 33,
+   "shape": "M"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "E"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "O"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "E"
+  },
+  {
+   "t": 1.875,
+   "f": 45,
+   "shape": "A"
+  },
+  {
+   "t": 2.0,
+   "f": 48,
+   "shape": "E"
+  },
+  {
+   "t": 2.083,
+   "f": 50,
+   "shape": "A"
+  },
+  {
+   "t": 2.167,
+   "f": 52,
+   "shape": "E"
+  },
+  {
+   "t": 2.25,
+   "f": 54,
+   "shape": "O"
+  },
+  {
+   "t": 2.417,
+   "f": 58,
+   "shape": "E"
+  },
+  {
+   "t": 2.625,
+   "f": 63,
+   "shape": "M"
+  },
+  {
+   "t": 2.75,
+   "f": 66,
+   "shape": "A"
+  },
+  {
+   "t": 3.042,
+   "f": 73,
+   "shape": "E"
+  },
+  {
+   "t": 3.167,
+   "f": 76,
+   "shape": "rest"
+  },
+  {
+   "t": 3.625,
+   "f": 87,
+   "shape": "O"
+  },
+  {
+   "t": 3.708,
+   "f": 89,
+   "shape": "A"
+  },
+  {
+   "t": 3.792,
+   "f": 91,
+   "shape": "E"
+  },
+  {
+   "t": 3.875,
+   "f": 93,
+   "shape": "M"
+  },
+  {
+   "t": 3.958,
+   "f": 95,
+   "shape": "A"
+  },
+  {
+   "t": 4.083,
+   "f": 98,
+   "shape": "E"
+  },
+  {
+   "t": 4.333,
+   "f": 104,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "We",
+   "t0": 0.505,
+   "t1": 0.63,
+   "f0": 12,
+   "f1": 15,
+   "ph": "wˌi"
+  },
+  {
+   "w": "found",
+   "t0": 0.63,
+   "t1": 0.918,
+   "f0": 15,
+   "f1": 22,
+   "ph": "fˈWnd"
+  },
+  {
+   "w": "out",
+   "t0": 0.918,
+   "t1": 1.068,
+   "f0": 22,
+   "f1": 26,
+   "ph": "ˈWt"
+  },
+  {
+   "w": "a",
+   "t0": 1.068,
+   "t1": 1.13,
+   "f0": 26,
+   "f1": 27,
+   "ph": "ɐ"
+  },
+  {
+   "w": "minute",
+   "t0": 1.13,
+   "t1": 1.38,
+   "f0": 27,
+   "f1": 33,
+   "ph": "mˈɪnət"
+  },
+  {
+   "w": "before",
+   "t0": 1.38,
+   "t1": 1.742,
+   "f0": 33,
+   "f1": 42,
+   "ph": "bəfˈɔɹ"
+  },
+  {
+   "w": "the",
+   "t0": 1.742,
+   "t1": 1.83,
+   "f0": 42,
+   "f1": 44,
+   "ph": "ðə"
+  },
+  {
+   "w": "rest",
+   "t0": 1.83,
+   "t1": 2.068,
+   "f0": 44,
+   "f1": 50,
+   "ph": "ɹˈɛst"
+  },
+  {
+   "w": "of",
+   "t0": 2.068,
+   "t1": 2.142,
+   "f0": 50,
+   "f1": 51,
+   "ph": "ʌv"
+  },
+  {
+   "w": "the",
+   "t0": 2.142,
+   "t1": 2.23,
+   "f0": 51,
+   "f1": 54,
+   "ph": "ðə"
+  },
+  {
+   "w": "world",
+   "t0": 2.23,
+   "t1": 2.58,
+   "f0": 54,
+   "f1": 62,
+   "ph": "wˈɜɹld"
+  },
+  {
+   "w": "Mas",
+   "t0": 2.63,
+   "t1": 3.155,
+   "f0": 63,
+   "f1": 76,
+   "ph": "mˈɑs"
+  },
+  {
+   "w": "One",
+   "t0": 3.612,
+   "t1": 3.875,
+   "f0": 87,
+   "f1": 93,
+   "ph": "wˈʌn"
+  },
+  {
+   "w": "minute",
+   "t0": 3.875,
+   "t1": 4.33,
+   "f0": 93,
+   "f1": 104,
+   "ph": "mˈɪnət"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -1.69,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 144.1,
+  "f0_range_st": 14.1,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "We found out a minute before the rest of the world, Moss. One minute.",
+  "cer": 0.038,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.27,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.45,
+  "rise_ms": 15.0,
+  "decay_ms": 180.0,
+  "decay_to_60_s": 0.265
+ },
+ "clean": {
+  "file": "audio/ep01/v35/act4/clean/v35-a4-0004.wav",
+  "note": "the dry read (no call chain), -16 LUFS"
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 12,
+   "word": "Mas",
+   "tts_s": 0.13,
+   "target_s": 0.45,
+   "point_s": 2.815,
+   "joined_speech": false,
+   "dip_db": -68.9,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.45,
+   "opened_s": 0.32
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "2efaec13f9286b54",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 4.29,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 1.81,
+   "rechecked_alone": false
+  }
+ }
+}

@@ -1,0 +1,420 @@
+{
+ "id": "v35-a2-0011",
+ "scene": "29",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "if we can comply, we will, and if we can't, we'll cease operating.",
+ "spoken_as": "if we can comply, we will,{0.3} and if we can't, we'll cease operating.",
+ "delivery": "at a lectern, pleasant, conversational; a threat said like a weather report",
+ "tag": "[V · MAY 24, 2023 · University College London, as printed by TIME and Decrypt: \"If we can comply, we will, and if we can't, we'll cease operating…\"; lowercased · FACT: the proposal's hybrid (\"we will try to comply, and if…\") mixed TIME's and Reuters' reports; this is one outlet's exact words]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "v35-29.02",
+ "shot_id": "v35-29.02",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": "pa",
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v35/act2/wav/v35-a2-0011.wav",
+ "mp3": null,
+ "duration_s": 5.29,
+ "frames_24": 127,
+ "voiced_span_s": 4.11,
+ "pace": {
+  "words": 13,
+  "wpm": 189.8,
+  "speed": 0.915,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.915,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.6,
+    4.2
+   ],
+   "turn_wpm_guide": [
+    135,
+    155
+   ],
+   "intent": "at a lectern, pleasant, conversational; a threat said like a weather report"
+  },
+  "measured": {
+   "wpm": 189.8,
+   "articulation_sps": 4.34,
+   "syllables": 17,
+   "span_s": 4.11,
+   "pauses_s": [
+    0.19
+   ]
+  },
+  "longest_internal_gap_s": 0.19,
+  "audible_in_s": 0.57,
+  "audible_out_s": 4.68
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.915",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch 0",
+  "low shelf +2 dB @160 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak +1 dB @3200 Hz Q0.8",
+  "high shelf -1.5 dB @8000 Hz",
+  "comp 2.0:1 @-24 dB (10/120 ms)",
+  "then the pa chain: HPF 160 Hz; LPF 8500 Hz; peak +2 dB @2400 Hz Q0.9; tanh saturation drive 1.6 mix 0.1; comp 3.0:1 @-22 dB (4/80 ms); -16 LUFS",
+  "Kokoro speed 0.915 (the plan speed; mas-manalt band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'will': Kokoro 0.33 s -> 0.33 s (intended 0.30; +0.00 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "E"
+  },
+  {
+   "t": 0.708,
+   "f": 17,
+   "shape": "O"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "E"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "A"
+  },
+  {
+   "t": 0.958,
+   "f": 23,
+   "shape": "E"
+  },
+  {
+   "t": 1.208,
+   "f": 29,
+   "shape": "M"
+  },
+  {
+   "t": 1.333,
+   "f": 32,
+   "shape": "E"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "A"
+  },
+  {
+   "t": 1.667,
+   "f": 40,
+   "shape": "O"
+  },
+  {
+   "t": 1.75,
+   "f": 42,
+   "shape": "E"
+  },
+  {
+   "t": 1.875,
+   "f": 45,
+   "shape": "O"
+  },
+  {
+   "t": 2.042,
+   "f": 49,
+   "shape": "A"
+  },
+  {
+   "t": 2.208,
+   "f": 53,
+   "shape": "E"
+  },
+  {
+   "t": 2.5,
+   "f": 60,
+   "shape": "rest"
+  },
+  {
+   "t": 2.625,
+   "f": 63,
+   "shape": "A"
+  },
+  {
+   "t": 2.708,
+   "f": 65,
+   "shape": "E"
+  },
+  {
+   "t": 2.875,
+   "f": 69,
+   "shape": "O"
+  },
+  {
+   "t": 2.958,
+   "f": 71,
+   "shape": "E"
+  },
+  {
+   "t": 3.083,
+   "f": 74,
+   "shape": "A"
+  },
+  {
+   "t": 3.25,
+   "f": 78,
+   "shape": "E"
+  },
+  {
+   "t": 3.458,
+   "f": 83,
+   "shape": "O"
+  },
+  {
+   "t": 3.542,
+   "f": 85,
+   "shape": "E"
+  },
+  {
+   "t": 3.708,
+   "f": 89,
+   "shape": "A"
+  },
+  {
+   "t": 3.875,
+   "f": 93,
+   "shape": "E"
+  },
+  {
+   "t": 3.958,
+   "f": 95,
+   "shape": "A"
+  },
+  {
+   "t": 4.083,
+   "f": 98,
+   "shape": "M"
+  },
+  {
+   "t": 4.167,
+   "f": 100,
+   "shape": "E"
+  },
+  {
+   "t": 4.333,
+   "f": 104,
+   "shape": "A"
+  },
+  {
+   "t": 4.458,
+   "f": 107,
+   "shape": "E"
+  },
+  {
+   "t": 4.708,
+   "f": 113,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "if",
+   "t0": 0.565,
+   "t1": 0.69,
+   "f0": 14,
+   "f1": 17,
+   "ph": "ɪf"
+  },
+  {
+   "w": "we",
+   "t0": 0.69,
+   "t1": 0.84,
+   "f0": 17,
+   "f1": 20,
+   "ph": "wi"
+  },
+  {
+   "w": "can",
+   "t0": 0.84,
+   "t1": 1.015,
+   "f0": 20,
+   "f1": 24,
+   "ph": "kæn"
+  },
+  {
+   "w": "comply",
+   "t0": 1.015,
+   "t1": 1.59,
+   "f0": 24,
+   "f1": 38,
+   "ph": "kəmplˈI"
+  },
+  {
+   "w": "we",
+   "t0": 1.665,
+   "t1": 1.865,
+   "f0": 40,
+   "f1": 45,
+   "ph": "wi"
+  },
+  {
+   "w": "will",
+   "t0": 1.865,
+   "t1": 2.515,
+   "f0": 45,
+   "f1": 60,
+   "ph": "wˈɪl"
+  },
+  {
+   "w": "and",
+   "t0": 2.615,
+   "t1": 2.728,
+   "f0": 63,
+   "f1": 65,
+   "ph": "ænd"
+  },
+  {
+   "w": "if",
+   "t0": 2.728,
+   "t1": 2.865,
+   "f0": 65,
+   "f1": 69,
+   "ph": "ɪf"
+  },
+  {
+   "w": "we",
+   "t0": 2.865,
+   "t1": 3.028,
+   "f0": 69,
+   "f1": 73,
+   "ph": "wi"
+  },
+  {
+   "w": "can't",
+   "t0": 3.028,
+   "t1": 3.415,
+   "f0": 73,
+   "f1": 82,
+   "ph": "kˈænt"
+  },
+  {
+   "w": "we'll",
+   "t0": 3.452,
+   "t1": 3.627,
+   "f0": 83,
+   "f1": 87,
+   "ph": "wil"
+  },
+  {
+   "w": "cease",
+   "t0": 3.627,
+   "t1": 3.965,
+   "f0": 87,
+   "f1": 95,
+   "ph": "sˈis"
+  },
+  {
+   "w": "operating",
+   "t0": 3.965,
+   "t1": 4.7,
+   "f0": 95,
+   "f1": 113,
+   "ph": "ˈɑpəɹˌATɪŋ"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.09,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.57,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 112.2,
+  "f0_range_st": 12.6,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "If we can comply, we will. And if we can't, we'll cease operating.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.324,
+  "align_median_s": 0.02,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.57,
+  "speech_tail_s": 0.365,
+  "rise_ms": 5.0,
+  "decay_ms": 215.0,
+  "decay_to_60_s": 0.245
+ },
+ "clean": {
+  "file": "audio/ep01/v35/act2/clean/v35-a2-0011.wav",
+  "note": "the dry read (no pa chain), -16 LUFS"
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 6,
+   "word": "will",
+   "tts_s": 0.33,
+   "target_s": 0.3,
+   "point_s": 1.835,
+   "joined_speech": false,
+   "dip_db": -58.4,
+   "breath": false,
+   "final_s": 0.33,
+   "opened_s": 0.0
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "53c2e67421287f2f",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 4.65,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 1,
+   "share_s": 1.59,
+   "rechecked_alone": false
+  }
+ }
+}

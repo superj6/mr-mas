@@ -1,5 +1,7 @@
 # ep01 · flashbacks
 
+> **Superseded 2026-09-28 by the final Ep1 v3.5 (script draft 8.4).** Ep1 now has three memories, about 66 s: **JUN 2018**, the night the machine taught itself (sc 13, about 34 s, T3); **MAR 2019**, the company with a ceiling (sc 28, about 26 s, T3); and **TPOOL** in two shots (sc 43, 6 s, T2a). The 1993 flashback below is retired (cut from the cold open in v3.1; `HOW DO I WIN?` retired by PLAN §8 choice 8A). The current table is the [flashback map's Ep1 section](../../timeline/flashback-map.md), and the beats are in [beat-plan-v35](production/full-v3/beat-plan-v35/) (`flashback` fields). What follows is the earlier plan, kept as history.
+
 Source: the flashback map (`_sources/research/worldcast-flashback-map.md` §2, ep1) with the critic's corrections applied (`worldcast-critic.md` §E42 and §E48), aligned to the script (cold open, and Act Four draft 4.0). The season-level placement is in [timeline/flashback-map.md](../../timeline/flashback-map.md).
 
 **Pilot guidelines**
