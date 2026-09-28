@@ -1,0 +1,22 @@
+{
+ "problems": [],
+ "flags": [
+  {
+   "id": "v31-vo-03",
+   "kind": "asr",
+   "note": "ASR missed a word: '13' (recall 0.0)"
+  }
+ ],
+ "totals": {
+  "lines": 4,
+  "words": 22,
+  "audible_s": 8.7,
+  "wpm_overall": 151.0
+ },
+ "stringouts": [
+  "audio/ep01/v31/act3/reel/sc18-fast-stringout.mp3",
+  "audio/ep01/v31/act3/reel/sc19-fast-stringout.mp3",
+  "audio/ep01/v31/act3/reel/sc20-fast-stringout.mp3"
+ ],
+ "method": "fastrec qa_generic: qa_v5.py's hard checks and ear flags, without its Act Four conversation table"
+}

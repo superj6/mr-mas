@@ -1,0 +1,38 @@
+{
+ "problems": [],
+ "flags": [
+  {
+   "id": "v31-a4-0009",
+   "kind": "pause-in-voice",
+   "note": "the 0.3 s pause after 'Okay' is opened while the voice still sounds (dip -24.6 dB)"
+  },
+  {
+   "id": "v31-a4-0013",
+   "kind": "asr",
+   "note": "ASR missed a word: 'Do on the first.' (recall 0.75)"
+  },
+  {
+   "id": "v31-a4-0015",
+   "kind": "pace",
+   "note": "articulation 2.94 syll/s against the guide 3.6-4.2"
+  },
+  {
+   "id": "v31-a4-0016",
+   "kind": "pace",
+   "note": "articulation 2.6 syll/s against the guide 4.4-5.0"
+  }
+ ],
+ "totals": {
+  "lines": 13,
+  "words": 78,
+  "audible_s": 24.1,
+  "wpm_overall": 194.0
+ },
+ "stringouts": [
+  "audio/ep01/v31/act4/reel/sc3-fast-stringout.mp3",
+  "audio/ep01/v31/act4/reel/sc4-fast-stringout.mp3",
+  "audio/ep01/v31/act4/reel/sc5-fast-stringout.mp3",
+  "audio/ep01/v31/act4/reel/sc7-fast-stringout.mp3"
+ ],
+ "method": "fastrec qa_generic: qa_v5.py's hard checks and ear flags, without its Act Four conversation table"
+}

@@ -1,0 +1,317 @@
+{
+ "id": "v31-a1-0003",
+ "scene": "7",
+ "speaker": "RIMA TAMURI",
+ "speaker_slug": "rima-tamuri",
+ "text": "A million people, Mas. Is that a tear?",
+ "spoken_as": "A million people, [Mas](/mˈɑs/).{0.4} Is that a tear?",
+ "delivery": "beside him at the hole; gently, almost pleased, a friend teasing; the J-cut keeps its 0.6 s lead",
+ "tag": "[INVENTED]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "7.01",
+ "shot_id": "7.01",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v31/act1/wav/v31-a1-0003.wav",
+ "mp3": null,
+ "duration_s": 3.785,
+ "frames_24": 91,
+ "voiced_span_s": 2.76,
+ "pace": {
+  "words": 8,
+  "wpm": 173.9,
+  "speed": 0.86,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.86,
+   "speed_band": [
+    0.9,
+    0.98
+   ],
+   "articulation_guide_sps": [
+    4.0,
+    4.6
+   ],
+   "turn_wpm_guide": [
+    140,
+    160
+   ],
+   "intent": "beside him at the hole; gently, almost pleased, a friend teasing; the J-cut keeps its 0.6 s lead"
+  },
+  "measured": {
+   "wpm": 173.9,
+   "articulation_sps": 4.27,
+   "syllables": 10,
+   "span_s": 2.76,
+   "pauses_s": [
+    0.42
+   ]
+  },
+  "longest_internal_gap_s": 0.42,
+  "audible_in_s": 0.5,
+  "audible_out_s": 3.26
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "af_heart (Kokoro-82M stock) · a-heart-composed · speed 0.860",
+ "voiceId": "af_heart",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch 0",
+  "peak -1 dB @300 Hz Q1.0",
+  "peak +1 dB @5000 Hz Q0.8",
+  "comp 2.0:1 @-22 dB (8/120 ms)",
+  "Kokoro speed 0.860 (the plan speed; rima-tamuri band 0.90-0.98); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'Mas': Kokoro 0.24 s -> 0.39 s (intended 0.40; +0.15 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "A"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "M"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "A"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "E"
+  },
+  {
+   "t": 1.0,
+   "f": 24,
+   "shape": "M"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "E"
+  },
+  {
+   "t": 1.167,
+   "f": 28,
+   "shape": "M"
+  },
+  {
+   "t": 1.25,
+   "f": 30,
+   "shape": "E"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "M"
+  },
+  {
+   "t": 1.542,
+   "f": 37,
+   "shape": "A"
+  },
+  {
+   "t": 1.833,
+   "f": 44,
+   "shape": "E"
+  },
+  {
+   "t": 1.917,
+   "f": 46,
+   "shape": "rest"
+  },
+  {
+   "t": 2.292,
+   "f": 55,
+   "shape": "E"
+  },
+  {
+   "t": 2.5,
+   "f": 60,
+   "shape": "A"
+  },
+  {
+   "t": 2.708,
+   "f": 65,
+   "shape": "E"
+  },
+  {
+   "t": 2.875,
+   "f": 69,
+   "shape": "A"
+  },
+  {
+   "t": 3.083,
+   "f": 74,
+   "shape": "E"
+  },
+  {
+   "t": 3.25,
+   "f": 78,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "A",
+   "t0": 0.49,
+   "t1": 0.59,
+   "f0": 12,
+   "f1": 14,
+   "ph": "ɐ"
+  },
+  {
+   "w": "million",
+   "t0": 0.59,
+   "t1": 1.04,
+   "f0": 14,
+   "f1": 25,
+   "ph": "mˈɪljᵊn"
+  },
+  {
+   "w": "people",
+   "t0": 1.04,
+   "t1": 1.365,
+   "f0": 25,
+   "f1": 33,
+   "ph": "pˈipᵊl"
+  },
+  {
+   "w": "Mas",
+   "t0": 1.415,
+   "t1": 1.92,
+   "f0": 34,
+   "f1": 46,
+   "ph": "mˈɑs"
+  },
+  {
+   "w": "Is",
+   "t0": 2.245,
+   "t1": 2.445,
+   "f0": 54,
+   "f1": 59,
+   "ph": "ˌɪz"
+  },
+  {
+   "w": "that",
+   "t0": 2.445,
+   "t1": 2.608,
+   "f0": 59,
+   "f1": 63,
+   "ph": "ðˈæt"
+  },
+  {
+   "w": "a",
+   "t0": 2.608,
+   "t1": 2.72,
+   "f0": 63,
+   "f1": 65,
+   "ph": "ɐ"
+  },
+  {
+   "w": "tear",
+   "t0": 2.72,
+   "t1": 3.28,
+   "f0": 65,
+   "f1": 79,
+   "ph": "tˈɪɹ"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.29,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 210.2,
+  "f0_range_st": 12.2,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "A million people, Moss. Is that a tear?",
+  "cer": 0.071,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.369,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.435,
+  "rise_ms": 0.0,
+  "decay_ms": 115.0,
+  "decay_to_60_s": 0.095
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 4,
+   "word": "Mas",
+   "tts_s": 0.245,
+   "target_s": 0.4,
+   "point_s": 1.665,
+   "joined_speech": false,
+   "dip_db": -64.4,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.385,
+   "opened_s": 0.155
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "d059daeca24f15b3",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 5.06,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 2.83,
+   "rechecked_alone": true
+  }
+ }
+}

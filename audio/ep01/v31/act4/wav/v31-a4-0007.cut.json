@@ -1,0 +1,270 @@
+{
+ "id": "v31-a4-0007",
+ "scene": "29",
+ "speaker": "GERG MOCKBRAN",
+ "speaker_slug": "gerg-mockbran",
+ "text": "Best time there is Nobody else is pushing anything",
+ "spoken_as": "Best time there is.{0.30} Nobody else is pushing anything.{b0.50} Anyway, that's not why I called.{0.20} You've got the staff letter open?{0.28} Scroll down.",
+ "delivery": "Sunny, fast, one turn: 0.3 s between the first two sentences, a 0.5 s change of thought before 'Anyway', then quick. 'You've got the staff letter open?' is a real check (let it lift if it will).",
+ "tag": "[INVENTED]",
+ "mode": "call",
+ "voiced_in_cut": true,
+ "on_camera": "monitor",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": "his",
+ "shot": "S5.09",
+ "shot_id": "S5.09",
+ "cue": "S5.09, 0.30 s after the previous voice",
+ "lip_sync": true,
+ "status": "new",
+ "device": "call",
+ "room": "the dark room; Gerg on the monitor",
+ "est_s": 7.3,
+ "file": "audio/ep01/v31/act4/wav/v31-a4-0007.wav",
+ "duration_s": 3.585,
+ "frames_24": 224,
+ "voiced_span_s": 7.82,
+ "pace": {
+  "words": 23,
+  "wpm": 176.5,
+  "speed": 1.06,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.06,
+   "speed_band": [
+    1.02,
+    1.1
+   ],
+   "articulation_guide_sps": [
+    5.0,
+    5.8
+   ],
+   "turn_wpm_guide": [
+    175,
+    200
+   ],
+   "intent": "Sunny, fast, one turn: 0.3 s between the first two sentences, a 0.5 s change of thought before 'Anyway', then quick. 'You've got the staff letter open?' is a real check (let it lift if it will)."
+  },
+  "measured": {
+   "wpm": 176.5,
+   "articulation_sps": 4.91,
+   "syllables": 32,
+   "span_s": 7.82,
+   "pauses_s": [
+    0.31,
+    0.49,
+    0.23,
+    0.27
+   ]
+  },
+  "longest_internal_gap_s": 0.49,
+  "audible_in_s": 0.33,
+  "audible_out_s": 3.315
+ },
+ "placement": {
+  "gap_before_s": 0.3,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 22,
+ "pick_reason": "a yes/no question: no take lifts 1 st; the most lift among the 10 takes within 0.2 UTMOS of the top (takes with a pause cut inside the voice set aside; a stop of 0.3 s or more is kept as a real stop, by separate whole reads, rather than run on)",
+ "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.060",
+ "voiceId": "am_puck",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch +1.5 st",
+  "peak -2 dB @250 Hz Q1.0",
+  "peak +2 dB @4000 Hz Q0.9",
+  "comp 3.0:1 @-22 dB (4/80 ms)",
+  "then the call / monitor filter: HPF 200 Hz; LPF 7000 Hz; peak +1.5 dB @1800 Hz Q1.0; comp 2.5:1 @-22 dB (5/90 ms); -16 LUFS",
+  "Kokoro speed 1.060, chosen from intent in the gerg-mockbran band 1.02-1.10 (the plan's 1.06); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'is' (word 4): Kokoro 0.00 s -> 0.31 s (intended 0.30; +0.30 s of room tone at the quietest 5 ms, 60/25 ms crossfades; Kokoro ran the words together here (dip -20.0 dB): the cut is shaped as a decay and an onset, ear check)",
+  "pause after 'anything' (word 9): Kokoro 0.14 s -> 0.50 s (intended 0.50; +0.35 s of room tone at the quietest 5 ms, 8/8 ms crossfades, with an inhale)",
+  "pause after 'called' (word 15): Kokoro 0.00 s -> 0.23 s (intended 0.20; +0.20 s of room tone at the quietest 5 ms, 60/25 ms crossfades; Kokoro ran the words together here (dip -36.1 dB): the cut is shaped as a decay and an onset, ear check)",
+  "pause after 'open' (word 21): Kokoro 0.07 s -> 0.28 s (intended 0.28; +0.21 s of room tone at the quietest 5 ms, 8/8 ms crossfades)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "placeholder inhale(s): synthetic band-limited noise with a breath envelope (NOT a licensed breath library; never from a real person)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (the room's early reflection is a mix send)"
+ ],
+ "words": [
+  {
+   "w": "Best",
+   "t0": 0.35,
+   "t1": 0.572,
+   "f0": 11,
+   "f1": 17,
+   "ph": "bˈɛst"
+  },
+  {
+   "w": "time",
+   "t0": 0.572,
+   "t1": 0.785,
+   "f0": 17,
+   "f1": 22,
+   "ph": "tˈIm"
+  },
+  {
+   "w": "there",
+   "t0": 0.785,
+   "t1": 0.998,
+   "f0": 22,
+   "f1": 27,
+   "ph": "ðɛɹ"
+  },
+  {
+   "w": "is",
+   "t0": 0.998,
+   "t1": 1.185,
+   "f0": 27,
+   "f1": 31,
+   "ph": "ɪz"
+  },
+  {
+   "w": "Nobody",
+   "t0": 1.535,
+   "t1": 1.873,
+   "f0": 40,
+   "f1": 48,
+   "ph": "nˈObˌɑdi"
+  },
+  {
+   "w": "else",
+   "t0": 1.873,
+   "t1": 2.11,
+   "f0": 48,
+   "f1": 54,
+   "ph": "ˈɛls"
+  },
+  {
+   "w": "is",
+   "t0": 2.11,
+   "t1": 2.26,
+   "f0": 54,
+   "f1": 57,
+   "ph": "ɪz"
+  },
+  {
+   "w": "pushing",
+   "t0": 2.26,
+   "t1": 2.635,
+   "f0": 57,
+   "f1": 66,
+   "ph": "pˈʊʃɪŋ"
+  },
+  {
+   "w": "anything",
+   "t0": 2.635,
+   "t1": 3.235,
+   "f0": 66,
+   "f1": 81,
+   "ph": "ˈɛniθˌɪŋ"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.12,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 111.3,
+  "f0_range_st": 11.2,
+  "final_move_st": -3.0,
+  "asr": "Best time there is, nobody else is pushing anything. Anyway, that's not why I called. You've got the staff letter open. Scroll down.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.278,
+  "align_median_s": 0.032,
+  "utmos_dry": 3.06,
+  "utmos_plain_read": 3.229,
+  "utmos_vs_plain": -0.169,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": 2.631,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 20.0,
+  "decay_ms": 145.0,
+  "decay_to_60_s": 0.55,
+  "q_lift_st": -0.45
+ },
+ "nobreath": {
+  "file": "audio/ep01/act4/dialogue/v5/nobreath/a5-29-05.wav",
+  "note": "the same take without the placeholder inhale(s)"
+ },
+ "breaths": [
+  {
+   "where": "mid",
+   "t0": 3.464,
+   "t1": 3.78
+  }
+ ],
+ "opened_pauses": [
+  {
+   "after_word": 4,
+   "word": "is",
+   "tts_s": 0.0,
+   "target_s": 0.3,
+   "point_s": 0.885,
+   "joined_speech": true,
+   "dip_db": -20.0,
+   "breath": false,
+   "crossfade_ms": [
+    60,
+    25
+   ],
+   "final_s": 0.31,
+   "opened_s": 0.3
+  },
+  {
+   "after_word": 9,
+   "word": "anything",
+   "tts_s": 0.145,
+   "target_s": 0.5,
+   "point_s": 2.95,
+   "joined_speech": false,
+   "dip_db": -65.1,
+   "breath": true,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.5,
+   "opened_s": 0.355
+  },
+  {
+   "after_word": 15,
+   "word": "called",
+   "tts_s": 0.0,
+   "target_s": 0.2,
+   "point_s": 5.11,
+   "joined_speech": true,
+   "dip_db": -36.1,
+   "breath": false,
+   "crossfade_ms": [
+    60,
+    25
+   ],
+   "final_s": 0.23,
+   "opened_s": 0.2
+  },
+  {
+   "after_word": 21,
+   "word": "open",
+   "tts_s": 0.07,
+   "target_s": 0.28,
+   "point_s": 6.83,
+   "joined_speech": false,
+   "dip_db": -59.9,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.28,
+   "opened_s": 0.21
+  }
+ ],
+ "cut_from": "a5-29-05 words 0-8 (audio/ep01/act4/dialogue/v5/wav/a5-29-05.wav, 0.120-3.583 s), 12 ms fades, room-tone handles to 0.35 s"
+}

@@ -1,0 +1,199 @@
+{
+ "id": "v31-a3-0002",
+ "scene": "20",
+ "speaker": "GERG MOCKBRAN",
+ "speaker_slug": "gerg-mockbran",
+ "text": "Okay That's patched",
+ "spoken_as": "Okay.{s0.20} That's patched.{0.30} Rima's going to wake up to forty emails about it.",
+ "delivery": "filter; he can see it refresh on his end",
+ "tag": "[INVENTED · every emergency becomes a build status. The Rima line comes after the edit, so it isn't its cause; it keeps her alive between sc 7 and Act Four, and \"forty\" is launch night's number come back. It states no fact about anyone's reaction to the real post. Guardrails check requested (open question 52)]",
+ "mode": "call",
+ "voiced_in_cut": true,
+ "on_camera": "monitor",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "2S",
+ "shot_id": "2S",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": "call",
+ "room": null,
+ "est_s": 6.2,
+ "file": "audio/ep01/v31/act3/wav/v31-a3-0002.wav",
+ "duration_s": 1.95,
+ "frames_24": 127,
+ "voiced_span_s": 3.99,
+ "pace": {
+  "words": 13,
+  "wpm": 195.5,
+  "speed": 1.06,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.06,
+   "speed_band": [
+    1.02,
+    1.1
+   ],
+   "articulation_guide_sps": [
+    5.0,
+    5.8
+   ],
+   "turn_wpm_guide": [
+    175,
+    200
+   ],
+   "intent": "filter; he can see it refresh on his end"
+  },
+  "measured": {
+   "wpm": 195.5,
+   "articulation_sps": 5.43,
+   "syllables": 19,
+   "span_s": 3.99,
+   "pauses_s": [
+    0.18,
+    0.31
+   ]
+  },
+  "longest_internal_gap_s": 0.31,
+  "audible_in_s": 0.33,
+  "audible_out_s": 1.68
+ },
+ "placement": {
+  "gap_before_s": 0.35,
+  "follows": "voice"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.060",
+ "voiceId": "am_puck",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch +1.5 st",
+  "peak -2 dB @250 Hz Q1.0",
+  "peak +2 dB @4000 Hz Q0.9",
+  "comp 3.0:1 @-22 dB (4/80 ms)",
+  "then the call chain: HPF 200 Hz; LPF 7000 Hz; peak +1.5 dB @1800 Hz Q1.0; comp 2.5:1 @-22 dB (5/90 ms); -16 LUFS",
+  "Kokoro speed 1.060 (the centre of the band; gerg-mockbran band 1.02-1.10); 2 whole reads, joined in room tone; no time-stretch, no carrier, no splice",
+  "pause after 'patched': Kokoro 0.00 s -> 0.32 s (intended 0.30; +0.30 s of room tone at the quietest 5 ms; Kokoro ran the words together here (dip -30.6 dB): ear check)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "words": [
+  {
+   "w": "Okay",
+   "t0": 0.35,
+   "t1": 0.94,
+   "f0": 11,
+   "f1": 25,
+   "ph": "ˌOkˈA"
+  },
+  {
+   "w": "That's",
+   "t0": 1.065,
+   "t1": 1.32,
+   "f0": 28,
+   "f1": 35,
+   "ph": "ðˈæts"
+  },
+  {
+   "w": "patched",
+   "t0": 1.32,
+   "t1": 1.6,
+   "f0": 35,
+   "f1": 41,
+   "ph": "pˈæʧt"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.19,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 123.8,
+  "f0_range_st": 11.6,
+  "f0_method": "pYIN (a4lib.analyse)",
+  "final_move_st": -4.7,
+  "asr": "Okay, that's patched, Rima's going to wake up to 40 emails about it.",
+  "cer": 0.093,
+  "word_recall_nonames": 0.917,
+  "logprob": -0.332,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.45,
+  "rise_ms": 20.0,
+  "decay_ms": 35.0,
+  "decay_to_60_s": 0.315
+ },
+ "speaker_label": "GERG",
+ "fast": {
+  "key": "ba318213a4c7434f",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 6.76,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": true,
+   "breaths": false,
+   "threads": 4
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 2.31,
+   "rechecked_alone": false
+  }
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": null,
+   "word": "Okay",
+   "tts_s": null,
+   "target_s": 0.2,
+   "final_s": 0.2,
+   "opened_s": 0.0,
+   "joined_speech": false,
+   "dip_db": null,
+   "breath": false,
+   "split": true,
+   "point_s": 0.555,
+   "crossfade_ms": [
+    0,
+    0
+   ]
+  },
+  {
+   "after_word": 2,
+   "word": "patched",
+   "tts_s": 0.0,
+   "target_s": 0.3,
+   "point_s": 1.25,
+   "joined_speech": true,
+   "dip_db": -30.6,
+   "breath": false,
+   "crossfade_ms": [
+    60,
+    25
+   ],
+   "final_s": 0.315,
+   "opened_s": 0.3
+  }
+ ],
+ "cut_from": "e1-a3-20-05 words 0-2 (audio/ep01/act3/dialogue/fast-v2/wav/e1-a3-20-05.wav, 0.120-1.967 s), 12 ms fades, room-tone handles to 0.35 s"
+}

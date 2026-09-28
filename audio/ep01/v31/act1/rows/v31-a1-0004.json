@@ -1,0 +1,364 @@
+{
+ "id": "v31-a1-0004",
+ "scene": "8",
+ "speaker": "RADNUS",
+ "speaker_slug": "radnus",
+ "text": "Search is fine. Totally fine. It's just a chat thing.",
+ "spoken_as": "Search is fine.{0.2} Totally fine.{0.3} It's just a chat thing.",
+ "delivery": "quick, holding up the phone with the two-dot bubble on it",
+ "tag": "[INVENTED]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "monitor",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "8.04",
+ "shot_id": "8.04",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": "call",
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v31/act1/wav/v31-a1-0004.wav",
+ "mp3": null,
+ "duration_s": 4.455,
+ "frames_24": 107,
+ "voiced_span_s": 3.4,
+ "pace": {
+  "words": 10,
+  "wpm": 176.5,
+  "speed": 1.03,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.03,
+   "speed_band": [
+    0.91,
+    0.99
+   ],
+   "articulation_guide_sps": [
+    3.8,
+    4.4
+   ],
+   "turn_wpm_guide": [
+    130,
+    150
+   ],
+   "intent": "quick, holding up the phone with the two-dot bubble on it"
+  },
+  "measured": {
+   "wpm": 176.5,
+   "articulation_sps": 4.11,
+   "syllables": 12,
+   "span_s": 3.4,
+   "pauses_s": [
+    0.19,
+    0.29,
+    0.09
+   ]
+  },
+  "longest_internal_gap_s": 0.29,
+  "audible_in_s": 0.5,
+  "audible_out_s": 3.9
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_echo*0.60+am_fenrir*0.40 (Kokoro-82M stock) · d-echo-fenrir-courteous-up2 · speed 1.030",
+ "voiceId": "am_echo*0.60+am_fenrir*0.40",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch +2 st",
+  "low shelf +1.5 dB @180 Hz",
+  "peak -1.5 dB @350 Hz Q1.0",
+  "peak +0.5 dB @3000 Hz Q0.9",
+  "high shelf -1 dB @7000 Hz",
+  "comp 2.0:1 @-24 dB (10/140 ms)",
+  "then the call chain: HPF 200 Hz; LPF 7000 Hz; peak +1.5 dB @1800 Hz Q1.0; comp 2.5:1 @-22 dB (5/90 ms); -16 LUFS",
+  "Kokoro speed 1.030 (the plan speed; radnus band 0.91-0.99); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'fine': Kokoro 0.04 s -> 0.20 s (intended 0.20; +0.17 s of room tone at the quietest 5 ms)",
+  "pause after 'fine': Kokoro 0.08 s -> 0.31 s (intended 0.30; +0.22 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "E"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "O"
+  },
+  {
+   "t": 0.708,
+   "f": 17,
+   "shape": "E"
+  },
+  {
+   "t": 1.042,
+   "f": 25,
+   "shape": "A"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "E"
+  },
+  {
+   "t": 1.375,
+   "f": 33,
+   "shape": "rest"
+  },
+  {
+   "t": 1.625,
+   "f": 39,
+   "shape": "O"
+  },
+  {
+   "t": 1.75,
+   "f": 42,
+   "shape": "E"
+  },
+  {
+   "t": 2.083,
+   "f": 50,
+   "shape": "A"
+  },
+  {
+   "t": 2.333,
+   "f": 56,
+   "shape": "E"
+  },
+  {
+   "t": 2.417,
+   "f": 58,
+   "shape": "rest"
+  },
+  {
+   "t": 2.75,
+   "f": 66,
+   "shape": "E"
+  },
+  {
+   "t": 2.917,
+   "f": 70,
+   "shape": "A"
+  },
+  {
+   "t": 3.0,
+   "f": 72,
+   "shape": "E"
+  },
+  {
+   "t": 3.083,
+   "f": 74,
+   "shape": "A"
+  },
+  {
+   "t": 3.458,
+   "f": 83,
+   "shape": "E"
+  },
+  {
+   "t": 3.625,
+   "f": 87,
+   "shape": "A"
+  },
+  {
+   "t": 3.708,
+   "f": 89,
+   "shape": "E"
+  },
+  {
+   "t": 3.917,
+   "f": 94,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Search",
+   "t0": 0.515,
+   "t1": 0.815,
+   "f0": 12,
+   "f1": 20,
+   "ph": "sˈɜɹʧ"
+  },
+  {
+   "w": "is",
+   "t0": 0.815,
+   "t1": 0.977,
+   "f0": 20,
+   "f1": 23,
+   "ph": "ɪz"
+  },
+  {
+   "w": "fine",
+   "t0": 0.977,
+   "t1": 1.365,
+   "f0": 23,
+   "f1": 33,
+   "ph": "fˈIn"
+  },
+  {
+   "w": "Totally",
+   "t0": 1.592,
+   "t1": 2.018,
+   "f0": 38,
+   "f1": 48,
+   "ph": "tˈOTəli"
+  },
+  {
+   "w": "fine",
+   "t0": 2.018,
+   "t1": 2.43,
+   "f0": 48,
+   "f1": 58,
+   "ph": "fˈIn"
+  },
+  {
+   "w": "It's",
+   "t0": 2.725,
+   "t1": 2.9,
+   "f0": 65,
+   "f1": 70,
+   "ph": "ˌɪts"
+  },
+  {
+   "w": "just",
+   "t0": 2.9,
+   "t1": 3.088,
+   "f0": 70,
+   "f1": 74,
+   "ph": "ʤˈʌst"
+  },
+  {
+   "w": "a",
+   "t0": 3.088,
+   "t1": 3.188,
+   "f0": 74,
+   "f1": 77,
+   "ph": "ɐ"
+  },
+  {
+   "w": "chat",
+   "t0": 3.188,
+   "t1": 3.52,
+   "f0": 77,
+   "f1": 84,
+   "ph": "ʧˈæt"
+  },
+  {
+   "w": "thing",
+   "t0": 3.525,
+   "t1": 3.92,
+   "f0": 85,
+   "f1": 94,
+   "ph": "θˈɪŋ"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -2.43,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 132.2,
+  "f0_range_st": 14.8,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Search is fine, totally fine. It's just a chat thing.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.204,
+  "align_median_s": 0.06,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.415,
+  "rise_ms": 45.0,
+  "decay_ms": 200.0,
+  "decay_to_60_s": 0.14
+ },
+ "clean": {
+  "file": "audio/ep01/v31/act1/clean/v31-a1-0004.wav",
+  "note": "the dry read (no call chain), -16 LUFS"
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 3,
+   "word": "fine",
+   "tts_s": 0.035,
+   "target_s": 0.2,
+   "point_s": 0.98,
+   "joined_speech": false,
+   "dip_db": -57.6,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.2,
+   "opened_s": 0.165
+  },
+  {
+   "after_word": 5,
+   "word": "fine",
+   "tts_s": 0.08,
+   "target_s": 0.3,
+   "point_s": 2.055,
+   "joined_speech": false,
+   "dip_db": -67.9,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.31,
+   "opened_s": 0.22
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "ab6a513c7ff762ff",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 2.94,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 3,
+   "share_s": 0.8,
+   "rechecked_alone": false
+  }
+ }
+}

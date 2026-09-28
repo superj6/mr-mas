@@ -1,0 +1,238 @@
+{
+ "id": "v31-a4-0005",
+ "scene": "27",
+ "speaker": "NELEH",
+ "speaker_slug": "neleh",
+ "text": "We've talked all day about him coming back and we're no closer",
+ "spoken_as": "He's been in the building for hours.{0.40} We've talked all day about him coming back, and we're no closer.",
+ "delivery": "Tired, factual, over her shoulder to the room. A breath first. 0.4 s between the sentences.",
+ "tag": "[INVENTED · the talks at HQ that Sunday are reported (research mid.md §3); the line says only that they happened and went nowhere, and gives no terms]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": "board",
+ "shot": "S4.09",
+ "shot_id": "S4.09",
+ "cue": "S4.09, after the picture's lead-in (see the shot plan)",
+ "lip_sync": true,
+ "status": "new",
+ "device": null,
+ "room": "the boardroom",
+ "est_s": 7.1,
+ "file": "audio/ep01/v31/act4/wav/v31-a4-0005.wav",
+ "duration_s": 3.952,
+ "frames_24": 161,
+ "voiced_span_s": 5.39,
+ "pace": {
+  "words": 19,
+  "wpm": 211.5,
+  "speed": 0.94,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.94,
+   "speed_band": [
+    0.92,
+    1.0
+   ],
+   "articulation_guide_sps": [
+    4.2,
+    4.8
+   ],
+   "turn_wpm_guide": [
+    150,
+    170
+   ],
+   "intent": "Tired, factual, over her shoulder to the room. A breath first. 0.4 s between the sentences."
+  },
+  "measured": {
+   "wpm": 211.5,
+   "articulation_sps": 4.82,
+   "syllables": 24,
+   "span_s": 5.39,
+   "pauses_s": [
+    0.41
+   ]
+  },
+  "longest_internal_gap_s": 0.41,
+  "audible_in_s": 0.33,
+  "audible_out_s": 3.682
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s3",
+ "takes_tried": 3,
+ "pick_reason": "the best UTMOS among the takes ASR hears whole",
+ "voice": "af_aoede (Kokoro-82M stock) · c-aoede-precise · speed 0.940",
+ "voiceId": "af_aoede",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch -2 st",
+  "peak -1.5 dB @300 Hz Q1.0",
+  "peak +1.5 dB @4500 Hz Q0.9",
+  "comp 2.5:1 @-22 dB (6/100 ms)",
+  "Kokoro speed 0.940, chosen from intent in the neleh band 0.92-1.00 (the plan's 0.94); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'hours' (word 7): Kokoro 0.27 s -> 0.41 s (intended 0.40; +0.13 s of room tone at the quietest 5 ms, 8/8 ms crossfades)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "placeholder inhale(s): synthetic band-limited noise with a breath envelope (NOT a licensed breath library; never from a real person)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (the room's early reflection is a mix send)"
+ ],
+ "words": [
+  {
+   "w": "We've",
+   "t0": 0.35,
+   "t1": 0.55,
+   "f0": 72,
+   "f1": 77,
+   "ph": "wˌiv"
+  },
+  {
+   "w": "talked",
+   "t0": 0.55,
+   "t1": 0.888,
+   "f0": 77,
+   "f1": 85,
+   "ph": "tˈɔkt"
+  },
+  {
+   "w": "all",
+   "t0": 0.888,
+   "t1": 1.15,
+   "f0": 85,
+   "f1": 91,
+   "ph": "ˈɔl"
+  },
+  {
+   "w": "day",
+   "t0": 1.15,
+   "t1": 1.4,
+   "f0": 91,
+   "f1": 97,
+   "ph": "dˈA"
+  },
+  {
+   "w": "about",
+   "t0": 1.4,
+   "t1": 1.663,
+   "f0": 97,
+   "f1": 103,
+   "ph": "əbˈWt"
+  },
+  {
+   "w": "him",
+   "t0": 1.663,
+   "t1": 1.875,
+   "f0": 103,
+   "f1": 109,
+   "ph": "hˌɪm"
+  },
+  {
+   "w": "coming",
+   "t0": 1.875,
+   "t1": 2.2,
+   "f0": 109,
+   "f1": 116,
+   "ph": "kˈʌmɪŋ"
+  },
+  {
+   "w": "back",
+   "t0": 2.2,
+   "t1": 2.525,
+   "f0": 116,
+   "f1": 124,
+   "ph": "bˈæk"
+  },
+  {
+   "w": "and",
+   "t0": 2.575,
+   "t1": 2.688,
+   "f0": 125,
+   "f1": 128,
+   "ph": "ænd"
+  },
+  {
+   "w": "we're",
+   "t0": 2.688,
+   "t1": 2.8,
+   "f0": 128,
+   "f1": 131,
+   "ph": "wɪɹ"
+  },
+  {
+   "w": "no",
+   "t0": 2.8,
+   "t1": 2.975,
+   "f0": 131,
+   "f1": 135,
+   "ph": "nˈO"
+  },
+  {
+   "w": "closer",
+   "t0": 2.975,
+   "t1": 3.602,
+   "f0": 135,
+   "f1": 150,
+   "ph": "klˈOsəɹ"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.42,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 162.0,
+  "f0_range_st": 10.0,
+  "final_move_st": -1.1,
+  "asr": "He's been in the building for hours. We've talked all day about him coming back and we're no closer.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.179,
+  "align_median_s": 0.038,
+  "utmos_dry": 2.893,
+  "utmos_plain_read": 2.858,
+  "utmos_vs_plain": 0.035,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": 2.905,
+  "speech_head_s": 0.84,
+  "speech_tail_s": 0.438,
+  "rise_ms": 60.0,
+  "decay_ms": 100.0,
+  "decay_to_60_s": 0.03
+ },
+ "nobreath": {
+  "file": "audio/ep01/act4/dialogue/v5/nobreath/a5-27-35.wav",
+  "note": "the same take without the placeholder inhale(s)"
+ },
+ "breaths": [
+  {
+   "where": "head",
+   "t0": 0.4,
+   "t1": 0.733
+  }
+ ],
+ "opened_pauses": [
+  {
+   "after_word": 7,
+   "word": "hours",
+   "tts_s": 0.27,
+   "target_s": 0.4,
+   "point_s": 2.035,
+   "joined_speech": false,
+   "dip_db": -84.2,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.415,
+   "opened_s": 0.13
+  }
+ ],
+ "cut_from": "a5-27-35 words 7-18 (audio/ep01/act4/dialogue/v5/wav/a5-27-35.wav, 2.834-6.330 s), 12 ms fades, room-tone handles to 0.35 s"
+}

@@ -1,0 +1,364 @@
+{
+ "id": "v31-a2-0003",
+ "scene": "15",
+ "speaker": "LAHTNEMULB",
+ "speaker_slug": "lahtnemulb",
+ "text": "That voice was not mine. The words were not mine.",
+ "spoken_as": "That voice was not mine.{0.45} The words were not mine.",
+ "delivery": "the matte chairman, plainly, to the room: every sentence finished",
+ "tag": "[P · MAY 16, 2023 · \"…that voice was not mine, the words were not mine…\" (blumenthal.senate.gov); the read makes the comma a full stop]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "15.02",
+ "shot_id": "15.02",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v31/act2/wav/v31-a2-0003.wav",
+ "mp3": null,
+ "duration_s": 4.345,
+ "frames_24": 105,
+ "voiced_span_s": 3.37,
+ "pace": {
+  "words": 10,
+  "wpm": 178.0,
+  "speed": 0.88,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.88,
+   "speed_band": [
+    0.84,
+    0.92
+   ],
+   "articulation_guide_sps": [
+    4.0,
+    4.6
+   ],
+   "turn_wpm_guide": [
+    135,
+    155
+   ],
+   "intent": "the matte chairman, plainly, to the room: every sentence finished"
+  },
+  "measured": {
+   "wpm": 178.0,
+   "articulation_sps": 3.45,
+   "syllables": 10,
+   "span_s": 3.37,
+   "pauses_s": [
+    0.47
+   ]
+  },
+  "longest_internal_gap_s": 0.47,
+  "audible_in_s": 0.5,
+  "audible_out_s": 3.87
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_adam*0.50+am_echo*0.50 (Kokoro-82M stock) · d-adam-echo-senate-low · speed 0.880",
+ "voiceId": "am_adam*0.50+am_echo*0.50",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 75 Hz",
+  "pitch -2 st",
+  "low shelf +1 dB @150 Hz",
+  "peak -1 dB @400 Hz Q1.0",
+  "peak +1 dB @2500 Hz Q0.9",
+  "comp 2.5:1 @-22 dB (6/110 ms)",
+  "Kokoro speed 0.880 (the plan speed; lahtnemulb band 0.84-0.92); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'mine': Kokoro 0.28 s -> 0.46 s (intended 0.45; +0.17 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "E"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "A"
+  },
+  {
+   "t": 0.708,
+   "f": 17,
+   "shape": "E"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "O"
+  },
+  {
+   "t": 1.042,
+   "f": 25,
+   "shape": "E"
+  },
+  {
+   "t": 1.167,
+   "f": 28,
+   "shape": "A"
+  },
+  {
+   "t": 1.25,
+   "f": 30,
+   "shape": "E"
+  },
+  {
+   "t": 1.375,
+   "f": 33,
+   "shape": "A"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "E"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "M"
+  },
+  {
+   "t": 1.667,
+   "f": 40,
+   "shape": "A"
+  },
+  {
+   "t": 1.958,
+   "f": 47,
+   "shape": "E"
+  },
+  {
+   "t": 2.042,
+   "f": 49,
+   "shape": "rest"
+  },
+  {
+   "t": 2.5,
+   "f": 60,
+   "shape": "E"
+  },
+  {
+   "t": 2.583,
+   "f": 62,
+   "shape": "O"
+  },
+  {
+   "t": 2.792,
+   "f": 67,
+   "shape": "E"
+  },
+  {
+   "t": 2.958,
+   "f": 71,
+   "shape": "O"
+  },
+  {
+   "t": 3.042,
+   "f": 73,
+   "shape": "E"
+  },
+  {
+   "t": 3.167,
+   "f": 76,
+   "shape": "A"
+  },
+  {
+   "t": 3.292,
+   "f": 79,
+   "shape": "E"
+  },
+  {
+   "t": 3.375,
+   "f": 81,
+   "shape": "M"
+  },
+  {
+   "t": 3.5,
+   "f": 84,
+   "shape": "A"
+  },
+  {
+   "t": 3.75,
+   "f": 90,
+   "shape": "E"
+  },
+  {
+   "t": 3.875,
+   "f": 93,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "That",
+   "t0": 0.515,
+   "t1": 0.79,
+   "f0": 12,
+   "f1": 19,
+   "ph": "ðˈæt"
+  },
+  {
+   "w": "voice",
+   "t0": 0.79,
+   "t1": 1.115,
+   "f0": 19,
+   "f1": 27,
+   "ph": "vˈYs"
+  },
+  {
+   "w": "was",
+   "t0": 1.115,
+   "t1": 1.29,
+   "f0": 27,
+   "f1": 31,
+   "ph": "wʌz"
+  },
+  {
+   "w": "not",
+   "t0": 1.29,
+   "t1": 1.565,
+   "f0": 31,
+   "f1": 38,
+   "ph": "nˌɑt"
+  },
+  {
+   "w": "mine",
+   "t0": 1.565,
+   "t1": 2.06,
+   "f0": 38,
+   "f1": 49,
+   "ph": "mˈIn"
+  },
+  {
+   "w": "The",
+   "t0": 2.44,
+   "t1": 2.577,
+   "f0": 59,
+   "f1": 62,
+   "ph": "ðə"
+  },
+  {
+   "w": "words",
+   "t0": 2.577,
+   "t1": 2.965,
+   "f0": 62,
+   "f1": 71,
+   "ph": "wˈɜɹdz"
+  },
+  {
+   "w": "were",
+   "t0": 2.965,
+   "t1": 3.09,
+   "f0": 71,
+   "f1": 74,
+   "ph": "wɜɹ"
+  },
+  {
+   "w": "not",
+   "t0": 3.09,
+   "t1": 3.365,
+   "f0": 74,
+   "f1": 81,
+   "ph": "nˌɑt"
+  },
+  {
+   "w": "mine",
+   "t0": 3.365,
+   "t1": 3.89,
+   "f0": 81,
+   "f1": 93,
+   "ph": "mˈIn"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.11,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 103.2,
+  "f0_range_st": 13.9,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "That voice was not mine. The words were not mine.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.179,
+  "align_median_s": 0.038,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.445,
+  "rise_ms": 30.0,
+  "decay_ms": 235.0,
+  "decay_to_60_s": 0.03
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 5,
+   "word": "mine",
+   "tts_s": 0.275,
+   "target_s": 0.45,
+   "point_s": 1.785,
+   "joined_speech": false,
+   "dip_db": -74.2,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.455,
+   "opened_s": 0.175
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "7c40ecbcfa393df5",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 3.2,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 1,
+   "share_s": 1.11,
+   "rechecked_alone": false
+  }
+ }
+}

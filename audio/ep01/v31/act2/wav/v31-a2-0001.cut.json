@@ -1,0 +1,255 @@
+{
+ "id": "v31-a2-0001",
+ "scene": "13",
+ "speaker": "NEDIB",
+ "speaker_slug": "nedib",
+ "text": "Whatever you promise in here today put it in writing",
+ "spoken_as": "Whatever you promise in here today,{0.2} put it in writing.{s0.5} Longer.",
+ "delivery": "to the row",
+ "tag": "[INVENTED · his character file's \"Put it in writing. Longer.\"; it plants the pinky promise (sc 19) and the order's scroll (sc 21), and says nothing about what the meeting decided]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "OTS",
+ "shot_id": "OTS",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 4.6,
+ "file": "audio/ep01/v31/act2/wav/v31-a2-0001.wav",
+ "duration_s": 3.67,
+ "frames_24": 125,
+ "voiced_span_s": 4.13,
+ "pace": {
+  "words": 11,
+  "wpm": 159.8,
+  "speed": 0.93,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.93,
+   "speed_band": [
+    0.93,
+    1.01
+   ],
+   "articulation_guide_sps": [
+    4.2,
+    4.8
+   ],
+   "turn_wpm_guide": [
+    145,
+    165
+   ],
+   "intent": "to the row"
+  },
+  "measured": {
+   "wpm": 159.8,
+   "articulation_sps": 4.94,
+   "syllables": 17,
+   "span_s": 4.13,
+   "pauses_s": [
+    0.21,
+    0.48
+   ]
+  },
+  "longest_internal_gap_s": 0.48,
+  "audible_in_s": 0.33,
+  "audible_out_s": 3.4
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_fenrir*0.50+am_onyx*0.50 (Kokoro-82M stock) · d-fenrir-onyx-folksy-0 · speed 0.930",
+ "voiceId": "am_fenrir*0.50+am_onyx*0.50",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch 0",
+  "low shelf +2 dB @160 Hz",
+  "peak -1.5 dB @380 Hz Q1.0",
+  "peak +1.5 dB @2200 Hz Q0.9",
+  "comp 3.0:1 @-21 dB (5/100 ms)",
+  "tanh saturation drive 1.6 mix 0.1",
+  "Kokoro speed 0.930 (the plan speed; nedib band 0.93-1.01); 2 whole reads, joined in room tone; no time-stretch, no carrier, no splice",
+  "pause after 'today': Kokoro 0.12 s -> 0.23 s (intended 0.20; +0.08 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "words": [
+  {
+   "w": "Whatever",
+   "t0": 0.35,
+   "t1": 0.7,
+   "f0": 12,
+   "f1": 20,
+   "ph": "wəTˈɛvəɹ"
+  },
+  {
+   "w": "you",
+   "t0": 0.7,
+   "t1": 0.862,
+   "f0": 20,
+   "f1": 24,
+   "ph": "ju"
+  },
+  {
+   "w": "promise",
+   "t0": 0.862,
+   "t1": 1.3,
+   "f0": 24,
+   "f1": 35,
+   "ph": "pɹˈɑməs"
+  },
+  {
+   "w": "in",
+   "t0": 1.3,
+   "t1": 1.45,
+   "f0": 35,
+   "f1": 38,
+   "ph": "ɪn"
+  },
+  {
+   "w": "here",
+   "t0": 1.45,
+   "t1": 1.675,
+   "f0": 38,
+   "f1": 44,
+   "ph": "hˈɪɹ"
+  },
+  {
+   "w": "today",
+   "t0": 1.675,
+   "t1": 2.15,
+   "f0": 44,
+   "f1": 55,
+   "ph": "tədˈA"
+  },
+  {
+   "w": "put",
+   "t0": 2.33,
+   "t1": 2.517,
+   "f0": 59,
+   "f1": 64,
+   "ph": "pˌʊt"
+  },
+  {
+   "w": "it",
+   "t0": 2.517,
+   "t1": 2.63,
+   "f0": 64,
+   "f1": 66,
+   "ph": "ɪt"
+  },
+  {
+   "w": "in",
+   "t0": 2.63,
+   "t1": 2.78,
+   "f0": 66,
+   "f1": 70,
+   "ph": "ɪn"
+  },
+  {
+   "w": "writing",
+   "t0": 2.78,
+   "t1": 3.32,
+   "f0": 70,
+   "f1": 83,
+   "ph": "ɹˈITɪŋ"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -2.63,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 110.6,
+  "f0_range_st": 11.0,
+  "f0_method": "pYIN (a4lib.analyse)",
+  "final_move_st": 1.9,
+  "asr": "Whatever you promise in here today, put it in writing. Longer!",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.397,
+  "align_median_s": 0.03,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.435,
+  "rise_ms": 30.0,
+  "decay_ms": 120.0,
+  "decay_to_60_s": 0.115
+ },
+ "fast": {
+  "key": "0c1f77100f572742",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 4.39,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": true,
+   "breaths": false,
+   "threads": 4
+  },
+  "asr": {
+   "packed_with": 2,
+   "share_s": 0.83,
+   "rechecked_alone": false
+  }
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 6,
+   "word": "today",
+   "tts_s": 0.12,
+   "target_s": 0.2,
+   "point_s": 1.95,
+   "joined_speech": false,
+   "dip_db": -65.3,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.225,
+   "opened_s": 0.08
+  },
+  {
+   "after_word": null,
+   "word": "writing",
+   "tts_s": null,
+   "target_s": 0.5,
+   "final_s": 0.5,
+   "opened_s": 0.0,
+   "joined_speech": false,
+   "dip_db": null,
+   "breath": false,
+   "split": true,
+   "point_s": 2.955,
+   "crossfade_ms": [
+    0,
+    0
+   ]
+  }
+ ],
+ "cut_from": "e1-a2-13-15 words 0-9 (audio/ep01/act2/dialogue/fast-v2/wav/e1-a2-13-15.wav, 0.140-3.702 s), 12 ms fades, room-tone handles to 0.35 s"
+}

@@ -1,0 +1,224 @@
+{
+ "id": "v31-vo-04",
+ "scene": "18",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "my other company. it tells people from machines.",
+ "spoken_as": "my other company.{0.4} it tells people from machines.",
+ "delivery": "plain, a little proud; orientation, never an explanation (N: who sent the box, why it matters)",
+ "tag": "[INVENTED · VO · v3.1 inner voice]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "vo",
+ "kind": "vo",
+ "side": "none",
+ "pov": null,
+ "shot": "18.02",
+ "shot_id": "18.02",
+ "cue": null,
+ "lip_sync": false,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v31/act3/wav/v31-vo-04.wav",
+ "mp3": null,
+ "duration_s": 4.675,
+ "frames_24": 113,
+ "voiced_span_s": 3.46,
+ "pace": {
+  "words": 8,
+  "wpm": 138.7,
+  "speed": 0.85,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.85,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.4,
+    4.0
+   ],
+   "turn_wpm_guide": [
+    120,
+    140
+   ],
+   "intent": "plain, a little proud; orientation, never an explanation (N: who sent the box, why it matters)"
+  },
+  "measured": {
+   "wpm": 138.7,
+   "articulation_sps": 4.23,
+   "syllables": 13,
+   "span_s": 3.46,
+   "pauses_s": [
+    0.39,
+    0.07
+   ]
+  },
+  "longest_internal_gap_s": 0.39,
+  "audible_in_s": 0.55,
+  "audible_out_s": 4.01
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.850",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 60 Hz",
+  "pitch 0",
+  "low shelf +2.5 dB @150 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak -1 dB @3200 Hz Q0.8",
+  "high shelf -2.5 dB @7500 Hz",
+  "comp 2.5:1 @-26 dB (15/160 ms)",
+  "Kokoro speed 0.850 (the plan speed; mas-manalt-vo band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'company': Kokoro 0.28 s -> 0.40 s (intended 0.40; +0.12 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [],
+ "words": [
+  {
+   "w": "my",
+   "t0": 0.615,
+   "t1": 0.815,
+   "f0": 15,
+   "f1": 20,
+   "ph": "mI"
+  },
+  {
+   "w": "other",
+   "t0": 0.815,
+   "t1": 1.115,
+   "f0": 20,
+   "f1": 27,
+   "ph": "ˈʌðəɹ"
+  },
+  {
+   "w": "company",
+   "t0": 1.115,
+   "t1": 1.72,
+   "f0": 27,
+   "f1": 41,
+   "ph": "kˈʌmpᵊni"
+  },
+  {
+   "w": "it",
+   "t0": 2.122,
+   "t1": 2.26,
+   "f0": 51,
+   "f1": 54,
+   "ph": "ɪt"
+  },
+  {
+   "w": "tells",
+   "t0": 2.26,
+   "t1": 2.585,
+   "f0": 54,
+   "f1": 62,
+   "ph": "tˈɛlz"
+  },
+  {
+   "w": "people",
+   "t0": 2.585,
+   "t1": 2.96,
+   "f0": 62,
+   "f1": 71,
+   "ph": "pˈipᵊl"
+  },
+  {
+   "w": "from",
+   "t0": 2.96,
+   "t1": 3.135,
+   "f0": 71,
+   "f1": 75,
+   "ph": "fɹʌm"
+  },
+  {
+   "w": "machines",
+   "t0": 3.135,
+   "t1": 4.03,
+   "f0": 75,
+   "f1": 97,
+   "ph": "məʃˈinz"
+  }
+ ],
+ "qa": {
+  "lufs_i": -18.0,
+  "target_lufs": -18.0,
+  "true_peak_dbtp": -4.58,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.55,
+  "median_f0_hz": 110.3,
+  "f0_range_st": 11.3,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "My other company. It tells people from machines.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.386,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.55,
+  "speech_tail_s": 0.415,
+  "rise_ms": 50.0,
+  "decay_ms": 65.0,
+  "decay_to_60_s": 0.25
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 3,
+   "word": "company",
+   "tts_s": 0.28,
+   "target_s": 0.4,
+   "point_s": 1.26,
+   "joined_speech": false,
+   "dip_db": -58.6,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.4,
+   "opened_s": 0.12
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "8d917f4f63433994",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 4.64,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 1.87,
+   "rechecked_alone": false
+  }
+ }
+}

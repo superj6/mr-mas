@@ -1,0 +1,281 @@
+{
+ "id": "v31-vo-01",
+ "scene": "13",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "four companies, one table. radnus has been mouthing the same sentence since we sat down.",
+ "spoken_as": "four companies, one table.{0.45} radnus has been mouthing the same sentence since we sat down.",
+ "delivery": "amused, quiet, as the room settles; the second sentence a shade slower",
+ "tag": "[INVENTED · VO · v3.1 inner voice]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "vo",
+ "kind": "vo",
+ "side": "none",
+ "pov": null,
+ "shot": "13.01",
+ "shot_id": "13.01",
+ "cue": null,
+ "lip_sync": false,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v31/act2/wav/v31-vo-01.wav",
+ "mp3": null,
+ "duration_s": 7.8,
+ "frames_24": 188,
+ "voiced_span_s": 6.54,
+ "pace": {
+  "words": 15,
+  "wpm": 137.6,
+  "speed": 0.87,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.87,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.4,
+    4.0
+   ],
+   "turn_wpm_guide": [
+    120,
+    140
+   ],
+   "intent": "amused, quiet, as the room settles; the second sentence a shade slower"
+  },
+  "measured": {
+   "wpm": 137.6,
+   "articulation_sps": 3.63,
+   "syllables": 21,
+   "span_s": 6.54,
+   "pauses_s": [
+    0.19,
+    0.56,
+    0.06
+   ]
+  },
+  "longest_internal_gap_s": 0.56,
+  "audible_in_s": 0.51,
+  "audible_out_s": 7.05
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.870",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 60 Hz",
+  "pitch 0",
+  "low shelf +2.5 dB @150 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak -1 dB @3200 Hz Q0.8",
+  "high shelf -2.5 dB @7500 Hz",
+  "comp 2.5:1 @-26 dB (15/160 ms)",
+  "Kokoro speed 0.870 (the plan speed; mas-manalt-vo band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'table': Kokoro 0.29 s -> 0.56 s (intended 0.45; +0.15 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [],
+ "words": [
+  {
+   "w": "four",
+   "t0": 0.55,
+   "t1": 0.825,
+   "f0": 13,
+   "f1": 20,
+   "ph": "fˈɔɹ"
+  },
+  {
+   "w": "companies",
+   "t0": 0.825,
+   "t1": 1.66,
+   "f0": 20,
+   "f1": 40,
+   "ph": "kˈʌmpᵊniz"
+  },
+  {
+   "w": "one",
+   "t0": 1.812,
+   "t1": 2.113,
+   "f0": 43,
+   "f1": 51,
+   "ph": "wˈʌn"
+  },
+  {
+   "w": "table",
+   "t0": 2.113,
+   "t1": 2.68,
+   "f0": 51,
+   "f1": 64,
+   "ph": "tˈAbᵊl"
+  },
+  {
+   "w": "radnus",
+   "t0": 3.392,
+   "t1": 4.005,
+   "f0": 81,
+   "f1": 96,
+   "ph": "ɹˈædnəs"
+  },
+  {
+   "w": "has",
+   "t0": 4.005,
+   "t1": 4.205,
+   "f0": 96,
+   "f1": 101,
+   "ph": "hæz"
+  },
+  {
+   "w": "been",
+   "t0": 4.205,
+   "t1": 4.405,
+   "f0": 101,
+   "f1": 106,
+   "ph": "bɪn"
+  },
+  {
+   "w": "mouthing",
+   "t0": 4.405,
+   "t1": 4.78,
+   "f0": 106,
+   "f1": 115,
+   "ph": "mˈWðɪŋ"
+  },
+  {
+   "w": "the",
+   "t0": 4.78,
+   "t1": 4.93,
+   "f0": 115,
+   "f1": 118,
+   "ph": "ðə"
+  },
+  {
+   "w": "same",
+   "t0": 4.93,
+   "t1": 5.318,
+   "f0": 118,
+   "f1": 128,
+   "ph": "sˈAm"
+  },
+  {
+   "w": "sentence",
+   "t0": 5.318,
+   "t1": 5.805,
+   "f0": 128,
+   "f1": 139,
+   "ph": "sˈɛntᵊns"
+  },
+  {
+   "w": "since",
+   "t0": 5.805,
+   "t1": 6.03,
+   "f0": 139,
+   "f1": 145,
+   "ph": "sˈɪns"
+  },
+  {
+   "w": "we",
+   "t0": 6.03,
+   "t1": 6.205,
+   "f0": 145,
+   "f1": 149,
+   "ph": "wi"
+  },
+  {
+   "w": "sat",
+   "t0": 6.205,
+   "t1": 6.542,
+   "f0": 149,
+   "f1": 157,
+   "ph": "sˈæt"
+  },
+  {
+   "w": "down",
+   "t0": 6.542,
+   "t1": 7.07,
+   "f0": 157,
+   "f1": 170,
+   "ph": "dˌWn"
+  }
+ ],
+ "qa": {
+  "lufs_i": -18.0,
+  "target_lufs": -18.0,
+  "true_peak_dbtp": -2.29,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.51,
+  "median_f0_hz": 114.0,
+  "f0_range_st": 12.2,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Four companies, one table. Radness has been mouthing the same sentence since we sat down.",
+  "cer": 0.028,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.252,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.45,
+  "rise_ms": 120.0,
+  "decay_ms": 215.0,
+  "decay_to_60_s": 0.3
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 4,
+   "word": "table",
+   "tts_s": 0.295,
+   "target_s": 0.45,
+   "point_s": 2.39,
+   "joined_speech": false,
+   "dip_db": -63.6,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.565,
+   "opened_s": 0.155
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "497a64cb9051542f",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 6.88,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 2.16,
+   "rechecked_alone": false
+  }
+ }
+}

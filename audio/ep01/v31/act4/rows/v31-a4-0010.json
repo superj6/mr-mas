@@ -1,0 +1,242 @@
+{
+ "id": "v31-a4-0010",
+ "scene": "5",
+ "speaker": "GERG MOCKBRAN",
+ "speaker_slug": "gerg-mockbran",
+ "text": "That's the share sale. Everybody was about to get paid.",
+ "spoken_as": "That's the share sale.{0.3} Everybody was about to get paid.",
+ "delivery": "he can hear the slot; matter-of-fact, then the stamp lands on \"paid\"",
+ "tag": "[INVENTED]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "os",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "S5.08",
+ "shot_id": "S5.08",
+ "cue": null,
+ "lip_sync": false,
+ "status": "fast",
+ "device": "call",
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v31/act4/wav/v31-a4-0010.wav",
+ "mp3": null,
+ "duration_s": 3.825,
+ "frames_24": 92,
+ "voiced_span_s": 2.65,
+ "pace": {
+  "words": 10,
+  "wpm": 226.4,
+  "speed": 1.06,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.06,
+   "speed_band": [
+    1.02,
+    1.1
+   ],
+   "articulation_guide_sps": [
+    5.0,
+    5.8
+   ],
+   "turn_wpm_guide": [
+    175,
+    200
+   ],
+   "intent": "he can hear the slot; matter-of-fact, then the stamp lands on \"paid\""
+  },
+  "measured": {
+   "wpm": 226.4,
+   "articulation_sps": 5.96,
+   "syllables": 14,
+   "span_s": 2.65,
+   "pauses_s": [
+    0.3
+   ]
+  },
+  "longest_internal_gap_s": 0.3,
+  "audible_in_s": 0.51,
+  "audible_out_s": 3.16
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.060",
+ "voiceId": "am_puck",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch +1.5 st",
+  "peak -2 dB @250 Hz Q1.0",
+  "peak +2 dB @4000 Hz Q0.9",
+  "comp 3.0:1 @-22 dB (4/80 ms)",
+  "then the call chain: HPF 200 Hz; LPF 7000 Hz; peak +1.5 dB @1800 Hz Q1.0; comp 2.5:1 @-22 dB (5/90 ms); -16 LUFS",
+  "Kokoro speed 1.060 (the plan speed; gerg-mockbran band 1.02-1.10); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'sale': Kokoro 0.06 s -> 0.30 s (intended 0.30; +0.24 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [],
+ "words": [
+  {
+   "w": "That's",
+   "t0": 0.47,
+   "t1": 0.688,
+   "f0": 11,
+   "f1": 16,
+   "ph": "ðˈæts"
+  },
+  {
+   "w": "the",
+   "t0": 0.688,
+   "t1": 0.775,
+   "f0": 16,
+   "f1": 19,
+   "ph": "ðə"
+  },
+  {
+   "w": "share",
+   "t0": 0.775,
+   "t1": 1.025,
+   "f0": 19,
+   "f1": 25,
+   "ph": "ʃˈɛɹ"
+  },
+  {
+   "w": "sale",
+   "t0": 1.025,
+   "t1": 1.35,
+   "f0": 25,
+   "f1": 32,
+   "ph": "sˈAl"
+  },
+  {
+   "w": "Everybody",
+   "t0": 1.67,
+   "t1": 2.133,
+   "f0": 40,
+   "f1": 51,
+   "ph": "ˈɛvɹibədi"
+  },
+  {
+   "w": "was",
+   "t0": 2.133,
+   "t1": 2.232,
+   "f0": 51,
+   "f1": 54,
+   "ph": "wʌz"
+  },
+  {
+   "w": "about",
+   "t0": 2.232,
+   "t1": 2.482,
+   "f0": 54,
+   "f1": 60,
+   "ph": "əbˈWt"
+  },
+  {
+   "w": "to",
+   "t0": 2.482,
+   "t1": 2.558,
+   "f0": 60,
+   "f1": 61,
+   "ph": "tə"
+  },
+  {
+   "w": "get",
+   "t0": 2.558,
+   "t1": 2.72,
+   "f0": 61,
+   "f1": 65,
+   "ph": "ɡɛt"
+  },
+  {
+   "w": "paid",
+   "t0": 2.72,
+   "t1": 3.18,
+   "f0": 65,
+   "f1": 76,
+   "ph": "pˈAd"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.09,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 127.4,
+  "f0_range_st": 11.3,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "That's the share sale. Everybody was about to get paid.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.513,
+  "align_median_s": 0.034,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.445,
+  "rise_ms": 20.0,
+  "decay_ms": 170.0,
+  "decay_to_60_s": 0.22
+ },
+ "clean": {
+  "file": "audio/ep01/v31/act4/clean/v31-a4-0010.wav",
+  "note": "the dry read (no call chain), -16 LUFS"
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 4,
+   "word": "sale",
+   "tts_s": 0.055,
+   "target_s": 0.3,
+   "point_s": 0.975,
+   "joined_speech": false,
+   "dip_db": -57.0,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.305,
+   "opened_s": 0.245
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "e02614939d1befaa",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 2.97,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 5,
+   "share_s": 1.0,
+   "rechecked_alone": false
+  }
+ }
+}

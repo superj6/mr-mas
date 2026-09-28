@@ -1,0 +1,202 @@
+{
+ "id": "v31-tg-0001",
+ "scene": "32",
+ "speaker": "ELGOOG'S DEMO",
+ "speaker_slug": "elgoog-demo",
+ "text": "What the quack!",
+ "spoken_as": "What the [quack](/kwˈæk/)!",
+ "delivery": "the demo's own product voice, bright and surprised; a stock voice cast for the film, never a clone of anyone",
+ "tag": "[V · DEC 6, 2023 · the demo video's own line (facts §B \"(demo)\"); played as the film's sound, not a character's]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "monitor",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "v31-32.01d",
+ "shot_id": "v31-32.01d",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v31/tag/wav/v31-tg-0001.wav",
+ "mp3": null,
+ "duration_s": 2.265,
+ "frames_24": 55,
+ "voiced_span_s": 1.02,
+ "pace": {
+  "words": 3,
+  "wpm": 176.5,
+  "speed": 1.04,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.04,
+   "speed_band": [
+    0.96,
+    1.06
+   ],
+   "articulation_guide_sps": [
+    4.2,
+    5.2
+   ],
+   "turn_wpm_guide": [
+    150,
+    175
+   ],
+   "intent": "the demo's own product voice, bright and surprised; a stock voice cast for the film, never a clone of anyone"
+  },
+  "measured": {
+   "wpm": 176.5,
+   "articulation_sps": 2.94,
+   "syllables": 3,
+   "span_s": 1.02,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.5,
+  "audible_out_s": 1.52
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "bf_isabella (Kokoro-82M stock) · a-isabella-product · speed 1.040",
+ "voiceId": "bf_isabella",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 100 Hz",
+  "pitch 0",
+  "peak +1.5 dB @3000 Hz Q0.9",
+  "high shelf +1 dB @8000 Hz",
+  "comp 2.5:1 @-22 dB (5/90 ms)",
+  "Kokoro speed 1.040 (the plan speed; elgoog-demo band 0.96-1.06); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "O"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "A"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "E"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "O"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "A"
+  },
+  {
+   "t": 1.375,
+   "f": 33,
+   "shape": "E"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "What",
+   "t0": 0.495,
+   "t1": 0.695,
+   "f0": 12,
+   "f1": 17,
+   "ph": "wˌʌt"
+  },
+  {
+   "w": "the",
+   "t0": 0.695,
+   "t1": 0.82,
+   "f0": 17,
+   "f1": 20,
+   "ph": "ðə"
+  },
+  {
+   "w": "quack",
+   "t0": 0.82,
+   "t1": 1.495,
+   "f0": 20,
+   "f1": 36,
+   "ph": "kwˈæk"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.77,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 215.4,
+  "f0_range_st": 6.1,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "What the quack!",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.53,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.395,
+  "rise_ms": 10.0,
+  "decay_ms": 255.0,
+  "decay_to_60_s": 0.34
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "52f8a97b9a9e67a5",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 2.78,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 1.67,
+   "rechecked_alone": false
+  }
+ }
+}

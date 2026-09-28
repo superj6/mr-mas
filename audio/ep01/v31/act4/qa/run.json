@@ -1,0 +1,43 @@
+{
+ "lines": 13,
+ "recorded": 1,
+ "takes": 1,
+ "skipped_same_key": 12,
+ "asr_only": 0,
+ "derived": 0,
+ "workers": 1,
+ "threads_per_worker": 3,
+ "wall_s": 10.0,
+ "takes_per_min": 6.0,
+ "load_avg_at_end": [
+  1.12255859375,
+  0.99951171875,
+  1.34375
+ ],
+ "cpus": 14,
+ "settings": {
+  "asr": true,
+  "asr_beam": 1,
+  "asr_batch_s": 24.0,
+  "asr_align": false,
+  "utmos": false,
+  "prosody": false,
+  "breaths": false,
+  "mp3": false,
+  "takes": 1,
+  "takes_flagged": 2
+ },
+ "workers_cpu": {
+  "synth_s": 0.8,
+  "asr_s": 1.6,
+  "asr_calls": 1,
+  "asr_items": 1,
+  "note": "summed over workers: seconds of wall inside each worker spent reading (Kokoro + house method) and in ASR"
+ },
+ "per_line_wall_s": {
+  "median": 2.78,
+  "max": 2.78,
+  "sum": 2.8
+ },
+ "finished": "2026-09-27 18:21:15"
+}

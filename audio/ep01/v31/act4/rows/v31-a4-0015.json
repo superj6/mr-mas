@@ -1,0 +1,227 @@
+{
+ "id": "v31-a4-0015",
+ "scene": "7",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "gerg comes back too.",
+ "spoken_as": "[gerg](/ɡˈɜɹɡ/) comes back too.",
+ "delivery": "to Terb, level: not a question",
+ "tag": "[INVENTED]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "S7.07-cont",
+ "shot_id": "S7.07-cont",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v31/act4/wav/v31-a4-0015.wav",
+ "mp3": null,
+ "duration_s": 2.59,
+ "frames_24": 63,
+ "voiced_span_s": 1.36,
+ "pace": {
+  "words": 4,
+  "wpm": 176.5,
+  "speed": 0.9,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.9,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.6,
+    4.2
+   ],
+   "turn_wpm_guide": [
+    135,
+    155
+   ],
+   "intent": "to Terb, level: not a question"
+  },
+  "measured": {
+   "wpm": 176.5,
+   "articulation_sps": 2.94,
+   "syllables": 4,
+   "span_s": 1.36,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.58,
+  "audible_out_s": 1.94
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.900",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch 0",
+  "low shelf +2 dB @160 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak +1 dB @3200 Hz Q0.8",
+  "high shelf -1.5 dB @8000 Hz",
+  "comp 2.0:1 @-24 dB (10/120 ms)",
+  "Kokoro speed 0.900 (the plan speed; mas-manalt band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "O"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "E"
+  },
+  {
+   "t": 0.958,
+   "f": 23,
+   "shape": "A"
+  },
+  {
+   "t": 1.042,
+   "f": 25,
+   "shape": "M"
+  },
+  {
+   "t": 1.125,
+   "f": 27,
+   "shape": "E"
+  },
+  {
+   "t": 1.208,
+   "f": 29,
+   "shape": "M"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "A"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "E"
+  },
+  {
+   "t": 1.625,
+   "f": 39,
+   "shape": "O"
+  },
+  {
+   "t": 1.958,
+   "f": 47,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "gerg",
+   "t0": 0.615,
+   "t1": 0.89,
+   "f0": 15,
+   "f1": 21,
+   "ph": "ɡˈɜɹɡ"
+  },
+  {
+   "w": "comes",
+   "t0": 0.89,
+   "t1": 1.19,
+   "f0": 21,
+   "f1": 29,
+   "ph": "kˈʌmz"
+  },
+  {
+   "w": "back",
+   "t0": 1.19,
+   "t1": 1.502,
+   "f0": 29,
+   "f1": 36,
+   "ph": "bˈæk"
+  },
+  {
+   "w": "too",
+   "t0": 1.502,
+   "t1": 1.96,
+   "f0": 36,
+   "f1": 47,
+   "ph": "tˈu"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.25,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.58,
+  "median_f0_hz": 119.3,
+  "f0_range_st": 10.6,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "GURG comes back too.",
+  "cer": 0.062,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.421,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.58,
+  "speech_tail_s": 0.39,
+  "rise_ms": 40.0,
+  "decay_ms": 180.0,
+  "decay_to_60_s": 0.26
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "dd14ccf358a9a982",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 3.28,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 2.06,
+   "rechecked_alone": false
+  }
+ }
+}

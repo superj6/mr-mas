@@ -1,0 +1,174 @@
+{
+ "id": "v31-a4-0003",
+ "scene": "3",
+ "speaker": "RIMA TAMURI",
+ "speaker_slug": "rima-tamuri",
+ "text": "We'll say we will.",
+ "spoken_as": "We'll say we will.",
+ "delivery": "on the call, unhurried, pragmatic: the answer plays on Neleh's face",
+ "tag": "[INVENTED]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "os",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "S3.04b",
+ "shot_id": "S3.04b",
+ "cue": null,
+ "lip_sync": false,
+ "status": "fast",
+ "device": "call",
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v31/act4/wav/v31-a4-0003.wav",
+ "mp3": null,
+ "duration_s": 2.005,
+ "frames_24": 49,
+ "voiced_span_s": 0.93,
+ "pace": {
+  "words": 4,
+  "wpm": 258.1,
+  "speed": 0.94,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.94,
+   "speed_band": [
+    0.9,
+    0.98
+   ],
+   "articulation_guide_sps": [
+    4.0,
+    4.6
+   ],
+   "turn_wpm_guide": [
+    140,
+    160
+   ],
+   "intent": "on the call, unhurried, pragmatic: the answer plays on Neleh's face"
+  },
+  "measured": {
+   "wpm": 258.1,
+   "articulation_sps": 4.3,
+   "syllables": 4,
+   "span_s": 0.93,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.5,
+  "audible_out_s": 1.43
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "af_heart (Kokoro-82M stock) · a-heart-composed · speed 0.940",
+ "voiceId": "af_heart",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch 0",
+  "peak -1 dB @300 Hz Q1.0",
+  "peak +1 dB @5000 Hz Q0.8",
+  "comp 2.0:1 @-22 dB (8/120 ms)",
+  "then the call chain: HPF 200 Hz; LPF 7000 Hz; peak +1.5 dB @1800 Hz Q1.0; comp 2.5:1 @-22 dB (5/90 ms); -16 LUFS",
+  "Kokoro speed 0.940 (the plan speed; rima-tamuri band 0.90-0.98); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [],
+ "words": [
+  {
+   "w": "We'll",
+   "t0": 0.47,
+   "t1": 0.652,
+   "f0": 11,
+   "f1": 16,
+   "ph": "wˌil"
+  },
+  {
+   "w": "say",
+   "t0": 0.652,
+   "t1": 0.865,
+   "f0": 16,
+   "f1": 21,
+   "ph": "sˈA"
+  },
+  {
+   "w": "we",
+   "t0": 0.865,
+   "t1": 1.015,
+   "f0": 21,
+   "f1": 24,
+   "ph": "wi"
+  },
+  {
+   "w": "will",
+   "t0": 1.015,
+   "t1": 1.45,
+   "f0": 24,
+   "f1": 35,
+   "ph": "wˈɪl"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.09,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 213.0,
+  "f0_range_st": 7.4,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "We'll say we will.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.408,
+  "align_median_s": 0.026,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.435,
+  "rise_ms": 15.0,
+  "decay_ms": 70.0,
+  "decay_to_60_s": 0.145
+ },
+ "clean": {
+  "file": "audio/ep01/v31/act4/clean/v31-a4-0003.wav",
+  "note": "the dry read (no call chain), -16 LUFS"
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "b373faff61dcd968",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 2.03,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 5,
+   "share_s": 0.64,
+   "rechecked_alone": false
+  }
+ }
+}

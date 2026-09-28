@@ -1,0 +1,261 @@
+{
+ "id": "v31-a4-0002",
+ "scene": "3",
+ "speaker": "NELEH",
+ "speaker_slug": "neleh",
+ "text": "Once more, before the others join.",
+ "spoken_as": "Once more, before the others join.",
+ "delivery": "to Mada's tile, pen on the sheet; brisk, fond of procedure: she reads everything once more",
+ "tag": "[INVENTED] (C §2.1 N3a)",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "v31-S3.00p",
+ "shot_id": "v31-S3.00p",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v31/act4/wav/v31-a4-0002.wav",
+ "mp3": null,
+ "duration_s": 2.695,
+ "frames_24": 65,
+ "voiced_span_s": 1.72,
+ "pace": {
+  "words": 6,
+  "wpm": 209.3,
+  "speed": 0.96,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.96,
+   "speed_band": [
+    0.92,
+    1.0
+   ],
+   "articulation_guide_sps": [
+    4.2,
+    4.8
+   ],
+   "turn_wpm_guide": [
+    150,
+    170
+   ],
+   "intent": "to Mada's tile, pen on the sheet; brisk, fond of procedure: she reads everything once more"
+  },
+  "measured": {
+   "wpm": 209.3,
+   "articulation_sps": 4.65,
+   "syllables": 8,
+   "span_s": 1.72,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.5,
+  "audible_out_s": 2.22
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "af_aoede (Kokoro-82M stock) · c-aoede-precise · speed 0.960",
+ "voiceId": "af_aoede",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch -2 st",
+  "peak -1.5 dB @300 Hz Q1.0",
+  "peak +1.5 dB @4500 Hz Q0.9",
+  "comp 2.5:1 @-22 dB (6/100 ms)",
+  "Kokoro speed 0.960 (the plan speed; neleh band 0.92-1.00); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "A"
+  },
+  {
+   "t": 0.625,
+   "f": 15,
+   "shape": "E"
+  },
+  {
+   "t": 0.708,
+   "f": 17,
+   "shape": "M"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "O"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "E"
+  },
+  {
+   "t": 0.958,
+   "f": 23,
+   "shape": "M"
+  },
+  {
+   "t": 1.042,
+   "f": 25,
+   "shape": "E"
+  },
+  {
+   "t": 1.125,
+   "f": 27,
+   "shape": "O"
+  },
+  {
+   "t": 1.208,
+   "f": 29,
+   "shape": "E"
+  },
+  {
+   "t": 1.375,
+   "f": 33,
+   "shape": "A"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "E"
+  },
+  {
+   "t": 1.833,
+   "f": 44,
+   "shape": "O"
+  },
+  {
+   "t": 2.125,
+   "f": 51,
+   "shape": "E"
+  },
+  {
+   "t": 2.25,
+   "f": 54,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Once",
+   "t0": 0.47,
+   "t1": 0.71,
+   "f0": 11,
+   "f1": 17,
+   "ph": "wˈʌns"
+  },
+  {
+   "w": "more",
+   "t0": 0.71,
+   "t1": 0.91,
+   "f0": 17,
+   "f1": 22,
+   "ph": "mˈɔɹ"
+  },
+  {
+   "w": "before",
+   "t0": 0.948,
+   "t1": 1.248,
+   "f0": 23,
+   "f1": 30,
+   "ph": "bəfˈɔɹ"
+  },
+  {
+   "w": "the",
+   "t0": 1.248,
+   "t1": 1.36,
+   "f0": 30,
+   "f1": 33,
+   "ph": "ði"
+  },
+  {
+   "w": "others",
+   "t0": 1.36,
+   "t1": 1.722,
+   "f0": 33,
+   "f1": 41,
+   "ph": "ˈʌðəɹz"
+  },
+  {
+   "w": "join",
+   "t0": 1.722,
+   "t1": 2.24,
+   "f0": 41,
+   "f1": 54,
+   "ph": "ʤˈYn"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -1.8,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 172.2,
+  "f0_range_st": 10.1,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Once more before the others join.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.283,
+  "align_median_s": 0.045,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 25.0,
+  "decay_ms": 75.0,
+  "decay_to_60_s": 0.025
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "b0b2310f87e1bd23",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 2.32,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 4,
+   "share_s": 0.49,
+   "rechecked_alone": false
+  }
+ }
+}

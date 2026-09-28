@@ -1,0 +1,187 @@
+{
+ "id": "v31-vo-05",
+ "scene": "19",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "i've had mine up since may.",
+ "spoken_as": "i've had mine up since may.",
+ "delivery": "dry, very small vanity, to nobody; then he lowers his hand",
+ "tag": "[INVENTED · VO · v3.1 inner voice]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "vo",
+ "kind": "vo",
+ "side": "none",
+ "pov": null,
+ "shot": "v31-19.03",
+ "shot_id": "v31-19.03",
+ "cue": null,
+ "lip_sync": false,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v31/act3/wav/v31-vo-05.wav",
+ "mp3": null,
+ "duration_s": 2.955,
+ "frames_24": 71,
+ "voiced_span_s": 1.62,
+ "pace": {
+  "words": 6,
+  "wpm": 222.2,
+  "speed": 0.87,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.87,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.4,
+    4.0
+   ],
+   "turn_wpm_guide": [
+    120,
+    140
+   ],
+   "intent": "dry, very small vanity, to nobody; then he lowers his hand"
+  },
+  "measured": {
+   "wpm": 222.2,
+   "articulation_sps": 3.7,
+   "syllables": 6,
+   "span_s": 1.62,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.62,
+  "audible_out_s": 2.24
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.870",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 60 Hz",
+  "pitch 0",
+  "low shelf +2.5 dB @150 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak -1 dB @3200 Hz Q0.8",
+  "high shelf -2.5 dB @7500 Hz",
+  "comp 2.5:1 @-26 dB (15/160 ms)",
+  "Kokoro speed 0.870 (the plan speed; mas-manalt-vo band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [],
+ "words": [
+  {
+   "w": "i've",
+   "t0": 0.59,
+   "t1": 0.778,
+   "f0": 14,
+   "f1": 19,
+   "ph": "ˌIv"
+  },
+  {
+   "w": "had",
+   "t0": 0.778,
+   "t1": 0.952,
+   "f0": 19,
+   "f1": 23,
+   "ph": "hæd"
+  },
+  {
+   "w": "mine",
+   "t0": 0.952,
+   "t1": 1.29,
+   "f0": 23,
+   "f1": 31,
+   "ph": "mˈIn"
+  },
+  {
+   "w": "up",
+   "t0": 1.29,
+   "t1": 1.49,
+   "f0": 31,
+   "f1": 36,
+   "ph": "ˌʌp"
+  },
+  {
+   "w": "since",
+   "t0": 1.49,
+   "t1": 1.778,
+   "f0": 36,
+   "f1": 43,
+   "ph": "sˈɪns"
+  },
+  {
+   "w": "may",
+   "t0": 1.778,
+   "t1": 2.26,
+   "f0": 43,
+   "f1": 54,
+   "ph": "mˈA"
+  }
+ ],
+ "qa": {
+  "lufs_i": -18.0,
+  "target_lufs": -18.0,
+  "true_peak_dbtp": -4.76,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.62,
+  "median_f0_hz": 115.4,
+  "f0_range_st": 10.9,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "I've had mine up since May.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.234,
+  "align_median_s": 0.066,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.62,
+  "speech_tail_s": 0.42,
+  "rise_ms": 95.0,
+  "decay_ms": 190.0,
+  "decay_to_60_s": 0.295
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "54c09b27f4ddc180",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 2.44,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 1,
+   "share_s": 0.96,
+   "rechecked_alone": false
+  }
+ }
+}

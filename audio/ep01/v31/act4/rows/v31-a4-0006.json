@@ -1,0 +1,161 @@
+{
+ "id": "v31-a4-0006",
+ "scene": "4",
+ "speaker": "NELEH",
+ "speaker_slug": "neleh",
+ "text": "Step four, Mada?",
+ "spoken_as": "Step four, Mada?",
+ "delivery": "the one question put straight to him",
+ "tag": "[INVENTED]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "os",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "S4.14",
+ "shot_id": "S4.14",
+ "cue": null,
+ "lip_sync": false,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v31/act4/wav/v31-a4-0006.wav",
+ "mp3": null,
+ "duration_s": 2.065,
+ "frames_24": 50,
+ "voiced_span_s": 1.07,
+ "pace": {
+  "words": 3,
+  "wpm": 168.2,
+  "speed": 0.94,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.94,
+   "speed_band": [
+    0.92,
+    1.0
+   ],
+   "articulation_guide_sps": [
+    4.2,
+    4.8
+   ],
+   "turn_wpm_guide": [
+    150,
+    170
+   ],
+   "intent": "the one question put straight to him"
+  },
+  "measured": {
+   "wpm": 168.2,
+   "articulation_sps": 3.74,
+   "syllables": 4,
+   "span_s": 1.07,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.51,
+  "audible_out_s": 1.58
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "af_aoede (Kokoro-82M stock) · c-aoede-precise · speed 0.940",
+ "voiceId": "af_aoede",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch -2 st",
+  "peak -1.5 dB @300 Hz Q1.0",
+  "peak +1.5 dB @4500 Hz Q0.9",
+  "comp 2.5:1 @-22 dB (6/100 ms)",
+  "Kokoro speed 0.940 (the plan speed; neleh band 0.92-1.00); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [],
+ "words": [
+  {
+   "w": "Step",
+   "t0": 0.495,
+   "t1": 0.76,
+   "f0": 12,
+   "f1": 18,
+   "ph": "stˈɛp"
+  },
+  {
+   "w": "four",
+   "t0": 0.77,
+   "t1": 0.97,
+   "f0": 18,
+   "f1": 23,
+   "ph": "fˈɔɹ"
+  },
+  {
+   "w": "Mada",
+   "t0": 1.02,
+   "t1": 1.6,
+   "f0": 24,
+   "f1": 38,
+   "ph": "mˈɑdə"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.06,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.51,
+  "median_f0_hz": 168.7,
+  "f0_range_st": 8.8,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Step 4, Maudet.",
+  "cer": 0.25,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.408,
+  "align_median_s": 0.19,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.45,
+  "rise_ms": 115.0,
+  "decay_ms": 90.0,
+  "decay_to_60_s": 0.035
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "7f82c82ffd9093d5",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 1.9,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 5,
+   "share_s": 0.65,
+   "rechecked_alone": false
+  }
+ }
+}

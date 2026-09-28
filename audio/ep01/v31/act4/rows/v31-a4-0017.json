@@ -1,0 +1,516 @@
+{
+ "id": "v31-a4-0017",
+ "scene": "4",
+ "speaker": "NELEH",
+ "speaker_slug": "neleh",
+ "text": "Mario, it's Neleh, from the NopeAI board. We'd like to offer you the job of CEO, and to discuss a merger.",
+ "spoken_as": "Mario, it's [Neleh](/nˈɛlɛ/), from the NopeAI board.{0.4} We'd like to offer you the job of CEO, and to discuss a merger.",
+ "delivery": "into the speakerphone; polite, a cold call",
+ "tag": "[INVENTED · the merger talks are confirmed (research gaps §2 #9); the CEO approach is reported, so it lives only in her line]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "S4.08",
+ "shot_id": "S4.08",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v31/act4/wav/v31-a4-0017.wav",
+ "mp3": null,
+ "duration_s": 7.54,
+ "frames_24": 181,
+ "voiced_span_s": 6.56,
+ "pace": {
+  "words": 21,
+  "wpm": 192.1,
+  "speed": 0.96,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.96,
+   "speed_band": [
+    0.92,
+    1.0
+   ],
+   "articulation_guide_sps": [
+    4.2,
+    4.8
+   ],
+   "turn_wpm_guide": [
+    150,
+    170
+   ],
+   "intent": "into the speakerphone; polite, a cold call"
+  },
+  "measured": {
+   "wpm": 192.1,
+   "articulation_sps": 5.05,
+   "syllables": 31,
+   "span_s": 6.56,
+   "pauses_s": [
+    0.42
+   ]
+  },
+  "longest_internal_gap_s": 0.42,
+  "audible_in_s": 0.51,
+  "audible_out_s": 7.07
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "af_aoede (Kokoro-82M stock) · c-aoede-precise · speed 0.960",
+ "voiceId": "af_aoede",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch -2 st",
+  "peak -1.5 dB @300 Hz Q1.0",
+  "peak +1.5 dB @4500 Hz Q0.9",
+  "comp 2.5:1 @-22 dB (6/100 ms)",
+  "Kokoro speed 0.960 (the plan speed; neleh band 0.92-1.00); one whole read; no time-stretch, no carrier, no splice",
+  "pause after 'board': Kokoro 0.36 s -> 0.34 s (intended 0.40; +0.04 s of room tone at the quietest 5 ms)",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "M"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "A"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "E"
+  },
+  {
+   "t": 0.833,
+   "f": 20,
+   "shape": "O"
+  },
+  {
+   "t": 1.042,
+   "f": 25,
+   "shape": "E"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "A"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "E"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "A"
+  },
+  {
+   "t": 1.667,
+   "f": 40,
+   "shape": "E"
+  },
+  {
+   "t": 1.792,
+   "f": 43,
+   "shape": "M"
+  },
+  {
+   "t": 1.875,
+   "f": 45,
+   "shape": "E"
+  },
+  {
+   "t": 2.0,
+   "f": 48,
+   "shape": "O"
+  },
+  {
+   "t": 2.208,
+   "f": 53,
+   "shape": "M"
+  },
+  {
+   "t": 2.292,
+   "f": 55,
+   "shape": "A"
+  },
+  {
+   "t": 2.625,
+   "f": 63,
+   "shape": "M"
+  },
+  {
+   "t": 2.708,
+   "f": 65,
+   "shape": "O"
+  },
+  {
+   "t": 2.917,
+   "f": 70,
+   "shape": "E"
+  },
+  {
+   "t": 3.083,
+   "f": 74,
+   "shape": "rest"
+  },
+  {
+   "t": 3.5,
+   "f": 84,
+   "shape": "E"
+  },
+  {
+   "t": 3.583,
+   "f": 86,
+   "shape": "A"
+  },
+  {
+   "t": 3.708,
+   "f": 89,
+   "shape": "E"
+  },
+  {
+   "t": 3.792,
+   "f": 91,
+   "shape": "O"
+  },
+  {
+   "t": 4.0,
+   "f": 96,
+   "shape": "E"
+  },
+  {
+   "t": 4.292,
+   "f": 103,
+   "shape": "O"
+  },
+  {
+   "t": 4.375,
+   "f": 105,
+   "shape": "E"
+  },
+  {
+   "t": 4.625,
+   "f": 111,
+   "shape": "A"
+  },
+  {
+   "t": 4.792,
+   "f": 115,
+   "shape": "M"
+  },
+  {
+   "t": 4.875,
+   "f": 117,
+   "shape": "A"
+  },
+  {
+   "t": 4.958,
+   "f": 119,
+   "shape": "E"
+  },
+  {
+   "t": 5.5,
+   "f": 132,
+   "shape": "O"
+  },
+  {
+   "t": 5.875,
+   "f": 141,
+   "shape": "A"
+  },
+  {
+   "t": 5.958,
+   "f": 143,
+   "shape": "E"
+  },
+  {
+   "t": 6.333,
+   "f": 152,
+   "shape": "A"
+  },
+  {
+   "t": 6.583,
+   "f": 158,
+   "shape": "M"
+  },
+  {
+   "t": 6.667,
+   "f": 160,
+   "shape": "O"
+  },
+  {
+   "t": 6.792,
+   "f": 163,
+   "shape": "E"
+  },
+  {
+   "t": 7.083,
+   "f": 170,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Mario",
+   "t0": 0.505,
+   "t1": 0.98,
+   "f0": 12,
+   "f1": 24,
+   "ph": "mˈɑɹiO"
+  },
+  {
+   "w": "it's",
+   "t0": 1.03,
+   "t1": 1.23,
+   "f0": 25,
+   "f1": 30,
+   "ph": "ɪts"
+  },
+  {
+   "w": "Neleh",
+   "t0": 1.23,
+   "t1": 1.605,
+   "f0": 30,
+   "f1": 39,
+   "ph": "nˈɛlɛ"
+  },
+  {
+   "w": "from",
+   "t0": 1.68,
+   "t1": 1.842,
+   "f0": 40,
+   "f1": 44,
+   "ph": "fɹʌm"
+  },
+  {
+   "w": "the",
+   "t0": 1.842,
+   "t1": 1.93,
+   "f0": 44,
+   "f1": 46,
+   "ph": "ðə"
+  },
+  {
+   "w": "NopeAI",
+   "t0": 1.93,
+   "t1": 2.617,
+   "f0": 46,
+   "f1": 63,
+   "ph": "nˌOpˈAˌI"
+  },
+  {
+   "w": "board",
+   "t0": 2.617,
+   "t1": 3.09,
+   "f0": 63,
+   "f1": 74,
+   "ph": "bˈɔɹd"
+  },
+  {
+   "w": "We'd",
+   "t0": 3.42,
+   "t1": 3.558,
+   "f0": 82,
+   "f1": 85,
+   "ph": "wˌid"
+  },
+  {
+   "w": "like",
+   "t0": 3.558,
+   "t1": 3.745,
+   "f0": 85,
+   "f1": 90,
+   "ph": "lˈIk"
+  },
+  {
+   "w": "to",
+   "t0": 3.745,
+   "t1": 3.883,
+   "f0": 90,
+   "f1": 93,
+   "ph": "tʊ"
+  },
+  {
+   "w": "offer",
+   "t0": 3.883,
+   "t1": 4.245,
+   "f0": 93,
+   "f1": 102,
+   "ph": "ˈɔfəɹ"
+  },
+  {
+   "w": "you",
+   "t0": 4.245,
+   "t1": 4.395,
+   "f0": 102,
+   "f1": 105,
+   "ph": "ju"
+  },
+  {
+   "w": "the",
+   "t0": 4.395,
+   "t1": 4.533,
+   "f0": 105,
+   "f1": 109,
+   "ph": "ðə"
+  },
+  {
+   "w": "job",
+   "t0": 4.533,
+   "t1": 4.882,
+   "f0": 109,
+   "f1": 117,
+   "ph": "ʤˈɑb"
+  },
+  {
+   "w": "of",
+   "t0": 4.882,
+   "t1": 5.008,
+   "f0": 117,
+   "f1": 120,
+   "ph": "ʌv"
+  },
+  {
+   "w": "CEO",
+   "t0": 5.008,
+   "t1": 5.77,
+   "f0": 120,
+   "f1": 138,
+   "ph": "sˌiˌiˈO"
+  },
+  {
+   "w": "and",
+   "t0": 5.845,
+   "t1": 5.958,
+   "f0": 140,
+   "f1": 143,
+   "ph": "ænd"
+  },
+  {
+   "w": "to",
+   "t0": 5.958,
+   "t1": 6.045,
+   "f0": 143,
+   "f1": 145,
+   "ph": "tə"
+  },
+  {
+   "w": "discuss",
+   "t0": 6.045,
+   "t1": 6.495,
+   "f0": 145,
+   "f1": 156,
+   "ph": "dəskˈʌs"
+  },
+  {
+   "w": "a",
+   "t0": 6.495,
+   "t1": 6.595,
+   "f0": 156,
+   "f1": 158,
+   "ph": "ɐ"
+  },
+  {
+   "w": "merger",
+   "t0": 6.595,
+   "t1": 7.09,
+   "f0": 158,
+   "f1": 170,
+   "ph": "mˈɜɹʤəɹ"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.37,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.51,
+  "median_f0_hz": 160.0,
+  "f0_range_st": 10.0,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Mario, it's Nelle from the No Pay I board. We'd like to offer you the job of CEO and to discuss a merger.",
+  "cer": 0.051,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.313,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.45,
+  "rise_ms": 30.0,
+  "decay_ms": 65.0,
+  "decay_to_60_s": 0.025
+ },
+ "breaths": [],
+ "opened_pauses": [
+  {
+   "after_word": 7,
+   "word": "board",
+   "tts_s": 0.36,
+   "target_s": 0.4,
+   "point_s": 2.88,
+   "joined_speech": false,
+   "dip_db": -100.2,
+   "breath": false,
+   "crossfade_ms": [
+    8,
+    8
+   ],
+   "final_s": 0.34,
+   "opened_s": 0.04
+  }
+ ],
+ "alt_takes": [],
+ "fast": {
+  "key": "3f2ce254b251c37f",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 7.39,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 3.29,
+   "rechecked_alone": true
+  }
+ }
+}

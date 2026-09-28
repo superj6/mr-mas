@@ -1,0 +1,218 @@
+{
+ "id": "v31-a4-0016",
+ "scene": "7",
+ "speaker": "TERB",
+ "speaker_slug": "terb",
+ "text": "Gerg comes back too.",
+ "spoken_as": "[Gerg](/ɡˈɜɹɡ/) comes back too.",
+ "delivery": "writing it onto the sheet, not looking up",
+ "tag": "[INVENTED]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "S7.07-cont",
+ "shot_id": "S7.07-cont",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": null,
+ "file": "audio/ep01/v31/act4/wav/v31-a4-0016.wav",
+ "mp3": null,
+ "duration_s": 2.69,
+ "frames_24": 65,
+ "voiced_span_s": 1.54,
+ "pace": {
+  "words": 4,
+  "wpm": 155.8,
+  "speed": 1.06,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.06,
+   "speed_band": [
+    0.98,
+    1.06
+   ],
+   "articulation_guide_sps": [
+    4.4,
+    5.0
+   ],
+   "turn_wpm_guide": [
+    165,
+    185
+   ],
+   "intent": "writing it onto the sheet, not looking up"
+  },
+  "measured": {
+   "wpm": 155.8,
+   "articulation_sps": 2.6,
+   "syllables": 4,
+   "span_s": 1.54,
+   "pauses_s": [
+    0.06
+   ]
+  },
+  "longest_internal_gap_s": 0.06,
+  "audible_in_s": 0.5,
+  "audible_out_s": 2.04
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_echo (Kokoro-82M stock) · b-echo-brisk · speed 1.060",
+ "voiceId": "am_echo",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 80 Hz",
+  "pitch 0",
+  "peak +1.5 dB @150 Hz Q0.9",
+  "peak -1.5 dB @500 Hz Q1.0",
+  "peak +2 dB @2000 Hz Q0.9",
+  "comp 3.0:1 @-21 dB (3/70 ms)",
+  "Kokoro speed 1.060 (the plan speed; terb band 0.98-1.06); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "O"
+  },
+  {
+   "t": 0.708,
+   "f": 17,
+   "shape": "E"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "A"
+  },
+  {
+   "t": 1.042,
+   "f": 25,
+   "shape": "M"
+  },
+  {
+   "t": 1.25,
+   "f": 30,
+   "shape": "A"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "E"
+  },
+  {
+   "t": 1.667,
+   "f": 40,
+   "shape": "O"
+  },
+  {
+   "t": 2.042,
+   "f": 49,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Gerg",
+   "t0": 0.48,
+   "t1": 0.842,
+   "f0": 12,
+   "f1": 20,
+   "ph": "ɡˈɜɹɡ"
+  },
+  {
+   "w": "comes",
+   "t0": 0.842,
+   "t1": 1.18,
+   "f0": 20,
+   "f1": 28,
+   "ph": "kˈʌmz"
+  },
+  {
+   "w": "back",
+   "t0": 1.18,
+   "t1": 1.53,
+   "f0": 28,
+   "f1": 37,
+   "ph": "bˈæk"
+  },
+  {
+   "w": "too",
+   "t0": 1.53,
+   "t1": 2.06,
+   "f0": 37,
+   "f1": 49,
+   "ph": "tˈu"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.45,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 119.6,
+  "f0_range_st": 13.7,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "GURG comes back too.",
+  "cer": 0.062,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.505,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 25.0,
+  "decay_ms": 155.0,
+  "decay_to_60_s": 0.205
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "f20f807020e2a5c5",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 3.44,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 1.89,
+   "rechecked_alone": false
+  }
+ }
+}
