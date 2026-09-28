@@ -14,6 +14,11 @@
      - Ep1's development flashback is **Mar 2019, the structure:** the capped profit under the nonprofit's board, and Mas with no equity. He built the board that fires him.
      - **After the blow, his side is a Social Network-style scramble:** still face, frantic actions, calls, options and terms. Human beats for Gerg, Tasya, Alyi, Neleh and the staff.
      - **Exchanges get tempo marks:** quick banter at 0.15–0.35 s gaps; Mas's own lines stay unhurried.
+   - **Also (same day):** "i still wanted something related to techical development where we can show more insight why they want agi… show some rl or similar innovation where mas and alyi or similar talk about making machine that can do everything is most meaningful work… a glimpse into the process that led up to chatgpt before llms when they were less sure in their exact way to agi"
+     - Ep1 adds **JUN 2018, the night the machine taught itself**, on launch night after the click.
+     - ATOD bots play themselves ("180 years" a day). Alyi's awe, and Mas's practicality.
+     - A lone `text? (side project)` monitor that only Mas glances at.
+     - It exits on the counter: the bots' counter becomes the users' counter.
 0000. **Motives, flashbacks and milestones (2026-09-28):**
    - **The notes, verbatim:**
      - "for none of the people including mas it is never shown why they're doing that… mas at least should have a bit more"
