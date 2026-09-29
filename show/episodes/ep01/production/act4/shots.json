@@ -9237,7 +9237,7 @@
    "status": "SALVAGE",
    "owner": "cast",
    "file": "studio/src/shared/pixel/cast/orb.ts",
-   "source": "studio/src/dev/mcoldopen/orb.ts (drawOrb, orbLookAt, orbBob) - port, never edit",
+   "source": "studio/src/shared/pixel/cast/orb.ts (drawOrb, orbLookAt, orbBob) - port, never edit",
    "needs": "medium scale (as intro); NEW room scale 8-10 px with 3 iris positions; NEW portrait-window Orb for 29.10 (iris at Mas / at the check, one dilate drawing)",
    "note": "",
    "used_in": [
@@ -9340,7 +9340,7 @@
    "status": "SALVAGE",
    "owner": "kits",
    "file": "studio/src/episodes/ep01/act4/kits/callgrid.ts",
-   "source": "studio/src/dev/mfinale/callart.ts + slot.ts (TILES layout, drawPointer, CALL_GREY, drawFired, glyphDissolve 20 f); still out/season/intro/moments/_cut/mfinale-fired.png",
+   "source": "studio/src/shared/pixel/kits/callart.ts + slot.ts (TILES layout, drawPointer, CALL_GREY, drawFired, glyphDissolve 20 f); still out/season/intro/moments/_cut/mfinale-fired.png",
    "needs": "G5 layout (3+2, Mas top-left) and G4 (2x2) with the gap-close slide between them; G5 with RIMA in Mas's old slot (27.03-27.10); drop `FIRED.`, blank the `11:47` clock, move the control bar OUT of the rail band (it sits at y 236 in the salvage); toasts; the `…` dialogue box; the board's pointer path; Mas's tile fall (4 drawings) + GLYPH dissolve 20 f (use 2 of 2) + the greyed empty plate that keeps falling (26.11); held-reaction freeze-state (footnotes stop, spinner stops); full-frame G4 for the avalanche; security-cam tile chrome (NO clock: invented logs never sit next to real timestamps)",
    "note": "",
    "used_in": [

@@ -4,7 +4,7 @@
 //   npx esbuild tools/genvideo/dump_room.ts --bundle --platform=node --outfile=/tmp/gv-room.js --log-level=warning
 //   node /tmp/gv-room.js <outDir> <frames>
 import {mkdirSync} from 'fs';
-import {writePNG} from '../../src/dev/pixeladv/tools/png';
+import {writePNG} from '../../src/shared/pixel/png';
 import {Buf, W, H} from '../../src/shared/pixel/px';
 import {PAL} from '../../src/shared/pixel/palette';
 import {drawRoom} from '../../src/dev/pixelengine/room';

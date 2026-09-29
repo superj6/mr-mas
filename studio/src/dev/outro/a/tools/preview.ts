@@ -5,7 +5,7 @@
 // `layout` writes <outDir>/layout.json: the timeline, the typing schedule, every text box and the moth's path,
 // straight from the scene's own modules, so tools/build.py (mix cues, QA boxes, sheets) never mirrors them by hand.
 import {writeFileSync} from 'fs';
-import {writePNG} from '../../../pixeladv/tools/png';
+import {writePNG} from '../../../../shared/pixel/png';
 import {composeFrame} from '../../../../shared/pixel/compose';
 import {outroScene} from '../scene';
 import {variantScene} from '../skins';

@@ -5,7 +5,7 @@
 //             as a lit spire) and A GLASS (read cold as a smashed window)
 // Labels in the show's 7 px pixel font. Pixel-identical frames to the Remotion composition (same compose()).
 //   node sheet.js <out.png>
-import {writePNG} from '../../../pixeladv/tools/png';
+import {writePNG} from '../../../../shared/pixel/png';
 import {Buf} from '../../../../shared/pixel/px';
 import {text, textWidth} from '../../../../shared/pixel/font';
 import {compose, OUT_W, VARIANT} from '../scene';

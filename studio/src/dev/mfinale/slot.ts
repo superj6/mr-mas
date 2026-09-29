@@ -26,7 +26,7 @@ import {newsPlate} from './type';
 import {
   vegasBg, shelfBg, officeBg, camOffBg, nelehBust, madaBust, drawPointer, drawHeart, HEART_W,
   handImg, HAND_TIP, drawButton,
-} from './callart';
+} from '../../shared/pixel/kits/callart';
 import {drawSkyline} from './skyline';
 
 // ================================================================== 9.1 CHATGTP (insert)

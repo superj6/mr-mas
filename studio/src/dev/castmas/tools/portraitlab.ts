@@ -1,6 +1,6 @@
 // @ts-nocheck -- Node-only dev tool. Mas portrait head angles side by side.
 //   npx esbuild src/dev/castmas/tools/portraitlab.ts --bundle --platform=node --outfile=<scratch>/plab.cjs && node <scratch>/plab.cjs <out.png> <scale>
-import {writePNG} from '../../pixeladv/tools/png';
+import {writePNG} from '../../../shared/pixel/png';
 import {Buf} from '../../../shared/pixel/px';
 import {PAL} from '../../../shared/pixel/palette';
 import {drawMasPortrait} from '../../../shared/pixel/cast/mas';

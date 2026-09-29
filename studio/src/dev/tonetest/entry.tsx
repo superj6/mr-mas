@@ -1,5 +1,5 @@
 import {registerRoot} from 'remotion';
-import {makeRoot} from '../makeRoot';
+import {makeRoot} from '../../shared/makeRoot';
 import {frames} from '../../styleframes/tonetest.frame';
 import {debugFrames} from './debug';
 

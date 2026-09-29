@@ -9,7 +9,7 @@
 import {Buf, W, H, clamp, rect} from './core/px';
 import {text, textWidth} from './core/font';
 import {PAL, lum} from './core/palette';
-import {RoomState, renderRoom, drawGlass, drawGlint, ROOM_W, ROOM_H, GLASS} from './art/room';
+import {RoomState, renderRoom, drawGlass, drawGlint, ROOM_W, ROOM_H, GLASS} from '../../shared/pixel/rooms/room';
 import {masImg, MasPose, MAS_AT, masStandImg, MAS_STAND_H} from './art/mas';
 import {noleImg, NolePose, NOLE_FOOT} from './art/nole';
 import {blitImg, imgOpaque, Img} from './core/figure';

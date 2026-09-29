@@ -3,8 +3,8 @@
 // the side facing the desk, the cold window on its back rim), with a black glass face holding a mechanical
 // iris: six aperture blades, a lens, one glint. The face can point anywhere on the sphere; foreshortening
 // comes from the sphere itself, so the iris swivel is a whole-pixel redraw, never a rotated sprite.
-import {Buf, bayer} from '../../shared/pixel/px';
-import {PAL} from '../../shared/pixel/palette';
+import {Buf, bayer} from '../px';
+import {PAL} from '../palette';
 
 export interface OrbState {
   /** where the face points: x -1 (screen-left) .. 1, y -1 (up) .. 1. [0, 0] = into the lens */

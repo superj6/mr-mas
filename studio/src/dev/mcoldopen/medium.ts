@@ -8,7 +8,7 @@ import {PAL, stepColor} from '../../shared/pixel/palette';
 import {blitImg, Img} from '../../shared/pixel/figure';
 import {masPortrait, MasPortraitState} from '../../shared/pixel/cast/mas';
 import {screenAt, SW, SH, CARET_HOME} from './screen';
-import {drawOrb, orbLookAt, orbBob} from './orb';
+import {drawOrb, orbLookAt, orbBob} from '../../shared/pixel/cast/orb';
 import {boxPool, ringPool, litWindows, shearTop, vignette} from './paint';
 import {EV, L1_KEYS, L2_KEYS, L2_BREAK} from './timeline';
 

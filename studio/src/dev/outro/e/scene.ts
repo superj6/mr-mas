@@ -12,7 +12,7 @@
 import {Buf, W, H} from '../../../shared/pixel/px';
 import {PAL} from '../../../shared/pixel/palette';
 import {drawMedium} from '../../mcoldopen/medium';
-import {drawPointer} from '../../mfinale/callart';
+import {drawPointer} from '../../../shared/pixel/kits/callart';
 import {PRE, EV, OUTRO, toO, blinkOn} from './timeline';
 import {drawEp1Window, drawTerms, drawSlug, drawStandinSlug, drawClose, drawEmber, CLOSE_AIM, ChromeState} from './window';
 import {drawMoth, drawMothLanded} from './moth';

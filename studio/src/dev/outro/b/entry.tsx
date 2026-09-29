@@ -10,7 +10,7 @@
 //   outro-b-stills  4 f: the per-episode variant states (timeline.ts STILLS; frame 1 is also read by
 //                   studio/src/dev/outro/_compare/reel.py).
 import {registerRoot} from 'remotion';
-import {makeRoot} from '../../makeRoot';
+import {makeRoot} from '../../../shared/makeRoot';
 import type {FrameDef} from '../../../shared/frame-def';
 import {OutroB, OutroBStills} from './OutroB';
 import {TOTAL, STILLS} from './timeline';

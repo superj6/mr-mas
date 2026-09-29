@@ -1,10 +1,10 @@
 // MR. MAS — mfinale: art for the per-episode slot (bar 9): the five-tile board call, its two board-member
 // busts (front view, webcam scale), the tile backgrounds, the board's pointer, reaction hearts, and the insert
 // of Mas's finger on the tiny beige button. Everything is master-palette pixels on the native grid.
-import {Buf, rect, line, poly, ellipse, hash, clamp, bayer} from '../../shared/pixel/px';
-import {PAL} from '../../shared/pixel/palette';
-import {Img, P, Part, Adjust, LightRig, FigureDef, renderFigure, blitImg} from '../../shared/pixel/figure';
-import {text, textWidth} from '../../shared/pixel/font';
+import {Buf, rect, line, poly, ellipse, hash, clamp, bayer} from '../px';
+import {PAL} from '../palette';
+import {Img, P, Part, Adjust, LightRig, FigureDef, renderFigure, blitImg} from '../figure';
+import {text, textWidth} from '../font';
 
 const memo1 = <T,>(fn: () => T) => { let v: T | undefined; return () => (v ??= fn()); };
 

@@ -5,7 +5,7 @@
 //   npx remotion render <bundle> range-p1-probe <dir> --sequence --props='{"at":[150,200,330]}' --frames=0-2
 import React from 'react';
 import {registerRoot, useCurrentFrame} from 'remotion';
-import {makeRoot} from '../../makeRoot';
+import {makeRoot} from '../../../shared/makeRoot';
 import type {FrameDef} from '../../../shared/frame-def';
 import {KeyTest} from './anime/KeyTest';
 import {P1} from './P1';

@@ -3,7 +3,7 @@
 // real glyphs only exist in the Remotion render).
 //   npx esbuild src/dev/pixelengine/tools/preview.ts --bundle --platform=node --outfile=/tmp/pe.js
 //   node /tmp/pe.js <outDir> <scale> panel:<id> | dissolve:<f,f,..> | front:<f,f,..>
-import {writePNG} from '../../pixeladv/tools/png';
+import {writePNG} from '../../../shared/pixel/png';
 import {composeFrame} from '../../../shared/pixel/compose';
 import {PANELS, dissolveScene, frontScene} from '../scenes';
 import {drawCathedral} from '../art';

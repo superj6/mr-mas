@@ -1,5 +1,5 @@
 // @ts-nocheck -- Node-only dev tool: Mas's reaction drawing options in context (p80), side by side.
-import {writePNG} from '../../../pixeladv/tools/png';
+import {writePNG} from '../../../../shared/pixel/png';
 import * as PL from '../plate';
 import {compose} from '../scene';
 const out = process.argv[2];

@@ -642,7 +642,7 @@ The deciding test is still the showrunner's own viewing of `outro-compare.mp4`. 
 
 **Common to all five.**
 - **Where:**
-  - Code in `studio/src/dev/outro/<id>/`, with its own entry via `studio/src/dev/makeRoot.tsx`.
+  - Code in `studio/src/dev/outro/<id>/`, with its own entry via `studio/src/shared/makeRoot.tsx`.
   - Outputs in `out/lookdev/outro/<id>/`.
   - Scratch in `…/scratchpad/outro-<label>/` only.
   - Don't edit shared files (the pixel engine, the font, the rooms, the OST engine, the theme); copy or wrap locally.

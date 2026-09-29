@@ -1,5 +1,5 @@
 // @ts-nocheck -- Node-only dev tool: renders the blueprint kit's building blocks on one sheet (a unit check).
-import {writePNG} from '../../../../../dev/pixeladv/tools/png';
+import {writePNG} from '../../../../../shared/pixel/png';
 import {Buf} from '../../../../../shared/pixel/px';
 import {BPX, bpSheet, bpDim, bpBox, bpArrow, bpStamp, bpText, bpCheck, bpChair, bpWalker, bpMoth, inkBlueprint} from '../../../../../shared/pixel/kits/blueprint';
 const b = new Buf(480, 270, BPX.navy);

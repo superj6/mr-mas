@@ -2,7 +2,7 @@
 // Fast pixel-exact previews of the act-4 insert + expression views (no Remotion; identical pixels):
 //   npx esbuild src/episodes/ep01/act4/inserts/tools/lab.ts --bundle --platform=node --outfile=<scratch>/ins.cjs
 //   node <scratch>/ins.cjs <outDir> <scale> <view> [<view> ...]      (view ids: see sheet.ts; 'list' prints them)
-import {writePNG} from '../../../../../dev/pixeladv/tools/png';
+import {writePNG} from '../../../../../shared/pixel/png';
 import {renderView, VIEWS, DELIVERABLES} from '../sheet';
 
 const [outDir, scaleS, ...ids] = process.argv.slice(2);

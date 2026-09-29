@@ -26,7 +26,7 @@ import * as AL from '../../../../shared/pixel/cast/alyi-speak';
 import * as GE from '../../../../shared/pixel/cast/gerg-speak';
 import {marioImg, MARIO_BASE, MARIO_FOOT} from '../../../../shared/pixel/cast/mario';
 import {masPortrait} from '../../../../shared/pixel/cast/mas';
-import {vegasBg} from '../../../../dev/mfinale/callart';
+import {vegasBg} from '../../../../shared/pixel/kits/callart';
 import {labView} from './lab';
 import * as MS from '../../../../shared/pixel/cast/mas-stand';
 import * as GS from '../../../../shared/pixel/cast/gerg-stand';

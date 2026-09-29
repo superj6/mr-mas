@@ -7,7 +7,7 @@ import {blitImg} from '../../shared/pixel/figure';
 import {Mask} from '../../shared/pixel/mask';
 import {typed} from '../../shared/pixel/sprite';
 import {nolePlace, masPose, roomState, LINE_NOLE, NOLE_CPS} from '../pixeladv/scene';
-import {renderRoom, drawGlass, ROOM_W, ROOM_H, GLASS, RoomState} from '../pixeladv/art/room';
+import {renderRoom, drawGlass, ROOM_W, ROOM_H, GLASS, RoomState} from '../../shared/pixel/rooms/room';
 import {masImg, MAS_AT} from '../pixeladv/art/mas';
 import {noleImg, NOLE_FOOT} from '../pixeladv/art/nole';
 import {drawForeground} from '../pixeladv/art/foreground';

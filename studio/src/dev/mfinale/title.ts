@@ -13,7 +13,7 @@ import type {SwitchSpec, DrawResult} from '../../shared/pixel/compose';
 import {T} from './timeline';
 import {drawSkyline, drawIgnition, drawRoseWindow, drawTowerPlates, camX, roseCenter, tinyMas, SPIRE} from './skyline';
 import {View} from './iso';
-import {drawOrb as drawColdOrb} from '../mcoldopen/orb';
+import {drawOrb as drawColdOrb} from '../../shared/pixel/cast/orb';
 
 // ================================================================== the wordmark (chamfered display letters)
 const SC = 1.25; // the letters are hand-set on a 40px grid and rasterised at 1.25 (re-rasterised polygons, not a scaled sprite)

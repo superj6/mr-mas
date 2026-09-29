@@ -1,6 +1,6 @@
 // @ts-nocheck -- Node-only dev tool: wireframe of the layout through a camera (composition check, no GL).
 //   npx esbuild src/dev/range/p3/tools/sketch.ts --bundle --platform=node --outfile=$SP/sk.js && node $SP/sk.js $SP/sk.png [side|pov|turn|glide:t]
-import {writePNG} from '../../../pixeladv/tools/png';
+import {writePNG} from '../../../../shared/pixel/png';
 import {Cam, project, SIDE_CAM, POV_CAM, WIN_CAM, REFL_EYE_W, MON_CAM, outCam, glideCam, turnCam, TABLE, SEATS, CANDLES, CANDLE_H, MONITOR, WINDOW, MAS_GLASS, PLACES, WALL_Z, END_X, NW, NH, V3} from '../layout';
 import {spriteRect} from '../sprites-geo';
 

@@ -4,7 +4,7 @@
 //   npx remotion still  src/dev/jumps/proto3/entry.tsx jump-proto-3 ../out/lookdev/jumps/proto3-still-p44.png --frame=44 --bundle-cache=false --log=error
 //   node src/dev/jumps/proto3/tools/sound.mjs     (the sound pass + the mux to ../out/lookdev/jumps/proto3.mp4)
 import {registerRoot} from 'remotion';
-import {makeRoot} from '../../makeRoot';
+import {makeRoot} from '../../../shared/makeRoot';
 import {frames} from '../../../styleframes/jumps/proto3.frame';
 
 registerRoot(makeRoot(frames));

@@ -1,5 +1,5 @@
 // @ts-nocheck -- Node-only dev tool: 24.02's flash-print candidates on the real laptop insert (rooms-a's file, read-only).
-import {writePNG} from '../../../../../dev/pixeladv/tools/png';
+import {writePNG} from '../../../../../shared/pixel/png';
 import {Buf} from '../../../../../shared/pixel/px';
 import {inPalette} from '../../../../../shared/pixel/palettes';
 import {drawLaptopInsert, LAPTOP_INSERT} from '../../../../../shared/pixel/rooms/vegas-suite';

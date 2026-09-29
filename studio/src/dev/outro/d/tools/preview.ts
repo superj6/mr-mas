@@ -5,7 +5,7 @@
 //   node <scratch>/od.js --boxes <out.json> <ep>                       (per-frame text boxes + the audits, for QA)
 // Line 1 of stdout is the read-time audit (per plate + the title: frames wholly on screen and settled before the out
 // vs 16 chars/s + 0.5 s, and `crop`: frames on screen but not whole, which must be 0).
-import {writePNG} from '../../../pixeladv/tools/png';
+import {writePNG} from '../../../../shared/pixel/png';
 import {writeFileSync} from 'fs';
 import {Buf, TRANSPARENT} from '../../../../shared/pixel/px';
 import {PAL} from '../../../../shared/pixel/palette';

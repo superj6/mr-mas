@@ -2,7 +2,7 @@
 // Fast Node preview of mdinner1 (pixels exact; glyph tokens approximated as tinted cells).
 //   npx esbuild src/dev/mdinner1/tools/preview.ts --bundle --platform=node --outfile=<scratch>/md1.cjs
 //   node <scratch>/md1.cjs <outDir> <scale> f:<global> | grid:<g,g,g,..> | world:<x,y,w,h>
-import {writePNG} from '../../pixeladv/tools/png';
+import {writePNG} from '../../../shared/pixel/png';
 import {composeFrame} from '../../../shared/pixel/compose';
 import {SCENE} from '../scene';
 import {toLocal} from '../timeline';

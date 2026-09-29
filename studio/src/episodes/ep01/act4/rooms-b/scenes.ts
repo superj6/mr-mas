@@ -12,7 +12,7 @@ import {drawLighthouse, LighthouseOpts} from '../../../../shared/pixel/rooms/lig
 import {marioImg, MARIO_BASE, MARIO_FOOT} from '../../../../shared/pixel/cast/mario';
 import {drawDarkRoom, drawDarkRoomFront, drawDarkDesk, DarkRoomOpts, DarkDeskOpts, DARKROOM} from '../../../../shared/pixel/rooms/darkroom';
 // the Orb is the intro builder's (dev) drawing; used here for staging only
-import {drawOrb} from '../../../../dev/mcoldopen/orb';
+import {drawOrb} from '../../../../shared/pixel/cast/orb';
 
 export interface PreviewScene { id: string; label: string; draw: (fb: Buf, f: number) => void; frames?: number }
 

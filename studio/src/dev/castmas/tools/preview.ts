@@ -1,6 +1,6 @@
 // @ts-nocheck -- Node-only dev tool (bundled with esbuild), excluded from the browser typecheck.
 //   node <bundle>.js <outDir> <scale> <view> [...]      view = sheet | motion:<f> | wip:<name> | strip:<f0,f1,..>
-import {writePNG} from '../../pixeladv/tools/png';
+import {writePNG} from '../../../shared/pixel/png';
 import {renderView} from '../sheet';
 
 const [outDir, scaleS, ...ids] = process.argv.slice(2);

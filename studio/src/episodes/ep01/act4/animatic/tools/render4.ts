@@ -22,7 +22,7 @@
 import {spawn, fork} from 'child_process';
 import * as fs from 'fs';
 import * as path from 'path';
-import {writePNG} from '../../../../../dev/pixeladv/tools/png';
+import {writePNG} from '../../../../../shared/pixel/png';
 import {frame4 as frame, native4 as native, picture4, OUT_W, OUT_H, ACT_FRAMES} from '../frame4';
 import {otext} from '../frame';
 import {SHOTS} from '../data-v4';

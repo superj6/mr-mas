@@ -1,6 +1,6 @@
 // MR. MAS — cast: THE ORB at MEDIUM / TWO-SHOT scale (Ep1 act 4 draft 3.1; new file, owned by the act-4 medium-tier
 // artist). pov-and-framing §4.1: "The Orb at this scale is a sphere and an iris."
-// The drawing is the APPROVED cold-open Orb (studio/src/dev/mcoldopen/orb.ts drawOrb: a chrome sphere that reflects only
+// The drawing is the APPROVED cold-open Orb (studio/src/shared/pixel/cast/orb.ts drawOrb: a chrome sphere that reflects only
 // the room it floats in, a black glass face, six aperture blades, a lens, one glint), PORTED here unchanged so episodes
 // don't import a dev folder (the original is not edited). The face can point anywhere; foreshortening comes from the
 // sphere, so every iris step is a whole-pixel redraw, never a rotated sprite.

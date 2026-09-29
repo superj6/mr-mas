@@ -6,7 +6,7 @@
 // (tools/build.sh runs the whole thing: the take, the sound, both cuts, the stills, the sheets, the measures.)
 import React from 'react';
 import {registerRoot} from 'remotion';
-import {makeRoot} from '../../makeRoot';
+import {makeRoot} from '../../../shared/makeRoot';
 import {EP1P2, Matte} from './P2Duck';
 import {LEN} from './plan';
 

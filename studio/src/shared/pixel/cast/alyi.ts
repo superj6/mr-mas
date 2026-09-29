@@ -5,9 +5,9 @@
 //   alyiLevitate  cross-legged, floating; whole-pixel bob; the shadow stays on the seat and shrinks (not in the intro)
 //   alyiChairLift rising STILL SEATED in his dinner chair, napkin in lap (the intro's levitation, SCRIPT §3.5b)
 //   alyiPortrait  conversation portrait; eyes: open / closed / 'tokens' (the eyes become token streams)
-import {Buf} from '../../../dev/pixeladv/core/px';
-import {PAL} from '../../../dev/pixeladv/core/palette';
-import {Adjust, FigureDef, Img, LightRig, P, Part, Prim, renderFigure} from '../../../dev/pixeladv/core/figure';
+import {Buf} from '../px';
+import {PAL} from '../palette';
+import {Adjust, FigureDef, Img, LightRig, P, Part, Prim, renderFigure} from '../figure';
 import {Legend, Ramps, newImg, paint, memo, seg, blitTo, hash01, lightPool, shiftPrim} from './kit';
 
 // skin o s m l L R · hair H h g · eye socket O (skin 0) + glint j · sweater Q q u U e E · mouth n

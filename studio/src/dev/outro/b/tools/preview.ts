@@ -6,7 +6,7 @@
 //   node $S/pv.js <outDir> <scale> <ep> <file frame>[,<file frame>...]      one PNG per frame
 //   node $S/pv.js <outDir> 1 <ep> grid:<f>,<f>,...                           a 4-wide contact grid at 1x
 //   node $S/pv.js <outDir> 1 <ep> check                                      the text checks (writes check-ep<ep>.json)
-import {writePNG} from '../../../pixeladv/tools/png';
+import {writePNG} from '../../../../shared/pixel/png';
 import {composeFrame} from '../../../../shared/pixel/compose';
 import {Buf, TRANSPARENT} from '../../../../shared/pixel/px';
 import {PAL} from '../../../../shared/pixel/palette';

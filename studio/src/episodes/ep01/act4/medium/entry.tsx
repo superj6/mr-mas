@@ -3,7 +3,7 @@
 //   npx remotion render src/episodes/ep01/act4/medium/entry.tsx act4med-motion ../out/ep01/act4/assets/medium/motion.mp4 --scale=0.5 --concurrency=1 --bundle-cache=false --log=error
 // Faster, pixel-identical: tools/lab.ts (Node, no browser).
 import {registerRoot} from 'remotion';
-import {makeRoot} from '../../../../dev/makeRoot';
+import {makeRoot} from '../../../../shared/makeRoot';
 import {frames} from './frames';
 
 registerRoot(makeRoot(frames));

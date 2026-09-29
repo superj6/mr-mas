@@ -2,7 +2,7 @@
 // Fast Node preview of mdinner2 (pixel-exact; this span uses no glyph layers).
 //   npx esbuild src/dev/mdinner2/tools/preview.ts --bundle --platform=node --outfile=<scratch>/md2.cjs
 //   node <scratch>/md2.cjs <outDir> <scale> f:<global> | grid:<g,g,..> | diff:<global> (vs mdinner1's scene)
-import {writePNG} from '../../pixeladv/tools/png';
+import {writePNG} from '../../../shared/pixel/png';
 import {composeFrame} from '../../../shared/pixel/compose';
 import {SCENE, _tunePrint} from '../scene';
 import {toLocal} from '../timeline';

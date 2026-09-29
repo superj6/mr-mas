@@ -9,7 +9,7 @@
 //       --picture <scratch>/p4-picture.mp4 --out ../../../../../../out/lookdev/range/p4.mp4
 // Stills + contact sheet: tools/sheet.ts (Node, same renderer; bit-identical to the Remotion frames, checked).
 import {registerRoot} from 'remotion';
-import {makeRoot} from '../../makeRoot';
+import {makeRoot} from '../../../shared/makeRoot';
 import {P4} from './P4';
 
 registerRoot(makeRoot([

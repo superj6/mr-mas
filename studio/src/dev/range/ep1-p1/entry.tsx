@@ -5,7 +5,7 @@
 //   npx remotion render src/dev/range/ep1-p1/entry.tsx ep1-p1-cels $S/cels-raw --sequence --image-format=png --gl=angle --concurrency=1
 //   npx remotion render src/dev/range/ep1-p1/entry.tsx ep1-p1 $S/video.mp4 --public-dir=$S/pub --gl=angle --concurrency=4
 import {registerRoot} from 'remotion';
-import {makeRoot} from '../../makeRoot';
+import {makeRoot} from '../../../shared/makeRoot';
 import {P1} from './P1';
 import {Cels, CEL_W, CEL_H, CEL_COUNT} from './gl/CelRender';
 import {Probe} from './Probe';

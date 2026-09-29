@@ -1,5 +1,5 @@
 // @ts-nocheck -- Node-only dev tool: the pixel [W] at native res (x2), band on / band off.
-import {writePNG} from '../../../pixeladv/tools/png';
+import {writePNG} from '../../../../shared/pixel/png';
 import {OBuf, drawWide} from '../plate';
 import {PAL} from '../../../../shared/pixel/palette';
 const f = Number(process.argv[3] || 0), band = Number(process.argv[4] ?? 67);

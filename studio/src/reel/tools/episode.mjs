@@ -86,7 +86,7 @@ if (!opt['no-sync'] && !opt['mix-only']) await step('sync', () => run(process.ex
 const codeFiles = [
   ...walk(path.join(STUDIO, 'src/reel'), (n) => /\.tsx?$/.test(n)), // what the bundle is built from (tools/ and sync.mjs are not)
   ...walk(path.join(STUDIO, 'src/shared'), (n) => /\.(tsx?|css)$/.test(n)),
-  path.join(STUDIO, 'src/dev/makeRoot.tsx'),
+  path.join(STUDIO, 'src/shared/makeRoot.tsx'),
   path.join(STUDIO, 'src/dev/reel/entry.tsx'),
   path.join(STUDIO, 'src/styleframes/reel.frame.tsx'),
 ].filter((f) => fs.existsSync(f));

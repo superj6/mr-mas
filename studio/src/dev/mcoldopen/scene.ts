@@ -17,7 +17,7 @@ import {drawMedium, CARET_FRAME} from './medium';
 import {drawWide, masDeskAt, WIDE} from './wide';
 import {drawCathedral} from './cathedral';
 import {drawChips} from './chips';
-import {orbBob} from './orb';
+import {orbBob} from '../../shared/pixel/cast/orb';
 import {vignette} from './paint';
 
 export type SceneDef = Pick<PixelSceneProps, 'draw' | 'after' | 'palette' | 'switch'>;

@@ -1,8 +1,8 @@
 // MR. MAS — pixeladv: MAS'S ROOM, 1:36 AM. Painted as (material, level) at native 480x203,
 // then lit by palette ramps (monitor cyan / hallway tungsten / night). All integer geometry.
-import {Buf, bayer, clamp, ellipse, hash, line, poly, rect} from '../core/px';
-import {MatBuf, resolve} from '../core/light';
-import {PAL} from '../core/palette';
+import {Buf, bayer, clamp, ellipse, hash, line, poly, rect} from '../px';
+import {MatBuf, resolve} from '../light';
+import {PAL} from '../palette';
 
 export const ROOM_W = 480;
 export const ROOM_H = 203;

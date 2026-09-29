@@ -1,5 +1,5 @@
 // @ts-nocheck -- Node-only dev tool: every P1 pixel figure on one sheet at 8x (for pixel-level review).
-import {writePNG} from '../../../pixeladv/tools/png';
+import {writePNG} from '../../../../shared/pixel/png';
 import {NOLE_IMG, MARIO_IMG, KRAM_IMG, NESNEJ_IMG, INTERN_IMG, MAS_IMG} from '../pixel/cast';
 const out = process.argv[2];
 const imgs = [KRAM_IMG({}), NESNEJ_IMG({}), MARIO_IMG({}), NOLE_IMG({flare: false}), INTERN_IMG({hand: 'up'})];

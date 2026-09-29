@@ -3,7 +3,7 @@
 //   npx esbuild src/dev/meras/tools/preview.ts --bundle --platform=node --outfile=<scratch>/mp.js \
 //     --loader:.woff=empty --loader:.woff2=empty --loader:.css=empty --external:remotion --external:react
 //   NODE_PATH=node_modules node <scratch>/mp.js <outDir> <scale> <globalFrame> [...] | sheet:<f,f,..> | crop:<f>:<x>,<y>,<w>,<h>
-import {writePNG} from '../../pixeladv/tools/png';
+import {writePNG} from '../../../shared/pixel/png';
 import {composeFrame} from '../../../shared/pixel/compose';
 import {merasScene} from '../scene';
 

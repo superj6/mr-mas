@@ -2,7 +2,7 @@
 // Fast Node stills of prototype 2, pixel-identical to the Remotion composition (same compose()).
 //   npx esbuild src/dev/jumps/proto2/tools/still.ts --bundle --platform=node --outfile=<scratch>/still.js
 //   node <scratch>/still.js <outDir> <p,p,...> [seam|glass] [crop x,y,w,h] [scale]
-import {writePNG} from '../../../pixeladv/tools/png';
+import {writePNG} from '../../../../shared/pixel/png';
 import {compose, OUT_W, OUT_H, VARIANT} from '../scene';
 
 const [outDir, list, variantS, cropS, scaleS] = process.argv.slice(2);

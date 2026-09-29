@@ -1,9 +1,9 @@
 // MR. MAS — cast kit (owned by the cast builder). Small helpers shared by mas.ts / gerg.ts / alyi.ts.
 // Everything stays on the integer grid: images are Int32 colour maps (-1 = transparent), faces and hands
 // are hand-placed TONE MAPS (each char = [material, ramp index]) so a light state is just a ramp swap.
-import {Buf} from '../../../dev/pixeladv/core/px';
-import {FigureDef, Img, LightRig, P, Prim, renderFigure} from '../../../dev/pixeladv/core/figure';
-import {PAL} from '../../../dev/pixeladv/core/palette';
+import {Buf} from '../px';
+import {FigureDef, Img, LightRig, P, Prim, renderFigure} from '../figure';
+import {PAL} from '../palette';
 
 export {P};
 export type {Img, Prim, FigureDef, LightRig};

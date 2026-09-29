@@ -1,6 +1,6 @@
 // @ts-nocheck -- Node-only dev tool: the far side on its own over the window's sky (fix pass: deep.ts), for grading.
 //   node farside.js <outDir> [p]
-import {writePNG} from '../../../pixeladv/tools/png';
+import {writePNG} from '../../../../shared/pixel/png';
 import {deepAt, deepStarsInto, deepGrain, toByte, DEEP} from '../deep';
 const [out, pS] = process.argv.slice(2);
 const p = Number(pS) || 75;

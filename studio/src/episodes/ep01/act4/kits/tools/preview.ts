@@ -3,7 +3,7 @@
 // only exist in the Remotion render).
 //   npx esbuild src/episodes/ep01/act4/kits/tools/preview.ts --bundle --platform=node --outfile=<scratch>/kpv.cjs
 //   node <scratch>/kpv.cjs <outDir> <scale> <scene>:<f> | <scene>:grid:<f,f,...> [...]
-import {writePNG} from '../../../../../dev/pixeladv/tools/png';
+import {writePNG} from '../../../../../shared/pixel/png';
 import {composeFrame} from '../../../../../shared/pixel/compose';
 import {TRANSPARENT} from '../../../../../shared/pixel/px';
 import {SCENES} from '../scenes';

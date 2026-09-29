@@ -120,7 +120,7 @@
 // verify, track.py, mix.py, sheets.py). Shared code is imported read-only; nothing outside this folder was edited.
 // Lookdev slugs: `LEGAL TEXT: DRAFT` (every outro frame) and the stand-in's own label. Legal review is pending.
 import {registerRoot} from 'remotion';
-import {makeRoot} from '../../makeRoot';
+import {makeRoot} from '../../../shared/makeRoot';
 import type {FrameDef} from '../../../shared/frame-def';
 import {OutroE, OutroEStill} from './Outro';
 import {TOTAL, TOTAL_PLAIN} from './timeline';

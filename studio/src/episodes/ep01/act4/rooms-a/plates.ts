@@ -12,7 +12,7 @@ import {inPalette} from '../../../../shared/pixel/palettes';
 import {alyiTableBack} from '../../../../shared/pixel/cast/alyi';
 import {gergBack, gergFront, GERG_DEFAULT, GERG_TABLE_EDGE} from '../../../../shared/pixel/cast/gerg';
 import {masDeskBack, masDeskFront, MAS_DESK_DEFAULT, MAS_DESK_EDGE} from '../../../../shared/pixel/cast/mas';
-import {drawGlass, GLASS} from '../../../../dev/pixeladv/art/room';
+import {drawGlass, GLASS} from '../../../../shared/pixel/rooms/room';
 
 export interface Plate { id: string; frame?: number; frames?: number; draw: (b: Buf, f: number) => void; }
 

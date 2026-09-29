@@ -6,7 +6,7 @@
 // The full build (render, sound, mux, stills, sheets): src/dev/range/ep1-p3/tools/build.sh <scratch dir>
 import React from 'react';
 import {registerRoot, useCurrentFrame} from 'remotion';
-import {makeRoot} from '../../makeRoot';
+import {makeRoot} from '../../../shared/makeRoot';
 import type {FrameDef} from '../../../shared/frame-def';
 import {P3} from './P3';
 import {CLIP_F} from './data';

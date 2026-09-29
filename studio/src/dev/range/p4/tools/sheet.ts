@@ -5,7 +5,7 @@
 //   npx esbuild src/dev/range/p4/tools/sheet.ts --bundle --platform=node --outfile=<scratch>/p4sheet.cjs
 //   node <scratch>/p4sheet.cjs <outDir>          -> p4-sheet.png, p4-still-*.png
 import * as fs from 'fs';
-import {writePNG} from '../../../pixeladv/tools/png';
+import {writePNG} from '../../../../shared/pixel/png';
 import {renderFrame, OUT_W, OUT_H} from '../render';
 import {Buf} from '../../../../shared/pixel/px';
 import {PAL} from '../../../../shared/pixel/palette';

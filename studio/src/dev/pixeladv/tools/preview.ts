@@ -1,7 +1,7 @@
 // @ts-nocheck -- Node-only dev tool (bundled with esbuild), excluded from the browser typecheck.
 // Dev-only Node preview: bundle with esbuild and run to dump frames as PNGs in seconds.
 //   node <bundle>.js <outDir> <scale> <frame|sheet-id> [...]
-import {writePNG} from './png';
+import {writePNG} from '../../../shared/pixel/png';
 import {renderScene, renderSheet} from '../scene';
 
 const [outDir, scaleS, ...ids] = process.argv.slice(2);

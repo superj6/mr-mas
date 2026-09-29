@@ -2,7 +2,7 @@
 // Fast Node preview of P1's PIXEL frames (pixels exact; glyph tokens approximated as tinted cells).
 //   npx esbuild src/dev/range/p1/tools/preview.ts --bundle --platform=node --outfile=<scratch>/p1pre.js
 //   node <scratch>/p1pre.js <outDir> <scale> <frame> [<frame> ...]
-import {writePNG} from '../../../pixeladv/tools/png';
+import {writePNG} from '../../../../shared/pixel/png';
 import {composeFrame} from '../../../../shared/pixel/compose';
 import {PIXEL_SCENE} from '../pixel/scene';
 

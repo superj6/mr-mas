@@ -7,7 +7,7 @@ import {Buf, W, H, line} from '../../../shared/pixel/px';
 import {PAL, stepColor, lightness} from '../../../shared/pixel/palette';
 import {drawMedium, MED, CARET_FRAME} from '../../mcoldopen/medium';
 import {SW, SH} from '../../mcoldopen/screen';
-import {drawOrb, orbBob} from '../../mcoldopen/orb';
+import {drawOrb, orbBob} from '../../../shared/pixel/cast/orb';
 import {O} from './timeline';
 
 export const SCREEN = {x: MED.screen[0], y: MED.screen[1], w: SW, h: SH}; // (80, 44) 180 x 112

@@ -4,7 +4,7 @@
 //   npx remotion still  src/dev/range/p3/entry.tsx p3 ../out/lookdev/range/p3-still.png --frame=200 --gl=angle --public-dir=src/dev/range/p3/public --timeout=600000
 //   npx remotion render src/dev/range/p3/entry.tsx p3 ../out/lookdev/range/p3.mp4 --gl=angle --concurrency=1 --public-dir=src/dev/range/p3/public --timeout=600000
 import {registerRoot} from 'remotion';
-import {makeRoot} from '../../makeRoot';
+import {makeRoot} from '../../../shared/makeRoot';
 import {P3} from './P3';
 import {Probe} from './Probe';
 import {Clod} from './Clod';

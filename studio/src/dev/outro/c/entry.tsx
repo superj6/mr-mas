@@ -92,7 +92,7 @@
 //   - OUTRO-PROPOSALS §0/§4/§9 and the comparison strip still say C is 10 s / 4 bars and describe the 0 -> 36 hang
 //     and the six-row board (outside this folder: the lead's).
 import {registerRoot} from 'remotion';
-import {makeRoot} from '../../makeRoot';
+import {makeRoot} from '../../../shared/makeRoot';
 import type {FrameDef} from '../../../shared/frame-def';
 import {OutroCEp1, OutroCStills} from './OutroC';
 import {TOTAL, STILLS} from './timeline';

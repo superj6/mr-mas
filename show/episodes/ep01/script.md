@@ -1686,7 +1686,7 @@ MUSIC: LEVERAGE, low (MM-08), from the click; thinned to its pedal under Alyi's 
 
 `SCENE:` His version of the noon call. The first words reach him and us together, and then the host's dialog does what it says. His tile falls out of the grid. His phone offers him one word three times, and he takes it.
 
-*Salvage: the call grid, the camera-off tile and the GLYPH dissolve from the cut intro slot (`studio/src/dev/mfinale/callart.ts`); the dialog is the 1993 kit's (`kits/dialog-1993.ts`) with new text.*
+*Salvage: the call grid, the camera-off tile and the GLYPH dissolve from the cut intro slot (`studio/src/shared/pixel/kits/callart.ts`); the dialog is the 1993 kit's (`kits/dialog-1993.ts`) with new text.*
 
 `[POV]` [S1.07] (≈ 7.2 s; his laptop, full-bleed, locked) A five-tile grid (a generic UI) connects, each tile with the call's own name label:
 - MAS MANALT, Vegas neon behind him;
@@ -3301,7 +3301,7 @@ flags .  .  .  o  .  .  .  .  .  O  .  .  .  .  .  .  .  .  .  .  .
 
 **Salvage map (the cut intro slot, already Ep1 art):**
 - The launch-button press and USERS counter (`out/season/intro/moments/_cut/mfinale-chatgtp.png`) → sc 5–6. Relabel the button `research preview`, and let only the drill's last wheel read `1,000,000`.
-- The board grid, the camera-off tile and Mas's GLYPH dissolve (`studio/src/dev/mfinale/callart.ts`, still `_cut/mfinale-fired.png`) → sc 26. Drop `FIRED.` and blank the `11:47` clock.
+- The board grid, the camera-off tile and Mas's GLYPH dissolve (`studio/src/shared/pixel/kits/callart.ts`, still `_cut/mfinale-fired.png`) → sc 26. Drop `FIRED.` and blank the `11:47` clock.
 - The pacing note named `slot.ts`; that file isn't in `studio/src/dev/mfinale/`. `callart.ts`, `scene.ts` and `MFinale.tsx` are.
 
 **Calibration** (FORMAT-DECISION §8 row 3):
@@ -5003,7 +5003,7 @@ Good question.
 
 #### 26. SAME — THE FALLING TILE [BASE] · S2 · 13:21–14:16 (22 bars: 4 · 4 · 4 · 4 · card 2 · 4)
 
-*Salvage: the call grid, the camera-off tile and the GLYPH dissolve from the cut intro slot (`studio/src/dev/mfinale/callart.ts`, still `_cut/mfinale-fired.png`). Drop `FIRED.` and blank the `11:47` clock; the rail's `~NOON PT` carries the time.*
+*Salvage: the call grid, the camera-off tile and the GLYPH dissolve from the cut intro slot (`studio/src/shared/pixel/kits/callart.ts`, still `_cut/mfinale-fired.png`). Drop `FIRED.` and blank the `11:47` clock; the rail's `~NOON PT` carries the time.*
 
 PHRASE 1 (4 bars). INSERT: a five-tile grid (a generic UI).
 - MAS, with Vegas neon behind him.

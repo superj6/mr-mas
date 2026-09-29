@@ -3,7 +3,7 @@
 //   npx esbuild src/dev/range/ep1-p1/tools/preview.ts --bundle --platform=node --outfile=<scratch>/pre.cjs
 //   node <scratch>/pre.cjs <outDir> <scale> <takes.json|-> <gen dir|-> <frame> [<frame> ...]
 import * as fs from 'fs';
-import {writePNG} from '../../../pixeladv/tools/png';
+import {writePNG} from '../../../../shared/pixel/png';
 import {Buf} from '../../../../shared/pixel/px';
 import {drawFrame, setMouthTrack, setClodPixel} from '../pixel';
 import {clayAt} from '../gl/cels';

@@ -4,9 +4,9 @@
 //   gergKeycaps  deterministic keycap "popcorn" for any frame (whole-pixel arcs, one bounce, they stay)
 //   gergPortrait conversation portrait (laptop uplight + warm restaurant rim)
 // Authored facing camera-left like the rest of the cast; pass flip to face right.
-import {Buf} from '../../../dev/pixeladv/core/px';
-import {PAL} from '../../../dev/pixeladv/core/palette';
-import {Adjust, FigureDef, Img, LightRig, P, Part, Prim, Stamp, renderFigure} from '../../../dev/pixeladv/core/figure';
+import {Buf} from '../px';
+import {PAL} from '../palette';
+import {Adjust, FigureDef, Img, LightRig, P, Part, Prim, Stamp, renderFigure} from '../figure';
 import {Legend, Ramps, newImg, over, paint, memo, seg, blitTo, edgeLight, hash01, lightPool, shiftPrim, fringe} from './kit';
 
 // skin warm o s m l L R · skin under the laptop glow a A · hair H h g G c · eye k · mouth n

@@ -2,7 +2,7 @@
 // Fast Node preview for ep01 act4 rooms B (pixel-exact: these rooms use no glyph layers).
 //   npx esbuild src/episodes/ep01/act4/rooms-b/tools/preview.ts --bundle --platform=node --outfile=<scratch>/rb.js
 //   node <scratch>/rb.js <outDir> <scale> <id|all> [frame]
-import {writePNG} from '../../../../../dev/pixeladv/tools/png';
+import {writePNG} from '../../../../../shared/pixel/png';
 import {Buf} from '../../../../../shared/pixel/px';
 import {PAL} from '../../../../../shared/pixel/palette';
 import {strayColors} from '../../../../../shared/pixel/palettes';

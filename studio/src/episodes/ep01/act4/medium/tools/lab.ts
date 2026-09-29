@@ -4,7 +4,7 @@
 //   node <scratch>/med.cjs <outDir> <scale> <view> [<view> ...]
 // Views are sheet.ts ids (see renderView); 'zoom:<k>:<x>:<y>:<w>:<h>:<view>' crops a native region and blows it up
 // k x nearest-neighbour (dev inspection only).
-import {writePNG} from '../../../../../dev/pixeladv/tools/png';
+import {writePNG} from '../../../../../shared/pixel/png';
 import {renderView} from '../sheet';
 
 const [outDir, scaleS, ...ids] = process.argv.slice(2);

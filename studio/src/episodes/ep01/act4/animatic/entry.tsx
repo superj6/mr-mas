@@ -10,7 +10,7 @@
 //   (v3: ep01-act4-animatic / ep01-act4-animatic-still, as before)
 // Faster, pixel-identical (Node, no browser): tools/render4.ts (v4) and tools/render.ts (v3); they also mux the audio.
 import {registerRoot} from 'remotion';
-import {makeRoot} from '../../../../dev/makeRoot';
+import {makeRoot} from '../../../../shared/makeRoot';
 import {frames} from './frames';
 
 registerRoot(makeRoot(frames));

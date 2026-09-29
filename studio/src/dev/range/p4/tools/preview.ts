@@ -4,7 +4,7 @@
 //   node <scratch>/p4prev.cjs <outDir> full|native|both f1,f2,...      (full = 1920x1080, native = 480x270)
 //   node <scratch>/p4prev.cjs <outDir> sheet <name> f1,f2,...          (a labelled contact sheet at native x1)
 import * as fs from 'fs';
-import {writePNG} from '../../../pixeladv/tools/png';
+import {writePNG} from '../../../../shared/pixel/png';
 import {renderFrame, renderNative, OUT_W, OUT_H} from '../render';
 import {Buf} from '../../../../shared/pixel/px';
 import {PAL} from '../../../../shared/pixel/palette';

@@ -169,7 +169,7 @@ void stepColor;
 //            rack's LEDs and the Orb's iris at the frame's edge are held (the stillness flag, kits/mas-version.ts)
 //   TRUE     the phone face-up and still on the desk, five fingers, Rima's post legible on it the whole time, the
 //            thumb taps a heart on every beat, the LEDs blink, the Orb's iris follows the taps
-import {drawOrb} from '../../../dev/mcoldopen/orb';
+import {drawOrb} from '../cast/orb';
 import {text, textWidth, wrap} from '../font';
 import {tapHandCaps, TapThumb} from './inserts-hands';
 import {hash, rect, line, poly, ellipse} from '../px';

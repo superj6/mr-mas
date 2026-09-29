@@ -84,7 +84,7 @@ mrmas/
 ### 1.3 How compositions are registered
 
 - **One type.** A `FrameDef` is `{id, component, props?, width?, height?, fps?, durationInFrames?}` ([src/shared/frame-def.ts](../studio/src/shared/frame-def.ts)). If it has no duration, it's a still.
-- **Auto-registration.** Every `*.frame.tsx` under `src/` exports `frames: FrameDef[]`. [src/Root.tsx](../studio/src/Root.tsx) collects them with webpack's `require.context('./', true, /\.frame\.tsx$/)` and passes them to `makeRoot` ([src/dev/makeRoot.tsx](../studio/src/dev/makeRoot.tsx)). `makeRoot` sorts them by id and emits a `<Composition>` or `<Still>` for each, at 1920×1080 and 24 fps by default. New work never edits Root.
+- **Auto-registration.** Every `*.frame.tsx` under `src/` exports `frames: FrameDef[]`. [src/Root.tsx](../studio/src/Root.tsx) collects them with webpack's `require.context('./', true, /\.frame\.tsx$/)` and passes them to `makeRoot` ([src/shared/makeRoot.tsx](../studio/src/shared/makeRoot.tsx)). `makeRoot` sorts them by id and emits a `<Composition>` or `<Still>` for each, at 1920×1080 and 24 fps by default. New work never edits Root.
 - **Per-builder dev entries.** Each builder also gets its own entry (`src/dev/<key>/entry.tsx`, or `src/episodes/.../entry.tsx`). It registers only that builder's frames with `makeRoot(frames)`. An entry like this bundles much less than the full Root, and a broken file in one builder's folder can't block another builder's render. The Act Four modules export from `frames.ts`, not `*.frame.tsx`, so their own entries are the only way to reach them.
 
 ```sh

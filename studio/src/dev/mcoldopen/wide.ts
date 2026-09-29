@@ -9,7 +9,7 @@ import {MatBuf, resolve} from '../../shared/pixel/light';
 import {drawMasDesk, MasDeskPose, MAS_DESK_EDGE, masDeskBack} from '../../shared/pixel/cast/mas';
 import {Mask} from '../../shared/pixel/mask';
 import {L1, L2, L1_KEYS, L2_KEYS, EV, typedCount} from './timeline';
-import {drawOrb, orbBob} from './orb';
+import {drawOrb, orbBob} from '../../shared/pixel/cast/orb';
 import {vignette} from './paint';
 
 export const WIDE = {

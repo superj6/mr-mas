@@ -2,7 +2,7 @@
 // Fast pixel-exact previews of the act-4 cast views (no Remotion):
 //   npx esbuild src/episodes/ep01/act4/cast/tools/lab.ts --bundle --platform=node --outfile=<scratch>/lab.cjs
 //   node <scratch>/lab.cjs <outDir> <scale> <view> [<view> ...]
-import {writePNG} from '../../../../../dev/pixeladv/tools/png';
+import {writePNG} from '../../../../../shared/pixel/png';
 import {renderView} from '../sheet';
 
 const [outDir, scaleS, ...ids] = process.argv.slice(2);

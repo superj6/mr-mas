@@ -1,7 +1,7 @@
 import React from 'react';
 import {Composition, Still} from 'remotion';
-import '../shared/theme/fonts';
-import type {FrameDef} from '../shared/frame-def';
+import './theme/fonts';
+import type {FrameDef} from './frame-def';
 
 /** Build a Remotion Root from a list of frame definitions (used by src/Root.tsx and per-asset dev entries). */
 export const makeRoot = (defs: FrameDef[]): React.FC => {

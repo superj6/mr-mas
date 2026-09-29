@@ -9,7 +9,7 @@
 // frameless portrait: bottom extension + shoulder falloff), vignette (negative fill behind a bust), shoulder (the OTS
 // foreground silhouette with a rim), whip (the whip streak: row runs + highlight smear), shift (whole-pixel offset).
 import * as fs from 'fs';
-import {writePNG} from '../pixeladv/tools/png';
+import {writePNG} from '../../shared/pixel/png';
 import {Buf, rect, clamp, bayer, hash} from '../../shared/pixel/px';
 import {PAL, stepColor, lum} from '../../shared/pixel/palette';
 import {blitImg} from '../../shared/pixel/figure';

@@ -1,5 +1,5 @@
 import type {FrameDef} from './shared/frame-def';
-import {makeRoot} from './dev/makeRoot';
+import {makeRoot} from './shared/makeRoot';
 
 // Every file matching *.frame.tsx under src/ exports `frames: FrameDef[]`.
 // Style frames, tests and intro scenes are added without touching this file.

@@ -16,7 +16,7 @@ import {radialMask} from '../../shared/pixel/mask';
 import type {SwitchSpec, DrawResult} from '../../shared/pixel/compose';
 import {drawMedium, MED, CARET_FRAME} from '../mcoldopen/medium';
 import {screenAt, SW, SH} from '../mcoldopen/screen';
-import {orbBob} from '../mcoldopen/orb';
+import {orbBob} from '../../shared/pixel/cast/orb';
 import {T, IRIS_GLYPH} from './timeline';
 import {drawTitle, titleAfter} from './title';
 

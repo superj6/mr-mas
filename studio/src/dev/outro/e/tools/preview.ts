@@ -6,7 +6,7 @@
 // identical on every frame o0-o195 (never moved, never covered), the landed moth clear of every glyph, each line's
 // read time vs its time on screen, and (polish pass 2) the ending: the last frame anything moves, the length of the
 // still hold, and that nothing but the terms line (and the moth) is on the desktop after the close.
-import {writePNG} from '../../../pixeladv/tools/png';
+import {writePNG} from '../../../../shared/pixel/png';
 import {Buf} from '../../../../shared/pixel/px';
 import {PAL} from '../../../../shared/pixel/palette';
 import {drawMockup, drawVariant, drawEndState} from '../scene';

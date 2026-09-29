@@ -13,7 +13,7 @@
 import {spawn, fork} from 'child_process';
 import * as fs from 'fs';
 import * as path from 'path';
-import {writePNG} from '../../../../../dev/pixeladv/tools/png';
+import {writePNG} from '../../../../../shared/pixel/png';
 import {frame, native, OUT_W, OUT_H, ACT_FRAMES, otext} from '../frame';
 import {SHOTS} from '../data-v3';
 import {DRAW3 as DRAW} from '../shots3';

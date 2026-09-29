@@ -89,7 +89,7 @@
 //   monitor-curve formulas in scene.ts mirror mcoldopen/screen.ts by hand: if the cold open's chart changes, re-check
 //   frames o0-23 (the preview's o0 frame must show no second curve).
 import {registerRoot} from 'remotion';
-import {makeRoot} from '../../makeRoot';
+import {makeRoot} from '../../../shared/makeRoot';
 import type {FrameDef} from '../../../shared/frame-def';
 import {OutroD, OutroDStill} from './OutroD';
 import {TOTAL} from './timeline';

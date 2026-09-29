@@ -1,6 +1,6 @@
 // @ts-nocheck -- Node-only dev tool: the guests' reconstruction drawings at native size (x3) on one sheet.
 //   npx esbuild src/dev/range/p3/tools/spr.ts --bundle --platform=node --outfile=$SP/spr.js && node $SP/spr.js $SP/spr.png [f]
-import {writePNG} from '../../../pixeladv/tools/png';
+import {writePNG} from '../../../../shared/pixel/png';
 import {guestImg} from '../sprites';
 const f = Number(process.argv[3] || 200);
 const W = 560, H = 260, o = new Uint32Array(W * H).fill(0x202431);

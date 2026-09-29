@@ -12,7 +12,7 @@ import {drawLobby} from '../../../../shared/pixel/rooms/lobby';
 import {drawSuite, SUITE} from '../../../../shared/pixel/rooms/vegas-suite';
 import {railPlaceholder} from '../../../../shared/pixel/rooms/setkit';
 import {masDeskBack, masDeskFront, MAS_DESK_DEFAULT} from '../../../../shared/pixel/cast/mas';
-import {drawGlass, GLASS} from '../../../../dev/pixeladv/art/room';
+import {drawGlass, GLASS} from '../../../../shared/pixel/rooms/room';
 
 export const MOTION = {
   frames: 180,

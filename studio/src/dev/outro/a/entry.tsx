@@ -20,7 +20,7 @@
 //   # optional: a variant still through Remotion itself (build.py draws the same pixels with tools/preview.ts)
 //   npx remotion still src/dev/outro/a/entry.tsx outro-a-stills $SCR/var-ep10.png --props='{"which":"ep10"}'
 import {registerRoot} from 'remotion';
-import {makeRoot} from '../../makeRoot';
+import {makeRoot} from '../../../shared/makeRoot';
 import type {FrameDef} from '../../../shared/frame-def';
 import {OutroA, OutroAVariant} from './Outro';
 import {TOTAL} from './timeline';

@@ -3,7 +3,7 @@
 //   npx remotion render src/dev/jumps/proto1/entry.tsx jump-proto-1 ../out/lookdev/jumps/proto1-silent.mp4 --concurrency=2 --bundle-cache=false --log=error
 // The finished clip (picture + the sound pass, muxed with the bundled ffmpeg): tools/build.sh
 import {registerRoot} from 'remotion';
-import {makeRoot} from '../../makeRoot';
+import {makeRoot} from '../../../shared/makeRoot';
 import {frames} from '../../../styleframes/jumps/proto1.frame';
 
 registerRoot(makeRoot(frames));

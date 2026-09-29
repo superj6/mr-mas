@@ -2,7 +2,7 @@
 // Fast Node preview for mcoldopen (pixels exact; glyph tokens approximated as tinted cells).
 //   npx esbuild src/dev/mcoldopen/tools/preview.ts --bundle --platform=node --outfile=<scratch>/mco.js
 //   node <scratch>/mco.js <outDir> <scale> screen:<f> | macro:<P>:<f> | frame:<f> | strip:<f,f,..> | world:<f>
-import {writePNG} from '../../pixeladv/tools/png';
+import {writePNG} from '../../../shared/pixel/png';
 import {Buf} from '../../../shared/pixel/px';
 import {composeFrame} from '../../../shared/pixel/compose';
 import {screenAt} from '../screen';

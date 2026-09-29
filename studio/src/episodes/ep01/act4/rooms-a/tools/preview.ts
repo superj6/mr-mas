@@ -2,7 +2,7 @@
 // Fast Node preview of the rooms-A plates (pixel-exact: these rooms use no glyph layers).
 //   npx esbuild src/episodes/ep01/act4/rooms-a/tools/preview.ts --bundle --platform=node --outfile=<scratch>/ra.js
 //   node <scratch>/ra.js <outDir> <scale> <id> [<id> ...]     (ids: see PLATES in ../plates.ts; 'all')
-import {writePNG} from '../../../../../dev/pixeladv/tools/png';
+import {writePNG} from '../../../../../shared/pixel/png';
 import {PLATES} from '../plates';
 import {Buf} from '../../../../../shared/pixel/px';
 import {strayColors} from '../../../../../shared/pixel/palettes';

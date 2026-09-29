@@ -3,9 +3,9 @@
 // pixeladv figure rig, head hand-pixelled as a tone map. Light: warm candle key from the front (right),
 // cool vault light as a back-rim (left) — the mirror of Nole's cyan-key / tungsten-rim.
 // Also here: his conversation portrait, the round vault blast door, the scroll that unrolls, the DRAFT sheet.
-import {Buf, rect, bayer} from '../../../dev/pixeladv/core/px';
-import {PAL} from '../../../dev/pixeladv/core/palette';
-import {Adjust, FigureDef, Img, LightRig, P, Part, Prim, Stamp, renderFigure, blitImg} from '../../../dev/pixeladv/core/figure';
+import {Buf, rect, bayer} from '../px';
+import {PAL} from '../palette';
+import {Adjust, FigureDef, Img, LightRig, P, Part, Prim, Stamp, renderFigure, blitImg} from '../figure';
 import {CX, micro, seg, shiftPrim} from './bosses';
 
 export const MARIO_W = 56;

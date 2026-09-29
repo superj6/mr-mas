@@ -23,7 +23,7 @@ import {drawTerbRoom, TERB_ROOM_DEFAULT, TerbRoomPose} from '../../../../shared/
 import {drawAlyiStand, ALYI_STAND_DEFAULT, alyiReflection} from '../../../../shared/pixel/cast/alyi-speak';
 import {drawAdelinaRoom, ADELINA_ROOM_DEFAULT} from '../../../../shared/pixel/cast/adelina';
 import {marioImg, MARIO_BASE, MARIO_FOOT} from '../../../../shared/pixel/cast/mario';
-import {drawGlass, GLASS} from '../../../../dev/pixeladv/art/room';
+import {drawGlass, GLASS} from '../../../../shared/pixel/rooms/room';
 
 // ------------------------------------------------------------------ THE SUITE (sc 24, 26): Mas at the desk, his glass, the Orb
 export const suiteRoom = (b: Buf, f: number, st: Partial<SuiteState> = {}, pose: Partial<MasDeskPose> = {}) => {

@@ -2,7 +2,7 @@
 //   npx remotion still src/dev/castrivals/entry.tsx castrivals-sheet ../out/lookdev/pixel/cast/castrivals-sheet.png --bundle-cache=false --log=error
 //   npx remotion render src/dev/castrivals/entry.tsx castrivals-motion ../out/lookdev/pixel/cast/castrivals-motion.mp4 --scale=0.5 --concurrency=1 --bundle-cache=false --log=error
 import {registerRoot} from 'remotion';
-import {makeRoot} from '../makeRoot';
+import {makeRoot} from '../../shared/makeRoot';
 import {frames} from '../../styleframes/castrivals.frame';
 
 registerRoot(makeRoot(frames));

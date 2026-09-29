@@ -5,9 +5,9 @@
 //   masStage     2008, age 23, on a stage: two stacked polos, both collars popped
 //   masThrone    2014, age 29, hoodie + tiny parachute pack, seated for the YC throne (crown optional)
 // Signature features, every age: the forward cowlick, calm level eyes, the tiny closed smile, slight frame.
-import {Buf} from '../../../dev/pixeladv/core/px';
-import {PAL} from '../../../dev/pixeladv/core/palette';
-import {Adjust, FigureDef, Img, LightRig, P, Part, Prim, Stamp, renderFigure} from '../../../dev/pixeladv/core/figure';
+import {Buf} from '../px';
+import {PAL} from '../palette';
+import {Adjust, FigureDef, Img, LightRig, P, Part, Prim, Stamp, renderFigure} from '../figure';
 import {Legend, Ramps, newImg, over, paint, memo, seg, shiftPrim, blitTo, bitRamps, blit1bit, BitLadder, edgeLight, lightPool} from './kit';
 
 // ============================================================ shared legend (room-scale tone maps)

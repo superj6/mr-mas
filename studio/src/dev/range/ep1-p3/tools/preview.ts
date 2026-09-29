@@ -3,7 +3,7 @@
 // browser canvas: use the ep1-p3-probe composition).
 //   npx esbuild src/dev/range/ep1-p3/tools/preview.ts --bundle --platform=node --outfile=<scratch>/pre.js
 //   node <scratch>/pre.js <outDir>
-import {writePNG} from '../../../pixeladv/tools/png';
+import {writePNG} from '../../../../shared/pixel/png';
 import {Buf} from '../../../../shared/pixel/px';
 import {plate, plateAt, wideFrame, madaFrame, tasyaLayer, masLayer, band, OWN, TRANSP} from '../pixel';
 

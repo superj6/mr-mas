@@ -5,9 +5,9 @@
 // integer lean by row-shear, light states lit / sil (doorway) / fade1 / fade2.
 // Plus: his conversation portrait (upgraded copy), the SPACEZ booster with its hatch, and the
 // novelty check ($1,000,000,000*).
-import {Buf, rect, bayer} from '../../../dev/pixeladv/core/px';
-import {PAL} from '../../../dev/pixeladv/core/palette';
-import {Adjust, FigureDef, Img, LightRig, P, Part, Prim, Stamp, renderFigure, blitImg} from '../../../dev/pixeladv/core/figure';
+import {Buf, rect, bayer} from '../px';
+import {PAL} from '../palette';
+import {Adjust, FigureDef, Img, LightRig, P, Part, Prim, Stamp, renderFigure, blitImg} from '../figure';
 import {CX, micro, microImg, microWidth, newImg, putPx, seg, shiftPrim} from './bosses';
 import {text} from '../font';
 

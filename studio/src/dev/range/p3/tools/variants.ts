@@ -1,5 +1,5 @@
 // @ts-nocheck -- Node-only dev tool: the portrait swap drawings the reconstruction's idles can use (x2 sheet).
-import {writePNG} from '../../../pixeladv/tools/png';
+import {writePNG} from '../../../../shared/pixel/png';
 import {gergPortrait, GERG_PORTRAIT_DEFAULT} from '../../../../shared/pixel/cast/gerg';
 import {alyiPortrait, ALYI_PORTRAIT_DEFAULT} from '../../../../shared/pixel/cast/alyi';
 import {marioPortraitImg, MARIO_PORTRAIT_REST} from '../../../../shared/pixel/cast/mario';

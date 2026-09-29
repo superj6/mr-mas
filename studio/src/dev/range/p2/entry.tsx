@@ -5,7 +5,7 @@
 //   clip:   npx remotion render src/dev/range/p2/entry.tsx range-p2 <out>.mp4 --gl=angle --concurrency=4
 //   build:  bash src/dev/range/p2/tools/build.sh   (both variants, sound, stills, sheet)
 import {registerRoot} from 'remotion';
-import {makeRoot} from '../../makeRoot';
+import {makeRoot} from '../../../shared/makeRoot';
 import {Probe} from './probe';
 import {P2, P2Exact, P2Grid} from './P2';
 import {N_FRAMES} from './params';

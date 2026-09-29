@@ -1,5 +1,5 @@
 // @ts-nocheck -- Node-only dev tool: palette tone-curve variants in a grid (dev iteration only).
-import {writePNG} from '../../pixeladv/tools/png';
+import {writePNG} from '../../../shared/pixel/png';
 import {PALETTES} from '../../../shared/pixel/palettes';
 import {bayer4, bayer8, cluster4, checker} from '../../../shared/pixel/dither';
 import {roomFrame} from '../room';

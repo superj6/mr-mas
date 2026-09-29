@@ -3,10 +3,10 @@
 // so a light state (dusk, freeze two-tone, 1-bit) is a ramp swap, never a redraw. Each boss owns ONE
 // readable motion loop of 2-4 drawings, held on 2s-4s. Whole-pixel only: nothing rotates or scales.
 // Conventions follow src/shared/pixel/cast/kit.ts (other builder) but this file is self-contained.
-import {Buf, rect, line} from '../../../dev/pixeladv/core/px';
-import {PAL} from '../../../dev/pixeladv/core/palette';
-import type {Img, Prim} from '../../../dev/pixeladv/core/figure';
-import {P} from '../../../dev/pixeladv/core/figure';
+import {Buf, rect, line} from '../px';
+import {PAL} from '../palette';
+import type {Img, Prim} from '../figure';
+import {P} from '../figure';
 
 // ================================================================== rivals kit
 /** Extra hand-picked colours the rivals need (added as families; the master palette stays untouched). */

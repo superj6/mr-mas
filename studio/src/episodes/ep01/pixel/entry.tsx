@@ -5,7 +5,7 @@
 //   npx remotion still  src/episodes/ep01/pixel/entry.tsx ep01-pixel-act1-still <out.png> --props='{"offset": 240, "mode": "review"}' --log=error
 //   npx remotion render src/episodes/ep01/pixel/entry.tsx ep01-pixel-act4-v5 <out.mp4> --frames=990-1040 --concurrency=2 --log=error
 import {registerRoot} from 'remotion';
-import {makeRoot} from '../../../dev/makeRoot';
+import {makeRoot} from '../../../shared/makeRoot';
 import {frames} from './frames';
 
 registerRoot(makeRoot(frames));
