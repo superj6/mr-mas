@@ -40,9 +40,9 @@
   "median_s": 3.604,
   "min_s": 1.0,
   "max_s": 33.167,
-  "lines": 81,
+  "lines": 82,
   "posts": 0,
-  "vo": 7,
+  "vo": 8,
   "lines_with_mouth": 74,
   "mouths_from_words": 0,
   "on_camera_mouths": [],
@@ -74,12 +74,12 @@
   {
    "check": "the lock vs the stick reel's own line frames",
    "ok": true,
-   "detail": "same frame: 7; 1 f earlier (the onset falls inside the frame): 74; other: 0"
+   "detail": "same frame: 7; 1 f earlier (the onset falls inside the frame): 75; other: 0"
   },
   {
    "check": "every line has a take",
    "ok": true,
-   "detail": "81 of 81 placed; no take: []"
+   "detail": "82 of 82 placed; no take: []"
   },
   {
    "check": "every line's speech lies inside its take file",
@@ -14290,15 +14290,15 @@
    "onscreen": [],
    "lines": [
     {
-     "id": "v35-vo-02",
+     "id": "v35-vo-06",
      "kind": "vo",
      "mode": "on-mic",
      "who": "MAS",
-     "text": "someone gets to be in the room.",
-     "s": 24,
-     "e": 71,
-     "fs": 15,
-     "fe": 86,
+     "text": "someone gets to be in the room. i'm glad it's me.",
+     "s": 4,
+     "e": 96,
+     "fs": -5,
+     "fe": 106,
      "os": false,
      "via": null,
      "face": null,
@@ -14309,18 +14309,18 @@
      "words": [
       [
        "Someone",
-       -1,
+       0,
        11
       ],
       [
        "gets",
        12,
-       18
+       17
       ],
       [
        "to",
        19,
-       22
+       21
       ],
       [
        "be",
@@ -14334,13 +14334,33 @@
       ],
       [
        "the",
-       31,
+       30,
        32
       ],
       [
        "room",
        34,
        43
+      ],
+      [
+       "i'm",
+       59,
+       65
+      ],
+      [
+       "glad",
+       66,
+       73
+      ],
+      [
+       "it's",
+       75,
+       79
+      ],
+      [
+       "me",
+       81,
+       90
       ]
      ],
      "tag": "V.O.",
@@ -16622,7 +16642,50 @@
      "e": 106
     }
    ],
-   "lines": [],
+   "lines": [
+    {
+     "id": "v35-vo-05",
+     "kind": "vo",
+     "mode": "on-mic",
+     "who": "MAS",
+     "text": "now for the backlash.",
+     "s": 62,
+     "e": 100,
+     "fs": 52,
+     "fe": 110,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [],
+     "words": [
+      [
+       "Now",
+       -1,
+       6
+      ],
+      [
+       "for",
+       8,
+       12
+      ],
+      [
+       "the",
+       13,
+       15
+      ],
+      [
+       "backlash",
+       17,
+       35
+      ]
+     ],
+     "tag": "V.O.",
+     "pre": false
+    }
+   ],
    "seq": "12",
    "verdict": "",
    "v4": null,
@@ -25730,24 +25793,24 @@
    "pre": false
   },
   {
-   "id": "v35-vo-02",
+   "id": "v35-vo-06",
    "shot": "v35-19.03",
    "beat": "v35-19.03",
    "kind": "vo",
    "mode": "on-mic",
    "who": "MAS",
-   "text": "someone gets to be in the room.",
+   "text": "someone gets to be in the room. i'm glad it's me.",
    "tag": "V.O.",
-   "on_s": 385.0417,
-   "end_s": 386.9717,
-   "file_s": 384.6817,
-   "abs_in": 9241,
-   "abs_out": 9288,
-   "file_in": 9232,
-   "file_out": 9303,
-   "file": "audio/ep01/v3-el/ep01-v35/act1/wav/v35-vo-02__mas-manalt-C.wav",
-   "stick_t": 1.0,
-   "stick_in": 0.36,
+   "on_s": 384.2417,
+   "end_s": 388.0117,
+   "file_s": 383.8617,
+   "abs_in": 9221,
+   "abs_out": 9313,
+   "file_in": 9212,
+   "file_out": 9323,
+   "file": "audio/ep01/v3-el/ep01-v35/act1/wav/v35-vo-06__mas-manalt-C.wav",
+   "stick_t": 0.2,
+   "stick_in": 0.38,
    "cut": false,
    "on_camera": "vo",
    "take_lip_sync": false,
@@ -25756,18 +25819,18 @@
    "words": [
     [
      "Someone",
-     -1,
+     0,
      11
     ],
     [
      "gets",
      12,
-     18
+     17
     ],
     [
      "to",
      19,
-     22
+     21
     ],
     [
      "be",
@@ -25781,13 +25844,33 @@
     ],
     [
      "the",
-     31,
+     30,
      32
     ],
     [
      "room",
      34,
      43
+    ],
+    [
+     "i'm",
+     59,
+     65
+    ],
+    [
+     "glad",
+     66,
+     73
+    ],
+    [
+     "it's",
+     75,
+     79
+    ],
+    [
+     "me",
+     81,
+     90
     ]
    ],
    "mouth": [],
@@ -27199,6 +27282,56 @@
    ],
    "mouth_src": "take",
    "pre": false
+  },
+  {
+   "id": "v35-vo-05",
+   "shot": "v31-12.03",
+   "beat": "v31-12.03",
+   "kind": "vo",
+   "mode": "on-mic",
+   "who": "MAS",
+   "text": "now for the backlash.",
+   "tag": "V.O.",
+   "on_s": 445.8083,
+   "end_s": 447.3583,
+   "file_s": 445.4083,
+   "abs_in": 10699,
+   "abs_out": 10737,
+   "file_in": 10689,
+   "file_out": 10747,
+   "file": "audio/ep01/v3-el/ep01-v35/act1/wav/v35-vo-05__mas-manalt-C.wav",
+   "stick_t": 2.6,
+   "stick_in": 0.4,
+   "cut": false,
+   "on_camera": "vo",
+   "take_lip_sync": false,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "Now",
+     -1,
+     6
+    ],
+    [
+     "for",
+     8,
+     12
+    ],
+    [
+     "the",
+     13,
+     15
+    ],
+    [
+     "backlash",
+     17,
+     35
+    ]
+   ],
+   "mouth": [],
+   "mouth_src": "none",
+   "pre": false
   }
  ],
  "posts": [],
@@ -28152,15 +28285,15 @@
    "os": false
   },
   {
-   "s": 9241,
-   "e": 9288,
-   "hold_to": 9300,
+   "s": 9221,
+   "e": 9313,
+   "hold_to": 9325,
    "who": "MAS",
    "shown": "MAN AT THE END DESK",
-   "text": "someone gets to be in the room.",
+   "text": "someone gets to be in the room. i'm glad it's me.",
    "kind": "vo",
    "mode": "on-mic",
-   "id": "v35-vo-02",
+   "id": "v35-vo-06",
    "os": false
   },
   {
@@ -28282,6 +28415,18 @@
    "mode": "on-mic",
    "id": "e1-a1-12-03",
    "os": false
+  },
+  {
+   "s": 10699,
+   "e": 10737,
+   "hold_to": 10749,
+   "who": "MAS",
+   "shown": "MAN AT THE END DESK",
+   "text": "now for the backlash.",
+   "kind": "vo",
+   "mode": "on-mic",
+   "id": "v35-vo-05",
+   "os": false
   }
  ],
  "refs": {},
@@ -28300,7 +28445,8 @@
   "v35-19.02: label 'Our mission is to ensure that ar' is up 155 f, under its read floor 171 f (the stick's timing; kept)",
   "v35-19.02: label '…a gradual transition to a world' is up 83 f, under its read floor 90 f (the stick's timing; kept)",
   "v35-19.02: label '…perhaps the most important—and ' is up 91 f, under its read floor 98 f (the stick's timing; kept)",
-  "V.O. on screen with a rail item (§5.2 wants one must-read at a time; stagger by a beat): [\"v3-vo-10~'MAR 14, 2023'\"]"
+  "1 takes are not in the timeline: ['v35-vo-02']",
+  "V.O. on screen with a rail item (§5.2 wants one must-read at a time; stagger by a beat): [\"v3-vo-10~'MAR 14, 2023'\", \"v35-vo-05~'MAR 29, 2023'\"]"
  ],
  "problems": []
 }

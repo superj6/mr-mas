@@ -423,7 +423,54 @@ const menuBar = (t: Buf, w: number, f: number, counter: string | null) => {
   else if (counter) pt(t, counter, 3, 2, PAL.G6);
   const clk = '3:04 AM'; pt(t, clk, w - 4 - pw(clk), 2, PAL.G5);
 };
-/** the at-capacity page, the reload, and the feed with the stranger's post (st.page), in his laptop's screen */
+/** a few emoji, hand-set at the pixel font's height (7 x 7): 🎉 😭 🙏 ❤ */
+const EMO: Record<string, [string[], Record<string, number>]> = {
+  '🎉': [['.r..c.y', '...y..r', '.c.ww..', '..www.c', '.wwww..', 'www....', 'w......'], {w: PAL.W6, y: PAL.W8, r: PAL.R3, c: PAL.C6}],
+  '😭': [['.yyyyy.', 'yyyyyyy', 'ykyyyky', 'bbyyybb', 'bykkkyb', 'byykyyb', '.yyyyy.'], {y: PAL.W7, k: PAL.N1, b: PAL.F6}],
+  '🙏': [['...S...', '..sSs..', '..sSs..', '.ssSss.', '.ssSss.', '.ssSss.', '..c.c..'], {s: PAL.S5, S: PAL.S3, c: PAL.C5}],
+  '❤': [['.rr.rr.', 'rrrrrrr', 'rrrrrrr', 'rrrrrrr', '.rrrrr.', '..rrr..', '...r...'], {r: PAL.R3}],
+};
+const emoji = (b: Buf, e: string, x: number, y: number) => { const g = EMO[e]; if (!g) return; g[0].forEach((row, j) => { for (let i = 0; i < 7; i++) { const c = g[1][row[i]]; if (c !== undefined) b.set(x + i, y + j, c); } }); };
+/** text with emoji in it: the pixel font, the emoji drawn in their place */
+const ptE = (b: Buf, s: string, x: number, y: number, col: number) => {
+  let cx = x, run = '';
+  const flush = () => { if (run) { pt(b, run, cx, y, col); cx += pw(run) + 2; run = ''; } };
+  for (const ch of s) { if (EMO[ch]) { flush(); emoji(b, ch, cx, y); cx += 9; } else run += ch; }
+  flush();
+};
+/** an anonymous staff avatar: a colour chip, a pale head and shoulders (no face, no name) */
+const staffAvatar = (b: Buf, x: number, y: number, col: number) => {
+  for (let j = 0; j < 12; j++) for (let i = 0; i < 12; i++) { const cx = Math.min(i, 11 - i), cy = Math.min(j, 11 - j); if (cx + cy < 2) continue; b.set(x + i, y + j, col); }
+  for (let j = 0; j < 4; j++) for (let i = 0; i < 4; i++) if (Math.hypot(i - 1.5, j - 1.5) < 2) b.set(x + 4 + i, y + 2 + j, PAL.P1);
+  for (let i = 2; i < 10; i++) for (let j = 8; j < 11; j++) if (Math.abs(i - 5.5) < 1.5 + (j - 8)) b.set(x + i, y + j, PAL.P1);
+};
+/** the team's internal channel on his screen at 3 AM: #launch, three messages from anonymous staff and the reactions
+ *  piling up under them (`k` frames since it loaded: the messages land in 3 held steps, the counts tick) */
+const teamChannel = (t: Buf, w: number, k: number) => {
+  rect(0, 12, w, 12, t.ink(PAL.N2)); rect(0, 24, w, 1, t.ink(PAL.N0));
+  pt(t, '#launch', 6, 14, PAL.P2); pt(t, '#launch', 7, 14, PAL.P2);
+  const msgs: Array<[string, number]> = [['1M 🎉 best week of my life', PAL.L1], ['my mom wrote her wedding toast with it 😭', PAL.U3], ['thank you mas 🙏', PAL.F4]];
+  msgs.forEach(([m, col], i) => {
+    if (k < i) return;
+    const y = 30 + i * 22;
+    staffAvatar(t, 6, y, col);
+    rect(22, y + 2, 16 + (i * 7) % 12, 2, t.ink(PAL.N4));
+    ptE(t, m, 22, y + 7, PAL.P2);
+  });
+  // the reactions under the last message, piling up (the counts tick on held steps)
+  if (k >= 3) {
+    const tick = Math.min(12, Math.floor((k - 3) / 4));
+    const R: Array<[string, number]> = [['🎉', 52], ['❤', 38], ['😭', 21], ['🙏', 44]];
+    let x = 22;
+    R.forEach(([e, n], i) => {
+      const s = String(n + tick * (i + 1)), cw = 14 + pw(s);
+      rect(x, 98, cw, 11, t.ink(PAL.N3)); rect(x, 98, cw, 1, t.ink(PAL.N5));
+      emoji(t, e, x + 2, 100); pt(t, s, x + 11, 100, PAL.P1);
+      x += cw + 4;
+    });
+  }
+};
+/** the at-capacity page, the reload, and the team's channel (st.page), in his laptop's screen */
 export const laptopScreen3am = (b: Buf, S: Rect, f: number, page: 'capacity' | 'reload' | 'feed', k: number) => {
   const t = new Buf(S.w, S.h, PAL.N1);
   menuBar(t, S.w, f, COUNTER_TXT);
@@ -437,11 +484,8 @@ export const laptopScreen3am = (b: Buf, S: Rect, f: number, page: 'capacity' | '
     const cx = S.w >> 1, cy = 70;
     for (let i = 0; i < 8; i++) { const a = (i / 8) * Math.PI * 2; const on = (Math.floor(k / 2) % 8) === i; rect(cx + Math.round(Math.cos(a) * 12) - 1, cy + Math.round(Math.sin(a) * 12) - 1, 3, 3, t.ink(on ? PAL.P2 : PAL.N4)); }
   } else {
-    // the feed: dim posts above and below, and the first post back, a stranger's, legible (no name, no face)
-    rect(8, 14, S.w - 16, 22, t.ink(PAL.N2)); pourRows(t, 34, 20, S.w - 60, 3, 61, PAL.N4);
-    const spec: FeedPostSpec = {text: 'asked it how to say sorry to my sister. it helped.', av: 'anon'};
-    const h = feedPost(t, 14, 42, S.w - 28, spec, {k, bg: PAL.N3, textCol: PAL.P2});
-    rect(8, 46 + h + 4, S.w - 16, 40, t.ink(PAL.N2)); pourRows(t, 34, 52 + h + 4, S.w - 60, 5, 63, PAL.N4);
+    // v3.5 final: the team's own channel at 3 AM, celebrating (anonymous staff avatars, no names), the reactions piling
+    teamChannel(t, S.w, k);
   }
   put(b, t, S.x, S.y);
 };
@@ -480,11 +524,10 @@ export const counterECU = (b: Buf, f: number, swap: boolean) => {
   rect(0, 0, 240, 22, t.ink(PAL.N3)); rect(0, 22, 240, 1, t.ink(PAL.N0));
   if (!swap) { pt(t, COUNTER_TXT, COUNTER_AT.x / 2, COUNTER_AT.y / 2, PAL.G6); drawOdometer(t, COUNTER_AT.x / 2 + pw(COUNTER_TXT) + 3, COUNTER_AT.y / 2 - 1, {size: 'plate', value: 8431207, digits: 7, spin: 1, f}); }
   else pt(t, YEARS_TXT, COUNTER_AT.x / 2, COUNTER_AT.y / 2, PAL.G6);
-  // the feed under it, soft at this range: the stranger's card's top edge, dim rows
-  rect(7, 30, 226, 44, t.ink(PAL.N3)); rect(7, 30, 226, 1, t.ink(PAL.N5));
-  for (let j = 0; j < 14; j++) for (let i = 0; i < 14; i++) if (Math.hypot(i - 6.5, j - 6.5) < 7) t.set(13 + i, 36 + j, PAL.G3);
-  pourRows(t, 34, 40, 180, 3, 65, PAL.N5, 6);
-  rect(7, 80, 226, 22, t.ink(PAL.N2));
+  // the team's channel under it (12.01's screen, seen close)
+  const c = new Buf(240, 90, PAL.N1);
+  teamChannel(c, 240, 99);
+  for (let j = 0; j < 90 - 12 && 26 + j < 102; j++) for (let i = 0; i < 240; i++) t.set(i, 26 + j, c.get(i, 12 + j));
   put2x(b, t, 0, 0);
 };
 

@@ -16,7 +16,7 @@
 // Tasya's freeze card. Stick scaffolding in the lock's texts (`mas types: …`, `his sheet: …`, `USERS: …` over a
 // spinning blur) is not drawn: the picture carries it. REZEILE is printed on EMIT's page (no pipeline plate).
 //
-// v3.1 (the lead's rulings): no band prompt anywhere (the letterbox stays dark: the cursor lives in the scene); launch
+// v3.1 (the lead's rulings): no band prompt anywhere (the letterbox stays dark; v3.5 final: no mouse cursor in the launch at all); launch
 // night's bullpen setups warmed a step (`warm: 1`); face lights on Alyi's reflection two steps (5.05, v3-5.06b, 5.09's
 // rack, 12.05); the v3.1 collars (the gold third, taller points) on every collar call; the match cut on Gerg's laptop
 // seen over his shoulder in both rooms, the lids matched; cleanUnder on 5.11.
@@ -27,7 +27,7 @@ import {PAL, stepColor} from '../../../../shared/pixel/palette';
 import {Mask} from '../../../../shared/pixel/mask';
 import {nameCard} from '../../../../shared/pixel/ui';
 import {drawLaunchWide, drawLaunch2S, drawLaunchGlass, drawLaunchMcuRima, drawLaunchMcuMas, drawLaunchOTSLaptop, drawLaunchMcuPF, drawCursor, launchBackM, otsShoulder, LAUNCH, MAS_TEAR_PATH} from '../../../../shared/pixel/rooms/bullpen-launch';
-import {drawButtonECU, BUTTON_ECU} from '../../../../shared/pixel/kits/launch-button';
+import {drawButtonECU} from '../../../../shared/pixel/kits/launch-button';
 import {drawChatECU} from '../../../../shared/pixel/kits/chat-window';
 import type {ChatLine} from '../../../../shared/pixel/kits/chat-window';
 import {drawHoleHigh, drawGpuTear, HIGH} from '../../../../shared/pixel/rooms/drill';
@@ -55,7 +55,7 @@ import type {RimaBoardPose} from '../../../../shared/pixel/cast/rima-board';
 import {masWalkAt} from '../../../../shared/pixel/cast/mas-stand';
 import {gergTypeAt} from '../../../../shared/pixel/cast/gerg';
 import {
-  blinkLid, cursorPath, ease2, sleepLed, fingerECU, otsRima, glassCount, deal2S, passerBy, guestCard, bottomShade, grains,
+  blinkLid, ease2, sleepLed, fingerECU, otsRima, glassCount, deal2S, passerBy, guestCard, bottomShade, grains,
   castMask, chatCard, twelfthKey, callMcu, handOnPhone, paneButton, postPreview, settleHand, mcuMasDesk, tearGlint,
 } from './extras';
 import {
@@ -114,11 +114,11 @@ L.add('5.01', {
   draw: (fb, k, sh, f) => { drawButtonECU(fb, f, {}); sleepLed(fb, f); },
 });
 L.add('5.02', {
-  st: 'ROOM-BULLPEN-LAUNCH drawLaunchWide {warm: 1, life} (the arrival, held, launch night warmed a step by its practicals: the hall\'s tungsten, his desk lamp, a far lamp left on; a far screensaver, a car\'s light on the bridge, and a passer-by crossing the hall\'s lit far end as we arrive · Gerg typing in his green, Rima at LOW-KEY twice-underlined, Alyi in the glass, Mas at the end desk breathing); no voice over the wide: room tone, Rima steps back from her board, the cursor drifts in and parks on the button, in the scene (drawCursor), then Gerg\'s "Okay, the build\'s green." at room scale; the letterbox stays dark',
+  st: 'ROOM-BULLPEN-LAUNCH drawLaunchWide {warm: 1, life} (the arrival, held, launch night warmed a step by its practicals: the hall\'s tungsten, his desk lamp, a far lamp left on; a far screensaver, a car\'s light on the bridge, and a passer-by crossing the hall\'s lit far end as we arrive · Gerg typing in his green, Rima at LOW-KEY twice-underlined, Alyi in the glass, Mas at the end desk breathing); no voice over the wide: room tone, Rima steps back from her board (v3.5 final: no mouse cursor anywhere in the launch, the showrunner\'s note), then Gerg\'s "Okay, the build\'s green." at room scale; the letterbox stays dark',
   face: {GERG: 'room'},
-  marks: {cursor: ['f', 43], rima: ['f', 84], pass: ['f', 0]},
+  marks: {rima: ['f', 84], pass: ['f', 0]},
   draw: (fb, k, sh, f) => {
-    const r = mk(sh, 'rima', 84), c = mk(sh, 'cursor', 43), p0 = mk(sh, 'pass', 0);
+    const r = mk(sh, 'rima', 84), p0 = mk(sh, 'pass', 0);
     // the passer-by crosses the hall's far end in 36 frames (whole pixels, held on 2s), as we arrive
     const pk = k - (k % 2) - p0, passer = pk >= 0 && pk <= 36 ? pk / 36 : null;
     drawLaunchWide(fb, f, {
@@ -128,17 +128,16 @@ L.add('5.02', {
       mas: {head: 'turn', breathe: breathe(f)},
       gerg: {mouth: openRest(sh, k, 'GERG'), look: 0},
     });
-    if (k >= c) { const [x, y] = cursorPath(k, c, c + 27, [262, 92], [131, 135]); drawCursor(fb, x, y); }
   },
 });
 L.add('5.03', {
-  st: 'ROOM-BULLPEN-LAUNCH drawLaunch2S {warm: 1} (desk to desk: Mas fg left, two collars (v31), his desk lamp\'s key on his face; Gerg typing in his green, lip-synced, not looking up; behind him Rima at the board, her back to us (cast/rima-board lower: she speaks from the board without turning round); the button and the parked cursor); Mas\'s eyes go to Rima\'s board on her line (v3.4: "she\'ll go for three." is cut, so they come back 10 frames after it); the plate GERG MOCKBRAN · CO-FOUNDER by Gerg',
+  st: 'ROOM-BULLPEN-LAUNCH drawLaunch2S {warm: 1} (desk to desk: Mas fg left, two collars (v31), his desk lamp\'s key on his face; Gerg typing in his green, lip-synced, not looking up; behind him Rima at the board, her back to us (cast/rima-board lower: she speaks from the board without turning round); the button); Mas\'s eyes go to Rima\'s board on her line (v3.4: "she\'ll go for three." is cut, so they come back 10 frames after it); the plate GERG MOCKBRAN · CO-FOUNDER by Gerg',
   face: {GERG: 'lip'},
   marks: {rimaOn: ['on', 'e1-a1-5-02', 0], voEnd: ['end', 'e1-a1-5-02', 10]},
   draw: (fb, k, sh, f) => {
     const lid = blinkLid(k, 3, 113);
     drawLaunch2S(fb, f, {
-      warm: 1, collarStyle: CS, cursor: true, underlines: 2, laptop: 'dark', rima: {body: 'lower'},
+      warm: 1, collarStyle: CS, underlines: 2, laptop: 'dark', rima: {body: 'lower'},
       gerg: {head: 'type', mouth: mouth(sh, k, 'GERG'), lid: lid === 2 ? 2 : 1},
       mas: {look: k >= mk(sh, 'rimaOn', 47) && k < mk(sh, 'voEnd', 164) ? 0 : 1},
     });
@@ -146,7 +145,7 @@ L.add('5.03', {
   },
 });
 L.add('5.04', {
-  st: 'extras.otsRima {warm: 1} = ROOM-BULLPEN-LAUNCH launchBackM (warm, camX 470, held steady) + rima-speak portrait (lip-synced; blinks; the desk lamp\'s key on her face, face only; she smooths her lapel before her question, lifts her brow waiting on him, firms on "a fortune", half-lids at Gerg\'s "v2 problem") + his desk\'s edge + (v3.4) on the V.O.\'s "it goes out tonight anyway." his head dips toward the button in the foreground silhouette, the settle before "it\'s a preview.", lips still (a silhouette) + otsShoulder (its rim in the lamp\'s tungsten) + the button and cursor lifted clear of the V.O. line; Alyi small and soft in the glass; the plate RIMA TAMURI · CTO',
+  st: 'extras.otsRima {warm: 1} = ROOM-BULLPEN-LAUNCH launchBackM (warm, camX 470, held steady) + rima-speak portrait (lip-synced; blinks; the desk lamp\'s key on her face, face only; she smooths her lapel before her question, lifts her brow waiting on him, firms on "a fortune", half-lids at Gerg\'s "v2 problem") + his desk\'s edge + (v3.4) on the V.O.\'s "it goes out tonight anyway." his head dips toward the button in the foreground silhouette, the settle before "it\'s a preview.", lips still (a silhouette) + otsShoulder (its rim in the lamp\'s tungsten) + the button lifted clear of the V.O. line (v3.5 final: no cursor); Alyi small and soft in the glass; the plate RIMA TAMURI · CTO',
   face: {RIMA: 'lip'},
   marks: {ask: ['on', 'e1-a1-5-06', 0], askEnd: ['end', 'e1-a1-5-06', 0], answered: ['end', 'e1-a1-5-07', 6], fortune: ['w', 'e1-a1-5-08', 'fortune', -6], v2: ['on', 'e1-a1-5-09', 4], decide: ['w', 'v34-vo-01', 'goes', 0]},
   draw: (fb, k, sh, f) => {
@@ -159,7 +158,7 @@ L.add('5.04', {
     const bl = blinkLid(k, 5, 131);
     const lid = k >= v2 ? (bl === 2 ? 2 : 1) : bl;
     otsRima(fb, f, {
-      camX: 470, cursor: true, warm: 1, headDy,
+      camX: 470, cursor: false, warm: 1, headDy,
       rima: {mouth: mouth(sh, k, 'RIMA'), lid, brow, hand},
       alyi: {soft: true, eyes: blinkLid(k, 9, 157) === 2 ? 'closed' : 'open', mouth: 'rest', t: f},
     });
@@ -204,11 +203,11 @@ L.add('5.07', {
     // Rima: marker down at her side · poised at the line's start · the underline on the squeak (her arm follows the
     // wet end) · holding at its end · the cap going on as she asks · capped · the marker lowered once Gerg has answered
     const rima: RimaBoardPose = k < sq - 8 ? {body: 'lower'} : k < sq ? {body: 'underline', reach: 0} : k < ask ? {body: 'underline'} : k < ask + 8 ? {body: 'cap0'} : k < after ? {body: 'cap1'} : {body: 'lower'};
-    drawLaunch2S(fb, f, {warm: 1, collarStyle: CS, cursor: true, underlines: k < sq ? 2 : 3, wet: k < sq ? 1 : wet, laptop: 'dark', rima, gerg, mas: {head: k >= down ? 'down' : '34', lid: k >= down ? 1 : 0}});
+    drawLaunch2S(fb, f, {warm: 1, collarStyle: CS, underlines: k < sq ? 2 : 3, wet: k < sq ? 1 : wet, laptop: 'dark', rima, gerg, mas: {head: k >= down ? 'down' : '34', lid: k >= down ? 1 : 0}});
   },
 });
 L.add('5.08', {
-  st: 'PROP-BEIGE-BUTTON drawButtonECU via extras.fingerECU (the parked cursor on the cap, then his finger comes in without a hover in three held steps and takes the cursor\'s place: touch, the click, the LED lights, nothing happens); no band text',
+  st: 'PROP-BEIGE-BUTTON drawButtonECU via extras.fingerECU (the bare cap; his finger comes in without a hover in three held steps: touch, the click, the LED lights, nothing happens; v3.5 final: no mouse cursor); no band text',
   marks: {click: ['snd', 'dialog_ok_click', 1, 0]},
   draw: (fb, k, sh, f) => {
     const c = mk(sh, 'click', 24), a0 = c - 16;
@@ -216,12 +215,10 @@ L.add('5.08', {
     const lit = k >= c;
     if (k < a0) {
       drawButtonECU(fb, f, {});
-      drawCursor(fb, BUTTON_ECU[0] + 1, BUTTON_ECU[1] + 1);
     } else {
       const st = steps.filter(([s]) => k >= s).pop()!;
       const press: 0 | 1 | 2 = k >= c && k < c + 12 ? 2 : k >= c - 3 ? 1 : 0;
       fingerECU(fb, press, st[1], st[2], lit);
-      if (k < a0 + 8) drawCursor(fb, BUTTON_ECU[0] + 1, BUTTON_ECU[1] + 1);
     }
   },
 });
@@ -570,7 +567,7 @@ L.add('8.06', {
 
 // ================================================================== SC 12 (v3.5) · 3 AM
 L.add('v35-12.01', {
-  st: 'v35 ots3am: over his shoulder at 3 AM (the bullpen two rungs darker, his laptop the one light): the at-capacity page (CHATGTP IS AT CAPACITY RIGHT NOW in the display face, the bubble asleep, "try again"; up from the first frame for the read floor), the reload\'s spinner, then the feed: the first post back is a stranger\'s, legible, no name, no face, a plain grey disc: "asked it how to say sorry to my sister. it helped." (it opens in 3 held steps) · the menu bar: the corner counter CHATGTP · USERS: (its wheels a spinning blur, never a figure) and the clock, 3:04 AM',
+  st: 'v35 ots3am: over his shoulder at 3 AM (the bullpen two rungs darker, his laptop the one light): the at-capacity page (CHATGTP IS AT CAPACITY RIGHT NOW in the display face, the bubble asleep, "try again"; up from the first frame for the read floor), the reload\'s spinner, then (v3.5 final, the showrunner\'s note: the staff were happy with him) the team\'s own channel, #launch, anonymous staff avatars and no names: "1M 🎉 best week of my life", "my mom wrote her wedding toast with it 😭", "thank you mas 🙏", landing in 3 held steps, the reactions piling up under them · the menu bar: the corner counter CHATGTP · USERS: (its wheels a spinning blur, never a figure) and the clock, 3:04 AM',
   marks: {post: ['txt', 'asked it how', 'at', 0]},
   draw: (fb, k, sh, f) => {
     const p = mk(sh, 'post', 41);
