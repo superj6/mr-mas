@@ -226,6 +226,7 @@ Until phases 2 and 3 run, put new lookdev in the existing sibling folder (`out/r
 ```
 mrmas/
 ├── README.md                    front page; points to docs/STATUS.md
+├── EPISODES.md                  the published episodes and where to watch them (Ep1 on YouTube)
 ├── .mrmas-root                  NEW (phase 1): empty marker that every tool uses to find the project root
 ├── docs/
 │   ├── README.md                NEW: index of the four docs below

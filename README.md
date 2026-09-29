@@ -2,6 +2,8 @@
 
 **An animated pixel-art satire of the AI race, built entirely in code.**
 
+**Watch: [EPISODES.md](EPISODES.md)**, the published episodes (Episode 1 is out).
+
 Mas Manalt is a soft-spoken "nonprofit guy" with no equity and no detectable panic. He talks his way to the top of NOPEAI, survives every attempt to fire him, and races his billionaire ex-friends to build superintelligence. That superintelligence has been studying *him* the whole time. *Tagline: unclear which side.*
 
 > A parody. Events are dramatized, scenes are invented, and names are changed to protect the valuations. Every character is a caricature of a public persona, with a parody name and a parody company. The broad plot follows public, dated events; invented scenes are played as obvious comedy. See [`show/bible/guardrails.md`](show/bible/guardrails.md).
