@@ -51,9 +51,78 @@ const STAFF: Array<{x: number; y: number; flip: boolean; rig: 'm' | 'r'; look: L
 const cup = (b: Buf, x: number, y: number) => { rect(x, y, 3, 4, b.ink(PAL.P2)); rect(x, y + 1, 3, 1, b.ink(PAL.C5)); b.set(x + 2, y + 3, PAL.P0); };
 /** a raised forearm with its cup at room scale (sleeve colour c): from the shoulder (sx, sy) up to the hand (hx, hy) */
 const raisedArm = (b: Buf, sx: number, sy: number, hx: number, hy: number, c: number, skin: number) => {
-  const n = Math.max(Math.abs(hx - sx), Math.abs(hy - sy));
-  for (let i = 0; i <= n; i++) { const x = Math.round(sx + (hx - sx) * i / n), y = Math.round(sy + (hy - sy) * i / n); b.set(x, y, c); b.set(x + 1, y, c); }
-  rect(hx - 1, hy - 1, 3, 3, b.ink(skin));
+  // shoulder -> elbow (out to the side and up) -> the hand above it: two 2 px strokes, the sleeve's lit edge, the hand
+  const ex = sx + Math.round((hx - sx) * 1.8) + (hx >= sx ? 2 : -2), ey = sy - Math.round((sy - hy) * 0.45);
+  const seg = (x0: number, y0: number, x1: number, y1: number) => { const n = Math.max(1, Math.abs(x1 - x0), Math.abs(y1 - y0)); for (let i = 0; i <= n; i++) { const x = Math.round(x0 + (x1 - x0) * i / n), y = Math.round(y0 + (y1 - y0) * i / n); b.set(x, y, stepColor(c, 1)); b.set(x + 1, y, c); b.set(x, y + 1, c); } };
+  seg(sx, sy, ex, ey); seg(ex, ey, hx, hy + 2);
+  rect(hx - 1, hy, 3, 3, b.ink(skin)); b.set(hx - 1, hy, stepColor(skin, 1));
+};
+
+// ------------------------------------------------------------------ arms, hands and happy faces (bust scale)
+/** a sleeve ramp: shadow, mid, lit, and the warm rim on the lit edge */
+type Sleeve = [number, number, number, number];
+const HOODIE: Sleeve = [PAL.G1, PAL.G2, PAL.G3, PAL.W4];
+/** a limb segment as a capsule, shaded from the room's warm key (up and to the left): its lit side a rung up, its far
+ *  side a rung down, a warm rim on the lit edge */
+const capsule = (b: Buf, x0: number, y0: number, x1: number, y1: number, r: number, sl: Sleeve) => {
+  const dx = x1 - x0, dy = y1 - y0, L2 = Math.max(1, dx * dx + dy * dy);
+  for (let y = Math.floor(Math.min(y0, y1) - r - 1); y <= Math.max(y0, y1) + r + 1; y++) for (let x = Math.floor(Math.min(x0, x1) - r - 1); x <= Math.max(x0, x1) + r + 1; x++) {
+    if (y < 0 || y >= RH || x < 0 || x >= 480) continue;
+    const t = clamp(((x - x0) * dx + (y - y0) * dy) / L2, 0, 1), cx = x0 + dx * t, cy = y0 + dy * t, d = Math.hypot(x - cx, y - cy);
+    if (d > r) continue;
+    const nx = (x - cx) / Math.max(0.5, d), ny = (y - cy) / Math.max(0.5, d), lit = -0.55 * nx - 0.83 * ny;
+    b.set(x, y, d > r - 1 && lit > 0.35 ? sl[3] : lit > 0.3 ? sl[2] : lit < -0.35 ? sl[0] : sl[1]);
+  }
+};
+/** an arm from the shoulder (on its own body) to the elbow to the wrist, the cuff a rung up near the wrist */
+const armTo = (b: Buf, sh: [number, number], el: [number, number], wr: [number, number], sl: Sleeve) => {
+  capsule(b, sh[0], sh[1], el[0], el[1], 7, sl);
+  capsule(b, el[0], el[1], wr[0], wr[1], 6, sl);
+  const t = 0.82, cx = el[0] + (wr[0] - el[0]) * t, cy = el[1] + (wr[1] - el[1]) * t;
+  capsule(b, cx, cy, wr[0], wr[1], 6, [sl[1], sl[2], stepColor(sl[2], 1), sl[3]]);
+};
+/** a hand gripping something (x..x+w wide, from row y): the fingers wrapped across its front in four rows, their
+ *  creases, the knuckles lit; the thumb over the top on the wrist's side (side -1: the wrist is to the left) */
+const grip = (b: Buf, x: number, y: number, w: number, side: -1 | 1) => {
+  for (let q = 0; q < 4; q++) {
+    const yy = y + q * 3, x0 = x - 1 + (q === 3 ? 1 : 0), x1 = x + w + (q === 3 ? -1 : 1);
+    for (let xx = x0; xx <= x1; xx++) { b.set(xx, yy, PAL.S5); b.set(xx, yy + 1, PAL.S4); b.set(xx, yy + 2, PAL.S2); }
+    b.set(side < 0 ? x1 : x0, yy + 1, PAL.S3);
+  }
+  const tx = side < 0 ? x - 3 : x + w - 1;
+  for (let j = 0; j < 8; j++) for (let i = 0; i < 5; i++) if (Math.hypot((i - 2) / 2.6, (j - 3.5) / 4.2) < 1) b.set(tx + i, y - 4 + j, j < 2 ? PAL.S5 : PAL.S4);
+  // the back of the hand to the wrist's side
+  for (let j = 0; j < 12; j++) for (let i = 0; i < 7; i++) b.set(side < 0 ? x - 7 + i : x + w + 1 + i, y + j, i === (side < 0 ? 0 : 6) ? PAL.S2 : j < 2 ? PAL.S5 : PAL.S4);
+};
+/** happy eyes on a portrait (local coords): the lids closed into two upward arcs, the lower lids pushed up by the
+ *  cheeks (a lit row under each), a crease at the outer corner; `band` is filled first with the skin under it */
+const happyEyes = (b: Buf, px: number, py: number, band: [number, number, number, number], eyes: Array<[number, number, number]>, outer: number) => {
+  const [bx0, bx1, by0, by1] = band;
+  for (let x = bx0; x <= bx1; x++) { const skin = b.get(px + x, py + by1 + 2); for (let y = by0; y <= by1; y++) b.set(px + x, py + y, skin); }
+  for (const [cx, cy, w] of eyes) {
+    const h = w / 2;
+    for (let i = -Math.floor(h); i <= Math.floor(h); i++) { const yy = cy + Math.round(Math.pow(Math.abs(i) / h, 2) * 2); b.set(px + cx + i, py + yy, PAL.N1); b.set(px + cx + i, py + yy + 1, PAL.S3); }
+    for (let i = -Math.floor(h) + 1; i < Math.floor(h); i++) b.set(px + cx + i, py + cy + 4, PAL.S5);
+  }
+  b.set(px + outer, py + eyes[1][1] - 1, PAL.S2); b.set(px + outer + 1, py + eyes[1][1] - 2, PAL.S2); b.set(px + outer, py + eyes[1][1] + 3, PAL.S2);
+};
+/** Mas's 3/4 head (masPortrait '34', local): the eyes' band and centres */
+const MAS_EYES = {band: [36, 61, 44, 49] as [number, number, number, number], eyes: [[41, 46, 7], [55, 46, 9]] as Array<[number, number, number]>, outer: 61};
+/** Alyi's portrait (alyiSpeakPortrait, local): the deep-set eyes' band and centres, the mouth */
+const ALYI_EYES = {band: [34, 60, 45, 50] as [number, number, number, number], eyes: [[39, 47, 7], [51, 47, 10]] as Array<[number, number, number]>, outer: 58};
+/** Alyi's open laugh (local): the teeth, the dark of the mouth, its corners up */
+const alyiLaugh = (b: Buf, px: number, py: number, open: number) => {
+  const y0 = 72;
+  for (let x = 40; x <= 49; x++) b.set(px + x, py + y0, PAL.P2);
+  for (let y = 1; y <= open; y++) for (let x = 39 + (y === open ? 1 : 0); x <= 50 - (y === open ? 1 : 0); x++) b.set(px + x, py + y0 + y, PAL.N1);
+  for (let x = 41; x <= 48; x++) b.set(px + x, py + y0 + open + 1, PAL.S3);
+  b.set(px + 38, py + y0 - 1, PAL.S2); b.set(px + 51, py + y0 - 1, PAL.S2);
+};
+/** Alyi's eyes warmed (open, a smile in them): the sockets' dark a rung lighter, the cheeks lifted under them */
+const alyiWarmEyes = (b: Buf, px: number, py: number) => {
+  const [bx0, bx1, by0, by1] = ALYI_EYES.band;
+  for (let y = by0; y <= by1; y++) for (let x = bx0; x <= bx1; x++) { const c = b.get(px + x, py + y); if (lightness(c) < 0.2) b.set(px + x, py + y, stepColor(c, 1)); }
+  for (const [cx, cy, w] of ALYI_EYES.eyes) for (let i = -Math.floor(w / 2) + 1; i < Math.floor(w / 2); i++) b.set(px + cx + i, py + cy + 4, PAL.S5);
 };
 
 // ------------------------------------------------------------------ [W] v35-32A.01
@@ -106,17 +175,19 @@ const softGuest = (b: Buf, cx: number, top: number, col: number, up: boolean, dy
     b.set(x, y, head ? (x < cx - 12 ? PAL.W2 : PAL.N2) : col);
   }
   if (up) {
-    const ax = cx + 22, ay = top + dy + 56;
-    for (let i = 0; i < 46; i++) { const x = ax + Math.round(i * 0.35), y = ay - i; for (let w = 0; w < 7; w++) b.set(x + w, y, col); }
-    const hx = ax + 16, hy = ay - 50;
-    rect(hx, hy, 9, 8, b.ink(PAL.S3));
-    rect(hx - 1, hy - 14, 11, 14, b.ink(PAL.P2)); rect(hx - 1, hy - 10, 11, 2, b.ink(PAL.C5));
+    // the near arm up from the shoulder, bent at the elbow, the hand round a paper cup (soft, like the guest)
+    const side = cx < 240 ? 1 : -1, shx = cx + side * 26, shy = top + dy + 58;
+    const sl: Sleeve = [stepColor(col, -1), col, stepColor(col, 1), PAL.W3];
+    const cx0 = shx + side * 8, cy0 = top + dy + 2;
+    armTo(b, [shx, shy], [shx + side * 22, shy - 18], [cx0 + 5, cy0 + 20], sl);
+    paperCup(b, cx0, cy0, 11, 16);
+    grip(b, cx0, cy0 + 8, 11, side > 0 ? -1 : 1);
   }
 };
 export interface PartyCheerSt { k: number; raise: number; clink1: number; clink2: number }
 export const partyCheer = (b: Buf, f: number, st: PartyCheerSt) => {
   const {k} = st;
-  launchBackM(b, 140, {soft: 2, alyi: 'gone', warm: 1, underlines: 3});
+  launchBackM(b, 60, {soft: 2, alyi: 'gone', warm: 1, underlines: 3});
   for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) if (bayer(x, y) < 0.2) b.set(x, y, stepColor(b.get(x, y), 1));
   const up = k >= st.raise, dy = up ? (Math.floor(k / 6) % 2) : 0;
   softGuest(b, 40, 40, PAL.U2, up && k >= st.raise + 2, dy);
@@ -127,22 +198,19 @@ export const partyCheer = (b: Buf, f: number, st: PartyCheerSt) => {
   putBust(b, masPortrait(ms), x, y);
   drawCollarsPortrait(b, x, y, 3, {head: 'front', light: 'warm', style: 'v31'});
   faceKey(b, x, y, x + 112, y + 96, 1, -1);
+  // his near arm, from his own shoulder: bent at the elbow, the glass going up in two held steps on the cheer, his hand
+  // round it (the clinks stay in the sound)
   const lift = k < st.raise - 2 ? 0 : k < st.raise ? 1 : 2;
-  const [hx, hy] = [[x + 102, 170], [x + 106, 118], [x + 108, 62]][lift];
-  // his forearm up from the frame's foot (the hoodie's grey, lit warm on its edge), his hand round the glass
-  for (let yy = hy + 10; yy < RH; yy++) { const t = (yy - hy - 10) / (RH - hy), cx = hx + 2 + Math.round(t * 12), hw = 6 + Math.round(t * 3); for (let xx = cx - hw; xx <= cx + hw; xx++) b.set(xx, yy, xx === cx - hw ? PAL.W4 : xx > cx + hw - 2 ? PAL.G1 : PAL.G3); }
-  rect(hx - 4, hy + 2, 13, 10, b.ink(PAL.S4)); rect(hx - 4, hy + 2, 13, 2, b.ink(PAL.S5));
-  bigGlass(b, hx - 3, hy - 22);
-  // two cups clink near the lens: from the frame's bottom corners, meeting at its foot, a glint on each touch
-  const near = (kk: number) => kk >= 0 && kk < 8;
-  const c1 = k - st.clink1, c2 = k - st.clink2;
-  if (c1 >= -6 && c2 < 12) {
-    const t = c1 < 0 ? (c1 + 6) / 6 : 1;
-    const lx = Math.round(130 + 70 * t), rx = Math.round(330 - 70 * t) - (near(c2) ? 4 : 0);
-    nearCup(b, lx, 150, PAL.C5); nearCup(b, rx, 152, PAL.W5);
-    if (near(c1) || near(c2)) { const gx = 240, gy = 158; b.set(gx, gy, PAL.W9); b.set(gx - 1, gy, PAL.W7); b.set(gx + 1, gy, PAL.W7); b.set(gx, gy - 1, PAL.W7); b.set(gx, gy + 1, PAL.W7); }
-  }
-  void f;
+  const [gx, gy] = [[x + 96, 150], [x + 102, 106], [x + 104, 52]][lift];
+  const sh: [number, number] = [x + 100, y + 110];
+  armTo(b, sh, [x + 124, lift === 2 ? y + 84 : y + 124], [gx + 7, gy + 22], HOODIE);
+  bigGlass(b, gx, gy);
+  grip(b, gx, gy + 12, 14, 1);
+  void f; void st.clink1; void st.clink2;
+};
+/** a paper cup at bust scale (w x h): its rim, its band, its taper */
+const paperCup = (b: Buf, x: number, y: number, w: number, h: number) => {
+  for (let j = 0; j < h; j++) { const inset = Math.round(j * 0.12); for (let i = inset; i < w - inset; i++) b.set(x + i, y + j, j === 0 ? PAL.P1 : j > 3 && j < 7 ? PAL.C5 : i === inset ? PAL.P0 : PAL.P2); }
 };
 /** his glass at bust scale: a clear tumbler, its water line catching the room's warm light */
 const bigGlass = (b: Buf, x: number, y: number) => {
@@ -152,15 +220,6 @@ const bigGlass = (b: Buf, x: number, y: number) => {
   }
   rect(x + 1, y + 7, 12, 1, b.ink(PAL.C8)); b.set(x + 3, y + 2, PAL.W9); b.set(x + 3, y + 3, PAL.W8);
 };
-/** a paper cup near the lens (big, a little soft), its band */
-const nearCup = (b: Buf, x: number, y: number, band: number) => {
-  for (let j = 0; j < 44; j++) for (let i = 0; i < 30 + Math.round(j * 0.2); i++) {
-    const X = x + i - Math.round(j * 0.1), Y = y + j; if (Y >= RH) continue;
-    if (bayer(X, Y) < 0.08) continue;
-    b.set(X, Y, j < 3 ? PAL.P1 : j > 8 && j < 16 ? band : i < 4 ? PAL.P0 : PAL.P2);
-  }
-};
-
 // ------------------------------------------------------------------ [2S] v35-32A.03
 /** where Mas's glass leaves the frame in 32A.03 (its left edge, x): 20.01 has it set down on his desk there */
 export const PARTY_GLASS_OUT = 196;
@@ -172,45 +231,57 @@ export const partyToast = (b: Buf, f: number, st: PartyToastSt) => {
   for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) if (bayer(x, y) < 0.5) { const c = b.get(x, y); b.set(x, y, stepColor(c, lightness(c) > 0.35 ? -1 : lightness(c) < 0.1 ? 1 : 0)); }
   const laughing = k >= st.laugh && k < st.down;
   const bob = laughing ? [0, 1, 2, 1][Math.floor((k - st.laugh) / 5) % 4] : 0;
-  // Mas (left, turned to him) and Alyi (right, turned to Mas): warm, the laugh in their shoulders
-  const ms: MasPortraitState = {...MAS_PORTRAIT_DEFAULT, light: 'warm', look: 0, mouth: laughing ? 'smile' : k >= st.toast ? 'smile' : 'rest', lid: laughing && bob === 2 ? 1 : 0};
+  const warmFrom = st.toast - 8; // Alyi turns to Mas as the toast comes
+  // MAS (left, turned to him): smiling from the toast, laughing (mouth open, eyes crinkled) through the laugh
+  const mOpen = laughing && Math.floor((k - st.laugh) / 4) % 3 !== 2;
+  const ms: MasPortraitState = {...MAS_PORTRAIT_DEFAULT, light: 'warm', look: 0, mouth: laughing ? (mOpen ? 'A' : 'smile') : k >= warmFrom ? 'smile' : 'rest'};
   const mt = new Buf(480, RH, TR);
   putBust(mt, masPortrait(ms), 70, 40 + bob);
   drawCollarsPortrait(mt, 70, 40 + bob, 3, {head: '34', light: 'warm', style: 'v31'});
+  if (laughing) happyEyes(mt, 70, 40 + bob, MAS_EYES.band, MAS_EYES.eyes, MAS_EYES.outer);
   for (let y = 0; y < RH; y++) for (let x = 70; x < 182; x++) { const v = mt.c[y * 480 + x]; if (v !== TR) b.set(251 - x, y, v); }
   faceKey(b, 70, 40, 182, 140, 1, 1);
-  const as: AlyiSpeakState = {...ALYI_SPEAK_DEFAULT, t: f, mouth: laughing ? (['A', 'E', 'smile', 'E'] as const)[Math.floor((k - st.laugh) / 4) % 4] : 'smile', eyes: laughing && bob === 2 ? 'closed' : 'open'};
-  putBust(b, alyiSpeakPortrait(as), 262, 42 + (bob === 1 ? 1 : 0));
-  faceKey(b, 262, 42, 374, 142, 2, -1);
-  // a desk's edge at the frame's foot (cups, a pizza box) hides where the busts end; the hands and the glass go over it
+  // ALYI (right): first turned to the room (his portrait flipped), then his head turns to Mas as the toast comes (a
+  // swapped drawing), smiling at him, his eyes warm; the laugh: mouth open, eyes crinkled, and he leans in
+  const turned = k >= warmFrom;
+  const lean = laughing ? (k < st.laugh + 3 ? 2 : 4) : 0;
+  const ax0 = 262 - lean, ay0 = 42 + (bob === 1 ? 1 : 0) + (lean ? 1 : 0);
+  const as: AlyiSpeakState = {...ALYI_SPEAK_DEFAULT, t: f, mouth: turned ? 'smile' : 'rest', eyes: 'open'};
+  const at = new Buf(480, RH, TR);
+  putBust(at, alyiSpeakPortrait(as), ax0, ay0, {flip: !turned});
+  if (turned && !laughing) alyiWarmEyes(at, ax0, ay0);
+  if (laughing) { happyEyes(at, ax0, ay0, ALYI_EYES.band, ALYI_EYES.eyes, ALYI_EYES.outer); alyiLaugh(at, ax0, ay0, Math.floor((k - st.laugh) / 4) % 3 === 2 ? 2 : 3); }
+  for (let i = 0; i < 480 * RH; i++) if (at.c[i] !== TR) b.c[i] = at.c[i];
+  faceKey(b, ax0, ay0, ax0 + 112, ay0 + 100, 2, -1);
+  // a desk's edge at the frame's foot (cups, a pizza box) hides where the busts end
   const top = 186;
   for (let y = top; y < RH; y++) for (let x = 0; x < 480; x++) b.set(x, y, y === top ? PAL.W4 : y < top + 3 ? PAL.D3 : bayer(x, y) < 0.3 ? PAL.D1 : PAL.D2);
   for (const cx of [26, 380, 420]) { rect(cx, top - 9, 6, 9, b.ink(PAL.P2)); rect(cx, top - 6, 6, 2, b.ink(PAL.C5)); }
   rect(300, top - 4, 60, 4, b.ink(PAL.D4)); rect(300, top - 4, 60, 1, b.ink(PAL.P1));
-  // a forearm from off the frame's foot up to a hand at (hx, hy): a sleeve band (lit edge), the hand
-  const arm = (hx: number, hy: number, bx: number, sleeve: number, rim: number) => {
-    for (let yy = hy + 20; yy < RH; yy++) { const t = (yy - hy - 20) / Math.max(1, RH - hy - 20); const cx = hx + 6 + Math.round((bx - hx - 6) * t), hw = 7 + Math.round(t * 3); for (let xx = cx - hw; xx <= cx + hw; xx++) b.set(xx, yy, xx === cx - hw ? rim : sleeve); }
-    rect(hx - 2, hy + 12, 16, 10, b.ink(PAL.S4)); rect(hx - 2, hy + 12, 16, 2, b.ink(PAL.S5));
-  };
-  // the toast: Alyi's cup (from the right) to Mas's glass (from the left), the clink at centre; then Alyi's cup goes
-  // down and his hand goes to Mas's shoulder for the laugh; Mas's glass comes down out of the frame at x 196
+  // Alyi's sweater, sampled from his own portrait (its shoulder), for his arm
+  const sw = at.get(ax0 + 30, ay0 + 122), ALYI_SW: Sleeve = [stepColor(sw, -1), sw, stepColor(sw, 1), PAL.W3];
+  // the toast: Mas's glass (his arm from his own shoulder, bent, his hand round it) to Alyi's cup (his arm from his
+  // shoulder); the clink at centre; Alyi's cup goes down after it; Mas's glass comes down out of the frame at x 196
   const reach = k < st.toast - 8 ? 0 : k < st.toast - 4 ? 1 : k < st.toast + 10 ? 2 : 1;
   const down = k >= st.down ? Math.min(3, Math.floor((k - st.down) / 3) + 1) : 0;
-  const gx = down ? PARTY_GLASS_OUT : [PARTY_GLASS_OUT, 212, 222][reach], gy = down ? [0, 140, 172, 210][down] : [150, 122, 112][reach];
-  if (gy < RH) { arm(gx, gy, gx - 34, PAL.G3, PAL.W4); bigGlass(b, gx, gy - 6); }
-  const cupGone = k >= st.laugh + 2;
-  if (!cupGone) {
-    const ax = [300, 262, 240][reach], ay = [150, 122, 112][reach];
-    arm(ax, ay, ax + 40, PAL.N2, PAL.W3);
-    rect(ax, ay - 6, 12, 18, b.ink(PAL.P2)); rect(ax, ay - 2, 12, 3, b.ink(PAL.C5)); rect(ax, ay - 6, 12, 1, b.ink(PAL.P1));
+  const gx = down ? PARTY_GLASS_OUT : [PARTY_GLASS_OUT, 208, 220][reach], gy = down ? [0, 128, 160, 206][down] : [150, 116, 104][reach];
+  const masSh: [number, number] = [172, 146 + bob];
+  if (gy < RH) { armTo(b, masSh, [184, 178], [gx - 4, gy + 16], HOODIE); bigGlass(b, gx, gy); grip(b, gx, gy + 11, 14, -1); }
+  const cupDown = k >= st.toast + 10 ? Math.min(3, Math.floor((k - st.toast - 10) / 3)) : 0;
+  if (cupDown < 3 && !(laughing && k >= st.laugh + 2)) {
+    const cx = [292, 250, 236][reach], cy = [150, 116, 106][reach] + [0, 16, 40][cupDown];
+    armTo(b, [ax0 + 8, ay0 + 106], [ax0 + 2, 178], [cx + 16, cy + 14], ALYI_SW);
+    paperCup(b, cx, cy, 13, 20);
+    grip(b, cx, cy + 9, 13, 1);
   }
-  if (k >= st.toast && k < st.toast + 4) { const cx = 236, cy = 112; b.set(cx, cy, PAL.W9); for (const [dx, dy] of [[-2, 0], [2, 0], [0, -2], [0, 2]] as Array<[number, number]>) b.set(cx + dx, cy + dy, PAL.W7); }
-  // Alyi's hand on Mas's shoulder through the laugh: his near arm across (the sweater's dark, its top lit warm), the
-  // hand resting on the hoodie's shoulder
-  if (k >= st.laugh + 6 && k < st.down + 6) {
-    const sx = 268, sy = 150 + bob, hx = 176, hy = 128 + bob;
-    for (let i = 0; i <= sx - hx; i++) { const x = sx - i, yc = Math.round(sy + (hy - sy) * i / (sx - hx) - Math.sin(i / (sx - hx) * Math.PI) * 6); for (let w = -6; w <= 6; w++) b.set(x, yc + w, w === -6 ? PAL.W3 : w > 4 ? PAL.N1 : PAL.N2); }
-    for (let j = 0; j < 12; j++) for (let i = 0; i < 18; i++) if (Math.hypot((i - 9) / 9, (j - 6) / 6) < 1) b.set(hx - 12 + i, hy - 8 + j, j < 3 ? PAL.S5 : i < 3 ? PAL.S3 : PAL.S4);
+  if (k >= st.toast && k < st.toast + 4) { const cx = 235, cy = 110; b.set(cx, cy, PAL.W9); for (const [dx, dy] of [[-2, 0], [2, 0], [0, -2], [0, 2]] as Array<[number, number]>) b.set(cx + dx, cy + dy, PAL.W7); }
+  // Alyi's hand on Mas's shoulder through the laugh: his arm from his own shoulder, reaching across (the sweater, the
+  // elbow low between them, the cuff), his hand resting over Mas's shoulder, the fingers down its far side
+  if (k >= st.laugh + 5 && k < st.down + 6) {
+    const hx = 178, hy = 134 + bob;
+    armTo(b, [ax0 + 8, ay0 + 104], [226, 170], [hx + 14, hy + 6], ALYI_SW);
+    for (let j = 0; j < 11; j++) for (let i = 0; i < 20; i++) if (Math.hypot((i - 10) / 10, (j - 5) / 5.5) < 1) b.set(hx + i - 4, hy + j - 2, j < 2 ? PAL.S5 : i < 3 ? PAL.S3 : PAL.S4);
+    for (let q = 0; q < 4; q++) for (let j = 0; j < 9; j++) { const X = hx - 6 + q * 4, Y = hy + 6 + j - (q === 0 ? 1 : 0); b.set(X, Y, PAL.S4); b.set(X + 1, Y, PAL.S3); if (j === 8) b.set(X, Y, PAL.S2); }
   }
   void clamp; void hash;
 };
