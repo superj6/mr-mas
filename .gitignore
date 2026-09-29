@@ -37,6 +37,8 @@ audio/**/tts_cache/
 **/tmp/
 **/.tmp/
 *.log
+# the Act Four dialogue recording logs are records that cannot be regenerated (docs/ORGANIZATION-PLAN.md §9 item 3)
+!audio/ep01/act4/dialogue/qa/*.log
 
 # Regenerable temp audio beds for the story reels (~50 MB each; rebuild with audio/reel/build_all.py)
 audio/reel/*.wav

@@ -9,7 +9,20 @@ Operational helpers for running this project on one laptop.
   - Tunables: `MRMAS_MIN_AVAIL_GB` (default 8), `MRMAS_MAX_SWAP_GB` (7: swap pages linger after a spike, so memory available is the main guard), `MRMAS_MAX_LOAD` (16), `MRMAS_HEAVY_WAIT` (3600 s).
   - Why: on 2026-09-27 six passes at once pushed load to 42 on 14 threads and swap to 7.4 of 8 GB, which froze the laptop and killed the session.
 
-- `rebuild-act.sh <act> [--from STEP] [--only STEP]`: rebuild one changed act of the Ep1 film end to end (lock, score, mix, picture, mux, film), each heavy step through `heavy.sh`. Documented in its header and in `show/episodes/ep01/production/full-v3/assembly.md` §Z.5.
+- `rebuild-act.sh <act> [--from STEP] [--only STEP] [--dry-run]`: rebuild one changed act of the Ep1 film end to end (lock, score, mix, picture, mux, film), each heavy step through `heavy.sh`. Documented in its header and in `show/episodes/ep01/production/full-v3/assembly.md` §Z.5.
+  - `--dry-run` runs nothing and writes nothing in the repo. It prints every command in order and checks that every path it names exists, and for the film step every input `assemble.py` reads. It exits 1 if anything is missing. Use it first, and after any move.
+
+- `pressure-governor.sh [minutes] &`: pauses this project's heavy jobs (their `heavy.sh` scopes) while the session's memory pressure is above 20%, and resumes them under 5%. It never touches another project's processes.
+
+### The reorganization tools (docs/ORGANIZATION-PLAN.md)
+
+- `orgmove.py`: the move and rewrite tool (plan Appendix B). `plan` is a dry run (the diff and the MANUAL lists), `apply` rewrites the references and then moves, `frag` exits 1 while anything is unrewritten or unreviewed, and `undo` moves everything back. Always set `MRMAS_ROOT` to the repo. How to run a phase: plan §7.
+- `fraggrep.sh 2|2d|3|4|5a|5b`: the independent fragment check (plan Appendix B.2); it uses only `git grep`.
+- `keyscan.py [range]`: checks that no API key value from `.env` is in the staged files (no argument) or in the commits about to be pushed (`origin/main..HEAD`). It never prints a value. Run it before every commit and push.
+- `reorg/`: what each reorg phase ran. `phaseN.tsv` is the manifest, `phaseN.ok.tsv` the reviewed MANUAL lines, `phaseN.frag.txt` the tool's final `frag` output.
+  - `reorg/smoke.sh <outdir> [<baseline>]`: the smoke tests for the finished Ep1 (checks only: the typecheck, `lock.py` on the six EL v3.5 segments, the v3.5 score check, the `rebuild-act.sh` dry runs, the film fingerprint, the dialogue paths).
+  - `reorg/ep01-final.sha1`: the SHA-1 of the final film `out/ep01/full-v3/ep01-v35.mp4` and of every chapter input (the EL pictures, the v3.5 mixes, the hum gap). `sha1sum -c ops/reorg/ep01-final.sha1` proves they are unchanged.
+- `workflows/`: the 25 workflow scripts of the early passes, as they ran. They are records and never rewritten (`workflows/README.md`).
 
 - **Also:** `git config core.untrackedCache true` and `feature.manyFiles true` are set locally. `git status` dropped from 4.7 s to instant, and Claude Code runs it for every agent turn.
 

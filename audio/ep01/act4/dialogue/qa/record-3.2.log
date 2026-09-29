@@ -1,0 +1,341 @@
+archive: retired/3.1 exists, skipping
+== master mada-good-question
+   probe: 1.000 -> span 0.830 s; aim 0.850 s -> speed 0.976
+  mada-good-question t01 sp 1.034 x1.00 span 0.87 (T 0.85, aim 0.85) wpm 138 F0 131.6 rng 7.9 fin -6.3 gap 0.00 cer 0.00 lp -0.48 score   3.60 | Good question.
+  mada-good-question t02 sp 0.976 x1.00 span 0.86 (T 0.85, aim 0.85) wpm 140 F0 131.2 rng 8.8 fin -0.2 gap 0.00 cer 0.00 lp -0.41 score   3.84 | Good question.
+  mada-good-question t03 sp 1.172 x1.00 span 0.92 (T 0.85, aim 0.85) wpm 130 F0 128.6 rng 6.5 fin 6.5 gap 0.00 cer 0.08 lp -0.60 score   9.60 | A good question.
+  mada-good-question t04 sp 0.976 x1.00 span 0.87 (T 0.85, aim 0.85) wpm 138 F0 122.1 rng 11.2 fin -0.4 gap 0.00 cer 0.00 lp -0.40 score   4.58 | Good question.
+  mada-good-question t05 sp 0.928 x1.00 span 0.93 (T 0.85, aim 0.85) wpm 129 F0 131.6 rng 8.7 fin -3.3 gap 0.00 cer 0.00 lp -0.48 score   4.01 | Good question.
+  mada-good-question t06 sp 0.896 x1.00 span 0.89 (T 0.85, aim 0.85) wpm 135 F0 126.7 rng 10.3 fin -1.0 gap 0.02 cer 0.00 lp -0.49 score   4.07 | Good question.
+   -> t01 (30 s)
+== echo a4-30-09
+   probe: 0.970 -> span 0.910 s; aim 0.972 s -> speed 0.908
+  a4-30-09   t01 sp 0.908 x1.00 span 0.98 (T 0.90, aim 0.97) wpm 122 F0 112.9 rng 11.1 fin 2.7 gap 0.00 cer 0.00 lp -0.40 score   3.54 | Good question.
+  a4-30-09   t02 sp 0.908 x1.00 span 0.96 (T 0.90, aim 0.97) wpm 125 F0 100.9 rng 12.5 fin 1.4 gap 0.00 cer 0.00 lp -0.40 score   4.39 | Good question.
+  a4-30-09   t03 sp 0.863 x1.00 span 1.00 (T 0.90, aim 0.97) wpm 120 F0 114.5 rng 10.7 fin 1.6 gap 0.00 cer 0.00 lp -0.42 score   2.85 | Good question.
+  a4-30-09   t04 sp 0.860 x1.00 span 1.01 (T 0.90, aim 0.97) wpm 119 F0 113.9 rng 13.0 fin 0.2 gap 0.00 cer 0.00 lp -0.44 score   3.50 | Good question.
+  a4-30-09   t05 sp 0.863 x1.00 span 1.01 (T 0.90, aim 0.97) wpm 119 F0 112.8 rng 12.9 fin 0.2 gap 0.00 cer 0.00 lp -0.43 score   3.43 | Good question.
+  a4-30-09   t06 sp 0.825 x1.00 span 0.99 (T 0.90, aim 0.97) wpm 121 F0 102.6 rng 8.8 fin 1.3 gap 0.00 cer 0.00 lp -0.41 score   2.42 | Good question.
+   -> t06 (26 s)
+   calm-off pair: MADA t02 x MAS t06  r=0.828  pair score 6.95
+== a4-25-10 NELEH Nine seats. Three left this year. Four of us vote. (target 3.30 s)
+   probe: 1.050 -> span 2.770 s; aim 3.300 s -> speed 0.892
+  a4-25-10   t01 sp 0.892 x1.00 span 3.04 (T 3.30, aim 3.30) wpm 197 F0 161.0 rng 10.1 fin -3.0 gap 0.15 cer 0.00 lp -0.26 score   0.96 | Nine seats, three left this year, four of us vote.
+  a4-25-10   t02 sp 0.892 x1.00 span 3.04 (T 3.30, aim 3.30) wpm 197 F0 152.0 rng 7.1 fin -2.1 gap 0.23 cer 0.10 lp -0.24 score   3.68 | 9 seats, 3 left this year, 4 of us vote.
+  a4-25-10   t03 sp 0.892 x1.00 span 3.04 (T 3.30, aim 3.30) wpm 197 F0 161.0 rng 10.1 fin -3.0 gap 0.20 cer 0.10 lp -0.25 score   2.20 | 9 seats, 3 left this year, 4 of us vote.
+  a4-25-10   t04 sp 0.892 x1.00 span 3.04 (T 3.30, aim 3.30) wpm 197 F0 160.1 rng 10.3 fin -3.2 gap 0.15 cer 0.00 lp -0.26 score   1.11 | Nine seats, three left this year, four of us vote.
+   -> t01 (22 s)
+== a4-25-11 NELEH This board controls the company. (target 1.70 s)
+   probe: 1.050 -> span 1.570 s; aim 1.700 s -> speed 0.970
+  a4-25-11   t01 sp 0.913 x1.00 span 1.75 (T 1.70, aim 1.70) wpm 171 F0 161.5 rng 9.7 fin 1.2 gap 0.04 cer 0.00 lp -0.29 score   2.15 | This board controls the company.
+  a4-25-11   t02 sp 0.901 x1.00 span 1.65 (T 1.70, aim 1.70) wpm 182 F0 151.1 rng 4.5 fin -0.7 gap 0.05 cer 0.00 lp -0.30 score   7.73 | This board controls the company.
+  a4-25-11   t03 sp 0.901 x1.00 span 1.64 (T 1.70, aim 1.70) wpm 183 F0 154.7 rng 4.5 fin 1.9 gap 0.04 cer 0.00 lp -0.31 score   7.46 | This board controls the company.
+   -> t01 (28 s)
+== a4-25-12 NELEH The investor gets— (target 0.80 s)
+   probe: 1.050 -> span 0.760 s; aim 0.800 s -> speed 0.998
+  a4-25-12   t01 sp 0.998 x1.00 span 0.80 (T 0.80, aim 0.80) wpm 225 F0 213.1 rng 5.8 fin -3.7 gap 0.01 cer 0.00 lp -0.59 score   2.23 | the investor gets
+  a4-25-12   t02 sp 0.998 x1.00 span 0.79 (T 0.80, aim 0.80) wpm 228 F0 161.5 rng 3.5 fin -2.3 gap 0.02 cer 0.00 lp -0.66 score   1.29 | the investor gets
+  a4-25-12   t03 sp 0.998 x1.00 span 0.81 (T 0.80, aim 0.80) wpm 222 F0 211.9 rng 6.0 fin -2.1 gap 0.01 cer 0.00 lp -0.53 score   2.04 | The investor gets
+  a4-25-12   t04 sp 0.998 x1.00 span 0.77 (T 0.80, aim 0.80) wpm 234 F0 169.2 rng 4.0 fin -1.7 gap 0.00 cer 0.00 lp -0.69 score   0.84 | The investor gets
+   -> t04 (24 s)
+== a4-25-13 NELEH And the CEO owns— (target 0.90 s)
+   probe: 1.050 -> span 0.820 s; aim 0.900 s -> speed 0.957
+  a4-25-13   t01 sp 0.957 x1.00 span 0.89 (T 0.90, aim 0.90) wpm 270 F0 195.4 rng 7.1 fin 0.0 gap 0.00 cer 0.00 lp -0.32 score   0.21 | and the CEO owns
+  a4-25-13   t02 sp 0.957 x1.00 span 0.92 (T 0.90, aim 0.90) wpm 261 F0 162.0 rng 3.8 fin 0.2 gap 0.00 cer 0.00 lp -0.34 score   0.75 | and the CEO owns
+  a4-25-13   t03 sp 0.957 x1.00 span 0.89 (T 0.90, aim 0.90) wpm 270 F0 197.1 rng 7.8 fin -3.5 gap 0.00 cer 0.00 lp -0.33 score   0.23 | and the CEO owns
+  a4-25-13   t04 sp 0.957 x1.00 span 0.92 (T 0.90, aim 0.90) wpm 261 F0 163.4 rng 4.7 fin 0.1 gap 0.00 cer 0.00 lp -0.36 score   0.56 | and the CEO owns
+   -> t01 (22 s)
+== a4-26-01 MAS MANALT super. (target 0.60 s)
+   probe: 0.970 -> span 0.660 s; aim 0.600 s -> speed 1.067
+  a4-26-01   t01 sp 1.014 x1.00 span 0.57 (T 0.60, aim 0.60) wpm 105 F0 131.6 rng 8.9 fin -0.1 gap 0.00 cer 0.00 lp -0.63 score   2.45 | Super.
+  a4-26-01   t02 sp 1.067 x1.00 span 0.59 (T 0.60, aim 0.60) wpm 102 F0 115.9 rng 8.1 fin -1.5 gap 0.00 cer 0.00 lp -0.68 score   0.76 | Super.
+  a4-26-01   t03 sp 0.978 x1.00 span 0.56 (T 0.60, aim 0.60) wpm 107 F0 103.2 rng 8.2 fin 2.2 gap 0.00 cer 0.00 lp -0.67 score   3.51 | Super.
+  a4-26-01   t04 sp 0.867 x1.00 span 0.64 (T 0.60, aim 0.60) wpm 94 F0 101.5 rng 8.7 fin 2.1 gap 0.01 cer 0.00 lp -0.23 score   3.21 | Super
+  a4-26-01   t05 sp 0.943 x1.00 span 0.57 (T 0.60, aim 0.60) wpm 105 F0 96.9 rng 10.5 fin 2.8 gap 0.00 cer 0.00 lp -0.65 score   6.46 | Super.
+  a4-26-01   t06 sp 0.943 x1.00 span 0.58 (T 0.60, aim 0.60) wpm 103 F0 99.5 rng 8.5 fin 2.1 gap 0.01 cer 0.00 lp -0.61 score   4.20 | Super
+  a4-26-01   t07 sp 0.907 x1.00 span 0.63 (T 0.60, aim 0.60) wpm 95 F0 102.3 rng 8.3 fin 2.4 gap 0.01 cer 0.00 lp -0.69 score   3.88 | Super.
+   -> t02 (42 s)
+== a4-27-04 RIMA TAMURI We'll share more soon. (target 1.10 s)
+   probe: 1.000 -> span 0.990 s; aim 1.100 s -> speed 0.900
+  a4-27-04   t01 sp 0.850 x1.00 span 1.07 (T 1.10, aim 1.10) wpm 224 F0 202.9 rng 6.0 fin -2.5 gap 0.00 cer 0.00 lp -0.24 score   0.14 | We'll share more soon.
+  a4-27-04   t02 sp 0.900 x1.00 span 1.07 (T 1.10, aim 1.10) wpm 224 F0 221.3 rng 8.3 fin -2.8 gap 0.00 cer 0.00 lp -0.25 score   0.15 | We'll share more soon.
+  a4-27-04   t03 sp 0.850 x1.00 span 1.07 (T 1.10, aim 1.10) wpm 224 F0 193.7 rng 4.8 fin -1.6 gap 0.00 cer 0.00 lp -0.26 score   0.17 | We'll share more soon.
+  a4-27-04   t04 sp 0.900 x1.00 span 1.09 (T 1.10, aim 1.10) wpm 220 F0 190.4 rng 4.0 fin 2.9 gap 0.01 cer 0.00 lp -0.26 score   2.84 | We'll share more soon.
+  a4-27-04   t05 sp 0.855 x1.00 span 1.12 (T 1.10, aim 1.10) wpm 214 F0 222.6 rng 8.3 fin -4.9 gap 0.00 cer 0.00 lp -0.24 score   0.11 | We'll share more soon.
+   -> t05 (25 s)
+== a4-27-23 NELEH Share what? (target 0.55 s)
+   probe: 1.050 -> span 0.620 s; aim 0.550 s -> speed 1.184
+  a4-27-23   t01 sp 1.184 x1.00 span 0.57 (T 0.55, aim 0.55) wpm 211 F0 207.7 rng 3.5 fin -1.0 gap 0.00 cer 0.00 lp -0.68 score   1.81 | Share what?
+  a4-27-23   t02 sp 1.184 x1.00 span 0.54 (T 0.55, aim 0.55) wpm 222 F0 141.8 rng 4.4 fin 0.0 gap 0.02 cer 0.22 lp -0.54 score   7.16 | Sure what.
+  a4-27-23   t03 sp 0.990 x1.00 span 0.55 (T 0.55, aim 0.55) wpm 218 F0 147.7 rng 4.3 fin -0.6 gap 0.00 cer 0.00 lp -0.56 score   3.41 | Share what?
+  a4-27-23   t04 sp 1.184 x1.00 span 0.54 (T 0.55, aim 0.55) wpm 222 F0 156.5 rng 6.7 fin 1.4 gap 0.02 cer 0.22 lp -0.61 score   4.71 | Sure what.
+   -> t01 (16 s)
+== a4-27-24 RIMA TAMURI More. Soon. (target 0.90 s)
+   probe: 1.000 -> span 0.920 s; aim 0.900 s -> speed 1.026
+  a4-27-24   t01 sp 1.026 x1.00 span 0.89 (T 0.90, aim 0.90) wpm 135 F0 222.6 rng 7.3 fin 1.2 gap 0.11 cer 0.00 lp -0.64 score   5.78 | more soon.
+  a4-27-24   t02 sp 0.850 x1.00 span 0.87 (T 0.90, aim 0.90) wpm 138 F0 199.4 rng 8.3 fin -0.1 gap 0.11 cer 0.00 lp -0.56 score   3.57 | more soon.
+  a4-27-24   t03 sp 0.920 x1.00 span 0.85 (T 0.90, aim 0.90) wpm 141 F0 188.2 rng 5.8 fin -1.3 gap 0.11 cer 0.00 lp -0.54 score   4.03 | more soon.
+  a4-27-24   t04 sp 1.026 x1.00 span 0.87 (T 0.90, aim 0.90) wpm 138 F0 223.8 rng 7.3 fin 1.2 gap 0.10 cer 0.00 lp -0.50 score   5.80 | More soon.
+   -> t02 (19 s)
+  a4-27-24   splice span 0.83 F0 191.5 cer 0.00 lp -0.47 match 0.861 score   2.13 | more soon.
+== a4-27-05 TILED EMPLOYEE Is this a coup? (target 0.90 s)
+   probe: 1.050 -> span 1.130 s; aim 0.900 s -> speed 1.312
+  a4-27-05   t01 sp 1.312 x1.00 span 0.92 (T 0.90, aim 0.90) wpm 261 F0 145.6 rng 7.9 fin -1.9 gap 0.02 cer 0.00 lp -0.47 score   2.80 | Is this a coup?
+  a4-27-05   t02 sp 1.312 x1.09 span 0.90 (T 0.90, aim 0.90) wpm 267 F0 164.3 rng 8.5 fin -5.0 gap 0.01 cer 0.00 lp -0.53 score   6.01 | Is this a coup?
+  a4-27-05   t03 sp 1.196 x1.00 span 0.81 (T 0.90, aim 0.90) wpm 296 F0 137.4 rng 7.5 fin -0.2 gap 0.01 cer 0.00 lp -0.43 score   1.61 | Is this a coup?
+  a4-27-05   t04 sp 1.312 x1.03 span 0.94 (T 0.90, aim 0.90) wpm 255 F0 162.9 rng 9.7 fin -8.5 gap 0.02 cer 0.00 lp -0.52 score   8.48 | Is this a coup?
+   -> t03 (17 s)
+== a4-27-06 ALYI "You can call it this way" (target 2.10 s)
+   probe: 0.920 -> span 1.950 s; aim 2.100 s -> speed 0.854
+  a4-27-06   t01 sp 0.854 x1.00 span 2.09 (T 2.10, aim 2.10) wpm 172 F0 81.5 rng 13.1 fin -2.3 gap 0.07 cer 0.00 lp -0.28 score   0.13 | You can call it this way.
+  a4-27-06   t02 sp 0.854 x1.00 span 2.02 (T 2.10, aim 2.10) wpm 178 F0 77.8 rng 8.9 fin 0.0 gap 0.06 cer 0.00 lp -0.36 score   0.82 | You can call it this way.
+  a4-27-06   t03 sp 0.854 x1.00 span 2.14 (T 2.10, aim 2.10) wpm 168 F0 79.1 rng 9.2 fin 0.0 gap 0.07 cer 0.00 lp -0.39 score   0.75 | You can call it this way.
+  a4-27-06   t04 sp 0.812 x1.00 span 2.26 (T 2.10, aim 2.10) wpm 159 F0 81.0 rng 13.0 fin -3.2 gap 0.11 cer 0.00 lp -0.30 score   0.38 | You can call it this way.
+   -> t01 (24 s)
+== a4-27-08 NELEH The bylaws allow it. Footnote three. (target 2.00 s)
+   probe: 1.050 -> span 2.020 s; aim 2.000 s -> speed 1.062
+  a4-27-08   t01 sp 1.062 x1.00 span 2.02 (T 2.00, aim 2.00) wpm 178 F0 172.1 rng 9.7 fin -3.7 gap 0.16 cer 0.00 lp -0.38 score   0.29 | The bylaws allow it, footnote 3.
+  a4-27-08   t02 sp 1.062 x1.00 span 1.97 (T 2.00, aim 2.00) wpm 183 F0 157.4 rng 4.4 fin -1.8 gap 0.21 cer 0.00 lp -0.28 score   1.39 | The bylaws allow it, footnote 3.
+  a4-27-08   t03 sp 1.062 x1.00 span 1.95 (T 2.00, aim 2.00) wpm 185 F0 160.3 rng 8.5 fin -2.2 gap 0.21 cer 0.00 lp -0.31 score   0.99 | The bylaws allow it, footnote 3.
+  a4-27-08   t04 sp 1.009 x1.00 span 2.00 (T 2.00, aim 2.00) wpm 180 F0 176.1 rng 9.4 fin -3.2 gap 0.14 cer 0.00 lp -0.39 score   0.28 | The bylaws allow it, footnote 3.
+   -> t04 (20 s)
+== a4-27-09 ALYI Step four will reveal itself. (target 2.10 s)
+   probe: 0.920 -> span 2.520 s; aim 2.100 s -> speed 1.104
+  a4-27-09   t01 sp 1.104 x1.00 span 2.18 (T 2.10, aim 2.10) wpm 138 F0 87.3 rng 13.3 fin -5.5 gap 0.04 cer 0.00 lp -0.41 score   0.43 | Step 4 Will Reveal Itself
+  a4-27-09   t02 sp 1.104 x1.00 span 2.03 (T 2.10, aim 2.10) wpm 148 F0 79.0 rng 9.7 fin 0.0 gap 0.04 cer 0.00 lp -0.49 score   0.94 | Step 4 will reveal itself.
+  a4-27-09   t03 sp 1.104 x1.00 span 2.10 (T 2.10, aim 2.10) wpm 143 F0 80.5 rng 10.4 fin -1.5 gap 0.02 cer 0.00 lp -0.47 score   0.41 | Step 4 will reveal itself.
+  a4-27-09   t04 sp 1.049 x1.00 span 2.18 (T 2.10, aim 2.10) wpm 138 F0 88.8 rng 13.4 fin -5.9 gap 0.08 cer 0.00 lp -0.44 score   0.47 | Step 4 Will Reveal Itself
+   -> t03 (19 s)
+== a4-27-10 NELEH When? (target 0.45 s)
+   probe: 1.050 -> span 0.420 s; aim 0.450 s -> speed 0.980
+  a4-27-10   t01 sp 0.980 x1.00 span 0.46 (T 0.45, aim 0.45) wpm 130 F0 211.9 rng 3.3 fin -2.5 gap 0.00 cer 0.00 lp -0.57 score   2.12 | When
+  a4-27-10   t02 sp 0.892 x1.00 span 0.45 (T 0.45, aim 0.45) wpm 133 F0 136.2 rng 4.0 fin -1.0 gap 0.00 cer 0.00 lp -0.69 score   5.72 | When
+  a4-27-10   t03 sp 0.893 x1.00 span 0.46 (T 0.45, aim 0.45) wpm 130 F0 146.4 rng 1.5 fin 0.9 gap 0.00 cer 0.00 lp -0.83 score   4.12 | When?
+  a4-27-10   t04 sp 0.980 x1.00 span 0.43 (T 0.45, aim 0.45) wpm 140 F0 158.3 rng 4.1 fin -1.0 gap 0.00 cer 0.00 lp -0.65 score   1.89 | When
+   -> t04 (19 s)
+== a4-27-12 NELEH The company is calling us. (target 1.30 s)
+   probe: 1.050 -> span 1.280 s; aim 1.300 s -> speed 1.034
+  a4-27-12   t01 sp 1.034 x1.00 span 1.28 (T 1.30, aim 1.30) wpm 234 F0 172.3 rng 10.2 fin -0.6 gap 0.03 cer 0.00 lp -0.32 score   0.23 | The company is calling us.
+  a4-27-12   t02 sp 0.970 x1.00 span 1.26 (T 1.30, aim 1.30) wpm 238 F0 152.0 rng 5.2 fin 0.6 gap 0.02 cer 0.00 lp -0.35 score   3.32 | The company is calling us.
+  a4-27-12   t03 sp 0.954 x1.00 span 1.26 (T 1.30, aim 1.30) wpm 238 F0 165.8 rng 5.5 fin 0.8 gap 0.02 cer 0.00 lp -0.34 score   1.34 | The company is calling us.
+  a4-27-12   t04 sp 0.982 x1.00 span 1.32 (T 1.30, aim 1.30) wpm 227 F0 187.2 rng 10.2 fin -1.6 gap 0.02 cer 0.00 lp -0.31 score   0.21 | The company is calling us.
+   -> t04 (22 s)
+== a4-27-13 ALYI That is the company telling us. (target 2.20 s)
+   probe: 0.920 -> span 2.370 s; aim 2.200 s -> speed 0.991
+  a4-27-13   t01 sp 0.991 x1.00 span 2.27 (T 2.20, aim 2.20) wpm 159 F0 87.8 rng 13.3 fin -6.5 gap 0.04 cer 0.00 lp -0.30 score   0.24 | That is the company telling us.
+  a4-27-13   t02 sp 0.991 x1.00 span 2.17 (T 2.20, aim 2.20) wpm 166 F0 79.6 rng 9.0 fin -0.9 gap 0.05 cer 0.00 lp -0.38 score   0.31 | That is the company telling us.
+  a4-27-13   t03 sp 0.991 x1.00 span 2.20 (T 2.20, aim 2.20) wpm 164 F0 82.9 rng 9.6 fin -4.3 gap 0.05 cer 0.00 lp -0.37 score   0.25 | That is the company telling us.
+  a4-27-13   t04 sp 0.942 x1.00 span 2.36 (T 2.20, aim 2.20) wpm 153 F0 86.8 rng 13.2 fin -5.8 gap 0.08 cer 0.00 lp -0.32 score   0.40 | That is the company telling us.
+   -> t01 (20 s)
+== a4-27-14 MARIO I've written up some thoughts— (target 1.60 s)
+   probe: 1.050 -> span 1.100 s; aim 1.600 s -> speed 0.892
+  a4-27-14   t01 sp 0.892 x1.00 span 1.24 (T 1.60, aim 1.60) wpm 242 F0 153.8 rng 13.1 fin -5.5 gap 0.00 cer 0.00 lp -0.16 score   5.08 | I've written up some thoughts
+  a4-27-14   t02 sp 0.892 x1.00 span 1.09 (T 1.60, aim 1.60) wpm 275 F0 120.7 rng 7.7 fin -1.5 gap 0.00 cer 0.00 lp -0.23 score   7.57 | I've written up some thoughts.
+  a4-27-14   t03 sp 0.892 x1.00 span 1.15 (T 1.60, aim 1.60) wpm 261 F0 141.0 rng 11.7 fin -1.2 gap 0.00 cer 0.00 lp -0.16 score   6.28 | I've written up some thoughts
+  a4-27-14   t04 sp 0.892 x1.00 span 1.23 (T 1.60, aim 1.60) wpm 244 F0 148.1 rng 12.4 fin -5.5 gap 0.00 cer 0.00 lp -0.16 score   4.63 | I've written up some thoughts
+   -> t04 (23 s)
+== a4-27-15 ADELINA In plain English: no. (target 1.30 s)
+   probe: 1.050 -> span 1.520 s; aim 1.300 s -> speed 1.270
+  a4-27-15   t01 sp 1.270 x1.00 span 1.26 (T 1.30, aim 1.30) wpm 190 F0 195.4 rng 7.3 fin -0.2 gap 0.24 cer 0.00 lp -0.35 score   0.55 | In plain English, no.
+  a4-27-15   t02 sp 1.155 x1.00 span 1.30 (T 1.30, aim 1.30) wpm 185 F0 197.1 rng 7.3 fin -0.3 gap 0.20 cer 0.00 lp -0.36 score   0.40 | In plain English, no.
+  a4-27-15   t03 sp 1.270 x1.00 span 1.29 (T 1.30, aim 1.30) wpm 186 F0 178.2 rng 4.3 fin -0.5 gap 0.22 cer 0.00 lp -0.36 score   0.26 | In plain English, no.
+  a4-27-15   t04 sp 1.270 x1.00 span 1.26 (T 1.30, aim 1.30) wpm 190 F0 181.8 rng 6.7 fin 0.7 gap 0.24 cer 0.00 lp -0.42 score   1.39 | in plain English. No.
+   -> t03 (22 s)
+== a4-27-16 MARIO Hi. Yes. We're very worried. How much? (target 2.20 s)
+   probe: 1.050 -> span 2.320 s; aim 2.200 s -> speed 1.122
+  a4-27-16   t01 sp 1.122 x1.00 span 2.27 (T 2.20, aim 2.20) wpm 185 F0 115.2 rng 15.3 fin -3.0 gap 0.15 cer 0.00 lp -0.46 score   0.48 | Hi, yes, we're very worried, how much?
+  a4-27-16   t02 sp 1.122 x1.00 span 2.21 (T 2.20, aim 2.20) wpm 190 F0 115.2 rng 15.4 fin -2.7 gap 0.13 cer 0.07 lp -0.41 score   1.22 | Yes, we're very worried how much.
+  a4-27-16   t03 sp 1.122 x1.00 span 2.21 (T 2.20, aim 2.20) wpm 190 F0 113.9 rng 9.9 fin -1.5 gap 0.15 cer 0.00 lp -0.41 score   0.59 | Hi, yes, we're very worried how much.
+  a4-27-16   t04 sp 1.066 x1.00 span 2.31 (T 2.20, aim 2.20) wpm 182 F0 116.2 rng 15.5 fin -3.6 gap 0.15 cer 0.07 lp -0.42 score   1.38 | Yes, we're very worried how much.
+   -> t01 (26 s)
+== a4-27-19 TTEMME Chat… for how long? (target 1.30 s)
+   probe: 1.080 -> span 1.250 s; aim 1.300 s -> speed 1.027
+  a4-27-19   t01 sp 1.027 x1.00 span 1.26 (T 1.30, aim 1.30) wpm 190 F0 168.7 rng 14.1 fin -5.2 gap 0.25 cer 0.00 lp -0.36 score  12.67 | Chat for how long.
+  a4-27-19   t02 sp 1.027 x1.00 span 1.26 (T 1.30, aim 1.30) wpm 190 F0 111.6 rng 8.9 fin -2.8 gap 0.24 cer 0.00 lp -0.41 score   5.76 | Chat for how long.
+  a4-27-19   t03 sp 0.932 x1.00 span 1.30 (T 1.30, aim 1.30) wpm 185 F0 157.4 rng 14.3 fin -4.8 gap 0.20 cer 0.00 lp -0.34 score   9.25 | Chat for how long.
+  a4-27-19   t04 sp 1.027 x1.00 span 1.31 (T 1.30, aim 1.30) wpm 183 F0 108.7 rng 9.8 fin -0.8 gap 0.26 cer 0.00 lp -0.46 score   4.86 | Chat for how long.
+   -> t04 (24 s)
+== a4-27-20 TASYA "a new advanced AI research team" (target 2.10 s)
+   probe: 0.980 -> span 2.060 s; aim 2.100 s -> speed 0.961
+  a4-27-20   t01 sp 0.874 x1.00 span 2.02 (T 2.10, aim 2.10) wpm 178 F0 155.6 rng 10.5 fin -1.8 gap 0.01 cer 0.00 lp -0.24 score   1.12 | A new advanced AI research team
+  a4-27-20   t02 sp 0.833 x1.00 span 2.12 (T 2.10, aim 2.10) wpm 170 F0 157.4 rng 10.5 fin -2.4 gap 0.01 cer 0.00 lp -0.31 score   1.45 | A new advanced AI research team
+  a4-27-20   t03 sp 0.961 x1.00 span 2.08 (T 2.10, aim 2.10) wpm 173 F0 153.8 rng 11.2 fin -4.3 gap 0.01 cer 0.00 lp -0.45 score   7.05 | A new advanced AI research team.
+  a4-27-20   t04 sp 0.851 x1.00 span 2.07 (T 2.10, aim 2.10) wpm 174 F0 141.0 rng 11.4 fin -7.2 gap 0.01 cer 0.00 lp -0.38 score   3.11 | a new advanced AI research team.
+  a4-27-20   t05 sp 0.833 x1.00 span 1.96 (T 2.10, aim 2.10) wpm 184 F0 146.8 rng 8.0 fin -0.2 gap 0.01 cer 0.00 lp -0.37 score   0.46 | a new advanced AI research team.
+   -> t05 (44 s)
+== a4-27-21 NELEH Step four? (target 0.65 s)
+   probe: 1.050 -> span 0.680 s; aim 0.650 s -> speed 1.098
+  a4-27-21   t01 sp 1.098 x1.00 span 0.66 (T 0.65, aim 0.65) wpm 182 F0 201.7 rng 8.8 fin -1.5 gap 0.01 cer 0.00 lp -0.58 score   2.84 | Step 4
+  a4-27-21   t02 sp 1.183 x1.00 span 0.68 (T 0.65, aim 0.65) wpm 176 F0 143.5 rng 5.2 fin -0.5 gap 0.02 cer 0.00 lp -0.60 score   5.57 | Step 4.
+  a4-27-21   t03 sp 1.183 x1.00 span 0.68 (T 0.65, aim 0.65) wpm 176 F0 152.0 rng 7.0 fin 1.7 gap 0.00 cer 0.00 lp -0.48 score   2.69 | Step 4.
+  a4-27-21   t04 sp 1.217 x1.00 span 0.66 (T 0.65, aim 0.65) wpm 182 F0 142.7 rng 5.5 fin -0.8 gap 0.03 cer 0.00 lp -0.59 score   5.84 | Step 4.
+   -> t03 (22 s)
+== a4-29-04 GERG MOCKBRAN One sec. Compiling— (target 0.90 s)
+   probe: 1.200 -> span 1.010 s; aim 0.900 s -> speed 1.374
+  a4-29-04   t01 sp 1.210 x1.00 span 0.99 (T 0.90, aim 0.90) wpm 182 F0 137.0 rng 10.3 fin -5.3 gap 0.15 cer 0.00 lp -0.45 score   0.67 | One sec, compiling.
+  a4-29-04   t02 sp 1.374 x1.00 span 0.87 (T 0.90, aim 0.90) wpm 207 F0 120.7 rng 10.5 fin -0.4 gap 0.12 cer 0.53 lp -0.83 score   8.36 | It was like compiling.
+  a4-29-04   t03 sp 1.168 x1.00 span 1.00 (T 0.90, aim 0.90) wpm 180 F0 136.6 rng 9.7 fin 3.0 gap 0.10 cer 0.00 lp -0.41 score   0.98 | One sec compiling.
+  a4-29-04   t04 sp 1.374 x1.00 span 0.93 (T 0.90, aim 0.90) wpm 194 F0 148.5 rng 5.1 fin -2.5 gap 0.13 cer 0.53 lp -0.66 score  13.18 | It was like compiling.
+   -> t01 (19 s)
+== a4-29-05 MAS MANALT what are you building? (target 1.40 s)
+   probe: 0.970 -> span 1.090 s; aim 1.512 s -> speed 0.825
+  a4-29-05   t01 sp 0.825 x1.00 span 1.35 (T 1.40, aim 1.51) wpm 178 F0 117.2 rng 10.2 fin -1.4 gap 0.00 cer 0.00 lp -0.33 score   0.64 | What are you building?
+  a4-29-05   t02 sp 0.825 x1.00 span 1.07 (T 1.40, aim 1.51) wpm 224 F0 116.5 rng 8.1 fin 1.3 gap 0.00 cer 0.00 lp -0.34 score   5.16 | What are you building?
+  a4-29-05   t03 sp 0.825 x1.00 span 1.05 (T 1.40, aim 1.51) wpm 229 F0 118.9 rng 8.4 fin 0.5 gap 0.00 cer 0.00 lp -0.35 score   5.64 | What are you building?
+  a4-29-05   t04 sp 0.825 x1.00 span 1.33 (T 1.40, aim 1.51) wpm 180 F0 114.2 rng 10.3 fin -0.8 gap 0.00 cer 0.00 lp -0.34 score   0.74 | What are you building?
+   -> t01 (19 s)
+== a4-29-06 GERG MOCKBRAN The company. Again. Just in case. (target 1.70 s)
+   probe: 1.200 -> span 1.660 s; aim 1.700 s -> speed 1.168
+  a4-29-06   t01 sp 1.168 x1.00 span 1.69 (T 1.70, aim 1.70) wpm 213 F0 133.9 rng 7.3 fin -0.2 gap 0.07 cer 0.12 lp -0.46 score   1.85 | company again, just in case.
+  a4-29-06   t02 sp 1.168 x1.00 span 1.72 (T 1.70, aim 1.70) wpm 209 F0 120.7 rng 7.2 fin 1.6 gap 0.08 cer 0.00 lp -0.32 score   3.17 | the company again, just in case.
+  a4-29-06   t03 sp 1.168 x1.00 span 1.76 (T 1.70, aim 1.70) wpm 205 F0 125.6 rng 6.9 fin 1.2 gap 0.07 cer 0.00 lp -0.31 score   0.27 | the company again, just in case.
+  a4-29-06   t04 sp 1.110 x1.00 span 1.79 (T 1.70, aim 1.70) wpm 201 F0 134.6 rng 7.6 fin -2.0 gap 0.07 cer 0.12 lp -0.40 score   1.89 | company again, just in case.
+   -> t03 (19 s)
+== a4-29-07 TASYA Everyone is welcome. (target 1.20 s)
+   probe: 0.980 -> span 1.280 s; aim 1.200 s -> speed 1.045
+  a4-29-07   t01 sp 1.045 x1.00 span 1.21 (T 1.20, aim 1.20) wpm 149 F0 152.0 rng 14.1 fin -6.8 gap 0.00 cer 0.00 lp -0.33 score   2.96 | Everyone is welcome.
+  a4-29-07   t02 sp 1.045 x1.00 span 1.16 (T 1.20, aim 1.20) wpm 155 F0 133.1 rng 11.8 fin -5.1 gap 0.00 cer 0.00 lp -0.29 score   0.24 | Everyone is welcome.
+  a4-29-07   t03 sp 1.045 x1.00 span 1.18 (T 1.20, aim 1.20) wpm 153 F0 133.9 rng 11.0 fin -4.5 gap 0.00 cer 0.00 lp -0.33 score   0.25 | Everyone is welcome.
+   -> t02 (13 s)
+== a4-29-08 MAS MANALT leave it open. (target 1.00 s)
+   probe: 0.970 -> span 0.930 s; aim 1.080 s -> speed 0.835
+  a4-29-08   t01 sp 0.897 x1.00 span 1.04 (T 1.00, aim 1.08) wpm 173 F0 114.9 rng 10.2 fin 1.2 gap 0.02 cer 0.00 lp -0.35 score   1.82 | Leave it open.
+  a4-29-08   t02 sp 0.825 x1.00 span 1.00 (T 1.00, aim 1.08) wpm 180 F0 112.6 rng 8.1 fin 1.6 gap 0.02 cer 0.00 lp -0.39 score   2.19 | Leave it open.
+  a4-29-08   t03 sp 0.870 x1.00 span 1.11 (T 1.00, aim 1.08) wpm 162 F0 115.9 rng 10.5 fin 0.2 gap 0.03 cer 0.00 lp -0.42 score   1.58 | Leave it open.
+  a4-29-08   t04 sp 0.825 x1.00 span 0.94 (T 1.00, aim 1.08) wpm 191 F0 107.8 rng 8.0 fin 1.2 gap 0.01 cer 0.00 lp -0.46 score   2.14 | Leave it open.
+   -> t03 (21 s)
+== a4-29-09 NELEH Has anyone read the char— (target 1.20 s)
+   probe: 1.050 -> span 1.120 s; aim 1.200 s -> speed 0.980
+  a4-29-09   t01 sp 0.980 x1.00 span 1.21 (T 1.20, aim 1.20) wpm 248 F0 176.2 rng 8.4 fin -1.2 gap 0.01 cer 0.15 lp -0.33 score   2.02 | Has anyone read the charter?
+  a4-29-09   t02 sp 0.980 x1.00 span 1.15 (T 1.20, aim 1.20) wpm 261 F0 153.3 rng 3.9 fin -0.4 gap 0.00 cer 0.15 lp -0.34 score   4.04 | Has anyone read the charter?
+  a4-29-09   t03 sp 0.980 x1.00 span 1.16 (T 1.20, aim 1.20) wpm 259 F0 157.8 rng 4.1 fin -0.3 gap 0.01 cer 0.15 lp -0.35 score   3.28 | Has anyone read the charter?
+   -> t01 (14 s)
+== a4-30-01 ALYI "I deeply regret my participation in the board's actions." (target 3.80 s)
+   probe: 0.920 -> span 3.920 s; aim 3.800 s -> speed 0.950
+  a4-30-01   t01 sp 0.950 x1.00 span 3.82 (T 3.80, aim 3.80) wpm 141 F0 84.6 rng 13.3 fin -6.6 gap 0.28 cer 0.00 lp -0.19 score   0.12 | I deeply regret my participation in the board's actions.
+  a4-30-01   t02 sp 0.950 x1.00 span 3.66 (T 3.80, aim 3.80) wpm 148 F0 81.5 rng 10.2 fin -6.5 gap 0.13 cer 0.00 lp -0.22 score   0.19 | I deeply regret my participation in the board's actions.
+  a4-30-01   t03 sp 0.950 x1.00 span 3.71 (T 3.80, aim 3.80) wpm 146 F0 81.0 rng 10.0 fin -6.4 gap 0.18 cer 0.00 lp -0.21 score   0.14 | I deeply regret my participation in the board's actions.
+  a4-30-01   t04 sp 0.903 x1.00 span 3.97 (T 3.80, aim 3.80) wpm 136 F0 84.3 rng 13.0 fin -6.7 gap 0.36 cer 0.00 lp -0.19 score   0.58 | I deeply regret my participation in the board's actions.
+   -> t01 (23 s)
+== a4-30-02 TASYA "We are below them, above them, around them." (target 2.90 s)
+   probe: 0.980 -> span 2.500 s; aim 2.900 s -> speed 0.833
+  a4-30-02   t01 sp 0.833 x1.00 span 2.72 (T 2.90, aim 2.90) wpm 176 F0 139.4 rng 15.8 fin -7.5 gap 0.15 cer 0.00 lp -0.23 score   0.24 | We are below them, above them, around them.
+  a4-30-02   t02 sp 0.833 x1.00 span 2.26 (T 2.90, aim 2.90) wpm 212 F0 132.3 rng 10.3 fin -5.3 gap 0.14 cer 0.00 lp -0.23 score   4.33 | We are below them, above them, around them.
+  a4-30-02   t03 sp 0.833 x1.00 span 2.59 (T 2.90, aim 2.90) wpm 185 F0 150.3 rng 10.6 fin -0.9 gap 0.15 cer 0.00 lp -0.28 score   0.69 | We are below them, above them, around them.
+  a4-30-02   t04 sp 0.833 x1.00 span 2.72 (T 2.90, aim 2.90) wpm 176 F0 139.4 rng 15.9 fin -7.5 gap 0.15 cer 0.00 lp -0.23 score   0.23 | We are below them, above them, around them.
+   -> t04 (20 s)
+== a4-30-03 MAS MANALT hi. (target 0.45 s)
+   probe: 0.970 -> span 0.530 s; aim 0.450 s -> speed 1.142
+  a4-30-03   t01 sp 1.142 x1.00 span 0.47 (T 0.45, aim 0.45) wpm 128 F0 118.6 rng 4.8 fin -3.7 gap 0.01 cer 0.00 lp -0.71 score   0.90 | Hi!
+  a4-30-03   t02 sp 1.142 x1.00 span 0.45 (T 0.45, aim 0.45) wpm 133 F0 95.2 rng 4.4 fin 3.1 gap 0.00 cer 1.50 lp -0.63 score  24.07 | Say hi.
+  a4-30-03   t03 sp 1.041 x1.00 span 0.44 (T 0.45, aim 0.45) wpm 136 F0 107.8 rng 10.3 fin 2.6 gap 0.00 cer 1.50 lp -0.72 score  22.11 | Bye!
+  a4-30-03   t04 sp 1.142 x1.00 span 0.43 (T 0.45, aim 0.45) wpm 140 F0 98.0 rng 4.3 fin 3.0 gap 0.00 cer 2.00 lp -0.73 score  29.52 | Be High.
+  a4-30-03   t05 sp 1.016 x1.00 span 0.45 (T 0.45, aim 0.45) wpm 133 F0 96.2 rng 4.2 fin -1.1 gap 0.00 cer 0.00 lp -0.80 score   3.18 | Hi!
+   -> t01 (19 s)
+== a4-30-04 TASYA Hello. (target 0.60 s)
+   probe: 0.980 -> span 0.600 s; aim 0.600 s -> speed 0.980
+  a4-30-04   t01 sp 0.980 x1.00 span 0.61 (T 0.60, aim 0.60) wpm 98 F0 129.7 rng 7.1 fin -0.6 gap 0.00 cer 0.00 lp -0.69 score   0.84 | Hello.
+  a4-30-04   t02 sp 0.980 x1.00 span 0.62 (T 0.60, aim 0.60) wpm 97 F0 116.2 rng 7.5 fin 1.8 gap 0.00 cer 0.40 lp -0.73 score   8.61 | is hello.
+  a4-30-04   t03 sp 0.980 x1.00 span 0.59 (T 0.60, aim 0.60) wpm 102 F0 122.1 rng 12.2 fin -0.7 gap 0.00 cer 0.00 lp -0.74 score   2.49 | Hello.
+  a4-30-04   t04 sp 0.931 x1.00 span 0.65 (T 0.60, aim 0.60) wpm 92 F0 131.2 rng 8.9 fin -0.5 gap 0.00 cer 0.00 lp -0.60 score   0.86 | Hello.
+   -> t01 (13 s)
+== a4-30-05 TERB Which room is on fire? (target 1.20 s)
+   probe: 1.100 -> span 1.510 s; aim 1.200 s -> speed 1.375
+  a4-30-05   t01 sp 1.215 x1.00 span 1.46 (T 1.20, aim 1.20) wpm 205 F0 111.9 rng 10.9 fin 3.8 gap 0.00 cer 0.00 lp -0.31 score   4.32 | Which room is on fire?
+  a4-30-05   t02 sp 1.111 x1.00 span 1.25 (T 1.20, aim 1.20) wpm 240 F0 99.7 rng 8.7 fin -6.0 gap 0.01 cer 0.00 lp -0.40 score   0.42 | Which room is on fire?
+  a4-30-05   t03 sp 1.192 x1.00 span 1.24 (T 1.20, aim 1.20) wpm 242 F0 98.0 rng 7.2 fin -2.4 gap 0.01 cer 0.00 lp -0.38 score   0.36 | Which room is on fire?
+   -> t03 (16 s)
+== a4-30-06 TERB …Ah. (target 0.40 s)
+   probe: 1.100 -> span 0.540 s; aim 0.400 s -> speed 1.375
+  a4-30-06   t01 sp 1.375 x1.10 span 0.41 (T 0.40, aim 0.40) wpm 146 F0 90.6 rng 9.1 fin -3.2 gap 0.01 cer 0.00 lp -0.69 score   1.62 | Ah.
+  a4-30-06   t02 sp 1.375 x1.10 span 0.43 (T 0.40, aim 0.40) wpm 140 F0 97.4 rng 6.5 fin -3.3 gap 0.00 cer 1.00 lp -0.54 score  13.54 | ON
+  a4-30-06   t03 sp 1.375 x1.10 span 0.47 (T 0.40, aim 0.40) wpm 128 F0 85.2 rng 7.1 fin -6.1 gap 0.02 cer 1.00 lp -0.76 score  16.42 | DAW
+   -> t01 (12 s)
+== a4-30-07 TERB Terms? (target 0.50 s)
+   probe: 1.100 -> span 0.690 s; aim 0.500 s -> speed 1.375
+  a4-30-07   t01 sp 1.375 x1.10 span 0.56 (T 0.50, aim 0.50) wpm 107 F0 98.4 rng 11.0 fin 4.7 gap 0.00 cer 0.00 lp -0.48 score   2.18 | terms.
+  a4-30-07   t02 sp 1.375 x1.06 span 0.49 (T 0.50, aim 0.50) wpm 122 F0 111.9 rng 5.4 fin -3.6 gap 0.00 cer 0.00 lp -0.70 score   7.77 | terms.
+  a4-30-07   t03 sp 1.375 x1.10 span 0.53 (T 0.50, aim 0.50) wpm 113 F0 86.9 rng 11.6 fin 0.8 gap 0.00 cer 0.00 lp -0.66 score   1.83 | terms.
+  a4-30-07   t04 sp 1.375 x1.10 span 0.54 (T 0.50, aim 0.50) wpm 111 F0 80.5 rng 11.5 fin -5.8 gap 0.00 cer 0.00 lp -0.38 score   6.75 | terms.
+   -> t03 (14 s)
+== a4-30-12 MAS MANALT okay. (target 0.60 s)
+   probe: 0.970 -> span 0.650 s; aim 0.600 s -> speed 1.051
+  a4-30-12   t01 sp 0.946 x1.00 span 0.62 (T 0.60, aim 0.60) wpm 97 F0 99.9 rng 8.6 fin 2.6 gap 0.00 cer 0.00 lp -0.66 score   4.56 | Okay.
+  a4-30-12   t02 sp 1.051 x1.00 span 0.62 (T 0.60, aim 0.60) wpm 97 F0 115.2 rng 10.1 fin 1.7 gap 0.04 cer 0.00 lp -0.73 score   3.32 | Okay.
+  a4-30-12   t03 sp 0.911 x1.00 span 0.63 (T 0.60, aim 0.60) wpm 95 F0 102.0 rng 7.9 fin 2.6 gap 0.00 cer 0.00 lp -0.79 score   4.26 | Okay.
+  a4-30-12   t04 sp 1.173 x1.00 span 0.64 (T 0.60, aim 0.60) wpm 94 F0 110.6 rng 8.9 fin 2.3 gap 0.01 cer 0.00 lp -0.47 score   2.85 | Okay
+  a4-30-12   t05 sp 0.981 x1.00 span 0.61 (T 0.60, aim 0.60) wpm 98 F0 107.5 rng 8.7 fin 3.3 gap 0.01 cer 0.50 lp -0.61 score   9.71 | OK
+  a4-30-12   t06 sp 0.998 x1.00 span 0.61 (T 0.60, aim 0.60) wpm 98 F0 101.5 rng 7.0 fin 3.4 gap 0.01 cer 0.00 lp -0.71 score   4.82 | Okay.
+   -> t04 (27 s)
+== a4-31-01 GERG MOCKBRAN What's in there? (target 0.70 s)
+   probe: 1.200 -> span 0.600 s; aim 0.700 s -> speed 1.029
+  a4-31-01   t01 sp 1.029 x1.00 span 0.69 (T 0.70, aim 0.70) wpm 261 F0 144.3 rng 6.0 fin -4.8 gap 0.00 cer 0.00 lp -0.27 score   4.78 | What's in there?
+  a4-31-01   t02 sp 1.029 x1.00 span 0.71 (T 0.70, aim 0.70) wpm 254 F0 126.4 rng 7.3 fin 3.3 gap 0.00 cer 0.25 lp -0.39 score   3.33 | Hey, what's in there?
+  a4-31-01   t03 sp 1.029 x1.00 span 0.73 (T 0.70, aim 0.70) wpm 247 F0 139.4 rng 8.2 fin -3.8 gap 0.00 cer 0.25 lp -0.30 score  11.52 | Hey, what's in there?
+   -> t02 (11 s)
+== a4-31-02 MAS MANALT it's a preview. (target 1.00 s)
+   probe: 0.970 -> span 0.990 s; aim 1.080 s -> speed 0.889
+  a4-31-02   t01 sp 0.971 x1.00 span 0.99 (T 1.00, aim 1.08) wpm 182 F0 112.2 rng 9.5 fin 0.7 gap 0.02 cer 0.00 lp -0.30 score   1.36 | It's a preview.
+  a4-31-02   t02 sp 0.825 x1.00 span 1.03 (T 1.00, aim 1.08) wpm 175 F0 100.0 rng 8.7 fin 2.2 gap 0.01 cer 0.00 lp -0.34 score   3.77 | It's a preview.
+  a4-31-02   t03 sp 0.825 x1.00 span 1.13 (T 1.00, aim 1.08) wpm 159 F0 102.0 rng 8.9 fin -1.0 gap 0.03 cer 0.00 lp -0.35 score   2.02 | It's a preview.
+  a4-31-02   t04 sp 0.936 x1.00 span 1.01 (T 1.00, aim 1.08) wpm 178 F0 108.4 rng 9.7 fin 1.7 gap 0.02 cer 0.00 lp -0.29 score   2.08 | It's a preview.
+   -> t01 (23 s)
+== a4-31-03 MAS MANALT "i love and respect alyi… i harbor zero ill will towards him." (target 4.30 s)
+   probe: 0.970 -> span 4.240 s; aim 4.644 s -> speed 0.879
+  a4-31-03   t01 sp 0.879 x1.00 span 4.62 (T 4.30, aim 4.64) wpm 156 F0 114.9 rng 9.9 fin -1.8 gap 0.41 cer 0.02 lp -0.36 score   0.50 | I love and respect Ali. I harbor zero ill will towards him.
+  a4-31-03   t02 sp 0.879 x1.00 span 4.57 (T 4.30, aim 4.64) wpm 158 F0 110.3 rng 10.5 fin -1.6 gap 0.36 cer 0.02 lp -0.42 score   0.63 | I love and respect Ali. I harbor zero ill will towards him.
+  a4-31-03   t03 sp 0.825 x1.00 span 4.65 (T 4.30, aim 4.64) wpm 155 F0 113.2 rng 9.0 fin -1.6 gap 0.40 cer 0.02 lp -0.39 score   0.54 | I love and respect Ali. I harbor zero ill will towards him.
+  a4-31-03   t04 sp 0.835 x1.00 span 4.84 (T 4.30, aim 4.64) wpm 149 F0 117.2 rng 10.6 fin -0.4 gap 0.44 cer 0.02 lp -0.39 score   1.71 | I love and respect Ali. I harbor zero ill will towards him.
+   -> t01 (33 s)
+== a4-26a-vo1 MAS MANALT i don't keep score. (target 1.50 s)
+   V.O. ref: on-camera read at 0.875 -> 1.360 s; aim 1.469 s (slot 2.5)
+   probe: 0.870 -> span 1.360 s; aim 1.469 s -> speed 0.806
+  a4-26a-vo1 t01 sp 0.806 x1.00 span 1.43 (T 1.50, aim 1.47) wpm 168 F0 125.6 rng 10.6 fin -0.6 gap 0.02 cer 0.00 lp -0.29 score   3.17 | I don't keep score.
+  a4-26a-vo1 t02 sp 0.739 x1.00 span 1.50 (T 1.50, aim 1.47) wpm 160 F0 117.2 rng 8.8 fin 2.1 gap 0.01 cer 0.00 lp -0.28 score   3.80 | I don't keep score.
+  a4-26a-vo1 t03 sp 0.739 x1.00 span 1.57 (T 1.50, aim 1.47) wpm 153 F0 120.7 rng 9.9 fin -5.6 gap 0.02 cer 0.00 lp -0.25 score   2.88 | I don't keep score.
+  a4-26a-vo1 t04 sp 0.739 x1.00 span 1.45 (T 1.50, aim 1.47) wpm 166 F0 119.3 rng 10.2 fin -1.8 gap 0.03 cer 0.00 lp -0.31 score   2.74 | I don't keep score.
+  a4-26a-vo1 t05 sp 0.739 x1.00 span 1.54 (T 1.50, aim 1.47) wpm 156 F0 132.3 rng 7.5 fin -2.4 gap 0.02 cer 0.00 lp -0.30 score   2.67 | I don't keep score.
+  a4-26a-vo1 t06 sp 0.854 x1.00 span 1.40 (T 1.50, aim 1.47) wpm 171 F0 124.2 rng 10.8 fin 0.3 gap 0.02 cer 0.00 lp -0.27 score   3.87 | I don't keep score.
+   -> t05 (41 s)
+== fallback a4-26a-vo1-fallback i don't keep things.
+   probe: 0.870 -> span 1.390 s; aim 1.480 s -> speed 0.817
+  a4-26a-vo1-fallback t01 sp 0.817 x1.00 span 1.42 (T 1.50, aim 1.48) wpm 169 F0 125.6 rng 10.7 fin -1.4 gap 0.02 cer 0.00 lp -0.28 score   3.27 | I don't keep things.
+  a4-26a-vo1-fallback t02 sp 0.739 x1.00 span 1.44 (T 1.50, aim 1.48) wpm 167 F0 114.5 rng 9.3 fin 0.5 gap 0.01 cer 0.00 lp -0.27 score   2.89 | I don't keep things.
+  a4-26a-vo1-fallback t03 sp 0.739 x1.00 span 1.52 (T 1.50, aim 1.48) wpm 158 F0 117.2 rng 10.3 fin -2.1 gap 0.02 cer 0.00 lp -0.22 score   2.73 | I don't keep things.
+  a4-26a-vo1-fallback t04 sp 0.739 x1.00 span 1.44 (T 1.50, aim 1.48) wpm 167 F0 121.3 rng 9.5 fin -1.0 gap 0.02 cer 0.00 lp -0.25 score   2.20 | I don't keep things.
+  a4-26a-vo1-fallback t05 sp 0.739 x1.00 span 1.49 (T 1.50, aim 1.48) wpm 161 F0 128.2 rng 7.8 fin 3.5 gap 0.04 cer 0.00 lp -0.38 score   5.07 | I don't keep things.
+  a4-26a-vo1-fallback t06 sp 0.835 x1.00 span 1.40 (T 1.50, aim 1.48) wpm 171 F0 126.4 rng 10.6 fin 0.1 gap 0.02 cer 0.00 lp -0.27 score   3.92 | I don't keep things.
+   -> t04 (38 s)
+== a4-29-vo2 MAS MANALT the badge was a joke. (target 1.60 s)
+   V.O. ref: on-camera read at 0.875 -> 1.480 s; aim 1.598 s (slot 1.875)
+   probe: 0.870 -> span 1.480 s; aim 1.598 s -> speed 0.806
+  a4-29-vo2  t01 sp 0.806 x1.00 span 1.61 (T 1.60, aim 1.60) wpm 186 F0 111.6 rng 10.5 fin -1.1 gap 0.09 cer 0.00 lp -0.34 score   3.00 | The badge was a joke.
+  a4-29-vo2  t02 sp 0.761 x1.00 span 1.62 (T 1.60, aim 1.60) wpm 185 F0 106.7 rng 9.1 fin -1.6 gap 0.10 cer 0.00 lp -0.33 score   1.99 | The badge was a joke.
+  a4-29-vo2  t03 sp 0.806 x1.00 span 1.63 (T 1.60, aim 1.60) wpm 184 F0 106.9 rng 9.3 fin -3.4 gap 0.09 cer 0.00 lp -0.32 score   2.14 | The badge was a joke.
+  a4-29-vo2  t04 sp 0.761 x1.00 span 1.59 (T 1.60, aim 1.60) wpm 189 F0 108.7 rng 9.4 fin -2.2 gap 0.09 cer 0.00 lp -0.33 score   2.17 | The badge was a joke.
+  a4-29-vo2  t05 sp 0.739 x1.00 span 1.55 (T 1.60, aim 1.60) wpm 194 F0 114.8 rng 8.9 fin 1.1 gap 0.08 cer 0.00 lp -0.32 score   3.16 | The badge was a joke.
+  a4-29-vo2  t06 sp 0.773 x1.00 span 1.72 (T 1.60, aim 1.60) wpm 174 F0 110.6 rng 10.5 fin -1.9 gap 0.09 cer 0.00 lp -0.30 score   3.27 | The badge was a joke.
+   -> t02 (33 s)
+== a4-29-vo3 MAS MANALT gerg never waits to be asked. (target 2.00 s)
+   V.O. ref: on-camera read at 0.875 -> 1.870 s; aim 2.020 s (slot 2.5)
+   probe: 0.870 -> span 1.860 s; aim 2.020 s -> speed 0.801
+  a4-29-vo3  t01 sp 0.893 x1.00 span 1.83 (T 2.00, aim 2.02) wpm 197 F0 120.3 rng 8.9 fin -1.0 gap 0.04 cer 0.00 lp -0.35 score   2.42 | Gerg never waits to be asked.
+  a4-29-vo3  t02 sp 0.801 x1.00 span 1.95 (T 2.00, aim 2.02) wpm 185 F0 111.0 rng 8.8 fin -3.1 gap 0.05 cer 0.00 lp -0.30 score   1.79 | Gerg never waits to be asked.
+  a4-29-vo3  t03 sp 0.881 x1.00 span 1.93 (T 2.00, aim 2.02) wpm 187 F0 115.2 rng 10.3 fin -4.3 gap 0.04 cer 0.00 lp -0.36 score   3.00 | Gerg never waits to be asked.
+  a4-29-vo3  t04 sp 0.801 x1.00 span 1.96 (T 2.00, aim 2.02) wpm 184 F0 115.2 rng 9.0 fin -3.5 gap 0.05 cer 0.00 lp -0.30 score   1.91 | Gerg never waits to be asked.
+  a4-29-vo3  t05 sp 0.739 x1.00 span 2.15 (T 2.00, aim 2.02) wpm 167 F0 119.3 rng 8.4 fin -2.4 gap 0.02 cer 0.00 lp -0.37 score   1.76 | Gerg never waits to be asked.
+  a4-29-vo3  t06 sp 0.881 x1.00 span 1.86 (T 2.00, aim 2.02) wpm 194 F0 117.2 rng 9.6 fin -4.1 gap 0.04 cer 0.00 lp -0.35 score   2.79 | Gerg never waits to be asked.
+   -> t05 (38 s)
+== a4-29-03 MAS MANALT mostly. (target 0.65 s)
+   probe: 0.970 -> span 0.730 s; aim 0.650 s -> speed 1.089
+  a4-29-03   t01 sp 1.156 x1.00 span 0.66 (T 0.65, aim 0.65) wpm 91 F0 109.4 rng 6.0 fin 3.2 gap 0.00 cer 0.00 lp -0.72 score   4.41 | mostly.
+  a4-29-03   t02 sp 0.989 x1.00 span 0.62 (T 0.65, aim 0.65) wpm 97 F0 108.1 rng 6.4 fin 3.0 gap 0.00 cer 0.00 lp -0.72 score   3.94 | Mostly
+  a4-29-03   t03 sp 0.908 x1.00 span 0.68 (T 0.65, aim 0.65) wpm 88 F0 111.3 rng 6.2 fin 2.1 gap 0.00 cer 0.00 lp -0.68 score   4.27 | Mostly.
+  a4-29-03   t04 sp 1.089 x1.00 span 0.65 (T 0.65, aim 0.65) wpm 92 F0 111.0 rng 7.8 fin 0.8 gap 0.00 cer 0.00 lp -0.48 score   2.15 | Mostly
+  a4-29-03   t05 sp 1.089 x1.00 span 0.64 (T 0.65, aim 0.65) wpm 94 F0 120.0 rng 9.9 fin 1.5 gap 0.00 cer 0.00 lp -0.52 score   4.70 | Mostly
+  a4-29-03   t06 sp 1.089 x1.00 span 0.64 (T 0.65, aim 0.65) wpm 94 F0 119.6 rng 8.7 fin 2.6 gap 0.00 cer 0.00 lp -0.48 score   4.92 | Mostly
+   -> t04 (29 s)
+== a4-27-00 derived
+  a4-27-00 derived from a4-26-01: -22.0 LUFS, TP -4.87, ASR 'Super.'
+dropped from lines.json (removed in 3.2): a4-25-01, a4-26a-vo2, a4-27-02, a4-27-03, a4-27-11, a4-27-18, a4-27-22, a4-29-vo1
+wrote /home/jgon/project/art/mrmas/audio/ep01/act4/dialogue/lines.json (53 rows) in 1143 s

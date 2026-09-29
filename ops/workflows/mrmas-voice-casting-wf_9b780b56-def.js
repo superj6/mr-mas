@@ -1,0 +1,19 @@
+export const meta = {
+  name: 'mrmas-voice-casting',
+  description: 'Voice casting pass: voice briefs + 2-3 synthetic stock-voice candidates per main character, each reading the same in-character lines, plus a casting sheet',
+  phases: [{ title: 'Cast', detail: 'voice designer for the main cast' }],
+}
+const ROOT = '/home/jgon/project/art/mrmas'
+const AUD = ROOT + '/audio'
+phase('Cast')
+const r = await agent(`You are the VOICE DIRECTOR / casting producer for "MR. MAS", an animated pixel-art satire of the AI race (Sam Altman -> MAS MANALT). Read ${ROOT}/show/README.md, then the character files in ${ROOT}/show/characters/ (if they exist yet; otherwise use ${ROOT}/show/_sources/plan-v1.md section 1 and ${ROOT}/show/_sources/research/worldcast-cast-integration.md). NOTE: the Trump-equivalent's canonical name is DLANOD J. RUMPT ("President RUMPT") — the user chose RUMPT; ignore any 'PMURT' spelling in sources.
+TASK: a VOICE CASTING PASS for the main cast: MAS MANALT, NOLE, GERG MOCKBRAN, ALYI, MARIO, PRESIDENT RUMPT, NESNEJ, RIMA TAMURI, THE ORB (a machine voice), THE INTERN (an eager AI voice).
+For each character:
+ 1. Write a VOICE BRIEF in ${AUD}/voices/CASTING.md: pitch range, pace (words/min), texture, attitude, signature cadence, what to avoid. Build it from the character's exaggerated PUBLIC PERSONA and comic function — NOT from imitating the real person's timbre. RULES: never clone or mimic a real person's voice or use their recordings; no accent-based humor for anyone; stay stylized.
+ 2. Cast 2-3 CANDIDATE voices from a permissively licensed local TTS with multiple stock voices (preferred: Kokoro-82M, Apache-2.0, many English voices; install into your OWN venv ${AUD}/.venv-casting with CPU-only torch — e.g. pip install --index-url https://download.pytorch.org/whl/cpu torch, then kokoro/misaki/soundfile; if Kokoro fails, use Piper or another permissive multi-voice TTS and note the license). Shape each candidate with processing (pedalboard at ${AUD}/.venv or install it in yours): pitch shift, formant-ish EQ, speed, compression, saturation, room/phone/radio character where fitting (THE ORB and THE INTERN may be clearly synthetic/processed).
+ 3. Each candidate reads the SAME 3 lines per character: one catchphrase, one verified quote reframed for the parody character if the character files list one with a source tag (else an [INVENTED] line), and one comic line from the season outline. Keep lines short. Examples: MAS "super." / "near the singularity; unclear which side." / "i did not know this was happening."; NOLE "I came up with the name!"; RUMPT something built from verified public verbal style in the character file (superlatives, renaming things, 'super intelligence') — tagged [INVENTED] unless verbatim-verified.
+ 4. Render WAV + MP3 to ${AUD}/voices/<character-slug>/<candidate>-<line>.{wav,mp3}; also a per-character 'reel' mp3 (all candidates back to back with a 0.4 s gap and a short spoken-free chime between candidates), and ${AUD}/voices/manifest.json [{character, candidate, model, voiceId, processing, license, lines:[{text, file, tag}]}].
+ 5. Pair each character with the pixel dialogue BLIP voice if ${AUD}/sfx/ has one for them (reference it in the manifest).
+ffmpeg is at ${ROOT}/studio/node_modules/@remotion/compositor-linux-x64-gnu/ffmpeg (LD_LIBRARY_PATH to that folder). You cannot listen: verify via analysis (duration, loudness ~-16 LUFS for dialogue, clipping, silence trimming) and choose conservative, clean processing. Other audio agents work in ${AUD}/theme, ${AUD}/sfx, ${AUD}/vocals, ${AUD}/mix — do not touch those.
+Final message: what you made, voice/model/license per candidate, your recommended pick per character and why, and what would most improve it (e.g. human voice actors/impressionists, ElevenLabs Voice Design from text descriptions — never cloning).`, { label: 'audio:voice-casting', phase: 'Cast' })
+return r

@@ -1,0 +1,14 @@
+export const meta = {
+  name: "mrmas-ost-fix2",
+  description: "OST follow-up: tune the remaining sample sets, notch MM-11's LEVERAGE ring, re-render MM-11 and refresh the sampler",
+  phases: [ { title: "Fix", detail: "engine tuning + MM-11 notch, then sampler refresh" } ],
+}
+const ROOT = "/home/jgon/project/art/mrmas"
+const AUTH = `AUTHORIZATION. The showrunner's standing notes: the score must be high quality ("not amateur"), with a jazz feel and 8-bit motifs; the main title V1 is LOCKED (never touch audio/theme/**). LIVE NOTES: read ${ROOT}/show/production/SHOWRUNNER-NOTES.md first; newer notes win. The lead is ordering this follow-up to the OST fix pass (reports in ${ROOT}/audio/ost/editor/ and each track's README). You are authorized to edit the files named in your task, render and measure. Do not ask questions. Nothing gets committed. You cannot listen: judge by measurement and say what needs ears. Machine is shared: keep renders to about 4 workers. Disk about 9 GB free: delete scratch; if under 6 GB, stop and report. Another pass (Act Four v4) will soon render new Act Four cues with this engine into audio/ost/tracks/e01-act4-v4/; do not touch that folder, and keep the engine's public API unchanged.`
+const a = await agent(`${AUTH}
+
+TASK 1 (engine, you own audio/ost/engine/library.py, engine/tuning.py and their tests): the fix-1 engine owner measured but did not correct these sample sets: tuba_stac (up to 74 cents off), tpt_stac (F2 about -33 c), cb_spic, hn_stac, the viola and cello tremolos, and solo violin. Measure each sample's fundamental with the robust method now in engine/tuning.py, write per-sample corrections into the TUNING table (never modify sample files), and verify within about 5 cents with renders at each sample's own pitch and range edges (section sets carry more uncertainty; report it). Skip vibes_hard and xylo (inharmonic bars) unless you find a reliable method. Run the full engine test suite.
+TASK 2 (you own audio/ost/tracks/mm11-the-return/ only): fix MM-11's LEVERAGE section, where the new F-major check reads A-range energy at 107-112 Hz from the pizz Ab2/Bb2 over a soft F2 pedal plus the pizz body resonance. Use the same approach composer A used for MM-08 (read audio/ost/tracks/mm08-the-falling-tile/README and its track code): a narrow notch on the offending notes or stem only, or a revoicing that keeps the harmony. Re-render MM-11 (picture version, album edit, stems) on the tuned engine, run its QA and the editor's qa.py, and update its cue sheet and README.
+TASK 3: re-render only the other cues where your new corrections move an audible note by more than 10 cents (list them from the scores), then rebuild ${ROOT}/audio/ost/ost-sampler.mp3 and index with the editor's scripts (audio/ost/editor/make_sampler.py, make_index.py) and note the changes in SAMPLER.md.
+Return a concise report: corrections made, cues re-rendered, QA results, what needs ears.`, { label: "fix2:tuning+mm11" })
+return a

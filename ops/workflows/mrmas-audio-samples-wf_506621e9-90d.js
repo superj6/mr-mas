@@ -1,0 +1,51 @@
+export const meta = {
+  name: 'mrmas-audio-samples',
+  description: 'Audio lookdev: intro theme variants, SFX board with character voice blips, vocals (TTS VO options, chant, choir), then a 30s intro audio sketch mix',
+  phases: [
+    { title: 'Create', detail: 'theme composer, sound designer, vocal producer' },
+    { title: 'Mix', detail: '30s intro audio sketch + listening notes' },
+  ],
+}
+
+const ROOT = '/home/jgon/project/art/mrmas'
+const AUD = ROOT + '/audio'
+const COMMON = `You are a senior audio producer on "MR. MAS", an animated satire of the AI race (Sam Altman -> MAS MANALT). The show's primary visual style is PIXEL ART (adventure-game structure), with rare motivated style switches (1-bit for 1993, early-web palette for 2008-14, GLYPH tokens for dark foreshadowing). The 30s intro runs on a 96 BPM / 24 fps grid (15 frames per beat, 60 per bar, 12 bars, 720 frames).
+READ: ${ROOT}/show/_sources/design/final.md section "## 4. Music & sound" (concept "The Knee": F minor, hook F F F F G Ab C F, tiers of fidelity, cue sheet with exact frame hits) and "### Shot table" in section 3 (timing of every hit); ${ROOT}/studio/INTRO_PIXEL_BRIEF.md (the new pixel-first intro with switch moments).
+TOOLS: Python venv at ${AUD}/.venv (numpy, scipy, soundfile, pedalboard 0.9.25, pretty_midi, mido, tinysoundfont). Use ${AUD}/.venv/bin/python. You may pip install more packages into your OWN new venv (e.g. ${AUD}/.venv-<key>) if needed, and download free/CC0/permissively licensed samples or SoundFonts (e.g. GeneralUser GS; small piano/strings SoundFonts; verify license, keep total downloads < 3 GB, store under ${AUD}/samples/ with a LICENSES.md). ffmpeg is bundled at ${ROOT}/studio/node_modules/@remotion/compositor-linux-x64-gnu/ffmpeg (run with LD_LIBRARY_PATH set to that folder) — encoders: libmp3lame, aac, libopus.
+QUALITY BAR: must sound like a real show's audio, NOT corny: no meme sounds, no cheesy retro clichés, tasteful and cinematic. Mix to about -14 LUFS integrated, -1 dBTP; export WAV masters + MP3 (192k+) previews.
+ETHICS: never clone or imitate a real person's voice from recordings; synthetic voices must be generic/stock voices or designed voices; note licenses of any TTS model used.
+You own files under ${AUD}/<key>/ only (scripts + outputs) — other audio agents work in parallel. Final message: what you made (paths), how it was made, what's strong, what's weak, and what external resources (APIs, instruments, performers) would most improve it.`
+
+phase('Create')
+const made = (await parallel([
+  { key: 'theme', prompt: `${COMMON}
+TASK (key: theme). Compose and produce the INTRO THEME "The Knee (Main Title)".
+SHOWRUNNER NOTES (binding, latest wins):
+ - The soundtrack as a whole should sit BETWEEN PIANO, ORCHESTRAL and BIG BAND — NOT big band all the way through. Big-band brass is a color for accents (e.g. name-card hits, the title), not the engine.
+ - It needs SOME JAZZ FEEL (extended harmony: m9/m11, maj7#11, altered dominants, quartal/sus voicings; a light swing or swung ostinato; walking bass lines in places; muted trumpet or sax color moments).
+ - It must still give an overall feel of 8-BIT MOTIFS: the knee motif (F F F F G Ab C F) and key figures appear as tasteful chip voices (pulse/square/triangle/noise, 16-bit sample-chip) that stay present across the piece as its identity — even when piano/orchestra carry the weight.
+ - Original; never copy an existing melody. Nothing corny.
+Timing: each variation exactly 30.000 s, locked to the 96 BPM / 24 fps grid (swung 2nd eighth = 10 frames after the beat), hitting the cue sheet: name-card hits f240/300/360/420, 'music fired' mute f495-509 and slam f510, final hit f630 as a voicing with NO third (quartal/sus — 'unclear which side' in harmony), ding f705. Tiers of fidelity still apply (dark room -> 1993 1-bit -> 2008-14 early chip -> dinner full -> title full), realised as instrumentation/fidelity changes.
+Make FOUR VARIATIONS (give each a short name and a one-paragraph description in ${AUD}/theme/VARIATIONS.md, including the rough balance piano / orchestral / big-band / chip):
+ V1 'CHIP CHAMBER JAZZ' (recommended): felt piano with jazz voicings + chamber strings + a chip lead carrying the knee head; soft brushes and upright bass with a light swing in the middle; brass section only as short stabs on the four name-card hits; orchestral swell into a quartal title chord. Balance ~ piano 35 / orchestra 30 / big band 10 / chip 25.
+ V2 'ORCHESTRAL NOIR, CHIP HEART': cinematic strings, low brass, timpani and piano; the 8-bit motif as a recurring ostinato/heartbeat that keeps poking through; one muted-trumpet jazz phrase over the dinner; mostly straight time with jazz harmony; big but restrained finish.
+ V3 'PIXEL SWING': the most playful — chip lead + piano trio (upright bass, brushes/ride) swinging; horn stabs only on the cards; strings enter for the skyline/title.
+ V4 'PIANO & PIXELS' (intimate/minimal): jazz felt piano + chip arps and pulse bass, a single cello/clarinet line, very small orchestral lift at the title — the version that would suit quieter episodes' intros.
+Production: composition scripts (MIDI on the grid via pretty_midi with swing + humanization), numpy synths for the chip voices (band-limited, subtle bit-crush only where era-appropriate) and 808 sub where useful; SoundFont/samples for piano, strings, brass, winds, upright bass, drums (tinysoundfont + GeneralUser GS or better free libraries), mix/master with pedalboard (room/hall reverb, gentle tape saturation, bus compression). Export ${AUD}/theme/theme-V1-chipchamber.{wav,mp3}, theme-V2-orchestralnoir.{wav,mp3}, theme-V3-pixelswing.{wav,mp3}, theme-V4-pianopixels.{wav,mp3}, stems per variation (${AUD}/theme/stems/V<n>-*.wav), ${AUD}/theme/cues.json, and a 12-second 'motif study' mp3 (the knee head through each tier). Analyse loudness/spectrum/transient timing vs cues and iterate until each sounds like a real title theme, not MIDI.` },
+  { key: 'sfx', prompt: `${COMMON}
+TASK (key: sfx). Build the SFX BOARD for the intro and the show's pixel world, procedurally (numpy + pedalboard; you may also use CC0 samples you verify). ~30 sounds, each a short WAV + MP3, tuned to F minor where pitched, premium not corny: dark-room drone, server hum, felt-key click/keyboard typing (soft), post click, Orb servo, Orb scan sweep, GLYPH shimmer (the sound of the world turning to tokens — subtle, eerie), glyph dissolve/blow-away, render-front sweep (palette upgrade), 1993 alert-dialog 'bonk', dialog OK click, tape start/spin-up, collar pops (tuned), camera shutter (freeze-card), freeze-card hit layer, keycap popcorn, flame whoomph, klaxon (short, tasteful), paper flutter, ceiling burst + rocket roar, landing thunk, rubber stamp (tuned to C), neon buzz + letter clunk, odometer ratchet, 'music fired' dry piano note, heart-avalanche celesta gliss, tower pop plucks (the knee notes F F F F G Ab C), siren whoop (tuned F), ka-ching (tasteful), bell ding F6.
+ALSO: CHARACTER VOICE BLIPS for pixel dialogue boxes (the adventure-game convention of per-character text 'babble'): design a distinct, tasteful blip voice per character (MAS: soft low rounded sine blip, slow; NOLE: bright, fast, slightly distorted square; GERG: rapid clicky; ALYI: breathy, reverberant; MARIO: woody, nervous; RUMPT: brassy, loud), and render each saying a sample line as text-synced babble (use the line lengths: Nole "I came up with the name!", Mas "super."). Export to ${AUD}/sfx/ with a manifest ${AUD}/sfx/manifest.json [{id, file, description, pitch, duration, useAt}].` },
+  { key: 'vocals', prompt: `${COMMON}
+TASK (key: vocals). Produce VOCAL samples:
+ 1. COLD-OPEN VO: Mas's line "near the singularity; unclear which side." — soft, close-mic, measured, a real pause at the semicolon, 'side' left hanging, delivered in about 2.5-3.0 s. Use a local open-source TTS with a permissive license (e.g. Kokoro-82M, Apache-2.0, CPU; install in your own venv ${AUD}/.venv-vocals with CPU-only torch; if it fails, try Piper or another permissive model) with 3-4 different STOCK voices; post-process (high-pass, gentle compression, small dark-room reverb, subtle saturation, time/pitch tweaks to hit the timing). Also 2 takes of Nole's "I came up with the name!" (bright, emphatic) and Mas's "super." (flat, tiny smile).
+ 2. 'FEEL THE AGI' GANG CHANT: whispered "feel… the…" then a shouted "A-G-I!" — layer multiple TTS voices/takes, pitch and timing offsets, room ambience, to sound like a small group in a stone room (tasteful, a little eerie).
+ 3. WORDLESS CLOSE-HARMONY VOCAL PAD for the title hit (jazz-vocal-group feel, e.g. a quartal 'aah/doo' voicing on F), plus a short scat-like 'doo-bah' vocal stab option for a name-card hit, via formant synthesis or layered processed voices; 4 s with a reverb tail.
+Export to ${AUD}/vocals/ (WAV + MP3) with ${AUD}/vocals/README.md listing each file, the voice/model used, its license, and processing. State clearly these are synthetic stock voices (no cloning) and that a human performer would likely beat them for the Mas line.` },
+].map(t => () => agent(t.prompt, { label: `audio:${t.key}`, phase: 'Create' }).then(r => ({ key: t.key, report: r }))))).filter(Boolean)
+
+phase('Mix')
+const mix = await agent(`${COMMON}
+TASK (key: mix). The theme, SFX and vocals are done (reports below). Build a 30.000 s INTRO AUDIO SKETCH: theme variation V1 (chip chamber jazz) + the SFX placed at their exact frames from the shot table / INTRO_PIXEL_BRIEF (convert frames to seconds at 24 fps) + the cold-open VO (best take, starting at f24) + the chant at f285-307 + choir under the final hit. Also make versions with V2, V3 and V4. Balance so VO is intelligible, SFX sit in the music, nothing corny. Export ${AUD}/mix/intro-sketch-V1.{wav,mp3} … intro-sketch-V4.{wav,mp3}, and ${AUD}/mix/timeline.json (every event with frame, time, file, gain). Also write ${AUD}/LISTENING_GUIDE.md: a short guide for the showrunner — what to listen for in each file, what's placeholder, and the top external resources that would upgrade quality (e.g. a human voice actor, ElevenLabs Voice Design/Music API, a composer, specific free instrument libraries).
+REPORTS:
+${made.map(m => `== ${m.key} ==\n${m.report}`).join('\n\n')}`, { label: 'audio:mix', phase: 'Mix' })
+return { made, mix }
