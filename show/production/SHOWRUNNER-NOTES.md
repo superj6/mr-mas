@@ -14,6 +14,16 @@
      - Act Four: staff hearts on his goodbye post, the board's phones, "STAFF AND INVESTORS PUSH…"
      - the egg-timer fix
      - Assemble a complete film.
+   - **Act Four: why the board talks about bringing him back (agreed 2026-09-28).** Showrunner: "the transition to we've been planning to bring him back still makes no sense". This is folded into step 1, with no timing change:
+     - **The Nov 18 night phones make the pressure about his return:**
+       - staff: "bring him back", with the hearts piling up
+       - Macrosoft: "Reinstate him."
+       - investors: "the share sale's off without him"
+     - **Neleh's line** becomes "They all want him back. As if it wasn't allowed. It was. The charter, footnote three. I've read it four times tonight." It's one EL re-record that must fit the old slot.
+     - **The Mario call** reads as the board's counter-move: they try to replace him so they don't have to give in. His "no" leaves them stuck.
+     - **The Nov 19 lobby opens on Mas's phone:** "NOPEAI BOARD: can you come in tomorrow? let's talk.", then his badge post. It's signed by the board, not a named person.
+     - **The ticker** reads "STAFF AND INVESTORS PUSH TO BRING MANALT BACK".
+     - The chain: pressure → they try to replace him → they fail → they invite him in → the talks stall → Ttemme → Macrosoft → the letter.
    - **Step 2 (ADDED scenes):**
      - **Act Two, after "AI CHIPS · QTY: MORE":** about 4–5 s, wordless, of staff racking the new INVIDIA boards.
      - **Act Three, before the Tidder post:** about 10 s, wordless, of the Sep 25, 2023 office party for ChatGTP's voice and image launch. Staff cheer Mas, and **Alyi is there, warm with Mas** (a toast, a shared laugh), so his vote later lands harder.
