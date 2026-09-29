@@ -102,7 +102,7 @@ Videos (`*.mp4` and similar), dependencies, the third-party sample libraries and
 
 **The complete, verified step-by-step guide is [`docs/RENDERING.md`](docs/RENDERING.md).** In short:
 
-0. **Where the repo lives.** Many scripts still assume the repo sits at `/home/jgon/project/art/mrmas`. Clone there, symlink that path to your clone, or apply the one-line path rewrite in [`docs/RENDERING.md` → paths](docs/RENDERING.md#11-paths-where-the-repo-must-live). Making the paths portable is on the to-do list.
+0. **Where the repo lives.** Anywhere. Every script finds the project root through the empty `.mrmas-root` marker at the top of the repo (`MRMAS_ROOT` overrides it); see [`docs/RENDERING.md` → paths](docs/RENDERING.md#11-paths-clone-anywhere).
 1. **Picture toolchain.** Remotion ships its own ffmpeg; Chrome Headless Shell downloads itself.
    ```bash
    cd studio

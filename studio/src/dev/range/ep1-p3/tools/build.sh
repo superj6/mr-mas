@@ -6,9 +6,10 @@
 # the additions; the OST engine for the Rhodes)  4 the subtitle track (tools/subs.py)  5 mux (bundled ffmpeg: picture,
 # sound; then tools/mux_subs.py adds the subtitles as a soft mov_text stream, default on)  6 three key stills (p250, p318, p360) + the contact
 # sheet + the blind sheet, all pulled from the ENCODED mp4.  Scratch frames and the bundle are deleted at the end.
+REPO=${MRMAS_ROOT:-$(d=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd) || exit 1; while [ ! -e "$d/.mrmas-root" ]; do { [ "$d" = / ] || [ "$d" = . ]; } && { echo "MR. MAS: no .mrmas-root above ${BASH_SOURCE[0]}; set MRMAS_ROOT" >&2; exit 1; }; d=$(dirname "$d"); done; echo "$d")} || exit 1   # the project root (phase 1, docs/ORGANIZATION-PLAN.md §4)
 set -euo pipefail
 S=${1:?scratch dir}
-ROOT=$(cd ../ && pwd)
+ROOT=$REPO
 OUT=$ROOT/out/lookdev/range/ep1
 FF=$ROOT/studio/node_modules/@remotion/compositor-linux-x64-gnu
 PYM=$ROOT/audio/.venv-mix/bin/python

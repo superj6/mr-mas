@@ -10,6 +10,23 @@ Run (repo root):
 Reads only the animatic and palette.ts; writes studio/src/dev/outro/a/standin-data.ts and a PNG proof into
 the scratch folder given by OUTRO_A_SCRATCH (default: the session scratch).
 """
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import base64
 import os
 import re
@@ -19,7 +36,7 @@ import sys
 import numpy as np
 from PIL import Image
 
-ROOT = '/home/jgon/project/art/mrmas'
+ROOT = REPO
 SRC = f'{ROOT}/out/ep01/act4/animatic/act4-animatic-v4-picture.mp4'
 PAL_TS = f'{ROOT}/studio/src/shared/pixel/palette.ts'
 OUT_TS = f'{ROOT}/studio/src/dev/outro/a/standin-data.ts'

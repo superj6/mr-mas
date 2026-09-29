@@ -22,6 +22,23 @@ Frames are outro frames (24 fps; the file starts at o0): Ep1's outro is 225 fram
 frames of black. One owner per sound (OST-BIBLE rule 11): the SFX own the servo, the scan, the grains, the chime and the
 moth; the score leaves them room (bar 1.3-1.4 has no music, 3.1 and 3.4 have no score onset).
 """
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import json
 import os
 import sys
@@ -31,7 +48,7 @@ import pyloudnorm as pyln
 import soundfile as sf
 from scipy.signal import butter, lfilter, resample_poly, sosfilt
 
-ROOT = '/home/jgon/project/art/mrmas'
+ROOT = REPO
 SC = sys.argv[1]
 OUT = os.path.join(ROOT, 'out/ep01/outro')
 NAME = 'outro-b-v3'

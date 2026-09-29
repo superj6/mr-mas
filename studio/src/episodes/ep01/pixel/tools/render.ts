@@ -38,7 +38,13 @@ import {prepare, native, picture, review, browserFrames, glyphFrames, srt, tcOf,
 import {otext} from '../text';
 import {drawHeadSlate} from '../standin';
 
-const REPO = '/home/jgon/project/art/mrmas';
+const REPO = process.env.MRMAS_ROOT ?? repo();
+function repo(): string {   // the project root: the nearest .mrmas-root above the cwd (phase 1; this tool can run bundled from scratch)
+  for (let d = process.cwd(); ; d = path.dirname(d)) {
+    if (fs.existsSync(path.join(d, '.mrmas-root'))) return d;
+    if (d === path.dirname(d)) throw new Error('MR. MAS: no .mrmas-root above the cwd; set MRMAS_ROOT');
+  }
+}
 const STUDIO = `${REPO}/studio`;
 const PIXEL = `${STUDIO}/src/episodes/ep01/pixel`;
 const FFDIR = `${STUDIO}/node_modules/@remotion/compositor-linux-x64-gnu`;

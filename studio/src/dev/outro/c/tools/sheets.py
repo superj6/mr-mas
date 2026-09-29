@@ -13,6 +13,23 @@ Writes out/lookdev/outro/c/
        qa/qa.json              per-line read time, contrast and decode fidelity; the band's stillness over all frames
 Run:   audio/.venv-theme/bin/python studio/src/dev/outro/c/tools/sheets.py <SC>
 """
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import glob
 import json
 import os
@@ -22,7 +39,7 @@ import sys
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
-ROOT = '/home/jgon/project/art/mrmas'
+ROOT = REPO
 OUT = f'{ROOT}/out/lookdev/outro/c'
 PRE = 24
 OUT_F = 192          # the outro: 3 bars at 96 BPM + the ring-out = 8.0 s (fourth pass; was 180)

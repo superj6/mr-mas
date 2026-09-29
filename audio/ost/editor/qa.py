@@ -31,6 +31,23 @@ files, not the cue sheets' numbers:
 The engine's own cue-sheet QA (warnings, balance, f_major with the pedal) is copied alongside for comparison.
 Writes editor/qa.json, and (full run or --loops) editor/qa-loops.json: every loop file on disk, parts included.
 """
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import glob
 import json
 import os
@@ -52,7 +69,7 @@ from engine import analysis as EA          # noqa: E402  (the corrected meters a
 from engine import mix as EM               # noqa: E402
 from engine.core import Note               # noqa: E402
 
-FFDIR = '/home/jgon/project/art/mrmas/studio/node_modules/@remotion/compositor-linux-x64-gnu'
+FFDIR = os.path.join(REPO, 'studio/node_modules/@remotion/compositor-linux-x64-gnu')
 SR = 48000
 KNEE_PC = [0, 0, 0, 0, 2, 3, 7, 0]
 

@@ -16,6 +16,23 @@ edit; balance and swing come from the album-edit cue sheet and MIDI), and the LR
 short-term meter (engine/mix.short_term_lufs, K-weighting along time).
 Writes editor/distinct.json.
 """
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import json
 import os
 import sys
@@ -31,7 +48,7 @@ TRACKS = ['mm01-water-line', 'mm02-his-version', 'mm05-the-more-you-buy', 'mm06-
           'mm07-how-to-fire-a-ceo', 'mm08-the-falling-tile', 'mm09-the-boards-side', 'mm10-his-side-745',
           'mm11-the-return', 'mm13-outside-intended-scope', 'mm19-renamed-it']
 ALBUM_EDIT = {'mm10-his-side-745', 'mm11-the-return'}     # the album master is the edit: use its cue sheet + MIDI
-V1 = '/home/jgon/project/art/mrmas/audio/theme/theme-V1-chipchamber.wav'
+V1 = os.path.join(REPO, 'audio/theme/theme-V1-chipchamber.wav')
 V1_BAL = dict(piano=34, orch=28, bigband=11, chip=27)
 
 
@@ -97,7 +114,7 @@ def main():
               flush=True)
     r = feats(read(V1))
     r.update(id='MT-V1 (locked title)', mm='MT', title='The Knee (Main Title) V1', balance=V1_BAL,
-             swing_share=swing_share('/home/jgon/project/art/mrmas/audio/theme/midi/theme-V1-chipchamber.mid'))
+             swing_share=swing_share(os.path.join(REPO, 'audio/theme/midi/theme-V1-chipchamber.mid')))
     rows.append(r)
 
     def vec(r):

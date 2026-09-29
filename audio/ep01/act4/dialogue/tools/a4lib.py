@@ -16,6 +16,23 @@ production dialogue pass needs:
 Stock Kokoro American-English packs only (lang 'a'); no reference audio of any real person is loaded.
 """
 from __future__ import annotations
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 
 import os
 import re
@@ -23,7 +40,7 @@ import sys
 import warnings
 
 warnings.filterwarnings("ignore")
-sys.path.insert(0, "/home/jgon/project/art/mrmas/audio/voices/tools")
+sys.path.insert(0, os.path.join(REPO, "audio/voices/tools"))
 
 import numpy as np
 import soundfile as sf

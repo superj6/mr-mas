@@ -3,10 +3,26 @@ board (shots-v4.json): one table per sequence, every shot with its locked length
 lines as placed, its must-read text with the read floor, its story marks, and what the animatic draws it from.
 Generated: re-run after lock_v4.py. Run:  python3 studio/src/episodes/ep01/act4/animatic/tools/shotlist_v4.py
 """
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import json
 import os
 
-REPO = "/home/jgon/project/art/mrmas"
 PROD = os.path.join(REPO, "show/episodes/ep01/production/act4")
 L = json.load(open(os.path.join(PROD, "shots-locked-v4.json")))
 LED = {r["id"]: r for r in json.load(open(os.path.join(REPO, "out/ep01/act4/animatic/layout-v4.json")))}

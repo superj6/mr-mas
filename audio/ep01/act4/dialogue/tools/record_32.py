@@ -16,6 +16,23 @@ What it does (tighten-changes §1-§4):
   * restages the 7 unvoiced posts on the 3.2 board (a4-26a-01 moves to sc 27); their scratch reads are untouched.
 """
 from __future__ import annotations
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 
 import json
 import os
@@ -36,7 +53,6 @@ import cast_a4 as CA
 import lines_a4_32 as S
 from record import voices as voices_31, rel, score_take, MODEL, LIP_CAMS, CUE_CAMS
 
-REPO = "/home/jgon/project/art/mrmas"
 ROOT = os.path.join(REPO, "audio/ep01/act4/dialogue")
 DATE = "2026-09-25"
 SR = L.SR

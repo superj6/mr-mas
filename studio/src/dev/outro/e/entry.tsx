@@ -102,7 +102,7 @@
 //   # 4. key stills + sheets from the ENCODED mp4, and the 480x270 check copies (needs Pillow)
 //   python3 src/dev/outro/e/tools/sheets.py $S/stage $S/frames
 //   # 5. into place (renames), and the top-level copy
-//   (cd $S/stage && for f in *.mp4 *.wav *.png check/*.png; do mv -f "$f" /home/jgon/project/art/mrmas/out/lookdev/outro/e/"$f"; done)
+//   (cd $S/stage && for f in *.mp4 *.wav *.png check/*.png; do mv -f "$f" "$REPO"/out/lookdev/outro/e/"$f"; done)
 //   cp ../out/lookdev/outro/e/outro-e-ep1-1080p.mp4 ../out/lookdev/outro/.outro-e.tmp && mv -f ../out/lookdev/outro/.outro-e.tmp ../out/lookdev/outro/outro-e.mp4
 //   # fast pixel-exact preview / the text + stillness checks, no Remotion:
 //   npx esbuild src/dev/outro/e/tools/preview.ts --bundle --platform=node --outfile=$S/oe.js && node $S/oe.js $S/pv 2 o:30 ep:10 verify

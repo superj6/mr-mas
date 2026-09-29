@@ -9,8 +9,25 @@ Library files used: sfx/wav/collar_pop_Ab4.wav, collar_pop_C5.wav, bell_ding_F6.
                     vocals/vo/mas_coldopen_michael.wav (cold-open VO, placed at f24).
 Everything else is synthesized here.
 
-Run: /home/jgon/project/art/mrmas/audio/.venv/bin/python build_temp_track.py
+Run: audio/.venv/bin/python build_temp_track.py
 """
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import json, os, subprocess
 import numpy as np
 import soundfile as sf
@@ -25,10 +42,10 @@ N = N_FRAMES * SR // FPS      # 1,440,000 samples = 30.000 s
 SPF = SR // FPS               # 2000 samples per frame
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-AUDIO = os.path.dirname(HERE)
+AUDIO = os.path.join(REPO, 'audio')
 SFX = os.path.join(AUDIO, 'sfx', 'wav')
 VO = os.path.join(AUDIO, 'vocals', 'vo', 'mas_coldopen_michael.wav')
-FFDIR = '/home/jgon/project/art/mrmas/studio/node_modules/@remotion/compositor-linux-x64-gnu'
+FFDIR = os.path.join(REPO, 'studio/node_modules/@remotion/compositor-linux-x64-gnu')
 
 # v2.1: no "music fired" mute; bar 9 is the roll call (8 stabs)
 

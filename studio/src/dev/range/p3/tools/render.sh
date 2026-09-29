@@ -1,9 +1,10 @@
 #!/bin/bash
 # range/p3 full render: probe the GPU, render in chunks (the ANGLE backend leaks on long runs), concat, mux the
 # temp sound.   tools/render.sh <bundle-dir> <scratch-dir> <out.mp4> [concurrency]
+REPO=${MRMAS_ROOT:-$(d=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd) || exit 1; while [ ! -e "$d/.mrmas-root" ]; do { [ "$d" = / ] || [ "$d" = . ]; } && { echo "MR. MAS: no .mrmas-root above ${BASH_SOURCE[0]}; set MRMAS_ROOT" >&2; exit 1; }; d=$(dirname "$d"); done; echo "$d")} || exit 1   # the project root (phase 1, docs/ORGANIZATION-PLAN.md §4)
 set -e
 B=$1; S=$2; OUT=$3; C=${4:-1}
-STUDIO=/home/jgon/project/art/mrmas/studio
+STUDIO=$REPO/studio
 FF=$STUDIO/node_modules/@remotion/compositor-linux-x64-gnu
 export LD_LIBRARY_PATH=$FF
 cd $STUDIO

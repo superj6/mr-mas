@@ -7,7 +7,16 @@ import {createRequire} from 'module';
 import * as path from 'path';
 import * as fs from 'fs';
 
-const REPO = '/home/jgon/project/art/mrmas';
+const REPO = process.env.MRMAS_ROOT ?? repo();
+function repo() {   // the project root: the nearest .mrmas-root above this script or the cwd (phase 1)
+  for (const start of [path.dirname(new URL(import.meta.url).pathname), process.cwd()]) {
+    for (let d = start; ; d = path.dirname(d)) {
+      if (fs.existsSync(path.join(d, '.mrmas-root'))) return d;
+      if (d === path.dirname(d)) break;
+    }
+  }
+  throw new Error('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT');
+}
 const PIXEL = `${REPO}/studio/src/episodes/ep01/pixel`;
 const EL = path.resolve(process.env.ELDIR ?? `${REPO}/show/episodes/ep01/production/full-v3/assembly/el`);   // ELDIR: assembly/el-v31 for v3.1
 const req = createRequire(`${REPO}/studio/package.json`);

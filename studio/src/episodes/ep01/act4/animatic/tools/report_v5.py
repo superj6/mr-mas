@@ -29,6 +29,23 @@ Nobody watched or listened to anything to make these numbers. Run (repo root; on
 it decodes the picture mp4 at 160 x 90 and the animatic's audio at low priority; put it through ops/heavy.sh):
   ops/heavy.sh audio/.venv-mix/bin/python studio/src/episodes/ep01/act4/animatic/tools/report_v5.py
 """
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import json
 import os
 import re
@@ -43,7 +60,6 @@ for _v in ("OPENBLAS_NUM_THREADS", "OMP_NUM_THREADS", "MKL_NUM_THREADS", "NUMEXP
 import numpy as np  # noqa: E402
 import soundfile as sf  # noqa: E402
 
-REPO = "/home/jgon/project/art/mrmas"
 P = lambda *a: os.path.join(REPO, *a)  # noqa: E731
 SR, FPS = 48000, 24
 SPF = SR // FPS

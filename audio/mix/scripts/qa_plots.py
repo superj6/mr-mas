@@ -1,5 +1,22 @@
 """QA sheet per variation: short-term loudness of each layer + master spectrogram with cue markers,
 and an onset check on the new roll-call bar (music-only master)."""
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import json
 import sys
 
@@ -10,7 +27,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
-MIX = '/home/jgon/project/art/mrmas/audio/mix'
+MIX = os.path.join(REPO, 'audio/mix')
 SR, SPF = 48000, 2000
 PARTS = ['master', 'music', 'sfx', 'vo', 'chant', 'choir']
 COL = dict(master='#222222', music='#3b6fb6', sfx='#d08a2e', vo='#c0392b', chant='#7d3c98', choir='#2e8b57')

@@ -7,10 +7,11 @@
 #    block aligned to even coordinates, so 4:2:0 chroma is exact. Remotion's own encoder filters chroma across pixel
 #    edges (measured worst-frame PSNR 29.6 dB vs 35.2 dB at 1080p on the dithered paper fade, same crf).
 # 3. Verifies 720 frames, 24/1, size, pix_fmt, and deletes the PNG dumps.
+REPO=${MRMAS_ROOT:-$(d=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd) || exit 1; while [ ! -e "$d/.mrmas-root" ]; do { [ "$d" = / ] || [ "$d" = . ]; } && { echo "MR. MAS: no .mrmas-root above ${BASH_SOURCE[0]}; set MRMAS_ROOT" >&2; exit 1; }; d=$(dirname "$d"); done; echo "$d")} || exit 1   # the project root (phase 1, docs/ORGANIZATION-PLAN.md §4)
 set -euo pipefail
 WHAT=${1:-1080}   # render policy: 1080p max; "4k"/"all" kept only for legacy use
-STUDIO=/home/jgon/project/art/mrmas/studio
-OUT=/home/jgon/project/art/mrmas/out/season/intro/picture
+STUDIO=$REPO/studio
+OUT=$REPO/out/season/intro/picture
 TMP=${2:-/tmp/claude-1000/-home-jgon-project-art-mrmas/a5e7723c-6ab4-4824-a1ed-8e367fdb82e5/scratchpad/master}
 FFD=$STUDIO/node_modules/@remotion/compositor-linux-x64-gnu
 FF() { LD_LIBRARY_PATH=$FFD "$FFD/ffmpeg" "$@"; }

@@ -36,6 +36,23 @@ Then: audio/.venv-casting/bin/python studio/src/episodes/ep01/act4/animatic/tool
 Record: show/episodes/ep01/production/act4/timing-v5.md.
 """
 from __future__ import annotations
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 
 import json
 import math
@@ -46,7 +63,6 @@ import sys
 import wave
 from collections import OrderedDict
 
-REPO = "/home/jgon/project/art/mrmas"
 P = lambda *a: os.path.join(REPO, *a)  # noqa: E731
 PROD = P("show/episodes/ep01/production/act4")
 REEL_JSON = P("show/reel/ep01-act4-v5.json")

@@ -12,6 +12,23 @@ exactly like the same bars inside the full cue), and render_sf2 pitch-bend / CC 
 - Pitch shifting = polyphase resampling (scipy.resample_poly) from 44.1k to 48k.
 """
 from __future__ import annotations
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 
 import glob
 import json
@@ -26,13 +43,13 @@ from scipy import signal
 
 from .core import SR, db, to_stereo, midi_hz
 
-SAMPLES = '/home/jgon/project/art/mrmas/audio/samples'
+SAMPLES = os.path.join(REPO, 'audio/samples')
 ROOT = f'{SAMPLES}/theme-pack'
 SFX_ROOT = f'{SAMPLES}/vsco2ce-sfx'
 GU = f'{SAMPLES}/generaluser-gs/GeneralUser-GS.sf2'
 SALAMANDER = f'{ROOT}/SalamanderGrandPiano-SF2-V3+20200602/SalamanderGrandPiano-V3+20200602.sf2'
 UPRIGHT_KW = f'{ROOT}/UprightPianoKW-SF2-20220221/UprightPianoKW-20220221.sf2'
-CACHE = '/home/jgon/project/art/mrmas/audio/ost/cache'
+CACHE = os.path.join(REPO, 'audio/ost/cache')
 os.makedirs(CACHE, exist_ok=True)
 
 NOTE_RE = r'([A-Ga-g])(#|b)?(-?\d)'

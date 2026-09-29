@@ -4,8 +4,9 @@
 # Kokoro takes and send nothing. The lock's cut lines are skipped here and cut by el_cut.py from the EL source takes.
 # NEW=1: only the writer's new v3.5 takes (audio/ep01/v35/<seg>/lines-v35.json), before the lock exists (phase 10).
 # Run from the repo root, in ops/heavy.sh. SEGS="act4" limits it; EXTRA="--retake <id>" adds a listening note's retake.
+REPO=${MRMAS_ROOT:-$(d=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd) || exit 1; while [ ! -e "$d/.mrmas-root" ]; do { [ "$d" = / ] || [ "$d" = . ]; } && { echo "MR. MAS: no .mrmas-root above ${BASH_SOURCE[0]}; set MRMAS_ROOT" >&2; exit 1; }; d=$(dirname "$d"); done; echo "$d")} || exit 1   # the project root (phase 1, docs/ORGANIZATION-PLAN.md §4)
 set -uo pipefail
-cd /home/jgon/project/art/mrmas
+cd "$REPO"
 export HF_HUB_OFFLINE=1
 PY=audio/.venv-casting/bin/python; T=audio/ep01/v3-el/tools/el_render.py
 REUSE="audio/ep01/v3-el/sample audio/ep01/v3-el/auditions audio/ep01/v3-el/auditions/principals audio/ep01/v3-el/auditions/sirrah/round2"

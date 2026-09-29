@@ -1,5 +1,22 @@
 """Place the vocal pieces on the 30 s intro clock (t=0 == f0), build an audition reel, and
 (optionally) a preview over whatever theme mixes the music agent has rendered so far."""
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import os, sys, glob
 sys.path.insert(0, os.path.dirname(__file__))
 import numpy as np
@@ -68,7 +85,7 @@ if __name__ == '__main__':
     }
     for f in glob.glob(os.path.join(ROOT, 'intro-layer', '_preview_*')):
         os.remove(f)
-    for th in sorted(glob.glob('/home/jgon/project/art/mrmas/audio/theme/theme-V*.wav')):
+    for th in sorted(glob.glob(os.path.join(REPO, 'audio/theme/theme-V*.wav'))):
         m, sr = sf.read(th)
         if sr != SR or abs(len(m) / SR - INTRO) > 0.05:
             continue

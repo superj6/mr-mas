@@ -14,15 +14,31 @@ FOUR` (draft 5.1) SOUND calls and stage directions; edit-plan-v5 §4-§5; art-ne
 files (audio/sfx/scripts/sounds_4.py).
 
 Run (light, about a second):
-  cd /home/jgon/project/art/mrmas && audio/.venv/bin/python audio/ep01/act4/sfx-v5/spot_v5.py
+  cd <repo> && audio/.venv/bin/python audio/ep01/act4/sfx-v5/spot_v5.py
 """
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import datetime
 import hashlib
 import json
 import os
 from collections import OrderedDict
 
-REPO = "/home/jgon/project/art/mrmas"
 P = lambda *a: os.path.join(REPO, *a)  # noqa: E731
 LOCK_PATH = P("show/episodes/ep01/production/act4/shots-locked-v5.json")
 OUT = P("show/episodes/ep01/production/act4/sfx-v5.json")

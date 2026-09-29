@@ -4,6 +4,23 @@ Kept because the 3.2 tools import from it.
 make_doc.py - write show/episodes/ep01/production/act4/dialogue.md (draft 3.1) from the delivered data
 (lines.json, qa/final_cast.json, auditions/auditions.json, qa/qa.json, reel_cues.json, lines_a4.RETIRED).
 Every number in the doc comes from those files; the prose sections are fixed text below."""
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import json
 import os
 import sys
@@ -13,7 +30,6 @@ import a4lib as AL
 import cast_a4 as CA
 from lines_a4 import SILENT, RETIRED, LINES as SPEC
 
-REPO = "/home/jgon/project/art/mrmas"
 ROOT = os.path.join(REPO, "audio/ep01/act4/dialogue")
 DOC = os.path.join(REPO, "show/episodes/ep01/production/act4/dialogue.md")
 
@@ -488,7 +504,7 @@ def main():
       "only after warm deliveries. `words: [{w, t0, t1, f0, f1}]` is delivered on every voiced row (V.O. included) for picture sync. "
       "Diagnostic strip: [`out/ep01/act4/dialogue/mouth_check.png`](../../../../../out/ep01/act4/dialogue/mouth_check.png).")
     w("")
-    w("A list in draft 3.1 script order. Paths are relative to the repo root (`/home/jgon/project/art/mrmas`).")
+    w("A list in draft 3.1 script order. Paths are relative to the repo root (the folder holding `.mrmas-root`).")
     w("")
     w("```")
     w("{id, scene, speaker, speaker_slug, text, spoken_as, delivery, tag, mode, voiced_in_cut, on_camera,")

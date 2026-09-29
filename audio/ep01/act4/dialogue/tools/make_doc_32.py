@@ -1,6 +1,23 @@
 """make_doc_32.py - write show/episodes/ep01/production/act4/dialogue.md for DRAFT 3.2 (the tightening pass) from the
 delivered data: lines.json, qa/qa.json, qa/final_cast.json, qa/pace-3.2.json, reel_cues.json, lines_a4_32 (the spec) and
 retired/3.1/lines.json (what it replaces). The pass-1 briefs (unchanged) come from tools/doc_briefs_pass1.md."""
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import json
 import os
 import sys
@@ -8,7 +25,6 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lines_a4_32 as S
 
-REPO = "/home/jgon/project/art/mrmas"
 ROOT = os.path.join(REPO, "audio/ep01/act4/dialogue")
 DOC = os.path.join(REPO, "show/episodes/ep01/production/act4/dialogue.md")
 A = "../../../../../audio/ep01/act4/dialogue"

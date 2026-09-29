@@ -2,6 +2,23 @@
 carried through every edit) vs ASR word onsets, and the 24 fps mouth lane coloured by shape.
 Usage: plot_mouth.py out.png id [id ...]
 """
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import json
 import os
 import sys
@@ -15,7 +32,6 @@ import soundfile as sf
 
 import a4lib as L
 
-REPO = "/home/jgon/project/art/mrmas"
 ROOT = os.path.join(REPO, "audio/ep01/act4/dialogue")
 COL = {"A": "#d9534f", "E": "#f0ad4e", "O": "#5bc0de", "M": "#333333", "rest": "#dddddd", "smile": "#9b59b6"}
 

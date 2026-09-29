@@ -19,12 +19,29 @@ A near-photoreal product shot, built procedurally (no downloaded assets, no mode
     nearer eye, motion blur on. Frames 0..119 (the prototype's p0..p119).
 
 Run (Blender 4.5.3 LTS; EEVEE Next on the Intel iGPU, Cycles on the CPU):
-  BL=/home/jgon/Downloads/blender-4.5.3-linux-x64/blender
+  BL=$HOME/Downloads/blender-4.5.3-linux-x64/blender
   $BL -b --factory-startup --python duck.py -- --mode eevee  --out <dir> --frames 0-119 --res 1056x592
   $BL -b --factory-startup --python duck.py -- --mode cycles --out <dir> --frames 0,119 --res 1280x720 --samples 256
 Frames are written as <dir>/f###.png (8-bit sRGB, Khronos PBR Neutral view, Blender's dither on). --blend <path> also saves the scene.
 The two Cycles stills at the arc's ends (f000, f119) are the conditioning inputs for the later outside-layer test.
 """
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import argparse
 import math
 import os

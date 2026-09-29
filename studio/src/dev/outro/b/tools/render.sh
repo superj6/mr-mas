@@ -5,8 +5,9 @@
 # steps (the Remotion render, the OST engine build) each go through ops/heavy.sh (Remotion --concurrency=4,
 # OST_WORKERS=2), so start this in the background and poll it: a heavy step can wait for a slot. Don't run this script
 # itself under ops/heavy.sh (the steps inside would wait on a second slot). About 3-6 min once it has its slots.
+REPO=${MRMAS_ROOT:-$(d=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd) || exit 1; while [ ! -e "$d/.mrmas-root" ]; do { [ "$d" = / ] || [ "$d" = . ]; } && { echo "MR. MAS: no .mrmas-root above ${BASH_SOURCE[0]}; set MRMAS_ROOT" >&2; exit 1; }; d=$(dirname "$d"); done; echo "$d")} || exit 1   # the project root (phase 1, docs/ORGANIZATION-PLAN.md §4)
 set -euo pipefail
-R=/home/jgon/project/art/mrmas
+R=$REPO
 SC=${1:?usage: render.sh <scratch folder>}
 mkdir -p "$SC"
 SC=$(cd "$SC" && pwd)

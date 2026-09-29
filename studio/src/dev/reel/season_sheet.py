@@ -2,10 +2,27 @@
 """Season contact sheet (3 stills per episode: cold open, midpoint, button) + out/season/reels/index.md.
 Stills are pulled from the rendered out/season/reels/epNN.mp4 at the generator's per-beat mark frame
 (beat start + 62% of its length), so the sheet shows exactly what the files contain."""
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import json, glob, os, re, subprocess, tempfile, textwrap
 from PIL import Image, ImageDraw, ImageFont
 
-ROOT = '/home/jgon/project/art/mrmas'
+ROOT = REPO
 OUT = f'{ROOT}/out/season/reels'
 FFD = f'{ROOT}/studio/node_modules/@remotion/compositor-linux-x64-gnu'
 FPS, TITLE = 24, 72

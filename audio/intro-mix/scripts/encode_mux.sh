@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 # Encode the four mixes to AAC-LC 256 kb/s (.m4a) and mux them onto the silent picture masters.
 # Video is stream-copied (no re-encode); the audio in each .mp4 is the same AAC bitstream as the .m4a.
+REPO=${MRMAS_ROOT:-$(d=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd) || exit 1; while [ ! -e "$d/.mrmas-root" ]; do { [ "$d" = / ] || [ "$d" = . ]; } && { echo "MR. MAS: no .mrmas-root above ${BASH_SOURCE[0]}; set MRMAS_ROOT" >&2; exit 1; }; d=$(dirname "$d"); done; echo "$d")} || exit 1   # the project root (phase 1, docs/ORGANIZATION-PLAN.md §4)
 set -euo pipefail
-ROOT=/home/jgon/project/art/mrmas
+ROOT=$REPO
 FFD=$ROOT/studio/node_modules/@remotion/compositor-linux-x64-gnu
 export LD_LIBRARY_PATH=$FFD
 FF="$FFD/ffmpeg -hide_banner -loglevel error -y"

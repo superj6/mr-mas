@@ -10,6 +10,23 @@ in shared scenes". Writes auditions/<slug>/<cand>-<line>.mp3, auditions/<slug>/<
 Run: HF_HUB_OFFLINE=1 audio/.venv-casting/bin/python audio/ep01/act4/dialogue/tools/audition.py
 """
 from __future__ import annotations
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 
 import json
 import os
@@ -23,7 +40,7 @@ import a4lib as L
 import cast_a4 as CA
 from lines_a4 import LINES
 
-ROOT = "/home/jgon/project/art/mrmas/audio/ep01/act4/dialogue"
+ROOT = os.path.join(REPO, "audio/ep01/act4/dialogue")
 AUD = os.path.join(ROOT, "auditions")
 
 EXTRA = {  # audition-only sides where a role has one very short act line (never used in the cut)

@@ -2,8 +2,25 @@
 """seam_frames.py - the v3-assemble pass: each chapter's first and last frame in the film against the same frame of its source
 picture (mean abs difference, 0-255, at 480 x 270), and against the neighbouring source frame, so a one-frame shift would show.
   audio/.venv-casting/bin/python show/episodes/ep01/production/full-v3/assembly/tools/seam_frames.py [variant ...]  -> assembly/seam-frames[-<variants>].json"""
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import json, subprocess, os, numpy as np, sys
-ROOT="/home/jgon/project/art/mrmas"; FFD=f"{ROOT}/studio/node_modules/@remotion/compositor-linux-x64-gnu"; ENV={**os.environ,"LD_LIBRARY_PATH":FFD}
+ROOT=REPO; FFD=f"{ROOT}/studio/node_modules/@remotion/compositor-linux-x64-gnu"; ENV={**os.environ,"LD_LIBRARY_PATH":FFD}
 def frame(path, idx, W=480, H=270):
     if path.endswith(".png"):                      # a held still (v3.2's hum gap): every frame is the image
         r = subprocess.run([f"{FFD}/ffmpeg","-v","error","-i",path,"-vf",f"scale={W}:{H}:flags=area","-f","image2pipe","-c:v","rawvideo","-pix_fmt","rgb24","-"],capture_output=True,env=ENV,check=True).stdout

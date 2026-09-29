@@ -46,6 +46,23 @@ Outputs (out/ep01/act4/animatic/): act4-mix-v4.wav (48 kHz stereo 24-bit), act4-
 act4-mix-v4.cues.json (EDL + measurements), and studio/src/episodes/ep01/act4/animatic/sound-v4.ts (margin labels).
 Run:  audio/.venv-mix/bin/python studio/src/episodes/ep01/act4/animatic/tools/mix_v4.py
 """
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import json
 import os
 from collections import OrderedDict
@@ -55,7 +72,6 @@ import pyloudnorm as pyln
 import soundfile as sf
 from scipy import signal
 
-REPO = "/home/jgon/project/art/mrmas"
 P = lambda *a: os.path.join(REPO, *a)  # noqa: E731
 SR, FPS = 48000, 24
 SPF = SR // FPS

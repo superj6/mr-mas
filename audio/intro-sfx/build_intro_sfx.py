@@ -18,6 +18,23 @@ out/season/intro/picture/intro-events.json exists, matching keys override the sc
 picture-sync.json. Re-run:  audio/.venv/bin/python audio/intro-sfx/build_intro_sfx.py
 """
 from __future__ import annotations
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 
 import hashlib
 import json
@@ -30,7 +47,7 @@ import soundfile as sf
 from scipy import signal
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-AUDIO = os.path.dirname(HERE)
+AUDIO = os.path.join(REPO, 'audio')
 PROJ = os.path.dirname(AUDIO)
 sys.path.insert(0, os.path.join(AUDIO, "sfx", "scripts"))
 from dsp import (SR, FPS, n_of, db, fade, lowpass, highpass, bandpass, biquad_peak, resonator, pulse,  # noqa: E402

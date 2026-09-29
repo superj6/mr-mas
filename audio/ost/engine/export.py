@@ -19,6 +19,23 @@ WAV masters are 24-bit PCM; stems FLAC 24-bit (lossless, ~30 % of WAV in practic
 A full build is ~1.5 MB per second of music (~280 MB per 3 min); draft with stems=False, loop=False.
 """
 from __future__ import annotations
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 
 import datetime
 import json
@@ -36,7 +53,7 @@ from . import analysis
 from .motifs import find_motif, knee_whole_count, MOTIFS
 
 ENGINE_VERSION = 'mrmas-ost-engine 1.1 (2026-09-26: fix1 -- meter axis, sample tuning, render pool, QA 5a-d)'
-FFDIR = '/home/jgon/project/art/mrmas/studio/node_modules/@remotion/compositor-linux-x64-gnu'
+FFDIR = os.path.join(REPO, 'studio/node_modules/@remotion/compositor-linux-x64-gnu')
 FFMPEG = f'{FFDIR}/ffmpeg'
 
 MASTERS = {

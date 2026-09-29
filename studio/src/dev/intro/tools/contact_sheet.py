@@ -8,11 +8,28 @@ Writes <out>/beat-NN_bar.beat_fFFF.png (48 files: one per beat, f0, f15 ... f705
 <out>/_contact-sheet_intro-ep1-beats.png: 8 columns = 2 bars per row, each still at native 480x270 (a 1/4 nearest
 downscale of the 4x frame, so it is the exact pixel art), labelled with frame, bar.beat and the moment on screen.
 """
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import os, shutil, sys
 from PIL import Image, ImageDraw, ImageFont
 
 SEQ = sys.argv[1]
-OUT = sys.argv[2] if len(sys.argv) > 2 else '/home/jgon/project/art/mrmas/out/season/intro/picture/beats'
+OUT = sys.argv[2] if len(sys.argv) > 2 else os.path.join(REPO, 'out/season/intro/picture/beats')
 EDL = [('mcoldopen', 0, 119), ('meras', 120, 224), ('mdinner1', 225, 344), ('mdinner2', 345, 479), ('mrollcall', 480, 539), ('mfinale', 540, 719)]
 moment = lambda f: next(m for m, a, b in EDL if a <= f <= b)
 HANDOFFS = {120, 225, 345, 480, 540}

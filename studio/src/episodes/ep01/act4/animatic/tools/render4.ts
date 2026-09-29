@@ -29,7 +29,13 @@ import {SHOTS} from '../data-v4';
 import {DRAW4 as DRAW} from '../shots4';
 import {Buf} from '../../../../../shared/pixel/px';
 
-const REPO = '/home/jgon/project/art/mrmas';
+const REPO = process.env.MRMAS_ROOT ?? repo();
+function repo(): string {   // the project root: the nearest .mrmas-root above the cwd (phase 1; this tool can run bundled from scratch)
+  for (let d = process.cwd(); ; d = path.dirname(d)) {
+    if (fs.existsSync(path.join(d, '.mrmas-root'))) return d;
+    if (d === path.dirname(d)) throw new Error('MR. MAS: no .mrmas-root above the cwd; set MRMAS_ROOT');
+  }
+}
 const FFDIR = `${REPO}/studio/node_modules/@remotion/compositor-linux-x64-gnu`;
 const FF = `${FFDIR}/ffmpeg`;
 const ENV = {...process.env, LD_LIBRARY_PATH: FFDIR};

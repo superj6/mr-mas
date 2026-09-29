@@ -8,6 +8,23 @@ written to timeline.json with frame, time, file, gain and processing, so the edi
 layers) can rebuild the same balance.
 """
 from __future__ import annotations
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 
 import json
 import os
@@ -18,7 +35,7 @@ import numpy as np
 import soundfile as sf
 from scipy import signal
 
-AUDIO = '/home/jgon/project/art/mrmas/audio'
+AUDIO = os.path.join(REPO, 'audio')
 MIX = f'{AUDIO}/mix'
 SFX = f'{AUDIO}/sfx'
 VOC = f'{AUDIO}/vocals'
@@ -29,7 +46,7 @@ import rollcall                                                     # noqa: E402
 
 SR, FPS, SPF = 48000, 24, 2000
 N = 720 * SPF
-FFDIR = '/home/jgon/project/art/mrmas/studio/node_modules/@remotion/compositor-linux-x64-gnu'
+FFDIR = os.path.join(REPO, 'studio/node_modules/@remotion/compositor-linux-x64-gnu')
 STEM_TRIM = -2.5          # the SFX agent's whole-stem trim (kept so gains match its layout)
 
 MUSIC_NAMES = {'V1': 'V1-chipchamber', 'V2': 'V2-orchestralnoir', 'V3': 'V3-pixelswing', 'V4': 'V4-pianopixels'}
@@ -549,7 +566,7 @@ def main(vs):
     tl.update(dict(
         show='MR. MAS', piece='Intro audio sketch (30.000 s)', fps=FPS, bpm=96, frames=720, duration_s=30.0,
         sample_rate=SR, samples_per_frame=SPF,
-        paths_relative_to='/home/jgon/project/art/mrmas/audio',
+        paths_relative_to=os.path.join(REPO, 'audio'),
         time_rule='time_s = start_frame / 24 (start_frame differs from frame for end- or hit-anchored files)',
         gain_rule='gain_db is applied to the file as-is (files are the other agents\' -14 LUFS / normalised '
                   'masters); then the whole sum goes through the master chain below (measured.master_makeup_db is '

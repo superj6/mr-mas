@@ -24,12 +24,28 @@ recall, then UTMOS22 (paired with a plain whole read of the same words at speed 
 (a question's final lift, a stress's prominence, an echo's contour match). Nobody has listened.
 """
 from __future__ import annotations
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 
 import json, os, re, sys, time, shutil, difflib, warnings
 warnings.filterwarnings("ignore")
 os.environ.setdefault("HF_HUB_OFFLINE", "1")
 HERE = os.path.dirname(os.path.abspath(__file__))
-REPO = "/home/jgon/project/art/mrmas"
 TOOLS = os.path.join(REPO, "audio/ep01/act4/dialogue/tools")
 sys.path.insert(0, TOOLS); sys.path.insert(0, HERE)
 import numpy as np

@@ -9,6 +9,23 @@ SCRIPT v2.1 §9.6):
   shout    -15.5 LUFS integrated over f300-316              ~1 LU under the band's Db hit: a gang shout at full voice
   PAD      -19.5 LUFS integrated over f632-686              ~2 dB over the violas it doubles (~7 LU under the tutti)
 """
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import os, sys, json
 sys.path.insert(0, os.path.dirname(__file__))
 from ivlib import *
@@ -16,7 +33,7 @@ from qa_harmony import pcs
 import pyworld as pw
 from scipy.ndimage import uniform_filter1d
 
-AUDIO = '/home/jgon/project/art/mrmas/audio'
+AUDIO = os.path.join(REPO, 'audio')
 TARGET = dict(whisper=(-21.0, 285, 300), shout=(-15.5, 300, 317), pad=(-19.5, 632, 686))
 
 

@@ -11,10 +11,26 @@ word; yes/no questions without a 1 st final lift; pauses opened where Kokoro ran
 outside the character's guide; pace spread within a scene.
 Also: totals, per-character pace, the conversations' talk time against the plan, and dialogue string-outs.
 """
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import json, os, re, sys, statistics as st, warnings
 warnings.filterwarnings("ignore")
 HERE = os.path.dirname(os.path.abspath(__file__))
-REPO = "/home/jgon/project/art/mrmas"
 sys.path.insert(0, os.path.join(REPO, "audio/ep01/act4/dialogue/tools")); sys.path.insert(0, HERE)
 import numpy as np, soundfile as sf
 import a4lib as L

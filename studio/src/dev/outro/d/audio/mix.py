@@ -18,6 +18,23 @@ out/lookdev/outro/d/ and the scratch folder.
 
 Run (repo root):  audio/.venv-theme/bin/python -B studio/src/dev/outro/d/audio/mix.py --scratch <scratch>
 """
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import argparse
 import json
 import os
@@ -27,10 +44,10 @@ import numpy as np
 import soundfile as sf
 from scipy.signal import butter, sosfilt
 
-sys.path.insert(0, '/home/jgon/project/art/mrmas/audio/ost')
+sys.path.insert(0, os.path.join(REPO, 'audio/ost'))
 from engine.mix import lufs, true_peak   # noqa: E402  (read-only import)
 
-ROOT = '/home/jgon/project/art/mrmas'
+ROOT = REPO
 OUT = f'{ROOT}/out/lookdev/outro/d'
 SR = 48000
 FPS = 24

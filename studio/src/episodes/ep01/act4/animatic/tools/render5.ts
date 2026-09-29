@@ -37,7 +37,13 @@ import {SHOTS, MIX, D6} from '../data-v5';
 import {DRAW5, DRAW5_FAILED, ledger5, missingShots5, textChecks5, OPT5, CANCEL_CLICK} from '../shots5';
 import {COMPARE_LEN, COMPARE_PARTS, CLIP_FROM, CLIP_TO, SLATE} from '../compare5';
 
-const REPO = '/home/jgon/project/art/mrmas';
+const REPO = process.env.MRMAS_ROOT ?? repo();
+function repo(): string {   // the project root: the nearest .mrmas-root above the cwd (phase 1; this tool can run bundled from scratch)
+  for (let d = process.cwd(); ; d = path.dirname(d)) {
+    if (fs.existsSync(path.join(d, '.mrmas-root'))) return d;
+    if (d === path.dirname(d)) throw new Error('MR. MAS: no .mrmas-root above the cwd; set MRMAS_ROOT');
+  }
+}
 const STUDIO = `${REPO}/studio`;
 const FFDIR = `${STUDIO}/node_modules/@remotion/compositor-linux-x64-gnu`;
 const FF = `${FFDIR}/ffmpeg`;

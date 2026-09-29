@@ -9,8 +9,9 @@
 #   LOCK=v31 bash .../el_lock.sh [seg ...]    the v3.1 lock -> assembly/el-v31/;   LOCK=v32 -> assembly/el-v32/, and so on
 # For v3.1 and later the --ep-in values are computed from the EL timelines (the cold open, then the 30 s intro = 720 f and
 # the 2 s card = 48 f, then the acts), with the stick reel's own frame rounding.
+REPO=${MRMAS_ROOT:-$(d=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd) || exit 1; while [ ! -e "$d/.mrmas-root" ]; do { [ "$d" = / ] || [ "$d" = . ]; } && { echo "MR. MAS: no .mrmas-root above ${BASH_SOURCE[0]}; set MRMAS_ROOT" >&2; exit 1; }; d=$(dirname "$d"); done; echo "$d")} || exit 1   # the project root (phase 1, docs/ORGANIZATION-PLAN.md §4)
 set -euo pipefail
-cd /home/jgon/project/art/mrmas
+cd "$REPO"
 LOCKV=${LOCK:-v3}
 LOCKPY=studio/src/episodes/ep01/pixel/tools/lock.py
 declare -A LABEL=([coldopen]='COLD OPEN' [act1]='ACT ONE' [act2]='ACT TWO' [act3]='ACT THREE' [act4]='ACT FOUR' [tag]='TAG')

@@ -21,6 +21,23 @@ Draft 3.1 additions:
     re-recorded or not; rows whose speaker has no visible mouth (V.O., O.S., speaker, off-face) carry mouth: [].
 """
 from __future__ import annotations
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 
 import json
 import os
@@ -38,7 +55,6 @@ from lines_a4 import LINES, MASTER_MADA
 LIP_CAMS = ("on", "reflection", "monitor")          # a mouth is drawn and animated
 CUE_CAMS = LIP_CAMS + ("blueprint", "crowd")        # the speaker is drawn: cues are kept as an option
 
-REPO = "/home/jgon/project/art/mrmas"
 ROOT = os.path.join(REPO, "audio/ep01/act4/dialogue")
 MODEL = "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)"
 LICENSE = ("Kokoro-82M weights + stock voice packs: Apache-2.0; misaki: Apache-2.0; pedalboard: GPL-3.0 (tool only); "

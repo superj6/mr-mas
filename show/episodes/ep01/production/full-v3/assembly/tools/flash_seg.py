@@ -2,6 +2,23 @@
 """flash_seg.py - the v3-assemble pass: the house flash measure (coldopen/tools/flashcheck.py's method, imported) on any
 MP4, streamed frame by frame (160 x 90 area decode) so a long segment doesn't sit in memory.
   audio/.venv-casting/bin/python .../assembly/tools/flash_seg.py <file.mp4> [...]   -> one JSON line per file"""
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import importlib.util
 import json
 import os
@@ -10,7 +27,7 @@ import sys
 
 import numpy as np
 
-ROOT = "/home/jgon/project/art/mrmas"
+ROOT = REPO
 FFD = f"{ROOT}/studio/node_modules/@remotion/compositor-linux-x64-gnu"
 _spec = importlib.util.spec_from_file_location("flashcheck", f"{ROOT}/studio/src/episodes/ep01/pixel/coldopen/tools/flashcheck.py")
 FC = importlib.util.module_from_spec(_spec)

@@ -16,6 +16,23 @@ Run (repo root):  audio/.venv-theme/bin/python -B studio/src/dev/outro/d/tools/b
 It expects in <scratch>: outro-d-ep1-silent.mp4, var-ep1-o200.png, var-ep7-o200.png, var-ep10-o100.png,
 var-ep10-o200.png (it (re)builds the esbuilt preview od.js itself).
 """
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import argparse
 import json
 import os
@@ -25,7 +42,7 @@ import subprocess
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
-ROOT = '/home/jgon/project/art/mrmas'
+ROOT = REPO
 STUDIO = f'{ROOT}/studio'
 OUTD = f'{ROOT}/out/lookdev/outro/d'
 FFD = f'{STUDIO}/node_modules/@remotion/compositor-linux-x64-gnu'

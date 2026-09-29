@@ -15,6 +15,23 @@ stops mid-phrase; 'stop' = the excerpt ends on the track's own designed stop or 
 Starts get a 10 ms fade-in.  Writes ../ost-sampler.mp3 and editor/sampler.json.  The WAV goes to $SAMPLER_WAV_DIR
 (default: this session's scratchpad) and is not a deliverable.
 """
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import json
 import os
 import subprocess
@@ -31,7 +48,7 @@ sys.path.insert(0, OST)
 from engine import mix as EM   # noqa: E402  (the true-peak-aware look-ahead limiter)
 
 T = os.path.join(OST, 'tracks')
-FFDIR = '/home/jgon/project/art/mrmas/studio/node_modules/@remotion/compositor-linux-x64-gnu'
+FFDIR = os.path.join(REPO, 'studio/node_modules/@remotion/compositor-linux-x64-gnu')
 SR = 48000
 GAP = 1.0
 BEAT = 0.625

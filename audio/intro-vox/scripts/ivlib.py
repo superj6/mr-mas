@@ -4,8 +4,25 @@ Builds on the vocal pass's DSP library (audio/vocals/scripts/vlib.py, read-only 
 stock voices, WORLD vocoder, pedalboard. Everything is synthetic; no recording of any real person.
 Intro clock: 24 fps, f0 = 0.000 s, 720 frames = 30.000 s, 48 kHz.
 """
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import os, sys, json, subprocess
-VOC_SCRIPTS = '/home/jgon/project/art/mrmas/audio/vocals/scripts'
+VOC_SCRIPTS = os.path.join(REPO, 'audio/vocals/scripts')
 sys.path.insert(0, VOC_SCRIPTS)
 import numpy as np
 import soundfile as sf
@@ -21,7 +38,7 @@ BUILD = os.path.join(ROOT, '_build')
 # with Kokoro and lands in our cache.
 WORK_DIR = os.path.join(ROOT, '_work')
 SEED_CACHES = [os.path.join(p, 'tts_cache') for p in
-               ('/home/jgon/project/art/mrmas/audio/vocals/_work', os.environ.get('IV_SEED_WORK', '/nonexistent'))]
+               (os.path.join(REPO, 'audio/vocals/_work'), os.environ.get('IV_SEED_WORK', '/nonexistent'))]
 vlib.WORK = WORK_DIR
 import hashlib, shutil
 _orig_tts, _orig_tts_words = vlib.tts, vlib.tts_words

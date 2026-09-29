@@ -3,6 +3,23 @@
 Each tile is labelled with its frame and what the brief says happens there. With `blind`, the tiles carry nothing but
 their order (for the cold reader, who must not be told what a section means).
 """
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import os
 import sys
 
@@ -32,7 +49,7 @@ d = ImageDraw.Draw(sheet)
 
 
 def font(sz, bold=False):
-    for p in ['/home/jgon/project/art/mrmas/studio/node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-700-normal.woff',
+    for p in [os.path.join(REPO, 'studio/node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-700-normal.woff'),
               '/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf' if bold else '/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf']:
         try:
             return ImageFont.truetype(p, sz)

@@ -9,6 +9,23 @@ preview's pixel checks).
 Writes to out/ep01/outro/: outro-b-v3-keyframes.png, outro-b-v3-key-credits.png (o128), outro-b-v3-key-moth.png
 (o212), and qa/ (full-size and 480x270 crops of every toast line, 480x270 frames, qa.json).
 """
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import json
 import os
 import sys
@@ -16,7 +33,7 @@ import sys
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
-ROOT = '/home/jgon/project/art/mrmas'
+ROOT = REPO
 SC = sys.argv[1]
 OUT = os.path.join(ROOT, 'out/ep01/outro')
 QA = os.path.join(OUT, 'qa')

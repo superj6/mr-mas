@@ -9,6 +9,23 @@ between scenes. Post pop-ups are not in it (house rule: unvoiced). The V.O. play
 dialogue) and the laptop-speaker "super." at its (6 LU under), so the reel previews the relative levels. Writes act4-dialogue-reel.mp3 and
 reel_cues.json ([{id, start_s, end_s}]) next to lines.json.
 """
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import json
 import os
 import sys
@@ -19,7 +36,6 @@ import soundfile as sf
 
 import a4lib as L
 
-REPO = "/home/jgon/project/art/mrmas"
 ROOT = os.path.join(REPO, "audio/ep01/act4/dialogue")
 GAP, SCENE_GAP = 0.35, 1.25
 HOLD_BEFORE = {  # seconds of silence before a line, where draft 3.1 prints a hold or a business beat (compressed picture time)

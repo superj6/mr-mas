@@ -10,17 +10,18 @@
 #   render  both cuts (CPU composite, --concurrency=4), muxed: out/lookdev/range/ep1/ep1-p2.mp4 (A), ep1-p2-b.mp4 (B); the matte
 #   review  sheets, blind sheets, key stills, measures (all from the encoded mp4s)
 # Disk: stops if free space is under 5 GB. The take's PNGs (~110 MB) stay in scratch until you delete the scratch.
+REPO=${MRMAS_ROOT:-$(d=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd) || exit 1; while [ ! -e "$d/.mrmas-root" ]; do { [ "$d" = / ] || [ "$d" = . ]; } && { echo "MR. MAS: no .mrmas-root above ${BASH_SOURCE[0]}; set MRMAS_ROOT" >&2; exit 1; }; d=$(dirname "$d"); done; echo "$d")} || exit 1   # the project root (phase 1, docs/ORGANIZATION-PLAN.md §4)
 set -e
 S=${1:?scratch dir}; shift
 STEPS=${*:-take sound render review}
-STUDIO=/home/jgon/project/art/mrmas/studio
+STUDIO=$REPO/studio
 HERE=$STUDIO/src/dev/range/ep1-p2
-OUT=/home/jgon/project/art/mrmas/out/lookdev/range/ep1
+OUT=$REPO/out/lookdev/range/ep1
 IN=$OUT/ep1-p2-inputs
-BL=/home/jgon/Downloads/blender-4.5.3-linux-x64/blender
+BL=$HOME/Downloads/blender-4.5.3-linux-x64/blender
 FFD=$STUDIO/node_modules/@remotion/compositor-linux-x64-gnu
 export LD_LIBRARY_PATH=$FFD
-PY=/home/jgon/project/art/mrmas/audio/.venv-theme/bin/python
+PY=$REPO/audio/.venv-theme/bin/python
 mkdir -p "$S/public/take" "$OUT" "$IN"
 disk() { local free=$(df -BG --output=avail / | tail -1 | tr -dc 0-9); if [ "$free" -lt 5 ]; then echo "STOP: only ${free} GB free"; exit 3; fi; echo "disk: ${free} GB free"; }
 cd $STUDIO

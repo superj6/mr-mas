@@ -18,8 +18,8 @@ How to re-create every file that git does not store. Videos, `node_modules/`, th
 This goes from a fresh clone to `out/season/intro/intro-ep1-V1-1080p.mp4` … `-V4-1080p.mp4`, the four 30.000 s intros (picture plus final mix). The mixes are committed as `audio/intro-mix/intro-ep1-mix-V*.m4a`, so only the picture has to be rendered. It takes about 3 minutes plus the downloads, which end up as about 370 MB of `node_modules` and 220 MB of Chrome Headless Shell.
 
 ```bash
-# 0. Scripts hard-code this path, so clone (or symlink) the repo here. Other options: §1.1.
-cd /home/jgon/project/art/mrmas
+# 0. Clone anywhere and work from the repo root (the scripts find it through the .mrmas-root marker, §1.1).
+cd <your clone>
 
 # 1. Picture toolchain (Remotion + its own Chrome and ffmpeg)
 (cd studio && npm ci && npx remotion browser ensure)
@@ -53,21 +53,9 @@ LD_LIBRARY_PATH=$FFD $FFD/ffprobe -v error -show_entries stream=codec_name,width
 
 ## 1. Setup
 
-### 1.1 Paths: where the repo must live
+### 1.1 Paths: clone anywhere
 
-29 scripts (`.py`, `.sh` and `.ts`) hard-code `/home/jgon/project/art/mrmas`. They include the theme sampler, the SFX `dsp.py`, the vocal and casting tools, the Act Four tools, `encode_mux.sh`, `master.sh` and `render_all.sh`; `grep -rl /home/jgon/project/art/mrmas audio studio/src` lists them. Use one of these options:
-
-```bash
-# A. clone to that path (simplest)
-git clone <repo-url> /home/jgon/project/art/mrmas
-
-# B. symlink that path to wherever you cloned it (one sudo; scripts write through the link into your clone)
-sudo mkdir -p /home/jgon/project/art && sudo ln -sfn "$PWD" /home/jgon/project/art/mrmas
-
-# C. rewrite the constant in your working copy (run from the repo root; edits 29 tracked files)
-grep -rlZ --include='*.py' --include='*.sh' --include='*.ts' --exclude-dir='.venv*' --exclude-dir=node_modules \
-  /home/jgon/project/art/mrmas audio studio/src | xargs -0 sed -i "s#/home/jgon/project/art/mrmas#$PWD#g"
-```
+Since the 2026-09-29 reorg (phase 1, `docs/ORGANIZATION-PLAN.md` §4), no script hard-codes the repo's location. Each one finds the project root at run time: it walks up from its own folder, then from the working directory, to the empty marker file `.mrmas-root` at the repo root. Set `MRMAS_ROOT=<dir>` to override it, for example for a script copied or bundled outside the repo. The Blender path defaults to `~/Downloads/blender-4.5.3-linux-x64/blender`; set `BLENDER` to override it.
 
 Two scripts also default their scratch folder to a session path under `/tmp/claude-1000/…`, and both create it if it's missing. `master.sh` takes a scratch folder as its second argument. `audio/intro-mix/scripts/verify.py` reads `MIX_TMP`.
 
@@ -104,7 +92,7 @@ studio/node_modules/@remotion/compositor-linux-x64-gnu/ffmpeg     (and ffprobe)
 The recipes use these helpers:
 
 ```bash
-FFD=/home/jgon/project/art/mrmas/studio/node_modules/@remotion/compositor-linux-x64-gnu
+FFD=$PWD/studio/node_modules/@remotion/compositor-linux-x64-gnu   # from the repo root
 ff() { LD_LIBRARY_PATH="$FFD" "$FFD/ffmpeg" -hide_banner "$@"; }
 fp() { LD_LIBRARY_PATH="$FFD" "$FFD/ffprobe" -hide_banner "$@"; }
 ```
@@ -114,7 +102,7 @@ fp() { LD_LIBRARY_PATH="$FFD" "$FFD/ffprobe" -hide_banner "$@"; }
 Python 3.12 is required: the pins include numpy 2.5 and torch 2.14. Each audio stage has its own venv under `audio/`, frozen with `pip freeze` into `audio/requirements/<name>.txt`. Create only the ones you need:
 
 ```bash
-cd /home/jgon/project/art/mrmas
+cd <your clone>
 for n in venv venv-theme venv-mix; do
   python3 -m venv audio/.$n
   audio/.$n/bin/pip install -r audio/requirements/$n.txt
@@ -512,7 +500,7 @@ Re-run `npx remotion compositions <entry>` for the current ids.
 ## 4. Known issues and gotchas
 
 1. **The 4K steps in the intro mix (fixed).** `encode_mux.sh` muxes a V1 4K file only if `out/season/intro/picture/intro-ep1-4k-silent.mp4` exists, and `verify.py` checks it only if present. Under the 1080p render policy neither is produced.
-2. **Hard-coded repo path and `/tmp/claude-1000/…` scratch defaults** (§1.1).
+2. **`/tmp/claude-1000/…` scratch defaults** in a few scripts (§1.1). The repo path itself is no longer hard-coded.
 3. **Linux x64 glibc only as written:** the scripts point at `compositor-linux-x64-gnu`.
 4. **Transitive dependencies.** `studio/src/dev/{reel,animatic}/stills.mjs` import `@remotion/bundler` and `@remotion/renderer`, which only arrive through `@remotion/cli`. They resolve with npm's flat install, but they aren't in `package.json`.
 5. **Voice rebuilds aren't bit-exact from a clean clone** (§3.7 caches), and Kokoro's `main` revision could move upstream (§1.4).

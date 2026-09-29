@@ -4,6 +4,23 @@ Everything renders at 48 kHz float64 stereo arrays shaped (n, 2) unless noted.
 Tuning: A4 = 440 Hz, equal temperament, the show key is F minor.
 """
 from __future__ import annotations
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 
 import functools
 import math
@@ -25,7 +42,7 @@ AUDIO = os.path.dirname(ROOT)                                                # .
 SAMPLES = os.path.join(AUDIO, "samples")
 VSCO = os.path.join(SAMPLES, "vsco2ce-sfx")
 GUGS = os.path.join(SAMPLES, "generaluser-gs", "GeneralUser-GS.sf2")
-FFMPEG_DIR = "/home/jgon/project/art/mrmas/studio/node_modules/@remotion/compositor-linux-x64-gnu"
+FFMPEG_DIR = os.path.join(REPO, "studio/node_modules/@remotion/compositor-linux-x64-gnu")
 FFMPEG = os.path.join(FFMPEG_DIR, "ffmpeg")
 
 RNG = np.random.default_rng(1993)

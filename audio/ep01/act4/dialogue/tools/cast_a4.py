@@ -7,11 +7,28 @@ New cast (not in CASTING.md) = auditioned here from stock Kokoro-82M American-En
 the real person's voice. No accent, age, health or disability coding; no mimicry.
 """
 from __future__ import annotations
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 
 import os
 import sys
 
-sys.path.insert(0, "/home/jgon/project/art/mrmas/audio/voices/tools")
+sys.path.insert(0, os.path.join(REPO, "audio/voices/tools"))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import cast as C  # casting-pass chains (read-only)
 from a4lib import dry

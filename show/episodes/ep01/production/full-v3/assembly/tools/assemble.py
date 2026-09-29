@@ -22,6 +22,23 @@ Writes out/ep01/full-v3/<VARIANTS[v].film>.mp4 (ep01-v3, ep01-v3-el, ep01-v31, e
 its head, the seams, the chapter table). The episode WAV is a scratch intermediate and is deleted after the mux.
 """
 from __future__ import annotations
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 
 import hashlib
 import json
@@ -33,7 +50,7 @@ import time
 import numpy as np
 import soundfile as sf
 
-ROOT = "/home/jgon/project/art/mrmas"
+ROOT = REPO
 FFD = f"{ROOT}/studio/node_modules/@remotion/compositor-linux-x64-gnu"
 ENV = {**os.environ, "LD_LIBRARY_PATH": FFD}
 FF, FP = f"{FFD}/ffmpeg", f"{FFD}/ffprobe"

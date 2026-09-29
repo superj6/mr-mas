@@ -20,6 +20,23 @@ act4-mix-v3.cues.json (the EDL: music segments, SFX, beds, dry windows, measurem
 studio/src/episodes/ep01/act4/animatic/sound-v3.ts.
 Run (numpy + soundfile + pyloudnorm):  audio/.venv-casting/bin/python studio/src/episodes/ep01/act4/animatic/tools/mix_v3.py
 """
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import json
 import os
 from collections import OrderedDict
@@ -28,7 +45,6 @@ import numpy as np
 import soundfile as sf
 import pyloudnorm as pyln
 
-REPO = "/home/jgon/project/art/mrmas"
 P = lambda *a: os.path.join(REPO, *a)  # noqa: E731
 SR, FPS = 48000, 24
 SPF = SR // FPS

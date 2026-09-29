@@ -3,9 +3,10 @@
 #   src/dev/range/p1/tools/build.sh <scratch dir>
 # 1 bundle  2 render silent (CPU, --concurrency=4)  3 temp sound (OST engine, read-only)  4 mux (bundled ffmpeg)
 # 5 key stills + contact sheet pulled from the ENCODED mp4.  Scratch frames are deleted at the end.
+REPO=${MRMAS_ROOT:-$(d=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd) || exit 1; while [ ! -e "$d/.mrmas-root" ]; do { [ "$d" = / ] || [ "$d" = . ]; } && { echo "MR. MAS: no .mrmas-root above ${BASH_SOURCE[0]}; set MRMAS_ROOT" >&2; exit 1; }; d=$(dirname "$d"); done; echo "$d")} || exit 1   # the project root (phase 1, docs/ORGANIZATION-PLAN.md §4)
 set -euo pipefail
 S=${1:?scratch dir}
-ROOT=$(cd ../ && pwd)
+ROOT=$REPO
 OUT=$ROOT/out/lookdev/range
 FF=$ROOT/studio/node_modules/@remotion/compositor-linux-x64-gnu
 PY=$ROOT/audio/.venv-mix/bin/python

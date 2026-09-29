@@ -10,7 +10,7 @@
 set -euo pipefail
 REPO=$(cd "$(dirname "$0")/../../../../.." && pwd)
 cd "$REPO"
-B=${BLENDER:-/home/jgon/Downloads/blender-4.5.3-linux-x64/blender}
+B=${BLENDER:-$HOME/Downloads/blender-4.5.3-linux-x64/blender}
 PY=$(dirname "$B")/4.5/python/bin/python3.11
 FFD=studio/node_modules/@remotion/compositor-linux-x64-gnu
 ff() { LD_LIBRARY_PATH=$FFD nice -n 15 "$FFD/ffmpeg" -hide_banner -loglevel error "$@"; }

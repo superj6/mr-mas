@@ -5,6 +5,23 @@ Loudness: ITU-R BS.1770-4 via pyloudnorm (integrated, gated); momentary/short-te
 ungated K-weighted windows; true peak is 4x oversampled (BS.1770-4 Annex 2).
 """
 from __future__ import annotations
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 
 import os
 import numpy as np
@@ -18,7 +35,7 @@ SPF = SR // FPS            # 2000 samples per frame
 FRAMES = 720
 N = FRAMES * SPF           # 1,440,000
 
-ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..'))   # .../mrmas
+ROOT = REPO
 AUDIO = os.path.join(ROOT, 'audio')
 OUT_DIR = os.path.join(AUDIO, 'intro-mix')
 

@@ -8,6 +8,23 @@ Sync method, per MP4:
      difference jump measured in the decoded MP4 video at the same frames. The ding (f705 = 29.375 s)
      is the headline check.
 """
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import json, os, subprocess, sys
 import numpy as np
 from scipy.signal import butter, sosfilt, correlate
@@ -19,7 +36,7 @@ ENV = dict(os.environ, LD_LIBRARY_PATH=FFD)
 FF, FP = os.path.join(FFD, 'ffmpeg'), os.path.join(FFD, 'ffprobe')
 VARS = {'V1': 'chipchamber', 'V2': 'orchestralnoir', 'V3': 'pixelswing', 'V4': 'pianopixels'}
 MP4 = [('V1', '1080p'), ('V2', '1080p'), ('V3', '1080p'), ('V4', '1080p')]  # render policy: 1080p max (a legacy 4K file is checked only if present)
-if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), '../../../out/season/intro/intro-ep1-V1-4k.mp4')):
+if os.path.exists(os.path.join(REPO, 'out/season/intro/intro-ep1-V1-4k.mp4')):
     MP4.insert(1, ('V1', '4k'))
 SYNC = [24, 120, 225, 240, 300, 345, 360, 420, 480, 540, 630, 690, 705, 719]   # cuts / freeze pops / title / bookend / ding
 

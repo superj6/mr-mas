@@ -6,6 +6,23 @@
   preview_SFX-solo.mp3           the SFX stem alone, +12 dB so it can be judged on its own
 Judge SFX sync here; the balance of record is audio/intro-mix/ (VO -4 dB and the music rides live there).
 """
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import os
 import sys
 
@@ -13,7 +30,7 @@ import numpy as np
 import soundfile as sf
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-AUDIO = os.path.dirname(HERE)
+AUDIO = os.path.join(REPO, 'audio')
 sys.path.insert(0, os.path.join(AUDIO, "sfx", "scripts"))
 from dsp import db, lufs_integrated, true_peak_db, write_mp3  # noqa: E402
 

@@ -31,6 +31,23 @@ Designed sound (all from audio/sfx/wav, read-only, except the synthesized moth a
 Run (repo root), after the picture render and the music render (see entry.tsx's header):
   audio/.venv-theme/bin/python studio/src/dev/outro/a/tools/build.py --scratch <scratch>
 """
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import argparse
 import json
 import math
@@ -44,7 +61,7 @@ import soundfile as sf
 from PIL import Image, ImageDraw, ImageFont
 from scipy.signal import butter, sosfilt
 
-ROOT = '/home/jgon/project/art/mrmas'
+ROOT = REPO
 sys.path.insert(0, f'{ROOT}/audio/ost')
 from engine.mix import lufs, true_peak   # noqa: E402
 

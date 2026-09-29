@@ -11,8 +11,9 @@
 # audio bed lookup per episode, first match wins (wav/mp3/m4a/aac/flac/ogg/opus):
 #   audio/reel/epNN.<ext>  ·  audio/reel/epNN[-_]*.<ext>  ·  audio/reel/{bed,temp-bed,temp_bed,reel-bed}.<ext> (looped)
 # With no bed the mp4 gets a silent stereo track, so every episode concatenates cleanly into season.mp4.
+REPO=${MRMAS_ROOT:-$(d=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd) || exit 1; while [ ! -e "$d/.mrmas-root" ]; do { [ "$d" = / ] || [ "$d" = . ]; } && { echo "MR. MAS: no .mrmas-root above ${BASH_SOURCE[0]}; set MRMAS_ROOT" >&2; exit 1; }; d=$(dirname "$d"); done; echo "$d")} || exit 1   # the project root (phase 1, docs/ORGANIZATION-PLAN.md §4)
 set -euo pipefail
-ROOT=/home/jgon/project/art/mrmas
+ROOT=$REPO
 STUDIO=$ROOT/studio
 OUT=${REEL_OUT:-$ROOT/out/season/reels}
 AUD=${REEL_AUDIO_DIR:-$ROOT/audio/reel}

@@ -41,11 +41,28 @@ OUTPUTS (out/ep01/act4/animatic/)
                                               not being written)
 
 RUN (it is a heavy job: about 3 GB of memory and a few minutes of one core; nothing else is started in parallel)
-  cd /home/jgon/project/art/mrmas
+  cd <repo>
   nohup ops/heavy.sh audio/.venv-mix/bin/python studio/src/episodes/ep01/act4/animatic/tools/mix_v5_final.py > <log> 2>&1 &
   ... --no-mux      the mix, stems and measurements only
   ... --mux-only    re-mux the written mix (e.g. after the pixel pass re-renders its picture) and re-check the encodes
 """
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import os
 
 for _v in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS", "NUMEXPR_NUM_THREADS"):
@@ -66,7 +83,6 @@ import soundfile as sf  # noqa: E402
 from scipy import signal  # noqa: E402
 from scipy.ndimage import minimum_filter1d  # noqa: E402
 
-REPO = "/home/jgon/project/art/mrmas"
 
 
 def P(*a):

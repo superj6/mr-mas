@@ -21,6 +21,23 @@ Sizing (the same house rules THE EDITOR's lock.py uses, so a re-lock moves littl
 Re-run after any re-record or ruling:  python3 studio/src/episodes/ep01/act4/board/tools/board_v2.py
 """
 from __future__ import annotations
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 
 import copy
 import re
@@ -29,7 +46,6 @@ import math
 import os
 from collections import OrderedDict
 
-REPO = "/home/jgon/project/art/mrmas"
 P = lambda *a: os.path.join(REPO, *a)  # noqa: E731
 PROD = P("show/episodes/ep01/production/act4")
 

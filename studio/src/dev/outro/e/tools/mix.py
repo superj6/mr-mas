@@ -16,6 +16,23 @@ Writes two mixes: the Ep1 mock-up (220 frames, with the moth) and a plain week (
 Run (repo root), after track.py:
   audio/.venv-theme/bin/python studio/src/dev/outro/e/tools/mix.py <scratch>/music out/lookdev/outro/e
 """
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import os
 import sys
 
@@ -23,7 +40,7 @@ import numpy as np
 import soundfile as sf
 from scipy.signal import butter, sosfilt
 
-sys.path.insert(0, '/home/jgon/project/art/mrmas/audio/ost')
+sys.path.insert(0, os.path.join(REPO, 'audio/ost'))
 from engine.mix import lufs, true_peak   # noqa: E402
 
 SR = 48000
@@ -34,7 +51,7 @@ TOTAL_PLAIN = 204           # timeline.ts TOTAL_PLAIN (a week with no stinger)
 CLICK = 150                 # timeline.ts EV.click (3.3)
 PLAIN_END = 179             # timeline.ts OUTRO - 1
 TRIM_S = 0.25               # track.py TRIM_S: the file's first 0.25 s are dropped (1.0 s of stand-in remain)
-SFX = '/home/jgon/project/art/mrmas/audio/sfx/wav'
+SFX = os.path.join(REPO, 'audio/sfx/wav')
 
 # the moth's flight, outro frames -> native x (moth.ts WAY, for the pan only; LAND x = 448)
 MOTH_ENTER, MOTH_LAND = 150, 165

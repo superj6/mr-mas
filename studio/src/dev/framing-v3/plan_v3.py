@@ -4,6 +4,23 @@
 One row per v3 shot, validated against the v3 framing grammar.
 Frames are CARRIED from lock v2 (split where a v2 shot is split) so the shares are comparable; THE EDITOR's v3 lock
 re-times everything (the dead-air pass), so treat seconds as v2-clock projections, never as the v3 clock."""
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import json, itertools, sys
 
 # size classes for the "no more than 2 consecutive shots of the same size" rule
@@ -176,7 +193,7 @@ s('31.09', ['31.09'], '[W]', 'W', 'W', 120, 'The folding chair unfolds: OBSERVER
 P = [p for p in P if p['frames'] > 0]
 SPLIT_LINES = {'a4-27-21': '27.36', 'a4-27-22': '27.36b', 'a4-30-03': '30.08', 'a4-30-04': '30.08b', 'a4-30-05': '30.13', 'a4-30-06': '30.13a',
                'a4-31-01': '31.03', 'a4-31-02': '31.03', 'a4-27-00': '27.01', 'a4-27-01': '27.01b'}
-V2L = json.load(open('/home/jgon/project/art/mrmas/show/episodes/ep01/production/act4/shots-locked-v2.json'))
+V2L = json.load(open(os.path.join(REPO, 'show/episodes/ep01/production/act4/shots-locked-v2.json')))
 by = {p['id']: p for p in P}
 for x in V2L['shots']:
     for l in x['lines']:
@@ -198,7 +215,7 @@ for k, g in itertools.groupby(P, key=lambda p: p['cls']):
 boxes = [p['id'] for p in P if p['cls'] == 'BOX']
 if len(boxes) > 2: prob.append(f'deliberate boxes > 2: {boxes}')
 tot = sum(p['frames'] for p in P)
-v2 = json.load(open('/home/jgon/project/art/mrmas/show/episodes/ep01/production/act4/shots-locked-v2.json'))
+v2 = json.load(open(os.path.join(REPO, 'show/episodes/ep01/production/act4/shots-locked-v2.json')))
 v2tot = sum(x['frames'] for x in v2['shots'])
 used = set(i for p in P for i in p['v2'])
 missing = [x['id'] for x in v2['shots'] if x['id'] not in used]

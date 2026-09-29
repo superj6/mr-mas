@@ -9,11 +9,28 @@ For every cut it writes the cut frame and its neighbours at 1080p (<name>_fNNN.p
 480x270 per cut (<name>_strip.png), a 4x zoom of the match cut (glint -> flame), the 345-359 pixel diff table and
 the 719 -> 0 loop strip.
 """
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import os, sys
 from PIL import Image, ImageChops, ImageDraw, ImageFont
 
 SEQ, RAW1 = sys.argv[1], sys.argv[2]
-OUT = sys.argv[3] if len(sys.argv) > 3 else '/home/jgon/project/art/mrmas/out/season/intro/picture/handoffs'
+OUT = sys.argv[3] if len(sys.argv) > 3 else os.path.join(REPO, 'out/season/intro/picture/handoffs')
 os.makedirs(OUT, exist_ok=True)
 font = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf', 12)
 P = lambda d, f: os.path.join(d, f'element-{f:03d}.png')

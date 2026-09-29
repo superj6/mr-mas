@@ -9,11 +9,12 @@
 #   sound   the temp sound pass (tools/sound.py)                                   -> <S>/sound.wav
 #   mux     video + sound                                                          -> out/lookdev/range/ep1/ep1-p1.mp4
 #   stills  3 key stills, the contact sheet and the blind sheet, from the ENCODED mp4 (full size + 480x270 checks)
+REPO=${MRMAS_ROOT:-$(d=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd) || exit 1; while [ ! -e "$d/.mrmas-root" ]; do { [ "$d" = / ] || [ "$d" = . ]; } && { echo "MR. MAS: no .mrmas-root above ${BASH_SOURCE[0]}; set MRMAS_ROOT" >&2; exit 1; }; d=$(dirname "$d"); done; echo "$d")} || exit 1   # the project root (phase 1, docs/ORGANIZATION-PLAN.md §4)
 set -euo pipefail
 S=${1:?scratch dir}; shift
 STAGES=${*:-voice cels px clip sound mux stills}
 STUDIO=$(pwd)
-ROOT=$(cd .. && pwd)
+ROOT=$REPO
 HERE=src/dev/range/ep1-p1
 OUT=$ROOT/out/lookdev/range/ep1
 FF=$STUDIO/node_modules/@remotion/compositor-linux-x64-gnu

@@ -18,6 +18,23 @@ for each segment this writes a COPY of the EL rows (the audio and the EL files a
   the current Kokoro locks (full-v3/lock/<seg>.json) name.
 """
 from __future__ import annotations
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 
 import importlib.util
 import json
@@ -28,7 +45,7 @@ import sys
 import numpy as np
 import soundfile as sf
 
-ROOT = "/home/jgon/project/art/mrmas"
+ROOT = REPO
 OUT = f"{ROOT}/show/episodes/ep01/production/full-v3/assembly/el"
 EL_TAKES = f"{ROOT}/audio/ep01/v3-el/ep01"
 SEGS = ["coldopen", "act1", "act2", "act3", "act4", "tag"]

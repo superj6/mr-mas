@@ -23,12 +23,13 @@
 #     el_lock.py would drop, so a changed Act One beat is spliced by hand (lock-v35.md §10); this script stops there.
 # The lock version is LOCK (default v35). Written by the v3.5 finishing pass (assembly.md §Z) so the next episodes have
 # one command per changed act.
+REPO=${MRMAS_ROOT:-$(d=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd) || exit 1; while [ ! -e "$d/.mrmas-root" ]; do { [ "$d" = / ] || [ "$d" = . ]; } && { echo "MR. MAS: no .mrmas-root above ${BASH_SOURCE[0]}; set MRMAS_ROOT" >&2; exit 1; }; d=$(dirname "$d"); done; echo "$d")} || exit 1   # the project root (phase 1, docs/ORGANIZATION-PLAN.md §4)
 set -euo pipefail
 ACT=${1:?usage: ops/rebuild-act.sh <act> [--from STEP] [--only STEP] [--dry-run]}; shift
 STEPS=(lock score mix picture mux film)
 FROM=lock; ONLY=; DRY=
 while [ $# -gt 0 ]; do case "$1" in --from) FROM=$2; shift 2;; --only) ONLY=$2; shift 2;; --dry-run) DRY=1; shift;; *) echo "unknown: $1" >&2; exit 2;; esac; done
-cd /home/jgon/project/art/mrmas
+cd "$REPO"
 R=$PWD; LOCK=${LOCK:-v35}; PY=$R/audio/.venv-casting/bin/python; TH=$R/audio/.venv-theme/bin/python
 A=show/episodes/ep01/production/full-v3/assembly; H="bash $R/ops/heavy.sh"
 S=${SCRATCH:-/tmp/rebuild-$ACT-$$}; mkdir -p "$S"; export ASM_SCRATCH=$S

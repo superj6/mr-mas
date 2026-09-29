@@ -17,6 +17,23 @@ rest; drawings held on 2s, with M / O / A stealing a frame from a longer neighbo
   python3 studio/src/episodes/ep01/pixel/coldopen/tools/mouths.py tag        # -> pixel/tag/takes-mouth.json
 """
 from __future__ import annotations
+import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
+import sys  # noqa: E402
+
+
+def _repo():
+    for start in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        d = start
+        while True:
+            if os.path.exists(os.path.join(d, '.mrmas-root')):
+                return d
+            if d == os.path.dirname(d):
+                break
+            d = os.path.dirname(d)
+    sys.exit('MR. MAS: no .mrmas-root above this script or the cwd; set MRMAS_ROOT')
+
+
+REPO = os.environ.get('MRMAS_ROOT') or _repo()
 
 import json
 import math
@@ -25,7 +42,7 @@ import struct
 import sys
 import wave
 
-ROOT = "/home/jgon/project/art/mrmas"
+ROOT = REPO
 FPS = 24
 SEGS = {
     "coldopen": {"takes": ["audio/ep01/coldopen/dialogue/lines-fast-v1.json"],
