@@ -19,7 +19,10 @@ ok() {
   swap=$(awk '/SwapTotal/ {t=$2} /SwapFree/ {f=$2} END {printf "%d", (t-f)/1048576}' /proc/meminfo)
   load=$(awk '{printf "%d", $1}' /proc/loadavg)
   # Swap only counts when memory is also getting low: stale pages linger in swap after a spike.
-  [ "$avail" -ge "$MIN_AVAIL_GB" ] && [ "$load" -le "$MAX_LOAD" ] && { [ "$avail" -ge 12 ] || [ "$swap" -le "$MAX_SWAP_GB" ]; }
+  # Memory pressure (PSI) too: systemd-oomd kills the terminal when the user session's pressure stays above 50%
+  # (2026-09-28: three terminal kills at 16:43, 17:48, 18:37), so never start a job while pressure is building.
+  psi=$(awk '/^some/ {split($2,a,"="); printf "%d", a[2]}' /proc/pressure/memory 2>/dev/null || echo 0)
+  [ "$avail" -ge "$MIN_AVAIL_GB" ] && [ "$load" -le "$MAX_LOAD" ] && [ "${psi:-0}" -le 5 ] && { [ "$avail" -ge 12 ] || [ "$swap" -le "$MAX_SWAP_GB" ]; }
 }
 start=$(date +%s)
 echo "[heavy] waiting for a slot (max $SLOTS)..." >&2
@@ -44,8 +47,10 @@ echo "[heavy] running: $*" >&2
 # Each job runs in its own memory-capped systemd scope (2026-09-28). On 2026-09-27 at 19:51 systemd-oomd killed the
 # whole terminal scope (Claude Code and every agent) at 23.9 GB peak, because heavy jobs lived in the terminal's cgroup.
 # In its own scope, a runaway job hits its own MemoryMax (or oomd picks it) instead of taking the session down.
+# Since the 16:43/17:48/18:37 terminal kills, jobs get no swap by default (MRMAS_HEAVY_SWAP_MAX): a job that outgrows its
+# cap dies inside its own scope instead of swapping and raising the whole session's memory pressure.
 MEM_MAX=${MRMAS_HEAVY_MEM_MAX:-8G}
 if [ -z "${MRMAS_HEAVY_NO_SCOPE:-}" ] && command -v systemd-run >/dev/null 2>&1 && systemd-run --user --scope --quiet true 2>/dev/null; then
-  exec nice -n 15 ionice -c3 systemd-run --user --scope --quiet -p MemoryMax="$MEM_MAX" -p MemorySwapMax=1G -- "$@"
+  exec nice -n 15 ionice -c3 systemd-run --user --scope --quiet -p MemoryMax="$MEM_MAX" -p MemorySwapMax="${MRMAS_HEAVY_SWAP_MAX:-0}" -- "$@"
 fi
 exec nice -n 15 ionice -c3 "$@"
