@@ -17,6 +17,7 @@
    - **Step 2 (ADDED scenes):**
      - **Act Two, after "AI CHIPS · QTY: MORE":** about 4–5 s, wordless, of staff racking the new INVIDIA boards.
      - **Act Three, before the Tidder post:** about 10 s, wordless, of the Sep 25, 2023 office party for ChatGTP's voice and image launch. Staff cheer Mas, and **Alyi is there, warm with Mas** (a toast, a shared laugh), so his vote later lands harder.
+     - **Act One, right before the pause letter (the open letter):** a quick 2–3 s flash of every chatbot just shown (ChatGTP, GNIB, DRAB, CLOD, Atem's leaked model), usage climbing at once with NopeAI far ahead. It's why the letter asks for a pause. Showrunner: "right before the open letter, there should be another quick flash of something show increased usage of all the chatbots just shown". It's picture-only if it fits before the letter's first line; otherwise it adds about 2 s.
      - Each goes through the lock, the score, the picture and the mix, then assembly.
 00000. **Human, fast, a show (2026-09-28):**
    - **The notes, verbatim:**
