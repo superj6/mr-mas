@@ -4,6 +4,20 @@
 
 ## Current notes, newest first
 
+00000A. **Final additions: the staff love him, and so does Alyi (2026-09-28, on the final film):**
+   - "we are trying to add in some final quick sentiments that employee sentiment with sam was high. also we should have alyi at the party as well to increase the surprise he fired sam"
+   - Also: "i did not want to cut a scene, only add one".
+   - **Step 1 (in progress, no timing change):**
+     - "now for the backlash." over "Shut It All Down"
+     - "someone gets to be in the room. i'm glad it's me."
+     - the 3 AM team channel celebrating ("thank you mas")
+     - Act Four: staff hearts on his goodbye post, the board's phones, "STAFF AND INVESTORS PUSH…"
+     - the egg-timer fix
+     - Assemble a complete film.
+   - **Step 2 (ADDED scenes):**
+     - **Act Two, after "AI CHIPS · QTY: MORE":** about 4–5 s, wordless, of staff racking the new INVIDIA boards.
+     - **Act Three, before the Tidder post:** about 10 s, wordless, of the Sep 25, 2023 office party for ChatGTP's voice and image launch. Staff cheer Mas, and **Alyi is there, warm with Mas** (a toast, a shared laugh), so his vote later lands harder.
+     - Each goes through the lock, the score, the picture and the mix, then assembly.
 00000. **Human, fast, a show (2026-09-28):**
    - **The notes, verbatim:**
      - "are we getting any openai development flashback besides the dinner? i would prefere having more to explore at the dinner later and use another partial progress more"
