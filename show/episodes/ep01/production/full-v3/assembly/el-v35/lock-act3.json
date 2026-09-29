@@ -52,7 +52,7 @@
   "mix": {
    "path": "out/ep01/full-v3/mix-v35-el/act3-mix.wav",
    "offset_frames": 0,
-   "frames": 3274.0
+   "frames": 3514.0
   },
   "refs": {}
  },
@@ -94,8 +94,8 @@
   },
   {
    "check": "the mix = its offset + the segment",
-   "ok": false,
-   "detail": "mix 3274.00 f vs 0 + 3514"
+   "ok": true,
+   "detail": "mix 3514.00 f vs 0 + 3514"
   }
  ],
  "sequences": [
@@ -8454,7 +8454,5 @@
   "rail 'NOV 16, 2023 · 11:59 PM' is up 24 f, under its read floor 34 f (the stick's; kept)",
   "V.O. on screen with a rail item (§5.2 wants one must-read at a time; stagger by a beat): [\"v34-vo-06~'NOV 6, 2023 · DEVDAY'\"]"
  ],
- "problems": [
-  "CHECK FAILED: the mix = its offset + the segment: mix 3274.00 f vs 0 + 3514"
- ]
+ "problems": []
 }

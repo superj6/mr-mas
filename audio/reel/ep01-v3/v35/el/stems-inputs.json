@@ -1,0 +1,81 @@
+{
+ "fingerprint": "a554bc21a33fcdf0bf54be5924d55cfc9f6d6a5b",
+ "variant": "el",
+ "timelines": {
+  "coldopen": "show/reel/ep01-v35-el/ep01-v35-el-coldopen.json",
+  "act1": "show/reel/ep01-v35-el/ep01-v35-el-act1.json",
+  "act2": "show/reel/ep01-v35-el/ep01-v35-el-act2.json",
+  "act3": "show/reel/ep01-v35-el/ep01-v35-el-act3.json",
+  "act4": "show/reel/ep01-v35-el/ep01-v35-el-act4.json",
+  "tag": "show/reel/ep01-v35-el/ep01-v35-el-tag.json"
+ },
+ "hints": {
+  "coldopen": {
+   "score": "audio/ost/tracks/e01-v3-coldopen/render/music-el.wav",
+   "cues": "audio/ost/tracks/e01-v3-coldopen/cues-el.json",
+   "drop": [],
+   "why": {},
+   "grid": null
+  },
+  "act1": {
+   "score": "audio/ost/tracks/e01-v3-act1/render/music-el.wav",
+   "cues": "audio/ost/tracks/e01-v3-act1/cues-el.json",
+   "drop": [
+    "siren",
+    "atod-arena"
+   ],
+   "why": {
+    "siren": "183.72 s:  code_red  comic panic, the siren as a joke",
+    "atod-arena": "225.74 s:  arena  tinny, heroic, endless"
+   },
+   "grid": null,
+   "grid_lobby": [
+    96.0,
+    330.337,
+    11.1
+   ],
+   "grid_duel": [
+    95.25,
+    392.097,
+    3.56
+   ]
+  },
+  "act2": {
+   "score": "audio/ost/tracks/e01-v3-act2/render/music-el.wav",
+   "cues": "audio/ost/tracks/e01-v3-act2/cues-el.json",
+   "drop": [
+    "knee-stabs"
+   ],
+   "why": {
+    "knee-stabs": "the lead's ruling (2026-09-27): the act2 score plays the tour poster's four knee stabs"
+   },
+   "grid": null
+  },
+  "act3": {
+   "score": "audio/ost/tracks/e01-v3-act3/render/music-el.wav",
+   "cues": "audio/ost/tracks/e01-v3-act3/cues-el.json",
+   "drop": [],
+   "why": {},
+   "grid": null
+  },
+  "act4": {
+   "score": "audio/ost/tracks/e01-v3-act4/render/music-el.wav",
+   "cues": "audio/ost/tracks/e01-v3-act4/cues-el.json",
+   "drop": [],
+   "why": {},
+   "grid": null,
+   "build_stop": 327.094
+  },
+  "tag": {
+   "score": "audio/ost/tracks/e01-v3-tag/render/music-el.wav",
+   "cues": "audio/ost/tracks/e01-v3-tag/cues-el.json",
+   "drop": [
+    "button-chord"
+   ],
+   "why": {
+    "button-chord": "30.01 s: THE BUTTON: F3 C4 G4 C5, no third (the vault's F hum is its root)"
+   },
+   "grid": null
+  }
+ }
+}

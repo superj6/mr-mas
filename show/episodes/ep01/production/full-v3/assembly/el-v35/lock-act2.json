@@ -52,7 +52,7 @@
   "mix": {
    "path": "out/ep01/full-v3/mix-v35-el/act2-mix.wav",
    "offset_frames": 0,
-   "frames": 4848.0
+   "frames": 4968.0
   },
   "refs": {}
  },
@@ -94,8 +94,8 @@
   },
   {
    "check": "the mix = its offset + the segment",
-   "ok": false,
-   "detail": "mix 4848.00 f vs 0 + 4968"
+   "ok": true,
+   "detail": "mix 4968.00 f vs 0 + 4968"
   }
  ],
  "sequences": [
@@ -15411,7 +15411,5 @@
   "17.03: plate 'NESNEJ / SELLS SHOVELS. FUNDS DI' is up 15 f, under its read floor 52 f (the stick's timing; kept)",
   "17.03: plate 'POCKETS: 1' is up 15 f, under its read floor 18 f (the stick's timing; kept)"
  ],
- "problems": [
-  "CHECK FAILED: the mix = its offset + the segment: mix 4848.00 f vs 0 + 4968"
- ]
+ "problems": []
 }

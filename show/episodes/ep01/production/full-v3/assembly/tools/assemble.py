@@ -218,12 +218,12 @@ def main(variant, dry=False):
         else:
             nf, s = probe_frames(c["video"])
             assert (s["width"], s["height"], s["r_frame_rate"]) == (1920, 1080, "24/1"), (c["id"], s)
-        a, sr = sf.read(c["audio"], dtype="float64", always_2d=True)
+        a, sr = sf.read(c["audio"], dtype="float32", always_2d=True)   # float32 (2026-09-28): half the memory of float64
         assert sr == SR and a.shape[1] == 2, (c["id"], sr, a.shape)
         want = nf * SPF
         if len(a) != want:
             raise SystemExit(f"{c['id']}: the audio is {len(a)} samples, the picture {nf} frames = {want} samples: refusing to pad or trim")
-        a = a * 10 ** (c["gain_db"] / 20)
+        a = a * np.float32(10 ** (c["gain_db"] / 20))
         tracks.append(a)
         rep["chapters"].append(dict(id=c["id"], title=VARIANTS[variant]["titles"].get(c["id"], TITLES.get(c["id"])), chapter=c.get("chapter", True), video=os.path.relpath(c["video"], ROOT), audio=os.path.relpath(c["audio"], ROOT),
                                     gain_db=c["gain_db"], frames=nf, start_frame=f_at, start_s=round(f_at / FPS, 4), seconds=round(nf / FPS, 4),

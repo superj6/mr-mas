@@ -31,7 +31,7 @@
    "why": "the act4 score's hand-off and the lead's note: the vault pedal's release at the tag's head, crossfading under the tag's own score, so the seam doesn't cut it"
   },
   "lufs_as_delivered": -21.03,
-  "lufs_after_gain": -21.08,
+  "lufs_after_gain": -21.09,
   "duck": {
    "by_mood_db": [
     [
@@ -58,15 +58,15 @@
  },
  "checks": [],
  "measured": {
-  "lufs_i": -17.03,
+  "lufs_i": -17.07,
   "true_peak_dbtp": -1.45,
   "sample_peak_dbfs": -1.5,
-  "lra_lu": 19.2,
+  "lra_lu": 19.1,
   "gain_db": 2.9,
   "limiter_ceiling_dbfs": -1.5,
-  "limiter_active_s": 0.313,
+  "limiter_active_s": 0.372,
   "dialogue_lufs": -13.09,
-  "score_lufs_after_duck": -18.84,
+  "score_lufs_after_duck": -18.87,
   "score_rms_under_speech_dbfs": -36.8,
   "score_rms_between_speech_dbfs": -23.3,
   "score_runs": {
@@ -83,7 +83,7 @@
     ]
    ]
   },
-  "rooms_lufs": -35.51,
+  "rooms_lufs": -35.53,
   "sfx_lufs": -31.07,
   "holes_under_-42dBFS_0.3s": [],
   "holes_mono_downmix": [],
@@ -91,24 +91,22 @@
   "unmarked_holes": 0,
   "unmarked_holes_without_score": 0,
   "jumps_over_15dB": {
-   "count": 7,
-   "rising": 5,
+   "count": 6,
+   "rising": 4,
    "rising_at_a_word": 3,
    "rising_at_an_sfx": 1,
-   "rising_other": [
-    19.35
-   ],
+   "rising_other": [],
    "falling": 2
   }
  },
  "file": "out/ep01/full-v3/mix-v35-el/tag-mix.wav",
  "guard_db": -0.88,
  "seam_head": {
-  "from_gain_db": 1.08,
+  "from_gain_db": 1.06,
   "to_gain_db": 2.9,
   "ramp_s": 2.0,
   "after": "act4"
  },
- "built": "2026-09-28 17:56:27",
+ "built": "2026-09-28 23:57:27",
  "heard": "nothing here has been listened to; every number is measured"
 }

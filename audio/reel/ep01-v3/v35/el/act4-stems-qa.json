@@ -1,0 +1,1174 @@
+{
+ "segment": "act4",
+ "variant": "el",
+ "timeline": "show/reel/ep01-v35-el/ep01-v35-el-act4.json",
+ "timeline_variant": "el",
+ "seconds": 498.042,
+ "frames": 11953,
+ "rooms": [
+  {
+   "room": "suite",
+   "from": -0.6,
+   "to": 73.708,
+   "first": "S1.01",
+   "last": "v35-41.06",
+   "lead": 0.6,
+   "trail": 0.5,
+   "lift_db": 0.0
+  },
+  {
+   "room": "plane",
+   "from": 72.708,
+   "to": 76.808,
+   "first": "v35-42.01",
+   "last": "v35-42.01",
+   "lead": 0.5,
+   "trail": 0.6,
+   "lift_db": 0.2
+  },
+  {
+   "room": "dark",
+   "from": 75.608,
+   "to": 82.192,
+   "first": "S2.01",
+   "last": "S2.02",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 0.9
+  },
+  {
+   "room": "tpool-2008",
+   "from": 81.192,
+   "to": 88.192,
+   "first": "v35-43.01",
+   "last": "v35-43.02",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 4.1
+  },
+  {
+   "room": "dark",
+   "from": 87.192,
+   "to": 91.192,
+   "first": "S2.05",
+   "last": "S2.05",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 0.8
+  },
+  {
+   "room": "office",
+   "from": 90.192,
+   "to": 154.942,
+   "first": "v31-S3.00p",
+   "last": "S3.04b",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 1.3
+  },
+  {
+   "room": "allhands",
+   "from": 153.742,
+   "to": 170.317,
+   "first": "S3.06",
+   "last": "S3.07",
+   "lead": 0.8,
+   "trail": 0.4,
+   "lift_db": 1.4
+  },
+  {
+   "room": "office_night",
+   "from": 169.317,
+   "to": 175.275,
+   "first": "S3.05",
+   "last": "S3.05",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 2.0
+  },
+  {
+   "room": "boardroom",
+   "from": 174.275,
+   "to": 187.108,
+   "first": "S4.02",
+   "last": "S4.02",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 1.1
+  },
+  {
+   "room": "split-a4",
+   "from": 186.108,
+   "to": 204.9,
+   "first": "S4.08",
+   "last": "S4.08",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 3.9
+  },
+  {
+   "room": "lobby-a1",
+   "from": 203.7,
+   "to": 212.55,
+   "first": "v32-S5.00",
+   "last": "v32-S5.00",
+   "lead": 0.8,
+   "trail": 0.05,
+   "lift_db": 0.0
+  },
+  {
+   "room": "cctv",
+   "from": 209.9,
+   "to": 222.483,
+   "first": "S4.09",
+   "last": "S4.09",
+   "lead": 2.6,
+   "trail": 0.4,
+   "lift_db": 3.3
+  },
+  {
+   "room": "boardroom",
+   "from": 221.483,
+   "to": 260.15,
+   "first": "S4.10b",
+   "last": "S4.07",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 1.1
+  },
+  {
+   "room": "bullpen-night",
+   "from": 259.15,
+   "to": 265.15,
+   "first": "v35-49A.01",
+   "last": "v35-49A.01",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 4.6
+  },
+  {
+   "room": "dark",
+   "from": 264.15,
+   "to": 364.983,
+   "first": "S5.03",
+   "last": "S6.06",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 1.1
+  },
+  {
+   "room": "bullpen-day",
+   "from": 363.783,
+   "to": 401.067,
+   "first": "S7.01",
+   "last": "v31-S7.03b",
+   "lead": 0.8,
+   "trail": 0.4,
+   "lift_db": 2.7
+  },
+  {
+   "room": "fires",
+   "from": 400.067,
+   "to": 459.483,
+   "first": "S7.05",
+   "last": "S7.13",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 0.0
+  },
+  {
+   "room": "lobby-night",
+   "from": 458.483,
+   "to": 476.067,
+   "first": "S8.01",
+   "last": "S8.05",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 0.0
+  },
+  {
+   "room": "coda",
+   "from": 475.067,
+   "to": 498.642,
+   "first": "S8.06",
+   "last": "S8.10",
+   "lead": 0.6,
+   "trail": 0.6,
+   "lift_db": 3.3
+  }
+ ],
+ "sfx": [
+  [
+   "S1.02",
+   "dialog_ok_click",
+   17.117,
+   -16
+  ],
+  [
+   "v31-S1.08d",
+   "dialog_ok_click",
+   27.733,
+   -16
+  ],
+  [
+   "S1.11",
+   "BUZZ",
+   32.842,
+   -14
+  ],
+  [
+   "v32-S1.13",
+   "key_tap_soft_03",
+   38.808,
+   -28
+  ],
+  [
+   "v32-S1.13",
+   "post_click",
+   44.808,
+   -22
+  ],
+  [
+   "S2.02",
+   "render_front_sweep",
+   80.88,
+   -24
+  ],
+  [
+   "S2.05",
+   "reverse_swell_1beat",
+   89.692,
+   -18
+  ],
+  [
+   "S1.03",
+   "rubber_stamp_C",
+   96.652,
+   -24
+  ],
+  [
+   "S1.04",
+   "rubber_stamp_C",
+   108.283,
+   -22
+  ],
+  [
+   "S1.04",
+   "rubber_stamp_C",
+   112.385,
+   -22
+  ],
+  [
+   "S1.05",
+   "paper_whip",
+   116.148,
+   -20
+  ],
+  [
+   "S3.00a",
+   "bell_ding_F6",
+   116.837,
+   -26
+  ],
+  [
+   "S3.03",
+   "post_click",
+   140.167,
+   -16
+  ],
+  [
+   "S3.04",
+   "bell_ding_F6",
+   140.492,
+   -26
+  ],
+  [
+   "S3.04b",
+   "key_tap_space",
+   154.138,
+   -26
+  ],
+  [
+   "S3.05",
+   "keycap_popcorn",
+   170.456,
+   -20
+  ],
+  [
+   "S4.02",
+   "BUZZ",
+   175.193,
+   -24
+  ],
+  [
+   "S4.02",
+   "BUZZ",
+   182.953,
+   -26
+  ],
+  [
+   "S4.02",
+   "landing_thunk",
+   183.272,
+   -22
+  ],
+  [
+   "S4.02",
+   "marker_uncap",
+   185.555,
+   -30
+  ],
+  [
+   "S4.02",
+   "marker_write_q",
+   185.785,
+   -28
+  ],
+  [
+   "S4.08",
+   "DTMF",
+   186.713,
+   -26
+  ],
+  [
+   "S4.08",
+   "RING",
+   187.513,
+   -24
+  ],
+  [
+   "S4.08",
+   "dialog_ok_click",
+   203.84,
+   -20
+  ],
+  [
+   "S4.08",
+   "DIALTONE",
+   203.963,
+   -30,
+   "ends 0.25 s after the beat, over 0.35 s"
+  ],
+  [
+   "S4.08",
+   "marker_write_q",
+   204.004,
+   -30
+  ],
+  [
+   "v32-S5.00",
+   "cloth_rustle",
+   205.5,
+   -28
+  ],
+  [
+   "v32-S5.00",
+   "camera_shutter",
+   206.9,
+   -24
+  ],
+  [
+   "v32-S5.00",
+   "post_click",
+   208.7,
+   -22
+  ],
+  [
+   "S4.10b",
+   "paper_whip",
+   233.611,
+   -22
+  ],
+  [
+   "S4.13",
+   "JANGLE",
+   239.121,
+   -30
+  ],
+  [
+   "S4.13",
+   "landing_thunk",
+   239.775,
+   -30
+  ],
+  [
+   "S4.13",
+   "landing_thunk",
+   240.075,
+   -30
+  ],
+  [
+   "S4.13",
+   "landing_thunk",
+   240.375,
+   -30
+  ],
+  [
+   "S4.13",
+   "key_tap_space",
+   240.825,
+   -24
+  ],
+  [
+   "S5.03",
+   "key_tap_soft_01",
+   265.263,
+   -26
+  ],
+  [
+   "S5.03",
+   "key_tap_soft_02",
+   265.53,
+   -26
+  ],
+  [
+   "S5.03",
+   "key_tap_soft_03",
+   265.797,
+   -26
+  ],
+  [
+   "S5.03",
+   "key_tap_soft_04",
+   266.064,
+   -26
+  ],
+  [
+   "S5.03",
+   "key_tap_soft_05",
+   266.331,
+   -26
+  ],
+  [
+   "S5.04",
+   "orb_servo",
+   270.55,
+   -22
+  ],
+  [
+   "S5.09",
+   "RINGBACK",
+   275.614,
+   -30
+  ],
+  [
+   "S5.09",
+   "dialog_ok_click",
+   276.708,
+   -24
+  ],
+  [
+   "S5.06",
+   "odometer_ratchet",
+   306.824,
+   -22
+  ],
+  [
+   "S5.06",
+   "bell_ding_F6",
+   308.609,
+   -28
+  ],
+  [
+   "S5.08",
+   "SLOT",
+   317.187,
+   -26
+  ],
+  [
+   "S5.08",
+   "rubber_stamp_C",
+   321.867,
+   -18
+  ],
+  [
+   "S5.11",
+   "key_tap_space",
+   332.989,
+   -24
+  ],
+  [
+   "S5.11",
+   "landing_thunk",
+   334.328,
+   -30
+  ],
+  [
+   "S5.11",
+   "landing_thunk",
+   334.812,
+   -30
+  ],
+  [
+   "S5.11",
+   "landing_thunk",
+   335.279,
+   -30
+  ],
+  [
+   "S5.11",
+   "BADGE_SLIDE",
+   347.39,
+   -26
+  ],
+  [
+   "S5.11",
+   "pen_tick_1",
+   348.29,
+   -28
+  ],
+  [
+   "S5.11",
+   "key_tap_space",
+   349.89,
+   -26
+  ],
+  [
+   "S6.01",
+   "landing_thunk",
+   355.475,
+   -24,
+   "sound J-cut: leads the cut by 0.4 s"
+  ],
+  [
+   "S6.01",
+   "landing_thunk",
+   356.539,
+   -24
+  ],
+  [
+   "S6.01",
+   "landing_thunk",
+   356.795,
+   -24
+  ],
+  [
+   "S6.01",
+   "landing_thunk",
+   357.051,
+   -24
+  ],
+  [
+   "S6.01",
+   "landing_thunk",
+   357.306,
+   -24
+  ],
+  [
+   "S6.04",
+   "landing_thunk",
+   361.455,
+   -20
+  ],
+  [
+   "S6.06",
+   "freeze_hit_F",
+   363.017,
+   -20
+  ],
+  [
+   "S7.01",
+   "key_tap_soft_02",
+   373.415,
+   -30
+  ],
+  [
+   "S7.01",
+   "key_tap_soft_04",
+   373.851,
+   -30
+  ],
+  [
+   "S7.01",
+   "key_tap_soft_06",
+   374.288,
+   -30
+  ],
+  [
+   "v31-S7.03b",
+   "key_tap_soft_02",
+   399.842,
+   -24
+  ],
+  [
+   "S7.06",
+   "landing_thunk",
+   402.875,
+   -18
+  ],
+  [
+   "S7.06",
+   "freeze_hit_F",
+   403.077,
+   -20
+  ],
+  [
+   "S7.06",
+   "extinguisher_pin",
+   405.142,
+   -20
+  ],
+  [
+   "S7.09",
+   "rubber_stamp_C",
+   444.283,
+   -18
+  ],
+  [
+   "S7.09",
+   "keycap_popcorn",
+   444.883,
+   -22
+  ],
+  [
+   "S7.13",
+   "hourglass_shatter",
+   455.293,
+   -10.0
+  ],
+  [
+   "S8.01",
+   "neon_ignite",
+   459.891,
+   -20
+  ],
+  [
+   "S8.03",
+   "alert_bonk",
+   465.483,
+   -18
+  ],
+  [
+   "S8.09",
+   "key_tap_soft_01",
+   491.208,
+   -26
+  ],
+  [
+   "S8.09",
+   "key_tap_soft_03",
+   491.908,
+   -26
+  ],
+  [
+   "S8.09",
+   "key_tap_soft_05",
+   492.608,
+   -26
+  ],
+  [
+   "S8.09",
+   "key_tap_soft_06",
+   493.308,
+   -26
+  ],
+  [
+   "S8.10",
+   "bell_ding_F6",
+   496.546,
+   -32
+  ]
+ ],
+ "sfx_missing": [],
+ "sfx_dropped": [],
+ "added": [
+  {
+   "what": "practice lap, far off",
+   "at": 0.4,
+   "peak_dbfs": -19.0,
+   "len_s": 6.5,
+   "why": "script SOUND: \"Far off, race-weekend practice laps.\"; v3.1 S1.01b; the lead: audible but distant"
+  },
+  {
+   "what": "practice lap, far off",
+   "at": 4.4,
+   "peak_dbfs": -23.0,
+   "len_s": 6.0,
+   "why": "script SOUND: \"Far off, race-weekend practice laps.\"; v3.1 S1.01b; the lead: audible but distant"
+  },
+  {
+   "what": "practice lap, far off (the car the Orb follows; lost behind a grandstand)",
+   "at": 5.61,
+   "peak_dbfs": -17.0,
+   "len_s": 4.61,
+   "why": "script SOUND: \"Far off, race-weekend practice laps.\"; v3.1 S1.01b; the lead: audible but distant"
+  },
+  {
+   "what": "the vault's F hum (the coda's pedal)",
+   "at": 475.67,
+   "to": 499.54,
+   "lufs": -37,
+   "why": "CODA mood: \"the vault's F hum as the pedal\"; plan S8.10 L-cut \"the vault's F pedal, into the tag\" 1.5 s"
+  },
+  {
+   "what": "the dark room's drone under the suite's last palette step, leading S2.01",
+   "at": 75.61,
+   "lufs": -40,
+   "why": "v3.2 plan v32-S1.13 jcut: \"the dark room's drone, under the last palette step\" 0.6 s"
+  },
+  {
+   "what": "the dark room's drone, leading S5.02 under S4.15",
+   "at": 266.25,
+   "lufs": -36,
+   "why": "script-v3-notes \u00a77 For sound; plan S4.15 jcut \"the dark room's drone, under Mada's held note\" 1.0 s"
+  },
+  {
+   "what": "the crane truck passes (its loudest at +0.5 s) and the suite's glasses shiver, from the pre-lap",
+   "at": 0.0,
+   "peak_dbfs": -27,
+   "why": "S1.01 caption: \"A crane truck grinds past; every glass shivers except his.\""
+  },
+  {
+   "what": "the call's waiting tone (twice), leading S3.00a",
+   "at": 116.02,
+   "peak_dbfs": -32,
+   "why": "plan S3.00a jcut: \"Neleh's office: the clock-tick and the call's waiting tone, under the whip's tail\" 0.6 s"
+  },
+  {
+   "what": "the all-hands crowd's hush, leading S3.06 (the room then stays hushed, -8 dB)",
+   "at": 153.74,
+   "peak_dbfs": -26,
+   "why": "plan S3.04b jcut: \"the all-hands crowd's hush\" 0.8 s"
+  },
+  {
+   "what": "Gerg's keys through the monitor",
+   "at": 276.83,
+   "to": 286.92,
+   "peak_dbfs": -16,
+   "why": "S5.09: the tile opens on him typing (\"doesn't look up\") (script-v3-notes \u00a77 For sound; sc 29 SOUND \"Gerg's keys and room through the monitor's small speaker\")"
+  },
+  {
+   "what": "Gerg's keys through the monitor",
+   "at": 287.12,
+   "to": 311.04,
+   "peak_dbfs": -24,
+   "why": "S5.06: light keys between his reads; none under the quoted lines; none from \"Scroll to the bottom.\" (script-v3-notes \u00a77 For sound; sc 29 SOUND \"Gerg's keys and room through the monitor's small speaker\")"
+  },
+  {
+   "what": "Gerg's keys through the monitor",
+   "at": 322.96,
+   "to": 327.09,
+   "peak_dbfs": -10,
+   "why": "S5.09-back: \"typing hard\", loud; stop dead on the act4 score's own Build stop (its cue sheet) (script-v3-notes \u00a77 For sound; sc 29 SOUND \"Gerg's keys and room through the monitor's small speaker\")"
+  },
+  {
+   "what": "one key on the cut out of S5.09b",
+   "at": 333.91,
+   "peak_dbfs": -18,
+   "why": "script S5.09b: \"Gerg holds the look a beat longer, then types again, and on the first key we cut.\""
+  },
+  {
+   "what": "Gerg's keys, faint, on the small tile until the door",
+   "at": 334.05,
+   "to": 335.8,
+   "peak_dbfs": -28,
+   "why": "script S5.11: \"Gerg's tile small and typing on the monitor\""
+  },
+  {
+   "what": "the JOIN ping (the laptop, the invite)",
+   "at": 9.92,
+   "peak_dbfs": -24,
+   "why": "S1.02 caption: \"The laptop pings: BOARD \u00b7 VIDEO CALL \u00b7 JOIN\"; script-v31-notes \u00a74 For sound"
+  },
+  {
+   "what": "the phones in a row on the table, still buzzing",
+   "at": 0.25,
+   "n": 6,
+   "why": "S4.09 caption: \"the phones, picked up and set in a row, face up, still buzzing\"; script-v31-notes \u00a74 For sound"
+  },
+  {
+   "what": "Ttemme's stream (S7.13 insert): the boardroom out k128-252, his mic's thin room; the crush sweeps (k140, k238), glass ticks (k155-168), the shatter (the timeline's, -10 dBFS), the shards (k174), near silence (k179-207), the sand (k208-229); the boardroom back at k252",
+   "at": 453.42,
+   "to": 458.58,
+   "why": "runway.md \u00a711.6 (the insert is silent); the lead: \"the hourglass shatter at S7.13\""
+  },
+  {
+   "what": "his thumb on the glass; the suite stepping down with the palette to night (-2, -4, -7 dB)",
+   "at": 38.96,
+   "why": "v3.2 plan v32-S1.13: \"his thumb on the glass; his post's send pop\"; the held steps"
+  },
+  {
+   "what": "the lobby by day: the revolving door's sweep under the dial tone; the lanyard across the stone; its clip",
+   "at": 203.7,
+   "why": "v3.2 plan v32-S5.00: jcut \"the lobby's room by day (the revolving door's sweep)\"; \"the lanyard's clip\""
+  },
+  {
+   "what": "the folder: Ttemme turns the page over (k315-321): its back is blank",
+   "at": 235.333,
+   "peak_dbfs": -15.0,
+   "why": "act4 score README (v3.5): \"the folder's page turns blank\"; the lock has no sound for it"
+  },
+  {
+   "what": "the war room: his phone buzzes as a call lands (1 of 7)",
+   "at": 46.468,
+   "peak_dbfs": -27.0,
+   "why": "shots-act4 v35-41.01: the calls and messages stacking tile over tile on the lock's onscreen times"
+  },
+  {
+   "what": "the war room: his phone buzzes as a call lands (2 of 7)",
+   "at": 46.776,
+   "peak_dbfs": -22.5,
+   "why": "shots-act4 v35-41.01: the calls and messages stacking tile over tile on the lock's onscreen times"
+  },
+  {
+   "what": "the war room: his phone buzzes as a call lands (3 of 7)",
+   "at": 47.173,
+   "peak_dbfs": -22.5,
+   "why": "shots-act4 v35-41.01: the calls and messages stacking tile over tile on the lock's onscreen times"
+  },
+  {
+   "what": "the war room: his phone buzzes as a call lands (4 of 7)",
+   "at": 47.51,
+   "peak_dbfs": -22.5,
+   "why": "shots-act4 v35-41.01: the calls and messages stacking tile over tile on the lock's onscreen times"
+  },
+  {
+   "what": "the war room: his phone buzzes as a call lands (5 of 7)",
+   "at": 47.846,
+   "peak_dbfs": -22.5,
+   "why": "shots-act4 v35-41.01: the calls and messages stacking tile over tile on the lock's onscreen times"
+  },
+  {
+   "what": "the war room: his phone buzzes as a call lands (6 of 7)",
+   "at": 48.161,
+   "peak_dbfs": -22.5,
+   "why": "shots-act4 v35-41.01: the calls and messages stacking tile over tile on the lock's onscreen times"
+  },
+  {
+   "what": "the war room: his phone buzzes as a call lands (7 of 7)",
+   "at": 48.411,
+   "peak_dbfs": -22.5,
+   "why": "shots-act4 v35-41.01: the calls and messages stacking tile over tile on the lock's onscreen times"
+  },
+  {
+   "what": "Tasya's key ring, heard only, through the call",
+   "at": 60.5,
+   "peak_dbfs": -32.0,
+   "why": "shots-act4 v35-41.03: \"his phone and key ring out of frame, the jangle heard only\""
+  },
+  {
+   "what": "the phone lights again on the notepad (len-16); its buzz becomes the plane's hum",
+   "at": 72.542,
+   "peak_dbfs": -29.0,
+   "why": "plan v35-41.06 lcut \"the phone's ring becomes a plane's hum\" 0.5 s"
+  },
+  {
+   "what": "the pen on the notepad: 1. GERG (k8)",
+   "at": 73.542,
+   "peak_dbfs": -33.0,
+   "why": "shots-act4 v35-42.01: TERMS, 1. GERG written by 1.0 s"
+  },
+  {
+   "what": "the pen on the notepad: 1. GERG (k17)",
+   "at": 73.917,
+   "peak_dbfs": -33.0,
+   "why": "shots-act4 v35-42.01: TERMS, 1. GERG written by 1.0 s"
+  },
+  {
+   "what": "the pen goes on: the second line, a scrawl (k30)",
+   "at": 74.458,
+   "peak_dbfs": -35.0,
+   "why": "shots-act4 v35-42.01: \"his pen keeps going, a second line we can't read\""
+  },
+  {
+   "what": "the bump: the cabin jolts (k38)",
+   "at": 74.792,
+   "peak_dbfs": -27.0,
+   "why": "shots-act4 v35-42.01: the bump at 1.6 s"
+  },
+  {
+   "what": "the bump: the cup rocks on the tray",
+   "at": 74.833,
+   "peak_dbfs": -33.0,
+   "why": "shots-act4 v35-42.01: the cup's coffee tilts and slops"
+  },
+  {
+   "what": "the coffee slops",
+   "at": 74.958,
+   "peak_dbfs": -38.0,
+   "why": "shots-act4 v35-42.01: the cup's coffee tilts and slops"
+  },
+  {
+   "what": "the hearts' soft ticks on Alyi's phone (18 on the picture's frames; two carried into S5.03)",
+   "at": 260.0,
+   "peak_dbfs": -25.5,
+   "why": "plan v35-49A.01: \"the bullpen's night air; the hearts' soft ticks\"; lcut \"the hearts' soft ticks carry across to Mas's phone\" 0.4 s"
+  }
+ ],
+ "score_hints": {
+  "score": "audio/ost/tracks/e01-v3-act4/render/music-el.wav",
+  "cues": "audio/ost/tracks/e01-v3-act4/cues-el.json",
+  "drop": [],
+  "why": {},
+  "grid": null,
+  "build_stop": 327.094
+ },
+ "keys_stop": {
+  "at": 327.094,
+  "beat_end": 328.083,
+  "rule": "on the act4 score's own Build stop (its cue sheet)"
+ },
+ "silence": {
+  "click_beat": "v31-S1.08d",
+  "click": 27.733,
+  "buzz": 32.842,
+  "seconds": 5.108,
+  "what": "every room out on the click (12 ms), room tone only at -50 LUFS, back on the buzz (80 ms); the click keeps its first 60 ms, then no SFX until the buzz"
+ },
+ "room_stem": {
+  "lufs": -37.02,
+  "peak_dbfs": -17.63,
+  "p10_50ms_dbfs": -39.6
+ },
+ "sfx_stem": {
+  "lufs": -31.47,
+  "peak_dbfs": -10.0,
+  "p10_50ms_dbfs": -240.0
+ },
+ "room_under_-55dBFS_0.3s": [],
+ "click_scan": {
+  "room": {
+   "boundaries": [],
+   "cutoffs": []
+  },
+  "sfx": {
+   "boundaries": [],
+   "cutoffs": [
+    {
+     "at": 17.195,
+     "ratio": 21.8,
+     "from_dbfs": -40.4,
+     "to_dbfs": -57.7,
+     "kind": "in-sample",
+     "inside": "dialog_ok_click"
+    },
+    {
+     "at": 44.885,
+     "ratio": 21.2,
+     "from_dbfs": -43.0,
+     "to_dbfs": -59.8,
+     "kind": "in-sample",
+     "inside": "post_click"
+    },
+    {
+     "at": 208.775,
+     "ratio": 27.7,
+     "from_dbfs": -43.0,
+     "to_dbfs": -58.5,
+     "kind": "in-sample",
+     "inside": "post_click"
+    },
+    {
+     "at": 260.335,
+     "ratio": 22.7,
+     "from_dbfs": -41.2,
+     "to_dbfs": -55.6,
+     "kind": "in-sample",
+     "inside": "the hearts' soft ticks on Alyi's phone (18 on the picture's frames; two carried into S5.03)"
+    },
+    {
+     "at": 260.96,
+     "ratio": 22.6,
+     "from_dbfs": -43.6,
+     "to_dbfs": -56.7,
+     "kind": "in-sample",
+     "inside": "the hearts' soft ticks on Alyi's phone (18 on the picture's frames; two carried into S5.03)"
+    },
+    {
+     "at": 261.21,
+     "ratio": 22.7,
+     "from_dbfs": -41.2,
+     "to_dbfs": -55.6,
+     "kind": "in-sample",
+     "inside": "the hearts' soft ticks on Alyi's phone (18 on the picture's frames; two carried into S5.03)"
+    },
+    {
+     "at": 261.835,
+     "ratio": 25.9,
+     "from_dbfs": -41.1,
+     "to_dbfs": -54.2,
+     "kind": "in-sample",
+     "inside": "the hearts' soft ticks on Alyi's phone (18 on the picture's frames; two carried into S5.03)"
+    },
+    {
+     "at": 262.085,
+     "ratio": 22.7,
+     "from_dbfs": -38.7,
+     "to_dbfs": -53.1,
+     "kind": "in-sample",
+     "inside": "the hearts' soft ticks on Alyi's phone (18 on the picture's frames; two carried into S5.03)"
+    },
+    {
+     "at": 262.92,
+     "ratio": 18.8,
+     "from_dbfs": -38.6,
+     "to_dbfs": -63.9,
+     "kind": "in-sample",
+     "inside": "the hearts' soft ticks on Alyi's phone (18 on the picture's frames; two carried into S5.03)"
+    },
+    {
+     "at": 263.17,
+     "ratio": 14.1,
+     "from_dbfs": -38.9,
+     "to_dbfs": -66.7,
+     "kind": "in-sample",
+     "inside": "the hearts' soft ticks on Alyi's phone (18 on the picture's frames; two carried into S5.03)"
+    },
+    {
+     "at": 263.42,
+     "ratio": 15.3,
+     "from_dbfs": -40.9,
+     "to_dbfs": -62.2,
+     "kind": "in-sample",
+     "inside": "the hearts' soft ticks on Alyi's phone (18 on the picture's frames; two carried into S5.03)"
+    },
+    {
+     "at": 264.085,
+     "ratio": 13.5,
+     "from_dbfs": -41.1,
+     "to_dbfs": -54.2,
+     "kind": "in-sample",
+     "inside": "the hearts' soft ticks on Alyi's phone (18 on the picture's frames; two carried into S5.03)"
+    },
+    {
+     "at": 264.295,
+     "ratio": 15.0,
+     "from_dbfs": -38.6,
+     "to_dbfs": -63.9,
+     "kind": "in-sample",
+     "inside": "the hearts' soft ticks on Alyi's phone (18 on the picture's frames; two carried into S5.03)"
+    },
+    {
+     "at": 264.96,
+     "ratio": 17.5,
+     "from_dbfs": -42.6,
+     "to_dbfs": -55.7,
+     "kind": "in-sample",
+     "inside": "the hearts' soft ticks on Alyi's phone (18 on the picture's frames; two carried into S5.03)"
+    },
+    {
+     "at": 265.17,
+     "ratio": 24.2,
+     "from_dbfs": -40.1,
+     "to_dbfs": -65.4,
+     "kind": "in-sample",
+     "inside": "an added layer"
+    },
+    {
+     "at": 286.805,
+     "ratio": 16.7,
+     "from_dbfs": -46.8,
+     "to_dbfs": -60.3,
+     "kind": "in-sample",
+     "inside": "Gerg's keys through the monitor"
+    },
+    {
+     "at": 459.895,
+     "ratio": 20.7,
+     "from_dbfs": -45.2,
+     "to_dbfs": -69.6,
+     "kind": "in-sample",
+     "inside": "neon_ignite"
+    }
+   ]
+  },
+  "rule": "second difference > 10.0x the local 99th percentile (see click_scan)"
+ },
+ "room_levels": [
+  {
+   "room": "suite@act4:S1.01",
+   "p5_50ms_dbfs": -38.8,
+   "lift_db": 0.0
+  },
+  {
+   "room": "plane@act4:v35-42.01",
+   "p5_50ms_dbfs": -40.2,
+   "lift_db": 0.2
+  },
+  {
+   "room": "dark@act4:S2.01",
+   "p5_50ms_dbfs": -40.9,
+   "lift_db": 0.9
+  },
+  {
+   "room": "tpool-2008@act4:v35-43.01",
+   "p5_50ms_dbfs": -44.1,
+   "lift_db": 4.1
+  },
+  {
+   "room": "dark@act4:S2.05",
+   "p5_50ms_dbfs": -40.8,
+   "lift_db": 0.8
+  },
+  {
+   "room": "office@act4:v31-S3.00p",
+   "p5_50ms_dbfs": -41.3,
+   "lift_db": 1.3
+  },
+  {
+   "room": "allhands@act4:S3.06",
+   "p5_50ms_dbfs": -41.4,
+   "lift_db": 1.4
+  },
+  {
+   "room": "office_night@act4:S3.05",
+   "p5_50ms_dbfs": -42.0,
+   "lift_db": 2.0
+  },
+  {
+   "room": "boardroom@act4:S4.02",
+   "p5_50ms_dbfs": -41.1,
+   "lift_db": 1.1
+  },
+  {
+   "room": "split-a4@act4:S4.08",
+   "p5_50ms_dbfs": -43.9,
+   "lift_db": 3.9
+  },
+  {
+   "room": "lobby-a1@act4:v32-S5.00",
+   "p5_50ms_dbfs": -38.9,
+   "lift_db": 0.0
+  },
+  {
+   "room": "cctv@act4:S4.09",
+   "p5_50ms_dbfs": -43.3,
+   "lift_db": 3.3
+  },
+  {
+   "room": "boardroom@act4:S4.10b",
+   "p5_50ms_dbfs": -41.1,
+   "lift_db": 1.1
+  },
+  {
+   "room": "bullpen-night@act4:v35-49A.01",
+   "p5_50ms_dbfs": -44.6,
+   "lift_db": 4.6
+  },
+  {
+   "room": "dark@act4:S5.03",
+   "p5_50ms_dbfs": -41.1,
+   "lift_db": 1.1
+  },
+  {
+   "room": "bullpen-day@act4:S7.01",
+   "p5_50ms_dbfs": -42.7,
+   "lift_db": 2.7
+  },
+  {
+   "room": "fires@act4:S7.05",
+   "p5_50ms_dbfs": -39.5,
+   "lift_db": 0.0
+  },
+  {
+   "room": "lobby-night@act4:S8.01",
+   "p5_50ms_dbfs": -39.1,
+   "lift_db": 0.0
+  },
+  {
+   "room": "coda@act4:S8.06",
+   "p5_50ms_dbfs": -43.3,
+   "lift_db": 3.3
+  }
+ ]
+}

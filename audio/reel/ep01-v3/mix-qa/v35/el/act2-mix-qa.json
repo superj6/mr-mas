@@ -1,9 +1,9 @@
 {
  "segment": "act2",
  "variant": "el",
- "seconds": 202.0,
- "frames": 4848,
- "samples": 9696000,
+ "seconds": 207.0,
+ "frames": 4968,
+ "samples": 9936000,
  "timeline": "show/reel/ep01-v35-el/ep01-v35-el-act2.json",
  "dialogue": {
   "lines": 46,
@@ -23,10 +23,10 @@
  "score": {
   "file": "audio/ost/tracks/e01-v3-act2/render/music-el.wav",
   "cues": "audio/ost/tracks/e01-v3-act2/cues-el.json",
-  "length_s": 202.0,
+  "length_s": 207.0,
   "length_vs_segment_s": 0.0,
-  "lufs_as_delivered": -20.16,
-  "lufs_after_gain": -20.16,
+  "lufs_as_delivered": -20.14,
+  "lufs_after_gain": -20.14,
   "duck": {
    "by_mood_db": [
     [
@@ -57,14 +57,14 @@
   "lufs_i": -16.0,
   "true_peak_dbtp": -1.46,
   "sample_peak_dbfs": -1.5,
-  "lra_lu": 5.8,
-  "gain_db": 1.17,
+  "lra_lu": 5.4,
+  "gain_db": 1.22,
   "limiter_ceiling_dbfs": -1.5,
-  "limiter_active_s": 0.065,
-  "dialogue_lufs": -14.9,
-  "score_lufs_after_duck": -21.6,
+  "limiter_active_s": 0.063,
+  "dialogue_lufs": -14.86,
+  "score_lufs_after_duck": -21.37,
   "score_rms_under_speech_dbfs": -30.7,
-  "score_rms_between_speech_dbfs": -21.2,
+  "score_rms_between_speech_dbfs": -21.1,
   "score_runs": {
    "count": 3,
    "shortest_s": 41.45,
@@ -79,38 +79,32 @@
     ],
     [
      121.6,
-     80.25
+     85.2
     ]
    ]
   },
-  "rooms_lufs": -37.25,
-  "sfx_lufs": -31.97,
+  "rooms_lufs": -37.16,
+  "sfx_lufs": -32.18,
   "holes_under_-42dBFS_0.3s": [],
   "holes_mono_downmix": [
    {
     "at": 116.15,
-    "s": 0.65,
+    "s": 0.7,
     "what": "UNMARKED (in beat 15.13)"
    },
    {
-    "at": 121.1,
-    "s": 0.35,
+    "at": 118.8,
+    "s": 0.4,
     "what": "UNMARKED (in beat 15.14)"
    }
   ],
-  "holes_without_score": [
-   {
-    "at": 201.35,
-    "s": 0.3,
-    "what": "designed: the black on the bell's last partial"
-   }
-  ],
+  "holes_without_score": [],
   "unmarked_holes": 0,
   "unmarked_holes_without_score": 0,
   "jumps_over_15dB": {
-   "count": 26,
-   "rising": 22,
-   "rising_at_a_word": 21,
+   "count": 28,
+   "rising": 24,
+   "rising_at_a_word": 23,
    "rising_at_an_sfx": 0,
    "rising_other": [
     91.65
@@ -121,11 +115,11 @@
  "file": "out/ep01/full-v3/mix-v35-el/act2-mix.wav",
  "guard_db": null,
  "seam_head": {
-  "from_gain_db": 1.43,
-  "to_gain_db": 1.17,
+  "from_gain_db": 1.4,
+  "to_gain_db": 1.22,
   "ramp_s": 2.0,
   "after": "act1"
  },
- "built": "2026-09-28 17:56:12",
+ "built": "2026-09-28 23:37:52",
  "heard": "nothing here has been listened to; every number is measured"
 }

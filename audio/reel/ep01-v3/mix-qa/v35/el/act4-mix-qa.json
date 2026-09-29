@@ -1,19 +1,19 @@
 {
  "segment": "act4",
  "variant": "el",
- "seconds": 494.708,
- "frames": 11873,
- "samples": 23746000,
+ "seconds": 498.042,
+ "frames": 11953,
+ "samples": 23906000,
  "timeline": "show/reel/ep01-v35-el/ep01-v35-el-act4.json",
  "dialogue": {
-  "lines": 99,
+  "lines": 100,
   "device": {
    "call": 8,
    "laptop": 1,
    "monitor": 7,
    "stream": 1
   },
-  "el_matched": 99,
+  "el_matched": 100,
   "missing": [],
   "kokoro_cast": 1
  },
@@ -28,10 +28,10 @@
  "score": {
   "file": "audio/ost/tracks/e01-v3-act4/render/music-el.wav",
   "cues": "audio/ost/tracks/e01-v3-act4/cues-el.json",
-  "length_s": 494.708,
+  "length_s": 498.042,
   "length_vs_segment_s": 0.0,
-  "lufs_as_delivered": -20.3,
-  "lufs_after_gain": -20.3,
+  "lufs_as_delivered": -20.27,
+  "lufs_after_gain": -20.27,
   "duck": {
    "by_mood_db": [
     [
@@ -50,33 +50,33 @@
     "D6: the Remove click -> the phone's buzz (every bus at zero in the mix), then no score under \"super.\" (the suite's air holds it), nor under his 1:46 PM post typed twice (v32-S1.13) -> the phone lights: the war room's pulse (v3.5)"
    ],
    [
-    202.667,
-    206.43,
+    206.0,
+    209.763,
     "the lobby by day, his side (v3.2): no score under the lanyard, the selfie and his post (the lobby's room; the split's pedal released under it) -> one felt note on his look up"
    ],
    [
-    305.153,
-    309.61,
+    308.487,
+    312.902,
     "the scroll stops on ALYI -> \"He did both.\" (no score: the chime, \"Alyi signed it.\" and \"alyi voted.\" play in the room)"
    ],
    [
-    433.135,
-    440.992,
+    436.427,
+    444.283,
     "the dead stop on \"of what?\" -> the stamp (Mada's pause, \"Good question.\", \"good question.\" and the long hold play in the room)"
    ],
    [
-    452.002,
-    453.458,
+    455.293,
+    456.75,
     "the hourglass shatters: the sand holds its shape (k173-207) and the music holds its breath with it (runway.md \u00a711.6)"
    ],
    [
-    462.442,
-    464.563,
+    465.733,
+    467.854,
     "the lobby CU \"silent like the first\" (v3.4: to the count): no score after the bonk (the neon's F); the flat line's tail is cut under the bonk (v3.2 EL: it hovered at -60 dBFS and read as a 50 ms fragment)"
    ],
    [
     359.708,
-    363.472,
+    366.763,
     "the dead stop on MADA's label -> the Monday bullpen (the dark room's air, then the bullpen's, hold it)"
    ]
   ],
@@ -103,74 +103,74 @@
  "setpieces": [
   {
    "what": "the avalanche",
-   "from": 352.58,
-   "to": 359.73,
-   "talk_lufs": -16.69,
+   "from": 355.88,
+   "to": 363.02,
+   "talk_lufs": -16.7,
    "measure": "st",
-   "peak_before_lufs": -16.81,
-   "lift_db": 3.64,
-   "peak_after_lufs": -14.47,
-   "over_talk_lu": 2.22
+   "peak_before_lufs": -17.34,
+   "lift_db": 3.15,
+   "peak_after_lufs": -14.33,
+   "over_talk_lu": 2.37
   },
   {
    "what": "the hourglass shatter",
-   "from": 451.95,
-   "to": 452.5,
-   "talk_lufs": -16.69,
+   "from": 455.24,
+   "to": 455.79,
+   "talk_lufs": -16.7,
    "measure": "mom",
-   "peak_before_lufs": -21.03,
-   "lift_db": 6.84,
-   "peak_after_lufs": -14.3,
-   "over_talk_lu": 2.39
+   "peak_before_lufs": -21.06,
+   "lift_db": 6.86,
+   "peak_after_lufs": -14.28,
+   "over_talk_lu": 2.42
   }
  ],
  "gain_rows": [
   {
    "what": "the avalanche (X6)",
-   "from": 352.58,
-   "to": 359.73,
+   "from": 355.88,
+   "to": 363.02,
    "target_lu": 1.75,
-   "mean_before_lufs": -15.31,
-   "mean_after_lufs": -13.57,
+   "mean_before_lufs": -15.85,
+   "mean_after_lufs": -14.11,
    "lift_lu": 1.74,
-   "gain_db": 1.99
+   "gain_db": 2.03
   }
  ],
  "checks": [
   {
    "what": "Gerg's keys at 2 AM, S5.09 (the tile opens)",
-   "from": 274.93,
-   "to": 283.58,
+   "from": 278.22,
+   "to": 286.92,
    "band_hz": [
     1000,
     5000
    ],
-   "unspoken_s": 2.17,
-   "sfx_rms": -48.1,
+   "unspoken_s": 2.21,
+   "sfx_rms": -48.2,
    "room_rms": -58.1,
-   "score_rms": -42.8,
-   "bed_rms": -42.7,
+   "score_rms": -42.9,
+   "bed_rms": -42.8,
    "sfx_minus_bed_db": -5.4
   },
   {
    "what": "Gerg's keys, S5.09-back (typing hard)",
-   "from": 319.67,
-   "to": 323.8,
+   "from": 322.96,
+   "to": 327.09,
    "band_hz": [
     1000,
     5000
    ],
    "unspoken_s": 0.92,
    "sfx_rms": -38.6,
-   "room_rms": -58.1,
+   "room_rms": -58.0,
    "score_rms": -41.4,
    "bed_rms": -41.3,
    "sfx_minus_bed_db": 2.7
   },
   {
    "what": "after \"His keys stop.\" (the first second of his look)",
-   "from": 323.85,
-   "to": 324.8,
+   "from": 327.14,
+   "to": 328.09,
    "band_hz": [
     1000,
     5000
@@ -179,8 +179,8 @@
    "sfx_rms": -240.0,
    "room_rms": -58.0,
    "score_rms": -42.5,
-   "bed_rms": -42.3,
-   "sfx_minus_bed_db": -197.7
+   "bed_rms": -42.4,
+   "sfx_minus_bed_db": -197.6
   },
   {
    "what": "the practice laps under S1.01 (after the crane)",
@@ -192,7 +192,7 @@
    ],
    "unspoken_s": 3.61,
    "sfx_rms": -32.4,
-   "room_rms": -46.4,
+   "room_rms": -46.5,
    "score_rms": -27.2,
    "bed_rms": -27.1,
    "sfx_minus_bed_db": -5.3
@@ -207,42 +207,42 @@
    ],
    "unspoken_s": 3.21,
    "sfx_rms": -29.4,
-   "room_rms": -46.2,
+   "room_rms": -46.3,
    "score_rms": -27.4,
    "bed_rms": -27.4,
    "sfx_minus_bed_db": -2.0
   },
   {
    "what": "the hourglass shatter (S7.13 k173-180)",
-   "from": 452.0,
-   "to": 452.29,
+   "from": 455.29,
+   "to": 455.58,
    "band_hz": [
     500,
     9000
    ],
    "unspoken_s": 0.29,
-   "sfx_rms": -20.4,
+   "sfx_rms": -20.3,
    "room_rms": -51.7,
    "score_rms": -46.7,
    "bed_rms": -45.3,
-   "sfx_minus_bed_db": 24.9
+   "sfx_minus_bed_db": 25.0
   }
  ],
  "measured": {
-  "lufs_i": -16.01,
-  "true_peak_dbtp": -1.18,
+  "lufs_i": -16.02,
+  "true_peak_dbtp": -1.23,
   "sample_peak_dbfs": -1.5,
-  "lra_lu": 7.5,
-  "gain_db": 1.08,
+  "lra_lu": 7.7,
+  "gain_db": 1.06,
   "limiter_ceiling_dbfs": -1.5,
-  "limiter_active_s": 1.229,
+  "limiter_active_s": 1.03,
   "dialogue_lufs": -15.07,
-  "score_lufs_after_duck": -22.01,
-  "score_rms_under_speech_dbfs": -31.1,
+  "score_lufs_after_duck": -22.02,
+  "score_rms_under_speech_dbfs": -31.2,
   "score_rms_between_speech_dbfs": -21.7,
   "score_runs": {
    "count": 14,
-   "shortest_s": 1.35,
+   "shortest_s": 1.3,
    "runs": [
     [
      0.3,
@@ -258,52 +258,52 @@
     ],
     [
      91.3,
-     111.25
+     114.55
     ],
     [
-     206.45,
-     46.05
+     209.75,
+     45.9
     ],
     [
-     253.2,
+     256.5,
      52.0
     ],
     [
-     309.9,
-     38.1
+     313.15,
+     38.25
     ],
     [
-     348.9,
-     10.85
+     352.2,
+     7.55
     ],
     [
-     363.45,
+     366.75,
      69.7
     ],
     [
-     441.0,
-     11.05
+     444.3,
+     11.0
     ],
     [
-     453.45,
+     456.75,
      8.95
     ],
     [
-     464.55,
-     1.35
+     467.85,
+     1.3
     ],
     [
-     466.3,
+     469.6,
      3.4
     ],
     [
-     470.55,
+     473.85,
      24.15
     ]
    ]
   },
-  "rooms_lufs": -37.11,
-  "sfx_lufs": -29.06,
+  "rooms_lufs": -37.14,
+  "sfx_lufs": -29.12,
   "holes_under_-42dBFS_0.3s": [
    {
     "at": 27.75,
@@ -311,7 +311,7 @@
     "what": "designed: THE ONE SILENCE: the Remove click -> the buzz (room tone only)"
    },
    {
-    "at": 452.6,
+    "at": 455.9,
     "s": 0.85,
     "what": "designed: Ttemme's stream: the held beat, near silence (the sand stands)"
    }
@@ -323,17 +323,22 @@
     "what": "designed: THE ONE SILENCE: the Remove click -> the buzz (room tone only)"
    },
    {
-    "at": 433.15,
-    "s": 0.45,
+    "at": 437.4,
+    "s": 0.4,
     "what": "UNMARKED (in beat S7.07-cont)"
    },
    {
-    "at": 434.1,
-    "s": 0.5,
+    "at": 438.8,
+    "s": 0.35,
     "what": "UNMARKED (in beat S7.07-cont)"
    },
    {
-    "at": 452.55,
+    "at": 440.6,
+    "s": 0.35,
+    "what": "UNMARKED (in beat S7.08)"
+   },
+   {
+    "at": 455.85,
     "s": 0.9,
     "what": "designed: Ttemme's stream: the held beat, near silence (the sand stands)"
    }
@@ -345,49 +350,49 @@
     "what": "designed: THE ONE SILENCE: the Remove click -> the buzz (room tone only)"
    },
    {
-    "at": 450.1,
-    "s": 0.3,
-    "what": "designed: Ttemme's stream: the held beat, near silence (the sand stands)"
+    "at": 46.1,
+    "s": 0.35,
+    "what": "UNMARKED (in beat v32-S1.13)"
    },
    {
-    "at": 452.6,
+    "at": 455.9,
     "s": 0.9,
     "what": "designed: Ttemme's stream: the held beat, near silence (the sand stands)"
    },
    {
-    "at": 453.95,
+    "at": 457.25,
     "s": 0.85,
     "what": "designed: Ttemme's stream: the held beat, near silence (the sand stands)"
    }
   ],
   "unmarked_holes": 0,
-  "unmarked_holes_without_score": 0,
+  "unmarked_holes_without_score": 1,
   "jumps_over_15dB": {
-   "count": 69,
-   "rising": 60,
-   "rising_at_a_word": 51,
-   "rising_at_an_sfx": 1,
+   "count": 61,
+   "rising": 53,
+   "rising_at_a_word": 45,
+   "rising_at_an_sfx": 0,
    "rising_other": [
     24.65,
     149.4,
-    206.45,
-    348.9,
-    352.55,
-    453.45,
-    464.4,
-    481.15
+    209.75,
+    280.1,
+    298.8,
+    352.2,
+    456.75,
+    484.45
    ],
-   "falling": 9
+   "falling": 8
   }
  },
  "file": "out/ep01/full-v3/mix-v35-el/act4-mix.wav",
  "guard_db": null,
  "seam_head": {
-  "from_gain_db": 2.07,
-  "to_gain_db": 1.08,
+  "from_gain_db": 2.16,
+  "to_gain_db": 1.06,
   "ramp_s": 2.0,
   "after": "act3"
  },
- "built": "2026-09-28 17:56:26",
+ "built": "2026-09-28 23:55:57",
  "heard": "nothing here has been listened to; every number is measured"
 }

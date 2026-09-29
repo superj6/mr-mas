@@ -1,16 +1,16 @@
 {
  "segment": "act1",
  "variant": "el",
- "seconds": 456.125,
- "frames": 10947,
- "samples": 21894000,
+ "seconds": 458.125,
+ "frames": 10995,
+ "samples": 21990000,
  "timeline": "show/reel/ep01-v35-el/ep01-v35-el-act1.json",
  "dialogue": {
-  "lines": 81,
+  "lines": 82,
   "device": {
    "phone": 8
   },
-  "el_matched": 81,
+  "el_matched": 80,
   "missing": [],
   "kokoro_cast": 3
  },
@@ -25,7 +25,7 @@
  "score": {
   "file": "audio/ost/tracks/e01-v3-act1/render/music-el.wav",
   "cues": "audio/ost/tracks/e01-v3-act1/cues-el.json",
-  "length_s": 456.125,
+  "length_s": 458.125,
   "length_vs_segment_s": 0.0,
   "lufs_as_delivered": -20.66,
   "lufs_after_gain": -20.66,
@@ -52,13 +52,48 @@
     "the collar's pop: the swing stops dead; the lobby's room under \"That collar suits you.\" / \"it does.\" / \"and the rent?\""
    ],
    [
-    443.208,
-    454.125,
+    445.208,
+    456.125,
     "EMIT's THUD stops the pause letter: no score through the page, his desk and the reflection, until the THREAT on the pen's lift"
    ]
   ],
   "head_fade_s": 0.04,
-  "head_fade_why": "designed hit at the head (cues.json designed_hit): (0.0, 'A1 THE DOWNBEAT (a designed hit, on the first frame): the felt on the button (Fm')"
+  "head_fade_why": "designed hit at the head (cues.json designed_hit): (0.0, 'A1 THE DOWNBEAT (a designed hit, on the first frame): the felt on the button (Fm')",
+  "rides": [
+   {
+    "curve": [
+     [
+      218.708,
+      0.0
+     ],
+     [
+      218.958,
+      -3.0
+     ],
+     [
+      223.918,
+      -3.0
+     ],
+     [
+      223.958,
+      -9.0
+     ],
+     [
+      224.458,
+      -3.0
+     ],
+     [
+      225.75,
+      -3.0
+     ],
+     [
+      226.75,
+      0.0
+     ]
+    ],
+    "why": "check-v35 #2: 3 AM's felt note and the bloom"
+   }
+  ]
  },
  "setpieces": [
   {
@@ -68,7 +103,7 @@
    "talk_lufs": -16.75,
    "measure": "st",
    "peak_before_lufs": -15.6,
-   "lift_db": 1.36,
+   "lift_db": 1.35,
    "peak_after_lufs": -14.27,
    "over_talk_lu": 2.48
   }
@@ -98,26 +133,26 @@
     3000
    ],
    "unspoken_s": 0.6,
-   "sfx_rms": -39.0,
+   "sfx_rms": -39.1,
    "room_rms": -44.0,
    "score_rms": -36.9,
    "bed_rms": -36.2,
-   "sfx_minus_bed_db": -2.8
+   "sfx_minus_bed_db": -2.9
   },
   {
    "what": "the pen leading 12.04",
-   "from": 447.12,
-   "to": 447.62,
+   "from": 449.12,
+   "to": 449.62,
    "band_hz": [
     3000,
     9000
    ],
-   "unspoken_s": 0.5,
-   "sfx_rms": -49.5,
-   "room_rms": -56.4,
+   "unspoken_s": 0.27,
+   "sfx_rms": -51.2,
+   "room_rms": -58.5,
    "score_rms": -240.0,
-   "bed_rms": -56.4,
-   "sfx_minus_bed_db": 6.9
+   "bed_rms": -58.5,
+   "sfx_minus_bed_db": 7.3
   }
  ],
  "measured": {
@@ -125,20 +160,20 @@
   "true_peak_dbtp": -1.45,
   "sample_peak_dbfs": -1.5,
   "lra_lu": 6.5,
-  "gain_db": 1.43,
+  "gain_db": 1.4,
   "limiter_ceiling_dbfs": -1.5,
-  "limiter_active_s": 0.539,
-  "dialogue_lufs": -14.67,
-  "score_lufs_after_duck": -20.89,
-  "score_rms_under_speech_dbfs": -31.8,
+  "limiter_active_s": 0.425,
+  "dialogue_lufs": -14.69,
+  "score_lufs_after_duck": -20.94,
+  "score_rms_under_speech_dbfs": -31.9,
   "score_rms_between_speech_dbfs": -20.7,
   "score_runs": {
-   "count": 9,
-   "shortest_s": 1.85,
+   "count": 10,
+   "shortest_s": 0.15,
    "runs": [
     [
      0.0,
-     13.35
+     13.3
     ],
     [
      13.85,
@@ -158,39 +193,43 @@
     ],
     [
      219.05,
-     2.25
+     1.55
     ],
     [
-     223.3,
-     56.1
+     221.0,
+     0.15
+    ],
+    [
+     223.55,
+     55.85
     ],
     [
      286.95,
-     156.3
+     158.3
     ],
     [
-     454.1,
+     456.1,
      1.85
     ]
    ]
   },
-  "rooms_lufs": -36.28,
-  "sfx_lufs": -35.77,
+  "rooms_lufs": -36.3,
+  "sfx_lufs": -34.63,
   "holes_under_-42dBFS_0.3s": [],
   "holes_mono_downmix": [],
   "holes_without_score": [
    {
-    "at": 455.15,
-    "s": 0.3,
+    "at": 457.15,
+    "s": 0.35,
     "what": "designed: the act-out black (the bullpen cuts with the picture)"
    }
   ],
   "unmarked_holes": 0,
   "unmarked_holes_without_score": 0,
   "jumps_over_15dB": {
-   "count": 119,
-   "rising": 92,
-   "rising_at_a_word": 73,
+   "count": 118,
+   "rising": 91,
+   "rising_at_a_word": 74,
    "rising_at_an_sfx": 1,
    "rising_other": [
     4.25,
@@ -204,10 +243,8 @@
     119.25,
     168.0,
     175.5,
-    219.05,
     221.3,
     222.95,
-    224.25,
     286.65,
     353.25,
     391.65
@@ -218,11 +255,11 @@
  "file": "out/ep01/full-v3/mix-v35-el/act1-mix.wav",
  "guard_db": null,
  "seam_head": {
-  "from_gain_db": 1.43,
-  "to_gain_db": 1.43,
+  "from_gain_db": 1.4,
+  "to_gain_db": 1.4,
   "ramp_s": 2.0,
   "after": "card"
  },
- "built": "2026-09-28 17:56:08",
+ "built": "2026-09-28 23:33:35",
  "heard": "nothing here has been listened to; every number is measured"
 }

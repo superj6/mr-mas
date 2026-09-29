@@ -1,9 +1,9 @@
 {
  "segment": "act3",
  "variant": "el",
- "seconds": 136.417,
- "frames": 3274,
- "samples": 6548000,
+ "seconds": 146.417,
+ "frames": 3514,
+ "samples": 7028000,
  "timeline": "show/reel/ep01-v35-el/ep01-v35-el-act3.json",
  "dialogue": {
   "lines": 24,
@@ -26,10 +26,10 @@
  "score": {
   "file": "audio/ost/tracks/e01-v3-act3/render/music-el.wav",
   "cues": "audio/ost/tracks/e01-v3-act3/cues-el.json",
-  "length_s": 136.417,
+  "length_s": 146.417,
   "length_vs_segment_s": 0.0,
-  "lufs_as_delivered": -20.03,
-  "lufs_after_gain": -20.03,
+  "lufs_as_delivered": -19.89,
+  "lufs_after_gain": -19.89,
   "duck": {
    "by_mood_db": [
     [
@@ -43,13 +43,13 @@
   },
   "designed_silences": [
    [
-    95.775,
-    113.358,
+    105.775,
+    123.358,
     "DevDay, live: no score under the stage; the hall's applause, the stage's own sound and his line play it dry; the felt comes back at home"
    ],
    [
-    133.917,
-    136.417,
+    143.917,
+    146.417,
     "THE CLOCK's dead stop on bar 4's downbeat -> the act's last frame (black; the SFX pre-lap of the crane and the tings carries it)"
    ]
   ],
@@ -58,93 +58,94 @@
  "checks": [
   {
    "what": "Gerg's keys down the line, 20.06 (loud)",
-   "from": 54.62,
-   "to": 66.5,
+   "from": 64.62,
+   "to": 76.5,
    "band_hz": [
     1000,
     5000
    ],
    "unspoken_s": 3.76,
    "sfx_rms": -41.5,
-   "room_rms": -56.7,
+   "room_rms": -56.8,
    "score_rms": -43.2,
    "bed_rms": -43.0,
    "sfx_minus_bed_db": 1.5
   }
  ],
  "measured": {
-  "lufs_i": -16.02,
-  "true_peak_dbtp": -1.34,
+  "lufs_i": -16.01,
+  "true_peak_dbtp": -1.36,
   "sample_peak_dbfs": -1.5,
-  "lra_lu": 7.4,
-  "gain_db": 2.07,
+  "lra_lu": 6.8,
+  "gain_db": 2.16,
   "limiter_ceiling_dbfs": -1.5,
-  "limiter_active_s": 1.096,
-  "dialogue_lufs": -14.49,
-  "score_lufs_after_duck": -19.36,
-  "score_rms_under_speech_dbfs": -31.5,
-  "score_rms_between_speech_dbfs": -21.5,
+  "limiter_active_s": 1.536,
+  "dialogue_lufs": -14.4,
+  "score_lufs_after_duck": -18.88,
+  "score_rms_under_speech_dbfs": -31.3,
+  "score_rms_between_speech_dbfs": -21.2,
   "score_runs": {
    "count": 2,
    "shortest_s": 20.6,
    "runs": [
     [
      0.05,
-     95.7
+     105.7
     ],
     [
-     113.35,
+     123.35,
      20.6
     ]
    ]
   },
-  "rooms_lufs": -36.44,
-  "sfx_lufs": -25.94,
+  "rooms_lufs": -35.61,
+  "sfx_lufs": -26.11,
   "holes_under_-42dBFS_0.3s": [
    {
-    "at": 134.1,
-    "s": 0.6,
+    "at": 144.05,
+    "s": 0.65,
     "what": "designed: the act-out black: THE CLOCK's dead stop, the crane pre-lap coming up"
    }
   ],
   "holes_mono_downmix": [
    {
-    "at": 134.05,
+    "at": 144.05,
     "s": 0.65,
     "what": "designed: the act-out black: THE CLOCK's dead stop, the crane pre-lap coming up"
    }
   ],
   "holes_without_score": [
    {
-    "at": 134.1,
-    "s": 0.6,
+    "at": 144.05,
+    "s": 0.65,
     "what": "designed: the act-out black: THE CLOCK's dead stop, the crane pre-lap coming up"
    }
   ],
   "unmarked_holes": 0,
   "unmarked_holes_without_score": 0,
   "jumps_over_15dB": {
-   "count": 31,
+   "count": 30,
    "rising": 25,
    "rising_at_a_word": 19,
-   "rising_at_an_sfx": 2,
+   "rising_at_an_sfx": 1,
    "rising_other": [
     32.05,
-    46.3,
-    113.35,
-    120.15
+    56.3,
+    123.35,
+    127.8,
+    130.15
    ],
-   "falling": 6
+   "falling": 5
   }
  },
  "file": "out/ep01/full-v3/mix-v35-el/act3-mix.wav",
  "guard_db": null,
  "seam_head": {
-  "from_gain_db": 1.17,
-  "to_gain_db": 2.07,
+  "from_gain_db": 1.22,
+  "to_gain_db": 2.16,
   "ramp_s": 2.0,
   "after": "act2"
  },
- "built": "2026-09-28 17:56:15",
+ "built": "2026-09-28 23:42:41",
  "heard": "nothing here has been listened to; every number is measured"
 }

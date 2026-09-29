@@ -56,7 +56,7 @@
   "mix": {
    "path": "out/ep01/full-v3/mix-v35-el/act1-mix.wav",
    "offset_frames": 0,
-   "frames": 10947.0
+   "frames": 10995.0
   },
   "refs": {}
  },
@@ -98,8 +98,8 @@
   },
   {
    "check": "the mix = its offset + the segment",
-   "ok": false,
-   "detail": "mix 10947.00 f vs 0 + 10995"
+   "ok": true,
+   "detail": "mix 10995.00 f vs 0 + 10995"
   }
  ],
  "sequences": [
@@ -28521,7 +28521,5 @@
   "1 takes are not in the timeline: ['v35-vo-02']",
   "V.O. on screen with a rail item (§5.2 wants one must-read at a time; stagger by a beat): [\"v3-vo-10~'MAR 14, 2023'\", \"v35-vo-05~'MAR 29, 2023'\"]"
  ],
- "problems": [
-  "CHECK FAILED: the mix = its offset + the segment: mix 10947.00 f vs 0 + 10995"
- ]
+ "problems": []
 }

@@ -549,6 +549,11 @@ def premix(name, g, variant, use_score=True):
                 tt = np.arange(N) / SR
                 mus *= db(np.interp(tt, [a_ - 0.6, a_, b_, b_ + 0.6], [0, gdb_, gdb_, 0])).astype('float32')[:, None]
                 sq.setdefault('rides', []).append({'beat': bid, 'from': round(a_, 2), 'to': round(b_, 2), 'db': gdb_, 'why': why_})
+        pts = [(g.starts[g.BI[b_]][0] + d_, v_) for b_, d_, v_ in SCORE_CURVE_LOCK.get(S.LOCK, {}).get(name, []) if g.has(b_)]
+        if pts:
+            tt = np.arange(N) / SR
+            mus *= db(np.interp(tt, [p_[0] for p_ in pts], [p_[1] for p_ in pts], left=0.0, right=0.0)).astype('float32')[:, None]
+            sq.setdefault('rides', []).append({'curve': [[round(a_, 3), v_] for a_, v_ in pts], 'why': 'check-v35 #2: 3 AM\'s felt note and the bloom'})
     # the set pieces rise: +2-3 LU over the talk (mood-analysis §4 #3; the lead, v3.1)
     mus, fx = setpieces(name, g, dlg, room, fx, mus, speech, qa)
     qa['checks'] = sound_checks(name, g, variant, fx, room, mus, speech)
@@ -626,6 +631,13 @@ PREV = {'act1': 'card', 'act2': 'act1', 'act3': 'act2', 'act4': 'act3', 'tag': '
 SCORE_HEAD_FADE = {'act1': 1.0, 'act2': 1.2, 'act3': 1.2, 'act4': 1.2}   # s: the score's fade-in at an act's head
 # score rides: the score makes room for a featured sound (beat, from, to or 'end', dB)
 SCORE_RIDE = {'act4': [('v31-S1.01b', 0.0, 'end', -4.0, 'the practice lap the Orb follows: the score makes room for it')]}
+# score gain curves per lock (a mix-side row): [(beat, s from its start, dB)], linear in dB between points, 0 dB outside.
+# v3.5 (check-v35 optional #2): 3 AM's felt F4 (219.08 s) and the 180 YEARS bloom (from 12.03's cut) entered at dialogue
+# level in the act's one hushed moment: -3 dB from the felt note, the bloom faded in over 0.5 s (from -9), back to 0 dB
+# over the first second of 2018
+SCORE_CURVE_LOCK = {'v35': {'act1': [('v35-12.02', -0.25, 0.0), ('v35-12.02', 0.0, -3.0), ('v35-12.03', -0.04, -3.0),
+                                     ('v35-12.03', 0.0, -9.0), ('v35-12.03', 0.5, -3.0), ('v35-13.01', 0.0, -3.0),
+                                     ('v35-13.01', 1.0, 0.0)]}}   # (the lead: -3 dB at entry; the bloom faded in from -9)
 LIFT_LU = 2.5                                             # the set pieces' peak over the talk (mood-analysis §4 #3)
 LIFT_MAX = {'st': 6.0, 'mom': 9.0}                      # dB: a short hit (the shatter) may take more
 # gain rows (v3.3): (what, (beat, s), (beat, s or ('sound', name)), LU): after the set-piece lift, the window's mean

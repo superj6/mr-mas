@@ -1,0 +1,542 @@
+{
+ "segment": "act2",
+ "variant": "el",
+ "timeline": "show/reel/ep01-v35-el/ep01-v35-el-act2.json",
+ "timeline_variant": "el",
+ "seconds": 207.0,
+ "frames": 4968,
+ "rooms": [
+  {
+   "room": "whitehouse",
+   "from": -1.0,
+   "to": 63.125,
+   "first": "13.01",
+   "last": "13.14",
+   "lead": 1.0,
+   "trail": 1.0,
+   "lift_db": 3.6
+  },
+  {
+   "room": "bullpen-night",
+   "from": 61.525,
+   "to": 68.525,
+   "first": "14.01",
+   "last": "14.01",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 4.6
+  },
+  {
+   "room": "senate",
+   "from": 67.525,
+   "to": 122.817,
+   "first": "v35-27.00",
+   "last": "15.14",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 1.1
+  },
+  {
+   "room": "office-2019",
+   "from": 121.817,
+   "to": 145.483,
+   "first": "v35-28.01",
+   "last": "v35-28.04",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 1.0
+  },
+  {
+   "room": "senate",
+   "from": 144.483,
+   "to": 147.983,
+   "first": "v35-28.05",
+   "last": "v35-28.05",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 1.1
+  },
+  {
+   "room": "street",
+   "from": 146.983,
+   "to": 164.942,
+   "first": "v35-29.01",
+   "last": "v35-29.05",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 6.0
+  },
+  {
+   "room": "rooftop",
+   "from": 163.942,
+   "to": 197.233,
+   "first": "17.01",
+   "last": "17.10",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 1.8
+  },
+  {
+   "room": "racks",
+   "from": 196.333,
+   "to": 201.853,
+   "first": "v35-30A.01",
+   "last": "v35-30A.02",
+   "lead": 0.5,
+   "trail": 0.02,
+   "lift_db": 0.0
+  },
+  {
+   "room": "rooftop",
+   "from": 201.233,
+   "to": 206.45,
+   "first": "17.11",
+   "last": "17.11",
+   "lead": 0.6,
+   "trail": 0.2,
+   "lift_db": 3.3
+  },
+  {
+   "room": "black: room tone -54.0 LUFS",
+   "from": 206.25,
+   "to": 207.0,
+   "first": "17.13"
+  }
+ ],
+ "sfx": [
+  [
+   "13.03",
+   "freeze_hit_F",
+   6.208,
+   -20
+  ],
+  [
+   "13.05",
+   "paper_flutter",
+   19.09,
+   -26
+  ],
+  [
+   "13.06",
+   "landing_thunk",
+   20.246,
+   -30
+  ],
+  [
+   "13.06",
+   "landing_thunk",
+   20.434,
+   -30
+  ],
+  [
+   "13.06",
+   "landing_thunk",
+   20.623,
+   -30
+  ],
+  [
+   "13.10",
+   "flame_whoomph",
+   43.237,
+   -26
+  ],
+  [
+   "13.12",
+   "camera_shutter",
+   49.292,
+   -14
+  ],
+  [
+   "13.12",
+   "freeze_hit_F",
+   49.312,
+   -22
+  ],
+  [
+   "13.14",
+   "camera_shutter",
+   56.542,
+   -30
+  ],
+  [
+   "v35-27.00",
+   "landing_thunk",
+   68.125,
+   -24
+  ],
+  [
+   "15.04",
+   "freeze_hit_C",
+   71.917,
+   -22
+  ],
+  [
+   "15.05",
+   "typing_soft",
+   72.752,
+   -30
+  ],
+  [
+   "15.15",
+   "folder_slide",
+   96.008,
+   -28,
+   "moved onto the picture: \"licenses\" +0.417 s (onset)"
+  ],
+  [
+   "15.15",
+   "rubber_stamp_C",
+   97.337,
+   -16,
+   "moved onto the picture: \"licenses\" +1.750 s (peak)"
+  ],
+  [
+   "15.16",
+   "paper_curl",
+   101.25,
+   -30
+  ],
+  [
+   "15.11",
+   "typing_soft",
+   106.402,
+   -26
+  ],
+  [
+   "15.12",
+   "cloth_rustle",
+   109.592,
+   -30
+  ],
+  [
+   "15.12",
+   "synth:moth",
+   110.642,
+   -30
+  ],
+  [
+   "15.13",
+   "synth:gasp",
+   115.832,
+   -17
+  ],
+  [
+   "15.14",
+   "rubber_stamp_C",
+   116.86,
+   -20
+  ],
+  [
+   "15.14",
+   "rubber_stamp_C",
+   117.2,
+   -20
+  ],
+  [
+   "15.14",
+   "rubber_stamp_C",
+   117.59,
+   -20
+  ],
+  [
+   "v35-28.05",
+   "landing_thunk",
+   146.983,
+   -24
+  ],
+  [
+   "v35-29.01",
+   "rubber_stamp_C",
+   147.883,
+   -18
+  ],
+  [
+   "v35-29.01",
+   "rubber_stamp_C",
+   148.383,
+   -18
+  ],
+  [
+   "v35-29.01",
+   "rubber_stamp_C",
+   148.883,
+   -18
+  ],
+  [
+   "v35-29.01",
+   "rubber_stamp_C",
+   149.383,
+   -18
+  ],
+  [
+   "v35-29.01",
+   "rubber_stamp_C",
+   149.883,
+   -18
+  ],
+  [
+   "v35-29.01",
+   "rubber_stamp_C",
+   150.383,
+   -18
+  ],
+  [
+   "v35-29.01",
+   "rubber_stamp_C",
+   150.883,
+   -18
+  ],
+  [
+   "17.01",
+   "pen_scribble_short",
+   166.342,
+   -30
+  ],
+  [
+   "17.01",
+   "pen_scribble_short",
+   167.482,
+   -30
+  ],
+  [
+   "17.01",
+   "pen_run",
+   168.862,
+   -30
+  ],
+  [
+   "17.01",
+   "pen_scribble_short",
+   169.642,
+   -30
+  ],
+  [
+   "17.01",
+   "pen_tick_1",
+   170.182,
+   -32
+  ],
+  [
+   "17.02",
+   "pen_scribble_short",
+   171.242,
+   -34
+  ],
+  [
+   "17.02",
+   "pen_scribble_short",
+   175.642,
+   -34
+  ],
+  [
+   "17.02",
+   "pen_scribble_short",
+   179.852,
+   -34
+  ],
+  [
+   "17.03",
+   "synth:roll",
+   181.333,
+   -24
+  ],
+  [
+   "17.04",
+   "freeze_hit_F",
+   182.75,
+   -22
+  ],
+  [
+   "17.07",
+   "ka_ching",
+   190.808,
+   -12
+  ],
+  [
+   "17.07",
+   "synth:bell",
+   190.828,
+   -18
+  ],
+  [
+   "17.10",
+   "paper_curl",
+   194.033,
+   -32
+  ],
+  [
+   "v35-30A.01",
+   "paper_tear",
+   197.183,
+   -30
+  ],
+  [
+   "v35-30A.02",
+   "folder_slide",
+   199.133,
+   -24
+  ],
+  [
+   "v35-30A.02",
+   "nameplate_off",
+   199.883,
+   -22
+  ],
+  [
+   "v35-30A.02",
+   "folder_slide",
+   200.033,
+   -25
+  ],
+  [
+   "v35-30A.02",
+   "nameplate_off",
+   200.733,
+   -22
+  ],
+  [
+   "v35-30A.02",
+   "ui_mute_blip",
+   201.033,
+   -30
+  ],
+  [
+   "v35-30A.02",
+   "ui_mute_blip",
+   201.233,
+   -30
+  ],
+  [
+   "v35-30A.02",
+   "ui_mute_blip",
+   201.433,
+   -30
+  ]
+ ],
+ "sfx_missing": [],
+ "sfx_dropped": [],
+ "added": [],
+ "score_hints": {
+  "score": "audio/ost/tracks/e01-v3-act2/render/music-el.wav",
+  "cues": "audio/ost/tracks/e01-v3-act2/cues-el.json",
+  "drop": [
+   "knee-stabs"
+  ],
+  "why": {
+   "knee-stabs": "the lead's ruling (2026-09-27): the act2 score plays the tour poster's four knee stabs"
+  },
+  "grid": null
+ },
+ "room_stem": {
+  "lufs": -37.34,
+  "peak_dbfs": -22.6,
+  "p10_50ms_dbfs": -39.9
+ },
+ "sfx_stem": {
+  "lufs": -33.39,
+  "peak_dbfs": -12.0,
+  "p10_50ms_dbfs": -240.0
+ },
+ "room_under_-55dBFS_0.3s": [],
+ "click_scan": {
+  "room": {
+   "boundaries": [],
+   "cutoffs": []
+  },
+  "sfx": {
+   "boundaries": [
+    {
+     "at": 6.214,
+     "boundary": 6.208,
+     "ratio": 19.5,
+     "kind": "step",
+     "before_dbfs": -32.6,
+     "after_dbfs": -26.5,
+     "laid_onset": "freeze_hit_F"
+    },
+    {
+     "at": 49.292,
+     "boundary": 49.292,
+     "ratio": 48.1,
+     "kind": "onset",
+     "before_dbfs": -42.5,
+     "after_dbfs": -25.5
+    },
+    {
+     "at": 56.542,
+     "boundary": 56.542,
+     "ratio": 146.1,
+     "kind": "onset",
+     "before_dbfs": -58.5,
+     "after_dbfs": -41.5
+    },
+    {
+     "at": 71.918,
+     "boundary": 71.917,
+     "ratio": 42.2,
+     "kind": "onset",
+     "before_dbfs": -39.0,
+     "after_dbfs": -27.6
+    },
+    {
+     "at": 182.756,
+     "boundary": 182.75,
+     "ratio": 10.4,
+     "kind": "step",
+     "before_dbfs": -34.6,
+     "after_dbfs": -28.5,
+     "laid_onset": "freeze_hit_F"
+    }
+   ],
+   "cutoffs": []
+  },
+  "rule": "second difference > 10.0x the local 99th percentile (see click_scan)"
+ },
+ "room_levels": [
+  {
+   "room": "whitehouse@act2:13.01",
+   "p5_50ms_dbfs": -43.6,
+   "lift_db": 3.6
+  },
+  {
+   "room": "bullpen-night@act2:14.01",
+   "p5_50ms_dbfs": -44.6,
+   "lift_db": 4.6
+  },
+  {
+   "room": "senate@act2:v35-27.00",
+   "p5_50ms_dbfs": -41.1,
+   "lift_db": 1.1
+  },
+  {
+   "room": "office-2019@act2:v35-28.01",
+   "p5_50ms_dbfs": -41.0,
+   "lift_db": 1.0
+  },
+  {
+   "room": "senate@act2:v35-28.05",
+   "p5_50ms_dbfs": -41.1,
+   "lift_db": 1.1
+  },
+  {
+   "room": "street@act2:v35-29.01",
+   "p5_50ms_dbfs": -49.0,
+   "lift_db": 6.0
+  },
+  {
+   "room": "rooftop@act2:17.01",
+   "p5_50ms_dbfs": -41.8,
+   "lift_db": 1.8
+  },
+  {
+   "room": "racks@act2:v35-30A.01",
+   "p5_50ms_dbfs": -35.9,
+   "lift_db": 0.0
+  },
+  {
+   "room": "rooftop@act2:17.11",
+   "p5_50ms_dbfs": -43.3,
+   "lift_db": 3.3
+  }
+ ]
+}

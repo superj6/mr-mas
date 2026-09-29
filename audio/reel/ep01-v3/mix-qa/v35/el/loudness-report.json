@@ -3,36 +3,36 @@
  "target_lufs": -16.0,
  "true_peak_max_dbtp": -1.05,
  "dialogue_reference_lufs": -14.59,
- "dialogue_reference_from": "this run",
+ "dialogue_reference_from": "the last full run",
  "guard_lu": 1.5,
  "segments": {
   "act1": {
    "file": "out/ep01/full-v3/mix-v35-el/act1-mix.wav",
-   "seconds": 456.125,
+   "seconds": 458.125,
    "lufs_i": -16.0,
    "true_peak_dbtp": -1.45,
    "lra_lu": 6.5,
-   "dialogue_lufs": -14.67,
-   "gain_db": 1.43,
+   "dialogue_lufs": -14.69,
+   "gain_db": 1.4,
    "guard_db": null,
    "score": "audio/ost/tracks/e01-v3-act1/render/music-el.wav",
    "unmarked_holes": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-09-28 17:56:08"
+   "built": "2026-09-28 23:33:35"
   },
   "act2": {
    "file": "out/ep01/full-v3/mix-v35-el/act2-mix.wav",
-   "seconds": 202.0,
+   "seconds": 207.0,
    "lufs_i": -16.0,
    "true_peak_dbtp": -1.46,
-   "lra_lu": 5.8,
-   "dialogue_lufs": -14.9,
-   "gain_db": 1.17,
+   "lra_lu": 5.4,
+   "dialogue_lufs": -14.86,
+   "gain_db": 1.22,
    "guard_db": null,
    "score": "audio/ost/tracks/e01-v3-act2/render/music-el.wav",
    "unmarked_holes": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-09-28 17:56:12"
+   "built": "2026-09-28 23:37:52"
   },
   "coldopen": {
    "file": "out/ep01/full-v3/mix-v35-el/coldopen-mix.wav",
@@ -50,59 +50,59 @@
   },
   "act3": {
    "file": "out/ep01/full-v3/mix-v35-el/act3-mix.wav",
-   "seconds": 136.417,
-   "lufs_i": -16.02,
-   "true_peak_dbtp": -1.34,
-   "lra_lu": 7.4,
-   "dialogue_lufs": -14.49,
-   "gain_db": 2.07,
+   "seconds": 146.417,
+   "lufs_i": -16.01,
+   "true_peak_dbtp": -1.36,
+   "lra_lu": 6.8,
+   "dialogue_lufs": -14.4,
+   "gain_db": 2.16,
    "guard_db": null,
    "score": "audio/ost/tracks/e01-v3-act3/render/music-el.wav",
    "unmarked_holes": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-09-28 17:56:15"
+   "built": "2026-09-28 23:42:41"
   },
   "act4": {
    "file": "out/ep01/full-v3/mix-v35-el/act4-mix.wav",
-   "seconds": 494.708,
-   "lufs_i": -16.01,
-   "true_peak_dbtp": -1.18,
-   "lra_lu": 7.5,
+   "seconds": 498.042,
+   "lufs_i": -16.02,
+   "true_peak_dbtp": -1.23,
+   "lra_lu": 7.7,
    "dialogue_lufs": -15.07,
-   "gain_db": 1.08,
+   "gain_db": 1.06,
    "guard_db": null,
    "score": "audio/ost/tracks/e01-v3-act4/render/music-el.wav",
    "unmarked_holes": 0,
-   "unmarked_holes_without_score": 0,
-   "built": "2026-09-28 17:56:26"
+   "unmarked_holes_without_score": 1,
+   "built": "2026-09-28 23:55:57"
   },
   "tag": {
    "file": "out/ep01/full-v3/mix-v35-el/tag-mix.wav",
    "seconds": 33.25,
-   "lufs_i": -17.03,
+   "lufs_i": -17.07,
    "true_peak_dbtp": -1.45,
-   "lra_lu": 19.2,
+   "lra_lu": 19.1,
    "dialogue_lufs": -13.09,
    "gain_db": 2.9,
    "guard_db": -0.88,
    "score": "audio/ost/tracks/e01-v3-tag/render/music-el.wav",
    "unmarked_holes": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-09-28 17:56:27"
+   "built": "2026-09-28 23:57:27"
   },
   "card": {
    "file": "out/ep01/full-v3/mix-v35-el/card-mix.wav",
    "seconds": 2.0,
-   "lufs_i": -35.91,
-   "true_peak_dbtp": -23.46,
+   "lufs_i": -35.93,
+   "true_peak_dbtp": -23.48,
    "lra_lu": null,
    "dialogue_lufs": null,
-   "gain_db": 1.43,
+   "gain_db": 1.4,
    "guard_db": null,
    "score": "none (card)",
    "unmarked_holes": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-09-28 17:56:27"
+   "built": "2026-09-28 23:33:35"
   }
  },
  "episode": {
@@ -115,7 +115,7 @@
    "act4",
    "tag"
   ],
-  "seconds": 1348.79,
+  "seconds": 1369.12,
   "lufs_i": -16.03,
   "lra_lu": 7.2,
   "note": "the story segments (and the card) back to back; the intro and the outro play their own masters between"
@@ -123,44 +123,44 @@
  "seams": [
   {
    "seam": "card -> act1",
-   "last_200ms_dbfs": -34.6,
+   "last_200ms_dbfs": -34.7,
    "first_200ms_dbfs": -14.4,
    "step_db": 20.2,
    "sample_jump": 0.0012
   },
   {
    "seam": "act1 -> act2",
-   "last_200ms_dbfs": -38.2,
-   "first_200ms_dbfs": -38.0,
-   "step_db": 0.2,
-   "sample_jump": 0.0004
+   "last_200ms_dbfs": -38.0,
+   "first_200ms_dbfs": -37.6,
+   "step_db": 0.4,
+   "sample_jump": 0.0003
   },
   {
    "seam": "act2 -> act3",
-   "last_200ms_dbfs": -38.1,
-   "first_200ms_dbfs": -37.5,
-   "step_db": 0.6,
-   "sample_jump": 0.0001
+   "last_200ms_dbfs": -38.4,
+   "first_200ms_dbfs": -37.4,
+   "step_db": 0.9,
+   "sample_jump": 0.0003
   },
   {
    "seam": "act3 -> act4",
-   "last_200ms_dbfs": -30.6,
-   "first_200ms_dbfs": -29.8,
-   "step_db": 0.8,
-   "sample_jump": 0.0043
+   "last_200ms_dbfs": -30.8,
+   "first_200ms_dbfs": -29.9,
+   "step_db": 0.9,
+   "sample_jump": 0.0039
   },
   {
    "seam": "act4 -> tag",
-   "last_200ms_dbfs": -28.1,
-   "first_200ms_dbfs": -27.3,
-   "step_db": 0.7,
-   "sample_jump": 0.0032
+   "last_200ms_dbfs": -26.6,
+   "first_200ms_dbfs": -28.1,
+   "step_db": -1.5,
+   "sample_jump": 0.0031
   }
  ],
  "spread": {
-  "lufs_i_lu": 1.03,
+  "lufs_i_lu": 1.07,
   "dialogue_lu": 1.98
  },
- "updated": "2026-09-28 17:57:12",
+ "updated": "2026-09-28 23:58:02",
  "heard": "nothing here has been listened to; every number is measured"
 }

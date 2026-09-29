@@ -1,11 +1,42 @@
 # Ep1 v3: rooms, SFX and the final mix (`v3-sound`, 2026-09-27)
 
-> **Status (v3.5 FINAL): the v3.5 EL lock is MIXED for the one film, ep01-v35.mp4 (§Y).** The v3.4 EL mixes and stems were deleted after the v3.5 film passed (`--lock v34 --variant el` rebuilds them); the v3.4 Kokoro mixes are kept.
+> **Status (v3.5 FINAL, v3.5b): the v3.5b EL lock is MIXED for the one film, ep01-v35.mp4 (§Y+, then §Y).** The v3.4 EL mixes and stems were deleted after the v3.5 film passed (`--lock v34 --variant el` rebuilds them); the v3.4 Kokoro mixes are kept.
 >
 > **Nothing here was heard.** Every number below is measured from the files. I also looked at envelope plots of the stems and mixes around the moments listed in §5. Whether a room sounds like its room, whether the keys read as Gerg, and whether any cut plays all need an ear.
-> Nothing was committed.
 >
 > §W is the v3.3 polish round's tool changes, §V the v3.2 round, §0 the v3.1 round. §1–§8 are the v3 round: the method, which still holds, and the v3 lock's numbers.
+
+## Y+. v3.5b: the final lock's additions, MIXED (the `finish` pass, 2026-09-29)
+
+**On the v3.5b EL lock** (8893509; lock-v35.md §10): Act One 10,995 f, Act Two 4,968, Act Three 3,514, Act Four 11,953 (cold open and tag unchanged). Stems `audio/reel/ep01-v3/v35/el/`, mixes `out/ep01/full-v3/mix-v35-el/`, QA `mix-qa/v35/el/` (plus `voice-check.json` and `click-scan-score-mix.json`). Every score is the v3.5b render at the new length.
+
+**Run a segment at a time** (memory pressure; the pressure governor pauses heavy jobs): `stems.py --lock v35 --variant el` through heavy.sh, then `mix_episode.py act1 card`, `act2`, `act3`, `act4`, `tag` (`--variant el --lock v35`), in that order. Each partial run takes the guard's reference and the previous chapter's gain from the last report.
+
+**Changed in the tools:**
+- **The egg timer (check-v35 must-fix 1):** on the v3.5 lock it stops at the window's cut (v35-18.01; the last tick 50 ms clear) and no longer carries into the duel: 8 ticks, 347.82–352.84 s in Act One (it had run on to 7:32 in the film).
+- **Levels (check-v35 optional #1, #3, #4, #5):** the vision post's keys −33 → −23 dBFS and the Publish click −24 → −14; the war room's buzzes 2–7 −28.5 → −22.5 (the first stays −27); the hearts' ticks +12 dB (−28 / −25.5); the blank page's `paper_curl` −30 → −15.
+- **3 AM's felt F4 and the 180 YEARS bloom (check-v35 #2, the lead: −3 dB at entry):** a mix-side score curve (`SCORE_CURVE_LOCK`): −3 dB from the felt note (218.96 s), the bloom faded in over 0.5 s from −9 dB at 12.03's cut, −3 dB to 2018's cut, back to 0 dB over its first second.
+- **The new rooms:** `racks` (Act Two's cold aisle: the racks' fans close, their air; leads the cut 0.5 s, stops on the cut out) and `party` (Act Three's launch party: the staff's walla; leads with the cheer 0.4 s, drains into the dark room over 0.6 s).
+- **The party's cheer J-cut** (0.4 s, `OWN_LEAD`); **20.01's keys pre-lap is not laid after the party** (`OWN_LEAD_NOT_AFTER`), so the laugh and the glass set down stay clear; the keys play where the timeline has them (1.48 s in).
+- **From the timeline, laid as written:** the usage flash's `counter_roll` (with 12.01's toast popping 0.4 s early into it), the racks' tear, slides, latches and LEDs, the party's cheers and clinks, 20.01's glass set down, Act Four's buzzes, clack, marker uncap, 4. MARIO and its strike, and 17.07's bell at 16.2 s.
+
+**Measured:**
+
+| | EL v3.5b |
+|---|---|
+| Cold open · Act One · Act Two · Act Three · Act Four (LUFS-I) | −16.0 · −16.0 · −16.0 · −16.01 · −16.02 |
+| Tag | −17.07 (the dialogue guard, −0.88 dB) |
+| **Episode** (the story plus the card) | **−16.03 LUFS**, LRA 7.2 · dialogue spread 1.98 LU |
+| Highest true peak (the mixes) | −1.23 dBTP (Act Four) |
+| Unmarked holes (with the score) · missing lines · missing SFX | 0 · 0 · 0 |
+| **X6**, the avalanche | −15.85 → −14.11 (+1.74 LU, 2.03 dB) |
+| Set pieces over the talk: the odometer · the avalanche · the shatter | +2.48 · +2.37 · +2.42 LU |
+| **The named lines** (speech band 300 Hz–4 kHz, the line over what's under it) | v35-vo-05 "now for the backlash." **26.7 dB** · v35-vo-06 "someone gets to be in the room…" **13.5 dB** · Neleh's v35-a4-0009 **12.9 dB** · "Then we'll write step four ourselves." **12.3 dB**: all voiced and clear |
+| The outro | the hum held 2.0 s, first hit −6 dB, seam 12.5 dB (400 ms) |
+
+**The click scan** at every boundary: the rooms have no flags (the racks' stop on the cut included); the SFX stems no truncations (the hearts' ticks' flags are the files' own fast decays); the score and mix flag only the designed moments (the thud, the freeze hits, the shutter, the post click, THE CLOCK's step, the war room's cluster).
+
+**For an ear:** the new rooms and the party's walla (film 12:36–12:46); the racks (11:50–11:56); whether the louder keys, click, buzzes and hearts now sit right; 3 AM at −3 dB (4:35–4:42); Act One's 16 level rises over 15 dB not on a word or a laid SFX (mostly the first weeks' cuts on the pulse).
 
 ## Y. v3.5 FINAL: the EL lock, MIXED (the `finish` pass, 2026-09-28)
 

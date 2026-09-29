@@ -106,7 +106,7 @@
   "mix": {
    "path": "out/ep01/full-v3/mix-v35-el/act4-mix.wav",
    "offset_frames": 0,
-   "frames": 11873.0
+   "frames": 11953.0
   },
   "refs": {
    "D6": [
@@ -163,8 +163,8 @@
   },
   {
    "check": "the mix = its offset + the segment",
-   "ok": false,
-   "detail": "mix 11873.00 f vs 0 + 11953"
+   "ok": true,
+   "detail": "mix 11953.00 f vs 0 + 11953"
   }
  ],
  "sequences": [
@@ -37483,7 +37483,5 @@
   "S4.11: the face table names TTEMME, who has no line in the shot",
   "marks outside their shot (base marks the layout may not read, or anchors on carried lines): ['S1.07.card=252', 'S1.07.dialog=252', 'S1.07.cardEnd=252', 'S1.09.click=-2', 'S4.02.lit=383', 'S4.08.ring2=475', 'S4.08.grab=475', 'S4.08.ringB=475', 'S4.08.handover=487', 'S4.13d.names=-21', 'S4.13d.look=-9', 'S4.07.pull=132', 'S4.07.tone1=132', 'S4.07.tone2=132', 'S4.07.tone3=132', 'S4.07.tone4=132', 'S5.09.glance=375']"
  ],
- "problems": [
-  "CHECK FAILED: the mix = its offset + the segment: mix 11873.00 f vs 0 + 11953"
- ]
+ "problems": []
 }

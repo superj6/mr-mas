@@ -1,16 +1,18 @@
 # Ep1 v3 → v3.5: the full episode films (`v3-assemble`, track F, 2026-09-27 and 28)
 
-> **Status: v3.5 FINAL BUILT AND MEASURED (2026-09-28): ONE film, `out/ep01/full-v3/ep01-v35.mp4`. §Z below is the current state.** §Y (v3.4), §X (v3.3), §W (v3.2), §V (v3.1) and the v3 round are the record. The v3.4 films are kept. Track F of [PLAN.md](PLAN.md) (§8, step 7).
+> **Status: v3.5 FINAL (v3.5b) BUILT AND MEASURED (2026-09-29): ONE film, `out/ep01/full-v3/ep01-v35.mp4`, 23:30.00. §Z below is the current state.** §Y (v3.4), §X (v3.3), §W (v3.2), §V (v3.1) and the v3 round are the record. The v3.4 films are kept. Track F of [PLAN.md](PLAN.md) (§8, step 7).
 >
-> **Nothing here was watched or heard.** Every number below is measured from the files. I looked at stills only. Nothing was committed.
+> **Nothing here was watched or heard.** Every number below is measured from the files. I looked at stills only.
 
-## Z. v3.5 FINAL (2026-09-28, the `finish` pass)
+## Z. v3.5 FINAL, v3.5b (2026-09-29, the `finish` pass)
 
-**The film:** `out/ep01/full-v3/ep01-v35.mp4`: **23:09.67** (33,352 frames), 136.1 MB, H.264 High CRF 18 + AAC-LC 256 kb/s (**libfdk_aac**), nine titled chapters.
+**The film:** `out/ep01/full-v3/ep01-v35.mp4`: **23:30.00** (33,840 frames), 138.8 MB, H.264 High CRF 18 + AAC-LC 256 kb/s (**libfdk_aac**), nine titled chapters.
+- **v3.5b** (SHOWRUNNER-NOTES 00000A; lock-v35.md §10): the usage flash (Act One +2.0 s), the racks (Act Two +5.0 s), the Sep 25 launch party with Alyi (Act Three +10.0 s), step four's payoff and Neleh's new line (Act Four +3.3 s), the two new V.O. lines, and the Saturday phones. The EL story is **32,811 frames** (Act One 10,995 · Two 4,968 · Three 3,514 · Four 11,953; cold open 583 and tag 798 unchanged).
 - **Voices:** the ElevenLabs cast (set A; SIRRAH recast as Ida), **MARIO on his Kokoro takes** (10 lines, with voices-el.md §AB3's EQ and −0.5 dB in the mix).
-- **The lock:** the EL-timed v3.5 lock, `show/reel/ep01-v35-el/` (key `ep01-v35-el-stick`).
-- **Intro:** the flash-fixed picture with the EL master (`audio/intro-mix/intro-ep1-mix-V1-chipchamber-el.wav`) at −3 dB. **Card:** 2 s. **Outro:** B, `mix-v35-el/outro-mix.wav` at −1 dB with the 0.75 s hum hold (hum gain fitted +2.90 dB; residual 1.2e-7; 2.0 s of hum alone).
-- **Records:** `assembly/el-v35-assembly.json`, `el-v35-qa.json`, `seam-frames-el-v35.json`; the transcript [assembly/transcript-v35.txt](assembly/transcript-v35.txt) (256 lines); the contact sheet `out/ep01/full-v3/ep01-v35-sheet.png` (139 frames, one every 10 s).
+- **The lock:** the EL-timed v3.5 lock, `show/reel/ep01-v35-el/` (key `ep01-v35-el-stick`, 8893509).
+- **Intro:** the flash-fixed picture with the EL master (`audio/intro-mix/intro-ep1-mix-V1-chipchamber-el.wav`) at −3 dB. **Card:** 2 s. **Outro:** B, `mix-v35-el/outro-mix.wav` at −1 dB with the 0.75 s hum hold (2.0 s of hum alone).
+- **Records:** `assembly/el-v35-assembly.json`, `el-v35-qa.json`, `seam-frames-el-v35.json`; the transcript [assembly/transcript-v35.txt](assembly/transcript-v35.txt) (258 lines); the contact sheet `out/ep01/full-v3/ep01-v35-sheet.png` (141 frames, one every 10 s). The sound: sound.md §Y.
+- **The 2026-09-28 build (23:09.67, 33,352 frames) is superseded;** this file replaced it at the same path.
 
 ### Z.1 Chapter times
 
@@ -19,12 +21,12 @@
 | 1 | Cold open | 0:00.00 · 24.29 |
 | 2 | Intro | 0:24.29 · 30.00 |
 | 3 | ep1.0_research_preview.md | 0:54.29 · 2.00 |
-| 4 | Act One · research preview | 0:56.29 · 7:36.13 |
-| 5 | Act Two · the regulate-me tour | 8:32.42 · 3:22.00 |
-| 6 | Act Three · verified: human | 11:54.42 · 2:16.42 |
-| 7 | Act Four · five days, told twice | 14:10.83 · 8:14.71 |
-| 8 | Tag · december (with the 0.75 s hum hold) | 22:25.54 · 34.00 |
-| 9 | Outro · credits | 22:59.54 · 10.13 |
+| 4 | Act One · research preview | 0:56.29 · 7:38.13 |
+| 5 | Act Two · the regulate-me tour | 8:34.42 · 3:27.00 |
+| 6 | Act Three · verified: human | 12:01.42 · 2:26.42 |
+| 7 | Act Four · five days, told twice | 14:27.83 · 8:18.04 |
+| 8 | Tag · december (with the 0.75 s hum hold) | 22:45.88 · 34.00 |
+| 9 | Outro · credits | 23:19.88 · 10.13 |
 
 **As YouTube timestamps** (paste into the description). YouTube needs every chapter to be at least 10 s, so the 2 s card rides with the intro:
 
@@ -32,15 +34,16 @@
 00:00 Cold open
 00:24 Intro
 00:56 Act One · research preview
-08:32 Act Two · the regulate-me tour
-11:54 Act Three · verified: human
-14:10 Act Four · five days, told twice
-22:25 Tag · december
-22:59 Outro · credits
+08:34 Act Two · the regulate-me tour
+12:01 Act Three · verified: human
+14:27 Act Four · five days, told twice
+22:45 Tag · december
+23:19 Outro · credits
 ```
 
 ### Z.2 The EL pictures (`picture-el/`, on `assembly/el-v35/`)
 
+- **v3.5b:** Acts One to Four are the picture passes' v3.5b renders (633ad95, 9e9d63f, 04c0c94, f0d2e86: silent), muxed here with the v3.5b mixes (libfdk_aac); the cold open and the tag are unchanged (the tag re-muxed with its new mix). Every picture lock (`LOCK=v35 el_lock.sh act1 act2 act3 act4 tag`) now passes every check, the length against the new mix included. S7.13's hourglass is at 10754 (lock-v35.md §10). The notes below are the first v3.5 build's.
 - **Takes and locks:** `el_takes.py --lock v35` (MARIO's 10 rows keep their Kokoro mouth tracks: act1 3, act2 6, act4 1); Tasya's TV cut (v33-a4-0002) carried by `el_cutmouths_carry.py v33 v35 act4`; `LOCK=v35 el_lock.sh`. Every check passes, re-run with the final mixes (the mix lengths match: 583 · 10,947 · 4,848 · 3,274 · 11,873 · 798 frames).
 - **Act One (10,947 f):** `check` lists **"11.04: overlay on 244 frames"**; the render laid the 3D CLOD on 244 frames (0 missing, 0 refused). **The tear macro** at 3670–3729 (`picstills` from the EL renderer, `tear.py --start 3670`), 60 browser frames spliced.
 - **Act Three (3,274 f):** 5 GLYPH frames from the EL Remotion bundle (`bundle_el.mjs`); the plain frames either side are identical.
@@ -50,34 +53,34 @@
 - **Flash per picture** (`flash_seg.py`): cold open 1, Act One 2, Act Two 1, Act Three 0, Act Four 1, tag 0; red 0. All pass (limit 3).
 - **Looked at** (decoded stills): the tear macro (k58), CLOD's clay in the pane (10062, 10200), the hourglass in context and shattered, the war room's 2 AM and the invitation.
 
-### Z.3 QA (measured)
+### Z.3 QA (measured, v3.5b)
 
 | Check | ep01-v35 |
 |---|---|
-| **Full decode** | **0 error lines**, 33,352 frames |
-| **A/V lag per chapter** | **0 samples in all nine** (correlation 0.9997–1.0). The untitled hum hold reads 1,100 samples: one period of the vault's F1 hum (22.9 ms), a correlation ambiguity on a steady tone; it is sample-continuous with the tag (jump 0.0007) and the chapters either side read 0 |
-| **Codec fidelity** (decoded vs source) | **0 bursts in every chapter**; worst difference 0.140 (Act Four) |
+| **Full decode** | **0 error lines**, 33,840 frames |
+| **A/V lag per chapter** | **0 samples in all nine** (correlation 0.9997–1.0). The untitled hum hold reads 1,100 samples: one period of the vault's F1 hum (22.9 ms), a correlation ambiguity on a steady tone; it is sample-continuous with the tag and the chapters either side read 0 |
+| **Codec fidelity** (decoded vs source) | **0 bursts in every chapter**; worst difference 0.144 (Act Four) |
 | **Integrated loudness** | **−16.08 LUFS** |
-| **True peak** | **−1.17 dBTP** (Act Four); sample peak −1.39 dBFS |
-| Chapters (LUFS-I) | cold open −16.0 · intro −17.0 · card −35.9 · acts −16.0 · tag −17.0 · outro −17.2 |
+| **True peak** | **−1.29 dBTP** (Act Four) |
+| Chapters (LUFS-I) | cold open −16.0 · intro −17.0 · card −36.0 · acts −16.0 · tag −17.1 · outro −17.2 |
 | Digital zero / holes (under −60 dBFS, 0.3 s) | **none / none** |
-| **Flashes** | **max 3 in 1 s** (the cold open's freeze, 0:12.42, at the limit, as every EL round; the picture's own reading is 1); red 0. **Pass** |
+| **Flashes** (the whole film) | **max 3 in 1 s** (the cold open's freeze, 0:12.42, at the limit, as every EL round; the picture's own reading is 1); red 0. **Pass** |
 | Chapters · edge frames | nine, matching the assembly to the millisecond · at most 0.67 of 255 (the hum-gap still) |
-| Audio vs picture length | +7.97 ms (the AAC tail) |
+| Audio vs picture length | +5.33 ms (the AAC tail) |
 
 **Seams:**
 
 | Join | At | Step (200 ms RMS) | |
 |---|---|---|---|
 | cold open → intro | 0:24.29 | −11.3 dB | designed |
-| intro → card | 0:54.29 | +0.6 | the card's room led in |
-| **card → Act One** | 0:56.29 | **+20.3** | the designed downbeat |
-| Act One → Two | 8:32.42 | +0.2 | |
-| Act Two → Three | 11:54.42 | +0.6 | |
-| Act Three → Four | 14:10.83 | +0.9 | |
-| Act Four → tag | 22:25.54 | +0.7 | |
-| tag → hum | 22:58.79 | +0.3 | continuous |
-| **hum → outro** | 22:59.54 | **+12.6** | the first hit, 6 dB down |
+| intro → card | 0:54.29 | +0.5 | the card's room led in |
+| **card → Act One** | 0:56.29 | **+20.2** | the designed downbeat |
+| Act One → Two | 8:34.42 | +0.4 | |
+| Act Two → Three | 12:01.42 | +1.0 | |
+| Act Three → Four | 14:27.83 | +0.9 | |
+| Act Four → tag | 22:45.88 | −1.5 | the ring-out's fade |
+| tag → hum | 23:19.12 | +0.2 | continuous |
+| **hum → outro** | 23:19.88 | **+12.6** | the first hit, 6 dB down |
 
 Every sample jump is under 0.01.
 
@@ -94,7 +97,7 @@ $PY src/dev/genvideo/runway/tear.py --pics $S/tearpics --png $S/glyph-act1 --sta
 node ../$A/tools/bundle_el.mjs $S/bundle
 BUNDLE=$S/bundle node $S/r-act3-el.cjs glyphs $S/glyph-act3 2
 BUNDLE=$S/bundle node $S/r-act4-el.cjs glyphs $S/glyph-act4 2 --opt hourglass=false
-cd .. && $PY $A/tools/hourglass_el.py --scratch $S/hg --out $S/hg-out --png $S/glyph-act4 --s713 10675 --back-at 170 && cd studio
+cd .. && $PY $A/tools/hourglass_el.py --scratch $S/hg --out $S/hg-out --png $S/glyph-act4 --s713 10754 --back-at 170 && cd studio   # (v3.5b; the first build: 10675)
 for s in act1 act2 act3 act4; do GLYPH_DIR=$S/glyph-$s SEGDIR=$S X264_THREADS=1 node $S/r-$s-el.cjs picture ../out/ep01/full-v3/picture-el/$s.mp4 --jobs 2 --no-audio; done
 cd ..   # (the finish pass ran the block above as one heavy job; then flash_seg.py on each picture, then a -c:v copy mux with mix-v35-el/<seg>-mix.wav)
 $PY audio/reel/ep01-v3/mix_episode.py --all --variant el --lock v35 --rebuild-stems      # sound.md §Y (re-runs itself through heavy.sh)
@@ -103,8 +106,25 @@ ASM_SCRATCH=$S bash ops/heavy.sh $PY $A/tools/qa.py el-v35                      
 bash ops/heavy.sh $PY $A/tools/seam_frames.py el-v35
 ```
 
-- **Tool changes:** `assemble.py` has the `el-v35` variant (film `ep01-v35`, label v3.5); `assemble.py` and `qa.py` take their scratch folder from `ASM_SCRATCH` (the default was another session's scratch).
+- **Tool changes:** `assemble.py` has the `el-v35` variant (film `ep01-v35`, label v3.5); `assemble.py` and `qa.py` take their scratch folder from `ASM_SCRATCH` (the default was another session's scratch). v3.5b: `assemble.py` holds the episode's audio in float32 (half the memory), and the v3.5b mix was run a segment at a time (`mix_episode.py act1 card`, then `act2`, `act3`, `act4`, `tag`: each reads the last run's report for the guard and the head gains) to keep memory pressure down.
 - **Disk:** after the film passed, the v3.4 EL mixes (`mix-v34-el/`, 338 MB), the v3.4 EL stems (`audio/reel/ep01-v3/v34/el/`, 131 MB) and the v3.4 EL pictures were deleted, with the bundle, GLYPH PNGs and render chunks. The v3.4 films are kept. 34 GB free at the end.
+
+### Z.5 One command per changed act: `ops/rebuild-act.sh`
+
+`ops/rebuild-act.sh <act> [--from STEP] [--only STEP]` rebuilds one changed act end to end with the tools above, in order, each heavy step through `ops/heavy.sh`, one at a time:
+
+| Step | What it runs |
+|---|---|
+| `lock` | `build_timeline.py` (the base lock), `el_lock.py <act> --lock v35 --fixed S7.13` (the act first: `--fixed` swallows what follows), `el_takes.py`, `el_lock.sh <act> tag` |
+| `score` | `audio/ost/tracks/e01-v3-<act>/track.py --render` (EL: `--el`, or `--variant el` for Acts Three and Four), `OST_WORKERS=2` |
+| `mix` | `stems.py --lock v35 --variant el` (one block, card to tag), then `mix_episode.py <act> <the next chapter>` (its head ramps from this act's gain; Act One takes the card), then `el_lock.sh <act>` (every check, the new mix's length included) |
+| `picture` | `build_el.mjs` + `check`; Act One's tear macro (7.02 + 28, from the lock), Acts Three and Four's GLYPH frames from `bundle_el.mjs`, Act Four's hourglass (`--s713` and `--back-at` read from the lock); `picture --no-audio`; `flash_seg.py` |
+| `mux` | the picture with `mix-v35-el/<act>-mix.wav` (`-c:v copy`, libfdk_aac) |
+| `film` | `assemble.py el-v35`, `qa.py el-v35`, `seam_frames.py el-v35` |
+
+- **It doesn't** write lines, record takes, or draw shots: those come first (takes.py / record.sh / render_v35.sh; the act's `shots.ts`).
+- **Act One's EL lock is never rebuilt by `el_lock.py`:** it carries hand-placed V.O. (voices-el.md §AD). The script stops there. Splice the beat by hand (lock-v35.md §10), then `ops/rebuild-act.sh act1 --from score`.
+- `SCRATCH=<dir>` sets its scratch folder (default `/tmp/rebuild-<act>-<pid>`); `LOCK=` another lock.
 
 ## Y. v3.4 (2026-09-28): the record (superseded by §Z; its films are kept)
 
