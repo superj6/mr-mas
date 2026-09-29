@@ -4,6 +4,12 @@
 
 ## Current notes, newest first
 
+00000B. **Ep1 is locked; ML concepts across the season (2026-09-29):**
+   - **Ep1 is final.** It's `out/ep01/full-v3/ep01-v35.mp4`, 23:31.58, f21d274. The showrunner: "also to be clear we shouldn't make any changes to episode 1".
+     - The last fixes before the lock: Neleh's "Step two." at the board's post, and Mada's "There is no step four." before "Then we'll write step four ourselves." The showrunner: "we never say step 2 either" and "we should've added there is no step 4".
+     - The Alyi-at-the-window move was dropped.
+     - The release copy (title, description, chapters, thumbnail) is in `show/episodes/ep01/release.md`.
+   - **ML concepts:** "throughout the rest of the season i want to slowly explain a few of the key ml concepts in more detail where relevant". The agreed map is in `show/bible/ml-concepts.md`: at most one concept in depth per episode, from Ep2 to Ep11, each tied to that episode's milestone, and never a lecture.
 00000A. **Final additions: the staff love him, and so does Alyi (2026-09-28, on the final film):**
    - "we are trying to add in some final quick sentiments that employee sentiment with sam was high. also we should have alyi at the party as well to increase the surprise he fired sam"
    - Also: "i did not want to cut a scene, only add one".

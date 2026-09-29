@@ -115,6 +115,8 @@ Proposed:
 | 2017 → 2022 → 2023 | Jerdna: NopeAI founding member → ALSET's Autopilot → back | JERDNA · NOLE | Ep8 · he defects mid-stride ("HAS WORKED FOR EVERYONE IN THIS ROOM") | 3 s |
 | Ep12 | **The family album:** the machine replays its ancestors (Breakout, the Go stone, the Dota draft, the cube, the GTP staircase) before it vetoes the firing | THE MODEL | Ep12 | montage, 6 s |
 
+**The concepts layer (agreed 2026-09-29):** a few milestones carry one ML concept explained in depth, at most one per episode. The map is in [ml-concepts.md](../bible/ml-concepts.md).
+
 **ATOD's thread (v3.5):** **Ep1** (Jun 2018: self-play, the believer and the organizer) → **Ep5** (Apr 2019: it beats the champions) → **Ep8** (Aug 2017: the one-on-one, the control fight's prologue, told last on purpose, like Nole's grievance).
 
 **Budget:**
