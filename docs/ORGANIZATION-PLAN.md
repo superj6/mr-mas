@@ -1,6 +1,6 @@
 # MR. MAS: organization plan
 
-**Status: revised and safe to run, phase by phase, in the order of §0.2. Nothing has moved yet.**
+**Status: being executed (2026-09-29); see the execution status in §0.**
 - Written 2026-09-26 by the `org-plan` pass (measured at 15:10) and reviewed by the `org-critic` pass (15:45, §10).
 - Revised at about 16:50 by the `orgv2-planfix` pass, which was read-only for the project apart from this file. Its dry runs and tests ran on throwaway copies of the tree in its scratch folder.
 - **Re-measured and re-tested at about 23:15 by `orgv2-planfix-r3`** (read-only too), on a copy of the tree as of 22:03. Every count below is from that run unless it says otherwise. What changed since 16:50 is in §0.1 and §10.6. The two findings that matter most:
@@ -48,6 +48,19 @@ The counts come from the v2 tool's dry run at about 22:10, on a copy of the tree
 | **5a** | Shipped studio code stops importing `src/dev/`: 5 files promoted to `src/shared/`, then the shim imports in 7 cast files and `room.ts` repointed | 5 | 119 files | 0 (14 reviewed records and comments) | medium; the compiler checks it | step 5 |
 | **5b** | *Optional:* the intro moment code moves to `src/intro/moments/`, and the intro and reel entries move beside their code | 14 | 139 files | 2 composed labels (`events.ts:24-25`), plus records | medium to high | step 8 (after the Ep1 picture lock) |
 | **6** | Act Four's older rounds (v1–v3 docs, data and renders) go to `history/` | 26 | 26 files | a re-audit; the KEEP list below | high until re-audited | step 9 (after the Act Four v5 pixel lock) |
+
+**Execution status (2026-09-29, the `reorg-run` pass; Ep1 locked for good at `1105dee`; each phase verified with §7.5 block 1 and `ops/reorg/smoke.sh`, no renders or re-mixes, `ep01-v35.mp4` byte-identical throughout):**
+
+| Phase | Status | Commit | Measured before it ran |
+|---|---|---|---|
+| 0 | **done** | `def7809` (+ `fce1fdf`, the leftover pass outputs; `68d3c3a`, the re-fingerprint after the Act Four fix) | — |
+| 2 | **done** | see `git log -- ops/reorg/phase2` | 3 moves, 5 files, 0 manual; fraggrep 1 → 0 |
+| 3 | pending | | 14 moves, 192 files, 7 FRAGMENT |
+| 1 | pending | | 114 code files hold `/home/jgon` |
+| 5a | pending | | 5 moves, 120 files |
+| 4 | pending | | 7 moves, 76 files, 3 DEPTH, 10 FRAGMENT |
+| 6 | pending | | 24 moves (the v2 and v3 animatic MP4s are gone; their rows are dropped) |
+| 2d, 5b | **open, not run** (optional, medium-high risk) | | |
 
 **KEEP until the Act Four v5 pixel lock** (not moved to `history/`, not deleted):
 - **The eight v2/v3 TS modules that the v4 animatic composer imports:** `animatic/{data-v2,data-v3,sound-v3,frame,shots,shots3,plan25,plan25v3}.ts`.

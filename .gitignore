@@ -70,8 +70,8 @@ audio/ost/tracks/*/render/**/*.mp3
 audio/ep01/**/*.wav
 out/**/*.wav
 # Derived web copies for the review page (sources live elsewhere in out/)
-out/review-desk/*.mp4
-out/review-desk/*.mp3
+out/review/*.mp4
+out/review/*.mp3
 # Reel beds and mixes (regenerable from audio/reel/ and the reel JSONs)
 audio/reel/**/*.wav
 # Rendered FLAC stems anywhere under out/ and audio/ (regenerable from the mix scripts)

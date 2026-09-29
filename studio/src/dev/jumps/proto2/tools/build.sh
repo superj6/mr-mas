@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Style jump prototype 2 · J3 "THE SKY OPENS": the full build (final polish: the TEAR ships; the seam and the glass are
-# kept for the record: out/jumps/prev/proto2-p*.png (the seam build) and out/jumps/proto2-alt-glass-p075.png).
+# kept for the record: out/jumps/history/proto2-p*.png (the seam build) and out/jumps/proto2-alt-glass-p075.png).
 #   picture (Remotion, 1080p) -> temp sound pass (tools/mix.ts) -> mux with the bundled ffmpeg -> key stills + sheet
 # Run from anywhere:  bash studio/src/dev/jumps/proto2/tools/build.sh [scratchDir]
 # Deliverables land in out/jumps/ (1920x1080 max; never --scale above 1). The machine is shared: concurrency 6 at most.

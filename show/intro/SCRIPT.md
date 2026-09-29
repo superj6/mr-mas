@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | **Title** | *MR. MAS*, opening titles |
-| **Version** | **v2.1 (pixel / jazz / no spoilers)**, 2026-09-25, script-checked the same day (§11). v2.0 is kept at [`_reviews/SCRIPT-v2.0-backup.md`](_reviews/SCRIPT-v2.0-backup.md). |
+| **Version** | **v2.1 (pixel / jazz / no spoilers)**, 2026-09-25, script-checked the same day (§11). v2.0 is kept at [`history/SCRIPT-v2.0-backup.md`](history/SCRIPT-v2.0-backup.md). |
 | **Status** | **Master script: the single source of truth for the opening.** Where another intro doc disagrees with this file, this file wins. §9.8 lists the files that still disagree. |
 | **Runtime** | 30.0 s = 720 frames at 24 fps (f0–719). The 2 s filename card that follows every intro (the filename alone, with no disclaimer since 2026-09-27: [overview §8](../bible/overview.md#8-disclaimer-cards)) is not counted. |
 | **Grid** | 96 BPM, 4/4 · 15 frames per beat · 60 frames per bar · 12 bars of 2.5 s · `at(bar, beat) = (bar−1)·60 + (beat−1)·15` in `studio/src/shared/timing.ts`. **Swung 2nd eighth = beat + 10 frames.** **Straight 2nd eighth = beat + 7.5 in the music** (engine `STRAIGHT_OFF`); picture and SFX round down to +7. Straight off-beats land at f127, the roll-call cuts (f487, f502, f517, f532), f622 and Ep11's f712 ding. Straight-eighth textures (the rack LEDs, the 1993 hats, the klaxon) alternate +7/+8. |
@@ -702,7 +702,7 @@ The automated luminance audit runs on every render. Check these frames by hand a
 ---
 
 ## 10. Revision notes (v2.1)
-**Source of the change:** the showrunner's REVISION v2.1 in [`studio/INTRO_PIXEL_BRIEF.md`](../../studio/INTRO_PIXEL_BRIEF.md) (binding), the three v2.0 reviews ([timing](_reviews/v2.0-review-timing.md), [tone](_reviews/v2.0-review-tone.md), [audio](_reviews/v2.0-review-audio.md)), and the current audio direction. v2.0 is backed up at [`_reviews/SCRIPT-v2.0-backup.md`](_reviews/SCRIPT-v2.0-backup.md).
+**Source of the change:** the showrunner's REVISION v2.1 in [`studio/INTRO_PIXEL_BRIEF.md`](../../studio/INTRO_PIXEL_BRIEF.md) (binding), the three v2.0 reviews ([timing](history/v2.0-review-timing.md), [tone](history/v2.0-review-tone.md), [audio](history/v2.0-review-audio.md)), and the current audio direction. v2.0 is backed up at [`history/SCRIPT-v2.0-backup.md`](history/SCRIPT-v2.0-backup.md).
 
 **Structure**
 - **Bar 9 is now THE PLAYERS roll call** (§3.7): eight portraits on straight eighths, riding the knee, cut on the eighth, with eight brass-and-chip stabs in stop-time. The Ep1 fired/rehired beat, the CHATGTP bloom, the video call, the GLYPH tile dissolve, the heart avalanche and the "music is fired" mute are gone from the intro; they live in Ep1.

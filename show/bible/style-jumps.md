@@ -494,7 +494,7 @@ This is THE CURVE.
 **Built:** `studio/src/dev/jumps/proto1/` · `out/jumps/proto1.mp4` (144 f: 2.5 s locked pixel, the click, the jump, the snap and fall, 1 s of the locked `[CU]`), `proto1-key-{1..4}-p*.png`, `proto1-sheet.png`, `proto1-steppop.mp4` (the rejected family-step in: it reads as a glitch flash). The sheet's transition row is p59, 60, 61, 63, 74, 75, 104, 105, 110, 114, 116, 120. Sound: the click decays to digital zero by p66 and stays there through the `[CU]`.
 
 **Fix pass (2026-09-25, the lead's review):**
-- **What changed.** The portrait, the perforation's place and hole shading, and the certificate's formula (the title band, `HOLDS ____ SHARES`, one serial). That build is kept for comparison in `out/jumps/prev/r1/` (same file names).
+- **What changed.** The portrait, the perforation's place and hole shading, and the certificate's formula (the title band, `HOLDS ____ SHARES`, one serial). That build is kept for comparison in `out/jumps/history/r1/` (same file names).
 - **Checks, from the encoded mp4:**
   - All 102 pixel frames (p0–62, p105–143) render identical to the previous build, to the pixel.
   - p74→p75 changes only the holes' box, and p89→p90 only the pupils (a step of about 3 px, down and to the right, toward the word).
@@ -505,7 +505,7 @@ This is THE CURVE.
   - The bust is on-model to the anime rig (its eyes and pointed locks), not a classical engraved likeness.
   - The scar row no longer sits on the perforation's line, which now misses the portrait.
 
-**Final polish (2026-09-26, the blind cold read).** A stranger with no context read the fix-pass build correctly: "a board voting a founder out on a call, told from his side"; `CANCELLED` and the `NOPEAI` certificate "land clearly on a first watch"; the portrait "a young man, late 20s to early 30s, dark spiky hair, a cowlick, a dark hoodie". Nothing felt corny. What looked cheap, and what changed (the fix-pass build is in `out/jumps/prev/`, same file names; the lead's key comparison is still key-3):
+**Final polish (2026-09-26, the blind cold read).** A stranger with no context read the fix-pass build correctly: "a board voting a founder out on a call, told from his side"; `CANCELLED` and the `NOPEAI` certificate "land clearly on a first watch"; the portrait "a young man, late 20s to early 30s, dark spiky hair, a cowlick, a dark hoodie". Nothing felt corny. What looked cheap, and what changed (the fix-pass build is in `out/jumps/history/`, same file names; the lead's key comparison is still key-3):
 
 | Cold read | Change |
 |---|---|
@@ -567,7 +567,7 @@ This is THE CURVE.
 | Shape | A star fracture from one point: radial arms and spider-web rings | One straight 1-px seam, parted to 11 px; its lower end hidden behind a tower's roof | A torn V from behind the window head, 20 px wide there, tapering to a torn hairline in open sky; passes behind the transom |
 | Cold read at 480×270 | "His window got smashed": a bullet hole, a rock (and a spider) | "A lit spire", "a pasted strip", "dead pixels" (blind read) | Builder's read only, not yet blind: "a black rip in the sky with stars in it" |
 | Guardrails | An impact on his home's window at night reads as an attack on that home ([mas-manalt](../characters/mas-manalt.md) NEVER DO) | Clean | Clean |
-| Kept as | `out/jumps/proto2-alt-glass-p075.png`, the sheet's third row | `out/jumps/prev/proto2-*.png` (the build that was read), the sheet's third row | `out/jumps/proto2.mp4` |
+| Kept as | `out/jumps/proto2-alt-glass-p075.png`, the sheet's third row | `out/jumps/history/proto2-*.png` (the build that was read), the sheet's third row | `out/jumps/proto2.mp4` |
 
 **What makes it a tear and not anything else:**
 - **It lives in open sky.** Its only occluders are the window head (its top runs on out of frame) and the transom (across it). Its tip stops 15 native px above the nearest roof. Nothing of the city touches it, so nothing of the city can claim it.
@@ -613,7 +613,7 @@ This is THE CURVE.
 
 Kept for the record: `seam.ts`, `glass.ts`, and the retired fracture (`crack.ts`, `sky.ts`). The Remotion `jump-proto-2-sheet` composition (in `styleframes/`) still carries the fracture build's labels, so the build doesn't use it.
 
-**Built:** `studio/src/dev/jumps/proto2/` · `out/jumps/proto2.mp4` (120 f), `proto2-p{040,056,084,112}.png`, `proto2-sheet.png` (its third row: the tear at 1:1, the seam and the glass at phone size), `proto2-sound.wav`, and `proto2-alt-glass-p075.png` (the frame that was judged; not re-rendered). The seam build is in `out/jumps/prev/proto2*`; the fracture build in `out/jumps/prev/r1/`.
+**Built:** `studio/src/dev/jumps/proto2/` · `out/jumps/proto2.mp4` (120 f), `proto2-p{040,056,084,112}.png`, `proto2-sheet.png` (its third row: the tear at 1:1, the seam and the glass at phone size), `proto2-sound.wav`, and `proto2-alt-glass-p075.png` (the frame that was judged; not re-rendered). The seam build is in `out/jumps/history/proto2*`; the fracture build in `out/jumps/history/r1/`.
 
 **Cold test at 480×270, stated plainly.** This is the builder's own read, not a blind one. A stranger would describe a man reading at his desk at night, a floating robot eye, and a black rip at the top of the window with stars in it, which the eye turns to look at. Nothing touches the skyline, so the spire read is gone. Its edges are torn and it has no rectangle, so the pasted-strip and dead-column reads should be gone. That needs confirming blind.
 - **Risks I can see.** A dark jagged wedge hanging from the top of a sky could be taken for smoke or a funnel cloud. The stars inside it and the tear's motion (it runs, then it is pulled apart, then it closes from the tip) argue against that. The lone hairline (p30–44) reads as a crack, and should.
